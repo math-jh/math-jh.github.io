@@ -1,0 +1,30 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG adjoint (Adjoints-1.svg)
+\begin{tikzcd}
+	{\mathcal{A}} & {\mathcal{B}}
+	\arrow[""{name=0, anchor=center, inner sep=0}, "F", shift left, curve={height=-6pt}, from=1-1, to=1-2]
+	\arrow[""{name=1, anchor=center, inner sep=0}, "G", shift left, curve={height=-6pt}, from=1-2, to=1-1]
+	\arrow["\dashv"{anchor=center, rotate=-90}, draw=none, from=0, to=1]
+\end{tikzcd}
+
+%%FIG triangle_identity (Adjoints-2.svg)
+\begin{tikzcd}
+	F & FGF && G & GFG \\
+	& F &&& G
+	\arrow["{F\eta}", Rightarrow, from=1-1, to=1-2]
+	\arrow["{\id_F}"', Rightarrow, from=1-1, to=2-2]
+	\arrow["{\epsilon F}", Rightarrow, from=1-2, to=2-2]
+	\arrow["{\eta G}", Rightarrow, from=1-4, to=1-5]
+	\arrow["{\id_G}"', Rightarrow, from=1-4, to=2-5]
+	\arrow["{G\epsilon}", Rightarrow, from=1-5, to=2-5]
+\end{tikzcd}
+
+\end{document}

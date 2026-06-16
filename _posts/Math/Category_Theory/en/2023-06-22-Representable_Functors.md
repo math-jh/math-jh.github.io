@@ -64,7 +64,7 @@ First, let us briefly examine how the above function operates. A natural transfo
 
 To show that this function is a bijection, it suffices to construct an inverse. That is, from an arbitrary element $$x\in F(A)$$ we must produce a natural transformation $$\Psi(x)$$, which is given, for each object $$X$$ in $$\mathcal{A}$$, by a function $$\Psi(x)_X:\Hom_\mathcal{A}(A,X)\rightarrow F(X)$$. Now, if $$\Psi(x)$$ is a natural transformation, the following diagram must commute.
 
-![naturality](/assets/images/Math/Category_Theory/Representable_Functors-1.png){:style="width:15em" class="invert" .align-center}
+![naturality](/assets/images/Math/Category_Theory/Representable_Functors-1.svg){:style="width:15.03em" class="invert" .align-center}
 
 Consider again $$\id_A\in\Hom_\mathcal{A}(A,A)$$. Traversing the upper-right path yields $$F(f)(\Psi(x)_A(\id_A))$$, while the lower-left path gives $$\Psi(x)_X(f)$$. Hence
 

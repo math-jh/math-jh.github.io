@@ -25,7 +25,7 @@ Although this notation differs slightly from that of [§Categories, ⁋Example 1
 
 By definition, given two extensions $$\mathbb{K} \rightarrow \mathbb{L}_1$$ and $$\mathbb{K} \rightarrow \mathbb{L}_2$$, the following commutative diagram
 
-![morphism_of_field_extensions](/assets/images/Math/Field_Theory/Algebraic_Extensions-1.png){:style="width:10em" class="invert" .align-center}
+![morphism_of_field_extensions](/assets/images/Math/Field_Theory/Algebraic_Extensions-1.svg){:style="width:10.39em" class="invert" .align-center}
 
 is a morphism between them. Here, since both $$\mathbb{L}_1$$ and $$\mathbb{L}_2$$ are fields, the morphism $$\mathbb{L}_1 \rightarrow \mathbb{L}_2$$ must be injective. Subject to the caution above, in this case we call $$\mathbb{L}_1$$ a *subextension* of $$\mathbb{L}_2$$.
 
@@ -111,7 +111,7 @@ Now let two $$\mathbb{K}$$-extensions $$\mathbb{L}_1/\mathbb{K}$$, $$\mathbb{L}_
 
 <ins id="def7">**Definition 7**</ins> For two $$\mathbb{K}$$-extensions $$\mathbb{L}_1/\mathbb{K}$$, $$\mathbb{L}_2/\mathbb{L}$$, a $$\mathbb{K}$$-extension $$\mathbb{K} \rightarrow \mathbb{M}$$ is called their *composite* if there exist $$\mathbb{K}$$-algebra homomorphisms $$\mathbb{L}_1 \rightarrow \mathbb{M}$$ and $$\mathbb{L}_2 \rightarrow \mathbb{M}$$ making the following diagram
 
-![composite_field](/assets/images/Math/Field_Theory/Algebraic_Extensions-2.png){:style="width:10em" class="invert" .align-center}
+![composite_field](/assets/images/Math/Field_Theory/Algebraic_Extensions-2.svg){:style="width:10.57em" class="invert" .align-center}
 
 commute.
 
