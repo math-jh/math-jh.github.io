@@ -9,7 +9,6 @@ sidebar:
     nav: "representation_theory-en"
 
 date: 2026-02-13
-last_modified_at: 2026-02-13
 weight: 1
 translated_at: 2026-06-01T20:30:01+00:00
 translation_source: kimi-cli

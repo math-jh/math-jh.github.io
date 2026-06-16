@@ -9,7 +9,6 @@ sidebar:
     nav: "manifolds-en"
 
 date: 2023-02-13
-last_modified_at: 2023-02-13
 weight: 19
 published: false
 translated_at: 2026-06-01T11:30:04+00:00

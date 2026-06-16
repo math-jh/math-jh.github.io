@@ -9,7 +9,6 @@ sidebar:
     nav: "topology-en"
 
 date: 2024-12-15
-last_modified_at: 2024-12-15
 weight: 19
 published: false
 translated_at: 2026-06-03T09:30:02+00:00

@@ -9,7 +9,6 @@ sidebar:
     nav: "multilinear_algebra-ko"
 
 date: 2025-05-07
-last_modified_at: 2025-05-07
 weight: 201
 
 ---

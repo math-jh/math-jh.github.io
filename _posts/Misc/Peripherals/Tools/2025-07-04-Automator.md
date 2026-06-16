@@ -7,7 +7,6 @@ categories: [Misc / Peripherals]
 permalink: /ko/misc/peripherals/tools/automator
 toc: false
 date: 2025-07-04
-last_modified_at: 2025-07-04
 weight: 102
 
 ---

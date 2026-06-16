@@ -10,7 +10,6 @@ sidebar:
     nav: "toric_geometry-ko"
 
 date: 2026-03-09
-last_modified_at: 2026-05-18
 weight: 5
 published: false
 ---

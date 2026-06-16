@@ -9,7 +9,6 @@ sidebar:
     nav: "set_theory-en"
 
 date: 2021-08-15
-last_modified_at: 2022-11-23
 weight: 5
 translated_at: 2026-06-02T11:00:03+00:00
 translation_source: kimi-cli

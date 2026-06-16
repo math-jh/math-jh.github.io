@@ -10,7 +10,6 @@ sidebar:
     nav: "llm_workshop-ko"
 toc: false
 date: 2026-02-05
-last_modified_at: 2026-02-05
 weight: 1
 
 ---

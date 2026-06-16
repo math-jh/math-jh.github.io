@@ -11,7 +11,6 @@ sidebar:
     nav: "set_theory-en"
 
 date: 2021-08-09
-last_modified_at: 2022-11-21
 
 weight: 2
 translated_at: 2026-06-02T10:00:02+00:00

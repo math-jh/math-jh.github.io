@@ -9,7 +9,6 @@ sidebar:
     nav: "group_theory-ko"
 
 date: 2025-04-07
-last_modified_at: 2025-04-07
 weight: 4
 
 ---

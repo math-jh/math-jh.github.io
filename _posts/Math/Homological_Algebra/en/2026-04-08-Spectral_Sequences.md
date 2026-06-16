@@ -9,7 +9,6 @@ sidebar:
     nav: "homological_algebra-en"
 
 date: 2026-04-08
-last_modified_at: 2026-04-12
 weight: 7
 translated_at: 2026-05-31T15:00:06+00:00
 translation_source: kimi-cli

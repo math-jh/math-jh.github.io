@@ -13,7 +13,6 @@ sidebar:
 author: Marvin
 
 date: 2026-05-22
-last_modified_at: 2026-05-22
 weight: 6
 
 ---

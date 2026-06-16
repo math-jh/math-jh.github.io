@@ -6,7 +6,6 @@ excerpt: "Todd class와 Chern character, HRR 정리의 좌변"
 categories: [Math / Algebraic Varieties]
 sidebar: { nav: "algebraic_varieties-ko" }
 date: 2026-05-07
-last_modified_at: 2026-05-07
 weight: 23
 published: false
 ---

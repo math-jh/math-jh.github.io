@@ -7,7 +7,6 @@ categories: [Math / Algebraic Varieties]
 sidebar:
     nav: "algebraic_varieties-ko"
 date: 2026-05-07
-last_modified_at: 2026-05-07
 weight: 25
 published: false
 ---

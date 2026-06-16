@@ -7,7 +7,6 @@ categories: [Misc / Peripherals]
 permalink: /ko/misc/peripherals/tools/sublime_text
 toc: false
 date: 2025-07-03
-last_modified_at: 2025-07-03
 weight: 101
 
 ---

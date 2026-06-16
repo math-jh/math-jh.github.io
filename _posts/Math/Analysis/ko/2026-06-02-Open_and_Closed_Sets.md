@@ -9,7 +9,6 @@ sidebar:
     nav: "analysis-ko"
 
 date: 2026-06-02
-last_modified_at: 2026-06-02
 weight: 7
 
 published: false

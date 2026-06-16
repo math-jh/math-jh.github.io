@@ -9,7 +9,6 @@ sidebar:
     nav: "algebraic_structures-ko"
 
 date: 2022-11-30
-last_modified_at: 2022-11-30
 weight: 5
 
 ---

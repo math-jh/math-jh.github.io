@@ -7,7 +7,6 @@ sidebar:
     nav: "llm_workshop-ko"
 author: Marvin
 date: 2026-05-28
-last_modified_at: 2026-05-29
 weight: 117
 toc: true
 ---

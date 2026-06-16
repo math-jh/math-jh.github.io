@@ -9,7 +9,6 @@ sidebar:
     nav: "linear_algebra-en"
 
 date: 2026-01-21
-last_modified_at: 2026-01-21
 weight: 17
 translated_at: 2026-06-01T03:30:05+00:00
 translation_source: kimi-cli

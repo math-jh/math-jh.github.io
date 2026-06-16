@@ -9,7 +9,6 @@ sidebar:
     nav: "ring_theory-en"
 
 date: 2025-05-06
-last_modified_at: 2025-05-06
 weight: 3
 translated_at: 2026-06-01T23:30:01+00:00
 translation_source: kimi-cli

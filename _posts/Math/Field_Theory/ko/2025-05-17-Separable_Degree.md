@@ -9,7 +9,6 @@ sidebar:
     nav: "field_theory-ko"
 
 date: 2025-05-17
-last_modified_at: 2025-05-17
 weight: 7
 
 ---

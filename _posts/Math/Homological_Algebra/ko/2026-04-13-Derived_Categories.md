@@ -9,7 +9,6 @@ sidebar:
     nav: "homological_algebra-ko"
 
 date: 2026-04-13
-last_modified_at: 2026-04-13
 weight: 8
 
 ---

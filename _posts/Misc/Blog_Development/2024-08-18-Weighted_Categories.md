@@ -12,7 +12,6 @@ sidebar:
     nav: "blog_development-ko"
     
 date: 2024-08-18
-last_modified_at: 2024-08-18
 weight: 15
 
 ---

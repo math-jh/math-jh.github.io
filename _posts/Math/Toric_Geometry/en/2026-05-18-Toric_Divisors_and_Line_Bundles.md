@@ -10,7 +10,6 @@ sidebar:
     nav: "toric_geometry-en"
 
 date: 2026-05-18
-last_modified_at: 2026-05-18
 weight: 3
 translated_at: 2026-06-03T12:00:01+00:00
 translation_source: kimi-cli
