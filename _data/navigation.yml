@@ -93,6 +93,8 @@ llm_workshop-ko:
         url: ko/llm_workshop/auto_sidebar_nav
       - title: "다이어그램을 SVG로"
         url: ko/llm_workshop/diagram_svg
+      - title: "수정일에서 기계적 커밋 빼기"
+        url: ko/llm_workshop/lastmod_skip
   - title: "Marvin의 독서 노트"
     children:
       - title: "독서 노트를 쓰는 봇"
