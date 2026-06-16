@@ -6,7 +6,7 @@
 /* Mockup palette (dark): deep navy paper + warm off-white ink + brass.
    Everything else derives from these. */
 $text-color: #e7e3d8 !default;                                    //  warm off-white
-$background-color: #14171f !default;                             //  near-black, faint cool tint (was navy #0e1726 — too blue)
+$background-color: #0b0d12 !default;                             //  near-black, faint cool tint
 $muted-text-color: #aeb6c6 !default;                             //  secondary text
 $primary-color: #05080f !default;                                //  masthead/footer navy
 $footer-background-color: #05080f !default;
@@ -14,7 +14,7 @@ $link-color: #82c8ff !default;
 $masthead-link-color: #f3f1ea !default;
 $masthead-link-color-hover: #e3b562 !default;                    //  brass (bright)
 $navicon-link-color-hover: mix($background-color, $text-color, 80%) !default;
-$border-color: #2b313d !default;                                 //  desaturated hairline (less blue)
+$border-color: #20242d !default;                                 //  desaturated hairline (less blue)
 $highlight-color: #d2a24e;                                       //  brass accent
 $notice-background-mix: 0%;
 $highlight-background-mix: 20%;

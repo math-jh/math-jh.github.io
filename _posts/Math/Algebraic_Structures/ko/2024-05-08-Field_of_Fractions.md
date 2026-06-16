@@ -240,7 +240,7 @@ $$(\alpha+\mathfrak{p})(\beta+\mathfrak{p})=0+\mathfrak{p}$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-만일 $$x\in \mathfrak{N}$$이라면 $$x^n=0$$이도록 하는 $$n>0$$이 존재할 것이고, 임의의 $$\alpha\in A$$에 대하여 $$(\alphax)^n=\alpha^nx^n=0$$이 되어 $$\alpha x\in \mathfrak{N}$$임을 보일 수 있다. 
+만일 $$x\in \mathfrak{N}$$이라면 $$x^n=0$$이도록 하는 $$n>0$$이 존재할 것이고, 임의의 $$\alpha\in A$$에 대하여 $$(\alpha x)^n=\alpha^nx^n=0$$이 되어 $$\alpha x\in \mathfrak{N}$$임을 보일 수 있다. 
 
 이제 $$\mathfrak{N}$$이 덧셈에 대해 닫혀있다는 것을 보여야 한다. 임의의 $$x,y\in \mathfrak{N}$$이 주어졌다 하고, 적당한 $$m,n>0$$에 대하여 $$x^m=0$$이고 $$y^n=0$$이라 하자. 그럼
 

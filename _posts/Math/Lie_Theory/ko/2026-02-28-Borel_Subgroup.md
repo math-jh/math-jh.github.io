@@ -246,7 +246,7 @@ $$\GL(n,\mathbb{C})/B\hookrightarrow\mathbb{P}(\wedge^1\mathbb{C}^n)\times\mathb
 
 </div>
 
-모든 complex semisimple Lie group은 compact form을 갖는다. 예를 들어 $$\SL(n,\mathbb{C})$$의 compact form은 $$\SU(n)$$이고, $$\SO(n,\mathbb{C})$$의 compact form은 $$\SO(n)$$이며, $$\Sp(2n,\mathbb{C})$$의 compact form은 $$\Sp(n)=\Sp(2n,\mathbb{C})\cap\U(2n)$$이다.
+모든 complex semisimple Lie group은 compact form을 갖는다. 예를 들어 $$\SL(n,\mathbb{C})$$의 compact form은 $$\SU(n)$$이고, $$\SO(n,\mathbb{C})$$의 compact form은 $$\SO(n)$$이며, $$\Sp(2n,\mathbb{C})$$의 compact form은 $$\Sp(n)=\Sp(2n,\mathbb{C})\cap\operatorname{U}(2n)$$이다.
 
 이제 핵심적인 결과를 서술한다.
 

@@ -279,7 +279,7 @@ $$\bigcap_{l\neq k} \mathfrak{m}_l\not\subseteq \mathfrak{m}_k$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-두 주장의 증명 모두 유사하므로 첫 번째 주장만 증명한다. $$\phi$$가 integral이라 가정하고, 이 때 $$E$$를 생성하는 integral element들을 $$x_i$$라 하자. 그럼 각각의 $$x_i$$는 적당한 monic polynomial $$p_i\in A[\x]$$를 만족한다. 따라서 각각의 $$1\otimes x_i$$는 $$E'$$를 생성하며, $$(\rho\[\x\])(p_i)$$를 만족한다. 이로부터 $$E'$$가 $$A'$$에 대해 integral임을 안다. 
+두 주장의 증명 모두 유사하므로 첫 번째 주장만 증명한다. $$\phi$$가 integral이라 가정하고, 이 때 $$E$$를 생성하는 integral element들을 $$x_i$$라 하자. 그럼 각각의 $$x_i$$는 적당한 monic polynomial $$p_i\in A[\x]$$를 만족한다. 따라서 각각의 $$1\otimes x_i$$는 $$E'$$를 생성하며, $$(\rho[\x])(p_i)$$를 만족한다. 이로부터 $$E'$$가 $$A'$$에 대해 integral임을 안다. 
 
 </details>
 

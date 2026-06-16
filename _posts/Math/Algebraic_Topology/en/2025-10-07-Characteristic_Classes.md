@@ -315,7 +315,7 @@ $$\lambda_1=(1,0,\cdots, 0),\quad \lambda_2=(2,0,\cdots,0),\qquad \lambda_k=(k,0
 
 Then by the above argument these become homology classes of $$\Gr_k(\mathbb{R}^\infty)$$, and the functions
 
-$$w_i: H_\bullet(\Gr_k(\mathbb{R}^\infty);\mathbb{Z}/2)\rightarrow \mathbb{Z}/2; \qquad \text{$w_i(\Omega_{\lambda_i}(F_\bullet))=1$ and is 0$ otherwise}$$
+$$w_i: H_\bullet(\Gr_k(\mathbb{R}^\infty);\mathbb{Z}/2)\rightarrow \mathbb{Z}/2; \qquad \text{$w_i(\Omega_{\lambda_i}(F_\bullet))=1$ and is $0$ otherwise}$$
 
 lie in the $$i$$th cohomology class $$H^i(\Gr_k(\mathbb{R}^\infty);\mathbb{Z}/2)$$, and thus we know
 

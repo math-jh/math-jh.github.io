@@ -32,7 +32,7 @@ In the previous post we defined what an algebraic extension is. First, consider 
 
 First, the equivalence of the first and second conditions is obvious. If the first condition holds, then the third condition is obvious. Also, by [\[Ring Theory\] §Polynomial Rings, ⁋Proposition 6](/en/math/ring_theory/polynomial_rings#prop6), any element of $$\mathbb{K}[\x]$$ can be written as a product of irreducible polynomials, and linear polynomials have roots in $$\mathbb{K}$$ for obvious reasons, so the third condition implies the second. Therefore the first three conditions are all equivalent.
 
-Now let us show that the third and fourth conditions are equivalent. Assume that the third condition holds; then for any element $$x$$ of an algebraic extension $$\mathbb{L}/\matbb{K}$$, its minimal polynomial is irreducible ([§Algebraic Extensions, ⁋Theorem 15](/en/math/field_theory/algebraic_extensions#thm15)), so from the third condition this minimal polynomial must be linear. 
+Now let us show that the third and fourth conditions are equivalent. Assume that the third condition holds; then for any element $$x$$ of an algebraic extension $$\mathbb{L}/\mathbb{K}$$, its minimal polynomial is irreducible ([§Algebraic Extensions, ⁋Theorem 15](/en/math/field_theory/algebraic_extensions#thm15)), so from the third condition this minimal polynomial must be linear. 
 
 Now assume the fourth condition. For an irreducible polynomial $$f$$ in $$\mathbb{K}[\x]$$, consider $$\mathbb{K}[\x]/(f)$$; this is an algebraic extension of $$\mathbb{K}$$ of degree $$n$$. Since we are assuming that every algebraic extension of $$\mathbb{K}$$ has degree $$1$$, the third condition follows. 
 

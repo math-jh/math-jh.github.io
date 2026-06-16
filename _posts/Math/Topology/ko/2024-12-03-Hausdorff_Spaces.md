@@ -176,7 +176,7 @@ $$(x,y)\mapsto f(x),\quad (x,y)\mapsto y$$
 
 거꾸로 $$X$$가 Hausdorff라면, 임의로 택한 $$X_j$$의 원소들 $$x_j$$에 대하여, 
 
-$$\prod_{j\in I} A_j,\qquad A_j=\begin{cases}A_i&i=j\\{x_j\}&\text{otherwise}\end{cases}$$
+$$\prod_{j\in I} A_j,\qquad A_j=\begin{cases}A_i&i=j\\\{x_j\}&\text{otherwise}\end{cases}$$
 
 으로 정의된 $$\prod A_j$$는 $$X_i$$와 위상동형인 $$X$$의 부분집합이다. 
 

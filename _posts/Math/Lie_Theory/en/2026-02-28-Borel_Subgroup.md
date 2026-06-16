@@ -239,7 +239,7 @@ We now examine the relationship between a compact Lie group $$G$$ and its comple
 
 </div>
 
-Every complex semisimple Lie group admits a compact form. For example, the compact form of $$\SL(n,\mathbb{C})$$ is $$\SU(n)$$, that of $$\SO(n,\mathbb{C})$$ is $$\SO(n)$$, and that of $$\Sp(2n,\mathbb{C})$$ is $$\Sp(n)=\Sp(2n,\mathbb{C})\cap\U(2n)$$.
+Every complex semisimple Lie group admits a compact form. For example, the compact form of $$\SL(n,\mathbb{C})$$ is $$\SU(n)$$, that of $$\SO(n,\mathbb{C})$$ is $$\SO(n)$$, and that of $$\Sp(2n,\mathbb{C})$$ is $$\Sp(n)=\Sp(2n,\mathbb{C})\cap\operatorname{U}(2n)$$.
 
 We now state the central result.
 

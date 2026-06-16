@@ -176,7 +176,7 @@ First, suppose the $$X_i$$ are Hausdorff and let $$x,y\in X$$ be given. Then the
 
 Conversely, if $$X$$ is Hausdorff, then for arbitrarily chosen elements $$x_j\in X_j$$, the set
 
-$$\prod_{j\in I} A_j,\qquad A_j=\begin{cases}A_i&i=j\\{x_j\}&\text{otherwise}\end{cases}$$
+$$\prod_{j\in I} A_j,\qquad A_j=\begin{cases}A_i&i=j\\\{x_j\}&\text{otherwise}\end{cases}$$
 
 is a subset of $$X$$ homeomorphic to $$X_i$$.
 

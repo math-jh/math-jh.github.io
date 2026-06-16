@@ -52,7 +52,7 @@ $$E_{ij}E_{jk}=\delta_{jh}E_{ik}$$
 
 </div>
 
-Free $$A$$-module $$M$$의 basis $$\mathcal{B}=(e_i)_{i\in I}$$를 고정하고, $$\lvert I\rvert=n$$이라 하자. 그럼 임의의 $$u\in \End_{\lMod{A}}(M)$$에 대하여, $$\[u\]_{\mathcal{B}}^\mathcal{B}\in\Mat_n(A)$$이며, 만일 $$u$$가 isomorphism이라면 [§행렬과 선형사상, ⁋따름정리 4](/ko/math/multilinear_algebra/matrices_and_linear_maps#cor4)에 의하여 $$\[u\]_{\mathcal{B}}^\mathcal{B}\in\GL_n(A)$$이다. 그럼 [§쌍대공간, ⁋명제 5](/ko/math/multilinear_algebra/dual_spaces#prop5)와 [§행렬과 선형사상, ⁋명제 5](/ko/math/multilinear_algebra/matrices_and_linear_maps#prop5)에 의하여 다음 식
+Free $$A$$-module $$M$$의 basis $$\mathcal{B}=(e_i)_{i\in I}$$를 고정하고, $$\lvert I\rvert=n$$이라 하자. 그럼 임의의 $$u\in \End_{\lMod{A}}(M)$$에 대하여, $$[u]_{\mathcal{B}}^\mathcal{B}\in\Mat_n(A)$$이며, 만일 $$u$$가 isomorphism이라면 [§행렬과 선형사상, ⁋따름정리 4](/ko/math/multilinear_algebra/matrices_and_linear_maps#cor4)에 의하여 $$[u]_{\mathcal{B}}^\mathcal{B}\in\GL_n(A)$$이다. 그럼 [§쌍대공간, ⁋명제 5](/ko/math/multilinear_algebra/dual_spaces#prop5)와 [§행렬과 선형사상, ⁋명제 5](/ko/math/multilinear_algebra/matrices_and_linear_maps#prop5)에 의하여 다음 식
 
 $$\bigl([u^{-1}]_{\mathcal{B}}^\mathcal{B}\bigr)^t=\bigl(\bigl[u^\ast\bigr]_{\mathcal{B}^\ast}^{\mathcal{B}^\ast}\bigr)^{-1}$$
 
@@ -76,7 +76,7 @@ $$e_i'=\sum_{j=1}^n a_{ji}e_i,\qquad 1\leq i\leq n$$
 
 $$u:e_i\mapsto e_i'=\sum_{j=1}^n a_{ji}e_i$$
 
-으로 정의되는 linear map $$u\in\End_{\lMod{A}}(M)$$의 $$\mathcal{B}$$에 대한 행렬표현 $$\[u\]_{\mathcal{B}}^\mathcal{B}\in\Mat_n(A)$$이다. 이제 이 행렬이 역행렬을 갖는 것은 $$u$$가 isomorphism인 것과 동치이고, 이는 $$(u(e_i))_{i\in I}$$가 $$M$$의 basis가 되는 것과 동치이다. 
+으로 정의되는 linear map $$u\in\End_{\lMod{A}}(M)$$의 $$\mathcal{B}$$에 대한 행렬표현 $$[u]_{\mathcal{B}}^\mathcal{B}\in\Mat_n(A)$$이다. 이제 이 행렬이 역행렬을 갖는 것은 $$u$$가 isomorphism인 것과 동치이고, 이는 $$(u(e_i))_{i\in I}$$가 $$M$$의 basis가 되는 것과 동치이다. 
 
 </details>
 

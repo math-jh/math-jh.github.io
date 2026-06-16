@@ -31,7 +31,7 @@ weight: 3
 
 우선 첫째 조건과 둘째 조건이 동치임은 자명하다. 만일 첫째 조건이 성립한다면 셋째 조건이 성립하는 것은 자명하다. 또, [\[환론\] §다항식환, ⁋명제 6](/ko/math/ring_theory/polynomial_rings#prop6)에 의하여 $$\mathbb{K}[\x]$$의 임의의 원소는 irreducible polynomial의 곱으로 나타낼 수 있고, 일차식은 자명한 이유로 $$\mathbb{K}$$ 안에서 근을 가지므로 셋째 조건이 둘째 조건을 함의한다. 따라서 첫째 조건부터 셋째 조건까지가 모두 동치이다.
 
-이제 셋째 조건과 넷째 조건이 동치임을 보이자. 우선 셋째 조건이 성립한다 가정하면, 우리는 algebraic extension $$\mathbb{L}/\matbb{K}$$의 임의의 원소 $$x$$의 minimal polynomial이 irreducible이므로 ([§대수적 확장, ⁋정리 15](/ko/math/field_theory/algebraic_extensions#thm15)) 셋째 조건으로부터 이 minimal polynomial이 일차식이어야 함을 안다. 
+이제 셋째 조건과 넷째 조건이 동치임을 보이자. 우선 셋째 조건이 성립한다 가정하면, 우리는 algebraic extension $$\mathbb{L}/\mathbb{K}$$의 임의의 원소 $$x$$의 minimal polynomial이 irreducible이므로 ([§대수적 확장, ⁋정리 15](/ko/math/field_theory/algebraic_extensions#thm15)) 셋째 조건으로부터 이 minimal polynomial이 일차식이어야 함을 안다. 
 
 이제 넷째 조건을 가정하자. $$\mathbb{K}[\x]$$의 irreducible polynomial $$f$$에 대하여, $$\mathbb{K}[\x]/(f)$$를 생각하면 이는 $$\mathbb{K}$$의 degree $$n$$ algebraic extension이다. 우리는 이 extension의 degree가 $$1$$이어야 함을 가정하고 있으므로, 셋째 조건이 얻어진다. 
 

@@ -390,7 +390,7 @@ Cocycle 조건 세 가지를 모두 확인한다.
 
 $$\varphi^\ast(\mathcal{L} \otimes \mathcal{M}) \cong \varphi^\ast \mathcal{L} \otimes \varphi^\ast \mathcal{M}$$이고 $$\varphi^\ast \mathcal{O}_Y \cong \mathcal{O}_X$$이므로, pullback은 group homomorphism이다.
 
-이를 확인하기 위해 transition function 관점에서 살펴보자. $$\mathcal{L} \otimes \mathcal{M}$$의 transition function은 $$g_{ij}^{\mathcal{L}} g_{ij}^{\mathcal{M}}$$이므로, $$\varphi^\ast(\mathcal{L} \otimes \mathcal{M})$$의 transition function은 $$(g_{ij}^{\mathcal{L}} g_{ij}^{\mathcal{M}}) \circ \varphi = (g_{ij}^{\mathcal{L}} \circ \varphi)(g_{ij}^{\mathcal{M}} \circ \varphi)$$이다. 이는 각각 $$\varphi^\ast\mathcal{L}$과 $\varphi^\ast\mathcal{M}$$의 transition function이므로, $$\varphi^\ast(\mathcal{L} \otimes \mathcal{M}) \cong \varphi^\ast\mathcal{L} \otimes \varphi^\ast\mathcal{M}$$을 얻는다. 또한 $$\mathcal{O}_Y$$의 transition function은 모두 $$1$$이므로 $$\varphi^\ast\mathcal{O}_Y$$의 transition function도 $$1$$, 즉 $$\varphi^\ast\mathcal{O}_Y \cong \mathcal{O}_X$$이다.
+이를 확인하기 위해 transition function 관점에서 살펴보자. $$\mathcal{L} \otimes \mathcal{M}$$의 transition function은 $$g_{ij}^{\mathcal{L}} g_{ij}^{\mathcal{M}}$$이므로, $$\varphi^\ast(\mathcal{L} \otimes \mathcal{M})$$의 transition function은 $$(g_{ij}^{\mathcal{L}} g_{ij}^{\mathcal{M}}) \circ \varphi = (g_{ij}^{\mathcal{L}} \circ \varphi)(g_{ij}^{\mathcal{M}} \circ \varphi)$$이다. 이는 각각 $$\varphi^\ast\mathcal{L}$$과 $$\varphi^\ast\mathcal{M}$$의 transition function이므로, $$\varphi^\ast(\mathcal{L} \otimes \mathcal{M}) \cong \varphi^\ast\mathcal{L} \otimes \varphi^\ast\mathcal{M}$$을 얻는다. 또한 $$\mathcal{O}_Y$$의 transition function은 모두 $$1$$이므로 $$\varphi^\ast\mathcal{O}_Y$$의 transition function도 $$1$$, 즉 $$\varphi^\ast\mathcal{O}_Y \cong \mathcal{O}_X$$이다.
 
 </details>
 
