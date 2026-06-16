@@ -51,7 +51,7 @@ $$E_{ij}E_{jk}=\delta_{jh}E_{ik}$$
 
 </div>
 
-Fix a basis $$\mathcal{B}=(e_i)_{i\in I}$$ of a free $$A$$-module $$M$$, and let $$\lvert I\rvert=n$$. Then for any $$u\in \End_{\lMod{A}}(M)$$, we have $$\[u\]_{\mathcal{B}}^\mathcal{B}\in\Mat_n(A)$$; moreover, if $$u$$ is an isomorphism, then by [§Matrices and Linear Maps, ⁋Corollary 4](/en/math/multilinear_algebra/matrices_and_linear_maps#cor4) we have $$\[u\]_{\mathcal{B}}^\mathcal{B}\in\GL_n(A)$$. In this case, [§Dual Spaces, ⁋Proposition 5](/en/math/multilinear_algebra/dual_spaces#prop5) and [§Matrices and Linear Maps, ⁋Proposition 5](/en/math/multilinear_algebra/matrices_and_linear_maps#prop5) yield the identity
+Fix a basis $$\mathcal{B}=(e_i)_{i\in I}$$ of a free $$A$$-module $$M$$, and let $$\lvert I\rvert=n$$. Then for any $$u\in \End_{\lMod{A}}(M)$$, we have $$[u]_{\mathcal{B}}^\mathcal{B}\in\Mat_n(A)$$; moreover, if $$u$$ is an isomorphism, then by [§Matrices and Linear Maps, ⁋Corollary 4](/en/math/multilinear_algebra/matrices_and_linear_maps#cor4) we have $$[u]_{\mathcal{B}}^\mathcal{B}\in\GL_n(A)$$. In this case, [§Dual Spaces, ⁋Proposition 5](/en/math/multilinear_algebra/dual_spaces#prop5) and [§Matrices and Linear Maps, ⁋Proposition 5](/en/math/multilinear_algebra/matrices_and_linear_maps#prop5) yield the identity
 
 $$\bigl([u^{-1}]_{\mathcal{B}}^\mathcal{B}\bigr)^t=\bigl(\bigl[u^\ast\bigr]_{\mathcal{B}^\ast}^{\mathcal{B}^\ast}\bigr)^{-1}$$
 
@@ -69,7 +69,7 @@ defines a basis of $$M$$ if and only if the square matrix $$(a_{ji})$$ is invert
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-The given matrix $$(a_{ji})$$ is precisely the matrix representation $$\[u\]_{\mathcal{B}}^\mathcal{B}\in\Mat_n(A)$$ with respect to $$\mathcal{B}$$ of the linear map $$u\in\End_{\lMod{A}}(M)$$ defined by
+The given matrix $$(a_{ji})$$ is precisely the matrix representation $$[u]_{\mathcal{B}}^\mathcal{B}\in\Mat_n(A)$$ with respect to $$\mathcal{B}$$ of the linear map $$u\in\End_{\lMod{A}}(M)$$ defined by
 
 $$u:e_i\mapsto e_i'=\sum_{j=1}^n a_{ji}e_i$$
 

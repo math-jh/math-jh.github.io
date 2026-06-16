@@ -276,7 +276,7 @@ We now examine further the properties of ring homomorphisms from [Definition 3](
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-The proofs are similar, so we prove only the first statement. Assume $$\phi$$ is integral, and let $$x_i$$ be integral elements generating $$E$$. Then each $$x_i$$ satisfies a monic polynomial $$p_i\in A[\x]$$. Hence each $$1\otimes x_i$$ generates $$E'$$ and satisfies $$(\rho\[\x\])(p_i)$$. It follows that $$E'$$ is integral over $$A'$$.
+The proofs are similar, so we prove only the first statement. Assume $$\phi$$ is integral, and let $$x_i$$ be integral elements generating $$E$$. Then each $$x_i$$ satisfies a monic polynomial $$p_i\in A[\x]$$. Hence each $$1\otimes x_i$$ generates $$E'$$ and satisfies $$(\rho[\x])(p_i)$$. It follows that $$E'$$ is integral over $$A'$$.
 
 </details>
 

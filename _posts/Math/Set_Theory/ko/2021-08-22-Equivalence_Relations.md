@@ -53,7 +53,7 @@ $$\pr_1R=A,\qquad R=R^{-1},\qquad R\circ R=R$$
 
 우선 $$R$$이 동치관계라 가정하자.  
 - 모든 $$x\in A$$에 대하여 $$(x,x)\in R$$이므로 $$\pr_1R=A$$가 성립한다.  
-- 또, $$R$$은 symmetric이므로 $$x\sim_\tiny{R} y\iff y\sim_\tiny{R}x$$가 성립하고 따라서
+- 또, $$R$$은 symmetric이므로 $$x\sim_{\tiny R} y\iff y\sim_{\tiny R}x$$가 성립하고 따라서
     
     $$(x,y)\in R\iff (y,x)\in R\iff (x,y)\in R^{-1}\tag{1}$$
 
