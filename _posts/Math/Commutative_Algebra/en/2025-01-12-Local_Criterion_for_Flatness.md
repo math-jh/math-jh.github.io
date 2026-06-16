@@ -65,11 +65,11 @@ $$(\mathfrak{m}^t\cap \mathfrak{a})\otimes_AM \rightarrow \mathfrak{a}\otimes_AM
 
 in this situation it suffices to show that the image of $$x$$ in $$(\mathfrak{a}/\mathfrak{m}^t\cap \mathfrak{a})\otimes_AM$$ is zero. On the other hand, consider the commutative diagram
 
-![inclusions](/assets/images/Math/Commutative_Algebra/Local_Criterion_for_Flatness-1.png){:style="width:10em" class="invert" .align-center}
+![inclusions](/assets/images/Math/Commutative_Algebra/Local_Criterion_for_Flatness-1.svg){:style="width:9.34em" class="invert" .align-center}
 
 and apply $$-\otimes_AM$$ to obtain the commutative diagram
 
-![trick](/assets/images/Math/Commutative_Algebra/Local_Criterion_for_Flatness-2.png){:style="width:16em" class="invert" .align-center}
+![trick](/assets/images/Math/Commutative_Algebra/Local_Criterion_for_Flatness-2.svg){:style="width:16.39em" class="invert" .align-center}
 
 The left-hand map $$\mathfrak{a}\otimes_AM \rightarrow M$$ is the multiplication map $$m$$, so $$x\in\ker m$$ is sent to $$0$$ along the $$\llcorner$$ composite. Hence it suffices to show that the right-hand map $$(\mathfrak{a}/(\mathfrak{m}^t\cap \mathfrak{a}))\otimes_AM \rightarrow (A/\mathfrak{m}^t)\otimes_AM$$ is injective. Via the isomorphism
 

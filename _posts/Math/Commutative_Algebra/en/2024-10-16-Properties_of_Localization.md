@@ -117,7 +117,7 @@ $$\alpha: E\otimes_A\Hom_A(A, N) \rightarrow\Hom_E(E\otimes_AM, E\otimes_AN)$$
 
 fits into the following commutative diagram
 
-![simplest_case](/assets/images/Math/Commutative_Algebra/Properties_of_Localization-1.png){:style="width:23em" class="invert" .align-center}
+![simplest_case](/assets/images/Math/Commutative_Algebra/Properties_of_Localization-1.svg){:style="width:24.69em" class="invert" .align-center}
 
 so the proposition holds in this case. Here the vertical maps come from the isomorphisms
 
@@ -129,7 +129,7 @@ $$F \rightarrow G \rightarrow M \rightarrow 0$$
 
 and apply the four lemma to the following commutative diagram
 
-![general_case](/assets/images/Math/Commutative_Algebra/Properties_of_Localization-2.png){:style="width:44em" class="invert" .align-center}
+![general_case](/assets/images/Math/Commutative_Algebra/Properties_of_Localization-2.svg){:style="width:47.63em" class="invert" .align-center}
 
 </details>
 

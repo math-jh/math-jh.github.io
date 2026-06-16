@@ -64,11 +64,11 @@ $$(\mathfrak{m}^t\cap \mathfrak{a})\otimes_AM \rightarrow \mathfrak{a}\otimes_AM
 
 를 얻으며, 이 상황에서 $$x$$는 $$(\mathfrak{a}/\mathfrak{m}^t\cap \mathfrak{a})\otimes_AM$$으로 옮겨졌을 때 $$0$$이 된다는 것을 보이면 충분하다. 한편, 다음의 commutative diagram
 
-![inclusions](/assets/images/Math/Commutative_Algebra/Local_Criterion_for_Flatness-1.png){:style="width:10em" class="invert" .align-center}
+![inclusions](/assets/images/Math/Commutative_Algebra/Local_Criterion_for_Flatness-1.svg){:style="width:9.34em" class="invert" .align-center}
 
 에 $$-\otimes_AM$$을 취해 얻어지는 다음의 commutative diagram
 
-![trick](/assets/images/Math/Commutative_Algebra/Local_Criterion_for_Flatness-2.png){:style="width:16em" class="invert" .align-center}
+![trick](/assets/images/Math/Commutative_Algebra/Local_Criterion_for_Flatness-2.svg){:style="width:16.39em" class="invert" .align-center}
 
 을 생각하면, 왼쪽 $$\mathfrak{a}\otimes_AM \rightarrow M$$은 multiplication map $$m$$이고, 따라서 $$x\in\ker m$$는 $$\llcorner$$ 방향으로의 합성을 통해 $$0$$으로 옮겨진다. 따라서 오른쪽 $$(\mathfrak{a}/(\mathfrak{m}^t\cap I))\otimes_AM \rightarrow (A/\mathfrak{m}^t)\otimes_AM$$이 injective인 것만 보이면 충분하다. 다음의 isomorphism
 

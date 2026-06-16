@@ -1,0 +1,78 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG Four_lemma (Diagram_Chasing-1.svg)
+\begin{tikzcd}
+	A\rar["f"]\dar["\alpha"]&B\rar["g"]\dar["\beta"]&C\rar["h"]\dar["\gamma"]&D\dar["\delta"]\\
+	A'\rar["f'"]&B'\rar["g'"]&C'\rar["h'"]&D'
+\end{tikzcd}
+
+%%FIG five_lemma (Diagram_Chasing-2.svg)
+\begin{tikzcd}
+	A\rar["f"]\dar["\alpha"]&B\rar["g"]\dar["\beta"]&C\rar["h"]\dar["\gamma"]&D\rar["k"]\dar["\delta"]&E\dar["\epsilon"]\\
+	A'\rar["f'"]&B'\rar["g'"]&C'\rar["h'"]&D'\rar["k'"]&E'
+\end{tikzcd}
+
+%%FIG short_five_lemma (Diagram_Chasing-3.svg)
+\begin{tikzcd}
+	0\rar &A\rar["f"]\dar["\alpha"]&B\rar["g"]\dar["\beta"]&C\rar\dar["\gamma"]&0\\
+	0\rar &A'\rar["f'"]&B'\rar["g'"]&C'\rar&0
+\end{tikzcd}
+
+%%FIG induced_morphism (Diagram_Chasing-4.svg)
+\begin{tikzcd}
+	X\rar["h"]\dar["\xi"]&Y\dar["\eta"]\\
+	X'\rar["h'"]&Y'
+\end{tikzcd}
+
+%%FIG induced_morphism_kernel (Diagram_Chasing-5.svg)
+\begin{tikzcd}
+	\ker (h)\rar["i"]\drar["\xi\circ i", black!50]\dar[dashed, "\xi^\#"]&X\rar["h"]\dar["\xi"]&Y\dar["\eta"]\\
+	\ker (h')\rar["i'" below]&X'\rar["h'" below]&Y'.
+\end{tikzcd}
+
+%%FIG induced_morphism_cokernel (Diagram_Chasing-6.svg)
+\begin{tikzcd}
+	X\rar["h"]\dar["\xi"]&Y\dar["\eta"]\drar["p'\circ\eta", black!50]\rar["p"]&\coker(h)\dar[dashed, "\eta^*"]\\
+	X'\rar["h'" below]&Y'\rar["p'" below]&\coker (h').
+\end{tikzcd}
+
+%%FIG induced_exact_sequence (Diagram_Chasing-7.svg)
+\begin{tikzcd}
+	A\dar["\alpha"]\rar["f"]&B\rar["g"]\dar["\beta"]&C\dar["\gamma"]\\
+	A'\rar["f'"]&B'\rar["g'"]&C'
+\end{tikzcd}
+
+%%FIG snake_diagram (Diagram_Chasing-8.svg)
+\begin{tikzcd}
+	&A\rar["f"]\dar["\alpha"]&B\rar["g"]\dar["\beta"]&C\dar["\gamma"]\rar&0\\
+	0\rar&A'\rar["f'"]&B'\rar["g'"]&C'
+\end{tikzcd}
+
+%%FIG connecting_map_of_snake_diagram (Diagram_Chasing-9.svg)
+\begin{tikzcd}
+	&\color{accent1} \ker(\alpha)\arrow[accent1,r,"f^\sharp"]\arrow[d, black!50]& \color{accent1}\ker(\beta)\arrow[accent1,r,"g^\sharp"]\arrow[d , black!50]\arrow[ddd,phantom,pos=.43,""{coordinate, name=Z, anchor=south}]& \color{accent1}\ker(\gamma)\arrow[d , black!50] \\
+	&A\ar[r,"f"]\ar[d,"\alpha"]&B\ar[r,"g"]\ar[d,"\beta"]&C\ar[r]\ar[d,"\gamma"]&0\\
+	0\ar[r]&A'\ar[r,"f'"]\ar[d , black!50]&B'\ar[r,"g'"]\ar[d , black!50]&C'\ar[d , black!50]&\\
+	& \color{accent1}\coker(\alpha)\ar[accent1,r,"(f')^*"]\arrow[accent1,from=uuurr, dashed, crossing over, crossing over clearance=.5ex,"\delta", rounded corners, to path={ -- ([xshift=2ex]\tikztostart.east)
+	|- (Z) [near end]\tikztonodes
+	-| ([xshift=-2ex]\tikztotarget.west)
+	-- (\tikztotarget)}]& \color{accent1}\coker(\beta)\ar[accent1,r,"(g')^*"]& \color{accent1}\coker(\gamma)
+\end{tikzcd}
+
+%%FIG Nine_lemma (Diagram_Chasing-10.svg)
+\begin{tikzcd}
+	&0\dar&0\dar&0\dar&\\
+	0\rar&A_1\dar\rar&B_1\rar\dar&C_1\rar\dar&0\\
+	0\rar&A_2\dar\rar&B_2\rar\dar&C_2\rar\dar&0\\
+	0\rar&A_3\dar\rar&B_3\rar\dar&C_3\rar\dar&0\\
+	&0&0&0
+\end{tikzcd}
+
+\end{document}

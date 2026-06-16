@@ -286,7 +286,7 @@ $$\frac{H'(H\cap K)}{H'(H\cap K')}\cong \frac{K'(K\cap H)}{K'(K\cap H')}$$
 
 This proof can be summarized roughly by the following lattice:
 
-![Zassenhaus](/assets/images/Math/Group_Theory/Series_of_Groups-1.png){:style="width:26em" class="invert" .align-center}
+![Zassenhaus](/assets/images/Math/Group_Theory/Series_of_Groups-1.svg){:style="width:44.91em" class="invert" .align-center}
 
 First, the fact that $$H'\cap K=H'\cap (H\cap K)$$ and $$K'\cap H=K'\cap (K\cap H)$$ are normal subgroups of $$H\cap K$$ follows from [\[Algebraic Structures\] §Isomorphism Theorems, ⁋Lemma 4](/en/math/algebraic_structures/isomorphism_theorems#lem4). Therefore, their intersection $$(H'\cap K)(K'\cap H)$$ is also a normal subgroup of $$H\cap K$$. Now looking at the left-hand side of the claimed isomorphism, from [\[Algebraic Structures\] §Isomorphism Theorems, ⁋Theorem 5](/en/math/algebraic_structures/isomorphism_theorems#thm5)
 

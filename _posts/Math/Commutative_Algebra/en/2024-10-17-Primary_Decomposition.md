@@ -142,7 +142,7 @@ Now we prove the third assertion. In general, since the intersection of $$\mathf
 
 Now consider the following commutative diagram:
 
-![injective](/assets/images/Math/Commutative_Algebra/Primary_Decomposition-1.png){:style="width:12em" class="invert" .align-center}
+![injective](/assets/images/Math/Commutative_Algebra/Primary_Decomposition-1.svg){:style="width:11.73em" class="invert" .align-center}
 
 Since the kernel of $$M \rightarrow M/M_k$$ is $$M_k$$, to prove the desired claim it suffices to show that both $$M_{\mathfrak{p}_k}\rightarrow (M/M_k)_{\mathfrak{p}_k}$$ and $$M/M_k \rightarrow (M/M_k)_{\mathfrak{p}_k}$$ are injective. First, the injectivity of $$M/M_k \rightarrow (M/M_k)_{\mathfrak{p}_k}$$ is immediate from the fact that $$M_k$$ is $$\mathfrak{p}_k$$-primary. Then, as we saw at the outset,
 

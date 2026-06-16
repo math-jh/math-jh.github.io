@@ -1,0 +1,48 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG long_exact_sequence (Long_Exact_Sequence-1.svg)
+\begin{tikzcd}
+	&A_n/\operatorname{im}d_{n+1}^A\rar\dar["\partial^A"]&B_n/\operatorname{im}d_{n+1}^B\rar\dar["\partial^B"]&C_n/\operatorname{im}d_{n+1}^C\rar\dar["\partial^C"]&0\\
+	0\rar&\ker d_{n-1}^A\rar["f"]&\ker d_{n-1}^B\rar["g"]&\ker d_{n-1}^C
+\end{tikzcd}
+
+%%FIG long_exact_sequence_exactness (Long_Exact_Sequence-2.svg)
+\begin{tikzcd}
+	0\rar&A_n\rar\dar["d_n^A"]&B_n\rar\dar["d_n^B"]&C_n\rar\dar["d_n^C"]&0\\
+	0\rar&A_{n-1}\rar&B_{n-1}\rar&C_{n-1}\rar&0
+\end{tikzcd}
+
+%%FIG morphism_in_SES (Long_Exact_Sequence-3.svg)
+\begin{tikzcd}
+	0\rar&A_\bullet\rar\dar&B_\bullet\rar\dar&C_\bullet\rar\dar&0\\
+	0\rar&A'_\bullet\rar&B'_\bullet\rar&C'_\bullet\rar&0
+\end{tikzcd}
+
+%%FIG functoriality (Long_Exact_Sequence-4.svg)
+\begin{tikzcd}
+	\cdots\rar&H_n(A)\rar\dar&H_n(B)\rar\dar&H_n(C)\rar\dar&H_{n-1}(A)\rar\dar&\cdots\\
+	\cdots\rar&H_n(A')\rar&H_n(B')\rar&H_n(C')\rar&H_{n-1}(A')\rar&\cdots
+\end{tikzcd}
+
+%%FIG chain_homotopy (Long_Exact_Sequence-5.svg)
+\begin{tikzcd}[column sep=40pt, row sep=30pt]
+	\cdots\rar&C_{n+1}\rar["d_{n+1}"]\dar["g_{n+1}", shift left=2pt]\dar["f_{n+1}" left, shift right=2pt]&C_n\rar["d_n"]\dar["f_{n}" left, shift right=2pt]\dar["g_{n}", shift left=2pt]\ar[dl, "h_n" above, black!50]&C_{n-1}\rar["d_{n-1}"]\dar["f_{n-1}" left, shift right=2pt]\dar["g_{n-1}", shift left=2pt]\ar[dl, "h_{n-1}" above, black!50]&\cdots\\
+	\cdots\rar&D_{n+1}\rar["d_{n+1}"]&D_n\rar["d_n"]&D_{n-1}\rar["d_{n-1}"]&\cdots
+\end{tikzcd}
+
+%%FIG composition_in_homotopy_category (Long_Exact_Sequence-6.svg)
+\begin{tikzcd}[column sep=40pt, row sep=30pt]
+	\cdots\rar&B_{n+1}\rar["d_{n+1}"]\dar["u_{n+1}"]&B_n\rar["d_n"]\dar["u_n"]&B_{n-1}\rar["d_{n-1}"]\dar["u_{n-1}"]&\cdots\\
+	\cdots\rar&C_{n+1}\rar["d_{n+1}"]\dar["g_{n+1}", shift left=2pt]\dar["f_{n+1}" left, shift right=2pt]&C_n\rar["d_n"]\dar["f_{n}" left, shift right=2pt]\dar["g_{n}", shift left=2pt]\ar[dl, "h_n" above, black!50]&C_{n-1}\rar["d_{n-1}"]\dar["f_{n-1}" left, shift right=2pt]\dar["g_{n-1}", shift left=2pt]\ar[dl, "h_{n-1}" above, black!50]&\cdots\\
+	\cdots\rar&D_{n+1}\rar["d_{n+1}"]\dar["v_{n+1}"]&D_n\rar["d_n"]\dar["v_n"]&D_{n-1}\rar["d_{n-1}"]\dar["v_{n-1}"]&\cdots\\
+	\cdots\rar&E_{n+1}\rar["d_{n+1}"]&E_n\rar["d_n"]&E_{n-1}\rar["d_{n-1}"]&\cdots
+\end{tikzcd}
+
+\end{document}

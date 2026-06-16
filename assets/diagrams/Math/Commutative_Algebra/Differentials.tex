@@ -1,0 +1,30 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG setup (Differentials-1.svg)
+\begin{tikzcd}
+	A & {A'} \\
+	E & {E'}
+	\arrow["\phi", from=1-1, to=1-2]
+	\arrow["\rho"', from=1-1, to=2-1]
+	\arrow["{\rho'}", from=1-2, to=2-2]
+	\arrow["\varphi"', from=2-1, to=2-2]
+\end{tikzcd}
+
+%%FIG functoriality (Differentials-2.svg)
+\begin{tikzcd}
+	A & {A'} \\
+	\Omega_{E/A} & \Omega_{E'/A}
+	\arrow["\phi", from=1-1, to=1-2]
+	\arrow["d_{E/A}"', from=1-1, to=2-1]
+	\arrow["d_{E'/A'}", from=1-2, to=2-2]
+	\arrow["\Omega_{\varphi/\phi}"', from=2-1, to=2-2]
+\end{tikzcd}
+
+\end{document}
