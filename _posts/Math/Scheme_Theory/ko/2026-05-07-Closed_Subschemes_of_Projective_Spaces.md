@@ -45,7 +45,7 @@ $$S_{(\x_i)} \rightarrow (S_\bullet/\mathfrak{a})_{(\bar\x_i)};\qquad \frac{f}{\
 
 $$\mathfrak{a}_{(\x_i)}=\left\{\frac{a}{\x_i^d}\;\middle\vert\;\text{$a\in\mathfrak{a}$ homogeneous of degree $d$}\right\}$$
 
-이다. 즉 $$\iota$$는 각 chart 위에서 $$\Spec\bigl(S_{(\x_i)}/\mathfrak{a}_{(\x_i)}\bigr) \rightarrow \Spec S_{(\x_i)}$$ 꼴의 closed embedding이고, 이들이 $$D_+(\x_i\x_j)$$들 위에서 호환되는 것은 위의 식이 $$\x_i$$의 선택과 무관한 방식으로 정의되었기 때문이다. 따라서 $$\iota$$는 scheme morphism이며, sheaf morphism $$\iota^\sharp:\mathscr{O}_{\mathbb{P}^n} \rightarrow \iota_\ast\mathscr{O}_{\Proj(S_\bullet/\mathfrak{a})}$$가 cover $$(D_+(\x_i))$$ 위에서 surjective이므로 stalk들 위에서도 surjective이다. 즉 $$\iota$$는 closed embedding이다. ([§닫힌 부분스킴, ⁋정의 2](/ko/math/scheme_theory/closed_subschemes#def2))
+이다. 즉 $$\iota$$는 각 chart 위에서 $$\Spec\bigl(S_{(\x_i)}/\mathfrak{a}_{(\x_i)}\bigr) \rightarrow \Spec S_{(\x_i)}$$ 꼴의 closed embedding이고, 이들이 $$D_+(\x_i\x_j)$$들 위에서 호환되는 것은 위의 식이 $$\x_i$$의 선택과 무관한 방식으로 정의되었기 때문이다. 따라서 $$\iota$$는 scheme morphism이며, sheaf morphism $$\iota^\sharp:\mathcal{O}_{\mathbb{P}^n} \rightarrow \iota_\ast\mathcal{O}_{\Proj(S_\bullet/\mathfrak{a})}$$가 cover $$(D_+(\x_i))$$ 위에서 surjective이므로 stalk들 위에서도 surjective이다. 즉 $$\iota$$는 closed embedding이다. ([§닫힌 부분스킴, ⁋정의 2](/ko/math/scheme_theory/closed_subschemes#def2))
 
 </details>
 
@@ -81,9 +81,9 @@ $$T=\left\{f\in S_\bullet\;\middle\vert\;\text{$f$ homogeneous,}\quad \frac{f}{\
 
 거꾸로 $$g=f/\x_i^d\in I_i$$가 주어졌다 하자. 여기서 $$f$$는 degree $$d$$의 homogeneous polynomial이다. 충분히 큰 $$N$$에 대하여 $$\x_i^Nf\in T$$임을 보이면, $$g=(\x_i^Nf)/\x_i^{N+d}\in\mathfrak{a}_{(\x_i)}$$가 되어 증명이 끝난다. 이를 위해 각각의 $$j$$에 대하여 $$(\x_i^Nf)/\x_j^{N+d}\in I_j$$이도록 하는 $$N$$을 찾자. $$j=i$$인 경우는 임의의 $$N$$에 대해 성립하므로 $$j\neq i$$라 하자.
 
-핵심은 $$I_i$$와 $$I_j$$가 교집합 $$D_+(\x_i\x_j)$$ 위에서 호환된다는 것이다. $$Z$$의 ideal sheaf $$\mathscr{I}_{Z/\mathbb{P}^n}=\ker\iota^\sharp$$를 생각하면 ([§닫힌 부분스킴, ⁋정의 5](/ko/math/scheme_theory/closed_subschemes#def5)), kernel은 단면들 위에서 계산되므로 $$\mathscr{I}_{Z/\mathbb{P}^n}(D_+(\x_i))=I_i$$이다. 한편 [§사영스킴, ⁋보조정리 9](/ko/math/scheme_theory/projective_schemes#lem9)에 의하여 $$D_+(\x_i\x_j)$$는 $$\Spec S_{(\x_i)}$$의 principal open subset $$D(\x_j/\x_i)$$이고, affine scheme 위에서 structure sheaf와 $$\iota_\ast\mathscr{O}_Z$$의 단면들은 모두 localization으로 주어지므로, localization의 exactness에 의해
+핵심은 $$I_i$$와 $$I_j$$가 교집합 $$D_+(\x_i\x_j)$$ 위에서 호환된다는 것이다. $$Z$$의 ideal sheaf $$\mathcal{I}_{Z/\mathbb{P}^n}=\ker\iota^\sharp$$를 생각하면 ([§닫힌 부분스킴, ⁋정의 5](/ko/math/scheme_theory/closed_subschemes#def5)), kernel은 단면들 위에서 계산되므로 $$\mathcal{I}_{Z/\mathbb{P}^n}(D_+(\x_i))=I_i$$이다. 한편 [§사영스킴, ⁋보조정리 9](/ko/math/scheme_theory/projective_schemes#lem9)에 의하여 $$D_+(\x_i\x_j)$$는 $$\Spec S_{(\x_i)}$$의 principal open subset $$D(\x_j/\x_i)$$이고, affine scheme 위에서 structure sheaf와 $$\iota_\ast\mathcal{O}_Z$$의 단면들은 모두 localization으로 주어지므로, localization의 exactness에 의해
 
-$$\mathscr{I}_{Z/\mathbb{P}^n}(D_+(\x_i\x_j))=(I_i)_{\x_j/\x_i}=(I_j)_{\x_i/\x_j}$$
+$$\mathcal{I}_{Z/\mathbb{P}^n}(D_+(\x_i\x_j))=(I_i)_{\x_j/\x_i}=(I_j)_{\x_i/\x_j}$$
 
 이다. 여기서 양변은 모두 $$S_{(\x_i\x_j)}$$의 ideal이다.
 

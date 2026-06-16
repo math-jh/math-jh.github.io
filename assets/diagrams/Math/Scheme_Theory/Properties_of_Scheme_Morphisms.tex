@@ -1,0 +1,33 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG finite_type_morphism (Properties_of_Scheme_Morphisms-1.svg)
+\begin{tikzpicture}
+	\draw[accent2] (-2,0) -- (2,0);
+	\fill[accent2!30] (-2,1) rectangle (2,5);
+	\fill (-1,0) circle [radius=2pt];
+	\draw[thick] (-1,1) -- (-1,5);
+	\draw[-{stealth}] (0,0.8) -- (0,0.2);
+	\draw (4.5,3) node{$\mathbb{A}^2_\Bbbk\cong \Spec \Bbbk[\x,\y]\cong \Spec \Bbbk[\x][\y]$};
+	\draw (4,0) node{$\mathbb{A}^1_\Bbbk\cong \Spec \Bbbk[\x]$};
+\end{tikzpicture}
+
+%%FIG finite_morphism (Properties_of_Scheme_Morphisms-2.svg)
+\begin{tikzpicture}
+	\draw (-.1,-4)--(4.9,-4) node[right]{$\mathbb{A}^1_\Bbbk\cong \Spec \Bbbk[\x]$};
+	\draw[domain=0:2.2, variable=\t] plot ({\t*\t},{\t}) node[right]{$\Spec \Bbbk[\x,\y]/(\y^2-\x)$};
+	\draw[domain=0:2.2, variable=\t] plot ({\t*\t},{-\t});
+	\fill (4,-4) circle[radius=2pt];
+	\draw[dashed, black!50] (4,2)--(4,-4);
+	\draw[-{stealth}] (2.5,-2.5) -- (2.5,-3.5);
+	\fill[accent1] (4,2) circle[radius=2pt];
+	\fill[accent1] (4,-2) circle[radius=2pt];
+\end{tikzpicture}
+
+\end{document}

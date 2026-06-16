@@ -47,13 +47,13 @@ $$D(\mathfrak{m})=\{(0)\}.$$
 
 On the other hand, if $$\mathfrak{m}=(\pi)$$, then by [§Spectra, ⁋Proposition 5](/en/math/scheme_theory/spectrums#prop5),
 
-$$\mathscr{O}(D(\mathfrak{m}))=\mathscr{O}(D(\pi))\cong A_\pi\cong \Frac(A).$$
+$$\mathcal{O}(D(\mathfrak{m}))=\mathcal{O}(D(\pi))\cong A_\pi\cong \Frac(A).$$
 
-Of course $$\mathscr{O}(\Spec A)\cong A$$.
+Of course $$\mathcal{O}(\Spec A)\cong A$$.
 
 Meanwhile, the two points of $$\Spec A$$ can be viewed geometrically as follows: each point is determined by a ring homomorphism from $$A$$ to its residue field, namely $$\kappa((0))$$ and $$\kappa(\mathfrak{m})$$. Using [§Spectra, ⁋Proposition 5](/en/math/scheme_theory/spectrums#prop5) again,
 
-$$\mathscr{O}_{(0)}\cong A_{(0)}\cong \Frac(A),\qquad \mathscr{O}_\mathfrak{m}\cong A_\mathfrak{m}$$
+$$\mathcal{O}_{(0)}\cong A_{(0)}\cong \Frac(A),\qquad \mathcal{O}_\mathfrak{m}\cong A_\mathfrak{m}$$
 
 from which we obtain
 
@@ -67,7 +67,7 @@ $$\kappa((0))=\Frac(A), \qquad \kappa(\mathfrak{m})=A_\mathfrak{m}/\mathfrak{m}A
 
 <ins id="def3">**Definition 3**</ins> For a scheme morphism $$f:X \rightarrow Y$$, we define the *diagonal morphism* as $$\Delta: X \rightarrow X \times_Y X$$.
 
-![diagonal_morphism](/assets/images/Math/Scheme_Theory/Valuative_Criteria-1.png){:style="width:12em" class="invert" .align-center}
+![diagonal_morphism](/assets/images/Math/Scheme_Theory/Valuative_Criteria-1.svg){:style="width:13.51em" class="invert" .align-center}
 
 If $$\Delta$$ is a closed immersion, we call $$f$$ *separated*, and say $$X$$ is *separated* over $$Y$$. If $$X$$ is separated over $$\Spec \mathbb{Z}$$, we simply call $$X$$ a *separated* scheme.
 
@@ -109,7 +109,7 @@ An example of a non-separated scheme is the line with double origin constructed 
 
 <ins id="thm6">**Theorem 6**</ins> For a Noetherian scheme $$X$$ and a scheme morphism $$f:X \rightarrow Y$$, $$f$$ being separated is equivalent to the following: for any valuation ring $$A$$ and its quotient field $$K=\Frac(A)$$, for any scheme morphisms $$\Spec A \rightarrow Y$$, $$\Spec K \rightarrow X$$ and the following commutative diagram
 
-![valuative_criterion_for_separatedness](/assets/images/Math/Scheme_Theory/Valuative_Criteria-2.png){:style="width:8em" class="invert" .align-center}
+![valuative_criterion_for_separatedness](/assets/images/Math/Scheme_Theory/Valuative_Criteria-2.svg){:style="width:8.27em" class="invert" .align-center}
 
 whenever the outer square is given, there is at most one $$\Spec A \rightarrow X$$ making the whole diagram commute.
 
@@ -145,7 +145,7 @@ Just as for [Theorem 6](#thm6), there is also a valuative criterion for proper m
 
 <ins id="thm9">**Theorem 9**</ins> For a Noetherian scheme $$X$$ and a scheme morphism $$f:X \rightarrow Y$$, $$f$$ being proper is equivalent to the following: for any valuation ring $$A$$ and its quotient field $$K=\Frac(A)$$, for any scheme morphisms $$\Spec A \rightarrow Y$$, $$\Spec K \rightarrow X$$ and the following commutative diagram
 
-![valuative_criterion_for_separatedness](/assets/images/Math/Scheme_Theory/Valuative_Criteria-2.png){:style="width:8em" class="invert" .align-center}
+![valuative_criterion_for_separatedness](/assets/images/Math/Scheme_Theory/Valuative_Criteria-2.svg){:style="width:8.27em" class="invert" .align-center}
 
 whenever the outer square is given, there exists exactly one $$\Spec A \rightarrow X$$ making the whole diagram commute.
 

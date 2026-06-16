@@ -26,9 +26,9 @@ weight: 8
 
 Scheme은 affine scheme으로부터 만들어진다. Scheme morphism의 성질 $$P$$가 local on target이라면, scheme morphism $$\varphi:X \rightarrow Y$$의 target $$Y$$를 $$\Spec B$$로 가정하여도 되고, 그럼 adjoint
 
-$$\Hom_\Sch(X, \Spec B)\cong \Hom_\cRing(B, \Gamma(X, \mathscr{O}_X))$$
+$$\Hom_\Sch(X, \Spec B)\cong \Hom_\cRing(B, \Gamma(X, \mathcal{O}_X))$$
 
-를 통해 우리는 scheme morphism $$X \rightarrow \Spec B$$의 성질을 ring homomorphism $$B \rightarrow \Gamma(X, \mathscr{O}_X)$$의 성질을 통해 정의할 수 있다. 
+를 통해 우리는 scheme morphism $$X \rightarrow \Spec B$$의 성질을 ring homomorphism $$B \rightarrow \Gamma(X, \mathcal{O}_X)$$의 성질을 통해 정의할 수 있다. 
 
 ## 준옹골사상과 준분리사상
 
@@ -117,7 +117,7 @@ Locally noetherian scheme $$X$$의 임의의 두 affine open subset $$V_1=\Spec 
 
 우리는 adjoint
 
-$$\Hom_\Sch(X, \Spec B)\cong\Hom_\cRing (B, \Gamma(X, \mathscr{O}_X))$$
+$$\Hom_\Sch(X, \Spec B)\cong\Hom_\cRing (B, \Gamma(X, \mathcal{O}_X))$$
 
 에서, 특별히 $$X=\Spec A$$인 경우 
 
@@ -125,7 +125,7 @@ $$\Hom_\Sch(\Spec A,\Spec B)\cong\Hom_\cRing (B, A)$$
 
 가 성립하는 것을 안다. ([§아핀스킴, ⁋명제 11](/ko/math/scheme_theory/affine_schemes#prop11)) 따라서, 위와 같이 affine-local on target인 스킴 사상의 성질을 살펴볼 때에는, $$Y$$의 임의의 affine open subset $$V\cong\Spec B$$에 대하여 $$U=\varphi^{-1}(V)$$도 $$X$$의 open subscheme $$U\cong \Spec A$$이고, 따라서 $$\varphi\vert_U: U \rightarrow V$$가 affine scheme들 사이의 morphism이 되어 이 성질을 ring homomorphism 
 
-$$(\varphi\vert_U)^\sharp(V): \mathscr{O}_V(V) \rightarrow \varphi^\ast \mathscr{O}_U(V)=\mathscr{O}_U(U)$$
+$$(\varphi\vert_U)^\sharp(V): \mathcal{O}_V(V) \rightarrow \varphi^\ast \mathcal{O}_U(V)=\mathcal{O}_U(U)$$
 
 으로부터 얻어낼 수 있으면 좋을 것이다. 그러나 물론 임의의 scheme morphism $$\varphi: X \rightarrow Y$$에 대하여, $$Y$$의 affine open subset의 preimage가 affine이 되지는 않는다. ([§스킴, ⁋예시 8](/ko/math/scheme_theory/schemes#ex8))
 
@@ -149,7 +149,7 @@ $$(\varphi\vert_U)^\sharp(V): \mathscr{O}_V(V) \rightarrow \varphi^\ast \mathscr
 
 <ins id="def10">**정의 10**</ins> Scheme morphism $$\varphi:X \rightarrow Y$$가 *finite<sub>유한</sub>*인 것은 $$\varphi$$가 affine이고, $$Y$$의 임의의 affine open subset $$V$$에 대하여, ring homomorphism
 
-$$(\varphi\vert_{\varphi^{-1}(V)})^\sharp(V): \mathscr{O}_V(V) \rightarrow \varphi^\ast \mathscr{O}_{\varphi^{-1}(V)}(V)$$
+$$(\varphi\vert_{\varphi^{-1}(V)})^\sharp(V): \mathcal{O}_V(V) \rightarrow \varphi^\ast \mathcal{O}_{\varphi^{-1}(V)}(V)$$
 
 이 finite ring homomorphism인 것이다. ([\[가환대수학\] §정수적 확장, ⁋정의 3](/ko/math/commutative_algebra/integral_extension#def3))
 
@@ -161,7 +161,7 @@ $$(\varphi\vert_{\varphi^{-1}(V)})^\sharp(V): \mathscr{O}_V(V) \rightarrow \varp
 
 <ins id="def11">**정의 11**</ins> Scheme morphism $$\varphi:X \rightarrow Y$$가 *integral<sub>정수형</sub>*인 것은 $$\varphi$$가 affine이고, $$Y$$의 임의의 affine open subset $$V$$에 대하여, ring homomorphism
 
-$$(\varphi\vert_{\varphi^{-1}(V)})^\sharp(V): \mathscr{O}_V(V) \rightarrow \varphi^\ast \mathscr{O}_{\varphi^{-1}(V)}(V)$$
+$$(\varphi\vert_{\varphi^{-1}(V)})^\sharp(V): \mathcal{O}_V(V) \rightarrow \varphi^\ast \mathcal{O}_{\varphi^{-1}(V)}(V)$$
 
 이 integral ring homomorphism인 것이다. ([\[가환대수학\] §정수적 확장, ⁋정의 3](/ko/math/commutative_algebra/integral_extension#def3)) 
 
@@ -175,7 +175,7 @@ $$(\varphi\vert_{\varphi^{-1}(V)})^\sharp(V): \mathscr{O}_V(V) \rightarrow \varp
 
 <ins id="def12">**정의 12**</ins> Scheme morphism $$\varphi:X \rightarrow Y$$가 *locally of finite type<sub>국소적으로 유한형</sub>*인 것은 $$Y$$의 임의의 affine open subset $$V$$와 $$\varphi^{-1}(V)$$의 임의의 affine open subset $$U$$에 대하여, 
 
-$$(\varphi\vert_{U})^\sharp(V): \mathscr{O}_V(V) \rightarrow \varphi^\ast \mathscr{O}_{\varphi^{-1}(V)}(V)$$
+$$(\varphi\vert_{U})^\sharp(V): \mathcal{O}_V(V) \rightarrow \varphi^\ast \mathcal{O}_{\varphi^{-1}(V)}(V)$$
 
 이 finite type인 것이다. ([\[가환대수학\] §정수적 확장, ⁋정의 3](/ko/math/commutative_algebra/integral_extension#def3)) 
 
@@ -215,7 +215,7 @@ $$(\varphi\vert_{U})^\sharp(V): \mathscr{O}_V(V) \rightarrow \varphi^\ast \maths
 
 이제 이에 대응되는 scheme morphism $$\Spec\iota: \Spec \mathbb{K}[\x,\y] \rightarrow\Spec \mathbb{K}[\x]$$를 생각하자. 이는 임의의 prime ideal $$\mathfrak{p}\subset \mathbb{K}[\x,\y]$$를 받아 $$\mathbb{K}[\x]$$의 prime ideal $$\mathfrak{p}\cap \mathbb{K}[\x]$$를 내놓는 함수이다. 이는 기하적으로는 affine plane $$\mathbb{A}^2_\mathbb{K}$$의 점 $$(x,y)$$를 affine line $$\mathbb{A}^1_\mathbb{K}$$의 점 $$x$$에 대응시키는 함수이다. 
 
-![finite_type_morphism](/assets/images/Math/Scheme_Theory/Properties_of_Scheme_Morphisms-1.png){:style="width:25em" class="invert" .align-center}
+![finite_type_morphism](/assets/images/Math/Scheme_Theory/Properties_of_Scheme_Morphisms-1.svg){:style="width:27.72em" class="invert" .align-center}
 
 이와 관련된 finite morphism의 예시로는 위의 ring homomorphism $$\iota:\mathbb{K}[\x]\rightarrow \mathbb{K}[\x,\y]$$에 projection map $$\pi:\mathbb{K}[\x,\y] \rightarrow \mathbb{K}[\x,\y]/(\x-\y^2)$$을 합성한 것이 있다. 그럼 $$\mathbb{K}[\x,\y]/(\x-\y^2)$$은 $$\mathbb{K}[\x]$$-module로서 $$1$$과 $$\y$$에 의해 생성되므로 $$\phi:\mathbb{K}[\x] \rightarrow \mathbb{K}[\x,\y]/(\x-\y^2)$$은 finite morphism이다. 
 
@@ -229,7 +229,7 @@ $$\Spec\phi: \Spec \frac{\mathbb{K}[\x,\y]}{(\x-\y^2)}\rightarrow \Spec \mathbb{
 
 은 기하적으로 $$\x=\y^2$$의 zero set $$Z(\x-\y^2)$$에서 $$x$$축으로의 projection으로 볼 수 있다.
 
-![finite_morphism](/assets/images/Math/Scheme_Theory/Properties_of_Scheme_Morphisms-2.png){:style="width:25em" class="invert" .align-center}
+![finite_morphism](/assets/images/Math/Scheme_Theory/Properties_of_Scheme_Morphisms-2.svg){:style="width:25.48em" class="invert" .align-center}
 
 이 두 예시의 기하학적인 차이는 꽤나 명확하다. 첫 번째 예시의 경우, target의 한 점에서의 fiber가 무한집합인 반면 두 번째 예시의 경우 한 점에서의 fiber가 유한집합이다. 대수적으로 이는 target $$\mathbb{A}_\mathbb{K}^1$$의 임의의 점 $$\mathfrak{p}=(\x-a)$$를 가져왔을 때, 임의의 $$\mathfrak{q}_b=(\x-a, \y-b)\in \mathbb{A}_\mathbb{K}^2$$는 $$(\Spec\iota)(\mathfrak{q}_b)=\mathfrak{p}$$를 만족하는 반면, 두 번째 예시에서는 오직 두 개의 점 $$\mathfrak{q}_+=(\x-a, \y-\sqrt{a})$$와 $$\mathfrak{q}_-=(\x-a, \y+\sqrt{a})$$만이 $$(\Spec\phi)(\mathfrak{q}_\pm)=\mathfrak{p}$$를 만족하는 것으로 확인할 수 있다. 
 

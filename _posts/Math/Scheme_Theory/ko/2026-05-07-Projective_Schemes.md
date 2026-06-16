@@ -42,7 +42,7 @@ $$\mathbb{P}^n=\mathbb{R}^n\coprod \mathbb{P}^{n-1}$$
 
 을 얻는다. 이 과정은 $$n=2$$인 경우 다음 그림에 표현되어 있다. 
 
-![stereographic_projection](/assets/images/Math/Scheme_Theory/Projective_Schemes-1.png){:style="width:25em" class="invert" .align-center}
+![stereographic_projection](/assets/images/Math/Scheme_Theory/Projective_Schemes-1.svg){:style="width:31.18em" class="invert" .align-center}
 
 이를 식으로 적으면, $$\mathbb{P}^n$$의 한 점 $$[x_0:\cdots:x_n]$$에 대하여, 만일 $$x_i\neq 0$$이라면 $$[x_0:\cdots:x_n]$$의 동치류 안에서 $$i$$번째 좌표가 $$1$$이 되는 점을 (유일하게) 찾을 수 있으며, 이 점을 $$P_i$$의 점으로 보아 다음 부분집합
 
@@ -84,7 +84,7 @@ $$(A^i)_{\x_{j/i}} \rightarrow (A^j)_{\x_{i/j}};\qquad \x_{k/i}\mapsto \x_{k/j}/
 
 ## 사영스킴
 
-현재로서는 위의 설명이 불완전한 부분들이 있다. 가령, $$U_i$$들이 $$\mathbb{P}^n$$의 open subscheme인 것은 [§스킴, ⁋보조정리 9](/ko/math/scheme_theory/schemes#lem9)의 결과이기는 하지만, 그 정의 자체로도 함수 $$\x_i$$가 $$0$$이 되지 않는 집합이므로 열린집합이 되어야 할 것처럼 보인다. 그러나 문제는 $$\x_i$$가 $$\mathbb{P}^n$$ 위의 함수가 아니라는 데에 있다. 심지어 $$n=1$$인 경우만 보아도 우리는 $$\mathscr{O}_{\mathbb{P}^1}(\mathbb{P}^1)\cong \mathbb{K}$$인 것을 확인했다. 이는 위상수학에서의 construction만으로도 확인할 수 있는데, $$\mathbb{R}^{n+1}\setminus \{0\}$$의 한 점 $$(x_0,\ldots, x_n)$$을 받아 $$x_i$$를 내놓는 함수 $$\x_i: \mathbb{R}^{n+1}\setminus\{0\} \rightarrow \mathbb{R}$$은 $$\sim$$과 compatible하지 않고 따라서 $$\mathbb{P}^n$$ 위의 함수를 정의하지 않는다. 또 다른 예시로 $$\mathbb{R}^2\setminus\{0\}$$ 위에서 정의된 함수 $$f: \mathbb{R}^2\setminus\{0\} \rightarrow \mathbb{R}$$가 다음의 식
+현재로서는 위의 설명이 불완전한 부분들이 있다. 가령, $$U_i$$들이 $$\mathbb{P}^n$$의 open subscheme인 것은 [§스킴, ⁋보조정리 9](/ko/math/scheme_theory/schemes#lem9)의 결과이기는 하지만, 그 정의 자체로도 함수 $$\x_i$$가 $$0$$이 되지 않는 집합이므로 열린집합이 되어야 할 것처럼 보인다. 그러나 문제는 $$\x_i$$가 $$\mathbb{P}^n$$ 위의 함수가 아니라는 데에 있다. 심지어 $$n=1$$인 경우만 보아도 우리는 $$\mathcal{O}_{\mathbb{P}^1}(\mathbb{P}^1)\cong \mathbb{K}$$인 것을 확인했다. 이는 위상수학에서의 construction만으로도 확인할 수 있는데, $$\mathbb{R}^{n+1}\setminus \{0\}$$의 한 점 $$(x_0,\ldots, x_n)$$을 받아 $$x_i$$를 내놓는 함수 $$\x_i: \mathbb{R}^{n+1}\setminus\{0\} \rightarrow \mathbb{R}$$은 $$\sim$$과 compatible하지 않고 따라서 $$\mathbb{P}^n$$ 위의 함수를 정의하지 않는다. 또 다른 예시로 $$\mathbb{R}^2\setminus\{0\}$$ 위에서 정의된 함수 $$f: \mathbb{R}^2\setminus\{0\} \rightarrow \mathbb{R}$$가 다음의 식
 
 $$f(x_0,x_1)=x_0^2-x_1$$
 
@@ -278,13 +278,13 @@ $$D(f^{\deg g}/g^{\deg f})\cong \Spec A_{(fg)}\cong D(g^{\deg f}/f^{\deg g})$$
 
 </div>
 
-특히 $$\Proj A_\bullet$$은 locally ringed space이므로, 임의의 $$\mathfrak{p}\in \Proj A_\bullet$$에 대하여 stalk $$\mathscr{O}_{\Proj A_\bullet,\mathfrak{p}}$$은 local ring이다. 그런데 어차피 $$\mathfrak{p}$$는 적당한 affine open neighborhood에 넣을 수 있으므로, 본질적으로 [§아핀스킴, ⁋보조정리 8](/ko/math/scheme_theory/affine_schemes#lem8)과 동일한 과정으로 다음을 보일 수 있다. 
+특히 $$\Proj A_\bullet$$은 locally ringed space이므로, 임의의 $$\mathfrak{p}\in \Proj A_\bullet$$에 대하여 stalk $$\mathcal{O}_{\Proj A_\bullet,\mathfrak{p}}$$은 local ring이다. 그런데 어차피 $$\mathfrak{p}$$는 적당한 affine open neighborhood에 넣을 수 있으므로, 본질적으로 [§아핀스킴, ⁋보조정리 8](/ko/math/scheme_theory/affine_schemes#lem8)과 동일한 과정으로 다음을 보일 수 있다. 
 
 <div class="proposition" markdown="1">
 
 <ins id="lem11">**보조정리 11**</ins> Graded ring $$A_\bullet$$과 임의의 $$\mathfrak{p}\in \Proj A_\bullet$$에 대하여, 다음 isomorphism
 
-$$\mathscr{O}_{\Proj A_\bullet,\mathfrak{p}}\cong A_{(\mathfrak{p})}$$
+$$\mathcal{O}_{\Proj A_\bullet,\mathfrak{p}}\cong A_{(\mathfrak{p})}$$
 
 이 존재한다. 
 
@@ -318,7 +318,7 @@ $$\mathbb{K}[\x_{0/i}, \ldots, \x_{n/i}]\rightarrow \mathbb{K}[\x_0,\ldots, \x_n
 
 이제 임의의 $$\mathfrak{p}\in \mathbb{P}^n_\mathbb{K}$$는 어떠한 $$D_+(\x_i)$$에 포함된다. 위의 isomorphism을 통하여 $$D_+(\x_i)$$의 점 $$\mathfrak{p}$$가 $$U_i=\Spec \mathbb{K}[\x_{0/i}, \ldots, \x_{n/i}]/(\x_{i/i}-1)$$의 점 $$\mathfrak{q}$$로 옮겨졌다 하자. 그럼 이 경우에 다음의 isomorphism
 
-$$\mathscr{O}_{\mathbb{P}^n_\mathbb{K},\mathfrak{p}}\cong \mathscr{O}_{U_i, \mathfrak{q}}$$
+$$\mathcal{O}_{\mathbb{P}^n_\mathbb{K},\mathfrak{p}}\cong \mathcal{O}_{U_i, \mathfrak{q}}$$
 
 을 기대하는 것이 당연할 것이다. 그리고 이는 물론 성립한다. ([\[가환대수학\] §등급환의 국소화, ⁋명제 8](/ko/math/commutative_algebra/localization_of_graded_rings#prop8)) 
 

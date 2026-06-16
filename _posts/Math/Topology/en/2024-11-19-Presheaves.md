@@ -48,38 +48,38 @@ Define the category $$\Open(X)$$ as the category associated to the ordered set $
 
 <div class="definition" markdown="1">
 
-<ins id="def2">**Definition 2**</ins> For a topological space $$X$$, a contravariant functor $$\mathscr{F}:\Open(X)^\op \rightarrow \Set$$ is called a *presheaf* of sets on $$X$$.
+<ins id="def2">**Definition 2**</ins> For a topological space $$X$$, a contravariant functor $$\mathcal{F}:\Open(X)^\op \rightarrow \Set$$ is called a *presheaf* of sets on $$X$$.
 
 </div>
 
-By convention, presheaves are commonly denoted by $$\mathcal{F}$$ or $$\mathscr{F}$$; between these, the calligraphic $$\mathcal{F}$$ is slightly more natural. However, since we are already using this font for topological structures, we adopt the script font in the topology category.
+By convention, presheaves are commonly denoted by $$\mathcal{F}$$ or $$\mathcal{F}$$; between these, the calligraphic $$\mathcal{F}$$ is slightly more natural. However, since we are already using this font for topological structures, we adopt the script font in the topology category.
 
-Since $$\mathscr{F}$$ is contravariant, each inclusion $$U\hookrightarrow V$$ of open sets yields a morphism $$\rho_{VU}: \mathscr{F}(V)\rightarrow \mathscr{F}(U)$$, and because $$\mathscr{F}$$ preserves composition, whenever $$U\hookrightarrow V\hookrightarrow W$$ we must have $$\rho_{WU}=\rho_{VU}\circ\rho_{WV}$$.
+Since $$\mathcal{F}$$ is contravariant, each inclusion $$U\hookrightarrow V$$ of open sets yields a morphism $$\rho_{VU}: \mathcal{F}(V)\rightarrow \mathcal{F}(U)$$, and because $$\mathcal{F}$$ preserves composition, whenever $$U\hookrightarrow V\hookrightarrow W$$ we must have $$\rho_{WU}=\rho_{VU}\circ\rho_{WV}$$.
 
 <div class="example" markdown="1">
 
-<ins id="ex3">**Example 3**</ins> Let $$X, Y$$ be two topological spaces, and define $$\mathscr{F}$$ as follows.
+<ins id="ex3">**Example 3**</ins> Let $$X, Y$$ be two topological spaces, and define $$\mathcal{F}$$ as follows.
 
-- For any open set $$U$$, set $$\mathscr{F}(U)=\Hom_\Top(U, Y)$$.
-- For open sets $$U\subseteq V$$, let $$\rho_{VU}:\mathscr{F}(V) \rightarrow \mathscr{F}(U)$$ be the restriction map sending a continuous function on $$V$$ to its restriction to $$U$$.
+- For any open set $$U$$, set $$\mathcal{F}(U)=\Hom_\Top(U, Y)$$.
+- For open sets $$U\subseteq V$$, let $$\rho_{VU}:\mathcal{F}(V) \rightarrow \mathcal{F}(U)$$ be the restriction map sending a continuous function on $$V$$ to its restriction to $$U$$.
 
-Then $$\mathscr{F}$$ is a presheaf.
+Then $$\mathcal{F}$$ is a presheaf.
 
 </div>
 
-In particular, this definition can be applied when a projection $$p:Y \rightarrow X$$ is given, by considering the presheaf $$\mathscr{F}$$ of continuous sections from $$X$$ to $$Y$$ ([\[Set Theory\] §Retraction and Section, ⁋Definition 2](/en/math/set_theory/retraction_and_section#def2)). Generalizing this, we make the following definition.
+In particular, this definition can be applied when a projection $$p:Y \rightarrow X$$ is given, by considering the presheaf $$\mathcal{F}$$ of continuous sections from $$X$$ to $$Y$$ ([\[Set Theory\] §Retraction and Section, ⁋Definition 2](/en/math/set_theory/retraction_and_section#def2)). Generalizing this, we make the following definition.
 
 <div class="definition" markdown="1">
 
-<ins id="def4">**Definition 4**</ins> Let $$\mathscr{F}$$ be a presheaf defined on a topological space $$X$$.
+<ins id="def4">**Definition 4**</ins> Let $$\mathcal{F}$$ be a presheaf defined on a topological space $$X$$.
 
-- For any open set $$U\subseteq X$$, the elements of $$\mathscr{F}(U)$$ are called *sections* over $$U$$. In particular, elements of $$\mathscr{F}(X)$$ are called *global sections*.
-- For open sets $$U\subseteq V$$, the map $$\rho_{VU}:\mathscr{F}(V) \rightarrow \mathscr{F}(U)$$ is called the *restriction map* from $$V$$ to $$U$$.
-- In particular, for open sets $$U\subseteq V$$ and $$s\in \mathscr{F}(V)$$, we write $$\rho_{VU}(s)\in \mathscr{F}(U)$$ simply as $$s\vert_U$$.
+- For any open set $$U\subseteq X$$, the elements of $$\mathcal{F}(U)$$ are called *sections* over $$U$$. In particular, elements of $$\mathcal{F}(X)$$ are called *global sections*.
+- For open sets $$U\subseteq V$$, the map $$\rho_{VU}:\mathcal{F}(V) \rightarrow \mathcal{F}(U)$$ is called the *restriction map* from $$V$$ to $$U$$.
+- In particular, for open sets $$U\subseteq V$$ and $$s\in \mathcal{F}(V)$$, we write $$\rho_{VU}(s)\in \mathcal{F}(U)$$ simply as $$s\vert_U$$.
 
 </div>
 
-Meanwhile, in [Definition 2](#def2) above, $$\Set$$ can be replaced by an appropriate category, such as $$\Ab$$. For instance, in [Example 3](#ex3), if $$Y=\mathbb{R}$$, we could use addition on $$\mathbb{R}$$ to define addition of continuous functions, and then $$\mathscr{F}(U)$$ would carry the structure of an abelian group. In such a case, $$\mathscr{F}$$ is called a presheaf of abelian groups on $$X$$. For convenience, we shall call a presheaf $$\mathscr{F}: \Open(X)^\op \rightarrow \mathcal{A}$$ an $$\mathcal{A}$$-valued presheaf. Among presheaves, those satisfying the gluing condition ([Lemma 1](#lem1)) are called sheaves; we define these in the next post.
+Meanwhile, in [Definition 2](#def2) above, $$\Set$$ can be replaced by an appropriate category, such as $$\Ab$$. For instance, in [Example 3](#ex3), if $$Y=\mathbb{R}$$, we could use addition on $$\mathbb{R}$$ to define addition of continuous functions, and then $$\mathcal{F}(U)$$ would carry the structure of an abelian group. In such a case, $$\mathcal{F}$$ is called a presheaf of abelian groups on $$X$$. For convenience, we shall call a presheaf $$\mathcal{F}: \Open(X)^\op \rightarrow \mathcal{A}$$ an $$\mathcal{A}$$-valued presheaf. Among presheaves, those satisfying the gluing condition ([Lemma 1](#lem1)) are called sheaves; we define these in the next post.
 
 ## Examples of presheaves
 
@@ -105,19 +105,19 @@ The following examples show ways to obtain new presheaves from an arbitrary pres
 
 <div class="example" markdown="1">
 
-<ins id="ex7">**Example 7**</ins> Given a presheaf $$\mathscr{F}$$ on $$X$$, for any open set $$U$$ we can define $$\mathscr{F}\vert_U$$ by
+<ins id="ex7">**Example 7**</ins> Given a presheaf $$\mathcal{F}$$ on $$X$$, for any open set $$U$$ we can define $$\mathcal{F}\vert_U$$ by
 
-$$\mathscr{F}\vert_U(V)=\mathscr{F}(V)\quad\text{for all open $V\subseteq U$}$$
+$$\mathcal{F}\vert_U(V)=\mathcal{F}(V)\quad\text{for all open $V\subseteq U$}$$
 
-Then $$\mathscr{F}\vert_U$$ is a presheaf. ([§Subspaces, ⁋Lemma 2](/en/math/topology/subspaces#lem2))
+Then $$\mathcal{F}\vert_U$$ is a presheaf. ([§Subspaces, ⁋Lemma 2](/en/math/topology/subspaces#lem2))
 
 </div>
 
 <div class="example" markdown="1">
 
-<ins id="ex8">**Example 8 (Pushforward)**</ins> Fix a continuous function $$f:X \rightarrow Y$$, and let $$\mathscr{F}$$ be a presheaf on $$X$$. The *pushforward* $$f_\ast \mathscr{F}$$ of $$\mathscr{F}$$ along $$f$$ is defined by
+<ins id="ex8">**Example 8 (Pushforward)**</ins> Fix a continuous function $$f:X \rightarrow Y$$, and let $$\mathcal{F}$$ be a presheaf on $$X$$. The *pushforward* $$f_\ast \mathcal{F}$$ of $$\mathcal{F}$$ along $$f$$ is defined by
 
-$$f_\ast \mathscr{F}(U)=\mathscr{F}(f^{-1}(U))$$
+$$f_\ast \mathcal{F}(U)=\mathcal{F}(f^{-1}(U))$$
 
 </div>
 
@@ -127,51 +127,51 @@ Of course, what determines a function defined on $$X$$ is its value at each poin
 
 <div class="definition" markdown="1">
 
-<ins id="def9">**Definition 9**</ins> Let $$\mathscr{F}$$ be a presheaf on a topological space $$X$$. For any point $$x\in X$$, the *stalk* $$\mathscr{F}_x$$ at $$x$$ is defined by
+<ins id="def9">**Definition 9**</ins> Let $$\mathcal{F}$$ be a presheaf on a topological space $$X$$. For any point $$x\in X$$, the *stalk* $$\mathcal{F}_x$$ at $$x$$ is defined by
 
-$$\mathscr{F}_x=\varinjlim_{x\in U}\mathscr{F}(U)$$
+$$\mathcal{F}_x=\varinjlim_{x\in U}\mathcal{F}(U)$$
 
-The elements of $$\mathscr{F}_x$$ are called *germs* at $$x$$.
+The elements of $$\mathcal{F}_x$$ are called *germs* at $$x$$.
 
 </div>
 
-In particular, if $$\mathscr{F}$$ is a presheaf valued in a complete category, then $$\mathscr{F}_x$$ is always well-defined. Meanwhile, writing out the limit explicitly in a concrete category, we have
+In particular, if $$\mathcal{F}$$ is a presheaf valued in a complete category, then $$\mathcal{F}_x$$ is always well-defined. Meanwhile, writing out the limit explicitly in a concrete category, we have
 
-$$\mathscr{F}_x=\{(s,U)\mid x\in U\in\mathscr{T},s\in\mathscr{F}(U)\}/\mathnormal{\sim}$$
+$$\mathcal{F}_x=\{(s,U)\mid x\in U\in\mathcal{T},s\in\mathcal{F}(U)\}/\mathnormal{\sim}$$
 
 where the equivalence relation $$\sim$$ is defined by
 
 $$(s,U)\sim(t,V)\iff\text{$\exists$ open neighborhood $W\subseteq U\cap V$ of $x$ satisfying $\rho_{UW}(s)=\rho_{VW}(t)$}$$
 
-That is, intuitively, the elements $$(s,U)$$ of $$\mathscr{F}_x$$ can be thought of as the value $$s(x)$$ at $$x$$ together with additional local information[^1] about $$s$$ near $$x$$. For convenience, for any $$s\in \mathscr{F}(U)$$, we write the image of $$s$$ under $$\mathscr{F}(U) \rightarrow \mathscr{F}_x$$ as $$s_x$$.
+That is, intuitively, the elements $$(s,U)$$ of $$\mathcal{F}_x$$ can be thought of as the value $$s(x)$$ at $$x$$ together with additional local information[^1] about $$s$$ near $$x$$. For convenience, for any $$s\in \mathcal{F}(U)$$, we write the image of $$s$$ under $$\mathcal{F}(U) \rightarrow \mathcal{F}_x$$ as $$s_x$$.
 
-For now, a presheaf is more of an object with additional algebraic information than a geometric one, but it is possible to make it into a geometric object. Consider a presheaf $$\mathscr{F}$$ on a topological space $$X$$ and the set
+For now, a presheaf is more of an object with additional algebraic information than a geometric one, but it is possible to make it into a geometric object. Consider a presheaf $$\mathcal{F}$$ on a topological space $$X$$ and the set
 
-$$\Spe(\mathscr{F})=\coprod_{x\in X} \mathscr{F}_x=\{(x,\xi)\mid x\in X, \xi\in \mathscr{F}_x\}$$
+$$\Spe(\mathcal{F})=\coprod_{x\in X} \mathcal{F}_x=\{(x,\xi)\mid x\in X, \xi\in \mathcal{F}_x\}$$
 
-Then for any open set $$U\subseteq X$$ and any $$s\in \mathscr{F}(U)$$, the functions
+Then for any open set $$U\subseteq X$$ and any $$s\in \mathcal{F}(U)$$, the functions
 
-$$\tilde{s}:U \rightarrow \Spe(\mathscr{F}); \quad x\mapsto (x,s_x)$$
+$$\tilde{s}:U \rightarrow \Spe(\mathcal{F}); \quad x\mapsto (x,s_x)$$
 
-exist. We endow $$\Spe(\mathscr{F})$$ with the final topology defined by this family of functions ([§Initial and Final Topology, ⁋Definition 4](/en/math/topology/initial_and_final_topology#def4)), and call this space the *étalé space* of $$\mathscr{F}$$.
+exist. We endow $$\Spe(\mathcal{F})$$ with the final topology defined by this family of functions ([§Initial and Final Topology, ⁋Definition 4](/en/math/topology/initial_and_final_topology#def4)), and call this space the *étalé space* of $$\mathcal{F}$$.
 
 ## Morphisms of presheaves
 
 <div class="definition" markdown="1">
 
-<ins id="def10">**Definition 10**</ins> Let $$\mathscr{F}, \mathscr{G}:\Open(X) \rightarrow \mathcal{A}$$ be two presheaves on a fixed topological space $$X$$. A natural transformation between them is called a *presheaf morphism*.
+<ins id="def10">**Definition 10**</ins> Let $$\mathcal{F}, \mathcal{G}:\Open(X) \rightarrow \mathcal{A}$$ be two presheaves on a fixed topological space $$X$$. A natural transformation between them is called a *presheaf morphism*.
 
 </div>
 
 Thus the category of $$\mathcal{A}$$-valued presheaves on $$X$$ is the functor category $$[\Open(X)^\op, \mathcal{A}]$$. We denote this by $$\PSh(X, \mathcal{A})$$, and when there is no risk of confusion from context, we simply write $$\PSh(X)$$. As a side note, the $$f_\ast$$ from [Example 8](#ex8) is a functor $$\PSh(X, \mathcal{A})\rightarrow \PSh(Y, \mathcal{A})$$.
 
-Thinking of the intuitive [Example 3](#ex3), for an open set $$U$$ the map $$\phi(U):\mathscr{F}(U) \rightarrow \mathscr{G}(U)$$ can be thought of as the function obtained by restricting $$\phi:\mathscr{F}\rightarrow \mathscr{G}$$ to $$U$$, so we sometimes write $$\phi\vert_U$$ instead of $$\phi(U)$$.
+Thinking of the intuitive [Example 3](#ex3), for an open set $$U$$ the map $$\phi(U):\mathcal{F}(U) \rightarrow \mathcal{G}(U)$$ can be thought of as the function obtained by restricting $$\phi:\mathcal{F}\rightarrow \mathcal{G}$$ to $$U$$, so we sometimes write $$\phi\vert_U$$ instead of $$\phi(U)$$.
 
 Meanwhile, by the universal property of the limit cone, the following proposition holds.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop11">**Proposition 11**</ins> Let $$\phi:\mathscr{F}\rightarrow\mathscr{G}$$ be a morphism of presheaves on a topological space $$X$$. Then for any $$x\in X$$, a morphism $$\phi_x:\mathscr{F}_x\rightarrow\mathscr{G}_x$$ between stalks is naturally induced.
+<ins id="prop11">**Proposition 11**</ins> Let $$\phi:\mathcal{F}\rightarrow\mathcal{G}$$ be a morphism of presheaves on a topological space $$X$$. Then for any $$x\in X$$, a morphism $$\phi_x:\mathcal{F}_x\rightarrow\mathcal{G}_x$$ between stalks is naturally induced.
 
 </div>
 
@@ -179,17 +179,17 @@ The following examples should have appeared under [Examples of presheaves](#exam
 
 <div class="example" markdown="1">
 
-<ins id="ex12">**Example 12 (Sheaf Hom)**</ins> Fix two presheaves $$\mathscr{F}, \mathscr{G}$$ and define, for any $$U$$,
+<ins id="ex12">**Example 12 (Sheaf Hom)**</ins> Fix two presheaves $$\mathcal{F}, \mathcal{G}$$ and define, for any $$U$$,
 
-$$\mathscr{Hom}(\mathscr{F},\mathscr{G})(U)=\Hom_{\PSh(U)}(\mathscr{F}\vert_U, \mathscr{G}\vert_U)$$
+$$\mathcal{Hom}(\mathcal{F},\mathcal{G})(U)=\Hom_{\PSh(U)}(\mathcal{F}\vert_U, \mathcal{G}\vert_U)$$
 
 </div>
 
 <div class="example" markdown="1">
 
-<ins id="ex13">**Example 13 (Product)**</ins> For a family of presheaves $$(\mathscr{F}_i:\Open(X) \rightarrow \Set)_{i\in I}$$ on a topological space $$X$$, their product $$\prod_{i\in I} \mathscr{F}_i$$ can be defined by
+<ins id="ex13">**Example 13 (Product)**</ins> For a family of presheaves $$(\mathcal{F}_i:\Open(X) \rightarrow \Set)_{i\in I}$$ on a topological space $$X$$, their product $$\prod_{i\in I} \mathcal{F}_i$$ can be defined by
 
-$$\left(\prod_{i\in I} \mathscr{F}_i\right)(U)=\prod_{i\in I} \mathscr{F}_i(U)$$
+$$\left(\prod_{i\in I} \mathcal{F}_i\right)(U)=\prod_{i\in I} \mathcal{F}_i(U)$$
 
 </div>
 
@@ -197,7 +197,7 @@ Using definitions as above, structures defined in a category $$\mathcal{A}$$—f
 
 <div class="example" markdown="1">
 
-<ins id="ex14">**Example 14**</ins> For a $$\Ring$$-valued presheaf $$\mathscr{O}_X$$ on a topological space $$X$$, a left $$\mathscr{O}_X$$-module object $$\mathscr{F}\in\PSh(X,\Ab)$$ is simply called an $$\mathscr{O}_X$$-module.
+<ins id="ex14">**Example 14**</ins> For a $$\Ring$$-valued presheaf $$\mathcal{O}_X$$ on a topological space $$X$$, a left $$\mathcal{O}_X$$-module object $$\mathcal{F}\in\PSh(X,\Ab)$$ is simply called an $$\mathcal{O}_X$$-module.
 
 </div>
 
@@ -213,12 +213,12 @@ Until now we have ignored the category in which a presheaf takes values; now we 
 
 <div class="definition" markdown="1">
 
-<ins id="def16">**Definition 16**</ins> Let $$\phi:\mathscr{F}\rightarrow\mathscr{G}$$ be a morphism of abelian presheaves on a topological space $$X$$. The *presheaf kernel* $$\ker\phi$$ of $$\phi$$ is the data consisting of:
+<ins id="def16">**Definition 16**</ins> Let $$\phi:\mathcal{F}\rightarrow\mathcal{G}$$ be a morphism of abelian presheaves on a topological space $$X$$. The *presheaf kernel* $$\ker\phi$$ of $$\phi$$ is the data consisting of:
 
 - For each open set $$U\subseteq X$$, the assignment $$U\mapsto \ker(\phi(U))$$;
 - For each inclusion $$U\subseteq V$$ of open sets, the restriction map $$\rho_{VU}:\ker(\phi(V))\rightarrow\ker(\phi(U))$$ uniquely determined by the following diagram:
   
-  ![presheaf_kernel-1](/assets/images/Math/Topology/Presheaves-1.png){:style="width:18em" class="invert" .align-center}
+  ![presheaf_kernel-1](/assets/images/Math/Topology/Presheaves-1.svg){:style="width:20.39em" class="invert" .align-center}
 
 </div>
 
@@ -234,7 +234,7 @@ In this definition, $$\rho_{VU}$$ is the restriction map uniquely determined by 
 
 This is immediate from the following diagram and the universal property of kernels:
 
-![presheaf_kernel-2](/assets/images/Math/Topology/Presheaves-2.png){:style="width:18em" class="invert" .align-center}
+![presheaf_kernel-2](/assets/images/Math/Topology/Presheaves-2.png){:style="width:22.77em" class="invert" .align-center}
 
 </details>
 

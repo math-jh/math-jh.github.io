@@ -1,0 +1,27 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG open_in_subspace_but_not_in_whole (Subspaces-1.svg)
+\begin{tikzpicture}
+	% intersection A cap V: clip to the rectangle, fill the disk
+	\begin{scope}
+		\clip (0,0) rectangle (6,4);
+		\fill[accent1!30] (6.5,5) circle[radius=2.4];
+	\end{scope}
+	% the subspace A
+	\draw[line width=1pt] (0,0) rectangle (6,4);
+	% the open set V of the whole space
+	\draw[accent1, dashed] (6.5,5) circle[radius=2.4];
+	% labels
+	\node[accent1] at (8.2,6.7) {$V$};
+	\node at (6.4,-0.45) {$A$};
+	\node[accent1!70] at (3.2,1.7) {$A\cap V$};
+\end{tikzpicture}
+
+\end{document}

@@ -1,0 +1,89 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG fiber_diagram (Fiber_Products-1.svg)
+\begin{tikzcd}
+	{X\times_SY} & Y \\
+	X & S
+	\arrow["{\rho_Y}", from=1-1, to=1-2]
+	\arrow["{\rho_X}"', from=1-1, to=2-1]
+	\arrow["{\varphi_Y}", from=1-2, to=2-2]
+	\arrow["{\varphi_X}"', from=2-1, to=2-2]
+\end{tikzcd}
+
+%%FIG universal_product (Fiber_Products-2.svg)
+\begin{tikzcd}
+	Z \\
+	& {X\times_SY} & Y \\
+	& X & S
+	\arrow["\psi"{description}, dashed, from=1-1, to=2-2]
+	\arrow["{\psi_Y}", curve={height=-12pt}, from=1-1, to=2-3]
+	\arrow["{\psi_X}"', curve={height=12pt}, from=1-1, to=3-2]
+	\arrow["{\rho_Y}", from=2-2, to=2-3]
+	\arrow["{\rho_X}"', from=2-2, to=3-2]
+	\arrow["{\varphi_Y}", from=2-3, to=3-3]
+	\arrow["{\varphi_X}"', from=3-2, to=3-3]
+\end{tikzcd}
+
+%%FIG open_subscheme (Fiber_Products-3.svg)
+\begin{tikzcd}
+	{\varphi^{-1}(U)} & U \\
+	Y & Z
+	\arrow["{\varphi\vert^U}", from=1-1, to=1-2]
+	\arrow["{\iota'}"', from=1-1, to=2-1]
+	\arrow["\iota", from=1-2, to=2-2]
+	\arrow["\varphi"', from=2-1, to=2-2]
+\end{tikzcd}
+
+%%FIG open_fiber_product-1 (Fiber_Products-4.svg)
+\begin{tikzcd}
+	{X\times_SY} & Y \\
+	X & S
+	\arrow["{\rho_Y}", from=1-1, to=1-2]
+	\arrow["{\rho_X}"', from=1-1, to=2-1]
+	\arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-1, to=2-2]
+	\arrow["{\varphi_Y}", from=1-2, to=2-2]
+	\arrow["{\varphi_X}"', from=2-1, to=2-2]
+\end{tikzcd}
+
+%%FIG open_fiber_product-2 (Fiber_Products-5.svg)
+\begin{tikzcd}
+	& {Y'} \\
+	{X\times_SY} & Y
+	\arrow[hook, from=1-2, to=2-2]
+	\arrow["{\rho_Y}"', from=2-1, to=2-2]
+\end{tikzcd}
+
+%%FIG magic_square (Fiber_Products-6.svg)
+\begin{tikzcd}
+	{\rho_Y^{-1}(Y')} & {Y'} \\
+	{X\times_SY} & Y \\
+	X & S
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-1, to=2-1]
+	\arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-1, to=2-2]
+	\arrow[hook, from=1-2, to=2-2]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-1, to=3-1]
+	\arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=2-1, to=3-2]
+	\arrow[from=2-2, to=3-2]
+	\arrow[from=3-1, to=3-2]
+\end{tikzcd}
+
+%%FIG adding_extra_variables (Fiber_Products-7.svg)
+\begin{tikzcd}
+	{\Spec A[\x_1,\ldots,\x_n]} & {\Spec B[\x_1,\ldots,\x_n]} \\
+	{\Spec A} & {\Spec B}
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-1, to=2-1]
+	\arrow[from=1-2, to=2-2]
+	\arrow[from=2-1, to=2-2]
+\end{tikzcd}
+
+\end{document}
