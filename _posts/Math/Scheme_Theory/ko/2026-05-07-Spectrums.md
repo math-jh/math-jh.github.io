@@ -9,7 +9,6 @@ sidebar:
     nav: "scheme_theory-ko"
 
 date: 2025-01-27
-last_modified_at: 2025-01-27
 weight: 2
 
 ---

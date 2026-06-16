@@ -7,7 +7,6 @@ permalink: /ko/math/scheme_theory/from_varieties_to_schemes
 sidebar: 
     nav: "scheme_theory-ko"
 date: 2026-05-07
-last_modified_at: 2026-05-07
 weight: 1
 published: false
 ---

@@ -9,7 +9,6 @@ sidebar:
     nav: "mirror_symmetry-en"
 
 date: 2026-05-19
-last_modified_at: 2026-05-19
 weight: 3
 translated_at: 2026-06-01T12:30:04+00:00
 translation_source: kimi-cli

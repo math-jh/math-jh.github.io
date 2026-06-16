@@ -9,7 +9,6 @@ sidebar:
     nav: "manifolds-ko"
 
 date: 2022-06-19
-last_modified_at: 2022-12-11
 weight: 10
 
 ---

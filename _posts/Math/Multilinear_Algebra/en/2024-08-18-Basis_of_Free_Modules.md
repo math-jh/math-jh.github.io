@@ -9,7 +9,6 @@ sidebar:
     nav: "multilinear_algebra-en"
 
 date: 2024-08-18
-last_modified_at: 2024-09-23
 weight: 3
 published: false
 translated_at: 2026-06-01T14:30:05+00:00

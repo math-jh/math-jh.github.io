@@ -9,7 +9,6 @@ sidebar:
     nav: "scheme_theory-en"
 
 date: 2025-03-08
-last_modified_at: 2025-03-08
 weight: 14
 published: false
 translated_at: 2026-06-02T02:30:01+00:00

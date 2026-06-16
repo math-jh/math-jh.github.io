@@ -7,7 +7,6 @@ categories: [Misc / Peripherals]
 permalink: /ko/misc/peripherals/keyboards/charybdis
 toc: false
 date: 2026-03-21
-last_modified_at: 2026-03-21
 weight: 11
 
 ---

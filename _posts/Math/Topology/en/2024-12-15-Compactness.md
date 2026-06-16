@@ -9,7 +9,6 @@ sidebar:
     nav: "topology-en"
 
 date: 2024-12-15
-last_modified_at: 2024-12-15
 weight: 16
 translated_at: 2026-06-03T08:30:02+00:00
 translation_source: kimi-cli

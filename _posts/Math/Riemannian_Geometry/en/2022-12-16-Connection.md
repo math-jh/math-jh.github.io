@@ -9,7 +9,6 @@ sidebar:
     nav: "riemannian_geometry-en"
 
 date: 2022-12-16
-last_modified_at: 2022-12-16
 weight: 2
 translated_at: 2026-06-01T21:30:01+00:00
 translation_source: kimi-cli

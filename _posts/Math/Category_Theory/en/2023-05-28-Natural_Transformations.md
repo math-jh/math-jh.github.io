@@ -9,7 +9,6 @@ sidebar:
     nav: "category_theory-en"
 
 date: 2023-05-28
-last_modified_at: 2023-05-28
 weight: 3
 translated_at: 2026-05-30T12:00:04+00:00
 translation_source: kimi-cli

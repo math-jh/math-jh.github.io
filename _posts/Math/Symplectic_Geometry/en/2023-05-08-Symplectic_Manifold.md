@@ -9,7 +9,6 @@ sidebar:
     nav: "symplectic_geometry-en"
 
 date: 2023-05-08
-last_modified_at: 2023-05-08
 weight: 3
 translated_at: 2026-06-03T00:00:02+00:00
 translation_source: kimi-cli

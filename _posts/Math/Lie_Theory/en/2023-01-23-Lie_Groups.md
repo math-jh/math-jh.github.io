@@ -9,7 +9,6 @@ sidebar:
     nav: "Lie_theory-en"
 
 date: 2023-01-23
-last_modified_at: 2025-11-06
 weight: 1
 translated_at: 2026-05-31T16:00:05+00:00
 translation_source: kimi-cli

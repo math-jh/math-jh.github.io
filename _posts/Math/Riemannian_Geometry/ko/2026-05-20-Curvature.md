@@ -9,7 +9,6 @@ sidebar:
     nav: "riemannian_geometry-ko"
 
 date: 2026-05-20
-last_modified_at: 2026-05-20
 weight: 4
 published: false
 

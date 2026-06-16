@@ -9,7 +9,6 @@ sidebar:
     nav: "Lie_theory-ko"
 
 date: 2025-01-07
-last_modified_at: 2025-01-07
 weight: 8
 published: false
 ---

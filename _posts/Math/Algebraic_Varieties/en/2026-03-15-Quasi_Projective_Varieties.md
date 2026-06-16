@@ -9,7 +9,6 @@ sidebar:
     nav: "algebraic_varieties-en"
 
 date: 2026-03-15
-last_modified_at: 2026-03-17
 weight: 3
 translated_at: 2026-05-30T02:30:04+00:00
 translation_source: kimi-cli

@@ -9,7 +9,6 @@ sidebar:
     nav: "field_theory-en"
 
 date: 2025-06-18
-last_modified_at: 2025-06-18
 weight: 9
 translated_at: 2026-06-11T06:30:02+00:00
 translation_source: kimi-cli
