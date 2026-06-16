@@ -1,0 +1,20 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG tangent_space_of_vector_space (Examples_of_Differentials-1.svg)
+\begin{tikzcd}
+	V & W \\
+	{T_xV} & {T_{L(x)}W}
+	\arrow[Rightarrow, no head, from=1-1, to=2-1]
+	\arrow["L", from=1-1, to=1-2]
+	\arrow[Rightarrow, no head, from=1-2, to=2-2]
+	\arrow["{dL_x}"', from=2-1, to=2-2]
+\end{tikzcd}
+
+\end{document}

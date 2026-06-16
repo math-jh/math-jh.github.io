@@ -274,7 +274,7 @@ Now let us prove properties of $$\Omega_{E/A}$$. From now on, every ring is comm
 
 <ins id="prop11">**Proposition 11**</ins> Suppose the following commutative diagram is given, and regard $$E$$ and $$E'$$ as $$A$$- and $$A'$$-algebras via the vertical maps.
 
-![change_of_base_ring-1](/assets/images/Math/Multilinear_Algebra/Differential_Modules-1.png){:style="width:6.8em" class="invert" .align-center}
+![change_of_base_ring-1](/assets/images/Math/Multilinear_Algebra/Differential_Modules-1.svg){:style="width:6.35em" class="invert" .align-center}
 
 Then there exists a unique $$A$$-linear map
 
@@ -282,7 +282,7 @@ $$\nu: \Omega_{E/A} \rightarrow \Omega_{E'/A'}$$
 
 making the following diagram commute:
 
-![change_of_base_ring-2](/assets/images/Math/Multilinear_Algebra/Differential_Modules-2.png){:style="width:10em" class="invert" .align-center}
+![change_of_base_ring-2](/assets/images/Math/Multilinear_Algebra/Differential_Modules-2.svg){:style="width:11.54em" class="invert" .align-center}
 
 </div>
 <details class="proof" markdown="1">
@@ -306,7 +306,7 @@ $$\Hom_E(\Omega_A(E), M)\cong\Der_A(E, M)$$
 
 given by the universal property of [Proposition 8](#prop8), we obtain the following commutative diagram:
 
-![change_of_base_ring-3](/assets/images/Math/Multilinear_Algebra/Differential_Modules-3.png){:style="width:28em" class="invert" .align-center}
+![change_of_base_ring-3](/assets/images/Math/Multilinear_Algebra/Differential_Modules-3.svg){:style="width:29.41em" class="invert" .align-center}
 
 Here the right-hand vertical map is the composite of the above isomorphism and the isomorphism of [[Algebraic Structures] §Change of Base Ring, ⁋Proposition 6](/en/math/algebraic_structures/change_of_base_ring#prop6),
 
@@ -362,7 +362,7 @@ $$E'\overset{d_{E'/A}}{\longrightarrow}\Omega_{E'/A}\overset{\Omega_u}{\longrigh
 
 Then again by the universal property there exists the following commutative diagram:
 
-![change_of_base_ring-4](/assets/images/Math/Multilinear_Algebra/Differential_Modules-4.png){:style="width:24em" class="invert" .align-center}
+![change_of_base_ring-4](/assets/images/Math/Multilinear_Algebra/Differential_Modules-4.svg){:style="width:25.13em" class="invert" .align-center}
 
 Now we introduce two exact sequences that are frequently used.
 

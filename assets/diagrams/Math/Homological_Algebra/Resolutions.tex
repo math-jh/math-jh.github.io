@@ -1,0 +1,197 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG Projective_object-1 (Resolutions-1.svg)
+\begin{tikzcd}
+	& P \\
+	B & C & 0
+	\arrow[from=1-2, to=2-2]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-2, to=2-3]
+\end{tikzcd}
+
+%%FIG Projective_object-2 (Resolutions-2.svg)
+\begin{tikzcd}
+	& P \\
+	B & C & 0
+	\arrow[dashed, from=1-2, to=2-1]
+	\arrow[from=1-2, to=2-2]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-2, to=2-3]
+\end{tikzcd}
+
+%%FIG Injective_object-1 (Resolutions-3.svg)
+\begin{tikzcd}
+	0 & A & B \\
+	& I
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow[from=1-2, to=2-2]
+\end{tikzcd}
+
+%%FIG Injective_object-2 (Resolutions-4.svg)
+\begin{tikzcd}
+	0 & A & B \\
+	& I
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow[from=1-2, to=2-2]
+	\arrow[dashed, from=1-3, to=2-2]
+\end{tikzcd}
+
+%%FIG splicing-1 (Resolutions-5.svg)
+\begin{tikzcd}
+	{P_1} && {P_0} & M & 0 \\
+	& {M_0} \\
+	0 && 0
+	\arrow["{d_1}", from=1-1, to=1-3]
+	\arrow["{\epsilon_1}"', from=1-1, to=2-2]
+	\arrow["{\epsilon_0}", from=1-3, to=1-4]
+	\arrow[from=1-4, to=1-5]
+	\arrow["{\iota_0}"', from=2-2, to=1-3]
+	\arrow[from=2-2, to=3-3]
+	\arrow[from=3-1, to=2-2]
+\end{tikzcd}
+
+%%FIG splicing-2 (Resolutions-6.svg)
+\begin{tikzcd}
+	&& 0 && 0 \\
+	&&& {M_1} \\
+	\cdots && {P_2} && {P_1} && {P_0} & M & 0 \\
+	& {M_3} &&&& {M_0} \\
+	0 && 0 && 0 && 0
+	\arrow[from=1-3, to=2-4]
+	\arrow[from=2-4, to=1-5]
+	\arrow["{\iota_1}", from=2-4, to=3-5]
+	\arrow["{d_3}", from=3-1, to=3-3]
+	\arrow["{\epsilon_3}"', from=3-1, to=4-2]
+	\arrow["{\epsilon_2}", from=3-3, to=2-4]
+	\arrow["{d_2}"', from=3-3, to=3-5]
+	\arrow["{d_1}", from=3-5, to=3-7]
+	\arrow["{\epsilon_1}"', from=3-5, to=4-6]
+	\arrow["{\epsilon_0}", from=3-7, to=3-8]
+	\arrow[from=3-8, to=3-9]
+	\arrow["{\iota_2}"', from=4-2, to=3-3]
+	\arrow[from=4-2, to=5-3]
+	\arrow["{\iota_0}"', from=4-6, to=3-7]
+	\arrow[from=4-6, to=5-7]
+	\arrow[from=5-1, to=4-2]
+	\arrow[from=5-5, to=4-6]
+\end{tikzcd}
+
+%%FIG comparison_proj (Resolutions-7.svg)
+\begin{tikzcd}
+	\cdots & {P_1} & {P_0} & M & 0 \\
+	\cdots & {Q_1} & {Q_0} & N & 0
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow["{f_1}", dashed, from=1-2, to=2-2]
+	\arrow["{\epsilon_M}", from=1-3, to=1-4]
+	\arrow["{f_0}", dashed, from=1-3, to=2-3]
+	\arrow[from=1-4, to=1-5]
+	\arrow["u", from=1-4, to=2-4]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-2, to=2-3]
+	\arrow["{\epsilon_N}"', from=2-3, to=2-4]
+	\arrow[from=2-4, to=2-5]
+\end{tikzcd}
+
+%%FIG comparison_inj (Resolutions-8.svg)
+\begin{tikzcd}
+	0 & M & {J^0} & {J^1} & \cdots \\
+	0 & N & {I^0} & {I^1} & \cdots
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow["u"', from=1-2, to=2-2]
+	\arrow[from=1-3, to=1-4]
+	\arrow["{f_0}", dashed, from=1-3, to=2-3]
+	\arrow[from=1-4, to=1-5]
+	\arrow["{f_1}", dashed, from=1-4, to=2-4]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-2, to=2-3]
+	\arrow[from=2-3, to=2-4]
+	\arrow[from=2-4, to=2-5]
+\end{tikzcd}
+
+%%FIG horseshoe-initial (Resolutions-9.svg)
+\begin{tikzcd}
+	&&& 0 \\
+	\cdots & {P_1'} & {P_0'} & {A'} & 0 \\
+	&&& A \\
+	\cdots & {P_1''} & {P_0''} & {A''} & 0 \\
+	&&& 0
+	\arrow[from=1-4, to=2-4]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-2, to=2-3]
+	\arrow["{\epsilon'}", from=2-3, to=2-4]
+	\arrow[from=2-4, to=2-5]
+	\arrow["i", from=2-4, to=3-4]
+	\arrow["p", from=3-4, to=4-4]
+	\arrow[from=4-1, to=4-2]
+	\arrow[from=4-2, to=4-3]
+	\arrow["{\epsilon''}", from=4-3, to=4-4]
+	\arrow[from=4-4, to=4-5]
+	\arrow[from=4-4, to=5-4]
+\end{tikzcd}
+
+%%FIG horseshoe-induction (Resolutions-10.svg)
+\begin{tikzcd}
+	& 0 & 0 & 0 \\
+	0 & {\ker\epsilon'} & {P_0'} & {A'} & 0 \\
+	0 & {\ker \epsilon} & {P_0} & A & 0 \\
+	0 & {\ker\epsilon''} & {P_0''} & {A''} & 0 \\
+	& 0 & 0 & 0
+	\arrow[from=1-2, to=2-2]
+	\arrow[from=1-3, to=2-3]
+	\arrow[from=1-4, to=2-4]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-2, to=2-3]
+	\arrow[from=2-2, to=3-2]
+	\arrow["{\epsilon'}", from=2-3, to=2-4]
+	\arrow[from=2-3, to=3-3]
+	\arrow[from=2-4, to=2-5]
+	\arrow["i", from=2-4, to=3-4]
+	\arrow[from=3-1, to=3-2]
+	\arrow[from=3-2, to=3-3]
+	\arrow[from=3-2, to=4-2]
+	\arrow["\epsilon", from=3-3, to=3-4]
+	\arrow[from=3-3, to=4-3]
+	\arrow[from=3-4, to=3-5]
+	\arrow["p", from=3-4, to=4-4]
+	\arrow[from=4-1, to=4-2]
+	\arrow[from=4-2, to=4-3]
+	\arrow[from=4-2, to=5-2]
+	\arrow["{\epsilon''}", from=4-3, to=4-4]
+	\arrow[from=4-3, to=5-3]
+	\arrow[from=4-4, to=4-5]
+	\arrow[from=4-4, to=5-4]
+\end{tikzcd}
+
+%%FIG horseshoe-finish (Resolutions-11.svg)
+\begin{tikzcd}
+	&&& 0 \\
+	\cdots & {P_2'} & {P_1'} & {\ker\epsilon'} & 0 \\
+	&&& {\ker\epsilon} \\
+	\cdots & {P_1''} & {P_2''} & {\ker\epsilon''} & 0 \\
+	&&& 0
+	\arrow[from=1-4, to=2-4]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-2, to=2-3]
+	\arrow["d", from=2-3, to=2-4]
+	\arrow[from=2-4, to=2-5]
+	\arrow[from=2-4, to=3-4]
+	\arrow[from=3-4, to=4-4]
+	\arrow[from=4-1, to=4-2]
+	\arrow[from=4-2, to=4-3]
+	\arrow[from=4-3, to=4-4]
+	\arrow[from=4-4, to=4-5]
+	\arrow[from=4-4, to=5-4]
+\end{tikzcd}
+
+\end{document}

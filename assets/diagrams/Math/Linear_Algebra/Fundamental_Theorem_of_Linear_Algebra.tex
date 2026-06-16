@@ -1,0 +1,24 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG FTLA (Fundamental_Theorem_of_Linear_Algebra-1.svg)
+\begin{tikzcd}
+\color{black!50}v\ar[rrr, |->, black!50]\dar[ddd, |->, black!50]&[-20pt]&&[-30pt]\color{black!50}L(v)\dar[ddd, |->, black!50]\\[-15pt]
+&V\rar["L"]\dar[-, double]&W\dar[-, double]\\
+&\Bbbk^n\rar["{[L]_\mathcal{C}^\mathcal{B}}" below]&\Bbbk^m\\[-15pt]
+\color{black!50}{[v]_\mathcal{B}}\ar[rrr, |->, black!50]&&&\color{black!50}\substack{[L(v)]_\mathcal{C}\\[2pt]={[L]_\mathcal{C}^\mathcal{B}[v]_{\mathcal{B}}}}
+\end{tikzcd}
+
+%%FIG change_of_basis (Change_of_Basis-1.svg)
+\begin{tikzcd}
+	V\rar["\operatorname{id}_V"]\dar&V\dar\\
+	\Bbbk^n\rar["{[\operatorname{id}_V]^\mathcal{B}_{\mathcal{B}'}}"]&\Bbbk^n
+\end{tikzcd}
+
+\end{document}

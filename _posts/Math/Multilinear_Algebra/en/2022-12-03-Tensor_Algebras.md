@@ -93,7 +93,7 @@ $$e_se_t=e_{st}$$
 
 In the case of extension of scalars, let a ring homomorphism $$\phi: A \rightarrow B$$ be given, and let $$M$$ be an $$A$$-module. Then there exist the extension of scalars $$\phi_!: \rMod{A} \rightarrow\rMod{B}$$ and the two functors $$\T_A: \rMod{A} \rightarrow \Alg{A}$$, $$\T_B:\rMod{B} \rightarrow \Alg{B}$$, and $$\phi_!:\Alg{A} \rightarrow\Alg{B}$$ is also defined in the obvious way. Through this we obtain the following (graded) $$B$$-linear map
 
-![extension_of_scalars](/assets/images/Math/Multilinear_Algebra/Tensor_Algebras-1.png){:style="width:16.8em" class="invert" .align-center}
+![extension_of_scalars](/assets/images/Math/Multilinear_Algebra/Tensor_Algebras-1.svg){:style="width:17.93em" class="invert" .align-center}
 
 <div class="proposition" markdown="1">
  
@@ -113,7 +113,7 @@ $$\iota_{\phi_!M}: \phi_!M \rightarrow \T_B(\phi_!M)$$
 
 this is an $$A$$-linear map from the $$A$$-module $$M$$ to the $$A$$-module $$\phi^\ast \T_B(\phi_!M)$$ (more precisely, $$U\phi^\ast \T_B(\phi^\ast\phi_!M)$$). Therefore, by [Proposition 2](#prop2), there exists a unique $$A$$-algebra homomorphism $$T_A(M)\rightarrow \phi^\ast T_{B}(\phi_!M)$$ making the following diagram
 
-![Extension_of_scalar_proof](/assets/images/Math/Multilinear_Algebra/Tensor_Algebras-2.png){:style="width:11em" class="invert" .align-center}
+![Extension_of_scalar_proof](/assets/images/Math/Multilinear_Algebra/Tensor_Algebras-2.svg){:style="width:10.30em" class="invert" .align-center}
 
 commute. Now, via the following adjunction
 

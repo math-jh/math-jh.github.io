@@ -112,7 +112,7 @@ $$F^\ast(f+g)=(f+g)\circ F=f\circ F+g\circ F=F^\ast(f)+F^\ast(g),\quad F^\ast(\a
 
 한편, $$T_pM$$과 $$T_{F(p)}N$$은 $$\mathcal{C}^\infty_{M,p}$$과 $$\mathcal{C}^\infty_{N,F(p)}$$에서 $$\mathbb{R}$$로의 linear map들 중 라이프니츠 법칙을 만족하는 원소들이므로, 이들은 각각의 dual space $$(\mathcal{C}^\infty_{M,p})^\ast$$과 $$(\mathcal{C}^\infty_{N,F(p)})^\ast$$의 부분공간이 된다. 따라서, 위에서 얻은 linear map $$F^\ast:\mathcal{C}^\infty_{N,F(p)}\rightarrow \mathcal{C}^\infty_{M,p}$$의 dual map $$(F^\ast)^\ast:(\mathcal{C}^\infty_{M,p})^\ast\rightarrow(\mathcal{C}^\infty_{N,F(p)})^\ast$$를 생각할 수 있다. 
 
-![differential](/assets/images/Math/Manifolds/Differentials-2.png){:style="width:17.6em" class="invert" .align-center}
+![differential](/assets/images/Math/Manifolds/Differentials-2.svg){:style="width:18.52em" class="invert" .align-center}
 
 명시적으로, 이 함수는 임의의 linear map $$L\in (\mathcal{C}^\infty_{M,p})^\ast$$에 대하여
 
