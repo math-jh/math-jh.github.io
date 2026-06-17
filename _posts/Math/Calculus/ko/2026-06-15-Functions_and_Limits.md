@@ -16,7 +16,7 @@ published: false
 
 ## 극한의 정의
 
-함수의 미분과 적분을 정의하기 위해서는, 고등학교 때 배우는 것과 마찬가지로 극한의 개념이 필요하다. 그 때와 비교하여 지금 우리가 다루는 극한이 더 발전한 것은 이제 우리는 극한을 <em-ko>정의</em-ko>한다는 것이다. 
+함수의 미분과 적분을 정의하기 위해서는 고등학교 때 배우는 것과 마찬가지로 극한의 개념이 필요하다. 그 때와 비교하여 지금 우리가 다루는 극한이 더 발전한 것은 이제 우리는 극한을 <em-ko>정의</em-ko>한다는 것이다. 
 
 <div class="definition" markdown="1">
 
@@ -36,11 +36,9 @@ $$0 < \lvert x - a \rvert < \delta \implies \lvert f(x) - L \rvert < \epsilon$$
 
 </div>
 
-우리는 고등학교에서 $$f(x)$$가 $$L$$에 "무한히 가까워진다"는 식으로 극한을 "정의"했었다. 그러나 이것이 실제로 정의가 될 수 없는 이유는 "가깝다"는 개념이 수학적인 개념이 아니기 때문으로, 집합을 처음 배울 때 "키가 작은 사람들의 집합" 등이 정의되지 않는 이유와 동일하다. 즉 누군가에게는 작은 사람이, 누군가에게는 크게 느껴질 수도 있듯, $$f(x)$$가 $$L$$에 <em-ko>얼마나</em-ko> 가까운지도 사람마다 다를 수 있다.
+이에 대한 직관적인 설명은 다음과 같다. 우리가 고등학교 때 극한의 개념을 $$f(x)$$가 $$L$$에 <em-ko>무한히 가까워진다</em-ko>고 이야기하는 것이 엄밀한 수학적 정의가 될 수 없는 이유는 <em-ko>가깝다</em-ko>는 개념이 수학적이지 않기 때문이다. 가령 $$L$$과 가까운 숫자들의 모임이, 수학적으로는 집합을 정의하지 않는 것과 같은 이치이다. 
 
-따라서 우리는 "가깝다"는 개념을 수학적으로 정의해야 하고, 그 결과물이 위의 [정의 2](#def2)이다. 직관적으로 이는 위에서 살펴본 문제를 해결하기 위해 모든 사람을 대상으로 합의를 만들어내는 과정으로 생각할 수 있다. 즉 우리가 $$f(x)$$를 $$L$$에 "$$\epsilon$$만큼 가깝게" 만들고 싶다고 요구하면 ($$\lvert f(x) - L\rvert < \epsilon$$), 그것을 보장해 주는 "$$x$$가 $$a$$에 얼마나 가까워야 하는가"의 기준 $$\delta$$를 항상 찾아낼 수 있다는 것이다. 이러한 매커니즘이 존재한다면, 그 누가 와서 얼마나 작은 조건을 요구하더라도 항상 이 기준을 맞춰줄 수 있게 된다. 
-
-이를 다음 예시에서 살펴보자.
+직관적으로 위의 $$\epsilon-\delta$$ 정의는 이를 해결하기 위해, 모든 사람을 대상으로 합의를 만들어내는 과정으로 생각하면 이해가 편하다. 즉, $$f(x)$$가 $$L$$에 <em-ko>얼마나</em-ko> 가까울 것을 요구하든 (즉, 어떤 $$\epsilon>0$$이 주어지든), $$x$$가 $$L$$에 충분히 가깝도록 하기만 하면 ($$\lvert f(x) - L\rvert < \epsilon$$) 이 요구를 맞춰줄 수 있다는 것이다. 이를 다음 예시에서 살펴보자.
 
 <div class="example" markdown="1">
 
@@ -66,7 +64,7 @@ $$0 < \lvert x-2\rvert < \delta \implies \lvert x^2 - 4\rvert < 5\delta \leq \ep
 
 </div>
 
-위와 같이, 본질적으로 우리가 $$\epsilon$$을 $$\delta$$에 의해 결정되는 것으로 둘 수 있다는 것이 이 정의의 핵심이다. 
+위와 같이, 본질적으로 우리가 $$\epsilon$$을 $$\delta$$에 의해 결정되는 것으로 둘 수 있다는 것이 이 정의의 핵심으로, 위에서의 직관을 이어가자면 어떠한 $$\epsilon>0$$을 가져오더라도 이 조건을 만족할 수 있는 $$\delta>0$$를 찾는 <em-ko>규칙</em-ko>이 바로 우리가 함수의 극한을 증명할 때 하는 일이다. 
 
 ## 극한의 성질들
 
@@ -81,7 +79,11 @@ $$0 < \lvert x-2\rvert < \delta \implies \lvert x^2 - 4\rvert < 5\delta \leq \ep
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$L \neq L'$$이라 가정하면 $$\epsilon = \tfrac{1}{2}\lvert L - L'\rvert > 0$$이다. [정의 2](#def2)에 의해 각각에 대응하는 $$\delta_1, \delta_2 > 0$$이 존재하여, $$0 < \lvert x-a\rvert < \delta_1$$이면 $$\lvert f(x) - L\rvert < \epsilon$$이고, $$0 < \lvert x-a\rvert < \delta_2$$이면 $$\lvert f(x) - L'\rvert < \epsilon$$이다. $$\delta = \min(\delta_1, \delta_2)$$로 두면 $$0 < \lvert x-a\rvert < \delta$$인 $$x$$에 대해 삼각부등식으로
+결론에 반하여 $$L \neq L'$$이라 가정하자. 그럼 $$\epsilon = \frac{1}{2}\lvert L - L'\rvert > 0$$이다. 이제 [정의 2](#def2)에 의해 각각에 대응하는 $$\delta_1, \delta_2 > 0$$이 존재하여 다음 두 조건
+
+$$0 < \lvert x-a\rvert < \delta_1\implies \lvert f(x) - L\rvert < \epsilon,\qquad 0 < \lvert x-a\rvert < \delta_2\implies\lvert f(x) - L'\rvert < \epsilon$$
+
+을 만족하도록 할 수 있다. 이제 $$\delta = \min(\delta_1, \delta_2)$$로 두면 $$0 < \lvert x-a\rvert < \delta$$인 $$x$$에 대해 삼각부등식으로
 
 $$\lvert L - L'\rvert \leq \lvert L - f(x)\rvert + \lvert f(x) - L'\rvert < \epsilon + \epsilon = \lvert L - L'\rvert$$
 
@@ -89,14 +91,14 @@ $$\lvert L - L'\rvert \leq \lvert L - f(x)\rvert + \lvert f(x) - L'\rvert < \eps
 
 </details>
 
-한편, 극한을 매번 정의로 계산하는 것은 번거롭다. 다행히 극한은 사칙연산과 잘 어울리므로, 복잡한 함수의 극한을 기본 함수들의 극한으로 분해할 수 있다.
+한편, [정의 2](#def2)는 원칙적으로 함수의 극한값의 후보 $$L$$이 주어졌을 때 그 극한값이 실제로 $$L$$이 맞다는 것을 보일 때만 사용할 수 있다. 즉, 이는 함수의 극한값이 <em-ko>무엇인지</em-ko> 알려주는 도구는 아니다. 이를 위해서는 다음 명제가 유용하다.
 
 <div class="proposition" markdown="1">
 
 <ins id="prop5">**명제 5 (극한법칙)**</ins> $$\displaystyle\lim_{x\to a} f(x) = L$$, $$\displaystyle\lim_{x\to a} g(x) = M$$이라 하자. 그러면
 
 1. $$\displaystyle\lim_{x\to a} \bigl(f(x) + g(x)\bigr) = L + M$$,
-2. 임의의 상수 $$c$$에 대해 $$\displaystyle\lim_{x\to a} c\,f(x) = cL$$,
+2. 임의의 상수 $$c$$에 대해 $$\displaystyle\lim_{x\to a} cf(x) = cL$$,
 3. $$\displaystyle\lim_{x\to a} f(x)g(x) = LM$$,
 4. $$M \neq 0$$이면 $$\displaystyle\lim_{x\to a} \frac{f(x)}{g(x)} = \frac{L}{M}$$
 
@@ -107,17 +109,18 @@ $$\lvert L - L'\rvert \leq \lvert L - f(x)\rvert + \lvert f(x) - L'\rvert < \eps
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-모든 성질을 다 증명하는 대신, 예시로 첫째 등식만 보인다. 양수 $$\epsilon > 0$$이 주어졌을 때, $$\epsilon/2$$에 대응하는 $$\delta_1, \delta_2 > 0$$을 각각 $$f, g$$의 극한 정의에서 얻고 $$\delta = \min(\delta_1,\delta_2)$$로 두면, $$0 < \lvert x-a\rvert < \delta$$일 때
+1. 양수 $$\epsilon > 0$$이 주어졌을 때, $$\epsilon/2$$에 대응하는 $$\delta_1, \delta_2 > 0$$을 각각 $$f, g$$의 극한 정의에서 얻을 수 있다. 그럼 $$\delta = \min(\delta_1,\delta_2)$$로 두면, $$0 < \lvert x-a\rvert < \delta$$일 때
 
 $$\lvert (f(x)+g(x)) - (L+M)\rvert \leq \lvert f(x)-L\rvert + \lvert g(x)-M\rvert < \tfrac{\epsilon}{2} + \tfrac{\epsilon}{2} = \epsilon$$
 
-이다. 2는 $$c=0$$이면 자명하고, $$c \neq 0$$이면 $$\epsilon/\lvert c\rvert$$에 대응하는 $$\delta$$를 잡으면 된다.
+이다. 
+2. 만일 $$c=0$$이면 아무런 $$\delta$$를 잡아도 상관없으므로 자명하다. $$c \neq 0$$이면 $$\epsilon/\lvert c\rvert$$에 대응하는 $$\delta$$를 잡으면 된다.
 
-3을 보이자. 먼저 $$f$$는 $$a$$ 근방에서 유계이다: $$\epsilon = 1$$에 대응하는 $$\delta_0$$을 잡으면 $$0 < \lvert x-a\rvert < \delta_0$$에서 $$\lvert f(x)\rvert < \lvert L\rvert + 1$$이다. 이제 같은 항을 더하고 빼는 기법으로
+3. 다음의 부등식
 
 $$\lvert f(x)g(x) - LM\rvert = \lvert f(x)(g(x)-M) + M(f(x)-L)\rvert \leq \lvert f(x)\rvert\,\lvert g(x)-M\rvert + \lvert M\rvert\,\lvert f(x)-L\rvert$$
 
-을 얻는다. $$\epsilon > 0$$에 대해 $$\lvert g(x)-M\rvert < \frac{\epsilon}{2(\lvert L\rvert+1)}$$이고 $$\lvert f(x)-L\rvert < \frac{\epsilon}{2(\lvert M\rvert+1)}$$이 되도록 $$\delta$$를 ($$\delta_0$$과 함께) 충분히 작게 잡으면 우변이 $$\epsilon$$보다 작아진다.
+을 사용한다. $$\epsilon > 0$$에 대해 $$\lvert g(x)-M\rvert < \frac{\epsilon}{2(\lvert L\rvert+1)}$$이고 $$\lvert f(x)-L\rvert < \frac{\epsilon}{2(\lvert M\rvert+1)}$$이 되도록 $$\delta$$를 ($$\delta_0$$과 함께) 충분히 작게 잡으면 우변이 $$\epsilon$$보다 작아진다.
 
 4은 $$1/g(x) \to 1/M$$을 보인 뒤 3을 적용하면 된다. $$M \neq 0$$이므로 $$a$$ 근방에서 $$\lvert g(x)\rvert > \lvert M\rvert/2$$이고,
 
