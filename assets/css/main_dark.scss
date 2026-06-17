@@ -12,6 +12,7 @@
 @import "recent-overlay"; // backdrop-style recent-posts popup
 @import "subject-cards"; // subject-home card grid
 @import "lang-select"; // language-select landing cards
+@import "settings-dropdown"; // masthead theme/language picker (shared by both skins)
 
 img.invert {
   // invert(1)로 명암(검정↔흰색)을 뒤집되, hue-rotate(180deg)로 색상은 제자리에 돌려
