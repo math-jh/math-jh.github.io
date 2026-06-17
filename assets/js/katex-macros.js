@@ -204,7 +204,17 @@ window.KATEX_MACROS = {
     "\\Umat":"\\operatorname{U}",
     "\\umat":"\\mathfrak{u}",
     // spaces
+    "\\C":"\\mathbb{C}",
+    "\\Z":"\\mathbb{Z}",
     "\\CP":"\\mathrm{P}_\\mathbb{C}",
     "\\RP":"\\mathbb{P}_\\mathbb{R}",
+    // quantum (co)homology / K-theory / matrix factorisation (research)
+    "\\QH":"\\operatorname{QH}",
+    "\\QK":"\\operatorname{QK}",
+    "\\MF":"\\operatorname{MF}",
+    "\\Lag":"\\operatorname{Lag}",
+    "\\Ovir":"\\widehat{\\mathcal{O}}^{\\,\\mathrm{vir}}",
     // misc
+    "\\half":"\\tfrac{1}{2}",
+    "\\shift":"(#1)\\text{-shifted}",
 };
