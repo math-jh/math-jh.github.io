@@ -1,12 +1,14 @@
 source "https://rubygems.org"
 
 gem "jekyll", "~> 4.3"
-gem "minimal-mistakes-jekyll"
-gem "kramdown-parser-gfm"
 gem "webrick", "~> 1.7"
-gem "nokogiri", ">= 1.13.2"
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw]
-gem "faraday-retry"
+# Removed (2026-06-17 cleanup):
+#  - minimal-mistakes-jekyll: theme is fully vendored (no theme:/remote_theme:),
+#    and every plugin it pulled that we use is declared explicitly below.
+#  - kramdown-parser-gfm: redundant — jekyll already depends on it transitively.
+#  - nokogiri, faraday-retry: explicit-only, nothing depends on them (the latter
+#    was only relevant to the octokit/jekyll-gist chain, removed with the theme gem).
 
 group :jekyll_plugins do
   gem "jekyll-last-modified-at"
