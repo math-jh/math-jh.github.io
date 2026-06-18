@@ -1,0 +1,78 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG 삼각형-부채꼴-직각삼각형 넓이 비교 (functions_and_limits-1.svg)
+\begin{tikzpicture}
+\tikzset{
+  axes/.style={->, black!50, line width=0.4pt},
+  angle/.style={accent1, line width=0.7pt},
+  region/.style={fill=accent1!15, draw=none},
+  boundary/.style={black, line width=0.7pt},
+  ghost/.style={black!50, line width=0.7pt},
+  dot/.style={fill=black, circle, inner sep=1.5pt}
+}
+
+\def\xa{45}
+\def\r{1.41421356}
+
+% 왼쪽: 삼각형 강조
+\begin{scope}[xshift=-4.2cm]
+  \draw[axes] (-0.3,0) -- (2.1,0);
+  \draw[axes] (0,-0.3) -- (0,1.8);
+  % 강조 도형 채우기
+  \fill[region] (0,0) -- (\r,0) -- ({\r*cos(\xa)},{\r*sin(\xa)}) -- cycle;
+  % 나머지 두 도형의 회색 외골선 (안쪽→바깥쪽 순)
+  \draw[ghost] (\r,0) arc (0:\xa:\r);
+  \draw[ghost] (0,0) -- (\r,0) -- (\r,{\r*tan(\xa)}) -- cycle;
+  % 강조 도형의 외골선 (가장 위)
+  \draw[boundary] (0,0) -- (\r,0) -- ({\r*cos(\xa)},{\r*sin(\xa)}) -- cycle;
+  % 각도
+  \draw[angle] (0.5,0) arc (0:\xa:0.5);
+  \node at (0.72,0.22) {$x$};
+  \node[below] at (0.7,-0.55) {$\frac{1}{2}\sin x$};
+\end{scope}
+
+% 가욱: 부채꼴 강조
+\begin{scope}
+  \draw[axes] (-0.3,0) -- (2.1,0);
+  \draw[axes] (0,-0.3) -- (0,1.8);
+  % 강조 도형 채우기
+  \fill[region] (0,0) -- (\r,0) arc (0:\xa:\r) -- cycle;
+  % 나머지 두 도형의 회색 외골선 (안쪽→바깥쪽 순)
+  \draw[ghost] (0,0) -- (\r,0) -- ({\r*cos(\xa)},{\r*sin(\xa)}) -- cycle;
+  \draw[ghost] (0,0) -- (\r,0) -- (\r,{\r*tan(\xa)}) -- cycle;
+  % 강조 도형의 외골선 (가장 위)
+  \draw[boundary] (0,0) -- (\r,0);
+  \draw[boundary] (\r,0) arc (0:\xa:\r);
+  \draw[boundary] (0,0) -- ({\r*cos(\xa)},{\r*sin(\xa)});
+  % 각도
+  \draw[angle] (0.5,0) arc (0:\xa:0.5);
+  \node at (0.72,0.22) {$x$};
+  \node[below] at (0.7,-0.55) {$\frac{1}{2}x$};
+\end{scope}
+
+% 오른쪽: 직각삼각형 강조
+\begin{scope}[xshift=4.2cm]
+  \draw[axes] (-0.3,0) -- (2.1,0);
+  \draw[axes] (0,-0.3) -- (0,2.3);
+  % 강조 도형 채우기
+  \fill[region] (0,0) -- (\r,0) -- (\r,{\r*tan(\xa)}) -- cycle;
+  % 나머지 두 도형의 회색 외골선 (안쪽→바깥쪽 순)
+  \draw[ghost] (0,0) -- (\r,0) -- ({\r*cos(\xa)},{\r*sin(\xa)}) -- cycle;
+  \draw[ghost] (\r,0) arc (0:\xa:\r);
+  % 강조 도형의 외골선 (가장 위)
+  \draw[boundary] (0,0) -- (\r,0) -- (\r,{\r*tan(\xa)}) -- cycle;
+  % 각도
+  \draw[angle] (0.5,0) arc (0:\xa:0.5);
+  \node at (0.72,0.22) {$x$};
+  \node[below] at (0.7,-0.55) {$\frac{1}{2}\tan x$};
+\end{scope}
+\end{tikzpicture}
+
+\end{document}
