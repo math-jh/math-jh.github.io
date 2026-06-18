@@ -59,13 +59,12 @@ _posts/Math/Mirror_Symmetry/**
 !_posts/Math/Mirror_Symmetry/en/2026-05-28-Givental_J_Function.md
 
 # Classical-math category landing pages — sealed until posts publish.
-# The posts (Analysis/Calculus/Number_Theory) are published:false, so in
+# The posts (Analysis/Number_Theory) are published:false, so in
 # production these categories are empty and the page's `sort: 'weight'` over a
 # nil category crashes the build. Local serve uses --unpublished so the posts
 # show and the page renders fine; keep these local-only until the streams go
-# live, then un-ignore.
+# live, then un-ignore. (Calculus went live 2026-06-18.)
 _pages/ko/Math-Analysis.md
-_pages/ko/Math-Calculus.md
 _pages/ko/Math-Number_Theory.md
 
 # Local-only term harvester
