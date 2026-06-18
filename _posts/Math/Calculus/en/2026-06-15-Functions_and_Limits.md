@@ -10,8 +10,9 @@ sidebar:
 
 date: 2026-06-15
 weight: 1
-translated_at: 2026-06-18T01:00:02+00:00
+translated_at: 2026-06-18T01:30:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-18T01:30:02+00:00
 ---
 ## Definition of Limit
 
