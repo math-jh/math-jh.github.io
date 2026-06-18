@@ -72,6 +72,17 @@
             "statusMessage": "md lint"
           }
         ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/linepatch_postcheck.py\"",
+            "timeout": 10,
+            "statusMessage": "linepatch postcheck"
+          }
+        ]
       }
     ],
     "SessionStart": [
