@@ -290,6 +290,7 @@ category_archive:
 
 categories-ko_order:
   - Math / Linear Algebra
+  - Math / Calculus
   - Math / Set Theory
   - Math / Category Theory
   - Math / Algebraic Structures
@@ -316,6 +317,7 @@ categories-ko_order:
 
 categories-en_order:
   - Math / Linear Algebra
+  - Math / Calculus
   - Math / Set Theory
   - Math / Category Theory
   - Math / Algebraic Structures
