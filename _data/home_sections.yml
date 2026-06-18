@@ -4,7 +4,7 @@
 # subject's running position here (kept identical to categories-*_order).
 # EN name = key after " / "; KO name = _data/category_labels.yml;
 # colour = _data/hues.yml; url = /{lang}/{en→snake}.
-- { ko: "교양수학",   en: "Liberal Arts",          subjects: ["Math / Linear Algebra", "Math / Calculus"] }
+- { ko: "교양수학",   en: "Liberal Arts",          subjects: ["Math / Calculus", "Math / Linear Algebra"] }
 - { ko: "수학기초론", en: "Foundations",           subjects: ["Math / Set Theory", "Math / Category Theory"] }
 - ko: "대수학"
   en: "Algebra"
