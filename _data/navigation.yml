@@ -264,8 +264,8 @@ mirror_symmetry-ko-research:
 category-ko:
   - title: "Basics"
     children:
-      # - title: "미적분학"
-      #   url: ko/calculus/
+      - title: "미적분학"
+        url: ko/calculus/
       - title: "선형대수학"
         url: ko/linear_algebra/
   - title: "Foundation"
@@ -356,8 +356,8 @@ category-ko:
 category-en:
   - title: "Basics"
     children:
-      # - title: "미적분학"
-      #   url: en/calculus/
+      - title: "Calculus"
+        url: en/calculus/
       - title: "Linear Algebra"
         url: en/linear_algebra/
   - title: "Foundation"
