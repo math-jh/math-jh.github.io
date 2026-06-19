@@ -37,7 +37,7 @@ $$h > 0$$에 대해 구간가법성 ([§정적분, ⁋명제 4](/ko/math/calculu
 
 $$F(x+h) - F(x) = \int_a^{x+h} f - \int_a^x f = \int_x^{x+h} f(t)\,dt$$
 
-이다. $$f$$가 $$[x, x+h]$$에서 연속이므로 그 구간에서 최솟값 $$m_h$$와 최댓값 $$M_h$$를 가지며 ([§연속함수, ⁋정리 3](/ko/math/calculus/continuity#thm3)), 단조성에 의해 $$m_h\, h \leq \int_x^{x+h} f \leq M_h\, h$$, 곧
+이다. $$f$$가 $$[x, x+h]$$에서 연속이므로 그 구간에서 최솟값 $$m_h$$와 최댓값 $$M_h$$를 가지며 ([§연속함수, ⁋정리 4](/ko/math/calculus/continuity#thm4)), 단조성에 의해 $$m_h\, h \leq \int_x^{x+h} f \leq M_h\, h$$, 곧
 
 $$m_h \leq \frac{F(x+h) - F(x)}{h} \leq M_h$$
 
