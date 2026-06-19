@@ -11,7 +11,7 @@ sidebar:
 
 date: 2022-08-02
 
-weight: 8
+weight: 7
 translated_at: 2026-05-31T22:30:05+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-05-31T22:30:05+00:00
