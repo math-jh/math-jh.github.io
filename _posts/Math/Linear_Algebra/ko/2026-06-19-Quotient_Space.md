@@ -39,9 +39,9 @@ $$v+W=\{v+w\mid w\in W\}$$
 
 </div>
 
-이는 집합론에서 처음 살펴보게 될 동치류의 예시이다. ([\[집합론\] §동치관계, ⁋정의 4](/ko/math/set_theory/equivalence_relations#def4)) 
+이는 집합론에서 처음 살펴보게 될 동치류의 예시이다. ([\[집합론\] §동치관계, ⁋정의 4](/ko/math/set_theory/equivalence_relations#def4)) 우리는 이에 대한 성질들을 별도로 살펴보자. 
 
-잉여류는 $$V$$를 서로소인 조각들로 나눈다. 이를 확인하기 위해, 두 벡터 $$v,v'\in V$$에 대하여 $$v\sim v'$$를 $$v-v'\in W$$인 것으로 정의하자. 그럼 $$W$$가 $$0$$을 포함하므로 $$v\sim v$$이고, $$W$$가 덧셈에 대한 역원을 가지므로 $$v\sim v'$$이면 $$v'\sim v$$이며, $$W$$가 덧셈에 대해 닫혀있으므로 $$v\sim v'$$이고 $$v'\sim v''$$이면 $$v\sim v''$$이다. ([§부분공간, ⁋명제 2](/ko/math/linear_algebra/subspaces#prop2)) 즉 $$\sim$$은 동치관계이다. 이제 다음의 동치
+우선 coset은 $$V$$를 서로소인 조각들로 나눈다. 이를 확인하기 위해, 두 벡터 $$v,v'\in V$$에 대하여 $$v\sim v'$$를 $$v-v'\in W$$인 것으로 정의하자. 그럼 $$W$$가 $$0$$을 포함하므로 $$v\sim v$$이고, $$W$$가 덧셈에 대한 역원을 가지므로 $$v\sim v'$$이면 $$v'\sim v$$이며, $$W$$가 덧셈에 대해 닫혀있으므로 $$v\sim v'$$이고 $$v'\sim v''$$이면 $$v\sim v''$$이다. ([§부분공간, ⁋명제 2](/ko/math/linear_algebra/subspaces#prop2)) 즉 $$\sim$$은 동치관계이다. 이제 다음의 동치
 
 $$v+W=v'+W\iff v-v'\in W$$
 
