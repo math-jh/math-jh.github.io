@@ -64,7 +64,7 @@ $$M - \tfrac1n < y_n \leq M, \qquad y_n \in f(K)$$
 
 </details>
 
-이로써 [\[미적분학\] §연속함수, ⁋정리 3](/ko/math/calculus/continuity#thm3)에서 받아들였던 최대·최소 정리가 완비성에 기초하여 증명되었고, 그것에 의존하던 [\[미적분학\] §평균값 정리](/ko/math/calculus/mean_value_theorem)의 롤의 정리도 정당화된다.
+이로써 [\[미적분학\] §연속함수, ⁋정리 4](/ko/math/calculus/continuity#thm4)에서 받아들였던 최대·최소 정리가 완비성에 기초하여 증명되었고, 그것에 의존하던 [\[미적분학\] §평균값 정리](/ko/math/calculus/mean_value_theorem)의 롤의 정리도 정당화된다.
 
 ## 균등연속성
 

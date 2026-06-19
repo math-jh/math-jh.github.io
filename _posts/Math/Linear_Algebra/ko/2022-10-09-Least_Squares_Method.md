@@ -13,6 +13,7 @@ date: 2022-10-09
 
 weight: 118
 
+
 ---
 
 ## 최소제곱법
@@ -81,6 +82,54 @@ $$\begin{pmatrix}a\\ b\end{pmatrix}=(A^tA)^{-1}A^ty=\frac{1}{6}\begin{pmatrix}3&
 
 더 일반적으로, 내적 $$\langle-,-\rangle$$을 dot product 대신 함수들의 공간에서의 $$L^2$$-내적 등으로 택하여도 이와 비슷한 예시를 반복할 수 있다. 
 
+[예시 2](#ex2)에서 본질적으로 쓰인 것은 적합하려는 함수가 미지의 계수들에 대해 일차라는 사실 뿐이다. 즉 적합하려는 모델이 미리 고른 함수들 $$f_1,\ldots, f_k$$의 일차결합 $$c_1f_1+\cdots+c_kf_k$$의 꼴이기만 하면, $$(i,j)$$ 성분이 $$i$$번째 데이터점에서의 $$f_j$$의 값인 행렬 $$A$$를 세우고 같은 normal equation을 풀어 계수 $$c_j$$를 얻을 수 있다. 직선 적합은 $$f_1(t)=t$$, $$f_2(t)=1$$인 경우였으며, 같은 방법이 다항함수 적합에도 그대로 적용된다. 
+
+<div class="example" markdown="1">
+
+<ins id="ex3">**예시 3**</ins> 평면 위의 네 점 $$(-2,5)$$, $$(-1,2)$$, $$(1,1)$$, $$(2,4)$$를 가장 잘 적합하는 이차함수 $$y=a\x^2+b\x+c$$를 찾는 문제를 생각하자. 각 점에서 $$(\x^2,\x,1)$$의 값을 행으로 쌓으면 
+
+$$A=\begin{pmatrix}4&-2&1\\ 1&-1&1\\ 1&1&1\\ 4&2&1\end{pmatrix},\qquad x=\begin{pmatrix}a\\ b\\ c\end{pmatrix},\qquad y=\begin{pmatrix}5\\ 2\\ 1\\ 4\end{pmatrix}$$
+
+이다. 직접 계산하면
+
+$$A^tA=\begin{pmatrix}34&0&10\\ 0&10&0\\ 10&0&4\end{pmatrix},\qquad A^ty=\begin{pmatrix}39\\ -3\\ 12\end{pmatrix}$$
+
+이다. 둘째 행은 분리되어 $$10b=-3$$, 즉 $$b=-\frac{3}{10}$$을 곧바로 주고, 나머지 두 미지수는 
+
+$$\begin{pmatrix}34&10\\ 10&4\end{pmatrix}\begin{pmatrix}a\\ c\end{pmatrix}=\begin{pmatrix}39\\ 12\end{pmatrix}$$
+
+을 푼다. 이 계수행렬의 행렬식은 $$34\cdot 4-10\cdot 10=36$$이므로 가역이고, 풀면 $$a=1$$, $$c=\frac{1}{2}$$을 얻는다. 따라서 최소제곱의 의미에서 가장 잘 적합하는 포물선은 $$y=\x^2-\frac{3}{10}\x+\frac{1}{2}$$이다.
+
+</div>
+
+[명제 1](#prop1)의 유도를 돌이켜보면, 최소제곱해 $$x$$가 만드는 $$Ax$$는 $$y$$를 $$\im A$$로 정사영한 벡터 $$\proj_{\im A}y$$와 정확히 같다. 이것이 애초에 normal equation을 이끌어낸 출발점이었다. 즉 적합값 $$\hat y=Ax$$는 $$y$$에서 $$\im A$$로 내린 수선의 발이고, 잔차 $$y-\hat y$$는 $$\im A$$에 수직이다. 특히 $$A$$가 full column rank여서 $$A^tA$$이 가역이라면 $$x=(A^tA)^{-1}A^ty$$이므로 적합값은 
+
+$$\hat y=A(A^tA)^{-1}A^ty$$
+
+로 주어진다. 여기서 등장한 행렬 $$P=A(A^tA)^{-1}A^t$$은 $$\im A$$로의 정사영을 나타내며, $$A^tA$$이 대칭이므로 $$P^t=P$$이고 
+
+$$P^2=A(A^tA)^{-1}(A^tA)(A^tA)^{-1}A^t=A(A^tA)^{-1}A^t=P$$
+
+이 성립함을 직접 확인할 수 있다. 정사영이 멱등사상이라는 사실이 행렬의 언어로 다시 나타난 것이다. 
+
+<div class="example" markdown="1">
+
+<ins id="ex4">**예시 4**</ins> [예시 2](#ex2)로 돌아가 적합값과 잔차를 직접 구해보자. $$x=(\tfrac{3}{2},\tfrac{7}{6})$$이었으므로 
+
+$$\hat y=Ax=\begin{pmatrix}0&1\\ 1&1\\ 2&1\end{pmatrix}\begin{pmatrix}3/2\\ 7/6\end{pmatrix}=\begin{pmatrix}7/6\\ 8/3\\ 25/6\end{pmatrix}$$
+
+이고, 따라서 잔차는 
+
+$$y-\hat y=\begin{pmatrix}1\\ 3\\ 4\end{pmatrix}-\begin{pmatrix}7/6\\ 8/3\\ 25/6\end{pmatrix}=\begin{pmatrix}-1/6\\ 1/3\\ -1/6\end{pmatrix}$$
+
+이다. 이 잔차를 $$A$$의 두 열 $$(0,1,2)$$와 $$(1,1,1)$$ 각각과 내적하면 
+
+$$0\cdot\left(-\tfrac{1}{6}\right)+1\cdot\tfrac{1}{3}+2\cdot\left(-\tfrac{1}{6}\right)=0,\qquad -\tfrac{1}{6}+\tfrac{1}{3}-\tfrac{1}{6}=0$$
+
+이 되어 잔차가 $$\im A$$에 수직임을 확인할 수 있다. 적합의 오차는 $$\lVert y-\hat y\rVert^2=\frac{1}{36}(1+4+1)=\frac{1}{6}$$이며, 이는 주어진 세 점이 한 직선 위에 있지 않은 정도를 정량적으로 나타낸다. 
+
+</div>
+
 ## 유사역행렬
 
 이번에는 반대로 행렬 $$A\in\Mat_{m\times n}(\mathbb{R})$$에서 $$m< n$$인 경우를 생각한다. 
@@ -91,7 +140,7 @@ $$\begin{pmatrix}a\\ b\end{pmatrix}=(A^tA)^{-1}A^ty=\frac{1}{6}\begin{pmatrix}3&
 
 <div class="proposition" markdown="1">
 
-<ins id="prop3">**명제 3**</ins> 임의의 행렬 $$A\in\Mat_{m\times n}(\mathbb{R})$$과 $$y\in\im A$$에 대하여, 방정식 $$Ax=y$$의 해들 중 norm을 최소로 하는 해는 유일하게 존재하며, 이는 $$\im A^t$$에 속하는 유일한 해이다.
+<ins id="prop5">**명제 5**</ins> 임의의 행렬 $$A\in\Mat_{m\times n}(\mathbb{R})$$과 $$y\in\im A$$에 대하여, 방정식 $$Ax=y$$의 해들 중 norm을 최소로 하는 해는 유일하게 존재하며, 이는 $$\im A^t$$에 속하는 유일한 해이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -113,7 +162,7 @@ $$\lVert x\rVert^2=\lVert p\rVert^2+\lVert u\rVert^2\geq \lVert p\rVert^2$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**명제 4**</ins> 행렬 $$A\in\Mat_{m\times n}(\mathbb{R})$$이 $$\rank A=m$$을 만족한다면 $$AA^t\in\Mat_m(\mathbb{R})$$은 가역이며, 임의의 $$y\in\mathbb{R}^m$$에 대하여 방정식 $$Ax=y$$의 최소노름해는
+<ins id="prop6">**명제 6**</ins> 행렬 $$A\in\Mat_{m\times n}(\mathbb{R})$$이 $$\rank A=m$$을 만족한다면 $$AA^t\in\Mat_m(\mathbb{R})$$은 가역이며, 임의의 $$y\in\mathbb{R}^m$$에 대하여 방정식 $$Ax=y$$의 최소노름해는
 
 $$x=A^t(AA^t)^{-1}y$$
 
@@ -133,7 +182,7 @@ $$\lVert A^tz\rVert^2=\langle A^tz, A^tz\rangle=\langle z, AA^tz\rangle=0$$
 
 $$Ax=AA^t(AA^t)^{-1}y=y$$
 
-이므로 $$x$$는 $$Ax=y$$의 해이다. 뿐만 아니라 $$x=A^t\big((AA^t)^{-1}y\big)\in\im A^t$$이므로, [명제 3](#prop3)에 의하여 $$x$$는 최소노름해이다.
+이므로 $$x$$는 $$Ax=y$$의 해이다. 뿐만 아니라 $$x=A^t\big((AA^t)^{-1}y\big)\in\im A^t$$이므로, [명제 5](#prop5)에 의하여 $$x$$는 최소노름해이다.
 
 </details>
 
@@ -143,7 +192,7 @@ $$Ax=AA^t(AA^t)^{-1}y=y$$
 
 <div class="definition" markdown="1">
 
-<ins id="def5">**정의 5**</ins> 행렬 $$A\in\Mat_{m\times n}(\mathbb{R})$$에 대하여, 만일 $$A$$가 full column rank라면
+<ins id="def7">**정의 7**</ins> 행렬 $$A\in\Mat_{m\times n}(\mathbb{R})$$에 대하여, 만일 $$A$$가 full column rank라면
 
 $$A^+:=(A^tA)^{-1}A^t$$
 
@@ -163,7 +212,7 @@ $$AA^+A=A,\quad A^+AA^+=A^+,\quad (AA^+)^t=AA^+,\quad (A^+A)^t=A^+A$$
 
 <div class="remark" markdown="1">
 
-<ins id="rmk6">**참고 6**</ins> $$A$$가 가역인 정사각행렬이라면 $$A^+=A^{-1}$$이 성립한다. 이는 $$A^tA$$과 $$AA^t$$이 모두 가역이어서 $$A^+=(A^tA)^{-1}A^t=A^{-1}(A^t)^{-1}A^t=A^{-1}$$이 되기 때문이다. 이러한 의미에서 유사역행렬은 역행렬의 개념을 일반화한다.
+<ins id="rmk8">**참고 8**</ins> $$A$$가 가역인 정사각행렬이라면 $$A^+=A^{-1}$$이 성립한다. 이는 $$A^tA$$과 $$AA^t$$이 모두 가역이어서 $$A^+=(A^tA)^{-1}A^t=A^{-1}(A^t)^{-1}A^t=A^{-1}$$이 되기 때문이다. 이러한 의미에서 유사역행렬은 역행렬의 개념을 일반화한다.
 
 </div>
 
