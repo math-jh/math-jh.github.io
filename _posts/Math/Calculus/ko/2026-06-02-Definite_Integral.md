@@ -98,7 +98,7 @@ $$\left\lvert \int_a^b f\right\rvert \leq \int_a^b \lvert f\rvert$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-최대·최소 정리 ([§연속함수, ⁋정리 3](/ko/math/calculus/continuity#thm3))로 $$f$$는 $$[a,b]$$에서 최솟값 $$m$$과 최댓값 $$M$$을 가진다. 위 평가에서 평균값 $$\dfrac{1}{b-a}\int_a^b f$$가 $$[m, M]$$에 속하므로, 중간값 정리 ([§연속함수, ⁋정리 4](/ko/math/calculus/continuity#thm4))에 의해 그 값을 취하는 $$c$$, 즉 $$f(c) = \dfrac{1}{b-a}\int_a^b f$$인 $$c$$가 존재한다.
+최대·최소 정리 ([§연속함수, ⁋정리 4](/ko/math/calculus/continuity#thm4))로 $$f$$는 $$[a,b]$$에서 최솟값 $$m$$과 최댓값 $$M$$을 가진다. 위 평가에서 평균값 $$\dfrac{1}{b-a}\int_a^b f$$가 $$[m, M]$$에 속하므로, 중간값 정리 ([§연속함수, ⁋정리 5](/ko/math/calculus/continuity#thm5))에 의해 그 값을 취하는 $$c$$, 즉 $$f(c) = \dfrac{1}{b-a}\int_a^b f$$인 $$c$$가 존재한다.
 
 </details>
 
