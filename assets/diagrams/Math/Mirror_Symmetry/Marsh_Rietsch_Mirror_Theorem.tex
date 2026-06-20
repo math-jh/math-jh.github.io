@@ -1,0 +1,20 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG LG model isomorphism (Marsh_Rietsch_Mirror_Theorem-1.svg)
+\begin{tikzcd}
+	{\check{X}^\circ \times \mathbb{C}_q^\ast} & {R \times \mathbb{C}_q^\ast} \\
+	{\mathbb{C}} & {\mathbb{C}}
+	\arrow["\Phi", "\sim"', from=1-1, to=1-2]
+	\arrow["{W_q}"', from=1-1, to=2-1]
+	\arrow["{F_q}", from=1-2, to=2-2]
+	\arrow[equal, from=2-1, to=2-2]
+\end{tikzcd}
+
+\end{document}
