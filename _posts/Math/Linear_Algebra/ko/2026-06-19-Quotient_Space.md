@@ -137,35 +137,39 @@ $$v+W=\sum_{i=1}^n\alpha_i(x_i+W)=\sum_{i=k+1}^n\alpha_i(x_i+W)$$
 
 인데, 마지막 등호는 $$i\leq k$$에 대하여 $$x_i\in W$$이므로 $$x_i+W=W$$이 $$V/W$$의 영벡터인 것으로부터 성립한다. 
 
-다음으로 이들은 일차독립이다. 스칼라들 $$\alpha_{k+1},\ldots,\alpha_n$$에 대하여 
+다음으로 이들이 일차독립임을 보이기 위해 스칼라들 $$\alpha_{k+1},\ldots,\alpha_n$$에 대하여 
 
 $$\sum_{i=k+1}^n\alpha_i(x_i+W)=0+W$$
 
-라 하자. 그럼 $$\sum_{i=k+1}^n\alpha_ix_i+W=W$$이므로 [보조정리 2](#lem2)에 의해 $$\sum_{i=k+1}^n\alpha_ix_i\in W$$이다. 따라서 이 벡터를 $$W$$의 basis로 나타내어 적당한 스칼라들 $$\beta_1,\ldots,\beta_k$$에 대해
+라 하자. 그럼 앞에서 살펴봤듯 $$\sum_{i=k+1}^n\alpha_ix_i+W=W=0+W$$이므로, [보조정리 2](#lem2)에 의해 $$\sum_{i=k+1}^n\alpha_ix_i\in W$$이다. 따라서 이 벡터를 $$W$$의 basis로 나타내어 적당한 스칼라들 $$\beta_1,\ldots,\beta_k$$에 대해
 
 $$\sum_{i=k+1}^n\alpha_ix_i=\sum_{i=1}^k\beta_ix_i$$
 
-이라 할 수 있다. 그런데 $$\{x_1,\ldots, x_n\}$$은 $$V$$의 basis로서 일차독립이므로 모든 계수가 $$0$$이어야 하고, 특히 $$\alpha_{k+1}=\cdots=\alpha_n=0$$이다. 
+이라 할 수 있으며 이를 정리하면
+
+$$-\sum_{i=1}^k\beta_ix_i+\sum_{i=k+1}^n\alpha_ix_i=0$$
+
+이다. 그런데 좌변은 $$\{x_1,\ldots, x_n\}$$의 일차결합이며, 이들은 $$V$$의 basis로서 일차독립이므로 모든 계수가 $$0$$이어야 하고, 특히 $$\alpha_{k+1}=\cdots=\alpha_n=0$$이다. 
 
 따라서 $$\{x_{k+1}+W,\ldots, x_n+W\}$$은 $$V/W$$의 basis이고, 그 원소의 개수는 $$n-k$$이므로 $$\dim(V/W)=n-k=\dim V-\dim W$$이다.
 
 </details>
 
-## 자연스러운 사영과 제1동형정리
+## 제1동형정리
 
-몫공간이 자연스럽게 등장하는 맥락은 linear map과 함께할 때 비로소 분명해진다. 우리는 [§선형사상](/ko/math/linear_algebra/linear_map)에서 linear map을, [§동형사상](/ko/math/linear_algebra/isomorphic_vector_spaces)에서 isomorphism과 rank-nullity 정리를 살펴보았으므로, 이제 이들과 몫공간의 관계를 살펴본다. 
+이 글이 별도의 글로 존재하는 이유 중 하나는 [§동형사상, ⁋정리 7](/ko/math/linear_algebra/isomorphic_vector_spaces#thm7)에 더 본질적인 의미를 부여하기 위한 것이며, 이 마지막 섹션의 목적이 바로 이것이다. 
 
 임의의 $$\mathbb{K}$$-벡터공간 $$V$$와 부분공간 $$W\leq V$$에 대하여, 다음의 식
 
-$$\pi(v)=v+W$$
+$$p(v)=v+W$$
 
-으로 정의된 함수 $$\pi:V\rightarrow V/W$$를 생각하자. 그럼 [정의 3](#def3)의 연산은 정확히 $$\pi$$가 다음의 두 식
+으로 정의된 함수 $$p:V\rightarrow V/W$$를 생각하자. 그럼 [정의 3](#def3)의 연산은 정확히 $$p$$가 다음의 두 식
 
-$$\pi(\alpha v)=(\alpha v)+W=\alpha(v+W)=\alpha\pi(v),\qquad \pi(v+v')=(v+v')+W=(v+W)+(v'+W)=\pi(v)+\pi(v')$$
+$$p(\alpha v)=(\alpha v)+W=\alpha(v+W)=\alpha  p(v),\qquad p(v+v')=(v+v')+W=(v+W)+(v'+W)=p(v)+p(v')$$
 
-을 만족하도록 정의된 것이다. 즉 $$\pi$$는 linear map이며, 이를 $$V$$에서 $$V/W$$로의 *자연스러운 사영<sub>natural projection</sub>*이라 부른다. 정의에 의해 $$\pi$$는 전사이고, 
+을 만족하도록 정의된 것이다. 즉 $$p$$는 linear map이며, 이를 $$V$$에서 $$V/W$$로의 *자연스러운 사영<sub>natural projection</sub>*이라 부른다. 정의에 의해 $$p$$는 전사이고, 
 
-$$\ker\pi=\{v\in V\mid v+W=W\}=W$$
+$$\ker p=\{v\in V\mid v+W=W\}=W$$
 
 이 성립한다. 이로부터 임의의 부분공간은 적당한 linear map의 kernel로 나타난다는 것을 안다. 
 
@@ -177,7 +181,7 @@ $$\ker\pi=\{v\in V\mid v+W=W\}=W$$
 
 $$\bar L(v+W)=L(v)$$
 
-으로 정의된 linear map $$\bar L:V/W\rightarrow U$$가 유일하게 존재하여 $$L=\bar L\circ\pi$$를 만족한다.
+으로 정의된 linear map $$\bar L:V/W\rightarrow U$$가 유일하게 존재하여 $$L=\bar L\circ p$$를 만족한다.
 
 </div>
 <details class="proof" markdown="1">
@@ -191,7 +195,7 @@ $$L(v)-L(v')=L(v-v')=0$$
 
 $$\bar L\bigl(\alpha(v+W)+(v'+W)\bigr)=\bar L\bigl((\alpha v+v')+W\bigr)=L(\alpha v+v')=\alpha L(v)+L(v')=\alpha\bar L(v+W)+\bar L(v'+W)$$
 
-으로부터 따라온다. 또 임의의 $$v\in V$$에 대하여 $$(\bar L\circ\pi)(v)=\bar L(v+W)=L(v)$$이므로 $$L=\bar L\circ\pi$$이다. 마지막으로 $$L=L'\circ\pi$$를 만족하는 linear map $$L':V/W\rightarrow U$$가 주어졌다 하면, $$\pi$$가 전사이므로 임의의 $$v+W\in V/W$$에 대하여 $$L'(v+W)=L'(\pi(v))=L(v)=\bar L(v+W)$$이고 따라서 $$L'=\bar L$$이다.
+으로부터 따라온다. 또 임의의 $$v\in V$$에 대하여 $$(\bar L\circ p)(v)=\bar L(v+W)=L(v)$$이므로 $$L=\bar L\circ p$$이다. 마지막으로 $$L=L'\circ p$$를 만족하는 linear map $$L':V/W\rightarrow U$$가 주어졌다 하면, $$p$$가 전사이므로 임의의 $$v+W\in V/W$$에 대하여 $$L'(v+W)=L'(p(v))=L(v)=\bar L(v+W)$$이고 따라서 $$L'=\bar L$$이다.
 
 </details>
 
