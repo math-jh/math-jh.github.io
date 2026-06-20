@@ -76,6 +76,13 @@
     border-left-color: mix(#000, $notice-color, 10%);
   }
 
+  /* A blockquote nested inside a box (정의/정리/증명/…): hide its brass left bar
+     so it doesn't compete with the box's own accent border. Keeps everything
+     else (italic, muted serif, indent). */
+  blockquote {
+    border-left: 0;
+  }
+
   code {
     background-color: mix($background-color, $notice-color, $code-notice-background-mix)
   }
