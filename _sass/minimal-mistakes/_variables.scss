@@ -101,8 +101,8 @@ $indent-var: 1.3em !default;
 @font-face {
   font-family: "MyEmphFont";
   font-style: normal;
-  src: url('fonts/NotoSansKR-Regular.woff') format('woff'),
-       url('fonts/NotoSansKR-Regular.woff2') format('woff2');
+  src: url('fonts/IBMPlexSansKR-Regular.woff2') format('woff2'),
+       url('fonts/IBMPlexSansKR-Regular.woff') format('woff');
   font-display: swap;
 }
 
