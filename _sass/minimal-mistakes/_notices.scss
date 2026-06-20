@@ -212,31 +212,18 @@ details[open] > summary::before {
 }
 
 /* ==========================================================================
-   정리 박스 스타일 — 좌측 헤어라인
-   admonition 채움/라운드를 빼고 좌측 세로선만 남긴 차분한 형태. 라벨은 본문 첫머리에
-   인라인으로 흐른다. theorem-label-splitter.rb 가 <ins> 라벨을 종류+번호(.thm-n)와
-   괄호 설명(.thm-name)으로 쪼개, 전자는 볼드·후자는 이탤릭으로 구분한다.
-   (여백 라벨 grid 는 라벨 길이 편차가 커서 폐기.)
+   정리 박스 스타일
+   박스 외형은 기존 admonition(옅은 채움 + 4px 좌측 띠 + 라운드, notice 믹스인) 그대로.
+   라벨만 손봤다: theorem-label-splitter.rb 가 <ins> 라벨을 종류+번호(.thm-n)와 괄호
+   설명(.thm-name)으로 쪼개고, 라벨+설명은 한 줄(.thm-head)·본문은 아래 줄로 둔다.
    ========================================================================== */
-.definition,
-.proposition,
-.proof,
-.proof--alone,
-.details,
-.example,
-.remark,
-.misc {
-  background-color: transparent;
-  border-left-width: 3px;
-  border-radius: 0;
-  padding: 0.15em 0 0.15em 1.1em;
-}
 
 /* 라벨: 라벨+괄호설명은 한 줄(.thm-head 블록), 본문은 그 아래 줄로. 종류+번호는
-   볼드, 괄호 설명은 이탤릭. 글자색은 그 박스의 헤어라인 색과 동일. */
+   볼드, 괄호 설명은 이탤릭. 글자색은 그 박스의 강조색(좌측 띠 색)과 동일. */
 .thm-head {
   display: block;
   margin-bottom: 0.2em;
+  font-size: 1.05em; /* 라벨을 본문(1em)보다 살짝 크게 */
 }
 
 .thm-n {
@@ -254,39 +241,94 @@ details[open] > summary::before {
 .remark      .thm-n, .remark      .thm-name { color: $remark-color; }
 .misc        .thm-n, .misc        .thm-name { color: $misc-color; }
 
-/* 증명: summary 라벨도 다른 라벨처럼 proof 색 볼드 sans. 접힘 삼각형은 왼쪽이 아니라
-   오른쪽 끝에 두고, 펼치면 숨긴다. 본문 끝엔 QED 사각형([open] 한정이라 접으면 함께 사라짐). */
+/* 증명: summary 라벨도 다른 라벨처럼 proof 색 볼드 sans.
+   theme 기본값 summary{font-style:italic} 때문에 sans 에서 faux slant 가 생기므로
+   font-style:normal 로 상쇄한다. 접힘/펼침 표식은 아래 마름모↔정사각형 참고. */
 .proof > summary,
 .proof--alone > summary {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   font-family: $sans-serif;
   font-weight: bold;
+  font-style: normal;
+  font-size: 1.05em; /* 라벨과 동일하게 본문보다 살짝 크게 */
   color: $proof-color;
 }
 
-/* 기존 왼쪽 삼각형(summary::before) 제거, 접혔을 때만 오른쪽 끝에 표시 */
+/* 기존 왼쪽 삼각형(summary::before) 제거 */
 .proof > summary::before,
 .proof--alone > summary::before {
   content: none;
 }
 
-.proof:not([open]) > summary::after,
-.proof--alone:not([open]) > summary::after {
-  content: "\25B8"; /* ▸ 접힘 표시 (flex space-between 으로 오른쪽 끝) */
-  font-style: normal;
-  color: $proof-color;
+/* QED 표식: 접힘=summary 옆 마름모, 펼침=회전하며 본문 끝(우하단)으로 이동해 정사각형.
+   위치(top)는 Proof_animate.js 가 toggle 마다, 회전은 [open] 이 맡고, 둘 다 CSS
+   transition 으로 부드럽게 이어진다. */
+$qed-size: 0.65em;
+
+.proof,
+.proof--alone {
+  position: relative; /* .qed-mark 의 absolute 기준 */
 }
 
-details.proof[open]::after,
-details.proof--alone[open]::after {
-  content: "";
-  display: block;
-  width: 0.5em;
-  height: 0.5em;
-  margin: 0.4em 0 0.1em auto; /* 줄바꿈 + 오른쪽 정렬 */
+.qed-mark {
+  position: absolute;
+  right: 1em;
+  width: $qed-size;
+  height: $qed-size;
   background: $proof-color;
+  transform: rotate(45deg); /* 접힘 = 마름모 */
+  transition: top 0.3s ease, transform 0.3s ease; /* Proof_animate.js DUR 과 동기 */
+  pointer-events: none;
+}
+
+details.proof[open] .qed-mark,
+details.proof--alone[open] .qed-mark {
+  transform: rotate(0deg); /* 펼침 = 정사각형 */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .qed-mark {
+    transition: none;
+  }
+}
+
+/* ==========================================================================
+   정리 상호참조 호버 미리보기 카드 (Xref_preview.js)
+   ========================================================================== */
+.xref-preview {
+  position: fixed;
+  z-index: 9999;
+  max-width: min(440px, 92vw);
+  max-height: 55vh;
+  overflow: auto;
+  padding: 0.1em 0.9em;
+  background: $background-color;
+  border: 1px solid $border-color;
+  border-radius: 6px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+  font-size: 0.92em;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.12s ease;
+
+  &.is-visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* 카드 안에 복제된 박스는 바깥 큰 마진 제거 */
+  .definition,
+  .proposition,
+  .example,
+  .remark,
+  .misc,
+  .proof,
+  .proof--alone,
+  .details {
+    margin: 0.5em 0 !important;
+  }
 }
 
 .lang {

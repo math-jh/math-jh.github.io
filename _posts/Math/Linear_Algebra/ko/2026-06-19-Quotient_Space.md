@@ -1,6 +1,6 @@
 ---
 title: "몫공간"
-description: "부분공간으로 벡터공간을 나눈 몫공간을 coset을 통해 구성하고, 연산의 잘 정의됨과 차원 공식을 증명한다. 나아가 자연스러운 사영, 보편 성질, 그리고 제1동형정리를 살펴본다."
+description: "부분공간으로 벡터공간을 나눈 몫공간을 coset을 통해 구성하고, 연산의 잘 정의됨과 차원 공식을 증명한다. 나아가 natural projection, 보편 성질, 그리고 제1동형정리를 살펴본다."
 excerpt: "부분공간으로 나눈 몫공간"
 
 categories: [Math / Linear Algebra]
@@ -157,23 +157,23 @@ $$-\sum_{i=1}^k\beta_ix_i+\sum_{i=k+1}^n\alpha_ix_i=0$$
 
 ## 제1동형정리
 
-이 글이 별도의 글로 존재하는 이유 중 하나는 [§동형사상, ⁋정리 7](/ko/math/linear_algebra/isomorphic_vector_spaces#thm7)에 더 본질적인 의미를 부여하기 위한 것이며, 이 마지막 섹션의 목적이 바로 이것이다. 
+이 글이 별도의 글로 존재하는 이유 중 하나는 [§동형사상, ⁋정리 7](/ko/math/linear_algebra/isomorphic_vector_spaces#thm7)에 더 본질적인 의미를 부여하기 위한 것이다. 이 마지막 섹션에서 우리는 이를 해결한다.  
 
 임의의 $$\mathbb{K}$$-벡터공간 $$V$$와 부분공간 $$W\leq V$$에 대하여, 다음의 식
 
 $$p(v)=v+W$$
 
-으로 정의된 함수 $$p:V\rightarrow V/W$$를 생각하자. 그럼 [정의 3](#def3)의 연산은 정확히 $$p$$가 다음의 두 식
+으로 정의된 함수 $$p:V\rightarrow V/W$$를 생각하자. 그럼 [정의 3](#def3)의 연산은 정확히 $$p$$가 다음의 두 식 
 
 $$p(\alpha v)=(\alpha v)+W=\alpha(v+W)=\alpha  p(v),\qquad p(v+v')=(v+v')+W=(v+W)+(v'+W)=p(v)+p(v')$$
 
-을 만족하도록 정의된 것이다. 즉 $$p$$는 linear map이며, 이를 $$V$$에서 $$V/W$$로의 *자연스러운 사영<sub>natural projection</sub>*이라 부른다. 정의에 의해 $$p$$는 전사이고, 
+을 만족하도록 정의된 것이다. 즉 $$p$$는 linear map이며, 이를 $$V$$에서 $$V/W$$로의 *natural projection<sub>자연스러운 사영</sub>*이라 부른다. 정의에 의해 $$p$$는 전사이고, 
 
 $$\ker p=\{v\in V\mid v+W=W\}=W$$
 
 이 성립한다. 이로부터 임의의 부분공간은 적당한 linear map의 kernel로 나타난다는 것을 안다. 
 
-자연스러운 사영의 가장 중요한 성질은 다음의 보편 성질이다. 이는 $$W$$를 $$0$$으로 보내는 임의의 linear map이 $$V/W$$를 거쳐 유일하게 분해된다는 것을 말한다.
+Natural projection의 가장 중요한 성질은 다음의 보편 성질이다. 이는 $$W$$를 $$0$$으로 보내는 임의의 linear map이 $$V/W$$를 거쳐 유일하게 분해된다는 것을 말한다.
 
 <div class="proposition" markdown="1">
 
