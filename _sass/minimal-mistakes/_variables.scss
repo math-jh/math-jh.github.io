@@ -106,12 +106,11 @@ $indent-var: 1.3em !default;
   font-display: swap;
 }
 
-/* Material Icons */
+/* Material Symbols Sharp */
 @font-face {
-  font-family: "Material Icons";
+  font-family: "Material Symbols Sharp";
   font-style: normal;
-  src: url('fonts/material-icons-sharp.woff') format('woff'),
-       url('fonts/material-icons-sharp.woff2') format('woff2');
+  src: url('fonts/material-symbols-sharp.woff2') format('woff2');
   font-display: swap;
 }
 

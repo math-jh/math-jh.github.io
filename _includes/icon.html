@@ -1,0 +1,9 @@
+{% comment %}
+  Icon helper for Material Symbols Sharp.
+  Usage:
+    {% include icon.html name="search" %}
+    {% include icon.html name="search" size="24" %}
+    {% include icon.html name="search" class="my-class" %}
+    {% include icon.html name="search" size="18" class="dropdown-arrow" style="vertical-align:-.1em" %}
+{% endcomment %}
+<i class="material-icons{% if include.size %} md-{{ include.size }}{% endif %}{% if include.class %} {{ include.class }}{% endif %}" aria-hidden="true"{% if include.style %} style="{{ include.style }}"{% endif %}>{{ include.name }}</i>

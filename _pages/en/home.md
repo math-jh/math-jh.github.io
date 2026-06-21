@@ -8,7 +8,7 @@ header:
   overlay_filter: 0.9
   caption: "Mirror symmetry and Schrödinger's cat. <br/>From [*Horizon* $(2018,\\text{ vol.}1)$](https://horizon.kias.re.kr/6469/)<br/>Photo by [**mareykrap**](https://notefolio.net/mareykrap/104880)"
   actions:
-    - label: "<span class='material-icons md-18' style='vertical-align:-.1em'>&#xE873;</span>  About"
+    - label: "<span class='material-icons md-18' style='vertical-align:-.2em'>article_person</span>  About"
       url: "/en/about"
 excerpt:
 ---

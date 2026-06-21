@@ -37,7 +37,7 @@
         {% if site.search == true %}
         <button class="search__toggle" type="button">
           <span class="visually-hidden">{{ site.data.ui-text[site.locale].search_label | default: "Toggle search" }}</span>
-          <i class="material-icons md-24" style="vertical-align:-.2em;">&#xE8B6;</i>
+          <i class="material-icons md-24" style="vertical-align:-.2em;">search</i>
         </button>
         {% endif %}
         <div class="settings-dropdown" style="{% unless site.dark_theme or site.multilingual %} display: none; {% endunless %}">
@@ -65,7 +65,7 @@
           </script>
           <button class="settings-toggle" onclick="toggleSettings(event)" aria-label="Settings">
             <i class="material-icons md-24" style="vertical-align:-.2em;">tune</i>
-            <i class="material-icons md-18 dropdown-arrow" style="vertical-align:-.1em;">arrow_drop_down</i>
+            <i class="material-icons md-18 dropdown-arrow" style="vertical-align:-.2em;">arrow_drop_down</i>
           </button>
           <ul class="settings-menu" id="settings-menu">
             {% if site.dark_theme %}

@@ -15,12 +15,12 @@ excerpt:
     <a class="lang-card" href="/ko/" hreflang="ko" lang="ko">
       <span class="lang-card__native">한국어</span>
       <span class="lang-card__sub">한국어로 읽기</span>
-      <span class="lang-card__go">계속하기 <i class="material-icons" aria-hidden="true">&#xE5C8;</i></span>
+      <span class="lang-card__go">계속하기 <i class="material-icons" aria-hidden="true">arrow_forward</i></span>
     </a>
     <a class="lang-card lang-card--en" href="/en/" hreflang="en" lang="en">
       <span class="lang-card__native">English</span>
       <span class="lang-card__sub">Read in English</span>
-      <span class="lang-card__go">Continue <i class="material-icons" aria-hidden="true">&#xE5C8;</i></span>
+      <span class="lang-card__go">Continue <i class="material-icons" aria-hidden="true">arrow_forward</i></span>
     </a>
   </nav>
 </div>
