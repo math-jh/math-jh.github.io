@@ -49,15 +49,18 @@
      });
  </script>
 
- <script language="javascript">
+ <script>
+  // 스크롤 진행률(%) — #percent 는 page.id 있는 글에만 존재하므로(default.html),
+  // 홈·카테고리 등 글이 아닌 페이지에선 가드가 없으면 스크롤마다 null 에러가 난다.
   const percentLabel = document.querySelector("#percent");
-  const originalTitle = document.title;
-  window.addEventListener("scroll", () => {
-    let scrollTop = window.scrollY;
-    let docHeight = document.body.offsetHeight;
-    let winHeight = window.innerHeight;
-    let scrollPercent = scrollTop / (docHeight - winHeight);
-    let scrollPercentRounded = Math.round(scrollPercent * 100);
-    percentLabel.innerHTML = scrollPercentRounded;
-  });
+  if (percentLabel) {
+    window.addEventListener("scroll", () => {
+      let scrollTop = window.scrollY;
+      let docHeight = document.body.offsetHeight;
+      let winHeight = window.innerHeight;
+      let scrollPercent = scrollTop / (docHeight - winHeight);
+      let scrollPercentRounded = Math.round(scrollPercent * 100);
+      percentLabel.innerHTML = scrollPercentRounded;
+    });
+  }
 </script>
