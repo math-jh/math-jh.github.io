@@ -9,12 +9,12 @@ sidebar:
     nav: "calculus-ko"
 
 date: 2026-06-02
-weight: 9
+weight: 12
 
 published: false
 ---
 
-[§부정적분](/ko/math/calculus/antiderivatives)은 미분의 역연산이었다. 정적분은 그와 전혀 다른 동기 — 곡선 아래의 넓이, 누적된 양 — 에서 출발하지만, 놀랍게도 다음 글의 미적분의 기본정리를 통해 둘이 하나로 묶인다. 이 글에서는 먼저 정적분을 넓이의 근사라는 직관에 충실하게 정의하고, 그 기본 성질을 정리한다.
+[§부정적분](/ko/math/calculus/antiderivatives)은 미분의 역연산이었다. 정적분은 그와 전혀 다른 동기 — 곡선 아래의 넓이, 누적된 양 — 에서 출발한다. 이 글에서는 먼저 정적분을 넓이의 근사라는 직관에 충실하게 정의하고, 그 기본 성질을 정리한다.
 
 ## 분할과 리만 합
 
@@ -46,7 +46,7 @@ $$\int_a^b f(x)\,dx = I$$
 
 $$\sum_{i=1}^n \frac{i}{n}\cdot\frac1n = \frac{1}{n^2}\cdot\frac{n(n+1)}{2} = \frac{n+1}{2n} \to \frac12$$
 
-이고, 같은 방식으로 $$\displaystyle\int_0^1 x^2\,dx = \lim_{n\to\infty}\sum_{i=1}^n \frac{i^2}{n^3} = \lim_{n\to\infty}\frac{n(n+1)(2n+1)}{6n^3} = \frac13$$이다. 이렇게 일일이 합을 계산하는 수고를 덜어 주는 것이 다음 글의 미적분의 기본정리이다.
+이고, 같은 방식으로 $$\displaystyle\int_0^1 x^2\,dx = \lim_{n\to\infty}\sum_{i=1}^n \frac{i^2}{n^3} = \lim_{n\to\infty}\frac{n(n+1)(2n+1)}{6n^3} = \frac13$$이다.
 
 모든 함수가 적분가능하지는 않다. 유리수에서 $$1$$, 무리수에서 $$0$$인 디리클레 함수는 어떤 부분구간에서도 상합이 $$1$$, 하합이 $$0$$이라 리만 합이 표본점에 따라 $$0$$과 $$1$$ 사이를 오가므로 한 값으로 모이지 않아 적분 불가능하다. 그러나 우리가 다루는 함수 대부분은 적분가능하다.
 
@@ -122,7 +122,7 @@ $$\left\lvert \int_a^b f\right\rvert \leq \int_a^b \lvert f\rvert$$
 
 ## 예시와 계산
 
-정의 2를 곧이곧대로 적용하여 리만 합의 극한을 계산하는 일은, 다음 글의 미적분의 기본정리가 등장하기 전까지는 정적분을 구하는 유일한 수단이다. 그 과정을 한 번 끝까지 밀어붙여 보는 것은, 정적분이 무엇을 재는지를 손으로 확인하는 좋은 연습이 된다. 먼저 거듭제곱 함수를 같은 길이의 부분구간으로 분할하여 직접 계산한다.
+정의 2를 곧이곧대로 적용하여 리만 합의 극한을 직접 계산하는 일은 대체로 번거롭다. 그러나 그 과정을 한 번 끝까지 밀어붙여 보는 것은, 정적분이 무엇을 재는지를 손으로 확인하는 좋은 연습이 된다. 먼저 거듭제곱 함수를 같은 길이의 부분구간으로 분할하여 직접 계산한다.
 
 <div class="example" markdown="1">
 
@@ -227,4 +227,31 @@ $$V = \int_{-r}^{r}\pi\bigl(r^2 - x^2\bigr)\,dx = \pi\left[r^2\int_{-r}^r dx - \
 
 </div>
 
-이렇게 정의한 정적분은 원리적으로는 리만 합의 극한을 직접 계산해야 하지만, 다음 글 [§미적분의 기본정리](/ko/math/calculus/fundamental_theorem_of_calculus)는 이 계산을 부정적분, 즉 미분의 역연산으로 환원하여 정적분과 부정적분을 하나로 잇는다. 위 예시들에서 $$\int_0^3 x^2 = 9$$ 같은 값을 리만 합 없이 즉시 얻을 수 있게 되는 것이다.
+
+## 멱급수의 항별 적분
+
+멱급수는 수렴요경 안에서 항별로 적분할 수도 있다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop14">**명제 14 (멱급수의 항별 적분)**</ins> $$f(x) = \sum_{n=0}^\infty c_n x^n$$이 수렴요경 $$R > 0$$을 가지면, $$\lvert x\rvert < R$$에서
+
+$$\int_0^x f(t)\,dt = \sum_{n=0}^\infty \frac{c_n}{n+1} x^{n+1}$$
+
+이고, 이 급수의 수렴요경도 $$R$$이다.
+
+</div>
+
+<div class="example" markdown="1">
+
+<ins id="ex15">**예시 15 (로그와 역탄젠트)**</ins> 기하급수 $$\dfrac{1}{1 - x} = \sum_{n=0}^\infty x^n$$ ($$\lvert x\rvert < 1$$) 을 항별 적분하면
+
+$$-\ln(1 - x) = \sum_{n=1}^\infty \frac{x^n}{n} \quad\Longrightarrow\quad \ln(1+x) = \sum_{n=1}^\infty \frac{(-1)^{n-1}}{n} x^n$$
+
+을 얻고, $$\dfrac{1}{1 + x^2} = \sum_{n=0}^\infty (-1)^n x^{2n}$$을 항별 적분하면
+
+$$\arctan x = \sum_{n=0}^\infty \frac{(-1)^n}{2n+1} x^{2n+1}$$
+
+을 얻는다.
+
+</div>

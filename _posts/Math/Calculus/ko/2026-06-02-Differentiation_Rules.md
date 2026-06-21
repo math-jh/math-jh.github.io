@@ -9,7 +9,7 @@ sidebar:
     nav: "calculus-ko"
 
 date: 2026-06-02
-weight: 4
+weight: 7
 
 published: false
 ---
@@ -248,4 +248,32 @@ $$2x + 2y\,\frac{dy}{dx} = 0 \quad\Longrightarrow\quad \frac{dy}{dx} = -\frac{x}
 
 </div>
 
-이로써 다항·유리·삼각·지수·로그함수와 그 합성으로 이루어진 거의 모든 함수를 미분할 수 있다. 이렇게 얻은 도함수가 함수의 증감·극값·그래프 모양에 어떤 정보를 주는지는 [§평균값 정리](/ko/math/calculus/mean_value_theorem)와 [§도함수의 응용](/ko/math/calculus/applications_of_derivatives)에서 다루고, 함수를 다항식으로 근사하는 데 도함수를 거듭 사용하는 방법은 [§테일러 정리](/ko/math/calculus/taylor_theorem)에서 다룬다.
+이로써 다항·유리·삼각·지수·로그함수와 그 합성으로 이루어진 거의 모든 함수를 미분할 수 있다.
+
+## 멱급수의 항별 미분
+
+무한급수를 항별로 미분할 수 있는지는 일반적으로 미묘하지만, 멱급수는 수렴요경 안에서 항별 미분이 가능하다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop7">**명제 7 (멱급수의 항별 미분)**</ins> $$f(x) = \sum_{n=0}^\infty c_n x^n$$이 수렴요경 $$R > 0$$을 가지면, $$f$$는 $$\lvert x\rvert < R$$에서 미분가능하며
+
+$$f'(x) = \sum_{n=1}^\infty n\,c_n x^{n-1}$$
+
+이고, 이 급수의 수렴요경도 $$R$$이다.
+
+</div>
+
+<div class="example" markdown="1">
+
+<ins id="ex12">**예시 12**</ins> 기하급수 $$\dfrac{1}{1-x} = \sum_{n=0}^\infty x^n$$ ($$\lvert x\rvert < 1$$) 을 미분하면
+
+$$\frac{1}{(1-x)^2} = \sum_{n=1}^\infty n x^{n-1}$$
+
+이고, 양변에 $$x$$를 곱하면
+
+$$\sum_{n=1}^\infty n x^n = \frac{x}{(1-x)^2} \qquad (\lvert x\rvert < 1)$$
+
+이다. 가령 $$x = \tfrac12$$을 넣으면 $$\sum_{n\geq 1} n/2^n = 2$$를 얻는다.
+
+</div>

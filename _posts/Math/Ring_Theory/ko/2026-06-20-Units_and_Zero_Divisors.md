@@ -144,7 +144,7 @@ $$(\mathbb{Z}/n\mathbb{Z})^\times=\{\bar a:\gcd(a,n)=1\}$$
 
 </div>
 
-위 예시에서 $$\mathbb{Z}/n\mathbb{Z}$$가 소수의 거듭제곱들의 곱으로 분해되는 모습은 중국인의 나머지정리로 정리되며 ([§중국인의 나머지정리, ⁋명제 5](/ko/math/ring_theory/chinese_remainder_theorem#prop5)), 그 곱분해를 떠받치는 idempotent들은 별도의 글에서 다룬다 ([§Idempotent과 곱분해, ⁋예시 8](/ko/math/ring_theory/idempotents#ex8)). 여기서는 unit group이 곱분해와 어떻게 어울리는지를 본다.
+위 예시에서 $$\mathbb{Z}/n\mathbb{Z}$$가 소수의 거듭제곱들의 곱으로 분해되는 모습은 중국인의 나머지정리로 정리된다 ([§중국인의 나머지정리, ⁋명제 5](/ko/math/ring_theory/chinese_remainder_theorem#prop5)). 여기서는 unit group이 곱분해와 어떻게 어울리는지를 본다.
 
 ## 곱환과 행렬환의 unit group
 

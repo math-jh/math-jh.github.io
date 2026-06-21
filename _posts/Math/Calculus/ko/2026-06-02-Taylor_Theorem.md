@@ -9,7 +9,7 @@ sidebar:
     nav: "calculus-ko"
 
 date: 2026-06-02
-weight: 7
+weight: 10
 
 published: false
 ---
@@ -130,7 +130,7 @@ $$(1+x)^\alpha = \sum_{k=0}^\infty \binom{\alpha}{k} x^k, \qquad \binom{\alpha}{
 
 $$\lvert R_n(x)\rvert = \frac{\lvert f^{(n+1)}(c)\rvert}{(n+1)!}\lvert x-a\rvert^{n+1} \leq \frac{M\,\lvert x-a\rvert^{n+1}}{(n+1)!}$$
 
-이다. 우변은 고정된 $$x$$에서 $$n \to \infty$$일 때 $$0$$으로 가므로 ([§수열의 극한, ⁋예시 6](/ko/math/calculus/sequences#ex6)의 $$r^n/n! \to 0$$), $$R_n(x) \to 0$$이고 부분합이 $$f(x)$$로 수렴한다.
+이다. 우변은 고정된 $$x$$에서 $$n \to \infty$$일 때 $$0$$으로 가므로 ([§수열의 극한, ⁋예시 7](/ko/math/calculus/sequences#ex7)의 $$r^n/n! \to 0$$), $$R_n(x) \to 0$$이고 부분합이 $$f(x)$$로 수렴한다.
 
 </details>
 
@@ -192,4 +192,4 @@ $$f(x) = P_n(x) + o\bigl((x-a)^n\bigr) \qquad (x \to a)$$
 
 가 성립한다 — 즉 오차가 $$(x-a)^n$$보다 빠르게 $$0$$으로 간다. 이 형태는 예시 8처럼 극한을 계산할 때 나머지를 일일이 평가하지 않고 "$$o$$" 기호로 묶어 두기에 편리하다.
 
-이처럼 테일러 정리는 함수를 다항식으로 바꾸어 계산을 단순화한다. 본 글의 나머지항은 라그랑주 형태였으나, 적분을 도입하면 [§미적분의 기본정리](/ko/math/calculus/fundamental_theorem_of_calculus)를 거쳐 적분형 나머지로도 표현되며, 무한급수로서의 수렴 이론은 [§멱급수](/ko/math/calculus/power_series)에서, 그리고 엄밀한 형태로는 해석학 [\[해석학\] §평균값 정리와 테일러 정리](/ko/math/analysis/mean_value_theorem)와 [\[해석학\] §멱급수와 해석함수](/ko/math/analysis/power_series)에서 다룬다.
+이처럼 테일러 정리는 함수를 다항식으로 바꾸어 계산을 단순화한다. 엄밀한 형태는 해석학 [\[해석학\] §평균값 정리와 테일러 정리](/ko/math/analysis/mean_value_theorem)와 [\[해석학\] §멱급수와 해석함수](/ko/math/analysis/power_series)에서 다룬다.

@@ -282,4 +282,3 @@ $$f = xy = \pm \tfrac12$$
 
 </div>
 
-한 변수 미분에서 적분으로 넘어갔듯, 다변수에서도 편미분의 짝으로 여러 변수에 걸친 적분이 있다. 이는 다음 글 [§다중적분](/ko/math/calculus/multiple_integrals)에서 다룬다. 다변수 미분의 엄밀한 이론 — 미분을 선형사상으로 보는 관점과 역함수·음함수 정리 — 은 해석학 [\[해석학\] §다변수 미분](/ko/math/analysis/multivariable_differentiation)에서 전개된다.

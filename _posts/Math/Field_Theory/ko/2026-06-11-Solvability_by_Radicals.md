@@ -36,7 +36,7 @@ published: false
 
 $$G$$의 원소들의 order들의 최소공배수를 $$n$$이라 하자. 우선 order가 $$n$$인 원소가 존재함을 보인다. 이를 위해 order가 각각 $$r,s$$인 $$x,y\in G$$에 대하여 order가 $$\lcm(r,s)$$인 원소가 존재함을 보이면, 이를 반복하여 원하는 원소를 얻는다.
 
-$$\lcm(r,s)$$를 소인수분해하여 각 소인수의 거듭제곱 $$p^e$$마다, $$p^e$$가 $$r$$ 혹은 $$s$$를 나누므로 $$x^{r/p^e}$$ 혹은 $$y^{s/p^e}$$가 order $$p^e$$의 원소가 된다. 따라서 order가 서로소인 두 원소 $$u,v$$의 곱이 order $$\operatorname{ord}(u)\operatorname{ord}(v)$$를 갖는 것만 보이면 충분하다. $$G$$가 abelian이므로 $$(uv)^{\operatorname{ord}(u)\operatorname{ord}(v)}=e$$이고, 거꾸로 $$(uv)^k=e$$라면 $$u^k=v^{-k}\in\langle u\rangle\cap\langle v\rangle$$인데 이 교집합의 order는 [\[대수적 구조\] §몫군, ⁋명제 5](/ko/math/algebraic_structures/quotient_groups#prop5)에 의해 서로소인 $$\operatorname{ord}(u)$$와 $$\operatorname{ord}(v)$$를 모두 나누므로 $$1$$이다. 즉 $$u^k=v^k=e$$이고 $$\operatorname{ord}(u),\operatorname{ord}(v)$$가 모두 $$k$$를 나누므로 $$\operatorname{ord}(u)\operatorname{ord}(v)\mid k$$이다.
+$$\lcm(r,s)$$를 소인수분해하여 각 소인수의 거듭제곱 $$p^e$$마다, $$p^e$$가 $$r$$ 혹은 $$s$$를 나누므로 $$x^{r/p^e}$$ 혹은 $$y^{s/p^e}$$가 order $$p^e$$의 원소가 된다. 따라서 order가 서로소인 두 원소 $$u,v$$의 곱이 order $$\ord(u)\ord(v)$$를 갖는 것만 보이면 충분하다. $$G$$가 abelian이므로 $$(uv)^{\ord(u)\ord(v)}=e$$이고, 거꾸로 $$(uv)^k=e$$라면 $$u^k=v^{-k}\in\langle u\rangle\cap\langle v\rangle$$인데 이 교집합의 order는 [\[대수적 구조\] §몫군, ⁋명제 5](/ko/math/algebraic_structures/quotient_groups#prop5)에 의해 서로소인 $$\ord(u)$$와 $$\ord(v)$$를 모두 나누므로 $$1$$이다. 즉 $$u^k=v^k=e$$이고 $$\ord(u),\ord(v)$$가 모두 $$k$$를 나누므로 $$\ord(u)\ord(v)\mid k$$이다.
 
 이제 $$G$$의 모든 원소는 $$x^n=1$$, 즉 다항식 $$\x^n-1$$의 근이다. Field 위에서 $$n$$차 다항식은 많아야 $$n$$개의 근을 가지므로 ([\[환론\] §다항식환, ⁋명제 9](/ko/math/ring_theory/polynomial_rings#prop9)) $$\card G\leq n$$이다. 한편 위에서 찾은 order $$n$$의 원소 $$a$$에 대하여 $$\langle a\rangle$$은 $$n$$개의 원소를 갖는 $$G$$의 subgroup이므로 $$G=\langle a\rangle$$이고, 즉 $$G$$는 cyclic이다.
 

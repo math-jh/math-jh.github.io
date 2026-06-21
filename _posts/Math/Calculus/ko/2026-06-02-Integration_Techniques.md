@@ -9,7 +9,7 @@ sidebar:
     nav: "calculus-ko"
 
 date: 2026-06-02
-weight: 11
+weight: 14
 
 published: false
 ---
@@ -182,4 +182,4 @@ $$\int x\arctan x\,dx = \frac{x^2}{2}\arctan x - \frac12\int \frac{x^2}{1+x^2}\,
 
 </div>
 
-이러한 기법으로도 초등함수로 표현되지 않는 적분 — 가령 $$\int e^{-x^2}\,dx$$, $$\int \frac{\sin x}{x}\,dx$$ — 이 존재하지만, 그래도 정적분 값 자체는 잘 정의된다 ([§정적분](/ko/math/calculus/definite_integral)). 적분 구간이나 피적분함수가 무한으로 발산하는 경우의 적분은 다음 글 [§이상적분](/ko/math/calculus/improper_integrals)에서 다룬다.
+이러한 기법으로도 초등함수로 표현되지 않는 적분 — 가령 $$\int e^{-x^2}\,dx$$, $$\int \frac{\sin x}{x}\,dx$$ — 이 존재하지만, 그래도 정적분 값 자체는 잘 정의된다 ([§정적분](/ko/math/calculus/definite_integral)).

@@ -247,19 +247,19 @@ Division ring이 자연스럽게 등장하는 또 하나의 맥락은 module 이
 <ins id="lem10">**보조정리 10 (Schur)**</ins> 환 $$R$$ 위의 simple module $$M,N$$에 대하여 다음이 성립한다.
 
 1. 임의의 $$R$$-module homomorphism $$f:M\to N$$은 zero map이거나 isomorphism이다.
-2. 특히 simple module $$M$$의 endomorphism ring $$\operatorname{End}_R(M)$$은 division ring이다.
+2. 특히 simple module $$M$$의 endomorphism ring $$\End_R(M)$$은 division ring이다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$f:M\to N$$을 nonzero $$R$$-module homomorphism이라 하자. $$\ker f$$는 $$M$$의 submodule이고 $$f\neq 0$$이므로 $$\ker f\neq M$$이다. $$M$$이 simple이므로 $$\ker f=0$$, 즉 $$f$$는 단사이다. 또 $$\operatorname{im}f$$는 $$N$$의 nonzero submodule이고 $$N$$이 simple이므로 $$\operatorname{im}f=N$$, 즉 $$f$$는 전사이다. 따라서 $$f$$는 isomorphism이다. 이로써 1이 성립한다.
+$$f:M\to N$$을 nonzero $$R$$-module homomorphism이라 하자. $$\ker f$$는 $$M$$의 submodule이고 $$f\neq 0$$이므로 $$\ker f\neq M$$이다. $$M$$이 simple이므로 $$\ker f=0$$, 즉 $$f$$는 단사이다. 또 $$\im f$$는 $$N$$의 nonzero submodule이고 $$N$$이 simple이므로 $$\im f=N$$, 즉 $$f$$는 전사이다. 따라서 $$f$$는 isomorphism이다. 이로써 1이 성립한다.
 
-이제 $$M=N$$인 경우를 보면, $$\operatorname{End}_R(M)$$은 사상의 합성을 곱셈으로, 항등사상 $$\operatorname{id}_M$$을 항등원으로 하는 환이다. $$M$$이 nonzero이므로 $$\operatorname{id}_M\neq 0$$, 즉 이 환은 $$0$$이 아니다. 1에 의해 nonzero $$f\in\operatorname{End}_R(M)$$은 isomorphism이고, 그 역사상 $$f^{-1}$$ 또한 $$R$$-module homomorphism이므로 $$\operatorname{End}_R(M)$$의 원소이다. $$f\circ f^{-1}=f^{-1}\circ f=\operatorname{id}_M$$이므로 $$f$$는 unit이다. 따라서 모든 nonzero 원소가 unit이고, $$\operatorname{End}_R(M)$$은 division ring이다.
+이제 $$M=N$$인 경우를 보면, $$\End_R(M)$$은 사상의 합성을 곱셈으로, 항등사상 $$\id_M$$을 항등원으로 하는 환이다. $$M$$이 nonzero이므로 $$\id_M\neq 0$$, 즉 이 환은 $$0$$이 아니다. 1에 의해 nonzero $$f\in\End_R(M)$$은 isomorphism이고, 그 역사상 $$f^{-1}$$ 또한 $$R$$-module homomorphism이므로 $$\End_R(M)$$의 원소이다. $$f\circ f^{-1}=f^{-1}\circ f=\id_M$$이므로 $$f$$는 unit이다. 따라서 모든 nonzero 원소가 unit이고, $$\End_R(M)$$은 division ring이다.
 
 </details>
 
-이 보조정리는 simple module의 endomorphism ring이라는 형태로 division ring을 대량으로 공급한다. 표현론에서는 이 division ring이 흔히 작은 field로 판명되는데, 가령 algebraically closed field $$\mathbb{C}$$ 위의 유한군 $$G$$의 irreducible representation에 대해 $$\operatorname{End}_{\mathbb{C}[G]}(M)\cong\mathbb{C}$$가 됨이 알려져 있다 ([\[표현론\] §유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)). 그러나 base field가 algebraically closed가 아니면 이 division ring이 진정으로 noncommutative하거나 base field보다 큰 field가 될 수 있으며, 이때 보조정리 10이 주는 division ring 구조가 본질적인 정보를 담는다. 이것이 Artin–Wedderburn 이론에서 semisimple ring을 division ring 위의 행렬환들의 곱으로 분해할 때 등장하는 division ring의 출처이다.
+이 보조정리는 simple module의 endomorphism ring이라는 형태로 division ring을 대량으로 공급한다. 표현론에서는 이 division ring이 흔히 작은 field로 판명되는데, 가령 algebraically closed field $$\mathbb{C}$$ 위의 유한군 $$G$$의 irreducible representation에 대해 $$\End_{\mathbb{C}[G]}(M)\cong\mathbb{C}$$가 됨이 알려져 있다 ([\[표현론\] §유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)). 그러나 base field가 algebraically closed가 아니면 이 division ring이 진정으로 noncommutative하거나 base field보다 큰 field가 될 수 있으며, 이때 보조정리 10이 주는 division ring 구조가 본질적인 정보를 담는다. 이것이 Artin–Wedderburn 이론에서 semisimple ring을 division ring 위의 행렬환들의 곱으로 분해할 때 등장하는 division ring의 출처이다.
 
 Quaternion $$\mathbb{H}$$ 또한 이 관점에 들어맞는다. $$\mathbb{H}$$를 자기 자신 위의 left module로 보면 이는 simple $$\mathbb{H}$$-module이고, 그 endomorphism ring은 right multiplication들로 이루어져 다시 $$\mathbb{H}$$와 동형이 된다. 즉 [명제 5](#prop5)에서 직접 구성한 noncommutative division ring $$\mathbb{H}$$는 simple module의 endomorphism ring으로도 실현되며, 보조정리 10의 결론이 비가환의 경우에도 비어 있지 않음을 보여 준다.
 

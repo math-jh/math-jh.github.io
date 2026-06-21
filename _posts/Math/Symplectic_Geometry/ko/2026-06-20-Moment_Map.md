@@ -17,7 +17,7 @@ published: false
 
 [§사교다양체, ⁋정의 6](/ko/math/symplectic_geometry/symplectic_manifold#def6)에서 우리는 함수 $$H\in C^\infty(M)$$마다 nondegeneracy를 이용해 Hamiltonian 벡터장 $$X_H$$를 정의하였다. 이제 우리는 함수 하나가 아니라 Lie group $$G$$가 symplectic manifold $$(M,\omega)$$에 symplectomorphism으로 작용하는 상황을 생각한다. 이때 $$G$$의 Lie algebra $$\mathfrak{g}$$의 각 원소 $$X$$는 $$M$$ 위의 벡터장 $$X_M$$을 낳으며, 좋은 경우에는 이 $$X_M$$이 어떤 함수의 Hamiltonian 벡터장이 된다. 이 함수들을 $$\mathfrak{g}$$에 대해 한꺼번에 모은 것이 *운동량 사상<sub>moment map</sub>* $$\mu:M\rightarrow\mathfrak{g}^\ast$$이다.
 
-운동량 사상은 고전역학에서 대칭성으로부터 보존량을 얻는 Noether 정리의 기하학적 형태이다. 회전 대칭이 각운동량을, 평행이동 대칭이 선운동량을 보존시키듯, 군작용의 각 일매개변수 부분군은 보존되는 함수 하나를 준다. 더 나아가 운동량 사상은 다음 글에서 다룰 Marsden-Weinstein reduction의 출발점이며, torus 작용의 경우 그 상이 볼록 다면체가 되어 toric 기하와 Delzant 대응으로 이어진다. 우리는 먼저 fundamental 벡터장과 Hamiltonian 작용을 정의하고, 운동량 사상의 기본 성질과 표준적인 예시들을 살펴본 뒤, 끝으로 Atiyah-Guillemin-Sternberg 볼록성 정리를 서술한다.
+운동량 사상은 고전역학에서 대칭성으로부터 보존량을 얻는 Noether 정리의 기하학적 형태이다. 회전 대칭이 각운동량을, 평행이동 대칭이 선운동량을 보존시키듯, 군작용의 각 일매개변수 부분군은 보존되는 함수 하나를 준다. 더 나아가 운동량 사상은 Marsden-Weinstein reduction의 출발점이며, torus 작용의 경우 그 상이 볼록 다면체가 되어 toric 기하와 Delzant 대응으로 이어진다. 우리는 먼저 fundamental 벡터장과 Hamiltonian 작용을 정의하고, 운동량 사상의 기본 성질과 표준적인 예시들을 살펴본 뒤, 끝으로 Atiyah-Guillemin-Sternberg 볼록성 정리를 서술한다.
 
 ## Fundamental 벡터장
 
@@ -76,7 +76,7 @@ $$\mu:M\rightarrow\mathfrak{g}^\ast$$
 
 $$\mu^X$$가 $$X_H$$를 따라 변화하는 율은 Poisson 괄호 ([§사교다양체, ⁋정의 7](/ko/math/symplectic_geometry/symplectic_manifold#def7)) $$X_H\,\mu^X=\{\mu^X,H\}$$이다. $$H$$가 $$G$$-불변이므로 $$X$$ 방향으로 미분하면 $$X_M\,H=0$$, 즉 $$dH(X_M)=0$$이다. 한편 조건 1에 의하여 $$\iota_{X_M}\omega=d\mu^X$$이므로
 
-$$\{\mu^X,H\}=X_{\mu^X}H=dH(X_{\mu^X})=dH(X_M)=0$$
+$$\{\mu^X,H\}=-X_{\mu^X}H=-dH(X_{\mu^X})=-dH(X_M)=0$$
 
 이다. 여기서 $$X_{\mu^X}=X_M$$은 조건 1과 Hamiltonian 벡터장의 유일성에서 온다. 따라서 $$\mu^X$$는 $$X_H$$의 흐름을 따라 일정하다.
 
@@ -101,9 +101,9 @@ $$\{\mu^X,H\}=X_{\mu^X}H=dH(X_{\mu^X})=dH(X_M)=0$$
 
 **2.** Coadjoint 작용을 $$X$$ 방향으로 미분하면 그 무한소 형태는 $$-\ad_X^\ast$$이다. $$\Ad^\ast$$-equivariance를 일매개변수 부분군 $$\exp(tY)$$에 대해 $$t$$로 미분하면, $$M$$이 connected이므로 equivariance는 다음의 무한소 형태와 동치이다.
 
-$$X_M\,\mu^Y=\langle\mu,[X,Y]\rangle=\mu^{[X,Y]}\qquad\text{(모든 }X,Y\in\mathfrak{g}\text{에 대해)}$$
+$$X_M\,\mu^Y=-\langle\mu,[X,Y]\rangle=-\mu^{[X,Y]}\qquad\text{(모든 }X,Y\in\mathfrak{g}\text{에 대해)}$$
 
-좌변을 풀어 쓰면 $$X_M\,\mu^Y=d\mu^Y(X_M)=\omega(Y_M,X_M)=\omega(X_{\mu^X},X_{\mu^Y})=\{\mu^X,\mu^Y\}$$이다. 여기서 마지막 등식은 Poisson 괄호의 정의이고, $$X_M=X_{\mu^X}$$를 사용하였다. 따라서 equivariance는 $$\{\mu^X,\mu^Y\}=\mu^{[X,Y]}$$과 동치이다.
+좌변을 풀어 쓰면 $$X_M\,\mu^Y=d\mu^Y(X_M)=\omega(Y_M,X_M)=\omega(X_{\mu^Y},X_{\mu^X})=\{\mu^Y,\mu^X\}=-\{\mu^X,\mu^Y\}$$이다. 여기서 조건 1로부터 오는 $$X_M=X_{\mu^X}$$, $$Y_M=X_{\mu^Y}$$와 Poisson 괄호의 정의, 그리고 $$\omega$$의 반대칭성을 사용하였다. 두 무한소 형태를 견주면 equivariance는 $$\{\mu^X,\mu^Y\}=\mu^{[X,Y]}$$과 동치이다.
 
 </details>
 
@@ -177,7 +177,7 @@ $$\mu(\mathbb{C}^n)=\mathbb{R}_{\leq0}^n=\{(a_1,\ldots,a_n):a_j\leq0\}$$
 
 </div>
 
-위 작용을 $$\mathbb{CP}^n$$으로 내리면 운동량 사상의 상이 유계인 단체가 된다. $$S^{2n+1}\subseteq\mathbb{C}^{n+1}$$ 위에서 $$\sum_j\lvert z_j\rvert^2=1$$이라는 제약을 가하고 대각 $$S^1$$로 나누면 $$\mathbb{CP}^n$$을 얻는데, 남은 $$T^n=T^{n+1}/S^1$$ 작용의 운동량 사상은 상수배 후 $$\bigl(\lvert z_1\rvert^2,\ldots,\lvert z_n\rvert^2\bigr)$$이 되어 그 상은 단체 $$\{a_j\geq0,\ \sum_j a_j\leq1\}$$이다. 이 절차가 다음 글에서 다룰 reduction의 한 사례이며, 그 결과 얻어지는 단체가 $$\mathbb{CP}^n$$의 Fubini-Study 운동량 다면체이다. 일반적으로 compact toric 다양체는 그 운동량 다면체에 의해 완전히 결정되는데, 이것이 [볼록성 정리](#thm10) 뒤에서 언급할 Delzant 대응이다.
+위 작용을 $$\mathbb{CP}^n$$으로 내리면 운동량 사상의 상이 유계인 단체가 된다. $$S^{2n+1}\subseteq\mathbb{C}^{n+1}$$ 위에서 $$\sum_j\lvert z_j\rvert^2=1$$이라는 제약을 가하고 대각 $$S^1$$로 나누면 $$\mathbb{CP}^n$$을 얻는데, 남은 $$T^n=T^{n+1}/S^1$$ 작용의 운동량 사상은 상수배 후 $$\bigl(\lvert z_1\rvert^2,\ldots,\lvert z_n\rvert^2\bigr)$$이 되어 그 상은 단체 $$\{a_j\geq0,\ \sum_j a_j\leq1\}$$이다. 이 절차가 reduction의 한 사례이며, 그 결과 얻어지는 단체가 $$\mathbb{CP}^n$$의 Fubini-Study 운동량 다면체이다. 일반적으로 compact toric 다양체는 그 운동량 다면체에 의해 완전히 결정되는데, 이것이 [볼록성 정리](#thm10) 뒤에서 언급할 Delzant 대응이다.
 
 마지막으로 cotangent bundle 위의 작용은 운동량 사상이 고전적 운동량과 일치하는 가장 직접적인 예시이다.
 
@@ -207,7 +207,7 @@ Cotangent lift가 항상 Hamiltonian이라는 사실의 증명은 tautological $
 
 이 정리의 상 $$\mu(M)$$을 작용의 *운동량 다면체<sub>moment polytope</sub>*라 부른다. 고정점은 운동량 사상의 임계점이며, $$\mu(M^T)$$의 점들이 운동량 다면체의 꼭짓점을 이룬다. 예시 7의 $$S^2$$에서 두 극점이 고정점이고 그 상 $$\{-1,1\}$$의 볼록포가 구간 $$[-1,1]$$인 것이 이 정리의 가장 단순한 사례이다.
 
-볼록성 정리는 toric 기하와 직접 연결된다. $$2n$$차원 compact symplectic manifold에 $$n$$차원 torus, 즉 최대 차원의 torus가 효과적으로 Hamiltonian 작용을 할 때 이를 *symplectic toric manifold<sub>사교 토릭 다양체</sub>*라 부르며, 이 경우 운동량 다면체는 단순하고 정수적인 매우 특별한 다면체 (*Delzant 다면체*)가 된다. Delzant의 정리는 이러한 다면체와 symplectic toric manifold 사이에 일대일 대응이 성립함을, 즉 다면체가 다양체를 그 작용과 함께 완전히 결정함을 말한다. 이로써 symplectic 기하의 한 부류 전체가 순전히 조합론적인 볼록 다면체의 데이터로 번역되며, 이것이 다음 글의 Marsden-Weinstein reduction과 함께 toric 기하로 들어가는 통로가 된다.
+볼록성 정리는 toric 기하와 직접 연결된다. $$2n$$차원 compact symplectic manifold에 $$n$$차원 torus, 즉 최대 차원의 torus가 효과적으로 Hamiltonian 작용을 할 때 이를 *symplectic toric manifold<sub>사교 토릭 다양체</sub>*라 부르며, 이 경우 운동량 다면체는 단순하고 정수적인 매우 특별한 다면체 (*Delzant 다면체*)가 된다. Delzant의 정리는 이러한 다면체와 symplectic toric manifold 사이에 일대일 대응이 성립함을, 즉 다면체가 다양체를 그 작용과 함께 완전히 결정함을 말한다. 이로써 symplectic 기하의 한 부류 전체가 순전히 조합론적인 볼록 다면체의 데이터로 번역된다.
 
 <div class="remark" markdown="1">
 

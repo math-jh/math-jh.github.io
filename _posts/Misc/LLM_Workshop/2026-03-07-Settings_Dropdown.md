@@ -32,8 +32,8 @@ weight: 3
   {% if site.dark_theme %}
     <label class="switch" for="toggle_dark_theme" style="color:#bbb; font-size:1em; display:inline; margin-left:5px; margin-right:5px">
         <input type="checkbox" id="toggle_dark_theme" onclick="scrollbar()"/>
-        <span class="material-icons md-16 unchecked" style="color:#ffbb9a">&#xE518;</span>
-        <span class="material-icons md-16 checked" style="color:#ffeabc">&#xE51C;</span>
+        <span class="material-icons md-16 unchecked" style="color:#ffbb9a">check_box_outline_blank</span>
+        <span class="material-icons md-16 checked" style="color:#ffeabc">check_box</span>
     </label>
   {% endif %}
   {% if site.multilingual %}
@@ -70,8 +70,8 @@ weight: 3
       <span style="color:#bbb">다크모드</span>
       <label class="switch" for="toggle_dark_theme" style="display:inline; margin:0">
         <input type="checkbox" id="toggle_dark_theme" onclick="darkmode(), scrollbar()"/>
-        <span class="material-icons md-16 unchecked" style="color:#ffbb9a">&#xE518;</span>
-        <span class="material-icons md-16 checked" style="color:#ffeabc">&#xE51C;</span>
+        <span class="material-icons md-16 unchecked" style="color:#ffbb9a">check_box_outline_blank</span>
+        <span class="material-icons md-16 checked" style="color:#ffeabc">check_box</span>
       </label>
     </li>
     {% endif %}

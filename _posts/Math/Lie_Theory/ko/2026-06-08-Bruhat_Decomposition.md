@@ -78,7 +78,7 @@ $$\ell(ws_i)=\ell(w)+1$$
 
 $$\ell(w)=\lvert\Phi^+\cap w^{-1}\Phi^-\rvert$$
 
-이 성립한다. 우변의 집합 $$\Phi^+\cap w^{-1}\Phi^-=\{\alpha\in\Phi^+\mid w\alpha\in\Phi^-\}$$를 $$w$$의 inversion 집합이라 부르며, 뒤에서 보겠지만 그 크기는 정확히 $$w$$에 대응하는 Bruhat cell의 차원과 일치한다.
+이 성립한다. 우변의 집합 $$\Phi^+\cap w^{-1}\Phi^-=\{\alpha\in\Phi^+\mid w\alpha\in\Phi^-\}$$를 $$w$$의 inversion 집합이라 부르며, 그 크기는 정확히 $$w$$에 대응하는 Bruhat cell의 차원과 일치한다.
 
 <div class="example" markdown="1">
 
@@ -110,7 +110,7 @@ $$(b_1,b_2)\cdot g=b_1gb_2^{-1}$$
 
 을 생각하는 것이다. 이 action의 orbit이 바로 double coset $$BwB$$이며, 위의 정리는 이 orbit이 $$W$$로 index된다는 뜻이다. 
 
-이것이 담고있는 기하학적 의미를 살펴보기 위해 $$G=\GL_n(\mathbb{C})$$에서의 예시를 살펴보자. 여기서 reference flag $$E_i=\operatorname{span}\{e_1,\ldots,e_i\}$$를 고정하면, 임의의 flag $$V_\bullet$$는 $$gB$$에 대응하는 $$V_i=\operatorname{span}\{ge_1,\ldots,ge_i\}$$인 것을 살펴보았다. ([§Borel subgroup, ⁋예시 13](/ko/math/lie_theory/borel_subgroup#ex13)) 일반적으로 reference flag $$E_\bullet$$과 $$V_i$$가 이루는 위치는 다음의 intersection
+이것이 담고있는 기하학적 의미를 살펴보기 위해 $$G=\GL_n(\mathbb{C})$$에서의 예시를 살펴보자. 여기서 reference flag $$E_i=\span\{e_1,\ldots,e_i\}$$를 고정하면, 임의의 flag $$V_\bullet$$는 $$gB$$에 대응하는 $$V_i=\span\{ge_1,\ldots,ge_i\}$$인 것을 살펴보았다. ([§Borel subgroup, ⁋예시 13](/ko/math/lie_theory/borel_subgroup#ex13)) 일반적으로 reference flag $$E_\bullet$$과 $$V_i$$가 이루는 위치는 다음의 intersection
 
 $$d_{ij}=\dim(V_i\cap E_j)$$
 
@@ -294,7 +294,7 @@ Generalized Bruhat decomposition의 가장 대표적인 예시는 Grassmannian $
 
 $$P_k=\left\{\begin{pmatrix}A&C\\0&D\end{pmatrix}\in \GL_n(\mathbb{C})\;\middle\vert\;A\in \GL_k(\mathbb{C}),\;D\in \GL_{n-k}(\mathbb{C})\right\}$$
 
-이다. 이 subgroup은 standard $$k$$-plane $$E_k=\operatorname{span}\{e_1,\ldots,e_k\}$$를 고정하므로, $$\GL_n(\mathbb{C})$$의 $$\Gr(k,n)$$ 위의 작용은 transitive하고 그 isotropy group이 정확히 $$P_k$$이다. 따라서
+이다. 이 subgroup은 standard $$k$$-plane $$E_k=\span\{e_1,\ldots,e_k\}$$를 고정하므로, $$\GL_n(\mathbb{C})$$의 $$\Gr(k,n)$$ 위의 작용은 transitive하고 그 isotropy group이 정확히 $$P_k$$이다. 따라서
 
 $$\Gr(k,n)\cong \GL_n(\mathbb{C})/P_k$$
 
@@ -439,7 +439,7 @@ $$X_{2413}=\{V\in\Gr(2,4)\mid\dim(V\cap E_2)\ge1\},$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 각 coordinate point가 fixed point이다. $$w$$의 대표원소 $$\dot w\in N_G(T)$$에 대하여 $$\dot w^{-1}t\dot w\in T\subseteq P$$이므로 $$t\cdot\dot wP=\dot w(\dot w^{-1}t\dot w)P=\dot wP$$이기 때문이다. 역으로 fixed point $$x$$를 잡으면, Bruhat 분해에 의해 $$x$$는 어떤 cell $$X_w^\circ=BwP/P$$에 속하고, $$T\subseteq B$$이므로 각 cell은 $$T$$-stable이다. 그런데 cell의 좌표화 $$X_w^\circ\cong\mathbb{A}^{\ell(w)}$$에서 $$T$$는 각 좌표를 nontrivial character로 scale한다. type $$A$$에서는 이를 [예시 15](#ex15)의 행렬 좌표에서 직접 볼 수 있는데, $$t=\operatorname{diag}(t_1,\ldots,t_n)$$는 pivot이 열 $$p$$인 행의 자유 성분 (열 $$b$$ 자리)을 $$t_bt_p^{-1}$$배 한다 (각 행을 $$t$$로 옮긴 뒤 pivot을 다시 $$1$$로 정규화하면 된다). 일반형에서는 cell이 root subgroup들의 곱 $$\prod_\alpha U_\alpha$$로 좌표화되고 $$T$$-conjugation이 각 $$U_\alpha\cong\mathbb{G}_a$$ 위에 root $$\alpha$$로 작용한다 ([Spr] 참조). 어느 쪽이든 모든 character가 nontrivial하므로, 좌표가 모두 $$0$$인 원점, 곧 $$wP$$만이 그 cell의 fixed point이다.
+우선 각 coordinate point가 fixed point이다. $$w$$의 대표원소 $$\dot w\in N_G(T)$$에 대하여 $$\dot w^{-1}t\dot w\in T\subseteq P$$이므로 $$t\cdot\dot wP=\dot w(\dot w^{-1}t\dot w)P=\dot wP$$이기 때문이다. 역으로 fixed point $$x$$를 잡으면, Bruhat 분해에 의해 $$x$$는 어떤 cell $$X_w^\circ=BwP/P$$에 속하고, $$T\subseteq B$$이므로 각 cell은 $$T$$-stable이다. 그런데 cell의 좌표화 $$X_w^\circ\cong\mathbb{A}^{\ell(w)}$$에서 $$T$$는 각 좌표를 nontrivial character로 scale한다. type $$A$$에서는 이를 [예시 15](#ex15)의 행렬 좌표에서 직접 볼 수 있는데, $$t=\diag(t_1,\ldots,t_n)$$는 pivot이 열 $$p$$인 행의 자유 성분 (열 $$b$$ 자리)을 $$t_bt_p^{-1}$$배 한다 (각 행을 $$t$$로 옮긴 뒤 pivot을 다시 $$1$$로 정규화하면 된다). 일반형에서는 cell이 root subgroup들의 곱 $$\prod_\alpha U_\alpha$$로 좌표화되고 $$T$$-conjugation이 각 $$U_\alpha\cong\mathbb{G}_a$$ 위에 root $$\alpha$$로 작용한다 ([Spr] 참조). 어느 쪽이든 모든 character가 nontrivial하므로, 좌표가 모두 $$0$$인 원점, 곧 $$wP$$만이 그 cell의 fixed point이다.
 
 </details>
 

@@ -62,7 +62,7 @@ $$\phi([x,y])=[\phi(x),\phi(y)]$$
 
 </div>
 
-Homomorphism $$\phi:\mathfrak{g}\rightarrow\mathfrak{h}$$의 kernel $$\ker\phi$$는 $$\mathfrak{g}$$의 ideal이고, image $$\operatorname{im}\phi$$는 $$\mathfrak{h}$$의 subalgebra이다. 실제로 $$a\in\ker\phi$$와 $$x\in\mathfrak{g}$$에 대하여 $$\phi([x,a])=[\phi(x),\phi(a)]=[\phi(x),0]=0$$이므로 $$[x,a]\in\ker\phi$$이다. Ideal $$\mathfrak{a}\subseteq\mathfrak{g}$$가 주어지면, 벡터공간 몫 $$\mathfrak{g}/\mathfrak{a}$$ 위에 bracket을 자연스럽게 정의할 수 있다.
+Homomorphism $$\phi:\mathfrak{g}\rightarrow\mathfrak{h}$$의 kernel $$\ker\phi$$는 $$\mathfrak{g}$$의 ideal이고, image $$\im\phi$$는 $$\mathfrak{h}$$의 subalgebra이다. 실제로 $$a\in\ker\phi$$와 $$x\in\mathfrak{g}$$에 대하여 $$\phi([x,a])=[\phi(x),\phi(a)]=[\phi(x),0]=0$$이므로 $$[x,a]\in\ker\phi$$이다. Ideal $$\mathfrak{a}\subseteq\mathfrak{g}$$가 주어지면, 벡터공간 몫 $$\mathfrak{g}/\mathfrak{a}$$ 위에 bracket을 자연스럽게 정의할 수 있다.
 
 <div class="proposition" markdown="1">
 
@@ -88,11 +88,11 @@ $$[[\bar x,\bar y],\bar z]+[[\bar y,\bar z],\bar x]+[[\bar z,\bar x],\bar y]=\bi
 
 </details>
 
-이로써 Lie algebra의 first isomorphism theorem이 성립한다. Homomorphism $$\phi:\mathfrak{g}\rightarrow\mathfrak{h}$$에 대하여 $$\mathfrak{g}/\ker\phi\cong\operatorname{im}\phi$$이며, 이는 벡터공간 사이의 동형이 bracket을 보존함을 [명제 5](#prop5)와 같은 방식으로 확인하면 얻어진다. 앞으로 우리는 이 동형을 자유로이 사용한다.
+이로써 Lie algebra의 first isomorphism theorem이 성립한다. Homomorphism $$\phi:\mathfrak{g}\rightarrow\mathfrak{h}$$에 대하여 $$\mathfrak{g}/\ker\phi\cong\im\phi$$이며, 이는 벡터공간 사이의 동형이 bracket을 보존함을 [명제 5](#prop5)와 같은 방식으로 확인하면 얻어진다. 앞으로 우리는 이 동형을 자유로이 사용한다.
 
 ## Adjoint representation
 
-Lie algebra가 자기 자신에 작용하는 방식은 bracket 그 자체로 주어진다. 각 원소 $$x$$에 대하여 $$y\mapsto[x,y]$$로 정의되는 선형사상이 그것이며, 이는 nilpotency를 판정할 때 핵심적인 도구가 된다. 여기에서 벡터공간 $$V$$에 대하여 $$\mathfrak{gl}(V)$$는 $$\End_k(V)$$에 commutator bracket $$[f,g]=f\circ g-g\circ f$$를 준 Lie algebra를 가리킨다. ([§보편 포락 대수, ⁋정의 1](/ko/math/lie_theory/universal_enveloping_algebra#def1))
+Lie algebra가 자기 자신에 작용하는 방식은 bracket 그 자체로 주어진다. 각 원소 $$x$$에 대하여 $$y\mapsto[x,y]$$로 정의되는 선형사상이 그것이며, 이는 nilpotency를 판정할 때 핵심적인 도구가 된다. 여기에서 벡터공간 $$V$$에 대하여 $$\mathfrak{gl}(V)$$는 $$\End_k(V)$$에 commutator bracket $$[f,g]=f\circ g-g\circ f$$를 준 Lie algebra를 가리킨다.
 
 <div class="definition" markdown="1">
 
@@ -240,11 +240,11 @@ $$(\mathfrak{a}+\mathfrak{b})/\mathfrak{b}\cong\mathfrak{a}/(\mathfrak{a}\cap\ma
 
 <div class="definition" markdown="1">
 
-<ins id="def15">**정의 15**</ins> 유한차원 Lie algebra $$\mathfrak{g}$$의 *radical<sub>근기</sub>* $$\operatorname{rad}\mathfrak{g}$$은 $$\mathfrak{g}$$의 solvable ideal 가운데 포함관계에 대하여 가장 큰 것이다.
+<ins id="def15">**정의 15**</ins> 유한차원 Lie algebra $$\mathfrak{g}$$의 *radical<sub>근기</sub>* $$\rad\mathfrak{g}$$은 $$\mathfrak{g}$$의 solvable ideal 가운데 포함관계에 대하여 가장 큰 것이다.
 
 </div>
 
-이러한 가장 큰 solvable ideal이 유일하게 존재함을 확인해 둔다. $$\mathfrak{g}$$가 유한차원이므로, 차원이 최대인 solvable ideal $$\mathfrak{r}$$을 택할 수 있다. 만일 $$\mathfrak{a}$$가 임의의 solvable ideal이면 위에서 본 대로 $$\mathfrak{r}+\mathfrak{a}$$도 solvable ideal이고 $$\mathfrak{r}\subseteq\mathfrak{r}+\mathfrak{a}$$이다. $$\mathfrak{r}$$의 차원이 최대이므로 $$\mathfrak{r}+\mathfrak{a}=\mathfrak{r}$$, 곧 $$\mathfrak{a}\subseteq\mathfrak{r}$$이다. 따라서 $$\mathfrak{r}$$은 모든 solvable ideal을 포함하는 유일한 가장 큰 solvable ideal이다. 몫 $$\mathfrak{g}/\operatorname{rad}\mathfrak{g}$$은 자명하지 않은 solvable ideal을 갖지 않으며, 이러한 Lie algebra를 *semisimple*이라 부른다. 임의의 유한차원 Lie algebra는 이렇게 가해 부분과 반단순 부분으로 나뉘어 분석된다.
+이러한 가장 큰 solvable ideal이 유일하게 존재함을 확인해 둔다. $$\mathfrak{g}$$가 유한차원이므로, 차원이 최대인 solvable ideal $$\mathfrak{r}$$을 택할 수 있다. 만일 $$\mathfrak{a}$$가 임의의 solvable ideal이면 위에서 본 대로 $$\mathfrak{r}+\mathfrak{a}$$도 solvable ideal이고 $$\mathfrak{r}\subseteq\mathfrak{r}+\mathfrak{a}$$이다. $$\mathfrak{r}$$의 차원이 최대이므로 $$\mathfrak{r}+\mathfrak{a}=\mathfrak{r}$$, 곧 $$\mathfrak{a}\subseteq\mathfrak{r}$$이다. 따라서 $$\mathfrak{r}$$은 모든 solvable ideal을 포함하는 유일한 가장 큰 solvable ideal이다. 몫 $$\mathfrak{g}/\rad\mathfrak{g}$$은 자명하지 않은 solvable ideal을 갖지 않으며, 이러한 Lie algebra를 *semisimple*이라 부른다. 임의의 유한차원 Lie algebra는 이렇게 가해 부분과 반단순 부분으로 나뉘어 분석된다.
 
 ## Engel의 정리
 
@@ -352,11 +352,11 @@ $$a\,x^{i+1}w=a x(x^i w)=x a(x^i w)+[a,x]x^i w$$
 
 이로써 각 $$a\in\mathfrak{a}$$는 $$W_m$$ 위에서 대각성분이 모두 $$\lambda(a)$$인 상삼각행렬이므로, $$W_m$$ 위로 제한한 $$a$$의 trace는
 
-$$\operatorname{tr}(a\vert_{W_m})=m\,\lambda(a)$$
+$$\tr(a\vert_{W_m})=m\,\lambda(a)$$
 
 이다. 특히 $$a=[x,b]$$ ($$b\in\mathfrak{a}$$)에 이 식을 적용한다. $$x$$와 $$b$$가 모두 $$W_m$$을 보존하므로 그 commutator $$[x,b]\vert_{W_m}=x\vert_{W_m}b\vert_{W_m}-b\vert_{W_m}x\vert_{W_m}$$의 trace는 $$0$$이다. 따라서
 
-$$0=\operatorname{tr}([x,b]\vert_{W_m})=m\,\lambda([x,b])$$
+$$0=\tr([x,b]\vert_{W_m})=m\,\lambda([x,b])$$
 
 이며, $$k$$의 표수가 $$0$$이고 $$m\geq 1$$이므로 $$\lambda([x,b])=0$$이다. 임의의 $$a=[a',x]=-[x,a']$$ ($$a'\in\mathfrak{a}$$) 꼴에 대해서도 $$\lambda([a',x])=-\lambda([x,a'])=0$$이므로, 처음의 등식 $$a(xw)=\lambda(a)xw+\lambda([a,x])w$$에서 모든 $$a$$에 대해 $$\lambda([a,x])=0$$이다. 따라서 $$xw\in W$$이다.
 

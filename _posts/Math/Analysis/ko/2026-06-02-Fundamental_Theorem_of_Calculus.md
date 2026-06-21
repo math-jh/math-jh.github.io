@@ -170,13 +170,13 @@ $$\frac{d}{dx}\int_{x}^{x^2} e^{t^2}\,dt = e^{(x^2)^2}\cdot 2x - e^{x^2}\cdot 1 
 
 <ins id="ex6">**예시 6 (초등적이지 않은 원시함수)**</ins> $$f(t) = e^{-t^2}$$은 $$\mathbb{R}$$에서 연속이지만 그 원시함수는 초등함수로 표현되지 않는다. 그럼에도 제1형은
 
-$$\operatorname{erf}(x) = \frac{2}{\sqrt{\pi}}\int_0^x e^{-t^2}\,dt$$
+$$\erf(x) = \frac{2}{\sqrt{\pi}}\int_0^x e^{-t^2}\,dt$$
 
 가 모든 $$x$$에서 잘 정의된 미분가능 함수임을 보장하며, 그 도함수는
 
-$$\operatorname{erf}'(x) = \frac{2}{\sqrt{\pi}}\,e^{-x^2}$$
+$$\erf'(x) = \frac{2}{\sqrt{\pi}}\,e^{-x^2}$$
 
-이다. 같은 방식으로 적분로그 $$\operatorname{li}(x) = \int_2^x \dfrac{dt}{\ln t}$$나 프레넬 적분 $$\int_0^x \sin(t^2)\,dt$$도 적분을 통해 정의되고, 그 미분은 다시 피적분함수가 된다. 적분은 이렇게 새로운 함수를 만들어 내는 생성 장치 구실을 한다.
+이다. 같은 방식으로 적분로그 $$\li(x) = \int_2^x \dfrac{dt}{\ln t}$$나 프레넬 적분 $$\int_0^x \sin(t^2)\,dt$$도 적분을 통해 정의되고, 그 미분은 다시 피적분함수가 된다. 적분은 이렇게 새로운 함수를 만들어 내는 생성 장치 구실을 한다.
 
 </div>
 
@@ -253,4 +253,4 @@ $$\int_0^1 2x\,e^{x^2}\,dx = \int_{0}^{1} e^u\,du = e - 1$$
 
 이 되어, 합성과 곱의 형태로 얽혀 있던 적분이 단순한 지수의 적분으로 풀린다.
 
-평가정리는 [\[미적분학\] §적분법](/ko/math/calculus/integration_techniques)의 치환·부분적분이 의존하던 토대이며, 이제 그 가정들이 모두 엄밀하게 증명되었다. 한 함수의 적분을 넘어 함수들의 열의 극한과 적분·미분이 어떻게 교환되는지는 다음 글 [§함수열과 점별수렴](/ko/math/analysis/sequences_of_functions)에서 다룬다.
+평가정리는 [\[미적분학\] §적분법](/ko/math/calculus/integration_techniques)의 치환·부분적분이 의존하던 토대이며, 이제 그 가정들이 모두 엄밀하게 증명되었다.

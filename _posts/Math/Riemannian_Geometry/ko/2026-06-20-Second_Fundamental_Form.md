@@ -211,7 +211,7 @@ $$H := \sum_{i=1}^m \mathrm{II}(e_i, e_i) \in N_p M$$
 
 </div>
 
-$$\mathrm{II}$$가 텐서이고 trace가 기저 선택에 무관하므로 $$H$$는 well-defined인 법벡터이다. 문헌에 따라 평균을 취해 $$\frac{1}{m} \sum_i \mathrm{II}(e_i, e_i)$$를 평균곡률로 정의하기도 하나, 우리는 trace 자체를 택한다. Hypersurface의 경우 법선 방향 $$\nu$$를 고정하면 $$H = (\operatorname{tr} S_\nu)\, \nu$$이며, $$\operatorname{tr} S_\nu$$는 주곡률들의 합이다. 평균곡률이 항등적으로 $$0$$인 submanifold를 *minimal submanifold<sub>극소 submanifold</sub>*라 부르는데, 이는 부피 범함수의 임계점이라는 변분적 의미를 가지며 비누막의 형상 등으로 나타난다.
+$$\mathrm{II}$$가 텐서이고 trace가 기저 선택에 무관하므로 $$H$$는 well-defined인 법벡터이다. 문헌에 따라 평균을 취해 $$\frac{1}{m} \sum_i \mathrm{II}(e_i, e_i)$$를 평균곡률로 정의하기도 하나, 우리는 trace 자체를 택한다. Hypersurface의 경우 법선 방향 $$\nu$$를 고정하면 $$H = (\tr S_\nu)\, \nu$$이며, $$\tr S_\nu$$는 주곡률들의 합이다. 평균곡률이 항등적으로 $$0$$인 submanifold를 *minimal submanifold<sub>극소 submanifold</sub>*라 부르는데, 이는 부피 범함수의 임계점이라는 변분적 의미를 가지며 비누막의 형상 등으로 나타난다.
 
 ## 측지선과의 관계
 

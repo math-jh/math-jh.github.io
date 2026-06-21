@@ -9,7 +9,7 @@ sidebar:
     nav: "calculus-ko"
 
 date: 2026-06-02
-weight: 10
+weight: 13
 
 published: false
 ---
@@ -162,13 +162,13 @@ $$\int_0^{2\pi} \lvert \sin x\rvert\,dx = \int_0^{\pi}\sin x\,dx - \int_{\pi}^{2
 
 <ins id="ex9">**예시 9 (특수함수의 도함수)**</ins> *오차함수<sub>error function</sub>*는
 
-$$\operatorname{erf}(x) = \frac{2}{\sqrt{\pi}}\int_0^x e^{-t^2}\,dt$$
+$$\erf(x) = \frac{2}{\sqrt{\pi}}\int_0^x e^{-t^2}\,dt$$
 
-로 정의된다. $$e^{-t^2}$$의 원시함수는 초등함수로 적히지 않으므로 이 적분은 닫힌 꼴이 없지만, 제1형 (정리 1) 에 의해 $$\operatorname{erf}$$는 미분가능하고
+로 정의된다. $$e^{-t^2}$$의 원시함수는 초등함수로 적히지 않으므로 이 적분은 닫힌 꼴이 없지만, 제1형 (정리 1) 에 의해 $$\erf$$는 미분가능하고
 
-$$\operatorname{erf}'(x) = \frac{2}{\sqrt{\pi}}\,e^{-x^2}$$
+$$\erf'(x) = \frac{2}{\sqrt{\pi}}\,e^{-x^2}$$
 
-이다. 마찬가지로 *적분로그* $$\operatorname{li}(x) = \int_2^x \dfrac{dt}{\ln t}$$도 $$\operatorname{li}'(x) = \dfrac{1}{\ln x}$$로 도함수가 즉시 나온다. 이처럼 적분으로 정의된 함수는 그 자체로 미적분의 대상이 된다.
+이다. 마찬가지로 *적분로그* $$\li(x) = \int_2^x \dfrac{dt}{\ln t}$$도 $$\li'(x) = \dfrac{1}{\ln x}$$로 도함수가 즉시 나온다. 이처럼 적분으로 정의된 함수는 그 자체로 미적분의 대상이 된다.
 
 </div>
 
@@ -216,7 +216,7 @@ $$\Phi'(x) = e^{(x^2)^2}\cdot 2x - e^{x^2}\cdot 1 = 2x\,e^{x^4} - e^{x^2}$$
 
 <div class="example" markdown="1">
 
-<ins id="ex12">**예시 12 (가정 위반)**</ins> $$\displaystyle\int_{-1}^{1} \frac{dx}{x^2}$$에 형식적으로 $$\bigl[-x^{-1}\bigr]_{-1}^{1} = -1 - 1 = -2$$를 대입하면 음수가 나오는데, 피적분함수 $$1/x^2$$는 항상 양수이므로 이는 명백히 틀렸다. 원인은 $$x = 0$$에서 피적분함수가 발산하여 $$[-1,1]$$에서 연속이 아니라는 데 있다. 정리 3의 가정이 깨졌으므로 평가정리를 그대로 쓸 수 없으며, 이런 적분은 [§이상적분](/ko/math/calculus/improper_integrals)에서 극한으로 따로 다룬다 — 실제로 이 적분은 발산한다.
+<ins id="ex12">**예시 12 (가정 위반)**</ins> $$\displaystyle\int_{-1}^{1} \frac{dx}{x^2}$$에 형식적으로 $$\bigl[-x^{-1}\bigr]_{-1}^{1} = -1 - 1 = -2$$를 대입하면 음수가 나오는데, 피적분함수 $$1/x^2$$는 항상 양수이므로 이는 명백히 틀렸다. 원인은 $$x = 0$$에서 피적분함수가 발산하여 $$[-1,1]$$에서 연속이 아니라는 데 있다. 정리 3의 가정이 깨졌으므로 평가정리를 그대로 쓸 수 없으며, 실제로 이 적분은 발산한다.
 
 </div>
 
@@ -245,4 +245,4 @@ $$\frac{F(b) - F(a)}{b - a} = F'(\xi) = f(\xi)$$
 
 값 $$\dfrac{1}{b-a}\int_a^b f$$를 $$f$$의 $$[a,b]$$에서의 *평균값<sub>average value</sub>*이라 하며, 명제 13은 연속함수가 자신의 평균값을 구간 안 어딘가에서 실제로 취한다는 뜻이다. 가령 $$f(x) = x^2$$의 $$[0,3]$$에서의 평균값은 $$\dfrac{1}{3}\int_0^3 x^2\,dx = \dfrac{1}{3}\cdot 9 = 3$$이고, $$f(\xi) = \xi^2 = 3$$을 만족하는 $$\xi = \sqrt{3} \in (0,3)$$이 그 평균을 실현한다.
 
-평가정리 덕분에 정적분의 계산은 원시함수를 찾는 문제로 귀착되며, 이를 위한 치환적분·부분적분 같은 기법은 다음 글 [§적분법](/ko/math/calculus/integration_techniques)에서 다룬다. 정적분에서는 이 기법들이 적분의 끝값까지 함께 변환하는 형태로 쓰인다. 적분 구간이나 피적분함수가 무한으로 가는 경우로의 확장은 [§이상적분](/ko/math/calculus/improper_integrals)에서, 그리고 본 정리의 가정인 연속함수의 적분가능성에 대한 엄밀한 증명은 [\[해석학\] §미적분의 기본정리](/ko/math/analysis/fundamental_theorem_of_calculus)에서 다룬다.
+끝으로, 평가정리 덕분에 정적분의 계산은 원시함수를 찾는 문제로 귀착된다.

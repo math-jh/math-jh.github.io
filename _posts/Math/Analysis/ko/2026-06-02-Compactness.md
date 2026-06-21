@@ -182,7 +182,7 @@ $$\text{(i) 어떤 값 } a \in C \text{가 무한히 자주 나타나는 경우}
 
 </details>
 
-마지막으로, 컴팩트집합은 자기 자신 위에서의 거리함수가 최솟값을 가진다는, 자주 인용되는 사실을 짚어 둔다. 이는 다음 글에서 증명할 최대·최소 정리의 한 특수한 형태이다.
+마지막으로, 컴팩트집합은 자기 자신 위에서의 거리함수가 최솟값을 가진다는, 자주 인용되는 사실을 짚어 둔다.
 
 <div class="example" markdown="1">
 
@@ -202,4 +202,3 @@ $$\lVert p - y_0 \rVert = \lim_k \lVert p - y_{m_k} \rVert = d(p, K)$$
 
 </div>
 
-컴팩트성의 위력은 다음 글 [§연속함수의 성질](/ko/math/analysis/continuous_functions)에서 본격적으로 드러난다. 연속함수가 컴팩트집합을 컴팩트집합으로 보낸다는 사실 ([§연속함수의 성질, ⁋정리 1](/ko/math/analysis/continuous_functions#thm1)) 하나에서 최대·최소 정리 ([§연속함수의 성질, ⁋따름정리 2](/ko/math/analysis/continuous_functions#cor2))와 균등연속성 ([§연속함수의 성질, ⁋정리 4](/ko/math/analysis/continuous_functions#thm4))이 한꺼번에 따라 나온다.

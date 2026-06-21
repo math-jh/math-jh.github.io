@@ -41,7 +41,7 @@ weight: 9
 ```html
 <aside class="sidebar__top">
     <div style="text-align: center; width: 50px">
-        <a href="#site-nav" class="top_button"> <i class="material-icons" style="color: #a9874a">&#xE5D8;</i></a>
+        <a href="#site-nav" class="top_button"> <i class="material-icons" style="color: #a9874a">arrow_upward</i></a>
     </div>
 </aside>
 ```
@@ -53,7 +53,7 @@ weight: 9
 ```html
 <aside class="sidebar__top">
     <div style="text-align: center; width: 50px">
-        <a href="#site-nav" class="top_button"> <i class="material-icons" style="color: #a9874a">&#xE5D8;</i></a>
+        <a href="#site-nav" class="top_button"> <i class="material-icons" style="color: #a9874a">arrow_upward</i></a>
         {% if page.id %}
             <p style="font-size:12px; color: #a9874a; font-family: sans-serif"><span id="percent">0</span>%</p>
         {% endif %}

@@ -124,9 +124,9 @@ $$e^{tA}v = \sum_{k=0}^\infty \frac{t^k A^k}{k!}v = \sum_{k=0}^\infty \frac{t^k 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**명제 5**</ins> $$A$$가 대각화되어 $$A = P D P^{-1}$$ ($$D = \operatorname{diag}(\lambda_1, \dots, \lambda_n)$$) 이면
+<ins id="prop5">**명제 5**</ins> $$A$$가 대각화되어 $$A = P D P^{-1}$$ ($$D = \diag(\lambda_1, \dots, \lambda_n)$$) 이면
 
-$$e^{tA} = P\,e^{tD}\,P^{-1}, \qquad e^{tD} = \operatorname{diag}\bigl(e^{\lambda_1 t}, \dots, e^{\lambda_n t}\bigr)$$
+$$e^{tA} = P\,e^{tD}\,P^{-1}, \qquad e^{tD} = \diag\bigl(e^{\lambda_1 t}, \dots, e^{\lambda_n t}\bigr)$$
 
 이다.
 
@@ -142,7 +142,7 @@ e^{tA} &= \sum_{k=0}^\infty \frac{t^k A^k}{k!} = \sum_{k=0}^\infty \frac{t^k P D
 &= P\left(\sum_{k=0}^\infty \frac{t^k D^k}{k!}\right)P^{-1} = P\,e^{tD}\,P^{-1}
 \end{aligned}$$
 
-이다. 대각행렬의 거듭제곱은 성분별 거듭제곱이므로 $$D^k = \operatorname{diag}(\lambda_1^k, \dots, \lambda_n^k)$$이고, 따라서 $$e^{tD}$$의 $$i$$번째 대각성분은 $$\sum_k t^k\lambda_i^k/k! = e^{\lambda_i t}$$이다.
+이다. 대각행렬의 거듭제곱은 성분별 거듭제곱이므로 $$D^k = \diag(\lambda_1^k, \dots, \lambda_n^k)$$이고, 따라서 $$e^{tD}$$의 $$i$$번째 대각성분은 $$\sum_k t^k\lambda_i^k/k! = e^{\lambda_i t}$$이다.
 
 </details>
 
@@ -255,7 +255,7 @@ y(t) &= e^{-t}\cdot 0 + \int_0^t e^{-(t-s)}\,e^{-s}\,ds \\
 
 <div class="proposition" markdown="1">
 
-<ins id="prop11">**명제 11 (점근적 안정성)**</ins> 상수계수 제차계 $$y' = Ay$$에서 $$A$$의 모든 고윳값 $$\lambda$$가 $$\operatorname{Re}\lambda < 0$$을 만족하면, 모든 해는 $$t \to \infty$$에서 $$y(t) \to 0$$이다.
+<ins id="prop11">**명제 11 (점근적 안정성)**</ins> 상수계수 제차계 $$y' = Ay$$에서 $$A$$의 모든 고윳값 $$\lambda$$가 $$\Real\lambda < 0$$을 만족하면, 모든 해는 $$t \to \infty$$에서 $$y(t) \to 0$$이다.
 
 </div>
 
@@ -264,12 +264,12 @@ y(t) &= e^{-t}\cdot 0 + \int_0^t e^{-(t-s)}\,e^{-s}\,ds \\
 
 조르당 표준형으로 $$e^{tA}$$의 각 성분은 유한 개의 $$t^j e^{\lambda t}$$ 꼴 항의 합이며, 여기서 $$\lambda$$는 고윳값, $$j$$는 해당 조르당 블록 크기 미만의 음이 아닌 정수이다. 각 항의 크기는
 
-$$\lvert t^j e^{\lambda t}\rvert = t^j e^{(\operatorname{Re}\lambda)\,t}$$
+$$\lvert t^j e^{\lambda t}\rvert = t^j e^{(\Real\lambda)\,t}$$
 
-인데, 가정에서 $$\operatorname{Re}\lambda < 0$$이므로 지수의 감쇠가 다항식 $$t^j$$의 증가를 압도하여 $$t \to \infty$$에서 $$0$$으로 간다. 따라서 $$e^{tA} \to 0$$이고, 임의의 $$y_0$$에 대해 $$y(t) = e^{tA}y_0 \to 0$$이다.
+인데, 가정에서 $$\Real\lambda < 0$$이므로 지수의 감쇠가 다항식 $$t^j$$의 증가를 압도하여 $$t \to \infty$$에서 $$0$$으로 간다. 따라서 $$e^{tA} \to 0$$이고, 임의의 $$y_0$$에 대해 $$y(t) = e^{tA}y_0 \to 0$$이다.
 
 </details>
 
-대칭적으로, 어떤 고윳값이 $$\operatorname{Re}\lambda > 0$$이면 그 모드를 따라 해가 지수적으로 발산하고, 고윳값이 모두 순허수이면 예시 7처럼 해가 진동하며 유계로 머문다. 이렇게 평형 $$y = 0$$의 안정·불안정·중립 거동이 고윳값의 실수부 부호로 한꺼번에 읽힌다.
+대칭적으로, 어떤 고윳값이 $$\Real\lambda > 0$$이면 그 모드를 따라 해가 지수적으로 발산하고, 고윳값이 모두 순허수이면 예시 7처럼 해가 진동하며 유계로 머문다. 이렇게 평형 $$y = 0$$의 안정·불안정·중립 거동이 고윳값의 실수부 부호로 한꺼번에 읽힌다.
 
 이렇게 선형 미분방정식의 풀이는 행렬의 고윳값·고유벡터 — 곧 선형사상의 스펙트럼 구조 ([\[다중선형대수학\] §행렬과 선형사상](/ko/math/multilinear_algebra/matrices_and_linear_maps)) — 로 완전히 귀착된다. 미분방정식의 해의 정성적 거동(평형의 안정성, 진동, 발산)이 고윳값의 실수부와 허수부로 읽힌다는 사실은 동역학계 이론의 출발점이며, 해석학·선형대수·기하가 만나는 지점이다.
