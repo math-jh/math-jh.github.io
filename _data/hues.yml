@@ -43,6 +43,7 @@
 "Math / Manifolds":              { hue: 16, sat: "28%", l: 44 }
 "Math / Lie Theory":             { hue: 20, sat: "28%", l: 48 }
 "Math / Riemannian Geometry":    { hue: 24, sat: "28%", l: 52 }
+"Math / Complex Geometry":       { hue: 26, sat: "28%", l: 48 }
 "Math / Algebraic Varieties":    { hue: 28, sat: "28%", l: 44 }
 "Math / Scheme Theory":          { hue: 32, sat: "28%", l: 48 }
 "Math / Toric Geometry":         { hue: 36, sat: "28%", l: 52 }

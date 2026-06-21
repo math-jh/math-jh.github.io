@@ -1,6 +1,6 @@
 ---
-title: "Limits of Functions and Sequences"
-description: "We define the limit of a function using epsilon-delta language, and cover the limit laws for arithmetic operations, limits of powers and roots, the squeeze theorem, one-sided limits, and limits at infinity with examples. Sequences are treated as a special case of functions with the natural numbers as their domain, and their limits are presented using epsilon-N language based on the theory of functional limits."
+title: "Limits of Functions"
+description: "We define the limit of a function using epsilon-delta language, and cover the limit laws for arithmetic operations, limits of powers and roots, the squeeze theorem, one-sided limits, and limits at infinity with examples."
 excerpt: "Defining limits via epsilon-delta and proving limit laws and the squeeze theorem"
 
 categories: [Math / Calculus]

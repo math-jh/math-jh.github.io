@@ -1,0 +1,24 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG 복소곡면 n=2의 Hodge 다이아몬드: h^{p,q}를 마름모꼴로 배열, 수직축 좌우대칭이 Hodge 대칭 (Hodge_Theory-1.svg)
+\begin{tikzpicture}
+	\draw[densely dashed, black!50] (0,-0.7) -- (0,4.7);
+	\node (a) at (0,4) {$h^{0,0}$};
+	\node (b) at (-1.7,3) {$h^{1,0}$};
+	\node (c) at (1.7,3) {$h^{0,1}$};
+	\node (d) at (-3.4,2) {$h^{2,0}$};
+	\node (e) at (0,2) {$h^{1,1}$};
+	\node (f) at (3.4,2) {$h^{0,2}$};
+	\node (g) at (-1.7,1) {$h^{2,1}$};
+	\node (h) at (1.7,1) {$h^{1,2}$};
+	\node (i) at (0,0) {$h^{2,2}$};
+\end{tikzpicture}
+
+\end{document}
