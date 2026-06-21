@@ -1,0 +1,98 @@
+/* ==========================================================================
+   로컬 의존성 그래프 — 우측 사이드바 목차 아래, 항상 표시(현재 글 2-hop 이웃).
+   톤은 목차(.toc)에 맞춘다: sans-serif-narrow · gray 본문 · brass nav__title.
+   소형 그래프의 빈 곳을 클릭하거나 ⤢ 버튼을 누르면 화면 중앙 오버레이로 크게 본다.
+   ========================================================================== */
+.localgraph-side {
+  margin-top: 1em;
+  font-family: $sans-serif-narrow;
+  color: $gray;
+
+  .nav__title {
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+    color: $highlight-color; // 목차 제목과 동일(브래스)
+    font-size: $type-size-6;
+  }
+
+  .lg-expand {
+    margin-left: auto;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    color: $highlight-color;
+    font-size: 1.4em;
+    line-height: 1;
+    padding: 0 2px;
+  }
+
+  .lg-canvas {
+    width: 100%;
+    height: 220px;
+    position: relative;
+    cursor: pointer; // 빈 곳 클릭 = 크게 보기
+  }
+
+  .lg-empty {
+    padding: 0.4rem 0.75rem;
+    font-size: $type-size-6;
+    color: $muted-text-color;
+  }
+}
+
+/* 화면 중앙 오버레이 — 2-hop 그래프를 크게 */
+.lg-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.55);
+
+  &.open { display: flex; }
+
+  &__card {
+    width: 86vw;
+    height: 84vh;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    background: $background-color;
+    color: $text-color;
+    border: 1px solid $border-color;
+    border-radius: 10px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    border-bottom: 1px solid $border-color;
+    font-family: $sans-serif-narrow;
+  }
+
+  &__title { font-weight: bold; }
+
+  &__full {
+    margin-left: auto;
+    color: $highlight-color;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  &__close {
+    background: none;
+    border: 0;
+    color: inherit;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  &__canvas { flex: 1; position: relative; }
+}

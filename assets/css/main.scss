@@ -14,3 +14,5 @@ search: false
 @import "subject-cards"; // subject-home card grid
 @import "lang-select"; // language-select landing cards
 @import "settings-dropdown"; // masthead theme/language picker (shared by both skins)
+@import "local-graph"; // per-post floating dependency graph panel
+@import "graph-page"; // global dependency graph page (index panel + Brass card)

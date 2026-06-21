@@ -25,6 +25,23 @@ module GraphData
     %r{\]\((/(?:ko|en)/[A-Za-z0-9_\-/]+?)(?:#[^)\s]*)?\)}
   ].freeze
 
+  # 카테고리(slug) → family(필터 칩·구분선·family 색용). 표에 없으면 misc.
+  FAMILY = {
+    "linear_algebra" => "foundations", "calculus" => "foundations",
+    "set_theory" => "foundations", "category_theory" => "foundations",
+    "algebraic_structures" => "algebra", "group_theory" => "algebra",
+    "ring_theory" => "algebra", "multilinear_algebra" => "algebra",
+    "field_theory" => "algebra", "homological_algebra" => "algebra",
+    "commutative_algebra" => "algebra", "representation_theory" => "algebra",
+    "number_theory" => "algebra",
+    "analysis" => "analysis",
+    "topology" => "geometry", "algebraic_topology" => "geometry",
+    "manifolds" => "geometry", "lie_theory" => "geometry",
+    "riemannian_geometry" => "geometry", "algebraic_varieties" => "geometry",
+    "scheme_theory" => "geometry", "toric_geometry" => "geometry",
+    "mirror_symmetry" => "geometry", "symplectic_geometry" => "geometry"
+  }.freeze
+
   module_function
 
   # 카테고리는 URL 에서 뽑는다: /ko/math/category_theory/slug -> "category_theory"
@@ -68,6 +85,8 @@ module GraphData
         title: (d.data["title"] || d.basename).to_s,
         url: d.url,
         category: cat,
+        hue: (hmap[cat] || 0),
+        family: (FAMILY[cat] || "misc"),
         color: color_for(cat, hmap)
       }
     end
