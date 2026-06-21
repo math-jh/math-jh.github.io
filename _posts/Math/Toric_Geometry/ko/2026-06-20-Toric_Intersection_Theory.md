@@ -90,9 +90,9 @@ $$[D_{\rho_1}] \cdots [D_{\rho_k}] = [V(\sigma)]$$
 
 <div class="remark" markdown="1">
 
-<ins id="rmk3">**참고 3**</ins> 명제 2의 (1)에서 우리는 $$X_\Sigma$$의 smoothness를 본질적으로 사용했다. $$X_\Sigma$$가 smooth가 아니라 simplicial일 뿐인 일반적 경우에는 우변에 cone의 *multiplicity* $$\operatorname{mult}(\sigma) = [N_\sigma : \mathbb{Z}v_{\rho_1} + \cdots + \mathbb{Z}v_{\rho_k}]$$가 곱해져
+<ins id="rmk3">**참고 3**</ins> 명제 2의 (1)에서 우리는 $$X_\Sigma$$의 smoothness를 본질적으로 사용했다. $$X_\Sigma$$가 smooth가 아니라 simplicial일 뿐인 일반적 경우에는 우변에 cone의 *multiplicity* $$\mult(\sigma) = [N_\sigma : \mathbb{Z}v_{\rho_1} + \cdots + \mathbb{Z}v_{\rho_k}]$$가 곱해져
 
-$$[D_{\rho_1}] \cdots [D_{\rho_k}] = \frac{1}{\operatorname{mult}(\sigma)}\,[V(\sigma)], \qquad [V(\sigma)] = \operatorname{mult}(\sigma)\,[D_{\rho_1}] \cdots [D_{\rho_k}]$$
+$$[D_{\rho_1}] \cdots [D_{\rho_k}] = \frac{1}{\mult(\sigma)}\,[V(\sigma)], \qquad [V(\sigma)] = \mult(\sigma)\,[D_{\rho_1}] \cdots [D_{\rho_k}]$$
 
 의 꼴로 나타난다 ([CLS] Proposition 12.5.2). 여기서 $$N_\sigma = N \cap \mathbb{R}\sigma$$는 $$\sigma$$가 span하는 부분공간 안의 lattice이다. Smooth cone은 그 generator가 $$N_\sigma$$의 basis를 이루어 $$\mult(\sigma) = 1$$이므로, 위 식은 명제 2의 (1)로 환원된다. Simplicial이지만 smooth가 아닌 경우 Chow group이 torsion을 가질 수 있어 위 식은 $$\CH^\ast(X_\Sigma)_\mathbb{Q}$$ 위에서만 성립한다.
 
@@ -171,7 +171,7 @@ $$D_{\rho_1} \cdots D_{\rho_n} = \begin{cases} 1 & \text{if } \rho_1 + \cdots + 
 
 $$D_{\rho_1} \cdots D_{\rho_n} = [V(\sigma)]$$
 
-이다. $$\sigma$$가 maximal cone이고 $$X_\Sigma$$가 complete이므로 $$V(\sigma)$$는 $$T_N$$의 fixed point 하나, 즉 한 점이다. 따라서 $$[V(\sigma)] = [\mathrm{pt}]$$이고 교차수는 $$1$$이다. (Smoothness에 의해 $$\operatorname{mult}(\sigma) = 1$$이므로 참고 3의 일반 공식에서도 같은 값을 얻는다.)
+이다. $$\sigma$$가 maximal cone이고 $$X_\Sigma$$가 complete이므로 $$V(\sigma)$$는 $$T_N$$의 fixed point 하나, 즉 한 점이다. 따라서 $$[V(\sigma)] = [\mathrm{pt}]$$이고 교차수는 $$1$$이다. (Smoothness에 의해 $$\mult(\sigma) = 1$$이므로 참고 3의 일반 공식에서도 같은 값을 얻는다.)
 
 </details>
 

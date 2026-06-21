@@ -160,7 +160,7 @@ $$\begin{aligned}
 
 ## 중첩구간정리
 
-완비성의 가장 기하학적인 표현 가운데 하나는 "끝없이 줄어드는 닫힌 구간들의 사슬은 빈 곳을 남기지 않는다"는 것이다. 이는 다음 글에서 다룰 수열의 수렴과 직결되며, 십진법 전개로 실수를 구성하는 직관의 바탕이 된다.
+완비성의 가장 기하학적인 표현 가운데 하나는 "끝없이 줄어드는 닫힌 구간들의 사슬은 빈 곳을 남기지 않는다"는 것이다. 이는 십진법 전개로 실수를 구성하는 직관의 바탕이 된다.
 
 <div class="proposition" markdown="1">
 
@@ -250,4 +250,4 @@ $$2 = \frac{p^2}{q^2} \implies p^2 = 2q^2$$
 
 </div>
 
-이처럼 완비성 하나로부터 실수의 핵심 성질들이 줄줄이 따라 나온다. 다음 글 [§수열의 수렴](/ko/math/analysis/convergence_of_sequences)에서는 완비성을 수열의 언어로 옮겨 단조수렴정리를 얻고, 이어 [§Cauchy 수열과 완비성](/ko/math/analysis/cauchy_sequences)에서 완비성의 또 다른 동치 형태를 본다. 이 완비성이 있어야 비로소 [\[미적분학\] §연속함수](/ko/math/calculus/continuity)에서 도구로 받아들였던 최대·최소 정리와 중간값 정리를 [§연속함수의 성질](/ko/math/analysis/continuous_functions), [§연결성과 중간값 정리](/ko/math/analysis/connectedness)에서 증명할 수 있다.
+이처럼 완비성 하나로부터 실수의 핵심 성질들이 줄줄이 따라 나온다.

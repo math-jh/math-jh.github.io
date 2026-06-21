@@ -219,4 +219,4 @@ $$f^{-1}(V) = \{x : f(x) \in V\} = (0, \infty)$$
 
 </div>
 
-세 특징화 — $$\varepsilon$$-$$\delta$$, 점열, 열린집합 — 는 상황에 따라 골라 쓰인다. 다음 글들에서 연속함수가 [§컴팩트성](/ko/math/analysis/compactness)과 [§연결성과 중간값 정리](/ko/math/analysis/connectedness)를 어떻게 보존하는지, 그리고 그로부터 [§연속함수의 성질](/ko/math/analysis/continuous_functions)에서 최대·최소 정리와 중간값 정리가 어떻게 따라 나오는지를 본다.
+세 특징화 — $$\varepsilon$$-$$\delta$$, 점열, 열린집합 — 는 상황에 따라 골라 쓰인다.

@@ -68,7 +68,7 @@ $$\left(\frac{a}{p}\right) \equiv a^{(p-1)/2} \pmod p$$
 
 페르마 소정리 ([§페르마 소정리, ⁋정리 1](/ko/math/number_theory/fermat_little_theorem#thm1))로 $$a^{p-1} \equiv 1$$이므로 $$\bigl(a^{(p-1)/2} - 1\bigr)\bigl(a^{(p-1)/2} + 1\bigr) \equiv 0 \pmod p$$이고, 따라서 $$a^{(p-1)/2} \equiv \pm 1 \pmod p$$이다.
 
-$$a$$가 이차 잉여이면 $$a \equiv x^2$$인 $$x$$가 있어 $$a^{(p-1)/2} \equiv x^{p-1} \equiv 1$$이다. 거꾸로 $$g$$를 법 $$p$$의 원시근 ([§원시근, ⁋정리 4](/ko/math/number_theory/primitive_roots#thm4))이라 하고 $$a \equiv g^j$$로 쓰면, $$a$$가 이차 잉여인 것은 $$j$$가 짝수인 것과 동치이다. 한편 $$a^{(p-1)/2} \equiv g^{j(p-1)/2} \equiv 1$$인 것은 $$\operatorname{ord}_p(g) = p-1$$이 $$j(p-1)/2$$를 나누는 것, 곧 $$j$$가 짝수인 것과 동치이다. 따라서 $$a^{(p-1)/2} \equiv 1$$인 것과 $$a$$가 이차 잉여인 것이 일치하고, 비잉여이면 $$a^{(p-1)/2} \equiv -1$$이다.
+$$a$$가 이차 잉여이면 $$a \equiv x^2$$인 $$x$$가 있어 $$a^{(p-1)/2} \equiv x^{p-1} \equiv 1$$이다. 거꾸로 $$g$$를 법 $$p$$의 원시근 ([§원시근, ⁋정리 4](/ko/math/number_theory/primitive_roots#thm4))이라 하고 $$a \equiv g^j$$로 쓰면, $$a$$가 이차 잉여인 것은 $$j$$가 짝수인 것과 동치이다. 한편 $$a^{(p-1)/2} \equiv g^{j(p-1)/2} \equiv 1$$인 것은 $$\ord_p(g) = p-1$$이 $$j(p-1)/2$$를 나누는 것, 곧 $$j$$가 짝수인 것과 동치이다. 따라서 $$a^{(p-1)/2} \equiv 1$$인 것과 $$a$$가 이차 잉여인 것이 일치하고, 비잉여이면 $$a^{(p-1)/2} \equiv -1$$이다.
 
 </details>
 
@@ -214,4 +214,4 @@ $$\begin{aligned}
 
 </div>
 
-곱셈성에 의해 르장드르 기호의 계산은 소수와 $$-1$$에서의 값으로 환원된다. 남은 핵심은 두 홀수 소수 $$p, q$$에 대해 $$\left(\frac{q}{p}\right)$$와 $$\left(\frac{p}{q}\right)$$가 어떻게 연관되는가인데, 이 놀라운 대칭이 다음 글 [§이차 상호법칙](/ko/math/number_theory/quadratic_reciprocity)의 주제이다.
+곱셈성에 의해 르장드르 기호의 계산은 소수와 $$-1$$에서의 값으로 환원된다. 남은 핵심은 두 홀수 소수 $$p, q$$에 대해 $$\left(\frac{q}{p}\right)$$와 $$\left(\frac{p}{q}\right)$$가 어떻게 연관되는가이다.

@@ -9,12 +9,12 @@ sidebar:
     nav: "calculus-ko"
 
 date: 2026-06-02
-weight: 8
+weight: 11
 
 published: false
 ---
 
-지금까지 함수로부터 도함수를 구하는 미분을 다루었다. 이제 방향을 뒤집어, 도함수가 주어졌을 때 원래 함수를 되찾는 문제를 생각한다. 이는 가장 단순한 미분방정식 $$F' = f$$를 푸는 것이기도 하다. 물리적으로는 가속도에서 속도를, 속도에서 위치를 복원하는 일이며, 수학적으로는 다음 글들의 정적분과 [§미적분의 기본정리](/ko/math/calculus/fundamental_theorem_of_calculus)를 통해 넓이·길이·부피의 계산과 이어진다.
+지금까지 함수로부터 도함수를 구하는 미분을 다루었다. 이제 방향을 뒤집어, 도함수가 주어졌을 때 원래 함수를 되찾는 문제를 생각한다. 이는 가장 단순한 미분방정식 $$F' = f$$를 푸는 것이기도 하다. 물리적으로는 가속도에서 속도를, 속도에서 위치를 복원하는 일이다.
 
 ## 원시함수
 
@@ -106,7 +106,7 @@ $$\int \left(\frac{2}{x} + \sec^2 x - \frac{5}{1+x^2}\right)dx = 2\ln\lvert x\rv
 
 <div class="example" markdown="1">
 
-<ins id="ex5">**예시 5**</ins> $$\displaystyle\int 2x\,e^{x^2}\,dx$$를 구하자. $$\dfrac{d}{dx}e^{x^2} = 2x\,e^{x^2}$$임을 알아채면 곧바로 $$\int 2x\,e^{x^2}\,dx = e^{x^2} + C$$이다. 마찬가지로 $$\dfrac{d}{dx}(\sin x)^3 = 3(\sin x)^2\cos x$$에서 $$\displaystyle\int \sin^2 x\,\cos x\,dx = \tfrac13\sin^3 x + C$$를 얻는다. 이렇게 "안쪽 함수의 도함수가 곱해져 있는" 꼴은 연쇄법칙을 거꾸로 적용한 것으로, 이를 체계화한 것이 [§적분법](/ko/math/calculus/integration_techniques)의 치환적분이다.
+<ins id="ex5">**예시 5**</ins> $$\displaystyle\int 2x\,e^{x^2}\,dx$$를 구하자. $$\dfrac{d}{dx}e^{x^2} = 2x\,e^{x^2}$$임을 알아채면 곧바로 $$\int 2x\,e^{x^2}\,dx = e^{x^2} + C$$이다. 마찬가지로 $$\dfrac{d}{dx}(\sin x)^3 = 3(\sin x)^2\cos x$$에서 $$\displaystyle\int \sin^2 x\,\cos x\,dx = \tfrac13\sin^3 x + C$$를 얻는다. 이렇게 "안쪽 함수의 도함수가 곱해져 있는" 꼴은 연쇄법칙을 거꾸로 적용한 것이다.
 
 </div>
 
@@ -158,8 +158,7 @@ $$\int \cos^2 x\,dx = \int \frac{1 + \cos 2x}{2}\,dx = \frac{x}{2} + \frac{\sin 
 
 $$\int \frac{dx}{x^2 - 1} = \int \frac12\left(\frac{1}{x-1} - \frac{1}{x+1}\right)dx = \frac12\ln\left\lvert \frac{x-1}{x+1}\right\rvert + C$$
 
-이다. 무리식은 적절한 치환으로 삼각함수 적분으로 바꾼다. 이러한 기법의 체계적 전개는 [§적분법](/ko/math/calculus/integration_techniques)에서 다룬다.
-
+이다. 무리식은 적절한 치환으로 삼각함수 적분으로 바꾼다. 
 ## 응용
 
 부정적분의 가장 직접적인 응용은 변화율로부터 양 자체를 복원하는 것이다.
@@ -180,7 +179,7 @@ $$s(t) = \int \cos t\,dt = \sin t + C$$
 
 $$\frac{d}{dx}\bigl(x\sin x + \cos x\bigr) = \sin x + x\cos x - \sin x = x\cos x$$
 
-로 피적분함수가 되살아남을 확인한다. 적분 결과의 정당성은 언제나 이렇게 미분으로 검증할 수 있으며, 이 점이 부정적분이 미분의 역연산임을 다시 보여준다. (이 적분 자체를 구하는 부분적분은 [§적분법](/ko/math/calculus/integration_techniques)에서 다룬다.)
+로 피적분함수가 되살아남을 확인한다. 적분 결과의 정당성은 언제나 이렇게 미분으로 검증할 수 있으며, 이 점이 부정적분이 미분의 역연산임을 다시 보여준다.
 
 </div>
 
@@ -188,4 +187,4 @@ $$\frac{d}{dx}\bigl(x\sin x + \cos x\bigr) = \sin x + x\cos x - \sin x = x\cos x
 
 기법을 모두 동원해도 초등함수로 표현되지 않는 부정적분이 존재한다. $$e^{-x^2}$$, $$\dfrac{\sin x}{x}$$, $$\dfrac{1}{\ln x}$$ 같은 함수는 연속이므로 원시함수를 *가지지만*, 그 원시함수가 다항·유리·삼각·지수·로그함수의 유한 합성으로는 표현되지 않음이 리우빌의 이론으로 증명된다. 따라서 "적분이 안 된다"는 말은 흔히 "초등함수로 안 적힌다"는 뜻이며, 그 적분값 자체는 (정적분으로서) 멀쩡히 존재한다. 정규분포의 누적분포함수 $$\int e^{-x^2}\,dx$$가 그 대표적 예이다.
 
-여기서 "연속함수는 원시함수를 가진다"는 존재성을 우리는 아직 증명하지 않았다. 미분 공식을 뒤집는 방식은 운 좋게 원시함수를 *찾았을* 때만 작동할 뿐, 일반적 존재를 보장하지 못한다. 이 존재성은 정적분을 도입한 뒤 [§미적분의 기본정리](/ko/math/calculus/fundamental_theorem_of_calculus)에서 가변상한 적분 $$F(x) = \int_a^x f$$가 $$f$$의 원시함수임을 보임으로써 비로소 증명된다. 그 다리를 놓으려면 먼저 정적분을 정의해야 하며, 그것이 다음 글 [§정적분](/ko/math/calculus/definite_integral)의 주제이다.
+여기서 "연속함수는 원시함수를 가진다"는 존재성을 우리는 아직 증명하지 않았다. 미분 공식을 뒤집는 방식은 운 좋게 원시함수를 *찾았을* 때만 작동할 뿐, 일반적 존재를 보장하지 못한다. 이 존재성은 정적분을 도입한 뒤 [§미적분의 기본정리](/ko/math/calculus/fundamental_theorem_of_calculus)에서 가변상한 적분 $$F(x) = \int_a^x f$$가 $$f$$의 원시함수임을 보임으로써 비로소 증명된다.

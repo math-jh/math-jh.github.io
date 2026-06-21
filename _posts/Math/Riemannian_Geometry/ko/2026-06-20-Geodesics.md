@@ -203,7 +203,7 @@ $$\dot\gamma^k = w^k, \qquad \dot w^k = -\sum_{i, j = 1}^n \Gamma_{ij}^k(\gamma)
 
 </details>
 
-위 정리의 해가 정의되는 구간 $$I$$는 일반적으로 $$\mathbb{R}$$ 전체가 아닐 수 있다. 임의의 시간에 대해 측지선이 항상 정의되는 manifold를 *geodesically complete<sub>측지적으로 완비된</sub>*이라 부르며, 이는 Hopf-Rinow 정리를 통해 거리공간으로서의 완비성과 동치임이 알려져 있다. 측지선의 정의역을 최대한 늘려 얻는 자료가 다음 글에서 다룰 exponential map의 출발점이 된다 ([참고 10](#rmk10)).
+위 정리의 해가 정의되는 구간 $$I$$는 일반적으로 $$\mathbb{R}$$ 전체가 아닐 수 있다. 임의의 시간에 대해 측지선이 항상 정의되는 manifold를 *geodesically complete<sub>측지적으로 완비된</sub>*이라 부르며, 이는 Hopf-Rinow 정리를 통해 거리공간으로서의 완비성과 동치임이 알려져 있다. 측지선의 정의역을 최대한 늘려 얻는 자료가 exponential map의 출발점이 된다 ([참고 10](#rmk10)).
 
 ## 예시
 
@@ -221,7 +221,7 @@ $$\ddot\gamma^k(t) = 0, \qquad k = 1, \ldots, n$$
 
 <div class="example" markdown="1">
 
-<ins id="ex9">**예시 9**</ins> $$\mathbb{R}^3$$에 매장된 단위 구면 $$S^2$$에 standard round metric, 즉 $$\iota : S^2 \hookrightarrow \mathbb{R}^3$$로 유도된 metric을 주자. 한 점 $$p \in S^2$$와 단위 vector $$v \in T_p S^2$$를 잡고, $$p$$와 $$v$$가 펼치는 $$\mathbb{R}^3$$의 평면 $$P = \operatorname{span}\{p, v\}$$를 생각하자. 이 평면이 구면과 만나는 교선은 *대원<sub>great circle</sub>*
+<ins id="ex9">**예시 9**</ins> $$\mathbb{R}^3$$에 매장된 단위 구면 $$S^2$$에 standard round metric, 즉 $$\iota : S^2 \hookrightarrow \mathbb{R}^3$$로 유도된 metric을 주자. 한 점 $$p \in S^2$$와 단위 vector $$v \in T_p S^2$$를 잡고, $$p$$와 $$v$$가 펼치는 $$\mathbb{R}^3$$의 평면 $$P = \span\{p, v\}$$를 생각하자. 이 평면이 구면과 만나는 교선은 *대원<sub>great circle</sub>*
 
 $$\gamma(t) = (\cos t)\, p + (\sin t)\, v$$
 
@@ -237,7 +237,7 @@ $$\ddot\gamma(t) = -(\cos t)\, p - (\sin t)\, v = -\gamma(t)$$
 
 <div class="remark" markdown="1">
 
-<ins id="rmk10">**참고 10**</ins> [정리 7](#thm7)은 각 $$(p, v) \in TM$$마다 그 점에서 출발하는 유일한 측지선 $$\gamma_v$$를 대응시킨다. $$v$$를 적절히 줄여 측지선이 $$t = 1$$까지 정의되도록 하면, 대응 $$v \mapsto \gamma_v(1)$$은 $$T_p M$$의 한 근방에서 $$M$$으로의 매끄러운 함수를 정의하는데, 이를 점 $$p$$에서의 *exponential map*이라 부른다. Exponential map은 측지선의 자료를 한 점의 접공간 위로 모아 manifold의 국소 구조를 선형화하는 도구이며, 다음 글에서 자세히 다룬다.
+<ins id="rmk10">**참고 10**</ins> [정리 7](#thm7)은 각 $$(p, v) \in TM$$마다 그 점에서 출발하는 유일한 측지선 $$\gamma_v$$를 대응시킨다. $$v$$를 적절히 줄여 측지선이 $$t = 1$$까지 정의되도록 하면, 대응 $$v \mapsto \gamma_v(1)$$은 $$T_p M$$의 한 근방에서 $$M$$으로의 매끄러운 함수를 정의하는데, 이를 점 $$p$$에서의 *exponential map*이라 부른다. Exponential map은 측지선의 자료를 한 점의 접공간 위로 모아 manifold의 국소 구조를 선형화하는 도구이다.
 
 </div>
 

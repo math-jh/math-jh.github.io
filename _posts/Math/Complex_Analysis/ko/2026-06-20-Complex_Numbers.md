@@ -23,7 +23,7 @@ published: false
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> *복소수<sub>complex number</sub>*는 실수 $$a, b$$에 대하여 $$z = a + bi$$ 꼴로 적히는 수이며, 여기서 $$i$$는 $$i^2 = -1$$을 만족하는 기호이다. 이때 $$a$$를 $$z$$의 *실수부<sub>real part</sub>*라 하여 $$\operatorname{Re} z$$로, $$b$$를 *허수부<sub>imaginary part</sub>*라 하여 $$\operatorname{Im} z$$로 적는다. 두 복소수의 덧셈과 곱셈은
+<ins id="def1">**정의 1**</ins> *복소수<sub>complex number</sub>*는 실수 $$a, b$$에 대하여 $$z = a + bi$$ 꼴로 적히는 수이며, 여기서 $$i$$는 $$i^2 = -1$$을 만족하는 기호이다. 이때 $$a$$를 $$z$$의 *실수부<sub>real part</sub>*라 하여 $$\Real z$$로, $$b$$를 *허수부<sub>imaginary part</sub>*라 하여 $$\Img z$$로 적는다. 두 복소수의 덧셈과 곱셈은
 
 $$(a + bi) + (c + di) = (a + c) + (b + d)i, \qquad (a + bi)(c + di) = (ac - bd) + (ad + bc)i$$
 
@@ -50,7 +50,7 @@ $$\lvert z\rvert = \sqrt{a^2 + b^2}$$
 <ins id="prop3">**명제 3**</ins> 임의의 복소수 $$z, w$$에 대하여 다음이 성립한다.
 
 1. $$\overline{z + w} = \bar{z} + \bar{w}$$이고 $$\overline{zw} = \bar{z}\,\bar{w}$$이다.
-2. $$\overline{\bar{z}} = z$$이고, $$z + \bar{z} = 2\operatorname{Re} z$$, $$z - \bar{z} = 2i\operatorname{Im} z$$이다. 특히 $$z = \bar{z}$$인 것은 $$z$$가 실수인 것과 동치이다.
+2. $$\overline{\bar{z}} = z$$이고, $$z + \bar{z} = 2\Real z$$, $$z - \bar{z} = 2i\Img z$$이다. 특히 $$z = \bar{z}$$인 것은 $$z$$가 실수인 것과 동치이다.
 3. $$z\bar{z} = \lvert z\rvert^2$$이고, $$z \neq 0$$이면 $$z^{-1} = \dfrac{\bar{z}}{\lvert z\rvert^2}$$이다.
 
 </div>
@@ -66,7 +66,7 @@ $$z = a + bi$$, $$w = c + di$$로 둔다.
 
     이고, 한편 $$\bar{z}\,\bar{w} = (a - bi)(c - di) = (ac - bd) - (ad + bc)i$$이므로 둘이 같다.
 
-2. $$\overline{\bar{z}} = \overline{a - bi} = a + bi = z$$이다. 또 $$z + \bar{z} = (a+bi)+(a-bi) = 2a = 2\operatorname{Re} z$$이고 $$z - \bar{z} = 2bi = 2i\operatorname{Im} z$$이다. 따라서 $$z = \bar{z}$$인 것은 $$\operatorname{Im} z = b = 0$$, 곧 $$z$$가 실수인 것과 동치이다.
+2. $$\overline{\bar{z}} = \overline{a - bi} = a + bi = z$$이다. 또 $$z + \bar{z} = (a+bi)+(a-bi) = 2a = 2\Real z$$이고 $$z - \bar{z} = 2bi = 2i\Img z$$이다. 따라서 $$z = \bar{z}$$인 것은 $$\Img z = b = 0$$, 곧 $$z$$가 실수인 것과 동치이다.
 
 3. 위에서 본 대로 $$z\bar{z} = a^2 + b^2 = \lvert z\rvert^2$$이다. $$z \neq 0$$이면 $$\lvert z\rvert^2 > 0$$이고
 
@@ -99,13 +99,13 @@ $$z = a + bi$$, $$w = c + di$$로 둔다.
 
     이고 양변이 음이 아니므로 $$\lvert zw\rvert = \lvert z\rvert\,\lvert w\rvert$$이다. 또 $$\lvert \bar{z}\rvert^2 = \bar{z}\,\overline{\bar{z}} = \bar{z}z = \lvert z\rvert^2$$이므로 $$\lvert \bar{z}\rvert = \lvert z\rvert$$이다.
 
-3. 먼저 임의의 복소수 $$u$$에 대해 $$\operatorname{Re} u \leq \lvert u\rvert$$임에 유의한다. $$u = x + yi$$이면 $$x \leq \sqrt{x^2 + y^2}$$이기 때문이다. 이를 $$u = z\bar{w}$$에 적용하면
+3. 먼저 임의의 복소수 $$u$$에 대해 $$\Real u \leq \lvert u\rvert$$임에 유의한다. $$u = x + yi$$이면 $$x \leq \sqrt{x^2 + y^2}$$이기 때문이다. 이를 $$u = z\bar{w}$$에 적용하면
 
     $$\begin{aligned}
     \lvert z + w\rvert^2
     &= (z + w)(\bar{z} + \bar{w}) = z\bar{z} + z\bar{w} + w\bar{z} + w\bar{w} \\
     &= \lvert z\rvert^2 + \lvert w\rvert^2 + (z\bar{w} + \overline{z\bar{w}}) \\
-    &= \lvert z\rvert^2 + \lvert w\rvert^2 + 2\operatorname{Re}(z\bar{w}) \\
+    &= \lvert z\rvert^2 + \lvert w\rvert^2 + 2\Real(z\bar{w}) \\
     &\leq \lvert z\rvert^2 + \lvert w\rvert^2 + 2\lvert z\bar{w}\rvert = \lvert z\rvert^2 + \lvert w\rvert^2 + 2\lvert z\rvert\,\lvert w\rvert = (\lvert z\rvert + \lvert w\rvert)^2
     \end{aligned}$$
 
@@ -119,11 +119,11 @@ $$z = a + bi$$, $$w = c + di$$로 둔다.
 
 복소수를 평면의 점으로 보면 직교좌표 $$(a, b)$$ 대신 극좌표, 곧 원점으로부터의 거리와 양의 실수축과 이루는 각도로 표현하는 것이 자연스럽다. 이 표현에서 복소수 곱셈의 기하적 의미가 가장 선명하게 드러난다.
 
-우리는 실수 위에서 정의된 지수함수와 삼각함수를 멱급수로 확장하여 ([\[해석학\] §멱급수와 해석함수](/ko/math/analysis/power_series)) 복소수 입력에 대해서도 $$e^z$$, $$\cos\theta$$, $$\sin\theta$$를 정의할 수 있으며, 이들 멱급수를 항별로 비교하면 다음의 *Euler 공식<sub>Euler's formula</sub>*
+이 글에서는 다음의 *Euler 공식<sub>Euler's formula</sub>*
 
 $$e^{i\theta} = \cos\theta + i\sin\theta \qquad (\theta \in \mathbb{R})$$
 
-을 얻는다. 이 글에서는 멱급수의 복소수 확장을 본격적으로 전개하지 않고 이 공식을 표기상의 약속으로 받아들여, $$\cos\theta + i\sin\theta$$를 $$e^{i\theta}$$로 줄여 적는다. 그 정당성과 해석적 성질은 멱급수를 복소영역에서 다룰 때 다시 확인한다.
+을 표기상의 약속으로 받아들여, $$\cos\theta + i\sin\theta$$를 $$e^{i\theta}$$로 줄여 적는다.
 
 <div class="definition" markdown="1">
 
@@ -327,7 +327,7 @@ $$\sqrt{1 + \lvert z_n\rvert^2}\,\sqrt{1 + \lvert z\rvert^2}$$
 
 인데, 만일 $$(z_n)$$이 유계가 아니라면 어떤 부분수열에서 $$\lvert z_n\rvert \to \infty$$이고, 그때 $$\chi(z_n, z) \to \chi(\infty, z) = 2/\sqrt{1 + \lvert z\rvert^2} > 0$$이 되어 $$\chi(z_n, z) \to 0$$에 모순이다. 따라서 $$(z_n)$$은 유계이고 $$\lvert z_n\rvert \leq M$$이라 두면
 
-$$\lvert z_n - z\rvert = \frac{\sqrt{1 + \lvert z_n\rvert^2}\,\sqrt{1 + \lvert z\rvert^2}}{2}\,\chi(z_n, z) \leq \frac{(1 + M^2)\cdot\text{상수}}{2}\,\chi(z_n, z) \to 0$$
+$$\lvert z_n - z\rvert = \frac{\sqrt{1 + \lvert z_n\rvert^2}\,\sqrt{1 + \lvert z\rvert^2}}{2}\,\chi(z_n, z) \leq \frac{\sqrt{1 + M^2}\,\sqrt{1 + \lvert z\rvert^2}}{2}\,\chi(z_n, z) \to 0$$
 
 이다. 따라서 두 거리는 $$\mathbb{C}$$ 위에서 같은 수렴을 정의하며, 같은 위상을 준다.
 

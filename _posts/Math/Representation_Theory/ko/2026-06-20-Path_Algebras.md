@@ -15,7 +15,7 @@ published: false
 
 ---
 
-표현론의 기본적인 전략은 추상적인 대수적 대상을 벡터공간 위의 선형사상으로 실현하여 선형대수학의 언어로 분석하는 것이다. 앞선 글들에서 우리는 finite group $$G$$와 유한차원 가환대수를 그러한 방식으로 다루었다. 이번 글에서 우리는 *quiver*, 곧 유향그래프를 출발점으로 삼는다. Quiver $$Q$$ 하나에는 *path algebra* $$kQ$$라 부르는 결합대수가 자연스럽게 따라붙으며, $$Q$$의 *representation*은 각 vertex에 벡터공간을, 각 arrow에 선형사상을 얹은 자료이다. 이 글의 핵심은 $$Q$$의 representation들이 이루는 category가 $$kQ$$ 위의 left module들이 이루는 category와 동치라는 것이다. 이 동치는 다음에 이어질 글들, 곧 Krull–Schmidt 정리와 indecomposable 분해, Auslander–Reiten 이론, 그리고 Gabriel의 정리로 향하는 모든 논의의 토대가 된다.
+표현론의 기본적인 전략은 추상적인 대수적 대상을 벡터공간 위의 선형사상으로 실현하여 선형대수학의 언어로 분석하는 것이다. 앞선 글들에서 우리는 finite group $$G$$와 유한차원 가환대수를 그러한 방식으로 다루었다. 이번 글에서 우리는 *quiver*, 곧 유향그래프를 출발점으로 삼는다. Quiver $$Q$$ 하나에는 *path algebra* $$kQ$$라 부르는 결합대수가 자연스럽게 따라붙으며, $$Q$$의 *representation*은 각 vertex에 벡터공간을, 각 arrow에 선형사상을 얹은 자료이다. 이 글의 핵심은 $$Q$$의 representation들이 이루는 category가 $$kQ$$ 위의 left module들이 이루는 category와 동치라는 것이다. 이 동치는 이어지는 논의들의 토대가 된다.
 
 이 글에서 $$k$$는 field를 가리킨다. Quiver는 vertex의 집합과 arrow의 집합이 모두 유한한 경우만을 다루며, 대수와 module의 일반론은 [\[대수적 구조\] §대수](/ko/math/algebraic_structures/algebras)와 [\[대수적 구조\] §가군](/ko/math/algebraic_structures/modules)에서 다룬 것을 따른다. 특히 associative unital $$k$$-algebra란 곱셈이 결합법칙을 만족하고 항등원을 가지는 $$k$$-algebra를 뜻한다 ([\[대수적 구조\] §대수, ⁋정의 1](/ko/math/algebraic_structures/algebras#def1)).
 
@@ -199,11 +199,7 @@ $$f_j\circ V_\alpha=W_\alpha\circ f_i$$
 
 를 만족하는 것이다. 즉 다음 diagram이 commute한다.
 
-$$\begin{aligned}
-V_i&\xrightarrow{\ V_\alpha\ }V_j\\
-{\scriptstyle f_i}\big\downarrow\ \ &\ \ \big\downarrow{\scriptstyle f_j}\\
-W_i&\xrightarrow{\ W_\alpha\ }W_j
-\end{aligned}$$
+![quiver representation 사상의 commutativity](/assets/images/Math/Representation_Theory/Path_Algebras-1.svg){:style="width:7.13em" class="invert" .align-center}
 
 </div>
 
@@ -276,8 +272,7 @@ $$M=1\cdot M=\sum_{i\in Q_0}e_iM=\bigoplus_{i\in Q_0}V_i$$
 
 정리 12의 동치 아래에서 [정의 11](#def11)의 representation 구성들은 정확히 module의 대응하는 구성으로 번역된다. Subrepresentation은 $$kQ$$-submodule에 대응하는데, 부분공간들이 arrow를 따라 닫혀 있다는 조건이 바로 $$\bigoplus_i W_i$$가 $$kQ$$의 작용에 대하여 닫혀 있다는 조건이기 때문이다. 마찬가지로 representation의 direct sum은 module의 direct sum에 대응한다. 따라서 representation에 대한 모든 분해 이론을 module의 언어로, 또는 그 반대로 옮길 수 있으며, 우리는 다음 글들에서 이 자유로운 번역을 전제로 한다.
 
-이 동치는 또한 representation을 다룰 때 굳이 path algebra 전체를 명시하지 않고 quiver의 자료만으로 작업해도 좋다는 것을 정당화한다. 가령 선형 $$A_2$$ quiver의 representation은 선형사상 $$V_\alpha:V_1\rightarrow V_2$$ 하나이고, 이를 분류하는 것은 곧 선형사상을 isomorphism 차이를 무시하고 분류하는 문제, 곧 rank에 의한 분류이다. 이처럼 단순한 분류가 가능한 quiver와 그렇지 않은 quiver를 가르는 경계가 바로 다음에 이어질 Gabriel의 정리의 주제이며, 그 출발점에 이 글에서 세운 $$\Rep(Q)\cong\lMod{kQ}$$이 놓인다.
-
+이 동치는 또한 representation을 다룰 때 굳이 path algebra 전체를 명시하지 않고 quiver의 자료만으로 작업해도 좋다는 것을 정당화한다. 가령 선형 $$A_2$$ quiver의 representation은 선형사상 $$V_\alpha:V_1\rightarrow V_2$$ 하나이고, 이를 분류하는 것은 곧 선형사상을 isomorphism 차이를 무시하고 분류하는 문제, 곧 rank에 의한 분류이다. 
 ---
 
 **참고문헌**

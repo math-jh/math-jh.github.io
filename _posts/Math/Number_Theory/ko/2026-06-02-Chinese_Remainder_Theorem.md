@@ -72,7 +72,7 @@ $$\mathbb{Z}/M\mathbb{Z} \;\xrightarrow{\;\sim\;}\; \mathbb{Z}/m_1\mathbb{Z} \ti
 
 </div>
 
-이 분해는 법 $$M$$에 대한 계산을 서로소인 소수 거듭제곱 법들로 쪼개어 처리하게 해 준다. 그 직접적 귀결로 오일러 $$\varphi$$ 함수의 곱셈성이 따르며, 이는 다음 글들 [§오일러 정리와 phi 함수](/ko/math/number_theory/euler_theorem)와 [§산술적 함수와 뫼비우스 반전](/ko/math/number_theory/arithmetic_functions)에서 곱셈적 함수의 일반론으로 발전한다.
+이 분해는 법 $$M$$에 대한 계산을 서로소인 소수 거듭제곱 법들로 쪼개어 처리하게 해 준다. 그 직접적 귀결로 오일러 $$\varphi$$ 함수의 곱셈성이 따른다.
 
 ## 명시적 공식과 계산
 
@@ -157,7 +157,7 @@ $$15t + 8 \equiv 2 \pmod 7 \;\Longrightarrow\; t + 1 \equiv 2 \pmod 7 \;\Longrig
 
 $$x \equiv a \pmod m, \qquad x \equiv b \pmod n$$
 
-은 $$\gcd(m, n) \mid (a - b)$$일 때에만 해를 가지며, 해가 있을 경우 법 $$\operatorname{lcm}(m, n)$$에 대해 유일하다.
+은 $$\gcd(m, n) \mid (a - b)$$일 때에만 해를 가지며, 해가 있을 경우 법 $$\lcm(m, n)$$에 대해 유일하다.
 
 </div>
 
@@ -168,7 +168,7 @@ $$d = \gcd(m, n)$$으로 두자. $$x$$가 해이면 $$x - a$$가 $$m$$의 배수
 
 역으로 $$d \mid (a - b)$$라 하자. 첫 식에서 $$x = a + m t$$로 쓰고 둘째 식에 넣으면 $$a + mt \equiv b \pmod n$$, 곧 $$mt \equiv b - a \pmod n$$이다. 이 $$t$$에 관한 일차 합동식은 $$\gcd(m, n) = d$$가 우변 $$b - a$$를 나누므로 ([§일차 합동식, ⁋정리 1](/ko/math/number_theory/linear_congruences#thm1)) 해를 가진다. 그러한 $$t$$를 하나 잡으면 $$x = a + mt$$가 연립의 해이다.
 
-유일성은 다음과 같다. $$x_0, x_1$$이 모두 해이면 $$x_0 - x_1$$이 $$m$$과 $$n$$의 공배수, 즉 $$\operatorname{lcm}(m, n)$$의 배수이므로 $$x_0 \equiv x_1 \pmod{\operatorname{lcm}(m, n)}$$이다. $$\gcd(m, n) = 1$$인 특수한 경우에는 $$d = 1$$이 항상 $$a - b$$를 나누고 $$\operatorname{lcm}(m, n) = mn$$이 되어 정리 1로 환원된다.
+유일성은 다음과 같다. $$x_0, x_1$$이 모두 해이면 $$x_0 - x_1$$이 $$m$$과 $$n$$의 공배수, 즉 $$\lcm(m, n)$$의 배수이므로 $$x_0 \equiv x_1 \pmod{\lcm(m, n)}$$이다. $$\gcd(m, n) = 1$$인 특수한 경우에는 $$d = 1$$이 항상 $$a - b$$를 나누고 $$\lcm(m, n) = mn$$이 되어 정리 1로 환원된다.
 
 </details>
 
@@ -178,7 +178,7 @@ $$d = \gcd(m, n)$$으로 두자. $$x$$가 해이면 $$x - a$$가 $$m$$의 배수
 
 $$6t + 5 \equiv 11 \pmod 8 \;\Longrightarrow\; 6t \equiv 6 \pmod 8 \;\Longrightarrow\; 3t \equiv 3 \pmod 4 \;\Longrightarrow\; t \equiv 1 \pmod 4$$
 
-이므로 $$t = 4u + 1$$, 곧 $$x = 6(4u + 1) + 5 = 24u + 11$$이다. 즉 $$x \equiv 11 \pmod{24}$$이고, 여기서 $$24 = \operatorname{lcm}(6, 8)$$이다. 반면 $$x \equiv 3 \pmod 6$$이고 $$x \equiv 0 \pmod 8$$이면 $$\gcd(6, 8) = 2$$인데 $$a - b = 3$$이 $$2$$로 나누어떨어지지 않으므로 해가 없다.
+이므로 $$t = 4u + 1$$, 곧 $$x = 6(4u + 1) + 5 = 24u + 11$$이다. 즉 $$x \equiv 11 \pmod{24}$$이고, 여기서 $$24 = \lcm(6, 8)$$이다. 반면 $$x \equiv 3 \pmod 6$$이고 $$x \equiv 0 \pmod 8$$이면 $$\gcd(6, 8) = 2$$인데 $$a - b = 3$$이 $$2$$로 나누어떨어지지 않으므로 해가 없다.
 
 </div>
 
