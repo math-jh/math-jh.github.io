@@ -78,6 +78,13 @@ module GraphData
     by_url = {}
     docs.each { |d| by_url[norm(d.url)] = true }
 
+    # category/weight lookup for filtering real prerequisites
+    meta = {}
+    docs.each do |d|
+      cat = category_of(d)
+      meta[norm(d.url)] = { category: cat, weight: d.data["weight"]&.to_i }
+    end
+
     nodes = docs.map do |d|
       cat = category_of(d)
       {
@@ -91,6 +98,15 @@ module GraphData
       }
     end
 
+    # edge direction: prerequisite -> dependent.
+    # A link A -> B in post content means "A cites/uses B", i.e. A depends on B.
+    # The dependency graph stores the reverse direction B -> A so arrows point from
+    # prerequisite to dependent.
+    #
+    # Same-category forward citations (lighter post cites heavier post) are ignored,
+    # because within a category weights define the reading order; such links are
+    # previews/forward references, not real dependencies. Cross-category citations
+    # are always reversed since weights are not comparable across categories.
     edges = Hash.new(0)
     docs.each do |d|
       src = norm(d.url)
@@ -99,7 +115,18 @@ module GraphData
         txt.scan(re) do |m|
           tgt = norm(m[0])
           next if tgt == src || !by_url.key?(tgt)
-          edges[[src, tgt]] += 1
+
+          s_meta = meta[src]
+          t_meta = meta[tgt]
+          same_cat = s_meta && t_meta && s_meta[:category] == t_meta[:category]
+
+          if same_cat
+            # Only keep edges where the citing post is heavier than the cited post.
+            next unless s_meta[:weight] && t_meta[:weight]
+            next unless s_meta[:weight] > t_meta[:weight]
+          end
+
+          edges[[tgt, src]] += 1
         end
       end
     end
