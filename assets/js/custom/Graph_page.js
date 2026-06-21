@@ -48,7 +48,7 @@
   /* ---------- card engine (graphcard.js 포팅) ---------- */
   function createGraphCard(stage, data, families, cfg) {
     var famKeys = new Set(families.map(function (f) { return f.key; }));
-    var deg = {}, adj = {}, byId = {};
+    var deg = {}, outAdj = {}, inAdj = {}, byId = {};
     data.nodes.forEach(function (n) {
       byId[n.id] = n;
       n.__c = n.family === 'misc'
@@ -59,8 +59,8 @@
       var e = endpoints(l);
       deg[e[0]] = (deg[e[0]] || 0) + 1;
       deg[e[1]] = (deg[e[1]] || 0) + 1;
-      (adj[e[0]] = adj[e[0]] || new Set()).add(e[1]);
-      (adj[e[1]] = adj[e[1]] || new Set()).add(e[0]);
+      (outAdj[e[0]] = outAdj[e[0]] || new Set()).add(e[1]);
+      (inAdj[e[1]] = inAdj[e[1]] || new Set()).add(e[0]);
     });
     function radius(n) { return Math.sqrt(2.0 + (deg[n.id] || 0) * 0.7) * 2.95; }
     var labelTop = Math.max(6, Math.round(data.nodes.length * 0.04));
@@ -87,7 +87,8 @@
       hlNodes = new Set(); hlLinks = new Set();
       if (node) {
         hlNodes.add(node.id);
-        (adj[node.id] || new Set()).forEach(function (x) { hlNodes.add(x); });
+        (outAdj[node.id] || new Set()).forEach(function (x) { hlNodes.add(x); });
+        (inAdj[node.id] || new Set()).forEach(function (x) { hlNodes.add(x); });
         data.links.forEach(function (l) {
           var e = endpoints(l);
           if (e[0] === node.id || e[1] === node.id) hlLinks.add(lid(l));
@@ -172,7 +173,15 @@
       ctx.beginPath(); ctx.arc(node.x, node.y, radius(node), 0, 6.2832); ctx.fill();
     }
     function linkColor(l) {
-      if (hlLinks.has(lid(l))) return 'rgba(' + cfg.accent + ',0.85)';
+      if (hlLinks.has(lid(l))) {
+        var e = endpoints(l);
+        var focused = hovered || selected;
+        if (focused) {
+          if (e[0] === focused.id) return 'rgba(' + cfg.accentOut + ',0.9)';
+          if (e[1] === focused.id) return 'rgba(' + cfg.accentIn + ',0.9)';
+        }
+        return 'rgba(' + cfg.accent + ',0.85)';
+      }
       var e = endpoints(l);
       var on = passesFilter(byId[e[0]]) && passesFilter(byId[e[1]]) && !hlLinks.size;
       return on ? 'rgba(' + cfg.link + ',0.36)' : 'rgba(' + cfg.link + ',0.05)';
@@ -183,12 +192,23 @@
       .autoPauseRedraw(false)
       .nodeId('id')
       .nodeRelSize(5)
+      .nodeVal(function (n) { return Math.pow(radius(n) / 5, 2); })
       .nodeColor(function () { return 'rgba(0,0,0,0)'; })
       .nodeCanvasObjectMode(function () { return 'replace'; })
       .nodeCanvasObject(draw)
       .nodePointerAreaPaint(pointerArea)
       .linkColor(linkColor)
       .linkWidth(function (l) { return hlLinks.has(lid(l)) ? 2.4 : 1; })
+      .linkDirectionalArrowLength(8)
+      .linkDirectionalArrowRelPos(0.96)
+      .linkDirectionalArrowColor(function (l) { return linkColor(l); })
+      .linkCurvature(function (l) {
+        var e = endpoints(l);
+        return data.links.some(function (r) {
+          var re = endpoints(r);
+          return re[0] === e[1] && re[1] === e[0];
+        }) ? 0.25 : 0;
+      })
       .onNodeHover(function (n) { hovered = n; refocus(); canvasWrap.style.cursor = n ? 'pointer' : ''; if (hoverCb) hoverCb(n ? n.id : null); })
       .onNodeClick(function (n) { selected = n; refocus(); showPop(n); if (clickCb) clickCb(n ? n.id : null); })
       .onBackgroundClick(function () { selected = null; hidePop(); refocus(); if (clickCb) clickCb(null); })
@@ -400,6 +420,7 @@
         var cfg = {
           nodeSat: 48, nodeLight: 60, glow: 14,
           accent: '240,198,116', link: '150,150,160',
+          accentIn: '165,111,20', accentOut: '107,58,0',
           label: '174,168,150', labelHi: '240,198,116',
           font: '"MySansSerifFont", system-ui, sans-serif',
           openLabel: lang === 'ko' ? '글로 이동 →' : 'Open post →'
