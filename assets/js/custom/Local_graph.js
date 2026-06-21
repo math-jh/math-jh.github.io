@@ -40,12 +40,12 @@
     var lang = box.dataset.lang || 'ko';
     var self = (box.dataset.self || location.pathname).replace(/\/$/, '');
     var t = lang === 'ko'
-      ? { title: '이웃 그래프', expand: '크게 보기', full: '전체 그래프 →', none: '연결 정보가 없습니다.' }
-      : { title: 'Local graph', expand: 'Expand', full: 'Full graph →', none: 'No links found.' };
+      ? { title: '의존성', expand: '크게 보기', full: '전체 그래프', none: '연결 정보가 없습니다.' }
+      : { title: 'Dependencies', expand: 'Expand', full: 'Full graph', none: 'No links found.' };
 
     box.innerHTML =
-      '<h4 class="nav__title"><span class="material-icons md-16">hub</span> ' + t.title +
-      '<button class="lg-expand" type="button" title="' + t.expand + '" aria-label="' + t.expand + '">⤢</button></h4>' +
+      '<h4 class="nav__title"><span class="material-icons md-16">graph_8</span> ' + t.title +
+      '<button class="lg-expand" type="button" title="' + t.expand + '" aria-label="' + t.expand + '"><span class="material-icons md-16">zoom_out_map</span></button></h4>' +
       '<div class="lg-canvas"></div>';
     var canvas = box.querySelector('.lg-canvas');
     var expandBtn = box.querySelector('.lg-expand');
@@ -55,9 +55,10 @@
     overlay.innerHTML =
       '<div class="lg-overlay__card"><div class="lg-overlay__head">' +
       '<span class="lg-overlay__title">' + t.title + '</span>' +
-      '<a class="lg-overlay__full" href="/' + lang + '/graph/">' + t.full + '</a>' +
       '<button class="lg-overlay__close" type="button" aria-label="close">✕</button>' +
-      '</div><div class="lg-overlay__canvas"></div></div>';
+      '</div><div class="lg-overlay__canvas">' +
+      '<a class="lg-overlay__full" href="/' + lang + '/graph/" title="' + t.full + '" aria-label="' + t.full + '"><span class="material-icons md-20">graph_3</span></a>' +
+      '</div></div>';
     document.body.appendChild(overlay);
     var ovCanvas = overlay.querySelector('.lg-overlay__canvas');
 
@@ -161,8 +162,8 @@
         .linkWidth(function (l) {
           return (lend(l.source) === self || lend(l.target) === self) ? 2 : 1;
         })
-        .linkDirectionalArrowLength(5)
-        .linkDirectionalArrowRelPos(0.96)
+        .linkDirectionalArrowLength(7)
+        .linkDirectionalArrowRelPos(0.45)
         .linkDirectionalArrowColor(function (l) {
           var s = lend(l.source), t = lend(l.target);
           if (s === self) return 'rgba(107,58,0,0.9)';

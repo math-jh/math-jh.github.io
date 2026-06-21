@@ -22,9 +22,11 @@
     border: 0;
     cursor: pointer;
     color: $highlight-color;
-    font-size: 1.4em;
+    font-size: 1em;
     line-height: 1;
     padding: 0 2px;
+    display: inline-flex;
+    align-items: center;
   }
 
   .lg-canvas {
@@ -79,10 +81,23 @@
   &__title { font-weight: bold; }
 
   &__full {
-    margin-left: auto;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 5;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
     color: $highlight-color;
-    font-weight: bold;
+    background: rgba($background-color, 0.85);
+    border: 1px solid $border-color;
     text-decoration: none;
+    backdrop-filter: blur(4px);
+
+    &:hover { color: $text-color; border-color: $highlight-color; }
   }
 
   &__close {

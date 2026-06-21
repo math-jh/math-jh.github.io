@@ -199,8 +199,8 @@
       .nodePointerAreaPaint(pointerArea)
       .linkColor(linkColor)
       .linkWidth(function (l) { return hlLinks.has(lid(l)) ? 2.4 : 1; })
-      .linkDirectionalArrowLength(8)
-      .linkDirectionalArrowRelPos(0.96)
+      .linkDirectionalArrowLength(10)
+      .linkDirectionalArrowRelPos(0.45)
       .linkDirectionalArrowColor(function (l) { return linkColor(l); })
       .linkCurvature(function (l) {
         var e = endpoints(l);
