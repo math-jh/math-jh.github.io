@@ -13,8 +13,6 @@ date: 2026-06-19
 
 weight: 8
 
-published: false
-
 ---
 
 우리는 이번 글에서 $$\mathbb{K}$$-벡터공간 $$V$$와 그 부분공간 $$W$$에 대하여, 그 *몫공간<sub>quotient space</sub>* $$V/W$$를 정의한다. 직관적으로 이는 $$V$$ 안에서, $$W$$의 원소들을 모두 $$0$$으로 만들어서 얻어지는 공간으로, 다만 이렇게 $$W$$의 원소들을 모두 $$0$$으로 만든 후에도 남아있는 공간이 여전히 벡터공간이기를 바라므로, $$W$$의 모든 원소들을 단순히 $$0$$이라고 선언하는 것만으로는 이를 달성할 수 없다. 
@@ -213,11 +211,11 @@ $$\bar L(v+\ker L)=L(v)$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$W=\ker L$$로 두면 [명제 6](#prop6)에 의하여 $$\bar L(v+\ker L)=L(v)$$으로 정의된 linear map $$\bar L:V/\ker L\rightarrow U$$이 잘 정의되며, 그 image는 $$\im L$$과 같다. 따라서 공역을 $$\im L$$로 제한하면 $$\bar L:V/\ker L\rightarrow\im L$$은 전사이다. 한편 $$\bar L(v+\ker L)=0$$이라 하면 $$L(v)=0$$, 즉 $$v\in\ker L$$이므로 $$v+\ker L=\ker L$$이 $$V/\ker L$$의 영벡터이다. 따라서 $$\ker\bar L=\{0\}$$이고 ([§선형사상, ⁋명제 8](/ko/math/linear_algebra/linear_map#prop8)) $$\bar L$$은 단사이다. 따라서 $$\bar L$$은 전단사인 linear map이므로 isomorphism이다. ([§동형사상, ⁋보조정리 2](/ko/math/linear_algebra/isomorphic_vector_spaces#lem2))
+$$W=\ker L$$로 두면 [명제 6](#prop6)에 의하여 $$\bar L(v+\ker L)=L(v)$$으로 정의된 linear map $$\bar L:V/\ker L\rightarrow U$$이 잘 정의되며, 그 image는 $$\im L$$과 같다. 따라서 공역을 $$\im L$$로 제한하면 $$\bar L:V/\ker L\rightarrow\im L$$은 전사이다. 한편 $$\bar L(v+\ker L)=0$$이라 하면 $$L(v)=0$$, 즉 $$v\in\ker L$$이므로 $$v+\ker L=\ker L$$이 $$V/\ker L$$의 영벡터이다. 따라서 $$\ker\bar L=\{0\}$$이고 따라서 $$\bar L$$은 단사이다. ([§선형사상, ⁋명제 8](/ko/math/linear_algebra/linear_map#prop8)) 즉, $$\bar L$$은 전단사인 linear map이므로 isomorphism이다. ([§동형사상, ⁋보조정리 2](/ko/math/linear_algebra/isomorphic_vector_spaces#lem2))
 
 </details>
 
-제1동형정리와 [정리 5](#thm5)를 결합하면 rank-nullity 정리를 다시 얻는다. 실제로 유한차원 $$V$$에 대하여 
+위의 [정리 7](#thm7)과 [정리 5](#thm5)를 결합하면 rank-nullity 정리를 다시 얻는다. 실제로 유한차원 $$V$$에 대하여 
 
 $$\rank L=\dim\im L=\dim(V/\ker L)=\dim V-\dim\ker L=\dim V-\nullity L$$
 

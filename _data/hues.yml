@@ -35,6 +35,7 @@
 
 # --- C. 해석학 — teal ---
 "Math / Analysis":               { hue: 188, sat: "24%", l: 48 }
+"Math / Complex Analysis":       { hue: 192, sat: "24%", l: 42 }
 
 # --- D. 기하학 (위상·미분기하·대수기하·거울대칭) — warm analogous band ---
 "Math / Topology":               { hue: 8,  sat: "28%", l: 46 }
