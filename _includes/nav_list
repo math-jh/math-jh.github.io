@@ -11,7 +11,7 @@
   build the list straight from the posts: header name from _data/category_labels.yml,
   entries = every post in the category (this lang) ordered by its `weight`.
   Curated/special sidebars (main, category-*, mirror_symmetry-*, *-research,
-  llm_workshop-*, blog_development-*, …) keep their explicit block and take the
+  blog_development-*, …) keep their explicit block and take the
   manual path instead. So a normal category needs ZERO navigation.yml upkeep —
   add a post (with categories + weight) and it appears automatically.
 {%- endcomment -%}

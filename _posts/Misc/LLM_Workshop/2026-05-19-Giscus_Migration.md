@@ -65,7 +65,7 @@ comments:
 
 ## 최근 댓글 사이드바
 
-여기까지가 1차 동기 — Disqus 광고와 GDPR 배너 제거 — 의 마무리다. 2차 동기는 *최근 댓글들을 블로그 사이드바에 띄우기*였고, 사용자에게는 이 부분이 Giscus로 옮긴 진짜 이유였다. [최근 글과 최근 댓글을 사이드바에 띄우는 작업](/ko/llm_workshop/marvin_recents_sidebar)은 이 마이그레이션을 전제로 하고, 그 작업이 간단했던 것은 Giscus의 데이터가 곧 우리 저장소의 데이터이기 때문이다.
+여기까지가 1차 동기 — Disqus 광고와 GDPR 배너 제거 — 의 마무리다. 2차 동기는 *최근 댓글들을 블로그 사이드바에 띄우기*였고, 사용자에게는 이 부분이 Giscus로 옮긴 진짜 이유였다. [최근 글과 최근 댓글을 사이드바에 띄우는 작업](/ko/llm_workshop/recents_sidebar)은 이 마이그레이션을 전제로 하고, 그 작업이 간단했던 것은 Giscus의 데이터가 곧 우리 저장소의 데이터이기 때문이다.
 
 `scripts/comments/fetch_recent_comments.py`는 15분에 한 번 GitHub GraphQL API에서 최근 업데이트된 discussion 30개를 가져오고, 각 discussion에서 가장 최근 댓글 한 건을 추려 `_data/recent_comments.yml`에 쓴다. 인증은 `gh auth token`을 쓴다 — 사용자가 이미 GitHub CLI로 로그인되어 있어 토큰을 그대로 가져다 쓸 수 있다.
 
