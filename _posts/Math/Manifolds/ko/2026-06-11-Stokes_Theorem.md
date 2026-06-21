@@ -26,7 +26,7 @@ $$\int_a^bf'(t)\,dt=f(b)-f(a)$$
 
 $$\int_V\omega=\int_{\mathbb{R}^{m-1}}\int_0^\infty f\,dr^m\,dr^1\cdots dr^{m-1}$$
 
-으로 정의한다. 여기서 $$f$$는 $$V$$ 바깥에서 $$0$$으로 확장한 것이다. 한편 $$\partial\mathbb{H}^m$$은 각 변수의 적분에 기여하지 않으므로, 이 적분은 $$V\cap\operatorname{int}\mathbb{H}^m$$ 위에서의 적분과 같다. [§경계가 있는 다양체, ⁋명제 3](/ko/math/manifolds/manifolds_with_boundary#prop3)에서 살펴본 것과 같이 chart들의 transition은 내부를 내부로 보내는 diffeomorphism이므로, 적분의 잘 정의됨과 chart 무관성, 그리고 partition of unity를 통한 전체 적분의 정의는 [§적분](/ko/math/manifolds/integration)에서의 논증이 글자 그대로 적용된다. 즉 oriented manifold with boundary $$M$$ 위의 compactly supported $$m$$-form $$\omega$$에 대하여 $$\int_M\omega$$가 잘 정의된다.
+으로 정의한다. 여기서 $$f$$는 $$V$$ 바깥에서 $$0$$으로 확장한 것이다. 한편 $$\partial\mathbb{H}^m$$은 각 변수의 적분에 기여하지 않으므로, 이 적분은 $$V\cap\interior\mathbb{H}^m$$ 위에서의 적분과 같다. [§경계가 있는 다양체, ⁋명제 3](/ko/math/manifolds/manifolds_with_boundary#prop3)에서 살펴본 것과 같이 chart들의 transition은 내부를 내부로 보내는 diffeomorphism이므로, 적분의 잘 정의됨과 chart 무관성, 그리고 partition of unity를 통한 전체 적분의 정의는 [§적분](/ko/math/manifolds/integration)에서의 논증이 글자 그대로 적용된다. 즉 oriented manifold with boundary $$M$$ 위의 compactly supported $$m$$-form $$\omega$$에 대하여 $$\int_M\omega$$가 잘 정의된다.
 
 $$m=1$$인 경우에는 [§경계가 있는 다양체](/ko/math/manifolds/manifolds_with_boundary)에서 살펴본 것과 같이 positively oriented chart만으로 $$M$$을 덮지 못할 수 있으므로, negatively oriented chart $$(U,x)$$에 대해서는
 
@@ -128,7 +128,7 @@ $$\int_{\partial M}\iota^\ast\omega=\epsilon(p)f(p)=-\epsilon f(p)=\int_Mdf$$
 
 <div class="example" markdown="1">
 
-<ins id="ex3">**예시 3**</ins> $$M=[0,1]$$에 표준적인 orientation, 즉 $$\operatorname{int}M=(0,1)$$에 $$\mathbb{R}$$의 표준 orientation을 주자. [§경계가 있는 다양체, ⁋예시 5](/ko/math/manifolds/manifolds_with_boundary#ex5)에서 살펴본 것과 같이 $$\partial M=\{0,1\}$$이고, 점 $$1$$에서는 outward vector $$\partial/\partial t$$가 positively oriented이므로 $$\epsilon(1)=+1$$, 점 $$0$$에서는 outward vector가 $$-\partial/\partial t$$이므로 $$\epsilon(0)=-1$$이다. 따라서 임의의 $$C^\infty$$ 함수 $$f$$에 대하여 [정리 1](#thm1)은
+<ins id="ex3">**예시 3**</ins> $$M=[0,1]$$에 표준적인 orientation, 즉 $$\interior M=(0,1)$$에 $$\mathbb{R}$$의 표준 orientation을 주자. [§경계가 있는 다양체, ⁋예시 5](/ko/math/manifolds/manifolds_with_boundary#ex5)에서 살펴본 것과 같이 $$\partial M=\{0,1\}$$이고, 점 $$1$$에서는 outward vector $$\partial/\partial t$$가 positively oriented이므로 $$\epsilon(1)=+1$$, 점 $$0$$에서는 outward vector가 $$-\partial/\partial t$$이므로 $$\epsilon(0)=-1$$이다. 따라서 임의의 $$C^\infty$$ 함수 $$f$$에 대하여 [정리 1](#thm1)은
 
 $$\int_{[0,1]}df=f(1)-f(0)$$
 

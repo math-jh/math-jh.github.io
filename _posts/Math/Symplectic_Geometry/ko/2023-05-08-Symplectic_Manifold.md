@@ -131,7 +131,7 @@ $$\{f,g\}=\omega(X_f,X_g)$$
 
 </div>
 
-정의로부터 $$\{f,g\}=(\iota_{X_g}\omega)(X_f)=dg(X_f)=X_f g$$이므로, Poisson 괄호는 $$f$$를 따라 흐를 때의 $$g$$의 변화율이기도 하다. $$\omega$$가 antisymmetric이므로 $$\{f,g\}=-\{g,f\}$$이고, $$X_f$$가 derivation이므로 각 변수에 대해 Leibniz 법칙 $$\{f,gh\}=\{f,g\}h+g\{f,h\}$$가 성립한다. 뿐만 아니라 $$d\omega=0$$이라는 조건이 정확히 Jacobi 항등식 $$\{f,\{g,h\}\}+\{g,\{h,f\}\}+\{h,\{f,g\}\}=0$$과 동치임을 보일 수 있으며, 따라서 $$(C^\infty(M),\{-,-\})$$는 Lie 대수를 이룬다. 
+정의로부터 $$\{f,g\}=(\iota_{X_f}\omega)(X_g)=df(X_g)=X_g f$$이므로, Poisson 괄호는 $$g$$를 따라 흐를 때의 $$f$$의 변화율이기도 하다. $$\omega$$가 antisymmetric이므로 $$\{f,g\}=-\{g,f\}$$이고, $$X_f$$가 derivation이므로 각 변수에 대해 Leibniz 법칙 $$\{f,gh\}=\{f,g\}h+g\{f,h\}$$가 성립한다. 뿐만 아니라 $$d\omega=0$$이라는 조건이 정확히 Jacobi 항등식 $$\{f,\{g,h\}\}+\{g,\{h,f\}\}+\{h,\{f,g\}\}=0$$과 동치임을 보일 수 있으며, 따라서 $$(C^\infty(M),\{-,-\})$$는 Lie 대수를 이룬다. 
 
 <div class="remark" markdown="1">
 

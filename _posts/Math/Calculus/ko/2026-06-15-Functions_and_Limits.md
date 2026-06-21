@@ -1,7 +1,7 @@
 ---
 title: "함수와 수열의 극한"
 description: "미적분학의 출발점인 함수의 극한을 ε-δ 언어로 정의하고, 극한의 사칙연산 법칙과 거듭제곱·근의 극한, 조임정리, 한쪽 극한과 무한대에서의 극한을 예시와 함께 다룬다. 수열은 정의역이 자연수인 특수한 함수로, 함수 극한의 이론을 바탕으로 ε-N 언어로 정리한다."
-excerpt: "함수의 극한을 ε-δ로, 수열의 극한을 ε-N으로 정의하고 극한법칙·조임정리를 증명한다"
+excerpt: "함수의 극한을 ε-δ로 정의하고 극한법칙·조임정리를 증명한다"
 
 categories: [Math / Calculus]
 permalink: /ko/math/calculus/functions_and_limits
@@ -23,7 +23,7 @@ weight: 1
 
 </div>
 
-점 $$a$$의 근방은 이후 해석학과 위상수학에서 더 엄밀한 방식으로 정의하게 되지만, 현재는 이 정도의 정의로 충분하다. 특별히 점 $$a$$의 근방 중 $$a$$ 자기 자신이 빠진 집합을 편의상 *삭제된 근방<sub>deleted neighborhood</sub>*라 부른다. 
+점 $$a$$의 근방은 현재는 이 정도의 정의로 충분하다. 특별히 점 $$a$$의 근방 중 $$a$$ 자기 자신이 빠진 집합을 편의상 *삭제된 근방<sub>deleted neighborhood</sub>*라 부른다. 
 
 <div class="definition" markdown="1">
 
@@ -298,7 +298,7 @@ $$a-\delta < x < a \implies \lvert f(x) - L\rvert < \epsilon$$
 
 </div>
 
-극한 $$\displaystyle\lim_{x\to a} f(x)$$가 존재하는 것은 두 한쪽 극한이 모두 존재하고 서로 같은 것과 동치이다. 가령 $$f(x) = \dfrac{\lvert x\rvert}{x}$$는 $$x \to 0^+$$에서 $$1$$, $$x \to 0^-$$에서 $$-1$$로 두 한쪽 극한이 다르므로 $$x \to 0$$에서의 극한은 존재하지 않는다. 이렇게 두 한쪽 극한이 유한하지만 서로 다른 점을 함수의 *도약<sub>jump</sub>* 불연속점이라 부른다 ([§연속함수](/ko/math/calculus/continuity)).
+극한 $$\displaystyle\lim_{x\to a} f(x)$$가 존재하는 것은 두 한쪽 극한이 모두 존재하고 서로 같은 것과 동치이다. 가령 $$f(x) = \dfrac{\lvert x\rvert}{x}$$는 $$x \to 0^+$$에서 $$1$$, $$x \to 0^-$$에서 $$-1$$로 두 한쪽 극한이 다르므로 $$x \to 0$$에서의 극한은 존재하지 않는다. 이렇게 두 한쪽 극한이 유한하지만 서로 다른 점을 함수의 *도약<sub>jump</sub>* 불연속점이라 부른다.
 
 <div class="definition" markdown="1">
 
@@ -330,41 +330,3 @@ $$\lim_{x\to 0}\frac{\sqrt{1+x} - 1}{x} = \lim_{x\to 0}\frac{1}{\sqrt{1+x}+1} = 
 
 </div>
 
-## 수열의 극한
-
-지금까지의 극한 이론에서 정의역은 실수의 부분집합이었다. 정의역을 자연수 집합 $$\mathbb{N}$$으로 제한하면 *수열<sub>sequence</sub>*을 얻고, $$n \to \infty$$로 가는 극한은 앞서 다룬 무한대에서의 함수 극한의 이산적 판본이 된다. 기본적으로 $$\mathbb{N}$$의 원소들은 $$\mathbb{R}$$과는 달리 이산적으로 분포하므로, 수열의 극한을 다룰 때 의미가 있는 것은 $$N\rightarrow\infty$$인 상황 뿐이다. 이러한 관점에서 수열의 극한을 $$\epsilon-N$$ 언어로 정리한다.
-
-<div class="definition" markdown="1">
-
-<ins id="def16">**정의 16**</ins> 실수열 $$(a_n)_{n=1}^\infty$$와 실수 $$L$$에 대해, 임의의 $$\epsilon > 0$$에 대하여 어떤 자연수 $$N$$이 존재하여
-
-$$n > N \implies \lvert a_n - L \rvert < \epsilon$$
-
-이 성립할 때, $$L$$을 $$n \to \infty$$일 때 $$a_n$$의 *극한<sub>limit</sub>*이라 하고 $$\displaystyle\lim_{n\to\infty} a_n = L$$로 적는다.
-
-</div>
-
-정의의 뜻은 분명하다. 어떤 오차 허용치 $$\epsilon$$이 주어져도, 그 이후의 모든 항이 $$L$$에서 $$\epsilon$$ 이내에 들어오도록 하는 지점 $$N$$을 찾을 수 있다는 것이다. 고등학교에서 익힌 "$$n$$이 커질수록 $$a_n$$이 $$L$$에 가까워진다"는 말을 정확히 만든 것이 $$\epsilon-N$$ 정의이며, 이는 앞서 본 무한대에서의 함수 극한 정의를 정의역 $$\mathbb{N}$$에 적용한 것에 불과하다.
-
-<div class="example" markdown="1">
-
-<ins id="ex17">**예시 17**</ins> $$\displaystyle\lim_{n\to\infty}\frac{1}{n}=0$$임을 확인하자. 임의의 $$\epsilon > 0$$에 대해 $$N > \frac{1}{\epsilon}$$인 자연수 $$N$$을 택하면, $$n > N$$일 때 $$\frac{1}{n} < \frac{1}{N} < \epsilon$$이므로 $$\bigl\lvert \frac{1}{n}-0\bigr\rvert < \epsilon$$이다.
-
-</div>
-
-그럼 다음은 [명제 5](#prop5)의 analogue로, 그 증명 또한 거의 동일하다. 
-
-<div class="proposition" markdown="1">
-
-<ins id="prop18">**명제 18 (수열의 극한법칙)**</ins> $$\displaystyle\lim_{n\to\infty} a_n = L$$, $$\displaystyle\lim_{n\to\infty} b_n = M$$이라 하자. 그러면
-
-1. $$\displaystyle\lim_{n\to\infty} \bigl(a_n + b_n\bigr) = L + M$$,
-2. 임의의 상수 $$c$$에 대해 $$\displaystyle\lim_{n\to\infty} c\,a_n = cL$$,
-3. $$\displaystyle\lim_{n\to\infty} a_n b_n = LM$$,
-4. $$M \neq 0$$이고 모든 $$n$$에 대해 $$b_n \neq 0$$이면 $$\displaystyle\lim_{n\to\infty} \frac{a_n}{b_n} = \frac{L}{M}$$
-
-이 성립한다.
-
-</div>
-
-이로써 극한의 정의와 기본 도구를 갖추었다. 다음 글 [§연속함수](/ko/math/calculus/continuity)에서는 극한을 이용하여 함수의 연속을 정의하고, 연속함수가 갖는 성질들을 다룬다. 한편 본 글에서 직관적으로 다룬 실수의 "빈틈 없음"이 왜 극한 이론을 떠받치는지 — 예컨대 단조유계수열이 왜 수렴하는지 — 는 해석학에서 [§실수의 완비성](/ko/math/analysis/completeness_of_reals)으로 엄밀히 정초된다.

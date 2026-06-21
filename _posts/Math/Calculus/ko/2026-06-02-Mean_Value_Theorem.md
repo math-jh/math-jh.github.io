@@ -9,7 +9,7 @@ sidebar:
     nav: "calculus-ko"
 
 date: 2026-06-02
-weight: 5
+weight: 8
 
 published: false
 ---
@@ -269,4 +269,3 @@ $$\lim_{x \to 0} \frac{1 - \cos x}{x^2} = \lim_{x \to 0} \frac{\sin x}{2x} = \li
 
 </div>
 
-평균값 정리에서 끌어낸 단조성·극값·볼록성 판정과 코시 평균값 정리에 기댄 로피탈 정리는 다음 글 [§도함수의 응용](/ko/math/calculus/applications_of_derivatives)에서 다룬다. 평균값 정리를 고계도함수로 반복 적용하면 [§테일러 정리](/ko/math/calculus/taylor_theorem)의 나머지항 평가를 얻는다. 본 글의 정리들은 모두 연속함수의 최대·최소 정리를 전제로 하는데, 그것을 떠받치는 실수의 완비성과 함께 엄밀한 증명은 해석학 [§평균값 정리와 테일러 정리](/ko/math/analysis/mean_value_theorem)에서 다시 다룬다.

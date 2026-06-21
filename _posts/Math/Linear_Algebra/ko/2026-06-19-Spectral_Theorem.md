@@ -171,7 +171,7 @@ $$\lambda\langle v,w\rangle=\langle Lv,w\rangle=\langle v,Lw\rangle=\mu\langle v
 
 ## 양의 정부호 작용소
 
-자기수반작용소 가운데 고윳값이 모두 양수인 것들은 따로 이름을 붙일 만하다. 이들은 다음 글에서 특이값 분해를 다룰 때 핵심적으로 쓰인다. 
+자기수반작용소 가운데 고윳값이 모두 양수인 것들은 따로 이름을 붙일 만하다. 
 
 <div class="definition" markdown="1">
 

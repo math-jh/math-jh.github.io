@@ -20,7 +20,7 @@ published: false
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> $$\gcd(a, n) = 1$$일 때, $$a^k \equiv 1 \pmod n$$을 만족하는 가장 작은 양의 정수 $$k$$를 $$a$$의 법 $$n$$에 대한 *위수<sub>order</sub>*라 하고 $$\operatorname{ord}_n(a)$$로 적는다.
+<ins id="def1">**정의 1**</ins> $$\gcd(a, n) = 1$$일 때, $$a^k \equiv 1 \pmod n$$을 만족하는 가장 작은 양의 정수 $$k$$를 $$a$$의 법 $$n$$에 대한 *위수<sub>order</sub>*라 하고 $$\ord_n(a)$$로 적는다.
 
 </div>
 
@@ -28,14 +28,14 @@ published: false
 
 <div class="proposition" markdown="1">
 
-<ins id="prop2">**명제 2**</ins> $$a^k \equiv 1 \pmod n$$인 것은 $$\operatorname{ord}_n(a) \mid k$$인 것과 동치이다. 특히 $$\operatorname{ord}_n(a) \mid \varphi(n)$$이다.
+<ins id="prop2">**명제 2**</ins> $$a^k \equiv 1 \pmod n$$인 것은 $$\ord_n(a) \mid k$$인 것과 동치이다. 특히 $$\ord_n(a) \mid \varphi(n)$$이다.
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$d = \operatorname{ord}_n(a)$$라 하고 $$k = dq + r$$ ($$0 \leq r < d$$) 로 나누면 $$a^k = (a^d)^q a^r \equiv a^r \pmod n$$이다. $$a^k \equiv 1$$이면 $$a^r \equiv 1$$인데 $$r < d$$이고 $$d$$가 최소이므로 $$r = 0$$, 즉 $$d \mid k$$이다. 역은 자명하다. 오일러 정리 $$a^{\varphi(n)} \equiv 1$$에 적용하면 $$d \mid \varphi(n)$$이다.
+$$d = \ord_n(a)$$라 하고 $$k = dq + r$$ ($$0 \leq r < d$$) 로 나누면 $$a^k = (a^d)^q a^r \equiv a^r \pmod n$$이다. $$a^k \equiv 1$$이면 $$a^r \equiv 1$$인데 $$r < d$$이고 $$d$$가 최소이므로 $$r = 0$$, 즉 $$d \mid k$$이다. 역은 자명하다. 오일러 정리 $$a^{\varphi(n)} \equiv 1$$에 적용하면 $$d \mid \varphi(n)$$이다.
 
 </details>
 
@@ -43,7 +43,7 @@ $$d = \operatorname{ord}_n(a)$$라 하고 $$k = dq + r$$ ($$0 \leq r < d$$) 로 
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**정의 3**</ins> $$\operatorname{ord}_n(a) = \varphi(n)$$인 $$a$$를 법 $$n$$의 *원시근<sub>primitive root</sub>*이라 한다. 원시근 $$g$$가 존재하면 $$g, g^2, \ldots, g^{\varphi(n)}$$이 기약잉여계 전체를 이룬다.
+<ins id="def3">**정의 3**</ins> $$\ord_n(a) = \varphi(n)$$인 $$a$$를 법 $$n$$의 *원시근<sub>primitive root</sub>*이라 한다. 원시근 $$g$$가 존재하면 $$g, g^2, \ldots, g^{\varphi(n)}$$이 기약잉여계 전체를 이룬다.
 
 </div>
 
@@ -74,18 +74,18 @@ $$d = \operatorname{ord}_n(a)$$라 하고 $$k = dq + r$$ ($$0 \leq r < d$$) 로 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop6">**명제 6**</ins> $$\gcd(a, n) = 1$$이고 $$d = \operatorname{ord}_n(a)$$이면, 임의의 양의 정수 $$k$$에 대해
+<ins id="prop6">**명제 6**</ins> $$\gcd(a, n) = 1$$이고 $$d = \ord_n(a)$$이면, 임의의 양의 정수 $$k$$에 대해
 
-$$\operatorname{ord}_n(a^k) = \frac{d}{\gcd(d, k)}$$
+$$\ord_n(a^k) = \frac{d}{\gcd(d, k)}$$
 
-이다. 특히 $$\operatorname{ord}_n(a^k) = d$$인 것은 $$\gcd(d, k) = 1$$인 것과 동치이다.
+이다. 특히 $$\ord_n(a^k) = d$$인 것은 $$\gcd(d, k) = 1$$인 것과 동치이다.
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$e = \operatorname{ord}_n(a^k)$$라 하자. 명제 2에 의해 $$(a^k)^m \equiv 1 \pmod n$$인 것은 $$d \mid km$$인 것과 동치이다. $$g = \gcd(d, k)$$로 두고 $$d = g d'$$, $$k = g k'$$ ($$\gcd(d', k') = 1$$) 로 적으면
+$$e = \ord_n(a^k)$$라 하자. 명제 2에 의해 $$(a^k)^m \equiv 1 \pmod n$$인 것은 $$d \mid km$$인 것과 동치이다. $$g = \gcd(d, k)$$로 두고 $$d = g d'$$, $$k = g k'$$ ($$\gcd(d', k') = 1$$) 로 적으면
 
 $$\begin{aligned}
 d \mid km &\iff g d' \mid g k' m \\
@@ -97,7 +97,7 @@ d \mid km &\iff g d' \mid g k' m \\
 
 </details>
 
-이 공식에서 원시근 $$g$$가 있으면 $$\operatorname{ord}_n(g^k) = \varphi(n)/\gcd(\varphi(n), k)$$이므로, $$g^k$$가 다시 원시근이 되는 것은 $$\gcd(k, \varphi(n)) = 1$$일 때뿐이다. 이로부터 원시근의 개수를 즉시 셀 수 있다.
+이 공식에서 원시근 $$g$$가 있으면 $$\ord_n(g^k) = \varphi(n)/\gcd(\varphi(n), k)$$이므로, $$g^k$$가 다시 원시근이 되는 것은 $$\gcd(k, \varphi(n)) = 1$$일 때뿐이다. 이로부터 원시근의 개수를 즉시 셀 수 있다.
 
 <div class="proposition" markdown="1">
 
@@ -108,7 +108,7 @@ d \mid km &\iff g d' \mid g k' m \\
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-원시근 $$g$$를 고정하면 모든 기약잉여류는 $$g^k$$ ($$1 \leq k \leq \varphi(n)$$) 꼴로 유일하게 적힌다. 명제 6에 의해 $$g^k$$가 원시근, 곧 $$\operatorname{ord}_n(g^k) = \varphi(n)$$인 것은 $$\gcd(k, \varphi(n)) = 1$$인 것과 동치이다. $$1 \leq k \leq \varphi(n)$$ 중 $$\varphi(n)$$과 서로소인 $$k$$의 개수가 바로 $$\varphi(\varphi(n))$$이므로, 원시근은 $$\varphi(\varphi(n))$$개이다.
+원시근 $$g$$를 고정하면 모든 기약잉여류는 $$g^k$$ ($$1 \leq k \leq \varphi(n)$$) 꼴로 유일하게 적힌다. 명제 6에 의해 $$g^k$$가 원시근, 곧 $$\ord_n(g^k) = \varphi(n)$$인 것은 $$\gcd(k, \varphi(n)) = 1$$인 것과 동치이다. $$1 \leq k \leq \varphi(n)$$ 중 $$\varphi(n)$$과 서로소인 $$k$$의 개수가 바로 $$\varphi(\varphi(n))$$이므로, 원시근은 $$\varphi(\varphi(n))$$개이다.
 
 </details>
 
@@ -126,14 +126,14 @@ $$\begin{aligned}
 2^1 &\equiv 2, & 2^2 &\equiv 4, & 2^3 &\equiv 1 \pmod 7
 \end{aligned}$$
 
-이므로 $$\operatorname{ord}_7(2) = 3$$이고 $$2$$는 원시근이 아니다. 다음으로 $$a = 3$$을 보면
+이므로 $$\ord_7(2) = 3$$이고 $$2$$는 원시근이 아니다. 다음으로 $$a = 3$$을 보면
 
 $$\begin{aligned}
 3^1 &\equiv 3, & 3^2 &\equiv 2, & 3^3 &\equiv 6, \\
 3^4 &\equiv 4, & 3^5 &\equiv 5, & 3^6 &\equiv 1 \pmod 7
 \end{aligned}$$
 
-이어서 $$3, 2, 6, 4, 5, 1$$이 기약잉여계 $$\{1, 2, 3, 4, 5, 6\}$$ 전체를 훑는다. 따라서 $$\operatorname{ord}_7(3) = 6$$이고 $$3$$이 원시근이다.
+이어서 $$3, 2, 6, 4, 5, 1$$이 기약잉여계 $$\{1, 2, 3, 4, 5, 6\}$$ 전체를 훑는다. 따라서 $$\ord_7(3) = 6$$이고 $$3$$이 원시근이다.
 
 </div>
 
@@ -143,19 +143,19 @@ $$\begin{aligned}
 
 <ins id="ex9">**예시 9 (위수가 합성수일 때의 거동)**</ins> 명제 6은 큰 위수에서 작은 위수를 만들어 낸다. 법 $$7$$에서 원시근 $$3$$은 위수 $$6$$이므로
 
-$$\operatorname{ord}_7(3^2) = \frac{6}{\gcd(6,2)} = \frac{6}{2} = 3, \qquad \operatorname{ord}_7(3^3) = \frac{6}{\gcd(6,3)} = \frac{6}{3} = 2$$
+$$\ord_7(3^2) = \frac{6}{\gcd(6,2)} = \frac{6}{2} = 3, \qquad \ord_7(3^3) = \frac{6}{\gcd(6,3)} = \frac{6}{3} = 2$$
 
 이다. 즉 $$3^2 \equiv 2$$는 위수 $$3$$, $$3^3 \equiv 6$$은 위수 $$2$$이며, 이는 예시 8의 직접 계산과 일치한다. 한 원시근만 알면 가능한 모든 위수의 원소를 이렇게 거듭제곱으로 뽑아낼 수 있다.
 
 </div>
 
-원시근의 진가는 곱셈을 덧셈으로 바꾸는 데 있다. 원시근 $$g$$를 고정하면, 각 기약잉여류 $$a$$에 대해 $$a \equiv g^\ell \pmod n$$인 지수 $$\ell$$ (법 $$\varphi(n)$$) 이 유일하게 정해지는데, 이를 $$g$$에 대한 $$a$$의 *지표<sub>index</sub>* 또는 이산로그라 하고 $$\operatorname{ind}_g a$$로 적는다. 로그의 성질 $$\operatorname{ind}_g(ab) \equiv \operatorname{ind}_g a + \operatorname{ind}_g b \pmod{\varphi(n)}$$이 성립하여, 곱셈 합동식이 덧셈 합동식으로 환원된다.
+원시근의 진가는 곱셈을 덧셈으로 바꾸는 데 있다. 원시근 $$g$$를 고정하면, 각 기약잉여류 $$a$$에 대해 $$a \equiv g^\ell \pmod n$$인 지수 $$\ell$$ (법 $$\varphi(n)$$) 이 유일하게 정해지는데, 이를 $$g$$에 대한 $$a$$의 *지표<sub>index</sub>* 또는 이산로그라 하고 $$\ind_g a$$로 적는다. 로그의 성질 $$\ind_g(ab) \equiv \ind_g a + \ind_g b \pmod{\varphi(n)}$$이 성립하여, 곱셈 합동식이 덧셈 합동식으로 환원된다.
 
 <div class="example" markdown="1">
 
 <ins id="ex10">**예시 10 (지표를 이용한 거듭제곱 합동식)**</ins> 법 $$7$$에서 $$x^4 \equiv 4 \pmod 7$$을 풀자. 원시근 $$g = 3$$에 대한 지표표는 예시 8에서
 
-$$\operatorname{ind}_3 1 = 6,\ \operatorname{ind}_3 2 = 2,\ \operatorname{ind}_3 3 = 1,\ \operatorname{ind}_3 4 = 4,\ \operatorname{ind}_3 5 = 5,\ \operatorname{ind}_3 6 = 3$$
+$$\ind_3 1 = 6,\ \ind_3 2 = 2,\ \ind_3 3 = 1,\ \ind_3 4 = 4,\ \ind_3 5 = 5,\ \ind_3 6 = 3$$
 
 이다. $$x \equiv 3^t$$로 놓으면 $$x^4 \equiv 3^{4t}$$이고 $$4 \equiv 3^4$$이므로, 합동식은
 
@@ -169,7 +169,7 @@ $$x \equiv 3^1 \equiv 3, \qquad x \equiv 3^4 \equiv 4 \pmod 7$$
 
 </div>
 
-이 방법은 일반적으로 $$x^k \equiv a \pmod p$$ 꼴의 합동식을, 원시근에 대한 지표를 취해 일차 합동식 $$k t \equiv \operatorname{ind}_g a \pmod{p-1}$$로 환원한다 ([§일차 합동식](/ko/math/number_theory/linear_congruences)). 따라서 해의 개수는 $$\gcd(k, p-1)$$이 $$\operatorname{ind}_g a$$를 나누면 $$\gcd(k, p-1)$$개, 그렇지 않으면 $$0$$개이다.
+이 방법은 일반적으로 $$x^k \equiv a \pmod p$$ 꼴의 합동식을, 원시근에 대한 지표를 취해 일차 합동식 $$k t \equiv \ind_g a \pmod{p-1}$$로 환원한다 ([§일차 합동식](/ko/math/number_theory/linear_congruences)). 따라서 해의 개수는 $$\gcd(k, p-1)$$이 $$\ind_g a$$를 나누면 $$\gcd(k, p-1)$$개, 그렇지 않으면 $$0$$개이다.
 
 마지막으로 합성수 법에서 곱셈군이 순환하지 않는 경우를 참고 5의 법 $$8$$에서 구체적으로 본다.
 
@@ -186,4 +186,4 @@ $$\begin{aligned}
 
 </div>
 
-원시근 $$g$$가 있으면 모든 기약잉여류가 $$g$$의 거듭제곱으로 적히므로, 곱셈이 지수의 덧셈으로 바뀌어 — 마치 로그처럼 — 계산이 단순해진다. 이 구조는 다음 글 [§이차 잉여](/ko/math/number_theory/quadratic_residues)에서 어떤 수가 법 $$p$$에서 제곱수인지를 판정하는 데 직접 쓰인다.
+원시근 $$g$$가 있으면 모든 기약잉여류가 $$g$$의 거듭제곱으로 적히므로, 곱셈이 지수의 덧셈으로 바뀌어 — 마치 로그처럼 — 계산이 단순해진다.

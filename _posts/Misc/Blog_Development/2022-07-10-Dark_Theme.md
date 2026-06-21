@@ -85,8 +85,8 @@ dark_skin                 : "custom-dark"
 <div style="margin-left: 5px; border: 2px solid #555; border-radius:10px; background-color:#222">
     <label class="switch" for="toggle_dark_theme" style="color:#bbb; font-size:1em; display:inline; margin-left:5px; margin-right:5px">
         <input type="checkbox" id="toggle_dark_theme" onclick="scrollbar()"/>
-        <span class="material-icons md-16 unchecked" style="color:#ffbb9a">&#xE518;</span>
-        <span class="material-icons md-16 checked" style="color:#ffeabc">&#xE51C;</span>
+        <span class="material-icons md-16 unchecked" style="color:#ffbb9a">check_box_outline_blank</span>
+        <span class="material-icons md-16 checked" style="color:#ffeabc">check_box</span>
     </label>
 </div>
 {% endif %}

@@ -160,7 +160,7 @@ $$M_n(R)=M_n(R)E_{11}\oplus\cdots\oplus M_n(R)E_{nn}$$
 
 진짜 곱분해는 block 구조에서 나온다. $$n=n_1+\cdots+n_r$$로 분할하고, 대각선을 따라 처음 $$n_1\times n_1$$ block, 다음 $$n_2\times n_2$$ block 식으로 놓인 block-diagonal 행렬들만 모은 부분환
 
-$$B=\left\{\operatorname{diag}(M_1,\ldots, M_r):M_k\in M_{n_k}(R)\right\}\cong\prod_{k=1}^r M_{n_k}(R)$$
+$$B=\left\{\diag(M_1,\ldots, M_r):M_k\in M_{n_k}(R)\right\}\cong\prod_{k=1}^r M_{n_k}(R)$$
 
 을 보자. $$B$$ 안에서 $$k$$번째 block에만 항등행렬을 놓은 원소 $$P_k$$는 $$B$$의 central idempotent이며, $$\{P_1,\ldots, P_r\}$$은 [정리 5](#thm5)의 의미에서 곱분해 $$B\cong\prod M_{n_k}(R)$$에 대응하는 central complete set이다. $$P_k$$들은 $$B$$ 안에서는 central이지만 더 큰 환 $$M_n(R)$$ 안에서는 그렇지 않다.
 
@@ -206,7 +206,7 @@ $$\bar e_i=(0,\ldots, 0,\underset{i}{1},0,\ldots, 0)$$
 
 <div class="example" markdown="1">
 
-<ins id="ex8">**예시 8**</ins> $$A=\mathbb{Z}$$를 보고, $$n\geq 2$$의 소인수분해를 $$n=p_1^{a_1}\cdots p_r^{a_r}$$ (서로 다른 소수 $$p_k$$)이라 하자. $$\mathfrak{a}_k=p_k^{a_k}\mathbb{Z}$$로 두면, 서로 다른 $$k,l$$에 대해 $$p_k^{a_k}$$와 $$p_l^{a_l}$$이 서로소이므로 적당한 정수 $$u,v$$가 존재하여 $$up_k^{a_k}+vp_l^{a_l}=1$$이고, 따라서 $$\mathfrak{a}_k+\mathfrak{a}_l=\mathbb{Z}$$로 쌍별 comaximal하다. 또 $$\bigcap_k\mathfrak{a}_k=\operatorname{lcm}(p_1^{a_1},\ldots, p_r^{a_r})\mathbb{Z}=n\mathbb{Z}$$이다. [정리 7](#thm7)을 몫환 $$\mathbb{Z}/n\mathbb{Z}$$에 적용하면 환동형사상
+<ins id="ex8">**예시 8**</ins> $$A=\mathbb{Z}$$를 보고, $$n\geq 2$$의 소인수분해를 $$n=p_1^{a_1}\cdots p_r^{a_r}$$ (서로 다른 소수 $$p_k$$)이라 하자. $$\mathfrak{a}_k=p_k^{a_k}\mathbb{Z}$$로 두면, 서로 다른 $$k,l$$에 대해 $$p_k^{a_k}$$와 $$p_l^{a_l}$$이 서로소이므로 적당한 정수 $$u,v$$가 존재하여 $$up_k^{a_k}+vp_l^{a_l}=1$$이고, 따라서 $$\mathfrak{a}_k+\mathfrak{a}_l=\mathbb{Z}$$로 쌍별 comaximal하다. 또 $$\bigcap_k\mathfrak{a}_k=\lcm(p_1^{a_1},\ldots, p_r^{a_r})\mathbb{Z}=n\mathbb{Z}$$이다. [정리 7](#thm7)을 몫환 $$\mathbb{Z}/n\mathbb{Z}$$에 적용하면 환동형사상
 
 $$\mathbb{Z}/n\mathbb{Z}\cong\prod_{k=1}^r\mathbb{Z}/p_k^{a_k}\mathbb{Z}$$
 

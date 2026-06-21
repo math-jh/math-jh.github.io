@@ -77,11 +77,7 @@ $$0\longrightarrow A\xrightarrow{\ f\ }B\xrightarrow{\ g\ }C\longrightarrow 0$$
 
 <ins id="prop4">**명제 4**</ins> $$0\rightarrow A\xrightarrow{f}B\xrightarrow{g}C\rightarrow 0$$이 almost split sequence이면 $$A$$와 $$C$$는 모두 indecomposable이며, $$C$$는 projective가 아니고 $$A$$는 injective가 아니다. 또한 이러한 almost split sequence는 $$C$$에 의하여 isomorphism을 무시하면 유일하게 결정된다. 곧 $$0\rightarrow A'\xrightarrow{f'}B'\xrightarrow{g'}C\rightarrow 0$$이 같은 끝점 $$C$$를 가지는 또 하나의 almost split sequence이면, 세 수직사상이 모두 isomorphism이고 두 사각형이 commute하는 완전열의 동형
 
-$$\begin{aligned}
-0\longrightarrow A&\xrightarrow{\ f\ }B\xrightarrow{\ g\ }C\longrightarrow 0\\
-\big\downarrow\ \ &\qquad\big\downarrow\qquad\ \big\Vert\\
-0\longrightarrow A'&\xrightarrow{\ f'\ }B'\xrightarrow{\ g'\ }C\longrightarrow 0
-\end{aligned}$$
+![두 almost split sequence 사이의 동형](/assets/images/Math/Representation_Theory/Auslander-Reiten_Theory-1.svg){:style="width:18.58em" class="invert" .align-center}
 
 이 존재한다.
 
@@ -109,7 +105,7 @@ $$\theta^{-1}=\id_B+(f\rho)+(f\rho)^2+\cdots+(f\rho)^n$$
 
 ## Transpose와 AR translate
 
-이제 non-projective indecomposable $$C$$로부터 almost split sequence의 시작점이 될 module을 구성한다. 두 단계를 거치는데, 먼저 right module 쪽으로 옮기는 *transpose* $$\operatorname{Tr}$$를, 다음으로 다시 left module로 되돌리는 *duality* $$\D$$를 적용한다. Transpose는 $$C$$의 minimal projective presentation을 dualize하여 얻는다. 여기서 $$C$$의 *projective cover*는 전사 $$P_0\twoheadrightarrow C$$ 가운데 $$P_0$$의 차원이 최소인 것이며, 유한차원 대수 위에서 항상 존재한다.
+이제 non-projective indecomposable $$C$$로부터 almost split sequence의 시작점이 될 module을 구성한다. 두 단계를 거치는데, 먼저 right module 쪽으로 옮기는 *transpose* $$\Tr$$를, 다음으로 다시 left module로 되돌리는 *duality* $$\D$$를 적용한다. Transpose는 $$C$$의 minimal projective presentation을 dualize하여 얻는다. 여기서 $$C$$의 *projective cover*는 전사 $$P_0\twoheadrightarrow C$$ 가운데 $$P_0$$의 차원이 최소인 것이며, 유한차원 대수 위에서 항상 존재한다.
 
 <div class="definition" markdown="1">
 
@@ -119,17 +115,17 @@ $$P_1\xrightarrow{\ p_1\ }P_0\xrightarrow{\ p_0\ }C\longrightarrow 0$$
 
 으로서, $$p_0:P_0\rightarrow C$$가 projective cover이고 $$p_1:P_1\rightarrow\ker p_0$$이 다시 projective cover인 것이다. $$(-)^{\ast}=\Hom_A(-,A)$$를 적용하면 right $$A$$-module의 사상열
 
-$$P_0^{\ast}\xrightarrow{\ p_1^{\ast}\ }P_1^{\ast}\longrightarrow \operatorname{Tr} C\longrightarrow 0$$
+$$P_0^{\ast}\xrightarrow{\ p_1^{\ast}\ }P_1^{\ast}\longrightarrow \Tr C\longrightarrow 0$$
 
 을 얻으며, $$C$$의 *transpose*<sub>전치</sub>를
 
-$$\operatorname{Tr} C=\coker\bigl(p_1^{\ast}:P_0^{\ast}\rightarrow P_1^{\ast}\bigr)$$
+$$\Tr C=\coker\bigl(p_1^{\ast}:P_0^{\ast}\rightarrow P_1^{\ast}\bigr)$$
 
 으로 정의한다. 이는 right $$A$$-module이다.
 
 </div>
 
-함자 $$(-)^{\ast}=\Hom_A(-,A)$$는 left $$A$$-module을 right $$A$$-module로 보내며, projective module $$P$$에 대하여 $$P^{\ast}$$ 또한 projective right module이다. Minimal projective presentation은 projective cover의 유일성에 의하여 isomorphism을 무시하면 유일하게 결정되므로, $$\operatorname{Tr} C$$ 또한 그러하다. 다만 $$\operatorname{Tr}$$는 projective summand에 둔감하다. $$C$$가 projective이면 $$P_1=0$$으로 둘 수 있어 $$\operatorname{Tr} C=0$$이 되며, 일반적으로 $$\operatorname{Tr}$$는 projective을 제외한 부분에서만 잘 정의된 대응을 준다. 다음으로 $$k$$ 위의 duality를 도입하여 right module을 다시 left module로 되돌린다.
+함자 $$(-)^{\ast}=\Hom_A(-,A)$$는 left $$A$$-module을 right $$A$$-module로 보내며, projective module $$P$$에 대하여 $$P^{\ast}$$ 또한 projective right module이다. Minimal projective presentation은 projective cover의 유일성에 의하여 isomorphism을 무시하면 유일하게 결정되므로, $$\Tr C$$ 또한 그러하다. 다만 $$\Tr$$는 projective summand에 둔감하다. $$C$$가 projective이면 $$P_1=0$$으로 둘 수 있어 $$\Tr C=0$$이 되며, 일반적으로 $$\Tr$$는 projective을 제외한 부분에서만 잘 정의된 대응을 준다. 다음으로 $$k$$ 위의 duality를 도입하여 right module을 다시 left module로 되돌린다.
 
 <div class="definition" markdown="1">
 
@@ -139,13 +135,13 @@ $$\D M=\Hom_k(M,k)$$
 
 로 정의한다. $$M$$이 left $$A$$-module이면 $$\D M$$ 위에 $$(\xi\cdot a)(m)=\xi(am)$$ ($$\xi\in\D M$$, $$a\in A$$, $$m\in M$$) 으로 right $$A$$-action을 주어 $$\D M$$을 right $$A$$-module로 만들고, 대칭적으로 right module을 left module로 옮긴다. 유한차원 벡터공간 위에서 evaluation 사상 $$M\rightarrow\D\D M$$이 isomorphism이므로 $$\D$$는 left와 right module category 사이의 contravariant equivalence이다. 이를 이용하여 non-projective indecomposable left $$A$$-module $$C$$의 *Auslander–Reiten translate*<sub>AR 변환</sub>를
 
-$$\tau C=\D\operatorname{Tr} C$$
+$$\tau C=\D\Tr C$$
 
 로 정의한다. $$\tau C$$는 다시 left $$A$$-module이다.
 
 </div>
 
-$$\D$$가 유한차원 벡터공간 위에서 $$\D\D M\cong M$$을 만족하는 contravariant equivalence이므로, $$\tau=\D\operatorname{Tr}$$는 non-projective indecomposable module들을 non-injective indecomposable module들로 일대일 대응시킨다. 그 역함자는 $$\tau^{-1}=\operatorname{Tr}\D$$로 주어지며, $$\tau$$와 $$\tau^{-1}$$이 각각 indecomposable의 isomorphism class들 위에서 서로 역인 전단사를 준다. 곧 $$\tau$$는 projective을 제외한 indecomposable과 injective을 제외한 indecomposable을 맞바꾸며, 다음 정리가 이 대응이 almost split sequence의 시작점과 끝점의 관계임을 말해 준다.
+$$\D$$가 유한차원 벡터공간 위에서 $$\D\D M\cong M$$을 만족하는 contravariant equivalence이므로, $$\tau=\D\Tr$$는 non-projective indecomposable module들을 non-injective indecomposable module들로 일대일 대응시킨다. 그 역함자는 $$\tau^{-1}=\Tr\D$$로 주어지며, $$\tau$$와 $$\tau^{-1}$$이 각각 indecomposable의 isomorphism class들 위에서 서로 역인 전단사를 준다. 곧 $$\tau$$는 projective을 제외한 indecomposable과 injective을 제외한 indecomposable을 맞바꾸며, 다음 정리가 이 대응이 almost split sequence의 시작점과 끝점의 관계임을 말해 준다.
 
 ## Auslander–Reiten 정리
 
@@ -159,7 +155,7 @@ $$\D$$가 유한차원 벡터공간 위에서 $$\D\D M\cong M$$을 만족하는 
 
 $$0\longrightarrow \tau C\xrightarrow{\ f\ }B\xrightarrow{\ g\ }C\longrightarrow 0$$
 
-이 존재한다. 곧 그 시작점은 [정의 6](#def6)의 AR translate $$\tau C=\D\operatorname{Tr} C$$와 isomorphic하다.
+이 존재한다. 곧 그 시작점은 [정의 6](#def6)의 AR translate $$\tau C=\D\Tr C$$와 isomorphic하다.
 
 2. 대칭적으로, 임의의 non-injective indecomposable $$A$$ 대하여 $$A$$로 시작하는 almost split sequence $$0\rightarrow A\rightarrow B\rightarrow \tau^{-1}A\rightarrow 0$$이 존재한다.
 
@@ -169,19 +165,19 @@ $$0\longrightarrow \tau C\xrightarrow{\ f\ }B\xrightarrow{\ g\ }C\longrightarrow
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-이 정리는 Auslander와 Reiten이 도입한 함자적 방법으로 증명된다. 핵심은 $$\D\operatorname{Tr} C$$를 $$\End_A(C)$$의 잉여체로의 사상에 대한 함자 $$\D\Hom_A(-,C)$$의 minimal projective resolution과 연결짓는 것으로, 이로부터 $$\Ext_A^1(C,\tau C)$$ 안에 right almost split이 되는 표준적인 원소가 존재함을 보인다. 완전한 증명은 길어 여기서 재구성하지 않으며, [ASS, Chapter IV, Theorem 1.13 및 Theorem 3.1]과 [ARS, Chapter V]의 함자적 논증을 따른다. Schiffler의 [Sch, Chapter 7]에는 hereditary algebra의 경우에 대한 보다 직접적인 구성이 있다.
+이 정리는 Auslander와 Reiten이 도입한 함자적 방법으로 증명된다. 핵심은 $$\D\Tr C$$를 $$\End_A(C)$$의 잉여체로의 사상에 대한 함자 $$\D\Hom_A(-,C)$$의 minimal projective resolution과 연결짓는 것으로, 이로부터 $$\Ext_A^1(C,\tau C)$$ 안에 right almost split이 되는 표준적인 원소가 존재함을 보인다. 완전한 증명은 길어 여기서 재구성하지 않으며, [ASS, Chapter IV, Theorem 1.13 및 Theorem 3.1]과 [ARS, Chapter V]의 함자적 논증을 따른다. Schiffler의 [Sch, Chapter 7]에는 hereditary algebra의 경우에 대한 보다 직접적인 구성이 있다.
 
-존재성을 전제로 하면, 시작점이 $$\tau C$$임은 다음과 같이 정리된다. Almost split sequence는 $$\Ext_A^1(C,A')$$의 원소이며, 그것이 almost split이라는 조건이 $$A'\cong\D\operatorname{Tr} C$$를 강제한다. 한편 [명제 4](#prop4)의 유일성은 존재성과 독립적으로 성립하므로, 일단 almost split sequence가 존재하면 그것은 $$C$$로부터 유일하게 결정되고 그 시작점은 $$\tau C$$로 확정된다. 두 번째 진술은 $$\D$$를 통한 left–right 대칭과 $$\tau^{-1}=\operatorname{Tr}\D$$로부터 첫 번째와 대칭적으로 따라온다.
+존재성을 전제로 하면, 시작점이 $$\tau C$$임은 다음과 같이 정리된다. Almost split sequence는 $$\Ext_A^1(C,A')$$의 원소이며, 그것이 almost split이라는 조건이 $$A'\cong\D\Tr C$$를 강제한다. 한편 [명제 4](#prop4)의 유일성은 존재성과 독립적으로 성립하므로, 일단 almost split sequence가 존재하면 그것은 $$C$$로부터 유일하게 결정되고 그 시작점은 $$\tau C$$로 확정된다. 두 번째 진술은 $$\D$$를 통한 left–right 대칭과 $$\tau^{-1}=\Tr\D$$로부터 첫 번째와 대칭적으로 따라온다.
 
 </details>
 
-정리 7은 module category $$\operatorname{mod} A$$의 거의 모든 morphism 구조를 $$\tau$$와 almost split sequence로 조직화한다. Non-projective indecomposable $$C$$마다 almost split sequence $$0\rightarrow\tau C\rightarrow B\rightarrow C\rightarrow 0$$이 하나씩 대응하고, 그 중간항 $$B$$의 indecomposable 분해가 $$C$$의 이웃들을 결정한다. Projective indecomposable $$P$$는 almost split sequence의 끝점이 될 수 없지만, 대신 $$\operatorname{rad} P\hookrightarrow P$$ ($$\operatorname{rad} P$$는 $$P$$의 radical, 곧 maximal submodule들의 교집합)가 right almost split morphism의 역할을 하여 quiver에서 $$P$$로 들어오는 화살표를 결정한다. 이로써 모든 indecomposable과 그 사이의 irreducible morphism이 하나의 조합론적 자료로 묶이며, 이를 정리한 것이 다음의 Auslander–Reiten quiver이다.
+정리 7은 module category $$\operatorname{mod} A$$의 거의 모든 morphism 구조를 $$\tau$$와 almost split sequence로 조직화한다. Non-projective indecomposable $$C$$마다 almost split sequence $$0\rightarrow\tau C\rightarrow B\rightarrow C\rightarrow 0$$이 하나씩 대응하고, 그 중간항 $$B$$의 indecomposable 분해가 $$C$$의 이웃들을 결정한다. Projective indecomposable $$P$$는 almost split sequence의 끝점이 될 수 없지만, 대신 $$\rad P\hookrightarrow P$$ ($$\rad P$$는 $$P$$의 radical, 곧 maximal submodule들의 교집합)가 right almost split morphism의 역할을 하여 quiver에서 $$P$$로 들어오는 화살표를 결정한다. 이로써 모든 indecomposable과 그 사이의 irreducible morphism이 하나의 조합론적 자료로 묶이며, 이를 정리한 것이 다음의 Auslander–Reiten quiver이다.
 
 ## Auslander–Reiten quiver
 
 <div class="definition" markdown="1">
 
-<ins id="def8">**정의 8**</ins> 유한차원 대수 $$A$$의 *Auslander–Reiten quiver* $$\Gamma_A$$는 다음의 quiver이다. Vertex는 indecomposable $$A$$-module들의 isomorphism class이다. 두 indecomposable $$M,N$$에 대하여, irreducible morphism $$M\rightarrow N$$이 존재할 때 vertex $$[M]$$에서 $$[N]$$으로 화살표를 하나 그린다. (보다 정밀하게는 화살표에 $$\Irr(M,N)=\operatorname{rad}(M,N)/\operatorname{rad}^2(M,N)$$의 차원을 valuation으로 붙이나, $$k$$가 algebraically closed이고 $$A=kQ$$가 acyclic이면 모든 valuation이 $$1$$이다.) 또한 $$\tau$$가 정의되는 non-projective vertex $$[C]$$마다 점선 $$[C]\dashrightarrow[\tau C]$$를 그려 AR translate를 기록한다.
+<ins id="def8">**정의 8**</ins> 유한차원 대수 $$A$$의 *Auslander–Reiten quiver* $$\Gamma_A$$는 다음의 quiver이다. Vertex는 indecomposable $$A$$-module들의 isomorphism class이다. 두 indecomposable $$M,N$$에 대하여, irreducible morphism $$M\rightarrow N$$이 존재할 때 vertex $$[M]$$에서 $$[N]$$으로 화살표를 하나 그린다. (보다 정밀하게는 화살표에 $$\Irr(M,N)=\rad(M,N)/\rad^2(M,N)$$의 차원을 valuation으로 붙이나, $$k$$가 algebraically closed이고 $$A=kQ$$가 acyclic이면 모든 valuation이 $$1$$이다.) 또한 $$\tau$$가 정의되는 non-projective vertex $$[C]$$마다 점선 $$[C]\dashrightarrow[\tau C]$$를 그려 AR translate를 기록한다.
 
 </div>
 
@@ -207,27 +203,20 @@ $$0\rightarrow M_{[3,3]}\rightarrow M_{[2,3]}\rightarrow M_{[2,2]}\rightarrow 0.
 
 각 열이 dimension vector를 보존함을 확인할 수 있다. 가령 둘째 열에서 $$(0,1,1)+(1,1,0)=(1,2,1)=(1,1,1)+(0,1,0)$$이다. 이로부터 AR translate는 $$\tau M_{[1,1]}=M_{[2,2]}$$, $$\tau M_{[1,2]}=M_{[2,3]}$$, $$\tau M_{[2,2]}=M_{[3,3]}$$이다. 화살표를 모으면 Auslander–Reiten quiver $$\Gamma_{kQ}$$는 다음 모양이 된다.
 
-$$\begin{aligned}
-&\qquad\qquad\quad M_{[1,3]}\\
-&\qquad\ \ \nearrow\qquad\ \ \searrow\\
-&\quad M_{[2,3]}\qquad\quad M_{[1,2]}\\
-&\nearrow\quad\searrow\quad\nearrow\quad\searrow\\
-M_{[3,3]}&\qquad M_{[2,2]}\qquad M_{[1,1]}
-\end{aligned}$$
+![A3 Auslander-Reiten quiver](/assets/images/Math/Representation_Theory/Auslander-Reiten_Theory-2.svg){:style="width:22.72em" class="invert" .align-center}
 
-여기서 각 화살표는 $$M_{[i,j]}$$에서 한 끝을 늘이거나 줄이는 inclusion·quotient에 해당하는 irreducible morphism이다. 가장 아래 행 $$M_{[3,3]},M_{[2,2]},M_{[1,1]}$$과 가운데 행 $$M_{[2,3]},M_{[1,2]}$$ 위에서 $$\tau$$는 각각 한 칸씩 왼쪽으로 옮기는 대응 $$\tau M_{[2,2]}=M_{[3,3]}$$, $$\tau M_{[1,1]}=M_{[2,2]}$$, $$\tau M_{[1,2]}=M_{[2,3]}$$으로 나타나고, 맨 위의 $$M_{[1,3]}=I_3$$은 injective이므로 $$\tau$$의 정의역에 들지 않는다. 이 quiver는 type $$A_3$$의 Dynkin diagram 모양을 따르며, 이는 Gabriel의 정리에서 일반화될 현상의 가장 작은 예이다.
+여기서 각 화살표는 $$M_{[i,j]}$$에서 한 끝을 늘이거나 줄이는 inclusion·quotient에 해당하는 irreducible morphism이다. 가장 아래 행 $$M_{[3,3]},M_{[2,2]},M_{[1,1]}$$과 가운데 행 $$M_{[2,3]},M_{[1,2]}$$ 위에서 $$\tau$$는 각각 한 칸씩 왼쪽으로 옮기는 대응 $$\tau M_{[2,2]}=M_{[3,3]}$$, $$\tau M_{[1,1]}=M_{[2,2]}$$, $$\tau M_{[1,2]}=M_{[2,3]}$$으로 나타나고, 맨 위의 $$M_{[1,3]}=I_3$$은 injective이므로 $$\tau$$의 정의역에 들지 않는다. 이 quiver는 type $$A_3$$의 Dynkin diagram 모양을 따른다.
 
 </div>
 
-위 예시에서 indecomposable의 개수 $$6=\binom{3+1}{2}$$이 path algebra의 차원 계산과 같은 조합론을 따른다는 점, 그리고 Auslander–Reiten quiver가 $$A_3$$ Dynkin diagram의 형태로 정렬된다는 점이 Auslander–Reiten 이론과 Gabriel의 정리를 잇는 다리이다. 일반적으로 $$Q$$가 type $$A$$, $$D$$, $$E$$의 Dynkin diagram을 underlying graph로 가질 때 indecomposable의 개수가 유한하고, 그때 $$\Gamma_{kQ}$$는 해당 root system의 양근들에 대응하는 유한 그래프가 된다.
 
 <div class="remark" markdown="1">
 
-<ins id="rmk10">**참고 10**</ins> Irreducible morphism은 module category의 *radical*로도 특징지어진다. $$\operatorname{rad}(M,N)$$을 isomorphism의 합성으로 분해되지 않는 사상들이 이루는 부분공간(indecomposable $$M,N$$에 대해서는 non-isomorphism들)으로, $$\operatorname{rad}^2(M,N)$$을 $$\operatorname{rad}(M,X)$$와 $$\operatorname{rad}(X,N)$$의 원소들의 합성으로 생성되는 부분공간으로 두면, indecomposable $$M,N$$에 대하여 $$f:M\rightarrow N$$이 irreducible인 것은
+<ins id="rmk10">**참고 10**</ins> Irreducible morphism은 module category의 *radical*로도 특징지어진다. $$\rad(M,N)$$을 isomorphism의 합성으로 분해되지 않는 사상들이 이루는 부분공간(indecomposable $$M,N$$에 대해서는 non-isomorphism들)으로, $$\rad^2(M,N)$$을 $$\rad(M,X)$$와 $$\rad(X,N)$$의 원소들의 합성으로 생성되는 부분공간으로 두면, indecomposable $$M,N$$에 대하여 $$f:M\rightarrow N$$이 irreducible인 것은
 
-$$f\in\operatorname{rad}(M,N)\setminus\operatorname{rad}^2(M,N)$$
+$$f\in\rad(M,N)\setminus\rad^2(M,N)$$
 
-인 것과 동치이다. 따라서 $$\Irr(M,N)=\operatorname{rad}(M,N)/\operatorname{rad}^2(M,N)$$의 차원이 Auslander–Reiten quiver에서 $$M\rightarrow N$$ 화살표의 multiplicity(valuation)를 준다. 이 관점에서 almost split sequence는 $$\operatorname{rad}/\operatorname{rad}^2$$ 수준의 정보를 짧은 완전열로 묶어 낸 것이며, 이것이 [정의 8](#def8)의 quiver가 module category의 morphism 구조를 충실히 반영하는 이유이다.
+인 것과 동치이다. 따라서 $$\Irr(M,N)=\rad(M,N)/\rad^2(M,N)$$의 차원이 Auslander–Reiten quiver에서 $$M\rightarrow N$$ 화살표의 multiplicity(valuation)를 준다. 이 관점에서 almost split sequence는 $$\rad/\rad^2$$ 수준의 정보를 짧은 완전열로 묶어 낸 것이며, 이것이 [정의 8](#def8)의 quiver가 module category의 morphism 구조를 충실히 반영하는 이유이다.
 
 </div>
 
