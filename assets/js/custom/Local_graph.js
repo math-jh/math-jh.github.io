@@ -153,11 +153,27 @@
         })
         .nodeLabel(function (n) { return n.title; })
         .linkColor(function (l) {
-          return (lend(l.source) === self || lend(l.target) === self)
-            ? 'rgba(169,135,74,0.85)' : 'rgba(130,132,142,0.3)';
+          var s = lend(l.source), t = lend(l.target);
+          if (s === self) return 'rgba(107,58,0,0.9)';   // self cites someone (outward)
+          if (t === self) return 'rgba(165,111,20,0.9)'; // someone cites self (inward)
+          return 'rgba(130,132,142,0.3)';
         })
         .linkWidth(function (l) {
           return (lend(l.source) === self || lend(l.target) === self) ? 2 : 1;
+        })
+        .linkDirectionalArrowLength(5)
+        .linkDirectionalArrowRelPos(0.96)
+        .linkDirectionalArrowColor(function (l) {
+          var s = lend(l.source), t = lend(l.target);
+          if (s === self) return 'rgba(107,58,0,0.9)';
+          if (t === self) return 'rgba(165,111,20,0.9)';
+          return 'rgba(130,132,142,0.3)';
+        })
+        .linkCurvature(function (l) {
+          var s = lend(l.source), t = lend(l.target);
+          return (sub.subLinks || []).some(function (r) {
+            return lend(r.source) === t && lend(r.target) === s;
+          }) ? 0.25 : 0;
         })
         .nodeCanvasObjectMode(function () { return 'after'; })
         .nodeCanvasObject(function (n, ctx, scale) {
