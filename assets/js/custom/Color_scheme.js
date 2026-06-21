@@ -71,9 +71,6 @@
     if (parent) parent.classList.toggle('expanded');
   };
 
-  // Back-compat: body onload still calls darkmode(); now idempotent.
-  window.darkmode = function () { apply(getTheme()); };
-
   // Apply immediately (head-time) so the swap is correct before paint.
   apply(getTheme());
 

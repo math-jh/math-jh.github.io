@@ -111,13 +111,28 @@
 
 /* ── Right-cluster refinements (structural, applies in light + dark) ───────── */
 
-/* Even spacing among the right-side controls: category icon · search · settings.
+/* Even spacing among the right-side controls: graph icon · category icon · search · settings.
    greedy-nav gives <a> links 1rem side-margins but the search/settings <button>s
    get none, so category↔search read wider than search↔settings. Normalise. */
 .greedy-nav {
-  .visible-links a   { margin: 0 0.4rem; }
-  .search__toggle    { margin: 0 0.4rem; }
-  .settings-dropdown { margin-left: 0.4rem; }
+  .visible-links a   { margin: 0 0.4rem; display: inline-flex; align-items: center; }
+  .search__toggle    { margin: 0 0.4rem; display: inline-flex; align-items: center; }
+  .settings-dropdown { margin: 0 0.4rem; }
+  .settings-toggle   { display: inline-flex; align-items: center; }
+
+  /* Lower graph/category/settings icons by 0.1em so they sit on the same
+     optical baseline as the search icon. */
+  .visible-links a .material-icons,
+  .settings-toggle .material-icons {
+    transform: translateY(0.1em);
+  }
+
+  /* The graph glyph's centre lands ~5px tighter to category than the even
+     category↔search↔settings spacing (≈45px centre-to-centre). Widen just the
+     graph→category gap (flex-end packing nudges graph left, leaving the others
+     put) so all four controls read as evenly spaced. Scoped by href to cover
+     both language variants. */
+  .visible-links a[href*="/graph/"] { margin-right: 0.75rem; }
 }
 
 /* Category is an icon now — drop the growing-underline hover for icon nav links. */

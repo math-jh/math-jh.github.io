@@ -5,15 +5,18 @@
  *
  *   [\[카테고리\] §글제목, ⁋정의 1](/ko/.../post#def1)
  *
- * production 에선 필요 없는 저작 보조 기능이라 localhost 에서만 활성화한다.
+ * production(math-jh.com) 에선 필요 없는 저작 보조 기능이라, 로컬 dev 와
+ * preview.math-jh.com(저작용 프리뷰 터널) 에서만 활성화한다.
  *
  * NOTE: theorem-label-splitter.rb 가 라벨 <ins id> 를 <span class="thm-n" id> 으로
  * 쪼개므로 셀렉터는 .thm-n[id] 다(쪼개지지 않은 <ins id> 도 보조로 포함).
  */
 document.addEventListener('DOMContentLoaded', function () {
-  // 로컬에서 글 쓸 때만. production 에선 no-op.
+  // 저작용 환경에서만. production(math-jh.com) 에선 no-op.
   var host = location.hostname;
-  if (host !== 'localhost' && host !== '127.0.0.1') return;
+  var AUTHORING =
+    host === 'localhost' || host === '127.0.0.1' || host === 'preview.math-jh.com';
+  if (!AUTHORING) return;
 
   // 1. 카테고리 (사이드바 nav 의 구·신 구조 모두 대응)
   var catElem =
@@ -44,9 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       var citation = `[\\[${category}\\] §${postTitle}, ⁋${type} ${number}](${pagePath}#${anchor})`;
 
-      if (navigator.clipboard && window.isSecureContext) {
-        navigator.clipboard.writeText(citation);
-      } else {
+      function legacyCopy() {
         var ta = document.createElement('textarea');
         ta.value = citation;
         ta.style.position = 'fixed';
@@ -55,6 +56,14 @@ document.addEventListener('DOMContentLoaded', function () {
         ta.select();
         document.execCommand('copy');
         document.body.removeChild(ta);
+      }
+
+      if (navigator.clipboard && window.isSecureContext) {
+        // writeText 는 Promise 라 거부될 수 있다(포커스 없음·권한 등). 조용히
+        // 실패하지 않도록 거부 시 execCommand 로 폴백한다.
+        navigator.clipboard.writeText(citation).catch(legacyCopy);
+      } else {
+        legacyCopy();
       }
 
       // 복사 피드백 (배경 깜빡)
