@@ -84,7 +84,7 @@
 
     <li class="nav__recents-section nav__recents-section--posts">
       <a href="{{ '/' | append: _lang | append: '/recent/' | relative_url }}" class="nav__section-link">
-        <span class="nav__sub-title"><span class="material-icons md-12" style="vertical-align:-.2em">&#xE164;</span> {{ site.data.ui-text[_lang].recent_posts | default: "Recent posts" }}</span>
+        <span class="nav__sub-title"><span class="material-icons md-12" style="vertical-align:-.2em">article</span> {{ site.data.ui-text[_lang].recent_posts | default: "Recent posts" }}</span>
       </a>
       <ul>
         {% assign _shown = 0 %}
@@ -98,7 +98,7 @@
     </li>
 
     <li class="nav__recents-section nav__recents-section--comments">
-      <span class="nav__sub-title nav__sub-title--no-link"><span class="material-icons md-12" style="vertical-align:-.2em">&#xE0B9;</span> {{ site.data.ui-text[_lang].recent_comments | default: "Recent comments" }}</span>
+      <span class="nav__sub-title nav__sub-title--no-link"><span class="material-icons md-12" style="vertical-align:-.2em">comment</span> {{ site.data.ui-text[_lang].recent_comments | default: "Recent comments" }}</span>
       <ul>
         {% if _comments.size > 0 %}
           {% for _c in _comments limit: 5 %}

@@ -11,7 +11,7 @@
     {% if document.show_date and document.date %}
       {% assign date = document.date %}
       <span class="page__meta-date">
-        <i class="material-icons md-14" aria-hidden="true" style="vertical-align:-.1em;">&#xEBCC;</i>
+        <i class="material-icons md-14" aria-hidden="true" style="vertical-align:-.2em;">event_available</i>
         {% assign date_format = site.date_format | default: "%B %-d, %Y" %}
         <time datetime="{{ date | date_to_xmlschema }}">{{ date | date: date_format }}</time>
       </span>
@@ -24,7 +24,7 @@
       {% assign words = document.content | strip_html | number_of_words %}
 
       <span class="page__meta-readtime">
-        <i class="material-icons md-14" aria-hidden="true" style="vertical-align:-.1em;">&#xE425;</i>
+        <i class="material-icons md-14" aria-hidden="true" style="vertical-align:-.1em;">hourglass_empty</i>
         {% if words < words_per_minute %}
           {{ site.data.ui-text[lang].less_than | default: "less than" }} 1 {{ site.data.ui-text[lang].minute_read | default: "minute read" }}
         {% elsif words == words_per_minute %}
