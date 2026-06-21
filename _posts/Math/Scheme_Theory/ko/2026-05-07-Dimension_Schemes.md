@@ -11,6 +11,7 @@ sidebar:
 date: 2025-03-14
 weight: 16
 
+
 ---
 
 ## 스킴의 차원
@@ -81,7 +82,7 @@ $$\dim\Spec A=\dim\Spec B$$
 
 </div>
 
-특히 임의의 integral domain $$A$$와 $$A$$의 normalization $$\tilde{A}$$에 대하여, $$\Spec \tilde{A}$$와 $$\Spec A$$의 차원은 항상 같다. 이는 더 일반적으로 scheme $$X$$의 normalization을 정의한 후에도 성립한다. ([##ref##](normalization))
+특히 임의의 integral domain $$A$$와 $$A$$의 normalization $$\tilde{A}$$에 대하여, $$\Spec \tilde{A}$$와 $$\Spec A$$의 차원은 항상 같다. 이는 더 일반적으로 scheme의 normalization에 대해서도 성립하지만, scheme의 normalization은 이후 별도의 글에서 다룬다.
 
 <div class="definition" markdown="1">
 
@@ -175,7 +176,7 @@ $$\alpha_{d_1d_2\cdots d_m}y_m^{r_1d_1+\cdots+r_{m-1}d_{m-1}+d_m}$$
 
 </div>
 
-위의 주장들에서 가장 중요하게 쓰인 결과는 당연히 [\[가환대수학\] §정수적 확장과 아이디얼](/ko/math/commutative_algebra/lying_over_and_going_up)의 결과들이다. 비슷한 종류의 결과인 [##ref##](going_down)을 사용하면 다음을 얻는다. 
+위의 주장들에서 가장 중요하게 쓰인 결과는 당연히 [\[가환대수학\] §정수적 확장과 아이디얼](/ko/math/commutative_algebra/lying_over_and_going_up)의 결과들이다. 이와 짝을 이루는 고전적 결과로, normal domain 위에서의 정수적 확장에 대해 성립하는 *going-down 정리*가 있다 (**[AM]**). 이를 사용하면 다음을 얻는다. 
 
 <div class="proposition" markdown="1">
 
@@ -198,4 +199,10 @@ $$\alpha_{d_1d_2\cdots d_m}y_m^{r_1d_1+\cdots+r_{m-1}d_{m-1}+d_m}$$
 [\[가환대수학\] §차원, ⁋정리 6](/ko/math/commutative_algebra/Krull_dimension#thm6)
 
 </details>
+
+---
+
+**참고문헌**
+
+**[AM]** M. F. Atiyah and I. G. Macdonald, *Introduction to commutative algebra*, Addison-Wesley, 1969.
 
