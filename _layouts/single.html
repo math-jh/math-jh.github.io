@@ -62,6 +62,10 @@ layout: default
               {% include toc.html lang=lang sanitize=true html=content h_min=1 h_max=6 class="toc__menu" skip_no_ids=true %}
             </nav>
             {% endif %}
+            {% if page.url contains '/math/' %}
+            <div class="localgraph-side" id="localgraph-side" data-lang="{{ lang }}" data-self="{{ page.url }}"></div>
+            <script src="/assets/js/vendor/force-graph/force-graph.min.js"></script>
+            {% endif %}
           </aside>
         {% endif %}
         {{ content }}

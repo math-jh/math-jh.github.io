@@ -385,3 +385,4 @@ head_scripts:
   - /assets/js/custom/Recent_overlay.js
   - /assets/js/custom/Xref_preview.js
   - /assets/js/custom/Proof_animate.js
+  - /assets/js/custom/Local_graph.js
