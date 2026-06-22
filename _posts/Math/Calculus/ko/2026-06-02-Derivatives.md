@@ -55,13 +55,37 @@ $$\frac{df}{dx},\qquad \frac{d}{dx}f$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$x \neq a$$에서 $$f(x) - f(a) = \dfrac{f(x)-f(a)}{x-a}\cdot(x-a)$$이다. $$x \to a$$일 때 우변의 첫 인자는 $$f'(a)$$로, 둘째 인자는 $$0$$으로 수렴하므로, 극한법칙 ([§함수의 극한, ⁋명제 5](/ko/math/calculus/functions_and_limits#prop5))에 의해 $$\lim_{x\to a}\bigl(f(x)-f(a)\bigr) = f'(a)\cdot 0 = 0$$이다. 따라서 $$\lim_{x\to a} f(x) = f(a)$$, 즉 $$f$$는 $$a$$에서 연속이다.
+$$x \neq a$$에서 
+
+$$f(x) - f(a) = \frac{f(x)-f(a)}{x-a}\cdot(x-a)$$
+
+이다. $$x \to a$$일 때 우변의 첫 인자는 $$f'(a)$$로, 둘째 인자는 $$0$$으로 수렴하므로, [§함수의 극한, ⁋명제 5](/ko/math/calculus/functions_and_limits#prop5)에 의해 
+
+$$\lim_{x\to a}\bigl(f(x)-f(a)\bigr) = f'(a)\cdot 0 = 0$$
+
+이다. 따라서 $$f$$는 $$a$$에서 연속이다.
 
 </details>
 
-역은 성립하지 않는다. 대표적인 예가 $$f(x) = \lvert x\rvert$$로, 이 함수는 $$0$$에서 연속이지만 미분가능하지 않다. 실제로 $$\dfrac{f(h)-f(0)}{h} = \dfrac{\lvert h\rvert}{h}$$는 $$h \to 0^+$$일 때 $$1$$, $$h \to 0^-$$일 때 $$-1$$로, 한쪽 극한이 서로 달라 극한이 존재하지 않는다. 즉 *모서리<sub>corner</sub>*에서는 접선의 기울기가 한 값으로 정해지지 않는다. 미분 불가능의 양상은 모서리만이 아니다. $$f(x) = \sqrt[3]{x}$$는 $$0$$에서 차분몫이 $$h^{-2/3} \to \infty$$로 발산하여 접선이 수직이 되고(*수직접선<sub>vertical tangent</sub>*), $$f(x) = x^{2/3}$$는 $$0$$에서 좌우 차분몫이 $$\mp\infty$$로 갈라지는 *첨점<sub>cusp</sub>*을 이룬다. 세 경우 모두 연속이지만 미분 불가능하다.
+그러나 그 역은 성립하지 않는다. 대표적인 예가 $$f(x) = \lvert x\rvert$$로, 이 함수는 $$0$$에서 연속이지만 미분가능하지 않다. 
 
-거꾸로 미분가능성은 한 점에서만 성립할 수도 있는 국소적 성질이어서, 함수가 그 점을 벗어나면 아무리 거칠어도 무방하다.
+![절댓값함수의 그래프](/assets/images/Math/Calculus/Derivatives-1.svg){:style="width:11.21em" class="invert" .align-center}
+
+실제로 
+
+$$\frac{f(h)-f(0)}{h} = \frac{\lvert h\rvert}{h}=\begin{cases}1&\text{if $h>0$}\\-1&\text{if $h<0$}\end{cases}$$
+
+이므로, 이 함수의 미분계수는 $$h \to 0^+$$일 때 $$1$$, $$h \to 0^-$$일 때 $$-1$$로, 한쪽 극한이 서로 달라 극한이 존재하지 않는다. 
+
+비슷한 예시로, $$f(x) = \sqrt[3]{x}$$는 $$0$$에서 차분몫이 $$h^{-2/3} \to \infty$$로 발산하는 *수직접선<sub>vertical tangent</sub>*을 갖는다.
+
+![세제곱근함수의 수직접선](/assets/images/Math/Calculus/Derivatives-2.svg){:style="width:12.46em" class="invert" .align-center}
+
+이를 $$f(x) = x^{2/3}$$는 $$0$$에서 좌우 차분몫이 $$\mp\infty$$로 갈라지는 *첨점<sub>cusp</sub>*을 이룬다.
+
+![2/3제곱함수의 첨점](/assets/images/Math/Calculus/Derivatives-3.svg){:style="width:13.17em" class="invert" .align-center}
+
+거꾸로 미분가능성은 한 점에서만 성립할 수도 있는 국소적 성질이어서, 다음과 같은 형태의 극단적인 예시도 가능하다. 
 
 <div class="example" markdown="1">
 
