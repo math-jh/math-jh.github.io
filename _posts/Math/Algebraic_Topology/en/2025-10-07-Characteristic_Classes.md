@@ -13,6 +13,8 @@ weight: 10
 translated_at: 2026-05-30T01:30:03+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-05-30T01:30:03+00:00
+
+published: false
 ---
 In the previous post, the map $$p:\Spe(\or_M^A)\rightarrow M$$ played an important role as a covering space, and it had the following properties.
 
