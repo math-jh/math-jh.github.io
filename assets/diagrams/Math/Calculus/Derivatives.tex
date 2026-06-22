@@ -1,0 +1,49 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG 절댓값함수의 그래프 (Derivatives-1.svg)
+\begin{tikzpicture}
+\tikzset{
+  axes/.style={->, black!50, line width=0.4pt},
+  curve/.style={accent1, line width=0.9pt},
+  dot/.style={fill=accent1, circle, inner sep=1.3pt}
+}
+\draw[axes] (-1.8,0) -- (1.8,0);
+\draw[axes] (0,-0.35) -- (0,1.75);
+\draw[curve] (-1.45,1.45) -- (0,0) -- (1.45,1.45);
+\node[dot] at (0,0) {};
+\end{tikzpicture}
+
+%%FIG 세제곱근함수의 수직접선 (Derivatives-2.svg)
+\begin{tikzpicture}
+\tikzset{
+  axes/.style={->, black!50, line width=0.4pt},
+  curve/.style={accent1, line width=0.9pt},
+  dot/.style={fill=accent1, circle, inner sep=1.3pt}
+}
+\draw[axes] (-2.0,0) -- (2.0,0);
+\draw[axes] (0,-1.5) -- (0,1.5);
+\draw[curve] plot[domain=-1.2:1.2, samples=160, smooth, variable=\t] ({\t*\t*\t},{\t});
+\node[dot] at (0,0) {};
+\end{tikzpicture}
+
+%%FIG 2/3제곱함수의 첨점 (Derivatives-3.svg)
+\begin{tikzpicture}
+\tikzset{
+  axes/.style={->, black!50, line width=0.4pt},
+  curve/.style={accent1, line width=0.9pt},
+  dot/.style={fill=accent1, circle, inner sep=1.3pt}
+}
+\draw[axes] (-2.1,0) -- (2.1,0);
+\draw[axes] (0,-0.5) -- (0,1.9);
+\draw[curve] plot[domain=-1.28:1.28, samples=200, variable=\t] ({\t*\t*\t},{\t*\t});
+\node[dot] at (0,0) {};
+\end{tikzpicture}
+
+\end{document}
