@@ -37,7 +37,7 @@ $$(fg)'(a) = f'(a)\,g(a) + f(a)\,g'(a)$$
 
 $$\frac{f(a+h)g(a+h) - f(a)g(a)}{h} = \frac{f(a+h)-f(a)}{h}\,g(a+h) + f(a)\,\frac{g(a+h)-g(a)}{h}$$
 
-$$h \to 0$$일 때 첫 항의 차분몫은 $$f'(a)$$로, $$g(a+h)$$는 $$g$$의 연속성 ([§미분과 도함수, ⁋명제 5](/ko/math/calculus/derivatives#prop5))에 의해 $$g(a)$$로 수렴한다. 둘째 항의 차분몫은 $$g'(a)$$로 수렴한다. 극한법칙 ([§함수와 극한, ⁋명제 4](/ko/math/calculus/functions_and_limits#prop4))에 의해 합은 $$f'(a)g(a) + f(a)g'(a)$$로 수렴한다.
+$$h \to 0$$일 때 첫 항의 차분몫은 $$f'(a)$$로, $$g(a+h)$$는 $$g$$의 연속성 ([§미분과 도함수, ⁋명제 2](/ko/math/calculus/derivatives#prop2))에 의해 $$g(a)$$로 수렴한다. 둘째 항의 차분몫은 $$g'(a)$$로 수렴한다. 극한법칙 ([§함수의 극한, ⁋명제 5](/ko/math/calculus/functions_and_limits#prop5))에 의해 합은 $$f'(a)g(a) + f(a)g'(a)$$로 수렴한다.
 
 </details>
 
@@ -252,15 +252,15 @@ $$2x + 2y\,\frac{dy}{dx} = 0 \quad\Longrightarrow\quad \frac{dy}{dx} = -\frac{x}
 
 ## 멱급수의 항별 미분
 
-무한급수를 항별로 미분할 수 있는지는 일반적으로 미묘하지만, 멱급수는 수렴요경 안에서 항별 미분이 가능하다.
+무한급수를 항별로 미분할 수 있는지는 일반적으로 미묘하지만, 멱급수는 수렴반경 안에서 항별 미분이 가능하다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop12">**명제 12 (멱급수의 항별 미분)**</ins> $$f(x) = \sum_{n=0}^\infty c_n x^n$$이 수렴요경 $$R > 0$$을 가지면, $$f$$는 $$\lvert x\rvert < R$$에서 미분가능하며
+<ins id="prop12">**명제 12 (멱급수의 항별 미분)**</ins> $$f(x) = \sum_{n=0}^\infty c_n x^n$$이 수렴반경 $$R > 0$$을 가지면, $$f$$는 $$\lvert x\rvert < R$$에서 미분가능하며
 
 $$f'(x) = \sum_{n=1}^\infty n\,c_n x^{n-1}$$
 
-이고, 이 급수의 수렴요경도 $$R$$이다.
+이고, 이 급수의 수렴반경도 $$R$$이다.
 
 </div>
 

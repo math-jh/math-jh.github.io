@@ -13,7 +13,7 @@ weight: 3
 
 ---
 
-우리는 본격적으로 미적분학을 시작하기 전에 우선 수열의 극한을 정의한다. 여기서 *수열<sub>sequence</sub>* $$(a_n)$$이란 자연수에 실수를 대응시키는 함수, 즉 $$a : \mathbb{N} \to \mathbb{R}$$을 그 값들 $$a_1, a_2, a_3, \ldots$$의 나열로 본 것이다. [§함수와 극한](/ko/math/calculus/functions_and_limits)에서 우리는 이미 $$x \to \infty$$일 때 함수가 어떻게 행동하는지를 다루었는데, 수열의 극한은 그 이산적 버전, 즉 변수가 자연수만 취하는 경우에서 $$n \to \infty$$로만 가는 경우로 생각할 수 있다. 
+우리는 본격적으로 미적분학을 시작하기 전에 우선 수열의 극한을 정의한다. 여기서 *수열<sub>sequence</sub>* $$(a_n)$$이란 자연수에 실수를 대응시키는 함수, 즉 $$a : \mathbb{N} \to \mathbb{R}$$을 그 값들 $$a_1, a_2, a_3, \ldots$$의 나열로 본 것이다. [§함수의 극한](/ko/math/calculus/functions_and_limits)에서 우리는 이미 $$x \to \infty$$일 때 함수가 어떻게 행동하는지를 다루었는데, 수열의 극한은 그 이산적 버전, 즉 변수가 자연수만 취하는 경우에서 $$n \to \infty$$로만 가는 경우로 생각할 수 있다. 
 
 ## 수열의 수렴
 
@@ -27,7 +27,7 @@ $$n > N \implies \lvert a_n - L \rvert < \varepsilon$$
 
 </div>
 
-이 정의는 [§함수와 수열의 극한, ⁋정의 14](/ko/math/calculus/functions_and_limits#def14)를 거의 그대로 가져온 것으로, 수열은 그 정의에 의해 변수가 자연수뿐이고 한 방향($$+\infty$$)으로만 가므로, 수열의 극한을 정의하는 거의 유일한 방법은 이것 뿐이다. 약간의 변종은 수열이 무한대로 발산하는 것으로, 이는 [§함수와 수열의 극한, ⁋정의 13](/ko/math/calculus/functions_and_limits#def13)을 약간 변형하면 어떻게 정의해야 할지 자명하다. 그러나 물론, 특정한 값으로 수렴하는 수열과 무한대로 발산하는 수열이 아닌 다른 종류의 수열도 존재한다 ([예시 12](#ex12))
+이 정의는 [§함수의 극한, ⁋정의 14](/ko/math/calculus/functions_and_limits#def14)를 거의 그대로 가져온 것으로, 수열은 그 정의에 의해 변수가 자연수뿐이고 한 방향($$+\infty$$)으로만 가므로, 수열의 극한을 정의하는 거의 유일한 방법은 이것 뿐이다. 약간의 변종은 수열이 무한대로 발산하는 것으로, 이는 [§함수의 극한, ⁋정의 13](/ko/math/calculus/functions_and_limits#def13)을 약간 변형하면 어떻게 정의해야 할지 자명하다. 그러나 물론, 특정한 값으로 수렴하는 수열과 무한대로 발산하는 수열이 아닌 다른 종류의 수열도 존재한다 ([예시 12](#ex12))
 
 <div class="example" markdown="1">
 
@@ -47,7 +47,7 @@ $$n > N\implies b_n = n > M$$
 
 </div>
 
-한편, 다음 명제 또한 [§함수와 극한, ⁋명제 5](/ko/math/calculus/functions_and_limits#prop5)의 증명과 동일한 방식으로 진행하면 충분하다. 
+한편, 다음 명제 또한 [§함수의 극한, ⁋명제 5](/ko/math/calculus/functions_and_limits#prop5)의 증명과 동일한 방식으로 진행하면 충분하다. 
 
 <div class="proposition" markdown="1">
 
@@ -83,7 +83,7 @@ $$a_n \to L$$이면 $$\varepsilon = 1$$에 대응하는 $$N$$을 잡았을 때 $
 
 </details>
 
-수렴하는 수열의 기본 성질들 또한 [명제 3](#prop3)에서 그러했듯 함수의 극한에서의 증명을 그대로 베껴와서 얻어진다. 가령 다음은 [§함수와 극한, ⁋명제 8](/ko/math/calculus/functions_and_limits#prop8)의 수열 버전이다.
+수렴하는 수열의 기본 성질들 또한 [명제 3](#prop3)에서 그러했듯 함수의 극한에서의 증명을 그대로 베껴와서 얻어진다. 가령 다음은 [§함수의 극한, ⁋명제 8](/ko/math/calculus/functions_and_limits#prop8)의 수열 버전이다.
 
 
 <div class="proposition" markdown="1">
@@ -162,7 +162,7 @@ $$L < r < 1$$인 $$r$$를 고르면, 충분히 큰 $$n \geq N$$에서 $$a_{n+1}/
 
 $$\frac{n(1+1/n)+1}{n+1} = \frac{n+2}{n+1} = 1 + \frac{1}{n+1}$$
 
-이고 기하평균은 $$((1+1/n)^n\cdot)^{1/(n+1)}=a_n^{1/(n+1)}$$이므로 
+이고 기하평균은 $$((1+1/n)^n\cdot 1)^{1/(n+1)}=a_n^{1/(n+1)}$$이므로 
 
 $$a_n \leq \left(1+\frac{1}{n+1}\right)^{n+1} = a_{n+1}$$
 
@@ -217,6 +217,6 @@ $$\lvert a_{n_k} - L\rvert < \varepsilon$$
 
 <div class="example" markdown="1">
 
-<ins id="ex12">**예시 12 (발산하는 수열)**</ins> 수열 $$a_n = (-1)^n$$을 보자. 짝수번째 부분수열 $$a_{2k} = 1 \to 1$$과 홀수번째 부분수열 $$a_{2k-1} = -1 \to -1$$이 서로 다른 극한을 가지므로, 명제 12에 의해 $$(a_n)$$은 발산한다.
+<ins id="ex12">**예시 12 (발산하는 수열)**</ins> 수열 $$a_n = (-1)^n$$을 보자. 짝수번째 부분수열 $$a_{2k} = 1 \to 1$$과 홀수번째 부분수열 $$a_{2k-1} = -1 \to -1$$이 서로 다른 극한을 가지므로, 명제 11에 의해 $$(a_n)$$은 발산한다.
 
 </div>
