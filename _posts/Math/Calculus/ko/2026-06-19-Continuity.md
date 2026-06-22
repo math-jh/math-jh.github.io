@@ -13,7 +13,7 @@ weight: 2
 
 ---
 
-우리는 [§함수와 수열의 극한](/ko/math/calculus/functions_and_limits)에서 극한을 엄밀하게 정의하였으며, 그럼 자연스러운 다음 스텝은 연속성이다. 
+우리는 [§함수의 극한](/ko/math/calculus/functions_and_limits)에서 극한을 엄밀하게 정의하였으며, 그럼 자연스러운 다음 스텝은 연속성이다. 
 
 ## 연속의 정의
 
@@ -45,7 +45,7 @@ $$\lvert x - a\rvert < \delta\Rightarrow\lvert f(x) - f(a)\rvert < \epsilon$$
 
 ## 연속함수의 연산
 
-우선 다음 명제는 [§함수와 극한, ⁋명제 4](/ko/math/calculus/functions_and_limits#prop4)의 자명한 결과이다.
+우선 다음 명제는 [§함수의 극한, ⁋명제 5](/ko/math/calculus/functions_and_limits#prop5)의 자명한 결과이다.
 
 <div class="proposition" markdown="1">
 
@@ -76,7 +76,7 @@ $$\lvert x-a\rvert < \delta\Rightarrow\lvert f(x) - b\rvert < \eta$$
 
 $$\lvert \sin x - \sin a\rvert= \left\lvert 2\cos\frac{x+a}{2}\sin\frac{x-a}{2}\right\rvert \leq 2\left\lvert \sin\frac{x-a}{2}\right\rvert$$
 
-이 항상 성립하는 것을 안다. 이제 여기에 [§함수와 수열의 극한, ⁋예시 10](/ko/math/calculus/functions_and_limits#ex10)에서 얻은 부등식 $$\lvert \sin t\rvert \leq \lvert t\rvert$$를 적용하면, 임의의 $$a \in \mathbb{R}$$에 대해
+이 항상 성립하는 것을 안다. 이제 여기에 [§함수의 극한, ⁋예시 10](/ko/math/calculus/functions_and_limits#ex10)에서 얻은 부등식 $$\lvert \sin t\rvert \leq \lvert t\rvert$$를 적용하면, 임의의 $$a \in \mathbb{R}$$에 대해
 
 $$\lvert \sin x - \sin a\rvert\leq\lvert x-a\rvert$$
 
