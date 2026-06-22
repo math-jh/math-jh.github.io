@@ -41,19 +41,7 @@ $$0 < \lvert x - a \rvert < \delta \implies \lvert f(x) - L \rvert < \epsilon$$
 
 <div class="example" markdown="1">
 
-<ins id="ex3">**예시 3**</ins> 이 예시에서는 일차함수와 이차함수의 예시에서 극한의 정의를 적용해본다.
-
-우선 일차함수 $$f(x)=2x-1$$을 생각하고, $$x\rightarrow 3$$일 때 이 함수의 극한값이 $$5$$임을 보이자. 그럼
-
-$$\lvert f(x)-L\rvert=\lvert (2x-1)-5\rvert=2\lvert x-3\rvert$$
-
-이므로, 만일 $$\delta=\epsilon/2$$로 택한다면
-
-$$0<\lvert x-3\rvert<\delta\implies 0<> 2\lvert x-3\rvert<2\delta=\epsilon$$
-
-이 된다. 
-
-또 다른 예시로, 이차함수 $$g(x)=x^2$$을 생각하고 $$x\rightarrow 2$$일 때 이 함수의 극한값이 $$4$$임을 보이자. 우선 이를 위해 위와 마찬가지로
+<ins id="ex3">**예시 3**</ins> 극한의 정의를 직접 적용해 보자. 일차함수는 거의 자명하여, $$f(x) = 2x - 1$$의 $$x \to 3$$ 극한이 $$5$$임은 $$\lvert f(x) - 5\rvert = 2\lvert x - 3\rvert$$이므로 $$\delta = \epsilon/2$$로 택하면 곧바로 따른다. 더 전형적인 것은 이차함수다. $$g(x) = x^2$$을 생각하고 $$x \rightarrow 2$$일 때 이 함수의 극한값이 $$4$$임을 보이자. 우선 이를 위해 위와 마찬가지로
 
 $$\lvert g(x)-L\rvert=\lvert x^2-4\rvert=\lvert x-2\rvert\lvert x+2\rvert$$
 
@@ -127,7 +115,7 @@ $$\lvert L - L'\rvert \leq \lvert L - f(x)\rvert + \lvert f(x) - L'\rvert < \eps
 
     이도록 할 수 있고, 비슷하게 $$\lvert g(x)\rvert <\lvert M\rvert+1$$이도록 하는 $$\delta$$도 잡을 수 있다. 이제 $$\delta$$를 이들 두 조건과, 다음 두 조건
     
-    $\lvert g(x)-M\rvert < \frac{\epsilon}{2(\lvert L\rvert+1)},\qquad \lvert f(x)-L\rvert < \frac{\epsilon}{2(\lvert M\rvert+1)}$$
+    $$\lvert g(x)-M\rvert < \frac{\epsilon}{2(\lvert L\rvert+1)},\qquad \lvert f(x)-L\rvert < \frac{\epsilon}{2(\lvert M\rvert+1)}$$
     
     이 모두 성립하도록 잡으면 된다. 
 
@@ -168,7 +156,7 @@ $$\left\lvert \frac{1}{g(x)} - \frac{1}{M}\right\rvert = \frac{\lvert g(x)-M\rve
     
     $$\bigl\lvert u^{1/k}-v^{1/k}\bigr\rvert \leq \frac{\lvert u-v\rvert}{k\,\min(u,v)^{(k-1)/k}}$$
     
-    가 성립한다. $$따라서 $$0 < \lvert x-a\rvert < \delta_1$$이면 $$0<L/2 < \min(f(x), L)$$이므로, $$f(x)=u$$, $$L=v$$를 대입하여
+    가 성립한다. 따라서 $$0 < \lvert x-a\rvert < \delta_1$$이면 $$0<L/2 < \min(f(x), L)$$이므로, $$f(x)=u$$, $$L=v$$를 대입하여
     
     $$\bigl\lvert \sqrt[k]{f(x)}-\sqrt[k]{L}\bigr\rvert \leq \frac{\lvert f(x)-L\rvert}{k\,(L/2)^{(k-1)/k}}$$
     
@@ -202,7 +190,7 @@ $$\lim_{x\rightarrow a}f(x)=\lim_{x \rightarrow a}c_nx^n+\cdots +\lim_{x\rightar
 
 을 얻은 후, [명제 5](#prop5)의 둘째 법칙과 [따름정리 6](#cor6)을 적용하여 이를
 
-$$\lim_{x\rightarrow a}f(x)=c_n\lvert(\lim_{x\rightarrow a}x\rvert)^n+\cdots c_1\lim_{x\rightarrow a}x+\lim_{x\rightarrow a}c_0$$
+$$\lim_{x\rightarrow a}f(x)=c_n(\lim_{x\rightarrow a}x)^n+\cdots c_1\lim_{x\rightarrow a}x+\lim_{x\rightarrow a}c_0$$
 
 으로 바꾼 후 [예시 7](#ex7)을 적용할 수 있다. 비슷한 방식으로, 임의의 다항함수의 비로 이루어진 유리함수의 극한 또한, 분모의 극한이 $$0$$이 아니라면 분자와 분모의 극한을 각각 구한 뒤 그 분수로 얻어진다는 것을 보일 수 있다.
 
