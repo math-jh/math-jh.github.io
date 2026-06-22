@@ -162,19 +162,11 @@ $$\frac{e^x - 1 - x}{x^2} = \frac{\frac{x^2}{2} + \frac{x^3}{6} + \cdots}{x^2} =
 
 </div>
 
-<div class="example" markdown="1">
-
-<ins id="ex9">**예시 9 (e의 근삿값)**</ins> 예시 3에서 $$x = 1$$로 두면 $$e = \sum_{k=0}^\infty \dfrac1{k!}$$이고, 처음 $$n+1$$항으로 근사한 오차는
-
-$$\lvert R_n(1)\rvert = \frac{e^c}{(n+1)!} \leq \frac{3}{(n+1)!} \qquad (0 < c < 1,\ e^c < 3)$$
-
-이다. $$n = 5$$이면 오차가 $$\dfrac{3}{720} \approx 0.004$$ 이하이고, $$n = 9$$이면 $$\dfrac{3}{10!} \approx 8\times 10^{-7}$$ 이하이다. 즉 항을 늘릴수록 계승 분모가 폭발적으로 커져 수렴이 매우 빠르다.
-
-</div>
+예시 3의 $$e = \sum_{k=0}^\infty \dfrac1{k!}$$에서 처음 $$n+1$$항으로 끊은 오차는 $$\lvert R_n(1)\rvert \leq \dfrac{3}{(n+1)!}$$ ($$e^c < 3$$) 이라, $$n = 9$$만 해도 $$\dfrac{3}{10!} \approx 8\times 10^{-7}$$ 이하로 계승 분모 덕에 수렴이 매우 빠르다.
 
 <div class="example" markdown="1">
 
-<ins id="ex10">**예시 10 (다른 전개)**</ins> 이항급수와 기하급수도 매클로린 전개의 특수한 경우이다. $$\alpha = -1$$인 이항급수는 기하급수
+<ins id="ex9">**예시 9 (다른 전개)**</ins> 이항급수와 기하급수도 매클로린 전개의 특수한 경우이다. $$\alpha = -1$$인 이항급수는 기하급수
 
 $$\frac{1}{1+x} = \sum_{k=0}^\infty (-1)^k x^k \qquad (\lvert x\rvert < 1)$$
 
@@ -182,7 +174,7 @@ $$\frac{1}{1+x} = \sum_{k=0}^\infty (-1)^k x^k \qquad (\lvert x\rvert < 1)$$
 
 $$\sqrt{1+x} = 1 + \frac{x}{2} - \frac{x^2}{8} + \frac{x^3}{16} - \cdots$$
 
-를 준다. 후자를 $$P_2(x) = 1 + \tfrac x2 - \tfrac{x^2}{8}$$로 끊으면 $$\sqrt{1.2} \approx 1 + 0.1 - 0.005 = 1.095$$로, 실제 값 $$1.0954\ldots$$에 가깝다.
+를 준다.
 
 </div>
 

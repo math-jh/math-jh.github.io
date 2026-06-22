@@ -148,31 +148,13 @@ $$\int_0^\infty x\,e^{-x^2}\,dx = \frac12\int_0^\infty e^{-u}\,du = \frac12$$
 
 ## 더 많은 계산과 판정
 
-지금까지의 정의·판정을 좀 더 다양한 피적분함수에 적용해 본다. 우선 무한구간과 끝점 특이성이 한 적분 안에 함께 나타나는 경우를 보자. 이때는 적분을 두 조각으로 나누어 각 끝에서의 거동을 따로 다스려야 한다.
-
-<div class="example" markdown="1">
-
-<ins id="ex14">**예시 14 (두 끝의 동시 처리)**</ins> $$\displaystyle\int_0^\infty \frac{dx}{\sqrt{x}\,(1+x)}$$를 살펴보자. 피적분함수는 $$x \to 0^+$$에서 $$\sim x^{-1/2}$$로 특이하고 $$x \to \infty$$에서 $$\sim x^{-3/2}$$로 감소하므로, 임의의 점 $$1$$에서 둘로 나눈다. $$0$$ 근처에서는
-
-$$\frac{1}{\sqrt x\,(1+x)} \leq \frac{1}{\sqrt x}, \qquad \int_0^1 \frac{dx}{\sqrt x} = 2 < \infty$$
-
-이라 수렴하고 (예시 6, $$p = \tfrac12 < 1$$), $$\infty$$ 근처에서는
-
-$$\frac{1}{\sqrt x\,(1+x)} \leq \frac{1}{\sqrt x \cdot x} = \frac{1}{x^{3/2}}, \qquad \int_1^\infty \frac{dx}{x^{3/2}} < \infty$$
-
-이라 수렴한다 (예시 3, $$p = \tfrac32 > 1$$). 두 조각이 모두 수렴하므로 전체가 수렴한다. 실제로 $$u = \sqrt x$$로 치환하면
-
-$$\int_0^\infty \frac{dx}{\sqrt x\,(1+x)} = \int_0^\infty \frac{2\,du}{1 + u^2} = 2 \cdot \frac\pi2 = \pi$$
-
-로 값까지 계산된다 (예시 7).
-
-</div>
+지금까지의 정의·판정을 좀 더 다양한 피적분함수에 적용해 본다.
 
 특이성이 어느 점에서 어떤 차수로 일어나는지 가늠하는 표준 도구가 극한비교판정이다. 다음 예는 피적분함수가 두 끝에서 서로 다른 거듭제곱처럼 행동하는 전형적인 상황이다.
 
 <div class="example" markdown="1">
 
-<ins id="ex15">**예시 15 (극한비교의 활용)**</ins> $$\displaystyle\int_1^\infty \frac{x\,dx}{x^3 - x + 2}$$의 수렴을 보자. $$x \to \infty$$에서 분모가 $$x^3$$처럼 커지므로 피적분함수는 $$x^{-2}$$처럼 행동할 것이다. 실제로 $$g(x) = x^{-2}$$와 비교하면
+<ins id="ex14">**예시 14 (극한비교의 활용)**</ins> $$\displaystyle\int_1^\infty \frac{x\,dx}{x^3 - x + 2}$$의 수렴을 보자. $$x \to \infty$$에서 분모가 $$x^3$$처럼 커지므로 피적분함수는 $$x^{-2}$$처럼 행동할 것이다. 실제로 $$g(x) = x^{-2}$$와 비교하면
 
 $$\frac{x/(x^3 - x + 2)}{1/x^2} = \frac{x^3}{x^3 - x + 2} = \frac{1}{1 - x^{-2} + 2x^{-3}} \xrightarrow{\;x\to\infty\;} 1$$
 
@@ -180,31 +162,11 @@ $$\frac{x/(x^3 - x + 2)}{1/x^2} = \frac{x^3}{x^3 - x + 2} = \frac{1}{1 - x^{-2} 
 
 </div>
 
-부분적분은 이상적분의 값을 닫힌 형태로 끌어내는 데 유용하다. 경계항이 극한에서 사라지는지를 반드시 확인해야 한다.
-
-<div class="example" markdown="1">
-
-<ins id="ex16">**예시 16 (부분적분)**</ins> $$\displaystyle\int_0^\infty x\,e^{-x}\,dx$$를 부분적분으로 계산한다. $$u = x$$, $$dv = e^{-x}\,dx$$로 두면 $$du = dx$$, $$v = -e^{-x}$$이고
-
-$$\begin{aligned}
-\int_0^t x\,e^{-x}\,dx &= \bigl[-x\,e^{-x}\bigr]_0^t + \int_0^t e^{-x}\,dx \\
-&= -t\,e^{-t} + \bigl[-e^{-x}\bigr]_0^t \\
-&= -t\,e^{-t} + (1 - e^{-t})
-\end{aligned}$$
-
-이다. $$t \to \infty$$일 때 $$t\,e^{-t} \to 0$$이고 $$e^{-t} \to 0$$이므로
-
-$$\int_0^\infty x\,e^{-x}\,dx = 1$$
-
-을 얻는다. 이는 예시 10의 $$\Gamma(2) = 1! = 1$$과 일치한다.
-
-</div>
-
 대칭성을 이용하면 계산이 크게 줄어든다. 우함수·기함수 여부를 먼저 살피는 습관이 도움이 된다.
 
 <div class="example" markdown="1">
 
-<ins id="ex17">**예시 17 (대칭과 발산)**</ins> $$\displaystyle\int_{-\infty}^\infty \frac{x\,dx}{1 + x^2}$$를 보자. 피적분함수는 기함수이므로 대칭적 극한 $$\int_{-t}^t$$는 항상 $$0$$이 되어 *코시 주값*은 $$0$$이다. 그러나 정의 1은 두 조각이 *각각* 수렴할 것을 요구하는데,
+<ins id="ex15">**예시 15 (대칭과 발산)**</ins> $$\displaystyle\int_{-\infty}^\infty \frac{x\,dx}{1 + x^2}$$를 보자. 피적분함수는 기함수이므로 대칭적 극한 $$\int_{-t}^t$$는 항상 $$0$$이 되어 *코시 주값*은 $$0$$이다. 그러나 정의 1은 두 조각이 *각각* 수렴할 것을 요구하는데,
 
 $$\int_0^t \frac{x\,dx}{1+x^2} = \tfrac12\bigl[\ln(1+x^2)\bigr]_0^t = \tfrac12\ln(1 + t^2) \xrightarrow{\;t\to\infty\;} \infty$$
 
@@ -212,23 +174,13 @@ $$\int_0^t \frac{x\,dx}{1+x^2} = \tfrac12\bigl[\ln(1+x^2)\bigr]_0^t = \tfrac12\l
 
 </div>
 
-거듭제곱과 로그가 섞인 피적분함수의 수렴 경계도 자주 등장한다. 다음은 로그 인자가 거듭제곱의 경계 $$p = 1$$을 어떻게 미세하게 바꾸는지 보여 준다.
-
-<div class="example" markdown="1">
-
-<ins id="ex18">**예시 18 (로그 인자)**</ins> $$\displaystyle\int_2^\infty \frac{dx}{x(\ln x)^p}$$는 $$u = \ln x$$로 치환하면 $$du = dx/x$$이고
-
-$$\int_2^\infty \frac{dx}{x(\ln x)^p} = \int_{\ln 2}^\infty \frac{du}{u^p}$$
-
-이 되어, 무한구간 거듭제곱적분 (예시 3) 으로 환원된다. 따라서 이 적분은 $$p > 1$$일 때 수렴하고 $$p \leq 1$$일 때 발산한다. 특히 $$p = 1$$인 $$\int_2^\infty \frac{dx}{x\ln x}$$는 발산하며 (예시 11), 이는 $$\frac1x$$만으로는 수렴을 끌어내지 못하던 $$p = 1$$ 경계가 로그를 한 제곱 더 붙여야 비로소 수렴 쪽으로 넘어감을 보여 준다.
-
-</div>
+거듭제곱과 로그가 섞인 피적분함수의 수렴 경계도 자주 등장한다. $$\displaystyle\int_2^\infty \frac{dx}{x(\ln x)^p}$$는 $$u = \ln x$$로 치환하면 $$\int_{\ln 2}^\infty u^{-p}\,du$$로 환원되어 (예시 3) $$p > 1$$일 때 수렴하고 $$p \leq 1$$일 때 발산하니, $$\frac1x$$만으로는 끌어내지 못하던 $$p = 1$$ 경계가 로그를 한 제곱 더 붙여야 비로소 수렴 쪽으로 넘어감을 보여 준다.
 
 마지막으로, 적분 자체가 닫힌 형태로 계산되지 않더라도 부등식만으로 값의 범위를 가둘 수 있다. 다음 예는 수렴을 보이는 동시에 적분값의 상계를 준다.
 
 <div class="example" markdown="1">
 
-<ins id="ex19">**예시 19 (수렴값의 범위 추정)**</ins> $$\displaystyle\int_0^\infty e^{-x^2}\,dx$$의 수렴과 상계를 동시에 얻어 보자. $$[0,1]$$에서는 연속이라 적분이 유한하고, $$x \geq 1$$에서는 $$x^2 \geq x$$이므로 $$e^{-x^2} \leq e^{-x}$$이다. 따라서
+<ins id="ex16">**예시 16 (수렴값의 범위 추정)**</ins> $$\displaystyle\int_0^\infty e^{-x^2}\,dx$$의 수렴과 상계를 동시에 얻어 보자. $$[0,1]$$에서는 연속이라 적분이 유한하고, $$x \geq 1$$에서는 $$x^2 \geq x$$이므로 $$e^{-x^2} \leq e^{-x}$$이다. 따라서
 
 $$\begin{aligned}
 \int_0^\infty e^{-x^2}\,dx &= \int_0^1 e^{-x^2}\,dx + \int_1^\infty e^{-x^2}\,dx \\

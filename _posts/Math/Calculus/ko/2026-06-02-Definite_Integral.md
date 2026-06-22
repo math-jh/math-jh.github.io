@@ -139,32 +139,13 @@ S(P, f) &= \sum_{i=1}^n \left(\frac{i}{n}\right)^3 \cdot \frac1n \\
 
 </div>
 
-표본점 선택과 무관하게 같은 값으로 수렴한다는 점은 정의 2의 핵심이며, 다음 예시는 같은 적분을 왼쪽 끝점으로 계산해도 결과가 변하지 않음을 보여 준다. 이는 적분가능한 함수에 대해 좌·우 리만 합의 차이가 분할을 잘게 할수록 사라짐을 반영한다.
-
-<div class="example" markdown="1">
-
-<ins id="ex9">**예시 9 (표본점의 무관함)**</ins> 같은 분할에서 왼쪽 끝점 $$c_i = (i-1)/n$$을 택하면
-
-$$\begin{aligned}
-S(P, f) &= \sum_{i=1}^n \left(\frac{i-1}{n}\right)^3 \cdot \frac1n \\
-&= \frac{1}{n^4}\sum_{j=0}^{n-1} j^3 \\
-&= \frac{1}{n^4}\cdot \frac{(n-1)^2 n^2}{4} \\
-&= \frac14\left(1 - \frac1n\right)^2
-\end{aligned}$$
-
-이다. 오른쪽 끝점이 준 $$\frac14(1 + 1/n)^2$$과 비교하면 두 합의 차이는
-
-$$\frac14\left[\left(1+\tfrac1n\right)^2 - \left(1-\tfrac1n\right)^2\right] = \frac14\cdot \frac{4}{n} = \frac1n \to 0$$
-
-이어서, 두 합 모두 같은 극한 $$\frac14$$로 수렴한다. 일반적으로 단조함수에서는 좌·우 리만 합이 각각 하합·상합(또는 그 반대)이 되며, 그 차이는 $$\lvert f(b) - f(a)\rvert\,\lVert P\rVert$$로 위에서 눌려 $$0$$으로 간다.
-
-</div>
+표본점 선택과 무관하게 같은 값으로 수렴한다는 점은 정의 2의 핵심이다. 같은 적분을 왼쪽 끝점 $$c_i = (i-1)/n$$으로 계산하면 리만 합이 $$\tfrac14(1 - 1/n)^2$$이 되어, 오른쪽 끝점이 준 $$\tfrac14(1 + 1/n)^2$$과의 차이가 $$\tfrac1n \to 0$$이므로 두 합 모두 같은 극한 $$\tfrac14$$로 수렴한다. 일반적으로 단조함수에서는 좌·우 리만 합이 각각 하합·상합(또는 그 반대)이 되며, 그 차이는 $$\lvert f(b) - f(a)\rvert\,\lVert P\rVert$$로 위에서 눌려 $$0$$으로 간다.
 
 부호 있는 넓이라는 관점은 적분 구간 위에서 함수의 부호가 바뀔 때 특히 분명해진다. 다음 예시는 한 적분이 양·음의 넓이를 상쇄하여 0이 되는 경우와, 실제 넓이를 구하려면 절댓값을 씌워야 하는 경우를 대비한다.
 
 <div class="example" markdown="1">
 
-<ins id="ex10">**예시 10 (부호 있는 넓이와 실제 넓이)**</ins> $$\displaystyle\int_0^{2\pi}\sin x\,dx = 0$$인 까닭은 $$[0,\pi]$$에서의 양의 넓이와 $$[\pi, 2\pi]$$에서의 음의 넓이가 정확히 상쇄되기 때문이다. 구간가법성(명제 4)으로 갈라 쓰면
+<ins id="ex9">**예시 9 (부호 있는 넓이와 실제 넓이)**</ins> $$\displaystyle\int_0^{2\pi}\sin x\,dx = 0$$인 까닭은 $$[0,\pi]$$에서의 양의 넓이와 $$[\pi, 2\pi]$$에서의 음의 넓이가 정확히 상쇄되기 때문이다. 구간가법성(명제 4)으로 갈라 쓰면
 
 $$\int_0^{2\pi}\sin x\,dx = \int_0^{\pi}\sin x\,dx + \int_{\pi}^{2\pi}\sin x\,dx = 2 + (-2) = 0$$
 
@@ -180,7 +161,7 @@ $$\int_0^{2\pi}\lvert \sin x\rvert\,dx = \int_0^{\pi}\sin x\,dx - \int_{\pi}^{2\
 
 <div class="example" markdown="1">
 
-<ins id="ex11">**예시 11 (적분의 상·하한 평가)**</ins> $$\displaystyle I = \int_0^1 \frac{dx}{1 + x^4}$$를 생각하자. $$[0,1]$$에서 $$0 \leq x^4 \leq 1$$이므로 $$1 \leq 1 + x^4 \leq 2$$, 따라서 피적분함수는
+<ins id="ex10">**예시 10 (적분의 상·하한 평가)**</ins> $$\displaystyle I = \int_0^1 \frac{dx}{1 + x^4}$$를 생각하자. $$[0,1]$$에서 $$0 \leq x^4 \leq 1$$이므로 $$1 \leq 1 + x^4 \leq 2$$, 따라서 피적분함수는
 
 $$\frac12 \leq \frac{1}{1 + x^4} \leq 1$$
 
@@ -196,7 +177,7 @@ $$\int_0^1 \frac12\,dx \leq I \leq \int_0^1 1\,dx, \qquad \text{즉} \quad \frac
 
 <div class="proposition" markdown="1">
 
-<ins id="prop12">**명제 12 (가중 평균값 정리)**</ins> $$f$$가 $$[a,b]$$에서 연속이고 $$g$$가 $$[a,b]$$에서 적분가능하며 부호가 일정($$g \geq 0$$)하면, 어떤 $$c \in [a,b]$$가 존재하여 $$\displaystyle\int_a^b f(x)g(x)\,dx = f(c)\int_a^b g(x)\,dx$$이다.
+<ins id="prop11">**명제 11 (가중 평균값 정리)**</ins> $$f$$가 $$[a,b]$$에서 연속이고 $$g$$가 $$[a,b]$$에서 적분가능하며 부호가 일정($$g \geq 0$$)하면, 어떤 $$c \in [a,b]$$가 존재하여 $$\displaystyle\int_a^b f(x)g(x)\,dx = f(c)\int_a^b g(x)\,dx$$이다.
 
 </div>
 
@@ -211,15 +192,11 @@ $$m\int_a^b g \leq \int_a^b fg \leq M\int_a^b g$$
 
 </details>
 
-$$g \equiv 1$$로 두면 가중 평균값 정리는 명제 5로 환원되므로, 명제 12는 평균값 정리의 진정한 일반화이다. 마지막으로, 두 곡선 사이의 넓이와 회전체의 부피를 구하는 예시 7의 공식을 구체적인 함수에 적용하여 끝맺는다.
+$$g \equiv 1$$로 두면 가중 평균값 정리는 명제 5로 환원되므로, 명제 11은 평균값 정리의 진정한 일반화이다. 마지막으로, 두 곡선 사이의 넓이와 회전체의 부피를 구하는 예시 7의 공식을 구체적인 함수에 적용하여 끝맺는다.
 
 <div class="example" markdown="1">
 
-<ins id="ex13">**예시 13 (회전체의 부피)**</ins> $$y = \sqrt{x}$$를 $$[0,1]$$에서 $$x$$축 둘레로 회전시킨 회전체의 부피는 예시 7의 공식 $$\int_a^b \pi f(x)^2\,dx$$에서 $$f(x)^2 = x$$이므로
-
-$$V = \int_0^1 \pi\bigl(\sqrt{x}\bigr)^2\,dx = \pi\int_0^1 x\,dx = \pi\cdot \frac12 = \frac{\pi}{2}$$
-
-이다 (정의로 계산한 $$\int_0^1 x = \tfrac12$$을 사용했다). 같은 방식으로 반지름 $$r$$인 반원 $$y = \sqrt{r^2 - x^2}$$를 $$[-r, r]$$에서 회전시키면
+<ins id="ex12">**예시 12 (회전체의 부피)**</ins> 반지름 $$r$$인 반원 $$y = \sqrt{r^2 - x^2}$$를 $$[-r, r]$$에서 $$x$$축 둘레로 회전시킨 회전체의 부피는 예시 7의 공식 $$\int_a^b \pi f(x)^2\,dx$$에서 $$f(x)^2 = r^2 - x^2$$이므로
 
 $$V = \int_{-r}^{r}\pi\bigl(r^2 - x^2\bigr)\,dx = \pi\left[r^2\int_{-r}^r dx - \int_{-r}^r x^2\,dx\right]$$
 
@@ -230,21 +207,21 @@ $$V = \int_{-r}^{r}\pi\bigl(r^2 - x^2\bigr)\,dx = \pi\left[r^2\int_{-r}^r dx - \
 
 ## 멱급수의 항별 적분
 
-멱급수는 수렴요경 안에서 항별로 적분할 수도 있다.
+멱급수는 수렴반경 안에서 항별로 적분할 수도 있다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop14">**명제 14 (멱급수의 항별 적분)**</ins> $$f(x) = \sum_{n=0}^\infty c_n x^n$$이 수렴요경 $$R > 0$$을 가지면, $$\lvert x\rvert < R$$에서
+<ins id="prop13">**명제 13 (멱급수의 항별 적분)**</ins> $$f(x) = \sum_{n=0}^\infty c_n x^n$$이 수렴반경 $$R > 0$$을 가지면, $$\lvert x\rvert < R$$에서
 
 $$\int_0^x f(t)\,dt = \sum_{n=0}^\infty \frac{c_n}{n+1} x^{n+1}$$
 
-이고, 이 급수의 수렴요경도 $$R$$이다.
+이고, 이 급수의 수렴반경도 $$R$$이다.
 
 </div>
 
 <div class="example" markdown="1">
 
-<ins id="ex15">**예시 15 (로그와 역탄젠트)**</ins> 기하급수 $$\dfrac{1}{1 - x} = \sum_{n=0}^\infty x^n$$ ($$\lvert x\rvert < 1$$) 을 항별 적분하면
+<ins id="ex14">**예시 14 (로그와 역탄젠트)**</ins> 기하급수 $$\dfrac{1}{1 - x} = \sum_{n=0}^\infty x^n$$ ($$\lvert x\rvert < 1$$) 을 항별 적분하면
 
 $$-\ln(1 - x) = \sum_{n=1}^\infty \frac{x^n}{n} \quad\Longrightarrow\quad \ln(1+x) = \sum_{n=1}^\infty \frac{(-1)^{n-1}}{n} x^n$$
 

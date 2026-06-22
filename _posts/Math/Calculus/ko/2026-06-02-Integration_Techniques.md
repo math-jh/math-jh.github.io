@@ -156,25 +156,7 @@ $$I_n = x^n e^x - n\int x^{n-1}e^x\,dx = x^n e^x - n I_{n-1}$$
 
 <div class="example" markdown="1">
 
-<ins id="ex11">**예시 11 (정적분)**</ins> 정적분에서는 두 기법이 끝값과 함께 작동한다. 부분적분으로
-
-$$\int_1^e \ln x\,dx = \bigl[x\ln x\bigr]_1^e - \int_1^e 1\,dx = (e - 0) - (e - 1) = 1$$
-
-이고, 치환으로 ($$u = \sin x$$, $$x : 0 \to \pi/2$$일 때 $$u : 0 \to 1$$)
-
-$$\int_0^{\pi/2} \sin^2 x\cos x\,dx = \int_0^1 u^2\,du = \frac13$$
-
-이다.
-
-</div>
-
-<div class="example" markdown="1">
-
-<ins id="ex12">**예시 12 (기법의 결합)**</ins> 한 적분에 여러 기법이 함께 쓰이기도 한다. $$\displaystyle\int \frac{dx}{x^2 + x} = \int \frac{dx}{x(x+1)}$$는 부분분수로
-
-$$\int \left(\frac1x - \frac{1}{x+1}\right)dx = \ln\lvert x\rvert - \ln\lvert x+1\rvert + C = \ln\left\lvert\frac{x}{x+1}\right\rvert + C$$
-
-이고, $$\displaystyle\int x\arctan x\,dx$$는 부분적분($$u = \arctan x$$, $$v' = x$$) 후 남는 유리식을 다시 정리하여
+<ins id="ex11">**예시 11 (기법의 결합)**</ins> 한 적분에 여러 기법이 함께 쓰이기도 한다. $$\displaystyle\int x\arctan x\,dx$$는 부분적분($$u = \arctan x$$, $$v' = x$$) 후 남는 유리식을 $$\dfrac{x^2}{1+x^2} = 1 - \dfrac{1}{1+x^2}$$로 갈라 적분하여
 
 $$\int x\arctan x\,dx = \frac{x^2}{2}\arctan x - \frac12\int \frac{x^2}{1+x^2}\,dx = \frac{x^2}{2}\arctan x - \frac12\bigl(x - \arctan x\bigr) + C$$
 
