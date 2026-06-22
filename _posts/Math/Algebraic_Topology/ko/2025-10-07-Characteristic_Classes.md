@@ -11,6 +11,10 @@ sidebar:
 date: 2025-10-07
 weight: 10
 
+published: false
+
+drift_needed: true
+
 ---
 
 이전 글에서 중요한 역할을 했던 $$p:\Spe(\or_M^A)\rightarrow M$$은 covering space로, 이들은 다음과 같은 성질을 가지고 있었다. 
@@ -335,4 +339,224 @@ $$w_1^{a_1}w_2^{a_2}\cdots w_k^{a_k}$$
 
 ## 오일러 특성류
 
-지금까지 우리는 $$\mathbb{Z}/2$$-coefficient를 사용하여 orientability의 문제를 효과적으로 피해왔다. 이제 우리는 orientation까지 고려하기로 한다.
+지금까지 우리는 $$\mathbb{Z}/2$$-coefficient를 사용하여 orientability의 문제를 효과적으로 피해왔다. 이제 우리는 orientation까지 고려하기로 한다. $$\mathbb{Z}/2$$-coefficient에서는 부호를 구별할 수 없어 모든 fiber가 자동으로 "방향"을 가졌지만, $$\mathbb{Z}$$-coefficient로 넘어가면 각 fiber에 방향을 일관되게 줄 수 있는지가 문제가 되고, 그것이 가능한 경우 top Stiefel-Whitney class $$w_n$$을 정수로 들어올린 더 섬세한 불변량이 나타난다. 이것이 Euler class이다.
+
+<div class="definition" markdown="1">
+
+<ins id="def8">**정의 8**</ins> Rank $$n$$ vector bundle $$p:E\rightarrow B$$의 *orientation<sub>방향</sub>*이란, 각 fiber $$p^{-1}(x)$$에 방향, 곧 무한순환군 $$H^n(p^{-1}(x), p^{-1}(x)\setminus 0;\mathbb{Z})\cong\mathbb{Z}$$의 한 생성원 $$u_x$$를, 국소 trivialization 위에서 연속적으로 (이웃한 fiber들끼리 일관되게) 부여하는 것이다. 이러한 방향이 존재하는 bundle을 *oriented vector bundle*이라 한다.
+
+</div>
+
+방향을 준다는 것은 각 fiber $$\cong \mathbb{R}^n$$의 두 방향 중 하나를 연속적으로 고르는 것으로, 구조군을 $$\GL(n;\mathbb{R})$$에서 행렬식이 양수인 부분군 $$\GL^+(n;\mathbb{R})$$로 줄이는 것과 같다. 모든 bundle이 방향을 갖지는 않으며, $$E$$가 orientable인 것은 정확히 $$w_1(E)=0$$ ([정의 5](#def5)) 인 것과 동치이다. 곧 첫 Stiefel-Whitney class가 방향에 대한 obstruction이다. 앞으로 이 절에서 다루는 bundle은 모두 oriented인 것으로 가정한다.
+
+방향이 주어지면 fiber마다 흩어져 있던 생성원 $$u_x$$들이 하나의 대역적 cohomology class로 묶인다.
+
+<div class="proposition" markdown="1">
+
+<ins id="thm9">**정리 9 (Thom 동형)**</ins> Oriented rank $$n$$ vector bundle $$p:E\rightarrow B$$에 대하여 $$E_0=E\setminus s_0(B)$$를 zero section을 제거한 부분공간이라 하자. 그럼 유일한 *Thom class* $$u\in H^n(E, E_0;\mathbb{Z})$$가 존재하여, 각 $$x\in B$$에 대해 $$u$$를 $$(p^{-1}(x), p^{-1}(x)\setminus 0)$$로 제한한 것이 방향 생성원 $$u_x$$이다. 더 나아가 cup product와 pullback의 합성
+
+$$H^k(B;\mathbb{Z})\xrightarrow{\ \cong\ }H^{k+n}(E, E_0;\mathbb{Z}),\qquad \alpha\longmapsto p^\ast\alpha\smile u$$
+
+는 모든 $$k$$에 대하여 isomorphism이다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+자세한 증명은 [MS]의 §10을 따른다. 핵심만 적으면, $$E$$가 trivial bundle $$B\times\mathbb{R}^n$$일 경우 pair $$(E, E_0)=(B\times\mathbb{R}^n, B\times(\mathbb{R}^n\setminus 0))$$이고, relative Künneth 정리에 의하여
+
+$$H^{k+n}(B\times\mathbb{R}^n, B\times(\mathbb{R}^n\setminus 0))\cong H^k(B)\otimes H^n(\mathbb{R}^n,\mathbb{R}^n\setminus 0)$$
+
+인데 우변의 둘째 인자는 $$\mathbb{Z}$$로 생성되는 무한순환군이고, 그 생성원이 fiber의 방향 $$u_x$$이다. 따라서 trivial bundle에서는 $$u=1\otimes u_x$$가 Thom class이고 위 사상이 isomorphism이다. 일반적인 경우는 trivialize되는 open cover를 잡아 Mayer-Vietoris로 국소 isomorphism들을 이어붙이며, 방향의 연속성이 국소 Thom class들이 부호 충돌 없이 하나의 대역적 $$u$$로 붙음을 보장한다.
+
+</details>
+
+Thom class는 zero section 근방에 집중된 fiber 방향의 cohomological 화신이다. 이를 다시 base로 끌어내리면 Euler class를 얻는다.
+
+<div class="definition" markdown="1">
+
+<ins id="def10">**정의 10**</ins> Oriented rank $$n$$ vector bundle $$E\rightarrow B$$의 *Euler 특성류<sub>Euler class</sub>* $$e(E)\in H^n(B;\mathbb{Z})$$를, zero section $$s:B\rightarrow E$$와 Thom class $$u$$ ([정리 9](#thm9)) 에 대하여
+
+$$e(E)=s^\ast\bigl(j^\ast u\bigr)$$
+
+로 정의한다. 여기서 $$j^\ast:H^n(E, E_0)\rightarrow H^n(E)$$는 pair에서 $$E$$ 전체로 가는 restriction이고, $$s^\ast:H^n(E)\xrightarrow{\cong}H^n(B)$$는 $$p$$가 homotopy equivalence이므로 isomorphism이다.
+
+</div>
+
+직관적으로 $$e(E)$$는 generic section이 zero section과 만나는 자리를 cohomology로 적은 것이다. Thom class $$u$$는 zero section을 Poincaré dual처럼 표현하므로, 그것을 base로 당긴 $$e(E)$$는 "section의 영점 자취"의 대수적 그림자이다. 다음 명제가 이 직관을 정당화한다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop11">**명제 11**</ins> Euler class는 다음을 만족한다.
+
+1. (Naturality) 임의의 $$f:B'\rightarrow B$$에 대하여 $$e(f^\ast E)=f^\ast e(E)$$이다.
+2. (Whitney) 두 oriented bundle에 대하여 $$e(E\oplus F)=e(E)\smile e(F)$$이다.
+3. (Vanishing) $$E$$가 어디서도 $$0$$이 되지 않는 section을 가지면 $$e(E)=0$$이다. 특히 trivial bundle은 $$e=0$$이다.
+4. (Mod 2 환원) $$e(E)$$의 $$\mathbb{Z}/2$$-환원은 top Stiefel-Whitney class $$w_n(E)$$ ([정의 5](#def5)) 이다.
+5. (방향 반전) 방향을 뒤집으면 $$e(E)$$의 부호가 바뀐다. 따라서 $$n$$이 홀수이면 $$2e(E)=0$$이다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+(1)은 Thom class가 pullback과 호환되는 데서, (2)는 두 bundle의 Thom class의 external product가 Whitney sum의 Thom class가 되는 데서 나온다 ([MS] §9–10).
+
+(3)을 보자. 어디서도 $$0$$이 아닌 section $$s':B\rightarrow E_0$$이 존재한다 하자. 직선 homotopy $$t\mapsto t\cdot s'$$는 $$E$$ 안에서 zero section $$s$$와 $$s'$$를 잇는 homotopy이므로 $$s^\ast=s'^\ast:H^n(E)\rightarrow H^n(B)$$이다. 한편 $$s'$$은 $$i:E_0\hookrightarrow E$$를 거쳐 가는데, pair의 long exact sequence에서 합성 $$H^n(E, E_0)\xrightarrow{j^\ast}H^n(E)\xrightarrow{i^\ast}H^n(E_0)$$이 $$0$$이므로 $$i^\ast(j^\ast u)=0$$, 곧 $$j^\ast u$$가 $$E_0$$ 위에서 소멸한다. $$s'$$이 $$E_0$$를 거치므로 $$s'^\ast(j^\ast u)=0$$이고, 따라서 $$e(E)=s^\ast(j^\ast u)=s'^\ast(j^\ast u)=0$$이다.
+
+(4)는 Thom class의 $$\mathbb{Z}/2$$-환원이 정확히 Stiefel-Whitney class를 정의하는 Thom class이기 때문이며 ([MS] §8), restriction이 환원과 교환하므로 $$e(E)\bmod 2=w_n(E)$$이다. (5)에서 fiber마다 방향을 뒤집으면 모든 $$u_x$$의 부호가 바뀌어 $$u\mapsto -u$$, 따라서 $$e\mapsto -e$$이다. $$n$$이 홀수이면 fiber의 반사 $$v\mapsto -v$$가 행렬식 $$(-1)^n=-1$$로 방향을 뒤집는 bundle automorphism을 주므로, 이 automorphism이 $$e=-e$$를 강제하여 $$2e(E)=0$$이다.
+
+</details>
+
+Euler class라는 이름은 그것이 재는 양에서 온다. $$M$$이 닫힌 oriented $$n$$-manifold이고 $$E=TM$$이 그 tangent bundle이면, $$e(TM)$$을 fundamental class $$[M]$$ ([§푸앵카레 쌍대성, ⁋정리 11](/ko/math/algebraic_topology/Poincare_duality#thm11)) 위에서 평가한 값이 정확히 Euler characteristic $$\chi(M)$$이다. 이는 generic vector field의 영점을 부호와 함께 센 것 (Poincaré–Hopf 정리) 과 같다. 곧 Euler class는 "이 bundle이 nonvanishing section을 허락하는가, 못 한다면 얼마나 못 하는가"를 재는 obstruction이며, tangent bundle의 경우 그 답이 위상적 불변량 $$\chi(M)$$으로 나타난다.
+
+## Gysin 완전열
+
+Euler class는 sphere bundle의 cohomology를 base의 cohomology와 잇는 완전열을 통해 계산과 직결된다. 이 완전열은 다음 절에서 Chern class를 정의하는 사다리가 된다.
+
+<div class="proposition" markdown="1">
+
+<ins id="thm12">**정리 12 (Gysin 완전열)**</ins> Oriented rank $$n$$ vector bundle $$E\rightarrow B$$의 sphere bundle $$\pi:S(E)\rightarrow B$$ (각 fiber가 $$S^{n-1}$$) 에 대하여, 다음의 long exact sequence
+
+$$\cdots\rightarrow H^{k-n}(B)\xrightarrow{\ \smile\, e\ }H^k(B)\xrightarrow{\ \pi^\ast\ }H^k(S(E))\xrightarrow{\ \pi_!\ }H^{k-n+1}(B)\rightarrow H^{k+1}(B)\rightarrow\cdots$$
+
+가 존재한다. 여기서 $$e=e(E)$$는 Euler class, $$\pi^\ast$$는 pullback, $$\pi_!$$는 fiber를 따른 적분 (pushforward) 이다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+Disk bundle $$D(E)$$는 zero section을 따라 $$B$$로 deformation retract되고, 그 경계 sphere bundle $$S(E)$$와의 pair $$(D(E), S(E))$$는 radial 변형으로 $$(E, E_0)$$와 homotopy equivalent하다. Pair $$(D(E), S(E))$$의 cohomology long exact sequence
+
+$$\cdots\rightarrow H^k(D(E), S(E))\rightarrow H^k(D(E))\rightarrow H^k(S(E))\xrightarrow{\ \delta\ }H^{k+1}(D(E), S(E))\rightarrow\cdots$$
+
+에서 세 항을 Thom 동형과 retraction으로 바꿔 적는다. $$H^k(D(E), S(E))\cong H^k(E, E_0)\cong H^{k-n}(B)$$는 [정리 9](#thm9)의 Thom 동형이고, $$H^k(D(E))\cong H^k(B)$$는 retraction이다. 첫째 사상 $$H^{k-n}(B)\rightarrow H^k(B)$$는 Thom 동형 $$\alpha\mapsto p^\ast\alpha\smile u$$ 뒤에 $$j^\ast$$를 합성한 것인데, 이는 정확히 $$\alpha\mapsto \alpha\smile e(E)$$이다 ($$j^\ast u$$를 base로 당긴 것이 $$e$$이므로). 둘째 사상 $$H^k(D(E))=H^k(B)\rightarrow H^k(S(E))$$는 restriction, 곧 $$\pi^\ast$$이다. 연결사상 $$\delta$$를 Thom 동형 $$H^{k+1}(D(E), S(E))\cong H^{k-n+1}(B)$$로 옮긴 것을 $$\pi_!$$로 둔다. 이로써 위 완전열을 얻는다.
+
+</details>
+
+특히 $$k<n-1$$이면 $$H^{k-n}(B)=0$$이고 $$H^{k-n+1}(B)=0$$이므로 $$\pi^\ast:H^k(B)\xrightarrow{\cong}H^k(S(E))$$가 isomorphism이다. 곧 sphere bundle의 낮은 차원 cohomology는 base의 것과 같고, 차원이 fiber의 크기 $$n-1$$에 다다르는 순간부터 Euler class와의 cup product가 그 차이를 지배한다. 이 "낮은 차원에서의 isomorphism"이 다음 절의 핵심 도구이다.
+
+## 천 특성류
+
+지금까지의 Stiefel-Whitney class와 Euler class는 실 vector bundle의 불변량이었다. 복소 vector bundle, 곧 각 fiber가 $$\mathbb{C}^n$$이고 transition function이 $$\GL(n;\mathbb{C})$$에 속하는 bundle은 추가 구조 덕분에 $$\mathbb{Z}$$-coefficient에서 더 풍부한 불변량을 가지며, 이것이 *Chern class*이다.
+
+복소 rank $$n$$ bundle $$\omega\rightarrow B$$는 $$\mathbb{C}^n\cong\mathbb{R}^{2n}$$으로 보아 underlying 실 rank $$2n$$ bundle $$\omega_{\mathbb{R}}$$를 준다. 결정적으로 복소구조는 $$\omega_{\mathbb{R}}$$에 표준 방향을 부여한다. $$\mathbb{C}$$-기저 $$v_1,\ldots,v_n$$으로부터 만든 실 기저 $$v_1, iv_1,\ldots, v_n, iv_n$$의 방향은 기저의 선택에 의존하지 않는데, 이는 $$\GL(n;\mathbb{C})$$가 connected이어서 그 작용이 항상 $$\GL^+(2n;\mathbb{R})$$ 안에 들어가기 때문이다. 따라서 $$\omega_{\mathbb{R}}$$는 표준적으로 oriented이고 Euler class $$e(\omega_{\mathbb{R}})\in H^{2n}(B;\mathbb{Z})$$를 가진다. 이를 출발점으로 삼아, Gysin 완전열을 타고 내려가며 낮은 차수의 Chern class들을 차례로 정의한다.
+
+이를 위해 deleted total space $$\omega_0=E(\omega)\setminus s_0(B)$$를 본다. $$\omega_0$$의 한 점은 fiber $$F=\omega_x$$와 그 안의 nonzero vector $$v\in F$$의 쌍이다. 이 점 위에 $$v$$의 (Hermitian 내적에 대한) orthogonal complement $$v^\perp\subseteq F$$를 달아주면, $$\omega_0$$ 위의 canonical 복소 rank $$(n-1)$$ bundle $$\omega^\perp$$가 정의된다. 한편 $$\omega_0$$는 $$\omega_{\mathbb{R}}$$의 sphere bundle $$S(\omega_{\mathbb{R}})$$ (fiber $$S^{2n-1}$$) 와 homotopy equivalent하므로, [정리 12](#thm12)의 Gysin 완전열
+
+$$\cdots\rightarrow H^{k-2n}(B)\xrightarrow{\ \smile\, e\ }H^k(B)\xrightarrow{\ \pi_0^\ast\ }H^k(\omega_0)\rightarrow H^{k-2n+1}(B)\rightarrow\cdots$$
+
+이 성립한다. $$k\leq 2n-2$$이면 양 끝의 $$H^{k-2n}(B)$$와 $$H^{k-2n+1}(B)$$가 모두 음의 차수라 $$0$$이므로, $$\pi_0^\ast:H^k(B)\xrightarrow{\cong}H^k(\omega_0)$$는 isomorphism이다.
+
+<div class="definition" markdown="1">
+
+<ins id="def13">**정의 13**</ins> 복소 rank $$n$$ vector bundle $$\omega\rightarrow B$$의 *Chern 특성류<sub>Chern class</sub>* $$c_i(\omega)\in H^{2i}(B;\mathbb{Z})$$를 $$n$$에 대한 귀납으로 다음과 같이 정의한다. $$c_0(\omega)=1$$이고, $$i>n$$이면 $$c_i(\omega)=0$$이다. 최고차 class는 underlying oriented 실 bundle의 Euler class
+
+$$c_n(\omega)=e(\omega_{\mathbb{R}})\in H^{2n}(B;\mathbb{Z})$$
+
+로 둔다. $$0<i<n$$에 대해서는, 위에서 만든 deleted total space $$\omega_0$$ 위의 canonical 복소 rank $$(n-1)$$ bundle $$\omega^\perp$$가 귀납가정에 의해 Chern class $$c_i(\omega^\perp)\in H^{2i}(\omega_0)$$를 가지므로, isomorphism $$\pi_0^\ast:H^{2i}(B)\xrightarrow{\cong}H^{2i}(\omega_0)$$ ($$2i\leq 2n-2$$이라 [정리 12](#thm12)로 isomorphism) 를 통해
+
+$$\pi_0^\ast\, c_i(\omega)=c_i(\omega^\perp)$$
+
+를 만족하는 유일한 $$c_i(\omega)\in H^{2i}(B)$$로 정의한다. 이들을 모두 더한 $$c(\omega)=1+c_1(\omega)+\cdots+c_n(\omega)\in H^\bullet(B;\mathbb{Z})$$를 *total Chern class*라 한다.
+
+</div>
+
+정의가 잘 됨은 구성에 내장되어 있다. $$\pi_0^\ast$$가 해당 차수에서 isomorphism이므로 $$c_i(\omega)$$는 $$c_i(\omega^\perp)$$로부터 유일하게 결정된다. 이 정의의 기하학적 뜻은 명료하다. 복소 bundle에서 nonzero vector $$v$$를 하나 고르는 일은 rank를 하나 떨어뜨려 $$v^\perp$$라는 rank $$(n-1)$$ bundle을 남기는데, 그 일이 일어나는 무대가 바로 deleted space $$\omega_0$$이다. 거기서 한 단계 작은 bundle의 Chern class를 읽고, Gysin 완전열이 보장하는 낮은 차수에서의 isomorphism으로 base까지 끌어내리는 것이다. 최고차에서는 더 내려갈 곳이 없어 Euler class가 그 자리를 직접 채운다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop14">**명제 14**</ins> Chern class는 다음을 만족한다.
+
+1. (Naturality) 임의의 $$f:B'\rightarrow B$$에 대하여 $$c(f^\ast\omega)=f^\ast c(\omega)$$이다.
+2. $$c_0(\omega)=1$$이고, $$i>\rank_{\mathbb{C}}\omega$$이면 $$c_i(\omega)=0$$이다.
+3. (최고차) $$c_n(\omega)=e(\omega_{\mathbb{R}})$$이며, 따라서 $$\omega$$가 nonzero section을 가지면 $$c_n(\omega)=0$$이다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+(2)와 (3)은 정의 그 자체이며, $$c_n=e(\omega_{\mathbb{R}})$$의 vanishing은 [명제 11](#prop11)의 (3)이다. (1)은 $$n$$에 대한 귀납으로 본다. $$c_n$$의 naturality는 Euler class의 naturality ([명제 11](#prop11)의 (1)) 이다. $$0<i<n$$에서는 $$f$$가 deleted space와 complement bundle, 그리고 Gysin 완전열 전체와 호환되는 사상 $$\omega_0'\rightarrow\omega_0$$을 유도하고, 그 위에서 $$f^\ast(\omega^\perp)\cong(f^\ast\omega)^\perp$$이므로 귀납가정과 $$\pi_0^\ast$$의 자연성으로부터 $$c_i$$의 naturality가 따라온다.
+
+</details>
+
+Whitney sum에 대한 곱 공식은 Chern class의 가장 중요한 계산 도구이다. 그 증명은 *splitting principle*에 기댄다.
+
+<div class="proposition" markdown="1">
+
+<ins id="thm15">**정리 15 (Whitney 합 공식)**</ins> 두 복소 vector bundle $$\omega,\omega'\rightarrow B$$에 대하여
+
+$$c(\omega\oplus\omega')=c(\omega)\smile c(\omega')$$
+
+가 성립한다. 곧 모든 $$k$$에 대하여 $$c_k(\omega\oplus\omega')=\sum_{i+j=k}c_i(\omega)\smile c_j(\omega')$$이다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+*Splitting principle* ([MS] §14, [BT]) 에 의하면, 임의의 복소 bundle $$\omega\rightarrow B$$에 대하여 연속함수 $$\rho:F(\omega)\rightarrow B$$가 존재하여 (flag bundle을 택한다) pullback $$\rho^\ast:H^\bullet(B)\hookrightarrow H^\bullet(F(\omega))$$가 단사이고, $$\rho^\ast\omega$$가 복소 line bundle들의 Whitney sum $$L_1\oplus\cdots\oplus L_n$$으로 쪼개진다. Naturality와 $$\rho^\ast$$의 단사성에 의해 공식은 모든 bundle을 line bundle들의 합으로 가정하고 증명해도 충분하다.
+
+Line bundle들에 대해서는, 두 line bundle $$L,L'$$에 대해 $$c(L\oplus L')=c(L)c(L')$$, 곧 $$c_1(L\oplus L')=c_1(L)+c_1(L')$$이고 $$c_2(L\oplus L')=c_1(L)\smile c_1(L')$$임을 보이면 된다. 이는 universal example $$\CP^\infty\times\CP^\infty$$ 위에서 두 tautological line bundle의 합에 대해 직접 확인되며 ([예시 16](#ex16)에서 $$H^\bullet(\CP^\infty)=\mathbb{Z}[c_1]$$), 일반적인 경우는 분류사상으로 pullback하여 얻는다. 귀납적으로 임의 개수의 line bundle의 합으로 확장된다.
+
+</details>
+
+이 공식과 더불어 Chern class를 떠받치는 기본 예시는 복소 projective space 위의 tautological bundle이다.
+
+<div class="example" markdown="1">
+
+<ins id="ex16">**예시 16**</ins> [예시 3](#ex3)의 실 tautological line bundle을 복소화한 것으로, $$\CP^\infty=\Gr_1(\mathbb{C}^\infty)$$ 위의 tautological 복소 line bundle $$\gamma$$를 생각하자. (이는 앞 절에서 실 Grassmannian $$\Gr_k(\mathbb{R}^\infty)$$를 만든 것과 같은 방식으로 $$\mathbb{C}$$ 위에서 만든 infinite Grassmannian이며, $$\Gr_1$$이므로 복소 projective space이다.) 그 first Chern class $$c_1(\gamma)$$는 $$H^2(\CP^\infty;\mathbb{Z})\cong\mathbb{Z}$$의 생성원이고,
+
+$$H^\bullet(\CP^\infty;\mathbb{Z})=\mathbb{Z}[c_1(\gamma)]$$
+
+는 $$c_1(\gamma)$$가 생성하는 polynomial ring이다. 임의의 복소 line bundle은 $$\gamma$$의 pullback으로 유일하게 얻어지므로, first Chern class는 일대일 대응
+
+$$\{B\text{ 위의 복소 line bundle}\}/\cong\ \xrightarrow{\ c_1\ }\ H^2(B;\mathbb{Z})$$
+
+를 주며, 이는 tensor product를 덧셈으로 보내는 group isomorphism이다. 곧 복소 line bundle의 모든 정보가 $$c_1$$ 하나에 담긴다.
+
+</div>
+
+더 일반적으로 실 Grassmannian의 자리를 복소 Grassmannian $$\Gr_n(\mathbb{C}^\infty)$$이 대신하고, 그 cohomology ring은
+
+$$H^\bullet(\Gr_n(\mathbb{C}^\infty);\mathbb{Z})=\mathbb{Z}[c_1,\ldots,c_n]$$
+
+으로 universal bundle의 Chern class들이 생성하는 polynomial ring이 된다 ([MS] §14). 이는 Stiefel-Whitney class에서 $$H^\bullet(\Gr_k(\mathbb{R}^\infty);\mathbb{Z}/2)=\mathbb{Z}/2[w_1,\ldots,w_k]$$이 했던 역할의 정수·복소 판본이며, 복소 bundle의 모든 특성류가 Chern class들의 다항식임을 뜻한다.
+
+## 폰트랴긴 특성류
+
+실 bundle에 대해서도 $$\mathbb{Z}$$-coefficient의 불변량을 복소 Chern class를 거쳐 얻을 수 있다.
+
+<div class="definition" markdown="1">
+
+<ins id="def17">**정의 17**</ins> 실 vector bundle $$E\rightarrow B$$의 *Pontryagin 특성류<sub>Pontryagin class</sub>* $$p_i(E)\in H^{4i}(B;\mathbb{Z})$$를, 복소화 $$E\otimes_{\mathbb{R}}\mathbb{C}$$의 Chern class로
+
+$$p_i(E)=(-1)^i\, c_{2i}(E\otimes_{\mathbb{R}}\mathbb{C})$$
+
+로 정의한다.
+
+</div>
+
+복소화한 bundle $$E\otimes_{\mathbb{R}}\mathbb{C}$$는 그 켤레 $$\overline{E\otimes\mathbb{C}}$$와 isomorphic한데, 켤레는 홀수 Chern class의 부호를 바꾸므로 $$c_{2i+1}(E\otimes\mathbb{C})$$들은 모두 $$2$$-torsion이 되어 ($$2c_{2i+1}=0$$) 본질적 정수 정보를 담지 못한다. 따라서 짝수 자리의 Chern class만 살아남고, 부호 $$(-1)^i$$를 붙여 $$p_i$$로 정의한 것이다. Pontryagin class는 $$H^{4i}(B;\mathbb{Z})$$에 살며, Stiefel-Whitney class가 $$\mathbb{Z}/2$$에서 하던 일의 실 bundle 정수 판본을 $$4$$의 배수 차수에서 수행한다.
+
+## 특성류와 분류공간
+
+지금까지 본 네 종류의 특성류는 하나의 공통된 틀에서 나온다. 특성류란, 각 공간 $$B$$ 위의 (구조군 $$G$$를 갖는) bundle의 isomorphism class마다 $$H^\bullet(B)$$의 원소를 자연스럽게, 곧 pullback과 호환되도록 배정하는 규칙이다. 그런데 이러한 자연스러운 배정은 universal bundle을 통해 단 하나의 공간의 cohomology로 환원된다. 앞서 보았듯 임의의 rank $$k$$ 실 bundle은 $$\Gr_k(\mathbb{R}^\infty)$$ 위의 universal bundle의 pullback이고, 복소 rank $$n$$ bundle은 $$\Gr_n(\mathbb{C}^\infty)$$ 위의 것의 pullback이다. 이 공간들은 구조군 $$G$$의 *classifying space<sub>분류공간</sub>* $$BG$$이며, 구체적으로
+
+$$\Gr_k(\mathbb{R}^\infty)=B\mathrm{O}(k),\qquad \Gr_n(\mathbb{C}^\infty)=B\mathrm{U}(n)$$
+
+이고, oriented bundle의 경우 $$B\mathrm{SO}(k)$$가 그 자리를 차지한다. 따라서 rank $$k$$ bundle의 isomorphism class는 $$B$$에서 $$BG$$로의 homotopy class $$[B, BG]$$와 일대일 대응하고, 특성류는 정확히 $$BG$$의 cohomology ring의 원소
+
+$$H^\bullet(B\mathrm{O}(k);\mathbb{Z}/2)=\mathbb{Z}/2[w_1,\ldots,w_k],\qquad H^\bullet(B\mathrm{U}(n);\mathbb{Z})=\mathbb{Z}[c_1,\ldots,c_n]$$
+
+이 분류사상으로 pullback된 것이다. Euler class는 $$B\mathrm{SO}$$의 cohomology에 사는 정수류이다. 이 관점에서 특성류 이론이란 분류공간의 cohomology를 계산하는 일에 다름 아니다.
+
+그렇다면 특성류는 무엇을 재는가. 한마디로 그것은 bundle이 trivial bundle로부터 얼마나 *꼬여 있는가*를 재는 obstruction이다. $$w_1$$은 방향을 줄 수 있는가에 대한 obstruction이고, $$w_2$$는 (방향이 있을 때) spin 구조에 대한 obstruction이다. 더 일반적으로 $$w_i$$와 $$c_i$$는 [명제 4](#prop4)에서 보았듯 일정 개수의 everywhere linearly independent section을 고르는 일에 대한 obstruction이며, 그것이 $$0$$이 아니면 그만큼의 독립 section이 존재할 수 없다. 최고차류인 Euler class와 top Chern class는 nonvanishing section 하나조차 존재하는가를 재고, tangent bundle의 경우 그 값이 Euler characteristic $$\chi(M)$$으로 나타나 vector field의 영점 개수를 지배한다. first Chern class는 한 걸음 더 나아가 복소 line bundle 전체를 완벽히 분류한다 ([예시 16](#ex16)). 이렇게 특성류는 "이 bundle은 얼마나, 어떻게 비틀려 있는가"라는 기하학적 물음을 $$H^\bullet(B)$$ 안의 계산 가능한 대수적 불변량으로 번역한다. 같은 류가 미분기하에서는 connection의 곡률로 ([\[대수다양체\] §천 특성류](/ko/math/algebraic_varieties/chern_classes)의 대수기하적 구성, 그리고 Chern–Weil 이론), 위상수학에서는 분류공간의 cohomology로 실현되며, 이 두 그림이 일치한다는 사실이 특성류 이론의 깊이를 이룬다.
+
+---
+
+**참고문헌**
+
+**[MS]** J. W. Milnor and J. D. Stasheff, *Characteristic Classes*, Annals of Mathematics Studies 76, Princeton University Press, 1974.
+
+**[BT]** R. Bott and L. W. Tu, *Differential Forms in Algebraic Topology*, Springer, 1982.
+
+**[Hat]** A. Hatcher, *Vector Bundles and K-Theory*, online notes, 2017.
