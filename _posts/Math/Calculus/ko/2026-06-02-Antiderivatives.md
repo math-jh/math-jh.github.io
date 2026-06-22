@@ -64,7 +64,7 @@ $$\int \bigl(a f(x) + b g(x)\bigr)\,dx = a\int f(x)\,dx + b\int g(x)\,dx$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$F, G$$를 각각 $$f, g$$의 원시함수라 하면, 미분의 선형성 ([§미분과 도함수, ⁋명제 3](/ko/math/calculus/derivatives#prop3))에 의해
+$$F, G$$를 각각 $$f, g$$의 원시함수라 하면, 미분의 선형성 ([§미분과 도함수, ⁋명제 6](/ko/math/calculus/derivatives#prop6))에 의해
 
 $$(aF + bG)' = aF' + bG' = af + bg$$
 
