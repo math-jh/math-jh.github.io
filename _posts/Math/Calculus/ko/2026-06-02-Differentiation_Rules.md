@@ -37,7 +37,7 @@ $$(fg)'(a) = f'(a)\,g(a) + f(a)\,g'(a)$$
 
 $$\frac{f(a+h)g(a+h) - f(a)g(a)}{h} = \frac{f(a+h)-f(a)}{h}\,g(a+h) + f(a)\,\frac{g(a+h)-g(a)}{h}$$
 
-$$h \to 0$$일 때 첫 항의 차분몫은 $$f'(a)$$로, $$g(a+h)$$는 $$g$$의 연속성 ([§미분과 도함수, ⁋명제 2](/ko/math/calculus/derivatives#prop2))에 의해 $$g(a)$$로 수렴한다. 둘째 항의 차분몫은 $$g'(a)$$로 수렴한다. 극한법칙 ([§함수와 극한, ⁋명제 4](/ko/math/calculus/functions_and_limits#prop4))에 의해 합은 $$f'(a)g(a) + f(a)g'(a)$$로 수렴한다.
+$$h \to 0$$일 때 첫 항의 차분몫은 $$f'(a)$$로, $$g(a+h)$$는 $$g$$의 연속성 ([§미분과 도함수, ⁋명제 5](/ko/math/calculus/derivatives#prop5))에 의해 $$g(a)$$로 수렴한다. 둘째 항의 차분몫은 $$g'(a)$$로 수렴한다. 극한법칙 ([§함수와 극한, ⁋명제 4](/ko/math/calculus/functions_and_limits#prop4))에 의해 합은 $$f'(a)g(a) + f(a)g'(a)$$로 수렴한다.
 
 </details>
 
@@ -256,7 +256,7 @@ $$2x + 2y\,\frac{dy}{dx} = 0 \quad\Longrightarrow\quad \frac{dy}{dx} = -\frac{x}
 
 <div class="proposition" markdown="1">
 
-<ins id="prop7">**명제 7 (멱급수의 항별 미분)**</ins> $$f(x) = \sum_{n=0}^\infty c_n x^n$$이 수렴요경 $$R > 0$$을 가지면, $$f$$는 $$\lvert x\rvert < R$$에서 미분가능하며
+<ins id="prop12">**명제 12 (멱급수의 항별 미분)**</ins> $$f(x) = \sum_{n=0}^\infty c_n x^n$$이 수렴요경 $$R > 0$$을 가지면, $$f$$는 $$\lvert x\rvert < R$$에서 미분가능하며
 
 $$f'(x) = \sum_{n=1}^\infty n\,c_n x^{n-1}$$
 
@@ -266,7 +266,7 @@ $$f'(x) = \sum_{n=1}^\infty n\,c_n x^{n-1}$$
 
 <div class="example" markdown="1">
 
-<ins id="ex12">**예시 12**</ins> 기하급수 $$\dfrac{1}{1-x} = \sum_{n=0}^\infty x^n$$ ($$\lvert x\rvert < 1$$) 을 미분하면
+<ins id="ex13">**예시 13**</ins> 기하급수 $$\dfrac{1}{1-x} = \sum_{n=0}^\infty x^n$$ ($$\lvert x\rvert < 1$$) 을 미분하면
 
 $$\frac{1}{(1-x)^2} = \sum_{n=1}^\infty n x^{n-1}$$
 
