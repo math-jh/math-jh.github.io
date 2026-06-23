@@ -11,6 +11,8 @@ sidebar:
 date: 2026-06-02
 weight: 10
 
+drift_needed: true
+
 published: false
 ---
 
@@ -29,7 +31,7 @@ published: false
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$f(K)$$의 점열 $$(y_n)$$을 택하면 $$y_n = f(x_n)$$인 $$x_n \in K$$이 있다. $$K$$가 점렬컴팩트이므로 $$x_{n_k} \to x \in K$$인 부분수열이 있고, $$f$$의 연속성과 점열 특징화 ([§함수의 극한과 연속, ⁋명제 2](/ko/math/analysis/limits_and_continuity#prop2))에 의해
+$$f(K)$$의 점열 $$(y_n)$$을 택하면 $$y_n = f(x_n)$$인 $$x_n \in K$$이 있다. $$K$$가 점렬컴팩트이므로 $$x_{n_k} \to x \in K$$인 부분수열이 있고, $$f$$의 연속성과 [§함수의 극한과 연속, ⁋명제 2](/ko/math/analysis/limits_and_continuity#prop2)에 의해
 
 $$y_{n_k} = f(x_{n_k}) \longrightarrow f(x) \in f(K)$$
 
@@ -37,11 +39,11 @@ $$y_{n_k} = f(x_{n_k}) \longrightarrow f(x) \in f(K)$$
 
 </details>
 
-증명에서 본질적으로 쓰인 것은 연속성의 점열 특징화 하나뿐이며, 정의역과 공역의 차원이나 구체적 구조는 전혀 개입하지 않는다. 그 결과 정리 1은 임의의 거리공간 사이의 연속함수에 그대로 적용된다. 한편 컴팩트성과 달리 닫힘이나 유계성은 연속함수가 보존하지 않음을 유의해야 한다 — 예컨대 $$f(x) = \arctan x$$는 닫힌집합 $$\mathbb{R}$$를 유계인 열린구간 $$(-\tfrac\pi2, \tfrac\pi2)$$로 보내고, $$g(x) = 1/x$$는 유계가 아닌 닫힌집합 $$(0, 1]$$ 위에서 유계가 아닌 상을 만든다. 컴팩트성이 닫힘과 유계의 결합이라는 점([§컴팩트성, ⁋정리 2](/ko/math/analysis/compactness#thm2))을 떠올리면, 두 성질이 따로따로는 깨지지만 묶어 놓으면 보존된다는 사실이 더욱 두드러진다.
+증명에서 본질적으로 쓰인 것은 연속성의 점열 특징화 하나뿐이며, 정의역과 공역의 차원이나 구체적 구조는 전혀 개입하지 않는다. 그 결과 [정리 1](#thm1)은 임의의 거리공간 사이의 연속함수에 그대로 적용된다. 한편 컴팩트성과 달리 닫힘이나 유계성은 연속함수가 보존하지 않음을 유의해야 한다 — 예컨대 $$f(x) = \arctan x$$는 닫힌집합 $$\mathbb{R}$$를 유계인 열린구간 $$(-\pi/2, \pi/2)$$로 보내고, $$g(x) = 1/x$$는 유계가 아닌 닫힌집합 $$(0, 1]$$ 위에서 유계가 아닌 상을 만든다. 컴팩트성이 닫힘과 유계의 결합이라는 점([§컴팩트성, ⁋정리 2](/ko/math/analysis/compactness#thm2))을 떠올리면, 두 성질이 따로따로는 깨지지만 묶어 놓으면 보존된다는 사실이 더욱 두드러진다.
 
 ## 최대·최소 정리
 
-실숫값 연속함수에 정리 1을 적용하면 최댓값과 최솟값의 존재가 곧바로 따른다. 핵심 관찰은 $$\mathbb{R}$$의 점렬컴팩트 부분집합이 자신의 상한과 하한을 원소로 포함한다는 것이다. 닫혀 있고 유계인 집합은 상·하한이 존재하며, 닫힘 때문에 그 극한값이 집합 안에 들어오기 때문이다. 따라서 $$f$$의 상 $$f(K)$$가 점렬컴팩트라는 정리 1의 결론만으로 최댓값·최솟값이 실현된다.
+실숫값 연속함수에 [정리 1](#thm1)을 적용하면 최댓값과 최솟값의 존재가 곧바로 따른다. 핵심 관찰은 $$\mathbb{R}$$의 점렬컴팩트 부분집합이 자신의 상한과 하한을 원소로 포함한다는 것이다. 닫혀 있고 유계인 집합은 상·하한이 존재하며, 닫힘 때문에 그 극한값이 집합 안에 들어오기 때문이다. 따라서 $$f$$의 상 $$f(K)$$가 점렬컴팩트라는 [정리 1](#thm1)의 결론만으로 최댓값·최솟값이 실현된다.
 
 <div class="proposition" markdown="1">
 
@@ -52,7 +54,7 @@ $$y_{n_k} = f(x_{n_k}) \longrightarrow f(x) \in f(K)$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-정리 1에 의해 $$f(K) \subseteq \mathbb{R}$$는 점렬컴팩트이고, 하이네–보렐 정리 ([§컴팩트성, ⁋정리 2](/ko/math/analysis/compactness#thm2))에 의해 닫혀 있고 유계이다. 유계이므로
+[정리 1](#thm1)에 의해 $$f(K) \subseteq \mathbb{R}$$는 점렬컴팩트이고, [§컴팩트성, ⁋정리 2](/ko/math/analysis/compactness#thm2) 정리 ([§컴팩트성, ⁋정리 2](/ko/math/analysis/compactness#thm2))에 의해 닫혀 있고 유계이다. 유계이므로
 
 $$M = \sup f(K)$$
 
@@ -64,7 +66,7 @@ $$M - \tfrac1n < y_n \leq M, \qquad y_n \in f(K)$$
 
 </details>
 
-이로써 [\[미적분학\] §연속함수, ⁋정리 4](/ko/math/calculus/continuity#thm4)에서 받아들였던 최대·최소 정리가 완비성에 기초하여 증명되었고, 그것에 의존하던 [\[미적분학\] §평균값 정리](/ko/math/calculus/mean_value_theorem)의 롤의 정리도 정당화된다.
+이로써 최대·최소 정리에서 받아들였던 최대·최소 정리가 완비성에 기초하여 증명되었고, 그것에 의존하던 평균값 정리](/ko/math/calculus/mean_value_theorem)의 롤의 정리도 정당화된다.
 
 ## 균등연속성
 
@@ -103,7 +105,7 @@ $$d_X(x_n, x_n') < \tfrac1n \quad\text{이면서}\quad d_Y\bigl(f(x_n), f(x_n')\
 
 $$d_X(x_{n_k}', x) \leq d_X(x_{n_k}', x_{n_k}) + d_X(x_{n_k}, x) < \tfrac{1}{n_k} + d_X(x_{n_k}, x) \longrightarrow 0$$
 
-이므로 같은 $$x$$로 수렴한다. 그런데 연속성과 점열 특징화에 의해
+이므로 같은 $$x$$로 수렴한다. 그런데 연속성과 [§함수의 극한과 연속, ⁋명제 2](/ko/math/analysis/limits_and_continuity#prop2)에 의해
 
 $$\begin{aligned}
 d_Y\bigl(f(x_{n_k}), f(x_{n_k}')\bigr)
@@ -119,7 +121,7 @@ d_Y\bigl(f(x_{n_k}), f(x_{n_k}')\bigr)
 
 ## 예시와 계산
 
-이제 위 정리들이 실제로 어떻게 작동하는지, 그리고 가정이 빠졌을 때 어떻게 무너지는지를 구체적인 함수들로 확인한다. 먼저 최대·최소 정리의 두 가정 — 정의역의 컴팩트성과 함수의 연속성 — 이 각각 필수임을 본다.
+먼저 최대·최소 정리의 두 가정인 정의역의 컴팩트성과 함수의 연속성이 각각 필수임을 본다.
 
 <div class="example" markdown="1">
 
@@ -133,15 +135,15 @@ $$\sup_{x \in (0,1)} x = 1, \qquad \inf_{x \in (0,1)} x = 0$$
 
 $$h(x) = \begin{cases} x, & 0 \leq x < 1, \\ 0, & x = 1 \end{cases}$$
 
-로 두면 $$h$$의 상한은 $$1$$이지만 $$x = 1$$에서의 불연속 때문에 어떤 점에서도 값 $$1$$을 취하지 않아 최댓값이 없다. 두 가정이 함께 있어야만 따름정리 2가 성립함이 드러난다.
+로 두면 $$h$$의 상한은 $$1$$이지만 $$x = 1$$에서의 불연속 때문에 어떤 점에서도 값 $$1$$을 취하지 않아 최댓값이 없다. 두 가정이 함께 있어야만 [따름정리 2](#cor2)가 성립함이 드러난다.
 
 </div>
 
-다음으로 균등연속과 단순 연속의 차이를 가르는 표준 예시를 본다. 정의역이 컴팩트가 아닐 때 연속이지만 균등연속이 아닌 함수가 어떻게 나타나는지 보여 준다.
+다음으로 정의역이 컴팩트가 아닐 때 연속이지만 균등연속이 아닌 함수가 어떻게 나타나는지를 본다.
 
 <div class="example" markdown="1">
 
-<ins id="ex6">**예시 6 (연속이지만 균등연속이 아닌 함수)**</ins> $$f : (0, 1] \to \mathbb{R}$$, $$f(x) = 1/x$$를 보자. 점 $$x_n = \tfrac1n$$과 $$x_n' = \tfrac{1}{n+1}$$을 택하면
+<ins id="ex6">**예시 6 (연속이지만 균등연속이 아닌 함수)**</ins> $$f : (0, 1] \to \mathbb{R}$$, $$f(x) = 1/x$$를 보자. 점 $$x_n = 1/n$$과 $$x_n' = 1/(n+1)$$을 택하면
 
 $$\lvert x_n - x_n' \rvert = \frac1n - \frac{1}{n+1} = \frac{1}{n(n+1)} \longrightarrow 0$$
 
@@ -149,9 +151,9 @@ $$\lvert x_n - x_n' \rvert = \frac1n - \frac{1}{n+1} = \frac{1}{n(n+1)} \longrig
 
 $$\lvert f(x_n) - f(x_n') \rvert = \lvert n - (n+1) \rvert = 1$$
 
-이 항상 $$1$$이다. 따라서 $$\varepsilon = 1$$에 대해서는 어떤 $$\delta > 0$$도 통하지 않아 $$f$$는 균등연속이 아니다. 원점 근처에서 함수가 한없이 가팔라져 공통의 $$\delta$$를 허용하지 않기 때문이다. 정의역 $$(0, 1]$$이 닫혀 있지 않아 — 따라서 컴팩트가 아니어서 — 정리 4의 가정이 충족되지 않는 것과 정확히 맞물린다.
+이 항상 $$1$$이다. 따라서 $$\varepsilon = 1$$에 대해서는 어떤 $$\delta > 0$$도 통하지 않아 $$f$$는 균등연속이 아니다. 원점 근처에서 함수가 한없이 가팔라져 공통의 $$\delta$$를 허용하지 않기 때문이다. 정의역 $$(0, 1]$$이 닫혀 있지 않아 — 따라서 컴팩트가 아니어서 — [정리 4](#thm4)의 가정이 충족되지 않는 것과 정확히 맞물린다.
 
-같은 현상은 $$g : \mathbb{R} \to \mathbb{R}$$, $$g(x) = x^2$$에서도 나타난다. $$x_n = n + \tfrac1n$$, $$x_n' = n$$이면 $$\lvert x_n - x_n'\rvert = \tfrac1n \to 0$$이지만
+같은 현상은 $$g : \mathbb{R} \to \mathbb{R}$$, $$g(x) = x^2$$에서도 나타난다. $$x_n = n + 1/n$$, $$x_n' = n$$이면 $$\lvert x_n - x_n'\rvert = 1/n \to 0$$이지만
 
 $$\lvert g(x_n) - g(x_n') \rvert = \Bigl(n + \tfrac1n\Bigr)^2 - n^2 = 2 + \frac{1}{n^2} > 2$$
 
@@ -159,26 +161,15 @@ $$\lvert g(x_n) - g(x_n') \rvert = \Bigl(n + \tfrac1n\Bigr)^2 - n^2 = 2 + \frac{
 
 </div>
 
-반대로 정의역을 컴팩트하게 제한하면 정리 4가 균등연속을 보장한다. 같은 $$x^2$$이라도 닫힌구간 위에서는 사정이 달라진다.
+반대로 정의역을 컴팩트하게 제한하면 [정리 4](#thm4)가 균등연속을 보장한다. 같은 $$x^2$$이라도 닫힌구간 $$[0, R]$$ 위에서는 $$x, x' \in [0, R]$$에 대해
 
-<div class="example" markdown="1">
+$$\lvert x^2 - x'^2 \rvert = \lvert x + x' \rvert \cdot \lvert x - x' \rvert \leq 2R \cdot \lvert x - x' \rvert$$
 
-<ins id="ex7">**예시 7 (컴팩트 정의역에서의 균등연속)**</ins> $$f(x) = x^2$$를 닫힌구간 $$[0, R]$$로 제한하면 정리 4에 의해 균등연속이며, 이를 직접 확인할 수 있다. $$x, x' \in [0, R]$$에 대해
-
-$$\begin{aligned}
-\lvert f(x) - f(x') \rvert &= \lvert x^2 - x'^2 \rvert = \lvert x + x' \rvert \cdot \lvert x - x' \rvert \\
-&\leq 2R \cdot \lvert x - x' \rvert
-\end{aligned}$$
-
-이므로, 주어진 $$\varepsilon > 0$$에 대해 $$\delta = \dfrac{\varepsilon}{2R}$$로 두면 $$\lvert x - x'\rvert < \delta$$일 때 $$\lvert f(x) - f(x')\rvert < \varepsilon$$이 모든 점에 공통으로 성립한다. $$\delta$$가 점 $$x$$와 무관하게 잡혔으므로 이는 정의 3의 균등연속이다. 인수 $$\lvert x + x'\rvert$$가 컴팩트 정의역에서 $$2R$$로 유계라는 점이 결정적이었다.
-
-</div>
-
-위 예시 7에서 본 부등식 $$\lvert f(x) - f(x')\rvert \leq 2R\,\lvert x - x'\rvert$$은 함숫값의 변화가 변수의 변화에 상수배로 묶이는 형태이다. 이런 조건은 균등연속을 자동으로 함의하는 유용한 충분조건이다.
+이어서, $$\delta = \varepsilon/(2R)$$로 두면 $$\lvert x - x'\rvert < \delta$$가 모든 점에 공통으로 $$\lvert x^2 - x'^2\rvert < \varepsilon$$을 강제한다. 인수 $$\lvert x + x'\rvert$$가 컴팩트 정의역에서 $$2R$$로 유계라는 점이 결정적이다. 이 부등식 $$\lvert f(x) - f(x')\rvert \leq 2R\,\lvert x - x'\rvert$$은 함숫값의 변화가 변수의 변화에 상수배로 묶이는 형태로, 균등연속을 자동으로 함의하는 유용한 충분조건을 이룬다.
 
 <div class="definition" markdown="1">
 
-<ins id="def8">**정의 8**</ins> $$f : X \to Y$$가 *립시츠<sub>Lipschitz</sub> 연속*이라는 것은, 어떤 상수 $$L \geq 0$$이 존재하여 모든 $$x, x' \in X$$에 대해
+<ins id="def7">**정의 7**</ins> $$f : X \to Y$$가 *립시츠<sub>Lipschitz</sub> 연속*이라는 것은, 어떤 상수 $$L \geq 0$$이 존재하여 모든 $$x, x' \in X$$에 대해
 
 $$d_Y\bigl(f(x), f(x')\bigr) \leq L \cdot d_X(x, x')$$
 
@@ -188,14 +179,14 @@ $$d_Y\bigl(f(x), f(x')\bigr) \leq L \cdot d_X(x, x')$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop9">**명제 9**</ins> 립시츠 연속인 함수는 균등연속이다.
+<ins id="prop8">**명제 8**</ins> 립시츠 연속인 함수는 균등연속이다.
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$L = 0$$이면 $$f$$는 상수함수여서 자명하므로 $$L > 0$$이라 하자. 주어진 $$\varepsilon > 0$$에 대해 $$\delta = \dfrac{\varepsilon}{L}$$로 두면, $$d_X(x, x') < \delta$$일 때
+$$L = 0$$이면 $$f$$는 상수함수여서 자명하므로 $$L > 0$$이라 하자. 주어진 $$\varepsilon > 0$$에 대해 $$\delta = \varepsilon/L$$로 두면, $$d_X(x, x') < \delta$$일 때
 
 $$d_Y\bigl(f(x), f(x')\bigr) \leq L \cdot d_X(x, x') < L \cdot \frac{\varepsilon}{L} = \varepsilon$$
 
@@ -203,7 +194,7 @@ $$d_Y\bigl(f(x), f(x')\bigr) \leq L \cdot d_X(x, x') < L \cdot \frac{\varepsilon
 
 </details>
 
-예시 7의 $$f(x) = x^2$$는 $$[0, R]$$ 위에서 립시츠 상수 $$2R$$로 립시츠 연속이며, 명제 9가 곧바로 그 균등연속을 준다. 그러나 립시츠 연속은 균등연속보다 진정으로 강한 조건이다. $$[0, 1]$$ 위의 $$f(x) = \sqrt{x}$$는 정리 4에 의해 균등연속이지만, 원점 근처에서
+위에서 본 $$f(x) = x^2$$는 $$[0, R]$$ 위에서 립시츠 상수 $$2R$$로 립시츠 연속이며, [명제 8](#prop8)이 곧바로 그 균등연속을 준다. 그러나 립시츠 연속은 균등연속보다 진정으로 강한 조건이다. $$[0, 1]$$ 위의 $$f(x) = \sqrt{x}$$는 [정리 4](#thm4)에 의해 균등연속이지만, 원점 근처에서
 
 $$\frac{\lvert \sqrt{x} - \sqrt{0}\,\rvert}{\lvert x - 0\rvert} = \frac{1}{\sqrt{x}} \longrightarrow \infty$$
 

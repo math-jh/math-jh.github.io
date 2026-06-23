@@ -11,6 +11,8 @@ sidebar:
 date: 2025-08-05
 weight: 5
 
+drift_needed: true
+
 ---
 
 우리는 이제 호몰로지를 실질적으로 계산할 수 있는 도구들을 살펴본다. 임의의 공간에 대해 이 공간의 호몰로지를 정의로부터 직접 계산하는 것은 거의 불가능한 일이므로, 우리는 큰 공간들을 작은 공간으로 쪼개고 이들의 호몰로지들로부터 큰 공간의 호몰로지를 계산하는 도구를 개발해야 한다. 가장 직관적인 상황은 Seifert-van Kampen 정리([§피복공간, ⁋정리 13](/ko/math/algebraic_topology/covering_spaces#thm13))의 상황일 것이며, 이 경우 우리는 functor $$\pi_1:\Top \rightarrow \Grp$$이 colimit을 보존하는 것을 살펴보았다. 그런데 abelianization functor $$\ab:\Grp \rightarrow \Ab$$는 forgetful functor $$U:\Ab \rightarrow \Grp$$의 left adjoint functor이고 ([\[대수적 구조\] §가환군, ⁋명제 7](/ko/math/algebraic_structures/abelian_groups#prop7)), left adjoint functor는 colimit을 보존하며 ([\[범주론\] §수반함자, ⁋정리 9](/ko/math/category_theory/adjoints#thm9)) first homology functor $$H_1:\Top \rightarrow \Ab$$는 이들의 합성이므로 ([§피복공간, ⁋정리 15](/ko/math/algebraic_topology/covering_spaces#thm15)) 또한 colimit을 보존해야 한다. 특별히 [§피복공간, ⁋따름정리 14](/ko/math/algebraic_topology/covering_spaces#cor14)와 같이 위상공간 $$X$$가 두 connected open subset $$U,V$$의 합집합으로 나타난다 하자. 그럼 category $$\Ab$$에서, 두 abelian group의 pushout은 이들의 direct sum의 coequalizer로 주어지므로 다음의 isomorphism 
@@ -193,7 +195,7 @@ $$X_0\subset X_1\subset\cdots\subset X_l=X$$
 
 $$H_n^\Delta(X^k, X^{k-1})\rightarrow H_n(X^k, X^{k-1})$$
 
-이 isomorphism임만 보이면 충분하다. 이를 가정하고 나면 우선 [§호몰로지, ⁋명제 10](/ko/math/algebraic_topology/homology#prop10)에 의해 $$k=1$$일 때 $$H_n^\Delta(X^0)\cong H_n(X^0)$$가 모든 $$n$$에 대해 성립하므로 [\[호몰로지 대수학\] §Diagram chasing, ⁋따름정리 2](/ko/math/homological_algebra/diagram_chasing#cor2)에 의해 $$H_n^\Delta(X^1)\cong H_n(X^1)$$임을 보일 수 있고, 다시 이로부터 귀납적으로 큰 $$k$$에 대해 원하는 isomorphism을 만들 수 있기 때문이다.
+이 isomorphism임만 보이면 충분하다. 이를 가정하고 나면 우선 [§호몰로지, ⁋명제 11](/ko/math/algebraic_topology/homology#prop11)에 의해 $$k=1$$일 때 $$H_n^\Delta(X^0)\cong H_n(X^0)$$가 모든 $$n$$에 대해 성립하므로 [\[호몰로지 대수학\] §Diagram chasing, ⁋따름정리 2](/ko/math/homological_algebra/diagram_chasing#cor2)에 의해 $$H_n^\Delta(X^1)\cong H_n(X^1)$$임을 보일 수 있고, 다시 이로부터 귀납적으로 큰 $$k$$에 대해 원하는 isomorphism을 만들 수 있기 때문이다.
 
 우선 정의에 의하여, $$C_\bullet^\Delta(X^k, X^{k-1})$$은 오직 $$n=k$$일 때만 nontrivial하며, 따라서 $$H_n^\Delta(X^k, X^{k-1})$$은 오직 $$n=k$$일 때만 ($$k$$-simplex들로 생성되는) nontrivial free abelian group이고, 다른 경우는 모두 trivial하다. 
   

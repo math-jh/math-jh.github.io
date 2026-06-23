@@ -11,6 +11,7 @@ sidebar:
 date: 2024-05-12
 weight: 202
 
+
 ---
 
 ## 가군의 직접곱과 직합
@@ -58,7 +59,7 @@ $$\CoEq(u,v)=N/N',\qquad N'=\langle u(x)-v(x)\rangle\rangle$$
 
 앞서 우리는 임의의 $$M,N\in\lMod{A}$$에 대하여 $$\Hom_{\lMod{A}}(M,N)$$이 abelian group이 된다는 것을 살펴보았다. 어렵지 않게 이 덧셈이 합성에 대해 잘 행동하고, category $$\lMod{A}$$는 zero module $$0$$을 zero object로 갖는 additive category가 된다는 것을 확인할 수 있다. ([\[범주론\] §아벨 카테고리, ⁋정의 1](/ko/math/category_theory/abelian_categories#def1))
 
-뿐만 아니라 $$\lMod{A}$$는 abelian category가 된다. ([\[범주론\] §아벨 카테고리, ⁋정의 7](/ko/math/category_theory/abelian_categories#def7)) 이를 확인하기 위해서는 임의의 monomorphism $$u:M \rightarrow N$$은 그 cokernel $$N \rightarrow N/M$$의 kernel과 같고, 임의의 epimorphism $$v:M \rightarrow N$$은 그 kernel $$\ker v$$의 cokernel $$M \rightarrow M/\ker v$$과 같다는 것을 확인하면 된다. 
+뿐만 아니라 $$\lMod{A}$$는 abelian category가 된다. ([\[범주론\] §아벨 카테고리, ⁋정의 3](/ko/math/category_theory/abelian_categories#def3)) 이를 확인하기 위해서는 임의의 monomorphism $$u:M \rightarrow N$$은 그 cokernel $$N \rightarrow N/M$$의 kernel과 같고, 임의의 epimorphism $$v:M \rightarrow N$$은 그 kernel $$\ker v$$의 cokernel $$M \rightarrow M/\ker v$$과 같다는 것을 확인하면 된다. 
 
 ## 자유가군
 

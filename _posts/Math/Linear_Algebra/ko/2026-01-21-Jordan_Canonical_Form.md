@@ -11,6 +11,8 @@ sidebar:
 date: 2026-01-21
 weight: 17
 
+drift_needed: true
+
 ---
 
 ## 일반화된 고유공간
@@ -369,9 +371,63 @@ $$[A]_{\mathcal{B}} = \begin{pmatrix}1&1&0\\0&1&1\\0&0&1\end{pmatrix} = J_3(1)$$
 
 조르당 표준형의 유일성은 Jordan block들의 크기가 $$\dim\ker N^k-\dim\ker N^{k-1}$$에 의해 결정된다는 사실로부터 따라온다. 이는 basis의 선택과 무관하므로, Jordan canonical form은 Jordan block들의 순서를 제외하고는 유일하게 결정된다.
 
+## 유리표준형
+
+조르당 표준형은 각 block에 고유값 $$\lambda$$를 직접 담으므로 $$\mathbb{K}$$가 algebraically closed라는 가정에 의존한다. 같은 정보를 고유값을 명시하지 않고 다항식의 계수만으로 담는 표준형이 있는데, 그 기본 단위가 companion matrix이다.
+
+<div class="definition" markdown="1">
+
+<ins id="def14">**정의 14**</ins> Monic polynomial $$p(\x)=\x^d+c_{d-1}\x^{d-1}+\cdots+c_1\x+c_0$$에 대하여, 그 *companion matrix<sub>동반행렬</sub>* $$C(p)$$를 다음의 $$d\times d$$ 행렬
+
+$$C(p)=\begin{pmatrix}0&0&\cdots&0&-c_0\\1&0&\cdots&0&-c_1\\0&1&\cdots&0&-c_2\\\vdots&\vdots&\ddots&\vdots&\vdots\\0&0&\cdots&1&-c_{d-1}\end{pmatrix}$$
+
+로 정의한다.
+
+</div>
+
+Operator $$T:V\rightarrow V$$가 *cyclic*이라는 것은 적당한 $$v\in V$$가 존재하여 $$\{v,Tv,\ldots,T^{d-1}v\}$$ ($$d=\dim V$$)가 $$V$$의 기저가 되는 것이며, 이러한 $$v$$를 cyclic vector라 부른다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="prop15">**명제 15**</ins> Cyclic vector $$v$$를 갖는 차원 $$d$$의 operator $$T:V\rightarrow V$$의 최소다항식 $$p$$는 차수가 $$d$$이고, cyclic basis $$\{v,Tv,\ldots,T^{d-1}v\}$$에 대한 $$T$$의 행렬표현은 $$C(p)$$이다. 특히 [정의 11](#def11)의 Jordan block $$J_k(\lambda)$$는 $$(\x-\lambda)^k$$의 companion matrix와 닮음이다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+$$\{v,Tv,\ldots,T^{d-1}v\}$$가 일차독립이므로 $$T^dv$$를 이들의 일차결합으로 나타낸
+
+$$T^dv=-(c_0v+c_1Tv+\cdots+c_{d-1}T^{d-1}v)$$
+
+의 계수로 $$p(\x)=\x^d+c_{d-1}\x^{d-1}+\cdots+c_0$$을 정의하면 $$p(T)v=0$$이다. 그럼 임의의 $$T^iv$$에 대해서도 $$p(T)T^iv=T^ip(T)v=0$$이고 이들이 $$V$$를 생성하므로 $$p(T)=0$$이다. 한편 차수가 $$d$$보다 작은 $$0$$ 아닌 다항식 $$q$$에 대해서는 $$q(T)v$$가 $$\{v,\ldots,T^{d-1}v\}$$의 자명하지 않은 일차결합이라 $$0$$이 아니므로, $$p$$가 $$T$$의 최소다항식이다. 이 기저에서 $$T$$는 $$T^iv\mapsto T^{i+1}v$$ ($$i<d-1$$)로, 그리고 $$T^{d-1}v$$는 위의 식으로 작용하므로 그 행렬표현은 정확히 $$C(p)$$이다.
+
+$$J_k(\lambda)$$의 경우, $$N=J_k(\lambda)-\lambda I$$가 index $$k$$의 nilpotent이므로 $$N^{k-1}v\neq 0$$인 $$v$$를 택하면 [보조정리 8](#lem8)에 의하여 $$\{v,Nv,\ldots,N^{k-1}v\}$$이 기저이다. $$J_k(\lambda)=\lambda I+N$$이라 $$\{v,J_k(\lambda)v,\ldots,J_k(\lambda)^{k-1}v\}$$도 같은 공간을 생성하므로 $$v$$는 cyclic vector이고, $$J_k(\lambda)$$의 최소다항식이 $$(\x-\lambda)^k$$이므로 위의 결과에 의해 $$J_k(\lambda)$$는 $$(\x-\lambda)^k$$의 companion matrix와 닮음이다.
+
+</details>
+
+이것이 실제로 같은 행렬이 되지 않는 이유는 순전히 관례적인 것으로, [정의 14](#def14)의 companion matrix는 basis를 낮은 차수에서 높은 차수로 정렬한 반면 Jordan block은 높은 차수에서 낮은 차수로 정렬했기 때문이다. 그러나 이 두 표준형 모두 뿌리를 깊이 내린 형태들이고, 어느 하나를 다른 하나와 맞추면 이 표준이 깨지므로 이렇게 간략한 remark로만 대체한다. 그럼 더 일반적으로 다음을 얻는다. 
+
+<div class="proposition" markdown="1">
+
+<ins id="thm16">**정리 16 (유리표준형)**</ins> Algebraically closed field 위의 유한차원 벡터공간에 정의된 임의의 linear operator $$A$$에 대하여, $$V$$의 적당한 기저를 택하면 $$A$$의 행렬표현이 companion matrix들의 block diagonal
+
+$$\begin{pmatrix}C(p_1)&&\\&\ddots&\\&&C(p_r)\end{pmatrix},\qquad p_i=(\x-\lambda_i)^{k_i}$$
+
+가 된다. 여기서 각 $$(\x-\lambda_i)^{k_i}$$는 $$A$$의 Jordan block $$J_{k_i}(\lambda_i)$$에 대응되는 *elementary divisor*이다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+[정리 12](#thm12)에 의하여 $$A$$는 Jordan block들 $$J_{k_i}(\lambda_i)$$의 direct sum과 닮음이고, [명제 15](#prop15)에 의하여 각 $$J_{k_i}(\lambda_i)$$는 $$C((\x-\lambda_i)^{k_i})$$와 닮음이므로, 이들을 모으면 원하는 block diagonal 형태를 얻는다.
+
+</details>
+
+당연한 이야기지만, 유리표준형의 진정한 쓸모는 $$\mathbb{K}$$가 algebraically closed가 <em-ko>아닐</em-ko> 때에도 적용할 수 있다는 것에 있다. 흐름상 위의 증명에서는 Jordan form을 사용하여 elementary divisor $$(\x-\lambda_i)^{k_i}$$들의 companion form을 얻었지만, 고유값이 $$\mathbb{K}$$ 안에 존재하지 않는 경우에도 임의의 operator는 최소다항식의 기약인수분해와 cyclic 분해를 통해 *invariant factor* $$p_1\mid p_2\mid\cdots\mid p_r$$ ($$p_r$$이 최소다항식)들의 companion matrix들로 표준화된다. 이 일반적 형태는 $$\mathbb{K}[\x]$$-module의 structure theorem으로부터 따라오며, 고유값을 전혀 언급하지 않고 $$\mathbb{K}$$ 위에서만 정의되는 표준형을 준다.
+
 ---
 
-**[Goc]** M.S. Gockenbach, *Finite-dimensional linear algebra*, Discrete Mathematics and its applications, Taylor&Francis, 2011. 
+**[Goc]** M.S. Gockenbach, *Finite-dimensional linear algebra*, Discrete Mathematics and its applications, Taylor&Francis, 2011.  
 **[Lee]** 이인석, *선형대수와 군*, 서울대학교 출판문화원, 2005.
 
 ---

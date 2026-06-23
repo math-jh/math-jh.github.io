@@ -11,6 +11,8 @@ sidebar:
 date: 2026-04-05
 weight: 12
 
+drift_needed: true
+
 ---
 
 우리는 그 동안 line bundle을 활용하여 다양한 invariant를 생각할 수 있다는 것을 확인하였다. 가령 [§선다발과 벡터다발](/ko/math/algebraic_varieties/line_bundles)에서 우리는 line bundle $$\mathcal{L}$$의 global section space $$\Gamma(X, \mathcal{L})$$을 정의하였다. 특히 [§선형계, ⁋정의 9](/ko/math/algebraic_varieties/linear_systems#def9)에서는 이 차원이 complete linear system의 dimension, 나아가 variety의 projective embedding을 결정하는 핵심적 역할을 한다는 것을 살펴보았다.
@@ -75,7 +77,7 @@ $$H^i(X, \mathcal{F}) = \frac{\ker(\Gamma(X, \mathcal{I}^i) \to \Gamma(X, \mathc
 
 우리는 앞서 global section space $$\Gamma(X, \mathcal{L})$$을 소개하며 이 공간의 또 다른 대중적인 표기 중 하나가 $$H^0(X, \mathcal{L})$$이라고 하였는데, 이 표기법이 바로 위의 정의로부터 정당화됨을 안다.
 
-다음 명제 또한 homological algebra로부터 바로 따라나오는 표준적인 명제이다. ([\[호몰로지 대수학\] §유도함자, ⁋명제 8](/ko/math/homological_algebra/derived_functors#prop8))
+다음 명제 또한 homological algebra로부터 바로 따라나오는 표준적인 명제이다. ([\[호몰로지 대수학\] §유도함자](/ko/math/homological_algebra/derived_functors))
 
 <div class="proposition" markdown="1">
 

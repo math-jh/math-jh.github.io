@@ -11,6 +11,8 @@ sidebar:
 date: 2026-04-21
 weight: 14
 
+drift_needed: true
+
 ---
 
 기하적으로 좋은 경우 dimension $$k$$의 cohomology와 codimension $$k$$ cohomology 사이에는 자연스러운 쌍대성이 존재한다. 이를 증명하기 위해 우리는 perfect pairing
@@ -107,7 +109,7 @@ $$\binom{2+(-4)}{2}=\binom{-2}{2} = 3$$
 
 ## 세르 쌍대성의 일반화
 
-우리는 지금까지의 논의를 일반화시킨다. 가장 처음으로 할 수 있는 것은 locally free sheaf $$\mathcal{E}$$를 임의의 coherent sheaf $$\mathcal{E}$$로 확장하는 것이다. 이는 생각보다 어려운 일은 아닌데, smooth variety에서는 임의의 coherent sheaf가 finite length locally free resolution을 갖기 때문으로, Serre duality의 주장을 귀납적으로 사용하면 된다. ([§표준선다발, ⁋정의 1](/ko/math/algebraic_varieties/canonical_bundle#def1))
+우리는 지금까지의 논의를 일반화시킨다. 가장 처음으로 할 수 있는 것은 locally free sheaf $$\mathcal{E}$$를 임의의 coherent sheaf $$\mathcal{E}$$로 확장하는 것이다. 이는 생각보다 어려운 일은 아닌데, smooth variety에서는 임의의 coherent sheaf가 finite length locally free resolution을 갖기 때문으로, Serre duality의 주장을 귀납적으로 사용하면 된다. ([§표준선다발](/ko/math/algebraic_varieties/canonical_bundle))
 
 그 후 우리는 $$X$$에서 smooth 조건을 포기한다. 이 경우 크게 두 가지의 문제가 있는데, 처음으로 보이는 문제는 $$X$$가 canonical line bundle을 갖지 않는다는 사실이다. 또 다른 문제는 약간 미묘한 것으로, 우리는 perfect pairing에서 명시적인 isomorphism을 얻어낼 때 다소 implicit하게 다음의 isomorphism
 

@@ -14,7 +14,7 @@ weight: 15
 published: false
 ---
 
-[§정적분](/ko/math/calculus/definite_integral)은 유한한 구간에서 유계인 함수에 대해 정의되었다. 그러나 구간이 무한히 뻗거나 피적분함수가 한 점에서 무한히 커지는 경우에도 "넓이"를 논하고 싶을 때가 많다 — 확률분포의 전체 질량, 발산하는 함수 아래의 넓이 등. 이를 유한 구간 적분의 극한을 통해 정의하는 것이 이상적분이다.
+[§정적분](/ko/math/calculus/definite_integral)은 유한한 구간에서 유계인 함수에 대해 정의되었다. 그러나 구간이 무한히 뻗거나 피적분함수가 한 점에서 무한히 커지는 경우에도 "넓이"를 논하고 싶을 때가 많다. 확률분포의 전체 질량이나 발산하는 함수 아래의 넓이가 그런 예이다. 이를 유한 구간 적분의 극한을 통해 정의하는 것이 이상적분이다.
 
 ## 이상적분의 정의
 
@@ -38,7 +38,7 @@ $$\int_a^{b} f(x)\,dx = \lim_{t \to b^-}\int_a^t f(x)\,dx$$
 
 </div>
 
-이상적분의 수렴은 결국 적분의 극한이 존재하는가의 문제이다. $$\int_0^\infty \sin x\,dx$$처럼 극한이 진동하면 발산한다.
+이상적분의 수렴은 결국 적분의 극한이 존재하는가의 문제이다. 가령 $$\int_0^\infty \sin x\,dx$$는 $$\int_0^t \sin x\,dx = 1 - \cos t$$가 진동하므로 발산한다.
 
 ## 기준 적분과 비교판정
 
@@ -46,7 +46,7 @@ $$\int_a^{b} f(x)\,dx = \lim_{t \to b^-}\int_a^t f(x)\,dx$$
 
 <div class="example" markdown="1">
 
-<ins id="ex3">**예시 3**</ins> $$\displaystyle\int_1^{\infty}\frac{dx}{x^p}$$는 $$p > 1$$일 때 수렴하고 $$p \leq 1$$일 때 발산한다. 실제로 $$p \neq 1$$이면 $$\int_1^t x^{-p}\,dx = \dfrac{t^{1-p} - 1}{1 - p}$$인데, $$t \to \infty$$일 때 $$t^{1-p}$$는 $$p > 1$$이면 $$0$$으로, $$p < 1$$이면 무한으로 간다. $$p = 1$$이면 $$\int_1^t \tfrac1x\,dx = \ln t \to \infty$$로 발산한다. 따라서 $$p > 1$$에서만 수렴하며, 그 값은 $$\dfrac{1}{p-1}$$이다.
+<ins id="ex3">**예시 3 (p-적분)**</ins> $$\int_1^{\infty} x^{-p}\,dx$$는 $$p > 1$$일 때 수렴하고 $$p \leq 1$$일 때 발산한다. 실제로 $$p \neq 1$$이면 $$\int_1^t x^{-p}\,dx = (t^{1-p} - 1)/(1 - p)$$인데, $$t \to \infty$$일 때 $$t^{1-p}$$는 $$p > 1$$이면 $$0$$으로, $$p < 1$$이면 무한으로 간다. $$p = 1$$이면 $$\int_1^t x^{-1}\,dx = \ln t \to \infty$$로 발산한다. 따라서 $$p > 1$$에서만 수렴하며, 그 값은 $$1/(p-1)$$이다.
 
 </div>
 
@@ -69,23 +69,17 @@ $$F(t) \leq \int_a^t g \leq \int_a^\infty g$$
 
 </details>
 
-비교할 함수를 직접 만들기 어려우면, 급수에서처럼 *극한비교판정*을 쓴다: $$\dfrac{f(x)}{g(x)} \to c$$ ($$0 < c < \infty$$) 이면 두 적분이 함께 수렴·발산한다.
+비교 대상은 거의 항상 [예시 3](#ex3)의 거듭제곱이나 지수함수 $$e^{-x}$$이다. 가령 $$\int_1^\infty e^{-x^2}\,dx$$는 $$x \geq 1$$에서 $$e^{-x^2} \leq e^{-x}$$이고 $$\int_1^\infty e^{-x}\,dx = e^{-1}$$이 수렴하므로 수렴하며, $$\int_1^\infty (x^2 + \sqrt x)^{-1}\,dx$$는 $$1/(x^2+\sqrt x) \leq 1/x^2$$이라 수렴한다. 비교할 함수를 직접 만들기 어려우면, 급수에서처럼 *[§무한급수, ⁋명제 7](/ko/math/calculus/series#prop7)*을 쓴다. $$f(x)/g(x) \to c$$ ($$0 < c < \infty$$) 이면 두 적분이 함께 수렴·발산하므로, 피적분함수가 $$x \to \infty$$에서 어떤 거듭제곱처럼 행동하는지만 보면 된다. 예를 들어 $$x/(x^3 - x + 2)$$를 $$g(x) = x^{-2}$$와 비교하면
+
+$$\frac{x/(x^3 - x + 2)}{1/x^2} = \frac{x^3}{x^3 - x + 2} \xrightarrow{\;x\to\infty\;} 1$$
+
+이라, $$\int_1^\infty x/(x^3 - x + 2)\,dx$$는 $$\int_1^\infty x^{-2}\,dx$$ (수렴) 와 운명을 같이한다. 치환적분도 이상적분에 그대로 쓰여 비교 대상을 만든다. $$u = \ln x$$로 두면 $$\int_2^\infty \frac{dx}{x(\ln x)^p} = \int_{\ln 2}^\infty u^{-p}\,du$$로 환원되어 ([예시 3](#ex3)) $$p > 1$$에서만 수렴하니, $$1/x$$만으로는 끌어내지 못하던 $$p = 1$$ 경계가 로그를 한 제곱 더 붙여야 비로소 수렴 쪽으로 넘어감을 본다.
+
+끝점에서 발산하는 특이적분에도 같은 거듭제곱이 기준이 되지만, 부등호 방향이 뒤집힌다.
 
 <div class="example" markdown="1">
 
-<ins id="ex5">**예시 5 (수렴 계산)**</ins> 직접 계산되는 예로 $$\displaystyle\int_0^\infty e^{-x}\,dx = \lim_{t\to\infty}\bigl[-e^{-x}\bigr]_0^t = \lim_{t\to\infty}(1 - e^{-t}) = 1$$이고, $$\displaystyle\int_1^\infty \frac{dx}{x^2} = \bigl[-\tfrac1x\bigr]_1^\infty = 1$$이다 (예시 3에서 $$p = 2$$). 비교판정의 예로 $$\int_1^\infty e^{-x^2}\,dx$$는 $$x \geq 1$$에서 $$e^{-x^2} \leq e^{-x}$$이고 $$\int_1^\infty e^{-x}$$가 수렴하므로 수렴한다.
-
-</div>
-
-<div class="example" markdown="1">
-
-<ins id="ex6">**예시 6 (특이적분)**</ins> 끝점에서 발산하는 경우도 거듭제곱이 기준이다. $$\displaystyle\int_0^1 \frac{dx}{x^p}$$는 $$\int_t^1 x^{-p}\,dx$$의 $$t \to 0^+$$ 극한으로, $$p < 1$$이면 수렴하고 $$p \geq 1$$이면 발산한다 (무한구간의 경우와 부등호 방향이 반대임에 유의). 가령 $$\displaystyle\int_0^1 \frac{dx}{\sqrt x} = \bigl[2\sqrt x\bigr]_0^1 = 2$$로 수렴하지만, $$\int_0^1 \tfrac{dx}{x}$$는 발산한다.
-
-</div>
-
-<div class="example" markdown="1">
-
-<ins id="ex7">**예시 7 (양쪽 무한)**</ins> $$\displaystyle\int_{-\infty}^{\infty} \frac{dx}{1 + x^2} = \lim_{t\to\infty}\bigl[\arctan x\bigr]_{-t}^{t} = \frac\pi2 - \Bigl(-\frac\pi2\Bigr) = \pi$$이다.
+<ins id="ex5">**예시 5 (특이점에서의 p-적분)**</ins> $$\int_0^1 x^{-p}\,dx$$는 $$\int_t^1 x^{-p}\,dx$$의 $$t \to 0^+$$ 극한으로, $$p < 1$$이면 수렴하고 $$p \geq 1$$이면 발산한다. 무한구간([예시 3](#ex3))에서는 큰 $$p$$가 빨리 감소해 수렴을 돕지만, 특이점 근처에서는 큰 $$p$$가 더 빨리 폭발해 발산을 부른다. 가령 $$\int_0^1 x^{-1/2}\,dx = \bigl[2\sqrt x\bigr]_0^1 = 2$$로 수렴하지만, $$\int_0^1 x^{-1}\,dx$$는 발산한다.
 
 </div>
 
@@ -93,7 +87,7 @@ $$F(t) \leq \int_a^t g \leq \int_a^\infty g$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop8">**명제 8**</ins> $$\int_a^\infty \lvert f\rvert$$이 수렴하면 $$\int_a^\infty f$$도 수렴한다 (절대수렴).
+<ins id="prop6">**명제 6 (절대수렴)**</ins> $$\int_a^\infty \lvert f\rvert$$이 수렴하면 $$\int_a^\infty f$$도 수렴한다.
 
 </div>
 
@@ -104,19 +98,15 @@ $$0 \leq f + \lvert f\rvert \leq 2\lvert f\rvert$$이므로 비교판정으로 $
 
 </details>
 
-## 더 많은 예와 응용
+역은 성립하지 않는다. $$\int_0^\infty \frac{\sin x}{x}\,dx = \frac\pi2$$는 수렴하지만 $$\int_0^\infty \lvert \sin x/x\rvert\,dx$$는 발산하므로 *조건수렴*이며, 이는 급수의 조건수렴에 대응한다.
 
-비교판정과 극한비교판정은 직접 적분되지 않는 경우에 위력을 발휘한다.
+## 감마함수와 적분판정
 
-<div class="example" markdown="1">
-
-<ins id="ex9">**예시 9 (비교·극한비교)**</ins> $$\displaystyle\int_1^\infty \frac{dx}{x^2 + \sqrt x}$$는 $$\dfrac{1}{x^2 + \sqrt x} \leq \dfrac{1}{x^2}$$이고 $$\int_1^\infty x^{-2}$$가 수렴하므로 수렴한다. 한편 $$\displaystyle\int_1^\infty \frac{dx}{\sqrt{x^2 + 1}}$$은 $$\dfrac{1}{\sqrt{x^2+1}} \big/ \dfrac1x \to 1$$이라 극한비교로 $$\int_1^\infty x^{-1}$$ (발산) 과 운명을 같이하여 발산한다.
-
-</div>
+수렴하는 이상적분은 새로운 함수를 정의하거나 무한급수의 수렴을 판정하는 데 쓰인다.
 
 <div class="example" markdown="1">
 
-<ins id="ex10">**예시 10 (감마함수)**</ins> $$\Gamma(s) = \displaystyle\int_0^\infty x^{s-1}e^{-x}\,dx$$는 $$s > 0$$에서 수렴한다 ($$0$$ 근처는 $$x^{s-1}$$의 특이적분이 $$s>0$$에서 수렴, $$\infty$$ 근처는 $$e^{-x}$$가 압도). 부분적분으로
+<ins id="ex7">**예시 7 (감마함수)**</ins> $$\Gamma(s) = \int_0^\infty x^{s-1}e^{-x}\,dx$$는 $$s > 0$$에서 수렴한다. $$0$$ 근처는 $$x^{s-1}$$의 특이적분이 $$s > 0$$에서 수렴하고 ([예시 5](#ex5)), $$\infty$$ 근처는 $$e^{-x}$$가 거듭제곱을 압도하기 때문이다. 부분적분으로
 
 $$\Gamma(s+1) = \bigl[-x^s e^{-x}\bigr]_0^\infty + s\int_0^\infty x^{s-1}e^{-x}\,dx = s\,\Gamma(s)$$
 
@@ -126,47 +116,21 @@ $$\Gamma(s+1) = \bigl[-x^s e^{-x}\bigr]_0^\infty + s\int_0^\infty x^{s-1}e^{-x}\
 
 <div class="example" markdown="1">
 
-<ins id="ex11">**예시 11 (적분판정)**</ins> 양의 감소 연속함수 $$f$$에 대해 $$\sum_n f(n)$$과 $$\int_1^\infty f$$가 함께 수렴·발산한다. 이를 $$f(x) = x^{-p}$$에 적용하면 예시 3의 적분 판정이 곧바로 $$p$$-급수 $$\sum n^{-p}$$의 판정 ([§무한급수, ⁋예시 2](/ko/math/calculus/series#ex2)) 을 준다. 또 $$f(x) = \dfrac{1}{x\ln x}$$이면 $$\int_2^\infty \dfrac{dx}{x\ln x} = \bigl[\ln\ln x\bigr]_2^\infty = \infty$$이므로 $$\sum \dfrac{1}{n\ln n}$$도 발산한다.
+<ins id="ex8">**예시 8 (적분판정)**</ins> 양의 감소 연속함수 $$f$$에 대해 $$\sum_n f(n)$$과 $$\int_1^\infty f$$가 함께 수렴·발산한다. 이를 $$f(x) = x^{-p}$$에 적용하면 [예시 3](#ex3)의 적분 판정이 곧바로 $$p$$-급수 $$\sum_n n^{-p}$$의 판정 ([§무한급수, ⁋예시 2](/ko/math/calculus/series#ex2)) 을 준다. 또 $$f(x) = 1/(x\ln x)$$이면 $$\int_2^\infty \frac{dx}{x\ln x} = \bigl[\ln\ln x\bigr]_2^\infty = \infty$$이므로 $$\sum_n 1/(n\ln n)$$도 발산한다.
+
+</div>
+
+마지막 두 예는 정의에 깔린 두 가지 미묘함을 드러낸다. 특이점이 구간 내부에 숨어 있거나, 대칭적 극한이 존재한다고 해서 이상적분이 수렴하는 것은 아니라는 점이다.
+
+<div class="example" markdown="1">
+
+<ins id="ex9">**예시 9 (내부 특이점)**</ins> 특이점이 적분 구간 *내부*에 있으면 반드시 그 점에서 나누어 각각의 수렴을 따져야 한다. $$\int_{-1}^1 x^{-2}\,dx$$을 무심코 $$\bigl[-x^{-1}\bigr]_{-1}^1 = -2$$로 계산하면 틀린다. 피적분함수가 양수인데 음수가 나오는 모순이다. $$x = 0$$에서 특이하므로 $$\int_{-1}^0 + \int_0^1$$로 나누면 각 조각이 $$\int_0^1 x^{-2}\,dx$$ ($$p = 2 \geq 1$$, 발산) 이므로 전체가 발산한다.
 
 </div>
 
 <div class="example" markdown="1">
 
-<ins id="ex12">**예시 12 (치환으로 계산)**</ins> 치환적분은 이상적분에도 그대로 쓰인다. $$u = x^2$$로 두면
-
-$$\int_0^\infty x\,e^{-x^2}\,dx = \frac12\int_0^\infty e^{-u}\,du = \frac12$$
-
-이고, $$u = \ln x$$로 두면 $$\displaystyle\int_e^\infty \frac{dx}{x(\ln x)^2} = \int_1^\infty \frac{du}{u^2} = 1$$이다.
-
-</div>
-
-<div class="example" markdown="1">
-
-<ins id="ex13">**예시 13 (내부 특이점)**</ins> 특이점이 적분 구간 *내부*에 있으면 반드시 그 점에서 나누어 각각의 수렴을 따져야 한다. $$\displaystyle\int_{-1}^1 \frac{dx}{x^2}$$을 무심코 $$\bigl[-\tfrac1x\bigr]_{-1}^1 = -2$$로 계산하면 틀린다 — 피적분함수가 양수인데 음수가 나오는 모순이다. $$x = 0$$에서 특이하므로 $$\int_{-1}^0 + \int_0^1$$로 나누면 각 조각이 $$\int_0^1 x^{-2}$$ ($$p = 2 \geq 1$$, 발산) 이므로 전체가 발산한다.
-
-</div>
-
-## 더 많은 계산과 판정
-
-지금까지의 정의·판정을 좀 더 다양한 피적분함수에 적용해 본다.
-
-특이성이 어느 점에서 어떤 차수로 일어나는지 가늠하는 표준 도구가 극한비교판정이다. 다음 예는 피적분함수가 두 끝에서 서로 다른 거듭제곱처럼 행동하는 전형적인 상황이다.
-
-<div class="example" markdown="1">
-
-<ins id="ex14">**예시 14 (극한비교의 활용)**</ins> $$\displaystyle\int_1^\infty \frac{x\,dx}{x^3 - x + 2}$$의 수렴을 보자. $$x \to \infty$$에서 분모가 $$x^3$$처럼 커지므로 피적분함수는 $$x^{-2}$$처럼 행동할 것이다. 실제로 $$g(x) = x^{-2}$$와 비교하면
-
-$$\frac{x/(x^3 - x + 2)}{1/x^2} = \frac{x^3}{x^3 - x + 2} = \frac{1}{1 - x^{-2} + 2x^{-3}} \xrightarrow{\;x\to\infty\;} 1$$
-
-이고 극한이 $$0 < 1 < \infty$$이므로, 극한비교판정에 의해 주어진 적분은 $$\int_1^\infty x^{-2}\,dx$$ (수렴) 와 운명을 같이하여 수렴한다.
-
-</div>
-
-대칭성을 이용하면 계산이 크게 줄어든다. 우함수·기함수 여부를 먼저 살피는 습관이 도움이 된다.
-
-<div class="example" markdown="1">
-
-<ins id="ex15">**예시 15 (대칭과 발산)**</ins> $$\displaystyle\int_{-\infty}^\infty \frac{x\,dx}{1 + x^2}$$를 보자. 피적분함수는 기함수이므로 대칭적 극한 $$\int_{-t}^t$$는 항상 $$0$$이 되어 *코시 주값*은 $$0$$이다. 그러나 정의 1은 두 조각이 *각각* 수렴할 것을 요구하는데,
+<ins id="ex10">**예시 10 (대칭과 발산)**</ins> $$\int_{-\infty}^\infty \frac{x\,dx}{1 + x^2}$$의 피적분함수는 기함수이므로 대칭적 극한 $$\int_{-t}^t$$는 항상 $$0$$이 되어 *코시 주값*은 $$0$$이다. 그러나 [정의 1](#def1)은 두 조각이 *각각* 수렴할 것을 요구하는데,
 
 $$\int_0^t \frac{x\,dx}{1+x^2} = \tfrac12\bigl[\ln(1+x^2)\bigr]_0^t = \tfrac12\ln(1 + t^2) \xrightarrow{\;t\to\infty\;} \infty$$
 
@@ -174,24 +138,6 @@ $$\int_0^t \frac{x\,dx}{1+x^2} = \tfrac12\bigl[\ln(1+x^2)\bigr]_0^t = \tfrac12\l
 
 </div>
 
-거듭제곱과 로그가 섞인 피적분함수의 수렴 경계도 자주 등장한다. $$\displaystyle\int_2^\infty \frac{dx}{x(\ln x)^p}$$는 $$u = \ln x$$로 치환하면 $$\int_{\ln 2}^\infty u^{-p}\,du$$로 환원되어 (예시 3) $$p > 1$$일 때 수렴하고 $$p \leq 1$$일 때 발산하니, $$\frac1x$$만으로는 끌어내지 못하던 $$p = 1$$ 경계가 로그를 한 제곱 더 붙여야 비로소 수렴 쪽으로 넘어감을 보여 준다.
-
-마지막으로, 적분 자체가 닫힌 형태로 계산되지 않더라도 부등식만으로 값의 범위를 가둘 수 있다. 다음 예는 수렴을 보이는 동시에 적분값의 상계를 준다.
-
-<div class="example" markdown="1">
-
-<ins id="ex16">**예시 16 (수렴값의 범위 추정)**</ins> $$\displaystyle\int_0^\infty e^{-x^2}\,dx$$의 수렴과 상계를 동시에 얻어 보자. $$[0,1]$$에서는 연속이라 적분이 유한하고, $$x \geq 1$$에서는 $$x^2 \geq x$$이므로 $$e^{-x^2} \leq e^{-x}$$이다. 따라서
-
-$$\begin{aligned}
-\int_0^\infty e^{-x^2}\,dx &= \int_0^1 e^{-x^2}\,dx + \int_1^\infty e^{-x^2}\,dx \\
-&\leq \int_0^1 1\,dx + \int_1^\infty e^{-x}\,dx \\
-&= 1 + \bigl[-e^{-x}\bigr]_1^\infty = 1 + e^{-1}
-\end{aligned}$$
-
-로 수렴하며 그 값이 $$1 + e^{-1}$$ 이하임을 알 수 있다 (참고로 정확한 값은 $$\tfrac{\sqrt\pi}{2}$$이다). 이처럼 비교판정은 수렴 여부뿐 아니라 정량적 상계도 함께 준다.
-
-</div>
-
-절대수렴이 아니어도 수렴하는 이상적분이 있다. $$\displaystyle\int_0^\infty \frac{\sin x}{x}\,dx = \frac\pi2$$는 수렴하지만 $$\int_0^\infty \bigl\lvert\tfrac{\sin x}{x}\bigr\rvert\,dx$$는 발산하므로 *조건수렴*이며, 이는 급수의 조건수렴에 대응한다. 발산하는 적분에도 대칭적 극한으로 값을 부여하는 *코시 주값* 같은 정밀화가 있으나, 표준적 수렴과는 구별해야 한다.
-
-이처럼 이상적분의 수렴 이론은 무한급수의 그것과 평행하며 (적분판정, 예시 11), 수렴하는 이상적분은 감마함수 (예시 10) 처럼 새로운 함수를 정의하는 데 쓰인다. 함수를 무한히 더하거나 적분하는 이런 극한 과정 전반의 엄밀한 취급은 해석학에서 이루어지며, 적분판정의 일반적 서술은 [\[해석학\] §무한급수](/ko/math/analysis/series)로 이어진다.
+이처럼 이상적분의 수렴 이론은 무한급수의 그것과 평행하며 (적분판정, [예시 8](#ex8)), 수렴하는 이상적분은 [예시 7](#ex7) 처럼 새로운 함수를 정의하는 데 쓰인다. 함수를 무한히 더하거나 적분하는 이런 극한 과정 전반의 엄밀한 취급은 해석학에서 이루어지며, 적분판정의 일반적 서술은 [\[해석학\] §무한급수](/ko/math/analysis/series)로 이어진다.
+</content>
+</invoke>

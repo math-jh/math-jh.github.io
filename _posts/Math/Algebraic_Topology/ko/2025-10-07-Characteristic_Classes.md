@@ -112,7 +112,7 @@ $$\Delta: B\rightarrow B\times B$$
 
 ## 체흐 코호몰로지
 
-이쯤에서 우리는 또 다른 코호몰로지 이론을 정립한다. 이는 sheaf cohomology ([§푸앵카레 쌍대성, ⁋정의 14](/ko/math/algebraic_topology/Poincare_duality#def14))와 마찬가지로 위상공간 위에 정의되는 sheaf에 대한 cohomology이며, étale space construction을 통하여 stalk이 벡터공간인 sheaf와 vector bundle을 같은 것으로 생각할 수 있으므로 우리 이야기에서 중요한 역할을 한다. 
+이쯤에서 우리는 또 다른 코호몰로지 이론을 정립한다. 이는 sheaf cohomology ([§푸앵카레 쌍대성, ⁋정의 15](/ko/math/algebraic_topology/Poincare_duality#def15))와 마찬가지로 위상공간 위에 정의되는 sheaf에 대한 cohomology이며, étale space construction을 통하여 stalk이 벡터공간인 sheaf와 vector bundle을 같은 것으로 생각할 수 있으므로 우리 이야기에서 중요한 역할을 한다. 
 
 Sheaf cohomology는 sheaf의 global section의 존재에 대한 obstruction을 cohomology가 담고 있다는 것을 보여줬다. 지금 살펴볼 체흐 코호몰로지도 그 결과는 비슷하지만, 이에 대한 답을 local section들을 이어붙여 global section을 만드는 과정에서 살펴본다는 점에서 차이가 있다. 어쨌든, manifold를 포함하는 좋은 경우에 체흐 코호몰로지는 sheaf cohomology와 같은 결과를 주고, 따라서 constant sheaf의 체흐 코호몰로지는 우리가 원래 알던 cohomology를 복원한다.
 
@@ -407,7 +407,7 @@ $$e(E)=s^\ast\bigl(j^\ast u\bigr)$$
 
 </details>
 
-Euler class라는 이름은 그것이 재는 양에서 온다. $$M$$이 닫힌 oriented $$n$$-manifold이고 $$E=TM$$이 그 tangent bundle이면, $$e(TM)$$을 fundamental class $$[M]$$ ([§푸앵카레 쌍대성, ⁋정리 11](/ko/math/algebraic_topology/Poincare_duality#thm11)) 위에서 평가한 값이 정확히 Euler characteristic $$\chi(M)$$이다. 이는 generic vector field의 영점을 부호와 함께 센 것 (Poincaré–Hopf 정리) 과 같다. 곧 Euler class는 "이 bundle이 nonvanishing section을 허락하는가, 못 한다면 얼마나 못 하는가"를 재는 obstruction이며, tangent bundle의 경우 그 답이 위상적 불변량 $$\chi(M)$$으로 나타난다.
+Euler class라는 이름은 그것이 재는 양에서 온다. $$M$$이 닫힌 oriented $$n$$-manifold이고 $$E=TM$$이 그 tangent bundle이면, $$e(TM)$$을 fundamental class $$[M]$$ ([§푸앵카레 쌍대성, ⁋정의 10](/ko/math/algebraic_topology/Poincare_duality#def10)) 위에서 평가한 값이 정확히 Euler characteristic $$\chi(M)$$이다. 이는 generic vector field의 영점을 부호와 함께 센 것 (Poincaré–Hopf 정리) 과 같다. 곧 Euler class는 "이 bundle이 nonvanishing section을 허락하는가, 못 한다면 얼마나 못 하는가"를 재는 obstruction이며, tangent bundle의 경우 그 답이 위상적 불변량 $$\chi(M)$$으로 나타난다.
 
 ## Gysin 완전열
 

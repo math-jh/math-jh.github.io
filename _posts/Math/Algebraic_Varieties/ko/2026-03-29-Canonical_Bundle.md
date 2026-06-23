@@ -11,6 +11,8 @@ sidebar:
 date: 2026-03-29
 weight: 11
 
+drift_needed: true
+
 ---
 
 [§선형계](/ko/math/algebraic_varieties/linear_systems)에서 우리는 line bundle의 (basepoint-free) complete linear system을 사용하여 projective space에 embed할 수 있다는 것을 살펴보았고, 만일 이것이 closed embedding을 정의한다면 이러한 line bundle을 *very ample*이라 부르기도 하였다. 
@@ -21,9 +23,9 @@ weight: 11
 
 위에서 언급한 것과 같이, $$\omega_X$$를 정의하기 위해서는 cotangent bundle $$\Omega_X^1$$로부터 시작한다. 이는 $$X$$ 위에 정의된 differential form들의 bundle인 것을 이미 살펴보았다. 이것이 대수적인 세팅에서의 미분과 맞아떨어짐을 보이자. ([\[가환대수학\] §미분, ⁋정의 3](/ko/math/commutative_algebra/differentials#def3)) 이를 위해서는 임의의 affine variety $$X$$와 그 coordinate ring $$A$$, 그리고 $$A$$-module $$M$$이 주어졌을 때 $$M$$을 $$X$$ 위의 vector bundle로 옮기는 과정을 살펴보아야 한다. 
 
-우리의 기본적인 철학은 [§아핀다양체, ⁋명제 16](/ko/math/algebraic_varieties/affine_varieties#prop16)을 이용하여 coordinate *ring* 사이의 homomorphism을 variety들 사이의 반대방향 morphism으로 옮길 수 있으며 따라서 $$X$$ 위에 정의된 bundle을 얻어낼 수 있다는 것이다. 그러나 문제는 $$M$$은 ring이 아니라는 것이다. 즉 $$M$$ 위에는 곱셈이 정의되어 있지 않다. 그러나 [\[다중선형대수학\] §텐서대수, ⁋정의 5](/ko/math/multilinear_algebra/tensor_algebras#def5)에 따르면 우리는 $$M$$ 위에 (commutative) 곱셈을 강제로 정의해주는 symmetric algebra $$\S(M)$$을 생각할 수 있다. 
+우리의 기본적인 철학은 [§아핀다양체](/ko/math/algebraic_varieties/affine_varieties)을 이용하여 coordinate *ring* 사이의 homomorphism을 variety들 사이의 반대방향 morphism으로 옮길 수 있으며 따라서 $$X$$ 위에 정의된 bundle을 얻어낼 수 있다는 것이다. 그러나 문제는 $$M$$은 ring이 아니라는 것이다. 즉 $$M$$ 위에는 곱셈이 정의되어 있지 않다. 그러나 [\[다중선형대수학\] §텐서대수, ⁋정의 5](/ko/math/multilinear_algebra/tensor_algebras#def5)에 따르면 우리는 $$M$$ 위에 (commutative) 곱셈을 강제로 정의해주는 symmetric algebra $$\S(M)$$을 생각할 수 있다. 
 
-그러나 이를 곧바로 적용하기에는 문제가 있다. 우리의 목적은 $$M$$을 $$X$$ 위에 정의된 vector bundle로 보려는 것임을 기억하자. 즉 대략적으로 $$X$$의 각 점 위에 $$M$$을 잘 달아주는 것이 우리의 목적인데, [§아핀다양체, ⁋명제 16](/ko/math/algebraic_varieties/affine_varieties#prop16)에 따르면 $$M$$이 variety의 세상에서 (fiber로) 등장한다면, 이를 정의하는 coordinate ring은 이것의 좌표함수여야 한다. 즉, 우리는 $$M$$ 대신 $$M^\vee$$를 사용해야만 하고, 따라서 $$\S_A(M)$$ 대신 $$\S_A(M^\vee)$$을 생각한다. 그럼 이는 $$A$$-algebra이며 따라서 coordinate ring 사이의 함수 $$A\rightarrow \S_A(M^\vee)$$을 얻고, 여기에 [§아핀다양체, ⁋명제 16](/ko/math/algebraic_varieties/affine_varieties#prop16)를 적용하면 어떠한 variety $$V(M)$$에서 $$X$$로 가는 morphism을 얻는다. 
+그러나 이를 곧바로 적용하기에는 문제가 있다. 우리의 목적은 $$M$$을 $$X$$ 위에 정의된 vector bundle로 보려는 것임을 기억하자. 즉 대략적으로 $$X$$의 각 점 위에 $$M$$을 잘 달아주는 것이 우리의 목적인데, [§아핀다양체](/ko/math/algebraic_varieties/affine_varieties)에 따르면 $$M$$이 variety의 세상에서 (fiber로) 등장한다면, 이를 정의하는 coordinate ring은 이것의 좌표함수여야 한다. 즉, 우리는 $$M$$ 대신 $$M^\vee$$를 사용해야만 하고, 따라서 $$\S_A(M)$$ 대신 $$\S_A(M^\vee)$$을 생각한다. 그럼 이는 $$A$$-algebra이며 따라서 coordinate ring 사이의 함수 $$A\rightarrow \S_A(M^\vee)$$을 얻고, 여기에 [§아핀다양체](/ko/math/algebraic_varieties/affine_varieties)를 적용하면 어떠한 variety $$V(M)$$에서 $$X$$로 가는 morphism을 얻는다. 
 
 이 morphism이 실제로 $$X$$ 위의 vector bundle 구조를 갖는지 확인하자. 점 $$x\in X$$는 coordinate ring $$A$$의 maximal ideal $$\mathfrak{m}_x$$에 해당하며, 따라서 $$V(M) \to X$$에서 $$x$$ 위의 set-theoretic fiber $$V(M)_x = \pi^{-1}(x)$$의 점들은 $$\mathfrak{m}_x\cdot \S_A(M^\vee)$$를 포함하는 $$\S_A(M^\vee)$$의 maximal ideal들이다. 
 

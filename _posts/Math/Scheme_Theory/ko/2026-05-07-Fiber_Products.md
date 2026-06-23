@@ -11,6 +11,8 @@ sidebar:
 date: 2025-03-08
 weight: 11
 
+drift_needed: true
+
 ---
 
 ## 올곱의 정의와 존재성
@@ -51,7 +53,7 @@ $$\Spec A\times_{\Spec C}\Spec B\cong\Spec (A\otimes_C B)$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$\AffSch\cong\cRing^\op$$를 통해 $$\Spec A \rightarrow \Spec C$$, $$\Spec B \rightarrow \Spec C$$를 $$C \rightarrow A$$, $$C \rightarrow B$$로 바꿔놓고 [##ref##](tensor_product_of_algebras)의 universal property와 fiber product의 universal property를 비교하면 된다.
+$$\AffSch\cong\cRing^\op$$를 통해 $$\Spec A \rightarrow \Spec C$$, $$\Spec B \rightarrow \Spec C$$를 $$C \rightarrow A$$, $$C \rightarrow B$$로 바꿔놓고 [\[대수적 구조\] §대수의 직접곱, 직합, 텐서곱, ⁋정리 6](/ko/math/algebraic_structures/operations_of_algebras#thm6)의 universal property와 fiber product의 universal property를 비교하면 된다.
 
 </details>
 
