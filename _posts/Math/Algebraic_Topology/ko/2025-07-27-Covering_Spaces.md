@@ -11,6 +11,8 @@ sidebar:
 date: 2025-07-27
 weight: 4
 
+drift_needed: true
+
 ---
 
 이전 글에서 우리는 fundamental group $$\pi_1(X)$$를 정의하고 간단한 성질들을 살펴보았다. 그럼 정의들로부터 다음 보조정리는 거의 자명하다. 
@@ -62,7 +64,7 @@ $$\widetilde{f}(\mathrm{x})=\begin{cases}f_{\lvert\mathrm{x}\rvert}(\mathrm{x}/\
 
 $$p:\mathbb{R}\rightarrow S^1;\quad t\mapsto (\cos 2\pi t, \sin 2\pi t)$$
 
-를 나타낸 것이며, 이것이 [정의 2](#def2)의 조건을 만족하는 것을 안다. 한편 일반적인 경우, covering map은 다음과 같이 부분공간과 곱공간에 대해 잘 작동한다는 것을 쉽게 증명할 수 있다. 
+를 나타낸 것이며, 이것이 [정의 3](#def3)의 조건을 만족하는 것을 안다. 한편 일반적인 경우, covering map은 다음과 같이 부분공간과 곱공간에 대해 잘 작동한다는 것을 쉽게 증명할 수 있다. 
 
 <div class="proposition" markdown="1">
 
@@ -101,7 +103,7 @@ $$\Hom_{\Pi_1(E))}(y_0, y_1)\rightarrow \Hom_{\Pi_1(B)}(p(y_0), p(y_1))\tag{$\as
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 $$p$$가 covering space라는 가정으로부터, $$B$$의 open covering $$(U_i)$$이 존재하여 각각의 $$U_i$$들이 $$p$$에 의해 evenly covered이도록 할 수 있다. 이제 $$(\alpha^{-1}(U_i))$$는 $$I$$의 open covering이므로 $$I$$를 덮는 finite subcover가 존재한다. 이제 [##ref##](Lebesgue_number_lemma)를 사용하여, $$I$$의 subdivision 
+우선 $$p$$가 covering space라는 가정으로부터, $$B$$의 open covering $$(U_i)$$이 존재하여 각각의 $$U_i$$들이 $$p$$에 의해 evenly covered이도록 할 수 있다. 이제 $$(\alpha^{-1}(U_i))$$는 $$I$$의 open covering이므로 $$I$$를 덮는 finite subcover가 존재한다. 이제 Lebesgue 수 보조정리를 사용하여, $$I$$의 subdivision 
 
 $$0=s_0<s_1<\cdots<s_n=1$$
 
@@ -204,7 +206,7 @@ $$\sk(\Fun(\Pi_1(X),\Set))\simeq\Fun(\sk(\Pi_1(X)), \Set)$$
 
 이므로, 다시 여기에서 $$X$$가 path-connected임을 이용하면 우리는 covering space들의 isomorphism class를 받아 $$\pi_1(X,x)$$-set을 내놓는 categorical equivalence가 존재함을 안다. 
 
-그런데 [\[대수적 구조\] §군의 작용, ⁋정리 14](/ko/math/algebraic_structures/group_actions#thm14)와 그 증명을 생각하면, 임의의 $$G$$-set $$E$$가 주어졌을 때 우리는 $$E$$를 $$G$$의 orbit들로 분해할 수 있고, 그럼 이들 각각의 orbit들로 제한했을 때의 $$G$$-action은 transitive하며 이들은 $$G$$의 적당한 normal subgroup $$N$$에 대하여, canonical $$G$$-action이 주어진 $$G/N$$과 isomorphic하다. 따라서 transitive group action만 생각하기로 한다면, monodromy functor의 정의에 의해 이는 target에서는 *connected* cover들만 생각하는 것이 된다. 즉 다음의 equivalence
+그런데 [\[대수적 구조\] §군의 작용, ⁋정리 14](/ko/math/algebraic_structures/group_actions#thm14)와 그 증명을 생각하면, 임의의 $$G$$-set $$E$$가 주어졌을 때 우리는 $$E$$를 $$G$$의 orbit들로 분해할 수 있고, 그럼 이들 각각의 orbit들로 제한했을 때의 $$G$$-action은 transitive하며 이들은 $$G$$의 적당한 subgroup $$H$$에 대하여, canonical $$G$$-action이 주어진 $$G/H$$과 isomorphic하다. 따라서 transitive group action만 생각하기로 한다면, monodromy functor의 정의에 의해 이는 target에서는 *connected* cover들만 생각하는 것이 된다. 즉 다음의 equivalence
 
 $$\left\{\text{isomorphism classes of covering spaces of $B$}\right\}\simeq \left\{\text{transitive $\pi_1(B,x)$-sets}\right\}$$
 

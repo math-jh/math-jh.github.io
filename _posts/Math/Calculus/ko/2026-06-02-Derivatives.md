@@ -94,7 +94,7 @@ $$\frac{f(h)-f(0)}{h} = \frac{\lvert h\rvert}{h}=\begin{cases}1&\text{if $h>0$}\
 
 $$f(x) = \begin{cases} x^2 & (x \in \mathbb{Q}) \\ 0 & (x \notin \mathbb{Q}) \end{cases}$$
 
-를 보자. $$a \neq 0$$에서는 $$a$$에 수렴하는 유리수열과 무리수열을 따라 함숫값이 각각 $$a^2$$과 $$0$$으로 갈라지므로 $$f$$는 불연속이고, 명제 2의 대우에 의해 미분가능하지 않다. 반면 $$0$$에서는 $$\lvert f(x)\rvert \leq x^2$$이라 연속이며, 평균변화율이
+를 보자. $$a \neq 0$$에서는 $$a$$에 수렴하는 유리수열과 무리수열을 따라 함숫값이 각각 $$a^2$$과 $$0$$으로 갈라지므로 $$f$$는 불연속이고, [명제 2](#prop2)의 대우에 의해 미분가능하지 않다. 반면 $$0$$에서는 $$\lvert f(x)\rvert \leq x^2$$이라 연속이며, 평균변화율이
 
 $$\left\lvert \frac{f(x) - f(0)}{x - 0} \right\rvert = \frac{\lvert f(x)\rvert}{\lvert x\rvert} \leq \lvert x\rvert \to 0$$
 
@@ -123,7 +123,7 @@ $$(f+g)'(a) = f'(a) + g'(a), \qquad (cf)'(a) = c\,f'(a)$$
 
 $$\frac{(f+g)(a+h)-(f+g)(a)}{h} = \frac{f(a+h)-f(a)}{h} + \frac{g(a+h)-g(a)}{h}$$
 
-로 갈라지고, 각 항이 $$f'(a), g'(a)$$로 수렴하므로 극한법칙에 의해 합도 수렴한다. $$cf$$도 평균변화율 식을 살펴보면 동일한 결과를 얻는다.
+로 갈라지고, 각 항이 $$f'(a), g'(a)$$로 수렴하므로 [§함수의 극한, ⁋명제 5](/ko/math/calculus/functions_and_limits#prop5)에 의해 합도 수렴한다. $$cf$$도 평균변화율 식을 살펴보면 동일한 결과를 얻는다.
 
 </details>
 

@@ -263,8 +263,10 @@ details[open] > summary::before {
 }
 
 /* QED 표식: 접힘=summary 옆 마름모, 펼침=회전하며 본문 끝(우하단)으로 이동해 정사각형.
-   위치(top)는 Proof_animate.js 가 toggle 마다, 회전은 [open] 이 맡고, 둘 다 CSS
-   transition 으로 부드럽게 이어진다. */
+   위치(top)는 Proof_animate.js 가 toggle 마다, 회전은 .qed-open 클래스(Proof_animate.js 가
+   펼침·접힘 *시작*에 토글)가 맡고, 둘 다 CSS transition 으로 부드럽게 이어진다.
+   회전을 [open] 아닌 클래스에 묶는 이유: 접힘에서 [open]은 애니메이션 끝에 제거되므로,
+   그에 묶으면 회전이 접힘과 동기되지 않고 끝에 튄다. */
 $qed-size: 0.65em;
 
 .proof,
@@ -283,8 +285,8 @@ $qed-size: 0.65em;
   pointer-events: none;
 }
 
-details.proof[open] .qed-mark,
-details.proof--alone[open] .qed-mark {
+details.proof.qed-open .qed-mark,
+details.proof--alone.qed-open .qed-mark {
   transform: rotate(0deg); /* 펼침 = 정사각형 */
 }
 

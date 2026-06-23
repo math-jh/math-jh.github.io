@@ -10,6 +10,8 @@ sidebar:
 
 date: 2026-03-29
 weight: 10
+
+drift_needed: true
 ---
 
 앞서 우리는 [§인자, ⁋정의 1](/ko/math/algebraic_varieties/divisors#def1)에서 variety $$X$$의 (Weil) divisor를 정의하였다. Zariski topology의 정의에 의하여, 이는 기본적으로 $$X$$ 위에 정의된 어떤 <em-ko>함수</em-ko>의 zero set에, 이 zero의 order를 더한 것으로 생각할 수 있으며, 이를 $$\mathbb{P}^n$$과 같은 경우에도 잘 정의하기 위해 우리는 <em-ko>함수</em-ko>를 <em-ko>적당한 line bundle의 section</em-ko>으로 일반화했다. 
@@ -212,7 +214,7 @@ $$\nu_d^{-1}(H_1) = \{[s:t] \in \mathbb{P}^1 \mid s^d - t^d = 0\}$$
 
 Very ample의 정의에서 핵심은 사상이 단순한 morphism이 아니라 *closed* embedding이라는 점이다. 즉, 위에서 설명한 것과 같이 추상적인 variety의 세계에서도 이를 사용하여 projective variety를 정의하고, 심지어 very ample line bundle $$\mathcal{L}$$을 사용하면 $$X$$를 이 ambient projective space에서 명시적인 좌표로 표현할 수도 있게 된다. 
 
-우리는 $$\mathcal{O}_{\mathbb{P}^n}(1)$$은 very ample이지만, $$\mathcal{O}_{\mathbb{P}^n}(-1)$$은 그렇지 않다는 것을 안다. [§선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_varieties/line_bundles#ex12)에서 살펴보았듯, 이는 $$\mathcal{O}_{\mathbb{P}^n}(-1)$$은 fiber가 base를 따라 이동할 때 꼬이는 방향이 section들이 zero section을 넘어가는 것을 허용하지 않아 global section이 존재하지 않기 때문이다. 반면 $$\mathcal{O}_{\mathbb{P}^n}(1)$$이 가지고 있는 꼬임은 이를 허용해주어 global section을 존재하게 해 준다. 
+우리는 $$\mathcal{O}_{\mathbb{P}^n}(1)$$은 very ample이지만, $$\mathcal{O}_{\mathbb{P}^n}(-1)$$은 그렇지 않다는 것을 안다. [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16)에서 살펴보았듯, 이는 $$\mathcal{O}_{\mathbb{P}^n}(-1)$$은 fiber가 base를 따라 이동할 때 꼬이는 방향이 section들이 zero section을 넘어가는 것을 허용하지 않아 global section이 존재하지 않기 때문이다. 반면 $$\mathcal{O}_{\mathbb{P}^n}(1)$$이 가지고 있는 꼬임은 이를 허용해주어 global section을 존재하게 해 준다. 
 
 이 예시는 너무 간단한 예시이기는 하지만, 만일 $$\mathbb{P}^n$$보다 복잡한 어떤 공간이 있고, 이 공간의 복잡성이 특정한 line bundle의 꼬임만으로는 (올바른 방향임에도) 해소가 안 된다면, 우리는 이것이 해소될 때까지 더욱 더 꼬임을 추가해줄 수 있을 것이다. 이러한 상상으로부터 다음을 정의한다.
 

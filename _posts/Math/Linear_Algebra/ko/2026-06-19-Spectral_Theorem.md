@@ -11,7 +11,9 @@ sidebar:
 
 date: 2026-06-19
 
-weight: 119
+weight: 120
+
+drift_needed: true
 
 published: false
 
@@ -73,7 +75,7 @@ $$\bar s=\overline{\bar z^tAz}=z^t\bar A\bar z=z^tA\bar z=(z^tA\bar z)^t=\bar z^
 
 <div class="remark" markdown="1">
 
-<ins id="rmk3">**참고 3**</ins> 위 증명에서 사용한 $$\bar z^tz=\sum_i\lvert z_i\rvert^2$$은 $$\mathbb{C}^n$$ 위의 표준적인 *Hermitian 내적*이다. 우리는 실내적공간만을 다루고 있으므로 복소내적을 본격적으로 도입하지는 않았으며, 위 증명에서는 이를 단지 계산을 위한 도구로만 사용하였다. 복소내적공간 위에서의 일반적인 이론은 [참고 11](#rmk11)에서 간략히 언급한다. 
+<ins id="rmk3">**참고 3**</ins> 위 증명에서 사용한 $$\bar z^tz=\sum_i\lvert z_i\rvert^2$$은 $$\mathbb{C}^n$$ 위의 표준적인 *Hermitian 내적*이다. 우리는 실내적공간만을 다루고 있으므로 복소내적을 본격적으로 도입하지는 않았으며, 위 증명에서는 이를 단지 계산을 위한 도구로만 사용하였다. 복소내적공간 위에서의 일반적인 이론은 [참고 12](#rmk12)에서 간략히 언급한다. 
 
 </div>
 
@@ -195,9 +197,39 @@ $$\langle Lv,v\rangle=\left\langle\sum_i a_i\lambda_iv_i,\sum_j a_jv_j\right\ran
 
 </details>
 
+양의 정부호 작용소의 행렬은 또한 삼각행렬을 통해 간결하게 분해된다.
+
+<div class="proposition" markdown="1">
+
+<ins id="prop11">**명제 11 (Cholesky 분해)**</ins> 양의 정부호인 실대칭행렬 $$A$$에 대하여, 대각성분이 모두 양수인 하삼각행렬 $$L$$이 유일하게 존재하여 $$A=LL^t$$이다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+$$A$$의 크기 $$n$$에 대한 귀납법으로 존재성을 보인다. $$n=1$$이면 $$A=(a)$$에서 양의 정부호성으로 $$a>0$$이므로 $$L=(\sqrt a)$$로 두면 된다. $$n\geq 2$$라 하고 $$A$$를
+
+$$A=\begin{pmatrix}\alpha&b^t\\ b&A'\end{pmatrix}$$
+
+으로 쪼개자. 여기서 $$\alpha=A_{11}>0$$은 양의 정부호성으로부터 양수이다. *Schur 여원* $$A''=A'-\alpha^{-1}bb^t$$ 또한 양의 정부호인데, 임의의 $$0\neq y\in\mathbb{R}^{n-1}$$에 대하여 $$x=-\alpha^{-1}(b^ty)$$로 두면
+
+$$\begin{pmatrix}x&y^t\end{pmatrix}A\begin{pmatrix}x\\ y\end{pmatrix}=\alpha x^2+2x(b^ty)+y^tA'y=y^tA''y$$
+
+이고 좌변이 $$A$$의 양의 정부호성으로 양수이기 때문이다. 귀납적 가정에 의하여 $$A''=L'L'^t$$인, 대각성분이 양수인 하삼각 $$L'$$이 존재하므로
+
+$$L=\begin{pmatrix}\sqrt\alpha&0\\ \alpha^{-1/2}b&L'\end{pmatrix}$$
+
+으로 두면
+
+$$LL^t=\begin{pmatrix}\alpha&b^t\\ b&\alpha^{-1}bb^t+L'L'^t\end{pmatrix}=\begin{pmatrix}\alpha&b^t\\ b&A'\end{pmatrix}=A$$
+
+이고 $$L$$의 대각성분은 모두 양수이다. 유일성은 첫 열이 $$\sqrt\alpha$$와 $$\alpha^{-1/2}b$$로 결정되고 $$L'$$이 귀납적으로 유일한 것으로부터 따라온다.
+
+</details>
+
 <div class="remark" markdown="1">
 
-<ins id="rmk11">**참고 11**</ins> 복소내적공간, 즉 $$\mathbb{C}^n$$ 위의 Hermitian 내적 $$\langle z,w\rangle=\sum_i\bar z_iw_i$$를 갖춘 공간 위에서는 더 넓은 종류의 작용소가 직교대각화된다. 이 경우 adjoint $$L^\ast$$는 켤레transpose로 주어지며, $$LL^\ast=L^\ast L$$을 만족하는 *정규작용소<sub>normal operator</sub>*가 정확히 정규직교기저로 대각화되는 작용소이다. 자기수반작용소($$L=L^\ast$$, Hermitian)와 유니터리작용소($$LL^\ast=I$$)는 모두 정규작용소의 특수한 경우이다. 이 복소판 스펙트럼 정리를 전개하기 위해서는 복소내적공간의 이론이 필요하며, 여기서는 다루지 않는다. 
+<ins id="rmk12">**참고 12**</ins> 복소내적공간, 즉 $$\mathbb{C}^n$$ 위의 Hermitian 내적 $$\langle z,w\rangle=\sum_i\bar z_iw_i$$를 갖춘 공간 위에서는 더 넓은 종류의 작용소가 직교대각화된다. 이 경우 adjoint $$L^\ast$$는 켤레transpose로 주어지며, $$LL^\ast=L^\ast L$$을 만족하는 *정규작용소<sub>normal operator</sub>*가 정확히 정규직교기저로 대각화되는 작용소이다. 자기수반작용소($$L=L^\ast$$, Hermitian)와 유니터리작용소($$LL^\ast=I$$)는 모두 정규작용소의 특수한 경우이다. 이 복소판 스펙트럼 정리는 [§복소내적공간](/ko/math/linear_algebra/complex_inner_product_spaces)과 [§복소 스펙트럼 정리](/ko/math/linear_algebra/complex_spectral_theorem)에서 전개한다. 
 
 </div>
 

@@ -14,9 +14,9 @@ weight: 9
 published: false
 ---
 
-[§부분수열과 Bolzano–Weierstrass 정리](/ko/math/analysis/bolzano_weierstrass)는 유계수열에서 수렴하는 부분수열을 뽑았다. 이 "부분수열을 추출하여 극한을 얻는" 능력을 집합의 성질로 추상화한 것이 컴팩트성이며, 해석학의 존재 정리들을 떠받치는 가장 중요한 위상적 개념이다.
+[§부분수열과 [§부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4) 정리](/ko/math/analysis/bolzano_weierstrass)는 유계수열에서 수렴하는 부분수열을 뽑았다. 이 "부분수열을 추출하여 극한을 얻는" 능력을 집합의 성질로 추상화한 것이 컴팩트성이며, 해석학의 존재 정리들을 떠받치는 가장 중요한 위상적 개념이다.
 
-해석학에서 어떤 점의 존재를 보이는 표준 전략은 다음과 같다. 먼저 원하는 성질에 점점 가까워지는 점열 $$(x_m)$$을 구성하고, 그 점열에서 수렴하는 부분수열을 뽑은 뒤, 극한점이 원하는 성질을 가짐을 보이는 것이다. 이 전략이 작동하려면 두 가지가 필요하다. 점열에서 수렴하는 부분수열을 언제나 뽑을 수 있어야 하고, 그 극한이 우리가 다루는 집합 안에 남아 있어야 한다. 바로 이 두 요구를 한 단어로 묶은 것이 점렬컴팩트성이다. 따라서 컴팩트집합은 "극한을 향한 추출"이 막힘없이 이루어지는 무대이며, 최대·최소 정리나 균등연속성 같은 결과가 이 무대 위에서 자연스럽게 따라 나온다.
+해석학에서 어떤 점의 존재를 보이는 표준 전략은 다음과 같다. 먼저 원하는 성질에 점점 가까워지는 점열 $$(x_m)$$을 구성하고, 그 점열에서 수렴하는 부분수열을 뽑은 뒤, 극한점이 원하는 성질을 가짐을 보이는 것이다. 이 전략이 작동하려면 두 가지가 필요하다. 점열에서 수렴하는 부분수열을 언제나 뽑을 수 있어야 하고, 그 극한이 우리가 다루는 집합 안에 남아 있어야 한다. 바로 이 두 요구를 한 단어로 묶은 것이 점렬컴팩트성이다. 따라서 컴팩트집합은 "극한을 향한 추출"이 막힘없이 이루어지는 무대이며, [§연속함수의 성질, ⁋따름정리 2](/ko/math/analysis/continuous_functions#cor2)나 균등연속성 같은 결과가 이 무대 위에서 자연스럽게 따라 나온다.
 
 ## 점렬컴팩트성
 
@@ -43,7 +43,7 @@ published: false
 
 $$x_m = (x_m^{(1)}, x_m^{(2)}, \ldots, x_m^{(n)}) \in \mathbb{R}^n$$
 
-이고, $$K$$가 유계이므로 각 좌표열 $$(x_m^{(j)})_m$$도 유계인 실수열이다. 먼저 첫 좌표열 $$(x_m^{(1)})$$에 Bolzano–Weierstrass 정리 ([§부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4))를 적용하여 수렴하는 부분수열의 첨자 집합 $$S_1 \subseteq \mathbb{N}$$을 얻는다. 그 부분수열 위에서 둘째 좌표열은 여전히 유계이므로 다시 Bolzano–Weierstrass를 적용하여 $$S_2 \subseteq S_1$$을 얻고, 이를 반복하면
+이고, $$K$$가 유계이므로 각 좌표열 $$(x_m^{(j)})_m$$도 유계인 실수열이다. 먼저 첫 좌표열 $$(x_m^{(1)})$$에 Bolzano–Weierstrass 정리 ([§부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4))를 적용하여 수렴하는 부분수열의 첨자 집합 $$S_1 \subseteq \mathbb{N}$$을 얻는다. 그 부분수열 위에서 둘째 좌표열은 여전히 유계이므로 다시 [§부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4)를 적용하여 $$S_2 \subseteq S_1$$을 얻고, 이를 반복하면
 
 $$S_1 \supseteq S_2 \supseteq \cdots \supseteq S_n, \qquad x_m^{(j)} \xrightarrow[\,m \in S_j\,]{} \xi_j \ (1 \leq j \leq n)$$
 
@@ -81,23 +81,11 @@ $$\lVert x_m \rVert > m$$
 
 ## 예시와 계산
 
-하이네–보렐 정리는 $$\mathbb{R}^n$$에서 점렬컴팩트성을 판정하는 일을 두 가지 단순한 점검으로 환원한다. 닫혀 있는가와 유계인가를 확인하면 되며, 둘 중 하나라도 어긋나면 점렬컴팩트가 아니다. 몇 가지 전형적인 경우를 직접 따져 보자.
+하이네–보렐 정리는 $$\mathbb{R}^n$$에서 점렬컴팩트성을 판정하는 일을 두 가지 단순한 점검으로 환원한다. 닫혀 있는가와 유계인가를 확인하면 되며, 둘 중 하나라도 어긋나면 점렬컴팩트가 아니다. 닫힌구간 $$[a,b]$$가 점렬컴팩트인 반면 $$(0,1)$$은 닫혀 있지 않아, $$[0,\infty)$$나 $$\mathbb{Z}$$는 유계가 아니어서 점렬컴팩트가 아닌 것이 그러한 예이다. 흥미로운 경우는 두 조건이 미묘하게 어긋나는 경계에서 나타나는데, 유계성과 닫힘 가운데 하나만으로는 점렬컴팩트성을 보장하지 못함을 다음 예시가 보여 준다.
 
 <div class="example" markdown="1">
 
-<ins id="ex5">**예시 5 (기본적인 판정)**</ins> $$\mathbb{R}$$의 부분집합을 살펴보면, 닫힌구간 $$[a, b]$$는 닫혀 있고 유계이므로 점렬컴팩트이다. 반면 다음 집합들은 모두 점렬컴팩트가 아니다.
-
-$$(0, 1) \ (\text{닫혀 있지 않음}), \qquad [0, \infty) \ (\text{유계가 아님}), \qquad \mathbb{Z} \ (\text{유계가 아님}).$$
-
-각각에서 반례가 되는 점열을 명시할 수 있다. $$(0,1)$$에서는 $$x_m = 1/m \to 0 \notin (0,1)$$, $$[0,\infty)$$에서는 $$x_m = m \to \infty$$, $$\mathbb{Z}$$에서는 $$x_m = m$$이 그러한 점열이며, 어느 것도 집합 안의 점으로 수렴하는 부분수열을 갖지 않는다.
-
-</div>
-
-유계성과 닫힘 가운데 하나만으로는 점렬컴팩트성을 보장하지 못한다는 점을 강조해 둔다. 다음 예시는 두 조건이 서로 독립임을 보여 준다.
-
-<div class="example" markdown="1">
-
-<ins id="ex6">**예시 6 (수렴점열과 그 극한)**</ins> 집합
+<ins id="ex5">**예시 5 (수렴점열과 그 극한)**</ins> 집합
 
 $$A = \Bigl\{\, \tfrac{1}{m} : m \in \mathbb{N} \,\Bigr\}$$
 
@@ -113,7 +101,7 @@ $$A \cup \{0\} = \Bigl\{\, 0, 1, \tfrac12, \tfrac13, \ldots \,\Bigr\}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop7">**명제 7**</ins> $$K \subseteq \mathbb{R}^m$$과 $$L \subseteq \mathbb{R}^n$$이 점렬컴팩트이면, 곱집합 $$K \times L \subseteq \mathbb{R}^{m+n}$$도 점렬컴팩트이다.
+<ins id="prop6">**명제 6**</ins> $$K \subseteq \mathbb{R}^m$$과 $$L \subseteq \mathbb{R}^n$$이 점렬컴팩트이면, 곱집합 $$K \times L \subseteq \mathbb{R}^{m+n}$$도 점렬컴팩트이다.
 
 </div>
 
@@ -144,7 +132,7 @@ $$z_k = (x_k, y_k) \xrightarrow[\,k \in T\,]{} (x, y) \in K \times L$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop8">**명제 8**</ins> $$K$$가 점렬컴팩트이고 $$F \subseteq K$$가 ($$K$$에서) 닫힌집합이면, $$F$$도 점렬컴팩트이다.
+<ins id="prop7">**명제 7**</ins> $$K$$가 점렬컴팩트이고 $$F \subseteq K$$가 ($$K$$에서) 닫힌집합이면, $$F$$도 점렬컴팩트이다.
 
 </div>
 
@@ -159,11 +147,11 @@ $$x_{m_k} \to x \in K$$
 
 </details>
 
-수렴하는 점열 자체도 그 극한과 함께라면 점렬컴팩트집합을 이룬다. 이는 예시 6을 일반화한 것으로, 컴팩트성이 "유한집합에 한 점을 더한 것처럼 행동하는" 작은 무한집합까지 포착함을 보여 준다.
+수렴하는 점열 자체도 그 극한과 함께라면 점렬컴팩트집합을 이룬다. 이는 [예시 5](#ex5)를 일반화한 것으로, 컴팩트성이 "유한집합에 한 점을 더한 것처럼 행동하는" 작은 무한집합까지 포착함을 보여 준다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop9">**명제 9**</ins> $$\mathbb{R}^n$$에서 $$x_m \to x$$이면, 집합
+<ins id="prop8">**명제 8**</ins> $$\mathbb{R}^n$$에서 $$x_m \to x$$이면, 집합
 
 $$C = \{x\} \cup \{x_m : m \in \mathbb{N}\}$$
 
@@ -174,11 +162,11 @@ $$C = \{x\} \cup \{x_m : m \in \mathbb{N}\}$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-하이네–보렐 정리에 따라 $$C$$가 닫혀 있고 유계임을 보이면 충분하다. 수렴하는 수열은 유계이고 ([§수열의 수렴, ⁋명제 4](/ko/math/analysis/convergence_of_sequences#prop4)) 거기에 극한점 하나를 더해도 유계이므로, $$C$$는 유계이다. 닫혀 있음을 보이기 위해 $$C$$의 점열 $$y_k \to y$$를 잡자. 두 경우로 나눈다.
+하이네–보렐 정리에 따라 $$C$$가 닫혀 있고 유계임을 보이면 충분하다. 수렴하는 수열은 유계이고 ([§수열의 수렴, ⁋명제 3](/ko/math/analysis/convergence_of_sequences#prop3)) 거기에 극한점 하나를 더해도 유계이므로, $$C$$는 유계이다. 닫혀 있음을 보이기 위해 $$C$$의 점열 $$y_k \to y$$를 잡자. 두 경우로 나눈다.
 
 $$\text{(i) 어떤 값 } a \in C \text{가 무한히 자주 나타나는 경우}, \qquad \text{(ii) 그렇지 않은 경우}.$$
 
-(i)이면 그 상수 부분수열이 $$a$$로 수렴하므로 극한의 유일성에 의해 $$y = a \in C$$이다. (ii)이면 각 값이 유한 번만 나타나므로 $$y_k$$ 자체가 $$x_m$$들을 무한히 훑고, 그 부분수열이 $$x$$로 수렴하여 $$y = x \in C$$이다. 어느 경우든 $$y \in C$$이므로 $$C$$는 닫혀 있다.
+(i)이면 그 상수 부분수열이 $$a$$로 수렴하므로 [§수열의 수렴, ⁋명제 2](/ko/math/analysis/convergence_of_sequences#prop2)에 의해 $$y = a \in C$$이다. (ii)이면 각 값이 유한 번만 나타나므로 $$y_k$$ 자체가 $$x_m$$들을 무한히 훑고, 그 부분수열이 $$x$$로 수렴하여 $$y = x \in C$$이다. 어느 경우든 $$y \in C$$이므로 $$C$$는 닫혀 있다.
 
 </details>
 
@@ -186,7 +174,7 @@ $$\text{(i) 어떤 값 } a \in C \text{가 무한히 자주 나타나는 경우}
 
 <div class="example" markdown="1">
 
-<ins id="ex10">**예시 10 (한 점에서 컴팩트집합까지의 거리)**</ins> $$K \subseteq \mathbb{R}^n$$이 비어 있지 않은 점렬컴팩트집합이고 $$p \in \mathbb{R}^n$$이라 하자. 거리
+<ins id="ex9">**예시 9 (한 점에서 컴팩트집합까지의 거리)**</ins> $$K \subseteq \mathbb{R}^n$$이 비어 있지 않은 점렬컴팩트집합이고 $$p \in \mathbb{R}^n$$이라 하자. 거리
 
 $$d(p, K) = \inf_{y \in K} \lVert p - y \rVert$$
 

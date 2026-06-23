@@ -11,6 +11,8 @@ sidebar:
 date: 2026-03-22
 weight: 6
 
+drift_needed: true
+
 ---
 
 미분기하학에서와 마찬가지로 대수기하학에서도 접공간은 다양체의 국소적 구조를 이해하는 핵심 도구이다.
@@ -25,11 +27,11 @@ $$\mathfrak{m}_x=\{\mathbf{f}\in \mathcal{C}^\infty_x\mid \mathbf{f}(x)=0\}$$
 
 $$(\mathfrak{m}_x/\mathfrak{m}_x^2)^\ast$$
 
-로 볼 수 있다는 것을 증명하였다. ([\[미분다양체\] §여접공간, ⁋보조정리 1](/ko/math/manifolds/cotangent_space#lem1)) 이 과정은 보통 미분기하학에서는 잘 다루지 않으나, algebraic variety로의 일반화에 큰 도움을 준다. 즉, (편의상 affine case로 고정한다면) 우리는 이미 algebraic variety들 위에 정의된 함수가 무엇인지 알고 ([§준사영다양체, ⁋정의 7](/ko/math/algebraic_varieties/quasi_projective_varieties#def7)), 이 때 $$x\in X$$에서 vanish하는 모든 함수들의 모임은 이 점에 해당되는 $$\mathbb{K}[X]$$의 maximal ideal에 해당한다는 것도 안다. 따라서 이를
+로 볼 수 있다는 것을 증명하였다. ([\[미분다양체\] §여접공간, ⁋보조정리 1](/ko/math/manifolds/cotangent_space#lem1)) 이 과정은 보통 미분기하학에서는 잘 다루지 않으나, algebraic variety로의 일반화에 큰 도움을 준다. 즉, (편의상 affine case로 고정한다면) 우리는 이미 algebraic variety들 위에 정의된 함수가 무엇인지 알고 ([§준사영다양체, ⁋정의 5](/ko/math/algebraic_varieties/quasi_projective_varieties#def5)), 이 때 $$x\in X$$에서 vanish하는 모든 함수들의 모임은 이 점에 해당되는 $$\mathbb{K}[X]$$의 maximal ideal에 해당한다는 것도 안다. 따라서 이를
 
 $$\mathfrak{m}_x=\{f\in \mathbb{K}[X]\mid f(x)=0\}$$
 
-으로 정의하고, $$\mathbb{K}[X]$$의 이 maximal ideal에서의 localization $$\mathbb{K}[X]_{\mathfrak{m}_x}=\mathcal{O}_{X,x}$$을 생각할 수 있다. ([\[가환대수학\] §국소화, ⁋정의 1](/ko/math/commutative_algebra/localization#def1)) 기하적으로는 [§아핀다양체, ⁋정의 14](/ko/math/algebraic_varieties/affine_varieties#def14)를 생각하면 이들은 점 $$x$$에서의 regular function들의 germ으로 정의할 수 있다.
+으로 정의하고, $$\mathbb{K}[X]$$의 이 maximal ideal에서의 localization $$\mathbb{K}[X]_{\mathfrak{m}_x}=\mathcal{O}_{X,x}$$을 생각할 수 있다. ([\[가환대수학\] §국소화, ⁋정의 4](/ko/math/commutative_algebra/localization#def4)) 기하적으로는 [§아핀다양체, ⁋정의 14](/ko/math/algebraic_varieties/affine_varieties#def14)를 생각하면 이들은 점 $$x$$에서의 regular function들의 germ으로 정의할 수 있다.
 
 <div class="definition" markdown="1">
 
@@ -115,7 +117,7 @@ $$T_x X = \ker(J_x) = \{v \in \mathbb{K}^n \mid J_x v = 0\}$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Affine case만 보인다. $$X = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$$이 irreducible하고 $$\dim X = d$$라 하자. 점 $$x \in X$$에서의 local ring $$\mathcal{O}_{X,x} = \mathbb{K}[X]_{\mathfrak{m}_x}$$를 생각하자. Localization은 차원을 보존하므로 $$\dim \mathcal{O}_{X,x} = \dim X = d$$이다. ([§차원, ⁋명제 2](/ko/math/algebraic_varieties/dimension#prop2))
+Affine case만 보인다. $$X = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$$이 irreducible하고 $$\dim X = d$$라 하자. 점 $$x \in X$$에서의 local ring $$\mathcal{O}_{X,x} = \mathbb{K}[X]_{\mathfrak{m}_x}$$를 생각하자. Localization은 차원을 보존하므로 $$\dim \mathcal{O}_{X,x} = \dim X = d$$이다. ([§차원](/ko/math/algebraic_varieties/dimension))
 
 일반적으로 Noetherian local ring $$(R, \mathfrak{m})$$에 대하여 $$\dim_{\mathbb{K}}(\mathfrak{m}/\mathfrak{m}^2) \ge \dim R$$이다. ([\[가환대수학\] §매개계, ⁋명제 2](/ko/math/commutative_algebra/system_of_parameters#prop2)) 따라서
 

@@ -1148,6 +1148,150 @@ def verify_math_mismatch(
 
 
 # ---------------------------------------------------------------------------
+# Region-incremental drift (re-translate only the changed <ins> regions)
+# ---------------------------------------------------------------------------
+
+def git_show_at(ko_path: Path, sha: str) -> Optional[str]:
+    """`git show <sha>:<relpath>` content, or None if unavailable. Read-only."""
+    try:
+        rel = str(ko_path.relative_to(BLOG_ROOT))
+        return subprocess.check_output(
+            ["git", "show", f"{sha}:{rel}"],
+            cwd=str(BLOG_ROOT), text=True, stderr=subprocess.DEVNULL,
+        )
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        return None
+
+
+def git_commit_before(ko_path: Path, iso_ts: str) -> Optional[str]:
+    """SHA of the last commit touching ko_path at or before iso_ts, or None."""
+    try:
+        rel = str(ko_path.relative_to(BLOG_ROOT))
+        out = subprocess.check_output(
+            ["git", "rev-list", "-1", f"--until={iso_ts}", "HEAD", "--", rel],
+            cwd=str(BLOG_ROOT), text=True, stderr=subprocess.DEVNULL,
+        ).strip()
+        return out or None
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        return None
+
+
+def _split_regions(body: str):
+    """Lossless split of a post body at `<ins id="...">` boundaries.
+
+    Returns [(region_id, region_text), ...]; the first chunk is keyed _PREAMBLE
+    (text before the first <ins>). ''.join(text for _, text) == body exactly, so
+    regions reassemble by concatenation. <ins> is the alignment unit because its
+    id is identical across KO/EN and survives reflow 1:1.
+    """
+    pos = [(m.group(1), m.start()) for m in _INS_ID_RE.finditer(body)]
+    if not pos:
+        return [(_PREAMBLE, body)]
+    out = [(_PREAMBLE, body[:pos[0][1]])]
+    for i, (rid, start) in enumerate(pos):
+        end = pos[i + 1][1] if i + 1 < len(pos) else len(body)
+        out.append((rid, body[start:end]))
+    return out
+
+
+def _region_norm(text: str) -> str:
+    """Whitespace-collapsed key for change detection (ignores pure reflow)."""
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def translate_drift_incremental(
+    ko_path: Path, en_path: Path, translated_at_iso: str,
+) -> Optional[Tuple[str, int, int, int, int]]:
+    """Region-level incremental drift re-translation.
+
+    Baseline = the KO as it was at the EN's `translated_at` commit (via git). Only
+    the `<ins>`-keyed regions whose KO content changed since then are re-sent to
+    Kimi; unchanged regions keep their existing EN text verbatim, so manual EN
+    fixes survive and unchanged math is never re-translated.
+
+    Returns (assembled_en, in_chars, out_chars, n_retranslated, n_total) on a
+    provably-clean result, or None to tell the caller to fall back to a full
+    re-translation (no git baseline / structure desync / validation not clean).
+    """
+    if not is_our_translation(en_path):
+        return None
+    en_text = en_path.read_text(encoding="utf-8")
+    en_fm_text, en_body = _split_fm_block(en_text)
+
+    ta = en_translation_meta(en_path).get("translated_at")
+    if not ta:
+        return None
+    sha = git_commit_before(ko_path, ta)
+    if not sha:
+        return None
+    old_ko = git_show_at(ko_path, sha)
+    if old_ko is None:
+        return None
+    _, old_body = _split_fm_block(old_ko)
+
+    ko_content = ko_path.read_text(encoding="utf-8")
+    ko_fm_text, ko_body = _split_fm_block(ko_content)
+
+    old_regions = dict(_split_regions(old_body))
+    en_regions  = dict(_split_regions(en_body))
+    cur_regions = _split_regions(ko_body)
+
+    out_chunks: list[str] = []
+    in_chars = out_chars = n_retrans = 0
+    for rid, ko_chunk in cur_regions:
+        unchanged = (
+            rid in old_regions and rid in en_regions
+            and _region_norm(old_regions[rid]) == _region_norm(ko_chunk)
+        )
+        if unchanged:
+            out_chunks.append(en_regions[rid].rstrip())
+        else:
+            prompt = build_prompt(ko_chunk)
+            en_chunk = call_kimi(prompt)
+            en_chunk, _ = label_fix(en_chunk)
+            en_chunk = re.sub(r"<sub>[^<]*?</sub>", "", en_chunk)
+            en_chunk = en_chunk.replace("/ko/", "/en/")
+            out_chunks.append(en_chunk.rstrip())
+            in_chars  += len(prompt)
+            out_chars += len(en_chunk)
+            n_retrans += 1
+
+    if n_retrans == 0:
+        new_body = en_body                       # only fm/whitespace changed
+    else:
+        new_body = "\n\n".join(c for c in out_chunks if c) + "\n"
+
+    # Frontmatter: keep the existing EN translated fields (drift rarely edits
+    # title/excerpt/description); only translate a field absent from EN.
+    en_fields: dict = {}
+    to_translate: dict = {}
+    for fkey in _LLM_FRONTMATTER_FIELDS:
+        ko_val = _extract_fm_scalar(ko_fm_text, fkey)
+        if not ko_val:
+            continue
+        existing = _extract_fm_scalar(en_fm_text, fkey)
+        if existing:
+            en_fields[fkey] = existing
+        else:
+            to_translate[fkey] = ko_val
+    if to_translate:
+        en_fields.update(_translate_fm_fields_via_kimi(to_translate))
+
+    en_fm = _compose_en_frontmatter(
+        ko_fm_text, en_fields, translated_at_iso=translated_at_iso)
+    assembled = f"---\n{en_fm}---\n{new_body.lstrip(chr(10))}"
+
+    warns: list = []
+    err = validate_translation(
+        assembled, ko_content=ko_content, reason="drift",
+        en_current=en_text, warnings=warns)
+    if err or warns:
+        log(f"incremental drift not clean (err={err}, warns={warns}); full fallback")
+        return None
+    return assembled, in_chars, out_chars, n_retrans, len(cur_regions)
+
+
+# ---------------------------------------------------------------------------
 # Commands
 # ---------------------------------------------------------------------------
 
@@ -1313,6 +1457,44 @@ def main() -> int:
 
         if reason == "verify":
             return run_verify(state, ko_path, en_path, key)
+
+        # Drift: try region-incremental re-translation first — only the <ins>
+        # regions whose KO changed (vs the git baseline) go to Kimi; unchanged
+        # EN is kept verbatim so manual fixes survive. Falls back to a full
+        # re-translation when there is no baseline or the result is not clean.
+        if reason == "drift":
+            inc_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
+            try:
+                inc = translate_drift_incremental(ko_path, en_path, inc_at)
+            except subprocess.TimeoutExpired:
+                inc = None
+            except Exception as e:
+                log(f"incremental drift error ({e!r}); full fallback")
+                inc = None
+            if inc is not None:
+                assembled, in_chars, out_chars, n_re, n_tot = inc
+                en_path.write_text(assembled, encoding="utf-8")
+                clear_drift_flag(ko_path)
+                state["files"][key] = {
+                    "status": "done",
+                    "last_attempt_ts": time.time(),
+                    "en_path": str(en_path.relative_to(BLOG_ROOT)),
+                    "ko_git_commit_ts": git_last_commit_ts(ko_path),
+                    "translated_at": inc_at,
+                    "in_chars": in_chars, "out_chars": out_chars,
+                    "reason": "drift-incremental",
+                    "regions_retranslated": n_re, "regions_total": n_tot,
+                }
+                stats = state.setdefault("stats", {})
+                stats["total_done"]      = stats.get("total_done", 0) + 1
+                stats["total_in_chars"]  = stats.get("total_in_chars", 0) + in_chars
+                stats["total_out_chars"] = stats.get("total_out_chars", 0) + out_chars
+                save_state(state)
+                log(f"DONE (incremental drift): {en_path.relative_to(BLOG_ROOT)} — "
+                    f"re-translated {n_re}/{n_tot} region(s), kept {n_tot - n_re} "
+                    f"(in={in_chars}c, out={out_chars}c)")
+                return 0
+            log(f"drift: incremental unavailable for {key}, full re-translation")
 
         log(f"translating ({reason}): {key} → {en_path.relative_to(BLOG_ROOT)} (ko {ko_path.stat().st_size}B)")
 

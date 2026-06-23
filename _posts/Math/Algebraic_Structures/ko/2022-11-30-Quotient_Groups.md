@@ -11,13 +11,14 @@ sidebar:
 date: 2022-11-30
 weight: 5
 
+
 ---
 
 앞서 [§대수적 구조, §§몫구조](/ko/math/algebraic_structures/algebraic_structures#몫구조)에서 우리는 동치관계 $$R$$이 마그마 $$A$$의 연산과 compatible할 경우 그 몫집합 $$A/R$$ 위에 자연스러운 방식으로 마그마 구조를 줄 수 있다는 것을 증명하였으며, 뿐만 아니라 [§반군, 모노이드, 군](/ko/math/algebraic_structures/groups)의 말미에서 우리는 $$A$$가 group일 경우, 이 방식으로 만들어진 마그마 $$A/R$$ 또한 group이 된다는 것을 살펴보았다. 이 때 group $$A/R$$을 *quotient group<sub>몫군</sub>*이라 부른다.
 
 ## 정규부분군
 
-한편 [\[집합론\] §동치관계, ⁋명제 7](/ko/math/set_theory/equivalence_relations#prop7)을 통해 우리는 다음 두 가지가 같다는 것을 안다.
+한편 [\[집합론\] §동치관계](/ko/math/set_theory/equivalence_relations)을 통해 우리는 다음 두 가지가 같다는 것을 안다.
 
 집합 $$G$$에 동치관계 $$R$$을 주는 것 $$\iff$$ 집합 $$G$$의 분할 $$(G_i)_{i\in I}$$을 택하는 것
 {: .text-center}

@@ -274,7 +274,7 @@ $$z_n = a_n + b_n i$$가 $$\mathbb{C}$$에서 Cauchy라 하자. 좌표별 부등
 
 $$\lvert z^n - 0\rvert = \lvert z\rvert^n \to 0$$
 
-이어서 $$z^n \to 0$$이다 ([\[해석학\] §수열의 수렴, ⁋예시 10](/ko/math/analysis/convergence_of_sequences#ex10)에서 본 실수열 $$\lvert z\rvert^n$$의 수렴). 반대로 $$\lvert z\rvert > 1$$이면 $$\lvert z^n\rvert \to \infty$$이므로 $$(z^n)$$은 유계가 아니어서 수렴하지 않는다. $$\lvert z\rvert = 1$$인 경계의 경우는 더 섬세하다. $$z = 1$$이면 $$z^n = 1$$로 일정하지만, 가령 $$z = i$$이면 $$z^n$$이 $$i, -1, -i, 1$$을 주기적으로 순환하여 ($$\lvert z^n\rvert = 1$$로 유계이지만) 수렴하지 않는다. 후자는 정리 11이 보장하는 수렴 부분수열의 존재를 명시적으로 보여 주는 예이기도 하다. 점열 $$(i^n)$$은 네 개의 상수 부분수열로 쪼개지며, 각각은 $$i, -1, -i, 1$$로 수렴한다.
+이어서 $$z^n \to 0$$이다 ([\[해석학\] §수열의 수렴, ⁋예시 8](/ko/math/analysis/convergence_of_sequences#ex8)에서 본 실수열 $$\lvert z\rvert^n$$의 수렴). 반대로 $$\lvert z\rvert > 1$$이면 $$\lvert z^n\rvert \to \infty$$이므로 $$(z^n)$$은 유계가 아니어서 수렴하지 않는다. $$\lvert z\rvert = 1$$인 경계의 경우는 더 섬세하다. $$z = 1$$이면 $$z^n = 1$$로 일정하지만, 가령 $$z = i$$이면 $$z^n$$이 $$i, -1, -i, 1$$을 주기적으로 순환하여 ($$\lvert z^n\rvert = 1$$로 유계이지만) 수렴하지 않는다. 후자는 정리 11이 보장하는 수렴 부분수열의 존재를 명시적으로 보여 주는 예이기도 하다. 점열 $$(i^n)$$은 네 개의 상수 부분수열로 쪼개지며, 각각은 $$i, -1, -i, 1$$로 수렴한다.
 
 </div>
 

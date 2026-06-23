@@ -8,6 +8,8 @@ sidebar:
     nav: "algebraic_varieties-ko"
 date: 2026-05-07
 weight: 25
+
+drift_needed: true
 published: false
 ---
 
@@ -112,7 +114,7 @@ Euler characteristic의 정의에 의해
 
 $$\rchi(\mathcal{O}_S)=h^0(\mathcal{O}_S)-h^1(\mathcal{O}_S)+h^2(\mathcal{O}_S)$$
 
-이다. $$S$$가 연결된 projective variety이므로 $$h^0(\mathcal{O}_S)=1$$이다. Serre duality ([§세르 쌍대성, ⁋명제 4](/ko/math/algebraic_varieties/serre_duality#prop4))에 의해
+이다. $$S$$가 연결된 projective variety이므로 $$h^0(\mathcal{O}_S)=1$$이다. Serre duality ([§세르 쌍대성, ⁋명제 2](/ko/math/algebraic_varieties/serre_duality#prop2))에 의해
 
 $$h^2(\mathcal{O}_S)=h^0(K_S)=p_g$$
 
@@ -140,7 +142,7 @@ $$K_S^2+\rchi_{\mathrm{top}}(S)=12(1-q+p_g)$$
 
 $$K_{\mathbb{P}^2}^2=(-3H)^2=9H^2=9$$
 
-이다. [§표준선다발, ⁋명제 7](/ko/math/algebraic_varieties/canonical_bundle#prop7)의 Euler exact sequence에 Whitney sum formula ([§천 특성류, ⁋정의 1](/ko/math/algebraic_varieties/chern_classes#def1))를 적용하면 $$c(T_{\mathbb{P}^2})=(1+H)^3=1+3H+3H^2$$이다. 따라서 $$c_2(T_{\mathbb{P}^2})=3H^2$$이므로 $$\int_{\mathbb{P}^2}c_2=3$$이다. 한편 [§사영공간의 코호몰로지, ⁋따름정리 3](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#cor3)에 의해 $$h^i(\mathbb{P}^2,\mathcal{O}_{\mathbb{P}^2})=0$$ for $$i>0$$이므로
+이다. [§표준선다발, ⁋명제 7](/ko/math/algebraic_varieties/canonical_bundle#prop7)의 Euler exact sequence에 Whitney sum formula ([§천 특성류, ⁋정의 1](/ko/math/algebraic_varieties/chern_classes#def1))를 적용하면 $$c(T_{\mathbb{P}^2})=(1+H)^3=1+3H+3H^2$$이다. 따라서 $$c_2(T_{\mathbb{P}^2})=3H^2$$이므로 $$\int_{\mathbb{P}^2}c_2=3$$이다. 한편 [§사영공간의 코호몰로지, ⁋명제 1](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop1)에 의해 $$h^i(\mathbb{P}^2,\mathcal{O}_{\mathbb{P}^2})=0$$ for $$i>0$$이므로
 
 $$\rchi(\mathcal{O}_{\mathbb{P}^2})=h^0(\mathcal{O}_{\mathbb{P}^2})=1$$
 

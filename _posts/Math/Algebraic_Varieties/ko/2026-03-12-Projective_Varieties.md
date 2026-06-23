@@ -11,6 +11,8 @@ sidebar:
 date: 2026-03-12
 weight: 2
 
+drift_needed: true
+
 ---
 
 ## 사영공간의 정의
@@ -100,7 +102,7 @@ Affine case와의 유일한 차이점은 여기서 다루는 다항식들이 모
 
 </details>
 
-Affine case에서와 마찬가지로, 이는 projective space $$\mathbb{P}^n$$ 위에 projective algebraic set들을 닫힌집합으로 갖는 위상구조가 존재한다는 것을 보여주며, 우리는 각각의 projective variety에 이를 이용하여 subspace topology를 줄 수 있다. 마찬가지로 이러한 topology를 *Zariski topology*라 부른다. ([[아핀다양체] §아핀다양체의 정의](/ko/math/algebraic_varieties/affine_varieties)에서 affine case의 Zariski topology를 먼저 살펴보았다.) 
+Affine case에서와 마찬가지로, 이는 projective space $$\mathbb{P}^n$$ 위에 projective algebraic set들을 닫힌집합으로 갖는 위상구조가 존재한다는 것을 보여주며, 우리는 각각의 projective variety에 이를 이용하여 subspace topology를 줄 수 있다. 마찬가지로 이러한 topology를 *Zariski topology*라 부른다. ([§아핀다양체](/ko/math/algebraic_varieties/affine_varieties)에서 affine case의 Zariski topology를 먼저 살펴보았다.) 
 
 ## Projective Nullstellensatz
 

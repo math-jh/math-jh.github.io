@@ -10,6 +10,8 @@ sidebar:
 
 date: 2026-05-04
 weight: 16
+
+drift_needed: true
 ---
 
 우리는 앞선 글에서 Riemann-Roch 정리를 곡선에서 살펴보았다. 본질적으로 Riemann-Roch 정리는 Euler characteristic을 다른 정량적인 수치들로 계산하는 것으로, 더 일반적으로 우리는 임의의 경우로 이를 일반화할 수도 있으나 이번 글에서는 surface로의 일반화만  다루기로 한다.
@@ -190,7 +192,7 @@ $$\rchi(\mathcal{O}_{\widetilde{\mathbb{P}}^2}(dH - kE)) = \frac{1}{2}(dH - kE) 
 
 </div>
 
-한편 곡선에서의 Riemann-Roch 정리는 위의 [명제 4](#prop4)에서 [§세르 쌍대성, ⁋명제 4](/ko/math/algebraic_varieties/serre_duality#prop4)를 적용하여 $$h^1$$ 부분을 $$h^0$$으로 바꾼 것으로, 곡면에서의 경우에도 이를 활용하여 $$h^2(\mathcal{O}(D)) = h^0(\omega_S(-D))$$로 적을 수 있고, 그럼 Riemann–Roch 공식은 다음의 식
+한편 곡선에서의 Riemann-Roch 정리는 위의 [명제 4](#prop4)에서 [§세르 쌍대성](/ko/math/algebraic_varieties/serre_duality)를 적용하여 $$h^1$$ 부분을 $$h^0$$으로 바꾼 것으로, 곡면에서의 경우에도 이를 활용하여 $$h^2(\mathcal{O}(D)) = h^0(\omega_S(-D))$$로 적을 수 있고, 그럼 Riemann–Roch 공식은 다음의 식
 
 $$h^0(\mathcal{O}(D)) - h^1(\mathcal{O}(D)) + h^0(\omega_S(-D)) = \rchi(\mathcal{O}_S) + \frac{1}{2}(D^2 - D \cdot K_S)$$
 

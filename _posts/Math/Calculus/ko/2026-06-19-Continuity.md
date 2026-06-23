@@ -13,11 +13,11 @@ weight: 2
 
 ---
 
-우리는 [§함수의 극한](/ko/math/calculus/functions_and_limits)에서 극한을 엄밀하게 정의하였으며, 그럼 자연스러운 다음 스텝은 연속성이다. 
+우리는 [§함수의 극한](/ko/math/calculus/functions_and_limits)에서 극한을 엄밀하게 정의하였으니, 그 위에서 연속성을 정의한다.
 
 ## 연속의 정의
 
-본질적으로, 연속의 정의에서 엄밀하지 않았던 부분, 즉 극한 부분은 이미 우리가 이전 글에서 엄밀하게 정의하였으므로, 다음 정리는 사실상 공짜라고 할 수 있다. 
+직관적으로 연속함수는 "끊김 없이 이어진" 함수이지만, 이를 엄밀하게 옮기는 데 필요한 도구는 이미 극한이라는 형태로 갖추어져 있다.
 
 <div class="definition" markdown="1">
 
@@ -29,7 +29,7 @@ $$\lim_{x \to a} f(x) = f(a)$$
 
 </div>
 
-이를 풀어쓰면, , 임의의 $$\epsilon > 0$$에 대하여 어떤 $$\delta > 0$$이 존재하여 
+이를 $$\epsilon$$-$$\delta$$ 논법으로 풀어쓰면, 임의의 $$\epsilon > 0$$에 대하여 어떤 $$\delta > 0$$이 존재하여 
 
 $$\lvert x - a\rvert < \delta\Rightarrow\lvert f(x) - f(a)\rvert < \epsilon$$
 
@@ -45,7 +45,7 @@ $$\lvert x - a\rvert < \delta\Rightarrow\lvert f(x) - f(a)\rvert < \epsilon$$
 
 ## 연속함수의 연산
 
-우선 다음 명제는 [§함수의 극한, ⁋명제 5](/ko/math/calculus/functions_and_limits#prop5)의 자명한 결과이다.
+연속은 극한값이 함숫값과 일치한다는 진술이므로, 극한의 사칙연산법칙 ([§함수의 극한, ⁋명제 5](/ko/math/calculus/functions_and_limits#prop5))이 그대로 연속함수의 연산으로 옮겨 온다.
 
 <div class="proposition" markdown="1">
 
@@ -72,7 +72,7 @@ $$\lvert x-a\rvert < \delta\Rightarrow\lvert f(x) - b\rvert < \eta$$
 
 <div class="example" markdown="1">
 
-<ins id="ex3">**예시 3**</ins> $$\sin$$ 삼각함수 $$\sin x$$가 정의역의 모든 점에서 연속임을 보이자. 우선 삼각함수의 덧셈공식에서
+<ins id="ex3">**예시 3**</ins> 삼각함수 $$\sin x$$가 정의역의 모든 점에서 연속임을 보이자. 삼각함수의 합차공식에서
 
 $$\lvert \sin x - \sin a\rvert= \left\lvert 2\cos\frac{x+a}{2}\sin\frac{x-a}{2}\right\rvert \leq 2\left\lvert \sin\frac{x-a}{2}\right\rvert$$
 
@@ -110,9 +110,9 @@ $$\lvert \sin x - \sin a\rvert\leq\lvert x-a\rvert$$
 
 <ins id="def6">**정의 6 (불연속의 분류)**</ins> 함수 $$f$$가 점 $$a$$에서 불연속일 때, 두 한쪽 극한 $$\lim_{x\to a^\pm} f(x)$$의 거동에 따라 다음 셋으로 나눈다.
 
-1. *제거가능 불연속<sub>removable</sub>*: 극한 $$\lim_{x\to a} f(x)$$가 존재하나 $$f(a)$$와 다르거나 $$f(a)$$가 정의되지 않은 경우. $$f(a)$$를 극한값으로 (재)정의하면 연속이 된다. 예: $$\dfrac{x^2-1}{x-1}$$ ($$a=1$$).
-2. *도약 불연속<sub>jump</sub>*: 두 한쪽 극한이 모두 존재하나 서로 다른 경우. 예: $$\dfrac{\lvert x\rvert}{x}$$ ($$a=0$$).
-3. *본질적 불연속<sub>essential</sub>*: 한쪽 극한 중 적어도 하나가 존재하지 않는 (진동하거나 발산하는) 경우. 예: $$\sin\dfrac1x$$ ($$a=0$$).
+1. *제거가능 불연속<sub>removable</sub>*: 극한 $$\lim_{x\to a} f(x)$$가 존재하나 $$f(a)$$와 다르거나 $$f(a)$$가 정의되지 않은 경우. $$f(a)$$를 극한값으로 (재)정의하면 연속이 된다. 예: $$(x^2-1)/(x-1)$$ ($$a=1$$).
+2. *도약 불연속<sub>jump</sub>*: 두 한쪽 극한이 모두 존재하나 서로 다른 경우. 예: $$\lvert x\rvert/x$$ ($$a=0$$).
+3. *본질적 불연속<sub>essential</sub>*: 한쪽 극한 중 적어도 하나가 존재하지 않는 (진동하거나 발산하는) 경우. 예: $$\sin(1/x)$$ ($$a=0$$).
 
 </div>
 

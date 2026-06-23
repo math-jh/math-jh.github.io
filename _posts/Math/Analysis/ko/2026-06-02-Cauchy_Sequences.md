@@ -14,7 +14,7 @@ weight: 3
 published: false
 ---
 
-[§수열의 수렴](/ko/math/analysis/convergence_of_sequences)의 단조수렴정리는 강력하지만 단조수열에만 쓸 수 있고, 극한이 무엇인지 알아야 수렴을 정의할 수 있다. 극한값을 미리 지목하지 않고 "항들이 자기들끼리 점점 가까워진다"는 내부적 조건만으로 수렴을 판정할 수 있다면 훨씬 유용할 것이다. 그것이 Cauchy 수열이며, 실수에서는 이 조건이 수렴과 정확히 동치이다.
+[§수열의 수렴](/ko/math/analysis/convergence_of_sequences)의 [§수열의 수렴, ⁋정리 7](/ko/math/analysis/convergence_of_sequences#thm7)는 강력하지만 단조수열에만 쓸 수 있고, 극한이 무엇인지 알아야 수렴을 정의할 수 있다. 극한값을 미리 지목하지 않고 "항들이 자기들끼리 점점 가까워진다"는 내부적 조건만으로 수렴을 판정할 수 있다면 훨씬 유용할 것이다. 그것이 Cauchy 수열이며, 실수에서는 이 조건이 수렴과 정확히 동치이다.
 
 ## Cauchy 수열
 
@@ -71,7 +71,7 @@ $$\varepsilon = 1$$에 대응하는 $$N$$을 잡으면, $$n \geq N$$에서 $$\lv
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-수렴 $$\Rightarrow$$ Cauchy는 명제 2이다. 역을 보이자. $$(a_n)$$이 Cauchy이면 명제 3에 의해 유계이고, Bolzano–Weierstrass 정리 ([§부분수열과 Bolzano–Weierstrass 정리](/ko/math/analysis/bolzano_weierstrass))에 의해 수렴하는 부분수열 $$a_{n_k} \to L$$이 존재한다. 이제 전체 수열이 같은 $$L$$로 수렴함을 보인다. 임의의 $$\varepsilon > 0$$에 대해, Cauchy 조건으로 $$m, n \geq N$$이면 $$\lvert a_m - a_n\rvert < \varepsilon/2$$이게 $$N$$을 잡고, 부분수열의 수렴으로 $$n_k \geq N$$이면서 $$\lvert a_{n_k} - L\rvert < \varepsilon/2$$인 $$k$$를 잡는다. 그러면 모든 $$n \geq N$$에 대해
+수렴 $$\Rightarrow$$ Cauchy는 [명제 2](#prop2)이다. 역을 보이자. $$(a_n)$$이 Cauchy이면 [명제 3](#prop3)에 의해 유계이고, [§부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4) 정리 ([§부분수열과 Bolzano–Weierstrass 정리](/ko/math/analysis/bolzano_weierstrass))에 의해 수렴하는 부분수열 $$a_{n_k} \to L$$이 존재한다. 이제 전체 수열이 같은 $$L$$로 수렴함을 보인다. 임의의 $$\varepsilon > 0$$에 대해, Cauchy 조건으로 $$m, n \geq N$$이면 $$\lvert a_m - a_n\rvert < \varepsilon/2$$이게 $$N$$을 잡고, 부분수열의 수렴으로 $$n_k \geq N$$이면서 $$\lvert a_{n_k} - L\rvert < \varepsilon/2$$인 $$k$$를 잡는다. 그러면 모든 $$n \geq N$$에 대해
 
 $$\lvert a_n - L\rvert \leq \lvert a_n - a_{n_k}\rvert + \lvert a_{n_k} - L\rvert < \varepsilon$$
 
@@ -83,7 +83,7 @@ $$\lvert a_n - L\rvert \leq \lvert a_n - a_{n_k}\rvert + \lvert a_{n_k} - L\rver
 
 <div class="remark" markdown="1">
 
-<ins id="rmk5">**참고 5**</ins> 정리 4에서 "Cauchy $$\Rightarrow$$ 수렴"은 실수의 완비성과 동치이다. 실제로 이 성질을 *완비성*의 정의로 채택하는 길도 있으며, 상한 성질로부터 (Bolzano–Weierstrass를 거쳐) 이를 유도한 것이 정리 4이다.
+<ins id="rmk5">**참고 5**</ins> [정리 4](#thm4)에서 "Cauchy $$\Rightarrow$$ 수렴"은 실수의 완비성과 동치이다. 실제로 이 성질을 *완비성*의 정의로 채택하는 길도 있으며, 상한 성질로부터 (Bolzano–Weierstrass를 거쳐) 이를 유도한 것이 [정리 4](#thm4)이다.
 
 </div>
 
@@ -93,15 +93,15 @@ $$\lvert a_n - L\rvert \leq \lvert a_n - a_{n_k}\rvert + \lvert a_{n_k} - L\rver
 
 $$\lvert a_m - a_n\rvert \leq 10^{-(N-1)}$$
 
-이 성립한다. 따라서 임의의 $$\varepsilon > 0$$에 대해 $$10^{-(N-1)} < \varepsilon$$이 되도록 $$N$$을 크게 잡으면 Cauchy 조건이 충족된다. 정의 1의 검증이 극한 $$\sqrt 2$$를 한 번도 언급하지 않았다는 점이 핵심이다. 같은 부등식이 $$\mathbb{R}$$ 안에서는 $$a_n \to \sqrt 2$$를 보장하지만, $$\mathbb{Q}$$ 안에서는 갈 곳이 없다.
+이 성립한다. 따라서 임의의 $$\varepsilon > 0$$에 대해 $$10^{-(N-1)} < \varepsilon$$이 되도록 $$N$$을 크게 잡으면 Cauchy 조건이 충족된다. [정의 1](#def1)의 검증이 극한 $$\sqrt 2$$를 한 번도 언급하지 않았다는 점이 핵심이다. 같은 부등식이 $$\mathbb{R}$$ 안에서는 $$a_n \to \sqrt 2$$를 보장하지만, $$\mathbb{Q}$$ 안에서는 갈 곳이 없다.
 
 ## 예시와 계산
 
-Cauchy 판정법의 가치는 극한값을 모르는 채로 수렴을 확정할 수 있다는 데 있다. 아래의 예시들은 정의 1과 정리 4를 직접 적용하여, 극한을 따로 구하지 않고도 수렴 여부를 가르는 전형적인 계산을 보인다.
+Cauchy 판정법의 가치는 극한값을 모르는 채로 수렴을 확정하거나 부정할 수 있다는 데 있다. Cauchy 조건의 부정은 발산의 직접 증명으로 쓰인다.
 
 <div class="example" markdown="1">
 
-<ins id="ex6">**예시 6 (조화급수의 부분합)**</ins> 조화급수의 부분합 $$s_n = \sum_{k=1}^{n} \dfrac{1}{k}$$이 이루는 수열은 Cauchy가 아니다. $$n = 2N$$, $$m = N$$을 택하면
+<ins id="ex6">**예시 6 (조화급수의 부분합)**</ins> 조화급수의 부분합 $$s_n = \sum_{k\le n} 1/k$$이 이루는 수열은 Cauchy가 아니다. $$n = 2N$$, $$m = N$$을 택하면
 
 $$\begin{aligned}
 \lvert s_{2N} - s_N\rvert &= \sum_{k=N+1}^{2N} \frac{1}{k} \\
@@ -109,31 +109,15 @@ $$\begin{aligned}
 &= \frac{N}{2N} = \frac{1}{2}
 \end{aligned}$$
 
-이므로, $$\varepsilon = \tfrac12$$에 대해서는 아무리 큰 $$N$$을 잡아도 $$m, n \geq N$$이면서 $$\lvert s_m - s_n\rvert \geq \tfrac12$$인 짝이 존재한다. 따라서 $$(s_n)$$은 Cauchy 조건을 어기고, 정리 4의 대우에 의해 발산한다. 극한값을 구하지 않고 발산을 증명한 셈이다.
+이므로, $$\varepsilon = \tfrac12$$에 대해서는 아무리 큰 $$N$$을 잡아도 $$m, n \geq N$$이면서 $$\lvert s_m - s_n\rvert \geq \tfrac12$$인 짝이 존재한다. 따라서 $$(s_n)$$은 Cauchy 조건을 어기고, [정리 4](#thm4)의 대우에 의해 발산한다. 극한값을 구하지 않고 발산을 증명한 셈이다.
 
 </div>
 
-위 예시는 Cauchy 조건의 부정이 발산의 직접 증명으로 쓰이는 전형을 보여 준다. 반대로 항 사이의 거리가 충분히 빠르게 줄어들면 수렴을 곧바로 끌어낼 수 있다.
+반대로 항 사이의 거리가 충분히 빠르게 줄어들면 수렴을 곧바로 끌어낼 수 있다. 가령 교대조화급수의 부분합 $$t_n = \sum_{k\le n} (-1)^{k-1}/k$$에서 $$m > n$$일 때 차 $$t_m - t_n$$은 절댓값이 단조감소하며 부호가 번갈아 나타나는 교대합이라 첫 항으로 위에서 눌려 $$\lvert t_m - t_n\rvert \leq 1/(n+1)$$이고, 따라서 $$(t_n)$$은 그 극한 $$\ln 2$$를 알지 못한 채로도 Cauchy임이 확인된다. 다음 예시는 거리가 기하급수적으로 줄어드는 경우로, 뒤의 수축수열 명제로 이어진다.
 
 <div class="example" markdown="1">
 
-<ins id="ex7">**예시 7 (교대조화급수의 부분합)**</ins> 교대조화급수의 부분합 $$t_n = \sum_{k=1}^{n} \dfrac{(-1)^{k-1}}{k}$$을 보자. $$m > n$$일 때 차
-
-$$t_m - t_n = \frac{(-1)^{n}}{n+1} + \frac{(-1)^{n+1}}{n+2} + \cdots + \frac{(-1)^{m-1}}{m}$$
-
-은 절댓값이 단조감소하며 부호가 번갈아 나타나는 합이다. 이런 교대합은 첫 항으로 위에서 눌리므로
-
-$$\lvert t_m - t_n\rvert \leq \frac{1}{n+1}$$
-
-이 성립한다. 따라서 임의의 $$\varepsilon > 0$$에 대해 $$\dfrac{1}{N+1} < \varepsilon$$이 되도록 $$N$$을 잡으면 모든 $$m, n \geq N$$에서 $$\lvert t_m - t_n\rvert < \varepsilon$$이고, $$(t_n)$$은 Cauchy이다. 정리 4에 의해 수렴하며, 그 극한이 $$\ln 2$$임은 여기서 쓰지 않았다.
-
-</div>
-
-조화급수와 교대조화급수의 대조는 Cauchy 판정법이 부분합 사이의 거리를 직접 다룬다는 점을 잘 드러낸다. 다음 예시는 거리가 기하급수적으로 줄어드는 경우이다.
-
-<div class="example" markdown="1">
-
-<ins id="ex8">**예시 8 (기하적으로 가까워지는 수열)**</ins> 어떤 $$0 \leq r < 1$$과 상수 $$C$$에 대해 모든 $$n$$에서 $$\lvert a_{n+1} - a_n\rvert \leq C r^n$$이라 하자. 그러면 $$m > n$$일 때 삼각부등식과 기하급수의 합으로
+<ins id="ex7">**예시 7 (기하적으로 가까워지는 수열)**</ins> 어떤 $$0 \leq r < 1$$과 상수 $$C$$에 대해 모든 $$n$$에서 $$\lvert a_{n+1} - a_n\rvert \leq C r^n$$이라 하자. 그러면 $$m > n$$일 때 삼각부등식과 기하급수의 합으로
 
 $$\begin{aligned}
 \lvert a_m - a_n\rvert &\leq \sum_{k=n}^{m-1} \lvert a_{k+1} - a_k\rvert \\
@@ -141,15 +125,15 @@ $$\begin{aligned}
 &\leq C \sum_{k=n}^{\infty} r^k = \frac{C r^n}{1 - r}
 \end{aligned}$$
 
-이다. $$r < 1$$이므로 $$r^n \to 0$$이고, 따라서 임의의 $$\varepsilon > 0$$에 대해 $$\dfrac{C r^N}{1-r} < \varepsilon$$이 되도록 $$N$$을 잡으면 모든 $$m, n \geq N$$에서 $$\lvert a_m - a_n\rvert < \varepsilon$$이다. 즉 $$(a_n)$$은 Cauchy이고 정리 4에 의해 수렴한다.
+이다. $$r < 1$$이므로 $$r^n \to 0$$이고, 따라서 임의의 $$\varepsilon > 0$$에 대해 $$C r^N/(1-r) < \varepsilon$$이 되도록 $$N$$을 잡으면 모든 $$m, n \geq N$$에서 $$\lvert a_m - a_n\rvert < \varepsilon$$이다. 즉 $$(a_n)$$은 Cauchy이고 [정리 4](#thm4)에 의해 수렴한다.
 
 </div>
 
-예시 8의 가정은 인접한 두 항의 거리만 통제하는데도 수열 전체의 수렴을 보장한다. 다만 인접 항의 거리가 $$0$$으로 가는 것만으로는 충분하지 않음에 주의해야 한다.
+[예시 7](#ex7)의 가정은 인접한 두 항의 거리만 통제하는데도 수열 전체의 수렴을 보장한다. 다만 인접 항의 거리가 $$0$$으로 가는 것만으로는 충분하지 않음에 주의해야 한다.
 
 <div class="example" markdown="1">
 
-<ins id="ex9">**예시 9 (인접 거리가 0으로 가도 Cauchy가 아닌 예)**</ins> $$a_n = \sqrt{n}$$이라 하면
+<ins id="ex8">**예시 8 (인접 거리가 0으로 가도 Cauchy가 아닌 예)**</ins> $$a_n = \sqrt{n}$$이라 하면
 
 $$\lvert a_{n+1} - a_n\rvert = \sqrt{n+1} - \sqrt{n} = \frac{1}{\sqrt{n+1} + \sqrt{n}} \to 0$$
 
@@ -161,15 +145,15 @@ $$\lvert a_{4N} - a_N\rvert = 2\sqrt{N} - \sqrt{N} = \sqrt{N} \to \infty$$
 
 </div>
 
-예시 9는 정의 1에서 "모든 $$m, n \geq N$$"이라는 두 자유 첨자가 본질적임을 보여 준다. 인접 항의 차만 다루면 예시 8과 같은 추가 가정(거리의 합 가능성)이 따로 필요하다.
+[예시 8](#ex8)은 [정의 1](#def1)에서 "모든 $$m, n \geq N$$"이라는 두 자유 첨자가 본질적임을 보여 준다. 인접 항의 차만 다루면 [예시 7](#ex7)과 같은 추가 가정(거리의 합 가능성)이 따로 필요하다.
 
 ## 수축수열
 
-극한을 모르고도 수렴을 보장하는 가장 깔끔한 충분조건은, 연속한 두 차가 일정한 비율로 줄어드는 *수축<sub>contractive</sub>* 조건이다. 이는 예시 8을 명제로 다듬은 것이며, 반복 대입으로 정의되는 수열의 수렴 증명에서 표준적으로 쓰인다.
+극한을 모르고도 수렴을 보장하는 가장 깔끔한 충분조건은, 연속한 두 차가 일정한 비율로 줄어드는 *수축<sub>contractive</sub>* 조건이다. 이는 [예시 7](#ex7)을 명제로 다듬은 것이며, 반복 대입으로 정의되는 수열의 수렴 증명에서 표준적으로 쓰인다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop10">**명제 10 (수축수열의 수렴)**</ins> 어떤 상수 $$0 \leq c < 1$$이 존재하여 모든 $$n$$에서
+<ins id="prop9">**명제 9 (수축수열의 수렴)**</ins> 어떤 상수 $$0 \leq c < 1$$이 존재하여 모든 $$n$$에서
 
 $$\lvert a_{n+1} - a_n\rvert \leq c\,\lvert a_n - a_{n-1}\rvert$$
 
@@ -184,7 +168,7 @@ $$\lvert a_{n+1} - a_n\rvert \leq c\,\lvert a_n - a_{n-1}\rvert$$
 
 $$\lvert a_{n+1} - a_n\rvert \leq c^{n-1} \lvert a_2 - a_1\rvert$$
 
-이다. 그러면 $$m > n$$일 때 예시 8과 같은 계산으로
+이다. 그러면 $$m > n$$일 때 [예시 7](#ex7)과 같은 계산으로
 
 $$\begin{aligned}
 \lvert a_m - a_n\rvert &\leq \sum_{k=n}^{m-1} \lvert a_{k+1} - a_k\rvert \\
@@ -192,7 +176,7 @@ $$\begin{aligned}
 &\leq \lvert a_2 - a_1\rvert \cdot \frac{c^{n-1}}{1 - c}
 \end{aligned}$$
 
-을 얻는다. $$0 \leq c < 1$$이므로 $$c^{n-1} \to 0$$이고, 우변은 $$n \to \infty$$에서 $$0$$으로 수렴한다. 따라서 임의의 $$\varepsilon > 0$$에 대해 $$N$$을 충분히 크게 잡으면 모든 $$m, n \geq N$$에서 $$\lvert a_m - a_n\rvert < \varepsilon$$이 되어 $$(a_n)$$은 Cauchy이고, 정리 4에 의해 수렴한다.
+을 얻는다. $$0 \leq c < 1$$이므로 $$c^{n-1} \to 0$$이고, 우변은 $$n \to \infty$$에서 $$0$$으로 수렴한다. 따라서 임의의 $$\varepsilon > 0$$에 대해 $$N$$을 충분히 크게 잡으면 모든 $$m, n \geq N$$에서 $$\lvert a_m - a_n\rvert < \varepsilon$$이 되어 $$(a_n)$$은 Cauchy이고, [정리 4](#thm4)에 의해 수렴한다.
 
 </details>
 
@@ -200,11 +184,11 @@ $$\begin{aligned}
 
 <div class="example" markdown="1">
 
-<ins id="ex11">**예시 11 (반복 대입으로 정의된 수열)**</ins> $$a_1 = 1$$이고 $$a_{n+1} = 1 + \dfrac{1}{a_n}$$으로 정의되는 수열을 보자. 모든 항이 $$1$$ 이상이므로 $$a_n \geq 1$$이고, 두 차를 비교하면
+<ins id="ex10">**예시 10 (반복 대입으로 정의된 수열)**</ins> $$a_1 = 1$$이고 $$a_{n+1} = 1 + 1/a_n$$으로 정의되는 수열을 보자. 모든 항이 $$1$$ 이상이므로 $$a_n \geq 1$$이고, 두 차를 비교하면
 
 $$\lvert a_{n+1} - a_n\rvert = \left\lvert \frac{1}{a_n} - \frac{1}{a_{n-1}} \right\rvert = \frac{\lvert a_n - a_{n-1}\rvert}{a_n\, a_{n-1}} \leq \lvert a_n - a_{n-1}\rvert$$
 
-이 된다. 더 정밀하게 보면 두 번째 항부터는 $$a_n \geq \tfrac32$$이므로 $$a_n a_{n-1} \geq \tfrac94 > 2$$여서 $$c = \tfrac12$$로 수축 조건이 성립한다. 명제 10에 의해 $$(a_n)$$은 수렴한다. 그 극한 $$L$$은 점화식의 양변에 극한을 취해 얻는 $$L = 1 + \dfrac{1}{L}$$, 곧 $$L^2 - L - 1 = 0$$의 양의 해 $$L = \dfrac{1 + \sqrt 5}{2}$$이다. 수렴은 명제 10이 보장하고, 극한값은 그 다음에 방정식을 풀어 얻는다.
+이 된다. 더 정밀하게 보면 두 번째 항부터는 $$a_n \geq \tfrac32$$이므로 $$a_n a_{n-1} \geq \tfrac94 > 2$$여서 $$c = \tfrac12$$로 수축 조건이 성립한다. [명제 9](#prop9)에 의해 $$(a_n)$$은 수렴한다. 그 극한 $$L$$은 점화식의 양변에 극한을 취해 얻는 $$L = 1 + 1/L$$, 곧 $$L^2 - L - 1 = 0$$의 양의 해 $$L = (1 + \sqrt 5)/2$$이다. 수렴은 [명제 9](#prop9)가 보장하고, 극한값은 그 다음에 방정식을 풀어 얻는다.
 
 </div>
 

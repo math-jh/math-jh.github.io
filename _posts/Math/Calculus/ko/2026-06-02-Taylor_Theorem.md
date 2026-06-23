@@ -11,6 +11,8 @@ sidebar:
 date: 2026-06-02
 weight: 10
 
+drift_needed: true
+
 published: false
 ---
 
@@ -57,7 +59,7 @@ $$g(t) = f(x) - \sum_{k=0}^{n}\frac{f^{(k)}(t)}{k!}(x-t)^k, \qquad h(t) = (x - t
 
 $$g'(t) = -\frac{f^{(n+1)}(t)}{n!}(x - t)^n$$
 
-만 남고, $$h'(t) = -(n+1)(x-t)^n$$이다. 코시 평균값 정리 ([§평균값 정리, ⁋정리 6](/ko/math/calculus/mean_value_theorem#thm6))를 $$a$$와 $$x$$ 사이에 적용하면
+만 남고, $$h'(t) = -(n+1)(x-t)^n$$이다. [§평균값 정리, ⁋정리 6](/ko/math/calculus/mean_value_theorem#thm6)를 $$a$$와 $$x$$ 사이에 적용하면
 
 $$\bigl(g(x) - g(a)\bigr)h'(c) = \bigl(h(x) - h(a)\bigr)g'(c)$$
 
@@ -65,7 +67,7 @@ $$\bigl(g(x) - g(a)\bigr)h'(c) = \bigl(h(x) - h(a)\bigr)g'(c)$$
 
 $$(-R_n(x))\bigl(-(n+1)(x-c)^n\bigr) = \bigl(-(x-a)^{n+1}\bigr)\left(-\frac{f^{(n+1)}(c)}{n!}(x-c)^n\right)$$
 
-이고, 양변의 $$(x-c)^n$$을 소거하여 정리하면 $$R_n(x) = \dfrac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}$$을 얻는다.
+이고, 양변의 $$(x-c)^n$$을 소거하여 정리하면 $$R_n(x) = f^{(n+1)}(c)(x-a)^{n+1}/(n+1)!$$을 얻는다.
 
 </details>
 
@@ -77,7 +79,7 @@ $$n = 0$$인 경우의 테일러 정리는 정확히 평균값 정리 ([§평균
 
 <div class="example" markdown="1">
 
-<ins id="ex3">**예시 3 (지수함수)**</ins> $$f(x) = e^x$$는 모든 계도함수가 $$e^x$$이고 $$f^{(k)}(0) = 1$$이므로, 매클로린 다항식은 $$P_n(x) = \sum_{k=0}^n \dfrac{x^k}{k!}$$이다. 나머지는 $$0$$과 $$x$$ 사이의 어떤 $$c$$에 대해 $$R_n(x) = \dfrac{e^c}{(n+1)!}x^{n+1}$$이고, 고정된 $$x$$에서
+<ins id="ex3">**예시 3 (지수함수)**</ins> $$f(x) = e^x$$는 모든 계도함수가 $$e^x$$이고 $$f^{(k)}(0) = 1$$이므로, 매클로린 다항식은 $$P_n(x) = \sum_{k=0}^n x^k/k!$$이다. 나머지는 $$0$$과 $$x$$ 사이의 어떤 $$c$$에 대해 $$R_n(x) = e^c x^{n+1}/(n+1)!$$이고, 고정된 $$x$$에서
 
 $$\lvert R_n(x)\rvert \leq \frac{e^{\lvert x\rvert}\lvert x\rvert^{n+1}}{(n+1)!} \to 0 \qquad (n \to \infty)$$
 
@@ -85,13 +87,13 @@ $$\lvert R_n(x)\rvert \leq \frac{e^{\lvert x\rvert}\lvert x\rvert^{n+1}}{(n+1)!}
 
 $$e^x = \sum_{k=0}^{\infty}\frac{x^k}{k!}$$
 
-이 성립한다. 특히 $$x = 1$$이면 $$e = \sum_{k=0}^\infty \dfrac{1}{k!}$$이다.
+이 성립한다. 특히 $$x = 1$$이면 $$e = \sum_{k=0}^\infty 1/k!$$이다.
 
 </div>
 
 <div class="example" markdown="1">
 
-<ins id="ex4">**예시 4 (삼각함수)**</ins> $$\sin x$$는 도함수가 $$\cos x, -\sin x, -\cos x, \sin x$$로 주기적이라 $$f^{(k)}(0)$$이 $$0, 1, 0, -1$$을 반복한다. 모든 계도함수가 $$\lvert f^{(n+1)}\rvert \leq 1$$로 유계이므로 예시 3과 같은 논법으로 나머지가 $$0$$으로 가, 모든 $$x$$에서
+<ins id="ex4">**예시 4 (삼각함수)**</ins> $$\sin x$$는 도함수가 $$\cos x, -\sin x, -\cos x, \sin x$$로 주기적이라 $$f^{(k)}(0)$$이 $$0, 1, 0, -1$$을 반복한다. 모든 계도함수가 $$\lvert f^{(n+1)}\rvert \leq 1$$로 유계이므로 [예시 3](#ex3)과 같은 논법으로 나머지가 $$0$$으로 가, 모든 $$x$$에서
 
 $$\sin x = \sum_{k=0}^\infty \frac{(-1)^k x^{2k+1}}{(2k+1)!}, \qquad \cos x = \sum_{k=0}^\infty \frac{(-1)^k x^{2k}}{(2k)!}$$
 
@@ -109,7 +111,7 @@ $$\ln(1+x) = \sum_{k=1}^\infty \frac{(-1)^{k-1}}{k} x^k \qquad (-1 < x \leq 1)$$
 
 $$(1+x)^\alpha = \sum_{k=0}^\infty \binom{\alpha}{k} x^k, \qquad \binom{\alpha}{k} = \frac{\alpha(\alpha-1)\cdots(\alpha-k+1)}{k!} \qquad (\lvert x\rvert < 1)$$
 
-이다. 이 두 전개는 무한급수이므로 수렴역이 제한됨에 유의한다 ($$e^x, \sin, \cos$$는 모든 $$x$$에서 수렴).
+이다. 특수한 경우로 $$\alpha = -1$$은 기하급수 $$1/(1+x) = \sum_k (-1)^k x^k$$를, $$\alpha = 1/2$$은 $$\sqrt{1+x} = 1 + x/2 - x^2/8 + \cdots$$를 준다. 이 전개들은 무한급수이므로 수렴역이 제한됨에 유의한다 ($$e^x, \sin, \cos$$는 모든 $$x$$에서 수렴).
 
 </div>
 
@@ -130,51 +132,25 @@ $$(1+x)^\alpha = \sum_{k=0}^\infty \binom{\alpha}{k} x^k, \qquad \binom{\alpha}{
 
 $$\lvert R_n(x)\rvert = \frac{\lvert f^{(n+1)}(c)\rvert}{(n+1)!}\lvert x-a\rvert^{n+1} \leq \frac{M\,\lvert x-a\rvert^{n+1}}{(n+1)!}$$
 
-이다. 우변은 고정된 $$x$$에서 $$n \to \infty$$일 때 $$0$$으로 가므로 ([§수열의 극한, ⁋예시 7](/ko/math/calculus/sequences#ex7)의 $$r^n/n! \to 0$$), $$R_n(x) \to 0$$이고 부분합이 $$f(x)$$로 수렴한다.
+이다. 우변은 고정된 $$x$$에서 $$n \to \infty$$일 때 $$0$$으로 가므로 ([§수열의 극한, ⁋예시 6](/ko/math/calculus/sequences#ex6)의 $$r^n/n! \to 0$$), $$R_n(x) \to 0$$이고 부분합이 $$f(x)$$로 수렴한다.
 
 </details>
 
-명제 6은 $$\sin, \cos$$ (도함수가 모두 $$1$$로 유계) 의 전개를 즉시 정당화한다. 그러나 도함수가 유계가 아니면 사정이 달라진다. $$f(x) = e^{-1/x^2}$$ ($$f(0)=0$$) 은 $$0$$에서 모든 계도함수가 $$0$$이어서 매클로린 급수가 항등적으로 $$0$$이지만 $$f$$ 자신은 $$0$$이 아니므로, 테일러 급수가 함수와 일치하지 않는다. 매끄러움이 해석성을 보장하지 못하는 것이다 ([§멱급수](/ko/math/calculus/power_series)).
+[명제 6](#prop6)은 $$\sin, \cos$$ (도함수가 모두 $$1$$로 유계) 의 전개를 즉시 정당화한다. 그러나 도함수가 유계가 아니면 사정이 달라진다. $$f(x) = e^{-1/x^2}$$ ($$f(0)=0$$) 은 $$0$$에서 모든 계도함수가 $$0$$이어서 매클로린 급수가 항등적으로 $$0$$이지만 $$f$$ 자신은 $$0$$이 아니므로, 테일러 급수가 함수와 일치하지 않는다. 매끄러움이 해석성을 보장하지 못하는 것이다 ([§멱급수](/ko/math/calculus/power_series)).
 
 ## 응용: 근사와 극한
 
-테일러 정리의 나머지 평가는 근삿값의 오차를 보증한다.
+나머지 평가는 근삿값의 오차를 보증한다. 가령 $$\sin(0.1)$$을 $$P_3(x) = x - x^3/6$$로 근사하면 4차 나머지가 $$\lvert R_3(0.1)\rvert \leq (0.1)^4/4! \approx 4.2\times 10^{-6}$$이라 소수점 다섯째 자리까지 정확하고, $$e = \sum_k 1/k!$$를 처음 $$n+1$$항에서 끊은 오차는 $$\lvert R_n(1)\rvert \leq 3/(n+1)!$$ ($$e^c < 3$$) 이라 $$n = 9$$만 해도 $$3/10! \approx 8\times 10^{-7}$$ 이하로, 계승 분모 덕에 수렴이 매우 빠르다.
+
+테일러 전개는 $$0/0$$ 꼴 극한에도 강력하여, 분자·분모를 각각 전개해 최저차항을 비교하면 [§도함수의 응용, ⁋정리 6](/ko/math/calculus/applications_of_derivatives#thm6)를 거듭 적용하지 않고도 극한을 읽어낼 수 있다.
 
 <div class="example" markdown="1">
 
-<ins id="ex7">**예시 7 (오차 보증)**</ins> $$\sin(0.1)$$을 $$P_3(x) = x - \dfrac{x^3}{6}$$로 근사하면, 4차 나머지가
+<ins id="ex7">**예시 7 (극한)**</ins> 극한 $$\lim_{x\to 0}(e^x - 1 - x)/x^2$$를 구하자. [예시 3](#ex3)에서 $$e^x = 1 + x + x^2/2 + x^3/6 + \cdots$$이므로
 
-$$\lvert R_3(0.1)\rvert \leq \frac{\lvert f^{(4)}(c)\rvert}{4!}(0.1)^4 \leq \frac{1}{24}(0.1)^4 \approx 4.2 \times 10^{-6}$$
-
-이므로 $$\sin(0.1) \approx 0.1 - \dfrac{0.001}{6} = 0.0998333\ldots$$이 소수점 다섯째 자리까지 정확하다.
-
-</div>
-
-테일러 전개는 $$\frac{0}{0}$$ 꼴 극한을 다루는 데에도 강력하다. 분자·분모를 각각 전개하여 최저차항을 비교하면 된다.
-
-<div class="example" markdown="1">
-
-<ins id="ex8">**예시 8 (극한)**</ins> $$\displaystyle\lim_{x\to 0}\frac{e^x - 1 - x}{x^2}$$를 구하자. 예시 3에서 $$e^x = 1 + x + \dfrac{x^2}{2} + \dfrac{x^3}{6} + \cdots$$이므로
-
-$$\frac{e^x - 1 - x}{x^2} = \frac{\frac{x^2}{2} + \frac{x^3}{6} + \cdots}{x^2} = \frac12 + \frac{x}{6} + \cdots \to \frac12$$
+$$\frac{e^x - 1 - x}{x^2} = \frac{x^2/2 + x^3/6 + \cdots}{x^2} = \frac12 + \frac{x}{6} + \cdots \to \frac12$$
 
 이다. 로피탈 정리를 두 번 적용한 결과와 일치하되, 전개는 고차 정보까지 한눈에 보여준다.
-
-</div>
-
-예시 3의 $$e = \sum_{k=0}^\infty \dfrac1{k!}$$에서 처음 $$n+1$$항으로 끊은 오차는 $$\lvert R_n(1)\rvert \leq \dfrac{3}{(n+1)!}$$ ($$e^c < 3$$) 이라, $$n = 9$$만 해도 $$\dfrac{3}{10!} \approx 8\times 10^{-7}$$ 이하로 계승 분모 덕에 수렴이 매우 빠르다.
-
-<div class="example" markdown="1">
-
-<ins id="ex9">**예시 9 (다른 전개)**</ins> 이항급수와 기하급수도 매클로린 전개의 특수한 경우이다. $$\alpha = -1$$인 이항급수는 기하급수
-
-$$\frac{1}{1+x} = \sum_{k=0}^\infty (-1)^k x^k \qquad (\lvert x\rvert < 1)$$
-
-이고, $$\alpha = \tfrac12$$이면 제곱근의 전개
-
-$$\sqrt{1+x} = 1 + \frac{x}{2} - \frac{x^2}{8} + \frac{x^3}{16} - \cdots$$
-
-를 준다.
 
 </div>
 
@@ -182,6 +158,6 @@ $$\sqrt{1+x} = 1 + \frac{x}{2} - \frac{x^2}{8} + \frac{x^3}{16} - \cdots$$
 
 $$f(x) = P_n(x) + o\bigl((x-a)^n\bigr) \qquad (x \to a)$$
 
-가 성립한다 — 즉 오차가 $$(x-a)^n$$보다 빠르게 $$0$$으로 간다. 이 형태는 예시 8처럼 극한을 계산할 때 나머지를 일일이 평가하지 않고 "$$o$$" 기호로 묶어 두기에 편리하다.
+가 성립한다. 즉 오차가 $$(x-a)^n$$보다 빠르게 $$0$$으로 간다. 이 형태는 [예시 7](#ex7)처럼 극한을 계산할 때 나머지를 일일이 평가하지 않고 "$$o$$" 기호로 묶어 두기에 편리하다.
 
 이처럼 테일러 정리는 함수를 다항식으로 바꾸어 계산을 단순화한다. 엄밀한 형태는 해석학 [\[해석학\] §평균값 정리와 테일러 정리](/ko/math/analysis/mean_value_theorem)와 [\[해석학\] §멱급수와 해석함수](/ko/math/analysis/power_series)에서 다룬다.
