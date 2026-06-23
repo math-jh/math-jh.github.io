@@ -11,8 +11,10 @@ sidebar:
 
 date: 2022-10-09
 
-weight: 118
+weight: 119
 
+published: false
+drift_needed: true
 
 ---
 
@@ -24,19 +26,19 @@ weight: 118
 
 대표적인 예시는 다양한 데이터가 주어졌을 때, 이를 표현하는 적당한 함수를 찾는 것이다. 물론 라그랑주 보간법을 이용하면 적절한 basis를 잡아 주어진 $$n+1$$개의 데이터를 근사하는 $$n$$차 함수를 찾을 수 있지만, 가령 이 데이터를 표현하는 일차함수를 찾으려 한다면 주어진 $$n+1$$개의 점이 모두 일직선 상에 존재하지 않는 한 정확한 해를 찾을 수는 없을 것이다.
 
-우리는 임의의 주어진 벡터 $$y$$를 $$\im A$$로 사영한 후, 이 벡터 $$y'=\proj_{\im(A)}y$$에 대해 방정식 $$Ax=y'$$를 풀 것이다. 그런데 앞선 글에서 우리는 $$y-y'\in (\im A)^\perp$$임을 알고 있으므로
+우리는 임의의 주어진 벡터 $$y$$를 $$\im A$$로 사영한 후, 이 벡터 $$\hat y=\proj_{\im(A)}y$$에 대해 방정식 $$Ax=\hat y$$를 풀 것이다. 그런데 앞선 글에서 우리는 $$y-\hat y\in (\im A)^\perp$$임을 알고 있으므로
 
-$$\langle y-y', v\rangle=0\qquad\text{for all $v\in \im A$}$$
+$$\langle y-\hat y, v\rangle=0\qquad\text{for all $v\in \im A$}$$
 
 임을 안다. 따라서 다음의 식
 
-$$\langle y-y', Au\rangle=0\qquad\text{for all $u\in \mathbb{R}^n$}$$
+$$\langle y-\hat y, Au\rangle=0\qquad\text{for all $u\in \mathbb{R}^n$}$$
 
 을 얻는다. 이제 $$A$$를 왼쪽으로 넘겨주면
 
-$$\langle A^t(y-y'), u\rangle=0\qquad\text{for all $u\in\mathbb{R}^n$}$$
+$$\langle A^t(y-\hat y), u\rangle=0\qquad\text{for all $u\in\mathbb{R}^n$}$$
 
-이고, $$\langle-,-\rangle$$이 non-degenerate인 것으로부터 $$A^t(y-y')=0$$임을 안다. 이제 $$y'=Ax$$이므로, 우리는 방정식
+이고, $$\langle-,-\rangle$$이 non-degenerate인 것으로부터 $$A^t(y-\hat y)=0$$임을 안다. 이제 $$\hat y=Ax$$이므로, 우리는 방정식
 
 $$A^tAx=A^ty$$
 
@@ -76,17 +78,19 @@ $$A^tA=\begin{pmatrix}5&3\\ 3&3\end{pmatrix},\qquad A^ty=\begin{pmatrix}11\\ 8\e
 
 $$\begin{pmatrix}a\\ b\end{pmatrix}=(A^tA)^{-1}A^ty=\frac{1}{6}\begin{pmatrix}3&-3\\ -3&5\end{pmatrix}\begin{pmatrix}11\\ 8\end{pmatrix}=\frac{1}{6}\begin{pmatrix}9\\ 7\end{pmatrix}=\begin{pmatrix}3/2\\ 7/6\end{pmatrix}$$
 
-을 얻는다. 즉, 주어진 세 점을 최소제곱의 의미에서 가장 잘 적합하는 직선은 $$y=\frac{3}{2}x+\frac{7}{6}$$이다.
+을 얻는다. 즉, 주어진 세 점을 최소제곱의 의미에서 가장 잘 표현하는 직선은 $$y=\frac{3}{2}x+\frac{7}{6}$$이다.
+
+![linear least squares fit](/assets/images/Math/Linear_Algebra/Least_Squares_Method-1.svg){:style="width:11.95em" class="invert" .align-center}
 
 </div>
 
 더 일반적으로, 내적 $$\langle-,-\rangle$$을 dot product 대신 함수들의 공간에서의 $$L^2$$-내적 등으로 택하여도 이와 비슷한 예시를 반복할 수 있다. 
 
-[예시 2](#ex2)에서 본질적으로 쓰인 것은 적합하려는 함수가 미지의 계수들에 대해 일차라는 사실 뿐이다. 즉 적합하려는 모델이 미리 고른 함수들 $$f_1,\ldots, f_k$$의 일차결합 $$c_1f_1+\cdots+c_kf_k$$의 꼴이기만 하면, $$(i,j)$$ 성분이 $$i$$번째 데이터점에서의 $$f_j$$의 값인 행렬 $$A$$를 세우고 같은 normal equation을 풀어 계수 $$c_j$$를 얻을 수 있다. 직선 적합은 $$f_1(t)=t$$, $$f_2(t)=1$$인 경우였으며, 같은 방법이 다항함수 적합에도 그대로 적용된다. 
+[예시 2](#ex2)에서 본질적으로 쓰인 것은 구하려는 함수가 미지의 계수들에 대해 일차라는 사실 뿐이다. 즉 사용하려는 모델이 미리 고른 함수들 $$f_1,\ldots, f_k$$의 일차결합 $$c_1f_1+\cdots+c_kf_k$$의 꼴이기만 하면, $$(i,j)$$ 성분이 $$i$$번째 데이터점에서의 $$f_j$$의 값인 행렬 $$A$$를 세우고 같은 normal equation을 풀어 계수 $$c_j$$를 얻을 수 있다. 특별히 [예시 2](#ex2)는 $$f_1(t)=t$$, $$f_2(t)=1$$인 경우였으며, 같은 방법이 일반적인 다항함수의 경우에도 그대로 적용된다. 
 
 <div class="example" markdown="1">
 
-<ins id="ex3">**예시 3**</ins> 평면 위의 네 점 $$(-2,5)$$, $$(-1,2)$$, $$(1,1)$$, $$(2,4)$$를 가장 잘 적합하는 이차함수 $$y=a\x^2+b\x+c$$를 찾는 문제를 생각하자. 각 점에서 $$(\x^2,\x,1)$$의 값을 행으로 쌓으면 
+<ins id="ex3">**예시 3**</ins> 평면 위의 네 점 $$(-2,5)$$, $$(-1,2)$$, $$(1,1)$$, $$(2,4)$$를 가장 잘 표현하는 이차함수 $$y=a\x^2+b\x+c$$를 찾는 문제를 생각하자. 각 점에서 $$(\x^2,\x,1)$$의 값을 행으로 쌓으면 
 
 $$A=\begin{pmatrix}4&-2&1\\ 1&-1&1\\ 1&1&1\\ 4&2&1\end{pmatrix},\qquad x=\begin{pmatrix}a\\ b\\ c\end{pmatrix},\qquad y=\begin{pmatrix}5\\ 2\\ 1\\ 4\end{pmatrix}$$
 
@@ -98,35 +102,33 @@ $$A^tA=\begin{pmatrix}34&0&10\\ 0&10&0\\ 10&0&4\end{pmatrix},\qquad A^ty=\begin{
 
 $$\begin{pmatrix}34&10\\ 10&4\end{pmatrix}\begin{pmatrix}a\\ c\end{pmatrix}=\begin{pmatrix}39\\ 12\end{pmatrix}$$
 
-을 푼다. 이 계수행렬의 행렬식은 $$34\cdot 4-10\cdot 10=36$$이므로 가역이고, 풀면 $$a=1$$, $$c=\frac{1}{2}$$을 얻는다. 따라서 최소제곱의 의미에서 가장 잘 적합하는 포물선은 $$y=\x^2-\frac{3}{10}\x+\frac{1}{2}$$이다.
+을 푼다. 이 계수행렬의 행렬식은 $$34\cdot 4-10\cdot 10=36$$이므로 가역이고, 풀면 $$a=1$$, $$c=\frac{1}{2}$$을 얻는다. 따라서 최소제곱의 의미에서 이들 네 점을 가장 잘 표현하는 포물선은 $$y=\x^2-\frac{3}{10}\x+\frac{1}{2}$$이다.
+
+![quadratic least squares fit](/assets/images/Math/Linear_Algebra/Least_Squares_Method-2.svg){:style="width:19.74em" class="invert" .align-center}
 
 </div>
 
-[명제 1](#prop1)의 유도를 돌이켜보면, 최소제곱해 $$x$$가 만드는 $$Ax$$는 $$y$$를 $$\im A$$로 정사영한 벡터 $$\proj_{\im A}y$$와 정확히 같다. 이것이 애초에 normal equation을 이끌어낸 출발점이었다. 즉 적합값 $$\hat y=Ax$$는 $$y$$에서 $$\im A$$로 내린 수선의 발이고, 잔차 $$y-\hat y$$는 $$\im A$$에 수직이다. 특히 $$A$$가 full column rank여서 $$A^tA$$이 가역이라면 $$x=(A^tA)^{-1}A^ty$$이므로 적합값은 
+[명제 1](#prop1)의 유도과정을 돌이켜보면, least-squares solution $$x$$가 만드는 $$Ax$$는 $$y$$를 $$\im A$$로 정사영한 벡터 $$\proj_{\im A}y$$와 정확히 같았으며, 이것이 애초에 방정식 $$A^tAx=A^ty$$을 이끌어낸 출발점이었다. 즉 근사값 $$\hat y=Ax$$는 $$y$$에서 $$\im A$$로 내린 수선의 발이고, 오차 $$y-\hat y$$는 $$\im A$$에 수직이다. 특히 $$A$$가 full column rank여서 $$A^tA$$이 가역이라면 $$x=(A^tA)^{-1}A^ty$$이므로 근사값은 
 
 $$\hat y=A(A^tA)^{-1}A^ty$$
 
-로 주어진다. 여기서 등장한 행렬 $$P=A(A^tA)^{-1}A^t$$은 $$\im A$$로의 정사영을 나타내며, $$A^tA$$이 대칭이므로 $$P^t=P$$이고 
-
-$$P^2=A(A^tA)^{-1}(A^tA)(A^tA)^{-1}A^t=A(A^tA)^{-1}A^t=P$$
-
-이 성립함을 직접 확인할 수 있다. 정사영이 멱등사상이라는 사실이 행렬의 언어로 다시 나타난 것이다. 
+로 주어진다. 여기서 등장한 행렬 $$P=A(A^tA)^{-1}A^t$$은 $$\im A$$로의 정사영을 나타낸다. 
 
 <div class="example" markdown="1">
 
-<ins id="ex4">**예시 4**</ins> [예시 2](#ex2)로 돌아가 적합값과 잔차를 직접 구해보자. $$x=(\tfrac{3}{2},\tfrac{7}{6})$$이었으므로 
+<ins id="ex4">**예시 4**</ins> [예시 2](#ex2)로 돌아가 근사함수와의 오차를 직접 구해보자. $$x=(\tfrac{3}{2},\tfrac{7}{6})$$이었으므로 
 
 $$\hat y=Ax=\begin{pmatrix}0&1\\ 1&1\\ 2&1\end{pmatrix}\begin{pmatrix}3/2\\ 7/6\end{pmatrix}=\begin{pmatrix}7/6\\ 8/3\\ 25/6\end{pmatrix}$$
 
-이고, 따라서 잔차는 
+이고, 따라서 오차는 
 
 $$y-\hat y=\begin{pmatrix}1\\ 3\\ 4\end{pmatrix}-\begin{pmatrix}7/6\\ 8/3\\ 25/6\end{pmatrix}=\begin{pmatrix}-1/6\\ 1/3\\ -1/6\end{pmatrix}$$
 
-이다. 이 잔차를 $$A$$의 두 열 $$(0,1,2)$$와 $$(1,1,1)$$ 각각과 내적하면 
+이다. 이 오차를 $$A$$의 두 열 $$(0,1,2)$$와 $$(1,1,1)$$ 각각과 내적하면 
 
 $$0\cdot\left(-\tfrac{1}{6}\right)+1\cdot\tfrac{1}{3}+2\cdot\left(-\tfrac{1}{6}\right)=0,\qquad -\tfrac{1}{6}+\tfrac{1}{3}-\tfrac{1}{6}=0$$
 
-이 되어 잔차가 $$\im A$$에 수직임을 확인할 수 있다. 적합의 오차는 $$\lVert y-\hat y\rVert^2=\frac{1}{36}(1+4+1)=\frac{1}{6}$$이며, 이는 주어진 세 점이 한 직선 위에 있지 않은 정도를 정량적으로 나타낸다. 
+이 되어 오차가 $$\im A$$에 수직임을 확인할 수 있다. 이 때, 오차는 $$\lVert y-\hat y\rVert^2=\frac{1}{36}(1+4+1)=\frac{1}{6}$$이며, 이는 주어진 세 점이 한 직선 위에 있지 않은 정도를 정량적으로 나타낸다. 
 
 </div>
 
@@ -194,26 +196,26 @@ $$Ax=AA^t(AA^t)^{-1}y=y$$
 
 <ins id="def7">**정의 7**</ins> 행렬 $$A\in\Mat_{m\times n}(\mathbb{R})$$에 대하여, 만일 $$A$$가 full column rank라면
 
-$$A^+:=(A^tA)^{-1}A^t$$
+$$A^\dagger:=(A^tA)^{-1}A^t$$
 
 으로, full row rank라면
 
-$$A^+:=A^t(AA^t)^{-1}$$
+$$A^\dagger:=A^t(AA^t)^{-1}$$
 
-으로 정의되는 행렬 $$A^+\in\Mat_{n\times m}(\mathbb{R})$$을 $$A$$의 *유사역행렬<sub>Moore-Penrose pseudoinverse</sub>*이라 부른다.
+으로 정의되는 행렬 $$A^\dagger\in\Mat_{n\times m}(\mathbb{R})$$을 $$A$$의 *유사역행렬<sub>Moore-Penrose pseudoinverse</sub>*이라 부른다.
 
 </div>
 
-위 두 식은 $$A$$의 rank에 대한 가정이 없는 일반적인 상황에서는 그대로 쓸 수 없는데, $$A^tA$$이나 $$AA^t$$ 중 적어도 하나가 가역이 아니기 때문이다. 일반적인 행렬에 대한 유사역행렬은 singular value decomposition을 이용하여 정의되며, $$A$$가 위 두 경우에 해당할 때에는 그 정의가 위의 식과 일치한다. 이때 $$A^+$$은 다음 네 조건
+위 두 식은 $$A$$의 rank에 대한 가정이 없는 일반적인 상황에서는 그대로 쓸 수 없는데, $$A^tA$$이나 $$AA^t$$ 중 적어도 하나가 가역이 아니기 때문이다. 일반적인 행렬에 대한 유사역행렬은 singular value decomposition을 이용하여 정의되며, $$A$$가 위 두 경우에 해당할 때에는 그 정의가 위의 식과 일치한다. 이때 $$A^\dagger$$은 다음 네 조건
 
-$$AA^+A=A,\quad A^+AA^+=A^+,\quad (AA^+)^t=AA^+,\quad (A^+A)^t=A^+A$$
+$$AA^\dagger A=A,\quad A^\dagger AA^\dagger=A^\dagger,\quad (AA^\dagger)^t=AA^\dagger,\quad (A^\dagger A)^t=A^\dagger A$$
 
-으로 유일하게 특징지어진다는 것이 알려져 있으며, 이를 통해 $$A^+$$이 $$A$$에 의해 잘 정의됨을 확인할 수 있다.
+으로 유일하게 특징지어진다는 것이 알려져 있으며, 이를 통해 $$A^\dagger$$이 $$A$$에 의해 잘 정의됨을 확인할 수 있다.
 
 <div class="remark" markdown="1">
 
-<ins id="rmk8">**참고 8**</ins> $$A$$가 가역인 정사각행렬이라면 $$A^+=A^{-1}$$이 성립한다. 이는 $$A^tA$$과 $$AA^t$$이 모두 가역이어서 $$A^+=(A^tA)^{-1}A^t=A^{-1}(A^t)^{-1}A^t=A^{-1}$$이 되기 때문이다. 이러한 의미에서 유사역행렬은 역행렬의 개념을 일반화한다.
+<ins id="rmk8">**참고 8**</ins> $$A$$가 가역인 정사각행렬이라면 $$A^\dagger=A^{-1}$$이 성립한다. 이는 $$A^tA$$과 $$AA^t$$이 모두 가역이어서 $$A^\dagger=(A^tA)^{-1}A^t=A^{-1}(A^t)^{-1}A^t=A^{-1}$$이 되기 때문이다. 이러한 의미에서 유사역행렬은 역행렬의 개념을 일반화한다.
 
 </div>
 
-유사역행렬을 도입하면 앞 절의 최소제곱과 이 절의 최소노름이 하나의 공식으로 통합된다. $$A$$가 full column rank인 경우 $$x=A^+y=(A^tA)^{-1}A^ty$$는 $$\lVert Ax-y\rVert$$을 최소로 하는 유일한 최소제곱해이고, $$A$$가 full row rank인 경우 $$x=A^+y=A^t(AA^t)^{-1}y$$는 $$Ax=y$$의 최소노름해이다. 일반적인 행렬에 대해서도 $$x=A^+y$$는 $$\lVert Ax-y\rVert$$을 최소로 하는 해들 중 다시 norm이 최소인 유일한 해를 주며, 이로써 두 절에서 따로 다룬 문제가 유사역행렬이라는 하나의 대상으로 자연스럽게 통합된다. 
+유사역행렬을 도입하면 앞 절의 최소제곱과 이 절의 최소노름이 하나의 공식으로 통합된다. $$A$$가 full column rank인 경우 $$x=A^\dagger y=(A^tA)^{-1}A^ty$$는 $$\lVert Ax-y\rVert$$을 최소로 하는 유일한 최소제곱해이고, $$A$$가 full row rank인 경우 $$x=A^\dagger y=A^t(AA^t)^{-1}y$$는 $$Ax=y$$의 최소노름해이다. 일반적인 행렬에 대해서도 $$x=A^\dagger y$$는 $$\lVert Ax-y\rVert$$을 최소로 하는 해들 중 다시 norm이 최소인 유일한 해를 주며, 이로써 두 절에서 따로 다룬 문제가 유사역행렬이라는 하나의 대상으로 자연스럽게 통합된다.

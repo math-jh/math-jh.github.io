@@ -11,6 +11,8 @@ sidebar:
 date: 2025-09-23
 weight: 9
 
+drift_needed: true
+
 ---
 
 이번 글에서 우리는 대수적 위상수학의 아름다운 정리인 푸앵카레 쌍대성에 대해 다룬다. 이전 글에서 언급한 것과 같이, 푸앵카레 쌍대성은 호몰로지와 코호몰로지 사이의 쌍대성을 보여준다. 우리가 이미 살펴본 universal coefficient theorem ([§코호몰로지, ⁋정리 5](/ko/math/algebraic_topology/cohomology#thm5))의 경우, $$C^\bullet(X;A)$$를 $$C_\bullet(X;A)$$의 dual로서 정의했을 때 어느정도 예상 가능한 결과였지만 푸앵카레 쌍대성은 보다 더 기하학적인 의미를 가지고 있다. 
@@ -63,7 +65,7 @@ $$H_m(M,M\setminus\{x\};\mathbb{Z})\cong H_m(U,U\setminus\{x\};\mathbb{Z})\cong 
 
 ## 상수층과 피복공간, 방향생성자층
 
-위에서 정의한 orientation sheaf $$\or_M$$에 대해 자세히 살펴보기 위해서는 constant sheaf와 locally constant sheaf를 조금 더 자세히 살펴볼 필요가 있다. 우선 임의의 abelian group $$A$$를 생각하고, 여기에 discrete topology를 주어 이를 위상공간으로 생각하자. 그럼 위상공간 사이의 projection map $$X\times A \rightarrow X$$는 trivial covering space이며, 이 covering map의 section들의 sheaf가 바로 constant sheaf $$\underline{A}$$이다. 거꾸로 constant sheaf $$\underline{A}$$가 주어질 경우, 우리는 $$\underline{A}$$의 étale space $$\Spe(\underline{A})$$가 covering space $$X\times A \rightarrow X$$가 된다는 것을 확인할 수 있다. ([\[위상수학\] §준층, ⁋정의 9](/ko/math/topology/presheaves#def9)) 그럼 locally constant sheaf는 별다른 것이 아니라 그 étale space가 covering space가 되는 sheaf인 것을 알 수 있다.
+위에서 정의한 orientation sheaf $$\or_M$$에 대해 자세히 살펴보기 위해서는 constant sheaf와 locally constant sheaf를 조금 더 자세히 살펴볼 필요가 있다. 우선 임의의 abelian group $$A$$를 생각하고, 여기에 discrete topology를 주어 이를 위상공간으로 생각하자. 그럼 위상공간 사이의 projection map $$X\times A \rightarrow X$$는 trivial covering space이며, 이 covering map의 section들의 sheaf가 바로 constant sheaf $$\underline{A}$$이다. 거꾸로 constant sheaf $$\underline{A}$$가 주어질 경우, 우리는 $$\underline{A}$$의 étale space $$\Spe(\underline{A})$$가 covering space $$X\times A \rightarrow X$$가 된다는 것을 확인할 수 있다. ([\[위상수학\] §준층](/ko/math/topology/presheaves)) 그럼 locally constant sheaf는 별다른 것이 아니라 그 étale space가 covering space가 되는 sheaf인 것을 알 수 있다.
 
 직관적으로 $$H_m(M,M\setminus\{x\};\mathbb{Z})\cong \mathbb{Z}$$는 $$x$$를 그 interior에 포함하는 $$m$$-simplex $$\sigma:\Delta^m\rightarrow M$$가 $$x$$를 몇 번 덮는지를 알려준다. 한편 $$\Delta^m$$은 꼭짓점이 어떻게 순서가 부여되었는지에 따라 부호를 줄 수 있고, 그럼 이 isomorphism을 통해 이러한 $$m$$-simplex들에 $$\mathbb{Z}$$의 원소를 대응시켰을 때 두 $$m$$-simplex의 부호 차이는 두 $$m$$-simplex의 source $$\Delta^m$$가 반대방향으로 부호가 매겨진 것, 혹은 $$\Delta^m$$의 부호를 하나로 고정했을 때 두 simplex map이 다른 방향을 지정하는 것으로 생각할 수 있다. 즉 $$H_m(M,M\setminus\{x\};\mathbb{Z})$$는 점 $$x$$에서의 orientation에 대한 정보를 담고 있다. 
 
@@ -441,7 +443,7 @@ $$H^k(X; \mathscr{F})$$
 
 </div>
 
-이에 대한 자세한 내용은 [\[대수기하학\] §층 코호몰로지, ⁋정의 1](/ko/math/algebraic_varieties/sheaf_cohomology#def1)에서 더 자세히 다룬다. 이제 푸앵카레 쌍대성은 다음의 isomorphism
+이에 대한 자세한 내용은 [\[대수다양체\] §층 코호몰로지, ⁋정의 1](/ko/math/algebraic_varieties/sheaf_cohomology#def1)에서 더 자세히 다룬다. 이제 푸앵카레 쌍대성은 다음의 isomorphism
 
 $$H^k(M;\mathscr{L})\cong H_{m-k}(M;\or_M^A\otimes \mathscr{L})$$
 

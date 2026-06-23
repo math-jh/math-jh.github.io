@@ -11,6 +11,7 @@ sidebar:
 date: 2025-07-05
 weight: 1
 
+
 ---
 
 우리는 이 카테고리에서 기하학을 공부할 때 필수적이라 할 수 있는 호몰로지, 코호몰로지 등을 다룬다. 이들 개념은 일반적인 위상공간 위에 정의되지만, 이들이 잘 행동하기 위해서는 공간이 추가적인 성질들을 가져야하며, 이러한 조건들이 모두 만족되는 공간이 바로 [\[위상수학\] §옹골성, ⁋정의 9](/ko/math/topology/compactness#def9)에서 정의하였던 topological manifold이다. 이번 글에서 우리는 topological manifold의 성질과 예시들을 살펴볼 것이며, 이 다음 글에서는 호몰로지가 무엇인지 대략적인 예시를 통해 살펴볼 것이다. 이들 두 글은 이 카테고리의 큰 방향을 보여주는 것으로, 본격적인 내용은 셋째 글부터 시작한다. 
@@ -91,7 +92,7 @@ $$\mathcal{B}=\left\{B_1\times B_2\mid B_i\in \mathcal{B}_i\right\}$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$X/R$$이 locally Euclidean이므로 $$X/R$$을 Euclidean neighborhood들 $$(U_i)_{i\in I}$$로 덮을 수 있으며 이들의 premimage들의 모임 $$(\pi^{-1}(U_i))_{i\in I}$$들이 $$X$$를 덮는다. 이제 임의의 second-countable space는 Lindelöf이므로 ([§옹골성과 필터의 수렴, ⁋정의 10](/ko/math/topology/filter_convergence#def10)) 적당한 countable subset $$J\subset I$$이 존재하여 $$(\pi^{-1}(U_i)_{i\in J}$$가 $$X$$의 countable open cover이며, 따라서 이들에 해당하는 $$(U_i)_{i\in J}$$들이 $$X/R$$의 countable cover가 된다. 그런데 이들 각각은 Euclidean neighborhood이므로 다시 countable base를 가지며, 이러한 것들이 countable하게 있으므로 이들을 모두 모은 것이 $$X/R$$의 countable base가 된다.
+$$X/R$$이 locally Euclidean이므로 $$X/R$$을 Euclidean neighborhood들 $$(U_i)_{i\in I}$$로 덮을 수 있으며 이들의 premimage들의 모임 $$(\pi^{-1}(U_i))_{i\in I}$$들이 $$X$$를 덮는다. 이제 임의의 second-countable space는 Lindelöf이므로 ([§옹골성과 필터의 수렴](/ko/math/topology/filter_convergence)) 적당한 countable subset $$J\subset I$$이 존재하여 $$(\pi^{-1}(U_i)_{i\in J}$$가 $$X$$의 countable open cover이며, 따라서 이들에 해당하는 $$(U_i)_{i\in J}$$들이 $$X/R$$의 countable cover가 된다. 그런데 이들 각각은 Euclidean neighborhood이므로 다시 countable base를 가지며, 이러한 것들이 countable하게 있으므로 이들을 모두 모은 것이 $$X/R$$의 countable base가 된다.
 
 </details>
 
