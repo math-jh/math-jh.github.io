@@ -10,10 +10,11 @@ sidebar:
 
 date: 2026-06-23
 weight: 8
-translated_at: 2026-06-24T14:30:01+00:00
+translated_at: 2026-06-24T15:00:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-24T15:00:02+00:00
 ---
-In [§Derivatives](/en/math/calculus/derivatives) we examined the definition of the derivative. Now we will investigate what information the derivative carries about a function, and the first step is the mean value theorem.
+In [§Derivatives](/en/math/calculus/derivatives) we examined the definition of the derivative. Now we investigate what information the derivative carries about a function, and the first step is the mean value theorem.
 
 ## Rolle's Theorem and the Mean Value Theorem
 
@@ -23,7 +24,7 @@ In [§Derivatives](/en/math/calculus/derivatives) we examined the definition of 
 
 </div>
 
-That is, intuitively, $$c$$ being a local maximum or minimum means that if we consider a sufficiently small neighborhood around $$c$$, the function value at $$c$$ appears to be the minimum or maximum within that neighborhood. The simplest statement about this is as follows.
+Intuitively, $$c$$ being a local maximum or minimum means that if we consider a sufficiently small neighborhood around $$c$$, the function value at $$c$$ appears to be the minimum or maximum within that neighborhood. The simplest statement about this is as follows.
 
 <div class="proposition" markdown="1">
 
@@ -91,7 +92,7 @@ For any two points $$x_1 < x_2$$ in $$I$$, applying [Theorem 4](#thm4) to $$[x_1
 
 </details>
 
-Next is a generalization of [Theorem 4](#thm4): whereas [Theorem 4](#thm4) compared the growth of $$f(x)$$ and $$g(x)=x$$, the following theorem extends $$g(x)$$ to a general case.
+Next is a generalization of [Theorem 4](#thm4): whereas [Theorem 4](#thm4) compared the growth of $$f(x)$$ and $$g(x)=x$$, the following theorem extends this to a general $$g(x)$$.
 
 <div class="proposition" markdown="1">
 
@@ -172,7 +173,7 @@ Meanwhile, [Theorem 3](#thm3) is also used to bound the number of zeros of a fun
 
 ![Parabola and tangent for root separation](/assets/images/Math/Calculus/Mean_Value_Theorem-1.svg){:style="width:14.76em" class="invert" .align-center}
 
-That is, intuitively, after a function has a zero, in order to reach the next zero it must <em>turn around</em> so that the function value returns to $$0$$, and this turning point is where the derivative becomes $$0$$. Stating this more mathematically:
+Intuitively, after a function has a zero, in order to reach the next zero it must <em>turn around</em> so that the function value returns to $$0$$, and this turning point is where the derivative becomes $$0$$. Stating this more precisely:
 
 <div class="proposition" markdown="1">
 
