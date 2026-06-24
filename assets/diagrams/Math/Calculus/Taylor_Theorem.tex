@@ -1,0 +1,30 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG 싸인 함수와 그 테일러 다항식 근사 (Taylor_Theorem-1.svg)
+\begin{tikzpicture}
+\tikzset{
+  axes/.style={->, black!50, line width=0.4pt},
+  sine/.style={accent1, line width=1.0pt},
+  p1/.style={accent2, line width=0.9pt},
+  p3/.style={black!50, line width=0.9pt},
+  p5/.style={accent3, line width=0.9pt}
+}
+\draw[axes] (-3.8,0) -- (3.8,0);
+\draw[axes] (0,-1.6) -- (0,1.6);
+\begin{scope}
+\clip (-3.15,-1.55) rectangle (3.15,1.55);
+\draw[p1, domain=-3.15:3.15, samples=100] plot (\x, {\x});
+\draw[p3, domain=-3.15:3.15, samples=100] plot (\x, {\x - \x*\x*\x/6});
+\draw[p5, domain=-3.15:3.15, samples=100] plot (\x, {\x - \x*\x*\x/6 + \x*\x*\x*\x*\x/120});
+\draw[sine, domain=-3.15:3.15, samples=200, smooth] plot (\x, {sin(\x r)});
+\end{scope}
+\end{tikzpicture}
+
+\end{document}
