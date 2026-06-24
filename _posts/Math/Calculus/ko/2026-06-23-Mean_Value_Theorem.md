@@ -357,15 +357,3 @@ $$\lim_{x\to 0} (\sin x)/x$$
     이도록 하는 $$\xi$$가 $$x$$와 $$x_0$$ 사이에 존재한다. $$x_0$$을 $$a$$에 가깝게 잡으면 그 사이에 놓인 $$\xi$$도 $$a$$에 가까워지므로, [정리 18](#thm18)의 가정처럼 $$\xi\rightarrow a$$에서 우변이 $$L$$로 수렴한다는 사실로부터, $$x_0$$을 충분히 $$a$$에 가깝게 잡으면 좌변의 비율 또한 $$L$$에 원하는 만큼 가깝게 둘 수 있다. 끝으로 $$f(x), g(x)\rightarrow\infty$$이므로 $$x\rightarrow a$$일 때 고정된 두 항 $$f(x_0), g(x_0)$$의 기여가 사라져 이 비율이 $$f(x)/g(x)$$와 같은 극한을 가지며, 따라서 $$\lim_{x\to a} f(x)/g(x)=L$$이다. 
 
 </div>
-
-이 변형으로 임의의 $$\alpha > 0$$에 대해
-
-$$\lim_{x\to\infty}\frac{\ln x}{x^\alpha} = \lim_{x\to\infty}\frac{1/x}{\alpha x^{\alpha-1}} = \lim_{x\to\infty}\frac{1}{\alpha x^\alpha} = 0$$
-
-이 나오므로, 로그함수는 임의의 양의 거듭제곱보다 느리게 발산한다. 곱이나 차의 부정형 $$0\cdot\infty$$, $$\infty - \infty$$도 적절히 분수로 바꾸면 로피탈 정리의 영역으로 들어온다. 예컨대 $$\lim_{x\to 0^+} x\ln x$$는 $$0\cdot(-\infty)$$ 꼴이지만 $$x\ln x = \ln x / (1/x)$$로 쓰면 $$-\infty/\infty$$ 꼴이 되어
-
-$$\lim_{x\to 0^+} x \ln x = \lim_{x\to 0^+}\frac{\ln x}{1/x} = \lim_{x\to 0^+}\frac{1/x}{-1/x^2} = \lim_{x\to 0^+}(-x) = 0$$
-
-이고, 이로부터 $$\lim_{x\to 0^+} x^x = \exp\bigl(\lim_{x\to 0^+} x\ln x\bigr) = e^0 = 1$$과 같은 거듭제곱 부정형도 계산된다.
-
-이처럼 도함수는 함수의 정성적 모양 전체, 곧 증감과 극값, 볼록성을 결정하고, 부정형 극한의 계산까지 가능하게 한다.
