@@ -1,25 +1,26 @@
 ---
 title: "Covering Spaces"
-excerpt: "Equivalent conditions for simply connected, covering spaces, and the Seifert–van Kampen theorem"
+description: "This post defines simply connected spaces and the concepts of covering spaces and covering maps. It introduces fundamental methods for computing fundamental groups through the properties of evenly covered neighborhoods."
+excerpt: "Equivalent conditions for simply connected spaces, covering spaces, and the Seifert-van Kampen theorem"
 
 categories: [Math / Algebraic Topology]
 permalink: /en/math/algebraic_topology/covering_spaces
 sidebar: 
     nav: "algebraic_topology-en"
 
-date: 2026-03-12
+date: 2025-07-27
 weight: 4
-translated_at: 2026-05-29T16:03:58+00:00
+translated_at: 2026-06-24T02:00:03+00:00
 translation_source: kimi-cli
-last_polished_at: 2026-05-25T15:30:03+00:00
+last_polished_at: 2026-06-24T02:00:03+00:00
 ---
-In the previous post, we defined the fundamental group $$\pi_1(X)$$ and examined its basic properties. The following lemma is then almost immediate from the definitions.
+In the previous post, we defined the fundamental group $$\pi_1(X)$$ and examined some of its basic properties. The following lemma is then almost immediate from the definitions.
 
 <div class="proposition" markdown="1">
 
 <ins id="lem1">**Lemma 1**</ins> For a path-connected space $$X$$, the following are equivalent.
 
-1. Any two paths $$p,q$$ sharing endpoints are path homotopic.
+1. Any two paths $$p,q$$ with the same endpoints are always path homotopic.
 2. Every loop $$f:S^1 \rightarrow X$$ is null-homotopic.
 3. For every loop $$f:S^1 \rightarrow X$$, there exists a continuous map $$\widetilde{f}:D^2 \rightarrow X$$ whose restriction to the boundary $$S^1$$ is $$f$$.
 4. $$\pi_1(X)=0$$.
@@ -28,33 +29,33 @@ In the previous post, we defined the fundamental group $$\pi_1(X)$$ and examined
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-The equivalence of the first, second, and last conditions is immediate by considering the loop $$p\ast\bar{q}$$ for two paths $$p,q$$. Thus it suffices to show that the third condition is equivalent to these.
+The equivalence of the first, second, and last conditions is obvious by considering the loop $$p\ast\bar{q}$$ for two paths $$p,q$$. Thus it suffices to show that the third condition is equivalent to these.
 
-First, assume the first condition. Then for any loop $$f:S^1 \rightarrow X$$, there exists a homotopy $$(f_t)$$ with $$f_1=f$$ and $$f_0$$ the constant map at a fixed point $$x_0$$. The formula
+First, assume the first condition. For any loop $$f:S^1 \rightarrow X$$, there exists a homotopy $$(f_t)$$ with $$f_1=f$$ and $$f_0$$ the constant map to a fixed point $$x_0$$. Then the formula
 
 $$\widetilde{f}(\mathrm{x})=\begin{cases}f_{\lvert\mathrm{x}\rvert}(\mathrm{x}/\lvert\mathrm{x}\rvert)&\text{if $\lvert\mathrm{x}\rvert\neq 0$}\\ x_0&\text{if $\lvert\mathrm{x}\rvert=0$}\end{cases}$$
 
-defines the continuous map required by the third condition. Conversely, assuming the third condition, given any loop $$f$$, setting $$f_t(\mathrm{x})=\widetilde{f}(t\mathrm{x})$$ yields a homotopy from $$f_1=f$$ to a constant map.
+defines the continuous map required by the third condition. Conversely, assuming the third condition, for any loop $$f$$, setting $$f_t(\mathrm{x})=\widetilde{f}(t\mathrm{x})$$ yields a homotopy from $$f_1=f$$ to the constant map.
 
 </details>
 
 <div class="definition" markdown="1">
 
-<ins id="def2">**Definition 2**</ins> If the equivalent conditions of [Lemma 1](#lem1) hold, we call a path-connected $$X$$ a *simply connected space*.
+<ins id="def2">**Definition 2**</ins> If the equivalent conditions of [Lemma 1](#lem1) hold, a path-connected space $$X$$ is called a *simply connected space*.
 
 </div>
 
 ## Covering Spaces
 
-For the remainder of this post, we assume all spaces are path-connected for convenience. Computing the fundamental group of a space that is not simply connected requires several tools; one of the most fundamental and essential is the use of covering spaces.
+For the remainder of this post, we consider only path-connected spaces for convenience. Computing the fundamental group of a non-simply-connected space requires several methods; one of the most basic and essential is the use of covering spaces.
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**Definition 3**</ins> For a continuous surjection $$p:E \rightarrow B$$, an open set $$U\subseteq B$$ is said to be *evenly covered* by $$p$$ if $$p^{-1}(U)$$ is a disjoint union of open subsets of $$E$$, each homeomorphic to $$U$$ via $$p$$. If every $$x\in B$$ has an open neighborhood that is evenly covered by $$p$$, then $$p$$ is called a *covering map* and $$E$$ is called a *covering space*.
+<ins id="def3">**Definition 3**</ins> For a continuous surjection $$p:E \rightarrow B$$, an open subset $$U$$ of $$B$$ is said to be *evenly covered* by $$p$$ if $$p^{-1}(U)$$ is a union of disjoint open subsets of $$E$$, each homeomorphic to $$U$$. If every $$x\in B$$ has an open neighborhood $$U$$ that is evenly covered by $$p$$, then $$p$$ is called a *covering map* and $$E$$ a *covering space*.
 
 </div>
 
-Although the definition appears somewhat involved, it is helpful to keep the following picture in mind.
+The definition may appear somewhat complicated, but it is essentially captured by the following picture.
 
 ![S1_covering](/assets/images/Math/Algebraic_Topology/Covering_Spaces-1.svg){:style="width:26em" class="invert" .align-center}
 
@@ -62,105 +63,105 @@ This depicts the covering map
 
 $$p:\mathbb{R}\rightarrow S^1;\quad t\mapsto (\cos 2\pi t, \sin 2\pi t)$$
 
-and one can verify that it satisfies the conditions of [Definition 3](#def3). In general, covering maps behave well with respect to subspaces and product spaces, as is easily proved.
+and we know that it satisfies the conditions of [Definition 3](#def3). In general, covering maps behave well with respect to subspaces and product spaces, as one can easily verify.
 
 <div class="proposition" markdown="1">
 
 <ins id="prop4">**Proposition 4**</ins> The following hold.
 
-1. For a covering map $$p:E \rightarrow B$$ and a subspace $$A\subseteq B$$, the restriction $$p\vert_{p^{-1}(A)}:p^{-1}(A) \rightarrow A$$ is a covering map.
-2. For covering maps $$p_1:E_1 \rightarrow B_1$$ and $$p_2:E_2\rightarrow B_2$$, the product map $$p_1\times p_2:E_1\times E_2 \rightarrow B_1\times B_2$$ is a covering map.
+1. For a covering map $$p:E \rightarrow B$$ and a subspace $$A$$ of $$B$$, the restriction $$p\vert_{p^{-1}(A)}:p^{-1}(A) \rightarrow A$$ is a covering map.
+2. For two covering maps $$p_1:E_1 \rightarrow B_1$$ and $$p_2:E_2\rightarrow B_2$$, the product $$p_1\times p_2:E_1\times E_2 \rightarrow B_1\times B_2$$ is a covering map.
 
 </div>
 
-## Fundamental Theorem of Covering Spaces
+## Fundamental Theorems of Covering Spaces
 
-By the functoriality of the fundamental groupoid $$\Pi_1:\Top \rightarrow \Grpd$$, any continuous map $$p:E \rightarrow B$$ induces a groupoid homomorphism
+By the functoriality of the fundamental groupoid $$\Pi_1:\Top \rightarrow \Grpd$$, any continuous map $$p:E \rightarrow B$$ defines a groupoid homomorphism
 
-$$\Pi_1(p):\Pi_1(E) \rightarrow \Pi_1(B)$$
+$$\Pi_1(f):\Pi_1(E) \rightarrow \Pi_1(B)$$
 
-In particular, for any $$y_0, y_1\in E$$, the induced map
+In particular, for any $$y_0, y_1\in E$$, the homomorphism
 
 $$\Hom_{\Pi_1(E))}(y_0, y_1)\rightarrow \Hom_{\Pi_1(B)}(p(y_0), p(y_1))\tag{$\ast$}$$
 
-is well-defined. If $$B$$ is path-connected and $$p(y_0)=p(y_1)$$, this becomes a homomorphism into the fundamental group $$\pi_1(B)$$. If $$E$$ is to carry all the information about the fundamental group (or groupoid) of $$B$$, then at minimum this homomorphism must be surjective.
+is well defined. If $$B$$ is path-connected and $$p(y_0)=p(y_1)$$, this becomes a (groupoid) homomorphism into the fundamental group $$\pi_1(B)$$. If $$E$$ carries all the information about the fundamental group (or groupoid) of $$B$$, then at least this homomorphism should be surjective.
 
 <div class="definition" markdown="1">
 
-<ins id="def5">**Definition 5**</ins> Fix a continuous map $$p:E\rightarrow B$$. For any continuous map $$f:X \rightarrow B$$, a *lifting* of $$f$$ along $$p$$ is a map $$\widetilde{f}:X\rightarrow E$$ satisfying $$p\circ\widetilde{f}=f$$.
+<ins id="def5">**Definition 5**</ins> Fix a continuous map $$p:E\rightarrow B$$. For any continuous map $$f:X \rightarrow B$$, a *lifting* of $$f$$ with respect to $$p$$ is a map $$\widetilde{f}:X\rightarrow E$$ satisfying $$p\circ\widetilde{f}=f$$.
 
 </div>
 
-The point of this definition is that when $$X=I$$, so that $$f$$ is a path in $$B$$, the existence of a lifting of $$f$$ along $$p$$ guarantees that it lies in the preimage of $$f$$ under ($$\ast$$). Our claim is that if $$p$$ is a covering map, such a lifting always exists.
+The point of this definition is that when $$X=I$$, so that $$f$$ is a path in $$B$$, a lifting of $$f$$ with respect to $$p$$—if it exists—lies in the preimage of $$f$$ under the homomorphism ($$\ast$$). Our claim is that such a lifting always exists when $$p$$ is a covering map.
 
 <div class="proposition" markdown="1">
 
-<ins id="lem6">**Lemma 6**</ins> Let $$p:E \rightarrow B$$ be a covering map and let $$y_0\in E$$. Then for every path $$\alpha:I \rightarrow B$$ starting at $$x_0=p(y_0)$$, there exists a unique lifting $$\widetilde{\alpha}:I \rightarrow E$$ starting at $$y_0$$.
+<ins id="lem6">**Lemma 6**</ins> Let $$p:E \rightarrow B$$ be a covering map and let $$y_0$$ be an arbitrary point of $$E$$. Then for every path $$\alpha:I \rightarrow B$$ starting at $$x_0=p(y_0)$$, there exists a unique lifting $$\widetilde{\alpha}:I \rightarrow E$$ starting at $$y_0$$.
 
 </div>
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Since $$p$$ is a covering map, we may choose an open cover $$(U_i)$$ of $$B$$ such that each $$U_i$$ is evenly covered by $$p$$. Then $$(\alpha^{-1}(U_i))$$ is an open cover of $$I$$, so it admits a finite subcover. By the [Lebesgue number lemma](Lebesgue_number_lemma), we can find a subdivision
+First, since $$p$$ is a covering map, there exists an open cover $$(U_i)$$ of $$B$$ such that each $$U_i$$ is evenly covered by $$p$$. Then $$(\alpha^{-1}(U_i))$$ is an open cover of $$I$$, so it admits a finite subcover. By the Lebesgue number lemma, we can find a subdivision of $$I$$
 
 $$0=s_0<s_1<\cdots<s_n=1$$
 
-of $$I$$ such that each $$\alpha([s_i,s_{i+1}])$$ lies in some evenly covered open set $$U$$. Set $$\widetilde{\alpha}(0)=y_0$$, and assume inductively that $$\widetilde{\alpha}$$ has been defined on $$[0,s_i]$$. By the choice of the subdivision, $$\alpha([s_i,s_{i+1}])$$ lies in some open set $$U$$ evenly covered by $$p$$; thus $$p^{-1}(U)$$ is a disjoint union $$\coprod_{j\in J}V_j$$ of open sets, each mapped homeomorphically onto $$U$$ by $$p$$. Let $$V_j$$ be the component containing $$\widetilde{\alpha}(s_i)$$; then define
+such that each $$\alpha([s_i,s_{i+1}])$$ lies in some $$U$$. Set $$\widetilde{\alpha}(0)=y_0$$, and assume inductively that $$\widetilde{\alpha}$$ is defined for $$0\leq s\leq s_i$$; we define it on $$[s_i,s_{i+1}]$$. By the choice of the $$s_i$$, the image $$\alpha([s_i,s_{i+1}])$$ lies in an open set $$U$$ evenly covered by $$p$$. Thus we can write $$p^{-1}(U)$$ as a disjoint union $$\coprod_{j\in J}V_j$$ of open sets homeomorphic to $$U$$. For the unique $$V_j$$ containing $$\widetilde{\alpha}(s_i)$$, we define
 
 $$\widetilde{\alpha}(s)=(p\vert_{V_j})^{-1}(\alpha(s))$$
 
-for $$s\in[s_i,s_{i+1}]$$. Uniqueness follows because each interval $$[s_i,s_{i+1}]$$ is connected, so the component containing $$\widetilde{\alpha}(s_i)$$ is determined inductively.
+Uniqueness follows because each $$[s_i,s_{i+1}]$$ is connected, so the component containing $$\alpha(s_i)$$ is determined inductively at each step.
 
 </details>
 
-The proof may appear technical, but the core idea is simple: any path starting at $$x_0\in B$$ remains inside some evenly covered neighborhood $$U$$ of $$x_0$$ for at least a short time, and since $$p^{-1}(U)$$ is a disjoint union of open subsets of $$E$$ each homeomorphic to $$U$$, knowing which component contains the starting point determines, by connectedness, the component in which the path must lie during that short interval. The Lebesgue number lemma is used only to ensure that this process terminates after finitely many steps.
+The proof may appear somewhat technical, but the key idea is transparent: any path starting at $$x_0\in B$$ remains in some evenly covered neighborhood $$U$$ of $$x_0$$ for at least a short time, and by definition $$p^{-1}(U)$$ is a union of disjoint open subsets of $$E$$ homeomorphic to $$U$$; knowing which of these contains the starting point determines, by connectedness, the component in which the path stays during this short interval. The Lebesgue number lemma is used only to ensure that this process terminates after finitely many steps.
 
-Returning to the groupoid homomorphism ($$\ast$$), [Lemma 6](#lem6) implies that for a covering space $$p:E \rightarrow B$$, given any $$x_0,x_1\in B$$ and a path $$\alpha$$ between them, a choice of $$y_0\in p^{-1}(x_0)$$ determines both $$y_1\in p^{-1}(x_1)$$ and a lift $$\widetilde{\alpha}\in \Hom_{\Pi_1(E)}(y_0,y_1)$$. The natural question is whether, for a path $$\alpha'$$ path-homotopic to $$\alpha$$, the same choice of $$y_0$$ yields the same endpoint $$y_1$$ and the same homotopy class. When $$p$$ is a covering map, the answer is affirmative.
+Returning to the groupoid homomorphism ($$\ast$$), [Lemma 6](#lem6) implies that for a covering space $$p:E \rightarrow B$$, given any $$x_0,x_1\in B$$ and a path $$\alpha$$ between them, a choice of $$y_0\in p^{-1}(x_0)$$ determines $$y_1\in p^{-1}(x_1)$$ and $$\widetilde{\alpha}\in \Hom_{\Pi_1(E)}(y_0,y_1)$$. The natural question is whether, for $$\alpha'$$ path-homotopic to $$\alpha$$, the same choice of $$y_0$$ yields the same $$y_1$$ and the same homotopy class. The answer is affirmative when $$p$$ is a covering map.
 
 <div class="proposition" markdown="1">
 
-<ins id="lem7">**Lemma 7**</ins> Let $$p:E \rightarrow B$$ be a covering map and let $$y_0\in E$$, with $$p(y_0)=x_0$$. Then for every continuous map $$F:I\times I \rightarrow B$$ satisfying $$F(0,0)=x_0$$, there exists a unique lifting $$\widetilde{F}:I\times I \rightarrow E$$ with $$\widetilde{F}(0,0)=y_0$$. Moreover, if $$F$$ is a path homotopy, then so is $$\widetilde{F}$$.
+<ins id="lem7">**Lemma 7**</ins> Let $$p:E \rightarrow B$$ be a covering map and let $$y_0$$ be an arbitrary point of $$E$$; set $$p(y_0)=x_0$$. Then for every continuous map $$F:I\times I \rightarrow B$$ with $$F(0,0)=x_0$$, there exists a unique lifting $$\widetilde{F}:I\times I \rightarrow E$$ with $$\widetilde{F}(0,0)=y_0$$. Moreover, if $$F$$ is a path homotopy, then so is $$\widetilde{F}$$.
 
 </div>
 
-The proof is essentially identical to that of [Lemma 6](#lem6), so we omit it. The crucial consequence is that, by this lemma, given a covering space $$p:E \rightarrow B$$ and a path class $$[\alpha]\in\Hom_{\Pi_1(B)}(x_0,x_1)$$, the choice of $$y_0\in p^{-1}(x_0)$$ uniquely determines the path class $$[\widetilde{\alpha}]\in \Hom_{\Pi_1(E)}(y_0,y_1)$$.
+The proof is essentially identical to that of [Lemma 6](#lem6), so we omit it. What matters is that by this lemma, path homotopy classes are preserved: for a covering space $$p:E \rightarrow B$$ and a path class $$[\alpha]\in\Hom_{\Pi_1(B)}(x_0,x_1)$$, a choice of $$y_0\in p^{-1}(x_0)$$ uniquely determines a path class $$[\widetilde{\alpha}]\in \Hom_{\Pi_1(E)}(y_0,y_1)$$ in $$E$$.
 
-Now consider again the fundamental groupoid $$\Pi_1(B)$$ and fix a covering map $$p:E \rightarrow B$$. By the evenly covered condition, $$p^{-1}(x)$$ is a discrete set for each $$x\in B$$. Hence, for any path class $$[\alpha]\in\Hom_{\Pi_1(B)}(x_0,x_1)$$, choosing $$y_0\in p^{-1}(x_0)$$ yields, by [Lemma 7](#lem7), a unique path class $$[\widetilde{\alpha}]$$ and thus a unique endpoint $$y_1\in p^{-1}(x_1)$$. In other words, $$[\alpha]$$ defines a function $$p^{-1}(x_0)\rightarrow p^{-1}(x_1)$$.
+Now consider again the fundamental groupoid $$\Pi_1(B)$$ and fix a covering map $$p:E \rightarrow B$$. By the evenly covered condition, the fiber $$p^{-1}(x)$$ over each $$x\in B$$ is a discrete set. Then for any path class $$[\alpha]\in\Hom_{\Pi_1(B)}(x_0,x_1)$$, choosing $$y_0\in p^{-1}(x_0)$$ defines a unique path class $$[\widetilde{\alpha}]$$ by [Lemma 7](#lem7), and hence a unique $$y_1\in p^{-1}(x_1)$$. In other words, $$[\alpha]$$ defines a function $$p^{-1}(x_0)\rightarrow p^{-1}(x_1)$$.
 
 <div class="definition" markdown="1">
 
-<ins id="def8">**Definition 8**</ins> In the situation above, the function $$p^{-1}(x_0)\rightarrow p^{-1}(x_1)$$ is called the *transport map* and is denoted $$T_{[\alpha]}$$.
+<ins id="def8">**Definition 8**</ins> In the above situation, the function $$p^{-1}(x_0)\rightarrow p^{-1}(x_1)$$ is called the *transport map* and is denoted by $$T_{[\alpha]}$$.
 
 </div>
 
-The transport map is bijective. Indeed, given any $$y_1\in p^{-1}(x_1)$$, we may use the path class $$[\overline{\alpha}]\in\Hom_{\Pi_1(B)}(x_1,x_0)$$ to find a path starting at $$y_1$$ and ending at some $$y_0\in p^{-1}(x_0)$$, and this procedure is unique by [Lemma 7](#lem7). Similarly, uniqueness of liftings implies that this correspondence respects concatenation of paths. Thus the assignment sending each object $$x\in \Pi_1(B)$$ to the set $$p^{-1}(x)$$ and each morphism $$[\alpha]\in\Hom_{\Pi_1(B)}(x_0,x_1)$$ to the transport map $$T_{[\alpha]}:p^{-1}(x_0)\rightarrow p^{-1}(x_1)$$ defines a functor.
+The transport map is bijective. Indeed, given any $$y_1\in p^{-1}(x_1)$$, we can use the path class $$[\overline{\alpha}]\in\Hom_{\Pi_1(B)}(x_1,x_0)$$ to find a path starting at $$y_1$$ and ending at some element $$y_0\in p^{-1}(x_0)$$, and this process is unique by [Lemma 7](#lem7). Similarly, by the uniqueness of liftings, this correspondence respects path concatenation. That is, the assignment sending $$x\in \Pi_1(B)$$ to $$p^{-1}(x)$$ and $$[\alpha]\in\Hom_{\Pi_1(B)}(x_0,x_1)$$ to $$T_{[\alpha]}:p^{-1}(x_0)\rightarrow p^{-1}(x_1)$$ is functorial.
 
 <div class="definition" markdown="1">
 
-<ins id="def9">**Definition 9**</ins> The functor $$\Pi_1(B) \rightarrow \Set$$ defined above is called the *monodromy functor* associated to $$p$$ and is denoted $$M_p$$.
+<ins id="def9">**Definition 9**</ins> The functor $$\Pi_1(B) \rightarrow \Set$$ defined above is called the *monodromy functor* defined by $$p$$ and is denoted by $$M_p$$.
 
 </div>
 
-For a fixed base space $$B$$, we define the category $$\Cov(B)$$ of covering spaces over $$B$$ in the evident manner. Explicitly, its objects are covering maps $$p:E\rightarrow B$$, and a morphism from $$p_1:E_1\rightarrow B$$ to $$p_2:E_2\rightarrow B$$ is a continuous map $$f:E_1\rightarrow E_2$$ making the diagram
+For a fixed base space $$B$$, we define in the obvious way the category $$\Cov(B)$$ of covering spaces of $$B$$. Explicitly, the objects of this category are covering maps $$p:E\rightarrow B$$, and a morphism between these is a commutative diagram
 
 ![morphism_of_covering_spaces](/assets/images/Math/Algebraic_Topology/Covering_Spaces-2.svg){:style="width:6.75em" class="invert" .align-center}
 
-commute. Associating to each $$p\in \Cov(B)$$ its monodromy functor $$M_p$$ then defines a functor
+Through this, assigning to each $$p\in \Cov(B)$$ its monodromy functor $$M_p$$ defines a functor
 
 $$M:\Cov(B) \rightarrow \Fun(\Pi_1(B),\Set)$$
 
-and the central result of this post is that this functor is an equivalence of categories. To establish this, one must verify the functoriality of the above correspondence and much more; but the deepest part of the proof is the construction of a covering space $$E \rightarrow B$$ from an arbitrary functor $$\Pi_1(B)\rightarrow \Set$$. Given a functor $$F:\Pi_1(B) \rightarrow \Set$$, reversing the monodromy construction makes it clear how to define $$p:E\rightarrow B$$ *as a function of sets*: for each $$x\in B$$, the set $$F(x)$$ will serve as the fiber over $$x$$, so we set
+and the main result of this post is that this is an equivalence of categories. To prove this, one must verify much starting from the functoriality of the above correspondence, but ultimately the most essential step is that given any functor $$\Pi_1(B)\rightarrow \Set$$, one can construct a covering space $$E \rightarrow B$$ from it. To this end, given any functor $$F:\Pi_1(B) \rightarrow \Set$$, tracing the monodromy functor backwards makes it obvious how to define $$p:E\rightarrow B$$ as a function between sets: for each $$x\in \Pi_1(B)$$, the set $$F(x)$$ will correspond to the fiber of $$p$$ over $$x$$, so we set the projection to be
 
 $$p:E=\coprod_{x\in B}F(x) \rightarrow B$$
 
-to be the projection. The difficulty lies in topologizing $$E$$ so that $$p$$ becomes a covering map. If such a topology exists, then each $$x\in B$$ must have an open neighborhood $$U$$ such that $$p^{-1}(U)$$ is homeomorphic to $$U\times F(x)$$. The familiar example $$\mathbb{R}\rightarrow S^1$$ makes this intuitive: $$p^{-1}(U)$$ is a disjoint union of copies of $$U$$, and an element of $$p^{-1}(U)$$ is determined by which copy it lies in ($$F(x)$$) and which point of that copy it is ($$U$$). We proceed in reverse by constructing, for suitable $$U$$, a bijection $$\phi:p^{-1}(U) \rightarrow U\times F(x)$$ and using it to define a topology on $$p^{-1}(U)$$. Verifying that these bijections agree on overlaps, endow $$E$$ with a well-defined topology, and satisfy the required properties is then routine; the heart of the proof lies in defining $$\phi$$.
+The problem is to endow $$E$$ with a topology making this a covering space. If such a topology exists, then for each $$x$$ there should be an open neighborhood $$U$$ such that $$p^{-1}(U)$$ is homeomorphic to $$U\times F(x)$. For the familiar example $$\mathbb{R}\rightarrow S^1$$, this is intuitively clear: $$p^{-1}(U)$$ is a disjoint union of copies of $$U$$, so any element of $$p^{-1}(U)$$ is determined by which copy it lies in ($$F(x)$$) and which point of that copy ($$U$$). We will conversely construct a bijection $$\phi:p^{-1}(U) \rightarrow U\times F(x)$$ and use it to define a topology on $$p^{-1}(U)$$. Showing that these $$\phi$$ agree on overlaps, and hence that the bijections assemble into a suitable topology on $$E$$ with the desired properties, is routine; the crux of the proof is the definition of $$\phi$$.
 
-From the form of $$p$$ above, we know that $$p^{-1}(U)$$ is the union of the sets $$F(x')$$ for $$x'\in U$$. The first coordinate of $$\phi(x')$$ should evidently be $$x'$$ itself, and the second coordinate, by the transport map, should be an element of $$F(x)$$ joined to $$x'$$ by a path. But for this information to be available in $$\Pi_1(B)$$, we require:
+By the form of $$p$$ defined above, we know that $$p^{-1}(U)$$ is the collection of $$F(x')$$ for $$x'\in U$$. Then the first coordinate of $$\phi(x')$$ should of course be $$x'$$ itself, and the second coordinate should be an element of $$F(x)$$ connected to $$x'$$ by a path, as suggested by the transport map. However, for this to be information contained in $$\Pi_1(B)$$, we need
 
-1. $$U$$ to be path-connected, so that a path class $$[\alpha]\in \Hom_{\Pi_1(B)}(x,x')$$ always exists, and
+1. $$U$$ to be path-connected, so that a path class $$[\alpha]\in \Hom_{\Pi_1(B)}(x,x')$$ always exists between $$x$$ and $$x'$$, and
 2. such a path class to be uniquely determined.
 
-The first condition is simply that $$B$$ be locally path-connected. The second is more subtle: it suffices that two paths in $$U$$ with common endpoints define the same path class *in $$B$$*. This is a weaker condition than being locally simply connected.
+The first condition is simply that $$B$$ be locally path-connected. The second is more subtle: two paths in $$U$$ with the same endpoints must define the same path class *in $$B$$*. This is a weaker condition than being locally simply connected.
 
 <div class="definition" markdown="1">
 
@@ -168,117 +169,119 @@ The first condition is simply that $$B$$ be locally path-connected. The second i
 
 </div>
 
-Hence, for the preceding argument to hold, the space $$B$$ must satisfy, in addition to path-connectedness, the two conditions of being locally path-connected and semi-locally simply connected. Synthesizing the above discussion yields the following theorem.
+For the above argument to hold, we see that $$B$$ must satisfy, in addition to the previously assumed path-connectedness, the two conditions of being locally path-connected and semi-locally simply connected. Combining the above discussion, we obtain the following result.
 
 <div class="proposition" markdown="1">
 
-<ins id="thm11">**Theorem 11 (Fundamental theorem of covering spaces)**</ins> For a path-connected, locally path-connected, semi-locally simply connected space $$B$$, there is an equivalence of categories
+<ins id="thm11">**Theorem 11 (Fundamental theorem of covering spaces)**</ins> For a path-connected, locally path-connected, semi-locally simply connected space $$B$$, there exists an equivalence
 
 $$M:\Cov(B) \rightarrow \Fun(\Pi_1(B), \Set)$$
 
+between the two categories.
+
 </div>
 
-For instance, every path-connected topological manifold satisfies these conditions.
+For example, any path-connected topological manifold always satisfies these conditions.
 
-It remains to understand what $$\Fun(\Pi_1(B), \Set)$$ is. More generally, consider a functor $$\mathscr{G}\rightarrow \Set$$ for an arbitrary groupoid $$\mathscr{G}$$. By definition, such a functor consists of:
+We must now examine what $$\Fun(\Pi_1(B), \Set)$$ is. More generally, consider what a functor $$\mathscr{G}\rightarrow \Set$$ is for an arbitrary groupoid $$\mathscr{G}$$. By definition, this consists of
 
-- a set $$S_G$$ for each object $$G\in \mathscr{G}$$,
-- a bijection $$S_G \rightarrow S_H$$ for each (iso)morphism $$G \rightarrow H$$ in $$\mathscr{G}$$.
+- a set $$S_G$$ corresponding to each object $$G\in \mathscr{G}$$,
+- a bijection $$S_G \rightarrow S_H$$ corresponding to each (iso)morphism $$G \rightarrow H$$ in $$\mathscr{G}$$.
 
-This description alone does not fully illuminate the structure, so consider the special case where $$\mathscr{G}$$ has a single object $$\ast$$, so that every morphism of $$\mathscr{G}$$ is an automorphism of $$\ast$$—that is, $$\mathscr{G}$$ is a group. Under this assumption, a functor $$\mathscr{G}\rightarrow \Set$$ amounts to the following data:
+This alone does not yet reveal the nature of a functor $$\mathscr{G}\rightarrow \Set$$, so consider the special case where $$\mathscr{G}$$ has only one object $$\ast$$, so that all morphisms of $$\mathscr{G}$$ are automorphisms of $$\ast$$—that is, $$\mathscr{G}$$ is a group. Under this assumption, a functor $$\mathscr{G}\rightarrow \Set$$ is the following data:
 
 - a set $$S$$ corresponding to the unique object of $$\mathscr{G}$$,
-- a bijection $$g\cdot-: S\rightarrow S$$ for each automorphism $$g:\ast \rightarrow \ast$$.
+- a bijection $$g\cdot-: S\rightarrow S$$ corresponding to each automorphism $$g:\ast \rightarrow \ast$$.
 
-Thus, as the notation suggests, this is precisely a group action of $$\mathscr{G}$$; the category $$\Fun(\mathscr{G},\Set)$$ is exactly the category of $$\mathscr{G}$$-sets, with morphisms the $$\mathscr{G}$$-equivariant maps. For a general groupoid $$\mathscr{G}$$, the picture is simply that of several groups acting separately on several sets, with the requirement that isomorphic objects $$G,H$$ of $$\mathscr{G}$$ act on their respective (isomorphic) sets $$S_G$$ and $$S_H$$ in the same manner.
+That is, as the notation suggests, this is precisely a group action of $$\mathscr{G}$$; $$\Fun(\mathscr{G},\Set)$$ is exactly the collection of $$\mathscr{G}$$-sets, with morphisms the $$\mathscr{G}$$-equivariant maps. For a general groupoid $$\mathscr{G}$$, this is simply several groups acting separately on several sets, with the requirement that isomorphic objects $$G,H$$ of $$\mathscr{G}$$ act in the same way on their respective (isomorphic) sets $$S_G$$ and $$S_H$$.
 
-Since $$B$$ is path-connected, the fundamental groupoid $$\Pi_1(B)$$ is a connected groupoid, and hence equivalent as a category to the group $$\pi_1(B,x)$$ for any $$x\in B$$. That is, a groupoid action of $$\Pi_1(B)$$ is nothing more than a group action of $$\pi_1(B,x)$$ propagated along the isomorphisms of $$\Pi_1(B)$$. Consequently, the information contained in [Theorem 11](#thm11) is essentially captured by a skeleton. Consider
+Since $$B$$ is path-connected, the fundamental groupoid $$\Pi_1(B)$$ is a connected groupoid, and hence equivalent as a category to the group $$\pi_1(B,x)$$ for any $$x\in B$$. Thus a groupoid action of $$\Pi_1(B)$$ is nothing but a group action of $$\pi_1(B,x)$$ replicated along the isomorphisms in $$\Pi_1(B)$$. Consequently, the information in [Theorem 11](#thm11) is essentially contained in the skeleton. Let us therefore consider
 
 $$\sk(M):\sk(\Cov(B))\rightarrow \sk(\Fun(\Pi_1(X), \Set))$$
 
-This is an equivalence sending isomorphism classes of covering spaces to monodromy functors $$M_p$$ up to natural isomorphism—that is, to $$\Pi_1(X)$$-sets up to isomorphism. In general,
+This is an equivalence taking isomorphism classes of covering spaces to the monodromy functor $$M_p$$ up to natural isomorphism—that is, to $$\Pi_1(X)$$-sets up to isomorphism. In general, since
 
 $$\sk(\Fun(\Pi_1(X),\Set))\simeq\Fun(\sk(\Pi_1(X)), \Set)$$
 
-so, using again that $$X$$ is path-connected, we obtain a categorical equivalence between isomorphism classes of covering spaces and $$\pi_1(X,x)$$-sets.
+and using again that $$X$$ is path-connected, we know that there exists a categorical equivalence taking isomorphism classes of covering spaces to a $$\pi_1(X,x)$$-set.
 
-Now recall [\[Algebraic Structures\] §Group Actions, ⁋Theorem 14 (Orbit-stabilizer theorem)](/en/math/algebraic_structures/group_actions#thm14) and its proof: given any $$G$$-set $$E$$, we may decompose $$E$$ into $$G$$-orbits, and the restriction of the action to each orbit is transitive; moreover, each such orbit is isomorphic to $$G/N$$ for some normal subgroup $$N$$ of $$G$$, equipped with the canonical $$G$$-action. Hence, if we restrict attention to transitive group actions, the definition of the monodromy functor tells us that on the target side this corresponds to considering only *connected* covers. We thus obtain an equivalence
+Now, recalling [\[Algebraic Structures\] §Group Actions, ⁋Theorem 14](/en/math/algebraic_structures/group_actions#thm14) and its proof, given any $$G$$-set $$E$$ we can decompose $$E$$ into orbits of $$G$$; the restriction of the action to each orbit is transitive, and these are isomorphic to $$G/H$$ with the canonical $$G$$-action for a suitable subgroup $$H$$ of $$G$$. Thus, if we restrict attention to transitive group actions, the definition of the monodromy functor implies that on the target side this corresponds to considering only *connected* covers. That is, we have an equivalence
 
 $$\left\{\text{isomorphism classes of covering spaces of $B$}\right\}\simeq \left\{\text{transitive $\pi_1(B,x)$-sets}\right\}$$
 
-Passing to the skeleton category classifying transitive $$\pi_1(B,x)$$-sets up to isomorphism yields, finally, the equivalence
+and considering the skeleton category of transitive $$\pi_1(B,x)$$-sets up to isomorphism, we finally obtain the equivalence
 
 $$\left\{\text{isomorphism classes of covering spaces of $B$}\right\}\simeq \left\{\text{conjugacy classes of subgroups of $\pi_1(B,x)$}\right\}$$
 
-Examining each of these categories, we find that they are simply partially ordered sets ([\[Category Theory\] §Categories, ⁋Example 3](/en/math/category_theory/categories#ex3)), and the equivalence is an isomorphism of posets. This gives the following classical statement.
+Now, each of these categories is nothing but a partially ordered set ([\[Category Theory\] §Categories, ⁋Example 3](/en/math/category_theory/categories#ex3)), and this equivalence is an isomorphism of posets. Hence we obtain the following result.
 
 <div class="proposition" markdown="1">
 
-<ins id="cor12">**Corollary 12 (Fundamental theorem of covering spaces, classical version)**</ins> For a path-connected, locally path-connected, semi-locally simply connected space $$B$$, there is a Galois correspondence between the set of isomorphism classes of connected covering spaces of $$B$$ and the set of conjugacy classes of subgroups of $$\pi_1(B)$$.
+<ins id="cor12">**Corollary 12 (Fundamental theorem of covering spaces, classical version)**</ins> For a path-connected, locally path-connected, semi-locally simply connected space $$B$$, there exists a Galois correspondence between the set of isomorphism classes of connected covering spaces and the conjugacy classes of subgroups of $$\pi_1(B)$$.
 
 </div>
 
-Explicitly, a covering space $$p:E \rightarrow B$$ determines a subgroup via $$\pi_1(p):\pi_1(E)\rightarrow \pi_1(B)$$, and two transitive $$G$$-sets $$X\cong G/H$$ and $$Y\cong G/K$$ are isomorphic if and only if $$H$$ and $$K$$ are conjugate, whence the result. On the other hand, if one wishes to work with specific subgroups of $$\pi_1(B,x)$$ rather than their conjugacy classes, this amounts to selecting a representative from each isomorphism class of covering spaces; equivalently, it is the same as fixing a basepoint in $$B$$ and considering *pointed* covering maps $$p:(E, y)\rightarrow (B,x)$$, examining their isomorphism classes individually. Thus we have a Galois correspondence
+Explicitly, given a covering space $$p:E \rightarrow B$$, a subgroup is defined via $$\pi_1(p):\pi_1(E)\rightarrow \pi_1(B)$$, and two transitive $$G$$-sets $$X\cong G/H$$ and $$Y\cong G/K$$ are isomorphic if and only if $$H$$ and $$K$$ are conjugate, which yields the above result. On the other hand, if instead of conjugacy classes of subgroups of $$\pi_1(B,x)$$ we consider the subgroups themselves, this corresponds to choosing one representative from each isomorphism class of covering spaces; this is exactly the same as fixing a base point of $$B$$ and considering *pointed* covering maps $$p:(E, y)\rightarrow (B,x)$$, viewing the elements of their isomorphism classes separately. That is, we have a Galois correspondence
 
 $$\left\{\text{isomorphism classes of \textit{pointed} covering spaces of $B$}\right\}\simeq \left\{\text{subgroups of $\pi_1(B,x)$}\right\}$$
 
-To put this in a more familiar form, for any $$H\leq \pi_1(B,x)$$ we may construct the corresponding covering space $$E_H$$, and the automorphism group $$\Aut(E_H/B)$$ of $$E_H$$ over $$B$$ satisfies
+Putting this in a more familiar form, for any $$H\leq \pi_1(B,x)$$ we can construct the corresponding covering space $$E_H$$, and then for the automorphism group $$\Aut(E_H/B)$$ of $$E_H$$,
 
 $$\Aut(E_H/B)\cong N_G(H)/H$$
 
-This group is called the *Deck transformation group* of $$E_H$$. More generally, automorphisms of covering spaces (obtained by choosing different elements of the fiber $$p^{-1}(x)$$) correspond to inner automorphisms of subgroups of $$\pi_1(B,x)$$; we call these *Deck transformations*.
+holds. This is called the *Deck transformation group* of $$E_H$$. More generally, automorphisms of covering spaces (obtained by choosing different elements of the fiber $$p^{-1}(x)$$) correspond to taking inner automorphisms of subgroups of $$\pi_1(B,x)$$; these are called *Deck transformations*.
 
-Now, the poset of conjugacy classes of subgroups of $$\pi_1(B,x)$$ possesses a minimal element $$\left\{e\right\}$$. By the Galois correspondence above, this corresponds to a *universal cover* $$\widetilde{B}$$. The Deck transformation group of this covering space is isomorphic to $$\pi_1(B,x)$$, and
+On the other hand, the poset of subgroups (or conjugacy classes of subgroups) of $$\pi_1(B,x)$$ has a minimal element $$\left\{e\right\}$$. By the above Galois correspondence, this corresponds to a *universal cover* $$\widetilde{B}$$. The Deck transformation group of this covering space is isomorphic to $$\pi_1(B,x)$$, and
 
 ## Seifert–van Kampen Theorem
 
-For well-behaved spaces, one can in principle compute the fundamental group or homology directly from the definitions, but in most cases such a computation is prohibitively complicated or essentially impossible. Our strategy is to compute the fundamental group of a large space by decomposing it into smaller pieces.
+While the familiar well-behaved spaces may sometimes have fundamental group or homology computable directly from the definition, in most cases such a computation is excessively complicated or nearly impossible. Our idea is to decompose a large space into smaller pieces in order to compute its fundamental group.
 
-The simplest such decomposition is a union of two open sets: $$X=U\cup V$$. By [\[Topology\] §Presheaves, ⁋Lemma 1](/en/math/topology/presheaves#lem1), the diagram
+The simplest such method is the case where a space $$X$$ is the union of two open sets $$X=U\cup V$$. Then by [\[Topology\] §Presheaves, ⁋Lemma 1](/en/math/topology/presheaves#lem1), the diagram
 
 ![union_as_colimit](/assets/images/Math/Algebraic_Topology/Covering_Spaces-3.svg){:style="width:7.54em" class="invert" .align-center}
 
-is a colimit diagram. Our goal is to apply the fundamental groupoid functor $$\Pi_1$$ to this diagram and express $$\Pi_1(X)$$ in terms of $$\Pi_1(U)$$, $$\Pi_1(V)$$, and $$\Pi_1(U\cap V)$$. More generally, [\[Topology\] §Presheaves, ⁋Lemma 1](/en/math/topology/presheaves#lem1) implies that for any open cover $$(U_i)$$, the diagram
+is a colimit diagram. In this case, we aim to describe $$\Pi_1(X)$$ in terms of $$\Pi_1(U)$$, $$\Pi_1(V)$$, and $$\Pi_1(U\cap V)$$ by applying the fundamental groupoid functor $$\Pi_1$$ to this diagram. On the other hand, [\[Topology\] §Presheaves, ⁋Lemma 1](/en/math/topology/presheaves#lem1) also tells us that for any open covering $$(U_i)$$, the diagram
 
 ![general_union_colimit](/assets/images/Math/Algebraic_Topology/Covering_Spaces-4.svg){:style="width:8.27em" class="invert" .align-center}
 
-is a colimit diagram. Our claim is that if the fundamental groupoids of the $$U_i$$ and of all their finite intersections are known, then the fundamental groupoid of $$\Pi_1(X)$$ can be computed from them.
+is a colimit diagram. Our claim is that if the fundamental groupoids of the $$(U_i)$$ and their finite intersections are all known, then we can compute the fundamental groupoid of $$\Pi_1(X)$$ from these.
 
 <div class="proposition" markdown="1">
 
-<ins id="thm13">**Theorem 13 (Seifert–van Kampen)**</ins> Let $$X$$ be a topological space with a path-connected open cover $$\mathcal{O}=(U_i)$$, and assume that every finite intersection of members of $$\mathcal{O}$$ belongs to $$\mathcal{O}$$. Then the colimit of the $$\mathcal{O}$$-shaped diagram $$\Pi_1:\mathcal{O}\rightarrow\Grpd$$ exists and is isomorphic to $$\Pi_1(X)$$.
+<ins id="thm13">**Theorem 13 (Seifert–van Kampen)**</ins> Let $$X$$ be a topological space with a path-connected open cover $$\mathcal{O}=(U_i)$$, and assume that finite intersections of elements of $$\mathcal{O}$$ again belong to $$\mathcal{O}$$. Then the colimit of the $$\mathcal{O}$$-shaped diagram $$\Pi_1:\mathcal{O}\rightarrow\Grpd$$ exists and is isomorphic to $$\Pi_1(X)$$.
 
 </div>
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-We must show that for any groupoid $$\mathscr{G}\in\Grpd$$ and any cocone $$\lambda:\Pi_1\vert_\mathcal{O}\Rightarrow \mathscr{G}$$, there exists a unique morphism $$\widetilde{\lambda}:\Pi_1(X)\rightarrow\mathscr{G}$$ such that $$\widetilde{\lambda}\vert_U=\lambda_U$$ for each $$U\in \mathcal{O}$$. Naturally, for each $$x\in X$$ we choose some $$U\in\mathcal{O}$$ containing $$x$$ and define $$\widetilde{\lambda}(x)=\lambda_U(x)$$. That this is independent of the choice of $$U$$ follows from the fact that for any $$U_1,U_2\in\mathcal{O}$$ containing $$x$$, the values $$\lambda_{U_1}(x)$$ and $$\lambda_{U_2}(x)$$ must both agree with $$\lambda_{U_1\cap U_2}(x)$$. Morphisms are treated similarly: for a path $$f$$ entirely contained in some $$U\in\mathcal{O}$$, the definition is well-defined for the same reason, and the only remaining issue is how to define $$\widetilde{\lambda}$$ on a path that is not contained in a single member of $$\mathcal{O}$$. In this case, one simply subdivides the path and takes the concatenation of the images of the pieces. That this is always defined and well-defined is straightforward to verify.
+That is, for any groupoid $$\mathscr{G}\in\Grpd$$ and any cocone $$\lambda:\Pi_1\vert_\mathcal{O}\Rightarrow \mathscr{G}$$, we must show that there exists a $$\widetilde{\lambda}$$ such that for each $$U\in \mathcal{O}$$, $$\widetilde{\lambda}$$ and $$\lambda$$ agree. Naturally, for any $$x\in X$$ we find a $$U$$ with $$x\in U$$; since $$\lambda_U$$ is defined on this $$U$$, we set $$\widetilde{\lambda}(x)=\lambda_U(x)$$. That this is independent of the choice of $$U$$ is obvious, because for any $$U_1,U_2$$ containing $$x$$, both $$\lambda_{U_1}(x)$$ and $$\lambda_{U_2}(x)$$ must agree with $$\lambda_{U_1\cap U_2}(x)$$. For morphisms we can define them similarly: for any path $$f$$ completely contained in some $$U\in \mathcal{O}$$, this definition is well-defined for the same reason, and the only thing that remains to be shown is how to define it when the path does not lie in a single $$U\in \mathcal{O}$$. But in this case we simply use concatenation of paths. We must show that this is always defined and well-defined.
 
 </details>
 
-As in the derivation of [Corollary 12](#cor12), we now apply this theorem at a single basepoint, thereby replacing $$\Grpd$$ with $$\Grp$$, and use the fact that colimits in $$\Grp$$ are amalgamated free products. This yields the classical statement.
+Now, just as when we obtained [Corollary 12](#cor12) above, applying this theorem to a single object and thus replacing $$\Grpd$$ with $$\Grp$$, and using that the colimit in $$\Grp$$ is the free product, we obtain the following result.
 
 <div class="proposition" markdown="1">
 
-<ins id="cor14">**Corollary 14 (Seifert–van Kampen theorem, classical version)**</ins> Let a topological space $$X$$ be expressed as the union of two connected open subsets $$U,V$$, and suppose $$U\cap V$$ is connected. Then the diagram
+<ins id="cor14">**Corollary 14 (Seifert–van Kampen theorem, classical version)**</ins> Let a topological space $$X$$ be the union of two connected open subsets $$U,V$$, and let $$U\cap V$$ be connected. Then the diagram
 
 ![van_Kampen](/assets/images/Math/Algebraic_Topology/Covering_Spaces-5.svg){:style="width:18.89em" class="invert" .align-center}
 
-is a pushout diagram, and the induced map $$\pi_1(U)\ast_{\pi_1(U\cap V)}\pi_1(V)\rightarrow \pi_1(X)$$ is an isomorphism.
+is a pushout diagram, and the resulting map $$\pi_1(U)\ast_{\pi_1(U\cap V)}\pi_1(V)\rightarrow \pi_1(X)$$ is an isomorphism.
 
 </div>
 
 ## Hurewicz Theorem
 
-Homology groups are structurally simpler than the fundamental group. For example, $$\pi_1(X)$$ need not be abelian in general, whereas $$H_1(X)$$ is abelian by definition. Nevertheless, as observed in [§Homology, ⁋Example 8](/en/math/algebraic_topology/homology#ex8), elements of $$H_1(X)$$ may be regarded as a kind of loop, so a relationship between the two is to be expected.
+Homology groups have a simpler structure than the fundamental group. For example, $$\pi_1(X)$$ need not be abelian in general, but $$H_1(X)$$ is abelian by definition. However, as we saw in [§Homology, ⁋Example 8](/en/math/algebraic_topology/homology#ex8), the elements of $$H_1(X)$$ can also be thought of as a kind of loop, so a relationship between them is to be expected.
 
 <div class="proposition" markdown="1">
 
-<ins id="thm15">**Theorem 15 (Hurewicz)**</ins> Let $$X$$ be a path-connected space. Then for each $$n$$, there is a group homomorphism
+<ins id="thm15">**Theorem 15 (Hurewicz)**</ins> Fix a path-connected space $$X$$. Then for each $$n$$, there exists a group homomorphism
 
 $$h_n:\pi_n(X) \rightarrow H_n(X)$$
 
-In particular, for $$n=1$$, the map $$h_1$$ is surjective and its kernel is the commutator subgroup $$[\pi_1(X),\pi_1(X)]$$; hence by the first isomorphism theorem,
+In particular, for $$n=1$$, $$h_1$$ is surjective and $$\ker h_1$$ is the commutator subgroup $$[\pi_1(X),\pi_1(X)]$$ of $$\pi_1(X)$$, so by the first isomorphism theorem
 
 $$H_1(X)\cong \pi_1(X)/\ker h_1=\pi_1(X)/[\pi_1(X),\pi_1(X)]=\pi_1(X)^\ab$$
 
@@ -286,11 +289,9 @@ More generally, if $$\pi_i(X)=0$$ for all $$i< n$$, then $$h_n$$ is an isomorphi
 
 </div>
 
-The Hurewicz homomorphism $$h_n$$ is given by $$f_\ast([S^n])$$ for any $$f:S^n \rightarrow X$$. Here $$[S^n]$$ denotes a generator of $$H_n(S^n)\cong \mathbb{Z}$$.
+The Hurewicz homomorphism $$h_n$$ is given by $$f_\ast([S^n])$$ for any $$f:S^n \rightarrow X$$. Here $$[S^n]$$ is the generator of $$H_n(S^n)\cong \mathbb{Z}$$.
 
-
-
---- 
+---
 
 **References**
 
@@ -298,5 +299,3 @@ The Hurewicz homomorphism $$h_n$$ is given by $$f_\ast([S^n])$$ for any $$f:S^n 
 [May] J. P. May, *A concise course in algebraic topology*.  
 [Mun] James Munkres, *Topology*. Prentice Hall, 2000.  
 [Tao] Terence Tao, [van Kampen's theorem via covering spaces](https://terrytao.wordpress.com/2012/10/28/van-kampens-theorem-via-covering-spaces/).
-
----

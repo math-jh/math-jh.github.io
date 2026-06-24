@@ -9,8 +9,7 @@ sidebar:
     nav: "calculus-ko"
 
 date: 2026-06-02
-weight: 14
-
+weight: 13
 drift_needed: true
 
 published: false

@@ -1,7 +1,7 @@
 ---
 title: "스펙트럼 정리"
-description: "실내적공간 위의 자기수반작용소를 정의하고, 그 고윳값이 모두 실수임을 보인다. 나아가 자기수반작용소가 항상 고유벡터들로 이루어진 정규직교기저를 가짐을 증명하여, 실대칭행렬의 직교대각화를 확립한다."
-excerpt: "자기수반작용소의 직교대각화"
+description: "실내적공간 위의 self-adjoint operator를 정의하고, 그 고윳값이 모두 실수임을 보인다. 나아가 self-adjoint operator가 항상 고유벡터들로 이루어진 orthonormal basis를 가짐을 증명하여, 실대칭행렬의 직교대각화를 확립한다."
+excerpt: "self-adjoint operator의 직교대각화"
 
 categories: [Math / Linear Algebra]
 permalink: /ko/math/linear_algebra/spectral_theorem
@@ -13,13 +13,13 @@ date: 2026-06-19
 
 weight: 120
 
-drift_needed: true
-
 published: false
 
 ---
 
-우리는 [§고유공간분해](/ko/math/linear_algebra/eigenspace_decomposition)에서 어떤 행렬이 대각화 가능한지를 살펴보았다. 내적공간 위에서는 더 강한 질문을 던질 수 있다. 어떤 linear operator가 단순히 대각화될 뿐만 아니라, 고유벡터들이 서로 직교하도록, 즉 정규직교기저를 통해 대각화될 수 있는가? 이 글에서는 이 질문에 대한 답이 자기수반작용소라는 것을 보인다. 우리는 [§내적공간](/ko/math/linear_algebra/inner_product_spaces)을 따라 $$\mathbb{R}$$-내적공간 위에서 이론을 전개한다. 
+우리는 [§고유공간분해](/ko/math/linear_algebra/eigenspace_decomposition)에서 어떤 행렬이 대각화 가능한지를 살펴보았다.
+
+내적공간 위에서는 더 강한 질문을 던질 수 있다. 어떤 linear operator가 단순히 대각화될 뿐만 아니라, 고유벡터들이 서로 직교하도록, 즉 orthonormal basis를 통해 대각화될 수 있는가? 이 글에서는 이 질문에 대한 답이 self-adjoint operator라는 것을 보인다. 우리는 [§내적공간](/ko/math/linear_algebra/inner_product_spaces)을 따라 $$\mathbb{R}$$-내적공간 위에서 이론을 전개하며, 같은 정리가 [§복소내적공간](/ko/math/linear_algebra/complex_inner_product_spaces) 위에서 self-adjoint operator를 포함하는 더 넓은 부류로 일반화되는 것은 [§복소 스펙트럼 정리](/ko/math/linear_algebra/complex_spectral_theorem)에서 다룬다. 
 
 ## 자기수반작용소
 
@@ -31,7 +31,7 @@ $$\langle Lv,w\rangle=\langle v,L^tw\rangle\qquad\text{for all $v,w\in V$}$$
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> $$\mathbb{R}$$-내적공간 $$V$$ 위의 linear operator $$L:V\rightarrow V$$가 *자기수반<sub>self-adjoint</sub>*이라는 것은 $$L=L^t$$인 것, 즉 
+<ins id="def1">**정의 1**</ins> $$\mathbb{R}$$-내적공간 $$V$$ 위의 linear operator $$L:V\rightarrow V$$가 *self-adjoint<sub>자기수반</sub>*이라는 것은 $$L=L^t$$인 것, 즉 
 
 $$\langle Lv,w\rangle=\langle v,Lw\rangle$$
 
@@ -39,15 +39,15 @@ $$\langle Lv,w\rangle=\langle v,Lw\rangle$$
 
 </div>
 
-자기수반작용소는 정규직교기저에 대한 행렬표현을 통해 알아보는 것이 가장 편하다. $$\mathcal{B}=\{e_1,\ldots, e_n\}$$이 $$V$$의 정규직교기저라 하고 $$A=[L]_\mathcal{B}^\mathcal{B}$$라 하자. 그럼 $$Le_i=\sum_k A_{ki}e_k$$이므로 $$\langle Le_i,e_j\rangle=A_{ji}$$이다. 따라서 
+self-adjoint operator는 orthonormal basis에 대한 행렬표현을 통해 알아보는 것이 가장 편하다. $$\mathcal{B}=\{e_1,\ldots, e_n\}$$이 $$V$$의 orthonormal basis라 하고 $$A=[L]_\mathcal{B}^\mathcal{B}$$라 하자. 그럼 $$Le_i=\sum_k A_{ki}e_k$$이므로 $$\langle Le_i,e_j\rangle=A_{ji}$$이다. 따라서 
 
 $$A_{ji}=\langle Le_i,e_j\rangle=\langle e_i,L^te_j\rangle=\langle L^te_j,e_i\rangle=[L^t]_{ij}$$
 
-이 성립하여, 정규직교기저에 대한 adjoint의 행렬표현은 원래 행렬표현의 transpose이다. 즉 $$L$$이 자기수반인 것은 그 행렬표현 $$A$$가 대칭행렬, 즉 $$A=A^t$$인 것과 동치이다. 
+이 성립하여, orthonormal basis에 대한 adjoint의 행렬표현은 원래 행렬표현의 transpose이다. 즉 $$L$$이 self-adjoint인 것은 그 행렬표현 $$A$$가 대칭행렬, 즉 $$A=A^t$$인 것과 동치이다. 
 
 ## 고윳값의 실수성
 
-자기수반작용소의 대각화에서 핵심이 되는 사실은, 실대칭행렬의 고윳값이 항상 실수라는 것이다. 
+self-adjoint operator의 대각화에서 핵심이 되는 사실은, 실대칭행렬의 고윳값이 항상 실수라는 것이다. 
 
 <div class="proposition" markdown="1">
 
@@ -75,37 +75,37 @@ $$\bar s=\overline{\bar z^tAz}=z^t\bar A\bar z=z^tA\bar z=(z^tA\bar z)^t=\bar z^
 
 <div class="remark" markdown="1">
 
-<ins id="rmk3">**참고 3**</ins> 위 증명에서 사용한 $$\bar z^tz=\sum_i\lvert z_i\rvert^2$$은 $$\mathbb{C}^n$$ 위의 표준적인 *Hermitian 내적*이다. 우리는 실내적공간만을 다루고 있으므로 복소내적을 본격적으로 도입하지는 않았으며, 위 증명에서는 이를 단지 계산을 위한 도구로만 사용하였다. 복소내적공간 위에서의 일반적인 이론은 [참고 12](#rmk12)에서 간략히 언급한다. 
+<ins id="rmk3">**참고 3**</ins> 위 증명에서 사용한 $$\bar z^tz=\sum_i\lvert z_i\rvert^2$$은 [§복소내적공간](/ko/math/linear_algebra/complex_inner_product_spaces)에서 다룬 $$\mathbb{C}^n$$ 위의 표준 Hermitian 내적이다. 이 글의 주제인 실내적공간 위의 이론에서는 위 증명처럼 복소내적을 계산 도구로만 끌어다 쓰지만, 같은 Hermitian 내적 위에서는 self-adjoint operator를 특수한 경우로 포함하는 더 넓은 부류의 스펙트럼 정리가 성립한다. 이는 [참고 12](#rmk12)에서 개관하고 [§복소 스펙트럼 정리](/ko/math/linear_algebra/complex_spectral_theorem)에서 본격적으로 전개한다. 
 
 </div>
 
-이로부터 자기수반작용소가 항상 고유벡터를 가짐을 안다. 
+이로부터 self-adjoint operator가 항상 고유벡터를 가짐을 안다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="cor4">**따름정리 4**</ins> $$0$$이 아닌 $$\mathbb{R}$$-내적공간 $$V$$ 위의 자기수반작용소 $$L:V\rightarrow V$$는 항상 고유벡터를 가진다. 
+<ins id="cor4">**따름정리 4**</ins> $$0$$이 아닌 $$\mathbb{R}$$-내적공간 $$V$$ 위의 self-adjoint operator $$L:V\rightarrow V$$는 항상 고유벡터를 가진다. 
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$V$$의 정규직교기저를 택하면 $$L$$의 행렬표현 $$A$$는 실대칭행렬이다. $$\dim V\geq 1$$이므로 $$A$$의 특성다항식은 차수가 $$1$$ 이상이고, 대수학의 기본정리에 의하여 $$\mathbb{C}$$에서 근을 가진다. [보조정리 2](#lem2)에 의하여 이 근은 실수이므로, $$A$$는 실수인 고윳값 $$\lambda$$를 가진다. 그럼 $$\lambda I-A$$가 singular이므로 $$(\lambda I-A)v=0$$을 만족하는 영이 아닌 $$v\in\mathbb{R}^n$$이 존재하고, 이것이 $$L$$의 고유벡터이다. 
+$$V$$의 orthonormal basis를 택하면 $$L$$의 행렬표현 $$A$$는 실대칭행렬이다. $$\dim V\geq 1$$이므로 $$A$$의 특성다항식은 차수가 $$1$$ 이상이고, 대수학의 기본정리에 의하여 $$\mathbb{C}$$에서 근을 가진다. [보조정리 2](#lem2)에 의하여 이 근은 실수이므로, $$A$$는 실수인 고윳값 $$\lambda$$를 가진다. 그럼 $$\lambda I-A$$가 singular이므로 $$(\lambda I-A)v=0$$을 만족하는 영이 아닌 $$v\in\mathbb{R}^n$$이 존재하고, 이것이 $$L$$의 고유벡터이다. 
 
 </details>
 
 ## 스펙트럼 정리
 
-남은 핵심은 자기수반작용소가 불변부분공간의 직교여공간을 다시 불변으로 남긴다는 사실이다. 
+남은 핵심은 self-adjoint operator가 불변부분공간의 orthogonal complement을 다시 불변으로 남긴다는 사실이다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="lem5">**보조정리 5**</ins> $$\mathbb{R}$$-내적공간 $$V$$ 위의 자기수반작용소 $$L:V\rightarrow V$$와, $$L(U)\subseteq U$$를 만족하는 부분공간 $$U\leq V$$에 대하여, $$L(U^\perp)\subseteq U^\perp$$이 성립한다. 
+<ins id="lem5">**보조정리 5**</ins> $$\mathbb{R}$$-내적공간 $$V$$ 위의 self-adjoint operator $$L:V\rightarrow V$$와, $$L(U)\subseteq U$$를 만족하는 부분공간 $$U\leq V$$에 대하여, $$L(U^\perp)\subseteq U^\perp$$이 성립한다. 
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-임의의 $$w\in U^\perp$$를 택하자. 임의의 $$u\in U$$에 대하여 $$L$$이 자기수반이므로 
+임의의 $$w\in U^\perp$$를 택하자. 임의의 $$u\in U$$에 대하여 $$L$$이 self-adjoint이므로 
 
 $$\langle Lw,u\rangle=\langle w,Lu\rangle$$
 
@@ -117,7 +117,7 @@ $$\langle Lw,u\rangle=\langle w,Lu\rangle$$
 
 <div class="proposition" markdown="1">
 
-<ins id="thm6">**정리 6 (스펙트럼 정리)**</ins> $$\mathbb{R}$$-내적공간 $$V$$ 위의 자기수반작용소 $$L:V\rightarrow V$$에 대하여, $$L$$의 고유벡터들로 이루어진 $$V$$의 정규직교기저가 존재한다. 특히 이 고윳값들은 모두 실수이다. 
+<ins id="thm6">**정리 6 (스펙트럼 정리)**</ins> $$\mathbb{R}$$-내적공간 $$V$$ 위의 self-adjoint operator $$L:V\rightarrow V$$에 대하여, $$L$$의 고유벡터들로 이루어진 $$V$$의 orthonormal basis가 존재한다. 특히 이 고윳값들은 모두 실수이다. 
 
 </div>
 <details class="proof" markdown="1">
@@ -125,9 +125,9 @@ $$\langle Lw,u\rangle=\langle w,Lu\rangle$$
 
 $$\dim V$$에 대한 귀납법으로 증명한다. $$\dim V=0$$인 경우는 보일 것이 없다. $$\dim V\geq 1$$이라 하면, [따름정리 4](#cor4)에 의하여 $$L$$은 고유벡터를 가지며, 이를 크기로 나누어 $$\lVert v_1\rVert=1$$인 고유벡터 $$v_1$$을 얻을 수 있다. 그 고윳값 $$\lambda_1$$은 [보조정리 2](#lem2)에 의해 실수이다. 
 
-$$U=\span v_1$$이라 하면 $$L(U)\subseteq U$$이므로 [보조정리 5](#lem5)에 의하여 $$L(U^\perp)\subseteq U^\perp$$이다. 한편 [§내적공간, ⁋정리 9](/ko/math/linear_algebra/inner_product_spaces#thm9) 이후의 논의에서 보았듯 $$V=U\oplus U^\perp$$이고 $$\dim U^\perp=\dim V-1$$이다. 또 $$U^\perp$$로 제한한 $$L\vert_{U^\perp}:U^\perp\rightarrow U^\perp$$은 임의의 $$w,w'\in U^\perp$$에 대하여 $$\langle Lw,w'\rangle=\langle w,Lw'\rangle$$을 그대로 만족하므로 $$U^\perp$$ 위에서 다시 자기수반이다. 따라서 귀납적 가정에 의하여 $$L\vert_{U^\perp}$$의 고유벡터들로 이루어진 $$U^\perp$$의 정규직교기저 $$\{v_2,\ldots, v_n\}$$이 존재한다. 
+$$U=\span v_1$$이라 하면 $$L(U)\subseteq U$$이므로 [보조정리 5](#lem5)에 의하여 $$L(U^\perp)\subseteq U^\perp$$이다. 한편 [§내적공간, ⁋정리 9](/ko/math/linear_algebra/inner_product_spaces#thm9) 이후의 논의에서 보았듯 $$V=U\oplus U^\perp$$이고 $$\dim U^\perp=\dim V-1$$이다. 또 $$U^\perp$$로 제한한 $$L\vert_{U^\perp}:U^\perp\rightarrow U^\perp$$은 임의의 $$w,w'\in U^\perp$$에 대하여 $$\langle Lw,w'\rangle=\langle w,Lw'\rangle$$을 그대로 만족하므로 $$U^\perp$$ 위에서 다시 self-adjoint이다. 따라서 귀납적 가정에 의하여 $$L\vert_{U^\perp}$$의 고유벡터들로 이루어진 $$U^\perp$$의 orthonormal basis $$\{v_2,\ldots, v_n\}$$이 존재한다. 
 
-이 벡터들은 모두 $$L$$의 고유벡터이기도 하며, $$v_1\in U$$이고 $$v_2,\ldots, v_n\in U^\perp$$이므로 $$v_1$$은 나머지와 직교한다. 따라서 $$\{v_1,v_2,\ldots, v_n\}$$은 $$L$$의 고유벡터들로 이루어진 $$V$$의 정규직교기저이다. 
+이 벡터들은 모두 $$L$$의 고유벡터이기도 하며, $$v_1\in U$$이고 $$v_2,\ldots, v_n\in U^\perp$$이므로 $$v_1$$은 나머지와 직교한다. 따라서 $$\{v_1,v_2,\ldots, v_n\}$$은 $$L$$의 고유벡터들로 이루어진 $$V$$의 orthonormal basis이다. 
 
 </details>
 
@@ -145,7 +145,7 @@ $$A=QDQ^t$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$A$$를 $$\mathbb{R}^n$$ 위의 자기수반작용소로 보면, [정리 6](#thm6)에 의하여 $$A$$의 고유벡터들로 이루어진 정규직교기저 $$\{v_1,\ldots, v_n\}$$이 존재한다. $$Av_i=\lambda_iv_i$$라 하고, $$v_i$$를 열로 갖는 행렬 $$Q=(v_1\mid\cdots\mid v_n)$$을 생각하자. $$Q$$의 열들이 정규직교이므로 $$Q$$는 orthogonal matrix이다. ([§내적공간, ⁋정의 7](/ko/math/linear_algebra/inner_product_spaces#def7)) 그럼 
+$$A$$를 $$\mathbb{R}^n$$ 위의 self-adjoint operator로 보면, [정리 6](#thm6)에 의하여 $$A$$의 고유벡터들로 이루어진 orthonormal basis $$\{v_1,\ldots, v_n\}$$이 존재한다. $$Av_i=\lambda_iv_i$$라 하고, $$v_i$$를 열로 갖는 행렬 $$Q=(v_1\mid\cdots\mid v_n)$$을 생각하자. $$Q$$의 열들이 정규직교이므로 $$Q$$는 orthogonal matrix이다. ([§내적공간, ⁋정의 7](/ko/math/linear_algebra/inner_product_spaces#def7)) 그럼 
 
 $$AQ=(Av_1\mid\cdots\mid Av_n)=(\lambda_1v_1\mid\cdots\mid\lambda_nv_n)=QD$$
 
@@ -157,65 +157,65 @@ $$AQ=(Av_1\mid\cdots\mid Av_n)=(\lambda_1v_1\mid\cdots\mid\lambda_nv_n)=QD$$
 
 <div class="proposition" markdown="1">
 
-<ins id="cor8">**따름정리 8**</ins> $$\mathbb{R}$$-내적공간 $$V$$ 위의 자기수반작용소 $$L$$의 서로 다른 두 고윳값 $$\lambda\neq\mu$$와 이에 해당하는 고유벡터 $$v,w$$에 대하여, $$\langle v,w\rangle=0$$이다. 따라서 $$V$$는 고유공간들의 직교하는 direct sum으로 분해된다. 
+<ins id="cor8">**따름정리 8**</ins> $$\mathbb{R}$$-내적공간 $$V$$ 위의 self-adjoint operator $$L$$의 서로 다른 두 고윳값 $$\lambda\neq\mu$$와 이에 해당하는 고유벡터 $$v,w$$에 대하여, $$\langle v,w\rangle=0$$이다. 따라서 $$V$$는 고유공간들의 직교하는 direct sum으로 분해된다. 
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$L$$이 자기수반이므로 
+$$L$$이 self-adjoint이므로 
 
 $$\lambda\langle v,w\rangle=\langle Lv,w\rangle=\langle v,Lw\rangle=\mu\langle v,w\rangle$$
 
-이고, 따라서 $$(\lambda-\mu)\langle v,w\rangle=0$$이다. $$\lambda\neq\mu$$이므로 $$\langle v,w\rangle=0$$이다. [정리 6](#thm6)의 정규직교기저를 같은 고윳값을 갖는 것들끼리 묶으면 각 고유공간의 정규직교기저를 얻으며, 방금 보인 직교성에 의해 서로 다른 고유공간들은 직교한다. 
+이고, 따라서 $$(\lambda-\mu)\langle v,w\rangle=0$$이다. $$\lambda\neq\mu$$이므로 $$\langle v,w\rangle=0$$이다. [정리 6](#thm6)의 orthonormal basis를 같은 고윳값을 갖는 것들끼리 묶으면 각 고유공간의 orthonormal basis를 얻으며, 방금 보인 직교성에 의해 서로 다른 고유공간들은 직교한다. 
 
 </details>
 
 ## 양의 정부호 작용소
 
-자기수반작용소 가운데 고윳값이 모두 양수인 것들은 따로 이름을 붙일 만하다. 
+self-adjoint operator 가운데 고윳값이 모두 양수인 것들은 따로 이름을 붙일 만하다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def9">**정의 9**</ins> $$\mathbb{R}$$-내적공간 $$V$$ 위의 자기수반작용소 $$L:V\rightarrow V$$이 *양의 준정부호<sub>positive semidefinite</sub>*라는 것은 모든 $$v\in V$$에 대하여 $$\langle Lv,v\rangle\geq 0$$인 것이고, *양의 정부호<sub>positive definite</sub>*라는 것은 모든 $$0\neq v\in V$$에 대하여 $$\langle Lv,v\rangle> 0$$인 것이다.
+<ins id="def9">**정의 9**</ins> $$\mathbb{R}$$-내적공간 $$V$$ 위의 self-adjoint operator $$L:V\rightarrow V$$이 *positive semidefinite<sub>양의 준정부호</sub>*라는 것은 모든 $$v\in V$$에 대하여 $$\langle Lv,v\rangle\geq 0$$인 것이고, *positive definite<sub>양의 정부호</sub>*라는 것은 모든 $$0\neq v\in V$$에 대하여 $$\langle Lv,v\rangle> 0$$인 것이다.
 
 </div>
 
 <div class="proposition" markdown="1">
 
-<ins id="prop10">**명제 10**</ins> $$\mathbb{R}$$-내적공간 $$V$$ 위의 자기수반작용소 $$L$$이 양의 준정부호인 것은 $$L$$의 모든 고윳값이 $$0$$ 이상인 것과 동치이고, 양의 정부호인 것은 $$L$$의 모든 고윳값이 양수인 것과 동치이다. 
+<ins id="prop10">**명제 10**</ins> $$\mathbb{R}$$-내적공간 $$V$$ 위의 self-adjoint operator $$L$$이 positive semidefinite인 것은 $$L$$의 모든 고윳값이 $$0$$ 이상인 것과 동치이고, positive definite인 것은 $$L$$의 모든 고윳값이 양수인 것과 동치이다. 
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[정리 6](#thm6)에 의하여 $$L$$의 고유벡터들로 이루어진 정규직교기저 $$\{v_1,\ldots, v_n\}$$을 택하고, $$Lv_i=\lambda_iv_i$$라 하자. 임의의 $$v=\sum_i a_iv_i$$에 대하여 
+[정리 6](#thm6)에 의하여 $$L$$의 고유벡터들로 이루어진 orthonormal basis $$\{v_1,\ldots, v_n\}$$을 택하고, $$Lv_i=\lambda_iv_i$$라 하자. 임의의 $$v=\sum_i a_iv_i$$에 대하여 
 
 $$\langle Lv,v\rangle=\left\langle\sum_i a_i\lambda_iv_i,\sum_j a_jv_j\right\rangle=\sum_i\lambda_ia_i^2$$
 
-이다. 마지막 등호는 $$\langle v_i,v_j\rangle=\delta_{ij}$$인 것으로부터 따라온다. 만일 모든 $$\lambda_i\geq 0$$이라면 이 값은 항상 $$0$$ 이상이고, 거꾸로 어떤 $$\lambda_i<0$$이라면 $$v=v_i$$에 대하여 $$\langle Lv_i,v_i\rangle=\lambda_i<0$$이다. 따라서 양의 준정부호성과 모든 고윳값이 $$0$$ 이상인 것이 동치이다. $$0\neq v$$에 대하여 $$\sum_i\lambda_ia_i^2>0$$인 것과 모든 $$\lambda_i>0$$인 것이 동치임도 같은 방식으로 확인되므로 양의 정부호성에 대한 주장도 성립한다. 
+이다. 마지막 등호는 $$\langle v_i,v_j\rangle=\delta_{ij}$$인 것으로부터 따라온다. 만일 모든 $$\lambda_i\geq 0$$이라면 이 값은 항상 $$0$$ 이상이고, 거꾸로 어떤 $$\lambda_i<0$$이라면 $$v=v_i$$에 대하여 $$\langle Lv_i,v_i\rangle=\lambda_i<0$$이다. 따라서 positive semidefinite성과 모든 고윳값이 $$0$$ 이상인 것이 동치이다. $$0\neq v$$에 대하여 $$\sum_i\lambda_ia_i^2>0$$인 것과 모든 $$\lambda_i>0$$인 것이 동치임도 같은 방식으로 확인되므로 positive definite성에 대한 주장도 성립한다. 
 
 </details>
 
-양의 정부호 작용소의 행렬은 또한 삼각행렬을 통해 간결하게 분해된다.
+positive definite 작용소의 행렬은 또한 삼각행렬을 통해 간결하게 분해된다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop11">**명제 11 (Cholesky 분해)**</ins> 양의 정부호인 실대칭행렬 $$A$$에 대하여, 대각성분이 모두 양수인 하삼각행렬 $$L$$이 유일하게 존재하여 $$A=LL^t$$이다.
+<ins id="prop11">**명제 11 (Cholesky 분해)**</ins> positive definite인 실대칭행렬 $$A$$에 대하여, 대각성분이 모두 양수인 하삼각행렬 $$L$$이 유일하게 존재하여 $$A=LL^t$$이다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$A$$의 크기 $$n$$에 대한 귀납법으로 존재성을 보인다. $$n=1$$이면 $$A=(a)$$에서 양의 정부호성으로 $$a>0$$이므로 $$L=(\sqrt a)$$로 두면 된다. $$n\geq 2$$라 하고 $$A$$를
+$$A$$의 크기 $$n$$에 대한 귀납법으로 존재성을 보인다. $$n=1$$이면 $$A=(a)$$에서 positive definite성으로 $$a>0$$이므로 $$L=(\sqrt a)$$로 두면 된다. $$n\geq 2$$라 하고 $$A$$를
 
 $$A=\begin{pmatrix}\alpha&b^t\\ b&A'\end{pmatrix}$$
 
-으로 쪼개자. 여기서 $$\alpha=A_{11}>0$$은 양의 정부호성으로부터 양수이다. *Schur 여원* $$A''=A'-\alpha^{-1}bb^t$$ 또한 양의 정부호인데, 임의의 $$0\neq y\in\mathbb{R}^{n-1}$$에 대하여 $$x=-\alpha^{-1}(b^ty)$$로 두면
+으로 쪼개자. 여기서 $$\alpha=A_{11}>0$$은 positive definite성으로부터 양수이다. *Schur 여원* $$A''=A'-\alpha^{-1}bb^t$$ 또한 positive definite인데, 임의의 $$0\neq y\in\mathbb{R}^{n-1}$$에 대하여 $$x=-\alpha^{-1}(b^ty)$$로 두면
 
 $$\begin{pmatrix}x&y^t\end{pmatrix}A\begin{pmatrix}x\\ y\end{pmatrix}=\alpha x^2+2x(b^ty)+y^tA'y=y^tA''y$$
 
-이고 좌변이 $$A$$의 양의 정부호성으로 양수이기 때문이다. 귀납적 가정에 의하여 $$A''=L'L'^t$$인, 대각성분이 양수인 하삼각 $$L'$$이 존재하므로
+이고 좌변이 $$A$$의 positive definite성으로 양수이기 때문이다. 귀납적 가정에 의하여 $$A''=L'L'^t$$인, 대각성분이 양수인 하삼각 $$L'$$이 존재하므로
 
 $$L=\begin{pmatrix}\sqrt\alpha&0\\ \alpha^{-1/2}b&L'\end{pmatrix}$$
 
@@ -229,7 +229,7 @@ $$LL^t=\begin{pmatrix}\alpha&b^t\\ b&\alpha^{-1}bb^t+L'L'^t\end{pmatrix}=\begin{
 
 <div class="remark" markdown="1">
 
-<ins id="rmk12">**참고 12**</ins> 복소내적공간, 즉 $$\mathbb{C}^n$$ 위의 Hermitian 내적 $$\langle z,w\rangle=\sum_i\bar z_iw_i$$를 갖춘 공간 위에서는 더 넓은 종류의 작용소가 직교대각화된다. 이 경우 adjoint $$L^\ast$$는 켤레transpose로 주어지며, $$LL^\ast=L^\ast L$$을 만족하는 *정규작용소<sub>normal operator</sub>*가 정확히 정규직교기저로 대각화되는 작용소이다. 자기수반작용소($$L=L^\ast$$, Hermitian)와 유니터리작용소($$LL^\ast=I$$)는 모두 정규작용소의 특수한 경우이다. 이 복소판 스펙트럼 정리는 [§복소내적공간](/ko/math/linear_algebra/complex_inner_product_spaces)과 [§복소 스펙트럼 정리](/ko/math/linear_algebra/complex_spectral_theorem)에서 전개한다. 
+<ins id="rmk12">**참고 12**</ins> [§복소내적공간](/ko/math/linear_algebra/complex_inner_product_spaces)에서 본 $$\mathbb{C}^n$$ 위의 Hermitian 내적 공간에서는 더 넓은 종류의 작용소가 직교대각화된다. 이 경우 adjoint $$L^\ast$$는 conjugate transpose로 주어지며, $$LL^\ast=L^\ast L$$을 만족하는 *normal operator<sub>정규작용소</sub>*가 정확히 orthonormal basis로 대각화되는 operator이다. self-adjoint operator($$L=L^\ast$$, Hermitian)와 unitary operator($$LL^\ast=I$$)는 모두 normal operator의 특수한 경우이다. 이 복소판 스펙트럼 정리는 [§복소 스펙트럼 정리](/ko/math/linear_algebra/complex_spectral_theorem)에서 전개한다. 
 
 </div>
 
