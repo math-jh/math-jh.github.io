@@ -10,27 +10,26 @@ sidebar:
 
 date: 2022-11-30
 weight: 5
-
-drift_needed: true
-translated_at: 2026-06-23T11:30:37+00:00
+translated_at: 2026-06-24T00:00:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-24T00:00:02+00:00
 ---
 In [§Algebraic Structures, §§Quotient Structures](/en/math/algebraic_structures/algebraic_structures#몫구조), we proved that when an equivalence relation $$R$$ is compatible with the operation of a magma $$A$$, the quotient set $$A/R$$ can be given a magma structure in a natural way; moreover, at the end of [§Semigroups, Monoids, and Groups](/en/math/algebraic_structures/groups), we saw that if $$A$$ is a group, then the magma $$A/R$$ constructed in this way is also a group. In this case, the group $$A/R$$ is called a *quotient group*.
 
 ## Normal Subgroups
 
-On the other hand, from [\[Set Theory\] §Equivalence Relations](/en/math/set_theory/equivalence_relations) we know that the following two things are equivalent:
+On the other hand, from [\[Set Theory\] §Equivalence Relations](/en/math/set_theory/equivalence_relations) we know that the following two are equivalent:
 
 Giving an equivalence relation $$R$$ on a set $$G$$ $$\iff$$ Choosing a partition $$(G_i)_{i\in I}$$ of the set $$G$$
 {: .text-center}
 
-Therefore, we can consider what the requirement that the equivalence relation $$R$$ be compatible with the operation of $$G$$ means on the right-hand side.
+Hence we may ask what the requirement that the equivalence relation $$R$$ be compatible with the operation of $$G$$ means on the right-hand side.
 
-First, assume that $$R$$ is compatible with the operation of $$G$$. Then each element of $$G/R$$ forms a partition of $$G$$, and in particular the set containing the identity element is only $$[e]$$.
+First, assume that $$R$$ is compatible with the operation of $$G$$. Then the elements of $$G/R$$ form a partition of $$G$$, and in particular the part containing the identity element is exactly $$[e]$$.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop1">**Proposition 1**</ins> For the quotient group $$G/R$$, $$[e]$$ is a subgroup of $$G$$.
+<ins id="prop1">**Proposition 1**</ins> For a quotient group $$G/R$$, the set $$[e]$$ is a subgroup of $$G$$.
 
 </div>
 <details class="proof" markdown="1">
@@ -40,11 +39,11 @@ Let $$a,b\in [e]$$. That is, $$a\sim e\sim b$$. Since $$R$$ is compatible with t
 
 </details>
 
-Conversely, suppose an arbitrary subgroup $$H$$ of $$G$$ is given. Replacing $$[e]$$ with $$H$$ in the above proof, we can define the following relation:
+Conversely, suppose an arbitrary subgroup $$H$$ of $$G$$ is given. Replacing $$[e]$$ with $$H$$ in the argument above, we can define the following relation:
 
 $$a\sim_{\tiny r}b\iff ab^{-1}\in H$$
 
-It is easy to show that $$\sim_{\tiny r}$$ defined in this way is an equivalence relation. Through this, to define a quotient group, this equivalence relation must be compatible with the operation of $$G$$. Let arbitrary $$a,b,c\in G$$ be given. First, if $$a\sim_{\tiny r}b$$ holds,
+It is easy to verify that $$\sim_{\tiny r}$$ defined in this way is an equivalence relation. To define a quotient group through this relation, we need this equivalence relation to be compatible with the operation of $$G$$. Let arbitrary $$a,b,c\in G$$ be given. First, if $$a\sim_{\tiny r}b$$ holds,
 
 $$(ac)(bc)^{-1}=acc^{-1}b^{-1}=ab^{-1}\in H$$
 
@@ -52,7 +51,7 @@ so $$ac\sim_{\tiny r} bc$$ holds. That is, $$\sim_{\tiny r}$$ is right compatibl
 
 $$(ca)(cb)^{-1}=cab^{-1}c^{-1}$$
 
-so in general $$\sim_{\tiny r}$$ need not be left compatible with the operation of $$G$$. But if for arbitrary $$x\in H$$, $$cxc^{-1}\in H$$ holds for all $$c\in G$$, then the right-hand side becomes an element of $$H$$, and thus $$\sim_{\tiny r}$$ defines a compatible equivalence relation on $$G$$.
+so in general $$\sim_{\tiny r}$$ need not be left compatible with the operation of $$G$$. But if for every $$x\in H$$, $$cxc^{-1}\in H$$ holds for all $$c\in G$$, then the right-hand side belongs to $$H$$, and thus $$\sim_{\tiny r}$$ defines a compatible equivalence relation on $$G$$.
 
 <div class="remark" markdown="1">
 
@@ -70,17 +69,17 @@ it is not right compatible. For this relation to be right compatible, $$c^{-1}xc
 
 <div class="definition" markdown="1">
 
-<ins id="def2">**Definition 2**</ins> A subgroup $$H$$ of a group $$G$$ is called a *normal subgroup* if for arbitrary $$g\in G$$ and arbitrary $$h\in H$$, $$ghg^{-1}\in H$$ always holds.
+<ins id="def2">**Definition 2**</ins> A subgroup $$H$$ of a group $$G$$ is called a *normal subgroup* if for every $$g\in G$$ and every $$h\in H$$, $$ghg^{-1}\in H$$ always holds.
 
 </div>
 
-On the other hand, since $$g$$ can be chosen arbitrarily, one can show that $$H$$ being a normal subgroup is equivalent to $$gHg^{-1}=H$$ holding for arbitrary $$g$$. By the above discussion, when a normal subgroup $$H$$ of $$G$$ is given, we can obtain the corresponding quotient group. The resulting quotient group is then written as $$G/H$$.
+On the other hand, since $$g$$ can be chosen arbitrarily, one can show that $$H$$ being a normal subgroup is equivalent to $$gHg^{-1}=H$$ holding for every $$g$$. By the above discussion, when a normal subgroup $$H$$ of $$G$$ is given, we can obtain the corresponding quotient group. The resulting quotient group is then written as $$G/H$$.
 
-From [Proposition 1](#prop1), for arbitrary $$a\in [e]$$ the following formula
+From [Proposition 1](#prop1), for arbitrary $$a\in [e]$$ the formula
 
 $$a\sim e\implies gag^{-1}\sim geg^{-1}=e$$
 
-shows that $$[e]$$ is a normal subgroup. Also, when $$H=[e]$$, the corresponding $$\sim_{\tiny r}$$ is exactly the same as the original equivalence relation $$\sim$$, so $$G/H$$ and $$G/R$$ are equal. Conversely, for $$\sim_{\tiny r}$$ defined from an arbitrary normal subgroup $$H$$, $$G/H=G/{\sim_{\tiny r}}$$ also holds. From this we know that giving a compatible equivalence relation on $$G$$ is the same as choosing a normal subgroup of $$G$$.
+shows that $$[e]$$ is a normal subgroup. Also, when $$H=[e]$$, the corresponding $$\sim_{\tiny r}$$ is exactly the original equivalence relation $$\sim$$, so $$G/H$$ and $$G/R$$ are equal. Conversely, for $$\sim_{\tiny r}$$ defined from an arbitrary normal subgroup $$H$$, $$G/H=G/{\sim_{\tiny r}}$$ also holds. From this we see that giving a compatible equivalence relation on $$G$$ is the same as choosing a normal subgroup of $$G$$.
 
 ## Cosets
 
@@ -90,7 +89,7 @@ First, consider the elements of $$G/{\sim_{\tiny r}}$$. For arbitrary $$a\in G$$
 
 $$x\in [a]_{\tiny r}\iff x\sim_{\tiny r} a\iff xa^{-1}\in H$$
 
-Thus, defining the set $$Ha$$ by the formula
+Thus, defining the set $$Ha$$ by
 
 $$Ha:=\{ha\mid h\in H\}$$
 
@@ -102,13 +101,13 @@ we have $$[a]_{\tiny r}=Ha$$. Similarly, for $$G/{\sim_{\tiny l}}$$ we have $$[a
 
 </div>
 
-Thus, when an arbitrary subgroup $$H$$ of $$G$$ is given, the two equivalence relations $$\sim_{\tiny r}$$ and $$\sim_{\tiny l}$$ partition $$G$$ into right cosets and left cosets respectively. In this case, the quotient set of $$G$$ by $$\sim_{\tiny r}$$ is written as $$H\setminus G$$, and the quotient set of $$G$$ by $$\sim_{\tiny l}$$ is written as $$G/H$$.[^1] In general $$Ha\neq aH$$, but in fact it is easy to check that the necessary and sufficient condition for $$Ha=aH$$ to hold is that $$H$$ is normal.
+Thus, when an arbitrary subgroup $$H$$ of $$G$$ is given, the two equivalence relations $$\sim_{\tiny r}$$ and $$\sim_{\tiny l}$$ partition $$G$$ into right cosets and left cosets respectively. In this case, the quotient set of $$G$$ by $$\sim_{\tiny r}$$ is written as $$H\setminus G$$, and the quotient set of $$G$$ by $$\sim_{\tiny l}$$ is written as $$G/H$$.[^1] In general $$Ha\neq aH$$, but it is easy to check that $$Ha=aH$$ holds if and only if $$H$$ is normal.
 
 Moreover, for arbitrary $$a\in G$$,
 
 $${a\cdot}: H\rightarrow aH;\quad h\mapsto ah,\qquad {a^{-1}\cdot}: aH\rightarrow H;\quad ah\mapsto h$$
 
-are inverse functions of each other, so we can see that all right cosets and left cosets have the same cardinality as $$H$$. Also, defining a function $$H\setminus G\rightarrow G/H$$ by the formula
+are mutually inverse, so all right cosets and left cosets have the same cardinality as $$H$$. Also, defining a function $$H\setminus G\rightarrow G/H$$ by
 
 $$Ha\mapsto a^{-1}H$$
 
@@ -120,7 +119,7 @@ it is easy to check that this function is bijective. That is, $$\lvert H\setminu
 
 </div>
 
-From the structure of $$G/H$$ examined above and the size of each element of $$G/H$$, the following proposition is obvious.
+From the structure of $$G/H$$ examined above and the size of each element of $$G/H$$, the following proposition is immediate.
 
 <div class="proposition" markdown="1">
 

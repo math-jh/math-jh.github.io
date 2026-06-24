@@ -10,30 +10,29 @@ sidebar:
 
 date: 2023-01-09
 weight: 8
-
-drift_needed: true
-translated_at: 2026-06-23T12:00:44+00:00
+translated_at: 2026-06-24T00:30:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-24T00:30:02+00:00
 ---
 Previously, we verified in [§Direct Products of Groups](/en/math/algebraic_structures/direct_products) that arbitrary products exist in $$\Grp$$, and in [§Group Homomorphisms](/en/math/algebraic_structures/group_homomorphisms) that every morphism in $$\Grp$$ has an equalizer. Thus, by the argument following [[Category Theory] §Limits, ⁋Example 7](/en/math/category_theory/limits#ex7), $$\Grp$$ is a complete category.
 
-On the other hand, every morphism in $$\Grp$$ has a coequalizer. ([§Isomorphism Theorems, ⁋Proposition 8](/en/math/algebraic_structures/isomorphism_theorems#prop8)) Therefore, if $$\Grp$$ has arbitrary coproducts, then $$\Grp$$ is a cocomplete category and hence a bicomplete category.
+On the other hand, every morphism in $$\Grp$$ has a coequalizer ([§Isomorphism Theorems, ⁋Proposition 8](/en/math/algebraic_structures/isomorphism_theorems#prop8)). Therefore, if $$\Grp$$ has arbitrary coproducts, it is a cocomplete category, and hence a bicomplete category.
 
-However, as in [§Direct Products of Groups, ⁋Lemma 1](/en/math/algebraic_structures/direct_products#lem1), it does not seem easy to find a natural way to put a group structure on the coproduct $$\coprod G_i$$ in $$\Set$$. ([[Set Theory] §Sum of Sets, ⁋Proposition 5](/en/math/set_theory/sum_of_sets#prop5))
+However, as in [§Direct Products of Groups, ⁋Lemma 1](/en/math/algebraic_structures/direct_products#lem1), it is not at all obvious how to put a group structure on the coproduct $$\coprod G_i$$ in $$\Set$$ ([[Set Theory] §Sum of Sets, ⁋Proposition 5](/en/math/set_theory/sum_of_sets#prop5)).
 
-In this post, we first show that the category of abelian groups has coproducts. In the next post, we show that for <em>arbitrary</em> groups, there exists a group satisfying the universal property of the coproduct, through a different approach than this one.
+In this post, we first show that the category of abelian groups has coproducts. In the next post, by a different method, we show that a group satisfying the universal property of the coproduct exists for <em>arbitrary</em> groups as well.
 
 ## Restricted sum
 
-Let $$(G_i)$$ be a family of groups, and suppose their product is given. Then each $$G_i$$ can be viewed as a subgroup of $$\prod G_i$$ via $$\iota_i$$. Naturally, one may consider whether the equality
+Let $$(G_i)$$ be a family of groups, and suppose their product is given. Then each $$G_i$$ can be viewed as a subgroup of $$\prod G_i$$ via $$\iota_i$$. Naturally, one may ask whether the equality
 
 $$\prod_{i\in I} G_i=\left\langle\bigcup \iota_i(G_i)\right\rangle$$
 
-holds. This equality almost never holds if $$I$$ is an infinite set. For the simplest example, let $$I=\mathbb{N}$$ and $$G_i=\mathbb{Z}/2\mathbb{Z}=\{\bar{0}, \bar{1}\}$$. Then, for instance, the left-hand side contains the element
+holds. This equality almost never holds when $$I$$ is infinite. The simplest example is to take $$I=\mathbb{N}$$ and $$G_i=\mathbb{Z}/2\mathbb{Z}=\{\bar{0}, \bar{1}\}$$. Then, for instance, the left-hand side contains the element
 
 $$(\bar{1},\bar{1},\cdots)$$
 
-but the right-hand side contains only elements obtained by *finite* operations on the $$\iota_i(\bar{1})$$, so it cannot contain the above element.
+but the right-hand side contains only elements obtained by *finite* operations on the $$\iota_i(\bar{1})$$, so it cannot contain the element above.
 
 <div class="definition" markdown="1">
 
@@ -51,7 +50,7 @@ By definition,
 
 $$\left\langle\bigcup \iota_i(G_i)\right\rangle={\prod_{i\in I}}^w G_i$$
 
-holds. Also, if $$I$$ is a finite set, the weak direct product is the same as the ordinary direct product.
+holds. Also, if $$I$$ is a finite set, the weak direct product coincides with the ordinary direct product.
 
 Then $$\prod^wG_i$$ has the following universal property.
 
@@ -69,7 +68,7 @@ Then there exists a unique group homomorphism $$f:\prod^w G_i\rightarrow H$$ suc
 
 First, we show uniqueness. If $$f, f'$$ satisfy the above, then they must agree on $$\bigcup\iota_i(G_i)$$, hence also on $$\prod^w G_i$$, and therefore $$f=f'$$.
 
-Now we must show the existence of $$f$$. For any $$x\in \prod^w G_i$$, define $$f(x)$$ by the formula
+Now we show the existence of $$f$$. For any $$x\in \prod^w G_i$$, define $$f(x)$$ by the formula
 
 $$f(x)=\prod_{i\in I} f_i(\pr_ix).$$
 
@@ -95,7 +94,7 @@ The condition imposed on the $$f_i$$,
 
 > For any $$i\neq j$$, if $$x\in G_i$$ and $$y\in G_j$$, then $$f_i(x)f_j(y)=f_j(y)f_i(x)$$
 
-is a condition that necessarily arises, because these are exactly the conditions satisfied by the $$\iota_i$$. Because of this, [Theorem 2](#thm2) gives an answer to our question only for abelian groups.
+is necessarily satisfied, because these are exactly the conditions satisfied by the $$\iota_i$$. Consequently, [Theorem 2](#thm2) answers our question only for abelian groups.
 
 Using the universal property of the weak direct product, one can prove several properties analogous to those for the direct product. For example, the following holds.
 
@@ -109,7 +108,7 @@ Using the universal property of the weak direct product, one can prove several p
 
 Let $$G$$ be a group, and let $$(H_i)$$ be a family of subgroups of $$G$$. If the elements of $$H_i$$ commute with the elements of $$H_j$$ whenever $$i\neq j$$, then the inclusion homomorphisms $$\iota_i:H_i\rightarrow G$$ induce a homomorphism $$\iota$$ from $$\prod^w H_i$$ to $$G$$.
 
-Also, we define the following.
+We also make the following definition.
 
 <div class="definition" markdown="1">
 
@@ -121,7 +120,7 @@ Thinking about the form of the homomorphism $$f$$ constructed in [Theorem 2](#th
 
 > Every $$x\in G$$ can be represented as a product $$\prod y_i$$ of finitely supported families $$(y_i)_{i\in I}$$ with $$y_i\in H_i$$.
 
-If the subgroups $$H_i$$ are all normal subgroups of $$G$$, then additionally $$G$$ is the internal weak direct product of the $$H_i$$ if the following condition is satisfied.
+If the subgroups $$H_i$$ are all normal in $$G$$, then the following additional condition guarantees that $$G$$ is the internal weak direct product of the $$H_i$$.
 
 <div class="proposition" markdown="1">
 

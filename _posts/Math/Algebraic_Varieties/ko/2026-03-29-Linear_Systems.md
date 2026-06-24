@@ -11,7 +11,6 @@ sidebar:
 date: 2026-03-29
 weight: 10
 
-drift_needed: true
 ---
 
 앞서 우리는 [§인자, ⁋정의 1](/ko/math/algebraic_varieties/divisors#def1)에서 variety $$X$$의 (Weil) divisor를 정의하였다. Zariski topology의 정의에 의하여, 이는 기본적으로 $$X$$ 위에 정의된 어떤 <em-ko>함수</em-ko>의 zero set에, 이 zero의 order를 더한 것으로 생각할 수 있으며, 이를 $$\mathbb{P}^n$$과 같은 경우에도 잘 정의하기 위해 우리는 <em-ko>함수</em-ko>를 <em-ko>적당한 line bundle의 section</em-ko>으로 일반화했다. 

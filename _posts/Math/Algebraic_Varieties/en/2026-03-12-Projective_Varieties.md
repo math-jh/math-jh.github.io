@@ -10,9 +10,9 @@ sidebar:
 
 date: 2026-03-12
 weight: 2
-translated_at: 2026-05-30T02:00:04+00:00
+translated_at: 2026-06-24T04:00:03+00:00
 translation_source: kimi-cli
-last_polished_at: 2026-05-30T02:00:04+00:00
+last_polished_at: 2026-06-24T04:00:03+00:00
 ---
 ## Definition of Projective Space
 
@@ -87,7 +87,7 @@ For a homogeneous ideal $$\mathfrak{a}$$, if we define its zero set $$Z(\mathfra
 <ins id="prop5">**Proposition 5**</ins> The following hold.
 
 1. $$Z(0) = \mathbb{P}^n$$, $$Z(1) = \emptyset$$,
-2. $$\bigcap_i Z(\mathfrak{a}_i) = Z\left(\sum_i \mathfrak{a}_i\right)$$,
+2. $$\bigcap_iZ(\mathfrak{a}_i) = Z\left(\sum_i \mathfrak{a}_i\right)$$,
 3. $$Z(\mathfrak{a}) \cup Z(\mathfrak{b}) = Z(\mathfrak{a} \cap \mathfrak{b}) = Z(\mathfrak{a}\mathfrak{b})$$.
 
 </div>
@@ -95,11 +95,11 @@ For a homogeneous ideal $$\mathfrak{a}$$, if we define its zero set $$Z(\mathfra
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-The only difference from the affine case is that the polynomials here are all homogeneous, but the proof itself is identical, so we omit it.
+The only difference from the affine case is that the polynomials we deal with here are all homogeneous, but the proof logic itself is identical, so we omit the proof.
 
 </details>
 
-Just as in the affine case, this shows that there exists a topology on projective space $$\mathbb{P}^n$$ whose closed sets are the projective algebraic sets, and we can give each projective variety the subspace topology induced from this. We likewise call this topology the *Zariski topology*. (We first examined the Zariski topology in the affine case in [[Affine Varieties] §Definition of Affine Varieties](/en/math/algebraic_varieties/affine_varieties).)
+As in the affine case, this shows that there exists a topological structure on projective space $$\mathbb{P}^n$$ having projective algebraic sets as closed sets, and we can endow each projective variety with the subspace topology induced by this. Likewise, we call this topology the *Zariski topology*. (We first examined the affine case of the Zariski topology in [§Affine Varieties](/en/math/algebraic_varieties/affine_varieties).)
 
 ## Projective Nullstellensatz
 

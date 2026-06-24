@@ -9,8 +9,7 @@ sidebar:
     nav: "calculus-ko"
 
 date: 2026-06-02
-weight: 10
-
+weight: 9
 drift_needed: true
 
 published: false
@@ -142,7 +141,7 @@ $$\lvert R_n(x)\rvert = \frac{\lvert f^{(n+1)}(c)\rvert}{(n+1)!}\lvert x-a\rvert
 
 나머지 평가는 근삿값의 오차를 보증한다. 가령 $$\sin(0.1)$$을 $$P_3(x) = x - x^3/6$$로 근사하면 4차 나머지가 $$\lvert R_3(0.1)\rvert \leq (0.1)^4/4! \approx 4.2\times 10^{-6}$$이라 소수점 다섯째 자리까지 정확하고, $$e = \sum_k 1/k!$$를 처음 $$n+1$$항에서 끊은 오차는 $$\lvert R_n(1)\rvert \leq 3/(n+1)!$$ ($$e^c < 3$$) 이라 $$n = 9$$만 해도 $$3/10! \approx 8\times 10^{-7}$$ 이하로, 계승 분모 덕에 수렴이 매우 빠르다.
 
-테일러 전개는 $$0/0$$ 꼴 극한에도 강력하여, 분자·분모를 각각 전개해 최저차항을 비교하면 [§도함수의 응용, ⁋정리 6](/ko/math/calculus/applications_of_derivatives#thm6)를 거듭 적용하지 않고도 극한을 읽어낼 수 있다.
+테일러 전개는 $$0/0$$ 꼴 극한에도 강력하여, 분자·분모를 각각 전개해 최저차항을 비교하면 [§평균값 정리, ⁋정리 18](/ko/math/calculus/mean_value_theorem#thm18)를 거듭 적용하지 않고도 극한을 읽어낼 수 있다.
 
 <div class="example" markdown="1">
 
