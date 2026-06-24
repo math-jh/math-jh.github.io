@@ -10,26 +10,25 @@ sidebar:
 
 date: 2024-05-12
 weight: 202
-
-drift_needed: true
-translated_at: 2026-06-23T12:30:29+00:00
+translated_at: 2026-06-24T01:00:03+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-24T01:00:03+00:00
 ---
 ## Direct Products and Direct Sums of Modules
 
-The category $$\lMod{A}$$ is a bicomplete category. To show this, we must construct arbitrary products and coproducts in $$\lMod{A}$$, and to do so it suffices to show that there is a natural $$A$$-action on the product and coproduct in $$\Ab$$.
+The category $$\lMod{A}$$ is bicomplete. To show this, we must construct arbitrary products and coproducts in $$\lMod{A}$$; for this it suffices to show that there is a natural $$A$$-action on the product and coproduct in $$\Ab$$.
 
 Let a family $$(M_i)_{i\in I}$$ of $$A$$-modules be given. Then the action on $$\prod M_i$$ is defined by the formula
 
 $$A\otimes\left(\prod_{i\in I}M_i\right)\overset{\id_A\otimes\pr_i}{\longrightarrow} A\otimes M_i \overset{\rho_i}{\longrightarrow} M_i $$
 
-which gives $$A\otimes\left(\prod M_i\right) \rightarrow M_i$$, and then using the universal property of the product in $$\Ab$$ we obtain $$A\otimes\left(\prod M_i\right) \rightarrow \prod M_i$$, and one checks that this satisfies the axioms of an action.
+which gives $$A\otimes\left(\prod M_i\right) \rightarrow M_i$$, and then using the universal property of the product in $$\Ab$$ we obtain $$A\otimes\left(\prod M_i\right) \rightarrow \prod M_i$$; one checks that this satisfies the axioms of an action.
 
 For the coproduct, since $$A\otimes-$$ is a left adjoint from $$\Ab$$ to $$\Ab$$, it preserves colimits, and thus through
 
 $$A\otimes\left(\bigoplus_{i\in I} M_i\right)\cong\bigoplus_{i\in I}(A\otimes M_i)\overset{\bigoplus \rho_i}{\longrightarrow} \bigoplus_{i\in I}M_i$$
 
-an action on $$\bigoplus M_i$$ is defined. For equalizer and coequalizer, given two module homomorphisms $$u,v:M \rightarrow N$$, we can define
+an action on $$\bigoplus M_i$$ is defined. For equalizers and coequalizers, given two module homomorphisms $$u,v:M \rightarrow N$$ we can define
 
 $$\Eq(u,v)=\{x\in M\mid u(x)=v(x)\}$$
 
@@ -45,7 +44,7 @@ That is, the following holds.
 
 </div>
 
-Then the direct product preserves kernels, and the direct sum preserves cokernels. ([\[Category Theory\] §Limits, ⁋Proposition 10](/en/math/category_theory/limits#prop10)) Additionally, they also satisfy the following proposition.
+Then the direct product preserves kernels, and the direct sum preserves cokernels. ([\[Category Theory\] §Limits, ⁋Proposition 10](/en/math/category_theory/limits#prop10)) Additionally, they satisfy the following proposition.
 
 <div class="proposition" markdown="1">
 
@@ -58,7 +57,7 @@ Then the direct product preserves kernels, and the direct sum preserves cokernel
 
 The proof of this is obtained by writing out $$\prod u_i$$ and $$\bigoplus u_i$$ directly coordinate-wise. In particular, from this proposition we see that the direct product also preserves cokernels, and the direct sum also preserves kernels.
 
-Earlier we observed that for arbitrary $$M,N\in\lMod{A}$$, the set $$\Hom_{\lMod{A}}(M,N)$$ becomes an abelian group. It is not difficult to check that this addition behaves well with respect to composition, and that the category $$\lMod{A}$$ is an additive category with the zero module $$0$$ as a zero object. ([\[Category Theory\] §Abelian Categories, ⁋Definition 1](/en/math/category_theory/abelian_categories#def1))
+Earlier we observed that for arbitrary $$M,N\in\lMod{A}$$, the set $$\Hom_{\lMod{A}}(M,N)$$ becomes an abelian group. It is not difficult to check that this addition is compatible with composition, and that the category $$\lMod{A}$$ is an additive category with the zero module $$0$$ as a zero object. ([\[Category Theory\] §Abelian Categories, ⁋Definition 1](/en/math/category_theory/abelian_categories#def1))
 
 Moreover, $$\lMod{A}$$ is an abelian category. ([\[Category Theory\] §Abelian Categories, ⁋Definition 3](/en/math/category_theory/abelian_categories#def3)) To verify this, one checks that any monomorphism $$u:M \rightarrow N$$ is the kernel of its cokernel $$N \rightarrow N/M$$, and any epimorphism $$v:M \rightarrow N$$ is the cokernel of its kernel $$\ker v$$, namely $$M \rightarrow M/\ker v$$.
 

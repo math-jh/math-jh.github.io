@@ -10,41 +10,41 @@ sidebar:
 
 date: 2026-04-21
 weight: 14
-translated_at: 2026-05-30T04:30:03+00:00
+translated_at: 2026-06-24T07:00:02+00:00
 translation_source: kimi-cli
-last_polished_at: 2026-05-30T04:30:03+00:00
+last_polished_at: 2026-06-24T07:00:02+00:00
 ---
-In geometrically nice situations, there is a natural duality between cohomology in dimension $$k$$ and cohomology in codimension $$k$$. To prove this, we used a perfect pairing
+In geometrically favorable situations, there is a natural duality between cohomology in dimension $$k$$ and cohomology in codimension $$k$$. To prove this, we used the perfect pairing
 
 $$H^k(M;R)\times H^{n-k}(M;R)\rightarrow R$$
 
-and obtained results such as [\[Algebraic Topology\] §Poincaré Duality, ⁋Theorem 11](/en/math/algebraic_topology/Poincare_duality#thm11). More specifically, since this pairing is constructed via the cap product and the fundamental class $$[M] \in H_n(M;R)$$, the source of duality in topology can be said to be the orientation class $$[M]$$.
+and obtained results such as [\[Algebraic Topology\] §Poincaré Duality, ⁋Theorem 11](/en/math/algebraic_topology/Poincare_duality#thm11). More specifically, since this pairing is constructed via the cap product and the fundamental class $$[M] \in H_n(M;R)$$, the source of duality in topology can be identified with the orientation class $$[M]$$.
 
-In this post, we study Serre duality, the algebraic geometry version of duality.
+In this post, we examine Serre duality, the algebraic-geometry analogue of this phenomenon.
 
 ## Serre Duality on Projective Space
 
-We first examine the case $$X=\mathbb{P}^n$$ rigorously. We know that every line bundle defined on $$\mathbb{P}^n$$ is of the form $$\mathcal{O}(d)$$, and in particular we saw in [§Canonical Bundle, ⁋Proposition 7](/en/math/algebraic_varieties/canonical_bundle#prop7) that this is $$\mathcal{O}(-n-1)$$. Then from [§Cohomology of Projective Space, ⁋Proposition 1 (Bott)](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1) we obtain the following.
+We first examine the case $$X=\mathbb{P}^n$$ in detail. We know that every line bundle on $$\mathbb{P}^n$$ is of the form $$\mathcal{O}(d)$$, and in particular we saw in [§Canonical Bundle, ⁋Proposition 7](/en/math/algebraic_varieties/canonical_bundle#prop7) that the canonical bundle is $$\mathcal{O}(-n-1)$$. Then from [§Cohomology of Projective Space, ⁋Proposition 1 (Bott)](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1) we obtain the following.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop1">**Proposition 1**</ins> For the canonical line bundle $$\omega_X$$ on projective space $$X=\mathbb{P}^n$$, there exists an isomorphism
+<ins id="prop1">**Proposition 1**</ins> For the canonical line bundle $$\omega_X$$ on projective space $$X=\mathbb{P}^n$$, there is an isomorphism
 
 $$H^n(X, \omega_X)\cong \mathbb{K}$$
 
 </div>
 
-In general, this is understood as the isomorphism that explicitly takes $$\x_0^{-1}\cdots\x_n^{-1}$$ as its basis, but it is only uniquely determined up to scalar multiplication. Choosing such a normalization is the same as concretely choosing a *trace map* $$\tr:H^n(\mathbb{P}^n, \omega_{\mathbb{P}^n}) \to \mathbb{K}$$.
+In general, this is understood as the isomorphism that explicitly takes $$\x_0^{-1}\cdots\x_n^{-1}$$ as its basis, but it is only uniquely determined up to scalar multiplication. Choosing such a normalization is tantamount to choosing a *trace map* $$\tr:H^n(\mathbb{P}^n, \omega_{\mathbb{P}^n}) \to \mathbb{K}$$.
 
-To obtain the duality pairing, we must define the cup product. For convenience, let us work at the level of Čech cohomology. For any topological space $$X$$, an open cover $$\mathcal{U}$$ of $$X$$, and sheaves $$\mathcal{F}$$, $$\mathcal{G}$$ defined on $$X$$, the cup product of two Čech cochains $$\alpha \in \check{C}^i(\mathcal{U}, \mathcal{F})$$ and $$\beta \in \check{C}^j(\mathcal{U}, \mathcal{G})$$ is given by the formula
+To obtain the duality pairing, we must define the cup product. For convenience, we work at the level of Čech cohomology. For any topological space $$X$$, an open cover $$\mathcal{U}$$ of $$X$$, and sheaves $$\mathcal{F}$$, $$\mathcal{G}$$ on $$X$$, the cup product of two Čech cochains $$\alpha \in \check{C}^i(\mathcal{U}, \mathcal{F})$$ and $$\beta \in \check{C}^j(\mathcal{U}, \mathcal{G})$$ is given by the formula
 
 $$(\alpha \smile \beta)_{i_0, \ldots, i_{i+j}} = \alpha_{i_0,\ldots,i_i}\big\vert_{U_{i_0,\ldots,i_{i+j}}} \otimes \beta_{i_i,\ldots,i_{i+j}}\big\vert_{U_{i_0,\ldots,i_{i+j}}}\in \check{C}^{i+j}(\mathcal{U}, \mathcal{F}\otimes\mathcal{G})$$
 
-We can compute explicitly that this descends to the cohomology level, from which the following map
+We can verify explicitly that this descends to cohomology, yielding the map
 
 $$\smile:\check{H}^i(\mathcal{U}, \mathcal{F}) \times \check{H}^j(\mathcal{U}, \mathcal{G}) \to \check{H}^{i+j}(\mathcal{U}, \mathcal{F} \otimes \mathcal{G})$$
 
-is defined. At the sheaf cohomology level, one can also define this by taking injective resolutions $$\mathcal{I}^\bullet$$ and $$\mathcal{J}^\bullet$$ of $$\mathcal{F}$$ and $$\mathcal{G}$$ respectively, and using the fact that their tensor product complex (that is, the total complex of the double complex whose components are $$\mathcal{I}^p\otimes \mathcal{J}^q$$) defines a resolution of $$\mathcal{F}\otimes\mathcal{G}$$.
+At the sheaf cohomology level, one can also define this by taking injective resolutions $$\mathcal{I}^\bullet$$ and $$\mathcal{J}^\bullet$$ of $$\mathcal{F}$$ and $$\mathcal{G}$$ respectively, and using the fact that their tensor product complex (that is, the total complex of the double complex whose components are $$\mathcal{I}^p\otimes \mathcal{J}^q$$) defines a resolution of $$\mathcal{F}\otimes\mathcal{G}$$.
 
 In any case, by the cup product pairing we obtain the following bilinear map for any locally free sheaf $$\mathcal{E}$$:
 
@@ -54,7 +54,7 @@ then, using the isomorphism $$\mathcal{E}\otimes \mathcal{E}^\vee\rightarrow \ma
 
 $$H^k(\mathbb{P}^n, \mathcal{E})\times H^{n-k}(\mathbb{P}^n, \omega_{\mathbb{P}^n}\otimes\mathcal{E}^\vee)\rightarrow \mathbb{K}$$
 
-For the case of $$\mathcal{O}(d)$$, we show non-degeneracy by direct computation in [§Cohomology of Projective Space, ⁋Proposition 1 (Bott)](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1), and then use the syzygy theorem to extend this non-degeneracy to a general locally free sheaf $$\mathcal{E}$$.
+For the case of $$\mathcal{O}(d)$$, we establish non-degeneracy by direct computation in [§Cohomology of Projective Space, ⁋Proposition 1 (Bott)](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1), and then use the syzygy theorem to extend this non-degeneracy to a general locally free sheaf $$\mathcal{E}$$.
 
 From the discussion so far, we obtain the following.
 
@@ -78,9 +78,9 @@ $$H^i(X, \mathcal{E}) \cong H^{n-i}(X, \omega_X \otimes \mathcal{E}^\vee)^\ast$$
 
 <div class="example" markdown="1">
 
-<ins id="ex3">**Example 3**</ins> Let us examine [Proposition 2](#prop2) concretely on $$\mathbb{P}^2$$. Here $$\omega_{\mathbb{P}^2} \cong \mathcal{O}(-3)$$, so Serre duality asserts the isomorphism $$H^k(\mathbb{P}^2, \mathcal{O}(d)) \cong H^{2-k}(\mathbb{P}^2, \mathcal{O}(-d-3))^\ast$$.
+<ins id="ex3">**Example 3**</ins> Let us examine [Proposition 2](#prop2) concretely in $$\mathbb{P}^2$$. Here $$\omega_{\mathbb{P}^2} \cong \mathcal{O}(-3)$$, so what Serre duality asserts is the isomorphism $$H^k(\mathbb{P}^2, \mathcal{O}(d)) \cong H^{2-k}(\mathbb{P}^2, \mathcal{O}(-d-3))^\ast$$.
 
-First, for $$d=0$$, by [§Cohomology of Projective Space, ⁋Proposition 1 (Bott)](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1)
+First, for $$d=0$$, by [§Cohomology of Projective Spaces, ⁋Proposition 1](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1) we have
 
 $$H^0(\mathbb{P}^2, \mathcal{O}) = \mathbb{K},\qquad H^1(\mathbb{P}^2, \mathcal{O}) = 0, \qquad H^2(\mathbb{P}^2, \mathcal{O}) = 0$$
 
@@ -88,37 +88,37 @@ and the cohomology of $$\mathcal{O}(-3)$$ is
 
 $$H^0(\mathbb{P}^2, \mathcal{O}(-3)) = 0, \qquad H^1(\mathbb{P}^2, \mathcal{O}(-3)) = 0,\qquad H^2(\mathbb{P}^2, \mathcal{O}(-3)) = \mathbb{K}$$
 
-so we can see that Serre duality holds. Similarly, for $$d=1$$, the only nonzero cohomology is
+so we see that Serre duality holds. Similarly, for $$d=1$$, the only nonzero cohomology is
 
 $$H^0(\mathbb{P}^2, \mathcal{O}(1)) = \mathbb{K}^3$$
 
-and by Serre duality we must have $$H^0(\mathcal{O}(1)) \cong H^2(\mathcal{O}(-4))^\ast$$, so $$\dim H^2(\mathcal{O}(-4))$$ should equal $$3$$. Applying [§Cohomology of Projective Space, ⁋Proposition 1 (Bott)](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1) again, the $$H^2$$ of $$\mathcal{O}(-4)$$ is actually
+and by Serre duality we must have $$H^0(\mathcal{O}(1)) \cong H^2(\mathcal{O}(-4))^\ast$$, so $$\dim H^2(\mathcal{O}(-4))$$ should be $$3$$. Applying [§Cohomology of Projective Spaces, ⁋Proposition 1](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1) again, the $$H^2$$ of $$\mathcal{O}(-4)$$ actually has dimension
 
 $$\binom{2+(-4)}{2}=\binom{-2}{2} = 3$$
 
-dimensional, so we can verify that they agree.
+so we can verify that they agree.
 
 </div>
 
-## Generalizations of Serre Duality
+## Generalization of Serre Duality
 
-We generalize the discussion so far. The first thing one can do is to extend from a locally free sheaf $$\mathcal{E}$$ to an arbitrary coherent sheaf $$\mathcal{E}$$. This is not as difficult as one might think, because on a smooth variety any coherent sheaf admits a finite length locally free resolution, so one can use the statement of Serre duality inductively. ([§Canonical Bundle, ⁋Definition 1](/en/math/algebraic_varieties/canonical_bundle#def1))
+We generalize the discussion so far. The first thing we can do is to extend from a locally free sheaf $$\mathcal{E}$$ to an arbitrary coherent sheaf $$\mathcal{E}$$. This is not as difficult as one might think, because on a smooth variety any coherent sheaf has a finite locally free resolution, so we may apply the statement of Serre duality inductively. ([§Canonical Bundle](/en/math/algebraic_varieties/canonical_bundle))
 
-Next, we drop the smoothness condition on $$X$$. In this case there are two main problems: the first obvious problem is that $$X$$ does not have a canonical line bundle. Another problem is slightly subtle: when obtaining an explicit isomorphism from the perfect pairing, we somewhat implicitly used the isomorphism
+Next we drop the smoothness condition on $$X$$. In this case there are two major problems. The first visible problem is that $$X$$ does not have a canonical line bundle. The other problem is slightly more subtle: when we obtained an explicit isomorphism from the perfect pairing, we somewhat implicitly used the isomorphism
 
 $$\mathcal{H}om(\mathcal{E}, \mathcal{F})\cong \mathcal{E}^\vee\otimes \mathcal{F}$$
 
-but in fact this is possible only because $$\mathcal{E}$$ is locally free; if $$\mathcal{E}$$ is a coherent sheaf and $$X$$ is singular, there is no guarantee that $$\mathcal{E}$$ admits a finite length locally free resolution, so this isomorphism does not hold. Therefore we introduce derived functors again, and call $$\omega_X$$ a *dualizing sheaf* of $$X$$ if it satisfies the formula
+but this is only possible because $$\mathcal{E}$$ is locally free; if $$\mathcal{E}$$ is a coherent sheaf and $$X$$ is singular, there is no guarantee that $$\mathcal{E}$$ has a finite locally free resolution, so this isomorphism fails. Therefore we introduce derived functors again, and call a sheaf $$\omega_X$$ satisfying
 
 $$\Ext^i_X(\mathcal{F},\omega_X)\cong H^{n-i}(X,\mathcal{F})^\vee$$
 
-In general, its existence is guaranteed for a Cohen-Macaulay variety of pure dimension $$n$$; although we will not give the definition, one can think of the Cohen-Macaulay condition intuitively as a notion that includes singular varieties which do not cause dimension-theoretic problems.
+the *dualizing sheaf* of $$X$$. In general, its existence is guaranteed for a Cohen-Macaulay variety of pure dimension $$n$$; we will not give the definition, but intuitively the Cohen-Macaulay condition is a notion that includes singular varieties which do not cause dimension-theoretic problems.
 
-A somewhat less intuitive generalization is relative Serre duality. In fact, we have not paid attention to the underlying field $$\mathbb{K}$$ of the variety, but in this context it helps to make its role explicit.
+A somewhat less intuitive generalization is relative Serre duality. In fact, we have not paid much attention to the underlying field $$\mathbb{K}$$ of the variety, but in this context it helps to make its role explicit.
 
-That an affine variety $$X$$ is defined over $$\mathbb{K}$$ means that its coordinate ring $$A$$ is a $$\mathbb{K}$$-algebra, i.e. there exists a ring homomorphism $$\mathbb{K}\rightarrow A$$ encoding this structure. Viewing these as morphisms between the coordinate rings of $$\mathbb{A}^1_\mathbb{K}$$ and $$X$$, this structure morphism is geometrically given as $$X\rightarrow \mathbb{A}^1_\mathbb{K}$$.
+That an affine variety $$X$$ is defined over $$\mathbb{K}$$ means that its coordinate ring $$A$$ is a $$\mathbb{K}$$-algebra, so there exists a ring homomorphism $$\mathbb{K}\rightarrow A$$ encoding this structure. Viewing these as the coordinate rings of $$\mathbb{A}^1_\mathbb{K}$$ and $$X$$ respectively, this structure morphism is geometrically given as $$X\rightarrow \mathbb{A}^1_\mathbb{K}$$.
 
-Relative Serre duality generalizes this setup by replacing the target $$\mathbb{A}^1_\mathbb{K}$$ with another variety. First, for any varieties $$X,Y$$, let us define a morphism $$f:X\rightarrow Y$$ to be a *smooth projective morphism* if the fiber $$f^{-1}(y)$$ over each $$y\in Y$$ is a smooth projective variety. Then in this case, since each fiber $$f^{-1}(y)$$ is a smooth projective variety, a canonical line bundle $$\omega_{X_y}$$ will exist, and a *relative dualizing sheaf* $$\omega_{X/Y}$$ on $$X$$ is defined by consistently assembling these. That is, $$\omega_{X/Y}$$ is a sheaf satisfying $$\omega_{X/Y}\vert_{X_y}\cong\omega_{X_y}$$ for each $$y$$. Then the generalization in this case is as follows.
+Relative Serre duality generalizes this setup by replacing the target $$\mathbb{A}^1_\mathbb{K}$$ with another variety. First, for arbitrary varieties $$X,Y$$, let us define that a morphism $$f:X\rightarrow Y$$ is a *smooth projective morphism* if for each $$y\in Y$$ the fiber $$f^{-1}(y)$$ is a smooth projective variety. Then in this case, each $$f^{-1}(y)$$ is a smooth projective variety so it will have a canonical line bundle $$\omega_{X_y}$$, and these can be assembled consistently into a *relative dualizing sheaf* $$\omega_{X/Y}$$ defined on $$X$$. That is, $$\omega_{X/Y}$$ is a sheaf satisfying $$\omega_{X/Y}\vert_{X_y}\cong\omega_{X_y}$$ for each $$y$$. Then the generalization in this setting is as follows.
 
 <div class="proposition" markdown="1">
 

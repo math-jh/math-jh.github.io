@@ -9,8 +9,7 @@ sidebar:
     nav: "calculus-ko"
 
 date: 2026-06-02
-weight: 13
-
+weight: 12
 drift_needed: true
 
 published: false
@@ -152,7 +151,7 @@ $$\begin{aligned}
 
 ## 적분의 평균값 정리
 
-마지막으로, 평가정리는 적분에 관한 평균값을 정의하고 평균값 정리의 적분판을 세우는 데에도 쓰인다. 연속함수의 가변상한 적분이 미분가능하다는 사실에 미분의 [§평균값 정리와 테일러 정리, ⁋정리 3](/ko/math/analysis/mean_value_theorem#thm3)를 적용하면 다음을 얻는다.
+마지막으로, 평가정리는 적분에 관한 평균값을 정의하고 평균값 정리의 적분판을 세우는 데에도 쓰인다. 연속함수의 가변상한 적분이 미분가능하다는 사실에 미분의 [§평균값 정리, ⁋정리 4](/ko/math/calculus/mean_value_theorem#thm4)를 적용하면 다음을 얻는다.
 
 <div class="proposition" markdown="1">
 
