@@ -33,7 +33,7 @@ $$(A^tA)^t=A^t(A^t)^t=A^tA$$이므로 $$A^tA$$은 대칭행렬, 즉 $$\mathbb{R}
 
 $$\langle A^tAv,v\rangle=\langle Av,Av\rangle=\lVert Av\rVert^2\geq 0$$
 
-이므로 $$A^tA$$은 양의 준정부호이다. ([§스펙트럼 정리, ⁋정의 9](/ko/math/linear_algebra/spectral_theorem#def9)) 따라서 [§스펙트럼 정리, ⁋명제 10](/ko/math/linear_algebra/spectral_theorem#prop10)에 의하여 $$A^tA$$의 모든 고윳값은 $$0$$ 이상이다.
+이므로 $$A^tA$$은 양의 준정부호이다. ([§스펙트럼 정리, ⁋정의 8](/ko/math/linear_algebra/spectral_theorem#def8)) 따라서 [§스펙트럼 정리, ⁋명제 9](/ko/math/linear_algebra/spectral_theorem#prop9)에 의하여 $$A^tA$$의 모든 고윳값은 $$0$$ 이상이다.
 
 </details>
 
@@ -61,7 +61,7 @@ $$A=U\Sigma V^t$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[명제 1](#prop1)에 의하여 $$A^tA$$은 자기수반이므로, [§스펙트럼 정리, ⁋정리 6](/ko/math/linear_algebra/spectral_theorem#thm6)에 의하여 $$A^tA$$의 고유벡터들로 이루어진 $$\mathbb{R}^n$$의 정규직교기저 $$\{v_1,\ldots, v_n\}$$이 존재한다. 고윳값을 $$\sigma_1^2\geq\cdots\geq\sigma_n^2\geq 0$$의 순서로 두고, $$\sigma_1,\ldots,\sigma_r$$이 양수이고 $$\sigma_{r+1}=\cdots=\sigma_n=0$$이라 하자. 즉 $$A^tAv_i=\sigma_i^2v_i$$이다.
+[명제 1](#prop1)에 의하여 $$A^tA$$은 자기수반이므로, [§스펙트럼 정리, ⁋정리 5](/ko/math/linear_algebra/spectral_theorem#thm5)에 의하여 $$A^tA$$의 고유벡터들로 이루어진 $$\mathbb{R}^n$$의 정규직교기저 $$\{v_1,\ldots, v_n\}$$이 존재한다. 고윳값을 $$\sigma_1^2\geq\cdots\geq\sigma_n^2\geq 0$$의 순서로 두고, $$\sigma_1,\ldots,\sigma_r$$이 양수이고 $$\sigma_{r+1}=\cdots=\sigma_n=0$$이라 하자. 즉 $$A^tAv_i=\sigma_i^2v_i$$이다.
 
 각 $$1\leq i\leq r$$에 대하여 
 

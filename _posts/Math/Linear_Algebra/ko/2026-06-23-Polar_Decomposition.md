@@ -21,7 +21,7 @@ published: false
 
 ## 양의 작용소의 제곱근
 
-자기수반작용소가 양의 준정부호라는 것은 [§스펙트럼 정리, ⁋정의 9](/ko/math/linear_algebra/spectral_theorem#def9)에서 정의한 대로 모든 $$v$$에 대해 $$\langle Lv,v\rangle\geq 0$$인 것이며, 이는 [§복소 스펙트럼 정리, ⁋명제 8](/ko/math/linear_algebra/complex_spectral_theorem#prop8)에 의해 자기수반작용소의 고윳값이 실수임을 함께 생각하면 모든 고윳값이 $$0$$ 이상인 것과 동치이다. 양의 작용소는 음이 아닌 실수처럼 제곱근을 가지며, 그 제곱근은 유일하다.
+자기수반작용소가 양의 준정부호라는 것은 [§스펙트럼 정리, ⁋정의 8](/ko/math/linear_algebra/spectral_theorem#def8)에서 정의한 대로 모든 $$v$$에 대해 $$\langle Lv,v\rangle\geq 0$$인 것이며, 이는 [§복소 스펙트럼 정리, ⁋명제 8](/ko/math/linear_algebra/complex_spectral_theorem#prop8)에 의해 자기수반작용소의 고윳값이 실수임을 함께 생각하면 모든 고윳값이 $$0$$ 이상인 것과 동치이다. 양의 작용소는 음이 아닌 실수처럼 제곱근을 가지며, 그 제곱근은 유일하다.
 
 <div class="proposition" markdown="1">
 

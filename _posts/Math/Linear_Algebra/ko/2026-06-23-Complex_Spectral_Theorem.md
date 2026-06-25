@@ -182,7 +182,7 @@ $$\lVert v\rVert^2=\langle Lv,Lv\rangle=\langle\lambda v,\lambda v\rangle=\bar\l
 
 <div class="remark" markdown="1">
 
-<ins id="rmk9">**참고 9**</ins> 복소 스펙트럼 정리는 실수판 ([§스펙트럼 정리, ⁋정리 6](/ko/math/linear_algebra/spectral_theorem#thm6))을 특수한 경우로 포함한다. 실대칭행렬 $$A$$는 성분이 실수이므로 $$A^\ast=\bar A^t=A^t=A$$가 되어 Hermitian 행렬이고, 따라서 [명제 8](#prop8)에 의하여 그 고윳값은 모두 실수이다. 실수 고윳값 $$\lambda$$에 대하여 $$\lambda I-A$$는 실행렬이므로 그 kernel에서 실벡터인 고유벡터를 택할 수 있고, 이로부터 실내적공간 위에서의 직교대각화가 따라온다. 실수판에서 실대칭행렬의 고윳값이 실수임을 보일 때 ([§스펙트럼 정리, ⁋보조정리 2](/ko/math/linear_algebra/spectral_theorem#lem2)) $$\mathbb{C}^n$$ 위의 Hermitian 내적을 "계산을 위한 도구"로만 끌어다 썼던 것은, 바로 이 [명제 8](#prop8)의 self-adjoint 고윳값의 실수성을 미리 사용한 것이었다.
+<ins id="rmk9">**참고 9**</ins> 복소 스펙트럼 정리는 실수판 ([§스펙트럼 정리, ⁋정리 5](/ko/math/linear_algebra/spectral_theorem#thm5))을 특수한 경우로 포함한다. 실대칭행렬 $$A$$는 성분이 실수이므로 $$A^\ast=\bar A^t=A^t=A$$가 되어 Hermitian 행렬이고, 따라서 [명제 8](#prop8)에 의하여 그 고윳값은 모두 실수이다. 실수 고윳값 $$\lambda$$에 대하여 $$\lambda I-A$$는 실행렬이므로 그 kernel에서 실벡터인 고유벡터를 택할 수 있고, 이로부터 실내적공간 위에서의 직교대각화가 따라온다. 실수판에서 실대칭행렬의 고윳값이 실수임을 보일 때 ([§스펙트럼 정리, ⁋보조정리 2](/ko/math/linear_algebra/spectral_theorem#lem2)) $$\mathbb{C}^n$$ 위의 Hermitian 내적을 "계산을 위한 도구"로만 끌어다 썼던 것은, 바로 이 [명제 8](#prop8)의 self-adjoint 고윳값의 실수성을 미리 사용한 것이었다.
 
 </div>
 
