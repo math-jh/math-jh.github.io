@@ -21,7 +21,7 @@ published: false
 
 ## 양의 작용소의 제곱근
 
-자기수반작용소가 양의 준정부호라는 것은 [§스펙트럼 정리, ⁋정의 8](/ko/math/linear_algebra/spectral_theorem#def8)에서 정의한 대로 모든 $$v$$에 대해 $$\langle Lv,v\rangle\geq 0$$인 것이며, 이는 [§복소 스펙트럼 정리, ⁋명제 8](/ko/math/linear_algebra/complex_spectral_theorem#prop8)에 의해 자기수반작용소의 고윳값이 실수임을 함께 생각하면 모든 고윳값이 $$0$$ 이상인 것과 동치이다. 양의 작용소는 음이 아닌 실수처럼 제곱근을 가지며, 그 제곱근은 유일하다.
+자기수반작용소가 양의 준정부호라는 것은 [§스펙트럼 정리, ⁋정의 8](/ko/math/linear_algebra/spectral_theorem#def8)에서 정의한 대로 모든 $$v$$에 대해 $$\langle Lv,v\rangle\geq 0$$인 것이며, 이는 [§복소 스펙트럼 정리, ⁋명제 7](/ko/math/linear_algebra/complex_spectral_theorem#prop7)에 의해 자기수반작용소의 고윳값이 실수임을 함께 생각하면 모든 고윳값이 $$0$$ 이상인 것과 동치이다. 양의 작용소는 음이 아닌 실수처럼 제곱근을 가지며, 그 제곱근은 유일하다.
 
 <div class="proposition" markdown="1">
 
@@ -31,7 +31,7 @@ published: false
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$P$$가 자기수반이므로 [§복소 스펙트럼 정리, ⁋정리 6](/ko/math/linear_algebra/complex_spectral_theorem#thm6)에 의하여 $$P$$의 고유벡터들로 이루어진 정규직교기저 $$\{e_1,\ldots,e_n\}$$이 존재하고, $$Pe_i=\lambda_ie_i$$의 각 $$\lambda_i$$는 $$0$$ 이상의 실수이다. 이제 $$Se_i=\sqrt{\lambda_i}e_i$$로 정의하면 $$S$$는 같은 정규직교기저를 고유벡터로 가지므로 자기수반이고, 고윳값 $$\sqrt{\lambda_i}\geq 0$$이 모두 음이 아니므로 양의 준정부호이며, $$S^2e_i=\lambda_ie_i=Pe_i$$이므로 $$S^2=P$$이다.
+$$P$$가 자기수반이므로 [§복소 스펙트럼 정리, ⁋정리 5](/ko/math/linear_algebra/complex_spectral_theorem#thm5)에 의하여 $$P$$의 고유벡터들로 이루어진 정규직교기저 $$\{e_1,\ldots,e_n\}$$이 존재하고, $$Pe_i=\lambda_ie_i$$의 각 $$\lambda_i$$는 $$0$$ 이상의 실수이다. 이제 $$Se_i=\sqrt{\lambda_i}e_i$$로 정의하면 $$S$$는 같은 정규직교기저를 고유벡터로 가지므로 자기수반이고, 고윳값 $$\sqrt{\lambda_i}\geq 0$$이 모두 음이 아니므로 양의 준정부호이며, $$S^2e_i=\lambda_ie_i=Pe_i$$이므로 $$S^2=P$$이다.
 
 유일성을 보이자. $$T$$가 또 다른 양의 준정부호 제곱근, 즉 $$T^2=P$$라 하자. 그럼 $$TP=T\cdot T^2=T^2\cdot T=PT$$이므로 $$T$$는 $$P$$와 가환이고, 따라서 $$P$$의 각 고유공간 $$E_{\lambda_i}(P)$$를 불변으로 남긴다. $$T$$를 $$E_{\lambda_i}(P)$$로 제한하면 그 위에서 $$T^2=P=\lambda_iI$$이므로 $$T\vert_{E_{\lambda_i}(P)}$$는 제곱이 $$\lambda_i I$$인 양의 준정부호 작용소인데, 그러한 작용소의 고윳값은 제곱이 $$\lambda_i$$이면서 음이 아니므로 $$\sqrt{\lambda_i}$$ 하나뿐이고, $$T\vert_{E_{\lambda_i}(P)}$$ 또한 자기수반이라 대각화되므로 $$T\vert_{E_{\lambda_i}(P)}=\sqrt{\lambda_i}\,I$$이다. 즉 $$T$$는 각 고유공간에서 $$\sqrt{\lambda_i}$$배로 작용하므로 $$T=S$$이다.
 
@@ -67,7 +67,7 @@ $$P=\sqrt{A^\ast A}$$인 것은 $$A=UP$$로부터 $$A^\ast A=PU^\ast UP=P^2$$이
 
 </details>
 
-극분해는 [§특이값 분해](/ko/math/linear_algebra/singular_value_decomposition)와 동전의 양면이다. $$P=\sqrt{A^\ast A}$$의 고윳값은 정확히 $$A$$의 singular value들이며, $$P$$를 [§복소 스펙트럼 정리, ⁋따름정리 7](/ko/math/linear_algebra/complex_spectral_theorem#cor7)로 $$P=W\Sigma W^\ast$$로 유니터리 대각화하면 $$A=UP=(UW)\Sigma W^\ast$$이 되어 특이값 분해를 준다. 거꾸로 특이값 분해 $$A=U_1\Sigma U_2^\ast$$로부터 $$A=(U_1U_2^\ast)(U_2\Sigma U_2^\ast)$$로 두면 극분해를 얻는다. 두 분해는 같은 정보를 "크기와 방향"으로 보느냐 "두 정규직교기저 사이의 대각화"로 보느냐의 차이일 뿐이다.
+극분해는 [§특이값 분해](/ko/math/linear_algebra/singular_value_decomposition)와 동전의 양면이다. $$P=\sqrt{A^\ast A}$$의 고윳값은 정확히 $$A$$의 singular value들이며, $$P$$를 [§복소 스펙트럼 정리, ⁋따름정리 6](/ko/math/linear_algebra/complex_spectral_theorem#cor6)로 $$P=W\Sigma W^\ast$$로 유니터리 대각화하면 $$A=UP=(UW)\Sigma W^\ast$$이 되어 특이값 분해를 준다. 거꾸로 특이값 분해 $$A=U_1\Sigma U_2^\ast$$로부터 $$A=(U_1U_2^\ast)(U_2\Sigma U_2^\ast)$$로 두면 극분해를 얻는다. 두 분해는 같은 정보를 "크기와 방향"으로 보느냐 "두 정규직교기저 사이의 대각화"로 보느냐의 차이일 뿐이다.
 
 ---
 
