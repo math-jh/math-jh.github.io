@@ -13,6 +13,7 @@ date: 2022-10-02
 
 weight: 117
 
+
 ---
 
 ## 내적과 노름
@@ -168,11 +169,27 @@ $$v=\langle v, x_1\rangle x_1+\cdots+\langle v, x_n\rangle x_n$$
 
 ## 직교행렬
 
-$$\mathbb{R}$$-내적공간 $$V$$를 생각하자. Linear map $$L:V\rightarrow V$$와 그 adjoint를 생각하자. 이 경우 $$L$$의 adjoint는 $$L^\ast$$ 대신 $$L^t$$로 적는 것이 관례이다. 그럼
+$$\mathbb{R}$$-내적공간 $$V$$와 그 위의 linear operator $$L:V\rightarrow V$$를 생각하자. [§쌍대공간](/ko/math/linear_algebra/dual_space)에서 우리는 $$L$$의 dual $$L^\ast:V^\ast\rightarrow V^\ast$$를 canonical pairing $$(-,-)$$에 대하여
 
-$$\langle v,Lw\rangle=\langle L^t v, w\rangle$$
+$$(Lv,f)=(v,L^\ast f)\qquad\text{for all $v\in V$, $f\in V^\ast$}$$
 
-이 항상 성립하므로, 임의의 linear map $$L$$이 $$\langle-,-\rangle$$을 보존한다면 임의의 $$v,w$$에 대하여
+을 만족하는 linear operator로 정의하였다. 한편 $$V$$에 내적이 주어져 있으면 임의의 $$0\neq v\in V$$에 대하여 $$\langle v,v\rangle>0$$이므로 내적은 non-degenerate이고, 따라서 [§쌍대공간, ⁋명제 4](/ko/math/linear_algebra/dual_space#prop4)에 의하여
+
+$$v\mapsto\langle v,-\rangle$$
+
+으로 정의된 함수 $$V\rightarrow V^\ast$$는 단사이다. $$\dim V=\dim V^\ast$$이므로 이는 isomorphism이며, 이 동형을 통해 내적은 $$V$$와 그 dual space $$V^\ast$$를 동일시한다. 이제 이 동형으로 $$L^\ast$$를 다시 $$V$$ 위의 operator로 옮긴 것을 $$L$$의 *adjoint<sub>수반</sub>*라 부르고, dual의 표기 $$L^\ast$$와 구별하여 $$L^t$$로 적는 것이 관례이다. 즉 $$L^t:V\rightarrow V$$는 임의의 $$v\in V$$에 대하여
+
+$$\langle L^t v,-\rangle=L^\ast\bigl(\langle v,-\rangle\bigr)$$
+
+이 되도록 정의된 operator이다. 우변은 $$\langle v,-\rangle\circ L$$, 즉 $$w\mapsto\langle v,Lw\rangle$$인 functional이므로, 이는
+
+$$\langle v,Lw\rangle=\langle L^t v,w\rangle$$
+
+이 모든 $$v,w\in V$$에 대해 성립한다는 것과 동치이다.
+
+특별히 $$V$$의 orthonormal basis $$\mathcal{B}=\{x_1,\ldots, x_n\}$$를 택하면 $$\langle x_i,x_j\rangle=\delta_{ij}$$이므로, $$\{\langle x_1,-\rangle,\ldots,\langle x_n,-\rangle\}$$이 정확히 $$\mathcal{B}$$의 dual basis가 된다. 즉 위의 동형은 orthonormal basis를 그 dual basis로 보내므로, $$L^t$$의 $$\mathcal{B}$$에 대한 행렬표현은 $$L^\ast$$의 dual basis에 대한 행렬표현과 일치한다. [§쌍대공간](/ko/math/linear_algebra/dual_space)에서 보았듯 후자는 $$[L]_\mathcal{B}^\mathcal{B}$$의 transpose이므로, orthonormal basis에 대하여 adjoint $$L^t$$의 행렬은 $$L$$의 행렬의 전치행렬이다. 표기 $$L^t$$는 여기에서 유래한다.
+
+이제 임의의 linear map $$L$$이 $$\langle-,-\rangle$$을 보존한다면 임의의 $$v,w$$에 대하여
 
 $$\langle v,w\rangle=\langle Lv,Lw\rangle=\langle v, L^t Lw\rangle$$
 
