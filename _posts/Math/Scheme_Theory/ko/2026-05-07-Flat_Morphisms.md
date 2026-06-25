@@ -5,6 +5,7 @@ excerpt: "Flat morphisms in algebraic geometry"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/flat_morphisms
+drift_needed: true
 sidebar: 
     nav: "scheme_theory-ko"
 
@@ -37,7 +38,7 @@ $$0 \longrightarrow N' \otimes_A M \longrightarrow N \otimes_A M \longrightarrow
 
 $$\mathbb{Z}/2\mathbb{Z} \xrightarrow{\times 2} \mathbb{Z}/2\mathbb{Z}$$
 
-이 되어 영사상이 되고 단사성이 깨지기 때문이다. 반면 자유 가군은 항상 평탄하다. 더 일반적으로 [\[가환대수학\] §평탄성, ⁋명제 1](/ko/math/commutative_algebra/flatness#prop1)에서 보듯이, 국소환 위에서 유한생성 평탄 가군은 자유 가군이다.
+이 되어 영사상이 되고 단사성이 깨지기 때문이다. 반면 자유 가군은 항상 평탄하다. 역으로, 국소환 위에서는 유한표시 평탄 가군이 자유 가군이라는 사실 또한 알려져 있다.
 
 ## 평탄 사상의 정의
 

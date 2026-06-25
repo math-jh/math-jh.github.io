@@ -5,6 +5,7 @@ excerpt: "유한생성 algebra의 Noether normalization 정리와 응용"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/noether_normalization
+drift_needed: true
 sidebar: 
     nav: "commutative_algebra-ko"
 
@@ -59,7 +60,7 @@ $$\tilde{\mathfrak{a}}_1\subset \tilde{\mathfrak{a}}_2\subset\cdots\subset  \til
 
 $$\mathfrak{a}\subset \tilde{\mathfrak{a}}_1\subset \tilde{\mathfrak{a}}_2\subset\cdots\subset  \tilde{\mathfrak{a}}_m$$
 
-으로 볼 수 있으므로 주어진 주장을 polynomial ring $$A=\mathbb{K}[\y_1,\ldots, \y_r]$$에 대해서만 보이면 충분하다. 이 경우, [§매개계, ⁋따름정리 10](/ko/math/commutative_algebra/system_of_parameters#cor10)에 의하여 $$r=d$$여야 한다. 
+으로 볼 수 있으므로 주어진 주장을 polynomial ring $$A=\mathbb{K}[\y_1,\ldots, \y_r]$$에 대해서만 보이면 충분하다. 이 경우, [§매개계, ⁋따름정리 11](/ko/math/commutative_algebra/system_of_parameters#cor11)에 의하여 $$r=d$$여야 한다. 
 
 이제 정리의 원소들 $$\x_i$$들을 만들기 위해 우리는 우선 $$\x_i'=\y_i$$로 두고, 이들을 바꿔가며 주어진 조건을 만족하는 $$\x_d$$들을 찾을 것이다. 이를 위해 다음의 두 조건
 

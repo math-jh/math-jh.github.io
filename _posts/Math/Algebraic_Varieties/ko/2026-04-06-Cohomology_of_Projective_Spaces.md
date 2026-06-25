@@ -12,7 +12,7 @@ date: 2026-04-06
 weight: 13
 ---
 
-우리는 일찍이 [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16)에서 line bundle $$\mathcal{O}(d)$$를 정의하고, 그 global section $$H^0(\mathbb{P}^n, \mathcal{O}(d))$$이 degree $$d$$의 homogeneous polynomial들과 동형임을 확인하였다. 그러나 우리가 이전 글에서 도입한 sheaf cohomology ([§층 코호몰로지, ⁋정의 1](/ko/math/algebraic_varieties/sheaf_cohomology#def1))는 $$H^0$$뿐만 아니라 higher cohomology group들 $$H^1, H^2, \ldots$$까지 포함하는 더 풍부한 불변량이므로, 이제 우리는 $$H^0$$ 뿐만 아니라 higher cohomology group들을 사용하여 $$\mathcal{O}(d)$$의 정보를 모두 알아낼 것이다.
+우리는 일찍이 [§선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_varieties/line_bundles#ex12)에서 line bundle $$\mathcal{O}(d)$$를 정의하고, [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16)의 계산을 통해 그 global section $$H^0(\mathbb{P}^n, \mathcal{O}(d))$$이 degree $$d$$의 homogeneous polynomial들과 동형임을 확인하였다. 그러나 우리가 이전 글에서 도입한 sheaf cohomology ([§층 코호몰로지, ⁋정의 1](/ko/math/algebraic_varieties/sheaf_cohomology#def1))는 $$H^0$$뿐만 아니라 higher cohomology group들 $$H^1, H^2, \ldots$$까지 포함하는 더 풍부한 불변량이므로, 이제 우리는 $$H^0$$ 뿐만 아니라 higher cohomology group들을 사용하여 $$\mathcal{O}(d)$$의 정보를 모두 알아낼 것이다.
 
 ## Bott's Formula
 

@@ -5,6 +5,7 @@ excerpt: "벡터공간의 고유공간분해"
 
 categories: [Math / Linear Algebra]
 permalink: /ko/math/linear_algebra/eigenspace_decomposition
+drift_needed: true
 sidebar: 
     nav: "linear_algebra-ko"
 
@@ -249,7 +250,7 @@ $$D=\begin{pmatrix}\lambda_1&0&\cdots&0\\ 0&\lambda_2&\cdots&0\\ \vdots&\vdots&\
 
 <div class="definition" markdown="1">
 
-<ins id="def8">**정의 8**</ins> [명제 5](#prop5)의 조건을 모두 만족하는 $$n\times n$$ 행렬 $$A$$를 *diagonalizable<sub>대각화가능</sub>*이라 한다.
+<ins id="def8">**정의 8**</ins> [명제 6](#prop6)의 조건을 모두 만족하는 $$n\times n$$ 행렬 $$A$$를 *diagonalizable<sub>대각화가능</sub>*이라 한다.
 
 </div>
 

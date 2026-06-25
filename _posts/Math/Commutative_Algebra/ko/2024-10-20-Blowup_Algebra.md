@@ -5,6 +5,7 @@ excerpt: "Ideal로부터 만드는 Rees algebra와 associated graded ring"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/blowup_algebra
+drift_needed: true
 sidebar: 
     nav: "commutative_algebra-ko"
 
@@ -138,7 +139,7 @@ $$\mathcal{J}':\quad M'\supseteq M'\cap M_1\supseteq M'\cap M_2\supseteq\cdots$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$\mathcal{J}$$가 $$\mathfrak{a}$$-stable이므로 $$\Bl_\mathcal{J}M$$은 $$\Bl_\mathfrak{a}A$$-module로서 finitely generated이다. 한편 $$\Bl_\mathfrak{a}A$$는 finitely generated $$A$$-algebra이고 $$A$$가 noetherian이므로 [§기본 개념들, §§Finiteness condition](/ko/math/commutative_algebra/basic_notions#finiteness-condition)에 의하여 $$\Bl_\mathfrak{a}A$$도 noetherian이다. 따라서, $$\Bl_\mathcal{J}M$$의 submodule $$\Bl_{\mathcal{J}'}M'$$ 또한 finitely generated이고, 다시 [명제 6](#prop6)을 적용하면 원하는 결과를 얻는다.
+$$\mathcal{J}$$가 $$\mathfrak{a}$$-stable이므로 $$\Bl_\mathcal{J}M$$은 $$\Bl_\mathfrak{a}A$$-module로서 finitely generated이다. 한편 $$\Bl_\mathfrak{a}A$$는 finitely generated $$A$$-algebra이고 $$A$$가 noetherian이므로 [§기본 개념들, ⁋따름정리 13](/ko/math/commutative_algebra/basic_notions#cor13)에 의하여 $$\Bl_\mathfrak{a}A$$도 noetherian이다. 따라서, $$\Bl_\mathcal{J}M$$의 submodule $$\Bl_{\mathcal{J}'}M'$$ 또한 finitely generated이고, 다시 [명제 6](#prop6)을 적용하면 원하는 결과를 얻는다.
 
 </details>
 

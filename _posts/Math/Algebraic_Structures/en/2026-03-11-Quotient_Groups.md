@@ -14,7 +14,7 @@ translated_at: 2026-06-24T00:00:02+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-06-24T00:00:02+00:00
 ---
-In [§Algebraic Structures, §§Quotient Structures](/en/math/algebraic_structures/algebraic_structures#몫구조), we proved that when an equivalence relation $$R$$ is compatible with the operation of a magma $$A$$, the quotient set $$A/R$$ can be given a magma structure in a natural way; moreover, at the end of [§Semigroups, Monoids, and Groups](/en/math/algebraic_structures/groups), we saw that if $$A$$ is a group, then the magma $$A/R$$ constructed in this way is also a group. In this case, the group $$A/R$$ is called a *quotient group*.
+In [§Algebraic Structures, §§Quotient Structures](/en/math/algebraic_structures/algebraic_structures#quotient-structures), we proved that when an equivalence relation $$R$$ is compatible with the operation of a magma $$A$$, the quotient set $$A/R$$ can be given a magma structure in a natural way; moreover, at the end of [§Semigroups, Monoids, and Groups](/en/math/algebraic_structures/groups), we saw that if $$A$$ is a group, then the magma $$A/R$$ constructed in this way is also a group. In this case, the group $$A/R$$ is called a *quotient group*.
 
 ## Normal Subgroups
 

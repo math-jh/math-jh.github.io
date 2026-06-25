@@ -16,7 +16,7 @@ last_polished_at: 2026-06-21T21:00:02+00:00
 ---
 The main reasons we defined limits of sequences and infinite series before limits and continuity of functions are twofold. The first reason is that we will need to handle infinite series anyway for the Riemann sums used in definite integrals, so we wanted to avoid having limits of sequences disrupt the flow from differentiation to integration. The second reason is precisely to define power series early in this article.
 
-A power series is essentially another way of writing a function, and its importance lies in the fact that by introducing it, we can handle functions much more easily that we could not deal with in high school. For example, when we defined the exponential function $$2^x$$ in high school, we did not rigorously define its values at irrational numbers; in fact, defining values in such a way requires the completeness of the real numbers, which was needed in [§Continuous Functions, ⁋Theorem 5](/en/math/calculus/continuity#thm5) or [§Limits of Sequences, ⁋Proposition 8](/en/math/calculus/sequences#prop8). Moreover, after defining the exponential function, when we defined the natural constant in [§Limits of Sequences, ⁋Example 9](/en/math/calculus/sequences#ex9), we had to resort to somewhat vague descriptions such as <em>the exponential function that remains itself upon differentiation</em>. On the other hand, defining the exponential function $$e^x$$ as a power series does not require such complexity, and moreover, functions that do not have an elementary antiderivative, such as the integral of $$e^{-x^2}$$, can be neatly expressed as a power series.
+A power series is essentially another way of writing a function, and its importance lies in the fact that by introducing it, we can handle functions much more easily that we could not deal with in high school. For example, when we defined the exponential function $$2^x$$ in high school, we did not rigorously define its values at irrational numbers; in fact, defining values in such a way requires the completeness of the real numbers, which was needed in [§Continuous Functions, ⁋Theorem 5](/en/math/calculus/continuity#thm5) or [§Limits of Sequences, ⁋Proposition 7](/en/math/calculus/sequences#prop7). Moreover, after defining the exponential function, when we defined the natural constant in [§Limits of Sequences, ⁋Example 8](/en/math/calculus/sequences#ex8), we had to resort to somewhat vague descriptions such as <em>the exponential function that remains itself upon differentiation</em>. On the other hand, defining the exponential function $$e^x$$ as a power series does not require such complexity, and moreover, functions that do not have an elementary antiderivative, such as the integral of $$e^{-x^2}$$, can be neatly expressed as a power series.
 
 ## Power Series and Radius of Convergence
 
@@ -72,9 +72,9 @@ As mentioned above, one of the benefits of introducing power series early is tha
 
 $$e^x = \sum_{n=0}^\infty \frac{x^n}{n!}$$
 
-In particular, substituting $$x = 1$$ gives $$e = \sum 1/n!$$, and this number coincides with the natural constant defined as the limit $$\lim(1 + 1/n)^n$$ in [§Limits of Sequences, ⁋Example 9](/en/math/calculus/sequences#ex9).
+In particular, substituting $$x = 1$$ gives $$e = \sum 1/n!$$, and this number coincides with the natural constant defined as the limit $$\lim(1 + 1/n)^n$$ in [§Limits of Sequences, ⁋Example 8](/en/math/calculus/sequences#ex8).
 
-The proof is as follows. Let $$L = \lim(1+1/n)^n$$ be the limit value and $$s_m = \sum 1/k!$$ be the partial sum of the series. In [§Limits of Sequences, ⁋Example 9](/en/math/calculus/sequences#ex9) above, we already showed by the binomial theorem that
+The proof is as follows. Let $$L = \lim(1+1/n)^n$$ be the limit value and $$s_m = \sum 1/k!$$ be the partial sum of the series. In [§Limits of Sequences, ⁋Example 8](/en/math/calculus/sequences#ex8) above, we already showed by the binomial theorem that
 
 $$\left(1 + \frac1n\right)^n = \sum_{k=0}^n \binom{n}{k}\frac{1}{n^k} = \sum_{k=0}^n \frac{1}{k!}\prod_{j=0}^{k-1}\left(1 - \frac{j}{n}\right)$$
 
@@ -84,7 +84,7 @@ First, since each factor $$1 - j/n$$ in the product is at most $$1$$, the above 
 
 $$\left(1 + \frac1n\right)^n \geq \sum_{k=0}^m \frac{1}{k!}\prod_{j=0}^{k-1}\left(1 - \frac{j}{n}\right)$$
 
-The left-hand side is at most $$L$$, so the right-hand side is also at most $$L$$, and sending $$n \to \infty$$ with $$m$$ fixed, the right-hand side is a finite sum and each factor satisfies $$1 - j/n \to 1$$, so by the limit laws ([§Limits of Sequences, ⁋Proposition 3](/en/math/calculus/sequences#prop3)) it converges to $$s_m$$. If all terms of a convergent sequence are at most $$L$$, then its limit is also at most $$L$$, so $$s_m \leq L$$, and sending $$m \to \infty$$ gives $$s \leq L$$. Combining the two inequalities yields $$L = s$$, i.e., the $$e$$ defined in both ways is the same number.
+The left-hand side is at most $$L$$, so the right-hand side is also at most $$L$$, and sending $$n \to \infty$$ with $$m$$ fixed, the right-hand side is a finite sum and each factor satisfies $$1 - j/n \to 1$$, so by the limit laws ([§Limits of Sequences, ⁋Proposition 2](/en/math/calculus/sequences#prop2)) it converges to $$s_m$$. If all terms of a convergent sequence are at most $$L$$, then its limit is also at most $$L$$, so $$s_m \leq L$$, and sending $$m \to \infty$$ gives $$s \leq L$$. Combining the two inequalities yields $$L = s$$, i.e., the $$e$$ defined in both ways is the same number.
 
 </div>
 
