@@ -5,6 +5,7 @@ excerpt: "Fractional ideal과 invertible module, Picard group"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/fractional_ideals
+drift_needed: true
 sidebar: 
     nav: "commutative_algebra-ko"
 
@@ -13,7 +14,7 @@ weight: 19
 
 ---
 
-다음 글에서 우리는 regular local ring ([§차원, ⁋정의 9](/ko/math/commutative_algebra/Krull_dimension#def9))에 대해 살펴본다. 그 전에 몇가지 개념들을 정의해야 한다. 
+다음 글에서 우리는 regular local ring ([§차원, ⁋정의 12](/ko/math/commutative_algebra/Krull_dimension#def12))에 대해 살펴본다. 그 전에 몇가지 개념들을 정의해야 한다. 
 
 ## 가역가군
 

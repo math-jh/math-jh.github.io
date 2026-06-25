@@ -5,6 +5,7 @@ excerpt: "가환환 위 polynomial ring의 인수분해와 Gauss lemma"
 
 categories: [Math / Ring Theory]
 permalink: /ko/math/ring_theory/polynomial_rings
+drift_needed: true
 sidebar: 
     nav: "ring_theory-ko"
 
@@ -380,7 +381,7 @@ $$(A/p_iA)[\x]\cong A[\x]/P_i$$
 
 <div class="proposition" markdown="1">
 
-<ins id="cor15">**따름정리 15**</ins> UFD $$A$$와 그 field of fraction $$\Frac A$$, 다항식 $$u(\x) \in A[\x]$$를 생각하고 $$u(\x)$$의 계수들의 최대공약수를 $$1$$이라 하자. 만약 $$u(\x)$$가 $$A[\x]$$에서 irreducible이면, $$u(\x)$$는 $$(\Frac A)[\x]$$에서도 irreducible이다.
+<ins id="cor15">**따름정리 15**</ins> UFD $$A$$와 그 field of fraction $$\Frac A$$, 다항식 $$u(\x) \in A[\x]$$를 생각하고 $$u(\x)$$의 계수들의 최대공약수를 $$1$$이라 하자. 그럼 $$u(\x)$$가 $$A[\x]$$에서 irreducible인 것과 $$u(\x)$$가 $$(\Frac A)[\x]$$에서 irreducible인 것이 동치이다.
 
 </div>
 <details class="proof" markdown="1">

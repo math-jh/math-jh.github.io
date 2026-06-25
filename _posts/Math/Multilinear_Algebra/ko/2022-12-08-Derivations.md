@@ -5,6 +5,7 @@ excerpt: "Differential module"
 
 categories: [Math / Multilinear Algebra]
 permalink: /ko/math/multilinear_algebra/derivations
+drift_needed: true
 sidebar: 
     nav: "multilinear_algebra-ko"
 
@@ -233,7 +234,7 @@ $$d(x^{-1}) = -\varepsilon_{\delta, \deg(x)} x^{-1}(d(x))x^{-1}
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[명제 5](#prop5)에 의해 $$d(1) = 0$$이므로,
+[명제 6](#prop6)에 의해 $$d(1) = 0$$이므로,
 
 $$0 = d(xx^{-1}) = d(x))x^{-1} + \varepsilon_{\delta, \deg(x)}x(d(x^{-1})$$
 

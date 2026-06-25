@@ -18,7 +18,7 @@ last_polished_at: 2026-06-19T14:30:02+00:00
 ---
 ## Least Squares
 
-The least squares method we introduce now is first considered for Euclidean spaces $$\mathbb{R}^n$$ equipped with the dot product. However, just as in [§Bilinear Forms, §§Non-degenerate Bilinear Forms](/en/math/linear_algebra/bilinear_form#비퇴화-쌍선형형식), this can be generalized to an arbitrary $$\mathbb{R}$$-inner product space.
+The least squares method we introduce now is first considered for Euclidean spaces $$\mathbb{R}^n$$ equipped with the dot product. However, just as in [§Bilinear Forms, §§Non-degenerate Bilinear Forms](/en/math/linear_algebra/bilinear_form#non-degenerate-bilinear-forms), this can be generalized to an arbitrary $$\mathbb{R}$$-inner product space.
 
 Consider an arbitrary matrix $$A\in\Mat_{m\times n}(\mathbb{R})$$ and the system of linear equations $$Ax=y$$. If $$m=n$$ and $$A$$ is invertible, this equation has a unique solution, but this is not the case in general. Let us consider the special case where $$m>n$$. Then $$\rank(A)\leq n< m$$, so for most vectors $$y$$ not lying in the image of $$A$$, this equation cannot be solved.
 

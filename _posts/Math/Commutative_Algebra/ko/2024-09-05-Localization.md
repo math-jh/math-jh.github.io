@@ -5,6 +5,7 @@ excerpt: "환과 가군의 localization과 local ring 구성"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/localization
+drift_needed: true
 sidebar: 
     nav: "commutative_algebra-ko"
 
@@ -112,7 +113,7 @@ $$s(1x-0\cdot1)=sx=0$$
 
 Localization의 가장 단순한 예시는 [\[대수적 구조\] §분수체, ⁋정의 2](/ko/math/algebraic_structures/field_of_fractions#def2)에서 살펴본 ring of fraction이다. 여기에서는 $$M=A$$로 잡았다. 특별히 우리는 $$A$$가 integral domain이라면 그 ring of fraction $$\Frac(A)$$가 field가 되는 것 또한 살펴보았다. ([\[대수적 구조\] §분수체, ⁋명제 6](/ko/math/algebraic_structures/field_of_fractions#prop6))
 
-또 다른 예시로, 마찬가지로 $$M=A$$로 두고, $$A$$의 prime ideal $$S=A\setminus \mathfrak{p}$$로 두어 $$A_\mathfrak{p}=S^{-1}A$$을 생각할 수 있었다. [정의 1](#def1)을 이용하여 이를 임의의 $$A$$-module $$M$$에도 적용할 수 있는데, 그렇게 하여 얻어지는 $$A$$-module을 $$M_\mathfrak{p}$$로 적는다. 
+또 다른 예시로, 마찬가지로 $$M=A$$로 두고, $$A$$의 prime ideal $$S=A\setminus \mathfrak{p}$$로 두어 $$A_\mathfrak{p}=S^{-1}A$$을 생각할 수 있었다. [정의 4](#def4)을 이용하여 이를 임의의 $$A$$-module $$M$$에도 적용할 수 있는데, 그렇게 하여 얻어지는 $$A$$-module을 $$M_\mathfrak{p}$$로 적는다. 
 
 위의 두 예시 모두 [정의 4](#def4)에서 정의한 덧셈구조 및 $$A$$의 스칼라곱 외에도 곱셈구조를 가지고 있다. 명시적으로 이 구조는
 

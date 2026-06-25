@@ -5,6 +5,7 @@ excerpt: "Filter의 수렴을 통한 compactness의 특성화"
 
 categories: [Math / Topology]
 permalink: /ko/math/topology/filter_convergence
+drift_needed: true
 sidebar: 
     nav: "topology-ko"
 
@@ -164,6 +165,18 @@ $$X$$가 [보조정리 7](#lem7)의 역이 성립한다는 공간이라 하자. 
 
 뿐만 아니라 first countable space는 sequential space라는 것을 쉽게 보일 수 있다. 
 
+<div class="proposition" markdown="1">
+
+<ins id="prop12">**명제 12**</ins> 임의의 second countable space $$X$$는 *Lindelöf<sub>린델뢰프</sub>*이다. 즉, $$X$$의 임의의 open cover는 가산 부분덮개를 갖는다.
+
+</div>
+<details class="proof" markdown="1">
+<summary>증명</summary>
+
+$$X$$의 countable base $$\mathcal{B}=\{B_1, B_2, \ldots\}$$를 고정하고, $$X$$의 임의의 open cover $$(U_\alpha)_{\alpha\in A}$$가 주어졌다 하자. 각 점 $$x\in X$$에 대하여 $$x\in U_\alpha$$인 $$\alpha$$가 존재하고, base의 정의에 의하여 $$x\in B_n\subseteq U_\alpha$$인 $$B_n\in\mathcal{B}$$이 존재한다. 이러한 $$B_n$$들을 모두 모으면 $$X$$를 덮는 $$\mathcal{B}$$의 가산 부분모임 $$\{B_{n_1}, B_{n_2}, \ldots\}$$을 얻는다. 이제 각 $$k$$에 대하여 $$B_{n_k}\subseteq U_{\alpha_k}$$인 $$\alpha_k$$를 하나씩 택하면, $$(U_{\alpha_k})_{k\geq 1}$$은 $$(U_\alpha)_{\alpha\in A}$$의 가산 부분덮개가 된다.
+
+</details>
+
 ## 필터의 수렴
 
 [명제 11](#prop11)의 증명에서 핵심적인 역할을 한 것은 $$x$$가 열린집합들의 decreasing sequence
@@ -174,15 +187,15 @@ $$B_1\supseteq B_2\supseteq\cdots$$
 
 <div class="definition" markdown="1">
 
-<ins id="def12">**정의 12**</ins> 위상공간 $$X$$와 그 위에 정의된 filter $$\mathcal{F}$$를 생각하자. ([§위상공간의 다른 정의들, ⁋정의 3](/ko/math/topology/equivalent_formulations_of_topology#def3)) 그럼 $$\mathcal{F}$$가 $$x\in X$$로 *수렴<sub>converge</sub>*한다는 것은 $$\mathcal{N}(x)\subseteq \mathcal{F}$$가 성립하는 것이다. ([§열린집합, §§Neighborhood filter](/ko/math/topology/open_sets#neighborhood-filter)) 이 때, $$x$$를 $$\mathcal{F}$$의 *limit point<sub>극한점</sub>*라 부른다. 
+<ins id="def13">**정의 13**</ins> 위상공간 $$X$$와 그 위에 정의된 filter $$\mathcal{F}$$를 생각하자. ([§위상공간의 다른 정의들, ⁋정의 3](/ko/math/topology/equivalent_formulations_of_topology#def3)) 그럼 $$\mathcal{F}$$가 $$x\in X$$로 *수렴<sub>converge</sub>*한다는 것은 $$\mathcal{N}(x)\subseteq \mathcal{F}$$가 성립하는 것이다. ([§열린집합, §§Neighborhood filter](/ko/math/topology/open_sets#neighborhood-filter)) 이 때, $$x$$를 $$\mathcal{F}$$의 *limit point<sub>극한점</sub>*라 부른다. 
 
 </div>
 
-[정의 12](#def12)는 점열의 수렴을 일반화한 것이다. 이를 확인하기 위해서는 우선 다음을 정의해야 한다.
+[정의 13](#def13)는 점열의 수렴을 일반화한 것이다. 이를 확인하기 위해서는 우선 다음을 정의해야 한다.
 
 <div class="definition" markdown="1">
 
-<ins id="def13">**정의 13**</ins> 집합 $$X$$ 위에 정의된 filter $$\mathcal{F}$$, 그리고 위상공간 $$X$$가 주어졌다 하자. 함수 $$f:X \rightarrow Y$$에 대하여, $$y\in Y$$가 $$\mathcal{F}$$에 대한 $$f$$의 *limit point*라는 것은 $$y$$가 filter $${\uparrow}f(\mathcal{F})$$의 limit point인 것이다. ([§위상공간의 다른 정의들, ⁋명제 7](/ko/math/topology/equivalent_formulations_of_topology#prop7))
+<ins id="def14">**정의 14**</ins> 집합 $$X$$ 위에 정의된 filter $$\mathcal{F}$$, 그리고 위상공간 $$X$$가 주어졌다 하자. 함수 $$f:X \rightarrow Y$$에 대하여, $$y\in Y$$가 $$\mathcal{F}$$에 대한 $$f$$의 *limit point*라는 것은 $$y$$가 filter $${\uparrow}f(\mathcal{F})$$의 limit point인 것이다. ([§위상공간의 다른 정의들, ⁋명제 7](/ko/math/topology/equivalent_formulations_of_topology#prop7))
 
 </div>
 
@@ -190,7 +203,7 @@ $$B_1\supseteq B_2\supseteq\cdots$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop14">**명제 14**</ins> 위상공간 $$X$$의 점열 $$(x_n)_{n\geq 1}$$에 대하여, $$(x_n)_{n\geq 1}$$이 $$x\in X$$로 수렴하는 것과 $$\mathbb{N}$$ 위에 정의된 Fréchet filter $$\mathcal{F}$$의 $$n\mapsto x_n$$에 의한 image로 생성되는 filter가 $$x$$로 수렴하는 것이 동치이다. ([§위상공간의 다른 정의들, ⁋예시 4](/ko/math/topology/equivalent_formulations_of_topology#ex4))
+<ins id="prop15">**명제 15**</ins> 위상공간 $$X$$의 점열 $$(x_n)_{n\geq 1}$$에 대하여, $$(x_n)_{n\geq 1}$$이 $$x\in X$$로 수렴하는 것과 $$\mathbb{N}$$ 위에 정의된 Fréchet filter $$\mathcal{F}$$의 $$n\mapsto x_n$$에 의한 image로 생성되는 filter가 $$x$$로 수렴하는 것이 동치이다. ([§위상공간의 다른 정의들, ⁋예시 4](/ko/math/topology/equivalent_formulations_of_topology#ex4))
 
 </div>
 
@@ -198,7 +211,7 @@ $$B_1\supseteq B_2\supseteq\cdots$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop15">**명제 15**</ins> 위상공간 $$X$$와 임의의 부분집합 $$A\subseteq X$$에 대하여, $$x\in\cl(A)$$인 것과, $$x$$로 수렴하는 $$A$$의 filter $$\mathcal{F}$$가 존재하는 것이 동치이다.
+<ins id="prop16">**명제 16**</ins> 위상공간 $$X$$와 임의의 부분집합 $$A\subseteq X$$에 대하여, $$x\in\cl(A)$$인 것과, $$x$$로 수렴하는 $$A$$의 filter $$\mathcal{F}$$가 존재하는 것이 동치이다.
 
 </div>
 <details class="proof" markdown="1">
@@ -218,6 +231,6 @@ $$\mathcal{N}(x)\vert_A=\{U\cap A\mid U\in \mathcal{N}(x)\}$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop16">**명제 16**</ins> 위상공간 사이의 함수 $$f:X \rightarrow Y$$에 대하여, 함수 $$f$$가 $$x\in X$$에서 연속인 것은 $$x$$로 수렴하는 임의의 filter $$\mathcal{F}$$에 대하여, filter base $$f(\mathcal{F})$$가 정의하는 filter가 $$f(x)$$로 수렴하는 것과 동치이다. 
+<ins id="prop17">**명제 17**</ins> 위상공간 사이의 함수 $$f:X \rightarrow Y$$에 대하여, 함수 $$f$$가 $$x\in X$$에서 연속인 것은 $$x$$로 수렴하는 임의의 filter $$\mathcal{F}$$에 대하여, filter base $$f(\mathcal{F})$$가 정의하는 filter가 $$f(x)$$로 수렴하는 것과 동치이다. 
 
 </div>

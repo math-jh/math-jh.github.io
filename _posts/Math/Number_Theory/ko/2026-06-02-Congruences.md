@@ -137,7 +137,7 @@ $$\gcd(a, n) = 1$$이면 Bézout 항등식으로 $$ax + ny = 1$$인 정수 $$x, 
 
 $$ax = 1 - ny \equiv 1 \pmod n$$
 
-이 되어 $$x$$가 $$a$$의 곱셈 역원이다. 거꾸로 $$ax \equiv 1 \pmod n$$인 $$x$$가 존재하면 어떤 정수 $$y$$에 대해 $$ax - 1 = ny$$, 곧 $$ax - ny = 1$$이다. $$d = \gcd(a, n)$$이라 하면 $$d \mid a$$이고 $$d \mid n$$이므로 좌변을 나누어 $$d \mid 1$$이고 ([§유클리드 호제법과 Bézout 항등식, ⁋따름정리 4](/ko/math/number_theory/euclidean_algorithm#cor4)), 따라서 $$d = 1$$, 즉 $$\gcd(a, n) = 1$$이다.
+이 되어 $$x$$가 $$a$$의 곱셈 역원이다. 거꾸로 $$ax \equiv 1 \pmod n$$인 $$x$$가 존재하면 어떤 정수 $$y$$에 대해 $$ax - 1 = ny$$, 곧 $$ax - ny = 1$$이다. $$d = \gcd(a, n)$$이라 하면 $$d \mid a$$이고 $$d \mid n$$이므로 좌변을 나누어 $$d \mid 1$$이고 ([§나눗셈과 최대공약수, ⁋명제 2](/ko/math/number_theory/divisibility#prop2)), 따라서 $$d = 1$$, 즉 $$\gcd(a, n) = 1$$이다.
 
 </details>
 

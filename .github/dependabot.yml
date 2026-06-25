@@ -1,0 +1,47 @@
+# Dependabot version updates.
+# The dependency graph is already tracked by GitHub's automatic manifest
+# detection (Gemfile.lock / package-lock.json); this config makes Dependabot
+# *act* on that graph — opening update PRs and (with alerts enabled) flagging
+# vulnerable versions.
+#
+# Docs: https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+version: 2
+updates:
+  # Ruby: Jekyll + plugins (Gemfile / Gemfile.lock)
+  - package-ecosystem: "bundler"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      timezone: "Asia/Seoul"
+    commit-message:
+      prefix: "chore(deps)"
+    groups:
+      gems:
+        update-types: ["minor", "patch"]
+    open-pull-requests-limit: 5
+
+  # Node: build-time tooling (package.json / package-lock.json) — devDependencies
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      timezone: "Asia/Seoul"
+    commit-message:
+      prefix: "chore(deps)"
+    groups:
+      npm:
+        update-types: ["minor", "patch"]
+    open-pull-requests-limit: 5
+
+  # Keep the actions/* and ruby/* versions in our own workflow current
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      timezone: "Asia/Seoul"
+    commit-message:
+      prefix: "chore(ci)"
+    open-pull-requests-limit: 5

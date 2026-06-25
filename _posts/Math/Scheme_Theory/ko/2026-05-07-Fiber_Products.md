@@ -5,6 +5,7 @@ excerpt: "Category of S-schemes에서의 fiber product 정의와 존재성"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/fiber_products
+drift_needed: true
 sidebar: 
     nav: "scheme_theory-ko"
 
@@ -280,7 +281,7 @@ $$\varphi^{-1}((0))=\Spec \mathbb{K}[\y]\otimes_{\Spec \mathbb{K}[\x]}\Spec \mat
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-Affine인 경우만 보이면 충분하다. 즉, 임의의 finite ring homomorphism $$\phi: B \rightarrow A$$와 $$B$$의 prime ideal $$\mathfrak{q}$$에 대하여 $$A\otimes_B\kappa(\mathfrak{q})$$가 유한히 많은 prime ideal을 갖는다는 것을 보이면 충분하다. 그런데 $$\phi$$가 fintite이므로 $$A\otimes_B\kappa(\mathfrak{q})$$는 finite $$\kappa(\mathfrak{q})$$-algebra이고 따라서 artinian이므로 이로부터 원하는 결과를 얻는다. ([\[환론\] §중국인의 나머지정리](/ko/math/ring_theory/chinese_remainder_theorem))
+Affine인 경우만 보이면 충분하다. 즉, 임의의 finite ring homomorphism $$\phi: B \rightarrow A$$와 $$B$$의 prime ideal $$\mathfrak{q}$$에 대하여 $$A\otimes_B\kappa(\mathfrak{q})$$가 유한히 많은 prime ideal을 갖는다는 것을 보이면 충분하다. 그런데 $$\phi$$가 fintite이므로 $$A\otimes_B\kappa(\mathfrak{q})$$는 finite $$\kappa(\mathfrak{q})$$-algebra이고 따라서 artinian이므로 이로부터 원하는 결과를 얻는다. ([\[가환대수학\] §조르단-횔더 정리, ⁋정리 4](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm4))
 
 </details>
 
