@@ -23,11 +23,11 @@ published: false
 
 ## 자기수반작용소
 
-[§내적공간, §§직교행렬](/ko/math/linear_algebra/inner_product_spaces#직교행렬)에서 우리는 $$\mathbb{R}$$-내적공간 $$V$$ 위의 linear operator $$L:V\rightarrow V$$에 대하여 그 adjoint $$L^t$$가 
+임의의 벡터공간 $$V$$와 그 위에 정의된 linear operator $$L:V\rightarrow V$$에 대하여 그 dual $$L^\ast$$는 Kronecker pairing에 대하여
 
-$$\langle Lv,w\rangle=\langle v,L^tw\rangle\qquad\text{for all $v,w\in V$}$$
+$$( Lv,f)=(v,L^\ast f)\qquad\text{for all $v\in V$, $f\in V^\ast$}$$
 
-을 만족하도록 정의됨을 보았다. 자기 자신과 adjoint가 일치하는 operator가 우리의 관심 대상이다.
+을 만족하는 linear operator $$L^\ast:V^\ast\rightarrow V^\ast$$이며, 만일 $$V$$가 $$\mathbb{R}$$-벡터공간이고 그 위에 내적 $$\langle-,-\rangle$$이 정의되었다면, 이는 $$V$$와 $$V^\ast$$ 사이의 isomorphism을 주므로, 이 isomorphism을 통해 $$L^\ast$$를 번역하면 그것이 바로 행렬에서의 transpose가 됨을 보았다. 
 
 <div class="definition" markdown="1">
 
