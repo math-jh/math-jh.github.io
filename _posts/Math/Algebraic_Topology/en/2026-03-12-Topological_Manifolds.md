@@ -5,14 +5,14 @@ excerpt: "The definition and properties of topological manifolds as locally Eucl
 
 categories: [Math / Algebraic Topology]
 permalink: /en/math/algebraic_topology/topological_manifolds
+drift_needed: true
 sidebar: 
     nav: "algebraic_topology-en"
 
 date: 2025-07-05
 weight: 1
-translated_at: 2026-06-24T01:30:01+00:00
+translated_at: 2026-06-25T17:00:03+00:00
 translation_source: kimi-cli
-last_polished_at: 2026-06-24T01:30:01+00:00
 ---
 In this category we cover homology, cohomology, and other concepts essential to the study of geometry. Although these notions are defined on general topological spaces, they behave well only when the spaces satisfy additional conditions, and a space meeting all of these requirements is precisely the topological manifold defined in [\[Topology\] §Compactness, ⁋Definition 9](/en/math/topology/compactness#def9). In this post we examine the properties and examples of topological manifolds, and in the next post we will gain a rough idea of what homology is through some illustrative examples. These two posts outline the broad direction of this category; the substantive content begins with the third post.
 
@@ -90,8 +90,8 @@ The last general construction we examine is the quotient space. However, as we s
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-Since $$X/R$$ is locally Euclidean, we can cover $$X/R$$ by Euclidean neighborhoods $$(U_i)_{i\in I}$$, and the collection of their preimages $$(\pi^{-1}(U_i))_{i\in I}$$ covers $$X$$. Now any second-countable space is Lindelöf, so ([§Compactness and Convergence of Filters](/en/math/topology/filter_convergence)) there exists a suitable countable subset $$J\subset I$$ such that $$(\pi^{-1}(U_i))_{i\in J}$$ is a countable open cover of $$X$$, and hence the corresponding $$(U_i)_{i\in J}$$ form a countable cover of $$X/R$$. But each of these is a Euclidean neighborhood, so each again has a countable base, and since there are countably many of them, their union forms a countable base for $$X/R$$.
+Since $$X/R$$ is locally Euclidean, we can cover $$X/R$$ by Euclidean neighborhoods $$(U_i)_{i\in I}$$, and the collection of their preimages $$(\pi^{-1}(U_i))_{i\in I}$$ covers $$X$$. Now any second-countable space is Lindelöf ([§Compactness and Convergence of Filters, ⁋Proposition 12](/en/math/topology/filter_convergence#prop12)), so there exists a suitable countable subset $$J\subset I$$ such that $$(\pi^{-1}(U_i))_{i\in J}$$ is a countable open cover of $$X$$, and therefore the corresponding $$(U_i)_{i\in J}$$ form a countable cover of $$X/R$$. But each of these is a Euclidean neighborhood, so each again has a countable base, and since there are countably many of them, their union forms a countable base for $$X/R$$.
 
 </details>
 
-If we view matters only in the flow of this category, it would suffice to restrict our attention to topological manifolds; however, when dealing with the multiplicative structure of cohomology in particular, it is more convenient to keep in mind the notion of integration on differentiable manifolds.
+Viewed solely through the flow of this category, it would suffice to restrict our attention to topological manifolds; however, when dealing with the multiplicative structure of cohomology in particular, it is more convenient to keep in mind the notion of integration on smooth manifolds.

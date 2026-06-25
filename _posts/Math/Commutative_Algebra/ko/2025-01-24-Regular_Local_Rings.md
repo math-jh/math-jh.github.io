@@ -5,6 +5,7 @@ excerpt: "Regular system of parameters와 regular local ring의 특성화"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/regular_local_rings
+drift_needed: true
 sidebar: 
     nav: "commutative_algebra-ko"
 
@@ -15,7 +16,7 @@ weight: 18
 
 ## 정칙국소환
 
-[§차원, ⁋정의 9](/ko/math/commutative_algebra/Krull_dimension#def9)을 생각하면, regular local ring $$(A, \mathfrak{m})$$에서 $$\mathfrak{m}$$을 생성하는 $$d=\dim A$$개의 원소들 $$a_1,\ldots, a_d$$는 $$A$$의 system of parameters가 되는 것이 자명하다. 이를 *regular system of parameters*라 부른다. 
+[§매개계, ⁋명제--정의 3](/ko/math/commutative_algebra/system_of_parameters#prop-def3)을 생각하면, regular local ring $$(A, \mathfrak{m})$$에서 $$\mathfrak{m}$$을 생성하는 $$d=\dim A$$개의 원소들 $$a_1,\ldots, a_d$$는 $$A$$의 system of parameters가 되는 것이 자명하다. 이를 *regular system of parameters*라 부른다. 
 
 <div class="proposition" markdown="1">
 
@@ -122,7 +123,7 @@ $$\dim A/\mathfrak{p}+(h-1)=d-1$$
 
 $$d=\dim A=\dim \im(\phi)=\dim \kappa[[\x_1,\ldots,\x_d]]/\ker\phi\leq \dim \kappa[[\x_1,\ldots, \x_d]]-\codim \ker\phi=d-\codim\ker\phi$$
 
-이고, 이것이 참이기 위해서는 반드시 $$\codim\ker\phi=0$$이어야 한다. 그런데 $$\kappa[[\x_1,\ldots, \x_d]]$$는 [§매개계, ⁋따름정리 10](/ko/math/commutative_algebra/system_of_parameters#cor10)에 의하여 integral domain이므로, 이는 곧 $$\ker\phi=0$$이라는 뜻이다. 
+이고, 이것이 참이기 위해서는 반드시 $$\codim\ker\phi=0$$이어야 한다. 그런데 $$\kappa[[\x_1,\ldots, \x_d]]$$는 [따름정리 1](#cor1)에 의하여 integral domain이므로, 이는 곧 $$\ker\phi=0$$이라는 뜻이다. 
 
 </details>
 

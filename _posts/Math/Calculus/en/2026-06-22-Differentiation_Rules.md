@@ -46,7 +46,7 @@ That the radius of convergence of the series on the right-hand side is $$R$$ its
 
 Before examining differentiation rules in earnest, we derive the derivatives of several functions.
 
-First, the exponential function was defined in [§Power Series, ⁋Example 3](/en/math/calculus/power_series#ex3) by $$e^x = \sum_{n\geq 0} x^n/n!$$. Applying [Proposition 1](#prop1) now, its derivative is the sum of the term-by-term derivatives
+First, the exponential function was defined in [§Power Series, ⁋Example 4](/en/math/calculus/power_series#ex4) by $$e^x = \sum_{n\geq 0} x^n/n!$$. Applying [Proposition 1](#prop1) now, its derivative is the sum of the term-by-term derivatives
 
 $$(e^x)' = \sum_{n=1}^\infty n\,\frac{x^{n-1}}{n!} = \sum_{n=1}^\infty \frac{x^{n-1}}{(n-1)!} = \sum_{m=0}^\infty \frac{x^m}{m!} = e^x$$
 

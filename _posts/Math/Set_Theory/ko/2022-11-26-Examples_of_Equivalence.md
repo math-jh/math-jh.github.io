@@ -6,6 +6,7 @@ excerpt: "동치관계의 예시들, 동치관계의 포화, isomorphism theorem
 
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/examples_of_equivalence
+drift_needed: true
 sidebar: 
     nav: "set_theory-ko"
 
@@ -150,7 +151,7 @@ $$f=j\circ\tilde{f}=j\circ h\circ p$$
 
 ![induced_mapping_of_equivalence](/assets/images/Math/Set_Theory/Examples_of_Equivalence-4.svg){:style="width:7.95em"  class="invert" .align-center}
 
-만일 $$q\circ f$$이 $$R$$과 compatible하다면, $$f$$가 *$$(R,S)$$-compatible*하다고 한다. [명제 7](#p75)에 의해 이는 다시 $$h:A/R\rightarrow B/S$$가 존재하여 $$h\circ p=q\circ f$$인 것과 동치이다. 
+만일 $$q\circ f$$이 $$R$$과 compatible하다면, $$f$$가 *$$(R,S)$$-compatible*하다고 한다. [명제 7](#prop7)에 의해 이는 다시 $$h:A/R\rightarrow B/S$$가 존재하여 $$h\circ p=q\circ f$$인 것과 동치이다. 
 
 ## 동치관계의 preimage
 

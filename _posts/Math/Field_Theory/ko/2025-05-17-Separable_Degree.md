@@ -5,6 +5,7 @@ excerpt: "Separable degree와 inseparable degree의 분해"
 
 categories: [Math / Field Theory]
 permalink: /ko/math/field_theory/separable_degree
+drift_needed: true
 sidebar: 
     nav: "field_theory-ko"
 
@@ -113,7 +114,7 @@ $$\sum x_i a_i^{p^{-n}}=0\implies a_i=0$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-우선 separable extension의 임의의 원소는 separable이므로 ([§분리가능확대체, ⁋명제 12](/ko/math/field_theory/separable_extensions#prop12)), separable인 $$\mathbb{L}$$의 subextension은 항상 $$\mathbb{L}$$에 포함된다. 한편, 역으로 separable element들로만 생성되는 algebraic extension은 마찬가지로 [§분리가능확대체, ⁋명제 12](/ko/math/field_theory/separable_extensions#prop12)에 의해 separable이므로, $$\mathbb{K}(\mathbb{L}_s)$$는 그 자체로 separable extension이며 다시 위의 주장에 의해 $$\mathbb{K}(\mathbb{L}_s)\subseteq \mathbb{L}_s$$가 성립한다. 즉, $$\mathbb{K}(\mathbb{L}_s)=\mathbb{L}_s$$가 성립하고 따라서 [명제 2](#prop2)로부터 원하는 결과를 얻는다. 
+우선 separable extension의 임의의 원소는 separable이므로 ([§분리가능확대체, ⁋명제 12](/ko/math/field_theory/separable_extensions#prop12)), separable인 $$\mathbb{L}$$의 subextension은 항상 $$\mathbb{L}$$에 포함된다. 한편, 역으로 separable element들로만 생성되는 algebraic extension은 마찬가지로 [§분리가능확대체, ⁋명제 12](/ko/math/field_theory/separable_extensions#prop12)에 의해 separable이므로, $$\mathbb{K}(\mathbb{L}_s)$$는 그 자체로 separable extension이며 다시 위의 주장에 의해 $$\mathbb{K}(\mathbb{L}_s)\subseteq \mathbb{L}_s$$가 성립한다. 즉, $$\mathbb{K}(\mathbb{L}_s)=\mathbb{L}_s$$가 성립하여 $$\mathbb{L}_s$$ 자신이 $$\mathbb{L}/\mathbb{K}$$의 subextension이고, 앞서 본 maximality와 합쳐 $$\mathbb{L}_s$$가 가장 큰 separable subextension임을 얻는다. 
 
 </details>
 
