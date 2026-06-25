@@ -5,7 +5,6 @@ excerpt: "Ideal로부터 만드는 Rees algebra와 associated graded ring"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/blowup_algebra
-drift_needed: true
 sidebar: 
     nav: "commutative_algebra-ko"
 
