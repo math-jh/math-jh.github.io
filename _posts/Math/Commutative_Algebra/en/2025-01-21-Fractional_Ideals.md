@@ -5,16 +5,16 @@ excerpt: "Fractional ideals, invertible modules, and the Picard group"
 
 categories: [Math / Commutative Algebra]
 permalink: /en/math/commutative_algebra/fractional_ideals
-drift_needed: true
 sidebar: 
     nav: "commutative_algebra-en"
 
 date: 2025-01-21
 weight: 19
-translated_at: 2026-06-25T22:00:12+00:00
+translated_at: 2026-06-26T16:00:01+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-26T16:00:01+00:00
 ---
-In this post we examine regular local rings ([§Dimension, ⁋Definition 12](/en/math/commutative_algebra/Krull_dimension#def12)). Before that, we need to define several concepts.
+In the following we examine regular local rings ([§Dimension, ⁋Definition 12](/en/math/commutative_algebra/Krull_dimension#def12)). Before doing so, we must define several concepts.
 
 ## Invertible Modules
 
@@ -26,9 +26,9 @@ First, we define the following.
 
 </div>
 
-For a prime ideal $$\mathfrak{p}$$ and a maximal ideal $$\mathfrak{m}$$ containing $$\mathfrak{p}$$, if $$A_\mathfrak{m}\cong M_\mathfrak{m}$$ then we would have $$A_\mathfrak{p}\cong M_\mathfrak{p}$$, so it suffices to check the above condition only for arbitrary maximal ideals.
+For a prime ideal $$\mathfrak{p}$$ and a maximal ideal $$\mathfrak{m}$$ containing $$\mathfrak{p}$$, if $$A_\mathfrak{m}\cong M_\mathfrak{m}$$ then we would have $$A_\mathfrak{p}\cong M_\mathfrak{p}$$; hence it suffices to check the above condition only for maximal ideals.
 
-Now, if we define $$M^\ast=\Hom_A(M,A)$$, then since $$A$$ is commutative we know that $$\Hom_A(M, A)$$ is also an $$A$$-module, and moreover the trace map $$M^\ast\otimes M \rightarrow A$$ exists as well. ([\[Multilinear Algebra\] §Hom and Tensor Products, ⁋Definition 6](/en/math/multilinear_algebra/hom_and_tensor#def6))
+Now define $$M^\ast=\Hom_A(M,A)$$. Since $$A$$ is commutative, $$\Hom_A(M, A)$$ is again an $$A$$-module, and moreover the trace map $$M^\ast\otimes M \rightarrow A$$ exists. ([\[Multilinear Algebra\] §Hom and Tensor Products, ⁋Definition 6](/en/math/multilinear_algebra/hom_and_tensor#def6))
 
 <div class="definition" markdown="1">
 
@@ -36,7 +36,7 @@ Now, if we define $$M^\ast=\Hom_A(M,A)$$, then since $$A$$ is commutative we kno
 
 </div>
 
-That $$a \mathfrak{A}$$ obtained from the above definition becomes an ideal of $$A$$ is obvious. Intuitively, if $$\mathfrak{A}$$ is finitely generated, the condition $$a \mathfrak{A}\subseteq A$$ corresponds to multiplying the common denominator of the generators of $$\mathfrak{A}$$ to view it as a subset of $$A$$. In particular, any finitely generated $$A$$-submodule of $$K$$
+That the $$a \mathfrak{A}$$ obtained from the above definition is an ideal of $$A$$ is obvious. Intuitively, if $$\mathfrak{A}$$ is finitely generated, the condition $$a \mathfrak{A}\subseteq A$$ corresponds to multiplying the generators of $$\mathfrak{A}$$ by a common denominator to view the result as a subset of $$A$$. In particular, any finitely generated $$A$$-submodule of $$K$$
 
 $$\left(\frac{a_1}{s_1},\ldots, \frac{a_n}{s_n}\right)A$$
 
@@ -68,7 +68,7 @@ and, following the above intuition, this can be thought of roughly as the collec
 <summary>Proof</summary>
 
 1. First, one direction is obvious by [§Properties of Localization, ⁋Proposition 4](/en/math/commutative_algebra/properties_of_localization#prop4).  
-    Conversely, suppose the trace map $$\tr:M^\ast\otimes_A M \rightarrow A$$ is an isomorphism; we must show that $$M_\mathfrak{p}\cong A_\mathfrak{p}$$. Then, since $$\tr$$ is an isomorphism, there exists an element of $$M^\ast\otimes M$$ such that
+    Conversely, suppose the trace map $$\tr:M^\ast\otimes_A M \rightarrow A$$ is an isomorphism; we must show that $$M_\mathfrak{p}\cong A_\mathfrak{p}$$. Since $$\tr$$ is an isomorphism, there exists an element of $$M^\ast\otimes M$$ such that
     
     $$\tr\left(\sum_{i=1}^n\xi_i\otimes x_i\right)=1$$
 
@@ -79,11 +79,11 @@ and, following the above intuition, this can be thought of roughly as the collec
     $$\tr_\mathfrak{p}: (M^\ast\otimes_AM)_\mathfrak{p}\cong M^\ast_\mathfrak{p}\otimes_{A_\mathfrak{p}}M_\mathfrak{p} \rightarrow A_\mathfrak{p}.$$
     
     Similarly, we can localize $$\xi_i:M \rightarrow A$$ to define $$(\xi_i)_\mathfrak{p}: M_\mathfrak{p}\rightarrow A_\mathfrak{p}$$, and these will be the desired isomorphisms.  
-    On the other hand, for a fixed $$\mathfrak{p}$$, since $$1\not\in \mathfrak{p}$$, among the chosen $$\xi_i\otimes x_i$$ above, at least one must satisfy $$\tr(\xi_i\otimes x_i)=\xi_i(x_i)\not\in \mathfrak{p}$$. Then the inverse of this element exists in $$A_\mathfrak{p}$$, and writing it as $$a_i$$ for convenience, we know from the equation
+    On the other hand, for a fixed $$\mathfrak{p}$$, since $$1\not\in \mathfrak{p}$$, among the chosen $$\xi_i\otimes x_i$$ above, at least one must satisfy $$\tr(\xi_i\otimes x_i)=\xi_i(x_i)\not\in \mathfrak{p}$$. Then the inverse of this element exists in $$A_\mathfrak{p}$$; writing it as $$a_i$$ for convenience, we know from the equation
 
     $$(\xi_i)_\mathfrak{p}(a_i x_i)=1$$
 
-    that $$(\xi_i)_{\mathfrak{p}}: M_\mathfrak{p} \rightarrow A_\mathfrak{p}$$ sends $$a_i x_i$$ to $$A_\mathfrak{p}$$. Now define $$A_\mathfrak{p} \rightarrow M_\mathfrak{p}$$ by $$1\mapsto a_ix_i$$; this is a section of $$(\xi_i)_\mathfrak{p}$$, and thus the following short exact sequence
+    that $$(\xi_i)_{\mathfrak{p}}: M_\mathfrak{p} \rightarrow A_\mathfrak{p}$$ sends $$a_i x_i$$ to $$1\in A_\mathfrak{p}$$. Now define $$A_\mathfrak{p} \rightarrow M_\mathfrak{p}$$ by $$1\mapsto a_ix_i$$; this is a section of $$(\xi_i)_\mathfrak{p}$$, and thus the following short exact sequence
 
     $$0 \longrightarrow \ker (\xi_i)_\mathfrak{p}\longrightarrow M_\mathfrak{p}\overset{(\xi_i)_\mathfrak{p}}{\longrightarrow}A_\mathfrak{p}\longrightarrow 0$$
 
@@ -92,11 +92,11 @@ and, following the above intuition, this can be thought of roughly as the collec
     $$M^\ast_\mathfrak{p}\otimes M_\mathfrak{p}\cong (A_\mathfrak{p}\xi_i\otimes A_\mathfrak{p}x_i)\oplus ( A_\mathfrak{p}\xi_i\otimes\ker (\xi_i)_\mathfrak{p})\oplus(\ker(x_i)_\mathfrak{p}\otimes A_\mathfrak{p}x_i)\oplus (\ker(x_i)_\mathfrak{p}\otimes \ker(\xi_i)_\mathfrak{p}).$$
 
     However, since the first term on the right-hand side exactly recovers all elements of $$A_\mathfrak{p}$$, when mapped by $$\tr_\mathfrak{p}$$ the remaining terms must go to $$0$$, and in particular from the second term going to $$0$$ we know that $$(\ker\xi_i)_\mathfrak{p}=\ker(\xi_i)_\mathfrak{p}=0$$. That is, $$\xi_i$$ is an isomorphism from $$M_\mathfrak{p}$$ to $$A_\mathfrak{p}$$ as claimed above, and through this we can regard $$M_\mathfrak{p}$$ as the free $$A_\mathfrak{p}$$-module generated by $$x_i$$.
-2. Now suppose $$M$$ is an invertible module. To compare it with a fractional ideal of $$A$$, we must first embed $$M$$ into $$K$$. However, first we can check that the maximal ideals of the total ring of fractions $$K$$ of $$A$$ correspond exactly to the maximal associated prime ideals of $$A$$, and since $$\Ass A$$ is finite, $$K$$ becomes a semilocal ring. Thus from [§Integral Extensions, ⁋Proposition 13](/en/math/commutative_algebra/integral_extension#prop13) and the following isomorphisms
+2. Now suppose $$M$$ is an invertible module. To compare it with a fractional ideal of $$A$$, we must first embed $$M$$ into $$K$$. First, we can check that the maximal ideals of the total ring of fractions $$K$$ of $$A$$ correspond exactly to the maximal associated prime ideals of $$A$$, and since $$\Ass A$$ is finite, $$K$$ is a semilocal ring. Thus from [§Integral Extensions, ⁋Proposition 13](/en/math/commutative_algebra/integral_extension#prop13) and the following isomorphisms
     
     $$M\otimes K_{\mathfrak{m}K}=M_\mathfrak{m}\cong A_\mathfrak{m}\cong K_{\mathfrak{m}K}$$
 
-    we obtain $$M\otimes K\cong K$$. Now composing this with the localization map $$\epsilon: M \rightarrow S^{-1}M=K\otimes M$$, we obtain the desired embedding, and the fact that $$\epsilon$$ is injective also follows by applying [§Properties of Localization, ⁋Proposition 4](/en/math/commutative_algebra/properties_of_localization#prop4) to any maximal ideal $$\mathfrak{m}$$ of $$A$$ to obtain the map
+    we obtain $$M\otimes K\cong K$$. Composing this with the localization map $$\epsilon: M \rightarrow S^{-1}M=K\otimes M$$, we obtain the desired embedding, and the fact that $$\epsilon$$ is injective also follows by applying [§Properties of Localization, ⁋Proposition 4](/en/math/commutative_algebra/properties_of_localization#prop4) to any maximal ideal $$\mathfrak{m}$$ of $$A$$ to obtain the map
 
     $$\epsilon_\mathfrak{m}: M_\mathfrak{m}\cong A_\mathfrak{m} \rightarrow K\otimes_{A_\mathfrak{m}} A_\mathfrak{m}=S^{-1}A_\mathfrak{m}$$
 
