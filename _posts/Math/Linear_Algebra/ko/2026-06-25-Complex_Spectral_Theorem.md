@@ -61,35 +61,38 @@ $$LL^\ast=L^\ast L$$
 
 $$\dim V$$에 대한 귀납법으로 진행한다. 우리는 $$V$$의 orthonormal basis $$\{e_1,\ldots,e_n\}$$이 존재하여 각 $$j$$에 대해 $$Le_j\in\span(e_1,\ldots,e_j)$$임을 보여야 한다. $$\dim V\leq 1$$인 경우는 자명하므로, $$\dim V=n\geq 2$$라 하자.
 
-$$L^\ast$$의 행렬표현의 특성다항식은 차수가 $$1$$ 이상이므로 [§특성다항식, ⁋정리 8](/ko/math/linear_algebra/characteristic_polynomial#thm8)에 의하여 근을 가지고, 따라서 $$L^\ast$$은 $$\lVert e_n\rVert=1$$인 고유벡터 $$e_n$$을 가진다. $$L^\ast e_n=\mu e_n$$이라 하자. 이제 $$W=(\span e_n)^\perp$$이 $$L$$에 대해 불변임을 본다. 임의의 $$w\in W$$에 대하여 adjoint의 정의로부터
+$$L^\ast$$의 특성다항식은 차수가 $$1$$ 이상이므로 [§특성다항식, ⁋정리 8](/ko/math/linear_algebra/characteristic_polynomial#thm8)에 의하여 근을 가지고, 따라서 $$L^\ast$$은 $$\lVert e_n\rVert=1$$인 고유벡터 $$e_n$$을 가진다. 이제 $$V$$에서 $$e_n$$이 span하는 직선의 complement $$W=(\span e_n)^\perp$$를 생각하자. 그럼
 
 $$\langle Lw,e_n\rangle=\langle w,L^\ast e_n\rangle=\langle w,\mu e_n\rangle=\mu\langle w,e_n\rangle=0$$
 
-이므로 $$Lw\in W$$이다. $$\dim W=n-1$$이므로 귀납적 가정을 $$L\vert_W$$에 적용하면, $$W$$의 orthonormal basis $$\{e_1,\ldots,e_{n-1}\}$$이 존재하여 각 $$j\leq n-1$$에 대해 $$Le_j\in\span(e_1,\ldots,e_j)$$이다.
+이므로 $$Lw\in W$$이다. 즉, $$W$$는 $$L$$에 대해 닫혀있으며, 이로부터 $$L\vert_W$$를 $$W$$ 위에 정의된 linear operator로 볼 수 있고, 이제 귀납적 가정에 의해
+ $$W$$의 orthonormal basis $$\{e_1,\ldots,e_{n-1}\}$$이 존재하여 각 $$j\leq n-1$$에 대해 $$Le_j\in\span(e_1,\ldots,e_j)$$이다.
 
-그럼 $$\{e_1,\ldots,e_n\}$$은 $$V$$의 orthonormal basis이고, $$j<n$$에 대해서는 $$Le_j\in\span(e_1,\ldots,e_j)$$이며 $$j=n$$에 대해서는 $$Le_n\in V=\span(e_1,\ldots,e_n)$$이 자명하게 성립한다. 즉 이 기저에 대한 $$L$$의 행렬표현은 upper triangular matrix가다. 이 기저의 벡터들을 열로 갖는 행렬을 $$U$$라 하면 $$U$$는 unitary이고 ([§복소내적공간, ⁋정의 5](/ko/math/linear_algebra/complex_inner_product_spaces#def5)) $$U^\ast AU=T$$가 upper triangular이므로 $$A=UTU^\ast$$이다.
+그럼 $$\{e_1,\ldots,e_n\}$$은 $$V$$의 orthonormal basis이고, $$j<n$$에 대해서는 $$Le_j\in\span(e_1,\ldots,e_j)$$이며 $$j=n$$에 대해서는 $$Le_n\in V=\span(e_1,\ldots,e_n)$$이 자명하게 성립한다. 즉 이 기저에 대한 $$L$$의 행렬표현은 upper triangular matrix가 된다. 이 기저의 벡터들을 열로 갖는 행렬을 $$U$$라 하면 $$U$$는 unitary이고 ([§복소내적공간, ⁋정의 5](/ko/math/linear_algebra/complex_inner_product_spaces#def5)) $$U^\ast AU=T$$가 upper triangular이므로 $$A=UTU^\ast$$이다.
 
 </details>
 
 Upper triangular matrix $$T$$는 $$A$$와 닮음이므로 같은 특성다항식을 가지며, upper triangular matrix의 특성다항식은 $$\prod_i(\x-T_{ii})$$이므로 $$T$$의 대각성분 $$T_{11},\ldots,T_{nn}$$은 정확히 $$A$$의 고윳값들을 중복도까지 담는다. Schur 분해는 임의의 복소행렬이 unitary transformation만으로 고윳값들을 대각선에 드러낼 수 있음을 말한다.
 
-Upper triangular matrix가 추가로 정규행렬이면 곧바로 대각행렬이 된다.
+만일 추가로 주어진 행렬이 normal이었다면, 이 upper triangular matrix가 추가로 대각행렬이 된다.
 
 <div class="proposition" markdown="1">
 
-<ins id="cor4">**따름정리 4**</ins> 정규행렬 $$A\in\Mat_n(\mathbb{C})$$는 unitary matrix로 대각화된다.
+<ins id="cor4">**따름정리 4**</ins> Normal matrix $$A\in\Mat_n(\mathbb{C})$$는 unitary matrix로 대각화된다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[정리 3](#thm3)에 의하여 $$A=UTU^\ast$$이고 $$T$$는 upper triangular이다. $$A$$가 정규행렬이고 $$U$$가 unitary이므로 $$T=U^\ast AU$$ 또한 정규행렬이다. upper triangular이면서 정규인 $$T$$가 대각임을 $$T$$의 행에 대한 귀납법으로 보인다.
+[정리 3](#thm3)에 의하여 $$A=UTU^\ast$$이고 $$T$$는 upper triangular이도록 할 수 있으며, 우리가 보여야 할 것은 만일 $$A$$가 normal이라면 $$T$$가 diagonal인 것을 보이는 것이다. 
 
-$$T$$가 upper triangular이므로 $$T$$의 첫째 열은 $$(T_{11},0,\ldots,0)^t$$이고, 따라서 $$\lVert Te_1\rVert^2=\lvert T_{11}\rvert^2$$이다. 한편 $$T^\ast$$의 첫째 열은 $$T$$의 첫째 행의 켤레이므로 $$\lVert T^\ast e_1\rVert^2=\sum_{j}\lvert T_{1j}\rvert^2$$이다. $$T$$가 정규이므로
+다. $$A$$가 normal matrix이고 $$U$$가 unitary이므로 $$T=U^\ast AU$$ 또한 normal matrix이다. upper triangular이면서 normal인 $$T$$가 대각임을 $$T$$의 행에 대한 귀납법으로 보인다.
+
+$$T$$가 upper triangular이므로 $$T$$의 첫째 열은 $$(T_{11},0,\ldots,0)^t$$이고, 따라서 $$\lVert Te_1\rVert^2=\lvert T_{11}\rvert^2$$이다. 한편 $$T^\ast$$의 첫째 열은 $$T$$의 첫째 행의 켤레이므로 $$\lVert T^\ast e_1\rVert^2=\sum_{j}\lvert T_{1j}\rvert^2$$이다. $$T$$가 normal이므로
 
 $$\lVert Te_1\rVert^2=\langle Te_1,Te_1\rangle=\langle e_1,T^\ast Te_1\rangle=\langle e_1,TT^\ast e_1\rangle=\langle T^\ast e_1,T^\ast e_1\rangle=\lVert T^\ast e_1\rVert^2$$
 
-이고, 따라서 $$\lvert T_{11}\rvert^2=\sum_{j}\lvert T_{1j}\rvert^2$$이므로 $$j>1$$에 대해 $$T_{1j}=0$$이다. 즉 첫째 행은 대각성분을 제외하면 모두 $$0$$이다. 그럼 $$T$$의 둘째 행 이하는 첫째 행·열을 떼어 낸 $$(n-1)\times(n-1)$$ upper triangular 정규행렬을 이루므로, 귀납적으로 그것도 대각이 되어 $$T$$ 전체가 대각이다. 따라서 $$A=UTU^\ast$$은 unitary diagonalization이다.
+이고, 따라서 $$\lvert T_{11}\rvert^2=\sum_{j}\lvert T_{1j}\rvert^2$$이므로 $$j>1$$에 대해 $$T_{1j}=0$$이다. 즉 첫째 행은 대각성분을 제외하면 모두 $$0$$이다. 그럼 $$T$$의 둘째 행 이하는 첫째 행·열을 떼어 낸 $$(n-1)\times(n-1)$$ upper triangular normal matrix를 이루므로, 귀납적으로 그것도 대각이 되어 $$T$$ 전체가 대각이다. 따라서 $$A=UTU^\ast$$은 unitary diagonalization이다.
 
 </details>
 
@@ -97,7 +100,7 @@ Schur 분해는 [§조르당 표준형](/ko/math/linear_algebra/Jordan_canonical
 
 ## 복소 스펙트럼 정리
 
-정규행렬의 unitary 대각화는 Schur 분해의 직접적 결과이다. 더 정밀하게, normal operator가 정확히 orthonormal basis로 대각화되는 operator임을 보인다.
+Normal matrix의 unitary 대각화는 Schur 분해의 직접적 결과이다. 더 정밀하게, normal operator가 정확히 orthonormal basis로 대각화되는 operator임을 보인다.
 
 <div class="proposition" markdown="1">
 
@@ -121,13 +124,13 @@ Schur 분해는 [§조르당 표준형](/ko/math/linear_algebra/Jordan_canonical
 
 $$A=UDU^\ast$$
 
-이 성립하는 것과 동치이다. 이 때 $$D$$의 대각성분은 $$A$$의 고윳값들이고, $$U$$의 열들은 이에 대응되는 정규직교인 고유벡터들이다.
+이 성립하는 것과 동치이다. 이 때 $$D$$의 대각성분은 $$A$$의 고윳값들이고, $$U$$의 열들은 이에 대응되는 orthonormal eigenvector들이다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$A$$를 $$\mathbb{C}^n$$ 위의 normal operator로 보면, [정리 5](#thm5)에 의하여 $$A$$의 고유벡터들로 이루어진 orthonormal basis $$\{v_1,\ldots,v_n\}$$이 존재한다. $$Av_i=\lambda_iv_i$$라 하고 $$v_i$$를 열로 갖는 행렬 $$U=(v_1\mid\cdots\mid v_n)$$을 생각하면, 열들이 정규직교이므로 $$U$$는 unitary matrix이다. ([§복소내적공간, ⁋정의 5](/ko/math/linear_algebra/complex_inner_product_spaces#def5)) 그럼
+$$A$$를 $$\mathbb{C}^n$$ 위의 normal operator로 보면, [정리 5](#thm5)에 의하여 $$A$$의 고유벡터들로 이루어진 orthonormal basis $$\{v_1,\ldots,v_n\}$$이 존재한다. $$Av_i=\lambda_iv_i$$라 하고 $$v_i$$를 열로 갖는 행렬 $$U=(v_1\mid\cdots\mid v_n)$$을 생각하면, 열들이 orthonormal이므로 $$U$$는 unitary matrix이다. ([§복소내적공간, ⁋정의 5](/ko/math/linear_algebra/complex_inner_product_spaces#def5)) 그럼
 
 $$AU=(\lambda_1v_1\mid\cdots\mid\lambda_nv_n)=UD$$
 
