@@ -148,7 +148,7 @@ $$\frac{x}{1+x} < \ln(1+x) < x$$
 
 <ins id="ex6">**예시 6 (사인 함수의 립시츠 추정)**</ins> $$f(x) = \sin x$$의 도함수는 $$\cos x$$로 $$\lvert \cos x\rvert \leq 1$$을 만족한다. 임의의 두 점 $$x, y$$에 대해 [정리 3](#thm3)를 쓰면 그 사이의 어떤 $$c$$로
 
-$$\sin x - \sin y = \cos c \,(x - y)$$
+$$\sin x - \sin y = \cos c  (x - y)$$
 
 이고, 절댓값을 취하면
 
@@ -192,7 +192,7 @@ $$\bigl(g(x)-g(a)\bigr)h'(c) = \bigl(h(x)-h(a)\bigr)g'(c)$$
 
 인 $$c$$가 존재한다. 여기서 $$g(x) = 0$$, $$h(x) = 0$$이므로
 
-$$-g(a)\,h'(c) = -h(a)\,g'(c) \;\Longrightarrow\; g(a) = \frac{h(a)}{h'(c)}\,g'(c)$$
+$$-g(a) h'(c) = -h(a) g'(c)  \Longrightarrow  g(a) = \frac{h(a)}{h'(c)} g'(c)$$
 
 이다. 위에서 구한 $$g'(c)$$, $$h'(c)$$, $$h(a) = (x-a)^{n+1}$$을 대입하면
 
@@ -204,7 +204,7 @@ $$g(a) = \frac{(x-a)^{n+1}}{-(n+1)(x-c)^n}\cdot\Bigl(-\frac{f^{(n+1)}(c)}{n!}(x-
 
 이 증명은 [\[미적분학\] §테일러 정리](/ko/math/calculus/taylor_theorem)에서와 같지만, 이제 그 토대인 최대·최소 정리와 미분의 성질이 모두 엄밀하게 증명되어 있다. $$n = 0$$인 경우 테일러 정리는 정확히 평균값 정리로 환원되므로, 테일러 정리는 평균값 정리의 고계 일반화라 부를 만하다. 라그랑주 나머지의 효용은 그것을 직접 가둘 수 있다는 데 있다. $$\lvert f^{(n+1)}\rvert$$이 구간에서 $$M$$으로 유계이면
 
-$$\left\lvert f(x) - \sum_{k=0}^n \frac{f^{(k)}(a)}{k!}(x-a)^k\right\rvert \leq \frac{M}{(n+1)!}\,\lvert x-a\rvert^{n+1}$$
+$$\left\lvert f(x) - \sum_{k=0}^n \frac{f^{(k)}(a)}{k!}(x-a)^k\right\rvert \leq \frac{M}{(n+1)!} \lvert x-a\rvert^{n+1}$$
 
 이 되어, 다항식 근사의 오차가 명시적으로 통제된다.
 
@@ -276,7 +276,7 @@ $$\frac{f(x)}{g(x)} = \frac{f(x)-f(a)}{g(x)-g(a)} = \frac{f'(\xi)}{g'(\xi)}$$
 
 $$f'(a) < \lambda < f'(b)$$인 $$\lambda$$를 잡고 $$\varphi(x) = f(x) - \lambda x$$로 두자. $$\varphi$$는 $$[a,b]$$에서 연속이므로 최대·최소 정리로 최솟값을 갖는다. $$\varphi'(a) = f'(a) - \lambda < 0$$이므로 $$\varphi$$는 $$a$$ 근방에서 감소하여 최솟값이 $$a$$에서 일어날 수 없고, $$\varphi'(b) = f'(b) - \lambda > 0$$이므로 $$b$$에서도 일어날 수 없다. 따라서 최솟값은 내부 점 $$c \in (a,b)$$에서 일어나고, 페르마 정리 ([정리 1](#thm1))에 의해
 
-$$\varphi'(c) = f'(c) - \lambda = 0 \;\Longrightarrow\; f'(c) = \lambda$$
+$$\varphi'(c) = f'(c) - \lambda = 0  \Longrightarrow  f'(c) = \lambda$$
 
 이다. $$f'(a) > f'(b)$$인 경우는 $$-f$$에 같은 논의를 적용한다.
 

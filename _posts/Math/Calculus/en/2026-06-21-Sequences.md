@@ -41,7 +41,7 @@ $$\lim_{n\to\infty} a_n = L, \qquad \lim_{n\to\infty} b_n = M$$
 Then
 
 1. $$\lim (a_n + b_n) = L + M$$,
-2. for any constant $$c$$, $$\lim c\,a_n = cL$$,
+2. for any constant $$c$$, $$\lim c a_n = cL$$,
 3. $$\lim a_n b_n = LM$$,
 4. if $$M \neq 0$$ and $$b_n \neq 0$$ for all $$n$$, then $$\lim a_n/b_n = L/M$$
 

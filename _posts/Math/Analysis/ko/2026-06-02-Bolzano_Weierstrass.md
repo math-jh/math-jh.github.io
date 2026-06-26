@@ -144,7 +144,7 @@ $$a_{n_j} \in I_j \qquad (j = 1, 2, 3, \dots).$$
 $$\begin{aligned}
 \lvert a_{n_j} - L\rvert
 &\leq \length(I_j) \\
-&= \frac{M - m}{2^{j}} \;\longrightarrow\; 0
+&= \frac{M - m}{2^{j}}  \longrightarrow  0
 \end{aligned}$$
 
 이고, 따라서 $$a_{n_j} \to L$$이다. 즉 $$(a_{n_j})$$가 수렴하는 부분수열이다.

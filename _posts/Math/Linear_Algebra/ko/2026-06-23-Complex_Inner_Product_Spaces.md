@@ -1,6 +1,6 @@
 ---
 title: "복소내적공간"
-description: "복소벡터공간 위에 conjugate-symmetric한 Hermitian 내적을 정의하고, 코시-슈바르츠 부등식과 Gram-Schmidt 과정이 그대로 성립함을 본다. 나아가 켤레전치로 주어지는 adjoint와 내적을 보존하는 unitary 행렬을 다룬다."
+description: "복소벡터공간 위에 conjugate-symmetric한 Hermitian 내적을 정의하고, 코시-슈바르츠 부등식과 Gram-Schmidt 과정이 그대로 성립함을 본다. 나아가 켤레전치로 주어지는 adjoint와 내적을 보존하는 unitary matrix를 다룬다."
 excerpt: "복소수 위에서 정의된 Hermitian 내적"
 
 categories: [Math / Linear Algebra]
@@ -13,8 +13,6 @@ date: 2026-06-23
 
 weight: 118
 
-published: false
-
 ---
 
 ## 복소내적과 노름
@@ -23,7 +21,7 @@ published: false
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> $$\mathbb{C}$$-벡터공간 $$V$$ 위의 함수 $$\langle-,-\rangle:V\times V\rightarrow\mathbb{C}$$가 *Hermitian inner product<sub>에르미트 내적</sub>*라는 것은 다음을 만족하는 것이다.
+<ins id="def1">**정의 1**</ins> $$\mathbb{C}$$-벡터공간 $$V$$ 위의 함수 $$\langle-,-\rangle:V\times V\rightarrow\mathbb{C}$$가 *Hermitian inner product<sub>Hermitian 내적</sub>*라는 것은 다음을 만족하는 것이다.
 
 1. (Conjugate-symmetry) 임의의 $$v,w\in V$$에 대하여 $$\langle w,v\rangle=\overline{\langle v,w\rangle}$$;
 2. (Linearity on second argument) 임의의 $$v,w,w'\in V$$와 $$\alpha\in\mathbb{C}$$에 대하여 $$\langle v,w+w'\rangle=\langle v,w\rangle+\langle v,w'\rangle$$이고 $$\langle v,\alpha w\rangle=\alpha\langle v,w\rangle$$;
@@ -97,7 +95,7 @@ $$\lVert v+w\rVert^2\leq\lVert v\rVert^2+2\lVert v\rVert\lVert w\rVert+\lVert w\
 
 이 되어 $$\lVert v+w\rVert\leq\lVert v\rVert+\lVert w\rVert$$을 얻는다. $$\lVert\alpha v\rVert=\lvert\alpha\rvert\lVert v\rVert$$은 $$\langle\alpha v,\alpha v\rangle=\bar\alpha\alpha\langle v,v\rangle=\lvert\alpha\rvert^2\lVert v\rVert^2$$로부터 자명하므로, $$\lVert-\rVert$$은 실제로 노름이다. ([§내적공간, ⁋정의 2](/ko/math/linear_algebra/inner_product_spaces#def2))
 
-## 정규직교기저
+## orthonormal basis
 
 실수의 경우와 마찬가지로, 복소내적공간에서도 두 벡터 $$v,w$$가 $$\langle v,w\rangle=0$$을 만족할 때 서로 직교한다고 하며, 크기가 모두 $$1$$이고 서로 직교하는 기저를 orthonormal basis라 부른다. 이 때도 실수의 경우와 마찬가지로 Gram-Schmidt 과정이 그대로 작동하는데, 실제로 기저 $$\{x_1,\ldots,x_n\}$$이 주어졌을 때 $$\hat x_1=x_1$$로 두고
 
@@ -121,7 +119,7 @@ $$V=U\oplus U^\perp,\qquad\dim U^\perp=\dim V-\dim U$$
 
 가 성립한다.
 
-## 수반작용소와 유니터리행렬
+## 수반작용소와 unitary matrix
 
 복소내적공간 $$V$$ 위의 linear operator $$L:V\rightarrow V$$에 대하여, 실수의 경우와 마찬가지로 그 *adjoint* $$L^\ast$$를
 
@@ -151,11 +149,11 @@ $$[L^\ast]_{ij}=\langle e_i,L^\ast e_j\rangle=\langle Le_i,e_j\rangle=\overline{
 
 <div class="definition" markdown="1">
 
-<ins id="def5">**정의 5**</ins> 행렬 $$U\in\Mat_n(\mathbb{C})$$가 *unitary matrix<sub>유니터리 행렬</sub>*라는 것은
+<ins id="def5">**정의 5**</ins> 행렬 $$U\in\Mat_n(\mathbb{C})$$가 *unitary matrix<sub>unitary matrix</sub>*라는 것은
 
 $$U^\ast U=UU^\ast=I$$
 
-가 성립하는 것이다. 복소내적공간 위의 operator $$L$$이 $$L^\ast L=I$$를 만족할 때 *unitary operator<sub>유니터리 작용소</sub>*라 부른다.
+가 성립하는 것이다. 복소내적공간 위의 operator $$L$$이 $$L^\ast L=I$$를 만족할 때 *unitary operator<sub>unitary operator</sub>*라 부른다.
 
 </div>
 
@@ -163,13 +161,12 @@ $$U^\ast U=UU^\ast=I$$
 
 $$\langle Lv,Lw\rangle=\langle v,L^\ast Lw\rangle=\langle v,w\rangle$$
 
-이 되어 내적을 보존한다. 두 orthonormal basis 사이의 기저변환행렬이 항상 unitary matrix가 된다는 것도 실수의 경우와 똑같은 계산으로 확인되며, 다만 conjugate-symmetry 때문에 한쪽 기저변환행렬이 다른 쪽의 켤레전치가 된다. 이 unitary 행렬과 켤레전치 adjoint가 self-adjoint operator를 일반화한 normal operator의 스펙트럼 정리를 전개하는 토대가 된다.
+이 되어 내적을 보존한다. 두 orthonormal basis 사이의 기저변환행렬이 항상 unitary matrix가 된다는 것도 실수의 경우와 똑같은 계산으로 확인되며, 다만 conjugate-symmetry 때문에 한쪽 기저변환행렬이 다른 쪽의 켤레전치가 된다. 이 unitary matrix와 켤레전치 adjoint가 self-adjoint operator를 일반화한 normal operator의 스펙트럼 정리를 전개하는 토대가 된다.
 
 ---
 
 **참고문헌**
 
-**[Axl]** S. Axler, *Linear algebra done right*, 3rd ed., Undergraduate Texts in Mathematics, Springer, 2015.  
 **[Goc]** M.S. Gockenbach, *Finite-dimensional linear algebra*, Discrete Mathematics and its applications, Taylor&Francis, 2011.  
 **[Lee]** 이인석, *선형대수와 군*, 서울대학교 출판문화원, 2005.
 

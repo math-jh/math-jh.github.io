@@ -45,7 +45,7 @@ $$x_m = (x_m^{(1)}, x_m^{(2)}, \ldots, x_m^{(n)}) \in \mathbb{R}^n$$
 
 이고, $$K$$가 유계이므로 각 좌표열 $$(x_m^{(j)})_m$$도 유계인 실수열이다. 먼저 첫 좌표열 $$(x_m^{(1)})$$에 Bolzano–Weierstrass 정리 ([§부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4))를 적용하여 수렴하는 부분수열의 첨자 집합 $$S_1 \subseteq \mathbb{N}$$을 얻는다. 그 부분수열 위에서 둘째 좌표열은 여전히 유계이므로 다시 [§부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4)를 적용하여 $$S_2 \subseteq S_1$$을 얻고, 이를 반복하면
 
-$$S_1 \supseteq S_2 \supseteq \cdots \supseteq S_n, \qquad x_m^{(j)} \xrightarrow[\,m \in S_j\,]{} \xi_j \ (1 \leq j \leq n)$$
+$$S_1 \supseteq S_2 \supseteq \cdots \supseteq S_n, \qquad x_m^{(j)} \xrightarrow[ m \in S_j ]{} \xi_j \ (1 \leq j \leq n)$$
 
 이 되는 첨자 집합들의 내림차순 사슬을 얻는다. 가장 작은 $$S_n$$을 따라가면 모든 좌표가 동시에 수렴하므로, 그 부분수열은 점
 
@@ -87,11 +87,11 @@ $$\lVert x_m \rVert > m$$
 
 <ins id="ex5">**예시 5 (수렴점열과 그 극한)**</ins> 집합
 
-$$A = \Bigl\{\, \tfrac{1}{m} : m \in \mathbb{N} \,\Bigr\}$$
+$$A = \Bigl\{  \frac{1}{m} : m \in \mathbb{N}  \Bigr\}$$
 
 는 유계이지만 닫혀 있지 않다. 점열 $$x_m = 1/m$$이 $$A$$ 안에 있으면서 $$0 \notin A$$로 수렴하기 때문이다. 따라서 $$A$$는 점렬컴팩트가 아니다. 그러나 여기에 극한점 $$0$$을 더한
 
-$$A \cup \{0\} = \Bigl\{\, 0, 1, \tfrac12, \tfrac13, \ldots \,\Bigr\}$$
+$$A \cup \{0\} = \Bigl\{  0, 1, \frac12, \frac13, \ldots  \Bigr\}$$
 
 은 닫혀 있고 유계이므로 점렬컴팩트가 된다. 실제로 이 집합의 임의의 점열은 무한히 많은 항이 어떤 한 값 $$1/k$$와 같거나, 아니면 $$0$$으로 수렴하는 부분수열을 가지며, 두 경우 모두 극한이 집합 안에 있다.
 
@@ -110,15 +110,15 @@ $$A \cup \{0\} = \Bigl\{\, 0, 1, \tfrac12, \tfrac13, \ldots \,\Bigr\}$$
 
 $$K \times L$$의 점열 $$z_k = (x_k, y_k)$$를 잡자. $$K$$가 점렬컴팩트이므로 첨자 집합 $$S \subseteq \mathbb{N}$$을 따라
 
-$$x_k \xrightarrow[\,k \in S\,]{} x \in K$$
+$$x_k \xrightarrow[ k \in S ]{} x \in K$$
 
 인 부분수열이 있다. 이 $$S$$ 위에서 $$(y_k)_{k \in S}$$는 점렬컴팩트집합 $$L$$의 점열이므로, 다시 $$T \subseteq S$$를 따라
 
-$$y_k \xrightarrow[\,k \in T\,]{} y \in L$$
+$$y_k \xrightarrow[ k \in T ]{} y \in L$$
 
 인 부분수열을 뽑을 수 있다. $$T \subseteq S$$이므로 $$T$$ 위에서는 두 좌표가 동시에 수렴하여
 
-$$z_k = (x_k, y_k) \xrightarrow[\,k \in T\,]{} (x, y) \in K \times L$$
+$$z_k = (x_k, y_k) \xrightarrow[ k \in T ]{} (x, y) \in K \times L$$
 
 이다. 따라서 $$K \times L$$의 임의의 점열에서 $$K \times L$$ 안의 점으로 수렴하는 부분수열을 뽑았으므로, $$K \times L$$은 점렬컴팩트이다.
 

@@ -111,9 +111,9 @@ Finally, it is convenient to classify the ways in which continuity can fail, as 
 
 <ins id="def6">**Definition 6 (Classification of Discontinuities)**</ins> When a function $$f$$ is discontinuous at a point $$a$$, we divide it into the following three cases according to the behavior of the two one-sided limits $$\lim_{x\to a^\pm} f(x)$$.
 
-1. *Removable discontinuity*: The limit $$\lim_{x\to a} f(x)$$ exists but is different from $$f(a)$$, or $$f(a)$$ is undefined. If we (re)define $$f(a)$$ to be the limit value, the function becomes continuous. Example: $$\dfrac{x^2-1}{x-1}$$ ($$a=1$$).
-2. *Jump discontinuity*: Both one-sided limits exist but are different from each other. Example: $$\dfrac{\lvert x\rvert}{x}$$ ($$a=0$$).
-3. *Essential discontinuity*: At least one of the one-sided limits does not exist (oscillates or diverges). Example: $$\sin\dfrac1x$$ ($$a=0$$).
+1. *Removable discontinuity*: The limit $$\lim_{x\to a} f(x)$$ exists but is different from $$f(a)$$, or $$f(a)$$ is undefined. If we (re)define $$f(a)$$ to be the limit value, the function becomes continuous. Example: $$\frac{x^2-1}{x-1}$$ ($$a=1$$).
+2. *Jump discontinuity*: Both one-sided limits exist but are different from each other. Example: $$\frac{\lvert x\rvert}{x}$$ ($$a=0$$).
+3. *Essential discontinuity*: At least one of the one-sided limits does not exist (oscillates or diverges). Example: $$\sin\frac1x$$ ($$a=0$$).
 
 </div>
 

@@ -47,7 +47,7 @@ $$\lim_{x \to a} f(x) = L$$
 
 <ins id="ex3">**예시 3**</ins> 정의를 직접 적용해 극한을 증명할 때, 일차함수처럼 $$\lvert f(x) - L\rvert$$이 $$\lvert x - a\rvert$$의 상수배이면 $$\delta$$를 곧바로 읽어낼 수 있지만, 변화율이 일정하지 않은 함수에서는 한 가지 손질이 필요하다. $$g(x) = x^2$$을 생각하고 $$x \to 2$$일 때 극한값이 $$4$$임을 보이자. 우선
 
-$$\lvert g(x)-4\rvert=\lvert x^2-4\rvert=\lvert x-2\rvert\,\lvert x+2\rvert$$
+$$\lvert g(x)-4\rvert=\lvert x^2-4\rvert=\lvert x-2\rvert \lvert x+2\rvert$$
 
 를 계산한다. 핵심은 $$\lvert x-2\rvert$$는 $$2$$ 근방에서 작지만 그 앞에 붙는 $$\lvert x+2\rvert$$는 통제되지 않으면 곱을 키울 수 있다는 점이다. 그래서 먼저 $$\delta\leq 1$$로 제한해 $$\lvert x+2\rvert<5$$를 확보하고 ($$\delta>1$$인 곳은 애초에 관심대상이 아니다), 그 위에서 $$\delta=\min(1,\epsilon/5)$$로 두면
 
@@ -111,7 +111,7 @@ $$\lvert L - L'\rvert \leq \lvert L - f(x)\rvert + \lvert f(x) - L'\rvert < \eps
 
 3. 다음의 부등식
     
-    $$\lvert f(x)g(x) - LM\rvert = \lvert f(x)(g(x)-M) + M(f(x)-L)\rvert \leq \lvert f(x)\rvert\,\lvert g(x)-M\rvert + \lvert M\rvert\,\lvert f(x)-L\rvert$$
+    $$\lvert f(x)g(x) - LM\rvert = \lvert f(x)(g(x)-M) + M(f(x)-L)\rvert \leq \lvert f(x)\rvert \lvert g(x)-M\rvert + \lvert M\rvert \lvert f(x)-L\rvert$$
     
     을 사용한다. 그럼 직관적으로 $$x$$가 $$a$$로 갈 때 $$\lvert g(x)-M\rvert$$와 $$\lvert f(x)-L\rvert$$는 모두 $$0$$으로 가므로, 만일 그 앞에 붙는 $$\lvert f(x)\rvert, \lvert g(x)\rvert$$들이 유한하다는 것만 보장된다면 위의 1번과 비슷한 계산을 통해 이를 $$\epsilon$$보다 작게 만들 수 있다. 
     
@@ -127,7 +127,7 @@ $$\lvert L - L'\rvert \leq \lvert L - f(x)\rvert + \lvert f(x) - L'\rvert < \eps
 
 4. $$1/g(x) \to 1/M$$을 보인 뒤 3을 적용하면 된다. $$M \neq 0$$이므로 $$a$$ 근방에서 $$\lvert g(x)\rvert > \lvert M\rvert/2$$이고,
 
-$$\left\lvert \frac{1}{g(x)} - \frac{1}{M}\right\rvert = \frac{\lvert g(x)-M\rvert}{\lvert g(x)\rvert\,\lvert M\rvert} < \frac{2}{\lvert M\rvert^2}\lvert g(x)-M\rvert$$
+$$\left\lvert \frac{1}{g(x)} - \frac{1}{M}\right\rvert = \frac{\lvert g(x)-M\rvert}{\lvert g(x)\rvert \lvert M\rvert} < \frac{2}{\lvert M\rvert^2}\lvert g(x)-M\rvert$$
 
 이므로 $$\lvert g(x)-M\rvert$$을 충분히 작게 만들면 된다.
 
@@ -160,13 +160,13 @@ $$\left\lvert \frac{1}{g(x)} - \frac{1}{M}\right\rvert = \frac{\lvert g(x)-M\rve
     
     를 생각하면 우변 둘째 인자의 각 항은 $$\min(u,v)^{(k-1)/k}$$보다 크므로
     
-    $$\bigl\lvert u^{1/k}-v^{1/k}\bigr\rvert \leq \frac{\lvert u-v\rvert}{k\,\min(u,v)^{(k-1)/k}}$$
+    $$\bigl\lvert u^{1/k}-v^{1/k}\bigr\rvert \leq \frac{\lvert u-v\rvert}{k \min(u,v)^{(k-1)/k}}$$
     
     가 성립한다. 따라서 $$0 < \lvert x-a\rvert < \delta_1$$이면 $$0<L/2 < \min(f(x), L)$$이므로, $$f(x)=u$$, $$L=v$$를 대입하여
     
-    $$\bigl\lvert \sqrt[k]{f(x)}-\sqrt[k]{L}\bigr\rvert \leq \frac{\lvert f(x)-L\rvert}{k\,(L/2)^{(k-1)/k}}$$
+    $$\bigl\lvert \sqrt[k]{f(x)}-\sqrt[k]{L}\bigr\rvert \leq \frac{\lvert f(x)-L\rvert}{k (L/2)^{(k-1)/k}}$$
     
-    를 얻는다. 이제 임의의 $$\epsilon > 0$$에 대해 $$k\,(L/2)^{(k-1)/k}\,\epsilon$$에 대응하는 $$\delta_2 > 0$$을 택하고 $$\delta = \min(\delta_1,\delta_2)$$로 두면, $$0 < \lvert x-a\rvert < \delta$$일 때 우변이 $$\epsilon$$보다 작아진다.
+    를 얻는다. 이제 임의의 $$\epsilon > 0$$에 대해 $$k (L/2)^{(k-1)/k} \epsilon$$에 대응하는 $$\delta_2 > 0$$을 택하고 $$\delta = \min(\delta_1,\delta_2)$$로 두면, $$0 < \lvert x-a\rvert < \delta$$일 때 우변이 $$\epsilon$$보다 작아진다.
 
 </details>
 

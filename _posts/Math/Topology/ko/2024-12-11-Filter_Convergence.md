@@ -5,7 +5,6 @@ excerpt: "Filter의 수렴을 통한 compactness의 특성화"
 
 categories: [Math / Topology]
 permalink: /ko/math/topology/filter_convergence
-drift_needed: true
 sidebar: 
     nav: "topology-ko"
 

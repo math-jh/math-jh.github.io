@@ -1,6 +1,6 @@
 ---
 title: "스펙트럼 정리"
-description: "실내적공간 위의 self-adjoint operator를 정의하고, 그 고윳값이 모두 실수임을 보인다. 나아가 self-adjoint operator가 항상 고유벡터들로 이루어진 orthonormal basis를 가짐을 증명하여, 실대칭행렬의 직교대각화를 확립한다."
+description: "실내적공간 위의 self-adjoint operator를 정의하고, 그 고윳값이 모두 실수임을 보인다. 나아가 self-adjoint operator가 항상 고유벡터들로 이루어진 orthonormal basis를 가짐을 증명하여, 실symmetric matrix의 직교대각화를 확립한다."
 excerpt: "self-adjoint operator의 직교대각화"
 
 categories: [Math / Linear Algebra]
@@ -13,21 +13,19 @@ date: 2026-06-25
 
 weight: 120
 
-published: false
-
 ---
 
 우리는 [§고유공간분해](/ko/math/linear_algebra/eigenspace_decomposition)에서 어떤 행렬이 대각화 가능한지를 살펴보았다. 추가적으로 공간 위에 내적이 주어져 있다면 이 고유벡터들이 서로 직교하도록, 즉 orthonormal basis를 통해 대각화될 수 있는지를 탐구할 수 있다. 
 
 이 글에서는 이 질문에 대한 답이 self-adjoint operator라는 것을 보인다. [§내적공간](/ko/math/linear_algebra/inner_product_spaces)에서 살펴보았듯, 본질적으로 내적은 base field에 의존하는 부분이 크므로 우리는 이 정리 또한 base field가 $$\mathbb{R}$$과 $$\mathbb{C}$$인 경우로 각각 나누어, 후자의 경우는 [§복소 스펙트럼 정리](/ko/math/linear_algebra/complex_spectral_theorem)에서 별도로 다루기로 한다. 
 
-## 자기수반작용소
+## self-adjoint operator
 
 [§내적공간](/ko/math/linear_algebra/inner_product_spaces)에서 우리는 $$\mathbb{R}$$-내적공간 $$V$$ 위의 linear operator $$L:V\rightarrow V$$의 adjoint $$L^t:V\rightarrow V$$를, 내적이 주는 동형 $$V\cong V^\ast$$를 통해 dual $$L^\ast$$를 번역한 operator로 정의하였다. 이는 임의의 $$v,w\in V$$에 대하여 $$\langle Lv,w\rangle=\langle v,L^t w\rangle$$을 만족하는 유일한 operator이다. 우리는 자기 자신의 adjoint와 일치하는 operator에 특별히 주목한다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> $$\mathbb{R}$$-내적공간 $$V$$ 위의 linear operator $$L:V\rightarrow V$$가 *self-adjoint<sub>자기수반</sub>*이라는 것은 $$L=L^t$$인 것, 즉 
+<ins id="def1">**정의 1**</ins> $$\mathbb{R}$$-내적공간 $$V$$ 위의 linear operator $$L:V\rightarrow V$$가 *self-adjoint<sub>self-adjoint</sub>*이라는 것은 $$L=L^t$$인 것, 즉 
 
 $$\langle Lv,w\rangle=\langle v,Lw\rangle$$
 
@@ -37,11 +35,11 @@ $$\langle Lv,w\rangle=\langle v,Lw\rangle$$
 
 ## 고윳값의 실수성
 
-Self-adjoint operator의 대각화에서 핵심이 되는 사실은, (실수) 대칭행렬의 고윳값이 항상 실수라는 것이다. 
+Self-adjoint operator의 대각화에서 핵심이 되는 사실은, (실수) symmetric matrix의 고윳값이 항상 실수라는 것이다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="lem2">**보조정리 2**</ins> 실수 대칭행렬 $$A$$의 모든 고윳값은 실수이다. 즉 $$A$$의 특성다항식의 모든 근은 실수이다. 
+<ins id="lem2">**보조정리 2**</ins> 실수 symmetric matrix $$A$$의 모든 고윳값은 실수이다. 즉 $$A$$의 특성다항식의 모든 근은 실수이다. 
 
 </div>
 <details class="proof" markdown="1">
@@ -57,7 +55,7 @@ $$s=\bar z^tAz$$
 
 $$s=\bar z^t(\lambda z)=\lambda(\bar z^tz)=\lambda\sum_{i=1}^n\lvert z_i\rvert^2$$
 
-이다. 다른 한편으로, $$s$$는 $$1\times 1$$ 행렬이므로 자기 자신의 transpose와 같고, $$A$$가 실수 대칭행렬이므로 $$A=A^t=\bar A$$임을 이용하면 그 켤레복소수는 
+이다. 다른 한편으로, $$s$$는 $$1\times 1$$ 행렬이므로 자기 자신의 transpose와 같고, $$A$$가 실수 symmetric matrix이므로 $$A=A^t=\bar A$$임을 이용하면 그 켤레복소수는 
 
 $$\bar s=\overline{\bar z^tAz}=z^t\bar A\bar z=z^tA\bar z=(z^tA\bar z)^t=\bar z^tA^tz=\bar z^tAz=s$$
 
@@ -75,7 +73,7 @@ $$\bar s=\overline{\bar z^tAz}=z^t\bar A\bar z=z^tA\bar z=(z^tA\bar z)^t=\bar z^
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$V$$의 orthonormal basis를 택하면 $$L$$의 행렬표현 $$A$$는 실수 대칭행렬이다. $$\dim V\geq 1$$이므로 $$A$$의 특성다항식은 차수가 $$1$$ 이상이고, 대수학의 기본정리에 의하여 $$\mathbb{C}$$에서 근을 가진다. [보조정리 2](#lem2)에 의하여 이 근은 실수이므로, $$A$$는 실수인 고윳값 $$\lambda$$를 가진다. 그럼 $$\lambda I-A$$가 singular이므로 $$(\lambda I-A)v=0$$을 만족하는 영이 아닌 $$v\in\mathbb{R}^n$$이 존재하고, 이것이 $$L$$의 고유벡터이다. 
+$$V$$의 orthonormal basis를 택하면 $$L$$의 행렬표현 $$A$$는 실수 symmetric matrix이다. $$\dim V\geq 1$$이므로 $$A$$의 특성다항식은 차수가 $$1$$ 이상이고, 대수학의 기본정리에 의하여 $$\mathbb{C}$$에서 근을 가진다. [보조정리 2](#lem2)에 의하여 이 근은 실수이므로, $$A$$는 실수인 고윳값 $$\lambda$$를 가진다. 그럼 $$\lambda I-A$$가 singular이므로 $$(\lambda I-A)v=0$$을 만족하는 영이 아닌 $$v\in\mathbb{R}^n$$이 존재하고, 이것이 $$L$$의 고유벡터이다. 
 
 </details>
 
@@ -117,21 +115,21 @@ $$U=\span v_1$$이라 하면 $$L(U)\subseteq U$$이므로 [보조정리 4](#lem4
 
 </details>
 
-행렬의 언어로 옮기면 스펙트럼 정리는 실대칭행렬의 직교대각화를 의미한다. 
+행렬의 언어로 옮기면 스펙트럼 정리는 실symmetric matrix의 직교대각화를 의미한다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="cor6">**따름정리 6**</ins> 임의의 실대칭행렬 $$A$$에 대하여, 적당한 orthogonal matrix $$Q$$와 실대각행렬 $$D$$가 존재하여 
+<ins id="cor6">**따름정리 6**</ins> 임의의 실symmetric matrix $$A$$에 대하여, 적당한 orthogonal matrix $$Q$$와 실diagonal matrix $$D$$가 존재하여 
 
 $$A=QDQ^t$$
 
-이 성립한다. 이 때 $$D$$의 대각성분은 $$A$$의 고윳값들이고, $$Q$$의 열들은 이에 대응되는 정규직교인 고유벡터들이다. 
+이 성립한다. 이 때 $$D$$의 대각성분은 $$A$$의 고윳값들이고, $$Q$$의 열들은 이에 대응되는 orthonormal인 고유벡터들이다. 
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$A$$를 $$\mathbb{R}^n$$ 위의 self-adjoint operator로 보면, [정리 5](#thm5)에 의하여 $$A$$의 고유벡터들로 이루어진 orthonormal basis $$\{v_1,\ldots, v_n\}$$이 존재한다. $$Av_i=\lambda_iv_i$$라 하고, $$v_i$$를 열로 갖는 행렬 $$Q=(v_1\mid\cdots\mid v_n)$$을 생각하자. $$Q$$의 열들이 정규직교이므로 $$Q$$는 orthogonal matrix이다. ([§내적공간, ⁋정의 7](/ko/math/linear_algebra/inner_product_spaces#def7)) 그럼 
+$$A$$를 $$\mathbb{R}^n$$ 위의 self-adjoint operator로 보면, [정리 5](#thm5)에 의하여 $$A$$의 고유벡터들로 이루어진 orthonormal basis $$\{v_1,\ldots, v_n\}$$이 존재한다. $$Av_i=\lambda_iv_i$$라 하고, $$v_i$$를 열로 갖는 행렬 $$Q=(v_1\mid\cdots\mid v_n)$$을 생각하자. $$Q$$의 열들이 orthonormal이므로 $$Q$$는 orthogonal matrix이다. ([§내적공간, ⁋정의 7](/ko/math/linear_algebra/inner_product_spaces#def7)) 그럼 
 
 $$AQ=(Av_1\mid\cdots\mid Av_n)=(\lambda_1v_1\mid\cdots\mid\lambda_nv_n)=QD$$
 
@@ -157,13 +155,13 @@ $$\lambda\langle v,w\rangle=\langle Lv,w\rangle=\langle v,Lw\rangle=\mu\langle v
 
 </details>
 
-## 양의 정부호 작용소
+## positive definite operator
 
 Self-adjoint operator 가운데 고윳값이 모두 양수인 것들은 따로 이름을 붙일 만하다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def8">**정의 8**</ins> $$\mathbb{R}$$-내적공간 $$V$$ 위의 self-adjoint operator $$L:V\rightarrow V$$이 *positive semidefinite<sub>양의 준정부호</sub>*라는 것은 모든 $$v\in V$$에 대하여 $$\langle Lv,v\rangle\geq 0$$인 것이고, *positive definite<sub>양의 정부호</sub>*라는 것은 모든 $$0\neq v\in V$$에 대하여 $$\langle Lv,v\rangle> 0$$인 것이다.
+<ins id="def8">**정의 8**</ins> $$\mathbb{R}$$-내적공간 $$V$$ 위의 self-adjoint operator $$L:V\rightarrow V$$이 *positive semidefinite<sub>positive semidefinite</sub>*라는 것은 모든 $$v\in V$$에 대하여 $$\langle Lv,v\rangle\geq 0$$인 것이고, *positive definite<sub>positive definite</sub>*라는 것은 모든 $$0\neq v\in V$$에 대하여 $$\langle Lv,v\rangle> 0$$인 것이다.
 
 </div>
 
@@ -183,11 +181,11 @@ $$\langle Lv,v\rangle=\left\langle\sum_i a_i\lambda_iv_i,\sum_j a_jv_j\right\ran
 
 </details>
 
-Positive definite 작용소의 행렬은 또한 삼각행렬을 통해 간결하게 분해된다. 사실 이 분해는 일반적인 정사각행렬의 LU 분해 ([§가우스 소거법, ⁋정의 8](/ko/math/linear_algebra/Gaussian_elimination#def8))가 symmetric positive definite 행렬에 대해 더욱 단순해진 형태로, 오직 $$L$$만 계산하면 $$U$$ 부분은 자동으로 나온다는 점에서 계산량을 절반으로 줄인다.
+Positive definite operator의 행렬은 또한 삼각행렬을 통해 간결하게 분해된다. 사실 이 분해는 일반적인 정사각행렬의 LU 분해 ([§가우스 소거법, ⁋정의 8](/ko/math/linear_algebra/Gaussian_elimination#def8))가 symmetric positive definite matrix에 대해 더욱 단순해진 형태로, 오직 $$L$$만 계산하면 $$U$$ 부분은 자동으로 나온다는 점에서 계산량을 절반으로 줄인다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop10">**명제 10 (Cholesky 분해)**</ins> Positive definite인 실대칭행렬 $$A$$에 대하여, 대각성분이 모두 양수인 하삼각행렬 $$L$$이 유일하게 존재하여 $$A=LL^t$$이다.
+<ins id="prop10">**명제 10 (Cholesky 분해)**</ins> Positive definite인 실symmetric matrix $$A$$에 대하여, 대각성분이 모두 양수인 하삼각행렬 $$L$$이 유일하게 존재하여 $$A=LL^t$$이다.
 
 </div>
 <details class="proof" markdown="1">

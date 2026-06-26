@@ -33,7 +33,7 @@ $$R = \frac{1}{\limsup_{n\to\infty} \lvert c_n\rvert^{1/n}}$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[§무한급수, ⁋정리 10](/ko/math/analysis/series#thm10)의 양 $$\limsup \lvert c_n (x-a)^n\rvert^{1/n} = \lvert x - a\rvert\,\limsup\lvert c_n\rvert^{1/n} = \lvert x - a\rvert/R$$를 본다. 이 값이 $$1$$보다 작으면, 곧 $$\lvert x - a\rvert < R$$이면 절대수렴하고, $$1$$보다 크면 일반항이 $$0$$으로 가지 않아 발산한다 ([§무한급수](/ko/math/analysis/series)의 근판정).
+[§무한급수, ⁋정리 10](/ko/math/analysis/series#thm10)의 양 $$\limsup \lvert c_n (x-a)^n\rvert^{1/n} = \lvert x - a\rvert \limsup\lvert c_n\rvert^{1/n} = \lvert x - a\rvert/R$$를 본다. 이 값이 $$1$$보다 작으면, 곧 $$\lvert x - a\rvert < R$$이면 절대수렴하고, $$1$$보다 크면 일반항이 $$0$$으로 가지 않아 발산한다 ([§무한급수](/ko/math/analysis/series)의 근판정).
 
 </details>
 
@@ -60,7 +60,7 @@ $$\lvert x - a\rvert \leq r$$이면 $$\lvert c_n(x-a)^n\rvert \leq \lvert c_n\rv
 
 <ins id="thm3">**정리 3**</ins> $$f(x) = \sum_{n=0}^\infty c_n (x-a)^n$$이 수렴반경 $$R > 0$$을 가지면, $$f$$는 $$\lvert x - a\rvert < R$$에서 무한히 미분가능하고
 
-$$f'(x) = \sum_{n=1}^\infty n\,c_n (x - a)^{n-1}$$
+$$f'(x) = \sum_{n=1}^\infty n c_n (x - a)^{n-1}$$
 
 이며, 이 도함수 급수도 수렴반경 $$R$$을 가진다. 따라서 $$c_n = f^{(n)}(a)/n!$$이다.
 
@@ -69,7 +69,7 @@ $$f'(x) = \sum_{n=1}^\infty n\,c_n (x - a)^{n-1}$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$\lim n^{1/n} = 1$$이므로 항별 미분한 급수의 수렴반경도 $$1/\limsup\lvert n c_n\rvert^{1/n} = R$$로 같다. 도함수 급수가 컴팩트하게 균등수렴하므로 ([정리 2](#thm2)), 균등수렴하는 도함수열의 극한이 원래 극한의 도함수가 된다는 정리에 의해 $$f' $$가 항별 미분으로 주어진다. 이를 반복하면 $$f$$가 무한히 미분가능하고, $$x = a$$를 대입하면 $$f^{(n)}(a) = n!\,c_n$$이다.
+$$\lim n^{1/n} = 1$$이므로 항별 미분한 급수의 수렴반경도 $$1/\limsup\lvert n c_n\rvert^{1/n} = R$$로 같다. 도함수 급수가 컴팩트하게 균등수렴하므로 ([정리 2](#thm2)), 균등수렴하는 도함수열의 극한이 원래 극한의 도함수가 된다는 정리에 의해 $$f' $$가 항별 미분으로 주어진다. 이를 반복하면 $$f$$가 무한히 미분가능하고, $$x = a$$를 대입하면 $$f^{(n)}(a) = n! c_n$$이다.
 
 </details>
 
@@ -125,7 +125,7 @@ d_n &= \frac{f^{(n)}(a)}{n!}
 $$\begin{aligned}
 \lim_{n\to\infty}\left\lvert\frac{c_{n+1}(x-a)^{n+1}}{c_n (x-a)^n}\right\rvert
 &= \lvert x - a\rvert \cdot \lim_{n\to\infty}\left\lvert\frac{c_{n+1}}{c_n}\right\rvert \\
-&= L\,\lvert x - a\rvert
+&= L \lvert x - a\rvert
 \end{aligned}$$
 
 이다. 이 값이 $$1$$보다 작으면, 곧 $$\lvert x - a\rvert < 1/L$$이면 절대수렴하고, $$1$$보다 크면 발산한다. 따라서 수렴반경은 $$R = 1/L$$이다. 비판정으로 극한이 존재할 때 근판정의 $$\limsup$$도 같은 값을 가지므로, 이는 [정리 1](#thm1)과 모순되지 않는다.
@@ -161,12 +161,12 @@ $$\begin{aligned}
 
 $$\begin{aligned}
 \frac{d}{dx}\frac{1}{1-x} &= \frac{1}{(1-x)^2}, \\
-\frac{d}{dx}\sum_{n=0}^\infty x^n &= \sum_{n=1}^\infty n\,x^{n-1}
+\frac{d}{dx}\sum_{n=0}^\infty x^n &= \sum_{n=1}^\infty n x^{n-1}
 \end{aligned}$$
 
-이므로 $$1/(1-x)^2 = \sum_{n=1}^\infty n\,x^{n-1}$$이고, 양변에 $$x$$를 곱하면
+이므로 $$1/(1-x)^2 = \sum_{n=1}^\infty n x^{n-1}$$이고, 양변에 $$x$$를 곱하면
 
-$$\sum_{n=1}^\infty n\,x^n = \frac{x}{(1-x)^2} \qquad (\lvert x\rvert < 1)$$
+$$\sum_{n=1}^\infty n x^n = \frac{x}{(1-x)^2} \qquad (\lvert x\rvert < 1)$$
 
 을 얻는다. $$x = 1/2$$을 대입하면 $$\sum_{n=1}^\infty n/2^n = 2$$라는 수치급수의 합이 따라 나온다.
 

@@ -34,7 +34,7 @@ $$\frac{(a+h)^{-m} - a^{-m}}{h} = -\frac{(a+h)^m - a^m}{h}\cdot\frac{1}{(a+h)^ma
 
 <ins id="prop1">**명제 1 (멱급수의 항별 미분)**</ins> 멱급수 $$f(x) = \sum_{n=0}^\infty c_n x^n$$이 수렴반경 $$R > 0$$을 가지면, $$f$$는 $$\lvert x\rvert < R$$에서 미분가능하고
 
-$$f'(x) = \sum_{n=1}^\infty n\,c_n x^{n-1}$$
+$$f'(x) = \sum_{n=1}^\infty n c_n x^{n-1}$$
 
 이며, 이 급수의 수렴반경도 $$R$$이다.
 
@@ -48,7 +48,7 @@ $$f'(x) = \sum_{n=1}^\infty n\,c_n x^{n-1}$$
 
 우선 지수함수는 [§멱급수, ⁋예시 3](/ko/math/calculus/power_series#ex3)에서 $$e^x = \sum_{n\geq 0} x^n/n!$$로 정의하였다. 이제 [명제 1](#prop1)을 적용하면 그 미분은 항별 미분의 합
 
-$$(e^x)' = \sum_{n=1}^\infty n\,\frac{x^{n-1}}{n!} = \sum_{n=1}^\infty \frac{x^{n-1}}{(n-1)!} = \sum_{m=0}^\infty \frac{x^m}{m!} = e^x$$
+$$(e^x)' = \sum_{n=1}^\infty n \frac{x^{n-1}}{n!} = \sum_{n=1}^\infty \frac{x^{n-1}}{(n-1)!} = \sum_{m=0}^\infty \frac{x^m}{m!} = e^x$$
 
 이므로, 지수함수는 미분에 대해 불변이다. 이는, 고등학교에서는 다음의 극한
 
@@ -87,7 +87,7 @@ $$\frac{\sin(x+h) - \sin x}{h} = \sin x \cdot \frac{\cos h - 1}{h} + \cos x \cdo
 
 <ins id="prop3">**명제 3 (곱의 미분법)**</ins> $$f, g$$가 $$a$$에서 미분가능하면 $$fg$$도 $$a$$에서 미분가능하고
 
-$$(fg)'(a) = f'(a)\,g(a) + f(a)\,g'(a)$$
+$$(fg)'(a) = f'(a) g(a) + f(a) g'(a)$$
 
 이다.
 
@@ -98,7 +98,7 @@ $$(fg)'(a) = f'(a)\,g(a) + f(a)\,g'(a)$$
 
 평균변화율에 같은 항을 더하고 빼면
 
-$$\frac{f(a+h)g(a+h) - f(a)g(a)}{h} = \frac{f(a+h)-f(a)}{h}\,g(a+h) + f(a)\,\frac{g(a+h)-g(a)}{h}$$
+$$\frac{f(a+h)g(a+h) - f(a)g(a)}{h} = \frac{f(a+h)-f(a)}{h} g(a+h) + f(a) \frac{g(a+h)-g(a)}{h}$$
 
 이다. $$h \to 0$$일 때 첫 항의 평균변화율은 $$f'(a)$$로, $$g(a+h)$$는 $$g$$의 연속성 ([§미분과 도함수, ⁋명제 2](/ko/math/calculus/derivatives#prop2))으로 $$g(a)$$로, 둘째 항의 평균변화율은 $$g'(a)$$로 수렴하므로, [§함수의 극한, ⁋명제 5](/ko/math/calculus/functions_and_limits#prop5)에 의해 합은 $$f'(a)g(a) + f(a)g'(a)$$로 수렴한다.
 
@@ -110,7 +110,7 @@ $$\frac{f(a+h)g(a+h) - f(a)g(a)}{h} = \frac{f(a+h)-f(a)}{h}\,g(a+h) + f(a)\,\fra
 
 <ins id="thm4">**정리 4 (연쇄법칙)**</ins> $$f$$가 $$a$$에서 미분가능하고 $$g$$가 $$b = f(a)$$에서 미분가능하면, 합성 $$g \circ f$$도 $$a$$에서 미분가능하고
 
-$$(g \circ f)'(a) = g'(f(a))\,f'(a)$$
+$$(g \circ f)'(a) = g'(f(a)) f'(a)$$
 
 이다.
 
@@ -125,7 +125,7 @@ $$\varphi(y) = \begin{cases} \frac{g(y) - g(b)}{y - b}, & y \neq b,\\[1mm] g'(b)
 
 로 옮긴다. 미분가능성의 정의에 의해 $$\varphi$$는 $$b$$에서 연속이고, 모든 $$y$$에 대해 $$g(y) - g(b) = \varphi(y)(y - b)$$가 성립한다. $$y = f(a+h)$$를 대입하면
 
-$$\frac{g(f(a+h)) - g(f(a))}{h} = \varphi(f(a+h))\,\frac{f(a+h) - f(a)}{h}$$
+$$\frac{g(f(a+h)) - g(f(a))}{h} = \varphi(f(a+h)) \frac{f(a+h) - f(a)}{h}$$
 
 이고, $$h \to 0$$일 때 $$f$$의 연속성으로 $$\varphi(f(a+h)) \to \varphi(b) = g'(b)$$이며 둘째 인자는 $$f'(a)$$로 수렴하므로, 극한은 $$g'(f(a))f'(a)$$이다.
 
@@ -137,7 +137,7 @@ $$\frac{g(f(a+h)) - g(f(a))}{h} = \varphi(f(a+h))\,\frac{f(a+h) - f(a)}{h}$$
 
 <ins id="cor5">**따름정리 5 (몫의 미분법)**</ins> $$f, g$$가 $$a$$에서 미분가능하고 $$g(a) \neq 0$$이면 $$f/g$$도 $$a$$에서 미분가능하고
 
-$$\left(\frac{f}{g}\right)'(a) = \frac{f'(a)\,g(a) - f(a)\,g'(a)}{g(a)^2}$$
+$$\left(\frac{f}{g}\right)'(a) = \frac{f'(a) g(a) - f(a) g'(a)}{g(a)^2}$$
 
 이다.
 
@@ -227,7 +227,7 @@ $$\sum_{n\geq 1} n x^n = \frac{x}{(1-x)^2}$$
 
 <ins id="ex9">**예시 9 (여러가지 미분법)**</ins> 방정식이 $$y$$를 $$x$$의 함수로 정해진 경우, $$y'$$를 구하기 위해 $$y=...$$ 형태로 명시적인 식을 구하는 것은 비효율적이거나, 그러한 형태를 취했을 때 깔끔한 미분이 나오지 않는 경우가 많다. 이런 상황에서 $$y$$를 $$x$$의 함수로 보고 양변을 미분한 뒤 $$y'$$에 대해 푸는 것을 *음함수 미분법<sub>implicit differentiation</sub>*이라 한다. 가령, 단위원 $$x^2 + y^2 = 1$$에서 양변을 미분하면 
 
-$$2x + 2y\,y' = 0$$
+$$2x + 2y y' = 0$$
 
 이므로, $$y' = -x/y$$를 얻고, 따라서 주어진 점 $$(x_0,y_0)$$에서의 접선의 기울기를 구할 수 있다.
 

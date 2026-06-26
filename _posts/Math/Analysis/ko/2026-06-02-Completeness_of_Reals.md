@@ -120,7 +120,7 @@ c + s &> c + \alpha - \varepsilon
 
 이고 $$c + s \in c + S$$이다. 따라서 $$c + \alpha - \varepsilon$$은 상계가 아니어서 $$c + \alpha$$가 가장 작은 상계, 곧 $$\sup(c + S) = c + \alpha$$이다.
 
-스칼라배의 경우도 같다. $$\lambda > 0$$이므로 $$s \leq \alpha$$에서 $$\lambda s \leq \lambda \alpha$$를 얻어 $$\lambda \alpha$$가 $$\lambda S$$의 상계이고, 임의의 $$\varepsilon > 0$$에 대해 $$s > \alpha - \tfrac{\varepsilon}{\lambda}$$인 $$s$$를 잡으면
+스칼라배의 경우도 같다. $$\lambda > 0$$이므로 $$s \leq \alpha$$에서 $$\lambda s \leq \lambda \alpha$$를 얻어 $$\lambda \alpha$$가 $$\lambda S$$의 상계이고, 임의의 $$\varepsilon > 0$$에 대해 $$s > \alpha - \frac{\varepsilon}{\lambda}$$인 $$s$$를 잡으면
 
 $$\begin{aligned}
 \lambda s &> \lambda\left(\alpha - \frac{\varepsilon}{\lambda}\right) = \lambda\alpha - \varepsilon
@@ -163,13 +163,13 @@ $$a_n \leq \alpha \leq b_n \quad (\forall n), \qquad \text{즉} \quad \alpha \in
 
 </details>
 
-닫힌 구간이라는 조건은 없앨 수 없다. 반열린 구간 $$I_n = \left(0, \tfrac1n\right]$$을 보면 모두 중첩하지만 임의의 $$x > 0$$은 아르키메데스 성질로 $$\tfrac1n < x$$가 되는 순간 빠져나가므로 $$\bigcap_n I_n = \varnothing$$이다. 구간의 길이 $$b_n - a_n$$이 $$0$$으로 줄어드는 경우에는 교집합이 정확히 한 점이 되며, 이 한 점이 모든 $$a_n$$의 상한이자 모든 $$b_n$$의 하한이다.
+닫힌 구간이라는 조건은 없앨 수 없다. 반열린 구간 $$I_n = \left(0, \frac1n\right]$$을 보면 모두 중첩하지만 임의의 $$x > 0$$은 아르키메데스 성질로 $$\frac1n < x$$가 되는 순간 빠져나가므로 $$\bigcap_n I_n = \varnothing$$이다. 구간의 길이 $$b_n - a_n$$이 $$0$$으로 줄어드는 경우에는 교집합이 정확히 한 점이 되며, 이 한 점이 모든 $$a_n$$의 상한이자 모든 $$b_n$$의 하한이다.
 
 <div class="example" markdown="1">
 
-<ins id="ex8">**예시 8 (길이가 줄어드는 구간과 십진 전개)**</ins> 실수 $$x$$의 십진 전개는 중첩구간정리의 전형적 사례이다. $$x = 0.\,d_1 d_2 d_3 \cdots$$ ($$d_k \in \{0, 1, \dots, 9\}$$) 에 대해
+<ins id="ex8">**예시 8 (길이가 줄어드는 구간과 십진 전개)**</ins> 실수 $$x$$의 십진 전개는 중첩구간정리의 전형적 사례이다. $$x = 0. d_1 d_2 d_3 \cdots$$ ($$d_k \in \{0, 1, \dots, 9\}$$) 에 대해
 
-$$I_n = \left[\, 0.d_1\cdots d_n,\ \ 0.d_1\cdots d_n + 10^{-n} \,\right]$$
+$$I_n = \left[  0.d_1\cdots d_n,\ \ 0.d_1\cdots d_n + 10^{-n}  \right]$$
 
 로 두면 $$I_1 \supseteq I_2 \supseteq \cdots$$이고 길이는 $$10^{-n} \to 0$$이다. [정리 7](#thm7)에 의해 교집합은 비어 있지 않고, 길이가 $$0$$으로 가므로 교집합은 한 점뿐이다. 그 점이 바로 무한소수가 나타내는 실수 $$x$$이다. 완비성이 없다면 이 교집합이 빌 수도 있어, 무한소수가 수렴할 대상이 보장되지 않는다.
 

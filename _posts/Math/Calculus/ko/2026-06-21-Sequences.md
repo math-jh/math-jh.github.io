@@ -40,7 +40,7 @@ $$\lim_{n\to\infty} a_n = L, \qquad \lim_{n\to\infty} b_n = M$$
 이라 하자. 그러면
 
 1. $$\lim (a_n + b_n) = L + M$$,
-2. 임의의 상수 $$c$$에 대해 $$\lim c\,a_n = cL$$,
+2. 임의의 상수 $$c$$에 대해 $$\lim c a_n = cL$$,
 3. $$\lim a_n b_n = LM$$,
 4. $$M \neq 0$$이고 모든 $$n$$에 대해 $$b_n \neq 0$$이면 $$\lim a_n/b_n = L/M$$
 

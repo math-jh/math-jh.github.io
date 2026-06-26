@@ -132,7 +132,7 @@ d(x_m, x_n) &\leq d(x_m, x) + d(x, x_n) \\
 
 거리공간의 풍부함은 같은 바탕집합에 서로 다른 거리를 줄 수 있다는 데 있다. 유클리드 거리 외에도 $$\mathbb{R}^n$$에는 좌표의 절댓값 합 $$d_1(x, y) = \sum_{i=1}^n \lvert x_i - y_i\rvert$$이나 최대 절댓값 $$d_\infty(x, y) = \max_{1 \leq i \leq n} \lvert x_i - y_i\rvert$$로도 거리를 줄 수 있다. 각 좌표에서 실수의 삼각부등식 $$\lvert x_i - z_i\rvert \leq \lvert x_i - y_i\rvert + \lvert y_i - z_i\rvert$$이 성립하므로 양변을 더하면 $$d_1$$이, 최댓값을 취하면 $$d_\infty$$가 삼각부등식을 물려받는다. 이 세 거리는 같은 점에서 서로 다른 값을 줄 수 있지만, 임의의 $$x, y$$에서 부등식 사슬
 
-$$d_\infty(x, y) \leq d_2(x, y) \leq d_1(x, y) \leq n\, d_\infty(x, y)$$
+$$d_\infty(x, y) \leq d_2(x, y) \leq d_1(x, y) \leq n  d_\infty(x, y)$$
 
 가 성립하여 서로를 상수배로 누른다. 따라서 한 거리로 수렴하는 점열은 나머지 두 거리로도 수렴하며, 세 거리는 $$\mathbb{R}^n$$에 같은 위상을 준다.
 
@@ -188,7 +188,7 @@ Y \text{가 닫힘},\ y_n \in Y &\implies x \in Y
 
 이 명제는 닫힌구간 $$[a,b]$$가 완비라는 사실을 즉시 설명한다. $$[a,b]$$는 완비공간 $$\mathbb{R}$$의 닫힌 부분집합이므로 [명제 9](#prop9)에 의해 완비이고, [예시 8](#ex8)에서 본 $$(0,1)$$과의 차이가 바로 닫힘 여부에 있었던 것이다. 같은 논리로 $$\mathbb{R}^n$$의 닫힌 공이나 구면처럼 닫힌 집합들은 모두 완비 거리공간이 된다.
 
-완비성이 마련해 주는 가장 중요한 도구는 *축약사상<sub>contraction</sub>*의 고정점이다. 거리를 일정 비율 $$\lambda < 1$$로 줄이는 사상 $$T$$, 곧 $$d(Tx, Ty) \leq \lambda\, d(x, y)$$를 만족하는 사상을 한 점에서 반복하면, 완비성 덕분에 그 반복열이 Cauchy가 되어 유일한 고정점으로 수렴한다. 가령 $$\mathbb{R}$$ 위의 $$T(x) = x/2 + 1$$은 비율 $$\lambda = 1/2$$의 축약사상이고, 그 반복은 유일한 고정점 $$2 = T(2)$$로 수렴한다. 이 현상을 일반화한 것이 완비 거리공간 위의 [§미분방정식의 존재성과 유일성, ⁋정리 2](/ko/math/analysis/existence_uniqueness_ode#thm2)이며, $$\mathbb{R}$$의 완비성이 수렴을 보장하는 핵심이었듯 완비성이 그 무대가 된다 ([§미분방정식의 존재성과 유일성, ⁋정리 2](/ko/math/analysis/existence_uniqueness_ode#thm2)).
+완비성이 마련해 주는 가장 중요한 도구는 *축약사상<sub>contraction</sub>*의 고정점이다. 거리를 일정 비율 $$\lambda < 1$$로 줄이는 사상 $$T$$, 곧 $$d(Tx, Ty) \leq \lambda  d(x, y)$$를 만족하는 사상을 한 점에서 반복하면, 완비성 덕분에 그 반복열이 Cauchy가 되어 유일한 고정점으로 수렴한다. 가령 $$\mathbb{R}$$ 위의 $$T(x) = x/2 + 1$$은 비율 $$\lambda = 1/2$$의 축약사상이고, 그 반복은 유일한 고정점 $$2 = T(2)$$로 수렴한다. 이 현상을 일반화한 것이 완비 거리공간 위의 [§미분방정식의 존재성과 유일성, ⁋정리 2](/ko/math/analysis/existence_uniqueness_ode#thm2)이며, $$\mathbb{R}$$의 완비성이 수렴을 보장하는 핵심이었듯 완비성이 그 무대가 된다 ([§미분방정식의 존재성과 유일성, ⁋정리 2](/ko/math/analysis/existence_uniqueness_ode#thm2)).
 
 ## 위상으로의 연결
 

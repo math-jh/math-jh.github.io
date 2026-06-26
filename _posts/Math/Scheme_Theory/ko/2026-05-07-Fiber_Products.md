@@ -5,7 +5,6 @@ excerpt: "Category of S-schemes에서의 fiber product 정의와 존재성"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/fiber_products
-drift_needed: true
 sidebar: 
     nav: "scheme_theory-ko"
 

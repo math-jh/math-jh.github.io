@@ -34,7 +34,7 @@ Meanwhile, by linearity a polynomial is differentiated term by term, so this als
 
 <ins id="prop1">**Proposition 1 (Term-by-Term Differentiation of Power Series)**</ins> If a power series $$f(x) = \sum_{n=0}^\infty c_n x^n$$ has radius of convergence $$R > 0$$, then $$f$$ is differentiable for $$\lvert x\rvert < R$$ and
 
-$$f'(x) = \sum_{n=1}^\infty n\,c_n x^{n-1}$$
+$$f'(x) = \sum_{n=1}^\infty n c_n x^{n-1}$$
 
 and this series also has radius of convergence $$R$$.
 
@@ -48,7 +48,7 @@ Before examining differentiation rules in earnest, we derive the derivatives of 
 
 First, the exponential function was defined in [§Power Series, ⁋Example 4](/en/math/calculus/power_series#ex4) by $$e^x = \sum_{n\geq 0} x^n/n!$$. Applying [Proposition 1](#prop1) now, its derivative is the sum of the term-by-term derivatives
 
-$$(e^x)' = \sum_{n=1}^\infty n\,\frac{x^{n-1}}{n!} = \sum_{n=1}^\infty \frac{x^{n-1}}{(n-1)!} = \sum_{m=0}^\infty \frac{x^m}{m!} = e^x$$
+$$(e^x)' = \sum_{n=1}^\infty n \frac{x^{n-1}}{n!} = \sum_{n=1}^\infty \frac{x^{n-1}}{(n-1)!} = \sum_{m=0}^\infty \frac{x^m}{m!} = e^x$$
 
 so the exponential function is invariant under differentiation. In high school, this result was obtained from the limit
 
@@ -83,7 +83,7 @@ We now state differentiation rules that apply to general forms. In [§Derivative
 
 <ins id="prop3">**Proposition 3 (Product Rule)**</ins> If $$f, g$$ are differentiable at $$a$$, then $$fg$$ is also differentiable at $$a$$ and
 
-$$(fg)'(a) = f'(a)\,g(a) + f(a)\,g'(a)$$
+$$(fg)'(a) = f'(a) g(a) + f(a) g'(a)$$
 
 </div>
 
@@ -92,7 +92,7 @@ $$(fg)'(a) = f'(a)\,g(a) + f(a)\,g'(a)$$
 
 Adding and subtracting the same term in the difference quotient gives
 
-$$\frac{f(a+h)g(a+h) - f(a)g(a)}{h} = \frac{f(a+h)-f(a)}{h}\,g(a+h) + f(a)\,\frac{g(a+h)-g(a)}{h}$$
+$$\frac{f(a+h)g(a+h) - f(a)g(a)}{h} = \frac{f(a+h)-f(a)}{h} g(a+h) + f(a) \frac{g(a+h)-g(a)}{h}$$
 
 As $$h \to 0$$, the difference quotient in the first term converges to $$f'(a)$$, $$g(a+h)$$ converges to $$g(a)$$ by continuity of $$g$$ ([§Derivatives, ⁋Proposition 2](/en/math/calculus/derivatives#prop2)), and the difference quotient in the second term converges to $$g'(a)$$, so by [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5) the sum converges to $$f'(a)g(a) + f(a)g'(a)$$.
 
@@ -104,7 +104,7 @@ The most widely used rule is the differentiation of composite functions.
 
 <ins id="thm4">**Theorem 4 (Chain Rule)**</ins> If $$f$$ is differentiable at $$a$$ and $$g$$ is differentiable at $$b = f(a)$$, then the composition $$g \circ f$$ is also differentiable at $$a$$ and
 
-$$(g \circ f)'(a) = g'(f(a))\,f'(a)$$
+$$(g \circ f)'(a) = g'(f(a)) f'(a)$$
 
 </div>
 
@@ -117,7 +117,7 @@ $$\varphi(y) = \begin{cases} \frac{g(y) - g(b)}{y - b}, & y \neq b,\\[1mm] g'(b)
 
 By the definition of differentiability, $$\varphi$$ is continuous at $$b$$, and for all $$y$$ we have $$g(y) - g(b) = \varphi(y)(y - b)$$. Substituting $$y = f(a+h)$$ gives
 
-$$\frac{g(f(a+h)) - g(f(a))}{h} = \varphi(f(a+h))\,\frac{f(a+h) - f(a)}{h}$$
+$$\frac{g(f(a+h)) - g(f(a))}{h} = \varphi(f(a+h)) \frac{f(a+h) - f(a)}{h}$$
 
 and as $$h \to 0$$, by continuity of $$f$$ we have $$\varphi(f(a+h)) \to \varphi(b) = g'(b)$$, while the second factor converges to $$f'(a)$$, so the limit is $$g'(f(a))f'(a)$$.
 
@@ -129,7 +129,7 @@ The quotient rule now follows as a corollary of the product rule and the chain r
 
 <ins id="cor5">**Corollary 5 (Quotient Rule)**</ins> If $$f, g$$ are differentiable at $$a$$ and $$g(a) \neq 0$$, then $$f/g$$ is also differentiable at $$a$$ and
 
-$$\left(\frac{f}{g}\right)'(a) = \frac{f'(a)\,g(a) - f(a)\,g'(a)}{g(a)^2}$$
+$$\left(\frac{f}{g}\right)'(a) = \frac{f'(a) g(a) - f(a) g'(a)}{g(a)^2}$$
 
 </div>
 
@@ -213,7 +213,7 @@ The second application is a result more fitting to the category of calculus, act
 
 <ins id="ex9">**Example 9 (Various Differentiation Rules)**</ins> When an equation determines $$y$$ as a function of $$x$$, to find $$y'$$ it is often inefficient or leads to an unclean derivative to obtain an explicit expression of the form $$y=...$$. In such situations, viewing $$y$$ as a function of $$x$$ and differentiating both sides, then solving for $$y'$$, is called *implicit differentiation*. For example, differentiating both sides of the unit circle $$x^2 + y^2 = 1$$ gives
 
-$$2x + 2y\,y' = 0$$
+$$2x + 2y y' = 0$$
 
 so we obtain $$y' = -x/y$$, and thus we can find the slope of the tangent line at a given point $$(x_0,y_0)$$.
 

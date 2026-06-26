@@ -24,7 +24,7 @@ published: false
 
 <ins id="def1">**정의 1**</ins> $$n$$차 벡터값 함수 $$y(t) \in \mathbb{R}^n$$에 대한 *선형 미분방정식계*는
 
-$$y'(t) = A(t)\,y(t) + b(t)$$
+$$y'(t) = A(t) y(t) + b(t)$$
 
 꼴이다. 여기서 $$A(t)$$는 $$n\times n$$ 행렬값, $$b(t)$$는 벡터값 연속함수이다. $$b \equiv 0$$이면 *제차*라 한다.
 
@@ -44,14 +44,14 @@ $$y'(t) = A(t)\,y(t) + b(t)$$
 $$\begin{aligned}
 \lvert f(t, y_1) - f(t, y_2)\rvert &= \lvert A(t)y_1 - A(t)y_2\rvert \\
 &= \lvert A(t)(y_1 - y_2)\rvert \\
-&\leq \lVert A(t)\rVert\,\lvert y_1 - y_2\rvert
+&\leq \lVert A(t)\rVert \lvert y_1 - y_2\rvert
 \end{aligned}$$
 
 이 성립한다. 여기서 $$\lVert A(t)\rVert$$은 행렬의 작용소노름이다. $$A(t)$$의 각 성분이 $$I$$에서 연속이므로 $$t \mapsto \lVert A(t)\rVert$$도 연속이고, 따라서 $$I$$의 임의의 컴팩트 부분구간에서 유계이다 ([§연속함수의 성질, ⁋따름정리 2](/ko/math/analysis/continuous_functions#cor2)). 그 유계값을 립시츠 상수로 삼으면 $$f$$는 $$y$$에 대해 균일하게 립시츠 조건을 만족하므로, [§미분방정식의 존재성과 유일성, ⁋정리 4](/ko/math/analysis/existence_uniqueness_ode#thm4) 정리 ([§미분방정식의 존재성과 유일성, ⁋정리 4](/ko/math/analysis/existence_uniqueness_ode#thm4))에 의해 국소해가 존재한다.
 
 전역으로의 확장이 핵심인데, 비선형의 경우와 달리 립시츠 상수가 해의 크기 $$\lvert y\rvert$$에 전혀 의존하지 않는다는 점이 결정적이다. 실제로 해가 존재하는 구간에서 $$\lvert y(t)\rvert$$의 성장은
 
-$$\frac{d}{dt}\lvert y\rvert \leq \lvert y'\rvert = \lvert A(t)y + b(t)\rvert \leq \lVert A(t)\rVert\,\lvert y\rvert + \lvert b(t)\rvert$$
+$$\frac{d}{dt}\lvert y\rvert \leq \lvert y'\rvert = \lvert A(t)y + b(t)\rvert \leq \lVert A(t)\rVert \lvert y\rvert + \lvert b(t)\rvert$$
 
 로 통제되고, 그뢴발 부등식을 적용하면 $$\lvert y(t)\rvert$$이 컴팩트 부분구간에서 유계로 머문다. 따라서 해가 구간의 끝점으로 다가가도 발산하지 않으므로 $$I$$ 전체로 연장된다.
 
@@ -87,7 +87,7 @@ $$e^{A + B} = e^A e^B$$
 
 행렬지수를 멱급수로 항별 미분하면
 
-$$\frac{d}{dt}e^{tA} = \frac{d}{dt}\sum_{k=0}^\infty \frac{t^k A^k}{k!} = \sum_{k=1}^\infty \frac{t^{k-1}A^k}{(k-1)!} = A\sum_{j=0}^\infty \frac{t^j A^j}{j!} = A\,e^{tA}$$
+$$\frac{d}{dt}e^{tA} = \frac{d}{dt}\sum_{k=0}^\infty \frac{t^k A^k}{k!} = \sum_{k=1}^\infty \frac{t^{k-1}A^k}{(k-1)!} = A\sum_{j=0}^\infty \frac{t^j A^j}{j!} = A e^{tA}$$
 
 이므로 (항별 미분의 정당성은 멱급수의 균등수렴에서 나온다) 다음을 얻는다.
 
@@ -95,7 +95,7 @@ $$\frac{d}{dt}e^{tA} = \frac{d}{dt}\sum_{k=0}^\infty \frac{t^k A^k}{k!} = \sum_{
 
 <ins id="thm4">**정리 4**</ins> 상수계수 제차계 $$y' = Ay$$, $$y(0) = y_0$$의 유일한 해는
 
-$$y(t) = e^{tA}\,y_0$$
+$$y(t) = e^{tA} y_0$$
 
 이다.
 
@@ -106,11 +106,11 @@ $$y(t) = e^{tA}\,y_0$$
 
 $$y(t) = e^{tA}y_0$$이 해가 됨을 직접 확인한다. 초기 조건은
 
-$$y(0) = e^{0\cdot A}\,y_0 = I\,y_0 = y_0$$
+$$y(0) = e^{0\cdot A} y_0 = I y_0 = y_0$$
 
 으로 성립하고, 앞서 구한 미분 공식 $$(d/dt)e^{tA} = A e^{tA}$$를 쓰면
 
-$$y'(t) = \frac{d}{dt}\bigl(e^{tA}y_0\bigr) = A e^{tA}y_0 = A\,y(t)$$
+$$y'(t) = \frac{d}{dt}\bigl(e^{tA}y_0\bigr) = A e^{tA}y_0 = A y(t)$$
 
 이므로 $$y' = Ay$$를 만족한다. 따라서 $$y(t) = e^{tA}y_0$$은 해이며, 상수계수계도 [정리 2](#thm2)의 가정($$A(t) \equiv A$$가 연속, $$b \equiv 0$$)을 충족하므로 그 유일성에 의해 이것이 유일한 해이다.
 
@@ -120,7 +120,7 @@ $$y'(t) = \frac{d}{dt}\bigl(e^{tA}y_0\bigr) = A e^{tA}y_0 = A\,y(t)$$
 
 행렬지수 $$e^{tA}$$를 무한급수로 직접 더하는 일은 실용적이지 않다. 다행히 그 계산은 $$A$$의 고유구조로 완전히 환원된다. $$A$$가 고윳값 $$\lambda$$와 고유벡터 $$v$$를 가지면 $$A v = \lambda v$$, $$A^k v = \lambda^k v$$이므로
 
-$$e^{tA}v = \sum_{k=0}^\infty \frac{t^k A^k}{k!}v = \sum_{k=0}^\infty \frac{t^k \lambda^k}{k!}v = e^{\lambda t}\,v$$
+$$e^{tA}v = \sum_{k=0}^\infty \frac{t^k A^k}{k!}v = \sum_{k=0}^\infty \frac{t^k \lambda^k}{k!}v = e^{\lambda t} v$$
 
 가 되어, $$y(t) = e^{\lambda t}v$$가 곧 해이다. 즉 고유벡터 방향으로는 행렬지수가 스칼라 지수로 단순화된다.
 
@@ -128,7 +128,7 @@ $$e^{tA}v = \sum_{k=0}^\infty \frac{t^k A^k}{k!}v = \sum_{k=0}^\infty \frac{t^k 
 
 <ins id="prop5">**명제 5**</ins> $$A$$가 대각화되어 $$A = P D P^{-1}$$ ($$D = \diag(\lambda_1, \dots, \lambda_n)$$) 이면
 
-$$e^{tA} = P\,e^{tD}\,P^{-1}, \qquad e^{tD} = \diag\bigl(e^{\lambda_1 t}, \dots, e^{\lambda_n t}\bigr)$$
+$$e^{tA} = P e^{tD} P^{-1}, \qquad e^{tD} = \diag\bigl(e^{\lambda_1 t}, \dots, e^{\lambda_n t}\bigr)$$
 
 이다.
 
@@ -141,7 +141,7 @@ $$A^k = (PDP^{-1})^k = P D^k P^{-1}$$이므로 (중간의 $$P^{-1}P$$가 모두 
 
 $$\begin{aligned}
 e^{tA} &= \sum_{k=0}^\infty \frac{t^k A^k}{k!} = \sum_{k=0}^\infty \frac{t^k P D^k P^{-1}}{k!} \\
-&= P\left(\sum_{k=0}^\infty \frac{t^k D^k}{k!}\right)P^{-1} = P\,e^{tD}\,P^{-1}
+&= P\left(\sum_{k=0}^\infty \frac{t^k D^k}{k!}\right)P^{-1} = P e^{tD} P^{-1}
 \end{aligned}$$
 
 이다. 대각행렬의 거듭제곱은 성분별 거듭제곱이므로 $$D^k = \diag(\lambda_1^k, \dots, \lambda_n^k)$$이고, 따라서 $$e^{tD}$$의 $$i$$번째 대각성분은 $$\sum_k t^k\lambda_i^k/k! = e^{\lambda_i t}$$이다.
@@ -150,7 +150,7 @@ e^{tA} &= \sum_{k=0}^\infty \frac{t^k A^k}{k!} = \sum_{k=0}^\infty \frac{t^k P D
 
 따라서 $$A$$가 대각화되면, 즉 고유벡터들이 기저를 이루면, 해는 $$e^{\lambda_i t}$$ 꼴의 항들의 선형결합으로 명시적으로 적힌다. 구체적으로 초기값 $$y_0$$을 고유벡터 기저로 $$y_0 = \sum_i c_i v_i$$로 전개하면
 
-$$y(t) = e^{tA}y_0 = \sum_{i=1}^n c_i\,e^{\lambda_i t}\,v_i$$
+$$y(t) = e^{tA}y_0 = \sum_{i=1}^n c_i e^{\lambda_i t} v_i$$
 
 가 되어, 각 고유모드가 자신의 고윳값에 따라 독립적으로 지수증감한다.
 
@@ -166,7 +166,7 @@ $$y(t) = e^{tA}y_0 = \sum_{i=1}^n c_i\,e^{\lambda_i t}\,v_i$$
 
 $$\begin{aligned}
 e^{tA} &= \sum_{k=0}^\infty \frac{t^k A^k}{k!} = \left(\sum_{m=0}^\infty \frac{(-1)^m (\omega t)^{2m}}{(2m)!}\right)I + \left(\sum_{m=0}^\infty \frac{(-1)^m (\omega t)^{2m+1}}{(2m+1)!}\right)\frac{A}{\omega} \\
-&= \cos(\omega t)\,I + \sin(\omega t)\,\frac{A}{\omega} \\
+&= \cos(\omega t) I + \sin(\omega t) \frac{A}{\omega} \\
 &= \begin{pmatrix} \cos\omega t & -\sin\omega t \\ \sin\omega t & \cos\omega t \end{pmatrix}
 \end{aligned}$$
 
@@ -181,11 +181,11 @@ e^{tA} &= \sum_{k=0}^\infty \frac{t^k A^k}{k!} = \left(\sum_{m=0}^\infty \frac{(
 <ins id="ex7">**예시 7 (결손 행렬과 조르당 블록)**</ins> $$A = \begin{pmatrix} \lambda & 1 \\ 0 & \lambda \end{pmatrix}$$는 고윳값 $$\lambda$$를 중복으로 가지나 고유벡터가 일차원뿐이라 대각화되지 않는다. $$A = \lambda I + N$$, $$N = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}$$로 쓰면 $$\lambda I$$와 $$N$$이 교환하고 $$N^2 = 0$$이므로
 
 $$\begin{aligned}
-e^{tA} &= e^{t\lambda I}\,e^{tN} = e^{\lambda t}I\cdot\bigl(I + tN\bigr) \\
-&= e^{\lambda t}\begin{pmatrix} 1 & t \\ 0 & 1 \end{pmatrix} = \begin{pmatrix} e^{\lambda t} & t\,e^{\lambda t} \\ 0 & e^{\lambda t} \end{pmatrix}
+e^{tA} &= e^{t\lambda I} e^{tN} = e^{\lambda t}I\cdot\bigl(I + tN\bigr) \\
+&= e^{\lambda t}\begin{pmatrix} 1 & t \\ 0 & 1 \end{pmatrix} = \begin{pmatrix} e^{\lambda t} & t e^{\lambda t} \\ 0 & e^{\lambda t} \end{pmatrix}
 \end{aligned}$$
 
-이다. 멱영부분 $$N$$ 때문에 급수가 유한항에서 끊겨 $$e^{tN} = I + tN$$이 되고, 그 결과 비대각 성분에 $$t\,e^{\lambda t}$$라는 다항식 곱하기 지수 항이 나타난다. 이것이 일반적으로 결손 고윳값이 해에 $$t^j e^{\lambda t}$$ 꼴을 들여오는 메커니즘이다.
+이다. 멱영부분 $$N$$ 때문에 급수가 유한항에서 끊겨 $$e^{tN} = I + tN$$이 되고, 그 결과 비대각 성분에 $$t e^{\lambda t}$$라는 다항식 곱하기 지수 항이 나타난다. 이것이 일반적으로 결손 고윳값이 해에 $$t^j e^{\lambda t}$$ 꼴을 들여오는 메커니즘이다.
 
 </div>
 
@@ -197,7 +197,7 @@ e^{tA} &= e^{t\lambda I}\,e^{tN} = e^{\lambda t}I\cdot\bigl(I + tN\bigr) \\
 
 <ins id="prop8">**명제 8 (매개변수변환 공식)**</ins> 상수계수 비제차계 $$y' = Ay + b(t)$$, $$y(t_0) = y_0$$의 유일한 해는
 
-$$y(t) = e^{(t - t_0)A}\,y_0 + \int_{t_0}^{t} e^{(t - s)A}\,b(s)\,ds$$
+$$y(t) = e^{(t - t_0)A} y_0 + \int_{t_0}^{t} e^{(t - s)A} b(s) ds$$
 
 이다.
 
@@ -214,13 +214,13 @@ $$\begin{aligned}
 
 여기서 $$(d/dt)e^{-tA} = -A e^{-tA}$$를 썼다. 이제 양변을 $$t_0$$에서 $$t$$까지 적분하면
 
-$$e^{-tA}y(t) - e^{-t_0 A}y_0 = \int_{t_0}^t e^{-sA}b(s)\,ds$$
+$$e^{-tA}y(t) - e^{-t_0 A}y_0 = \int_{t_0}^t e^{-sA}b(s) ds$$
 
 이고, 양변에 왼쪽에서 $$e^{tA}$$를 곱한 뒤 $$e^{tA}e^{-t_0 A} = e^{(t-t_0)A}$$, $$e^{tA}e^{-sA} = e^{(t-s)A}$$ ($$tA$$와 $$-sA$$가 교환하므로) 를 쓰면 주어진 공식을 얻는다.
 
 </details>
 
-우변의 첫 항 $$e^{(t-t_0)A}y_0$$은 제차해(초기조건을 나르는 부분)이고, 적분항은 강제항 $$b(s)$$가 $$s$$ 시점부터 $$t$$까지 행렬지수로 전파되어 누적된 *특수해*이다. 이는 스칼라 일차방정식 $$y' = ay + b(t)$$의 적분인자 풀이를 행렬로 그대로 들어올린 것이다. 강제항이 제차해와 같은 지수율을 가질 때, 가령 $$y' = -y + e^{-t}$$에서 적분 $$\int_0^t e^{-(t-s)}e^{-s}\,ds = t\,e^{-t}$$가 보이듯, 해에 다항식 인자가 곱해진 *공명* 항 $$t\,e^{-t}$$이 생기는 것도 이 공식이 직접 설명한다.
+우변의 첫 항 $$e^{(t-t_0)A}y_0$$은 제차해(초기조건을 나르는 부분)이고, 적분항은 강제항 $$b(s)$$가 $$s$$ 시점부터 $$t$$까지 행렬지수로 전파되어 누적된 *특수해*이다. 이는 스칼라 일차방정식 $$y' = ay + b(t)$$의 적분인자 풀이를 행렬로 그대로 들어올린 것이다. 강제항이 제차해와 같은 지수율을 가질 때, 가령 $$y' = -y + e^{-t}$$에서 적분 $$\int_0^t e^{-(t-s)}e^{-s} ds = t e^{-t}$$가 보이듯, 해에 다항식 인자가 곱해진 *공명* 항 $$t e^{-t}$$이 생기는 것도 이 공식이 직접 설명한다.
 
 마지막으로, 고윳값의 실수부가 해의 장기거동을 어떻게 지배하는지를 정리해 둔다.
 
@@ -235,7 +235,7 @@ $$e^{-tA}y(t) - e^{-t_0 A}y_0 = \int_{t_0}^t e^{-sA}b(s)\,ds$$
 
 조르당 표준형으로 $$e^{tA}$$의 각 성분은 유한 개의 $$t^j e^{\lambda t}$$ 꼴 항의 합이며, 여기서 $$\lambda$$는 고윳값, $$j$$는 해당 조르당 블록 크기 미만의 음이 아닌 정수이다. 각 항의 크기는
 
-$$\lvert t^j e^{\lambda t}\rvert = t^j e^{(\Real\lambda)\,t}$$
+$$\lvert t^j e^{\lambda t}\rvert = t^j e^{(\Real\lambda) t}$$
 
 인데, 가정에서 $$\Real\lambda < 0$$이므로 지수의 감쇠가 다항식 $$t^j$$의 증가를 압도하여 $$t \to \infty$$에서 $$0$$으로 간다. 따라서 $$e^{tA} \to 0$$이고, 임의의 $$y_0$$에 대해 $$y(t) = e^{tA}y_0 \to 0$$이다.
 

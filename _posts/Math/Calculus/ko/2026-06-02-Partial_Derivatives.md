@@ -9,7 +9,7 @@ sidebar:
     nav: "calculus-ko"
 
 date: 2026-06-02
-weight: 15
+weight: 13
 published: false
 ---
 
@@ -61,7 +61,7 @@ $$\lim_{h \to 0}\frac{f(a + h) - f(a) - L\cdot h}{\lVert h\rVert} = 0$$
 
 <ins id="thm4">**정리 4 (다변수 연쇄법칙)**</ins> $$f$$가 미분가능하고 $$x(t) = (x_1(t), \ldots, x_n(t))$$가 미분가능한 곡선이면, 합성 $$t \mapsto f(x(t))$$도 미분가능하고
 
-$$\frac{d}{dt} f(x(t)) = \nabla f(x(t)) \cdot x'(t) = \sum_{i=1}^n \frac{\partial f}{\partial x_i}\,\frac{dx_i}{dt}$$
+$$\frac{d}{dt} f(x(t)) = \nabla f(x(t)) \cdot x'(t) = \sum_{i=1}^n \frac{\partial f}{\partial x_i} \frac{dx_i}{dt}$$
 
 이다.
 
@@ -80,7 +80,7 @@ $$\frac{d}{dt} f(x(t)) = \nabla f(x(t)) \cdot x'(t) = \sum_{i=1}^n \frac{\partia
 
 <div class="proposition" markdown="1">
 
-<ins id="thm5">**정리 5 (클레로)**</ins> 두 혼합편미분 $$\frac{\partial^2 f}{\partial x\,\partial y}$$와 $$\frac{\partial^2 f}{\partial y\,\partial x}$$가 모두 존재하고 한 점 근방에서 연속이면, 그 점에서 둘이 같다.
+<ins id="thm5">**정리 5 (클레로)**</ins> 두 혼합편미분 $$\frac{\partial^2 f}{\partial x \partial y}$$와 $$\frac{\partial^2 f}{\partial y \partial x}$$가 모두 존재하고 한 점 근방에서 연속이면, 그 점에서 둘이 같다.
 
 </div>
 
@@ -100,7 +100,7 @@ $$\frac{d}{dt} f(x(t)) = \nabla f(x(t)) \cdot x'(t) = \sum_{i=1}^n \frac{\partia
 미분가능성에 의해 임의의 단위벡터 $$u$$에 대해 $$D_u f(a) = \nabla f(a)\cdot u$$이다. 코시–슈바르츠 부등식으로
 
 $$\begin{aligned}
-D_u f(a) = \nabla f(a)\cdot u &\leq \lVert\nabla f(a)\rVert\,\lVert u\rVert \\
+D_u f(a) = \nabla f(a)\cdot u &\leq \lVert\nabla f(a)\rVert \lVert u\rVert \\
 &= \lVert\nabla f(a)\rVert
 \end{aligned}$$
 
@@ -114,7 +114,7 @@ D_u f(a) = \nabla f(a)\cdot u &\leq \lVert\nabla f(a)\rVert\,\lVert u\rVert \\
 
 한 변수에서 극값이 임계점에서 일어났듯, 다변수에서도 미분가능한 함수의 극값은 각 편미분이 $$0$$이 되어야 하므로 $$\nabla f = 0$$인 *임계점*에서만 일어난다. 임계점이 극대·극소·안장점 중 무엇인지를 가르는 것은 그 점에서의 이차 거동이다. 미분가능한 함수의 임계점 근방 전개
 
-$$f(a + h) \approx f(a) + \frac{1}{2}\, h^\top H\, h, \qquad H = \begin{pmatrix} f_{xx} & f_{xy} \\ f_{yx} & f_{yy}\end{pmatrix}$$
+$$f(a + h) \approx f(a) + \frac{1}{2}  h^\top H  h, \qquad H = \begin{pmatrix} f_{xx} & f_{xy} \\ f_{yx} & f_{yy}\end{pmatrix}$$
 
 에서 일차항이 $$\nabla f(a) = 0$$으로 사라지므로, 증감은 이차형식 $$h^\top H h$$의 부호가 결정한다. 이 이차형식이 양으로 정부호이면 극소, 음으로 정부호이면 극대, 부호가 갈리면 *안장점*이다.
 
@@ -131,7 +131,7 @@ $$f(a + h) \approx f(a) + \frac{1}{2}\, h^\top H\, h, \qquad H = \begin{pmatrix}
 
 $$\begin{aligned}
 Q(h_1, h_2) &= f_{xx}h_1^2 + 2 f_{xy}h_1 h_2 + f_{yy}h_2^2 \\
-&= f_{xx}\!\left(h_1 + \frac{f_{xy}}{f_{xx}}h_2\right)^2 + \frac{f_{xx}f_{yy} - f_{xy}^2}{f_{xx}}\,h_2^2
+&= f_{xx} \left(h_1 + \frac{f_{xy}}{f_{xx}}h_2\right)^2 + \frac{f_{xx}f_{yy} - f_{xy}^2}{f_{xx}} h_2^2
 \end{aligned}$$
 
 로 정리된다. $$D = f_{xx}f_{yy} - f_{xy}^2 > 0$$이면 둘째 항의 계수 $$D/f_{xx}$$가 $$f_{xx}$$와 같은 부호이므로 두 항의 부호가 일치해, $$f_{xx} > 0$$이면 $$Q > 0$$ (정부호, 극소), $$f_{xx} < 0$$이면 $$Q < 0$$ (음정부호, 극대)이다. $$D < 0$$이면 두 항의 부호가 반대라 $$Q$$가 양·음의 값을 모두 가지므로 안장점이다.
