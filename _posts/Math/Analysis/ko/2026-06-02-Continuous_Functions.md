@@ -60,7 +60,7 @@ $$M = \sup f(K)$$
 
 가 존재한다 ([§실수의 완비성, ⁋정의 2](/ko/math/analysis/completeness_of_reals#def2)). 상한의 근사 성질로부터 각 $$n$$에 대해
 
-$$M - \tfrac1n < y_n \leq M, \qquad y_n \in f(K)$$
+$$M - \frac1n < y_n \leq M, \qquad y_n \in f(K)$$
 
 인 $$y_n$$을 고를 수 있고, 따라서 $$y_n \to M$$이다. $$f(K)$$가 닫혀 있으므로 그 극한 $$M$$도 $$f(K)$$의 원소이다. 즉 $$M = f(x_{\max})$$인 $$x_{\max} \in K$$가 있어 $$M$$이 최댓값이다. 하한 $$m = \inf f(K)$$에 대해서도 같은 논증을 적용하면 $$m = f(x_{\min})$$인 $$x_{\min} \in K$$가 있어 최솟값이 실현된다. 마지막 주장은 닫힌구간 $$[a,b]$$가 닫혀 있고 유계여서 점렬컴팩트이므로 곧바로 따른다.
 
@@ -80,11 +80,11 @@ $$M - \tfrac1n < y_n \leq M, \qquad y_n \in f(K)$$
 
 정의 1의 연속과의 차이는 한정사의 순서에 있다. 점별 연속은 $$\varepsilon$$과 점 $$a$$를 먼저 받은 뒤 $$\delta$$를 고르는 반면, 균등연속은 $$\varepsilon$$만 받고 모든 점에 동시에 통하는 $$\delta$$를 고른다. 기호로 적으면, 점별 연속이
 
-$$\forall \varepsilon\, \forall a\, \exists \delta\, \forall x : \bigl(d_X(x, a) < \delta \implies d_Y(f(x), f(a)) < \varepsilon\bigr)$$
+$$\forall \varepsilon  \forall a  \exists \delta  \forall x : \bigl(d_X(x, a) < \delta \implies d_Y(f(x), f(a)) < \varepsilon\bigr)$$
 
 인 데 비해, 균등연속은 $$\delta$$를 $$a$$보다 앞으로 끌어내어
 
-$$\forall \varepsilon\, \exists \delta\, \forall x\, \forall x' : \bigl(d_X(x, x') < \delta \implies d_Y(f(x), f(x')) < \varepsilon\bigr)$$
+$$\forall \varepsilon  \exists \delta  \forall x  \forall x' : \bigl(d_X(x, x') < \delta \implies d_Y(f(x), f(x')) < \varepsilon\bigr)$$
 
 이다. $$\exists \delta$$가 $$\forall a$$보다 안쪽에 있는지 바깥쪽에 있는지가 두 개념을 가른다. 균등연속이면 분명히 연속이지만, 그 역은 일반적으로 성립하지 않는다.
 
@@ -99,11 +99,11 @@ $$\forall \varepsilon\, \exists \delta\, \forall x\, \forall x' : \bigl(d_X(x, x
 
 $$f$$가 $$K$$에서 연속이지만 균등연속이 아니라 하자. 그러면 어떤 $$\varepsilon > 0$$에 대해, 모든 $$\delta = 1/n$$이 실패하여
 
-$$d_X(x_n, x_n') < \tfrac1n \quad\text{이면서}\quad d_Y\bigl(f(x_n), f(x_n')\bigr) \geq \varepsilon$$
+$$d_X(x_n, x_n') < \frac1n \quad\text{이면서}\quad d_Y\bigl(f(x_n), f(x_n')\bigr) \geq \varepsilon$$
 
 인 두 점열 $$(x_n), (x_n')$$이 있다. $$K$$가 점렬컴팩트이므로 $$x_{n_k} \to x \in K$$인 부분수열이 있고, 짝지어진 점 $$x_{n_k}'$$도
 
-$$d_X(x_{n_k}', x) \leq d_X(x_{n_k}', x_{n_k}) + d_X(x_{n_k}, x) < \tfrac{1}{n_k} + d_X(x_{n_k}, x) \longrightarrow 0$$
+$$d_X(x_{n_k}', x) \leq d_X(x_{n_k}', x_{n_k}) + d_X(x_{n_k}, x) < \frac{1}{n_k} + d_X(x_{n_k}, x) \longrightarrow 0$$
 
 이므로 같은 $$x$$로 수렴한다. 그런데 연속성과 [§함수의 극한과 연속, ⁋명제 2](/ko/math/analysis/limits_and_continuity#prop2)에 의해
 
@@ -155,7 +155,7 @@ $$\lvert f(x_n) - f(x_n') \rvert = \lvert n - (n+1) \rvert = 1$$
 
 같은 현상은 $$g : \mathbb{R} \to \mathbb{R}$$, $$g(x) = x^2$$에서도 나타난다. $$x_n = n + 1/n$$, $$x_n' = n$$이면 $$\lvert x_n - x_n'\rvert = 1/n \to 0$$이지만
 
-$$\lvert g(x_n) - g(x_n') \rvert = \Bigl(n + \tfrac1n\Bigr)^2 - n^2 = 2 + \frac{1}{n^2} > 2$$
+$$\lvert g(x_n) - g(x_n') \rvert = \Bigl(n + \frac1n\Bigr)^2 - n^2 = 2 + \frac{1}{n^2} > 2$$
 
 이어서 $$\varepsilon = 2$$가 좌절된다. 여기서는 정의역이 유계가 아니어서 컴팩트성이 깨진다.
 
@@ -165,7 +165,7 @@ $$\lvert g(x_n) - g(x_n') \rvert = \Bigl(n + \tfrac1n\Bigr)^2 - n^2 = 2 + \frac{
 
 $$\lvert x^2 - x'^2 \rvert = \lvert x + x' \rvert \cdot \lvert x - x' \rvert \leq 2R \cdot \lvert x - x' \rvert$$
 
-이어서, $$\delta = \varepsilon/(2R)$$로 두면 $$\lvert x - x'\rvert < \delta$$가 모든 점에 공통으로 $$\lvert x^2 - x'^2\rvert < \varepsilon$$을 강제한다. 인수 $$\lvert x + x'\rvert$$가 컴팩트 정의역에서 $$2R$$로 유계라는 점이 결정적이다. 이 부등식 $$\lvert f(x) - f(x')\rvert \leq 2R\,\lvert x - x'\rvert$$은 함숫값의 변화가 변수의 변화에 상수배로 묶이는 형태로, 균등연속을 자동으로 함의하는 유용한 충분조건을 이룬다.
+이어서, $$\delta = \varepsilon/(2R)$$로 두면 $$\lvert x - x'\rvert < \delta$$가 모든 점에 공통으로 $$\lvert x^2 - x'^2\rvert < \varepsilon$$을 강제한다. 인수 $$\lvert x + x'\rvert$$가 컴팩트 정의역에서 $$2R$$로 유계라는 점이 결정적이다. 이 부등식 $$\lvert f(x) - f(x')\rvert \leq 2R \lvert x - x'\rvert$$은 함숫값의 변화가 변수의 변화에 상수배로 묶이는 형태로, 균등연속을 자동으로 함의하는 유용한 충분조건을 이룬다.
 
 <div class="definition" markdown="1">
 
@@ -196,7 +196,7 @@ $$d_Y\bigl(f(x), f(x')\bigr) \leq L \cdot d_X(x, x') < L \cdot \frac{\varepsilon
 
 위에서 본 $$f(x) = x^2$$는 $$[0, R]$$ 위에서 립시츠 상수 $$2R$$로 립시츠 연속이며, [명제 8](#prop8)이 곧바로 그 균등연속을 준다. 그러나 립시츠 연속은 균등연속보다 진정으로 강한 조건이다. $$[0, 1]$$ 위의 $$f(x) = \sqrt{x}$$는 [정리 4](#thm4)에 의해 균등연속이지만, 원점 근처에서
 
-$$\frac{\lvert \sqrt{x} - \sqrt{0}\,\rvert}{\lvert x - 0\rvert} = \frac{1}{\sqrt{x}} \longrightarrow \infty$$
+$$\frac{\lvert \sqrt{x} - \sqrt{0} \rvert}{\lvert x - 0\rvert} = \frac{1}{\sqrt{x}} \longrightarrow \infty$$
 
 이어서 어떤 유한한 립시츠 상수로도 묶이지 않는다. 즉 립시츠 연속, 균등연속, 단순 연속은 갈수록 약해지는 세 단계의 조건이며, 컴팩트 정의역 위에서는 가운데 두 조건이 연속과 합쳐진다.
 

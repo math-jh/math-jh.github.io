@@ -20,7 +20,7 @@ published: false
 
 미분은 한 점에서의 순간 변화율을, 적분은 한 구간 위에서의 누적량을 잰다. 표면적으로 이 둘은 서로 무관해 보인다 — 하나는 국소적이고 다른 하나는 대역적이며, 미분은 차분몫의 극한으로, 적분은 분할에 따른 상합·하합의 극대극소로 정의된다. 미적분의 기본정리가 말하는 바는, 그럼에도 두 연산이 서로를 정확히 되돌린다는 것이다. 누적량을 상한에 대해 미분하면 원래의 피적분함수가 되살아나고(제1형), 거꾸로 한 함수의 도함수를 적분하면 그 함수의 증분이 복원된다(제2형).
 
-이 정리가 실용적으로 중요한 이유는, 적분을 분할의 극한으로 직접 계산하는 일이 거의 불가능에 가깝기 때문이다. 정의에 충실하게 $$\int_0^1 x^2\,dx$$를 구하려면 $$\sum_{i} (i/n)^2 \cdot (1/n)$$ 류의 합의 극한을 다뤄야 하지만, 원시함수 $$x^3/3$$ 하나를 안다면 평가정리가 즉시 값 $$1/3$$을 내어 준다. 우리는 가변상한 적분이 연속이며 연속점에서 미분가능함을 보이고(제1형), 이를 통해 원시함수에 의한 정적분 평가(제2형)를 확립한다.
+이 정리가 실용적으로 중요한 이유는, 적분을 분할의 극한으로 직접 계산하는 일이 거의 불가능에 가깝기 때문이다. 정의에 충실하게 $$\int_0^1 x^2 dx$$를 구하려면 $$\sum_{i} (i/n)^2 \cdot (1/n)$$ 류의 합의 극한을 다뤄야 하지만, 원시함수 $$x^3/3$$ 하나를 안다면 평가정리가 즉시 값 $$1/3$$을 내어 준다. 우리는 가변상한 적분이 연속이며 연속점에서 미분가능함을 보이고(제1형), 이를 통해 원시함수에 의한 정적분 평가(제2형)를 확립한다.
 
 ## 가변상한 적분
 
@@ -68,13 +68,13 @@ $$\begin{aligned}
 
 $$\frac{F(x_0 + h) - F(x_0)}{h} = \frac1h\int_{x_0}^{x_0 + h} f$$
 
-이다. 핵심 착상은 상수 $$f(x_0)$$ 또한 $$\frac1h\int_{x_0}^{x_0+h} f(x_0)\,dt = f(x_0)$$로 적분 형태로 쓸 수 있다는 점이며, 이를 이용해 차분몫과 목표값 $$f(x_0)$$의 차이를 하나의 적분으로 모은다. $$f$$가 $$x_0$$에서 연속이므로, 임의의 $$\varepsilon > 0$$에 대해 $$\lvert t - x_0\rvert < \delta$$이면 $$\lvert f(t) - f(x_0)\rvert < \varepsilon$$인 $$\delta > 0$$이 있다. $$0 < \lvert h\rvert < \delta$$이면 적분 구간의 모든 $$t$$가 $$x_0$$에서 $$\delta$$ 이내에 있으므로
+이다. 핵심 착상은 상수 $$f(x_0)$$ 또한 $$\frac1h\int_{x_0}^{x_0+h} f(x_0) dt = f(x_0)$$로 적분 형태로 쓸 수 있다는 점이며, 이를 이용해 차분몫과 목표값 $$f(x_0)$$의 차이를 하나의 적분으로 모은다. $$f$$가 $$x_0$$에서 연속이므로, 임의의 $$\varepsilon > 0$$에 대해 $$\lvert t - x_0\rvert < \delta$$이면 $$\lvert f(t) - f(x_0)\rvert < \varepsilon$$인 $$\delta > 0$$이 있다. $$0 < \lvert h\rvert < \delta$$이면 적분 구간의 모든 $$t$$가 $$x_0$$에서 $$\delta$$ 이내에 있으므로
 
 $$\begin{aligned}
 \left\lvert \frac{F(x_0+h) - F(x_0)}{h} - f(x_0)\right\rvert
-&= \left\lvert \frac1h\int_{x_0}^{x_0+h} f(t)\,dt - \frac1h\int_{x_0}^{x_0+h} f(x_0)\,dt\right\rvert \\
-&= \left\lvert \frac1h\int_{x_0}^{x_0+h}\bigl(f(t) - f(x_0)\bigr)\,dt\right\rvert \\
-&\leq \frac{1}{\lvert h\rvert}\left\lvert \int_{x_0}^{x_0+h}\lvert f(t) - f(x_0)\rvert\,dt\right\rvert \\
+&= \left\lvert \frac1h\int_{x_0}^{x_0+h} f(t) dt - \frac1h\int_{x_0}^{x_0+h} f(x_0) dt\right\rvert \\
+&= \left\lvert \frac1h\int_{x_0}^{x_0+h}\bigl(f(t) - f(x_0)\bigr) dt\right\rvert \\
+&\leq \frac{1}{\lvert h\rvert}\left\lvert \int_{x_0}^{x_0+h}\lvert f(t) - f(x_0)\rvert dt\right\rvert \\
 &\leq \frac{1}{\lvert h\rvert}\cdot \varepsilon\lvert h\rvert \\
 &= \varepsilon
 \end{aligned}$$
@@ -83,7 +83,7 @@ $$\begin{aligned}
 
 </details>
 
-특히 $$f$$가 $$[a,b]$$ 전체에서 연속이면 모든 점에서 $$F'(x) = f(x)$$이므로 $$F$$는 $$f$$의 원시함수이다. 즉 연속함수는 언제나 원시함수를 가지며, 그 하나가 바로 가변상한 적분 $$F(x) = \int_a^x f$$이다. 이는 존재 자체가 비자명한 결론이다 — 적분이라는 대역적 구성을 거치지 않고서는 일반적인 연속함수의 원시함수를 닫힌 형태로 쓸 길이 없으며, 가령 $$f(t) = e^{-t^2}$$의 원시함수는 초등함수로 표현되지 않지만 제1형은 그것이 함수 $$F(x) = \int_0^x e^{-t^2}\,dt$$로서 존재함을 보장한다.
+특히 $$f$$가 $$[a,b]$$ 전체에서 연속이면 모든 점에서 $$F'(x) = f(x)$$이므로 $$F$$는 $$f$$의 원시함수이다. 즉 연속함수는 언제나 원시함수를 가지며, 그 하나가 바로 가변상한 적분 $$F(x) = \int_a^x f$$이다. 이는 존재 자체가 비자명한 결론이다 — 적분이라는 대역적 구성을 거치지 않고서는 일반적인 연속함수의 원시함수를 닫힌 형태로 쓸 길이 없으며, 가령 $$f(t) = e^{-t^2}$$의 원시함수는 초등함수로 표현되지 않지만 제1형은 그것이 함수 $$F(x) = \int_0^x e^{-t^2} dt$$로서 존재함을 보장한다.
 
 ## 평가정리
 
@@ -104,14 +104,14 @@ $$\int_a^b f = G(b) - G(a)$$
 
 임의의 분할 $$P : a = x_0 < \cdots < x_n = b$$를 잡는다. 각 부분구간 $$[x_{i-1}, x_i]$$에서 $$G$$는 연속이고 그 내부에서 미분가능하므로, [§평균값 정리와 테일러 정리, ⁋정리 3](/ko/math/analysis/mean_value_theorem#thm3)에 의해
 
-$$G(x_i) - G(x_{i-1}) = G'(t_i)\,(x_i - x_{i-1}) = f(t_i)\,\Delta x_i$$
+$$G(x_i) - G(x_{i-1}) = G'(t_i) (x_i - x_{i-1}) = f(t_i) \Delta x_i$$
 
 인 점 $$t_i \in (x_{i-1}, x_i)$$이 존재한다 (여기서 $$G' = f$$를 썼다). 이제 $$i = 1$$부터 $$n$$까지 합하면 좌변은 망원합으로 접혀
 
 $$\begin{aligned}
 G(b) - G(a)
 &= \sum_{i=1}^n \bigl(G(x_i) - G(x_{i-1})\bigr) \\
-&= \sum_{i=1}^n f(t_i)\,\Delta x_i
+&= \sum_{i=1}^n f(t_i) \Delta x_i
 \end{aligned}$$
 
 가 된다. 우변은 표본점 $$t_i$$로 만든 $$f$$의 한 리만 합이다. 각 부분구간에서 하한·상한을 잡으면 $$m_i \leq f(t_i) \leq M_i$$이므로 이 리만 합은 하합과 상합 사이에 끼이고,
@@ -126,19 +126,19 @@ $$L(P, f) \leq G(b) - G(a) \leq U(P, f)$$
 
 ## 적분의 기본 규칙
 
-평가정리는 원시함수 하나만 알면 정적분을 끝점에서의 값 차이로 환원하므로, 가령 $$G(x) = x^3/3$$에서 $$\int_0^1 x^2\,dx = G(1) - G(0) = 1/3$$이 분할의 극한 없이 곧바로 나온다. 반대로 제1형은 적분으로 정의된 함수를 미분할 때 쓰이며, 상한이 함수 $$u(x)$$이면 $$F(x) = \int_a^{u(x)} f$$를 $$\Phi(u) = \int_a^u f$$와 $$u$$의 합성으로 보고 연쇄법칙을 적용해 $$F'(x) = f(u(x))\,u'(x)$$를 얻는다. 정작 비자명한 위력은 닫힌 형태가 없는 적분에서 드러난다.
+평가정리는 원시함수 하나만 알면 정적분을 끝점에서의 값 차이로 환원하므로, 가령 $$G(x) = x^3/3$$에서 $$\int_0^1 x^2 dx = G(1) - G(0) = 1/3$$이 분할의 극한 없이 곧바로 나온다. 반대로 제1형은 적분으로 정의된 함수를 미분할 때 쓰이며, 상한이 함수 $$u(x)$$이면 $$F(x) = \int_a^{u(x)} f$$를 $$\Phi(u) = \int_a^u f$$와 $$u$$의 합성으로 보고 연쇄법칙을 적용해 $$F'(x) = f(u(x)) u'(x)$$를 얻는다. 정작 비자명한 위력은 닫힌 형태가 없는 적분에서 드러난다.
 
 <div class="example" markdown="1">
 
 <ins id="ex4">**예시 4 (초등적이지 않은 원시함수)**</ins> $$f(t) = e^{-t^2}$$은 $$\mathbb{R}$$에서 연속이지만 그 원시함수는 초등함수로 표현되지 않는다. 그럼에도 제1형은
 
-$$\erf(x) = \frac{2}{\sqrt{\pi}}\int_0^x e^{-t^2}\,dt$$
+$$\erf(x) = \frac{2}{\sqrt{\pi}}\int_0^x e^{-t^2} dt$$
 
 가 모든 $$x$$에서 잘 정의된 미분가능 함수임을 보장하며, 그 도함수는
 
-$$\erf'(x) = \frac{2}{\sqrt{\pi}}\,e^{-x^2}$$
+$$\erf'(x) = \frac{2}{\sqrt{\pi}} e^{-x^2}$$
 
-이다. 같은 방식으로 적분로그 $$\li(x) = \int_2^x dt/\ln t$$나 프레넬 적분 $$\int_0^x \sin(t^2)\,dt$$도 적분을 통해 정의되고, 그 미분은 다시 피적분함수가 된다. 적분은 이렇게 새로운 함수를 만들어 내는 생성 장치 구실을 한다.
+이다. 같은 방식으로 적분로그 $$\li(x) = \int_2^x dt/\ln t$$나 프레넬 적분 $$\int_0^x \sin(t^2) dt$$도 적분을 통해 정의되고, 그 미분은 다시 피적분함수가 된다. 적분은 이렇게 새로운 함수를 만들어 내는 생성 장치 구실을 한다.
 
 </div>
 
@@ -148,7 +148,7 @@ $$\erf'(x) = \frac{2}{\sqrt{\pi}}\,e^{-x^2}$$
 
 <ins id="prop5">**명제 5 (부분적분)**</ins> $$u, v$$가 $$[a,b]$$에서 연속미분가능하면
 
-$$\int_a^b u\,v'\,dx = \bigl[u\,v\bigr]_a^b - \int_a^b u'\,v\,dx$$
+$$\int_a^b u v' dx = \bigl[u v\bigr]_a^b - \int_a^b u' v dx$$
 
 이다.
 
@@ -160,9 +160,9 @@ $$\int_a^b u\,v'\,dx = \bigl[u\,v\bigr]_a^b - \int_a^b u'\,v\,dx$$
 [§미분, ⁋명제 4](/ko/math/analysis/differentiation#prop4)으로 $$(uv)' = u'v + uv'$$이고, $$u, v$$가 연속미분가능하므로 $$(uv)'$$는 연속, 따라서 적분가능하다. 양변을 $$[a,b]$$에서 적분한 뒤 $$uv$$가 $$(uv)'$$의 원시함수임을 써서 평가정리를 적용하면
 
 $$\begin{aligned}
-\bigl[u\,v\bigr]_a^b
-&= \int_a^b (uv)'\,dx \\
-&= \int_a^b u'\,v\,dx + \int_a^b u\,v'\,dx
+\bigl[u v\bigr]_a^b
+&= \int_a^b (uv)' dx \\
+&= \int_a^b u' v dx + \int_a^b u v' dx
 \end{aligned}$$
 
 가 된다. 우변의 한 항을 좌변으로 옮기면 주장한 등식을 얻는다.
@@ -171,7 +171,7 @@ $$\begin{aligned}
 
 부분적분은 한 인수의 미분을 다른 인수의 미분으로 옮겨 적분을 단순화한다. 가령 $$u = x$$, $$v' = e^x$$로 두면 $$u' = 1$$, $$v = e^x$$이므로
 
-$$\int_0^1 x\,e^x\,dx = \bigl[x\,e^x\bigr]_0^1 - \int_0^1 e^x\,dx = e - (e - 1) = 1$$
+$$\int_0^1 x e^x dx = \bigl[x e^x\bigr]_0^1 - \int_0^1 e^x dx = e - (e - 1) = 1$$
 
 이다. 마찬가지로 치환적분도 제1형과 연쇄법칙의 결합으로 정당화된다.
 
@@ -179,7 +179,7 @@ $$\int_0^1 x\,e^x\,dx = \bigl[x\,e^x\bigr]_0^1 - \int_0^1 e^x\,dx = e - (e - 1) 
 
 <ins id="prop6">**명제 6 (치환적분)**</ins> $$\varphi$$가 $$[a,b]$$에서 연속미분가능하고 $$f$$가 $$\varphi$$의 치역을 포함하는 구간에서 연속이면
 
-$$\int_a^b f\bigl(\varphi(x)\bigr)\,\varphi'(x)\,dx = \int_{\varphi(a)}^{\varphi(b)} f(u)\,du$$
+$$\int_a^b f\bigl(\varphi(x)\bigr) \varphi'(x) dx = \int_{\varphi(a)}^{\varphi(b)} f(u) du$$
 
 이다.
 
@@ -192,17 +192,17 @@ $$f$$가 연속이므로 [정리 2](#thm2)에 의해 원시함수 $$F(u) = \int_
 
 $$\begin{aligned}
 \bigl(F\circ\varphi\bigr)'(x)
-&= F'\bigl(\varphi(x)\bigr)\,\varphi'(x) \\
-&= f\bigl(\varphi(x)\bigr)\,\varphi'(x)
+&= F'\bigl(\varphi(x)\bigr) \varphi'(x) \\
+&= f\bigl(\varphi(x)\bigr) \varphi'(x)
 \end{aligned}$$
 
 이므로 $$F\circ\varphi$$는 좌변 피적분함수의 원시함수이다. 평가정리로
 
 $$\begin{aligned}
-\int_a^b f\bigl(\varphi(x)\bigr)\,\varphi'(x)\,dx
+\int_a^b f\bigl(\varphi(x)\bigr) \varphi'(x) dx
 &= \bigl(F\circ\varphi\bigr)(b) - \bigl(F\circ\varphi\bigr)(a) \\
 &= F\bigl(\varphi(b)\bigr) - F\bigl(\varphi(a)\bigr) \\
-&= \int_{\varphi(a)}^{\varphi(b)} f(u)\,du
+&= \int_{\varphi(a)}^{\varphi(b)} f(u) du
 \end{aligned}$$
 
 를 얻는다 (마지막 등식은 $$F$$의 정의에서 따른다).
@@ -211,8 +211,8 @@ $$\begin{aligned}
 
 치환은 적분을 더 다루기 쉬운 변수로 바꾼다. 예컨대 $$\varphi(x) = x^2$$, $$f(u) = e^u$$로 두면 $$\varphi'(x) = 2x$$이므로
 
-$$\int_0^1 2x\,e^{x^2}\,dx = \int_{0}^{1} e^u\,du = e - 1$$
+$$\int_0^1 2x e^{x^2} dx = \int_{0}^{1} e^u du = e - 1$$
 
 이 되어, 합성과 곱의 형태로 얽혀 있던 적분이 단순한 지수의 적분으로 풀린다.
 
-평가정리는 [\[미적분학\] §적분법](/ko/math/calculus/integration_techniques)의 치환·부분적분이 의존하던 토대이며, 이제 그 가정들이 모두 엄밀하게 증명되었다.
+평가정리는 [\[미적분학\] §적분](/ko/math/calculus/integration)의 치환·부분적분이 의존하던 토대이며, 이제 그 가정들이 모두 엄밀하게 증명되었다.

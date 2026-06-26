@@ -146,7 +146,7 @@ The examples above show in particular that when the derivatives are bounded, the
 
 The remainder from Taylor's theorem satisfies
 
-$$\lvert R_n(x)\rvert = \frac{\lvert f^{(n+1)}(c)\rvert}{(n+1)!}\lvert x-a\rvert^{n+1} \leq \frac{M\,\lvert x-a\rvert^{n+1}}{(n+1)!}$$
+$$\lvert R_n(x)\rvert = \frac{\lvert f^{(n+1)}(c)\rvert}{(n+1)!}\lvert x-a\rvert^{n+1} \leq \frac{M \lvert x-a\rvert^{n+1}}{(n+1)!}$$
 
 The right-hand side goes to $$0$$ as $$n \to \infty$$ for fixed $$x$$ ([§Limits of Sequences, ⁋Example 6](/en/math/calculus/sequences#ex6), $$r^n/n! \to 0$$), so $$R_n(x) \to 0$$ and the partial sums converge to $$f(x)$$.
 

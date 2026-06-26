@@ -109,7 +109,7 @@ $$\begin{aligned}
 &= \frac{N}{2N} = \frac{1}{2}
 \end{aligned}$$
 
-이므로, $$\varepsilon = \tfrac12$$에 대해서는 아무리 큰 $$N$$을 잡아도 $$m, n \geq N$$이면서 $$\lvert s_m - s_n\rvert \geq \tfrac12$$인 짝이 존재한다. 따라서 $$(s_n)$$은 Cauchy 조건을 어기고, [정리 4](#thm4)의 대우에 의해 발산한다. 극한값을 구하지 않고 발산을 증명한 셈이다.
+이므로, $$\varepsilon = \frac12$$에 대해서는 아무리 큰 $$N$$을 잡아도 $$m, n \geq N$$이면서 $$\lvert s_m - s_n\rvert \geq \frac12$$인 짝이 존재한다. 따라서 $$(s_n)$$은 Cauchy 조건을 어기고, [정리 4](#thm4)의 대우에 의해 발산한다. 극한값을 구하지 않고 발산을 증명한 셈이다.
 
 </div>
 
@@ -155,7 +155,7 @@ $$\lvert a_{4N} - a_N\rvert = 2\sqrt{N} - \sqrt{N} = \sqrt{N} \to \infty$$
 
 <ins id="prop9">**명제 9 (수축수열의 수렴)**</ins> 어떤 상수 $$0 \leq c < 1$$이 존재하여 모든 $$n$$에서
 
-$$\lvert a_{n+1} - a_n\rvert \leq c\,\lvert a_n - a_{n-1}\rvert$$
+$$\lvert a_{n+1} - a_n\rvert \leq c \lvert a_n - a_{n-1}\rvert$$
 
 이 성립하면, $$(a_n)$$은 Cauchy 수열이고 따라서 수렴한다.
 
@@ -164,7 +164,7 @@ $$\lvert a_{n+1} - a_n\rvert \leq c\,\lvert a_n - a_{n-1}\rvert$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-가정을 반복 적용하면 $$d_n = \lvert a_{n+1} - a_n\rvert$$에 대해 $$d_n \leq c\, d_{n-1} \leq \cdots \leq c^{n-1} d_1$$, 즉
+가정을 반복 적용하면 $$d_n = \lvert a_{n+1} - a_n\rvert$$에 대해 $$d_n \leq c  d_{n-1} \leq \cdots \leq c^{n-1} d_1$$, 즉
 
 $$\lvert a_{n+1} - a_n\rvert \leq c^{n-1} \lvert a_2 - a_1\rvert$$
 
@@ -186,9 +186,9 @@ $$\begin{aligned}
 
 <ins id="ex10">**예시 10 (반복 대입으로 정의된 수열)**</ins> $$a_1 = 1$$이고 $$a_{n+1} = 1 + 1/a_n$$으로 정의되는 수열을 보자. 모든 항이 $$1$$ 이상이므로 $$a_n \geq 1$$이고, 두 차를 비교하면
 
-$$\lvert a_{n+1} - a_n\rvert = \left\lvert \frac{1}{a_n} - \frac{1}{a_{n-1}} \right\rvert = \frac{\lvert a_n - a_{n-1}\rvert}{a_n\, a_{n-1}} \leq \lvert a_n - a_{n-1}\rvert$$
+$$\lvert a_{n+1} - a_n\rvert = \left\lvert \frac{1}{a_n} - \frac{1}{a_{n-1}} \right\rvert = \frac{\lvert a_n - a_{n-1}\rvert}{a_n  a_{n-1}} \leq \lvert a_n - a_{n-1}\rvert$$
 
-이 된다. 더 정밀하게 보면 두 번째 항부터는 $$a_n \geq \tfrac32$$이므로 $$a_n a_{n-1} \geq \tfrac94 > 2$$여서 $$c = \tfrac12$$로 수축 조건이 성립한다. [명제 9](#prop9)에 의해 $$(a_n)$$은 수렴한다. 그 극한 $$L$$은 점화식의 양변에 극한을 취해 얻는 $$L = 1 + 1/L$$, 곧 $$L^2 - L - 1 = 0$$의 양의 해 $$L = (1 + \sqrt 5)/2$$이다. 수렴은 [명제 9](#prop9)가 보장하고, 극한값은 그 다음에 방정식을 풀어 얻는다.
+이 된다. 더 정밀하게 보면 두 번째 항부터는 $$a_n \geq \frac32$$이므로 $$a_n a_{n-1} \geq \frac94 > 2$$여서 $$c = \frac12$$로 수축 조건이 성립한다. [명제 9](#prop9)에 의해 $$(a_n)$$은 수렴한다. 그 극한 $$L$$은 점화식의 양변에 극한을 취해 얻는 $$L = 1 + 1/L$$, 곧 $$L^2 - L - 1 = 0$$의 양의 해 $$L = (1 + \sqrt 5)/2$$이다. 수렴은 [명제 9](#prop9)가 보장하고, 극한값은 그 다음에 방정식을 풀어 얻는다.
 
 </div>
 

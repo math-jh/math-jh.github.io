@@ -1,7 +1,7 @@
 ---
 title: "이차형식과 실베스터 관성법칙"
-description: "대칭 쌍선형형식으로부터 이차형식을 정의하고, 실수 위에서 적절한 기저를 택하면 대각형으로 환원됨을 보인다. 나아가 부호수가 기저의 선택과 무관함을 주장하는 실베스터 관성법칙을 증명한다."
-excerpt: "실수 대칭 쌍선형형식의 분류"
+description: "symmetric 쌍선형형식으로부터 이차형식을 정의하고, 실수 위에서 적절한 기저를 택하면 대각형으로 환원됨을 보인다. 나아가 부호수가 기저의 선택과 무관함을 주장하는 실베스터 관성법칙을 증명한다."
+excerpt: "실수 symmetric 쌍선형형식의 분류"
 
 categories: [Math / Linear Algebra]
 permalink: /ko/math/linear_algebra/quadratic_forms
@@ -45,11 +45,11 @@ $$\langle v,w\rangle=\frac{1}{2}\bigl(Q(v+w)-Q(v)-Q(w)\bigr)\tag{1}$$
 
 ## 합동과 대각형
 
-$$V$$ 위에 symmetric bilinear form $$\langle -,-\rangle$$이 주어졌다 하고, $$V$$의 basis $$\mathcal{B}$$를 택하자. 그럼 [§쌍선형형식, §§Gram matrix](/ko/math/linear_algebra/bilinear_form#gram-matrix)에서 살펴본 대로, $$(i,j)$$ 성분이 $$\langle x_i,x_j\rangle$$인 Gram matrix $$G_\mathcal{B}$$에 대하여 $$\langle v,w\rangle=[v]_\mathcal{B}^tG_\mathcal{B}[w]_\mathcal{B}$$이 성립하며, $$\langle-,-\rangle$$이 symmetric이므로 $$G_\mathcal{B}$$는 대칭행렬이다. 또 다른 basis $$\mathcal{C}$$를 택하면, 기저변환행렬 $$P=[\id]_\mathcal{C}^\mathcal{B}$$에 대하여 
+$$V$$ 위에 symmetric bilinear form $$\langle -,-\rangle$$이 주어졌다 하고, $$V$$의 basis $$\mathcal{B}$$를 택하자. 그럼 [§쌍선형형식, §§Gram matrix](/ko/math/linear_algebra/bilinear_form#gram-matrix)에서 살펴본 대로, $$(i,j)$$ 성분이 $$\langle x_i,x_j\rangle$$인 Gram matrix $$G_\mathcal{B}$$에 대하여 $$\langle v,w\rangle=[v]_\mathcal{B}^tG_\mathcal{B}[w]_\mathcal{B}$$이 성립하며, $$\langle-,-\rangle$$이 symmetric이므로 $$G_\mathcal{B}$$는 symmetric matrix이다. 또 다른 basis $$\mathcal{C}$$를 택하면, 기저변환행렬 $$P=[\id]_\mathcal{C}^\mathcal{B}$$에 대하여 
 
 $$G_\mathcal{C}=P^tG_\mathcal{B}P$$
 
-이 성립함을 보았다. 이렇게 가역행렬 $$P$$에 대하여 $$G'=P^tGP$$의 관계로 이어지는 두 대칭행렬 $$G,G'$$을 서로 *합동<sub>congruent</sub>*이라 부른다. 즉 같은 bilinear form을 서로 다른 basis로 적은 Gram matrix들은 서로 합동이다. 우리의 목표는 합동인 행렬들 가운데 가장 단순한 대표를 찾는 것이다. 
+이 성립함을 보았다. 이렇게 가역행렬 $$P$$에 대하여 $$G'=P^tGP$$의 관계로 이어지는 두 symmetric matrix $$G,G'$$을 서로 *합동<sub>congruent</sub>*이라 부른다. 즉 같은 bilinear form을 서로 다른 basis로 적은 Gram matrix들은 서로 합동이다. 우리의 목표는 합동인 행렬들 가운데 가장 단순한 대표를 찾는 것이다. 
 
 <div class="proposition" markdown="1">
 
@@ -77,11 +77,11 @@ $$\langle e_i,e_i\rangle=\frac{\langle f_i,f_i\rangle}{\lvert\langle f_i,f_i\ran
 
 </details>
 
-[명제 2](#prop2)의 basis에 대한 Gram matrix는 대각성분이 $$1$$, $$-1$$, $$0$$인 대각행렬이다. 기저를 적절히 재배열하면, 이 대각행렬을 $$1$$이 $$p$$개, $$-1$$이 $$q$$개, $$0$$이 $$r$$개 나타나는 다음의 꼴
+[명제 2](#prop2)의 basis에 대한 Gram matrix는 대각성분이 $$1$$, $$-1$$, $$0$$인 diagonal matrix이다. 기저를 적절히 재배열하면, 이 diagonal matrix를 $$1$$이 $$p$$개, $$-1$$이 $$q$$개, $$0$$이 $$r$$개 나타나는 다음의 꼴
 
 $$\begin{pmatrix}I_p&&\\&-I_q&\\&&0_r\end{pmatrix}$$
 
-로 만들 수 있다. 따라서 임의의 실대칭행렬은 이 꼴의 행렬과 합동이다. 이 때 이차형식은 이 basis에 대한 좌표 $$v=\sum a_ie_i$$로 적었을 때 
+로 만들 수 있다. 따라서 임의의 실symmetric matrix은 이 꼴의 행렬과 합동이다. 이 때 이차형식은 이 basis에 대한 좌표 $$v=\sum a_ie_i$$로 적었을 때 
 
 $$Q(v)=a_1^2+\cdots+a_p^2-a_{p+1}^2-\cdots-a_{p+q}^2$$
 
@@ -111,7 +111,7 @@ $$p=\max\{\dim U\mid U\leq V,\ Q(v)>0\text{ for all nonzero }v\in U\}$$
 
 $$Q(v)=\sum_{i=1}^p a_i^2>0$$
 
-이므로 $$\dim U_+=p$$인 부분공간 위에서 $$Q$$가 양의 정부호이다. 따라서 위 최댓값은 $$p$$ 이상이다. 거꾸로 $$Q$$가 양의 정부호인 임의의 부분공간 $$U$$를 생각하고, $$U_-=\span\{e_{p+1},\ldots, e_n\}$$이라 하자. 임의의 $$v=\sum_{i=p+1}^n a_ie_i\in U_-$$에 대하여 
+이므로 $$\dim U_+=p$$인 부분공간 위에서 $$Q$$가 positive definite이다. 따라서 위 최댓값은 $$p$$ 이상이다. 거꾸로 $$Q$$가 positive definite인 임의의 부분공간 $$U$$를 생각하고, $$U_-=\span\{e_{p+1},\ldots, e_n\}$$이라 하자. 임의의 $$v=\sum_{i=p+1}^n a_ie_i\in U_-$$에 대하여 
 
 $$Q(v)=-\sum_{i=p+1}^{p+q}a_i^2\leq 0$$
 
@@ -133,27 +133,27 @@ $$\dim U+\dim U_-=\dim(U+U_-)\leq n$$
 
 부호수에서 $$p+q$$는 Gram matrix의 rank이고, $$r$$은 $$\langle-,-\rangle$$이 퇴화하는 정도, 즉 모든 벡터와 직교하는 벡터들이 이루는 부분공간의 차원이다. 특히 $$\langle-,-\rangle$$이 non-degenerate인 것은 $$r=0$$인 것과 동치이다. 
 
-관성법칙은 곧바로 실대칭행렬의 합동에 의한 완전한 분류를 준다.
+관성법칙은 곧바로 실symmetric matrix의 합동에 의한 완전한 분류를 준다.
 
 <div class="proposition" markdown="1">
 
-<ins id="cor5">**따름정리 5**</ins> 두 실대칭행렬이 서로 합동인 것은 이들이 정의하는 bilinear form의 부호수가 같은 것과 동치이다. 
+<ins id="cor5">**따름정리 5**</ins> 두 실symmetric matrix가 서로 합동인 것은 이들이 정의하는 bilinear form의 부호수가 같은 것과 동치이다. 
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-두 행렬 $$G,G'$$이 합동이라 하면 이들은 같은 bilinear form을 서로 다른 basis로 적은 것이므로 부호수가 같다. 거꾸로 부호수가 $$(p,q,r)$$로 같다면, [명제 2](#prop2)에 의하여 $$G$$와 $$G'$$은 모두 $$1$$이 $$p$$개, $$-1$$이 $$q$$개, $$0$$이 $$r$$개인 같은 대각행렬과 합동이고, 합동은 동치관계이므로 $$G$$와 $$G'$$은 서로 합동이다. 
+두 행렬 $$G,G'$$이 합동이라 하면 이들은 같은 bilinear form을 서로 다른 basis로 적은 것이므로 부호수가 같다. 거꾸로 부호수가 $$(p,q,r)$$로 같다면, [명제 2](#prop2)에 의하여 $$G$$와 $$G'$$은 모두 $$1$$이 $$p$$개, $$-1$$이 $$q$$개, $$0$$이 $$r$$개인 같은 diagonal matrix와 합동이고, 합동은 동치관계이므로 $$G$$와 $$G'$$은 서로 합동이다. 
 
 </details>
 
-## 양의 정부호성
+## positive definiteness
 
 부호수가 $$(n,0,0)$$인 경우, 즉 $$Q$$가 영이 아닌 모든 벡터에서 양수인 경우는 특별히 중요하다. 
 
 <div class="definition" markdown="1">
 
-<ins id="def6">**정의 6**</ins> $$\mathbb{R}$$-벡터공간 $$V$$ 위에 정의된 symmetric bilinear form $$\langle-,-\rangle$$이 *양의 정부호<sub>positive definite</sub>*라는 것은 모든 $$0\neq v\in V$$에 대하여 $$\langle v,v\rangle>0$$인 것이다.
+<ins id="def6">**정의 6**</ins> $$\mathbb{R}$$-벡터공간 $$V$$ 위에 정의된 symmetric bilinear form $$\langle-,-\rangle$$이 *positive definite<sub>positive definite</sub>*라는 것은 모든 $$0\neq v\in V$$에 대하여 $$\langle v,v\rangle>0$$인 것이다.
 
 </div>
 
@@ -161,7 +161,7 @@ $$\dim U+\dim U_-=\dim(U+U_-)\leq n$$
 
 <ins id="prop7">**명제 7**</ins> $$\mathbb{R}$$-벡터공간 $$V$$ 위에 정의된 symmetric bilinear form $$\langle-,-\rangle$$에 대하여, 다음은 모두 동치이다.
 
-1. $$\langle-,-\rangle$$이 양의 정부호이다.
+1. $$\langle-,-\rangle$$이 positive definite이다.
 2. $$\langle-,-\rangle$$의 부호수가 $$(n,0,0)$$이다.
 3. $$\langle-,-\rangle$$이 $$V$$ 위의 내적이다.
 
@@ -169,9 +169,9 @@ $$\dim U+\dim U_-=\dim(U+U_-)\leq n$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[명제 2](#prop2)의 basis $$\{e_1,\ldots, e_n\}$$에 대하여 $$v=\sum a_ie_i$$이면 $$Q(v)=\sum_i\langle e_i,e_i\rangle a_i^2$$이다. 만일 어떤 $$\langle e_i,e_i\rangle$$이 $$-1$$이거나 $$0$$이라면 $$v=e_i$$에 대하여 $$Q(e_i)\leq 0$$이므로 양의 정부호가 아니다. 거꾸로 모든 $$\langle e_i,e_i\rangle$$이 $$1$$이라면, 즉 부호수가 $$(n,0,0)$$이라면 임의의 $$0\neq v$$에 대하여 $$Q(v)=\sum a_i^2>0$$이다. 따라서 1번과 2번이 동치이다. 
+[명제 2](#prop2)의 basis $$\{e_1,\ldots, e_n\}$$에 대하여 $$v=\sum a_ie_i$$이면 $$Q(v)=\sum_i\langle e_i,e_i\rangle a_i^2$$이다. 만일 어떤 $$\langle e_i,e_i\rangle$$이 $$-1$$이거나 $$0$$이라면 $$v=e_i$$에 대하여 $$Q(e_i)\leq 0$$이므로 positive definite가 아니다. 거꾸로 모든 $$\langle e_i,e_i\rangle$$이 $$1$$이라면, 즉 부호수가 $$(n,0,0)$$이라면 임의의 $$0\neq v$$에 대하여 $$Q(v)=\sum a_i^2>0$$이다. 따라서 1번과 2번이 동치이다. 
 
-한편 내적의 정의는 symmetric bilinear form이면서 모든 $$v$$에 대해 $$\langle v,v\rangle\geq 0$$이고 등호가 오직 $$v=0$$일 때만 성립하는 것이므로 ([§내적공간, ⁋정의 1](/ko/math/linear_algebra/inner_product_spaces#def1)) 이는 정확히 양의 정부호라는 조건이다. 따라서 1번과 3번이 동치이다. 
+한편 내적의 정의는 symmetric bilinear form이면서 모든 $$v$$에 대해 $$\langle v,v\rangle\geq 0$$이고 등호가 오직 $$v=0$$일 때만 성립하는 것이므로 ([§내적공간, ⁋정의 1](/ko/math/linear_algebra/inner_product_spaces#def1)) 이는 정확히 positive definite라는 조건이다. 따라서 1번과 3번이 동치이다. 
 
 </details>
 
@@ -179,7 +179,7 @@ $$\dim U+\dim U_-=\dim(U+U_-)\leq n$$
 
 <div class="remark" markdown="1">
 
-<ins id="rmk8">**참고 8**</ins> [명제 2](#prop2)는 가역행렬에 의한 합동변환 $$G\mapsto P^tGP$$을 통해 대각형을 얻은 것이며, 이 때 대각성분의 절댓값에는 아무런 정보가 없다. 만일 $$P$$를 orthogonal matrix로 제한하면, 합동변환은 닮음변환 $$G\mapsto P^tGP=P^{-1}GP$$과 일치하므로 [§스펙트럼 정리](/ko/math/linear_algebra/spectral_theorem)에 의하여 $$G$$를 그 eigenvalue들로 이루어진 대각행렬로 만들 수 있다. 이렇게 얻어진 대각성분은 더 이상 $$1,-1,0$$이 아니라 $$G$$의 실제 eigenvalue들이며, 그 부호의 분포가 곧 부호수 $$(p,q,r)$$이 된다. 이를 *주축정리<sub>principal axis theorem</sub>*라 부른다. 관성법칙은 합동에 대한 불변량을, 주축정리는 닮음에 대한 불변량을 다룬다는 점에서 둘은 구별된다. 
+<ins id="rmk8">**참고 8**</ins> [명제 2](#prop2)는 가역행렬에 의한 합동변환 $$G\mapsto P^tGP$$을 통해 대각형을 얻은 것이며, 이 때 대각성분의 절댓값에는 아무런 정보가 없다. 만일 $$P$$를 orthogonal matrix로 제한하면, 합동변환은 닮음변환 $$G\mapsto P^tGP=P^{-1}GP$$과 일치하므로 [§스펙트럼 정리](/ko/math/linear_algebra/spectral_theorem)에 의하여 $$G$$를 그 eigenvalue들로 이루어진 diagonal matrix로 만들 수 있다. 이렇게 얻어진 대각성분은 더 이상 $$1,-1,0$$이 아니라 $$G$$의 실제 eigenvalue들이며, 그 부호의 분포가 곧 부호수 $$(p,q,r)$$이 된다. 이를 *주축정리<sub>principal axis theorem</sub>*라 부른다. 관성법칙은 합동에 대한 불변량을, 주축정리는 닮음에 대한 불변량을 다룬다는 점에서 둘은 구별된다. 
 
 </div>
 

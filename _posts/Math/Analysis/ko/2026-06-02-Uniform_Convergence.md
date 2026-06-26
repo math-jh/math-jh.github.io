@@ -64,7 +64,7 @@ $$\lim_{n\to\infty}\int_a^b f_n = \int_a^b f = \int_a^b \lim_{n\to\infty} f_n$$
 
 $$f$$는 [정리 2](#thm2)로 연속이므로 적분가능하다 ([§Riemann 적분, ⁋정리 4](/ko/math/analysis/riemann_integral#thm4)). 단조성에 의해
 
-$$\left\lvert\int_a^b f_n - \int_a^b f\right\rvert \leq \int_a^b \lvert f_n - f\rvert \leq \lVert f_n - f\rVert_\infty\,(b - a) \to 0$$
+$$\left\lvert\int_a^b f_n - \int_a^b f\right\rvert \leq \int_a^b \lvert f_n - f\rvert \leq \lVert f_n - f\rVert_\infty (b - a) \to 0$$
 
 이다.
 
@@ -150,7 +150,7 @@ $$\lvert f_n(x)\rvert \leq \frac{1}{\sqrt{n}} \to 0$$
 
 이므로 $$\lVert f_n - 0\rVert_\infty \leq 1/\sqrt{n} \to 0$$, 즉 $$f_n$$은 $$0$$으로 균등수렴한다. 그러나 도함수는
 
-$$f_n'(x) = \sqrt{n}\,\cos(nx)$$
+$$f_n'(x) = \sqrt{n} \cos(nx)$$
 
 이어서 $$x = 0$$에서 $$f_n'(0) = \sqrt{n} \to \infty$$이다. 극한함수 $$0$$의 도함수는 $$0$$이므로
 

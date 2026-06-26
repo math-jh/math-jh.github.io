@@ -151,7 +151,7 @@ $$\sqrt{1+x} = 1 + \frac{x}{2} - \frac{x^2}{8} + \cdots$$
 
 테일러 정리의 나머지는
 
-$$\lvert R_n(x)\rvert = \frac{\lvert f^{(n+1)}(c)\rvert}{(n+1)!}\lvert x-a\rvert^{n+1} \leq \frac{M\,\lvert x-a\rvert^{n+1}}{(n+1)!}$$
+$$\lvert R_n(x)\rvert = \frac{\lvert f^{(n+1)}(c)\rvert}{(n+1)!}\lvert x-a\rvert^{n+1} \leq \frac{M\lvert x-a\rvert^{n+1}}{(n+1)!}$$
 
 이다. 우변은 고정된 $$x$$에서 $$n \to \infty$$일 때 $$0$$으로 가므로 ([§수열의 극한, ⁋예시 6](/ko/math/calculus/sequences#ex6)의 $$r^n/n! \to 0$$), $$R_n(x) \to 0$$이고 부분합이 $$f(x)$$로 수렴한다.
 

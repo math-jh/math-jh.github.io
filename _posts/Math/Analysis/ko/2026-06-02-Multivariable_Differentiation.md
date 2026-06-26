@@ -34,7 +34,7 @@ $$\lim_{h \to 0}\frac{\lVert f(a + h) - f(a) - Df(a)h\rVert}{\lVert h\rVert} = 0
 
 미분이 선형사상이라는 점이 한 변수와의 본질적 차이이다. 한 변수에서는 그 선형사상이 수 $$f'(a)$$를 곱하는 것이었다. [정의 1](#def1)의 조건을 풀어 쓰면, 잔차 $$r(h) = f(a+h) - f(a) - Df(a)h$$가 $$\lVert h\rVert$$보다 더 빨리 $$0$$으로 수렴한다는 뜻이다. 즉
 
-$$f(a + h) = f(a) + Df(a)h + r(h), \qquad \frac{\lVert r(h)\rVert}{\lVert h\rVert} \to 0 \;\;(h \to 0)$$
+$$f(a + h) = f(a) + Df(a)h + r(h), \qquad \frac{\lVert r(h)\rVert}{\lVert h\rVert} \to 0   (h \to 0)$$
 
 으로, 일차다항식 $$h \mapsto f(a) + Df(a)h$$가 $$f$$를 $$a$$에서 *1차 오차로* 근사한다. 흔히 $$r(h) = o(\lVert h\rVert)$$로 쓰며, "리틀-오" 표기는 $$h \to 0$$일 때 $$\lVert r(h)\rVert/\lVert h\rVert \to 0$$임을 줄인 것이다. 이 근사의 유일성, 즉 두 선형사상이 모두 같은 잔차 조건을 만족하면 서로 같다는 사실은 [명제 2](#prop2)에서 야코비 행렬과 함께 따라 나온다.
 
@@ -82,7 +82,7 @@ $$\lim_{t \to 0} \frac{f_i(a + te_j) - f_i(a)}{t} = \frac{\partial f_i}{\partial
 
 $$D(g \circ f)(a) = Dg(f(a)) \circ Df(a)$$
 
-이다. 행렬로는 야코비 행렬의 곱 $$J_{g\circ f}(a) = J_g(b)\,J_f(a)$$이다.
+이다. 행렬로는 야코비 행렬의 곱 $$J_{g\circ f}(a) = J_g(b) J_f(a)$$이다.
 
 </div>
 
@@ -98,10 +98,10 @@ $$f(a + h) = b + Ah + r(h), \qquad g(b + k) = g(b) + Bk + s(k)$$
 $$\begin{aligned}
 (g \circ f)(a + h) &= g(b + k) = g(b) + Bk + s(k) \\
 &= g(b) + B\bigl(Ah + r(h)\bigr) + s(k) \\
-&= (g\circ f)(a) + BA\,h + \underbrace{\bigl(B\,r(h) + s(k)\bigr)}_{=: \,\rho(h)}
+&= (g\circ f)(a) + BA h + \underbrace{\bigl(B r(h) + s(k)\bigr)}_{=:  \rho(h)}
 \end{aligned}$$
 
-가 된다. 남은 일은 잔차 $$\rho(h) = B\,r(h) + s(k)$$가 $$o(\lVert h\rVert)$$임을 보이는 것이다. 첫 항은 $$B$$가 선형사상이므로 어떤 상수 $$C$$에 대해 $$\lVert B\,r(h)\rVert \le C\,\lVert r(h)\rVert = o(\lVert h\rVert)$$이다. 둘째 항은, 먼저 $$k = Ah + r(h)$$가 $$\lVert k\rVert \le \lVert A\rVert\,\lVert h\rVert + \lVert r(h)\rVert \le C'\lVert h\rVert$$ ($$h$$가 충분히 작을 때) 로 $$\lVert h\rVert$$ 정도의 크기임에 주의한다. 그러면
+가 된다. 남은 일은 잔차 $$\rho(h) = B r(h) + s(k)$$가 $$o(\lVert h\rVert)$$임을 보이는 것이다. 첫 항은 $$B$$가 선형사상이므로 어떤 상수 $$C$$에 대해 $$\lVert B r(h)\rVert \le C \lVert r(h)\rVert = o(\lVert h\rVert)$$이다. 둘째 항은, 먼저 $$k = Ah + r(h)$$가 $$\lVert k\rVert \le \lVert A\rVert \lVert h\rVert + \lVert r(h)\rVert \le C'\lVert h\rVert$$ ($$h$$가 충분히 작을 때) 로 $$\lVert h\rVert$$ 정도의 크기임에 주의한다. 그러면
 
 $$\frac{\lVert s(k)\rVert}{\lVert h\rVert} = \frac{\lVert s(k)\rVert}{\lVert k\rVert}\cdot \frac{\lVert k\rVert}{\lVert h\rVert} \le \frac{\lVert s(k)\rVert}{\lVert k\rVert}\cdot C'$$
 
@@ -111,15 +111,15 @@ $$\frac{\lVert s(k)\rVert}{\lVert h\rVert} = \frac{\lVert s(k)\rVert}{\lVert k\r
 
 행렬로 옮기면 연쇄법칙은 야코비 행렬의 곱셈이 된다. 성분으로 풀어 쓰면, $$g\circ f$$의 $$i$$행 $$j$$열 성분이
 
-$$\frac{\partial (g\circ f)_i}{\partial x_j}(a) = \sum_{k} \frac{\partial g_i}{\partial y_k}(b)\,\frac{\partial f_k}{\partial x_j}(a)$$
+$$\frac{\partial (g\circ f)_i}{\partial x_j}(a) = \sum_{k} \frac{\partial g_i}{\partial y_k}(b) \frac{\partial f_k}{\partial x_j}(a)$$
 
 라는 익숙한 합 꼴이며, 이는 행렬곱 $$J_g(b)J_f(a)$$의 $$(i,j)$$ 성분에 다름 아니다. 선형사상 합성의 행렬이 행렬곱이라는 선형대수의 사실 덕분에, 일변수 연쇄법칙의 한 줄 공식이 다변수에서 행렬곱 한 줄로 그대로 살아남는다.
 
 가장 흔한 특수경우는 곡선을 따른 변화율이다. $$g : \mathbb{R}^n \to \mathbb{R}$$가 미분가능하고 $$\gamma : \mathbb{R} \to \mathbb{R}^n$$이 미분가능한 곡선이면, $$Dg(\gamma(t))$$가 $$1 \times n$$ 행렬 (기울기) 이고 $$D\gamma(t)$$가 $$n \times 1$$ 행렬 (속도) 이므로 합성 $$t \mapsto g(\gamma(t))$$의 변화율은
 
-$$\frac{d}{dt}\,g(\gamma(t)) = Dg(\gamma(t))\,\gamma'(t) = \sum_{j=1}^n \frac{\partial g}{\partial x_j}(\gamma(t))\,\gamma_j'(t) = \nabla g(\gamma(t)) \cdot \gamma'(t)$$
+$$\frac{d}{dt} g(\gamma(t)) = Dg(\gamma(t)) \gamma'(t) = \sum_{j=1}^n \frac{\partial g}{\partial x_j}(\gamma(t)) \gamma_j'(t) = \nabla g(\gamma(t)) \cdot \gamma'(t)$$
 
-이다. 특히 직선 $$\gamma(t) = a + tv$$를 넣으면 $$\gamma'(t) = v$$이므로 $$t = 0$$에서 $$(d/dt)\big\vert_{t=0}\, g(a + tv) = \nabla g(a)\cdot v$$, 곧 방향 $$v$$로의 방향도함수가 기울기와 $$v$$의 내적임을 얻는다. 이 곡선 제한은 아래 다변수 [§평균값 정리와 테일러 정리, ⁋정리 3](/ko/math/analysis/mean_value_theorem#thm3)의 증명에서 다시 쓰인다.
+이다. 특히 직선 $$\gamma(t) = a + tv$$를 넣으면 $$\gamma'(t) = v$$이므로 $$t = 0$$에서 $$(d/dt)\big\vert_{t=0}  g(a + tv) = \nabla g(a)\cdot v$$, 곧 방향 $$v$$로의 방향도함수가 기울기와 $$v$$의 내적임을 얻는다. 이 곡선 제한은 아래 다변수 [§평균값 정리와 테일러 정리, ⁋정리 3](/ko/math/analysis/mean_value_theorem#thm3)의 증명에서 다시 쓰인다.
 
 ## 연속미분가능성
 
@@ -140,12 +140,12 @@ $$f(a + h) - f(a) = \sum_{j=1}^n \bigl(f(a^{(j)}) - f(a^{(j-1)})\bigr)$$
 
 이다. $$a^{(j)}$$와 $$a^{(j-1)}$$는 $$j$$번째 좌표만 $$h_j$$만큼 다르므로, 각 차에 한 변수 [§평균값 정리와 테일러 정리, ⁋정리 3](/ko/math/analysis/mean_value_theorem#thm3)를 적용하면 $$a^{(j-1)}$$와 $$a^{(j)}$$ 사이의 어떤 점 $$\xi_j$$에 대해
 
-$$f(a^{(j)}) - f(a^{(j-1)}) = \frac{\partial f}{\partial x_j}(\xi_j)\,h_j$$
+$$f(a^{(j)}) - f(a^{(j-1)}) = \frac{\partial f}{\partial x_j}(\xi_j) h_j$$
 
 이다. 이를 모아 빼고 더하면
 
 $$\begin{aligned}
-f(a + h) - f(a) - \sum_{j=1}^n \frac{\partial f}{\partial x_j}(a)\,h_j
+f(a + h) - f(a) - \sum_{j=1}^n \frac{\partial f}{\partial x_j}(a) h_j
 &= \sum_{j=1}^n \left( \frac{\partial f}{\partial x_j}(\xi_j) - \frac{\partial f}{\partial x_j}(a) \right) h_j
 \end{aligned}$$
 
@@ -153,7 +153,7 @@ f(a + h) - f(a) - \sum_{j=1}^n \frac{\partial f}{\partial x_j}(a)\,h_j
 
 $$\frac{\left\lvert f(a + h) - f(a) - \sum_j \frac{\partial f}{\partial x_j}(a)h_j \right\rvert}{\lVert h\rVert} \le \sum_{j=1}^n \left\lvert \frac{\partial f}{\partial x_j}(\xi_j) - \frac{\partial f}{\partial x_j}(a) \right\rvert$$
 
-이다. 한편 $$h \to 0$$이면 모든 $$\xi_j \to a$$이고, 편미분 $$\partial f/\partial x_j$$가 $$a$$에서 연속이므로 우변의 각 항이 $$0$$으로 간다. 따라서 좌변도 $$0$$으로 가며, 이는 선형사상 $$h \mapsto \sum_j (\partial f/\partial x_j)(a)\,h_j$$가 곧 $$Df(a)$$임을, 즉 $$f$$가 $$a$$에서 미분가능함을 뜻한다.
+이다. 한편 $$h \to 0$$이면 모든 $$\xi_j \to a$$이고, 편미분 $$\partial f/\partial x_j$$가 $$a$$에서 연속이므로 우변의 각 항이 $$0$$으로 간다. 따라서 좌변도 $$0$$으로 가며, 이는 선형사상 $$h \mapsto \sum_j (\partial f/\partial x_j)(a) h_j$$가 곧 $$Df(a)$$임을, 즉 $$f$$가 $$a$$에서 미분가능함을 뜻한다.
 
 </details>
 
@@ -238,10 +238,10 @@ $$L(a + h) - L(a) = M(a+h) - Ma = Mh$$
 $$\begin{aligned}
 q(a + h) - q(a) &= (a+h)^\top M (a+h) - a^\top M a \\
 &= a^\top M h + h^\top M a + h^\top M h \\
-&= 2\,a^\top M h + h^\top M h
+&= 2 a^\top M h + h^\top M h
 \end{aligned}$$
 
-이고, $$h^\top M h = O(\lVert h\rVert^2) = o(\lVert h\rVert)$$이므로 $$Dq(a)h = 2\,a^\top M h$$, 곧 $$\nabla q(a) = 2Ma$$이다. $$M = I$$이면 $$q(x) = \lVert x\rVert^2$$이고 $$\nabla q(a) = 2a$$로, 익숙한 결과를 회복한다.
+이고, $$h^\top M h = O(\lVert h\rVert^2) = o(\lVert h\rVert)$$이므로 $$Dq(a)h = 2 a^\top M h$$, 곧 $$\nabla q(a) = 2Ma$$이다. $$M = I$$이면 $$q(x) = \lVert x\rVert^2$$이고 $$\nabla q(a) = 2a$$로, 익숙한 결과를 회복한다.
 
 </div>
 

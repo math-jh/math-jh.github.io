@@ -5,7 +5,6 @@ excerpt: "Flat morphisms in algebraic geometry"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/flat_morphisms
-drift_needed: true
 sidebar: 
     nav: "scheme_theory-ko"
 
