@@ -12,26 +12,27 @@ sidebar:
 date: 2026-06-23
 
 weight: 118
-translated_at: 2026-06-26T10:00:02+00:00
+translated_at: 2026-06-26T21:00:01+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-26T21:00:01+00:00
 ---
 ## Complex Inner Product and Norm
 
-In [§Inner Product Spaces](/en/math/linear_algebra/inner_product_spaces), we defined an inner product on an $\mathbb{R}$-vector space. The key condition of the inner product is positive-definiteness, i.e., $\langle v,v\rangle\geq 0$, which requires an ordering on $\mathbb{K}$ and thus does not immediately carry over to a general field. In particular, on $\mathbb{C}$, if we simply use $\langle v,w\rangle=\sum_i v_iw_i$, then $\langle v,v\rangle=\sum_i v_i^2$ becomes a complex number and we cannot speak of its sign. The solution is to take the complex conjugate of one variable. Since $\sum_i\bar v_iv_i=\sum_i\lvert v_i\rvert^2$ is always a non-negative real number, we modify the inner product so that it is conjugate-linear in one variable. We call such an inner product a *Hermitian inner product*, and in this post we examine how the theory of [§Inner Product Spaces](/en/math/linear_algebra/inner_product_spaces) carries over to $\mathbb{C}$-vector spaces equipped with it.
+In [§Inner Product Spaces](/en/math/linear_algebra/inner_product_spaces), we defined an inner product on an $\mathbb{R}$-vector space. The defining condition of an inner product is positive-definiteness, i.e., $\langle v,v\rangle\geq 0$, which requires an ordering on $\mathbb{K}$ and thus does not immediately carry over to a general field. In particular, on $\mathbb{C}$, if we simply set $\langle v,w\rangle=\sum_i v_iw_i$, then $\langle v,v\rangle=\sum_i v_i^2$ becomes a complex number and we can no longer speak of its sign. The remedy is to take the complex conjugate of one variable: since $\sum_i\bar v_iv_i=\sum_i\lvert v_i\rvert^2$ is always a non-negative real number, we modify the inner product so that it is conjugate-linear in one variable. Such an inner product is called a *Hermitian inner product*, and in this post we examine how the theory of [§Inner Product Spaces](/en/math/linear_algebra/inner_product_spaces) carries over to $\mathbb{C}$-vector spaces equipped with one.
 
 <div class="definition" markdown="1">
 
 <ins id="def1">**Definition 1**</ins> A function $\langle-,-\rangle:V\times V\rightarrow\mathbb{C}$ on a $\mathbb{C}$-vector space $V$ is called a *Hermitian inner product* if it satisfies the following:
 
 1. (Conjugate-symmetry) For any $v,w\in V$, $\langle w,v\rangle=\overline{\langle v,w\rangle}$;
-2. (Linearity on second argument) For any $v,w,w'\in V$ and $\alpha\in\mathbb{C}$, $\langle v,w+w'\rangle=\langle v,w\rangle+\langle v,w'\rangle$ and $\langle v,\alpha w\rangle=\alpha\langle v,w\rangle$;
+2. (Linearity in the second argument) For any $v,w,w'\in V$ and $\alpha\in\mathbb{C}$, $\langle v,w+w'\rangle=\langle v,w\rangle+\langle v,w'\rangle$ and $\langle v,\alpha w\rangle=\alpha\langle v,w\rangle$;
 3. (Positive-definiteness) For any $v\in V$, $\langle v,v\rangle\geq 0$, and equality holds only when $v=0$.
 
 A space $V$ equipped with such a $\langle-,-\rangle$ is called a *complex inner product space*.
 
 </div>
 
-Setting $v=w$ in condition 1 gives $\langle v,v\rangle=\overline{\langle v,v\rangle}$, so $\langle v,v\rangle$ is always real, and thus the inequality in the third condition makes sense. As for the second condition, the inner product is linear in the second variable by definition, but conjugate-linear in the first. Indeed, combining conditions 1 and 2 yields
+Setting $v=w$ in condition 1 gives $\langle v,v\rangle=\overline{\langle v,v\rangle}$, so $\langle v,v\rangle$ is always real, and thus the inequality in condition 3 is meaningful. As for condition 2, the inner product is linear in the second variable by definition, but conjugate-linear in the first. Indeed, combining conditions 1 and 2 yields
 
 $$\langle \alpha v,w\rangle=\overline{\langle w,\alpha v\rangle}=\overline{\alpha\langle w,v\rangle}=\bar\alpha\overline{\langle w,v\rangle}=\bar\alpha\langle v,w\rangle$$
 
@@ -41,7 +42,7 @@ The most basic example is the *standard Hermitian inner product* on $\mathbb{C}^
 
 $$\langle v,w\rangle=\sum_{i=1}^n\bar v_iw_i=\bar v^tw.$$
 
-Here, conjugate-symmetry follows from $\overline{\bar v^tw}=v^t\bar w=\overline{w}^{\,t}v$, linearity in the second variable follows immediately from the properties of matrix multiplication, and $\langle v,v\rangle=\sum_i\lvert v_i\rvert^2$ is positive for $v\neq 0$, so it is positive-definite.
+Here, conjugate-symmetry follows from $\overline{\bar v^tw}=v^t\bar w=\overline{w}^{\,t}v$, linearity in the second variable follows immediately from the properties of matrix multiplication, and $\langle v,v\rangle=\sum_i\lvert v_i\rvert^2$ is positive whenever $v\neq 0$, so the product is positive-definite.
 
 Meanwhile, since condition 3 implies that $\langle v,v\rangle$ is a non-negative real number, we can define the magnitude of a vector exactly as in the real case.
 

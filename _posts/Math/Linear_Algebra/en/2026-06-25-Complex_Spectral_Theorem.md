@@ -12,22 +12,23 @@ sidebar:
 date: 2026-06-25
 
 weight: 121
-translated_at: 2026-06-26T03:30:01+00:00
+translated_at: 2026-06-26T21:30:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-26T21:30:02+00:00
 ---
-In [§Spectral Theorem](/en/math/linear_algebra/spectral_theorem), we saw that a self-adjoint operator on a $$\mathbb{R}$$-inner product space is precisely diagonalized by an orthonormal basis, and in that process we necessarily had to go up to $$\mathbb{C}$$. Now we examine what the spectral theorem says for complex matrices.
+In [§Spectral Theorem](/en/math/linear_algebra/spectral_theorem), we saw that a self-adjoint operator on a $$\mathbb{R}$$-inner product space is precisely diagonalized by an orthonormal basis, and in that process we necessarily had to ascend to $$\mathbb{C}$$. Now we examine what the spectral theorem says for complex matrices.
 
 ## Self-Adjoint and Normal Operators
 
-First, just as in the real case, we give a name to an operator whose adjoint is itself.
+First, just as in the real case, we give a name to an operator that coincides with its own adjoint.
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**Definition 1**</ins> A linear operator $$L:V\rightarrow V$$ on a complex inner product space $$V$$ is called *self-adjoint*, or *Hermitian*, if $$L=L^\ast$$, i.e., for all $$v,w\in V$$ we have $$\langle Lv,w\rangle=\langle v,Lw\rangle$$.
+<ins id="def1">**Definition 1**</ins> A linear operator $$L:V\rightarrow V$$ on a complex inner product space $$V$$ is called *self-adjoint*, or *Hermitian*, if $$L=L^\ast$$; equivalently, $$\langle Lv,w\rangle=\langle v,Lw\rangle$$ for all $$v,w\in V$$.
 
 </div>
 
-That is, via the isomorphism given by the inner product, when we identify $$V^\ast$$ with $$V$$, the dual operator $$L^\ast: V^\ast\rightarrow V^\ast$$ translated to $$V$$ is exactly itself. For real matrices this came out as a symmetric matrix, but for complex numbers the only difference is that this becomes the conjugate-transpose matrix. A slightly confusing point is that $$L^\ast$$ now denotes both the conjugate-transpose and the dual map, but as we saw above, if we regard $$V$$ and $$V^\ast$$ as the same via the isomorphism given by a complex inner product space, these two actually coincide, so there is no real harm.
+That is, via the isomorphism furnished by the inner product, when we identify $$V^\ast$$ with $$V$$, the dual operator $$L^\ast: V^\ast\rightarrow V^\ast$$ translated to $$V$$ is exactly $$L$$ itself. For real matrices this yields a symmetric matrix; for complex matrices the only difference is that one obtains the conjugate-transpose. A slightly confusing point is that $$L^\ast$$ now denotes both the conjugate-transpose and the dual map, but as we saw above, if we regard $$V$$ and $$V^\ast$$ as the same via the isomorphism given by a complex inner product, these two actually coincide, so there is no real harm.
 
 One point that differs from the real case is that it is <em>not</em> only self-adjoint operators that are diagonalized by an orthonormal basis; for this we need the following generalization.
 
@@ -41,7 +42,7 @@ holds.
 
 </div>
 
-Then in particular a self-adjoint operator satisfies $$LL^\ast=L^2=L^\ast L$$, so it is a normal operator, and a unitary operator is as well. ([§Complex Inner Product Spaces, ⁋Definition 5](/en/math/linear_algebra/complex_inner_product_spaces#def5)) Moreover, a *skew-Hermitian* operator satisfying $$L^\ast=-L$$ also satisfies $$LL^\ast=-L^2=L^\ast L$$, so it is a normal operator. Thus normal operators form a broad class containing many special cases, and the goal of this post is to show that they are exactly the operators diagonalized by an orthonormal basis.
+Then in particular a self-adjoint operator satisfies $$LL^\ast=L^2=L^\ast L$$, so it is normal, and a unitary operator is as well. ([§Complex Inner Product Spaces, ⁋Definition 5](/en/math/linear_algebra/complex_inner_product_spaces#def5)) Moreover, a *skew-Hermitian* operator satisfying $$L^\ast=-L$$ also satisfies $$LL^\ast=-L^2=L^\ast L$$, so it is normal. Thus normal operators form a broad class containing many special cases, and the goal of this post is to show that they are exactly the operators diagonalized by an orthonormal basis.
 
 ## Schur Decomposition
 
@@ -49,7 +50,7 @@ On a complex inner product space, any linear operator can be shown to be similar
 
 <div class="proposition" markdown="1">
 
-<ins id="thm3">**Theorem 3 (Schur)**</ins> For any linear operator $$L:V\rightarrow V$$ on a complex inner product space $$V$$, there exists an orthonormal basis of $$V$$ with respect to which the matrix representation of $$L$$ is an upper triangular matrix. In the language of matrices, for any $$A\in\Mat_n(\mathbb{C})$$ there exist a unitary matrix $$U$$ and an upper triangular matrix $$T$$ such that $$A=UTU^\ast$$.
+<ins id="thm3">**Theorem 3 (Schur)**</ins> For any linear operator $$L:V\rightarrow V$$ on a complex inner product space $$V$$, there exists an orthonormal basis of $$V$$ with respect to which the matrix representation of $$L$$ is upper triangular. In the language of matrices, for any $$A\in\Mat_n(\mathbb{C})$$ there exist a unitary matrix $$U$$ and an upper triangular matrix $$T$$ such that $$A=UTU^\ast$$.
 
 </div>
 <details class="proof" markdown="1">
@@ -61,15 +62,15 @@ The characteristic polynomial of $$L^\ast$$ has degree at least $$1$$, so by [§
 
 $$\langle Lw,e_n\rangle=\langle w,L^\ast e_n\rangle=\langle w,\mu e_n\rangle=\mu\langle w,e_n\rangle=0$$
 
-so $$Lw\in W$$. That is, $$W$$ is invariant under $$L$$, and hence we may view $$L\vert_W$$ as a linear operator on $$W$$, and by the induction hypothesis there exists an orthonormal basis $$\{e_1,\ldots,e_{n-1}\}$$ of $$W$$ such that for each $$j\leq n-1$$ we have $$Le_j\in\span(e_1,\ldots,e_j)$$.
+so $$Lw\in W$$. That is, $$W$$ is invariant under $$L$$, and hence we may view $$L\vert_W$$ as a linear operator on $$W$$; by the induction hypothesis there exists an orthonormal basis $$\{e_1,\ldots,e_{n-1}\}$$ of $$W$$ such that for each $$j\leq n-1$$ we have $$Le_j\in\span(e_1,\ldots,e_j)$$.
 
-Then $$\{e_1,\ldots,e_n\}$$ is an orthonormal basis of $$V$$, and for $$j<n$$ we have $$Le_j\in\span(e_1,\ldots,e_j)$$ while for $$j=n$$ we trivially have $$Le_n\in V=\span(e_1,\ldots,e_n)$$. Thus the matrix representation of $$L$$ with respect to this basis is an upper triangular matrix. Letting $$U$$ be the matrix whose columns are the vectors of this basis, $$U$$ is unitary ([§Complex Inner Product Spaces, ⁋Definition 5](/en/math/linear_algebra/complex_inner_product_spaces#def5)) and $$U^\ast AU=T$$ is upper triangular, so $$A=UTU^\ast$$.
+Then $$\{e_1,\ldots,e_n\}$$ is an orthonormal basis of $$V$$, and for $$j<n$$ we have $$Le_j\in\span(e_1,\ldots,e_j)$$ while for $$j=n$$ we trivially have $$Le_n\in V=\span(e_1,\ldots,e_n)$$. Thus the matrix representation of $$L$$ with respect to this basis is upper triangular. Letting $$U$$ be the matrix whose columns are the vectors of this basis, $$U$$ is unitary ([§Complex Inner Product Spaces, ⁋Definition 5](/en/math/linear_algebra/complex_inner_product_spaces#def5)) and $$U^\ast AU=T$$ is upper triangular, so $$A=UTU^\ast$$.
 
 </details>
 
-The upper triangular matrix $$T$$ is similar to $$A$$, so it has the same characteristic polynomial, and the characteristic polynomial of an upper triangular matrix is $$\prod_i(\x-T_{ii})$$, so the diagonal entries $$T_{11},\ldots,T_{nn}$$ of $$T$$ contain exactly the eigenvalues of $$A$$ with multiplicity. The Schur decomposition says that any complex matrix can reveal its eigenvalues on the diagonal by a unitary transformation alone.
+The upper triangular matrix $$T$$ is similar to $$A$$, so it has the same characteristic polynomial, and the characteristic polynomial of an upper triangular matrix is $$\prod_i(\x-T_{ii})$$; thus the diagonal entries $$T_{11},\ldots,T_{nn}$$ of $$T$$ contain exactly the eigenvalues of $$A$$ with multiplicity. The Schur decomposition says that any complex matrix can reveal its eigenvalues on the diagonal by a unitary transformation alone.
 
-If in addition the given matrix is normal, then this upper triangular matrix further becomes a diagonal matrix.
+If in addition the given matrix is normal, then this upper triangular matrix further becomes diagonal.
 
 <div class="proposition" markdown="1">
 
@@ -79,9 +80,9 @@ If in addition the given matrix is normal, then this upper triangular matrix fur
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-By [Theorem 3](#thm3) we may write $$A=UTU^\ast$$ with $$T$$ upper triangular, and what we need to show is that if $$A$$ is normal then $$T$$ is a diagonal matrix. Since $$U$$ is unitary, $$T=U^\ast AU$$ is also a normal matrix, and we show by induction on the rows of $$T$$ that an upper triangular normal matrix $$T$$ is diagonal.
+By [Theorem 3](#thm3) we may write $$A=UTU^\ast$$ with $$T$$ upper triangular, and we need to show that if $$A$$ is normal then $$T$$ is diagonal. Since $$U$$ is unitary, $$T=U^\ast AU$$ is also normal, and we show by induction on the rows of $$T$$ that an upper triangular normal matrix is diagonal.
 
-First, since $$T$$ is upper triangular, the first column of $$T$$ is $$(T_{11},0,\ldots,0)^t$$, and thus $$\lVert Te_1\rVert^2=\lvert T_{11}\rvert^2$$. On the other hand, the first column of $$T^\ast$$ is the conjugate of the first row of $$T$$, so $$\lVert T^\ast e_1\rVert^2=\sum_{j}\lvert T_{1j}\rvert^2$$. Since $$T$$ is normal,
+First, since $$T$$ is upper triangular, its first column is $$(T_{11},0,\ldots,0)^t$$, and thus $$\lVert Te_1\rVert^2=\lvert T_{11}\rvert^2$$. On the other hand, the first column of $$T^\ast$$ is the conjugate of the first row of $$T$$, so $$\lVert T^\ast e_1\rVert^2=\sum_{j}\lvert T_{1j}\rvert^2$$. Since $$T$$ is normal,
 
 $$\lVert Te_1\rVert^2=\langle Te_1,Te_1\rangle=\langle e_1,T^\ast Te_1\rangle=\langle e_1,TT^\ast e_1\rangle=\langle T^\ast e_1,T^\ast e_1\rangle=\lVert T^\ast e_1\rVert^2$$
 
@@ -89,7 +90,7 @@ and thus $$\lvert T_{11}\rvert^2=\sum_{j}\lvert T_{1j}\rvert^2$$, so $$T_{1j}=0$
 
 </details>
 
-The Schur decomposition forms a nice contrast with [§Jordan Canonical Form](/en/math/linear_algebra/Jordan_canonical_form). The Jordan canonical form uses a generally non-unitary change of basis to put a matrix into a canonical block form, whereas the Schur decomposition restricts the change of basis to be unitary at the cost of giving up a canonical form and settling for an upper triangular form. The latter preserves orthonormality and is numerically stable, which is an advantage that makes it frequently used in applications.
+The Schur decomposition forms a nice contrast with [§Jordan Canonical Form](/en/math/linear_algebra/Jordan_canonical_form). The Jordan canonical form uses a generally non-unitary change of basis to put a matrix into a canonical block form, whereas the Schur decomposition restricts the change of basis to be unitary at the cost of giving up a canonical form and settling for an upper triangular one. The latter preserves orthonormality and is numerically stable, an advantage that makes it frequently used in applications.
 
 ## Complex Spectral Theorem
 
@@ -103,7 +104,7 @@ The unitary diagonalization of a normal matrix is a direct consequence of [Theor
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-If $$L$$ is normal, then it is diagonalized by an orthonormal basis by [Corollary 4](#cor4), so the key is the converse. Suppose there exists an orthonormal basis $$\{v_1,\ldots,v_n\}$$ of $$V$$ consisting of eigenvectors of $$L$$ with $$Lv_i=\lambda_i v_i$$. Then by [§Complex Inner Product Spaces, ⁋Proposition 4](/en/math/linear_algebra/complex_inner_product_spaces#prop4), the matrix representation of $$L^\ast$$ with respect to this basis is $$\diag(\bar\lambda_1,\ldots,\bar\lambda_n)$$. Now two diagonal matrices commute, so $$LL^\ast=L^\ast L$$, and hence $$L$$ is a normal operator.
+If $$L$$ is normal, then it is diagonalized by an orthonormal basis by [Corollary 4](#cor4), so the key is the converse. Suppose there exists an orthonormal basis $$\{v_1,\ldots,v_n\}$$ of $$V$$ consisting of eigenvectors of $$L$$ with $$Lv_i=\lambda_i v_i$$. Then by [§Complex Inner Product Spaces, ⁋Proposition 4](/en/math/linear_algebra/complex_inner_product_spaces#prop4), the matrix representation of $$L^\ast$$ with respect to this basis is $$\diag(\bar\lambda_1,\ldots,\bar\lambda_n)$$. Now two diagonal matrices commute, so $$LL^\ast=L^\ast L$$, and hence $$L$$ is normal.
 
 </details>
 
@@ -121,7 +122,7 @@ holds. In this case, the diagonal entries of $$D$$ are the eigenvalues of $$A$$,
 
 ## Special Cases
 
-As explained above, self-adjoint operators and unitary operators are normal operators, so by [Theorem 5](#thm5) they are both diagonalized by an orthonormal basis. What makes them special is that the diagonal matrix obtained from the diagonalization has a particular form.
+As explained above, self-adjoint operators and unitary operators are normal, so by [Theorem 5](#thm5) they are both diagonalized by an orthonormal basis. What makes them special is that the diagonal matrix obtained from the diagonalization has a particular form.
 
 <div class="proposition" markdown="1">
 
