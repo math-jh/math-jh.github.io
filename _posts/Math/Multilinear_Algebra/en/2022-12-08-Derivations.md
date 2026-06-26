@@ -5,18 +5,18 @@ excerpt: "Differential modules"
 
 categories: [Math / Multilinear Algebra]
 permalink: /en/math/multilinear_algebra/derivations
-drift_needed: true
 sidebar: 
     nav: "multilinear_algebra-en"
 
 date: 2022-12-12
 weight: 120
-translated_at: 2026-06-26T02:00:54+00:00
+translated_at: 2026-06-26T22:30:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-26T22:30:02+00:00
 ---
 ## Definition of Derivations
 
-We now introduce the notion of a derivation. More precisely, we will be concerned with the concept of differential forms, and to handle this we need a graded algebra. Henceforth, we write $$\Delta$$ for the abelian group that provides the structure of a graded algebra.
+We now introduce the notion of a derivation. More precisely, we shall be concerned with the concept of differential forms, and to handle this we need a graded algebra. Henceforth, we write $$\Delta$$ for the abelian group that provides the graded algebra structure.
 
 <div class="definition" markdown="1">
 
