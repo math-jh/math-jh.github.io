@@ -5,18 +5,18 @@ excerpt: "The decomposition of separable and inseparable degrees"
 
 categories: [Math / Field Theory]
 permalink: /en/math/field_theory/separable_degree
-drift_needed: true
 sidebar: 
     nav: "field_theory-en"
 
 date: 2025-05-17
 weight: 7
-translated_at: 2026-06-26T00:30:02+00:00
+translated_at: 2026-06-26T18:00:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-26T18:00:02+00:00
 ---
 ## Radical Extensions
 
-The most inseparable extension one can conceive is, of course, a $$p$$-radical extension. For this reason, a $$p$$-radical extension is often called a *purely inseparable extension*. In this post, we first examine the relationship between $$p$$-radical extensions and separable extensions, and then explain it using the separable degree.
+The most inseparable extension one can conceive is, of course, a $$p$$-radical extension. For this reason, a $$p$$-radical extension is often called a *purely inseparable extension*. In this post, we first examine the relationship between $$p$$-radical extensions and separable extensions, and then describe it using the separable degree.
 
 Let us first prove the following lemma.
 

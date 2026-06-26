@@ -10,22 +10,23 @@ sidebar:
 
 date: 2026-06-08
 weight: 5
-translated_at: 2026-06-26T04:00:02+00:00
+translated_at: 2026-06-26T18:30:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-26T18:30:02+00:00
 ---
-In general, when a geometric object is given, we decompose it into smaller pieces in order to understand its structure. For instance, the most manageable topological spaces are CW complexes, and by decomposing them into cell structures we can perform concrete computations. Since a Lie group is simultaneously an algebraic and a geometric object, we can try this approach, and the Bruhat decomposition introduced in [§Borel subgroup, ⁋Proposition 16](/en/math/lie_theory/borel_subgroup#prop16) does exactly this.
+In general, when a geometric object is given, we decompose it into smaller pieces in order to understand its structure. For instance, the most manageable topological spaces are CW complexes, and decomposing them into cell structures allows us to perform concrete computations. Since a Lie group is simultaneously an algebraic and a geometric object, we can try this approach, and the Bruhat decomposition introduced in [§Borel subgroup, ⁋Proposition 16](/en/math/lie_theory/borel_subgroup#prop16) does exactly this.
 
 In this post we examine the Bruhat decomposition in more detail, then generalize to larger parabolic subgroups $$P\supseteq B$$ containing the Borel subgroup $$B$$, and study the cell decomposition of the partial flag variety $$G/P$$.
 
 ## Coxeter group and length function
 
-What distinguishes the Bruhat decomposition from an ordinary cell decomposition is that the cells do not arise arbitrarily, but naturally as orbits of the action of the Borel subgroup $$B$$ on $$G/B$$. More importantly, the set of these orbits $$B\backslash G/B$$ is indexed precisely by the Weyl group $$W$$ ([§Root systems, ⁋Definition 17](/en/math/lie_theory/root_systems#def17)). Hence the geometry of each cell is completely reduced to the combinatorics of $$W$$, and it is here that the root system reappears.
+What distinguishes the Bruhat decomposition from an ordinary cell decomposition is that the cells do not arise arbitrarily, but naturally as orbits for the action of the Borel subgroup $$B$$ on $$G/B$$. More importantly, the set of these orbits $$B\backslash G/B$$ is indexed precisely by the Weyl group $$W$$ ([§Root systems, ⁋Definition 17](/en/math/lie_theory/root_systems#def17)). Hence the geometry of each cell is completely reduced to the combinatorics of $$W$$, and it is here that the root system reappears.
 
 To this end we first define the Coxeter group.
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**Definition 1**</ins> A pair $$(W,S)$$ of a group $$W$$ and its generators $$S=\{s_1,\ldots,s_r\}$$ is called a *Coxeter system* if $$W$$ has the following presentation:
+<ins id="def1">**Definition 1**</ins> A pair $$(W,S)$$ of a group $$W$$ and generators $$S=\{s_1,\ldots,s_r\}$$ is called a *Coxeter system* if $$W$$ has the following presentation:
 
 $$W=\left\langle s_1,\ldots,s_r\;\middle\vert\;(s_is_j)^{m_{ij}}=e\right\rangle$$
 
@@ -35,7 +36,7 @@ Here $$m_{ii}=1$$, and for $$i\neq j$$ we have $$m_{ij}=m_{ji}\in\{2,3,\ldots,\i
 
 The condition $$m_{ii}=1$$ means that each generator is an involution satisfying $$s_i^2=e$$, and the relation $$(s_is_j)^{m_{ij}}=e$$ for $$i\neq j$$ is called the *braid relation*. For example, if $$m_{ij}=2$$ then $$s_is_j=s_js_i$$, i.e. the two generators commute, and if $$m_{ij}=3$$ then $$s_is_js_i=s_js_is_j$$. The case $$m_{ij}=\infty$$ means that no relation is imposed between $$s_i$$ and $$s_j$$.
 
-The smallest nontrivial case is that of two generators. If $$S=\{s_1,s_2\}$$ and $$m_{12}=m$$, then $$(W,S)$$ is exactly the dihedral group of order $$2m$$ ([\[Algebraic Structures\] §Semigroups, Monoids, Groups, ⁋Example 16](/en/math/algebraic_structures/groups#ex16)), and the two generators are realized as reflections about adjacent axes of symmetry of a regular $$m$$-gon, with their product $$s_1s_2$$ being a rotation of order $$m$$. A general Coxeter group can be understood as such dihedral pieces glued together sharing generators. Indeed, for any two generators $$s_i,s_j$$ the subgroup $$\langle s_i,s_j\rangle$$ is always the dihedral group of order $$2m_{ij}$$, and the essence of the presentation in [Definition 1](#def1) is that there are no new relations involving three or more generators beyond these pairwise ones.
+The smallest nontrivial case is that of two generators. If $$S=\{s_1,s_2\}$$ and $$m_{12}=m$$, then $$(W,S)$$ is exactly the dihedral group of order $$2m$$ ([\[Algebraic Structures\] §Semigroups, Monoids, Groups, ⁋Example 16](/en/math/algebraic_structures/groups#ex16)), and the two generators are realized as reflections in adjacent axes of symmetry of a regular $$m$$-gon, with their product $$s_1s_2$$ being a rotation of order $$m$$. A general Coxeter group can be understood as such dihedral pieces glued together along shared generators. Indeed, for any two generators $$s_i,s_j$$ the subgroup $$\langle s_i,s_j\rangle$$ is always the dihedral group of order $$2m_{ij}$$, and the essence of the presentation in [Definition 1](#def1) is that there are no new relations involving three or more generators beyond these pairwise ones.
 
 The symmetric matrix formed by these integers $$m_{ij}$$ encodes all information of the Coxeter system, and finite reflection groups are characterized precisely as finite Coxeter groups.
 
@@ -57,7 +58,7 @@ Given a Coxeter system $$(W,S)$$, we can measure the "cost" of expressing each e
 
 <div class="definition" markdown="1">
 
-<ins id="def3">**Definition 3**</ins> For an element $$w$$ of a Coxeter system $$(W,S)$$, the *length* $$\ell(w)$$ of $$w$$ is the smallest $$k$$ needed to write $$w$$ as a product of simple reflections $$w=s_{i_1}\cdots s_{i_k}$$. An expression of length $$\ell(w)$$ is called a *reduced expression* of $$w$$.
+<ins id="def3">**Definition 3**</ins> For an element $$w$$ of a Coxeter system $$(W,S)$$, the *length* $$\ell(w)$$ of $$w$$ is the smallest $$k$$ for which $$w$$ can be written as a product of simple reflections $$w=s_{i_1}\cdots s_{i_k}$$. An expression of length $$\ell(w)$$ is called a *reduced expression* of $$w$$.
 
 </div>
 
@@ -107,9 +108,9 @@ The simplest and most intuitive way to view this decomposition is to consider th
 
 $$(b_1,b_2)\cdot g=b_1gb_2^{-1}$$
 
-The orbit of this action is exactly the double coset $$BwB$$, and the theorem says that these orbits are indexed by $$W$$.
+The orbits of this action are exactly the double cosets $$BwB$$, and the theorem says that these orbits are indexed by $$W$$.
 
-To examine the geometric meaning of this, let us look at the example of $$G=\GL_n(\mathbb{C})$$. Fixing the reference flag $$E_i=\span\{e_1,\ldots,e_i\}$$, we saw that an arbitrary flag $$V_\bullet$$ corresponds to $$gB$$ via $$V_i=\span\{ge_1,\ldots,ge_i\}$$. ([§Borel subgroup, ⁋Example 13](/en/math/lie_theory/borel_subgroup#ex13)) In general, the relative position of the reference flag $$E_\bullet$$ and $$V_i$$ is expressed by the intersection dimensions
+To examine the geometric meaning of this, let us look at the example $$G=\GL_n(\mathbb{C})$$. Fixing the reference flag $$E_i=\span\{e_1,\ldots,e_i\}$$, we saw that an arbitrary flag $$V_\bullet$$ corresponds to $$gB$$ via $$V_i=\span\{ge_1,\ldots,ge_i\}$$. ([§Borel subgroup, ⁋Example 13](/en/math/lie_theory/borel_subgroup#ex13)) In general, the relative position of the reference flag $$E_\bullet$$ and $$V_\bullet$$ is expressed by the intersection dimensions
 
 $$d_{ij}=\dim(V_i\cap E_j)$$
 
@@ -119,7 +120,7 @@ $$d_{ij}=\dim(V_i\cap E_j)=\#\{k\leq i\mid w(k)\leq j\}$$
 
 for exactly one $$w\in S_n$$. That is, the relative position of $$V_\bullet$$ is in one-to-one correspondence with an element of $$W$$ in this way, and $$BwB$$ is the set of all $$g$$ whose relative position is $$w$$. Each piece $$BwB$$ is called a *Bruhat cell*.
 
-This, as its name suggests, forms an open cell. Concretely, $$B$$ decomposes as the semidirect product of a maximal torus $$T$$ and the unipotent radical $$B=U\rtimes T$$, and this unipotent radical $$U$$ is the product of the positive root subgroups $$U=\prod_{\alpha\in\Phi^+}U_\alpha$$ (each $$U_\alpha\cong\mathbb{G}_a$$). Denoting the unipotent radical of the opposite Borel subgroup $$B^-$$ by $$U^-$$, for each $$w\in W$$ we define
+This, as its name suggests, forms an open cell. Concretely, $$B$$ decomposes as the semidirect product of a maximal torus $$T$$ and the unipotent radical, $$B=U\rtimes T$$, and this unipotent radical $$U$$ is the product of the positive root subgroups $$U=\prod_{\alpha\in\Phi^+}U_\alpha$$ (each $$U_\alpha\cong\mathbb{G}_a$$). Denoting the unipotent radical of the opposite Borel subgroup $$B^-$$ by $$U^-$$, for each $$w\in W$$ we define
 
 $$U_w=U\cap wU^-w^{-1}$$
 
