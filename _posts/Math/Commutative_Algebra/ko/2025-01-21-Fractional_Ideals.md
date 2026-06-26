@@ -5,7 +5,6 @@ excerpt: "Fractional ideal과 invertible module, Picard group"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/fractional_ideals
-drift_needed: true
 sidebar: 
     nav: "commutative_algebra-ko"
 

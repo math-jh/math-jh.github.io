@@ -5,7 +5,6 @@ excerpt: "Graded ring과 graded module의 homogeneous localization"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/localization_of_graded_rings
-drift_needed: true
 sidebar: 
     nav: "commutative_algebra-ko"
 

@@ -5,7 +5,6 @@ excerpt: "벡터공간의 고유공간분해"
 
 categories: [Math / Linear Algebra]
 permalink: /ko/math/linear_algebra/eigenspace_decomposition
-drift_needed: true
 sidebar: 
     nav: "linear_algebra-ko"
 
