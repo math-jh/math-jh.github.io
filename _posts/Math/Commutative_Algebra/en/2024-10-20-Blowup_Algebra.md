@@ -5,14 +5,14 @@ excerpt: "Rees algebra and associated graded ring from an ideal"
 
 categories: [Math / Commutative Algebra]
 permalink: /en/math/commutative_algebra/blowup_algebra
-drift_needed: true
 sidebar: 
     nav: "commutative_algebra-en"
 
 date: 2024-10-20
 weight: 11
-translated_at: 2026-06-25T20:00:12+00:00
+translated_at: 2026-06-26T14:30:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-26T14:30:02+00:00
 ---
 In this post, we fix an ideal $\mathfrak{a}$ of a ring $A$ and define two graded $A$-algebras arising from it.
 
@@ -26,7 +26,7 @@ $$\gr_\mathfrak{a}A= A/\mathfrak{a}\oplus \mathfrak{a}/\mathfrak{a}^2\oplus\cdot
 
 </div>
 
-In the above definition, the multiplication in $\gr_\mathfrak{a}A$ is defined as follows: given arbitrary $a\in \mathfrak{a}^k/\mathfrak{a}^{k+1}$ and $b\in \mathfrak{a}^l/\mathfrak{a}^{l+1}$, their product $ab$ is obtained by first computing the product $\tilde{a}\tilde{b}$ of representatives $\tilde{a}\in \mathfrak{a}^k$ and $\tilde{b}\in \mathfrak{a}^l$, and then restricting the result to $\mathfrak{a}^{k+l}/\mathfrak{a}^{k+l+1}$.
+In the above definition, the multiplication in $\gr_\mathfrak{a}A$ is defined as follows: given arbitrary $a\in \mathfrak{a}^k/\mathfrak{a}^{k+1}$ and $b\in \mathfrak{a}^l/\mathfrak{a}^{l+1}$, their product $ab$ is obtained by first computing the product $\tilde{a}\tilde{b}$ of representatives $\tilde{a}\in \mathfrak{a}^k$ and $\tilde{b}\in \mathfrak{a}^l$, then restricting the result to $\mathfrak{a}^{k+l}/\mathfrak{a}^{k+l+1}$.
 
 <div class="proposition" markdown="1">
 
@@ -108,13 +108,13 @@ First, if $\Bl_\mathcal{J}M$ is finitely generated, then there exists a suitable
 
 </details>
 
-## Artin-Rees lemma
+## Artin–Rees lemma
 
-We now prove the following useful Artin-Rees lemma.
+We now prove the following useful Artin–Rees lemma.
 
 <div class="proposition" markdown="1">
 
-<ins id="lem7">**Lemma 7 (Artin-Rees)**</ins> Fix a Noetherian ring $A$ and an ideal $\mathfrak{a}\subseteq A$, and let $M$ be a finitely generated $A$-module with a submodule $M'$. If
+<ins id="lem7">**Lemma 7 (Artin–Rees)**</ins> Fix a Noetherian ring $A$ and an ideal $\mathfrak{a}\subseteq A$, and let $M$ be a finitely generated $A$-module with a submodule $M'$. If
 
 $$\mathcal{J}:\quad M=M_0\supseteq M_1\supseteq\cdots$$
 
