@@ -25,9 +25,12 @@ _site/
 # Obsidian
 .obsidian/
 
-# Bundler
+# Bundler — anchor to repo root. An unanchored `vendor/` matched EVERY vendor
+# dir at any depth, silently ignoring self-hosted libs under assets/js/vendor/
+# (force-graph.min.js 404'd in production this way, 2026-06-26). Only the
+# root-level Bundler vendor/bundle/ should be ignored.
 .bundle/
-vendor/
+/vendor/
 
 # Python
 __pycache__/
