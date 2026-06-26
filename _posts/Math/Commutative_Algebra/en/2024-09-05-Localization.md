@@ -5,14 +5,14 @@ excerpt: "Localization of rings and modules, and local ring construction"
 
 categories: [Math / Commutative Algebra]
 permalink: /en/math/commutative_algebra/localization
-drift_needed: true
 sidebar: 
     nav: "commutative_algebra-en"
 
 date: 2024-09-05
 weight: 2
-translated_at: 2026-06-25T19:00:17+00:00
+translated_at: 2026-06-26T14:00:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-26T14:00:02+00:00
 ---
 ## Local Rings
 
@@ -31,7 +31,7 @@ Then we can show the following equivalence.
 <ins id="prop2">**Proposition 2**</ins> For a ring $$A$$, the following are equivalent.
 
 1. $$A$$ is a local ring.
-2. Every non-unit of $$A$$ lies in some proper ideal $$\mathfrak{m}\subsetneq A$$ of $$A$$.
+2. Every non-unit of $$A$$ lies in some proper ideal $$\mathfrak{m}\subsetneq A$$.
 3. The set of all non-units of $$A$$ forms an ideal.
 
 </div>
@@ -40,7 +40,7 @@ Then we can show the following equivalence.
 
 First assume (1), and let $$a\in A$$ be an arbitrary non-unit. Then $$(a)$$ is an ideal of $$A$$, so by [[Algebraic Structures] §Definition of Rings, ⁋Theorem 9](/en/math/algebraic_structures/rings#thm9) it is contained in some maximal ideal. But since $$A$$ has a unique maximal ideal $$\mathfrak{m}$$, we must have $$(a)\subseteq \mathfrak{m}$$, and hence $$a\in \mathfrak{m}$$.
 
-Now assume (2) and show (3). For this, it suffices to show that the set of non-units of $$A$$ is closed under addition. First, from $$\mathfrak{m}\neq A$$ we know that $$\mathfrak{m}$$ does not contain any unit of $$A$$. From this we see that the set of all non-units of $$A$$ must equal $$\mathfrak{m}$$.
+Now assume (2) and show (3). For this, it suffices to show that the set of non-units of $$A$$ is closed under addition. First, from $$\mathfrak{m}\neq A$$ we know that $$\mathfrak{m}$$ contains no unit of $$A$$. From this we see that the set of all non-units of $$A$$ must equal $$\mathfrak{m}$$.
 
 Finally, assume (3) and show (1). For any ideal $$\mathfrak{a}\subsetneq A$$, by the preceding observation we know that $$\mathfrak{a}$$ consists only of non-units, and therefore $$\mathfrak{a}$$ is contained in the ideal $$\mathfrak{m}$$ consisting of all non-units of $$A$$. On the other hand, $$\mathfrak{m}$$ is a maximal ideal because any element of $$A\setminus \mathfrak{m}$$ is a unit of $$A$$, so the only ideal containing $$\mathfrak{m}$$ is $$A$$ itself.
 
@@ -48,7 +48,7 @@ Finally, assume (3) and show (1). For any ideal $$\mathfrak{a}\subsetneq A$$, by
 
 ## Localization of Modules
 
-As explained in the previous post, to look at localization of rings we define localization of modules more generally.
+As explained in the previous post, to study localization of rings we define localization of modules in greater generality.
 
 <div class="definition" markdown="1">
 
@@ -62,7 +62,7 @@ In particular, since $$1$$ can be regarded as the product of a family indexed by
 
 <ins id="def4">**Definition 4**</ins> For a ring $$A$$, an $$A$$-module $$M$$, and a multiplicative subset $$S$$ of $$A$$, the *localization* of $$M$$ at $$S$$ is the $$A$$-module $$S^{-1}M$$ defined as follows.
 
-1. As a set, $$S^{-1}M$$ is the quotient set of $$M\times S$$ by the equivalence relation
+1. As a set, $$S^{-1}M$$ is the quotient of $$M\times S$$ by the equivalence relation
     
     $$(x,s)\sim (x',s')\iff \text{there exists $t\in S$ such that $t(s'x-sx')=0$}$$
   
@@ -73,7 +73,7 @@ In particular, since $$1$$ can be regarded as the product of a family indexed by
 
 </div>
 
-We should verify that the operations defined in (2) actually give an $$A$$-module structure, but this is not difficult. Instead we add a few observations. First, for any $$t\in S$$ and $$x/s\in S^{-1}M$$, we have
+We should verify that the operations defined in (2) actually yield an $$A$$-module structure, but this is not difficult. Instead we add a few observations. First, for any $$t\in S$$ and $$x/s\in S^{-1}M$$, we have
 
 $$\frac{tx}{ts}=\frac{x}{s}$$
 
@@ -87,11 +87,11 @@ $$\frac{0}{s'}+\frac{x}{s}=\frac{x}{s}+\frac{0}{s'}=\frac{0s+s'x}{ss'}=\frac{s'x
 
 we see that this is the additive identity in $$S^{-1}M$$. By a similar calculation one can verify that the inverse of any $$x/s$$ is $$(-x)/s$$.
 
-The above calculations are no different from the addition and multiplication of fractions we have done since middle school. Taking this as intuition, we can define the canonical map $$\epsilon: M \rightarrow S^{-1}M$$ by $$x\mapsto x/1$$. Unfortunately, $$\epsilon$$ need not be injective in general; the reason is obvious and is captured in the following proposition.
+The above calculations are no different from the addition and multiplication of fractions we have done since middle school. Taking this as intuition, we define the canonical map $$\epsilon: M \rightarrow S^{-1}M$$ by $$x\mapsto x/1$$. Unfortunately, $$\epsilon$$ need not be injective in general; the reason is obvious and is captured in the following proposition.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**Proposition 5**</ins> In the above situation, $$\epsilon(x)=0$$ is equivalent to the existence of some $$s\in S$$ such that $$sx=0$$. In particular, if $$M$$ is finitely generated, then $$S^{-1}M=0$$ is equivalent to $$M$$ being annihilated by $$S$$.
+<ins id="prop5">**Proposition 5**</ins> In the above situation, $$\epsilon(x)=0$$ if and only if there exists $$s\in S$$ such that $$sx=0$$. In particular, if $$M$$ is finitely generated, then $$S^{-1}M=0$$ if and only if $$M$$ is annihilated by $$S$$.
 
 </div>
 <details class="proof" markdown="1">
@@ -111,11 +111,11 @@ The above argument also works in the reverse direction.
 
 ## Localization of Rings
 
-The simplest example of localization is the ring of fractions examined in [[Algebraic Structures] §Field of Fractions, ⁋Definition 2](/en/math/algebraic_structures/field_of_fractions#def2). Here we took $$M=A$$. In particular, we also saw that if $$A$$ is an integral domain, then its ring of fractions $$\Frac(A)$$ becomes a field. ([[Algebraic Structures] §Field of Fractions, ⁋Proposition 6](/en/math/algebraic_structures/field_of_fractions#prop6))
+The simplest example of localization is the ring of fractions examined in [[Algebraic Structures] §Field of Fractions, ⁋Definition 2](/en/math/algebraic_structures/field_of_fractions#def2). Here we take $$M=A$$. In particular, we also saw that if $$A$$ is an integral domain, then its ring of fractions $$\Frac(A)$$ is a field. ([[Algebraic Structures] §Field of Fractions, ⁋Proposition 6](/en/math/algebraic_structures/field_of_fractions#prop6))
 
-As another example, again taking $$M=A$$ and letting $$S=A\setminus \mathfrak{p}$$ for a prime ideal $$\mathfrak{p}$$ of $$A$$, we could consider $$A_\mathfrak{p}=S^{-1}A$$. Using [Definition 4](#def4) we can apply this to any $$A$$-module $$M$$, and the resulting $$A$$-module is denoted $$M_\mathfrak{p}$$.
+As another example, again taking $$M=A$$ and letting $$S=A\setminus \mathfrak{p}$$ for a prime ideal $$\mathfrak{p}$$ of $$A$$, we can consider $$A_\mathfrak{p}=S^{-1}A$$. Using [Definition 4](#def4) we can apply this to any $$A$$-module $$M$$, and the resulting $$A$$-module is denoted $$M_\mathfrak{p}$$.
 
-Both of the above examples have a multiplication structure in addition to the addition structure and scalar multiplication by $$A$$ defined in [Definition 4](#def4). Explicitly, this structure is given by
+Both of the above examples carry a multiplication structure in addition to the addition and scalar multiplication by $$A$$ defined in [Definition 4](#def4). Explicitly, this structure is given by
 
 $$\frac{x}{s}\frac{x'}{s'}=\frac{xx'}{ss'}$$
 
@@ -135,7 +135,7 @@ Suppose $$f$$ satisfying the given condition is given. If $$\overline{f}: S^{-1}
 
 $$\overline{f}\left(\frac{a}{s}\right)=\overline{f}\left(\frac{a}{1}\frac{1}{s}\right)=\overline{f}(\epsilon(a)\epsilon(s)^{-1})=\overline{f}(\epsilon(a))\overline{f}(\epsilon(s)^{-1})=f(a)f(s)^{-1}$$
 
-so if $$\overline{f}$$ exists it is uniquely determined by the above formula. Now it remains to show that $$\overline{f}: S^{-1}A \rightarrow B$$ defined by $$\overline{f}(a/s)=f(a)f(s)^{-1}$$ is a ring homomorphism, which is a straightforward calculation.
+so if $$\overline{f}$$ exists it is uniquely determined by the above formula. It remains to show that $$\overline{f}: S^{-1}A \rightarrow B$$ defined by $$\overline{f}(a/s)=f(a)f(s)^{-1}$$ is a ring homomorphism, which is a straightforward calculation.
 
 </details>
 
@@ -149,12 +149,12 @@ Meanwhile, there is a specific relationship between localization and ideals. Fir
 
 <ins id="def7">**Definition 7**</ins> For a ring homomorphism $$f:A \rightarrow B$$, an ideal $$\mathfrak{a}$$ of $$A$$, and an ideal $$\mathfrak{b}$$ of $$B$$, we define the following.
 
-1. The *contraction* of $$\mathfrak{b}$$ under $$f$$ is defined as the ideal $$f^{-1}(\mathfrak{b})$$ of $$A$$, and is denoted $$\mathfrak{b}^c$$.
-2. The *extension* of $$\mathfrak{a}$$ under $$f$$ is defined as the ideal of $$B$$ generated by the image $$f(\mathfrak{a})$$, and is denoted $$\mathfrak{a}^e$$.
+1. The *contraction* of $$\mathfrak{b}$$ under $$f$$ is the ideal $$f^{-1}(\mathfrak{b})$$ of $$A$$, denoted $$\mathfrak{b}^c$$.
+2. The *extension* of $$\mathfrak{a}$$ under $$f$$ is the ideal of $$B$$ generated by the image $$f(\mathfrak{a})$$, denoted $$\mathfrak{a}^e$$.
 
 </div>
 
-To make the first definition we should prove that $$f^{-1}(\mathfrak{b})$$ is an ideal, but this proof is easy. While the above notation is useful, it is relatively less intuitive, so after this post we will write $$f^{-1}(\mathfrak{b})$$ and $$f(\mathfrak{a})B$$ instead of the above notation.
+To make the first definition we should prove that $$f^{-1}(\mathfrak{b})$$ is an ideal, but this proof is easy. While the above notation is useful, it is relatively less intuitive, so after this post we will write $$f^{-1}(\mathfrak{b})$$ and $$f(\mathfrak{a})B$$ instead.
 
 <div class="proposition" markdown="1">
 
@@ -165,7 +165,7 @@ To make the first definition we should prove that $$f^{-1}(\mathfrak{b})$$ is an
   
     $$\mathfrak{a}^{ec}=\{a\in A\mid\text{there exists $s\in S$ satisfying $sa\in \mathfrak{a}$}\}$$
   
-    holds. In particular, $$\mathfrak{a}^e=S^{-1}A$$ is equivalent to $$\mathfrak{a}\cap S\neq\emptyset$$.
+    holds. In particular, $$\mathfrak{a}^e=S^{-1}A$$ if and only if $$\mathfrak{a}\cap S\neq\emptyset$$.
 
 Therefore, there is an inclusion-preserving bijection between the prime ideals of $$S^{-1}A$$ and the prime ideals of $$A$$ that do not meet $$S$$.
 
@@ -186,7 +186,7 @@ The following is immediate from the above proposition.
 
 <div class="proposition" markdown="1">
 
-<ins id="cor9">**Corollary 9**</ins> The localization of a Noetherian ring is noetherian.
+<ins id="cor9">**Corollary 9**</ins> The localization of a Noetherian ring is Noetherian.
 
 </div>
 <details class="proof" markdown="1">
