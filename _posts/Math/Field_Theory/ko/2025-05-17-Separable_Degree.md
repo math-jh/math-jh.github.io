@@ -5,7 +5,6 @@ excerpt: "Separable degree와 inseparable degree의 분해"
 
 categories: [Math / Field Theory]
 permalink: /ko/math/field_theory/separable_degree
-drift_needed: true
 sidebar: 
     nav: "field_theory-ko"
 

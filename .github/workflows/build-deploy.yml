@@ -97,5 +97,5 @@ jobs:
       - name: Submit npm + Ruby deps to dependency graph
         uses: advanced-security/component-detection-dependency-submission-action@v0.1.1
         with:
-          detectorsCategories: "Npm, RubyGems"
+          detectorsCategories: "Npm,RubyGems"
           correlator: "build-deploy"

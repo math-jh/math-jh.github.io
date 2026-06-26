@@ -5,7 +5,6 @@ excerpt: "Regular system of parameters와 regular local ring의 특성화"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/regular_local_rings
-drift_needed: true
 sidebar: 
     nav: "commutative_algebra-ko"
 
