@@ -14,7 +14,7 @@ weight: 14
 published: false
 ---
 
-[\[미적분학\] §정적분](/ko/math/calculus/definite_integral)에서 정적분을 리만 합의 극한으로 도입하면서, 연속함수의 적분가능성은 증명 없이 받아들였다. 이제 [§컴팩트성](/ko/math/analysis/compactness)과 균등연속성을 갖추었으므로, 적분을 엄밀하게 정초하고 그 사실을 증명한다.
+[\[미적분학\] §적분](/ko/math/calculus/integration)에서 정적분을 리만 합의 극한으로 도입하면서, 연속함수의 적분가능성은 증명 없이 받아들였다. 이제 [§컴팩트성](/ko/math/analysis/compactness)과 균등연속성을 갖추었으므로, 적분을 엄밀하게 정초하고 그 사실을 증명한다.
 
 ## 다르부 상합과 하합
 
@@ -24,7 +24,7 @@ published: false
 
 <ins id="def1">**정의 1**</ins> 유계함수 $$f : [a,b] \to \mathbb{R}$$와 분할 $$P : a = x_0 < \cdots < x_n = b$$에 대하여, 각 부분구간에서 $$m_i = \inf_{[x_{i-1}, x_i]} f$$, $$M_i = \sup_{[x_{i-1}, x_i]} f$$로 두고
 
-$$L(P, f) = \sum_{i=1}^n m_i\,\Delta x_i, \qquad U(P, f) = \sum_{i=1}^n M_i\,\Delta x_i$$
+$$L(P, f) = \sum_{i=1}^n m_i \Delta x_i, \qquad U(P, f) = \sum_{i=1}^n M_i \Delta x_i$$
 
 를 각각 *하합<sub>lower sum</sub>*과 *상합<sub>upper sum</sub>*이라 한다.
 
@@ -39,8 +39,8 @@ $$L(P, f) \leq L(P', f) \leq U(P', f) \leq U(P, f)$$
 가 성립한다. 점 하나를 추가하는 경우만 보이면 귀납으로 충분한데, 부분구간 $$[x_{i-1}, x_i]$$에 점 $$c$$를 넣어 두 조각으로 나누면 좁은 구간의 하한이 넓은 구간의 하한보다 작지 않으므로 $$m' = \inf_{[x_{i-1},c]} f \geq m_i$$, $$m'' = \inf_{[c, x_i]} f \geq m_i$$이고
 
 $$\begin{aligned}
-m'\,(c - x_{i-1}) + m''\,(x_i - c) &\geq m_i\,(c - x_{i-1}) + m_i\,(x_i - c) \\
-&= m_i\,(x_i - x_{i-1}) = m_i\,\Delta x_i
+m' (c - x_{i-1}) + m'' (x_i - c) &\geq m_i (c - x_{i-1}) + m_i (x_i - c) \\
+&= m_i (x_i - x_{i-1}) = m_i \Delta x_i
 \end{aligned}$$
 
 이어서 $$L(P', f) \geq L(P, f)$$, 대칭적으로 $$U(P', f) \leq U(P, f)$$이다. 따라서 임의의 두 분할 $$P, Q$$에 대해 공통세분 $$P \cup Q$$를 잡으면
@@ -127,7 +127,7 @@ $$L(P, f) = \sum_i 0\cdot\Delta x_i = 0, \qquad U(P, f) = \sum_i 1\cdot\Delta x_
 $$f$$가 증가한다고 하자 (감소는 대칭이다). 구간을 $$n$$등분하여 $$\Delta x_i = (b-a)/n$$로 두면, 증가성으로 각 부분구간에서 $$m_i = f(x_{i-1})$$, $$M_i = f(x_i)$$이다. 따라서 합이 망원경처럼 소거되어
 
 $$\begin{aligned}
-U(P_n, f) - L(P_n, f) &= \sum_{i=1}^n \bigl(f(x_i) - f(x_{i-1})\bigr)\,\frac{b-a}{n} \\
+U(P_n, f) - L(P_n, f) &= \sum_{i=1}^n \bigl(f(x_i) - f(x_{i-1})\bigr) \frac{b-a}{n} \\
 &= \frac{b-a}{n}\sum_{i=1}^n \bigl(f(x_i) - f(x_{i-1})\bigr) \\
 &= \frac{b-a}{n}\bigl(f(b) - f(a)\bigr)
 \end{aligned}$$
@@ -188,4 +188,4 @@ $$U(P, f) - L(P, f) = \bigl(U(P_1, f) - L(P_1, f)\bigr) + \bigl(U(P_2, f) - L(P_
 
 </details>
 
-이로써 [\[미적분학\] §정적분, ⁋정리 3](/ko/math/calculus/definite_integral#thm3)에서 받아들였던 연속함수의 적분가능성이 완비성에 기초하여 증명되었고, 같은 다르부 틀에서 선형성·구간가법성·단조성도 모두 따라 나왔다.
+이로써 [\[미적분학\] §적분, ⁋정리 10](/ko/math/calculus/integration#thm10)에서 받아들였던 연속함수의 적분가능성이 완비성에 기초하여 증명되었고, 같은 다르부 틀에서 선형성·구간가법성·단조성도 모두 따라 나왔다.

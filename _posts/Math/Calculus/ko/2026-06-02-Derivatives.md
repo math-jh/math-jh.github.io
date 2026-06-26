@@ -110,7 +110,7 @@ $$\left\lvert \frac{f(x) - f(0)}{x - 0} \right\rvert = \frac{\lvert f(x)\rvert}{
 
 <ins id="prop4">**명제 4**</ins> $$f, g$$가 $$a$$에서 미분가능하고 $$c$$가 상수이면, $$f + g$$와 $$cf$$도 $$a$$에서 미분가능하고
 
-$$(f+g)'(a) = f'(a) + g'(a), \qquad (cf)'(a) = c\,f'(a)$$
+$$(f+g)'(a) = f'(a) + g'(a), \qquad (cf)'(a) = c f'(a)$$
 
 이다.
 

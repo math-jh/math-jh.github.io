@@ -81,7 +81,7 @@ $$f_n(x) = \frac{\sin(nx)}{\sqrt{n}}$$
 
 을 보자. $$\lvert f_n(x)\rvert \leq 1/\sqrt{n} \to 0$$이므로 $$f_n \to 0$$이 점별로 (사실 균등하게) 성립하여 극한함수는 $$f \equiv 0$$이고 $$f' \equiv 0$$이다. 그러나 항별 도함수는
 
-$$f_n'(x) = \sqrt{n}\,\cos(nx)$$
+$$f_n'(x) = \sqrt{n} \cos(nx)$$
 
 이며, 가령 $$x = 0$$에서 $$f_n'(0) = \sqrt{n} \to \infty$$로 발산한다. 즉 $$f_n \to f$$가 점별로(심지어 균등하게) 성립해도 $$f_n' \to f'$$은 성립하지 않는다.
 
@@ -95,7 +95,7 @@ $$f_n'(x) = \sqrt{n}\,\cos(nx)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**명제 5 (극한의 유일성과 선형성)**</ins> 함수열 $$(f_n)$$이 함수 $$f$$로 점별수렴하면 그러한 $$f$$는 유일하다. 또 $$(f_n)$$이 $$f$$로, $$(g_n)$$이 $$g$$로 점별수렴하고 $$c$$가 상수이면, $$(f_n + c\,g_n)$$은 $$f + c\,g$$로, $$(f_n g_n)$$은 $$fg$$로 점별수렴한다.
+<ins id="prop5">**명제 5 (극한의 유일성과 선형성)**</ins> 함수열 $$(f_n)$$이 함수 $$f$$로 점별수렴하면 그러한 $$f$$는 유일하다. 또 $$(f_n)$$이 $$f$$로, $$(g_n)$$이 $$g$$로 점별수렴하고 $$c$$가 상수이면, $$(f_n + c g_n)$$은 $$f + c g$$로, $$(f_n g_n)$$은 $$fg$$로 점별수렴한다.
 
 </div>
 
@@ -105,8 +105,8 @@ $$f_n'(x) = \sqrt{n}\,\cos(nx)$$
 각 주장은 고정된 점 $$x$$에서의 수열 극한에 관한 사실로 환원된다. 만약 $$(f_n)$$이 $$f$$와 $$\tilde f$$ 양쪽으로 점별수렴한다면, 각 $$x$$에서 수열 $$(f_n(x))$$이 두 수 $$f(x)$$와 $$\tilde f(x)$$로 동시에 수렴하므로 수열 [§수열의 수렴, ⁋명제 2](/ko/math/analysis/convergence_of_sequences#prop2)에 의해 $$f(x) = \tilde f(x)$$이고, 모든 $$x$$에서 같으니 $$f = \tilde f$$이다. 선형성과 곱은 각 $$x$$에서
 
 $$\begin{aligned}
-\lim_{n\to\infty}\bigl(f_n(x) + c\,g_n(x)\bigr) &= \lim_{n\to\infty} f_n(x) + c\lim_{n\to\infty} g_n(x) = f(x) + c\,g(x),\\
-\lim_{n\to\infty}\bigl(f_n(x)\,g_n(x)\bigr) &= \Bigl(\lim_{n\to\infty} f_n(x)\Bigr)\Bigl(\lim_{n\to\infty} g_n(x)\Bigr) = f(x)\,g(x)
+\lim_{n\to\infty}\bigl(f_n(x) + c g_n(x)\bigr) &= \lim_{n\to\infty} f_n(x) + c\lim_{n\to\infty} g_n(x) = f(x) + c g(x),\\
+\lim_{n\to\infty}\bigl(f_n(x) g_n(x)\bigr) &= \Bigl(\lim_{n\to\infty} f_n(x)\Bigr)\Bigl(\lim_{n\to\infty} g_n(x)\Bigr) = f(x) g(x)
 \end{aligned}$$
 
 가 성립하는 수열 극한의 대수법칙에서 곧바로 나온다.
@@ -139,17 +139,17 @@ $$f(x) = \frac{1}{x} \qquad (0 < x \leq 1)$$
 
 <ins id="ex7">**예시 7 (디리클레 함수)**</ins> $$\mathbb{R}$$에서
 
-$$d(x) = \lim_{m\to\infty}\Bigl(\lim_{n\to\infty} \cos^{2n}(m!\,\pi x)\Bigr)$$
+$$d(x) = \lim_{m\to\infty}\Bigl(\lim_{n\to\infty} \cos^{2n}(m! \pi x)\Bigr)$$
 
-을 생각하자. 안쪽 극한부터 본다. $$m!\,x$$가 정수이면 $$\cos(m!\,\pi x) = \pm 1$$이라 $$\cos^{2n}(m!\,\pi x) = 1$$이고, 정수가 아니면 $$\lvert \cos(m!\,\pi x)\rvert < 1$$이라 $$\cos^{2n}(m!\,\pi x) \to 0$$이다. 따라서
+을 생각하자. 안쪽 극한부터 본다. $$m! x$$가 정수이면 $$\cos(m! \pi x) = \pm 1$$이라 $$\cos^{2n}(m! \pi x) = 1$$이고, 정수가 아니면 $$\lvert \cos(m! \pi x)\rvert < 1$$이라 $$\cos^{2n}(m! \pi x) \to 0$$이다. 따라서
 
-$$\lim_{n\to\infty} \cos^{2n}(m!\,\pi x) = \begin{cases} 1, & m!\,x \in \mathbb{Z},\\ 0, & m!\,x \notin \mathbb{Z} \end{cases}$$
+$$\lim_{n\to\infty} \cos^{2n}(m! \pi x) = \begin{cases} 1, & m! x \in \mathbb{Z},\\ 0, & m! x \notin \mathbb{Z} \end{cases}$$
 
-이다. 이제 $$m \to \infty$$를 본다. $$x = p/q$$가 유리수이면 $$m \geq q$$인 모든 $$m$$에서 $$m!\,x$$가 정수가 되어 안쪽 값이 $$1$$로 안정되므로 바깥 극한도 $$1$$이고, $$x$$가 무리수이면 어떤 $$m$$에서도 $$m!\,x$$가 정수가 아니므로 항상 $$0$$이다. 결국
+이다. 이제 $$m \to \infty$$를 본다. $$x = p/q$$가 유리수이면 $$m \geq q$$인 모든 $$m$$에서 $$m! x$$가 정수가 되어 안쪽 값이 $$1$$로 안정되므로 바깥 극한도 $$1$$이고, $$x$$가 무리수이면 어떤 $$m$$에서도 $$m! x$$가 정수가 아니므로 항상 $$0$$이다. 결국
 
 $$d(x) = \begin{cases} 1, & x \in \mathbb{Q},\\ 0, & x \notin \mathbb{Q} \end{cases}$$
 
-이 되어 *디리클레 함수<sub>Dirichlet function</sub>*를 얻는다. 이 함수는 모든 점에서 불연속이며 리만적분조차 불가능하지만, 연속함수 $$\cos^{2n}(m!\,\pi x)$$들의 두 번 반복된 점별극한으로 만들어진다.
+이 되어 *디리클레 함수<sub>Dirichlet function</sub>*를 얻는다. 이 함수는 모든 점에서 불연속이며 리만적분조차 불가능하지만, 연속함수 $$\cos^{2n}(m! \pi x)$$들의 두 번 반복된 점별극한으로 만들어진다.
 
 </div>
 
@@ -159,12 +159,12 @@ $$d(x) = \begin{cases} 1, & x \in \mathbb{Q},\\ 0, & x \notin \mathbb{Q} \end{ca
 
 <ins id="ex8">**예시 8 (연속 극한이라도 비균등)**</ins> $$[0,1]$$에서
 
-$$f_n(x) = n\,x\,(1 - x^2)^n$$
+$$f_n(x) = n x (1 - x^2)^n$$
 
-을 보자. $$x = 0$$에서 $$f_n(0) = 0$$이고, $$0 < x \leq 1$$이면 $$0 \leq 1 - x^2 < 1$$이라 $$(1-x^2)^n \to 0$$이 지수적으로 빨라 $$n\,(1-x^2)^n \to 0$$이므로, 점별극한은 $$f \equiv 0$$으로 연속이다. 그러나 각 $$f_n$$의 최댓값을 보면
+을 보자. $$x = 0$$에서 $$f_n(0) = 0$$이고, $$0 < x \leq 1$$이면 $$0 \leq 1 - x^2 < 1$$이라 $$(1-x^2)^n \to 0$$이 지수적으로 빨라 $$n (1-x^2)^n \to 0$$이므로, 점별극한은 $$f \equiv 0$$으로 연속이다. 그러나 각 $$f_n$$의 최댓값을 보면
 
 $$\begin{aligned}
-f_n'(x) &= n\,(1-x^2)^{n-1}\bigl(1 - (2n+1)x^2\bigr) = 0 \implies x_n = \frac{1}{\sqrt{2n+1}},\\
+f_n'(x) &= n (1-x^2)^{n-1}\bigl(1 - (2n+1)x^2\bigr) = 0 \implies x_n = \frac{1}{\sqrt{2n+1}},\\
 M_n = f_n(x_n) &= \frac{n}{\sqrt{2n+1}}\Bigl(1 - \frac{1}{2n+1}\Bigr)^n = \frac{n}{\sqrt{2n+1}}\Bigl(\frac{2n}{2n+1}\Bigr)^n
 \end{aligned}$$
 

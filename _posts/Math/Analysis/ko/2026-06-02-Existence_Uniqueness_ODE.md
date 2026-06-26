@@ -26,7 +26,7 @@ published: false
 
 <div class="definition" markdown="1">
 
-<ins id="def1">**정의 1**</ins> 거리공간 $$(X, d)$$의 사상 $$T : X \to X$$가 *축약사상<sub>contraction</sub>*이라는 것은, 어떤 상수 $$0 \leq \lambda < 1$$에 대하여 모든 $$x, y$$에서 $$d(T x, T y) \leq \lambda\, d(x, y)$$인 것이다.
+<ins id="def1">**정의 1**</ins> 거리공간 $$(X, d)$$의 사상 $$T : X \to X$$가 *축약사상<sub>contraction</sub>*이라는 것은, 어떤 상수 $$0 \leq \lambda < 1$$에 대하여 모든 $$x, y$$에서 $$d(T x, T y) \leq \lambda  d(x, y)$$인 것이다.
 
 </div>
 
@@ -44,7 +44,7 @@ published: false
 먼저 연속한 두 항 사이의 거리가 기하급수적으로 줄어듦을 본다. 축약 조건을 반복 적용하면
 
 $$\begin{aligned}
-d(x_{n+1}, x_n) &= d(Tx_n, Tx_{n-1}) \leq \lambda\, d(x_n, x_{n-1}) \\
+d(x_{n+1}, x_n) &= d(Tx_n, Tx_{n-1}) \leq \lambda  d(x_n, x_{n-1}) \\
 &\leq \lambda^2 d(x_{n-1}, x_{n-2}) \leq \cdots \leq \lambda^n d(x_1, x_0)
 \end{aligned}$$
 
@@ -52,26 +52,26 @@ d(x_{n+1}, x_n) &= d(Tx_n, Tx_{n-1}) \leq \lambda\, d(x_n, x_{n-1}) \\
 
 $$\begin{aligned}
 d(x_m, x_n) &\leq \sum_{k=n}^{m-1} d(x_{k+1}, x_k) \leq \sum_{k=n}^{m-1}\lambda^k d(x_1, x_0) \\
-&\leq d(x_1, x_0)\sum_{k=n}^{\infty}\lambda^k = \frac{\lambda^n}{1 - \lambda}\,d(x_1, x_0)
+&\leq d(x_1, x_0)\sum_{k=n}^{\infty}\lambda^k = \frac{\lambda^n}{1 - \lambda} d(x_1, x_0)
 \end{aligned}$$
 
 이다. 우변은 $$n \to \infty$$일 때 ($$0 \leq \lambda < 1$$이므로) $$0$$으로 가고, 이는 $$m, n$$에 관해 균등하게 작아지므로 $$(x_n)$$은 Cauchy 수열이다. 공간이 완비이므로 ([§거리공간, ⁋정의 4](/ko/math/analysis/metric_spaces#def4)) 극한 $$x_n \to x^\ast$$이 존재한다.
 
-이 극한이 고정점임을 보인다. 축약사상은 $$d(Tx, Ty) \leq \lambda\, d(x, y)$$에서 곧바로 연속이므로
+이 극한이 고정점임을 보인다. 축약사상은 $$d(Tx, Ty) \leq \lambda  d(x, y)$$에서 곧바로 연속이므로
 
 $$x^\ast = \lim_{n\to\infty} x_{n+1} = \lim_{n\to\infty} T x_n = T\Bigl(\lim_{n\to\infty} x_n\Bigr) = T x^\ast$$
 
 이다. 마지막으로 유일성을 본다. $$x^\ast, y^\ast$$가 둘 다 고정점이면
 
-$$d(x^\ast, y^\ast) = d(Tx^\ast, Ty^\ast) \leq \lambda\, d(x^\ast, y^\ast)$$
+$$d(x^\ast, y^\ast) = d(Tx^\ast, Ty^\ast) \leq \lambda  d(x^\ast, y^\ast)$$
 
-이고, $$\lambda < 1$$이므로 $$(1 - \lambda)\,d(x^\ast, y^\ast) \leq 0$$이 되어 $$d(x^\ast, y^\ast) = 0$$, 곧 $$x^\ast = y^\ast$$이다.
+이고, $$\lambda < 1$$이므로 $$(1 - \lambda) d(x^\ast, y^\ast) \leq 0$$이 되어 $$d(x^\ast, y^\ast) = 0$$, 곧 $$x^\ast = y^\ast$$이다.
 
 </details>
 
 위 증명은 고정점의 존재와 유일성뿐 아니라 *수렴 속도*에 대한 정량적 정보까지 준다. 부등식 $$d(x_m, x_n) \leq \lambda^n/(1-\lambda) \cdot d(x_1, x_0)$$에서 $$m \to \infty$$로 보내면
 
-$$d(x_n, x^\ast) \leq \frac{\lambda^n}{1 - \lambda}\,d(x_1, x_0)$$
+$$d(x_n, x^\ast) \leq \frac{\lambda^n}{1 - \lambda} d(x_1, x_0)$$
 
 라는 *선험적 오차 평가<sub>a priori error estimate</sub>*를 얻는다. 즉 반복 $$n$$번이면 오차가 $$\lambda^n$$의 비율로 줄어드는데, 이를 *선형 수렴<sub>linear convergence</sub>*이라 한다. 이 평가는 수치적으로 고정점을 근사할 때 몇 번 반복해야 원하는 정밀도에 도달하는지를 미리 알려 준다.
 
@@ -93,7 +93,7 @@ $$y'(t) = f(t, y(t)), \qquad y(t_0) = y_0$$
 
 상수 $$L$$을 *립시츠 상수<sub>Lipschitz constant</sub>*라 부른다. 기하적으로 이 조건은 같은 $$t$$에서 그래프 $$y \mapsto f(t, y)$$의 두 점을 잇는 모든 할선의 기울기가 $$\lvert$$기울기$$\rvert \leq L$$로 균등하게 유계임을 뜻한다. 만약 $$f$$가 둘째 변수에 대해 연속미분가능하고 $$\partial f / \partial y$$가 유계이면, [§[§평균값 정리와 테일러 정리, ⁋정리 3](/ko/math/analysis/mean_value_theorem#thm3)와 테일러 정리, ⁋정리 3](/ko/math/analysis/mean_value_theorem#thm3)에 의해
 
-$$\lvert f(t, y_1) - f(t, y_2)\rvert = \left\lvert \frac{\partial f}{\partial y}(t, \xi)\right\rvert\,\lvert y_1 - y_2\rvert \leq L\,\lvert y_1 - y_2\rvert$$
+$$\lvert f(t, y_1) - f(t, y_2)\rvert = \left\lvert \frac{\partial f}{\partial y}(t, \xi)\right\rvert \lvert y_1 - y_2\rvert \leq L \lvert y_1 - y_2\rvert$$
 
 이 성립하므로 ($$L = \sup\lvert \partial f / \partial y\rvert$$), 립시츠 조건은 자동으로 만족된다. 이것이 실제 응용에서 립시츠 조건을 확인하는 가장 흔한 방법이다.
 
@@ -108,26 +108,26 @@ $$\lvert f(t, y_1) - f(t, y_2)\rvert = \left\lvert \frac{\partial f}{\partial y}
 
 미분방정식과 초기 조건을 적분하면, 미적분의 기본정리 ([§미적분의 기본정리, ⁋정리 3](/ko/math/analysis/fundamental_theorem_of_calculus#thm3))에 의해 문제는 적분방정식
 
-$$y(t) = y_0 + \int_{t_0}^t f(s, y(s))\,ds$$
+$$y(t) = y_0 + \int_{t_0}^t f(s, y(s)) ds$$
 
 와 동치이다. 실제로 $$y$$가 미분방정식의 해이면 양변을 $$t_0$$에서 $$t$$까지 적분하여 위 식을 얻고, 거꾸로 위 적분방정식을 만족하는 연속함수 $$y$$는 우변이 $$t$$에 대해 미분가능하므로 미분하면 $$y'(t) = f(t, y(t))$$를 얻고 $$t = t_0$$을 대입하면 $$y(t_0) = y_0$$을 얻는다. 적분방정식 형태가 유리한 이유는 미분이라는 까다로운 연산이 사라지고, 연속함수만 다루면 되기 때문이다.
 
 우변을 연속함수 $$y$$에 대응시키는 *피카르 작용소<sub>Picard operator</sub>*
 
-$$(Ty)(t) = y_0 + \int_{t_0}^t f(s, y(s))\,ds$$
+$$(Ty)(t) = y_0 + \int_{t_0}^t f(s, y(s)) ds$$
 
 를 생각하자. 그러면 적분방정식의 해는 정확히 $$T$$의 고정점 $$Ty = y$$이다. 충분히 짧은 닫힌구간 $$I = [t_0 - h, t_0 + h]$$ 위에서 연속함수들의 공간 $$C(I)$$에 상한노름 $$\lVert g\rVert_\infty = \sup_{t\in I}\lvert g(t)\rvert$$을 주면 이는 완비 거리공간이다. 두 연속함수 $$y_1, y_2$$에 대해, 립시츠 조건을 적분 안에서 적용하면
 
 $$\begin{aligned}
-\lvert (Ty_1)(t) - (Ty_2)(t)\rvert &= \left\lvert \int_{t_0}^t \bigl(f(s, y_1(s)) - f(s, y_2(s))\bigr)\,ds\right\rvert \\
-&\leq \int_{t_0}^t \lvert f(s, y_1(s)) - f(s, y_2(s))\rvert\,ds \\
-&\leq \int_{t_0}^t L\,\lvert y_1(s) - y_2(s)\rvert\,ds \\
-&\leq L\,\lvert t - t_0\rvert\,\lVert y_1 - y_2\rVert_\infty \leq L h\,\lVert y_1 - y_2\rVert_\infty
+\lvert (Ty_1)(t) - (Ty_2)(t)\rvert &= \left\lvert \int_{t_0}^t \bigl(f(s, y_1(s)) - f(s, y_2(s))\bigr) ds\right\rvert \\
+&\leq \int_{t_0}^t \lvert f(s, y_1(s)) - f(s, y_2(s))\rvert ds \\
+&\leq \int_{t_0}^t L \lvert y_1(s) - y_2(s)\rvert ds \\
+&\leq L \lvert t - t_0\rvert \lVert y_1 - y_2\rVert_\infty \leq L h \lVert y_1 - y_2\rVert_\infty
 \end{aligned}$$
 
 이 모든 $$t \in I$$에서 성립한다. 좌변의 상한을 취하면
 
-$$\lVert Ty_1 - Ty_2\rVert_\infty \leq L h\,\lVert y_1 - y_2\rVert_\infty$$
+$$\lVert Ty_1 - Ty_2\rVert_\infty \leq L h \lVert y_1 - y_2\rVert_\infty$$
 
 이다. 이제 구간의 반폭 $$h$$를 $$Lh < 1$$이 되도록, 가령 $$h < 1/L$$로 잡으면 $$T$$가 축약상수 $$\lambda = Lh$$인 축약사상이 된다. [정리 2](#thm2)에 의해 $$T$$는 유일한 고정점 $$y \in C(I)$$를 가지며, 이 $$y$$가 초기값 문제의 유일한 해이다.
 
@@ -170,26 +170,26 @@ $$y(t) = \begin{cases} t^2/4, & t \geq 0 \\ 0, & t < 0 \end{cases}$$
 
 피카르 반복 $$y_{n+1} = Ty_n$$을 $$y_0 \equiv y_0$$에서 시작하자. 연속한 두 근사의 차를 평가한다. $$M = \sup_{\lvert t - t_0\rvert \leq a}\lvert f(t, y_0)\rvert$$로 두면
 
-$$\lvert y_1(t) - y_0(t)\rvert = \left\lvert \int_{t_0}^t f(s, y_0)\,ds\right\rvert \leq M\,\lvert t - t_0\rvert$$
+$$\lvert y_1(t) - y_0(t)\rvert = \left\lvert \int_{t_0}^t f(s, y_0) ds\right\rvert \leq M \lvert t - t_0\rvert$$
 
 이고, 귀납적으로 립시츠 조건을 반복 적용하면
 
 $$\begin{aligned}
-\lvert y_{n+1}(t) - y_n(t)\rvert &\leq \int_{t_0}^t L\,\lvert y_n(s) - y_{n-1}(s)\rvert\,ds \\
-&\leq M\,\frac{L^n \lvert t - t_0\rvert^{n+1}}{(n+1)!}
+\lvert y_{n+1}(t) - y_n(t)\rvert &\leq \int_{t_0}^t L \lvert y_n(s) - y_{n-1}(s)\rvert ds \\
+&\leq M \frac{L^n \lvert t - t_0\rvert^{n+1}}{(n+1)!}
 \end{aligned}$$
 
-을 얻는다. 따라서 $$\lvert t - t_0\rvert \leq a$$에서 $$\lVert y_{n+1} - y_n\rVert_\infty \leq M (La)^{n+1}/(L\,(n+1)!)$$이고, 우변은 지수급수의 항이라 그 합이 유한하다. 망원합 $$y_n = y_0 + \sum_{k=0}^{n-1}(y_{k+1} - y_k)$$이 상한노름에서 절대수렴하므로 $$y_n$$은 어떤 연속함수 $$y$$로 균등수렴하고, 극한에서 $$y = Ty$$이다. 유일성은 [정리 4](#thm4)의 논법을 구간 전체에서 그뢴발 부등식으로 잇거나, 구간을 길이 $$1/(2L)$$ 이하의 조각으로 나누어 각 조각에서 [정리 2](#thm2)를 적용해 얻는다.
+을 얻는다. 따라서 $$\lvert t - t_0\rvert \leq a$$에서 $$\lVert y_{n+1} - y_n\rVert_\infty \leq M (La)^{n+1}/(L (n+1)!)$$이고, 우변은 지수급수의 항이라 그 합이 유한하다. 망원합 $$y_n = y_0 + \sum_{k=0}^{n-1}(y_{k+1} - y_k)$$이 상한노름에서 절대수렴하므로 $$y_n$$은 어떤 연속함수 $$y$$로 균등수렴하고, 극한에서 $$y = Ty$$이다. 유일성은 [정리 4](#thm4)의 논법을 구간 전체에서 그뢴발 부등식으로 잇거나, 구간을 길이 $$1/(2L)$$ 이하의 조각으로 나누어 각 조각에서 [정리 2](#thm2)를 적용해 얻는다.
 
 </details>
 
-[명제 6](#prop6)의 핵심은 립시츠 상수 $$L$$이 $$y$$의 크기에 무관하게 *하나의 상수*로 잡힌다는 데 있다. 그러면 피카르 반복의 차가 $$L^n / n!$$의 빠르기로 줄어 구간 길이에 관계없이 수렴하므로, [정리 4](#thm4)에서 구간을 줄일 필요가 없어진다. 전역 립시츠 조건이 성립하는 가장 중요한 경우가 우변이 $$y$$에 대해 선형인 방정식이다. 실제로 $$y' = a(t)\,y + b(t)$$에서 $$a, b$$가 닫힌구간 $$I$$에서 연속이면 $$\lvert a(t)\rvert$$이 $$I$$에서 유계라 그 상한 $$L$$이 전역 립시츠 상수가 되고, [명제 6](#prop6)에 의해 해가 $$I$$ 전체에서 유일하게 존재한다. 가령 $$y' = -2t\,y$$의 해 $$e^{-t^2}$$처럼 선형 방정식의 해는 정의 구간 밖으로 폭발하지 않고 끝까지 살아남는다. 반면 비선형 방정식에서는 해가 유한 시간에 발산할 수 있다.
+[명제 6](#prop6)의 핵심은 립시츠 상수 $$L$$이 $$y$$의 크기에 무관하게 *하나의 상수*로 잡힌다는 데 있다. 그러면 피카르 반복의 차가 $$L^n / n!$$의 빠르기로 줄어 구간 길이에 관계없이 수렴하므로, [정리 4](#thm4)에서 구간을 줄일 필요가 없어진다. 전역 립시츠 조건이 성립하는 가장 중요한 경우가 우변이 $$y$$에 대해 선형인 방정식이다. 실제로 $$y' = a(t) y + b(t)$$에서 $$a, b$$가 닫힌구간 $$I$$에서 연속이면 $$\lvert a(t)\rvert$$이 $$I$$에서 유계라 그 상한 $$L$$이 전역 립시츠 상수가 되고, [명제 6](#prop6)에 의해 해가 $$I$$ 전체에서 유일하게 존재한다. 가령 $$y' = -2t y$$의 해 $$e^{-t^2}$$처럼 선형 방정식의 해는 정의 구간 밖으로 폭발하지 않고 끝까지 살아남는다. 반면 비선형 방정식에서는 해가 유한 시간에 발산할 수 있다.
 
 <div class="example" markdown="1">
 
 <ins id="ex7">**예시 7 (유한 시간 폭발)**</ins> $$y' = y^2$$, $$y(0) = 1$$을 보자. 여기서 $$f(t, y) = y^2$$는 임의의 유계 영역에서는 립시츠 조건을 만족하므로 국소해가 존재하고, 변수분리로
 
-$$\int \frac{dy}{y^2} = \int dt \;\Longrightarrow\; -\frac{1}{y} = t + C$$
+$$\int \frac{dy}{y^2} = \int dt  \Longrightarrow  -\frac{1}{y} = t + C$$
 
 를 풀면 $$y(0) = 1$$에서 $$C = -1$$, 곧
 
@@ -205,7 +205,7 @@ $$y(t) = \frac{1}{1 - t}$$
 
 <ins id="prop8">**명제 8 (반복의 오차)**</ins> [정리 4](#thm4)의 가정 아래, 피카르 반복 $$y_n = T^n y_0$$과 참해 $$y$$ 사이에는
 
-$$\lVert y_n - y\rVert_\infty \leq \frac{(Lh)^n}{1 - Lh}\,\lVert y_1 - y_0\rVert_\infty$$
+$$\lVert y_n - y\rVert_\infty \leq \frac{(Lh)^n}{1 - Lh} \lVert y_1 - y_0\rVert_\infty$$
 
 이 성립한다. 여기서 $$h$$는 [정리 4](#thm4)에서 잡은 구간의 반폭이고 $$Lh < 1$$이다.
 
@@ -216,7 +216,7 @@ $$\lVert y_n - y\rVert_\infty \leq \frac{(Lh)^n}{1 - Lh}\,\lVert y_1 - y_0\rVert
 
 작용소 $$T$$는 $$C(I)$$ 위에서 축약상수 $$\lambda = Lh < 1$$의 축약사상이고 $$y$$는 그 고정점이므로, [정리 2](#thm2)의 증명에서 얻은 선험적 오차 평가
 
-$$d(x_n, x^\ast) \leq \frac{\lambda^n}{1 - \lambda}\,d(x_1, x_0)$$
+$$d(x_n, x^\ast) \leq \frac{\lambda^n}{1 - \lambda} d(x_1, x_0)$$
 
 을 $$x_n = y_n$$, $$x^\ast = y$$, $$\lambda = Lh$$에 그대로 적용하면 주장하는 부등식을 얻는다.
 

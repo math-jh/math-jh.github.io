@@ -1,6 +1,6 @@
 ---
 title: "특이값 분해"
-description: "임의의 실행렬에 대해 전치곱의 스펙트럼 분해로부터 특이값을 정의하고, 직교행렬과 대각형 행렬의 곱으로의 특이값 분해를 구성한다. 나아가 이를 통해 일반적인 유사역행렬을 정의한다."
+description: "임의의 실행렬에 대해 그 전치와의 곱의 스펙트럼 분해로부터 특이값을 정의하고, orthogonal matrix와 diagonal matrix의 곱으로의 특이값 분해를 구성한다. 나아가 이를 통해 일반적인 유사역행렬을 정의한다."
 excerpt: "임의의 실행렬의 직교 분해"
 
 categories: [Math / Linear Algebra]
@@ -17,23 +17,23 @@ published: false
 
 ---
 
-스펙트럼 정리는 실대칭행렬, 즉 정사각행렬에 대한 직교대각화를 주었다. 그러나 일반적인 $$m\times n$$ 행렬은 정사각행렬이 아니므로 eigenvalue나 대각화를 직접 말할 수 없다. 이 글에서는 임의의 실행렬을 두 orthogonal matrix와 하나의 대각형 행렬의 곱으로 분해하는 특이값 분해를 다룬다. 그 출발점은, 임의의 $$A$$에 대하여 $$A^tA$$이 항상 실대칭행렬이 되어 스펙트럼 정리를 적용할 수 있다는 관찰이다. 
+우리가 지금까지 다룬 도구들은 모두 $$n\times n$$ 행렬, 즉 linear operator에 적용되는 것들로, 일반적인 $$m\times n$$ 행렬은 정사각행렬이 아니므로 eigenvalue나 대각화를 직접 말할 수 없다. 이 글에서는 임의의 실행렬을 두 orthogonal matrix와 하나의 diagonal matrix의 곱으로 분해하는 특이값 분해를 다룬다. 그 출발점은, 임의의 $$A$$에 대하여 $$A^tA$$이 항상 실수 symmetric matrix가 되어 스펙트럼 정리를 적용할 수 있다는 관찰이다. 
 
-## 특이값
+## 특이값 분해
 
 <div class="proposition" markdown="1">
 
-<ins id="prop1">**명제 1**</ins> 임의의 행렬 $$A\in\Mat_{m\times n}(\mathbb{R})$$에 대하여, $$A^tA\in\Mat_n(\mathbb{R})$$은 양의 준정부호인 자기수반작용소이다. 특히 $$A^tA$$의 모든 고윳값은 $$0$$ 이상의 실수이다.
+<ins id="prop1">**명제 1**</ins> 임의의 행렬 $$A\in\Mat_{m\times n}(\mathbb{R})$$에 대하여, $$A^tA\in\Mat_n(\mathbb{R})$$은 positive semidefinite인 self-adjoint operator이다. 특히 $$A^tA$$의 모든 고윳값은 $$0$$ 이상의 실수이다.
 
 </div>
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$(A^tA)^t=A^t(A^t)^t=A^tA$$이므로 $$A^tA$$은 대칭행렬, 즉 $$\mathbb{R}^n$$ 위의 자기수반작용소이다. 또 임의의 $$v\in\mathbb{R}^n$$에 대하여 
+$$(A^tA)^t=A^t(A^t)^t=A^tA$$이므로 $$A^tA$$은 symmetric matrix, 즉 $$\mathbb{R}^n$$ 위의 self-adjoint operator이다. 또 임의의 $$v\in\mathbb{R}^n$$에 대하여 
 
 $$\langle A^tAv,v\rangle=\langle Av,Av\rangle=\lVert Av\rVert^2\geq 0$$
 
-이므로 $$A^tA$$은 양의 준정부호이다. ([§스펙트럼 정리, ⁋정의 8](/ko/math/linear_algebra/spectral_theorem#def8)) 따라서 [§스펙트럼 정리, ⁋명제 9](/ko/math/linear_algebra/spectral_theorem#prop9)에 의하여 $$A^tA$$의 모든 고윳값은 $$0$$ 이상이다.
+이므로 $$A^tA$$은 positive semidefinite이다. ([§스펙트럼 정리, ⁋정의 8](/ko/math/linear_algebra/spectral_theorem#def8)) 따라서 [§스펙트럼 정리, ⁋명제 9](/ko/math/linear_algebra/spectral_theorem#prop9)에 의하여 $$A^tA$$의 모든 고윳값은 $$0$$ 이상이다.
 
 </details>
 
@@ -45,13 +45,11 @@ $$\langle A^tAv,v\rangle=\langle Av,Av\rangle=\lVert Av\rVert^2\geq 0$$
 
 </div>
 
-## 특이값 분해
-
 이제 본 정리를 증명한다. 
 
 <div class="proposition" markdown="1">
 
-<ins id="thm3">**정리 3 (특이값 분해)**</ins> 임의의 행렬 $$A\in\Mat_{m\times n}(\mathbb{R})$$에 대하여, orthogonal matrix $$U\in\Mat_m(\mathbb{R})$$, $$V\in\Mat_n(\mathbb{R})$$과, $$(i,i)$$ 성분이 $$A$$의 특이값 $$\sigma_i$$이고 나머지 성분이 $$0$$인 $$m\times n$$ 대각형 행렬 $$\Sigma$$가 존재하여 
+<ins id="thm3">**정리 3 (특이값 분해)**</ins> 임의의 행렬 $$A\in\Mat_{m\times n}(\mathbb{R})$$에 대하여, orthogonal matrix $$U\in\Mat_m(\mathbb{R})$$, $$V\in\Mat_n(\mathbb{R})$$과, $$(i,i)$$ 성분이 $$A$$의 특이값 $$\sigma_i$$이고 나머지 성분이 $$0$$인 $$m\times n$$ diagonal matrix $$\Sigma$$가 존재하여 
 
 $$A=U\Sigma V^t$$
 
@@ -61,7 +59,7 @@ $$A=U\Sigma V^t$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-[명제 1](#prop1)에 의하여 $$A^tA$$은 자기수반이므로, [§스펙트럼 정리, ⁋정리 5](/ko/math/linear_algebra/spectral_theorem#thm5)에 의하여 $$A^tA$$의 고유벡터들로 이루어진 $$\mathbb{R}^n$$의 정규직교기저 $$\{v_1,\ldots, v_n\}$$이 존재한다. 고윳값을 $$\sigma_1^2\geq\cdots\geq\sigma_n^2\geq 0$$의 순서로 두고, $$\sigma_1,\ldots,\sigma_r$$이 양수이고 $$\sigma_{r+1}=\cdots=\sigma_n=0$$이라 하자. 즉 $$A^tAv_i=\sigma_i^2v_i$$이다.
+[명제 1](#prop1)에 의하여 $$A^tA$$은 self-adjoint이므로, [§스펙트럼 정리, ⁋정리 5](/ko/math/linear_algebra/spectral_theorem#thm5)에 의하여 $$A^tA$$의 고유벡터들로 이루어진 $$\mathbb{R}^n$$의 orthonormal basis $$\{v_1,\ldots, v_n\}$$이 존재한다. 고윳값을 $$\sigma_1^2\geq\cdots\geq\sigma_n^2\geq 0$$의 순서로 두고, $$\sigma_1,\ldots,\sigma_r$$이 양수이고 $$\sigma_{r+1}=\cdots=\sigma_n=0$$이라 하자. 즉 $$A^tAv_i=\sigma_i^2v_i$$이다.
 
 각 $$1\leq i\leq r$$에 대하여 
 
@@ -71,13 +69,13 @@ $$u_i=\frac{1}{\sigma_i}Av_i\in\mathbb{R}^m$$
 
 $$\langle u_i,u_j\rangle=\frac{1}{\sigma_i\sigma_j}\langle Av_i,Av_j\rangle=\frac{1}{\sigma_i\sigma_j}\langle A^tAv_i,v_j\rangle=\frac{\sigma_i^2}{\sigma_i\sigma_j}\langle v_i,v_j\rangle=\frac{\sigma_i}{\sigma_j}\delta_{ij}=\delta_{ij}$$
 
-이므로 $$\{u_1,\ldots, u_r\}$$은 $$\mathbb{R}^m$$의 정규직교인 집합이다. 이를 확장하여 $$\mathbb{R}^m$$의 정규직교기저 $$\{u_1,\ldots, u_m\}$$을 얻을 수 있다. ([§내적공간, §§정규직교기저](/ko/math/linear_algebra/inner_product_spaces#정규직교기저)) 
+이므로 $$\{u_1,\ldots, u_r\}$$은 $$\mathbb{R}^m$$의 orthonormal set이다. 이를 확장하여 $$\mathbb{R}^m$$의 orthonormal basis $$\{u_1,\ldots, u_m\}$$을 얻을 수 있다. ([§내적공간, §§정규직교기저](/ko/math/linear_algebra/inner_product_spaces#정규직교기저)) 
 
 한편 $$r<i\leq n$$에 대하여는 
 
 $$\lVert Av_i\rVert^2=\langle Av_i,Av_i\rangle=\langle A^tAv_i,v_i\rangle=\sigma_i^2\langle v_i,v_i\rangle=0$$
 
-이므로 $$Av_i=0$$이다. 이제 $$u_i$$를 열로 갖는 $$U=(u_1\mid\cdots\mid u_m)$$과 $$v_i$$를 열로 갖는 $$V=(v_1\mid\cdots\mid v_n)$$을 정의하면, 두 행렬 모두 열이 정규직교이므로 orthogonal matrix이다. $$\Sigma$$를 $$(i,i)$$ 성분이 $$\sigma_i$$ ($$1\leq i\leq r$$)이고 나머지가 $$0$$인 $$m\times n$$ 대각형 행렬이라 하면, $$AV$$와 $$U\Sigma$$의 $$i$$번째 열을 비교할 때 $$1\leq i\leq r$$에 대해서는 
+이므로 $$Av_i=0$$이다. 이제 $$u_i$$를 열로 갖는 $$U=(u_1\mid\cdots\mid u_m)$$과 $$v_i$$를 열로 갖는 $$V=(v_1\mid\cdots\mid v_n)$$을 정의하면, 두 행렬 모두 열이 orthonormal이므로 orthogonal matrix이다. $$\Sigma$$를 $$(i,i)$$ 성분이 $$\sigma_i$$ ($$1\leq i\leq r$$)이고 나머지가 $$0$$인 $$m\times n$$ diagonal matrix라 하면, $$AV$$와 $$U\Sigma$$의 $$i$$번째 열을 비교할 때 $$1\leq i\leq r$$에 대해서는 
 
 $$Av_i=\sigma_iu_i$$
 
@@ -105,7 +103,7 @@ $$A=U\Sigma V^t$$에서 $$U,V$$은 가역이므로 $$\rank A=\rank\Sigma$$이다
 
 <div class="definition" markdown="1">
 
-<ins id="def5">**정의 5**</ins> 행렬 $$A\in\Mat_{m\times n}(\mathbb{R})$$의 특이값 분해 $$A=U\Sigma V^t$$가 주어졌다 하자. $$\Sigma$$의 양의 특이값 $$\sigma_i$$들에 대하여, $$(i,i)$$ 성분이 $$1/\sigma_i$$이고 나머지가 $$0$$인 $$n\times m$$ 대각형 행렬을 $$\Sigma^+$$이라 하자. 그럼 $$A$$의 *유사역행렬<sub>Moore-Penrose pseudoinverse</sub>*을 
+<ins id="def5">**정의 5**</ins> 행렬 $$A\in\Mat_{m\times n}(\mathbb{R})$$의 특이값 분해 $$A=U\Sigma V^t$$가 주어졌다 하자. $$\Sigma$$의 양의 특이값 $$\sigma_i$$들에 대하여, $$(i,i)$$ 성분이 $$1/\sigma_i$$이고 나머지가 $$0$$인 $$n\times m$$ diagonal matrix를 $$\Sigma^+$$이라 하자. 그럼 $$A$$의 *유사역행렬<sub>Moore-Penrose pseudoinverse</sub>*을 
 
 $$A^+=V\Sigma^+U^t$$
 
@@ -127,11 +125,11 @@ $$AA^+A=A,\quad A^+AA^+=A^+,\quad (AA^+)^t=AA^+,\quad (A^+A)^t=A^+A$$
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-$$\Sigma\Sigma^+$$은 $$(i,i)$$ 성분이 $$1\leq i\leq r$$일 때 $$1$$이고 나머지가 $$0$$인 $$m\times m$$ 대각행렬이며, $$\Sigma^+\Sigma$$은 같은 방식으로 정의된 $$n\times n$$ 대각행렬이다. 이들은 모두 대칭이고, $$\Sigma\Sigma^+\Sigma=\Sigma$$, $$\Sigma^+\Sigma\Sigma^+=\Sigma^+$$임을 성분별로 직접 확인할 수 있다. 이제 $$A=U\Sigma V^t$$, $$A^+=V\Sigma^+U^t$$과 $$U^tU=I$$, $$V^tV=I$$을 이용하면
+$$\Sigma\Sigma^+$$은 $$(i,i)$$ 성분이 $$1\leq i\leq r$$일 때 $$1$$이고 나머지가 $$0$$인 $$m\times m$$ diagonal matrix이며, $$\Sigma^+\Sigma$$은 같은 방식으로 정의된 $$n\times n$$ diagonal matrix이다. 이들은 모두 symmetric이고, $$\Sigma\Sigma^+\Sigma=\Sigma$$, $$\Sigma^+\Sigma\Sigma^+=\Sigma^+$$임을 성분별로 직접 확인할 수 있다. 이제 $$A=U\Sigma V^t$$, $$A^+=V\Sigma^+U^t$$과 $$U^tU=I$$, $$V^tV=I$$을 이용하면
 
 $$AA^+=U\Sigma V^tV\Sigma^+U^t=U(\Sigma\Sigma^+)U^t,\qquad A^+A=V(\Sigma^+\Sigma)V^t$$
 
-이다. $$\Sigma\Sigma^+$$과 $$\Sigma^+\Sigma$$이 대칭이므로 $$AA^+$$과 $$A^+A$$ 또한 대칭이고, 이로써 셋째와 넷째 조건이 성립한다. 또 
+이다. $$\Sigma\Sigma^+$$과 $$\Sigma^+\Sigma$$이 symmetric이므로 $$AA^+$$과 $$A^+A$$ 또한 symmetric이고, 이로써 셋째와 넷째 조건이 성립한다. 또 
 
 $$AA^+A=U(\Sigma\Sigma^+)U^tU\Sigma V^t=U(\Sigma\Sigma^+\Sigma)V^t=U\Sigma V^t=A$$
 
@@ -147,11 +145,11 @@ $$A^+AA^+=V(\Sigma^+\Sigma)V^tV\Sigma^+U^t=V(\Sigma^+\Sigma\Sigma^+)U^t=V\Sigma^
 
 $$\bigl((A^tA)^{-1}A^t\bigr)A=I_n,\qquad A\bigl((A^tA)^{-1}A^t\bigr)=A(A^tA)^{-1}A^t$$
 
-으로부터 위 네 조건을 모두 만족함을 직접 확인할 수 있다. ($$A^tA$$이 대칭이므로 그 역행렬도 대칭이어서 $$A(A^tA)^{-1}A^t$$은 대칭이다.) 따라서 유일성에 의하여 $$A^+=(A^tA)^{-1}A^t$$이고, 이는 [§최소제곱법, ⁋정의 7](/ko/math/linear_algebra/least_squares_method#def7)의 식과 일치한다. Full row rank인 경우도 마찬가지이다. 
+으로부터 위 네 조건을 모두 만족함을 직접 확인할 수 있다. ($$A^tA$$이 symmetric이므로 그 역행렬도 symmetric이어서 $$A(A^tA)^{-1}A^t$$은 symmetric이다.) 따라서 유일성에 의하여 $$A^+=(A^tA)^{-1}A^t$$이고, 이는 [§최소제곱법, ⁋정의 7](/ko/math/linear_algebra/least_squares_method#def7)의 식과 일치한다. Full row rank인 경우도 마찬가지이다. 
 
 <div class="remark" markdown="1">
 
-<ins id="rmk7">**참고 7**</ins> 특이값 분해 $$A=U\Sigma V^t$$은 기하학적으로 임의의 linear map $$A$$가 정규직교기저에 대한 회전 혹은 반사, 각 축으로의 $$\sigma_i$$배 확대, 그리고 또 다른 회전 혹은 반사의 합성으로 분해됨을 의미한다. $$V$$의 열 $$v_i$$를 *오른쪽 특이벡터*, $$U$$의 열 $$u_i$$를 *왼쪽 특이벡터*라 부르며, 이들은 각각 $$A^tA$$과 $$AA^t$$의 고유벡터이다. 가장 큰 몇 개의 특이값만 남기고 나머지를 $$0$$으로 두면 $$A$$를 낮은 rank의 행렬로 근사할 수 있는데, 이 근사가 여러 자연스러운 의미에서 최적이라는 사실이 특이값 분해를 응용에서 특히 유용하게 만든다. 
+<ins id="rmk7">**참고 7**</ins> 특이값 분해 $$A=U\Sigma V^t$$은 기하학적으로 임의의 linear map $$A$$가 orthonormal basis에 대한 회전 혹은 반사, 각 축으로의 $$\sigma_i$$배 확대, 그리고 또 다른 회전 혹은 반사의 합성으로 분해됨을 의미한다. $$V$$의 열 $$v_i$$를 *오른쪽 특이벡터*, $$U$$의 열 $$u_i$$를 *왼쪽 특이벡터*라 부르며, 이들은 각각 $$A^tA$$과 $$AA^t$$의 고유벡터이다. 가장 큰 몇 개의 특이값만 남기고 나머지를 $$0$$으로 두면 $$A$$를 낮은 rank의 행렬로 근사할 수 있는데, 이 근사가 여러 자연스러운 의미에서 최적이라는 사실이 특이값 분해를 응용에서 특히 유용하게 만든다. 
 
 </div>
 

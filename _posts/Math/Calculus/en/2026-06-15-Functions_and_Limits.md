@@ -32,7 +32,7 @@ For now, this definition of a neighborhood of $$a$$ is sufficient. For convenien
 
 $$0 < \lvert x - a \rvert < \delta \implies \lvert f(x) - L \rvert < \epsilon$$
 
-holds. In this case, we write $$\displaystyle\lim_{x \to a} f(x) = L$$.
+holds. In this case, we write $$\lim_{x \to a} f(x) = L$$.
 
 </div>
 
@@ -74,7 +74,7 @@ Now let us examine the properties of limits based on this. First, the first prop
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**Proposition 4 (Uniqueness of Limits)**</ins> If $$\displaystyle\lim_{x\to a} f(x) = L$$ and $$\displaystyle\lim_{x\to a} f(x) = L'$$, then $$L = L'$$.
+<ins id="prop4">**Proposition 4 (Uniqueness of Limits)**</ins> If $$\lim_{x\to a} f(x) = L$$ and $$\lim_{x\to a} f(x) = L'$$, then $$L = L'$$.
 
 </div>
 
@@ -97,12 +97,12 @@ Meanwhile, [Definition 2](#def2) can in principle only be used when a candidate 
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**Proposition 5 (Limit Laws)**</ins> Suppose $$\displaystyle\lim_{x\to a} f(x) = L$$ and $$\displaystyle\lim_{x\to a} g(x) = M$$. Then
+<ins id="prop5">**Proposition 5 (Limit Laws)**</ins> Suppose $$\lim_{x\to a} f(x) = L$$ and $$\lim_{x\to a} g(x) = M$$. Then
 
-1. $$\displaystyle\lim_{x\to a} \bigl(f(x) + g(x)\bigr) = L + M$$,
-2. For any constant $$c$$, $$\displaystyle\lim_{x\to a} cf(x) = cL$$,
-3. $$\displaystyle\lim_{x\to a} f(x)g(x) = LM$$,
-4. If $$M \neq 0$$, then $$\displaystyle\lim_{x\to a} \frac{f(x)}{g(x)} = \frac{L}{M}$$
+1. $$\lim_{x\to a} \bigl(f(x) + g(x)\bigr) = L + M$$,
+2. For any constant $$c$$, $$\lim_{x\to a} cf(x) = cL$$,
+3. $$\lim_{x\to a} f(x)g(x) = LM$$,
+4. If $$M \neq 0$$, then $$\lim_{x\to a} \frac{f(x)}{g(x)} = \frac{L}{M}$$
 
 hold.
 
@@ -120,7 +120,7 @@ hold.
 
 3. We use the following inequality
     
-    $$\lvert f(x)g(x) - LM\rvert = \lvert f(x)(g(x)-M) + M(f(x)-L)\rvert \leq \lvert f(x)\rvert\,\lvert g(x)-M\rvert + \lvert M\rvert\,\lvert f(x)-L\rvert$$
+    $$\lvert f(x)g(x) - LM\rvert = \lvert f(x)(g(x)-M) + M(f(x)-L)\rvert \leq \lvert f(x)\rvert \lvert g(x)-M\rvert + \lvert M\rvert \lvert f(x)-L\rvert$$
     
     Intuitively, as $$x$$ approaches $$a$$, both $$\lvert g(x)-M\rvert$$ and $$\lvert f(x)-L\rvert$$ go to $$0$$, so if we can only guarantee that the factors $$\lvert f(x)\rvert, \lvert g(x)\rvert$$ in front of them are finite, then we can make this smaller than $$\epsilon$$ through a calculation similar to 1 above.
     
@@ -136,7 +136,7 @@ hold.
 
 4. We show $$1/g(x) \to 1/M$$ and then apply 3. Since $$M \neq 0$$, we have $$\lvert g(x)\rvert > \lvert M\rvert/2$$ in a neighborhood of $$a$$, and
 
-$$\left\lvert \frac{1}{g(x)} - \frac{1}{M}\right\rvert = \frac{\lvert g(x)-M\rvert}{\lvert g(x)\rvert\,\lvert M\rvert} < \frac{2}{\lvert M\rvert^2}\lvert g(x)-M\rvert$$
+$$\left\lvert \frac{1}{g(x)} - \frac{1}{M}\right\rvert = \frac{\lvert g(x)-M\rvert}{\lvert g(x)\rvert \lvert M\rvert} < \frac{2}{\lvert M\rvert^2}\lvert g(x)-M\rvert$$
 
 so it suffices to make $$\lvert g(x)-M\rvert$$ sufficiently small.
 
@@ -146,10 +146,10 @@ Then the following holds.
 
 <div class="proposition" markdown="1">
 
-<ins id="cor6">**Corollary 6 (Limits of Powers and Roots)**</ins> If $$\displaystyle\lim_{x\to a} f(x) = L$$, then
+<ins id="cor6">**Corollary 6 (Limits of Powers and Roots)**</ins> If $$\lim_{x\to a} f(x) = L$$, then
 
-1. For any positive integer $$k$$, $$\displaystyle\lim_{x\to a} \bigl(f(x)\bigr)^k = L^k$$,
-2. If $$L > 0$$, then for any positive integer $$k$$, $$\displaystyle\lim_{x\to a} \sqrt[k]{f(x)} = \sqrt[k]{L}$$
+1. For any positive integer $$k$$, $$\lim_{x\to a} \bigl(f(x)\bigr)^k = L^k$$,
+2. If $$L > 0$$, then for any positive integer $$k$$, $$\lim_{x\to a} \sqrt[k]{f(x)} = \sqrt[k]{L}$$
 
 hold.
 
@@ -169,13 +169,13 @@ hold.
     
     each term of the second factor on the right is greater than $$\min(u,v)^{(k-1)/k}$$, so
     
-    $$\bigl\lvert u^{1/k}-v^{1/k}\bigr\rvert \leq \frac{\lvert u-v\rvert}{k\,\min(u,v)^{(k-1)/k}}$$
+    $$\bigl\lvert u^{1/k}-v^{1/k}\bigr\rvert \leq \frac{\lvert u-v\rvert}{k \min(u,v)^{(k-1)/k}}$$
     
     holds. Therefore if $$0 < \lvert x-a\rvert < \delta_1$$, then $$0<L/2 < \min(f(x), L)$$, so substituting $$f(x)=u$$ and $$L=v$$,
     
-    $$\bigl\lvert \sqrt[k]{f(x)}-\sqrt[k]{L}\bigr\rvert \leq \frac{\lvert f(x)-L\rvert}{k\,(L/2)^{(k-1)/k}}$$
+    $$\bigl\lvert \sqrt[k]{f(x)}-\sqrt[k]{L}\bigr\rvert \leq \frac{\lvert f(x)-L\rvert}{k (L/2)^{(k-1)/k}}$$
     
-    we obtain. Now for any $$\epsilon > 0$$, choose $$\delta_2 > 0$$ corresponding to $$k\,(L/2)^{(k-1)/k}\,\epsilon$$ and set $$\delta = \min(\delta_1,\delta_2)$$; then when $$0 < \lvert x-a\rvert < \delta$$, the right-hand side becomes smaller than $$\epsilon$$.
+    we obtain. Now for any $$\epsilon > 0$$, choose $$\delta_2 > 0$$ corresponding to $$k (L/2)^{(k-1)/k} \epsilon$$ and set $$\delta = \min(\delta_1,\delta_2)$$; then when $$0 < \lvert x-a\rvert < \delta$$, the right-hand side becomes smaller than $$\epsilon$$.
 
 </details>
 
@@ -215,7 +215,7 @@ Limits that cannot be computed by limit laws alone are often handled by trapping
 
 <div class="proposition" markdown="1">
 
-<ins id="prop8">**Proposition 8 (Squeeze Theorem)**</ins> If $$g(x) \leq f(x) \leq h(x)$$ in a deleted neighborhood of a real number $$a$$ and $$\displaystyle\lim_{x\to a} g(x) = \lim_{x\to a} h(x) = L$$, then $$\displaystyle\lim_{x\to a} f(x) = L$$.
+<ins id="prop8">**Proposition 8 (Squeeze Theorem)**</ins> If $$g(x) \leq f(x) \leq h(x)$$ in a deleted neighborhood of a real number $$a$$ and $$\lim_{x\to a} g(x) = \lim_{x\to a} h(x) = L$$, then $$\lim_{x\to a} f(x) = L$$.
 
 </div>
 
@@ -230,7 +230,7 @@ Another basic fact about how inequalities and limits interact is that limits pre
 
 <div class="proposition" markdown="1">
 
-<ins id="prop9">**Proposition 9 (Order Preservation of Limits)**</ins> If $$f(x) \leq g(x)$$ in a neighborhood of $$a$$ (excluding $$a$$) and the two limits $$L = \displaystyle\lim_{x\to a}f(x)$$, $$M = \displaystyle\lim_{x\to a}g(x)$$ exist, then $$L \leq M$$.
+<ins id="prop9">**Proposition 9 (Order Preservation of Limits)**</ins> If $$f(x) \leq g(x)$$ in a neighborhood of $$a$$ (excluding $$a$$) and the two limits $$L = \lim_{x\to a}f(x)$$, $$M = \lim_{x\to a}g(x)$$ exist, then $$L \leq M$$.
 
 </div>
 
@@ -247,7 +247,7 @@ The most famous application of the squeeze theorem is the following trigonometri
 
 <div class="example" markdown="1">
 
-<ins id="ex10">**Example 10**</ins> $$\displaystyle\lim_{x\to 0}\frac{\sin x}{x} = 1$$. Comparing areas in the unit circle for $$0 < x < \pi/2$$, we obtain the inequality
+<ins id="ex10">**Example 10**</ins> $$\lim_{x\to 0}\frac{\sin x}{x} = 1$$. Comparing areas in the unit circle for $$0 < x < \pi/2$$, we obtain the inequality
 
 $$\frac{1}{2}\sin x \leq \frac{1}{2}x \leq \frac{1}{2}\tan x$$
 
@@ -275,7 +275,7 @@ The following example is also classical.
 
 <div class="example" markdown="1">
 
-<ins id="ex11">**Example 11**</ins> $$\displaystyle\lim_{x\to 0} x\sin\frac{1}{x} = 0$$. This is because $$\bigl\lvert x\sin\frac{1}{x}\bigr\rvert \leq \lvert x\rvert$$, so
+<ins id="ex11">**Example 11**</ins> $$\lim_{x\to 0} x\sin\frac{1}{x} = 0$$. This is because $$\bigl\lvert x\sin\frac{1}{x}\bigr\rvert \leq \lvert x\rvert$$, so
 
 $$-\lvert x\rvert \leq x\sin\frac1x \leq \lvert x\rvert$$
 
@@ -293,31 +293,31 @@ The limits so far have been the case where $$x$$ approaches $$a$$ from both side
 
 $$a < x < a+\delta \implies \lvert f(x) - L\rvert < \epsilon$$
 
-holds. In this case, we write $$\displaystyle\lim_{x\to a^+} f(x) = L$$. Similarly, when $$f$$ is defined on $$(a-c, a)$$, the *left limit* as $$x \to a^-$$ is defined by
+holds. In this case, we write $$\lim_{x\to a^+} f(x) = L$$. Similarly, when $$f$$ is defined on $$(a-c, a)$$, the *left limit* as $$x \to a^-$$ is defined by
 
 $$a-\delta < x < a \implies \lvert f(x) - L\rvert < \epsilon$$
 
-and we write $$\displaystyle\lim_{x\to a^-} f(x) = L$$.
+and we write $$\lim_{x\to a^-} f(x) = L$$.
 
 </div>
 
-The existence of the limit $$\displaystyle\lim_{x\to a} f(x)$$ is equivalent to both one-sided limits existing and being equal to each other. For example, $$f(x) = \dfrac{\lvert x\rvert}{x}$$ has right limit $$1$$ as $$x \to 0^+$$ and left limit $$-1$$ as $$x \to 0^-$$; since the two one-sided limits differ, the limit as $$x \to 0$$ does not exist. A point where the two one-sided limits are finite but different from each other is called a *jump* discontinuity of the function.
+The existence of the limit $$\lim_{x\to a} f(x)$$ is equivalent to both one-sided limits existing and being equal to each other. For example, $$f(x) = \frac{\lvert x\rvert}{x}$$ has right limit $$1$$ as $$x \to 0^+$$ and left limit $$-1$$ as $$x \to 0^-$$; since the two one-sided limits differ, the limit as $$x \to 0$$ does not exist. A point where the two one-sided limits are finite but different from each other is called a *jump* discontinuity of the function.
 
 <div class="definition" markdown="1">
 
-<ins id="def13">**Definition 13**</ins> For a function $$f$$ defined on a deleted neighborhood of a real number $$a$$, $$\displaystyle\lim_{x\to a} f(x) = \infty$$ means that for every $$M > 0$$, there exists some $$\delta > 0$$ such that if $$0 < \lvert x-a\rvert < \delta$$, then $$f(x) > M$$. Similarly, $$\displaystyle\lim_{x\to a} f(x) = -\infty$$ means that for every $$M > 0$$, there exists some $$\delta > 0$$ such that if $$0 < \lvert x-a\rvert < \delta$$, then $$f(x) < -M$$.
+<ins id="def13">**Definition 13**</ins> For a function $$f$$ defined on a deleted neighborhood of a real number $$a$$, $$\lim_{x\to a} f(x) = \infty$$ means that for every $$M > 0$$, there exists some $$\delta > 0$$ such that if $$0 < \lvert x-a\rvert < \delta$$, then $$f(x) > M$$. Similarly, $$\lim_{x\to a} f(x) = -\infty$$ means that for every $$M > 0$$, there exists some $$\delta > 0$$ such that if $$0 < \lvert x-a\rvert < \delta$$, then $$f(x) < -M$$.
 
 </div>
 
-For example, $$\displaystyle\lim_{x\to 0}\frac{1}{x^2} = \infty$$, and in this case the line $$x = 0$$ is called a *vertical asymptote* of the graph.
+For example, $$\lim_{x\to 0}\frac{1}{x^2} = \infty$$, and in this case the line $$x = 0$$ is called a *vertical asymptote* of the graph.
 
 <div class="definition" markdown="1">
 
-<ins id="def14">**Definition 14**</ins> For a function $$f$$ defined for $$x$$ greater than some real number $$N_0$$, $$\displaystyle\lim_{x\to\infty} f(x) = L$$ means that for every $$\epsilon > 0$$, there exists some $$N > N_0$$ such that if $$x > N$$, then $$\lvert f(x) - L\rvert < \epsilon$$. Similarly, for a function defined for $$x$$ less than some $$N_0$$, $$\displaystyle\lim_{x\to-\infty} f(x) = L$$ means that there exists an $$N$$ such that if $$x < N$$, then $$\lvert f(x) - L\rvert < \epsilon$$.
+<ins id="def14">**Definition 14**</ins> For a function $$f$$ defined for $$x$$ greater than some real number $$N_0$$, $$\lim_{x\to\infty} f(x) = L$$ means that for every $$\epsilon > 0$$, there exists some $$N > N_0$$ such that if $$x > N$$, then $$\lvert f(x) - L\rvert < \epsilon$$. Similarly, for a function defined for $$x$$ less than some $$N_0$$, $$\lim_{x\to-\infty} f(x) = L$$ means that there exists an $$N$$ such that if $$x < N$$, then $$\lvert f(x) - L\rvert < \epsilon$$.
 
 </div>
 
-For example, $$\displaystyle\lim_{x\to\infty}\frac{1}{x} = 0$$, and for rational functions the leading term dominates the behavior, so $$\displaystyle\lim_{x\to\infty}\frac{2x^2 + 1}{3x^2 - x} = \frac{2}{3}$$. If such a finite limit $$L$$ exists, the line $$y = L$$ becomes a *horizontal asymptote* of the graph.
+For example, $$\lim_{x\to\infty}\frac{1}{x} = 0$$, and for rational functions the leading term dominates the behavior, so $$\lim_{x\to\infty}\frac{2x^2 + 1}{3x^2 - x} = \frac{2}{3}$$. If such a finite limit $$L$$ exists, the line $$y = L$$ becomes a *horizontal asymptote* of the graph.
 
 <div class="example" markdown="1">
 
@@ -329,6 +329,6 @@ by rationalizing the numerator,
 
 $$\lim_{x\to 0}\frac{\sqrt{1+x} - 1}{x} = \lim_{x\to 0}\frac{1}{\sqrt{1+x}+1} = \frac12,$$
 
-and combining with [Example 10](#ex10), $$\displaystyle\lim_{x\to 0}\frac{\sin 3x}{x} = \lim_{x\to 0}3\cdot\frac{\sin 3x}{3x} = 3$$.
+and combining with [Example 10](#ex10), $$\lim_{x\to 0}\frac{\sin 3x}{x} = \lim_{x\to 0}3\cdot\frac{\sin 3x}{3x} = 3$$.
 
 </div>

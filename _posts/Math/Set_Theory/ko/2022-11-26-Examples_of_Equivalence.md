@@ -6,7 +6,6 @@ excerpt: "동치관계의 예시들, 동치관계의 포화, isomorphism theorem
 
 categories: [Math / Set Theory]
 permalink: /ko/math/set_theory/examples_of_equivalence
-drift_needed: true
 sidebar: 
     nav: "set_theory-ko"
 
