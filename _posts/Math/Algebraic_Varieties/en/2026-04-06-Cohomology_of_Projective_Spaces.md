@@ -5,14 +5,14 @@ excerpt: "Bott's formula and the cohomology of line bundles on projective space"
 
 categories: [Math / Algebraic Varieties]
 permalink: /en/math/algebraic_varieties/cohomology_of_projective_spaces
-drift_needed: true
 sidebar:
     nav: "algebraic_varieties-en"
 
 date: 2026-04-06
 weight: 13
-translated_at: 2026-06-25T17:30:55+00:00
+translated_at: 2026-06-26T09:00:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-26T09:00:02+00:00
 ---
 We previously defined the line bundle $$\mathcal{O}(d)$$ in [§Line Bundles and Vector Bundles, ⁋Example 12](/en/math/algebraic_varieties/line_bundles#ex12), and verified through the computation of [§Line Bundles and Vector Bundles, ⁋Example 16](/en/math/algebraic_varieties/line_bundles#ex16) that its global sections $$H^0(\mathbb{P}^n, \mathcal{O}(d))$$ are isomorphic to homogeneous polynomials of degree $$d$$. However, the sheaf cohomology we introduced in earlier posts ([§Sheaf Cohomology, ⁋Definition 1](/en/math/algebraic_varieties/sheaf_cohomology#def1)) is a richer invariant that includes not only $$H^0$$ but also higher cohomology groups $$H^1, H^2, \ldots$$. Thus, we now aim to extract all information about $$\mathcal{O}(d)$$ using not just $$H^0$$ but also the higher cohomology groups.
 

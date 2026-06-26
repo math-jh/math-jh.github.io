@@ -5,14 +5,14 @@ excerpt: "The definition and properties of topological manifolds as locally Eucl
 
 categories: [Math / Algebraic Topology]
 permalink: /en/math/algebraic_topology/topological_manifolds
-drift_needed: true
 sidebar: 
     nav: "algebraic_topology-en"
 
 date: 2025-07-05
 weight: 1
-translated_at: 2026-06-25T17:00:03+00:00
+translated_at: 2026-06-26T08:30:01+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-26T08:30:01+00:00
 ---
 In this category we cover homology, cohomology, and other concepts essential to the study of geometry. Although these notions are defined on general topological spaces, they behave well only when the spaces satisfy additional conditions, and a space meeting all of these requirements is precisely the topological manifold defined in [\[Topology\] §Compactness, ⁋Definition 9](/en/math/topology/compactness#def9). In this post we examine the properties and examples of topological manifolds, and in the next post we will gain a rough idea of what homology is through some illustrative examples. These two posts outline the broad direction of this category; the substantive content begins with the third post.
 
