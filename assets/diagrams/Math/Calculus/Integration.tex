@@ -1,0 +1,53 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG 리만 합 (Integration-1.svg)
+\begin{tikzpicture}
+\tikzset{
+  axes/.style={->, black!50, line width=0.4pt},
+  curve/.style={accent1, line width=0.9pt},
+  rect/.style={fill=accent1!18, draw=accent1!55, line width=0.4pt},
+  rectHi/.style={fill=accent2!22, draw=accent2, line width=0.6pt},
+  dot/.style={fill=accent1, circle, inner sep=1.3pt},
+  dotHi/.style={fill=accent2, circle, inner sep=1.5pt},
+  brace/.style={black!60, line width=0.4pt}
+}
+% axes
+\draw[axes] (0.2,0) -- (6.9,0) node[right, black] {$x$};
+\draw[axes] (0,-0.3) -- (0,3.8) node[above, black] {$y$};
+% partition tick marks
+\foreach \x in {1,2,3,4,5,6} \draw[black!50] (\x,0.06) -- (\x,-0.06);
+% Riemann rectangles; sample point c = left end + 0.6 of each subinterval
+\draw[rect] (1,0) rectangle (2,1.818);
+\draw[rect] (2,0) rectangle (3,2.235);
+\draw[rectHi] (3,0) rectangle (4,2.577);
+\draw[rect] (4,0) rectangle (5,2.874);
+\draw[rect] (5,0) rectangle (6,3.140);
+% curve y = f(x)
+\draw[curve] plot[domain=0.85:6.15, samples=200, smooth, variable=\t]
+  ({\t},{1.2*sqrt(\t)+0.3}) node[above right, black] {$y=f(x)$};
+% sample points on the curve
+\node[dot] at (1.6,1.818) {};
+\node[dot] at (2.6,2.235) {};
+\node[dotHi] at (3.6,2.577) {};
+\node[dot] at (4.6,2.874) {};
+\node[dot] at (5.6,3.140) {};
+% axis labels
+\node[below=1pt] at (1,0) {$a$};
+\node[below=1pt] at (6,0) {$b$};
+\node[below=1pt] at (3.6,0) {$c_i$};
+% width of the i-th subinterval
+\draw[brace, decorate, decoration={brace, mirror, amplitude=3pt}]
+  (3,-0.55) -- (4,-0.55) node[midway, below=3pt] {$\Delta x_i$};
+% height of the i-th rectangle
+\draw[brace, decorate, decoration={brace, amplitude=3pt}]
+  (2.8,0) -- (2.8,2.577) node[midway, left=3pt] {$f(c_i)$};
+\end{tikzpicture}
+
+\end{document}
