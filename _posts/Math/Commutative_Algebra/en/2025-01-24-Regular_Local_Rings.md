@@ -5,14 +5,14 @@ excerpt: "Characterization of regular systems of parameters and regular local ri
 
 categories: [Math / Commutative Algebra]
 permalink: /en/math/commutative_algebra/regular_local_rings
-drift_needed: true
 sidebar: 
     nav: "commutative_algebra-en"
 
 date: 2025-01-24
 weight: 18
-translated_at: 2026-06-25T23:02:03+00:00
+translated_at: 2026-06-26T16:30:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-26T16:30:02+00:00
 ---
 ## Regular Local Rings
 
@@ -26,17 +26,17 @@ Recalling [§System of Parameters, ⁋Proposition–Definition 3](/en/math/commu
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-We prove this by induction on the dimension of $$(A, \mathfrak{m})$$. The case $$d=0$$ is trivial since $$A$$ is a field. Assume the claim holds up to dimension $$\dim A=d$$, and consider the case $$\dim A=d+1$$. Then in particular $$\mathfrak{m}\neq 0$$, so by [§Integral Extensions, ⁋Lemma 8](/en/math/commutative_algebra/integral_extension#lem8) we know that $$\mathfrak{m}\neq \mathfrak{m}^2$$. On the other hand, by [§Associated Primes, ⁋Theorem 7](/en/math/commutative_algebra/associated_primes#thm7), we know that the minimal prime ideals of $$A$$ are finite in number. Let these be $$\mathfrak{p}_1,\ldots, \mathfrak{p}_k$$. If
+We prove this by induction on the dimension of $$(A, \mathfrak{m})$$. The case $$d=0$$ is trivial since $$A$$ is a field. Assume the claim holds for dimension $$\dim A=d$$, and consider the case $$\dim A=d+1$$. Then in particular $$\mathfrak{m}\neq 0$$, so by [§Integral Extensions, ⁋Lemma 8](/en/math/commutative_algebra/integral_extension#lem8) we know that $$\mathfrak{m}\neq \mathfrak{m}^2$$. On the other hand, by [§Associated Primes, ⁋Theorem 7](/en/math/commutative_algebra/associated_primes#thm7), the minimal prime ideals of $$A$$ are finite in number. Let these be $$\mathfrak{p}_1,\ldots, \mathfrak{p}_k$$. If
 
 $$\mathfrak{m}\subseteq \mathfrak{m}^2\cup \mathfrak{p}_1\cup\cdots\cup \mathfrak{p}_k$$
 
-then by [§Associated Primes, ⁋Lemma 2](/en/math/commutative_algebra/associated_primes#lem2) and the above computation $$\mathfrak{m}\neq \mathfrak{m}^2$$, we would have $$\mathfrak{m}=\mathfrak{p}_i$$ for some $$i$$, which would imply
+then by [§Associated Primes, ⁋Lemma 2](/en/math/commutative_algebra/associated_primes#lem2) and the above fact that $$\mathfrak{m}\neq \mathfrak{m}^2$$, we would have $$\mathfrak{m}=\mathfrak{p}_i$$ for some $$i$$, which would imply
 
 $$d+1=\dim A=\codim \mathfrak{m}=\codim \mathfrak{p}_i=0$$
 
-a contradiction. Therefore we know that there must exist some $$a\in \mathfrak{m}$$ such that $$a\not\in \mathfrak{m}^2\cup \mathfrak{p}_1\cup\cdots\cup \mathfrak{p}_k$$.
+a contradiction. Therefore there must exist some $$a\in \mathfrak{m}$$ with $$a\not\in \mathfrak{m}^2\cup \mathfrak{p}_1\cup\cdots\cup \mathfrak{p}_k$$.
 
-Now let $$A'=A/(a)$$, and consider the maximal ideal $$\mathfrak{m}'=\mathfrak{m}A'$$ of $$A'$$. By the choice of $$a$$, none of the prime ideals of $$A'$$ corresponds to any $$\mathfrak{p}_i$$, so necessarily $$\dim A'<\dim A$$ holds, and combining this with [§System of Parameters, ⁋Corollary 7](/en/math/commutative_algebra/system_of_parameters#cor7) we see that $$\dim A'=d-1$$. Thus from the identity
+Now let $$A'=A/(a)$$, and consider the maximal ideal $$\mathfrak{m}'=\mathfrak{m}A'$$ of $$A'$$. By the choice of $$a$$, none of the prime ideals of $$A'$$ corresponds to any $$\mathfrak{p}_i$$, so necessarily $$\dim A'<\dim A$$; combining this with [§System of Parameters, ⁋Corollary 7](/en/math/commutative_algebra/system_of_parameters#cor7) we see that $$\dim A'=d-1$$. Thus from the identity
 
 $$\mathfrak{m}'/(\mathfrak{m}')^2=\mathfrak{m}/(\mathfrak{m}^2+(a))$$
 
@@ -80,7 +80,7 @@ holds.
 
 As we saw in [§Krull Dimension](/en/math/commutative_algebra/Krull_dimension), in general we have $$\dim A/\mathfrak{p} + \codim \mathfrak{p} \le \dim A$$. Thus it suffices to prove the reverse inequality.
 
-Let $$d = \dim A$$ and $$h = \codim \mathfrak{p}$$. By [Corollary 3](#cor3), a regular system of parameters $$x_1, \ldots, x_d$$ is an $$A$$-sequence contained in $$\mathfrak{m}$$. In general, when a $$d$$-dimensional Noetherian local ring $$(A,\mathfrak{m})$$ has an $$A$$-sequence of $$d$$ elements inside $$\mathfrak{m}$$, we call $$A$$ a *Cohen–Macaulay local ring*; thus a regular local ring is a Cohen–Macaulay local ring. Therefore it suffices to prove the following two claims by induction on $$d$$.
+Let $$d = \dim A$$ and $$h = \codim \mathfrak{p}$$. By [Corollary 3](#cor3), a regular system of parameters $$x_1, \ldots, x_d$$ is an $$A$$-sequence contained in $$\mathfrak{m}$$. In general, when a $$d$$-dimensional Noetherian local ring $$(A,\mathfrak{m})$$ has an $$A$$-sequence of $$d$$ elements inside $$\mathfrak{m}$$, we call $$A$$ a *Cohen–Macaulay local ring*; thus every regular local ring is a Cohen–Macaulay local ring. Therefore it suffices to prove the following two claims by induction on $$d$$.
 
 1. Any associated prime $$\mathfrak{q}\in \Ass A$$ of a $$d$$-dimensional Cohen–Macaulay local ring $$A$$ satisfies $$\dim A/\mathfrak{q}=d$$.
 2. Any prime ideal $$\mathfrak{p}$$ of a $$d$$-dimensional Cohen–Macaulay local ring $$A$$ satisfies $$\dim A/\mathfrak{p}+\codim \mathfrak{p}=d$$.
@@ -99,7 +99,7 @@ and the reverse inequality is obvious, yielding the first claim.
 
 For the second claim, if $$h=0$$ then $$\mathfrak{p}$$ is a minimal prime ideal, and by [§Associated Primes, ⁋Theorem 7](/en/math/commutative_algebra/associated_primes#thm7) we have $$\mathfrak{p}\in\Ass A$$, so the first claim gives $$\dim A/\mathfrak{p}=d$$. Now assume $$h\geq 1$$. If $$\mathfrak{p}$$ were contained in some $$\mathfrak{q}\in \Ass A$$, then from the first claim and the general inequality we would get $$\codim \mathfrak{q}=0$$, but then $$\mathfrak{p}\subseteq \mathfrak{q}$$ implies $$h=0$$, a contradiction. Since $$\Ass A$$ is finite ([§Associated Primes, ⁋Theorem 7](/en/math/commutative_algebra/associated_primes#thm7)), by prime avoidance ([§Associated Primes, ⁋Lemma 2](/en/math/commutative_algebra/associated_primes#lem2)) we can choose $$x\in \mathfrak{p}$$ not belonging to any associated prime; in particular, $$x$$ is a non-zerodivisor.
 
-We now use the fact that $$\overline{A}=A/xA$$ is again a $$(d-1)$$-dimensional Cohen–Macaulay local ring. This is a standard result from depth theory — quotient by a non-zerodivisor reduces both depth and dimension by exactly $$1$$ — and since we have not yet covered depth theory on this blog, we defer its proof to [[Stacks, Lemma 10.104.2]](https://stacks.math.columbia.edu/tag/02JN). Applying the second claim of the induction hypothesis to $$\overline{\mathfrak{p}}=\mathfrak{p}/xA$$ gives
+We now use the fact that $$\overline{A}=A/xA$$ is again a $$(d-1)$$-dimensional Cohen–Macaulay local ring. This is a standard result from depth theory — quotienting by a non-zerodivisor reduces both depth and dimension by exactly $$1$$ — and since we have not yet covered depth theory on this blog, we defer its proof to [[Stacks, Lemma 10.104.2]](https://stacks.math.columbia.edu/tag/02JN). Applying the second claim of the induction hypothesis to $$\overline{\mathfrak{p}}=\mathfrak{p}/xA$$ gives
 
 $$\dim \overline{A}/\overline{\mathfrak{p}}+\codim \overline{\mathfrak{p}}=d-1$$
 
@@ -113,7 +113,7 @@ and we obtain the desired result.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**Proposition 5**</ins> Let $$(A, \mathfrak{m})$$ be a complete regular local Noetherian ring of dimension $$d$$, and let $$\kappa=A/\mathfrak{m}$$ be its residue field. If $$A$$ contains some field, then $$A\cong \kappa[[\x_1,\ldots, \x_d]]$$, and this isomorphism sends each variable $$\x_i$$ to an element of a regular system of parameters of $$A$$.
+<ins id="prop5">**Proposition 5**</ins> Let $$(A, \mathfrak{m})$$ be a complete regular local Noetherian ring of dimension $$d$$, and let $$\kappa=A/\mathfrak{m}$$ be its residue field. If $$A$$ contains a field, then $$A\cong \kappa[[\x_1,\ldots, \x_d]]$$, and this isomorphism identifies each variable $$\x_i$$ with an element of a regular system of parameters of $$A$$.
 
 </div>
 <details class="proof" markdown="1">

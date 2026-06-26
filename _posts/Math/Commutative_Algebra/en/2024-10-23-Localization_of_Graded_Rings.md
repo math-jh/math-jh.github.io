@@ -5,20 +5,20 @@ excerpt: "Homogeneous localization of graded rings and graded modules"
 
 categories: [Math / Commutative Algebra]
 permalink: /en/math/commutative_algebra/localization_of_graded_rings
-drift_needed: true
 sidebar: 
     nav: "commutative_algebra-en"
 
 date: 2024-10-23
 weight: 4
-translated_at: 2026-06-25T21:30:20+00:00
+translated_at: 2026-06-26T15:30:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-26T15:30:02+00:00
 ---
 We examine how to localize an arbitrary graded ring, and more generally an arbitrary graded module. In this post, unless stated otherwise, we assume all graded rings are $$\mathbb{N}_{\geq 0}$$-graded, and fix $$A=\bigoplus A_i$$ and $$M=\bigoplus M_i$$. Then for any $$n$$,
 
 $$M(n)_k=M_{n+k}\qquad\text{for all $k$}$$
 
-defines a graded $$A$$-module structure on $$M(n)$$ naturally.
+naturally endows $$M(n)$$ with the structure of a graded $$A$$-module.
 
 ## Ideal Quotient
 
@@ -44,7 +44,7 @@ We showed in [[Algebraic Structures] §Graded Rings, ⁋Proposition 6](/en/math/
 
 <div class="proposition" markdown="1">
 
-<ins id="lem2">**Lemma 2**</ins> For a graded ring $$A$$ and homogeneous ideals $$\mathfrak{a},\mathfrak{b}$$ of $$A$$, the following hold. The following hold.
+<ins id="lem2">**Lemma 2**</ins> For a graded ring $$A$$ and homogeneous ideals $$\mathfrak{a},\mathfrak{b}$$ of $$A$$, the following hold.
 
 1. $$\sqrt{\mathfrak{a}}$$ is a homogeneous ideal.
 2. $$(\mathfrak{a}:\mathfrak{b})$$ is a homogeneous ideal.
@@ -54,13 +54,13 @@ We showed in [[Algebraic Structures] §Graded Rings, ⁋Proposition 6](/en/math/
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-1. First, we show that $$\sqrt{\mathfrak{a}}$$ is a homogeneous ideal. That is, for any $$x\in \sqrt{\mathfrak{a}}$, when we write $$x$$ as a sum of homogeneous elements
+1. First, we show that $$\sqrt{\mathfrak{a}}$$ is a homogeneous ideal. That is, for any $$x\in \sqrt{\mathfrak{a}}$$, when we write $$x$$ as a sum of homogeneous elements
 
     $$x=x_{d_1}+\cdots+x_{d_l},\quad d_1 < \cdots < d_l\tag{$\ast$}$$
 
-    we must show that each $$x_i$$ belongs to $$\sqrt{\mathfrak{a}}$$. From $$x\in \mathfrak{a}$$, there exists a suitable $$k$$ such that $$x^k\in \mathfrak{a}$$. Without loss of generality, assuming that $$x_l$$ has the largest degree in the above expression ($$\ast$$), when we write $$x^k$$ as a sum of homogeneous elements, $$x_l^k$$ is the unique element in degree $$k\deg x_l$$. Since $$x^k\in \mathfrak{a}$$ and $$\mathfrak{a}$$ is a homogeneous ideal, we have $$x_l^k\in \mathfrak{a}$$, i.e., $$x_l\in \sqrt{\mathfrak{a}}$$. Then since $$x-x_l\in\sqrt{\mathfrak{a}}$$, we repeat the same argument.
+    we must show that each $$x_i$$ belongs to $$\sqrt{\mathfrak{a}}$$. From $$x\in \sqrt{\mathfrak{a}}$$, there exists a suitable $$k$$ such that $$x^k\in \mathfrak{a}$$. Without loss of generality, assuming that $$x_l$$ has the largest degree in the above expression ($$\ast$$), when we write $$x^k$$ as a sum of homogeneous elements, $$x_l^k$$ is the unique element in degree $$k\deg x_l$$. Since $$x^k\in \mathfrak{a}$$ and $$\mathfrak{a}$$ is a homogeneous ideal, we have $$x_l^k\in \mathfrak{a}$$, i.e., $$x_l\in \sqrt{\mathfrak{a}}$$. Then since $$x-x_l\in\sqrt{\mathfrak{a}}$$, we repeat the same argument.
 
-2. Let $$x\in (\mathfrak{a}:\mathfrak{b})$$. As above, when we write $$x$$ as a sum of homogeneous elements ($$\ast$$), we must show that each $$x_i$$ belongs to $$(\mathfrak{a}:\mathfrak{b})$$. Let an arbitrary homogeneous element $$b$$ generating $$\mathfrak{b}$$ be given. Then $$x_ib$$ is the homogeneous element of $$xb\in \mathfrak{a}$$ in degree $$\deg x_i+\deg b$$, and since $$\mathfrak{a}$$ is a homogeneous ideal, $$x_ib\in \mathfrak{a}$$.
+2. Let $$x\in (\mathfrak{a}:\mathfrak{b})$$. As above, when we write $$x$$ as a sum of homogeneous elements ($$\ast$$), we must show that each $$x_i$$ belongs to $$(\mathfrak{a}:\mathfrak{b})$$. Let an arbitrary homogeneous element $$b$$ generating $$\mathfrak{b}$$ be given. Then $$x_ib$$ is the homogeneous component of $$xb\in \mathfrak{a}$$ in degree $$\deg x_i+\deg b$$, and since $$\mathfrak{a}$$ is a homogeneous ideal, $$x_ib\in \mathfrak{a}$$.
 
 3. Finally, assuming the given condition, let us express arbitrary two elements $$x,y\in A$$ as sums of homogeneous elements
 
