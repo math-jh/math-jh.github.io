@@ -12,16 +12,15 @@ sidebar:
 date: 2022-10-09
 
 weight: 119
-
-drift_needed: true
-translated_at: 2026-06-26T11:32:40+00:00
+translated_at: 2026-06-26T20:30:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-26T20:30:02+00:00
 ---
 ## Least Squares Method
 
-The method of least squares we introduce now is first considered for Euclidean spaces $$\mathbb{R}^n$$ and the dot product defined on them. However, as was done in [§Bilinear Forms, §§Non-degenerate Bilinear Forms](/en/math/linear_algebra/bilinear_form#비퇴화-쌍선형형식), this can be generalized to an arbitrary $$\mathbb{R}$$-inner product space in the same way.
+The method of least squares we introduce now is first considered for Euclidean spaces $$\mathbb{R}^n$$ with the dot product defined on them. However, as was done in [§Bilinear Forms, §§Non-degenerate Bilinear Forms](/en/math/linear_algebra/bilinear_form#비퇴화-쌍선형형식), this can be generalized to an arbitrary $$\mathbb{R}$$-inner product space in the same way.
 
-Consider an arbitrary matrix $$A\in\Mat_{m\times n}(\mathbb{R})$$ and the system of linear equations $$Ax=y$$. If $$m=n$$ and $$A$$ is invertible, this equation has a unique solution, but this is not the case in general. In particular, consider the case where $$m>n$$. Then since $$\rank(A)\leq n< m$$, for most $$y$$ excluding those vectors in the image of $$A$$, this equation cannot be solved.
+Consider an arbitrary matrix $$A\in\Mat_{m\times n}(\mathbb{R})$$ and the system of linear equations $$Ax=y$$. If $$m=n$$ and $$A$$ is invertible, this equation has a unique solution, but this is not the case in general. In particular, consider the case where $$m>n$$. Then since $$\rank(A)\leq n< m$$, for most $$y$$—excluding those vectors lying in the image of $$A$$—this equation cannot be solved.
 
 A typical example is finding an appropriate function that represents given data. Of course, using Lagrange interpolation we can choose a suitable basis and find an $$n$$-th degree function approximating the given $$n+1$$ data points, but if we try to find a linear function representing this data, we cannot find an exact solution unless all the given $$n+1$$ points lie on a single straight line.
 
