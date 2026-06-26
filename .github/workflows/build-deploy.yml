@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0   # full history so jekyll-last-modified-at reads real commit dates
 
@@ -92,7 +92,7 @@ jobs:
       contents: write   # required to POST to the dependency-graph API
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Submit npm + Ruby deps to dependency graph
         uses: advanced-security/component-detection-dependency-submission-action@v0.1.1
