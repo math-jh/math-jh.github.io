@@ -10,8 +10,9 @@ sidebar:
 
 date: 2026-06-26
 weight: 11
-translated_at: 2026-06-26T12:30:02+00:00
+translated_at: 2026-06-26T13:30:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-26T13:30:02+00:00
 ---
 We previously defined two different kinds of integrals: the indefinite integral and the definite integral. The indefinite integral is meaningful as the reverse process of differentiation, while the definite integral carries its own geometric meaning as the area under a curve. The fundamental theorem of calculus shows that these two are, in some sense, exactly the same process, and one could even say that calculus itself was born from this insight.
 
