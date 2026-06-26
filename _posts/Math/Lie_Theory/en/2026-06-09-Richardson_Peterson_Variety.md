@@ -10,8 +10,9 @@ sidebar:
 
 date: 2026-06-09
 weight: 6
-translated_at: 2026-06-26T04:30:02+00:00
+translated_at: 2026-06-26T19:00:01+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-26T19:00:01+00:00
 ---
 In [§Bruhat decomposition](/en/math/lie_theory/bruhat_decomposition) we saw that the partial flag variety $$G/P$$ decomposes into Bruhat cells, and that the geometry of $$G/P$$ is encoded in the combinatorics of the Weyl group through the closures of these cells, the Schubert varieties. In this post we discuss two kinds of subvarieties that naturally sit above this decomposition. One is the *Richardson variety*, obtained as the intersection of two opposite Bruhat decompositions, and the other is the *Peterson variety*, cut out by a single regular nilpotent element.
 
