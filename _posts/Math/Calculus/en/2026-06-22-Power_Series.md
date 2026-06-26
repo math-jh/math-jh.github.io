@@ -10,13 +10,13 @@ sidebar:
 
 date: 2026-06-22
 weight: 5
-translated_at: 2026-06-21T21:00:02+00:00
+drift_needed: true
+translated_at: 2026-06-26T11:00:02+00:00
 translation_source: kimi-cli
-last_polished_at: 2026-06-21T21:00:02+00:00
 ---
-The main reasons we defined limits of sequences and infinite series before limits and continuity of functions are twofold. The first reason is that we will need to handle infinite series anyway for the Riemann sums used in definite integrals, so we wanted to avoid having limits of sequences disrupt the flow from differentiation to integration. The second reason is precisely to define power series early in this article.
+The reason we defined the limit and continuity of a function first, and then defined the limit of a sequence and infinite series, is largely twofold. The first reason is that the method of exhaustion used in definite integration requires dealing with infinite series anyway, so we wanted to prevent the limit of sequences from interrupting the flow from differentiation to integration. The second reason is precisely to define power series first in this article.
 
-A power series is essentially another way of writing a function, and its importance lies in the fact that by introducing it, we can handle functions much more easily that we could not deal with in high school. For example, when we defined the exponential function $$2^x$$ in high school, we did not rigorously define its values at irrational numbers; in fact, defining values in such a way requires the completeness of the real numbers, which was needed in [§Continuous Functions, ⁋Theorem 5](/en/math/calculus/continuity#thm5) or [§Limits of Sequences, ⁋Proposition 7](/en/math/calculus/sequences#prop7). Moreover, after defining the exponential function, when we defined the natural constant in [§Limits of Sequences, ⁋Example 8](/en/math/calculus/sequences#ex8), we had to resort to somewhat vague descriptions such as <em>the exponential function that remains itself upon differentiation</em>. On the other hand, defining the exponential function $$e^x$$ as a power series does not require such complexity, and moreover, functions that do not have an elementary antiderivative, such as the integral of $$e^{-x^2}$$, can be neatly expressed as a power series.
+Power series provide another way of writing functions, and by introducing them we can handle functions more easily that could not be treated in high school. For example, when defining the exponential function $$2^x$$ in high school, we did not rigorously define the function values at irrational numbers; to do so would require the completeness of real numbers used in [§Continuous Functions, ⁋Theorem 5](/en/math/calculus/continuity#thm5) or [§Limits of Sequences, ⁋Proposition 7](/en/math/calculus/sequences#prop7). Moreover, after defining the exponential function, when defining the natural constant in [§Limits of Sequences, ⁋Example 8](/en/math/calculus/sequences#ex8), we had to resort to somewhat vague methods, such as <em-ko>an exponential function that differentiates to itself</em-ko>. On the other hand, if we define the exponential function $$e^x$$ by a power series, none of this complexity arises, and we can also express cleanly functions that do not have an elementary antiderivative, such as the integral of $$e^{-x^2}$$.
 
 ## Power Series and Radius of Convergence
 
@@ -46,45 +46,35 @@ and the right-hand side is a convergent geometric series with common ratio $$r <
 
 The case $$R=0$$ is interpreted as the given power series converging only at $$x=0$$ (and thus is not of interest to us), while the opposite extreme $$R=\infty$$ is interpreted as the given power series converging on the entire real line. Apart from these two cases, the radius of convergence does not determine convergence at $$\lvert x\rvert=R$$, and in fact all combinations are possible depending on the power series.
 
-Because of its form, the radius of convergence of a power series is usually computed by the ratio test or the root test. For example, applying the ratio test, if $$\left\lvert c_{n+1}/c_n\right\rvert \to L$$, then the ratio of adjacent terms approaches $$L\lvert x\rvert$$, so we can set $$R = 1/L$$, and more generally
+Because of its shape, the radius of convergence of a power series is usually computed using the ratio test or [§Infinite Series, ⁋Proposition 8](/en/math/calculus/series#prop8). For instance, applying the ratio test, if $$\left\lvert c_{n+1}/c_n\right\rvert \to L$$ then the ratio of adjacent terms approaches $$L\lvert x\rvert$$, so we know that setting $$R = 1/L$$ works, and more generally,
 
 $$\frac{1}{R} = \limsup_{n\to\infty} \lvert c_n\rvert^{1/n}$$
 
-always holds.
-
-<div class="example" markdown="1">
-
-<ins id="ex3">**Example 3 (Computing the Radius of Convergence)**</ins> For example,
-
-$$\sum \frac{x^n}{n!}:\frac{n!}{(n+1)!} = \frac{1}{n+1} \to 0 \implies R = \infty$$
-
-so this series converges on the entire real line.
-
-</div>
+always holds. For example, applying the ratio test to $$\sum_n x^n/n!$$, the ratio of adjacent terms is $$\lvert x\rvert/(n+1) \to 0$$, so $$R = \infty$$; that is, this power series converges on the entire real line.
 
 ## Expansion of Elementary Functions
 
-As mentioned above, one of the benefits of introducing power series early is that we can define the exponential function in a more rigorous way.
+One of the benefits of introducing power series early is that we can define the exponential function in a more solid way.
 
 <div class="example" markdown="1">
 
-<ins id="ex4">**Example 4 (Exponential Function)**</ins> We write the power series from [Example 3](#ex3) as
+<ins id="ex3">**Example 3 (Exponential function)**</ins> We write the power series converging over all real numbers seen above as
 
 $$e^x = \sum_{n=0}^\infty \frac{x^n}{n!}$$
 
 In particular, substituting $$x = 1$$ gives $$e = \sum 1/n!$$, and this number coincides with the natural constant defined as the limit $$\lim(1 + 1/n)^n$$ in [§Limits of Sequences, ⁋Example 8](/en/math/calculus/sequences#ex8).
 
-The proof is as follows. Let $$L = \lim(1+1/n)^n$$ be the limit value and $$s_m = \sum 1/k!$$ be the partial sum of the series. In [§Limits of Sequences, ⁋Example 8](/en/math/calculus/sequences#ex8) above, we already showed by the binomial theorem that
+The proof is as follows. Let the limit value of that limit be $$L = \lim(1+1/n)^n$$, and let the partial sum of the series be $$s_m = \sum 1/k!$$. Then in [§Limits of Sequences, ⁋Example 8](/en/math/calculus/sequences#ex8) above, we already showed by the binomial theorem that
 
 $$\left(1 + \frac1n\right)^n = \sum_{k=0}^n \binom{n}{k}\frac{1}{n^k} = \sum_{k=0}^n \frac{1}{k!}\prod_{j=0}^{k-1}\left(1 - \frac{j}{n}\right)$$
 
-and also showed that this sequence is increasing and that its limit $$L$$ is the supremum of its terms.
+and also that this sequence is increasing, so its limit $$L$$ is the supremum of the terms.
 
-First, since each factor $$1 - j/n$$ in the product is at most $$1$$, the above sum is at most $$\sum_{k=0}^n 1/k! = s_n$$, and the partial sum is again at most its limit $$s = \sum_{n=0}^\infty 1/n!$$, so $$(1 + 1/n)^n \leq s$$ for all $$n$$. Since $$L$$ is the supremum of the terms and $$s$$ is an upper bound, we obtain $$L \leq s$$. Conversely, fixing $$m$$ and considering only $$n \geq m$$, dropping the nonnegative terms on the right side of the above sum gives
+First, since each factor $$1 - j/n$$ in the product is at most $$1$$, the above sum is at most $$\sum_{k=0}^n 1/k! = s_n$$, and the partial sums are in turn at most their limit $$s = \sum_{n=0}^\infty 1/n!$$, so $$(1 + 1/n)^n \leq s$$ for all $$n$$. Since $$L$$ is the supremum of the terms and $$s$$ is an upper bound, we obtain $$L \leq s$$. Conversely, fixing $$m$$ and considering only $$n \geq m$$, we drop the nonnegative latter terms in the above sum to obtain
 
 $$\left(1 + \frac1n\right)^n \geq \sum_{k=0}^m \frac{1}{k!}\prod_{j=0}^{k-1}\left(1 - \frac{j}{n}\right)$$
 
-The left-hand side is at most $$L$$, so the right-hand side is also at most $$L$$, and sending $$n \to \infty$$ with $$m$$ fixed, the right-hand side is a finite sum and each factor satisfies $$1 - j/n \to 1$$, so by the limit laws ([§Limits of Sequences, ⁋Proposition 2](/en/math/calculus/sequences#prop2)) it converges to $$s_m$$. If all terms of a convergent sequence are at most $$L$$, then its limit is also at most $$L$$, so $$s_m \leq L$$, and sending $$m \to \infty$$ gives $$s \leq L$$. Combining the two inequalities yields $$L = s$$, i.e., the $$e$$ defined in both ways is the same number.
+Since the left-hand side is at most $$L$$, the right-hand side is also at most $$L$$, and fixing $$m$$ while sending $$n \to \infty$$, the right-hand side is a finite sum and each factor satisfies $$1 - j/n \to 1$$, so by [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5) ([§Limits of Sequences, ⁋Proposition 2](/en/math/calculus/sequences#prop2)) it converges to $$s_m$$. If all terms of a convergent sequence are at most $$L$$, then its limit is also at most $$L$$, so $$s_m \leq L$$, and sending $$m \to \infty$$ again gives $$s \leq L$$. Combining the two inequalities yields $$L = s$$, that is, the $$e$$ defined in the two posts is the same number.
 
 </div>
 
@@ -92,7 +82,7 @@ The left-hand side is at most $$L$$, so the right-hand side is also at most $$L$
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**Proposition 5**</ins> If $$f(x) = \sum a_n x^n$$ and $$g(x) = \sum b_n x^n$$ have radii of convergence $$R_f$$ and $$R_g$$ respectively, then for $$\lvert x\rvert < \min(R_f, R_g)$$ we have
+<ins id="prop4">**Proposition 4**</ins> If $$f(x) = \sum a_n x^n$$ and $$g(x) = \sum b_n x^n$$ have radii of convergence $$R_f$$ and $$R_g$$ respectively, then for $$\lvert x\rvert < \min(R_f, R_g)$$ we have
 
 $$f(x) + g(x) = \sum_{n=0}^\infty (a_n + b_n)x^n, \qquad f(x)g(x) = \sum_{n=0}^\infty \left(\sum_{k=0}^n a_k b_{n-k}\right) x^n$$
 
@@ -100,16 +90,14 @@ The coefficients of the product are the *Cauchy product* of the two coefficient 
 
 </div>
 
-The Cauchy product is the extension to infinite degree of multiplying two polynomials and collecting terms of the same degree. For example, multiplying $$\dfrac{1}{1-x} = \sum x^n$$ by itself gives the $$n$$-th coefficient as $$\sum_{k=0}^n 1\cdot 1 = n+1$$, yielding $$\dfrac{1}{(1-x)^2} = \sum (n+1)x^n$$.
+The Cauchy product extends to infinite degree the process of multiplying two polynomials and collecting terms of the same degree. For example, multiplying $$1/(1-x) = \sum_n x^n$$ by itself gives the $$n$$th coefficient as $$\sum_{k=0}^n 1\cdot 1 = n+1$$, yielding $$1/(1-x)^2 = \sum_n (n+1)x^n$$.
 
 ## Analytic Functions
 
 <div class="definition" markdown="1">
 
-<ins id="def6">**Definition 6**</ins> A function $$f$$ is said to be *analytic* at a point $$a$$ if it coincides with a power series centered at $$a$$ in a neighborhood of $$a$$. If $$f$$ is analytic at every point of its domain, it is called an *analytic function*.
+<ins id="def5">**Definition 5**</ins> A function $$f$$ is said to be *analytic* at a point $$a$$ if it agrees with a power series centered at $$a$$ in some neighborhood of $$a$$. If $$f$$ is analytic at every point of its domain, we call $$f$$ an *analytic function*.
 
 </div>
 
-By Definition 6, an analytic function coincides with its Taylor series. However, the converse is false. The function $$f(x) = e^{-1/x^2}$$ (with $$f(0) = 0$$) is smooth on all of $$\mathbb{R}$$, but all derivatives at $$0$$ are $$0$$, so its Taylor series is identically $$0$$, and thus it does not coincide with $$f$$ in any neighborhood of $$0$$; hence $$f$$ is not analytic at $$0$$. That is, smoothness does not guarantee analyticity, and whether the Taylor series converges to the function can be determined via the remainder term in Taylor's theorem after learning differentiation. In complex analysis, which bridges this gap, (complex) differentiability is equivalent to analyticity, and the situation changes dramatically.
-
-In this way, power series allow us to treat functions as polynomials of infinite degree, and they have wide applications in series solutions of differential equations, numerical approximation, and definitions of special functions. The rigorous theory of uniform convergence of power series and analytic functions is treated in analysis [\[Analysis\] §Power Series and Analytic Functions](/en/math/analysis/power_series).
+By [Definition 5](#def5), an analytic function coincides with its Taylor series. However, the converse is false. The function $$f(x) = e^{-1/x^2}$$ (with $$f(0) = 0$$) is smooth on all of $$\mathbb{R}$$, but all its derivatives at $$0$$ vanish, so its Taylor series is identically $$0$$; hence it does not agree with $$f$$ in any neighborhood of $$0$$, and $$f$$ is not analytic at $$0$$. Thus smoothness does not guarantee analyticity, and whether a Taylor series converges to the function can be determined by examining the remainder term in Taylor's theorem after learning differentiation.
