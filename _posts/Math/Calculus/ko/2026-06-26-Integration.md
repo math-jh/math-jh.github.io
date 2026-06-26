@@ -292,13 +292,13 @@ $$\int_a^b f(x)dx = f(c)(b-a)$$
 
 $$\frac{1}{b-a}\int_a^b f(x)dx$$
 
-가 $$[m, M]$$에 속하므로, [§연속함수, ⁋정리 5](/ko/math/calculus/continuity#thm5)에 의해 그 값을 취하는 $$c$$, 즉 $$f(c) = \frac{1}{b-a}\int_a^b f$$인 $$c$$가 존재한다.
+가 $$[m, M]$$에 속하므로, [§연속함수, ⁋정리 5](/ko/math/calculus/continuity#thm5)에 의해 그 값을 취하는 $$c$$, 즉 $$f(c) = \frac{1}{b-a}\int_a^b f(x)dx$$인 $$c$$가 존재한다.
 
 </details>
 
 여기서 
 
-$$\frac{1}{b-a}\int_a^b f$$
+$$\frac{1}{b-a}\int_a^b f(x)dx$$
 
 를 $$f$$의 $$[a,b]$$에서의 *평균값*이라 하며, [명제 12](#prop12)은 연속함수가 자신의 평균값을 적어도 한 점에서 실제로 취함을 말한다.
 
