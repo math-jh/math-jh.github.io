@@ -5,14 +5,14 @@ excerpt: "The decomposition of separable and inseparable degrees"
 
 categories: [Math / Field Theory]
 permalink: /en/math/field_theory/separable_degree
+drift_needed: true
 sidebar: 
     nav: "field_theory-en"
 
 date: 2025-05-17
 weight: 7
-translated_at: 2026-05-31T07:00:04+00:00
+translated_at: 2026-06-26T00:30:02+00:00
 translation_source: kimi-cli
-last_polished_at: 2026-05-31T07:00:04+00:00
 ---
 ## Radical Extensions
 
@@ -108,19 +108,19 @@ On the other hand, just as with algebraic closures or perfect closures, we can a
 
 <div class="proposition" markdown="1">
 
-<ins id="prop5">**Proposition 5**</ins> For a field extension $$\mathbb{L}/\mathbb{K}$$, let $$\mathbb{L}_s$$ be the set of elements that are algebraic and separable over $$\mathbb{K}$$. Then $$\mathbb{L}_s$$ is a subextension of $$\mathbb{L}/\mathbb{K}$$, and moreover it is the largest separable algebraic extension contained in $$\mathbb{L}$$.
+<ins id="prop5">**Proposition 5**</ins> For a field extension $$\mathbb{L}/\mathbb{K}$$, let $$\mathbb{L}_s$$ be the set of elements that are algebraic and separable over $$\mathbb{K}$$. Then $$\mathbb{L}_s$$ is a subextension of $$\mathbb{L}/\mathbb{K}$$, and moreover it is the largest algebraic extension contained in $$\mathbb{L}$$ that is separable.
 
 </div>
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-First, since every element of a separable extension is separable ([§Separable Extensions, ⁋Proposition 12](/en/math/field_theory/separable_extensions#prop12)), any separable subextension of $$\mathbb{L}$$ is always contained in $$\mathbb{L}_s$$. On the other hand, conversely, an algebraic extension generated only by separable elements is also separable by [§Separable Extensions, ⁋Proposition 12](/en/math/field_theory/separable_extensions#prop12), so $$\mathbb{K}(\mathbb{L}_s)$$ is itself a separable extension, and again by the above claim $$\mathbb{K}(\mathbb{L}_s)\subseteq \mathbb{L}_s$$ holds. Thus $$\mathbb{K}(\mathbb{L}_s)=\mathbb{L}_s$$, and we obtain the desired result from [Proposition 2](#prop2).
+First, since every element of a separable extension is separable ([§Separable Extensions, ⁋Proposition 12](/en/math/field_theory/separable_extensions#prop12)), any subextension of $$\mathbb{L}$$ that is separable is always contained in $$\mathbb{L}_s$$. Conversely, an algebraic extension generated solely by separable elements is again separable by [§Separable Extensions, ⁋Proposition 12](/en/math/field_theory/separable_extensions#prop12), so $$\mathbb{K}(\mathbb{L}_s)$$ is itself a separable extension; hence by the preceding claim we have $$\mathbb{K}(\mathbb{L}_s)\subseteq \mathbb{L}_s$$. Thus $$\mathbb{K}(\mathbb{L}_s)=\mathbb{L}_s$$, which shows that $$\mathbb{L}_s$$ itself is a subextension of $$\mathbb{L}/\mathbb{K}$$; combining this with the maximality observed above, we obtain that $$\mathbb{L}_s$$ is the largest separable subextension.
 
 </details>
 
-As mentioned above, $$\mathbb{L}_s$$ is called the *relative separable algebraic closure* (in $$\mathbb{L}/\mathbb{K}$$).
+As mentioned above, we call $$\mathbb{L}_s$$ the *relative separable algebraic closure* (in $$\mathbb{L}/\mathbb{K}$$).
 
-The main result of this post is that any algebraic extension always decomposes completely into a separable part (corresponding to the relative separable closure) and an inseparable part. This can be verified as follows.
+The central result of this article is that any algebraic extension always splits completely into a separable part (corresponding to the relative separable closure) and an inseparable part. This can be verified as follows.
 
 <div class="proposition" markdown="1">
 

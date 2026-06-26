@@ -5,7 +5,6 @@ excerpt: "Differential module"
 
 categories: [Math / Multilinear Algebra]
 permalink: /ko/math/multilinear_algebra/derivations
-drift_needed: true
 sidebar: 
     nav: "multilinear_algebra-ko"
 

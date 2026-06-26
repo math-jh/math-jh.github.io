@@ -5,7 +5,6 @@ excerpt: "벡터공간의 기저와 차원"
 
 categories: [Math / Linear Algebra]
 permalink: /ko/math/linear_algebra/dimension
-drift_needed: true
 sidebar: 
     nav: "linear_algebra-ko"
 
