@@ -79,23 +79,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
-
-  # Submit the npm + Ruby dependency trees (resolved from package-lock.json /
-  # Gemfile.lock) to GitHub's dependency graph at build time. Kept in its own
-  # job so the elevated `contents: write` scope stays isolated from build/deploy.
-  # NOTE: GitHub's manifest auto-detection already populates the graph (that's
-  # where the 95-package graph comes from) — this layer adds build-time
-  # snapshots tied to a passing CI build. Runs in parallel; doesn't gate deploy.
-  dependency-submission:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write   # required to POST to the dependency-graph API
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v7
-
-      - name: Submit npm + Ruby deps to dependency graph
-        uses: advanced-security/component-detection-dependency-submission-action@v0.1.1
-        with:
-          detectorsCategories: "Npm,RubyGems"
-          correlator: "build-deploy"
