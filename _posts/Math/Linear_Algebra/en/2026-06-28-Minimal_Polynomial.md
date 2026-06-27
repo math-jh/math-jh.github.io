@@ -12,14 +12,15 @@ sidebar:
 date: 2026-06-28
 
 weight: 18
-translated_at: 2026-06-27T19:00:02+00:00
+translated_at: 2026-06-27T20:30:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-27T20:30:02+00:00
 ---
-Through the Jordan canonical form, we decomposed an arbitrary linear operator into Jordan blocks on generalized eigenspaces. This structure is also useful for examining the relationship between polynomials and linear operators. In this post, we define the operation of substituting a polynomial into a matrix, and through this we cover the Cayley–Hamilton theorem and the minimal polynomial.
+Through the Jordan canonical form, we decomposed an arbitrary linear operator into Jordan blocks on generalized eigenspaces. This structure is also useful for examining the relationship between polynomials and linear operators. In this post, we define the operation of evaluating a polynomial at a matrix, and through this we treat the Cayley–Hamilton theorem and the minimal polynomial.
 
 ## Polynomials in Matrices
 
-Since powers of matrices, scalar multiplication, and addition are all well defined, substituting a polynomial into a matrix is also naturally defined. In this post, $$\mathbb{K}[\x]$$ denotes the space of (finite-degree) polynomials defined in [§Subspaces, ⁋Example 5](/en/math/linear_algebra/subspaces#ex5).
+Since matrix powers, scalar multiplication, and addition are all well defined, evaluating a polynomial at a matrix is likewise naturally defined. In this post, $$\mathbb{K}[\x]$$ denotes the space of (finite-degree) polynomials defined in [§Subspaces, ⁋Example 5](/en/math/linear_algebra/subspaces#ex5).
 
 <div class="definition" markdown="1">
 
@@ -31,7 +32,7 @@ Here we adopt the convention $$A^0=I$$. The same definition applies to a linear 
 
 </div>
 
-This evaluation transfers addition and multiplication of polynomials to that of matrices. In particular, the following proposition is frequently used in the discussion below.
+This evaluation transfers polynomial addition and multiplication to matrix addition and multiplication. In particular, the following proposition is frequently used in the discussion below.
 
 <div class="proposition" markdown="1">
 
@@ -157,11 +158,9 @@ Now using the Jordan canonical form, we can determine the exact form of the mini
 
 <div class="proposition" markdown="1">
 
-<ins id="thm8">**Theorem 8**</ins> Assume $$\mathbb{K}$$ is algebraically closed. Let $$\lambda_1,\ldots,\lambda_r$$ be the distinct eigenvalues of an $$n\times n$$ matrix $$A$$. Then the identity
+<ins id="thm8">**Theorem 8**</ins> Assume $$\mathbb{K}$$ is algebraically closed. Let $$\lambda_1,\ldots,\lambda_r$$ be the distinct eigenvalues of an $$n\times n$$ matrix $$A$$. Then
 
 $$m_A(\x)=\prod_{i=1}^r(\x-\lambda_i)^{e_{\lambda_i}}$$
-
-holds.
 
 </div>
 <details class="proof" markdown="1">
@@ -187,7 +186,7 @@ In particular, the minimal polynomial gives a concise criterion for diagonalizab
 
 <div class="proposition" markdown="1">
 
-<ins id="cor9">**Corollary 9**</ins> Assume $$\mathbb{K}$$ is algebraically closed. An $$n\times n$$ matrix $$A$$ is diagonalizable if and only if $$m_A$$ is a product of distinct linear factors, i.e., of the form
+<ins id="cor9">**Corollary 9**</ins> Assume $$\mathbb{K}$$ is algebraically closed. An $$n\times n$$ matrix $$A$$ is diagonalizable if and only if $$m_A$$ is a product of distinct linear factors, i.e.,
 
 $$m_A(\x)=\prod_{i=1}^r(\x-\lambda_i)$$
 
@@ -215,7 +214,7 @@ the characteristic polynomial is $$\x^2-1=(\x-1)(\x+1)$$, and since $$B^2=I$$, w
 
 ## Jordan–Chevalley Decomposition
 
-In the discussion so far, the Jordan form has been the central tool and motivation. On the other hand, thinking of each Jordan block, it splits into two pieces: a diagonal part containing the eigenvalue and a nilpotent part appearing as super-diagonal entries. We close this post by applying our discussion so far to extend this decomposition to the whole space.
+In the discussion so far, the Jordan form has been the central tool and motivation. On the other hand, each Jordan block splits into two pieces: a diagonal part containing the eigenvalue and a nilpotent part appearing as super-diagonal entries. We close this post by applying our discussion so far to extend this decomposition to the whole space.
 
 First, let us observe three facts needed for the uniqueness of the decomposition.
 
