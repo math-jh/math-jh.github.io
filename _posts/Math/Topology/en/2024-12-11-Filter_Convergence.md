@@ -5,14 +5,14 @@ excerpt: "Characterizing compactness via filter convergence"
 
 categories: [Math / Topology]
 permalink: /en/math/topology/filter_convergence
-drift_needed: true
 sidebar: 
     nav: "topology-en"
 
 date: 2024-12-11
 weight: 15
-translated_at: 2026-06-26T07:32:01+00:00
+translated_at: 2026-06-27T01:30:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-27T01:30:02+00:00
 ---
 We first define the following.
 

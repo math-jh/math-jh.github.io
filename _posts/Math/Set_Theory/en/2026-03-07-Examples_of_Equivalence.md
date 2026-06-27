@@ -5,14 +5,14 @@ excerpt: "Examples of equivalence relations, saturation, and isomorphism theorem
 
 categories: [Math / Set Theory]
 permalink: /en/math/set_theory/examples_of_equivalence
-drift_needed: true
 sidebar: 
     nav: "set_theory-en"
 
 date: 2021-08-22
 weight: 13
-translated_at: 2026-06-26T06:31:04+00:00
+translated_at: 2026-06-27T01:00:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-27T01:00:02+00:00
 ---
 In this post, we examine examples of equivalence relations that appear in various contexts.
 
