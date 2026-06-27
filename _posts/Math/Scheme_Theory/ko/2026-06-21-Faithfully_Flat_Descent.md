@@ -305,5 +305,3 @@ Affine의 경우, $$X\times_A A'=\Spec C'$$가 affine이라 하자. 그럼 $$\ma
 **[Stacks]** The Stacks Project Authors, *The Stacks Project*. Available [online](https://stacks.math.columbia.edu/).  
 **[BLR]** S. Bosch, W. Lütkebohmert, M. Raynaud, *Néron models*. Ergebnisse der Mathematik. Springer, 1990.  
 **[EGA]** A. Grothendieck, J. Dieudonné, *Éléments de géométrie algébrique IV*. Publications mathématiques de l'IHÉS, 1964–1967.
-</content>
-</invoke>

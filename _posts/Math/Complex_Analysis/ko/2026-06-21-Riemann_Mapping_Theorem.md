@@ -288,5 +288,3 @@ $$f'(z_0) = e^{-i\vartheta}f^\ast{}'(z_0) = e^{-i\vartheta}\lvert f^\ast{}'(z_0)
 **[Rud]** W. Rudin, *Real and complex analysis*, 3rd ed., McGraw–Hill, 1987.
 
 **[SS]** E.M. Stein, R. Shakarchi, *Complex analysis*, Princeton Lectures in Analysis II, Princeton University Press, 2003.
-</content>
-</invoke>
