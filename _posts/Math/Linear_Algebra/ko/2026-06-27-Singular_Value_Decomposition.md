@@ -13,8 +13,6 @@ date: 2026-06-27
 
 weight: 123
 
-published: false
-
 ---
 
 우리가 지금까지 다룬 도구들은 모두 $$n\times n$$ 행렬, 즉 linear operator에 적용되는 것들로, 일반적인 $$m\times n$$ 행렬은 정사각행렬이 아니므로 eigenvalue나 대각화를 직접 말할 수 없다. 이 글에서는 임의의 실행렬을 두 orthogonal matrix와 하나의 diagonal matrix의 곱으로 분해하는 특이값 분해를 다룬다. 그 출발점은, 임의의 $$A$$에 대하여 $$A^tA$$이 항상 실수 symmetric matrix가 되어 스펙트럼 정리를 적용할 수 있다는 관찰이다. 
@@ -154,7 +152,5 @@ $$\bigl((A^tA)^{-1}A^t\bigr)A=I_n,\qquad A\bigl((A^tA)^{-1}A^t\bigr)=A(A^tA)^{-1
 **참고문헌**
 
 **[Goc]** M.S. Gockenbach, *Finite-dimensional linear algebra*, Discrete Mathematics and its applications, Taylor&Francis, 2011.  
-**[TB]** L.N. Trefethen and D. Bau, *Numerical linear algebra*, SIAM, 1997.  
-**[Str]** G. Strang, *Linear algebra and its applications*, 4th ed., Cengage Learning, 2006.
 
 ---
