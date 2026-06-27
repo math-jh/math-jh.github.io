@@ -5,16 +5,16 @@ excerpt: "Flat morphisms in algebraic geometry"
 
 categories: [Math / Scheme Theory]
 permalink: /en/math/scheme_theory/flat_morphisms
-drift_needed: true
 sidebar: 
     nav: "scheme_theory-en"
 
 date: 2025-02-21
 weight: 10
-translated_at: 2026-06-26T06:00:36+00:00
+translated_at: 2026-06-27T00:30:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-27T00:30:02+00:00
 ---
-When dealing with families of shapes in algebraic geometry, we expect the fibers to vary "continuously" as the base point changes. However, mere continuity of the map is insufficient to capture this intuition. For instance, the dimension of a fiber may jump abruptly at a point of the base, or the number of singular points may change discontinuously. The notion that excludes such phenomena and ensures that the fibers maintain constant algebraic and geometric properties is precisely **flatness**. In this post, we first define flat modules in the context of commutative algebra, and then introduce flat morphisms between [§Schemes](/en/math/scheme_theory/schemes) and examine their geometric meaning, criteria, and examples.
+When dealing with families of shapes in algebraic geometry, we expect the fibers to vary "continuously" as the base point changes. However, mere continuity of the map is insufficient to capture this intuition. For instance, the dimension of a fiber may jump abruptly at a point of the base, or the number of singular points may change discontinuously. The notion that excludes such phenomena and ensures that the fibers maintain constant algebraic and geometric properties is precisely **flatness**. In this post, we first define flat modules in the context of commutative algebra, then introduce flat morphisms between [§Schemes](/en/math/scheme_theory/schemes), and examine their geometric meaning, criteria, and examples.
 
 ## Flat Modules
 
@@ -38,11 +38,11 @@ Intuitively, a flat module $$M$$ preserves the linear relations that existed amo
 
 $$\mathbb{Z}/2\mathbb{Z} \xrightarrow{\times 2} \mathbb{Z}/2\mathbb{Z}$$
 
-which becomes the zero map, so injectivity fails. On the other hand, free modules are always flat. Conversely, it is also known that over a local ring, a finitely presented flat module is a free module.
+which becomes the zero map, so injectivity fails. On the other hand, free modules are always flat. Conversely, over a local ring, a finitely presented flat module is known to be free.
 
 ## Definition of Flat Morphisms
 
-Let us now move to the context of schemes. That a morphism $$f: X \to Y$$ is flat means, roughly speaking, that the structure sheaf of $$X$$ has the structure of a flat module over the structure sheaf of $$Y$$.
+Let us now move to the context of schemes. That a morphism $$f: X \to Y$$ is flat means, roughly speaking, that the structure sheaf of $$X$$ carries the structure of a flat module over the structure sheaf of $$Y$$.
 
 <div class="definition" markdown="1">
 
@@ -150,7 +150,7 @@ Let us examine typical examples of flat and non-flat morphisms.
 
 <ins id="ex9">**Example 9**</ins>
 
-(1) An open immersion into an open subscheme is flat. This corresponds locally to localization, and localization is always flat.
+(1) An open immersion is flat. This corresponds locally to localization, and localization is always flat.
 
 (2) The projection morphism between affine spaces $$\mathbb{A}_k^{n+m} \to \mathbb{A}_k^n$$, that is, $$k[x_1, \dots, x_n] \to k[x_1, \dots, x_n, y_1, \dots, y_m]$$, is flat. This follows immediately from the free module structure of a multivariate polynomial ring.
 

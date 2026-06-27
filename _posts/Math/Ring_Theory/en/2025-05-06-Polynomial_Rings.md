@@ -5,30 +5,30 @@ excerpt: "Factorization in polynomial rings over commutative rings and Gauss's l
 
 categories: [Math / Ring Theory]
 permalink: /en/math/ring_theory/polynomial_rings
-drift_needed: true
 sidebar: 
     nav: "ring_theory-en"
 
 date: 2025-05-06
 weight: 3
-translated_at: 2026-06-26T03:01:14+00:00
+translated_at: 2026-06-26T23:00:01+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-26T23:00:01+00:00
 ---
 <div class="remark" markdown="1">
 
-<ins id="rmk">**Note**</ins> In this post, $$A$$ is always a commutative ring.
+<ins id="rmk">**Remark**</ins> In this post, $$A$$ is always a commutative ring.
 
 </div>
 
-We defined the polynomial algebra $$A[\x_i]_{i\in I}$$ for an arbitrary (commutative) ring $$A$$ in [\[Algebraic Structures\] §Algebras, ⁋Definition 7](/en/math/algebraic_structures/algebras#def7). This has an $$A$$-algebra structure, but since the scalar multiplication of $$A$$ defined on $$A[\x_i]_{i\in I}$$ comes from the inclusion $$A\hookrightarrow A[\x_i]_{i\in I}$$ when we view $$A[\x_i]_{i\in I}$$ as a ring, it suffices to consider $$A[\x_i]_{i\in I}$$ as a ring when studying its properties.
+We defined the polynomial algebra $$A[\x_i]_{i\in I}$$ for an arbitrary (commutative) ring $$A$$ in [\[Algebraic Structures\] §Algebras, ⁋Definition 7](/en/math/algebraic_structures/algebras#def7). This carries an $$A$$-algebra structure, but since the scalar multiplication of $$A$$ on $$A[\x_i]_{i\in I}$$ arises from the inclusion $$A\hookrightarrow A[\x_i]_{i\in I}$$ when we regard $$A[\x_i]_{i\in I}$$ as a ring, it suffices to consider $$A[\x_i]_{i\in I}$$ merely as a ring when studying its properties.
 
 ## Degree of Polynomials
 
-Before dealing with polynomials in earnest, let us first define the tools needed to handle them. First, *polynomials* defined over $$A$$ mean the elements of the polynomial ring $$P=A[\x_i]_{i\in I}$$. In this case, let us define $$\mathbb{N}^{(I)}$$ as the set of finitely supported functions from $$I$$ to $$\mathbb{N}$$
+Before treating polynomials in earnest, let us first define the tools needed to handle them. By a *polynomial* defined over $$A$$ we mean an element of the polynomial ring $$P=A[\x_i]_{i\in I}$$. Let $$\mathbb{N}^{(I)}$$ denote the set of finitely supported functions from $$I$$ to $$\mathbb{N}$$:
 
 $$\mathbb{N}^{(I)}=\{\nu:I \rightarrow \mathbb{N}\mid\text{$f(i)=0$ for all but finitely many $i\in I$}\}$$
 
-Then for any $$\nu\in \mathbb{N}^{(I)}$$, setting
+For any $$\nu\in \mathbb{N}^{(I)}$$, setting
 
 $$\x^\nu=\prod_{i\in I} \x_i^{\nu_i}$$
 
@@ -48,7 +48,7 @@ allows us to view $$P=A[\x_i]_{i\in I}$$ as an $$\mathbb{N}$$-graded ring
 
 $$P=\bigoplus_{n\in \mathbb{N}}\bigoplus_{\lvert\nu\rvert=n}(A[\x_i]_{i\in I})_\nu=\bigoplus_{n\in \mathbb{N}} P_n$$
 
-In this case, for each $$n$$, we call the elements of $$P_n$$ *homogeneous polynomials* of degree $$n$$. Also, for any polynomial $$u\in P$$, we write the component of $$u$$ corresponding to degree $$n$$ in this homogeneous decomposition as $$u_n$$.
+For each $$n$$, we call the elements of $$P_n$$ *homogeneous polynomials* of degree $$n$$. Also, for any polynomial $$u\in P$$, we write the component of $$u$$ of degree $$n$$ in this homogeneous decomposition as $$u_n$$.
 
 <div class="definition" markdown="1">
 
@@ -101,7 +101,7 @@ and therefore the coefficient of the highest degree term is $$a_nb_m$$. However,
 
 </div>
 
-Now let us think again about the general case. If any two polynomials $$u,v\in A[\x_i]_{i\in I}$$ are given, since only finitely many indeterminates appear in these polynomials, when computing $$uv$$ it suffices to consider $$A[\x_j]_{j\in J}$$ for some finite set $$J\subset I$$ instead of $$A[\x_i]_{i\in I}$$. Then the fact that $$A[\x_j]_{j\in J}$$ is an integral domain follows from [Lemma 3](#lem3) and the following isomorphism
+Now let us return to the general case. If any two polynomials $$u,v\in A[\x_i]_{i\in I}$$ are given, since only finitely many indeterminates appear in these polynomials, when computing $$uv$$ it suffices to consider $$A[\x_j]_{j\in J}$$ for some finite set $$J\subset I$$ instead of $$A[\x_i]_{i\in I}$$. Then the fact that $$A[\x_j]_{j\in J}$$ is an integral domain follows from [Lemma 3](#lem3) and the isomorphism
 
 $$A[\x_1,\x_2]\cong (A[\x_1])[\x_2]$$
 
@@ -174,7 +174,7 @@ we see that $$\mathbb{K}[\x]$$ is a Euclidean domain.
 
 In particular, the notion of greatest common divisor is well-defined over a Euclidean domain, and related to this, Bézout's lemma also holds. ([§Integral Domains, ⁋Theorem 7](/en/math/ring_theory/integral_domains#thm7))
 
-We have previously seen that the images of arbitrary (non-zero) elements of $$\mathbb{K}$$ in $$\mathbb{K}[\x]$$ are units of $$\mathbb{K}[\x]$$. ([Lemma 3](#lem3)) On the other hand, in a Euclidean domain whether one element divides another can be determined by running the Euclidean algorithm, so an arbitrary non-constant $$u\in \mathbb{K}[\x]$$ being irreducible is equivalent to $$u$$ not being divisible by any $$v\in \mathbb{K}[\x]$$ satisfying $$\deg(v)<\deg(u)$$.
+We have previously seen that the images of arbitrary (nonzero) elements of $$\mathbb{K}$$ in $$\mathbb{K}[\x]$$ are units of $$\mathbb{K}[\x]$$. ([Lemma 3](#lem3)) On the other hand, in a Euclidean domain whether one element divides another can be determined by running the Euclidean algorithm, so an arbitrary non-constant $$u\in \mathbb{K}[\x]$$ being irreducible is equivalent to $$u$$ not being divisible by any $$v\in \mathbb{K}[\x]$$ satisfying $$\deg(v)<\deg(u)$$.
 
 On the other hand, $$\mathbb{K}[\x]$$ is a UFD, and thus we can define irreducible elements of $$\mathbb{K}[\x]$$. Since the units of $$\mathbb{K}[\x]$$ are exactly the units of $$\mathbb{K}$$, any irreducible polynomial $$u$$ satisfies $$\deg(u)\geq 1$$ by definition, and since $$u$$ is irreducible, if $$v\mid u$$ then $$v$$ is either a constant polynomial or a constant multiple of $$u$$. In particular, any two irreducible polynomials must be constant multiples of each other, so two distinct *monic* irreducible polynomials are coprime. In this way, any polynomial in $$A[\x]$$ can be uniquely expressed as a product of its leading coefficient and monic irreducible polynomials.
 
@@ -303,7 +303,7 @@ from which we obtain the first claim. If $$k\cdot 1$$ is cancellable in $$A$$, t
 
 <div class="proposition" markdown="1">
 
-<ins id="prop13">**Proposition 13**</ins> Let an integral domain $$A$$ and a set $$I$$ be given, and let $$(H_i)_{i\in I}$$ be a family of infinite subsets of $$A$$ indexed by $$I$$. Also, let $$H=\prod_{i\in I} H_i\subseteq A^I$$. Then if $$u$$ is a non-zero element of $$A[\x_i]_{i\in I}$$, the set
+<ins id="prop13">**Proposition 13**</ins> Let an integral domain $$A$$ and a set $$I$$ be given, and let $$(H_i)_{i\in I}$$ be a family of infinite subsets of $$A$$ indexed by $$I$$. Also, let $$H=\prod_{i\in I} H_i\subseteq A^I$$. Then if $$u$$ is a nonzero element of $$A[\x_i]_{i\in I}$$, the set
 
 $$H_u=\{(\x_i)\in H\mid u(\x_i)\neq 0\}$$
 
@@ -325,7 +325,7 @@ has the same cardinality as $$\prod_{i\in J} H_i$$. Now for any element $$(x_i)_
 
 $$w(\x)=\sum_{k=0}^mv_k(x_1,\ldots, x_{n-1})\x_n^k$$
 
-is a non-zero polynomial. On the other hand, the set
+is a nonzero polynomial. On the other hand, the set
 
 $$\{a\in H_n\mid w(a)\neq 0\}$$
 
@@ -337,7 +337,7 @@ The case where $$I$$ is an infinite set can be reduced to the finite case by con
 
 </details>
 
-In particular, if $$I$$ is non-empty, then $$H_u$$ becomes an infinite set.
+In particular, if $$I$$ is nonempty, then $$H_u$$ is an infinite set.
 
 ## Factorization
 
