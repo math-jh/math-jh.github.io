@@ -194,26 +194,26 @@ $$Ax=AA^t(AA^t)^{-1}y=y$$
 
 <ins id="def7">**정의 7**</ins> 행렬 $$A\in\Mat_{m\times n}(\mathbb{R})$$에 대하여, 만일 $$A$$가 full column rank라면
 
-$$A^\dagger:=(A^tA)^{-1}A^t$$
+$$A^+:=(A^tA)^{-1}A^t$$
 
 으로, full row rank라면
 
-$$A^\dagger:=A^t(AA^t)^{-1}$$
+$$A^+:=A^t(AA^t)^{-1}$$
 
-으로 정의되는 행렬 $$A^\dagger\in\Mat_{n\times m}(\mathbb{R})$$을 $$A$$의 *유사역행렬<sub>Moore-Penrose pseudoinverse</sub>*이라 부른다.
+으로 정의되는 행렬 $$A^+\in\Mat_{n\times m}(\mathbb{R})$$을 $$A$$의 *유사역행렬<sub>Moore-Penrose pseudoinverse</sub>*이라 부른다.
 
 </div>
 
-위 두 식은 $$A$$의 rank에 대한 가정이 없는 일반적인 상황에서는 그대로 쓸 수 없는데, $$A^tA$$이나 $$AA^t$$ 중 적어도 하나가 가역이 아니기 때문이다. 일반적인 행렬에 대한 유사역행렬은 singular value decomposition을 이용하여 정의되며, $$A$$가 위 두 경우에 해당할 때에는 그 정의가 위의 식과 일치한다. 이때 $$A^\dagger$$은 다음 네 조건
+위 두 식은 $$A$$의 rank에 대한 가정이 없는 일반적인 상황에서는 그대로 쓸 수 없는데, $$A^tA$$이나 $$AA^t$$ 중 적어도 하나가 가역이 아니기 때문이다. 일반적인 행렬에 대한 유사역행렬은 singular value decomposition을 이용하여 정의되며, $$A$$가 위 두 경우에 해당할 때에는 그 정의가 위의 식과 일치한다. 이때 $$A^+$$은 다음 네 조건
 
-$$AA^\dagger A=A,\quad A^\dagger AA^\dagger=A^\dagger,\quad (AA^\dagger)^t=AA^\dagger,\quad (A^\dagger A)^t=A^\dagger A$$
+$$AA^+ A=A,\quad A^+ AA^+=A^+,\quad (AA^+)^t=AA^+,\quad (A^+ A)^t=A^+ A$$
 
-으로 유일하게 특징지어진다는 것이 알려져 있으며, 이를 통해 $$A^\dagger$$이 $$A$$에 의해 잘 정의됨을 확인할 수 있다.
+으로 유일하게 특징지어진다는 것이 알려져 있으며, 이를 통해 $$A^+$$이 $$A$$에 의해 잘 정의됨을 확인할 수 있다.
 
 <div class="remark" markdown="1">
 
-<ins id="rmk8">**참고 8**</ins> $$A$$가 가역인 정사각행렬이라면 $$A^\dagger=A^{-1}$$이 성립한다. 이는 $$A^tA$$과 $$AA^t$$이 모두 가역이어서 $$A^\dagger=(A^tA)^{-1}A^t=A^{-1}(A^t)^{-1}A^t=A^{-1}$$이 되기 때문이다. 이러한 의미에서 유사역행렬은 역행렬의 개념을 일반화한다.
+<ins id="rmk8">**참고 8**</ins> $$A$$가 가역인 정사각행렬이라면 $$A^+=A^{-1}$$이 성립한다. 이는 $$A^tA$$과 $$AA^t$$이 모두 가역이어서 $$A^+=(A^tA)^{-1}A^t=A^{-1}(A^t)^{-1}A^t=A^{-1}$$이 되기 때문이다. 이러한 의미에서 유사역행렬은 역행렬의 개념을 일반화한다.
 
 </div>
 
-유사역행렬을 도입하면 앞 절의 최소제곱과 이 절의 최소노름이 하나의 공식으로 통합된다. $$A$$가 full column rank인 경우 $$x=A^\dagger y=(A^tA)^{-1}A^ty$$는 $$\lVert Ax-y\rVert$$을 최소로 하는 유일한 최소제곱해이고, $$A$$가 full row rank인 경우 $$x=A^\dagger y=A^t(AA^t)^{-1}y$$는 $$Ax=y$$의 최소노름해이다. 일반적인 행렬에 대해서도 $$x=A^\dagger y$$는 $$\lVert Ax-y\rVert$$을 최소로 하는 해들 중 다시 norm이 최소인 유일한 해를 주며, 이로써 두 절에서 따로 다룬 문제가 유사역행렬이라는 하나의 대상으로 자연스럽게 통합된다.
+유사역행렬을 도입하면 앞 절의 최소제곱과 이 절의 최소노름이 하나의 공식으로 통합된다. $$A$$가 full column rank인 경우 $$x=A^+ y=(A^tA)^{-1}A^ty$$는 $$\lVert Ax-y\rVert$$을 최소로 하는 유일한 최소제곱해이고, $$A$$가 full row rank인 경우 $$x=A^+ y=A^t(AA^t)^{-1}y$$는 $$Ax=y$$의 최소노름해이다. 일반적인 행렬에 대해서도 $$x=A^+ y$$는 $$\lVert Ax-y\rVert$$을 최소로 하는 해들 중 다시 norm이 최소인 유일한 해를 주며, 이로써 두 절에서 따로 다룬 문제가 유사역행렬이라는 하나의 대상으로 자연스럽게 통합된다.
