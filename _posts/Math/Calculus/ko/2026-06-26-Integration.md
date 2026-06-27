@@ -316,7 +316,7 @@ $$\int_{-1}^{1} xdx = \int_{-1}^{0} xdx + \int_{0}^{1} xdx = -\frac{1}{2} + \fra
 
 $$\int_{-1}^{1} \lvert x\rvert dx = \int_{-1}^{0} (-x)dx + \int_{0}^{1} xdx = \frac{1}{2} + \frac{1}{2} = 1$$
 
-이 된다. 이는 삼각부등식의 적분판 $$\bigl\lvert\int f\bigr\rvert \leq \int \lvert f\rvert$$이 등호가 아니라 부등호 $$0 < 1$$로 성립하는 구체적 사례이며, 각 조각의 값은 삼각형 넓이로 곧바로 확인된다. 이 계산은 앞서 리만 합으로 삼각형의 넓이를 구한 것과도 일치한다. 
+이 된다. 이는 삼각부등식의 적분판 $$\bigl\lvert\int_a^b f(x) dx\bigr\rvert \leq \int_a^b \lvert f(x)\rvert dx$$이 등호가 아니라 부등호 $$0 < 1$$로 성립하는 구체적 사례이며, 각 조각의 값은 삼각형 넓이로 곧바로 확인된다. 이 계산은 앞서 리만 합으로 삼각형의 넓이를 구한 것과도 일치한다. 
 
 </div>
 
