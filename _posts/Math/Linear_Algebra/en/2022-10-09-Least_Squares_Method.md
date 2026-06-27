@@ -190,26 +190,26 @@ The case of least squares treated in the previous section and the case of minimu
 
 <ins id="def7">**Definition 7**</ins> For a matrix $$A\in\Mat_{m\times n}(\mathbb{R})$$, if $$A$$ has full column rank we define
 
-$$A^\dagger:=(A^tA)^{-1}A^t$$
+$$A^+:=(A^tA)^{-1}A^t$$
 
 and if $$A$$ has full row rank we define
 
-$$A^\dagger:=A^t(AA^t)^{-1}$$
+$$A^+:=A^t(AA^t)^{-1}$$
 
-The matrix $$A^\dagger\in\Mat_{n\times m}(\mathbb{R})$$ defined in this way is called the *Moore-Penrose pseudoinverse* of $$A$$.
+The matrix $$A^+\in\Mat_{n\times m}(\mathbb{R})$$ defined in this way is called the *Moore-Penrose pseudoinverse* of $$A$$.
 
 </div>
 
-The two formulas above cannot be used directly in the general situation without the rank assumption on $$A$$, because at least one of $$A^tA$$ or $$AA^t$$ is not invertible. The pseudoinverse for a general matrix is defined using singular value decomposition, and when $$A$$ falls into one of the two cases above, this definition coincides with the formulas above. It is known that $$A^\dagger$$ is then uniquely characterized by the following four conditions:
+The two formulas above cannot be used directly in the general situation without the rank assumption on $$A$$, because at least one of $$A^tA$$ or $$AA^t$$ is not invertible. The pseudoinverse for a general matrix is defined using singular value decomposition, and when $$A$$ falls into one of the two cases above, this definition coincides with the formulas above. It is known that $$A^+$$ is then uniquely characterized by the following four conditions:
 
-$$AA^\dagger A=A,\quad A^\dagger AA^\dagger=A^\dagger,\quad (AA^\dagger)^t=AA^\dagger,\quad (A^\dagger A)^t=A^\dagger A$$
+$$AA^+ A=A,\quad A^+ AA^+=A^+,\quad (AA^+)^t=AA^+,\quad (A^+ A)^t=A^+ A$$
 
-and through this we can verify that $$A^\dagger$$ is well-defined by $$A$$.
+and through this we can verify that $$A^+$$ is well-defined by $$A$$.
 
 <div class="remark" markdown="1">
 
-<ins id="rmk8">**Remark 8**</ins> If $$A$$ is an invertible square matrix, then $$A^\dagger=A^{-1}$$ holds. This is because both $$A^tA$$ and $$AA^t$$ are invertible, so $$A^\dagger=(A^tA)^{-1}A^t=A^{-1}(A^t)^{-1}A^t=A^{-1}$$. In this sense, the pseudoinverse generalizes the notion of an inverse.
+<ins id="rmk8">**Remark 8**</ins> If $$A$$ is an invertible square matrix, then $$A^+=A^{-1}$$ holds. This is because both $$A^tA$$ and $$AA^t$$ are invertible, so $$A^+=(A^tA)^{-1}A^t=A^{-1}(A^t)^{-1}A^t=A^{-1}$$. In this sense, the pseudoinverse generalizes the notion of an inverse.
 
 </div>
 
-With the introduction of the pseudoinverse, the least squares of the previous section and the minimum norm of this section are unified into a single formula. When $$A$$ has full column rank, $$x=A^\dagger y=(A^tA)^{-1}A^ty$$ is the unique least-squares solution minimizing $$\lVert Ax-y\rVert$$, and when $$A$$ has full row rank, $$x=A^\dagger y=A^t(AA^t)^{-1}y$$ is the minimum-norm solution of $$Ax=y$$. Even for a general matrix, $$x=A^\dagger y$$ gives the unique solution among those minimizing $$\lVert Ax-y\rVert$$ that again has minimum norm, and thus the problems treated separately in the two sections are naturally unified into a single object called the pseudoinverse.
+With the introduction of the pseudoinverse, the least squares of the previous section and the minimum norm of this section are unified into a single formula. When $$A$$ has full column rank, $$x=A^+ y=(A^tA)^{-1}A^ty$$ is the unique least-squares solution minimizing $$\lVert Ax-y\rVert$$, and when $$A$$ has full row rank, $$x=A^+ y=A^t(AA^t)^{-1}y$$ is the minimum-norm solution of $$Ax=y$$. Even for a general matrix, $$x=A^+ y$$ gives the unique solution among those minimizing $$\lVert Ax-y\rVert$$ that again has minimum norm, and thus the problems treated separately in the two sections are naturally unified into a single object called the pseudoinverse.
