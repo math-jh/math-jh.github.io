@@ -213,3 +213,11 @@ and through this we can verify that $$A^+$$ is well-defined by $$A$$.
 </div>
 
 With the introduction of the pseudoinverse, the least squares of the previous section and the minimum norm of this section are unified into a single formula. When $$A$$ has full column rank, $$x=A^+ y=(A^tA)^{-1}A^ty$$ is the unique least-squares solution minimizing $$\lVert Ax-y\rVert$$, and when $$A$$ has full row rank, $$x=A^+ y=A^t(AA^t)^{-1}y$$ is the minimum-norm solution of $$Ax=y$$. Even for a general matrix, $$x=A^+ y$$ gives the unique solution among those minimizing $$\lVert Ax-y\rVert$$ that again has minimum norm, and thus the problems treated separately in the two sections are naturally unified into a single object called the pseudoinverse.
+
+---
+
+**References**
+
+**[Goc]** M.S. Gockenbach, *Finite-dimensional linear algebra*, Discrete Mathematics and its applications, Taylor&Francis, 2011.  
+
+---

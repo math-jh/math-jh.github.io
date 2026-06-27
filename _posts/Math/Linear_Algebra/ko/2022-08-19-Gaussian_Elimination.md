@@ -349,6 +349,6 @@ $$L=\begin{pmatrix}1&0&0\\2&1&0\\4&3&1\end{pmatrix}$$
 
 **참고문헌**
 
-**[Lee]** 이인석, *선형대수와 군*, 서울대학교 출판문화원, 2005.
+**[Goc]** M.S. Gockenbach, *Finite-dimensional linear algebra*, Discrete Mathematics and its applications, Taylor&Francis, 2011.
 
 ---
