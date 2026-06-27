@@ -5,14 +5,14 @@ excerpt: "Definition and existence of fiber products in the category of S-scheme
 
 categories: [Math / Scheme Theory]
 permalink: /en/math/scheme_theory/fiber_products
-drift_needed: true
 sidebar: 
     nav: "scheme_theory-en"
 
 date: 2025-03-08
 weight: 11
-translated_at: 2026-06-26T05:30:20+00:00
+translated_at: 2026-06-27T00:00:01+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-27T00:00:01+00:00
 ---
 ## Definition and Existence of Fiber Products
 
