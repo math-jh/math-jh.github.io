@@ -5,14 +5,14 @@ excerpt: "The definition of scheme dimension and its relation to Krull dimension
 
 categories: [Math / Scheme Theory]
 permalink: /en/math/scheme_theory/dimension
-drift_needed: true
 sidebar: 
     nav: "scheme_theory-en"
 
 date: 2025-03-14
 weight: 16
-translated_at: 2026-06-26T05:01:02+00:00
+translated_at: 2026-06-26T23:30:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-26T23:30:02+00:00
 ---
 ## Dimension of Schemes
 
@@ -24,13 +24,13 @@ We now define the dimension of a scheme.
 
 </div>
 
-Then, by the Galois correspondence of [§Spectrums, ⁋Proposition 16](/en/math/scheme_theory/spectrums#prop16), we know that the dimension of $$\Spec A$$ as a scheme equals the dimension of $$A$$ as a ring. ([[Commutative Algebra] §Dimension, ⁋Definition 1](/en/math/commutative_algebra/Krull_dimension#def1)) Moreover, by definition, one can show that $$\Spec A$$ and $$\Spec A/\mathfrak{N}(A)$$ are homeomorphic, so $$\dim A=\dim A/\mathfrak{N}(A)$$ holds. That is, reducedness does not affect dimension.
+Then, by the Galois correspondence of [§Spectrums, ⁋Proposition 16](/en/math/scheme_theory/spectrums#prop16), we know that the dimension of $$\Spec A$$ as a scheme equals the dimension of $$A$$ as a ring. ([[Commutative Algebra] §Dimension, ⁋Definition 1](/en/math/commutative_algebra/Krull_dimension#def1)) Moreover, by definition one can show that $$\Spec A$$ and $$\Spec A/\mathfrak{N}(A)$$ are homeomorphic, so $$\dim A=\dim A/\mathfrak{N}(A)$$. That is, reducedness does not affect dimension.
 
 On the other hand, by the same reasoning as in [[Topology] §Dimension, ⁋Proposition 13](/en/math/topology/dimension#prop13), the following holds.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop2">**Proposition 2**</ins> For an arbitrary scheme $$X$$, the condition $$\dim X=n$$ is equivalent to the existence of an affine open covering $$(U_i)$$ of $$X$$ such that $$\dim U_i\leq n$$ for all $$U_i$$, with equality holding for at least one $$i$$.
+<ins id="prop2">**Proposition 2**</ins> For any scheme $$X$$, the condition $$\dim X=n$$ is equivalent to the existence of an affine open covering $$(U_i)$$ of $$X$$ such that $$\dim U_i\leq n$$ for all $$i$$, with equality holding for at least one $$i$$.
 
 </div>
 
@@ -40,21 +40,21 @@ Meanwhile, we saw in [§Properties of Scheme Morphisms, ⁋Proposition 14](/en/m
 
 <ins id="ex3">**Example 3**</ins> For example, consider the algebraic closure $$\overline{\mathbb{Q}}$$ of $$\mathbb{Q}$$. Then $$\mathbb{Q} \rightarrow \overline{\mathbb{Q}}$$ is integral, so the scheme morphism $$\Spec \overline{\mathbb{Q}} \rightarrow \Spec \mathbb{Q}$$ is integral.
 
-On the other hand, by [§Fiber Products, ⁋Proposition 15](/en/math/scheme_theory/fiber_products#prop15), integral morphisms are preserved under base change, so the base change of $$\Spec \overline{\mathbb{Q}} \rightarrow \Spec \mathbb{Q}$$ via $$\Spec \overline{\mathbb{Q}} \rightarrow \Spec \mathbb{Q}$$, namely $$\Spec \overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}} \rightarrow \Spec \overline{\mathbb{Q}}$$, is also integral. However, the prime ideals of $$\overline{\mathbb{Q}}\otimes \overline{\mathbb{Q}}$$ are in bijection with $$\Gal(\overline{\mathbb{Q}}/\mathbb{Q})$$, so $$\Spec\overline{\mathbb{Q}}\otimes \overline{\mathbb{Q}}$$ is an infinite set, and thus $$\Spec \overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}} \rightarrow \Spec \overline{\mathbb{Q}}$$ is not a quasi-finite morphism, hence not a finite morphism.
+On the other hand, by [§Fiber Products, ⁋Proposition 15](/en/math/scheme_theory/fiber_products#prop15), integral morphisms are preserved under base change, so the base change of $$\Spec \overline{\mathbb{Q}} \rightarrow \Spec \mathbb{Q}$$ along itself, namely $$\Spec \overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}} \rightarrow \Spec \overline{\mathbb{Q}}$$, is also integral. However, the prime ideals of $$\overline{\mathbb{Q}}\otimes_\mathbb{Q} \overline{\mathbb{Q}}$$ are in bijection with $$\Gal(\overline{\mathbb{Q}}/\mathbb{Q})$$, so $$\Spec\overline{\mathbb{Q}}\otimes_\mathbb{Q} \overline{\mathbb{Q}}$$ is an infinite set, and thus $$\Spec \overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}} \rightarrow \Spec \overline{\mathbb{Q}}$$ is not a quasi-finite morphism, hence not a finite morphism.
 
 </div>
 
-However, the following holds.
+Nevertheless, the following holds.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop4">**Proposition 4**</ins> Any fiber of an integral morphism $$\varphi: X \rightarrow Y$$ is always of dimension $$0$$.
+<ins id="prop4">**Proposition 4**</ins> Every fiber of an integral morphism $$\varphi: X \rightarrow Y$$ has dimension $$0$$.
 
 </div>
 <details class="proof" markdown="1">
 <summary>Proof</summary>
 
-By definition, the fiber at a point $$y$$ of $$Y$$ is given by the base change of $$\varphi$$ along the inclusion map $$\Spec \kappa(y) \rightarrow Y$$:
+By definition, the fiber over a point $$y$$ of $$Y$$ is given by the base change of $$\varphi$$ along the inclusion map $$\Spec \kappa(y) \rightarrow Y$$:
 
 $$\varphi^{-1}(y)=X\times_Y\Spec \kappa(y)$$
 
@@ -62,7 +62,7 @@ Since integral morphisms are preserved under base change,
 
 $$\varphi^{-1}(y)=X\times_Y\Spec \kappa(y) \rightarrow \Spec \kappa(y)$$
 
-is an integral morphism, and by definition an integral morphism is an affine morphism. Thus it suffices to show that for any integral morphism $$\Spec B \rightarrow \Spec \mathbb{K}$$, we have $$\dim \Spec B=\dim B=0$$. That is, we must show that for any integral extension $$\mathbb{K} \rightarrow B$$, there cannot exist a chain of prime ideals of $$B$$
+is an integral morphism, and by definition an integral morphism is affine. Thus it suffices to show that for any integral morphism $$\Spec B \rightarrow \Spec \mathbb{K}$$, we have $$\dim \Spec B=\dim B=0$$. That is, we must show that for any integral extension $$\mathbb{K} \rightarrow B$$, there cannot exist a chain of prime ideals of $$B$$
 
 $$\mathfrak{q}_1\subsetneq \mathfrak{q}_2$$
 
@@ -70,7 +70,7 @@ This is a consequence of [[Commutative Algebra] §Integral Extensions and Ideals
 
 </details>
 
-Since [[Commutative Algebra] §Integral Extensions and Ideals, ⁋Corollary 4](/en/math/commutative_algebra/lying_over_and_going_up#cor4) used in the proof of the above proposition also holds for any integral extension $$A\hookrightarrow B$$, more generally the following holds.
+Since [[Commutative Algebra] §Integral Extensions and Ideals, ⁋Corollary 4](/en/math/commutative_algebra/lying_over_and_going_up#cor4) used in the proof above also holds for any integral extension $$A\hookrightarrow B$$, more generally the following holds.
 
 <div class="proposition" markdown="1">
 
@@ -82,7 +82,7 @@ always holds.
 
 </div>
 
-In particular, for any integral domain $$A$$ and its normalization $$\tilde{A}$$, the dimensions of $$\Spec \tilde{A}$$ and $$\Spec A$$ are always equal. This holds more generally for the normalization of a scheme, but the normalization of schemes will be treated in a separate post later.
+In particular, for any integral domain $$A$$ and its normalization $$\tilde{A}$$, the dimensions of $$\Spec \tilde{A}$$ and $$\Spec A$$ are always equal. This holds more generally for the normalization of a scheme, but the normalization of schemes will be treated in a separate post.
 
 <div class="definition" markdown="1">
 
@@ -118,7 +118,7 @@ However, as before, equality does not hold in general.
 
 ## Noether Normalization
 
-We now show the following important result.
+We now prove the following important result.
 
 <div class="proposition" markdown="1">
 
@@ -162,7 +162,7 @@ into each monomial $$\alpha_{d_1d_2\cdots d_m}\x_1^{d_1}\cdots\x_m^{d_m}$$ const
 
 $$\alpha_{d_1d_2\cdots d_m}y_m^{r_1d_1+\cdots+r_{m-1}d_{m-1}+d_m}$$
 
-and other terms involving $$z_k$$. Now if we choose $$r_1,\ldots, r_{m-1}$$ sufficiently large, we can make such a term the leading term, and thus the above equation ($$\ast\ast$$) shows that $$y_m$$ is integrally dependent on $$z_1,\ldots, z_{m-1}$$. On the other hand, for the $$\mathbb{K}$$-subalgebra $$A'$$ of $$A$$ generated by $$z_1,\ldots, z_{m-1}$$, that is, the $$\mathbb{K}$$-subalgebra $$A'$$ of $$A$$ where the coefficients exist when ($$\ast\ast$$) is viewed as a polynomial in $$y_m$$, the inductive hypothesis gives elements $$x_1,\ldots, x_n\in A$$ satisfying the desired condition. Now $$A$$ is a finite $$A'$$-module by the above argument, and $$A'$$ is a finite $$\mathbb{K}[x_1,\ldots, x_n]$$-module by the inductive hypothesis, so we obtain the desired result.
+and other terms involving the $$z_k$$. Now if we choose $$r_1,\ldots, r_{m-1}$$ sufficiently large, we can make such a term the leading term, and thus the above equation ($$\ast\ast$$) shows that $$y_m$$ is integrally dependent on $$z_1,\ldots, z_{m-1}$$. On the other hand, for the $$\mathbb{K}$$-subalgebra $$A'$$ of $$A$$ generated by $$z_1,\ldots, z_{m-1}$$, that is, the $$\mathbb{K}$$-subalgebra $$A'$$ of $$A$$ containing the coefficients when ($$\ast\ast$$) is viewed as a polynomial in $$y_m$$, the inductive hypothesis gives elements $$x_1,\ldots, x_n\in A$$ satisfying the desired condition. Now $$A$$ is a finite $$A'$$-module by the above argument, and $$A'$$ is a finite $$\mathbb{K}[x_1,\ldots, x_n]$$-module by the inductive hypothesis, so we obtain the desired result.
 
 </details>
 
@@ -170,7 +170,7 @@ Geometrically, setting $$A=\mathbb{K}[y_1,\ldots, y_m]/\mathfrak{p}$$ means that
 
 <div class="proposition" markdown="1">
 
-<ins id="prop9">**Proposition 9**</ins> Let $$\mathbb{K}$$ be an arbitrary field and $$A$$ a finitely generated $$\mathbb{K}$$-algebra. If $$A$$ is an integral domain, then $$\dim\Spec A=\trdeg_\mathbb{K} \Frac(A)$$ holds.
+<ins id="prop9">**Proposition 9**</ins> Let $$\mathbb{K}$$ be an arbitrary field and $$A$$ a finitely generated $$\mathbb{K}$$-algebra. If $$A$$ is an integral domain, then $$\dim\Spec A=\trdeg_\mathbb{K} \Frac(A)$$.
 
 </div>
 
@@ -178,7 +178,7 @@ The most important results used in the above statements are of course those from
 
 <div class="proposition" markdown="1">
 
-<ins id="prop10">**Proposition 10**</ins> Let $$\mathbb{K}$$ be an arbitrary field and $$A$$ a finitely generated $$\mathbb{K}$$-algebra. If $$A$$ is an integral domain and $$f\in A$$ is a non-unit, then $$\dim A/(f)=\dim A-1$$ holds.
+<ins id="prop10">**Proposition 10**</ins> Let $$\mathbb{K}$$ be an arbitrary field and $$A$$ a finitely generated $$\mathbb{K}$$-algebra. If $$A$$ is an integral domain and $$f\in A$$ is a non-unit, then $$\dim A/(f)=\dim A-1$$.
 
 </div>
 
@@ -188,7 +188,7 @@ Earlier we saw that for any affine integral $$\mathbb{K}$$-scheme $$X=\Spec A$$,
 
 <div class="proposition" markdown="1">
 
-<ins id="prop11">**Proposition 11**</ins> For a locally noetherian scheme $$X$$ and a function $$f$$ on $$X$$, each irreducible component of $$Z(f)$$ has codimension $$0$$ or codimension $$1$$.
+<ins id="prop11">**Proposition 11**</ins> For a locally noetherian scheme $$X$$ and a function $$f$$ on $$X$$, each irreducible component of $$Z(f)$$ has codimension $$0$$ or $$1$$.
 
 </div>
 <details class="proof" markdown="1">
