@@ -12,8 +12,9 @@ sidebar:
 date: 2026-06-27
 
 weight: 123
-translated_at: 2026-06-27T18:00:01+00:00
+translated_at: 2026-06-27T20:00:01+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-06-27T20:00:01+00:00
 ---
 The tools discussed so far all apply to $$n\times n$$ matrices, i.e., linear operators. A general $$m\times n$$ matrix is not square, so we cannot directly speak of eigenvalues or diagonalization. In this post, we cover the singular value decomposition, which decomposes an arbitrary rectangular matrix into a product of two orthogonal matrices and one diagonal matrix. The starting point is the observation that for any $$A$$, the matrix $$A^tA$$ is always a real symmetric matrix, so the spectral theorem applies.
 
@@ -101,7 +102,7 @@ In [§Least Squares Method, ⁋Definition 7](/en/math/linear_algebra/least_squar
 
 <div class="definition" markdown="1">
 
-<ins id="def5">**Definition 5**</ins> Let a singular value decomposition $$A=U\Sigma V^t$$ of a matrix $$A\in\Mat_{m\times n}(\mathbb{R})$$ be given. For the positive singular values $$\sigma_i$$ of $$\Sigma$$, let $$\Sigma^+$$ be the $$n\times m$$ diagonal matrix whose $$(i,i)$$-entry is $$1/\sigma_i$$ and whose remaining entries are $$0$$. Then we define the *Moore-Penrose pseudoinverse* of $$A$$ as
+<ins id="def5">**Definition 5**</ins> Let a singular value decomposition $$A=U\Sigma V^t$$ of a matrix $$A\in\Mat_{m\times n}(\mathbb{R})$$ be given. For the positive singular values $$\sigma_i$$ of $$\Sigma$$, let $$\Sigma^+$$ be the $$n\times m$$ diagonal matrix whose $$(i,i)$$-entry is $$1/\sigma_i$$ and whose remaining entries are $$0$$. Then we define the *Moore–Penrose pseudoinverse* of $$A$$ as
 
 $$A^+=V\Sigma^+U^t$$
 
