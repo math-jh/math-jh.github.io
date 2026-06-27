@@ -296,3 +296,11 @@ $$\proj_Uv=\sum_{i=1}^k v_ix_i=\sum_{i=1}^k w_ix_i=w$$
 </details>
 
 뿐만 아니라, $$\proj_Uv$$의 정의에 의하여 $$v-\proj_Uv$$는 $$U$$에 수직인 벡터가 되는 것이 자명하다. 이 사실은 다음 글에서 유용하게 사용한다.
+
+---
+
+**참고문헌**
+
+**[Goc]** M.S. Gockenbach, *Finite-dimensional linear algebra*, Discrete Mathematics and its applications, Taylor&Francis, 2011.
+
+---

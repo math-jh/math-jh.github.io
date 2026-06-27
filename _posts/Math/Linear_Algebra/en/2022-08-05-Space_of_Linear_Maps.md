@@ -200,3 +200,11 @@ $$L'(x_k)=\sum_{i,j}\alpha_{ji}B_i^j(x_k)=\sum_{j=1}^m\alpha_{jk}B_k^j(x_k)=\sum
 Hence by the uniqueness part of [Theorem 1](#thm1), we have $$L'=L$$.
 
 </details>
+
+---
+
+**References**
+
+**[Lee]** 이인석, *선형대수와 군*, 서울대학교 출판문화원, 2005.
+
+---

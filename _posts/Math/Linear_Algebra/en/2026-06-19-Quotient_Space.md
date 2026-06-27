@@ -225,6 +225,5 @@ which is exactly the formula of [§Isomorphisms, ⁋Theorem 7](/en/math/linear_a
 **References**
 
 **[Goc]** M.S. Gockenbach, *Finite-dimensional linear algebra*, Discrete Mathematics and its applications, Taylor&Francis, 2011.  
-**[Rom]** S. Roman, *Advanced linear algebra*, 3rd ed., Graduate Texts in Mathematics 135, Springer, 2008.
 
 ---

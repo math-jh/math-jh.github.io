@@ -294,3 +294,11 @@ so we obtain the desired conclusion.
 </details>
 
 Moreover, from the definition of $$\proj_Uv$$ it is obvious that $$v-\proj_Uv$$ is a vector perpendicular to $$U$$. This fact will be useful in the next post.
+
+---
+
+**References**
+
+**[Goc]** M.S. Gockenbach, *Finite-dimensional linear algebra*, Discrete Mathematics and its applications, Taylor&Francis, 2011.  
+
+---
