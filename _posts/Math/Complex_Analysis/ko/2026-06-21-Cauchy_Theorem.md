@@ -273,5 +273,3 @@ $$g(b) = \int_a^b \frac{\gamma'(\tau)}{\gamma(\tau)}\,d\tau = \oint_\gamma \frac
 **[Con]** J.B. Conway, *Functions of one complex variable I*, 2nd ed., Graduate Texts in Mathematics 11, Springer, 1978.
 
 **[SS]** E.M. Stein, R. Shakarchi, *Complex analysis*, Princeton Lectures in Analysis II, Princeton University Press, 2003.
-</content>
-</invoke>
