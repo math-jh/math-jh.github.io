@@ -19,6 +19,9 @@
 #   이 훅은 그 뒤(:post_render)에 렌더된 HTML 을 만지므로 서로 간섭이 없다.
 # - 대상: .definition / .proposition / .example / .remark / .misc.
 #   .proof / .details 는 <details><summary> 라 별도다(라벨이 <ins> 가 아님).
+# - 괄호 서술명 안의 한글 구간은 <span class="thm-name-ko">로 감싼다 — 한글 이탤릭은
+#   가짜 기울임이라 CSS(_notices.scss)가 em-ko 서체로 대체한다. 라틴 구간(예: "Whitney")은
+#   이탤릭 그대로 둔다: "(Whitney 합 공식)" → (Whitney <span…>합 공식</span>).
 
 module TheoremLabelSplitter
   # 박스 시작부:  <div class="X"> <p><ins id="…"><strong>라벨</strong></ins> …
@@ -30,6 +33,10 @@ module TheoremLabelSplitter
 
   # 라벨에서 "종류+번호" 와 "(서술명)" 을 가른다. 이름이 없으면 매치 실패 → name=nil.
   NAME_SPLIT = %r{\A(.+?)\s*(\(.*\))\s*\z}
+
+  # 서술명 안의 한글 구간: 양끝이 한글이고 내부에 한글·숫자·공백·하이픈류(·, –)만 허용.
+  # 이 구간만 em-ko 서체 span 으로 감싸고, 라틴 구간은 이탤릭으로 남긴다.
+  KO_RUN = /\p{Hangul}(?:[\p{Hangul}0-9\s\-–·]*\p{Hangul})?/
 
   module_function
 
@@ -47,7 +54,13 @@ module TheoremLabelSplitter
         name    = nil
       end
 
-      name_part = name ? %( <em class="thm-name">#{name}</em>) : ""
+      name_part =
+        if name
+          marked = name.gsub(KO_RUN) { %(<span class="thm-name-ko">#{Regexp.last_match(0)}</span>) }
+          %( <em class="thm-name">#{marked}</em>)
+        else
+          ""
+        end
       # 라벨+설명을 .thm-head 한 블록으로 묶어 한 줄에 두고, 본문은 그 아래 줄로 흐른다.
       %(#{div}<p><span class="thm-head"><span class="thm-n" id="#{id}">#{kindnum}</span>#{name_part}</span> )
     end
