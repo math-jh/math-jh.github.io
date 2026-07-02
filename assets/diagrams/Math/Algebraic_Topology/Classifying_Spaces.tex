@@ -1,0 +1,21 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\begin{document}
+
+%%FIG 분류사상의 pullback 사각형 (Classifying_Spaces-1.svg)
+\begin{tikzcd}
+  {f^\ast EG} & EG \\
+  X & BG
+  \arrow["{\widetilde f}", from=1-1, to=1-2]
+  \arrow["p"', from=1-1, to=2-1]
+  \arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-1, to=2-2]
+  \arrow[from=1-2, to=2-2]
+  \arrow["f"', from=2-1, to=2-2]
+\end{tikzcd}
+
+\end{document}

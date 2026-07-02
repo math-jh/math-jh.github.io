@@ -67,13 +67,13 @@ $$\operatorname{area}(D) = \oint_C xdy = -\oint_C ydx = \frac12\oint_C (xdy - yd
 
 ## 회전형과 발산형
 
-그린 정리는 평면벡터장 $$F = (P, Q)$$의 두 미분량을 각각 경계 적분으로 해석하는 두 형태로 다시 적힌다.
+그린 정리는 평면벡터장 $$\mathbf{F} = (P, Q)$$의 두 미분량을 각각 경계 적분으로 해석하는 두 형태로 다시 적힌다.
 
 <div class="proposition" markdown="1">
 
-<ins id="prop3">**명제 3**</ins> $$D$$의 경계 $$C$$가 양의 방향이고 $$F = (P, Q)$$가 $$C^1$$이면, 단위접선 $$T$$와 바깥 단위법선 $$n$$에 대해
+<ins id="prop3">**명제 3**</ins> $$D$$의 경계 $$C$$가 양의 방향이고 $$\mathbf{F} = (P, Q)$$가 $$C^1$$이면, 단위접선 $$\mathbf{T}$$와 바깥 단위법선 $$\mathbf{n}$$에 대해
 
-$$\oint_C F \cdot Tds = \iint_D \left(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\right)dA, \qquad \oint_C F \cdot nds = \iint_D \operatorname{div} FdA$$
+$$\oint_C \mathbf{F} \cdot \mathbf{T}ds = \iint_D \left(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\right)dA, \qquad \oint_C \mathbf{F} \cdot \mathbf{n}ds = \iint_D \operatorname{div} FdA$$
 
 이다. 앞을 *회전형<sub>circulation form</sub>*, 뒤를 *발산형<sub>flux form</sub>*이라 한다.
 
@@ -82,7 +82,7 @@ $$\oint_C F \cdot Tds = \iint_D \left(\frac{\partial Q}{\partial x} - \frac{\par
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-회전형은 $$\oint_C F\cdot Tds = \oint_C Pdx + Qdy$$가 바로 [정리 1](#thm1)의 좌변이고, 우변의 피적분함수 $$Q_x - P_y$$가 평면벡터장의 회전 ([§벡터장, ⁋정의 3](/ko/math/calculus/vector_fields#def3))이다. 발산형은 양의 방향 경계에서 바깥 단위법선이 $$nds = (dy, -dx)$$임을 쓰면 $$\oint_C F\cdot nds = \oint_C Pdy - Qdx$$인데, [정리 1](#thm1)을 $$(P, Q) \mapsto (-Q, P)$$에 적용하면 이것이 $$\iint_D (P_x + Q_y)dA = \iint_D \operatorname{div} FdA$$와 같다.
+회전형은 $$\oint_C \mathbf{F}\cdot \mathbf{T}ds = \oint_C Pdx + Qdy$$가 바로 [정리 1](#thm1)의 좌변이고, 우변의 피적분함수 $$Q_x - P_y$$가 평면벡터장의 회전 ([§벡터장, ⁋정의 3](/ko/math/calculus/vector_fields#def3))이다. 발산형은 양의 방향 경계에서 바깥 단위법선이 $$\mathbf{n}ds = (dy, -dx)$$임을 쓰면 $$\oint_C \mathbf{F}\cdot \mathbf{n}ds = \oint_C Pdy - Qdx$$인데, [정리 1](#thm1)을 $$(P, Q) \mapsto (-Q, P)$$에 적용하면 이것이 $$\iint_D (P_x + Q_y)dA = \iint_D \operatorname{div} FdA$$와 같다.
 
 </details>
 
@@ -90,20 +90,20 @@ $$\oint_C F \cdot Tds = \iint_D \left(\frac{\partial Q}{\partial x} - \frac{\par
 
 <div class="proposition" markdown="1">
 
-<ins id="cor4">**따름정리 4**</ins> 단순연결 열린 영역에서 $$C^1$$ 벡터장 $$F = (P, Q)$$가 무회전($$\partial Q/\partial x = \partial P/\partial y$$)이면 $$F$$는 보존장이다.
+<ins id="cor4">**따름정리 4**</ins> 단순연결 열린 영역에서 $$C^1$$ 벡터장 $$\mathbf{F} = (P, Q)$$가 무회전($$\partial Q/\partial x = \partial P/\partial y$$)이면 $$\mathbf{F}$$는 보존장이다.
 
 </div>
 
 <details class="proof" markdown="1">
 <summary>증명</summary>
 
-영역이 단순연결이므로 그 안의 임의의 단순 닫힌 곡선 $$C$$가 둘러싸는 영역 $$D$$ 전체가 다시 영역 안에 들어간다. 회전형으로 $$\oint_C F\cdot dr = \iint_D (Q_x - P_y)dA = 0$$이고, 모든 닫힌 곡선에서 적분이 $$0$$이므로 [§선적분, ⁋정리 4](/ko/math/calculus/line_integrals#thm4)에 의해 $$F$$는 보존장이다.
+영역이 단순연결이므로 그 안의 임의의 단순 닫힌 곡선 $$C$$가 둘러싸는 영역 $$D$$ 전체가 다시 영역 안에 들어간다. 회전형으로 $$\oint_C \mathbf{F}\cdot d\mathbf{r} = \iint_D (Q_x - P_y)dA = 0$$이고, 모든 닫힌 곡선에서 적분이 $$0$$이므로 [§선적분, ⁋정리 4](/ko/math/calculus/line_integrals#thm4)에 의해 $$\mathbf{F}$$는 보존장이다.
 
 </details>
 
 <div class="example" markdown="1">
 
-<ins id="ex5">**예시 5 (타원의 넓이)**</ins> 타원 $$x^2/a^2 + y^2/b^2 = 1$$을 $$r(t) = (a\cos t, b\sin t)$$ ($$0 \leq t \leq 2\pi$$)로 매개화하면 [따름정리 2](#cor2)로
+<ins id="ex5">**예시 5 (타원의 넓이)**</ins> 타원 $$x^2/a^2 + y^2/b^2 = 1$$을 $$\mathbf{r}(t) = (a\cos t, b\sin t)$$ ($$0 \leq t \leq 2\pi$$)로 매개화하면 [따름정리 2](#cor2)로
 
 $$\operatorname{area} = \frac12\oint (xdy - ydx) = \frac12\int_0^{2\pi}\bigl(a\cos t \cdot b\cos t - b\sin t\cdot(-a\sin t)\bigr)dt = \frac12\int_0^{2\pi} abdt = \pi ab$$
 
@@ -113,6 +113,6 @@ $$\operatorname{area} = \frac12\oint (xdy - ydx) = \frac12\int_0^{2\pi}\bigl(a\c
 
 <div class="example" markdown="1">
 
-<ins id="ex6">**예시 6 (각도장과 단순연결성)**</ins> [§선적분, ⁋예시 6](/ko/math/calculus/line_integrals#ex6)의 각도장 $$F = (-y, x)/(x^2+y^2)$$은 무회전이지만 원점을 도는 단위원에서 적분이 $$2\pi$$였다. [따름정리 4](#cor4)와 모순처럼 보이나, 단위원이 둘러싸는 원판은 $$F$$가 정의되지 않는 원점을 품으므로 그 위에서 그린 정리를 적용할 수 없다. 정의역 $$\mathbb{R}^2\setminus\{0\}$$이 단순연결이 아닌 것이 핵심이며, 정리의 단순연결 가정이 빠질 수 없음을 보여 준다. 실제로 원점을 품지 않는 닫힌 곡선에서는 $$F$$의 적분이 모두 $$0$$이다.
+<ins id="ex6">**예시 6 (각도장과 단순연결성)**</ins> [§선적분, ⁋예시 6](/ko/math/calculus/line_integrals#ex6)의 각도장 $$\mathbf{F} = (-y, x)/(x^2+y^2)$$은 무회전이지만 원점을 도는 단위원에서 적분이 $$2\pi$$였다. [따름정리 4](#cor4)와 모순처럼 보이나, 단위원이 둘러싸는 원판은 $$\mathbf{F}$$가 정의되지 않는 원점을 품으므로 그 위에서 그린 정리를 적용할 수 없다. 정의역 $$\mathbb{R}^2\setminus\{0\}$$이 단순연결이 아닌 것이 핵심이며, 정리의 단순연결 가정이 빠질 수 없음을 보여 준다. 실제로 원점을 품지 않는 닫힌 곡선에서는 $$\mathbf{F}$$의 적분이 모두 $$0$$이다.
 
 </div>

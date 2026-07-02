@@ -103,6 +103,7 @@ window.KATEX_MACROS = {
     "\\dR":"\\mathrm{dR}",
     "\\End":"\\operatorname{End}",
     "\\erf":"\\operatorname{erf}",
+    "\\et":"\\mathrm{\\acute{e}t}",
     "\\ev":"\\mathrm{ev}",
     "\\Ext":"\\operatorname{Ext}",
     "\\ext":"\\operatorname{ext}",
@@ -144,6 +145,7 @@ window.KATEX_MACROS = {
     "\\nullity":"\\operatorname{nullity}",
     "\\Num":"\\operatorname{Num}",
     "\\obj":"\\operatorname{obj}",
+    "\\Op":"\\operatorname{Op}",
     "\\op":"\\mathrm{op}",
     "\\or":"\\mathrm{or}",
     "\\Or":"\\mathrm{Or}",
@@ -194,6 +196,7 @@ window.KATEX_MACROS = {
     "\\tr":"\\mathrm{tr}",
     "\\trdeg":"\\operatorname{trdeg}",
     "\\vol":"\\operatorname{vol}",
+    "\\Zar":"\\mathrm{Zar}",
     // Lie groups and Lie algebras
     "\\GL":"\\operatorname{GL}",
     "\\gl":"\\mathfrak{gl}",
