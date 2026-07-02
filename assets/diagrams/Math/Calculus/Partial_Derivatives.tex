@@ -1,0 +1,21 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{tikz-cd, kotex}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepackage{quiver}
+\usepackage{Operators}
+\usepackage{palette}
+\usepackage{diagram-style}
+\definecolor{DarkBlue}{RGB}{0,0,139}
+\begin{document}
+
+%%FIG saddle_surface (Partial_Derivatives-1.svg)
+\begin{tikzpicture}
+  \begin{axis}[samples=30, ticks=none, hide axis]
+    \addplot3[surf, color=DarkBlue, opacity=0.5, domain=-2:2, faceted color=black] {x^2-y^2};
+    \fill[accent1] (axis cs:0,0,0) circle (3pt);
+  \end{axis}
+\end{tikzpicture}
+
+\end{document}

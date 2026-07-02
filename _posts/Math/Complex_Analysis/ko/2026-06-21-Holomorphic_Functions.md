@@ -297,7 +297,7 @@ $$f$$가 정칙이면 $$u, v$$는 ($$C^2$$급이므로) Cauchy–Riemann 방정�
 
 $$u_{xx} = v_{yx}, \qquad u_{yy} = -v_{xy}$$
 
-이다. $$v$$가 $$C^2$$급이므로 혼합편미분이 순서에 무관하여 $$v_{yx} = v_{xy}$$이고 ([\[미적분학\] §다변수함수와 편미분, ⁋정리 5](/ko/math/calculus/partial_derivatives#thm5)의 클레로 정리), 따라서
+이다. $$v$$가 $$C^2$$급이므로 혼합편미분이 순서에 무관하여 $$v_{yx} = v_{xy}$$이고 ([\[미적분학\] §다변수함수와 편미분, ⁋정리 7](/ko/math/calculus/partial_derivatives#thm7)의 클레로 정리), 따라서
 
 $$\Delta u = u_{xx} + u_{yy} = v_{yx} - v_{xy} = 0$$
 

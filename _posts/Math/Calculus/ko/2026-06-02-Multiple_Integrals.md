@@ -77,17 +77,17 @@ $$\int_0^1 \int_0^y e^{y^2} dx dy = \int_0^1 y e^{y^2} dy = \frac12(e - 1)$$
 
 <div class="proposition" markdown="1">
 
-<ins id="thm4">**정리 4 (변수변환)**</ins> 일대일 $$C^1$$ 사상 $$(x,y) = T(u,v)$$가 영역 $$D'$$을 $$D$$로 보내고 야코비 행렬식이 $$D'$$에서 $$0$$이 아니면
+<ins id="thm4">**정리 4 (변수변환)**</ins> 일대일 $$C^1$$ 사상 $$(x,y) = \mathbf{T}(u,v)$$가 영역 $$D'$$을 $$D$$로 보내고 야코비 행렬식이 $$D'$$에서 $$0$$이 아니면
 
-$$\iint_D f(x,y) dA = \iint_{D'} f(T(u,v)) \lvert \det J_T(u,v)\rvert du dv$$
+$$\iint_D f(x,y) dA = \iint_{D'} f(\mathbf{T}(u,v)) \lvert \det J_{\mathbf{T}}(u,v)\rvert du dv$$
 
-이다. 여기서 $$J_T = \begin{pmatrix} \partial x/\partial u & \partial x/\partial v \\ \partial y/\partial u & \partial y/\partial v\end{pmatrix}$$는 $$T$$의 야코비 행렬이다.
+이다. 여기서 $$J_{\mathbf{T}} = \begin{pmatrix} \partial x/\partial u & \partial x/\partial v \\ \partial y/\partial u & \partial y/\partial v\end{pmatrix}$$는 $$\mathbf{T}$$의 야코비 행렬이다.
 
 </div>
 
-야코비 행렬식 $$\lvert\det J_T\rvert$$은 $$T$$가 넓이를 늘이는 국소 비율로, 한 변수에서 $$dx = g'(u) du$$의 $$\lvert g'\rvert$$에 해당한다. 직관적으로 보면, $$(u,v)$$ 평면의 작은 직사각형 $$[u, u+\Delta u]\times[v, v+\Delta v]$$은 $$T$$에 의해 $$(x,y)$$ 평면의 작은 평행사변형으로 옮겨지는데, 그 두 변은 근사적으로 $$T_u \Delta u$$와 $$T_v \Delta v$$ ($$T_u, T_v$$는 $$T$$의 편도함수 벡터) 이다. 두 벡터가 이루는 평행사변형의 넓이가 바로 $$\lvert\det J_T\rvert \Delta u \Delta v$$이므로, 넓이 원소는
+야코비 행렬식 $$\lvert\det J_{\mathbf{T}}\rvert$$은 $$\mathbf{T}$$가 넓이를 늘이는 국소 비율로, 한 변수에서 $$dx = g'(u) du$$의 $$\lvert g'\rvert$$에 해당한다. 직관적으로 보면, $$(u,v)$$ 평면의 작은 직사각형 $$[u, u+\Delta u]\times[v, v+\Delta v]$$은 $$\mathbf{T}$$에 의해 $$(x,y)$$ 평면의 작은 평행사변형으로 옮겨지는데, 그 두 변은 근사적으로 $$\mathbf{T}_u \Delta u$$와 $$\mathbf{T}_v \Delta v$$ ($$\mathbf{T}_u, \mathbf{T}_v$$는 $$\mathbf{T}$$의 편도함수 벡터) 이다. 두 벡터가 이루는 평행사변형의 넓이가 바로 $$\lvert\det J_{\mathbf{T}}\rvert \Delta u \Delta v$$이므로, 넓이 원소는
 
-$$dA = \lvert\det J_T(u,v)\rvert du dv$$
+$$dA = \lvert\det J_{\mathbf{T}}(u,v)\rvert du dv$$
 
 로 변환된다. 이 식을 리만 합에 대입해 극한을 취한 것이 [정리 4](#thm4)이며, 절댓값을 붙이는 이유는 넓이가 항상 양수이기 때문이다 (한 변수의 치환적분에서 적분 구간의 방향이 부호를 흡수하던 것과 대비된다).
 
