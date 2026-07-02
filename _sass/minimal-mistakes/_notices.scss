@@ -18,12 +18,13 @@
   font-size: $type-size-5 !important;
   text-indent: initial; /* override*/
   /* Admonition style: faint tint + 4px accent left border (instead of a solid
-     fill). $notice-color is now a mid-strength accent in BOTH skins, so the
-     tint stays subtle and the border carries the colour — readable and
-     consistently toned in light and dark. */
-  background-color: rgba($notice-color, 0.16);
+     fill), square corners. $notice-color is a mid-strength accent in BOTH
+     skins, so the tint stays subtle and the border carries the colour.
+     The low tint alpha and square corners are deliberate (print-leaning look);
+     don't re-round or re-darken without a design pass. */
+  background-color: rgba($notice-color, 0.08);
   border-left: 4px solid $notice-color;
-  border-radius: $border-radius;
+  border-radius: 0;
   box-shadow: none;
 
   /* Inline theorem label: <ins>정의 1 (…)</ins> — bold sans in the box's accent
@@ -213,7 +214,7 @@ details[open] > summary::before {
 
 /* ==========================================================================
    정리 박스 스타일
-   박스 외형은 기존 admonition(옅은 채움 + 4px 좌측 띠 + 라운드, notice 믹스인) 그대로.
+   박스 외형은 admonition(옅은 채움 + 4px 좌측 띠 + 직각 모서리, notice 믹스인).
    라벨만 손봤다: theorem-label-splitter.rb 가 <ins> 라벨을 종류+번호(.thm-n)와 괄호
    설명(.thm-name)으로 쪼개고, 라벨+설명은 한 줄(.thm-head)·본문은 아래 줄로 둔다.
    ========================================================================== */
@@ -233,6 +234,17 @@ details[open] > summary::before {
 
 .thm-name {
   font-style: italic;
+}
+
+/* splitter 가 괄호 서술명 안의 한글 구간만 이 span 으로 감싼다: 한글은 가짜 기울임
+   대신 본문 강조와 같은 em-ko 서체(_base.scss)로, 라틴 구간은 이탤릭 그대로.
+   서체·정렬은 em-ko 와 동기. 크기만 다르다: 본문 em-ko 의 1.14em 보정을 그대로 쓰면
+   1.05em 짜리 라벨 줄 안에서 과대해져(1.05×1.14), 라벨 맥락에서는 1.05em 로 줄였다. */
+.thm-name-ko {
+  font-style: normal;
+  font-family: "MyEmphFont";
+  font-size: 1.05em;
+  vertical-align: -0.03em;
 }
 
 .definition  .thm-n, .definition  .thm-name { color: $definition-color; }
