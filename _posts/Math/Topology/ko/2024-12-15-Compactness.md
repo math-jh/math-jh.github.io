@@ -1,7 +1,7 @@
 ---
 title: "옹골성"
 description: "위상 공간의 옹골성과 관련된 결과들을 다루며, Tychonoff 정리와 ultrafilter 수렴을 이용한 옹골성의 동치 조건을 증명한다."
-excerpt: "Tychonoff 정리와 local compactness, paracompactness"
+excerpt: "ultrafilter 수렴을 이용한 옹골성의 동치와 Tychonoff 정리"
 
 categories: [Math / Topology]
 permalink: /ko/math/topology/compactness
@@ -11,9 +11,12 @@ sidebar:
 date: 2024-12-15
 weight: 16
 
+published: false
+drift_needed: true
+
 ---
 
-이제 우리는 옹골성과 관련된 남은 결과들 및 이 정의의 변주들을 살펴본다. 
+이제 우리는 옹골성과 관련된 남은 결과인 Tychonoff 정리를 살펴본다. 
 
 ## Tychonoff theorem
 
@@ -49,97 +52,6 @@ Compact space들 $$(X_i)_{i\in I}$$의 product $$X=\prod_{i\in I} X_i$$는 compa
 반대 방향은 $$X$$ 위에 정의된 임의의 ultrafilter $$\mathcal{F}$$에 대하여, $$\pr_i(\mathcal{F})$$가 $$X_i$$의 ultrafilter base를 정의한다는 것을 확인한 후, $$X_i$$가 compact라는 가정과 [보조정리 1](#lem1)로부터 이 ultrafilter의 limit point $$x_i$$를 얻고, $$x=(x_i)_{i\in I}$$가 $$\mathcal{F}$$의 limit point임을 보일 수 있으므로 다시 [보조정리 1](#lem1)에 의해 증명이 완료된다. 
 :::
 
-## 국소적 옹골공간
+## 옹골성의 변주들
 
-공간 $$X$$가 compact인 것은 너무나 좋은 성질이라 우리가 다루는 공간들이 compact가 아닌 경우가 많다. 가령 실수집합 $$\mathbb{R}$$만 보아도, $$(n,n+2)$$로 이루어진 open cover들을 생각하면 compact가 아니다. 따라서 이 조건은 다소 약화시킬 필요가 있다. 
-
-::: 정의 3
-위상공간 $$X$$가 점 $$x\in X$$에서 *locally compact<sub>국소적으로 옹골</sub>*라는 것은 $$x$$를 포함하는 $$X$$의 compact neighborhood $$A$$가 존재하는 것이다. 만일 $$X$$가 모든 점에서 locally compact라면, 이를 *locally compact space<sub>국소적 옹골공간</sub>*이라 부른다. 
-:::
-
-그럼 [§옹골공간, ⁋보조정리 6](/ko/math/topology/compact_spaces#lem6)과 비슷한 증명으로 임의의 locally compact Hausdorff space는 regular라는 것을 보일 수 있다. 다음 정리는 locally compact Hausdorff space에 대한 중요한 정보를 준다.
-
-::: 정리 4 (Alexandroff)
-Locally compact Hausdorff space $$X$$가 주어졌다 하자. 그럼 compact Hausdorff space $$X'$$와 한 점 $$\ast_{X'}\in X'$$, 그리고 homeomorphism $$f: X \rightarrow X'\setminus\{\ast_{X'}\}$$가 존재한다. 뿐만 아니라, 만일 이 조건을 만족하는 또 다른 데이터 $$g: X \rightarrow X''\setminus\{\ast_{X''}\}$$가 주어졌다 하면, 유일한 homeomorphism $$h: X' \rightarrow X''$$가 존재하여 $$g=h\circ f$$이도록 할 수 있다. 
-:::
-
-증명을 조금 더 직관적으로 하기 위해 주장을 조금 덜 엄밀한 방법으로 이야기하자면, locally compact Hausdorff space가 주어진다면 여기에 한 점을 더해 이를 compact Hausdorff space로 만들 수 있으며, 이렇게 한 점을 추가하는 방법은 유일하다고 할 수 있다. 이렇게 얻어진 새로운 공간을 $$X$$의 *one-point compactification*이라 부르기도 한다.
-
-::: 증명 (정리 4)
-우선 유일성을 보이자. $$h$$는 당연히 $$X'\setminus\{\ast_{X'}\}$$에서는 $$f(x)$$를 $$g(x)$$로 보내고, $$\ast_{X'}$$는 $$\ast_{X''}$$로 보내도록 정의하는 것이 자연스러울 것이다. 그럼 $$h$$는 연속이다. 이를 증명하기 위해 $$X''$$의 임의의 열린집합 $$V$$가 주어졌다 하자. 만일 $$V$$가 $$\ast_{X''}$$를 포함하지 않는다면, 정의에 의하여
-
-$$h^{-1}(V)=f(g^{-1}(V))$$
-
-이며 $$f$$가 homeomorphism이므로 $$h^{-1}(V)$$는 $$X'\setminus\{\ast_{X'}\}$$안에서 열린집합이다. 한편 $$X'\setminus\{\ast_{X'}\}$$는 $$X'$$가 Hausdorff space라는 가정으로부터 열린집합이므로 [§부분공간, ⁋보조정리 2](/ko/math/topology/subspaces#lem2)에 의하여 $$h^{-1}(V)$$는 $$X'$$의 열린집합이다. 
-
-만일 $$V$$가 $$\ast_{X'}$$를 포함한다면, $$X''\setminus V$$는 $$X''$$의 닫힌집합이므로 compact인 부분집합이고, 따라서 $$f(X)$$의 compact인 부분집합이기도 하다. 이제 $$g$$가 homeomorphism인 것으로부터 $$g^{-1}(X''\setminus V)$$는 $$X$$의 compact subspace이고, 따라서 다음 집합
-
-$$h^{-1}(X''\setminus V)=f(g^{-1}(X''\setminus V))$$
-
-은 $$X'$$의 compact subspace이므로 닫힌집합이다. ([§옹골공간, ⁋따름정리 5](/ko/math/topology/compact_spaces#cor5)) 따라서 [§연속함수, ⁋정리 4](/ko/math/topology/continuous_functions#thm4)의 세 번째 조건으로부터 $$h$$가 연속임을 안다.
-
-위의 증명으로부터, 만일 주어진 조건을 만족하는 위상공간 $$X'=X\cup \{\ast_{X'}\}$$가 존재한다면, $$X'$$의 열린집합은 다음의 두 종류
-
-$$f(U)\quad\text{for $U$ open in $X$},\qquad X'\setminus f(C)\quad\text{for $C$ compact in $X$}$$
-
-의 꼴이어야 한다는 것을 안다. 그럼 실제로 이것이 [§열린집합, ⁋정의 1](/ko/math/topology/open_sets#def1)의 조건을 만족하는 것을 쉽게 보일 수 있다. 남은 것은 이렇게 주어진 위상구조가 compact Hausdorff임을 보이는 것 뿐이다. 
-
-우선 $$X'$$가 compact라는 것을 보이자. $$X'$$의 임의의 open covering $$(U_i)_{i\in I}$$이 주어진다면, 이 family에는 $$\ast_{X'}$$를 포함하는 열린집합 $$U_j$$이 존재해야 하며, 위에서 정의한 위상구조에 의하여 이는 $$X$$의 compact subset $$C$$에 대해 $$U_j=X'\setminus C$$로 적을 수 있다. 한편, $$X$$의 열린집합들의 모임 $$(f^{-1}(U_i))_{i\neq j}$$를 생각하자. 그럼 $$(U_i)_{i\neq j}$$들이 $$f(C)$$를 덮어야 하므로 $$(f^{-1}(U_i))_{i\neq j}$$는 $$C$$의 open covering이고, $$C$$가 compact라는 가정으로부터 finite subcover를 택하여 이로부터 $$X'$$의 open covering $$(U_i)_{i\in I}$$의 finite subcover를 얻을 수 있다.
-
-이제 $$X'$$가 Hausdorff임을 보이기 위해 $$X'$$의 임의의 두 점 $$x,y\in X'$$가 주어졌다 하자. 이들 둘이 모두 $$f(X)$$에 속한다면 증명할 것이 없으므로, $$y=\ast_{X'}$$라 가정할 수 있다. 그럼 $$x$$를 포함하는 $$X$$의 compact neighborhood $$C$$와 $$C$$에 속하는 $$x$$의 열린근방 $$U$$가 존재하므로, $$f(U)$$와 $$X'\setminus f(C)$$가 $$x,y$$를 분리하는 열린집합이 된다.
-:::
-
-## 위상다양체
-
-이번에는 옹골성에서 요구하는 유한성을 다소 약화시켜보자. 가령 위상공간 $$X$$의 임의의 open covering이 *locally* finite open subcover를 갖는 상황을 생각할 수 있다. ([§집합의 내부, 폐포, 경계, ⁋정의 3](/ko/math/topology/other_concepts#def3)) 그런데 약간의 말장난을 통해 이 조건은 사실 $$X$$의 compactness와 동치임을 보일 수 있으므로 이것만으로는 새로운 정의가 나오지 않는다. 이제 우리는 위상공간 두 open cover $$(U_i)_{i\in I}$$와 $$(V_j)_{j\in J}$$에 대하여, 임의의 $$V_j$$를 온전히 포함하는 $$U_i$$가 항상 존재한다면 $$(V_j)_{j\in J}$$가 $$(U_i)_{i\in I}$$의 *(open) refinement*라 부르기로 한다. 
-
-::: 정의 5
-위상공간 $$X$$가 *paracompact*라는 것은 $$X$$의 임의의 open covering이 locally finite open refinement를 갖는 것이다. 
-:::
-
-만일 $$X$$가 compact라면, 임의의 open covering의 finite subcover가 곧 locally finite open refinment가 되므로 임의의 compact space는 paracompact이다. 
-
-우리가 다루는 거의 모든 공간은 Hausdorff space이다. 별도로 증명을 하지는 않지만, paracompact Hausdorff space를 특징짓는 중요한 성질 중 하나는 *partition of unity*의 존재성이다. ([정리 7](#thm7))
-
-::: 정의 6
-위상공간 $$X$$가 주어졌다 하자. 그럼 연속함수들의 집합
-
-$$\Phi=\{\phi:X \rightarrow [0,1]\mid \text{$\phi$ continuous}\}$$
-
-이 *partition of unity<sub>단위분할</sub>*이라는 것은 다음의 두 조건
-
-1. 임의의 $$x\in X$$에 대하여, 적당한 열린근방 $$U$$가 존재하여 $$\phi\vert_U\neq 0$$을 만족하는 $$\phi\in \Phi$$가 오직 유한 개 뿐이도록 할 수 있다.
-2. 임의의 $$x\in X$$에 대하여, $$\sum_{\phi\in \Phi} \phi(x)=1$$이 성립한다.
-
-이 성립하는 것이다. 특별히 $$X$$의 open covering $$(U_i)_{i\in I}$$에 대하여, $$\supp \phi_i\subseteq U_i$$를 만족하는 partition of unity $$\Phi=(\phi_i)_{i\in I}$$를 *partition of unity subordinate to $$(U_i)$$*라 부른다. 
-:::
-
-즉 다음이 성립한다.
-
-::: 정리 7
-위상공간 $$X$$가 paracompact Hausdorff space인 것과, $$X$$의 임의의 open cover $$(U_i)$$에 대하여 partition of unity subordinate to $$(U_i)$$가 존재하는 것이 동치이다.
-:::
-
-이에 대한 증명은 [위키피디아](https://en.wikipedia.org/wiki/Paracompact_space)에서 확인할 수 있다. 이를 그대로 옮겨적는 대신 이것이 어떠한 방식으로 사용되는지를 간략히 살펴보자. 이를 위해 우선 위상다양체를 정의한다. 위상다양체의 모델은 우리가 잘 알고 있는 공간, 곧 Euclidean space $$\mathbb{R}^m$$이다.
-
-::: 정의 8
-위상공간 $$M$$이 *locally Euclidean of dimension $$m$$*이라는 것은 임의의 $$x\in M$$이 주어질 때마다 $$x$$의 적당한 열린근방 $$U$$가 존재하여 $$U$$가 $$\mathbb{R}^m$$의 열린집합과 homeomorphic한 것이다. 
-:::
-
-이 조건이 위상다양체의 본질이지만, 생각보다는 약한 조건이므로 우리는 여기에 몇몇 조건을 추가한다. 
-
-::: 정의 9
-Second countable, Hausdorff, locally Euclidean of dimension $$m$$인 공간을 *topological manifold of dimension $$m$$*이라 부른다. 
-:::
-
-그럼 증명없이 언급할 또 다른 정리로 다음이 있다. 
-
-::: 정리 10
-임의의 Hausdorff locally Euclidean topological space $$M$$에 대하여, $$M$$이 second-countable인 것과, $$M$$이 paracompact이고 countable하게 많은 connected component를 갖는 것이 동치이다. ([§연결공간, ⁋정의 7](/ko/math/topology/connected_spaces#def7))
-:::
-
-우리는 아직 connected component가 무엇인지 정의하지 않았지만, 어쨌든 위의 정리는 논리적으로 임의의 topological manifold $$M$$은 paracompact Hausdorff이고, 따라서 topological manifold $$M$$의 임의의 open cover $$(U_i)$$에 대하여 partition of unity subordinate to $$(U_i)$$가 존재한다는 것을 함의한다. 특히 우리는 locally Euclidean 조건을 활용하여 open cover $$(U_i)$$를 Euclidean space로 볼 수 있는데, 그럼 이 위에서 정의된 $$\mathbb{R}$$로의 연속함수라는 것은 우리가 미적분학을 배울 때부터 알고 있는 대상이다. 그럼 다음의 식 
-
-$$f=\sum \phi_i f_i$$
-
-을 통해 $$M$$ 전체에서 정의된 연속함수 $$f$$를 정의할 수 있으며 거꾸로 $$M$$ 전체에서 정의된 연속함수 $$f$$가 주어졌다 하면 각각의 $$\phi_i f$$가 $$U_i$$ 위에서 정의된 연속함수이다. 대부분의 경우 topological manifold는 단 하나의 connected component를 갖는 것으로 생각해도 별 문제가 없으므로, 사실상 paracompactness가 manifold를 다룰 때 필수적인 조건이라 생각할 수 있다. 
+옹골성은 여러 방향으로 완화되어 위상수학의 핵심 개념들을 낳는다. 각 점 주위에서만 옹골성을 요구하는 국소적 옹골성과 거기에서 얻어지는 일점 옹골화는 별도의 글에서 다룬다. ([§국소적 옹골공간과 일점 옹골화](/ko/math/topology/locally_compact_spaces)) 또한 유한 부분덮개 대신 국소유한 세분을 허용하여 옹골성을 완화한 paracompactness와 그것이 낳는 단위분할, 그리고 그 응용인 위상다양체는 또 다른 글에서 전개한다. ([§Paracompact 공간과 단위분할](/ko/math/topology/paracompact_spaces))

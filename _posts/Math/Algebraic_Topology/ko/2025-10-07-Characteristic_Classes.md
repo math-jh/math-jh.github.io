@@ -46,6 +46,7 @@ $$H^k(B;\mathbb{Z})\xrightarrow{\ \cong\ }H^{k+n}(E, E_0;\mathbb{Z}),\qquad \alp
 
 는 모든 $$k$$에 대하여 isomorphism이다.
 :::
+
 ::: 증명
 핵심만 적으면, $$E$$가 trivial bundle $$B\times\mathbb{R}^n$$일 경우 pair $$(E, E_0)=(B\times\mathbb{R}^n, B\times(\mathbb{R}^n\setminus 0))$$이고, Künneth formula의 relative 버전에 의하여
 
@@ -162,6 +163,7 @@ $$\cdots\rightarrow H^{k-n}(B)\xrightarrow{\ \smile e\ }H^k(B)\xrightarrow{\ \pi
 
 가 존재한다. 여기서 $$e=e(E)$$는 Euler class, $$\pi^\ast$$는 pullback, $$\pi_!$$는 fiber를 따른 적분이다.
 :::
+
 ::: 증명
 Pair $$(D(E), S(E))$$의 cohomology long exact sequence
 
@@ -200,7 +202,13 @@ $$\smile e:H^0(S^2)\rightarrow H^2(S^2)$$
 
 는 $$\times 2$$ map으로 주어지며, 그 cokernel $$\mathbb{Z}/2$$가 sphere bundle $$S(TS^2)$$의 $$H^2$$에 torsion으로 나타난다. 반면 $$S^2$$의 trivial bundle $$E$$로 시작했다면, 이 부분은 $$\mathbb{Z}$$였을 것이므로, Euler class가 sphere bundle을 product로부터 밀어낸 흔적이 바로 이 torsion에 담겨있는 것이다. 
 
-이제 이로부터 Chern class를 정의하자. 핵심적인 사실은 $$k<n-1$$이면 $$H^{k-n}(B)=0$$이고 $$H^{k-n+1}(B)=0$$이므로 $$\pi^\ast:H^k(B)\xrightarrow{\cong}H^k(S(E))$$가 isomorphism이라는 것이다. 곧 sphere bundle의 낮은 차원 cohomology는 base의 것과 같고, 차원이 fiber의 크기 $$n-1$$에 다다르는 순간부터 Euler class와의 cup product가 그 차이를 지배한다. 
+이제 이로부터 Chern class를 정의하자. 핵심적인 사실은 $$k<n-1$$이면 
+
+$$H^{k-n}(B)=H^{k-n+1}(B)=0$$
+
+이므로 $$\pi^\ast:H^k(B)\rightarrow H^k(S(E))$$가 isomorphism이라는 것이다. 즉, sphere bundle의 cohomology는 낮은 차원에서는 정확히 base의 cohomology와 일치하며, 그 이후부터는 
+
+낮은 차원 cohomology는 base의 것과 같고, 차원이 fiber의 크기 $$n-1$$에 다다르는 순간부터 Euler class와의 cup product가 그 차이를 지배한다. 
 
 Deleted total space $$E_0=E\setminus 0(B)$$를 본다. $$E_0$$의 한 점은 fiber $$F=E_x$$와 그 안의 nonzero vector $$v\in F$$의 쌍이다. 이 점 위에 $$v$$의 (Hermitian 내적에 대한) orthogonal complement $$v^\perp\subseteq F$$를 달아주면, $$E_0$$ 위의 canonical complex rank $$(n-1)$$ bundle $$E^\perp$$가 정의된다. 한편 $$E_0$$는 $$E_{\mathbb{R}}$$의 sphere bundle $$S(E_{\mathbb{R}})$$ (fiber $$S^{2n-1}$$) 와 homotopy equivalent하므로, [정리 5](#thm5)의 Gysin 완전열
 
