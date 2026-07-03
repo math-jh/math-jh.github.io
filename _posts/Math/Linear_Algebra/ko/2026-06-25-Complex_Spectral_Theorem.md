@@ -37,7 +37,7 @@ $$LL^\ast=L^\ast L$$
 이 성립하는 것이다.
 :::
 
-그럼 특히 self-adjoint operator는 $$LL^\ast=L^2=L^\ast L$$이므로 normal operator이고, unitary operator 또한 그러하다. ([§복소내적공간, ⁋정의 5](/ko/math/linear_algebra/complex_inner_product_spaces#def5)) 뿐만 아니라, $$L^\ast=-L$$을 만족하는 *skew-Hermitian* operator도 $$LL^\ast=-L^2=L^\ast L$$이므로 normal operator이며, 이렇듯 normal operator는 여러 특수한 경우들을 포함하는 넓은 부류이며, 이 글의 목표는 이들이 정확히 orthonormal basis로 대각화되는 operator임을 보이는 것이다.
+그럼 특히 self-adjoint operator는 $$LL^\ast=L^2=L^\ast L$$이므로 normal operator이고, unitary operator 또한 그러하다. ([§복소내적공간, ⁋정의 6](/ko/math/linear_algebra/complex_inner_product_spaces#def6)) 뿐만 아니라, $$L^\ast=-L$$을 만족하는 *skew-Hermitian* operator도 $$LL^\ast=-L^2=L^\ast L$$이므로 normal operator이며, 이렇듯 normal operator는 여러 특수한 경우들을 포함하는 넓은 부류이며, 이 글의 목표는 이들이 정확히 orthonormal basis로 대각화되는 operator임을 보이는 것이다.
 
 ## Schur 분해
 
@@ -56,7 +56,7 @@ $$\langle Lw,e_n\rangle=\langle w,L^\ast e_n\rangle=\langle w,\mu e_n\rangle=\mu
 이므로 $$Lw\in W$$이다. 즉, $$W$$는 $$L$$에 대해 닫혀있으며, 이로부터 $$L\vert_W$$를 $$W$$ 위에 정의된 linear operator로 볼 수 있고, 이제 귀납적 가정에 의해
  $$W$$의 orthonormal basis $$\{e_1,\ldots,e_{n-1}\}$$이 존재하여 각 $$j\leq n-1$$에 대해 $$Le_j\in\span(e_1,\ldots,e_j)$$이다.
 
-그럼 $$\{e_1,\ldots,e_n\}$$은 $$V$$의 orthonormal basis이고, $$j<n$$에 대해서는 $$Le_j\in\span(e_1,\ldots,e_j)$$이며 $$j=n$$에 대해서는 $$Le_n\in V=\span(e_1,\ldots,e_n)$$이 자명하게 성립한다. 즉 이 기저에 대한 $$L$$의 행렬표현은 upper triangular matrix가 된다. 이 기저의 벡터들을 열로 갖는 행렬을 $$U$$라 하면 $$U$$는 unitary이고 ([§복소내적공간, ⁋정의 5](/ko/math/linear_algebra/complex_inner_product_spaces#def5)) $$U^\ast AU=T$$가 upper triangular이므로 $$A=UTU^\ast$$이다.
+그럼 $$\{e_1,\ldots,e_n\}$$은 $$V$$의 orthonormal basis이고, $$j<n$$에 대해서는 $$Le_j\in\span(e_1,\ldots,e_j)$$이며 $$j=n$$에 대해서는 $$Le_n\in V=\span(e_1,\ldots,e_n)$$이 자명하게 성립한다. 즉 이 기저에 대한 $$L$$의 행렬표현은 upper triangular matrix가 된다. 이 기저의 벡터들을 열로 갖는 행렬을 $$U$$라 하면 $$U$$는 unitary이고 ([§복소내적공간, ⁋정의 6](/ko/math/linear_algebra/complex_inner_product_spaces#def6)) $$U^\ast AU=T$$가 upper triangular이므로 $$A=UTU^\ast$$이다.
 :::
 
 Upper triangular matrix $$T$$는 $$A$$와 닮음이므로 같은 특성다항식을 가지며, upper triangular matrix의 특성다항식은 $$\prod_i(\x-T_{ii})$$이므로 $$T$$의 대각성분 $$T_{11},\ldots,T_{nn}$$은 정확히 $$A$$의 고윳값들을 중복도까지 담는다. Schur 분해는 임의의 복소행렬이 unitary transformation만으로 고윳값들을 대각선에 드러낼 수 있음을 말한다.
@@ -86,7 +86,7 @@ Normal matrix의 unitary diagonalization은 [정리 3](#thm3)의 직접적 결�
 복소내적공간 $$V$$ 위의 linear operator $$L:V\rightarrow V$$가 normal operator인 것은, $$L$$의 고유벡터들로 이루어진 $$V$$의 orthonormal basis가 존재하는 것과 동치이다.
 :::
 ::: 증명
-우선 $$L$$이 normal이라면 [따름정리 4](#cor4)에 의하여 $$L$$은 orthonormal basis로 대각화된다는 것이 자명하므로, 핵심은 반대방향이다. $$L$$의 고유벡터들로 이루어진 orthonormal basis $$\{v_1,\ldots,v_n\}$$이 존재하여 $$Lv_i=\lambda_i v_i$$라 하자. 그럼 [§복소내적공간, ⁋명제 4](/ko/math/linear_algebra/complex_inner_product_spaces#prop4)에 의해, 이 기저에 대한 $$L^\ast$$의 행렬표현은 $$\diag(\bar\lambda_1,\ldots,\bar\lambda_n)$$이다. 이제 두 diagonal matrix은 가환이므로 $$LL^\ast=L^\ast L$$이고, 따라서 $$L$$은 normal operator이다.
+우선 $$L$$이 normal이라면 [따름정리 4](#cor4)에 의하여 $$L$$은 orthonormal basis로 대각화된다는 것이 자명하므로, 핵심은 반대방향이다. $$L$$의 고유벡터들로 이루어진 orthonormal basis $$\{v_1,\ldots,v_n\}$$이 존재하여 $$Lv_i=\lambda_i v_i$$라 하자. 그럼 [§복소내적공간, ⁋명제 5](/ko/math/linear_algebra/complex_inner_product_spaces#prop5)에 의해, 이 기저에 대한 $$L^\ast$$의 행렬표현은 $$\diag(\bar\lambda_1,\ldots,\bar\lambda_n)$$이다. 이제 두 diagonal matrix은 가환이므로 $$LL^\ast=L^\ast L$$이고, 따라서 $$L$$은 normal operator이다.
 :::
 
 행렬의 언어로 옮기면, 이 정리는 (증명에서 보았듯) normal matrix의 unitary diagonalization에 대한 이야기이다.

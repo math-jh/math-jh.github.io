@@ -37,7 +37,7 @@ $$Q(v+w)=\langle v+w,v+w\rangle=\langle v,v\rangle+2\langle v,w\rangle+\langle w
 
 $$\langle v,w\rangle=\frac{1}{2}\bigl(Q(v+w)-Q(v)-Q(w)\bigr)\tag{1}$$
 
-이 성립하기 때문이다. 이 식을 *polarization identity<sub>편극항등식</sub>*이라 부른다. 즉 $$\mathbb{R}$$ 위에서 symmetric bilinear form과 이차형식은 서로를 유일하게 결정하며, 우리는 둘을 자유롭게 오갈 수 있으므로 이들 둘은 본질적으로 같은 것이다. 식 (1)이 성립하는 데에는 $$2$$로 나눌 수 있다는 사실, 즉 $$\ch\mathbb{R}\neq 2$$이라는 사실이 본질적으로 쓰였으며, 이는 가령 [§쌍선형형식, ⁋명제 7](/ko/math/linear_algebra/bilinear_form#prop7)에서도 이미 일어났던 상황이다. 
+이 성립하기 때문이다. 이 식을 *polarization identity<sub>편극항등식</sub>*이라 부른다. 즉 $$\mathbb{R}$$ 위에서 symmetric bilinear form과 이차형식은 서로를 유일하게 결정하며, 우리는 둘을 자유롭게 오갈 수 있으므로 이들 둘은 본질적으로 같은 것이다. 식 (1)이 성립하는 데에는 $$2$$로 나눌 수 있다는 사실, 즉 $$\ch\mathbb{R}\neq 2$$이라는 사실이 본질적으로 쓰였으며, 이는 가령 [§쌍선형형식, ⁋명제 10](/ko/math/linear_algebra/bilinear_form#prop10)에서도 이미 일어났던 상황이다. 
 
 ## 합동과 대각형
 
@@ -59,7 +59,7 @@ $$2\langle u,v\rangle=\langle u+v,u+v\rangle-\langle u,u\rangle-\langle v,v\rang
 
 $$v=\frac{\langle v,w\rangle}{\langle w,w\rangle}w+\left(v-\frac{\langle v,w\rangle}{\langle w,w\rangle}w\right)$$
 
-으로 적어 $$V=W\oplus w^\perp$$임을 알 수 있다. ([§쌍선형형식, ⁋명제 7](/ko/math/linear_algebra/bilinear_form#prop7)의 증명과 같다.) 여기서 $$w^\perp=\{v\mid\langle v,w\rangle=0\}$$이다. $$w^\perp$$로 제한한 bilinear form도 symmetric이므로 귀납적 가정에 의하여 $$w^\perp$$의 orthogonal basis가 존재하고, 여기에 $$w$$를 더하면 $$V$$의 orthogonal basis $$\{f_1,\ldots,f_n\}$$을 얻는다. 
+으로 적어 $$V=W\oplus w^\perp$$임을 알 수 있다. ([§쌍선형형식, ⁋명제 10](/ko/math/linear_algebra/bilinear_form#prop10)의 증명과 같다.) 여기서 $$w^\perp=\{v\mid\langle v,w\rangle=0\}$$이다. $$w^\perp$$로 제한한 bilinear form도 symmetric이므로 귀납적 가정에 의하여 $$w^\perp$$의 orthogonal basis가 존재하고, 여기에 $$w$$를 더하면 $$V$$의 orthogonal basis $$\{f_1,\ldots,f_n\}$$을 얻는다. 
 
 이제 각 $$f_i$$를 적절히 스칼라배하여 $$\langle f_i,f_i\rangle$$을 $$1$$, $$-1$$, $$0$$ 중 하나로 만든다. 만일 $$\langle f_i,f_i\rangle=0$$이라면 $$e_i=f_i$$로 두고, 그렇지 않다면 $$c=\sqrt{\lvert\langle f_i,f_i\rangle\rvert}$$에 대하여 $$e_i=f_i/c$$로 두면 
 

@@ -38,7 +38,7 @@ $$LL^\ast=L^\ast L$$
 holds.
 :::
 
-Then in particular a self-adjoint operator satisfies $$LL^\ast=L^2=L^\ast L$$, so it is normal, and a unitary operator is as well. ([§Complex Inner Product Spaces, ⁋Definition 5](/en/math/linear_algebra/complex_inner_product_spaces#def5)) Moreover, a *skew-Hermitian* operator satisfying $$L^\ast=-L$$ also satisfies $$LL^\ast=-L^2=L^\ast L$$, so it is normal. Thus normal operators form a broad class containing many special cases, and the goal of this post is to show that they are exactly the operators diagonalized by an orthonormal basis.
+Then in particular a self-adjoint operator satisfies $$LL^\ast=L^2=L^\ast L$$, so it is normal, and a unitary operator is as well. ([§Complex Inner Product Spaces, ⁋Definition 6](/en/math/linear_algebra/complex_inner_product_spaces#def6)) Moreover, a *skew-Hermitian* operator satisfying $$L^\ast=-L$$ also satisfies $$LL^\ast=-L^2=L^\ast L$$, so it is normal. Thus normal operators form a broad class containing many special cases, and the goal of this post is to show that they are exactly the operators diagonalized by an orthonormal basis.
 
 ## Schur Decomposition
 
@@ -56,7 +56,7 @@ $$\langle Lw,e_n\rangle=\langle w,L^\ast e_n\rangle=\langle w,\mu e_n\rangle=\mu
 
 so $$Lw\in W$$. That is, $$W$$ is invariant under $$L$$, and hence we may view $$L\vert_W$$ as a linear operator on $$W$$; by the induction hypothesis there exists an orthonormal basis $$\{e_1,\ldots,e_{n-1}\}$$ of $$W$$ such that for each $$j\leq n-1$$ we have $$Le_j\in\span(e_1,\ldots,e_j)$$.
 
-Then $$\{e_1,\ldots,e_n\}$$ is an orthonormal basis of $$V$$, and for $$j<n$$ we have $$Le_j\in\span(e_1,\ldots,e_j)$$ while for $$j=n$$ we trivially have $$Le_n\in V=\span(e_1,\ldots,e_n)$$. Thus the matrix representation of $$L$$ with respect to this basis is upper triangular. Letting $$U$$ be the matrix whose columns are the vectors of this basis, $$U$$ is unitary ([§Complex Inner Product Spaces, ⁋Definition 5](/en/math/linear_algebra/complex_inner_product_spaces#def5)) and $$U^\ast AU=T$$ is upper triangular, so $$A=UTU^\ast$$.
+Then $$\{e_1,\ldots,e_n\}$$ is an orthonormal basis of $$V$$, and for $$j<n$$ we have $$Le_j\in\span(e_1,\ldots,e_j)$$ while for $$j=n$$ we trivially have $$Le_n\in V=\span(e_1,\ldots,e_n)$$. Thus the matrix representation of $$L$$ with respect to this basis is upper triangular. Letting $$U$$ be the matrix whose columns are the vectors of this basis, $$U$$ is unitary ([§Complex Inner Product Spaces, ⁋Definition 6](/en/math/linear_algebra/complex_inner_product_spaces#def6)) and $$U^\ast AU=T$$ is upper triangular, so $$A=UTU^\ast$$.
 :::
 
 The upper triangular matrix $$T$$ is similar to $$A$$, so it has the same characteristic polynomial, and the characteristic polynomial of an upper triangular matrix is $$\prod_i(\x-T_{ii})$$; thus the diagonal entries $$T_{11},\ldots,T_{nn}$$ of $$T$$ contain exactly the eigenvalues of $$A$$ with multiplicity. The Schur decomposition says that any complex matrix can reveal its eigenvalues on the diagonal by a unitary transformation alone.
@@ -86,7 +86,7 @@ The unitary diagonalization of a normal matrix is a direct consequence of [Theor
 A linear operator $$L:V\rightarrow V$$ on a complex inner product space $$V$$ is a normal operator if and only if there exists an orthonormal basis of $$V$$ consisting of eigenvectors of $$L$$.
 :::
 ::: Proof
-If $$L$$ is normal, then it is diagonalized by an orthonormal basis by [Corollary 4](#cor4), so the key is the converse. Suppose there exists an orthonormal basis $$\{v_1,\ldots,v_n\}$$ of $$V$$ consisting of eigenvectors of $$L$$ with $$Lv_i=\lambda_i v_i$$. Then by [§Complex Inner Product Spaces, ⁋Proposition 4](/en/math/linear_algebra/complex_inner_product_spaces#prop4), the matrix representation of $$L^\ast$$ with respect to this basis is $$\diag(\bar\lambda_1,\ldots,\bar\lambda_n)$$. Now two diagonal matrices commute, so $$LL^\ast=L^\ast L$$, and hence $$L$$ is normal.
+If $$L$$ is normal, then it is diagonalized by an orthonormal basis by [Corollary 4](#cor4), so the key is the converse. Suppose there exists an orthonormal basis $$\{v_1,\ldots,v_n\}$$ of $$V$$ consisting of eigenvectors of $$L$$ with $$Lv_i=\lambda_i v_i$$. Then by [§Complex Inner Product Spaces, ⁋Proposition 5](/en/math/linear_algebra/complex_inner_product_spaces#prop5), the matrix representation of $$L^\ast$$ with respect to this basis is $$\diag(\bar\lambda_1,\ldots,\bar\lambda_n)$$. Now two diagonal matrices commute, so $$LL^\ast=L^\ast L$$, and hence $$L$$ is normal.
 :::
 
 In the language of matrices, this theorem says (as we saw in the proof) that a normal matrix admits a unitary diagonalization.
