@@ -14,11 +14,11 @@ weight: 1
 
 ---
 
-우리는 이 카테고리에서 기하학을 공부할 때 필수적이라 할 수 있는 호몰로지, 코호몰로지 등을 다룬다. 이들 개념은 일반적인 위상공간 위에 정의되지만, 이들이 잘 행동하기 위해서는 공간이 추가적인 성질들을 가져야하며, 이러한 조건들이 모두 만족되는 공간이 바로 [\[위상수학\] §옹골성, ⁋정의 9](/ko/math/topology/compactness#def9)에서 정의하였던 topological manifold이다. 이번 글에서 우리는 topological manifold의 성질과 예시들을 살펴볼 것이며, 이 다음 글에서는 호몰로지가 무엇인지 대략적인 예시를 통해 살펴볼 것이다. 이들 두 글은 이 카테고리의 큰 방향을 보여주는 것으로, 본격적인 내용은 셋째 글부터 시작한다. 
+우리는 이 카테고리에서 기하학을 공부할 때 필수적이라 할 수 있는 호몰로지, 코호몰로지 등을 다룬다. 이들 개념은 일반적인 위상공간 위에 정의되지만, 이들이 잘 행동하기 위해서는 공간이 추가적인 성질들을 가져야하며, 이러한 조건들이 모두 만족되는 공간이 바로 아래에서 정의할 topological manifold이다. 이번 글에서 우리는 topological manifold의 성질과 예시들을 살펴볼 것이며, 이 다음 글에서는 호몰로지가 무엇인지 대략적인 예시를 통해 살펴볼 것이다. 이들 두 글은 이 카테고리의 큰 방향을 보여주는 것으로, 본격적인 내용은 셋째 글부터 시작한다. 
 
 ## 위상다양체의 정의
 
-서술상의 편의를 위해 [\[위상수학\] §옹골성, ⁋정의 8](/ko/math/topology/compactness#def8)과 [\[위상수학\] §옹골성, ⁋정의 9](/ko/math/topology/compactness#def9)를 반복하면 다음과 같다. 
+위상다양체는 다음과 같이 정의된다. 
 
 ::: 정의 1
 위상공간 $$M$$이 *locally Euclidean of dimension $$m$$*이라는 것은 임의의 $$x\in M$$이 주어질 때마다 $$x$$의 적당한 열린근방 $$U$$가 존재하여 $$U$$가 $$\mathbb{R}^m$$의 열린집합과 homeomorphic한 것이다. 
@@ -28,7 +28,7 @@ weight: 1
 Second countable, Hausdorff, locally Euclidean of dimension $$m$$인 공간을 *topological manifold of dimension $$m$$*이라 부른다. 
 :::
 
-편의상 topological manifold of dimension $$m$$을 *$$m$$-manifold*라 부르자. [\[위상수학\] §옹골성, ⁋정의 8](/ko/math/topology/compactness#def8)에서는 정의하지 않았지만, 종종 우리는 위의 정의에서 $$\mathbb{R}^m$$을 *half-space*
+편의상 topological manifold of dimension $$m$$을 *$$m$$-manifold*라 부르자. [정의 1](#def1)에서는 다루지 않았지만, 종종 우리는 위의 정의에서 $$\mathbb{R}^m$$을 *half-space*
 
 $$\mathbb{H}^m=\left\{(x_1,\ldots,x_m)\in \mathbb{R}^m\mid x_m\geq 0\right\}$$
 

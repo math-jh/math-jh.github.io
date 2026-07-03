@@ -18,9 +18,9 @@ published: false
 
 ## 국소적 옹골공간
 
-Compactness는 위상공간이 지닐 수 있는 성질 가운데 가장 강력한 것에 속하지만, 정작 우리가 다루는 많은 공간은 compact가 아니다. Euclidean space $$\mathbb{R}^n$$은 유계가 아니어서 compact가 아니고, 위상다양체 역시 국소적으로만 Euclidean space를 닮았을 뿐 전체로는 compact일 이유가 없다. ([§옹골성, ⁋정의 9](/ko/math/topology/compactness#def9)) 그럼에도 이러한 공간들은 각 점 주위에서만큼은 compact 공간처럼 행동한다. 우리는 이 국소적인 성질을 분리해 내어, 전역적 compactness가 없는 공간에서도 compact 공간의 논증을 국소적으로 되살리고자 한다. 더 나아가 이러한 공간에 단 하나의 점을 더하는 것만으로 compact 공간을 얻을 수 있음을 보게 될 것이다.
+Compactness는 위상공간이 지닐 수 있는 성질 가운데 가장 강력한 것에 속하지만, 정작 우리가 다루는 많은 공간은 compact가 아니다. Euclidean space $$\mathbb{R}^n$$은 유계가 아니어서 compact가 아니고, 뒤에서 다룰 위상다양체 역시 국소적으로만 Euclidean space를 닮았을 뿐 전체로는 compact일 이유가 없다. 그럼에도 이러한 공간들은 각 점 주위에서만큼은 compact 공간처럼 행동한다. 우리는 이 국소적인 성질을 분리해 내어, 전역적 compactness가 없는 공간에서도 compact 공간의 논증을 국소적으로 되살리고자 한다. 더 나아가 이러한 공간에 단 하나의 점을 더하는 것만으로 compact 공간을 얻을 수 있음을 보게 될 것이다.
 
-우리는 이 개념을 [§옹골성, ⁋정의 3](/ko/math/topology/compactness#def3)에서 이미 도입한 바 있으며, 이 글의 출발점으로 삼기 위해 여기에 다시 적는다.
+우리는 각 점 주위의 옹골성이라는 이 국소적 조건을 다음과 같이 정식화한다.
 
 ::: 정의 1
 위상공간 $$X$$가 점 $$x\in X$$에서 *locally compact<sub>국소적으로 옹골</sub>*라는 것은 $$x$$를 포함하는 $$X$$의 compact neighborhood가 존재하는 것이다. $$X$$가 모든 점에서 locally compact일 때 $$X$$를 *locally compact space<sub>국소적 옹골공간</sub>*이라 부른다. Locally compact이며 Hausdorff인 공간을 줄여 *LCH space*라 적기로 한다.
@@ -49,7 +49,7 @@ $$K$$는 compact Hausdorff space이므로 regular space이다. ([§옹골공간,
 가장 기본적인 예로 Euclidean space $$\mathbb{R}^n$$이 LCH임을 들 수 있다. 임의의 점 $$x$$에 대하여 닫힌 공 $$\{y\mid\lVert y-x\rVert\leq 1\}$$은 Heine–Borel 정리에 의해 compact이고 열린 공을 품으므로 $$x$$의 compact neighborhood를 이루며, $$\mathbb{R}^n$$이 Hausdorff임은 이미 알고 있다. 마찬가지로 임의의 discrete space도 LCH인데, 각 점 $$x$$에 대하여 한원소집합 $$\{x\}$$이 열린 유한집합으로서 compact neighborhood가 되고 discrete space는 Hausdorff이기 때문이다. 조금 덜 자명한 예는 위상다양체이다.
 
 ::: 예시 3
-임의의 topological manifold $$M$$은 LCH space이다. ([§옹골성, ⁋정의 9](/ko/math/topology/compactness#def9)) 정의상 $$M$$은 Hausdorff이며, 각 점 $$x$$는 $$\mathbb{R}^n$$의 열린집합과 homeomorphic한 열린근방 $$U$$를 가진다. 그 homeomorphism 아래에서 $$x$$에 대응하는 점은 $$\mathbb{R}^n$$에서 compact neighborhood를 가지므로 ($$\mathbb{R}^n$$이 LCH이기 때문이다), 이를 $$U$$로 되끌어 오면 $$x$$의 compact neighborhood를 얻는다.
+각 점이 $$\mathbb{R}^n$$의 열린집합과 homeomorphic한 열린근방을 갖는 Hausdorff 공간은 LCH space이다. 뒤에서 정의할 위상다양체가 바로 이러한 공간이다. 실제로 그러한 공간 $$M$$의 각 점 $$x$$에 대하여 $$\mathbb{R}^n$$의 열린집합과 homeomorphic한 열린근방 $$U$$를 잡으면, 그 homeomorphism 아래에서 $$x$$에 대응하는 점이 $$\mathbb{R}^n$$에서 compact neighborhood를 가지므로 ($$\mathbb{R}^n$$이 LCH이기 때문이다) 이를 $$U$$로 되끌어 오면 $$x$$의 compact neighborhood를 얻는다.
 :::
 
 Locally compact이라는 조건은 얼핏 매우 약해 보이지만 결코 자동으로 주어지는 것은 아니다. 다음은 국소적 옹골공간이 아닌 대표적인 예이다.
@@ -75,7 +75,7 @@ Hausdorff space의 부분공간은 다시 Hausdorff이므로 국소적 옹골성
 
 ## 일점 옹골화의 구성
 
-Compact가 아닌 공간을 compact로 만드는 가장 경제적인 방법은 부족한 부분을 단 하나의 점으로 메우는 것이다. 직관적으로는 $$\mathbb{R}$$의 양끝으로 달아나는 점들을 하나의 무한원점으로 모아 원을 만드는 것과 같다. 이러한 옹골화의 존재와 유일성은 LCH space에 대하여 이미 [§옹골성, ⁋정리 4](/ko/math/topology/compactness#thm4)에서 증명한 바 있다. 여기에서는 같은 결과를 임의의 위상공간에 통하는 명시적 구성으로 다시 이끌어 내고, 그 구성이 언제 Hausdorff 공간을 낳는지까지 규명하여 그 정리를 정련한다. 우리는 이 구성을 임의의 위상공간에 대해 정식화한다.
+Compact가 아닌 공간을 compact로 만드는 가장 경제적인 방법은 부족한 부분을 단 하나의 점으로 메우는 것이다. 직관적으로는 $$\mathbb{R}$$의 양끝으로 달아나는 점들을 하나의 무한원점으로 모아 원을 만드는 것과 같다. 우리는 이 옹골화를 임의의 위상공간에 대해 명시적으로 정식화하고, 그것이 compact 공간을 낳음을 보인 뒤, 그 구성이 언제 Hausdorff 공간을 낳는지까지 규명한다.
 
 ::: 정의 6
 위상공간 $$X$$가 주어졌다 하자. $$X$$에 속하지 않는 새로운 점 하나를 $$\infty$$라 적고 집합 $$X^+=X\cup\{\infty\}$$을 생각한다. $$X^+$$의 부분집합 가운데 다음 두 종류를 열린집합으로 선언한다. 첫째로 $$X$$의 열린집합 $$U$$, 둘째로 $$X$$에서 compact이며 닫힌 부분집합 $$C$$에 대한 $$X^+\setminus C$$이다. 이렇게 얻은 위상공간 $$X^+$$를 $$X$$의 *one-point compactification<sub>일점 옹골화</sub>*, 또는 *Alexandroff compactification*이라 부른다.
@@ -116,7 +116,7 @@ $$X^+$$의 임의의 open covering $$(O_i)_{i\in I}$$이 주어졌다 하자. $$
 거꾸로 $$X$$가 LCH라 하자. $$X^+$$의 서로 다른 두 점을 분리해야 한다. 두 점이 모두 $$X$$에 속하면 $$X$$가 Hausdorff이므로 이들을 $$X$$에서 분리하는 서로소인 열린집합을 얻고, 이들은 [정의 6](#def6)의 첫째 종류로서 $$X^+$$에서도 열린집합이다. 남은 경우는 한 점이 $$x\in X$$이고 다른 한 점이 $$\infty$$인 경우이다. $$X$$가 Hausdorff이므로 [명제 2](#prop2)에 의하여 $$x$$의 열린근방 $$U$$가 존재하여 $$K=\cl(U)$$가 compact이다. $$X$$가 Hausdorff이므로 $$K$$는 닫힌집합이고 ([§옹골공간, ⁋따름정리 5](/ko/math/topology/compact_spaces#cor5)), 따라서 $$X^+\setminus K$$는 $$\infty$$를 품는 둘째 종류의 열린집합이다. $$U\subseteq K$$이므로 $$U$$와 $$X^+\setminus K$$는 서로소이며 각각 $$x$$와 $$\infty$$를 분리한다.
 :::
 
-[정리 8](#thm8)과 [정리 9](#thm9)를 합치면, $$X$$가 LCH space일 때 $$X^+$$는 compact Hausdorff space가 되고 [명제 7](#prop7)에 의해 $$X$$는 그 안에 열린 부분공간으로 매장된다. 특히 $$X$$가 compact가 아니라면 이 매장은 조밀하다. 이는 [§옹골성, ⁋정리 4](/ko/math/topology/compactness#thm4)에서 이미 증명한 Alexandroff 정리의 존재 부분에 해당하며, 여기에서는 이를 임의의 $$X$$에 통하는 명시적 구성으로 다시 얻은 것이다. 남은 것은 이러한 옹골화가 본질적으로 유일하다는 사실이며, 이는 다음의 보편성으로 정식화된다.
+[정리 8](#thm8)과 [정리 9](#thm9)를 합치면, $$X$$가 LCH space일 때 $$X^+$$는 compact Hausdorff space가 되고 [명제 7](#prop7)에 의해 $$X$$는 그 안에 열린 부분공간으로 매장된다. 특히 $$X$$가 compact가 아니라면 이 매장은 조밀하다. 이것이 Alexandroff 정리의 존재 부분, 곧 임의의 LCH space가 어떤 compact Hausdorff space에 조밀한 열린 부분공간으로 매장된다는 사실이다. 남은 것은 이러한 옹골화가 본질적으로 유일하다는 사실이며, 이는 다음의 보편성으로 정식화된다.
 
 ::: 정리 10
 LCH space $$X$$가 주어졌다 하자. compact Hausdorff space $$Y$$와 점 $$p\in Y$$, 그리고 homeomorphism $$\varphi:X\to Y\setminus\{p\}$$이 주어졌다 하면, 유일한 homeomorphism $$h:X^+\to Y$$가 존재하여 $$X$$ 위에서 $$h=\varphi$$이고 $$h(\infty)=p$$이다.
@@ -129,7 +129,7 @@ $$\varphi$$를 통해 $$X$$와 $$Y\setminus\{p\}$$을 동일시하고, $$X$$를 
 그러므로 $$p$$를 $$\infty$$와 동일시하는 집합 사이의 대응 $$h:X^+\to Y$$는 열린집합을 열린집합으로, 그 역도 마찬가지로 대응시키는 전단사이며, 따라서 homeomorphism이다. $$h$$는 $$X$$ 위에서 $$\varphi$$와 일치하고 $$\infty$$를 $$p$$로 보내야 하므로 유일하다.
 :::
 
-[정리 10](#thm10)은 LCH space $$X$$에 한 점을 더해 compact Hausdorff space를 만드는 방법이 위상동형을 무시하면 오직 하나뿐임을 말한다. 이는 [§옹골성, ⁋정리 4](/ko/math/topology/compactness#thm4)의 유일성 부분을 보편성의 언어로 다시 서술한 것이다. 이 유일성 덕분에 우리는 이후 $$X^+$$를 그 구체적 구성과 무관하게 다룰 수 있고, 실제 계산에서는 임의의 편리한 compact Hausdorff 모델을 골라 $$X^+$$와 동일시하면 된다.
+[정리 10](#thm10)은 LCH space $$X$$에 한 점을 더해 compact Hausdorff space를 만드는 방법이 위상동형을 무시하면 오직 하나뿐임을 말한다. 이것이 Alexandroff 정리의 유일성 부분을 보편성의 언어로 서술한 것이다. 이 유일성 덕분에 우리는 이후 $$X^+$$를 그 구체적 구성과 무관하게 다룰 수 있고, 실제 계산에서는 임의의 편리한 compact Hausdorff 모델을 골라 $$X^+$$와 동일시하면 된다.
 
 ![일점 옹골화의 보편성](/assets/images/Math/Topology/Locally_Compact_Spaces-1.svg){:style="width:6.23em" class="invert" .align-center}
 

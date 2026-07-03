@@ -1,6 +1,6 @@
 ---
 title: "Paracompact 공간과 단위분할"
-description: "임의의 열린 덮개가 국소유한 세분을 갖는 paracompact 공간을 정의하고, paracompact Hausdorff 공간이 normal임과 단위분할의 존재를 Urysohn 보조정리로 증명하여 국소 구성을 대역화하는 도구를 마련한다."
+description: "임의의 열린 덮개가 국소유한 세분을 갖는 paracompact 공간을 정의하고, paracompact Hausdorff 공간이 normal임과 단위분할의 존재를 Urysohn 보조정리로 증명한 뒤, 그 응용으로 위상다양체를 정의하고 위상다양체가 언제나 단위분할을 허락함을 본다."
 excerpt: "Paracompact spaces, local finiteness, and partitions of unity"
 
 categories: [Math / Topology]
@@ -36,7 +36,7 @@ Compactness는 임의의 열린 덮개에서 유한한 부분덮개를 뽑아낼
 위상공간 $$X$$가 *paracompact*라는 것은 $$X$$의 임의의 open covering이 locally finite open refinement를 갖는 것이다.
 :::
 
-우리는 이 개념을 [§옹골성, ⁋정의 5](/ko/math/topology/compactness#def5)에서 이미 도입한 바 있으며, 이 글의 출발점으로 삼기 위해 여기에 다시 적는다. 정의는 임의의 열린 덮개에 대하여 그것을 세분하는 국소유한 열린 덮개가 존재할 것을 요구한다. Compactness가 요구하는 것은 임의의 열린 덮개에서 유한 개만 남겨도 여전히 전체를 덮는다는 것인데, 유한 개의 열린집합으로 이루어진 덮개는 그 자체로 국소유한이므로, paracompactness는 compactness가 요구하는 유한성을 각 점 주위에서의 유한성으로 완화한 것이라 읽을 수 있다.
+정의는 임의의 열린 덮개에 대하여 그것을 세분하는 국소유한 열린 덮개가 존재할 것을 요구한다. Compactness가 요구하는 것은 임의의 열린 덮개에서 유한 개만 남겨도 여전히 전체를 덮는다는 것인데, 유한 개의 열린집합으로 이루어진 덮개는 그 자체로 국소유한이므로, paracompactness는 compactness가 요구하는 유한성을 각 점 주위에서의 유한성으로 완화한 것이라 읽을 수 있다.
 
 ::: 명제 3
 임의의 compact space는 paracompact이다.
@@ -138,7 +138,7 @@ Paracompact 공간의 가장 풍부한 공급원 가운데 하나는 metric spac
 나아가 $$X$$의 open covering $$(U_i)_{i\in I}$$가 주어졌을 때, 같은 첨수집합으로 놓인 partition of unity $$(\phi_i)_{i\in I}$$가 모든 $$i$$에 대하여 $$\supp\phi_i\subseteq U_i$$를 만족하면 이를 *$$(U_i)$$에 종속된<sub>subordinate</sub>* 단위분할이라 부른다.
 :::
 
-이 개념 역시 [§옹골성, ⁋정의 6](/ko/math/topology/compactness#def6)에서 이미 도입하였다. 첫째 조건의 국소유한성은 둘째 조건의 합 $$\sum_i\phi_i(x)$$이 각 점의 어떤 근방에서 유한합으로 환원되어 실제로 의미를 가지도록 보장한다. 종속성 조건 $$\supp\phi_i\subseteq U_i$$은 각 $$\phi_i$$가 $$U_i$$ 바깥에서는 물론 $$U_i$$의 경계 부근에서까지 소멸함을 뜻하므로, $$U_i$$ 위에서만 정의된 국소적 자료에 $$\phi_i$$를 곱하면 그 곱을 $$X$$ 전체로 $$0$$을 채워 연속적으로 연장할 수 있게 된다. 이것이 단위분할이 국소 구성을 대역화하는 원리이다.
+첫째 조건의 국소유한성은 둘째 조건의 합 $$\sum_i\phi_i(x)$$이 각 점의 어떤 근방에서 유한합으로 환원되어 실제로 의미를 가지도록 보장한다. 종속성 조건 $$\supp\phi_i\subseteq U_i$$은 각 $$\phi_i$$가 $$U_i$$ 바깥에서는 물론 $$U_i$$의 경계 부근에서까지 소멸함을 뜻하므로, $$U_i$$ 위에서만 정의된 국소적 자료에 $$\phi_i$$를 곱하면 그 곱을 $$X$$ 전체로 $$0$$을 채워 연속적으로 연장할 수 있게 된다. 이것이 단위분할이 국소 구성을 대역화하는 원리이다.
 
 존재 증명의 관건은 정규성만으로는 부족하고, 덮개를 두 번 "수축"시켜 닫힌집합이 여전히 전체를 덮게 만드는 데에 있다. 이를 위한 보조정리를 먼저 마련한다. Family $$(U_i)_{i\in I}$$가 *point-finite<sub>점별유한</sub>*라는 것은 각 점 $$x\in X$$가 유한 개의 $$U_i$$에만 속하는 것을 말하며, locally finite family는 언제나 point-finite이다.
 
@@ -199,7 +199,7 @@ $$\sum_{\alpha\in J}\phi_\alpha(x)=\frac{1}{\psi(x)}\sum_{\alpha\in J}\psi_\alph
 :::
 
 ::: 참고 12
-[정리 11](#thm11)의 역도 성립한다. 임의의 open covering $$(U_i)_{i\in I}$$에 대하여 이에 종속된 단위분할 $$(\phi_i)_{i\in I}$$이 존재하는 공간 $$X$$가 주어졌다 하자. 그럼 열린집합 $$G_i=\{x\mid\phi_i(x)>0\}$$은 $$G_i\subseteq\supp\phi_i\subseteq U_i$$를 만족하여 $$(U_i)$$의 open refinement를 이루고, $$(\supp\phi_i)$$가 locally finite이므로 $$(G_i)$$도 locally finite이며, $$\sum_i\phi_i(x)=1$$로부터 각 $$x$$에서 $$\phi_i(x)>0$$인 $$i$$가 존재하여 $$(G_i)$$가 $$X$$를 덮는다. 따라서 $$X$$는 paracompact이다. Hausdorff 조건을 함께 놓으면 이것이 [§옹골성, ⁋정리 7](/ko/math/topology/compactness#thm7)에서 증명 없이 진술한 동치, 곧 위상공간이 paracompact Hausdorff인 것과 임의의 open covering이 종속 단위분할을 허락하는 것이 동치라는 사실을 이룬다.
+[정리 11](#thm11)의 역도 성립한다. 임의의 open covering $$(U_i)_{i\in I}$$에 대하여 이에 종속된 단위분할 $$(\phi_i)_{i\in I}$$이 존재하는 공간 $$X$$가 주어졌다 하자. 그럼 열린집합 $$G_i=\{x\mid\phi_i(x)>0\}$$은 $$G_i\subseteq\supp\phi_i\subseteq U_i$$를 만족하여 $$(U_i)$$의 open refinement를 이루고, $$(\supp\phi_i)$$가 locally finite이므로 $$(G_i)$$도 locally finite이며, $$\sum_i\phi_i(x)=1$$로부터 각 $$x$$에서 $$\phi_i(x)>0$$인 $$i$$가 존재하여 $$(G_i)$$가 $$X$$를 덮는다. 따라서 $$X$$는 paracompact이다. Hausdorff 조건을 함께 놓으면 이것은 위상공간이 paracompact Hausdorff인 것과 임의의 open covering이 종속 단위분할을 허락하는 것이 동치라는 사실을 이룬다.
 :::
 
 ## 국소 구성의 대역화
@@ -214,7 +214,30 @@ $$f=\sum_{\alpha\in J}\phi_\alpha f_\alpha$$
 은 각 점의 근방에서 유한합으로 환원되어 $$X$$ 전체에서 정의된 연속함수를 이룬다. 여기에서 $$f$$는 국소적 자료 $$(f_\alpha)$$를 단위분할의 무게로 평균 낸 대역적 함수이다. 반대로 $$X$$ 위의 임의의 연속함수 $$g$$가 주어지면 $$g=\sum_\alpha\phi_\alpha g$$이 성립하여, $$g$$가 $$U_\alpha$$ 위의 조각 $$\phi_\alpha g$$들로 분해된다.
 :::
 
-이 구성은 위상다양체를 다룰 때 특히 유용하다. 위상다양체는 언제나 paracompact Hausdorff space이므로, 그 임의의 좌표 덮개에 종속된 단위분할이 존재한다. 이 사실 덕분에 각 좌표조각에서 Euclidean space의 언어로 정의한 대상을 다양체 전체로 이어 붙이는 일이 가능해지며, 이것이 단위분할이 다양체론과 다발 이론에서 필수적인 도구로 쓰이는 이유이다.
+이 구성이 가장 본질적으로 쓰이는 무대가 위상다양체이다. 우리는 이 절에서 위상다양체를 정의하고, 그것이 언제나 앞 절의 단위분할을 허락하는 공간임을 확인한다. 위상다양체의 모델은 우리가 잘 아는 Euclidean space $$\mathbb{R}^m$$이며, 위상다양체란 국소적으로 이 모델을 닮은 공간이다.
+
+## 위상다양체
+
+::: 정의 14
+위상공간 $$M$$이 *locally Euclidean of dimension $$m$$*이라는 것은 임의의 $$x\in M$$마다 $$x$$의 열린근방 $$U$$가 존재하여 $$U$$가 $$\mathbb{R}^m$$의 열린집합과 homeomorphic한 것이다.
+:::
+
+Locally Euclidean 조건은 위상다양체의 국소적 본질이지만 그것만으로는 지나치게 약하여, 여기에 두 가지 대역적 조건을 더한다.
+
+::: 정의 15
+Second countable이고 Hausdorff이며 locally Euclidean of dimension $$m$$인 공간을 *topological manifold of dimension $$m$$*이라 부른다.
+:::
+
+Hausdorff와 second countability를 요구하는 까닭은 다음 정리에서 드러난다. 이 정리는 locally Euclidean 공간에서 second countability가 사실상 paracompactness와 같은 조건임을 말해 주며, 이로써 위상다양체가 앞 절에서 마련한 단위분할의 무대에 정확히 놓임을 확인해 준다.
+
+::: 정리 16
+Hausdorff이고 locally Euclidean인 위상공간 $$M$$에 대하여, $$M$$이 second countable인 것은 $$M$$이 paracompact이고 가산 개의 connected component를 갖는 것과 동치이다. ([§연결공간, ⁋정의 7](/ko/math/topology/connected_spaces#def7))
+:::
+::: 증명
+핵심 착상만 밝히고 세부는 **[Lee]**를 따른다. Locally Euclidean 조건에서 각 점은 $$\mathbb{R}^m$$의 열린집합과 위상동형인 근방을 가지므로 그 공간은 각 점에서 국소적 옹골공간처럼 행동한다. Second countable이면 [예시 4](#ex4)의 소진 논증을 일반화하여 $$M$$을 가산 개의 relatively compact 열린집합으로 덮을 수 있고, 이로부터 [명제 3](#prop3)의 유한성 논증과 같은 방식으로 국소유한 세분을 얻어 $$M$$이 paracompact임과 component가 가산임을 얻는다. 거꾸로 paracompact이고 component가 가산이면 각 component가 Lindelöf가 되어 가산 기저를 가지므로 $$M$$은 second countable이다.
+:::
+
+이 정리의 직접적인 귀결로 임의의 위상다양체 $$M$$은 paracompact Hausdorff space이며, 따라서 [정리 11](#thm11)에 의하여 $$M$$의 임의의 좌표 덮개에 종속된 단위분할이 존재한다. 이 사실 덕분에 각 좌표조각에서 Euclidean space의 언어로 정의한 대상을 다양체 전체로 이어 붙이는 일이 가능해지며, 이것이 단위분할이 다양체론과 다발 이론에서 필수적인 도구로 쓰이는 이유이다.
 
 ---
 
