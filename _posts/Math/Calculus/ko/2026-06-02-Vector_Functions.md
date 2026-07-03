@@ -9,11 +9,11 @@ sidebar:
     nav: "calculus-ko"
 
 date: 2026-06-02
-weight: 15
+weight: 13
 published: false
 ---
 
-지금까지 다룬 함수는 실수를 실수로 보내거나, 여러 실수를 한 실수로 보냈다. 이제 거꾸로 한 실수를 여러 실수로 보내는 함수, 곧 매개변수 하나로 공간 속의 곡선을 그리는 벡터값 함수를 생각한다. 이는 시간에 따라 움직이는 점의 자취로 볼 수 있어, 미분이 속도와 가속도라는 물리적 의미를 얻고, 적분이 곡선의 길이를 잰다.
+지금까지 다룬 함수는 실수를 실수로 보내는 $$f:\mathbb{R}\to\mathbb{R}$$에 국한되었다. 이제 함수를 더 일반적으로 택하여 새로운 내용을 시작한다. 일반화의 방향은 차원을 늘리는 것인데, 정의역의 차원을 올리는 방향과 공역의 차원을 올리는 방향이 있다. 이 글에서는 후자, 곧 한 실수를 여러 실수로 보내는 함수 $$\mathbf{r}:\mathbb{R}\to\mathbb{R}^n$$을 다룬다. 이는 매개변수 하나로 공간 속의 곡선을 그리는 벡터값 함수로, 시간에 따라 움직이는 점의 자취로 볼 수 있어 미분이 속도와 가속도라는 물리적 의미를 얻고 적분이 곡선의 길이를 잰다.
 
 ## 벡터값 함수
 
@@ -46,7 +46,7 @@ $$(f \mathbf{u})' = f' \mathbf{u} + f \mathbf{u}', \qquad (\mathbf{u} \cdot \mat
 :::
 
 ::: 증명
-모두 성분별로 적으면 스칼라함수의 곱미분과 연쇄법칙으로 환원된다. 가령 점곱은 $$\mathbf{u} \cdot \mathbf{v} = \sum_i u_i v_i$$이므로 $$(\mathbf{u} \cdot \mathbf{v})' = \sum_i (u_i' v_i + u_i v_i') = \mathbf{u}' \cdot \mathbf{v} + \mathbf{u} \cdot \mathbf{v}'$$이고, 교차곱과 스칼라곱도 각 성분이 $$u_i v_j$$ 꼴의 곱들의 합이라 같은 방식으로 따른다. 합성은 [§다변수함수와 편미분, ⁋정리 6](/ko/math/calculus/partial_derivatives#thm6)의 한 변수 특수경우, 곧 보통의 연쇄법칙을 각 성분에 적용한 것이다.
+모두 성분별로 적으면 스칼라함수의 곱미분과 연쇄법칙으로 환원된다. 가령 점곱은 $$\mathbf{u} \cdot \mathbf{v} = \sum_i u_i v_i$$이므로 $$(\mathbf{u} \cdot \mathbf{v})' = \sum_i (u_i' v_i + u_i v_i') = \mathbf{u}' \cdot \mathbf{v} + \mathbf{u} \cdot \mathbf{v}'$$이고, 교차곱과 스칼라곱도 각 성분이 $$u_i v_j$$ 꼴의 곱들의 합이라 같은 방식으로 따른다. 합성은 [§미분법, ⁋정리 4](/ko/math/calculus/differentiation_rules#thm4)의 연쇄법칙을 각 성분에 적용한 것이다.
 :::
 
 점곱의 미분에서 곧바로 유용한 따름정리가 나온다. $$\lvert \mathbf{u}(t)\rvert$$가 상수이면 $$\mathbf{u} \cdot \mathbf{u} = \lvert \mathbf{u}\rvert^2$$도 상수이므로 $$(\mathbf{u} \cdot \mathbf{u})' = 2 \mathbf{u} \cdot \mathbf{u}' = 0$$, 곧 $$\mathbf{u} \perp \mathbf{u}'$$이다. 길이가 일정한 벡터의 변화율은 항상 그 벡터에 수직이다. 원운동에서 위치벡터와 속도가 수직인 것이 이 사실의 특수한 경우이다.
