@@ -15,6 +15,34 @@ published: false
 
 지금까지 다룬 함수는 실수를 실수로 보내는 $$f:\mathbb{R}\to\mathbb{R}$$에 국한되었다. 이제 함수를 더 일반적으로 택하여 새로운 내용을 시작한다. 일반화의 방향은 차원을 늘리는 것인데, 정의역의 차원을 올리는 방향과 공역의 차원을 올리는 방향이 있다. 이 글에서는 후자, 곧 한 실수를 여러 실수로 보내는 함수 $$\mathbf{r}:\mathbb{R}\to\mathbb{R}^n$$을 다룬다. 이는 매개변수 하나로 공간 속의 곡선을 그리는 벡터값 함수로, 시간에 따라 움직이는 점의 자취로 볼 수 있어 미분이 속도와 가속도라는 물리적 의미를 얻고 적분이 곡선의 길이를 잰다.
 
+## 벡터공간
+
+곡선은 한 실수를 받아 여러 실수로 이루어진 점을 내어주는 함수, 곧 $$\mathbb{R}^n$$ 안으로 들어가는 함수이므로, 그 공간의 구조를 먼저 간략히 정리한다. $$\mathbb{R}^n$$은 *벡터공간<sub>vector space</sub>*이며, 이 공간의 원소를 *벡터<sub>vector</sub>*라 부른다. 벡터는 순서쌍
+
+$$\mathbf{a}=(a_1, \ldots, a_n)\qquad a_i\in\mathbb{R}$$
+
+으로 쓰이며, 벡터들 사이에는 두 가지 기본 연산이 있다. 하나는 두 벡터 $$\mathbf{v}=(v_1,\ldots,v_n)$$와 $$\mathbf{w}=(w_1,\ldots,w_n)$$를 더하는 *덧셈*
+
+$$\mathbf{v}+\mathbf{w}=(v_1+w_1,\ldots,v_n+w_n)$$
+
+이고, 다른 하나는 실수 $$c$$를 곱하는 *스칼라곱*
+
+$$c\mathbf{v}=(cv_1,\ldots,cv_n)$$
+
+이다. 이 연산들은 좌표평면에서 본 벡터 연산을 $$n$$차원으로 그대로 옮긴 것이며, 교환법칙과 결합법칙, 분배법칙 등이 자연스럽게 성립한다.
+
+우리가 다루는 공간은 유클리드 공간이므로 여기에 내적과 노름도 함께 사용한다. 두 벡터 $$\mathbf{v},\mathbf{w}\in\mathbb{R}^n$$의 *내적<sub>inner product</sub>*은 좌표별 곱의 합
+
+$$\mathbf{v}\cdot \mathbf{w}=v_1w_1+\cdots+v_nw_n$$
+
+으로 정의되고, 이로부터 벡터의 *norm<sub>노름</sub>*, 즉 크기는 $$\lvert \mathbf{v}\rvert=\sqrt{\mathbf{v}\cdot \mathbf{v}}$$로 주어진다. 내적은 두 벡터가 이루는 각도를 재는 데에도 쓰이며, 특히 $$\mathbf{v}\cdot \mathbf{w}=0$$일 때 두 벡터가 서로 *직교<sub>orthogonal</sub>*한다고 한다.
+
+한편, 세 차원 $$\mathbb{R}^3$$에서는 추가로 *외적<sub>cross product</sub>*이 정의된다. 두 벡터 $$\mathbf{v},\mathbf{w}\in\mathbb{R}^3$$에 대해 외적 $$\mathbf{v}\times \mathbf{w}$$는 $$\mathbf{v}$$와 $$\mathbf{w}$$ 모두에 직교하면서 방향이 오른손 법칙을 따르고, 크기는 $$\mathbf{v}$$와 $$\mathbf{w}$$가 이루는 평행사변형의 넓이와 같은 벡터이다. 좌표로는
+
+$$\mathbf{v}\times \mathbf{w}=(v_2w_3-v_3w_2,\ v_3w_1-v_1w_3,\ v_1w_2-v_2w_1)$$
+
+로 계산한다. 이 글에서는 외적을 주로 직교하는 벡터를 만드는 도구로 쓴다.
+
 ## 벡터값 함수
 
 ::: 정의 1
