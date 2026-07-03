@@ -128,13 +128,13 @@ $$0\cdot\left(-\tfrac{1}{6}\right)+1\cdot\tfrac{1}{3}+2\cdot\left(-\tfrac{1}{6}\
 
 우선 임의의 $$A\in\Mat_{m\times n}(\mathbb{R})$$과 $$y\in\im(A)$$가 주어졌다 하고, $$A$$가 단사가 아니라 하자. 그럼 $$Au=0$$을 만족하는 영이 아닌 벡터 $$u$$들이 존재하며, 따라서 $$Ax=y$$를 만족하는 벡터 $$x$$가 하나 주어진다면, $$x+u$$들 또한 해가 된다는 것을 알 수 있다. 이제 이들 중 가장 작은 norm을 갖는 해를 찾아 이를 *최소노름해<sub>minimum-norm solution</sub>*라 부르자. 즉, $$Ax=y$$의 해 전체는 한 특수해 $$x_0$$에 대하여 $$x_0+\ker A$$의 꼴을 이루며, 우리는 이 affine 부분공간 위에서 norm을 최소로 만드는 점을 찾는다.
 
-이는 [§내적공간, ⁋정리 9](/ko/math/linear_algebra/inner_product_spaces#thm9)의 projection theorem이 다루는 상황과 정확히 같다. 원점에서 affine 부분공간 $$x_0+\ker A$$까지의 거리를 최소로 만드는 점은 유일하며, 이 점에서 affine 부분공간으로 그은 벡터는 $$\ker A$$에 수직이다. 따라서 최소노름해는 $$(\ker A)^\perp$$에 놓인 유일한 해이다. 한편 [§쌍선형형식, ⁋명제 5](/ko/math/linear_algebra/bilinear_form#prop5)에 의하여 $$(\ker A)^\perp=\im A^t$$이 성립한다. 이를 정리하면 다음과 같다.
+이는 [§내적공간, ⁋정리 9](/ko/math/linear_algebra/inner_product_spaces#thm9)의 projection theorem이 다루는 상황과 정확히 같다. 원점에서 affine 부분공간 $$x_0+\ker A$$까지의 거리를 최소로 만드는 점은 유일하며, 이 점에서 affine 부분공간으로 그은 벡터는 $$\ker A$$에 수직이다. 따라서 최소노름해는 $$(\ker A)^\perp$$에 놓인 유일한 해이다. 한편 [§쌍선형형식, ⁋명제 8](/ko/math/linear_algebra/bilinear_form#prop8)에 의하여 $$(\ker A)^\perp=\im A^t$$이 성립한다. 이를 정리하면 다음과 같다.
 
 ::: 명제 5
 임의의 행렬 $$A\in\Mat_{m\times n}(\mathbb{R})$$과 $$y\in\im A$$에 대하여, 방정식 $$Ax=y$$의 해들 중 norm을 최소로 하는 해는 유일하게 존재하며, 이는 $$\im A^t$$에 속하는 유일한 해이다.
 :::
 ::: 증명
-$$y\in\im A$$이므로 $$Ax_0=y$$를 만족하는 $$x_0$$이 존재하고, $$Ax=y$$의 해 전체는 $$x_0+\ker A$$와 같다. [§쌍선형형식, ⁋명제 5](/ko/math/linear_algebra/bilinear_form#prop5)에 의하여
+$$y\in\im A$$이므로 $$Ax_0=y$$를 만족하는 $$x_0$$이 존재하고, $$Ax=y$$의 해 전체는 $$x_0+\ker A$$와 같다. [§쌍선형형식, ⁋명제 8](/ko/math/linear_algebra/bilinear_form#prop8)에 의하여
 
 $$\mathbb{R}^n=\ker A\oplus(\ker A)^\perp$$
 

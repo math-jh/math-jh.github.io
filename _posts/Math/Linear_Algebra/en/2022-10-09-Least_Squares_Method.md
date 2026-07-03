@@ -126,13 +126,13 @@ Now we consider the opposite case: a matrix $$A\in\Mat_{m\times n}(\mathbb{R})$$
 
 First, suppose arbitrary $$A\in\Mat_{m\times n}(\mathbb{R})$$ and $$y\in\im(A)$$ are given, and assume $$A$$ is not injective. Then there exist non-zero vectors $$u$$ satisfying $$Au=0$$, and therefore if a vector $$x$$ satisfying $$Ax=y$$ is given, we can see that the $$x+u$$ are also solutions. Now let us find among these the solution with the smallest norm and call it the *minimum-norm solution*. That is, the entire set of solutions of $$Ax=y$$ forms $$x_0+\ker A$$ for a particular solution $$x_0$$, and we seek the point on this affine subspace that minimizes the norm.
 
-This is exactly the situation treated by the projection theorem in [§Inner Product Spaces, ⁋Theorem 9](/en/math/linear_algebra/inner_product_spaces#thm9). The point that minimizes the distance from the origin to the affine subspace $$x_0+\ker A$$ is unique, and the vector drawn from this point to the affine subspace is perpendicular to $$\ker A$$. Therefore the minimum-norm solution is the unique solution lying in $$(\ker A)^\perp$$. On the other hand, by [§Bilinear Forms, ⁋Proposition 5](/en/math/linear_algebra/bilinear_form#prop5), we have $$(\ker A)^\perp=\im A^t$$. This can be summarized as follows.
+This is exactly the situation treated by the projection theorem in [§Inner Product Spaces, ⁋Theorem 9](/en/math/linear_algebra/inner_product_spaces#thm9). The point that minimizes the distance from the origin to the affine subspace $$x_0+\ker A$$ is unique, and the vector drawn from this point to the affine subspace is perpendicular to $$\ker A$$. Therefore the minimum-norm solution is the unique solution lying in $$(\ker A)^\perp$$. On the other hand, by [§Bilinear Forms, ⁋Proposition 8](/en/math/linear_algebra/bilinear_form#prop8), we have $$(\ker A)^\perp=\im A^t$$. This can be summarized as follows.
 
 ::: Proposition 5
 For an arbitrary matrix $$A\in\Mat_{m\times n}(\mathbb{R})$$ and $$y\in\im A$$, among the solutions of the equation $$Ax=y$$ there exists a unique solution that minimizes the norm, and this is the unique solution belonging to $$\im A^t$$.
 :::
 ::: Proof
-Since $$y\in\im A$$, there exists $$x_0$$ satisfying $$Ax_0=y$$, and the entire set of solutions of $$Ax=y$$ is $$x_0+\ker A$$. By [§Bilinear Forms, ⁋Proposition 5](/en/math/linear_algebra/bilinear_form#prop5),
+Since $$y\in\im A$$, there exists $$x_0$$ satisfying $$Ax_0=y$$, and the entire set of solutions of $$Ax=y$$ is $$x_0+\ker A$$. By [§Bilinear Forms, ⁋Proposition 8](/en/math/linear_algebra/bilinear_form#prop8),
 
 $$\mathbb{R}^n=\ker A\oplus(\ker A)^\perp$$
 
