@@ -24,13 +24,11 @@ For Lie groups, this representation-theoretic perspective is even more useful, b
 
 However, as in [\[Representation Theory\] §Representation Theory of Finite Groups, ⁋Definition 1](/en/math/representation_theory/representations_of_finite_groups#def1), if we define the representation theory of $$G$$ in this way, we lose the smooth structure on the Lie group $$G$$. Thus we must modify the definition as follows.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> For a Lie group $$G$$, a *representation* of $$G$$ consists of a finite-dimensional vector space $$V$$ together with a smooth map
+::: Definition 1
+For a Lie group $$G$$, a *representation* of $$G$$ consists of a finite-dimensional vector space $$V$$ together with a smooth map
 
 $$\rho:G\rightarrow \Aut(V)$$
-
-</div>
+:::
 
 If we regard $$G$$ as a Lie group equipped with the discrete topology and the trivial smooth structure, then this definition can be viewed as a generalization of [\[Representation Theory\] §Representation Theory of Finite Groups, ⁋Definition 1](/en/math/representation_theory/representations_of_finite_groups#def1). Similarly, all definitions in [\[Representation Theory\] §Representation Theory of Finite Groups, §§Basic Concepts of Representation Theory](/en/math/representation_theory/representations_of_finite_groups#basic-concepts-of-representation-theory) can be carried over to Lie groups.
 
@@ -42,11 +40,9 @@ On the other hand, given a finite-dimensional representation $$G\rightarrow\Aut(
 
 One of the most important tools in linear algebra is diagonalization. Thus, for a given Lie group action $$\rho:G \rightarrow \Aut(V)$$, we are interested in choosing a basis of $$V$$ so that the matrix representation of each $$\rho(g)$$ becomes diagonal. If $$G$$ were finite, we could find such a basis for each $$g$$ individually, but since $$G$$ is now infinite, this is difficult. Therefore, we naturally become interested in elements that are simultaneously diagonalizable. Now, [\[Linear Algebra\] §Eigenspace Decomposition, ⁋Proposition 10](/en/math/linear_algebra/eigenspace_decomposition#prop10) tells us that two diagonalizable matrices are simultaneously diagonalizable if and only if they commute, so the following definition is appropriate.
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**Definition 2**</ins> For a compact, connected Lie group $$G$$, a subgroup $$T$$ of $$G$$ is called a *maximal torus* if $$T$$ is a torus and is maximal with respect to inclusion.
-
-</div>
+::: Definition 2
+For a compact, connected Lie group $$G$$, a subgroup $$T$$ of $$G$$ is called a *maximal torus* if $$T$$ is a torus and is maximal with respect to inclusion.
+:::
 
 Choosing an arbitrary element $$X$$ of the Lie algebra $$\mathfrak{g}$$, the closure of the one-parameter subgroup traced by the exponential map in this direction becomes a torus. Hence the existence of a maximal torus is immediate by [\[Set Theory\] §Axiom of Choice, ⁋Theorem 4](/en/math/set_theory/axiom_of_choice#thm4).
 
@@ -82,9 +78,8 @@ Then for each $$t\in T$$, $$\rho(t)$$ is diagonalized by this decomposition, and
 
 Intuitively, we can think of $$t\mapsto e^{2\pi i\lambda_i(X)}$$ as a rotational motion with angular velocity $$\lambda_i(X)$$, and adopting this perspective, we know that for each $$X\in \mathfrak{t}$$, we can describe this torus action by the angular velocity $$\lambda_i(X)$$ in this direction. Each of these $$\lambda_i$$ is called a *weight*. Then for each weight $$\lambda_i$$, there exists an appropriate $$V_i$$ on which the torus action operates as $$t\cdot v=\rchi_{\lambda_i}(t)v$$. Such a $$V_i$$ is called a *weight space*.
 
-<div class="example" markdown="1">
-
-<ins id="ex3">**Example 3**</ins> As a concrete example, consider the one-dimensional torus
+::: Example 3
+As a concrete example, consider the one-dimensional torus
 
 $$S^1\cong T \cong \mathbb{R}/\mathbb{Z}$$
 
@@ -119,8 +114,7 @@ then the elements that can be weights in its Lie algebra $$\mathfrak{t}\cong \ma
 $$\lambda=(n_1, \ldots, n_r)$$
 
 Explicitly, this weight is the linear functional that outputs $$n_1x_1+\cdots+n_rx_r$$ when given arbitrary $$X=(x_1,\ldots, x_r)\in \mathfrak{t}$$.
-
-</div>
+:::
 
 Just as in eigenspace decomposition in linear algebra, the multiplicity of each weight need not be $$1$$. For example, consider the following torus action
 
@@ -128,9 +122,8 @@ $$e^{2\pi i t}\cdot(z_1, z_2)=(e^{4\pi i t}z_1, e^{4\pi i t} z_2)$$
 
 then this time $$T$$ acts on the two-dimensional space $$\mathbb{C}^2$$ as if it had weight $$2$$. Collecting components that have the same weight $$\lambda$$ in this way and calling this $$V_\lambda$$, we obtain the *weight space decomposition* $$V=\bigoplus V_\lambda$$. Writing the discussion so far rigorously as a definition, we have the following.
 
-<div class="definition" markdown="1">
-
-<ins id="def4">**Definition 4**</ins> Let a torus $$T$$ and a complex $$T$$-module $$V$$ be given. For an irreducible character $$\rchi_\lambda: T \rightarrow S^1$$ and the corresponding linear functional $$\lambda:\mathfrak{t}\rightarrow\mathbb{C}$$, we say that $$\lambda$$ is a *weight* of $$V$$ if the set
+::: Definition 4
+Let a torus $$T$$ and a complex $$T$$-module $$V$$ be given. For an irreducible character $$\rchi_\lambda: T \rightarrow S^1$$ and the corresponding linear functional $$\lambda:\mathfrak{t}\rightarrow\mathbb{C}$$, we say that $$\lambda$$ is a *weight* of $$V$$ if the set
 
 $$V_\lambda=\left\{v\in V\mid t\cdot v=\rchi_\lambda(t)v\text{ for all $t\in T$}\right\}$$
 
@@ -139,8 +132,7 @@ is nontrivial. In this case, we call $$V_\lambda$$ the *weight space* of $$\lamb
 $$V=\bigoplus_\lambda V_\lambda$$
 
 is called the *weight decomposition* of $$V$$.
-
-</div>
+:::
 
 ## Maximal tori
 
@@ -154,26 +146,20 @@ is surjective. Then in particular, for any other torus $$T'$$ and its generator 
 
 We can not only show that this map is surjective, but also compute its explicit mapping degree. For this purpose, let us define the following.
 
-<div class="definition" markdown="1">
-
-<ins id="def5">**Definition 5**</ins> For a compact, connected Lie group $$G$$, a maximal torus $$T$$, and the normalizer of $$T$$
+::: Definition 5
+For a compact, connected Lie group $$G$$, a maximal torus $$T$$, and the normalizer of $$T$$
 
 $$N=\{g\in G\mid gTg^{-1}=T\}$$
 
 we define the group $$W=N/T$$ as the *Weyl group* of $$G$$.
-
-</div>
+:::
 
 Then the following holds.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop6">**Proposition 6**</ins> The Weyl group $$W=N/T$$ is always finite.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 6
+The Weyl group $$W=N/T$$ is always finite.
+:::
+::: Proof
 By definition, $$N$$ acts on $$T$$ by conjugation
 
 $$N\rightarrow\Aut(T);\qquad n\mapsto (t\mapsto ntn^{-1})$$
@@ -183,23 +169,18 @@ However, $$\Aut(T)$$ is determined by where the lattice of the torus $$T=\mathbb
 Now for an arbitrary one-parameter subgroup $$\alpha:\mathbb{R}\rightarrow N_0$$, we must have $$\alpha(\mathbb{R})\cdot T=T$$, and from this we know that $$\alpha(\mathbb{R})\subset T$$. But by [\[Manifolds\] §Vector Fields, ⁋Theorem 6](/en/math/manifolds/vector_fields#thm6), these cover some open neighborhood of the identity in $$N_0$$, and therefore generate $$N_0$$. That is, $$N_0=T$$.
 
 Therefore $$N/T$$ is exactly the number of connected components of $$N$$, and since $$N$$ is a closed subspace of the compact Lie group $$G$$, it is likewise compact, so this cannot be infinite.
-
-</details>
+:::
 
 Now our claim is as follows.
 
-<div class="proposition" markdown="1">
-
-<ins id="lem7">**Lemma 7**</ins> For a compact, connected Lie group $$G$$, a maximal torus $$T$$, and the map
+::: Lemma 7
+For a compact, connected Lie group $$G$$, a maximal torus $$T$$, and the map
 
 $$q:G/T\times T\rightarrow G;\qquad (gT, s)\mapsto gsg^{-1}$$
 
 the mapping degree of $$q$$ is $$\lvert W\rvert$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 To compute the mapping degree, it suffices to choose one regular value and find all its preimages, then compute the sign of the differential at each preimage.
 
 For this, first choose a generator $$t$$ of $$T$$ and consider its preimage $$q^{-1}(t)$$. For arbitrary $$(gT,s)\in G/T\times T$$, the condition $$q(gT,s)=t$$ means $$gsg^{-1}=t$$. On the other hand, $$g^{-1}tg=s\in T$$, and
@@ -263,19 +244,16 @@ $$\Ad_{wt^{-1}w^{-1}}\vert_\mathfrak{f}-I=\Ad_w\circ(\Ad_t^{-1}\vert_\mathfrak{f
 so these two operators are similar and thus have the same determinant.
 
 From the above, we have verified that $$t$$ is a regular value of $$q$$, the number of elements in $$q^{-1}(t)$$ is $$\lvert W\rvert$$, and the determinant of $$dq$$ has the same sign at all preimage points. Therefore, with an appropriate choice of orientation, $$\deg q=\lvert W\rvert$$.
-
-</details>
+:::
 
 As mentioned above, the core content of this section follows immediately from this lemma.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm8">**Theorem 8**</ins> For a compact connected Lie group $$G$$, the following hold.
+::: Theorem 8
+For a compact connected Lie group $$G$$, the following hold.
 
 1. Any element of $$G$$ is contained in some maximal torus.
 2. Any two maximal tori of $$G$$ are conjugate.
-
-</div>
+:::
 
 Therefore, for any compact connected Lie group $$G$$ and maximal torus $$T$$, we obtain the decomposition
 
@@ -311,27 +289,20 @@ $$[g]=\{hgh^{-1}\mid h\in G\}$$
 
 is described through $$T$$ and $$W$$ as follows.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop9">**Proposition 9**</ins> Two elements of a maximal torus $$T$$ are conjugate in $$G$$ if and only if they belong to the same orbit under the Weyl group action.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 9
+Two elements of a maximal torus $$T$$ are conjugate in $$G$$ if and only if they belong to the same orbit under the Weyl group action.
+:::
+::: Proof
 Let $$x,y$$ be two elements of $$T$$ that are conjugate to each other. That is, for some $$g\in G$$, we have $$gxg^{-1}=y$$. Now comparing $$T$$ and $$gTg^{-1}$$, these are maximal tori in the centralizer $$Z_G(y)$$ of $$y$$. Therefore, there exists $$h\in Z_G(y)$$ such that $$T=h(gTg^{-1})h^{-1}$$, and from this $$(hg)x(hg)^{-1}=y$$ and $$hg\in N_G(T)$$. That is, $$y=(hgT)\cdot x$$, so $$x$$ and $$y$$ belong to the same $$W$$-orbit.
 
 Conversely, if $$x$$ and $$y$$ belong to the same $$W$$-orbit, they are obviously conjugate in $$G$$.
-
-</details>
+:::
 
 From this, we know that for each conjugacy class $$[g]$$, the intersection $$[g]\cap T$$ is exactly one $$W$$-orbit. Therefore we obtain the following one-to-one correspondence.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop10">**Proposition 10**</ins> There is a natural one-to-one correspondence between $$T/W$$ and $$\Conj(G)$$.
-
-</div>
+::: Proposition 10
+There is a natural one-to-one correspondence between $$T/W$$ and $$\Conj(G)$$.
+:::
 
 Under this one-to-one correspondence, the conjugation action on $$G$$ acts trivially on $$T/W$$. That is, each element of $$G$$ preserves the conjugacy class to which it belongs.
 
@@ -353,15 +324,13 @@ $$h\cdot(gT,t)=(hgT,t)$$
 
 Now it is obvious that this action commutes with the $$W$$-action, and therefore $$G$$ induces a well-defined action on the quotient $$(G/T\times T)/W$$ as well. From this observation we obtain the following.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop11">**Proposition 11**</ins> Under the identification $$(G/T\times T)/W\cong G$$, the conjugation action is expressed as follows.
+::: Proposition 11
+Under the identification $$(G/T\times T)/W\cong G$$, the conjugation action is expressed as follows.
 
 $$h\cdot[(gT,t)]=[(hgT,t)]$$
 
 That is, it acts by left multiplication on the $$G/T$$ component and preserves the $$T$$ component.
-
-</div>
+:::
 
 On the other hand, by [Proposition 10](#prop10), we know that there is a one-to-one correspondence between $$T/W$$ and $$\Conj(G)$$. By definition, $$c_h$$ does not change the conjugacy class of $$G$$, and we can check that this is reflected in the fact that there is no change in the $$T$$ direction in the above proposition. Instead, the conjugation action can be thought of as acting exactly on $$G/T$$.
 
@@ -431,44 +400,35 @@ Now considering the standard representation of $$\SU(2)$$ on $$\mathbb{C}^2$$, w
 
 Finally, we examine a definition that gives a taste of the motivation for root systems, which we will cover in the next post. In [Lemma 7](#lem7), we computed the preimage of $$q$$ at a generator $$t$$ of $$T$$ and checked that there are $$\lvert W\rvert$$ of them. Now that we know $$W$$ acts on $$T$$, we can write this condition as follows.
 
-<div class="definition" markdown="1">
-
-<ins id="def12">**Definition 12**</ins> An element $$t$$ of a maximal torus $$T$$ is called *regular* if the only $$w\in W$$ satisfying $$wtw^{-1}=t$$ is $$w=e$$. Conversely, if there exists $$w\neq e$$ such that $$wtw^{-1}=t$$, then $$t$$ is called *singular*.
-
-</div>
+::: Definition 12
+An element $$t$$ of a maximal torus $$T$$ is called *regular* if the only $$w\in W$$ satisfying $$wtw^{-1}=t$$ is $$w=e$$. Conversely, if there exists $$w\neq e$$ such that $$wtw^{-1}=t$$, then $$t$$ is called *singular*.
+:::
 
 That is, a regular element is one whose stabilizer under the Weyl group action is trivial, and a singular element is one with a nontrivial stabilizer. In general, to compute the mapping degree of $$q$$, one must compute the value at a regular value of $$q$$, and thinking of the orbit-stabilizer theorem, we know that for the preimage to have $$\lvert W\rvert$$ images in this way, the stabilizer must necessarily be trivial. From this, it is natural to call such elements regular.
 
-<div class="example" markdown="1">
-
-<ins id="ex13">**Example 13**</ins> In the case of $$\SU(2)$$, $$T=\{\text{diag}(e^{i\theta}, e^{-i\theta})\}$$ and $$W=\mathbb{Z}_2$$ acts by $$\theta\mapsto -\theta$$. Therefore:
+::: Example 13
+In the case of $$\SU(2)$$, $$T=\{\text{diag}(e^{i\theta}, e^{-i\theta})\}$$ and $$W=\mathbb{Z}_2$$ acts by $$\theta\mapsto -\theta$$. Therefore:
 
 - **Regular:** Elements with $$\theta \neq 0, \pi$$. These are not fixed points of the reflection.
 - **Singular:** $$\theta=0$$ (identity) and $$\theta=\pi$$ ($$\text{diag}(-1,-1)$$). These are fixed by the reflection.
 
 On the torus $$T\cong S^1$$, there are exactly two singular elements, and the regular elements are their complement.
-
-</div>
+:::
 
 In general, the following holds.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop14">**Proposition 14**</ins> For a maximal torus $$T$$ of a compact connected Lie group $$G$$:
+::: Proposition 14
+For a maximal torus $$T$$ of a compact connected Lie group $$G$$:
 
 1. The regular elements form a dense open subset of $$T$$.
 2. The singular elements form a closed subset of codimension $$\geq 1$$ in $$T$$.
 3. The set of singular elements is a union of finitely many subgroups.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 (1) and (2): For each $$w\in W$$, $$w\neq e$$, the fixed point set $$\{t\in T: wtw^{-1}=t\}$$ is a proper closed subgroup of $$T$$. The set of singular elements is the finite union of these, so it is closed, and its complement (the regular elements) is dense open.
 
 (3): The fixed point set for each $$w\neq e$$ is a closed subgroup of $$T$$, and since $$W$$ is finite, it is a union of finitely many subgroups.
-
-</details>
+:::
 
 The set formed by singular elements in $$T$$ divides the torus into several pieces. For example, in the case of $$\SU(2)$$, the two singular elements divide $$S^1$$ into two semicircles. On each semicircle, the Weyl group defines a free action, and the Weyl group action serves to identify them with each other.
 

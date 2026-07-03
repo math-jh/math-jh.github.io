@@ -21,11 +21,9 @@ last_polished_at: 2026-06-02T20:00:01+00:00
 
 To discuss whether the product of sets is associative, we must first define partial products.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> Let a family $$(A_i)_{i\in I}$$ and its product $$\prod_{i\in I} A_i$$ be given. Then for a subset $$J\subseteq I$$ of the index set, we call $$\prod_{j\in J} A_j$$ a *partial product*.
-
-</div>
+::: Definition 1
+Let a family $$(A_i)_{i\in I}$$ and its product $$\prod_{i\in I} A_i$$ be given. Then for a subset $$J\subseteq I$$ of the index set, we call $$\prod_{j\in J} A_j$$ a *partial product*.
+:::
 
 Let a partial product $$\prod_{j\in J}A_j$$ of $$\prod_{i\in I}A_i$$ be given. Then for any $$F\in\prod_{i\in I}A_i$$,
 
@@ -39,41 +37,29 @@ $$\prod_{i\in I}A_i\longrightarrow \prod_{j\in J}A_j\longrightarrow \prod_{k\in 
 
 is simply the $$K$$-th projection $$\pr_K$$ from $$\prod_{i\in I}A_i$$ to its partial product $$\prod_{k\in K}A_k$$. This follows from $$\Delta_K=\Delta_J\circ\Delta_K$$.
 
-<div class="proposition" markdown="1">
+::: Proposition 2
+Consider a family $$(A_i)_{i\in I}$$ whose every component is non-empty, and let $$J\subseteq I$$. If $$g:J\rightarrow\bigcup_{i\in I} A_i$$ satisfies $$g(j)\in A_j$$, then there exists an extension $$f:I\rightarrow\bigcup_{i\in I} A_i$$ of $$g$$ such that $$f(i)\in A_i$$.
+:::
 
-<ins id="prop2">**Proposition 2**</ins> Consider a family $$(A_i)_{i\in I}$$ whose every component is non-empty, and let $$J\subseteq I$$. If $$g:J\rightarrow\bigcup_{i\in I} A_i$$ satisfies $$g(j)\in A_j$$, then there exists an extension $$f:I\rightarrow\bigcup_{i\in I} A_i$$ of $$g$$ such that $$f(i)\in A_i$$.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proof
 Let $$g=(G,J,\bigcup A_i)$$. For each $$i\in I\setminus J$$, since $$A_i$$ is non-empty we can choose an element $$x_i\in A_i$$. Now define
 
 $$F=G\cup\biggl(\bigcup_{i\in I\setminus J}\{(i, x_i)\}\biggr)$$
 
 and set $$f=(F,I,\bigcup A_i)$$. This yields the desired result.
+:::
 
-</details>
+::: Proposition 3
+Let a family $$(A_i)_{i\in I}$$ with non-empty index set $$I$$ be given. If $$(J_k)_{k\in K}$$ is a partition of $$I$$, then the function $$f\mapsto (\pr_{J_k}(f))_{k\in K}$$ from $$\prod_{i\in I}A_i$$ to $$\prod_{k\in K}\left(\prod_{j\in J_k}A_j\right)$$ is also a bijection.
+:::
 
-<div class="proposition" markdown="1">
-
-<ins id="prop3">**Proposition 3**</ins> Let a family $$(A_i)_{i\in I}$$ with non-empty index set $$I$$ be given. If $$(J_k)_{k\in K}$$ is a partition of $$I$$, then the function $$f\mapsto (\pr_{J_k}(f))_{k\in K}$$ from $$\prod_{i\in I}A_i$$ to $$\prod_{k\in K}\left(\prod_{j\in J_k}A_j\right)$$ is also a bijection.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>Proof 1</summary>
-
+::: Proof
 Since $$(J_k)_{k\in K}$$ is a partition, the functions $$f_k:J_k\rightarrow \bigcup_{i\in I} A_i$$ form a family of functions with pairwise disjoint domains; hence by [§Sum of Sets, ⁋Proposition 2](/en/math/set_theory/sum_of_sets#prop2) we obtain a bijection.
-
-</details>
+:::
 
 The proof above is concise, but the following argument using the universal property is equally elegant.
 
-<details class="proof--alone" markdown="1">
-<summary>Proof 2</summary>
-
+::: Proof (Proposition 3)
 For notational cleanliness we adopt the following uniform convention:
 
 - The $$k$$-th projection of the product $$\prod_{k\in K}\left(\prod_{j\in J_k}A_j\right)$$ with respect to the index set $$K$$
@@ -121,29 +107,22 @@ $${\pr_i}\circ(\phi\circ\psi)=({\pr_i}\circ\phi)\circ\psi={\pr_{ik}}\circ\psi={\
 we obtain the desired conclusion. (The last equality regards $$\pr_j$$ as the projection onto $$\{j\}\subseteq I$$.) Although this equation appears complicated, it is merely the formulaic transcription of the statement that the following diagram commutes:
 
 ![partial_product_pf_4](/assets/images/Math/Set_Theory/Property_of_Products-4.svg){:style="width:17.00em" class="invert" .align-center}
-
-</details> 
+:::
 
 Let $$(A_i)_{i\in I}$$ and $$(B_i)_{i\in I}$$ be families with the same index set, and let a family of functions $$(g_i:A_i\rightarrow B_i)_{i\in I}$$ be given. Define $$u_f:I\rightarrow\bigcup_{i\in I}B_i$$ by $$i\mapsto g_i(f(i))$$; then $$u_f(i)\in B_i$$, and therefore $$u_f\in\prod_{i\in I}B_i$$.
 
-<div class="definition" markdown="1">
+::: Definition 4
+The function $$f\mapsto u_f$$ defined above is called the *product* of the $$(g_i)$$ and is denoted by $$\prod_{i\in I}g_i$$.
+:::
 
-<ins id="def4">**Definition 4**</ins> The function $$f\mapsto u_f$$ defined above is called the *product* of the $$(g_i)$$ and is denoted by $$\prod_{i\in I}g_i$$.
-
-</div>
-
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**Proposition 5**</ins> Let $$(A_i)_{i\in I}$$, $$(B_i)_{i\in I}$$, and $$(C_i)_{i\in I}$$ be three families, and let $$(f_i)_{i\in I}$$ and $$(g_i)_{i\in I}$$ be families of functions from $$A_i$$ to $$B_i$$ and from $$B_i$$ to $$C_i$$, respectively. Then
+::: Proposition 5
+Let $$(A_i)_{i\in I}$$, $$(B_i)_{i\in I}$$, and $$(C_i)_{i\in I}$$ be three families, and let $$(f_i)_{i\in I}$$ and $$(g_i)_{i\in I}$$ be families of functions from $$A_i$$ to $$B_i$$ and from $$B_i$$ to $$C_i$$, respectively. Then
 
 $$\prod_{i\in I} (g_i\circ f_i)=\left(\prod_{i\in I} g_i\right)\circ\left(\prod_{i\in I}f_i\right)$$
 
 holds.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 There is nothing to explain beyond the following two commutative diagrams:
 
 ![composition_of_product_functions](/assets/images/Math/Set_Theory/Property_of_Products-5.svg){:style="width:14.31em" class="invert" .align-center}
@@ -151,8 +130,7 @@ There is nothing to explain beyond the following two commutative diagrams:
 and
 
 ![composition_of_product_fuctions_2](/assets/images/Math/Set_Theory/Property_of_Products-6.svg){:style="width:16.81em" class="invert" .align-center}
-
-</details>
+:::
 
 Since it is obvious that the product of the $$\id_{A_i}$$ is $$\id_{\prod A_i}$$, the preceding proposition makes it clear that the product of injective functions is injective, and the product of surjective functions is surjective.
 
@@ -161,34 +139,29 @@ Since it is obvious that the product of the $$\id_{A_i}$$ is $$\id_{\prod A_i}$$
 
 When two or more operations are defined, whether distributivity holds between them is an important question.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop6">**Proposition 6**</ins> Let $$((A_{k,i})_{i\in J_k})_{k\in K}$$ be a family of families of sets. Suppose further that $$K\neq\emptyset$$ and $$J_k\neq\emptyset$$ for all $$k\in K$$. Then for $$I=\prod_{k\in K} J_k\neq\emptyset$$,
+::: Proposition 6
+Let $$((A_{k,i})_{i\in J_k})_{k\in K}$$ be a family of families of sets. Suppose further that $$K\neq\emptyset$$ and $$J_k\neq\emptyset$$ for all $$k\in K$$. Then for $$I=\prod_{k\in K} J_k\neq\emptyset$$,
 
 $$\bigcup_{k\in K}\left(\bigcap_{i\in J_k}A_{k,i}\right)=\bigcap_{f\in I}\left(\bigcup_{k\in K}A_{k,f(k)}\right),\quad\bigcap_{k\in K}\left(\bigcup_{i\in J}A_{k,i}\right)=\bigcup_{f\in I}\left(\bigcap_{k\in K}A_{k,f(k)}\right)$$
 
 hold.
-</div>
+:::
 
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proof
 First, let $$x\in \bigcup_{k\in K}\left(\bigcap_{i\in J_k}A_{k,i}\right)$$. We must show that $$x\in \bigcap_{f\in I}\left(\bigcup_{k\in K}A_{k,f(k)}\right)$$, i.e., that $$x\in \bigcup_{k\in K}A_{k,f(k)}$$ for every $$f\in I$$. Since $$x\in \bigcap_{i\in J_k}A_{k,i}$$ for some $$k\in K$$, we have $$x\in A_{k,f(k)}$$. Hence $$x\in \bigcup_{k\in K}A_{k,f(k)}$$ for all $$f$$, and the inclusion follows.
 
 To establish the reverse inclusion we argue by contrapositive. Suppose $$x\not\in \bigcup_{k\in K}\left(\bigcap_{i\in J_k}A_{k,i}\right)$$. Then for every $$k\in K$$ we have $$x\not\in \bigcap_{i\in J_k}A_{k,i}$$. Thus there exists some $$i$$ such that $$x\not\in A_{k,i}$$ for every $$k$$. Choosing $$f\in I$$ so that $$f(k)$$ is such an $$i$$, we obtain $$x\not\in\bigcup_{k\in K}A_{k,f(k)}$$, so $$x$$ does not belong to the right-hand side. The second equality is proved similarly.
-</details>
+:::
 
 Distributivity also holds between product and union, and between product and intersection, as follows; the proof is almost identical to the above, so we omit it.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop7">**Proposition 7**</ins> Let $$((A_{k,i})_{i\in J_k})_{k\in K}$$ be a family of families of sets, and define $$I$$ as in the previous proposition. Then
+::: Proposition 7
+Let $$((A_{k,i})_{i\in J_k})_{k\in K}$$ be a family of families of sets, and define $$I$$ as in the previous proposition. Then
 
 $$\prod_{k\in K}\left(\bigcup_{i\in J_k}A_{k,i}\right)=\bigcup_{f\in I}\left(\prod_{k\in K}A_{k,f(k)}\right),\quad\prod_{k\in K}\left(\bigcap_{i\in J}A_{k,i}\right)=\bigcap_{f\in I}\left(\prod_{k\in K}A_{k,f(k)}\right)$$
 
 hold.
-
-</div>
+:::
 
 ---
 **References**

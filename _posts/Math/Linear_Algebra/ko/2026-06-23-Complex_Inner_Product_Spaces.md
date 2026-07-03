@@ -19,17 +19,15 @@ weight: 118
 
 [§내적공간](/ko/math/linear_algebra/inner_product_spaces)에서 우리는 $$\mathbb{R}$$-벡터공간 위의 내적을 정의하였다. 내적의 핵심 조건은 $$\langle v,v\rangle\geq 0$$이라는 positive-definiteness이며, 이는 $$\mathbb{K}$$에 대소관계가 있어야 하므로 일반적인 field에서는 곧바로 옮겨지지 않는다. 특히 $$\mathbb{C}$$ 위에서 $$\langle v,w\rangle=\sum_i v_iw_i$$를 그대로 쓰면 $$\langle v,v\rangle=\sum_i v_i^2$$이 복소수가 되어 부호를 말할 수 없다. 해결책은 한쪽 변수에 켤레복소수를 취하는 것이다. $$\sum_i\bar v_iv_i=\sum_i\lvert v_i\rvert^2$$은 언제나 음이 아닌 실수이기 때문이다. 이렇게 한 변수에 대해 conjugate-linear가 되도록 수정한 내적을 *Hermitian inner product*이라 부르며, 이 글에서는 이를 갖춘 $$\mathbb{C}$$-벡터공간 위에서 [§내적공간](/ko/math/linear_algebra/inner_product_spaces)의 이론이 어떻게 옮겨지는지를 살펴본다.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> $$\mathbb{C}$$-벡터공간 $$V$$ 위의 함수 $$\langle-,-\rangle:V\times V\rightarrow\mathbb{C}$$가 *Hermitian inner product<sub>Hermitian 내적</sub>*라는 것은 다음을 만족하는 것이다.
+::: 정의 1
+$$\mathbb{C}$$-벡터공간 $$V$$ 위의 함수 $$\langle-,-\rangle:V\times V\rightarrow\mathbb{C}$$가 *Hermitian inner product<sub>Hermitian 내적</sub>*라는 것은 다음을 만족하는 것이다.
 
 1. (Conjugate-symmetry) 임의의 $$v,w\in V$$에 대하여 $$\langle w,v\rangle=\overline{\langle v,w\rangle}$$;
 2. (Linearity on second argument) 임의의 $$v,w,w'\in V$$와 $$\alpha\in\mathbb{C}$$에 대하여 $$\langle v,w+w'\rangle=\langle v,w\rangle+\langle v,w'\rangle$$이고 $$\langle v,\alpha w\rangle=\alpha\langle v,w\rangle$$;
 3. (Positive-definiteness) 임의의 $$v\in V$$에 대하여 $$\langle v,v\rangle\geq 0$$이고, 등호는 오직 $$v=0$$일 때만 성립한다.
 
 이러한 $$\langle-,-\rangle$$이 주어진 $$V$$를 *복소내적공간<sub>complex inner product space</sub>*이라 부른다.
-
-</div>
+:::
 
 조건 1에서 $$v=w$$로 두면 $$\langle v,v\rangle=\overline{\langle v,v\rangle}$$이므로 $$\langle v,v\rangle$$은 항상 실수이고, 따라서 셋째 조건의 부등호가 말이 된다. 둘째 조건의 경우, 정의에 의해 이 내적은 둘째 변수에 대해서는 linear이지만 첫째 변수에 대해서는 conjugate-linear인데, 실제로 조건 1과 2를 결합하면
 
@@ -45,15 +43,13 @@ $$\langle v,w\rangle=\sum_{i=1}^n\bar v_iw_i=\bar v^tw$$
 
 한편, 셋째 조건에 의해 $$\langle v,v\rangle$$이 음이 아닌 실수이므로, 실수의 경우와 똑같이 벡터의 크기를 정의할 수 있다.
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**정의 2**</ins> 복소내적공간 $$V$$ 위의 *norm<sub>노름</sub>* $$\lVert-\rVert:V\rightarrow\mathbb{R}$$을 다음의 식
+::: 정의 2
+복소내적공간 $$V$$ 위의 *norm<sub>노름</sub>* $$\lVert-\rVert:V\rightarrow\mathbb{R}$$을 다음의 식
 
 $$\lVert v\rVert=\sqrt{\langle v,v\rangle}$$
 
 으로 정의한다.
-
-</div>
+:::
 
 그러나, 실수의 경우와 달리 내적 자체는 복소수 값을 가지므로, 노름의 성질을 확인할 때 켤레가 끼어든다. 우선 임의의 $$v,w\in V$$에 대하여 $$\langle v,w\rangle$$과 $$\langle w,v\rangle=\overline{\langle v,w\rangle}$$의 합은 실수부의 두 배, 즉 $$\langle v,w\rangle+\langle w,v\rangle=2\Real\langle v,w\rangle$$이다. 이를 이용하면
 
@@ -61,18 +57,14 @@ $$\lVert v+w\rVert^2=\langle v+w,v+w\rangle=\lVert v\rVert^2+2\Real\langle v,w\r
 
 을 얻는다. 코시-슈바르츠 부등식은 이 전개의 핵심 도구이다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop3">**명제 3 (Cauchy-Schwarz)**</ins> 복소내적공간 $$V$$의 임의의 벡터 $$v,w$$에 대하여
+::: 명제 3 (Cauchy-Schwarz)
+복소내적공간 $$V$$의 임의의 벡터 $$v,w$$에 대하여
 
 $$\lvert\langle v,w\rangle\rvert\leq\lVert v\rVert\lVert w\rVert$$
 
 이 성립한다. 등호는 $$v,w$$가 일차종속일 때, 그리고 그 때에만 성립한다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 $$w=0$$이면 양변이 모두 $$0$$이므로 성립한다. $$w\neq 0$$이라 하고
 
 $$\lambda=\frac{\langle w,v\rangle}{\langle w,w\rangle}$$
@@ -86,8 +78,7 @@ $$0\leq\lVert v-\lambda w\rVert^2=\langle v-\lambda w,v-\lambda w\rangle=\lVert 
 $$\bar\lambda\langle w,v\rangle=\frac{\overline{\langle w,v\rangle}\langle w,v\rangle}{\lVert w\rVert^2}=\frac{\lvert\langle w,v\rangle\rvert^2}{\lVert w\rVert^2}$$
 
 이고 $$\lvert\langle w,v\rangle\rvert=\lvert\langle v,w\rangle\rvert$$인 것으로부터 따라온다. 양변을 정리하면 $$\lvert\langle v,w\rangle\rvert^2\leq\lVert v\rVert^2\lVert w\rVert^2$$이고, 등호는 정확히 $$v-\lambda w=0$$, 즉 $$v,w$$가 일차종속일 때 성립한다.
-
-</details>
+:::
 
 이로부터 삼각부등식이 따라온다. 위에서 구한 $$\lVert v+w\rVert^2=\lVert v\rVert^2+2\Real\langle v,w\rangle+\lVert w\rVert^2$$에서 $$\Real\langle v,w\rangle\leq\lvert\langle v,w\rangle\rvert\leq\lVert v\rVert\lVert w\rVert$$을 적용하면
 
@@ -127,35 +118,28 @@ $$\langle Lv,w\rangle=\langle v,L^\ast w\rangle\qquad\text{for all }v,w\in V$$
 
 를 만족하는 유일한 operator로 정의한다. orthonormal basis에 대한 행렬표현을 통해 $$L^\ast$$의 정체를 알 수 있다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**명제 4**</ins> $$\mathcal{B}=\{e_1,\ldots,e_n\}$$이 복소내적공간 $$V$$의 orthonormal basis이고 $$A=[L]_\mathcal{B}^\mathcal{B}$$라 하면, $$L^\ast$$의 행렬표현은 $$A$$의 *conjugate transpose<sub>켤레전치</sub>* $$A^\ast=\bar A^t$$이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 명제 4
+$$\mathcal{B}=\{e_1,\ldots,e_n\}$$이 복소내적공간 $$V$$의 orthonormal basis이고 $$A=[L]_\mathcal{B}^\mathcal{B}$$라 하면, $$L^\ast$$의 행렬표현은 $$A$$의 *conjugate transpose<sub>켤레전치</sub>* $$A^\ast=\bar A^t$$이다.
+:::
+::: 증명
 $$Le_i=\sum_kA_{ki}e_k$$이므로 $$\langle e_j,Le_i\rangle=\sum_kA_{ki}\langle e_j,e_k\rangle=A_{ji}$$이다. 그럼 adjoint의 정의와 conjugate-symmetry로부터
 
 $$[L^\ast]_{ij}=\langle e_i,L^\ast e_j\rangle=\langle Le_i,e_j\rangle=\overline{\langle e_j,Le_i\rangle}=\overline{A_{ji}}$$
 
 이 되어, $$L^\ast$$의 행렬표현의 $$(i,j)$$성분은 $$\overline{A_{ji}}$$, 즉 $$A^\ast=\bar A^t$$이다.
-
-</details>
+:::
 
 즉, 실수내적공간에서 adjoint가 transpose로 주어졌던 것이 복소내적공간에서는 켤레전치로 바뀌는 것이다. 
 
 한편 내적을 보존하는 operator는 실수의 경우 orthogonal matrix로 표현되었다. 복소의 경우 이에 대응하는 것이 unitary matrix이다.
 
-<div class="definition" markdown="1">
-
-<ins id="def5">**정의 5**</ins> 행렬 $$U\in\Mat_n(\mathbb{C})$$가 *unitary matrix<sub>unitary matrix</sub>*라는 것은
+::: 정의 5
+행렬 $$U\in\Mat_n(\mathbb{C})$$가 *unitary matrix<sub>unitary matrix</sub>*라는 것은
 
 $$U^\ast U=UU^\ast=I$$
 
 가 성립하는 것이다. 복소내적공간 위의 operator $$L$$이 $$L^\ast L=I$$를 만족할 때 *unitary operator<sub>unitary operator</sub>*라 부른다.
-
-</div>
+:::
 
 [§동형사상, ⁋정리 7](/ko/math/linear_algebra/isomorphic_vector_spaces#thm7)로부터 $$U^\ast U=I$$이면 자동으로 $$UU^\ast=I$$임을 알 수 있으므로, 한쪽 조건만으로 충분하다. unitary operator는 정확히 내적을 보존하는 operator이다. 실제로 $$L$$이 내적을 보존하면 임의의 $$v,w$$에 대하여 $$\langle v,w\rangle=\langle Lv,Lw\rangle=\langle v,L^\ast Lw\rangle$$이 모든 $$v$$에 대해 성립하므로 $$L^\ast L=I$$이고, 거꾸로 $$L^\ast L=I$$이면
 

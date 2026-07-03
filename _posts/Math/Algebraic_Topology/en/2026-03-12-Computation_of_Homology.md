@@ -30,11 +30,9 @@ Then it is not difficult to see that the boundary map $$\partial_k:C_k(X) \right
 
 $$\cdots \longrightarrow C_k(X,A)\overset{\partial}{\longrightarrow} C_{k-1}(X,A)\longrightarrow\cdots.$$
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> The $$k$$-th homology of the above chain complex, $$H_k(X,A)$$, is called *relative homology*.
-
-</div>
+::: Definition 1
+The $$k$$-th homology of the above chain complex, $$H_k(X,A)$$, is called *relative homology*.
+:::
 
 Now consider the short exact sequence in the category $$\Ch_{\geq 0}(\Ab)$$
 
@@ -54,27 +52,23 @@ commutes, a chain map $$C_\bullet(X,A) \rightarrow C_\bullet(Y,B)$$ is also indu
 
 Intuitively, the relative homology $$H_\bullet(X,A)$$ of a pair $$(X,A)$$ is the homology of the chain complex $$C_\bullet(X,A)$$ corresponding to the cokernel of the inclusion $$C_\bullet(A)\hookrightarrow C_\bullet(X)$$. Since the information about $$C_\bullet(A)$$ disappears upon taking the quotient, it seems plausible that removing a subset contained in $$A$$ from the whole space would not change the relative homology. This is indeed true under the following mild condition.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm2">**Theorem 2 (Excision theorem)**</ins> Let $$A$$ be a subspace of a space $$X$$, and let $$Z$$ be a subspace of $$A$$ satisfying $$\cl Z\subseteq \interior A$$. Then the inclusion
+::: Theorem 2 (Excision theorem)
+Let $$A$$ be a subspace of a space $$X$$, and let $$Z$$ be a subspace of $$A$$ satisfying $$\cl Z\subseteq \interior A$$. Then the inclusion
 
 $$(X\setminus Z, A\setminus Z)\hookrightarrow (X,A)$$
 
 induces an isomorphism
 
 $$H_k(X\setminus Z, A\setminus Z)\rightarrow H_k(X,A).$$
-
-</div>
+:::
 
 However, compared with how intuitively obvious this theorem is, its proof involves somewhat technical details, so we omit it here.
 
 On the other hand, in geometric situations we already know a way to ignore information contained in $$A$$ in this manner: namely, the quotient space $$X/A$$ obtained by collapsing $$A$$ to a point. Then it is a reasonable guess that there is a relationship between the homology $$H_k(X/A)$$ and the relative homology $$H_k(X,A)$$. Of course, as with the theorem above, this is possible only if $$A$$ is not too pathological a space.
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**Definition 3**</ins> For a space $$X$$ and a subspace $$A$$, the pair $$(X,A)$$ is called a *good pair* if $$A$$ is a closed set and there exists a suitable open subset $$U$$ of $$X$$ such that $$A\subset U$$ and $$A$$ is a strong deformation retract of $$U$$.
-
-</div>
+::: Definition 3
+For a space $$X$$ and a subspace $$A$$, the pair $$(X,A)$$ is called a *good pair* if $$A$$ is a closed set and there exists a suitable open subset $$U$$ of $$X$$ such that $$A\subset U$$ and $$A$$ is a strong deformation retract of $$U$$.
+:::
 
 Let a good pair $$(X,A)$$ be given, and let $$U$$ be an open set satisfying the hypothesis of [Definition 3](#def3). Then in the following diagram
 
@@ -138,13 +132,11 @@ $$\widetilde{H}_k(X)=H_k(X,x);$$
 
 then we can rewrite the right-hand side of the above isomorphism (2) as $$\widetilde{H}_k(X/A)$$, obtaining the following.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**Proposition 4**</ins> For a good pair $$(X,A)$$, the quotient map $$X \rightarrow X/A$$ induces, for every $$k$$, the following isomorphism
+::: Proposition 4
+For a good pair $$(X,A)$$, the quotient map $$X \rightarrow X/A$$ induces, for every $$k$$, the following isomorphism
 
 $$H_k(X,A)\cong \widetilde{H}_k(X/A).$$
-
-</div>
+:::
 
 ## Simplicial homology and singular homology
 
@@ -166,14 +158,10 @@ exist. Then by [\[Homological Algebra\] §Long Exact Sequence, ⁋Proposition 2]
 
 Using this, the following holds.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm5">**Theorem 5**</ins> For any $$\Delta$$-complex $$X$$, the homomorphism (3) is an isomorphism.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Theorem 5
+For any $$\Delta$$-complex $$X$$, the homomorphism (3) is an isomorphism.
+:::
+::: Proof
 We sketch the main idea. By the above commutative diagram, consider the filtration defined by the $$\Delta$$-complex structure of $$X$$
 
 $$X_0\subset X_1\subset\cdots\subset X_l=X$$
@@ -201,16 +189,14 @@ $$H_k(\Delta^k, \partial\Delta^{k})\cong H_{k-1}(\Delta^{k-1}, \partial\Delta^{k
 and hence the desired result follows inductively.
 
 Looking at this process, we see that the generator of $$H_k(\Delta^k,\partial\Delta^k)$$ (as singular homology) is exactly the $$k$$-simplex $$\Delta^k$$ itself. Since the pair $$(X^k,X^{k-1})$$ is the union of such pairs $$(\Delta^k,\partial\Delta^k)$$, by [§Homology, ⁋Proposition 9](/en/math/algebraic_topology/homology#prop9) we obtain the desired result.
-
-</details>
+:::
 
 ## Mayer–Vietoris sequence
 
 Although we did not write out the proof for reasons of length, the excision theorem of [Theorem 2](#thm2) is extremely useful in homology theory. For example, in the proof of [Theorem 5](#thm5) we used the excision theorem to ignore simplices of dimension less than $$k-1$$, which allowed us to use induction; the base step of that induction was the homology of a one-point space. This process can be seen as essentially possessing all the properties that homology should satisfy, and axiomatizing this gives the following.
 
-<div class="definition" markdown="1">
-
-<ins id="def6">**Definition 6 (Eilenberg–Steenrod axioms)**</ins> For functors $$H_k$$ from the category of pairs of topological spaces to the category of abelian groups, and natural transformations
+::: Definition 6 (Eilenberg–Steenrod axioms)
+For functors $$H_k$$ from the category of pairs of topological spaces to the category of abelian groups, and natural transformations
 
 $$\partial:H_k(X,A)\rightarrow H_{k-1}(A,\emptyset):=H_{k-1}(A)$$
 
@@ -223,8 +209,7 @@ between them, the *Eilenberg–Steenrod axioms* mean the following axioms.
 - (Exactness) For each pair $$(X,A)$$, the two inclusions $$(A,\emptyset) \hookrightarrow (X,\emptyset)$$ and $$(X,\emptyset)\hookrightarrow (X,A)$$ fit into the following long exact sequence
 
     $$\cdots \rightarrow H_k(A)\rightarrow H_k(X) \rightarrow H_k(X,A) \rightarrow H_{k-1}(A)\rightarrow \cdots.$$
-
-</div>
+:::
 
 Then the result of Eilenberg and Steenrod shows that homology theories defined in this way are all naturally isomorphic, provided the *coefficient group* $$H_0(\ast)$$ is fixed. For example, we proved earlier that simplicial homology and singular homology agree on a $$\Delta$$-complex, and if we separate out the proof step by step we can verify that what we essentially used were the axioms of [Definition 6](#def6). For practical computation of homology it is convenient to introduce *cellular homology* defined on a *CW complex*; likewise this homology also satisfies the above axioms and therefore gives the same computation as simplicial homology and singular homology.
 
@@ -264,17 +249,15 @@ $$\cdots \rightarrow H_{n+1}(U)\oplus H_{n+1}(V)\rightarrow H_{n+1}(X)\rightarro
 
 Since $$\Cone(\alpha)$$ and (4) are both exact, (5) is also exact, and the differential maps of the exact sequence (5) are obtained via the change of basis defined by the isomorphisms $$i_V$$ in the mapping cone exact sequence. Computing this explicitly gives the following.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop7">**Proposition 7 (Mayer–Vietoris sequence)**</ins> Let a topological space $$X$$ be expressed as the union of two open sets $$X=U\cup V$$, and consider a homology theory $$H$$ defined on it. Then there exists a long exact sequence
+::: Proposition 7 (Mayer–Vietoris sequence)
+Let a topological space $$X$$ be expressed as the union of two open sets $$X=U\cup V$$, and consider a homology theory $$H$$ defined on it. Then there exists a long exact sequence
 
 $$\cdots \rightarrow H_{n+1}(U)\oplus H_{n+1}(V)\overset{\Psi}{\longrightarrow} H_{n+1}(X)\overset{\partial}{\longrightarrow} H_n(U\cap V)\overset{\Phi}{\longrightarrow} H_n(U)\oplus H_n(V)\rightarrow\cdots$$
 
 where the maps $$\Psi, \Phi$$ are given by
 
 $$\Psi(u,v)=u+v,\qquad \Phi(x)=(x,-x).$$
-
-</div>
+:::
 
 In particular, looking at the case $$n=1$$ we recover (1), which we initially obtained by transporting the Seifert–van Kampen theorem via abelianization, and in this sense the Mayer–Vietoris sequence can be thought of as the homology version of the Seifert–van Kampen theorem.
 

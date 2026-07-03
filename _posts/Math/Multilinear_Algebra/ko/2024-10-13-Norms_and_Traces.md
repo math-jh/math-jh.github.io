@@ -17,9 +17,8 @@ weight: 12
 
 언제나처럼 commutative ring $$A$$가 주어졌다 하고, 이번에는 unital associative $$A$$-algebra $$E$$가 주어졌다 하자. 그럼 임의의 $$E$$-module은 항상 restriction of scalar를 통해 $$A$$-module로 생각할 수 있다.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> $$E$$-module $$M$$이 주어졌다 하고, $$M$$이 $$A$$-module로서 유한한 basis를 갖는다 하자. 임의의 $$\alpha\in E$$에 대하여, 다음의 $$E$$-module endomorphism
+::: 정의 1
+$$E$$-module $$M$$이 주어졌다 하고, $$M$$이 $$A$$-module로서 유한한 basis를 갖는다 하자. 임의의 $$\alpha\in E$$에 대하여, 다음의 $$E$$-module endomorphism
 
 $$\alpha_M: x\mapsto \alpha x$$
 
@@ -28,8 +27,7 @@ $$\alpha_M: x\mapsto \alpha x$$
 $$\tr_{M/A}(\alpha)=\tr(\alpha_M),\qquad N_{M/A}(\alpha)=\det(\alpha_M),\qquad \chi_{M/A,\alpha}(\x)=\chi_{\alpha_M}(\x)$$
 
 으로 표기한다.
-
-</div>
+:::
 
 그럼 trace와 determinant의 성질로부터
 
@@ -50,9 +48,8 @@ $$\chi_{M/A,\,\alpha}(\x) = N_{M[\x]/A[\x]}(\x - \alpha)$$
 
 주목할 만한 사실은 위의 선택은 $$M$$의 isomorphism class에만 의존한다는 것이다. 이는 $$M$$에서 $$M'$$로의 isomorphism이 있다면 이 isomorphism을 따라 $$M$$의 basis가 $$M'$$의 basis로 옮겨지며, 이 basis에 대해 $$\alpha_{M'}$$을 행렬로 나타낸 것이 원래의 basis에 대해 $$\alpha_M$$을 행렬로 나타낸 것과 같기 때문이다. 다음 명제도 비슷한 방식으로 증명할 수 있다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**명제 2**</ins> $$E$$-module $$M$$의 submodule들의 decreasing sequence
+::: 명제 2
+$$E$$-module $$M$$의 submodule들의 decreasing sequence
 
 $$M = M_0 \supset M_1 \supset \cdots \supset M_r = \{0\}$$
 
@@ -65,12 +62,9 @@ N_{M/A}(\alpha) = \prod_{i=1}^r N_{P_i/A}(\alpha),\qquad
 \chi_{M/A,\alpha}(x) = \prod_{i=1}^r \chi_{P_i/A,\alpha}(x)$$
 
 이 성립한다. 
+:::
 
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 $$P_i$$의 $$A$$-basis를 $$\mathcal{B}_i'$$라 하자. 이들을 lift하면 $$M_{i-1}$$의 supplementary $$A$$-submodule $$\mathcal{B}_i$$의 basis로 확장할 수 있고, 그 합집합 $$\mathcal{B} = \bigcup \mathcal{B}_i$$는 $$M$$의 $$A$$-basis가 된다. 이제 각 $$\alpha \in E$$에 대해, endomorphism $$\alpha_{P_i}$$의 $$\mathcal{B}_i$$에 대한 행렬을 $$X_{ii}$$라 하면, $$\alpha_M$$의 전체 행렬
 
 $$e_M \sim
@@ -82,33 +76,26 @@ X_{rr} & \ast  & \cdots & \ast  \\
 \end{pmatrix}$$
 
 은 block upper-triangular 형태를 가지며 각 대각블록이 $$X_{ii}$$가 된다. 이제 trace는 대각합, determinant는 대각곱, characteristic polynomial은 대각 항들의 곱으로 주어지므로 명제가 성립한다.
-
-</details>
+:::
 
 같은 원리로 다음이 성립한다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop3">**명제 3**</ins> $$E, E'$$를 $$A$$-algebra라 하고, $$M$$과 $$M'$$을 각각 $$E$$, $$E'$$-module이라 하자.  
+::: 명제 3
+$$E, E'$$를 $$A$$-algebra라 하고, $$M$$과 $$M'$$을 각각 $$E$$, $$E'$$-module이라 하자.  
 $$M$$과 $$M'$$이 각각 $$A$$-module로서 free이고, 각각 rank $$n$$, $$n'$$을 갖는다 하자. 먼알 $$M \otimes_A M'$$은 $$E \otimes_A E'$$-module로 취급한다면, 임의의 $$\alpha \in E$$, $$\alpha' \in E'$$에 대해 다음의 식
 
 $$\tr_{M \otimes M'/A}(\alpha \otimes \alpha') = \tr_{M/A}(\alpha) \cdot \tr_{M'/A}(\alpha'),\qquad N_{M \otimes M'/A}(\alpha \otimes \alpha') = N_{M/A}(\alpha)^{n'} \cdot N_{M'/A}(\alpha')^n$$
 
 이 성립한다. 
-
-</div>
+:::
 
 이제 우리는 본격적인 정의에 들어간다. 본질적으로 norm은 determinant이고, determinant는 행렬의 가역성을 판단하는 도구이므로 다음이 성립하는 것은 이상한 일이 아니다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**명제 4**</ins> $$E$$가 유한한 $$A$$-basis를 갖는 $$A$$-algebra라고 하자.  
+::: 명제 4
+$$E$$가 유한한 $$A$$-basis를 갖는 $$A$$-algebra라고 하자.  
 $$\alpha \in E$$가 invertible하기 위한 필요충분조건은 $$N_{E/A}(\alpha)$$가 $$A$$에서 invertible인 것이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 $$\alpha$$가 $$E$$에서 inverse $$\alpha' \in E$$를 갖는다고 하자. 이때
 
 $$N_{E/A}(\alpha)N_{E/A}(\alpha') = N_{E/A}(\alpha\alpha') = N_{E/A}(1) = 1$$
@@ -124,5 +111,4 @@ $$h : x \mapsto \alpha x$$
 $$h(\alpha'\alpha- 1) = \alpha\alpha'\alpha - \alpha = (\alpha'\alpha - 1)\alpha = 0$$
 
 이므로 $$\alpha'\alpha = 1$$이 되고, $$\alpha'$$는 $$\alpha$$의 inverse가 된다.
-
-</details>
+:::

@@ -42,18 +42,14 @@ $$\int_Mf=\sum_{p\in M}\epsilon(p)f(p)$$
 
 ## 스토크스 정리
 
-<div class="proposition" markdown="1">
-
-<ins id="thm1">**정리 1 (Stokes)**</ins> $$m\geq1$$차원의 oriented manifold with boundary $$M$$과 compactly supported $$(m-1)$$-form $$\omega$$가 주어졌다 하자. $$\partial M$$에 induced orientation을 주고 $$\iota:\partial M \rightarrow M$$을 inclusion이라 하면, 다음의 식
+::: 정리 1 (Stokes)
+$$m\geq1$$차원의 oriented manifold with boundary $$M$$과 compactly supported $$(m-1)$$-form $$\omega$$가 주어졌다 하자. $$\partial M$$에 induced orientation을 주고 $$\iota:\partial M \rightarrow M$$을 inclusion이라 하면, 다음의 식
 
 $$\int_Md\omega=\int_{\partial M}\iota^\ast\omega$$
 
 이 성립한다. 특히 $$\partial M=\emptyset$$이라면 $$\int_Md\omega=0$$이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 우선 partition of unity를 통해 주장을 국소적인 명제로 줄이자. $$M$$을 덮는 chart들 $$(U_\alpha,x_\alpha)$$와 이에 subordinate한 smooth partition of unity $$(\phi_i)$$를 택하면 ([§미분다양체, §§Smooth partition of unity](/ko/math/manifolds/smooth_manifolds)), $$\supp\omega$$가 compact이므로 $$\omega=\sum_i\phi_i\omega$$는 유한 합이다. 한편 $$\sum_i\phi_i=1$$로부터 $$\sum_id\phi_i=0$$이므로
 
 $$\sum_id(\phi_i\,\omega)=\sum_i\bigl(d\phi_i\wedge\omega+\phi_i\,d\omega\bigr)=d\omega$$
@@ -109,38 +105,28 @@ $$\int_0^\infty g'(t)\,dt=-g(0)=-f(p)$$
 $$\int_{\partial M}\iota^\ast\omega=\epsilon(p)f(p)=-\epsilon f(p)=\int_Mdf$$
 
 가 되어 주장이 성립한다.
-
-</details>
+:::
 
 위의 증명을 한 문장으로 줄이자면, Stokes 정리는 본질적으로 미적분학의 기본정리에 partition of unity를 묻힌 것이다. 정리의 형태에서 바로 읽을 수 있는 중요한 특수한 경우는 경계가 없는 경우이다.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor2">**따름정리 2**</ins> 경계가 없는 oriented manifold $$M$$ 위의 compactly supported $$(m-1)$$-form $$\omega$$에 대하여 $$\int_Md\omega=0$$이다. 특히 $$M$$이 compact라면, $$M$$ 위의 임의의 exact $$m$$-form의 적분은 $$0$$이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 따름정리 2
+경계가 없는 oriented manifold $$M$$ 위의 compactly supported $$(m-1)$$-form $$\omega$$에 대하여 $$\int_Md\omega=0$$이다. 특히 $$M$$이 compact라면, $$M$$ 위의 임의의 exact $$m$$-form의 적분은 $$0$$이다.
+:::
+::: 증명
 [정리 1](#thm1)에서 $$\partial M=\emptyset$$인 경우이다. $$M$$이 compact라면 임의의 미분형식이 compactly supported이므로 둘째 주장이 따라나온다.
+:::
 
-</details>
-
-<div class="example" markdown="1">
-
-<ins id="ex3">**예시 3**</ins> $$M=[0,1]$$에 표준적인 orientation, 즉 $$\interior M=(0,1)$$에 $$\mathbb{R}$$의 표준 orientation을 주자. [§경계가 있는 다양체, ⁋예시 5](/ko/math/manifolds/manifolds_with_boundary#ex5)에서 살펴본 것과 같이 $$\partial M=\{0,1\}$$이고, 점 $$1$$에서는 outward vector $$\partial/\partial t$$가 positively oriented이므로 $$\epsilon(1)=+1$$, 점 $$0$$에서는 outward vector가 $$-\partial/\partial t$$이므로 $$\epsilon(0)=-1$$이다. 따라서 임의의 $$C^\infty$$ 함수 $$f$$에 대하여 [정리 1](#thm1)은
+::: 예시 3
+$$M=[0,1]$$에 표준적인 orientation, 즉 $$\interior M=(0,1)$$에 $$\mathbb{R}$$의 표준 orientation을 주자. [§경계가 있는 다양체, ⁋예시 5](/ko/math/manifolds/manifolds_with_boundary#ex5)에서 살펴본 것과 같이 $$\partial M=\{0,1\}$$이고, 점 $$1$$에서는 outward vector $$\partial/\partial t$$가 positively oriented이므로 $$\epsilon(1)=+1$$, 점 $$0$$에서는 outward vector가 $$-\partial/\partial t$$이므로 $$\epsilon(0)=-1$$이다. 따라서 임의의 $$C^\infty$$ 함수 $$f$$에 대하여 [정리 1](#thm1)은
 
 $$\int_{[0,1]}df=f(1)-f(0)$$
 
 이 되어 미적분학의 기본정리를 복원한다.
+:::
 
-</div>
-
-<div class="remark" markdown="1">
-
-<ins id="rmk4">**참고 4**</ins> 미적분학에서 다루는 Green 정리, divergence 정리, 고전적인 Stokes 정리는 모두 [정리 1](#thm1)의 특수한 경우이다. 가령 $$\mathbb{R}^2$$의 (경계가 매끄러운) 영역 $$D$$와 $$1$$-form $$\omega=P\,dx+Q\,dy$$에 대하여 $$d\omega=(\partial Q/\partial x-\partial P/\partial y)\,dx\wedge dy$$이므로 [정리 1](#thm1)은 Green 정리가 된다. 이들 고전적 정리들에서 등장하는 "반시계 방향"이나 "바깥쪽 법선" 같은 조건들이 정확히 induced orientation의 내용이다.
-
-</div>
+::: 참고 4
+미적분학에서 다루는 Green 정리, divergence 정리, 고전적인 Stokes 정리는 모두 [정리 1](#thm1)의 특수한 경우이다. 가령 $$\mathbb{R}^2$$의 (경계가 매끄러운) 영역 $$D$$와 $$1$$-form $$\omega=P\,dx+Q\,dy$$에 대하여 $$d\omega=(\partial Q/\partial x-\partial P/\partial y)\,dx\wedge dy$$이므로 [정리 1](#thm1)은 Green 정리가 된다. 이들 고전적 정리들에서 등장하는 "반시계 방향"이나 "바깥쪽 법선" 같은 조건들이 정확히 induced orientation의 내용이다.
+:::
 
 ---
 

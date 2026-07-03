@@ -24,22 +24,16 @@ Of course, we cannot simply carry this over to vector spaces. If we were to rega
 
 Therefore we define as follows.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> Let two $$\mathbb{K}$$-vector spaces $$V,W$$ and a linear map $$L:V\rightarrow W$$ be given. Then $$L$$ is called an *isomorphism* if there exists another linear map $$L':W\rightarrow V$$ such that $$L\circ L'=\id_W$$ and $$L'\circ L=\id_V$$. When such an isomorphism between $$V$$ and $$W$$ exists, we say that $$V,W$$ are *isomorphic* and write $$V\cong W$$.
-
-</div>
+::: Definition 1
+Let two $$\mathbb{K}$$-vector spaces $$V,W$$ and a linear map $$L:V\rightarrow W$$ be given. Then $$L$$ is called an *isomorphism* if there exists another linear map $$L':W\rightarrow V$$ such that $$L\circ L'=\id_W$$ and $$L'\circ L=\id_V$$. When such an isomorphism between $$V$$ and $$W$$ exists, we say that $$V,W$$ are *isomorphic* and write $$V\cong W$$.
+:::
 
 By definition, any isomorphism is a bijection between the two sets $$V,W$$. Moreover, the converse also holds by the following lemma.
 
-<div class="proposition" markdown="1">
-
-<ins id="lem2">**Lemma 2**</ins> Let $$L:V\rightarrow W$$ be an isomorphism between two $$\mathbb{K}$$-vector spaces $$V$$, $$W$$. Then the inverse function $$L^{-1}$$ exists, and $$L^{-1}$$ is linear.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Lemma 2
+Let $$L:V\rightarrow W$$ be an isomorphism between two $$\mathbb{K}$$-vector spaces $$V$$, $$W$$. Then the inverse function $$L^{-1}$$ exists, and $$L^{-1}$$ is linear.
+:::
+::: Proof
 The existence of $$L^{-1}$$ is a result from set theory, and in this case $$L\circ L^{-1}=\id_W$$ and $$L^{-1}\circ L=\id_V$$.
 
 Thus it suffices to show that $$L^{-1}$$ is linear. First, for any $$\alpha\in\mathbb{K}$$ and $$w\in W$$, we must show that $$L^{-1}(\alpha w)=\alpha L^{-1}(w)$$. For any $$w\in W$$ there exists a unique $$v\in V$$ such that $$L(v)=w$$, and then $$L(\alpha v)=\alpha L(v)=\alpha w$$. Now
@@ -47,67 +41,49 @@ Thus it suffices to show that $$L^{-1}$$ is linear. First, for any $$\alpha\in\m
 $$L^{-1}(\alpha w)=L^{-1}(L(\alpha v))=\alpha v=\alpha L^{-1}(w).$$
 
 Similarly, $$L^{-1}(w_1+w_2)=L^{-1}(w_1)+L^{-1}(w_2)$$ can also be shown.
-
-</details>
+:::
 
 The following proposition involves the same set-theoretic issue that was briefly mentioned after [\[Set Theory\] §Cardinals, ⁋Definition 1](/en/math/set_theory/cardinals#def1). Namely, it is uncertain whether <phrase>the collection of all $\mathbb{K}$-vector spaces</phrase> is actually a set, but we will pass over this without further comment.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop3">**Proposition 3**</ins> The relation $$\cong$$ of [Definition 1](#def1) is an equivalence relation.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 3
+The relation $$\cong$$ of [Definition 1](#def1) is an equivalence relation.
+:::
+::: Proof
 We must show that the relation $$\cong$$ is reflexive, symmetric, and transitive.
 
 1. First, it is obvious that $$V\cong V$$ for any $$\mathbb{K}$$-vector space $$V$$, because $$\id_V:V\rightarrow V$$ is an isomorphism from $$V$$ to $$V$$.
 2. By the preceding [Lemma 2](#lem2), it is obvious that $$\cong$$ is symmetric.    
 3. Finally, suppose $$U\cong V$$ and $$V\cong W$$. Then there exist two isomorphisms $$L_1:U\rightarrow V$$, $$L_2: V\rightarrow W$$ such that
-
-</details>
+:::
 
 Although this proposition may seem obvious, it establishes the less obvious part of the classification of all finite-dimensional $$\mathbb{K}$$-vector spaces.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor4">**Corollary 4**</ins> Any two $$n$$-dimensional $$\mathbb{K}$$-vector spaces are always isomorphic.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Corollary 4
+Any two $$n$$-dimensional $$\mathbb{K}$$-vector spaces are always isomorphic.
+:::
+::: Proof
 [§Linear Maps, ⁋Example 14](/en/math/linear_algebra/linear_map#ex14) means that any $$n$$-dimensional $$\mathbb{K}$$-vector space $$V$$ satisfies $$V\cong \mathbb{K}^n$$. For another $$n$$-dimensional $$\mathbb{K}$$-vector space $$W$$ we also have $$W\cong \mathbb{K}^n$$, so from the fact that $$\cong$$ is an equivalence relation we know that $$V\cong W$$.
-
-</details>
+:::
 
 Of course the converse also holds, and therefore we see that the only invariant determining the structure of a finite-dimensional vector space is its dimension.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**Proposition 5**</ins> Let two isomorphic $$\mathbb{K}$$-vector spaces $$V,W$$ and an isomorphism $$L:V\rightarrow W$$ be given. If $$\mathcal{B}$$ is a basis of $$V$$, then $$L(\mathcal{B})$$ is also a basis of $$W$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 5
+Let two isomorphic $$\mathbb{K}$$-vector spaces $$V,W$$ and an isomorphism $$L:V\rightarrow W$$ be given. If $$\mathcal{B}$$ is a basis of $$V$$, then $$L(\mathcal{B})$$ is also a basis of $$W$$.
+:::
+::: Proof
 [§Linear Maps, ⁋Corollary 9](/en/math/linear_algebra/linear_map#cor9).
-
-</details>
+:::
 
 ## Rank-Nullity Theorem
 
 Meanwhile, for a given linear map $$L$$, the spaces $$\ker L$$ and $$\im L$$ measure how far $$L$$ is from being injective and surjective, respectively. Since we have seen above that dimension is the only invariant determining a vector space, it is enough to look at the dimensions of $$\ker L$$ and $$\im L$$ rather than the spaces themselves.
 
-<div class="definition" markdown="1">
-
-<ins id="def6">**Definition 6**</ins> Let two $$\mathbb{K}$$-vector spaces $$V,W$$ and a linear map $$L:V\rightarrow W$$ be given. Then 
+::: Definition 6
+Let two $$\mathbb{K}$$-vector spaces $$V,W$$ and a linear map $$L:V\rightarrow W$$ be given. Then 
 
 1. $$\dim\ker L$$ is called the *nullity* of $$L$$, and is denoted by $$\nullity L$$.
 2. $$\dim\im L$$ is called the *rank* of $$L$$, and is denoted by $$\rank L$$.
-
-</div>
+:::
 
 The following two statements are hardly worth numbering separately.
 
@@ -116,18 +92,14 @@ The following two statements are hardly worth numbering separately.
 
 Moreover, the following theorem holds.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm7">**Theorem 7 (Rank-nullity theorem)**</ins> Let two $$\mathbb{K}$$-vector spaces $$V,W$$ and a linear map $$L:V\rightarrow W$$ be given. Then the equation
+::: Theorem 7 (Rank-nullity theorem)
+Let two $$\mathbb{K}$$-vector spaces $$V,W$$ and a linear map $$L:V\rightarrow W$$ be given. Then the equation
 
 $$\rank L+\nullity L=\dim V$$
 
 always holds.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 For convenience, write $$\dim V=n$$ and $$\nullity L=k$$. The following two cases are obvious.
 
 1. If $$n=k$$, then $$\ker L$$ is a subspace having the same dimension as $$V$$, so $$\ker L=V$$. Therefore $$L=0$$, and since $$\im L=0$$ we have $$\rank L=0$$, so the theorem holds.
@@ -156,8 +128,7 @@ $$w=L\left(\sum_{i=1}^n\alpha_ix_i\right)=L\left(\sum_{i=1}^k\alpha_ix_i\right)+
 because $$\sum_{i=1}^k\alpha_ix_i\in\ker L$$.
 
 From the above, $$\rank L=\dim\im L=n-k=\dim V-\nullity L$$, so the equation of the theorem holds.
-
-</details>
+:::
 
 ---
 

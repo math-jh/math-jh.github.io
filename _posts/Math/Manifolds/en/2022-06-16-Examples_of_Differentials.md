@@ -18,15 +18,13 @@ In the previous post we studied differentials in depth; now we examine some exam
 
 ## Curves and Velocity Vectors on Manifolds
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> For a manifold $$M$$, we call a $$C^\infty$$ function $$\gamma:(a,b)\rightarrow M$$ a $$C^\infty$$ curve on $$M$$, and for any $$t\in (a,b)$$ we call
+::: Definition 1
+For a manifold $$M$$, we call a $$C^\infty$$ function $$\gamma:(a,b)\rightarrow M$$ a $$C^\infty$$ curve on $$M$$, and for any $$t\in (a,b)$$ we call
 
 $$d\gamma_t\left(\frac{d}{dr}\bigg\vert_t\right)$$
 
 the *velocity vector* of this curve at the point $$\gamma(t)$$, denoting it by $$\gamma'(t)$$.
-
-</div>
+:::
 
 As an element of $$T_{\gamma(t)}M$$, the vector $$\gamma'(t)$$ acts on each element $$f$$ of $$\mathcal{C}^\infty_{M,\gamma(t)}$$; expanding the definition of the differential yields
 
@@ -34,14 +32,10 @@ $$\gamma'(t)f=d\gamma_p\left(\frac{d}{dr}\bigg\vert_t\right)f=\frac{d}{dr}\bigg\
 
 In fact, when defining $$T_pM$$ we may just as well regard it as the collection of $$C^\infty$$ curves passing through the point $$p$$[^1]. We prove the following proposition, which is part of this claim and will be used frequently.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**Proposition 2**</ins> Fix a manifold $$M$$ and a point $$p\in M$$. For any nonzero $$v\in T_pM$$, there exists a $$C^\infty$$ curve $$\gamma$$ passing through $$p$$ whose velocity vector at $$p$$ equals $$v$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 2
+Fix a manifold $$M$$ and a point $$p\in M$$. For any nonzero $$v\in T_pM$$, there exists a $$C^\infty$$ curve $$\gamma$$ passing through $$p$$ whose velocity vector at $$p$$ equals $$v$$.
+:::
+::: Proof
 It suffices to find a coordinate system $$(U,\varphi)$$ centered at $$p$$ satisfying
 
 $$v=d\varphi^{-1}_{\varphi(p)}\left(\frac{\partial}{\partial r^1}\bigg\vert_0\right).$$
@@ -51,8 +45,7 @@ Then $$v$$ is the velocity vector at $$t=0$$ of the $$C^\infty$$ curve
 $$\gamma: t\mapsto \varphi^{-1}(t, 0,\cdots, 0).$$
 
 Finding such a coordinate system is straightforward: choose an arbitrary coordinate system $$(U,\psi)$$, construct a new basis of $$\mathbb{R}^n$$ containing the translated vector $$d\psi_p(v)$$, and compose the original $$\psi$$ with the resulting change of basis.
-
-</details>
+:::
 
 In the special case $$M=\mathbb{R}^m$$, a basis of $$T_{\gamma(t)}M$$ is given by
 
@@ -86,13 +79,11 @@ $$(F\circ\gamma)'(t)=dF_{\gamma(t)}(\gamma'(t)).$$
 
 Refining this slightly, we see that for a given $$C^\infty$$ function $$F:M\rightarrow N$$, in order to determine the value $$dF_p(v)$$ of the differential at any $$v\in T_pM$$, we need only choose any curve having velocity vector $$v$$ at the point $$p$$[^2], and then compute the velocity vector of $$F\circ\gamma$$ at time $$t$$ for this curve $$\gamma$$. That is,
 
-<div class="proposition" markdown="1">
-
-<ins id="prop3">**Proposition 3**</ins> Let $$M,N$$ be two manifolds and $$F:M\rightarrow N$$ a $$C^\infty$$ function. For any $$v\in T_pM$$, any $$C^\infty$$ curve $$\gamma:(a,b)\rightarrow M$$ satisfying $$\gamma(0)=p$$ and $$\gamma'(0)=v$$ also satisfies
+::: Proposition 3
+Let $$M,N$$ be two manifolds and $$F:M\rightarrow N$$ a $$C^\infty$$ function. For any $$v\in T_pM$$, any $$C^\infty$$ curve $$\gamma:(a,b)\rightarrow M$$ satisfying $$\gamma(0)=p$$ and $$\gamma'(0)=v$$ also satisfies
 
 $$dF_p(v)=(F\circ\gamma)'(0).$$
-
-</div>
+:::
 
 ## Tangent Spaces of Vector Spaces
 
@@ -108,16 +99,12 @@ $$D_v\vert_x: f\mapsto \lim_{h\rightarrow 0}\frac{f(x+tv)-f(x)}{t}$$
 
 gives this isomorphism.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**Proposition 4**</ins> Let $$V$$ be an $$m$$-dimensional $$\mathbb{R}$$-vector space equipped with a manifold structure. For any point $$x\in V$$, there exists an isomorphism $$V\cong T_xV$$ independent of the choice of basis. Moreover, if $$V,W$$ are two $$\mathbb{R}$$-vector spaces and $$L:V\rightarrow W$$ is a linear map, then the following diagram commutes.
+::: Proposition 4
+Let $$V$$ be an $$m$$-dimensional $$\mathbb{R}$$-vector space equipped with a manifold structure. For any point $$x\in V$$, there exists an isomorphism $$V\cong T_xV$$ independent of the choice of basis. Moreover, if $$V,W$$ are two $$\mathbb{R}$$-vector spaces and $$L:V\rightarrow W$$ is a linear map, then the following diagram commutes.
 
 ![tangent_space_of_vector_space](/assets/images/Math/Manifolds/Examples_of_Differentials-1.svg){:style="width:9.31em" class="invert" .align-center}
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 For the first part, we use the directional derivative formula shown above,
 
 $$(D_v\vert_x)f=\lim_{t\rightarrow 0}\frac{f(x+tv)-f(x)}{t}.$$
@@ -158,20 +145,17 @@ so for any $$f$$, $$(L\circ\gamma)'(0)$$ satisfies
 $$(L\circ\gamma)'(0)f=\lim_{t\rightarrow 0}\frac{f(L(x)+tL(v))-f(L(x))}{t}=(D_{L(v)}\vert_{L(x)})f.$$
 
 Therefore the given diagram commutes.
-
-</details>
+:::
 
 The isomorphism $$V\cong T_xV$$ constructed above does not depend on the choice of basis, but if a basis $$e_1,\ldots, e_n$$ of $$V$$ and its dual basis $$r^1,\ldots, r^n$$ are given, one can check that this isomorphism is
 
 $$\sum a_ie_i\leftrightarrow\sum a_i\frac{\partial}{\partial r^i}.$$
 
-<div class="example" markdown="1">
-
-<ins id="ex5">**Example 5**</ins> The set $$\Mat_n(\mathbb{R})$$ of $$n\times n$$ matrices is an $$n^2$$-dimensional $$\mathbb{R}$$-vector space. Hence the tangent space at any point of $$\Mat_n(\mathbb{R})$$ is the same as $$\Mat_n(\mathbb{R})$$.
+::: Example 5
+The set $$\Mat_n(\mathbb{R})$$ of $$n\times n$$ matrices is an $$n^2$$-dimensional $$\mathbb{R}$$-vector space. Hence the tangent space at any point of $$\Mat_n(\mathbb{R})$$ is the same as $$\Mat_n(\mathbb{R})$$.
 
 In particular, for the open submanifold $$\GL(n,\mathbb{R})$$ of $$\Mat_n(\mathbb{R})$$, the tangent space at any element of $$\GL(n,\mathbb{R})$$ coincides with the tangent space of that element viewed as an element of $$\Mat_n(\mathbb{R})$$, and therefore equals $$\Mat_n(\mathbb{R})$$.
-
-</div>
+:::
 
 ## Tangent Covectors
 
@@ -181,11 +165,9 @@ $$T_pM\overset{df_p}{\longrightarrow}T_{f(p)}\mathbb{R}\overset{\sim}{\longright
 
 we may regard $$df_p$$ as an element of $$(T_pM)^\ast$$.
 
-<div class="definition" markdown="1">
-
-<ins id="def6">**Definition 6**</ins> For a manifold $$M$$ and a point $$p\in M$$, the dual space $$(T_pM)^\ast$$ of the $$\mathbb{R}$$-vector space $$T_pM$$ is called the *cotangent space*, written simply as $$T_p^\ast M$$. The elements of $$T_p^\ast M$$ are called *tangent covectors*, or simply *covectors*.
-
-</div>
+::: Definition 6
+For a manifold $$M$$ and a point $$p\in M$$, the dual space $$(T_pM)^\ast$$ of the $$\mathbb{R}$$-vector space $$T_pM$$ is called the *cotangent space*, written simply as $$T_p^\ast M$$. The elements of $$T_p^\ast M$$ are called *tangent covectors*, or simply *covectors*.
+:::
 
 Thus the preceding discussion can be summarized as saying that any $$C^\infty$$ function $$f:M\rightarrow\mathbb{R}$$ determines a tangent covector.
 
@@ -201,19 +183,14 @@ $$(\xi^i \vert_p)\left(\frac{\partial}{\partial x^j}\bigg\vert_p\right)=\delta_{
 
 where $$\delta_{ij}$$ denotes the Kronecker delta.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop7">**Proposition 7**</ins> In the above situation, $$\xi^i\vert_p=dx^i\vert_p$$. In other words, the dual bases $$(\xi^i \vert_p)$$ of $$T_pM$$ arising from $$(U,\varphi)$$ are precisely the differentials at $$p$$ of the coordinate functions $$x^i$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 7
+In the above situation, $$\xi^i\vert_p=dx^i\vert_p$$. In other words, the dual bases $$(\xi^i \vert_p)$$ of $$T_pM$$ arising from $$(U,\varphi)$$ are precisely the differentials at $$p$$ of the coordinate functions $$x^i$$.
+:::
+::: Proof
 It suffices to show that the $$dx^i$$ satisfy equation (1). By definition,
 
 $$dx^i\vert_p\left(\frac{\partial}{\partial x^j}\bigg\vert_p\right)=\frac{\partial}{\partial x^j}\bigg\vert_p x^i=\delta_{ij}.$$
-
-</details>
+:::
 
 This proof becomes more transparent if we recall [§Cotangent Space, ⁋Lemma 1](/en/math/manifolds/cotangent_space#lem1), proved when we first introduced the tangent space. That is, passing from the first equality to the second is by definition of the differential $$dx^i\vert_p$$, but simultaneously it is the process of naturally identifying the double dual of the finite-dimensional $$\mathbb{R}$$-vector space $$\mathfrak{m}_p/\mathfrak{m}^2_p$$ with itself via
 

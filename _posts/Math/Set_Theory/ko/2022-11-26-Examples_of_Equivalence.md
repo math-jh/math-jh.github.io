@@ -20,33 +20,25 @@ weight: 13
 
 앞선 글에서 동치관계 $$(R,A,A)$$에서부터 canonical한 함수 $$p:A\rightarrow A/R$$이 잘 정의된다는 것을 보았는데, 그 역 또한 성립한다. 즉, 임의의 함수가 주어졌을 때, 이 함수를 사용하여 동치관계를 만들 수 있다.
 
-<div class="proposition" markdown="1">
+::: 명제 1
+집합 $$A$$와 이를 정의역으로 갖는 함수 $$f$$가 주어졌다 하자. 그럼 $$x$$, $$y$$ 사이의 관계 <phrase>$x,y\in A$이고 $f(x)=f(y)$</phrase>는 $$A$$ 위에서의 동치관계다.
+:::
 
-<ins id="prop1">**명제 1**</ins> 집합 $$A$$와 이를 정의역으로 갖는 함수 $$f$$가 주어졌다 하자. 그럼 $$x$$, $$y$$ 사이의 관계 <phrase>$x,y\in A$이고 $f(x)=f(y)$</phrase>는 $$A$$ 위에서의 동치관계다.
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 주어진 관계가 $$A$$ 위에서 reflexive함은 자명하다. 한편, 만일 $$f(x)=f(y)$$라면 $$f(y)=f(x)$$이고, $$f(x)=f(y)$$, $$f(y)=f(z)$$이면 $$f(x)=f(z)$$이므로 이 관계는 symmetric, transitive하기도 하다.
+:::
 
-</details>
-
-<div class="definition" markdown="1">
-
-<ins id="def2">**정의 2**</ins> 위의 명제에서 정의된 동치관계를 *$$f$$에 의해 정의된 동치관계*라 부른다.
-
-</div>
+::: 정의 2
+위의 명제에서 정의된 동치관계를 *$$f$$에 의해 정의된 동치관계*라 부른다.
+:::
 
 동치관계 $$(R,A,A)$$와 이로부터 유도된 $$p:A\rightarrow A/R$$에 대하여, 동치관계 $$R$$은 [정의 2](#def2)를 $$p$$에 적용하여 얻은 동치관계와 정확하게 같다는 것을 확인할 수 있다.
 
 ## 단항관계와 compatible한 동치관계
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**정의 3**</ins> $$(R,A,A)$$가 동치관계라 하자. 그럼 단항관계 $$P$$가 $$R$$과 *compatible*하다는 것은 $$P(x)\wedge (x\sim_{\tiny R}y)\implies P(y)$$인 것이다.
-
-</div>
+::: 정의 3
+$$(R,A,A)$$가 동치관계라 하자. 그럼 단항관계 $$P$$가 $$R$$과 *compatible*하다는 것은 $$P(x)\wedge (x\sim_{\tiny R}y)\implies P(y)$$인 것이다.
+:::
 
 예를 들어, 단항관계 
 
@@ -58,15 +50,11 @@ weight: 13
 
 와 compatible하다. Equivalence class의 관점에서 위 정의를 다시 쓰면 다음과 같다.
 
-<div class="proposition" markdown="1">
+::: 명제 4
+$$R$$이 집합 $$A$$ 위에서의 동치관계이고, $$P$$가 $$R$$과 compatible한 단항관계라 하자. 그럼 <phrase>$t\in A/R$이고 어떤 x\in t$가 존재하여 $P(x)$인 것</phrase>과 <phrase>$t\in A/R$이고 모든 $x\in t$에 대하여 $P(x)$인 것</phrase>이 서로 동치이다.
+:::
 
-<ins id="prop4">**명제 4**</ins> $$R$$이 집합 $$A$$ 위에서의 동치관계이고, $$P$$가 $$R$$과 compatible한 단항관계라 하자. 그럼 <phrase>$t\in A/R$이고 어떤 x\in t$가 존재하여 $P(x)$인 것</phrase>과 <phrase>$t\in A/R$이고 모든 $x\in t$에 대하여 $P(x)$인 것</phrase>이 서로 동치이다.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 풀어 쓰자면, 
 
 > $$P$$가 $$R$$과 compatible할 때, equivalence class의 단 하나의 원소만 $$P$$를 만족한다면, 그 원소와 같은 class에 들어있는 모든 원소에 대해서도 $$P$$가 성립한다.
@@ -74,16 +62,13 @@ weight: 13
 그리고 이건 정확히 compatible한 단항관계의 정의다. 
 
 반대 방향은 자명하다. 만일 $$t\in A/R$$에 대하여 $$a\in t$$가 존재하여 $$P(a)$$라 하자. 그럼 모든 $$x\in t$$에 대하여 $$a\sim_{\tiny R}x$$이므로 $$P(x)$$이다.
-
-</details>
+:::
 
 ## 동치관계의 포화
 
-<div class="definition" markdown="1">
-
-<ins id="def5">**정의 5**</ins> $$R$$이 $$A$$ 위에서의 동치관계이고 $$X$$가 $$A$$의 부분집합이라 하자. $$X$$가 $$R$$에 대해 *saturated<sub>포화</sub>*되었다는 것은 단항관계 $$x\in A$$가 $$R$$과 compatible한 것이다.
-
-</div>
+::: 정의 5
+$$R$$이 $$A$$ 위에서의 동치관계이고 $$X$$가 $$A$$의 부분집합이라 하자. $$X$$가 $$R$$에 대해 *saturated<sub>포화</sub>*되었다는 것은 단항관계 $$x\in A$$가 $$R$$과 compatible한 것이다.
+:::
 
 ![saturated_set](/assets/images/Math/Set_Theory/Examples_of_Equivalence-1.png){:style="width:600px" class="invert" .align-center}
 
@@ -116,19 +101,15 @@ $$X'=p^{-1}(p(X'))\supseteq p^{-1}(p(X))$$
 
 ## Canonical decomposition
 
-<div class="definition" markdown="1">
-
-<ins id="def6">**정의 6**</ins> 동치관계 $$(R,A,A)$$와 $$A$$를 정의역으로 갖는 함수 $$f$$에 대하여, $$f$$가 $$R$$과 *compatible*하다는 것은 $$x$$에 대한 단항관계 $$y=f(x)$$가 $$R$$과 compatible하다는 것을 의미한다.
-
-</div>
+::: 정의 6
+동치관계 $$(R,A,A)$$와 $$A$$를 정의역으로 갖는 함수 $$f$$에 대하여, $$f$$가 $$R$$과 *compatible*하다는 것은 $$x$$에 대한 단항관계 $$y=f(x)$$가 $$R$$과 compatible하다는 것을 의미한다.
+:::
 
 즉, $$f$$가 $$R$$과 compatible하려면 $$f$$는 각각의 equivalence class로 제한하였을 때 상수함수가 되어야 한다. 이제 [§Retraction과 section, ⁋명제 4](/ko/math/set_theory/retraction_and_section#prop4)를 적용하면 다음을 얻는다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop7">**명제 7**</ins> 동치관계 $$(R,A,A)$$와 canonical $$p:A\rightarrow A/R$$을 생각하자. 그럼 $$f:A\rightarrow B$$가 $$R$$과 compatible한 것은 $$f=h\circ p$$이도록 하는 $$h:A/R\rightarrow B$$가 존재하는 것과 동치이다.
-
-</div>
+::: 명제 7
+동치관계 $$(R,A,A)$$와 canonical $$p:A\rightarrow A/R$$을 생각하자. 그럼 $$f:A\rightarrow B$$가 $$R$$과 compatible한 것은 $$f=h\circ p$$이도록 하는 $$h:A/R\rightarrow B$$가 존재하는 것과 동치이다.
+:::
 
 즉, 다음의 diagram이 commute한다.
 
@@ -164,11 +145,9 @@ $$f=j\circ\tilde{f}=j\circ h\circ p$$
 
 다음 정의는 이미 [§동치관계, ⁋예시 5](/ko/math/set_theory/equivalence_relations#ex5)에서 언급했던 것이다.
 
-<div class="definition" markdown="1">
-
-<ins id="def8">**정의 8**</ins> 집합 $$A$$ 위에 정의된 두 동치관계 $$R,S$$에 대해, $$S$$가 $$R$$보다 *finer<sub>세밀하다</sub>*하다는 것은 $$x\sim_{\tiny S}y\implies x\sim_{\tiny R}y$$가 항상 성립하는 것이다.
-
-</div>
+::: 정의 8
+집합 $$A$$ 위에 정의된 두 동치관계 $$R,S$$에 대해, $$S$$가 $$R$$보다 *finer<sub>세밀하다</sub>*하다는 것은 $$x\sim_{\tiny S}y\implies x\sim_{\tiny R}y$$가 항상 성립하는 것이다.
+:::
 
 집합 $$A$$ 위에 정의된 두 동치관계 $$R,S$$가 주어졌고, $$S$$가 $$R$$보다 finer하다고 하자. 
 

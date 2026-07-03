@@ -18,31 +18,25 @@ last_polished_at: 2026-06-01T21:30:01+00:00
 
 Using the Lie derivative, we can differentiate vector fields or differential forms, but it is impossible to extend this concept to sections $$\Gamma(E)$$ of an arbitrary vector bundle $$\pi:E\rightarrow M$$. On the tangent bundle $$TM$$, given two points $$p,q$$ on an integral flow $$\phi$$, there exists a natural isomorphism $$d\phi^{-t}$$ connecting the two tangent spaces $$T_pM$$ and $$T_qM$$; however, no such map exists between two fibers $$E_p$$ and $$E_q$$ of an arbitrary vector bundle $$E$$. Therefore, we additionally define a *connection* that joins these fibers.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> Given a vector bundle $$E\rightarrow M$$ over a manifold $$M$$, a *connection* $$\nabla:\mathfrak{X}(M)\times\Gamma(E)\rightarrow\Gamma(E)$$ on $$E$$ is a map satisfying the following conditions.
+::: Definition 1
+Given a vector bundle $$E\rightarrow M$$ over a manifold $$M$$, a *connection* $$\nabla:\mathfrak{X}(M)\times\Gamma(E)\rightarrow\Gamma(E)$$ on $$E$$ is a map satisfying the following conditions.
 
 1. (Tensoriality) $$\nabla_XY$$ is $$C^\infty$$-linear in the first argument.
 2. (Linearity) $$\nabla_XY$$ is $$\mathbb{R}$$-linear in the second argument.
 3. For any $$f\in C^\infty(M)$$, $$\nabla$$ satisfies the Leibniz rule
     
     $$\nabla_X(fY)=f\nabla_XY+(Xf)Y$$
-
-</div>
+:::
 
 Here, $$\nabla_XY$$ is also called the *covariant derivative* of $$Y$$ in the direction of $$X$$. The following proposition shows that to compute $$(\nabla_XY)_p$$, it suffices to know $$X$$ and $$Y$$ in a neighborhood of $$p$$.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**Proposition 2**</ins> Let $$M$$ be a manifold, and let $$X\in\mathfrak{X}(M)$$ and $$Y\in\Gamma(E)$$. For any point $$p\in M$$, $$(\nabla_XY)_p$$ depends only on
+::: Proposition 2
+Let $$M$$ be a manifold, and let $$X\in\mathfrak{X}(M)$$ and $$Y\in\Gamma(E)$$. For any point $$p\in M$$, $$(\nabla_XY)_p$$ depends only on
 
 1. the value $$X_p$$ of the vector field $$X$$ at $$p$$,
 2. the restriction $$Y\vert_U$$ of the vector field $$Y$$ to an open neighborhood $$U$$ of $$p$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 First, we show that $$(\nabla_XY)_p$$ depends only on the vector field in an open neighborhood $$U$$ of $$p$$. To show that $$(\nabla_XY_1)_p=(\nabla_XY_2)_p$$ whenever two vector fields $$Y_1,Y_2$$ agree on an open neighborhood $$U$$ of $$p$$, it suffices to show that if a vector field $$Y$$ is identically zero on an open neighborhood $$U$$, then $$(\nabla_XY)_p=0$$. Let $$\varphi$$ be a bump function satisfying $$\supp(\varphi)\subseteq U$$ and $$\varphi(p)=1$$; then the vector field $$\varphi Y$$ is identically zero on all of $$M$$. Therefore, by the second condition of [Definition 1](#def1), $$\nabla_X(\varphi Y)=0$$. On the other hand, by the Leibniz rule,
 
 $$0=\nabla_X(\varphi Y)=\varphi\nabla_XY+(X\varphi)Y$$
@@ -62,8 +56,7 @@ Then
 $$(\nabla_XY)_p=(\nabla_{\sum X^i\frac{\partial}{\partial x^i}}Y)_p=\left(\sum_{i=1}^n X^i\nabla_{\partial/\partial x^i} Y\right)_p$$
 
 and since $$X^i(p)=0$$ for all $$i$$, we obtain the desired result.
-
-</details>
+:::
 
 ## Covariant Differentiation on the Tangent Bundle
 
@@ -93,11 +86,9 @@ there exist $$n^3$$ $$C^\infty$$ functions $$\Gamma_{ij}^k$$ satisfying this. Th
 
 $$\nabla_XY=\sum_{k=1}^n\left(\sum_{i,j=1}^nX(Y^k)+X^iY^j\Gamma_{ij}^k\right)E_k$$
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**Definition 3**</ins> The $$n^3$$ functions $$\Gamma_{ij}^k$$ defined above are called the *connection coefficients*.
-
-</div>
+::: Definition 3
+The $$n^3$$ functions $$\Gamma_{ij}^k$$ defined above are called the *connection coefficients*.
+:::
 
 On the other hand, the tangent bundle over any manifold $$M$$ always admits a connection. To verify this, just as with a Riemannian metric, one can take the connection on Euclidean space
 
@@ -109,25 +100,20 @@ and patch it together via a partition of unity.
 
 We show that a connection $$\nabla$$ defined on the tangent bundle $$TM$$ extends nicely to any $$(r,s)$$-tensor field $$\mathcal{T}^{r,s}(M)$$. ([]()) To do this, we must first specify how $$\nabla$$ extends to the cotangent bundle $$T^\ast M$$.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**Proposition 4**</ins> Let $$M$$ be a manifold and let $$\nabla$$ be a connection on the tangent bundle $$TM$$. Define a map $$\nabla^\ast:\mathfrak{X}(M)\times\Gamma(T^\ast M)\rightarrow\Gamma(T^\ast M)$$ by the formula
+::: Proposition 4
+Let $$M$$ be a manifold and let $$\nabla$$ be a connection on the tangent bundle $$TM$$. Define a map $$\nabla^\ast:\mathfrak{X}(M)\times\Gamma(T^\ast M)\rightarrow\Gamma(T^\ast M)$$ by the formula
 
 $$(\nabla_X^\ast\alpha)_p(Y)=X\bigl(\alpha(Y)\bigr)-\alpha_p\bigl(\nabla_XY\bigr)_p$$
 
 Then $$\nabla^\ast$$ is a connection on $$T^\ast M$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 First, one can show that $$\nabla^\ast\alpha$$ defined by the expression on the right-hand side is a $$1$$-form, so the codomain of $$\nabla^\ast$$ is unproblematic.
 
 That $$\nabla^\ast$$ actually satisfies the conditions for a connection is obvious except for the Leibniz rule. In fact, the Leibniz rule also follows immediately from
 
 $$\begin{aligned}(\nabla_X^\ast f\alpha)_pY&=X(f\cdot\alpha(Y))-(f\alpha)_p(\nabla_XY)_p\\&=(Xf)(\alpha(Y))+f(p)\bigl(X(\alpha(Y))-\alpha_p(\nabla_XY)_p\bigr)\\&=\bigl((Xf)\alpha+f\nabla_X\alpha\bigr)Y\end{aligned}$$
-
-</details>
+:::
 
 By a slight abuse of notation, we write the $$\nabla^\ast$$ defined above also as $$\nabla$$.
 
@@ -135,15 +121,13 @@ By a slight abuse of notation, we write the $$\nabla^\ast$$ defined above also a
 
 Now we can finally extend the connection on $$TM$$ to $$(r,s)$$-tensor fields $$\mathcal{T}^{r,s}(M)$$. As above, we shall write this connection also as $$\nabla$$.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**Proposition 5**</ins> Let $$\nabla$$ be a connection on the tangent bundle $$TM\rightarrow M$$. Then $$\nabla$$ can be extended to all tensor fields $$\mathcal{T}^{r,s}(M)$$ satisfying the following two conditions
+::: Proposition 5
+Let $$\nabla$$ be a connection on the tangent bundle $$TM\rightarrow M$$. Then $$\nabla$$ can be extended to all tensor fields $$\mathcal{T}^{r,s}(M)$$ satisfying the following two conditions
 
 $$\nabla_X(F\otimes G)=(\nabla_X F)\otimes G+F\otimes(\nabla_XG),\qquad\nabla_X(F+G)=\nabla_XF+\nabla_XG$$
 
 and the extension is uniquely determined by the additional condition that $$\nabla_Xf=Xf$$ for $$\mathcal{T}^{0,0}M$$.
-
-</div>
+:::
 
 An arbitrary $$(r,s)$$-tensor $$F$$ can be regarded as the same as the following linear map
 
@@ -196,21 +180,16 @@ $$\nabla_{X,Y}^2F(\ldots)=(\nabla^2 F)(\cdots, Y,X)$$
 
 This $$\nabla_{X,Y}^2F$$ is $$C^\infty(M)$$-linear in $$Y$$, but $$\nabla_X\nabla_Y$$ is not $$C^\infty$$-linear in $$Y$$, so in general $$\nabla_{X,Y}^2\neq\nabla_X\nabla_Y$$. However, the following holds.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop6">**Proposition 6**</ins> For any $$(r,s)$$-tensor $$F$$,
+::: Proposition 6
+For any $$(r,s)$$-tensor $$F$$,
 
 $$\nabla_{X,Y}^2F=\nabla_X(\nabla_YF)-\nabla_{\nabla_XY}F$$
 
 holds.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 One need only plug $$(\omega^1,\ldots,\omega^r,Z_1,\ldots,Z_s)$$ into the right-hand side.
-
-</details>
+:::
 
 In particular, applying this to a $$(0,0)$$-tensor $$C^\infty(M)$$ yields the *covariant Hessian* $$\nabla^2 u$$. 
 

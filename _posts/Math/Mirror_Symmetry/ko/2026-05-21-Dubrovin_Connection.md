@@ -36,9 +36,8 @@ $$\nabla^z_{\partial_\alpha} = \partial_\alpha + \frac{1}{z}\, \mathcal{C}_\alph
 
 를 생각하면, $$z \to \infty$$에서는 Levi-Civita connection $$\nabla$$로 수렴하고 $$z \to 0$$에서는 product $$\circ$$의 classical limit으로 발산하는 하나의 family로 묶을 수 있으며, 실제로 $$z\rightarrow 0$$인 계산을 할 때는 이를 rescale하여 $$z\nabla^z_{\partial_\alpha} = z\partial_\alpha + \mathcal{C}_\alpha$$의 $$z \to 0$$ leading term으로 빼내면 된다. 어쨌든, 이러한 의미에서 $$\nabla^z$$는 두 구조를 연결하는 *flat pencil of connections*이며, 물리적으로는 이를 string coupling constant로 해석한다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> Frobenius manifold $$M$$과 auxiliary complex parameter $$z \in \mathbb{C}^\ast$$를 생각하자. 그럼 *Dubrovin connection* $$\nabla^z$$는 projection
+::: 정의 1
+Frobenius manifold $$M$$과 auxiliary complex parameter $$z \in \mathbb{C}^\ast$$를 생각하자. 그럼 *Dubrovin connection* $$\nabla^z$$는 projection
 
 $$\pr_1: M\times \mathbb{C}^\ast \rightarrow M$$
 
@@ -51,8 +50,7 @@ $$\nabla^z_{\partial_\alpha} = \partial_\alpha + \frac{1}{z}\, \mathcal{C}_\alph
 $$\nabla^z_{\partial_z} = \partial_z - \frac{1}{z^2}E\circ(-) + \frac{1}{z}\mu$$
 
 으로 주어진다. 여기서 $$E$$는 Euler vector field ([§프로베니우스 다양체, ⁋정의 5](/ko/math/mirror_symmetry/frobenius_manifold#def5))이고, $$\mu$$는 *grading operator*로, flat coordinate $$t^\alpha$$에 대응하는 cohomology class $$\sigma^\alpha$$의 절반 차수 $$d_\alpha = \tfrac{1}{2}\deg\sigma^\alpha$$와 conformal dimension $$d$$로부터 $$\mu(\partial_\alpha) = (d_\alpha - d/2)\, \partial_\alpha$$로 정의된다.
-
-</div>
+:::
 
 앞서 [§프로베니우스 다양체, ⁋정의 5](/ko/math/mirror_symmetry/frobenius_manifold#def5)에서 Frobenius manifold를 정의할 때, 각 점에서의 Frobenius algebra의 grading structure를 담기 위해 $$E$$를 도입했던 것을 기억하자. 구체적으로, 
 
@@ -80,25 +78,20 @@ $$[\nabla^z_{\partial_\alpha}, \nabla^z_{\partial_\beta}] = [\partial_\alpha + z
 
 뿐만 아니라 다음 명제는 이러한 connection들의 flatness가 *정확하게* 이 두 조건과 동치임을 보여준다. 이들은 Frobenius manifold ([§프로베니우스 다양체, ⁋정의 5](/ko/math/mirror_symmetry/frobenius_manifold#def5))의 공리들이었으며, 따라서 $$\nabla^z$$의 $$M$$-방향 flatness는 단순히 moduli를 맞추기 위한 결과가 아니라 Frobenius structure 그 자체라 할 수 있다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**명제 2**</ins> Frobenius manifold $$M$$ 위의 connection $$\nabla^z$$ ([정의 1](#def1))를 생각하자. Product $$\circ$$가 commutative라는 가정 아래, $$\nabla^z$$가 모든 $$z$$에 대해 $$M$$-방향 (즉 $$\partial_\alpha$$ 방향들 사이)으로 flat인 것은 다음 두 조건이 모두 성립하는 것과 동치이다.
+::: 명제 2
+Frobenius manifold $$M$$ 위의 connection $$\nabla^z$$ ([정의 1](#def1))를 생각하자. Product $$\circ$$가 commutative라는 가정 아래, $$\nabla^z$$가 모든 $$z$$에 대해 $$M$$-방향 (즉 $$\partial_\alpha$$ 방향들 사이)으로 flat인 것은 다음 두 조건이 모두 성립하는 것과 동치이다.
 
 1. *Potentiality*: $$\partial_\alpha\, c_{\beta\gamma}^\delta = \partial_\beta\, c_{\alpha\gamma}^\delta$$. 즉 $$c_{\alpha\beta}^\delta$$가 어떤 potential $$F$$의 세 번째 도함수이다.
 2. *Associativity (WDVV)*: $$[\mathcal{C}_\alpha, \mathcal{C}_\beta] = 0$$, 성분으로는 $$\sum_\delta c_{\alpha\beta}^\delta\, c_{\delta\gamma}^\epsilon = \sum_\delta c_{\beta\gamma}^\delta\, c_{\alpha\delta}^\epsilon$$. 즉 $$\circ$$가 associative이다.
+:::
 
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 위에서 한쪽 방향은 이미 보였으므로 역방향만 확인하면 된다. $$\nabla^z$$가 모든 $$z \in \mathbb{C}^\ast$$에 대해 flat이라 하자. 곡률
 
 $$[\nabla^z_{\partial_\alpha}, \nabla^z_{\partial_\beta}] = \frac{1}{z}\,(\partial_\alpha\mathcal{C}_\beta - \partial_\beta\mathcal{C}_\alpha) + \frac{1}{z^2}\,[\mathcal{C}_\alpha, \mathcal{C}_\beta]$$
 
 은 $$z^{-1}$$과 $$z^{-2}$$에 대한 Laurent polynomial이므로, 이것이 모든 $$z$$에서 vanish하는 것은 두 계수가 따로 vanish하는 것과 동치이다. $$z^{-1}$$ 계수의 vanishing은 곧 첫째 조건 $$\partial_\alpha\mathcal{C}_\beta = \partial_\beta\mathcal{C}_\alpha$$이며, $$z^{-2}$$ 계수의 vanishing $$[\mathcal{C}_\alpha, \mathcal{C}_\beta] = 0$$을 성분으로 적으면 $$\sum_\delta (c_{\alpha\delta}^\epsilon c_{\beta\gamma}^\delta - c_{\beta\delta}^\epsilon c_{\alpha\gamma}^\delta) = 0$$인데, $$\circ$$가 commutative라는 가정 아래 이것은 정확히 associativity, 즉 WDVV equation과 동치이다. ([§프로베니우스 다양체, ⁋명제 7](/ko/math/mirror_symmetry/frobenius_manifold#prop7))
-
-</details>
+:::
 
 한편 $$z$$-방향의 flatness $$[\nabla^z_{\partial_z}, \nabla^z_{\partial_\alpha}] = 0$$은 Euler vector field $$E$$와 grading operator $$\mu$$가 product와 호환된다는 조건, 즉 Frobenius manifold의 homogeneity (또는 conformal) condition을 요구한다. 이 조건은 [§프로베니우스 다양체, ⁋정의 5](/ko/math/mirror_symmetry/frobenius_manifold#def5)의 네 번째 조건으로 이미 우리의 정의 안에 들어 있으므로, 우리의 정의에서는  $$z$$-방향까지 포함한 $$\nabla^z$$의 온전한 flatness가 얻어진다.
 
@@ -106,15 +99,13 @@ $$[\nabla^z_{\partial_\alpha}, \nabla^z_{\partial_\beta}] = \frac{1}{z}\,(\parti
 
 Connection $$\nabla$$는 본질적으로 section을 *미분*하는 도구이다. Vector bundle을 $$\mathcal{O}_X$$-module로 볼 때 우리가 가진 연산은 함수와의 곱셈뿐이지만, 미분까지 할 수 있게 되면 그 bundle은 함수에 더해 미분연산자들의 작용까지 받는 대상, 곧 *$$\mathcal{D}_X$$-module*이 되며, 이것이 flat이어야 그 정의가 말이 될 것이다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**정의 3**</ins> Complex manifold $$B$$ 위에서, $$B$$ 위 미분 연산자들의 sheaf of rings $$\mathcal{D}_B$$는 structure sheaf $$\mathcal{O}_B$$와 vector field들, 즉 $$\mathcal{O}_B$$ 위의 derivation ([\[가환대수학\] §미분, ⁋정의 1](/ko/math/commutative_algebra/differentials#def1))이 생성하는 operator들의 sheaf이다. 이 때, vector field $$\partial$$과 함수 $$f$$는 다음의 관계식
+::: 정의 3
+Complex manifold $$B$$ 위에서, $$B$$ 위 미분 연산자들의 sheaf of rings $$\mathcal{D}_B$$는 structure sheaf $$\mathcal{O}_B$$와 vector field들, 즉 $$\mathcal{O}_B$$ 위의 derivation ([\[가환대수학\] §미분, ⁋정의 1](/ko/math/commutative_algebra/differentials#def1))이 생성하는 operator들의 sheaf이다. 이 때, vector field $$\partial$$과 함수 $$f$$는 다음의 관계식
 
 $$[\partial, f] = \partial(f)$$
 
 를 만족한다. 이제 $$\mathcal{D}_B$$-action이 정의된 $$\mathcal{O}_B$$-module $$\mathcal{M}$$을 *$$\mathcal{D}_B$$-module*이라 부른다. 
-
-</div>
+:::
 
 $$\mathcal{M}$$ 위에 $$\mathcal{O}_B$$-module 구조는 보편적으로 함수 $$f\in \mathcal{O}_B$$와의 곱셈으로 생각한다. 그럼 임의의 section $$s\in \mathcal{M}$$에 대하여, 관계식 $$[\partial, f]=\partial(f)$$는 다음의 Leibniz 법칙
 
@@ -146,17 +137,15 @@ $$H_A=H^\ast(X)\otimes_\mathbb{C}\mathbb{C}[q^\pm, z^\pm]=H^\ast(X, \mathbb{C}[z
 
 이와 비슷하게, 우리는 다음 글에서 $$X$$의 mirror dual $$\check{X}$$이 정의하는 Jacobi ring들 $$\Jac(W_q)$$들도 적당한 manifold $$M_B$$ 위에 정의된 fiber가 되도록 할 수 있다는 것을 보인다. 뿐만 아니라, 이를 $$\mathcal{D}$$-module로 만드는 *Gauss-Manin connection* $$\nabla^{GM}$$이 존재하여, 이 $$D$$-module의 section이 B-model state space $$H_B$$를 구성한다는 것을 증명할 것이다. 그럼 우리의 mirror symmetry statement는 다음의 주장으로 격상된다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="conj4">**주장 4 (Mirror theorem, $$D$$-module form)**</ins> Mirror pair $$(X, \check{X})$$에 대해, 앞서 도입한 A-model state space $$H_A$$와 B-model state space $$H_B$$ 사이의 *mirror isomorphism*
+::: misc 주장 4 (Mirror theorem, $$D$$-module form) {#conj4}
+Mirror pair $$(X, \check{X})$$에 대해, 앞서 도입한 A-model state space $$H_A$$와 B-model state space $$H_B$$ 사이의 *mirror isomorphism*
 
 $$\Phi: H_A \xrightarrow{\sim} H_B$$
 
 가 존재하여, $$\Phi$$가 Dubrovin connection과 Gauss-Manin connection을 호환시킨다.
 
 $$\Phi \circ \nabla^z = \nabla^{GM} \circ \Phi$$
-
-</div>
+:::
 
 다소 주의할 것은, 이 주장은 엄밀하게는 증명된 사실이 아니라 하나의 철학이라는 것이다. 이는 여러 mirror pair들에 대해 별도로 증명되어 왔으며, 가령 Givental이 증명한 Calabi-Yau hypersurface in toric variety의 경우가 역사적으로 가장 처음 증명되었으며, 이후 이것이 toric Fano variety로 확장되었고 그 후 Coates-Corti-Iritani-Tseng에 의해 toric stack에 대해서도 확장되었다. 약간 다른 방향의 일반화로는 toric variety 대신 homogeneous space, 특히 partial flag variety $$G/P$$로 가는 길이 있다. 이 방향에서는 물리적으로 Eguchi-Hori-Xiong에 의해 우선 Grassmannian과 flag variety에 대한 LG superpotential이 구성되었으며, Rietsch에 의해 이것이 Lie-theoretic하게 연구되었고, 이에 대한 탐구가 이 카테고리의 주요한 목적 중 하나이다. 
 

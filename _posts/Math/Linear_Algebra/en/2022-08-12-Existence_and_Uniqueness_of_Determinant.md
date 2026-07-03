@@ -22,11 +22,9 @@ In this post we show that the determinant exists uniquely and examine methods fo
 
 In this section we define the symmetric group. The results introduced here are presented without detailed proof, but the proofs can be found in [\[Group Theory\] §Symmetric Groups](/en/math/group_theory/symmetric_groups) if desired.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> The collection of all bijections from the set $$\{1,\ldots, n\}$$ to itself is called the *symmetric group*, denoted $$S_n$$. The elements of $$S_n$$ are called *permutations*.
-
-</div>
+::: Definition 1
+The collection of all bijections from the set $$\{1,\ldots, n\}$$ to itself is called the *symmetric group*, denoted $$S_n$$. The elements of $$S_n$$ are called *permutations*.
+:::
 
 The elements of $$S_n$$ form a group under function composition, with identity element $$\id$$, and the inverse of a function $$\tau\in S_n$$ is the inverse function $$\tau^{-1}$$.
 
@@ -58,14 +56,10 @@ holds.
 
 ## Existence and Uniqueness of the Determinant
 
-<div class="proposition" markdown="1">
-
-<ins id="lem2">**Lemma 2**</ins> The function $$D$$ satisfying [§Determinant, ⁋Definition 4](/en/math/linear_algebra/determinant#def4) exists uniquely.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Lemma 2
+The function $$D$$ satisfying [§Determinant, ⁋Definition 4](/en/math/linear_algebra/determinant#def4) exists uniquely.
+:::
+::: Proof
 Let $$f$$ be an alternating linear map. For arbitrary $$v_1,\ldots, v_n\in V$$, if
 
 $$v_i=v_1^ie_1+\cdots v_n^ie_n,\qquad i=1,\ldots, n$$
@@ -94,8 +88,7 @@ For existence, similarly taking a hint from equation (1), we define
 $$D(v_1,\ldots, v_n)=\sum_{\tau\in S_n}\sgn(\tau)v^1_{\tau(1)}v^2_{\tau(2)}\cdots v^n_{\tau(n)}$$
 
 and then show that $$D$$ is actually an alternating multilinear map. This is simply repeating the above calculation in reverse, so we omit it.
-
-</details>
+:::
 
 Thus the determinant is well defined, and we write it as $$\det$$. From the proof of the above proposition, we obtained an explicit formula for the determinant $$\det A$$. That is, denoting the $$i$$-th column vector of a matrix $$A$$ by $$A_i$$, the $$j$$-th component of $$A_i$$ is $$A_{ji}$$, and therefore
 
@@ -107,32 +100,23 @@ $$\det A=\sum_{\tau\in S_n}\sgn(\tau)A_{\tau(1)1}A_{\tau(2)2}\cdots A_{\tau(n)n}
 
 In general, when $$n$$ is large, directly computing the determinant using this formula is cumbersome, but the above formula is very helpful when proving various properties of the determinant.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor3">**Corollary 3**</ins> For any matrix $$A\in\Mat_n(\mathbb{K})$$, $$\det(A^t)=\det A$$ holds.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Corollary 3
+For any matrix $$A\in\Mat_n(\mathbb{K})$$, $$\det(A^t)=\det A$$ holds.
+:::
+::: Proof
 First, for transpositions $$\upsilon_i$$, if $$\tau=\upsilon_1\circ\ldots\upsilon_k$$ then $$\tau^{-1}=\upsilon_k^{-1}\circ\cdots\circ\upsilon_1^{-1}$$, so $$\sgn(\tau)=\sgn(\tau^{-1})$$ always holds. Now from the definition of $$A^t$$, we have $$A_{ij}=(A^t)_{ji}$$, and
 
 $$\det(A^t)=\sum_{\tau\in S_n}\sgn(\tau)A_{1\tau(1)}\cdots A_{n\tau(n)}=\sum_{\tau\in S_n}\sgn(\tau^{-1})A_{\tau^{-1}(1)1}\cdots A_{\tau^{-1}(n)n}$$
 
 from which we obtain the desired result.
-
-</details>
+:::
 
 Also, from the above formula we can see that the determinant preserves multiplication.
 
-<div class="proposition" markdown="1">
-
-<ins id="lem4">**Lemma 4**</ins> For any matrices $$A,B\in\Mat_n(\mathbb{K})$$, $$\det(AB)=\det(A)\det(B)$$ holds.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Lemma 4
+For any matrices $$A,B\in\Mat_n(\mathbb{K})$$, $$\det(AB)=\det(A)\det(B)$$ holds.
+:::
+::: Proof
 The $$(i,j)$$-entry of the matrix $$AB$$ is given by the formula
 
 $$(AB)_{ij}=\sum_{k=1}^nA_{ik}B_{kj}$$
@@ -150,19 +134,14 @@ Then the right-hand side of the above expression becomes
 $$\sum_{\upsilon\in S_n}\sgn(\upsilon)\det(A)B_{\upsilon(1)1}\cdots B_{\upsilon(n)n}=\det(A)\det(B)$$
 
 thus completing the proof.
-
-</details>
+:::
 
 In the previous post we explained geometrically that a matrix $$A$$ is invertible if and only if $$\det A\neq 0$$. Using [Lemma 4](#lem4) above, we can prove this rigorously.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**Proposition 5**</ins> For any matrix $$A\in\Mat_n(\mathbb{K})$$, $$\det A\neq 0$$ is equivalent to $$A$$ being invertible.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 5
+For any matrix $$A\in\Mat_n(\mathbb{K})$$, $$\det A\neq 0$$ is equivalent to $$A$$ being invertible.
+:::
+::: Proof
 From the fundamental theorem of linear algebra, we know that $$A$$ being invertible is equivalent to the linear map $$L_A:\mathbb{K}^n\rightarrow \mathbb{K}^n$$ defined by $$A$$ being invertible. Since $$\mathbb{K}^n$$ is finite-dimensional, this is equivalent to $$L_A$$ being surjective, which is equivalent to the column vectors $$A_1,\ldots, A_n$$ forming a basis of $$\col(A)$$, i.e., being linearly independent. If $$A_1,\ldots, A_n$$ are not linearly independent, then by [§Determinant, ⁋Proposition 3](/en/math/linear_algebra/determinant#prop3), $$\det A=0$$. That is, if $$\det A\neq 0$$, then $$A$$ is invertible.
 
 Conversely, assume $$A$$ is invertible. Then from the formula
@@ -170,47 +149,37 @@ Conversely, assume $$A$$ is invertible. Then from the formula
 $$1=\det(I)=\det(A^{-1}A)=\det(A^{-1})\det(A)\tag{3}$$
 
 we know that $$\det A\neq 0$$.
-
-</details>
+:::
 
 From equation (3) appearing in the proof of the above proposition, we obtain the following corollary.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor6">**Corollary 6**</ins> For an invertible matrix $$A\in\Mat_n(\mathbb{K})$$, $$\det(A^{-1})=(\det A)^{-1}$$ holds.
-
-</div>
+::: Corollary 6
+For an invertible matrix $$A\in\Mat_n(\mathbb{K})$$, $$\det(A^{-1})=(\det A)^{-1}$$ holds.
+:::
 
 ## Triangular Matrices and the Determinant
 
 The formula examined above is inefficient because it requires computing $$n!$$ terms to find the determinant. However, in certain cases this formula applies usefully.
 
-<div class="definition" markdown="1">
-
-<ins id="def7">**Definition 7**</ins> A matrix $$A\in\Mat_n(\mathbb{K})$$ is called an *upper triangular matrix* if $$A_{ij}=0$$ whenever $$i>j$$. Similarly, if $$A_{ij}=0$$ whenever $$i < j$$, then $$A$$ is called a *lower triangular matrix*, and upper and lower triangular matrices are collectively called simply *triangular matrices*.
+::: Definition 7
+A matrix $$A\in\Mat_n(\mathbb{K})$$ is called an *upper triangular matrix* if $$A_{ij}=0$$ whenever $$i>j$$. Similarly, if $$A_{ij}=0$$ whenever $$i < j$$, then $$A$$ is called a *lower triangular matrix*, and upper and lower triangular matrices are collectively called simply *triangular matrices*.
 
 On the other hand, the entries $$A_{ii}$$ of a matrix $$A$$ are called the *diagonal entries*, and if $$A_{ij}=0$$ whenever $$i\neq j$$, then $$A$$ is called a *diagonal matrix*.
-
-</div>
+:::
 
 In particular, every $$n\times n$$ row echelon matrix is an upper triangular matrix. ([§Gaussian Elimination, ⁋Definition 4](/en/math/linear_algebra/Gaussian_elimination#def4))
 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop8">**Proposition 8**</ins> For any triangular matrix $$A$$, $$\det(A)$$ equals the product of the diagonal entries.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 8
+For any triangular matrix $$A$$, $$\det(A)$$ equals the product of the diagonal entries.
+:::
+::: Proof
 Let us examine once more the determinant formula
 
 $$\det A=\sum_{\tau\in S_n}\sgn(\tau)A_{\tau(1)1}A_{\tau(2)2}\cdots A_{\tau(n)n}$$
 
 For any $$\tau\in S_n$$, since $$\tau$$ is a bijection, if there exists an $$i$$ such that $$\tau(i)>i$$, then there must necessarily exist a $$j$$ such that $$\tau(j)<j$$. Therefore, among the terms summed in the above formula, all are 0 except when $$\tau=\id$$.
-
-</details>
+:::
 
 By [§Gaussian Elimination](/en/math/linear_algebra/Gaussian_elimination), any matrix can be transformed into row echelon form by repeated elementary row operations. Since every row echelon matrix is an upper triangular matrix, by the above proposition we can very easily find the determinant of the resulting row echelon matrix. On the other hand, applying elementary row operations is equivalent to multiplying by elementary matrices. Therefore, if from a matrix $$A$$ we obtain a row echelon matrix $$A'$$ by repeated elementary row operations $$E_1,\ldots, E_k$$, then
 
@@ -230,18 +199,14 @@ Also, $$E''_{i,j,r}$$ is necessarily a triangular matrix, and since the product 
 
 On the other hand, using formula (2) for the determinant, we can also find the determinant of a block matrix.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop9">**Proposition 9**</ins> Let $$A\in\Mat_k(\mathbb{K})$$ and let $$I$$ be the $$l\times l$$ identity matrix. Then the determinant of the block matrix
+::: Proposition 9
+Let $$A\in\Mat_k(\mathbb{K})$$ and let $$I$$ be the $$l\times l$$ identity matrix. Then the determinant of the block matrix
 
 $$\begin{pmatrix}A&O\\O&I\end{pmatrix}$$
 
 equals $$\det A$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 This is almost identical to the proof of [Proposition 8](#prop8). Computing the determinant of the given matrix using formula (2), we get
 
 $$\det \begin{pmatrix}A&O\\O&I\end{pmatrix}=\sum_{\tau\in S_{k+l}}\sgn(\tau)A_{\tau(1)1}A_{\tau(2)2}\cdots A_{\tau(k)k}B_{\tau(k+1)(k+1)}\cdots B_{\tau(k+l)(k+l)}$$
@@ -251,28 +216,22 @@ Here $$B_{k+i}$$ is the element of $$\mathbb{K}^{k+l}$$ whose $$(k+i)$$-th compo
 $$\tau(k+1)=k+1,\ldots,\tau(k+l)=k+1$$
 
 the terms summed on the right-hand side are always 0, so we only need to sum over those $$\tau$$ for which the last $$l$$ entries are fixed. That is, the determinant of the given matrix becomes exactly the same as formula (2), so the given proposition holds.
+:::
 
-</details>
-
-<div class="proposition" markdown="1">
-
-<ins id="cor10">**Corollary 10**</ins> For $$A\in\Mat_k(\mathbb{K}),B\in\Mat_l(\mathbb{K}), C\in\Mat_{l\times k}(\mathbb{K})$$, the determinant of the block matrix
+::: Corollary 10
+For $$A\in\Mat_k(\mathbb{K}),B\in\Mat_l(\mathbb{K}), C\in\Mat_{l\times k}(\mathbb{K})$$, the determinant of the block matrix
 
 $$\begin{pmatrix}A&O\\C&B\end{pmatrix}$$
 
 equals $$\det A\det B$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 This follows immediately from the formula
 
 $$\begin{pmatrix}A&O\\C&B\end{pmatrix}=\begin{pmatrix}A&O\\O&E\end{pmatrix}\begin{pmatrix}I&O\\O&I\end{pmatrix}\begin{pmatrix}I&O\\O&B\end{pmatrix}$$
 
 and [Proposition 9](#prop9), and [Lemma 4](#lem4). For the last matrix, after $$l$$ row swaps and $$l$$ column swaps, there are $$2l$$ sign changes, so the determinant of the given matrix becomes equal to $$\det B$$.
-
-</details>
+:::
 
 It is not difficult to extend the above results inductively. That is,
 
@@ -289,24 +248,18 @@ is generally not equal to $$\det A\det D-\det B\det C$$.
 
 When an $$n\times n$$ square matrix $$A$$ is given, one of the easiest ways to find its determinant is to use the Laplace expansion, which we now introduce. For this, a definition is needed.
 
-<div class="definition" markdown="1">
-
-<ins id="def11">**Definition 11**</ins> Let a matrix $$A\in\Mat_n(\mathbb{K})$$ be given. For $$1\leq i,j\leq n$$, $$A^{(i,j)}$$ is the $$(n-1)\times (n-1)$$ square matrix obtained by deleting the $$i$$-th row and $$j$$-th column of $$A$$.
-
-</div>
+::: Definition 11
+Let a matrix $$A\in\Mat_n(\mathbb{K})$$ be given. For $$1\leq i,j\leq n$$, $$A^{(i,j)}$$ is the $$(n-1)\times (n-1)$$ square matrix obtained by deleting the $$i$$-th row and $$j$$-th column of $$A$$.
+:::
 
 The Laplace expansion expresses the determinant of $$A$$ as a formula in terms of the $$\det A^{(i,j)}$$.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm12">**Theorem 12**</ins> For any matrix $$A\in\Mat_n(\mathbb{K})$$ and any $$1\leq i\leq n$$, the following formula holds:
+::: Theorem 12
+For any matrix $$A\in\Mat_n(\mathbb{K})$$ and any $$1\leq i\leq n$$, the following formula holds:
 
 $$\det A=\sum_{j=1}^n(-1)^{i+j}A_{ij}\det (A^{(i,j)})$$
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 First fix $$i,j$$. Let $$B_j$$ be the matrix obtained from $$A$$ by replacing all entries in the $$i$$-th row with 0, except leaving the $$j$$-th entry unchanged. Then, swap rows $$i-1$$ times to bring the $$i$$-th row to the first row, and swap columns $$j-1$$ times to bring the $$j$$-th column to the first column, and call the resulting matrix $$B_j'$$. Then
 
 $$B_j'=\begin{pmatrix}A_{ij}&0&\cdots&0\\A_{1j}&&&\\\vdots&&A^{(i,j)}&\\A_{nj}&&&\end{pmatrix}$$
@@ -318,8 +271,7 @@ $$\det B_j=(-1)^{i+j-2}\det B_j'=(-1)^{i+j-2}A_{ij}\det A^{(i,j)}=(-1)^{i+j}A_{i
 On the other hand, using multilinearity in the $$i$$-th column, the sum of the determinants of the $$B_j$$ equals the determinant of $$A$$, so we obtain the desired formula
 
 $$\det A=\sum_{j=1}^n\det B_j=\sum_{j=1}^n (-1)^{i+j}A_{ij}\det A^{(i,j)}$$
-
-</details>
+:::
 
 ---
 

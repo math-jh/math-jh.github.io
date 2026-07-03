@@ -18,19 +18,16 @@ last_polished_at: 2026-06-01T08:00:04+00:00
 
 We defined vector bundles in the previous post partly for later use, but we also needed them immediately to define vector fields.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> For any vector bundle $$\pi:E\rightarrow M$$, a map $$\sigma:M\rightarrow E$$ satisfying $$\pi\circ\sigma=\id_M$$ is called a *section* of the vector bundle $$E\rightarrow M$$.
-
-</div>
+::: Definition 1
+For any vector bundle $$\pi:E\rightarrow M$$, a map $$\sigma:M\rightarrow E$$ satisfying $$\pi\circ\sigma=\id_M$$ is called a *section* of the vector bundle $$E\rightarrow M$$.
+:::
 
 This definition merely says that $$\sigma$$ is a function taking each point $$p$$ to an element of $$E_p$$. Meanwhile, since $$E$$ is itself a manifold, any section $$\sigma:M\rightarrow E$$ is a map between two manifolds, and thus the smoothness of $$\sigma$$ is well-defined. We write $$\Gamma(E)$$ for the set of smooth sections of the vector bundle $$E\rightarrow M$$.
 
 In particular, a section $$X$$ of the tangent bundle $$\pi:TM\rightarrow M$$ is called a *vector field*, and the value of $$X$$ at a point $$p$$ is often written $$X_p$$. Since $$X_p\in T_pM$$, for a function $$f$$ defined near $$p$$, the real number $$X_p(f)$$ is well-defined. In particular, if $$f$$ is defined on an open set $$U$$, we denote by $$X(f)$$ the function $$U\rightarrow\mathbb{R}$$ sending $$p\in U$$ to the real number $$X_p(f)$$.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**Proposition 2**</ins> Let $$X$$ be a vector field on a manifold $$M$$. Then the following are equivalent.
+::: Proposition 2
+Let $$X$$ be a vector field on a manifold $$M$$. Then the following are equivalent.
 
 1. $$X$$ is $$C^\infty$$.
 2. For any coordinate system $$(U,\varphi)$$, $$\varphi=(x^i)_{i=1}^m$$, the functions $$a^i:U\rightarrow\mathbb{R}$$ defined by the formula
@@ -39,11 +36,8 @@ In particular, a section $$X$$ of the tangent bundle $$\pi:TM\rightarrow M$$ is 
 
     are all $$C^\infty$$ on $$U$$.
 3. For any open set $$V\subseteq M$$ and any $$C^\infty$$ function $$f:V\rightarrow\mathbb{R}$$, the function $$X(f)$$ is also $$C^\infty$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 First, if $$X$$ is $$C^\infty$$, then clearly $$X\vert_U$$ is $$C^\infty$$. Meanwhile, as functions on $$TM$$, the $$dx^i$$ are component functions of the coordinate system $$\tilde{\varphi}:\pi^{-1}(U)\rightarrow\mathbb{R}^{2m}$$, so they are likewise $$C^\infty$$, and therefore their composition
 
 $$a^i(p)=dx^i\left(\sum a^i(p)\frac{\partial}{\partial x^i}\bigg\vert_p\right)=dx^i\vert_p\circ(X\vert_U)_p$$
@@ -65,8 +59,7 @@ are $$C^\infty$$. But direct computation gives
 $$x^i\circ\pi\circ (X\vert_U)=x^i\circ\id_U=x^i,\qquad dx^i\circ(X\vert_U)=X(x^i)$$
 
 so they are all $$C^\infty$$.
-
-</details>
+:::
 
 We write $$\mathfrak{X}(M)$$ for the set of $$C^\infty$$ vector fields on $$M$$, and henceforth assume all vector fields are $$C^\infty$$. Meanwhile, by a partition of unity, any vector field defined only on some open set $$U$$ of $$M$$ can be extended to all of $$M$$. ([§Tangent Space, footnote 1](/en/math/manifolds/tangent_space#fn:1))
 
@@ -82,9 +75,8 @@ $$(\alpha X)_p=\alpha\cdot X_p$$
 
 we see that $$\alpha X$$ is also an element of $$\mathfrak{X}(M)$$. Thus $$\mathfrak{X}(M)$$ is an $$\mathbb{R}$$-vector space. However, as an $$\mathbb{R}$$-vector space, $$\mathfrak{X}(M)$$ is too large.
 
-<div class="example" markdown="1">
-
-<ins id="ex3">**Example 3**</ins> Let $$M=\mathbb{R}$$. Here we regard $$M$$ as equipped with the manifold structure given by the single chart $$(\mathbb{R},\id)$$. Then the tangent space $$T_pM$$ at each point $$p$$ is the one-dimensional vector space spanned by $$d/dx\vert_p$$, and thus the correspondence
+::: Example 3
+Let $$M=\mathbb{R}$$. Here we regard $$M$$ as equipped with the manifold structure given by the single chart $$(\mathbb{R},\id)$$. Then the tangent space $$T_pM$$ at each point $$p$$ is the one-dimensional vector space spanned by $$d/dx\vert_p$$, and thus the correspondence
 
 $$X:M\rightarrow TM;\qquad p\mapsto \frac{d}{dx}\bigg\vert_p$$
 
@@ -93,8 +85,7 @@ is an element of $$\mathfrak{X}(M)$$. However, for any $$C^\infty$$ function $$f
 $$fX:M\rightarrow TM;\qquad p\mapsto f(p)\frac{d}{dx}\bigg\vert_p$$
 
 also belongs to $$\mathfrak{X}(M)$$ ([Proposition 2](#prop2)), and this element cannot be expressed as a constant multiple of $$X$$ unless $$f$$ is constant. Moreover, since $$C^\infty(M)$$ is an infinite-dimensional vector space over $$\mathbb{R}$$, the space $$\mathfrak{X}(M)$$ is also infinite-dimensional.
-
-</div>
+:::
 
 In such a situation, it is relatively more convenient to regard $$\mathfrak{X}(M)$$ as a $$C^\infty(M)$$-module.
 
@@ -110,16 +101,14 @@ $$X_1(p)=h(p, e_1),\quad X_2(p)=h(p,e_2),\quad\ldots,\quad X_m(p)=h(p,e_m)\tag{1
 
 these generate $$\mathfrak{X}(U)$$.
 
-<div class="definition" markdown="1">
-
-<ins id="def4">**Definition 4**</ins> Let $$M$$ be a manifold, and let $$\dim M=m$$.
+::: Definition 4
+Let $$M$$ be a manifold, and let $$\dim M=m$$.
 
 - We say that $$X_1,\ldots, X_k$$ are *linearly independent* on a subset $$A$$ of $$M$$ if for each $$p\in A$$, the vectors $$X_1(p),\ldots, X_k(p)$$ in $$T_pM$$ are linearly independent.
 - We say that $$X_1,\ldots, X_k$$ *span* the tangent bundle $$TM$$ on a subset $$A$$ of $$M$$ if for each $$p\in A$$, the vectors $$X_1(p),\ldots, X_k(p)$$ in $$T_pM$$ span $$T_pM$$.
 - If linearly independent vector fields $$X_1,\ldots, X_k$$ on an open set $$U\subseteq M$$ span the tangent bundle, we call them a *local frame* of $$M$$.
 - If in the above definition we can take $$U=M$$, we call these vector fields a *global frame* of $$M$$.
-
-</div>
+:::
 
 Therefore, from the above discussion we see that a parallelizable manifold admits a global frame. Conversely, if a manifold $$M$$ has a global frame $$X_1,\ldots, X_m$$, we can verify that $$M$$ is parallelizable by defining a map $$TM\rightarrow M\times\mathbb{R}^m$$ by
 
@@ -128,17 +117,14 @@ $$(p,a_1X_1(p)+\cdots+a_mX_m(p))\mapsto (p,a_1e_1+\cdots+a_me_m)$$
 
 ## Integral Flow
 
-<div class="definition" markdown="1">
-
-<ins id="def5">**Definition 5**</ins> A $$C^\infty$$ curve $$\sigma$$ on a manifold $$M$$ is called an *integral flow* of $$X\in\mathfrak{X}(M)$$ if $$\sigma'(t)=X(\sigma(t))$$ holds for all $$t$$.
-
-</div>
+::: Definition 5
+A $$C^\infty$$ curve $$\sigma$$ on a manifold $$M$$ is called an *integral flow* of $$X\in\mathfrak{X}(M)$$ if $$\sigma'(t)=X(\sigma(t))$$ holds for all $$t$$.
+:::
 
 The following theorem follows easily from the theory of ordinary differential equations, but we omit its proof since it lies beyond our scope. Moreover, from item 4 onward, the theorem requires a few additional definitions.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm6">**Theorem 6**</ins> Let $$M$$ be a manifold and let $$X\in\mathfrak{X}(M)$$. For each $$p\in M$$, there exist suitable constants $$a(p), b(p)$$ (possibly $$\pm\infty$$) and a $$C^\infty$$ curve $$\phi_p: \bigl(a(p),b(p)\bigr)\rightarrow M$$ satisfying the following conditions.
+::: Theorem 6
+Let $$M$$ be a manifold and let $$X\in\mathfrak{X}(M)$$. For each $$p\in M$$, there exist suitable constants $$a(p), b(p)$$ (possibly $$\pm\infty$$) and a $$C^\infty$$ curve $$\phi_p: \bigl(a(p),b(p)\bigr)\rightarrow M$$ satisfying the following conditions.
 
 1. $$0\in \bigl(a(p),b(p)\bigr)$$, $$\phi_p(0)=p$$.
 2. $$\phi_p$$ is an integral flow of $$X$$.
@@ -148,8 +134,7 @@ The following theorem follows easily from the theory of ordinary differential eq
 6. $$\bigcup_{t>0}\mathcal{D}_t=M$$.
 7. $$\phi^{t}:\mathcal{D}_t\rightarrow\mathcal{D}_{-t}$$ is a diffeomorphism, and its inverse is $$\phi^{-t}$$.
 8. The domain of $$\phi^s\circ \phi^t$$ is contained in $$\mathcal{D}_{s+t}$$, and in particular, if $$s$$ and $$t$$ have the same sign, the domain of this function coincides exactly with $$\mathcal{D}_{s+t}$$. Moreover, on this domain, $$\phi^s\circ \phi^t=\phi^{t+s}$$.
-
-</div>
+:::
 
 Even though the proof is omitted, we must fully understand what this theorem asserts.
 
@@ -170,11 +155,9 @@ Now, setting aside the technical results 4 and 5, the next statement is 6, which
 Statement 8 also has a somewhat technical aspect: if $$s$$ and $$t$$ had opposite signs, say $$s=-2$$ and $$t=1$$, then the domain of $$\phi^s\circ\phi^t$$ would not simply be $$\mathcal{D}_{-1}$$, but rather the subset of $$\mathcal{D}_{-1}$$ consisting of those points for which it is possible to proceed along $$\phi_p$$ for 1 second.
 
 
-<div class="definition" markdown="1">
-
-<ins id="def7">**Definition 7**</ins> We say that $$X\in\mathfrak{X}(M)$$ is *complete* if $$\mathcal{D}_t=M$$ for all $$t$$. In this case, the maps $$\phi^t$$ form a group under composition $$\circ$$, called the *one-parameter group* of $$X$$.
-
-</div>
+::: Definition 7
+We say that $$X\in\mathfrak{X}(M)$$ is *complete* if $$\mathcal{D}_t=M$$ for all $$t$$. In this case, the maps $$\phi^t$$ form a group under composition $$\circ$$, called the *one-parameter group* of $$X$$.
+:::
 
 If $$X$$ is not complete, there is a slight problem with the domains of the $$\phi^t$$ as above, making it difficult to regard them as a group. A more subtle case is when the original vector field $$X$$ varies with time, but this is not yet our concern, so we pass over it.
 

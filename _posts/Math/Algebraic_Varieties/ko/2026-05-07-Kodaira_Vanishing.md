@@ -22,9 +22,8 @@ weight: 17
 
 우리가 다룰 기본적인 설정은 다음과 같다. $$X$$는 $$n$$차원 smooth projective variety이고, $$\mathcal{L}$$은 $$X$$ 위의 ample line bundle, $$\omega_X = \det \Omega_X^1 = \Omega_X^n$$은 canonical line bundle이다. ([§표준선다발, ⁋정의 5](/ko/math/algebraic_varieties/canonical_bundle#def5)) 그럼 Kodaira vanishing theorem은 다음과 같이 쓸 수 있다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop1">**명제 1 (Kodaira vanishing)**</ins> $$n$$차원 smooth projective variety $$X$$, ample line bundle $$\mathcal{L}$$이 주어졌다 하자. 그럼 모든 $$p > 0$$에 대하여
+::: 명제 1 (Kodaira vanishing)
+$$n$$차원 smooth projective variety $$X$$, ample line bundle $$\mathcal{L}$$이 주어졌다 하자. 그럼 모든 $$p > 0$$에 대하여
  
 $$H^p(X, \omega_X \otimes \mathcal{L}) = 0$$
 
@@ -33,41 +32,34 @@ $$H^p(X, \omega_X \otimes \mathcal{L}) = 0$$
 $$H^p(X, \Omega^q\otimes \mathcal{L})=0$$
 
 이 성립한다. 
-
- </div>
+:::
 
 첫째 주장은 둘째 주장에서 $$q=n$$으로 두어 얻어지는 것이다. 이 명제에 대한 증명은 꽤나 기술적인 부분이 있어 이번 글에서는 이를 엄밀하게 증명하기보다는 대수기하학에서 어떻게 사용되는지에 초점을 맞춘다. 
 
 명제의 서술에서 알 수 있듯, Kodaira vanishing은 canonical bundle에 대한 twist 이후의 higher cohomology를 제거한다. Serre duality를 사용하면 이는 다음의 동치된 서술로 바꾸어 쓸 수 있다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**명제 2**</ins> [명제 1](#prop1)의 가정 아래, 모든 $$p < n$$에 대하여
+::: 명제 2
+[명제 1](#prop1)의 가정 아래, 모든 $$p < n$$에 대하여
 
 $$H^p(X, \mathcal{L}^{-1}) = 0$$
 
 이 성립한다.
+:::
 
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 [§세르 쌍대성](/ko/math/algebraic_varieties/serre_duality)의 Serre duality에 의해
 
 $$H^p(X, \mathcal{L}^{-1}) \cong H^{n-p}(X, \omega_X \otimes \mathcal{L})^\vee$$
 
 이 성립한다. $$p < n$$이면 $$n - p > 0$$이므로, [명제 1](#prop1)에 의해 우변은 $$0$$이다.
-
-</details>
+:::
 
 이 두 formulation은 위의 증명에서 살펴본 것과 같이 Serre duality를 통해 완전히 동치이므로 상황에 따라 더 편한 쪽을 사용하면 된다.
 
 Kodaira vanishing이 가장 단순한 nontrivial한 예시를 제공하는 것은 projective space $$X = \mathbb{P}^n$$에서이다. 
 
-<div class="example" markdown="1">
-
-<ins id="ex3">**예시 3**</ins> 우리는 [§표준선다발, ⁋명제 7](/ko/math/algebraic_varieties/canonical_bundle#prop7)에서
+::: 예시 3
+우리는 [§표준선다발, ⁋명제 7](/ko/math/algebraic_varieties/canonical_bundle#prop7)에서
 
 $$\omega_{\mathbb{P}^n} \cong \mathcal{O}(-n-1)$$
 
@@ -86,8 +78,7 @@ $$H^q(\mathbb{P}^n, \mathcal{O}(k)) = \begin{cases}
 \end{cases}$$
 
 이며, 이로부터 자동으로 $$q\neq 0$$에 대해서는 모든 cohomology가 사라지므로 우리의 관심사는 $$q=n$$일 때 뿐이다. 이제 위의 식에 따르면 이것이 nonzero가 되기 위해서는 $$k\leq -n-1$$이 성립해야 한다. 그런데 우리 상황에서는 $$k=d-n-1$$이고 $$d>0$$이므로 이는 불가능하고, 따라서 Kodaira vanishing theorem을 다시 검증할 수 있다. 
-
-</div>
+:::
 
 ## 고다이라 소멸정리의 응용
 
@@ -123,9 +114,8 @@ $$\rchi(\mathcal{O}_S(mK_S)) = \frac{m(m-1)}{2} K_S^2 + \rchi(\mathcal{O}_S)$$
 
 한편 이러한 경우 plurigenera의 식은 asymptotically 2차식인 것으로 생각할 수 있다. 이는 
 
-<div class="definition" markdown="1">
-
-<ins id="def4">**정의 4**</ins> Smooth projective variety $$X$$의 *Kodaira dimension<sub>고다이라 차원</sub>* $$\kappa(X)$$는 다음과 같이 정의된다. 모든 $$m \geq 1$$에 대해 $$P_m(X) = 0$$이면 $$\kappa(X) = -\infty$$이다. 그렇지 않은 경우, $$\kappa(X)$$는 $$P_m(X) = O(m^\kappa)$$를 만족하는 최소의 정수 $$\kappa \geq 0$$로 정의된다. 즉
+::: 정의 4
+Smooth projective variety $$X$$의 *Kodaira dimension<sub>고다이라 차원</sub>* $$\kappa(X)$$는 다음과 같이 정의된다. 모든 $$m \geq 1$$에 대해 $$P_m(X) = 0$$이면 $$\kappa(X) = -\infty$$이다. 그렇지 않은 경우, $$\kappa(X)$$는 $$P_m(X) = O(m^\kappa)$$를 만족하는 최소의 정수 $$\kappa \geq 0$$로 정의된다. 즉
 
 $$\kappa(X) = \min\{k \in \mathbb{Z}_{\geq 0} : P_m(X) = O(m^k)\}$$
 
@@ -134,8 +124,7 @@ $$\kappa(X) = \min\{k \in \mathbb{Z}_{\geq 0} : P_m(X) = O(m^k)\}$$
 $$\kappa(X) = \limsup_{m \to \infty} \frac{\log P_m(X)}{\log m}$$
 
 으로도 쓸 수 있다.
-
-</div>
+:::
 
 우리는 위의 계산으로부터, surface의 경우 $$\kappa \in \{-\infty, 0, 1, 2\}$$인 것을 안다. [Enriques–Kodaira classification](https://en.wikipedia.org/wiki/Enriques-Kodaira_classification)은 surface를 크게는 Kodaira dimension에 의해 분류하고, 여기에 $$\kappa=0$$과 $$\kappa=-\infty$$인 경우는 geometric genus $$p_g$$와 irregularity $$q$$를 사용하여 추가적인 세부 분류를 해 준다. 
 
@@ -156,11 +145,9 @@ $$\{s \in H^0(X, \mathcal{L}) : s(p) = 0\} \longrightarrow \mathfrak{m}_p\mathca
 
 의 image가 전체 $$\mathfrak{m}_p\mathcal{L}_p / \mathfrak{m}_p^2\mathcal{L}_p$$를 span함을 의미한다. 어렵지 않게 이들의 반대방향 또한 성립한다는 것을 확인할 수 있다. 즉 다음이 성립한다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**명제 5**</ins> Projective variety $$X$$ 위의 line bundle $$\mathcal{L}$$에 대해, $$\mathcal{L}$$이 very ample인 것은 위의 두 가지 separation 조건을 동시에 만족하는 것과 동치이다.
-
-</div>
+::: 명제 5
+Projective variety $$X$$ 위의 line bundle $$\mathcal{L}$$에 대해, $$\mathcal{L}$$이 very ample인 것은 위의 두 가지 separation 조건을 동시에 만족하는 것과 동치이다.
+:::
 
 이제 이러한 separation 조건들이 cohomology를 통해 검증되는 방식을 살펴 보자. 먼저 (1)의 경우, 두 점 $$p \neq q$$를 포함하는 closed subvariety $$Z = \{p\} \cup \{q\}$$를 생각하면, $$Z$$를 정의하는 ideal sheaf $$\mathcal{I}_Z$$에 대해 short exact sequence
 
@@ -197,11 +184,9 @@ $$S^\mu H^0(X, \mathcal{L}^{\otimes m}) \longrightarrow H^0(X, \mathcal{L}^{\oti
 
 Kodaira vanishing의 가장 유명한 응용은 Kodaira embedding theorem이다. 다만 이는 complex manifold의 영역으로 나가는 감이 있어 우리 글에서는 간단히만 소개한다. 우선 Compact complex manifold $$X$$가 **Kähler manifold**라는 것은, $$X$$ 위에 서로 호환되는 Riemannian metric, symplectic form, complex structure가 정의된 것이다. 이 때, Line bundle $$\mathcal{L}$$에 Hermitian metric $$h$$가 주어지면, 그 curvature form $$\Theta_h$$가 정의되며 $$\mathcal{L}$$이 **positive**라는 것은 $$\frac{i}{2\pi}\Theta_h$$가 positive definite $$(1,1)$$-form이 되는 것이다. 그럼 다음이 성립한다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop6">**명제 6 (Kodaira embedding)**</ins> $$X$$를 compact Kähler manifold, $$\mathcal{L}$$을 positive line bundle이라 하자. 그럼 충분히 큰 $$k$$에 대해 $$\mathcal{L}^{\otimes k}$$는 very ample이며, 특히 $$\mathcal{L}$$은 ample line bundle이다. 따라서 $$X$$는 projective variety이다.
-
-</div>
+::: 명제 6 (Kodaira embedding)
+$$X$$를 compact Kähler manifold, $$\mathcal{L}$$을 positive line bundle이라 하자. 그럼 충분히 큰 $$k$$에 대해 $$\mathcal{L}^{\otimes k}$$는 very ample이며, 특히 $$\mathcal{L}$$은 ample line bundle이다. 따라서 $$X$$는 projective variety이다.
+:::
 
 즉 이 명제를 사용하면 Kähler manifold가 projective variety가 되는 것을 보일 수 있다. 
 

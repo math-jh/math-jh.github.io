@@ -57,18 +57,14 @@ weight: 1
 
 식에서 새로 도입한 $$H$$는 *Hamiltonian<sub>해밀토니안</sub>*을 의미하며, 앞으로 할 이야기에서는 그냥 에너지라 생각해도 무방하다. 이 원리는 $$H$$가 시간에 의존할 경우에도 국소적으로는 성립하며, 이 때는 $$H$$를 $$H_t$$로 바꾸어 쓰면 된다. 수학적으로 이러한 문제를 어떻게 다루는지는 아주 잘 알려져있다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop1">**명제 1**</ins> Phase space 상의 경로 $$z(t)=(x(t),y(t))$$ ($$t_0\leq t\leq t_1$$)가 위치조건 $$x(t_0)=x_0$$, $$x(t_1)=x_1$$을 만족하는 경로들 가운데 $$\mathcal{A}_H$$의 극값인 것은 $$z$$가 다음의 *Hamilton's equation*
+::: 명제 1
+Phase space 상의 경로 $$z(t)=(x(t),y(t))$$ ($$t_0\leq t\leq t_1$$)가 위치조건 $$x(t_0)=x_0$$, $$x(t_1)=x_1$$을 만족하는 경로들 가운데 $$\mathcal{A}_H$$의 극값인 것은 $$z$$가 다음의 *Hamilton's equation*
 
 $$\dot{x}=\frac{\partial H_t}{\partial y},\quad \dot{y}=-\frac{\partial H_t}{\partial x}$$
 
 을 만족하는 것과 동치이다. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 이를 증명하기 위해, 위치조건 $$x_s(t_0)=x_0$$, $$x_s(t_1)=x_1$$을 만족하는 경로들의 1-parameter family $$(z_s)=(x_s,y_s)$$가 주어졌다 하고, $$z_0=z$$라 하자. 그럼
 
 $$\begin{aligned}\frac{\partial}{\partial s}\bigg\vert_{s=0}\mathcal{A}_H(z_s)&=\frac{\partial}{\partial s}\bigg\vert_{s=0}\int_{t_0}^{t_1}\langle y_s,\dot{x}_s\rangle-H_t(x_s,y_s)\mathop{dt}\\&=\int_{t_0}^{t_1}\frac{\partial}{\partial s}\bigg\vert_{s=0}\left(\langle y_s,\dot{x}_s\rangle-H_t(x_s,y_s)\right)\mathop{dt}\\&=\int_{t_0}^{t_1}\bigl\langle\partial_s y_s\vert_0,\dot{x}\bigr\rangle+\bigl\langle y,\partial_s\dot{x}\vert_0\bigr\rangle-\bigl\langle\partial_sx_s\vert_0,\partial_x H_t\bigr\rangle-\bigl\langle\partial_sy_s\vert_0,\partial_yH_t\bigr\rangle\mathop{dt}\end{aligned}$$
@@ -86,8 +82,7 @@ $$\frac{\partial}{\partial s}\bigg\vert_{s=0}\mathcal{A}_H(z)=\int_{t_0}^{t_1}\l
 $$\dot{x}-\partial_yH_t=0,\qquad\dot{y}+\partial_xH_t=0$$
 
 이 성립하는 것과 동치이다.
-
-</details>
+:::
 
 벡터공간 $$\mathbb{R}^{2n}$$에서 정의된 (linear) complex structure[^1] $$J_0\in\End(\mathbb{R}^{2n})$$을 생각하자. Basis $$\{x_1,\ldots, x_n,y_1,\ldots, y_n\}$$에 대하여 이 linear map은 다음의 행렬
 

@@ -18,69 +18,53 @@ We previously defined the tangent space $$T_pM$$ of a manifold $$M$$, showed tha
 
 ## Functions between Smooth Manifolds
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> Let two manifolds $$M,N$$ be given. A function $$F:M\rightarrow N$$ is said to be $$C^\infty$$ at a point $$p\in M$$ if there exist a coordinate system $$(U,\varphi)$$ containing $$p$$ and a coordinate system $$(V,\psi)$$ with $$F(U)\subseteq V$$ such that $$\psi\circ F\circ\varphi^{-1}$$ is $$C^\infty$$.
+::: Definition 1
+Let two manifolds $$M,N$$ be given. A function $$F:M\rightarrow N$$ is said to be $$C^\infty$$ at a point $$p\in M$$ if there exist a coordinate system $$(U,\varphi)$$ containing $$p$$ and a coordinate system $$(V,\psi)$$ with $$F(U)\subseteq V$$ such that $$\psi\circ F\circ\varphi^{-1}$$ is $$C^\infty$$.
 
 ![smooth_map](/assets/images/Math/Manifolds/Differentials-1.png){:style="width:500px" class="invert" .align-center}
 <cap>[Lee], p.34. Fig. 2.2</cap>
 
 If $$F$$ is $$C^\infty$$ at every point, we simply call it a $$C^\infty$$ function.
-
-</div>
+:::
 
 As when we previously defined $$C^\infty$$ functions from a manifold to $$\mathbb{R}$$, one should verify that this definition is independent of the choice of coordinate system; but this is essentially identical to what we proved after [§Smooth Manifolds, ⁋Definition 2](/en/math/manifolds/smooth_manifolds#def2), so we omit it.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**Proposition 2**</ins> Let two manifolds $$M,N$$ be given. If $$F:M\rightarrow N$$ is $$C^\infty$$ at a point $$p\in M$$, then $$F$$ is continuous at $$p$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 2
+Let two manifolds $$M,N$$ be given. If $$F:M\rightarrow N$$ is $$C^\infty$$ at a point $$p\in M$$, then $$F$$ is continuous at $$p$$.
+:::
+::: Proof
 Assume the situation of [Definition 1](#def1). Then the function $$\psi\circ F\circ\varphi^{-1}:\varphi(U)\rightarrow\psi(V)$$ between Euclidean spaces is $$C^\infty$$. Since it is differentiable, it is certainly continuous. But $$\varphi$$ and $$\psi$$ are both homeomorphisms, so
 
 $$F=\psi^{-1}\circ(\psi\circ F\circ\varphi^{-1})\circ\varphi$$
 
 is continuous as a composition of continuous functions.
+:::
 
-</details>
 
+::: Example 3
+$$\id_M:M\rightarrow M$$ is obviously a $$C^\infty$$ function. More generally, if any open subset $$U\subseteq M$$ is given the open submanifold structure ([§Examples of Differentiable Manifolds, ⁋Definition 3](/en/math/manifolds/examples_of_manifolds#def3)), the inclusion map $$U\hookrightarrow M$$ is a $$C^\infty$$ function.
+:::
 
-<div class="example" markdown="1">
-
-<ins id="ex3">**Example 3**</ins> $$\id_M:M\rightarrow M$$ is obviously a $$C^\infty$$ function. More generally, if any open subset $$U\subseteq M$$ is given the open submanifold structure ([§Examples of Differentiable Manifolds, ⁋Definition 3](/en/math/manifolds/examples_of_manifolds#def3)), the inclusion map $$U\hookrightarrow M$$ is a $$C^\infty$$ function.
-
-</div>
-
-<div class="example" markdown="1">
-
-<ins id="ex4">**Example 4**</ins> For any two manifolds $$M,N$$, the constant map sending every point $$p\in M$$ to a fixed point $$q\in N$$ is $$C^\infty$$.
-
-</div>
+::: Example 4
+For any two manifolds $$M,N$$, the constant map sending every point $$p\in M$$ to a fixed point $$q\in N$$ is $$C^\infty$$.
+:::
 
 We have now defined the manifolds that constitute our objects of study, as well as the functions between them. The following proposition is readily verified.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**Proposition 5**</ins> For three manifolds $$M,N,P$$, if both $$F:M\rightarrow N$$ and $$G:N\rightarrow P$$ are $$C^\infty$$, then their composition $$G\circ F$$ is also $$C^\infty$$.
-
-</div>
+::: Proposition 5
+For three manifolds $$M,N,P$$, if both $$F:M\rightarrow N$$ and $$G:N\rightarrow P$$ are $$C^\infty$$, then their composition $$G\circ F$$ is also $$C^\infty$$.
+:::
 
 It is then clear that isomorphisms between manifolds should be defined as follows.
 
-<div class="definition" markdown="1">
-
-<ins id="def6">**Definition 6**</ins> If for two manifolds $$M,N$$ there exist $$F:M\rightarrow N$$ and $$G:N\rightarrow M$$ such that $$G\circ F=\id_M$$ and $$F\circ G=\id_N$$, then we call each of $$F$$ and $$G$$ a *diffeomorphism*, and say that $$F$$ and $$G$$ are *diffeomorphic*.
-
-</div>
+::: Definition 6
+If for two manifolds $$M,N$$ there exist $$F:M\rightarrow N$$ and $$G:N\rightarrow M$$ such that $$G\circ F=\id_M$$ and $$F\circ G=\id_N$$, then we call each of $$F$$ and $$G$$ a *diffeomorphism*, and say that $$F$$ and $$G$$ are *diffeomorphic*.
+:::
 
 Thus, manifolds and smooth functions form the category $$\Man$$.
 
-<div class="remark" markdown="1">
-
-**Remark**</ins> One can endow the same topological manifold $$M$$ with distinct smooth structures that are diffeomorphic to each other but not identical. Define two smooth structures $$\mathcal{A}_1$$, $$\mathcal{A}_2$$ by the single charts $$(\mathbb{R},\id_\mathbb{R})$$ and $$(\mathbb{R}, x\mapsto x^{3})$$, respectively. Then $$\mathcal{A}_1$$ and $$\mathcal{A}_2$$ define different smooth structures. ([§Smooth Manifolds, ⁋Example 4](/en/math/manifolds/smooth_manifolds#ex4))  
+::: remark Remark {#rmk}
+One can endow the same topological manifold $$M$$ with distinct smooth structures that are diffeomorphic to each other but not identical. Define two smooth structures $$\mathcal{A}_1$$, $$\mathcal{A}_2$$ by the single charts $$(\mathbb{R},\id_\mathbb{R})$$ and $$(\mathbb{R}, x\mapsto x^{3})$$, respectively. Then $$\mathcal{A}_1$$ and $$\mathcal{A}_2$$ define different smooth structures. ([§Smooth Manifolds, ⁋Example 4](/en/math/manifolds/smooth_manifolds#ex4))  
 For convenience, write $$(M,\mathcal{A}_1)=M_1$$, $$(M,\mathcal{A}_2)=M_2$$, $$\varphi=\id_\mathbb{R}$$, and $$\psi=(x\mapsto x^3)$$.
 
 These two manifolds $$M_1, M_2$$ are diffeomorphic to each other. Define the function $$F:M_1\rightarrow M_2$$ by $$x\mapsto x^{1/3}$$. Then obviously $$F^{-1}$$ is given by $$y\mapsto y^3$$. By definition $$F$$ is $$C^\infty$$. For any point $$p\in M_1$$, taking the coordinate systems $$(\mathbb{R},\varphi)$$ on $$M_1$$ and $$(\mathbb{R},\psi)$$ on $$M_2$$, it is obvious that $$p\in\mathbb{R}$$ and $$F(\mathbb{R})\subset\mathbb{R}$$, and since they satisfy
@@ -93,8 +77,7 @@ Moreover, $$F^{-1}$$ is also $$C^\infty$$, because similarly for any point $$q\i
 $$(\psi^{-1}\circ F^{-1}\circ \varphi)(s)=s$$
 
 holds.
-
-</div>
+:::
 
 ## Differentials
 
@@ -132,13 +115,11 @@ $$\begin{aligned}(v\circ F^\ast)(fg)&=v(F^\ast(fg))=v((f\circ F)(g\circ F))\\
 
 Summarizing the discussion so far, we obtain the following.
 
-<div class="definition" markdown="1">
-
-<ins id="def7">**Definition 7**</ins> Let $$F:M\rightarrow N$$ be a $$C^\infty$$ function between two manifolds. For any $$p\in M$$, the *differential* of $$F$$ at the point $$p$$, $$dF_p:T_pM\rightarrow T_{F(p)}N$$, is the linear map defined for any $$v\in T_pM$$ and any $$g\in \mathcal{C}^\infty_{N,F(p)}$$ by
+::: Definition 7
+Let $$F:M\rightarrow N$$ be a $$C^\infty$$ function between two manifolds. For any $$p\in M$$, the *differential* of $$F$$ at the point $$p$$, $$dF_p:T_pM\rightarrow T_{F(p)}N$$, is the linear map defined for any $$v\in T_pM$$ and any $$g\in \mathcal{C}^\infty_{N,F(p)}$$ by
 
 $$(dF_p(v))g=v(g\circ F)$$
-
-</div>
+:::
 
 Several consequences are immediate from the definition. First, for $$\id_M:M\rightarrow M$$, the differential $$d(\id_M)_p$$ is always the identity map $$\id_{T_pM}$$ on $$T_pM$$. This is clear from the formula in [Definition 7](#def7). Also, for three manifolds $$M,N,P$$, if $$F:M\rightarrow N$$ and $$G:N\rightarrow P$$ are $$C^\infty$$, then the formula
 
@@ -148,17 +129,12 @@ holds. This is obvious either from the fact that the pullback used to define the
 
 However, there are many $$C^\infty$$ functions whose differential is an isomorphism but which are not diffeomorphisms.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop8">**Proposition 8**</ins> For a manifold $$M$$ and an open submanifold $$U$$ of $$M$$, the inclusion map $$\iota:U\hookrightarrow M$$ induces an isomorphism between tangent spaces for every $$p\in U$$. That is, $$d\iota_p$$ is always an isomorphism.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 8
+For a manifold $$M$$ and an open submanifold $$U$$ of $$M$$, the inclusion map $$\iota:U\hookrightarrow M$$ induces an isomorphism between tangent spaces for every $$p\in U$$. That is, $$d\iota_p$$ is always an isomorphism.
+:::
+::: Proof
 This is obvious because $$\iota^\ast$$ induces an isomorphism between $$\mathcal{C}^\infty_{U,p}$$ and $$\mathcal{C}^\infty_{M,\iota(p)}$$. In fact, from the outset there is no harm in regarding the two vector spaces as identical.
-
-</details>
+:::
 
 ## Bases of Tangent Spaces and Differentials
 

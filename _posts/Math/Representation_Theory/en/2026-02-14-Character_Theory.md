@@ -18,15 +18,13 @@ In this post we define character functions and examine their properties. They wi
 
 ## Characters of Group Representations
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> For a representation $$\rho:G\rightarrow\Aut(V)$$ of $$G$$, the corresponding *character* $$\rchi_\rho:G\rightarrow\mathbb{C}$$ is defined by
+::: Definition 1
+For a representation $$\rho:G\rightarrow\Aut(V)$$ of $$G$$, the corresponding *character* $$\rchi_\rho:G\rightarrow\mathbb{C}$$ is defined by
 
 $$\rchi_\rho(g)=\tr(\rho(g))$$
 
 .
-
-</div>
+:::
 
 In other words, this function takes each $$g\in G$$ and returns the trace of the linear map $$\rho(g):V\rightarrow V$$ it defines. As we shall see, this function plays a major role in describing representations of $$G$$. For instance, we can immediately see that it encodes the dimension of $$V$$:
 
@@ -38,15 +36,13 @@ $$L_V:V\rightarrow V,\qquad L_W:W\rightarrow W$$
 
 we know how their direct sum $$L_V\oplus L_W: V\oplus W\rightarrow V\oplus W$$ and their tensor product $$L_V\otimes L_W: V\otimes W \rightarrow V\otimes W$$ are defined, and we also know what their traces are (for instance, by computing with matrices). From this we obtain the following proposition.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**Proposition 2**</ins> For representations $$V, W$$, the following hold.
+::: Proposition 2
+For representations $$V, W$$, the following hold.
 
 1. $$\rchi_{V\oplus W}=\rchi_V\oplus \rchi_W$$
 2. $$\rchi_{V\otimes W}=\rchi_V\rchi_W$$
 3. $$\rchi_{V^\ast}=\overline{\rchi}_V$$
-
-</div>
+:::
 
 In particular, by the first formula, since any representation admits an irreducible decomposition
 
@@ -64,23 +60,19 @@ $$\rchi_\rho(hgh^{-1})=\tr(\rho(h)\rho(g)\rho(h)^{-1})=\tr(\rho(g))=\rchi_\rho(g
 
 holds, so ([\[Linear Algebra\] §Characteristic Polynomial, ⁋Corollary 5](/en/math/linear_algebra/characteristic_polynomial#cor5)) we see that $$\rchi_\rho$$ is constant on the *conjugacy classes* of $$G$$. Such functions also have a name.
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**Definition 3**</ins> A function $$\rchi:G\rightarrow\mathbb{C}$$ is called a *class function* if $$\rchi(hgh^{-1})=f(g)$$ holds for all $$g,h\in G$$. We denote the collection of all class functions defined on $$G$$ by $$\mathbb{C}_\class(G)$$.
-
-</div>
+::: Definition 3
+A function $$\rchi:G\rightarrow\mathbb{C}$$ is called a *class function* if $$\rchi(hgh^{-1})=f(g)$$ holds for all $$g,h\in G$$. We denote the collection of all class functions defined on $$G$$ by $$\mathbb{C}_\class(G)$$.
+:::
 
 By definition, class functions are determined by their values on each conjugacy class, and thus, as a vector space, $$\mathbb{C}_\class(G)$$ has dimension equal to the number of conjugacy classes of $$G$$. Meanwhile, the idea we considered important in the previous post was that given a value, we could average it over all of $$G$$ to obtain a $$G$$-invariant value. Using this, we can give the following definition on $$\mathbb{C}_\class(G)$$.
 
-<div class="definition" markdown="1">
-
-<ins id="def4">**Definition 4**</ins> For any class functions $$\rchi_1,\rchi_2: G\rightarrow \mathbb{C}$$, we define
+::: Definition 4
+For any class functions $$\rchi_1,\rchi_2: G\rightarrow \mathbb{C}$$, we define
 
 $$\langle \rchi_1,\rchi_2\rangle=\frac{1}{\lvert G\rvert}\sum_{g\in G} \rchi_1(g)\overline{\rchi_2(g)}$$
 
 .
-
-</div>
+:::
 
 This is merely the standard Hermitian product on the target space $$\mathbb{C}$$ transferred to $$\mathbb{C}_\class(G)$$. On the other hand, for the character $$\rchi_\rho$$ of any representation $$\rho$$, for any $$g\in G$$,
 
@@ -198,18 +190,14 @@ $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r\Mat_{d_i}(\mathbb{C})$$
 
 Earlier we showed that the characters of irreducible representations form an orthonormal set inside $$\mathbb{C}_\class(G)$$. Now we show that they form an orthonormal basis of $$\mathbb{C}_\class(G)$$.
 
-<div class="proposition" markdown="1">
-
-<ins id="lem5">**Lemma 5**</ins> Let any function $$\phi:G\rightarrow \mathbb{C}$$ and any representation $$\rho:G\rightarrow\Aut(V)$$ be given. If we define
+::: Lemma 5
+Let any function $$\phi:G\rightarrow \mathbb{C}$$ and any representation $$\rho:G\rightarrow\Aut(V)$$ be given. If we define
 
 $$\rho_\phi=\sum_{g\in G} \phi(g)\rho(g): V\rightarrow V$$
 
 then $$\rho_\phi$$ is a $$G$$-map if and only if $$\phi$$ is a class function.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 For $$\rho_\phi$$ to be a $$G$$-map, the formula
 
 $$\rho_\phi(h\cdot v)=h\cdot\rho_\phi(v)$$
@@ -227,8 +215,7 @@ we can write this. Now for this to equal
 $$h\cdot\rho_\phi(v)=\rho(h)\rho_\phi(v)=\rho(h)\left(\sum_{g\in G}\phi(g)\rho(g)(v)\right)$$
 
 we must have exactly $$\phi(g)=\phi(hgh^{-1})$$, that is, $$\phi$$ must be a class function.
-
-</details>
+:::
 
 Now we use this to show that every class function can be expressed as a linear combination of irreducible characters. That is, we must show that if for a class function $$\phi$$, $$\langle \rchi_V,\phi\rangle=0$$ holds for all irreducible characters $$\rchi_V$$, then $$\phi=0$$.
 

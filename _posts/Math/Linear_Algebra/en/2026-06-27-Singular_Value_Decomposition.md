@@ -20,44 +20,33 @@ The tools discussed so far all apply to $$n\times n$$ matrices, i.e., linear ope
 
 ## Singular Value Decomposition
 
-<div class="proposition" markdown="1">
-
-<ins id="prop1">**Proposition 1**</ins> For any matrix $$A\in\Mat_{m\times n}(\mathbb{R})$$, the matrix $$A^tA\in\Mat_n(\mathbb{R})$$ is a positive semidefinite self-adjoint operator. In particular, all eigenvalues of $$A^tA$$ are non-negative real numbers.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 1
+For any matrix $$A\in\Mat_{m\times n}(\mathbb{R})$$, the matrix $$A^tA\in\Mat_n(\mathbb{R})$$ is a positive semidefinite self-adjoint operator. In particular, all eigenvalues of $$A^tA$$ are non-negative real numbers.
+:::
+::: Proof
 Since $$(A^tA)^t=A^t(A^t)^t=A^tA$$, the matrix $$A^tA$$ is symmetric, i.e., a self-adjoint operator on $$\mathbb{R}^n$$. Moreover, for any $$v\in\mathbb{R}^n$$,
 
 $$\langle A^tAv,v\rangle=\langle Av,Av\rangle=\lVert Av\rVert^2\geq 0$$
 
 so $$A^tA$$ is positive semidefinite. ([§Spectral Theorem, ⁋Definition 8](/en/math/linear_algebra/spectral_theorem#def8)) Therefore, by [§Spectral Theorem, ⁋Proposition 9](/en/math/linear_algebra/spectral_theorem#prop9), all eigenvalues of $$A^tA$$ are non-negative.
-
-</details>
+:::
 
 Since all eigenvalues of the matrix $$A^tA$$ are non-negative, we can take their square roots.
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**Definition 2**</ins> For a matrix $$A\in\Mat_{m\times n}(\mathbb{R})$$, write the eigenvalues of $$A^tA$$, counted with multiplicity, as $$\sigma_1^2\geq\sigma_2^2\geq\cdots\geq\sigma_n^2\geq 0$$. The non-negative real numbers $$\sigma_i=\sqrt{\sigma_i^2}$$ are called the *singular values* of $$A$$.
-
-</div>
+::: Definition 2
+For a matrix $$A\in\Mat_{m\times n}(\mathbb{R})$$, write the eigenvalues of $$A^tA$$, counted with multiplicity, as $$\sigma_1^2\geq\sigma_2^2\geq\cdots\geq\sigma_n^2\geq 0$$. The non-negative real numbers $$\sigma_i=\sqrt{\sigma_i^2}$$ are called the *singular values* of $$A$$.
+:::
 
 Our main claim is then as follows.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm3">**Theorem 3 (Singular Value Decomposition)**</ins> For any matrix $$A\in\Mat_{m\times n}(\mathbb{R})$$, there exist orthogonal matrices $$U\in\Mat_m(\mathbb{R})$$ and $$V\in\Mat_n(\mathbb{R})$$, and an $$m\times n$$ diagonal matrix $$\Sigma$$ whose $$(i,i)$$-entry is the singular value $$\sigma_i$$ of $$A$$ and whose remaining entries are $$0$$, such that
+::: Theorem 3 (Singular Value Decomposition)
+For any matrix $$A\in\Mat_{m\times n}(\mathbb{R})$$, there exist orthogonal matrices $$U\in\Mat_m(\mathbb{R})$$ and $$V\in\Mat_n(\mathbb{R})$$, and an $$m\times n$$ diagonal matrix $$\Sigma$$ whose $$(i,i)$$-entry is the singular value $$\sigma_i$$ of $$A$$ and whose remaining entries are $$0$$, such that
 
 $$A=U\Sigma V^t$$
 
 holds.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 By [Proposition 1](#prop1), $$A^tA$$ is self-adjoint, so by [§Spectral Theorem, ⁋Theorem 5](/en/math/linear_algebra/spectral_theorem#thm5) there exists an orthonormal basis $$\{v_1,\ldots, v_n\}$$ of $$\mathbb{R}^n$$ consisting of eigenvectors of $$A^tA$$. Order the eigenvalues as $$\sigma_1^2\geq\cdots\geq\sigma_n^2\geq 0$$, and suppose $$\sigma_1,\ldots,\sigma_r$$ are positive and $$\sigma_{r+1}=\cdots=\sigma_n=0$$. That is, $$A^tAv_i=\sigma_i^2v_i$$.
 
 For each $$1\leq i\leq r$$, define
@@ -79,47 +68,35 @@ so $$Av_i=0$$. Now define $$U=(u_1\mid\cdots\mid u_m)$$ with columns $$u_i$$ and
 $$Av_i=\sigma_iu_i$$
 
 and the $$i$$-th column of $$U\Sigma$$ is also $$\sigma_iu_i$$, while for $$i>r$$ we have $$Av_i=0$$ and the $$i$$-th column of $$\Sigma$$ is $$0$$, so the $$i$$-th column of $$U\Sigma$$ is also $$0$$. Therefore $$AV=U\Sigma$$, and since $$V$$ is orthogonal, multiplying both sides on the right by $$V^t=V^{-1}$$ yields $$A=U\Sigma V^t$$.
-
-</details>
+:::
 
 The singular value decomposition re-expresses the rank of a matrix in the language of singular values.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor4">**Corollary 4**</ins> The rank of a matrix $$A\in\Mat_{m\times n}(\mathbb{R})$$ equals the number of non-zero singular values.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Corollary 4
+The rank of a matrix $$A\in\Mat_{m\times n}(\mathbb{R})$$ equals the number of non-zero singular values.
+:::
+::: Proof
 In $$A=U\Sigma V^t$$, the matrices $$U$$ and $$V$$ are invertible, so $$\rank A=\rank\Sigma$$. The non-zero entries of $$\Sigma$$ are precisely the positive singular values $$\sigma_1,\ldots,\sigma_r$$, and these lie in distinct rows and columns, so the non-zero columns of $$\Sigma$$ are exactly $$r$$ in number and are linearly independent. Therefore $$\rank A=r$$.
-
-</details>
+:::
 
 ## General Pseudoinverse
 
 In [§Least Squares Method, ⁋Definition 7](/en/math/linear_algebra/least_squares_method#def7), we defined the pseudoinverse when $$A$$ has full column rank or full row rank, and we announced that the definition in the general case would use the singular value decomposition. We now present that definition.
 
-<div class="definition" markdown="1">
-
-<ins id="def5">**Definition 5**</ins> Let a singular value decomposition $$A=U\Sigma V^t$$ of a matrix $$A\in\Mat_{m\times n}(\mathbb{R})$$ be given. For the positive singular values $$\sigma_i$$ of $$\Sigma$$, let $$\Sigma^+$$ be the $$n\times m$$ diagonal matrix whose $$(i,i)$$-entry is $$1/\sigma_i$$ and whose remaining entries are $$0$$. Then we define the *Moore–Penrose pseudoinverse* of $$A$$ as
+::: Definition 5
+Let a singular value decomposition $$A=U\Sigma V^t$$ of a matrix $$A\in\Mat_{m\times n}(\mathbb{R})$$ be given. For the positive singular values $$\sigma_i$$ of $$\Sigma$$, let $$\Sigma^+$$ be the $$n\times m$$ diagonal matrix whose $$(i,i)$$-entry is $$1/\sigma_i$$ and whose remaining entries are $$0$$. Then we define the *Moore–Penrose pseudoinverse* of $$A$$ as
 
 $$A^+=V\Sigma^+U^t$$
-
-</div>
+:::
 
 For this to make sense, we must verify that the definition does not depend on the choice of singular value decomposition. This follows from the next proposition.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop6">**Proposition 6**</ins> The matrix $$A^+$$ of [Definition 5](#def5) satisfies all four conditions
+::: Proposition 6
+The matrix $$A^+$$ of [Definition 5](#def5) satisfies all four conditions
 
 $$AA^+A=A,\quad A^+AA^+=A^+,\quad (AA^+)^t=AA^+,\quad (A^+A)^t=A^+A$$
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 $$\Sigma\Sigma^+$$ is the $$m\times m$$ diagonal matrix whose $$(i,i)$$-entry is $$1$$ for $$1\leq i\leq r$$ and $$0$$ otherwise, and $$\Sigma^+\Sigma$$ is the $$n\times n$$ diagonal matrix defined in the same way. Both are symmetric, and one can verify directly entrywise that $$\Sigma\Sigma^+\Sigma=\Sigma$$ and $$\Sigma^+\Sigma\Sigma^+=\Sigma^+$$. Now using $$A=U\Sigma V^t$$, $$A^+=V\Sigma^+U^t$$, and $$U^tU=I$$, $$V^tV=I$$, we have
 
 $$AA^+=U\Sigma V^tV\Sigma^+U^t=U(\Sigma\Sigma^+)U^t,\qquad A^+A=V(\Sigma^+\Sigma)V^t$$
@@ -133,8 +110,7 @@ and similarly
 $$A^+AA^+=V(\Sigma^+\Sigma)V^tV\Sigma^+U^t=V(\Sigma^+\Sigma\Sigma^+)U^t=V\Sigma^+U^t=A^+$$
 
 so the first and second conditions also hold.
-
-</details>
+:::
 
 Now, in [§Least Squares Method, ⁋Definition 7](/en/math/linear_algebra/least_squares_method#def7) we saw that the above four conditions uniquely determine $$A^+$$, so the $$A^+$$ of [Definition 5](#def5) is well defined independently of the choice of singular value decomposition, and we also know that the two definitions agree in the full-rank case. For example, if $$A$$ has full column rank, then $$A^tA$$ is invertible, and one can verify directly from
 

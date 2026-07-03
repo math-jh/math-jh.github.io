@@ -18,11 +18,9 @@ weight: 5
 
 이제 다음을 정의한다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> $$A$$-module $$M$$이 *simple<sub>단순</sub>*이라는 것은 $$M\neq 0$$이며, $$M$$의 submodule이 오직 $$0$$과 $$M$$ 뿐인 것이다.
-
-</div>
+::: 정의 1
+$$A$$-module $$M$$이 *simple<sub>단순</sub>*이라는 것은 $$M\neq 0$$이며, $$M$$의 submodule이 오직 $$0$$과 $$M$$ 뿐인 것이다.
+:::
 
 Simple module은 반드시 하나의 원소 $$x\in M$$으로 생성되어야 함이 자명하지만 $$\mathbb{Z}/6\mathbb{Z}$$를 생각하면 그 역은 성립하지 않는다. 한편 simple module $$M$$이 $$x$$로 생성된다면, $$A$$-module homomorphism $$A \rightarrow M$$을 $$1\mapsto x$$로 주면 isomorphism
 
@@ -30,21 +28,18 @@ $$A/\ann(M)=A/\ann(x)\cong M$$
 
 을 얻는다. 만일 $$\ann(M)$$이 maximal ideal이 아니라면, $$\ann(M)$$을 포함하는 $$A$$의 maximal ideal $$\mathfrak{m}$$에 대하여 $$\mathfrak{m}/\ann(M)$$이 $$M$$의 submodule이 될 것이므로 $$\ann(M)$$은 반드시 $$A$$의 maximal ideal이 되어야 함도 자명하다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**정의 2**</ins> $$A$$-module $$M$$을 고정하자. $$M$$의 submodule들의 decreasing sequence
+::: 정의 2
+$$A$$-module $$M$$을 고정하자. $$M$$의 submodule들의 decreasing sequence
 
 $$M=M_0\supsetneq M_1\supsetneq \cdots\supsetneq M_n=0$$
 
 을 길이 $$n$$의 chain이라 부른다. 이 chain이 *composition series<sub>합성열</sub>*이라는 것은 모든 $$k$$에 대하여 $$M_k/M_{k+1}$$이 simple module인 것이다. 이러한 composition series들의 길이 중 가장 작은 것을 $$M$$의 *length<sub>길이</sub>*라 부르고 $$\length(M)$$으로 적는다. 만일 $$M$$의 composition series가 존재하지 않는다면 $$\length(M)=\infty$$로 정의한다. 
-
-</div>
+:::
 
 그럼 다음 정리는 module 버전의 Jordan-Hölder 정리라 할 수 있다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="thm3">**정리 3**</ins> $$A$$-module $$M$$이 유한한 composition series를 갖는 것은 $$M$$이 artinian인 동시에 noetherian인 것과 동치이다. 이 조건이 만족되어 길이 $$n$$짜리 composition series
+::: 정리 3
+$$A$$-module $$M$$이 유한한 composition series를 갖는 것은 $$M$$이 artinian인 동시에 noetherian인 것과 동치이다. 이 조건이 만족되어 길이 $$n$$짜리 composition series
 
 $$M=M_0\supsetneq M_1\supsetneq \cdots\supsetneq M_n=0$$
 
@@ -53,11 +48,8 @@ $$M=M_0\supsetneq M_1\supsetneq \cdots\supsetneq M_n=0$$
 1. 길이가 $$n$$ 이하인 $$M$$의 임의의 submodule들의 chain들은 모두 composition series로의 refinement를 갖는다. 
 2. $$M_k/M_{k+1}\cong A/\mathfrak{m}$$이도록 하는 $$k$$가 존재하는 maximal ideal들의 모임에 대하여, isomorphism $$M\cong\bigoplus_{\mathfrak{m}}M_\mathfrak{m}$$이 존재한다. 
 3. 만일 어떤 $$k$$에 대하여 $$\mathfrak{p}^k$$가 $$M$$을 annihilate한다면 $$M=M_\mathfrak{p}$$이다. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 우선 $$M$$이 artinian인 동시에 noetherian이라 하자. 우선 $$M$$이 noetherian이라는 조건으로부터 $$M$$의 적당한 maximal proper submodule $$M_1$$을 찾을 수 있다. 한편 noetherian module의 submodule은 반드시 noetherian이어야 함이 자명하므로, 이를 반복하여 $$M_k$$의 maximal proper submodule $$M_{k+1}$$을 찾을 수 있다. 그런데 이렇게 정의한 chain 
 
 $$M=M_0\supsetneq M_1\supsetneq \cdots$$
@@ -85,23 +77,18 @@ $$M_\mathfrak{m}=(M_0)_\mathfrak{m}\supsetneq (M_1)_\mathfrak{m}\supsetneq \cdot
 $$(M_k)_\mathfrak{m}/(M_{k+1})_\mathfrak{m}\cong (M_k/M_{k+1})_\mathfrak{m}=\begin{cases}M_k/M_{k+1}&\text{if $M_k/M_{k+1}\cong A/\mathfrak{m}$,}\\0&\text{otherwise}\end{cases}$$
 
 이 성립한다. 이로부터 두 번째 결과를 얻으며, 세 번째 결과는 위의 계산과 유사하게 증명할 수 있다.
-
-</details>
+:::
 
 ## 아틴환과 뇌터환의 성질들
 
-<div class="proposition" markdown="1">
-
-<ins id="thm4">**정리 4**</ins> Ring $$A$$에 대해 다음이 모두 동치이다.
+::: 정리 4
+Ring $$A$$에 대해 다음이 모두 동치이다.
 
 1. $$A$$가 noetherian이고 임의의 prime ideal이 maximal이다.
 2. $$A$$는 $$A$$-module로서 유한한 length를 갖는다.
 3. $$A$$는 artinian이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 우선 첫째 조건을 가정하고 둘째 조건을 보이자. 결론에 반하여 $$A$$가 첫째 조건을 만족하지만, finite length가 아니라 하자. 이제 $$\mathfrak{a}$$를 $$A/\mathfrak{a}$$가 finite length가 아니도록 하는 $$A$$의 ideal들 중 maximal인 것이라 하자. 그럼 만일 $$ab\in \mathfrak{a}$$이고 $$a\not\in \mathfrak{a}$$라면, 다음의 short exact sequence
 
 $$0\longrightarrow A/(\mathfrak{a}:a)\overset{a}{\longrightarrow}A/\mathfrak{a}\longrightarrow A/(\mathfrak{a}+(a))\longrightarrow 0$$
@@ -125,19 +112,14 @@ $$(\mathfrak{b}\mathfrak{a})\mathfrak{a}=\mathfrak{b}\mathfrak{a}^2=\mathfrak{b}
 $$\mathfrak{m}_1\cdots\mathfrak{m}_k=0\subseteq \mathfrak{p}$$
 
 인 것으로부터 어떠한 $$l$$에 대해서는 $$\mathfrak{m}_l\subseteq \mathfrak{p}$$가 성립해야 함을 알고 따라서 $$\mathfrak{m}_l=\mathfrak{p}$$이다. 이로부터 첫째 조건이 모두 성립한다.
-
-</details>
+:::
 
 이로부터 임의의 artinian ring은 local artinian ring들의 유한한 product임을 보일 수 있다. Noetherian ring에 대해서는 다음이 성립한다.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm5">**정리 5**</ins> Noetherian ring $$A$$에 대하여, $$A$$가 domain들의 유한한 product인 것은 $$A$$의 임의의 maximal ideal에 대하여 $$A_\mathfrak{m}$$이 domain인 것과 동치이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 정리 5
+Noetherian ring $$A$$에 대하여, $$A$$가 domain들의 유한한 product인 것은 $$A$$의 임의의 maximal ideal에 대하여 $$A_\mathfrak{m}$$이 domain인 것과 동치이다.
+:::
+::: 증명
 우선 $$A$$가 domain의 유한한 product $$A=\prod A_i$$라 하자. 그럼 $$A$$의 임의의 prime ideal은 $$A_i$$의 unit $$e_i$$를 포함할 수 없으므로 multiplicative subset에 들어가며, 이 원소 $$e_i$$는 $$i\neq j$$를 만족하는 $$A_j$$를 annihilate하므로 $$A=(A_i)_\mathfrak{p}$$이 성립한다. ([§국소화, ⁋명제 5](/ko/math/commutative_algebra/localization#prop5))
 
 거꾸로 $$A$$의 임의의 maximal ideal $$\mathfrak{m}$$에서의 localization이 domain이라 가정하고, $$\{\mathfrak{q}_i\}$$를 $$A$$의 prime ideal들 중 minimal한 것이라 하자. 그럼 다음 글에서 증명할 [§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)에 의하여 $$\{\mathfrak{q}_i\}$$는 유한집합이며, 이를 받아들이고 나면 $$A$$에서 유한히 많은 domain들의 direct product로의 자연스러운 map
@@ -153,54 +135,41 @@ $$A_\mathfrak{m} \rightarrow \left(\prod_{i\in I} A/\mathfrak{q}_i\right)_\mathf
 $$\left(\prod_{i\in I} A/\mathfrak{q}_i\right)_\mathfrak{m}=(A/\mathfrak{q}_i)_\mathfrak{m}=A_\mathfrak{m}$$
 
 이므로, 위의 map이 isomorphism이 된다.
+:::
 
-</details>
-
-<div class="proposition" markdown="1">
-
-<ins id="cor6">**따름정리 6**</ins> Noetherian ring $$A$$와 finiely generated $$A$$-module $$M$$에 대하여, 다음이 모두 동치이다. 
+::: 따름정리 6
+Noetherian ring $$A$$와 finiely generated $$A$$-module $$M$$에 대하여, 다음이 모두 동치이다. 
 
 1. $$M$$이 유한한 길이를 갖는다.
 2. 적당한 maximal ideal들의 곱 $$\prod_{i=1}^n \mathfrak{m}_i$$가 $$M$$을 annihilate한다.
 3. $$\ann(M)$$을 포함하는 prime ideal들이 maximal이다.
 4. $$A/\ann(M)$$이 Artinian이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 우선 첫째 조건을 가정하면 [정리 3](#thm3)의 두 번째와 세 번째 결과로부터 두 번째 조건이 성립하는 것이 자명하다. 이제 두 번째 조건을 가정하자. 그럼 $$\ann(M)$$을 포함하는 임의의 prime ideal $$\mathfrak{p}$$에 대하여, $$\mathfrak{p}\supseteq\prod \mathfrak{m}_i$$이므로 어떠한 $$i$$에 대하여 $$\mathfrak{p}\supseteq \mathfrak{m}_i$$이고, 따라서 $$\mathfrak{p}=\mathfrak{m} 
 _i$$이다. 세 번째 조건이 네 번째 조건을 함의하는 것은 [정리 4](#thm4)의 첫째 조건과 셋째 조건의 동치이며, 마지막으로 네 번째 조건을 가정하면 $$A/\ann(M)$$은 [정리 4](#thm4)의 둘째 조건으로 인해 $$A/\ann(M)$$-module로서 유한한 길이를 가지고, $$M$$은 finitely generated $$A/\ann(M)$$-module이므로 원하는 결과를 얻는다. 
-
-</details>
+:::
 
 그럼 다음이 성립한다.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor7">**따름정리 7**</ins> Noetherian ring $$A$$와 finitely generated $$A$$-module $$M$$, 그리고 $$\ann(M)$$을 포함하는 prime ideal $$\mathfrak{p}$$를 고정하자. 그럼 $$A_\mathfrak{p}$$-module로서 $$M_\mathfrak{p}$$가 유한한 길이를 갖는 것과 $$\mathfrak{p}$$가 $$\ann(M)$$을 포함하는 prime들 중 minimal인 것이 동치이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 따름정리 7
+Noetherian ring $$A$$와 finitely generated $$A$$-module $$M$$, 그리고 $$\ann(M)$$을 포함하는 prime ideal $$\mathfrak{p}$$를 고정하자. 그럼 $$A_\mathfrak{p}$$-module로서 $$M_\mathfrak{p}$$가 유한한 길이를 갖는 것과 $$\mathfrak{p}$$가 $$\ann(M)$$을 포함하는 prime들 중 minimal인 것이 동치이다.
+:::
+::: 증명
 만일 $$\mathfrak{p}$$가 $$\ann(M)$$을 포함하는 minimal prime ideal이라면, $$A_\mathfrak{p}$$-module $$M_\mathfrak{p}$$는 유한한 길이를 갖는다. 이는 localization $$A_\mathfrak{p}$$를 생각하면, $$A_\mathfrak{p}$$의 prime ideal들은 [§국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8)에 의해 $$\mathfrak{p}$$에 속하는 prime ideal들인데, 그럼 $$\mathfrak{p}$$의 minimality로부터 $$\ann(M)A_\mathfrak{p}$$를 포함하는 prime ideal은 오직 $$\mathfrak{p}A_\mathfrak{p}$$ 뿐이고 이는 local ring $$A_\mathfrak{p}$$의 (유일한) maximal ideal이기 때문이다. 
 
 거꾸로 $$M_\mathfrak{p}$$이 유한한 길이를 갖는 $$A_\mathfrak{p}$$-module이라 하면, [따름정리 6](#cor6)에 의해 $$M_\mathfrak{p}$$의 annihilator $$\ann(M)A_\mathfrak{p}$$를 포함하는 prime ideal들은 모두 maximal이고, 이들은 다시 [§국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8)을 통해 $$\ann(M)$$을 포함하며 $$\mathfrak{p}$$에 포함된 prime ideal과 일대일대응이 있으므로 위의 논증을 뒤집으면 된다.
-
-</details>
+:::
 
 특별히 $$A$$의 임의의 ideal $$\mathfrak{a}$$에 대하여, $$A$$-module $$A/\mathfrak{a}$$를 생각하면 $$\ann(A/\mathfrak{a})=\mathfrak{a}$$가 되며, 이로부터 다음을 얻는다.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor8">**따름정리 8**</ins> Noetherian ring $$A$$와 임의의 ideal $$\mathfrak{a}$$, 그리고 $$\mathfrak{a}$$를 포함하는 prime ideal $$\mathfrak{p}$$에 대하여, 다음이 모두 동치이다.
+::: 따름정리 8
+Noetherian ring $$A$$와 임의의 ideal $$\mathfrak{a}$$, 그리고 $$\mathfrak{a}$$를 포함하는 prime ideal $$\mathfrak{p}$$에 대하여, 다음이 모두 동치이다.
 
 1. $$\mathfrak{p}$$는 $$\mathfrak{a}$$를 포함하는 prime ideal들 중 minimal이다.
 2. $$A_\mathfrak{p}/\mathfrak{a}A_\mathfrak{p}$$가 artinian이다.
 3. Localization $$A_\mathfrak{p}$$ 안에서, 충분히 큰 $$n$$에 대하여 항상 $$(\mathfrak{p}A_\mathfrak{p})^n\subseteq \mathfrak{a}A_\mathfrak{p}$$이 성립한다. 
-
-</div>
+:::
 
 ---
 

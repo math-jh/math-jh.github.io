@@ -18,9 +18,8 @@ last_polished_at: 2026-05-30T15:00:04+00:00
 
 Now we can define monoid objects.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> A *monoid object* in a monoidal category $$(\mathcal{A},\otimes, I)$$ consists of the following data:
+::: Definition 1
+A *monoid object* in a monoidal category $$(\mathcal{A},\otimes, I)$$ consists of the following data:
 - an object $$M$$,
 - *multiplication* $$\mu:M\otimes M \rightarrow M$$,
 - *unit* $$\eta:I \rightarrow M$$.
@@ -31,21 +30,18 @@ These satisfy the following conditions.
 ![associativity](/assets/images/Math/Category_Theory/Monoid_Objects-1.svg){:style="width:29.37em" class="invert" .align-center}
 - (Unit)
 ![unit](/assets/images/Math/Category_Theory/Monoid_Objects-2.svg){:style="width:17.03em" class="invert" .align-center}
-
-</div>
+:::
 
 Any monoidal category $$(\mathcal{A},\otimes, I)$$ always has the monoid object $$I$$. Also, if $$M$$ is a monoid object in a symmetric monoidal category, then one can easily check that $$M\otimes M$$ is also a monoid object.
 
-<div class="example" markdown="1">
-
-<ins id="ex2">**Example 2**</ins> The following are all examples of monoid objects.
+::: Example 2
+The following are all examples of monoid objects.
 
 - In the cartesian monoidal category $$\Set$$, a monoid object is a monoid in the usual sense.
 - In $$\Top$$, a monoid object is a *topological monoid*.
 - For any commutative ring $$R$$, a monoid object in $$(\lMod{R},\otimes_R, R)$$ is an associative unital $$R$$-algebra.
 - For any commutative ring $$R$$, a monoid object in $$(\Ch(R),\otimes_R, R)$$ is a differential graded $$R$$-algebra. Here the unit $$R$$ is the chain complex with $$R$$ in degree $$0$$ and $$0$$ in all other degrees.
-
-</div>
+:::
 
 We need to explain the above examples not from a categorical perspective, but in the algebraic language we already know.
 
@@ -92,9 +88,8 @@ where $$\epsilon_G$$ is the unique morphism from $$G$$ to the terminal object $$
 
 shows that $$(-1)^{-1}\times \id_G$$ is well defined.
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**Definition 3**</ins> In a cartesian monoidal category $$(\mathcal{A},\times, I)$$, a *group object* consists of the following data:
+::: Definition 3
+In a cartesian monoidal category $$(\mathcal{A},\times, I)$$, a *group object* consists of the following data:
 - an object $$G$$,
 - *multiplication* $$\mu:G\otimes G \rightarrow G$$,
 - *unit* $$\eta:I \rightarrow G$$,
@@ -111,14 +106,12 @@ Let $$e_G$$ denote the composition $$G\rightarrow I\overset{\eta}{\rightarrow}G$
 - (Inverse element) The following diagram
   ![inverse_element](/assets/images/Math/Category_Theory/Monoid_Objects-7.svg){:style="width:11.08em" class="invert" .align-center}
   commutes.
-
-</div>
+:::
 
 Since [Definition 3](#def3) started from a cartesian monoidal category, we were able to draw the diagrams as above using the universal property of the categorical product, omitting the associators and unitors. If we write them all out explicitly, the first two diagrams are exactly the conditions for a monoid object, and the last condition can be seen as the newly added one.
 
-<div class="example" markdown="1">
-
-<ins id="ex4">**Example 4**</ins> The following are all group objects.
+::: Example 4
+The following are all group objects.
 
 - In $$\Set$$, a group object is a group.
 - In $$\Top$$, a group object is a topological group.
@@ -126,8 +119,7 @@ Since [Definition 3](#def3) started from a cartesian monoidal category, we were 
 - In $$\Var$$, a group object is an algebraic group.
 - In $$\Sch$$, a group object is a group scheme.
 - In $$\Grp$$, a group object is an abelian group.
-
-</div>
+:::
 
 Only the last example may look slightly less obvious, but this can be verified by checking that since the inverse $$\iota$$ must be a group homomorphism, commutativity follows from this condition.
 
@@ -135,31 +127,25 @@ Only the last example may look slightly less obvious, but this can be verified b
 
 Looking at what was needed when constructing [Definition 3](#def3) above, what we needed was precisely the diagonal map $$\Delta: G \rightarrow G\otimes G$$, the augmentation map $$G \rightarrow I$$, and the inverse map $$I \rightarrow G$$. Sorting out what is needed here, we can first define the following.
 
-<div class="definition" markdown="1">
-
-<ins id="def5">**Definition 5**</ins> Let a monoidal category $$(\mathcal{A},\otimes,I)$$ be given. An object $$M$$ of $$\mathcal{A}$$ is called a *comonoid* if $$M$$ is a monoid object in $$\mathcal{A}^\op$$.
-
-</div>
+::: Definition 5
+Let a monoidal category $$(\mathcal{A},\otimes,I)$$ be given. An object $$M$$ of $$\mathcal{A}$$ is called a *comonoid* if $$M$$ is a monoid object in $$\mathcal{A}^\op$$.
+:::
 
 Unpacking this, the data constituting a comonoid are *comultiplication* $$\Delta: G \rightarrow G\otimes G$$ and *counit* $$\epsilon:G \rightarrow I$$, and these satisfy the dual versions of the two conditions in [Definition 1](#def1).
 
-<div class="definition" markdown="1">
-
-<ins id="def6">**Definition 6**</ins> Let a symmetric monoidal category $$(\mathcal{A},\otimes,I)$$ be given. Then $$(M,\mu,\eta,\Delta,\epsilon)$$ is called a *bimonoid* if the following hold.
+::: Definition 6
+Let a symmetric monoidal category $$(\mathcal{A},\otimes,I)$$ be given. Then $$(M,\mu,\eta,\Delta,\epsilon)$$ is called a *bimonoid* if the following hold.
 
 - $$(M,\mu,\eta)$$ is a monoid.
 - $$(M,\Delta,\epsilon)$$ is a comonoid.
 - The comultiplication and counit are both monoid morphisms.
-
-</div>
+:::
 
 When a monoid object $$M$$ is given, the role of the symmetry is important in order to give $$M\otimes M$$ a monoid structure, so generally the notion of a bimonoid is also defined only in a symmetric monoidal category. We now define a Hopf monoid as follows.
 
-<div class="definition" markdown="1">
-
-<ins id="def7">**Definition 7**</ins> In a symmetric monoidal category $$(\mathcal{A},\otimes,I)$$, $$(H,\mu,\eta,\Delta,\epsilon,\iota)$$ is called a *Hopf monoid* if $$(H,\mu,\eta,\Delta,\epsilon)$$ is a bimonoid and $$\iota$$ satisfies the same condition as the last diagram in [Definition 3](#def3).
-
-</div>
+::: Definition 7
+In a symmetric monoidal category $$(\mathcal{A},\otimes,I)$$, $$(H,\mu,\eta,\Delta,\epsilon,\iota)$$ is called a *Hopf monoid* if $$(H,\mu,\eta,\Delta,\epsilon)$$ is a bimonoid and $$\iota$$ satisfies the same condition as the last diagram in [Definition 3](#def3).
+:::
 
 To write the condition for $$\iota$$ explicitly, one must translate all the diagrams given in [Definition 3](#def3) into the information that a Hopf monoid carries; for example, one of the triangles is the following diagram
 
@@ -167,14 +153,12 @@ To write the condition for $$\iota$$ explicitly, one must translate all the diag
 
 which can be written out explicitly, and similarly using $$\iota\otimes\id_H$$ one obtains the other triangle.
 
-<div class="example" markdown="1">
-
-<ins id="ex8">**Example 8**</ins> The following are all examples of Hopf monoids.
+::: Example 8
+The following are all examples of Hopf monoids.
 
 - Any monoid object in a cartesian monoidal category has a natural bimonoid structure, and thus every group object in a cartesian monoidal category is a Hopf monoid.
 - In $$\Vect$$, a Hopf monoid is a Hopf algebra.
-
-</div>
+:::
 
 ---
 

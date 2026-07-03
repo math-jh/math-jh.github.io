@@ -20,23 +20,19 @@ On the other hand, since divisors also allow negative coefficients, this zero se
 
 For convenience of exposition, we have only discussed Weil divisors above, but a similar argument can be made for Cartier divisors, and the resulting definition is as follows.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> A Weil divisor $$D=\sum n_i D_i$$ defined on a variety $$X$$ is called *effective* if $$n_i\geq 0$$ for all $$i$$. A Cartier divisor $$\{(U_i, f_i)\}$$ is called *effective* if $$f_i$$ is regular on $$U_i$$ for all $$i$$.
-
-</div>
+::: Definition 1
+A Weil divisor $$D=\sum n_i D_i$$ defined on a variety $$X$$ is called *effective* if $$n_i\geq 0$$ for all $$i$$. A Cartier divisor $$\{(U_i, f_i)\}$$ is called *effective* if $$f_i$$ is regular on $$U_i$$ for all $$i$$.
+:::
 
 Our goal, then, is to examine whether any effective divisor exists in the divisor class of a divisor $$D$$. To this end, consider the line bundle $$\mathcal{L}=\mathcal{O}_X(D)$$ defined by $$D$$. ([§Line Bundles and Vector Bundles, ⁋Definition 17](/en/math/algebraic_varieties/line_bundles#def17)) Each nonzero global section $$s\in \Gamma(X, \mathcal{L})$$ of $$\mathcal{L}$$ has no poles, so it defines an effective divisor $$\divisor(s)$$; we can check that this differs from the original $$D$$ only by a trivialization, so it is linearly equivalent to $$D$$. That is, to find an effective divisor linearly equivalent to $$D$$, it suffices to look at the nonzero global sections of $$\mathcal{O}_X(D)$$. However, one must be careful that $$\divisor(s)$$ depends not on $$s$$ itself but on its nonzero multiples; therefore, the object of interest is not $$\Gamma(X, \mathcal{L})$$ itself but its projectivization.
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**Definition 2**</ins> For a line bundle $$\mathcal{L}$$ on a variety $$X$$, the *complete linear system* of $$\mathcal{L}$$ is the projectivization of the global section space $$\Gamma(X, \mathcal{L})$$ of $$\mathcal{L}$$:
+::: Definition 2
+For a line bundle $$\mathcal{L}$$ on a variety $$X$$, the *complete linear system* of $$\mathcal{L}$$ is the projectivization of the global section space $$\Gamma(X, \mathcal{L})$$ of $$\mathcal{L}$$:
 
 $$\lvert \mathcal{L} \rvert = \mathbb{P}(\Gamma(X, \mathcal{L}))$$
 
 A *linear system* for $$\mathcal{L}$$ is a nonempty projective subspace of $$\lvert \mathcal{L} \rvert$$. That is, for a subspace $$V \subseteq \Gamma(X, \mathcal{L})$$, it is of the form $$\mathbb{P}(V) \subseteq \lvert \mathcal{L} \rvert$$.
-
-</div>
+:::
 
 ## Linear Systems on Projective Space
 
@@ -46,9 +42,8 @@ $$\lvert \mathcal{O}_{\mathbb{P}^n}(d)\rvert=\mathbb{P}(\Gamma(\mathbb{P}^n, \ma
 
 geometrically as the family of degree $$d$$ hypersurfaces in $$\mathbb{P}^n$$.
 
-<div class="example" markdown="1">
-
-<ins id="ex3">**Example 3**</ins> For convenience, fix $$n=2$$. Then the family of degree $$1$$ hypersurfaces, i.e., the family of lines in $$\mathbb{P}^2$$, is isomorphic to $$\mathbb{P}^2$$ itself. More precisely,
+::: Example 3
+For convenience, fix $$n=2$$. Then the family of degree $$1$$ hypersurfaces, i.e., the family of lines in $$\mathbb{P}^2$$, is isomorphic to $$\mathbb{P}^2$$ itself. More precisely,
 
 $$\lvert \mathcal{O}_{\mathbb{P}^2}(1)\rvert\cong \mathbb{P}(\mathbb{K}[\x_0,\x_1,\x_2]_1)\cong \mathbb{P}^{\binom{3}{1}-1}=\mathbb{P}^2$$
 
@@ -91,8 +86,7 @@ $$0=F(1,-i,0)=a_{00}-a_{11}-ia_{01}$$
 force $$a_{12}=0$$, $$a_{01}=0$$, $$5a_{11}=-a_{22}$$, $$a_{00}=a_{11}$$, so the actual variables are the two $$a_{00}$$, $$a_{02}$$. That is, this family of conics forms a 2-dimensional subspace $$V$$ of $$\Gamma(X,\mathcal{O}(2))$$, and its projectivization is the $$\mathbb{P}^1$$ represented by $$[\lambda:\mu]$$.
 
 ![pencil_of_circles](/assets/images/Math/Algebraic_Varieties/Linear_Systems-1.svg){:style="width:40em" class="invert" .align-center}
-
-</div>
+:::
 
 Of course, [Definition 2](#def2) applies equally to any variety, whether $$X$$ is a projective space or a quasi-projective variety. However, the reason we took such pains to calculate [Example 3](#ex3) above is that for any quasi-projective variety $$X\subseteq \mathbb{P}^n$$, if $$D$$ comes from some $$\mathcal{O}_{\mathbb{P}^n}(d)$$, we can use the language of homogeneous polynomials directly. That is, in this case the restriction map
 
@@ -124,23 +118,19 @@ The embedding $$\varphi_L$$ above actually depends on the choice of basis of $$V
 
 To describe this rigorously, we define the *support* of a Weil divisor $$D = \sum n_i D_i$$ as $$\operatorname{Supp}(D) = \bigcup_{n_i \neq 0} D_i$$. That is, the support is the union of the prime divisors whose coefficient in the divisor is nonzero. Using this, the following is well-defined.
 
-<div class="definition" markdown="1">
-
-<ins id="def4">**Definition 4**</ins> The *base locus* $$\operatorname{Bs}(L)$$ of a linear system $$L \subseteq \lvert \mathcal{L} \rvert$$ is the closed subset shared by all elements of $$L$$. Specifically, when $$L = \mathbb{P}(V)$$ with $$V \subseteq \Gamma(X, \mathcal{L})$$,
+::: Definition 4
+The *base locus* $$\operatorname{Bs}(L)$$ of a linear system $$L \subseteq \lvert \mathcal{L} \rvert$$ is the closed subset shared by all elements of $$L$$. Specifically, when $$L = \mathbb{P}(V)$$ with $$V \subseteq \Gamma(X, \mathcal{L})$$,
 
 $$\operatorname{Bs}(L) = \bigcap_{s \in V \setminus \{0\}} \operatorname{Supp}(\operatorname{div}(s))$$
 
 where $$\operatorname{div}(s)$$ is the zero divisor of the section $$s$$.
-
-</div>
+:::
 
 Especially in calculations of hypersurfaces in $$\mathbb{P}^n$$, for $$V \subseteq \mathbb{K}[\x_0, \ldots, \x_n]_d$$ this is the same as $$\operatorname{Bs}(L) = \bigcap_{[F] \in L} Z(F)$$. Then the definition we wanted is the following.
 
-<div class="definition" markdown="1">
-
-<ins id="def5">**Definition 5**</ins> $$L$$ is called *basepoint-free* if $$\operatorname{Bs}(L) = \emptyset$$. That is, for any point $$p \in X$$, there always exists an element of $$L$$ not passing through $$p$$.
-
-</div>
+::: Definition 5
+$$L$$ is called *basepoint-free* if $$\operatorname{Bs}(L) = \emptyset$$. That is, for any point $$p \in X$$, there always exists an element of $$L$$ not passing through $$p$$.
+:::
 
 The key property of a basepoint-free linear system is as follows. If $$L=\mathbb{P}(V)$$ is basepoint-free, then a basis $$F_0,\ldots,F_r$$ of $$V$$ satisfies $$\bigcap Z(F_i)\cap X=\emptyset$$, so using this we can define the following regular map
 
@@ -148,11 +138,9 @@ $$\varphi_L:X\to\mathbb{P}^r,\quad p\mapsto[F_0(p):\cdots:F_r(p)]$$
 
 Our initial interest in linear systems was to find effective divisors linearly equivalent to a given divisor $$D$$; the following proposition gives a direct answer to this.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop6">**Proposition 6**</ins> In the above situation, a hyperplane $$H$$ in $$\mathbb{P}^r$$ defines an effective divisor belonging to $$\lvert L\rvert$$.
-
-</div>
+::: Proposition 6
+In the above situation, a hyperplane $$H$$ in $$\mathbb{P}^r$$ defines an effective divisor belonging to $$\lvert L\rvert$$.
+:::
 
 To verify this, it suffices to check that for a hyperplane $$H: a_0\x_0+\cdots+a_r\x_r=0$$ in $$\mathbb{P}^r$$, the preimage $$\varphi_L^{-1}(H)$$ coincides with the zero set of the global section
 
@@ -160,23 +148,20 @@ $$\sigma=a_0F_0+\cdots+a_rF_r\in V$$
 
 that is, with $$\divisor(\sigma)$$. Let us look at a more concrete example.
 
-<div class="example" markdown="1">
-
-<ins id="ex7">**Example 7**</ins> Let us examine the two examples of $$\mathbb{P}^n$$ seen in [Example 3](#ex3). First, consider the complete linear system
+::: Example 7
+Let us examine the two examples of $$\mathbb{P}^n$$ seen in [Example 3](#ex3). First, consider the complete linear system
 
 $$\lvert \mathcal{O}_{\mathbb{P}^2}(1)\rvert=\mathbb{P}(\mathbb{K}[\x_0,\x_1,\x_2]_1)$$
 
 If we choose the basis of the vector space $$\mathbb{K}[\x_0,\x_1,\x_2]_1$$ as $$\x_0,\x_1,\x_2$$, then since there is no point in $$\mathbb{P}^2$$ where $$\x_0,\x_1,\x_2$$ simultaneously vanish, this is basepoint-free. The $$\varphi_L$$ defined by this choice of basis is simply the identity.
 
 In the case of the two conics, as examined above, the base locus is not empty. In fact, the base locus is the four intersection points of $$C_1\cap C_2$$ already examined in [Example 3](#ex3), and geometrically we know that each element of the pencil shares exactly these four intersection points of $$C_1\cap C_2$$, which matches the definition of the base locus.
-
-</div>
+:::
 
 The above example intuitively shows the origin of the name "basepoint," but since $$\varphi_L$$ is the identity, [Proposition 6](#prop6) does not have much meaning in fact. Let us look at a more non-trivial example.
 
-<div class="example" markdown="1">
-
-<ins id="ex8">**Example 8**</ins> On $$\mathbb{P}^1$$ for $$d \ge 1$$, the map defined by the complete linear system $$\lvert \mathcal{O}_{\mathbb{P}^1}(d) \rvert$$ is
+::: Example 8
+On $$\mathbb{P}^1$$ for $$d \ge 1$$, the map defined by the complete linear system $$\lvert \mathcal{O}_{\mathbb{P}^1}(d) \rvert$$ is
 
 $$\nu_d: \mathbb{P}^1 \to \mathbb{P}^d, \quad [s : t] \mapsto [s^d : s^{d-1}t : \cdots : t^d]$$
 
@@ -191,8 +176,7 @@ so scheme-theoretically this becomes the effective divisor $$d\cdot[0:1]$$ givin
 $$\nu_d^{-1}(H_1) = \{[s:t] \in \mathbb{P}^1 \mid s^d - t^d = 0\}$$
 
 and since $$s^d - t^d$$ decomposes into a product of $$d$$ distinct linear factors (for example, if $$\mathbb{K}=\mathbb{C}$$ then $$s^d-t^d=\prod_{k=0}^{d-1}(s-\zeta^k t)$$), $$\nu_d^{-1}(H_1)$$ is an effective divisor consisting of $$d$$ distinct points on $$\mathbb{P}^1$$. In any case, these preimages are degree $$d$$ effective divisors belonging to $$\lvert \mathcal{O}_{\mathbb{P}^1}(d)\rvert$$.
-
-</div>
+:::
 
 ## Ample Line Bundle
 
@@ -202,11 +186,9 @@ For example, in our language, to say that $$\mathbb{P}^1\times \mathbb{P}^1$$ is
 
 However, even on an abstract variety we can define line bundles, linear systems, and so on. Then in particular, using [Proposition 6](#prop6) we can define an appropriate map to projective space. The importance of the following definition should be understood in this context.
 
-<div class="definition" markdown="1">
-
-<ins id="def9">**Definition 9**</ins> A line bundle $$\mathcal{L}$$ (or the corresponding linear system $$\lvert \mathcal{L} \rvert$$) is called *very ample* if the regular map $$\varphi_{\mathcal{L}}: X \to \mathbb{P}(\Gamma(X, \mathcal{L}))$$ defined by the complete linear system $$\lvert \mathcal{L} \rvert = \mathbb{P}(\Gamma(X, \mathcal{L}))$$ is a closed embedding.
-
-</div>
+::: Definition 9
+A line bundle $$\mathcal{L}$$ (or the corresponding linear system $$\lvert \mathcal{L} \rvert$$) is called *very ample* if the regular map $$\varphi_{\mathcal{L}}: X \to \mathbb{P}(\Gamma(X, \mathcal{L}))$$ defined by the complete linear system $$\lvert \mathcal{L} \rvert = \mathbb{P}(\Gamma(X, \mathcal{L}))$$ is a closed embedding.
+:::
 
 For this to be well-defined, $$\varphi_L$$ must not depend on the choice of basis, and indeed it is easy to check that this is the case.
 
@@ -216,11 +198,9 @@ We know that $$\mathcal{O}_{\mathbb{P}^n}(1)$$ is very ample, but $$\mathcal{O}_
 
 This example is perhaps too simple, but if there is some space more complicated than $$\mathbb{P}^n$$ and its complexity cannot be resolved by the twisting of a particular line bundle (even in the right direction), we could keep adding more and more twisting until it is resolved. From this idea we define the following.
 
-<div class="definition" markdown="1">
-
-<ins id="def10">**Definition 10**</ins> $$\mathcal{L}$$ is called *ample* if for some $$m > 0$$, $$\mathcal{L}^{\otimes m}$$ is very ample.
-
-</div>
+::: Definition 10
+$$\mathcal{L}$$ is called *ample* if for some $$m > 0$$, $$\mathcal{L}^{\otimes m}$$ is very ample.
+:::
 
 To see the usefulness of this definition, we should think of a space having a line bundle that is ample but not very ample, but it is still somewhat premature to introduce such a space. However, before long we will deal with such a space, and then ampleness will prove its full usefulness.
 

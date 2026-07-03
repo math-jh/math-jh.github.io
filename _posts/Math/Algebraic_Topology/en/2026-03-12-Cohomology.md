@@ -66,26 +66,23 @@ $$0 \rightarrow H_k(C)\otimes_\mathbb{Z}A\rightarrow H_k(C;A)\rightarrow \Tor_1^
 
 On the other hand, because (1) is a split short exact sequence, we may choose a retraction $$r_k:C_k \rightarrow Z_k$$. ([[Multilinear Algebra] §Exact Sequences, ⁋Proposition 10](/en/math/multilinear_algebra/exact_sequences#prop10)) With this choice, $$(p_k\circ r_k)\otimes \id_A$$ induces a map $$H_k(C;A)\rightarrow H_k(C)\otimes_\mathbb{Z} A$$ that serves as a retraction of the map $$H_k(C)\otimes_\mathbb{Z}A\rightarrow H_k(C;A)$$ above. Hence we obtain the following.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop1">**Proposition 1 (Universal coefficient theorem for homology)**</ins> For any topological space $$X$$ and abelian group $$A$$, there exists a short exact sequence
+::: Proposition 1 (Universal coefficient theorem for homology)
+For any topological space $$X$$ and abelian group $$A$$, there exists a short exact sequence
 
 $$0 \rightarrow H_k(X)\otimes_\mathbb{Z}A\rightarrow H_k(X;A)\rightarrow \Tor_1^\mathbb{Z}(H_{k-1}(X), A)\rightarrow 0$$
 
 Moreover, this sequence splits (non-canonically), and thus yields a (non-canonical) isomorphism
 
 $$H_k(X;A)\cong \left(H_k(X)\otimes_\mathbb{Z}A\right)\oplus \Tor_1^\mathbb{Z}(H_{k-1}(X), A)$$
-
-</div>
+:::
 
 
 ## Definition of Cohomology and the Universal Coefficient Theorem
 
 Just as in [§Computation of Homology, ⁋Definition 6](/en/math/algebraic_topology/computation_of_homology#def6), we define the Eilenberg-Steenrod axioms for cohomology; a contravariant functor together with connecting morphisms satisfying these axioms will be called a cohomology theory. Writing this out explicitly gives the following.
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**Definition 2 (Eilenberg-Steenrod axioms)**</ins> For contravariant functors $$H^k$$ from the category of pairs of topological spaces to the category of abelian groups, together with natural transformations
+::: Definition 2 (Eilenberg-Steenrod axioms)
+For contravariant functors $$H^k$$ from the category of pairs of topological spaces to the category of abelian groups, together with natural transformations
 
 $$\delta: H^k(X) \rightarrow H^{k+1}(X,A)$$
 
@@ -98,8 +95,7 @@ the *Eilenberg-Steenrod axioms* are the following.
 - (Exactness) For each pair $$(X,A)$$ and the two inclusions $$(A,\emptyset) \hookrightarrow (X,\emptyset)$$ and $$(X,\emptyset)\hookrightarrow (X,A)$$, we have the long exact sequence
     
     $$\cdots \rightarrow H^k(X,A)\rightarrow H^k(X) \rightarrow H^k(A) \rightarrow H^{k+1}(X,A)\rightarrow \cdots$$
-
-</div>
+:::
 
 To establish the existence of a cohomology theory satisfying these axioms, we proceed as in [§Homology](/en/math/algebraic_topology/homology) and consider the chain complex of singular simplices of a topological space $$X$$
 
@@ -121,17 +117,15 @@ and call it the *$$k$$th cohomology* of $$X$$. The reason for using superscripts
 
 We must now examine the relationship between $$H^k(X;A)$$ and $$H_k(X)$$ thus defined. As noted at the outset, it is not the case that $$H^k(X;A)\cong H_k(X)^\ast$$ holds in general. Nevertheless, by an argument parallel to the proof of [Proposition 1](#prop1) above, we obtain the following.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop3">**Proposition 3 (Universal coefficient theorem for cohomology)**</ins> For any topological space $$X$$ and abelian group $$A$$, there exists a short exact sequence
+::: Proposition 3 (Universal coefficient theorem for cohomology)
+For any topological space $$X$$ and abelian group $$A$$, there exists a short exact sequence
 
 $$0\rightarrow\Ext_\mathbb{Z}^1(H_{k-1}(X), A)\rightarrow H^k(X;A)\rightarrow \Hom_\mathbb{Z}(H_k(X),A)\rightarrow 0$$
 
 Moreover, this sequence splits (non-canonically), and thus yields a (non-canonical) isomorphism
 
 $$H^k(X;A)\cong \Hom_\mathbb{Z}(H_k(X),A)\oplus \Ext^1_\mathbb{Z}(H_{k-1}(X),A)$$
-
-</div>
+:::
 
 Roughly speaking, this can be viewed as translating [Proposition 1](#prop1) via [[Algebraic Structures] §Abelian Groups, ⁋Theorem 15](/en/math/algebraic_structures/abelian_groups#thm15).
 
@@ -227,53 +221,46 @@ are, when $$A$$ is a ring, chain complexes of $$A$$-modules, and the $$C^\bullet
 
 On the other hand, we know that if $$A$$ is a principal ideal domain, then any submodule of a free $$A$$-module is again free. Looking back at the proof of [Proposition 1](#prop1), we see that it relied on the fact that $$\mathbb{Z}$$ is a principal ideal domain, so every submodule of a free $$\mathbb{Z}$$-module (that is, of a free abelian group) is again free. Building on this, we can generalize the preceding two propositions as follows.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm4">**Theorem 4 (Universal coefficient theorem for homology, general version)**</ins> Let $$A$$ be a principal ideal domain, $$C_\bullet$$ a chain complex of free $$A$$-modules, and $$M$$ an arbitrary $$A$$-module. Then there exists a short exact sequence
+::: Theorem 4 (Universal coefficient theorem for homology, general version)
+Let $$A$$ be a principal ideal domain, $$C_\bullet$$ a chain complex of free $$A$$-modules, and $$M$$ an arbitrary $$A$$-module. Then there exists a short exact sequence
 
 $$0 \rightarrow H_k(C)\otimes_AM\rightarrow H_k(C\otimes_AM)\rightarrow \Tor_1^A(H_{k-1}(C), A)\rightarrow 0$$
 
 Moreover, this sequence splits (non-canonically), and thus yields a (non-canonical) isomorphism
 
 $$H_k(C\otimes_AM)\cong \left(H_k(C)\otimes_AM\right)\oplus \Tor_1^A(H_{k-1}(C), M)$$
+:::
 
-</div>
-
-<div class="proposition" markdown="1">
-
-<ins id="thm5">**Theorem 5 (Universal coefficient theorem for cohomology, general version)**</ins> Let $$A$$ be a principal ideal domain, $$C_\bullet$$ a chain complex of free $$A$$-modules, and $$M$$ an arbitrary $$A$$-module. Then there exists a short exact sequence
+::: Theorem 5 (Universal coefficient theorem for cohomology, general version)
+Let $$A$$ be a principal ideal domain, $$C_\bullet$$ a chain complex of free $$A$$-modules, and $$M$$ an arbitrary $$A$$-module. Then there exists a short exact sequence
 
 $$0\rightarrow\Ext_A^1(H_{k-1}(C), M)\rightarrow H_k(\Hom_A(C,M))\rightarrow \Hom_A(H_k(C),M)\rightarrow 0$$
 
 Moreover, this sequence splits (non-canonically), and thus yields a (non-canonical) isomorphism
 
 $$H_k(\Hom_A(C,M))\cong \Hom_A(H_k(C),M)\oplus \Ext^1_A(H_{k-1}(C),M)$$
-
-</div>
+:::
 
 ## The Mayer-Vietoris Sequence
 
 Among the axioms of [Definition 2](#def2), the excision axiom allows us to compute the cohomology of a large space from that of smaller ones. The following proposition is the cohomology version of [[Algebraic Topology] §Computation of Homology, ⁋Proposition 7](/en/math/algebraic_topology/computation_of_homology#prop7); its proof consists of repeating the passage from [[Algebraic Topology] §Computation of Homology, ⁋Definition 6](/en/math/algebraic_topology/computation_of_homology#def6) to [[Algebraic Topology] §Computation of Homology, ⁋Proposition 7](/en/math/algebraic_topology/computation_of_homology#prop7), now starting from [Definition 2](#def2).
 
-<div class="proposition" markdown="1">
-
-<ins id="prop6">**Proposition 6 (Mayer-Vietoris sequence)**</ins> Let a topological space $$X$$ be expressed as the union $$X=U\cup V$$ of two open sets, and consider a cohomology theory $$H$$ defined on it. Then there exists a long exact sequence
+::: Proposition 6 (Mayer-Vietoris sequence)
+Let a topological space $$X$$ be expressed as the union $$X=U\cup V$$ of two open sets, and consider a cohomology theory $$H$$ defined on it. Then there exists a long exact sequence
 
 $$\cdots \to H^{n}(X) \xrightarrow{(i^\ast, j^\ast)} H^{n}(U) \oplus H^{n}(V) \xrightarrow{k^\ast - l^\ast} H^{n}(U \cap V) \xrightarrow{\delta} H^{n+1}(X) \to \cdots$$
 
 where $$i^\ast, j^\ast, k^\ast, l^\ast$$ are the maps induced by the inclusions
 
 $$i:U\rightarrow X,\quad j:V\rightarrow X,\quad k:U\cap V\rightarrow U,\quad l:U\cap V \rightarrow V$$
-
-</div>
+:::
 
 ## Tensor Product of Chain Complexes
 
 The Mayer-Vietoris sequence lets us compute the homology or cohomology of a large space from that of its small subspaces. On the other hand, we can also form a larger space $$X\times Y$$ as the product of two spaces $$X$$ and $$Y$$; the Künneth formula helps us compute the homology and cohomology of such a product space. To this end, we must first define the tensor product of two chain complexes $$C_\bullet$$ and $$D_\bullet$$.
 
-<div class="definition" markdown="1">
-
-<ins id="def7">**Definition 7**</ins> Let $$A$$ be a ring and $$C_\bullet, D_\bullet$$ chain complexes of $$A$$-modules. Their *tensor product* $$(C\otimes D)_\bullet$$ is defined in degree $$k$$ by
+::: Definition 7
+Let $$A$$ be a ring and $$C_\bullet, D_\bullet$$ chain complexes of $$A$$-modules. Their *tensor product* $$(C\otimes D)_\bullet$$ is defined in degree $$k$$ by
 
 $$(C\otimes D)_k=\bigoplus_{p+q=k}C_p\otimes_A D_q$$
 
@@ -282,27 +269,22 @@ and the differential is defined on homogeneous elements by
 $$\partial(x,y)=(\partial^Cx,y)+(-1)^{\deg(x)}(x,\partial^Dy)$$
 
 and then extended linearly.
-
-</div>
+:::
 
 That is, $$(C\otimes D)_\bullet$$ can be regarded as the total complex of a double complex whose $$(p,q)$$-component is $$C_p\otimes D_q$$, with horizontal differential $$\partial^C\otimes\id_D$$ and vertical differential $$\id_C\otimes \partial^D$$. ([§Homology, ⁋Definition 5](/en/math/homological_algebra/homology#def5))
 
 The algebraic content of the Künneth formula is then captured by the following lemma.
 
-<div class="proposition" markdown="1">
-
-<ins id="lem8">**Lemma 8**</ins> Let $$A$$ be a principal ideal domain and $$C_\bullet$$, $$D_\bullet$$ chain complexes of $$A$$-modules, and suppose $$C_\bullet$$ is a chain complex of free $$A$$-modules. Then for any $$k$$ there exists a short exact sequence
+::: Lemma 8
+Let $$A$$ be a principal ideal domain and $$C_\bullet$$, $$D_\bullet$$ chain complexes of $$A$$-modules, and suppose $$C_\bullet$$ is a chain complex of free $$A$$-modules. Then for any $$k$$ there exists a short exact sequence
 
 $$0 \rightarrow \bigoplus_{p+q=k}H_p(C)\otimes_AH_q(D)\rightarrow H_k(C\otimes D)\rightarrow \bigoplus_{p+q=k-1}\Tor_1^A(H_p(C),H_q(D))\rightarrow 0$$
 
 Moreover, this short exact sequence splits (non-canonically), and thus there is an isomorphism
 
 $$H_k(C\otimes D)\cong \left( \bigoplus_{p+q=k}H_p(C)\otimes_AH_q(D)\right)\oplus \left(\bigoplus_{p+q=k-1}\Tor_1^A(H_p(C),H_q(D)) \right)$$
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 First, consider the short exact sequence
 
 $$0 \rightarrow Z_p(C) \rightarrow C_p\rightarrow B_{p-1}(C)\rightarrow 0$$
@@ -344,22 +326,19 @@ As for the splitting claim, since
 $$0 \rightarrow Z_\bullet(C)\rightarrow C_\bullet \rightarrow B_{\bullet-1}(C) \rightarrow 0$$
 
 is a split exact sequence, a section $$B_{\bullet-1}(C)\rightarrow C_\bullet$$ induces a splitting of ($$\ast$$).
-
-</details>
+:::
 
 ## The Eilenberg-Zilber Theorem and the Künneth Formula
 
 With the result of [Lemma 8](#lem8) in mind, our task is clear. Given two topological spaces $$X,Y$$ and the corresponding chain complexes $$C_\bullet(X),C_\bullet(Y)$$, we examine the relationship between the homology $$H_\bullet(X\times Y)$$ of the product space $$X\times Y$$ and the tensor product $$(H(X)\otimes H(Y))_\bullet$$ of the two chain complexes $$H_\bullet(X)$$, $$H_\bullet(Y)$$. The following theorem shows that these two algebraic objects are one and the same.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm9">**Theorem 9 (Eilenberg-Zilber)**</ins> For two topological spaces $$X,Y$$ and the chain complexes $$C_\bullet(X),C_\bullet(Y)$$, and $$C_\bullet(X\times Y)$$ obtained from them, there exists a chain homotopy equivalence between $$(C(X)\otimes C(Y))_\bullet$$ and $$C_\bullet(X\times Y)$$; consequently
+::: Theorem 9 (Eilenberg-Zilber)
+For two topological spaces $$X,Y$$ and the chain complexes $$C_\bullet(X),C_\bullet(Y)$$, and $$C_\bullet(X\times Y)$$ obtained from them, there exists a chain homotopy equivalence between $$(C(X)\otimes C(Y))_\bullet$$ and $$C_\bullet(X\times Y)$$; consequently
 
 $$H_\bullet(C(X\times Y))\cong H_\bullet(C(X)\otimes C(Y))$$
 
 holds.
-
-</div>
+:::
 
 This is usually proved using the [acyclic models theorem](https://en.wikipedia.org/wiki/Acyclic_model), but the acyclic models theorem is in fact closer to a generalization of the Eilenberg-Zilber theorem, so invoking it here feels somewhat excessive. However, since a direct proof of the Eilenberg-Zilber theorem is quite tedious, we shall content ourselves with examining the two maps that appear in its proof:
 
@@ -383,17 +362,15 @@ $$\AW\circ\EZ=\id_{(C(X)\otimes C(Y))_\bullet},\qquad \EZ\circ \AW\simeq \id_{C_
 
 Therefore, combining [Lemma 8](#lem8) with [Theorem 9](#thm9), we obtain the following result.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor10">**Corollary 10 (Künneth)**</ins> Fix topological spaces $$X,Y$$. Then for their product space $$X\times Y$$ and a principal ideal domain $$A$$, there exists a short exact sequence
+::: Corollary 10 (Künneth)
+Fix topological spaces $$X,Y$$. Then for their product space $$X\times Y$$ and a principal ideal domain $$A$$, there exists a short exact sequence
 
 $$0 \rightarrow \bigoplus_{p+q=k}H_p(X;A)\otimes_AH_q(Y;A)\rightarrow H_k(X\times Y;A)\rightarrow \bigoplus_{p+q=k-1}\Tor_1^A(H_p(X;A),H_q(Y;A))\rightarrow 0$$
 
 Moreover, this short exact sequence splits (non-canonically), and thus there is an isomorphism
 
 $$H_k(X\times Y;A)\cong \left( \bigoplus_{p+q=k}H_p(X;A)\otimes_AH_q(Y;A)\right)\oplus \left(\bigoplus_{p+q=k-1}\Tor_1^A(H_p(X;A),H_q(Y;A)) \right)$$
-
-</div>
+:::
 
 Of course, using this result together with [Theorem 5](#thm5), one can obtain the cohomology version of the Künneth formula.
 

@@ -19,9 +19,8 @@ weight: 1
 
 ## 5항 보조정리
 
-<div class="proposition" markdown="1">
-
-<ins id="prop1">**명제 1 (The four lemma)**</ins> 각 행들이 exact인 commutative diagram
+::: 명제 1 (The four lemma)
+각 행들이 exact인 commutative diagram
 
 ![Four_lemma](/assets/images/Math/Homological_Algebra/Diagram_Chasing-1.svg){:style="width:15.54em" class="invert" .align-center}
 
@@ -29,11 +28,8 @@ weight: 1
 
 1. 만일 $$\gamma$$가 전사라면 $$\beta$$ 또한 전사이다.
 2. 만일 $$\beta$$가 단사라면 $$\gamma$$ 또한 단사이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 1. 임의의 $$b'\in B'$$를 택하자. 우리는 적당한 $$b\in B$$가 존재하여 $$\beta(b)=b'$$임을 보여야 한다. 가정에 의해 $$\gamma$$는 전사이므로, 적당한 $$c\in C$$가 존재하여 $$\gamma(c)=g'(b')\in C'$$가 성립한다. 이제
   
     $$\delta(h(c))=h'(\gamma(c))=h'(g'(b'))=0$$
@@ -64,38 +60,32 @@ weight: 1
     $$\beta(b)=\beta(b_0-f(a))=\beta(b_0)-\beta(f(a))=\beta(b_0)-f'(\alpha(a))=\beta(b_0)-f'(a')=\beta(b_0)-\beta(b_0)=0$$
 
     이므로 $$b\in\ker(\beta)$$이고, $$\beta$$는 단사이므로 $$b=0$$가 된다. 따라서 $$c=g(b)=0$$이고, $$\gamma$$는 단사이다.
-
-</details>
+:::
 
 위의 명제는 다음의 자명한 두 따름정리를 갖는다.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor2">**따름정리 2 (The five lemma)**</ins> 각 행이 exact인 commutative diagram
+::: 따름정리 2 (The five lemma)
+각 행이 exact인 commutative diagram
 
 ![five_lemma](/assets/images/Math/Homological_Algebra/Diagram_Chasing-2.svg){:style="width:20.26em" class="invert" .align-center}
 
 이 주어졌다 하자. 만일 $$\alpha,\beta,\delta,\epsilon$$이 모두 전단사라면, $$\gamma$$ 또한 전단사이다.
+:::
 
-</div>
-
-<div class="proposition" markdown="1">
-
-<ins id="cor3">**따름정리 3 (The short five lemma)**</ins> 각 행이 exact인 commutative diagram
+::: 따름정리 3 (The short five lemma)
+각 행이 exact인 commutative diagram
 
 ![short_five_lemma](/assets/images/Math/Homological_Algebra/Diagram_Chasing-3.svg){:style="width:18.88em" class="invert" .align-center}
 
 이 주어졌다 하자. 만일 $$\alpha,\gamma$$가 모두 단사라면 $$\beta$$도 단사이고, $$\alpha,\gamma$$가 모두 전사라면 $$\beta$$도 전사이다.
-
-</div>
+:::
 
 ## 뱀 보조정리
 
 남은 글에서 우리의 주된 목표는 뱀 보조정리를 증명하는 것인데, 이를 위해서는 두 개의 보조정리가 필요하다.
 
-<div class="proposition" markdown="1">
-
-<ins id="lem4">**보조정리 4**</ins> Commutative square
+::: 보조정리 4
+Commutative square
 
 ![induced_morphism](/assets/images/Math/Homological_Algebra/Diagram_Chasing-4.svg){:style="width:6.22em" class="invert" .align-center}
 
@@ -104,11 +94,8 @@ weight: 1
 $$\xi^\sharp:\ker(h)\rightarrow\ker(h'),\quad \eta^\sharp:\im(h)\rightarrow\im(h'),\quad\xi^\ast:X/\ker(h)\rightarrow X'/\ker(h'),\quad \eta^\ast:\coker(h)\rightarrow\coker(h')$$
 
 이 잘 정의된다. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 $$i:\ker(h)\rightarrow X$$와 $$\xi$$의 합성 $$\xi\circ i:\ker h\rightarrow X'$$를 생각하자. 그럼 
 
 $$h'\circ(\xi\circ i)=(\eta\circ h)\circ i=\eta\circ 0=0$$
@@ -130,14 +117,12 @@ $$(p'\circ\eta)\circ h=p'\circ(h'\circ\xi)=(p'\circ h')\circ\xi=0\circ\xi=0$$
 $$\ker(h)\subseteq\ker(p\circ\xi)$$
 
 이고, 따라서 $$p\circ\xi$$가 $$\xi^\ast:X/\ker(h)\rightarrow X'/\ker(h')$$를 유도한다.
-
-</details>
+:::
 
 이를 이용하면 다음 보조정리를 보일 수 있다.
 
-<div class="proposition" markdown="1">
-
-<ins id="lem5">**보조정리 5**</ins> 각 행이 exact인 commutative diagram
+::: 보조정리 5
+각 행이 exact인 commutative diagram
 
 ![induced_exact_sequence](/assets/images/Math/Homological_Algebra/Diagram_Chasing-7.svg){:style="width:10.84em" class="invert" .align-center}
 
@@ -146,11 +131,8 @@ $$\ker(h)\subseteq\ker(p\circ\xi)$$
 $$\ker(\alpha)\rightarrow\ker(\beta)\rightarrow\ker(\gamma),\qquad \coker(\alpha)\rightarrow\coker(\beta)\rightarrow\coker(\gamma)$$
 
 를 유도한다. 뿐만 아니라, $$f':A'\rightarrow B'$$가 단사라면 첫째 열이 exact가 되고, $$g:B\rightarrow C$$가 전사라면 둘째 열이 exact가 된다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 $$f,g$$와 $$f',g'$$이 각각 주어진 두 개의 열
 
 $$\ker(\alpha)\overset{f^\sharp}{\longrightarrow}\ker(\beta)\overset{g^\sharp}{\longrightarrow}\ker(\gamma),\qquad \coker(\alpha)\overset{(f')^\ast}{\longrightarrow}\coker(\beta)\overset{(g')^\ast}{\longrightarrow}\coker(\gamma)$$
@@ -184,14 +166,12 @@ $$f'(a')+\im(\beta)=b'+\im(\beta)$$
 $$((f')^\ast)(a'+\im(\alpha))=b'+\im(\beta)$$
 
 이 성립한다.
-
-</details>
+:::
 
 이제 드디어 snake lemma를 증명할 수 있다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="thm6">**정리 6 (The snake lemma)**</ins> 각 행이 exact인 commutative diagram
+::: 정리 6 (The snake lemma)
+각 행이 exact인 commutative diagram
 
 ![snake_diagram](/assets/images/Math/Homological_Algebra/Diagram_Chasing-8.svg){:style="width:18.88em" class="invert" .align-center}
 
@@ -204,11 +184,8 @@ $$\ker(\alpha)\rightarrow\ker(\beta)\rightarrow\ker(\gamma),\qquad \coker(\alpha
 $$\ker(\alpha)\rightarrow\ker(\beta)\rightarrow\ker(\gamma)\rightarrow\coker(\alpha)\rightarrow\coker(\beta)\rightarrow\coker(\gamma)$$
 
 이 exact sequence를 이룬다. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 증명을 위해서는 $$\delta$$를 하나 만들고, 이후 위의 열이 $$\ker(\gamma)$$와 $$\coker(\alpha)$$에서 각각 exact임을 보이면 충분하다. 
 
 우선 $$c\in\ker(\gamma)$$를 하나 택하자. 그럼 $$g$$가 전사이므로, 적당한 $$b\in B$$가 존재하여 $$g(b)=c$$가 성립하며, 이 $$b$$는 다음의 식
@@ -252,8 +229,7 @@ $$g^\sharp(b-f(a))=g(b-f(a))=g(b)-g(f(a))=g(b)=c$$
 $$\gamma(g(b))=(g'\circ\beta)(b)=(g'\circ f')(a')=0$$
 
 가 성립하므로 $$g(b)\in\ker(\gamma)$$이다. 따라서 $$\delta(g(b))$$가 잘 정의되며, $$b$$가 정확히 $$f'(a')=\beta(b)$$를 만족하는 원소로 정의되었으므로 이 값은 정확히 $$a'+\im(\alpha)$$와 같다.
-
-</details>
+:::
 
 이 정리를 snake lemma라고 부르는 것은 connecting map $$\delta$$를 그렸을 때, 다음과 같은 모양이 나오기 때문이다.
 
@@ -261,15 +237,13 @@ $$\gamma(g(b))=(g'\circ\beta)(b)=(g'\circ f')(a')=0$$
 
 Snake lemma는 보통 다음 글에서와 같이 long exact sequence를 그릴 때 사용되지만, 다음의 또 다른 따름정리 또한 갖는다.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor7">**따름정리 7 (The 3×3 lemma)**</ins> 각 행이 exact인 commutative diagram
+::: 따름정리 7 (The 3×3 lemma)
+각 행이 exact인 commutative diagram
 
 ![Nine_lemma](/assets/images/Math/Homological_Algebra/Diagram_Chasing-10.svg){:style="width:19.30em" class="invert" .align-center}
 
 이 주어졌다 하자. 만일 첫 두 개의 열이 모두 short exact sequence라면 마지막 열 또한 short exact sequence가 되고, 마지막 두 개의 열이 모두 short exact sequence라면 첫 열 또한 short exact sequence가 된다.
-
-</div>
+:::
 
 ---
 

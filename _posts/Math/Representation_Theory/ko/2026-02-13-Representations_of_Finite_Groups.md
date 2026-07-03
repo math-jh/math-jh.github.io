@@ -19,15 +19,13 @@ weight: 1
 
 우선 다음의 정의부터 시작하자. 
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> 임의의 finite group $$G$$에 대하여, $$G$$의 *representation<sub>표현</sub>*은 유한차원 벡터공간 $$V$$와, group action의 조건을 만족하는 함수
+::: 정의 1
+임의의 finite group $$G$$에 대하여, $$G$$의 *representation<sub>표현</sub>*은 유한차원 벡터공간 $$V$$와, group action의 조건을 만족하는 함수
 
 $$\rho: G\times V \rightarrow V$$
 
 가 주어져서 각각의 $$\rho(g,-)$$가 linear map인 것이다.
-
-</div>
+:::
 
 일반적으로 ground field $$\mathbb{K}$$는 임의의 ring $$A$$로 대체해도 아무런 문제는 없지만, 우리의 논의에서는 $$\mathbb{K}=\mathbb{C}$$로 두어도 충분하므로 이렇게 고정하기로 한다. 또, 우리는 주로 *유한차원* 벡터공간 $$V$$를 representation space로 갖는 경우를 생각하고 있음을 기억하자. 이 또한 무한차원 벡터공간으로 일반화할 수 있지만, 이를 위해서는 $$V$$에 topological vector space 구조를 주는 등의 표준적인 방법들이 필요하다. 
 
@@ -45,29 +43,25 @@ $$L(g\cdot v)=g\cdot L(v)\qquad\text{for all $g\in G$ and $v\in V$}$$
 
 한편 $$V$$에 적용되는 선형대수학의 언어를 차용하면 다음을 정의할 수 있다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**정의 2**</ins> Group $$G$$의 representation $$G\times V\rightarrow V$$에 대하여 다음을 정의한다. 
+::: 정의 2
+Group $$G$$의 representation $$G\times V\rightarrow V$$에 대하여 다음을 정의한다. 
 
 1. $$V$$의 subspace $$W$$가 *$$G$$-invariant<sub>$G$-불변공간</sub>*라는 것은 임의의 $$g\in G$$와 임의의 $$w\in W$$에 대하여 $$g\cdot w\in W$$가 항상 성립하는 것이다.
 2. 임의의 $$G$$-invariant subspace $$W$$에 대하여, representation $$G\times W\rightarrow W$$를 $$V$$의 *subrepresentation<sub>부분표현</sub>*이라 부른다. 
 3. 만일 $$V$$가 zero representation이 아니고 $$V$$의 subrepresentation들이 trivial subrepresentation들, 즉 자기 자신과 $$G\times\{0\}\rightarrow\{0\}$$ 뿐이라면 $$V$$를 *irreducible representation<sub>기약표현</sub>*이라 부른다. 
-
-</div>
+:::
 
 이와 마찬가지 관점에서 우리는 임의의 representation $$V,W$$에 대하여, 이들의 벡터공간에서의 연산을 이용하여 $$V\oplus W$$, $$V\otimes W$$ 등을 정의할 수 있다. 다음 정의에서 다소 주의할 것은, 위의 [정의 2](#def2)와는 다르게 $$V\otimes W$$ 등에서는 <em-ko>자연스러운</em-ko> $$G$$-action이 존재하지 않을 수도 있다는 것으로, 우리는 이 때문에 각 벡터공간 위에 $$G$$-action을 명시적으로 정의해준다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**정의 3**</ins> $$G$$-representation $$V, W$$에 대하여, 다음의 $$G$$-action을 통해 새로운 $$G$$-representation들을 정의한다.
+::: 정의 3
+$$G$$-representation $$V, W$$에 대하여, 다음의 $$G$$-action을 통해 새로운 $$G$$-representation들을 정의한다.
 
 1. Direct sum $$V\oplus W$$; $$G$$-action $$g\cdot(v,w)=(g\cdot v,g\cdot w)$$
 2. Tensor product $$V\otimes W$$; $$G$$-action $$g\cdot(v\otimes w)=(g\cdot v)\otimes (g\cdot w)$$, 그리고 이로부터 얻어지는 exterior power $$\bigwedge^k V$$, symmetric power $$\operatorname{Sym}^k V$$와 그 위의 $$G$$-action들
 3. $$\Hom_\mathbb{C}(V,W)$$; $$G$$-action $$(g\cdot f)(v)=g\cdot f(g^{-1}\cdot v)$$
 4. 3번에서 $$W=\mathbb{C}$$로 두어 얻어지는 *dual representation* $$V^\ast$$
 5. 스칼라곱을 conjugate으로 바꾸어 얻어지는 *conjugate representation* $$\overline{V}$$ (동일한 $$G$$-action)
-
-</div>
+:::
 
 ## Category $$\lMod{\mathbb{C}[G]}$$
 
@@ -103,15 +97,13 @@ $$\widetilde{\rho}\left(\sum_{x\in G} \phi_x x, v\right)= \sum_{x\in G} \phi_x\r
 
 은 $$V$$ 위에 $$\mathbb{C}[G]$$-module 구조를 준다. 거꾸로 임의의 $$\mathbb{C}[G]$$-module $$V$$가 주어졌다 하면, 각 $$x\in G$$에 대하여 $$x$$가 $$V$$에 작용하는 방식을 통해 $$G$$-representation을 얻을 수 있다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**명제 4**</ins> 위의 대응들은 categorical equivalence
+::: 명제 4
+위의 대응들은 categorical equivalence
 
 $$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$
 
 을 준다.
-
-</div>
+:::
 
 즉 우리가  $$G$$-module이라 부르던 것은, 엄밀히 말하자면 $$\mathbb{C}[G]$$-module 구조에서 $$G\hookrightarrow \mathbb{C}[G]$$가 주어졌을 때의 action만 본 것이라 생각할 수도 있다. 
 
@@ -139,15 +131,13 @@ $$p: V\rightarrow V^G;\qquad v\mapsto \frac{1}{\lvert G\rvert}\sum_{g\in G}g\cdo
 
 이 존재한다는 것이다. 특히 이 projection map에 담긴 아이디어, 즉 $$G$$의 작용들을 모두 더한 후 평균내어 $$G$$-invariant한 대상을 얻어내는 아이디어는 중요하게 사용된다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def5">**정의 5**</ins> $$G$$-representation $$V$$ 위의 Hermitian inner product $$\langle-,-\rangle$$이 *$$G$$-invariant*라는 것은 임의의 $$g\in G$$와 $$u,v\in V$$에 대하여
+::: 정의 5
+$$G$$-representation $$V$$ 위의 Hermitian inner product $$\langle-,-\rangle$$이 *$$G$$-invariant*라는 것은 임의의 $$g\in G$$와 $$u,v\in V$$에 대하여
 
 $$\langle g\cdot u,g\cdot v\rangle=\langle u,v\rangle$$
 
 이 성립하는 것이다. $$G$$-invariant inner product를 갖는 representation을 *unitary representation*이라 부른다.
-
-</div>
+:::
 
 만일 이러한 $$G$$-invariant inner product가 주어졌다면, 임의의 $$g\in G$$에 대하여 $$\rho(g)\in \Aut(V)$$는 unitary operator이다. 이를 관찰하기 위해 $$G$$-invariant inner product $$\langle -,-\rangle$$가 주어졌다 하고, 임의의 $$g\in G$$에 대해
 
@@ -157,14 +147,10 @@ $$\langle v,w\rangle=\langle \rho(g) v,\rho(g) w\rangle=\langle \rho(g)^\dagger 
 
 한편, 유한차원 $$G$$-module $$V$$는 $$G$$-invariant inner product를 갖는다. 이는 위에서 언급한 아이디어를 활용하여 증명할 수 있다. 
 
-<div class="proposition" markdown="1">
- 
-<ins id="prop6">**명제 6**</ins> 임의의 representation $$V$$는 $$G$$-invariant inner product를 갖는다. 즉 임의의 representation은 unitary representation이다. 
- 
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 명제 6
+임의의 representation $$V$$는 $$G$$-invariant inner product를 갖는다. 즉 임의의 representation은 unitary representation이다. 
+:::
+::: 증명
 $$V$$ 위의 임의의 Hermitian inner product $$\langle -,- \rangle$$에 대하여, 
 
 $$\langle\kern-1.5pt\langle u,v\rangle\kern-1.5pt\rangle = \frac{1}{\vert G\vert }\sum_{g \in G} \langle g\cdot u, g\cdot v \rangle$$
@@ -174,22 +160,16 @@ $$\langle\kern-1.5pt\langle u,v\rangle\kern-1.5pt\rangle = \frac{1}{\vert G\vert
 $$\langle\kern-1.5pt\langle h\cdot u, h\cdot v\rangle\kern-1.5pt\rangle = \frac{1}{\vert G\vert }\sum_{g \in G} \langle gh\cdot u, gh\cdot v \rangle = \langle\kern-1.5pt\langle u, v\rangle\kern-1.5pt\rangle$$
 
 이므로 이 inner product는 $$G$$-invariant이다.
-
-</details>
+:::
 
 어쨌든 이번 섹션의 핵심적인 정리는 위의 명제로부터 따라나온다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="cor7">**따름정리 7 (Maschke)**</ins> 임의의 유한차원 $$G$$-representation $$V$$와 $$G$$-invariant subspace $$W$$에 대하여, 적당한 $$G$$-invariant subspace $$W'$$가 존재하여 $$V = W \oplus W'$$이도록 할 수 있다. 따라서, 귀납적으로, 임의의 유한차원 $$G$$-representation은 irreducible representation들의 direct sum으로 분해된다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 따름정리 7 (Maschke)
+임의의 유한차원 $$G$$-representation $$V$$와 $$G$$-invariant subspace $$W$$에 대하여, 적당한 $$G$$-invariant subspace $$W'$$가 존재하여 $$V = W \oplus W'$$이도록 할 수 있다. 따라서, 귀납적으로, 임의의 유한차원 $$G$$-representation은 irreducible representation들의 direct sum으로 분해된다.
+:::
+::: 증명
 $$W'$$를 $$W$$의 orthogonal complement로 잡으면, $$W'$$ 또한 $$G$$-invariant subspace이며 $$V = W \oplus W'$$가 성립한다.
-
-</details>
+:::
 
 앞서 우리는 categorical equivalence
 
@@ -205,35 +185,28 @@ $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r \Mat_{n_i}(\mathbb{C})\tag{1}$$
 
 다음 글에서 우리는 decomposition (1)에 표현론적인 의미를 부여한다. 이를 위한 준비작업으로 우리는 다음 보조정리를 증명한다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="lem8">**보조정리 8 (Schur)**</ins> (Compact) group $$G$$와 irreducible $$G$$-module들 $$V,W$$가 주어졌다 하자. 그럼 다음이 성립한다. 
+::: 보조정리 8 (Schur)
+(Compact) group $$G$$와 irreducible $$G$$-module들 $$V,W$$가 주어졌다 하자. 그럼 다음이 성립한다. 
 
 1. 임의의 $$G$$-map $$V\rightarrow W$$는 zero map이거나 isomorphism이다. 
 2. 임의의 $$G$$-automorphism $$f\in \Aut_G(V)$$는 $$f(v)=\lambda v$$의 꼴이다. 
 3. $$G$$-map들의 모임 $$\Hom_G(V,W)$$은 $$\mathbb{C}$$이거나 $$0$$이다. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 1. 이는 kernel과 image를 각각 생각하면 자명하다. 
 2. 주어진 $$f$$는 $$G$$-linear map이기 이전에 $$\mathbb{C}$$-linear map이므로, $$f$$의 eigenvalue $$\lambda$$가 존재한다. 이제 이 eigenvalue에 대응되는 eigenspace를 $$W$$라 하고, 이것이 실은 $$G$$-submodule이 됨을 보이면 된다. 
 3. 위의 두 명제에 의해 자명하다. 
-
-</details>
+:::
 
 이를 사용하면 우리는 다음 명제를 얻는다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop9">**명제 9**</ins> 위와 같은 상황에서, 다음의 함수 
+::: 명제 9
+위와 같은 상황에서, 다음의 함수 
 
 $$d=\bigoplus_{W\in\Irr(G, \mathbb{C})} d_W:\bigoplus_{W\in \Irr(G, \mathbb{C})}\Hom_G(W,V)\otimes_\mathbb{C}W\rightarrow V$$
 
 는 isomorphism이다. 
-
-</div>
+:::
 
 이에 대한 증명은, $$V$$가 irreducible decomposition $$V=\bigoplus V_j$$을 가지므로 다음의 식
 
@@ -241,11 +214,9 @@ $$\Hom_G(W, V)=\Hom_G\left(W, \bigoplus V_j\right)\cong \bigoplus \Hom_G(W, V_j)
 
 과 [보조정리 8](#lem8)에 의해 자명하다. 즉 복잡하게 써 두기는 했지만, 위의 $$d$$는 각각의 irreducible $$G$$-module $$W$$(의 isomorphism class)들이 $$V$$ 안에 얼마나 들어있는지를 세는 것이며, 따라서 다음 정의가 자연스럽다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def10">**정의 10**</ins> 위의 함수에 의한 $$W\in\Irr(G, \mathbb{C})$$의 image를 $$V$$의 *$$W$$-isotypical summand*라 부르고, $$\Hom_G(W, V)$$를 $$W$$의 *multiplicity*라 부른다. 
-
-</div>
+::: 정의 10
+위의 함수에 의한 $$W\in\Irr(G, \mathbb{C})$$의 image를 $$V$$의 *$$W$$-isotypical summand*라 부르고, $$\Hom_G(W, V)$$를 $$W$$의 *multiplicity*라 부른다. 
+:::
 
 약간의 믿음을 가지면 이러한 표현이 유일하다는 것도 납득할 수 있다. 즉, 우리는 임의의 representation $$V$$가 주어졌을 때 이를 다음의 decomposition
 

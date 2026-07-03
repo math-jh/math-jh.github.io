@@ -38,9 +38,8 @@ $$\nabla^z_{\partial_\alpha} = \partial_\alpha + \frac{1}{z}\, \mathcal{C}_\alph
 
 that interpolates between the two, we obtain a one-parameter family converging to the Levi-Civita connection $$\nabla$$ as $$z \to \infty$$ and diverging to the classical limit of the product $$\circ$$ as $$z \to 0$$; when computing at $$z\rightarrow 0$$ one simply rescales to extract the leading term of $$z\nabla^z_{\partial_\alpha} = z\partial_\alpha + \mathcal{C}_\alpha$$ in the $$z \to 0$$ limit. In this sense $$\nabla^z$$ is a *flat pencil of connections* joining the two structures, and physically it is interpreted as the string coupling constant.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> Let $$M$$ be a Frobenius manifold and $$z \in \mathbb{C}^\ast$$ an auxiliary complex parameter. The *Dubrovin connection* $$\nabla^z$$ is the connection on the pullback bundle defined via the projection
+::: Definition 1
+Let $$M$$ be a Frobenius manifold and $$z \in \mathbb{C}^\ast$$ an auxiliary complex parameter. The *Dubrovin connection* $$\nabla^z$$ is the connection on the pullback bundle defined via the projection
 
 $$\pr_1: M\times \mathbb{C}^\ast \rightarrow M$$
 
@@ -53,8 +52,7 @@ Here $$\mathcal{C}_\alpha$$ is the endomorphism $$\partial_\alpha\circ-$$ define
 $$\nabla^z_{\partial_z} = \partial_z - \frac{1}{z^2}E\circ(-) + \frac{1}{z}\mu$$
 
 Here $$E$$ is the Euler vector field ([§Frobenius Manifolds, ⁋Definition 5](/en/math/mirror_symmetry/frobenius_manifold#def5)), and $$\mu$$ is the *grading operator*, defined by $$\mu(\partial_\alpha) = (d_\alpha - d/2)\, \partial_\alpha$$ from the half-degree $$d_\alpha = \tfrac{1}{2}\deg\sigma^\alpha$$ of the cohomology class $$\sigma^\alpha$$ corresponding to the flat coordinate $$t^\alpha$$ and the conformal dimension $$d$$.
-
-</div>
+:::
 
 Recall that in [§Frobenius Manifolds, ⁋Definition 5](/en/math/mirror_symmetry/frobenius_manifold#def5), when defining a Frobenius manifold, we introduced $$E$$ to encode the grading structure of the Frobenius algebra at each point. Specifically,
 
@@ -82,25 +80,20 @@ For this curvature to vanish for all $$z$$, the coefficients of $$z^{-1}$$ and $
 
 Moreover, the following proposition shows that the flatness of these connections is *exactly* equivalent to these two conditions. These were the axioms of a Frobenius manifold ([§Frobenius Manifolds, ⁋Definition 5](/en/math/mirror_symmetry/frobenius_manifold#def5)), and therefore the $$M$$-direction flatness of $$\nabla^z$$ is not merely a by-product of adjusting moduli, but is the Frobenius structure itself.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**Proposition 2**</ins> Consider the connection $$\nabla^z$$ on a Frobenius manifold $$M$$ ([Definition 1](#def1)). Under the assumption that the product $$\circ$$ is commutative, $$\nabla^z$$ being flat in the $$M$$-directions (i.e. among the $$\partial_\alpha$$ directions) for every $$z$$ is equivalent to the following two conditions both holding.
+::: Proposition 2
+Consider the connection $$\nabla^z$$ on a Frobenius manifold $$M$$ ([Definition 1](#def1)). Under the assumption that the product $$\circ$$ is commutative, $$\nabla^z$$ being flat in the $$M$$-directions (i.e. among the $$\partial_\alpha$$ directions) for every $$z$$ is equivalent to the following two conditions both holding.
 
 1. **Potentiality:** $$\partial_\alpha\, c_{\beta\gamma}^\delta = \partial_\beta\, c_{\alpha\gamma}^\delta$$. That is, $$c_{\alpha\beta}^\delta$$ is the third derivative of some potential $$F$$.
 2. **Associativity (WDVV):** $$[\mathcal{C}_\alpha, \mathcal{C}_\beta] = 0$$, or in components $$\sum_\delta c_{\alpha\beta}^\delta\, c_{\delta\gamma}^\epsilon = \sum_\delta c_{\beta\gamma}^\delta\, c_{\alpha\delta}^\epsilon$$. That is, $$\circ$$ is associative.
+:::
 
-</div>
-
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proof
 We have already shown one direction above, so we need only check the converse. Suppose $$\nabla^z$$ is flat for all $$z \in \mathbb{C}^\ast$$. The curvature
 
 $$[\nabla^z_{\partial_\alpha}, \nabla^z_{\partial_\beta}] = \frac{1}{z}\,(\partial_\alpha\mathcal{C}_\beta - \partial_\beta\mathcal{C}_\alpha) + \frac{1}{z^2}\,[\mathcal{C}_\alpha, \mathcal{C}_\beta]$$
 
 is a Laurent polynomial in $$z^{-1}$$ and $$z^{-2}$$, so its vanishing for all $$z$$ is equivalent to the two coefficients vanishing separately. The vanishing of the $$z^{-1}$$ coefficient is exactly the first condition $$\partial_\alpha\mathcal{C}_\beta = \partial_\beta\mathcal{C}_\alpha$$, and writing the vanishing of the $$z^{-2}$$ coefficient, $$[\mathcal{C}_\alpha, \mathcal{C}_\beta] = 0$$, in components gives $$\sum_\delta (c_{\alpha\delta}^\epsilon c_{\beta\gamma}^\delta - c_{\beta\delta}^\epsilon c_{\alpha\gamma}^\delta) = 0$$, which under the assumption that $$\circ$$ is commutative is exactly associativity, i.e. the WDVV equation. ([§Frobenius Manifolds, ⁋Proposition 7](/en/math/mirror_symmetry/frobenius_manifold#prop7))
-
-</details>
+:::
 
 On the other hand, flatness in the $$z$$-direction, $$[\nabla^z_{\partial_z}, \nabla^z_{\partial_\alpha}] = 0$$, requires the condition that the Euler vector field $$E$$ and the grading operator $$\mu$$ are compatible with the product, i.e. the homogeneity (or conformal) condition of the Frobenius manifold. Since this condition is already built into our definition as the fourth condition in [§Frobenius Manifolds, ⁋Definition 5](/en/math/mirror_symmetry/frobenius_manifold#def5), in our definition we obtain the full flatness of $$\nabla^z$$ including the $$z$$-direction.
 
@@ -108,15 +101,13 @@ On the other hand, flatness in the $$z$$-direction, $$[\nabla^z_{\partial_z}, \n
 
 A connection $$\nabla$$ is essentially a tool for *differentiating* sections. When we view a vector bundle as an $$\mathcal{O}_X$$-module, the only operation we have is multiplication by functions, but once differentiation is available, that bundle becomes an object receiving the action of differential operators in addition to functions, namely a *$$\mathcal{D}_X$$-module*, and flatness is required for this definition to be meaningful.
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**Definition 3**</ins> On a complex manifold $$B$$, the sheaf of rings $$\mathcal{D}_B$$ of differential operators on $$B$$ is the sheaf of operators generated by the structure sheaf $$\mathcal{O}_B$$ and vector fields, i.e. derivations on $$\mathcal{O}_B$$ ([\[Commutative Algebra\] §Differentials, ⁋Definition 1](/en/math/commutative_algebra/differentials#def1)). In this setting, a vector field $$\partial$$ and a function $$f$$ satisfy the relation
+::: Definition 3
+On a complex manifold $$B$$, the sheaf of rings $$\mathcal{D}_B$$ of differential operators on $$B$$ is the sheaf of operators generated by the structure sheaf $$\mathcal{O}_B$$ and vector fields, i.e. derivations on $$\mathcal{O}_B$$ ([\[Commutative Algebra\] §Differentials, ⁋Definition 1](/en/math/commutative_algebra/differentials#def1)). In this setting, a vector field $$\partial$$ and a function $$f$$ satisfy the relation
 
 $$[\partial, f] = \partial(f)$$
 
 An $$\mathcal{O}_B$$-module $$\mathcal{M}$$ equipped with a $$\mathcal{D}_B$$-action is called a *$$\mathcal{D}_B$$-module*.
-
-</div>
+:::
 
 The $$\mathcal{O}_B$$-module structure on $$\mathcal{M}$$ is generally understood as multiplication by a function $$f\in \mathcal{O}_B$$. Then for any section $$s\in \mathcal{M}$$, the relation $$[\partial, f]=\partial(f)$$ yields the Leibniz rule
 
@@ -148,13 +139,11 @@ This is called the *A-model state space*.
 
 Similarly, in the next post we will show that the Jacobi rings $$\Jac(W_q)$$ defined by the mirror dual $$\check{X}$$ of $$X$$ can also be made into fibers over a suitable manifold $$M_B$$. Moreover, there exists a *Gauss-Manin connection* $$\nabla^{GM}$$ making this into a $$\mathcal{D}$$-module, and we will prove that the sections of this $$D$$-module constitute the B-model state space $$H_B$$. Then our mirror symmetry statement is elevated to the following claim.
 
-<div class="proposition" markdown="1">
-
-<ins id="conj4">**Conjecture 4 (Mirror theorem, $$D$$-module form)**</ins> For a mirror pair $$(X, \check{X})$$, there exists a *mirror isomorphism* between the A-model state space $$H_A$$ and the B-model state space $$H_B$$ introduced above, such that $$\Phi$$ is compatible with the Dubrovin connection and the Gauss-Manin connection:
+::: misc Conjecture 4 (Mirror theorem, $$D$$-module form) {#conj4}
+For a mirror pair $$(X, \check{X})$$, there exists a *mirror isomorphism* between the A-model state space $$H_A$$ and the B-model state space $$H_B$$ introduced above, such that $$\Phi$$ is compatible with the Dubrovin connection and the Gauss-Manin connection:
 
 $$\Phi \circ \nabla^z = \nabla^{GM} \circ \Phi$$
-
-</div>
+:::
 
 It is worth noting carefully that this conjecture is not, strictly speaking, a proven fact, but rather a guiding philosophy. It has been proved separately for various mirror pairs. For example, the case of Calabi-Yau hypersurfaces in toric varieties, proved by Givental, was historically the first; this was later extended to toric Fano varieties, and then further to toric stacks by Coates-Corti-Iritani-Tseng. A generalization in a slightly different direction replaces toric varieties by homogeneous spaces, in particular by partial flag varieties $$G/P$$. In this direction, the LG superpotentials for Grassmannians and flag varieties were first constructed physically by Eguchi-Hori-Xiong, and studied Lie-theoretically by Rietsch; exploring this is one of the main aims of this series.
 

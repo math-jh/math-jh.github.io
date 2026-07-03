@@ -22,9 +22,8 @@ The Kodaira vanishing theorem is a much more refined result, guaranteeing that f
 
 The basic setup we consider is as follows. $$X$$ is an $$n$$-dimensional smooth projective variety, $$\mathcal{L}$$ is an ample line bundle on $$X$$, and $$\omega_X = \det \Omega_X^1 = \Omega_X^n$$ is the canonical line bundle. ([§Canonical Bundle, ⁋Definition 5](/en/math/algebraic_varieties/canonical_bundle#def5)) Then the Kodaira vanishing theorem can be stated as follows.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop1">**Proposition 1 (Kodaira vanishing)**</ins> Let $$X$$ be an $$n$$-dimensional smooth projective variety and $$\mathcal{L}$$ an ample line bundle. Then for every $$p > 0$$,
+::: Proposition 1 (Kodaira vanishing)
+Let $$X$$ be an $$n$$-dimensional smooth projective variety and $$\mathcal{L}$$ an ample line bundle. Then for every $$p > 0$$,
 
 $$H^p(X, \omega_X \otimes \mathcal{L}) = 0$$
 
@@ -33,41 +32,34 @@ holds. More generally, for $$p, q$$ satisfying $$p + q > n$$,
 $$H^p(X, \Omega^q \otimes \mathcal{L}) = 0$$
 
 holds.
-
-</div>
+:::
 
 The first claim is obtained from the second by setting $$q = n$$. The proof of this proposition involves quite technical aspects, so in this post we focus on how it is used in algebraic geometry rather than giving a rigorous proof.
 
 As can be seen from the statement of the proposition, Kodaira vanishing removes higher cohomology after twisting by the canonical bundle. Using Serre duality, this can be rewritten as the following equivalent statement.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**Proposition 2**</ins> Under the assumptions of [Proposition 1](#prop1), for all $$p < n$$,
+::: Proposition 2
+Under the assumptions of [Proposition 1](#prop1), for all $$p < n$$,
 
 $$H^p(X, \mathcal{L}^{-1}) = 0$$
 
 holds.
+:::
 
-</div>
-
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proof
 By Serre duality from [§Serre Duality](/en/math/algebraic_varieties/serre_duality),
 
 $$H^p(X, \mathcal{L}^{-1}) \cong H^{n-p}(X, \omega_X \otimes \mathcal{L})^\vee$$
 
 holds. If $$p < n$$ then $$n - p > 0$$, so the right-hand side is $$0$$ by [Proposition 1](#prop1).
-
-</details>
+:::
 
 These two formulations are completely equivalent via Serre duality, as seen in the proof above, so we may use whichever is more convenient in a given situation.
 
 The simplest nontrivial example where Kodaira vanishing applies is the projective space $$X = \mathbb{P}^n$$.
 
-<div class="example" markdown="1">
-
-<ins id="ex3">**Example 3**</ins> We verified in [§Canonical Bundle, ⁋Proposition 7](/en/math/algebraic_varieties/canonical_bundle#prop7) that
+::: Example 3
+We verified in [§Canonical Bundle, ⁋Proposition 7](/en/math/algebraic_varieties/canonical_bundle#prop7) that
 
 $$\omega_{\mathbb{P}^n} \cong \mathcal{O}(-n-1)$$
 
@@ -86,8 +78,7 @@ $$H^q(\mathbb{P}^n, \mathcal{O}(k)) = \begin{cases}
 \end{cases}$$
 
 and from this all cohomology automatically vanishes for $$q \neq 0$$, so our only concern is when $$q = n$$. Now, according to the formula above, for this to be nonzero we must have $$k \leq -n - 1$$. But in our situation $$k = d - n - 1$$ with $$d > 0$$, so this is impossible, and thus we can verify the Kodaira vanishing theorem again.
-
-</div>
+:::
 
 ## Applications of Kodaira Vanishing
 
@@ -123,17 +114,15 @@ Now, if $$m \geq 2$$ and $$K_S$$ is ample, then $$(m-1)K_S$$ is also ample, so a
 
 On the other hand, in such cases the plurigenera can be thought of as asymptotically quadratic. This is related to
 
-<div class="definition" markdown="1">
-
-<ins id="def4">**Definition 4**</ins> The *Kodaira dimension* of a smooth projective variety $$X$$ is defined as follows. If $$P_m(X) = 0$$ for all $$m \geq 1$$, then $$\kappa(X) = -\infty$$. Otherwise, $$\kappa(X)$$ is defined as the smallest integer $$\kappa \geq 0$$ such that $$P_m(X) = O(m^\kappa)$$. That is,
+::: Definition 4
+The *Kodaira dimension* of a smooth projective variety $$X$$ is defined as follows. If $$P_m(X) = 0$$ for all $$m \geq 1$$, then $$\kappa(X) = -\infty$$. Otherwise, $$\kappa(X)$$ is defined as the smallest integer $$\kappa \geq 0$$ such that $$P_m(X) = O(m^\kappa)$$. That is,
 
 $$\kappa(X) = \min\{k \in \mathbb{Z}_{\geq 0} : P_m(X) = O(m^k)\}$$
 
 Equivalently, it can also be written as
 
 $$\kappa(X) = \limsup_{m \to \infty} \frac{\log P_m(X)}{\log m}$$
-
-</div>
+:::
 
 From the above computation, we know that for surfaces $$\kappa \in \{-\infty, 0, 1, 2\}$$. The [Enriques–Kodaira classification](https://en.wikipedia.org/wiki/Enriques-Kodaira_classification) classifies surfaces largely by Kodaira dimension, and for the cases $$\kappa = 0$$ and $$\kappa = -\infty$$ it provides further detailed classification using the geometric genus $$p_g$$ and irregularity $$q$$.
 
@@ -154,11 +143,9 @@ $$\{s \in H^0(X, \mathcal{L}) : s(p) = 0\} \longrightarrow \mathfrak{m}_p\mathca
 
 spans all of $$\mathfrak{m}_p\mathcal{L}_p / \mathfrak{m}_p^2\mathcal{L}_p$$. It is not difficult to verify that the converses of these also hold. That is, the following holds.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**Proposition 5**</ins> For a line bundle $$\mathcal{L}$$ on a projective variety $$X$$, $$\mathcal{L}$$ being very ample is equivalent to the two separation conditions above being satisfied simultaneously.
-
-</div>
+::: Proposition 5
+For a line bundle $$\mathcal{L}$$ on a projective variety $$X$$, $$\mathcal{L}$$ being very ample is equivalent to the two separation conditions above being satisfied simultaneously.
+:::
 
 Now let us examine how these separation conditions are verified via cohomology. First, for (1), considering the closed subvariety $$Z = \{p\} \cup \{q\}$$ containing two distinct points $$p \neq q$$, for the ideal sheaf $$\mathcal{I}_Z$$ defining $$Z$$ we obtain the short exact sequence
 
@@ -194,11 +181,9 @@ through Kodaira vanishing. Such vanishing guarantees that higher cohomology does
 
 The most famous application of Kodaira vanishing is the Kodaira embedding theorem. However, this ventures into the realm of complex manifolds, so we only briefly introduce it here. First, a compact complex manifold $$X$$ being a **Kähler manifold** means that a compatible Riemannian metric, symplectic form, and complex structure are defined on $$X$$. In this case, if a Hermitian metric $$h$$ is given on a line bundle $$\mathcal{L}$$, its curvature form $$\Theta_h$$ is defined, and $$\mathcal{L}$$ being **positive** means that $$\frac{i}{2\pi}\Theta_h$$ is a positive definite $$(1,1)$$-form. Then the following holds.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop6">**Proposition 6 (Kodaira embedding)**</ins> Let $$X$$ be a compact Kähler manifold and $$\mathcal{L}$$ a positive line bundle. Then for sufficiently large $$k$$, $$\mathcal{L}^{\otimes k}$$ is very ample, and in particular $$\mathcal{L}$$ is an ample line bundle. Therefore $$X$$ is a projective variety.
-
-</div>
+::: Proposition 6 (Kodaira embedding)
+Let $$X$$ be a compact Kähler manifold and $$\mathcal{L}$$ a positive line bundle. Then for sufficiently large $$k$$, $$\mathcal{L}^{\otimes k}$$ is very ample, and in particular $$\mathcal{L}$$ is an ample line bundle. Therefore $$X$$ is a projective variety.
+:::
 
 That is, using this proposition we can show that a Kähler manifold becomes a projective variety.
 

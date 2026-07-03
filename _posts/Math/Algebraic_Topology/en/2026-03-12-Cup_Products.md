@@ -55,15 +55,13 @@ When there is no risk of confusion, we shall simply write this as $$\times$$.
 
 We are now in a position to define the cup product.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> For a commutative ring $$A$$ and a topological space $$X$$, the composition
+::: Definition 1
+For a commutative ring $$A$$ and a topological space $$X$$, the composition
 
 $${\smile}:H^\bullet(X;A)\otimes_A H^\bullet(X;A)\overset{\AW^\ast\circ\bar{\times}}{\longrightarrow}H^\bullet(X\times X)\overset{\Delta^\ast}{\longrightarrow} H^\bullet(X)$$
 
 is called the *cup product* on $$H^\bullet(X;A)$$.
-
-</div>
+:::
 
 At this stage it becomes clear why the cup product was not explicitly visible in homology. Using the Eilenberg–Zilber map, one can construct
 
@@ -79,15 +77,13 @@ As this explicit computation reveals, in de Rham cohomology the cup product is a
 
 As its name suggests, the cup product defines a multiplication on the cohomology ring. However, since $$H^\bullet(X;A)$$ is a graded ring, care is required when discussing the commutativity of this multiplication.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**Proposition 2**</ins> Fix a topological space $$X$$ and a commutative ring $$A$$. Then
+::: Proposition 2
+Fix a topological space $$X$$ and a commutative ring $$A$$. Then
 
 $$(H^\bullet(X;A), {\smile}, 1)$$
 
 is a graded-commutative, $$\mathbb{N}$$-graded $$A$$-algebra. Here, $$1\in H^0(X;A)$$ is the cocycle sending every $$\Delta$$-simplex of $$X$$ to $$1\in A$$.
-
-</div>
+:::
 
 That is, for homogeneous elements $$\alpha\in H^p(X;A),\beta\in H^q(X;A),\gamma\in H^r(X;A)$$, we have
 
@@ -101,18 +97,14 @@ To prove this, we naturally apply [§Acyclic models theorem](/en/math/algebraic_
 
 The property proved above shows that the objects of the functor $$H^\bullet(-;A)$$, although initially defined as landing in $$\lMod{A}$$, ultimately arrive in $$\gr_{\mathbb{N}}\Alg{A}$$. It is then natural to ask whether $$H^\bullet(-;A)$$ itself is a functor from $$\Top$$ to $$\gr_\mathbb{N}\Alg{A}$$.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop3">**Proposition 3**</ins> For any topological spaces $$X,Y$$ and any commutative ring $$A$$,
+::: Proposition 3
+For any topological spaces $$X,Y$$ and any commutative ring $$A$$,
 
 $$\times: H^\ast(X;A)\otimes_A H^\ast(Y;A) \to H^\ast(X\times Y;A)$$
 
 is a graded $$A$$-algebra homomorphism.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 What we must show is the commutativity of the following diagram:
 
 ![functoriality_of_cup_products](/assets/images/Math/Algebraic_Topology/Cup_Products-1.svg){:style="width:41.10em" class="invert" .align-center}
@@ -122,20 +114,17 @@ For any $$\alpha_1,\alpha_2\in H^\ast(X;A)$$ and any $$\beta_1,\beta_2\in H^\ast
 $$(\alpha_1\times\beta_1)(\alpha_2\times\beta_2)=\Delta_{X\times Y}^\ast ((\alpha_1\times\beta_1)\times(\alpha_2\times\beta_2))$$
 
 and since the right-hand side is of the form $$\alpha_1\times\beta_1\times\alpha_2\times\beta_2$$, we can regroup the factors appropriately. That this is a graded homomorphism and preserves $$1$$ is clear.
-
-</details>
+:::
 
 From this we can also deduce the functoriality of the cup product itself.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**Proposition 4**</ins> For a continuous map $$f:X \rightarrow Y$$, the induced map $$f^\ast=H^\bullet(f;A):H^\bullet(Y;A)\rightarrow H^\bullet(X;A)$$ is a morphism of graded $$A$$-algebras. That is,
+::: Proposition 4
+For a continuous map $$f:X \rightarrow Y$$, the induced map $$f^\ast=H^\bullet(f;A):H^\bullet(Y;A)\rightarrow H^\bullet(X;A)$$ is a morphism of graded $$A$$-algebras. That is,
 
 $$f^\ast(\alpha\smile\beta)=(f^\ast\alpha)\smile(f^\ast\beta)$$
 
 holds.
-
-</div>
+:::
 
 The proof of this proposition is immediate: by [Proposition 3](#prop3) we already know that the following diagram
 
@@ -169,27 +158,23 @@ where $$\sigma_i$$ and $$\tau_i$$ are the chains appearing when $$\sigma$$ is wr
 
 $$\beta\frown \sigma=\sum_i(-1)^{\lvert\beta\rvert\lvert\sigma_i\rvert}\beta(\tau_i)\sigma_i$$
 
-<div class="definition" markdown="1">
-
-<ins id="def5">**Definition 5**</ins> The map defined above
+::: Definition 5
+The map defined above
 
 $$\frown:H^p(X;A)\otimes H_{p+q}(X;A) \rightarrow H_q(X;A)$$
 
 is called the *cap product*.
-
-</div>
+:::
 
 Thus $$\frown$$ takes a homology chain of degree $$p+q$$ and a cohomology class of degree $$p$$, pairs the degree $$p$$ part of the homology chain with the cohomology class via the Kronecker pairing, and then multiplies the resulting scalar with the remaining degree $$q$$ homology chain. Although this definition may appear contrived at first, the uniqueness in [§Acyclic models theorem](/en/math/algebraic_topology/acyclic_models_theorem#thm3) guarantees that it is the only definition that behaves coherently. Moreover, from this description one recognizes that the cap product is precisely the operation corresponding to the interior product.
 
 The following then holds.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop6">**Proposition 6 (Projection formula)**</ins> For a continuous map $$f:X \rightarrow Y$$, and for $$\alpha\in H^p(X)$$, $$\beta\in H^q(Y)$$, and $$\sigma\in H_{p+q}(X)$$, we have
+::: Proposition 6 (Projection formula)
+For a continuous map $$f:X \rightarrow Y$$, and for $$\alpha\in H^p(X)$$, $$\beta\in H^q(Y)$$, and $$\sigma\in H_{p+q}(X)$$, we have
 
 $$f_\ast(f^\ast\beta\frown\sigma)=\beta\frown f_\ast\sigma$$
-
-</div>
+:::
 
 --- 
 

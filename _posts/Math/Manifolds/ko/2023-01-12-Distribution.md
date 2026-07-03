@@ -23,17 +23,15 @@ $$\sigma'(t)=X(\sigma(t)),\qquad \sigma(0)=p\tag{1}$$
 
 한편, 위의 식 (1)은 $$\sigma$$의 image 뿐만 아니라, 이를 매개화하는 방법도 강제한다. 반면 submanifold $$S$$는 $$\sigma$$의 매개화와는 무관하게 결정되므로, 이는 벡터 $$X_p$$가 아니라 $$T_pM$$의 1차원 부분공간 $$\span(X_p)$$에 의해서만 결정된다.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> $$m$$차원 manifold $$M$$이 주어졌다 하고, $$1\leq k\leq m$$인 정수 $$k$$가 주어졌다 하자. 각각의 $$p\in M$$마다 $$T_pM$$의 $$k$$차원 부분공간 $$\mathcal{D}$$를 대응시키는 함수 $$p\rightarrow\mathcal{D}(p)$$를 *$$k$$차원 distribution*이라 부른다. 
+::: 정의 1
+$$m$$차원 manifold $$M$$이 주어졌다 하고, $$1\leq k\leq m$$인 정수 $$k$$가 주어졌다 하자. 각각의 $$p\in M$$마다 $$T_pM$$의 $$k$$차원 부분공간 $$\mathcal{D}$$를 대응시키는 함수 $$p\rightarrow\mathcal{D}(p)$$를 *$$k$$차원 distribution*이라 부른다. 
 
 $$k$$차원 distribution $$\mathcal{D}$$가 $$C^\infty$$인 것은 각각의 $$p\in M$$마다 적당한 열린근방 $$U$$와, 이 위에서 정의된 $$C^\infty$$ 벡터장들 $$X_1,\ldots, X_k$$가 존재하여, 각각의 $$x\in U$$마다 다음의 식
 
 $$\mathcal{D}(x)=\span\{(X_1)_x,\ldots, (X_k)_x\}$$
 
 이 성립하는 것이다.
-
-</div>
+:::
 
 벡터장 $$X$$는 위에서 살펴본 것과 같이 다음의 식 $$p\mapsto\span(X_p)\subseteq T_pM$$을 통해 1차원 distribution을 정의한다. 그럼 submanifold $$S$$는 다음의 식
 
@@ -41,15 +39,13 @@ $$T_xS=\mathcal{D}(x)\qquad\text{for all $x$}$$
 
 을 만족하도록 결정된다. 따라서 다음과 같이 정의한다.
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**정의 2**</ins> $$M$$ 위에 정의된 $$k$$차원 distribution $$\mathcal{D}$$에 대하여, 다음의 식
+::: 정의 2
+$$M$$ 위에 정의된 $$k$$차원 distribution $$\mathcal{D}$$에 대하여, 다음의 식
 
 $$T_xS=\mathcal{D}(x)\qquad\text{for all $x$}$$
 
 을 만족하는 manifold $$S$$를 $$\mathcal{D}$$의 *integral manifold*라 부른다.
-
-</div>
+:::
 
 만약 각각의 $$p\in M$$마다, $$p$$를 포함하는 integral manifold가 존재한다면 이를 *integrable* distribution이라 부른다. 
 
@@ -57,9 +53,8 @@ $$T_xS=\mathcal{D}(x)\qquad\text{for all $x$}$$
 
 다음의 정리가 잘 알려져 있다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="thm3">**정리 3 (Frobenius)**</ins> Manifold $$M$$ 위에 정의된 $$k$$차원 distribution $$\mathcal{D}$$를 생각하자. 그럼 $$\mathcal{D}$$가 integrable인 것과, 임의의 $$X,Y\in\mathcal{D}$$에 대하여 $$[X,Y]\in\mathcal{D}$$가 성립하는 것이 동치이다. 
+::: 정리 3 (Frobenius)
+Manifold $$M$$ 위에 정의된 $$k$$차원 distribution $$\mathcal{D}$$를 생각하자. 그럼 $$\mathcal{D}$$가 integrable인 것과, 임의의 $$X,Y\in\mathcal{D}$$에 대하여 $$[X,Y]\in\mathcal{D}$$가 성립하는 것이 동치이다. 
 
 뿐만 아니라, 임의의 $$k$$차원 involutive distribution에 대하여 다음이 성립한다. 
 
@@ -70,21 +65,16 @@ $$T_xS=\mathcal{D}(x)\qquad\text{for all $x$}$$
 
    로 정의된 slice들이 $$\mathcal{D}$$의 integral manifold이도록 할 수 있다.
 3. 마지막으로, 만일 $$\Phi:N\rightarrow M$$이 connected integral manifold이고, $$\Phi(N)\subseteq U$$라면 $$\Phi(N)$$은 2번의 slice들 중 단 하나의 slice에만 포함된다.
-
-</div>
+:::
 
 후자의 조건을 만족하는 distribution을 *involutive*라 부른다. 따라서 Frobenius 정리는 distribution $$\mathcal{D}$$가 integrable한 것과 involutive인 것이 동치라고 줄여 쓸 수 있다.
 
 이 정리의 한쪽 방향은 꽤 쉽게 증명할 수 있다.
 
-<div class="proposition" markdown="1">
-
-<ins id="lem4">**보조정리 4**</ins> Manifold $$M$$ 위에 정의된 smooth distribution $$\mathcal{D}$$이 integrable이라 하자. 그럼 $$\mathcal{D}$$는 involutive distribution이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 보조정리 4
+Manifold $$M$$ 위에 정의된 smooth distribution $$\mathcal{D}$$이 integrable이라 하자. 그럼 $$\mathcal{D}$$는 involutive distribution이다.
+:::
+::: 증명
 $$X,Y\in\mathcal{D}$$라 하고, 한 점 $$p\in M$$을 택하자. $$[X,Y]_p\in\mathcal{D}(p)$$임을 보여야 한다. 
 
 $$\mathcal{D}$$는 integrable distribution이므로, 점 $$p$$를 포함하는 $$\mathcal{D}$$의 integral submanifold $$\Phi:S\rightarrow M$$이 존재한다. 점 $$s\in S$$가 $$\Phi(s)=p$$를 만족한다 하자. 임의의 $$x\in S$$에 대하여 
@@ -100,23 +90,18 @@ $$d\Phi_s(\tilde{X}_s)=X_p,\qquad d\Phi_s(\tilde{Y}_s)=Y_p$$
 $$[X,Y]_p=d\Phi_s([\tilde{X},\tilde{Y}]_s)\in\mathcal{D}(p)$$
 
 이 성립한다. 
-
-</details>
+:::
 
 따라서 [정리 3](#thm3)의 증명에서 어려운 부분은 반대방향이라 할 수 있다. 이는 distribution의 차원 $$k$$에 대한 귀납법으로 진행한다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="lem5">**보조정리 5**</ins> $$m$$차원 manifold $$M$$과 한 점 $$p\in M$$, 그리고 $$X_p\neq 0$$을 만족하는 벡터장 $$X$$가 주어졌다 하자. 그럼 $$p$$를 포함하는 적당한 coordinate system $$(U,\varphi), \varphi=(x^1,\ldots, x^m)$$가 존재하여
+::: 보조정리 5
+$$m$$차원 manifold $$M$$과 한 점 $$p\in M$$, 그리고 $$X_p\neq 0$$을 만족하는 벡터장 $$X$$가 주어졌다 하자. 그럼 $$p$$를 포함하는 적당한 coordinate system $$(U,\varphi), \varphi=(x^1,\ldots, x^m)$$가 존재하여
 
 $$X\vert_U=\frac{\partial}{\partial x^1}\bigg\vert_U$$
 
 이도록 할 수 있다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 점 $$p$$를 중심으로 하는 coordinate system $$(V,\tau), \tau=(y^1,\ldots, y^m)$$을 택하여
 
 $$X_p=\frac{\partial}{\partial y^1}\bigg\vert_p$$
@@ -138,12 +123,9 @@ $$\sigma: (-\epsilon,\epsilon)\times W;\qquad (t,a^2,\ldots, a^d)\mapsto \phi^t(
 $$d\sigma\left(\frac{\partial}{\partial r^1}\bigg\vert_0\right)=\frac{\partial}{\partial y^1}\bigg\vert_p=X_p\neq 0,\qquad d\sigma\left(\frac{\partial}{\partial r^i}\bigg\vert_0\right)=\frac{\partial}{\partial y^i}\bigg\vert_p$$
 
 이므로 $$\sigma$$는 원점에서 nonsingular이고, 따라서 $$\sigma^{-1}$$이 coordinate map을 정의한다.
+:::
 
-</details>
-
-<details class="proof--alone" markdown="1">
-<summary>정리 3의 증명</summary>
-
+::: 증명 (정리 3)
 정리가 모든 $$k-1$$차원 distribution에 대해 성립한다고 가정하고, $$\mathcal{D}$$가 $$k$$차원 distribution이라 하자. 한 점 $$p\in M$$에 대하여, $$\mathcal{D}$$가 $$p$$ 근방에서는 $$k$$개의 벡터장 $$X_1,\ldots, X_k$$에 의해 span된다고 가정할 수 있다. 이제 [보조정리 5](#lem5)를 적용하여
 
 $$X_1\vert_V=\frac{\partial}{\partial y^1}$$
@@ -219,8 +201,7 @@ $$Y_i(x^{k+j})=Z_i(w^{k+j})=0$$
 $$d(\pi\circ\varphi\circ\Phi)\equiv 0$$
 
 이 임의의 $$y\in N$$에 대해 성립한다. 그런데 $$N$$은 connected이므로, $$\pi\circ\varphi\circ\Phi$$가 상수함수이고, 따라서 $$\Phi(N)$$은 하나의 slice에 포함된다.
-
-</details>
+:::
 
 ---
 

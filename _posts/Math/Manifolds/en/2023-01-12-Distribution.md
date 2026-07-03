@@ -24,17 +24,15 @@ The image $$S$$ of such a curve $$\sigma$$ in $$M$$ can be viewed as a submanifo
 
 On the other hand, equation (1) determines not only the image of $$\sigma$$ but also its parametrization. In contrast, the submanifold $$S$$ is determined independently of the parametrization of $$\sigma$$, so it is determined solely by the 1-dimensional subspace $$\span(X_p)$$ of $$T_pM$$, rather than by the vector $$X_p$$ itself.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> Let $$M$$ be an $$m$$-dimensional manifold, and let $$k$$ be an integer with $$1\leq k\leq m$$. A function assigning to each $$p\in M$$ a $$k$$-dimensional subspace $$\mathcal{D}(p)$$ of $$T_pM$$ is called a *$$k$$-dimensional distribution*.
+::: Definition 1
+Let $$M$$ be an $$m$$-dimensional manifold, and let $$k$$ be an integer with $$1\leq k\leq m$$. A function assigning to each $$p\in M$$ a $$k$$-dimensional subspace $$\mathcal{D}(p)$$ of $$T_pM$$ is called a *$$k$$-dimensional distribution*.
 
 A $$k$$-dimensional distribution $$\mathcal{D}$$ is said to be $$C^\infty$$ if for each $$p\in M$$ there exists a suitable open neighborhood $$U$$ and smooth vector fields $$X_1,\ldots, X_k$$ defined on it such that for each $$x\in U$$,
 
 $$\mathcal{D}(x)=\span\{(X_1)_x,\ldots, (X_k)_x\}$$
 
 holds.
-
-</div>
+:::
 
 As we saw above, a vector field $$X$$ defines a 1-dimensional distribution via the map $$p\mapsto\span(X_p)\subseteq T_pM$$. Then the submanifold $$S$$ is characterized by the condition
 
@@ -42,15 +40,13 @@ $$T_xS=\mathcal{D}(x)\qquad\text{for all $x$}$$
 
 We therefore make the following definition.
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**Definition 2**</ins> For a $$k$$-dimensional distribution $$\mathcal{D}$$ defined on $$M$$, a manifold $$S$$ satisfying
+::: Definition 2
+For a $$k$$-dimensional distribution $$\mathcal{D}$$ defined on $$M$$, a manifold $$S$$ satisfying
 
 $$T_xS=\mathcal{D}(x)\qquad\text{for all $x$}$$
 
 is called an *integral manifold* of $$\mathcal{D}$$.
-
-</div>
+:::
 
 If for each $$p\in M$$ there exists an integral manifold containing $$p$$, then $$\mathcal{D}$$ is called an *integrable* distribution.
 
@@ -58,9 +54,8 @@ If for each $$p\in M$$ there exists an integral manifold containing $$p$$, then 
 
 The following theorem is well known.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm3">**Theorem 3 (Frobenius)**</ins> Let $$\mathcal{D}$$ be a $$k$$-dimensional distribution defined on a manifold $$M$$. Then $$\mathcal{D}$$ is integrable if and only if $$[X,Y]\in\mathcal{D}$$ holds for any $$X,Y\in\mathcal{D}$$.
+::: Theorem 3 (Frobenius)
+Let $$\mathcal{D}$$ be a $$k$$-dimensional distribution defined on a manifold $$M$$. Then $$\mathcal{D}$$ is integrable if and only if $$[X,Y]\in\mathcal{D}$$ holds for any $$X,Y\in\mathcal{D}$$.
 
 Moreover, for any $$k$$-dimensional involutive distribution the following hold:
 
@@ -71,21 +66,16 @@ Moreover, for any $$k$$-dimensional involutive distribution the following hold:
 
    can be made to be integral manifolds of $$\mathcal{D}$$.
 3. Finally, if $$\Phi:N\rightarrow M$$ is a connected integral manifold and $$\Phi(N)\subseteq U$$, then $$\Phi(N)$$ is contained in exactly one of the slices from (2).
-
-</div>
+:::
 
 A distribution satisfying the latter condition is called *involutive*. Therefore, the Frobenius theorem may be summarized by saying that a distribution $$\mathcal{D}$$ is integrable if and only if it is involutive.
 
 One direction of this theorem can be proved quite easily.
 
-<div class="proposition" markdown="1">
-
-<ins id="lem4">**Lemma 4**</ins> Let $$\mathcal{D}$$ be a smooth distribution defined on a manifold $$M$$. If $$\mathcal{D}$$ is integrable, then $$\mathcal{D}$$ is an involutive distribution.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Lemma 4
+Let $$\mathcal{D}$$ be a smooth distribution defined on a manifold $$M$$. If $$\mathcal{D}$$ is integrable, then $$\mathcal{D}$$ is an involutive distribution.
+:::
+::: Proof
 Let $$X,Y\in\mathcal{D}$$ and pick a point $$p\in M$$. We must show that $$[X,Y]_p\in\mathcal{D}(p)$$.
 
 Since $$\mathcal{D}$$ is an integrable distribution, there exists an integral submanifold $$\Phi:S\rightarrow M$$ of $$\mathcal{D}$$ containing $$p$$. Let $$s\in S$$ be a point satisfying $$\Phi(s)=p$$. For any $$x\in S$$,
@@ -101,23 +91,18 @@ Then these vector fields are $$\Phi$$-related to $$X$$ and $$Y$$ respectively, s
 $$[X,Y]_p=d\Phi_s([\tilde{X},\tilde{Y}]_s)\in\mathcal{D}(p)$$
 
 holds.
-
-</details>
+:::
 
 Thus, the difficult part of the proof of [Theorem 3](#thm3) is the converse direction. This proceeds by induction on the dimension $$k$$ of the distribution.
 
-<div class="proposition" markdown="1">
-
-<ins id="lem5">**Lemma 5**</ins> Let $$M$$ be an $$m$$-dimensional manifold, $$p\in M$$ a point, and $$X$$ a vector field satisfying $$X_p\neq 0$$. Then there exists a suitable coordinate system $$(U,\varphi)$$ containing $$p$$, with $$\varphi=(x^1,\ldots, x^m)$$, such that
+::: Lemma 5
+Let $$M$$ be an $$m$$-dimensional manifold, $$p\in M$$ a point, and $$X$$ a vector field satisfying $$X_p\neq 0$$. Then there exists a suitable coordinate system $$(U,\varphi)$$ containing $$p$$, with $$\varphi=(x^1,\ldots, x^m)$$, such that
 
 $$X\vert_U=\frac{\partial}{\partial x^1}\bigg\vert_U$$
 
 holds.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 Choose a coordinate system $$(V,\tau)$$ centered at $$p$$, with $$\tau=(y^1,\ldots, y^m)$$, such that
 
 $$X_p=\frac{\partial}{\partial y^1}\bigg\vert_p$$
@@ -139,12 +124,9 @@ is well-defined. Now,
 $$d\sigma\left(\frac{\partial}{\partial r^1}\bigg\vert_0\right)=\frac{\partial}{\partial y^1}\bigg\vert_p=X_p\neq 0,\qquad d\sigma\left(\frac{\partial}{\partial r^i}\bigg\vert_0\right)=\frac{\partial}{\partial y^i}\bigg\vert_p$$
 
 so $$\sigma$$ is nonsingular at the origin, and hence $$\sigma^{-1}$$ defines a coordinate map.
+:::
 
-</details>
-
-<details class="proof--alone" markdown="1">
-<summary>Proof of Theorem 3</summary>
-
+::: Proof (Theorem 3)
 Assume the theorem holds for all $$(k-1)$$-dimensional distributions, and let $$\mathcal{D}$$ be a $$k$$-dimensional distribution. For a point $$p\in M$$, we may assume that $$\mathcal{D}$$ is spanned by $$k$$ vector fields $$X_1,\ldots, X_k$$ in a neighborhood of $$p$$. Now apply [Lemma 5](#lem5) to find a coordinate system $$(V,\tau)$$ centered at $$p$$, with $$\tau=(y^1,\ldots, y^k)$$, such that
 
 $$X_1\vert_V=\frac{\partial}{\partial y^1}$$
@@ -220,8 +202,7 @@ Finally, we must prove the third assertion. This time let $$\pi$$ be the project
 $$d(\pi\circ\varphi\circ\Phi)\equiv 0$$
 
 holds for any $$y\in N$$. But since $$N$$ is connected, $$\pi\circ\varphi\circ\Phi$$ is constant, and hence $$\Phi(N)$$ is contained in a single slice.
-
-</details>
+:::
 
 ---
 

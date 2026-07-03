@@ -26,15 +26,13 @@ $$H^k(M;R)\times H^{n-k}(M;R)\rightarrow R$$
 
 우리는 우선 $$X=\mathbb{P}^n$$인 경우만 엄밀하게 살펴본다. 우리는 $$\mathbb{P}^n$$ 위에 정의된 line bundle은 모두 $$\mathcal{O}(d)$$의 꼴인 것을 알고 있으며, 특히 [§표준선다발, ⁋명제 7](/ko/math/algebraic_varieties/canonical_bundle#prop7)에서 이것이 $$\mathcal{O}(-n-1)$$임을 살펴보았다. 그럼 [§사영공간의 코호몰로지, ⁋명제 1](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop1)에서 우리는 다음을 얻는다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop1">**명제 1**</ins> Projective space $$X=\mathbb{P}^n$$ 위의 canonical line bundle $$\omega_X$$에 대하여, isomorphism
+::: 명제 1
+Projective space $$X=\mathbb{P}^n$$ 위의 canonical line bundle $$\omega_X$$에 대하여, isomorphism
 
 $$H^n(X, \omega_X)\cong \mathbb{K}$$
 
 이 존재한다. 
-
-</div>
+:::
 
 일반적으로 이는 명시적으로 $$\x_0^{-1}\cdots\x_n^{-1}$$을 basis로 두는 isomorphism으로 이해되지만, scalar multiplication에 대해서만 유일하게 결정된다. 이렇게 normalization을 택하는 것은 구체적으로 *trace map* $$\tr:H^n(\mathbb{P}^n, \omega_{\mathbb{P}^n}) \to \mathbb{K}$$을 택하는 것과 같다. 
 
@@ -60,15 +58,13 @@ $$H^k(\mathbb{P}^n, \mathcal{E})\times H^{n-k}(\mathbb{P}^n, \omega_{\mathbb{P}^
 
 지금까지의 논의에서 다음을 얻는다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**명제 2 (Serre duality pairing, projective case)**</ins> $$\mathbb{P}^n$$ 위의 locally free sheaf $$\mathcal{E}$$에 대해 bilinear form
+::: 명제 2 (Serre duality pairing, projective case)
+$$\mathbb{P}^n$$ 위의 locally free sheaf $$\mathcal{E}$$에 대해 bilinear form
 
 $$H^k(\mathbb{P}^n, \mathcal{E}) \times H^{n-k}(\mathbb{P}^n, \omega_{\mathbb{P}^n} \otimes \mathcal{E}^\vee) \to \mathbb{K};\quad (\alpha, \beta) \mapsto \tr(\alpha \smile \beta)$$
 
 은 perfect pairing이다.
-
-</div>
+:::
 
 더 명시적으로, 일반적으로 Serre duality는 이로부터 얻어지는 다음의 isomorphism
 
@@ -82,9 +78,8 @@ $$H^i(X, \mathcal{E}) \cong H^{n-i}(X, \omega_X \otimes \mathcal{E}^\vee)^\ast$$
 
 을 의미한다.
 
-<div class="example" markdown="1">
-
-<ins id="ex3">**예시 3**</ins> $$\mathbb{P}^2$$에서 [명제 2](#prop2)를 구체적으로 살펴보자. 여기에서 $$\omega_{\mathbb{P}^2} \cong \mathcal{O}(-3)$$이므로, Serre duality가 주장하는 바는 isomorphism $$H^k(\mathbb{P}^2, \mathcal{O}(d)) \cong H^{2-k}(\mathbb{P}^2, \mathcal{O}(-d-3))^\ast$$이다.
+::: 예시 3
+$$\mathbb{P}^2$$에서 [명제 2](#prop2)를 구체적으로 살펴보자. 여기에서 $$\omega_{\mathbb{P}^2} \cong \mathcal{O}(-3)$$이므로, Serre duality가 주장하는 바는 isomorphism $$H^k(\mathbb{P}^2, \mathcal{O}(d)) \cong H^{2-k}(\mathbb{P}^2, \mathcal{O}(-d-3))^\ast$$이다.
 
 우선 $$d=0$$인 경우, [§사영공간의 코호몰로지, ⁋명제 1](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop1)에 의해 
 
@@ -103,8 +98,7 @@ $$H^0(\mathbb{P}^2, \mathcal{O}(1)) = \mathbb{K}^3$$
 $$\binom{2+(-4)}{2}=\binom{-2}{2} = 3$$
 
 차원이므로 일치하는 것을 확인할 수 있다.
-
-</div>
+:::
 
 ## 세르 쌍대성의 일반화
 
@@ -126,15 +120,13 @@ Affine variety $$X$$가 $$\mathbb{K}$$ 위에서 정의되었다는 것은 그 c
 
 Relative Serre duality는 이 세팅을 일반화하는 것으로, target $$\mathbb{A}^1_\mathbb{K}$$를 또 다른 variety로 바꿔준다. 우선 임의의 variety $$X,Y$$에 대하여, morphism $$f:X\rightarrow Y$$가 *smooth projective morphism*이라는 것을 각각의 $$y\in Y$$ 위에서의 fiber $$f^{-1}(y)$$가 smooth projective variety가 되는 것으로 정의하자. 그럼 이 경우, $$f^{-1}(y)$$는 smooth projective variety로서 canonical line bundle $$\omega_{X_y}$$가 존재할 것이며, 이들을 일관적으로 모은 *relative dualizing sheaf* $$\omega_{X/Y}$$가 $$X$$ 위에 정의된다. 즉 $$\omega_{X/Y}$$는 각각의 $$y$$에 대하여 $$\omega_{X/Y}\vert_{X_y}\cong\omega_{X_y}$$을 만족하는 sheaf이다. 그럼 이 때의 일반화는 다음과 같다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**명제 4 (Relative Serre duality)**</ins> Smooth projective morphism $$f \colon X \to Y$$에서 $$n = \dim X - \dim Y$$라 하자. 그럼
+::: 명제 4 (Relative Serre duality)
+Smooth projective morphism $$f \colon X \to Y$$에서 $$n = \dim X - \dim Y$$라 하자. 그럼
 
 $$R^n f_\ast \omega_{X/Y} \cong \mathcal{O}_Y$$
 
 이며, $$i \neq n$$에 대해서는 $$R^i f_\ast \omega_{X/Y} = 0$$이다.
-
-</div>
+:::
 
 ## Grothendieck Duality
 
@@ -156,15 +148,13 @@ $$\operatorname{Hom}_{D(X)}(\mathcal{F}, f^! \mathcal{G}) \cong \operatorname{Ho
 
 앞서 말했듯 Grothendieck duality는 relative Serre duality를 포함하는 결과이다. 이를 살펴보기 위해 smooth morphism $$f:X\rightarrow Y$$의 경우를 생각하면, $$f^! \mathcal{O}_Y \cong \omega_{X/Y}[n]$$이 성립하며, 이로부터 $$\omega_{X/Y}$$가 올바른 dimension에 들어있는 것이 정확히 $$f^!\mathcal{O}_Y$$임을 알 수 있다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**명제 5 (Grothendieck Duality)**</ins> Proper morphism $$f \colon X \to Y$$와 coherent sheaf $$\mathcal{F}$$ on $$X$$에 대해, derived category에서 다음 isomorphism이 성립한다:
+::: 명제 5 (Grothendieck Duality)
+Proper morphism $$f \colon X \to Y$$와 coherent sheaf $$\mathcal{F}$$ on $$X$$에 대해, derived category에서 다음 isomorphism이 성립한다:
 
 $$R f_\ast R\mathcal{H}om_{\mathcal{O}_X}(\mathcal{F}, f^! \mathcal{G}) \cong R\mathcal{H}om_{\mathcal{O}_Y}(R f_\ast \mathcal{F}, \mathcal{G})$$
 
 여기서 $$R\mathcal{H}om$$은 derived Hom ([\[호몰로지 대수학\] §유도카테고리, ⁋명제 10](/ko/math/homological_algebra/derived_categories#prop10))이며, $$\mathcal{G}$$는 $$Y$$ 위의 coherent sheaf의 bounded complex이다. 
-
-</div>
+:::
 
 직관적으로 이 정리는 'pushforward 후 Hom'과 'Hom 후 pushforward'가 같다는 것을 의미한다. 즉, $$\mathcal{F}$$와 $$f^! \mathcal{G}$$ 사이의 Hom을 $$X$$에서 계산한 후 $$Y$$로 내려보내는 것과, $$\mathcal{F}$$를 먼저 $$Y$$로 내려보낸 후 $$\mathcal{G}$$와의 Hom을 계산하는 것이 같다는 뜻이다. 
 

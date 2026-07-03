@@ -69,9 +69,8 @@ $$0 \rightarrow H_k(C)\otimes_\mathbb{Z}A\rightarrow H_k(C;A)\rightarrow \Tor_1^
 
 한편 (1)은 splitting short exact sequence이므로, 우리는 retraction $$r_k:C_k \rightarrow Z_k$$을 하나 택할 수 있다. ([\[다중선형대수학\] §완전열, ⁋명제 10](/ko/math/multilinear_algebra/exact_sequences#prop10)) 그럼 이러한 선택 하에서, $$(p_k\circ r_k)\otimes \id_A$$는 호몰로지에서의 함수 $$H_k(C;A)\rightarrow H_k(C)\otimes_\mathbb{Z} A$$를 유도하며 이것이 위의 $$H_k(C)\otimes_\mathbb{Z}A\rightarrow H_k(C;A)$$의 retraction임을 안다. 즉 다음을 얻는다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop1">**명제 1 (Universal coefficient theorem for homology)**</ins> 임의의 위상공간 $$X$$와 abelian group $$A$$에 대하여, 다음의 short exact sequence
+::: 명제 1 (Universal coefficient theorem for homology)
+임의의 위상공간 $$X$$와 abelian group $$A$$에 대하여, 다음의 short exact sequence
 
 $$0 \rightarrow H_k(X)\otimes_\mathbb{Z}A\rightarrow H_k(X;A)\rightarrow \Tor_1^\mathbb{Z}(H_{k-1}(X), A)\rightarrow 0$$
 
@@ -80,17 +79,15 @@ $$0 \rightarrow H_k(X)\otimes_\mathbb{Z}A\rightarrow H_k(X;A)\rightarrow \Tor_1^
 $$H_k(X;A)\cong \left(H_k(X)\otimes_\mathbb{Z}A\right)\oplus \Tor_1^\mathbb{Z}(H_{k-1}(X), A)$$
 
 을 준다.
-
-</div>
+:::
 
 
 ## 코호몰로지의 정의와 보편계수정리
 
 [§호몰로지의 계산, ⁋정의 6](/ko/math/algebraic_topology/computation_of_homology#def6)과 마찬가지로 우리는 코호몰로지의 Eilenberg-Steenrod axiom을 정의하고, 이를 만족하는 contravariant functor와 connecting morphism들을 cohomology라 부를 수 있을 것이다. 이를 명시적으로 적으면 다음과 같다.
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**정의 2 (Eilenberg-Steenrod axioms)**</ins> 위상공간들의 pair들의 category에서 abelian group들의 category로의 contravariant functor들 $$H^k$$과, 이들 사이의 natural transformation
+::: 정의 2 (Eilenberg-Steenrod axioms)
+위상공간들의 pair들의 category에서 abelian group들의 category로의 contravariant functor들 $$H^k$$과, 이들 사이의 natural transformation
 
 $$\delta: H^k(X) \rightarrow H^{k+1}(X,A)$$
 
@@ -105,8 +102,7 @@ $$\delta: H^k(X) \rightarrow H^{k+1}(X,A)$$
     $$\cdots \rightarrow H^k(X,A)\rightarrow H^k(X) \rightarrow H^k(A) \rightarrow H^{k+1}(X,A)\rightarrow \cdots$$
 
     에 들어간다. 
-
-</div>
+:::
 
 이러한 조건들을 만족하는 cohomology theory의 존재성을 보이기 위해 [§호몰로지](/ko/math/algebraic_topology/homology)에서와 마찬가지로 위상공간 $$X$$의 singular simplex들로 이루어진 chain complex
 
@@ -128,9 +124,8 @@ $$H^k(X;A):=H_k(C^\vee)$$
 
 그럼 이렇게 정의한 $$H^k(X;A)$$와 $$H_k(X)$$ 사이에 어떠한 관계가 있는지를 살펴보아야 한다. 이 글의 서두에서 밝힌 것과 같이, 단순히 $$H^k(X;A)\cong H_k(X)^\ast$$가 성립하는 것은 아니다. 그러나 위의 [명제 1](#prop1)의 증명과 유사한 방식으로 우리는 다음의 명제를 얻어낼 수 있다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop3">**명제 3 (Universal coefficient theorem for cohomology)**</ins> 임의의 위상공간 $$X$$와 abelian group $$A$$에 대하여, 다음의 short exact sequence
+::: 명제 3 (Universal coefficient theorem for cohomology)
+임의의 위상공간 $$X$$와 abelian group $$A$$에 대하여, 다음의 short exact sequence
 
 $$0\rightarrow\Ext_\mathbb{Z}^1(H_{k-1}(X), A)\rightarrow H^k(X;A)\rightarrow \Hom_\mathbb{Z}(H_k(X),A)\rightarrow 0$$
 
@@ -139,8 +134,7 @@ $$0\rightarrow\Ext_\mathbb{Z}^1(H_{k-1}(X), A)\rightarrow H^k(X;A)\rightarrow \H
 $$H^k(X;A)\cong \Hom_\mathbb{Z}(H_k(X),A)\oplus \Ext^1_\mathbb{Z}(H_{k-1}(X),A)$$
 
 을 준다.
-
-</div>
+:::
 
 이는 대략적으로, [명제 1](#prop1)을 [\[대수적 구조\] §가환군, ⁋정리 15](/ko/math/algebraic_structures/abelian_groups#thm15)를 통해 번역한 것이라 생각할 수 있다. 
 
@@ -240,9 +234,8 @@ $$C_\bullet(X;A):=C_\bullet(X)\otimes_\mathbb{Z}A,\qquad C_\bullet^\Delta(X;A):=
 
 한편, 우리는 만일 $$A$$가 principal ideal domain이라면 임의의 free $$A$$-module의 submodule은 다시 free $$A$$-module임을 알고 있다. [명제 1](#prop1)의 증명을 다시 살펴보면, $$\mathbb{Z}$$가 principal ideal domain이므로 free $$\mathbb{Z}$$-module (즉 free abelian group)의 submodule이 다시 free $$\mathbb{Z}$$-module이 된다는 사실을 활용한 것이며, 이를 바탕으로 앞선 두 명제를 다음과 같이 일반화할 수 있다.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm4">**정리 4 (Universal coefficient theorem for homology, general version)**</ins> Principal ideal domain $$A$$와, free $$A$$-module들의 chain complex $$C_\bullet$$, 그리고 임의의 $$A$$-module $$M$$에 대하여 다음의 short exact sequence
+::: 정리 4 (Universal coefficient theorem for homology, general version)
+Principal ideal domain $$A$$와, free $$A$$-module들의 chain complex $$C_\bullet$$, 그리고 임의의 $$A$$-module $$M$$에 대하여 다음의 short exact sequence
 
 $$0 \rightarrow H_k(C)\otimes_AM\rightarrow H_k(C\otimes_AM)\rightarrow \Tor_1^A(H_{k-1}(C), A)\rightarrow 0$$
 
@@ -251,12 +244,10 @@ $$0 \rightarrow H_k(C)\otimes_AM\rightarrow H_k(C\otimes_AM)\rightarrow \Tor_1^A
 $$H_k(C\otimes_AM)\cong \left(H_k(C)\otimes_AM\right)\oplus \Tor_1^A(H_{k-1}(C), M)$$
 
 을 준다.
+:::
 
-</div>
-
-<div class="proposition" markdown="1">
-
-<ins id="thm5">**정리 5 (Universal coefficient theorem for cohomology, general version)**</ins> Principal ideal domain $$A$$와, free $$A$$-module들의 chain complex $$C_\bullet$$, 그리고 임의의 $$A$$-module $$M$$에 대하여 다음의 short exact sequence
+::: 정리 5 (Universal coefficient theorem for cohomology, general version)
+Principal ideal domain $$A$$와, free $$A$$-module들의 chain complex $$C_\bullet$$, 그리고 임의의 $$A$$-module $$M$$에 대하여 다음의 short exact sequence
 
 $$0\rightarrow\Ext_A^1(H_{k-1}(C), M)\rightarrow H_k(\Hom_A(C,M))\rightarrow \Hom_A(H_k(C),M)\rightarrow 0$$
 
@@ -265,16 +256,14 @@ $$0\rightarrow\Ext_A^1(H_{k-1}(C), M)\rightarrow H_k(\Hom_A(C,M))\rightarrow \Ho
 $$H_k(\Hom_A(C,M))\cong \Hom_A(H_k(C),M)\oplus \Ext^1_A(H_{k-1}(C),M)$$
 
 을 준다.
-
-</div>
+:::
 
 ## 메이어-피토리스 열
 
 한편 [정의 2](#def2)의 공리들 중 excision axiom은 우리가 작은 공간들의 코호몰로지로부터 큰 공간의 코호몰로지를 계산할 수 있게 해 준다. 다음 명제는 [\[대수적 위상수학\] §호몰로지의 계산, ⁋명제 7](/ko/math/algebraic_topology/computation_of_homology#prop7)의 코호몰로지 버전이며, 그 증명은 [\[대수적 위상수학\] §호몰로지의 계산, ⁋정의 6](/ko/math/algebraic_topology/computation_of_homology#def6)로부터 [\[대수적 위상수학\] §호몰로지의 계산, ⁋명제 7](/ko/math/algebraic_topology/computation_of_homology#prop7)를 얻어낸 과정을, [정의 2](#def2)에서 시작하여 반복하면 된다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop6">**명제 6 (Mayer-Vietoris sequence)**</ins> 위상공간 $$X$$가 두 열린집합들의 합집합 $$X=U\cup V$$로 나타난다 하고, 이 위에 정의된 cohomology theory $$H$$를 생각하자. 그럼 long exact sequence
+::: 명제 6 (Mayer-Vietoris sequence)
+위상공간 $$X$$가 두 열린집합들의 합집합 $$X=U\cup V$$로 나타난다 하고, 이 위에 정의된 cohomology theory $$H$$를 생각하자. 그럼 long exact sequence
 
 $$\cdots \to H^{n}(X) \xrightarrow{(i^\ast, j^\ast)} H^{n}(U) \oplus H^{n}(V) \xrightarrow{k^\ast - l^\ast} H^{n}(U \cap V) \xrightarrow{\delta} H^{n+1}(X) \to \cdots$$
 
@@ -283,16 +272,14 @@ $$\cdots \to H^{n}(X) \xrightarrow{(i^\ast, j^\ast)} H^{n}(U) \oplus H^{n}(V) \x
 $$i:U\rightarrow X,\quad j:V\rightarrow X,\quad k:U\cap V\rightarrow U,\quad l:U\cap V \rightarrow V$$
 
 에 유도되는 함수들이다.
-
-</div>
+:::
 
 ## 사슬복합체의 텐서곱
 
 Mayer-Vietoris sequence를 사용하면 큰 공간의 작은 부분공간들의 호몰로지 혹은 코호몰로지로부터 큰 공간의 호몰로지, 코호몰로지를 계산할 수 있다. 한편 우리는 두 공간 $$X,Y$$를 곱하여 더 큰 공간 $$X\times Y$$를 만들 수도 있는데, 퀴네트 공식은 이러한 곱공간의 호몰로지와 코호몰로지를 계산하는 데에 도움을 준다. 이를 위해서는 우선 두 chain complex $$C_\bullet$$, $$D_\bullet$$이 주어졌을 때 이들의 텐서곱을 정의해야 한다.
 
-<div class="definition" markdown="1">
-
-<ins id="def7">**정의 7**</ins> Ring $$A$$와 $$A$$-module들의 chain complex $$C_\bullet,D_\bullet$$이 주어졌다 하자. 그럼 이들의 *tensor product* $$(C\otimes D)_\bullet$$은 각각의 $$k$$에 대하여
+::: 정의 7
+Ring $$A$$와 $$A$$-module들의 chain complex $$C_\bullet,D_\bullet$$이 주어졌다 하자. 그럼 이들의 *tensor product* $$(C\otimes D)_\bullet$$은 각각의 $$k$$에 대하여
 
 $$(C\otimes D)_k=\bigoplus_{p+q=k}C_p\otimes_A D_q$$
 
@@ -301,16 +288,14 @@ $$(C\otimes D)_k=\bigoplus_{p+q=k}C_p\otimes_A D_q$$
 $$\partial(x,y)=(\partial^Cx,y)+(-1)^{\deg(x)}(x,\partial^Dy)$$
 
 으로 정의한 후, 이를 linear하게 확장하여 얻어지는 것이다.
-
-</div>
+:::
 
 즉, $$(C\otimes D)_\bullet$$은 $$(p,q)$$ 성분이 $$C_p\otimes D_q$$이고, horizontal differential이 $$\partial^C\otimes\id_D$$, vertical differential이 $$\id_C\otimes \partial^D$$로 주어지는 double complex의 total complex라 할 수 있다. ([§호몰로지, ⁋정의 5](/ko/math/homological_algebra/homology#def5))
 
 그럼 퀴네트 공식의 대수적인 내용은 다음 보조정리에 담겨있다.
 
-<div class="proposition" markdown="1">
-
-<ins id="lem8">**보조정리 8**</ins> Principal ideal doamin $$A$$와 $$A$$-module들의 chain complex $$C_\bullet$$, $$D_\bullet$$이 주어졌다 하고 $$C_\bullet$$이 free $$A$$-module들의 chain complex라 하자. 그럼 임의의 $$k$$에 대하여 다음의 short exact sequence
+::: 보조정리 8
+Principal ideal doamin $$A$$와 $$A$$-module들의 chain complex $$C_\bullet$$, $$D_\bullet$$이 주어졌다 하고 $$C_\bullet$$이 free $$A$$-module들의 chain complex라 하자. 그럼 임의의 $$k$$에 대하여 다음의 short exact sequence
 
 $$0 \rightarrow \bigoplus_{p+q=k}H_p(C)\otimes_AH_q(D)\rightarrow H_k(C\otimes D)\rightarrow \bigoplus_{p+q=k-1}\Tor_1^A(H_p(C),H_q(D))\rightarrow 0$$
 
@@ -319,11 +304,8 @@ $$0 \rightarrow \bigoplus_{p+q=k}H_p(C)\otimes_AH_q(D)\rightarrow H_k(C\otimes D
 $$H_k(C\otimes D)\cong \left( \bigoplus_{p+q=k}H_p(C)\otimes_AH_q(D)\right)\oplus \left(\bigoplus_{p+q=k-1}\Tor_1^A(H_p(C),H_q(D)) \right)$$
 
 이 존재한다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 우선 다음의 short exact sequence
 
 $$0 \rightarrow Z_p(C) \rightarrow C_p\rightarrow B_{p-1}(C)\rightarrow 0$$
@@ -365,22 +347,19 @@ $$\coker \delta_k\cong (H(C)\otimes H(D))_k,\qquad \ker \delta_{k-1}\cong \Tor_1
 $$0 \rightarrow Z_\bullet(C)\rightarrow C_\bullet \rightarrow B_{\bullet-1}(C) \rightarrow 0$$
 
 이 split exact sequence이므로, section $$B_{\bullet-1}(C)\rightarrow C_\bullet$$에 의해 ($$\ast$$)의 splitting이 유도된다.
-
-</details>
+:::
 
 ## 아일렌베르크-질버 정리와 퀴네트 공식
 
 [보조정리 8](#lem8)의 결과를 염두에 두면, 우리가 해야 할 일은 명확하다. 두 위상공간 $$X,Y$$와 이에 해당하는 chain complex $$C_\bullet(X),C_\bullet(Y)$$가 주어졌을 때, product space $$X\times Y$$의 호몰로지 $$H_\bullet(X\times Y)$$와, 두 chain complex $$H_\bullet(X)$$, $$H_\bullet(Y)$$의 tensor product $$(H(X)\otimes H(Y))_\bullet$$의 관계를 살펴보는 것이다. 다음 정리는 이를 두 대수적인 대상들이 동일한 것이라는 것을 보여준다.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm9">**정리 9 (Eilenberg-Zilber)**</ins> 두 위상공간 $$X,Y$$와 이들로부터 얻어지는 chain complex $$C_\bullet(X),C_\bullet(Y)$$, 그리고 $$C_\bullet(X\times Y)$$에 대하여, 두 chain complex $$(C(X)\otimes C(Y))_\bullet$$과 $$C_\bullet(X\times Y)$$ 사이의 chain homotopy equivalence가 존재하며, 따라서 
+::: 정리 9 (Eilenberg-Zilber)
+두 위상공간 $$X,Y$$와 이들로부터 얻어지는 chain complex $$C_\bullet(X),C_\bullet(Y)$$, 그리고 $$C_\bullet(X\times Y)$$에 대하여, 두 chain complex $$(C(X)\otimes C(Y))_\bullet$$과 $$C_\bullet(X\times Y)$$ 사이의 chain homotopy equivalence가 존재하며, 따라서 
 
 $$H_\bullet(C(X\times Y))\cong H_\bullet(C(X)\otimes C(Y))$$
 
 이 성립한다.
-
-</div>
+:::
 
 이는 보편적으로 [acyclic models theorem](https://en.wikipedia.org/wiki/Acyclic_model)을 사용하여 증명하지만, acyclic models theorem은 사실 Eilenberg-Zilber theorem의 일반화에 가까운 정리라 acyclic models theorem을 사용하여 이를 증명하는 것은 과한 감이 있다. 다만 Eilenberg-Zilber theorem을 직접 증명하는 것은 상당히 피곤한 일이므로, 우리는 이 증명 과정에서 등장하는 두 map
 
@@ -406,9 +385,8 @@ $$\AW\circ\EZ=\id_{(C(X)\otimes C(Y))_\bullet},\qquad \EZ\circ \AW\simeq \id_{C_
 
 따라서 [보조정리 8](#lem8)에 [정리 9](#thm9)를 종합하면 다음의 결과를 얻는다.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor10">**따름정리 10 (Künneth)**</ins> 위상공간 $$X,Y$$를 고정하자. 그럼 이들의 곱공간 $$X\times Y$$와 principal ideal domain $$A$$에 대하여, 다음의 short exact sequence
+::: 따름정리 10 (Künneth)
+위상공간 $$X,Y$$를 고정하자. 그럼 이들의 곱공간 $$X\times Y$$와 principal ideal domain $$A$$에 대하여, 다음의 short exact sequence
 
 $$0 \rightarrow \bigoplus_{p+q=k}H_p(X;A)\otimes_AH_q(Y;A)\rightarrow H_k(X\times Y;A)\rightarrow \bigoplus_{p+q=k-1}\Tor_1^A(H_p(X;A),H_q(Y;A))\rightarrow 0$$
 
@@ -417,8 +395,7 @@ $$0 \rightarrow \bigoplus_{p+q=k}H_p(X;A)\otimes_AH_q(Y;A)\rightarrow H_k(X\time
 $$H_k(X\times Y;A)\cong \left( \bigoplus_{p+q=k}H_p(X;A)\otimes_AH_q(Y;A)\right)\oplus \left(\bigoplus_{p+q=k-1}\Tor_1^A(H_p(X;A),H_q(Y;A)) \right)$$
 
 이 존재한다.
-
-</div>
+:::
 
 물론, 이 결과와 [정리 5](#thm5)를 사용하면 코호몰로지 버전의 퀴네트 공식을 얻을 수 있다.
 

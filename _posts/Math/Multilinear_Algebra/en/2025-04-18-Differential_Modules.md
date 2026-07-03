@@ -20,22 +20,18 @@ Now we define differential modules. For this we need a simple lemma; first consi
 
 In addition to the above assumptions, we assume that every algebra appearing in this section is unital associative, and that all algebra homomorphisms are unital.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop1">**Proposition 1**</ins> Let $$E$$ and $$F$$ be two associative unital graded $$A$$-algebras, let $$M$$ be an $$(E,E)$$-bimodule, and let $$N$$ be a graded $$(F,F)$$-bimodule. Then for a graded $$A$$-algebra homomorphism $$\rho: E \rightarrow F$$ and a degree $$0$$ graded $$E$$-homomorphism $$\theta: M \rightarrow N$$ of $$E$$-bimodules defined via $$\rho$$, the following hold:
+::: Proposition 1
+Let $$E$$ and $$F$$ be two associative unital graded $$A$$-algebras, let $$M$$ be an $$(E,E)$$-bimodule, and let $$N$$ be a graded $$(F,F)$$-bimodule. Then for a graded $$A$$-algebra homomorphism $$\rho: E \rightarrow F$$ and a degree $$0$$ graded $$E$$-homomorphism $$\theta: M \rightarrow N$$ of $$E$$-bimodules defined via $$\rho$$, the following hold:
 
 1. For any $$\varepsilon$$-derivation $$d': F \rightarrow N$$, the composition $$d'\circ\rho: E \rightarrow \rho^\ast N$$ is also an $$\varepsilon$$-derivation of the same degree.
 2. For any $$\varepsilon$$-derivation $$d: E \rightarrow M$$, the composition $$\theta\circ d: E \rightarrow \rho^\ast N$$ is also an $$\varepsilon$$-derivation of the same degree.
-
-</div>
+:::
 
 The proof is immediate from the definition of $$\rho^\ast$$. Meanwhile, in this situation we can also endow $$F$$ with an $$(E,E)$$-bimodule structure. It is then natural to ask when $$d':F \rightarrow N$$ is also (left/right) $$E$$-linear.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**Proposition 2**</ins> Assume the situation of [Proposition 1](#prop1), and let an $$\varepsilon$$-derivation $$d': F \rightarrow N$$ be given. Then $$d'$$ is left (resp. right) $$E$$-linear if and only if $$d'$$ vanishes identically on the subalgebra $$\rho(E)$$ of $$F$$.
-
-</div>
+::: Proposition 2
+Assume the situation of [Proposition 1](#prop1), and let an $$\varepsilon$$-derivation $$d': F \rightarrow N$$ be given. Then $$d'$$ is left (resp. right) $$E$$-linear if and only if $$d'$$ vanishes identically on the subalgebra $$\rho(E)$$ of $$F$$.
+:::
 
 Now define $$\Der_A(F, N)$$ to be the set of $$A$$-derivations from $$F$$ to $$N$$. Then the subset of derivations satisfying the condition of [Proposition 2](#prop2) — that is, those that become $$E$$-linear — coincides with the set of derivations vanishing identically on $$\rho(E)$$; hence this subset forms an $$A$$-submodule of $$\Der_A(F, N)$$. We denote it by $$\Der_E(F,N)$$.
 
@@ -61,27 +57,22 @@ Now if a degree $$0$$ graded $$A$$-linear map $$g:E \rightarrow E\oplus M[\delta
 
 Then the following proposition is also a consequence of a simple calculation.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop3">**Proposition 3**</ins> A graded $$K$$-linear map $$f: A \to E$$ of degree $$\delta$$ is an $$\varepsilon$$-derivation if and only if the map $$x \mapsto (x, f(x))$$ is a graded $$K$$-algebra homomorphism from $$A$$ to $$A \oplus E[\delta]$$.
-
-</div>
+::: Proposition 3
+A graded $$K$$-linear map $$f: A \to E$$ of degree $$\delta$$ is an $$\varepsilon$$-derivation if and only if the map $$x \mapsto (x, f(x))$$ is a graded $$K$$-algebra homomorphism from $$A$$ to $$A \oplus E[\delta]$$.
+:::
 
 On the other hand, for the next section we also need to examine when the graded $$A$$-algebra $$E\oplus M[\delta]$$ defined above is associative and unital.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**Proposition 4**</ins> In the above situation, $$E \oplus M[\delta]$$ is an associative unital algebra if and only if $$E$$ is associative unital and the two maps $$(a, x) \mapsto a \cdot x$$ and $$(a, x) \mapsto x \cdot a$$ define an $$(A, A)$$-bimodule structure on $$M$$. In this case, $$E \oplus M[\delta]$$ has unity $$(1, 0)$$.
-
-</div>
+::: Proposition 4
+In the above situation, $$E \oplus M[\delta]$$ is an associative unital algebra if and only if $$E$$ is associative unital and the two maps $$(a, x) \mapsto a \cdot x$$ and $$(a, x) \mapsto x \cdot a$$ define an $$(A, A)$$-bimodule structure on $$M$$. In this case, $$E \oplus M[\delta]$$ has unity $$(1, 0)$$.
+:::
 
 ## Tensor Algebras and Derivations
 
 The exterior algebra, which appeared as an important example in the previous post, is obtained from the following more general setting.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**Proposition 5**</ins> Let $$A$$ be a commutative ring and $$M$$ an $$A$$-module, let $$B$$ be one of $$\T(M)$$, $$\S(M)$$, or $$\bigwedge(M)$$, and let $$E$$ be a $$(B,B)$$-bimodule. Assume that a derivation $$d_0: A \rightarrow E$$ and an abelian group homomorphism $$d_1: M \rightarrow E$$ satisfy the condition
+::: Proposition 5
+Let $$A$$ be a commutative ring and $$M$$ an $$A$$-module, let $$B$$ be one of $$\T(M)$$, $$\S(M)$$, or $$\bigwedge(M)$$, and let $$E$$ be a $$(B,B)$$-bimodule. Assume that a derivation $$d_0: A \rightarrow E$$ and an abelian group homomorphism $$d_1: M \rightarrow E$$ satisfy the condition
 
 $$d_1(ax)=ad_1(x)+d_0(a)x.$$
 
@@ -94,11 +85,8 @@ and if $$B=\bigwedge(M)$$, additionally assume the condition
 $$xd_1(x)+d_1(x)x=0.$$
 
 Then regarding $$B$$ as a $$\mathbb{Z}$$-algebra, there exists a unique $$A$$-derivation $$d: B \rightarrow E$$ satisfying $$d\vert_A = d_0$$ and $$d\vert_M = d_1$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 First define multiplication on the abelian group $$B \oplus E$$ by the formula
 
 $$(b, t)(b', t') = (bb', bt' + b't)$$
@@ -110,8 +98,7 @@ On the other hand, defining $$h_0: B \to B \oplus E$$ by $$h_0(a) = (a, d_0(a))$
 $$h_1(ax) = h_0(a) h_1(x)$$
 
 holds, so $$h_1$$ is an $$A$$-linear map from $$M$$ to $$B$$. Therefore, using the given assumptions and the universal property of $$T(M)$$, $$S(M)$$, or $$\bigwedge(M)$$, we obtain a unique $$A$$-algebra homomorphism $$h:B \rightarrow B\oplus E$$ satisfying $$h\vert_M=h_1$$. Meanwhile, we can easily check that composing $$h$$ with the augmentation map $$B\oplus E \rightarrow B$$ yields $$\id_B$$, so again by [Proposition 3](#prop3) there exists a unique $$\varepsilon$$-derivation $$d:B \rightarrow E$$ such that $$h(b)=(b,d(b))$$, and from this we obtain the desired result.
-
-</details>
+:::
 
 ## Universal Property
 
@@ -123,14 +110,10 @@ $$m: E\otimes_AE \rightarrow E$$
 
 of $$E$$, it is obvious that $$m$$ preserves this $$(E,E)$$-bimodule structure. Therefore we can consider the kernel $$\mathfrak{I}$$ of $$m$$, which is a sub-$$(E,E)$$-bimodule of $$E\otimes_AE$$. The following lemma is then a simple calculation.
 
-<div class="proposition" markdown="1">
-
-<ins id="lem6">**Lemma 6**</ins> The map $$\delta_E: x \mapsto x \otimes 1 - 1 \otimes x$$ is an $$A$$-derivation from $$E$$ to $$\mathfrak{I}$$. Moreover, $$\mathfrak{I}$$ is generated as a left $$A$$-module by the image of $$\delta_E$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Lemma 6
+The map $$\delta_E: x \mapsto x \otimes 1 - 1 \otimes x$$ is an $$A$$-derivation from $$E$$ to $$\mathfrak{I}$$. Moreover, $$\mathfrak{I}$$ is generated as a left $$A$$-module by the image of $$\delta_E$$.
+:::
+::: Proof
 The first claim follows from the following calculation:
 
 $$(xy)\otimes 1-1\otimes(xy)=(x\otimes 1-1\otimes x)y+x(y\otimes 1-1\otimes y).$$
@@ -140,21 +123,16 @@ Now let an arbitrary element $$\sum_i x_i\otimes y_i$$ of $$\mathfrak{I}$$ be gi
 $$\sum_i x_i\otimes y_i=\sum_i \left(x_i(1\otimes y_i)-(x_iy_i)\otimes 1\right)=\sum_i x_i(1\otimes y_i-y_i\otimes 1),$$
 
 so the second claim is also immediate.
-
-</details>
+:::
 
 From this we now obtain the following universal property.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop7">**Proposition 7**</ins> The map $$\delta_E$$ obtained in [Lemma 6](#lem6) satisfies the following universal property.
+::: Proposition 7
+The map $$\delta_E$$ obtained in [Lemma 6](#lem6) satisfies the following universal property.
 
 > For every $$(E,E)$$-bimodule $$M$$ and every $$A$$-derivation $$d: E \to M$$, there exists a unique $$(E,E)$$-bimodule homomorphism $$f: \mathfrak{I} \to M$$ such that $$d=f\circ\delta_E$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 First, by [Proposition 1](#prop1) we know that for every $$(E, E)$$-bimodule homomorphism $$f: \mathfrak{I} \to M$$, the composition $$f \circ \delta_E$$ is an $$A$$-derivation from $$E$$ to $$M$$.
 
 On the other hand, for uniqueness, from the definition of $$\delta_E$$ we know that we must have
@@ -166,8 +144,7 @@ and since by [Lemma 6](#lem6) $$\mathfrak{I}$$ is generated by the image of $$\d
 $$f\left( \sum_i x_i \otimes y_i \right) = \sum_i x_i  f(1 \otimes y_i - y_i \otimes 1) = - \sum_i x_i  dy_i$$
 
 must necessarily hold. Therefore, to show existence we must verify that this defines an $$(E,E)$$-bimodule homomorphism. For this, first note that the map $$(x, y) \mapsto -x \cdot dy$$ is an $$A$$-bilinear map from $$E$$ to $$M$$, so from this we know that the $$A$$-bilinear map $$g: E \otimes E \to M$$ defined by $$g(x \otimes y) = -x \cdot dy$$ is well-defined. Then its restriction to $$\mathfrak{I}$$ equals $$f$$, and it now suffices to show that this restriction preserves the $$E$$-bimodule structure, which is a simple calculation.
-
-</details>
+:::
 
 By the above proposition we obtain a canonical $$A$$-module isomorphism
 
@@ -213,9 +190,8 @@ $$((E\otimes_AE)/\mathfrak{I})\otimes_A\mathfrak{I}\cong\mathfrak{I}/\mathfrak{I
 
 we obtain the desired claim. That is, the following holds.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop8">**Proposition 8**</ins> Consider a commutative $$A$$-algebra $$E$$, the multiplication map $$m:E\otimes_AE \rightarrow E$$, and the kernel $$\mathfrak{I}$$ of $$m$$. Then endow $$\mathfrak{I}/\mathfrak{I}^2$$ with an $$E$$-module structure via the canonical isomorphism
+::: Proposition 8
+Consider a commutative $$A$$-algebra $$E$$, the multiplication map $$m:E\otimes_AE \rightarrow E$$, and the kernel $$\mathfrak{I}$$ of $$m$$. Then endow $$\mathfrak{I}/\mathfrak{I}^2$$ with an $$E$$-module structure via the canonical isomorphism
 
 $$(E\otimes_AE)/\mathfrak{I}\cong E.$$
 
@@ -226,22 +202,18 @@ $$x\mapsto (x\otimes 1-1\otimes x)+\mathfrak{I}^2,$$
 $$\delta_{E/A}$$ is an $$A$$-derivation and satisfies the following universal property.
 
 > For any $$E$$-module $$M$$ and any $$A$$-derivation $$D:E \rightarrow M$$, there exists a unique $$A$$-linear map $$g:\mathfrak{I}/\mathfrak{I}^2 \rightarrow M$$ such that $$D=g\circ\delta_{E/A}$$.
+:::
 
-</div>
-
-<div class="definition" markdown="1">
-
-<ins id="def9">**Definition 9**</ins> The $$E$$-module $$\mathfrak{I}/\mathfrak{I}^2$$ is called the module of *$$A$$-differentials* (or the ($$E$$-)module of differentials), and is denoted by $$\Omega_{A}(E)$$ or $$\Omega_{E/A}$$. Also, we write $$\delta_{E/A}(x)$$ as $$d_{E/A}(x)$$, and when there is no danger of confusion we simply write this as $$dx$$. For each $$x \in E$$, we call $$d_{E/A}(x)$$ the *differential* of $$x$$.
-
-</div>
+::: Definition 9
+The $$E$$-module $$\mathfrak{I}/\mathfrak{I}^2$$ is called the module of *$$A$$-differentials* (or the ($$E$$-)module of differentials), and is denoted by $$\Omega_{A}(E)$$ or $$\Omega_{E/A}$$. Also, we write $$\delta_{E/A}(x)$$ as $$d_{E/A}(x)$$, and when there is no danger of confusion we simply write this as $$dx$$. For each $$x \in E$$, we call $$d_{E/A}(x)$$ the *differential* of $$x$$.
+:::
 
 Therefore, we obtain the canonical isomorphism
 
 $$\Hom_E(\Omega_{E/A}, N)\cong\Der_A(E, N).$$
 
-<div class="example" markdown="1">
-
-<ins id="ex10">**Example 10**</ins> Let $$A$$ be a commutative ring and $$M$$ an $$A$$-module. Then the symmetric algebra $$\S(M)$$ is a commutative $$A$$-algebra. Therefore, for any $$\S(M)$$-module $$N$$ and any $$A$$-derivation $$D:\S(M)\rightarrow N$$, there exists a unique $$A$$-linear map $$g:\Omega_{\S(M)/A}\rightarrow N$$ such that the formula
+::: Example 10
+Let $$A$$ be a commutative ring and $$M$$ an $$A$$-module. Then the symmetric algebra $$\S(M)$$ is a commutative $$A$$-algebra. Therefore, for any $$\S(M)$$-module $$N$$ and any $$A$$-derivation $$D:\S(M)\rightarrow N$$, there exists a unique $$A$$-linear map $$g:\Omega_{\S(M)/A}\rightarrow N$$ such that the formula
 
 $$D=g\circ d_{\S(M)/A}$$
 
@@ -264,14 +236,12 @@ $$\Omega_{\S(M)/A}\cong M\otimes_A\S(M)$$
 holds, and moreover, if we write this isomorphism as $$\omega:M\otimes_A\S(M)\rightarrow\Omega_{\S(M)/A}$$, then for any $$x\in M$$ we know that $$\omega(x\otimes1)=d_{\S(M)/A}(x)=dx$$.
 
 In particular, if $$M$$ is a free $$A$$-module of finite rank $$n$$, then $$\S(M)$$ can be identified with the polynomial algebra $$A[\x_1,\ldots, \x_n]$$, and under this identification the $$d\x_i$$ are <em-ko>really</em-ko> the images of the $$\x_i$$ under $$d=d_{\S(M)/A}$$; moreover, if the image of a polynomial $$p\in A[\x_1,\ldots, \x_n]$$ under $$d$$ is expressed as a linear combination of the basis elements $$d\x_i$$ of $$\Omega_{\S(M)/A}$$, then the coefficients attached to them are precisely the $$i$$-th partial derivatives $$\partial p/\partial \x_i$$ of $$p$$.
-
-</div>
+:::
 
 Now let us prove properties of $$\Omega_{E/A}$$. From now on, every ring is commutative, every algebra is associative, commutative, and unital, and every algebra homomorphism is unital.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop11">**Proposition 11**</ins> Suppose the following commutative diagram is given, and regard $$E$$ and $$E'$$ as $$A$$- and $$A'$$-algebras via the vertical maps.
+::: Proposition 11
+Suppose the following commutative diagram is given, and regard $$E$$ and $$E'$$ as $$A$$- and $$A'$$-algebras via the vertical maps.
 
 ![change_of_base_ring-1](/assets/images/Math/Multilinear_Algebra/Differential_Modules-1.svg){:style="width:6.35em" class="invert" .align-center}
 
@@ -282,14 +252,10 @@ $$\nu: \Omega_{E/A} \rightarrow \Omega_{E'/A'}$$
 making the following diagram commute:
 
 ![change_of_base_ring-2](/assets/images/Math/Multilinear_Algebra/Differential_Modules-2.svg){:style="width:11.54em" class="invert" .align-center}
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 The proof is nothing but an appropriate use of the other universal properties employed in proving [Proposition 8](#prop8).
-
-</details>
+:::
 
 From this we see that if we regard $$\Omega$$ as the correspondence taking an $$A$$-algebra $$A \rightarrow E$$ to the module of its differentials $$\Omega_A(E)$$, then $$\Omega$$ also possesses functoriality.
 
@@ -317,18 +283,14 @@ $$\Der_{A'}(E', N) \rightarrow \Der_A(E, N);\qquad D\mapsto D\circ u$$
 
 obtained from the functoriality of $$\Der$$.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop12">**Proposition 12**</ins> Suppose $$E' = E \otimes_AA'$$, and let $$\eta : A \to E'$$ and $$u : E \to E'$$ be the canonical morphisms. Then the $$A'$$-linear map
+::: Proposition 12
+Suppose $$E' = E \otimes_AA'$$, and let $$\eta : A \to E'$$ and $$u : E \to E'$$ be the canonical morphisms. Then the $$A'$$-linear map
 
 $$\Omega_0(u) : \Omega_{E/A}\otimes_EE'\rightarrow\Omega_{E'/A'}$$
 
 is an isomorphism.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 First, since the vertical maps are all isomorphisms, if we show that $$C(u)$$ is an isomorphism then we know that for any $$N$$,
 
 $$\Hom_{E'}(\Omega_{E'/A'} , N) \rightarrow \Hom_{E'}(\Omega_{E/A}\otimes_AE',N)$$
@@ -348,8 +310,7 @@ First,
 $$\Hom(u, \id_N):\Hom_{A'}(E\otimes_AA', N) \rightarrow \Hom_A(E, N)$$
 
 is an isomorphism, and since $$C(u)$$ is nothing but its restriction to $$\Der_{A'}(E', N)$$, it is obvious that $$C(u)$$ is injective. That $$C(u)$$ is surjective can also be proved without difficulty.
-
-</details>
+:::
 
 In particular, consider the case where $$\rho:A \rightarrow A'$$ is $$\id_A: A\rightarrow A'$$, so that $$u:E\rightarrow E'$$ is an $$A$$-algebra homomorphism. Then through the above process $$u$$ induces an $$E'$$-linear homomorphism
 
@@ -365,18 +326,14 @@ Then again by the universal property there exists the following commutative diag
 
 Now we introduce two exact sequences that are frequently used.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop13">**Proposition 13**</ins> The sequence of $$E'$$-modules
+::: Proposition 13
+The sequence of $$E'$$-modules
 
 $$\Omega_A(E)\otimes_EE'\overset{\Omega_0(u)}{\longrightarrow}\Omega_{E'/A}\overset{\Omega_u}{\longrightarrow}\Omega_{E'/E}\longrightarrow0$$
 
 is exact.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 Again from the fact that $$\Hom$$ is a left exact functor ([§Projective, Injective, and Flat Modules, ⁋Proposition 2](/en/math/multilinear_algebra/various_modules#prop2)), it suffices to show that the sequence
 
 $$0 \rightarrow \Hom_{E'}(\Omega_{E'/E},N) \rightarrow \Hom_{E'}(\Omega_{E'/A}, N) \rightarrow \Hom_{E'}(\Omega_{E/A}\otimes_EE',N)$$
@@ -386,8 +343,7 @@ is exact for any $$E'$$-module $$N$$. However, using the commutative diagrams em
 $$0 \rightarrow \Der_E(E', N) \rightarrow \Der_A(E', N) \rightarrow \Der_A(E, N),$$
 
 and we showed immediately after [Proposition 2](#prop2) that this is exact.
-
-</details>
+:::
 
 Now consider in particular the case where $$u:E \rightarrow E'$$ is surjective, so that for $$\mathfrak{I}=\ker u$$ we have an isomorphism $$E'\cong E/\mathfrak{I}$$. Denote by $$d'$$ the composition of the restriction of the canonical derivation $$d=d_{E/A}$$ to $$\mathfrak{I}$$ with $$i_E$$:
 
@@ -403,22 +359,17 @@ $$\overline{d}:\mathfrak{I}/\mathfrak{I}^2\rightarrow\Omega_{E/A}\otimes_EE'$$
 
 is well-defined. Moreover, since $$\mathfrak{I}$$ annihilates $$\mathfrak{I}/\mathfrak{I}^2$$, $$\overline{d}$$ is an $$E'=E/\mathfrak{I}$$-linear map.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop14">**Proposition 14**</ins> In the above situation, the sequence of $$E'$$-linear maps
+::: Proposition 14
+In the above situation, the sequence of $$E'$$-linear maps
 
 $$\mathfrak{I}/\mathfrak{I}^2\overset{\overline{d}}{\longrightarrow}\Omega_{E/A}\otimes_EE'\overset{\Omega_0(u)}{\longrightarrow}\Omega_{E'/A}\longrightarrow0$$
 
 is exact.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 Using the notation of the preceding argument, we can identify $$\Omega_{E/A}\otimes_EE'$$ with $$\Omega_{E/A}/\mathfrak{I}\Omega_{E/A}$$. Then under this identification, the image of $$\overline{d}$$ becomes the image of $$d(\mathfrak{I})\subset\Omega_{E/A}$$ in the quotient module $$\Omega_{E/A}/\mathfrak{I}\Omega_{E/A}$$. Therefore, taking the $$A$$-submodule $$I$$ of $$\Omega_{E/A}$$ to be that generated by $$\mathfrak{I}\Omega_{E/A}$$ and $$d(\mathfrak{I})$$, we obtain the isomorphism
 
 $$\frac{\Omega_{E/A}\otimes_EE'}{\im(\overline{d})}\cong\frac{\Omega_{E/A}}{I},$$
 
 and through this we obtain the desired result.
-
-</details>
+:::

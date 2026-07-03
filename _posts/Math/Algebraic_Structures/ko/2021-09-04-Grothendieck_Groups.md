@@ -35,14 +35,10 @@ $$\Hom_\Ab(K(M), G)\cong\Hom_\cMon(M, U(G))$$
 
 위의 성질을 만족하는 $$K(S)$$는 isomorphism에 대해 유일하다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop1">**명제 1**</ins> Abelian group $$H$$와 semigroup homomorphism $$\eta_S'$$가 위의 universal mapping problem을 만족한다면, $$K(S)\cong H$$가 성립한다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 명제 1
+Abelian group $$H$$와 semigroup homomorphism $$\eta_S'$$가 위의 universal mapping problem을 만족한다면, $$K(S)\cong H$$가 성립한다.
+:::
+::: 증명
 우선 다음 diagram을 살펴보자.
 
 ![uniqueness_1](/assets/images/Math/Algebraic_Structures/Grothendieck_Groups-2.svg){:style="width:6.91em"  class="invert" .align-center}
@@ -60,21 +56,16 @@ $$\bar{\eta}_S'\circ\bar{\eta}_S\circ\eta_S'=\bar{\eta}_S'\circ \eta_S=\eta=\id_
 ![uniqueness_3](/assets/images/Math/Algebraic_Structures/Grothendieck_Groups-4.svg){:style="width:9.96em"  class="invert" .align-center}
 
 비슷하게 $$\id_{K(S)}=\bar{\eta}_S\circ \bar{\eta}_S'$$가 성립한다는 것도 보일 수 있고, 따라서 $$K(S)\cong H$$가 성립한다.
-</details>
+:::
 
 한편, $$S$$가 이미 abelian group이었다면, $$K(S)$$는 다른 원소를 추가할 필요 없이 $$S$$ 그 자체가 나와야 한다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**명제 2**</ins> 만일 $$S$$가 abelian group이라면 위의 universal mapping problem을 만족하는 abelian group $$K(S)$$는 $$K(S)\cong S$$를 만족한다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 명제 2
+만일 $$S$$가 abelian group이라면 위의 universal mapping problem을 만족하는 abelian group $$K(S)$$는 $$K(S)\cong S$$를 만족한다.
+:::
+::: 증명
 $$S$$와 $$\id_S$$가 자명하게 universal property를 만족하므로, 앞선 [명제 1](#prop1)에 의하여 universal property를 만족하는 임의의 abelian group은 $$S$$와 동형이어야 한다.
-
-</details>
+:::
 
 위의 두 명제들은 universal mapping problem을 만족하는 $$K(S)$$가 우리가 찾는 abelian group이라는 것을 보여주지만, 실제로 $$K(S)$$가 존재한다는 것은 보여주지 않는다. 
 
@@ -98,14 +89,10 @@ $$(a_1, b_1)\equiv (a_2, b_2)\pmod{R}\iff a_1+b_2+c=a_2+b_1+c\text{ for some $c\
 
 우선 이 관계가 동치관계임을 보여야 한다.
 
-<div class="proposition" markdown="1">
-
-<ins id="lem3">**보조정리 3**</ins> 위에서 정의한 관계 $$R$$은 product semigroup $$S\times S$$ 위에서의 연산과 compatible한 동치관계이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 보조정리 3
+위에서 정의한 관계 $$R$$은 product semigroup $$S\times S$$ 위에서의 연산과 compatible한 동치관계이다.
+:::
+::: 증명
 우선, $$R$$이 동치관계임을 보이자. 임의의 $$(a,b)\in S\times S$$에 대하여, 
 
 $$a+b+c=a+b+c$$
@@ -132,19 +119,14 @@ $$a_1+b_1'+c_1=a_1'+b_1+c_1,\qquad a_2+b_2'+c_2=a_2'+b_2+c_2$$
 $$(a_1+a_2)+(b_1'+b_2')+(c_1+c_2)=(a_1'+a_2')+(b_1+b_2)+(c_1+c_2)$$
 
 이 성립하므로, 정의에 의해 $$(a_1+a_2, b_1+b_2)\equiv(a_1'+a_2', b_1'+b_2')\pmod{R}$$이 성립하고, 따라서 $$R$$은 $$S\times S$$의 연산과 compatible하다. 
-
-</details>
+:::
 
 그러므로 $$(S\times S)/R$$은 commutative semigroup이 된다. 이를 $$K(S)$$라 하자. 
 
-<div class="proposition" markdown="1">
-
-<ins id="lem4">**보조정리 4**</ins> $$K(S)$$는 abelian group이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 보조정리 4
+$$K(S)$$는 abelian group이다.
+:::
+::: 증명
 $$K(S)$$가 항등원과 역원을 가짐을 보이면 된다. 우리는 $$(a,b)$$를 $$a-b$$처럼 생각하고 있으므로, 항등원은 $$(a,a)$$, $$(a,b)$$의 역원은 $$-(a-b)=b-a$$, 즉 $$(b,a)$$가 될 것이다. 이를 증명하자.
 
 우선, 임의의 $$c\in S$$에 대하여, $$[(c,c)]$$가 항등원이 됨을 보인다. 임의의 $$[(a,b)]\in K(S)$$에 대하여,
@@ -162,19 +144,14 @@ $$(a+c)+b+d=(b+c)+a+d$$
 $$[(a,b)]+[(b,a)]=[(a+b,a+b)]$$
 
 이므로, 앞선 논증에 의해 $$[(a,b)]+[(b,a)]$$는 $$K(S)$$의 항등원이 되고, $$[(a,b)]+[(b,a)]$$도 마찬가지다. 따라서 $$K(S)$$의 임의의 원소의 역원이 존재하므로, $$K(S)$$는 group의 구조를 가진다. 
-
-</details>
+:::
 
 그럼 $$K(S)$$는 우리가 찾던 abelian group이 된다. 즉, $$K(S)$$는 위의 universal mapping problem을 만족한다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**명제 5**</ins> Commutative semigroup $$(S, +)$$에 대하여, 위와 같이 만들어진 가환군 $$K(S)$$와, 자연스러운 semigroup homomorphism $$\eta_S:S\rightarrow K(S)$$는 universal property를 만족한다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 명제 5
+Commutative semigroup $$(S, +)$$에 대하여, 위와 같이 만들어진 가환군 $$K(S)$$와, 자연스러운 semigroup homomorphism $$\eta_S:S\rightarrow K(S)$$는 universal property를 만족한다.
+:::
+::: 증명
 우선 $$S$$에서 $$K(S)$$로의 *자연스러운 semigroup homomorphism*이 무엇인지부터 생각해보자. 우리는 $$K(S)$$에서 $$(a,b)$$를 $$a-b$$로 취급하고 있으므로, $$a$$가 $$K(S)$$에서는 $$(a+b)-b$$, 즉 $$[(a+b, b)]$$인 것을 알 수 있다. 따라서 $$\eta_S$$을 $$a\mapsto[(a+a, a)]$$으로 정의하자. 물론 아무 $$b$$나 택해서 $$a\mapsto[(a+b,b)]$$으로 정의해도 같은 값이 나온다.
 
 Universal property를 증명하기 위해, 임의의 abelian group $$G$$와, semigroup homomorphism $$f:S\rightarrow G$$가 주어졌다고 하자. 
@@ -202,16 +179,13 @@ $$\begin{aligned}\bar{f}\left([(a_1,b_1)]+[(a_2, b_2)]\right)&=\bar{f}\left([(a_
 가 성립하기 때문이다. 
 
 마지막으로, $$\bar{f}$$가 주어진 조건 $$f=\bar{f}\circ\eta_S$$을 만족한다는 것은 계산해보면 자명하다.
-
-</details>
+:::
 
 이렇게, 우리는 원했던 abelian semigroup $$K(S)$$를 얻었다. 특히 정수를 엄밀한 방식으로 정의할 수 있다.
 
-<div class="definition" markdown="1">
-
-<ins id="def6">**정의 6**</ins> Monoid $$(\mathbb{N},+)$$에 대하여, 위의 과정을 통해 얻어지는 abelian group을 $$(\mathbb{Z},+)$$으로 적는다.
-
-</div>
+::: 정의 6
+Monoid $$(\mathbb{N},+)$$에 대하여, 위의 과정을 통해 얻어지는 abelian group을 $$(\mathbb{Z},+)$$으로 적는다.
+:::
 
 ## Monoid of fractions
 
@@ -223,11 +197,9 @@ $$(a,p)\equiv (b,q)\pmod{R}\iff aqs=bps\text{ for some $s\in S'$}$$
 
 를 정의하면, 이 관계는 $$E\times S'$$ 위의 연산과 compatible한 동치관계이고 따라서 $$(E\times S')/R$$이 monoid가 된다.
 
-<div class="definition" markdown="1">
-
-<ins id="def7">**정의 7**</ins> 위와 같이 얻어지는 monoid $$(E\times S')/R$$을 $$S$$를 분모로 갖는 $$E$$의 *monoid of fraction*이라 부르고 $$E_S$$로 표기한다. 이 monoid의 원소 $$(a,p)$$는 $$a/p$$로 표기한다. 
-
-</div>
+::: 정의 7
+위와 같이 얻어지는 monoid $$(E\times S')/R$$을 $$S$$를 분모로 갖는 $$E$$의 *monoid of fraction*이라 부르고 $$E_S$$로 표기한다. 이 monoid의 원소 $$(a,p)$$는 $$a/p$$로 표기한다. 
+:::
 
 이 때, $$E$$는 monoid이므로 위의 논의와는 다르게 항등원 $$1$$을 가진다. 그럼 [명제 5](#prop5)에서의 homomorphism $$\eta_S$$은 명시적으로, $$a\mapsto a/1$$로 생각할 수 있다. 
 

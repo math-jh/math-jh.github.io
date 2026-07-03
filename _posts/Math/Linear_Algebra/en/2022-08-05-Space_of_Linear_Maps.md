@@ -18,17 +18,13 @@ last_polished_at: 2026-05-31T23:00:06+00:00
 ---
 ## Extension by linearity
 
-<div class="proposition" markdown="1">
-
-<ins id="thm1">**Theorem 1 (Extension by linearity)**</ins> Let $$V$$ be an arbitrary $$\mathbb{K}$$-vector space with basis $$\mathcal{B}$$. For any other $$\mathbb{K}$$-vector space $$W$$, whenever a function $$g:\mathcal{B}\rightarrow W$$ is given, there exists a unique linear map $$G:V\rightarrow W$$ such that $$g=G\circ\iota$$.
-
-</div>
+::: Theorem 1 (Extension by linearity)
+Let $$V$$ be an arbitrary $$\mathbb{K}$$-vector space with basis $$\mathcal{B}$$. For any other $$\mathbb{K}$$-vector space $$W$$, whenever a function $$g:\mathcal{B}\rightarrow W$$ is given, there exists a unique linear map $$G:V\rightarrow W$$ such that $$g=G\circ\iota$$.
+:::
 
 Here $$\iota:\mathcal{B}\rightarrow V$$ denotes the inclusion $$\mathcal{B}\hookrightarrow V$$.
 
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proof
 For a given function $$g$$, it is clear that a linear map $$G$$ satisfying the condition must be unique. Indeed, if $$G':V\rightarrow W$$ is another linear map satisfying the given condition, then for any $$v\in V$$, writing
 
 $$v=\sum_{x\in \mathcal{B}}v_xx$$
@@ -44,8 +40,7 @@ Now we must actually construct $$G$$. Naturally, for any $$v=\sum_{x\in\mathcal{
 $$G(v)=\sum_{x\in\mathcal{B}} v_xg(x)$$
 
 Since the expression of $$v$$ as a linear combination of elements of $$\mathcal{B}$$ is unique, $$G$$ is well-defined, and one can easily verify that $$G$$ is a linear map.
-
-</details>
+:::
 
 That is, we can always find $$G:V\rightarrow W$$ making the following diagram commute.
 
@@ -83,17 +78,13 @@ $$v=\sum_{i=1}^n v_ix_i\quad\mapsto\quad \sum_{j=1}^m\left(\sum_{i=1}^n\alpha_{j
 
 Using the theorem above, we can prove the following proposition corresponding to [\[Set Theory\] §Retraction and Section, ⁋Proposition 1](/en/math/set_theory/retraction_and_section#prop1).
 
-<div class="proposition" markdown="1">
-
-<ins id="cor2">**Corollary 2**</ins> Let $$V,W$$ be two $$\mathbb{K}$$-vector spaces and let $$L:V\rightarrow W$$ be a linear map.
+::: Corollary 2
+Let $$V,W$$ be two $$\mathbb{K}$$-vector spaces and let $$L:V\rightarrow W$$ be a linear map.
 
 1. If $$L$$ is injective, there exists a linear map $$R:W\rightarrow V$$ such that $$R\circ L=\id_V$$.
 2. If $$L$$ is surjective, there exists a linear map $$S:W\rightarrow V$$ such that $$L\circ S=\id_W$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 1. First suppose $$L$$ is injective, and choose a basis $$x_1,\ldots,x_n$$ of $$V$$. Then $$L(x_1),\ldots, L(x_n)$$ are linearly independent, and therefore we can find a basis $$\mathcal{B}$$ of $$W$$ containing them. Now define a function $$r:\mathcal{B}\rightarrow V$$ by
     
     $$r(v)=\begin{cases}x_i&\text{if $v=L(x_i)$}\\0&\text{otherwise}\end{cases}$$
@@ -105,23 +96,18 @@ Using the theorem above, we can prove the following proposition corresponding to
     $$s(v)=x_k\qquad v=L(x_k)$$
 
     and apply [Theorem 1](#thm1) to obtain a linear map, which we call $$S$$. Now for any element $$L(x_k)$$ of the basis $$\mathcal{B}$$ of $$W$$, we have $$(L\circ S)(L(x_k))=L(x_k)$$, so again by the uniqueness part of Theorem 1, $$L\circ S=\id_W$$.
-
-</details>
+:::
 
 ## Space of Linear Maps
 
-<div class="proposition" markdown="1">
-
-<ins id="lem3">**Lemma 3**</ins> Let $$V$$ and $$W$$ be $$\mathbb{K}$$-vector spaces. If $$L,L_1,L_2$$ are linear maps from $$V$$ to $$W$$ and $$\alpha\in\mathbb{K}$$, then
+::: Lemma 3
+Let $$V$$ and $$W$$ be $$\mathbb{K}$$-vector spaces. If $$L,L_1,L_2$$ are linear maps from $$V$$ to $$W$$ and $$\alpha\in\mathbb{K}$$, then
 
 $$L_1+L_2:v\mapsto L_1(v)+L_2(v),\qquad \alpha L:v\mapsto \alpha L(v)$$
 
 are also linear.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 Let $$v, v_1,v_2\in V$$ and $$\alpha\in\mathbb{K}$$. Then
 
 $$\begin{aligned}
@@ -140,18 +126,15 @@ $$\begin{aligned}
     \end{aligned}$$
     
 Therefore $$L_1+L_2$$ is a linear map. The second claim can be shown similarly.
-
-</details>
+:::
 
 Thus we may make the following definition.
 
-<div class="definition" markdown="1">
-
-<ins id="def4">**Definition 4**</ins> For two $$\mathbb{K}$$-vector spaces $$V,W$$, the $$\mathbb{K}$$-vector space obtained by equipping the set of linear maps from $$V$$ to $$W$$ with the operations from [Lemma 3](#lem3) is denoted $$\Hom_\mathbb{K}(V,W)$$, or simply $$\Hom(V,W)$$ when the field $$\mathbb{K}$$ is clear from context.
+::: Definition 4
+For two $$\mathbb{K}$$-vector spaces $$V,W$$, the $$\mathbb{K}$$-vector space obtained by equipping the set of linear maps from $$V$$ to $$W$$ with the operations from [Lemma 3](#lem3) is denoted $$\Hom_\mathbb{K}(V,W)$$, or simply $$\Hom(V,W)$$ when the field $$\mathbb{K}$$ is clear from context.
 
 In particular, when $$W=\mathbb{K}$$, we call $$\Hom(V,\mathbb{K})$$ the *dual space* of $$V$$ and denote it by $$V^\ast$$. The elements of $$V^\ast$$ are called *linear functionals*.
-
-</div>
+:::
 
 The zero vector in the vector space $$\Hom(V,W)$$ is the function $$0$$ sending every element to 0. ([§Linear Maps, ⁋Example 10](/en/math/linear_algebra/linear_map#ex10)) When referring to this function, we shall call it the zero function for convenience.
 
@@ -161,14 +144,10 @@ $$f_i^j(x)=\begin{cases}y_j&\text{if $x=x_i$}\\0&\text{otherwise}\end{cases}$$
 
 That is, $$f_i^j$$ is the function sending only $$x_i$$ to $$y_j$$ and everything else to 0. Then by [Theorem 1](#thm1), there exists a unique linear map $$B_i^j$$ such that $$f_i^j=B_i^j\circ\iota$$.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**Proposition 5**</ins> Let $$V,W$$ be two finite-dimensional $$\mathbb{K}$$-vector spaces with bases $$\{x_1,\ldots,x_n\}$$ and $$\{y_1,\ldots,y_m\}$$, respectively. Then $$\Hom(V,W)$$ is an $$mn$$-dimensional vector space, and the $$mn$$ linear maps $$B_i^j$$ defined above form a basis of $$\Hom(V,W)$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 5
+Let $$V,W$$ be two finite-dimensional $$\mathbb{K}$$-vector spaces with bases $$\{x_1,\ldots,x_n\}$$ and $$\{y_1,\ldots,y_m\}$$, respectively. Then $$\Hom(V,W)$$ is an $$mn$$-dimensional vector space, and the $$mn$$ linear maps $$B_i^j$$ defined above form a basis of $$\Hom(V,W)$$.
+:::
+::: Proof
 It suffices to prove the claim about the basis.
 
 First, the $$B_i^j$$ are linearly independent. For scalars $$\alpha_{11},\ldots,\alpha_{mn}$$, suppose
@@ -198,8 +177,7 @@ is a linear map. Moreover, substituting $$v=x_k$$ gives
 $$L'(x_k)=\sum_{i,j}\alpha_{ji}B_i^j(x_k)=\sum_{j=1}^m\alpha_{jk}B_k^j(x_k)=\sum_{j=1}^m\alpha_{jk}y_j=L(x_k)$$
 
 Hence by the uniqueness part of [Theorem 1](#thm1), we have $$L'=L$$.
-
-</details>
+:::
 
 ---
 

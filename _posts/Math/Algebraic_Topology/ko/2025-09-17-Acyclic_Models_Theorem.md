@@ -20,17 +20,14 @@ weight: 7
 
 호몰로지 이론을 전개할 때 우리는 보통 $$n$$-simplex들을 사용하게 되며, 이들은 우리가 $$\Top$$의 임의의 원소들을 살펴보는데 도움이 된다. 이를 다음과 같이 정의로 삼을 수 있다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> *Category with models*는 category $$\mathcal{A}$$와, $$\mathcal{A}$$의 object들의 모임 $$\mathcal{M}$$으로 이루어진 pair $$(\mathcal{A},\mathcal{M})$$을 뜻한다. 이 때, $$\mathcal{M}$$에 속하는 object들을 우리는 *model*들이라 부른다.
-
-</div>
+::: 정의 1
+*Category with models*는 category $$\mathcal{A}$$와, $$\mathcal{A}$$의 object들의 모임 $$\mathcal{M}$$으로 이루어진 pair $$(\mathcal{A},\mathcal{M})$$을 뜻한다. 이 때, $$\mathcal{M}$$에 속하는 object들을 우리는 *model*들이라 부른다.
+:::
 
 이 정의는 그 자체만으로는 별 영양가는 없다. 이제 우리는 다음을 정의한다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**정의 2**</ins> Category with models $$(\mathcal{A},\mathcal{M})$$이 주어졌다 하고, covariant functor $$F_\bullet:\mathcal{A}\rightarrow \Ch_{\geq0}(\lMod{A})$$가 주어졌다 하자. 
+::: 정의 2
+Category with models $$(\mathcal{A},\mathcal{M})$$이 주어졌다 하고, covariant functor $$F_\bullet:\mathcal{A}\rightarrow \Ch_{\geq0}(\lMod{A})$$가 주어졌다 하자. 
 
 1. Functor $$F_\bullet$$가 *acyclic on $$\mathcal{M}$$*이라는 것은 각각의 $$M\in\mathcal{M}$$에 대하여, $$H_i(F(M))=0$$이 모든 $$i>0$$에 대하여 성립하는 것이다. 
 2. Functor $$F_\bullet$$가 *free on $$\mathcal{M}$$*이라는 것은 각각의 $$n$$에 대하여, 다음의 natural isomorphism
@@ -38,8 +35,7 @@ weight: 7
     $$F_n(-)\cong \bigoplus_{M\in \mathcal{M}}\mathbb{Z}\Hom_\mathcal{A}(M,-)$$
 
     이 성립하는 것이다.
-
-</div>
+:::
 
 예를 들어, standard $$n$$-simplex들 $$\Delta^n$$들의 모임 $$\mathcal{M}$$을 model들로 갖는 category with models $$(\Top, \mathcal{M})$$을 생각하자. 그럼 각각의 $$X\in \Top$$마다 singular $$n$$-simplex들의 chain complex $$C_\bullet(X)$$을 대응시키는 functor $$C_\bullet:\Top \rightarrow \Ab$$는 acyclic on $$\mathcal{M}$$인 동시에 free on $$\mathcal{M}$$이다.
 
@@ -52,9 +48,8 @@ weight: 7
 
 이번 글의 메인 정리는 다음의 정리이다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="thm3">**정리 3 (Acyclic models theorem)**</ins> Category with models $$(\mathcal{A},\mathcal{M})$$과, 두 functor $$F_\bullet, G_\bullet:\mathcal{A}\rightarrow \Ch_{\geq0}(\lMod{A})$$이 주어졌다 하고 $$F_\bullet$$이 free on $$\mathcal{M}$$, $$G_\bullet$$이 acyclic on $$\mathcal{M}$$이라 하자. 그럼 두 functor 
+::: 정리 3 (Acyclic models theorem)
+Category with models $$(\mathcal{A},\mathcal{M})$$과, 두 functor $$F_\bullet, G_\bullet:\mathcal{A}\rightarrow \Ch_{\geq0}(\lMod{A})$$이 주어졌다 하고 $$F_\bullet$$이 free on $$\mathcal{M}$$, $$G_\bullet$$이 acyclic on $$\mathcal{M}$$이라 하자. 그럼 두 functor 
 
 $$H_0(F(-)),H_0(G(-)): \mathcal{A}\rightarrow \lMod{A}$$
 
@@ -67,8 +62,7 @@ $$f(-)_0:H_0(F(-)) \Rightarrow H_0(G(-))$$
 $$f_\bullet(-):F_\bullet(-) \rightarrow G_\bullet(-)$$
 
 가 존재하여 $$H_0(f)=f_0$$이도록 할 수 있으며, 이러한 natural transformation $$f$$는 natural chain homotopy에 대하여 유일하게 존재한다. 
-
-</div>
+:::
 
 즉, 호몰로지 레벨에서 정의된 $$f(X)_0: H_0(F(X))\rightarrow H_0(G(X))$$에서부터 시작하여, chain map $$f_\bullet(X):F_\bullet(X)\rightarrow G_\bullet(X)$$를 만들어야 한다. 이를 위해 우선 $$f_\bullet(X)$$의 $$0$$번째 성분 $$f_0(X)$$를 정의하자. 이는, $$F_0(X)$$이 free이므로, 각각의 $$u:M\rightarrow X$$이 어디로 옮겨지는지를 정의하는 것과 같다. 한편 다음의 commutative diagram
 

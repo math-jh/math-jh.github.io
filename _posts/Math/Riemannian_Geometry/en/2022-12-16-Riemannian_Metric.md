@@ -24,13 +24,11 @@ using exterior algebra in [\[Manifolds\] §Differential Forms](/en/math/manifold
 
 Fix a point $$p\in M$$. Then $$g_p$$ is an element of $$\mathcal{S}^2(T^\ast_pM)$$. By the same argument we verified after [\[Manifolds\] §Differential Forms, ⁋Definition 1](/en/math/manifolds/differential_forms#def1), we see that $$\mathcal{S}^2(T^\ast_pM)\cong(\mathcal{S}^2(T_pM))^\ast$$, and by [\[Multilinear Algebra\] §Tensor Algebras, ⁋Proposition 11](/en/math/multilinear_algebra/tensor_algebras#prop11), we may regard $$g_p$$ as a symmetric multilinear map from $$T_pM\times T_pM$$ to $$\mathbb{R}$$. Hence, provided we impose an appropriate non-degeneracy condition on $$g_p$$, we may view it as an inner product on $$T_pM$$. ([\[Linear Algebra\] §Inner Product Spaces, ⁋Definition 1](/en/math/linear_algebra/inner_product_spaces#def1))
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> A *Riemannian metric* on a manifold $$M$$ is a smooth section $$g\in\Gamma(\mathcal{S}^2(T^\ast M))$$ that is positive-definite in the following sense.
+::: Definition 1
+A *Riemannian metric* on a manifold $$M$$ is a smooth section $$g\in\Gamma(\mathcal{S}^2(T^\ast M))$$ that is positive-definite in the following sense.
 
 > (Positive-definiteness) For any $$p\in M$$, we have $$g_p(v,v)>0$$ for all nonzero $$v\in T_pM$$.
-
-</div>
+:::
 
 If we weaken the positive-definiteness condition above to non-degeneracy, the resulting smooth section $$g \in \Gamma(\mathcal{S}^2(T^\ast M))$$ is called a *pseudo-Riemannian metric*. In this case, $$g_p$$ is no longer an inner product, but it defines a non-degenerate symmetric bilinear form on $$T_pM$$.
 
@@ -76,13 +74,11 @@ Of course, since (1) is an isomorphism, given any covector field $$\omega$$ we c
 
 A Riemannian metric finally allows us to do geometry on a manifold: measuring distances, angles, and so forth. Recall that once an inner product is defined on a vector space $$V$$, we can endow $$V$$ with a norm via $$\lVert v\rVert:=\sqrt{\langle v,v\rangle}$$.
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**Definition 2**</ins> Let $$(M,g)$$ be a Riemannian manifold and let $$\gamma:[a,b]\rightarrow M$$ be a curve defined on it. Then the *length* $$\length(\gamma)$$ of $$\gamma$$ is defined by
+::: Definition 2
+Let $$(M,g)$$ be a Riemannian manifold and let $$\gamma:[a,b]\rightarrow M$$ be a curve defined on it. Then the *length* $$\length(\gamma)$$ of $$\gamma$$ is defined by
 
 $$\length(\gamma)=\int_a^b\lVert\dot{\gamma}(t)\rVert_g\mathop{dt}$$
-
-</div>
+:::
 
 The length of a curve defined in this way is independent of the parametrization. Moreover, via the above definition we can make $$M$$ into a metric space by setting
 

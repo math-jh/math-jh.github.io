@@ -28,15 +28,13 @@ $$\psi_i := c_1(\mathbb{L}_i) \in H^2(\overline{\mathcal{M}}_{0, n+1}(X, \beta))
 
 is called the *$$\psi$$-class*.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1 (Descendant Gromov–Witten invariant)**</ins> For any cohomology classes $$\gamma_i \in H^\ast(X)$$ and integers $$k_i \geq 0$$, the *descendant Gromov–Witten invariant* is defined by
+::: Definition 1 (Descendant Gromov–Witten invariant)
+For any cohomology classes $$\gamma_i \in H^\ast(X)$$ and integers $$k_i \geq 0$$, the *descendant Gromov–Witten invariant* is defined by
 
 $$\left\langle \tau_{k_1}(\gamma_1), \ldots, \tau_{k_{n+1}}(\gamma_{n+1})\right\rangle_{0, n+1, \beta} := \int_{[\overline{\mathcal{M}}_{0, n+1}(X, \beta)]^{\mathrm{vir}}} \prod_{i=1}^{n+1} \psi_i^{k_i} \smile \ev_i^\ast \gamma_i$$
 
 When all $$k_i = 0$$ it is called a *primary* invariant; if at least one $$k_i \geq 1$$ it is called a *gravitational descendant*.
-
-</div>
+:::
 
 Although working with moduli spaces requires a slight upgrade in language, the Chern class of a stack carries essentially the same intuitive meaning as that of an ordinary line bundle. That is, $$\psi_i$$ measures how much $$\mathbb{L}_i$$ is twisted over the moduli space. More concretely, given a $$2$$-cycle $$\Sigma$$ in the moduli base, the pairing
 
@@ -52,13 +50,11 @@ We saw earlier that $$\psi_i$$ can essentially be expressed as a sum of degenera
 
 Intuitively, $$\psi_i$$ can be thought of as a sum of boundary divisors arising in this manner, $$\sum_{i\in S} D_S$$, but if left as is the same cohomology class would be counted multiple times, so a reference choice is needed to remove the redundancy. That is, fixing $$j,k$$, the component corresponding to $$S^c$$ must be pinned down by $$j,k$$ and the nodal point to kill the automorphism of this $$\mathbb{P}^1$$.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**Proposition 2 (Genus 0 Topological Recursion Relation)**</ins> For fixed three indices $$i,j,k$$ of $$\{1, \ldots, n\}$$ ($$n\geq 4$$), the $$\psi$$-class $$\psi_i$$ is expressed as the following sum of boundary divisors:
+::: Proposition 2 (Genus 0 Topological Recursion Relation)
+For fixed three indices $$i,j,k$$ of $$\{1, \ldots, n\}$$ ($$n\geq 4$$), the $$\psi$$-class $$\psi_i$$ is expressed as the following sum of boundary divisors:
 
 $$\psi_i=\sum_{\substack{S \subset \{1, \ldots, n\} \\ i \in S, j, k \notin S, \lvert S\rvert \geq 2}} D_S \in H^2(\overline{\mathcal{M}}_{0, n})$$
-
-</div>
+:::
 
 Then for the moduli space of stable maps to a given target $$X$$, namely $$\overline{\mathcal{M}}_{0, n}(X, \beta)$$, the above formula can be pulled back via the forgetful morphism $$\overline{\mathcal{M}}_{0, n}(X, \beta) \to \overline{\mathcal{M}}_{0, n}$$.
 
@@ -134,13 +130,11 @@ $$\partial_{t^a}\bigl((t_{(2)})^2/2\bigr) = \partial_{t^a}\!\left(\frac{1}{2}\su
 
 The antiderivative of the quantum part is resolved $$\beta$$-by-$$\beta$$ using the relation $$q_a\partial_{q_a} q^\beta = (T_a \cdot \beta) q^\beta$$ coming from $$q^\beta = e^{t_{(2)}\cdot \beta}$$, and for each $$\beta$$ it organizes into an $$H^\ast(X)$$-valued correction determined by the $$q^\beta$$ factor and *primary* GW invariants (descendant invariants without $$\psi$$-class insertions) $$\langle T_a, T^c\rangle_{0, 2, \beta}$$. Therefore $$s_2$$ becomes the sum of the classical $$(t_{(2)})^2/2$$ and this quantum correction. At higher orders $$z^{-k}$$ ($$k \geq 2$$), following the same recursion, *gravitational descendants* of the form $$\tau_{k-1}(T_a)$$ accumulate in turn, and the $$J$$-function is ultimately the explicit one-line formula for the fundamental solution forced by this process.
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**Definition 3**</ins> The (small) *Givental $$J$$-function* $$J_X: (\mathbb{C}^\ast)^r \times \mathbb{C}^\ast \to H^\ast(X)$$ of $$X$$ is defined by
+::: Definition 3
+The (small) *Givental $$J$$-function* $$J_X: (\mathbb{C}^\ast)^r \times \mathbb{C}^\ast \to H^\ast(X)$$ of $$X$$ is defined by
 
 $$J_X(q, z) := e^{t_{(2)}/z}\left( 1 + \sum_{\substack{\beta \in H_2(X, \mathbb{Z})_{\mathrm{eff}} \\ \beta \neq 0}} \sum_{a=0}^s q^\beta \left\langle \frac{T_a}{z(z - \psi)} \right\rangle_{0, 1, \beta} T^a \right)$$
-
-</div>
+:::
 
 Here $$H_2(X, \mathbb{Z})_{\mathrm{eff}}$$ is the set of effective curve classes (defined in [\[Symplectic Geometry\] §Quantum Cohomology, §§Novikov Ring](/en/math/symplectic_geometry/quantum_cohomology#novikov-ring)), and as $$\beta$$ ranges over this set, each $$\beta \neq 0$$ contributes to the instanton correction of degree $$q^\beta$$.
 
@@ -168,9 +162,8 @@ More concretely, we have already seen from [\[Symplectic Geometry\] §Gromov–W
 
 Meanwhile, recall that our motivation for introducing the $$J$$-function was to find the fundamental solution of the QDE ($$\ast$$). In [§Dubrovin Connection, §§D-module](/en/math/mirror_symmetry/dubrovin_connection#d-module) we saw that the A-model $$D$$-module is the bundle with fiber $$H^\ast(X)$$ over each point $$(q, z)$$ of the base $$M_A = (\mathbb{C}^\ast)^r \times \mathbb{C}^\ast_z$$, and the connection 1-form $$\mathcal{C}_a = T_a \qtimes -$$ on it was an endomorphism of this fiber, whose solutions were exactly the horizontal sections of ($$\ast$$). These solutions are $$\dim_\mathbb{C}H^\ast(X)$$-dimensional, and if we solve this equation with the $$T_a$$ as initial values, we obtain exactly all the solutions. Through this process we obtain the following fundamental solution matrix.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**Proposition 4 (A-side fundamental solution matrix)**</ins> Define the endomorphism $$S(q, z) \in \End(H^\ast(X))$$ by the matrix elements
+::: Proposition 4 (A-side fundamental solution matrix)
+Define the endomorphism $$S(q, z) \in \End(H^\ast(X))$$ by the matrix elements
 
 $$\eta\bigl(S(q,z)T_a, T_b\bigr) := \eta(T_a, T_b) + \sum_{\beta \neq 0} q^\beta \left\langle \frac{T_a}{z - \psi}, T_b \right\rangle_{0, 2, \beta}$$
 
@@ -183,12 +176,9 @@ where $$\eta$$ is the Poincaré pairing. Then $$S$$ satisfies the following.
 2. *($$J$$ = $$T_0$$ column)* $$J_X(q, z) = e^{t_{(2)}/z} S(q, z) T_0$$ holds. In particular $$J$$ itself is also a horizontal section of ($$\ast$$), and
    
    $$z q_a\partial_{q_a} J_X = T_a \qtimes J_X \qquad (a = 1, \ldots, r)$$
+:::
 
-</div>
-
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proof
 First, let us show that substituting $$T_b = T_0 = 1$$ in the second slot of the defining equation for $$S$$ gives the $$J = T_0$$ column. Throughout this post we consistently follow the convention $$1/(z - \psi) = \sum_{k \geq 0} z^{-k-1}\psi^k$$, and accordingly we keep the divisor-equation correction term with a $$+$$ sign (some literature uses $$1/(z + \psi)$$ with the opposite sign). Now the 2-point descendant in the definition involves $$T_0 = 1$$, and expanding this as a geometric series gives
 
 $$\left\langle \frac{T_a}{z - \psi}, 1\right\rangle_{0, 2, \beta} = \sum_{k \geq 0} z^{-k-1}\langle \tau_k(T_a), 1\rangle_{0, 2, \beta}$$
@@ -206,8 +196,7 @@ This is exactly the term appearing inside the small $$J$$ formula of [Definition
 Now let us show that each column $$S(q,z)T_b$$ of $$S$$ is a horizontal section. For this, we directly apply $$z q_a\partial_{q_a}$$ to $$S(q, z) T_b$$. First, $$S(q, z) T_b$$ is expressed as a sum of terms with $$q^\beta$$ as a factor for each $$\beta$$, and using the recursion relation examined before introducing the $$J$$-function and [\[Symplectic Geometry\] §Gromov–Witten Invariants, ⁋Proposition 4](/en/math/symplectic_geometry/gromov_witten#prop4), $$z q_a\partial_{q_a}$$ ultimately inserts $$T_a$$ at a point while lowering the degree of $$\psi$$ by one in the $$1/(z - \psi)$$ of the distinguished marked point, multiplied by the attached $$z$$.
 
 Now this lowered-degree $$\psi$$ can be decomposed into a sum of boundary divisors $$\sum_S D_S$$ using [Proposition 2](#prop2) (more precisely, the version with target lifted from [Proposition 2](#prop2)). On each $$D_S$$, the source curve splits into two components with effective class $$\beta = \beta_1 + \beta_2$$, and the diagonal class $$\sum_c T_c \otimes T^c$$ appears at the node between them. The component where the newly inserted $$T_a$$ gathers gives a 3-point invariant $$\langle T_a, T_c, T_d\rangle_{0, 3, \beta_1}$$, i.e., the structure constant expressing the quantum product $$T_a \qtimes$$ in a basis, and the other component reconstructs the (lower-degree) $$\beta_2$$ part of $$S(q, z) T_b$$ having $$T^c$$ at the node. Therefore summing over all $$c$$ and splittings $$\beta = \beta_1 + \beta_2$$ exactly reconstructs applying $$T_a \qtimes$$ to the vector $$S(q, z) T_b$$, i.e., the right-hand side $$T_a \qtimes \bigl(S(q, z) T_b\bigr)$$.
-
-</details>
+:::
 
 Therefore as $$q\rightarrow 0$$ all $$q^\beta$$ terms vanish, so the classical limit of $$S$$ is $$\id$$. On the A-side this can be thought of as a consequence of the fact that the classical limit of the quantum cup product is the ordinary cup product.
 
@@ -221,15 +210,13 @@ Meanwhile, this calculation is also related to the treatment of integration cons
 
 We have independently constructed the A-side fundamental solution matrix $$S$$ ([Proposition 4](#prop4)) and the B-side period matrix $$\mathcal{I}$$ ([§Gauss–Manin Connection, ⁋Proposition 7](/en/math/mirror_symmetry/gauss-manin_connection#prop7)). One of the insights of mirror symmetry is that these two matrices actually coincide.
 
-<div class="proposition" markdown="1">
-
-<ins id="conj5">**Conjecture 5 (Mirror theorem, $$J$$-function form)**</ins> For a mirror pair $$(X, \check{X})$$, the $$J$$-function of $$X$$ is written in terms of the cohomology basis $$\{T^a\}$$ components of the oscillating integral over a certain Lefschetz thimble $$\Gamma_0$$ (the *distinguished* thimble determined in a neighborhood of the large radius limit) corresponding to the $$T_0 = 1$$ normalization. That is,
+::: misc Conjecture 5 (Mirror theorem, $$J$$-function form) {#conj5}
+For a mirror pair $$(X, \check{X})$$, the $$J$$-function of $$X$$ is written in terms of the cohomology basis $$\{T^a\}$$ components of the oscillating integral over a certain Lefschetz thimble $$\Gamma_0$$ (the *distinguished* thimble determined in a neighborhood of the large radius limit) corresponding to the $$T_0 = 1$$ normalization. That is,
 
 $$J_X(q, z) = \sum_a J^a(q, z) T^a,\qquad J^a(q, z) \;\propto\; \mathcal{I}^a_{\Gamma_0}(q, z) = \int_{\Gamma_0} T_a\, e^{W_q/z}\,\omega$$
 
 holds up to normalization. Here the right-hand side is the $$p = \Gamma_0$$ column of the period matrix $$\mathcal{I}^a_p$$ introduced in [§Gauss–Manin Connection, ⁋Proposition 7](/en/math/mirror_symmetry/gauss-manin_connection#prop7).
-
-</div>
+:::
 
 The above [Conjecture 5](#conj5) is one of the strongest formulations of mirror symmetry: all A-side descendant Gromov–Witten invariants are reconstructed from B-side period integrals. Then in particular, the classical ring-level mirror symmetry $$QH^\ast(X) \cong \Jac(W_q)$$ is recovered as the leading order as $$z\rightarrow 0$$. Concretely, the $$z \to 0$$ stationary-phase asymptotic ([§Gauss–Manin Connection, ⁋Proposition 3](/en/math/mirror_symmetry/gauss-manin_connection#prop3)) expands as a sum over critical points of $$W_q$$, and the leading-order critical values $$\{W_q(p)\}$$ recover the canonical coordinates of quantum cohomology.
 
@@ -241,13 +228,11 @@ In the case of Calabi–Yau hypersurfaces in toric varieties, this was proven by
 
 In the case of toric Fano varieties, the B-side oscillating integral is computed in an explicit *hypergeometric* form. The object defined through this is the *$$I$$-function*, which serves as the toric mirror counterpart of the $$J$$-function.
 
-<div class="definition" markdown="1">
-
-<ins id="def5">**Definition 5 (Givental's $$I$$-function)**</ins> Let $$X$$ be a smooth projective toric Fano variety, $$D_1, \ldots, D_m$$ the toric divisors, and $$\beta \in H_2(X, \mathbb{Z})$$ an effective curve class. The *$$I$$-function* of $$X$$ is defined by
+::: Definition 5 (Givental's $$I$$-function)
+Let $$X$$ be a smooth projective toric Fano variety, $$D_1, \ldots, D_m$$ the toric divisors, and $$\beta \in H_2(X, \mathbb{Z})$$ an effective curve class. The *$$I$$-function* of $$X$$ is defined by
 
 $$I_X(q, z) := e^{t_{(2)}/z} \sum_{\beta \in H_2(X, \mathbb{Z})_{\mathrm{eff}}} q^\beta \prod_{i=1}^m \frac{\prod_{k=-\infty}^{0} (D_i + kz)}{\prod_{k=-\infty}^{D_i \cdot \beta}(D_i + kz)}$$
-
-</div>
+:::
 
 Here the formally appearing infinite products to $$-\infty$$ cancel exactly between numerator and denominator, so this is in fact a well-defined expression reducing to a finite product (or its inverse) depending on the sign of $$D_i \cdot \beta$$. The data determining this product are only the toric divisor $$D_i$$ and its intersection number $$D_i \cdot \beta$$, and the information these two carry is the same as that contained in the *charge matrix* $$Q = (Q_{ji}) \in \Mat_{r \times m}(\mathbb{Z})$$ introduced in [§Overview of Mirror Symmetry, ⁋Definition 1](/en/math/mirror_symmetry/overview#def1).
 
@@ -263,17 +248,15 @@ The charge matrix is by definition the matrix whose rows are these $$r$$ relatio
 
 The origin of this formula is the oscillating integral on the Hori–Vafa mirror $$\check{X}$$ of $$X$$, or more precisely, the expansion of this integral over charge data for the distinguished thimble $$\Gamma_0$$ of [Conjecture 5](#conj5) is exactly $$I_X$$. That is, $$I_X$$ is nothing more than the explicit formula for the distinguished column of the period matrix $$\mathcal{I}$$ in [§Gauss–Manin Connection, ⁋Proposition 7](/en/math/mirror_symmetry/gauss-manin_connection#prop7). We postpone the detailed expansion of this to [Example 7](#ex7), and first translate this into a statement about the $$J$$-function.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop6">**Proposition 6 (Givental's mirror theorem)**</ins> When $$X$$ is a smooth projective toric Fano variety, the $$I$$-function and $$J$$-function of $$X$$ satisfy the relation
+::: Proposition 6 (Givental's mirror theorem)
+When $$X$$ is a smooth projective toric Fano variety, the $$I$$-function and $$J$$-function of $$X$$ satisfy the relation
 
 $$J_X(\tau(q), z) = I_X(q, z)$$
 
 where $$\tau(q)$$ is the mirror map defined from the asymptotic expansion of the $$I$$-function
 
 $$I_X(q, z) = 1 + \tau(q)/z + O(z^{-2})$$
-
-</div>
+:::
 
 Examining both sides for the proof, $$J_X$$ is as seen in [Proposition 4](#prop4) the fundamental solution of the small QDE ($$\ast$$), and $$I_X$$ is the hypergeometric function explicitly given by charge data in [Definition 5](#def5). The key to the proof is to directly verify that this explicit $$I_X$$ is also a solution of the same $$D$$-module as $$J_X$$, i.e., of the same QDE ($$\ast$$). If $$X$$ is toric Fano then $$H^\ast(X)$$ is generated by $$H^2(X)$$, so ($$\ast$$) reduces to a differential equation for a single component of $$I_X$$, and at this point feeding $$z q_a\partial_{q_a}$$ into the hypergeometric product of $$I_X$$ verifies that each factor of the product satisfies this equation term by term. Meanwhile both $$I_X$$ and $$J_X$$ have the normalization $$1 + O(z^{-1})$$ as $$z \to \infty$$, and since the solution of the QDE is uniquely determined from its leading asymptotic once $$a_0$$ is fixed, we obtain $$J_X(\tau(q), z) = I_X(q, z)$$. We will verify this with a concrete calculation for $$X = \mathbb{P}^n$$. ([Example 7](#ex7))
 
@@ -285,9 +268,8 @@ $$-K_X \cdot \beta = r_X (H \cdot \beta) \geq 2$$
 
 so the $$q$$-dependent corrections are pushed to orders $$z^{-2}$$ and below. As a result no $$q$$-corrections remain in the mirror map $$\tau(q)$$, and in this case $$J_X(q, z) = I_X(q, z)$$ holds without any coordinate change. The $$\mathbb{P}^n$$ in the following [Example 7](#ex7) ($$-K = (n+1)H$$, Fano index $$n+1 \geq 2$$) is such a case.
 
-<div class="example" markdown="1">
-
-<ins id="ex7">**Example 7** ($$X = \mathbb{P}^n$$)</ins> The fan of $$\mathbb{P}^n$$ is the normal fan of the standard simplex, with $$n+1$$ rays
+::: Example 7 ($$X = \mathbb{P}^n$$)
+The fan of $$\mathbb{P}^n$$ is the normal fan of the standard simplex, with $$n+1$$ rays
 
 $$v_0 = -e_1 - \cdots - e_n,\qquad v_i = e_i\quad (i = 1, \ldots, n)$$
 
@@ -334,8 +316,7 @@ $$(z\partial_q)(qz\partial_q)^n\Phi_0 = \sum_{d \geq 1}\frac{d^{n+1}q^{d-1}}{(d!
 which is exactly verified.
 
 The stationary-phase aspect of [Conjecture 5](#conj5) was also already computed in [§Gauss–Manin Connection, ⁋Example 8](/en/math/mirror_symmetry/gauss-manin_connection#ex8), but this falls somewhat outside our core concerns in this post, so we omit it.
-
-</div>
+:::
 
 This example shows that mirror symmetry is realized not as an abstract isomorphism but as a concrete coincidence of two hypergeometric series. In the case of general toric Fano varieties, similar explicit calculations proceed from the charge matrix, and in all such cases the $$I = J$$ theorem of [Proposition 6](#prop6) provides a practical verification of mirror symmetry.
 
@@ -349,15 +330,13 @@ $$z\partial_{t^a} s = T_a \star_t s\qquad (a = 0, 1, \ldots, \dim_\mathbb{C} H^\
 
 which is the *big QDE* extending ($$\ast$$) to the full $$H^\ast$$ direction.
 
-<div class="definition" markdown="1">
-
-<ins id="def8">**Definition 8 (Big $$J$$-function)**</ins> The *big Givental $$J$$-function* $$J_X^{\mathrm{big}}: H^\ast(X) \times \mathbb{C}^\ast \to H^\ast(X)$$ of $$X$$ is defined by
+::: Definition 8 (Big $$J$$-function)
+The *big Givental $$J$$-function* $$J_X^{\mathrm{big}}: H^\ast(X) \times \mathbb{C}^\ast \to H^\ast(X)$$ of $$X$$ is defined by
 
 $$J_X^{\mathrm{big}}(t, z) := e^{t_{(2)}/z}\left( 1 + \sum_{\substack{\beta \in H_2(X, \mathbb{Z})_{\mathrm{eff}}, n \geq 0 \\ (\beta, n) \neq (0, 0)}} \sum_{a=0}^s \frac{q^\beta}{n!} \left\langle \frac{T_a}{z - \psi}, t, \ldots, t \right\rangle_{0, n+1, \beta} T^a \right)$$
 
 Here the first marked point carries $$T_a/(z-\psi)$$ (i.e., the pullback of $$T_a$$ with all degree $$\psi^k$$ inserted in generating-function form), and the remaining $$n$$ marked points all carry $$t \in H^\ast(X)$$, making a total of $$n+1$$ marked points.
-
-</div>
+:::
 
 That the big $$J$$-function forms a horizontal section of the big QDE follows by the same argument as the small version of [Proposition 4](#prop4). The small $$J$$-function is recovered as the $$t = t_{(2)} \in H^2(X)$$ specialization of the big $$J$$-function; applying the divisor equation (with descendant correction term) $$n$$ times to $$H^2$$ insertions makes the $$t_{(2)}$$ insertions come out as $$(t_{(2)} \cdot \beta)^n$$ factors and $$\psi$$-shift corrections, these sum to $$\sum_n (t_{(2)}\cdot \beta)^n/n! = q^\beta$$, and the $$\psi$$-shift correction produces an additional $$z^{-1}$$ factor, so that the small $$J$$-function form of [Definition 3](#def3) with a single marked point is directly recovered.
 

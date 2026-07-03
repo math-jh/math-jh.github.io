@@ -27,17 +27,12 @@ Hence we may ask what the requirement that the equivalence relation $$R$$ be com
 
 First, assume that $$R$$ is compatible with the operation of $$G$$. Then the elements of $$G/R$$ form a partition of $$G$$, and in particular the part containing the identity element is exactly $$[e]$$.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop1">**Proposition 1**</ins> For a quotient group $$G/R$$, the set $$[e]$$ is a subgroup of $$G$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 1
+For a quotient group $$G/R$$, the set $$[e]$$ is a subgroup of $$G$$.
+:::
+::: Proof
 Let $$a,b\in [e]$$. That is, $$a\sim e\sim b$$. Since $$R$$ is compatible with the operation of $$G$$, multiplying both sides of $$a\sim b$$ on the right by $$b^{-1}$$ yields $$ab^{-1}\sim e$$. Thus $$ab^{-1}\in[e]$$, so by [§Semigroups, Monoids, and Groups, ⁋Proposition 15](/en/math/algebraic_structures/groups#prop15) we know that $$[e]$$ is a subgroup.
-
-</details>
+:::
 
 Conversely, suppose an arbitrary subgroup $$H$$ of $$G$$ is given. Replacing $$[e]$$ with $$H$$ in the argument above, we can define the following relation:
 
@@ -53,9 +48,8 @@ $$(ca)(cb)^{-1}=cab^{-1}c^{-1}$$
 
 so in general $$\sim_{\tiny r}$$ need not be left compatible with the operation of $$G$$. But if for every $$x\in H$$, $$cxc^{-1}\in H$$ holds for all $$c\in G$$, then the right-hand side belongs to $$H$$, and thus $$\sim_{\tiny r}$$ defines a compatible equivalence relation on $$G$$.
 
-<div class="remark" markdown="1">
-
-**Remark**</ins> If instead of the equivalence relation $$\sim_r$$ we had defined the relation
+::: remark Remark {#rmk}
+If instead of the equivalence relation $$\sim_r$$ we had defined the relation
 
 $$a\sim_{\tiny l} b\iff a^{-1}b\in H$$
 
@@ -64,14 +58,11 @@ then $$\sim_{\tiny l}$$ would be left compatible, and since
 $$(ac)^{-1}(bc)=c^{-1}(a^{-1}b)c$$
 
 it is not right compatible. For this relation to be right compatible, $$c^{-1}xc\in H$$ must hold for arbitrary $$c\in G$$ and arbitrary $$x\in H$$, which is the same condition obtained above.
+:::
 
-</div>
-
-<div class="definition" markdown="1">
-
-<ins id="def2">**Definition 2**</ins> A subgroup $$H$$ of a group $$G$$ is called a *normal subgroup* if for every $$g\in G$$ and every $$h\in H$$, $$ghg^{-1}\in H$$ always holds.
-
-</div>
+::: Definition 2
+A subgroup $$H$$ of a group $$G$$ is called a *normal subgroup* if for every $$g\in G$$ and every $$h\in H$$, $$ghg^{-1}\in H$$ always holds.
+:::
 
 On the other hand, since $$g$$ can be chosen arbitrarily, one can show that $$H$$ being a normal subgroup is equivalent to $$gHg^{-1}=H$$ holding for every $$g$$. By the above discussion, when a normal subgroup $$H$$ of $$G$$ is given, we can obtain the corresponding quotient group. The resulting quotient group is then written as $$G/H$$.
 
@@ -95,11 +86,9 @@ $$Ha:=\{ha\mid h\in H\}$$
 
 we have $$[a]_{\tiny r}=Ha$$. Similarly, for $$G/{\sim_{\tiny l}}$$ we have $$[a]_{\tiny l}=aH$$. Of course, if the operation of $$G$$ were written as addition, these would conventionally be written as $$H+a$$ and $$a+H$$ respectively.
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**Definition 3**</ins> The two sets $$Ha$$ and $$aH$$ defined above are called the *right coset* and *left coset* respectively.
-
-</div>
+::: Definition 3
+The two sets $$Ha$$ and $$aH$$ defined above are called the *right coset* and *left coset* respectively.
+:::
 
 Thus, when an arbitrary subgroup $$H$$ of $$G$$ is given, the two equivalence relations $$\sim_{\tiny r}$$ and $$\sim_{\tiny l}$$ partition $$G$$ into right cosets and left cosets respectively. In this case, the quotient set of $$G$$ by $$\sim_{\tiny r}$$ is written as $$H\setminus G$$, and the quotient set of $$G$$ by $$\sim_{\tiny l}$$ is written as $$G/H$$.[^1] In general $$Ha\neq aH$$, but it is easy to check that $$Ha=aH$$ holds if and only if $$H$$ is normal.
 
@@ -113,19 +102,15 @@ $$Ha\mapsto a^{-1}H$$
 
 it is easy to check that this function is bijective. That is, $$\lvert H\setminus G\rvert=\lvert G/H\rvert$$.
 
-<div class="definition" markdown="1">
-
-<ins id="def4">**Definition 4**</ins> For a group $$G$$ and a subgroup $$H$$, we define the *index* $$[G:H]$$ of $$H$$ as $$\lvert G/H\rvert$$.
-
-</div>
+::: Definition 4
+For a group $$G$$ and a subgroup $$H$$, we define the *index* $$[G:H]$$ of $$H$$ as $$\lvert G/H\rvert$$.
+:::
 
 From the structure of $$G/H$$ examined above and the size of each element of $$G/H$$, the following proposition is immediate.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**Proposition 5 (Lagrange)**</ins> For a group $$G$$ and a subgroup $$H$$, $$\lvert G\rvert=[G:H]\lvert H\rvert$$ holds.
-
-</div>
+::: Proposition 5 (Lagrange)
+For a group $$G$$ and a subgroup $$H$$, $$\lvert G\rvert=[G:H]\lvert H\rvert$$ holds.
+:::
 
 This proposition also holds when $$G$$ or $$H$$ is infinite, but in particular when they are finite, we obtain the result that <phrase>for any subgroup $$H$$ of a group $$G$$, $$\lvert H\rvert$$ divides $$\lvert G\rvert$$</phrase>.
 

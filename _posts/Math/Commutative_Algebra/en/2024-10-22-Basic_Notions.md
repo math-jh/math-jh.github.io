@@ -20,13 +20,11 @@ In this category, every ring that appears is a commutative ring. Also, any $$A$$
 
 In this category we examine a commutative ring $$A$$ and a module $$M$$ defined over it. Since any ideal $$\mathfrak{a}$$ of the ring $$A$$ can always be regarded as an $$A$$-module, in many cases we develop the theory of $$A$$-modules. In the posts of the [\[Algebraic Structures\]](/en/algebraic_structures/) category, to avoid confusion we wrote elements of an $$A$$-module $$M$$ as $$x,y,\ldots$$ and elements of $$A$$ as $$\alpha,\beta,\ldots$$; however, if we regard $$\mathfrak{a}$$ also as an $$A$$-module, making such a distinction in notation causes more confusion rather than less, so in this category we do not make such a distinction.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> For any $$A$$-module $$M$$, we define the *annihilator* $\ann(M)$ of $$M$$ by the formula
+::: Definition 1
+For any $$A$$-module $$M$$, we define the *annihilator* $\ann(M)$ of $$M$$ by the formula
 
 $$\ann(M)=\{a\in A\mid aM=0\}$$
-
-</div>
+:::
 
 On the other hand, for two ideals $$\mathfrak{a},\mathfrak{b}$$ of a ring $$A$$ we define the *ideal quotient* $$(\mathfrak{a}:\mathfrak{b})$$ by the formula
 
@@ -60,9 +58,8 @@ and one can check that this is surjective and that its kernel is exactly the sub
 
 In many cases we assume some kind of finiteness. For example, in the posts of [\[Multilinear Algebra\]](/en/multilinear_algebra) we assumed that a given module is a finitely generated $$A$$-module, and by choosing a basis we could reduce many computations to matrix computations. In a similar vein we define the notions of finiteness that we will frequently use.
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**Definition 2**</ins> We say that an $$A$$-module $$M$$ satisfies the *ascending chain condition* if, whenever an increasing sequence
+::: Definition 2
+We say that an $$A$$-module $$M$$ satisfies the *ascending chain condition* if, whenever an increasing sequence
 
 $$M_0\subseteq M_1\subseteq M_2\subseteq\cdots$$
 
@@ -71,23 +68,18 @@ of submodules of $$M$$ is given, there exists a suitable $$k$$ such that $$M_k=M
 $$M_0\supseteq M_1\supseteq M_2\supseteq\cdots$$
 
 of submodules of $$M$$ is given, there exists a suitable $$k$$ such that $$M_k=M_{k+1}=\cdots$$. An $$A$$-module $$M$$ satisfying the ascending chain condition is called *noetherian*. An $$A$$-module $$M$$ satisfying the descending chain condition is called *artinian*. A ring $$A$$ being noetherian or artinian means that $$A$$ is noetherian or artinian as a module over itself.
-
-</div>
+:::
 
 Then the following holds.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm3">**Theorem 3**</ins> For any $$A$$-module $$M$$, the following are all equivalent.
+::: Theorem 3
+For any $$A$$-module $$M$$, the following are all equivalent.
 
 1. $$M$$ is noetherian.
 2. Every submodule of $$M$$ is finitely generated.
 3. Any collection of submodules of $$M$$ always has a maximal element with respect to inclusion.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 First assume condition 1 and show condition 2. Suppose for contradiction that $$M$$ has a submodule $$N$$ that is not finitely generated. Then we can choose an arbitrary element $$x_0\neq 0$$ of $$N$$, and since $$N$$ is not finitely generated we have $$N\neq \langle x_1\rangle$$, so we can choose $$x_2\in N\setminus \langle x_1\rangle$$. Repeating this, we obtain an increasing sequence of submodules of $$N$$
 
 $$\langle x_1\rangle\subsetneq \langle x_2\rangle\subsetneq\cdots$$
@@ -105,31 +97,21 @@ Now we show that conditions 1 and 3 are equivalent. First, if condition 1 is sat
 $$M_0\subseteq M_1\subseteq M_2\subseteq\cdots$$
 
 the collection of these must have a maximal element, so condition 1 holds.
-
-</details>
+:::
 
 Thus it is obvious that any submodule of a noetherian module is again noetherian. Moreover, the following holds.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**Proposition 4**</ins> For a noetherian $$A$$-module $$M$$, any quotient $$M/N$$ is also noetherian.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 4
+For a noetherian $$A$$-module $$M$$, any quotient $$M/N$$ is also noetherian.
+:::
+::: Proof
 Any submodule of $$M/N$$ is of the form $$L/N$$ for a suitable submodule $$L$$ of $$M$$, and now $$L$$ is finitely generated and the generators of $$L$$ generate $$L/N$$ under the canonical surjection, so this is obvious.
+:::
 
-</details>
-
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**Proposition 5**</ins> For any $$A$$-module $$M$$ and any submodule $$N$$, $$M$$ being noetherian is equivalent to both $$N$$ and $$M/N$$ being noetherian.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 5
+For any $$A$$-module $$M$$ and any submodule $$N$$, $$M$$ being noetherian is equivalent to both $$N$$ and $$M/N$$ being noetherian.
+:::
+::: Proof
 One direction has already been proved. Thus it suffices to show that $$M$$ is noetherian assuming that $$N$$ and $$M/N$$ are noetherian. Fix an arbitrary submodule $$L$$ of $$M$$. Then the image $$L/N$$ of $$L$$ in $$M/N$$ is finitely generated, and $$L\cap N$$ is also a submodule of $$N$$ so it is finitely generated. Now let $$x_1,\ldots, x_m\in L$$ be elements whose images in $$L/N$$ generate $$L/N$$, and let $$y_1,\ldots, y_n\in L\cap N$$ generate $$L\cap N$$. Then for any $$x\in L$$ there exist $$\alpha_i\in A$$ such that
 
 $$x\equiv \alpha_1x_1+\cdots+\alpha_m x_m\pmod{N}$$
@@ -139,22 +121,16 @@ Therefore
 $$x-\sum \alpha_i x_i\in L\cap N$$
 
 and rewriting this using the generators of $$L\cap N$$ gives the desired result.
-
-</details>
+:::
 
 Hence the following holds.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor6">**Corollary 6**</ins> For a ring $$A$$ and two noetherian $$A$$-modules $$M,N$$, the direct sum $$M\oplus N$$ is a noetherian $$A$$-module.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Corollary 6
+For a ring $$A$$ and two noetherian $$A$$-modules $$M,N$$, the direct sum $$M\oplus N$$ is a noetherian $$A$$-module.
+:::
+::: Proof
 Apply [Proposition 5](#prop5) to $$M\oplus N$$ and its submodule $$M\oplus 0\cong M$$.
-
-</details>
+:::
 
 The condition of a finitely generated $$A$$-module that we examined in the [\[Multilinear Algebra\]](/en/multilinear_algebra) category is that there exists an exact sequence
 
@@ -166,13 +142,11 @@ $$M=\langle x_1,\ldots, x_n\mid \text{relations on $x_i$}\rangle$$
 
 there may be infinitely many relations among the $$x_i$$. Since these relations are determined by the kernel of the surjection $$A^{\oplus n} \rightarrow M$$, we make the following definition.
 
-<div class="definition" markdown="1">
-
-<ins id="def7">**Definition 7**</ins> An $$A$$-module $$M$$ is called *finitely presented* if there exist suitable $$m,n$$ such that the following exact sequence exists:
+::: Definition 7
+An $$A$$-module $$M$$ is called *finitely presented* if there exist suitable $$m,n$$ such that the following exact sequence exists:
 
 $$A^{\oplus m} \rightarrow A^{\oplus n} \rightarrow M \rightarrow 0$$
-
-</div>
+:::
 
 In general a finitely presented module is finitely generated, but the converse does not hold. However, for any noetherian ring $$A$$ the two notions coincide. This is because if $$M$$ is a finitely generated $$A$$-module, then we obtain the exact sequence
 
@@ -188,70 +162,52 @@ $$A^{\oplus m} \rightarrow A^{\oplus n} \rightarrow M \rightarrow 0$$
 
 On the other hand we define the following.
 
-<div class="definition" markdown="1">
-
-<ins id="def8">**Definition 8**</ins> An $$A$$-module $$M$$ is called a *coherent module* if $$M$$ is finitely generated and, whenever any $$A$$-linear map $$A^{\oplus n} \rightarrow M$$ is given, the kernel of this linear map is finitely generated.
-
-</div>
+::: Definition 8
+An $$A$$-module $$M$$ is called a *coherent module* if $$M$$ is finitely generated and, whenever any $$A$$-linear map $$A^{\oplus n} \rightarrow M$$ is given, the kernel of this linear map is finitely generated.
+:::
 
 Then the following proposition is obvious.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop9">**Proposition 9**</ins> For a noetherian ring $$A$$ and an $$A$$-module $$M$$, the following are all equivalent.
+::: Proposition 9
+For a noetherian ring $$A$$ and an $$A$$-module $$M$$, the following are all equivalent.
 
 1. $$M$$ is finitely generated.
 2. $$M$$ is finitely presented.
 3. $$M$$ is coherent.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 The equivalence of conditions 1 and 2 has already been examined. Also, by definition a coherent $$A$$-module is always finitely generated. Thus it suffices to assume that $$M$$ is finitely generated and show that $$M$$ is coherent. This follows by applying [Proposition 5](#prop5) to the kernel of any given $$A$$-linear map $$A^{\oplus n}\rightarrow M$$, which is a submodule of $$A^{\oplus n}$$.
-
-</details>
+:::
 
 ## Prime Ideals
 
 Finally we need the notion of *prime ideal* that we defined in [\[Algebraic Structures\] §Field of Fractions, ⁋Proposition 8](/en/math/algebraic_structures/field_of_fractions#prop8).
 
-<div class="definition" markdown="1">
-
-<ins id="def10">**Definition 10**</ins> An ideal $$\mathfrak{p}\subsetneq A$$ of a ring $$A$$ is called a *prime ideal* if, whenever $$ab\in \mathfrak{p}$$, then necessarily $$a\in \mathfrak{p}$$ or $$b\in \mathfrak{p}$$ holds.
-
-</div>
+::: Definition 10
+An ideal $$\mathfrak{p}\subsetneq A$$ of a ring $$A$$ is called a *prime ideal* if, whenever $$ab\in \mathfrak{p}$$, then necessarily $$a\in \mathfrak{p}$$ or $$b\in \mathfrak{p}$$ holds.
+:::
 
 Then we can refine the fourth result of [\[Algebraic Structures\] §Quotient Rings, Ring Homomorphisms, ⁋Theorem 3](/en/math/algebraic_structures/quotient_rings#thm3) to obtain the following.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop11">**Proposition 11**</ins> For any ideal $$\mathfrak{a}$$ of a ring $$A$$, there is a one-to-one correspondence between prime ideals of $$A/\mathfrak{a}$$ and prime ideals of $$A$$ containing $$\mathfrak{a}$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 11
+For any ideal $$\mathfrak{a}$$ of a ring $$A$$, there is a one-to-one correspondence between prime ideals of $$A/\mathfrak{a}$$ and prime ideals of $$A$$ containing $$\mathfrak{a}$$.
+:::
+::: Proof
 By the third result of [\[Algebraic Structures\] §Quotient Rings, Ring Homomorphisms, ⁋Theorem 3](/en/math/algebraic_structures/quotient_rings#thm3), for $$\mathfrak{a}\subseteq \mathfrak{p}\subseteq A$$ we have
 
 $$A/\mathfrak{p}\cong \frac{A/\mathfrak{a}}{\mathfrak{p}/\mathfrak{a}}$$
 
 and then using the equivalence condition of [\[Algebraic Structures\] §Field of Fractions, ⁋Proposition 8](/en/math/algebraic_structures/field_of_fractions#prop8) gives the result.
-
-</details>
+:::
 
 ## Hilbert Basis Theorem
 
 So far we have examined the basic properties of noetherian modules. The rings we will deal with are mostly polynomial rings or quotients thereof, so it is important to know whether noetherianness is preserved under operations involving polynomial rings. This is a classical result proved by Hilbert.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm12">**Theorem 12 (Hilbert basis theorem)**</ins> For a noetherian ring $$A$$, the polynomial ring $$A[\x]$$ is also noetherian.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Theorem 12 (Hilbert basis theorem)
+For a noetherian ring $$A$$, the polynomial ring $$A[\x]$$ is also noetherian.
+:::
+::: Proof
 By [Theorem 3](#thm3) it suffices to show that any ideal $$I$$ of $$A[\x]$$ is finitely generated. For each integer $$n\geq 0$$, let $$\mathfrak{a}_n$$ be the set of leading coefficients of polynomials of degree $$n$$ belonging to $$I$$, together with $$0$$.
 
 First we check that $$\mathfrak{a}_n$$ is an ideal of $$A$$. Let $$a,b$$ be the leading coefficients of two polynomials $$f,g\in I$$ of degree $$n$$. Then $$f+g\in I$$ has degree $$n$$ and leading coefficient $$a+b$$, or if $$a+b=0$$ then its degree is less than $$n$$; in either case $$a+b\in \mathfrak{a}_n$$. Also, for any $$\lambda\in A$$ the leading coefficient of $$\lambda f\in I$$ is $$\lambda a$$ or $$0$$, so $$\lambda a\in \mathfrak{a}_n$$. On the other hand, if $$f\in I$$ has degree $$n$$ then $$\x f\in I$$ has degree $$n+1$$ and the same leading coefficient, so $$\mathfrak{a}_n\subseteq \mathfrak{a}_{n+1}$$ holds.
@@ -267,24 +223,18 @@ has degree less than $$d$$. If $$d>N$$, then $$c\in \mathfrak{a}_d=\mathfrak{a}_
 $$f-\sum_j \lambda_j \x^{d-N} f_{N,j}\in I$$
 
 also has degree less than $$d$$. In both cases the subtracted polynomial is an $$A[\x]$$-linear combination of the $$\{f_{n,j}\}$$, so by the induction hypothesis the above difference is generated by the $$\{f_{n,j}\}$$, and hence $$f$$ itself is as well. (The case $$f=0$$ is obvious.) Therefore $$I$$ is finitely generated.
-
-</details>
+:::
 
 In particular, by applying this repeatedly we see that the polynomial ring $$A[\x_1,\ldots,\x_n]=A[\x_1,\ldots,\x_{n-1}][\x_n]$$ is also noetherian, and from this we obtain the following.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor13">**Corollary 13**</ins> A finitely generated $$A$$-algebra $$B$$ over a noetherian ring $$A$$ is noetherian.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Corollary 13
+A finitely generated $$A$$-algebra $$B$$ over a noetherian ring $$A$$ is noetherian.
+:::
+::: Proof
 Since $$B$$ is a finitely generated $$A$$-algebra, there exists a surjective ring homomorphism $$A[\x_1,\ldots,\x_n]\rightarrow B$$ for a suitable $$n$$. That is, $$B\cong A[\x_1,\ldots,\x_n]/I$$ for some ideal $$I$$. Applying [Theorem 12](#thm12) repeatedly, we know that $$A[\x_1,\ldots,\x_n]$$ is noetherian.
 
 Now it suffices to show that a quotient of a noetherian ring is noetherian. By [\[Algebraic Structures\] §Quotient Rings, Ring Homomorphisms, ⁋Theorem 3](/en/math/algebraic_structures/quotient_rings#thm3), the ideals of $$B$$ are in one-to-one correspondence with the ideals of $$A[\x_1,\ldots,\x_n]$$ containing $$I$$, preserving inclusion. Thus any ascending chain of ideals of $$B$$ gives an ascending chain of ideals of $$A[\x_1,\ldots,\x_n]$$, and the latter stabilizes by the noetherianness of $$A[\x_1,\ldots,\x_n]$$, so the former also stabilizes. Regarding the ring $$B$$ as a $$B$$-module over itself, its submodules are exactly the ideals of $$B$$, so by [Theorem 3](#thm3) the ring $$B$$ is noetherian.
-
-</details>
+:::
 
 ---
 

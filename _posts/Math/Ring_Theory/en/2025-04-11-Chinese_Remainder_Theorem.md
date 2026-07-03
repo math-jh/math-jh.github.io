@@ -16,13 +16,11 @@ last_polished_at: 2026-06-01T23:00:02+00:00
 ---
 ## Products of Ideals
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> For two two-sided ideals $$\mathfrak{a},\mathfrak{b}$$ of a ring $$A$$, their *product* $$\mathfrak{a}\mathfrak{b}$$ is defined as the set
+::: Definition 1
+For two two-sided ideals $$\mathfrak{a},\mathfrak{b}$$ of a ring $$A$$, their *product* $$\mathfrak{a}\mathfrak{b}$$ is defined as the set
 
 $$\mathfrak{a}\mathfrak{b}=\{x_1y_1+x_2y_2+\cdots+x_ny_n: x_i\in \mathfrak{a}, y_i\in \mathfrak{b}, n\geq 1\}.$$
-
-</div>
+:::
 
 That $$\mathfrak{a}\mathfrak{b}$$ is a subgroup of $$A$$ under addition is clear. Moreover, for any element $$x_1y_1+\cdots+x_ny_n$$ of $$\mathfrak{a}\mathfrak{b}$$ and any element $$x$$ of $$A$$,
 
@@ -30,18 +28,14 @@ $$x(x_1y_1+\cdots+x_ny_n)=xx_1y_1+\cdots xx_ny_n$$
 
 and since $$xx_i\in \mathfrak{a}$$, we have $$x(x_1y_1+\cdots+x_ny_n)\in \mathfrak{a}\mathfrak{b}$$. A similar argument with multiplication on the right shows that $$\mathfrak{a}\mathfrak{b}$$ is a two-sided ideal of $$A$$.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**Proposition 2**</ins> With respect to the multiplication defined above, the collection of two-sided ideals of $$A$$ forms a monoid with identity element $$A$$. Moreover, the distributive laws
+::: Proposition 2
+With respect to the multiplication defined above, the collection of two-sided ideals of $$A$$ forms a monoid with identity element $$A$$. Moreover, the distributive laws
 
 $$\mathfrak{a}(\mathfrak{b}+\mathfrak{c})=\mathfrak{a}\mathfrak{b}+\mathfrak{a}\mathfrak{c},\quad (\mathfrak{a}+\mathfrak{b})\mathfrak{c}=\mathfrak{a}\mathfrak{c}+\mathfrak{b}\mathfrak{c}$$
 
 hold.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 Let three two-sided ideals $$\mathfrak{a},\mathfrak{b},\mathfrak{c}$$ be given. Then any element of $$(\mathfrak{a}\mathfrak{b})\mathfrak{c}$$ can be written in the form
 
 $$\left(\sum_{i=1}^{n_1} x_i^{(1)}y_i^{(1)}\right)z_1+\cdots+\left(\sum_{i=1}^{n_k}x_i^{(k)}y_i^{(k)}\right)z_k$$
@@ -57,8 +51,7 @@ using the distributive law, one easily shows that $$\mathfrak{a}(\mathfrak{b}+\m
 $$a_1b_1+\cdots+a_nb_n + a_1'c_1+\cdots +a_m'c_m\in \mathfrak{a}\mathfrak{b}+\mathfrak{a}\mathfrak{c}$$
 
 since the $$b_i$$ and $$c_i$$ all belong to $$\mathfrak{b}+\mathfrak{c}$$, the above element lies in $$\mathfrak{a}(\mathfrak{b}+\mathfrak{c})$$. The right distributive law is proved similarly.
-
-</details>
+:::
 
 Thus the collection of two-sided ideals of $$A$$ has a structure identical to that of a ring except for additive inverses. Such a structure is called a semiring, though we will not have much occasion to use it.
 
@@ -68,18 +61,14 @@ $$\mathfrak{a}\mathfrak{b}\subset \mathfrak{a}A\subset \mathfrak{a},\quad \mathf
 
 both hold, so $$\mathfrak{a}\mathfrak{b}\subset \mathfrak{a}\cap \mathfrak{b}$$. In general equality need not hold, but it may in special cases.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop3">**Proposition 3**</ins> Let $$\mathfrak{a},\mathfrak{b}_1,\ldots, \mathfrak{b}_n$$ be two-sided ideals of $$A$$, and assume that $$A=\mathfrak{a}+\mathfrak{b}_i$$ holds for all $$i$$. Then
+::: Proposition 3
+Let $$\mathfrak{a},\mathfrak{b}_1,\ldots, \mathfrak{b}_n$$ be two-sided ideals of $$A$$, and assume that $$A=\mathfrak{a}+\mathfrak{b}_i$$ holds for all $$i$$. Then
 
 $$A=\mathfrak{a}+\mathfrak{b}_1\cdots \mathfrak{b}_n=\mathfrak{a}+(\mathfrak{b}_1\cap\cdots\cap \mathfrak{b}_n)$$
 
 holds.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 Since $$\mathfrak{b}_1\cdots \mathfrak{b}_n\subset \mathfrak{b}_1\cap \cdots\cap \mathfrak{b}_n$$ in any case, it suffices to show that $$A=\mathfrak{a}+\mathfrak{b}_1\cdots \mathfrak{b}_n$$. Moreover, since the proof proceeds by induction, it is enough to consider the case $$n=2$$. That is, suppose $$A=\mathfrak{a}+\mathfrak{b}_1=\mathfrak{a}+\mathfrak{b}_2$$, and let us show that $$A=\mathfrak{a}+\mathfrak{b}_1 \mathfrak{b}_2$$.
 
 From $$A=\mathfrak{a}+\mathfrak{b}_1=\mathfrak{a}+\mathfrak{b}_2$$, we can choose $$a,a'\in \mathfrak{a}$$ and $$b_i\in \mathfrak{b}_i$$ satisfying $$1=a+b_1=a'+b_2$$. Then
@@ -87,14 +76,12 @@ From $$A=\mathfrak{a}+\mathfrak{b}_1=\mathfrak{a}+\mathfrak{b}_2$$, we can choos
 $$1=a'+b_2=a'+1b_2=a'+(a+b_1)b_2=(a+a'b_2)+b_1b_2\in \mathfrak{a}+\mathfrak{b}_1 \mathfrak{b}_2$$
 
 holds.
-
-</details>
+:::
 
 Using this we can prove the following proposition, which yields
 
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**Proposition 4**</ins> Let $$\mathfrak{b}_1,\ldots, \mathfrak{b}_n$$ be two-sided ideals of $$A$$ such that $$\mathfrak{b}_i+\mathfrak{b}_j=A$$ ($$i\neq j$$) always holds. Then the equality
+::: Proposition 4
+Let $$\mathfrak{b}_1,\ldots, \mathfrak{b}_n$$ be two-sided ideals of $$A$$ such that $$\mathfrak{b}_i+\mathfrak{b}_j=A$$ ($$i\neq j$$) always holds. Then the equality
 
 $$\mathfrak{b}_1\cap \cdots\cap \mathfrak{b}_n=\sum_{\sigma\in S_n} \mathfrak{b}_{\sigma(1)}\cdots \mathfrak{b}_{\sigma(n)}$$
 
@@ -103,11 +90,8 @@ holds, and therefore in particular if $$A$$ is commutative then
 $$\mathfrak{b}_1\cap \cdots\cap \mathfrak{b}_n=\mathfrak{b}_1\cdots \mathfrak{b}_n$$
 
 holds.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 We again argue by induction. First, in the case $$n=2$$, we can find $$b_i\in \mathfrak{b}_i$$ satisfying $$b_1+b_2=1$$. Now for any $$x\in \mathfrak{b}_1\cap \mathfrak{b}_2$$,
 
 $$x=x\cdot 1=x(b_1+b_2)=xb_1+xb_2\in \mathfrak{b}_2 \mathfrak{b}_1+\mathfrak{b}_1 \mathfrak{b}_2$$
@@ -125,26 +109,20 @@ holds. By the induction hypothesis $$\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_{n
 $$\mathfrak{b}_n\cap(\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_{n-1})=\left(\sum_{\sigma\in S_{n-1}}\mathfrak{b}_{\sigma(1)}\cdots\mathfrak{b}_{\sigma(n-1)}\right)\mathfrak{b}_n+\mathfrak{b}_n\left(\sum_{\sigma\in S_{n-1}}\mathfrak{b}_{\sigma(1)}\cdots \mathfrak{b}_{\sigma(n-1)}\right)$$
 
 and here the right-hand side is a partial sum of $$\sum_{\sigma\in S_n}\mathfrak{b}_{\sigma(1)}\cdots \mathfrak{b}_{\sigma(n)}$$, so we obtain the desired conclusion.
-
-</details>
+:::
 
 ## Chinese Remainder Theorem
 
 Let $$A$$ be a ring, and let $$\mathfrak{a}_i$$ be two-sided ideals of $$A$$. Then there are projections $$\pi_i:A \rightarrow A/\mathfrak{a}_i$$, and from these we obtain a ring homomorphism $$\pi:A \rightarrow\prod A/\mathfrak{a}_i$$.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**Proposition 5**</ins> Let $$A$$ be a ring, and let $$\mathfrak{a}_1,\ldots, \mathfrak{a}_n$$ be two-sided ideals of $$A$$. If $$\mathfrak{a}_i+\mathfrak{a}_j=A$$ always holds for $$i\neq j$$, then the $$\pi:A \rightarrow \prod_1^n A/\mathfrak{a}_i$$ defined above is surjective, and the kernel of this map equals $$\bigcap \mathfrak{a}_i$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 5
+Let $$A$$ be a ring, and let $$\mathfrak{a}_1,\ldots, \mathfrak{a}_n$$ be two-sided ideals of $$A$$. If $$\mathfrak{a}_i+\mathfrak{a}_j=A$$ always holds for $$i\neq j$$, then the $$\pi:A \rightarrow \prod_1^n A/\mathfrak{a}_i$$ defined above is surjective, and the kernel of this map equals $$\bigcap \mathfrak{a}_i$$.
+:::
+::: Proof
 First, $$\ker\pi=\bigcap \mathfrak{a}_i$$ is clear, so it suffices to show that $$\pi$$ is surjective. We do this by induction.
 
 The case $$n=1$$ is clear from the properties of the quotient ring. Now suppose there exists $$y\in A$$ such that $$\pi_i(y)=x_i+\mathfrak{a}_i$$ holds for all $$i=1,\ldots, n-1$$. If there exists $$x\in A$$ satisfying $$\pi_i(x)=x_i+\mathfrak{a}_i$$ for all $$i=1,\ldots, n$$, then we can write $$x=y+z$$ for some $$z\in A$$, and then the conditions on $$x$$ and $$y$$ require that $$z\in\bigcap_{i=1}^{n-1} \mathfrak{a}_i$$. Also, $$z+\mathfrak{a}_n=x_n-y+\mathfrak{a}_n$$ must hold, and conversely, if such $$z$$ exists then $$x=y+z$$ is the desired $$x$$. But by [Proposition 3](#prop3), $$\mathfrak{a}_n+\bigcap_1^{n-1} \mathfrak{a}_i=A$$ holds, so we can always find such $$z$$.
-
-</details>
+:::
 
 Therefore, by the first isomorphism theorem there is a canonical isomorphism
 
@@ -160,19 +138,14 @@ Now consider the case $$A=\mathbb{Z}$$, and for pairwise coprime integers $$n_1,
 
 More generally, the following are all equivalent.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop6">**Proposition 6**</ins> Let $$A$$ be a ring, let $$C(A)$$ be its center, and let $$\mathfrak{a}_1,\ldots, \mathfrak{a}_n$$ be two-sided ideals of $$A$$. The following are all equivalent.
+::: Proposition 6
+Let $$A$$ be a ring, let $$C(A)$$ be its center, and let $$\mathfrak{a}_1,\ldots, \mathfrak{a}_n$$ be two-sided ideals of $$A$$. The following are all equivalent.
 
 1. The map $$A \rightarrow \prod A/\mathfrak{a}_i$$ defined above is an isomorphism.
 2. For all $$i\neq j$$, $$\mathfrak{a}_i+\mathfrak{a}_j=A$$ and $$\bigcap \mathfrak{a}_i=0$$.
 3. For all $$i\neq j$$, $$\mathfrak{a}_i+\mathfrak{a}_j=A$$ and $$\prod \mathfrak{a}_i=0$$.
 4. There exist elements $$e_1,\ldots, e_n$$ of $$C(A)$$ such that $$\sum e_i=1$$, $$e_i^2=e_i$$ for all $$i$$, $$e_ie_j=0$$ for all $$i\neq j$$, and $$\mathfrak{a}_i=A(1-e_i)$$ for all $$i$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 The $$e_i$$ in the last condition denote the elements of $$\prod A/\mathfrak{a}_i$$ whose $$i$$th component is $$1$$ and whose remaining components are all $$0$$. With this in mind, one easily sees that the four conditions are all equivalent.
-
-</details>
+:::

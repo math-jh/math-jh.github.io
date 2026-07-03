@@ -20,15 +20,13 @@ One good strategy for dealing with a mathematical object whose structure is comp
 
 Let us begin with the following definition.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> For an arbitrary finite group $$G$$, a *representation* of $$G$$ is given by a finite-dimensional vector space $$V$$ and a function
+::: Definition 1
+For an arbitrary finite group $$G$$, a *representation* of $$G$$ is given by a finite-dimensional vector space $$V$$ and a function
 
 $$\rho: G\times V \rightarrow V$$
 
 satisfying the conditions of a group action such that each $$\rho(g,-)$$ is a linear map.
-
-</div>
+:::
 
 In general the ground field $$\mathbb{K}$$ could be replaced by an arbitrary ring $$A$$ without any problem, but for our discussion it suffices to fix $$\mathbb{K}=\mathbb{C}$$. Also, keep in mind that we mainly consider the case where $$V$$ is a *finite-dimensional* vector space as the representation space. This too can be generalized to infinite-dimensional vector spaces, but for that one needs standard methods such as endowing $$V$$ with a topological vector space structure.
 
@@ -44,29 +42,25 @@ $$L(g\cdot v)=g\cdot L(v)\qquad\text{for all $g\in G$ and $v\in V$}$$
 
 On the other hand, borrowing the language of linear algebra applied to $$V$$, we can make the following definition.
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**Definition 2**</ins> For a representation $$G\times V\rightarrow V$$ of a group $$G$$, we define the following.
+::: Definition 2
+For a representation $$G\times V\rightarrow V$$ of a group $$G$$, we define the following.
 
 1. A subspace $$W$$ of $$V$$ is called *$$G$$-invariant* if for every $$g\in G$$ and every $$w\in W$$, we always have $$g\cdot w\in W$$.
 2. For any $$G$$-invariant subspace $$W$$, the representation $$G\times W\rightarrow W$$ is called a *subrepresentation* of $$V$$.
 3. If $$V$$ is not the zero representation and the only subrepresentations of $$V$$ are the trivial ones, namely itself and $$G\times\{0\}\rightarrow\{0\}$$, then $$V$$ is called an *irreducible representation*.
-
-</div>
+:::
 
 From the same point of view we can define, for arbitrary representations $$V,W$$, the objects $$V\oplus W$$, $$V\otimes W$$, etc., using the operations on their underlying vector spaces. One thing to be slightly careful about in the next definition is that, unlike in [Definition 2](#def2) above, there may not be a *natural* $$G$$-action on $$V\otimes W$$, etc.; therefore we explicitly define a $$G$$-action on each vector space.
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**Definition 3**</ins> For $$G$$-representations $$V, W$$, we define new $$G$$-representations via the following $$G$$-actions.
+::: Definition 3
+For $$G$$-representations $$V, W$$, we define new $$G$$-representations via the following $$G$$-actions.
 
 1. Direct sum $$V\oplus W$$; $$G$$-action $$g\cdot(v,w)=(g\cdot v,g\cdot w)$$
 2. Tensor product $$V\otimes W$$; $$G$$-action $$g\cdot(v\otimes w)=(g\cdot v)\otimes (g\cdot w)$$, and from this the exterior power $$\bigwedge^k V$$, symmetric power $$\operatorname{Sym}^k V$$, and the $$G$$-actions on them
 3. $$\Hom_\mathbb{C}(V,W)$$; $$G$$-action $$(g\cdot f)(v)=g\cdot f(g^{-1}\cdot v)$$
 4. The *dual representation* $$V^\ast$$ obtained from 3 by setting $$W=\mathbb{C}$$
 5. The *conjugate representation* $$\overline{V}$$ obtained by replacing scalar multiplication with its conjugate (same $$G$$-action)
-
-</div>
+:::
 
 ## Category $$\lMod{\mathbb{C}[G]}$$
 
@@ -102,13 +96,11 @@ $$\widetilde{\rho}\left(\sum_{x\in G} \phi_x x, v\right)= \sum_{x\in G} \phi_x\r
 
 gives a $$\mathbb{C}[G]$$-module structure on $$V$$. Conversely, given any $$\mathbb{C}[G]$$-module $$V$$, we can obtain a $$G$$-representation from the action of each $$x\in G$$ on $$V$$.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**Proposition 4**</ins> The above correspondences give a categorical equivalence
+::: Proposition 4
+The above correspondences give a categorical equivalence
 
 $$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$
-
-</div>
+:::
 
 That is, what we called a $$G$$-module can be thought of, strictly speaking, as looking only at the action coming from $$G\hookrightarrow \mathbb{C}[G]$$ in a $$\mathbb{C}[G]$$-module structure.
 
@@ -136,15 +128,13 @@ $$p: V\rightarrow V^G;\qquad v\mapsto \frac{1}{\lvert G\rvert}\sum_{g\in G}g\cdo
 
 exists. In particular, the idea contained in this projection map — namely, the idea of averaging over all actions of $$G$$ to obtain a $$G$$-invariant object — is of central importance.
 
-<div class="definition" markdown="1">
-
-<ins id="def5">**Definition 5**</ins> A Hermitian inner product $$\langle-,-\rangle$$ on a $$G$$-representation $$V$$ is called *$$G$$-invariant* if for every $$g\in G$$ and $$u,v\in V$$,
+::: Definition 5
+A Hermitian inner product $$\langle-,-\rangle$$ on a $$G$$-representation $$V$$ is called *$$G$$-invariant* if for every $$g\in G$$ and $$u,v\in V$$,
 
 $$\langle g\cdot u,g\cdot v\rangle=\langle u,v\rangle$$
 
 holds. A representation possessing a $$G$$-invariant inner product is called a *unitary representation*.
-
-</div>
+:::
 
 If such a $$G$$-invariant inner product is given, then for every $$g\in G$$, $$\rho(g)\in \Aut(V)$$ is a unitary operator. To see this, suppose a $$G$$-invariant inner product $$\langle -,-\rangle$$ is given; then for every $$g\in G$$,
 
@@ -154,14 +144,10 @@ holds for all $$v,w\in V$$.
 
 On the other hand, every finite-dimensional $$G$$-module $$V$$ admits a $$G$$-invariant inner product. This can be proved using the idea mentioned above.
 
-<div class="proposition" markdown="1">
- 
-<ins id="prop6">**Proposition 6**</ins> Every representation $$V$$ admits a $$G$$-invariant inner product. That is, every representation is unitary.
- 
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 6
+Every representation $$V$$ admits a $$G$$-invariant inner product. That is, every representation is unitary.
+:::
+::: Proof
 For any Hermitian inner product $$\langle -,- \rangle$$ on $$V$$, define a new inner product $$\langle\kern-1.5pt\langle-,-\rangle\kern-1.5pt\rangle$$ by
 
 $$\langle\kern-1.5pt\langle u,v\rangle\kern-1.5pt\rangle = \frac{1}{\vert G\vert }\sum_{g \in G} \langle g\cdot u, g\cdot v \rangle$$
@@ -171,22 +157,16 @@ Then for any $$h\in G$$,
 $$\langle\kern-1.5pt\langle h\cdot u, h\cdot v\rangle\kern-1.5pt\rangle = \frac{1}{\vert G\vert }\sum_{g \in G} \langle gh\cdot u, gh\cdot v \rangle = \langle\kern-1.5pt\langle u, v\rangle\kern-1.5pt\rangle$$
 
 so this inner product is $$G$$-invariant.
-
-</details>
+:::
 
 At any rate, the central theorem of this section follows from the above proposition.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor7">**Corollary 7 (Maschke)**</ins> For any finite-dimensional $$G$$-representation $$V$$ and $$G$$-invariant subspace $$W$$, there exists a suitable $$G$$-invariant subspace $$W'$$ such that $$V = W \oplus W'$$. Therefore, inductively, any finite-dimensional $$G$$-representation decomposes as a direct sum of irreducible representations.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Corollary 7 (Maschke)
+For any finite-dimensional $$G$$-representation $$V$$ and $$G$$-invariant subspace $$W$$, there exists a suitable $$G$$-invariant subspace $$W'$$ such that $$V = W \oplus W'$$. Therefore, inductively, any finite-dimensional $$G$$-representation decomposes as a direct sum of irreducible representations.
+:::
+::: Proof
 Taking $$W'$$ to be the orthogonal complement of $$W$$, then $$W'$$ is also a $$G$$-invariant subspace and $$V = W \oplus W'$$ holds.
-
-</details>
+:::
 
 Earlier we examined the categorical equivalence
 
@@ -202,35 +182,28 @@ exists.
 
 In the next post we give a representation-theoretic meaning to the decomposition (1). As preparation for this, we prove the following lemma.
 
-<div class="proposition" markdown="1">
-
-<ins id="lem8">**Lemma 8 (Schur)**</ins> Let a (compact) group $$G$$ and irreducible $$G$$-modules $$V,W$$ be given. Then the following hold.
+::: Lemma 8 (Schur)
+Let a (compact) group $$G$$ and irreducible $$G$$-modules $$V,W$$ be given. Then the following hold.
 
 1. Any $$G$$-map $$V\rightarrow W$$ is either the zero map or an isomorphism.
 2. Any $$G$$-automorphism $$f\in \Aut_G(V)$$ is of the form $$f(v)=\lambda v$$.
 3. The space of $$G$$-maps $$\Hom_G(V,W)$$ is either $$\mathbb{C}$$ or $$0$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 1. This is obvious by considering the kernel and image.
 2. The given $$f$$ is a $$\mathbb{C}$$-linear map before being a $$G$$-linear map, so $$f$$ has an eigenvalue $$\lambda$$. Now let $$W$$ be the eigenspace corresponding to this eigenvalue; it suffices to show that this is in fact a $$G$$-submodule.
 3. This is obvious from the two propositions above.
-
-</details>
+:::
 
 Using this we obtain the following proposition.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop9">**Proposition 9**</ins> In the same situation as above, the function
+::: Proposition 9
+In the same situation as above, the function
 
 $$d=\bigoplus_{W\in\Irr(G, \mathbb{C})} d_W:\bigoplus_{W\in \Irr(G, \mathbb{C})}\Hom_G(W,V)\otimes_\mathbb{C}W\rightarrow V$$
 
 is an isomorphism.
-
-</div>
+:::
 
 The proof of this is obvious from the identity
 
@@ -238,11 +211,9 @@ $$\Hom_G(W, V)=\Hom_G\left(W, \bigoplus V_j\right)\cong \bigoplus \Hom_G(W, V_j)
 
 and [Lemma 8](#lem8), since $$V$$ has an irreducible decomposition $$V=\bigoplus V_j$$. That is, although we have written it in a complicated way, the above $$d$$ simply counts how many copies of each irreducible $$G$$-module $$W$$ (or rather, its isomorphism class) appear inside $$V$$; therefore the following definition is natural.
 
-<div class="definition" markdown="1">
-
-<ins id="def10">**Definition 10**</ins> The image of $$W\in\Irr(G, \mathbb{C})$$ under the above function is called the *$$W$$-isotypical summand* of $$V$$, and $$\Hom_G(W, V)$$ is called the *multiplicity* of $$W$$.
-
-</div>
+::: Definition 10
+The image of $$W\in\Irr(G, \mathbb{C})$$ under the above function is called the *$$W$$-isotypical summand* of $$V$$, and $$\Hom_G(W, V)$$ is called the *multiplicity* of $$W$$.
+:::
 
 With a small leap of faith, one can also be convinced that such a decomposition is unique. That is, we know that any representation $$V$$ can be written in the form of the decomposition
 

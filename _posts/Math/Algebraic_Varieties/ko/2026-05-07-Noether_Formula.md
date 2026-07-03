@@ -15,43 +15,35 @@ published: false
 
 Smooth projective surface의 기하학을 분류하는 데 있어 가장 기본적인 불변량들은 자기교차수 $$K_S^2$$, topological Euler characteristic $$\rchi_{\mathrm{top}}(S)$$, 그리고 structure sheaf의 Euler characteristic $$\rchi(\mathcal{O}_S)$$이다. 이 세 불변량 사이에는 놀랍도록도 단순한 선형관계가 존재하며, 이를 **Noether formula**라 부른다. 본 글에서는 Hirzebruch-Riemann-Roch 정리의 곡면으로의 환원을 통해 Noether formula를 유도하고, $$c_2(S)$$의 기하학적 의미를 설명한 뒤, 다양한 구체적인 예시를 통해 이 공식을 검증한다.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> Smooth projective surface $$S$$의 **topological Euler characteristic** $$\rchi_{\mathrm{top}}(S)$$는
+::: 정의 1
+Smooth projective surface $$S$$의 **topological Euler characteristic** $$\rchi_{\mathrm{top}}(S)$$는
 
 $$\rchi_{\mathrm{top}}(S)=\sum_{i=0}^4(-1)^i\dim H^i(S,\mathbb{Q})$$
 
 으로 정의된다.
+:::
 
-</div>
-
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**명제 2 (Poincaré-Hopf)**</ins> Smooth projective surface $$S$$에 대하여, 그 두 번째 Chern class의 적분값은 topological Euler characteristic과 일치한다. 즉
+::: 명제 2 (Poincaré-Hopf)
+Smooth projective surface $$S$$에 대하여, 그 두 번째 Chern class의 적분값은 topological Euler characteristic과 일치한다. 즉
 
 $$\int_S c_2(T_S)=\rchi_{\mathrm{top}}(S)$$
 
 이 성립한다.
-
-</div>
+:::
 
 이는 [§천 특성류, ⁋명제 10](/ko/math/algebraic_varieties/chern_classes#prop10)의 일반적인 진술을 surface의 경우에 적용한 것이며, 그 증명은 위상적 논증을 필요로 하므로 [BT] 등의 문헌으로 미룬다. 이 명제는 $$c_2(S)$$가 단순한 형식적 불변량이 아니라, surface의 위상적 구조를 측정하는 기하학적 양임을 보장한다. 예를 들어 $$\mathbb{P}^2$$의 경우 $$\rchi_{\mathrm{top}}(\mathbb{P}^2)=3$$이며, 이는 $$c_2(T_{\mathbb{P}^2})=3H^2$$의 적분값과 일치함을 아래 [예시 6](#ex6)에서 확인한다.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm3">**정리 3 (Noether formula)**</ins> Algebraically closed field 위의 smooth projective surface $$S$$에 대하여 다음이 성립한다.
+::: 정리 3 (Noether formula)
+Algebraically closed field 위의 smooth projective surface $$S$$에 대하여 다음이 성립한다.
 
 $$K_S^2+c_2(S)=12\rchi(\mathcal{O}_S)$$
 
 여기서 $$K_S$$는 canonical divisor, $$c_2(S)=c_2(T_S)$$는 tangent bundle의 두 번째 Chern class, $$\rchi(\mathcal{O}_S)$$는 structure sheaf의 Euler characteristic이다.
-
-</div>
+:::
 
 Noether formula는 surface의 대수적 불변량 $$\rchi(\mathcal{O}_S)$$와 기하학적 불변량 $$K_S^2$$, 위상적 불변량 $$c_2(S)$$를 하나의 선형 관계로 묶는다. 이는 곡면의 기하학을 분류하는 데 있어 핵심적인 도구로, 특히 Enriques-Kodaira 분류에서 각 birational equivalence class의 불변량들을 제한하는 강력한 제약을 제공한다.
 
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 Hirzebruch-Riemann-Roch 정리 ([§Hirzebruch-Riemann-Roch, ⁋정리 2](/ko/math/algebraic_varieties/hirzebruch_riemann_roch#thm2))에 의해, smooth projective surface $$S$$ 위의 line bundle $$\mathcal{O}_S$$에 대하여
 
 $$\rchi(S,\mathcal{O}_S)=\int_S\operatorname{ch}(\mathcal{O}_S)\cdot\operatorname{td}(T_S)$$
@@ -69,27 +61,21 @@ $$\operatorname{td}(T_S)=1-\frac{K_S}{2}+\frac{K_S^2+c_2(S)}{12}$$
 $$\rchi(\mathcal{O}_S)=\int_S\frac{K_S^2+c_2(S)}{12}=\frac{K_S^2+c_2(S)}{12}$$
 
 이다. 양변에 $$12$$를 곱하면 Noether formula를 얻는다. $$\square$$
-
-</details>
+:::
 
 정리 [3](#thm3)의 증명에서 확인할 수 있듯이, Noether formula는 Hirzebruch-Riemann-Roch 정리에 $$\mathcal{F}=\mathcal{O}_S$$를 대입한 직접적인 결과이다. 이는 HRR 정리가 단순한 계산적 도구를 넘어, 서로 다른 영역의 불변량들 사이의 심층적인 연결을 제공함을 보여준다.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor4">**따름정리 4**</ins> Smooth projective surface $$S$$에 대하여
+::: 따름정리 4
+Smooth projective surface $$S$$에 대하여
 
 $$12\rchi(\mathcal{O}_S)=K_S^2+\rchi_{\mathrm{top}}(S)$$
 
 이 성립한다.
+:::
 
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 명제 [2](#prop2)에 의해 $$c_2(S)=\rchi_{\mathrm{top}}(S)$$이므로, 이를 Noether formula의 $$c_2(S)$$에 대입하면 즉각적으로 결과를 얻는다. $$\square$$
-
-</details>
+:::
 
 따름정리 [4](#cor4)는 Noether formula를 기하-위상적 관점에서 재해석한다. $$K_S^2$$은 surface의 "대수적 복잡도"를, $$\rchi_{\mathrm{top}}(S)$$는 "위상적 복잡도"를 측정하며, 이들의 합이 항상 $$12$$의 배수가 된다는 사실은 놀라운 정수성 조건을 제공한다.
 
@@ -97,19 +83,15 @@ $$12\rchi(\mathcal{O}_S)=K_S^2+\rchi_{\mathrm{top}}(S)$$
 
 Noether formula의 우변에 등장하는 $$\rchi(\mathcal{O}_S)$$는 surface의 여러 중요한 지표들과 밀접하게 연결된다. Serre duality와 Hodge theory를 통해 이 불변량을 보다 구체적인 cohomological 지표로 전개할 수 있다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**명제 5**</ins> Smooth projective surface $$S$$에 대하여
+::: 명제 5
+Smooth projective surface $$S$$에 대하여
 
 $$\rchi(\mathcal{O}_S)=1-q+p_g$$
 
 이 성립한다. 여기서 $$q=h^1(S,\mathcal{O}_S)$$는 **불규칙성**<sub>irregularity</sub>, $$p_g=h^0(S,K_S)$$는 **기하적 genus**<sub>geometric genus</sub>이다.
+:::
 
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 Euler characteristic의 정의에 의해
 
 $$\rchi(\mathcal{O}_S)=h^0(\mathcal{O}_S)-h^1(\mathcal{O}_S)+h^2(\mathcal{O}_S)$$
@@ -123,8 +105,7 @@ $$h^2(\mathcal{O}_S)=h^0(K_S)=p_g$$
 $$\rchi(\mathcal{O}_S)=1-q+p_g$$
 
 를 얻는다. $$\square$$
-
-</details>
+:::
 
 명제 [5](#prop5)에 의해 Noether formula는
 
@@ -136,9 +117,8 @@ $$K_S^2+\rchi_{\mathrm{top}}(S)=12(1-q+p_g)$$
 
 구체적인 surface들에 대해 Noether formula를 직접 검증함으로써, 이 정리의 내용과 불변량들의 계산 방법을 확립한다.
 
-<div class="example" markdown="1">
-
-<ins id="ex6">**예시 6 ($$\mathbb{P}^2$$)**</ins> Projective plane $$S=\mathbb{P}^2$$에 대하여, canonical divisor는 $$K_{\mathbb{P}^2}=-3H$$이며 $$H$$는 hyperplane class이다. 따라서
+::: 예시 6 ($$\mathbb{P}^2$$)
+Projective plane $$S=\mathbb{P}^2$$에 대하여, canonical divisor는 $$K_{\mathbb{P}^2}=-3H$$이며 $$H$$는 hyperplane class이다. 따라서
 
 $$K_{\mathbb{P}^2}^2=(-3H)^2=9H^2=9$$
 
@@ -147,12 +127,10 @@ $$K_{\mathbb{P}^2}^2=(-3H)^2=9H^2=9$$
 $$\rchi(\mathcal{O}_{\mathbb{P}^2})=h^0(\mathcal{O}_{\mathbb{P}^2})=1$$
 
 이다. 따라서 $$9+3=12\cdot 1$$이 성립하여 Noether formula를 만족한다.
+:::
 
-</div>
-
-<div class="example" markdown="1">
-
-<ins id="ex7">**예시 7 ($$\mathbb{P}^1\times\mathbb{P}^1$$)**</ins> Product surface $$S=\mathbb{P}^1\times\mathbb{P}^1$$에 대하여, $$H_1$$과 $$H_2$$를 각 인자로의 pullback of hyperplane class라 하면 canonical divisor는 $$K_S=-2H_1-2H_2$$이다. $$H_1^2=H_2^2=0$$이고 $$H_1\cdot H_2=1$$이므로
+::: 예시 7 ($$\mathbb{P}^1\times\mathbb{P}^1$$)
+Product surface $$S=\mathbb{P}^1\times\mathbb{P}^1$$에 대하여, $$H_1$$과 $$H_2$$를 각 인자로의 pullback of hyperplane class라 하면 canonical divisor는 $$K_S=-2H_1-2H_2$$이다. $$H_1^2=H_2^2=0$$이고 $$H_1\cdot H_2=1$$이므로
 
 $$K_S^2=(-2H_1-2H_2)^2=4H_1^2+8H_1\cdot H_2+4H_2^2=8$$
 
@@ -161,12 +139,10 @@ $$K_S^2=(-2H_1-2H_2)^2=4H_1^2+8H_1\cdot H_2+4H_2^2=8$$
 $$\rchi(\mathcal{O}_S)=\rchi(\mathcal{O}_{\mathbb{P}^1})\cdot\rchi(\mathcal{O}_{\mathbb{P}^1})=1\cdot 1=1$$
 
 이며, 따라서 $$8+4=12\cdot 1$$이 성립한다.
+:::
 
-</div>
-
-<div class="example" markdown="1">
-
-<ins id="ex8">**예시 8 ($$\mathbb{P}^2$$의 $$r$$점 blow-up)**</ins> $$\pi:\widetilde{\mathbb{P}}^2\rightarrow\mathbb{P}^2$$를 $$r$$개의 일반적인 점에서의 blow-up이라 하자. Canonical divisor는
+::: 예시 8 ($$\mathbb{P}^2$$의 $$r$$점 blow-up)
+$$\pi:\widetilde{\mathbb{P}}^2\rightarrow\mathbb{P}^2$$를 $$r$$개의 일반적인 점에서의 blow-up이라 하자. Canonical divisor는
 
 $$K_{\widetilde{\mathbb{P}}^2}=\pi^\ast K_{\mathbb{P}^2}+E_1+\cdots+E_r=-3\pi^\ast H+E_1+\cdots+E_r$$
 
@@ -183,12 +159,10 @@ $$\rchi_{\mathrm{top}}(\widetilde{\mathbb{P}}^2)=3+r$$
 $$\rchi(\mathcal{O}_{\widetilde{\mathbb{P}}^2})=\rchi(\mathcal{O}_{\mathbb{P}^2})=1$$
 
 이다. 따라서 $$(9-r)+(3+r)=12=12\cdot 1$$이 성립한다.
+:::
 
-</div>
-
-<div class="example" markdown="1">
-
-<ins id="ex9">**예시 9 ($$\mathbb{P}^3$$ 속 degree $$d$$ smooth surface)**</ins> $$S\subset\mathbb{P}^3$$를 degree $$d$$인 smooth surface라 하자. Adjunction formula에 의해
+::: 예시 9 ($$\mathbb{P}^3$$ 속 degree $$d$$ smooth surface)
+$$S\subset\mathbb{P}^3$$를 degree $$d$$인 smooth surface라 하자. Adjunction formula에 의해
 
 $$K_S=(K_{\mathbb{P}^3}+S)\vert_S=(-4H+dH)\vert_S=(d-4)h$$
 
@@ -225,8 +199,7 @@ $$K_S^2+\int_S c_2=d(d-4)^2+d(d^2-4d+6)=2d^3-12d^2+22d$$
 $$12\rchi(\mathcal{O}_S)=12+2(d-1)(d-2)(d-3)=2d^3-12d^2+22d$$
 
 이므로 양쪽이 일치함을 확인한다.
-
-</div>
+:::
 
 예시 [9](#ex9)에서 $$d=4$$인 경우, 즉 quartic K3 surface의 경우 $$K_S=0$$이고 $$K_S^2=0$$, $$\rchi_{\mathrm{top}}(S)=24$$, $$\rchi(\mathcal{O}_S)=2$$이므로 $$0+24=12\cdot 2$$가 성립한다. 이는 K3 surface의 대표적인 불변량들과 일치하며, 이러한 계산이 surface의 classification에서 어떻게 활용되는지를 보여준다.
 

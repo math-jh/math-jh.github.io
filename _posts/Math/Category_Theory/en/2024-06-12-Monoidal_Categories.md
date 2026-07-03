@@ -55,9 +55,8 @@ Simply put, a monoidal category is a category equipped with a monoid operation a
 
 Before giving the definition, recall that in the two diagrams defining a monoid, $$M\times(M\times M)$$ and $$(M\times M)\times M$$ are different sets, and $$M$$, $$I\times M$$, and $$M\times I$$ are also different sets. They are certainly distinct sets; it is only that natural isomorphisms exist among them.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1 (Monoidal category)**</ins> A *monoidal category* consists of data $$(\mathcal{A},\otimes, I)$$. Here $$\mathcal{A}$$ is a category, $$I\in\obj(\mathcal{A})$$, and $$\otimes:\mathcal{A}\times \mathcal{A}\rightarrow \mathcal{A}$$ is a bifunctor. They satisfy the following conditions.
+::: Definition 1 (Monoidal category)
+A *monoidal category* consists of data $$(\mathcal{A},\otimes, I)$$. Here $$\mathcal{A}$$ is a category, $$I\in\obj(\mathcal{A})$$, and $$\otimes:\mathcal{A}\times \mathcal{A}\rightarrow \mathcal{A}$$ is a bifunctor. They satisfy the following conditions.
 
 1. There exists a natural isomorphism between the two functors $$-\otimes(-\otimes-)$$ and $$(-\otimes-)\otimes-$$ from $$\mathcal{A}\times \mathcal{A}\times \mathcal{A}$$ to $$\mathcal{A}$$
 
@@ -84,8 +83,7 @@ If the symmetric condition on $$\otimes$$ is additionally imposed on a monoidal 
   ![symmetor](/assets/images/Math/Category_Theory/Monoidal_Categories-6.svg){:style="width:13.43em" class="invert" .align-center}
 - (Inverse law)
   ![inverse](/assets/images/Math/Category_Theory/Monoidal_Categories-7.svg){:style="width:16.29em" class="invert" .align-center}
-
-</div>
+:::
 
 If in a symmetric monoidal category, $$\gamma_{A,B}:A\otimes B\rightarrow B\otimes A$$ and $$\gamma_{B,A}:B\otimes A \rightarrow A\otimes B$$ are not inverses of each other, this is called a *braided monoidal category*.
 
@@ -93,33 +91,27 @@ The coherence conditions for the associator and unitors are used in the proof of
 
 In any case, thanks to the coherence theorem, we know that the monoidal product does not depend on the order of computation or the order in which the objects are listed, so we need not pay as much attention to these natural isomorphisms.
 
-<div class="example" markdown="1">
-
-<ins id="ex2">**Example 2**</ins> The following are all examples of monoidal categories.
+::: Example 2
+The following are all examples of monoidal categories.
 
 - Equipping $$\Set$$ with the usual product ([§Limits, ⁋Example 6](/en/math/category_theory/limits#ex6)) and taking $$I$$ to be any singleton makes $$\Set$$ a symmetric monoidal category.
 - Equipping $$\Grp$$ with the usual product and taking $$I$$ to be the trivial group $$\{e\}$$ makes $$\Grp$$ a symmetric monoidal category.
 - Giving $$\Top$$ the product structure via the product topology and taking $$I$$ to be any singleton makes $$\Top$$ a symmetric monoidal category.
 - For any commutative ring $$R$$, the category $$\lMod{R}$$ of $$R$$-modules is a symmetric monoidal category under the tensor product $$\otimes$$.
 - In particular, when $$R=k$$ the above example shows that $$\Vect_k$$ is a symmetric monoidal category, and when $$R=\mathbb{Z}$$ we see that $$\Ab$$ is a symmetric monoidal category.
-
-</div>
+:::
 
 The first two examples of [Example 2](#ex2) can be generalized. Let us first define the following.
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**Definition 3**</ins> If every finite family of objects in a category $$\mathcal{A}$$ always has a categorical product, this category is called a *cartesian category*.
-
-</div>
+::: Definition 3
+If every finite family of objects in a category $$\mathcal{A}$$ always has a categorical product, this category is called a *cartesian category*.
+:::
 
 Then in the preceding examples, $$\Set$$ and $$\Grp$$ become cartesian categories. Likewise, $$\Top$$ and $$\Man^\infty$$, etc., are all cartesian categories.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**Proposition 4**</ins> Any cartesian category carries the structure of a monoidal category.
-
-</div>
+::: Proposition 4
+Any cartesian category carries the structure of a monoidal category.
+:::
 
 Although quite a bit of elaboration is needed for the proof of this proposition, essentially it is enough to recall how $$(A\times B)\times C\cong A\times(B\times C)$$ and $$I\times M\cong M\cong M\times I$$ arise and then repeat the calculations. A monoidal category whose monoidal product is given by the product is called a *cartesian monoidal category*.
 

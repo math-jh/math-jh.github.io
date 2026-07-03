@@ -17,69 +17,53 @@ weight: 5
 
 ## 미분다양체 사이의 함수
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> 두 manifold $$M,N$$이 주어졌다 하자. 함수 $$F:M\rightarrow N$$이 점 $$p\in M$$에서 $$C^\infty$$라는 것은, $$p$$를 포함하는 적당한 coordinate system $$(U,\varphi)$$와, $$F(U)\subseteq V$$인 적당한 coordinate system $$(V,\psi)$$가 존재하여 $$\psi\circ F\circ\varphi^{-1}$$이 $$C^\infty$$인 것이다. 
+::: 정의 1
+두 manifold $$M,N$$이 주어졌다 하자. 함수 $$F:M\rightarrow N$$이 점 $$p\in M$$에서 $$C^\infty$$라는 것은, $$p$$를 포함하는 적당한 coordinate system $$(U,\varphi)$$와, $$F(U)\subseteq V$$인 적당한 coordinate system $$(V,\psi)$$가 존재하여 $$\psi\circ F\circ\varphi^{-1}$$이 $$C^\infty$$인 것이다. 
 
 ![smooth_map](/assets/images/Math/Manifolds/Differentials-1.png){:style="width:500px" class="invert" .align-center}
 <cap>[Lee], p.34. Fig. 2.2</cap>
 
 만일 $$F$$가 모든 점에서 $$C^\infty$$라면 이를 간단히 $$C^\infty$$ 함수라 한다.
-
-</div>
+:::
 
 앞서 manifold에서 $$\mathbb{R}$$로의 $$C^\infty$$ 함수를 정의했을 때와 마찬가지로, 이 정의 또한 coordinate system의 선택과 무관하다는 것을 보여야 하지만 이는 기본적으로 [§미분다양체, ⁋정의 2](/ko/math/manifolds/smooth_manifolds#def2) 이후에 증명한 것과 똑같기에 생략한다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**명제 2**</ins> 두 manifold $$M,N$$이 주어졌다 하자. 만일 $$F:M\rightarrow N$$이 점 $$p\in M$$에서 $$C^\infty$$라면, 이 함수는 $$p$$에서 연속이다. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 명제 2
+두 manifold $$M,N$$이 주어졌다 하자. 만일 $$F:M\rightarrow N$$이 점 $$p\in M$$에서 $$C^\infty$$라면, 이 함수는 $$p$$에서 연속이다. 
+:::
+::: 증명
 [정의 1](#def1)의 상황을 그대로 가정하자. 그럼 우선 유클리드 공간 사이의 함수 $$\psi\circ F\circ\varphi^{-1}:\varphi(U)\rightarrow\psi(V)$$가 $$C^\infty$$이다. 이 함수는 미분가능하므로 당연히 연속이다. 그런데 $$\varphi$$와 $$\psi$$는 모두 homeomorphism이므로, 
 
 $$F=\psi^{-1}\circ(\psi\circ F\circ\varphi^{-1})\circ\varphi$$
 
 는 연속함수들의 합성이므로 연속이다.
+:::
 
-</details>
 
+::: 예시 3
+$$\id_M:M\rightarrow M$$은 당연하게 $$C^\infty$$ 함수이다. 더 일반적으로, 임의의 열린집합 $$U\subseteq M$$에 open submanifold 구조를 주면 ([§미분다양체의 예시들, ⁋정의 3](/ko/math/manifolds/examples_of_manifolds#def3)) inclusion map $$U\hookrightarrow M$$은 $$C^\infty$$ 함수이다. 
+:::
 
-<div class="example" markdown="1">
-
-<ins id="ex3">**예시 3**</ins> $$\id_M:M\rightarrow M$$은 당연하게 $$C^\infty$$ 함수이다. 더 일반적으로, 임의의 열린집합 $$U\subseteq M$$에 open submanifold 구조를 주면 ([§미분다양체의 예시들, ⁋정의 3](/ko/math/manifolds/examples_of_manifolds#def3)) inclusion map $$U\hookrightarrow M$$은 $$C^\infty$$ 함수이다. 
-
-</div>
-
-<div class="example" markdown="1">
-
-<ins id="ex4">**예시 4**</ins> 임의의 두 manifold $$M,N$$에 대하여, $$M$$의 임의의 점 $$p\in M$$을 모두 고정된 점 $$q\in N$$으로 보내는 상수함수는 $$C^\infty$$이다. 
-
-</div>
+::: 예시 4
+임의의 두 manifold $$M,N$$에 대하여, $$M$$의 임의의 점 $$p\in M$$을 모두 고정된 점 $$q\in N$$으로 보내는 상수함수는 $$C^\infty$$이다. 
+:::
 
 이제 우리가 다룰 대상들인 manifold들을 정의했고, manifold들 사이의 함수들을 정의했다. 다음 명제가 성립하는 것을 어렵지 않게 확인할 수 있다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**명제 5**</ins> 세 manifold $$M,N,P$$에 대하여, 만일 $$F:M\rightarrow N$$과 $$G:N\rightarrow P$$가 모두 $$C^\infty$$라면 이들의 합성 $$G\circ F$$ 또한 $$C^\infty$$이다.
-
-</div>
+::: 명제 5
+세 manifold $$M,N,P$$에 대하여, 만일 $$F:M\rightarrow N$$과 $$G:N\rightarrow P$$가 모두 $$C^\infty$$라면 이들의 합성 $$G\circ F$$ 또한 $$C^\infty$$이다.
+:::
 
 그럼 manifold들 사이의 isomorphism은 다음과 같이 정의해야 한다는 것이 명확하다.
 
-<div class="definition" markdown="1">
-
-<ins id="def6">**정의 6**</ins> 만일 두 manifold $$M,N$$에 대하여, $$F:M\rightarrow N$$과 $$G:N\rightarrow M$$이 각각 존재하여 $$G\circ F=\id_M$$이고 $$F\circ G=\id_N$$이라면 $$F$$와 $$G$$ 각각을 *diffeomorphism<sub>미분동형사상</sub>*이라 부르고, $$F$$와 $$G$$가 *diffeomorphic<sub>미분동형</sub>*이라 말한다.
-
-</div>
+::: 정의 6
+만일 두 manifold $$M,N$$에 대하여, $$F:M\rightarrow N$$과 $$G:N\rightarrow M$$이 각각 존재하여 $$G\circ F=\id_M$$이고 $$F\circ G=\id_N$$이라면 $$F$$와 $$G$$ 각각을 *diffeomorphism<sub>미분동형사상</sub>*이라 부르고, $$F$$와 $$G$$가 *diffeomorphic<sub>미분동형</sub>*이라 말한다.
+:::
 
 따라서, manifold들과 smooth function들은 카테고리 $$\Man$$을 이룬다.
 
-<div class="remark" markdown="1">
-
-**참고**</ins> 동일한 topological manifold $$M$$ 위에 diffeomorphic하지만 서로 같지는 않은 미분구조를 줄 수 있다. 두 미분구조 $$\mathcal{A}_1$$, $$\mathcal{A}_2$$를 각각 single chart들 $$(\mathbb{R},\id_\mathbb{R})$$, $$(\mathbb{R}, x\mapsto x^{3})$$을 통해 정의하자. 그럼 $$\mathcal{A}_1$$과 $$\mathcal{A}_2$$는 서로 다른 미분구조를 정의한다. ([§미분다양체, ⁋예시 4](/ko/math/manifolds/smooth_manifolds#ex4))  
+::: remark 참고 {#rmk}
+동일한 topological manifold $$M$$ 위에 diffeomorphic하지만 서로 같지는 않은 미분구조를 줄 수 있다. 두 미분구조 $$\mathcal{A}_1$$, $$\mathcal{A}_2$$를 각각 single chart들 $$(\mathbb{R},\id_\mathbb{R})$$, $$(\mathbb{R}, x\mapsto x^{3})$$을 통해 정의하자. 그럼 $$\mathcal{A}_1$$과 $$\mathcal{A}_2$$는 서로 다른 미분구조를 정의한다. ([§미분다양체, ⁋예시 4](/ko/math/manifolds/smooth_manifolds#ex4))  
 편의상 $$(M,\mathcal{A}_1)$$을 $$M_1$$, $$(M,\mathcal{A}_2)$$를 $$M_2$$로 이름붙이고, $$\varphi=\id_\mathbb{R}$$, 그리고 $$\psi=(x\mapsto x^3)$$이라 하자. 
 
 이들 두 manifold $$M_1, M_2$$는 서로 diffeomorphic하다. $$M_1$$에서 $$M_2$$로의 함수 $$F$$를 $$x\mapsto x^{1/3}$$으로 정의하자. 그럼 자명하게 $$F^{-1}$$은 $$y\mapsto y^3$$으로 정의된다. 정의에 의해 $$F$$는 $$C^\infty$$이다. 임의의 점 $$p\in M_1$$에 대하여, $$M_1$$과 $$M_2$$ 각각에 정의된 두 coordinate system $$(\mathbb{R},\varphi)$$와 $$(\mathbb{R},\psi)$$을 잡으면 $$p\in\mathbb{R}$$,  $$F(\mathbb{R})\subset\mathbb{R}$$을 만족하는 것은 자명하고, 또 이들이
@@ -92,8 +76,7 @@ $$(\psi\circ F\circ \varphi^{-1})(t)=t$$
 $$(\psi^{-1}\circ F^{-1}\circ \varphi)(s)=s$$
 
 이 성립하기 때문이다. 
-
-</div>
+:::
 
 ## 미분사상
 
@@ -131,15 +114,13 @@ $$\begin{aligned}(v\circ F^\ast)(fg)&=v(F^\ast(fg))=v((f\circ F)(g\circ F))\\
 
 으로부터 얻어진다. 지금까지의 논의를 정리하면 다음과 같다.
 
-<div class="definition" markdown="1">
-
-<ins id="def7">**정의 7**</ins> $$F:M\rightarrow N$$이 두 manifold 사이의 $$C^\infty$$ 함수라 하자. 임의의 $$p\in M$$에 대하여, $$F$$의 점 $$p$$에서의 *differential<sub>미분사상</sub>* $$dF_p:T_pM\rightarrow T_{F(p)}N$$은 임의의 $$v\in T_pM$$과 임의의 $$g\in \mathcal{C}^\infty_{N,F(p)}$$에 대하여
+::: 정의 7
+$$F:M\rightarrow N$$이 두 manifold 사이의 $$C^\infty$$ 함수라 하자. 임의의 $$p\in M$$에 대하여, $$F$$의 점 $$p$$에서의 *differential<sub>미분사상</sub>* $$dF_p:T_pM\rightarrow T_{F(p)}N$$은 임의의 $$v\in T_pM$$과 임의의 $$g\in \mathcal{C}^\infty_{N,F(p)}$$에 대하여
 
 $$(dF_p(v))g=v(g\circ F)$$
 
 으로 정의되는 linear map이다.
-
-</div>
+:::
 
 정의로부터 몇 가지 결과는 자명하다. 우선 $$\id_M:M\rightarrow M$$에 대하여 $$d(\id_M)_p$$는 항상 $$T_pM$$에서 $$T_pM$$으로의 identity인 $$\id_{T_pM}$$이 된다. 이는 [정의 7](#def7)의 식으로부터 명백하다. 또, 세 manifold $$M,N,P$$에 대하여 $$F:M\rightarrow N$$, $$G:N\rightarrow P$$가 $$C^\infty$$라면, 다음의 식
 
@@ -149,17 +130,12 @@ $$d(G\circ F)_p=(dG_{F(p)})\circ (dF_p)$$
 
 그러나 differential이 isomorphism이 되는 $$C^\infty$$ 함수 중 diffeomorphism이 아닌 것은 매우 많다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop8">**명제 8**</ins> Manifold $$M$$과, $$M$$의 open submanifold $$U$$에 대하여, inclusion map $$\iota:U\hookrightarrow M$$은 모든 $$p\in U$$에 대하여 tangent space 사이의 isomorphism을 유도한다. 즉, $$d\iota_p$$가 항상 isomorphism이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 명제 8
+Manifold $$M$$과, $$M$$의 open submanifold $$U$$에 대하여, inclusion map $$\iota:U\hookrightarrow M$$은 모든 $$p\in U$$에 대하여 tangent space 사이의 isomorphism을 유도한다. 즉, $$d\iota_p$$가 항상 isomorphism이다.
+:::
+::: 증명
 $$\iota^\ast$$가 $$\mathcal{C}^\infty_{U,p}$$와 $$\mathcal{C}^\infty_{M,\iota(p)}$$ 사이의 isomorphism을 만들기 때문에 자명하다. 사실 처음부터 두 벡터공간은 같은 것으로 보아도 무리가 없다.
-
-</details>
+:::
 
 ## 접공간의 기저와 미분사상
 

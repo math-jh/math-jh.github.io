@@ -39,9 +39,8 @@ $$(x^{g_1})^{g_2}=x^{g_1g_2}$$
 
 이 성립한다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="lem1">**보조정리 1**</ins> 임의의 $$x,y,z\in G$$에 대하여 다음이 성립한다.
+::: 보조정리 1
+임의의 $$x,y,z\in G$$에 대하여 다음이 성립한다.
 
 1. $$xy=yx[x,y]$$.
 2. $$x^y=[y,x^{-1}]x$$.
@@ -50,14 +49,12 @@ $$(x^{g_1})^{g_2}=x^{g_1g_2}$$
 5. $$[x^y,[y,z]][y^z,[z,x]][z^x,[x,y]]=e$$.
 6. $$[x,yz][z,xy][y,zx]=e$$.
 7. $$[xy,z][yz,x][zx,y]=e$$.
-
-</div>
+:::
 
 이에 대한 증명은 단순히 각 변을 전개하는 것이므로 생략한다. 이를 사용하여 다음을 보일 수 있다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**명제 2**</ins> Group $$G$$의 세 subgroup $$H, H', H''$$에 대하여 다음이 성립한다.
+::: 명제 2
+Group $$G$$의 세 subgroup $$H, H', H''$$에 대하여 다음이 성립한다.
 
 1. $$H$$는 $$[H,H']$$를 normalize한다.
 2. 만일 $$[H',H'']$$이 $$H$$을 normalize한다면, $$[H,[H',H'']]$$은 $$[h,[h',h'']]$$ 꼴의 원소들로 생성되는 $$G$$의 subgroup과 같다. 
@@ -66,12 +63,8 @@ $$(x^{g_1})^{g_2}=x^{g_1g_2}$$
     $$[H, [H',H'']]\subseteq[H'',[H',H]][H', [H'',H]]$$
 
     이 성립한다. 
-
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 1. 임의의 generator $$[h_1,h']\in [H,H']$$와 $$h_2\in H$$에 대하여 $$[h_1,h']^{h_2}\in [H,H']$$를 보이면 충분하다. 이는 [보조정리 1](#lem1)의 넷째 결과로부터
     
     $$[h_1,h']^{h_2}=[h_1h_2,h'][h_2,h']^{-1}$$
@@ -88,31 +81,24 @@ $$(x^{g_1})^{g_2}=x^{g_1g_2}$$
     $$[h, [h', h'']]=[u^{h'}, [h', h'']]=[(h'')^u, [u, h']]^{-1}[(h')^{h''},[h'',u]]^{-1}$$
 
     으로부터 원하는 결과를 얻는다. 
-
-</details>
+:::
 
 ## 내림중심열과 멱영군
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**정의 3**</ins> Group $$G$$에 대하여, 다음의 식
+::: 정의 3
+Group $$G$$에 대하여, 다음의 식
 
 $$C_1(G)=G,\qquad C_{n+1}(G)=[G, C_n(G)]$$
 
 을 통해 $$G$$의 *lower central series<sub>내림중심열</sub>* $$(C_n(G))_{n\geq 1}$$을 정의한다. 
-
-</div>
+:::
 
 그럼 다음이 성립한다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**명제 4**</ins> Group homomorphism $$f:G \rightarrow G'$$에 대하여, $$f(C_n(G))\subseteq C_n(G')$$이 항상 성립한다. 뿐만 아니라, 만일 $$f$$가 surjective라면 $$f(C_n(G))=C_n(G')$$이 성립한다. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 명제 4
+Group homomorphism $$f:G \rightarrow G'$$에 대하여, $$f(C_n(G))\subseteq C_n(G')$$이 항상 성립한다. 뿐만 아니라, 만일 $$f$$가 surjective라면 $$f(C_n(G))=C_n(G')$$이 성립한다. 
+:::
+::: 증명
 $$n$$에 대한 귀납법으로 진행한다. $$f(C_n(G))\subseteq C_n(G')$$라 가정하자. 그럼 $$C_{n+1}(G)$$의 원소는 정의에 의하여
 
 $$x^{-1}y^{-1}xy,\qquad x\in G, y\in C_n(G)$$
@@ -122,23 +108,18 @@ $$x^{-1}y^{-1}xy,\qquad x\in G, y\in C_n(G)$$
 $$f(x^{-1}y^{-1}xy)=f(x)^{-1}f(y)^{-1}f(x)f(y)\in [G, f(C_n(G))]\subseteq [G, C_n(G')]=C_{n+1}(G')$$
 
 이므로 원하는 결과를 얻는다. 만일 $$f$$가 surjective라면, $$f(G)=G'$$이고 위의 귀납법에서 $$\subseteq$$를 $$=$$으로 대체할 수 있다.
-
-</details>
+:::
 
 한편, $$G$$는 $$G$$의 normal subgroup이므로, 마찬가지의 귀납법을 통해 $$C_n(G)$$들은 모두 $$G$$의 normal subgroup이며, 따라서 $$C_{n+1}(G)$$는 $$C_n(G)$$의 normal subgroup이기도 하다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**명제 5**</ins> 임의의 group $$G$$와 임의의 자연수 $$m,n$$에 대하여, 다음의 포함관계
+::: 명제 5
+임의의 group $$G$$와 임의의 자연수 $$m,n$$에 대하여, 다음의 포함관계
 
 $$[C_m(G), C_n(G)]\subset C_{m+n}(G)$$
 
 가 성립한다. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 [명제 2](#prop2)의 셋째 결과로부터 우리는
 
 $$[C_m(G), C_{n+1}(G)]=[C_m(G), [C_n(G), G]]\subseteq[G, [C_m(G), C_n(G)]][C_n(G), [G, C_m(G)]]=[G, [C_m(G), C_n(G)]][C_n(G), C_{m+1}(G)]$$
@@ -148,22 +129,18 @@ $$[C_m(G), C_{n+1}(G)]=[C_m(G), [C_n(G), G]]\subseteq[G, [C_m(G), C_n(G)]][C_n(G
 $$[C_m(G), C_1(G)]\subseteq C_{m+1}(G),\qquad [C_1(G), C_n(G)]\subseteq C_{n+1}(G)$$
 
 이 성립하는 것은 정의로부터 자명하므로 귀납적으로 이 부등식이 모든 $$m,n$$에 대해 성립하는 것을 안다. 
-
-</details>
+:::
 
 이제 다음을 정의한다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def6">**정의 6**</ins> Group $$G$$가 *nilpotent group<sub>멱영군</sub>*이라는 것은 적당한 자연수 $$n$$이 존재하여 $$C_{n+1}(G)=\{e\}$$인 것이다. 이 조건을 만족하는 자연수 중 가장 큰 $$n$$을 $$G$$의 *nilpotency class*라 부른다. 
-
-</div>
+::: 정의 6
+Group $$G$$가 *nilpotent group<sub>멱영군</sub>*이라는 것은 적당한 자연수 $$n$$이 존재하여 $$C_{n+1}(G)=\{e\}$$인 것이다. 이 조건을 만족하는 자연수 중 가장 큰 $$n$$을 $$G$$의 *nilpotency class*라 부른다. 
+:::
 
 그럼 다음이 성립한다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop7">**명제 7**</ins> Group $$G$$와 자연수 $$n$$에 대하여, 다음이 모두 동치이다. 
+::: 명제 7
+Group $$G$$와 자연수 $$n$$에 대하여, 다음이 모두 동치이다. 
 
 1. $$G$$가 nilpotent group of nilpotency class $$\leq n$$이다. 
 2. 적당한 $$G$$의 subgroup들의 decreasing sequence
@@ -172,65 +149,50 @@ $$[C_m(G), C_1(G)]\subseteq C_{m+1}(G),\qquad [C_1(G), C_n(G)]\subseteq C_{n+1}(
 
     가 존재하여 $$[G, G_k]\subseteq G_{k+1}$$이 모든 $$k$$에 대해 성립한다.
 3. $$G$$의 center $$C(G)$$에 포함되어 있는 subgroup $$A$$가 존재하여, $$G/A$$가 nilpotent group of nilpotency class $$\leq n-1$$이다. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 우선 첫째 조건을 가정하면, $$G_k=C_k(G)$$가 둘째 조건을 만족하며, 거꾸로 둘째 조건이 성립한다면 귀납적으로 $$C_k(G)\subset G_k$$가 항상 성립하는 것을 보일 수 있다. 
 
 나머지 동치의 경우, 첫째 조건을 가정하면 셋째 조건이 성립하는 것은 $$A=C_n(G)$$로 두면 된다. 셋째 조건을 가정하고 첫째 조건이 성립하는 것을 보이는 것은 canonical morphism $$G \rightarrow G/A$$를 통해 $$C_n(G)$$를 보내면 그 image는 [명제 4](#prop4)에 의하여 $$C_n(G/A)$$와 같고, 가정에 의해 이것이 $$\{e\}$$이므로 $$C_n(G)\subset A$$이고 따라서 $$C_{n+1}(G)=\{e\}$$임을 확인하면 된다. 
-
-</details>
+:::
 
 따라서, 직관적으로 nilpotent group of nilpotency class $$\leq n$$은 trivial group $$\{e\}$$로부터 $$n$$개의 central extension들을 통해 얻어지는 것으로 생각할 수 있다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop8">**명제 8**</ins> Nilpotent group $$G$$ of nilpotency class $$\leq n$$과 $$G$$의 subgroup $$H$$를 고정하자. 그럼 적당한 subgroup들의 sequence
+::: 명제 8
+Nilpotent group $$G$$ of nilpotency class $$\leq n$$과 $$G$$의 subgroup $$H$$를 고정하자. 그럼 적당한 subgroup들의 sequence
 
 $$G=H_1\supseteq H_2\supseteq\cdots\supseteq H_{n+1}=H$$
 
 가 존재하여 $$H_{k+1}$$이 $$H_k$$의 normal subgroup이고 $$H_k/H_{k+1}$$이 commutative이도록 할 수 있다. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 [명제 7](#prop7)의 둘째 동치조건을 만족하는 $$G$$의 subgroup들의 sequence를 잡은 후, $$H_k=HG_k$$로 두면 된다. 
-
-</details>
+:::
 
 
 ## 유도열과 가해군
 
 이제 우리는 다른 종류의 series를 정의한다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def9">**정의 9**</ins> Group $$G$$의 *derived series<sub>유도열</sub>*은 다음의 식
+::: 정의 9
+Group $$G$$의 *derived series<sub>유도열</sub>*은 다음의 식
 
 $$D_0(G)=G,\qquad D_{n+1}(G)=[D_n(G),D_n(G)]$$
 
 으로 주어지는 $$G$$의 subgroup들의 series이다. 
-
-</div>
+:::
 
 그럼 nilpotent group과 마찬가지로 다음 명제가 성립한다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop10">**명제 10**</ins> Group homomorphism $$f:G \rightarrow G'$$에 대하여, $$f(D_n(G))\subseteq D_n(G')$$이 항상 성립한다. 뿐만 아니라, 만일 $$f$$가 surjective라면 $$f(D_n(G))=D_n(G')$$이 성립한다. 
-
-</div>
+::: 명제 10
+Group homomorphism $$f:G \rightarrow G'$$에 대하여, $$f(D_n(G))\subseteq D_n(G')$$이 항상 성립한다. 뿐만 아니라, 만일 $$f$$가 surjective라면 $$f(D_n(G))=D_n(G')$$이 성립한다. 
+:::
 
 이에 대한 증명은 [명제 4](#prop4)와 마찬가지로 귀납법을 사용하면 된다. Lower central series의 stability condition으로 nilpotent group을 정의한 것과 같이, solvable group은 derived series의 stability condition으로 정의된다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def11">**정의 11**</ins> Group $$G$$가 *solvable<sub>가해</sub>*이라는 것은 적당한 자연수 $$n$$이 존재하여 $$D_{n+1}(G)=\{e\}$$인 것이다. 이 조건을 만족하는 자연수 중 가장 큰 $$n$$을 $$G$$의 *solvability class*라 부른다.
-
-</div>
+::: 정의 11
+Group $$G$$가 *solvable<sub>가해</sub>*이라는 것은 적당한 자연수 $$n$$이 존재하여 $$D_{n+1}(G)=\{e\}$$인 것이다. 이 조건을 만족하는 자연수 중 가장 큰 $$n$$을 $$G$$의 *solvability class*라 부른다.
+:::
 
 정의에 의하여 $$D_0(G)=C_1(G)=G$$이고 $$D_1(G)=[G,G]=C_2(G)$$가 성립한다. 그럼 이 사실과 [명제 5](#prop5)로부터, 귀납적으로 다음의 포함관계
 
@@ -238,9 +200,8 @@ $$D_n(G)\subseteq C_{2^n}(G)$$
 
 이 성립하는 것을 안다. 즉 임의의 nilpotent group은 항상 solvable이다. 다음 명제는 [명제 7](#prop7)에 대응되는 solvable group의 characterization이다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop12">**명제 12**</ins> Group $$G$$와 자연수 $$n$$에 대하여, 다음이 모두 동치이다. 
+::: 명제 12
+Group $$G$$와 자연수 $$n$$에 대하여, 다음이 모두 동치이다. 
 
 1. $$G$$가 solvable group of solvability class $$\leq n$$이다. 
 2. 적당한 $$G$$의 subgroup들의 decreasing sequence
@@ -249,8 +210,7 @@ $$D_n(G)\subseteq C_{2^n}(G)$$
 
     가 존재하여 $$G_k/G_{k+1}$$들이 모두 commutative이다. 
 3. $$G$$의 normal commutative subgroup $$A$$가 존재하여, $$G/A$$가 solvable group of solvability class $$\leq n-1$$이다. 
-
-</div>
+:::
 
 따라서, 직관적으로 solvable group of solvability class $$\leq n$$은 trivial group $$\{e\}$$를 $$n$$개의 abelian group들로 extend하여 얻어지는 것으로 생각할 수 있다. 
 
@@ -258,15 +218,13 @@ $$D_n(G)\subseteq C_{2^n}(G)$$
 
 우리는 앞에서 nilpotent group들은 central extension을 반복하여 얻어지는 group이고, solvable group은 abelian extension을 반복하여 얻어지는 group인 것을 확인하였다. 이제 우리는 가장 일반적인 경우를 다룬다.
 
-<div class="definition" markdown="1">
-
-<ins id="def13">**정의 13**</ins> Group $$G$$의 subgroup들의 sequence
+::: 정의 13
+Group $$G$$의 subgroup들의 sequence
 
 $$G=G_0\supset G_1\supset \cdots\supset G_n=\{e\}$$
 
 가 *subnormal series<sub>부분정규열</sub>*이라는 것은 각 $$k$$에 $$G_{k+1}$$이 $$G_k$$의 normal subgroup인 것이며, 이 때 $$G_k/G_{k+1}$$을 이 series의 *quotient*라 부른다. Composition series $$G_\bullet$$보다 finer한 subnormal series가 존재하지 않는다면, 이를 $$G$$의 *composition series*라 부른다. 
-
-</div>
+:::
 
 그럼 임의의 group $$G$$와 normal subgroup $$N$$에 대하여, $$G/N$$의 normal subgroup과, $$G$$의 normal subgroup 중 $$N$$을 포함하는 것들 사이의 일대일대응이 존재하므로, $$G_\bullet$$이 composition series인 것은 각각의 $$k$$에 대하여 $$G_k/G_{k+1}$$이 simple인 것과 같은 말이다. ([§대칭군, ⁋정의 12](/ko/math/group_theory/symmetric_groups#def12))
 
@@ -276,18 +234,14 @@ $$G=G_0\supset G_1\supset \cdots\supset G_n=\{e\},\qquad G=H_0\supset H_1\supset
 
 에 대하여, $$m=n$$이고, $$G_k/G_{k+1}\cong H_{\sigma(k)}/H_{\sigma(k)+1}$$이 모든 $$k=0,\ldots, n-1$$에 대해 성립하도록 하는 $$\sigma\in S_n$$이 존재한다면 $$G_\bullet$$과 $$H_\bullet$$이 *equivalent<sub>동등</sub>*한 subnormal series라 부른다. 이 절의 가장 큰 정리는 [정리 16](#thm16)으로, group $$G$$의 두 composition series가 존재한다면 이들은 equivalent하다는 것이다. 이를 증명하기 위해 다음 보조정리부터 시작하자.
 
-<div class="proposition" markdown="1">
-
-<ins id="lem14">**보조정리 14 (Zassenhaus)**</ins> Group $$G$$의 두 subgroup $$H,K$$가 주어졌다 하고, 이들 각각의 normal subgroup $$H',K'$$가 주어졌다 하자. 그럼 $$H'(H\cap K')$$는 $$H'(H\cap K)$$의 normal subgroup이고, $$K'(K\cap H')$$는 $$K'(K\cap H)$$의 normal subgroup이며 다음의 isomorphism
+::: 보조정리 14 (Zassenhaus)
+Group $$G$$의 두 subgroup $$H,K$$가 주어졌다 하고, 이들 각각의 normal subgroup $$H',K'$$가 주어졌다 하자. 그럼 $$H'(H\cap K')$$는 $$H'(H\cap K)$$의 normal subgroup이고, $$K'(K\cap H')$$는 $$K'(K\cap H)$$의 normal subgroup이며 다음의 isomorphism
 
 $$\frac{H'(H\cap K)}{H'(H\cap K')}\cong \frac{K'(K\cap H)}{K'(K\cap H')}$$
 
 이 존재한다. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 이 증명은 대략적으로 다음의 lattice
 
 ![Zassenhaus](/assets/images/Math/Group_Theory/Series_of_Groups-1.svg){:style="width:44.91em" class="invert" .align-center}
@@ -303,40 +257,30 @@ $$H'(H'\cap K)(K'\cap H)=H'(H\cap K')$$
 $$\frac{H'(H\cap K)}{H'(H\cap K')}\cong \frac{H\cap K}{(H'\cap K)(K'\cap H)}$$
 
 이 존재하는 것을 안다. 
-
-</details>
+:::
 
 그럼 다음이 성립한다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop15">**명제 15 (Schreier)**</ins> 임의의 두 subnormal series 
+::: 명제 15 (Schreier)
+임의의 두 subnormal series 
 
 $$G=G_0\supset G_1\supset \cdots\supset G_n=\{e\},\qquad G=H_0\supset H_1\supset\cdots\supset H_m=\{e\}$$
 
 에 대하여, 이들 각각의 refinement $$G_\bullet', H_\bullet'$$가 존재하여 이들 둘이 equivalent하도록 할 수 있다. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 $$G_i$$와 $$G_{i+1}$$ 사이에 $$G_i\cap H_j$$를 $$j$$를 움직여 가며 넣고 $$H_j$$와 $$H_{j+1}$$ 사이에 $$G_i\cap H_j$$를 $$i$$를 움직여가며 각각 끼워넣은 다음 이렇게 만들어진 refinement들이 서로 equivalent하다는 것을 [보조정리 14](#lem14)를 통해 보일 수 있다. 
-
-</details>
+:::
 
 따라서 다음이 성립한다.
 
-<div class="proposition" markdown="1">
+::: 정리 16 (Jordan-Hölder)
+임의의 두 composition series는 equivalent하다. 
+:::
 
-<ins id="thm16">**정리 16 (Jordan-Hölder)**</ins> 임의의 두 composition series는 equivalent하다. 
-
-</div>
-
-<div class="definition" markdown="1">
-
-<ins id="def17">**정의 17**</ins> Group $$G$$의 *length<sub>길이</sub>*는 strictly descending subnormal series의 길이의 upper bound로 정의한다. 
-
-</div>
+::: 정의 17
+Group $$G$$의 *length<sub>길이</sub>*는 strictly descending subnormal series의 길이의 upper bound로 정의한다. 
+:::
 
 그럼 만일 $$G$$가 composition series를 갖는다면 $$G$$의 composition series의 길이가 정확히 $$G$$의 length가 된다는 것을 안다. 따라서 다음의 등식
 
@@ -348,34 +292,24 @@ $$\length(G)=\length(G/N)+\length(N)$$
 
 가해성의 가장 고전적인 응용은 대칭군이 언제부터 가해가 아닌지를 가르는 것이며, 그 분기점은 $$A_5$$의 단순성에 있다 ([§대칭군, ⁋예시 13](/ko/math/group_theory/symmetric_groups#ex13)).
 
-<div class="proposition" markdown="1">
-
-<ins id="prop18">**명제 18**</ins> $$A_5$$는 가해군이 아니다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 명제 18
+$$A_5$$는 가해군이 아니다.
+:::
+::: 증명
 먼저 $$A_5$$가 non-abelian임을 본다. 만일 $$A_5$$가 abelian이라면 임의의 $$g\neq e$$에 대하여 cyclic subgroup $$\langle g\rangle$$이 (abelian group의 모든 subgroup이 그러하듯) normal subgroup이고 $$\{e\}$$가 아니므로, $$A_5$$의 simple성 ([§대칭군, ⁋예시 13](/ko/math/group_theory/symmetric_groups#ex13))에 의해 $$\langle g\rangle=A_5$$, 곧 $$A_5$$가 위수 $$60$$의 cyclic group이 된다. 그러나 그렇다면 $$\langle g^{30}\rangle$$이 위수 $$2$$의 자명하지 않은 proper normal subgroup을 이루어 simple성에 모순이다. 따라서 $$A_5$$는 non-abelian이다.
 
 이제 derived series ([정의 9](#def9))를 본다. 교환자부분군 $$D_1(A_5)=[A_5,A_5]$$는 언제나 normal subgroup이며, $$A_5$$가 non-abelian이므로 $$D_1(A_5)\neq\{e\}$$이다. $$A_5$$가 simple이므로 $$D_1(A_5)=A_5$$일 수밖에 없고, 따라서 귀납적으로 모든 $$n$$에 대하여 $$D_n(A_5)=A_5\neq\{e\}$$이다. 어떤 $$n$$에서도 $$D_{n+1}(A_5)=\{e\}$$가 성립할 수 없으므로, [정의 11](#def11)에 의해 $$A_5$$는 가해군이 아니다.
-
-</details>
+:::
 
 가해성이 subgroup으로 유전된다는 사실과 결합하면, 대칭군의 가해성에 대한 결론이 곧바로 따라온다.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor19">**따름정리 19**</ins> $$n\geq 5$$이면 대칭군 $$S_n$$은 가해군이 아니다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 따름정리 19
+$$n\geq 5$$이면 대칭군 $$S_n$$은 가해군이 아니다.
+:::
+::: 증명
 먼저 가해군의 subgroup이 다시 가해임을 본다. subgroup $$H\subseteq G$$의 포함사상 $$\iota:H\hookrightarrow G$$에 [명제 10](#prop10)을 적용하면 $$D_n(H)\subseteq D_n(G)$$이므로, $$G$$가 가해여서 어떤 $$n$$에 $$D_n(G)=\{e\}$$이면 $$D_n(H)=\{e\}$$가 되어 $$H$$도 가해이다.
 
 이제 $$n\geq 5$$이면 $$\{6,\ldots,n\}$$의 원소들을 고정하는 치환들이 $$S_5$$의 복제를 이루므로 $$A_5\subseteq S_5\subseteq S_n$$이다. 만일 $$S_n$$이 가해라면 그 subgroup인 $$A_5$$도 가해여야 하는데, 이는 [명제 18](#prop18)에 모순이다. 따라서 $$S_n$$은 가해군이 아니다.
-
-</details>
+:::
 
 이 따름정리는 순수하게 군론적인 사실이지만, 그 가장 유명한 귀결은 체론에 있다. $$n \geq 5$$차 일반 다항식의 Galois 군이 $$S_n$$이고 그 $$S_n$$이 가해가 아니라는 사실이, 일반 5차 이상 방정식이 거듭제곱근으로 풀리지 않는다는 정리의 군론적 핵심을 이룬다 ([\[체론\] §거듭제곱근 가해성](/ko/math/field_theory/solvability_by_radicals)).

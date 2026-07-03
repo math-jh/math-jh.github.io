@@ -19,21 +19,17 @@ weight: 19
 
 우선 다음을 정의한다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> Ring $$A$$에 대하여, $$A$$-module $$M$$이 *invertible<sub>가역</sub>*이라는 것은 $$M$$이 finitely generated이고, $$A$$의 임의의 prime ideal $$\mathfrak{p}$$에 대하여 $$M_\mathfrak{p}\cong A_\mathfrak{p}$$가 성립하는 것이다. 
-
-</div>
+::: 정의 1
+Ring $$A$$에 대하여, $$A$$-module $$M$$이 *invertible<sub>가역</sub>*이라는 것은 $$M$$이 finitely generated이고, $$A$$의 임의의 prime ideal $$\mathfrak{p}$$에 대하여 $$M_\mathfrak{p}\cong A_\mathfrak{p}$$가 성립하는 것이다. 
+:::
 
 Prime ideal $$\mathfrak{p}$$와 $$\mathfrak{p}$$를 포함하는 maximal ideal $$\mathfrak{m}$$에 대하여, 만일 $$A_\mathfrak{m}\cong M_\mathfrak{m}$$라면 $$A_\mathfrak{p}\cong M_\mathfrak{p}$$일 것이므로 위의 조건은 임의의 maximal idlal에 대해서만 확인해봐도 충분하다. 
 
 이제 $$M^\ast=\Hom_A(M,A)$$으로 정의하면, $$A$$가 commutative라는 사실로부터 $$\Hom_A(M, A)$$도 $$A$$-module임을 알고, 더 나아가 trace map $$M^\ast\otimes M \rightarrow A$$ 또한 존재한다. ([\[다중선형대수학\] §Hom과 텐서곱, ⁋정의 6](/ko/math/multilinear_algebra/hom_and_tensor#def6))
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**정의 2**</ins> Ring $$A$$와, $$A$$의 total ring of fractions $$K$$를 생각하자. 그럼 $$K$$의 $$A$$-submodule $$\mathfrak{A}$$가 $$A$$의 *fractional ideal<sub>분수아이디얼</sub>*이라는 것은 $$0$$이 아닌 적당한 $$a\in A$$가 존재하여 $$a \mathfrak{A}\subseteq A$$인 것이다. 
-
-</div>
+::: 정의 2
+Ring $$A$$와, $$A$$의 total ring of fractions $$K$$를 생각하자. 그럼 $$K$$의 $$A$$-submodule $$\mathfrak{A}$$가 $$A$$의 *fractional ideal<sub>분수아이디얼</sub>*이라는 것은 $$0$$이 아닌 적당한 $$a\in A$$가 존재하여 $$a \mathfrak{A}\subseteq A$$인 것이다. 
+:::
 
 위의 정의에서 얻어지는 $$a \mathfrak{A}$$가 $$A$$의 ideal이 된다는 것은 자명하다. 직관적으로 $$\mathfrak{A}$$가 finitely generated라면, $$a \mathfrak{A}\subseteq A$$라는 조건은 $$\mathfrak{A}$$의 generator들의 공통분모를 곱하여 이를 $$A$$의 subset으로 보는 것과 같은 것이다. 특히 $$K$$의 임의의 finitely generated $$A$$-submodule
 
@@ -51,9 +47,8 @@ $$X^{-1}=(A:_KX)=\{y\in K\mid yX\subseteq A\}$$
 
 이며, 위의 직관에 따르면 이는 대략적으로 $$X$$의 분모들의 모임 정도로 생각할 수 있다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="thm3">**정리 3**</ins> Noetherian ring $$A$$에 대하여 다음이 성립한다.
+::: 정리 3
+Noetherian ring $$A$$에 대하여 다음이 성립한다.
 
 1. $$A$$-module $$M$$이 invertible인 것과, trace map $$M^\ast\otimes_A M \rightarrow A$$가 isomorphism인 것이 동치이다. 
 2. 임의의 invertible module은 $$A$$의 어떤 fractional ideal과 isomorphic하고, 따라서 $$K$$의 임의의 invertible $$A$$-submodule은 $$A$$의 fractional ideal이다. 이런 식으로 얻어지는 임의의 invertible fractional ideal은 $$A$$의 non-zerodivisor를 포함한다.
@@ -63,11 +58,8 @@ $$X^{-1}=(A:_KX)=\{y\in K\mid yX\subseteq A\}$$
 
     으로 정의되는 morphism들은 isomorphism들이다. 특히 $$M^{-1}\cong M^\ast$$이 성립한다.
 4. 임의의 $$A$$-submodule $$M\subseteq K$$에 대하여, $$M$$이 invertible인 것과 $$M^{-1}M=A$$인 것이 동치이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 1. 우선 한쪽 방향은 [§국소화의 성질들, ⁋명제 4](/ko/math/commutative_algebra/properties_of_localization#prop4)에 의해 자명하다.  
     거꾸로 trace map $$\tr:M^\ast\otimes_A M \rightarrow A$$가 isomorphism이라 하고, $$M_\mathfrak{p}\cong A_\mathfrak{p}$$임을 보여야 한다. 이 때, $$\tr$$이 isomorphism이므로
     
@@ -106,17 +98,12 @@ $$X^{-1}=(A:_KX)=\{y\in K\mid yX\subseteq A\}$$
 3. 두 invertible module $$M,N$$이 주어졌다 하자. 그럼 둘째 결과에 의해 이들을 $$K$$ 안에 들어있는 fractional ideal로 생각할 수 있으며, 주장에서 주어진 map 또한 이렇게 정의된 것이다. 그럼 어차피 주어진 morphism들이 isomorphism이라는 것은 [§국소화의 성질들, ⁋명제 4](/ko/math/commutative_algebra/properties_of_localization#prop4)을 통해 보일 것이므로, 처음부터 $$A$$가 local임을 가정해도 되고, 그럼 둘째 결과에서의 논증과 invertible module의 정의에 의해 $$M,N$$은 모두 $$A$$와 isomorphic하다. 이제 $$M,N$$을 생성하는 $$K$$의 non-zerodivisor를 각각 $$s,t$$라 하면, 첫 번째 morphism은 원래부터 epimorphism이고, 추가로 $$M\otimes_A N$$을 $$A\cong As\otimes_AAt$$로 본다면 $$M\otimes N \rightarrow MN$$은 $$1\otimes1$$을 $$st$$로 보내는 것으로 이해할 수 있으므로 $$st$$가 non-zerodivisor라는 것으로부터 이것이 monomorphism이기도 하다는 것을 안다.
   두 번째 morphism의 경우, 우선 우리는 두 번째 결과에 의하여 적당한 non-zerodivisor $$a\in A\cap M$$을 택할 수 있다. 그럼 $$0$$이 아닌 임의의 $$t\in M^{-1}N$$에 대해 $$ta\neq 0$$이므로 $$u_t$$는 zero morphism이 아니고, 따라서 주장의 morphism은 monomorphism이다. 이것이 epimorphism이라는 것은 임의의 $$u\in \Hom_A(M,N)$$에 대하여, $$u(x)=y$$라 하면 $$u=u_{y/x}$$가 되어 성립한다. 특히 $$N=A$$로 두면 마지막 주장을 얻는다.
 4. 우선 $$M$$이 invertible이라면 3번 결과에 의해 $$M^{-1}\otimes M \rightarrow M^{-1}M$$과 trace map $$M^\ast\otimes M \rightarrow A$$를 같은 것으로 볼 수 있다. 거꾸로 $$K$$의 임의의 $$A$$-submodule $$M$$이 $$M^{-1}M=A$$를 만족한다면, 위와 마찬가지로 localization을 통해 $$(A,\mathfrak{m})$$이 local ring이라 가정하고 $$M\cong A$$임을 보여도 된다. 그런데 조건 $$M^{-1}M=A$$에 의하여, 적당한 $$y\in M^{-1}$$에 대해 $$yM\not\subseteq \mathfrak{m}$$이도록 할 수 있고 그럼 $$\mathfrak{m}$$의 maximality에 의하여 $$yM=A$$여야 하고, 이로부터 $$M$$과 $$A$$ 사이의 isomorphism $$y-$$를 얻는다. 
+:::
 
-</details>
-
-<div class="proposition" markdown="1">
-
-<ins id="thm4">**정리 4**</ins> UFD $$R$$에 대하여 $$\Pic(R)=0$$이다. 즉, UFD $$R$$ 위의 invertible module은 free이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 정리 4
+UFD $$R$$에 대하여 $$\Pic(R)=0$$이다. 즉, UFD $$R$$ 위의 invertible module은 free이다.
+:::
+::: 증명
 $$R$$이 UFD이고 $$I$$가 $$R$$의 invertible fractional ideal이라 하자. 충분성을 위해 $$I \subseteq R$$이라 가정한다 (아니면 적당한 $$s \in R$$로 $$sI \subseteq R$$이 되게 하면, $$I$$가 principal이면 $$sI$$도 principal이므로).
 
 $$I$$가 invertible이므로 $$I^{-1}I = R$$이고, [정의 1](#def1)에 의해 임의의 prime $$\mathfrak{p}$$에서 $$I_\mathfrak{p} \cong R_\mathfrak{p}$$이다. 따라서 $$I$$는 **locally principal**이다: 임의의 height 1 prime $$\mathfrak{p}$$에 대하여, localization $$R_\mathfrak{p}$$은 DVR이며 ($$R$$이 UFD이므로 $$R_\mathfrak{p}$$는 정규 local ring of dimension 1), DVR에서 모든 nonzero fractional ideal은 principal이므로 적당한 $$v_\mathfrak{p}(I) \in \mathbb{Z}$$에 대하여 $$I_\mathfrak{p} = (\pi_\mathfrak{p}^{v_\mathfrak{p}(I)})$$이다. 여기서 $$\pi_\mathfrak{p}$$는 $$R_\mathfrak{p}$$의 uniformizer이고, $$v_\mathfrak{p}$$는 $$R_\mathfrak{p}$$의 normalized valuation이다. $$I \subseteq R$$이므로 $$v_\mathfrak{p}(I) \ge 0$$이다.
@@ -126,39 +113,31 @@ $$I$$가 invertible이므로 $$I^{-1}I = R$$이고, [정의 1](#def1)에 의해 
 $$I = \bigcap_{\mathfrak{p}} I_\mathfrak{p} \cap R = \bigcap_{\mathfrak{p}} (\pi_\mathfrak{p}^{v_\mathfrak{p}(I)}) = (a)$$
 
 이다. 첫째 등호에서 $$\subseteq$$ 방향은 명백하고, 반대 방향은 $$x \in R$$이고 모든 height 1 prime $$\mathfrak{p}$$에 대해 $$v_\mathfrak{p}(x) \ge v_\mathfrak{p}(I)$$이면 UFD에서 각 $$\mathfrak{p}$$에서의 valuation 비교에 의해 $$x/a \in R$$, 즉 $$x \in (a)$$임에서 따른다. 마지막 등호에서 $$\bigcap_{\mathfrak{p}} (\pi_\mathfrak{p}^{v_\mathfrak{p}(I)})$$는 $$v_\mathfrak{p}(x) \ge v_\mathfrak{p}(I)$$ for all $$\mathfrak{p}$$를 만족하는 $$x \in K$$의 집합이므로 이는 $$(a)$$와 일치한다. 따라서 $$I$$는 principal ideal이다.
-
-</details>
+:::
 
 Ring $$A$$ 위에 정의된 invertible module들의 isomorphism class들의 모임을 생각하자. 그럼 $$\otimes$$는 이 isomorphism class를 보존하므로 이 위에 이항연산을 정의하며, $$\otimes$$가 결합법칙과 교환법칙을 만족하고, 항등원 $$A$$를 갖는다. 뿐만 아니라, [정리 3](#thm3)의 첫째 결과에 의해 임의의 invertible module은 $$\otimes$$에 대한 역원 $$M^\ast$$를 가진다. 이로부터 이 모임이 abelian group이 되는 것을 안다.
 
 비슷하게, $$K$$의 invertible $$A$$-submodule들 (즉 $$A$$의 invertible fractional ideal들) 또한 ideal product를 통해 group의 구조를 가지며, 이 때 [정리 3](#thm3)의 넷째 조건은 $$M$$의 역원이 $$M^{-1}$$임을 보여준다. 이들에 다음과 같이 이름을 붙인다.
 
-<div class="definition" markdown="1">
-
-<ins id="def5">**정의 5**</ins> Ring $$A$$에 대하여 다음을 정의한다. 
+::: 정의 5
+Ring $$A$$에 대하여 다음을 정의한다. 
 
 1. $$A$$의 *Picard group<sub>피카르드 군</sub>* $$\Pic(A)$$는 $$\otimes$$로 연산이 주어진 invertible $$A$$-module들의 isomorphism class들의 group이다.
 2. $$A$$의 *Cartier divisor<sub>카르티에 인자</sub>*들의 group $$\CaDiv(A)$$는 $$K$$의 invertible $$A$$-submodule들, 즉 $$A$$의 fractional ideal들의 group이다.
-
-</div>
+:::
 
 그럼 [정리 3](#thm3)로부터 다음이 자명하다.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor6">**따름정리 6**</ins> Noetherian ring $$A$$에 대하여 다음이 성립한다.
+::: 따름정리 6
+Noetherian ring $$A$$에 대하여 다음이 성립한다.
 
 1. $$K$$의 임의의 invertible $$A$$-submodule을 받아, 그 isomorphism class를 내놓는 함수 $$\CaDiv(A) \rightarrow \Pic(A)$$는 surjective이며, 그 kernel은 $$K$$의 unit들의 group $$K^\times$$와 isomorphic하다.
 2. $$\CaDiv(A)$$는 $$A$$의 invertible ideal들에 의해 생성되는 free abelian group이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 1. 주어진 함수가 surjective인 것은 [정리 3](#thm3)의 둘째 결과이며, $$K$$의 임의의 unit $$x$$에 대하여 $$Ax\subseteq K$$는 이 함수에 의해 $$A$$로 옮겨지는 invertible module이다. 따라서 임의의 invertible submodule $$M,N$$이 isomorphic하여, 적당한 $$x\in K^\times$$에 대해 $$I=xJ$$라 할 수 있으므로 kernel에 대한 주장도 보일 수 있다.
 2. 임의의 invertible fractional ideal $$\mathfrak{A}$$에 대하여, [정리 3](#thm3)의 둘째, 넷째 결과에 의해 $$\mathfrak{A}^{-1}$$도 invertible fractional ideal이고, 그럼 다시 [정리 3](#thm3)의 둘째 결과에 의해 $$\mathfrak{A}^{-1}$$은 $$A$$의 non-zerodivisor를 포함한다. 이를 $$a$$라 하면, $$a \mathfrak{A}\subseteq A$$이므로 $$\mathfrak{A}=a \mathfrak{A}\cdot (a)^{-1}$$이다. 
-
-</details>
+:::
 
 ---
 

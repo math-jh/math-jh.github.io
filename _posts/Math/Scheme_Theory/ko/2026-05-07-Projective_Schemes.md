@@ -101,15 +101,13 @@ $$f(\lambda x_0,\ldots, \lambda x_n)=\lambda^{\deg f} f(x_0,\ldots, x_n),\qquad 
 
 이번 글의 남은 부분에서 우리는 graded ring에 $$\Proj$$를 취하여 projective scheme을 얻어내는 과정을 따라간다. 이를 위해 몇몇 표기를 고정한다. 
 
-<div class="remark" markdown="1">
-
+::: remark 참고 {#rmk}
 Graded ring은 별 말이 없다면 항상 $$\mathbb{N}_{\geq0}$$-graded인 것으로 가정한다. 즉 우리의 관심이 되는 ring은 항상 다음의 꼴
 
 $$A_\bullet=\bigoplus_{i=0}^\infty A_i=A_0\oplus A_1\oplus\cdots$$
 
 이다. 이 때, $$A_0$$은 그 자체로 ring이므로, $$A_\bullet$$은 graded $$A_0$$-algebra로 볼 수 있으며, 이러한 이유에서 $$A_0$$을 *base ring*이라 부른다. 또, $$A_\bullet$$에 정의된 grading 구조를 잊어버리고 이를 평범한 ring으로 볼 일이 있을 때는 이를 간단히 $$A$$로만 적기로 한다. 
-
-</div>
+:::
 
 Graded ring $$A_\bullet$$이 주어졌다 하자. 그럼 다음의 부분집합
 
@@ -119,48 +117,40 @@ $$A_+=\bigoplus_{i=1}^\infty A_i=A_1\oplus A_2\oplus\cdots$$
 
 이제 집합으로서 $$\Proj A_\bullet$$은 다음과 같이 정의된다.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> Graded ring $$A_\bullet$$에 대하여, $$\Proj A_\bullet$$은 다음의 집합
+::: 정의 1
+Graded ring $$A_\bullet$$에 대하여, $$\Proj A_\bullet$$은 다음의 집합
 
 $$\Proj A_\bullet =\{\mathfrak{p}\in \Spec A\mid\text{$\mathfrak{p}$ is homogeneous and $A_+\not\subset \mathfrak{p}$}\}$$
 
 으로 정의된다.
-
-</div>
+:::
 
 정의에 의해 $$\Proj A_\bullet$$은 $$\Spec A$$의 부분집합이다. 즉, $$\Proj A_\bullet$$의 점들은 모두 $$\Spec A$$의 점들이기도 하다. 이는 $$\Spec A$$ 대신 $$\mSpec A$$를 사용했다면 다소 어색한 결과이지만, $$\Spec A$$에는 전통적인 점들 외에도 prime ideal들에 해당하는 점들이 존재한다. 가령 $$A=\mathbb{K}[\x_1,\x_2]$$의 ideal $$(\x_1-\x_2)$$를 생각하면, $$\mathbb{K}[\x_1,\x_2]/(\x_1-\x_2)\cong \mathbb{K}[\x_1]$$이므로 이 ideal은 prime ideal이다. 또, 이 ideal은 $$\mathbb{K}[\x_1,\x_2]$$를 graded ring $$A_\bullet$$으로 보았을 때, $$A_+$$를 포함하지 않는 homogeneous prime ideal이므로 $$\Proj A_\bullet$$의 점이기도 하다. 
 
 아직까지 $$\Proj A_\bullet$$은 집합일 뿐이다. 여기에 위상구조를 주기 위해서는 함수의 zero locus를 사용해야 하고, 앞서 관찰했듯 우리는 *homogeneous* polynomial의 zero locus를 사용해야 한다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**정의 2**</ins> Graded ring $$A_\bullet$$가 주어졌다 하자. $$A_\bullet$$의 homogeneous ideal $$\mathfrak{a}$$에 대하여
+::: 정의 2
+Graded ring $$A_\bullet$$가 주어졌다 하자. $$A_\bullet$$의 homogeneous ideal $$\mathfrak{a}$$에 대하여
 
 $$Z_+(\mathfrak{a})=\{\mathfrak{p}\in\Proj A_\bullet\mid \mathfrak{a}\subseteq \mathfrak{p}\}$$
 
 으로 정의한다. 
-
-</div>
+:::
 
 그럼 [\[가환대수학\] §등급환의 국소화, ⁋보조정리 2](/ko/math/commutative_algebra/localization_of_graded_rings#lem2)의 셋째 결과를 이용하여, [§스펙트럼, ⁋보조정리 6](/ko/math/scheme_theory/spectrums#lem6), 그리고 [§스펙트럼, ⁋명제 5](/ko/math/scheme_theory/spectrums#prop5)과 비슷한 다음 보조정리를 보일 수 있다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="lem3">**보조정리 3**</ins> Graded ring $$A_\bullet$$에 대하여 다음이 성립한다.
+::: 보조정리 3
+Graded ring $$A_\bullet$$에 대하여 다음이 성립한다.
 
 1. 임의의 homogeneous ideal $$\mathfrak{a},\mathfrak{b}$$에 대하여, $$Z_+(\mathfrak{a}\mathfrak{b})=Z_+(\mathfrak{a})\cup Z_+(\mathfrak{b})$$이다. 
 2. 임의의 homogeneous ideal들의 family $$\{\mathfrak{a}_i\}$$에 대하여, $$Z_+(\sum \mathfrak{a}_i)=\bigcap Z_+(\mathfrak{a}_i)$$이 성립한다. 
 3. 임의의 homogeneous ideal $$\mathfrak{a}$$에 대하여, $$Z_+(\sqrt{\mathfrak{a}})=Z_+(\mathfrak{a})$$이다. 
 4. 임의의 homogeneous ideal $$\mathfrak{a}$$에 대하여, $$Z_+(\mathfrak{a})=Z_+(\mathfrak{a}\cap A_+)$$이다. 
-
-</div>
+:::
 
 물론 위의 보조정리에서 등장하는 $$\mathfrak{a}\mathfrak{b}$$나 $$\sqrt{\mathfrak{a}}$$, $$\sum \mathfrak{a}_i$$들은 homogeneous임이 자명하다. 그럼 첫째 결과부터 셋째 결과까지는 이미 스펙트럼에서 관찰한 결과들이며, 오직 넷째 결과만이 새롭다. 
 
-<details class="proof--alone" markdown="1">
-<summary>보조정리 3의 증명</summary>
-
+::: 증명 (보조정리 3)
 1. $$\mathfrak{a}$$ 혹은 $$\mathfrak{b}$$를 포함하는 homogeneous prime ideal $$\mathfrak{p}$$는 그보다 작은 homogeneous ideal $$\mathfrak{ab}$$ 또한 포함하는 것이 자명하므로, 반대방향 포함관계만 보이면 충분하다. $$\mathfrak{p}\supset \mathfrak{ab}$$라 가정하자. 만일 $$\mathfrak{p}\not\supseteq \mathfrak{b}$$라 하면, $$b\not\in \mathfrak{p}$$인 $$\mathfrak{b}$$의 원소 $$b$$를 찾을 수 있다. 그럼 $$\mathfrak{b}$$가 homogeneous이므로, 이를 homogeneous element들의 합으로 분해하여
     
     $$b=b_1+\cdots b_n,\qquad \text{$b_i\in \mathfrak{b}$ homogeneous}$$
@@ -174,45 +164,34 @@ $$Z_+(\mathfrak{a})=\{\mathfrak{p}\in\Proj A_\bullet\mid \mathfrak{a}\subseteq \
 3. [\[가환대수학\] §국소화의 성질들, ⁋따름정리 8](/ko/math/commutative_algebra/properties_of_localization#cor8).
 4. 정의에 의해 $$Z_+(\mathfrak{a})\subseteq Z_+(\mathfrak{a}\cap A_+)$$는 자명하므로 반대방향만 보이면 충분하다. 즉, $$\mathfrak{p}$$가 $$\mathfrak{a}$$의 양의 차수를 갖는 homogeneous element들을 모두 가지며, $$A_+$$를 통째로 포함하지는 않는 prime ideal이라 하고 $$\mathfrak{a}\subseteq \mathfrak{p}$$임을 보이자. 이를 위해서는 임의의 $$a\in \mathfrak{a}\cap A_0$$을 택했을 때, 위의 가정으로부터 $$a$$ 또한 $$\mathfrak{p}$$에 석함을 보이면 충분하다.  
     이제 $$A_+\not\subset\mathfrak{p}$$이므로, $$\mathfrak{p}$$에 속하지 않는 homogeneous element $$f$$가 존재한다. 이제 $$af\in \mathfrak{a}\cap A_+\subseteq \mathfrak{p}$$이고, $$f\not\in \mathfrak{p}$$이므로 $$a\in \mathfrak{p}$$이다. 
-
-</details>
+:::
 
 이 보조정리들의 결과를 보면, 첫째 결과와 둘째 결과로부터 다음을 정의할 수 있다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def4">**정의 4**</ins> Graded ring $$A_\bullet$$이 주어졌다 하자. 임의의 homogeneous ideal $$\mathfrak{a}$$에 대하여, $$Z_+(\mathfrak{a})$$ 꼴의 집합을 닫힌집합으로 갖는 $$\Proj A_\bullet$$의 (유일한) 위상을 *Zariski topology*라 부른다. 
-
-</div>
+::: 정의 4
+Graded ring $$A_\bullet$$이 주어졌다 하자. 임의의 homogeneous ideal $$\mathfrak{a}$$에 대하여, $$Z_+(\mathfrak{a})$$ 꼴의 집합을 닫힌집합으로 갖는 $$\Proj A_\bullet$$의 (유일한) 위상을 *Zariski topology*라 부른다. 
+:::
 
 또, 이 보조정리의 넷째 결과에 의해, 우리는 $$\Proj A_\bullet$$을 정의할 때는 $$A_+$$에 속한 homogeneous ideal들만 고려하면 된다는 것을 안다. 이는 직관적으로도 자명한데, $$A=\mathbb{K}[\x_0,\ldots, \x_n]$$이라 두면 $$A_0$$에 들어있는 원소들은 어차피 상수함수이기 때문이다. 
 
 이제 다음을 정의한다.
 
-<div class="definition" markdown="1">
-
-<ins id="def5">**정의 5**</ins> Graded ring $$A_\bullet$$의 임의의 homogeneous element $$f$$에 대하여, $$Z_+(f)$$의 $$\Proj A_\bullet$$에서의 complement $$\Proj A_\bullet\setminus Z_+(f)$$를 $$D_+(f)$$라 적는다. 
-
-</div>
+::: 정의 5
+Graded ring $$A_\bullet$$의 임의의 homogeneous element $$f$$에 대하여, $$Z_+(f)$$의 $$\Proj A_\bullet$$에서의 complement $$\Proj A_\bullet\setminus Z_+(f)$$를 $$D_+(f)$$라 적는다. 
+:::
 
 다음 따름정리는 [보조정리 3](#lem3)의 첫째 결과에 의해 바로 얻어진다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="cor6">**따름정리 6**</ins> $$D_+(f)\cap D_+(g)=D_+(fg)$$가 성립한다. 
-
-</div>
+::: 따름정리 6
+$$D_+(f)\cap D_+(g)=D_+(fg)$$가 성립한다. 
+:::
 
 뿐만 아니라 다음이 성립한다.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor7">**따름정리 7**</ins> $$D_+(f)$$들의 모임은 $$\Proj A_\bullet$$의 base를 이룬다. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 따름정리 7
+$$D_+(f)$$들의 모임은 $$\Proj A_\bullet$$의 base를 이룬다. 
+:::
+::: 증명
 $$A$$의 임의의 homogeneous ideal $$\mathfrak{a}$$를 homogeneous generator들을 이용하여 $$\mathfrak{a}=\sum_{i\in I} (f_i)$$로 쓰면
 
 $$Z_+(\mathfrak{a})=\bigcap_{i\in I} Z_+((f_i))$$
@@ -222,23 +201,18 @@ $$Z_+(\mathfrak{a})=\bigcap_{i\in I} Z_+((f_i))$$
 $$D_+(\mathfrak{a})=\bigcup_{i\in I} D_+(f_i)$$
 
 이다. 
-
-</details>
+:::
 
 한편, 우리는 ring $$A$$의 스펙트럼 $$\Spec A$$에서, 임의의 원소 $$f\in A$$를 택하면 $$D(f)$$는 (scheme으로서) $$\Spec A_f$$와 isomorphic한 것을 살펴보았다. 비슷한 결과가 $$D_+(f)$$에 대해서도 성립한다.
 
-<div class="proposition" markdown="1">
-
-<ins id="lem8">**보조정리 8**</ins> Graded ring $$A_\bullet$$과 임의의 homogeneous element $$f\in A_\bullet$$에 대하여, 함수 $$D_+(f) \rightarrow \Spec A_{(f)}$$를 다음의 식
+::: 보조정리 8
+Graded ring $$A_\bullet$$과 임의의 homogeneous element $$f\in A_\bullet$$에 대하여, 함수 $$D_+(f) \rightarrow \Spec A_{(f)}$$를 다음의 식
 
 $$\mathfrak{p}\mapsto \mathfrak{p}A_f\cap A_{(f)}$$
 
 으로 정의하면 이 함수는 homeomorphism이다. ([\[가환대수학\] §등급환의 국소화, ⁋정의 5](/ko/math/commutative_algebra/localization_of_graded_rings#def5)) 
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 우선 $$f\not\in \mathfrak{p}$$이므로, localization $$A \rightarrow A_f$$를 통해 $$\mathfrak{p}$$는 $$A_f$$의 prime ideal $$\mathfrak{p}A_f$$로 옮겨진다. ([\[가환대수학\] §국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8)) 이제 주장의 우변은 inclusion $$i: A_{(f)} \rightarrow A_f$$에 의한 $$\mathfrak{p}A_f$$의 preimage이므로 이는 $$A_{(f)}$$의 prime ideal이 된다. 
 
 이제 함수로서 이 대응의 역함수 $$\Spec A_{(f)} \rightarrow D_+(f)$$를 정의하자. 임의의 prime ideal $$\mathfrak{q}\in\Spec A_{(f)}$$가 주어졌다 하고, $$A$$의 homogeneous element $$x$$ 중 다음의 조건
@@ -250,52 +224,44 @@ $$\frac{x^{\deg f}}{f^{\deg x}}\in \mathfrak{q}$$
 $$xy\in \mathfrak{p}\iff \frac{x^{\deg f}}{f^{\deg x}}\frac{y^{\deg f}}{f^{\deg y}}\in \mathfrak{q}$$
 
 이므로 $$\mathfrak{q}$$가 prime ideal인 것으로부터 $$\mathfrak{p}$$가 prime ideal인 것을 안다. 이제 이 대응 $$\mathfrak{p}\mapsto \mathfrak{p}A_f\cap A_{(f)}$$과 $$\mathfrak{q}\mapsto \mathfrak{p}$$가 서로의 역함수인 것을 쉽게 확인할 수 있고, $$A_\bullet$$의 임의의 homogeneous ideal $$\mathfrak{a}$$에 대하여, $$D_+(f)$$의 닫힌집합 $$Z_+(\mathfrak{a})\cap D_+(f)$$는 이 함수에 의하여 $$\Spec A_{(f)}$$의 닫힌집합 $$Z(\mathfrak{a}A_f\cap A_{(f)})$$으로 옮기므로 이것이 homeomorphism이 되는 것을 안다.
-
-</details>
+:::
 
 그럼 이제 $$\Proj A_\bullet$$에 scheme 구조를 주는 방법은 자명하다. 다음 보조정리의 증명은 [보조정리 8](#lem8)과 거의 유사하다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="lem9">**보조정리 9**</ins> Graded ring $$A_\bullet$$과 nonzero homogeneous element $$f,g$$에 대하여, isomorphism
+::: 보조정리 9
+Graded ring $$A_\bullet$$과 nonzero homogeneous element $$f,g$$에 대하여, isomorphism
 
 $$\Spec A_{(fg)}\cong D(g^{\deg f}/f^{\deg g})\subseteq \Spec A_{(f)}$$
 
 이 존재한다. 
-
-</div>
+:::
 
 따라서, $$\Spec A_{(g)}$$의 principal open set $$D(f^{\deg g}/g^{\deg f})\subseteq \Spec A_{(f)}$$와 $$\Spec A_{(f)}$$의 principal open set $$\Spec A_{(fg)}\cong D(g^{\deg f}/f^{\deg g})$$ 사이의 isomorphism이 존재한다. 이제 다음 정리는 단순한 계산이다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="thm10">**정리 10**</ins> 위에서 정의한 $$\Spec A_{(f)}$$들과 open subscheme들 $$D(g^{\deg f}/f^{\deg g})$$, 그리고 isomorphism
+::: 정리 10
+위에서 정의한 $$\Spec A_{(f)}$$들과 open subscheme들 $$D(g^{\deg f}/f^{\deg g})$$, 그리고 isomorphism
 
 $$D(f^{\deg g}/g^{\deg f})\cong \Spec A_{(fg)}\cong D(g^{\deg f}/f^{\deg g})$$
 
 들은 [§스킴, ⁋보조정리 9](/ko/math/scheme_theory/schemes#lem9)의 조건들을 모두 만족하고, 따라서 $$\Proj A_\bullet$$ 위에 유일한 scheme structure를 준다. 
-
-</div>
+:::
 
 특히 $$\Proj A_\bullet$$은 locally ringed space이므로, 임의의 $$\mathfrak{p}\in \Proj A_\bullet$$에 대하여 stalk $$\mathcal{O}_{\Proj A_\bullet,\mathfrak{p}}$$은 local ring이다. 그런데 어차피 $$\mathfrak{p}$$는 적당한 affine open neighborhood에 넣을 수 있으므로, 본질적으로 [§아핀스킴, ⁋보조정리 8](/ko/math/scheme_theory/affine_schemes#lem8)과 동일한 과정으로 다음을 보일 수 있다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="lem11">**보조정리 11**</ins> Graded ring $$A_\bullet$$과 임의의 $$\mathfrak{p}\in \Proj A_\bullet$$에 대하여, 다음 isomorphism
+::: 보조정리 11
+Graded ring $$A_\bullet$$과 임의의 $$\mathfrak{p}\in \Proj A_\bullet$$에 대하여, 다음 isomorphism
 
 $$\mathcal{O}_{\Proj A_\bullet,\mathfrak{p}}\cong A_{(\mathfrak{p})}$$
 
 이 존재한다. 
-
-</div>
+:::
 
 다소 주의할 것은 $$\Proj$$는 $$\Spec$$과 다르게, $$\bgr_{\mathbb{N}_{\geq 0}}\cRing^\op$$에서 $$\LRS$$로의 functor를 정의하지 않는다는 것이다. 이는 graded ring homomorphism $$\phi_\bullet:A_\bullet \rightarrow B_\bullet$$과 $$B$$의 임의의 homogeneous ideal $$\mathfrak{q}$$가 $$B_+$$를 포함하지 않더라도 그 inverse image $$\phi^{-1}(\mathfrak{q})$$는 $$A_+$$를 포함할 수도 있기 때문이다. 
 
 이제 마지막으로 우리는 맨 처음 motivation을 위해 살펴본 projective space를 대수기하의 언어로 (거의) 완전하게 옮겨본다.
 
-<div class="example" markdown="1">
-
-<ins id="ex12">**예시 12**</ins> 대수기하학에서, $$\mathbb{P}^n_\mathbb{K}$$는 다음의 식
+::: 예시 12
+대수기하학에서, $$\mathbb{P}^n_\mathbb{K}$$는 다음의 식
 
 $$\mathbb{P}^n_\mathbb{K}=\Proj \mathbb{K}[\x_0,\ldots, \x_n]$$
 
@@ -320,8 +286,7 @@ $$\mathbb{K}[\x_{0/i}, \ldots, \x_{n/i}]\rightarrow \mathbb{K}[\x_0,\ldots, \x_n
 $$\mathcal{O}_{\mathbb{P}^n_\mathbb{K},\mathfrak{p}}\cong \mathcal{O}_{U_i, \mathfrak{q}}$$
 
 을 기대하는 것이 당연할 것이다. 그리고 이는 물론 성립한다. ([\[가환대수학\] §등급환의 국소화, ⁋명제 8](/ko/math/commutative_algebra/localization_of_graded_rings#prop8)) 
-
-</div>
+:::
 
 ---
 **참고문헌**

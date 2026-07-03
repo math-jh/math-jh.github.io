@@ -18,15 +18,13 @@ published: false
 
 ## 캘러미분가군
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> Ring $$A$$와 $$A$$-algebra $$E$$, 그리고 $$E$$-module $$M$$이 주어졌다 하자. 그럼 다음의 Leibniz rule
+::: 정의 1
+Ring $$A$$와 $$A$$-algebra $$E$$, 그리고 $$E$$-module $$M$$이 주어졌다 하자. 그럼 다음의 Leibniz rule
 
 $$d(xy)=y\,dx+x\,dy$$
 
 을 모든 $$x,y\in E$$에 대해 만족하는 $$A$$-linear map들을 *$$A$$-derivation*이라 부르고 이들의 모임을 $$\Der_A(E,M)$$으로 적는다. 
-
-</div>
+:::
 
 Derivation의 기본적인 성질 중 하나는 $$\Der_A(E,M)$$이 $$E$$-module 구조를 갖는다는 것으로, 이는 임의의 $$x\in E$$와 $$d\in \Der_A(E, M)$$에 대하여, $$A$$-linear map $$x d$$를 다음의 식
 
@@ -46,33 +44,28 @@ $$(u\circ d)(y_1y_2)=u(y_1\,dy_2+y_2\,dy_1)=y_1u(dy_2)+y_2u(dy_1)=y_1(u\circ d)(
 
 에 따른 것이다. 즉, $$\Der_A(E, -)$$는 $$\lMod{E}$$에서 자기자신으로의 functor가 된다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="lem2">**보조정리 2**</ins> Functor $$\Der_A(E, -)$$는 representable하다. 즉, $$\lMod{E}$$에서 자기자신으로의 두 functor들 사이의 natural isomorphism
+::: 보조정리 2
+Functor $$\Der_A(E, -)$$는 representable하다. 즉, $$\lMod{E}$$에서 자기자신으로의 두 functor들 사이의 natural isomorphism
 
 $$\Der_A(E,-)\cong\Hom_E(\Omega_{E/A},-)$$
 
 이 성립하도록 하는 $$E$$-module $$\Omega_{E/A}$$이 존재한다. 
-
-</div>
+:::
 
 Representing object $$\Omega_{E/A}$$는 다음과 같이 정의된다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**정의 3**</ins> $$A$$-algebra $$E$$에 대하여, $$E$$의 $$A$$에 대한 *Kähler differential module<sub>캘러 미분가군</sub>*은 $$\{df\mid f\in E\}$$로 생성되는 $$E$$-module에, 다음의 relation들
+::: 정의 3
+$$A$$-algebra $$E$$에 대하여, $$E$$의 $$A$$에 대한 *Kähler differential module<sub>캘러 미분가군</sub>*은 $$\{df\mid f\in E\}$$로 생성되는 $$E$$-module에, 다음의 relation들
 
 $$\text{$d(xy)=x\,dy+y\,dx$ for all $x,y\in E$},\qquad \text{$d(ax+by)=a\,dx+b\,dy$ for all $x,y\in E$ and $a,b\in A$}$$
 
 을 주어 만들어지는 $$E$$-module이며, 이를 $$\Omega_{E/A}$$로 표기한다. 이 때, $$f\mapsto df$$로 정의되는 $$A$$-linear derivation $$d:E \rightarrow \Omega_{E/A}$$를 *universal $$A$$-derivation*이라 적는다. 
-
-</div>
+:::
 
 그럼 $$\Omega_{E/A}$$가 원하는 universal property ([보조정리 2](#lem2))를 만족하는 것을 쉽게 확인할 수 있다.  뿐만 아니라, $$\Omega_{E/A}$$를 $$A$$-algebra $$A \rightarrow E$$를 받아 $$\Omega_{E/A}$$를 내놓는 functor처럼 생각하면, 다음과 같은 종류의 functoriality 또한 성립한다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**명제 4**</ins> 다음의 ring homomorphism들의 commutative diagram
+::: 명제 4
+다음의 ring homomorphism들의 commutative diagram
 
 ![setup](/assets/images/Math/Commutative_Algebra/Differentials-1.svg){:style="width:6.30em" class="invert" .align-center}
 
@@ -81,14 +74,10 @@ $$\text{$d(xy)=x\,dy+y\,dx$ for all $x,y\in E$},\qquad \text{$d(ax+by)=a\,dx+b\,
 ![functoriality](/assets/images/Math/Commutative_Algebra/Differentials-2.svg){:style="width:11.39em" class="invert" .align-center}
 
 을 commute하게 하는 유일한 $$E$$-linear map $$\Omega_{\varphi/\phi}:\Omega_{E/A} \rightarrow \Omega_{E'/A'}$$이 존재한다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 $$d_{E'/A'}\circ \phi$$가 $$A$$-derivation이므로 [보조정리 2](#lem2)에 의해 자명하다. 
-
-</details>
+:::
 
 한편 $$\Omega_{E'/A'}$$는 $$E'$$-module이므로, [\[대수적 구조\] §스칼라의 변환, ⁋명제 6](/ko/math/algebraic_structures/change_of_base_ring#prop6)에 의하여 
 
@@ -112,18 +101,14 @@ $$d_{E'/E}=E' \overset{d_{E'/A}}{\longrightarrow}\Omega_{E'/A}\overset{\Omega_\v
 
 과 동일하다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**명제 5 (Cotangent sequence)**</ins> $$E'$$-linear map들의 sequence
+::: 명제 5 (Cotangent sequence)
+$$E'$$-linear map들의 sequence
 
 $$\Omega_{E/A}\otimes_EE'\overset{\Omega_{\varphi/A}'}{\longrightarrow}\Omega_{E'/A}\overset{\Omega_\varphi}{\longrightarrow}\Omega_{E'/E} \longrightarrow 0$$
 
 는 exact이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 $$N$$을 $$\Omega_{\varphi/A}'$$의 image, 즉 원소들 $$d_{E'/A}\varphi(x)$$ ($$x\in E$$)로 생성되는 $$\Omega_{E'/A}$$의 $$E'$$-submodule이라 하고, $$C=\Omega_{E'/A}/N$$과 quotient map $$\pi:\Omega_{E'/A} \rightarrow C$$를 생각하자.
 
 우선 $$\Omega_\varphi$$가 surjective인 것을 보이자. $$\Omega_{E'/E}$$는 $$E'$$-module로서 원소들 $$d_{E'/E}y'$$ ($$y'\in E'$$)으로 생성되는데, 위에서 살펴본 식 $$d_{E'/E}=\Omega_\varphi\circ d_{E'/A}$$에 의하여 이들은 모두 $$\Omega_\varphi$$의 image에 속하기 때문이다.
@@ -139,8 +124,7 @@ $$\delta(\varphi(e)y')=\varphi(e)\,\delta(y')+y'\,\delta(\varphi(e))=\varphi(e)\
 $$\pi(d_{E'/A}y')\overset{\psi'}{\longmapsto} d_{E'/E}y'\overset{\psi}{\longmapsto}\pi(d_{E'/A}y'),\qquad d_{E'/E}y'\overset{\psi}{\longmapsto}\pi(d_{E'/A}y')\overset{\psi'}{\longmapsto}d_{E'/E}y'$$
 
 이므로 이들은 모두 identity이다. 즉 $$\psi'$$는 isomorphism이고, 따라서 $$\ker \Omega_\varphi=N=\im \Omega_{\varphi/A}'$$이다.
-
-</details>
+:::
 
 또 다른 중요한 exact sequence는 특별히 $$\varphi:E \rightarrow E'$$가 surjective인 경우에 얻어진다. 이 경우, first isomorphism theorme에 의하여
 
@@ -160,18 +144,14 @@ $$\bar{d}:K/K^2 \rightarrow \Omega_{E/A}\otimes_EE'$$
 
 을 얻는다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop6">**명제 6**</ins> 위와 같은 상황에서, 다음의 sequence
+::: 명제 6
+위와 같은 상황에서, 다음의 sequence
 
 $$K/K^2 \overset{\bar{d}}{\longrightarrow}\Omega_{E/A}\otimes_EE' \rightarrow\Omega_{E'/A} \longrightarrow 0$$
 
 는 exact이다. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 가운데 map은 [명제 5](#prop5)에서의 $$\Omega_{\varphi/A}'$$이다. $$N'$$을 $$\bar{d}$$의 image로 생성되는 $$\Omega_{E/A}\otimes_EE'$$의 $$E'$$-submodule이라 하고, $$C'=(\Omega_{E/A}\otimes_EE')/N'$$과 quotient map $$\pi:\Omega_{E/A}\otimes_EE' \rightarrow C'$$를 생각하자.
 
 우선 $$\Omega_{\varphi/A}'$$가 surjective인 것을 보이자. $$\varphi$$가 surjective이므로 $$\Omega_{E'/A}$$의 임의의 생성원은 $$x\in E$$에 대하여 $$d_{E'/A}\varphi(x)$$의 꼴로 쓸 수 있고, 이는 $$\Omega_{\varphi/A}'(d_{E/A}x\otimes 1)$$과 같기 때문이다.
@@ -187,8 +167,7 @@ $$\delta(x'y')=\pi(d_{E/A}(xy)\otimes 1)=\pi((x\,d_{E/A}y+y\,d_{E/A}x)\otimes 1)
 $$\pi(d_{E/A}x\otimes 1)\overset{\psi'}{\longmapsto}d_{E'/A}\varphi(x)\overset{\psi}{\longmapsto}\pi(d_{E/A}x\otimes 1),\qquad d_{E'/A}x'\overset{\psi}{\longmapsto}\pi(d_{E/A}x\otimes 1)\overset{\psi'}{\longmapsto}d_{E'/A}x'$$
 
 이 되어 모두 identity이다. 즉 $$\psi'$$는 isomorphism이고, 따라서 $$\ker\Omega_{\varphi/A}'=N'=\im\bar{d}$$이다.
-
-</details>
+:::
 
 이 exact sequence를 *conormal sequence*라 부르기도 한다.
 

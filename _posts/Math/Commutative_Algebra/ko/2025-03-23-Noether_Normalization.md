@@ -17,9 +17,8 @@ weight: 21
 
 이번 글의 목표는 다음의 정리를 보이고, 이에 따른 결과들을 살펴보는 것이다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="thm1">**정리 1 (Noether normalization lemma)**</ins> Finitely generated $$d$$-dimensional $$\mathbb{K}$$-algebra $$A$$에 대하여, 다음의 부등식
+::: 정리 1 (Noether normalization lemma)
+Finitely generated $$d$$-dimensional $$\mathbb{K}$$-algebra $$A$$에 대하여, 다음의 부등식
 
 $$d_1>d_2>\cdots>d_m>0$$
 
@@ -32,25 +31,20 @@ $$\mathfrak{a}_1\subset \mathfrak{a}_2\subset\cdots\subset \mathfrak{a}_m$$
 $$\mathfrak{a}_i\cap B=(\x_{d_i+1},\ldots, \x_d)\qquad\text{for $i=1,\ldots, m$}$$
 
 이 성립하도록 할 수 있다. 
-
-</div>
+:::
 
 이는 다음의 보조정리를 사용하여 보일 수 있으며, 이에 대한 증명은 생략하기로 한다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="lem2">**보조정리 2**</ins> Field $$\mathbb{K}$$와, non-constant polynomial $$f\in B=\mathbb{K}[\x_1,\ldots, \x_r]$$이 주어졌다 하자. 그럼 적당한 원소들 $$\x_1',\ldots, \x_{r-1}'\in B$$가 존재하여, 원소들 $$\x_1',\ldots, \x_{r-1}', f$$로 생성된 $$B$$의 $$\mathbb{K}$$-subalgebra를 $$B'$$라 했을 때 $$B$$가 finitely generated $$B'$$-module이도록 할 수 있다. 뿐만 아니라, 이들 원소들은 다음과 같이 택할 수 있다.
+::: 보조정리 2
+Field $$\mathbb{K}$$와, non-constant polynomial $$f\in B=\mathbb{K}[\x_1,\ldots, \x_r]$$이 주어졌다 하자. 그럼 적당한 원소들 $$\x_1',\ldots, \x_{r-1}'\in B$$가 존재하여, 원소들 $$\x_1',\ldots, \x_{r-1}', f$$로 생성된 $$B$$의 $$\mathbb{K}$$-subalgebra를 $$B'$$라 했을 때 $$B$$가 finitely generated $$B'$$-module이도록 할 수 있다. 뿐만 아니라, 이들 원소들은 다음과 같이 택할 수 있다.
 
 1. 충분히 큰 정수 $$e$$에 대하여, $$\x_i'=\x_i-\x_r^{e}$$으로 택할 수 있다. 
 2. 만일 $$\mathbb{K}$$가 infinite field라면, 적당한 $$a_i\in \mathbb{K}$$들에 대해 $$\x_i'=\x_i-a_i\x_r$$로 택할 수 있다. 
-
-</div>
+:::
 
 그럼 [정리 1](#thm1)의 증명은 다음과 같다. 
 
-<details class="proof--alone" markdown="1">
-<summary>정리 1의 증명</summary>
-
+::: 증명 (정리 1)
 우선 $$A$$가 finitely generated $$\mathbb{K}$$-algebra이므로 $$A=\mathbb{K}[\y_1,\ldots, \y_r]/\mathfrak{a}$$라 적을 수 있다. 그럼 주어진 조건을 만족하는 ideal들의 chain이 주어졌다 하면, 이들의 $$\mathbb{K}[\y_1,\ldots, \y_r]$$에서의 preimage들로 이루어진 chain
 
 $$\tilde{\mathfrak{a}}_1\subset \tilde{\mathfrak{a}}_2\subset\cdots\subset  \tilde{\mathfrak{a}}_m$$
@@ -77,15 +71,12 @@ $$\mathfrak{a}_i\cap \mathbb{K}[\x_1',\ldots, \x_e']\neq 0$$
 $$\mathfrak{a}_i\cap B_e\supseteq (\x_{e+1},\ldots, \x_d)$$
 
 이 성립하는데, 좌변의 ideal은 $$d_i$$-차원이고, 우변의 ideal의 차원은 $$e$$가 되어 모순이기 때문이다. 이제 $$\x_e$$를 위의 교집합에 속하는 아무 nonzero polynomial로 잡은 후, [보조정리 2](#lem2)를 사용하여 새로운 원소들 $$\x_1',\ldots, \x_{e-1}'$$들도 새로운 원소로 교체해주면 된다.
-
-</details>
+:::
 
 ## 결과들
 
 [정리 1](#thm1)은 다음의 결과를 준다.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm3">**정리 3**</ins> Ring $$A$$가 integral domain이고, finitely generated $$\mathbb{K}$$-algebra라 하자. 그럼 $$\dim A=\trdeg_\mathbb{K}\Frac(A)$$이다. 
-
-</div>
+::: 정리 3
+Ring $$A$$가 integral domain이고, finitely generated $$\mathbb{K}$$-algebra라 하자. 그럼 $$\dim A=\trdeg_\mathbb{K}\Frac(A)$$이다. 
+:::

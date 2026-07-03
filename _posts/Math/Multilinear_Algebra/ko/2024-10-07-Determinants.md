@@ -23,42 +23,33 @@ $$e_J=e_{j_1}\wedge e_{j_2}\wedge\cdots\wedge e_{j_k},\qquad j_1<\cdots < j_k, \
 
 이제 $$M$$이 유한한 basis $$e_1,\ldots, e_n$$을 갖는다 하자. 그럼 $$\bigwedge^n(M)$$의 basis는 단 하나의 원소 $$e_1\wedge\cdots\wedge e_n$$ 뿐이다. 한편 임의의 $$u\in\End_\rMod{A}(M)$$에 대하여, $$\bigwedge$$의 functoriality로부터 $$\bigwedge^n(u):\bigwedge^n(M)\rightarrow\bigwedge^n(M)$$이 유도되며, 위의 논의로부터 이 linear map은 반드시 $$x\mapsto \alpha x$$의 꼴로 쓰여야 한다.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> Free $$A$$-module $$M$$이 basis $$(e_i)_{i\in I}$$를 갖는다 하자. 그럼 임의의 $$u:M \rightarrow M$$에 대하여, 위의 논의에서 얻어지는 $$\alpha\in A$$를 $$u$$의 *행렬식<sub>determinant</sub>*이라 부르고 $$\det u$$로 적는다.
-
-</div>
+::: 정의 1
+Free $$A$$-module $$M$$이 basis $$(e_i)_{i\in I}$$를 갖는다 하자. 그럼 임의의 $$u:M \rightarrow M$$에 대하여, 위의 논의에서 얻어지는 $$\alpha\in A$$를 $$u$$의 *행렬식<sub>determinant</sub>*이라 부르고 $$\det u$$로 적는다.
+:::
 
 그럼 정의로부터 다음 명제가 자명하다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**명제 2**</ins> 다음이 성립한다. 
+::: 명제 2
+다음이 성립한다. 
 
 1. 임의의 $$u,v\in\End_\rMod{A}(M)$$에 대하여, $$\det(u\circ v)=(\det u)(\det v)$$가 성립한다.
 2. $$\det(\id_M)=1$$이다.
 3. 임의의 $$u\in\Aut_\rMod{A}(M)$$에 대하여, $$\det u$$는 $$A$$에서 곱셈에 대한 역원이 존재하며 그 값은 $$\det(u)^{-1}=\det(u^{-1})$$과 같다.
+:::
 
-</div>
-
-<div class="proposition" markdown="1">
-
-<ins id="cor3">**따름정리 3**</ins> 유한차원 free $$A$$-module $$M$$과 $$u\in\End_\rMod{A}(M)$$에 대하여 다음이 동치이다.
+::: 따름정리 3
+유한차원 free $$A$$-module $$M$$과 $$u\in\End_\rMod{A}(M)$$에 대하여 다음이 동치이다.
 
 1. $$u$$가 bijective이다.
 2. $$\det u$$가 $$A$$에서 가역이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 2번 조건을 가정하고 1번 조건을 보이면 충분하다. 이를 위해서는 $$x_i=u(e_i)$$로 정의하여
 
 $$x_1\wedge \cdots\wedge x_n=\det(u) e_1\wedge\cdots\wedge e_n$$
 
 를 얻은 후, 양 변에 $$\det(u)^{-1}$$을 곱한 후 그 식으로부터 얻어지는 기저변환을 생각하면 된다.
-
-</details>
+:::
 
 Free $$A$$-module $$M$$과 그 basis $$e_1,\ldots, e_n$$을 고정하면, 임의의 $$M$$의 원소들 $$x_1,\ldots, x_n$$에 대하여
 
@@ -72,9 +63,8 @@ $$x_1\wedge \cdots\wedge x_n=\alpha e_1\wedge\cdots\wedge e_n$$
 
 이를 위해 임의의 $$X=(\xi_{ij})\in\Mat_{I\times J}$$가 주어졌다 하자. $$I$$와 $$J$$ 위에 정의된 total ordering를 하나 고정하면, 임의의 유한한 부분집합 $$H\subseteq I$$, $$K\subseteq J$$가 주어질 때마다 이들로 만들어진 부분행렬 $$X_{H,K}=(\xi_{i,j})_{i\in H,j\in K}$$의 index에도 total order가 주어진다. 특히 만일 $$\lvert H\rvert=\lvert K\rvert$$인 경우를 생각하자. 그럼 다음의 보조정리는 자명하다.
 
-<div class="proposition" markdown="1">
-
-<ins id="lem4">**보조정리 4**</ins> Free $$A$$-module $$M$$의 basis $$(e_i)_{i\in I}$$가 주어졌다 하고, $$I$$의 total ordering을 하나 고정하자. 또, 임의의 자연수 $$p$$에 대하여, $$\bigwedge^p(M)$$의 basis
+::: 보조정리 4
+Free $$A$$-module $$M$$의 basis $$(e_i)_{i\in I}$$가 주어졌다 하고, $$I$$의 total ordering을 하나 고정하자. 또, 임의의 자연수 $$p$$에 대하여, $$\bigwedge^p(M)$$의 basis
 
 $$(e_J=e_{j_1}\wedge\cdots\wedge e_{j_p})_{\lvert J\rvert=p}$$
 
@@ -87,37 +77,27 @@ $$x_j=\sum_{i\in I} \xi_{ij}e_i$$
 $$x_1\wedge x_2\wedge\cdots\wedge x_p=\sum_{\lvert J\rvert=p}\det X_{I,J}e_J$$
 
 이 성립한다. 
+:::
 
-</div>
-
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**명제 5**</ins> 두 free $$A$$-moduile $$M,N$$과 이들의 유한한 basis $$(e_i)_{1\leq i\leq m}$$, $$(f_j)_{1\leq j\leq n}$$가 각각 주어졌다 하자. 이제 $$\min(m,n)$$보다 작은 자연수 $$p$$에 대하여, $$\bigwedge^p(u):\bigwedge^p(M) \rightarrow\bigwedge^p(N)$$을 basis $$(e_I)_{\lvert I\rvert=p}$$, $$(f_J)_{\lvert J\rvert=p}$$에 대하여 행렬로 표현한 것은 $$(\det(X_{J,I}))$$로 주어진다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 명제 5
+두 free $$A$$-moduile $$M,N$$과 이들의 유한한 basis $$(e_i)_{1\leq i\leq m}$$, $$(f_j)_{1\leq j\leq n}$$가 각각 주어졌다 하자. 이제 $$\min(m,n)$$보다 작은 자연수 $$p$$에 대하여, $$\bigwedge^p(u):\bigwedge^p(M) \rightarrow\bigwedge^p(N)$$을 basis $$(e_I)_{\lvert I\rvert=p}$$, $$(f_J)_{\lvert J\rvert=p}$$에 대하여 행렬로 표현한 것은 $$(\det(X_{J,I}))$$로 주어진다.
+:::
+::: 증명
 주어진 상황에서 $$I$$의 원소들을 $$i_1<\cdots i_p$$로 크기 순으로 나열하자. 그럼 $$\bigwedge^p(u)$$의 정의에 의하여
 
 $${\bigwedge}^p(u)=u(e_{i_1})\wedge\cdots\wedge u(e_{i_p})$$
 
 이므로, 앞선 보조정리를 적용하면 된다.
+:::
 
-</details>
-
-<div class="proposition" markdown="1">
-
-<ins id="cor6">**따름정리 6**</ins> Free $$A$$-module $$M$$이 유한한 basis $$(e_i)_{1\leq i\leq n}$$을 갖는다 하자. 그럼 임의의 $$u\in\End_\rMod{A}(M)$$과 $$\alpha,\beta\in A$$에 대하여 다음 식
+::: 따름정리 6
+Free $$A$$-module $$M$$이 유한한 basis $$(e_i)_{1\leq i\leq n}$$을 갖는다 하자. 그럼 임의의 $$u\in\End_\rMod{A}(M)$$과 $$\alpha,\beta\in A$$에 대하여 다음 식
 
 $$\det(\alpha\cdot\id_M+\beta u)=\sum_{k\geq 0}\tr\left({\bigwedge}^k(u)\right)\alpha^{n-k}\beta^k$$
 
 를 얻는다. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 좌변은 다음의 wedge
 
 $$(\alpha e_1+\beta u(e_1))\wedge\cdots\wedge(\alpha e_n+\beta u(e_n))$$
@@ -153,8 +133,7 @@ $$x_P=\gamma_{P,Q}\sum_{\lvert I\rvert=p}\det X_{I,P} e_Q\wedge e_I$$
 $$x_P=\det (X_{P,P} )e_1\wedge e_2\wedge\cdots\wedge e_n$$
 
 으로 쓸 수 있다. [명제 5](#prop5)에 의하여, 고정된 $$p$$에 대해 $$\lvert P\rvert=p$$를 만족하는 모든 $$p$$에 대해 $$\det(X_{p,p})$$를 모두 더한 것이 $$\tr\left(\bigwedge^k(u)\right)$$이므로 이로써 증명이 완료된다. 
-
-</details>
+:::
 
 특히 $$\alpha=\beta=1$$로 두면 $$\tr(\bigwedge(u))=\det(\id_M+u)$$를 얻는다. 
 
@@ -196,9 +175,8 @@ $$\rho\circ(\iota_!u)=u\circ\rho$$
 
 이 성립하는 것을 안다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop7">**명제 7**</ins> 위와 같은 상황에서, $$A[\x]$$-endomorphism $$\psi=\x-\iota_!u$$를 다음 식
+::: 명제 7
+위와 같은 상황에서, $$A[\x]$$-endomorphism $$\psi=\x-\iota_!u$$를 다음 식
 
 $$\psi(p\otimes_Ax)=(\x p)\otimes_Ax -p\otimes_A u(x)$$
 
@@ -207,11 +185,8 @@ $$\psi(p\otimes_Ax)=(\x p)\otimes_Ax -p\otimes_A u(x)$$
 $$\iota_!M\overset{\psi}{\longrightarrow}\iota_!M\overset{\rho}{\longrightarrow}M_u\longrightarrow 0$$
 
 이 exact이다. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 $$\ker\rho\subseteq \im\psi$$인 것만 보이면 충분하다. $$z\in\ker\rho$$가 임의로 주어졌다 하자. 그럼 $$z$$를 $$p\otimes_A x$$의 꼴의 원소들의 합으로 분해한 후, 다시 $$p$$들을 $$1,\x,\x^2,\ldots$$들의 일차결합으로 생각하여 분해한 후 $$\x^k$$들에 맞추어 합을 다시 쓰는 방식으로 
 
 $$z=\sum_k \x^k\otimes_A x_k,\qquad x_k\in M$$
@@ -229,8 +204,7 @@ $$z=\sum_k (\x^k\otimes_A x_k-1\otimes_A u^k(x_k))=\sum_k (\x^k-\iota_!u^k)(1\ot
 $$\sum_k (\x-\iota_!u)\circ\left(\sum_{j=0}^{k-1} \x^j (\iota_!u)^{k-j-1}\right)$$
 
 으로 쓸 수 있으므로 증명이 완료된다. 
-
-</details>
+:::
 
 한편, $$\psi$$의 행렬식을 생각하면 [따름정리 6](#cor6)으로부터 
 
@@ -242,22 +216,16 @@ $$\det (\x-\iota_!u)=\sum_{k=0}^n (-1)^k\tr\left({\bigwedge}^k(u)\right)\x^{n-k}
 
 으로 쓸 수 있다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def8">**정의 8**</ins> 위에서 정의한 다항식 $$\det(\x-\iota_!u)$$를 $$u$$의 *characteristic polynomial<sub>특성다항식</sub>*이라 부르고 $$\chi_u(\x)$$로 적는다. 
-
-</div>
+::: 정의 8
+위에서 정의한 다항식 $$\det(\x-\iota_!u)$$를 $$u$$의 *characteristic polynomial<sub>특성다항식</sub>*이라 부르고 $$\chi_u(\x)$$로 적는다. 
+:::
 
 그럼 앞선 식으로부터, characteristic polynomial에서 $$\x^n$$의 계수는 $$1$$, $$\x^{n-1}$$의 계수는 $$-\tr(u)$$이며 상수항은 $$(-1)^n\det(u)$$임을 알 수 있다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop9">**명제 9 (Cayley-Hamilton)**</ins> $$\chi_u(u)=0$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 명제 9 (Cayley-Hamilton)
+$$\chi_u(u)=0$$.
+:::
+::: 증명
 보여야 할 것은 임의의 $$x\in M$$에 대하여 $$\chi_u(u)(x)=0$$인 것을 보여야 한다. 그런데 $$\chi_u(u)(x)$$는, 식 (1)을 사용하면, $$\rho(\chi_u(\x)\otimes_Ax)$$와 같다. 이제
 
 $$\chi_u(\x)\otimes_Ax=\chi_u(\x)(1\otimes_Ax)=\det(\x-\iota_!u)(1\otimes_Ax)$$
@@ -267,5 +235,4 @@ $$\chi_u(\x)\otimes_Ax=\chi_u(\x)(1\otimes_Ax)=\det(\x-\iota_!u)(1\otimes_Ax)$$
 $$\det(\x-\iota_!u)(1\otimes_Ax)=(\x-\iota_!u)(v(1\otimes_A x))$$
 
 으로 쓸 수 있고 따라서 [명제 7](#prop7)에 의해 원하는 결과를 얻는다.
-
-</details>
+:::

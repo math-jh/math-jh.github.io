@@ -44,24 +44,18 @@ $$\bigwedge\nolimits^n(L):\bigwedge\nolimits^n(V)\rightarrow\bigwedge\nolimits^n
 
 특별히 $$E=T^\ast M$$이라면 다음과 같이 정의한다.
 
-<div class="definition" markdown="1">
+::: 정의 1
+$$M$$이 $$m$$차원의 connected manifold라 하자. 이 때, $$M$$이 *orientable*이라는 것은 $$\bigwedge\nolimits^m(M)\setminus\{0\}$$이 두 개의 component를 갖는 것이고, 이 때 두 component중 하나를 택하는 것을 $$M$$의 *orientation*이라 부른다. 
+:::
 
-<ins id="def1">**정의 1**</ins> $$M$$이 $$m$$차원의 connected manifold라 하자. 이 때, $$M$$이 *orientable*이라는 것은 $$\bigwedge\nolimits^m(M)\setminus\{0\}$$이 두 개의 component를 갖는 것이고, 이 때 두 component중 하나를 택하는 것을 $$M$$의 *orientation*이라 부른다. 
-
-</div>
-
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**명제 2**</ins> $$M$$이 $$m$$차원의 connected manifold라 하자. 다음이 모두 동치이다.
+::: 명제 2
+$$M$$이 $$m$$차원의 connected manifold라 하자. 다음이 모두 동치이다.
 
 1. $$M$$이 orientable이다.
 2. $$M$$을 덮는 적당한 coordinate system들의 모임이 존재하여, 이들이 겹치는 곳에서 Jacobian이 항상 0보다 크도록 할 수 있다.
 3. $$M$$ 위에 정의된 non-vanishing $$m$$-form이 존재한다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 편의상 $$M$$의 coordinate system들은 모두 connected인 것으로 가정한다. 이는 항상 가능한데, 임의의 chart의 정의역을 좌표근방 안의 열린 공들로 제한하면 되기 때문이다. 또, coordinate system $$(U,x)$$마다 $$U$$ 위에서 정의된 non-vanishing $$m$$-form
 
 $$\omega_U=dx^1\wedge\cdots\wedge dx^m$$
@@ -97,16 +91,11 @@ $$\omega=\sum_{i\in I}\phi_i\,\omega_{U_{\alpha(i)}}$$
 으로 정의하면, 각 항은 $$M$$ 전체에서 정의된 $$C^\infty$$ $$m$$-form으로 확장되고 ($$\supp\phi_i$$ 바깥에서 $$0$$), 합은 locally finite이므로 $$\omega$$는 $$M$$ 위의 $$C^\infty$$ $$m$$-form이다. 임의의 점 $$p$$에서 $$\sum\phi_i(p)=1$$이므로 $$\phi_i(p)>0$$인 $$i$$가 존재하고, 그러한 $$i$$들에 대하여 $$\omega_{U_{\alpha(i)}}(p)$$들은 모두 서로의 positive multiple이므로 $$\omega(p)$$는 이들 중 하나의 positive multiple이 되어 $$0$$이 아니다. 즉 $$\omega$$는 non-vanishing $$m$$-form이다.
 
 종합하면 (3)$$\implies$$(2)$$\implies$$(1)$$\implies$$(2)$$\implies$$(3)이므로 세 조건이 모두 동치이다.
+:::
 
-</details>
-
-<div class="example" markdown="1">
-
-<ins id="ex3">**예시 3**</ins> 
-
+::: 예시 3
 임의의 Lie group은 orientable이다. 이는 $$\Omega_\text{l.inv}^\ast(G)$$에서의 임의의 basis $$\omega_1,\ldots,\omega_n$$을 택한 후, 이들의 wedge $$\omega_1\wedge\cdots\wedge\omega_n$$을 생각하면 이것이 $$G$$ 위에서 nonvanishing $$n$$-form을 정의하기 때문이다.
-
-</div>
+:::
 
 ---
 

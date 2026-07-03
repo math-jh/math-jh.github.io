@@ -19,15 +19,13 @@ weight: 6
 
 두 점 $$(a, f(a))$$와 $$(x, f(x))$$를 잇는 직선의 기울기는 평균변화율 $$\frac{f(x) - f(a)}{x - a}$$이며, 이 때 $$x$$를 $$a$$로 보내는 극한을 취하면 미분계수를 얻는다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> 함수 $$f$$가 점 $$a$$에서 *미분가능<sub>differentiable</sub>*하다는 것은 극한
+::: 정의 1
+함수 $$f$$가 점 $$a$$에서 *미분가능<sub>differentiable</sub>*하다는 것은 극한
 
 $$f'(a) := \lim_{x \to a} \frac{f(x) - f(a)}{x - a} = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h}$$
 
 이 존재하는 것이다. 이 값 $$f'(a)$$를 $$f$$의 $$a$$에서의 *미분계수<sub>derivative</sub>*라 부른다. $$f$$가 정의역의 모든 점에서 미분가능하면, $$a \mapsto f'(a)$$로 정의되는 함수 $$f'$$를 $$f$$의 *도함수<sub>derivative function</sub>*라 한다.
-
-</div>
+:::
 
 두 표현은, 당연히, $$x=a+h$$로 두면 같은 것임이 자명하며, 위의 평균변화율에 대한 논의에 의해 미분계수 $$f'(a)$$는 점 $$(a, f(a))$$에서 그래프에 그은 접선의 기울기이다. 한편 임의의 직선은 기울기와 그 위의 한 점에 의해 완벽하게 결정되며, 특히 이 접선은 $$(a,f(a))$$를 지난다는 것이 이미 주어진 것이므로 점 $$a$$에서 미분가능한 함수의 접선은
 
@@ -45,15 +43,11 @@ $$\frac{df}{dx},\qquad \frac{d}{dx}f$$
 
 미분가능은 연속보다 강한 조건이다.
 
-<div class="proposition" markdown="1">
+::: 명제 2
+$$f$$가 $$a$$에서 미분가능하면 $$f$$는 $$a$$에서 연속이다.
+:::
 
-<ins id="prop2">**명제 2**</ins> $$f$$가 $$a$$에서 미분가능하면 $$f$$는 $$a$$에서 연속이다.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 $$x \neq a$$에서 
 
 $$f(x) - f(a) = \frac{f(x)-f(a)}{x-a}\cdot(x-a)$$
@@ -63,8 +57,7 @@ $$f(x) - f(a) = \frac{f(x)-f(a)}{x-a}\cdot(x-a)$$
 $$\lim_{x\to a}\bigl(f(x)-f(a)\bigr) = f'(a)\cdot 0 = 0$$
 
 이다. 따라서 $$f$$는 $$a$$에서 연속이다.
-
-</details>
+:::
 
 그러나 그 역은 성립하지 않는다. 대표적인 예가 $$f(x) = \lvert x\rvert$$로, 이 함수는 $$0$$에서 연속이지만 미분가능하지 않다. 
 
@@ -88,9 +81,8 @@ $$\frac{f(h)-f(0)}{h} = \frac{\lvert h\rvert}{h}=\begin{cases}1&\text{if $h>0$}\
 
 거꾸로 미분가능성은 한 점에서만 성립할 수도 있는 국소적 성질이어서, 다음과 같은 형태의 극단적인 예시도 가능하다. 
 
-<div class="example" markdown="1">
-
-<ins id="ex3">**예시 3 (한 점에서만 미분가능한 함수)**</ins> 함수
+::: 예시 3 (한 점에서만 미분가능한 함수)
+함수
 
 $$f(x) = \begin{cases} x^2 & (x \in \mathbb{Q}) \\ 0 & (x \notin \mathbb{Q}) \end{cases}$$
 
@@ -99,55 +91,45 @@ $$f(x) = \begin{cases} x^2 & (x \in \mathbb{Q}) \\ 0 & (x \notin \mathbb{Q}) \en
 $$\left\lvert \frac{f(x) - f(0)}{x - 0} \right\rvert = \frac{\lvert f(x)\rvert}{\lvert x\rvert} \leq \lvert x\rvert \to 0$$
 
 이므로 $$f'(0) = 0$$이 존재한다. 즉 $$f$$는 오직 $$0$$에서만 미분가능하다. 
-
-</div>
+:::
 
 ## 미분의 성질
 
 한편, 도함수는 결국엔 평균변화율이라는 함수의 극한이므로, [§함수의 극한, ⁋명제 5](/ko/math/calculus/functions_and_limits#prop5)으로부터 미분도 선형성을 갖는다는 것을 증명할 수 있다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**명제 4**</ins> $$f, g$$가 $$a$$에서 미분가능하고 $$c$$가 상수이면, $$f + g$$와 $$cf$$도 $$a$$에서 미분가능하고
+::: 명제 4
+$$f, g$$가 $$a$$에서 미분가능하고 $$c$$가 상수이면, $$f + g$$와 $$cf$$도 $$a$$에서 미분가능하고
 
 $$(f+g)'(a) = f'(a) + g'(a), \qquad (cf)'(a) = c f'(a)$$
 
 이다.
+:::
 
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 평균변화율이 
 
 $$\frac{(f+g)(a+h)-(f+g)(a)}{h} = \frac{f(a+h)-f(a)}{h} + \frac{g(a+h)-g(a)}{h}$$
 
 로 갈라지고, 각 항이 $$f'(a), g'(a)$$로 수렴하므로 [§함수의 극한, ⁋명제 5](/ko/math/calculus/functions_and_limits#prop5)에 의해 합도 수렴한다. $$cf$$도 평균변화율 식을 살펴보면 동일한 결과를 얻는다.
-
-</details>
+:::
 
 한편 도함수 $$f'$$도 다시 함수이므로, 그것이 미분가능하면 또 미분할 수 있다.
 
-<div class="definition" markdown="1">
-
-<ins id="def5">**정의 5**</ins> $$f$$의 도함수 $$f'$$이 미분가능하면 그 도함수를 *이계도함수* $$f'' = (f')'$$라 한다. 이를 반복하여 $$n$$번 미분한 것을 *$$n$$계도함수* $$f^{(n)}$$이라 하며, $$f^{(0)} = f$$로 둔다. 어떤 구간에서 $$f^{(n)}$$이 존재하고 연속이면 $$f$$가 그 구간에서 *$$C^n$$급*이라 하고, 모든 계의 도함수가 존재하면 *$$C^\infty$$급* 또는 *매끄럽다<sub>smooth</sub>*고 한다.
-
-</div>
+::: 정의 5
+$$f$$의 도함수 $$f'$$이 미분가능하면 그 도함수를 *이계도함수* $$f'' = (f')'$$라 한다. 이를 반복하여 $$n$$번 미분한 것을 *$$n$$계도함수* $$f^{(n)}$$이라 하며, $$f^{(0)} = f$$로 둔다. 어떤 구간에서 $$f^{(n)}$$이 존재하고 연속이면 $$f$$가 그 구간에서 *$$C^n$$급*이라 하고, 모든 계의 도함수가 존재하면 *$$C^\infty$$급* 또는 *매끄럽다<sub>smooth</sub>*고 한다.
+:::
 
 이계도함수 $$f''$$은 변화율의 변화율로, $$f$$가 위치라면 $$f''$$은 가속도이다. 또 $$f''$$의 부호는 그래프가 굽는 방향(볼록·오목)을 알려 준다. 이번 글에서 우리는 구체적인 함수를 미분하는 것을 목표로 하지 않지만, 다음 글에서 우리는 다항함수와 $$\sin, \cos, \exp$$ 등의 함수가 매끄러움을 보게 될 것이다. 
 
 마지막으로, 극한이 좌우에서 일치할 때에만 존재하듯, 미분계수의 존재도 좌우 평균변화율의 극한이 일치하는지에 달려 있다. 이를 떼어 정의해 두면 모서리·끝점에서의 미분가능성을 정밀하게 다룰 수 있다.
 
-<div class="definition" markdown="1">
-
-<ins id="def6">**정의 6**</ins> 함수 $$f$$의 점 $$a$$에서의 *우미분계수<sub>right-hand derivative</sub>*와 *좌미분계수<sub>left-hand derivative</sub>*를 각각
+::: 정의 6
+함수 $$f$$의 점 $$a$$에서의 *우미분계수<sub>right-hand derivative</sub>*와 *좌미분계수<sub>left-hand derivative</sub>*를 각각
 
 $$f'_+(a) := \lim_{h \to 0^+} \frac{f(a+h) - f(a)}{h}, \qquad f'_-(a) := \lim_{h \to 0^-} \frac{f(a+h) - f(a)}{h}$$
 
 로 정의한다. 두 한쪽 미분계수가 모두 존재하고 서로 같으면, 그리고 오직 그때에만, $$f$$는 $$a$$에서 미분가능하고 그 공통값이 $$f'(a)$$이다.
-
-</div>
+:::
 
 이는 양쪽 극한이 일치할 때에만 극한이 존재한다는 사실 ([§함수의 극한](/ko/math/calculus/functions_and_limits))을 평균변화율에 적용한 것에 지나지 않는다. 절댓값함수 $$f(x) = \lvert x\rvert$$를 다시 보면 $$f'_+(0) = 1$$, $$f'_-(0) = -1$$로 둘이 달라 $$0$$에서 미분 불가능함이 곧바로 확인된다. 한쪽 미분계수는 정의역의 끝점에서 미분가능성을 논할 때에도 자연스럽게 쓰이는데, 가령 $$[0, \infty)$$에서 정의된 $$f(x) = \sqrt x$$의 $$0$$에서의 거동은 우미분계수로만 의미를 갖는다.
 

@@ -19,49 +19,40 @@ weight: 9
 
 Abelian category를 정의하기 위해서는 우선 additive category를 정의해야 한다.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> Category $$\mathcal{A}$$가 *$$\Ab$$-category*라는 것은 $$\Hom_\mathcal{C}(A,B)$$가 모두 abelian group의 구조를 갖고 있으며, 이 때 $$(\Hom_\mathcal{C}(A,B),+)$$가 합성에 대한 분배법칙을 만족하는 것이다. 즉, 임의의 $$g_1,g_2\in\Hom_\mathcal{C}(B,C)$$와, 임의의 $$f:A\rightarrow B$$ 혹은 $$h:C\rightarrow D$$에 대하여
+::: 정의 1
+Category $$\mathcal{A}$$가 *$$\Ab$$-category*라는 것은 $$\Hom_\mathcal{C}(A,B)$$가 모두 abelian group의 구조를 갖고 있으며, 이 때 $$(\Hom_\mathcal{C}(A,B),+)$$가 합성에 대한 분배법칙을 만족하는 것이다. 즉, 임의의 $$g_1,g_2\in\Hom_\mathcal{C}(B,C)$$와, 임의의 $$f:A\rightarrow B$$ 혹은 $$h:C\rightarrow D$$에 대하여
 
 $$(g_1+g_2)\circ f=g_1\circ f+g_2\circ f,\qquad h\circ(g_1+g_2)=h\circ g_1+h\circ g_2$$
 
 이 모두 성립하는 것이다. Zero object $$0$$을 가지고, 임의의 두 object에 대해 이들의 곱이 존재하는 $$\Ab$$-category를 *additive category<sub>덧셈 카테고리</sub>*라 부른다.
-
-</div>
+:::
 
 두 additive category $$\mathcal{A},\mathcal{B}$$ 사이의 functor $$F:\mathcal{A}\rightarrow\mathcal{B}$$가 *additive functor<sub>덧셈함자</sub>*라는 것은 $$F$$가 abelian group $$\Hom_\mathcal{A}(A,B)$$에서 $$\Hom_\mathcal{B}(F(A),F(B))$$ 사이의 group homomorphism을 유도하는 것이다.
 
 Additive category에서는 임의의 $$A,B\in\obj(\mathcal{A})$$에 대하여, *zero map<sub>영사상</sub>* $$0_{AB}:A\rightarrow B$$가 $$A\rightarrow 0\rightarrow B$$로 정의된다. 이렇게 정의한 zero map은 물론 abelian group $$\Hom_\mathcal{A}(A,B)$$의 덧셈에 대한 항등원이 된다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**명제 2**</ins> 임의의 additive category $$\mathcal{A}$$와 두 대상 $$A,B\in\obj(\mathcal{A})$$에 대하여, 위에서 정의한 zero map $$0_{AB}$$는 $$\Hom_\mathcal{A}(A,B)$$의 덧셈에 대한 항등원이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 명제 2
+임의의 additive category $$\mathcal{A}$$와 두 대상 $$A,B\in\obj(\mathcal{A})$$에 대하여, 위에서 정의한 zero map $$0_{AB}$$는 $$\Hom_\mathcal{A}(A,B)$$의 덧셈에 대한 항등원이다.
+:::
+::: 증명
 Zero object $$0$$에서 $$B$$로의 morphism $$0_{0B}$$가 유일하게 존재한다. 따라서 $$0_{0B}+0_{0B}=0_{0B}$$가 성립한다. 이제 주어진 명제는 다음의 식
 
 $$0_{AB}+0_{AB}=0_{0B}\circ0_{A0}+0_{0B}\circ0_{A0}=(0_{0B}+0_{0B})\circ 0_{A0}=0_{0B}\circ 0_{A0}=0_{AB}$$
 
 으로부터 자명하다.
-
-</details>
+:::
 
 ## Abelian category
 
 이제 abelian category를 정의할 수 있다.
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**정의 3**</ins> Additive category $$\mathcal{A}$$가 *abelian category<sub>아벨 카테고리</sub>*라는 것은 다음 조건들이 추가로 성립하는 것이다.
+::: 정의 3
+Additive category $$\mathcal{A}$$가 *abelian category<sub>아벨 카테고리</sub>*라는 것은 다음 조건들이 추가로 성립하는 것이다.
 
 1. 임의의 homomorphism이 kernel과 cokernel을 갖는다.
 2. 임의의 monomorphism $$f$$는 $$\coker f$$의 kernel과 같다.
 3. 임의의 epimorphism $$f$$는 $$\ker f$$의 cokernel과 같다.
-
-</div>
+:::
 
 Additive category $$\mathcal{A}$$의 임의의 morphism $$f:A \rightarrow B$$의 kernel은 $$0:A \rightarrow B$$와의 equalizer $$\Eq(f,0)$$으로 정의되며, 비슷하게 $$f$$의 cokernel은 $$0$$과의 coequalizer $$\CoEq(f,0)$$으로 정의된다. 
 
@@ -89,16 +80,14 @@ $$\coim(f)=\coker(\ker(f))$$
 
 ## 사슬 복합체
 
-<div class="definition" markdown="1">
-
-<ins id="def4">**정의 4**</ins> Additive category $$\mathcal{A}$$에서 정의된 다음의 데이터를 생각하자.
+::: 정의 4
+Additive category $$\mathcal{A}$$에서 정의된 다음의 데이터를 생각하자.
 
 - 대상들의 모임 $$(A_n)_{n\in \mathbb{Z}}$$,
 - morphism들의 모임 $$(d_n:A_n \rightarrow A_{n-1})_{n\in \mathbb{Z}}$$
 
 만일 이들 데이터가 조건 $$d_n\circ d_{n-1}=0$$을 만족한다면, 이를 *chain complex<sub>사슬복합체</sub>*라 부르고 $$A_\bullet$$으로 적는다. 
-
-</div>
+:::
 
 한편, chain complex $$A_\bullet$$, $$B_\bullet$$ 사이의 morphism을 *chain map*이라 부르며, 이는 조건 $$d_n^B\circ f_n=f_{n-1}\circ d_n^A$$를 만족하는 morphism들의 모임 $$(f_n: A_n \rightarrow B_n)_{n\in \mathbb{Z}}$$으로 주어진다. 이를 통해 chain complex들의 category $$\Ch(\mathcal{A})$$를 정의할 수 있다.
 
@@ -116,19 +105,16 @@ $$Z_n \hookrightarrow B_n \hookrightarrow C_n$$
 
 $$\mathcal{A}^\op$$에서의 chain complex는 *cochain complex<sub>공사슬복합체</sub>*라 부른다.
 
-<div class="definition" markdown="1">
-
-<ins id="def5">**정의 5**</ins> 임의의 chain complex $$A_\bullet$$이 주어졌다 하자. 그럼
+::: 정의 5
+임의의 chain complex $$A_\bullet$$이 주어졌다 하자. 그럼
 
 $$\cdots \rightarrow A_{n+1}\overset{d_{n+1}}{\longrightarrow}A_n\overset{d_n}{\longrightarrow}A_{n-1}\rightarrow\cdots$$
 
 이 $$A_n$$에서 *exact*라는 것은 위의 monomorphism $$Z_n \rightarrow B_n$$이 isomorphism인 것이다. 모든 곳에서 exact인 chain complex를 *exact sequence*라 부른다.
+:::
 
-</div>
-
-<div class="example" markdown="1">
-
-<ins id="ex6">**예시 6**</ins> 다음의 chain complex
+::: 예시 6
+다음의 chain complex
 
 $$\cdots 0 \rightarrow 0 \rightarrow A \rightarrow B \rightarrow C \rightarrow 0 \rightarrow 0 \rightarrow \cdots$$
 
@@ -137,8 +123,7 @@ $$\cdots 0 \rightarrow 0 \rightarrow A \rightarrow B \rightarrow C \rightarrow 0
 $$0 \rightarrow A \rightarrow B \rightarrow C \rightarrow 0$$
 
 으로 적는다.
-
-</div>
+:::
 
 Additive functor $$F:\mathcal{A}\rightarrow \mathcal{B}$$가 주어졌다 하자. 그럼 $$\mathcal{A}$$에서 정의된 임의의 chain complex $$A_\bullet$$에 대하여, 다음의 데이터
 
@@ -146,9 +131,8 @@ $$\cdots \rightarrow F(A_{n+1}) \overset{F(d_{n+1})}{\longrightarrow} F(A_n) \ov
 
 가 chain complex가 된다는 것을 쉽게 확인할 수 있다. 즉 additive functor $$F$$는 functor $$\Ch(\mathcal{A})\rightarrow \Ch(\mathcal{B})$$를 유도한다. 그러나 일반적인 functor에 대하여, 원래의 chain complex $$A_\bullet$$이 exact라는 것이 위와 같이 얻어진 새로운 complex $$F(A_\bullet)$$가 exact라는 것을 보장해주지는 않는다.
 
-<div class="definition" markdown="1">
-
-<ins id="def7">**정의 7**</ins> Additive functor $$F: \mathcal{A} \rightarrow \mathcal{B}$$가 *left exact*인 것은 임의의 short exact sequence
+::: 정의 7
+Additive functor $$F: \mathcal{A} \rightarrow \mathcal{B}$$가 *left exact*인 것은 임의의 short exact sequence
 
 $$0 \rightarrow A \rightarrow B \rightarrow C \rightarrow 0$$
 
@@ -161,8 +145,7 @@ $$0 \rightarrow F(A) \rightarrow F(B) \rightarrow F(C)$$
 $$A \rightarrow B \rightarrow C \rightarrow 0$$
 
 이 exact인 것이다. Left exact인 동시에 right exact인 functor를 *exact functor*라 부른다.
-
-</div>
+:::
 
 즉, kernel을 보존하는 additive functor를 left exact functor라 부르고, cokernel을 보존하는 functor를 right exact functor라 부른다. 그럼 특히 left adjoint functor는 right exact이고, right adjoint functor는 left exact임을 확인할 수 있다.
 
@@ -178,11 +161,9 @@ $$F$$가 contravariant였더라도 위의 정의와 마찬가지로 left exactne
 
 따라서, 일반적으로는 이러한 정리들을 일일히 보이는 대신 다음 정리를 사용한다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="thm8">**정리 8 (Freyd-Mitchell embedding theorem)**</ins> 임의의 small abelian category $$\mathcal{A}$$에 대하여, 적당한 ring $$A$$와 fully faithful, exact functor $$F:\mathcal{A}\rightarrow\lMod{A}$$이 존재한다.
-
-</div>
+::: 정리 8 (Freyd-Mitchell embedding theorem)
+임의의 small abelian category $$\mathcal{A}$$에 대하여, 적당한 ring $$A$$와 fully faithful, exact functor $$F:\mathcal{A}\rightarrow\lMod{A}$$이 존재한다.
+:::
 
 따라서, 임의의 abelian category의 대상들을 $$A$$-module로 생각하고, 이들의 morphism을 $$A$$-linear map으로 생각한 후 계산을 해도 무관하다.
 

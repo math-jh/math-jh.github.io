@@ -40,27 +40,23 @@ $$h'\left( \sum_{\bar{h}\in H/G}\bar{h}x\right)=\sum_{\bar{h}\in H/G}(h'\bar{h})
 
 holds.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> In the above situation, define $$\tr_{H/G}:M^G \rightarrow M^H$$ by the formula
+::: Definition 1
+In the above situation, define $$\tr_{H/G}:M^G \rightarrow M^H$$ by the formula
 
 $$\tr_{H/G}(x)=\sum_{\bar{h}\in H/G} \bar{h}x$$
 
 and call it the *relative trace*.
-
-</div>
+:::
 
 Then the following holds.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**Proposition 2**</ins> The following hold.
+::: Proposition 2
+The following hold.
 
 1. For any $$x\in M^G$$ and $$h\in H$$, we have $$hx\in M^{hGh^{-1}}$$ and the formula $$\tr_{H/hGh^{-1}}(hx)=\tr_{H/G}(x)$$ holds.
 2. For subgroups $$F\leq G\leq H$$, we have $$\tr_{H/G}\circ\tr_{G/F}=\tr_{H/F}$$.
 3. For any $$x\in M^H$$, we have $$\tr_{H/G}(x)=[H:G].x$$.
-
-</div>
+:::
 
 ## Symmetric Tensors
 
@@ -68,17 +64,15 @@ Now we begin the main definitions. First, for any $$A$$-module $$M$$, we can def
 
 $$\sigma(x_1\otimes x_2\otimes \cdots\otimes x_n)=x_{\sigma^{-1}(1)}\otimes \cdots\otimes x_{\sigma^{-1}(n)}$$
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**Definition 3**</ins> In the above situation, elements $$z\in \T^nM$$ satisfying
+::: Definition 3
+In the above situation, elements $$z\in \T^nM$$ satisfying
 
 $$\sigma z=z\qquad\text{for all $\sigma\in S_n$}$$
 
 are called $$n$$th *symmetric tensors*, and their set $$\Sym^n(M)$$ is called the $$n$$-th *symmetric power*. Their (graded) direct sum is written as
 
 $$\Sym(M)=\bigoplus_{d=0}^\infty \Sym^d(M)$$
-
-</div>
+:::
 
 $$\Sym(M)$$ must be distinguished from the symmetric algebra $$\S(M)$$ defined earlier, but in good cases we can show that the two are isomorphic.
 
@@ -110,9 +104,8 @@ $$xy=\sum_{\sigma\in S_{p,q}}\sigma(x\otimes y)$$
 
 .
 
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**Proposition 4**</ins> For any $$A$$-module $$M$$, the following hold.
+::: Proposition 4
+For any $$A$$-module $$M$$, the following hold.
 
 1. $$\Sym(M)$$ becomes an associative, commutative unital $$A$$-algebra under the multiplication defined above.
 2. For positive integers $$p_1,\ldots, p_n$$, the formula
@@ -120,11 +113,8 @@ $$xy=\sum_{\sigma\in S_{p,q}}\sigma(x\otimes y)$$
     $$x_1x_2\cdots x_n=\tr_{S_{p_1+\cdots+p_n}/S_{p_1}\times\cdots\times S_{p_n}}(x_1\otimes \cdots\otimes x_n)$$
 
     holds.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 Let us prove the second claim first. We proceed by induction. The case $$n=2$$ is the definition, so assume inductively that
 
 $$x_2\cdots x_n=\tr_{S_{p_2+\dots+p_n}/(S_{p_2}\times\cdots\times S_{p_n})}(x_2 \otimes \dots \otimes x_n)$$
@@ -158,8 +148,7 @@ and in particular for $$n=3$$ this shows the associativity of $$\Sym(M)$$. For c
 $$\underbrace{p_2+1,\cdots p_2+p_1}_\text{\scriptsize$p_1$ elements},\qquad \underbrace{1,\ldots, p_2}_\text{\scriptsize$p_2$ elements}$$
 
 and applying the first result of [Proposition 2](#prop2) suffices. The unit is of course $$1\in \Sym^0(M)$$.
-
-</details>
+:::
 
 For any $$x\in M$$ and $$k\in \mathbb{N}$$, define
 
@@ -167,9 +156,8 @@ $$\gamma_k(x)=\underbrace{x\otimes\cdots\otimes x}_\text{\scriptsize $k$ times}$
 
 . Then using the above proposition we obtain the following corollary.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor5">**Corollary 5**</ins> The following hold.
+::: Corollary 5
+The following hold.
 
 1. The product $$x^k$$ of $$x$$ defined in [Proposition 4](#prop4) equals $$k!\gamma_k(x)$$. 
 2. For any $$x_1,\ldots, x_n\in M$$,
@@ -196,22 +184,17 @@ $$\gamma_k(x)=\underbrace{x\otimes\cdots\otimes x}_\text{\scriptsize $k$ times}$
     $$(-1)^nx_1x_2\cdots x_n=\sum_{H\subset\{1,\ldots, n\}}(-1)^{\lvert H\rvert}\gamma_n(x_H)$$
 
     holds. 
-
-</div>
+:::
 
 As in the general tensor algebra, we are particularly interested in the case where $$M$$ is a free $$A$$-module. First let us prove the following lemma.
 
-<div class="proposition" markdown="1">
-
-<ins id="lem6">**Lemma 6**</ins> For a finite group $$H$$ and a left $$AH$$-module $$N$$, suppose that an $$H$$-invariant $$A$$-basis $$B$$ of $$N$$ is given, and consider the quotient set $$\Omega=B/H$$ for this action. Then the following hold.
+::: Lemma 6
+For a finite group $$H$$ and a left $$AH$$-module $$N$$, suppose that an $$H$$-invariant $$A$$-basis $$B$$ of $$N$$ is given, and consider the quotient set $$\Omega=B/H$$ for this action. Then the following hold.
 
 1. If for each $$\omega\in \Omega$$ we define $$y_\omega=\sum_{b\in\omega}b$$, then $$(y_\omega)_{\omega\in \Omega}$$ is an $$A$$-basis of $$N^H$$. 
 2. A basis of a supplementary submodule of $$N^H$$ in $$N$$ is given by the union $$B'=\bigcup_{\omega\in\Omega} \omega'$$ of the sets $$\omega'=\omega\setminus \{z_\omega\}$$, each obtained from $$\omega\in\Omega$$ by removing one element.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 First, gathering all the $$y_\omega$$ and the elements of $$B'$$ merely replaces one element $$z_\omega$$ from each $$\omega$$ with $$y_\omega$$, so by elementary linear algebra we know that this is an $$A$$-basis of $$N$$. That is, defining
 
 $$N_1=\sum_{\omega\in\Omega} Ay_\omega,\qquad N_2=\sum_{b'\in B'}Ab'$$
@@ -219,26 +202,20 @@ $$N_1=\sum_{\omega\in\Omega} Ay_\omega,\qquad N_2=\sum_{b'\in B'}Ab'$$
 we have $$N=N_1\oplus N_2$$.
 
 Now we must show that $$N_1=N^H$$. By assumption $$N_1\subset N^H$$ is obvious. On the other hand, for any $$y\in N^H$$, writing $$y$$ as a linear combination $$y=\sum \alpha_b b$$ in the $$A$$-basis $$B$$, we know that $$\alpha_{bh}=\alpha_b$$ must hold for all $$b\in B$$ and all $$h\in H$$. From this it follows that $$y\in N_1$$.
-
-</details>
+:::
 
 Then using this we can prove the following proposition.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop7">**Proposition 7**</ins> Suppose that $$M$$ is a free $$A$$-module and $$(e_i)_{i \in I}$$ is a basis of $$M$$.
+::: Proposition 7
+Suppose that $$M$$ is a free $$A$$-module and $$(e_i)_{i \in I}$$ is a basis of $$M$$.
 
 1. For each $$\nu\in\mathbb{N}^{(I)}$$, the elements $$e_\nu=\prod_{i\in I}\gamma_{\nu_i}(e_i)$$ form an $$A$$-basis of $$\Sym(M)$$.
 2. For any $$k$$, $$\Sym^k(M)$$ is an $$A$$-direct factor of $$\T^kM$$. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 1. This follows from the second formula of [Corollary 5](#cor5).
 2. For each $$k$$, set $$H=S_k$$ and $$N=\T^kM$$ and apply [Lemma 6](#lem6). 
-
-</details>
+:::
 
 ## Functoriality
 
@@ -264,17 +241,15 @@ $$s:\T(M)\rightarrow \Sym(M);\qquad x\mapsto \sum_{\sigma\in S_n}\sigma x$$
 
 . One thing to be careful about is that even if $$x\in\Sym^k(M)\subseteq \T^k(M)$$, $$s(x)$$ is not $$x$$ itself but $$k!.x$$.
 
-<div class="remark" markdown="1">
-
-<ins id="rmk8">**Remark 8**</ins> For the above reason, some references define the symmetric product from the beginning as
+::: Remark 8
+For the above reason, some references define the symmetric product from the beginning as
 
 $$xy=\frac{1}{p!q!}\tr_{S_{p+q}/(S_p\times S_q)}(x\otimes y)$$
 
 . The advantage of doing so is that one no longer needs to worry about such coefficients, but for the above notation to make sense there must be a $$\mathbb{Q}$$-vector space structure on $$\T(M)$$ from the start.
 
 In general, any $$A$$-module has a $$\mathbb{Z}$$-module structure (so expressions such as $$k!.x$$ are well defined regardless of $$A$$), but a natural $$\mathbb{Q}$$-action does not exist, so we shall stick with the original definition.
-
-</div>
+:::
 
 For the symmetrization map $$s:\T(M) \rightarrow \Sym(M)$$ obtained in this way, by [§Tensor Algebras, ⁋Proposition 6](/en/math/multilinear_algebra/tensor_algebras#prop6) we obtain an $$\bar{s}: \S(M) \rightarrow \Sym(M)$$ satisfying
 
@@ -288,14 +263,12 @@ $$t: \Sym(M)\hookrightarrow \T(M)\overset{p}{\longrightarrow}\S(M)$$
 
 , and our claim is that in many cases these two maps can be regarded as (almost) inverses of each other.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop9">**Proposition 9**</ins> The following hold.
+::: Proposition 9
+The following hold.
 
 1. If $$x\in \S^n(M)$$, then $$(t\circ\bar{s})(x)=n!.x$$.
 2. If $$x\in \Sym^n(M)$$, then $$(\bar{s}\circ t)(x)=n!.x$$. 
-
-</div>
+:::
 
 The proof of this is a simple calculation.
 
@@ -305,9 +278,8 @@ For reasons similar to what we saw in [Remark 8](#rmk8) above, if $$A$$ is a $$\
 
 On the other hand, the symmetric algebra $$\S(M)$$ could be thought of as a representation of symmetric $$n$$-linear maps; considering $$\Sym(M)$$ together with [Proposition 9](#prop9) above, we obtain the following proposition.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop10">**Proposition 10**</ins> Let two $$A$$-modules $$M,N$$, a natural number $$n$$, and $$u: M \rightarrow N$$ be given. If $$M$$ is a free $$A$$-module, then the following are all equivalent.
+::: Proposition 10
+Let two $$A$$-modules $$M,N$$, a natural number $$n$$, and $$u: M \rightarrow N$$ be given. If $$M$$ is a free $$A$$-module, then the following are all equivalent.
 
 1. There exists an $$n$$-linear map $$v: M^n \rightarrow N$$ satisfying $$u(x)=v(x,\ldots, x)$$.
 2. There exists a linear map $$w: \Sym(M) \rightarrow N$$ satisfying $$u(x)=w(\gamma_n(x))$$.
@@ -317,26 +289,22 @@ On the other hand, the symmetric algebra $$\S(M)$$ could be thought of as a repr
 
     . 
 4. For every basis $$(e_i)_{i\in I}$$ of $$M$$, one can find a family $$(y_\nu)$$ satisfying the formula in condition 3.
-
-</div>
+:::
 
 Then maps $$u: M \rightarrow N$$ satisfying these equivalent conditions are called degree $$n$$ *homogeneous polynomial mappings*, and their set is written as $$\Poly^n(M,N)$$. The first and second conditions of the above proposition induce surjections onto $$\Poly^n(M,N)$$ from the set of $$n$$-linear maps from $$M$$ to $$N$$ and from $$\Hom_A(\Sym^n(M), N)$$, respectively, while the third and fourth conditions justify the name *polynomial mapping*.
 
-<div class="example" markdown="1">
-
-<ins id="ex11">**Example 11**</ins> Let a free $$A$$-module $$A^{(I)}$$ and a polynomial $$u\in N[\x_i]_{i\in I}$$ be given. Then the formula
+::: Example 11
+Let a free $$A$$-module $$A^{(I)}$$ and a polynomial $$u\in N[\x_i]_{i\in I}$$ be given. Then the formula
 
 $$(x_i)_{i\in I} \mapsto u(x_i)\in N$$
 
 is a homogeneous polynomial mapping of $$A$$-modules, and its degree is $$n$$.
-
-</div>
+:::
 
 It is not hard to show that the composition of two polynomial mappings is again a homogeneous mapping.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop12">**Proposition 12**</ins> Assume all the conditions of [Proposition 10](#prop10) and additionally assume that $$y\mapsto n!.y$$ is an automorphism of $$N$$. Then for any $$u\in\Poly^n(M,N)$$, there exists a *unique* symmetric $$n$$-linear map $$v:M^n \rightarrow N$$ satisfying
+::: Proposition 12
+Assume all the conditions of [Proposition 10](#prop10) and additionally assume that $$y\mapsto n!.y$$ is an automorphism of $$N$$. Then for any $$u\in\Poly^n(M,N)$$, there exists a *unique* symmetric $$n$$-linear map $$v:M^n \rightarrow N$$ satisfying
 
 $$u(x)=v(x,\ldots, x)$$
 
@@ -345,19 +313,16 @@ $$u(x)=v(x,\ldots, x)$$
 $$v(x_1,\ldots, x_n)=\frac{1}{n!}\sum_{H\subseteq \{1,\ldots, n\}}(-1)^{\lvert H\rvert}u\left(\sum_{i\in H} x_i\right)$$
 
 holds.
-
-</div>
+:::
 
 This follows from [Corollary 5](#cor5). Combining this with the observation in [Remark 8](#rmk8), we obtain the following result.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop13">**Proposition 13**</ins> Assume the situation of [Proposition 10](#prop10), and consider the canonical homomorphism $$\Hom_A(\Sym^n(M), N) \rightarrow \Poly^n(M,N)$$. Then the following hold.
+::: Proposition 13
+Assume the situation of [Proposition 10](#prop10), and consider the canonical homomorphism $$\Hom_A(\Sym^n(M), N) \rightarrow \Poly^n(M,N)$$. Then the following hold.
 
 1. If $$A$$ is an infinite integral domain and $$N$$ is torsion-free, then this homomorphism is an isomorphism.
 2. If $$y\mapsto n!.y$$ is an injective endomorphism from $$N$$ to $$N$$, then this homomorphism is an isomorphism.
-
-</div>
+:::
 
 ## Symmetric Functions
 
@@ -405,12 +370,10 @@ $$E_f=A[\x_1,\ldots,\x_n]/\mathfrak{a},\qquad \mathfrak{a}=(s_k+(-1)^{k+1}a_k)$$
 
 ; then $$f$$, upon extending coefficients from $$A$$ to $$E_f$$, factors completely into a product of linear terms. Moreover $$E_f$$ is universal among $$A$$-algebras with this property, which can be written precisely as follows.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop14">**Proposition 14**</ins> Let arbitrary commutative rings $$A,B$$ be given, and fix a ring homomorphism $$\rho: A \rightarrow B$$ and elements $$\xi_1,\ldots, \xi_n$$ of $$B$$. If in $$B[\x]$$ the formula
+::: Proposition 14
+Let arbitrary commutative rings $$A,B$$ be given, and fix a ring homomorphism $$\rho: A \rightarrow B$$ and elements $$\xi_1,\ldots, \xi_n$$ of $$B$$. If in $$B[\x]$$ the formula
 
 $$\rho(f)(\x)=\prod_{i=1}^n (\x-\xi_i)$$
 
 holds, then there exists a unique ring homomorphism $$u: E_f \rightarrow B$$ such that $$\rho(a)=u(a\cdot 1)$$ and $$u(\x_i)=\xi_i$$.
-
-</div>
+:::

@@ -17,23 +17,20 @@ weight: 3
 
 ## 수열의 수렴
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> 실수열 $$(a_n)_{n=1}^\infty$$와 실수 $$L$$에 대해, 임의의 $$\varepsilon > 0$$에 대하여 어떤 자연수 $$N$$이 존재하여
+::: 정의 1
+실수열 $$(a_n)_{n=1}^\infty$$와 실수 $$L$$에 대해, 임의의 $$\varepsilon > 0$$에 대하여 어떤 자연수 $$N$$이 존재하여
 
 $$n > N \implies \lvert a_n - L \rvert < \varepsilon$$
 
 이 성립할 때, $$L$$을 $$n \to \infty$$일 때 $$a_n$$의 *극한<sub>limit</sub>*이라 하고 $$\lim_{n\to\infty} a_n = L$$로 적는다.
-
-</div>
+:::
 
 이 정의는 [§함수의 극한, ⁋정의 14](/ko/math/calculus/functions_and_limits#def14)를 거의 그대로 가져온 것으로, 수열은 변수가 자연수뿐이고 한 방향($$+\infty$$)으로만 가므로 극한을 정의하는 방법도 사실상 이것뿐이다. 가령 $$a_n = 1/n \to 0$$은 임의의 $$\varepsilon > 0$$에 대해 $$N > 1/\varepsilon$$인 $$N$$을 택하면 $$n > N$$에서 $$1/n < 1/N < \varepsilon$$이 되는 것으로 확인된다. 약간의 변종은 수열이 무한대로 발산하는 것으로, 이는 [§함수의 극한, ⁋정의 13](/ko/math/calculus/functions_and_limits#def13)에서 임의의 $$M$$에 대해 $$n > N \implies a_n > M$$인 $$N$$이 존재하는 것으로 옮겨 적으면 되며, 가령 $$b_n = n$$이 그러하다. 그러나 수렴하지도 무한대로 발산하지도 않는 수열 또한 존재한다 ([예시 11](#ex11)).
 
 수렴하는 수열의 기본 성질들은 대개 함수의 극한에서의 증명을 그대로 옮겨 얻어진다. 가령 다음 명제는 [§함수의 극한, ⁋명제 5](/ko/math/calculus/functions_and_limits#prop5)의 증명과 동일한 방식으로 진행하면 충분하다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**명제 2 (수열의 극한법칙)**</ins> 두 수열 $$a_n$$, $$b_n$$이 수렴하고, 그 수렴값을
+::: 명제 2 (수열의 극한법칙)
+두 수열 $$a_n$$, $$b_n$$이 수렴하고, 그 수렴값을
 
 $$\lim_{n\to\infty} a_n = L, \qquad \lim_{n\to\infty} b_n = M$$
 
@@ -45,54 +42,40 @@ $$\lim_{n\to\infty} a_n = L, \qquad \lim_{n\to\infty} b_n = M$$
 4. $$M \neq 0$$이고 모든 $$n$$에 대해 $$b_n \neq 0$$이면 $$\lim a_n/b_n = L/M$$
 
 이 성립한다.
-
-</div>
+:::
 
 ## 극한의 성질
 
 수열 $$(a_n)$$에 대해 모든 $$n$$에서 $$\lvert a_n\rvert \leq M$$인 양수 $$M$$이 존재하면 $$(a_n)$$을 *유계<sub>bounded</sub>*라 한다. 수렴하는 수열은 앞의 유한개의 항을 제외하면 항상 수렴하는 점 근처로 모이므로 유계이다. 
 
-<div class="proposition" markdown="1">
+::: 명제 3
+수렴하는 수열은 유계이다.
+:::
 
-<ins id="prop3">**명제 3**</ins> 수렴하는 수열은 유계이다.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 $$a_n \to L$$이면 $$\varepsilon = 1$$에 대응하는 $$N$$을 잡았을 때 $$n \geq N$$에서 $$\lvert a_n\rvert \leq \lvert L\rvert + 1$$이다. 나머지 유한개 항을 포함하여 $$M = \max\{\lvert a_1\rvert, \ldots, \lvert a_{N-1}\rvert, \lvert L\rvert + 1\}$$로 두면 모든 $$n$$에서 $$\lvert a_n\rvert \leq M$$이다.
-
-</details>
+:::
 
 같은 베껴오기로, 다음은 [§함수의 극한, ⁋명제 8](/ko/math/calculus/functions_and_limits#prop8)의 수열 버전이다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**명제 4 (조임정리)**</ins> 충분히 큰 모든 $$n$$에서 $$a_n \leq c_n \leq b_n$$이고 $$a_n \to L$$, $$b_n \to L$$이면 $$c_n \to L$$이다.
-
-</div>
+::: 명제 4 (조임정리)
+충분히 큰 모든 $$n$$에서 $$a_n \leq c_n \leq b_n$$이고 $$a_n \to L$$, $$b_n \to L$$이면 $$c_n \to L$$이다.
+:::
 
 그럼 다음의 간단하지만 유용한 결과를 얻을 수 있다.
 
-<div class="proposition" markdown="1">
+::: 명제 5 (조임정리)
+실수열 $$a_n$$이 모든 $$n$$에 대해 $$a_n > 0$$을 만족하고, 인접항의 비로 이루어진 수열이 $$a_{n+1}/a_n$$이 $$1$$보다 작은 값 $$L$$로 수렴하면 $$a_n \to 0$$이다.
+:::
 
-<ins id="prop5">**명제 5 (조임정리)**</ins> 실수열 $$a_n$$이 모든 $$n$$에 대해 $$a_n > 0$$을 만족하고, 인접항의 비로 이루어진 수열이 $$a_{n+1}/a_n$$이 $$1$$보다 작은 값 $$L$$로 수렴하면 $$a_n \to 0$$이다.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 $$L < r < 1$$인 $$r$$를 고르면, 충분히 큰 $$n \geq N$$에서 $$a_{n+1}/a_n < r$$이므로 $$a_{N+k} < r^k a_N$$이다. $$0 < r < 1$$이라 $$r^k \to 0$$이고, 조임정리로 $$a_n \to 0$$이다.
-
-</details>
+:::
 
 이와 비슷하게, 실제 계산에서 많이 쓰이는 결과들을 다음 예시로 모아둔다. 
 
-<div class="example" markdown="1">
-
-<ins id="ex6">**예시 6**</ins> 다음은 수열의 극한의 기본 예시들이다.
+::: 예시 6
+다음은 수열의 극한의 기본 예시들이다.
 
 1. $$p > 0$$에 대해 $$1/n^p \to 0$$이 성립한다. 이는 $$n \geq 1$$에서 $$n^p \geq n$$이므로 $$0 < 1/n^p \leq 1/n \to 0$$이고, 따라서 [명제 4](#prop4)를 적용하면 된다. 
 2. 더 일반적으로, 같은 차수를 갖는 다항식의 비는 최고차항의 비에 의해 결정된다.
@@ -120,24 +103,20 @@ $$L < r < 1$$인 $$r$$를 고르면, 충분히 큰 $$n \geq N$$에서 $$a_{n+1}/
 
     이므로 바로 얻어진다. 
 6. 비슷하게, $$r > 1$$, $$p > 0$$에 대해 수열 $$r^n/n!$$의 인접한 항의 비는 $$r/(n+1) \to 0 < 1$$이므로 같은 이유로 $$0$$이다.
-
-</div>
+:::
 
 ## 단조수렴정리
 
 한편, 다음 명제를 증명하기 위해서는 해석학의 지식이 필요하므로 현재 우리가 증명하는 것은 불가능하지만, 그 결과 자체는 유용하므로 미리 받아들이기로 한다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop7">**명제 7 (단조수렴)**</ins> 위로 유계인 증가수열과 아래로 유계인 감소수열은 수렴한다. (증가수열의 극한은 그 항들의 상한이다.)
-
-</div>
+::: 명제 7 (단조수렴)
+위로 유계인 증가수열과 아래로 유계인 감소수열은 수렴한다. (증가수열의 극한은 그 항들의 상한이다.)
+:::
 
 이에 대한 가장 유용한 활용은 다음 *자연상수*의 존재성 증명이다. 
 
-<div class="example" markdown="1">
-
-<ins id="ex8">**예시 8 (자연상수 $$e$$)**</ins> 수열 $$a_n = (1 + 1/n)^n$$은 증가하며 위로 유계이고, 따라서 [명제 7](#prop7)에 의해 수렴한다.
+::: 예시 8 (자연상수 $$e$$)
+수열 $$a_n = (1 + 1/n)^n$$은 증가하며 위로 유계이고, 따라서 [명제 7](#prop7)에 의해 수렴한다.
 
 우선 이 수열이 증가수열임을 보이자. 우선 $$n$$개의 $$1+1/n$$과 하나의 $$1$$에 대하여 산술기하평균 부등식을 적용하면, 산술평균은
 
@@ -162,42 +141,32 @@ $$\binom{n}{k}\frac{1}{n^k} = \frac{1}{k!}\cdot\frac{n(n-1)\cdots(n-k+1)}{n^k} \
 $$a_n \leq \sum_{k=0}^{n}\frac{1}{k!} \leq 1 + \sum_{k=1}^{\infty}\frac{1}{2^{k-1}} = 3$$
 
 이다. 이 수열의 극한을 *자연상수* $$e = 2.718\ldots$$로 정의한다.
-
-</div>
+:::
 
 ## 부분수열
 
 한편, 수열의 수렴 여부를 분석할 때, 수열의 일부 항만 골라 뽑은 새 수열을 보는 것이 유용하다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def9">**정의 9**</ins> 수열 $$(a_n)$$과 자연수의 순증가 수열 $$n_1 < n_2 < n_3 < \cdots$$이 주어졌을 때, 새 수열 $$(a_{n_k})_{k\geq 1}$$을 $$(a_n)$$의 *부분수열<sub>subsequence</sub>*이라 한다.
-
-</div>
+::: 정의 9
+수열 $$(a_n)$$과 자연수의 순증가 수열 $$n_1 < n_2 < n_3 < \cdots$$이 주어졌을 때, 새 수열 $$(a_{n_k})_{k\geq 1}$$을 $$(a_n)$$의 *부분수열<sub>subsequence</sub>*이라 한다.
+:::
 
 즉 수열 $$a_n$$에서 index의 순서를 유지한 채 <em-ko>건너뛰며</em-ko> 항을 고른 것이다. 원래 수열이 어떤 값으로 수렴하면 그 부분수열도 같은 값으로 수렴하리라는 것은 직관적으로 분명하다. 
 
-<div class="proposition" markdown="1">
+::: 명제 10
+만일 수열 $$a_n$$이 $$L$$로 수렴하면 모든 부분수열 $$(a_{n_k})$$도 $$L$$로 수렴한다. 
+:::
 
-<ins id="prop10">**명제 10**</ins> 만일 수열 $$a_n$$이 $$L$$로 수렴하면 모든 부분수열 $$(a_{n_k})$$도 $$L$$로 수렴한다. 
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 임의의 $$\varepsilon > 0$$에 대해 $$n \geq N$$이면 $$\lvert a_n - L\rvert < \varepsilon$$인 $$N$$을 잡자. 그럼 정의에 의해 $$n_k \geq k$$이고, 따라서 $$k \geq N$$이면 $$n_k \geq N$$이라
 
 $$\lvert a_{n_k} - L\rvert < \varepsilon$$
 
 이다. 즉 $$a_{n_k} \to L$$이다. 
-
-</details>
+:::
 
 이 명제는 어떤 수열이 수렴함을 보일 때보다, 수렴하지 <em-ko>않음</em-ko>을 보일 때 쓸모가 크다. 그 대우에 의해, 서로 다른 두 극한을 갖는 부분수열이 존재하면 원래 수열 $$(a_n)$$은 수렴하지 않기 때문이다.
 
-<div class="example" markdown="1">
-
-<ins id="ex11">**예시 11 (발산하는 수열)**</ins> 수열 $$a_n = (-1)^n$$을 보자. 짝수번째 부분수열 $$a_{2k} = 1 \to 1$$과 홀수번째 부분수열 $$a_{2k-1} = -1 \to -1$$이 서로 다른 극한을 가지므로, [명제 10](#prop10)에 의해 $$(a_n)$$은 발산한다.
-
-</div>
+::: 예시 11 (발산하는 수열)
+수열 $$a_n = (-1)^n$$을 보자. 짝수번째 부분수열 $$a_{2k} = 1 \to 1$$과 홀수번째 부분수열 $$a_{2k-1} = -1 \to -1$$이 서로 다른 극한을 가지므로, [명제 10](#prop10)에 의해 $$(a_n)$$은 발산한다.
+:::

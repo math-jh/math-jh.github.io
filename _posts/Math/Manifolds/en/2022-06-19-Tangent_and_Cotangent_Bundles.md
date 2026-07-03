@@ -18,17 +18,15 @@ last_polished_at: 2026-06-01T07:30:04+00:00
 
 Now we need to define vector fields, and to define concepts such as $$C^\infty$$ vector fields it is better to first introduce the notion of a vector bundle. Let us begin by defining a vector bundle over a topological space.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> A *vector bundle* over a topological space $$B$$ is an object $$\pi:E \rightarrow B$$ defined as follows.
+::: Definition 1
+A *vector bundle* over a topological space $$B$$ is an object $$\pi:E \rightarrow B$$ defined as follows.
 
 - The *total space* $$E$$ and the *base space* $$B$$ are both topological spaces, and $$\pi:E \rightarrow B$$ is a continuous surjection.
 - For each $$b\in B$$, the fiber $$E_b=\pi^{-1}(b)$$ carries the structure of a $$k$$-dimensional vector space.
 - For each $$b_0\in B$$ there exists a suitable open neighborhood $$U\subseteq B$$ and a homeomorphism $$h:U\times\mathbb{R}^k \rightarrow\pi^{-1}(U)$$ such that for every $$b\in U$$, the map $$x\mapsto h(b,x)$$ is an isomorphism.
 
 We call $$k$$ the *rank* of the vector bundle $$E\rightarrow B$$. The homomorphism $$h$$ in the third condition is called a *local trivialization*, and if we can take $$U=B$$ then we call $$E$$ a *trivial vector bundle*.
-
-</div>
+:::
 
 Similarly, we can define a vector bundle over a manifold. To do this we require both $$E$$ and $$B$$ to be manifolds, $$\pi$$ to be a $$C^\infty$$ surjection, and replace the third condition with
 
@@ -38,9 +36,8 @@ Similarly, we can define a vector bundle over a manifold. To do this we require 
 
 A typical example of a vector bundle is the tangent bundle.
 
-<div class="example" markdown="1">
-
-<ins id="ex2">**Example 2 (Tangent bundle)**</ins> Define the set $$TM$$ by
+::: Example 2 (Tangent bundle)
+Define the set $$TM$$ by
 
 $$TM=\bigsqcup_{p\in M} T_pM$$
 
@@ -81,8 +78,7 @@ That $$\phi$$ is an isomorphism between vector spaces on each fixed fiber $$\pi^
 $$\tilde{\varphi}=(\varphi\times\id_{\mathbb{R}^m})\circ\phi$$
 
 since in this formula the two functions other than $$\phi$$ are both diffeomorphisms.
-
-</div>
+:::
 
 In particular, if $$TM$$ is a trivial bundle, we call $$M$$ a *parallelizable manifold*.
 
@@ -92,15 +88,13 @@ The reason the tangent bundle $$TM$$ is important is that most vector bundles de
 
 Originally, each time we define these we would have to show that they satisfy the conditions of a vector bundle, but **[Mil]** presents a more fundamental approach.
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**Definition 3**</ins> Suppose two vector bundles $$E\rightarrow B$$, $$E'\rightarrow B'$$ are given. Then a *bundle map* from $$E \rightarrow B$$ to $$E' \rightarrow B'$$ means, among pairs $$E\rightarrow E', B \rightarrow B'$$ making the diagram
+::: Definition 3
+Suppose two vector bundles $$E\rightarrow B$$, $$E'\rightarrow B'$$ are given. Then a *bundle map* from $$E \rightarrow B$$ to $$E' \rightarrow B'$$ means, among pairs $$E\rightarrow E', B \rightarrow B'$$ making the diagram
 
 ![bundle_map](/assets/images/Math/Manifolds/Tangent_and_Cotangent_Bundles-1.svg){:style="width:5.60em" class="invert" .align-center}
 
 commute, those for which $$E_b\rightarrow E'_{b'}$$ is an isomorphism.
-
-</div>
+:::
 
 Now consider the category $$\mathbf{FVect}_\text{iso}$$ of finite-dimensional $$\mathbb{R}$$-vector spaces whose morphisms are isomorphisms. Then $$\mathbf{FVect}_\text{iso}\times\mathbf{FVect}_\text{iso}$$ is the category whose
 
@@ -109,19 +103,16 @@ Now consider the category $$\mathbf{FVect}_\text{iso}$$ of finite-dimensional $$
 
 Thus a functor $$F$$ from $$\mathbf{FVect}_\text{iso}\times\mathbf{FVect}_\text{iso}$$ to $$\mathbf{FVect}_\text{iso}$$ must take $$(V,W)$$ to an $$\mathbb{R}$$-vector space $$F(V,W)$$ and $$(f,g)$$ to an isomorphism $$F(f,g)$$.
 
-<div class="definition" markdown="1">
-
-<ins id="def4">**Definition 4**</ins> A functor $$F:\mathbf{FVect}_\text{iso}\times\mathbf{FVect}_\text{iso}\rightarrow \mathbf{FVect}_\text{iso}$$ is called a *smooth functor* if $$F(f,g)$$ depends smoothly on $$f,g$$.
-
-</div>
+::: Definition 4
+A functor $$F:\mathbf{FVect}_\text{iso}\times\mathbf{FVect}_\text{iso}\rightarrow \mathbf{FVect}_\text{iso}$$ is called a *smooth functor* if $$F(f,g)$$ depends smoothly on $$f,g$$.
+:::
 
 If $$f\in\Hom(V,V'), g\in\Hom(W,W')$$, then $$F(f,g)\in\Hom(F(V,W),F(V',W'))$$. Since these are all vector spaces, they carry the smooth structure described in [§Examples of Manifolds, ⁋Example 2](/en/math/manifolds/examples_of_manifolds#ex2), and through this we can apply the above definition. Also, it is not difficult to extend this definition to a general $$k$$-fold product
 
 $$\mathbf{FVect}_\text{iso}\times\cdots\times\mathbf{FVect}_\text{iso}\rightarrow \mathbf{FVect}_\text{iso}$$
 
-<div class="example" markdown="1">
-
-<ins id="ex5">**Example 5**</ins> $$\Hom(-,-)$$ is a smooth functor. Suppose arbitrary isomorphisms $$f:V\rightarrow V'$$, $$g:W\rightarrow W'$$ are given. Then $$\Hom(f,g)$$ is a functor from $$\Hom(V,W)$$ to $$\Hom(V',W')$$ making the diagram below
+::: Example 5
+$$\Hom(-,-)$$ is a smooth functor. Suppose arbitrary isomorphisms $$f:V\rightarrow V'$$, $$g:W\rightarrow W'$$ are given. Then $$\Hom(f,g)$$ is a functor from $$\Hom(V,W)$$ to $$\Hom(V',W')$$ making the diagram below
 
 ![Hom_functor](/assets/images/Math/Manifolds/Tangent_and_Cotangent_Bundles-2.svg){:style="width:7.11em" class="invert" .align-center}
 
@@ -139,18 +130,15 @@ The following are all examples of smooth functors.
 - $$k$$-th exterior functor $$\bigwedge\nolimits^k(-)$$ ([\[Multilinear Algebra\] §Tensor Algebras](/en/math/multilinear_algebra/tensor_algebras)),
 - Tensor product $$-\otimes -$$,
 - Direct sum $$-\oplus-$$.
-
-</div>
+:::
 
 The proof of the following theorem can be found in Theorem 3.6 of **[MS]**.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm6">**Theorem 6**</ins> Let an arbitrary smooth functor $$F:(\mathbf{FVect}_\text{iso})^n\rightarrow \mathbf{FVect}_\text{iso}$$ and $$n$$ vector bundles $$E_i\rightarrow B$$ with a common base space $$B$$ be given. Then there exists a vector bundle $$E\rightarrow B$$ whose fiber at each $$b\in B$$ is given by
+::: Theorem 6
+Let an arbitrary smooth functor $$F:(\mathbf{FVect}_\text{iso})^n\rightarrow \mathbf{FVect}_\text{iso}$$ and $$n$$ vector bundles $$E_i\rightarrow B$$ with a common base space $$B$$ be given. Then there exists a vector bundle $$E\rightarrow B$$ whose fiber at each $$b\in B$$ is given by
 
 $$E_b=F((E_1)_b,\ldots,(E_n)_b)$$
-
-</div>
+:::
 
 We denote the vector bundle $$E$$ obtained by the above process simply as $$F(E_1,\ldots, E_n)$$.
 
@@ -158,11 +146,9 @@ We denote the vector bundle $$E$$ obtained by the above process simply as $$F(E_
 
 Applying [Theorem 6](#thm6) to an arbitrary manifold $$M$$, the tangent bundle $$E=TM\rightarrow M$$, and the dual functor $$(-)^\ast$$, we obtain the following.
 
-<div class="definition" markdown="1">
-
-<ins id="def7">**Definition 7**</ins> The *cotangent bundle* defined over a manifold $$M$$ means the vector bundle $$(TM)^\ast$$ obtained by [Theorem 6](#thm6). Following the notation for cotangent space $$T_p^\ast M$$, we denote this by $$T^\ast M$$.
-
-</div>
+::: Definition 7
+The *cotangent bundle* defined over a manifold $$M$$ means the vector bundle $$(TM)^\ast$$ obtained by [Theorem 6](#thm6). Following the notation for cotangent space $$T_p^\ast M$$, we denote this by $$T^\ast M$$.
+:::
 
 $$T^\ast M$$ is the space with the vector space $$T_p^\ast M$$ attached at each point $$p$$. Here $$T_p^\ast M$$ is the dual space of the vector space $$T_pM$$, that is, the space of linear maps that take a vector of $$T_pM$$ and output a real number. We will revisit vector bundles obtained by applying other smooth functors before long.
 

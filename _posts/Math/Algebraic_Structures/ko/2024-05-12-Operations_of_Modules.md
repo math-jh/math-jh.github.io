@@ -38,22 +38,18 @@ $$\CoEq(u,v)=N/N',\qquad N'=\langle u(x)-v(x)\rangle\rangle$$
 
 을 통해 정의할 수 있다. 즉 다음이 성립한다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="thm1">**정리 1**</ins> $$\lMod{A}$$는 bicomplete category이며, 특히 $$A$$-module들의 family $$(M_i)$$의 product는 이들의 direct product, coproduct는 이들의 direct sum으로 주어진다.
-
-</div>
+::: 정리 1
+$$\lMod{A}$$는 bicomplete category이며, 특히 $$A$$-module들의 family $$(M_i)$$의 product는 이들의 direct product, coproduct는 이들의 direct sum으로 주어진다.
+:::
 
 그럼 direct product는 kernel을, direct sum은 cokernel을 각각 보존한다. ([\[범주론\] §극한, ⁋명제 10](/ko/math/category_theory/limits#prop10)) 추가로 이들은 다음의 명제 또한 만족한다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**명제 2**</ins> 두 $$A$$-module들의 family $$(M_i)_{i\in I},(N_i)_{i\in I}$$와 이들 사이의 linear map들 $$u_i: M_i \rightarrow N_i$$가 주어졌다 하고, 이들이 유도하는 함수 $$\bigoplus u_i:\bigoplus M_i \rightarrow \bigoplus N_i$$와 $$\prod u_i: \prod M_i \rightarrow \prod N_i$$를 생각하자. 그럼 다음이 성립한다.
+::: 명제 2
+두 $$A$$-module들의 family $$(M_i)_{i\in I},(N_i)_{i\in I}$$와 이들 사이의 linear map들 $$u_i: M_i \rightarrow N_i$$가 주어졌다 하고, 이들이 유도하는 함수 $$\bigoplus u_i:\bigoplus M_i \rightarrow \bigoplus N_i$$와 $$\prod u_i: \prod M_i \rightarrow \prod N_i$$를 생각하자. 그럼 다음이 성립한다.
 
 1. 만일 $$u_i$$들 각각이 surjective라면 $$\prod u_i$$도 surjective이고, 그 역도 성립한다.
 2. 만일 $$u_i$$들 각각이 injective라면 $$\bigoplus u_i$$도 injective이고, 그 역도 성립한다.
-
-</div>
+:::
 
 이에 대한 증명은 $$\prod u_i$$와 $$\bigoplus u_i$$를 직접 좌표별로 써서 얻어진다. 특히 이 명제에 의해 direct product는 cokernel 또한 보존하고, direct sum은 kernel 또한 보존한다는 것을 알 수 있다. 
 
@@ -79,11 +75,9 @@ $$F(X)=F\left(\coprod_{x\in X} \{x\}\right)\cong\bigoplus_{x\in X} F(\{x\})$$
 
 이 성립해야 하고, 위의 representation을 이용하면 $$F(X)=\bigoplus_{x\in X}Ax$$로 정의해야 한다는 것을 안다. 즉 다음이 성립한다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop3">**명제 3**</ins> Forgetful functor $$U:\lMod{A} \rightarrow\Set$$과 위에서 정의한 free functor $$F:\Set \rightarrow\lMod{A}$$에 대하여, adjunction $$F\dashv U$$가 존재한다.
-
-</div>
+::: 명제 3
+Forgetful functor $$U:\lMod{A} \rightarrow\Set$$과 위에서 정의한 free functor $$F:\Set \rightarrow\lMod{A}$$에 대하여, adjunction $$F\dashv U$$가 존재한다.
+:::
 
 임의의 집합 $$X$$에 대하여, $$F(X)$$와 isomorphic한 $$A$$-module들을 *free $$A$$-module<sub>자유 $A$-가군</sub>*이라 부른다.
 
@@ -91,15 +85,13 @@ $$F(X)=F\left(\coprod_{x\in X} \{x\}\right)\cong\bigoplus_{x\in X} F(\{x\})$$
 
 한편 우리는 $$A$$-module들의 텐서곱 또한 정의할 수 있다. 우선 다음 정의부터 시작한다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def4">**정의 4**</ins> Ring $$A$$와 right $$A$$-module $$M$$, left $$A$$-module $$N$$이 주어졌다 하자. 그럼 임의의 abelian group $$L$$에 대하여, 함수 $$f:M\times N \rightarrow L$$이 *$$A$$-balanced*라는 것은 $$f$$가 abelian group들 사이의 함수로서 bilinear이고, 추가로 다음 식
+::: 정의 4
+Ring $$A$$와 right $$A$$-module $$M$$, left $$A$$-module $$N$$이 주어졌다 하자. 그럼 임의의 abelian group $$L$$에 대하여, 함수 $$f:M\times N \rightarrow L$$이 *$$A$$-balanced*라는 것은 $$f$$가 abelian group들 사이의 함수로서 bilinear이고, 추가로 다음 식
 
 $$f(x\alpha, y)=f(x,\alpha y)$$
 
 이 성립하는 것이다. 
-
-</div>
+:::
 
 고정된 $$M\in\obj(\rMod{A}),N\in\obj(\lMod{A})$$에 대하여, 집합 $$\Balan_A(M,N;L)$$를 다음 식
 
@@ -107,14 +99,10 @@ $$\Balan_A(M,N;L)=\{\text{$A$-balanced maps from $M\times N$ to $L$}\}$$
 
 으로 정의하자. 그럼 다음 정리가 성립한다.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm5">**정리 5**</ins> Functor $$\Balan_A(M,N;-):\lMod{\mathbb{Z}}=\Ab\rightarrow\Set$$은 representable functor이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 정리 5
+Functor $$\Balan_A(M,N;-):\lMod{\mathbb{Z}}=\Ab\rightarrow\Set$$은 representable functor이다.
+:::
+::: 증명
 Free abelian group $$F(M\times N)$$의 subgroup $$M'$$를
 
 $$M'=\left\langle (x, y_1+y_2)-(x,y_1)-(x,y_2), (x_1+x_2,y)-(x_1,y)-(x_2,y), (\alpha x,y)-(x,\alpha y)\right\rangle$$
@@ -122,20 +110,17 @@ $$M'=\left\langle (x, y_1+y_2)-(x,y_1)-(x,y_2), (x_1+x_2,y)-(x_1,y)-(x_2,y), (\a
 으로 정의하자. 그럼 free group의 universal property에 의하여, 임의의 함수 $$f:M\times N \rightarrow L$$이 주어질 때마다 group homomorphism $$\hat{f}:F(M\times N)\rightarrow L$$이 존재하고, $$f$$가 $$A$$-balanced라면 이 $$\hat{f}$$의 kernel이 $$M'$$를 포함하므로 $$\hat{f}$$가 $$F(M\times N)/M'$$에서 $$L$$로의 group homomorphism을 정의한다. 
 
 Isomorphism $$\Balan_A(M,N;L)\cong\Hom_\Ab(F(M\times N)/M',L)$$의 naturality는 추가적으로 보여야 하긴 하지만, 단순한 계산이므로 생략한다. 
-
-</details>
+:::
 
 이렇게 얻어진 representation을 $$M\otimes_AN$$으로 적는다. 그럼 다음이 성립한다.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm6">**정리 6 ($$\otimes\dashv\Hom$$)**</ins> Adjunction 
+::: 정리 6 ($$\otimes\dashv\Hom$$)
+Adjunction 
 
 $$\Hom_\mathbb{Z}(M\otimes_A N, L)\cong\Hom_{\rMod{A}}(M,\Hom_\mathbb{Z}(N, L))\cong\Hom_{\lMod{A}}(N,\Hom_\mathbb{Z}(M, L))$$
 
 이 존재한다. 
-
-</div>
+:::
 
 따라서 $$\otimes$$는 colimit과 commute하고, $$\Hom$$은 limit과 commute한다. 특히 abelian group들 사이의 다음의 isomorphism들
 
@@ -175,15 +160,13 @@ $$\alpha(x\otimes_Ay)=(\alpha x)\otimes_Ay=x\otimes_A(\alpha y)$$
 
 이 존재한다. 이 또한 적절한 functor의 representation이 된다.
 
-<div class="definition" markdown="1">
-
-<ins id="def7">**정의 7**</ins> Commutative ring $$A$$와 세 $$A$$-module $$M,N,L$$이 주어졌다 하자. 그럼 함수 $$f:M\times N \rightarrow L$$이 *$$A$$-bilinear*라는 것은 $$f$$가 abelian group들 사이의 함수로서 bilinear이고, 추가로 다음 식
+::: 정의 7
+Commutative ring $$A$$와 세 $$A$$-module $$M,N,L$$이 주어졌다 하자. 그럼 함수 $$f:M\times N \rightarrow L$$이 *$$A$$-bilinear*라는 것은 $$f$$가 abelian group들 사이의 함수로서 bilinear이고, 추가로 다음 식
 
 $$\alpha f(x,y)=f(\alpha x,y)=f(x,\alpha y)$$
 
 이 성립하는 것이다. 
-
-</div>
+:::
 
 집합 $$\Bilin_A(M,N;L)$$을 다음 식
 
@@ -191,22 +174,18 @@ $$\Bilin_A(M,N;L)=\{\text{$A$-bilinear maps from $M\times N$ to $L$}\}$$
 
 으로 정의하자.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop8">**명제 8**</ins> Functor $$\Bilin_A(M,N;-):\lMod{A}\rightarrow\Set$$은 representable functor이며, 그 representation은 위에서 정의한 *$$A$$-module* $$M\otimes_AN$$이다. 
-
-</div>
+::: 명제 8
+Functor $$\Bilin_A(M,N;-):\lMod{A}\rightarrow\Set$$은 representable functor이며, 그 representation은 위에서 정의한 *$$A$$-module* $$M\otimes_AN$$이다. 
+:::
 
 한편 $$A$$가 일반적인 ring이라면 $$\Hom_{\lMod{A}}(M,M')$$은 $$A$$-module 구조를 갖지 않았지만, $$A$$가 commutative ring이라면 $$\Hom_{\lMod{A}}(M,M')$$ 위에도 $$A$$-module 구조가 존재한다. 즉, $$\Hom_A$$는 internal $$\Hom$$이며,  따라서 [정리 6](#thm6)의 adjunction을 더 다듬어 다음을 증명할 수 있다.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm9">**정리 9**</ins> Commutative ring $$A$$에 대하여, adjunction
+::: 정리 9
+Commutative ring $$A$$에 대하여, adjunction
 
 $$\Hom_A(M\otimes_AN, L)\cong\Hom_A(M,\Hom_A(N,L))\cong\Hom_A(N,\Hom_A(M,L))$$
 
 이 존재한다. 
-
-</div>
+:::
 
 특히 위의 식들 (1), (2)가 모두 $$A$$-module들 사이의 isomorphism이 된다. 또, $$(\lMod{A},\otimes_A,A)$$이 symmetric monoidal category가 된다는 것을 확인할 수 있다. 

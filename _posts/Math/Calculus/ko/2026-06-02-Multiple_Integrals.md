@@ -17,15 +17,13 @@ published: false
 
 ## 이중적분
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> 직사각형 $$R = [a,b]\times[c,d]$$ 위의 유계함수 $$f(x,y)$$에 대하여, $$R$$을 작은 직사각형 $$R_{ij}$$ (넓이 $$\Delta A_{ij}$$) 들로 분할하고 각 조각에서 표본점 $$(x_i^\ast, y_j^\ast)$$을 택해 만든 리만 합
+::: 정의 1
+직사각형 $$R = [a,b]\times[c,d]$$ 위의 유계함수 $$f(x,y)$$에 대하여, $$R$$을 작은 직사각형 $$R_{ij}$$ (넓이 $$\Delta A_{ij}$$) 들로 분할하고 각 조각에서 표본점 $$(x_i^\ast, y_j^\ast)$$을 택해 만든 리만 합
 
 $$\sum_{i,j} f(x_i^\ast, y_j^\ast) \Delta A_{ij}$$
 
 이 분할을 잘게 할 때 한 값으로 수렴하면, 그 값을 $$f$$의 *이중적분*이라 하고 $$\iint_R f(x,y) dA$$로 적는다.
-
-</div>
+:::
 
 $$f \geq 0$$이면 이중적분은 밑면이 $$R$$이고 윗면이 곡면 $$z = f(x,y)$$인 입체의 부피이다. 한 변수 정적분이 넓이였던 것이 한 차원 올라간 셈이다. 리만 합의 각 항 $$f(x_i^\ast, y_j^\ast) \Delta A_{ij}$$은 밑면 넓이 $$\Delta A_{ij}$$에 높이 $$f(x_i^\ast, y_j^\ast)$$를 곱한 가느다란 기둥의 부피이고, 이 기둥들을 모아 입체를 근사한 뒤 분할을 무한히 잘게 하는 극한이 이중적분이다.
 
@@ -37,15 +35,13 @@ $$f \geq 0$$이면 이중적분은 밑면이 $$R$$이고 윗면이 곡면 $$z = 
 
 이중적분의 정의는 이차원 극한이라 직접 계산이 어렵다. 다행히 한 변수씩 차례로 적분하는 *반복적분*으로 환원된다.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm2">**정리 2 (푸비니)**</ins> $$f$$가 $$R = [a,b]\times[c,d]$$에서 연속이면
+::: 정리 2 (푸비니)
+$$f$$가 $$R = [a,b]\times[c,d]$$에서 연속이면
 
 $$\iint_R f dA = \int_a^b \left(\int_c^d f(x,y) dy\right)dx = \int_c^d \left(\int_a^b f(x,y) dx\right)dy$$
 
 이다. 즉 적분 순서를 바꿀 수 있다.
-
-</div>
+:::
 
 안쪽 적분은 한 변수를 상수로 고정하고 다른 변수로 적분하는 보통의 정적분이므로, 다중적분이 [§미적분의 기본정리](/ko/math/calculus/fundamental_theorem_of_calculus)와 적분법으로 푸는 한 변수 적분들의 연쇄로 환원된다. 피적분함수가 $$f(x,y) = g(x)h(y)$$처럼 변수분리되고 영역이 직사각형이면 한 단계 더 나아가, 이중적분은 두 한 변수 적분의 곱 $$(\int_a^b g)(\int_c^d h)$$으로 분해된다.
 
@@ -57,9 +53,8 @@ $$\iint_D f = \int_a^b \int_{g_1(x)}^{g_2(x)} f(x,y) dy dx$$
 
 순서를 어떻게 잡느냐는 답을 바꾸지 않지만, 한쪽 순서로는 안쪽 적분이 초등함수로 풀리는 반면 다른 순서로는 풀리지 않는 일이 흔하다. 그래서 *적분 순서 교환*은 단순한 형식 조작이 아니라 실용적인 계산 전략이다.
 
-<div class="example" markdown="1">
-
-<ins id="ex3">**예시 3 (적분 순서 교환)**</ins> 적분
+::: 예시 3 (적분 순서 교환)
+적분
 
 $$\int_0^1 \int_x^1 e^{y^2} dy dx$$
 
@@ -68,22 +63,19 @@ $$\int_0^1 \int_x^1 e^{y^2} dy dx$$
 $$\int_0^1 \int_0^y e^{y^2} dx dy = \int_0^1 y e^{y^2} dy = \frac12(e - 1)$$
 
 로 닫힌다. 안쪽 적분이 한 순서로는 막히고 다른 순서로는 풀린다는 것이 순서 교환을 형식 조작 이상으로 만든다.
-
-</div>
+:::
 
 ## 변수변환
 
 한 변수의 치환적분에 대응하는 것이 다변수의 변수변환이며, 길이 비율 $$g'$$의 자리에 야코비 행렬식이 들어간다.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm4">**정리 4 (변수변환)**</ins> 일대일 $$C^1$$ 사상 $$(x,y) = \mathbf{T}(u,v)$$가 영역 $$D'$$을 $$D$$로 보내고 야코비 행렬식이 $$D'$$에서 $$0$$이 아니면
+::: 정리 4 (변수변환)
+일대일 $$C^1$$ 사상 $$(x,y) = \mathbf{T}(u,v)$$가 영역 $$D'$$을 $$D$$로 보내고 야코비 행렬식이 $$D'$$에서 $$0$$이 아니면
 
 $$\iint_D f(x,y) dA = \iint_{D'} f(\mathbf{T}(u,v)) \lvert \det J_{\mathbf{T}}(u,v)\rvert du dv$$
 
 이다. 여기서 $$J_{\mathbf{T}} = \begin{pmatrix} \partial x/\partial u & \partial x/\partial v \\ \partial y/\partial u & \partial y/\partial v\end{pmatrix}$$는 $$\mathbf{T}$$의 야코비 행렬이다.
-
-</div>
+:::
 
 야코비 행렬식 $$\lvert\det J_{\mathbf{T}}\rvert$$은 $$\mathbf{T}$$가 넓이를 늘이는 국소 비율로, 한 변수에서 $$dx = g'(u) du$$의 $$\lvert g'\rvert$$에 해당한다. 직관적으로 보면, $$(u,v)$$ 평면의 작은 직사각형 $$[u, u+\Delta u]\times[v, v+\Delta v]$$은 $$\mathbf{T}$$에 의해 $$(x,y)$$ 평면의 작은 평행사변형으로 옮겨지는데, 그 두 변은 근사적으로 $$\mathbf{T}_u \Delta u$$와 $$\mathbf{T}_v \Delta v$$ ($$\mathbf{T}_u, \mathbf{T}_v$$는 $$\mathbf{T}$$의 편도함수 벡터) 이다. 두 벡터가 이루는 평행사변형의 넓이가 바로 $$\lvert\det J_{\mathbf{T}}\rvert \Delta u \Delta v$$이므로, 넓이 원소는
 
@@ -97,9 +89,8 @@ $$\det J = \det\begin{pmatrix}\cos\theta & -r\sin\theta \\ \sin\theta & r\cos\th
 
 이므로 $$dA = r dr d\theta$$이다. 이 여분의 인자 $$r$$가 직교좌표에서는 막히던 적분을 풀어 주는 일이 잦다. 가령 단위원판 $$D$$에서 $$\iint_D e^{-(x^2+y^2)} dA = \int_0^{2\pi} \int_0^1 e^{-r^2} r dr d\theta = \pi(1 - e^{-1})$$인데, $$e^{-r^2} r$$의 부정적분 $$-\frac12 e^{-r^2}$$가 닫힌 꼴이라 계산이 끝난다. 같은 인자가 한 변수로는 풀 수 없는 가우스 적분도 닫는다.
 
-<div class="example" markdown="1">
-
-<ins id="ex5">**예시 5 (가우스 적분)**</ins> 한 변수로는 초등함수로 안 풀리는 $$I = \int_{-\infty}^{\infty} e^{-x^2} dx$$를 다중적분으로 구한다. 곱 $$I^2$$을 두 개의 독립 변수에 대한 적분으로 보아 하나로 묶으면
+::: 예시 5 (가우스 적분)
+한 변수로는 초등함수로 안 풀리는 $$I = \int_{-\infty}^{\infty} e^{-x^2} dx$$를 다중적분으로 구한다. 곱 $$I^2$$을 두 개의 독립 변수에 대한 적분으로 보아 하나로 묶으면
 
 $$\begin{aligned}
 I^2 &= \left(\int_{-\infty}^\infty e^{-x^2} dx\right) \left(\int_{-\infty}^\infty e^{-y^2} dy\right) \\
@@ -114,8 +105,7 @@ I^2 &= \int_0^{2\pi} \int_0^\infty e^{-r^2} r dr d\theta \\
 \end{aligned}$$
 
 이므로 $$I = \sqrt\pi$$이다. 차원을 하나 올려 회전대칭을 활용하는 이 기법이 가우스 적분의 고전적 풀이이며, 핵심은 직교좌표에서 풀리지 않던 안쪽 적분이 극좌표에서 생긴 여분의 인자 $$r$$ 덕분에 닫힌다는 데 있다.
-
-</div>
+:::
 
 ## 삼중적분과 응용
 

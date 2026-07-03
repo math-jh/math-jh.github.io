@@ -27,15 +27,13 @@ $$\ad(X)Y=[X,Y]$$
 
 표현론의 결과들을 사용하는 데에 중요한 것은 임의의 finite-dimensional representation은 항상 unitary라는 것이었다. 이 결과를 증명할 때 사용하는 논리는 $$V$$ 위에 $$G$$-invariant inner product를 택할 수 있다는 것인데, 엄밀히 말하자면 우리는 orthogonal complement에 관심이 있으므로 non-degenerate symmetric form만 있어도 충분하다. 그런데 Lie algebra 위에는 자연스러운 bilinear form이 하나 존재한다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> Lie algebra $$\mathfrak{g}$$ 위에 다음의 식
+::: 정의 1
+Lie algebra $$\mathfrak{g}$$ 위에 다음의 식
 
 $$K(X,Y)=\tr(\ad(X)\ad(Y))$$
 
 으로 정의된 symmetric bilinear form을 *Killing form*이라 부른다. 
-
-</div>
+:::
 
 Killing form이 symmetric이고, $$\mathbb{C}$$-bilnear인 것은 정의에 의해 자명하다. 심지어 이 Killing form은 별도의 조작을 거치지 않아도 이미 $$G$$에 의한 adjoint action에 대해 invariant하기도 하다. 즉 다음 식
 
@@ -47,25 +45,21 @@ $$0=\frac{d}{dt}\bigg\vert_{t=0}K(\Ad_{\exp(tZ)}X, \Ad_{\exp(tZ)},Y)=K([Z,X],Y)+
 
 을 얻는다. 남아있는 것은 이것이 non-degenerate인 조건이다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**정의 2**</ins> Lie algebra $$\mathfrak{g}$$이 *simple<sub>단순</sub>*이라는 것은 $$\mathfrak{g}$$가 non-abelian Lie algebra이고 $$\mathfrak{g}$$의 ideal이 $$0$$과 자기자신 뿐인 것이다. Simple Lie algebra들의 direct sum으로 쓸 수 있는 Lie algebra를 *semisimple*이라 부른다. 
-
-</div>
+::: 정의 2
+Lie algebra $$\mathfrak{g}$$이 *simple<sub>단순</sub>*이라는 것은 $$\mathfrak{g}$$가 non-abelian Lie algebra이고 $$\mathfrak{g}$$의 ideal이 $$0$$과 자기자신 뿐인 것이다. Simple Lie algebra들의 direct sum으로 쓸 수 있는 Lie algebra를 *semisimple*이라 부른다. 
+:::
 
 그럼 다음이 성립한다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop3">**명제 3**</ins> 유한차원 Lie algebra $$\mathfrak{g}$$에 대하여, 다음이 모두 동치이다. 
+::: 명제 3
+유한차원 Lie algebra $$\mathfrak{g}$$에 대하여, 다음이 모두 동치이다. 
 
 1. $$\mathfrak{g}$$가 semisimple이다.
 2. Killing form이 non-degenerate이다.
 3. $$\mathfrak{g}$$가 nonzero abelian ideal을 갖지 않는다. 
 4. $$\mathfrak{g}$$가 nonzero solvable ideal을 갖지 않는다. 
 5. $$\mathfrak{g}$$의 radical이 $$0$$이다. 
-
-</div>
+:::
 
 이에 대한 증명이 당장 중요한 것은 아니므로 넘어가기로 한다. 
 
@@ -73,11 +67,9 @@ $$0=\frac{d}{dt}\bigg\vert_{t=0}K(\Ad_{\exp(tZ)}X, \Ad_{\exp(tZ)},Y)=K([Z,X],Y)+
 
 선형대수학에서 아주 강력한 도구 중 하나는 대각화였으며, 우리는 Lie group에서는 이를 weight decomposition을 통해 담아냈다. ([§원환면의 작용, ⁋정의 4](/ko/math/lie_theory/torus_action#def4)) 이에 대응되는 Lie algebra의 개념은 다음과 같다.
 
-<div class="definition" markdown="1">
-
-<ins id="def4">**정의 4**</ins> Semisimple Lie algebra $$\mathfrak{g}$$에 대하여, $$\mathfrak{g}$$의 *Cartan subalgebra<sub>카르탕 부분대수</sub>*는 $$\ad(H)$$가 모든 $$H\in \mathfrak{h}$$에 대하여 diagonalizable이도록 하는 abelian subalgebra $$\mathfrak{h}$$ 중 maximal인 것이다. 
-
-</div>
+::: 정의 4
+Semisimple Lie algebra $$\mathfrak{g}$$에 대하여, $$\mathfrak{g}$$의 *Cartan subalgebra<sub>카르탕 부분대수</sub>*는 $$\ad(H)$$가 모든 $$H\in \mathfrak{h}$$에 대하여 diagonalizable이도록 하는 abelian subalgebra $$\mathfrak{h}$$ 중 maximal인 것이다. 
+:::
 
 두 diagonalizable operator $$A,B$$가 simultaneously diagonalizable인 것은 이들 두 operator가 commute하는 것과 동치이므로, 정의에 의하여 $$\mathfrak{h}$$의 모든 원소들은 simultaneously diagonalizable이다. 이제 simultaneously diagonalizable operator들의 family $$\{H\in \mathfrak{h}\}$$를 사용하여 $$\mathfrak{g}$$를 분해하자. 만일 simultaneously diagonalizable operator들의 <em-ko>유한한</em-ko> family $$A_1,\ldots, A_n$$이 주어졌다면, simultaneous eigenspace로 공간을 분해하는 것은 
 
@@ -85,9 +77,8 @@ $$V=\bigoplus V_\alpha,\qquad \text{$A_i v_\alpha=\lambda_i v_\alpha$ for all $v
 
 와 같은 형태이지만, 현재 우리 상황에서는 $$\mathfrak{h}$$가 벡터공간이므로 linear functional $$\alpha: \mathfrak{h}\rightarrow \mathbb{C}$$를 택하여 $$\alpha(H)$$가 각각의 $$H$$의 고유값 역할을 해주도록 하는 것이 낫다. 따라서 다음과 같이 정의한다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def5">**정의 5**</ins> Semisimple Lie algebra $$\mathfrak{g}$$와 $$\mathfrak{g}$$의 Cartan subalgebra $$\mathfrak{h}$$에 대하여, 
+::: 정의 5
+Semisimple Lie algebra $$\mathfrak{g}$$와 $$\mathfrak{g}$$의 Cartan subalgebra $$\mathfrak{h}$$에 대하여, 
 
 $$\Phi=\left\{\alpha\in \mathfrak{h}^\ast\setminus\{0\}\mid \mathfrak{g}_\alpha\neq 0\right\}$$
 
@@ -96,8 +87,7 @@ $$\Phi=\left\{\alpha\in \mathfrak{h}^\ast\setminus\{0\}\mid \mathfrak{g}_\alpha\
 $$\mathfrak{g}_\alpha=\left\{X\in \mathfrak{g}\mid [H,X]=\alpha(H)X\text{ for all $H\in \mathfrak{h}$}\right\}$$
 
 이다. ([§리 군, ⁋정의 19](/ko/math/lie_theory/Lie_groups#def19))
-
-</div>
+:::
 
 정의에 의하여 $$\mathfrak{h}$$는 자기 자신 위에는 $$0$$으로 작용한다. 즉 $$\mathfrak{h}$$는 $$\mathfrak{g}$$를 simultaneous eigenspace로 분해했을 때 eigenvalue $$0$$에 해당하는 부분이며 이로부터 우리는 다음의 decomposition
 
@@ -105,9 +95,8 @@ $$\mathfrak{g}=\mathfrak{h}\oplus\bigoplus_{\alpha\in \Phi}\mathfrak{g}_\alpha$$
 
 을 얻는다. 이들이 다음 명제를 만족하는 것은 자명하다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop6">**명제 6**</ins> Semisimple Lie algebra $$\mathfrak{g}$$, Cartan subalgebra $$\mathfrak{h}$$와 그 root decomposition 
+::: 명제 6
+Semisimple Lie algebra $$\mathfrak{g}$$, Cartan subalgebra $$\mathfrak{h}$$와 그 root decomposition 
 
 $$\mathfrak{g}=\mathfrak{h}\oplus\bigoplus_{\alpha\in\Phi}\mathfrak{g}_\alpha$$
 
@@ -116,11 +105,8 @@ $$\mathfrak{g}=\mathfrak{h}\oplus\bigoplus_{\alpha\in\Phi}\mathfrak{g}_\alpha$$
 1. 임의의 $$\alpha,\beta\in \Phi$$에 대하여 $$[\mathfrak{g}_\alpha,\mathfrak{g}_\beta]\subseteq \mathfrak{g}_{\alpha+\beta}$$가 성립한다. 
 2. 만일 $$\alpha+\beta\neq 0$$이라면 $$\mathfrak{g}_\alpha$$와 $$\mathfrak{g}_\beta$$는 $$K$$에 대해 orthogonal이다. 
 3. Killing form을 $$\mathfrak{g}_\alpha\otimes \mathfrak{g}_{-\alpha}$$로 제한하면 nondegenerate pairing이 된다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 1. 임의의 $$X\in \mathfrak{g}_\alpha, Y\in \mathfrak{g}_\beta$$, $$H\in \mathfrak{h}$$에 대하여, 
     
     $$[H,[X,Y]]=[[H,X],Y]+[X,[H,Y]]=[\alpha(H)X,Y]+[X,\beta(H)Y]=(\alpha+\beta)(H)[X,Y]$$
@@ -132,8 +118,7 @@ $$\mathfrak{g}=\mathfrak{h}\oplus\bigoplus_{\alpha\in\Phi}\mathfrak{g}_\alpha$$
 
     을 얻는다. 만일 $$\alpha+\beta\neq 0$$이라면 이 식이 항상 성립하기 위해서는 $$K(X,Y)=0$$이 항상 성립해야 한다.
 3. Killing form은 $$\mathfrak{g}$$에서는 non-degenerate이므로, 임의의 $$X\in \mathfrak{g}_\alpha$$가 주어졌을 때마다 $$K(X,Z)\neq 0$$이도록 하는 $$Z\in \mathfrak{g}$$가 존재한다. 보여야 할 것은 $$Z\in \mathfrak{g}_{-\alpha}$$이도록 할 수 있다는 것이다. 이는 $$Z$$를 root decompose한 후 둘째 결과에 의해 $$-\alpha$$가 아닌 나머지 부분에 해당하는 성분들은 어차피 $$X$$와 pairing해봤자 $$0$$이 되기 때문에 자명하다.
-
-</details>
+:::
 
 ## 예시: $$\sl(2;\mathbb{C})$$
 
@@ -167,20 +152,16 @@ $$H\cdot v=\mu v,\qquad E\cdot v=0$$
 
 이 성립하는 것을 안다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop7">**명제 7**</ins> 임의의 highest weight $$v_0\in V_\mu$$에 대하여, 
+::: 명제 7
+임의의 highest weight $$v_0\in V_\mu$$에 대하여, 
 
 $$v_j=\frac{1}{j!}F^j v_0$$
 
 으로 정의하면 다음이 성립한다.
 
 $$H\cdot v_j=(\mu-2j)v_j,\quad F\cdot v_j=(j+1)v_{j+1},\quad E\cdot v_j=(\mu-j+1)v_{j-1}.$$
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 처음 두 식은 자명하므로, $$E$$에 대한 식만 보이면 충분하다. 귀납법으로 진행한다. $$j=0$$인 경우는 자명하며, 만일 주어진 식이 $$j$$에 대해 성립한다면
 
 $$E\cdot v_{j+1}=\frac{1}{j+1}EF\cdot v_j=\frac{1}{j+1}(FE+H)\cdot v_j$$
@@ -190,8 +171,7 @@ $$E\cdot v_{j+1}=\frac{1}{j+1}EF\cdot v_j=\frac{1}{j+1}(FE+H)\cdot v_j$$
 $$E\cdot v_j=(\mu-j+1)v_{j-1}$$
 
 이고 $$H$$에 대한 식으로부터 $$H\cdot v_j=(\mu-2j)v_j$$이므로 이들을 대입하면 원하는 결과를 얻는다. 
-
-</details>
+:::
 
 한편 $$V$$가 유한차원이므로, $$v_{m+1}=0$$을 만족하는 가장 작은 정수 $$m$$이 존재한다. 그럼 이러한 $$m$$에 대하여, 
 
@@ -199,15 +179,13 @@ $$0=E\cdot v_{m+1}=(\mu-m)v_m$$
 
 과 $$m$$의 최소성으로부터 $$\mu=m$$이어야 한다는 것을 안다. 즉 highest weight는 반드시 양의 정수이다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def8">**정의 8**</ins> 고정된 정수 $$m\geq 0$$에 대하여, $$\sl_2$$의 representation $$V(m)$$을 $$m+1$$개의 vector들 $$v_0,\ldots, v_m$$과, [명제 7](#prop7)의 action 
+::: 정의 8
+고정된 정수 $$m\geq 0$$에 대하여, $$\sl_2$$의 representation $$V(m)$$을 $$m+1$$개의 vector들 $$v_0,\ldots, v_m$$과, [명제 7](#prop7)의 action 
 
 $$H\cdot v_j=(m-2j)v_j,\quad F\cdot v_j=(j+1)v_{j+1},\quad E\cdot v_j=(m-j+1)v_{j-1}$$
 
 을 주어 정의한다. $$v_{-1}=v_{m+1}=0$$이다. 
-
-</div>
+:::
 
 어렵지 않게 $$V(m)$$은 irreducible인 것을 보일 수 있다. 이제 임의의 $$\sl_2$$-representation $$V$$에 대하여, 우리는 $$V$$의 highest weight을 찾은 후 highest weight vector에 대하여 [명제 7](#prop7)을 적용하고, 남아있는 highest weight vector가 있다면 다시 이를 반복하는 식으로 $$V$$를 irreducible $$\sl_2$$-representation으로 분해할 수 있다. 
 
@@ -215,9 +193,8 @@ $$H\cdot v_j=(m-2j)v_j,\quad F\cdot v_j=(j+1)v_{j+1},\quad E\cdot v_j=(m-j+1)v_{
 
 위의 $$\sl_2$$-representation의 예시는 앞으로 해나갈 이야기에 큰 역할을 한다. 우선 다음을 정의하자. 
 
-<div class="definition" markdown="1">
-
-<ins id="def9">**정의 9**</ins> 유한차원 벡터공간 $$V$$와 그 위에 정의된 inner product $$( -,-)$$을 고정하자. $$V$$의 non-zero vector들의 유한한 집합 $$\Phi$$가 *root system*이라는 것은 다음의 조건들이 만족되는 것이다. 
+::: 정의 9
+유한차원 벡터공간 $$V$$와 그 위에 정의된 inner product $$( -,-)$$을 고정하자. $$V$$의 non-zero vector들의 유한한 집합 $$\Phi$$가 *root system*이라는 것은 다음의 조건들이 만족되는 것이다. 
 
 1. $$\Phi$$의 원소들이 $$V$$를 span한다. 
 2. 만일 $$\alpha\in \Phi$$이고 $$c\in \mathbb{R}$$이라면 $$c\alpha\in \Phi$$이기 위해서는 $$c=\pm 1$$이어야 한다. 
@@ -231,14 +208,12 @@ $$H\cdot v_j=(m-2j)v_j,\quad F\cdot v_j=(j+1)v_{j+1},\quad E\cdot v_j=(m-j+1)v_{
     $$\langle \beta,\alpha\rangle:=2\frac{(\beta,\alpha)}{(\alpha,\alpha)}$$
 
     은 항상 정수이다. 
-
-</div>
+:::
 
 이제 semisimple complex Lie algebra $$\mathfrak{g}$$의 Cartan subalgebra $$\mathfrak{h}$$를 고정하자. 그럼 우선 다음이 성립한다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="lem10">**보조정리 10**</ins> Semisimple Lie algebra $$\mathfrak{g}$$, Cartan subalgebra $$\mathfrak{h}$$, 그리고 root decomposition
+::: 보조정리 10
+Semisimple Lie algebra $$\mathfrak{g}$$, Cartan subalgebra $$\mathfrak{h}$$, 그리고 root decomposition
 
 $$\mathfrak{g}=\mathfrak{h}\oplus\bigoplus_{\alpha\in \Phi} \mathfrak{g}_\alpha$$
 
@@ -248,11 +223,8 @@ $$\mathfrak{g}=\mathfrak{h}\oplus\bigoplus_{\alpha\in \Phi} \mathfrak{g}_\alpha$
 2. 만일 $$\alpha+\beta\neq 0$$이라면 $$\mathfrak{g}_\alpha$$와 $$\mathfrak{g}_\beta$$가 orthogonal이다. 
 3. $$\mathfrak{g}$$ 위에 정의된 Killing form을 $$\mathfrak{h}$$로 제한한 것은 non-degenerate이다. 
 4. $$\mathfrak{g}$$ 위에 정의된 Killing form은 $$\mathfrak{g}_\alpha\times \mathfrak{g}_{-\alpha} \rightarrow \mathbb{C}$$로 제한했을 때 non-degenerate이다. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 처음 주장은 자명하다. 둘째 주장의 경우, 임의의 $$X_\alpha\in \mathfrak{g}_\alpha,X_\beta\in \mathfrak{g}_\beta$$ 그리고 임의의 $$H\in \mathfrak{h}$$에 대하여, $$K$$의 $$\ad$$-invariance로부터 다음의 식
 
 $$0=K([H,X_\alpha],X_\beta)+K(X_\alpha, [H,X_\beta])=K(\alpha(H)X_\alpha, X_\beta)+K(X_\alpha,\beta(H)X_\beta)=(\alpha+\beta)(H)K(X_\alpha,X_\beta)$$
@@ -262,8 +234,7 @@ $$0=K([H,X_\alpha],X_\beta)+K(X_\alpha, [H,X_\beta])=K(\alpha(H)X_\alpha, X_\bet
 이제 셋째 주장을 보이기 위해 임의의 $$H\in \mathfrak{h}$$에 대하여 $$X\in \mathfrak{g}$$가 존재하여 $$K(H,X)\neq 0$$이도록 할 수 있다는 것을 기억하자. 새롭게 보여야 할 것은 $$X$$를 $$\mathfrak{h}$$에서 뽑을 수 있다는 것이다. 이를 위해 $$X$$를 root decomposition $$\sum X_\alpha$$의 꼴로 쓰면, 우리는 위의 결과에 의하여 $$K(H,-)$$를 취했을 때 $$X_0\in \mathfrak{h}$$를 제외한 모든 $$X_\alpha$$가 $$0$$을 준다는 것을 안다. 따라서 $$K(H,H_0)\neq 0$$이다. 
 
 넷째 주장은 셋째 주장과 정확히 동일하게 증명하면 된다.
-
-</details>
+:::
 
 이제 $$\mathfrak{g}$$ 위에 정의된 Killing form이 $$\mathfrak{h}$$위에서도 non-degenerate이므로 이로부터 유도되는 다음의 isomorphism
 
@@ -283,14 +254,10 @@ $$\alpha(X)=K(H_\alpha,X)\qquad\text{for all $X\in \mathfrak{h}$}$$
 
 을 만족하는 $$H_\alpha\in \mathfrak{h}$$이 존재한다. 우리의 첫 번째 관찰은 다음의 보조정리이다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="lem11">**보조정리 11**</ins> 임의의 $$E\in \mathfrak{g}_\alpha$$와 $$F\in \mathfrak{g}_{-\alpha}$$에 대하여, $$[E,F]=K(E,F)H_\alpha$$이 성립한다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 보조정리 11
+임의의 $$E\in \mathfrak{g}_\alpha$$와 $$F\in \mathfrak{g}_{-\alpha}$$에 대하여, $$[E,F]=K(E,F)H_\alpha$$이 성립한다.
+:::
+::: 증명
 $$K$$의 $$\ad$$-invariance에 의하여
 
 $$K([E,F],H)=K(F,[H,E])$$
@@ -304,8 +271,7 @@ $$[H,E]=\alpha(H)E=K(H_\alpha,H)E$$
 $$K([E,F],H)=K(F,[H,E])=K(F, K(H_\alpha,H)E)=K(H_\alpha,H)K(F,E)=K(K(F,E)H_\alpha,H)$$
 
 이 모든 $$H$$에 대해 성립하므로 원하는 결과를 얻는다. 
-
-</details>
+:::
 
 한편 우리는 [보조정리 10](#lem10)으로부터 $$E\in \mathfrak{g}_\alpha$$, $$F\in \mathfrak{g}_{-\alpha}$$를 택하여 $$K(E,F)\neq 0$$이도록 할 수 있다. 그럼 위의 결과로부터 이들은 다음의 relation
 
@@ -357,19 +323,16 @@ $$\frac{2K(\alpha,\beta)}{K(\alpha,\alpha)}=2c,\quad \frac{2K(\alpha,\beta)}{K(\
 
 가 모두 정수이기 위해서는 $$c$$는 $$\pm 1$$, $$\pm 2$$, $$\pm 1/2$$ 중 하나여야 하고, 다시 이를 $$\sl_2$$-representation theory로 옮긴 후 integrality를 적용하면 원하는 결과를 얻는다. 즉 우리는 다음을 증명하였다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop12">**명제 12**</ins> [정의 4](#def4)에서 정의한 root들의 모임 $$\Phi$$는 $$\mathfrak{h}^\ast$$의 root system이다. 
-
-</div>
+::: 명제 12
+[정의 4](#def4)에서 정의한 root들의 모임 $$\Phi$$는 $$\mathfrak{h}^\ast$$의 root system이다. 
+:::
 
 ## 예시들
 
 이제 다음의 예시들을 살펴보자. 
 
-<div class="example" markdown="1">
-
-<ins id="ex13">**예시 13**</ins> 우선 standard Euclidean space $$\mathbb{R}^{n+1}$$을 생각하고, $$\mathbb{R}^{n+1}$$의 subspace
+::: 예시 13
+우선 standard Euclidean space $$\mathbb{R}^{n+1}$$을 생각하고, $$\mathbb{R}^{n+1}$$의 subspace
 
 $$V_n=\left\{(x_1,\ldots, x_{n+1}\mid x_1+\cdots+x_{n+1}=0\right\}$$
 
@@ -382,14 +345,12 @@ $$\Phi(A_n)=\left\{e_i-e_j\mid 1\leq i\neq j\leq n+1\right\}$$
 $$s_{ij}(\mathbf{x})=\mathbf{x}-\langle \mathbf{x}, \mathbf{e}_{ij}\rangle\mathbf{e}_{ij}=(x_1,\ldots, x_{n+1})-(x_i-x_j)\mathbf{e}_{ij}$$
 
 이고 이는 $$\mathbf{x}$$의 $$i$$번째와 $$j$$번째의 성분을 바꾼 것으로 주어진다. 따라서 이로부터 [정의 5](#def5)의 셋째 조건이 성립하는 것을 알고 넷째 조건은 자명하다. 
-
-</div>
+:::
 
 비슷하게 다음의 예시를 생각할 수 있다. 
 
-<div class="example" markdown="1">
-
-<ins id="ex14">**예시 14**</ins> 이번에는 standard Euclidean space $$\mathbb{R}^n$$을 생각하자. 이번에는 다음 집합
+::: 예시 14
+이번에는 standard Euclidean space $$\mathbb{R}^n$$을 생각하자. 이번에는 다음 집합
 
 $$\Phi(D_n)=\left\{\pm e_i\pm e_j\mid 1\leq i \neq j\leq n\right\}$$
 
@@ -398,8 +359,7 @@ $$\Phi(D_n)=\left\{\pm e_i\pm e_j\mid 1\leq i \neq j\leq n\right\}$$
 $$s_{ij}^+(\mathbf{x})=\mathbf{x}-\langle\mathbf{x}, \mathbf{e}_{ij}^+\rangle\mathbf{e}_{ij}^+=(x_1,\ldots, x_n)-(x_i+x_j)\mathbf{e}_{ij}$$
 
 을 생각하면, $$s_{ij}^+$$는 주어진 벡터의 $$i$$번째 성분과 $$j$$번째 성분을 바꾼 후 부호까지 반대로 바꾸어주는 것이다. 
-
-</div>
+:::
 
 위의 예시들에서 살펴볼 수 있듯이 root system을 묘사하기 위해 모든 root들이 필요한 것은 아니다. 가령 $$\Phi(A_n)$$의 경우, 
 
@@ -407,11 +367,9 @@ $$e_i-e_k=(e_i-e_j)+(e_j-e_k)$$
 
 이 성립하며 이로부터 $$\Phi(A_n)$$을 묘사하기 위해서는 $$e_i-e_{i+1}$$ 꼴의 원소들만 필요함을 안다. 이와 비슷한 방식으로 우리는 다음을 정의한다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def15">**정의 15**</ins> Root system $$\Phi$$에 대하여, 우리는 $$\Phi$$의 부분집합 $$\Phi^+$$가 *positive root*들의 부분집합이라는 것은 각각의 root $$\alpha\in \Phi$$에 대하여, $$\alpha$$와 $$-\alpha$$ 중 정확하게 하나만이 $$\Phi$$에 속하며, 임의의 두 $$\alpha,\beta\in \Phi^+$$가 주어질 때마다 $$\alpha+\beta\in \Phi^+$$ 또한 성립하는 것이다. Simple root들의 모임 $$\Phi^+$$을 고정하였을 때, $$\Phi^+$$의 원소 $$\alpha$$가 *simple root*라는 것은 $$\alpha$$를 $$\Phi^+$$의 두 원소들의 합으로 나타낼 수 없는 것이다. 
-
-</div>
+::: 정의 15
+Root system $$\Phi$$에 대하여, 우리는 $$\Phi$$의 부분집합 $$\Phi^+$$가 *positive root*들의 부분집합이라는 것은 각각의 root $$\alpha\in \Phi$$에 대하여, $$\alpha$$와 $$-\alpha$$ 중 정확하게 하나만이 $$\Phi$$에 속하며, 임의의 두 $$\alpha,\beta\in \Phi^+$$가 주어질 때마다 $$\alpha+\beta\in \Phi^+$$ 또한 성립하는 것이다. Simple root들의 모임 $$\Phi^+$$을 고정하였을 때, $$\Phi^+$$의 원소 $$\alpha$$가 *simple root*라는 것은 $$\alpha$$를 $$\Phi^+$$의 두 원소들의 합으로 나타낼 수 없는 것이다. 
+:::
 
 따라서 simple root들 사이의 정수값들 
 
@@ -421,15 +379,13 @@ $$\langle\alpha_i,\alpha_j\rangle=2\frac{(\alpha_i,\alpha_j)}{(\alpha_j,\alpha_j
 
 이제 root system $$\Phi$$와 simple root들의 모임 $$\Delta=\left\{\alpha_1,\ldots, \alpha_l\right\}$$이 고정되었다고 하자. 그럼 *Cartan matrix*는 다음과 같이 정의된다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def16">**정의 16**</ins> 위와 같은 세팅에서, 다음의 행렬
+::: 정의 16
+위와 같은 세팅에서, 다음의 행렬
 
 $$A=(a_{ij})_{1\leq i,j\leq l},\qquad a_{ij}=\langle \alpha_i,\alpha_j\rangle$$
 
 을 *Cartan matrix*라 부른다. 
-
-</div>
+:::
 
 Root system의 정의에 의하여 각각의 성분 $$a_{ij}$$는 정수이다. 또 각각의 $$i$$에 대하여 $$a_{ii}=2$$인 것 또한 자명하다. 
 
@@ -457,21 +413,17 @@ $$\langle \alpha,\beta\rangle =2\frac{(\alpha,\beta)}{\lvert\beta\rvert^2}=\frac
 
 Root system $$\Phi$$의 각 root $$\alpha$$에 대하여 reflection $$s_\alpha$$는 $$\Phi$$의 automorphism을 정의한다. 이들 reflection들로 생성되는 군을 생각하자.
 
-<div class="definition" markdown="1">
-
-<ins id="def17">**정의 17**</ins> Root system $$\Phi$$의 *Weyl group*은 reflection들 $$s_\alpha$$ ($$\alpha\in\Phi$$)로 생성되는 $$\Aut(\Phi)$$의 부분군이다.
+::: 정의 17
+Root system $$\Phi$$의 *Weyl group*은 reflection들 $$s_\alpha$$ ($$\alpha\in\Phi$$)로 생성되는 $$\Aut(\Phi)$$의 부분군이다.
 
 $$W(\Phi)=\langle s_\alpha\mid \alpha\in\Phi\rangle$$
-
-</div>
+:::
 
 Weyl group은 유한군이다. 실제로 $$W$$는 $$\Phi$$가 속한 Euclidean space의 orthogonal group의 부분군이고, $$\Phi$$가 유한집합이므로 $$W$$ 역시 유한하다. 또한 [명제 12](#prop12)에서 확인한 것과 같이 reflection $$s_\alpha$$가 $$\alpha$$에 수직인 초평면에 대한 대칭이동이므로, $$W$$는 Coxeter group의 구조를 갖는다.
 
-<div class="example" markdown="1">
-
-<ins id="ex18">**예시 18**</ins> [예시 13](#ex13)에서 살펴본 $$\Phi(A_n)$$의 경우, reflection $$s_{ij}$$는 $$i$$번째와 $$j$$번째 좌표를 교환하는 transposition에 해당한다. 따라서 $$W(\Phi(A_n))\cong S_{n+1}$$이다. [예시 14](#ex14)의 $$\Phi(D_n)$$의 경우, reflection들은 좌표의 교환과 부호 변화를 모두 포함하므로 $$W(\Phi(D_n))\cong(\mathbb{Z}/2\mathbb{Z})^{n-1}\rtimes S_n$$이다.
-
-</div>
+::: 예시 18
+[예시 13](#ex13)에서 살펴본 $$\Phi(A_n)$$의 경우, reflection $$s_{ij}$$는 $$i$$번째와 $$j$$번째 좌표를 교환하는 transposition에 해당한다. 따라서 $$W(\Phi(A_n))\cong S_{n+1}$$이다. [예시 14](#ex14)의 $$\Phi(D_n)$$의 경우, reflection들은 좌표의 교환과 부호 변화를 모두 포함하므로 $$W(\Phi(D_n))\cong(\mathbb{Z}/2\mathbb{Z})^{n-1}\rtimes S_n$$이다.
+:::
 
 ## Lie group과의 연결
 
@@ -481,14 +433,10 @@ Weyl group은 유한군이다. 실제로 $$W$$는 $$\Phi$$가 속한 Euclidean s
 
 이제 $$N(T)$$가 $$\mathfrak{t}^\ast$$ 위에 작용하는 방식을 살펴보자. 임의의 $$n\in N(T)$$에 대하여, adjoint representation $$\Ad(n)$$은 $$\mathfrak{g}$$ 위의 automorphism이고 $$nTn^{-1}=T$$이므로 $$\mathfrak{t}$$를 보존한다. 따라서 $$\Ad(n)\vert_\mathfrak{t}$$는 $$\mathfrak{t}$$의 automorphism이고, 이를 dual로 옮기면 $$\mathfrak{t}^\ast$$ 위의 linear action을 얻는다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop19">**명제 19**</ins> $$N(T)$$의 $$\mathfrak{t}^\ast$$ 위의 action은 root system $$\Phi$$를 보존한다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 명제 19
+$$N(T)$$의 $$\mathfrak{t}^\ast$$ 위의 action은 root system $$\Phi$$를 보존한다.
+:::
+::: 증명
 임의의 $$n\in N(T)$$와 $$\alpha\in\Phi$$에 대하여, $$\Ad(n)$$이 $$\mathfrak{g}_\alpha$$를 $$\mathfrak{g}_{n\cdot\alpha}$$로 보낸다는 것을 보이면 충분하다. 임의의 $$X\in\mathfrak{g}_\alpha$$와 $$H\in\mathfrak{t}$$에 대하여,
 
 $$[H,\Ad(n)X]=\Ad(n)[\Ad(n)^{-1}H,X]$$
@@ -502,19 +450,14 @@ $$[\Ad(n)^{-1}H,X]=\alpha(\Ad(n)^{-1}H)X=(n^{-1}\cdot\alpha)(H)\cdot X$$
 $$[H,\Ad(n)X]=(n^{-1}\cdot\alpha)(H)\cdot\Ad(n)X$$
 
 이고, 이는 $$\Ad(n)X\in\mathfrak{g}_{n^{-1}\cdot\alpha}$$임을 의미한다. 즉 $$\Ad(n)$$은 $$\mathfrak{g}_\alpha$$를 $$\mathfrak{g}_{n^{-1}\cdot\alpha}$$로 보내고, 이로부터 $$n\cdot\alpha\in\Phi$$임을 안다.
-
-</details>
+:::
 
 따라서 우리는 $$W=N(T)/T$$가 $$\mathfrak{t}^\ast$$ 위에, 특히 root system $$\Phi$$ 위에 잘 정의된 action을 갖는다는 것을 안다. 이제 핵심적인 결과는 다음과 같다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop20">**명제 20**</ins> 각각의 root $$\alpha\in\Phi$$에 대하여, $$\Ad(n_\alpha)\vert_\mathfrak{t}=s_\alpha$$를 만족하는 $$n_\alpha\in N(T)$$가 존재한다. 따라서 Lie group에서 정의한 Weyl group $$W=N(T)/T$$와 root system의 Weyl group은 isomorphic하다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 명제 20
+각각의 root $$\alpha\in\Phi$$에 대하여, $$\Ad(n_\alpha)\vert_\mathfrak{t}=s_\alpha$$를 만족하는 $$n_\alpha\in N(T)$$가 존재한다. 따라서 Lie group에서 정의한 Weyl group $$W=N(T)/T$$와 root system의 Weyl group은 isomorphic하다.
+:::
+::: 증명
 임의의 root $$\alpha\in\Phi$$에 대하여, 앞서 살펴본 것과 같이 $$\sl_{2,\alpha}=\langle e_\alpha, f_\alpha, h_\alpha\rangle$$는 $$\sl(2;\mathbb{C})$$와 isomorphic한 $$\mathfrak{g}$$의 subalgebra이다. 이에 대응하는 $$G$$의 Lie subgroup $$G_\alpha$$는 $$\SU(2)$$ 혹은 $$\SO(3)$$와 locally isomorphic하다.
 
 $$G_\alpha$$는 $$T$$와 교집합을 취했을 때 1차원 torus $$T_\alpha=T\cap G_\alpha$$를 이룬다. 이제 $$N(T)$$의 원소 중 $$\Ad$$-action이 $$\mathfrak{t}$$ 위에서 reflection $$s_\alpha$$를 유도하는 것을 찾아야 한다. 이를 위해 다음 원소
@@ -528,8 +471,7 @@ $$\begin{pmatrix}0&1\\-1&0\end{pmatrix}$$
 에 해당하며, 이 원소는 $$T_\alpha$$의 원소를 $$t\mapsto t^{-1}$$로 보낸다. 따라서 $$\Ad(n_\alpha)$$는 $$h_\alpha$$를 $$-h_\alpha$$로 보내고, $$\ker\alpha$$를 보존한다. 즉 $$\Ad(n_\alpha)\vert_\mathfrak{t}=s_\alpha$$이다.
 
 마지막으로 $$n_\alpha\in N(T)$$임을 확인하자. $$\Ad(n_\alpha)$$가 $$\mathfrak{t}$$를 보존하므로 $$n_\alpha Tn_\alpha^{-1}$$과 $$T$$는 같은 Lie algebra를 갖고, 둘 다 connected이므로 $$n_\alpha Tn_\alpha^{-1}=T$$이다.
-
-</details>
+:::
 
 이로부터 우리는 두 관점에서의 Weyl group이 본질적으로 같은 대상임을 안다. Lie group 관점에서 $$W=N(T)/T$$는 maximal torus의 conjugation action을 포착하고, Lie algebra 관점에서의 $$W$$는 root system의 대칭성을 포착한다. 두 정의의 일치는 compact Lie group의 구조가 그 Lie algebra의 root system에 의해 완전히 결정된다는 사실의 구체적인 표현이다.
 

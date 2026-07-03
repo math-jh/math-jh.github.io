@@ -23,13 +23,11 @@ $$\bigwedge\nolimits(T^\ast M)\cong\bigoplus_{k=0}^n\bigwedge\nolimits^k(T^\ast 
 
 점 $$p\in M$$을 고정하자. 그럼 $$g_p$$는 $$\mathcal{S}^2(T^\ast_pM)$$의 원소이다. 이제 [\[미분다양체\] §미분형식, ⁋정의 1](/ko/math/manifolds/differential_forms#def1) 이후에 확인한 것과 마찬가지 논증을 거쳐 $$\mathcal{S}^2(T^\ast_pM)\cong(\mathcal{S}^2(T_pM))^\ast$$임을 알 수 있고, [\[다중선형대수학\] §텐서대수, ⁋명제 11](/ko/math/multilinear_algebra/tensor_algebras#prop11)에 의해 $$g_p$$를 $$T_pM\times T_pM$$에서 $$\mathbb{R}$$로의 symmetric multilinear map으로 생각할 수 있다. 따라서 $$g_p$$에 적절한 non-degenerate 조건만 준다면 이를 $$T_pM$$ 위에 정의된 내적으로 생각할 수 있다. ([\[선형대수학\] §내적공간, ⁋정의 1](/ko/math/linear_algebra/inner_product_spaces#def1))
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> Manifold $$M$$ 위에 주어진 *Riemannian metric<sub>리만 계량</sub>*은 다음과 같은 센스에서 positive-definite인 smooth section $$g\in\Gamma(\mathcal{S}^2(T^\ast M))$$을 의미한다.
+::: 정의 1
+Manifold $$M$$ 위에 주어진 *Riemannian metric<sub>리만 계량</sub>*은 다음과 같은 센스에서 positive-definite인 smooth section $$g\in\Gamma(\mathcal{S}^2(T^\ast M))$$을 의미한다.
 
 > (Positive-definiteness) 임의의 $$p\in M$$에 대하여, $$g_p(v,v)>0$$이 영이 아닌 모든 $$v\in T_pM$$에 대하여 성립한다.
-
-</div>
+:::
 
 위 정의에서 positive-definiteness 조건을 non-degeneracy로 약화시킨 smooth section $$g \in \Gamma(\mathcal{S}^2(T^\ast M))$$을 *pseudo-Riemannian metric<sub>준-리만 계량</sub>*이라 부른다. 이 경우 $$g_p$$는 더 이상 내적은 아니지만 $$T_pM$$ 위의 non-degenerate symmetric bilinear form을 정의한다. 
 
@@ -75,15 +73,13 @@ $$\tilde{g}(X)=\sum_{i,j=1}^n g_{ij}X^idx^j$$
 
 한편 Riemannian metric은 드디어 manifold 위에서 거리를 재고, 각도를 재는 등의 기하를 할 수 있게 해 준다. 임의의 벡터공간 $$V$$ 위에 내적이 정의되면 $$\lVert v\rVert:=\sqrt{\langle v,v\rangle}$$을 통해 $$V$$에 거리를 줄 수 있었다는 것을 기억하자.
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**정의 2**</ins> Riemannian manifold $$(M,g)$$와, 이 위에 정의된 곡선 $$\gamma:[a,b]\rightarrow M$$이 있다 하자. 그럼 $$\gamma$$의 *길이<sub>length</sub>* $$\length(\gamma)$$는 다음의 식
+::: 정의 2
+Riemannian manifold $$(M,g)$$와, 이 위에 정의된 곡선 $$\gamma:[a,b]\rightarrow M$$이 있다 하자. 그럼 $$\gamma$$의 *길이<sub>length</sub>* $$\length(\gamma)$$는 다음의 식
 
 $$\length(\gamma)=\int_a^b\lVert\dot{\gamma}(t)\rVert_g\mathop{dt}$$
 
 으로 정의된다.
-
-</div>
+:::
 
 이렇게 정의한 곡선의 길이는 parametrization에 의존하지 않는다. 한편, 위의 정의를 통해 $$M$$을 거리공간으로 만들 수 있다. 이를 위해서는
 

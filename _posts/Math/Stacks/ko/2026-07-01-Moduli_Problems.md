@@ -24,9 +24,8 @@ published: false
 
 분류 문제를 정식화하는 핵심 착상은, 고정된 한 base 위에서 대상을 분류하는 대신, 가능한 모든 base $$T$$에 대하여 동시에 *$$T$$로 매개변수화된 족*을 분류하는 것이다. 한 점만이 아니라 임의의 test scheme $$T$$ 위의 족 전체를 다루어야, 동형류들이 어떻게 변형되는지가 자료에 담긴다. 이때 한 분류 문제는 각 $$T$$에 그 위의 족들을 대응시키는 규칙, 곧 함자로 압축된다.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> 한 *moduli 문제<sub>moduli problem</sub>*는 다음 자료로 이루어진다. 각 scheme $$T$$에 대하여 "$$T$$ 위의 족"이라 부르는 대상들의 모임이 주어지고, 그 사이의 isomorphism이 지정되어 groupoid $$\mathcal{M}(T)$$를 이루며, 각 morphism $$f: T' \rightarrow T$$에 대하여 족을 $$T'$$으로 끌어당기는 pullback 함자 $$f^\ast:\mathcal{M}(T) \rightarrow \mathcal{M}(T')$$이 주어진다. 이 자료가 정합성 조건을 만족하여 pseudofunctor
+::: 정의 1
+한 *moduli 문제<sub>moduli problem</sub>*는 다음 자료로 이루어진다. 각 scheme $$T$$에 대하여 "$$T$$ 위의 족"이라 부르는 대상들의 모임이 주어지고, 그 사이의 isomorphism이 지정되어 groupoid $$\mathcal{M}(T)$$를 이루며, 각 morphism $$f: T' \rightarrow T$$에 대하여 족을 $$T'$$으로 끌어당기는 pullback 함자 $$f^\ast:\mathcal{M}(T) \rightarrow \mathcal{M}(T')$$이 주어진다. 이 자료가 정합성 조건을 만족하여 pseudofunctor
 
 $$\mathcal{M}:\Sch^\op \rightarrow \Grpd$$
 
@@ -35,8 +34,7 @@ $$\mathcal{M}:\Sch^\op \rightarrow \Grpd$$
 $$\underline{M}:\Sch^\op \rightarrow \Set,\qquad \underline{M}(T)=\obj \mathcal{M}(T)/\cong$$
 
 를 그 moduli 문제의 *coarse moduli functor* 또는 *set-값 moduli functor*라 부른다.
-
-</div>
+:::
 
 여기에서 "족"이 정확히 무엇인지는 분류 문제마다 다르다. 종수 $$g$$ 곡선의 분류에서는 $$T$$ 위의 족이란 매끄러운 사영 morphism $$X \rightarrow T$$로서 모든 기하적 fiber가 종수 $$g$$의 곡선인 것이고, 고정된 다양체 $$X$$ 위의 vector bundle의 분류에서는 $$X\times T$$ 위의 위수 $$r$$ vector bundle이며, 절단을 가진 타원곡선의 분류에서는 절단을 가진 종수 $$1$$의 매끄러운 사영곡선의 족이다. 어느 경우든 pullback은 morphism $$f: T' \rightarrow T$$에 대한 fiber product를 통한 base change로 주어지고, 정합성 자료는 base change가 합성과 정준 동형으로 호환된다는 것에서 나온다. 이 정합성이 등호가 아니라 정준 동형으로만 성립하기 때문에 $$\mathcal{M}$$은 진짜 pseudofunctor이며, 동치인 fibered category의 언어로 다루는 편이 자연스럽다. ([§Fibered category와 stack, ⁋참고 4](/ko/math/stacks/fibered_categories_and_stacks#rmk4))
 
@@ -46,9 +44,8 @@ $$\underline{M}:\Sch^\op \rightarrow \Set,\qquad \underline{M}(T)=\obj \mathcal{
 
 이상적인 답은 moduli 문제를 표현하는 scheme이다. 곧 동형류들이 한 scheme $$M$$의 점들과 일대일대응할 뿐 아니라, $$M$$ 위에 단 하나의 "보편 족"이 놓여 있어 임의의 족이 그것의 pullback으로 유일하게 얻어지는 상황이다. 이를 함자의 언어로 옮기면 표현가능성이 된다.
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**정의 2**</ins> Moduli 문제의 set-값 moduli functor $$\underline{M}:\Sch^\op \rightarrow \Set$$가 scheme $$M$$에 의하여 *표현가능*할 때, 곧 자연동형
+::: 정의 2
+Moduli 문제의 set-값 moduli functor $$\underline{M}:\Sch^\op \rightarrow \Set$$가 scheme $$M$$에 의하여 *표현가능*할 때, 곧 자연동형
 
 $$\underline{M}\cong \Hom_{\Sch}(-, M)$$
 
@@ -57,8 +54,7 @@ $$\underline{M}\cong \Hom_{\Sch}(-, M)$$
 $$\mathcal{U}\in \underline{M}(M)$$
 
 을 *보편 족<sub>universal family</sub>*이라 부른다.
-
-</div>
+:::
 
 이 정의는 표현가능 함자의 universal element를 그대로 옮긴 것이다. ([\[범주론\] §표현가능한 함자, ⁋정의 5](/ko/math/category_theory/representable_functors#def5)) 보편 족 $$\mathcal{U}$$이 갖는 보편성은 다음과 같이 풀린다. 임의의 scheme $$T$$와 그 위의 족 $$X\in \underline{M}(T)$$에 대하여, 자연동형의 한 성분 $$\underline{M}(T)\cong \Hom_\Sch(T, M)$$이 $$X$$에 유일한 morphism $$f_X: T \rightarrow M$$을 대응시키며, Yoneda의 자연성에 의하여 이 $$f_X$$은 정확히
 
@@ -68,23 +64,19 @@ $$X\cong f_X^\ast \mathcal{U}$$
 
 Fine moduli가 실제로 존재하는 비자명한 예는 분류 대상에 충분한 강성 자료, 곧 rigidify하는 추가 구조를 얹은 경우에서 나온다. 사영공간과 Grassmannian이 대표적이다.
 
-<div class="example" markdown="1">
-
-<ins id="ex3">**예시 3** (사영공간)</ins> 사영공간 $$\mathbb{P}^n$$은 다음 moduli 문제의 fine moduli space이다. $$T$$ 위의 족을, $$T$$ 위의 line bundle $$\mathcal{L}$$과 이를 globally generate하는 $$n+1$$개의 절단 $$s_0,\ldots, s_n\in \Gamma(T, \mathcal{L})$$의 자료 $$(\mathcal{L}, s_0,\ldots, s_n)$$의 동형류로 정의한다. 여기에서 두 자료가 동형이라는 것은 절단들을 옮기는 line bundle의 동형이 존재하는 것이다. 이 함자는 $$\mathbb{P}^n$$에 의하여 표현되며, 보편 족은 twisting sheaf $$\mathcal{O}_{\mathbb{P}^n}(1)$$과 그 좌표절단 $$\x_0,\ldots, \x_n$$이다. ([\[스킴\] §점함자, ⁋정리 11](/ko/math/scheme_theory/functor_of_points#thm11))
-
-</div>
+::: 예시 3 (사영공간)
+사영공간 $$\mathbb{P}^n$$은 다음 moduli 문제의 fine moduli space이다. $$T$$ 위의 족을, $$T$$ 위의 line bundle $$\mathcal{L}$$과 이를 globally generate하는 $$n+1$$개의 절단 $$s_0,\ldots, s_n\in \Gamma(T, \mathcal{L})$$의 자료 $$(\mathcal{L}, s_0,\ldots, s_n)$$의 동형류로 정의한다. 여기에서 두 자료가 동형이라는 것은 절단들을 옮기는 line bundle의 동형이 존재하는 것이다. 이 함자는 $$\mathbb{P}^n$$에 의하여 표현되며, 보편 족은 twisting sheaf $$\mathcal{O}_{\mathbb{P}^n}(1)$$과 그 좌표절단 $$\x_0,\ldots, \x_n$$이다. ([\[스킴\] §점함자, ⁋정리 11](/ko/math/scheme_theory/functor_of_points#thm11))
+:::
 
 이 예에서 결정적인 것은, 분류되는 자료 $$(\mathcal{L}, s_0,\ldots, s_n)$$이 비자명한 automorphism을 가지지 않는다는 점이다. Line bundle $$\mathcal{L}$$ 자체는 곱셈 $$\mathbb{G}_m$$만큼의 automorphism을 가지지만, globally generate하는 절단들을 고정하면 그 절단을 보존하는 line bundle 자기동형은 항등사상뿐이다. 절단이라는 강성 자료가 automorphism을 죽인 덕분에 set-값 함자가 곧바로 표현가능해진 것이며, 이것이 fine moduli가 존재하는 전형적인 구조이다.
 
-<div class="example" markdown="1">
-
-<ins id="ex4">**예시 4** (Grassmannian)</ins> Grassmannian $$\Gr(k, n)$$은 다음 moduli 문제의 fine moduli space이다. $$T$$ 위의 족을, 자명한 다발의 위수 $$k$$ locally free 몫다발
+::: 예시 4 (Grassmannian)
+Grassmannian $$\Gr(k, n)$$은 다음 moduli 문제의 fine moduli space이다. $$T$$ 위의 족을, 자명한 다발의 위수 $$k$$ locally free 몫다발
 
 $$\mathcal{O}_T^n\twoheadrightarrow \mathcal{Q},\qquad \mathcal{Q}\text{ is locally free of rank } k$$
 
 의 동형류로 정의한다. 여기에서 두 몫다발이 동형이라는 것은 두 몫사상을 commute하게 하는 $$\mathcal{O}_T$$-module 동형 $$\mathcal{Q}\cong \mathcal{Q}'$$이 존재하는 것이다. 이 함자는 $$\Gr(k, n)$$에 의하여 표현되며, 보편 족은 Grassmannian 위의 보편 몫다발 $$\mathcal{O}^n\twoheadrightarrow \mathcal{Q}^{\mathrm{univ}}$$이다. ([\[스킴\] §점함자, ⁋예시 12](/ko/math/scheme_theory/functor_of_points#ex12)) $$T=\Spec \mathbb{K}$$가 field 위의 한 점일 때 위수 $$k$$ 몫공간 $$\mathbb{K}^n\twoheadrightarrow Q$$은 그 kernel인 $$(n-k)$$차원 부분공간과 일대일대응하므로, $$\Gr(k, n)(\mathbb{K})$$은 $$\mathbb{K}^n$$의 $$(n-k)$$차원 부분공간들의 집합과 일치한다. 부분공간을 직접 분류하는 [\[대수다양체\] §그라스만 다양체, ⁋정의 1](/ko/math/algebraic_varieties/grassmannians#def1)의 관례에서 이 집합은 $$\Gr(n-k, n)$$에 해당하며, 위수 $$k$$ 몫다발의 moduli로서 정의한 $$\Gr(k, n)$$은 kernel을 취하는 대응을 통해 그것과 동일시된다.
-
-</div>
+:::
 
 예시 4 역시 강성의 메커니즘을 따른다. 부분공간 $$W\subseteq \mathbb{K}^n$$ 자체는 그것을 보존하는 $$\GL_n$$의 부분군만큼의 대칭을 가지지만, 몫사상 $$\mathcal{O}_T^n\twoheadrightarrow \mathcal{Q}$$을 그 자료로 삼고 동형을 몫사상과 commute하는 것으로 한정하면, 그러한 자기동형은 항등사상뿐이다. $$k=1$$인 경우 위수 $$1$$ 몫다발을 분류하는 일은 예시 3의 사영공간 $$\mathbb{P}^{n-1}$$로 환원되며, 실제로 $$\mathcal{O}_T^n\twoheadrightarrow \mathcal{L}$$을 주는 것은 $$\mathcal{L}$$의 globally generate하는 절단 $$n$$개를 주는 것과 같다. 이 두 예는 fine moduli가 가능한 분류 문제의 공통 구조, 곧 분류 대상이 비자명한 automorphism을 가지지 않도록 자료를 rigidify한 구조를 보여준다.
 
@@ -94,14 +86,10 @@ $$\mathcal{O}_T^n\twoheadrightarrow \mathcal{Q},\qquad \mathcal{Q}\text{ is loca
 
 핵심은 다음 관찰이다. Fine moduli space가 존재한다면 set-값 moduli functor $$\underline{M}$$은 표현가능 함자 $$\Hom_\Sch(-, M)$$과 동형이고, 표현가능 함자는 fpqc 위상(따라서 그보다 거친 étale·Zariski 위상)에 대한 sheaf이다. 이는 충실평탄 하강의 표준적 귀결로, affine한 $$M=\Spec R$$의 경우 전역절단 presheaf $$T\mapsto \Gamma(T, \mathcal{O}_T)$$이 fpqc sheaf라는 사실 ([\[스킴\] §충실평탄 하강, ⁋정리 9](/ko/math/scheme_theory/faithfully_flat_descent#thm9))로부터 $$\Hom_\Sch(-, \Spec R)=\Hom_{\mathrm{Ring}}(R, \Gamma(-, \mathcal{O}))$$을 통해 따라오고, 일반적인 $$M$$은 affine open으로 덮어 접합하여 얻는다. 즉 한 scheme으로 가는 morphism들은 덮개 위에서 정합적으로 주어지면 유일하게 이어 붙는다. 그러므로 $$\underline{M}$$이 sheaf가 아니면 fine moduli는 존재할 수 없다. 비자명한 automorphism은 정확히 이 sheaf 조건의 분리성, 곧 "덮개 위에서 같은 족은 원래 같다"는 부분을 깨뜨린다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**명제 5**</ins> 한 moduli 문제에 대하여, 어떤 scheme $$T$$와 그 위의 surjective étale 덮개 $$S \rightarrow T$$, 그리고 족 $$X\in \mathcal{M}(T)$$이 존재하여 다음을 만족한다고 하자. 어떤 고정된 대상 $$E$$에 대하여 $$S$$로 끌어당기면 $$X\times_T S\cong E\times S$$이지만 ($$X$$이 *isotrivial<sub>등질</sub>*하지만), $$X$$이 $$T$$ 위에서 상수 족 $$E\times T$$과 동형이 아니다. 그럼 이 문제는 fine moduli space를 가지지 않는다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 명제 5
+한 moduli 문제에 대하여, 어떤 scheme $$T$$와 그 위의 surjective étale 덮개 $$S \rightarrow T$$, 그리고 족 $$X\in \mathcal{M}(T)$$이 존재하여 다음을 만족한다고 하자. 어떤 고정된 대상 $$E$$에 대하여 $$S$$로 끌어당기면 $$X\times_T S\cong E\times S$$이지만 ($$X$$이 *isotrivial<sub>등질</sub>*하지만), $$X$$이 $$T$$ 위에서 상수 족 $$E\times T$$과 동형이 아니다. 그럼 이 문제는 fine moduli space를 가지지 않는다.
+:::
+::: 증명
 Fine moduli space $$M$$이 존재한다고 가정하고 모순을 이끈다. [정의 2](#def2)에 의하여 set-값 moduli functor는 표현가능 함자 $$\underline{M}\cong \Hom_\Sch(-, M)$$이고, 표현가능 함자는 fpqc 위상에 대한 sheaf, 따라서 그보다 거친 étale 위상에 대해서도 sheaf이다. 이는 전역절단 presheaf가 fpqc sheaf라는 [\[스킴\] §충실평탄 하강, ⁋정리 9](/ko/math/scheme_theory/faithfully_flat_descent#thm9)의 표준적 귀결이다. Sheaf의 조건 가운데 분리성은, 임의의 덮개 $$S \rightarrow T$$에 대하여 제한사상
 
 $$\underline{M}(T) \rightarrow \underline{M}(S)$$
@@ -109,8 +97,7 @@ $$\underline{M}(T) \rightarrow \underline{M}(S)$$
 이 단사인 것이다.
 
 이제 가정의 두 족 $$X$$과 $$E\times T$$을 $$\underline{M}(T)$$의 원소로 본다. $$S$$로 끌어당기면 $$X\times_T S\cong E\times S\cong (E\times T)\times_T S$$이므로, 두 동형류는 $$\underline{M}(S)$$에서 같은 원소로 보내진다. 그러나 가정에 의하여 $$X$$과 $$E\times T$$은 $$T$$ 위에서 동형이 아니므로 $$\underline{M}(T)$$에서 서로 다른 원소이다. 이는 제한사상 $$\underline{M}(T) \rightarrow \underline{M}(S)$$의 단사성에 모순이다. 따라서 $$\underline{M}$$은 분리된 presheaf조차 될 수 없고, 표현가능할 수 없으므로 fine moduli space는 존재하지 않는다.
-
-</details>
+:::
 
 명제 5의 가정에 등장하는 비자명한 등질 족은, 분류 대상 $$E$$이 비자명한 automorphism군 $$\Aut(E)$$을 가질 때 그 군의 비자명한 torsor로부터 만들어진다. 위수 $$d$$의 automorphism $$\sigma\in \Aut(E)$$과 차수 $$d$$의 cyclic étale 덮개 $$S \rightarrow T$$ (곧 비자명한 $$\mathbb{Z}/d$$-torsor, [§Fibered category와 stack, ⁋정의 18](/ko/math/stacks/fibered_categories_and_stacks#def18))이 주어지면, $$\mathbb{Z}/d$$을 $$E$$에는 $$\sigma$$로 $$S$$에는 덮개변환으로 대각작용시켜 얻는 몫
 
@@ -118,11 +105,9 @@ $$X=(E\times S)/(\mathbb{Z}/d) \rightarrow S/(\mathbb{Z}/d)=T$$
 
 이 그러한 족이다. $$S$$로 끌어당기면 $$X\times_T S\cong E\times S$$이 되어 등질이지만, $$\sigma$$가 비자명하면 $$X$$은 상수 족과 동형이 아니다. 이는 sheaf 조건의 분리성이 깨지는 모습 그 자체이다. 두 족 $$X$$과 $$E\times T$$이 덮개 $$S \rightarrow T$$ 위에서 동형이 되지만 $$T$$ 위에서는 동형이 아니므로, $$\underline{M}(T) \rightarrow \underline{M}(S)$$이 단사가 아니어서 $$\underline{M}$$은 separated presheaf조차 되지 못한다. ([§Fibered category와 stack, ⁋명제 15](/ko/math/stacks/fibered_categories_and_stacks#prop15)) 비자명한 automorphism이 있는 한 적절한 base $$T$$ 위에서 이러한 torsor가 늘 존재하므로, 장애는 우연이 아니라 구조적이다.
 
-<div class="example" markdown="1">
-
-<ins id="ex6">**예시 6** (타원곡선에 fine moduli가 없음)</ins> 절단을 가진 타원곡선 $$(E, 0)$$은 항상 비자명한 automorphism $$[-1]:(x, y)\mapsto(x, -y)$$을 가지며, 이는 절단 $$0$$을 고정하는 위수 $$2$$의 자기동형이다. 곧 모든 타원곡선에 대하여 $$\{\pm 1\}\cong \mathbb{Z}/2\subseteq \Aut(E, 0)$$이다. 따라서 $$\sigma=[-1]$$, $$d=2$$으로 위의 구성을 적용한다. Field $$k$$ ($$\operatorname{char}k\neq 2$$) 위에서 타원곡선 $$E$$을 하나 고정하고, $$T$$을 비자명한 $$\mathbb{Z}/2$$-torsor를 갖는 base, 예컨대 $$T=\Spec k(t)$$과 이차확대 $$S=\Spec k(t)[\sqrt{t}]$$으로 두면, 위의 몫 $$X=(E\times S)/(\mathbb{Z}/2)$$은 $$E$$의 *이차 twist*로서 $$X\times_T S\cong E\times S$$이지만 $$T$$ 위에서 상수 족과 동형이 아니다. [명제 5](#prop5)에 의하여 절단을 가진 타원곡선의 moduli 문제는 fine moduli space를 가지지 않는다. 같은 논증은 $$j$$-불변량이 고정된 등질 족이 비자명하게 존재함을 보여주므로, 동형류 집합 $$\{j\in k\}=\mathbb{A}^1_j$$을 그대로 scheme으로 보아도 그 위에 보편 타원곡선은 놓일 수 없다.
-
-</div>
+::: 예시 6 (타원곡선에 fine moduli가 없음)
+절단을 가진 타원곡선 $$(E, 0)$$은 항상 비자명한 automorphism $$[-1]:(x, y)\mapsto(x, -y)$$을 가지며, 이는 절단 $$0$$을 고정하는 위수 $$2$$의 자기동형이다. 곧 모든 타원곡선에 대하여 $$\{\pm 1\}\cong \mathbb{Z}/2\subseteq \Aut(E, 0)$$이다. 따라서 $$\sigma=[-1]$$, $$d=2$$으로 위의 구성을 적용한다. Field $$k$$ ($$\operatorname{char}k\neq 2$$) 위에서 타원곡선 $$E$$을 하나 고정하고, $$T$$을 비자명한 $$\mathbb{Z}/2$$-torsor를 갖는 base, 예컨대 $$T=\Spec k(t)$$과 이차확대 $$S=\Spec k(t)[\sqrt{t}]$$으로 두면, 위의 몫 $$X=(E\times S)/(\mathbb{Z}/2)$$은 $$E$$의 *이차 twist*로서 $$X\times_T S\cong E\times S$$이지만 $$T$$ 위에서 상수 족과 동형이 아니다. [명제 5](#prop5)에 의하여 절단을 가진 타원곡선의 moduli 문제는 fine moduli space를 가지지 않는다. 같은 논증은 $$j$$-불변량이 고정된 등질 족이 비자명하게 존재함을 보여주므로, 동형류 집합 $$\{j\in k\}=\mathbb{A}^1_j$$을 그대로 scheme으로 보아도 그 위에 보편 타원곡선은 놓일 수 없다.
+:::
 
 예시 6은 강성이 깨진 분류 문제의 전형이다. 사영공간이나 Grassmannian에서는 추가 자료가 automorphism을 죽여 set-값 함자가 곧바로 sheaf였던 반면, 타원곡선에서는 절단을 고정하더라도 $$[-1]$$이 살아남아 함자가 sheaf가 되지 못한다. 그렇다면 우리는 둘 중 하나를 선택해야 한다. Automorphism을 자료로 그대로 안고 가는 더 정교한 기하적 대상으로 옮겨 가거나, automorphism을 포기하고 동형류만 담는 가장 좋은 scheme 근사를 찾는 것이다. 이 두 길이 다음 절의 주제이다.
 
@@ -130,41 +115,32 @@ $$X=(E\times S)/(\mathbb{Z}/d) \rightarrow S/(\mathbb{Z}/d)=T$$
 
 첫 번째 보정은 set-값 함자 $$\underline{M}$$ 대신 groupoid-값 함자 $$\mathcal{M}$$ 자체를 기하적 대상으로 삼는 것이다. 명제 5의 장애가 동형류로 뭉개면서 automorphism 정보를 버린 데서 비롯되었으므로, 그 정보를 끝까지 들고 가면 장애가 사라진다. [정의 1](#def1)의 $$\mathcal{M}$$을 fibered category로 보고 그것이 stack임을 확인한 뒤, 적절한 대수성 조건을 부과한 것이 바로 *moduli stack*이다.
 
-<div class="definition" markdown="1">
-
-<ins id="def7">**정의 7**</ins> 한 moduli 문제의 moduli functor $$\mathcal{M}:\Sch^\op \rightarrow \Grpd$$이, 대응하는 fibered category로서 site $$(\Sch, \mathrm{fppf})$$ 위의 stack이고 ([§Fibered category와 stack, ⁋정의 13](/ko/math/stacks/fibered_categories_and_stacks#def13)) 나아가 대수적 stack일 때 ([§대수적 stack과 quotient stack, ⁋정의 6](/ko/math/stacks/algebraic_stacks#def6)), 이를 그 문제의 *moduli stack<sub>moduli stack</sub>*이라 부른다. 대각선 $$\Delta:\mathcal{M} \rightarrow \mathcal{M}\times\mathcal{M}$$이 unramified일 때, 곧 점들의 automorphism군이 모두 유한 reduced일 때 이 stack은 Deligne–Mumford stack이고, 그렇지 않은 일반적인 경우에는 Artin stack이다.
-
-</div>
+::: 정의 7
+한 moduli 문제의 moduli functor $$\mathcal{M}:\Sch^\op \rightarrow \Grpd$$이, 대응하는 fibered category로서 site $$(\Sch, \mathrm{fppf})$$ 위의 stack이고 ([§Fibered category와 stack, ⁋정의 13](/ko/math/stacks/fibered_categories_and_stacks#def13)) 나아가 대수적 stack일 때 ([§대수적 stack과 quotient stack, ⁋정의 6](/ko/math/stacks/algebraic_stacks#def6)), 이를 그 문제의 *moduli stack<sub>moduli stack</sub>*이라 부른다. 대각선 $$\Delta:\mathcal{M} \rightarrow \mathcal{M}\times\mathcal{M}$$이 unramified일 때, 곧 점들의 automorphism군이 모두 유한 reduced일 때 이 stack은 Deligne–Mumford stack이고, 그렇지 않은 일반적인 경우에는 Artin stack이다.
+:::
 
 Moduli stack 위에는 언제나 보편 족이 존재한다. Set-값 함자에서는 보편 족이 항등사상의 상으로 정의되었듯이 ([정의 2](#def2)), stack에서는 항등 morphism $$\id_\mathcal{M}:\mathcal{M} \rightarrow \mathcal{M}$$ 자체가 $$\mathcal{M}$$ 위의 보편 족을 주며, automorphism을 fiber groupoid가 그대로 기억하므로 명제 5의 모순이 일어나지 않는다. 비자명한 등질 족 $$X \rightarrow T$$은 stack의 점들의 morphism으로 정확히 구별되고, classifying morphism $$T \rightarrow \mathcal{M}$$이 더 이상 상수가 아니라 그 twist를 식별하는 비자명한 자료가 된다. 이것이 stack이 "moduli 문제의 올바른 대상"인 까닭이다.
 
 두 번째 보정은 stack을 포기하고 scheme(또는 algebraic space)의 세계에 머무르되, 동형류만을 담는 가장 좋은 근사를 찾는 것이다.
 
-<div class="definition" markdown="1">
-
-<ins id="def8">**정의 8**</ins> 한 moduli 문제의 set-값 moduli functor $$\underline{M}:\Sch^\op \rightarrow \Set$$에 대하여, scheme $$M$$과 자연변환 $$\Phi:\underline{M} \rightarrow \Hom_\Sch(-, M)$$의 쌍이 *coarse moduli space<sub>성긴 moduli 공간</sub>*라는 것은 다음 두 조건을 만족하는 것이다.
+::: 정의 8
+한 moduli 문제의 set-값 moduli functor $$\underline{M}:\Sch^\op \rightarrow \Set$$에 대하여, scheme $$M$$과 자연변환 $$\Phi:\underline{M} \rightarrow \Hom_\Sch(-, M)$$의 쌍이 *coarse moduli space<sub>성긴 moduli 공간</sub>*라는 것은 다음 두 조건을 만족하는 것이다.
 
 1. (보편성) 임의의 scheme $$N$$과 자연변환 $$\Psi:\underline{M} \rightarrow \Hom_\Sch(-, N)$$에 대하여, $$\Psi=\Hom_\Sch(-, \pi)\circ \Phi$$을 만족하는 morphism $$\pi: M \rightarrow N$$이 유일하게 존재한다. 곧 $$\Phi$$은 scheme으로 가는 자연변환들 가운데 시작대상이다.
 
 2. (기하적 점에서의 전단사) 임의의 대수적으로 닫힌 field $$\mathbb{K}$$에 대하여, 사상 $$\Phi(\Spec \mathbb{K}):\underline{M}(\Spec \mathbb{K}) \rightarrow \Hom_\Sch(\Spec \mathbb{K}, M)=M(\mathbb{K})$$이 전단사이다.
-
-</div>
+:::
 
 조건 1은 $$M$$이 동형류들을 담는 scheme 가운데 가장 보편적인 것, 곧 $$\underline{M}$$에서 scheme으로 가는 모든 사상이 $$M$$을 거쳐 가도록 하는 초기 대상임을 말한다. 조건 2는 $$M$$의 닫힌 field 위의 점들이 정확히 분류 대상의 동형류와 일대일대응함을 보장하여, $$M$$이 적어도 집합 수준에서는 올바른 매개변수 공간임을 확정한다. Fine moduli space는 자동으로 coarse moduli space이지만 ($$\Phi$$이 동형이면 두 조건이 자명히 성립한다), 그 역은 성립하지 않는다. Coarse moduli space는 일반적으로 보편 족을 가지지 않으며, 두 조건이 보장하는 것은 점들의 대응과 보편성뿐이다. 보편성에 의하여 coarse moduli space는 존재하면 유일한 동형을 통해 유일하게 결정된다.
 
 Coarse moduli space의 존재는 자명하지 않다. 그 일반적 존재를 보장하는 것이 Keel–Mori 정리로, moduli stack의 언어로 가장 깔끔하게 서술된다.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm9">**정리 9** (Keel–Mori)</ins> $$\mathcal{M}$$이 noetherian base 위에서 locally of finite type인 대수적 stack이고, 그 inertia stack $$I_\mathcal{M}=\mathcal{M}\times_{\mathcal{M}\times\mathcal{M}}\mathcal{M} \rightarrow \mathcal{M}$$이 유한이라 하자. 그럼 $$\mathcal{M}$$의 coarse moduli space $$\pi:\mathcal{M} \rightarrow M$$이 존재한다. 여기에서 $$M$$은 algebraic space이고, $$\pi$$은 proper이며 기하적 점들의 동형류 집합과 $$M$$의 기하적 점들 사이의 전단사를 유도한다. 특히 분리된 finite type Deligne–Mumford stack은 coarse moduli space를 가진다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명 (개요)</summary>
-
+::: 정리 9 (Keel–Mori)
+$$\mathcal{M}$$이 noetherian base 위에서 locally of finite type인 대수적 stack이고, 그 inertia stack $$I_\mathcal{M}=\mathcal{M}\times_{\mathcal{M}\times\mathcal{M}}\mathcal{M} \rightarrow \mathcal{M}$$이 유한이라 하자. 그럼 $$\mathcal{M}$$의 coarse moduli space $$\pi:\mathcal{M} \rightarrow M$$이 존재한다. 여기에서 $$M$$은 algebraic space이고, $$\pi$$은 proper이며 기하적 점들의 동형류 집합과 $$M$$의 기하적 점들 사이의 전단사를 유도한다. 특히 분리된 finite type Deligne–Mumford stack은 coarse moduli space를 가진다.
+:::
+::: 증명
 완전한 증명은 이 글의 범위를 넘으므로 핵심 착상만 적는다. Inertia stack $$I_\mathcal{M} \rightarrow \mathcal{M}$$은 각 점에 그 automorphism군을 fiber로 붙이는 stack이며, 이것이 유한하다는 것이 정확히 stabilizer들이 유한군이라는 조건이다. 이 조건 아래에서 stack을 국소적으로 유한군 $$G$$에 의한 quotient stack $$[U/G]$$으로 표현할 수 있고 ([§대수적 stack과 quotient stack, ⁋정의 8](/ko/math/stacks/algebraic_stacks#def8)), 국소적인 후보 coarse space로 불변량환의 spectrum $$U/G=\Spec \Gamma(U, \mathcal{O}_U)^G$$을 취한다. 핵심은 이 국소적 몫들이 étale 위상에 대하여 정합적으로 이어 붙어 algebraic space $$M$$을 이루고, 그 위에서 [정의 8](#def8)의 두 조건이 성립함을 보이는 것이다. Inertia의 유한성은 이 접합을 가능케 하는 본질적 가정으로, 실제로 separated classifying morphism을 갖는 coarse moduli space가 존재하는 것은 inertia가 유한한 것과 동치이다. 자세한 논증은 Keel–Mori의 원논문과 [Stacks]를 참조하라.
-
-</details>
+:::
 
 정리 9의 가정에서 inertia의 유한성이 결정적이다. Stabilizer가 양의 차원을 가지는 stack, 예컨대 $$\mathbf{B}\mathbb{G}_m$$이나 $$[\mathbb{A}^1/\mathbb{G}_m]$$ ([§대수적 stack과 quotient stack, ⁋예시 13](/ko/math/stacks/algebraic_stacks#ex13))은 이 정리의 적용 범위 밖이며, 이들의 coarse moduli space는 stabilizer 정보를 잃으면서 점들을 심하게 뭉갠다. 반면 Deligne–Mumford stack은 정의상 stabilizer가 유한하므로, 분리성과 finite type 조건만 더하면 곧바로 coarse moduli space를 가진다. 다음 절의 타원곡선 moduli가 바로 이 상황에 해당한다.
 
@@ -192,11 +168,9 @@ $$\Aut(E, 0)\cong \begin{cases}\mathbb{Z}/6 & j=0,\\ \mathbb{Z}/4 & j=1728,\\ \m
 
 이다. 모든 점이 공통의 $$\mathbb{Z}/2$$을 가지므로 $$\mathcal{M}_{1, 1}$$은 전체에 걸쳐 $$\mathbb{Z}/2$$-gerbe와 같은 구조를 이루며, $$j=0$$과 $$j=1728$$에서 이 공통 $$\mathbb{Z}/2$$을 넘어 각각 $$\mathbb{Z}/3$$과 $$\mathbb{Z}/2$$만큼 automorphism이 추가로 도약한다. Stabilizer가 모두 유한하므로 $$\mathcal{M}_{1, 1}$$은 Deligne–Mumford stack이다. ([§대수적 stack과 quotient stack, ⁋정리 11](/ko/math/stacks/algebraic_stacks#thm11))
 
-<div class="example" markdown="1">
-
-<ins id="ex10">**예시 10** ($$j$$-직선과 보편 족의 부재)</ins> $$j$$-불변량은 자연변환 $$\Phi:\underline{M}_{1, 1} \rightarrow \Hom_\Sch(-, \mathbb{A}^1_j)$$을 주며, 이 쌍 $$(\mathbb{A}^1_j, \Phi)$$이 $$\mathcal{M}_{1, 1}$$의 coarse moduli space이다. 실제로 $$\mathcal{M}_{1, 1}$$은 분리된 finite type Deligne–Mumford stack이므로 [정리 9](#thm9)에 의하여 coarse moduli space를 가지며, 대수적으로 닫힌 field 위에서 타원곡선의 동형류가 $$j$$-불변량으로 완전히 결정되므로 ([정의 8](#def8)의 둘째 조건) 그 coarse 공간은 $$\mathbb{A}^1_j$$이다. 그러나 $$\mathbb{A}^1_j$$ 위에는 보편 타원곡선이 존재하지 않는다. 만약 존재한다면 $$\mathbb{A}^1_j$$이 fine moduli space가 되어 [명제 5](#prop5)에 위배되기 때문이다. 곧 모든 타원곡선이 갖는 $$[-1]$$ automorphism이 [예시 6](#ex6)의 비자명한 이차 twist를 낳고, 이 twist는 $$j$$가 상수인 비자명한 등질 족이어서 $$\mathbb{A}^1_j$$로의 classifying morphism이 그것을 식별하지 못한다. 반면 stack $$\mathcal{M}_{1, 1}$$ 위에서는 항등 morphism이 보편 타원곡선을 주며, 이 twist는 $$T \rightarrow \mathcal{M}_{1, 1}$$의 비자명한 자료로 정확히 구별된다.
-
-</div>
+::: 예시 10 ($$j$$-직선과 보편 족의 부재)
+$$j$$-불변량은 자연변환 $$\Phi:\underline{M}_{1, 1} \rightarrow \Hom_\Sch(-, \mathbb{A}^1_j)$$을 주며, 이 쌍 $$(\mathbb{A}^1_j, \Phi)$$이 $$\mathcal{M}_{1, 1}$$의 coarse moduli space이다. 실제로 $$\mathcal{M}_{1, 1}$$은 분리된 finite type Deligne–Mumford stack이므로 [정리 9](#thm9)에 의하여 coarse moduli space를 가지며, 대수적으로 닫힌 field 위에서 타원곡선의 동형류가 $$j$$-불변량으로 완전히 결정되므로 ([정의 8](#def8)의 둘째 조건) 그 coarse 공간은 $$\mathbb{A}^1_j$$이다. 그러나 $$\mathbb{A}^1_j$$ 위에는 보편 타원곡선이 존재하지 않는다. 만약 존재한다면 $$\mathbb{A}^1_j$$이 fine moduli space가 되어 [명제 5](#prop5)에 위배되기 때문이다. 곧 모든 타원곡선이 갖는 $$[-1]$$ automorphism이 [예시 6](#ex6)의 비자명한 이차 twist를 낳고, 이 twist는 $$j$$가 상수인 비자명한 등질 족이어서 $$\mathbb{A}^1_j$$로의 classifying morphism이 그것을 식별하지 못한다. 반면 stack $$\mathcal{M}_{1, 1}$$ 위에서는 항등 morphism이 보편 타원곡선을 주며, 이 twist는 $$T \rightarrow \mathcal{M}_{1, 1}$$의 비자명한 자료로 정확히 구별된다.
+:::
 
 예시 10은 fine, coarse, stack의 세 층위를 한눈에 보여준다. $$\mathbb{A}^1_j$$은 동형류를 점으로 올바르게 담지만 보편 족을 잃은 coarse moduli space이고, $$\mathcal{M}_{1, 1}$$은 automorphism을 기억하여 보편 족을 회복한 moduli stack이며, 둘을 잇는 사상 $$\mathcal{M}_{1, 1} \rightarrow \mathbb{A}^1_j$$이 정확히 stabilizer 정보를 잊는 coarse 사상이다. $$j=0$$과 $$j=1728$$에서 stack은 더 큰 automorphism군을 가진 "더 무거운" 점을 두는 반면 coarse 공간은 평범한 점만을 두며, 이 차이가 두 대상이 다른 본질적인 이유이다.
 

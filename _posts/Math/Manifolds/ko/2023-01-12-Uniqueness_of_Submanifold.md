@@ -25,9 +25,8 @@ $$F_0=\bar{\Phi}^{-1}\circ F$$
 
 Submanifold를 단순히 원래의 manifold의 부분집합으로 본다면, 이 질문은 단순히 임의의 $$C^\infty$$ 함수 $$F:N\rightarrow M$$의 치역이 $$F(N)\subseteq P\subseteq M$$을 만족할 때, $$F$$의 공역을 $$P$$로 제한한 것이 $$C^\infty$$냐는 질문과 같다. 그러나 이 질문은 보기보다 단순하지 않으며, 실제로 항상 이것이 성립하는 것은 아니다.
 
-<div class="example" markdown="1">
-
-<ins id="ex1">**예시 1**</ins> 두 manifold $$N,P$$가 모두 자연스러운 manifold 구조가 주어진 $$\mathbb{R}$$이라 하고, $$M=\mathbb{R}^2$$에도 자연스러운 manifold 구조가 주어졌다 하자. 두 submanifold $$\Phi:N\rightarrow M$$과 $$\Psi:P\rightarrow M$$을 다음의 두 그림
+::: 예시 1
+두 manifold $$N,P$$가 모두 자연스러운 manifold 구조가 주어진 $$\mathbb{R}$$이라 하고, $$M=\mathbb{R}^2$$에도 자연스러운 manifold 구조가 주어졌다 하자. 두 submanifold $$\Phi:N\rightarrow M$$과 $$\Psi:P\rightarrow M$$을 다음의 두 그림
 
 ![counterexample_1](/assets/images/Math/Manifolds/Uniqueness_of_Submanifold-1.svg){:style="width:18.80em" class="invert" .align-center}
 
@@ -42,14 +41,12 @@ Submanifold를 단순히 원래의 manifold의 부분집합으로 본다면, 이
 ![counterexample_3](/assets/images/Math/Manifolds/Uniqueness_of_Submanifold-3.svg){:style="width:19.88em" class="invert" .align-center}
 
 즉 $$(\bar{\Psi}^{-1}\circ\Phi)^{-1}$$이 연속이 아니므로 이 함수는 $$C^\infty$$ 함수조차 되지 않는다.
-
-</div>
+:::
 
 그러나, 다음 명제는 위의 예시와 같은 문제를 일으키는 것이 오직 위상적인 데이터라는 것을 보여준다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**명제 2**</ins> Manifold $$M$$의 submanifold $$\Phi:P\rightarrow M$$이 주어졌다 하자. 임의의 $$C^\infty$$ 함수 $$F:N\rightarrow M$$가 $$F(N)\subseteq\Phi(P)$$를 만족한다면, 다음의 식
+::: 명제 2
+Manifold $$M$$의 submanifold $$\Phi:P\rightarrow M$$이 주어졌다 하자. 임의의 $$C^\infty$$ 함수 $$F:N\rightarrow M$$가 $$F(N)\subseteq\Phi(P)$$를 만족한다면, 다음의 식
 
 $$F_0=\bar{\Phi}^{-1}\circ F$$
 
@@ -57,11 +54,8 @@ $$F_0=\bar{\Phi}^{-1}\circ F$$
 
 1. 만일 $$F_0$$가 연속이라면 $$F_0$$은 $$C^\infty$$이다.
 2. 만일 $$\Phi$$가 embedding이라면 $$F_0$$은 연속이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 둘째 주장은 정의이므로 첫 번째 주장만 보이면 충분하다. 
 
 $$F_0$$가 연속이라 가정하고, $$F_0$$이 $$C^\infty$$이기도 하다는 것을 보이자. 즉 임의의 $$x\in N$$에 대하여, $$x$$를 중심으로 하는 coordinate system $$(U,\varphi)$$가 존재하여 $$F_0$$을 $$U$$로 제한한 것이 $$C^\infty$$임을 보여야 한다. 그런데 $$F_0$$가 연속인 전단사함수임을 가정하였으므로, 이를 보이기 위해서는 임의의 $$y\in P$$를 포함하는 coordinate system $$(V,\psi)$$가 존재하여, $$\psi\circ F_0$$을 <em-ko>열린집합</em-ko> $$F_0^{-1}(V)$$로 제한한 것이 $$C^\infty$$임을 보이면 충분하다. 
@@ -73,16 +67,13 @@ $$F_0$$가 연속이라 가정하고, $$F_0$$이 $$C^\infty$$이기도 하다는
 $$(\pi\circ\gamma\circ\Phi)\circ F_0\vert_{F_0^{-1}(V)}=\pi\circ\gamma\circ F\vert_{F_0^{-1}(V)}$$
 
 이고, 우변의 식은 $$C^\infty$$ 함수들의 합성이므로 $$C^\infty$$이다.
-
-</details>
+:::
 
 ## 부분다양체 사이의 동치관계
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**정의 3**</ins> Manifold $$M$$과 두 submanifold $$\Phi_1:N_1\rightarrow M$$, $$\Phi_2:N_2\rightarrow M$$이 주어졌다 하자. 이들 둘이 *equivalent*하다는 것은 diffeomorphism $$\theta:N_1\rightarrow N_2$$가 존재하여 $$\Phi_1=\Phi_2\circ\theta$$가 성립하는 것이다.
-
-</div>
+::: 정의 3
+Manifold $$M$$과 두 submanifold $$\Phi_1:N_1\rightarrow M$$, $$\Phi_2:N_2\rightarrow M$$이 주어졌다 하자. 이들 둘이 *equivalent*하다는 것은 diffeomorphism $$\theta:N_1\rightarrow N_2$$가 존재하여 $$\Phi_1=\Phi_2\circ\theta$$가 성립하는 것이다.
+:::
 
 이렇게 정의된 관계가 $$M$$의 모든 submanifold들 $$(N,\Phi)$$들의 집합에 동치관계를 유도한다는 것은 자명하다. 임의의 equivalence class $$[(N,\Phi)]$$를 택하자. 그럼 처음에 살펴본 것과 같은 쌍 
 
@@ -108,26 +99,17 @@ $$\Phi_2(N_2)=\Phi_1(\theta(N_2))=\Phi_1(N_1)$$
 
 그럼에도 불구하고, $$(A,\iota)$$가 만족해야 할 조건이 추가된다면 이 위에 submanifold의 구조가 유일하게 결정될 수도 있다. 다음 글에서 소개할 정리들의 결과는 이러한 유일성까지 만족하며, 이 때 다음의 두 명제를 유용하게 사용할 수 있다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**명제 4**</ins> Manifold $$M$$의 부분집합 $$A$$와, $$A$$ 위에 정의된 topology $$\mathcal{T}$$를 고정하자. 그럼 $$(A,\iota)$$를 $$M$$의 submanifold로 만드는 미분구조는 많아야 하나 존재한다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 명제 4
+Manifold $$M$$의 부분집합 $$A$$와, $$A$$ 위에 정의된 topology $$\mathcal{T}$$를 고정하자. 그럼 $$(A,\iota)$$를 $$M$$의 submanifold로 만드는 미분구조는 많아야 하나 존재한다.
+:::
+::: 증명
 [명제 2](#prop2)의 첫째 주장에 의해 자명하다. 
+:::
 
-</details>
-
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**명제 5**</ins> Manifold $$M$$의 부분집합 $$A$$가 주어졌다 하자. 만일 $$A$$를 $$M$$의 subspace로 보았을 때, $$(A,\iota)$$를 $$M$$의 submanifold로 만드는 미분구조가 존재한다면, 이 미분구조와 subspace topology는 $$(A,\iota)$$에 줄 수 있는 유일한 manifold의 구조가 된다. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 명제 5
+Manifold $$M$$의 부분집합 $$A$$가 주어졌다 하자. 만일 $$A$$를 $$M$$의 subspace로 보았을 때, $$(A,\iota)$$를 $$M$$의 submanifold로 만드는 미분구조가 존재한다면, 이 미분구조와 subspace topology는 $$(A,\iota)$$에 줄 수 있는 유일한 manifold의 구조가 된다. 
+:::
+::: 증명
 우선 앞선 [명제 4](#prop4)를 subspace topology $$\mathcal{T}$$에 적용하면, $$(A,\mathcal{T},\iota)$$를 $$M$$의 submanifold로 만드는 미분구조는 유일하다. 이를 $$\mathcal{A}$$라 하자. 이제 $$(A,\iota)$$를 $$M$$의 submanifold로 만드는 위상 $$\mathcal{T}'$$와 미분구조 $$\mathcal{A}'$$가 주어졌다 하고, 다음 diagram을 생각하자.
 
 ![uniqueness](/assets/images/Math/Manifolds/Uniqueness_of_Submanifold-4.svg){:style="width:12.99em" class="invert" .align-center}
@@ -147,8 +129,7 @@ $$\dim(A,\mathcal{T}',\mathcal{A}')<\dim(A,\mathcal{T},\mathcal{A})$$
 $$(U,\varphi)$$가 $$(A,\mathcal{T},\mathcal{A})$$의 coordinate system이라 하자. 일반성을 잃지 않고 $$\varphi$$의 image가 $$\mathbb{R}^d$$라 가정할 수 있으며, 이 때 $$\id$$는 전사함수이므로 합성 $$\varphi\circ\id$$의 image 또한 $$\mathbb{R}^d$$이다.
 
 한편, $$(A,\mathcal{T}',\mathcal{A}')$$는 manifold이므로 이를 $$\mathbb{R}^{d'}$$와 homeomorphic한 *countable*한 coordinate system들 $$(V,\sigma)$$들로 덮을 수 있다. 그런데 $$\varphi\circ\id\circ\sigma^{-1}$$은 $$C^\infty$$이고, 이들은 $$C^1$$ 함수로서 모두 measure zero set $$\mathbb{R}^{d'}$$들을 measure zero set들로 보내므로 이들의 image가 $$\mathbb{R}^d$$가 되는 것은 모순이다. 
-
-</details>
+:::
 
 ---
 

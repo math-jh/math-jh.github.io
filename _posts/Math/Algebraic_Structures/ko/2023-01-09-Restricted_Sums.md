@@ -34,17 +34,15 @@ $$(\bar{1},\bar{1},\cdots)$$
 
 를 포함하지만, 우변은 $$\iota_i(\bar{1})$$들의 *유한한* 연산을 통해 얻어지는 원소만을 포함하므로 위의 원소를 포함할 수 없다.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> Group들의 family $$(G_i)$$가 주어졌다 하고, $$G_i$$들의 subgroup $$H_i$$들을 고정하자. 그럼 유한개를 제외한 모든 $$i$$에 대해 $$\pr_ix\in H_i$$를 만족하는 $$x$$들로 이루어진 subgroup을 $$H_i$$에 대한 $$G_i$$들의 *restricted sum*이라 부르고 $$\prod^H G_i$$라 표현한다.
+::: 정의 1
+Group들의 family $$(G_i)$$가 주어졌다 하고, $$G_i$$들의 subgroup $$H_i$$들을 고정하자. 그럼 유한개를 제외한 모든 $$i$$에 대해 $$\pr_ix\in H_i$$를 만족하는 $$x$$들로 이루어진 subgroup을 $$H_i$$에 대한 $$G_i$$들의 *restricted sum*이라 부르고 $$\prod^H G_i$$라 표현한다.
 
 특별히 모든 $$i$$에 대해 $$H_i=\{e\}$$인 경우 $$G_i$$들의 *weak direct product*라 부르고, 간단히
 
 $${\prod_{i\in I}}^w G_i$$
 
 으로 표기한다.
-
-</div>
+:::
 
 표기법 $$\prod^H$$는 그렇게까지 좋은 표기법은 아니지만, 다행히 우리는 weak direct product에만 관심이 있으므로 이 표기를 다시 쓸 일은 없다. 
 
@@ -56,18 +54,14 @@ $$\left\langle\bigcup \iota_i(G_i)\right\rangle={\prod_{i\in I}}^w G_i$$
 
 그럼 $$\prod^wG_i$$는 다음과 같은 universal property를 갖는다.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm2">**정리 2**</ins> Group들의 family $$(G_i)$$와 이들의 weak direct product $$\prod^w G_i$$가 주어졌다 하자. 또 다른 group $$H$$에 대하여, group homomorphism들 $$f_i:G_i\rightarrow H$$가 다음의 조건
+::: 정리 2
+Group들의 family $$(G_i)$$와 이들의 weak direct product $$\prod^w G_i$$가 주어졌다 하자. 또 다른 group $$H$$에 대하여, group homomorphism들 $$f_i:G_i\rightarrow H$$가 다음의 조건
 
 > 임의의 $$i\neq j$$에 대하여 $$x\in G_i$$이고 $$y\in G_j$$라면, $$f_i(x)f_j(y)=f_j(y)f_i(x)$$
  
 을 만족한다면, 유일한 group homomorphism $$f:\prod^w G_i\rightarrow H$$가 존재하여 $$f_i=f\circ\iota_i$$가 임의의 $$i$$에 대해 성립한다. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 우선 유일성부터 보이자. 만일 $$f, f'$$가 위의 식을 만족한다면, 이들은 $$\bigcup\iota_i(G_i)$$에서 같은 값을 가져야 하므로 $$\prod^w G_i$$에서도 같은 값을 가져야 하고 따라서 $$f=f'$$여야 한다.
 
 이제 $$f$$의 존재성을 보여야 한다. 임의의 $$x\in \prod^w G_i$$에 대하여, $$f(x)$$를 다음의 식
@@ -89,8 +83,7 @@ $$f_1(\pr_1x)f_1(\pr_1y)f_2(\pr_2x)f_2(\pr_2y)\cdots f_n(\pr_nx)f_n(\pr_ny)$$
 $$f_1(\pr_1x)f_2(\pr_2x)\cdots f_n(\pr_nx)f_1(\pr_1y)f_2(\pr_2y)\cdots f_n(\pr_ny)$$
 
 으로 바꾸어 쓸 수 있다. 따라서 $$f(xy)=f(x)f(y)$$이고 $$f$$는 group homomorphism이 된다. $$f_i=f\circ\iota_i$$인 것은 자명하다.
-
-</details>
+:::
 
 $$f_i$$들에 걸려있는 조건
 
@@ -100,11 +93,9 @@ $$f_i$$들에 걸려있는 조건
 
 Weak direct product의 universal property를 이용하면 direct product때와 유사한 몇몇 성질들을 보일 수 있다. 예컨대 다음이 성립한다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop3">**명제 3**</ins> $$G_i$$들이 group이고, $$H_i$$들이 $$G_i$$들의 normal subgroup이라 하면 $$\prod^w H_i$$들 또한 $$\prod^w G_i$$들의 normal subgroup이고 그 quotient group은 $$\prod^w (G_i/H_i)$$와 같다.
-
-</div>
+::: 명제 3
+$$G_i$$들이 group이고, $$H_i$$들이 $$G_i$$들의 normal subgroup이라 하면 $$\prod^w H_i$$들 또한 $$\prod^w G_i$$들의 normal subgroup이고 그 quotient group은 $$\prod^w (G_i/H_i)$$와 같다.
+:::
 
 ## Internal weak product
 
@@ -112,11 +103,9 @@ $$G$$가 group이고, $$(H_i)$$들이 $$G$$의 subgroup들의 family라 하자. 
 
 또, 다음을 정의한다.
 
-<div class="definition" markdown="1">
-
-<ins id="def4">**정의 4**</ins>  위와 같은 상황에서, 만일 $$\iota$$가 isomorphism이라면 $$G$$가 $$H_i$$들의 *internal weak direct product*라고 부른다. 
-
-</div>
+::: 정의 4
+ 위와 같은 상황에서, 만일 $$\iota$$가 isomorphism이라면 $$G$$가 $$H_i$$들의 *internal weak direct product*라고 부른다. 
+:::
 
 [정리 2](#thm2)에서 만들어낸 homomorphism $$f$$의 모양을 생각하면, $$G$$가 $$H_i$$들의 internal weak direct product인 것은 다음 조건
 
@@ -126,19 +115,15 @@ $$G$$가 group이고, $$(H_i)$$들이 $$G$$의 subgroup들의 family라 하자. 
 
 만일 subgroup들 $$H_i$$가 모두 $$G$$의 normal subgroup이라면, 추가적으로 다음의 조건이 갖춰지면 $$G$$가 $$H_i$$들의 internal weak direct product가 된다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**명제 5**</ins> Group $$G$$의 normal subgroup들 $$(H_i)$$가 다음의 두 조건
+::: 명제 5
+Group $$G$$의 normal subgroup들 $$(H_i)$$가 다음의 두 조건
 
 1. $$G=\bigl\langle\bigcup_{i\in I} H_i\bigr\rangle$$,
 2. $$H_k\cap \bigl\langle\bigcup_{i\neq k} H_i\bigr\rangle=\{e\}$$
 
 을 만족한다면 $$G$$가 $$H_i$$들의 internal weak direct product이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 우선 2번 조건은 특히 $$H_i\cap H_j=\{e\}$$가 모든 pair $$i\neq j$$에 대해 성립한다는 것을 보여준다. 이제 $$x_i\in H_i,x_j\in H_j$$를 임의로 택하면, 
 
 $$x_ix_jx_i^{-1}x_j^{-1}=x_i\bigl(x_jx_i^{-1}x_j^{-1}\bigr)=\bigl(x_ix_jx_i^{-1}\bigr)x_j^{-1}\in H_i\cap H_j=\{e\}$$
@@ -164,8 +149,7 @@ $$\iota(a)=\prod_{i\in I}\iota_i(a_i)=\prod_{i\in I} a_i=e$$
 $$a_i^{-1}=\prod_{j\in I\setminus\{i\}}a_j\in H_i\cap \left\langle\bigcup_{j\neq i} H_i\right\rangle=\{e\}$$
 
 가 되어 $$i\in\supp(a_i)$$라는 가정에 모순이다. 따라서 $$\supp(a_i)$$는 공집합이고 $$a$$는 항등원이다. 
-
-</details>
+:::
 
 
 ---

@@ -22,21 +22,16 @@ weight: 8
 
 두 경우가 해당한다. 거꾸로 이러한 조건을 만족하는 $$(A_i)$$와 그 위에서 정의된 연속함수들 $$f_i$$들이 주어졌을 때, 이들이 $$X=\bigcup A_i$$ 위에서의 연속함수를 지정하는지의 여부를 생각할 수 있다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="lem1">**보조정리 1**</ins> 집합 $$X$$와 [§부분공간, ⁋명제 5](/ko/math/topology/subspaces#prop5)의 두 조건 중 하나를 만족하는 부분집합들의 family $$(A_i)$$가 주어졌다 하자. 만일 연속함수들의 family $$(f_i: A_i \rightarrow Y)$$가 다음 조건
+::: 보조정리 1
+집합 $$X$$와 [§부분공간, ⁋명제 5](/ko/math/topology/subspaces#prop5)의 두 조건 중 하나를 만족하는 부분집합들의 family $$(A_i)$$가 주어졌다 하자. 만일 연속함수들의 family $$(f_i: A_i \rightarrow Y)$$가 다음 조건
 
 $$f_i\vert_{A_i\cap A_j}=f_j\vert_{A_i\cap A_j}\qquad\text{for all $i,j$}$$
 
 을 만족한다면, 이들을 확장하여 생기는 함수 $$f:X \rightarrow Y$$는 연속함수이다. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 우선 함수 $$f$$는 [\[집합론\] §집합의 합, ⁋명제 2](/ko/math/set_theory/sum_of_sets#prop2)에 의해 얻어진다. 이 함수가 연속이라는 것은 [§부분공간, ⁋명제 7](/ko/math/topology/subspaces#prop7)에서 얻어진다.
-
-</details>
+:::
 
 ## 연속함수들의 준층
 
@@ -44,38 +39,32 @@ $$f_i\vert_{A_i\cap A_j}=f_j\vert_{A_i\cap A_j}\qquad\text{for all $i,j$}$$
 
 Category $$\Open(X)$$를 ordered set $$(\mathcal{T}, \subseteq)$$를 category로 본 것으로 정의하자. 즉, 이들의 대상들은 열린집합들이며, $$U\subseteq V$$일 때마다 화살표 $$U\hookrightarrow V$$가 유일하게 존재한다.
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**정의 2**</ins> 위상공간 $$X$$에 대하여, contravariant functor $$\mathcal{F}:\Open(X)^\op \rightarrow \Set$$을 $$X$$ 위에 정의된 집합들의 *presheaf<sub>준층</sub>*라 부른다.
-
-</div>
+::: 정의 2
+위상공간 $$X$$에 대하여, contravariant functor $$\mathcal{F}:\Open(X)^\op \rightarrow \Set$$을 $$X$$ 위에 정의된 집합들의 *presheaf<sub>준층</sub>*라 부른다.
+:::
 
 참고로, presheaf는 보편적으로 $$\mathcal{F}$$ 혹은 $$\mathcal{F}$$와 같이 표기하지만, 이 둘 가운데는 캘리그래피체인 $$\mathcal{F}$$가 조금 더 자연스럽다. 그러나 우리는 이미 이 글씨체를 위상구조를 나타내는데 사용하고 있으므로, 위상수학 카테고리 내에서는 흘림체를 사용하기로 한다. 
 
 이제 $$\mathcal{F}$$는 contravariant이므로, 열린집합 사이의 inclusion $$U\hookrightarrow V$$가 주어질 때마다 morphism $$\rho_{VU}: \mathcal{F}(V)\rightarrow \mathcal{F}(U)$$가 주어지며, $$\mathcal{F}$$는 합성을 보존하므로 $$U\hookrightarrow V\hookrightarrow W$$가 주어졌다면 $$\rho_{WU}=\rho_{VU}\circ\rho_{WV}$$가 성립해야 한다. 
 
-<div class="example" markdown="1">
-
-<ins id="ex3">**예시 3**</ins> 두 위상공간 $$X, Y$$가 주어졌다 하고, $$\mathcal{F}$$를 다음과 같이 정의하자.
+::: 예시 3
+두 위상공간 $$X, Y$$가 주어졌다 하고, $$\mathcal{F}$$를 다음과 같이 정의하자.
 
 - 임의의 열린집합 $$U$$에 대하여, $$\mathcal{F}(U)=\Hom_\Top(U, Y)$$이다.
 - 열린집합 $$U\subseteq V$$가 주어졌을 때, $$\rho_{VU}:\mathcal{F}(V) \rightarrow \mathcal{F}(U)$$는 $$V$$에서 정의된 연속함수를 $$U$$로 제한하는 restriction map이다.
 
 그럼 $$\mathcal{F}$$는 presheaf가 된다. 
-
-</div>
+:::
 
 특별히 이 정의는 projection $$p:Y \rightarrow X$$가 주어졌을 때, $$X$$에서 $$Y$$로의 continuous section들 ([\[집합론\] §Retraction과 section, ⁋정의 2](/ko/math/set_theory/retraction_and_section#def2))의 presheaf $$\mathcal{F}$$의 모임을 생각하는 식으로 응용할 수 있다. 이를 일반화하여 다음과 같은 정의를 내린다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def4">**정의 4**</ins> 위상공간 $$X$$ 위에서 정의된 presheaf $$\mathcal{F}$$가 주어졌다 하자. 
+::: 정의 4
+위상공간 $$X$$ 위에서 정의된 presheaf $$\mathcal{F}$$가 주어졌다 하자. 
 
 - 임의의 열린집합 $$U\subseteq X$$에 대하여, $$\mathcal{F}(U)$$의 원소들을 $$U$$에서의 *section*이라 부른다. 특별히 $$\mathcal{F}(X)$$의 원소들은 *global section*이라 부른다.
 - 열린집합 $$U\subseteq V$$에 대하여, $$\rho_{VU}:\mathcal{F}(V) \rightarrow \mathcal{F}(U)$$를 $$V$$에서 $$U$$로의 *restriction map*이라 부른다. 
 - 특별히 열린집합들 $$U\subseteq V$$와 $$s\in \mathcal{F}(V)$$에 대하여, $$\rho_{VU}(s)\in \mathcal{F}(U)$$를 간단히 $$s\vert_U$$로 표기한다.
-
-</div>
+:::
 
 한편 위의 [정의 2](#def2)에서, $$\Set$$은 적절한 카테고리, 예를 들어 $$\Ab$$와 같은 카테고리로 바꿀 수도 있다. 가령 [예시 3](#ex3)에서 $$Y=\mathbb{R}$$이었다면, $$\mathbb{R}$$ 위에 정의된 덧셈을 사용하여 연속함수들의 덧셈을 정의할 수도 있었을 것이며, 그럼 $$\mathcal{F}(U)$$는 abelian group의 구조를 가지게 되었을 것이다. 이러한 경우 $$\mathcal{F}$$를 $$X$$ 위에 정의된 abelian group들의 presheaf라 부른다. 편의상 앞으로 presheaf $$\mathcal{F}: \Open(X)^\op \rightarrow \mathcal{A}$$를 $$\mathcal{A}$$-valued presheaf라 부르기로 한다. Presheaf 중 위의 gluing condition ([보조정리 1](#lem1))을 만족하는 것들을 sheaf라 부르는데, 이는 다음 글에서 정의한다. 
 
@@ -83,57 +72,47 @@ Category $$\Open(X)$$를 ordered set $$(\mathcal{T}, \subseteq)$$를 category로
 
 다음으로 presheaf의 몇 가지 예시들을 살펴본다. 
 
-<div class="example" markdown="1">
-
-<ins id="ex5">**예시 5 (Skyscraper sheaf)**</ins> 고정된 위상공간 $$X$$와 한 점 $$i_x:\{x\}\hookrightarrow X$$가 주어졌다 하고, 대상 $$A\in \mathcal{A}$$를 고정하자. 그럼 다음의 식
+::: 예시 5 (Skyscraper sheaf)
+고정된 위상공간 $$X$$와 한 점 $$i_x:\{x\}\hookrightarrow X$$가 주어졌다 하고, 대상 $$A\in \mathcal{A}$$를 고정하자. 그럼 다음의 식
 
 $$(i_x)_\ast A(U)=\begin{cases}A&\text{if $x\in U$,}\\T&\text{if $x\not\in U$,}\end{cases}\qquad \text{$T$ a terminal object in $\mathcal{A}$}$$
 
 으로 주고, restriction map은 $$\id_A$$ 혹은, terminal object $$T$$를 이용해 주면 이는 presheaf를 정의한다. 이를 *skyscraper sheaf*라 부른다.
+:::
 
-</div>
-
-<div class="example" markdown="1">
-
-<ins id="ex6">**예시 6 (Constant presheaf)**</ins> 이번에는 고정된 위상공간 $$X$$와 대상 $$A\in \mathcal{A}$$를 고정하고, 모든 열린집합마다 $$A$$를 대응시키고 restriction map들은 모두 $$\id_A$$로 주자. 그럼 이는 presheaf를 정의하며, 이를 *constant presheaf*라 부른다. 
-
-</div>
+::: 예시 6 (Constant presheaf)
+이번에는 고정된 위상공간 $$X$$와 대상 $$A\in \mathcal{A}$$를 고정하고, 모든 열린집합마다 $$A$$를 대응시키고 restriction map들은 모두 $$\id_A$$로 주자. 그럼 이는 presheaf를 정의하며, 이를 *constant presheaf*라 부른다. 
+:::
 
 다음 예시들은 임의의 presheaf로부터 새로운 presheaf를 얻어내는 방법들을 보여준다. 
 
-<div class="example" markdown="1">
-
-<ins id="ex7">**예시 7**</ins> $$X$$ 위에 정의된 presheaf $$\mathcal{F}$$가 주어졌을 때, 임의의 열린집합 $$U$$에 대하여 $$\mathcal{F}\vert_U$$를 다음 식
+::: 예시 7
+$$X$$ 위에 정의된 presheaf $$\mathcal{F}$$가 주어졌을 때, 임의의 열린집합 $$U$$에 대하여 $$\mathcal{F}\vert_U$$를 다음 식
 
 $$\mathcal{F}\vert_U(V)=\mathcal{F}(V)\quad\text{for all open $V\subseteq U$}$$
 
 으로 정의할 수 있다. 그럼 $$\mathcal{F}\vert_U$$는 presheaf가 된다. ([§부분공간, ⁋보조정리 2](/ko/math/topology/subspaces#lem2)) 
+:::
 
-</div>
-
-<div class="example" markdown="1">
-
-<ins id="ex8">**예시 8 (Pushforward)**</ins> 연속함수 $$f:X \rightarrow Y$$를 고정하고, $$X$$ 위에 정의된 presheaf $$\mathcal{F}$$가 주어졌다 하자. 그럼 $$\mathcal{F}$$의 $$f$$에 의한 *pushforward<sub>밂</sub>* $$f_\ast \mathcal{F}$$를 다음 식
+::: 예시 8 (Pushforward)
+연속함수 $$f:X \rightarrow Y$$를 고정하고, $$X$$ 위에 정의된 presheaf $$\mathcal{F}$$가 주어졌다 하자. 그럼 $$\mathcal{F}$$의 $$f$$에 의한 *pushforward<sub>밂</sub>* $$f_\ast \mathcal{F}$$를 다음 식
 
 $$f_\ast \mathcal{F}(U)=\mathcal{F}(f^{-1}(U))$$
 
 을 통해 정의한다. 
-
-</div>
+:::
 
 ## 줄기
 
 한편, $$X$$ 위에 정의된 함수를 결정짓는 것은 당연히 $$x\in X$$에서의 함숫값이다. 이것이 집합으로서 $$X$$ 위에 정의된 함수와 다른 점은 $$X$$ 위에 정의된 위상구조로 인하여, 이 점 $$x$$ 근방에서 어떠한 일이 일어나는지를 같이 살펴볼 수 있다는 것이다. 이러한 직관을 바탕으로 다음을 정의한다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def9">**정의 9**</ins> 위상공간 $$X$$ 위에서 정의된 presheaf $$\mathcal{F}$$를 생각하자. 임의의 점 $$x\in X$$에 대하여, 점 $$x$$에서의 *stalk<sub>줄기</sub>* $$\mathcal{F}_x$$를
+::: 정의 9
+위상공간 $$X$$ 위에서 정의된 presheaf $$\mathcal{F}$$를 생각하자. 임의의 점 $$x\in X$$에 대하여, 점 $$x$$에서의 *stalk<sub>줄기</sub>* $$\mathcal{F}_x$$를
 
 $$\mathcal{F}_x=\varinjlim_{x\in U}\mathcal{F}(U)$$
 
 으로 정의한다. $$\mathcal{F}_x$$의 원소들을 점 $$x$$에서의 *germ<sub>싹</sub>*이라 부른다.
-
-</div>
+:::
 
 특히 $$\mathcal{F}$$가 complete category valued presheaf라면 $$\mathcal{F}_x$$가 항상 잘 정의된다. 한편 concrete category에서 limit의 표현을 직접적으로 나타내보면
 
@@ -157,11 +136,9 @@ $$\tilde{s}:U \rightarrow \Spe(\mathcal{F}); \quad x\mapsto (x,s_x)$$
 
 ## 준층들 사이의 사상
 
-<div class="definition" markdown="1">
-
-<ins id="def10">**정의 10**</ins> 고정된 위상공간 $$X$$ 위에서 정의된 두 presheaf $$\mathcal{F}, \mathcal{G}:\Open(X) \rightarrow \mathcal{A}$$ 사이의 natural transformation을 *presheaf morphism<sub>준층 사상</sub>*으로 정의한다.
-
-</div>
+::: 정의 10
+고정된 위상공간 $$X$$ 위에서 정의된 두 presheaf $$\mathcal{F}, \mathcal{G}:\Open(X) \rightarrow \mathcal{A}$$ 사이의 natural transformation을 *presheaf morphism<sub>준층 사상</sub>*으로 정의한다.
+:::
 
 즉 $$X$$ 위에서 정의된 $$\mathcal{A}$$-valued presheaf들의 카테고리는 functor category $$[\Open(X)^\op, \mathcal{A}]$$이다. 이를 $$\PSh(X, \mathcal{A})$$로 표기하며, 문맥상 혼동의 여지가 없을 때에는 $$\PSh(X)$$로만 적기도 한다. 여담으로 [예시 8](#ex8)의 $$f_\ast$$는 functor $$\PSh(X, \mathcal{A})\rightarrow \PSh(Y, \mathcal{A})$$이다. 
 
@@ -169,55 +146,44 @@ $$\tilde{s}:U \rightarrow \Spe(\mathcal{F}); \quad x\mapsto (x,s_x)$$
 
 한편 limit cone의 universal property에 의해 다음 명제가 성립한다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop11">**명제 11**</ins> 위상공간 $$X$$ 위에 정의된 presheaf들 사이의 morphism $$\phi:\mathcal{F}\rightarrow\mathcal{G}$$가 주어졌다 하자. 그럼 임의의 $$x\in X$$에 대하여, stalk들 사이의 morphism $$\phi_x:\mathcal{F}_x\rightarrow\mathcal{G}_x$$가 자연스럽게 유도된다.
-
-</div>
+::: 명제 11
+위상공간 $$X$$ 위에 정의된 presheaf들 사이의 morphism $$\phi:\mathcal{F}\rightarrow\mathcal{G}$$가 주어졌다 하자. 그럼 임의의 $$x\in X$$에 대하여, stalk들 사이의 morphism $$\phi_x:\mathcal{F}_x\rightarrow\mathcal{G}_x$$가 자연스럽게 유도된다.
+:::
 
 다음 예시들은 위의 [준층의 예시들](#준층의-예시들) 아래에 있었어야 했지만, 아직 presheaf morphism을 정의하지 않았었기 때문에 뒤로 밀렸다. 
 
-<div class="example" markdown="1">
-
-<ins id="ex12">**예시 12 (Sheaf Hom)**</ins> 두 presheaf $$\mathcal{F}, \mathcal{G}$$를 고정하고, 임의의 $$U$$에 대하여 
+::: 예시 12 (Sheaf Hom)
+두 presheaf $$\mathcal{F}, \mathcal{G}$$를 고정하고, 임의의 $$U$$에 대하여 
 
 $$\mathcal{Hom}(\mathcal{F},\mathcal{G})(U)=\Hom_{\PSh(U)}(\mathcal{F}\vert_U, \mathcal{G}\vert_U)$$
 
 으로 정의한다. 
+:::
 
-</div>
-
-<div class="example" markdown="1">
-
-<ins id="ex13">**예시 13 (Product)**</ins> 위상공간 $$X$$ 위에 정의된 presheaf들의 family $$(\mathcal{F}_i:\Open(X) \rightarrow \Set)_{i\in I}$$에 대하여, 이들의 product $$\prod_{i\in I} \mathcal{F}_i$$를 
+::: 예시 13 (Product)
+위상공간 $$X$$ 위에 정의된 presheaf들의 family $$(\mathcal{F}_i:\Open(X) \rightarrow \Set)_{i\in I}$$에 대하여, 이들의 product $$\prod_{i\in I} \mathcal{F}_i$$를 
 
 $$\left(\prod_{i\in I} \mathcal{F}_i\right)(U)=\prod_{i\in I} \mathcal{F}_i(U)$$
 
 으로 정의할 수 있다.
-
-</div>
+:::
 
 위와 같은 정의를 이용하여 category $$\mathcal{A}$$에 정의된 구조, 예를 들면 product나 coproduct, limit, colimit, monoidal product 등을 $$\PSh(X, \mathcal{A})$$에 옮겨올 수 있다. 특히 $$\PSh(X, \Ab)$$는 $$\Ab$$ 위에 정의된 monoidal structure $$(\Ab,\otimes, \mathbb{Z})$$를 물려받으며 여기에서의 monoidal object는 $$\PSh(X, \Ring)$$이다. 같은 맥락에서 다음 예시를 이해할 수 있다.
 
-<div class="example" markdown="1">
-
-<ins id="ex14">**예시 14**</ins> 위상공간 $$X$$ 위에 정의된 $$\Ring$$-valued presheaf $$\mathcal{O}_X$$에 대하여, left $$\mathcal{O}_X$$-module object $$\mathcal{F}\in\PSh(X,\Ab)$$을 간단히 $$\mathcal{O}_X$$-module이라 부른다.
-
-</div>
+::: 예시 14
+위상공간 $$X$$ 위에 정의된 $$\Ring$$-valued presheaf $$\mathcal{O}_X$$에 대하여, left $$\mathcal{O}_X$$-module object $$\mathcal{F}\in\PSh(X,\Ab)$$을 간단히 $$\mathcal{O}_X$$-module이라 부른다.
+:::
 
 ## 가환준층
 
 지금까지 우리는 presheaf가 어떤 카테고리에서 값을 갖는지를 무시해왔는데, 이제 우리는 특별히 카테고리 $$\Ab$$에서 값을 갖는 presheaf들을 살펴본다. 
 
-<div class="definition" markdown="1">
+::: 정의 15
+위상공간 $$X$$에 대하여, contravariant functor $$\Open(X)\rightarrow\Ab$$을 *abelian presheaf*라 부른다.
+:::
 
-<ins id="def15">**정의 15**</ins> 위상공간 $$X$$에 대하여, contravariant functor $$\Open(X)\rightarrow\Ab$$을 *abelian presheaf*라 부른다.
-
-</div>
-
-<div class="definition" markdown="1">
-
-<ins id="def16">**정의 16**</ins> 위상공간 $$X$$ 위에 정의된 abelian presheaf들 사이의 morphism $$\phi:\mathcal{F}\rightarrow\mathcal{G}$$가 주어졌다 하자. 그럼 $$\phi$$의 *presheaf kernel<sub>핵 준층</sub>* $$\ker\phi$$는 
+::: 정의 16
+위상공간 $$X$$ 위에 정의된 abelian presheaf들 사이의 morphism $$\phi:\mathcal{F}\rightarrow\mathcal{G}$$가 주어졌다 하자. 그럼 $$\phi$$의 *presheaf kernel<sub>핵 준층</sub>* $$\ker\phi$$는 
 
 - 각각의 열린집합 $$U\subseteq X$$마다, $$U\mapsto \ker(\phi(U))$$
 - 포함관계에 있는 두 열린집합 $$U\subseteq V$$마다 다음의 diagram
@@ -227,26 +193,20 @@ $$\left(\prod_{i\in I} \mathcal{F}_i\right)(U)=\prod_{i\in I} \mathcal{F}_i(U)$$
   을 통해 유일하게 결정되는 restriction map $$\rho_{VU}:\ker(\phi(V))\rightarrow\ker(\phi(U))$$
 
 으로 이루어진 데이터이다.
-
-</div>
+:::
 
 이 정의에서, $$\rho_{VU}$$는 $$\ker(\phi(U))$$의 universal property로부터 유일하게 결정되는 restriction map이다.
 
-<div class="proposition" markdown="1">
-
-<ins id="lem17">**보조정리 17**</ins> 위에서 정의한 $$\ker\phi$$는 $$X$$ 위에서의 (abelian) presheaf이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 보조정리 17
+위에서 정의한 $$\ker\phi$$는 $$X$$ 위에서의 (abelian) presheaf이다.
+:::
+::: 증명
 다음의 diagram
 
 ![presheaf_kernel-2](/assets/images/Math/Topology/Presheaves-2.png){:style="width:22.77em" class="invert" .align-center}
 
 와 kernel의 universal property에 의해 자명하다. 
-
-</details>
+:::
 
 이와 마찬가지 방법으로, *presheaf cokernel*, *presheaf image*, *presheaf coimage* 혹은 *presheaf quotient* 등등을 모두 정의할 수 있다. 따라서 주어진 위상공간 $$X$$ 위에서 정의된 abelian presheaf들의 카테고리 $$\PSh(X,\Ab)$$은 abelian category가 된다.
   

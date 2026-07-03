@@ -27,11 +27,9 @@ $$\langle -,-\rangle:V\times V^\ast\rightarrow \mathbb{K};\quad (v,f)\mapsto f(v
 
 이제 우리는 $$V=W$$인 경우에 집중한다.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> 임의의 pairing $$\langle -,-\rangle:V\times W\rightarrow \mathbb{K}$$에 대하여, 만일 $$W=V$$라면 이 pairing을 $$V$$ 위에서 정의된 *bilinear form<sub>쌍선형형식</sub>*이라 부른다. $$\langle -,-\rangle$$이 *non-degenerate bilinear form<sub>비퇴화 쌍선형형식</sub>*이라는 것은 $$\langle-,-\rangle$$이 pairing으로서 non-degenerate인 것이다.
-
-</div>
+::: 정의 1
+임의의 pairing $$\langle -,-\rangle:V\times W\rightarrow \mathbb{K}$$에 대하여, 만일 $$W=V$$라면 이 pairing을 $$V$$ 위에서 정의된 *bilinear form<sub>쌍선형형식</sub>*이라 부른다. $$\langle -,-\rangle$$이 *non-degenerate bilinear form<sub>비퇴화 쌍선형형식</sub>*이라는 것은 $$\langle-,-\rangle$$이 pairing으로서 non-degenerate인 것이다.
+:::
 
 $$V$$ 위에 bilinear form이 주어졌다 하자. 그럼 위와 같은 논증을 통해, 우리는 $$V$$에서 $$V^\ast$$로의 linear map들
 
@@ -39,9 +37,8 @@ $$v\mapsto \langle v,-\rangle,\qquad v\mapsto \langle -,v\rangle$$
 
 을 얻는다. 일반적으로 이 둘은 같을 필요가 없지만, 다음을 정의할 수 있다.
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**정의 2**</ins> 임의의 bilinear form $$\langle-,-\rangle:V\times V\rightarrow \mathbb{K}$$에 대하여, 다음의 식
+::: 정의 2
+임의의 bilinear form $$\langle-,-\rangle:V\times V\rightarrow \mathbb{K}$$에 대하여, 다음의 식
 
 $$\langle v,w\rangle=\langle w,v\rangle$$
 
@@ -50,8 +47,7 @@ $$\langle v,w\rangle=\langle w,v\rangle$$
 $$\langle v,w\rangle=-\langle w,v\rangle$$
 
 이 성립하면 이 form이 *alternating<sub>교대적</sub>*이라 말한다.
-
-</div>
+:::
 
 ## 비퇴화 쌍선형형식
 
@@ -63,27 +59,23 @@ $$V\rightarrow V^\ast;\qquad v\mapsto \langle -,v\rangle\tag{1}$$
 
 편의를 위해 앞으로는 $$\langle -,-\rangle$$이 처음부터 symmetric non-degenerate bilinear form이었던 것으로 가정하자. 그럼 $$\langle -,-\rangle$$는 식 (1)에 의해 정의된 isomorphism을 가지며, 이는 다음과 같이 쓸 수 있다.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor3">**따름정리 3**</ins> Symmetric non-degenerate bilinear form $$\langle -,-\rangle$$이 주어진 유한차원 $$\mathbb{K}$$-벡터공간 $$V$$를 생각하자. 임의의 $$f\in V^\ast$$가 주어질 때마다, 적당한 $$w\in V$$가 유일하게 존재하여 
+::: 따름정리 3
+Symmetric non-degenerate bilinear form $$\langle -,-\rangle$$이 주어진 유한차원 $$\mathbb{K}$$-벡터공간 $$V$$를 생각하자. 임의의 $$f\in V^\ast$$가 주어질 때마다, 적당한 $$w\in V$$가 유일하게 존재하여 
 
 $$f(v)=\langle v,w\rangle\qquad\text{for all $v\in V$}$$
 
 이 성립한다.
-
-</div>
+:::
 
 그럼 특히 이전 글에서 정의한 orthogonal complement의 개념을 $$V$$로 가져올 수 있다. 즉, 다음과 같이 정의하자.
 
-<div class="definition" markdown="1">
-
-<ins id="def4">**정의 4**</ins> Symmetric non-degenerate bilinear form $$\langle -,-\rangle$$이 주어진 유한차원 $$\mathbb{K}$$-벡터공간 $$V$$를 생각하자. 임의의 $$v\in V$$에 대하여, 다음의 식 $$\langle w,v\rangle=0$$을 만족하는 모든 $$w\in V$$들의 모임을 $$v$$의 *orthogonal complement<sub>직교여공간</sub>*이라 하고, $$v^\perp$$로 적는다. 더 일반적으로, 임의의 집합 $$S$$에 대하여, 다음 집합
+::: 정의 4
+Symmetric non-degenerate bilinear form $$\langle -,-\rangle$$이 주어진 유한차원 $$\mathbb{K}$$-벡터공간 $$V$$를 생각하자. 임의의 $$v\in V$$에 대하여, 다음의 식 $$\langle w,v\rangle=0$$을 만족하는 모든 $$w\in V$$들의 모임을 $$v$$의 *orthogonal complement<sub>직교여공간</sub>*이라 하고, $$v^\perp$$로 적는다. 더 일반적으로, 임의의 집합 $$S$$에 대하여, 다음 집합
 
 $$S^\perp=\bigcap_{v\in S}v^\perp$$
 
 을 $$S$$의 orthogonal complement로 정의한다.
-
-</div>
+:::
 
 물론, 만일 $$\langle -,-\rangle$$이 symmetric하지 않았더라도 동일한 정의를 할 수 있으며, 실제로 $$v$$를 $$\langle -,v\rangle$$로 보내는지 혹은 $$\langle v,-\rangle$$으로 보내는지를 선택한 후 이 선택을 꾸준히 유지한다면 동일한 결과를 얻게 된다. 어쨌든 혹시 모를 혼란을 피하기 위해 우리는 $$\langle -,-\rangle$$이 symmetric이라는 조건을 유지한다.
 
@@ -129,16 +121,14 @@ $$\langle Lv,w\rangle=(\varphi^{-1}(w))(Lv)=(\varphi^{-1}_W(w)\circ L)(v)=(L^\as
 
 [§쌍대공간, §§직교여공간](/ko/math/linear_algebra/dual_space#직교여공간)의 결과들은 모두 canonical pairing에 대한 식 $$(Lv,f)=(v,L^\ast f)$$로부터 얻어졌다. 따라서, 이를 위에서 얻은 non-degenerate bilinear form $$\langle -,-\rangle$$들에 대한 식 (2)로 대체하면 다음 결과들을 얻는다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**명제 5**</ins> Symmetric non-degnerate bilinear form들이 주어진 두 $$\mathbb{K}$$-벡터공간 $$V,W$$, linear map $$L:V\rightarrow W$$와 그 adjoint $$L^\ast:W\rightarrow V$$가 주어졌다 하자. 그럼
+::: 명제 5
+Symmetric non-degnerate bilinear form들이 주어진 두 $$\mathbb{K}$$-벡터공간 $$V,W$$, linear map $$L:V\rightarrow W$$와 그 adjoint $$L^\ast:W\rightarrow V$$가 주어졌다 하자. 그럼
 
 1. 임의의 부분공간 $$U\subseteq V$$에 대하여, $$L(U)^\perp=(L^\ast)^{-1}(U^\perp)$$가 성립한다.
 2. 임의의 부분공간 $$U\subseteq W$$에 대하여, $$L^\ast(U)^\perp=L^{-1}(U^\perp)$$가 성립한다.
 3. $$(\im L)^\perp=\ker(L^\ast)$$이 성립한다.
 4. $$(\im L^\ast)^\perp=\ker L$$이 성립한다.
-
-</div>
+:::
 
 특히, 3번과 4번에서 얻어지는 $$V$$와 $$W$$의 부분공간들
 
@@ -154,15 +144,13 @@ $$V=\ker L\oplus(\ker L)^\perp,\qquad W=\im L\oplus(\im L)^\perp$$
 
 이제 symmetric non-degenerate bilinear form이 주어진 $$\mathbb{K}$$-벡터공간 $$V$$를 생각하자. 그럼 $$V$$의 부분집합 $$\{v_1,\ldots, v_n\}$$이 *orthogonal set*이라는 것은 $$i\neq j$$일 때마다 $$\langle v_i,v_j\rangle=0$$이 성립하는 것이다. 만일 $$V$$의 basis $$\mathcal{B}$$가 orthogonal set이기도 하다면, 이를 *orthogonal basis*라 부른다.
 
-<div class="definition" markdown="1">
-
-<ins id="def6">**정의 6**</ins> Field $$\mathbb{K}$$가 다음의 조건
+::: 정의 6
+Field $$\mathbb{K}$$가 다음의 조건
 
 $$\underbrace{1+1+\cdots+1}_\text{$p$ times}=0$$
 
 을 만족한다면 $$\mathbb{K}$$의 *characteristic<sub>표수</sub>*이 $$p$$라고 하고 이를 $$\ch \mathbb{K}=p$$로 표기한다. 만일 위의 식을 만족하는 자연수 $$p$$가 존재하지 않는다면 $$\mathbb{K}$$는 characteristic 0을 갖는 것으로 생각한다.
-
-</div>
+:::
 
 예를 들어 $$\mathbb{R}$$은 characteristic 0을 갖는다. 만일 $$\mathbb{F}_2=\{0,1\}$$에 다음의 식
 
@@ -174,14 +162,10 @@ $$0\cdot 0=0,\quad 0\cdot 1=0,\quad 1\cdot 0=0,\quad 1\cdot 1=1$$
 
 으로 덧셈과 곱셈을 각각 정의한다면 $$\mathbb{F}_2$$는 field의 조건을 만족한다는 것을 확인할 수 있고, 이 때 $$\ch\mathbb{F}_2=2$$이다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop7">**명제 7**</ins> $$\ch \mathbb{K}\neq 2$$인 field $$\mathbb{K}$$에 대하여, symmetric non-degenerate bilinear form이 주어진 $$\mathbb{K}$$-벡터공간 $$V$$는 항상 orthogonal basis를 갖는다.  
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 명제 7
+$$\ch \mathbb{K}\neq 2$$인 field $$\mathbb{K}$$에 대하여, symmetric non-degenerate bilinear form이 주어진 $$\mathbb{K}$$-벡터공간 $$V$$는 항상 orthogonal basis를 갖는다.  
+:::
+::: 증명
 우선 간단한 보조정리를 보이자. 임의로 고정된 $$v\in V$$에 대하여, 반드시 $$\langle u,v\rangle\neq 0$$이도록 하는 $$u\in V$$가 존재한다. 그럼
 
 $$2\langle u,v\rangle=\langle u+v,u+v\rangle-\langle u,u\rangle-\langle v,v\rangle$$
@@ -209,8 +193,7 @@ $$u'=u-\frac{\langle u,w\rangle}{\langle w,w\rangle}w\in W^\perp$$
 $$\langle u',v\rangle=\langle u,v\rangle\neq 0$$
 
 을 만족한다. 즉, $$W^\perp$$ 또한 $$\langle-,-\rangle$$에 대해 non-degenerate이며, 따라서 귀납적 가정에 의해 $$W^\perp$$에는 orthogonal basis $$\mathcal{B}$$가 존재한다. 이제 $$\mathcal{B}\cup\{v\}$$는 $$V$$의 orthogonal basis이므로, 원하는 결과를 얻는다.
-
-</details>
+:::
 
 ## Gram matrix
 

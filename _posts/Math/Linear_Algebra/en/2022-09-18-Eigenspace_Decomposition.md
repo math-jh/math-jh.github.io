@@ -42,26 +42,20 @@ $$Av=\sum_{\lambda\in\sigma(A)}\lambda v_\lambda$$
 
 Of course, for this calculation to make sense, the representation of $$v$$ as a sum of the $$v_\lambda$$ must be unique. We define this as follows.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> A $$\mathbb{K}$$-vector space $$V$$ is called the *direct sum* of its subspaces $$(W_i)_{i\in I}$$ if, for every $$v\in V$$, there exist unique $$(v_i)_{i\in I}$$ such that
+::: Definition 1
+A $$\mathbb{K}$$-vector space $$V$$ is called the *direct sum* of its subspaces $$(W_i)_{i\in I}$$ if, for every $$v\in V$$, there exist unique $$(v_i)_{i\in I}$$ such that
 
 $$v=\sum_{i\in I} v_i$$
 
 holds.[^1] We write this as $$V=\bigoplus_{i\in I}W_i$$.
-
-</div>
+:::
 
 The easiest nontrivial case is when $$I$$ has two elements.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**Proposition 2**</ins> For two subspaces $$W_1,W_2$$ of a $$\mathbb{K}$$-vector space $$V$$, the condition $$V=W_1\oplus W_2$$ is equivalent to $$V=W_1+W_2$$ and $$W_1\cap W_2=\{0\}$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 2
+For two subspaces $$W_1,W_2$$ of a $$\mathbb{K}$$-vector space $$V$$, the condition $$V=W_1\oplus W_2$$ is equivalent to $$V=W_1+W_2$$ and $$W_1\cap W_2=\{0\}$$.
+:::
+::: Proof
 First, assume $$V=W_1\oplus W_2$$. By definition, $$W_1+W_2\subseteq V$$ is clear. Conversely, for any $$v\in V$$, there exist $$w_i\in W_i$$ such that $$v=w_1+w_2$$, so $$V\subseteq W_1+W_2$$ also holds. Hence $$V=W_1+W_2$$. On the other hand, if $$W_1\cap W_2\neq \{0\}$$, then for a nonzero $$w\in W_1\cap W_2$$,
 
 $$w=0+w=w+0$$
@@ -77,8 +71,7 @@ then
 $$w_1-w_1'=w_2-w_2'$$
 
 The left side lies in $$W_1$$ and the right side lies in $$W_2$$, so the condition $$W_1\cap W_2=\{0\}$$ implies $$w_1-w_1'=w_2-w_2'=0$$.
-
-</details>
+:::
 
 One direction of the above proposition holds even when $$I$$ has three or more elements. That is, if $$V=\bigoplus_{i\in I}W_i$$, then $$V=\sum_{i\in I}W_i$$ and $$W_i\cap W_j=\{0\}$$ whenever $$i\neq j$$, and the proof is the same as above. However, the converse does not hold in general.
 
@@ -90,14 +83,10 @@ $$e_1+e_2=e_1+e_2+0=0+0+(e_1+e_2)$$
 
 As another example, choose a basis $$\mathcal{B}=\{x_1,\ldots, x_n\}$$ of $$V$$. If we set $$W_i=\mathbb{K}x_i$$, then the condition that $$\mathcal{B}$$ is a basis is exactly the condition that $$V$$ is the direct sum of the $$W_i$$. More generally, the following holds.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop3">**Proposition 3**</ins> For any $$\mathbb{K}$$-vector space $$V$$ and subspaces $$(W_i)_{i\in I}$$, the condition $$V=\bigoplus_{i\in I} W_i$$ is equivalent to the bases $$\mathcal{B}_i$$ of $$W_i$$ satisfying $$\mathcal{B}_i\cap\mathcal{B}_j=\emptyset$$ whenever $$i\neq j$$, and $$\bigcup_{i\in I}\mathcal{B}_i$$ being a basis of $$V$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 3
+For any $$\mathbb{K}$$-vector space $$V$$ and subspaces $$(W_i)_{i\in I}$$, the condition $$V=\bigoplus_{i\in I} W_i$$ is equivalent to the bases $$\mathcal{B}_i$$ of $$W_i$$ satisfying $$\mathcal{B}_i\cap\mathcal{B}_j=\emptyset$$ whenever $$i\neq j$$, and $$\bigcup_{i\in I}\mathcal{B}_i$$ being a basis of $$V$$.
+:::
+::: Proof
 First, assume $$V=\bigoplus W_i$$ and choose bases $$\mathcal{B}_i$$ of the $$W_i$$. If $$\mathcal{B}_i\cap\mathcal{B}_j\neq\emptyset$$, then $$W_i\cap W_j\neq\emptyset$$, which contradicts the discussion after [Proposition 2](#prop2), so we must have $$\mathcal{B}_i\cap\mathcal{B}_j=\emptyset$$. For any $$v\in V$$, from $$V=\bigoplus W_i$$ there exist unique $$w_i$$ satisfying
 
 $$v=\sum_{i\in I} w_i$$
@@ -105,8 +94,7 @@ $$v=\sum_{i\in I} w_i$$
 Also, in each $$W_i$$ the $$w_i$$ can be uniquely expressed as linear combinations of elements of $$\mathcal{B}_i$$. From this we see that $$\bigcup\mathcal{B}_i$$ is a basis of $$V$$.
 
 Reversing this argument shows the converse as well.
-
-</details>
+:::
 
 Thus we see that $$\dim V=\sum_{i\in I}\dim W_i$$.
 
@@ -118,14 +106,10 @@ $$Ax_1=\lambda_1x_1\neq\lambda_2 x_1$$
 
 so $$x_1\not\in E_{\lambda_2}$$. Therefore, however we choose bases of the $$E_\lambda$$, the bases of $$E_{\lambda_1}$$ and $$E_{\lambda_2}$$ never overlap for distinct $$\lambda_1,\lambda_2$$. Moreover, the following holds.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**Proposition 4**</ins> For any matrix $$A$$, suppose $$x_1,\ldots, x_m$$ are eigenvectors corresponding to distinct eigenvalues $$\lambda_1,\ldots,\lambda_m$$ respectively. Then the set $$\{x_1,\ldots,x_m\}$$ is linearly independent.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 4
+For any matrix $$A$$, suppose $$x_1,\ldots, x_m$$ are eigenvectors corresponding to distinct eigenvalues $$\lambda_1,\ldots,\lambda_m$$ respectively. Then the set $$\{x_1,\ldots,x_m\}$$ is linearly independent.
+:::
+::: Proof
 Suppose for contradiction that the set $$\{x_1,x_2,\ldots, x_m\}$$ is linearly dependent. That is, there exist scalars $$\alpha_i$$, not all zero, satisfying
 
 $$\alpha_1x_1+\alpha_2x_2+\cdots+\alpha_mx_m=0\tag{1}$$
@@ -165,8 +149,7 @@ then the above equation becomes
 $$\beta_1''x_1+\beta_2''x_2+\cdots+\beta_m''x_m=0$$
 
 By assumption, $$\lambda_i-\lambda_m\neq 0$$, so for $$1\leq i\leq m-1$$, the condition $$\beta_i''=0$$ is equivalent to $$\beta_i=0$$. Therefore, the number of $$1\leq i\leq m-1$$ with $$\beta_i''\neq 0$$ is $$k-1$$, and since $$\beta_m''=0$$, the size of $$\supp(\beta_i'')_{1\leq i\leq m}$$ is $$k-1$$. This contradicts the minimality of $$(\beta_i)_{1\leq i\leq m}$$, so the set $$\{x_1,x_2,\ldots, x_m\}$$ is linearly independent.
-
-</details>
+:::
 
 From this, for any matrix $$A$$ with eigenvalues $$\lambda\in\sigma(A)$$, corresponding eigenspaces $$E_\lambda$$, and bases $$\mathcal{B}_\lambda$$, we know that $$\mathcal{B}=\bigcup_{\lambda\in\sigma(A)}\mathcal{B}_\lambda$$ is a linearly independent subset of $$\mathbb{K}^n$$. However, there is no reason for $$\mathcal{B}$$ to be a basis of $$\mathbb{K}^n$$ in general. For example, in [§Characteristic Polynomial, ⁋Example 7](/en/math/linear_algebra/characteristic_polynomial#ex7), when $$\mathbb{K}=\mathbb{R}$$ we have $$\sigma(J)=\emptyset$$, so $$\mathcal{B}=\emptyset$$. Moreover, even if we assume that the characteristic polynomial of $$A$$ has exactly $$n$$ roots, a similar problem can arise; for instance, for the matrix
 
@@ -176,14 +159,10 @@ the characteristic polynomial is $$(\mathbf{x}-1)^3=0$$, but the only eigenvecto
 
 The following proposition shows that the geometric multiplicity of an eigenvalue of a matrix can never exceed its algebraic multiplicity.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**Proposition 5**</ins> For an eigenvalue $$\lambda\in\mathbb{K}$$ of an $$n\times n$$ matrix $$A$$, the geometric multiplicity of $$\lambda$ never exceeds its algebraic multiplicity.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 5
+For an eigenvalue $$\lambda\in\mathbb{K}$$ of an $$n\times n$$ matrix $$A$$, the geometric multiplicity of $$\lambda$ never exceeds its algebraic multiplicity.
+:::
+::: Proof
 Let the geometric multiplicity of $$\lambda$$ be $$k$$, and consider $$k$$ linearly independent vectors $$x_1,\ldots, x_k$$ spanning $$E_\lambda(A)$$. We can add $$(n-k)$$ vectors $$x_{k+1},\ldots, x_n$$ to form a new basis $$\{x_1,\ldots, x_n\}$$ of $$\mathbb{K}^n$$. Now define the matrix $$X$$ by
 
 $$X=(x_1\vert x_2\vert \cdots\vert x_n)$$
@@ -205,19 +184,16 @@ Thus, writing the characteristic polynomial of $$A$$ as $$p_A(\mathbf{x})$$, by 
 $$p_A(\mathbf{x})=p_{A'}(\mathbf{x})=\det(\mathbf{x}I-A')=(\mathbf{x}-\lambda)^k\det(\mathbf{x}I_{n-k}-C)$$
 
 That is, the algebraic multiplicity of $$\lambda$$ in $$p_A$$ is at least $$k$$.
-
-</details>
+:::
 
 Given an $$n\times n$$ matrix $$A$$ with characteristic polynomial $$p_A$$, the sum of the algebraic multiplicities of the eigenvalues $$\lambda$$ cannot exceed $$n$$, the degree of $$p_A$$. Also, for a fixed eigenvalue $$\lambda$$, the above proposition shows that the geometric multiplicity of $$\lambda$$ cannot exceed its algebraic multiplicity. Finally, from the argument after [Proposition 4](#prop4), we see that in order to decompose $$\mathbb{K}^n$$ into eigenspaces, the sum of the geometric multiplicities of the $$\lambda$$ must equal $$n$$. Putting all this together, we obtain the following proposition.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop6">**Proposition 6**</ins> For any $$n\times n$$ matrix $$A$$, the necessary and sufficient condition for $$\mathbb{K}^n$$ to be expressible as a direct sum of the eigenspaces of $$A$$ is:
+::: Proposition 6
+For any $$n\times n$$ matrix $$A$$, the necessary and sufficient condition for $$\mathbb{K}^n$$ to be expressible as a direct sum of the eigenspaces of $$A$$ is:
 
 1. The characteristic polynomial of $$A$$ has $$n$$ roots counting multiplicity, and
 2. For each eigenvalue, the geometric multiplicity equals the algebraic multiplicity.
-
-</div>
+:::
 
 In particular, if $$\mathbb{K}$$ is algebraically closed, the first condition is always satisfied, so only the second condition need be considered.
 
@@ -235,23 +211,19 @@ $$y_i\cdot x_j=\begin{cases}1&i=j\\0&i\neq j\end{cases}$$
 
 in the proof of [Proposition 5](#prop5), we see that $$C$$ also becomes a diagonal matrix and $$B$$ becomes the zero matrix. Therefore the following holds.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop7">**Proposition 7**</ins> Consider an $$n\times n$$ matrix $$A$$ satisfying all the conditions of [Proposition 6](#prop6), and let $$x_1,\ldots, x_n$$ be a basis of $$\mathbb{R}^n$$ consisting of eigenvectors of $$A$$. Let $$Ax_i=\lambda_ix_i$$ and $$X=(x_1\mid\cdots\mid x_n)$$. Then for the diagonal matrix
+::: Proposition 7
+Consider an $$n\times n$$ matrix $$A$$ satisfying all the conditions of [Proposition 6](#prop6), and let $$x_1,\ldots, x_n$$ be a basis of $$\mathbb{R}^n$$ consisting of eigenvectors of $$A$$. Let $$Ax_i=\lambda_ix_i$$ and $$X=(x_1\mid\cdots\mid x_n)$$. Then for the diagonal matrix
 
 $$D=\begin{pmatrix}\lambda_1&0&\cdots&0\\ 0&\lambda_2&\cdots&0\\ \vdots&\vdots&\ddots&\vdots\\0&0&\cdots&\lambda_n\end{pmatrix}$$
 
 we have $$A=XDX^{-1}$$.
-
-</div>
+:::
 
 Thus we can give a suitable name to a matrix $$A$$ satisfying this condition.
 
-<div class="definition" markdown="1">
-
-<ins id="def8">**Definition 8**</ins> An $$n\times n$$ matrix $$A$$ satisfying all the conditions of [Proposition 6](#prop6) is called *diagonalizable*.
-
-</div>
+::: Definition 8
+An $$n\times n$$ matrix $$A$$ satisfying all the conditions of [Proposition 6](#prop6) is called *diagonalizable*.
+:::
 
 Alternatively, since [Proposition 6](#prop6) gives a necessary and sufficient condition, there is no problem in calling a matrix similar to a diagonal matrix diagonalizable. In other words, any diagonalizable matrix is completely determined by its eigenvalues.
 
@@ -267,11 +239,9 @@ $$A_1A_2\cdots A_k =XD_1D_2\cdots D_kX^{-1}$$
 
 and since the product of diagonal matrices is merely the diagonal matrix consisting of the products of the diagonal entries, computing $$A_1A_2\cdots A_k$$ may also not be very difficult. We give such a case the following name.
 
-<div class="definition" markdown="1">
-
-<ins id="def9">**Definition 9**</ins> A family of matrices $$\{A_i\}$$ is called *simultaneously diagonalizable* if there exists an invertible matrix $$X$$ such that $$X^{-1}A_iX$$ is a diagonal matrix for every $$i$$.
-
-</div>
+::: Definition 9
+A family of matrices $$\{A_i\}$$ is called *simultaneously diagonalizable* if there exists an invertible matrix $$X$$ such that $$X^{-1}A_iX$$ is a diagonal matrix for every $$i$$.
+:::
 
 If two matrices $$A,B$$ are simultaneously diagonalizable through a fixed matrix $$X$$, then from
 
@@ -279,14 +249,10 @@ $$AB=XD_AX^{-1}XD_BX^{-1}=XD_AD_BX^{-1}=XD_BD_AX^{-1}=BA$$
 
 we know that the two matrices $$A, B$$ commute. The following proposition shows that the converse also holds (for diagonalizable matrices).
 
-<div class="proposition" markdown="1">
-
-<ins id="prop10">**Proposition 10**</ins> If two diagonalizable matrices $$A,B$$ satisfy $$AB=BA$$, then $$A, B$$ are simultaneously diagonalizable.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 10
+If two diagonalizable matrices $$A,B$$ satisfy $$AB=BA$$, then $$A, B$$ are simultaneously diagonalizable.
+:::
+::: Proof
 Essentially, it suffices to show that the two matrices $$A,B$$ admit the same eigenspace decomposition. Consider the eigenspace decomposition using $$A$$:
 
 $$V=\bigoplus_{\lambda}E_\lambda(A)$$
@@ -296,8 +262,7 @@ Then for any $$v\in E_\lambda(A)$$, from
 $$A(Bv)=ABv=BAv=B(\lambda v)=\lambda(Bv)$$
 
 we know that $$Bv\in E_\lambda(A)$$. Now viewing $$B$$ as a linear operator on the vector space $$E_\lambda(A)$$, since the original linear operator $$B$$ was diagonalizable, $$B$$ is also diagonalizable on $$E_\lambda(A)$$, and therefore there exists a basis of $$E_\lambda(A)$$ consisting of eigenvectors of $$B$$. Any element of $$E_\lambda(A)$$ is an eigenvector of $$A$$ (corresponding to eigenvalue $$\lambda$$), so these are also eigenvectors of $$A$$.
-
-</details>
+:::
 
 ## Eigenspace Decomposition of Linear Operators
 
@@ -313,14 +278,10 @@ $$A-I=\begin{pmatrix}0&1&1\\0&0&1\\0&0&0\end{pmatrix}$$
 
 the operator defined by this satisfies $$\ker (A-I)\cap \im(A-I)\neq \{0\}$$. However, if $$\ker L\cap \im L=\{0\}$$ holds, then from [§Dimension of Vector Spaces, ⁋Example 8](/en/math/linear_algebra/dimension#ex8) and [Proposition 2](#prop2) we know that necessarily $$V=\ker L\oplus \im L$$. The following lemma gives a condition equivalent to this.
 
-<div class="proposition" markdown="1">
-
-<ins id="lem11">**Lemma 11**</ins> In the above situation, the condition $$\ker L\cap \im L=\{0\}$$ is equivalent to $$\ker L^2=\ker L$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Lemma 11
+In the above situation, the condition $$\ker L\cap \im L=\{0\}$$ is equivalent to $$\ker L^2=\ker L$$.
+:::
+::: Proof
 With a little thought, we see that $$\ker L^2=\ker L$$ is equivalent to $$\ker L^2\subset \ker L$$. Therefore what we need to show is the equivalence
 
 $$\ker L\cap \im L=\{0\}\iff \ker L^2\subset\ker L$$
@@ -330,23 +291,18 @@ First, assume $$\ker L\cap \im L=\{0\}$$ and let $$v\in\ker L^2$$. Then $$0=L^2 
 $$0=Lv=L(Lw)=L^2w\implies w\in\ker(L^2)\subset \ker L$$
 
 so $$w\in \ker L$$. That is, $$v=Lw=0$$.
-
-</details>
+:::
 
 Returning to the original story, we are particularly interested in the case where $$L$$ is of the form $$A-\lambda I$$ for some linear operator and its eigenvalue. The following proposition uses [Lemma 11](#lem11) to characterize diagonalizability concisely.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop12">**Proposition 12**</ins> A linear operator $$A:V\rightarrow V$$ is diagonalizable if and only if for every eigenvalue $$\lambda\in\sigma(A)$$,
+::: Proposition 12
+A linear operator $$A:V\rightarrow V$$ is diagonalizable if and only if for every eigenvalue $$\lambda\in\sigma(A)$$,
 
 $$\ker(A-\lambda I)^2=\ker(A-\lambda I)$$
 
 holds.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 First, suppose $$A$$ is diagonalizable. Then $$V=\bigoplus_{\mu\in\sigma(A)} E_\mu(A)$$. For any $$v\in\ker(A-\lambda I)^2$$, we can uniquely write $$v=\sum_{\mu\in\sigma(A)}v_\mu$$, and
 
 $$(A-\lambda I)^2v=\sum_{\mu\in\sigma(A)}(A-\lambda I)^2v_\mu=\sum_{\mu\in\sigma(A)}(\mu-\lambda)^2v_\mu=0$$
@@ -376,8 +332,7 @@ is well-defined. Then from [Proposition 4](#prop4), if $$w\in W_\lambda(A)$$ is 
 $$\ker (A_{W_\lambda(A)}-\mu I)=\ker (A_{W_\lambda(A)}-\mu I)^2$$
 
 also holds on $$W_\lambda(A)$$ for a similar reason. That is, we can repeat this process inductively. On the other hand, since we are assuming that $$\mathbb{K}$$ is algebraically closed, we know that any linear operator $$W \rightarrow W$$ always has an eigenvalue as long as $$W$$ is not $$0$$-dimensional, and from this we know that this induction exactly gives the eigenspace decomposition of $$A$$.
-
-</details>
+:::
 
 ---
 

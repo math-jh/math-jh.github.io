@@ -30,11 +30,9 @@ $$H_m(M, M\setminus V;\mathbb{Z})\rightarrow H_m(M,M\setminus U;\mathbb{Z})\tag{
 
 을 가지므로 presheaf이다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> 대응 (1)의 sheafification ([\[위상수학\] §층, ⁋정의 5](/ko/math/topology/sheaves#def5))을 *orientation sheaf<sub>방향층</sub>*라 부르고 $$\or_M$$로 적는다.
-
-</div>
+::: 정의 1
+대응 (1)의 sheafification ([\[위상수학\] §층, ⁋정의 5](/ko/math/topology/sheaves#def5))을 *orientation sheaf<sub>방향층</sub>*라 부르고 $$\or_M$$로 적는다.
+:::
 
 그럼 임의의 $$x\in M$$와 $$x$$의 임의의 열린근방 $$U$$에 대하여, 다음의 canonical map 
 
@@ -56,11 +54,9 @@ $$H_m(M,M\setminus\{x\};\mathbb{Z})\cong H_m(U,U\setminus\{x\};\mathbb{Z})\cong 
 
 이고, $$\mathbb{R}^m\setminus\{0\}$$은 $$S^{m-1}$$으로 deformation retract하므로 relative homology long exact sequence에 의하여 위의 식의 우변은 $$\mathbb{Z}$$와 isomorphic한 것을 알 수 있으며, 이 sheaf는 locally constant sheaf인 것 또한 확인할 수 있다. 즉, 임의의 $$x\in M$$이 주어질 때마다 적당한 열린근방 $$U$$가 존재하여 $$\or_M\vert_U$$가 constant sheaf이도록 할 수 있다. ([\[위상수학\] §층, ⁋예시 9](/ko/math/topology/sheaves#ex9))
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**정의 2**</ins> Relative homology group $$H_m(M, M\setminus \{x\};\mathbb{Z})$$을 $$M$$의 $$x$$에서의 *local homology group*이라 부른다. 
-
-</div>
+::: 정의 2
+Relative homology group $$H_m(M, M\setminus \{x\};\mathbb{Z})$$을 $$M$$의 $$x$$에서의 *local homology group*이라 부른다. 
+:::
 
 ## 상수층과 피복공간, 방향생성자층
 
@@ -74,11 +70,9 @@ $$\Iso_\mathbb{Z}(H_m(M, M\setminus\{x\}), \underline{\mathbb{Z}}_x)$$
 
 을 선택하는 것은 각각의 $$x$$에서 $$M$$이 양의 방향인지, 음의 방향인지를 택하는 것과 같다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**정의 3**</ins> Topological manifold $$M$$ of dimension $$m$$에 대하여, 점 $$x$$에서의 *local orientation<sub>국소 방향</sub>*은 $$\Iso_\mathbb{Z}(H_m(M,M\setminus\{x\}), \underline{\mathbb{Z}}_x)$$의 원소를 택하는 것으로 주어진다.
-
-</div>
+::: 정의 3
+Topological manifold $$M$$ of dimension $$m$$에 대하여, 점 $$x$$에서의 *local orientation<sub>국소 방향</sub>*은 $$\Iso_\mathbb{Z}(H_m(M,M\setminus\{x\}), \underline{\mathbb{Z}}_x)$$의 원소를 택하는 것으로 주어진다.
+:::
 
 이제 각각의 열린집합 $$U$$에 대하여 
 
@@ -88,17 +82,14 @@ $$\omega_M^\pre(U)=\prod_{x\in U}\Iso_\mathbb{Z}(H_m(M,M\setminus\{x\}), \underl
 
 이제 $$\omega_M^\pre$$의 sheafification $$\omega_M$$을 $$M$$의 *orientation-generator sheaf<sub>방향생성자층</sub>*라 부른다. 이는, 방향이 고정된 constant sheaf $$\underline{\mathbb{Z}}$$의 generator $$1$$을 고정해뒀을 때, isomorphism $$H_m(M,M\setminus\{x\};\mathbb{Z})$$이 $$1$$을 $$1$$로 보내는지, $$-1$$로 보내는지 살펴보는 것이며 이를 통해 $$\omega_M$$은 $$\or_M$$의 subsheaf로 볼 수 있다. 그럼 $$\omega_M$$은 locally constant sheaf이므로, 그 étale space $$\Spe(\omega_M)$$는 $$M$$의 covering space가 되며 각 fiber는 두 개의 원소로 이루어져 있다.
 
-<div class="definition" markdown="1">
-
-<ins id="def4">**정의 4**</ins> 위에서 정의한 étale space $$\Spe(\omega_M)$$을 $$M$$의 *orientation double cover<sub>방향 이중덮개</sub>*라 부르고, global section $$M \rightarrow \Spe(\omega_M)$$을 *global orientation<sub>전역 방향</sub>*이라 부른다. $$M$$이 *orientable<sub>가향</sub>*이라는 것은 global orientation이 존재하는 것이다.
-
-</div>
+::: 정의 4
+위에서 정의한 étale space $$\Spe(\omega_M)$$을 $$M$$의 *orientation double cover<sub>방향 이중덮개</sub>*라 부르고, global section $$M \rightarrow \Spe(\omega_M)$$을 *global orientation<sub>전역 방향</sub>*이라 부른다. $$M$$이 *orientable<sub>가향</sub>*이라는 것은 global orientation이 존재하는 것이다.
+:::
 
 그럼 그 이름과 같이 $$\Spe(\omega_M)$$은 $$M$$의 covering space이며, 뿐만 아니라 임의의 $$x\in M$$에 대하여, $$x$$의 chart $$U$$를 생각하면 canonical projection $$p:\Spe(\omega_M)\rightarrow M$$에 의한 $$U$$의 preimage $$p^{-1}(U)$$가 $$U$$와 homeomorphic한 두 개의 disjoint open subset으로 나타난다. 
 
-<div class="example" markdown="1">
-
-<ins id="ex5">**예시 5**</ins> 예를 들어 $$S^1$$의 orientation double cover $$p:\Spe(\omega_{S^1})\rightarrow S^1$$을 생각하자. 임의의 점 $$x\in S^1$$의 $$p$$에 의한 preimage $$p^{-1}(x)$$는 두 개의 점 $$(x,+)$$와 $$(x,-)$$로 이루어져 있으며, 이는 $$x$$를 포함하는 chart $$U$$에 대해서도 마찬가지가 되어 $$p^{-1}(U)$$가 두 개의 open subset $$U^+,U^-$$로 나뉘게 된다. 
+::: 예시 5
+예를 들어 $$S^1$$의 orientation double cover $$p:\Spe(\omega_{S^1})\rightarrow S^1$$을 생각하자. 임의의 점 $$x\in S^1$$의 $$p$$에 의한 preimage $$p^{-1}(x)$$는 두 개의 점 $$(x,+)$$와 $$(x,-)$$로 이루어져 있으며, 이는 $$x$$를 포함하는 chart $$U$$에 대해서도 마찬가지가 되어 $$p^{-1}(U)$$가 두 개의 open subset $$U^+,U^-$$로 나뉘게 된다. 
 
 ![Orientation_cover_of_S1](/assets/images/Math/Algebraic_Topology/Poincare_Duality-1.svg){:style="width:45%" class="invert" .align-center}
 
@@ -113,20 +104,17 @@ $$\omega_M^\pre(U)=\prod_{x\in U}\Iso_\mathbb{Z}(H_m(M,M\setminus\{x\}), \underl
 ![orientation_cover_of_M](/assets/images/Math/Algebraic_Topology/Poincare_Duality-3.svg){:style="width:40%" class="invert" .align-center}
 
 그러나 이를 이어붙여 $$M$$ 전체를 이어붙이려 하면 문제가 생기는데, 이 그림에서 보여지는 두 개의 cover를, orientation을 고려해가며 반시계방향으로 붙여나가면, 다시 $$x$$로 돌아왔을 때 $$(x,+)$$와 $$(x,-)$$가 서로 뒤바뀌어 있으므로 위쪽과 아래쪽 component를 교차해서 붙여야 한다. 이렇게 만들어진 $$M$$의 double cover는 원기둥과 homeomorphic하게 된다. 
-
-</div>
+:::
 
 정의에 의해 $$M$$이 orientable이려면 $$\omega_M$$의 global section이 존재하며, 이는 $$\Spe(\omega_M)$$이 trivial covering space라는 것과 동치이며 이는 다시 $$\omega_M$$이 constant sheaf라는 것과 동치이다. 여기에 [§피복공간, ⁋따름정리 12 (Fundamental theorem of covering spaces, classical version)](/ko/math/algebraic_topology/covering_spaces#cor12)를 적용하면 다음 명제를 얻는다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop6">**명제 6**</ins> (Connected) topological manifold $$M$$에 대하여, 다음이 동치이다. 
+::: 명제 6
+(Connected) topological manifold $$M$$에 대하여, 다음이 동치이다. 
 
 1. $$M$$이 orientable이다.
 2. $$\Spe(\omega_M)$$이 두 개의 component를 갖는다. 
 3. $$\pi_1(M)$$의 monodromy action이 $$\Spe(\omega_M)$$에서 trivial하게 act한다.
-
-</div>
+:::
 
 그런데 우리는 이미 호몰로지와 코호몰로지를 다룰 때 $$\mathbb{Z}$$-module뿐 아니라, 일반적인 $$A$$-module로 확장했으므로 위의 논증 또한 일반적인 $$A$$-module에 대해 확장할 수 있다. 이를 위해 우선 [\[대수적 위상수학\] §코호몰로지, ⁋명제 1](/ko/math/algebraic_topology/cohomology#prop1)의 relative homology 버전을 생각하면, 다음의 (non-canonical) isomorphism
 
@@ -148,15 +136,13 @@ $$\Iso_\mathbb{Z}(\mathbb{Z},\mathbb{Z})\cong \mathbb{Z}^\times\cong \{\pm 1\}$$
 
 으로부터 정의되는 것이고 따라서 $$\pi_1(M,x)$$-action은 정확하게 group homomorphism $$\pi_1(M,x)\rightarrow \mathbb{Z}^\times$$로 생각할 수 있다. 그럼 $$A$$에서 $$A$$로의 $$A$$-module isomorphism은 정확히 $$A$$의 unit group $$A^\times$$의 원소와 대응되므로, 이는 결과적으로 group homomorphism $$\pi_1(M,x)\rightarrow A^\times$$를 살펴보는 것과 같다. 즉 [명제 6](#prop6)은 다음과 같이 일반화할 수 있다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop7">**명제 7**</ins>  (Connected) topological manifold $$M$$에 대하여, 다음이 동치이다. 
+::: 명제 7
+ (Connected) topological manifold $$M$$에 대하여, 다음이 동치이다. 
 
 1. $$M$$이 $$A$$-orientable이다.
 2. $$\Spe(\omega_M^A)$$이 trivial covering $$M\times \lvert A^\times\rvert$$이다. 
 3. Monodromy representation $$\pi_1(M)\rightarrow A^\times$$는 trivial이다. 
-
-</div>
+:::
 
 이러한 일반화에서 가장 특기할만한 경우는 $$A=\mathbb{Z}/2$$일 때이다. 이 경우, $$A$$의 unit은 $$-1=1$$ 뿐이므로 orientation을 지정하는 방법은 유일하고, 따라서 임의의 manifold는 항상 $$\mathbb{Z}/2$$-orientable이다.
 
@@ -179,9 +165,8 @@ $$H_m(M; A)\rightarrow H_m(M,M\setminus\{x\};A)\tag{1}$$
 
 푸앵카레 쌍대성의 핵심적인 내용은 모두 첫째 단계에 담겨있는 것이며, 둘째 단계는 이를 현명하게 표현할 수 있는 언어를 배우는 것에 가깝다. 따라서 우리는 우선 첫째 단계부터 시작한다. 이는 다음의 보조정리에 의해 얻어진다.
 
-<div class="proposition" markdown="1">
-
-<ins id="lem8">**보조정리 8**</ins> Topological manifold $$M$$ of dimension $$m$$을 고정하자. $$M$$의 임의의 compact subset $$C$$에 대하여 다음이 성립한다.
+::: 보조정리 8
+Topological manifold $$M$$ of dimension $$m$$을 고정하자. $$M$$의 임의의 compact subset $$C$$에 대하여 다음이 성립한다.
 
 1. 임의의 section $$s:M \rightarrow \Spe(\omega_M^A)$$가 주어질 때마다, 적당한 homology class 
     
@@ -193,11 +178,8 @@ $$H_m(M; A)\rightarrow H_m(M,M\setminus\{x\};A)\tag{1}$$
 
     에 의한 $$\alpha_C$$의 image가 $$s_x$$이도록 할 수 있다. 
 2. 모든 $$i>n$$에 대해 $$H_i(M, M\setminus C;A)=0$$이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 우선 임의의 compact set $$C_1,C_2$$, 그리고 이들의 교집합 $$C_1\cap C_2$$에 대해 이 명제가 성립한다면 $$C_1\cup C_2$$에 대해서도 명제가 성립함을 보이자. 이는 Mayer-Vietoris sequence
 
 $$\cdots \rightarrow H_k(M,M\setminus (C_1\cup C_2); A)\rightarrow H_k(M,M\setminus C_1;A)\oplus H_k(M,M\setminus C_2;A)\rightarrow H_k(M, M\setminus (C_1\cap C_2);A)\rightarrow\cdots\tag{2}$$
@@ -219,26 +201,21 @@ $$0=H_{m+1}(M,M\setminus (C_1\cap C_2);A)\rightarrow H_m(M,M\setminus (C_1\cup C
 의 injectivity로부터 나온다. 
 
 이제 귀납법의 기초단계를 위해서는 $$M=\mathbb{R}^m$$이고 $$A$$가 convex compact subset인 경우를 생각하면 충분하다. 임의의 manifold $$M$$의 compact set을 Euclidean chart로 덮은 후, compactness를 사용하면 $$M=\mathbb{R}^m$$으로 가정해도 충분하며 $$\mathbb{R}^m$$의 open ball들의 basis를 사용하고 다시 compactness를 사용하면 $$A$$가 convex임을 추가로 가정해도 되기 때문이다. 그럼 이 단계에서 두 공간 $$\mathbb{R}^m\setminus A$$와 $$\mathbb{R}^m\setminus \{x\}$$가 모두 같은 공간 $$S^{m-1}$$로 deformation retract하므로 isomorphism이 되고, 이로부터 증명이 끝난다. 
-
-</details>
+:::
 
 이 증명에서 compactness는 Mayer-Vietoris sequence를 사용하여 귀납적인 방식으로 $$\alpha$$를 구성할 때, 이 귀납적인 과정이 유한한 단계에서 끝나도록 하려면 반드시 필요하다. 실제로 compactness가 빠질 경우 푸앵카레 쌍대성은 다소 다른 형태를 띄게 되는데, 이를 공통된 식으로 표현하기 위해 도입해야 하는 것이 sheaf cohomology의 언어이다. 
 
 어쨌든 위의 [보조정리 8](#lem8)에 의하여, 만일 $$M$$이 compact topological manifold of dimension $$m$$이라면, $$C=M$$으로 두어 다음의 정리를 얻는다.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm9">**정리 9**</ins> Compact connected topological manifold $$M$$ of dimension $$m$$이 주어졌다 하자. 그럼 orientation sheaf $$\omega_M^A$$이 주어질 때마다 적당한 class $$[M]\in H_m(M;A)$$이 유일하게 존재하여 canonical homomorphism (1)에 의한 $$[M]$$의 image가 $$s_x$$와 일치하도록 할 수 있다. 
-
-</div>
+::: 정리 9
+Compact connected topological manifold $$M$$ of dimension $$m$$이 주어졌다 하자. 그럼 orientation sheaf $$\omega_M^A$$이 주어질 때마다 적당한 class $$[M]\in H_m(M;A)$$이 유일하게 존재하여 canonical homomorphism (1)에 의한 $$[M]$$의 image가 $$s_x$$와 일치하도록 할 수 있다. 
+:::
 
 그럼 [보조정리 8](#lem8)에 의하여 $$H_m(M;A)$$는 $$[M]$$에 의해 생성되는 free $$A$$-module of rank 1이며, 서로 다른 global orientation의 선택은 서로 다른 $$H_m(M;A)$$의 generator의 선택에 대응된다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def10">**정의 10**</ins> 위의 [정리 9](#thm9)에서 정의한 $$[M]$$을 global orientation $$s$$가 정의하는 $$M$$의 *fundamental class<sub>기본류</sub>*라 부른다. 
-
-</div>
+::: 정의 10
+위의 [정리 9](#thm9)에서 정의한 $$[M]$$을 global orientation $$s$$가 정의하는 $$M$$의 *fundamental class<sub>기본류</sub>*라 부른다. 
+:::
 
 뿐만 아니라, 만일 [정리 9](#thm9)의 조건을 만족하는 homology class $$[M]$$이 존재한다면, 이로부터 global section $$s:M \rightarrow \Spe(\omega_M^A)$$이 주어진다는 것을 안다. 
 
@@ -254,23 +231,19 @@ $$-\frown [M]: H^p(M;A)\rightarrow H_{m-p}(M;A)$$
 
 이 된다.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm11">**정리 11**</ins> $$A$$-orientable compact manifold $$M$$ of dimension $$m$$과 그 fundamental class $$[M]$$에 대하여, 위의 homomorphism
+::: 정리 11
+$$A$$-orientable compact manifold $$M$$ of dimension $$m$$과 그 fundamental class $$[M]$$에 대하여, 위의 homomorphism
 
 $$-\frown [M]: H^p(M;A)\rightarrow H_{m-p}(M;A)$$
 
 은 isomorphism이다. 
-
-</div>
+:::
 
 이에 대한 증명 또한 [보조정리 8](#lem8)의 증명과 마찬가지로 Mayer-Vietoris sequence를 이용한 귀납법으로 진행한다. 그러나 다소 다른 점은, [보조정리 8](#lem8)은 명제의 주장이 compact subset $$C$$에 대한 주장이어서 compactness를 적극적으로 사용할 수 있었지만, 이번에는 명제가 $$M$$ 자체에 대한 주장이기 때문에, 가령 $$M$$의 chart $$U$$가 주어졌다고 하면 이는 compact가 아니므로 단순한 귀납법으로 접근할 수는 없다. 이에 우리는 다음을 정의한다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def12">**정의 12**</ins> Cochain $$\varphi\in C^p(M;A)$$이 *compactly supported*라는 것은 적당한 compact set $$K\subseteq M$$이 존재하여 $$\varphi(\sigma)=0$$가 $$M\setminus K$$에 들어가는 모든 simplex에 대해 성립하는 것을 말한다. Compactly supported cochain들의 cochain complex의 $$i$$번째 호몰로지를 $$p$$번째 *compactly supported cohomology*라 부르고 $$H_c^p(M;A)$$로 적는다. 
-
-</div>
+::: 정의 12
+Cochain $$\varphi\in C^p(M;A)$$이 *compactly supported*라는 것은 적당한 compact set $$K\subseteq M$$이 존재하여 $$\varphi(\sigma)=0$$가 $$M\setminus K$$에 들어가는 모든 simplex에 대해 성립하는 것을 말한다. Compactly supported cochain들의 cochain complex의 $$i$$번째 호몰로지를 $$p$$번째 *compactly supported cohomology*라 부르고 $$H_c^p(M;A)$$로 적는다. 
+:::
 
 그럼 다음의 식
 
@@ -286,18 +259,14 @@ $$\varinjlim_{\text{\scriptsize$K$ compact}}H^p(M,M\setminus K;A)\rightarrow H_c
 
 이 잘 정의되기 때문이다. 이것이 isomorphism인 것은 직접 보이면 된다. 특히 임의의 compact manifold $$M$$에 대하여 $$H_c^p(M,A)\cong H^p(M;A)$$이 성립하며, 따라서 원하는 결과는 다음의 보조정리에서 따라나온다.
 
-<div class="proposition" markdown="1">
-
-<ins id="lem13">**보조정리 13**</ins> 임의의 $$A$$-orientable $$m$$-manifold $$M$$에 대하여 다음의 isomorphism
+::: 보조정리 13
+임의의 $$A$$-orientable $$m$$-manifold $$M$$에 대하여 다음의 isomorphism
 
 $$H_c^p(M;A)\cong H_{m-p}(M;A)$$
 
 이 모든 $$p$$에 대하여 성립한다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 이를 위해서는 우선 isomorphism을 정의해야 한다. 이를 위해, 임의의 compact subset $$K$$에 대하여 cap product
 
 $$H^p(M,M\setminus K;A)\times H_m(M,M\setminus K;A)\rightarrow H_{m-p}(M;A)$$
@@ -367,8 +336,7 @@ $$U_1\subset U_1\cup U_2\subset U_1\cup U_2\cup U_3\cdots$$
 에 앞선 (무한한) 귀납법을 적용하면 원하는 결과를 얻는다. 
 
 이제 마지막으로 $$M$$이 임의의 manifold일 경우, second countability를 이용하여 countable한 Euclidean chart로 $$M$$을 덮고 위와 마찬가지의 논증을 거치면 된다.
-
-</details>
+:::
 
 특히 증명에서, 만일 $$M$$이 그 자체로 compact였다면 dualilty map $$D_M$$은 정확하게 fundamental class $$[M]$$과의 cap product가 되었을 것이다.
 
@@ -378,11 +346,9 @@ $$M$$이 $$A$$-orientable이 아닐 경우 [정리 11](#thm11)이 성립하지 �
 
 이제 이 꼬임을 쌍대성에서 함께 고려하기 위해 우리는 *homology with local coefficient*을 정의한다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def14">**정의 14**</ins> $$M$$ 위에 정의된 locally constant sheaf $$\mathscr{L}$$을 *local coefficient system*이라 부른다. 
-
-</div>
+::: 정의 14
+$$M$$ 위에 정의된 locally constant sheaf $$\mathscr{L}$$을 *local coefficient system*이라 부른다. 
+:::
 
 Local system $$\mathscr{L}$$의 stalk을 $$L$$이라 하자. 그럼 [§피복공간, ⁋정리 11](/ko/math/algebraic_topology/covering_spaces#thm11)에 의하여, 우리는 임의의 path $$\alpha:[0,1]\rightarrow M$$이 주어질 때마다 stalk들 사이의 isomorphism $$\mathscr{L}_{\alpha(0)}\rightarrow \mathscr{L}_{\alpha(1)}$$이 존재하는 것을 안다. 이는 별다른 것이 아니라 covering space $$\Spe(\mathscr{L})\rightarrow M$$에서 path $$\alpha$$를 lift하여 얻어지는 isomorphism이다. 즉, 우리는 다음의 functor
 
@@ -428,9 +394,8 @@ $$0 \rightarrow \mathscr{F}\rightarrow \mathscr{G}_0 \rightarrow \mathscr{G}_1\r
 
 을 정의한다. 직관적으로 이는 $$\Spe(\mathscr{F})$$의 global section이 존재하지 못하도록 하는 부분을 $$\mathscr{Q}$$에, 그리고 다시 $$\mathscr{Q}$$의 global section이 존재하지 못하도록 하는 부븐을 $$\mathscr{Q}'$$에 담는 식으로 계속해서 반복하는 것이다. 이 resolution $$\mathscr{G}_\bullet$$은 injective resolution은 아니지만, 각각의 sheaf가 flabby (flasque) sheaf이기 때문에 이를 통해 global section functor의 right derived functor $$R^i\Gamma$$들을 계산할 수 있다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def15">**정의 15**</ins> 위상공간 $$X$$와 그 위에 정의된 sheaf $$\mathscr{F}$$에 대하여, Godement resolution의 global section들의 sequence
+::: 정의 15
+위상공간 $$X$$와 그 위에 정의된 sheaf $$\mathscr{F}$$에 대하여, Godement resolution의 global section들의 sequence
 
 $$0 \rightarrow \mathscr{F}(X)\rightarrow \mathscr{G}_0(X)\rightarrow \mathscr{G}_1(X)\rightarrow \cdots$$
 
@@ -439,8 +404,7 @@ $$0 \rightarrow \mathscr{F}(X)\rightarrow \mathscr{G}_0(X)\rightarrow \mathscr{G
 $$H^k(X; \mathscr{F})$$
 
 으로 적고, 이를 *sheaf cohomology*라 부른다. 
-
-</div>
+:::
 
 이에 대한 자세한 내용은 [\[대수다양체\] §층 코호몰로지, ⁋정의 1](/ko/math/algebraic_varieties/sheaf_cohomology#def1)에서 더 자세히 다룬다. 이제 푸앵카레 쌍대성은 다음의 isomorphism
 
@@ -464,9 +428,8 @@ $$H^k(M;A)\cong H_{m-k}(M;A)$$
 
 이것이 무슨 뜻인지를 엄밀하게 설명하기 위해서는 최소한 지금까지 들인 노력만큼이 추가로 필요하다. 그러나 이것이 직관적으로 무슨 뜻인지 살펴보는 것은 아마 다음 예시로 충분할 것이다.
 
-<div class="example" markdown="1">
-
-<ins id="ex16">**예시 16**</ins> Torus $$T^2=S^1\times S^1$$을 생각하자. 그럼 우리는 Kunneth formula로부터 $$T^2$$의 cohomology가
+::: 예시 16
+Torus $$T^2=S^1\times S^1$$을 생각하자. 그럼 우리는 Kunneth formula로부터 $$T^2$$의 cohomology가
 
 $$H^0(T^2;\mathbb{Z})\cong \mathbb{Z}, \quad H^1(T^2;\mathbb{Z})\cong \mathbb{Z}^2,\quad H^2(T^2;\mathbb{Z})$$
 
@@ -489,8 +452,7 @@ $$H^2(T^2;\mathbb{Z})=H^1(T^2;\mathbb{Z})\otimes H^1(T^2;\mathbb{Z})\cong \mathb
 ![intersections_on_torus](/assets/images/Math/Algebraic_Topology/Poincare_Duality-6.svg){:style="width:40%" class="invert" .align-center}
 
 과 같이 만날 것이다. 이는 일견 두 개의 교점이 생기는 것 같지만, 위의 그림에서 양쪽 교점은 그 부호가 다르다, 즉, 가령 직선을 첫 번째 벡터, 곡선을 두 번째 벡터로 두고 외적을 할 경우, 하나는 바깥쪽, 다른 하나는 안쪽으로 들어가는 벡터가 나올 것이며 따라서 부호가 반대이다. 이렇게 두 교점이 상쇄되어 이들의 교집합은 $$0$$이 되고, 따라서 $$\alpha\smile\alpha=0$$이 된다.
-
-</div>
+:::
 
 --- 
 

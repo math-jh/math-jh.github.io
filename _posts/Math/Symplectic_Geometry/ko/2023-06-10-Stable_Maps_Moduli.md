@@ -22,26 +22,22 @@ published: false
 
 먼저 도메인 측 도구를 정비한다.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> Genus $$g$$, $$n$$개의 marked points를 갖는 *prestable curve* $$(C, p_1, \ldots, p_n)$$이란
+::: 정의 1
+Genus $$g$$, $$n$$개의 marked points를 갖는 *prestable curve* $$(C, p_1, \ldots, p_n)$$이란
 
 - $$C$$는 connected complete (algebraic 또는 complex analytic) curve로, *node*만을 singularity로 가진다 (즉, 각 singular point의 local model이 $$\{xy = 0\} \subset \mathbb{C}^2$$).
 - $$p_1, \ldots, p_n \in C$$는 distinct smooth points (즉 node가 아닌 점).
 - $$g = h^1(C, \mathcal{O}_C) = p_a(C)$$가 arithmetic genus.
-
-</div>
+:::
 
 각 *irreducible component* $$C_i$$는 normalization하면 smooth curve이며, $$C$$의 dual graph는 vertex가 component, edge가 node인 graph이다.
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**정의 2**</ins> Prestable curve $$(C, p_1, \ldots, p_n)$$이 *stable<sub>안정</sub>*이라 함은, automorphism group $$\mathrm{Aut}(C, p_1, \ldots, p_n)$$이 *유한*함을 의미한다. 등가적으로:
+::: 정의 2
+Prestable curve $$(C, p_1, \ldots, p_n)$$이 *stable<sub>안정</sub>*이라 함은, automorphism group $$\mathrm{Aut}(C, p_1, \ldots, p_n)$$이 *유한*함을 의미한다. 등가적으로:
 
 - Genus $$0$$ component $$C_i$$는 적어도 $$3$$개의 special points (marked points + node)를 가짐.
 - Genus $$1$$ component는 적어도 $$1$$개의 special point를 가짐.
-
-</div>
+:::
 
 Stability 조건은 *moduli problem이 well-posed*하기 위한 최소 조건이다. Genus $$0$$의 경우 $$\mathrm{Aut}(\mathbb{P}^1) = \mathrm{PGL}_2(\mathbb{C})$$는 3-transitive하므로 3개의 점이 finiteness를 강제한다.
 
@@ -49,9 +45,8 @@ Deligne-Mumford는 1969년 stable curves의 moduli space $$\overline{\mathcal{M}
 
 ## Stable map의 정의
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**정의 3**</ins> Symplectic manifold (또는 smooth projective variety) $$X$$, genus $$g \geq 0$$, $$n \geq 0$$, homology class $$\beta \in H_2(X, \mathbb{Z})$$가 주어졌다고 하자. *Genus $$g$$, $$n$$-marked, $$\beta$$-class stable map*이란
+::: 정의 3
+Symplectic manifold (또는 smooth projective variety) $$X$$, genus $$g \geq 0$$, $$n \geq 0$$, homology class $$\beta \in H_2(X, \mathbb{Z})$$가 주어졌다고 하자. *Genus $$g$$, $$n$$-marked, $$\beta$$-class stable map*이란
 
 $$(C, p_1, \ldots, p_n, f),\qquad f: C \to X$$
 
@@ -63,22 +58,19 @@ $$(C, p_1, \ldots, p_n, f),\qquad f: C \to X$$
 - *Stability*: 모든 *contracted* component $$C_i$$ ($$f\vert_{C_i}$$가 상수 map)에 대해 $$\mathrm{Aut}(C_i, p_{i,\bullet})$$이 유한 (즉 prestable curve의 stability 조건을 $$C_i$$가 만족).
 
 두 stable map $$(C, p_\bullet, f)$$와 $$(C', p'_\bullet, f')$$이 *isomorphic*이라 함은 marked points와 map을 보존하는 isomorphism $$\phi: C \xrightarrow{\sim} C'$$이 존재함을 말한다.
-
-</div>
+:::
 
 Stability 조건은 *non-contracted* component에서는 자동으로 성립한다 ($$f\vert_{C_i}$$가 non-constant면 그것이 finiteness를 보장). Contracted component에 대해서만 prestable curve의 stability 조건을 부과한다.
 
 ## Moduli space의 compactness
 
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**명제 4** (Compactness)</ins> $$(X, \omega)$$가 compact symplectic manifold일 때, *genus $$g$$, $$n$$-marked, $$\beta$$-class stable map들의 isomorphism class 집합*
+::: 명제 4 (Compactness)
+$$(X, \omega)$$가 compact symplectic manifold일 때, *genus $$g$$, $$n$$-marked, $$\beta$$-class stable map들의 isomorphism class 집합*
 
 $$\overline{\mathcal{M}}_{g, n}(X, \beta) := \big\{ (C, p_\bullet, f) \big\} \big/ \sim$$
 
 은 compact (Hausdorff) topological space를 이룬다.
-
-</div>
+:::
 
 증명은 [§J-holomorphic curves, ⁋명제 8](/ko/math/symplectic_geometry/j_holomorphic_curves#prop8)의 Gromov compactness theorem의 직접적 적용이다. Stable map들의 sequence가 energy bound (homology class가 fixed이므로 자동) 하에서 reparametrization과 bubble formation 후 stable limit을 갖는다는 statement이다. Stability 조건이 *unique한* limit object를 보장한다.
 
@@ -102,15 +94,13 @@ $$\psi_i := c_1(\mathbb{L}_i) \in H^2(\overline{\mathcal{M}}_{g, n}(X, \beta), \
 
 $$\overline{\mathcal{M}}_{g, n}(X, \beta)$$의 *expected* (또는 *virtual*) dimension은 deformation-obstruction theory로부터 계산된다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**명제 5** (Expected dimension)</ins> $$X$$가 complex dimension $$d$$일 때
+::: 명제 5 (Expected dimension)
+$$X$$가 complex dimension $$d$$일 때
 
 $$\mathrm{vdim}_\mathbb{C}\, \overline{\mathcal{M}}_{g, n}(X, \beta) = \int_\beta c_1(TX) + (d - 3)(1 - g) + n$$
 
 이다.
-
-</div>
+:::
 
 증명 sketch: deformation의 tangent space와 obstruction space의 차원은 deformation theory에서
 
@@ -128,11 +118,9 @@ $$[\overline{\mathcal{M}}_{g, n}(X, \beta)]^{\mathrm{vir}} \in H_{2 \mathrm{vdim
 
 가 정합적으로 construct된다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop6">**명제 6** (Virtual fundamental class)</ins> Li-Tian, Behrend-Fantechi (algebraic case), Fukaya-Ono, Ruan, Siebert (symplectic case) 등에 의해, moduli space $$\overline{\mathcal{M}}_{g, n}(X, \beta)$$ 위에 *virtual fundamental class* $$[\overline{\mathcal{M}}_{g, n}(X, \beta)]^{\mathrm{vir}}$$가 잘 정의되며, expected dimension의 homology class를 이룬다.
-
-</div>
+::: 명제 6 (Virtual fundamental class)
+Li-Tian, Behrend-Fantechi (algebraic case), Fukaya-Ono, Ruan, Siebert (symplectic case) 등에 의해, moduli space $$\overline{\mathcal{M}}_{g, n}(X, \beta)$$ 위에 *virtual fundamental class* $$[\overline{\mathcal{M}}_{g, n}(X, \beta)]^{\mathrm{vir}}$$가 잘 정의되며, expected dimension의 homology class를 이룬다.
+:::
 
 Virtual fundamental class의 정확한 construction은 매우 기술적이며, 본 글의 범위를 넘어선다 ([LT], [BF], [FO]). 핵심 idea: actual moduli space가 너무 큰 경우, *obstruction bundle*의 *Euler class*를 곱하여 expected dimension의 cycle을 인공적으로 만들어낸다. Smooth case에서는 $$[\overline{\mathcal{M}}_{g, n}(X, \beta)]^{\mathrm{vir}} = [\overline{\mathcal{M}}_{g, n}(X, \beta)]$$이다.
 

@@ -36,17 +36,15 @@ exist and are continuous. If a function $$f$$ is $$C^k$$ for every natural numbe
 
 Unlike general topological spaces, a topological manifold looks locally like $$\mathbb{R}^n$$, so we can import the notion of differentiation defined there to $$M$$. This is possible because differentiability is essentially a local property.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> Let a topological manifold $$M$$ be given. For $$0\leq k\leq\infty$$, coordinate charts $$(U,\varphi)$$ and $$(V,\psi)$$ are *$$C^k$$-compatible* if both *transition maps*
+::: Definition 1
+Let a topological manifold $$M$$ be given. For $$0\leq k\leq\infty$$, coordinate charts $$(U,\varphi)$$ and $$(V,\psi)$$ are *$$C^k$$-compatible* if both *transition maps*
 
 $$\psi\circ\varphi^{-1}:\varphi(U\cap V)\rightarrow\psi(U\cap V),\qquad\varphi\circ\psi^{-1}:\psi(U\cap V)\rightarrow\varphi(U\cap V)$$
 
 are $$C^k$$. A collection $$\mathcal{A}=\{(U_\lambda, \varphi_\lambda)\}_{\lambda\in\Lambda}$$ of $$C^k$$-compatible charts satisfying $$M=\bigcup U_\lambda$$ is called a *$$C^k$$-atlas*.
 
 Among $$C^k$$-atlases defined on $$M$$, an atlas that is maximal with respect to inclusion is called a *$$C^k$$-differentiable structure*, and in this case $$M$$ is called a *$$C^k$$-differentiable manifold*. In the special case $$k=\infty$$, this structure is called a *smooth differentiable manifold* or more simply a *differentiable manifold*.
-
-</div>
+:::
 
 The reason we think of a *maximal* atlas as giving a differentiable structure in this definition is that it is entirely possible for two non-maximal atlases to give essentially the same differentiable structure. For example, $$\mathbb{R}$$ has the $$C^\infty$$-atlas
 
@@ -60,11 +58,9 @@ However, as we will see in [Proposition 3](#prop3), since a maximal atlas contai
 
 On the other hand, to understand an object in mathematics it suffices to know the functions defined on it. Henceforth we assume all manifolds are smooth differentiable manifolds.
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**Definition 2**</ins> Consider a manifold $$M$$ and a point $$p\in M$$. A function $$f$$ defined on a suitable open neighborhood of $$p$$ is $$C^\infty$$ at $$p$$ if for some coordinate chart $$(U,\varphi)$$ containing $$p$$, the function $$f\circ\varphi^{-1}:U'\rightarrow \mathbb{R}$$ is $$C^\infty$$ at the point $$\varphi(p)$$.
-
-</div>
+::: Definition 2
+Consider a manifold $$M$$ and a point $$p\in M$$. A function $$f$$ defined on a suitable open neighborhood of $$p$$ is $$C^\infty$$ at $$p$$ if for some coordinate chart $$(U,\varphi)$$ containing $$p$$, the function $$f\circ\varphi^{-1}:U'\rightarrow \mathbb{R}$$ is $$C^\infty$$ at the point $$\varphi(p)$$.
+:::
 
 Suppose another coordinate chart $$(V,\psi)$$ is defined on another open neighborhood of $$p$$. If $$f\circ\varphi^{-1}$$ is $$C^\infty$$ at $$\varphi(p)$$ but $$f\circ\psi^{-1}$$ is not at $$\psi(p)$$, then this definition would not be well-defined. However, on $$\psi(U\cap V)$$ we have
 
@@ -72,15 +68,11 @@ $$f\circ\psi^{-1}=(f\circ\varphi^{-1})\circ(\varphi\circ\psi^{-1})$$
 
 so $$f\circ\psi^{-1}$$ is $$C^\infty$$ at $$\psi(p)$$. By a similar argument one can show the following.
 
-<div class="proposition" markdown="1">
+::: Proposition 3
+Let a $$C^k$$-atlas $$\mathcal{A}$$ on a topological manifold $$M$$ be given. Then there exists a unique maximal $$C^k$$-atlas containing $$\mathcal{A}$$. Therefore any $$C^k$$-atlas $$\mathcal{A}$$ defines a unique $$C^k$$-differentiable structure on $$M$$.
+:::
 
-<ins id="prop3">**Proposition 3**</ins> Let a $$C^k$$-atlas $$\mathcal{A}$$ on a topological manifold $$M$$ be given. Then there exists a unique maximal $$C^k$$-atlas containing $$\mathcal{A}$$. Therefore any $$C^k$$-atlas $$\mathcal{A}$$ defines a unique $$C^k$$-differentiable structure on $$M$$.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proof
 Define $$\mathcal{A}'$$ by the formula
 
 $$\mathcal{A}'=\{(V,\psi)\mid\psi\circ\varphi_\lambda^{-1}, \varphi_\lambda\circ\psi^{-1}\text{ are $C^k$ for all $\varphi_\lambda\in\mathcal{A}$}\}$$
@@ -96,18 +88,15 @@ $$\psi'\circ\psi^{-1}=(\psi'\circ\varphi^{-1})\circ(\varphi\circ\psi^{-1})$$
 so $$\psi'\circ\psi^{-1}$$ is $$C^k$$ at $$p$$. Since $$p$$ was arbitrary, this shows that $$\psi'\circ\psi^{-1}$$ is $$C^k$$. Of course, reversing the roles of $$(V,\psi)$$ and $$(V',\psi')$$ shows that the reverse transition map is also $$C^k$$.
 
 By definition $$\mathcal{A}'$$ is clearly a maximal $$C^k$$-atlas, and its uniqueness is easily verified.
+:::
 
-</details>
-
-<div class="example" markdown="1">
-
-<ins id="ex4">**Example 4**</ins> On the real numbers $$\mathbb{R}$$, consider the two atlases
+::: Example 4
+On the real numbers $$\mathbb{R}$$, consider the two atlases
 
 $$\mathcal{A}_1=\{(\mathbb{R},\id_\mathbb{R})\},\qquad \mathcal{A}_2=\{(\mathbb{R}, x\mapsto x^3)\}$$
 
 These are atlases consisting of a single chart, so they are trivially $$C^\infty$$. By the preceding [Proposition 3](#prop3), there exists a differentiable structure containing each of them. However, they are not equal, because the two charts $$(\mathbb{R},\id_\mathbb{R})$$ and $$(\mathbb{R}, x\mapsto x^3)$$ are not $$C^\infty$$-compatible. (While $$x\mapsto x^3$$ is a $$C^\infty$$ function, its inverse $$x\mapsto x^{1/3}$$ is not.)
-
-</div>
+:::
 
 However, although the two atlases in [Example 4](#ex4) do not give the *same* differentiable structure, they give differentiable structures that are *diffeomorphic* to each other.
 
@@ -117,15 +106,11 @@ We showed that a continuous partition of unity exists on any topological manifol
 
 Therefore we need to construct a smooth partition of unity, and for this it suffices to prove the following lemma.
 
-<div class="proposition" markdown="1">
+::: Lemma 5 ($$C^\infty$$ Urysohn Lemma)
+Let real numbers $$a'<a<b<b'$$ be given. Then there exists a $$C^\infty$$ function $$\psi:\mathbb{R}\rightarrow[0,1]$$ that equals $$1$$ on $$[a,b]$$ and $$0$$ outside $$(a',b')$$.
+:::
 
-<ins id="lem5">**Lemma 5 ($$C^\infty$$ Urysohn Lemma)**</ins> Let real numbers $$a'<a<b<b'$$ be given. Then there exists a $$C^\infty$$ function $$\psi:\mathbb{R}\rightarrow[0,1]$$ that equals $$1$$ on $$[a,b]$$ and $$0$$ outside $$(a',b')$$.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proof
 We may assume without loss of generality that $$a'=-2,a=-1,b=1,b'=2$$. First define a function $$f$$ by
 
 $$f(t)=\begin{cases}e^{-1/t}&t>0\\0&t\leq 0\end{cases}$$
@@ -137,8 +122,7 @@ $$g(t)=\frac{f(t)}{f(t)+f(1-t)}$$
 Then $$g$$ is likewise always non-negative, its value is always less than or equal to $$1$$, and in particular it is identically $$1$$ when $$t\geq 1$$ and identically $$0$$ when $$t\leq 0$$. Therefore it suffices to define $$\psi$$ by the formula
 
 $$\psi(t)=g(t+2)g(2-t)$$
-
-</details>
+:::
 
 Using the above $$C^\infty$$ Urysohn lemma in place of the general Urysohn lemma, we can construct a smooth partition of unity on a differentiable manifold.
 

@@ -18,9 +18,8 @@ In the previous post, we used filtrations and induction to prove the balancing o
 
 ## Spectral Sequences
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> A *spectral sequence* is a collection of the following data.
+::: Definition 1
+A *spectral sequence* is a collection of the following data.
 
 1. A bigraded object $$E_r=(E_r^{p,q})_{p,q}$$,
 2. A differential $$d_r$$ on $$E_r$$ of bidegree $$(r,1-r)$$, i.e., $$d_r:E_r^{p,q}\rightarrow E_r^{p+r, q-r+1}$$ (so that $$d_r^2=0$$)
@@ -28,8 +27,7 @@ In the previous post, we used filtrations and induction to prove the balancing o
 For each $$r$$, the bigraded complex $$(E_r^{p,q}, d_r)$$ is called the *$$r$$-th page*. These two pieces of data are related by the formula
 
 $$E_{r+1}^{p,q}\cong \frac{\ker(d_r^{p,q}: E_r^{p,q}\rightarrow E_r^{p+r,q-r+1})}{\im(d_r^{p-r,q+r-1}: E_r^{p-r, q+r-1}\rightarrow E_r^{p,q})}$$
-
-</div>
+:::
 
 If we visualize the elements of the $$E_r$$ page as points $$(p,q)$$ in the plane, then $$d_r^{p,q}$$ goes from $$(p,q)$$ to $$(p+r, q-r+1)$$, and these arrows form a cochain complex. In particular, from this viewpoint $$E_{r+1}^{p,q}$$ can be regarded as the cohomology at the point $$(p,q)$$ of the cochain complex passing through $$(p,q)$$.
 
@@ -43,15 +41,13 @@ We analyzed this, and our main goal was ultimately to compute the homology of th
 
 As mentioned above, the following [Definition 2](#def2) is a much more general version, but the philosophy of decomposing a complex more finely remains essentially the same.
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**Definition 2**</ins> A *decreasing filtration* $$F$$ on a cochain complex $$A^\bullet$$ is a sequence of subcomplexes $$(F^p A^\bullet)_p$$ satisfying
+::: Definition 2
+A *decreasing filtration* $$F$$ on a cochain complex $$A^\bullet$$ is a sequence of subcomplexes $$(F^p A^\bullet)_p$$ satisfying
 
 $$\cdots \supset F^{p-1}A^\bullet \supset F^pA^\bullet \supset F^{p+1}A^\bullet \supset \cdots$$
 
 A cochain complex equipped with a (decreasing) filtration is called a *filtered complex*, denoted $$(A^\bullet, F)$$.
-
-</div>
+:::
 
 In particular, since each $$F^p A^\bullet$$ is a subcomplex of $$A^\bullet$$, the differential of $$A^\bullet$$ restricts to $$F^pA^\bullet$$ and the cohomology with respect to this restricted differential is well defined. Intuitively, as $$p$$ increases, $$F^p A^\bullet$$ becomes smaller, and one can understand that new information is added at each stage. In the proof of [§Ext and Tor, ⁋Proposition 3](/en/math/homological_algebra/ext_and_tor#prop3) above, we considered $$F^{p+1}A^\bullet/F^pA^\bullet$$ in order to apply induction and identified this with the original double complex $$K^{p, \bullet-p}$$; in the general case too, this information is important in that it *exactly* captures the $$p$$-th filtration step. The cochain complex obtained in this way,
 
@@ -61,13 +57,11 @@ is called the *associated graded complex* with respect to $$F$$. Of course, the 
 
 The most important fact about a filtration is that when a filtered complex $$A^\bullet$$ is given, the filtration descends naturally to the cohomology level as well. We will use this filtration to define the convergence of the spectral sequence induced from a filtered complex.
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**Definition 3**</ins> Let $$(A^\bullet, F)$$ be a filtered complex. The image at the cohomology level of the inclusion $$F^pA^\bullet\rightarrow A^\bullet$$ is defined by
+::: Definition 3
+Let $$(A^\bullet, F)$$ be a filtered complex. The image at the cohomology level of the inclusion $$F^pA^\bullet\rightarrow A^\bullet$$ is defined by
 
 $$F^p H^n = \operatorname{im}\bigl(H^n(F^p A^\bullet) \to H^n(A^\bullet)\bigr)$$
-
-</div>
+:::
 
 This filtration consists of the cohomology classes induced by cocycles contained in $$F^p A^\bullet$$. As $$p$$ increases, $$F^p A^\bullet$$ becomes smaller, so $$F^p H^n$$ also becomes smaller.
 
@@ -75,23 +69,19 @@ This filtration consists of the cohomology classes induced by cocycles contained
 
 Now we explain the convergence of spectral sequences. Intuitively, since each page $$E_r^{p,q}$$ of a spectral sequence is an object that is progressively refined as $$r$$ increases, we must examine what this approximation ultimately converges to. We therefore begin with the following definition.
 
-<div class="definition" markdown="1">
-
-<ins id="def4">**Definition 4**</ins> A spectral sequence $$\{E_r^{p,q}, d_r\}$$ is *regular* if for each $$(p,q)$$, we have $$E_r^{p,q} = E_{r+1}^{p,q}$$ for all sufficiently large $$r$$. The stabilized value is then denoted $$E_\infty^{p,q}$$.
-
-</div>
+::: Definition 4
+A spectral sequence $$\{E_r^{p,q}, d_r\}$$ is *regular* if for each $$(p,q)$$, we have $$E_r^{p,q} = E_{r+1}^{p,q}$$ for all sufficiently large $$r$$. The stabilized value is then denoted $$E_\infty^{p,q}$$.
+:::
 
 Since regularity means that the pages of the spectral sequence no longer change at each bidegree, it enables the following definition.
 
-<div class="definition" markdown="1">
-
-<ins id="def5">**Definition 5**</ins> A spectral sequence $$\{E_r^{p,q}, d_r\}$$ *converges* to a filtered graded object $$(H^n, F)$$ if for each $$(p,q)$$,
+::: Definition 5
+A spectral sequence $$\{E_r^{p,q}, d_r\}$$ *converges* to a filtered graded object $$(H^n, F)$$ if for each $$(p,q)$$,
 
 $$E_\infty^{p,q} \cong F^p H^{p+q} / F^{p+1} H^{p+q} = \gr^p H^{p+q}$$
 
 holds. We write this as $$E_r^{p,q} \Rightarrow H^{p+q}$$.
-
-</div>
+:::
 
 Again, thinking of the familiar example of the total complex of a double complex, this can be regarded as a generalization of the phenomenon that the homology of the total complex emerges when we impose the horizontal filtration on the double complex and send $$p$$ to $$0$$.
 
@@ -99,11 +89,9 @@ If for each $$n$$ we have $$\bigcap_p F^p H^n = 0$$ (Hausdorff condition), $$\bi
 
 In general, regularity of a spectral sequence does not always hold. However, if for all $$r$$ the terms $$E_r^{p,q}$$ are supported only in the first quadrant, that is, if $$E_r^{p,q}\neq 0$$ is possible only when $$p,q\geq 0$$, then for sufficiently large $$r$$ the differential $$d_r$$ sends any given point into the second or fourth quadrant, where it vanishes; hence the spectral sequence is always regular. That is, the following holds.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop6">**Proposition 6**</ins> A first quadrant spectral sequence, i.e., one for which $$E_r^{p,q} = 0$$ whenever $$p < 0$$ or $$q < 0$$, is always regular. Moreover, when such a spectral sequence converges as $$E_r^{p,q} \Rightarrow H^{p+q}$$, for each $$(p,q)$$ we have $$E_r^{p,q} = E_\infty^{p,q}$$ for all sufficiently large $$r$$.
-
-</div>
+::: Proposition 6
+A first quadrant spectral sequence, i.e., one for which $$E_r^{p,q} = 0$$ whenever $$p < 0$$ or $$q < 0$$, is always regular. Moreover, when such a spectral sequence converges as $$E_r^{p,q} \Rightarrow H^{p+q}$$, for each $$(p,q)$$ we have $$E_r^{p,q} = E_\infty^{p,q}$$ for all sufficiently large $$r$$.
+:::
 
 ## Filtrations and Spectral Sequences
 
@@ -138,41 +126,32 @@ Of course, verifying that this correspondence is well defined and actually defin
 
 In particular, what ($$\ast$$) reveals is that all the $$d_r$$ are essentially the same map as $$d$$, and the index $$r$$ serves only to measure how far across the filtration one jumps. That is, the following holds.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop7">**Proposition 7**</ins> The $$E_r^{p,q}$$ and $$d_r$$ constructed from a filtered complex $$(A^\bullet, F)$$ as above satisfy the conditions of a spectral sequence in [Definition 1](#def1). Namely,
+::: Proposition 7
+The $$E_r^{p,q}$$ and $$d_r$$ constructed from a filtered complex $$(A^\bullet, F)$$ as above satisfy the conditions of a spectral sequence in [Definition 1](#def1). Namely,
 
 $$d_r \circ d_r = 0$$
 
 holds, and $$E_{r+1}^{p,q} \cong H(E_r, d_r)$$.
-
-</div>
+:::
 
 Moreover, the spectral sequence defined in this way also enjoys a form of functoriality.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop8">**Proposition 8**</ins> Let $$f : (A^\bullet, F) \to (B^\bullet, G)$$ be a chain map between filtered complexes. That is, for each $$p$$,
+::: Proposition 8
+Let $$f : (A^\bullet, F) \to (B^\bullet, G)$$ be a chain map between filtered complexes. That is, for each $$p$$,
 
 $$f(F^p A^\bullet) \subset G^p B^\bullet$$
 
 holds. Then $$f$$ induces a well-defined map $$f_r : E_r(A) \to E_r(B)$$ for each $$r$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 Since $$f$$ is a chain map, it sends cocycles to cocycles and boundaries to boundaries. Also, since $$f(F^p) \subset G^p$$, we have $$f(Z_r^{p,q}(A)) \subset Z_r^{p,q}(B)$$ and $$f(B_r^{p,q}(A)) \subset B_r^{p,q}(B)$$. Therefore $$f$$ induces a well-defined map on each $$E_r$$.
-
-</details>
+:::
 
 Our core result is that this spectral sequence actually reaches the cohomology of the original complex. Let us first define the following.
 
-<div class="definition" markdown="1">
-
-<ins id="def9">**Definition 9**</ins> A filtered complex $$(A^\bullet, F)$$ is *bounded* if for each $$n$$ there exists a sufficiently large $$p$$ with $$F^pA^n=0$$, and a sufficiently small $$p$$ with $$F^pA^n=A^n$$.
-
-</div>
+::: Definition 9
+A filtered complex $$(A^\bullet, F)$$ is *bounded* if for each $$n$$ there exists a sufficiently large $$p$$ with $$F^pA^n=0$$, and a sufficiently small $$p$$ with $$F^pA^n=A^n$$.
+:::
 
 That is, fixing [Definition 2](#def2) in degree $$n$$ and considering the filtration
 
@@ -186,19 +165,16 @@ $$E_\infty^{p,q}\cong F^p H^{p+q}(A^\bullet)/F^{p+1}H^{p+q}(A^\bullet)$$
 
 and from this we obtain the following result.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop10">**Proposition 10**</ins> Let $$(A^\bullet, F)$$ be a bounded filtered complex, and let $$(E_r^{p,q})$$ be the spectral sequence it defines. Then $$(E_r^{p,q})$$ converges to the filtered graded object $$(H^\bullet, F)$$ of [Definition 3](#def3). That is, $$E_r^{p,q}\Rightarrow H^{p+q}(A^\bullet)$$.
-
-</div>
+::: Proposition 10
+Let $$(A^\bullet, F)$$ be a bounded filtered complex, and let $$(E_r^{p,q})$$ be the spectral sequence it defines. Then $$(E_r^{p,q})$$ converges to the filtered graded object $$(H^\bullet, F)$$ of [Definition 3](#def3). That is, $$E_r^{p,q}\Rightarrow H^{p+q}(A^\bullet)$$.
+:::
 
 ## Spectral Sequences of Double Complexes
 
 We have taken the proof of the balancing of $$\Ext$$ and $$\Tor$$ in [§Ext and Tor, ⁋Proposition 3](/en/math/homological_algebra/ext_and_tor#prop3) as the motivation for our theory. We close this post by examining the spectral sequence defined from a double complex.
 
-<div class="example" markdown="1">
-    
-<ins id="ex11">**Example 11**</ins> Consider the total complex $$\Tot(K)^\bullet$$ of an arbitrary double complex $$K^{p,q}$$. We can equip this total complex with a filtration in two ways.
+::: Example 11
+Consider the total complex $$\Tot(K)^\bullet$$ of an arbitrary double complex $$K^{p,q}$$. We can equip this total complex with a filtration in two ways.
 
 First, define the *vertical filtration* by
 
@@ -225,8 +201,7 @@ and $$d_0$$ is given by the horizontal differential $$d_h$$. Therefore the $$E_1
 $$E_1^{p,q} = H^p_h(K^{\bullet, q})$$
 
 and $$d_1$$ is induced by the vertical differential $$d_v$$.
-
-</div>
+:::
 
 In particular, let $$K^{p,q}$$ be a first quadrant double complex. Then both filtrations define bounded filtered complexes, so by [Proposition 10](#prop10) each spectral sequence converges to $$H^\bullet(\Tot(K))$$. From this we can reconstruct the proof of [§Ext and Tor, ⁋Proposition 3](/en/math/homological_algebra/ext_and_tor#prop3) in fancier language.
 

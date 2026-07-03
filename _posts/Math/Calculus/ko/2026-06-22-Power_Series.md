@@ -18,15 +18,13 @@ weight: 5
 
 ## 멱급수와 수렴반경
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> 중심 $$a$$에서의 *멱급수<sub>power series</sub>*는 수열 $$(c_n)_{n\geq 0}$$에 대해
+::: 정의 1
+중심 $$a$$에서의 *멱급수<sub>power series</sub>*는 수열 $$(c_n)_{n\geq 0}$$에 대해
 
 $$\sum_{n=0}^{\infty} c_n (x - a)^n = c_0 + c_1(x-a) + c_2(x-a)^2 + \cdots$$
 
 꼴의 급수이다. 이 급수가 수렴하는 $$x$$들의 모임을 *domain of convergence<sub>수렴역</sub>*이라 하고, 그 위에서 급수의 합은 $$x$$의 함수를 정의한다.
-
-</div>
+:::
 
 논의를 간단히 하기 위해 이후 $$a = 0$$인 경우, 즉 $$\sum c_n x^n$$을 주로 다루며, 일반적인 경우는 $$x$$를 $$x - a$$로 바꾸면 되므로 이는 일반성을 크게 잃어버리는 가정이 아니다. 
 
@@ -36,11 +34,9 @@ $$\lvert c_n x^n\rvert = \lvert c_n x_0^n\rvert \cdot r^n \leq M r^n$$
 
 이며 우변은 공비 $$r < 1$$의 수렴하는 기하급수이므로 [§무한급수, ⁋정리 6](/ko/math/calculus/series#thm6)을 적용할 수 있기 때문이다. 이제 수렴하는 $$x$$들의 절댓값의 상한을 $$R$$ (그런 $$x$$가 무계이면 $$R=\infty$$)이라 두자. $$\lvert x\rvert<R$$이면 $$\lvert x\rvert<\lvert x_0\rvert$$이면서 수렴하는 $$x_0$$이 존재하여 앞서 보인 사실로 절대수렴하고, $$\lvert x\rvert>R$$이면 상한의 정의상 발산하므로, 다음의 정리를 얻는다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="thm2">**정리 2 (수렴반경)**</ins> 각 멱급수 $$\sum c_n x^n$$에 대하여 $$0 \leq R \leq \infty$$인 *수렴반경<sub>radius of convergence</sub>* $$R$$이 존재하여, $$\lvert x\rvert < R$$이면 절대수렴하고 $$\lvert x\rvert > R$$이면 발산한다.
-
-</div>
+::: 정리 2 (수렴반경)
+각 멱급수 $$\sum c_n x^n$$에 대하여 $$0 \leq R \leq \infty$$인 *수렴반경<sub>radius of convergence</sub>* $$R$$이 존재하여, $$\lvert x\rvert < R$$이면 절대수렴하고 $$\lvert x\rvert > R$$이면 발산한다.
+:::
 
 여기서 $$R=0$$인 경우는 주어진 멱급수가 $$x=0$$에서만 수렴하는 경우로 해석되며 (따라서 우리의 관심사가 아니다), 반대쪽 극한인 $$R=\infty$$의 경우는 주어진 멱급수가 실수 전체에서 수렴하는 경우로 해석된다. 이 두 경우를 제외하면, 수렴반경은 $$\lvert x\rvert=R$$인 경우에 대한 수렴여부는 결정해주지 않으며 실제로 멱급수에 따라 모든 조합이 가능하다.
 
@@ -54,9 +50,8 @@ $$\frac{1}{R} = \limsup_{n\to\infty} \lvert c_n\rvert^{1/n}$$
 
 멱급수를 일찍 도입하여 얻는 이득 중 하나는 지수함수를 더 확실한 방법으로 정의할 수 있다는 것이다. 
 
-<div class="example" markdown="1">
-
-<ins id="ex3">**예시 3 (지수함수)**</ins> 앞서 본 실수 전체에서 수렴하는 멱급수를
+::: 예시 3 (지수함수)
+앞서 본 실수 전체에서 수렴하는 멱급수를
 
 $$e^x = \sum_{n=0}^\infty \frac{x^n}{n!}$$
 
@@ -73,29 +68,24 @@ $$\left(1 + \frac1n\right)^n = \sum_{k=0}^n \binom{n}{k}\frac{1}{n^k} = \sum_{k=
 $$\left(1 + \frac1n\right)^n \geq \sum_{k=0}^m \frac{1}{k!}\prod_{j=0}^{k-1}\left(1 - \frac{j}{n}\right)$$
 
 을 얻는다. 좌변은 $$L$$ 이하이므로 우변 또한 $$L$$ 이하이고, $$m$$을 고정한 채 $$n \to \infty$$를 보내면 우변은 유한합이고 각 인수가 $$1 - j/n \to 1$$이므로 [§함수의 극한, ⁋명제 5](/ko/math/calculus/functions_and_limits#prop5) ([§수열의 극한, ⁋명제 2](/ko/math/calculus/sequences#prop2))에 의해 $$s_m$$으로 수렴한다. 수렴하는 수열의 모든 항이 $$L$$ 이하이면 그 극한도 $$L$$ 이하이므로 $$s_m \leq L$$이고, 다시 $$m \to \infty$$를 보내면 $$s \leq L$$이다. 두 부등식을 합쳐 $$L = s$$, 즉 두 글에서 정의한 $$e$$는 같은 수이다.
-
-</div>
+:::
 
 ## 멱급수의 연산
 
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**명제 4**</ins> $$f(x) = \sum a_n x^n$$, $$g(x) = \sum b_n x^n$$이 각각 수렴반경 $$R_f, R_g$$를 가지면, $$\lvert x\rvert < \min(R_f, R_g)$$에서
+::: 명제 4
+$$f(x) = \sum a_n x^n$$, $$g(x) = \sum b_n x^n$$이 각각 수렴반경 $$R_f, R_g$$를 가지면, $$\lvert x\rvert < \min(R_f, R_g)$$에서
 
 $$f(x) + g(x) = \sum_{n=0}^\infty (a_n + b_n)x^n, \qquad f(x)g(x) = \sum_{n=0}^\infty \left(\sum_{k=0}^n a_k b_{n-k}\right) x^n$$
 
 이다. 곱의 계수는 두 계수열의 *코시 곱<sub>Cauchy product</sub>*이다.
-
-</div>
+:::
 
 코시 곱은 두 다항식을 곱해 같은 차수의 항을 모으는 것을 무한 차수로 확장한 것이다. 가령 $$1/(1-x) = \sum_n x^n$$을 자신과 곱하면 $$n$$차 계수가 $$\sum_{k=0}^n 1\cdot 1 = n+1$$이 되어 $$1/(1-x)^2 = \sum_n (n+1)x^n$$을 얻는다.
 
 ## 해석함수
 
-<div class="definition" markdown="1">
-
-<ins id="def5">**정의 5**</ins> 함수 $$f$$가 점 $$a$$ 근방에서 그곳을 중심으로 하는 멱급수와 일치하면 $$f$$가 $$a$$에서 *해석적<sub>analytic</sub>*이라 한다. 정의역의 모든 점에서 해석적이면 $$f$$를 *해석함수*라 한다.
-
-</div>
+::: 정의 5
+함수 $$f$$가 점 $$a$$ 근방에서 그곳을 중심으로 하는 멱급수와 일치하면 $$f$$가 $$a$$에서 *해석적<sub>analytic</sub>*이라 한다. 정의역의 모든 점에서 해석적이면 $$f$$를 *해석함수*라 한다.
+:::
 
 [정의 5](#def5)에 의해 해석함수는 자신의 테일러 급수와 일치한다. 그러나 그 역은 거짓이다. $$f(x) = e^{-1/x^2}$$ ($$f(0) = 0$$) 은 $$\mathbb{R}$$ 전체에서 매끄럽지만 $$0$$에서 모든 계도함수가 $$0$$이어서 그 테일러 급수가 항등적으로 $$0$$이고, 따라서 $$0$$의 어떤 근방에서도 $$f$$와 일치하지 않아 $$f$$는 $$0$$에서 해석적이지 않다. 즉 매끄러움이 해석성을 보장하지 못하는 것이며, 테일러 급수가 함수로 수렴하는지는 미분법을 배운 뒤 테일러 정리에서 나머지항을 통해 판정할 수 있다. 

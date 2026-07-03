@@ -18,17 +18,15 @@ last_polished_at: 2026-06-26T22:30:02+00:00
 
 We now introduce the notion of a derivation. More precisely, we shall be concerned with the concept of differential forms, and to handle this we need a graded algebra. Henceforth, we write $$\Delta$$ for the abelian group that provides the graded algebra structure.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> Let a function $$\varepsilon : \Delta \times \Delta \to \{ \pm 1 \}$$ satisfy the following three conditions for an abelian group $$(\Delta, +, 0)$$.
+::: Definition 1
+Let a function $$\varepsilon : \Delta \times \Delta \to \{ \pm 1 \}$$ satisfy the following three conditions for an abelian group $$(\Delta, +, 0)$$.
 
 - $$\varepsilon(\alpha + \alpha', \beta) = \varepsilon(\alpha, \beta)\varepsilon(\alpha', \beta)$$  
 - $$\varepsilon(\alpha, \beta + \beta') = \varepsilon(\alpha, \beta)\varepsilon(\alpha, \beta')$$  
 - $$\varepsilon(\beta, \alpha) = \varepsilon(\alpha, \beta)$$
 
 Then we call $$\varepsilon$$ a *commutation factor*.
-
-</div>
+:::
 
 In particular, we then have $$\varepsilon(2.\alpha, \beta) = \varepsilon(\alpha, 2.\beta) = 1$$.
 
@@ -50,15 +48,13 @@ Assume that all three of these $$A$$-linear maps are degree $$0$$ graded homomor
 
 We now make the following definition.
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**Definition 2**</ins> In addition to the above situation, suppose a commutation factor $$\varepsilon: \Delta \times \Delta \to \{ \pm 1 \}$$ is given. Then a degree $$\delta$$ *$$(A, \varepsilon)$$-derivation* from $$(E, E', E'')$$ to $$(F, F', F'')$$, or simply an *$$\varepsilon$$-derivation*, is a triple of degree $$\delta$$ graded $$A$$-module homomorphisms $$d: E \rightarrow F$$, $$d': E' \rightarrow F'$$, $$d'': E'' \rightarrow F''$$ satisfying the condition
+::: Definition 2
+In addition to the above situation, suppose a commutation factor $$\varepsilon: \Delta \times \Delta \to \{ \pm 1 \}$$ is given. Then a degree $$\delta$$ *$$(A, \varepsilon)$$-derivation* from $$(E, E', E'')$$ to $$(F, F', F'')$$, or simply an *$$\varepsilon$$-derivation*, is a triple of degree $$\delta$$ graded $$A$$-module homomorphisms $$d: E \rightarrow F$$, $$d': E' \rightarrow F'$$, $$d'': E'' \rightarrow F''$$ satisfying the condition
 
 $$d''(xx') = (dx)x' + \varepsilon(\delta, \deg(x))x(d'x')$$
 
 If $$\varepsilon$$ is always $$1$$, so that we may omit $$\varepsilon$$ from the above formula, we simply call $$(d,d',d'')$$ a *derivation*.
-
-</div>
+:::
 
 To avoid confusion in the above definition, it is worth noting where each term belongs: for example, $$(dx)x'$$ on the right-hand side is the element of $$F''$$ obtained by multiplying $$dx\in F$$ and $$x'\in E'$$ via $$\lambda_1$$. However, in practice we are interested in the following two special cases.
 
@@ -133,30 +129,26 @@ $$[x,y]_\varepsilon=xy-\varepsilon(\deg(x),\deg(y))yx$$
 
 Then through this we can define the $$\varepsilon$$-bracket in $$G=\End_{\bgr_\Delta \Alg{A}^3}(E, E', E'')$$.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop3">**Proposition 3**</ins> Let $$d_1, d_2$$ be $$\varepsilon$$-derivations on $$(E, E', E'')$$. Denoting their degrees by $$\delta_1$$, $$\delta_2$$, their $$\varepsilon$$-bracket
+::: Proposition 3
+Let $$d_1, d_2$$ be $$\varepsilon$$-derivations on $$(E, E', E'')$$. Denoting their degrees by $$\delta_1$$, $$\delta_2$$, their $$\varepsilon$$-bracket
 
 $$[d_1, d_2]_\varepsilon = d_1 \circ d_2 - \varepsilon_{\delta_1, \delta_2} \, d_2 \circ d_1$$
 
 is another $$\varepsilon$$-derivation of degree $$\delta_1 + \delta_2$$. In particular, if $$d$$ is an $$\varepsilon$$-derivation of degree $$\delta$$ and $$\varepsilon_{\delta, \delta} = -1$$, then $$d^2 = d \circ d$$ is a derivation.
-
-</div>
+:::
 
 The proof of this is immediate from the expansion of $$(d_2\circ d_1)(xx')$$ computed above.
 
 Then restricting to the case $$\Delta=\mathbb{Z}$$ in particular, the above proposition yields the following corollary.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor4">**Corollary 4**</ins> Let $$\Delta = \mathbb{Z}$$. Then the following hold.
+::: Corollary 4
+Let $$\Delta = \mathbb{Z}$$. Then the following hold.
 
 1. The square of an antiderivation is a derivation.  
 2. The bracket of two derivations is a derivation.  
 3. The bracket of an antiderivation and an even-degree derivation is an antiderivation.  
 4. If $$d_1$$, $$d_2$$ are antiderivations, then $$d_1 d_2 + d_2 d_1$$ is a derivation.
-
-</div>
+:::
 
 On the other hand, looking at the partial derivatives defined on the polynomial algebra, they satisfy $$\partial_i\partial_j=\partial_j\partial_i$$ for any $$i,j$$. Now, as with general differential operators, write $$D=\partial_i+\partial_j$$ and consider $$D^2$$; this can be expanded as
 
@@ -168,9 +160,8 @@ $$D^2=\partial_i^2+2\partial_i\partial_j+\partial_j^2$$
 
 The following proposition generalizes this further.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**Proposition 5**</ins> Under the above assumptions and notation, let a polynomial $$F \in A[\x_1, \dots, \x_k]$$ in indeterminates $$T_1, \dots, T_n, T_1', \dots, T_n'$$ be given. That is, $$F(T)$$, $$F(T')$$ mean
+::: Proposition 5
+Under the above assumptions and notation, let a polynomial $$F \in A[\x_1, \dots, \x_k]$$ in indeterminates $$T_1, \dots, T_n, T_1', \dots, T_n'$$ be given. That is, $$F(T)$$, $$F(T')$$ mean
 
 $$F(T) = F(T_1, \dots, T_n), \qquad F(T') = F(T_1', \dots, T_n')$$
 
@@ -187,21 +178,16 @@ then for any $$x\in E$$, $$x\'\in E'$$ the formula
 $$P(D)(x x') = \sum_i (Q_i(D) x)(R_i(D) x')$$
 
 holds.
-
-</div>
+:::
 
 ## Derivations of $$A$$-Algebras
 
 We now examine the second of the two special cases discussed after [Definition 2](#def2). That is, let a $$\Delta$$-graded $$A$$-algebra $$E$$ and a graded $$A$$-module $$F$$ be given, together with two multiplications $$E\otimes_AF \rightarrow F$$ and $$F\otimes_AE \rightarrow F$$.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop6">**Proposition 6**</ins> For an $$\varepsilon$$-derivation $$d:E \to F$$ of degree $$\delta$$, the kernel $$\ker(d)$$ is a graded subalgebra of $$E$$, and if $$E$$ has a unit then $$1 \in \ker(d)$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 6
+For an $$\varepsilon$$-derivation $$d:E \to F$$ of degree $$\delta$$, the kernel $$\ker(d)$$ is a graded subalgebra of $$E$$, and if $$E$$ has a unit then $$1 \in \ker(d)$$.
+:::
+::: Proof
 That $$\ker(d)$$ is an $$A$$-submodule of $$E$$ is obvious, so we only need to show that $$\ker(d)$$ is closed under multiplication. For arbitrary homogeneous $$x, y \in \ker(d)$$,
 
 $$d(xy) = (dx)y + \varepsilon(\delta, \deg(x))x(dy) = 0$$
@@ -213,24 +199,19 @@ Now if $$E$$ has a unit, then $$1$$ is of degree $$0$$, so
 $$d(1) = d(1 \cdot 1) = (d1) \cdot 1 + \varepsilon_{\delta, 0} \cdot 1 \cdot (d1) = d1 + d1 = 2d1$$
 
 and we obtain $$d(1) = 0$$.
-
-</details>
+:::
 
 Therefore, if $$d_1,d_2$$ are degree $$\delta$$ $$\varepsilon$$-derivations from $$E$$ to $$F$$ and they agree on the generators of $$E$$ as an algebra over $$A$$, then $$d_1=d_2$$. On the other hand, the following holds for inverses.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop7">**Proposition 7**</ins> Let $$E$$ be a unital $$\Delta$$-graded $$A$$-algebra, and let $$d:E \to F$$ be an $$\varepsilon$$-derivation of degree $$\delta$$. If $$x$$ is an invertible homogeneous element of $$E$$, then for its inverse $$x^{-1}$$ the formula
+::: Proposition 7
+Let $$E$$ be a unital $$\Delta$$-graded $$A$$-algebra, and let $$d:E \to F$$ be an $$\varepsilon$$-derivation of degree $$\delta$$. If $$x$$ is an invertible homogeneous element of $$E$$, then for its inverse $$x^{-1}$$ the formula
 
 $$d(x^{-1}) = -\varepsilon_{\delta, \deg(x)} x^{-1}(d(x))x^{-1}
 = -\varepsilon_{\delta, \deg(x)} (d(x)) x^{-2}$$
 
 holds.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 By [Proposition 6](#prop6) we have $$d(1) = 0$$, so
 
 $$0 = d(xx^{-1}) = d(x))x^{-1} + \varepsilon_{\delta, \deg(x)}x(d(x^{-1})$$
@@ -245,18 +226,13 @@ $$d(x^{-1}) = -\varepsilon_{\delta, \deg(x)} x^{-1}(d(x))x^{-1}.
 $$
 
 Using that the degree of $$x^{-1}$$ is $$-\deg(x)$$ and computing $$d(x^{-1}x)$$ gives the second equality.
+:::
 
-</details>
+::: Proposition 8
+Let an $$A$$-algebra $$E$$ be an integral domain, and consider its field of fractions $$K=\Frac E$$. Regarding an arbitrary $$K$$-vector space $$F$$ as an $$E$$-module and considering an $$A$$-derivation $$d:E \rightarrow F$$, $$d$$ extends uniquely to an $$A$$-derivation from $$K$$ to $$F$$.
+:::
 
-<div class="proposition" markdown="1">
-
-<ins id="prop8">**Proposition 8**</ins> Let an $$A$$-algebra $$E$$ be an integral domain, and consider its field of fractions $$K=\Frac E$$. Regarding an arbitrary $$K$$-vector space $$F$$ as an $$E$$-module and considering an $$A$$-derivation $$d:E \rightarrow F$$, $$d$$ extends uniquely to an $$A$$-derivation from $$K$$ to $$F$$.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proof
 Let an arbitrary derivation $$d:E \rightarrow f$$ be given, and suppose an extension $$\bar{d}$$ of $$d$$ to $$K$$ exists. Applying [Proposition 7](#prop7), we know that the formula
 
 $$\bar{d}(u/v) = v^{-1} d(u) - v^{-2} u\, d(v)$$
@@ -280,58 +256,47 @@ and rearranging gives
 $$v' d(u) - v^{-1} u\, d(v) = v' d(u') - v'^{-1} u'\, d(v')$$
 
 Thus the definition is well-defined independently of the expression of the element $$u/v$$ of $$F$$. That $$\bar{d}$$ actually satisfies the condition of an $$A$$-derivation from $$K$$ to $$F$$ is a straightforward computation.
-
-</details>
+:::
 
 In the next proposition, for notational convenience, for any degree $$\delta$$ $$\varepsilon$$-derivation $$d:A \rightarrow E$$ define
 
 $$Z_\varepsilon=\{a\in A\mid \text{$xa_d=\varepsilon(\deg(a),\deg(x))a_dx$ for all homogeneous component $a_d$ of $a$ and for all homogeneous $x\in E$.}\}$$
 
-<div class="proposition" markdown="1">
-
-<ins id="prop9">**Proposition 9**</ins> Let $$A$$ be a unital graded associative $$A$$-algebra and let $$E$$ be a graded $$(A, A)$$-bimodule. Let $$d: A \to E$$ be an $$\varepsilon$$-derivation of degree $$\delta$$, and let $$a$$ be a homogeneous element of $$Z_\varepsilon$$ of degree $$\alpha$$. Then the morphism
+::: Proposition 9
+Let $$A$$ be a unital graded associative $$A$$-algebra and let $$E$$ be a graded $$(A, A)$$-bimodule. Let $$d: A \to E$$ be an $$\varepsilon$$-derivation of degree $$\delta$$, and let $$a$$ be a homogeneous element of $$Z_\varepsilon$$ of degree $$\alpha$$. Then the morphism
 
 $$x \mapsto a (d x)$$
 
 is an $$\varepsilon$$-derivation of degree $$\delta + \alpha$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 Denoting the given morphism by $$d'$$, this morphism is obviously $$A$$-linear. To show that $$d'$$ is an $$\varepsilon$$-derivation, for arbitrary homogeneous element $$x$$ of degree $$\delta'$$ and arbitrary $$y\in A$$ we have
 
 $$\begin{aligned}d'(xy)&=a(dx)y+\varepsilon(\delta, \delta')a(x(dy))\\&=a(dx)y+\varepsilon(\delta, \delta')\varepsilon(\alpha,\delta')xa(dy)\\&=(d'x)y+\varepsilon(\delta+\alpha,\delta')x(d'y)\end{aligned}$$
 
 so $$d'$$ becomes a degree $$\delta + \alpha$$ $$\varepsilon$$-derivation.
-
-</details>
+:::
 
 On the other hand, if $$E$$ is a $$\Delta$$-graded (associative) $$A$$-algebra with an $$\varepsilon$$-bracket given on it, then there is a natural $$\varepsilon$$-derivation on it.
 
-<div class="definition" markdown="1">
-
-<ins id="def10">**Definition 10**</ins> For a homogeneous element $$z\in E$$ of a graded $$A$$-algebra $$E$$, we write the morphism
+::: Definition 10
+For a homogeneous element $$z\in E$$ of a graded $$A$$-algebra $$E$$, we write the morphism
 
 $$x\mapsto [z,x]_\varepsilon$$
 
 as $$\ad_\varepsilon(z)$$.
-
-</div>
+:::
 
 Then the following holds.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop11">**Proposition 11**</ins> Let $$E$$ be a graded $$A$$-algebra.
+::: Proposition 11
+Let $$E$$ be a graded $$A$$-algebra.
 
 1. For any $$\varepsilon$$-derivation $$d : E \rightarrow E$$ and all homogeneous elements $$z$$ of $$E$$, we have $${[d, \ad(a)]_\varepsilon = \ad(dz)}$$.
 2. If $$A$$ is associative, then $$\ad(z)$$ is an $$\varepsilon$$-derivation of $$A$$, and its degree is $$\deg(z)$$.
-</div>
+:::
 
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proof
 1. Let $$d$$ be an $$\varepsilon$$-derivation of degree $$\delta$$, and let $$\zeta = \deg(z)$$. Now let $$f = [d, \ad(z)]_\varepsilon$$; then for every homogeneous element $$x \in A$$ of degree $$\xi$$,
 
     $$\begin{aligned}f(x)&=d(z x - \varepsilon(\zeta, \xi) x z) - \varepsilon(\delta, \zeta) (z (dx) - \varepsilon(\zeta, \delta+\xi) (dx) z) \\&= d(z x) - \varepsilon(\zeta, \xi) d(x z) - \varepsilon(\delta, \zeta) z (dx) + \varepsilon(\zeta,2.\delta+\xi) d(x) z \\&=(dz)x+\varepsilon(\delta, \zeta)z(dx)-\varepsilon(\zeta,\xi)((dx)z+\varepsilon(\delta, \xi)x(dz))- \varepsilon(\delta, \zeta) z (dx) + \varepsilon(\zeta,2.\delta+\xi) (dx) z\\&=(dz)x+\varepsilon(\delta,\zeta)z(dx)-\varepsilon(\zeta,\xi)(dx)z-\varepsilon(\delta+\zeta,\xi)x(dz)-\varepsilon(\delta,\zeta)z (dx)+\varepsilon(\zeta,\xi)(dx)z\\&=(dz)x-\varepsilon(\delta+\zeta,\xi)x(dz)=[dz,x]_\varepsilon=\ad_\varepsilon(dz)(x)\end{aligned}$$
@@ -342,22 +307,19 @@ Then the following holds.
     $$\begin{aligned}\ad(z)(x y) &= z(x y) - \varepsilon(\zeta, \xi + \eta)(x y) z \\&= (z x) y - \varepsilon(\zeta, \xi) x z y + \varepsilon(\zeta, \xi) x z y - \varepsilon(\zeta, \xi + \eta) x y z \\&= (ax-\varepsilon(\zeta,\xi xz)y+\varepsilon(zeta,\xi)x(ay-\varepsilon(\zeta,\eta)ya)\\&=\ad(z)(x) \cdot y + \varepsilon(\zeta, \xi) x \cdot \ad(z)(y)\end{aligned}$$
 
     as desired.
-
-</details>
+:::
 
 Therefore, if $$E$$ is an associative graded $$A$$-algebra, then by [Definition 10](#def10) any homogeneous element of $$E$$ defines an $$\varepsilon$$-derivation from $$E$$ to itself, and we call this an *inner $$\varepsilon$$-derivation*.
 
 When this holds, replacing $$d$$ by an inner $$\varepsilon$$-derivation in the above formula yields the following corollary.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor12">**Corollary 12**</ins> For two homogeneous elements $$x,y$$ of an associative graded algebra $$E$$, the formula
+::: Corollary 12
+For two homogeneous elements $$x,y$$ of an associative graded algebra $$E$$, the formula
 
 $${[\ad_\varepsilon(x), \ad_\varepsilon(y)]_\varepsilon = \ad_\varepsilon([x,y]_\varepsilon)}$$
 
 always holds.
-
-</div>
+:::
 
 Moreover, the equality of the above corollary can be obtained by verifying it for arbitrary homogeneous $$z\in E$$, so if $$x,y,z$$ are homogeneous elements of degrees $$\xi,\eta,\zeta$$ respectively, then the formula
 

@@ -17,9 +17,8 @@ weight: 12
 
 [§접다발과 여접다발, ⁋예시 5](/ko/math/manifolds/tangent_and_cotangent_bundles#ex5)와 [§접다발과 여접다발, ⁋정리 6](/ko/math/manifolds/tangent_and_cotangent_bundles#thm6)을 이용하면 다음을 정의할 수 있다.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> Manifold $$M$$에 대하여, 
+::: 정의 1
+Manifold $$M$$에 대하여, 
 
 $$\mathcal{T}^{r,s}(M)=\mathcal{T}^{r,s}(TM),\quad \bigwedge\nolimits^\ast(M)=\bigwedge(T^\ast M),\quad \bigwedge\nolimits^k(M)=\bigwedge\nolimits^k(T^\ast M)$$
 
@@ -28,8 +27,7 @@ $$\mathcal{T}^{r,s}(M)=\mathcal{T}^{r,s}(TM),\quad \bigwedge\nolimits^\ast(M)=\b
 $$\Gamma\left(\mathcal{T}^{r,s}(M)\right),\quad\Omega^\ast(M):=\Gamma\left(\bigwedge\nolimits^\ast(M)\right),\quad\Omega^k(M):=\Gamma\left(\bigwedge\nolimits^k(M)\right)$$
 
 의 원소들을 각각 *tensor field<sub>텐서장</sub>*, *differential form<sub>미분형식</sub>*, *differential $$k$$-form<sub>$k$차 미분형식</sub>*이라 부른다. 
-
-</div>
+:::
 
 두 simple tensor 
 
@@ -95,16 +93,14 @@ $$(F^\ast\omega)_p(X_1(p),\ldots, X_k(p))=(F^\ast_p\omega_{F(p)})\bigl(X_1(p),\l
 
 앞서 우리는 $$\Omega^0(M)=C^\infty(M)$$인 것을 확인했다. 임의의 $$f\in C^\infty(M)$$에 대하여, 그 differential $$df$$는 각 점 $$p\in M$$을 받아 $$df_p:T_pM\rightarrow\mathbb{R}$$를 내놓는 함수이다. ([§미분사상의 예시들, ⁋정의 6](/ko/math/manifolds/examples_of_differentials#def6)) 즉, $$df\in T^\ast M=\Omega^1(M)$$이다. 이 operator $$d$$는 다음과 같이 일반적인 differential form에 대해서도 정의된다.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm2">**정리 2**</ins> Manifold $$M$$에 대하여, degree $$1$$의 anti-derivation $$d:\Omega^\ast(M)\rightarrow\Omega^\ast(M)$$가 유일하게 존재하여 다음의 두 조건을 만족한다. (증명은 **[War]**를 보라.)
+::: 정리 2
+Manifold $$M$$에 대하여, degree $$1$$의 anti-derivation $$d:\Omega^\ast(M)\rightarrow\Omega^\ast(M)$$가 유일하게 존재하여 다음의 두 조건을 만족한다. (증명은 **[War]**를 보라.)
 
 1. $$d^2=0$$,
 2. 임의의 $$f\in\Omega^0(M)$$에 대하여, $$df$$는 위와 같이 $$f$$의 differential과 동일하다.
 
 뿐만 아니라, 이렇게 정의된 $$d$$는 pullback $$F^\ast$$와 commute한다.
-
-</div>
+:::
 
 이와 같이 differential $$d$$가 정의된 graded algebra를 *differential graded algebra*, 혹은 간단하게 *DG-algebra*라고 부른다. 한편 위의 조건 1에 의하여 다음 sequence
 
@@ -118,21 +114,17 @@ $$0\longrightarrow\Omega^0(M)\overset{d}{\longrightarrow}\Omega^1(M)\overset{d}{
 
 ## Interior multiplication
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**정의 3**</ins> Manifold $$M$$ 위에 주어진 vector field $$X$$를 생각하자. 그럼 $$\iota_X:\Omega^\ast(M) \rightarrow\Omega^\ast(M)$$은 임의의 $$k$$-form $$\omega$$에 다음의 식
+::: 정의 3
+Manifold $$M$$ 위에 주어진 vector field $$X$$를 생각하자. 그럼 $$\iota_X:\Omega^\ast(M) \rightarrow\Omega^\ast(M)$$은 임의의 $$k$$-form $$\omega$$에 다음의 식
 
 $$(\iota_X\omega)(X_1,\ldots, X_{k-1})=\omega(X,X_1,\ldots, X_{k-1})$$
 
 으로 정의된 $$(k-1)$$-form $$\iota_X\omega$$를 대응시키는 함수이다. 이를 $$X$$에 의한 *interior multiplication<sub>내부곱</sub>*이라 부른다. 
+:::
 
-</div>
-
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**명제 4**</ins> Manifold $$M$$과 그 위에 주어진 임의의 vector field $$X$$에 대하여, interior multiplication $$\iota_X$$는 degree $$-1$$의 antiderivation이다.
-
-</div>
+::: 명제 4
+Manifold $$M$$과 그 위에 주어진 임의의 vector field $$X$$에 대하여, interior multiplication $$\iota_X$$는 degree $$-1$$의 antiderivation이다.
+:::
 
 
 ---
