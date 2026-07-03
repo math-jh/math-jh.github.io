@@ -529,9 +529,12 @@ Conversion rules for the body:
    - `*english<sub>한국어</sub>*` → `*english*` (drop Korean gloss).
    - `*한국어<sub>english</sub>*` → `*English*` (use English gloss as primary).
 
-4. HTML structure: preserve `<div class="...">`, translate `<ins>` labels:
-   - `<ins id="def1">**정의 1**</ins>` → `<ins id="def1">**Definition 1**</ins>` (id and number N unchanged).
-   - `<details class="proof"><summary>증명</summary>` → `<summary>Proof</summary>`.
+4. Theorem-box fenced blocks (`:::`): keep every `:::` fence line exactly where it is, with the same count and order — both the labeled opener and the bare `:::` closer. On the opener, translate ONLY the label text:
+   - Derived box `::: 정리 2 (Thom isomorphism)` → `::: Theorem 2 (Thom isomorphism)`: translate the kind word (정의→Definition, 명제→Proposition, 정리→Theorem, 보조정리→Lemma, 따름정리→Corollary, 예시→Example, 참고→Remark), keep the number N unchanged, translate the parenthesized name.
+   - Attached proof `::: 증명` → `::: Proof`. Standalone proof `::: 증명 (정리 4)` → `::: Proof (Theorem 4)` (translate the label inside the parentheses too).
+   - misc box `::: misc 주장 4 (Mirror theorem, $$D$$-module form) {#conj4}` → `::: misc Conjecture 4 (Mirror theorem, $$D$$-module form) {#conj4}`: translate the label text but keep the trailing `{#conj4}` anchor EXACTLY (same id, same braces).
+   - The bare closing `:::` line is copied verbatim. Never add, drop, split, merge, or reorder `:::` lines.
+   - Some blocks are still written as legacy HTML rather than `:::` — preserve `<div class="...">`, `</div>`, `<details class="proof">`, `</details>` exactly, and translate only their labels: `<ins id="def1">**정의 1**</ins>` → `<ins id="def1">**Definition 1**</ins>` (id and number N unchanged), `<summary>증명</summary>` → `<summary>Proof</summary>`.
 
 5. Style: first-person plural ("we"); idiomatic, not literal grammar. "우리는 ~를 정의한다" → "we define ~".
 
@@ -544,7 +547,7 @@ Conversion rules for the body:
 # Self-check before responding (must all pass)
 
 - Same number of `$$...$$` blocks as the KO body — count the `$$` markers: EN must have exactly as many `$$...$$` display blocks as KO, none silently downgraded to inline `$...$`, none added/dropped/split/merged.
-- Every `<ins id="...">` from KO appears with the same id and same number N.
+- Every `:::` opener from KO appears in EN with the label translated but the SAME derived anchor: the kind→prefix mapping (정의→def, 명제→prop, 정리→thm, 보조정리→lem, 따름정리→cor, 예시→ex, 참고→rmk) plus the unchanged number, and every `::: misc … {#id}` keeps its `{#id}` intact. The `:::` fence lines have the same count and order as KO; no Korean kind word survives on any opener.
 - No Korean labels remain (정의, 명제, 정리, 보조정리, 따름정리, 예시, 참고, 증명, 참고문헌).
 - The body ends at the final content line — do not truncate mid-sentence.
 - Output begins with the first body character (no leading `---` or blank lines).
@@ -573,10 +576,10 @@ Given the Korean source body (for meaning reference) and the current English tra
 # What to preserve VERBATIM — mathematical fidelity is non-negotiable
 
 1. **Math blocks `$$...$$`** — byte-for-byte: LaTeX commands, variable names, spacing, ordering, AND delimiter. The COUNT and ORDER of `$$...$$` display blocks MUST match the KO source exactly. NEVER downgrade a `$$...$$` display block into inline `$...$` (and never promote inline into display). Easiest rule: never touch what is inside `$$...$$`, and never change a `$$` delimiter into `$`. Single `$...$` is legitimate ONLY inside `\\text{...}`/`\\tag{...}` or inside inline HTML tags (`<cap>`, `<phrase>`, `<em>`, `<em-ko>`); preserve it there and use `$$...$$` everywhere else.
-2. **`<ins id="...">**Label N**</ins>` numbering** — every `<ins>` id (e.g. `def1`, `prop2`) and the integer N MUST appear with the same id and N, in the same order as in the KO source.
+2. **Fenced theorem-box `:::` openers** — every `:::` fence line (the labeled opener and the bare `:::` closer) stays in place, with the same count and order. The opener's derived anchor MUST be unchanged: the kind→prefix mapping (Definition→def, Proposition→prop, Theorem→thm, Lemma→lem, Corollary→cor, Example→ex, Remark→rmk) plus the integer N, and every `::: misc … {#id}` keeps its `{#id}`. Never change N.
 3. Cross-reference **paths** (`/en/math/...`) and **anchors** (`#def1`, `#prop2`) — unchanged. Visible labels may be lightly refined only if materially clearer.
    - **Verification rule**: do NOT change an anchor target or invent a new `[display](url)` pairing unless you have actually seen the target with that exact form. If unsure, leave the existing form untouched.
-4. HTML structure — `<div class="...">`, `<ins id="...">**...**</ins>`, `<details class="proof"><summary>...</summary>`, `<sub>...</sub>` — keep exactly.
+4. Fenced `:::` blocks (opener label already in English from the initial translation — keep it English), any legacy theorem-box HTML that remains (`<div class="...">`, `<ins id="...">**...**</ins>`, `<details class="proof"><summary>...</summary>`), and inline HTML (`<sub>...</sub>`, `<cap>`, `<em>`) — keep exactly, with ids and numbers unchanged.
 5. Section headers (`## ...`) — keep as-is unless genuinely wrong.
 6. Footnote markers `[^N]` and identifiers — unchanged.
 7. References / bibliography entries (BibTeX-style) — unchanged.
@@ -584,7 +587,7 @@ Given the Korean source body (for meaning reference) and the current English tra
 # Self-check before responding
 
 - Same number of `$$...$$` blocks as the KO body — none downgraded to inline `$...$`.
-- Every `<ins id="...">**Label N**</ins>` from KO present with identical id and N.
+- Every `:::` opener present with its derived anchor (kind→prefix + N) unchanged and every `::: misc … {#id}` intact; `:::` line count and order match the KO source.
 - No Korean labels remain (정의, 명제, 정리, 보조정리, 따름정리, 예시, 참고, 증명, 참고문헌).
 - Output is body only — no frontmatter or `---` lines.
 
@@ -618,8 +621,141 @@ def build_polish_prompt(ko_body: str, en_body: str) -> str:
 
 _FENCE_RE     = re.compile(r"^\s*```(?:markdown|md)?\s*\n|\n```\s*$", re.MULTILINE)
 _MATH_BLOCK_RE = re.compile(r"\$\$.*?\$\$", re.DOTALL)
-_INS_ID_RE     = re.compile(r'<ins\s+id="([^"]+)"')
 _KO_PATH_RE    = re.compile(r"/ko/[A-Za-z0-9_\-/]+")
+
+
+# ---------------------------------------------------------------------------
+# Theorem-box syntax (fenced `:::` + residual Style-A HTML)
+# ---------------------------------------------------------------------------
+# The source markdown now carries pandoc-style `::: <label>` theorem boxes,
+# which a Jekyll :pre_render plugin (_plugins/fenced_theorem_blocks.rb) expands
+# to the old Style-A HTML (<div class>/<ins id>/<details class="proof">) at
+# build time. The migration converted only the byte-exact-invertible blocks;
+# ~167 non-canonical blocks across the Math corpus were intentionally LEFT as
+# raw Style-A HTML. So the source is a MIX of both forms and the worker must
+# handle their UNION.
+#
+# Anchor id derivation:
+#   ::: 정리 2 (name)  / ::: Theorem 2 (name)   -> derived id thm2  (kind+number)
+#   ::: misc <label> {#conj4}                   -> explicit id conj4
+#   ::: 증명 | ::: Proof | ::: 증명 (정리 4)      -> proof: NO id
+#   <ins id="def9">**정의 9**</ins> …            -> residual raw HTML: id def9
+# Fence-/raw-aware: a `:::` or `<ins>` inside ``` code fences or {% raw %} blocks
+# is ignored, exactly as the plugin ignores it.
+
+_KIND_PREFIX = {
+    "정의": "def", "명제": "prop", "정리": "thm", "보조정리": "lem",
+    "따름정리": "cor", "예시": "ex", "참고": "rmk",
+    "Definition": "def", "Proposition": "prop", "Theorem": "thm",
+    "Lemma": "lem", "Corollary": "cor", "Example": "ex", "Remark": "rmk",
+}
+_KIND_ALT = "|".join(re.escape(k) for k in sorted(_KIND_PREFIX, key=lambda s: -len(s)))
+_DERIVED_LABEL_RE = re.compile(r"^(" + _KIND_ALT + r")[ \t]+(\d+)")
+_MISC_LABEL_RE    = re.compile(r"^misc[ \t]+(.+?)[ \t]*\{#([^}]+)\}[ \t]*$")
+
+# Opener carrying a label (bare closing `:::` has no label and won't match).
+_FENCE_LABEL_RE     = re.compile(r"^:::[ \t]+(.+?)[ \t]*$")
+_INS_LINE_RE        = re.compile(r'<ins\s+id="([^"]+)"')      # residual Style-A HTML
+_CODEFENCE_OPEN_RE  = re.compile(r"^ {0,3}(`{3,}|~{3,})")
+_CODEFENCE_CLOSE_RE = re.compile(r"^ {0,3}(`{3,}|~{3,})[ \t]*$")
+_RAW_OPEN_RE        = re.compile(r"^\s*\{%\s*raw\s*%\}\s*$")
+_RAW_CLOSE_RE       = re.compile(r"^\s*\{%\s*endraw\s*%\}\s*$")
+_HANGUL_RE          = re.compile(r"[가-힣]")
+
+
+def _fenced_block_id(label: str) -> Optional[str]:
+    """Anchor id for a `::: ` opener label, mirroring the plugin's derivation.
+
+    Returns the id for box blocks (a misc block's explicit `{#id}`, or a derived
+    box's kind→prefix + number), or None for proof blocks and anything the
+    plugin would not recognize (those carry no anchor id)."""
+    m = _MISC_LABEL_RE.match(label)
+    if m:
+        return m.group(2)
+    m = _DERIVED_LABEL_RE.match(label)
+    if m:
+        return _KIND_PREFIX[m.group(1)] + m.group(2)
+    return None
+
+
+def _iter_source_lines(text: str):
+    """Yield (line_index, line) for every line OUTSIDE ``` code fences and
+    {% raw %} blocks — the plugin's exact fence-/raw-aware scan. Fence/raw
+    delimiter lines and everything between them are skipped."""
+    in_fence = in_raw = False
+    fchar = ""
+    flen = 0
+    for idx, line in enumerate(text.split("\n")):
+        if in_raw:
+            if _RAW_CLOSE_RE.match(line):
+                in_raw = False
+            continue
+        if not in_fence and _RAW_OPEN_RE.match(line):
+            in_raw = True
+            continue
+        if in_fence:
+            mc = _CODEFENCE_CLOSE_RE.match(line)
+            if mc and mc.group(1)[0] == fchar and len(mc.group(1)) >= flen:
+                in_fence = False
+            continue
+        mo = _CODEFENCE_OPEN_RE.match(line)
+        if mo:
+            in_fence = True
+            fchar = mo.group(1)[0]
+            flen = len(mo.group(1))
+            continue
+        yield idx, line
+
+
+def _iter_fence_openers(text: str):
+    """Yield (line_index, label) for each `::: <label>` opener OUTSIDE fences/raw.
+    The bare closing `:::` has no label and is not yielded."""
+    for idx, line in _iter_source_lines(text):
+        m = _FENCE_LABEL_RE.match(line)
+        if m:
+            yield idx, m.group(1)
+
+
+def _box_anchors(text: str) -> list:
+    """[(id, line_index), ...] for every theorem-box anchor in document order:
+    a `:::` box opener (derived/misc) OR a residual raw `<ins id>` line. Both
+    forms coexist in the source (see module note). Proof openers carry no id and
+    are skipped, so a proof folds into the preceding box's region — the same
+    alignment the old <ins>-only split had (a proof <details> held no <ins id>).
+    """
+    out = []
+    for idx, line in _iter_source_lines(text):
+        m = _FENCE_LABEL_RE.match(line)
+        if m:
+            bid = _fenced_block_id(m.group(1))
+            if bid is not None:
+                out.append((bid, idx))
+            continue
+        mi = _INS_LINE_RE.search(line)
+        if mi:
+            out.append((mi.group(1), idx))
+    return out
+
+
+def _box_ids(text: str) -> set:
+    """Set of theorem-box anchor ids in text (fenced-derived ∪ residual <ins id>).
+    Equals the <ins id> set the plugin ultimately emits."""
+    return {bid for bid, _ln in _box_anchors(text)}
+
+
+def _fenced_residual_ko_labels(text: str) -> list:
+    """`:::` openers whose label still contains Korean text — an untranslated
+    label the id-set check cannot catch (a KO opener and its EN form derive the
+    SAME id) and label_audit misses (it only scans **bold**/§/⁋/headers/
+    <summary>, not `:::` openers). A correctly translated EN opener never
+    contains Hangul, so a Hangul scan of the opener label is precise. (Residual
+    KO in raw `<ins>**정의 N**</ins>` HTML is already caught by label_audit's
+    **bold** rule.) Fence-/raw-aware."""
+    return [
+        f"line {idx + 1}: untranslated KO text in fenced opener {label!r}"
+        for idx, label in _iter_fence_openers(text)
+        if _HANGUL_RE.search(label)
+    ]
 
 
 def _body_after_frontmatter(text: str) -> str:
@@ -688,13 +824,25 @@ def validate_translation(
     if ko_math != en_math:
         warnings.append(f"math block count mismatch: ko={ko_math}, en={en_math}")
 
-    # <ins id="..."> id set must match KO source exactly
-    ko_ids = set(_INS_ID_RE.findall(ko_content))
-    en_ids = set(_INS_ID_RE.findall(translated))
+    # Theorem-box anchor ids must match the KO source exactly. Ids come from the
+    # `:::` openers (kind→prefix + number for derived boxes, the explicit `{#id}`
+    # for misc boxes — the same derivation the pre_render plugin uses to emit
+    # <ins id>) UNIONed with any residual raw `<ins id>` HTML the migration left
+    # un-converted. Proof openers carry no id.
+    ko_ids = _box_ids(ko_content)
+    en_ids = _box_ids(translated)
     if ko_ids != en_ids:
         missing = sorted(ko_ids - en_ids)
         extra   = sorted(en_ids - ko_ids)
-        return f"<ins id> mismatch: missing={missing} extra={extra}"
+        return f"fenced box id mismatch: missing={missing} extra={extra}"
+
+    # An untranslated KO label left on a `:::` opener slips past BOTH the id
+    # check (a KO opener and its EN form derive the same id) and label_audit
+    # (which never looks at `:::` openers), so check it directly.
+    residual_fenced = _fenced_residual_ko_labels(translated)
+    if residual_fenced:
+        more = f" (+{len(residual_fenced)-1} more)" if len(residual_fenced) > 1 else ""
+        return f"untranslated fenced label — {residual_fenced[0]}{more}"
 
     # No /ko/ paths in body (must all be /en/)
     body = _body_after_frontmatter(translated)
@@ -797,7 +945,7 @@ def translate(
          we just normalise it).
       5. Compose EN frontmatter deterministically from KO frontmatter
          (permalink /ko/→/en/, sidebar.nav -ko→-en, translated fields, meta).
-      6. Validate the assembled output (math count, <ins> ids, label residue).
+      6. Validate the assembled output (math count, fenced box ids, label residue).
     """
     ko_content = ko_path.read_text(encoding="utf-8")
     ko_fm_text, ko_body = _split_fm_block(ko_content)
@@ -889,11 +1037,10 @@ _SUB_STRIP_RE = re.compile(r"<sub>.*?</sub>", re.DOTALL)
 # translated). So a KO block "survives" iff its whitespace-normalized LaTeX
 # appears anywhere in EN's math — display OR inline. Blocks that pass that check
 # are benign by construction (no model needed); only blocks whose content is
-# absent from EN entirely are suspect, and Kimi sees just those `<ins>` regions
+# absent from EN entirely are suspect, and Kimi sees just those `:::` box regions
 # — and is never told about `$$`/counts, so it can't loop on counting.
 
 _DISPLAY_RE = re.compile(r"\$\$(.*?)\$\$", re.DOTALL)
-_INS_RE     = re.compile(r'<ins id="([^"]+)"')
 _INLINE_RE  = re.compile(r"\$([^$\n]+?)\$")
 _PREAMBLE   = "__preamble__"
 _VERIFY_MAX_REGIONS = 12
@@ -913,16 +1060,11 @@ def _en_math_inventory(en: str) -> set:
     return {_norm_math(x) for x in (*disp, *inline)}
 
 
-def _ins_anchors(text: str):
-    """[(id, line_index), ...] for each `<ins id>`, in document order."""
-    return [(m.group(1), text.count("\n", 0, m.start())) for m in _INS_RE.finditer(text)]
-
-
-def _ins_regions(text: str) -> dict:
-    """id -> region text (its `<ins>` line up to the next anchor). Text before
-    the first anchor is filed under _PREAMBLE."""
+def _box_regions(text: str) -> dict:
+    """id -> region text (its box-anchor line up to the next box anchor). Text
+    before the first anchor is filed under _PREAMBLE."""
     lines = text.split("\n")
-    anchors = _ins_anchors(text)
+    anchors = _box_anchors(text)
     out = {}
     first = anchors[0][1] if anchors else len(lines)
     out[_PREAMBLE] = "\n".join(lines[:first])
@@ -937,13 +1079,13 @@ def _locate_divergences(ko: str, en: str):
 
     benign_count — KO blocks missing from EN's `$$` sequence whose LaTeX still
                    survives somewhere in EN (pure `$$`→`$` downgrade / rephrase).
-    suspect_ids  — ordered `<ins>` ids (or _PREAMBLE) whose region holds a KO
+    suspect_ids  — ordered `:::` box ids (or _PREAMBLE) whose region holds a KO
                    block whose LaTeX is absent from EN entirely.
 
-    `<ins>` anchors are the alignment unit because they survive the `$$`→`$`
-    downgrade 1:1, whereas matched `$$` blocks go sparse exactly in the
-    downgrade-heavy posts we care about (EN keeps ~20% of KO's `$$`), which
-    misaligns any block-bracketed window."""
+    `:::` box anchors are the alignment unit because their derived id is identical
+    across KO/EN and survives the `$$`→`$` downgrade 1:1, whereas matched `$$`
+    blocks go sparse exactly in the downgrade-heavy posts we care about (EN keeps
+    ~20% of KO's `$$`), which misaligns any block-bracketed window."""
     ko_body, en_body = _SUB_STRIP_RE.sub("", ko), _SUB_STRIP_RE.sub("", en)
     ko_iter = list(_DISPLAY_RE.finditer(ko_body))
     ko_blocks = [_norm_math(m.group(1)) for m in ko_iter]
@@ -957,7 +1099,7 @@ def _locate_divergences(ko: str, en: str):
         if tag in ("delete", "replace"):
             missing.extend(range(i1, i2))
 
-    anchors = _ins_anchors(ko_body)
+    anchors = _box_anchors(ko_body)
 
     def enclosing(line: int) -> str:
         cur = _PREAMBLE
@@ -1097,10 +1239,11 @@ def verify_math_mismatch(
          appears anywhere in EN (display or inline), since math is identical
          across languages. Most mismatches are pure `$$display$$`→`$inline$`
          downgrades and resolve here with NO model call.
-      2. Semantic — only the `<ins>` regions holding a genuinely-absent KO block
-         go to Kimi (no-tools agent), which judges meaning preservation WITHOUT
-         being told anything about `$$`/counts. `<ins>` is the alignment unit
-         because it survives the downgrade 1:1 (matched `$$` blocks go sparse in
+      2. Semantic — only the `:::` box regions holding a genuinely-absent KO
+         block go to Kimi (no-tools agent), which judges meaning preservation
+         WITHOUT being told anything about `$$`/counts. The `:::` box is the
+         alignment unit because its derived id is identical across KO/EN and
+         survives the downgrade 1:1 (matched `$$` blocks go sparse in
          downgrade-heavy posts and misalign). Returns a terse VERDICT string;
          'verify-failed: …' on error.
     """
@@ -1111,7 +1254,7 @@ def verify_math_mismatch(
                 f"inline/text (`$$`→`$` downgrade or rephrase); no content missing.")
 
     omitted = max(0, len(suspect_ids) - _VERIFY_MAX_REGIONS)
-    ko_reg, en_reg = _ins_regions(ko_content), _ins_regions(en_new)
+    ko_reg, en_reg = _box_regions(ko_content), _box_regions(en_new)
     pairs = []
     for rid in suspect_ids[:_VERIFY_MAX_REGIONS]:
         kr, er = _cap_region(ko_reg.get(rid, "")), _cap_region(en_reg.get(rid, ""))
@@ -1177,20 +1320,30 @@ def git_commit_before(ko_path: Path, iso_ts: str) -> Optional[str]:
 
 
 def _split_regions(body: str):
-    """Lossless split of a post body at `<ins id="...">` boundaries.
+    """Lossless split of a post body at theorem-box-anchor boundaries (`:::` box
+    openers and residual raw `<ins id>` lines).
 
     Returns [(region_id, region_text), ...]; the first chunk is keyed _PREAMBLE
-    (text before the first <ins>). ''.join(text for _, text) == body exactly, so
-    regions reassemble by concatenation. <ins> is the alignment unit because its
-    id is identical across KO/EN and survives reflow 1:1.
+    (text before the first anchor). ''.join(text for _, text) == body exactly,
+    so regions reassemble by concatenation. The box id (def1/prop2/conj4/…),
+    identical across the KO and EN anchors, is the alignment key; proof openers
+    carry no id and fold into the preceding box's region — the same behavior the
+    old <ins>-based split had.
     """
-    pos = [(m.group(1), m.start()) for m in _INS_ID_RE.finditer(body)]
-    if not pos:
+    anchors = _box_anchors(body)
+    if not anchors:
         return [(_PREAMBLE, body)]
-    out = [(_PREAMBLE, body[:pos[0][1]])]
-    for i, (rid, start) in enumerate(pos):
-        end = pos[i + 1][1] if i + 1 < len(pos) else len(body)
-        out.append((rid, body[start:end]))
+    lines = body.split("\n")
+    offsets = []
+    off = 0
+    for ln in lines:
+        offsets.append(off)
+        off += len(ln) + 1                       # +1 for the '\n' split removed
+    starts = [offsets[idx] for _bid, idx in anchors]
+    out = [(_PREAMBLE, body[:starts[0]])]
+    for i, (bid, _idx) in enumerate(anchors):
+        end = starts[i + 1] if i + 1 < len(anchors) else len(body)
+        out.append((bid, body[starts[i]:end]))
     return out
 
 
@@ -1205,7 +1358,7 @@ def translate_drift_incremental(
     """Region-level incremental drift re-translation.
 
     Baseline = the KO as it was at the EN's `translated_at` commit (via git). Only
-    the `<ins>`-keyed regions whose KO content changed since then are re-sent to
+    the `:::`-box-keyed regions whose KO content changed since then are re-sent to
     Kimi; unchanged regions keep their existing EN text verbatim, so manual EN
     fixes survive and unchanged math is never re-translated.
 
