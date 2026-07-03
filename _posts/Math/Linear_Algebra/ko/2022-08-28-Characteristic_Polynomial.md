@@ -19,11 +19,9 @@ weight: 15
 
 ## 특성다항식과 고윳값
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> 임의의 $$n$$차 정사각행렬 $$A$$에 대하여, $$A$$의 *특성다항식<sub>characteristic polynomial</sub>*을 $$\x$$에 대한 다항식 $$\det(\x I-A)$$으로 정의한다.
-
-</div>
+::: 정의 1
+임의의 $$n$$차 정사각행렬 $$A$$에 대하여, $$A$$의 *특성다항식<sub>characteristic polynomial</sub>*을 $$\x$$에 대한 다항식 $$\det(\x I-A)$$으로 정의한다.
+:::
 
 다음의 식
 
@@ -49,19 +47,15 @@ $$\det(0I-A)=\det(-A)=(-1)^n\det(A)$$
 
 따라서 다음 명제를 증명하였다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**명제 2**</ins> $$n$$차 정사각행렬의 특성다항식은 반드시 $$n$$차다항식이며, 특성다항식의 $$n-1$$차항의 계수는 $$-\tr A$$와 같고, 상수항은 $$(-1)^n\det A$$와 같다.
-
-</div>
+::: 명제 2
+$$n$$차 정사각행렬의 특성다항식은 반드시 $$n$$차다항식이며, 특성다항식의 $$n-1$$차항의 계수는 $$-\tr A$$와 같고, 상수항은 $$(-1)^n\det A$$와 같다.
+:::
 
 특성다항식의 해는 행렬을 살펴볼 때 중요한 정보가 된다.
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**정의 3**</ins> $$n\times n$$ 행렬 $$A$$에 대하여, $$A$$의 특성다항식 $$\det(\x I-A)=0$$의 해를 $$A$$의 *고윳값<sub>eigenvalue</sub>*이라 부른다. $$A$$의 고윳값들의 모임을 $$A$$의 *spectrum<sub>스펙트럼</sub>*이라 부르고, 이 집합을 $$\Spec(A)$$으로 표기한다.
-
-</div>
+::: 정의 3
+$$n\times n$$ 행렬 $$A$$에 대하여, $$A$$의 특성다항식 $$\det(\x I-A)=0$$의 해를 $$A$$의 *고윳값<sub>eigenvalue</sub>*이라 부른다. $$A$$의 고윳값들의 모임을 $$A$$의 *spectrum<sub>스펙트럼</sub>*이라 부르고, 이 집합을 $$\Spec(A)$$으로 표기한다.
+:::
 
 두 닮은 $$n\times n$$ 행렬 $$A,B$$를 생각하자. 그럼 $$A=PBP^{-1}$$로부터, 
 
@@ -69,31 +63,21 @@ $$\det(\x I-A)=\det(\x I-PBP^{-1})=\det(P(\x I-B)P^{-1})=\det P\det(\x I-B)\det 
 
 를 얻는다. 따라서 $$A$$와 $$B$$의 특성다항식은 서로 같다. 이로부터 다음의 따름정리들을 얻는다.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor4">**따름정리 4**</ins> 임의의 linear map $$L:V\rightarrow V$$에 대하여, $$L$$의 특성다항식을 <phrase>행렬 $[L]_\mathcal{B}^\mathcal{B}$의 특성다항식</phrase>으로 정의한 것이 잘 정의된다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 따름정리 4
+임의의 linear map $$L:V\rightarrow V$$에 대하여, $$L$$의 특성다항식을 <phrase>행렬 $[L]_\mathcal{B}^\mathcal{B}$의 특성다항식</phrase>으로 정의한 것이 잘 정의된다.
+:::
+::: 증명
 즉, $$V$$의 basis $$\mathcal{B}$$ 대신 $$\mathcal{C}$$를 택하여도 $$L$$의 특성다항식에는 변화가 없다는 것을 보여야 한다. 앞선 논증에 의하여, 이는 [§기저변환, ⁋명제 5](/ko/math/multilinear_algebra/change_of_basis#prop5) 이후의 식으로부터 두 행렬표현 $$[L]_\mathcal{B}^\mathcal{B}$$와 $$[L]_\mathcal{C}^\mathcal{C}$$가 서로 닮은 행렬이라는 것을 관찰하는 것으로 충분하다.
-
-</details>
+:::
 
 편의상 앞으로의 논의는 모두 행렬에 대한 것으로 통일하지만, 위의 따름정리를 통해 우리는 똑같은 내용을 임의의 linear map $$L$$에 대하여도 증명할 수 있다.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor5">**따름정리 5**</ins> 서로 닮은 행렬의 trace와 행렬식은 같다. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 따름정리 5
+서로 닮은 행렬의 trace와 행렬식은 같다. 
+:::
+::: 증명
 앞선 논증으로부터 $$A$$와 $$B$$는 같은 특성다항식을 갖는다는 것을 알고, [명제 2](#prop2)로부터 행렬의 trace와 행렬식은 특성다항식으로부터 결정된다. 
-
-</details>
+:::
 
 특히 임의의 linear map $$L:V\rightarrow V$$가 주어졌을 때, 다음 글에서 다룰 행렬의 대각화를 통해 $$[L]_\mathcal{B}^\mathcal{B}$$를 분해하면 $$V$$를 $$L$$의 고유공간으로 분해할 수 있다.
 
@@ -101,33 +85,27 @@ $$\det(\x I-A)=\det(\x I-PBP^{-1})=\det(P(\x I-B)P^{-1})=\det P\det(\x I-B)\det 
 
 고윳값들은 모두 특성다항식의 해지만, 어떤 고윳값들은 다른 고윳값보다 더 큰 중복도를 가질 수 있다. 이는 다음과 같이 정의된다.
 
-<div class="definition" markdown="1">
-
-<ins id="def6">**정의 6**</ins> $$\mathbb{K}[\x]$$의 임의의 다항식 $$p(\x)$$이 주어졌다 하고, $$a\in\mathbb{K}$$가 $$p(\x)=0$$의 해라 하자. 만일 $$(\x-a)^k$$가 $$p(\x)$$를 나누지만, $$(\x-a)^{k+1}$$은 $$p(\x)$$를 나누지 않는다면 $$a$$의 *중복도<sub>multiplicity</sub>*를 $$k$$로 정의한다. 
-
-</div>
+::: 정의 6
+$$\mathbb{K}[\x]$$의 임의의 다항식 $$p(\x)$$이 주어졌다 하고, $$a\in\mathbb{K}$$가 $$p(\x)=0$$의 해라 하자. 만일 $$(\x-a)^k$$가 $$p(\x)$$를 나누지만, $$(\x-a)^{k+1}$$은 $$p(\x)$$를 나누지 않는다면 $$a$$의 *중복도<sub>multiplicity</sub>*를 $$k$$로 정의한다. 
+:::
 
 $$n\times n$$ 행렬 $$A$$의 특성다항식을 $$p_A(\x)$$라 하고, $$\lambda$$가 $$A$$의 한 고윳값이라 하자. 그럼 $$p_A$$의 해로서의 $$\lambda$$의 중복도를 $$\lambda$$의 *대수적 중복도<sub>algebraic multiplicity</sub>*라 부른다. 이는 곧 정의할 *기하적 중복도*와 구분하기 위한 용어이다. 
 
 $$\mathbb{K}[\x]$$의 임의의 원소 $$p(\x)$$가 주어졌다 하자. $$p$$가 $$n$$차식이라 하면, $$p$$는 많아야 $$n$$개의 해를 가진다. 그러나 $$p$$가 정확히 $$n$$개의 해를 가져야만 하는 것은 아니다.
 
-<div class="example" markdown="1">
-
-<ins id="ex7">**예시 7**</ins> 예를 들어, $$\mathbb{K}=\mathbb{R}$$이라 하고, $$2\times 2$$ 정사각행렬
+::: 예시 7
+예를 들어, $$\mathbb{K}=\mathbb{R}$$이라 하고, $$2\times 2$$ 정사각행렬
 
 $$J=\begin{pmatrix}0&-1\\1&0\end{pmatrix}$$
 
 을 생각하자. 그럼 $$J$$의 특성다항식은 $$\x^2+1$$이며, 이 다항식은 $$\mathbb{R}$$에서 해를 갖지 않는다. 
-
-</div>
+:::
 
 이와 같은 일이 일어나지 않는 field를 *algebraically closed field<sub>대수적으로 닫힌 체</sub>*라 부른다. 다음 *대수학의 기본정리*는 대수적으로 증명할 수도 있고, 해석학을 통해 증명할 수도 있지만 어떠한 방식도 우리의 현재 수준에선 어렵기 때문에 사실로 받아들이고 넘어간다.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm8">**정리 8 (대수학의 기본정리)**</ins> 복소수 집합 $$\mathbb{C}$$는 algebraically closed field이다.
-
-</div>
+::: 정리 8 (대수학의 기본정리)
+복소수 집합 $$\mathbb{C}$$는 algebraically closed field이다.
+:::
 
 위의 [예시 7](#ex7)의 행렬 $$J$$의 특성방정식은 $$\mathbb{R}$$에서는 해를 갖지 않지만, $$\mathbb{C}$$에서는 두 개의 해를 갖는다. 앞으로도 이와 같이 다항식의 해가 어떠한 field 위에서 정의되었는지를 구분하는 것이 중요하다. 
 
@@ -139,19 +117,15 @@ $$(\lambda I-A)v=0$$
 
 을 만족하는 영이 아닌 벡터 $$v$$가 존재한다.
 
-<div class="definition" markdown="1">
-
-<ins id="def9">**정의 9**</ins> $$n\times n$$ 행렬 $$A$$와 고윳값 $$\lambda$$에 대하여, $$Av=\lambda v$$를 만족하는 벡터 $$v$$를 $$\lambda$$에 해당하는 $$A$$의 *고유벡터<sub>eigenvector</sub>*라 부른다. 
-
-</div>
+::: 정의 9
+$$n\times n$$ 행렬 $$A$$와 고윳값 $$\lambda$$에 대하여, $$Av=\lambda v$$를 만족하는 벡터 $$v$$를 $$\lambda$$에 해당하는 $$A$$의 *고유벡터<sub>eigenvector</sub>*라 부른다. 
+:::
 
 행렬 $$A$$에 대하여, $$\lambda$$에 해당하는 고유벡터들을 모두 모아 그 집합을 $$E_\lambda$$라 하자. 그럼 $$E_\lambda$$가 벡터공간을 이룬다는 것을 쉽게 확인할 수 있다. 이를 $$\lambda$$에 해당하는 *고유공간<sub>eigenspace</sub>*이라 부른다. $$E_\lambda$$는 항상 영이 아닌 벡터를 적어도 하나 포함하므로, $$\dim E_\lambda$$는 항상 $$0$$보다 크다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def10">**정의 10**</ins> $$n\times n$$ 행렬 $$A$$와 고윳값 $$\lambda$$에 대하여, $$E_\lambda$$의 차원 $$\dim E_\lambda$$를 $$\lambda$$의 *기하적 중복도<sub>geometric multiplicity</sub>*라 부른다. 
-
-</div>
+::: 정의 10
+$$n\times n$$ 행렬 $$A$$와 고윳값 $$\lambda$$에 대하여, $$E_\lambda$$의 차원 $$\dim E_\lambda$$를 $$\lambda$$의 *기하적 중복도<sub>geometric multiplicity</sub>*라 부른다. 
+:::
 
 
 

@@ -33,11 +33,9 @@ $$\omega = d\log \rchi^{m_1} \wedge \cdots \wedge d\log \rchi^{m_N}$$
 
 을 만드는 구성[^1]의 일반화이다. 한편 이 구성이 작동하는 ambient 데이터 $$(Y, D)$$ 자체를 추상화하면 다음 정의의 log Calabi-Yau pair가 된다.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> Smooth projective variety $$Y$$와 reduced SNC divisor ([\[토릭 기하학\] §토릭 다양체 위의 로그 미분형식, ⁋정의 5](/ko/math/toric_geometry/logarithmic_differentials#def5)) $$D \subset Y$$의 쌍 $$(Y, D)$$가 $$K_Y + D \sim 0$$을 만족할 때 이를 *log Calabi-Yau pair*라 부른다. 이 때, 위의 construction을 통해 얻어지는 non-vanihsing volume form $$\omega=\Omega\vert_{\check{X}}$$을 log CY pair의 *canonical holomorphic volume form*이라 부른다. 
-
-</div>
+::: 정의 1
+Smooth projective variety $$Y$$와 reduced SNC divisor ([\[토릭 기하학\] §토릭 다양체 위의 로그 미분형식, ⁋정의 5](/ko/math/toric_geometry/logarithmic_differentials#def5)) $$D \subset Y$$의 쌍 $$(Y, D)$$가 $$K_Y + D \sim 0$$을 만족할 때 이를 *log Calabi-Yau pair*라 부른다. 이 때, 위의 construction을 통해 얻어지는 non-vanihsing volume form $$\omega=\Omega\vert_{\check{X}}$$을 log CY pair의 *canonical holomorphic volume form*이라 부른다. 
+:::
 
 기하적으로, 앞선 construction에서 $$\mathcal{K}_Y\otimes \mathcal{O}_Y(D)\cong \mathcal{O}_Y$$의 nowhere-vanishing global section을 통해 $$\omega$$를 택하는 것은 trivialization $$\Omega^N_Y(\log D)\cong\mathcal{O}_Y$$를 택하는 것과 같다. 특히 $$\check{X}=(\mathbb{C}^\ast)^N$$인 경우 standard affine coordinate들 $$\x_i$$에 대한 canonical volume form은
 
@@ -77,29 +75,25 @@ $$S_z^M=\{x \in \check{X} \mid \Real(W(x)/z) <-M\}$$
 
 지금까지의 논의를 정리하면 다음과 같다.
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**정의 2**</ins> Landau-Ginzburg model $$(\check{X}, W_q)$$와 그 위에 정의된 holomorphic volume form $$\omega$$을 생각하자. 고정된 Lefschetz thimble $$\Gamma_p$$에 대하여, 이를 따르는 *oscillating integral*을
+::: 정의 2
+Landau-Ginzburg model $$(\check{X}, W_q)$$와 그 위에 정의된 holomorphic volume form $$\omega$$을 생각하자. 고정된 Lefschetz thimble $$\Gamma_p$$에 대하여, 이를 따르는 *oscillating integral*을
 
 $$\mathcal{I}_{\Gamma_p}(q, z) := \int_{\Gamma_p} e^{W_q / z}\, \omega$$
 
 으로 정의한다. 여기서 $$\Gamma_p$$는 $$q$$와 $$z$$의 변화에 따라 continuously isotoped될 수 있는 Lefschetz thimble로 선택된다.
-
-</div>
+:::
 
 여기서 $$\Gamma_p$$를 $$(q,z)$$의 변화에 따라 continuously isotoped 될 수 있도록 택하는 것은 $$(q,z)$$의 변화에 따라 critical point가 변하고, 따라서 thimble 또한 변형되는데 그 변형 정도가 연속이도록 해 주는 것이다. 즉 parameter $$(q,z)$$의 변화에 따라 cycle을 parallel하게 transport하는 것이며, 이것이 곧 정의할 Gauss-Manin connection의 base를 주게 된다. 
 
 위에서 언급했듯, $$e^{W_q/z}$$는 $$W_q$$의 phase에 따라 급격히 진동하므로, 적분의 dominant contribution은 phase가 stationary한 점, 즉 critical point 근처에서만 발생한다. 다음 명제는 [\[사교기하학\] §Morse 이론과 stationary phase 근사, ⁋명제 16](/ko/math/symplectic_geometry/morse_stationary_phase#prop16)을 우리 세팅에 맞추어 다시 적어둔 것이다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop3">**명제 3 (Stationary phase asymptotic)**</ins> $$W_q$$의 non-degenerate critical point $$p$$와 이를 통과하는 Lefschetz thimble $$\Gamma_p$$에 대해, $$z \to 0^+$$에서
+::: 명제 3 (Stationary phase asymptotic)
+$$W_q$$의 non-degenerate critical point $$p$$와 이를 통과하는 Lefschetz thimble $$\Gamma_p$$에 대해, $$z \to 0^+$$에서
 
 $$\mathcal{I}_{\Gamma_p}(q, z) \sim (2\pi z)^{N/2} \frac{e^{W_q(p)/z}}{\sqrt{\det\Hess_p(W_q)}} \big(1 + O(z)\big)$$
 
 이 성립한다. 여기서 $$N = \dim_\mathbb{C} \check{X}$$, $$\Hess_p$$는 $$p$$에서의 Hessian이며, $$\sqrt{}$$의 branch는 $$\Gamma_p$$의 orientation으로 결정된다.
-
-</div>
+:::
 
 증명의 핵심은 $$p$$ 근방에서 [\[사교기하학\] §Morse 이론과 stationary phase 근사, ⁋정리 6](/ko/math/symplectic_geometry/morse_stationary_phase#thm6)을 사용하여 $$W_q$$를 quadratic form으로 환원한 뒤 Gaussian 적분을 적용하는 것이다. 어쨌든 우리 상황에서 중요한 것은 $$z \to 0^+$$일 때 oscillating integral이 *각 critical point의 local data*, 즉 critical value $$W_q(p)$$와 Hessian determinant로 완전히 결정된다는 사실이다. 특히 mirror symmetry isomorphism $$\Jac(W_q) \cong QH^\ast(X_\Sigma)$$ 관점에서, critical value들 $$\{ W_q(p) \}$$는 A-side에서는 quantum cohomology의 *canonical coordinate*로 해석된다.
 
@@ -117,56 +111,47 @@ $$\{\mathcal{H}_{(q, z)}\}_{(q, z) \in B}$$
 
 이 family는 만일 $$W_q$$가 Morse type이라면 $$B$$ 위에 정의된 vector bundle $$\mathcal{H}$$를 정의한다는 것이 알려져 있다. 특히 이들 각각의 fiber가 잘 붙는다는 것은 앞서 Lefschetz thimble을 택할 때 $$(q,z)$$에 따라 continuously isotoped될 수 있는 것들을 모았기 때문에 가능하다. 즉, cycle $$\Gamma$$가 $$(q, z)$$의 변화에 따라 연속적으로 움직일 때 그와 pairing되는 cohomology class도 함께 "따라가도록" 평행 이동시킬 수 있고, 이 평행 이동을 connection 형태로 정리한 것이 *Gauss-Manin connection*이다.
 
-<div class="definition" markdown="1"> 
-
-<ins id="def4">**정의 4 (Gauss-Manin connection)**</ins> Vector bundle $$\mathcal{H} \to (\mathbb{C}^\ast)^r \times \mathbb{C}^\ast$$ 위의 *Gauss-Manin connection* $$\nabla^{GM}$$은 다음 조건으로 유일하게 결정되는 flat connection이다.
+::: 정의 4 (Gauss-Manin connection)
+Vector bundle $$\mathcal{H} \to (\mathbb{C}^\ast)^r \times \mathbb{C}^\ast$$ 위의 *Gauss-Manin connection* $$\nabla^{GM}$$은 다음 조건으로 유일하게 결정되는 flat connection이다.
 
 > Section $$\mathbf{s}: (q, z) \mapsto [\alpha(q, z)] \in \mathcal{H}_{(q,z)}$$가 *$$\nabla^{GM}$$-flat*이라는 것은, [정의 2](#def2) 직후의 의미로 continuously isotoped된 *임의의* cycle family $$\{\Gamma(q, z)\}$$에 대해 *period*
 > 
 > $$\Pi_\Gamma(q, z) := \int_{\Gamma(q, z)} \alpha(q, z)$$
 > 
 > 이 $$(q, z)$$의 locally constant function이 되는 것과 동치이다.
-
-</div>
+:::
 
 위에서 언급했듯 cohomology fiber $$\mathcal{H}_{(q,z)}$$의 원소는 dual rapid decay homology의 cycle과의 integral pairing으로 완전히 결정된다. 이 때, 위의 local system 구조에서 fiber 사이의 canonical identification은 정확히 cycle들의 parallel transport의 dual로 결정되었다. 따라서, 위의 bundle의 section들을 이 identification을 통해 locally constant인지 확인하기 위해서는 모든 parallel transport된 cycle들과의 pairing 값이 locally constant인지 보면 되고, 이 값이 바로 period인 것이다. 약간의 계산을 거치면 이렇게 정의된 $$\nabla^{GM}$$이 유일하게 결정되며, $$\nabla^{GM}$$의 flatness 또한 확인할 수 있다. 
 
 $$\nabla^{GM}$$의 representative form 차원에서의 계산은 다음과 같다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**명제 5**</ins> Class $$[e^{W_q/z}\, \omega] \in \mathcal{H}_{(q,z)}$$에 대해 Gauss-Manin connection은
+::: 명제 5
+Class $$[e^{W_q/z}\, \omega] \in \mathcal{H}_{(q,z)}$$에 대해 Gauss-Manin connection은
 
 $$\nabla^{GM}_{\partial_{q_i}} [e^{W_q/z}\, \omega] = \left[\frac{\partial_{q_i} W_q}{z}\, e^{W_q/z}\, \omega\right],\qquad \nabla^{GM}_{z \partial_z}[e^{W_q/z}\, \omega] = \left[-\frac{W_q}{z}\, e^{W_q/z}\, \omega\right]$$
 
 으로 작용한다.
+:::
 
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 Cochain 차원에서 chain rule로 계산하면
 
 $$\partial_{q_i}\!\left(e^{W_q/z}\,\omega\right) = \frac{\partial_{q_i} W_q}{z}\, e^{W_q/z}\, \omega,\qquad z\partial_z\!\left(e^{W_q/z}\,\omega\right) = -\frac{W_q}{z}\, e^{W_q/z}\, \omega$$
 
 이다 ($$\omega$$는 $$q, z$$와 무관). $$\nabla^{GM}$$의 well-definedness는 cocycle 변형이 coboundary로 떨어진다는 사실, 즉 임의의 $$(N-1)$$-form $$\beta$$에 대해 $$d(e^{W_q/z}\beta) = e^{W_q/z}(d\beta + z^{-1} dW_q \wedge \beta)$$이 exact임에서 따라 나오며, flatness $$[\nabla^{GM}_{\partial_{q_i}}, \nabla^{GM}_{\partial_{q_j}}] = 0$$은 partial derivative들의 commutativity로부터 즉시 얻어진다.
-
-</details>
+:::
 
 ## B-model connection
 
 [§두브로빈 접속, ⁋정의 1](/ko/math/mirror_symmetry/dubrovin_connection#def1)의 A-model Dubrovin connection $$\nabla^z$$와 직접 비교 가능하도록, Gauss-Manin connection을 $$z$$만큼 rescaling한 *B-model connection*을 정의한다.
 
-<div class="definition" markdown="1">
-
-<ins id="def6">**정의 6 (B-model connection)**</ins> $$\mathcal{H}$$ 위에 *B-model connection* $$\nabla^z_B$$을
+::: 정의 6 (B-model connection)
+$$\mathcal{H}$$ 위에 *B-model connection* $$\nabla^z_B$$을
 
 $$\nabla^z_B := z\nabla^{GM}$$
 
 으로 정의한다. 
-
-</div>
+:::
 
 명시적으로, frame $$[e^{W_q/z}\omega]$$에 B-model connection을 적용해보면 [명제 5](#prop5)에서 
 
@@ -204,9 +189,8 @@ $$\mathcal{I}^a_p(q, z) \;:=\; \langle e_a,\,[\Gamma_p]\rangle \;=\; \int_{\Gamm
 
 를 정의할 수 있다. 이제 위의 ($$\ast$$)는 이 행렬 상에서 다음과 같이 적힌다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop7">**명제 7 (Fundamental solution matrix)**</ins> 위의 setup에서 $$\Jac(W_q)$$ 안의 multiplication 행렬을
+::: 명제 7 (Fundamental solution matrix)
+위의 setup에서 $$\Jac(W_q)$$ 안의 multiplication 행렬을
 
 $$T_a\cdot \partial_{q_i}W_q = \sum_b (M_i)^a_b\, T_b,\qquad T_a\cdot W_q = \sum_b E^a_b\, T_b\quad\text{in}\;\Jac(W_q)$$
 
@@ -215,8 +199,7 @@ $$T_a\cdot \partial_{q_i}W_q = \sum_b (M_i)^a_b\, T_b,\qquad T_a\cdot W_q = \sum
 $$z\,\partial_{q_i}\mathcal{I}^a_p = \sum_b (M_i)^a_b\,\mathcal{I}^b_p,\qquad z^2\,\partial_z\mathcal{I}^a_p = -\sum_b E^a_b\,\mathcal{I}^b_p$$
 
 을 만족한다. 특히 $$\mathcal{I}$$는 invertible matrix-valued function이며, frame $$\{e_a\}_a$$로 trivialize한 B-model connection $$\nabla^z_B$$의 *fundamental solution matrix*를 이룬다.
-
-</div>
+:::
 
 구체적으로, $$\{[\Gamma_p]\}$$의 dual basis $$\{f^p\}\subset\mathcal{H}_{(q,z)}$$는 [정의 4](#def4)에 의해 $$\nabla^z_B$$의 *horizontal sections*이고, $$\mathcal{H}$$ 안에서 non-flat frame $$\{e_a\}$$와 flat frame $$\{f^p\}$$ 사이의 change-of-basis가 정확히
 
@@ -226,9 +209,8 @@ $$e_a = \sum_p \mathcal{I}^a_p\,f^p,\qquad f^p = \sum_a (\mathcal{I}^{-1})^p_a\,
 
 ## 예시: $$\mathbb{P}^n$$의 oscillating integral
 
-<div class="example" markdown="1">
-
-<ins id="ex8">**예시 8** ($$X = \mathbb{P}^n$$)</ins> 우리는 앞서 [§거울대칭 개요, ⁋예시 5](/ko/math/mirror_symmetry/overview#ex5)에서 $$\mathbb{P}^n$$의 Hori-Vafa mirror는
+::: 예시 8 ($$X = \mathbb{P}^n$$)
+우리는 앞서 [§거울대칭 개요, ⁋예시 5](/ko/math/mirror_symmetry/overview#ex5)에서 $$\mathbb{P}^n$$의 Hori-Vafa mirror는
 
 $$\check{X} = (\mathbb{C}^\ast)^n,\qquad W_q = \x_1 + \cdots + \x_n + \frac{q}{\x_1 \cdots \x_n},\qquad \omega = \frac{d\x_1 \wedge \cdots \wedge d\x_n}{\x_1 \cdots \x_n}$$
 
@@ -275,8 +257,7 @@ $$\Hess_{x_\zeta}(W_q) = \tfrac{1}{x_\zeta}\bigl(I_n + \mathbf{1}\mathbf{1}^\top
 $$\mathcal{I}_{\Gamma_{x_\zeta}}(q, z) \sim (2\pi z)^{n/2}\,\frac{\exp\bigl((n+1)\,\zeta\,q^{1/(n+1)}/z\bigr)}{\sqrt{(n+1)(\zeta\,q^{1/(n+1)})^{-n}}}\,(1 + O(z))$$
 
 가 따른다.
-
-</div>
+:::
 
 ---
 

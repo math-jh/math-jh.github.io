@@ -30,11 +30,9 @@ The discussion above remains valid for a general binary relation $$(R,A,B)$$. Th
 
 ## Definition of a Function
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> For a nonempty set $$A$$, a binary relation $$f=(F,A,B)$$ is called a *function* if $$A=\pr_1F$$ and for each $$x\in A$$, the set $$F(\{x\})$$ is a singleton set.[^1]
-
-</div>
+::: Definition 1
+For a nonempty set $$A$$, a binary relation $$f=(F,A,B)$$ is called a *function* if $$A=\pr_1F$$ and for each $$x\in A$$, the set $$F(\{x\})$$ is a singleton set.[^1]
+:::
 
 The condition $$A=\pr_1F$$ means that every element $$x$$ of $$A$$ corresponds to *at least* one $$y\in B$$; the second condition means that every $$x\in A$$ corresponds to *at most* one $$y\in B$$. Hence $$f=(F,A,B)$$ is a function precisely when:
 
@@ -54,11 +52,9 @@ In special cases, expressions such as $$f_x$$ are also used to denote function v
 
 If $$f$$ is a function from a set $$A$$ to itself, then $$x\in A$$ is said to be *fixed* by $$f$$ if $$f(x)=x$$.
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**Definition 2**</ins> For any set $$A$$, we define the *identity function* $$\id_A$$ as the triple $$(\Delta_A,A,A)$$. That is, $$\id_A$$ is the function given by $$f(x)=x$$ for every $$x\in A$$.
-
-</div>
+::: Definition 2
+For any set $$A$$, we define the *identity function* $$\id_A$$ as the triple $$(\Delta_A,A,A)$$. That is, $$\id_A$$ is the function given by $$f(x)=x$$ for every $$x\in A$$.
+:::
 
 By definition, $$\id_A$$ fixes every element of $$A$$.
 
@@ -100,11 +96,9 @@ commuting means that $$g\circ f=\id_A$$ and $$f\circ g=\id_B$$.
 
 ## Extension and Restriction of Functions
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**Definition 3**</ins> Two functions $$f=(F,A,B),f'=(F',A',B')$$ are *compatible* on a set $$S$$ if $$S$$ is contained in the domains of both $$f$$ and $$f'$$, and $$f(x)=f'(x)$$ for all $$x\in S$$.
-
-</div>
+::: Definition 3
+Two functions $$f=(F,A,B),f'=(F',A',B')$$ are *compatible* on a set $$S$$ if $$S$$ is contained in the domains of both $$f$$ and $$f'$$, and $$f(x)=f'(x)$$ for all $$x\in S$$.
+:::
 
 Let $$f$$ and $$f'$$ be two functions, and suppose $$S=\pr_1 F\cap\pr_1 F'$$ is non-empty. If the two functions are compatible on $$S$$, then a new function $$g$$ with domain $$\pr_1F\cup\pr_1F'$$ can be defined by
 
@@ -112,11 +106,9 @@ $$g(x)=\begin{cases}f(x)&x\in \pr_1F\setminus\pr_1F'\\ f(x)=f'(x)&x\in \pr_1F\ca
 
 This situation is captured in the following definition.
 
-<div class="definition" markdown="1">
-
-<ins id="def4">**Definition 4**</ins> Let $$f=(F,A,B)$$ and $$f'=(F',A',B')$$ be two functions. If $$F\subseteq F'$$ and $$B\subseteq B'$$, then $$f'$$ is called an *extension* of $$f$$, and we say that $$f'$$ extends $$f$$.
-
-</div>
+::: Definition 4
+Let $$f=(F,A,B)$$ and $$f'=(F',A',B')$$ be two functions. If $$F\subseteq F'$$ and $$B\subseteq B'$$, then $$f'$$ is called an *extension* of $$f$$, and we say that $$f'$$ extends $$f$$.
+:::
 
 Conversely, a function may be restricted to a smaller domain. Let $$f=(F,A,B)$$ be a function and let $$X\subseteq A$$. If we define the relation $$R$$ by
 
@@ -124,11 +116,9 @@ Conversely, a function may be restricted to a smaller domain. Let $$f=(F,A,B)$$ 
 
 then the collection of all $$(x,y)$$ satisfying this condition forms a function whose domain is $$X$$. This leads to the following definition.
 
-<div class="definition" markdown="1">
-
-<ins id="def5">**Definition 5**</ins> The function $$g$$ defined above is called the *restriction* of $$f$$ to $$X$$, and is denoted by $$f\vert_{X}$$.
-
-</div>
+::: Definition 5
+The function $$g$$ defined above is called the *restriction* of $$f$$ to $$X$$, and is denoted by $$f\vert_{X}$$.
+:::
 
 
 

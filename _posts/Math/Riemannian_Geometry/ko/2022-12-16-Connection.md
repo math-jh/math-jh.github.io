@@ -17,9 +17,8 @@ weight: 2
 
 Lie derivative를 이용하면 벡터장이나 differential form을 미분할 수 있지만, 이 개념을 임의의 vector bundle $$\pi:E\rightarrow M$$의 section $$\Gamma(E)$$로 확장하는 것은 불가능하다. Tangent bundle $$TM$$ 위에서는 integral flow $$\phi$$ 위의 두 점 $$p,q$$가 주어졌을 때, 두 tangent space $$T_pM$$과 $$T_qM$$을 잇는 자연스러운 isomorphism $$d\phi^{-t}$$가 존재했지만, 임의의 vector bundle $$E$$의 두 fiber $$E_p$$와 $$E_q$$ 사이에는 이러한 함수가 존재하지 않기 때문이다. 따라서 우리는 이들 fiber들을 <em-ko>이어주는</em-ko> *connection*이라는 것을 추가로 정의한다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> Manifold $$M$$ 위에 정의된 vector bundle $$E\rightarrow M$$에 대하여, $$E$$ 위에서 정의된 *connection<sub>접속</sub>* $$\nabla:\mathfrak{X}(M)\times\Gamma(E)\rightarrow\Gamma(E)$$는 다음 조건들을 만족하는 함수이다.
+::: 정의 1
+Manifold $$M$$ 위에 정의된 vector bundle $$E\rightarrow M$$에 대하여, $$E$$ 위에서 정의된 *connection<sub>접속</sub>* $$\nabla:\mathfrak{X}(M)\times\Gamma(E)\rightarrow\Gamma(E)$$는 다음 조건들을 만족하는 함수이다.
 
 1. (Tensoriality) $$\nabla_XY$$는 첫째 성분에 대하여 $$C^\infty$$-linear이다.
 2. (Linearity) $$\nabla_XY$$는 둘째 성분에 대하여 $$\mathbb{R}$$-linear이다.
@@ -28,24 +27,19 @@ Lie derivative를 이용하면 벡터장이나 differential form을 미분할 �
     $$\nabla_X(fY)=f\nabla_XY+(Xf)Y$$
 
     을 만족한다.
-
-</div>
+:::
 
 이 때, $$\nabla_XY$$를 *$$Y$$의 $$X$$방향으로의 covariant derivative<sub>공변미분</sub>*라 부르기도 한다. 다음 명제는 $$(\nabla_XY)_p$$를 계산하기 위해서는 $$p$$ 근방에서의 $$X$$와 $$Y$$만 알면 충분하다는 것을 보여준다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**명제 2**</ins> Manifold $$M$$이 주어졌다 하고, $$X\in\mathfrak{X}(M)$$, $$Y\in\Gamma(E)$$라 하자. 임의의 점 $$p\in M$$에 대하여, $$(\nabla_XY)_p$$는 
+::: 명제 2
+Manifold $$M$$이 주어졌다 하고, $$X\in\mathfrak{X}(M)$$, $$Y\in\Gamma(E)$$라 하자. 임의의 점 $$p\in M$$에 대하여, $$(\nabla_XY)_p$$는 
 
 1. 점 $$p$$에서의 벡터장 $$X$$의 값 $$X_p$$,
 2. 점 $$p$$의 열린근방에서의 벡터장 $$Y\vert_U$$
 
 에만 의존한다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 우선 $$(\nabla_XY)_p$$가 점 $$p$$의 열린근방 $$U$$에서의 벡터장에만 의존한다는 것을 보이자. 두 벡터장 $$Y_1,Y_2$$가 $$p$$의 열린근방 $$U$$에서 같다면 $$(\nabla_XY_1)_p=(\nabla_XY_2)_p$$임을 보여야 하므로, 이를 위해서는 벡터장 $$Y$$가 열린근방 $$U$$의 모든 점에서 항등적으로 $$0$$이라면 $$(\nabla_XY)_p$$가 $$0$$임을 보이면 충분하다. $$\varphi$$를 $$\supp(\varphi)\subseteq U$$, $$\varphi(p)=1$$을 만족하는 bump function이라 하면 벡터장 $$\varphi Y$$는 $$M$$ 전체에서 항등적으로 $$0$$이다. 따라서 [정의 1](#def1)의 둘째 조건으로부터 $$\nabla_X(\varphi Y)=0$$이다. 한편 라이프니츠 법칙에 의해,
 
 $$0=\nabla_X(\varphi Y)=\varphi\nabla_XY+(X\varphi)Y$$
@@ -65,8 +59,7 @@ $$X=X^1\frac{\partial}{\partial x^1}+\cdots+X^n\frac{\partial}{\partial x^n}$$
 $$(\nabla_XY)_p=(\nabla_{\sum X^i\frac{\partial}{\partial x^i}}Y)_p=\left(\sum_{i=1}^n X^i\nabla_{\partial/\partial x^i} Y\right)_p$$
 
 이고, 모든 $$i$$에 대하여 $$X^i(p)=0$$이므로 원하는 결과를 얻는다.
-
-</details>
+:::
 
 ## Tangent bundle 위에서의 공변미분
 
@@ -98,11 +91,9 @@ $$\nabla_XY=\sum_{k=1}^n\left(\sum_{i,j=1}^nX(Y^k)+X^iY^j\Gamma_{ij}^k\right)E_k
 
 으로 쓸 수 있다.
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**정의 3**</ins> 위에서 정의한 $$n^3$$개의 함수 $$\Gamma_{ij}^k$$를 *connection coefficient<sub>접속 계수</sub>*이라 부른다.
-
-</div>
+::: 정의 3
+위에서 정의한 $$n^3$$개의 함수 $$\Gamma_{ij}^k$$를 *connection coefficient<sub>접속 계수</sub>*이라 부른다.
+:::
 
 한편, 임의의 manifold $$M$$위의 tangent bundle은 항상 connection을 갖는다. 이를 확인하기 위해서는 Riemannian metric 때와 마찬가지로, 유클리드 공간에서의 connection
 
@@ -114,18 +105,14 @@ $$\nabla_vY:=v(Y^1)\frac{\partial}{\partial x^i}+\cdots+v(Y^n)\frac{\partial}{\p
 
 우리는 tangent bundle $$TM$$ 위에 정의된 connection $$\nabla$$가 임의의 $$(r,s)$$-tensor field $$\mathcal{T}^{r,s}(M)$$로 잘 확장된다는 것을 보인다. ([]()) 이를 위해서는 우선 $$\nabla$$가 cotangent bundle $$T^\ast M$$ 위에서는 어떻게 확장되는지를 정해줘야 한다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**명제 4**</ins> Manifold $$M$$과, tangent bundle $$TM$$ 위의 connection $$\nabla$$가 주어졌다 하자. 함수 $$\nabla^\ast:\mathfrak{X}(M)\times\Gamma(T^\ast M)\rightarrow\Gamma(T^\ast M)$$을 다음의 식
+::: 명제 4
+Manifold $$M$$과, tangent bundle $$TM$$ 위의 connection $$\nabla$$가 주어졌다 하자. 함수 $$\nabla^\ast:\mathfrak{X}(M)\times\Gamma(T^\ast M)\rightarrow\Gamma(T^\ast M)$$을 다음의 식
 
 $$(\nabla_X^\ast\alpha)_p(Y)=X\bigl(\alpha(Y)\bigr)-\alpha_p\bigl(\nabla_XY\bigr)_p$$
 
 으로 정하면, $$\nabla^\ast$$는 $$T^\ast M$$ 위의 connection이 된다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 우선 우변의 식으로 정의된 $$\nabla^\ast\alpha$$가 $$1$$-form이라는 것을 보일 수 있으므로 $$\nabla^\ast$$의 공역에는 문제가 없다.
 
 $$\nabla^\ast$$가 실제로 connection의 조건을 만족한다는 사실은 라이프니츠 법칙 이외에는 자명하다. 사실 라이프니츠 법칙 또한
@@ -133,8 +120,7 @@ $$\nabla^\ast$$가 실제로 connection의 조건을 만족한다는 사실은 �
 $$\begin{aligned}(\nabla_X^\ast f\alpha)_pY&=X(f\cdot\alpha(Y))-(f\alpha)_p(\nabla_XY)_p\\&=(Xf)(\alpha(Y))+f(p)\bigl(X(\alpha(Y))-\alpha_p(\nabla_XY)_p\bigr)\\&=\bigl((Xf)\alpha+f\nabla_X\alpha\bigr)Y\end{aligned}$$
 
 으로부터 자명하다.
-
-</details>
+:::
 
 약간의 abuse of notation을 통해, 위에서 정의한 $$\nabla^\ast$$도 마찬가지로 $$\nabla$$로 적는다.
 
@@ -142,15 +128,13 @@ $$\begin{aligned}(\nabla_X^\ast f\alpha)_pY&=X(f\cdot\alpha(Y))-(f\alpha)_p(\nab
 
 이제 드디어 $$TM$$의 connection을 $$(r,s)$$-tensor field $$\mathcal{T}^{r,s}(M)$$으로 확장할 수 있다. 위에서와 마찬가지로, 이렇게 정의한 connection 역시 $$\nabla$$로 적기로 한다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**명제 5**</ins> Tangent bundle $$TM\rightarrow M$$ 위에 정의된 connection $$\nabla$$가 주어졌다 하자. 그럼 $$\nabla$$를 모든 tensor field $$\mathcal{T}^{r,s}(M)$$들 위에 다음 두 조건
+::: 명제 5
+Tangent bundle $$TM\rightarrow M$$ 위에 정의된 connection $$\nabla$$가 주어졌다 하자. 그럼 $$\nabla$$를 모든 tensor field $$\mathcal{T}^{r,s}(M)$$들 위에 다음 두 조건
 
 $$\nabla_X(F\otimes G)=(\nabla_X F)\otimes G+F\otimes(\nabla_XG),\qquad\nabla_X(F+G)=\nabla_XF+\nabla_XG$$
 
 을 만족하도록 확장할 수 있으며, 추가로 $$\mathcal{T}^{0,0}M$$에서 $$\nabla_Xf=Xf$$이도록 하는 확장이 유일하게 결정된다.
-
-</div>
+:::
 
 임의의 $$(r,s)$$-tensor $$F$$는 다음의 linear map
 
@@ -205,21 +189,16 @@ $$\nabla_{X,Y}^2F(\ldots)=(\nabla^2 F)(\cdots, Y,X)$$
 
 을 만족하는 $$(r,s)$$-tenor $$\nabla_{X,Y}^2F$$으로 정의된다. 이렇게 정의된 $$\nabla_{X,Y}^2F$$는 $$Y$$에 대하여 $$C^\infty(M)$$-linear이지만, $$\nabla_X\nabla_Y$$는 $$Y$$에 대하여 $$C^\infty$$-linear가 아니므로 일반적으로 $$\nabla_{X,Y}^2\neq\nabla_X\nabla_Y$$이다. 그러나 다음이 성립한다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop6">**명제 6**</ins> 임의의 $$(r,s)$$-tensor $$F$$에 대하여,
+::: 명제 6
+임의의 $$(r,s)$$-tensor $$F$$에 대하여,
 
 $$\nabla_{X,Y}^2F=\nabla_X(\nabla_YF)-\nabla_{\nabla_XY}F$$
 
 이 성립한다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 우변에 $$(\omega^1,\ldots,\omega^r,Z_1,\ldots,Z_s)$$를 넣어보면 된다.
-
-</details>
+:::
 
 특히 $$(0,0)$$-tensor $$C^\infty(M)$$에 이를 적용하면 *covariant Hessian* $$\nabla^2 u$$를 얻는다. 
 

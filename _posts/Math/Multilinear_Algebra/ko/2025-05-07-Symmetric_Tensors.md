@@ -40,27 +40,23 @@ $$h'\left( \sum_{\bar{h}\in H/G}\bar{h}x\right)=\sum_{\bar{h}\in H/G}(h'\bar{h})
 
 이기 때문이다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> 위와 같은 상황에서, $$\tr_{H/G}:M^G \rightarrow M^H$$를 다음의 식
+::: 정의 1
+위와 같은 상황에서, $$\tr_{H/G}:M^G \rightarrow M^H$$를 다음의 식
 
 $$\tr_{H/G}(x)=\sum_{\bar{h}\in H/G} \bar{h}x$$
 
 으로 정의하고, 이를 *relative trace*라 부른다. 
-
-</div>
+:::
 
 그럼 다음이 성립한다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**명제 2**</ins> 다음이 성립한다.
+::: 명제 2
+다음이 성립한다.
 
 1. 임의의 $$x\in M^G$$와 $$h\in H$$에 대하여, $$hx\in M^{hGh^{-1}}$$이고 식 $$\tr_{H/hGh^{-1}}(hx)=\tr_{H/G}(x)$$이 성립한다. 
 2. Subgroup들 $$F\leq G\leq H$$에 대하여, $$\tr_{H/G}\circ\tr_{G/F}=tr_{H/F}$$가 성립한다. 
 3. 임의의 $$x\in M^H$$에 대하여, $$\tr_{H/G}(x)=[H:G].x$$가 성립한다. 
-
-</div>
+:::
 
 ## 대칭텐서
 
@@ -70,9 +66,8 @@ $$\sigma(x_1\otimes x_2\otimes \cdots \otimes x_n)=x_{\sigma^{-1}(1)}\otimes \cd
 
 으로 정의할 수 있다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**정의 3**</ins> 위와 같은 상황에서, 
+::: 정의 3
+위와 같은 상황에서, 
 
 $$\sigma z=z\qquad\text{for all $\sigma\in S_n$}$$
 
@@ -81,8 +76,7 @@ $$\sigma z=z\qquad\text{for all $\sigma\in S_n$}$$
 $$\Sym(M)=\bigoplus_{d=0}^\infty \Sym^d(M)$$
 
 으로 적는다. 
-
-</div>
+:::
 
 $$\Sym(M)$$은 앞서 정의했던 symmetric algebra $$\S(M)$$과는 구별해야 하지만, 좋은 경우에는 이들 둘이 서로 isomorphic하다는 것을 보일 수 있다. 
 
@@ -114,9 +108,8 @@ $$xy=\sum_{\sigma\in S_{p,q}}\sigma(x\otimes y)$$
 
 으로 적을 수 있다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**명제 4**</ins> 임의의 $$A$$-module $$M$$에 대하여 다음이 성립한다.
+::: 명제 4
+임의의 $$A$$-module $$M$$에 대하여 다음이 성립한다.
 
 1. $$\Sym(M)$$은 위에서 정의한 곱셈에 의해 associative, commutative unital $$A$$-algebra가 된다. 
 2. 양의 정수 $$p_1,\ldots, p_n$$에 대하여, 다음의 식
@@ -124,11 +117,8 @@ $$xy=\sum_{\sigma\in S_{p,q}}\sigma(x\otimes y)$$
     $$x_1x_2\cdots x_n=\tr_{S_{p_1+\cdots+p_n}/S_{p_1}\times\cdots\times S_{p_n}}(x_1\otimes \cdots\otimes x_n)$$
 
     이 성립한다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 둘째 주장부터 보이자. 귀납법으로 진행한다. $$n=2$$일 때는 정의와 같으므로, 귀납적으로
 
 $$x_2\cdots x_n=\tr_{S_{p_2+\dots+p_n}/(S_{p_2}\times\cdots\times S_{p_n})}(x_2 \otimes \dots \otimes x_n)$$
@@ -162,8 +152,7 @@ $$\tr_{S_{p_1+\cdots +p_n}/S_{p_2+\cdots +p_n}}(x_1\otimes\cdots\otimes x_n)=(x_
 $$\underbrace{p_2+1,\cdots p_2+p_1}_\text{\scriptsize$p_1$ elements},\qquad \underbrace{1,\ldots, p_2}_\text{\scriptsize$p_2$ elements}$$
 
 로 배열하는 $$\sigma\in S_{p_1+p_2}$$를 사용하여 [명제 2](#prop2)의 첫째 결과를 사용하면 된다. Unit은 당연하게 $$1\in \Sym^0(M)$$이다.
-
-</details>
+:::
 
 임의의 $$x\in M$$과 $$k\in \mathbb{N}$$에 대하여, 
 
@@ -171,9 +160,8 @@ $$\gamma_k(x)=\underbrace{x\otimes\cdots\otimes x}_\text{\scriptsize $k$ times}$
 
 으로 정의하자. 그럼 위의 명제를 사용하여 계산하면 다음의 따름정리를 얻는다.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor5">**따름정리 5**</ins> 다음이 성립한다. 
+::: 따름정리 5
+다음이 성립한다. 
 
 1. [명제 4](#prop4)에서 정의한 $$x$$의 곱 $$x^k$$는 $$k!\gamma_k(x)$$와 같다. 
 2. 임의의 $$x_1,\ldots, x_n\in M$$에 대하여,
@@ -200,22 +188,17 @@ $$\gamma_k(x)=\underbrace{x\otimes\cdots\otimes x}_\text{\scriptsize $k$ times}$
     $$(-1)^nx_1x_2\cdots x_n=\sum_{H\subset\{1,\ldots, n\}}(-1)^{\lvert H\rvert}\gamma_n(x_H)$$
 
     이 성립한다. 
-
-</div>
+:::
 
 일반적인 텐서대수에서와 마찬가지로, 우리의 관심이 되는 것은 특별히 $$M$$이 free $$A$$-module일 때이다. 우선 다음의 보조정리를 보이자. 
 
-<div class="proposition" markdown="1">
-
-<ins id="lem6">**보조정리 6**</ins> Finite group $$H$$와 left $$AH$$-module $$N$$에 대하여, $$N$$의 $$H$$-invariant $$A$$-basis $$B$$가 주어졌다 하고, 이 action에 대한 quotient set $$\Omega=B/H$$를 생각하자. 그럼 다음이 성립한다. 
+::: 보조정리 6
+Finite group $$H$$와 left $$AH$$-module $$N$$에 대하여, $$N$$의 $$H$$-invariant $$A$$-basis $$B$$가 주어졌다 하고, 이 action에 대한 quotient set $$\Omega=B/H$$를 생각하자. 그럼 다음이 성립한다. 
 
 1. 각각의 $$\omega\in \Omega$$마다 $$y_\omega=\sum_{b\in\omega}b$$라 정의하면, $$(y_\omega)_{\omega\in \Omega}$$는 $$N^H$$의 $$A$$-basis이다. 
 2. $$N^H$$의 $$N$$에서의 supplementary submodule의 basis는 각각의 $$\omega\in\Omega$$에서 원소 하나씩을 뺀 집합 $$\omega'=\omega\setminus \{z_\omega\}$$들의 합집합 $$B'=\bigcup_{\omega\in\Omega} \omega'$$로 이루어진다. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 우선 $$y_\omega$$들과 $$B'$$의 원소들을 모두 모으면, 이는 단지 $$\omega$$의 한 원소 $$z_\omega$$를 $$y_\omega$$로 교체한 것에 불과하므로, 간단한 선형대수에 의해 이것이 $$N$$의 $$A$$-basis임을 안다. 즉, 주어진 decomposition을 따라
 
 $$N_1=\sum_{\omega\in\Omega} Ay_\omega,\qquad N_2=\sum_{b'\in B'}Ab$$
@@ -223,26 +206,20 @@ $$N_1=\sum_{\omega\in\Omega} Ay_\omega,\qquad N_2=\sum_{b'\in B'}Ab$$
 라 하면 $$N=N_1\oplus N_2$$이다. 
 
 이제 보여야 할 것은 $$N_1=N^H$$이다. 가정에 의해 $$N_1\subset N^H$$는 자명하다. 한편 임의의 $$y\in N^H$$에 대하여, $$y$$를 $$A$$-basis $$B$$의 linear combination $$y=\sum \alpha_b b$$로 나타내면 모든 $$b\in B$$와 모든 $$h\in H$$에 대하여 $$\alpha_{bh}=\alpha_b$$가 성립해야 하는 것을 안다. 이로부터 $$y\in N_1$$이어야 한다. 
-
-</details>
+:::
 
 그럼 이를 이용하여 다음의 명제를 보일 수 있다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop7">**명제 7**</ins> $$M$$이 free $$A$$-module이고, $$(e_i)_{i \in I}$$가 $$M$$의 basis라고 하자.
+::: 명제 7
+$$M$$이 free $$A$$-module이고, $$(e_i)_{i \in I}$$가 $$M$$의 basis라고 하자.
 
 1. 각각의 $$\nu\in\mathbb{N}^{(I)}$$에 대하여, $$e_\nu=\prod_{i\in I}\gamma_{\nu_i}(e_i)$$들은 $$\Sym(M)$$의 $$A$$-basis를 이룬다.
 2. 임의의 $$k$$에 대하여, $$\Sym^k(M)$$은 $$\T^kM$$의 $$A$$-direct factor이다. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 1. [따름정리 5](#cor5)의 둘째 식을 사용하면 된다.
 2. 각각의 $$k$$에 대하여, $$H=S_k$$, $$N=\T^KM$$으로 두고 [보조정리 6](#lem6)을 적용하면 된다. 
-
-</details>
+:::
 
 ## Functoriality
 
@@ -268,17 +245,15 @@ $$s:\T(M)\rightarrow \Sym(M);\qquad x\mapsto \sum_{\sigma\in S_n}\sigma x$$
 
 임을 안다. 다소 주의할 것으로, 만일 $$x\in\Sym^k(M)\subseteq \T^k(M)$$이라 하더라도 $$s(x)$$는 $$x$$가 그대로 나오는 것이 아니라 $$k!.x$$가 나온다는 것이 있다.
 
-<div class="remark" markdown="1">
-
-<ins id="rmk8">**참고 8**</ins> 위와 같은 이유로, 몇몇 reference들에는 처음 symmetric product를 정의할 때부터
+::: 참고 8
+위와 같은 이유로, 몇몇 reference들에는 처음 symmetric product를 정의할 때부터
 
 $$xy=\frac{1}{p!q!}\tr_{S_{p+q}/(S_p\times S_q)}(x\otimes y)$$
 
 으로 정의하기도 한다. 이렇게 했을 때 유리한 점은 위와 같은 계수를 더 이상 신경쓸 필요가 없다는 것이나, 위의 표기가 말이 되기 위해서는 처음부터 $$\T(M)$$ 위에 $$\mathbb{Q}$$-vector space 구조가 있어야 한다. 
 
 일반적으로 임의의 $$A$$-module 위에는 $$\mathbb{Z}$$-module 구조가 있지만 (따라서 $$k!.x$$ 등의 표현이 $$A$$에 관계없이 잘 정의되지만) 자연스러운 $$\mathbb{Q}$$-action은 존재하지 않으므로 우리는 원래의 정의를 그대로 사용하기로 한다. 
-
-</div>
+:::
 
 이와 같이 얻어낸 symmetrization map $$s:\T(M) \rightarrow \Sym(M)$$에 대하여, 우리는 [§텐서대수, ⁋명제 6](/ko/math/multilinear_algebra/tensor_algebras#prop6)에 의하여 다음의 식
 
@@ -292,14 +267,12 @@ $$t: \Sym(M)\hookrightarrow \T(M)\overset{p}{\longrightarrow}\S(M)$$
 
 또한 가지며, 우리의 주장은 많은 경우 이들 두 함수를 서로의 (거의) 역함수로 생각해도 된다는 것이다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop9">**명제 9**</ins> 다음이 성립한다.
+::: 명제 9
+다음이 성립한다.
 
 1. 만일 $$x\in \S^n(M)$$이라면, $$(t\circ\bar{s})(x)=n!.x$$이다.
 2. 만일 $$x\in \Sym^n(M)$$이라면, $$(\bar{s}\circ t)(x)=n!.x$$이다. 
-
-</div>
+:::
 
 이에 대한 증명은 단순한 계산이다. 
 
@@ -309,9 +282,8 @@ $$t: \Sym(M)\hookrightarrow \T(M)\overset{p}{\longrightarrow}\S(M)$$
 
 한편 symmetric algebra $$\S(M)$$은 symmetric $$n$$-linear map들의 representation으로 생각할 수 있었는데, 위의 [명제 9](#prop9)을 통해 $$\Sym(M)$$을 함께 생각하면 다음의 명제를 얻는다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop10">**명제 10**</ins> 두 $$A$$-module $$M,N$$, 자연수 $$n$$과 $$u: M \rightarrow N$$이 주어졌다 하자. 만일 $$M$$이 free $$A$$-module이라면 다음이 모두 동치이다. 
+::: 명제 10
+두 $$A$$-module $$M,N$$, 자연수 $$n$$과 $$u: M \rightarrow N$$이 주어졌다 하자. 만일 $$M$$이 free $$A$$-module이라면 다음이 모두 동치이다. 
 
 1. 식 $$u(x)=v(x,\ldots, x)$$를 만족하는 $$n$$-linear map $$v: M^n \rightarrow N$$이 존재한다. 
 2. 식 $$u(x)=w(\gamma_n(x))$$를 만족하는 linear map $$w: \Sym(M) \rightarrow N$$이 존재한다. 
@@ -321,26 +293,22 @@ $$t: \Sym(M)\hookrightarrow \T(M)\overset{p}{\longrightarrow}\S(M)$$
 
     이도록 할 수 있다. 
 4. $$M$$의 basis $$(e_i)_{i\in I}$$마다 3번 조건의 식을 만족하는 family $$(y_\nu)$$를 찾을 수 있다.
-
-</div>
+:::
 
 그럼 이 동치조건들을 만족하는 map $$u: M \rightarrow N$$들을 degree $$n$$ *homogeneous polynomial mapping*이라 부르고 이들의 모임을 $$\Poly^n(M,N)$$으로 적는다. 위의 명제의 첫째 조건과 둘째 조건은 각각 $$M$$에서 $$N$$으로의 $$n$$-linear map들의 모임에서 $$\Poly^n(M,N)$$으로의 surjection, $$\Hom_A(\Sym^n(M), N)$$에서 $$\Poly^n(M,N)$$으로의 surjection을 각각 유도하며, 셋째 조건과 넷째 조건은 이 이름 *polynomial mapping*을 정당화한다. 
 
-<div class="example" markdown="1">
-
-<ins id="ex11">**예시 11**</ins> $$A$$-module $$N$$에 대하여, free $$A$$-module $$A^{(I)}$$이 주어졌다 하고 다항식 $$u\in N[\x_i]_{i\in I}$$를 하나 고정하자. 그럼 다음의 식
+::: 예시 11
+$$A$$-module $$N$$에 대하여, free $$A$$-module $$A^{(I)}$$이 주어졌다 하고 다항식 $$u\in N[\x_i]_{i\in I}$$를 하나 고정하자. 그럼 다음의 식
 
 $$(x_i)_{i\in I} \mapsto u(x_i)\in N$$
 
 은 $$A$$-module들 사이의 hoomgeneous polynomial mapping이며 그 degree는 $$n$$이다. 
-
-</div>
+:::
 
 어렵지 않게 두 polynomial mapping의 합성은 다시 homogeneous mapping이라는 것을 보일 수 있다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop12">**명제 12**</ins> [명제 10](#prop10)의 조건을 모두 가정하고, 추가로 $$y\mapsto n!.y$$가 $$N$$의 automorphism이라 가정하자. 그럼 임의의 $$u\in\Poly^n(M,N)$$에 대하여, 식
+::: 명제 12
+[명제 10](#prop10)의 조건을 모두 가정하고, 추가로 $$y\mapsto n!.y$$가 $$N$$의 automorphism이라 가정하자. 그럼 임의의 $$u\in\Poly^n(M,N)$$에 대하여, 식
 
 $$u(x)=v(x,\ldots, x)$$
 
@@ -349,19 +317,16 @@ $$u(x)=v(x,\ldots, x)$$
 $$v(x_1,\ldots, x_n)=\frac{1}{n!}\sum_{H\subseteq \{1,\ldots, n\}}(-1)^{\lvert H\rvert}u\left(\sum_{i\in H} x_i\right)$$
 
 이 성립한다. 
-
-</div>
+:::
 
 이는 [따름정리 5](#cor5)로부터 따라나오는 결과이다. 이제 이것과 [참고 8](#rmk8)의 관찰을 종합하면 다음의 결과를 얻는다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop13">**명제 13**</ins> [명제 10](#prop10)의 상황을 가정하고, canonical homomorphism $$\Hom_A(\Sym^n(M), N) \rightarrow \Poly^n(M,N)$$을 생각하자. 그럼 다음이 성립한다.
+::: 명제 13
+[명제 10](#prop10)의 상황을 가정하고, canonical homomorphism $$\Hom_A(\Sym^n(M), N) \rightarrow \Poly^n(M,N)$$을 생각하자. 그럼 다음이 성립한다.
 
 1. 만일 $$A$$가 무한집합인 integral domain이고 $$N$$이 torsion-free라면 이 homomorphism은 isomorphism이다. 
 2. 만일 $$y\mapsto n!.y$$가 $$N$$에서 $$N$$으로의 injective endomorphism이라면 $$u$$는 isomorphism이다. 
-
-</div>
+:::
 
 ## 대칭함수
 
@@ -410,27 +375,23 @@ $$E_f=A[\x_1,\ldots,\x_n]/\mathfrak{a},\qquad \mathfrak{a}=(s_k+(-1)^{k+1}a_k)$$
 
 를 생각할 수 있으며, 이 때 $$f$$는, 계수를 $$A$$ 대신 $$E_f$$로 확장하면, 일차식들의 곱으로 완전히 인수분해된다. 뿐만 아니라 $$E_f$$는 이러한 성질을 갖는 $$A$$-algebra 중 universal한 대상인데, 이를 엄밀히 적으면 다음과 같다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop14">**명제 14**</ins> 임의의 commutative ring $$A,B$$가 주어졌다 하고, ring homomorphism $$\rho: A \rightarrow B$$와 $$B$$의 원소들 $$\xi_1,\ldots, \xi_n$$을 고정하자. 만일 $$B[\x]$$에서 다음의 식
+::: 명제 14
+임의의 commutative ring $$A,B$$가 주어졌다 하고, ring homomorphism $$\rho: A \rightarrow B$$와 $$B$$의 원소들 $$\xi_1,\ldots, \xi_n$$을 고정하자. 만일 $$B[\x]$$에서 다음의 식
 
 $$\rho(f)(\x)=\prod_{i=1}^n (\x-\xi_i)$$
 
 이 성립한다면, 유일한 ring homomorphism $$u: E_f \rightarrow B$$가 존재하여 $$\rho(a)=u(a.1)$$이고 $$u(\x_i)=\xi_i$$이도록 할 수 있다. 
-
-</div>
+:::
 
 지금까지 생성원으로 다룬 $$s_k$$는 표준적으로 *elementary symmetric polynomial<sub>기본대칭다항식</sub>* $$e_k$$라 부른다. 이와 짝을 이루는 다른 대칭다항식들을 함께 정의해 두면 대칭함수 환의 구조가 한결 선명해지고, 이들은 Grassmannian의 Schubert calculus 등에서 핵심적으로 쓰인다.
 
-<div class="definition" markdown="1">
-
-<ins id="def15">**정의 15**</ins> 자연수 $$k$$에 대하여, $$k$$차 *complete homogeneous symmetric polynomial<sub>완전동차대칭다항식</sub>* $$h_k$$를
+::: 정의 15
+자연수 $$k$$에 대하여, $$k$$차 *complete homogeneous symmetric polynomial<sub>완전동차대칭다항식</sub>* $$h_k$$를
 
 $$h_k = \sum_{1 \leq i_1 \leq i_2 \leq \cdots \leq i_k \leq n} \x_{i_1} \x_{i_2} \cdots \x_{i_k}$$
 
 로 정의한다. 즉 $$h_k$$는 $$k$$차 monomial 전체의 합이며, $$h_0 = 1$$, 그리고 $$k < 0$$이면 $$h_k = 0$$으로 약속한다.
-
-</div>
+:::
 
 elementary symmetric polynomial이 $$\prod_{i=1}^n (1 + \x_i T) = \sum_{k=0}^n e_k T^k$$로 생성되는 것과 짝을 이루어, complete homogeneous는 생성함수
 
@@ -438,21 +399,18 @@ $$\prod_{i=1}^n \frac{1}{1 - \x_i T} = \sum_{k \geq 0} h_k T^k$$
 
 로 나타난다. 두 생성함수의 곱이 $$1$$이라는 사실에서 $$e$$와 $$h$$를 잇는 관계 $$\sum_{j=0}^k (-1)^j e_j\, h_{k-j} = 0$$ ($$k \geq 1$$) 이 따라오며, $$h_1, \ldots, h_n$$ 또한 $$e_1, \ldots, e_n$$과 마찬가지로 대칭다항식 환 $$A[\x_1, \ldots, \x_n]^{S_n}$$을 생성한다.
 
-<div class="definition" markdown="1">
-
-<ins id="def16">**정의 16**</ins> 약감소하는 음 아닌 정수열 $$\lambda = (\lambda_1 \geq \lambda_2 \geq \cdots \geq \lambda_n \geq 0)$$ — 이를 *partition<sub>분할</sub>*이라 한다 — 에 대하여, *Schur polynomial<sub>슈어 다항식</sub>* $$s_\lambda$$를 두 교대다항식의 비
+::: 정의 16
+약감소하는 음 아닌 정수열 $$\lambda = (\lambda_1 \geq \lambda_2 \geq \cdots \geq \lambda_n \geq 0)$$ — 이를 *partition<sub>분할</sub>*이라 한다 — 에 대하여, *Schur polynomial<sub>슈어 다항식</sub>* $$s_\lambda$$를 두 교대다항식의 비
 
 $$s_\lambda(\x_1, \ldots, \x_n) = \frac{\det\bigl(\x_i^{\lambda_j + n - j}\bigr)_{1 \leq i, j \leq n}}{\det\bigl(\x_i^{n - j}\bigr)_{1 \leq i, j \leq n}}$$
 
 로 정의한다. 분모는 Vandermonde 행렬식 $$\prod_{i < j} (\x_i - \x_j)$$이고 분자도 같은 인자들로 나누어떨어지므로, $$s_\lambda$$는 잘 정의된 다항식이며 변수의 치환에 불변인 대칭다항식이다.
-
-</div>
+:::
 
 예를 들어 $$\lambda = (0, \ldots, 0)$$이면 $$s_\lambda = 1$$이고, 변수가 $$n = 2$$개일 때 $$\lambda = (2,1)$$이면 분자 $$\det\begin{pmatrix} \x_1^3 & \x_1 \\ \x_2^3 & \x_2 \end{pmatrix} = \x_1 \x_2 (\x_1^2 - \x_2^2)$$를 Vandermonde $$\x_1 - \x_2$$로 나누어 $$s_{(2,1)} = \x_1 \x_2 (\x_1 + \x_2)$$를 얻는다.
 
-<div class="remark" markdown="1">
-
-<ins id="rmk17">**참고 17**</ins> Schur polynomial은 여러 동치인 방식으로 기술된다. 첫째, [정의 15](#def15)의 $$h_k$$를 이용한 *Jacobi–Trudi 항등식*
+::: 참고 17
+Schur polynomial은 여러 동치인 방식으로 기술된다. 첫째, [정의 15](#def15)의 $$h_k$$를 이용한 *Jacobi–Trudi 항등식*
 
 $$s_\lambda = \det\bigl(h_{\lambda_i - i + j}\bigr)_{1 \leq i, j \leq \ell}$$
 
@@ -465,5 +423,4 @@ $$s_\lambda = \sum_T \x_1^{m_1(T)} \cdots \x_n^{m_n(T)}$$
 $$s_\lambda\, s_\mu = \sum_\nu c_{\lambda\mu}^\nu\, s_\nu$$
 
 의 $$c_{\lambda\mu}^\nu$$를 *Littlewood–Richardson 수*라 부른다. 이 동치성들과 기저·곱셈 규칙의 증명은 Macdonald, *Symmetric Functions and Hall Polynomials* (I장) 또는 Fulton, *Young Tableaux* 를 참조하라.
-
-</div>
+:::

@@ -23,15 +23,13 @@ Lie group의 경우 이러한 표현론적 관점은 더 도움이 되는데, Li
 
 다만 [\[표현론\] §유한군의 표현론, ⁋정의 1](/ko/math/representation_theory/representations_of_finite_groups#def1)에서처럼 $$G$$의 representation theory를 정의하면 Lie group $$G$$ 위에 있는 smooth structure는 놓치게 되므로, 다음과 같이 정의해주어야 한다.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> Lie group $$G$$에 대하여, $$G$$의 *representation<sub>표현</sub>*은 유한차원 벡터공간 $$V$$와, smooth map
+::: 정의 1
+Lie group $$G$$에 대하여, $$G$$의 *representation<sub>표현</sub>*은 유한차원 벡터공간 $$V$$와, smooth map
 
 $$\rho:G\rightarrow \Aut(V)$$
 
 이 주어진 것이다. 
-
-</div>
+:::
 
 만일 $$G$$를 discrete topology와 자명한 smooth structure가 주어진 Lie group으로 본다면 이 정의는 [\[표현론\] §유한군의 표현론, ⁋정의 1](/ko/math/representation_theory/representations_of_finite_groups#def1)의 일반화라 생각할 수도 있다. 비슷하게 [\[표현론\] §유한군의 표현론, §§표현론의 기본 개념들](/ko/math/representation_theory/representations_of_finite_groups#표현론의-기본-개념들)에 있는 모든 정의를 Lie group에 대해서도 할 수 있다. 
 
@@ -43,11 +41,9 @@ $$\rho:G\rightarrow \Aut(V)$$
 
 선형대수에서 가장 중요한 도구 중 하나는 대각화이다. 따라서 우리는 주어진 Lie group action $$\rho:G \rightarrow \Aut(V)$$에 대하여, $$V$$의 basis를 적당히 택하여 $$\rho(g)$$의 행렬표현을 대각행렬로 만드는 데에 관심이 있다. 만일 $$G$$가 유한군이었다면, 각각의 $$g$$에 대해 이러한 basis를 찾아줄 수 있었겠지만 현재는 $$G$$가 무한하므로 이러한 일을 하기 힘들다. 따라서 우리는 simultaneously diagonalizable인 원소들에 자연스럽게 관심을 갖게 된다. 그런데 [\[선형대수학\] §고유공간분해, ⁋명제 10](/ko/math/linear_algebra/eigenspace_decomposition#prop10)은 두 diagonalizable matrix가 simultaneously diagonalizable일 필요충분조건은 이들이 commute하는 것임을 알고 있으므로, 다음 정의를 내리는 것이 합당하다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**정의 2**</ins> Compact, connected Lie group $$G$$에 대하여, $$G$$의 subgroup $$T$$가 *maximal torus*라는 것은 $$T$$가 torus이고, 포함관계에 대하여 maximal인 것이다. 
-
-</div>
+::: 정의 2
+Compact, connected Lie group $$G$$에 대하여, $$G$$의 subgroup $$T$$가 *maximal torus*라는 것은 $$T$$가 torus이고, 포함관계에 대하여 maximal인 것이다. 
+:::
 
 Lie algebra $$\mathfrak{g}$$의 임의의 원소 $$X$$를 택한 후, 이 방향으로의 exponential map이 그리는 one-parameter subgroup의 closure가 torus가 된다. 따라서 maximal torus의 존재성은 [\[집합론\] §선택공리, ⁋정리 4](/ko/math/set_theory/axiom_of_choice#thm4)에 의해 자명하다. 
 
@@ -83,9 +79,8 @@ $$V=\bigoplus_\lambda V_\lambda;\qquad V_\lambda=\{t\cdot v=\lambda(t)v\text{ fo
 
 직관적으로 $$t\mapsto e^{2\pi i\lambda_i(X)}$$를 각속도 $$\lambda_i(X)$$를 갖는 각운동이라 생각할 수 있고, 이러한 관점을 도입하면 우리는 각각의 $$X\in \mathfrak{t}$$가 주어졌을 때, 이 방향으로의 각속도 $$\lambda_i(X)$$가 얼마인지를 통해 이 torus action을 설명할 수 있다는 것을 안다. 이 때 각각의 $$\lambda_i$$들을 우리는 *weight*라 부른다. 그럼 우리는 각각의 weight $$\lambda_i$$마다 적당한 $$V_i$$가 존재하여, 이 위에서는 torus action이 $$t\cdot v=\rchi_{\lambda_i}(t)v$$로 작동하는 것을 안다. 이러한 $$V_i$$를 *weight space*라 부른다. 
 
-<div class="example" markdown="1">
-
-<ins id="ex3">**예시 3**</ins> 특별한 예시로, 1차원 torus
+::: 예시 3
+특별한 예시로, 1차원 torus
 
 $$S^1\cong T \cong \mathbb{R}/\mathbb{Z}$$
 
@@ -120,8 +115,7 @@ $$T^r=\left\{(e^{2\pi i t_1}, \ldots e^{2\pi i t_r})\mid t_i\in \mathbb{R}/\math
 $$\lambda=(n_1, \ldots, n_r)$$
 
 로 주어질 것이다. 명시적으로 이 weight는 임의의 $$X=(x_1,\ldots, x_r)\in \mathfrak{t}$$가 주어졌을 때 $$n_1x_1+\cdots+n_rx_r$$을 내놓는 linear functional이다.  
-
-</div>
+:::
 
 선형대수학에서의 eigenspace decomposition에서와 마찬가지로, 각각의 weight에 대한 중복도가 $$1$$일 필요는 없다. 가령 다음의 torus action
 
@@ -129,9 +123,8 @@ $$e^{2\pi i t}\cdot(z_1, z_2)=(e^{4\pi i t}z_1, e^{4\pi i t} z_2)$$
 
 를 생각하면 이번에는 2차원 공간 $$\mathbb{C}^2$$ 위에서 $$T$$가 weight $$2$$를 갖는 것처럼 행동하기 때문이다. 이와 같이 서로 같은 weight $$\lambda$$들을 갖는 성분들을 한데 모아 이를 $$V_\lambda$$라 하면, 우리는 *weight space decomposition* $$V=\bigoplus V_\lambda$$를 얻는다. 지금까지의 논의를 엄밀하게 정의로 적으면 다음과 같다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def4">**정의 4**</ins> Torus $$T$$와 complex $$T$$-module $$V$$가 주어졌다 하자. Irreducible character $$\rchi_\lambda: T \rightarrow S^1$$와 그에 해당하는 linear functional $$\lambda:\mathfrak{t}\rightarrow\mathbb{C}$$에 대하여, $$\lambda$$가 $$V$$의 *weight*이라는 것은 다음 집합
+::: 정의 4
+Torus $$T$$와 complex $$T$$-module $$V$$가 주어졌다 하자. Irreducible character $$\rchi_\lambda: T \rightarrow S^1$$와 그에 해당하는 linear functional $$\lambda:\mathfrak{t}\rightarrow\mathbb{C}$$에 대하여, $$\lambda$$가 $$V$$의 *weight*이라는 것은 다음 집합
 
 $$V_\lambda=\left\{v\in V\mid t\cdot v=\rchi_\lambda(t)v\text{ for all $t\in T$}\right\}$$
 
@@ -140,8 +133,7 @@ $$V_\lambda=\left\{v\in V\mid t\cdot v=\rchi_\lambda(t)v\text{ for all $t\in T$}
 $$V=\bigoplus_\lambda V_\lambda$$
 
 을 $$V$$의 *weight decomposition*이라 부른다. 
-
-</div>
+:::
 
 ## 극대 원환면
 
@@ -155,26 +147,20 @@ $$q: G/T\times T\rightarrow G; \qquad (g,t)\mapsto gtg^{-1}$$
 
 우리는 이 map이 surjective라는 것 뿐만 아니라, 명시적인 mappuing degree까지 구해줄 수 있다. 이를 위해 다음을 정의하자. 
 
-<div class="definition" markdown="1">
-
-<ins id="def5">**정의 5**</ins> Compact, connected Lie group $$G$$와 maximal torus $$T$$, 그리고 $$T$$의 normalizer
+::: 정의 5
+Compact, connected Lie group $$G$$와 maximal torus $$T$$, 그리고 $$T$$의 normalizer
 
 $$N=\{g\in G\mid gTg^{-1}=T\}$$
 
 에 대하여, group $$W=N/T$$를 $$G$$의 *Weyl group<sub>바일 군</sub>*으로 정의한다. 
-
-</div>
+:::
 
 그럼 다음이 성립한다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop6">**명제 6**</ins> Weyl group $$W=N/T$$는 항상 유한하다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 명제 6
+Weyl group $$W=N/T$$는 항상 유한하다.
+:::
+::: 증명
 정의에 의해 $$N$$은 $$T$$ 위에 conjugation action
 
 $$N\rightarrow\Aut(T);\qquad n\mapsto (t\mapsto ntn^{-1})$$
@@ -184,23 +170,18 @@ $$N\rightarrow\Aut(T);\qquad n\mapsto (t\mapsto ntn^{-1})$$
 이제 임의의 1-parameter subgroup $$\alpha:\mathbb{R}\rightarrow N_0$$에 대하여, $$\alpha(\mathbb{R})\cdot T=T$$가 성립해야 하고, 이로부터 $$\alpha(\mathbb{R})\subset T$$여야 함을 안다. 그런데 [\[미분다양체\] §벡터장, ⁋정리 6](/ko/math/manifolds/vector_fields#thm6)에 의하여 이들은 $$N_0$$에서 항등원의 어떠한 열린근방을 덮으며, 따라서 $$N_0$$을 생성한다. 즉 $$N_0=T$$이다.
 
 따라서 $$N/T$$는 정확하게 $$N$$의 connected component의 개수이며, $$N$$은 compact Lie group $$G$$의 closed subspace로서 마찬가지로 compact이므로 이것이 무한할 수 없다.
-
-</details>
+:::
 
 이제 우리의 주장은 다음과 같다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="lem7">**보조정리 7**</ins> Compact, connected Lie group $$G$$, maximal torus $$T$$와 함수
+::: 보조정리 7
+Compact, connected Lie group $$G$$, maximal torus $$T$$와 함수
 
 $$q:G/T\times T\rightarrow G;\qquad (gT, s)\mapsto gsg^{-1}$$
 
 에 대하여, $$q$$의 mapping degree는 $$\lvert W\rvert$$이다. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 Mapping degree를 계산하기 위해서는 regular value 하나를 선택한 후 그 preimage를 모두 찾고, 각각의 preimage에서의 differential의 sign을 계산하면 된다. 
 
 이를 위해 먼저 $$T$$의 generator $$t$$를 하나 택하고 그 preimage $$q^{-1}(t)$$를 생각하자. 임의의 $$(gT,s)\in G/T\times T$$에 대하여, $$q(gT,s)=t$$라는 것은 $$gsg^{-1}=t$$라는 것이다. 한편 $$g^{-1}tg=s\in T$$이고, 
@@ -264,19 +245,16 @@ $$\Ad_{wt^{-1}w^{-1}}\vert_\mathfrak{f}-I=\Ad_w\circ(\Ad_t^{-1}\vert_\mathfrak{f
 이므로, 이 두 operator는 similar하고 따라서 같은 determinant를 갖는다.
 
 이상에서 $$t$$는 $$q$$의 regular value이고, $$q^{-1}(t)$$의 원소 개수는 $$\lvert W\rvert$$이며, 모든 preimage 점에서 $$dq$$의 determinant는 같은 부호를 갖는다는 것을 확인하였다. 따라서 적절한 orientation 선택 하에서 $$\deg q=\lvert W\rvert$$이다.
-
-</details>
+:::
 
 위에서 언급한 것과 같이, 이 보조정리로부터 이 섹션의 핵심적인 내용이 바로 따라나온다.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm8">**정리 8**</ins> Compact connected Lie group $$G$$에 대해 다음이 성립한다.
+::: 정리 8
+Compact connected Lie group $$G$$에 대해 다음이 성립한다.
 
 1. $$G$$의 임의의 원소는 어떠한 maximal torus에 포함되어 있다. 
 2. $$G$$의 두 maximal torus는 항상 conjugate이다. 
-
-</div>
+:::
 
 따라서 우리는 임의의 compact connected Lie group $$G$$와 maximal torus $$T$$에 대하여, 다음의 decomposition
 
@@ -312,27 +290,20 @@ $$[g]=\{hgh^{-1}\mid h\in G\}$$
 
 는 $$T$$와 $$W$$를 통해 다음과 같이 기술된다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop9">**명제 9**</ins> Maximal torus $$T$$의 두 원소가 $$G$$에서 conjugate인 것과 이들이 Weyl group action의 같은 orbit에 속하는 것이 동치이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 명제 9
+Maximal torus $$T$$의 두 원소가 $$G$$에서 conjugate인 것과 이들이 Weyl group action의 같은 orbit에 속하는 것이 동치이다.
+:::
+::: 증명
 $$T$$의 두 원소 $$x,y$$가 서로 conjugate이라 하자. 즉 적당한 $$g\in G$$에 대하여 $$gxg^{-1}=y$$이다. 이제 $$T$$와 $$gTg^{-1}$$을 비교하면 이들은 $$y$$의 centralizer $$Z_G(y)$$의 maximal torus이다. 따라서 $$T=h(gTg^{-1})h^{-1}$$이도록 하는 $$h\in Z_G(y)$$가 존재하며, 이로부터 $$(hg)x(hg)^{-1}=y$$이고 $$hg\in N_G(T)$$이다. 즉 $$y=(hgT)\cdot x$$이므로 $$x$$와 $$y$$는 같은 $$W$$-orbit에 속한다.
 
 역으로, $$x,y$$가 같은 $$W$$-orbit에 속한다면 자명히 $$G$$에서 conjugate이다.
-
-</details>
+:::
 
 이로부터 각 conjugacy class $$[g]$$에 대하여, $$[g]\cap T$$는 정확하게 하나의 $$W$$-orbit임을 안다. 따라서 우리는 다음의 일대일대응을 얻는다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop10">**명제 10**</ins> $$T/W$$와 $$\Conj(G)$$ 사이에는 자연스러운 일대일대응이 존재한다.
-
-</div>
+::: 명제 10
+$$T/W$$와 $$\Conj(G)$$ 사이에는 자연스러운 일대일대응이 존재한다.
+:::
 
 이 일대일대응 하에서, $$G$$ 위의 conjugation action은 $$T/W$$ 위에서 자명하게 작용한다. 즉, $$G$$의 각 원소는 자신이 속한 conjugacy class를 보존한다.
 
@@ -354,15 +325,13 @@ $$h\cdot(gT,t)=(hgT,t)$$
 
 이제 이 action이 $$W$$-action과 commute하는 것은 자명하며, 따라서 $$G$$는 quotient $$(G/T\times T)/W$$ 위에도 잘 정의된 action을 유도한다. 이 observation으로부터 다음을 얻는다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop11">**명제 11**</ins> Identification $$(G/T\times T)/W\cong G$$ 하에서, conjugation action은 다음과 같이 표현된다.
+::: 명제 11
+Identification $$(G/T\times T)/W\cong G$$ 하에서, conjugation action은 다음과 같이 표현된다.
 
 $$h\cdot[(gT,t)]=[(hgT,t)]$$
 
 즉, $$G/T$$ 성분에는 left multiplication으로 작용하고, $$T$$ 성분은 보존한다.
-
-</div>
+:::
 
 한편, 우리는 [명제 10](#prop10)에 의하여 $$T/W$$와 $$\Conj(G)$$ 사이에 일대일대응이 존재함을 안다. $$c_h$$는, 정의에 의해, $$G$$의 conjugacy class를 변화시키지 않으며 이것이 위의 명제에서 $$T$$ 방향의 변화가 없는 것으로 반영된 것을 확인할 수 있다. 그 대신 conjugation action은 정확하게 $$G/T$$ 위에 작용하는 것으로 생각할 수 있다.
 
@@ -432,44 +401,35 @@ $$\begin{pmatrix}0&1\\-1&0\end{pmatrix}\begin{pmatrix}e^{i\theta}&0\\0&e^{-i\the
 
 마지막으로 우리는 다음 글에서 다룰 root system의 motivation을 맛볼 수 있는 정의를 살펴본다. [보조정리 7](#lem7)에서, 우리가 $$T$$의 generator $$t$$에서의 $$q$$에 대한 preimage를 계산하고 그 개수가 $$\lvert W\rvert$$개임을 확인하였다. 이제 $$T$$위에 $$W$$가 작용한다는 것을 알게되었으므로 이 조건을 다음과 같이 쓸 수 있다.
 
-<div class="definition" markdown="1">
-
-<ins id="def12">**정의 12**</ins> Maximal torus $$T$$의 원소 $$t$$가 *regular*라는 것은 $$wtw^{-1}=t$$를 만족하는 $$w\in W$$가 오직 $$w=e$$뿐인 것이다. 반대로, $$wtw^{-1}=t$$인 $$w\neq e$$가 존재하면 $$t$$를 *singular*라 한다.
-
-</div>
+::: 정의 12
+Maximal torus $$T$$의 원소 $$t$$가 *regular*라는 것은 $$wtw^{-1}=t$$를 만족하는 $$w\in W$$가 오직 $$w=e$$뿐인 것이다. 반대로, $$wtw^{-1}=t$$인 $$w\neq e$$가 존재하면 $$t$$를 *singular*라 한다.
+:::
 
 즉, regular element는 Weyl group action의 stabilizer가 자명한 원소이고, singular element는 비자명한 stabilizer를 갖는 원소이다. 일반적으로 $$q$$의 mapping degree를 계산하기 위해서는 $$q$$의 regular value에서의 값을 계산해야 하는데, orbit-stabilizer theorem을 생각하면 preimage가 이와 같이 $$\lvert W\rvert$$개의 image를 가지기 위해서는 반드시 stabilizer가 trivial해야한다는 것을 안다. 이로부터 이러한 원소를 regular element라 부르는 것이 자연스럽다.
 
-<div class="example" markdown="1">
-
-<ins id="ex13">**예시 13**</ins> $$\SU(2)$$의 경우, $$T=\{\text{diag}(e^{i\theta}, e^{-i\theta})\}$$이고 $$W=\mathbb{Z}_2$$가 $$\theta\mapsto -\theta$$로 작용한다. 따라서:
+::: 예시 13
+$$\SU(2)$$의 경우, $$T=\{\text{diag}(e^{i\theta}, e^{-i\theta})\}$$이고 $$W=\mathbb{Z}_2$$가 $$\theta\mapsto -\theta$$로 작용한다. 따라서:
 
 - **Regular:** $$\theta \neq 0, \pi$$인 원소들. 이들은 reflection의 fixed point가 아니다.
 - **Singular:** $$\theta=0$$ (항등원)과 $$\theta=\pi$$ ($$\text{diag}(-1,-1)$$). 이들은 reflection에 의해 고정된다.
 
 Torus $$T\cong S^1$$에서 singular 원소는 정확히 두 점이며, regular 원소들은 그 여집합이다.
-
-</div>
+:::
 
 일반적으로 다음이 성립한다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop14">**명제 14**</ins> Compact connected Lie group $$G$$의 maximal torus $$T$$에 대하여:
+::: 명제 14
+Compact connected Lie group $$G$$의 maximal torus $$T$$에 대하여:
 
 1. Regular 원소들은 $$T$$에서 dense open subset을 이룬다.
 2. Singular 원소들은 $$T$$에서 codimension $$\geq 1$$인 closed subset을 이룬다.
 3. Singular 원소들의 집합은 유한 개의 subgroup들의 합집합이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 (1)과 (2): 각 $$w\in W$$, $$w\neq e$$에 대하여, fixed point set $$\{t\in T: wtw^{-1}=t\}$$는 $$T$$의 proper closed subgroup이다. Singular 원소들의 집합은 이들의 유한 합집합이므로 closed이고, 그 여집합(regular 원소들)은 dense open이다.
 
 (3): 각 $$w\neq e$$에 대한 fixed point set이 $$T$$의 closed subgroup이고, $$W$$가 유한이므로 유한 개의 subgroup들의 합집합이다.
-
-</details>
+:::
 
 Singular 원소들이 $$T$$에서 형성하는 집합은 torus를 여러 조각으로 나눈다. 가령 $$\SU(2)$$의 경우, singular 원소 두 점이 $$S^1$$을 두 개의 반원으로 나눈다. 각 반원에서 Weyl group은 free action을 정의하며, Weyl group action은 이들을 서로 대응시켜주는 역할을 한다.
 

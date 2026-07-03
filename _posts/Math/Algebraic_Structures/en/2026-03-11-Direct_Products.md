@@ -17,14 +17,10 @@ last_polished_at: 2026-05-24T08:30:03+00:00
 
 We know how to define products in any category $$\mathcal{A}$$. ([\[Category Theory\] §Limits, ⁋Example 6](/en/math/category_theory/limits#ex6)) The following lemma shows that arbitrary products in the category $$\Grp$$ always exist.
 
-<div class="proposition" markdown="1">
-
-<ins id="lem1">**Lemma 1**</ins> $$\Grp$$ is a cartesian monoidal category.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Lemma 1
+$$\Grp$$ is a cartesian monoidal category.
+:::
+::: Proof
 First, the product set $$\prod_{i\in I} G_i$$ in $$\Set$$ satisfying the universal property of products was already defined in [\[Set Theory\] §Product of Sets, ⁋Definition 1](/en/math/set_theory/product_of_sets#def1). For notational convenience, we write elements $$f:I\rightarrow \bigcup G_i$$ of $$\prod_{i\in I}G_i$$ as tuples $$(a_i)_{i\in I}$$.
 
 Now for any two elements $$x=(x_i)_{i\in I}$$ and $$y=(y_i)_{i\in I}$$ of the set $$\prod_{i\in I}G_i$$, we define
@@ -42,35 +38,25 @@ We now prove that $$(G=\prod_{i\in I}G_i,(\pr_i)_{i\in I})$$ defined in this way
 $$f(xy)=(f_i(xy))_{i\in I}=(f_i(x)f_i(y))_{i\in I}=(f_i(x))_{i\in I}(f_i(y))_{i\in I}=f(x)f(y)$$
 
 so $$f$$ is a group homomorphism, and therefore the above $$(G=\prod_{i\in I}G_i,(\pr_i)_{i\in I})$$ satisfies the universal property.
-
-</details>
+:::
 
 The following corollaries are also immediate from the universal property of products.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor2">**Corollary 2**</ins> For a family of groups $$(G_i)$$, their product is uniquely determined up to unique isomorphism.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Corollary 2
+For a family of groups $$(G_i)$$, their product is uniquely determined up to unique isomorphism.
+:::
+::: Proof
 In any category, terminal objects are unique up to unique isomorphism.
+:::
 
-</details>
-
-<div class="proposition" markdown="1">
-
-<ins id="cor3">**Corollary 3**</ins> Let $$(G_i)$$ and $$(H_i)$$ be families of groups indexed by the same set $$I$$, and suppose that for each $$i$$ a group homomorphism $$f_i:G_i\rightarrow H_i$$ is given. Then there exists a unique group homomorphism $$f:\prod G_i\rightarrow\prod H_i$$ making the following diagram
+::: Corollary 3
+Let $$(G_i)$$ and $$(H_i)$$ be families of groups indexed by the same set $$I$$, and suppose that for each $$i$$ a group homomorphism $$f_i:G_i\rightarrow H_i$$ is given. Then there exists a unique group homomorphism $$f:\prod G_i\rightarrow\prod H_i$$ making the following diagram
 
 ![Product_of_map](/assets/images/Math/Algebraic_Structures/Direct_Products-1.svg){:style="width:13.07em" class="invert" .align-center}
 
 commute. Moreover, $$\ker f=\prod\ker f_i$$ and $$\im f=\prod\im f_i$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 $$\prod H_i$$ is the terminal object of the collection of cones satisfying the given conditions. ([\[Category Theory\] §Limits, §§Universal Property of Limits](/en/math/category_theory/limits#universal-property-of-limits)) By the commutative diagram defined in this way,
 
 $$x\in\ker f\iff f(x)=e\iff \forall i(\pr_i^H(f(x))=e_i)\iff \forall i((f_i\circ \pr_i^G)(x)=e_i)\iff \forall i(\pr_i^G(x)\in\ker f_i)$$
@@ -80,17 +66,12 @@ so $$\ker f=\prod\ker f_i$$. Similarly, for $$y\in\prod H_i$$, we have $$y\in\im
 $$\pr_i^H(y)=\pr_i^H(f(x))=f_i(\pr_i^G(x))\in\im f_i$$
 
 so $$\im f=\prod\im f_i$$ also holds.
+:::
 
-</details>
-
-<div class="proposition" markdown="1">
-
-<ins id="cor4">**Corollary 4**</ins> Let $$(G_i)_{i\in I}$$ be a family of groups. If each $$H_i$$ is a normal subgroup of $$G_i$$, then $$\prod H_i$$ is also a normal subgroup of $$\prod G_i$$, and its quotient group is $$\prod (G_i/H_i)$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Corollary 4
+Let $$(G_i)_{i\in I}$$ be a family of groups. If each $$H_i$$ is a normal subgroup of $$G_i$$, then $$\prod H_i$$ is also a normal subgroup of $$\prod G_i$$, and its quotient group is $$\prod (G_i/H_i)$$.
+:::
+::: Proof
 Apply [Corollary 3](#cor3) to the canonical homomorphisms $$p_i:G_i\rightarrow G_i/H_i$$.
 
 ![product_of_normal_subgroups](/assets/images/Math/Algebraic_Structures/Direct_Products-2.svg){:style="width:18.32em" class="invert" .align-center}
@@ -100,22 +81,16 @@ Each $$p_i\circ\pr_i$$ is surjective as a composition of surjective homomorphism
 $$\biggl(\prod_{i\in I} G_i\biggr)\bigg/\biggl(\prod_{i\in I}H_i\biggr)\cong\prod_{i\in I} (G_i/H_i)$$
 
 holds.
-
-</details>
+:::
 
 Of course, even when the $$H_i$$ are subgroups of the $$G_i$$ that are not necessarily normal, $$\prod H_i$$ is still a subgroup of $$\prod G_i$$.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor5">**Corollary 5**</ins> Let $$(G_i)_{i\in I}$$ be a family of groups. If $$H_i\leq G_i$$ for each $$i\in I$$, then $$\prod H_i$$ is a subgroup of $$\prod G_i$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Corollary 5
+Let $$(G_i)_{i\in I}$$ be a family of groups. If $$H_i\leq G_i$$ for each $$i\in I$$, then $$\prod H_i$$ is a subgroup of $$\prod G_i$$.
+:::
+::: Proof
 Apply [Corollary 3](#cor3) to the inclusion homomorphisms $$\iota_i:H_i\hookrightarrow G_i$$. Then $$\iota$$ is injective and $$\prod H_i$$ is precisely the image of $$\iota$$, hence a subgroup of $$\prod G_i$$.
-
-</details>
+:::
 
 ## Partial Products
 

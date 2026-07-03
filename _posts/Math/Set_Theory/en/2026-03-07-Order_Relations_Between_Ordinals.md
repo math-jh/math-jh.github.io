@@ -18,16 +18,12 @@ last_polished_at: 2026-06-02T22:30:02+00:00
 
 By definition, every ordinal is a well-ordered set. Moreover, the converse also holds.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop1">**Proposition 1**</ins> Let $$A,B$$ be two well-ordered sets. Then at least one of the following holds:
+::: Proposition 1
+Let $$A,B$$ be two well-ordered sets. Then at least one of the following holds:
 1. There exists an order isomorphism from $$A$$ onto a segment of $$B$$, or
 2. There exists an order isomorphism from $$B$$ onto a segment of $$A$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 Let $$\mathcal{F}$$ be the set of isomorphisms from segments of $$A$$ to segments of $$B$$. First, we show that $$\mathcal{F}$$ is inductive.
 
 Suppose a totally ordered subset $$\mathcal{G}$$ of $$\mathcal{F}$$ is given. Then we can form the set $$S$$ by taking the union of the domains of all $$u\in\mathcal{G}$$. Since $$S$$ is a union of segments of $$A$$, it is again a segment of $$A$$. Now, let $$\fun(A,B)$$ be the collection of functions from subsets of $$A$$ to $$B$$. It is clear that this collection is inductive with respect to function extension. Since $$\bigcup\mathcal{G}$$ consists of functions from subsets of $$A$$ to subsets of $$B$$, let $$v$$ be the least upper bound of $$\mathcal{G}$$ in $$\fun(A,B)$$. Then $$v(S)$$ is the union of the ranges of all $$u\in\mathcal{G}$$, hence a segment of $$B$$, and for any $$x, y$$, choosing $$u\in \mathcal{G}$$ that contains both $$x$$ and $$y$$ yields
@@ -39,22 +35,19 @@ which shows that $$v$$ is an isomorphism from $$S$$ onto $$v(S)$$. Therefore, $$
 By Zorn's lemma, $$\mathcal{F}$$ has a maximal element. Call it $$u_0$$, and denote its domain by $$S_0$$. We need to show that either $$S_0=A$$ or $$u_0(S_0)=B$$.
 
 If neither holds, then there exist $$a\in A$$ and $$b\in B$$ such that $$S_0=(-\infty, a)$$ and $$u_0(S_0)=(-\infty, b)$$. Adding $$(a,b)$$ to $$u_0$$ then yields a new function that strictly extends $$u_0$$, contradicting the maximality of $$u_0$$. Hence, either $$S_0=A$$ or $$u_0(S_0)=B$$.
-
-</details>
+:::
 
 As mentioned earlier, since every ordinal is a well-ordered set, the above proposition opens the way to viewing any well-ordered set as a segment order isomorphic to an initial segment of some ordinal. However, to achieve this we must introduce the following new axiom.
 
-<div class="misc" markdown="1">
-
-**The Axiom schema of Replacement.** Let $$P(x,y)$$ be a property satisfying
+::: misc The Axiom schema of Replacement. {#axiom-replacement}
+Let $$P(x,y)$$ be a property satisfying
 
 > For any $$x$$, there always exists a $$y$$ such that $$P(x,y)$$ holds.
 
 Then for any set $$A$$, there exists another set $$B$$ such that
 
 > For each $$x\in A$$, there exists a suitable $$y\in B$$ such that $$P(x,y)$$ holds.
-
-</div>
+:::
 
 Given a $$P$$ satisfying the above condition, we can regard it as a function $$F$$ that takes $$x$$ as input and produces $$y$$ as output. However, functions were originally defined with a specified target, whereas the correspondence created by this condition $$P$$ provides no information about the target whatsoever—this is why an axiom schema is needed rather than a single axiom. In any case, once the replacement schema is given, we can properly define the target $$B$$, and then by applying the comprehension schema to $$B$$ with the condition
 
@@ -62,14 +55,10 @@ Given a $$P$$ satisfying the above condition, we can regard it as a function $$F
 
 we can equivalently define the *image* of $$A$$ under $$F$$.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm2">**Theorem 2**</ins> Every well-ordered set is order isomorphic to a unique ordinal.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Theorem 2
+Every well-ordered set is order isomorphic to a unique ordinal.
+:::
+::: Proof
 Let $$A$$ be a well-ordered set, and let $$X$$ be the set of all $$x\in A$$ satisfying
 
 > $$S_x$$ is order isomorphic to some ordinal.
@@ -89,8 +78,7 @@ This property assigns either a unique ordinal $$y$$ or (equally uniquely) the em
 From the above, we conclude that $$B$$ is an ordinal number. Moreover, applying the argument of step 2 verbatim, we can show that for any $$x\in X$$, if $$y<x$$ then $$y\in X$$. That is, $$X$$ is a segment of $$A$$, and thus either $$X=S_x$$ or $$X=A$$.
 
 Now, to show that $$X=A$$, we argue by contradiction. First, we can define $$f:X\rightarrow B$$ by $$f(x)=\alpha_x$$, and one can verify that $$f$$ is an order isomorphism between $$X$$ and $$B$$. However, if $$X=S_x$$, then since $$B$$ is an ordinal, this would mean that $$S_x$$ is isomorphic to the ordinal $$B$$, and by definition we must have $$x\in X$$. This is a contradiction, so $$X=A$$.
-
-</details>
+:::
 
 ## Definition of Cardinal Numbers
 
@@ -98,19 +86,15 @@ We now introduce the rigorous definition of cardinality. However, our full treat
 
 The definition of cardinality that we will adopt in the next article defines the size of a set using bijections between sets. For example, since there exists a bijection between any two two-element sets, we regard them as having the same size. This definition does not align well with ordinals in some sense; for instance, $$\omega$$ and $$\omega+1$$ are certainly different sets from the ordinal perspective, yet there exists a bijection between them (ignoring order). To reconcile these, we proceed as follows.
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**Definition 3**</ins> For any set $$A$$, the smallest ordinal number that does not admit a bijection with any subset of $$A$$ is called the *Hartogs number* of $$A$$ and is denoted by $$h(A)$$.
-
-</div>
+::: Definition 3
+For any set $$A$$, the smallest ordinal number that does not admit a bijection with any subset of $$A$$ is called the *Hartogs number* of $$A$$ and is denoted by $$h(A)$$.
+:::
 
 Successor ordinals admit bijections with their *predecessors*, so they cannot be the Hartogs number of any set. Even if we examine limit ordinals, $$\omega$$ and $$\omega\cdot 2$$ should have the same cardinality. For this reason, we introduce the following new concept.
 
-<div class="definition" markdown="1">
-
-<ins id="def4">**Definition 4**</ins> An ordinal $$\alpha$$ is called an *initial ordinal* if for all $$\beta<\alpha$$, there is no bijection between $$\beta$$ and $$\alpha$$.
-
-</div>
+::: Definition 4
+An ordinal $$\alpha$$ is called an *initial ordinal* if for all $$\beta<\alpha$$, there is no bijection between $$\beta$$ and $$\alpha$$.
+:::
 
 Then the size of any set can be expressed as the size of an initial ordinal. Given a set $$X$$, we can equip it with a well-ordering to select an ordinal $$\alpha$$, and then choose the smallest among all ordinals of the same size (using the well-ordering).
 

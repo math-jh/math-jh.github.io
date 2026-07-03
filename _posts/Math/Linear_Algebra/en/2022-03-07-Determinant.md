@@ -26,21 +26,18 @@ The determinant is a function from $$\Mat_n(\mathbb{K})$$ to $$\mathbb{K}$$. Reg
 
 $$A=(A_1\;A_2\;\cdots\;A_n)\cong (A_1, A_2, \cdots, A_n)\cong \bigl((A_{11}, A_{21}, \ldots, A_{n1}), (A_{12},A_{22},\ldots, A_{n2}),\ldots, (A_{1n},A_{2n},\ldots, A_{nn})\bigr)$$
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> For $$\mathbb{K}$$-vector spaces $$V,W$$, a function
+::: Definition 1
+For $$\mathbb{K}$$-vector spaces $$V,W$$, a function
 
 $$f:\underbrace{V\times\cdots\times V}_\text{ {\footnotesize $n$} times}\rightarrow W$$
 
 is called a *multilinear map* if $$f$$ is linear in each component.
-
-</div>
+:::
 
 In particular, when $$n=2$$, we say $$f$$ is *bilinear*.
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**Definition 2**</ins> Let two $$\mathbb{K}$$-vector spaces $$V,W$$ and a multilinear map
+::: Definition 2
+Let two $$\mathbb{K}$$-vector spaces $$V,W$$ and a multilinear map
 
 $$f: \underbrace{V\times\cdots\times V}_\text{ {\footnotesize $n$} times}\rightarrow W$$
 
@@ -49,19 +46,14 @@ be given. If for any $$v_1,\ldots, v_n$$ and any $$i\neq j$$ the identity
 $$f(v_1,\ldots, v_i, \ldots, v_j,\ldots, v_n)=-f(v_1,\ldots, v_j,\ldots, v_i,\ldots, v_n)$$
 
 always holds, then we call $$f$$ an *alternating multilinear map*.
-
-</div>
+:::
 
 As above, let a multilinear map $$f:V\times\cdots\times V\rightarrow W$$ be given. Then $$f$$ is *antisymmetric* if for any $$v_1,\ldots, v_n$$ and any $$i\neq j$$, whenever $$v_i=v_j$$ we have $$f(v_1,\ldots, v_n)=0$$.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop3">**Proposition 3**</ins> A multilinear map $$f:V\times\cdots\times V\rightarrow W$$ is alternating if and only if it is antisymmetric.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 3
+A multilinear map $$f:V\times\cdots\times V\rightarrow W$$ is alternating if and only if it is antisymmetric.
+:::
+::: Proof
 First, assume that $$f$$ is alternating. Then for any $$v_1,\ldots, v_n\in V$$ satisfying $$v_i=v_j$$,
 
 $$\begin{aligned}f(v_1,\ldots,v_i,\ldots, v_j,\ldots, v_n)&=f(v_1\ldots, v_j,\ldots,v_i,\ldots, v_n)\\&=-f(v_1,\ldots, v_i,\ldots, v_j,\ldots, v_n)\end{aligned}$$
@@ -77,18 +69,15 @@ where $$v_i+v_j$$ appears in the $$i$$th and $$j$$th components. Applying multil
 $$\begin{aligned}0&=f(v_1,\ldots, v_i,\ldots, v_i,\ldots, v_n)+f(v_1,\ldots, v_i,\ldots, v_j,\ldots,v_n)\\&\phantom{==}+f(v_1,\ldots, v_j,\ldots, v_i,\ldots,v_n)+f(v_1,\ldots, v_j,\ldots, v_j,\ldots, v_n)\end{aligned}$$
 
 and since $$f$$ is antisymmetric, the first and last terms—in which $$v_i$$ and $$v_j$$ each appear twice—vanish. The desired conclusion follows.
-
-</details>
+:::
 
 In particular, suppose $$f$$ is an alternating multilinear map in $$n$$ variables and one of $$v_1,\ldots, v_n$$ is a linear combination of the other $$n-1$$ vectors. Then applying multilinearity followed by the proposition above, we see that $$f(v_1,\ldots, v_n)=0$$.
 
 We are now in a position to define the determinant.
 
-<div class="definition" markdown="1">
-
-<ins id="def4">**Definition 4**</ins> An alternating multilinear map $$D:(\mathbb{K}^n)^n\rightarrow \mathbb{K}$$ satisfying $$D(e_1,\ldots, e_n)=1$$ is called the *determinant*.
-
-</div>
+::: Definition 4
+An alternating multilinear map $$D:(\mathbb{K}^n)^n\rightarrow \mathbb{K}$$ satisfying $$D(e_1,\ldots, e_n)=1$$ is called the *determinant*.
+:::
 
 We have not yet shown that the determinant exists or is unique, so we have used the notation $$D$$ rather than $$\det$$. In the next post we introduce the computation of the determinant and prove both claims, after which we adopt the standard notation $$\det$$.
 

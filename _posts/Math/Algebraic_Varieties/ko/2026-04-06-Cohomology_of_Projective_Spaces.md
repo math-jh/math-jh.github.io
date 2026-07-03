@@ -18,21 +18,17 @@ weight: 13
 
 $$\mathcal{O}(d)$$는 line bundle이므로 quasi-coherent sheaf이고, 따라서 sheaf cohomology를 계산하기 위해서는 Čech cohomology를 활용하여 standard affine cover $$\mathcal{U}=\{U_0,\ldots, U_n\}$$을 사용하면 충분하다. 다음은 그 계산의 결과이다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop1">**명제 1 (Bott)**</ins> $$\mathbb{P}^n$$ 위의 line bundle $$\mathcal{O}(d)$$의 cohomology는 다음과 같다:
+::: 명제 1 (Bott)
+$$\mathbb{P}^n$$ 위의 line bundle $$\mathcal{O}(d)$$의 cohomology는 다음과 같다:
 
 $$H^q(\mathbb{P}^n, \mathcal{O}(d)) = \begin{cases}
 \mathbb{K}[\x_0, \ldots, \x_n]_d & q = 0, d \geq 0 \\
 \mathbb{K}[\x_0^{-1}, \ldots, \x_n^{-1}]_{-d-n-1} & q = n, d \leq -n-1 \\
 0 & \text{otherwise}
 \end{cases}$$
+:::
 
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 위에서 설명한 것과 같이 Čech cohomology를 사용한다. 우선 각각의 열린집합 위에서 section $$\mathcal{O}(d)(U_i)$$는
 
 $$\x_i^d \cdot \mathbb{K}[\x_0/\x_i, \ldots, \widehat{\x_i/\x_i}, \ldots, \x_n/\x_i]$$
@@ -114,8 +110,7 @@ $$\cdots\rightarrow H^{n-1}(\mathbb{P}^{n-1}, \mathcal{O}(d))\rightarrow H^n(\ma
 $$\mathbb{K}[\x_0^{\pm 1}, \ldots, \x_n^{\pm 1}]_d$$
 
 의 원소임을 알고, $$n-1$$-cochain의 image로 나타나지 않는 monomial들은 앞선 $$\mathbb{P}^1$$에서의 계산과 유사하게 <em-ko>모든</em-ko> 지수가 $$-1$$보다 작은 $$d$$차식이며 이로부터 원하는 결과를 얻는다. $$H^0$$의 경우는, 위에서는 직접 계산해보았지만, 이미 언급했듯 이는 [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16)의 재확인에 불과하므로 여기서는 굳이 반복하지 않기로 한다.
-
-</details>
+:::
 
 위 증명에서 우리는 각 변수 $$\x_0,\cdots, \x_n$$ 그리고 $$d\leq -n-1$$에 대하여, $$H^n(\mathbb{P}^n, \mathcal{O}(d))$$가 다음의 monomial들
 
@@ -137,32 +132,26 @@ $$\mathbb{K}[\x_0^{-1}, \ldots, \x_n^{-1}]_{-d-n-1}$$
 
 한편 나중을 위해 우리는 Euler characteristic을 정의한다.
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**정의 2**</ins> Variety $$X$$와 그 위에 정의된 coherent sheaf $$\mathcal{F}$$에 대하여, $$\mathcal{F}$$의 *Euler characteristic<sub>오일러 지표</sub>*을 다음의 식
+::: 정의 2
+Variety $$X$$와 그 위에 정의된 coherent sheaf $$\mathcal{F}$$에 대하여, $$\mathcal{F}$$의 *Euler characteristic<sub>오일러 지표</sub>*을 다음의 식
 
 $$\rchi(X, \mathcal{F}) = \sum_{i=0}^{n} (-1)^i \dim H^i(X, \mathcal{F})$$
 
 으로 정의한다.
-
-</div>
+:::
 
 특별히 $$X=\mathbb{P}^n$$이고 $$\mathcal{F}=\mathcal{O}(d)$$인 경우, 어차피 어느 경우에서건 중간 cohomology들은 모두 죽고 양 끝의 cohomology만 고려하면 되므로 다음 따름정리를 쉽게 증명할 수 있다.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor3">**따름정리 3**</ins> $$\mathbb{P}^n$$ 위의 $$\mathcal{O}(d)$$의 Euler characteristic은 다음의 식
+::: 따름정리 3
+$$\mathbb{P}^n$$ 위의 $$\mathcal{O}(d)$$의 Euler characteristic은 다음의 식
 
 $$\rchi(\mathbb{P}^n, \mathcal{O}(d)) = \binom{n+d}{n}$$
 
 
 으로 주어진다.
+:::
 
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 [명제 1](#prop1)에 의해 cohomology는 세 가지 경우로 나뉜다.
 
 첫째, $$d \geq 0$$인 경우 $$H^0$$만 non-zero이므로
@@ -182,8 +171,7 @@ $$\rchi(\mathcal{O}(d)) = (-1)^n \dim \mathbb{K}[\x_0^{-1}, \ldots, \x_n^{-1}]_{
 $$\binom{-d-1}{n}=(-1)^n\binom{n+d}{n}$$
 
 임을 안다. 여기서 $$\binom{n+d}{n}$$은 위의 경우와 마찬가지로 이항계수 표기에 대한 일반적인 convention을 따랐다.
-
-</details>
+:::
 
 Euler characteristic은 short exact sequence에 대해 additivity라는 중요한 성질을 갖는다. 즉, short exact sequence 
 
@@ -201,19 +189,15 @@ $$\mathcal{L}\otimes \mathcal{O}(d)$$
 
 더 일반적으로 우리는 이를 임의의 projective variety와 그 위에 정의된 임의의 coherent sheaf로 확장할 수 있다. 이를 위해서는 우선 $$\mathcal{O}(1)$$의 역할을 할 것이 필요한데, 우리의 정의에서 projective variety $$X$$는 항상 embedding $$X\hookrightarrow\mathbb{P}^N$$으로 주어지므로 $$\mathbb{P}^N$$ 위의 $$\mathcal{O}(1)$$들을 끌어오면 된다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**명제 4 (Serre Vanishing)**</ins> $$X$$를 projective variety, $$\mathcal{L}$$을 ample line bundle, $$\mathcal{F}$$를 coherent sheaf라 하자. 그럼 충분히 큰 $$m$$에 대해
+::: 명제 4 (Serre Vanishing)
+$$X$$를 projective variety, $$\mathcal{L}$$을 ample line bundle, $$\mathcal{F}$$를 coherent sheaf라 하자. 그럼 충분히 큰 $$m$$에 대해
 
 $$H^i(X, \mathcal{F} \otimes \mathcal{L}^{\otimes m}) = 0 \quad (i > 0)$$
 
 이 성립한다.
+:::
 
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 $$\mathcal{L}$$이 ample이므로, 충분히 큰 $$m_0$$에 대해 $$\mathcal{L}^{\otimes m_0}$$은 very ample이다. 즉, 적당한 embedding $$i \colon X \hookrightarrow \mathbb{P}^N$$이 존재하여 $$\mathcal{L}^{\otimes m_0} = i^\ast\mathcal{O}(1)$$이 성립한다. $$\mathbb{P}^N$$의 standard affine cover $$\{U_i\}$$를 $$X$$에 restrict하면 affine open cover $$\{X \cap U_i\}$$를 얻는다. Finite intersection $$U_{i_0} \cap \cdots \cap U_{i_p}$$은 affine이므로 $$(X \cap U_{i_0}) \cap \cdots \cap (X \cap U_{i_p}) = X \cap (U_{i_0} \cap \cdots \cap U_{i_p})$$도 affine이다. 따라서 두 Čech complex가 literally 같으므로
 
 $$\check{H}^i(\{X \cap U_j\}, \mathcal{F}) = \check{H}^i(\{U_j\}, i_\ast\mathcal{F})$$
@@ -259,8 +243,7 @@ $$H^j(\mathcal{G}(n_0)) \cong H^{j+N}(\mathcal{K}_{N-1})$$
 을 얻는다. $$\mathbb{P}^N$$의 cohomological dimension은 $$N$$이므로 $$H^{j+N} = 0$$ ($$j \geq 1$$, $$j + N \geq N+1 > N$$), 따라서 $$H^j(\mathcal{G}(n_0)) = 0$$이다.
 
 마지막으로, $$\mathcal{G}(n_0)$$이 globally generated이므로 $$\mathcal{G}(n) = \mathcal{G}(n_0) \otimes \mathcal{O}(n - n_0)$$ 역시 $$n \geq n_0$$에 대해 globally generated이고, 따라서 위와 동일한 resolution 인자를 $$\mathcal{G}(n)$$에 대해서도 구성할 수 있으므로 vanishing은 $$n \geq n_0$$인 모든 $$n$$에 대해 성립한다.
-
-</details>
+:::
 
 ## Regularity
 
@@ -268,15 +251,13 @@ $$H^j(\mathcal{G}(n_0)) \cong H^{j+N}(\mathcal{K}_{N-1})$$
 
 직관적으로 higher cohomology는 낮은 degree cohomology에서의 실패로 인해 생기는 것이므로, 이 twisting은 높은 차수에서는 "덜" 필요하다. 이를 염두에 두면 다음의 정의가 자연스럽다.
 
-<div class="definition" markdown="1">
-
-<ins id="def5">**정의 5**</ins> Projective variety $$X$$와 그 위의 ample line bundle $$\mathcal{L}$$이 고정되었다고 하자. 그럼 $$X$$ 위의 coherent sheaf $$\mathcal{F}$$가 *$$m$$-regular*라는 것은 모든 $$i>0$$에 대하여
+::: 정의 5
+Projective variety $$X$$와 그 위의 ample line bundle $$\mathcal{L}$$이 고정되었다고 하자. 그럼 $$X$$ 위의 coherent sheaf $$\mathcal{F}$$가 *$$m$$-regular*라는 것은 모든 $$i>0$$에 대하여
 
 $$H^i(X, \mathcal{F} \otimes \mathcal{L}^{\otimes m - i}) = 0$$
 
 이 성립하는 것이다.
-
-</div>
+:::
 
 일반적으로 coherent sheaf의 cohomology를 모두 계산하는 것은 거의 불가능하지만, 충분히 twist하면 higher cohomology가 vanish한다는 것이 우리의 기본적인 아이디어이다. Regularity는 여기에서 더 나아가, 구체적으로 얼마만큼의 twisting이 필요한지를 측정해주는 개념이다. 
 
@@ -286,15 +267,13 @@ $$H^0(X, \mathcal{L}) \otimes \mathcal{O}_X \to \mathcal{L}$$
 
 이 surjective인 것과 동치이다. *Globally generated*는 이 조건을 임의의 coherent sheaf로 일반화한 것이다: coherent sheaf $$\mathcal{F}$$가 globally generated라는 것은, 마찬가지로 위와 같은 형태의 evaluation map이 surjective가 되어 global section들로 각 점의 stalk를 모두 생성할 수 있다는 의미이다. 특히 line bundle의 경우에는 globally generated인 것과 basepoint-free인 것이 동치이다. 이 성질은 [명제 4](#prop4)의 증명에서도 핵심적인 역할을 하였다.
 
-<div class="definition" markdown="1">
-
-<ins id="def6">**정의 6**</ins> Coherent sheaf $$\mathcal{F}$$가 *globally generated*라는 것은 evaluation map
+::: 정의 6
+Coherent sheaf $$\mathcal{F}$$가 *globally generated*라는 것은 evaluation map
 
 $$H^0(X, \mathcal{F}) \otimes \mathcal{O}_X \to \mathcal{F}$$
 
 가 surjective인 것이다. 즉, global section들로 stalk를 모두 생성할 수 있다.
-
-</div>
+:::
 
 Regularity를 일반적으로 정의하기 위해서는, 우선 twist의 개념이 필요하다. $$\mathbb{P}^n$$에서는 $$\mathcal{O}(1)$$을 기본으로 사용하므로 $$\mathcal{F}(d) := \mathcal{F} \otimes \mathcal{O}(d)$$로 쓴다. 임의의 projective variety $$X$$ 위에서는 ample line bundle $$\mathcal{L}$$을 택하고 $$\mathcal{F}(d) := \mathcal{F} \otimes \mathcal{L}^{\otimes d}$$로 정의한다. Twist는 다음의 성질들을 만족한다. Tensor product의 결합법칙에 의해 $$\mathcal{F}(d)(e) = \mathcal{F}(d+e)$$가 성립한다. 또한, tensor product functor $$- \otimes \mathcal{L}^{\otimes d}$$는 line bundle이므로 exact이고, 따라서 short exact sequence
 
@@ -307,18 +286,14 @@ $$0 \to \mathcal{F}(d) \to \mathcal{G}(d) \to \mathcal{H}(d) \to 0$$
 역시 short exact sequence가 된다.
 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop7">**명제 7 (Castelnuovo-Mumford Regularity)**</ins> $$X$$를 projective variety, $$\mathcal{L}$$을 ample line bundle, $$\mathcal{F}$$를 coherent sheaf라 하자. $$\mathcal{F}$$가 $$\mathcal{L}$$에 대해 $$m$$-regular이면 다음이 성립한다.
+::: 명제 7 (Castelnuovo-Mumford Regularity)
+$$X$$를 projective variety, $$\mathcal{L}$$을 ample line bundle, $$\mathcal{F}$$를 coherent sheaf라 하자. $$\mathcal{F}$$가 $$\mathcal{L}$$에 대해 $$m$$-regular이면 다음이 성립한다.
 
 1. $$\mathcal{F} \otimes \mathcal{L}^{\otimes m}$$은 globally generated이다.
 2. $$\mathcal{F} \otimes \mathcal{L}^{\otimes p}$$는 모든 $$p \geq 0$$에 대해 $$\mathcal{L}$$에 대해 $$(m+p)$$-regular이다.
+:::
 
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 $$X$$의 차원에 대한 귀납법으로 증명한다. $$\dim X = 0$$인 경우 $$X$$는 한 점이고 coherent sheaf $$\mathcal{F}$$는 finite-dimensional vector space이므로 $$H^0$$ 이외의 cohomology는 자동으로 사라진다. 이제 $$\dim X \geq 1$$이라 가정하자.
 
 핵심은 $$\mathcal{L}$$의 global section $$s \in H^0(X, \mathcal{L})$$으로 정의되는 effective divisor $$D$$에 대한 restriction exact sequence를 이용하는 것이다. 일반적인 $$s$$를 택하면 Bertini의 정리에 의해 $$D$$는 smooth이며, 다음 short exact sequence를 얻는다.
@@ -376,28 +351,21 @@ $$H^0(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-1}) \to H^1(\
 $$H^{i-1}(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-i}) \to H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-i-1}) \to H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-i}) \to H^i(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-i})$$
 
 이다. 귀납적 가정에 의해 $$H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-i-1}) = 0$$ ($$p' = p-1$$, $$j = i$$에 대한 가정)이고, $$\mathcal{F}\vert_D$$에 대한 귀납적 가정 (차원에 대한 귀납)에 의해 $$H^{i-1}(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-i}) = 0$$과 $$H^i(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-i}) = 0$$이 $$i-1 \geq 1$$, $$i \leq n-1$$에 대해 성립한다. 따라서 $$H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-i}) = 0$$을 얻는다.
+:::
 
-</details>
-
-<div class="example" markdown="1">
-
-<ins id="ex8">**예시 8**</ins> $$\mathbb{P}^n$$ 위의 line bundle $$\mathcal{O}(d)$$의 regularity를 계산해보자. 여기서 $$\mathcal{L} = \mathcal{O}(1)$$이므로 twist는 $$\mathcal{O}(d) \otimes \mathcal{O}(m) = \mathcal{O}(d+m)$$이다. $$m$$-regularity 조건은 $$H^i(\mathbb{P}^n, \mathcal{O}(d+m-i)) = 0$$ ($$i > 0$$)이다. $$d \geq 0$$이고 $$m = 0$$을 택하면 $$H^i(\mathcal{O}(d-i))$$를 확인해야 하는데, $$i = 1$$일 때 $$H^1(\mathcal{O}(d-1))$$은 $$d \geq 1$$이면 $$0$$이고 $$d = 0$$이면 $$H^1(\mathcal{O}(-1)) = 0$$ (Bott's formula에서 $$-1 \geq -n$$이므로 모든 cohomology가 $$0$$)이다. 일반적으로 $$d \geq 0$$이고 $$i > 0$$일 때 $$d - i \geq -n$$이면 $$H^i(\mathcal{O}(d-i)) = 0$$이고, $$d - i < -n$$, 즉 $$i > d + n$$인 경우에는 $$i > n$$이 되어 어차피 $$H^i = 0$$이다. 따라서 $$\mathcal{O}(d)$$는 $$\mathcal{L} = \mathcal{O}(1)$$에 대해 $$0$$-regular이다. 반면 $$d < 0$$인 경우, $$\mathcal{O}(d)$$는 $$(-d)$$-regular이다. [명제 7](#prop7)에 의해 $$\mathcal{O}(d) \otimes \mathcal{L}^{\otimes 0} = \mathcal{O}(d)$$는 $$d \geq 0$$일 때 globally generated이며, 이는 ([§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16))에서 확인한 바와 일치한다.
-
-</div>
+::: 예시 8
+$$\mathbb{P}^n$$ 위의 line bundle $$\mathcal{O}(d)$$의 regularity를 계산해보자. 여기서 $$\mathcal{L} = \mathcal{O}(1)$$이므로 twist는 $$\mathcal{O}(d) \otimes \mathcal{O}(m) = \mathcal{O}(d+m)$$이다. $$m$$-regularity 조건은 $$H^i(\mathbb{P}^n, \mathcal{O}(d+m-i)) = 0$$ ($$i > 0$$)이다. $$d \geq 0$$이고 $$m = 0$$을 택하면 $$H^i(\mathcal{O}(d-i))$$를 확인해야 하는데, $$i = 1$$일 때 $$H^1(\mathcal{O}(d-1))$$은 $$d \geq 1$$이면 $$0$$이고 $$d = 0$$이면 $$H^1(\mathcal{O}(-1)) = 0$$ (Bott's formula에서 $$-1 \geq -n$$이므로 모든 cohomology가 $$0$$)이다. 일반적으로 $$d \geq 0$$이고 $$i > 0$$일 때 $$d - i \geq -n$$이면 $$H^i(\mathcal{O}(d-i)) = 0$$이고, $$d - i < -n$$, 즉 $$i > d + n$$인 경우에는 $$i > n$$이 되어 어차피 $$H^i = 0$$이다. 따라서 $$\mathcal{O}(d)$$는 $$\mathcal{L} = \mathcal{O}(1)$$에 대해 $$0$$-regular이다. 반면 $$d < 0$$인 경우, $$\mathcal{O}(d)$$는 $$(-d)$$-regular이다. [명제 7](#prop7)에 의해 $$\mathcal{O}(d) \otimes \mathcal{L}^{\otimes 0} = \mathcal{O}(d)$$는 $$d \geq 0$$일 때 globally generated이며, 이는 ([§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16))에서 확인한 바와 일치한다.
+:::
 
 ## Very ample과 ample의 성질
 
 위의 [명제 4](#prop4)와 [명제 7](#prop7)은 ample line bundle의 성질에 대한 대표적인 결과이다. 우리는 이 글을 ample line bundle과 very ample line bundle에 대한 추가적인 성질을 살펴보며 마무리한다. 
 
-<div class="proposition" markdown="1">
+::: 명제 9
+$$\mathcal{L}$$이 very ample이고 $$\mathcal{M}$$이 globally generated이면, $$\mathcal{L} \otimes \mathcal{M}$$은 very ample이다.
+:::
 
-<ins id="prop9">**명제 9**</ins> $$\mathcal{L}$$이 very ample이고 $$\mathcal{M}$$이 globally generated이면, $$\mathcal{L} \otimes \mathcal{M}$$은 very ample이다.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 $$\mathcal{L}$$이 very ample이므로, projective embedding $$i: X \hookrightarrow \mathbb{P}^N$$이 존재하여 $$\mathcal{L} = i^\ast\mathcal{O}_{\mathbb{P}^N}(1)$$이도록 할 수 있다. 한편, $$\mathcal{M}$$이 globally generated이므로, global section들 $$s_0, \ldots, s_n \in H^0(X, \mathcal{M})$$가 모든 점에서 stalk를 generate하며, 이로부터 morphism $$\phi: X \to \mathbb{P}^n$$를 정의할 수 있다.
 
 이제 closed embedding $$(i, \phi): X \to \mathbb{P}^N \times \mathbb{P}^n$$을 생각하자. 그럼 여기에 Segre embedding ([§사영다양체, ⁋예시 16](/ko/math/algebraic_varieties/projective_varieties#ex16)) 
@@ -409,27 +377,21 @@ $$\sigma: \mathbb{P}^N \times \mathbb{P}^n \hookrightarrow \mathbb{P}^{Nn+N+n}$$
 $$(\sigma \circ (i, \phi))^\ast\mathcal{O}(1) = i^\ast\mathcal{O}(1) \otimes \phi^\ast\mathcal{O}(1) = \mathcal{L} \otimes \mathcal{M}$$
 
 인 것을 안다. 즉 $$\mathcal{L} \otimes \mathcal{M}$$은 very ample이다.
-
-</details>
+:::
 
 즉, 다소 복잡하게 설명하기는 했으나 핵심은 globally generated line bundle $$\mathcal{M}$$이 정의하는 morphism $$\phi:X\rightarrow \mathbb{P}^n$$은 closed embedding이 아닐 수 있으나, 이를 $$\mathcal{L}$$과 텐서하여 $$(i,\phi)$$ 형태로 projective space에 넣어주면 첫 번째 성분인 $$i$$가 이 map을 closed embedding으로 만들어준다는 것이다. 그럼 이로부터 다음의 유용한 결과 또한 증명할 수 있다. 
 
-<div class="proposition" markdown="1">
+::: 명제 10
+Projective variety $$X$$ 위에 정의된 ample line bundle $$\mathcal{L}$$과 임의의 line bundle $$\mathcal{M}$$에 대하여, 충분히 큰 $$n$$에 대해 $$\mathcal{M} \otimes \mathcal{L}^{\otimes n}$$은 very ample이다.
+:::
 
-<ins id="prop10">**명제 10**</ins> Projective variety $$X$$ 위에 정의된 ample line bundle $$\mathcal{L}$$과 임의의 line bundle $$\mathcal{M}$$에 대하여, 충분히 큰 $$n$$에 대해 $$\mathcal{M} \otimes \mathcal{L}^{\otimes n}$$은 very ample이다.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 우선 $$\mathcal{L}$$이 ample이므로 적당한 $$m>0$$에 대해 $$\mathcal{L}^{\otimes m}$$이 very ample이다. 한편, [명제 4](#prop4)에 의해 우리는 충분히 큰 $$k$$에 대해서는 $$\mathcal{M}\otimes \mathcal{L}^{\otimes k}$$의 higher cohomology가 사라지도록 할 수 있으므로, 이러한 $$k$$에 대해서 $$\mathcal{M}\otimes \mathcal{L}^{\otimes k}$$는 globally generated이다. 이제 [명제 9](#prop9)에 의해 
 
 $$(\mathcal{M} \otimes \mathcal{L}^{\otimes k}) \otimes \mathcal{L}^{\otimes m} = \mathcal{M} \otimes \mathcal{L}^{\otimes (k+m)}$$
 
 은 very ample이고, 이로부터 $$n = k + m$$으로 두면 증명이 완료된다.
-
-</details>
+:::
 
 ---
 

@@ -26,20 +26,16 @@ On the other hand, we proved that for an arbitrary matrix $$A$$ to be invertible
 
 First, we show the following simple lemma.
 
-<div class="proposition" markdown="1">
-
-<ins id="lem1">**Lemma 1**</ins> For a matrix $$A\in\Mat_n(\mathbb{K})$$, the following three conditions are all equivalent.
+::: Lemma 1
+For a matrix $$A\in\Mat_n(\mathbb{K})$$, the following three conditions are all equivalent.
 
 1. $$A$$ is invertible.
 2. There exists a suitable $$B\in\Mat_n(\mathbb{K})$$ such that $$AB=I$$.
 3. There exists a suitable $$B\in\Mat_n(\mathbb{K})$$ such that $$BA=I$$.
 
 Moreover, if the second or third condition holds, then $$B=A^{-1}$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 That the first condition implies each of the second and third is obvious, so it suffices to show the converse directions.
 
 First, assume that there exists a suitable $$B\in\Mat_n(\mathbb{K})$$ such that $$AB=I$$. Then by the fundamental theorem of linear algebra,
@@ -53,8 +49,7 @@ $$\rank L_A+\nullity L_A=\dim \mathbb{K}^n=n$$
 we know that $$\nullity L_A=0$$. That is, $$L_A$$ is also injective, and thus $$L_A$$ is bijective and the matrix $$A$$ is invertible. Now, multiplying both sides of the equation $$AB=I$$ on the left by $$A^{-1}$$, we obtain $$B=A^{-1}$$.
 
 Similarly, one can prove that the third condition implies the first.
-
-</details>
+:::
 
 Of course, thinking again that matrices and linear maps are the same, this is obvious because the inverse of a function satisfies the same property.
 
@@ -112,9 +107,8 @@ Now, repeat this process for the $$n-1$$ equations from the second row to the la
 2. For every equation that is not all zeros, the first nonzero coefficient in this equation is to the right of the coefficient with this property in the equation above it.
 
 
-<div class="example" markdown="1">
-
-<ins id="ex2">**Example 2**</ins> The following system of equations satisfies the above two conditions.
+::: Example 2
+The following system of equations satisfies the above two conditions.
 
 $$\begin{aligned}x_1+2x_2+4x_3+3x_4&=2\\\phantom{x_1+}3x_2\phantom{+2x_3}+6x_4&=3\\\phantom{x_1+2x_2+}x_3+5x_4&=1\end{aligned}$$
 
@@ -127,8 +121,7 @@ $$\begin{aligned}x_1\phantom{+2x_2+4x_3}-21x_4&=-4\\\phantom{x_1+}x_2\phantom{+2
 From this, we can see that the general solution to the above system of equations is
 
 $$x_1=-4+21x_4,\quad x_2=1-2x_4,\quad x_3=1-5x_4$$
-
-</div>
+:::
 
 The method of solving a system of equations through the process described so far is called *Gaussian elimination* or *Gaussian-Jordan elimination*.
 
@@ -136,23 +129,20 @@ The method of solving a system of equations through the process described so far
 
 The system of equations (3) given initially could be simply expressed as $$Ax=b$$ using matrices. Gaussian elimination shows that by appropriately changing this matrix $$A$$ and $$b$$, we can write this equation as $$A'x=b'$$, where the matrix $$A'$$ can be chosen to satisfy the two conditions (*).
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**Definition 3**</ins> For a given matrix $$A$$, an *elementary row operation* refers to the following three operations:
+::: Definition 3
+For a given matrix $$A$$, an *elementary row operation* refers to the following three operations:
 
 1. Swapping two entire rows,
 2. Multiplying a row by a nonzero constant,
 3. Adding a multiple of one row to another row.
-
-</div>
+:::
 
 The specific [Example 2](#ex2) we examined was about appropriately manipulating a system of linear equations to satisfy condition (*) and then writing it in a specific way. However, it is worth noting that the calculations examined before that were also essentially obtained from elementary row operations (corresponding equation manipulations).
 
 Also, we define the following.
 
-<div class="definition" markdown="1">
-
-<ins id="def4">**Definition 4**</ins> Let an $$m\times n$$ matrix $$A$$ be given. For any $$1\leq i\leq m$$, if the integer $$j_0(i)=\min\{j\leq n\mid a_{ij}\neq 0\}$$ is well-defined, we call $$a_{i,j_0(i)}$$ the *leading coefficient* of the $$i$$-th row. Additionally, if the following two conditions are satisfied:
+::: Definition 4
+Let an $$m\times n$$ matrix $$A$$ be given. For any $$1\leq i\leq m$$, if the integer $$j_0(i)=\min\{j\leq n\mid a_{ij}\neq 0\}$$ is well-defined, we call $$a_{i,j_0(i)}$$ the *leading coefficient* of the $$i$$-th row. Additionally, if the following two conditions are satisfied:
 
 1. If $$a_{i1}, a_{i2},\ldots, a_{in}=0$$, then for all $$k$$ satisfying $$i < k$$, $$a_{k1}, a_{k2},\ldots, a_{kn}=0$$.
 2. If $$i < i'$$ and both integers $$j_0(i), j_0(i')$$ are well-defined, then necessarily $$j_0(i) < j_0(i')$$.
@@ -163,8 +153,7 @@ then we call the matrix $$A$$ a *row echelon matrix*. If additionally
 2. for all $$i'\neq i$$, $$a_{i', j_0(i)}=0$$
 
 then we call $$A$$ a *reduced row echelon matrix*.
-
-</div>
+:::
 
 Therefore, synthesizing the discussion from the previous section, Gaussian elimination can be said to be the process of making a row echelon matrix, or further a reduced row echelon matrix, from a matrix $$A$$ through elementary row operations. Generally, there can be various row echelon forms made from a given matrix $$A$$, but it is well known that the reduced row echelon form is uniquely determined. We do not prove this uniqueness since we will not use it.
 
@@ -198,9 +187,8 @@ Now, when an arbitrary system of linear equations is given, we can manipulate th
 
 The basic idea is that when performing Gaussian elimination, the columns do not mix with each other, which can also be said to be obvious from the definition of matrix multiplication if we think of elementary row operations as multiplication by the elementary matrices examined above. Moreover, when performing Gaussian elimination, since the right-hand side containing constants is subjected to the same operations as the left-hand side, we can add the components of the right-hand side to the matrix and compute them all at once.
 
-<div class="example" markdown="1">
-
-<ins id="ex5">**Example 5**</ins> Let us use the system of equations given in [Example 2](#ex2):
+::: Example 5
+Let us use the system of equations given in [Example 2](#ex2):
 
 $$\begin{aligned}x_1+2x_2+4x_3+3x_4&=2\\\phantom{x_1+}3x_2\phantom{+2x_3}+6x_4&=3\\\phantom{x_1+2x_2+}x_3+5x_4&=1\end{aligned}$$
 
@@ -223,24 +211,20 @@ $$\begin{pmatrix}1&0&0&-21&-4\\0&1&0&2&1\\0&0&1&5&1\end{pmatrix}$$
 Restoring the system of equations from this augmented matrix, we know that this is exactly what we obtained in [Example 2](#ex2):
 
 $$\begin{aligned}x_1\phantom{+2x_2+4x_3}-21x_4&=-4\\\phantom{x_1+}x_2\phantom{+2x_3}+\phantom{1}2x_4&=1\\\phantom{x_1+2x_2+}x_3+\phantom{1}5x_4&=1\end{aligned}$$
-
-</div>
+:::
 
 The example just examined is essentially no different from the calculation of [Example 2](#ex2) (even in terms of convenience). A meaningful difference is obtained when finding the inverse matrix by using the augmented matrix. For this, consider the case where the matrix $$A$$ defining the system of equations (3) is an $$n\times n$$ invertible matrix. First, the following lemma is obvious.
 
-<div class="proposition" markdown="1">
-
-<ins id="lem6">**Lemma 6**</ins> Any $$n\times n$$ reduced row echelon matrix is either the identity matrix or has a column consisting only of $$0$$s.
-
-</div>
+::: Lemma 6
+Any $$n\times n$$ reduced row echelon matrix is either the identity matrix or has a column consisting only of $$0$$s.
+:::
 
 As mentioned earlier, all elementary matrices are invertible, and we can restore the original matrix by multiplying the inverses of the elementary row operations we performed on the reduced row echelon form of the given matrix in order. That is, if some $$n\times n$$ matrix has a column consisting only of $$0$$s, then this matrix is not invertible, and therefore the original matrix cannot be invertible. In other words, the reduced row echelon form of an $$n\times n$$ matrix is the identity matrix.
 
 Now, when an arbitrary $$n\times n$$ invertible matrix is given, we can solve the $$n$$ systems of equations $$Av_i=e_i$$ all at once using the augmented matrix. That is, by appending $$e_1,\ldots, e_n$$ all at once to form the $$2n\times n$$ matrix $$(A\mid I_n)$$, and converting this to reduced row echelon form, the rear $$n\times n$$ matrix becomes the inverse of the original matrix.
 
-<div class="example" markdown="1">
-
-<ins id="ex7">**Example 7**</ins> Let us find the inverse of the following matrix:
+::: Example 7
+Let us find the inverse of the following matrix:
 
 $$A=\begin{pmatrix}1&2&4\\ 0&3&0\\ 0&0&1\end{pmatrix}$$
 
@@ -263,18 +247,15 @@ $$\begin{pmatrix}1&0&0&1&-2/3&-4\\0&1&0&0&1/3&0\\0&0&1&0&0&1\end{pmatrix}$$
 That is, the inverse of the given matrix $$A$$ is
 
 $$A^{-1}=\begin{pmatrix}1&-2/3&-4\\0&1/3&0\\0&0&1\end{pmatrix}$$
-
-</div>
+:::
 
 ## LU Decomposition
 
 Earlier, we examined Gaussian elimination from the perspective of elementary row operations. Now, if we organize the same process in terms of matrix multiplication, we can see that any matrix can be decomposed into the product of two triangular matrices.
 
-<div class="definition" markdown="1">
-
-<ins id="def8">**Definition 8**</ins> For a square matrix $$A$$, when $$A$$ is decomposed as $$A=LU$$, if $$L$$ is a lower triangular matrix with all diagonal entries equal to $$1$$ and $$U$$ is an upper triangular matrix, we call this the *LU decomposition* of $$A$$.
-
-</div>
+::: Definition 8
+For a square matrix $$A$$, when $$A$$ is decomposed as $$A=LU$$, if $$L$$ is a lower triangular matrix with all diagonal entries equal to $$1$$ and $$U$$ is an upper triangular matrix, we call this the *LU decomposition* of $$A$$.
+:::
 
 Consider a matrix for which Gaussian elimination can be performed without row exchanges and without multiplying an entire row by a constant. That is, suppose that using only the elementary row operation of "adding a multiple of one row to another row," we can obtain an upper triangular matrix $$U$$. If the elementary matrices used in this process are $$E_1,E_2,\ldots,E_k$$ in order, then
 
@@ -288,24 +269,19 @@ and setting $$L=E_1^{-1}\cdots E_k^{-1}$$, we obtain $$A=LU$$.
 
 Of course, to perform Gaussian elimination in this way, the pivot to be used at each step must be nonzero. That is, LU decomposition exists only when this condition is satisfied. The following is a summary of this result.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm9">**Theorem 9**</ins> For a square matrix $$A$$, the following holds.
+::: Theorem 9
+For a square matrix $$A$$, the following holds.
 
 1. If Gaussian elimination can be performed without row exchanges and without multiplying a row by a constant, then $$A$$ has an LU decomposition.
 2. If both $$A=LU$$ and $$A=L'U'$$ are LU decompositions with the diagonal entries of $$L,L'$$ equal to $$1$$, then $$L=L'$$ and $$U=U'$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 Existence is obvious from the above discussion. Let us show uniqueness. If $$LU=L'U'$$, then since $$L'$$ is invertible,
 
 $$(L')^{-1}L=U'(U)^{-1}$$
 
 The left side is the product of two lower triangular matrices, so it is a lower triangular matrix, and the right side is the product of two upper triangular matrices, so it is an upper triangular matrix. Therefore, both sides are diagonal matrices. Moreover, since the diagonal entries of $$L$$ and $$(L')^{-1}$$ are all $$1$$, the diagonal entries of the left side are also all $$1$$. That is, both sides are the identity matrix, and we obtain $$L=L'$$, $$U=U'$$.
-
-</details>
+:::
 
 The usefulness of LU decomposition is prominent when solving the system of equations $$Ax=b$$. If $$A=LU$$ is decomposed, then $$Ax=b$$ can be written as $$L(Ux)=b$$, and we solve this by separating it into:
 
@@ -313,9 +289,8 @@ $$Ly=b,\qquad Ux=y$$
 
 Each equation is a system of equations for a lower triangular or upper triangular matrix, so the solution can be found by simple forward or backward substitution.
 
-<div class="example" markdown="1">
-
-<ins id="ex10">**Example 10**</ins> Consider the matrix
+::: Example 10
+Consider the matrix
 
 $$A=\begin{pmatrix}2&1&1\\4&3&3\\8&7&9\end{pmatrix}$$
 
@@ -332,8 +307,7 @@ Multiplying the inverses of the elementary matrices used here gives:
 $$L=\begin{pmatrix}1&0&0\\2&1&0\\4&3&1\end{pmatrix}$$
 
 and we can verify that $$A=LU$$.
-
-</div>
+:::
 
 However, (mainly for small matrices) applying Gaussian elimination every time to determine whether a matrix is invertible can sometimes be inefficient. The determinant, which we will examine in the next post, tells us whether a given $$n\times n$$ matrix is invertible or not. However, (especially for complex matrices) one of the easiest ways to compute the determinant is still Gaussian elimination. ([§Existence and Uniqueness of the Determinant, ⁋Proposition 8](/en/math/linear_algebra/existence_and_uniqueness_of_determinant#prop8))
 

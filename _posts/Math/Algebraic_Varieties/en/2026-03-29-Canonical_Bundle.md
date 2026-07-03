@@ -56,11 +56,9 @@ These two definitions are merely expressing the same object in different geometr
 
 In general, compared to concrete geometric language, the advantage of sheaf language is that it can be applied in more general cases. For example, we define the following. ([\[Commutative Algebra\] §Basic Notions, ⁋Definition 8](/en/math/commutative_algebra/basic_notions#def8))
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> An $$\mathcal{O}_X$$-module $$\mathcal{F}$$ on a general variety $$X$$ is called a *quasi-coherent sheaf* if there exist an affine open cover $$\{U_i\}$$ of $$X$$ and $$A_i=\mathcal{O}_X(U_i)$$-modules $$M_i$$ for each such that $$\mathcal{F}\vert_{U_i}\cong \widetilde{M_i}$$. If each $$M_i$$ is a finitely generated $$A_i$$-module, we call $$\mathcal{F}$$ a *coherent sheaf*.
-
-</div>
+::: Definition 1
+An $$\mathcal{O}_X$$-module $$\mathcal{F}$$ on a general variety $$X$$ is called a *quasi-coherent sheaf* if there exist an affine open cover $$\{U_i\}$$ of $$X$$ and $$A_i=\mathcal{O}_X(U_i)$$-modules $$M_i$$ for each such that $$\mathcal{F}\vert_{U_i}\cong \widetilde{M_i}$$. If each $$M_i$$ is a finitely generated $$A_i$$-module, we call $$\mathcal{F}$$ a *coherent sheaf*.
+:::
 
 In general, when dealing with quasi-coherent sheaves, we must be careful because different $$M$$'s may be attached on each affine cover, but if we restrict to the affine case, $$M\mapsto \widetilde{M}$$ defines a categorical equivalence from $$\lMod{A}$$ to $$\QCoh(X)$$. This can be verified by checking that for any quasi-coherent sheaf $$\mathcal{F}$$, $$\widetilde{\Gamma(X,\mathcal{F})}$$ recovers $$\mathcal{F}$$ itself. That is, our slogan is: in the affine case, a quasi-coherent sheaf is an $$A$$-module, and a coherent sheaf is a finite rank $$A$$-module. 
 
@@ -72,23 +70,17 @@ However, one somewhat cautionary point from the above intuition is that [\[Commu
 
 We are now ready to define the canonical bundle. To do this, we must first introduce the cotangent bundle on a variety; the following definition was already examined in [§Line Bundles and Vector Bundles, ⁋Example 24](/en/math/algebraic_varieties/line_bundles#ex24), but we introduce it again for completeness. 
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**Definition 2**</ins> The *cotangent bundle* $$\Omega_X^1$$ of a smooth variety $$X$$ is the dual vector bundle of the tangent bundle $$\mathcal{T}_X$$. 
-
-</div>
+::: Definition 2
+The *cotangent bundle* $$\Omega_X^1$$ of a smooth variety $$X$$ is the dual vector bundle of the tangent bundle $$\mathcal{T}_X$$. 
+:::
 
 Then the construction we examined in the previous section is for the following. 
 
-<div class="proposition" markdown="1">
+::: Proposition 3
+For an affine variety $$X$$ and its coordinate ring $$A$$, $$\Omega_X^1$$ is the vector bundle corresponding to $$\widetilde{\Omega}_{A/\mathbb{K}}$$. ([\[Commutative Algebra\] §Differentials, ⁋Definition 3](/en/math/commutative_algebra/differentials#def3))
+:::
 
-<ins id="prop3">**Proposition 3**</ins> For an affine variety $$X$$ and its coordinate ring $$A$$, $$\Omega_X^1$$ is the vector bundle corresponding to $$\widetilde{\Omega}_{A/\mathbb{K}}$$. ([\[Commutative Algebra\] §Differentials, ⁋Definition 3](/en/math/commutative_algebra/differentials#def3))
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proof
 For this, it will be convenient to rewrite the previously defined tangent bundle and cotangent bundle in the language of sheaves. First, let us define the tangent sheaf $$\mathcal{T}_X$$. For an open subset $$U$$ of $$X$$, we call the sheaf defined by $$\mathcal{T}_X(U) = \Der_\mathbb{K}(\mathcal{O}_X(U),\mathcal{O}_X(U))$$, the collection of $$\mathbb{K}$$-derivations on $$\mathcal{O}_X(U)$$, the tangent sheaf. 
 
 Our main tool is the universal property of Kähler differentials. ([\[Commutative Algebra\] §Differentials, ⁋Lemma 2](/en/math/commutative_algebra/differentials#lem2)) That is, for any $$A$$-module $$N$$, we use the natural isomorphism
@@ -112,36 +104,29 @@ On the other hand, from the fact that $$\Omega_{A/\mathbb{K}}$$ is a finitely ge
 $$\widetilde{\Omega_{A/\mathbb{K}}}^\vee\cong \widetilde{\Omega_{A/\mathbb{K}}^\vee}\cong \widetilde{\Der_\mathbb{K}(A,A)}\cong \mathcal{T}_X$$
 
 so the desired claim holds. 
-
-</details>
+:::
 
 This result shows that the cotangent bundle is represented by differential $$1$$-forms as we imagine. 
 
-<div class="example" markdown="1">
-
-<ins id="ex4">**Example 4**</ins> The cotangent bundle of $$\mathbb{A}^n$$ is $$\Omega_{\mathbb{A}^n}^1 \cong \mathcal{O}_{\mathbb{A}^n}^{\oplus n}$$. Algebraically, if we fix the coordinate ring $$\mathbb{K}[\x_1, \ldots, \x_n]$$ of $$\mathbb{A}^n$$, the Kähler differentials of this $$\mathbb{K}$$-algebra are the free module $$\bigoplus_{i=1}^n \mathbb{K}[\x_1, \ldots, \x_n]  d\x_i$$, so this result aligns well with our intuition.
-
-</div>
+::: Example 4
+The cotangent bundle of $$\mathbb{A}^n$$ is $$\Omega_{\mathbb{A}^n}^1 \cong \mathcal{O}_{\mathbb{A}^n}^{\oplus n}$$. Algebraically, if we fix the coordinate ring $$\mathbb{K}[\x_1, \ldots, \x_n]$$ of $$\mathbb{A}^n$$, the Kähler differentials of this $$\mathbb{K}$$-algebra are the free module $$\bigoplus_{i=1}^n \mathbb{K}[\x_1, \ldots, \x_n]  d\x_i$$, so this result aligns well with our intuition.
+:::
 
 On the other hand, for any smooth variety $$X$$ of dimension $$n$$ and its cotangent bundle $$\Omega_X^1$$, since each fiber of $$\Omega_X^1$$ is $$n$$-dimensional, we know that taking its $$n$$-fold exterior product yields a line bundle.
 
-<div class="definition" markdown="1">
-
-<ins id="def5">**Definition 5**</ins> We define the *canonical line bundle* $$\omega_X$$ of a smooth variety $$X$$ of dimension $$n$$ as the top exterior power of the cotangent bundle
+::: Definition 5
+We define the *canonical line bundle* $$\omega_X$$ of a smooth variety $$X$$ of dimension $$n$$ as the top exterior power of the cotangent bundle
 
 $$\omega_X = \bigwedge\nolimits^{\!n} \Omega_X^1$$
-
-</div>
+:::
 
 We call a global section $$s\in \Gamma(X, \omega_X)$$ of the canonical bundle $$\omega_X$$ a *regular $$n$$-form* on $$X$$. These are the $$n$$-forms of the form $$fd\x_1 \wedge \cdots \wedge d\x_n$$ for a regular function $$f$$, when we take a trivializing open set $$U$$ of $$\omega_X$$ and identify it with the cotangent bundle on affine space as in [Example 4](#ex4). 
 
 On the other hand, from the correspondence between line bundles and divisor classes, we can define the following.
 
-<div class="definition" markdown="1">
-
-<ins id="def6">**Definition 6**</ins> The divisor class corresponding to the canonical bundle $$\omega_X$$ is called the *canonical divisor* and denoted by $$K_X$$. That is, $$\omega_X \cong \mathcal{O}_X(K_X)$$.
-
-</div>
+::: Definition 6
+The divisor class corresponding to the canonical bundle $$\omega_X$$ is called the *canonical divisor* and denoted by $$K_X$$. That is, $$\omega_X \cong \mathcal{O}_X(K_X)$$.
+:::
 
 Since we use [§Line Bundles and Vector Bundles, ⁋Proposition 19](/en/math/algebraic_varieties/line_bundles#prop19) for this, note that $$K_X$$ is defined only as a divisor class.
 
@@ -157,13 +142,11 @@ $$0 \rightarrow \mathcal{O}_{\mathbb{P}^{n}}\rightarrow \mathcal{O}_{\mathbb{P}^
 
 exists, and taking the dual of this yields the following. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop7">**Proposition 7 (Euler Exact Sequence)**</ins> There exists an exact sequence of vector bundles on $$\mathbb{P}^n$$
+::: Proposition 7 (Euler Exact Sequence)
+There exists an exact sequence of vector bundles on $$\mathbb{P}^n$$
 
 $$0 \rightarrow \Omega_{\mathbb{P}^n}^1 \rightarrow \mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)} \rightarrow \mathcal{O}_{\mathbb{P}^n} \rightarrow 0$$
-
-</div>
+:::
 
 To compute the canonical bundle of $$\mathbb{P}^n$$ now, we must take the top exterior power of this exact sequence. More generally, suppose the following short exact sequence
 
@@ -183,9 +166,8 @@ $$\omega_{\mathbb{P}^n}=\det(\Omega_{\mathbb{P}^n}^1)\cong \mathcal{O}_{\mathbb{
 
 At this time the canonical divisor is given by $$K_{\mathbb{P}^n}=-(n+1)H$$. From this calculation and [§Line Bundles and Vector Bundles, ⁋Example 16](/en/math/algebraic_varieties/line_bundles#ex16), we know that $$\omega_{\mathbb{P}^n}$$ has no regular sections. 
 
-<div class="example" markdown="1">
-
-<ins id="ex8">**Example 8**</ins> We can also verify the above calculation from the perspective of transition functions of $$n$$-forms. Setting the affine coordinates on the standard open cover $$U_i = \{\x_i \neq 0\}$$ of $$\mathbb{P}^n$$ as $$\y_j^{(i)} = \x_j / \x_i$$ ($$j \neq i$$), we can consider the $$n$$-form on $$U_i$$
+::: Example 8
+We can also verify the above calculation from the perspective of transition functions of $$n$$-forms. Setting the affine coordinates on the standard open cover $$U_i = \{\x_i \neq 0\}$$ of $$\mathbb{P}^n$$ as $$\y_j^{(i)} = \x_j / \x_i$$ ($$j \neq i$$), we can consider the $$n$$-form on $$U_i$$
 
 $$d \y_1^{(i)} \wedge \cdots \wedge \widehat{d \y_i^{(i)}} \wedge \cdots \wedge d \y_n^{(i)}$$
 
@@ -198,8 +180,7 @@ Therefore the $$n$$-form on $$U_j$$ transforms on $$U_i \cap U_j$$ as
 $$\bigwedge_{k \neq j} d \y_k^{(j)} = (\y_j^{(i)})^{-(n+1)} \cdot \bigwedge_{k \neq i} d \y_k^{(i)}$$
 
 Here since $$(\y_j^{(i)})^{-(n+1)} = (\x_j / \x_i)^{-(n+1)}$$, we can verify that the transition function is $$g_{ij} = (\x_i / \x_j)^{-(n+1)}$$. This matches the transition function of $$\mathcal{O}_{\mathbb{P}^n}(-n-1)$$.
-
-</div>
+:::
 
 ## Adjunction Formula
 
@@ -223,21 +204,18 @@ $$0 \rightarrow \mathcal{I}_D/\mathcal{I}_D^2\rightarrow \Omega_X^1\lvert D\righ
 
 which corresponds to the dual of the above short exact sequence. Here the first arrow is given by $$f\mapsto df$$. Taking the top exterior power of this short exact sequence yields the following.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop9">**Proposition 9**</ins> (Adjunction Formula) For a smooth divisor $$D$$ of a smooth variety $$X$$,
+::: Proposition 9
+(Adjunction Formula) For a smooth divisor $$D$$ of a smooth variety $$X$$,
 
 $$\omega_D \cong (\omega_X \otimes \mathcal{O}_X(D))\vert_D$$
-
-</div>
+:::
 
 From this, the claim for the canonical divisor also follows immediately. In any case, the content of this proposition is that if we twist the canonical bundle $$\omega_X$$ of the ambient variety $$X$$ by the normal bundle $$\mathcal{O}_X(D)$$ and then restrict to $$D$$, we obtain the canonical bundle $$\omega_D$$ of the subvariety $$D$$. In simpler terms, differential forms on $$D$$ are obtained by adding information about the normal direction to the differential forms of the ambient space. 
 
 The following example shows a concrete calculation using this. 
 
-<div class="example" markdown="1">
-
-<ins id="ex10">**Example 10**</ins> Let $$C \subset \mathbb{P}^2$$ be a smooth curve of degree $$d$$. By the adjunction formula,
+::: Example 10
+Let $$C \subset \mathbb{P}^2$$ be a smooth curve of degree $$d$$. By the adjunction formula,
 
 $$\omega_C \cong \omega_{\mathbb{P}^2}\vert_C \otimes \mathcal{O}_{\mathbb{P}^2}(C)\vert_C \cong \mathcal{O}_{\mathbb{P}^2}(-3)\vert_C \otimes \mathcal{O}_{\mathbb{P}^2}(d)\vert_C \cong \mathcal{O}_C(d-3)$$
 
@@ -250,8 +228,7 @@ $$g=\frac{(d-1)(d-2)}{2}$$
 ([Degree-genus formula](https://en.wikipedia.org/wiki/Genus%E2%80%93degree_formula)) From this we can verify that
 
 $$\deg K_C=d(d-3)=(d-1)(d-2)-2=2g-2$$
-
-</div>
+:::
 
 The degree-genus formula is in fact a special case of the Riemann-Roch theorem that we will examine later, and in that post we will derive both the result $$\deg K_C=2g-2$$ of the above calculation and the degree-genus formula.
 
@@ -279,18 +256,14 @@ $$0 \to T_{E/Z} \to T_E \to \pi_E^\ast T_Z \to 0\tag{$\ast$}$$
 
 On the other hand, since $$Z$$ was of codimension $$r$$ by assumption, $$\mathcal{N}_{Z/X}$$ is of rank $$r$$ and therefore each fiber of $$E$$ is $$\mathbb{P}^{r-1}$$. We generalize [Proposition 7](#prop7) to obtain the following. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop11">**Proposition 11 (Relative Euler sequence)**</ins> For any vector bundle $$V\rightarrow B$$ and projectivized vector bundle $$\pi: \mathbb{P}(V)\rightarrow B$$, the following short exact sequence
+::: Proposition 11 (Relative Euler sequence)
+For any vector bundle $$V\rightarrow B$$ and projectivized vector bundle $$\pi: \mathbb{P}(V)\rightarrow B$$, the following short exact sequence
 
 $$0\rightarrow \mathcal{O}\rightarrow \pi^\ast V\otimes \mathcal{O}(1)\rightarrow T_{\mathbb{P}(V)/B}\rightarrow 0$$
 
 exists.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 By definition, each point $$[v]\in \mathbb{P}(V)$$ is a one-dimensional subspace on a fiber of $$V$$. Now, just as in $$\mathbb{P}^n$$, $$\mathcal{O}_{\mathbb{P}(V)}(-1)$$ is the line bundle collecting these lines, and from this we obtain the tautological exact sequence
 
 $$0\rightarrow \mathcal{O}(-1)\rightarrow \pi^\ast V\rightarrow \mathcal{Q}\rightarrow 0$$
@@ -310,26 +283,21 @@ $$\Hom(\mathcal{O}(-1),\mathcal{Q})\cong T_{\mathbb{P}(V)/B}$$
 and from this we obtain the *relative* Euler sequence
 
 $$0\rightarrow \mathcal{O}\rightarrow \pi^\ast V\otimes \mathcal{O}(1)\rightarrow T_{\mathbb{P}(V)/B}\rightarrow 0$$
-
-</details>
+:::
 
 Therefore, returning to our situation, we obtain the following exact sequence
 
 $$0\rightarrow \mathcal{O}_E\rightarrow (\pi\vert_E)^\ast \mathcal{N}_{Z/X}\otimes \mathcal{O}_E(1)\rightarrow T_{E/Z}\rightarrow 0\tag{$\ast\ast$}$$
 
-<div class="proposition" markdown="1">
-
-<ins id="prop12">**Proposition 12 (Canonical bundle of a blow-up)**</ins> For the blow-up $$\pi: \widetilde{X} \to X$$ of a smooth variety $$X$$ along a smooth subvariety $$Z$$ of codimension $$r$$, letting $$E$$ be the exceptional divisor,
+::: Proposition 12 (Canonical bundle of a blow-up)
+For the blow-up $$\pi: \widetilde{X} \to X$$ of a smooth variety $$X$$ along a smooth subvariety $$Z$$ of codimension $$r$$, letting $$E$$ be the exceptional divisor,
 
 $$K_{\widetilde{X}} = \pi^\ast K_X + (r-1)E$$
 
 holds.
+:::
 
-</div>
-
-<details class="proof" markdown="1">
-<summary>Proof</summary> 
-
+::: Proof
 First, by the adjunction formula on $$\widetilde{X}$$,
 
 $$K_E = (K_{\widetilde{X}} + E)\vert_E$$
@@ -373,20 +341,17 @@ and substituting this again into the first formula, we know that
 $$K_E = \det(T_E)^{-1} = \omega_{E/Z} \otimes \pi_E^\ast K_Z = \pi_E^\ast K_Z \otimes \pi_E^\ast \det(\mathcal{N}_{Z/X})^{-1} \otimes \mathcal{O}_E(-r)$$
 
 Comparing these two expressions now yields $$-a-1 = -r$$, that is, $$a = r-1$$.
-
-</details>
+:::
 
 Let us examine the following concretely.
 
-<div class="example" markdown="1">
-
-<ins id="ex13">**Example 13 (Blow-up of $$\mathbb{A}^2$$ at a point)**</ins> Consider the blow-up of $$X = \mathbb{A}^2$$ at the origin $$Z = \{0\}$$. Since $$K_{\mathbb{A}^2} = 0$$ and the codimension of $$Z$$ is $$r = 2$$, by [Proposition 12](#prop12),
+::: Example 13 (Blow-up of $$\mathbb{A}^2$$ at a point)
+Consider the blow-up of $$X = \mathbb{A}^2$$ at the origin $$Z = \{0\}$$. Since $$K_{\mathbb{A}^2} = 0$$ and the codimension of $$Z$$ is $$r = 2$$, by [Proposition 12](#prop12),
 
 $$K_{\widetilde{\mathbb{A}^2}} = E$$
 
 Since $$K_{\widetilde{\mathbb{A}^2}} = E$$, we can see that the exceptional divisor $$E$$ plays the role of the canonical divisor.
-
-</div>
+:::
 
 ---
 

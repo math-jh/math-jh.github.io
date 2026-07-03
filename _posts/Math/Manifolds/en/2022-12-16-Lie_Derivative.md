@@ -28,13 +28,11 @@ $$\lim_{h\rightarrow 0}\frac{f(\gamma(h))-f(p)}{h}\tag{1}$$
 
 Now suppose a vector field $$X$$ on $$M$$ is given, and consider the problem of finding the directional derivative $$X_pf$$ at each point $$p$$ in the direction of $$X_p$$. Geometrically, this amounts to choosing, for every point $$p$$, a curve $$\gamma_p$$ satisfying $$\gamma(0)=p$$ and $$\gamma'(0)=X_p$$, and applying formula (1) above. But we know that such a curve always exists. ([§Vector Fields, ⁋Theorem 6](/en/math/manifolds/vector_fields#thm6))
 
-<div class="definition" markdown="1">
- 
-<ins id="def1">**Definition 1**</ins> Fix a manifold $$M$$ and a vector field $$X$$ defined on it, and suppose a function $$f:M\rightarrow\mathbb{R}$$ is given. Then the *Lie derivative* $$\mathcal{L}_Xf$$ of $$f$$ is the function defined by the formula
+::: Definition 1
+Fix a manifold $$M$$ and a vector field $$X$$ defined on it, and suppose a function $$f:M\rightarrow\mathbb{R}$$ is given. Then the *Lie derivative* $$\mathcal{L}_Xf$$ of $$f$$ is the function defined by the formula
 
 $$(\mathcal{L}_Xf)(p)=\lim_{t\rightarrow 0}\frac{f(\phi^t(p))-f(\phi^0(p))}{t}=\lim_{t\rightarrow 0}\frac{f(\phi^t(p))-f(p)}{t}$$
-
-</div> 
+:::
 
 Of course, by the preceding argument this is nothing other than the directional derivative $$X_pf$$. However, the flow $$\phi^t$$ used here furnishes not merely a way to differentiate functions, but a way to differentiate every other object defined on $$M$$.
 
@@ -44,33 +42,28 @@ The simplest example is the derivative of a vector field. Since a vector field $
 
 Nevertheless, differentiation is still possible in our setting. Recalling [§Vector Fields, ⁋Theorem 6](/en/math/manifolds/vector_fields#thm6), since $$\phi^t$$ is a diffeomorphism, $$d\phi^t$$ induces an isomorphism from $$T_pM$$ to $$T_{\phi^t(p)}$$. Moreover, the same theorem tells us that the inverse of this isomorphism is $$d\phi^{-t}$$. Therefore, by pulling $$Y_{\phi^t(p)}$$ back to $$T_pM$$ via $$d\phi^{-t}$$, we can make the following definition.
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**Definition 2**</ins> Fix a manifold $$M$$ and a vector field $$X$$ defined on it, and suppose another vector field $$Y:M\rightarrow TM$$ is given. Then the *Lie derivative* $$\mathcal{L}_XY$$ of $$Y$$ is the vector field defined by the formula
+::: Definition 2
+Fix a manifold $$M$$ and a vector field $$X$$ defined on it, and suppose another vector field $$Y:M\rightarrow TM$$ is given. Then the *Lie derivative* $$\mathcal{L}_XY$$ of $$Y$$ is the vector field defined by the formula
 
 $$(\mathcal{L}_XY)_p=\lim_{t\rightarrow 0}\frac{(d\phi^{-t})_{\phi^t(p)}(Y_{\phi^t(p)})-Y_p}{t}$$
-
-</div>
+:::
 
 ## Lie Derivative of Differential Forms
 
 Naturally, we can continue defining derivatives in this manner. For example, the following gives the method for differentiating a differential form along a vector field $$X$$.
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**Definition 3**</ins> Fix a manifold $$M$$ and a vector field $$X$$ defined on it, and suppose a differential form $$\omega\in\Omega^\ast(M)$$ is given. Then the *Lie derivative* $$\mathcal{L}_X\omega$$ of $$\omega$$ is the differential form defined by the formula
+::: Definition 3
+Fix a manifold $$M$$ and a vector field $$X$$ defined on it, and suppose a differential form $$\omega\in\Omega^\ast(M)$$ is given. Then the *Lie derivative* $$\mathcal{L}_X\omega$$ of $$\omega$$ is the differential form defined by the formula
 
 $$(\mathcal{L}_X\omega)_p=\frac{d}{dt}\bigg\vert_{t=0}(\phi^t)^\ast\omega_{\phi^t(p)}=\lim_{t\rightarrow 0}\frac{(\phi^t)^\ast\omega_{\phi^t(p)}-\omega_p}{t}$$
-
-</div>
+:::
 
 Moreover, it is not difficult to extend this definition to arbitrary tensor fields. Since we will not need this immediately, we omit it.
 
 Some parts of the following proposition have already been proved, and some are new, but we omit all proofs as they would be too lengthy to write out in full.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**Proposition 4**</ins> For any $$X\in\mathfrak{X}(M)$$, the following hold.
+::: Proposition 4
+For any $$X\in\mathfrak{X}(M)$$, the following hold.
 
 1. For any $$f\in C^\infty(M)$$, we have $$\mathcal{L}_Xf=X(f)$$.
 2. For any $$Y\in \mathfrak{X}(M)$$, we have $$\mathcal{L}_XY=[X,Y]$$.
@@ -85,8 +78,7 @@ Some parts of the following proposition have already been proved, and some are n
     $$\begin{aligned}d\omega(X_0,\ldots, X_k)&=\sum_{i=0}^k(-1)^iX_i\omega(X_0,\ldots, \hat{X}_i,\ldots, X_k)\\&\phantom{==}+\sum_{i<j}(-1)^{i+j}\omega([X_i, X_j], X_0,\ldots, \hat{X}_i,\ldots, \hat{X}_j,\ldots, X_k)\end{aligned}$$
 
 In 5 and 6, the hat indicates that the corresponding entry is omitted.
-
-</div>
+:::
 
 The first statement of this proposition is something we have already verified. The bracket $$[-,-]$$ appearing in the second and sixth results is an operation between vector fields called the *Lie bracket*; we will only touch upon it briefly here and treat it in detail in the next post. At any rate, the key point of the second, fifth, and sixth results is that when computing $$\mathcal{L}_X$$, one can obtain the Lie derivative through comparatively simple algebraic manipulations rather than appealing to the original definition. The fourth result is known as Cartan's formula.
 
@@ -98,13 +90,11 @@ $$(XY)(fg)=X(f(Yg)+g(Yf))=(Xf)(Yg)+f(XY)g+(Xg)(Yf)+g(XY)f\tag{2}$$
 
 In other words, the two terms $$(Xf)(Yg)$$ and $$(Xg)(Yf)$$ are precisely what prevent $$XY$$ from satisfying the Leibniz rule, and so we make the following definition.
 
-<div class="definition" markdown="1">
-
-<ins id="def5">**Definition 5**</ins> For $$X,Y\in\mathfrak{X}(M)$$, the element $$[X,Y]\in\mathfrak{X}(M)$$ is defined by the formula
+::: Definition 5
+For $$X,Y\in\mathfrak{X}(M)$$, the element $$[X,Y]\in\mathfrak{X}(M)$$ is defined by the formula
 
 $$[X,Y]f=X(Yf)-Y(Xf)$$
-
-</div>
+:::
 
 Of course, for this definition to make sense we must verify that the right-hand side actually yields an element of $$\mathfrak{X}(M)$$, but this can be done by interchanging the roles of $$X$$ and $$Y$$ in formula (2) above to obtain $$(YX)(fg)$$, and then subtracting. Since this definition was designed from the outset to cancel the two problematic terms, the Leibniz rule will hold automatically.
 
@@ -116,15 +106,13 @@ For instance, if $$F$$ is not surjective, there is no natural way to assign a ta
 
 Therefore, rather than attempting to push $$X\in\mathfrak{X}(M)$$ forward through $$F$$, it is wiser to examine the case in which a vector field $$Y\in\mathfrak{X}(N)$$ already given satisfies the desired property.
 
-<div class="definition" markdown="1">
-
-<ins id="def6">**Definition 6**</ins> Let $$F:M\rightarrow N$$ be a $$C^\infty$$ map. If $$X\in\mathfrak{X}(M)$$ and $$Y\in\mathfrak{X}(N)$$ satisfy the equation
+::: Definition 6
+Let $$F:M\rightarrow N$$ be a $$C^\infty$$ map. If $$X\in\mathfrak{X}(M)$$ and $$Y\in\mathfrak{X}(N)$$ satisfy the equation
 
 $$dF_p(X_p)=Y_{F(p)}$$
 
 for all $$p\in M$$, then we say that $$X$$ and $$Y$$ are *$$F$$-related*.
-
-</div>
+:::
 
 In other words, $$X$$ and $$Y$$ being $$F$$-related means that the following diagram commutes.
 
@@ -132,16 +120,12 @@ In other words, $$X$$ and $$Y$$ being $$F$$-related means that the following dia
 
 As we can see by applying the fact that $$X$$ is $$C^\infty$$ (from [§Vector Fields, ⁋Proposition 2](/en/math/manifolds/vector_fields#prop2)) to each function $$f$$, whether $$X$$ and $$Y$$ are $$F$$-related can also be tested by applying them to each function.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop7">**Proposition 7**</ins> Let $$F:M\rightarrow N$$ be a $$C^\infty$$ map, and let $$X\in\mathfrak{X}(M)$$ and $$Y\in\mathfrak{X}(N)$$. Then $$X$$ and $$Y$$ are $$F$$-related if and only if for every $$f$$,
+::: Proposition 7
+Let $$F:M\rightarrow N$$ be a $$C^\infty$$ map, and let $$X\in\mathfrak{X}(M)$$ and $$Y\in\mathfrak{X}(N)$$. Then $$X$$ and $$Y$$ are $$F$$-related if and only if for every $$f$$,
 
 $$X(f\circ F)=(Yf)\circ F$$
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 For any point $$p\in M$$,
 
 $$X(f\circ F)(p)=X_p(f\circ F)=dF_p(X_p)f$$
@@ -151,19 +135,14 @@ and
 $$((Yf)\circ F)(p)=(Yf)(F(p))=Y_{F(p)}f$$
 
 Hence the two given conditions are equivalent.
-
-</details>
+:::
 
 At first we pointed out that if $$F$$ is neither surjective nor injective, it is not natural to seek a $$Y\in\mathfrak{X}(N)$$ that is $$F$$-related to a given $$X\in\mathfrak{X}(M)$$ through $$F$$; however, if $$F$$ is a diffeomorphism, then the following natural choice exists.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop8">**Proposition 8**</ins> If $$F:M\rightarrow N$$ is a diffeomorphism, then for every $$X\in\mathfrak{X}(M)$$ there exists a unique $$Y\in\mathfrak{X}(N)$$ such that $$X$$ and $$Y$$ are $$F$$-related.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 8
+If $$F:M\rightarrow N$$ is a diffeomorphism, then for every $$X\in\mathfrak{X}(M)$$ there exists a unique $$Y\in\mathfrak{X}(N)$$ such that $$X$$ and $$Y$$ are $$F$$-related.
+:::
+::: Proof
 For each $$q\in N$$ there exists a unique $$p\in M$$ such that $$F(p)=q$$. Thus, for each point $$q\in N$$, we define $$Y$$ by the formula
 
 $$Y_q=dF_p(X_p)\qquad (F(p)=q)$$
@@ -173,17 +152,12 @@ Since the above formula must hold for $$Y$$ to be $$F$$-related to $$X$$, the un
 $$N\overset{F^{-1}}{\longrightarrow}M\overset{X}{\longrightarrow}TM\overset{dF}{\longrightarrow}TN$$
 
 and therefore $$Y$$ is $$C^\infty$$.
+:::
 
-</details>
-
-<div class="proposition" markdown="1">
-
-<ins id="prop9">**Proposition 9**</ins> Let $$F:M\rightarrow N$$ be a $$C^\infty$$ map. If for $$i=1,2$$ we have $$X_i\in\mathfrak{X}(M)$$, $$Y_i\in\mathfrak{X}(N)$$, and $$X_i$$ and $$Y_i$$ are $$F$$-related, then $$[X_1,X_2]$$ is $$F$$-related to $$[Y_1,Y_2]$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 9
+Let $$F:M\rightarrow N$$ be a $$C^\infty$$ map. If for $$i=1,2$$ we have $$X_i\in\mathfrak{X}(M)$$, $$Y_i\in\mathfrak{X}(N)$$, and $$X_i$$ and $$Y_i$$ are $$F$$-related, then $$[X_1,X_2]$$ is $$F$$-related to $$[Y_1,Y_2]$$.
+:::
+::: Proof
 We must show that the formula
 
 $$dF_p([X_1,X_2]_p)=[Y_1,Y_2]_{F(p)}$$
@@ -198,8 +172,7 @@ $$\begin{aligned}dF_p([X_1,X_2]_p)f&=[X_1,X_2]_p(f\circ F)\\
 &=[Y_1,Y_2]_{F(p)}f\end{aligned}$$
 
 Thus we obtain the desired conclusion.
-
-</details>
+:::
 
 ---
 

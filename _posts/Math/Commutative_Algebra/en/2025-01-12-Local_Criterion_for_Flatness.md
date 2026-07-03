@@ -18,14 +18,10 @@ last_polished_at: 2026-05-30T23:00:05+00:00
 ---
 In the previous post we examined several criteria for determining when an $$A$$-module $$M$$ is flat, and in this post we turn to a criterion using localization. The following theorem shows that it suffices to verify [§Flatness, ⁋Proposition 1](/en/math/commutative_algebra/flatness#prop1) only for the maximal ideal.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm1">**Theorem 1**</ins> Fix a Noetherian local ring $$(A, \mathfrak{m})$$, and assume that $$(E, \mathfrak{n})$$ is a local Noetherian $$A$$-algebra satisfying $$\mathfrak{m}E\subseteq \mathfrak{n}$$. Then for a finitely generated $$E$$-module $$M$$, $$M$$ is a flat $$A$$-module if and only if $$\Tor_1^A(A/\mathfrak{m}, M)=0$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Theorem 1
+Fix a Noetherian local ring $$(A, \mathfrak{m})$$, and assume that $$(E, \mathfrak{n})$$ is a local Noetherian $$A$$-algebra satisfying $$\mathfrak{m}E\subseteq \mathfrak{n}$$. Then for a finitely generated $$E$$-module $$M$$, $$M$$ is a flat $$A$$-module if and only if $$\Tor_1^A(A/\mathfrak{m}, M)=0$$.
+:::
+::: Proof
 If $$M$$ is a flat $$A$$-module then $$\Tor_1^A(A/\mathfrak{m}, M)=0$$ is precisely the content of [§Flatness, ⁋Proposition 1](/en/math/commutative_algebra/flatness#prop1), so it suffices to prove the converse.
 
 To prove the converse, we again invoke [§Flatness, ⁋Proposition 1](/en/math/commutative_algebra/flatness#prop1): assuming the given condition, we show that for any ideal $$\mathfrak{a}$$ of $$A$$ the multiplication map $$m:\mathfrak{a}\otimes_AM \rightarrow M$$ is injective. To this end, suppose $$x\in \mathfrak{a}\otimes_AM$$ lies in the kernel $$\ker m$$, and let us show that $$x=0$$. First, the $$E$$-module structure on $$M$$ induces a natural $$E$$-module structure on $$\mathfrak{a}\otimes_AM$$ as well, and from the assumption $$\mathfrak{m}E\subseteq \mathfrak{n}$$ we know that for every $$n$$,
@@ -95,8 +91,7 @@ we obtain
 $$\cdots \rightarrow\Tor_1^A(N', M) \rightarrow \Tor_1^A(N, M) \rightarrow \Tor_1^A(N/N', M) \rightarrow \cdots$$
 
 By the inductive hypothesis $$\Tor_1^A(N', M)=\Tor_1^A(N/N',M)=0$$, whence the desired result.
-
-</details>
+:::
 
 On the other hand, if $$M$$ is a flat $$A$$-module then for any $$A/(a)$$-module $$N$$,
 
@@ -104,18 +99,14 @@ $$(M/aM)\otimes_{A/(a)}N=(A/(a)\otimes_A M)\otimes_{A/(a)} N\cong M\otimes_AN$$
 
 so $$M/aM$$ is a flat $$A/(a)$$-module without any additional hypotheses. In [Corollary 3](#cor3) we establish the converse of this assertion under the hypotheses of [Theorem 1](#thm1). For this we require the following lemma.
 
-<div class="proposition" markdown="1">
-
-<ins id="lem2">**Lemma 2**</ins> Let $$M$$ be an $$A$$-module, and let $$a\in A$$ be a non-zerodivisor on both $$A$$ and $$M$$. Then for any $$A/(a)$$-module $$N$$,
+::: Lemma 2
+Let $$M$$ be an $$A$$-module, and let $$a\in A$$ be a non-zerodivisor on both $$A$$ and $$M$$. Then for any $$A/(a)$$-module $$N$$,
 
 $$\Tor_i^{A/(a)}(N, M/aM)=\Tor_i^A(N,M)$$
 
 holds.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 Consider a free resolution of the $$A$$-module $$M$$
 
 $$\cdots \rightarrow F_2 \rightarrow F_1 \rightarrow F_0\tag{1}$$
@@ -135,45 +126,35 @@ $$\Tor_i^A(A/(a), M)=\begin{cases} M/aM&\text{if $i=0$}\\ 0&\text{otherwise}\end
 so (2) is a free resolution of $$M/aM$$. Therefore, computing $$\Tor_i^{A/(a)}(N, M/aM)$$ using (2), we obtain the desired result from the isomorphism
 
 $$N\otimes_{A/(a)} F_i/aF_i=N\otimes_{A/(a)} ((A/(a))\otimes_A F_i)\cong N\otimes_A F_i.$$
-
-</details>
+:::
 
 Using this we can prove the following.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor3">**Corollary 3**</ins> Fix a Noetherian local ring $$(A, \mathfrak{m})$$, and assume that $$(E, \mathfrak{n})$$ is a local Noetherian $$A$$-algebra satisfying $$\mathfrak{m}E\subseteq \mathfrak{n}$$. If $$a\in \mathfrak{m}$$ is a non-zerodivisor in $$A$$ and simultaneously a zerodivisor on the finitely generated $$E$$-module $$M$$, then $$M$$ is a flat $$A$$-module if and only if $$M/aM$$ is a flat $$A/(a)$$-module.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Corollary 3
+Fix a Noetherian local ring $$(A, \mathfrak{m})$$, and assume that $$(E, \mathfrak{n})$$ is a local Noetherian $$A$$-algebra satisfying $$\mathfrak{m}E\subseteq \mathfrak{n}$$. If $$a\in \mathfrak{m}$$ is a non-zerodivisor in $$A$$ and simultaneously a zerodivisor on the finitely generated $$E$$-module $$M$$, then $$M$$ is a flat $$A$$-module if and only if $$M/aM$$ is a flat $$A/(a)$$-module.
+:::
+::: Proof
 Assume that $$M/aM$$ is a flat $$A/(a)$$-module. For the residue field $$A/\mathfrak{m}$$ of $$A$$, the assumption gives
 
 $$\Tor_1^{A/(a)}(A/\mathfrak{m}, M/aM)=0,$$
 
 and applying [Lemma 2](#lem2) we deduce that $$\Tor_1^A(A/\mathfrak{m}, M)=0$$. Hence by [Theorem 1](#thm1), $$M$$ is a flat $$A$$-module.
-
-</details>
+:::
 
 ## Rees algebra
 
-<div class="definition" markdown="1">
-
-<ins id="def4">**Definition 4**</ins> For a ring $$A$$ and an ideal $$\mathfrak{a}$$, the *Rees algebra* is
+::: Definition 4
+For a ring $$A$$ and an ideal $$\mathfrak{a}$$, the *Rees algebra* is
 
 $$A[\mathfrak{a}t]=\bigoplus_{n=0}^\infty \mathfrak{a}^n t^n\subseteq A[t].$$
 
 In the same setting, the *extended Rees algebra* is defined by
 
 $$A[\mathfrak{a}t, t^{-1}]=\bigoplus_{n=-\infty}^\infty \mathfrak{a}^nt^n\subseteq A[t, t^{-1}].$$
-
-</div>
+:::
 
 Then the following corollary is almost obvious.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**Proposition 5**</ins> Fix a field $$\mathbb{K}$$ and a $$\mathbb{K}$$-algebra $$A$$. Then the Rees algebra $$A[\mathfrak{a}t, t^{-1}]$$ is a flat $$\mathbb{K}[t]$$-module. Moreover, if $$\bigcap \mathfrak{a}^i=0$$, then every element of the form $$1-t s$$ ($$s\in S$$) is a non-zerodivisor in $$A[\mathfrak{a}t, t^{-1}]$$.
-
-</div>
+::: Proposition 5
+Fix a field $$\mathbb{K}$$ and a $$\mathbb{K}$$-algebra $$A$$. Then the Rees algebra $$A[\mathfrak{a}t, t^{-1}]$$ is a flat $$\mathbb{K}[t]$$-module. Moreover, if $$\bigcap \mathfrak{a}^i=0$$, then every element of the form $$1-t s$$ ($$s\in S$$) is a non-zerodivisor in $$A[\mathfrak{a}t, t^{-1}]$$.
+:::

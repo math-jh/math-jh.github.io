@@ -19,23 +19,19 @@ weight: 10
 
 위에서 우리는 서술의 편의상 Weil divisor에 대한 논의만 하였지만, Cartier divisor에 대해서도 비슷한 논증을 할 수 있으며, 그 결과로 나오는 정의는 다음과 같다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> Variety $$X$$ 위에 정의된 Weil divisor $$D=\sum n_i D_i$$가 *effective*라는 것은 모든 $$i$$에 대해 $$n_i\geq 0$$인 것이다. Cartier divisor $$\{(U_i, f_i)\}$$가 *effective*라는 것은 모든 $$i$$에 대해 $$f_i$$가 $$U_i$$ 위에서 regular인 것이다. 
-
-</div>
+::: 정의 1
+Variety $$X$$ 위에 정의된 Weil divisor $$D=\sum n_i D_i$$가 *effective*라는 것은 모든 $$i$$에 대해 $$n_i\geq 0$$인 것이다. Cartier divisor $$\{(U_i, f_i)\}$$가 *effective*라는 것은 모든 $$i$$에 대해 $$f_i$$가 $$U_i$$ 위에서 regular인 것이다. 
+:::
 
 그렇다면 우리의 목적은 divisor $$D$$의 divisor class 안에서 어떠한 effective divisor가 존재하는지 살펴보는 것이다. 이를 위해 divisor $$D$$가 정의하는 line bundle $$\mathcal{L}=\mathcal{O}_X(D)$$를 생각하자. ([§선다발과 벡터다발, ⁋정의 17](/ko/math/algebraic_varieties/line_bundles#def17)) 우리는 $$\mathcal{L}$$의 각각의 nonzero global section $$s\in \Gamma(X, \mathcal{L})$$는 pole이 없으므로 effective divisor $$\divisor(s)$$를 정의하며, 이는 원래의 $$D$$와 trivialization만큼만 차이나는 것을 확인할 수 있으므로 $$D$$와 linearly equivalent하다. 즉 $$D$$와 linearly equivalent한 effective divisor를 찾기 위해선 $$\mathcal{O}_X(D)$$의 nonzero global section을 보면 된다. 다만 주의할 사항은 $$\divisor(s)$$는 $$s$$ 자체가 아니라 $$s$$의 nonzero multiple에 의존한다는 것으로, 이때문에 우리가 관심을 가져야할 대상은 $$\Gamma(X, \mathcal{L})$$ 자체가 아니라 그 projectivization이다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**정의 2**</ins> Variety $$X$$ 위의 line bundle $$\mathcal{L}$$에 대하여, $$\mathcal{L}$$의 *complete linear system*은 $$\mathcal{L}$$의 global section space $$\Gamma(X, \mathcal{L})$$의 projectivization
+::: 정의 2
+Variety $$X$$ 위의 line bundle $$\mathcal{L}$$에 대하여, $$\mathcal{L}$$의 *complete linear system*은 $$\mathcal{L}$$의 global section space $$\Gamma(X, \mathcal{L})$$의 projectivization
 
 $$\lvert \mathcal{L} \rvert = \mathbb{P}(\Gamma(X, \mathcal{L}))$$
 
 이다. $$\mathcal{L}$$에 대한 *linear system*은 $$\lvert \mathcal{L} \rvert$$의 nonempty projective subspace이다. 즉, 부분벡터공간 $$V \subseteq \Gamma(X, \mathcal{L})$$에 대해 $$\mathbb{P}(V) \subseteq \lvert \mathcal{L} \rvert$$의 꼴이다.
-
-</div>
+:::
 
 ## Projective space의 linear system
 
@@ -45,9 +41,8 @@ $$\lvert \mathcal{O}_{\mathbb{P}^n}(d)\rvert=\mathbb{P}(\Gamma(\mathbb{P}^n, \ma
 
 을 기하적으로 degree $$d$$ hypersurface in $$\mathbb{P}^n$$들의 family로 이해할 수 있다. 
 
-<div class="example" markdown="1">
-
-<ins id="ex3">**예시 3**</ins> 편의상 $$n=2$$로 고정하자. 그럼 degree $$1$$ hypersurface들, 즉 $$\mathbb{P}^2$$의 직선들의 family는 $$\mathbb{P}^2$$ 자기자신과 isomorphic하다. 더 자세히 살펴보면, 
+::: 예시 3
+편의상 $$n=2$$로 고정하자. 그럼 degree $$1$$ hypersurface들, 즉 $$\mathbb{P}^2$$의 직선들의 family는 $$\mathbb{P}^2$$ 자기자신과 isomorphic하다. 더 자세히 살펴보면, 
 
 $$\lvert \mathcal{O}_{\mathbb{P}^2}(1)\rvert\cong \mathbb{P}(\mathbb{K}[\x_0,\x_1,\x_2]_1)\cong \mathbb{P}^{\binom{3}{1}-1}=\mathbb{P}^2$$
 
@@ -90,8 +85,7 @@ $$0=F(1,-i,0)=a_{00}-a_{11}-ia_{01}$$
 이 $$a_{12}=0$$, $$a_{01}=0$$, $$5a_{11}=-a_{22}$$, $$a_{00}=a_{11}$$을 강제하므로 실질적인 변수는 $$a_{00}$$, $$a_{02}$$의 두 개이다. 즉, 이들 conic의 모임은 $$\Gamma(X,\mathcal{O}(2))$$의 2차원 부분공간 $$V$$를 이룰 것이며, 이를 projectivize한 것이 $$[\lambda:\mu]$$로 나타나는 $$\mathbb{P}^1$$이 된다. 
 
 ![pencil_of_circles](/assets/images/Math/Algebraic_Varieties/Linear_Systems-1.svg){:style="width:40em" class="invert" .align-center}
-
-</div>
+:::
 
 물론 [정의 2](#def2)는 $$X$$가 projective space이든 quasi-projective variety이든 임의의 variety에 동일하게 적용된다. 그러나 우리가 위의 [예시 3](#ex3)을 이렇게 공들여 계산한 이유는, 임의의 quasi-projective variety $$X\subseteq \mathbb{P}^n$$에 대해서도 $$D$$가 어떠한 $$\mathcal{O}_{\mathbb{P}^n}(d)$$에서 온다면 homogeneous polynomial의 언어를 그대로 사용할 수 있기 때문이다. 즉 이 경우 restriction map
 
@@ -125,23 +119,19 @@ $$\mathbb{P}^2\rightarrow \mathbb{P}^1;\qquad [\x_0,\x_1,\x_2]\mapsto [\x_0^2+\x
 
 이를 엄밀하게 기술하기 위해, Weil divisor $$D = \sum n_i D_i$$의 *support*를 $$\operatorname{Supp}(D) = \bigcup_{n_i \neq 0} D_i$$로 정의한다. 즉, support는 divisor에서 계수가 $$0$$이 아닌 prime divisor들의 합집합이다. 이를 이용하면 다음이 잘 정의된다.
 
-<div class="definition" markdown="1">
-
-<ins id="def4">**정의 4**</ins> Linear system $$L \subseteq \lvert \mathcal{L} \rvert$$의 *base locus* $$\operatorname{Bs}(L)$$는 $$L$$의 모든 원소가 공유하는 closed subset이다. 구체적으로, $$L = \mathbb{P}(V)$$에서 $$V \subseteq \Gamma(X, \mathcal{L})$$일 때,
+::: 정의 4
+Linear system $$L \subseteq \lvert \mathcal{L} \rvert$$의 *base locus* $$\operatorname{Bs}(L)$$는 $$L$$의 모든 원소가 공유하는 closed subset이다. 구체적으로, $$L = \mathbb{P}(V)$$에서 $$V \subseteq \Gamma(X, \mathcal{L})$$일 때,
 
 $$\operatorname{Bs}(L) = \bigcap_{s \in V \setminus \{0\}} \operatorname{Supp}(\operatorname{div}(s))$$
 
 여기서 $$\operatorname{div}(s)$$는 section $$s$$의 zero divisor이다. 
-
-</div>
+:::
 
 특히 $$\mathbb{P}^n$$의 hypersurface 계산에서는 $$V \subseteq \mathbb{K}[\x_0, \ldots, \x_n]_d$$에 대해 $$\operatorname{Bs}(L) = \bigcap_{[F] \in L} Z(F)$$와 동일하다. 그럼 우리가 하고 싶었던 정의는 다음의 정의이다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def5">**정의 5**</ins> $$L$$이 *basepoint-free*라는 것은 $$\operatorname{Bs}(L) = \emptyset$$인 것이다. 즉, 임의의 점 $$p \in X$$에서 $$p$$를 지나지 않는 $$L$$의 원소가 항상 존재한다.
-
-</div>
+::: 정의 5
+$$L$$이 *basepoint-free*라는 것은 $$\operatorname{Bs}(L) = \emptyset$$인 것이다. 즉, 임의의 점 $$p \in X$$에서 $$p$$를 지나지 않는 $$L$$의 원소가 항상 존재한다.
+:::
 
 Basepoint-free linear system의 핵심적인 성질은 다음과 같다. $$L=\mathbb{P}(V)$$가 basepoint-free이면 $$V$$의 기저 $$F_0,\ldots,F_r$$는 $$\bigcap Z(F_i)\cap X=\emptyset$$을 만족하므로, 이를 사용하면 다음의 regular map
 
@@ -149,11 +139,9 @@ $$\varphi_L:X\to\mathbb{P}^r,\quad p\mapsto[F_0(p):\cdots:F_r(p)]$$
 
 을 정의된다. 우리가 처음 linear system에 관심을 가진 것은 주어진 divisor $$D$$에 대해 $$D$$와 linearly equivalent한 effective divisor를 찾기 위해서였는데, 다음 명제는 이에 대한 직접적인 대답을 준다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop6">**명제 6**</ins> 위의 상황에서, $$\mathbb{P}^r$$의 hyperplane $$H$$는 $$\lvert L\rvert$$에 속하는 effective divisor를 정의한다. 
-
-</div>
+::: 명제 6
+위의 상황에서, $$\mathbb{P}^r$$의 hyperplane $$H$$는 $$\lvert L\rvert$$에 속하는 effective divisor를 정의한다. 
+:::
 
 이를 확인하기 위해서는 $$\mathbb{P}^r$$의 hyperplane $$H: a_0\x_0+\cdots+a_r\x_r=0$$에 대하여, $$\varphi_L^{-1}(H)$$는 다음의 global section 
 
@@ -161,23 +149,20 @@ $$\sigma=a_0F_0+\cdots+a_rF_r\in V$$
 
 의 zero set, 즉 $$\divisor(\sigma)$$와 일치한다는 것을 확인하면 된다. 좀 더 구체적인 예시를 살펴 보자.
 
-<div class="example" markdown="1">
-
-<ins id="ex7">**예시 7**</ins> [예시 3](#ex3)에서 살펴 본 $$\mathbb{P}^n$$의 두 예시를 살펴 보자. 우선 처음의 complete linear system 
+::: 예시 7
+[예시 3](#ex3)에서 살펴 본 $$\mathbb{P}^n$$의 두 예시를 살펴 보자. 우선 처음의 complete linear system 
 
 $$\lvert \mathcal{O}_{\mathbb{P}^2}(1)\rvert=\mathbb{P}(\mathbb{K}[\x_0,\x_1,\x_2]_1)$$
 
 을 생각하자. 벡터공간 $$\mathbb{K}[\x_0,\x_1,\x_2]_1$$의 basis를 $$\x_0,\x_1,\x_2$$로 택하면, $$\x_0,\x_1,\x_2$$가 동시에 $$0$$이 되는 $$\mathbb{P}^2$$의 점은 없으므로 이는 basepoint-free이다. 이 basis의 선택이 정의하는 $$\varphi_L$$은 그냥 identity이다.
 
 두 conic의 base locus의 경우, 위에서 살펴보았듯 base locus가 공집합이 아니다. 실제로, base locus는 [예시 3](#ex3)에서 이미 살펴본 $$C_1\cap C_2$$의 네 개의 교점이며, 기하적으로 pencil의 각 원소들은 정확히 $$C_1\cap C_2$$의 네 교점을 공유하므로 이것이 base locus의 정의와 맞아떨어지는 것을 안다.
-
-</div>
+:::
 
 위의 예시는 basepoint라는 이름의 유래를 직관적으로 보여주지만, $$\varphi_L$$이 identity이므로 [명제 6](#prop6)은 사실 큰 의미가 없다. 좀 더 non-trivial한 예시를 살펴 보자.
 
-<div class="example" markdown="1">
-
-<ins id="ex8">**예시 8**</ins> $$\mathbb{P}^1$$에서 $$d \ge 1$$일 때, $$\lvert \mathcal{O}_{\mathbb{P}^1}(d) \rvert$$의 complete linear system이 정의하는 map은
+::: 예시 8
+$$\mathbb{P}^1$$에서 $$d \ge 1$$일 때, $$\lvert \mathcal{O}_{\mathbb{P}^1}(d) \rvert$$의 complete linear system이 정의하는 map은
 
 $$\nu_d: \mathbb{P}^1 \to \mathbb{P}^d, \quad [s : t] \mapsto [s^d : s^{d-1}t : \cdots : t^d]$$
 
@@ -192,8 +177,7 @@ $$\nu_d^{-1}(H_0) = \{[s:t] \in \mathbb{P}^1 \mid s^d = 0\}$$
 $$\nu_d^{-1}(H_1) = \{[s:t] \in \mathbb{P}^1 \mid s^d - t^d = 0\}$$
 
 이고, $$s^d - t^d$$는 $$d$$개의 서로 다른 linear factor의 곱으로 분해되므로(가령 $$\mathbb{K}=\mathbb{C}$$라면 $$s^d-t^d=\prod_{k=0}^{d-1}(s-\zeta^k t)$$) $$\nu_d^{-1}(H_1)$$은 $$\mathbb{P}^1$$ 위의 서로 다른 $$d$$개의 점으로 이루어진 effective divisor이다. 어떤 경우에도 이 preimage들은 $$\lvert \mathcal{O}_{\mathbb{P}^1}(d)\rvert$$에 속하는 degree $$d$$ effective divisor이다.
-
-</div>
+:::
 
 ## Ample line bundle
 
@@ -203,11 +187,9 @@ $$\nu_d^{-1}(H_1) = \{[s:t] \in \mathbb{P}^1 \mid s^d - t^d = 0\}$$
 
 그러나 추상적인 variety에서도 line bundle과 linear system 등등을 모두 정의할 수 있다. 그럼 특히 [명제 6](#prop6)을 사용하면 projective space로의 적절한 함수를 정의할 수 있게 된다. 다음 정의의 중요성은 이러한 맥락에서 이해해야 한다.
 
-<div class="definition" markdown="1">
-
-<ins id="def9">**정의 9**</ins> Line bundle $$\mathcal{L}$$ (또는 대응하는 linear system $$\lvert \mathcal{L} \rvert$$)이 *very ample*이라는 것은, complete linear system $$\lvert \mathcal{L} \rvert = \mathbb{P}(\Gamma(X, \mathcal{L}))$$이 정의하는 regular map $$\varphi_{\mathcal{L}}: X \to \mathbb{P}(\Gamma(X, \mathcal{L}))$$이 closed embedding인 것이다.
-
-</div>
+::: 정의 9
+Line bundle $$\mathcal{L}$$ (또는 대응하는 linear system $$\lvert \mathcal{L} \rvert$$)이 *very ample*이라는 것은, complete linear system $$\lvert \mathcal{L} \rvert = \mathbb{P}(\Gamma(X, \mathcal{L}))$$이 정의하는 regular map $$\varphi_{\mathcal{L}}: X \to \mathbb{P}(\Gamma(X, \mathcal{L}))$$이 closed embedding인 것이다.
+:::
 
 이것이 잘 정의되려면 $$\varphi_L$$이 basis의 선택에 의존하지 않아야 하며, 실제로 그러하다는 것을 쉽게 확인할 수 있다. 
 
@@ -217,11 +199,9 @@ Very ample의 정의에서 핵심은 사상이 단순한 morphism이 아니라 *
 
 이 예시는 너무 간단한 예시이기는 하지만, 만일 $$\mathbb{P}^n$$보다 복잡한 어떤 공간이 있고, 이 공간의 복잡성이 특정한 line bundle의 꼬임만으로는 (올바른 방향임에도) 해소가 안 된다면, 우리는 이것이 해소될 때까지 더욱 더 꼬임을 추가해줄 수 있을 것이다. 이러한 상상으로부터 다음을 정의한다.
 
-<div class="definition" markdown="1">
-
-<ins id="def10">**정의 10**</ins> $$\mathcal{L}$$이 *ample*이라는 것은 어떤 $$m > 0$$에 대해 $$\mathcal{L}^{\otimes m}$$이 very ample인 것이다.
-
-</div>
+::: 정의 10
+$$\mathcal{L}$$이 *ample*이라는 것은 어떤 $$m > 0$$에 대해 $$\mathcal{L}^{\otimes m}$$이 very ample인 것이다.
+:::
 
 이 정의의 유용성을 보려면 ample이지만 very ample은 아닌 line bundle을 갖는 공간을 생각해야겠지만, 아직은 그러한 공간을 소개하기에는 다소 이르다. 하지만 머지 않아 그러한 공간을 다루게 되면 ampleness가 본격적으로 그 쓸모를 증명하게 된다. 
 

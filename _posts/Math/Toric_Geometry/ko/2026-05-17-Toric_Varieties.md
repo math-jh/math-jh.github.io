@@ -22,26 +22,22 @@ weight: 2
 
 위와 같이 affine toric variety들을 이어붙이기 위해서는 각각의 cone들이 서로 어떻게 만나는지를 제어하는 조합론적인 구조가 필요하다. 이를 위해 우리는 *fan*을 정의한다.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> Lattice $$N$$에 대해, $$N_\mathbb{R}$$에 정의된 *fan* $$\Sigma$$는 다음 조건을 만족하는 strongly convex rational polyhedral cone들의 모임이다:
+::: 정의 1
+Lattice $$N$$에 대해, $$N_\mathbb{R}$$에 정의된 *fan* $$\Sigma$$는 다음 조건을 만족하는 strongly convex rational polyhedral cone들의 모임이다:
 
 1. $$\Sigma$$에 속하는 임의의 cone $$\tau$$의 face도 $$\Sigma$$에 속한다.
 2. $$\Sigma$$에 속하는 임의의 두 cone $$\tau_1, \tau_2$$의 교집합 $$\tau_1 \cap \tau_2$$는 각각의 face이다.
-
-</div>
+:::
 
 둘째 조건은 [정의 3](#def3)에서 위의 과정을 통해 gluing을 할 때 필요한 것으로, 서로 다른 두 cone $$\tau_1, \tau_2$$가 그들의 공통 face에서만 만나도록 강제해준다. 한편 첫 번째 조건은 fan이 각 cone의 모든 면을 포함하므로, 일종의 closedness를 요구하는 것으로 볼 수 있다. 
 
-<div class="example" markdown="1">
-
-<ins id="ex2">**예시 2**</ins> $$N = \mathbb{Z}^2$$에서 원점을 중심으로 방사형으로 세 개의 2차원 cone $$\tau_0, \tau_1, \tau_2$$가 $$\mathbb{R}^2$$를 덮는 fan을 생각할 수 있다. 가령 세 개의 벡터 $$e_1, e_2, -e_1-e_2$$를 생각한 후, 이들이 만드는 세 개의 cone을 생각하자.
+::: 예시 2
+$$N = \mathbb{Z}^2$$에서 원점을 중심으로 방사형으로 세 개의 2차원 cone $$\tau_0, \tau_1, \tau_2$$가 $$\mathbb{R}^2$$를 덮는 fan을 생각할 수 있다. 가령 세 개의 벡터 $$e_1, e_2, -e_1-e_2$$를 생각한 후, 이들이 만드는 세 개의 cone을 생각하자.
 
 ![$$\mathbb{P}^2$$의 fan](/assets/images/Math/Toric_Geometry/Toric_Varieties-1.svg){:style="width:20em" class="invert" .align-center}
 
 각각의 cone은 두 개의 반직선 원소 $$\rho_i, \rho_{i+1}$$에 의해 생성되며, 이러한 반직선들은 1차원 cone들이 된다. 원점 $$\{0\}$$ 자체는 0차원 cone으로서 모든 fan에 포함된다. 이 fan은 $$\mathbb{P}^2$$의 toric variety를 정의하는 가장 기본적인 예시이다.
-
-</div>
+:::
 
 ## 토릭 다양체의 정의
 
@@ -51,43 +47,31 @@ $$U_{\tau_1} \supset U_{\tau_1 \cap \tau_2} \cong U_{\tau_2 \cap \tau_1} \subset
 
 이 존재하며, 이를 통해 $$U_\tau$$들을 이어붙일 수 있다.
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**정의 3**</ins> Fan $$\Sigma$$에 대하여, affine toric variety들 $$\{U_\tau\}_{\tau \in \Sigma}$$를 위에서 기술한 방식으로 이어붙여 얻어지는 algebraic variety를 $$\Sigma$$가 정의하는 *toric variety<sub>토릭 다양체</sub>*라 하며, $$X_\Sigma$$로 적는다.
-
-</div>
+::: 정의 3
+Fan $$\Sigma$$에 대하여, affine toric variety들 $$\{U_\tau\}_{\tau \in \Sigma}$$를 위에서 기술한 방식으로 이어붙여 얻어지는 algebraic variety를 $$\Sigma$$가 정의하는 *toric variety<sub>토릭 다양체</sub>*라 하며, $$X_\Sigma$$로 적는다.
+:::
 
 그럼 다음은 [§아핀 토릭 다양체, ⁋명제 15](/ko/math/toric_geometry/affine_toric_varieties#prop15)을 일반화하는 것이다. 
 
-<div class="proposition" markdown="1">
+::: 명제 4
+Toric variety $$X_\Sigma$$는 normal, separated algebraic variety이다.
+:::
 
-<ins id="prop4">**명제 4**</ins> Toric variety $$X_\Sigma$$는 normal, separated algebraic variety이다.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 $$X_\Sigma$$의 normality는 각 affine chart $$U_\tau$$가 [§아핀 토릭 다양체, ⁋명제 15](/ko/math/toric_geometry/affine_toric_varieties#prop15)에 의해 normal이고, 이 성질이 gluing에 의해 보존되기 때문에 얻어진다. Separatedness를 보이기 위해서는 diagonal morphism $$\Delta: X_\Sigma \to X_\Sigma \times X_\Sigma$$의 image가 닫힌 집합임을 확인하면 된다. 각 affine chart 위에서 이는 두 cone의 교집합이 face임을 보장하는 fan의 두 번째 조건에 의해 성립한다. 
-
-</details>
+:::
 
 Toric variety $$X_\Sigma$$가 affine toric variety로부터 물려받는 중요한 성질 중 하나는 algebraic torus $$T_N$$을 열린 조밀한 부분집합으로 포함한다는 것이다. ([§아핀 토릭 다양체, ⁋명제 11](/ko/math/toric_geometry/affine_toric_varieties#prop11)) 실제로, 0차원 cone $$\{0\} \in \Sigma$$에 대응하는 affine chart $$U_{\{0\}}$$는 $$T_N$$과 동형이며, 다른 모든 $$U_\tau$$는 이를 열린 부분집합으로 포함한다. 따라서 $$T_N \subset X_\Sigma$$는 open dense embedding을 정의한다.
 
 [§아핀 토릭 다양체, ⁋명제 10](/ko/math/toric_geometry/affine_toric_varieties#prop10)에서 보았듯이, 각 affine toric variety $$U_\tau$$ 위에는 algebraic torus $$T_N$$의 작용이 자연스럽게 정의된다. 우리는 해당 글에서, cone의 inclusion이 유도하는 affine toric variety들 사이의 inclusion이 torus action에 대해 invariant하다는 것을 살펴보았으므로, 이 작용은 gluing을 통해 $$X_\Sigma$$ 전체로 확장된다. 
 
-<div class="proposition" markdown="1">
+::: 명제 5
+임의의 fan $$\Sigma$$에 대하여 toric variety $$X_\Sigma$$ 위에는 algebraic torus $$T_N$$의 작용이 자연스럽게 정의된다. 이 작용 하에서 $$T_N \subset X_\Sigma$$는 open dense $$T_N$$-invariant subset이며, 이 위에서 정의된 $$T_N$$의 자기 자신 위의 action이 $$X_\Sigma$$ 위의 작용으로 확장된다. 
+:::
 
-<ins id="prop5">**명제 5**</ins> 임의의 fan $$\Sigma$$에 대하여 toric variety $$X_\Sigma$$ 위에는 algebraic torus $$T_N$$의 작용이 자연스럽게 정의된다. 이 작용 하에서 $$T_N \subset X_\Sigma$$는 open dense $$T_N$$-invariant subset이며, 이 위에서 정의된 $$T_N$$의 자기 자신 위의 action이 $$X_\Sigma$$ 위의 작용으로 확장된다. 
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 각각의 cone $$\tau \in \Sigma$$에 대해, $$U_\tau$$ 위의 $$T_N$$-action은 [§아핀 토릭 다양체, ⁋명제 10](/ko/math/toric_geometry/affine_toric_varieties#prop10)에 의해 정의된다. 두 affine chart $$U_{\tau_1}$$과 $$U_{\tau_2}$$의 교집합 $$U_{\tau_1 \cap \tau_2}$$ 위에서 이들 작용은 일치하므로, 이들은 $$X_\Sigma$$ 전체에서 well-defined한 $$T_N$$-action을 정의한다. 한편 $$\{0\} \in \Sigma$$에 대응하는 chart $$U_{\{0\}} \cong T_N$$은 열린 조밀한 부분집합이며, $$T_N$$의 자기작용은 이 chart 위에서 left multiplication으로 주어지므로 $$X_\Sigma$$ 위의 작용으로 자연스럽게 확장된다. 
-
-</details>
+:::
 
 만일 fan $$\Sigma$$가 $$\bigcup_{\tau \in \Sigma} \tau = N_\mathbb{R}$$을 만족한다면 우리는 이를 *complete<sub>완전</sub>* fan이라 부른다. 이 경우 $$X_\Sigma$$는 *complete<sub>완비</sub>* algebraic variety, 즉 $$\Spec(\mathbb{C})$$ 위에서 proper한 variety가 됨이 알려져 있다. Completeness는 대수기하에서 compactness에 대응하는 개념이므로, 우리는 이 경우 $$X_\Sigma$$를 $$T_N$$의 *equivariant compactification*이라 부른다.
 
@@ -99,30 +83,23 @@ Toric variety $$X_\Sigma$$가 affine toric variety로부터 물려받는 중요�
 
 Lattice $$M$$의 dual lattice가 $$N$$이고, $$M_\mathbb{R}$$의 full-dimensional convex lattice polytope $$P$$를 생각하자. $$P$$의 각 facet $$F^\prime$$에 대하여, $$F^\prime$$이 결정하는 hyperplane에 수직이고 polytope $$P$$의 내부를 향하는 $$N$$의 원소들 중, $$v = k v^\prime$$ ($$k > 1$$ 정수, $$v^\prime \in N$$) 꼴로 분해되지 않는 유일한 lattice vector를 $$F^\prime$$의 *primitive inner normal vector* $$u_{F^\prime} \in N$$이라 부른다.
 
-<div class="definition" markdown="1">
-
-<ins id="def6">**정의 6**</ins> Polytope $$P$$의 *normal fan* $$\Sigma_P$$는, $$P$$의 각 면 $$F$$에 대해 $$F$$를 포함하는 모든 facet $$F^\prime$$의 primitive inner normal vector $$u_{F^\prime}$$들이 생성하는 cone $$\tau_F$$를 모은 것
+::: 정의 6
+Polytope $$P$$의 *normal fan* $$\Sigma_P$$는, $$P$$의 각 면 $$F$$에 대해 $$F$$를 포함하는 모든 facet $$F^\prime$$의 primitive inner normal vector $$u_{F^\prime}$$들이 생성하는 cone $$\tau_F$$를 모은 것
 
 $$\Sigma_P = \{\tau_F \mid F \text{ is a face of } P\}$$
 
 으로 정의된다.
-
-</div>
+:::
 
 우리의 첫 번째 주장은 이것이 실제로 fan이 되고, 따라서 toric variety를 정의한다는 것이다. 
 
-<div class="proposition" markdown="1">
+::: 명제 7
+위의 정의에 의해 얻어진 $$\Sigma_P$$는 실제로 fan이다. 즉, $$\Sigma_P$$는 정의 1의 두 조건을 모두 만족한다.
+:::
 
-<ins id="prop7">**명제 7**</ins> 위의 정의에 의해 얻어진 $$\Sigma_P$$는 실제로 fan이다. 즉, $$\Sigma_P$$는 정의 1의 두 조건을 모두 만족한다.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 $$\Sigma_P$$의 임의의 원소 $$\tau_F$$는 primitive inner normal vector들의 $$\mathbb{R}_{\ge 0}$$-linear combination으로 생성되므로 strongly convex rational polyhedral cone이다. 먼저 face 조건을 확인하자. $$\tau_F$$의 face는 $$F$$의 상위 면 $$F^\prime \supseteq F$$에 대응하며, 이는 $$\tau_{F^\prime} \in \Sigma_P$$가 되므로 첫 번째 조건이 만족된다. 두 cone $$\tau_{F_1}, \tau_{F_2} \in \Sigma_P$$의 교집합을 생각하자. $$\tau_{F_1} \cap \tau_{F_2}$$는 $$F_1$$과 $$F_2$$의 교집합을 포함하는 가장 작은 면 $$F$$에 대응하는 cone $$\tau_F$$와 같다. 이는 $$\tau_{F_1}$$과 $$\tau_{F_2}$$ 모두의 face가 되므로, 두 번째 조건도 만족된다.
-
-</details>
+:::
 
 따라서 normal fan은 toric variety $$X_{\Sigma_P}$$를 정의한다. 우리가 다음으로 살펴볼 것은 이렇게 얻어진 toric variety가 단순한 toric variety가 아닌 *projective* variety가 된다는 점이며, 더 나아가 projective인 toric variety는 사실상 모두 이 방식으로 얻어진다는 것이다. 이러한 양방향 대응을 정확히 기술하기 위해서는 toric variety 위의 line bundle과 polytope 사이의 관계를 먼저 정리해두는 것이 좋다.
 
@@ -136,20 +113,15 @@ $$P_D = \{u \in M_\mathbb{R} \mid \langle u, v_\rho \rangle \ge -a_\rho \text{ f
 
 으로 정의하면, 위 compatibility는 정확히 $$P_D$$의 vertex들이 lattice element $$m_\sigma$$로 주어지는 것에 대응되며, 따라서 $$P_D$$는 lattice polytope이 된다. 거꾸로 lattice polytope $$P$$로부터 normal fan $$\Sigma_P$$를 얻는 과정은 [정의 6](#def6)에서 본 것과 같다. 이 양방향이 toric variety의 projectivity와 polytope 사이를 잇는 다리가 된다.
 
-<div class="proposition" markdown="1">
+::: 명제 8
+Toric variety $$X_\Sigma$$가 projective variety인 것은 $$\Sigma$$가 어떤 full-dimensional lattice polytope $$P$$의 normal fan, 즉 $$\Sigma = \Sigma_P$$인 것과 필요충분조건이다.
+:::
 
-<ins id="prop8">**명제 8**</ins> Toric variety $$X_\Sigma$$가 projective variety인 것은 $$\Sigma$$가 어떤 full-dimensional lattice polytope $$P$$의 normal fan, 즉 $$\Sigma = \Sigma_P$$인 것과 필요충분조건이다.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 ($$\Rightarrow$$) $$X_\Sigma$$가 projective라면 그 위에 very ample line bundle $$\mathcal{L}$$이 존재하며, 위의 대응에 의해 이는 $$T_N$$-invariant Cartier divisor $$D$$로 표현된다. 앞서 본 바, 이로부터 얻어지는 $$P_D$$는 lattice polytope이며, $$\mathcal{L}$$이 ample (특히 very ample)이므로 [§토러스 인자와 선다발, ⁋명제 9](/ko/math/toric_geometry/toric_divisors#prop9)에 의해 대응되는 piecewise linear function $$\psi_D$$는 strictly convex이다. 이로부터 $$P_D$$의 normal fan이 $$\Sigma$$와 일치함을 얻는다.
 
 ($$\Leftarrow$$) $$\Sigma = \Sigma_P$$라 하자. Polytope $$P$$의 데이터 — 즉 각 ray $$\rho$$에 대해 $$a_\rho = -\min_{u \in P}\langle u, v_\rho\rangle$$ — 로부터 $$T_N$$-invariant divisor $$D_P = \sum_\rho a_\rho D_\rho$$를 얻는다. 여기서 $$P$$의 각 vertex가 lattice point라는 사실이 정확히 앞의 compatibility 조건을 충족시켜 $$D_P$$가 Cartier가 되며, 충분히 큰 $$k > 0$$에 대해 $$kD_P$$가 very ample이 된다. 이때 $$kP$$의 lattice point들로 정의되는 monomial map $$\phi_{kP}: T_N \to \mathbb{P}^s$$의 image의 Zariski closure가 $$X_\Sigma$$와 동형이므로 ([명제 9](#prop9) 참고), $$X_\Sigma$$는 projective이다.
-
-</details>
+:::
 
 이러한 동치조건을 만족하는 toric variety $$X_\Sigma = X_{\Sigma_P}$$를 *projective toric variety*라 부르며, polytope $$P$$를 강조하여 $$X_P$$로 적기도 한다. 이 결과는 toric variety의 기하학적 성질이 fan의 조합론적 성질로 완전히 기술됨을 보여주는 대표적인 예시이다.
 
@@ -161,26 +133,20 @@ $$\phi_P: T_N \longrightarrow \mathbb{P}^s, \qquad t \longmapsto [\rchi^{m_0}(t)
 
 을 정의할 수 있다. 여기서 $$\rchi^m: T_N \to \mathbb{C}^\ast$$는 $$m \in M$$에 대응하는 character이다.
 
-<div class="proposition" markdown="1">
+::: 명제 9
+위에서 정의한 $$\phi_P$$의 image의 Zariski closure가 $$X_P$$와 isomorphic다. 즉, $$X_P \cong \overline{\phi_P(T_N)}$$가 성립한다.
+:::
 
-<ins id="prop9">**명제 9**</ins> 위에서 정의한 $$\phi_P$$의 image의 Zariski closure가 $$X_P$$와 isomorphic다. 즉, $$X_P \cong \overline{\phi_P(T_N)}$$가 성립한다.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 $$P$$가 very ample lattice polytope일 때 (즉, $$X_P$$ 위에서 대응되는 divisor $$D_P$$가 very ample line bundle을 정의할 때), 각 vertex $$v$$에 대응하는 affine chart는 monomial들 $$\rchi^{m_i - m_v}$$들로 생성되는 coordinate ring을 갖는다. 여기서 $$m_v$$는 vertex $$v$$에 대응하는 lattice point이다. 이러한 affine chart들은 $$\mathbb{P}^s$$의 표준 affine chart들과 자연스럽게 호환되며, 이들의 gluing이 $$\overline{\phi_P(T_N)}$$를 정의한다. 일반적인 경우 $$kP$$가 very ample이 되도록 하는 $$k > 0$$를 선택하면, polytope을 양의 정수배로 확대해도 normal fan은 변하지 않으므로 $$\Sigma_{kP} = \Sigma_P$$, 따라서 $$X_{kP} = X_P$$이며 embedding은 $$kP$$를 사용하여 위와 같이 정의된다.
-
-</details>
+:::
 
 이 embedding은 toric variety의 조합론적 정의와 대수기하학적 정의 사이의 연결고리를 다시 한 번 보여준다. 즉, polytope $$P$$의 lattice point의 개수는 (projective) toric variety를 projective space로 embed했을 때 그 ambient projective space $$\mathbb{P}^s$$의 차원을 결정하는 것이다. 
 
 이제 우리는 가장 기본적인 projective toric variety, 즉 projective space $$\mathbb{P}^n$$의 예시를 살펴본다.
 
-<div class="example" markdown="1">
-
-<ins id="ex10">**예시 10**</ins> Lattice $$M = \mathbb{Z}^n$$에서 *standard simplex* $$\Delta_n \subset M_\mathbb{R}$$를
+::: 예시 10
+Lattice $$M = \mathbb{Z}^n$$에서 *standard simplex* $$\Delta_n \subset M_\mathbb{R}$$를
 
 $$\Delta_n = \{(x_1, \ldots, x_n) \in \mathbb{R}^n \mid x_i \ge 0,\; x_1 + \cdots + x_n \le 1\}$$
 
@@ -195,18 +161,15 @@ $$v_i = e_i \quad (i = 1, \ldots, n), \qquad v_0 = -e_1 - \cdots - e_n$$
 $$\phi_{\Delta_n}: (\mathbb{C}^\ast)^n \longrightarrow \mathbb{P}^n, \qquad (t_1, \ldots, t_n) \longmapsto [1 : t_1 : \cdots : t_n]$$
 
 가 되는 것을 확인할 수 있다.
-
-</div>
+:::
 
 ## 매끄러움과 특이점 분해
 
 한편 [§아핀 토릭 다양체, ⁋명제 9](/ko/math/toric_geometry/affine_toric_varieties#prop9)에서 affine toric variety $$U_\sigma$$의 smoothness가 cone $$\sigma$$의 조합론적 조건으로 판정됨을 보았다. $$X_\Sigma$$는 affine chart $$U_\tau$$의 gluing이므로, 이는 곧바로 일반 toric variety의 판정으로 일반화할 수 있다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop11">**명제 11**</ins> Toric variety $$X_\Sigma$$가 smooth algebraic variety인 것은 fan $$\Sigma$$의 모든 cone $$\tau \in \Sigma$$가 smooth cone인 것과 필요충분조건이다. 
-
-</div>
+::: 명제 11
+Toric variety $$X_\Sigma$$가 smooth algebraic variety인 것은 fan $$\Sigma$$의 모든 cone $$\tau \in \Sigma$$가 smooth cone인 것과 필요충분조건이다. 
+:::
 
 혹은 더 간단하게 $$\Sigma$$의 모든 *maximal* cone이 smooth임을 확인하면 나머지 face의 smoothness는 이로부터 따라오게 된다. 
 

@@ -54,9 +54,8 @@ $$\mu(a,\mu(b,c))=\mu(a,b\cdot c)=a\cdot(b\cdot c)$$
 
 정의를 하기에 앞서, monoid를 정의하는 두 diagram에서 $$M\times(M\times M)$$과 $$(M\times M)\times M$$은 서로 다른 집합이고, $$M$$, $$I\times M$$, $$M\times I$$도 서로 다른 집합이라는 것을 기억하자. 이들은 분명 서로 다른 집합들이며, 다만 이들 사이에 자연스러운 isomorphism들이 존재할 뿐이다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1 (Monoidal category)**</ins> *Monoidal category<sub>모노이드 범주</sub>*는 데이터 $$(\mathcal{A},\otimes, I)$$로 이루어진다. 여기서 $$\mathcal{A}$$는 category이고, $$I\in\obj(\mathcal{A})$$이며, $$\otimes:\mathcal{A}\times \mathcal{A}\rightarrow \mathcal{A}$$가 bifunctor이다. 이들은 다음 조건을 만족한다. 
+::: 정의 1 (Monoidal category)
+*Monoidal category<sub>모노이드 범주</sub>*는 데이터 $$(\mathcal{A},\otimes, I)$$로 이루어진다. 여기서 $$\mathcal{A}$$는 category이고, $$I\in\obj(\mathcal{A})$$이며, $$\otimes:\mathcal{A}\times \mathcal{A}\rightarrow \mathcal{A}$$가 bifunctor이다. 이들은 다음 조건을 만족한다. 
 
 1. $$\mathcal{A}\times \mathcal{A}\times \mathcal{A}$$에서 $$\mathcal{A}$$로의 두 functor $$-\otimes(-\otimes-)$$와 $$(-\otimes-)\otimes-$$사이의 natural isomorphism
     
@@ -85,8 +84,7 @@ $$\mu(a,\mu(b,c))=\mu(a,b\cdot c)=a\cdot(b\cdot c)$$
   ![inverse](/assets/images/Math/Category_Theory/Monoidal_Categories-7.svg){:style="width:16.29em" class="invert" .align-center}
 
 으로 나타난다.
-
-</div>
+:::
 
 만일 symmetric monoidal category에서, $$\gamma_{A,B}:A\otimes B\rightarrow B\otimes A$$와 $$\gamma_{B,A}:B\otimes A \rightarrow A\otimes B$$가 서로의 inverse가 아니라면, 이를 *braided monoidal category<sub>매듭 모노이드 범주</sub>*라 부른다.
 
@@ -94,33 +92,27 @@ Associator와 unitor들의 coherence condition은 Mac Lane의 coherence theorem�
 
 어쨌든 coherence theorem 덕분에 우리는 monoidal product가 계산순서 혹은 이들이 나열된 순서에 의존하지 않는다는 것을 알고 있으므로 이제 이들 natural isomorphism은 상대적으로 덜 신경써도 된다. 
 
-<div class="example" markdown="1">
-
-<ins id="ex2">**예시 2**</ins> 다음은 모두 monoidal category의 예시들이다.
+::: 예시 2
+다음은 모두 monoidal category의 예시들이다.
 
 - $$\Set$$에 일반적인 product ([§극한, ⁋예시 6](/ko/math/category_theory/limits#ex6))를 장착하고, $$I$$는 아무 singleton으로 가져오면 $$\Set$$은 symmetric monoidal category가 된다.
 - $$\Grp$$에 일반적인 product를 장착하고, $$I$$는 trivial group $$\{e\}$$으로 가져오면 $$\Grp$$이 symmetric monoidal category가 된다. 
 - $$\Top$$에 product 구조를 product topology로 주고, $$I$$는 아무 singleton으로 가져오면 $$\Top$$은 symmetric monoidal category가 된다. 
 - 임의의 commutative ring $$R$$에 대하여, $$R$$-module들의 카테고리 $$\lMod{R}$$은 tensor product $$\otimes$$에 대해 symmetric monoidal category이다.
 - 특히 $$R=k$$인 경우 위의 예시는 $$\Vect_k$$가 symmetric monoidal category임을 보여주고, $$R=\mathbb{Z}$$인 경우 우리는 $$\Ab$$이 symmetric monoidal category임을 알 수 있다. 
-
-</div>
+:::
 
 [예시 2](#ex2)의 앞의 두 예시는 일반화가 가능하다. 우선 다음을 정의하자.
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**정의 3**</ins> Category $$\mathcal{A}$$의 대상들의 유한한 family가 항상 categorical product를 갖는다면, 이 category를 *cartesian category*라 부른다. 
-
-</div>
+::: 정의 3
+Category $$\mathcal{A}$$의 대상들의 유한한 family가 항상 categorical product를 갖는다면, 이 category를 *cartesian category*라 부른다. 
+:::
 
 그럼 앞선 예시에서, $$\Set$$과 $$\Grp$$은 cartesian category가 된다. 마찬가지로 $$\Top$$이나 $$\Man^\infty$$ 등도 모두 cartesian category이다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**명제 4**</ins> 임의의 cartesian category는 monoidal category의 구조를 갖는다. 
-
-</div>
+::: 명제 4
+임의의 cartesian category는 monoidal category의 구조를 갖는다. 
+:::
 
 이 명제의 증명을 위해서는 많은 말을 덧붙여야 하긴 하지만, 본질적으로 이는 $$(A\times B)\times C\cong A\times(B\times C)$$와 $$I\times M\cong M\cong M\times I$$들이 어떻게 나왔는지를 떠올린 후, 계산들을 반복하면 된다. 이와 같이, monoidal product가 product로 주어진 monoidal category를 *cartesian monoidal category*라 부른다. 
 

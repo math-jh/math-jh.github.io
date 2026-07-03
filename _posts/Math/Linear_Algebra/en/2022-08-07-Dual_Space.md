@@ -32,21 +32,18 @@ When $$V$$ is finite-dimensional, $$V$$ and $$V^\ast$$ have the same dimension, 
 
 To show that $$V$$ and $$V^\ast$$ are isomorphic, we had to choose a specific basis. By contrast, we can construct an injective linear map from $$V$$ to $$V^{\ast\ast}$$ that is *independent of the choice of basis*. Since $$V$$ and $$V^{\ast\ast}$$ have the same dimension, this injective linear map must be an isomorphism.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> Given three $$\mathbb{K}$$-vector spaces $$U,V,W$$, a function $$f:U\times V\rightarrow W$$ is called *bilinear* if for any $$u,u_1,u_2\in U$$, $$v,v_1,v_2\in V$$, and scalar $$\alpha$$,
+::: Definition 1
+Given three $$\mathbb{K}$$-vector spaces $$U,V,W$$, a function $$f:U\times V\rightarrow W$$ is called *bilinear* if for any $$u,u_1,u_2\in U$$, $$v,v_1,v_2\in V$$, and scalar $$\alpha$$,
 
 $$f(u_1+u_2,v)=f(u_1,v)+f(u_2,v),\qquad f(u,v_1+v_2)=f(u,v_1)+f(u,v_2),\qquad f(\alpha u,v)=\alpha f(u,v)=f(u,\alpha v)$$
 
 hold.
-
-</div>
+:::
 
 In other words, for any $$u\in U$$ the function $$f(u,-):V\rightarrow W$$ is linear, and for any $$v\in V$$ the function $$f(-,v):U\rightarrow W$$ is also linear.
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**Definition 2**</ins> Given two $$\mathbb{K}$$-vector spaces $$V,W$$, a *pairing* of $$V$$ and $$W$$ is a bilinear map $$(-,-):V\times W\rightarrow \mathbb{K}$$. If for every nonzero $$v\in V$$ the linear map
+::: Definition 2
+Given two $$\mathbb{K}$$-vector spaces $$V,W$$, a *pairing* of $$V$$ and $$W$$ is a bilinear map $$(-,-):V\times W\rightarrow \mathbb{K}$$. If for every nonzero $$v\in V$$ the linear map
 
 $$(v,-): W\rightarrow \mathbb{K}$$
 
@@ -55,8 +52,7 @@ is never the zero function, then this pairing is called *non-degenerate on the l
 $$(-,w):U\rightarrow \mathbb{K}$$
 
 is never the zero function, then this pairing is called *non-degenerate on the right*. A pairing that is non-degenerate on both the left and the right is simply called a *non-degenerate pairing*.
-
-</div>
+:::
 
 The notation $$(-,-)$$ coincides with that for ordered pairs, which may cause some confusion, but the two are easily distinguished from context, and the notation is convenient; we therefore adopt it.
 
@@ -68,9 +64,8 @@ hold trivially, so the dot product is indeed a pairing. Moreover, for any nonzer
 
 When $$V=W$$ as above, a pairing is sometimes called a *bilinear form*. The example we use in this post is the following.
 
-<div class="example" markdown="1">
-
-<ins id="ex3">**Example 3**</ins> For any $$\mathbb{K}$$-vector space $$V$$ and its dual space $$V^\ast$$, define $$(-,-):V\times V^\ast\rightarrow \mathbb{K}$$ by
+::: Example 3
+For any $$\mathbb{K}$$-vector space $$V$$ and its dual space $$V^\ast$$, define $$(-,-):V\times V^\ast\rightarrow \mathbb{K}$$ by
 
 $$(v,f)=f(v)$$
 
@@ -89,12 +84,10 @@ $$(\alpha v,f)=f(\alpha v)=\alpha f(v)=(\alpha f)(v)=(v,\alpha f)$$
 holds, so $$(-,-)$$ is a pairing. Furthermore, $$(-,-)$$ is non-degenerate. If any $$f\in V^\ast$$ is nonzero, then there exists $$v$$ with $$f(v)\neq 0$$, so $$(-,-)$$ is non-degenerate on the right. Also, for any nonzero vector $$v$$, choose a basis $$\mathcal{B}$$ containing $$v$$ and construct its dual basis as above; for the element $$\xi$$ of the dual basis corresponding to $$v$$, we have $$(v,\xi)=1$$, so $$(-,-)$$ is also non-degenerate on the left.
 
 Thus $$(-,-)$$ is a non-degenerate pairing. We call this the *canonical pairing*.
+:::
 
-</div>
-
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**Proposition 4**</ins> Given two $$\mathbb{K}$$-vector spaces $$V,W$$ with a non-degenerate pairing $$(-,-):V\times W\rightarrow \mathbb{K}$$, the function $$V\rightarrow W^\ast$$ defined by
+::: Proposition 4
+Given two $$\mathbb{K}$$-vector spaces $$V,W$$ with a non-degenerate pairing $$(-,-):V\times W\rightarrow \mathbb{K}$$, the function $$V\rightarrow W^\ast$$ defined by
 
 $$v\mapsto (v,-)$$
 
@@ -103,28 +96,19 @@ is an injective linear map. Similarly, the function $$W\rightarrow V^\ast$$ defi
 $$w\mapsto (-,w)$$
 
 is also an injective linear map.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 That these functions are linear maps is obvious since $$(-,-)$$ is linear in each argument. That they are injective is exactly the statement that $$(-,-)$$ is non-degenerate on the left and on the right.
+:::
 
-</details>
-
-<div class="proposition" markdown="1">
-
-<ins id="cor5">**Corollary 5**</ins> Two *finite-dimensional* $$\mathbb{K}$$-vector spaces $$V,W$$ with a non-degenerate pairing $$(-,-):V\times W\rightarrow \mathbb{K}$$ are isomorphic.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Corollary 5
+Two *finite-dimensional* $$\mathbb{K}$$-vector spaces $$V,W$$ with a non-degenerate pairing $$(-,-):V\times W\rightarrow \mathbb{K}$$ are isomorphic.
+:::
+::: Proof
 This is immediate from the two inequalities
 
 $$\dim V\leq\dim W^\ast=\dim W,\qquad \dim W\leq\dim V^\ast=\dim V.$$
-
-</details>
+:::
 
 In this sense, a non-degenerate pairing between two finite-dimensional vector spaces is sometimes called a *perfect pairing*. Applying this corollary to the canonical pairing of [Example 3](#ex3) with $$W=V^\ast$$, we obtain an isomorphism from $$V$$ to $$V^{\ast\ast}$$. Explicitly, this function is the *evaluation map*
 
@@ -184,17 +168,13 @@ In other words, the transpose of a matrix is precisely the matrix representing t
 
 First, the following proposition holds.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop6">**Proposition 6**</ins> Let $$V,W$$ be two $$\mathbb{K}$$-vector spaces, and let $$L:V\rightarrow W$$ be a linear map and $$L^\ast:W^\ast\rightarrow V^\ast$$ its dual.
+::: Proposition 6
+Let $$V,W$$ be two $$\mathbb{K}$$-vector spaces, and let $$L:V\rightarrow W$$ be a linear map and $$L^\ast:W^\ast\rightarrow V^\ast$$ its dual.
 
 1. If $$L$$ is injective, then $$L^\ast$$ is surjective.
 2. If $$L$$ is surjective, then $$L^\ast$$ is injective.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 Both claims are immediate from [§Space of Linear Maps, ⁋Corollary 2](/en/math/linear_algebra/space_of_linear_maps#cor2).
 
 1. If $$L$$ is injective, there exists $$R:W\rightarrow V$$ satisfying $$R\circ L=\id_V$$. Then for any $$f\in V^\ast$$, the composition $$f\circ R$$ is a function from $$W$$ to $$\mathbb{K}$$, i.e., an element of $$W^\ast$$, and
@@ -207,18 +187,15 @@ Both claims are immediate from [§Space of Linear Maps, ⁋Corollary 2](/en/math
     $$L^\ast(f)=f\circ L=0\implies 0=(f\circ L)\circ S=f\circ(L\circ S)=f\circ\id_W=f$$
 
     so $$L^\ast$$ is injective.
-
-</details>
+:::
 
 This proposition suggests a specific relationship between $$\ker L$$ and $$\im L^\ast$$, and between $$\im L$$ and $$\ker L^\ast$$. We begin with the following definition.
 
-<div class="definition" markdown="1">
-
-<ins id="def7">**Definition 7**</ins> Let $$V$$ be a $$\mathbb{K}$$-vector space with canonical pairing $$(-,-)$$, and consider an arbitrary subset $$S\subseteq V$$. The collection of $$f\in V^\ast$$ satisfying $$(v,f)=0$$ for all $$v\in S$$ is called the *orthogonal complement* or *annihilator* of $$S$$, and is denoted by $$S^\perp$$.
+::: Definition 7
+Let $$V$$ be a $$\mathbb{K}$$-vector space with canonical pairing $$(-,-)$$, and consider an arbitrary subset $$S\subseteq V$$. The collection of $$f\in V^\ast$$ satisfying $$(v,f)=0$$ for all $$v\in S$$ is called the *orthogonal complement* or *annihilator* of $$S$$, and is denoted by $$S^\perp$$.
 
 Similarly, given an arbitrary subset $$T\subseteq V^\ast$$, the collection of $$v\in V$$ satisfying $$(v,f)=0$$ for all $$f\in T$$ is called the orthogonal complement of $$T$$ and is denoted by $$T^\perp$$.
-
-</div>
+:::
 
 In particular, when $$S$$ or $$T$$ is a singleton we sometimes write $$v^\perp$$ or $$f^\perp$$.
 
@@ -228,71 +205,51 @@ $$S^\perp=\bigcap_{v\in S}v^\perp$$
 
 and [§Basis of a Vector Space, ⁋Lemma 3](/en/math/linear_algebra/basis#lem3), we see that $$S^\perp$$ is a subspace of $$V^\ast$$. Similarly, for any $$T\subseteq V^\ast$$, the set $$T^\perp$$ is a subspace of $$V$$.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop8">**Proposition 8**</ins> Let $$V,W$$ be two $$\mathbb{K}$$-vector spaces, and let $$L:V\rightarrow W$$ be a linear map and $$L^\ast:W^\ast\rightarrow V^\ast$$ its dual. For any subspace $$U\subseteq V$$ and its orthogonal complement $$U^\perp$$,
+::: Proposition 8
+Let $$V,W$$ be two $$\mathbb{K}$$-vector spaces, and let $$L:V\rightarrow W$$ be a linear map and $$L^\ast:W^\ast\rightarrow V^\ast$$ its dual. For any subspace $$U\subseteq V$$ and its orthogonal complement $$U^\perp$$,
 
 $$L(U)^\perp=(L^\ast)^{-1}(U^\perp)$$
 
 holds.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 Using equation (1), which defines the dual map $$L^\ast$$ via the canonical pairing, for any $$\upsilon\in W^\ast$$ we have
 
 $$\upsilon\in L(U)^\perp\iff (L(u),\upsilon)=0\text{ for all $u\in U$}\iff (u, L^\ast(\upsilon))=0\text{ for all $u\in U$}\iff L^\ast(\upsilon)\in U^\perp$$
 
 as desired.
+:::
 
-</details>
-
-<div class="proposition" markdown="1">
-
-<ins id="cor9">**Corollary 9**</ins> Let $$V,W$$ be two $$\mathbb{K}$$-vector spaces, and let $$L:V\rightarrow W$$ be a linear map and $$L^\ast:W^\ast\rightarrow V^\ast$$ its dual. Then $$(\im L)^\perp=\ker(L^\ast)$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Corollary 9
+Let $$V,W$$ be two $$\mathbb{K}$$-vector spaces, and let $$L:V\rightarrow W$$ be a linear map and $$L^\ast:W^\ast\rightarrow V^\ast$$ its dual. Then $$(\im L)^\perp=\ker(L^\ast)$$.
+:::
+::: Proof
 It suffices to take $$U=V$$ in [Proposition 8](#prop8). From the non-degeneracy of the canonical pairing $$(-,-)$$, we have $$U^\perp=\{0\}$$, yielding the desired result.
-
-</details>
+:::
 
 In [Proposition 8](#prop8), we could instead start with $$U\subseteq W^\ast$$ rather than $$U\subseteq V$$. In that case we obtain the following proposition.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop10">**Proposition 10**</ins> Let $$V,W$$ be two $$\mathbb{K}$$-vector spaces, and let $$L:V\rightarrow W$$ be a linear map and $$L^\ast:W^\ast\rightarrow V^\ast$$ its dual. For any subspace $$U\subseteq W^\ast$$ and its orthogonal complement $$U^\perp$$,
+::: Proposition 10
+Let $$V,W$$ be two $$\mathbb{K}$$-vector spaces, and let $$L:V\rightarrow W$$ be a linear map and $$L^\ast:W^\ast\rightarrow V^\ast$$ its dual. For any subspace $$U\subseteq W^\ast$$ and its orthogonal complement $$U^\perp$$,
 
 $$\bigl(L^\ast(U)\bigr)^\perp=L^{-1}(U^\perp)$$
 
 holds.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 This too follows from equation (1): for any $$x\in V$$,
 
 $$x\in \bigl(L^\ast(U)\bigr)^\perp\iff (x, L^\ast(\upsilon))=0\text{ for all $\upsilon\in U$}\iff (L(x),\upsilon)=0\text{ for all $\upsilon\in U$}\iff L(x)\in U^\perp$$
 
 which gives the claim.
+:::
 
-</details>
-
-<div class="proposition" markdown="1">
-
-<ins id="cor11">**Corollary 11**</ins> Let $$V,W$$ be two $$\mathbb{K}$$-vector spaces, and let $$L:V\rightarrow W$$ be a linear map and $$L^\ast:W^\ast\rightarrow V^\ast$$ its dual. Then $$\bigl(\im L^\ast\bigr)^\perp=\ker L$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Corollary 11
+Let $$V,W$$ be two $$\mathbb{K}$$-vector spaces, and let $$L:V\rightarrow W$$ be a linear map and $$L^\ast:W^\ast\rightarrow V^\ast$$ its dual. Then $$\bigl(\im L^\ast\bigr)^\perp=\ker L$$.
+:::
+::: Proof
 It suffices to take $$U=W^\ast$$ in [Proposition 10](#prop10).
-
-</details>
+:::
 
 ---
 

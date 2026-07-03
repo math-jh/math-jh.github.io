@@ -43,35 +43,23 @@ is well-defined. On the other hand, since both $$V$$ and $$W$$ are $$n$$-dimensi
 
 In particular, if $$E=T^\ast M$$, we define the following.
 
-<div class="definition" markdown="1">
+::: Definition 1
+Let $$M$$ be an $$m$$-dimensional connected manifold. Then $$M$$ is said to be *orientable* if $$\bigwedge\nolimits^m(M)\setminus\{0\}$$ has two components, and choosing one of the two components is called an *orientation* of $$M$$.
+:::
 
-<ins id="def1">**Definition 1**</ins> Let $$M$$ be an $$m$$-dimensional connected manifold. Then $$M$$ is said to be *orientable* if $$\bigwedge\nolimits^m(M)\setminus\{0\}$$ has two components, and choosing one of the two components is called an *orientation* of $$M$$.
-
-</div>
-
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**Proposition 2**</ins> Let $$M$$ be an $$m$$-dimensional connected manifold. Then the following are all equivalent.
+::: Proposition 2
+Let $$M$$ be an $$m$$-dimensional connected manifold. Then the following are all equivalent.
 
 1. $$M$$ is orientable.
 2. There exists a suitable collection of coordinate systems covering $$M$$ such that the Jacobian is always positive on their overlaps.
 3. There exists a non-vanishing $$m$$-form defined on $$M$$.
+:::
+::: Proof
+:::
 
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
-
-
-</details>
-
-<div class="example" markdown="1">
-
-<ins id="ex3">**Example 3**</ins>
-
+::: Example 3
 Any Lie group is orientable. Indeed, if we choose any basis $$\omega_1,\ldots,\omega_n$$ in $$\Omega_\text{l.inv}^\ast(G)$$ and consider their wedge $$\omega_1\wedge\cdots\wedge\omega_n$$, this defines a nonvanishing $$n$$-form on $$G$$.
-
-</div>
+:::
 
 ---
 

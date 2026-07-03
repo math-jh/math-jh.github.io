@@ -35,9 +35,8 @@ $$\widehat{G}_\mathcal{J}=\varprojlim_i G/H_i=\left\{(g_1,g_2,\ldots)\in \prod G
 
 만일 $$G$$에 ring 구조가 주어져 있고 $$H_i$$들이 ideal들이었다면 $$\widehat{G}$$ 또한 자연스러운 ring 구조를 갖는다. 우리가 살펴볼 상황은 다음과 같은 상황이다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> Ring $$A$$와 ideal $$\mathfrak{a}$$를 고정하자. 그럼 $$A$$의 ideal들의 $$\mathfrak{a}$$-filtration
+::: 정의 1
+Ring $$A$$와 ideal $$\mathfrak{a}$$를 고정하자. 그럼 $$A$$의 ideal들의 $$\mathfrak{a}$$-filtration
 
 $$\mathcal{J}:\qquad A=\mathfrak{a}_0\supseteq \mathfrak{a}_1\supseteq \mathfrak{a}_2\cdots$$
 
@@ -52,8 +51,7 @@ $$\widehat{A}=\varprojlim_i A/\mathfrak{a}_i$$
 $$A\supseteq\mathfrak{a}\supseteq \mathfrak{a}^2\cdots$$
 
 꼴로 주어졌다면 이를 $$A$$의 *$$\mathfrak{a}$$-adic completion<sub>$\mathfrak{a}$진 완비화</sub>*이라 부른다. 이 경우, 만일 $$\mathfrak{a}$$가 maximal ideal이라면 $$\widehat{A}$$은 유일한 maximal ideal $$\widehat{\mathfrak{a}}$$를 갖는 local ring이 되므로, $$\widehat{A}$$을 *complete local ring<sub>국소완비환</sub>*이라 부른다. 
-
-</div>
+:::
 
 우선 natural map $$\rho:A \rightarrow \widehat{A}$$는 canonical morphism들 $$\pr_i: A \rightarrow A/\mathfrak{a}_i$$들에 universal property를 적용하여 얻어지는 것이다. 그럼 정의에 의하여
 
@@ -101,27 +99,23 @@ $$\mathfrak{a}\supseteq \mathfrak{a}^2\supseteq\cdots\tag{2}$$
 
 다시 일반적인 topological abelian group $$G$$로 돌아와서, 우리는 [##ref##]()의 조건을 약화시켜 다음을 정의할 수 있다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**정의 2**</ins> Topological group $$(G, +, 0)$$에 대하여, $$G$$의 원소들의 수열 $$(x_i)_{i\in \mathbb{N}}$$이 *Cauchy sequence<sub>코시 수열</sub>*이라는 것은 $$0$$의 임의의 근방 $$U$$가 주어질 때마다 적당한 자연수 $$N$$이 존재하여, 다음 명제
+::: 정의 2
+Topological group $$(G, +, 0)$$에 대하여, $$G$$의 원소들의 수열 $$(x_i)_{i\in \mathbb{N}}$$이 *Cauchy sequence<sub>코시 수열</sub>*이라는 것은 $$0$$의 임의의 근방 $$U$$가 주어질 때마다 적당한 자연수 $$N$$이 존재하여, 다음 명제
 
 $$m,n>N \implies x_m-x_n\in U$$
 
 가 참이도록 할 수 있는 것을 말한다. 
-
-</div>
+:::
 
 그럼 [##ref##]()에서 Cauchy filter들의 equivalence class들의 모임으로 completion을 정의한 것과 같이, 우리는 두 Cauchy sequence $$(x_m)$$, $$(y_n)$$이 주어졌을 때 이들을 언제 같은 것으로 볼지를 정하고, 그를 통해 (위상적인) completion을 정의할 수 있다. 다만 우리가 관심있는 것은 위의 filtration (2)에 의해 정의되는 first countable topological group $$A$$이며, first countable space는 sequentual이므로 다음 정의에서는 편의를 위해 $$G$$가 first countable space라 가정하고, Cauchy filter 대신 Cauchy sequence를 사용한다.
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**정의 3**</ins> Topological group $$(G, +, 0)$$의 두 Cauchy sequence $$(x_m)$$, $$(y_n)$$이 *equivalent<sub>동등</sub>*하다는 것은 $$0$$의 임의의 근방 $$U$$가 주어질 때마다 적당한 자연수 $$N$$이 존재하여, 다음 명제
+::: 정의 3
+Topological group $$(G, +, 0)$$의 두 Cauchy sequence $$(x_m)$$, $$(y_n)$$이 *equivalent<sub>동등</sub>*하다는 것은 $$0$$의 임의의 근방 $$U$$가 주어질 때마다 적당한 자연수 $$N$$이 존재하여, 다음 명제
 
 $$m,n>N \implies x_m-y_n\in U$$
 
 가 참이도록 할 수 있는 것을 말한다. First countable topological group $$G$$의 모든 Cauchy sequence들의 집합에 이 equivalence relation을 주어 얻어지는 집합을 $$G$$의 *completion<sub>완비화</sub>*이라 부르고, 이를 $$\widehat{G}$$로 적는다. 
-
-</div>
+:::
 
 이제 $$0\in G$$의 열린근방 $$U$$에 대하여, 
 
@@ -141,11 +135,9 @@ $$\sum_{j=1}^\infty b_j$$
 
 은 $$\widehat{A}$$의 원소를 하나 정의한다. 거꾸로, 임의의 $$\widehat{A}$$의 원소 $$(a_n')$$이 주어졌다하면 $$0$$의 local base (2)를 이용하여 이 원소와 equivalent하고 (3)과 같은 형태를 갖는 Cauchy sequence를 찾을 수 있다. 
 
-<div class="example" markdown="1">
-
-<ins id="ex4">**예시 4**</ins> 만일 $$A=\mathbb{K}[\x]$$이고 $$\mathfrak{a}=(\x)$$라면 $$\widehat{A}$$는 *formal power series*들의 ring $$\mathbb{K}[[\x]]$$이다.
-
-</div>
+::: 예시 4
+만일 $$A=\mathbb{K}[\x]$$이고 $$\mathfrak{a}=(\x)$$라면 $$\widehat{A}$$는 *formal power series*들의 ring $$\mathbb{K}[[\x]]$$이다.
+:::
 
 Ring $$\mathbb{K}[[\x]]$$는 유일한 nonzero prime ideal $$\mathfrak{m}=(\x)$$를 갖는 discrete valuation ring이다. 즉 $$(\x)$$에 속하지 않는 임의의 원소는 unit이며, 이는 본질적으로 다음의 식
 
@@ -167,48 +159,34 @@ $$(1+\x)(1-\x+\x^2-\cdots+(-1)^i\x^i)=1+(-1)^i\x^i\in \mathfrak{m}^i$$
 
 이 계산을 일반화하여 다음의 두 결과를 얻는다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**명제 5**</ins> $$A$$가 ideal $$\mathfrak{a}$$에 대해 complete이라 하자. 그럼 다음 집합
+::: 명제 5
+$$A$$가 ideal $$\mathfrak{a}$$에 대해 complete이라 하자. 그럼 다음 집합
 
 $$U=\{1+a\mid a\in \mathfrak{a}\}$$
 
 은 $$A$$의 unit들의 모임이며, $$U$$는 multiplicatively closed이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 위의 논증에서 $$\x$$만 $$a$$로 바꾸면 된다.
+:::
 
-</details>
-
-<div class="proposition" markdown="1">
-
-<ins id="cor6">**따름정리 6**</ins> Local ring $$(A, \mathfrak{m})$$에 대하여, $$A[[\x_1,\ldots, \x_n]]$$도 local ring이며, 그 유일한 maximal ideal은 $$\mathfrak{m}+(\x_1,\ldots, \x_n)$$이다. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 따름정리 6
+Local ring $$(A, \mathfrak{m})$$에 대하여, $$A[[\x_1,\ldots, \x_n]]$$도 local ring이며, 그 유일한 maximal ideal은 $$\mathfrak{m}+(\x_1,\ldots, \x_n)$$이다. 
+:::
+::: 증명
 $$\mathfrak{m}+(\x_1,\ldots,\x_n)$$ 바깥의 원소는 $$0$$이 아닌 상수항을 가지므로, [명제 5](#prop5)에 의해 이것이 unit임을 보일 수 있다. 
-
-</details>
+:::
 
 또, 다음이 성립한다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop7">**명제 7**</ins> $$A$$의 ideal들의 filtration
+::: 명제 7
+$$A$$의 ideal들의 filtration
 
 $$A=\mathfrak{a}_0\supseteq \mathfrak{a}_1\supseteq\cdots$$
 
 과 filtration에 대한 associated graded ring $$\gr A$$를 고정하자. 만일 $$A$$가 이 filtration에 대해 complete이라 하면, $$A$$의 ideal $$\mathfrak{a}$$와 그 원소들 $$a_1,\ldots, a_n$$에 대하여, $$\initial(\mathfrak{a})$$가 $$\initial(a_1),\ldots, \initial(a_n)$$에 의해 생성된다면 $$\mathfrak{a}$$ 또한 $$a_1,\ldots, a_n$$에 의해 생성된다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 원소들 $$a_1,\ldots, a_n$$에 의해 생성되는 ideal을 $$\mathfrak{a}'$$라 하고 $$\mathfrak{a}=\mathfrak{a}'$$임을 보이자. 일반성을 잃지 않고 이들 원소들이 모두 $$0$$이 아니라 가정할 수 있다. 또, 만일 $$a_k\in \mathfrak{a}_i$$가 모든 $$i$$에 대해 성립했다면, canonical morphism $$A \rightarrow \widehat{A}$$에 의해 $$a_k$$는 $$0\in \widehat{A}$$로 옮겨지고, $$A$$가 complete이므로 이는 $$a_k=0$$이었다는 것이므로 적당한 $$d$$를 택하여 $$a_k\not\in \mathfrak{a}_i$$가 모든 $$k$$에 대해 성립하도록 할 수 있다.
 
 한편 $$\initial(\mathfrak{a})$$가 $$\initial(a_k)$$들에 의해 생성된다는 가정으로부터, 임의의 $$a\in \mathfrak{a}$$에 대해 다음의 식
@@ -242,8 +220,7 @@ $$\sum_{l=0}^\infty b_k^{(l)}$$
 $$a-\sum_{k=1}^n c_k a_k\in \bigcap \mathfrak{a}_i=0$$
 
 이므로 원하는 결과를 얻는다. 
-
-</details>
+:::
 
 
 ---

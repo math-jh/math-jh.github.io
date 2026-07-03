@@ -70,14 +70,12 @@ $$\ker(\Hom_{\lMod{A}}(N, u))\cong\Hom_{\lMod{A}}(N, \ker u)\tag{3}$$
 
 Therefore the following holds.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop1">**Proposition 1**</ins> Let an $$A$$-linear map $$u:M \rightarrow M'$$ be given.
+::: Proposition 1
+Let an $$A$$-linear map $$u:M \rightarrow M'$$ be given.
 
 1. $$u$$ is injective if and only if $$\Hom(N, u)$$ is injective for every $$A$$-module $$N$$.
 2. $$u$$ is surjective if and only if $$\Hom(u, N)$$ is injective for every $$A$$-module $$N$$.
-
-</div>
+:::
 
 However, in general, even if $$u$$ is surjective, $$\Hom(u, N)$$ need not be surjective; and even if $$u$$ is injective, $$\Hom(N, u)$$ need not be surjective.
 
@@ -99,22 +97,18 @@ $$0 \rightarrow \Hom_\lMod{A}(N, M_1)\rightarrow\Hom_\lMod{A}(N, M_2) \rightarro
 
 is exact. In other words, the following holds.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**Proposition 2**</ins> For any $$N\in\lMod{A}$$, the functors $$\Hom_\lMod{A}(-,N)$$ and $$\Hom_\lMod{A}(N,-)$$ are left exact.
-
-</div>
+::: Proposition 2
+For any $$N\in\lMod{A}$$, the functors $$\Hom_\lMod{A}(-,N)$$ and $$\Hom_\lMod{A}(N,-)$$ are left exact.
+:::
 
 However, in general $$\Hom_\lMod{A}(-,N)$$ and $$\Hom_{\lMod{A}}(N,-)$$ need not be right exact. We define $$A$$-modules satisfying these conditions as follows.
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**Definition 3**</ins> We define the following.
+::: Definition 3
+We define the following.
 
 1. If $$\Hom(-, I)$$ is right exact, we call $$I$$ an *injective module*.
 2. If $$\Hom(P, -)$$ is right exact, we call $$P$$ a *projective module*.
-
-</div>
+:::
 
 Then from (1) we know that a direct product of modules is injective if and only if each factor is injective, and a direct sum of modules is projective if and only if each direct summand is projective. In particular, from the fact that the homomorphism
 
@@ -122,14 +116,10 @@ $$\Hom(A, u):\Hom_{\lMod{A}}(A, M) \rightarrow \Hom_{\lMod{A}}(A, M')$$
 
 is an isomorphism, we see that $$A$$ itself is projective, and hence any free module is a projective module.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**Proposition 4**</ins> A left $$A$$-module is projective if and only if it is a direct summand of a free $$A$$-module.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 4
+A left $$A$$-module is projective if and only if it is a direct summand of a free $$A$$-module.
+:::
+::: Proof
 That any direct summand of a free module is projective is clear from the argument above. Thus assume that $$P$$ is projective. By [§Bases, ⁋Proposition 2](/en/math/multilinear_algebra/basis_of_free_modules#prop2) we can choose a free $$A$$-module $$F$$ and a surjection $$p:F \rightarrow P$$. Now $$P$$ being projective means that the map
 
 $$\Hom_{\lMod{A}}(P, p):\Hom_{\lMod{A}}(P,F) \rightarrow \Hom_{\lMod{A}}(P,P)$$
@@ -139,8 +129,7 @@ is surjective, so there exists $$i\in \Hom_{\lMod{A}}(P,F)$$ such that
 $$\id_P=\Hom_{\lMod{A}}(P,p)(i)=p\circ i$$
 
 This equation shows that $$i$$ is injective, so we may identify $$P$$ with $$\im i$$, and then one verifies that $$F\cong\ker p\oplus\im i$$.
-
-</details>
+:::
 
 ## Flat Modules
 
@@ -156,14 +145,12 @@ Likewise, for an $$A$$-linear map $$u:M \rightarrow M'$$ between right $$A$$-mod
 
 $$\coker(u\otimes_AN)\cong (\coker u)\otimes_A N$$
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**Proposition 5**</ins> The following hold.
+::: Proposition 5
+The following hold.
 
 1. A linear map $$u:M \rightarrow M'$$ between right $$A$$-modules is surjective if and only if $$u\otimes_A N$$ is surjective for every left $$A$$-module $$N$$.
 2. A linear map $$v:N \rightarrow N'$$ between left $$A$$-modules is surjective if and only if $$M\otimes_A v$$ is surjective for every right $$A$$-module $$M$$.
-
-</div>
+:::
 
 Then, just as before, the above property means that when an exact sequence of right $$A$$-modules
 
@@ -183,18 +170,14 @@ $$M\otimes_AN_1 \rightarrow M\otimes_AN_2 \rightarrow M\otimes_AN_3 \rightarrow 
 
 is also exact. In other words, the following holds.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop6">**Proposition 6**</ins> For any $$M\in\rMod{A}$$ and $$N\in \lMod{A}$$, the functors $$-\otimes_AN$$ and $$M\otimes_A-$$ are right exact.
-
-</div>
+::: Proposition 6
+For any $$M\in\rMod{A}$$ and $$N\in \lMod{A}$$, the functors $$-\otimes_AN$$ and $$M\otimes_A-$$ are right exact.
+:::
 
 Then, in the same spirit as [Definition 3](#def3), we can make the following definition.
 
-<div class="definition" markdown="1">
-
-<ins id="def7">**Definition 7**</ins> A left $$A$$-module $$N$$ is called a *flat module* if for every injective $$A$$-linear map $$u:M \rightarrow M'$$ between right $$A$$-modules, $$u\otimes_A N$$ is injective. Similarly one defines flat right $$A$$-modules.
-
-</div>
+::: Definition 7
+A left $$A$$-module $$N$$ is called a *flat module* if for every injective $$A$$-linear map $$u:M \rightarrow M'$$ between right $$A$$-modules, $$u\otimes_A N$$ is injective. Similarly one defines flat right $$A$$-modules.
+:::
 
 Any free module is flat. Also, it is obvious that a direct sum of modules is flat if and only if each summand is flat. Therefore, by [Proposition 4](#prop4), every projective module is flat. However, the converse does not hold in general.

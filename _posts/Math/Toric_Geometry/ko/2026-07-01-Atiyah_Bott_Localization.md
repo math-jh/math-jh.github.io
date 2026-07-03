@@ -32,19 +32,14 @@ $$N_{\mathrm{loc}}:=N\otimes_R\mathrm{Frac}(R)$$
 
 국소화 정리의 무대는 fixed locus $$M^T=\{x\in M\mid g\cdot x=x\text{ for all }g\in T\}$$이다. Torus 작용의 fixed locus는 다양체로서 잘 행동하며, 각 성분 주위에서 작용이 normal 방향으로 어떻게 보이는지가 정리의 핵심 데이터가 된다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop1">**명제 1**</ins> $$T$$가 콤팩트 다양체 $$M$$ 위에 매끄럽게 작용할 때, fixed locus $$M^T$$은 닫힌 매끄러운 부분다양체이며 유한히 많은 connected 성분 $$F$$의 disjoint union이다. 각 성분 $$F$$는 $$T$$-불변이고 그 위에서 $$T$$가 자명하게 작용한다. 더 나아가 $$F$$의 normal bundle $$N_F=TM\vert_F/TF$$은 fiber마다 $$T$$-작용을 가지며, 이 작용의 weight들은 모두 $$0$$이 아니다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 명제 1
+$$T$$가 콤팩트 다양체 $$M$$ 위에 매끄럽게 작용할 때, fixed locus $$M^T$$은 닫힌 매끄러운 부분다양체이며 유한히 많은 connected 성분 $$F$$의 disjoint union이다. 각 성분 $$F$$는 $$T$$-불변이고 그 위에서 $$T$$가 자명하게 작용한다. 더 나아가 $$F$$의 normal bundle $$N_F=TM\vert_F/TF$$은 fiber마다 $$T$$-작용을 가지며, 이 작용의 weight들은 모두 $$0$$이 아니다.
+:::
+::: 증명
 $$T$$는 콤팩트이므로 $$M$$ 위에 $$T$$-불변 Riemann metric을 평균화로 만들 수 있고, 그에 대한 exponential map은 $$T$$-동변이다. 한 fixed point $$x\in M^T$$에서 $$T$$는 tangent space $$T_xM$$ 위에 선형으로 (isotropy 표현으로) 작용하며, 이 선형표현의 weight $$0$$ 고유공간을 $$(T_xM)^T$$라 하면 $$T$$-동변 exponential map이 $$(T_xM)^T$$의 작은 근방을 $$M^T$$ 위로 보내는 chart를 준다. 따라서 $$M^T$$은 각 점 근방에서 $$(T_xM)^T$$로 모형화되는 매끄러운 부분다양체이고, $$M$$이 콤팩트이므로 성분의 수는 유한하다. 정의상 $$M^T$$의 모든 점이 고정되므로 각 성분 위에서 작용은 자명하다.
 
 성분 $$F$$에서 $$T_xM=T_xF\oplus(N_F)_x$$로 분해할 때, $$T_xF=(T_xM)^T$$는 정확히 weight $$0$$ 부분이므로 그 보충 $$(N_F)_x$$ 위의 isotropy 표현에는 weight $$0$$이 나타나지 않는다. 만일 normal 방향에 weight $$0$$ 성분이 있었다면 그 방향이 fixed locus를 키워 $$F$$의 차원과 모순이다. 동변 tubular neighborhood 정리에 의해 $$F$$의 근방은 $$N_F$$의 disk bundle과 $$T$$-동변 미분동형이고, 그 위에서 $$T$$가 fiber에 선형으로 작용한다. 자세한 slice 정리와 동변 tubular neighborhood의 구성은 [BGV]의 §7을 따른다.
-
-</details>
+:::
 
 곧 fixed locus는 차원이 제각각일 수 있는 부분다양체들의 모임이며, 각 성분 $$F$$ 위에서는 $$T$$가 아무 일도 하지 않는 대신 그 normal 방향에 모든 비자명한 작용이 응축되어 있다. Isolated fixed point, 곧 $$F=\{p\}$$가 한 점인 경우에는 $$N_F=T_pM$$이 곧 tangent space 전체이고, 그 위의 isotropy 표현의 weight $$w_1(p),\ldots,w_m(p)\in M_T$$ (여기서 $$m=\dim_{\mathbb{C}}M$$, 단 $$M$$이 거의 복소다양체일 때) 들이 작용의 모든 국소 정보를 담는다. ([\[리 이론\] §원환면의 작용, ⁋정의 4](/ko/math/lie_theory/torus_action#def4)) 앞으로 이 weight들이 $$R$$의 일차식으로 분모에 등장한다.
 
@@ -52,15 +47,13 @@ $$T$$는 콤팩트이므로 $$M$$ 위에 $$T$$-불변 Riemann metric을 평균�
 
 명제 1의 normal bundle $$N_F$$은 $$T$$-동변 vector bundle이다. 우리는 그 *동변 Euler class*를 만들어, 국소화 정리에서 $$F$$로의 기여를 이 class로 나누는 형태로 기술할 것이다. 정의는 Borel 구성을 통해 보통의 Euler class를 동변 판본으로 들어올리는 것이다. 앞으로 다룰 normal bundle은 모두 복소 bundle이므로 (예시의 $$\mathbb{P}^n$$, Grassmannian, 매끄러운 toric variety는 모두 복소다양체이다), 우리는 복소 $$T$$-동변 bundle에 한정해 정의한다.
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**정의 2**</ins> $$T$$-공간 $$Y$$ 위의 복소 $$T$$-동변 vector bundle $$E\rightarrow Y$$에 대하여, Borel 구성 $$E_T=ET\times_T E\rightarrow Y_T=ET\times_T Y$$은 $$Y_T$$ 위의 보통의 복소 vector bundle이다. ([§동변 코호몰로지, ⁋정의 1](/ko/math/toric_geometry/equivariant_cohomology#def1)) 그 보통의 Chern class와 top Chern class (= Euler class) 를 통해 $$E$$의 *equivariant Chern class<sub>동변 천 특성류</sub>*와 *equivariant Euler class<sub>동변 오일러 특성류</sub>*를
+::: 정의 2
+$$T$$-공간 $$Y$$ 위의 복소 $$T$$-동변 vector bundle $$E\rightarrow Y$$에 대하여, Borel 구성 $$E_T=ET\times_T E\rightarrow Y_T=ET\times_T Y$$은 $$Y_T$$ 위의 보통의 복소 vector bundle이다. ([§동변 코호몰로지, ⁋정의 1](/ko/math/toric_geometry/equivariant_cohomology#def1)) 그 보통의 Chern class와 top Chern class (= Euler class) 를 통해 $$E$$의 *equivariant Chern class<sub>동변 천 특성류</sub>*와 *equivariant Euler class<sub>동변 오일러 특성류</sub>*를
 
 $$c_i^T(E):=c_i(E_T)\in H_T^{2i}(Y),\qquad e_T(E):=c_{\mathrm{rank}}^T(E)=e\big((E_T)_{\mathbb{R}}\big)\in H_T^{2\mathrm{rank}(E)}(Y)$$
 
 로 정의한다. 여기서 우변의 보통 Chern class와 Euler class는 각각 [\[대수적 위상수학\] §벡터다발의 특성류, ⁋정의 6](/ko/math/algebraic_topology/characteristic_classes#def6)과 [\[대수적 위상수학\] §벡터다발의 특성류, ⁋정의 3](/ko/math/algebraic_topology/characteristic_classes#def3)의 것이다.
-
-</div>
+:::
 
 보통의 특성류가 만족하던 naturality와 Whitney 합 공식은 Borel 구성이 함자적이므로 그대로 동변 판본으로 이어진다. ([\[대수적 위상수학\] §벡터다발의 특성류, ⁋정리 8](/ko/math/algebraic_topology/characteristic_classes#thm8)) 특히 $$T$$-동변 bundle의 직합에 대해 $$e_T(E\oplus E')=e_T(E)e_T(E')$$이다.
 
@@ -80,17 +73,12 @@ $$e_T(N_p)=\prod_{j=1}^m w_j\in R$$
 
 다음 명제가 국소화에서 결정적이다. $$e_T(N_F)$$은 $$F$$ 위에서 일반적으로 $$0$$이 아닌 nilpotent 보정항을 갖지만, 국소화하면 가역이 된다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop3">**명제 3**</ins> 명제 1의 fixed component $$F$$에 대하여, $$e_T(N_F)$$은 국소화된 환 $$H_T^\bullet(F)_{\mathrm{loc}}=H^\bullet(F)\otimes_{\mathbb{Q}}\mathrm{Frac}(R)$$ 안에서 가역이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 명제 3
+명제 1의 fixed component $$F$$에 대하여, $$e_T(N_F)$$은 국소화된 환 $$H_T^\bullet(F)_{\mathrm{loc}}=H^\bullet(F)\otimes_{\mathbb{Q}}\mathrm{Frac}(R)$$ 안에서 가역이다.
+:::
+::: 증명
 위 분해식에서 $$e_T(N_F)=\prod_\chi\prod_j(x_{\chi,j}+\chi)$$이다. $$x_{\chi,j}\in H^{>0}(F)$$이고 $$F$$가 콤팩트 다양체이므로 $$H^{>0}(F;\mathbb{Q})$$의 원소는 모두 nilpotent이다. 한 인수를 $$x_{\chi,j}+\chi=\chi(1+\chi^{-1}x_{\chi,j})$$로 쓰면, $$\chi\neq 0$$이라 $$\chi$$는 $$\mathrm{Frac}(R)$$에서 가역이고 $$\chi^{-1}x_{\chi,j}$$은 nilpotent이므로 $$1+\chi^{-1}x_{\chi,j}$$은 가역이다 (그 역은 유한 geometric series이다). 따라서 각 인수가 $$H^\bullet(F)\otimes\mathrm{Frac}(R)$$에서 가역이고 그 곱 $$e_T(N_F)$$도 가역이다. 동치로, $$e_T(N_F)$$을 차수에 따라 분해하면 그 최저차 항은 $$\prod_\chi\chi^{\mathrm{rank}(N_F)_\chi}\in R$$이라는 $$R$$의 $$0$$이 아닌 원소이고, 나머지는 $$H^{>0}(F)$$에서 온 nilpotent 보정이다.
-
-</details>
+:::
 
 Isolated fixed point에서는 $$e_T(N_p)=\prod_j w_j$$이 $$R$$의 $$0$$이 아닌 원소이므로, 보정항 없이 곧바로 $$\mathrm{Frac}(R)$$에서 가역이다. 일반적인 양의 차원 성분에서도 국소화 후에는 분모에 둘 수 있는 양이 된다는 것이 이 명제의 내용이다.
 
@@ -98,37 +86,30 @@ Isolated fixed point에서는 $$e_T(N_p)=\prod_j w_j$$이 $$R$$의 $$0$$이 아�
 
 콤팩트 oriented 다양체 위에서는 cohomology class를 fundamental class 위에서 평가하는 적분이 있다. ([\[대수적 위상수학\] §푸앵카레 쌍대성, ⁋정의 10](/ko/math/algebraic_topology/Poincare_duality#def10)) 동변 판본에서는 이것이 $$R$$에 값을 갖는 $$R$$-선형 사상이 되며, fiber를 따라 적분하는 Gysin 사상으로 실현된다.
 
-<div class="definition" markdown="1">
-
-<ins id="def4">**정의 4**</ins> $$M$$이 $$\dim_{\mathbb{R}}M=d$$인 콤팩트 oriented $$T$$-다양체라 하자. Borel 구성 $$M_T\rightarrow BT$$은 fiber $$M$$을 갖는 oriented fiber bundle이므로 ([§동변 코호몰로지, ⁋명제 2](/ko/math/toric_geometry/equivariant_cohomology#prop2)), fiber를 따른 적분 (Gysin 사상)
+::: 정의 4
+$$M$$이 $$\dim_{\mathbb{R}}M=d$$인 콤팩트 oriented $$T$$-다양체라 하자. Borel 구성 $$M_T\rightarrow BT$$은 fiber $$M$$을 갖는 oriented fiber bundle이므로 ([§동변 코호몰로지, ⁋명제 2](/ko/math/toric_geometry/equivariant_cohomology#prop2)), fiber를 따른 적분 (Gysin 사상)
 
 $$\int_M:H_T^k(M)=H^k(M_T)\longrightarrow H^{k-d}(BT)=R^{k-d}$$
 
 이 정의된다. 이를 $$M$$ 위의 *equivariant integration<sub>동변 적분</sub>* 또는 $$M\rightarrow\mathrm{pt}$$의 pushforward $$\pi_\ast$$라 부른다. 같은 방식으로 닫힌 $$T$$-부분다양체의 포함 $$j:F\hookrightarrow M$$ (normal bundle이 oriented) 에 대해 차수를 $$\mathrm{codim}F$$만큼 올리는 동변 Gysin pushforward $$j_\ast:H_T^\bullet(F)\rightarrow H_T^{\bullet+\mathrm{codim}F}(M)$$이 정의된다.
-
-</div>
+:::
 
 $$\int_M$$은 $$R$$-선형이며 차수를 $$d=\dim_{\mathbb{R}}M$$만큼 낮춘다. Borel 구성을 잊고 $$t_i=0$$으로 보내면 ([§동변 코호몰로지, ⁋정의 8](/ko/math/toric_geometry/equivariant_cohomology#def8)의 augmentation) 보통의 적분 $$H^\bullet(M)\rightarrow\mathbb{Q}$$, 곧 fundamental class 위에서의 평가로 환원된다. Fiber 적분과 동변 Gysin 사상의 구성은 [BT]의 §6과 [AF]의 §2를 따른다. 이 적분이 fixed component로 어떻게 분해되는지를 지배하는 것이 다음의 세 항등식이다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**명제 5**</ins> $$j_F:F\hookrightarrow M$$을 fixed component의 포함, $$\pi_M:M\rightarrow\mathrm{pt}$$, $$\pi_F:F\rightarrow\mathrm{pt}$$을 상수사상이라 하자. 그럼 다음이 성립한다.
+::: 명제 5
+$$j_F:F\hookrightarrow M$$을 fixed component의 포함, $$\pi_M:M\rightarrow\mathrm{pt}$$, $$\pi_F:F\rightarrow\mathrm{pt}$$을 상수사상이라 하자. 그럼 다음이 성립한다.
 
 1. (자기교차 공식) 모든 $$\beta\in H_T^\bullet(F)$$에 대하여 $$j_F^\ast j_{F\ast}\beta=e_T(N_F)\smile\beta$$이다.
 2. (직교성) 서로 다른 성분 $$F\neq G$$에 대하여 $$j_F^\ast j_{G\ast}=0$$이다.
 3. (함자성) $$\pi_{M\ast}\circ j_{F\ast}=\pi_{F\ast}$$, 곧 $$\int_M j_{F\ast}\beta=\int_F\beta$$이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 (1) 동변 Thom class를 통한 자기교차 공식이다. 닫힌 부분다양체 $$F$$의 동변 tubular neighborhood는 $$N_F$$의 disk bundle과 동일시되고 (명제 1), 그 동변 Thom class $$u\in H_T^{\mathrm{codim}F}(N_F,N_F^\circ)$$의 zero section으로의 제한이 동변 Euler class $$e_T(N_F)$$이다. ([\[대수적 위상수학\] §벡터다발의 특성류, ⁋정리 2](/ko/math/algebraic_topology/characteristic_classes#thm2)의 동변 판본) Pushforward $$j_{F\ast}$$은 Thom class와의 곱 뒤 확장으로 정의되므로, 그 즉시 되돌려 제한하면 $$j_F^\ast j_{F\ast}\beta=e_T(N_F)\smile\beta$$를 얻는다.
 
 (2) $$F$$와 $$G$$가 서로소이므로 $$j_{G\ast}\beta$$는 $$G$$의 한 근방에 support를 갖는 class로 표현되고, 그것을 $$F$$로 제한하면 $$0$$이다.
 
 (3) 동변 Gysin 사상의 함자성으로, $$\pi_M\circ j_F=\pi_F$$이면 pushforward도 합성된다. 동변 Thom 동형과 fiber 적분의 함자성에서 따라온다. 자세한 내용은 [AF]의 §2, [BGV]의 §7을 따른다.
-
-</details>
+:::
 
 (1)은 보통의 위상수학에서 부분다양체의 자기교차가 그 normal bundle의 Euler class로 주어진다는 사실의 동변 판본이며, (3)은 "먼저 $$F$$에 밀어 넣고 $$M$$ 위에서 적분하나, $$F$$ 위에서 바로 적분하나 같다"는 명백한 사실이다. 세 항등식을 합치면, $$M$$ 전체에서의 적분을 fixed component들로 쪼개 읽는 길이 열린다.
 
@@ -136,14 +117,10 @@ $$\int_M$$은 $$R$$-선형이며 차수를 $$d=\dim_{\mathbb{R}}M$$만큼 낮춘
 
 이제 핵심 보조정리로 넘어간다. Fixed locus를 제거한 자리 위에서는 작용이 어디서도 자명하지 않으므로, 그 equivariant cohomology가 $$R$$ 위에서 torsion이 된다. 이것이 국소화의 대수적 원천이다.
 
-<div class="proposition" markdown="1">
-
-<ins id="lem6">**보조정리 6**</ins> $$U=M\setminus M^T$$이라 하면 $$H_T^\bullet(U)$$은 torsion $$R$$-가군이다. 같은 결론이 pair의 상대 cohomology $$H_T^\bullet(M,M^T)$$에도 성립한다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 보조정리 6
+$$U=M\setminus M^T$$이라 하면 $$H_T^\bullet(U)$$은 torsion $$R$$-가군이다. 같은 결론이 pair의 상대 cohomology $$H_T^\bullet(M,M^T)$$에도 성립한다.
+:::
+::: 증명
 $$U$$의 한 점 $$x$$를 보자. $$x$$는 고정점이 아니므로 그 stabilizer $$T_x=\{g\in T\mid g\cdot x=x\}$$은 $$T$$의 진부분 닫힌 부분군이다. Slice 정리에 의해 $$x$$는 $$T$$-불변 근방 $$T\times_{T_x}S_x$$ ($$S_x$$는 slice) 를 가지며, 이때
 
 $$H_T^\bullet(T\times_{T_x}S_x)=H_{T_x}^\bullet(S_x)$$
@@ -151,14 +128,12 @@ $$H_T^\bullet(T\times_{T_x}S_x)=H_{T_x}^\bullet(S_x)$$
 이다. 이 가군 위의 $$R=H_T^\bullet(\mathrm{pt})$$-작용은 제한사상 $$R=H_T^\bullet(\mathrm{pt})\rightarrow H_{T_x}^\bullet(\mathrm{pt})$$을 거친다. $$T_x$$가 진부분군이므로 그 항등성분 $$T_x^0$$의 차원은 $$n$$보다 작거나, $$T_x$$가 유한군이다. $$\mathbb{Q}$$-계수에서 $$H_{T_x}^\bullet(\mathrm{pt};\mathbb{Q})=H^\bullet(BT_x^0;\mathbb{Q})=\mathrm{Sym}_{\mathbb{Q}}\big(\mathrm{Hom}(T_x^0,S^1)\otimes\mathbb{Q}\big)$$이고, 제한사상 $$M_T\otimes\mathbb{Q}\rightarrow\mathrm{Hom}(T_x^0,S^1)\otimes\mathbb{Q}$$은 차원이 떨어지므로 핵이 $$0$$이 아니다. 그 핵의 $$0$$이 아닌 원소 $$\chi\in R$$을 고르면, $$\chi$$는 $$H_{T_x}^\bullet(S_x)$$ 위에서 $$0$$으로 작용한다. 곧 $$\chi$$가 이 국소 가군을 소멸시킨다.
 
 $$M^T$$이 콤팩트이고 그 보충 $$U$$를 위와 같은 유한 개의 $$T$$-불변 열린집합으로 덮을 수 있다. ($$M$$이 콤팩트이므로 임의의 콤팩트 부분집합이 유한 개로 덮이고, Mayer–Vietoris로 이어붙인다.) 각 조각을 소멸시키는 character들의 곱 $$\chi=\chi_1\cdots\chi_r\in R$$은 $$0$$이 아니며, Mayer–Vietoris 완전열을 따라 귀납하면 $$\chi$$가 $$H_T^\bullet(U)$$ 전체를 소멸시킨다. 따라서 $$H_T^\bullet(U)$$은 torsion이다. $$H_T^\bullet(M,M^T)$$의 torsion성은 pair $$(M,M^T)$$의 동변 tubular neighborhood를 통한 excision으로 $$U$$의 (compactly supported) equivariant cohomology와 같은 orbit-type 조각들로 환원되어 같은 방식으로 따라온다. 전면적인 Mayer–Vietoris 논증은 [AB]의 §3과 [AF]의 §7을 따른다.
-
-</details>
+:::
 
 이 torsion 현상이 의미하는 바는 직관적으로 명료하다. $$\mathrm{Spec}R$$을 좌표공간으로 볼 때, equivariant cohomology는 그 위의 가군으로서 작용의 stabilizer가 비자명한 자리에 support를 가지며, 작용이 거의 자유로운 $$U$$ 위에서는 support가 원점 주변의 진부분 자취로 밀려나 분수체로 넘어가면 사라진다. 이제 본 정리를 증명한다.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm7">**정리 7 (Atiyah–Bott, Berline–Vergne 국소화 정리)**</ins> 포함 $$i:M^T\hookrightarrow M$$이 유도하는 제한사상은 국소화 후 동형
+::: 정리 7 (Atiyah–Bott, Berline–Vergne 국소화 정리)
+포함 $$i:M^T\hookrightarrow M$$이 유도하는 제한사상은 국소화 후 동형
 
 $$i^\ast:H_T^\bullet(M)_{\mathrm{loc}}\xrightarrow{\ \cong\ }H_T^\bullet(M^T)_{\mathrm{loc}}=\bigoplus_F H_T^\bullet(F)_{\mathrm{loc}}$$
 
@@ -167,11 +142,8 @@ $$i^\ast:H_T^\bullet(M)_{\mathrm{loc}}\xrightarrow{\ \cong\ }H_T^\bullet(M^T)_{\
 $$(i^\ast)^{-1}(\beta)=\sum_F j_{F\ast}\left(\frac{\beta_F}{e_T(N_F)}\right)$$
 
 이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 Pair $$(M,M^T)$$의 동변 cohomology 긴 완전열
 
 $$\cdots\rightarrow H_T^k(M,M^T)\rightarrow H_T^k(M)\xrightarrow{\ i^\ast\ }H_T^k(M^T)\rightarrow H_T^{k+1}(M,M^T)\rightarrow\cdots$$
@@ -187,8 +159,7 @@ $$i^\ast:H_T^\bullet(M)_{\mathrm{loc}}\xrightarrow{\ \cong\ }H_T^\bullet(M^T)_{\
 $$j_G^\ast J(\beta)=j_G^\ast j_{G\ast}\left(\frac{\beta_G}{e_T(N_G)}\right)=e_T(N_G)\smile\frac{\beta_G}{e_T(N_G)}=\beta_G$$
 
 이다. 곧 $$i^\ast\circ J=\mathrm{id}$$이고, $$i^\ast$$이 이미 동형이므로 $$J=(i^\ast)^{-1}$$이다.
-
-</details>
+:::
 
 정리의 내용을 다시 읽으면, $$H_T^\bullet(M)_{\mathrm{loc}}$$의 임의의 원소 $$\alpha$$는 그 fixed point로의 제한 $$(i_F^\ast\alpha)_F$$만으로 완전히 복원된다. 곧
 
@@ -200,31 +171,25 @@ $$\alpha=\sum_F j_{F\ast}\left(\frac{i_F^\ast\alpha}{e_T(N_F)}\right)\quad\text{
 
 국소화 정리에 동변 적분을 결합하면, $$M$$ 전체에서의 적분이 fixed component 각각에서의 국소 적분의 합으로 분해된다.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm8">**정리 8 (ABBV 적분 공식)**</ins> $$\alpha\in H_T^\bullet(M)$$에 대하여
+::: 정리 8 (ABBV 적분 공식)
+$$\alpha\in H_T^\bullet(M)$$에 대하여
 
 $$\int_M\alpha=\sum_F\int_F\frac{i_F^\ast\alpha}{e_T(N_F)}$$
 
 이 $$\mathrm{Frac}(R)$$ 안에서 성립한다. 여기서 합은 fixed locus $$M^T$$의 connected 성분 $$F$$ 전체에 대한 것이다. 특히 좌변은 $$R$$의 원소이고 우변은 fixed point에서의 데이터만으로 계산된다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 [정리 7](#thm7)의 등식 $$\alpha=\sum_F j_{F\ast}\big(i_F^\ast\alpha/e_T(N_F)\big)$$을 $$H_T^\bullet(M)_{\mathrm{loc}}$$ 안에서 잡고, $$\mathrm{Frac}(R)$$-선형으로 확장한 동변 적분 $$\int_M$$을 양변에 적용한다. [명제 5](#prop5)의 함자성 $$\int_M\circ j_{F\ast}=\int_F$$로부터
 
 $$\int_M\alpha=\sum_F\int_M j_{F\ast}\left(\frac{i_F^\ast\alpha}{e_T(N_F)}\right)=\sum_F\int_F\frac{i_F^\ast\alpha}{e_T(N_F)}$$
 
 를 얻는다. 좌변 $$\int_M\alpha$$은 정의상 $$R$$에 속하므로, 우변의 합도 $$R$$의 원소이다 (각 항은 $$\mathrm{Frac}(R)$$에 있으나 그 합은 분모가 약분되어 $$R$$로 떨어진다).
-
-</details>
+:::
 
 가장 자주 쓰는 경우는 fixed point가 모두 isolated일 때이다. 이때 각 $$F=\{p\}$$에서 $$\int_p$$은 단순히 $$p$$에서의 값을 읽는 것이고 $$e_T(N_p)=\prod_j w_j(p)$$이므로, 공식이 다음과 같이 단순해진다.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor9">**따름정리 9**</ins> $$M^T$$이 유한 개의 isolated fixed point들로 이루어진 경우, 각 $$p\in M^T$$의 isotropy weight를 $$w_1(p),\ldots,w_m(p)$$ ($$m=\dim_{\mathbb{C}}M$$) 이라 하면
+::: 따름정리 9
+$$M^T$$이 유한 개의 isolated fixed point들로 이루어진 경우, 각 $$p\in M^T$$의 isotropy weight를 $$w_1(p),\ldots,w_m(p)$$ ($$m=\dim_{\mathbb{C}}M$$) 이라 하면
 
 $$\int_M\alpha=\sum_{p\in M^T}\frac{i_p^\ast\alpha}{\prod_{j=1}^m w_j(p)}$$
 
@@ -233,11 +198,8 @@ $$\int_M\alpha=\sum_{p\in M^T}\frac{i_p^\ast\alpha}{\prod_{j=1}^m w_j(p)}$$
 $$\chi(M)=\#M^T$$
 
 곧 Euler characteristic이 fixed point의 개수와 같다. 일반적으로 fixed locus가 양의 차원 성분을 가질 때는 $$\chi(M)=\sum_F\chi(F)$$이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 첫 식은 [정리 8](#thm8)에서 $$F=\{p\}$$, $$i_p^\ast\alpha\in R$$, $$e_T(N_p)=\prod_j w_j(p)$$을 대입한 것이다.
 
 둘째 식을 보자. Isolated fixed point에서는 $$N_p=T_pM$$이므로 $$i_p^\ast e_T(TM)=e_T(T_pM)=e_T(N_p)$$이고, 따라서
@@ -245,8 +207,7 @@ $$\chi(M)=\#M^T$$
 $$\int_M e_T(TM)=\sum_{p}\frac{e_T(N_p)}{e_T(N_p)}=\sum_p 1=\#M^T$$
 
 이다. 한편 $$\int_M e_T(TM)$$은 차수 $$2m-2m=0$$의 $$R$$-원소, 곧 상수이며, $$t_i=0$$으로 보내면 보통의 적분 $$\int_M e(TM)$$가 된다. 보통의 Euler class를 fundamental class 위에서 평가한 값이 Euler characteristic $$\chi(M)$$이므로 ([\[대수적 위상수학\] §벡터다발의 특성류, ⁋명제 4](/ko/math/algebraic_topology/characteristic_classes#prop4)의 tangent bundle에 대한 Poincaré–Hopf 해석) $$\int_M e_T(TM)=\chi(M)$$이고, 따라서 $$\chi(M)=\#M^T$$이다. 양의 차원 성분이 있는 일반적 경우에는 각 성분에서 $$i_F^\ast e_T(TM)=e_T(TF)\smile e_T(N_F)$$이므로 ($$TM\vert_F=TF\oplus N_F$$에 대한 Whitney 합 공식) ABBV의 피적분은 $$e_T(TF)\smile e_T(N_F)/e_T(N_F)=e_T(TF)$$이고, $$T$$가 $$F$$ 위에서 자명하게 작용하므로 $$\int_F e_T(TF)=\int_F e(TF)=\chi(F)$$가 되어 $$\chi(M)=\sum_F\chi(F)$$를 얻는다.
-
-</details>
+:::
 
 곧 Atiyah–Bott–Berline–Vergne 공식은 위상적 불변량인 Euler characteristic을 "fixed point를 세는" 조합적 양으로 바꾸어 주며, 이는 콤팩트 Lie group 작용에 대한 고전적인 결과를 동변 적분의 특수한 경우로 회수한다.
 
@@ -254,9 +215,8 @@ $$\int_M e_T(TM)=\sum_{p}\frac{e_T(N_p)}{e_T(N_p)}=\sum_p 1=\#M^T$$
 
 [§동변 코호몰로지, ⁋정리 7](/ko/math/toric_geometry/equivariant_cohomology#thm7)에서 계산한 $$\mathbb{P}^n$$ 위의 표준 작용으로 돌아가, ABBV 공식이 무엇을 주는지를 본다. $$T=(S^1)^{n+1}$$이 좌표별로 작용하고, fixed point는 $$n+1$$개의 좌표점 $$p_i=[0:\cdots:1:\cdots:0]$$ ($$i$$번째 자리에 $$1$$) 이다.
 
-<div class="example" markdown="1">
-
-<ins id="ex10">**예시 10**</ins> $$\mathbb{P}^n$$의 fixed point $$p_i$$에서 tangent space는
+::: 예시 10
+$$\mathbb{P}^n$$의 fixed point $$p_i$$에서 tangent space는
 
 $$T_{p_i}\mathbb{P}^n=\mathrm{Hom}\Big(\mathbb{C}_{t_i},\bigoplus_{j\neq i}\mathbb{C}_{t_j}\Big)=\bigoplus_{j\neq i}\mathbb{C}_{t_j-t_i}$$
 
@@ -289,8 +249,7 @@ $$\sum_{i=0}^n\frac{1}{\prod_{j\neq i}(t_j-t_i)}=0$$
 $$\int_{\mathbb{P}^n}\zeta^n=\sum_{i=0}^n\frac{(-t_i)^n}{\prod_{j\neq i}(t_j-t_i)}=\sum_{i=0}^n\frac{t_i^n}{\prod_{j\neq i}(t_i-t_j)}=1$$
 
 이 되어, $$\mathbb{P}^n$$의 차수 $$\int_{\mathbb{P}^n}\zeta^n=1$$을 fixed point의 합으로 회복한다.
-
-</div>
+:::
 
 이 예시에서 주목할 점은, 우변의 각 항이 $$t_i$$의 유리함수로 분모를 가짐에도 그 합이 $$t$$에 무관한 정수가 된다는 것이다. ABBV 공식은 이 "기적적인 약분"이 사실은 $$M$$ 위의 적분이라는 위상적 양의 그림자임을 설명한다. 또한 [따름정리 9](#cor9)의 Euler characteristic 계산은 여기서 $$\chi(\mathbb{P}^n)=\#\{p_0,\ldots,p_n\}=n+1$$로 즉시 확인된다.
 
@@ -298,9 +257,8 @@ $$\int_{\mathbb{P}^n}\zeta^n=\sum_{i=0}^n\frac{(-t_i)^n}{\prod_{j\neq i}(t_j-t_i
 
 다음으로 Grassmannian $$\mathrm{Gr}(k,n)$$, 곧 $$\mathbb{C}^n$$의 $$k$$차원 부분공간들의 공간을 보자. $$T=(S^1)^n$$이 $$\mathbb{C}^n$$의 좌표에 작용하면 $$\mathrm{Gr}(k,n)$$ 위에 작용이 유도되고, 그 fixed point는 좌표 부분공간들이다. 이는 Schubert calculus의 동변 판본으로 가는 입구가 된다.
 
-<div class="example" markdown="1">
-
-<ins id="ex11">**예시 11**</ins> $$T=(S^1)^n$$이 좌표별로 작용하는 $$\mathrm{Gr}(k,n)$$에서, $$k$$-원소 부분집합 $$I\subseteq\{1,\ldots,n\}$$마다 좌표 부분공간 $$E_I=\mathrm{span}(e_i\mid i\in I)$$이 fixed point이고, fixed point는 정확히 이들 $$\binom{n}{k}$$개이다. $$E_I$$에서 tangent space는
+::: 예시 11
+$$T=(S^1)^n$$이 좌표별로 작용하는 $$\mathrm{Gr}(k,n)$$에서, $$k$$-원소 부분집합 $$I\subseteq\{1,\ldots,n\}$$마다 좌표 부분공간 $$E_I=\mathrm{span}(e_i\mid i\in I)$$이 fixed point이고, fixed point는 정확히 이들 $$\binom{n}{k}$$개이다. $$E_I$$에서 tangent space는
 
 $$T_{E_I}\mathrm{Gr}(k,n)=\mathrm{Hom}\big(E_I,\mathbb{C}^n/E_I\big)=\bigoplus_{i\in I,\ j\notin I}\mathbb{C}_{t_j-t_i}$$
 
@@ -323,8 +281,7 @@ $$i_{E_I}^\ast\zeta=-\sum_{i\in I}t_i$$
 $$\int_{\mathrm{Gr}(2,4)}\zeta^4=\sum_{\lvert I\rvert=2}\frac{\big(-\sum_{i\in I}t_i\big)^4}{\prod_{i\in I,\ j\notin I}(t_j-t_i)}=2$$
 
 가 된다 (우변은 $$t$$에 무관한 상수이며 $$2$$로 계산된다). 이는 $$\mathrm{Gr}(2,4)\subset\mathbb{P}^5$$의 차수가 $$2$$, 곧 $$\mathbb{P}^3$$ 안에서 일반 위치의 네 직선과 모두 만나는 직선의 개수가 $$2$$라는 고전적 Schubert 계산과 일치한다.
-
-</div>
+:::
 
 이 예시가 보여 주듯, Schubert class의 fixed point 제한 $$i_{E_I}^\ast\sigma_\lambda$$만 알면 모든 교차수가 좌표 부분공간 위의 유한합으로 환원된다. 이 제한값들은 factorial Schur polynomial로 명시되며, equivariant Schubert calculus는 바로 이 국소화 데이터를 조직하는 이론이다.
 

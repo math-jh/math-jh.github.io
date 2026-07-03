@@ -23,15 +23,13 @@ $$\Jac(W_q) \cong QH^\ast(X_\Sigma)$$
 
 Frobenius manifold는 직관적으로 각 점에서 Frobenius algebra structure를 갖는 manifold이다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> Finite-dimensional commutative, associative $$\mathbb{C}$$-algebra $$A$$와 그 위에 정의된 non-degenerate symmetric bilinear form $$\eta: A \otimes A \to \mathbb{C}$$가 주어졌다 하자. 만일 모든 원소 $$x,y,z\in A$$에 대하여 다음의 식
+::: 정의 1
+Finite-dimensional commutative, associative $$\mathbb{C}$$-algebra $$A$$와 그 위에 정의된 non-degenerate symmetric bilinear form $$\eta: A \otimes A \to \mathbb{C}$$가 주어졌다 하자. 만일 모든 원소 $$x,y,z\in A$$에 대하여 다음의 식
 
 $$\eta(x \cdot y,z) = \eta(x,y \cdot z)$$
 
 이 성립한다면, 이 pair $$(A, \eta)$$를 *Frobenius algebra<sub>프로베니우스 대수</sub>*라 부른다.
-
-</div>
+:::
 
 위 조건은 $$A$$의 곱셈 $$\cdot : A \otimes A \to A$$와 bilinear form $$\eta$$가 호환되어, 세 인수 모두에 대해 대칭인 trilinear form $$c(x,y,z) := \eta(x \cdot y,z)$$를 정의함을 의미한다. 실제로 commutativity로부터 
 
@@ -43,9 +41,8 @@ $$c(x,y,z) = \eta(x,y \cdot z) = \eta(y \cdot z, x) = c(y,z,x)$$
 
 이다. 따라서 $$c$$는 세 변수에 대해 완전히 symmetric하며, 이 trilinear form이 Frobenius structure의 모든 정보를 담고 있다.
 
-<div class="example" markdown="1">
-
-<ins id="ex2">**예시 2**</ins> Compact Kähler manifold $$X$$의 cohomology ring $$H^\ast(X, \mathbb{C})$$는 cup product와 Poincaré pairing
+::: 예시 2
+Compact Kähler manifold $$X$$의 cohomology ring $$H^\ast(X, \mathbb{C})$$는 cup product와 Poincaré pairing
 
 $$\eta(\alpha, \beta) = \int_X \alpha \smile \beta$$
 
@@ -54,19 +51,16 @@ $$\eta(\alpha, \beta) = \int_X \alpha \smile \beta$$
 $$\eta(\alpha \smile \beta, \gamma) = \eta(\alpha, \beta \smile \gamma)$$
 
 이 모든 $$\alpha,\beta,\gamma$$에 대해 성립한다는 것이며, 이 식은 cup product의 결합법칙으로 얻어지는 것이다. 
-
-</div>
+:::
 
 한편, 우리는 [§거울대칭 개요](/ko/math/mirror_symmetry/overview)의 예시에서 Landau-Ginzburg model을 소개했는데, 이는 주어진 manifold $$\check{X}$$ 위에 주어진 holomorphic function $$W$$로 이루어지며, $$W$$의 critical point들을 담고 있는 Jacobi ring이 B-model의 정보를 들고 있었다. 국소적으로 이는 다음과 같이 적힌다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**정의 3**</ins> Holomorphic function $$f : \mathbb{C}^n \to \mathbb{C}$$가 원점에서 *isolated hypersurface singularity*를 갖는다는 것은 다음의 두 조건이 성립하는 것이다.
+::: 정의 3
+Holomorphic function $$f : \mathbb{C}^n \to \mathbb{C}$$가 원점에서 *isolated hypersurface singularity*를 갖는다는 것은 다음의 두 조건이 성립하는 것이다.
 
 1. $$f(0) = 0$$, $$df(0) = 0$$.
 2. 원점이 $$f$$의 critical point들 중 *isolated*인 것, 즉 원점의 어떤 근방 안에서 $$df = 0$$의 해가 원점 하나뿐이다.
-
-</div>
+:::
 
 표준적인 예시는 $$f(\x) = \x^{k+1}$$ ($$k \geq 1$$)이며, 우리는 이를 $$A_k$$-type singularity라 부른다. 
 
@@ -76,9 +70,8 @@ $$\Jac(f) = \mathbb{C}[\x_1, \ldots, \x_n]/(\partial_1 f, \ldots, \partial_n f)$
 
 을 생각할 수 있다. 그 차원 $$\mu(f)=\dim \Jac(f)$$는 $$f$$의 singularity의 개수를 order를 포함해서 센 것으로, 직관적으로는 약간의 perturbation을 통하여 $$\mu(f)$$개의 simple critical point들을 갖는 것으로 생각할 수도 있다. Singularity theory에서는 이 $$\mu(f)$$를 $$f$$의 *Milnor number*라 부른다.
 
-<div class="example" markdown="1">
-
-<ins id="ex4">**예시 4**</ins> 모든 critical point가 isolated hypersurface singularity인 다항식 $$f : \mathbb{C}^n \to \mathbb{C}$$의 Jacobi ring $$\Jac(f)$$ 위에 *residue pairing* $$\eta$$를 다음의 식
+::: 예시 4
+모든 critical point가 isolated hypersurface singularity인 다항식 $$f : \mathbb{C}^n \to \mathbb{C}$$의 Jacobi ring $$\Jac(f)$$ 위에 *residue pairing* $$\eta$$를 다음의 식
 
 $$\eta(g, h) := \frac{1}{(2\pi i)^n} \oint_{\Gamma_\epsilon} \frac{g(\x) h(\x) \, d\x_1 \wedge \cdots \wedge d\x_n}{\partial_1 f \cdots \partial_n f}$$
 
@@ -153,8 +146,7 @@ $$\sum_{k=0}^{2} \omega^{km} = 3\iff m \equiv 0 \pmod 3$$
 $$\begin{pmatrix} 0 & 0 & 1 \\ 0 & 1 & 0 \\ 1 & 0 & 0 \end{pmatrix}$$
 
 로 주어지는 것을 확인할 수 있다.
-
-</div>
+:::
 
 ## 프로베니우스 다양체
 
@@ -186,9 +178,8 @@ $$\Lie_E(\eta) = (2 - d)\eta$$
 
 이제 우리는 Frobenius manifold를 정의하기 위한 모든 재료를 완성했다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def5">**정의 5**</ins> 쌍 $$(M, \eta, \circ, e, E)$$가 *Frobenius manifold<sub>프로베니우스 다양체</sub>*라는 것은 다음의 조건이 모두 성립하는 것이다. 
+::: 정의 5
+쌍 $$(M, \eta, \circ, e, E)$$가 *Frobenius manifold<sub>프로베니우스 다양체</sub>*라는 것은 다음의 조건이 모두 성립하는 것이다. 
 
 1. $$TM$$ 위의 symmetric non-degenerate bilinear form $$\eta$$가 유도하는 Levi-Civita connection이 flat이다. 
 2. 각 $$p\in M$$마다 commutative associative product $$\circ_p: T_p M \otimes T_p M \to T_p M$$이 존재하며 이는 $$p$$에 대해 smooth이다. 
@@ -200,33 +191,27 @@ $$\Lie_E(\eta) = (2 - d)\eta$$
     가 성립한다.
 5. 모든 vector field $$X,Y,Z$$에 대해 $$\eta(X \circ Y, Z) = \eta(X, Y \circ Z)$$가 성립한다.
 6. (Potentiality) Trilinear form $$c(X,Y,Z):=\eta(X\circ Y, Z)$$가 정의하는 $$4$$-tensor $$\nabla c$$는 네 변수에 대하여 모두 대칭이다. 
-
-</div>
+:::
 
 ## WDVV equation
 
 [정의 5](#def5)의 마지막 조건이 potentiality라 불리는 이유는 이것이 trilinear form $$c$$를 적절한 scalar function $$F:M \rightarrow \mathbb{C}$$의 삼계도함수로 표현해주기 때문이다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop6">**명제 6**</ins> Frobenius manifold $$(M, \eta, \circ, e, E)$$의 flat coordinate $$t^1, \ldots, t^n$$에 대해, $$M$$ 위에 (국소적으로) 정의된 holomorphic function $$F: M \to \mathbb{C}$$가 존재하여
+::: 명제 6
+Frobenius manifold $$(M, \eta, \circ, e, E)$$의 flat coordinate $$t^1, \ldots, t^n$$에 대해, $$M$$ 위에 (국소적으로) 정의된 holomorphic function $$F: M \to \mathbb{C}$$가 존재하여
 
 $$c_{\alpha\beta\gamma}(t) := \eta(\partial_{t^\alpha} \circ \partial_{t^\beta}, \partial_{t^\gamma}) = \frac{\partial^3 F}{\partial t^\alpha \partial t^\beta \partial t^\gamma}$$
 
 가 모든 $$\alpha, \beta, \gamma$$에 대해 성립한다. 
+:::
 
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 Flat coordinate $$t^\alpha$$에 대해 $$\nabla_{\partial_{t^\delta}}$$는 단순한 편미분 $$\partial_{t^\delta}$$와 일치하므로, [정의 5](#def5)의 potentiality 조건은
 
 $$\partial_{t^\delta} c_{\alpha\beta\gamma} = \partial_{t^\alpha} c_{\delta\beta\gamma}$$
 
 가 네 인덱스에 대해 대칭으로 성립한다는 의미이다. 한편 $$c$$ 자체가 세 인덱스에 대해 대칭이므로, 이를 함께 모으면 1-form $$\omega_{\beta\gamma} := \sum_\alpha c_{\alpha\beta\gamma} dt^\alpha$$가 closed임을 얻는다. Poincaré lemma로부터 국소적으로 함수 $$G_{\beta\gamma}$$가 존재해 $$\partial_{t^\alpha} G_{\beta\gamma} = c_{\alpha\beta\gamma}$$이며, $$c$$의 대칭성으로부터 $$G_{\beta\gamma} = G_{\gamma\beta}$$이고 또한 $$\partial_{t^\alpha} G_{\beta\gamma} = \partial_{t^\beta} G_{\alpha\gamma}$$가 성립한다. 다시 Poincaré lemma를 한 단계 더 적용하면 함수 $$H_\gamma$$가 존재해 $$\partial_{t^\beta} H_\gamma = G_{\beta\gamma}$$이고, $$H_\gamma$$의 대칭성 $$\partial_{t^\delta} H_\gamma = \partial_{t^\gamma} H_\delta$$로부터 마지막으로 scalar function $$F$$가 존재해 $$\partial_{t^\gamma} F = H_\gamma$$가 성립한다. 종합하면 $$\partial_{t^\alpha} \partial_{t^\beta} \partial_{t^\gamma} F = c_{\alpha\beta\gamma}$$이다.
-
-</details>
+:::
 
 이러한 $$F$$를 Frobenius manifold의 *potential*이라 부른다. 이로부터 만일 flat coordinate을 잡고, $$\eta^{\alpha\beta}$$를 $$\eta_{\alpha\beta}$$의 역행렬이라 하면 곱셈의 structure constant는
 
@@ -234,19 +219,15 @@ $$\partial_{t^\alpha} \circ \partial_{t^\beta} = \sum_{\gamma, \delta} \frac{\pa
 
 로 주어진다. 그런데 이 곱셈 $$\circ$$는 associative이므로, 이를 structure constant로 직접 계산하면 다음을 얻는다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop7">**명제 7 (Witten-Dijkgraaf-Verlinde-Verlinde)**</ins> [명제 6](#prop6)의 potential $$F$$는 모든 $$\alpha, \beta, \gamma, \delta$$에 대해 다음의 방정식
+::: 명제 7 (Witten-Dijkgraaf-Verlinde-Verlinde)
+[명제 6](#prop6)의 potential $$F$$는 모든 $$\alpha, \beta, \gamma, \delta$$에 대해 다음의 방정식
 
 $$\sum_{e, f} \frac{\partial^3 F}{\partial t^\alpha \partial t^\beta \partial t^e} \eta^{ef} \frac{\partial^3 F}{\partial t^f \partial t^\gamma \partial t^\delta} = \sum_{e, f} \frac{\partial^3 F}{\partial t^\alpha \partial t^\gamma \partial t^e} \eta^{ef} \frac{\partial^3 F}{\partial t^f \partial t^\beta \partial t^\delta}$$
 
 을 만족한다.
+:::
 
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 곱셈 $$\circ$$의 associativity $$(\partial_{t^\alpha} \circ \partial_{t^\beta}) \circ \partial_{t^\gamma} = \partial_{t^\alpha} \circ (\partial_{t^\beta} \circ \partial_{t^\gamma})$$을 structure constant로 풀어 쓰자. $$C_{\alpha\beta}{}^\gamma := \sum_\delta c_{\alpha\beta\delta} \eta^{\delta\gamma}$$로 정의하면 곱셈은
 
 $$\partial_{t^\alpha} \circ \partial_{t^\beta} = \sum_\gamma C_{\alpha\beta}{}^\gamma \partial_{t^\gamma}\tag{1}$$
@@ -260,8 +241,7 @@ $$\sum_e C_{\alpha\beta}{}^e C_{e\gamma}{}^\delta = \sum_e C_{\alpha\gamma}{}^e 
 $$\sum_{e, f} \frac{\partial^3 F}{\partial t^\alpha \partial t^\beta \partial t^e} \eta^{ef} \frac{\partial^3 F}{\partial t^f \partial t^\gamma \partial t^\delta} = \sum_{e, f} \frac{\partial^3 F}{\partial t^\alpha \partial t^\gamma \partial t^e} \eta^{ef} \frac{\partial^3 F}{\partial t^f \partial t^\beta \partial t^\delta}$$
 
 를 얻는다. 역으로 이 PDE 시스템을 만족하는 $$F$$로부터 정의된 곱셈은 자동으로 associative하므로 WDVV equation은 Frobenius manifold의 associativity와 정확히 동치인 조건이 된다.
-
-</details>
+:::
 
 WDVV equation은 $$F$$의 삼계도함수들 사이의 quadratic relation이며, $$F$$ 자체에 대해서는 3차 비선형 편미분방정식 시스템이다. Mirror symmetry의 A-model 측에서 quantum cohomology의 Gromov-Witten potential은 이 equation을 만족하는 대표적 예시로, 이는 *splitting axiom* ([\[사교기하학\] §Gromov-Witten 불변량, ⁋명제 6](/ko/math/symplectic_geometry/gromov_witten#prop6))에 반영되어 있다. 
 
@@ -271,9 +251,8 @@ WDVV equation은 $$F$$의 삼계도함수들 사이의 quadratic relation이며,
 
 다음 예시는 가장 기본적인 Frobenius manifold이며, 이후의 더 복잡한 quantum cohomology 예시와 비교 기준이 된다.
 
-<div class="example" markdown="1">
-
-<ins id="ex8">**예시 8**</ins> $$M = \mathbb{C}^n$$ 위에 좌표 $$t^1, \ldots, t^n$$을 도입하고
+::: 예시 8
+$$M = \mathbb{C}^n$$ 위에 좌표 $$t^1, \ldots, t^n$$을 도입하고
 
 $$\eta = \sum_{i=1}^n dt^i \otimes dt^i,\qquad \partial_{t^i} \circ \partial_{t^j} = \delta_{ij} \partial_{t^i}$$
 
@@ -298,8 +277,7 @@ $$F=\frac{1}{6}\sum_i (t^i)^3$$
 $$\sum_e C_{\alpha\beta}{}^e C_{e\gamma}{}^\delta = \delta_{\alpha\beta}\delta_{\alpha\gamma}\delta_{\gamma\delta} = \delta_{\alpha\beta\gamma\delta} = \delta_{\alpha\gamma}\delta_{\alpha\beta}\delta_{\beta\delta} = \sum_e C_{\alpha\gamma}{}^e C_{e\beta}{}^\delta$$
 
 로 자명하게 성립하는 것을 다시 확인할 수 있다. 
-
-</div>
+:::
 
 이 예시에서 좌표들 $$t^i$$는 몹시 좋은데, 이들 좌표에서는 곱셈 $$\circ$$이 자연스레 대각화된다. 일반적으로 우리는 곱셈 $$\circ_p$$가 generic point에서 idempotent들의 direct sum으로 나타나는 경우 이를 *semisimple* Frobenius manifold라 부르는데, [예시 8](#ex8)은 그러한 것들 중 가장 단순한 예시라 할 수 있다.
 
@@ -309,19 +287,15 @@ $$M = H^\ast(X, \mathbb{C})$$
 
 로 잡고, cohomology basis $$\{\sigma^\alpha\}$$의 dual로 formal coordinate $$t = \sum_\alpha t^\alpha \sigma^\alpha$$를 도입하자. $$M$$이 그 자체로 벡터공간이므로 각 점에서의 tangent space $$T_tM$$은 $$H^\ast(X, \mathbb{C})$$와 canonically isomorphic하다. 따라서 여기에 Frobenius manifold 구조를 주는 것은 $$T_tM\cong H^\ast(X, \mathbb{C})$$ 위에 Frobenius product $$\circ_t$$를 주는 것과 같고, (당연히) 이를 big quantum cohomology의 곱셈 $$\circ_t$$, 즉 GW potential $$F(t)$$의 삼계도함수가 정의하는 곱셈으로 택할 것이다. ([\[사교기하학\] §양자 코호몰로지, ⁋정의 12](/ko/math/symplectic_geometry/quantum_cohomology#def12)) 다음 명제는 이 데이터가 실제로 Frobenius manifold를 이룬다는 것을 보여준다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop9">**명제 9**</ins> Compact Kähler manifold $$X$$에 대하여, $$M = H^\ast(X, \mathbb{C})$$ 위에 big quantum product $$\circ_t$$ ([\[사교기하학\] §양자 코호몰로지, ⁋정의 12](/ko/math/symplectic_geometry/quantum_cohomology#def12)), Poincaré pairing $$\eta$$, 항등원 $$e = 1 \in H^0(X)$$, 그리고 Euler vector field
+::: 명제 9
+Compact Kähler manifold $$X$$에 대하여, $$M = H^\ast(X, \mathbb{C})$$ 위에 big quantum product $$\circ_t$$ ([\[사교기하학\] §양자 코호몰로지, ⁋정의 12](/ko/math/symplectic_geometry/quantum_cohomology#def12)), Poincaré pairing $$\eta$$, 항등원 $$e = 1 \in H^0(X)$$, 그리고 Euler vector field
 
 $$E = \sum_\alpha \Bigl(1 - \frac{1}{2}\deg \sigma^\alpha\Bigr) t^\alpha \partial_{t^\alpha} + \sum_\alpha r^\alpha \partial_{t^\alpha}, \qquad c_1(X) = \sum_\alpha r^\alpha \sigma^\alpha$$
 
 를 두면 $$(M, \eta, \circ_t, e, E)$$는 Frobenius manifold ([정의 5](#def5))이다.
+:::
 
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 [정의 5](#def5)의 여섯 조건을 차례로 확인한다. 
 
 1. 우선 Poincaré pairing $$\eta_{\alpha\beta} = \int_X \sigma_\alpha \smile \sigma_\beta$$는 linear coordinate $$t^\alpha$$에서 상수이므로 그 Levi-Civita connection이 flat이고 $$t^\alpha$$가 flat coordinate을 이룬다. 
@@ -330,8 +304,7 @@ $$E = \sum_\alpha \Bigl(1 - \frac{1}{2}\deg \sigma^\alpha\Bigr) t^\alpha \partia
 4. 한편 [\[사교기하학\] §양자 코호몰로지, ⁋정의 12](/ko/math/symplectic_geometry/quantum_cohomology#def12)에 의해 structure constant는 $$c_{\alpha\beta\gamma}(t) = \eta(\partial_{t^\alpha} \circ_t \partial_{t^\beta}, \partial_{t^\gamma}) = \partial_{t^\alpha}\partial_{t^\beta}\partial_{t^\gamma} F$$이므로, 이것이 세 index에 대해 대칭이라는 사실로부터 $$\eta(X \circ Y, Z) = \eta(X, Y \circ Z)$$를 얻는다.
 5. 비슷하게 $$\nabla c$$가 네 index에 대해 대칭이라는 것을 확인할 수 있으며, 이 potentiality 아래에서 associativity는 [명제 7](#prop7)의 WDVV equation과 동치이며, A-model 측에서는 GW invariant의 splitting axiom으로 보장된다. 
 6. 마지막으로 quantum cohomology의 grading ([\[사교기하학\] §양자 코호몰로지, ⁋정의 2](/ko/math/symplectic_geometry/quantum_cohomology#def2))이 위 본문에서 본 대로 $$\Lie_E(\circ) = \circ$$, $$\Lie_E(\eta) = (2-d)\eta$$로 번역되고, 주어진 $$E$$가 $$\nabla^2 E = 0$$인 affine vector field로서 이를 만족한다.
-
-</details>
+:::
 
 한편 우리의 mirror symmetry statement
 
@@ -339,9 +312,8 @@ $$\Jac(W_q)\cong QH^\ast(X)$$
 
 을 생각하면, 결국 이는 quantum parameter $$q$$의 deformation에 의존하는 것이며, 따라서 이 수준에서만 고려한다면 big quantum cohomology는 다소 큰 것이며 우리는 $$H^2$$ 방향의 deformation, 혹은 small quantum cohomology만 생각하면 된다. 더 일반적인 수준에서도, big quantum cohomology와 $$W_q$$의 bulk deformation을 포함하여 mirror symmetry를 연구할 수는 있지만, 이는 우리의 일차적인 목표에서 벗어나므로 대부분의 경우 우리는 $$H^2$$ 방향의 deformation만 고려하기로 한다. 다음 $$\mathbb{P}^1$$ 예시에서는 unit 방향 $$H^0$$를 빼면 $$H^2$$가 cohomology의 전부라 ($$\deg \ge 4$$ 방향이 없어) big quantum cohomology가 곧 small과 일치하므로, 아래 계산이 [명제 9](#prop9)를 그대로 실현한다.
 
-<div class="example" markdown="1">
-
-<ins id="ex10">**예시 10**</ins> 위 곱셈 $$\circ_t$$가 $$t$$에 따라 변한다는 것을 명시적으로 확인하기 위해 $$X = \mathbb{P}^1$$인 경우를 계산하자. Manifold $$M = H^\ast(\mathbb{P}^1) = \mathbb{C}\langle 1, H\rangle$$는 그 자체가 vector space이므로, 그 위의 좌표는 cohomology basis $$\{1, H\}$$의 dual로 주어진다. 이를 각각 $$t^0, t^1$$이라 하자. 
+::: 예시 10
+위 곱셈 $$\circ_t$$가 $$t$$에 따라 변한다는 것을 명시적으로 확인하기 위해 $$X = \mathbb{P}^1$$인 경우를 계산하자. Manifold $$M = H^\ast(\mathbb{P}^1) = \mathbb{C}\langle 1, H\rangle$$는 그 자체가 vector space이므로, 그 위의 좌표는 cohomology basis $$\{1, H\}$$의 dual로 주어진다. 이를 각각 $$t^0, t^1$$이라 하자. 
 
 이제 $$\mathbb{P}^1$$의 Gromov-Witten potential은
 
@@ -376,8 +348,7 @@ $$\Lie_E\bigl(e^{t^1}\, dt^1 \otimes dt^1 \otimes \partial_{t^0}\bigr) = (2 + 0 
 가 되어 $$\Lie_E(\circ) = \circ$$이다.
 
 이제 Novikov variable을 $$q = e^{t^1}$$로 두면, 둘째 식은 $$\partial_{t^1} \circ \partial_{t^1} = qe$$가 되며, 이는 다시 cohomology 언어로 옮겨오면 $$H \star H = q \cdot 1$$이므로 [§거울대칭 개요, ⁋예시 5](/ko/math/mirror_symmetry/overview#ex5)에서의 small quantum ring을 복원한다. 뿐만 아니라, 이제 이 isomorphism은 $$q=e^{t^1}$$의 변화에 따라 parametrize되어 기존의 ring isomorphism 수준에서의 mirror symmetry를 더 업그레이드한 것이다.
-
-</div>
+:::
 
 이렇듯 Frobenius manifold는 quantum cohomology의 ring structure를 *deformation parameter $$t$$의 함수*로서 일관성 있게 다룰 수 있는 무대를 제공한다. 다음 글부터 우리는 이제 본격적인 mirror symmetry를 탐구할 수 있다. 
 

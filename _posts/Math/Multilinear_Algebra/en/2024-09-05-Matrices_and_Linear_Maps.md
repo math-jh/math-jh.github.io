@@ -32,31 +32,24 @@ without further ado. ([§Dual Spaces, ⁋Definition 6](/en/math/multilinear_alge
 
 For the remainder of this post, we assume that two free $$A$$-modules $$M,N$$ are given, and fix their bases $$\mathcal{B}=(e_i)_{i\in I}$$, $$\mathcal{C}=(f_j)_{j\in J}$$.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> In the above situation, suppose an arbitrary $$A$$-linear map $$u:M \rightarrow N$$ is given. Then the *matrix representation* of $$u$$ is the matrix
+::: Definition 1
+In the above situation, suppose an arbitrary $$A$$-linear map $$u:M \rightarrow N$$ is given. Then the *matrix representation* of $$u$$ is the matrix
 
 $$[u]_\mathcal{C}^\mathcal{B}=(f_j^\ast(u(e_i)))_{(j,i)\in J\times I}=(\langle u(e_i), f_j^\ast\rangle)_{(j,i)\in J\times I}$$.
-
-</div>
+:::
 
 We first note the following.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**Proposition 2**</ins> The $$i$$-th column of the matrix representation $$[u]_\mathcal{C}^\mathcal{B}$$ of a linear map $$u:M \rightarrow N$$ equals the coordinate representation $$[u(e_i)]_\mathcal{C}$$ of $$u(e_i)$$ with respect to $$\mathcal{C}$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 2
+The $$i$$-th column of the matrix representation $$[u]_\mathcal{C}^\mathcal{B}$$ of a linear map $$u:M \rightarrow N$$ equals the coordinate representation $$[u(e_i)]_\mathcal{C}$$ of $$u(e_i)$$ with respect to $$\mathcal{C}$$.
+:::
+::: Proof
 By definition, the $$i$$-th column of $$[u]_\mathcal{C}^\mathcal{B}$$ is given by
 
 $$(f_j^\ast(u(e_i)))_{j\in J}=(\langle u(e_i), f_j^\ast\rangle)_{j\in J}$$.
 
 The $$j$$-th component of this column vector is, by the preceding formula (1), precisely the coefficient of $$f_j$$ when $$u(e_i)$$ is expressed as a linear combination with respect to the basis $$\mathcal{C}$$.
-
-</details>
+:::
 
 If another $$A$$-linear map $$v:M \rightarrow N$$ is given, we can verify that
 
@@ -76,18 +69,14 @@ to construct the inverse of the above $$Z(A)$$-linear map; hence it is a $$Z(A)$
 
 We previously examined how the product of two matrices is defined. As in [[Linear Algebra] §Fundamental Theorem of Linear Algebra, ⁋Theorem 5](/en/math/linear_algebra/ftla#thm5), this product corresponds to the composition of linear maps. Let us first prove the following proposition.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop3">**Proposition 3**</ins> If $$I,J$$ are finite sets, then for any linear map $$u:M \rightarrow N$$ and any $$x\in M$$, the formula
+::: Proposition 3
+If $$I,J$$ are finite sets, then for any linear map $$u:M \rightarrow N$$ and any $$x\in M$$, the formula
 
 $$[u(x)]_\mathcal{C}=[u]_\mathcal{C}^\mathcal{B}[x]_\mathcal{B}$$
 
 holds.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 We can verify that the right-hand side yields a column vector, and by formula (2) of [§Matrices, §§Matrix Multiplication](/en/math/multilinear_algebra/matrices#matrix-multiplication), its $$j$$-th component is
 
 $$\left([u]_\mathcal{C}^\mathcal{B}[x]_\mathcal{B}\right)_{j0}=\sum_{i\in I}\left([u]_\mathcal{C}^\mathcal{B}\right)_{ji}\left([x]_\mathcal{B}\right)_{i0}=\sum_{i\in I}\left\langle u(e_i),f_j^\ast\right\rangle \left\langle x,e_i^\ast\right\rangle$$.
@@ -97,54 +86,43 @@ On the other hand, since $$x=\sum_{i\in I}x_i e_i$$, the $$j$$-th component of $
 $$\langle u(x),f_j^\ast\rangle=\left\langle u\left(\sum_{i\in I} x_i e_i\right), f_j^\ast\right\rangle=\left\langle \sum_{i\in I} x_i u(e_i), f_j^\ast\right\rangle=\sum_{i\in I}x_i\langle u(e_i),f_j^\ast\rangle=\sum_{i\in I}\left\langle u(e_i),f_j^\ast\right\rangle \left\langle x,e_i^\ast\right\rangle$$
 
 yielding the desired result.
-
-</details>
+:::
 
 Combining this with [Proposition 2](#prop2), we obtain the following.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor4">**Corollary 4**</ins> Suppose three $$A$$-modules $$M,N,L$$ are given, and fix finite bases $$\mathcal{B}=(e_i)_{i\in I},\mathcal{C}=(f_j)_{j\in J},\mathcal{D}=(g_k)_{k\in K}$$. Then for any linear maps $$u:M \rightarrow N$$, $$v:N \rightarrow L$$, the formula
+::: Corollary 4
+Suppose three $$A$$-modules $$M,N,L$$ are given, and fix finite bases $$\mathcal{B}=(e_i)_{i\in I},\mathcal{C}=(f_j)_{j\in J},\mathcal{D}=(g_k)_{k\in K}$$. Then for any linear maps $$u:M \rightarrow N$$, $$v:N \rightarrow L$$, the formula
 
 $$[v \circ u]_\mathcal{D}^\mathcal{B}=[v]_\mathcal{D}^\mathcal{C}[u]_\mathcal{C}^\mathcal{B}$$
 
 holds.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 For any $$x\in M$$,
 
 $$[v \circ u]_\mathcal{D}^\mathcal{B}[x]_\mathcal{B}=[(v \circ u)(x)]_\mathcal{D}=[(v(u(x))]_\mathcal{D}=[v]_\mathcal{D}^\mathcal{C}[u(x)]_\mathcal{C}=[v]_\mathcal{D}^\mathcal{C}[u]_\mathcal{C}^\mathcal{B}[x]_\mathcal{B}$$
 
 so from the $$Z(A)$$-isomorphism $$\Mat_{K\times I}(A)\cong\Hom_\lMod{A}(M,L)$$ we obtain the desired result.
-
-</details>
+:::
 
 ## Transpose of Matrix Representations
 
 The transpose of a matrix also has a corresponding notion for linear maps.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**Proposition 5**</ins> If $$I,J$$ are finite sets, then for any linear map $$u:M \rightarrow N$$, the formula
+::: Proposition 5
+If $$I,J$$ are finite sets, then for any linear map $$u:M \rightarrow N$$, the formula
 
 $$\left([u]_\mathcal{C}^\mathcal{B}\right)^t=\left[u^\ast\right]_{\mathcal{B}^\ast}^{\mathcal{C}^\ast}$$
 
 holds. Here $$\mathcal{B}^\ast$$ and $$\mathcal{C}^\ast$$ are the dual bases of $$\mathcal{B},\mathcal{C}$$ respectively.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 By [§Dual Spaces, ⁋Proposition 8](/en/math/multilinear_algebra/dual_spaces#prop8), we may identify $$M$$ with $$M^{\ast\ast}$$, and then $$\mathcal{B}$$ corresponds to the dual basis $$\mathcal{B}^{\ast\ast}$$ of $$\mathcal{B}^\ast$$. Now
 
 $$\left(\left[u^\ast\right]_{\mathcal{B}^\ast}^{\mathcal{C}^\ast}\right)_{ji}=\langle u^\ast(f_j^\ast), e_i^{\ast\ast}\rangle=\langle e_i, u^\ast(f^\ast)\rangle=\langle u(e_i), f_j^\ast\rangle=\left([u]_\mathcal{C}^\mathcal{B}\right)_{ij}=\left(\left([u]_\mathcal{C}^\mathcal{B}\right)^t\right)_{ji} $$
 
 so we obtain the desired result.
-
-</details>
+:::
 
 ## Matrix Representations and Trace
 

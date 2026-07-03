@@ -35,14 +35,10 @@ Intuitively, $$K(S)$$ may be thought of as the smallest abelian group containing
 
 Any $$K(S)$$ satisfying the above property is unique up to isomorphism.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop1">**Proposition 1**</ins> If an abelian group $$H$$ and a semigroup homomorphism $$\eta_S'$$ satisfy the above universal mapping problem, then $$K(S)\cong H$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 1
+If an abelian group $$H$$ and a semigroup homomorphism $$\eta_S'$$ satisfy the above universal mapping problem, then $$K(S)\cong H$$.
+:::
+::: Proof
 First, consider the following diagram.
 
 ![uniqueness_1](/assets/images/Math/Algebraic_Structures/Grothendieck_Groups-2.svg){:style="width:6.91em"  class="invert" .align-center}
@@ -60,21 +56,16 @@ and by the universal property again, the map $$f$$ satisfying $$f\circ \eta_S'=\
 ![uniqueness_3](/assets/images/Math/Algebraic_Structures/Grothendieck_Groups-4.svg){:style="width:9.96em"  class="invert" .align-center}
 
 Similarly, one can show that $$\id_{K(S)}=\bar{\eta}_S\circ \bar{\eta}_S'$$, and therefore $$K(S)\cong H$$.
-</details>
+:::
 
 On the other hand, if $$S$$ is already an abelian group, then $$K(S)$$ should be $$S$$ itself without adjoining any new elements.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**Proposition 2**</ins> If $$S$$ is an abelian group, then the abelian group $$K(S)$$ satisfying the above universal mapping problem is isomorphic to $$S$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 2
+If $$S$$ is an abelian group, then the abelian group $$K(S)$$ satisfying the above universal mapping problem is isomorphic to $$S$$.
+:::
+::: Proof
 Since $$S$$ and $$\id_S$$ trivially satisfy the universal property, by [Proposition 1](#prop1), any abelian group satisfying the universal property must be isomorphic to $$S$$.
-
-</details>
+:::
 
 The above propositions show that a $$K(S)$$ satisfying the universal mapping problem is the abelian group we seek, but they do not establish that such a $$K(S)$$ actually exists.
 
@@ -96,14 +87,10 @@ $$(a_1, b_1)\equiv (a_2, b_2)\pmod{R}\iff a_1+b_2+c=a_2+b_1+c\text{ for some $c\
 
 First, we show that this relation is an equivalence relation.
 
-<div class="proposition" markdown="1">
-
-<ins id="lem3">**Lemma 3**</ins> The relation $$R$$ defined above is an equivalence relation on the product semigroup $$S\times S$$ compatible with its operation.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Lemma 3
+The relation $$R$$ defined above is an equivalence relation on the product semigroup $$S\times S$$ compatible with its operation.
+:::
+::: Proof
 First, we show that $$R$$ is an equivalence relation. For any $$(a,b)\in S\times S$$,
 
 $$a+b+c=a+b+c$$
@@ -131,19 +118,14 @@ hold. Adding these two equations yields
 $$(a_1+a_2)+(b_1'+b_2')+(c_1+c_2)=(a_1'+a_2')+(b_1+b_2)+(c_1+c_2)$$
 
 so by definition $$(a_1+a_2, b_1+b_2)\equiv(a_1'+a_2', b_1'+b_2')\pmod{R}$$. Thus $$R$$ is compatible with the operation on $$S\times S$$.
-
-</details>
+:::
 
 Therefore, $$(S\times S)/R$$ is a commutative semigroup. We denote this by $$K(S)$$.
 
-<div class="proposition" markdown="1">
-
-<ins id="lem4">**Lemma 4**</ins> $$K(S)$$ is an abelian group.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Lemma 4
+$$K(S)$$ is an abelian group.
+:::
+::: Proof
 It suffices to show that $$K(S)$$ has an identity element and inverses. Since we regard $$(a,b)$$ as $$a-b$$, the identity element should be of the form $$(a,a)$$, and the inverse of $$(a,b)$$ should be $$-(a-b)=b-a$$, i.e. $$(b,a)$$. Let us prove this.
 
 First, for any $$c\in S$$, we show that $$[(c,c)]$$ is the identity element. For any $$[(a,b)]\in K(S)$$,
@@ -161,19 +143,14 @@ On the other hand, for any $$[(a,b)]\in K(S)$$,
 $$[(a,b)]+[(b,a)]=[(a+b,a+b)]$$
 
 so by the preceding argument, $$[(a,b)]+[(b,a)]$$ is the identity element of $$K(S)$$, and the same holds for $$[(b,a)]+[(a,b)]$$. Thus every element of $$K(S)$$ has an inverse, so $$K(S)$$ carries a group structure.
-
-</details>
+:::
 
 Thus $$K(S)$$ becomes the abelian group we were looking for. That is, $$K(S)$$ satisfies the above universal mapping problem.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**Proposition 5**</ins> For a commutative semigroup $$(S, +)$$, the abelian group $$K(S)$$ constructed as above, together with the natural semigroup homomorphism $$\eta_S:S\rightarrow K(S)$$, satisfies the universal property.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 5
+For a commutative semigroup $$(S, +)$$, the abelian group $$K(S)$$ constructed as above, together with the natural semigroup homomorphism $$\eta_S:S\rightarrow K(S)$$, satisfies the universal property.
+:::
+::: Proof
 First, let us consider what the *natural semigroup homomorphism* from $$S$$ to $$K(S)$$ should be. Since we regard an element $$(a,b)$$ in $$K(S)$$ as $$a-b$$, we see that $$a$$ corresponds to $$(a+b)-b$$ in $$K(S)$$, i.e. $$[(a+b, b)]$$. Therefore, we define $$\eta_S$$ by $$a\mapsto[(a+a, a)]$$. Of course, choosing any $$b$$ and defining $$a\mapsto[(a+b,b)]$$ yields the same element.
 
 To prove the universal property, let an arbitrary abelian group $$G$$ and a semigroup homomorphism $$f:S\rightarrow G$$ be given.
@@ -199,16 +176,13 @@ $$\begin{aligned}\bar{f}\left([(a_1,b_1)]+[(a_2, b_2)]\right)&=\bar{f}\left([(a_
 holds.
 
 Finally, that $$\bar{f}$$ satisfies the required condition $$f=\bar{f}\circ\eta_S$$ follows by a direct computation.
-
-</details>
+:::
 
 Thus, we have obtained the desired abelian group $$K(S)$$. In particular, this yields a rigorous definition of the integers.
 
-<div class="definition" markdown="1">
-
-<ins id="def6">**Definition 6**</ins> For the monoid $$(\mathbb{N},+)$$, the abelian group obtained through the above process is denoted by $$(\mathbb{Z},+)$$.
-
-</div>
+::: Definition 6
+For the monoid $$(\mathbb{N},+)$$, the abelian group obtained through the above process is denoted by $$(\mathbb{Z},+)$$.
+:::
 
 ## Monoid of fractions
 
@@ -220,11 +194,9 @@ $$(a,p)\equiv (b,q)\pmod{R}\iff aqs=bps\text{ for some $s\in S'$}$$
 
 Then this relation is an equivalence relation on $$E\times S'$$ compatible with its operation, so $$(E\times S')/R$$ is a monoid.
 
-<div class="definition" markdown="1">
-
-<ins id="def7">**Definition 7**</ins> The monoid $$(E\times S')/R$$ obtained as above is called the *monoid of fractions* of $$E$$ with denominator $$S$$, denoted by $$E_S$$. Elements $$(a,p)$$ of this monoid are denoted by $$a/p$$.
-
-</div>
+::: Definition 7
+The monoid $$(E\times S')/R$$ obtained as above is called the *monoid of fractions* of $$E$$ with denominator $$S$$, denoted by $$E_S$$. Elements $$(a,p)$$ of this monoid are denoted by $$a/p$$.
+:::
 
 In this case, since $$E$$ is a monoid, unlike in the above discussion, it has an identity element $$1$$. Then the homomorphism $$\eta_S$$ in [Proposition 5](#prop5) can be described explicitly as $$a\mapsto a/1$$.
 

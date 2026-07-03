@@ -17,15 +17,13 @@ weight: 2
 
 ## 군 표현의 지표
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> $$G$$의 representation $$\rho:G\rightarrow\Aut(V)$$에 대응하는 *character<sub>지표</sub>* $$\rchi_\rho:G\rightarrow\mathbb{C}$$를
+::: 정의 1
+$$G$$의 representation $$\rho:G\rightarrow\Aut(V)$$에 대응하는 *character<sub>지표</sub>* $$\rchi_\rho:G\rightarrow\mathbb{C}$$를
 
 $$\rchi_\rho(g)=\tr(\rho(g))$$
 
 으로 정의한다. 
-
-</div>
+:::
 
 즉, 각각의 $$g\in G$$를 받아서 이것이 정의하는 linear map $$\rho(g):V\rightarrow V$$의 trace를 내 주는 것이 이 함수가 하는 일이다. 앞으로 살펴보겠지만, 이 함수는 $$G$$의 representation을 설명하는데 큰 역할을 한다. 가령, 당장 볼 수 있는 것은 이 함수가 $$V$$의 차원을 담고 있는 것이다. 
 
@@ -37,15 +35,13 @@ $$L_V:V\rightarrow V,\qquad L_W:W\rightarrow W$$
 
 이 주어졌을 때 이들의 direct sum $$L_V\oplus L_W: V\oplus W\rightarrow V\oplus W$$, 이들의 tensor product $$L_V\otimes L_W: V\otimes W \rightarrow V\otimes W$$ 등이 어떻게 정의되는지 알고 있고, 이들의 trace가 어떻게 되는지 또한 (가령 행렬로 두고 계산하면) 알고 있다. 이로부터 다음의 명제를 얻는다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**명제 2**</ins> Representation $$V, W$$에 대해 다음이 성립한다. 
+::: 명제 2
+Representation $$V, W$$에 대해 다음이 성립한다. 
 
 1. $$\rchi_{V\oplus W}=\rchi_V\oplus \rchi_W$$
 2. $$\rchi_{V\otimes W}=\rchi_V\rchi_W$$
 3. $$\rchi_{V^\ast}=\overline{\rchi}_V$$
-
-</div>
+:::
 
 특히 첫 번째 식에 의하여, 임의의 representation은 irreducible decomposition
 
@@ -63,23 +59,19 @@ $$\rchi_\rho(hgh^{-1})=\tr(\rho(h)\rho(g)\rho(h)^{-1})=\tr(\rho(g))=\rchi_\rho(g
 
 가 성립하므로 ([\[선형대수학\] §특성다항식, ⁋따름정리 5](/ko/math/linear_algebra/characteristic_polynomial#cor5)), 우리는 이로부터 $$\rchi_\rho$$가 $$G$$의 *conjugacy class*들 위에서 상수임을 안다. 이러한 함수들에도 이름이 있다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**정의 3**</ins> 함수 $$\rchi:G\rightarrow\mathbb{C}$$가 *class function<sub>유함수</sub>*이라는 것은 $$\rchi(hgh^{-1})=f(g)$$가 모든 $$g,h\in G$$에 대해 성립하는 것이다. $$G$$ 위에 정의된 모든 class function들의 모임을 $$\mathbb{C}_\class(G)$$으로 적는다. 
-
-</div>
+::: 정의 3
+함수 $$\rchi:G\rightarrow\mathbb{C}$$가 *class function<sub>유함수</sub>*이라는 것은 $$\rchi(hgh^{-1})=f(g)$$가 모든 $$g,h\in G$$에 대해 성립하는 것이다. $$G$$ 위에 정의된 모든 class function들의 모임을 $$\mathbb{C}_\class(G)$$으로 적는다. 
+:::
 
 정의에 의해 class function들은 각 conjugacy class들 위에서의 함수값에 의해 결정되며, 따라서 벡터공간으로서 $$\mathbb{C}_\class(G)$$는 $$G$$의 conjugacy class의 개수만큼의 차원을 갖는다. 한편 앞선 글에서 우리가 중요하게 생각했던 아이디어는 어떠한 값이 주어졌을 때, 이를 $$G$$ 전체에 대하여 평균내주어 $$G$$-invariant한 값을 얻어낼 수 있다는 것이었는데, 이를 이용하면 $$\mathbb{C}_\class(G)$$ 위에 다음과 같은 정의를 해줄 수 있다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def4">**정의 4**</ins> 임의의 class function들 $$\rchi_1,\rchi_2: G\rightarrow \mathbb{C}$$에 대하여, 
+::: 정의 4
+임의의 class function들 $$\rchi_1,\rchi_2: G\rightarrow \mathbb{C}$$에 대하여, 
 
 $$\langle \rchi_1,\rchi_2\rangle=\frac{1}{\lvert G\rvert}\sum_{g\in G} \rchi_1(g)\overline{\rchi_2(g)}$$
 
 으로 정의한다. 
-
-</div>
+:::
 
 이는 단순히 target space $$\mathbb{C}$$에 정의된 standard Hermitian product를 $$\mathbb{C}_\class(G)$$ 위에 옮겨준 것에 불과하다. 한편, 어떠한 representation $$\rho$$의 character $$\rchi_\rho$$에 대해서는, 임의의 $$g\in G$$에 대하여
 
@@ -185,18 +177,14 @@ $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r\Mat_{d_i}(\mathbb{C})$$
 
 앞서 우리는 $$\mathbb{C}_\class(G)$$ 안에서 irreducible representation들의 character가 orthonormal set을 이룬다는 것을 보았다. 이제 우리는 이들이 $$\mathbb{C}_\class(G)$$의 orthonormal basis가 된다는 것을 보인다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="lem5">**보조정리 5**</ins> 임의의 함수 $$\phi:G\rightarrow \mathbb{C}$$와 임의의 representation $$\rho:G\rightarrow\Aut(V)$$이 주어졌다 하자. 
+::: 보조정리 5
+임의의 함수 $$\phi:G\rightarrow \mathbb{C}$$와 임의의 representation $$\rho:G\rightarrow\Aut(V)$$이 주어졌다 하자. 
 
 $$\rho_\phi=\sum_{g\in G} \phi(g)\rho(g): V\rightarrow V$$
 
 으로 정의하면, $$\rho_\phi$$가 $$G$$-map인 것과 $$\phi$$가 class function인 것이 동치이다. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 $$\rho_\phi$$가 $$G$$-map이기 위해서는 임의의 $$h\in G$$와 임의의 $$v\in V$$에 대하여 다음 식
 
 $$\rho_\phi(h\cdot v)=h\cdot\rho_\phi(v)$$
@@ -214,8 +202,7 @@ $$\rho_\phi(hv)=\sum_{g\in G}\phi(hgh^{-1})\rho(hgh^{-1})(h\cdot v)=\sum_{g\in G
 $$h\cdot\rho_\phi(v)=\rho(h)\rho_\phi(v)=\rho(h)\left(\sum_{g\in G}\phi(g)\rho(g)(v)\right)$$
 
 와 같기 위해서는 정확히 $$\phi(g)=\phi(hgh^{-1})$$, 곧 $$\phi$$가 class function이어야 한다. 
-
-</details>
+:::
 
 이제 우리는 이를 사용하여 모든 class function이 irreducible character들의 일차결합으로 나타난다는 것을 보인다. 즉 만일 class function $$\phi$$에 대하여, $$\langle \rchi_V,\phi\rangle=0$$이 모든 irreducible character $$\rchi_V$$에 대해 성립한다면 $$\phi=0$$이라는 것을 보여야 한다. 
 

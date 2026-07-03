@@ -19,16 +19,12 @@ last_polished_at: 2026-06-02T12:00:01+00:00
 ---
 The end of the previous post enables us to give new characterizations of injective and surjective functions. ([§Operations on Functions, ⁋Remark 6](/en/math/set_theory/operation_of_functions#rmk6))
 
-<div class="proposition" markdown="1">
-
-<ins id="prop1">**Proposition 1**</ins> Consider a function $$f:A\rightarrow B$$. If there exists $$r:B\rightarrow A$$ such that $$r\circ f=\id_A$$, then $$f$$ is injective. If there exists $$s:B\rightarrow A$$ such that $$f\circ s=\id_B$$, then $$f$$ is surjective.
+::: Proposition 1
+Consider a function $$f:A\rightarrow B$$. If there exists $$r:B\rightarrow A$$ such that $$r\circ f=\id_A$$, then $$f$$ is injective. If there exists $$s:B\rightarrow A$$ such that $$f\circ s=\id_B$$, then $$f$$ is surjective.
 
 Conversely, if $$f$$ is surjective, then there exists $$s:B\rightarrow A$$ such that $$f\circ s=\id_B$$, and if $$f$$ is injective, then there exists $$r:B\rightarrow A$$ such that $$r\circ f=\id_A$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 The second part was already proved in the previous post, so we need only establish the first part. Suppose $$r\circ f=\id_A$$. If $$f(x)=f(y)$$, then
 
 $$x=\id_{A}(x)=(r\circ f)(x)=r\circ(f(x))=r\circ(f(y))=(r\circ f)(y)=\id_{A}(y)=y$$
@@ -38,8 +34,7 @@ so $$f$$ is injective. Similarly, if $$f\circ s=\id_{B}$$, then for any $$y\in B
 $$y=\id_{B}(y)=(f\circ s)(y)=f(s(y))$$
 
 so $$y\in f(A)$$, and hence $$f$$ is surjective.
-
-</details>
+:::
 
 Thus a function $$f:A\rightarrow B$$ is injective if and only if there exists $$r:B\rightarrow A$$ making the diagram
 
@@ -51,12 +46,10 @@ commute. A function $$f:A\rightarrow B$$ is surjective if and only if there exis
 
 commute. Such $$r$$ and $$s$$ have names.
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**Definition 2**</ins> Let $$f$$ be an injective function from $$A$$ to $$B$$. A function $$r:B\rightarrow A$$ satisfying $$r\circ f=\id_A$$ is called a *retraction* of $$f$$.  
+::: Definition 2
+Let $$f$$ be an injective function from $$A$$ to $$B$$. A function $$r:B\rightarrow A$$ satisfying $$r\circ f=\id_A$$ is called a *retraction* of $$f$$.  
 If $$f$$ is a surjective function from $$A$$ to $$B$$, a function $$s:B\rightarrow A$$ satisfying $$f\circ s=\id_B$$ is called a *section* of $$f$$.
-
-</div>
+:::
 
 If $$f$$ is injective with retraction $$r$$, then $$f$$ may be viewed as a section of $$r$$; conversely, if $$f$$ is surjective with section $$s$$, then $$f$$ may be viewed as a retraction of $$s$$. Hence a retraction is surjective and a section is injective.
 
@@ -74,9 +67,8 @@ $$Y=\id_B(Y)=f(s(Y))\subseteq f(f^{-1}(Y))$$
 
 so the above inclusions become equalities. The following proposition is straightforward to prove, but the results are worth remembering.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop3">**Proposition 3**</ins> Let $$f:A\rightarrow B$$ and $$f':B\rightarrow C$$ be functions, and set $$f''=f'\circ f$$.
+::: Proposition 3
+Let $$f:A\rightarrow B$$ and $$f':B\rightarrow C$$ be functions, and set $$f''=f'\circ f$$.
 
 1. If $$f$$ and $$f'$$ are both injective, then so is $$f''$$.
    Moreover, if $$r$$ and $$r'$$ are retractions of $$f$$ and $$f'$$ respectively, then $$r\circ r'$$ is a retraction of $$f''$$.
@@ -86,11 +78,9 @@ so the above inclusions become equalities. The following proposition is straight
    In particular, if $$r''$$ is a retraction of $$f''$$, then $$r''\circ f'$$ is a retraction of $$f$$.
 4. If $$f''$$ is surjective, then $$f'$$ is also surjective.
    In particular, if $$s''$$ is a section of $$f''$$, then $$f\circ s''$$ is a section of $$f'$$.
-</div>
+:::
 
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proof
 1. Suppose $$f''(a_1)=f''(a_2)$$. Then $$f'(f(a_1))=f'(f(a_2))$$, and applying the injectivity of $$f'$$ and then that of $$f$$, we obtain $$a_1=a_2$$. Hence $$f''$$ is injective.
     Now let $$r$$ and $$r'$$ be retractions of $$f$$ and $$f'$$ respectively, i.e., $$r\circ f=\id_A$$ and $$r'\circ f'=\id_B$$. Then for any $$a\in A$$,
 
@@ -113,18 +103,14 @@ so the above inclusions become equalities. The following proposition is straight
 4. Since $$f''$$ is surjective, for any $$c\in C$$ there exists $$a\in A$$ with $$f''(a)=c$$. Thus $$f'(f(a))=c$$, so taking $$b=f(a)\in B$$ gives $$f'(b)=c$$. Moreover, for any $$c\in C$$,
 
      $$(f'\circ(f\circ s''))(c)=(f''\circ s'')(c)=\id_C(c)=c.$$  
+:::
 
-</details>
-
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**Proposition 4**</ins>
-
+::: Proposition 4
 1. Let $$A,B,C$$ be sets, and let $$g:A\rightarrow B$$ be a surjection and $$f:A\rightarrow C$$ a function. Then <phrase>there exists $h:B\rightarrow C$ with $f=h\circ g$</phrase> if and only if <phrase>$(g(x)=g(y))\implies(f(x)=f(y))$</phrase>.
    If these equivalent conditions hold, then $$h$$ satisfying $$f=h\circ g$$ is uniquely determined by $$f$$; moreover, if $$s$$ is a section of $$g$$, then $$h=f\circ s$$.
 2. Let $$A,B,C$$ be sets, and let $$g:A\rightarrow B$$ be an injection and $$f:C\rightarrow B$$ a function. Then <phrase>there exists a function $h:C\rightarrow A$ such that $f=g\circ h$</phrase> if and only if <phrase>$f(C)\subseteq g(A)$</phrase>.
    If these equivalent conditions hold, then $$h$$ is uniquely determined by $$f$$; moreover, if $$r$$ is a retraction of $$g$$, then $$h=r\circ f$$.
-</div>
+:::
 
 The result in part 1 states that there exists $$h$$ making the diagram
 
@@ -136,9 +122,7 @@ commute. Part 2 states that there exists $$h$$ making the diagram
 
 commute.
 
-<details class="proof--alone" markdown="1">
-<summary>Proof of Proposition 4</summary>
-
+::: Proof (Proposition 4)
 1. Suppose $$f=h\circ g$$. If $$g(x)=g(y)$$, then
 
     $$ f(x)=(h\circ g)(x)=h(g(x))=h(g(y))=(h\circ g)(y)=f(y)$$
@@ -179,8 +163,7 @@ commute.
     $$(g\circ r)(f(x))=(g\circ r)(g(y))=(g\circ(r\circ g))(y)=(g\circ\id_A)(y)=g(y)=f(x)$$
 
     so $$(g\circ h)(x)=f(x)$$ holds for all $$x\in C$$. Thus such an $$h$$ exists.
-
-</details>
+:::
 
 
 

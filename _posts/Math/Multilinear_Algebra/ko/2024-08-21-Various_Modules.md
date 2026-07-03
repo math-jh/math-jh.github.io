@@ -71,14 +71,12 @@ $$\ker(\Hom_{\lMod{A}}(N, u))\cong\Hom_{\lMod{A}}(N, \ker u)\tag{3}$$
 
 이 성립한다. 따라서 다음이 성립한다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop1">**명제 1**</ins> $$A$$-linear map $$u:M \rightarrow M'$$이 주어졌다 하자.
+::: 명제 1
+$$A$$-linear map $$u:M \rightarrow M'$$이 주어졌다 하자.
 
 1. $$u$$가 injective인 것은 임의의 $$A$$-module $$N$$에 대하여 $$\Hom(N, u)$$가 injective인 것과 동치이다.
 2. $$u$$가 surjective인 것은 임의의 $$A$$-module $$N$$에 대하여 $$\Hom(u, N)$$이 injective인 것과 동치이다.
-
-</div>
+:::
 
 그러나 일반적으로, $$u$$가 surjective이더라도 $$\Hom(u, N)$$이 surjective는 아닐 수도 있고, $$u$$가 injective이더라도 $$\Hom(N, u)$$가 surjective는 아닐 수도 있다. 
 
@@ -100,22 +98,18 @@ $$0 \rightarrow \Hom_\lMod{A}(N, M_1)\rightarrow\Hom_\lMod{A}(N, M_2) \rightarro
 
 가 exact라는 것과 같은 말이다. 즉 다음이 성립한다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**명제 2**</ins> 임의의 $$N\in\lMod{A}$$에 대하여, $$\Hom_\lMod{A}(-,N)$$과 $$\Hom_\lMod{A}(N,-)$$은 left exact functor이다.
-
-</div>
+::: 명제 2
+임의의 $$N\in\lMod{A}$$에 대하여, $$\Hom_\lMod{A}(-,N)$$과 $$\Hom_\lMod{A}(N,-)$$은 left exact functor이다.
+:::
 
 그러나 일반적으로 $$\Hom_\lMod{A}(-,N)$$과 $$\Hom_{\lMod{A}}(N,-)$$이 right exact가 될 필요는 없다. 이러한 조건을 만족하는 $$A$$-module들을 다음과 같이 정의한다.
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**정의 3**</ins> 다음을 정의한다.
+::: 정의 3
+다음을 정의한다.
 
 1. 만일 $$\Hom(-, I)$$가 right exact라면 $$I$$를 *injective module<sub>단사가군</sub>*이라 부른다. 
 2. 만일 $$\Hom(P, -)$$가 right exact라면 $$P$$를 *projective module<sub>사영가군</sub>*이라 부른다. 
-
-</div>
+:::
 
 그럼 식 (1)로부터 module들의 direct product가 injective인 것과 각각의 성분이 injective인 것이 동치인 것을 알고, module들의 direct sum이 projective인 것은 각각의 direct summand가 projective인 것과 동치임을 안다. 특히 다음의 homomorphism
 
@@ -123,14 +117,10 @@ $$\Hom(A, u):\Hom_{\lMod{A}}(A, M) \rightarrow \Hom_{\lMod{A}}(A, M')$$
 
 이 isomorphism이라는 사실로부터 $$A$$ 자기 자신은 projective임을 알고, 따라서 임의의 free module은 projective module이다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**명제 4**</ins> Left $$A$$-module가 projective인 것과 $$P$$가 free $$A$$-module의 direct summand인 것이 동치이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 명제 4
+Left $$A$$-module가 projective인 것과 $$P$$가 free $$A$$-module의 direct summand인 것이 동치이다.
+:::
+::: 증명
 임의의 free module의 direct summand가 projective라는 것은 위의 논증으로부터 자명하다. 따라서 $$P$$가 projective라 가정하자. [§기저, ⁋명제 2](/ko/math/multilinear_algebra/basis_of_free_modules#prop2)에 의하여 적당한 free $$A$$-module $$F$$와 surjection $$p:F \rightarrow P$$를 택할 수 있다. 한편 $$P$$가 projective라는 것은 다음의 함수
 
 $$\Hom_{\lMod{A}}(P, p):\Hom_{\lMod{A}}(P,F) \rightarrow \Hom_{\lMod{A}}(P,P)$$
@@ -140,8 +130,7 @@ $$\Hom_{\lMod{A}}(P, p):\Hom_{\lMod{A}}(P,F) \rightarrow \Hom_{\lMod{A}}(P,P)$$
 $$\id_P=\Hom_{\lMod{A}}(P,p)(i)=p\circ i$$
 
 이도록 할 수 있다. 이 식으로부터 $$i$$는 injective이므로 $$P$$와 $$\im i$$를 같은 것으로 볼 수 있고, 그럼 $$F\cong\ker p\oplus\im i$$인 것을 확인할 수 있다.
-
-</details>
+:::
 
 ## 평탄가군
 
@@ -159,14 +148,12 @@ $$\coker(u\otimes_AN)\cong (\coker u)\otimes_A N$$
 
 이 존재한다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**명제 5**</ins> 다음이 성립한다.
+::: 명제 5
+다음이 성립한다.
 
 1. Right $$A$$-module들 사이의 linear map $$u:M \rightarrow M'$$이 surjective인 것은 임의의 left $$A$$-module $$N$$에 대하여, $$u\otimes_A N$$이 surjective인 것과 동치이다.
 2. Left $$A$$-module들 사이의 linear map $$v:N \rightarrow N'$$이 surjective인 것은 임의의 right $$A$$-module $$M$$에 대하여, $$M\otimes_A v$$이 surjective인 것과 동치이다.
-
-</div>
+:::
 
 그럼 앞서 했던 것과 마찬가지로, 위의 성질은 right $$A$$-module들의 exact sequence
 
@@ -186,19 +173,15 @@ $$M\otimes_AN_1 \rightarrow M\otimes_AN_2 \rightarrow M\otimes_AN_3 \rightarrow 
 
 또한 exact가 된다. 즉 다음이 성립한다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop6">**명제 6**</ins> 임의의 $$M\in\rMod{A}$$, $$N\in \lMod{A}$$에 대하여, $$-\otimes_AN$$과 $$M\otimes_A-$$는 각각 right exact functor이다.
-
-</div>
+::: 명제 6
+임의의 $$M\in\rMod{A}$$, $$N\in \lMod{A}$$에 대하여, $$-\otimes_AN$$과 $$M\otimes_A-$$는 각각 right exact functor이다.
+:::
 
 그럼 [정의 3](#def3)과 비슷한 맥락에서 다음을 정의할 수 있다.
 
 
-<div class="definition" markdown="1">
-
-<ins id="def7">**정의 7**</ins> Left $$A$$-module $$N$$이 *flat module<sub>평탄가군</sub>*이라는 것은 임의의 right $$A$$-module들 사이의 injective $$A$$-linear map $$u:M \rightarrow M'$$에 대하여, $$u\otimes_A N$$이 injective인 것이다. 비슷하게 flat right $$A$$-module을 정의할 수 있다. 
-
-</div>
+::: 정의 7
+Left $$A$$-module $$N$$이 *flat module<sub>평탄가군</sub>*이라는 것은 임의의 right $$A$$-module들 사이의 injective $$A$$-linear map $$u:M \rightarrow M'$$에 대하여, $$u\otimes_A N$$이 injective인 것이다. 비슷하게 flat right $$A$$-module을 정의할 수 있다. 
+:::
 
 임의의 free module은 flat이다. 또, module들의 direct sum이 flat인 것과 각각의 summand가 flat인 것이 동치임이 자명하다. 따라서 [명제 4](#prop4)에 의하여 projective module은 항상 flat이다. 그러나 그 역이 항상 성립하는 것은 아니다.

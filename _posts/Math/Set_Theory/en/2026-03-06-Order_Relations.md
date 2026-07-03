@@ -16,79 +16,71 @@ last_polished_at: 2026-06-02T14:30:02+00:00
 ---
 ## Order Relations
 
-<div class="definition" markdown="1">
-<ins id="def1">**Definition 1**</ins> A binary relation $$R$$ is said to be *anti-symmetric* if
+::: Definition 1
+A binary relation $$R$$ is said to be *anti-symmetric* if
 
 > whenever $$x\mathrel{R}y$$ and $$y\mathrel{R}x$$, then $$x=y$$
 
 always holds.
-</div>
+:::
 
 Then order relations are defined as follows.
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**Definition 2**</ins> A binary relation $$(R,A,A)$$ is called an *order relation* if $$R$$ is reflexive, transitive, and anti-symmetric.
-
-</div>
+::: Definition 2
+A binary relation $$(R,A,A)$$ is called an *order relation* if $$R$$ is reflexive, transitive, and anti-symmetric.
+:::
 
 In this case, we say that $$A$$ is *ordered by* $$R$$, and we often call $$A$$ an *ordered set*. Also, as with equivalence relations, we write $$x\mathrel{R}y$$ as $$x\leq_{\tiny R}y$$.
 
-<ins id="ex3">**Example 3**</ins> The binary relation <phrase>$x=y$</phrase> is an order relation. The relation <phrase>$x\subseteq y$</phrase> is also an order relation. ([§Ordered Pairs, ⁋Proposition 2](/en/math/set_theory/ordered_pair#prop2) and [§Ordered Pairs, ⁋Proposition 3](/en/math/set_theory/ordered_pair#prop3))
-{: .example}
+::: Example 3
+The binary relation <phrase>$x=y$</phrase> is an order relation. The relation <phrase>$x\subseteq y$</phrase> is also an order relation. ([§Ordered Pairs, ⁋Proposition 2](/en/math/set_theory/ordered_pair#prop2) and [§Ordered Pairs, ⁋Proposition 3](/en/math/set_theory/ordered_pair#prop3))
+:::
 
 Since an ordered set is a set equipped with an additional relation $$\leq$$, when we consider functions between such sets we usually focus on those that also preserve $$\leq$$. In particular, we define the following.
 
-<ins id="def4">**Definition 4**</ins> If for two order relations $$(R, A, A)$$ and $$(R', A',A')$$ there exists a bijection $$f$$ such that $$x\leq_{\tiny R}y$$ is equivalent to $$f(x)\leq_{\tiny R'}f(y)$$, then we call $$f$$ an *order isomorphism*.
-{: .definition}
+::: Definition 4
+If for two order relations $$(R, A, A)$$ and $$(R', A',A')$$ there exists a bijection $$f$$ such that $$x\leq_{\tiny R}y$$ is equivalent to $$f(x)\leq_{\tiny R'}f(y)$$, then we call $$f$$ an *order isomorphism*.
+:::
 
 Henceforth, when we speak of an isomorphism between ordered sets, we shall always mean an order isomorphism.
 
 We can do for order relations something analogous to [§Equivalence Relations, ⁋Proposition 3](/en/math/set_theory/equivalence_relations#prop3).
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**Proposition 5**</ins> A binary relation $$(R,A,A)$$ is an order relation if and only if the following two conditions hold.
+::: Proposition 5
+A binary relation $$(R,A,A)$$ is an order relation if and only if the following two conditions hold.
 
 $$R\circ R=R,\qquad R\cap R^{-1}=\Delta_A$$
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 That the first condition is equivalent to transitivity was already shown in the proof of [§Equivalence Relations, ⁋Proposition 3](/en/math/set_theory/equivalence_relations#prop3). That the second condition combines reflexivity and antisymmetry can also be easily seen.
-
-</details>
+:::
 
 ## Preorder Relations
 
 First let us look at the following example.
 
-<div class="example" markdown="1">
-
-<ins id="ex6">**Example 6**</ins> Consider a function $$f:A\rightarrow B$$, and suppose an order relation $$\leq$$ is defined on $$B$$. Then, just as we derive an equivalence relation from a function, we can define a relation $$\preceq$$ on $$A$$ as follows. ([§Examples of Equivalence Relations, ⁋Definition 2](/en/math/set_theory/examples_of_equivalence#def2))
+::: Example 6
+Consider a function $$f:A\rightarrow B$$, and suppose an order relation $$\leq$$ is defined on $$B$$. Then, just as we derive an equivalence relation from a function, we can define a relation $$\preceq$$ on $$A$$ as follows. ([§Examples of Equivalence Relations, ⁋Definition 2](/en/math/set_theory/examples_of_equivalence#def2))
 
 $$x\preceq y\iff f(x)\leq f(y)$$
 
 By definition $$\preceq$$ is reflexive and transitive. However, unless $$f$$ is injective, $$\preceq$$ does not generally satisfy antisymmetry.
-</div>
+:::
 
 Therefore, we drop the antisymmetry condition and define the following.
 
-<ins id="def7">**Definition 7**</ins> A reflexive and transitive relation $$R$$ is called a *preorder relation*.
-{: .definition}
+::: Definition 7
+A reflexive and transitive relation $$R$$ is called a *preorder relation*.
+:::
 
 If $$R$$ is a preorder relation we sometimes write it as $$\preceq_{\tiny R}$$, but since preorders share many properties with order relations, the same symbol $$\leq_{\tiny R}$$ is also commonly used. We too shall use $$\leq_{\tiny R}$$ unless there is a special reason not to.
 
 To understand the properties of preorder relations, we must examine more closely the property of antisymmetry: it holds for order relations but fails for preorders. If a relation $$R$$ were an order relation, antisymmetry would mean $$(x\leq_{\tiny R}y)\wedge(y\leq_{\tiny R}x)\implies x=y$$. We have seen that this fails for preorders, but the following proposition shows that a *generalized equality*—namely, an equivalence relation—plays the same role instead.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop8">**Proposition 8**</ins> Let $$R$$ be a preorder relation. Then the relation <phrase>$x\leq_{\tiny R}y$ and $y\leq_{\tiny R}x$</phrase> is an equivalence relation.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
+::: Proposition 8
+Let $$R$$ be a preorder relation. Then the relation <phrase>$x\leq_{\tiny R}y$ and $y\leq_{\tiny R}x$</phrase> is an equivalence relation.
+:::
+::: Proof
 Let the above relation be $$S$$. We must show that $$S$$ is reflexive, symmetric, and transitive. First, reflexivity is obvious: since $$R$$ is a preorder, $$x\mathrel{R}x$$ holds for every $$x$$. Next, for arbitrary $$x$$, $$y$$, suppose $$x\mathrel{S}y$$. Then
 
 $$x\mathrel{S}y\iff(x\leq_{\tiny R}y)\wedge(y\leq_{\tiny R}x)\iff(y\leq_{\tiny R}x)\wedge(x\leq_{\tiny R}y)\iff y\mathrel{S}x$$
@@ -104,27 +96,25 @@ $$\begin{aligned}  (x\mathrel{S}y)\wedge(y\mathrel{S}z)&\iff((x\leq_{\tiny R}y)\
 \end{aligned}$$
 
 so $$S$$ is transitive, and therefore $$S$$ is an equivalence relation.
-</details>
+:::
 
 ## Strict Orders
 
 Given an order relation $$\leq$$, let $$<$$ be the relation defined by <phrase>$x\leq y$ and $x\neq y$</phrase>. Then $$<$$ cannot be an order relation because it is not antisymmetric, nor can it be a preorder because it is not reflexive. Instead, we define the following.
 
-<ins id="def9">**Definition 9**</ins> A relation $$R$$ is said to be *asymmetric* if $$x\mathrel{R}y$$ implies $$y\not\mathrel{R}x$$. An asymmetric, transitive relation is called a *strict order*.
-{: .definition}
+::: Definition 9
+A relation $$R$$ is said to be *asymmetric* if $$x\mathrel{R}y$$ implies $$y\not\mathrel{R}x$$. An asymmetric, transitive relation is called a *strict order*.
+:::
 
 To denote a strict order we use $$<_{\tiny S}$$. Then the following holds.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop10">**Proposition 10**</ins> Let $$R$$ be an order relation. Then the new relation <phrase>$x\leq_{\tiny R}y$ and $x\neq y$</phrase> is a strict order.
+::: Proposition 10
+Let $$R$$ be an order relation. Then the new relation <phrase>$x\leq_{\tiny R}y$ and $x\neq y$</phrase> is a strict order.
 
 Conversely, let $$S$$ be a strict order. Then the new relation <phrase>$x<_{\tiny S}y$ or $x=y$</phrase> is an order relation.
-</div>
+:::
 
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proof
 First, let $$R$$ be an order relation and define a new relation $$S$$ by <phrase>$x\leq_{\tiny R}y$ and $x\neq y$</phrase>. To show asymmetry, we must demonstrate that $$x\mathrel{S}y$$ and $$y\mathrel{S}x$$ cannot hold simultaneously. Expanding $$(x\mathrel{S}y)\wedge(y\mathrel{S}x)$$ gives the following.
   
 $$((x\leq_{\tiny R}y)\wedge(x\neq y))\wedge((y\leq_{\tiny R}x)\wedge(y\neq x))$$
@@ -154,12 +144,13 @@ $$\begin{aligned}
 \end{aligned}$$
 
 so $$R$$ is transitive. Therefore $$R$$ is an order relation.
-</details>
+:::
 
 Henceforth, we shall write the strict order obtained from an order relation $$R$$ as $$<_{\tiny R}$$, and the order relation obtained from a strict order $$S$$ as $$\leq_{\tiny S}$$.
 
-<ins id="rmk11">**Remark 11**</ins> In general, $$x\not\leq y$$ does not imply $$x>y$$. Let $$S=\left\{a,b\right\}$$, and define the relation $$\leq$$ on $$\mathcal{P}(S)$$ to be the inclusion relation between subsets. Then this is obviously an order relation. Here, $$\left\{a\right\}\not\leq\left\{b\right\}$$, but $$\left\{a\right\}>\left\{b\right\}$$ does not hold either.
-{: .remark}
+::: Remark 11
+In general, $$x\not\leq y$$ does not imply $$x>y$$. Let $$S=\left\{a,b\right\}$$, and define the relation $$\leq$$ on $$\mathcal{P}(S)$$ to be the inclusion relation between subsets. Then this is obviously an order relation. Here, $$\left\{a\right\}\not\leq\left\{b\right\}$$, but $$\left\{a\right\}>\left\{b\right\}$$ does not hold either.
+:::
 
 
 

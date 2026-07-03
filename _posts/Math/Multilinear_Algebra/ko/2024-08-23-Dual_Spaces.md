@@ -39,21 +39,17 @@ $$(u\beta)(\alpha x)=u(\alpha x)\beta=\alpha u(x)\beta=\alpha((u\beta)(x))$$
 
 임의의 ring $$A$$는 그 위에 정의된 곱셈구조를 통해 자연스러운 $$(A,A)$$-bimodule 구조를 갖는다. 따라서 앞선 논증에 의하여 $$\Hom_{\lMod{A}}(M, A)$$을 right $$A$$-module로 생각할 수 있다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> 위에서 정의한 right $$A$$-module $$\Hom_{\lMod{A}}(M, A)$$를 $$M$$의 *dual module<sub>쌍대가군</sub>*이라 부르고 $$M^\ast$$로 적는다.
-
-</div>
+::: 정의 1
+위에서 정의한 right $$A$$-module $$\Hom_{\lMod{A}}(M, A)$$를 $$M$$의 *dual module<sub>쌍대가군</sub>*이라 부르고 $$M^\ast$$로 적는다.
+:::
 
 비슷하게 right $$A$$-module $$M$$이 주어졌다면 $$\Hom_{\rMod{A}}(M,A)$$를 left $$A$$-module로 볼 수 있으며 우리는 이를 $$M$$의 dual module이라 부른다. 특별히 $$M=A$$인 경우, 혼동을 피하기 위해 $$A$$를 left $$A$$-module로 본 것을 $$A_l$$, right $$A$$-module로 본 것을 $$A_r$$로 적는다면 두 식 $$A_l^\ast=A_r$$이고 $$A_r^\ast=A_l$$을 확인할 수 있다. 
 
 정의에 의해, 임의의 $$x\in M$$과 임의의 $$\xi\in M^\ast$$가 주어졌다면 이들 쌍은 $$\xi(x)\in A$$를 지정한다. 이를 $$\langle x, \xi\rangle$$로 적으며, 이러한 표기를 *Kronecker pairing<sub>크로네커 쌍</sub>*이라 부른다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**정의 2**</ins> 임의의 $$A$$-module $$M$$과 그 dual $$M^\ast$$에 대하여, $$x\in M$$과 $$\xi\in M^\ast$$가 *orthogonal<sub>작교</sub>*한다는 것은 $$\langle x,\xi\rangle=0$$인 것이다.
-
-</div>
+::: 정의 2
+임의의 $$A$$-module $$M$$과 그 dual $$M^\ast$$에 대하여, $$x\in M$$과 $$\xi\in M^\ast$$가 *orthogonal<sub>작교</sub>*한다는 것은 $$\langle x,\xi\rangle=0$$인 것이다.
+:::
 
 $$M$$과 $$M^\ast$$의 두 부분집합의 임의의 원소들의 쌍이 orthogonal이라면 이들 둘이 orthogonal하다 말한다. 한편, $$x\in M$$를 임의로 고정하고 $$\xi,\xi_1,\xi_2\in M^\ast$$와 $$\alpha\in A$$가 주어졌다 하자. 그럼
 
@@ -61,11 +57,9 @@ $$\langle x, \xi_1+\xi_2\rangle=\langle x, \xi_1\rangle+\langle x,\xi_2\rangle=0
 
 이므로, $$M$$의 고정된 부분집합 $$S$$에 대해, $$S$$의 원소들과 orthogonal한 $$M^\ast$$의 원소들을 모아두면 이는 $$M^\ast$$의 submodule이 된다.
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**정의 3**</ins> 위와 같이 정의한 $$M^\ast$$의 submodule을 $$M$$에 orthogonal한 submodule이라 부르고, $$S^\perp$$라 적는다.
-
-</div>
+::: 정의 3
+위와 같이 정의한 $$M^\ast$$의 submodule을 $$M$$에 orthogonal한 submodule이라 부르고, $$S^\perp$$라 적는다.
+:::
 
 임의의 부분집합 $$T\subseteq M^\ast$$에 대해서도 비슷하게 $$T^\perp$$를 다음 식
 
@@ -81,11 +75,9 @@ $$\Hom(u,A):\Hom_{\lMod{A}}(N,A)\rightarrow\Hom_{\lMod{A}}(M,A)$$
 
 이 $$A$$의 right action과 compatible함을 알 수 있다. 즉 $$\Hom(u,A)$$는 right $$A$$-module homomorphism이다.
 
-<div class="definition" markdown="1">
-
-<ins id="def4">**정의 4**</ins> Left $$A$$-module들 사이의 $$A$$-linear map $$u:M \rightarrow N$$에 대하여, 위에서 정의한 right $$A$$-module homomorphism을 $$u$$의 *transpose<sub>전치</sub>*라 하고 $$u^\ast$$로 적는다.
-
-</div>
+::: 정의 4
+Left $$A$$-module들 사이의 $$A$$-linear map $$u:M \rightarrow N$$에 대하여, 위에서 정의한 right $$A$$-module homomorphism을 $$u$$의 *transpose<sub>전치</sub>*라 하고 $$u^\ast$$로 적는다.
+:::
 
 $$u^\ast$$는 임의의 $$\xi\in N^\ast$$에서의 값 $$u^\ast(\xi)\in M^\ast$$로 결정되며, 다시 $$u^\ast(\xi)\in M^\ast$$는 임의의 $$x\in M$$에서의 값 
 
@@ -99,16 +91,14 @@ $$\langle u(x),\xi\rangle=\langle x, u^\ast\xi\rangle$$
 
 또, $$\Hom(-,A)$$의 functoriality와 [\[대수적 구조\] §가군, ⁋명제 8](/ko/math/algebraic_structures/modules#prop8)에 의해 다음 명제를 얻는다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**명제 5**</ins> 다음이 성립한다.
+::: 명제 5
+다음이 성립한다.
 
 1. 두 $$A$$-linear map $$u,v:M \rightarrow N$$에 대하여, $$(u+v)^\ast=u^\ast+v^\ast$$이다.
 2. 두 $$A$$-linear map $$u:M \rightarrow N$$, $$v:N \rightarrow L$$에 대하여, $$(v\circ u)^\ast=u^\ast\circ v^\ast$$이다.
 3. 임의의 $$M$$에 대하여, $$(\id_M)^\ast=\id_{M^\ast}$$이다.
 4. 임의의 $$A$$-linear isomorphism $$u:M \rightarrow N$$에 대하여, $$(u^{-1})^\ast=(u^\ast)^{-1}$$이다. 
-
-</div>
+:::
 
 ## 쌍대기저
 
@@ -126,12 +116,10 @@ $$\langle e_i, e_j^\ast\rangle=\delta_{ij}$$
 
 이 성립한다는 것을 안다. 이들의 모임은 linearly independent이지만, $$I$$가 무한집합이라면 이것이 $$M^\ast$$의 basis가 되지는 않는다. 그러나 $$I$$가 유한집합이라면 $$\prod_{i\in I} A\cong \bigoplus_{i\in I}A$$이므로 이들이 정확히 basis가 된다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def6">**정의 6**</ins> 임의의 free module $$M$$과 basis $$(e_i)_{i\in I}$$를 고정하자. 그럼 위에서 정의한 $$M^\ast$$의 원소들의 family $$(e_i^\ast)_{i\in I}$$를 $$(e_i)_{i\in I}$$에 대응되는 *coordinate form<sub>좌표 형식</sub>*이라 부른다.  
+::: 정의 6
+임의의 free module $$M$$과 basis $$(e_i)_{i\in I}$$를 고정하자. 그럼 위에서 정의한 $$M^\ast$$의 원소들의 family $$(e_i^\ast)_{i\in I}$$를 $$(e_i)_{i\in I}$$에 대응되는 *coordinate form<sub>좌표 형식</sub>*이라 부른다.  
 만일 $$M$$이 finitely generated free module라면 이들 family $$(e_i^\ast)_{i\in I}$$는 $$M^\ast$$의 basis이며, 이를 $$(e_i)$$의 *dual basis<sub>쌍대기저</sub>*라 부른다.
-
-</div>
+:::
 
 
 ## 이중쌍대공간
@@ -142,17 +130,13 @@ $$\langle x,-\rangle: M^\ast \rightarrow A$$
 
 을 통해 정의된 함수가 right $$A$$-module homomorphism인 것을 확인할 수 있다. 즉 위의 식이 $$M$$에서 $$M^{\ast\ast}$$로의 함수를 정의하며, 이 함수 또한 linear map인 것을 확인할 수 있다. 일반적으로 이 함수는 injective도, surjective도 되지 않는다.
 
-<div class="definition" markdown="1">
-
-<ins id="def7">**정의 7**</ins> 만일 위의 함수 $$M \rightarrow M^{\ast\ast}$$이 bijective라면 $$M$$을 *reflexive*라 부른다.
-
-</div>
+::: 정의 7
+만일 위의 함수 $$M \rightarrow M^{\ast\ast}$$이 bijective라면 $$M$$을 *reflexive*라 부른다.
+:::
 
 그럼 다음이 성립한다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop8">**명제 8**</ins> 임의의 free module $$M$$에 대하여, 위에서 정의한 $$M \rightarrow M^{\ast\ast}$$는 injective이다. 만일 여기에 더하여, $$M$$이 finitely generated라면 이 함수는 bijective이다.
-
-</div>
+::: 명제 8
+임의의 free module $$M$$에 대하여, 위에서 정의한 $$M \rightarrow M^{\ast\ast}$$는 injective이다. 만일 여기에 더하여, $$M$$이 finitely generated라면 이 함수는 bijective이다.
+:::
 

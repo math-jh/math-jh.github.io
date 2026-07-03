@@ -22,13 +22,11 @@ For example, given sets $$A_1$$ and $$A_2$$, the product $$A_1\times A_2$$ is th
 
 It is then natural to define the product of a general family as follows.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> Let $$(A_i)_{i\in I}$$ be a family of sets. The *product* of this family is the collection $$P$$ of all functions from $$I$$ to $$\bigcup A_i$$ satisfying $$x_i=f(i)\in A_i$$.
+::: Definition 1
+Let $$(A_i)_{i\in I}$$ be a family of sets. The *product* of this family is the collection $$P$$ of all functions from $$I$$ to $$\bigcup A_i$$ satisfying $$x_i=f(i)\in A_i$$.
 
 As with the notation for families of sets, elements of $$P$$ are written as $$(x_i)_{i\in I}$$; each $$x_i$$ is called the *$$i$$-th component*. The function sending $$F\in P$$ to $$F(i)$$ is called the *$$i$$-th projection* and is denoted by $$\pr_i$$.
-
-</div>
+:::
 
 Thus, to consider the product of sets is to consider a *set of functions*.
 
@@ -42,14 +40,10 @@ Let functions $$u:A'\rightarrow A$$ and $$v:B\rightarrow B'$$ be given, and cons
 
 In this diagram, whenever a function $$f:A\rightarrow B$$ is given, we can associate to it the function $$\tilde{f}=v\circ f\circ u$$ from $$A'$$ to $$B'$$. The assignment $$f\mapsto \tilde{f}$$ is a function from $$\Fun(A, B)$$ to $$\Fun(A', B')$$.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**Proposition 2**</ins> In the diagram above, if $$u$$ is surjective and $$v$$ is injective, then $$f\mapsto \tilde{f}$$ is injective. If $$u$$ is injective and $$v$$ is surjective, then $$f\mapsto \tilde{f}$$ is surjective.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 2
+In the diagram above, if $$u$$ is surjective and $$v$$ is injective, then $$f\mapsto \tilde{f}$$ is injective. If $$u$$ is injective and $$v$$ is surjective, then $$f\mapsto \tilde{f}$$ is surjective.
+:::
+::: Proof
 First suppose $$u$$ is surjective and $$v$$ is injective. To show that $$f\mapsto\tilde{f}$$ is injective, we must prove that $$\tilde{f}=\tilde{g}$$ implies $$f=g$$. Let $$s$$ and $$r$$ be a section and retraction corresponding to $$u$$ and $$v$$ respectively. If $$\tilde{f}=\tilde{g}$$, then
 
 $$\begin{aligned}
@@ -65,21 +59,16 @@ Similarly, suppose $$u$$ is injective and $$v$$ is surjective. We must show that
 $$f'=\id_{B'}\circ f'\circ\id_{A'}=(v\circ s')\circ f'\circ(r'\circ u)=v\circ(s'\circ f'\circ r')\circ u$$
 
 so $$f=s'\circ f'\circ r'$$ is an element of $$\Fun(A,B)$$ satisfying $$f'=\tilde{f}$$. Hence the given function is surjective.
-
-</details>
+:::
 
 In particular, if both $$u$$ and $$v$$ are bijections, then $$f\mapsto \tilde{f}$$ is also a bijection.
 
 Earlier we saw that the sum of sets satisfies a universal property. Likewise, the product satisfies an analogous universal property.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm3">**Theorem 3**</ins> Let $$P$$ be the product of a family of sets $$(A_i)$$, with projection functions $$\pr_i:P\rightarrow A_i$$. Given another set $$B$$ and functions $$f_i:B\rightarrow A_i$$, there exists a unique function $$f:B\rightarrow P$$ satisfying $$f_i=\pr_i\circ f$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Theorem 3
+Let $$P$$ be the product of a family of sets $$(A_i)$$, with projection functions $$\pr_i:P\rightarrow A_i$$. Given another set $$B$$ and functions $$f_i:B\rightarrow A_i$$, there exists a unique function $$f:B\rightarrow P$$ satisfying $$f_i=\pr_i\circ f$$.
+:::
+::: Proof
 Suppose functions $$f$$ and $$f'$$ are given, both satisfying the condition $$f_i=\pr_i\circ f$$. We must show that $$f(y)=f'(y)$$ for every $$y\in B$$. Since $$f(y)$$ and $$f'(y)$$ are elements of $$A$$ and hence functions (ordered pairs), they are determined by the values they assign to each $$i$$ (the $$i$$-th coordinates). Thus it suffices to show that $$\pr_i(f(y))=\pr_i(f'(y))$$ for any given $$y\in B$$ and $$i\in I$$. But
 
 $$\pr_i(f(y))=f_i(y)=\pr_i(f'(y))$$
@@ -91,8 +80,7 @@ For existence, taking a cue from the uniqueness proof above, we define the value
 > $$(f(y))(i)=f_i(y)$$
 
 and then verify that the correspondence $$y\mapsto f(y)$$ is indeed a function.
-
-</details>
+:::
 
 Since at least one $$(P, \pr_i)$$ satisfying the conditions of [Theorem 3](#thm3) exists ([Definition 1](#def1)), we may take this as the definition of the product set. That is, the product of $$(A_i)_{i\in I}$$ can be characterized as a set $$\prod_{i\in I} A_i$$ together with functions $$\pr_i:\prod_{i\in I}A_i\rightarrow A_i$$ satisfying the following universal property.
 
@@ -100,15 +88,11 @@ Since at least one $$(P, \pr_i)$$ satisfying the conditions of [Theorem 3](#thm3
 
 By the same reasoning as in [§Sum of Sets, ⁋Corollary 9](/en/math/set_theory/sum_of_sets#cor9), one can verify that the object and projections $$\pr_i$$ satisfying this universal property are unique up to bijection.
 
-<div class="proposition" markdown="1">
+::: Proposition 4
+Let $$A$$, $$B$$, $$C$$ be sets and let $$f:B\times C\rightarrow A$$. If $$\tilde{f}$$ is the function from $$C$$ to $$\Fun(B,A)$$ defined by $$y\mapsto f(-,y)$$, then $$f\mapsto\tilde{f}$$ is a bijection. That is, there exists a bijection between $$\Fun(B\times C,A)$$ and $$\Fun(C, \Fun(B, A))$$.
+:::
 
-<ins id="prop4">**Proposition 4**</ins> Let $$A$$, $$B$$, $$C$$ be sets and let $$f:B\times C\rightarrow A$$. If $$\tilde{f}$$ is the function from $$C$$ to $$\Fun(B,A)$$ defined by $$y\mapsto f(-,y)$$, then $$f\mapsto\tilde{f}$$ is a bijection. That is, there exists a bijection between $$\Fun(B\times C,A)$$ and $$\Fun(C, \Fun(B, A))$$.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proof
 Since $$\tilde{f}$$ is a function from $$C$$ to $$\Fun(B,A)$$, we have $$\tilde{f}\in\Fun(C,\Fun(B,A))$$. Thus the given correspondence is a function from $$\Fun(B\times C, A)$$ to $$\Fun(C, \Fun(B,A))$$. To show that this function is bijective, we construct its inverse.
 
 Let $$g\in\Fun(C, \Fun(B,A))$$ be given. For any $$y\in C$$, $$g(y)$$ is an element of $$\Fun(B, A)$$. Define $$\bar{g}:B\times C\rightarrow A$$ to be the function sending $$(x, y)$$ to $$g(y)(x)$$. Then for any $$g\in \Fun(C,\Fun(B,A))$$, we have a function
@@ -135,24 +119,21 @@ $$\begin{aligned}
 \end{aligned}$$
 
 Therefore $$\sim\;:f\mapsto\tilde{f}$$ is a bijection.
-</details>
+:::
 
 Immediately after defining the union, we observed that replacing the index set via a surjection has no effect. For products of sets, replacing the index set via a bijection likewise has no effect.
 
-<div class="proposition" markdown="1">
+::: Proposition 5
+Let $$(A_i)_{i\in I}$$ be a family of sets and let $$u:K\rightarrow I$$ be a bijection. For any $$f:I\rightarrow \prod_{i\in I}A_i$$, the function $$f\mapsto f\circ u$$ sending $$f$$ to $$f\circ u: K\rightarrow \prod_{i\in I} A_i$$ is a bijection.
+:::
 
-<ins id="prop5">**Proposition 5**</ins> Let $$(A_i)_{i\in I}$$ be a family of sets and let $$u:K\rightarrow I$$ be a bijection. For any $$f:I\rightarrow \prod_{i\in I}A_i$$, the function $$f\mapsto f\circ u$$ sending $$f$$ to $$f\circ u: K\rightarrow \prod_{i\in I} A_i$$ is a bijection.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>Proof</summary>
+::: Proof
 Consider the diagram
 
 ![induced_bijection](/assets/images/Math/Set_Theory/Product_of_Sets-3.svg){:style="width:13.03em"  class="invert" .align-center}
 
 Here $$v$$ is the bijection sending $$(x_i)_{i\in I}$$ to $$(x_{u(k)})_{k\in K}$$. By [Proposition 2](#prop2) above, $$F\mapsto F\circ U$$ is a bijection.
-</details>
+:::
 
 
 

@@ -20,15 +20,13 @@ Power series provide another way of writing functions, and by introducing them w
 
 ## Power Series and Radius of Convergence
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> A *power series* centered at $$a$$ is a series of the form
+::: Definition 1
+A *power series* centered at $$a$$ is a series of the form
 
 $$\sum_{n=0}^{\infty} c_n (x - a)^n = c_0 + c_1(x-a) + c_2(x-a)^2 + \cdots$$
 
 for a sequence $$(c_n)_{n\geq 0}$$. The set of $$x$$ for which this series converges is called the *domain of convergence*, and the sum of the series defines a function of $$x$$ on this domain.
-
-</div>
+:::
 
 To simplify the discussion, we will mainly deal with the case $$a = 0$$, i.e., $$\sum c_n x^n$$, from now on; the general case can be reduced to this by replacing $$x$$ with $$x - a$$, so this is not a significant loss of generality.
 
@@ -38,11 +36,9 @@ $$\lvert c_n x^n\rvert = \lvert c_n x_0^n\rvert \cdot r^n \leq M r^n$$
 
 and the right-hand side is a convergent geometric series with common ratio $$r < 1$$, so we can apply [§Infinite Series, ⁋Theorem 6](/en/math/calculus/series#thm6). Now let $$R$$ be the supremum of the absolute values of the $$x$$ at which the series converges (if there are unboundedly many such $$x$$, set $$R=\infty$$). If $$\lvert x\rvert<R$$, then there exists an $$x_0$$ with $$\lvert x\rvert<\lvert x_0\rvert$$ at which the series converges, so it converges absolutely by the fact shown above; if $$\lvert x\rvert>R$$, then it diverges by the definition of the supremum. Thus we obtain the following theorem.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm2">**Theorem 2 (Radius of Convergence)**</ins> For each power series $$\sum c_n x^n$$, there exists a *radius of convergence* $$R$$ with $$0 \leq R \leq \infty$$ such that the series converges absolutely if $$\lvert x\rvert < R$$ and diverges if $$\lvert x\rvert > R$$.
-
-</div>
+::: Theorem 2 (Radius of Convergence)
+For each power series $$\sum c_n x^n$$, there exists a *radius of convergence* $$R$$ with $$0 \leq R \leq \infty$$ such that the series converges absolutely if $$\lvert x\rvert < R$$ and diverges if $$\lvert x\rvert > R$$.
+:::
 
 The case $$R=0$$ is interpreted as the given power series converging only at $$x=0$$ (and thus is not of interest to us), while the opposite extreme $$R=\infty$$ is interpreted as the given power series converging on the entire real line. Apart from these two cases, the radius of convergence does not determine convergence at $$\lvert x\rvert=R$$, and in fact all combinations are possible depending on the power series.
 
@@ -56,9 +52,8 @@ always holds. For example, applying the ratio test to $$\sum_n x^n/n!$$, the rat
 
 One of the benefits of introducing power series early is that we can define the exponential function in a more solid way.
 
-<div class="example" markdown="1">
-
-<ins id="ex3">**Example 3 (Exponential function)**</ins> We write the power series converging over all real numbers seen above as
+::: Example 3 (Exponential function)
+We write the power series converging over all real numbers seen above as
 
 $$e^x = \sum_{n=0}^\infty \frac{x^n}{n!}$$
 
@@ -75,29 +70,24 @@ First, since each factor $$1 - j/n$$ in the product is at most $$1$$, the above 
 $$\left(1 + \frac1n\right)^n \geq \sum_{k=0}^m \frac{1}{k!}\prod_{j=0}^{k-1}\left(1 - \frac{j}{n}\right)$$
 
 Since the left-hand side is at most $$L$$, the right-hand side is also at most $$L$$, and fixing $$m$$ while sending $$n \to \infty$$, the right-hand side is a finite sum and each factor satisfies $$1 - j/n \to 1$$, so by [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5) ([§Limits of Sequences, ⁋Proposition 2](/en/math/calculus/sequences#prop2)) it converges to $$s_m$$. If all terms of a convergent sequence are at most $$L$$, then its limit is also at most $$L$$, so $$s_m \leq L$$, and sending $$m \to \infty$$ again gives $$s \leq L$$. Combining the two inequalities yields $$L = s$$, that is, the $$e$$ defined in the two posts is the same number.
-
-</div>
+:::
 
 ## Operations on Power Series
 
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**Proposition 4**</ins> If $$f(x) = \sum a_n x^n$$ and $$g(x) = \sum b_n x^n$$ have radii of convergence $$R_f$$ and $$R_g$$ respectively, then for $$\lvert x\rvert < \min(R_f, R_g)$$ we have
+::: Proposition 4
+If $$f(x) = \sum a_n x^n$$ and $$g(x) = \sum b_n x^n$$ have radii of convergence $$R_f$$ and $$R_g$$ respectively, then for $$\lvert x\rvert < \min(R_f, R_g)$$ we have
 
 $$f(x) + g(x) = \sum_{n=0}^\infty (a_n + b_n)x^n, \qquad f(x)g(x) = \sum_{n=0}^\infty \left(\sum_{k=0}^n a_k b_{n-k}\right) x^n$$
 
 The coefficients of the product are the *Cauchy product* of the two coefficient sequences.
-
-</div>
+:::
 
 The Cauchy product extends to infinite degree the process of multiplying two polynomials and collecting terms of the same degree. For example, multiplying $$1/(1-x) = \sum_n x^n$$ by itself gives the $$n$$th coefficient as $$\sum_{k=0}^n 1\cdot 1 = n+1$$, yielding $$1/(1-x)^2 = \sum_n (n+1)x^n$$.
 
 ## Analytic Functions
 
-<div class="definition" markdown="1">
-
-<ins id="def5">**Definition 5**</ins> A function $$f$$ is said to be *analytic* at a point $$a$$ if it agrees with a power series centered at $$a$$ in some neighborhood of $$a$$. If $$f$$ is analytic at every point of its domain, we call $$f$$ an *analytic function*.
-
-</div>
+::: Definition 5
+A function $$f$$ is said to be *analytic* at a point $$a$$ if it agrees with a power series centered at $$a$$ in some neighborhood of $$a$$. If $$f$$ is analytic at every point of its domain, we call $$f$$ an *analytic function*.
+:::
 
 By [Definition 5](#def5), an analytic function coincides with its Taylor series. However, the converse is false. The function $$f(x) = e^{-1/x^2}$$ (with $$f(0) = 0$$) is smooth on all of $$\mathbb{R}$$, but all its derivatives at $$0$$ vanish, so its Taylor series is identically $$0$$; hence it does not agree with $$f$$ in any neighborhood of $$0$$, and $$f$$ is not analytic at $$0$$. Thus smoothness does not guarantee analyticity, and whether a Taylor series converges to the function can be determined by examining the remainder term in Taylor's theorem after learning differentiation.

@@ -43,9 +43,8 @@ $$\iota^{-1} \mathcal{O}_{\Spec A} \rightarrow (\Spec\pi\vert^{Z(\mathfrak{a})})
 but we have not defined a scheme structure on $$Z(\mathfrak{a})$$; hence we do not know the relationship between $$\iota^{-1}\mathcal{O}_{\Spec A}$$ and $$\mathcal{O}_{Z(\mathfrak{a})}$$, and there is no guarantee that this is an isomorphism. In fact, it is far more likely not to be an isomorphism, because $$\iota^{-1}\mathcal{O}_{\Spec A}$$ is defined using only the topological data of the closed set $$Z(\mathfrak{a})$$ inside the structure sheaf of $$\Spec A$$, whereas $$(\Spec\pi)_\ast\mathcal{O}_{\Spec A/\mathfrak{a}}$$ also carries the algebraic information of the ring $$A/\mathfrak{a}$$. 
 
 
-<div class="example" markdown="1">
-
-<ins id="ex1">**Example 1**</ins> For example, fix a field $$\mathbb{K}$$ and consider the affine $$1$$-line $$\mathbb{A}_\mathbb{K}^1=\Spec \mathbb{K}[\x]$$. Then we have the canonical surjections
+::: Example 1
+For example, fix a field $$\mathbb{K}$$ and consider the affine $$1$$-line $$\mathbb{A}_\mathbb{K}^1=\Spec \mathbb{K}[\x]$$. Then we have the canonical surjections
 
 $$\pi_1:\mathbb{K}[\x] \rightarrow \mathbb{K}[\x]/(\x)\cong \mathbb{K},\qquad \pi_2:\mathbb{K}[\x] \rightarrow \mathbb{K}[\x]/(\x^2)$$
 
@@ -58,8 +57,7 @@ Thus, considering the scheme morphisms they define,
 $$\Spec\pi_1:\Spec \mathbb{K}[\x]/(\x) \rightarrow \Spec \mathbb{K}[\x],\qquad \Spec\pi_2:\Spec \mathbb{K}[\x]/(\x^2) \rightarrow \Spec \mathbb{K}[\x]$$
 
 we see that as continuous maps, $$\Spec\pi_1$$ sends the unique point $$(0)$$ of $$\Spec \mathbb{K}[\x]/(\x)$$ to the point $$(\x)$$ of $$\Spec \mathbb{K}[\x]$$, and $$\Spec\pi_2$$ sends the unique point $$(\x)$$ of $$\Spec \mathbb{K}[\x]/(\x^2)$$ to the point $$(\x)$$ of $$\Spec \mathbb{K}[\x]$$. That is, as continuous maps they define the same function, but of course $$\Spec \mathbb{K}[\x]/(\x)$$ and $$\mathbb{K}[\x]/(\x^2)$$ are not isomorphic as schemes. 
-
-</div>
+:::
 
 Naturally, the structure sheaf we want is of the form $$(\Spec\pi)_\ast \mathcal{O}_{\Spec A/\mathfrak{a}}$$, which carries the algebraic information; the relationship between this and $$\iota^{-1}\mathcal{O}_{\Spec A}$$ will be examined at the end of this article.
 
@@ -77,30 +75,23 @@ $$B=\im\phi\cong A/\ker\phi$$
 
 so this property characterizes $$\pi$$ exactly. Furthermore, by [\[Commutative Algebra\] §Properties of Localization, ⁋Proposition 4](/en/math/commutative_algebra/properties_of_localization#prop4), the surjectivity of $$\pi$$ can be checked by examining whether the localization $$\pi_\mathfrak{p}: A_\mathfrak{p} \rightarrow (A/\mathfrak{a})_{\mathfrak{p}}$$ at each prime ideal $$\mathfrak{p}$$ is surjective. Geometrically, this is the same as examining the stalk at each point $$\mathfrak{p}$$ of the affine scheme $$\Spec A$$, and so by [\[Topology\] §Sheaves, ⁋Proposition 15](/en/math/topology/sheaves#prop15) it is equivalent to $$(\Spec\pi)^\sharp$$ being surjective. 
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**Definition 2**</ins> A scheme morphism $$\iota: Z \rightarrow X$$ is a *closed embedding* if $$\iota$$ is a homeomorphism (as a continuous map) between $$Z$$ and a closed subset of $$X$$, and the sheaf morphism $$\iota^\sharp: \mathcal{O}_X \rightarrow \iota_\ast \mathcal{O}_Z$$ is surjective.
-
-</div>
+::: Definition 2
+A scheme morphism $$\iota: Z \rightarrow X$$ is a *closed embedding* if $$\iota$$ is a homeomorphism (as a continuous map) between $$Z$$ and a closed subset of $$X$$, and the sheaf morphism $$\iota^\sharp: \mathcal{O}_X \rightarrow \iota_\ast \mathcal{O}_Z$$ is surjective.
+:::
 
 The condition on the continuous map $$\iota$$ is self-evident, and the intuition for $$\iota^\sharp$$ also admits a geometric interpretation: the functions on $$Z$$ — more precisely, on $$\iota(Z)$$ — must all be obtained by restricting functions on $$X$$ to $$Z$$. Equivalently, given any function on $$Z$$, it must be possible to extend it to a function on $$X$$. On the other hand, if $$\iota$$ is an open embedding, then $$\iota^\sharp$$ must be an isomorphism. 
 
 This definition is natural, but its flavor differs slightly from the properties of scheme morphisms we defined in previous articles. We therefore use (without proof) the following equivalent characterization. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop3">**Proposition 3**</ins> For a scheme morphism $$\varphi: X \rightarrow Y$$, the following two conditions are equivalent.
+::: Proposition 3
+For a scheme morphism $$\varphi: X \rightarrow Y$$, the following two conditions are equivalent.
 
 1. $$\varphi$$ is a closed embedding.
 2. $$\varphi$$ is an affine morphism, and for every affine open subset $$V\cong \Spec B$$ of $$Y$$, with preimage $$\varphi^{-1}(V)\cong \Spec A$$, the map $$B \rightarrow A$$ is surjective. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 [The equivalence of two definitions of closed subscheme, Vakil's Ex 8.1.K](https://math.stackexchange.com/questions/1720902/the-equivalence-of-two-definitions-of-closed-subscheme-vakils-ex-8-1-k), Stack Exchange.
-
-</details>
+:::
 
 Then any closed embedding can locally be regarded as coming from some $$\pi: A \rightarrow A/\mathfrak{a}$$, as we saw above. In particular, if $$Y$$ is an affine scheme $$\Spec B$$, then by the equivalence above, any closed embedding $$\varphi: X \rightarrow Y$$ into $$Y$$ corresponds exactly to some $$B \rightarrow B/\mathfrak{b}$$. 
 
@@ -108,19 +99,15 @@ Then any closed embedding can locally be regarded as coming from some $$\pi: A \
 
 Once we accept [Proposition 3](#prop3), we know that any closed embedding is affine-local on the target, and that closed embeddings are closed under composition. Moreover, the following holds.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**Proposition 4**</ins> Any closed embedding is a finite morphism.
-
-</div>
+::: Proposition 4
+Any closed embedding is a finite morphism.
+:::
 
 This is obvious from the definition, and in light of the geometric intuition for (quasi-)finite morphisms developed in [§Properties of Scheme Morphisms, ⁋Example 15](/en/math/scheme_theory/properties_of_scheme_morphisms#ex15), it is clear that at least a closed embedding must always be quasi-finite; one can further give a geometric interpretation of why it is in fact finite. 
 
-<div class="definition" markdown="1">
-
-<ins id="def5">**Definition 5**</ins> For any scheme $$Z$$, a subsheaf $$\mathcal{I}$$ of $$\mathcal{O}_Z$$ is called an *ideal sheaf* on $$Z$$. In particular, for a closed embedding $$\iota: Z \rightarrow X$$, the subsheaf $$\ker\iota^\sharp$$ of $$\mathcal{O}_X$$ is called the ideal sheaf defined by $$\iota$$, denoted $$\mathcal{I}_{Z/X}$$. 
-
-</div>
+::: Definition 5
+For any scheme $$Z$$, a subsheaf $$\mathcal{I}$$ of $$\mathcal{O}_Z$$ is called an *ideal sheaf* on $$Z$$. In particular, for a closed embedding $$\iota: Z \rightarrow X$$, the subsheaf $$\ker\iota^\sharp$$ of $$\mathcal{O}_X$$ is called the ideal sheaf defined by $$\iota$$, denoted $$\mathcal{I}_{Z/X}$$. 
+:::
 
 That is, we have the exact sequence
 
@@ -134,14 +121,10 @@ so $$\mathcal{I}_{Z/X}(U)$$ is an ideal of $$A$$, which justifies the name.
 
 Right after [Proposition 3](#prop3) we saw that closed subschemes of an affine scheme $$Y=\Spec B$$ correspond exactly to ideals of $$B$$. Since any scheme is built by gluing affine schemes, ideals are defined on each affine piece, and if they satisfy a suitable gluing condition, they define a closed subscheme of the original scheme. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop6">**Proposition 6**</ins> Suppose that for each affine open subset $$\Spec A$$ of a scheme $$X$$, an ideal $$\mathcal{I}(A)\subseteq A$$ is given. If for every $$f\in A$$ the map $$A \rightarrow A_f$$ induces an isomorphism $$\mathcal{I}(A_f)\cong \mathcal{I}(A)_f$$, then this data induces a unique closed subscheme $$Z\hookrightarrow X$$. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 6
+Suppose that for each affine open subset $$\Spec A$$ of a scheme $$X$$, an ideal $$\mathcal{I}(A)\subseteq A$$ is given. If for every $$f\in A$$ the map $$A \rightarrow A_f$$ induces an isomorphism $$\mathcal{I}(A_f)\cong \mathcal{I}(A)_f$$, then this data induces a unique closed subscheme $$Z\hookrightarrow X$$. 
+:::
+::: Proof
 First cover $$X$$ by affine open subsets $$\{\Spec A_i\}$$. Then what we need to show is that for any $$i,j$$, the closed subscheme of $$\Spec A_i$$ defined by the ideal $$\mathcal{I}(A_i)$$ and the closed subscheme of $$\Spec A_j$$ defined by the ideal $$\mathcal{I}(A_j)$$ agree on the intersection of $$\Spec A_i$$ and $$\Spec A_j$$. 
 
 First, by [§Topological Structure of Schemes, ⁋Lemma 11](/en/math/scheme_theory/topology_of_schemes#lem11) we can cover the intersection of $$\Spec A_i$$ and $$\Spec A_j$$ by principal open subsets 
@@ -149,28 +132,23 @@ First, by [§Topological Structure of Schemes, ⁋Lemma 11](/en/math/scheme_theo
 $$\Spec (A_i)_{f_i}\cong\Spec (A_j)_{f_j}$$
 
 Restricting the closed subscheme of $$\Spec A_i$$ defined by $$\mathcal{I}(A_i)$$ to $$D(f_i)\cong\Spec (A_i)_{f_i}$$ gives $$\mathcal{I}(A_i)_{f_i}$$, which by assumption is isomorphic to $$\mathcal{I}((A_i)_{f_i})$$, and this equals $$\mathcal{I}((A_j)_{f_j})$$, so we can glue these together to form a closed subscheme $$Z$$. 
-
-</details>
+:::
 
 Now let an arbitrary scheme $$X$$ and a global section $$s\in \Gamma(X, \mathcal{O}_X)$$ be given. Then for each affine cover $$U\cong\Spec A$$, the restriction $$s\vert_U$$ defines an ideal $$\mathcal{I}(A)=(s\vert_U)$$ of $$A$$, and it is obvious that the $$\mathcal{I}(A)$$ defined in this way satisfy the conditions of [Proposition 6](#prop6).
 
-<div class="definition" markdown="1">
-
-<ins id="def7">**Definition 7**</ins> For a scheme $$X$$ and a global section $$s\in \Gamma(X, \mathcal{O}_X)$$, the scheme $$Z(s)$$ defined as above is called the *vanishing scheme* of $$s$$.
-
-</div>
+::: Definition 7
+For a scheme $$X$$ and a global section $$s\in \Gamma(X, \mathcal{O}_X)$$, the scheme $$Z(s)$$ defined as above is called the *vanishing scheme* of $$s$$.
+:::
 
 More generally, it is obvious how to define $$Z(S)$$ for a set $$S$$ of global sections. Hence in particular, when $$X=\Spec A$$ and $$S=\mathfrak{a}$$ is an ideal of $$A$$, it is obvious how to define $$Z(\mathfrak{a})$$: it is obtained by pushing forward the structure sheaf of the affine scheme $$\Spec A/\mathfrak{a}$$ to the closed set $$Z(\mathfrak{a})$$ via $$\Spec\pi$$. Henceforth we always regard $$Z(\mathfrak{a})$$ as carrying this scheme structure.
 
-<div class="definition" markdown="1">
-
-<ins id="def8">**Definition 8**</ins> A scheme morphism $$\varphi: X \rightarrow Y$$ is a *locally closed embedding* if there exists some open subscheme $$\iota:Z\hookrightarrow Y$$ of $$Y$$ such that, in the canonical decomposition
+::: Definition 8
+A scheme morphism $$\varphi: X \rightarrow Y$$ is a *locally closed embedding* if there exists some open subscheme $$\iota:Z\hookrightarrow Y$$ of $$Y$$ such that, in the canonical decomposition
 
 $$X\overset{\varphi\vert^Z}{\longrightarrow}Z\overset{\iota}{\longrightarrow} Y$$
 
 $$\varphi\vert^Z$$ is a closed embedding. 
-
-</div>
+:::
 
 Then by [Proposition 4](#prop4), we know that any locally closed embedding is always locally of finite type. 
 
@@ -180,11 +158,9 @@ We now define the image of a scheme morphism. Naturally, given an arbitrary sche
 
 The solution is to define the *scheme-theoretic image* of $$\varphi$$ as the smallest closed subscheme of $$Y$$ containing the image of $$\varphi$$. To do this, we must first examine what it means for one closed subscheme of $$X$$ to be smaller than another.
 
-<div class="proposition" markdown="1">
-
-<ins id="lem9">**Lemma 9**</ins> Let two closed embeddings $$\iota_1: Z_1 \rightarrow X$$, $$\iota_2: Z_2 \rightarrow X$$ be given. Then the existence of a scheme morphism $$\varphi: Z_1 \rightarrow Z_2$$ satisfying $$\iota_1=\iota_2\circ\varphi$$ is equivalent to $$\mathcal{I}_{Z_2/X}\subseteq \mathcal{I}_{Z_1/X}$$. In this case $$\varphi$$ is a closed embedding. 
-
-</div>
+::: Lemma 9
+Let two closed embeddings $$\iota_1: Z_1 \rightarrow X$$, $$\iota_2: Z_2 \rightarrow X$$ be given. Then the existence of a scheme morphism $$\varphi: Z_1 \rightarrow Z_2$$ satisfying $$\iota_1=\iota_2\circ\varphi$$ is equivalent to $$\mathcal{I}_{Z_2/X}\subseteq \mathcal{I}_{Z_1/X}$$. In this case $$\varphi$$ is a closed embedding. 
+:::
 
 Indeed, viewed on an affine open subset $$\Spec A$$, the two closed embeddings correspond respectively to
 
@@ -194,21 +170,18 @@ and the existence of $$\varphi$$ satisfying the above condition is the same as r
 
 For two closed subschemes $$Z_1, Z_2$$ of a scheme $$X$$, we regard $$Z_1$$ as a *smaller* closed subscheme than $$Z_2$$ if there exists a closed embedding $$\varphi:Z_1 \rightarrow Z_2$$. 
 
-<div class="definition" markdown="1">
-
-<ins id="def10">**Definition 10**</ins> Let an arbitrary scheme morphism $$\varphi: X \rightarrow Y$$ be given. We say that the image of $$\varphi$$ is *contained* in a closed subscheme $$\iota: Z \rightarrow Y$$ if the composition
+::: Definition 10
+Let an arbitrary scheme morphism $$\varphi: X \rightarrow Y$$ be given. We say that the image of $$\varphi$$ is *contained* in a closed subscheme $$\iota: Z \rightarrow Y$$ if the composition
 
 $$\mathcal{I}_{Z/Y} \rightarrow \mathcal{O}_Y \rightarrow \varphi_\ast \mathcal{O}_X$$
 
 is zero. In this case, the smallest closed subscheme of $$Y$$ containing the image of $$\varphi$$ is called the *scheme-theoretic image* of $$\varphi$$.
-
-</div>
+:::
 
 If in the above $$Y$$ is an affine scheme $$\Spec B$$, then a closed subscheme of $$Y$$ is completely determined by an ideal $$\mathfrak{b}$$ of $$B$$. Therefore, in this case the scheme-theoretic image of $$\varphi$$ is the closed subscheme of $$Y$$ defined by the kernel of $$\mathcal{O}_Y \rightarrow \varphi_\ast \mathcal{O}_X$$. In the more special case where $$X$$ is also affine, $$\mathcal{O}_Y \rightarrow \varphi_\ast \mathcal{O}_X$$ comes from a ring homomorphism $$\phi$$, so we can carry out an explicit computation.
 
-<div class="example" markdown="1">
-
-<ins id="ex11">**Example 11**</ins> Let us look at a slight variant of the closed embedding example $$\Spec\pi: \Spec \mathbb{K}[\x]/(\x^2) \rightarrow \Spec \mathbb{K}[\x]$$ from [Example 1](#ex1). In this example, for clarity we write $$\mathbb{K}[\x]/(\x^2)$$ as $$\mathbb{K}[\epsilon]/(\epsilon^2)$$. 
+::: Example 11
+Let us look at a slight variant of the closed embedding example $$\Spec\pi: \Spec \mathbb{K}[\x]/(\x^2) \rightarrow \Spec \mathbb{K}[\x]$$ from [Example 1](#ex1). In this example, for clarity we write $$\mathbb{K}[\x]/(\x^2)$$ as $$\mathbb{K}[\epsilon]/(\epsilon^2)$$. 
 
 By [\[Algebraic Structures\] §Algebras, ⁋Proposition 8](/en/math/algebraic_structures/algebras#prop8), we know that a $$\mathbb{K}$$-algebra homomorphism $$\phi:\mathbb{K}[\x_1,\ldots, \x_n] \rightarrow \mathbb{K}[\epsilon]/(\epsilon^2)$$ is completely determined by the images of the $$\x_i$$. So let $$\phi(\x_i)=a_i+b_i\epsilon$$. If some $$b_i$$ is nonzero, one can show that $$\phi$$ is surjective; thus $$\Spec\phi$$ is a closed embedding and the scheme-theoretic image of $$\Spec\phi$$ is the closed subscheme defined by $$\Spec\phi$$ itself. Writing this out concretely, $$\Spec\phi$$ sends the unique prime ideal $$(\epsilon)$$ of $$\mathbb{K}[\epsilon]/(\epsilon^2)$$ to the prime ideal of $$\Spec \mathbb{K}[\x_1,\ldots, \x_n]$$
 
@@ -217,8 +190,7 @@ $$(\Spec\phi)(\epsilon)=\phi^{-1}(\epsilon)=\left(\frac{\x_1}{b_1}-\frac{a_1}{b_
 That is, as a continuous map $$\Spec\phi$$ sends the one-point space $$\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$$ to the single point $$(a_1,\ldots, a_n)$$ of $$\mathbb{A}^n$$.
 
 Geometrically, $$\Spec\phi$$ corresponds to the tangent vector $$(b_1,\ldots, b_n)$$ at the point $$(a_1,\ldots, a_n)$$ of $$\mathbb{A}^n$$. This can be seen from the fact that the directional derivative of any function $$f\in \mathbb{K}[\x_1,\ldots, \x_n]$$ on $$\mathbb{A}^n$$ at the point $$(a_1,\ldots, a_n)$$ in the direction of the vector $$(b_1,\ldots, b_n)$$ is given exactly by $$\phi(f)$$. More generally, replacing $$\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$$ with $$\Spec \mathbb{K}[\epsilon]/(\epsilon^k)$$, we can see derivatives up to order $$k-1$$. 
-
-</div>
+:::
 
 In the example above we assumed that $$X$$ is an affine scheme, but $$\varphi^\sharp:\mathcal{O}_Y \rightarrow \varphi_\ast \mathcal{O}_X$$ is in any case part of the data of the scheme morphism $$\varphi$$, so there is nothing new there. The difference appears when we generalize $$Y$$ to an arbitrary scheme: for each affine open subset $$V=\Spec B$$ of $$Y$$, the ideal
 
@@ -226,27 +198,23 @@ $$\mathcal{I}(V):=\ker(\varphi^\sharp(V))\subset B$$
 
 defines a closed subscheme of $$V$$, but whether one can glue these together to form a single closed subscheme defined on all of $$Y$$ is a separate matter. Of course we will use [Proposition 6](#prop6) for this, and this hypothesis is satisfied in particular when $$X$$ is a reduced scheme or $$\varphi$$ is quasi-compact.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor12">**Corollary 12**</ins> Let a scheme morphism $$\varphi: X \rightarrow Y$$ be given. If $$X$$ is reduced or $$\varphi$$ is quasi-compact, then the ideal sheaf $$\mathcal{I}$$ defined above satisfies the conditions of [Proposition 6](#prop6); hence $$\mathcal{I}$$ defines a closed subscheme of $$Y$$, and this is the scheme-theoretic image of $$\varphi$$.
-
-</div>
+::: Corollary 12
+Let a scheme morphism $$\varphi: X \rightarrow Y$$ be given. If $$X$$ is reduced or $$\varphi$$ is quasi-compact, then the ideal sheaf $$\mathcal{I}$$ defined above satisfies the conditions of [Proposition 6](#prop6); hence $$\mathcal{I}$$ defines a closed subscheme of $$Y$$, and this is the scheme-theoretic image of $$\varphi$$.
+:::
 
 Under the above assumption, checking the image of $$\varphi$$ on each affine open subset, one sees that the scheme-theoretic image of $$\varphi$$ has the form of a structure sheaf defined on the closure of the image of $$\varphi$$ (as a continuous map). 
 
 Without the assumption of [Corollary 12](#cor12), this need not happen.
 
-<div class="example" markdown="1">
-
-<ins id="ex13">**Example 13**</ins> Define a scheme $$X$$ by
+::: Example 13
+Define a scheme $$X$$ by
 
 $$X=\coprod_{k\geq 0} \Spec \mathbb{K}[\epsilon]/(\epsilon^k)$$
 
 and let $$Y=\Spec \mathbb{K}[\x]$$. We can define a scheme morphism $$X \rightarrow Y$$ on each component of $$X$$ via $$\x\mapsto \epsilon$$. Then from [Example 11](#ex11) we know that the image of $$X \rightarrow Y$$ (as a continuous map) is the single point $$0\in \mathbb{A}^1$$. 
 
 However, the scheme-theoretic image of the scheme morphism $$\varphi:X \rightarrow Y$$ is not $$0$$. To see this, consider the morphism of structure sheaves $$\varphi^\sharp:\mathcal{O}_Y \rightarrow \varphi_\ast \mathcal{O}_X$$. For an element $$f$$ of $$\mathcal{O}_Y$$ to satisfy $$\varphi^\sharp(f)=0$$, the $$k$$-th order approximation of $$f$$ must be zero for every $$k$$, which forces $$f=0$$. Hence $$\mathcal{I}_{Z/Y}$$ must be zero, and from this we see that the scheme-theoretic image of $$\varphi$$ is $$Y$$ itself.
-
-</div>
+:::
 
 ## Reduced Scheme Structures on Closed Sets
 
@@ -255,11 +223,9 @@ At the beginning of this article, we were able to define two structure sheaves o
 More generally, consider an arbitrary scheme $$Y$$ and a closed subset $$X$$ of $$Y$$. Then for any open subset $$\Spec B$$ of $$Y$$, the closed subset $$X\cap \Spec B$$ of $$\Spec B$$ can be written in the form $$Z(\mathfrak{b})$$ for some radical ideal $$\mathfrak{b}$$ of $$B$$, by [§Spectra, ⁋Theorem 15](/en/math/scheme_theory/spectrums#thm15). 
 Moreover, since $$\mathfrak{b}$$ is by definition the largest among the ideals of $$B$$ satisfying $$X\cap \Spec B= Z(\mathfrak{b}')$$, by [Lemma 9](#lem9) it gives the smallest closed subscheme structure on $$X\cap \Spec B$$.
 
-<div class="definition" markdown="1">
-
-<ins id="def14">**Definition 14**</ins> For any closed subset $$X$$ of a scheme $$Y$$, the scheme structure on $$X$$ defined above is called the *reduced scheme structure*, and is written $$X^\red$$. 
-
-</div>
+::: Definition 14
+For any closed subset $$X$$ of a scheme $$Y$$, the scheme structure on $$X$$ defined above is called the *reduced scheme structure*, and is written $$X^\red$$. 
+:::
 
 In particular, when $$X=Y$$, writing $$\Spec B=Z(0)$$ for any affine subset $$\Spec B$$, we have $$\mathfrak{b}=\sqrt{(0)}$$, so $$B/\sqrt{(0)}$$ is a reduced ring. Meanwhile, the sheaf morphism examined above,
 

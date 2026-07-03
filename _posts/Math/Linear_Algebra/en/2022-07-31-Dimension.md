@@ -20,11 +20,9 @@ last_polished_at: 2026-06-26T19:30:02+00:00
 
 From [§Basis of a Vector Space, ⁋Example 9](/en/math/linear_algebra/basis#ex9) and [§Basis of a Vector Space, ⁋Example 11](/en/math/linear_algebra/basis#ex11), we see that a basis of a vector space $$V$$ need not be unique. However, in these examples the number of elements in each basis remains the same. This is not a coincidence.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm1">**Theorem 1**</ins> For a $$\mathbb{K}$$-vector space $$V$$, if two bases $$\mathcal{B}_1$$ and $$\mathcal{B}_2$$ of $$V$$ are given, then $$\lvert \mathcal{B}_1\rvert=\lvert \mathcal{B}_2\rvert$$ holds.
-
-</div>
+::: Theorem 1
+For a $$\mathbb{K}$$-vector space $$V$$, if two bases $$\mathcal{B}_1$$ and $$\mathcal{B}_2$$ of $$V$$ are given, then $$\lvert \mathcal{B}_1\rvert=\lvert \mathcal{B}_2\rvert$$ holds.
+:::
 
 This theorem includes the case where $$\mathcal{B}_1$$ and $$\mathcal{B}_2$$ are infinite. To establish it, three steps are required.
 
@@ -34,14 +32,10 @@ This theorem includes the case where $$\mathcal{B}_1$$ and $$\mathcal{B}_2$$ are
 
 Of course, there is no reason we could not prove this theorem now, but just as with [§Basis of a Vector Space, ⁋Theorem 10](/en/math/linear_algebra/basis#thm10), doing so requires a bit of set-theoretic background, so we defer it to a separate post. The last step, however, can be proved without any additional prerequisites.
 
-<div class="proposition" markdown="1">
-
-<ins id="lem2">**Lemma 2**</ins> For a $$\mathbb{K}$$-vector space $$V$$, if $$\mathcal{B}_1$$ and $$\mathcal{B}_2$$ are both finite bases of $$V$$, then $$\lvert \mathcal{B}_1\rvert=\lvert \mathcal{B}_2\rvert$$ holds.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Lemma 2
+For a $$\mathbb{K}$$-vector space $$V$$, if $$\mathcal{B}_1$$ and $$\mathcal{B}_2$$ are both finite bases of $$V$$, then $$\lvert \mathcal{B}_1\rvert=\lvert \mathcal{B}_2\rvert$$ holds.
+:::
+::: Proof
 Let $$\mathcal{B}_1=\{x_1,x_2,\ldots, x_m\}$$ and $$\mathcal{B}_2=\{y_1,y_2,\ldots, y_n\}$$; we must show that $$m=n$$. Suppose, for contradiction, that $$m>n$$.
 
 Since $$x_1\in V$$, we can express $$x_1$$ as a linear combination of $$y_1$$, $$y_2$$, $$\ldots$$, $$y_n$$. Thus, by [§Basis of a Vector Space, ⁋Proposition 6](/en/math/linear_algebra/basis#prop6), the set $$\{x_1,y_1,y_2,\ldots, y_n\}$$ is linearly dependent. That is, there exist scalars $$\beta_1$$, $$\alpha_1$$, $$\alpha_2$$, $$\ldots$$, $$\alpha_n$$, not all zero, such that
@@ -94,8 +88,7 @@ Repeating this process leads to two possibilities.
 2. Otherwise, after $$n$$ iterations we will have completely replaced the original basis $$\{y_1,y_2,\ldots, y_n\}$$ with the new basis $$\{x_1, x_2, \ldots, x_n\}$$. In this case, since $$x_{n+1}\in V$$ can be expressed as a linear combination of $$\{x_1, x_2, \ldots, x_n\}$$, the set $$\{x_1,x_2,\ldots, x_{n+1}\}$$ is linearly dependent, and hence so is $$\{x_1,x_2,\ldots, x_m\}$$.
 
 In either case, $$\{x_1,x_2,\ldots, x_m\}$$ is linearly dependent and therefore cannot be a basis, which is a contradiction.
-
-</details>
+:::
 
 In fact, the proof above actually established a slightly stronger statement than the original proposition:
 
@@ -103,37 +96,28 @@ In fact, the proof above actually established a slightly stronger statement than
 
 Since by [Theorem 1](#thm1) all bases of $$V$$ have the same cardinality, the following definition is well-posed.
 
-<div class="definition" markdown="1">
+::: Definition 3
+For a $$\mathbb{K}$$-vector space $$V$$, the cardinality of a basis of $$V$$ is called the *dimension* of $$V$$, denoted by $$\dim V$$, or by $$\dim_\mathbb{K}V$$ when we need to emphasize $$\mathbb{K}$$. If $$\dim V$$ is finite, $$V$$ is a *finite-dimensional* vector space; otherwise, $$V$$ is an *infinite-dimensional* vector space.
+:::
 
-<ins id="def3">**Definition 3**</ins> For a $$\mathbb{K}$$-vector space $$V$$, the cardinality of a basis of $$V$$ is called the *dimension* of $$V$$, denoted by $$\dim V$$, or by $$\dim_\mathbb{K}V$$ when we need to emphasize $$\mathbb{K}$$. If $$\dim V$$ is finite, $$V$$ is a *finite-dimensional* vector space; otherwise, $$V$$ is an *infinite-dimensional* vector space.
-
-</div>
-
-<div class="example" markdown="1">
-
-<ins id="ex4">**Example 4**</ins> 
-
+::: Example 4
 1. The basis of the trivial vector space $$\{0\}$$ is $$\emptyset$$, so the dimension of this space is $$\lvert\emptyset\rvert=0$$.
 2. For any field $$\mathbb{K}$$, $$\mathbb{K}$$ itself is a 1-dimensional $$\mathbb{K}$$-vector space.
 3. For any field $$\mathbb{K}$$, the dimension of the Euclidean $$n$$-space $$\mathbb{K}^n$$ is $$\dim \mathbb{K}^n=n$$.
 4. $$\dim_\mathbb{R}\mathbb{C}=2$$. 
 5. $$\mathbb{K}[\x]$$ is an infinite-dimensional vector space.
+:::
 
-</div>
-
+::: remark Remark {#rmk}
 From now on, we always assume that the vector spaces we deal with are finite-dimensional.
-{: .remark}
+:::
 
 Depending on the situation, results in finite-dimensional vector spaces may or may not hold in infinite dimensions. For example, the following proposition can be extended to the infinite-dimensional case, but in this post we restrict ourselves to the finite-dimensional case.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**Proposition 5**</ins> For a $$\mathbb{K}$$-vector space $$V$$ and any linearly independent subset $$S$$ of $$V$$, there exists a basis $$\mathcal{B}$$ of $$V$$ containing $$S$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 5
+For a $$\mathbb{K}$$-vector space $$V$$ and any linearly independent subset $$S$$ of $$V$$, there exists a basis $$\mathcal{B}$$ of $$V$$ containing $$S$$.
+:::
+::: Proof
 If $$\langle S\rangle=V$$, there is nothing more to prove. Otherwise, there exists $$v\in V$$ with $$v\not\in\langle S\rangle$$. Let $$S_1=S\cup\{v\}$$. Then $$S_1$$ is linearly independent. Obviously $$v\neq0$$, and for any linear combination of elements of $$S_1$$
 
 $$\sum_{x\in S_1} \alpha_xx=\sum_{x\in S}\alpha_xx+\alpha_vv=0$$  
@@ -143,19 +127,14 @@ if $$\alpha_v\neq 0$$, we can move $$\alpha_vv$$ to the other side and multiply 
 Now if $$\langle S\rangle_1=V$$, the proof is complete; otherwise we can repeat the same process by defining $$S_2=S_1\cup\{v'\}$$. Of course, we must show that $$S_2$$ is linearly independent, but since we picked $$v'$$ from $$V\setminus\langle S\rangle_1$$, this follows by exactly the same logic as above.
 
 By the preceding [Lemma 2](#lem2), this process terminates in at most $$\dim V$$ steps, and when it ends we obtain the desired basis $$S_n$$.
-
-</details>
+:::
 
 A basis of $$V$$ is a set that is both linearly independent and spans $$V$$. The above proposition says that we can add vectors to a linearly independent set appropriately to make it span $$V$$. Conversely, if there is a set spanning $$V$$, we can remove some redundant elements from it to also satisfy the linear independence condition. The basic idea of the proof of this proposition is the same as that of [Proposition 5](#prop5), but since $$S$$ may be infinite, the proof does not work by removing elements from $$S$$ one by one.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop6">**Proposition 6**</ins> For a $$\mathbb{K}$$-vector space $$V$$ and a subset $$S$$ spanning $$V$$, some subset of $$S$$ is a basis of $$V$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 6
+For a $$\mathbb{K}$$-vector space $$V$$ and a subset $$S$$ spanning $$V$$, some subset of $$S$$ is a basis of $$V$$.
+:::
+::: Proof
 Let $$S_0=\emptyset$$. Then $$\langle S\rangle_0=\{0\}$$. Pick an element $$x_1$$ from $$S\setminus\langle S\rangle_0$$ and let $$S_1=\{x_1\}=S_0\cup\{x_1\}$$; similarly, pick an element $$x_2$$ from $$S\setminus\langle S\rangle_1$$ to form $$S_2=\{x_1,x_2\}=S_1\cup \{x_2\}$$, repeating this process.
 
 The sets $$S_i$$ obtained in this way are linearly independent subsets by definition, and as long as $$\langle S\rangle_i$$ is not equal to $$S$$, the number of elements in $$S_{i+1}$$ is always one greater than that in $$S_i$$. Therefore, it suffices to show that $$S\setminus\langle S\rangle_i$$ is nonempty for all $$i < n = \dim V$$.
@@ -169,14 +148,12 @@ and since $$\langle S\rangle_m$$ on the right-hand side is already a subspace of
 $$V=\langle S\rangle\subseteq\span\bigl(\langle S\rangle_m\bigr)=\langle S\rangle_m$$
 
 we conclude that $$\langle S\rangle_m=V$$.
-
-</details>
+:::
 
 Finally, let us examine two slightly more general examples.
 
-<div class="example" markdown="1">
-
-<ins id="ex7">**Example 7**</ins> Let two $$\mathbb{K}$$-vector spaces $$V$$ and $$W$$ be given. Then their *product* $$V\times W$$ is the vector space of vectors of the form $$(v,w)$$ for arbitrary $$v\in V$$, $$w\in W$$. Its operations are given by
+::: Example 7
+Let two $$\mathbb{K}$$-vector spaces $$V$$ and $$W$$ be given. Then their *product* $$V\times W$$ is the vector space of vectors of the form $$(v,w)$$ for arbitrary $$v\in V$$, $$w\in W$$. Its operations are given by
 
 $$(v_1, w_1)+(v_2,w_2)=(v_1+v_2,w_1+w_2),\quad\alpha(v,w)=(\alpha v,\alpha w)$$
 
@@ -185,12 +162,10 @@ It is not difficult to verify that if $$\mathcal{B}_1$$ and $$\mathcal{B}_2$$ ar
 $$\mathcal{B}=\{(x, y)\mid x\in \mathcal{B}_1\text{ and }y\in \mathcal{B}_2\}$$
 
 of $$V\times W$$ is a basis of $$V\times W$$. In particular, if both $$V$$ and $$W$$ are finite-dimensional, then $$V\times W$$ is also finite-dimensional and $$\dim(V\times W)=(\dim V)+(\dim W)$$.
+:::
 
-</div>
-
-<div class="example" markdown="1">
-
-<ins id="ex8">**Example 8**</ins> Now let a $$\mathbb{K}$$-vector space $$V$$ be given, and let $$W_1$$ and $$W_2$$ be two subspaces of $$V$$. Then the subspace $$W_1+W_2$$ of $$V$$ is defined as
+::: Example 8
+Now let a $$\mathbb{K}$$-vector space $$V$$ be given, and let $$W_1$$ and $$W_2$$ be two subspaces of $$V$$. Then the subspace $$W_1+W_2$$ of $$V$$ is defined as
 
 > the smallest subspace of $$V$$ containing both $$W_1$$ and $$W_2$$.
 
@@ -201,11 +176,8 @@ Assuming that both $$W_1$$ and $$W_2$$ are finite-dimensional,
 $$\dim(W_1+W_2)=\dim W_1+\dim W_2-\dim(W_1\cap W_2)$$
 
 holds.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 Let $$W_1$$ and $$W_2$$ be $$m$$- and $$n$$-dimensional respectively, and let $$W_1\cap W_2$$ be $$k$$-dimensional. Then there exists a basis $$\mathcal{B}_0=\{x_1,\ldots, x_k\}$$ of $$W_1\cap W_2$$. This set is a linearly independent subset of both $$W_1$$ and $$W_2$$, so there exist bases of $$W_1$$ and $$W_2$$ containing it. Let these be $$\mathcal{B}_1$$ and $$\mathcal{B}_2$$. Then
 
 $$\mathcal{B}_1=\{y_1,\ldots, y_m\},\quad \mathcal{B}_2=\{z_1,\ldots, z_n\},\qquad y_1=z_1=x_1,\ldots, y_k=z_k=x_k$$
@@ -233,8 +205,7 @@ $$(\beta_1-\alpha_1')y_1+\cdots+(\beta_k-\alpha_k')y_k+\beta_{k+1}y_{k+1}+\cdots
 so by the linear independence of $$\mathcal{B}_1$$ all coefficients are zero, and in particular $$\beta_{k+1}=\cdots=\beta_m=0$$. Similarly, from the second equality $$\gamma_{k+1}=\cdots=\gamma_n=0$$, and then the remaining equation from (2) is simply $$\alpha_1x_1+\cdots+\alpha_kx_k=0$$; but since $$x_1,\ldots,x_k$$ form a basis of $$W_1\cap W_2$$, by linear independence again these are all zero. Thus $$\mathcal{B}_1\cup\mathcal{B}_2$$ is a linearly independent subset spanning $$W_1+W_2$$, and therefore a basis of $$W_1+W_2$$. Hence
 
 $$\dim(W_1+W_2)=\lvert\mathcal{B}_1\cup\mathcal{B}_2\rvert=\lvert\mathcal{B}_1\rvert+\lvert\mathcal{B}_2\rvert-\lvert\mathcal{B}_0\rvert=\dim W_1+\dim W_2-\dim(W_1\cap W_2).$$
-
-</details>
+:::
 
 
 ---

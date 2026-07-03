@@ -28,11 +28,9 @@ Meanwhile, we mentioned at the beginning of the previous post that $$V$$ and $$V
 
 We now focus on the case $$V=W$$.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> For any pairing $$\langle -,-\rangle:V\times W\rightarrow \mathbb{K}$$, if $$W=V$$, we call this pairing a *bilinear form* on $$V$$. We say that $$\langle -,-\rangle$$ is a *non-degenerate bilinear form* if it is non-degenerate as a pairing.
-
-</div>
+::: Definition 1
+For any pairing $$\langle -,-\rangle:V\times W\rightarrow \mathbb{K}$$, if $$W=V$$, we call this pairing a *bilinear form* on $$V$$. We say that $$\langle -,-\rangle$$ is a *non-degenerate bilinear form* if it is non-degenerate as a pairing.
+:::
 
 Suppose a bilinear form on $$V$$ is given. Then by the same argument as above, we obtain linear maps from $$V$$ to $$V^\ast$$
 
@@ -40,9 +38,8 @@ $$v\mapsto \langle v,-\rangle,\qquad v\mapsto \langle -,v\rangle$$
 
 In general these two need not coincide, but we can make the following definition.
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**Definition 2**</ins> For any bilinear form $$\langle-,-\rangle:V\times V\rightarrow \mathbb{K}$$, if the identity
+::: Definition 2
+For any bilinear form $$\langle-,-\rangle:V\times V\rightarrow \mathbb{K}$$, if the identity
 
 $$\langle v,w\rangle=\langle w,v\rangle$$
 
@@ -51,8 +48,7 @@ holds for all $$v,w\in V$$, we say that this form is *symmetric*. If the identit
 $$\langle v,w\rangle=-\langle w,v\rangle$$
 
 holds for all $$v,w\in V$$, we say that this form is *alternating*.
-
-</div>
+:::
 
 ## Non-Degenerate Bilinear Forms
 
@@ -62,25 +58,21 @@ $$V\rightarrow V^\ast;\qquad v\mapsto \langle -,v\rangle\tag{1}$$
 
 For convenience, we henceforth assume that $$\langle -,-\rangle$$ is a symmetric non-degenerate bilinear form from the outset. Then $$\langle -,-\rangle$$ yields the isomorphism defined by equation (1), which can be expressed as follows.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor3">**Corollary 3**</ins> Consider a finite-dimensional $$\mathbb{K}$$-vector space $$V$$ equipped with a symmetric non-degenerate bilinear form $$\langle -,-\rangle$$. For any given $$f\in V^\ast$$, there exists a unique $$w\in V$$ such that
+::: Corollary 3
+Consider a finite-dimensional $$\mathbb{K}$$-vector space $$V$$ equipped with a symmetric non-degenerate bilinear form $$\langle -,-\rangle$$. For any given $$f\in V^\ast$$, there exists a unique $$w\in V$$ such that
 
 $$f(v)=\langle v,w\rangle\qquad\text{for all $v\in V$}$$
-
-</div>
+:::
 
 In particular, we can now import the notion of orthogonal complement from the previous post into $$V$$. That is, we define as follows.
 
-<div class="definition" markdown="1">
-
-<ins id="def4">**Definition 4**</ins> Consider a finite-dimensional $$\mathbb{K}$$-vector space $$V$$ equipped with a symmetric non-degenerate bilinear form $$\langle -,-\rangle$$. For any $$v\in V$$, the set of all $$w\in V$$ satisfying $$\langle w,v\rangle=0$$ is called the *orthogonal complement* of $$v$$, denoted $$v^\perp$$. More generally, for any set $$S$$, we define
+::: Definition 4
+Consider a finite-dimensional $$\mathbb{K}$$-vector space $$V$$ equipped with a symmetric non-degenerate bilinear form $$\langle -,-\rangle$$. For any $$v\in V$$, the set of all $$w\in V$$ satisfying $$\langle w,v\rangle=0$$ is called the *orthogonal complement* of $$v$$, denoted $$v^\perp$$. More generally, for any set $$S$$, we define
 
 $$S^\perp=\bigcap_{v\in S}v^\perp$$
 
 as the orthogonal complement of $$S$$.
-
-</div>
+:::
 
 Of course, even if $$\langle -,-\rangle$$ were not symmetric, we could adopt the same definition; in fact, once we choose whether to send $$v$$ to $$\langle -,v\rangle$$ or to $$\langle v,-\rangle$$ and consistently maintain that choice, we obtain the same result. In any case, to avoid possible confusion we retain the assumption that $$\langle -,-\rangle$$ is symmetric.
 
@@ -126,16 +118,14 @@ We call such an $$L'$$ satisfying this equation the *adjoint* of the linear map 
 
 The results of [§Dual Space, §§Orthogonal Complement](/en/math/linear_algebra/dual_space#orthogonal-complement) were all obtained from the equation $$(Lv,f)=(v,L^\ast f)$$ for the canonical pairing. Therefore, replacing this with equation (2) for the non-degenerate bilinear forms $$\langle -,-\rangle$$ obtained above, we get the following results.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**Proposition 5**</ins> Suppose two $$\mathbb{K}$$-vector spaces $$V$$ and $$W$$ equipped with symmetric non-degenerate bilinear forms, a linear map $$L:V\rightarrow W$$, and its adjoint $$L^\ast:W\rightarrow V$$ are given. Then
+::: Proposition 5
+Suppose two $$\mathbb{K}$$-vector spaces $$V$$ and $$W$$ equipped with symmetric non-degenerate bilinear forms, a linear map $$L:V\rightarrow W$$, and its adjoint $$L^\ast:W\rightarrow V$$ are given. Then
 
 1. For any subspace $$U\subseteq V$$, we have $$L(U)^\perp=(L^\ast)^{-1}(U^\perp)$$.
 2. For any subspace $$U\subseteq W$$, we have $$L^\ast(U)^\perp=L^{-1}(U^\perp)$$.
 3. We have $$(\im L)^\perp=\ker(L^\ast)$$.
 4. We have $$(\im L^\ast)^\perp=\ker L$$.
-
-</div>
+:::
 
 In particular, the subspaces
 
@@ -149,15 +139,13 @@ $$V=\ker L\oplus(\ker L)^\perp,\qquad W=\im L\oplus(\im L)^\perp$$
 
 Now consider a $$\mathbb{K}$$-vector space $$V$$ equipped with a symmetric non-degenerate bilinear form. Then a subset $$\{v_1,\ldots, v_n\}$$ of $$V$$ is called an *orthogonal set* if $$\langle v_i,v_j\rangle=0$$ whenever $$i\neq j$$. If a basis $$\mathcal{B}$$ of $$V$$ is also an orthogonal set, we call it an *orthogonal basis*.
 
-<div class="definition" markdown="1">
-
-<ins id="def6">**Definition 6**</ins> If a field $$\mathbb{K}$$ satisfies the condition
+::: Definition 6
+If a field $$\mathbb{K}$$ satisfies the condition
 
 $$\underbrace{1+1+\cdots+1}_\text{$p$ times}=0$$
 
 then we say that the *characteristic* of $$\mathbb{K}$$ is $$p$$, and write $$\ch \mathbb{K}=p$$. If no natural number $$p$$ satisfies the above formula, we consider $$\mathbb{K}$$ to have characteristic 0.
-
-</div>
+:::
 
 For example, $$\mathbb{R}$$ has characteristic 0. If we define addition and multiplication on $$\mathbb{F}_2=\{0,1\}$$ by
 
@@ -169,14 +157,10 @@ $$0\cdot 0=0,\quad 0\cdot 1=0,\quad 1\cdot 0=0,\quad 1\cdot 1=1$$
 
 respectively, then we can verify that $$\mathbb{F}_2$$ satisfies the field axioms, and in this case $$\ch\mathbb{F}_2=2$$.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop7">**Proposition 7**</ins> For a field $$\mathbb{K}$$ with $$\ch \mathbb{K}\neq 2$$, a $$\mathbb{K}$$-vector space $$V$$ equipped with a symmetric non-degenerate bilinear form always has an orthogonal basis.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 7
+For a field $$\mathbb{K}$$ with $$\ch \mathbb{K}\neq 2$$, a $$\mathbb{K}$$-vector space $$V$$ equipped with a symmetric non-degenerate bilinear form always has an orthogonal basis.
+:::
+::: Proof
 First, we prove a simple lemma. For any fixed $$v\in V$$, there exists $$u\in V$$ such that $$\langle u,v\rangle\neq 0$$. Then
 
 $$2\langle u,v\rangle=\langle u+v,u+v\rangle-\langle u,u\rangle-\langle v,v\rangle$$
@@ -204,8 +188,7 @@ is an element of $$W^\perp$$ and satisfies
 $$\langle u',v\rangle=\langle u,v\rangle\neq 0$$
 
 That is, $$W^\perp$$ is also non-degenerate with respect to $$\langle-,-\rangle$$, and so by the inductive hypothesis, there exists an orthogonal basis $$\mathcal{B}$$ of $$W^\perp$$. Now $$\mathcal{B}\cup\{v\}$$ is an orthogonal basis of $$V$$, so we obtain the desired result.
-
-</details>
+:::
 
 ## Gram Matrix
 

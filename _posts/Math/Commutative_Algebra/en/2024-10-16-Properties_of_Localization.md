@@ -20,14 +20,10 @@ We now examine further properties of localization. The first goal of this post i
 
 We begin by proving a lemma. Define an $$A$$-module homomorphism $$S^{-1}A\times_A M \rightarrow  S^{-1}M$$ by $$(r/u, x)\mapsto rx/u$$; this is an $$A$$-bilinear map, and therefore induces an $$A$$-linear map $$S^{-1}A\otimes_A M \rightarrow S^{-1}M$$. ([\[Algebraic Structures\] §Direct Products, Direct Sums, and Tensor Products of Modules, ⁋Theorem 5](/en/math/algebraic_structures/operations_of_modules#thm5))
 
-<div class="proposition" markdown="1">
-
-<ins id="lem1">**Lemma 1**</ins> The $$A$$-linear map defined above is an isomorphism.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Lemma 1
+The $$A$$-linear map defined above is an isomorphism.
+:::
+::: Proof
 It suffices to construct an inverse. To this end, we first define a function from $$M\times S$$ to $$S^{-1}A\otimes_AM$$ by
 
 $$(x,s)\mapsto \frac{1}{s}\otimes x$$
@@ -41,8 +37,7 @@ Since $$ts',ts\in A$$, moving $$ts'$$ and $$ts$$ to the left of $$\otimes$$ on e
 $$\frac{1}{s}\otimes x=\frac{1}{s'}\otimes x'$$
 
 That this function is an $$A$$-linear map and is the inverse of the $$S^{-1}A\otimes_A M \rightarrow S^{-1}M$$ defined above is now clear.
-
-</details>
+:::
 
 In particular, this allows us to establish the functoriality of module localization. For any $$u: M \rightarrow M'$$, we define $$S^{-1}M \rightarrow S^{-1}M'$$ by identifying both sides with localization via the map
 
@@ -50,14 +45,10 @@ $$S^{-1}\otimes_A u: S^{-1}\otimes_AM \rightarrow S^{-1}\otimes_AM'$$
 
 In general, tensor products are right exact, but in this case the functor is exact.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**Proposition 2**</ins> $$S^{-1}A$$ is a flat $$A$$-module. ([\[Multilinear Algebra\] §Projective, Injective, and Flat Modules, ⁋Definition 7](/en/math/multilinear_algebra/various_modules#def7))
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 2
+$$S^{-1}A$$ is a flat $$A$$-module. ([\[Multilinear Algebra\] §Projective, Injective, and Flat Modules, ⁋Definition 7](/en/math/multilinear_algebra/various_modules#def7))
+:::
+::: Proof
 Suppose an injective $$A$$-linear map $$u:M \rightarrow M'$$ is given; we must show that $$S^{-1}A\otimes_A u$$ is injective. By [Lemma 1](#lem1), it suffices to show that the induced linear map $$S^{-1}M \rightarrow S^{-1}M'$$ is injective. Take any $$x/s\in S^{-1}M$$ and suppose its image $$u(x)/s$$ in $$S^{-1}M'$$ is zero. Then from $$u(x)/s=0/1$$ there exists some $$t\in S$$ such that
 
 $$tu(x)=u(tx)=0$$
@@ -67,49 +58,37 @@ holds, and since $$u$$ is injective we must have $$tx=0$$ in $$M$$. Hence in $$S
 $$\frac{x}{s}=\frac{tx}{ts}=\frac{0}{ts}=0$$
 
 so we obtain the desired result.
-
-</details>
+:::
 
 ## Properties Determined by Localization
 
 By [Proposition 2](#prop2) above, if $$u:M \rightarrow M'$$ is injective (resp. surjective, bijective), then the induced map $$S^{-1}M \rightarrow S^{-1}M'$$ is also injective (resp. surjective, bijective). [Proposition 4](#prop4) can be regarded as a sort of (strong) converse to this. To prove it, we first establish the following lemma.
 
-<div class="proposition" markdown="1">
-
-<ins id="lem3">**Lemma 3**</ins> Let $$M$$ be an $$A$$-module and consider the localization $$\epsilon_\mathfrak{m}:M \rightarrow M_\mathfrak{m}$$ at a maximal ideal $$\mathfrak{m}$$ of $$A$$. Then an element $$x$$ of $$M$$ is zero if and only if for *every* maximal ideal $$\mathfrak{m}$$ of $$A$$, the map $$\epsilon_\mathfrak{m}$$ defined above satisfies $$\epsilon_\mathfrak{m}(x)=0$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Lemma 3
+Let $$M$$ be an $$A$$-module and consider the localization $$\epsilon_\mathfrak{m}:M \rightarrow M_\mathfrak{m}$$ at a maximal ideal $$\mathfrak{m}$$ of $$A$$. Then an element $$x$$ of $$M$$ is zero if and only if for *every* maximal ideal $$\mathfrak{m}$$ of $$A$$, the map $$\epsilon_\mathfrak{m}$$ defined above satisfies $$\epsilon_\mathfrak{m}(x)=0$$.
+:::
+::: Proof
 One direction is obvious, so it suffices to prove the converse. Fix a maximal ideal $$\mathfrak{m}$$ and suppose $$\epsilon_\mathfrak{m}(x)=0$$. This is equivalent to $$\ann(x)$$ not being contained in $$\mathfrak{m}$$. Then by the given condition, $$\ann(x)$$ is an ideal not contained in *any* maximal ideal of $$A$$, and the only such ideal is $$A$$ itself. Thus $$\ann(x)=A$$, which completes the proof.
-
-</details>
+:::
 
 Therefore, the following holds.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**Proposition 4**</ins> An $$A$$-linear map $$u:M \rightarrow N$$ is a monomorphism (resp. epimorphism, isomorphism) if and only if for every maximal ideal $$\mathfrak{m}$$, the localized map $$u_\mathfrak{m}: M_\mathfrak{m} \rightarrow N_\mathfrak{m}$$ is a monomorphism (resp. epimorphism, isomorphism).
-
-</div>
+::: Proposition 4
+An $$A$$-linear map $$u:M \rightarrow N$$ is a monomorphism (resp. epimorphism, isomorphism) if and only if for every maximal ideal $$\mathfrak{m}$$, the localized map $$u_\mathfrak{m}: M_\mathfrak{m} \rightarrow N_\mathfrak{m}$$ is a monomorphism (resp. epimorphism, isomorphism).
+:::
 
 The proof follows by applying [Lemma 3](#lem3) to the kernel and cokernel.
 
 The following proposition will be used frequently hereafter, so it is worth remembering the statement even if one does not dwell on the proof.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**Proposition 5**</ins> Fix a ring $$A$$ and an $$A$$-algebra $$E$$. Then for any $$A$$-modules $$M,N$$, the following $$E$$-module homomorphism
+::: Proposition 5
+Fix a ring $$A$$ and an $$A$$-algebra $$E$$. Then for any $$A$$-modules $$M,N$$, the following $$E$$-module homomorphism
 
 $$\alpha: E\otimes_A\Hom_A(M,N) \rightarrow\Hom_E(E\otimes_A M, E\otimes_AN);\qquad (1\otimes f)\mapsto \id_E\otimes_A f$$
 
 is well-defined. In particular, if $$E$$ is a flat $$A$$-module and $$M$$ is finitely presented, then $$\alpha$$ is an isomorphism.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 That $$\alpha$$ is well-defined is obvious. Now suppose $$E$$ is a flat $$A$$-module and $$M=A$$. Then the given map
 
 $$\alpha: E\otimes_A\Hom_A(A, N) \rightarrow\Hom_E(E\otimes_AM, E\otimes_AN)$$
@@ -129,8 +108,7 @@ $$F \rightarrow G \rightarrow M \rightarrow 0$$
 and apply the four lemma to the following commutative diagram
 
 ![general_case](/assets/images/Math/Commutative_Algebra/Properties_of_Localization-2.svg){:style="width:47.63em" class="invert" .align-center}
-
-</details>
+:::
 
 In particular, suppose a short exact sequence
 
@@ -146,9 +124,8 @@ $$\Hom_\rMod{A}(N,L) \rightarrow \Hom_\rMod{A}(N,N) \rightarrow 0$$
 
 is surjective, then the original exact sequence $$0 \rightarrow M \rightarrow L \rightarrow N \rightarrow 0$$ is split. Thus we obtain the following.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor6">**Corollary 6**</ins> Suppose a short exact sequence
+::: Corollary 6
+Suppose a short exact sequence
 
 $$0 \rightarrow M \rightarrow L \rightarrow N \rightarrow 0$$
 
@@ -157,34 +134,27 @@ is given. If $$N$$ is finitely presented and for every maximal ideal $$\mathfrak
 $$0 \rightarrow M_\mathfrak{m} \rightarrow L_\mathfrak{m} \rightarrow N_\mathfrak{m} \rightarrow 0$$
 
 is a splitting exact sequence, then the original exact sequence splits.
-
-</div>
+:::
 
 ## Radical of an Ideal
 
 The following result is not strictly related to localization, but we mention it here because the proof uses a multiplicative subset.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop7">**Proposition 7**</ins> For a ring $$A$$ and a multiplicative subset $$S$$, suppose $$\mathfrak{a}$$ is maximal among ideals disjoint from $$S$$. Then $$\mathfrak{a}$$ is a prime ideal.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 7
+For a ring $$A$$ and a multiplicative subset $$S$$, suppose $$\mathfrak{a}$$ is maximal among ideals disjoint from $$S$$. Then $$\mathfrak{a}$$ is a prime ideal.
+:::
+::: Proof
 Let $$a_1,a_2$$ be two elements of $$A$$; we show that if $$a_1,a_2\not\in \mathfrak{a}$$ then $$a_1a_2\not\in \mathfrak{a}$$. By the maximality of $$\mathfrak{a}$$, the two ideals $$\mathfrak{a}+(a_1)$$ and $$\mathfrak{a}+(a_2)$$ must each intersect $$S$$, so there exist suitable $$b_1,b_2\in A$$ and $$x_1,x_2\in \mathfrak{a}$$ such that $$a_ib_i+x_i\in S$$. Since $$S$$ is closed under multiplication, the element
 
 $$(a_1b_1+x_1)(a_2b_2+x_2)=a_1a_2b_1b_2+a_1b_1x_2+a_2b_2x_1+x_1x_2$$
 
 must also belong to $$S$$. If, contrary to the conclusion, $$a_1a_2\in \mathfrak{a}$$, then all four terms on the right-hand side lie in $$\mathfrak{a}$$, contradicting the assumption that $$\mathfrak{a}$$ and $$S$$ are disjoint.
-
-</details>
+:::
 
 In a similar vein we obtain the following.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor8">**Corollary 8**</ins> For an ideal $$\mathfrak{a}$$ of a ring $$A$$, define the *radical* $$\sqrt{\mathfrak{a}}$$ by the formula
+::: Corollary 8
+For an ideal $$\mathfrak{a}$$ of a ring $$A$$, define the *radical* $$\sqrt{\mathfrak{a}}$$ by the formula
 
 $$\sqrt{\mathfrak{a}}=\{a\mid a^k\in \mathfrak{a}\text{ for some $k\in \mathbb{N}$}\}$$
 
@@ -193,14 +163,10 @@ Then
 $$\sqrt{\mathfrak{a}}=\bigcap_\text{\scriptsize$\mathfrak{p}$ prime containing $\mathfrak{a}$} \mathfrak{p}$$
 
 holds.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 One direction is obvious. For the converse, if $$a\not\in \sqrt{\mathfrak{a}}$$ then set $$S=\{a^k\mid k\geq 1\}$$ and apply [§Localization, ⁋Proposition 8](/en/math/commutative_algebra/localization#prop8).
-
-</details>
+:::
 
 ---
 

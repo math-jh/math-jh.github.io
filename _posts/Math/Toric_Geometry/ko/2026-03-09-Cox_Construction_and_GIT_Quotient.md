@@ -26,42 +26,34 @@ GIT의 기초 — reductive group, invariant ring, affine GIT quotient $$X/\!/G 
 
 군 작용에 대한 quotient를 정의하는 방식은 *어떤 보편 성질을 만족하는 morphism인가*와 *집합으로서 어떤 동치류를 잡는가*의 두 관점으로 갈린다. 전자는 categorical, 후자는 set-theoretic 관점이며, GIT의 핵심 통찰은 이 둘이 일반적으로 일치하지 않는다는 점이다. 가령 $$\mathbb{C}^\ast$$가 $$\mathbb{C}^2$$ 위에 $$t\cdot(z_1, z_2) = (tz_1, tz_2)$$로 작용할 때, 원점은 닫힌 궤도이지만 나머지 모든 궤도의 폐포가 원점을 포함하므로 set-theoretic quotient $$\mathbb{C}^2/\mathbb{C}^\ast$$에는 분리 성질이 결여된다. 이러한 상황을 체계적으로 다루기 위해 다음 두 개념을 분리한다.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> Algebraic group $$G$$가 작용하는 variety $$X$$에 대해, morphism $$\varphi: X \to Y$$가 *categorical quotient<sub>범주적 몫</sub>*라 함은 다음 두 조건을 만족함을 의미한다:
+::: 정의 1
+Algebraic group $$G$$가 작용하는 variety $$X$$에 대해, morphism $$\varphi: X \to Y$$가 *categorical quotient<sub>범주적 몫</sub>*라 함은 다음 두 조건을 만족함을 의미한다:
 
 1. $$\varphi$$는 $$G$$-invariant이다. 즉 모든 $$g \in G$$에 대해 $$\varphi \circ g = \varphi$$.
 2. $$G$$-invariant morphism $$f: X \to Z$$가 주어질 때마다 유일한 morphism $$\tilde{f}: Y \to Z$$가 존재하여 $$f = \tilde{f} \circ \varphi$$.
-
-</div>
+:::
 
 이는 보편 성질이므로 $$Y$$가 존재한다면 유일성은 자동이다. 다만 정의는 $$Y$$가 한 점으로 붕괴할 가능성을 배제하지 않으며, 위에서 본 $$\mathbb{C}^\ast$$의 scaling 예시에서는 실제로 categorical quotient가 한 점에 불과하다 ([예시 5](#ex5)). 즉 categorical quotient는 *너무 적은 정보*를 담을 수 있다.
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**정의 2**</ins> Categorical quotient $$\varphi: X \to Y$$가 *geometric quotient<sub>기하학적 몫</sub>*라 함은 추가로 다음 조건이 성립함을 의미한다:
+::: 정의 2
+Categorical quotient $$\varphi: X \to Y$$가 *geometric quotient<sub>기하학적 몫</sub>*라 함은 추가로 다음 조건이 성립함을 의미한다:
 
 1. $$\varphi$$는 surjective이고, 각 $$y \in Y$$의 fiber $$\varphi^{-1}(y)$$는 정확히 하나의 $$G$$-궤도이다.
 2. $$\varphi$$는 submersion. 즉, $$U \subseteq Y$$가 열린 집합인 것과 $$\varphi^{-1}(U) \subseteq X$$가 열린 $$G$$-불변 집합인 것은 동치이다.
 3. 구조층의 차원에서 $$\mathcal{O}_Y = (\varphi_\ast \mathcal{O}_X)^G$$.
-
-</div>
+:::
 
 Geometric quotient는 통상 $$Y = X/G$$로 표기하며, $$Y$$의 점은 정확히 $$X$$의 $$G$$-궤도와 일대일 대응한다. Categorical quotient는 닫힌 궤도들을 한 점으로 묶을 뿐이지만 ([명제 3](#prop3)), geometric quotient는 모든 궤도를 분리한다. 직관적으로 두 개념 사이의 간극은 $$X$$ 안에 *다른 궤도의 폐포에 포함되는 궤도*가 있을 때 발생한다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop3">**명제 3**</ins> Reductive group $$G$$가 affine variety $$X = \Spec A$$ 위에 작용한다고 하자. 그러면 invariant subring $$A^G \subseteq A$$ ([\[스킴\] §대수적 군, ⁋정의 14](/ko/math/scheme_theory/algebraic_groups#def14))는 finitely generated이며, 자연스러운 morphism
+::: 명제 3
+Reductive group $$G$$가 affine variety $$X = \Spec A$$ 위에 작용한다고 하자. 그러면 invariant subring $$A^G \subseteq A$$ ([\[스킴\] §대수적 군, ⁋정의 14](/ko/math/scheme_theory/algebraic_groups#def14))는 finitely generated이며, 자연스러운 morphism
 
 $$\varphi : X \longrightarrow X /\!/ G := \Spec(A^G)$$
 
 는 categorical quotient이다 ([\[스킴\] §대수적 군, ⁋정의 17](/ko/math/scheme_theory/algebraic_groups#def17)). 더욱이 두 점 $$x, x' \in X$$가 $$\varphi$$에 의해 같은 상을 가질 필요충분조건은 두 궤도 폐포 $$\overline{G\cdot x}$$와 $$\overline{G\cdot x'}$$가 교차하는 것이다.
+:::
 
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 $$A^G$$의 유한생성성은 *Hilbert finiteness theorem*의 결과이다. $$G$$가 reductive이므로 모든 rational $$G$$-module은 완전가약(completely reducible)이고 ([\[스킴\] §대수적 군, ⁋정의 15](/ko/math/scheme_theory/algebraic_groups#def15)), 그 결과 $$A$$는 trivial한 invariant 성분과 그 보충 $$G$$-불변 부분공간 $$A_0$$로 분해된다:
 
 $$A = A^G \oplus A_0.$$
@@ -71,24 +63,20 @@ $$A = A^G \oplus A_0.$$
 이제 $$\varphi$$의 categorical quotient 성질을 본다. $$G$$-invariant morphism $$f: X \to Z = \Spec B$$가 주어지면 이에 대응하는 ring homomorphism $$f^\sharp: B \to A$$의 상은 $$G$$-invariant element로 이루어지므로 $$A^G$$에 포함된다. 따라서 $$f^\sharp$$는 $$B \to A^G$$를 거쳐 분해되고, 이는 $$f$$가 $$\varphi$$를 통해 유일하게 분해됨을 뜻한다. 일반적인 $$Z$$에 대해서는 affine cover로 환원하면 동일한 결론이 따른다.
 
 두 점이 같은 상을 가질 조건을 보인다. 두 궤도 폐포가 교차하면 그 교집합 위에서 모든 $$G$$-invariant 함수는 두 점에서 같은 값을 가지므로, 임의의 $$f \in A^G$$에 대해 $$f(x) = f(x')$$이다. 역으로 $$\overline{G \cdot x} \cap \overline{G \cdot x'} = \emptyset$$이라 가정하자. 두 닫힌 $$G$$-불변 부분집합이 disjoint이므로 그 ideal들 $$I_x, I_{x'} \subseteq A$$에 대해 $$I_x + I_{x'} = A$$이다. Reductivity로부터 $$I_x^G + I_{x'}^G = A^G$$가 성립하며, 이로부터 $$f(x) = 0$$, $$f(x') = 1$$인 $$f \in A^G$$가 존재한다. 따라서 $$\varphi(x) \ne \varphi(x')$$이다.
-
-</details>
+:::
 
 위 명제의 두 번째 부분이 categorical quotient와 geometric quotient의 차이를 정량화한다. 즉 $$X/\!/G$$의 한 점은 $$X$$의 *$$G$$-궤도들의 동치류*에 대응하되, 그 동치관계는 *궤도 폐포가 사슬로 연결됨*이다. 모든 궤도가 이미 닫혀 있다면 이 동치류는 곧 궤도 자체이고 이 경우 categorical quotient는 geometric quotient가 된다.
 
-<div class="remark" markdown="1">
-
-<ins id="rmk4">**참고 4**</ins> 명제의 finite generation 부분은 $$G$$가 reductive라는 가정을 본질적으로 사용한다. Nagata는 unipotent group의 작용에 대해 invariant ring이 finitely generated가 아닐 수 있음을 보여 Hilbert의 14번째 문제의 반례를 제시하였다. 본 글에서 $$G$$를 reductive로 제한하는 것은 단순한 편의가 아니라 GIT가 성립하기 위한 핵심 가정이다.
-
-</div>
+::: 참고 4
+명제의 finite generation 부분은 $$G$$가 reductive라는 가정을 본질적으로 사용한다. Nagata는 unipotent group의 작용에 대해 invariant ring이 finitely generated가 아닐 수 있음을 보여 Hilbert의 14번째 문제의 반례를 제시하였다. 본 글에서 $$G$$를 reductive로 제한하는 것은 단순한 편의가 아니라 GIT가 성립하기 위한 핵심 가정이다.
+:::
 
 ## $$\mathbb{P}^n$$을 GIT quotient로 보기
 
 Cox 구성으로 본격적으로 들어가기 전에, 가장 간단한 toric variety인 $$\mathbb{P}^n$$이 어떻게 GIT quotient로 자연스럽게 나타나는지를 살펴보자. 이 예시는 *어떤 linearization을 택하느냐에 따라 quotient가 달라진다*는 GIT의 본질을 명확히 보여주며, 이후 일반 toric variety의 Cox 구성으로 곧장 일반화된다.
 
-<div class="example" markdown="1">
-
-<ins id="ex5">**예시 5**</ins> $$G = \mathbb{C}^\ast$$가 $$X = \mathbb{C}^2$$ 위에 scaling
+::: 예시 5
+$$G = \mathbb{C}^\ast$$가 $$X = \mathbb{C}^2$$ 위에 scaling
 
 $$t \cdot (z_1, z_2) = (tz_1, tz_2)$$
 
@@ -123,12 +111,10 @@ $$X^{\mathrm{ss}}(L_\chi) = X^{\mathrm{s}}(L_\chi) = \mathbb{C}^2 \setminus \{0\
 $$(\mathbb{C}^2 \setminus \{0\}) / \mathbb{C}^\ast = \mathbb{P}^1$$
 
 과 일치한다. 같은 variety, 같은 군의 작용임에도 linearization의 character 선택에 따라 quotient가 한 점에서 $$\mathbb{P}^1$$로 달라진다.
+:::
 
-</div>
-
-<div class="example" markdown="1">
-
-<ins id="ex6">**예시 6**</ins> 같은 계산이 차원 $$n$$에서 그대로 일반화된다. $$G = \mathbb{C}^\ast$$가 $$X = \mathbb{C}^n$$ 위에 표준 scaling으로 작용하고 character $$\chi(t) = t$$로 linearize하면
+::: 예시 6
+같은 계산이 차원 $$n$$에서 그대로 일반화된다. $$G = \mathbb{C}^\ast$$가 $$X = \mathbb{C}^n$$ 위에 표준 scaling으로 작용하고 character $$\chi(t) = t$$로 linearize하면
 
 $$\mathbb{C}^n /\!/_\chi \mathbb{C}^\ast = \Proj \mathbb{C}[\z_1, \ldots, \z_n] = \mathbb{P}^{n-1}$$
 
@@ -137,20 +123,17 @@ $$\mathbb{C}^n /\!/_\chi \mathbb{C}^\ast = \Proj \mathbb{C}[\z_1, \ldots, \z_n] 
 $$\mathbb{P}^{n-1} = (\mathbb{C}^n \setminus \{0\}) / \mathbb{C}^\ast$$
 
 가 GIT quotient의 특수한 경우임을 명시한다. 곧 살펴볼 Cox 구성은 이 시점을 임의의 toric variety로 확장한 것이다.
-
-</div>
+:::
 
 ## Homogeneous coordinate ring과 irrelevant ideal
 
 Projective space의 homogeneous coordinate ring은 $$\mathbb{C}[\x_0, \ldots, \x_n]$$으로, 각 변수가 $$\mathbb{P}^n$$의 coordinate hyperplane에 대응한다. Cox는 이를 toric variety로 확장하기 위해, fan의 1차원 cone 각각에 변수를 대응시킨다.
 
-<div class="definition" markdown="1">
-
-<ins id="def7">**정의 7**</ins> Toric variety $$X_\Sigma$$의 *homogeneous coordinate ring* 혹은 *Cox ring*은 다음과 같이 정의된다:
+::: 정의 7
+Toric variety $$X_\Sigma$$의 *homogeneous coordinate ring* 혹은 *Cox ring*은 다음과 같이 정의된다:
 
 $$S = \mathbb{C}[\x_\rho \mid \rho \in \Sigma(1)].$$
-
-</div>
+:::
 
 Cox ring $$S$$는 polynomial ring이므로 특히 UFD이다. 이로써 toric variety의 좌표환은 일반 variety보다 훨씬 단순한 형태로 인코딩된다 — 실제로 toric variety가 아닌 일반 variety에 대해서도 Cox ring을 정의할 수 있으나, polynomial ring이 되는 것은 toric의 경우뿐이다.
 
@@ -168,9 +151,8 @@ Cox ring $$S$$ 위의 $$\Cl(X_\Sigma)$$-grading은 다음과 같이 정의된다
 
 다음으로, 사영공간 구성에서 원점 $$\{0\}$$을 제거하던 것에 해당하는 exceptional subset을 정의한다.
 
-<div class="definition" markdown="1">
-
-<ins id="def8">**정의 8**</ins> 각 cone $$\sigma \in \Sigma$$에 대해 monomial $$\hat{\x}_\sigma$$를
+::: 정의 8
+각 cone $$\sigma \in \Sigma$$에 대해 monomial $$\hat{\x}_\sigma$$를
 
 $$\hat{\x}_\sigma = \prod_{\rho \not\subset \sigma} \x_\rho$$
 
@@ -179,8 +161,7 @@ $$\hat{\x}_\sigma = \prod_{\rho \not\subset \sigma} \x_\rho$$
 $$B(\Sigma) = \langle \hat{\x}_\sigma \mid \sigma \in \Sigma \rangle \subseteq S$$
 
 이며, *exceptional set* $$Z(\Sigma) = V(B(\Sigma)) \subseteq \mathbb{C}^{\Sigma(1)}$$은 그 zero locus이다.
-
-</div>
+:::
 
 명칭의 유래는 $$\mathbb{P}^n$$의 경우 $$B(\Sigma) = \langle \x_0, \ldots, \x_n \rangle$$이 되어 usual homogeneous coordinate ring의 irrelevant ideal과 일치하는 데 있다. 실제로 $$\mathbb{P}^n$$의 fan은 $$n+1$$개의 1차원 cone을 가지며, 각 maximal cone은 그 중 $$n$$개를 포함하므로 $$\hat{\x}_\sigma$$는 변수 하나만 빼고 곱한 것이 된다. 모든 maximal cone에 대해 모으면 $$\langle \x_0, \ldots, \x_n \rangle$$이 생성된다.
 
@@ -188,19 +169,15 @@ $$B(\Sigma) = \langle \hat{\x}_\sigma \mid \sigma \in \Sigma \rangle \subseteq S
 
 이제 toric variety $$X_\Sigma$$를 affine space $$\mathbb{C}^{\Sigma(1)}$$에서 exceptional set $$Z(\Sigma)$$를 제거한 뒤 군 $$G$$로 몫을 취함으로써 재구성할 수 있다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop9">**명제 9**</ins> Toric variety $$X_\Sigma$$는 $$\mathbb{C}^{\Sigma(1)} \setminus Z(\Sigma)$$에 대한 $$G$$의 작용의 categorical quotient로
+::: 명제 9
+Toric variety $$X_\Sigma$$는 $$\mathbb{C}^{\Sigma(1)} \setminus Z(\Sigma)$$에 대한 $$G$$의 작용의 categorical quotient로
 
 $$X_\Sigma \cong (\mathbb{C}^{\Sigma(1)} \setminus Z(\Sigma)) /\!/ G$$
 
 로 나타난다. 더욱이 $$\Sigma$$가 *simplicial* fan일 때 — 즉 각 cone이 그 차원만큼의 $$\mathbb{R}$$-linearly independent한 ray generator로 생성될 때 — 이 quotient는 geometric quotient가 된다.
+:::
 
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 Cox의 원래 논문의 증명을 따라간다. 먼저 $$G$$가 $$\mathbb{C}^{\Sigma(1)} \setminus Z(\Sigma)$$ 위에 잘 정의된 작용을 가짐을 본다: $$Z(\Sigma)$$는 coordinate subspace들의 union이며 $$G$$의 작용은 $$(\mathbb{C}^\ast)^{\Sigma(1)}$$의 작용으로부터 유도된 diagonal action이므로 coordinate subspace들을 보존한다.
 
 각 cone $$\sigma \in \Sigma$$에 대해 $$U_\sigma = \Spec \mathbb{C}[\sigma^\vee \cap M]$$는 toric variety의 affine chart이다. 이제 $$\hat{\x}_\sigma$$에 의해 localize한 ring $$S_{\hat{\x}_\sigma}$$의 $$0$$차 부분 $$(S_{\hat{\x}_\sigma})^{(0)}$$은 $$G$$-invariant element들로 구성되며, Cox는 이것이 $$\mathbb{C}[\sigma^\vee \cap M]$$와 isomorphic함을 보였다:
@@ -210,16 +187,14 @@ $$(S_{\hat{\x}_\sigma})^{(0)} \cong \mathbb{C}[\sigma^\vee \cap M].$$
 이로부터 $$U_\sigma$$가 $$\mathbb{C}^{\Sigma(1)} \setminus Z(\Sigma)$$의 $$G$$-invariant open subset에 대한 quotient로 얻어진다. 이러한 affine chart들이 fan의 조합론에 따라 적절히 glueing되어 전체 $$X_\Sigma$$가 categorical quotient로서 얻어진다.
 
 Simplicial인 경우, 각 cone이 simplicial이므로 local chart $$U_\sigma$$에 대한 작용의 stabilizer가 유한군이 되어 ([명제 3](#prop3)의 orbit closure 기준이 단순화됨) geometric quotient가 된다. 역으로 geometric quotient이려면 stabilizer가 유한해야 하고, 이는 각 cone이 simplicial임을 의미한다.
-
-</details>
+:::
 
 명제 9의 geometric quotient 버전은 매우 중요하다. Simplicial toric variety의 경우 점들이 실제로 $$G$$의 궤도로 대응되므로 homogeneous coordinate의 직관적 이해가 가능하다. Non-simplicial 경우에는 categorical quotient에 그치므로 점들이 $$G$$-orbit과 일대일 대응하지는 않지만, 여전히 좋은 geometric interpretation을 제공한다.
 
 ## 예시
 
-<div class="example" markdown="1">
-
-<ins id="ex10">**예시 10 (사영공간)**</ins> $$\mathbb{P}^n$$의 fan $$\Sigma$$는 원점을 중심으로 하는 $$n+1$$개의 1차원 cone $$\rho_0, \ldots, \rho_n$$으로 구성되며, primitive generator는 $$u_0, \ldots, u_{n-1}$$이 표준기저이고 $$u_n = -u_0 - \cdots - u_{n-1}$$이다. 각 maximal cone $$\sigma_i = \mathrm{cone}(u_0, \ldots, \hat{u}_i, \ldots, u_n)$$에 대해
+::: 예시 10 (사영공간)
+$$\mathbb{P}^n$$의 fan $$\Sigma$$는 원점을 중심으로 하는 $$n+1$$개의 1차원 cone $$\rho_0, \ldots, \rho_n$$으로 구성되며, primitive generator는 $$u_0, \ldots, u_{n-1}$$이 표준기저이고 $$u_n = -u_0 - \cdots - u_{n-1}$$이다. 각 maximal cone $$\sigma_i = \mathrm{cone}(u_0, \ldots, \hat{u}_i, \ldots, u_n)$$에 대해
 
 $$\hat{\x}_{\sigma_i} = \x_i$$
 
@@ -236,12 +211,10 @@ $$t \cdot (\x_0, \ldots, \x_n) = (t\x_0, \ldots, t\x_n)$$
 $$\mathbb{P}^n = (\mathbb{C}^{n+1} \setminus \{0\}) / \mathbb{C}^\ast$$
 
 를 재현한다. 이는 [예시 6](#ex6)에서 본 GIT 시점과 정확히 일치한다.
+:::
 
-</div>
-
-<div class="example" markdown="1">
-
-<ins id="ex11">**예시 11 (사영선의 곱)**</ins> $$X = \mathbb{P}^1 \times \mathbb{P}^1$$의 fan은 1차원 cone 4개 $$\rho_1, \rho_2, \rho_3, \rho_4$$를 가지며 primitive generator는 보통 $$u_1 = (1, 0)$$, $$u_2 = (0, 1)$$, $$u_3 = (-1, 0)$$, $$u_4 = (0, -1)$$이다. Maximal cone 4개는 각각 인접한 두 cone으로 생성되며, 예컨대 $$\sigma_{12} = \mathrm{cone}(u_1, u_2)$$에 대해 $$\hat{\x}_{\sigma_{12}} = \x_3 \x_4$$이다. 모든 maximal cone에 대해 계산하면
+::: 예시 11 (사영선의 곱)
+$$X = \mathbb{P}^1 \times \mathbb{P}^1$$의 fan은 1차원 cone 4개 $$\rho_1, \rho_2, \rho_3, \rho_4$$를 가지며 primitive generator는 보통 $$u_1 = (1, 0)$$, $$u_2 = (0, 1)$$, $$u_3 = (-1, 0)$$, $$u_4 = (0, -1)$$이다. Maximal cone 4개는 각각 인접한 두 cone으로 생성되며, 예컨대 $$\sigma_{12} = \mathrm{cone}(u_1, u_2)$$에 대해 $$\hat{\x}_{\sigma_{12}} = \x_3 \x_4$$이다. 모든 maximal cone에 대해 계산하면
 
 $$B(\Sigma) = \langle \x_1 \x_3,\, \x_1 \x_4,\, \x_2 \x_3,\, \x_2 \x_4 \rangle = \langle \x_1, \x_2 \rangle \cap \langle \x_3, \x_4 \rangle$$
 
@@ -258,29 +231,23 @@ $$(t_1, t_2) \cdot (\x_1, \x_2, \x_3, \x_4) = (t_1 \x_1, t_1 \x_2, t_2 \x_3, t_2
 $$\mathbb{P}^1 \times \mathbb{P}^1 = (\mathbb{C}^4 \setminus Z(\Sigma)) / (\mathbb{C}^\ast)^2$$
 
 를 얻는다.
-
-</div>
+:::
 
 ## Cox ring과 line bundle의 대응
 
 사영공간에서 homogeneous coordinate ring의 graded component가 twisted structure sheaf의 global section과 대응했듯, Cox ring에서도 같은 대응이 성립한다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop12">**명제 12**</ins> Toric variety $$X_\Sigma$$가 simplicial이라고 하자. $$\beta \in \Cl(X_\Sigma)$$에 대해 $$S$$의 $$\beta$$차 성분 $$S_\beta$$는 다음과 같은 isomorphism을 갖는다:
+::: 명제 12
+Toric variety $$X_\Sigma$$가 simplicial이라고 하자. $$\beta \in \Cl(X_\Sigma)$$에 대해 $$S$$의 $$\beta$$차 성분 $$S_\beta$$는 다음과 같은 isomorphism을 갖는다:
 
 $$S_\beta \cong H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D)).$$
 
 여기서 $$D$$는 class $$\beta$$에 속하는 임의의 Weil divisor이다.
+:::
 
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 Cox ring $$S$$의 $$\beta$$차 성분은 monomial $$\prod_\rho \x_\rho^{a_\rho}$$들로 생성되며, 여기서 $$\sum_\rho a_\rho D_\rho$$가 class $$\beta$$를 갖는다. 한편 [§토러스 인자와 선다발, ⁋명제 7](/ko/math/toric_geometry/toric_divisors#prop7)에 의해 $$H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))$$는 $$\langle m, u_\rho \rangle \ge -a_\rho$$를 만족하는 lattice point $$m \in M$$에 대응하는 character $$\chi^m$$들로 이루어진다. 이 조건은 $$\beta$$차 monomial의 정의와 정확히 일치하며, 각 lattice point $$m$$에 대응하는 monomial $$\prod_\rho \x_\rho^{\langle m, u_\rho \rangle + a_\rho}$$의 degree가 $$\sum_\rho (\langle m, u_\rho \rangle + a_\rho) D_\rho = \sum_\rho a_\rho D_\rho + \divisor(\chi^m) = \beta$$가 되므로 ($$\divisor(\chi^m)$$은 principal divisor이므로 class group에서 사라짐) 자연스러운 isomorphism이 얻어진다.
-
-</details>
+:::
 
 명제 12는 Cox ring이 toric variety의 모든 line bundle의 global section을 동시에 인코딩한다는 것을 의미한다. 이는 사영공간에서 $$\mathbb{C}[\x_0, \ldots, \x_n]$$이 모든 $$\mathcal{O}_{\mathbb{P}^n}(d)$$의 global section을 담고 있는 것과 정확히 일치한다. 이 관점에서 Cox ring은 toric variety의 divisor class group으로 graded된 "universal" coordinate ring이다.
 

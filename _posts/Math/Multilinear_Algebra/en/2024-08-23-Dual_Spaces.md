@@ -40,21 +40,17 @@ The same reasoning applies to a right $$A$$-module $$M$$ and a $$(B,A)$$-bimodul
 
 Any ring $$A$$ has a natural $$(A,A)$$-bimodule structure given by its multiplication. Therefore, by the preceding argument, we may regard $$\Hom_{\lMod{A}}(M, A)$$ as a right $$A$$-module.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> The right $$A$$-module $$\Hom_{\lMod{A}}(M, A)$$ defined above is called the *dual module* of $$M$$, and is denoted by $$M^\ast$$.
-
-</div>
+::: Definition 1
+The right $$A$$-module $$\Hom_{\lMod{A}}(M, A)$$ defined above is called the *dual module* of $$M$$, and is denoted by $$M^\ast$$.
+:::
 
 Similarly, given a right $$A$$-module $$M$$, we may view $$\Hom_{\rMod{A}}(M,A)$$ as a left $$A$$-module, and we call it the dual module of $$M$$. In the special case $$M=A$$, to avoid confusion we write $$A_l$$ for $$A$$ regarded as a left $$A$$-module and $$A_r$$ for $$A$$ regarded as a right $$A$$-module; then one can verify the two equalities $$A_l^\ast=A_r$$ and $$A_r^\ast=A_l$$.
 
 By definition, for any $$x\in M$$ and $$\xi\in M^\ast$$, the pair assigns an element $$\xi(x)\in A$$. We write this as $$\langle x, \xi\rangle$$, and call this notation the *Kronecker pairing*.
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**Definition 2**</ins> For any $$A$$-module $$M$$ and its dual $$M^\ast$$, elements $$x\in M$$ and $$\xi\in M^\ast$$ are said to be *orthogonal* if $$\langle x,\xi\rangle=0$$.
-
-</div>
+::: Definition 2
+For any $$A$$-module $$M$$ and its dual $$M^\ast$$, elements $$x\in M$$ and $$\xi\in M^\ast$$ are said to be *orthogonal* if $$\langle x,\xi\rangle=0$$.
+:::
 
 If every pair of elements from a subset of $$M$$ and a subset of $$M^\ast$$ is orthogonal, we say that the two subsets are orthogonal. Now fix an arbitrary $$x\in M$$, and let $$\xi,\xi_1,\xi_2\in M^\ast$$ and $$\alpha\in A$$. Then
 
@@ -62,11 +58,9 @@ $$\langle x, \xi_1+\xi_2\rangle=\langle x, \xi_1\rangle+\langle x,\xi_2\rangle=0
 
 hence, for a fixed subset $$S$$ of $$M$$, the collection of elements of $$M^\ast$$ orthogonal to the elements of $$S$$ forms a submodule of $$M^\ast$$.
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**Definition 3**</ins> The submodule of $$M^\ast$$ defined as above is called the submodule orthogonal to $$S$$, and is denoted by $$S^\perp$$.
-
-</div>
+::: Definition 3
+The submodule of $$M^\ast$$ defined as above is called the submodule orthogonal to $$S$$, and is denoted by $$S^\perp$$.
+:::
 
 For an arbitrary subset $$T\subseteq M^\ast$$, we can similarly define $$T^\perp$$ by the formula
 
@@ -82,11 +76,9 @@ $$\Hom(u,A):\Hom_{\lMod{A}}(N,A)\rightarrow\Hom_{\lMod{A}}(M,A)$$
 
 is compatible with the right action of $$A$$. That is, $$\Hom(u,A)$$ is a right $$A$$-module homomorphism.
 
-<div class="definition" markdown="1">
-
-<ins id="def4">**Definition 4**</ins> For an $$A$$-linear map $$u:M \rightarrow N$$ between left $$A$$-modules, the right $$A$$-module homomorphism defined above is called the *transpose* of $$u$$, and is denoted by $$u^\ast$$.
-
-</div>
+::: Definition 4
+For an $$A$$-linear map $$u:M \rightarrow N$$ between left $$A$$-modules, the right $$A$$-module homomorphism defined above is called the *transpose* of $$u$$, and is denoted by $$u^\ast$$.
+:::
 
 $$u^\ast$$ is determined by its values $$u^\ast(\xi)\in M^\ast$$ at any $$\xi\in N^\ast$$, and in turn each $$u^\ast(\xi)\in M^\ast$$ is determined by its values at any $$x\in M$$
 
@@ -100,16 +92,14 @@ and conversely, if this formula holds for all $$x\in M$$ and all $$\xi\in N^\ast
 
 Moreover, by the functoriality of $$\Hom(-,A)$$ and [[Algebraic Structures] §Modules, ⁋Proposition 8](/en/math/algebraic_structures/modules#prop8), we obtain the following proposition.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**Proposition 5**</ins> The following hold.
+::: Proposition 5
+The following hold.
 
 1. For any two $$A$$-linear maps $$u,v:M \rightarrow N$$, we have $$(u+v)^\ast=u^\ast+v^\ast$$.
 2. For any two $$A$$-linear maps $$u:M \rightarrow N$$ and $$v:N \rightarrow L$$, we have $$(v\circ u)^\ast=u^\ast\circ v^\ast$$.
 3. For any $$M$$, we have $$(\id_M)^\ast=\id_{M^\ast}$$.
 4. For any $$A$$-linear isomorphism $$u:M \rightarrow N$$, we have $$(u^{-1})^\ast=(u^\ast)^{-1}$$. 
-
-</div>
+:::
 
 ## Dual Basis
 
@@ -127,12 +117,10 @@ $$\langle e_i, e_j^\ast\rangle=\delta_{ij}$$
 
 holds. The collection of these elements is linearly independent, but if $$I$$ is infinite it does not form a basis of $$M^\ast$$. However, if $$I$$ is finite then $$\prod_{i\in I} A\cong \bigoplus_{i\in I}A$$, so they constitute a basis.
 
-<div class="definition" markdown="1">
-
-<ins id="def6">**Definition 6**</ins> Fix an arbitrary free module $$M$$ and a basis $$(e_i)_{i\in I}$$. Then the family $$(e_i^\ast)_{i\in I}$$ of elements of $$M^\ast$$ defined above is called the *coordinate form* corresponding to $$(e_i)_{i\in I}$$.  
+::: Definition 6
+Fix an arbitrary free module $$M$$ and a basis $$(e_i)_{i\in I}$$. Then the family $$(e_i^\ast)_{i\in I}$$ of elements of $$M^\ast$$ defined above is called the *coordinate form* corresponding to $$(e_i)_{i\in I}$$.  
 If $$M$$ is a finitely generated free module, then this family $$(e_i^\ast)_{i\in I}$$ is a basis of $$M^\ast$$, and is called the *dual basis* of $$(e_i)$$.
-
-</div>
+:::
 
 
 ## Bidual Space
@@ -143,16 +131,12 @@ $$\langle x,-\rangle: M^\ast \rightarrow A$$
 
 is a right $$A$$-module homomorphism. Thus the above formula defines a map from $$M$$ to $$M^{\ast\ast}$$, and one can verify that this map is also linear. In general, this map is neither injective nor surjective.
 
-<div class="definition" markdown="1">
-
-<ins id="def7">**Definition 7**</ins> If the above map $$M \rightarrow M^{\ast\ast}$$ is bijective, then $$M$$ is called *reflexive*.
-
-</div>
+::: Definition 7
+If the above map $$M \rightarrow M^{\ast\ast}$$ is bijective, then $$M$$ is called *reflexive*.
+:::
 
 Then the following holds.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop8">**Proposition 8**</ins> For any free module $$M$$, the map $$M \rightarrow M^{\ast\ast}$$ defined above is injective. If in addition $$M$$ is finitely generated, then this map is bijective.
-
-</div>
+::: Proposition 8
+For any free module $$M$$, the map $$M \rightarrow M^{\ast\ast}$$ defined above is injective. If in addition $$M$$ is finitely generated, then this map is bijective.
+:::

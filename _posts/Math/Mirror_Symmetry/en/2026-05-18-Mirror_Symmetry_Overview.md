@@ -34,17 +34,15 @@ In the case of toric varieties ([\[Toric Geometry\] §Definition of Toric Variet
 
 Let $$\Sigma$$ be the fan of a smooth projective toric variety $$X=X_\Sigma$$, and let $$v_1, \ldots, v_N \in N \cong \mathbb{Z}^n$$ be the primitive generators of its one-dimensional cones. If $$\Sigma$$ is a complete fan, the $$v_i$$ span $$N_\mathbb{R}$$. However, since $$N>n$$, they are $$\mathbb{Z}$$-linearly dependent, and thus there exist $$r=N-n$$ integral relations among them. 
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> The *charge matrix* of $$X_\Sigma$$ is the integer matrix
+::: Definition 1
+The *charge matrix* of $$X_\Sigma$$ is the integer matrix
 
 $$Q = (Q_{ji}) \in \Mat_{r \times N}(\mathbb{Z})$$
 
 consisting of the coefficients of the integral relations among the above rays
 
 $$\sum_{i=1}^N Q_{ji}\, v_i = 0,\qquad j = 1, \ldots, r.$$
-
-</div>
+:::
 
 Although the charge matrix is simply the matrix collecting the coefficients of the ray relations, if one writes $$X_\Sigma$$ as the GIT quotient via the Cox construction
 
@@ -52,9 +50,8 @@ $$X_\Sigma \;=\; \big(\mathbb{C}^N \setminus Z\big) \,\big/\!/\, (\mathbb{C}^\as
 
 then the $$j$$-th $$(\mathbb{C}^\ast)$$ factor acts on the Cox ring variables $$\x_i$$ with weight $$Q_{ji}$$, and these become important numbers determining the geometry of the toric variety.
 
-<div class="example" markdown="1">
-
-<ins id="ex2">**Example 2**</ins> Write the rays of $$\mathbb{P}^n$$ as
+::: Example 2
+Write the rays of $$\mathbb{P}^n$$ as
 
 $$v_0=-e_1-\cdots-e_n,\quad v_i=e_i\qquad (i=1,\ldots, n).$$
 
@@ -71,16 +68,13 @@ As a slightly nontrivial example, consider $$\mathbb{P}^1\times \mathbb{P}^1$$. 
 $$Q = \begin{pmatrix} 1 & 1 & 0 & 0 \\ 0 & 0 & 1 & 1 \end{pmatrix}.$$
 
 This encodes the information that the torus acts by the standard scaling action on each of the first and second $$\mathbb{P}^1$$ factors. 
-
-</div>
+:::
 
 From the viewpoint of mirror symmetry, the charge matrix encodes the data of the $$B$$-model. One should be somewhat careful that the situation we are currently dealing with is more general than the Calabi-Yau manifold explained in the introduction. In general, a smooth projective toric variety $$X_\Sigma$$ is given as a Fano variety rather than a Calabi-Yau, and in this case the mirror dual of $$X_\Sigma$$ is expressed not as a Calabi-Yau but as a *Landau-Ginzburg model*. 
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**Definition 3**</ins> A *Landau-Ginzburg model* is a pair $$(\check{X}, W)$$ of a complex manifold $$\check{X}$$ and a holomorphic function $$W : \check{X} \to \mathbb{C}$$ defined on it. We call $$W$$ the *superpotential*.
-
-</div>
+::: Definition 3
+A *Landau-Ginzburg model* is a pair $$(\check{X}, W)$$ of a complex manifold $$\check{X}$$ and a holomorphic function $$W : \check{X} \to \mathbb{C}$$ defined on it. We call $$W$$ the *superpotential*.
+:::
 
 The purpose of this post is to examine this phenomenon through light calculations before formally defining the concepts of mirror symmetry. Therefore, instead of explaining the data on both sides precisely, we replace this with brief ideas and intuition. First, from the $$B$$-model side, the charge matrix defines the *Jacobi ring* $$\Jac(W_q)$$, which can be viewed as the classical limit of the oscillating integral mentioned earlier. For a given Landau-Ginzburg model $$(\check{X}, W)$$, its Jacobi ring is given by definition as
 
@@ -88,9 +82,8 @@ $$\Jac(W) = \frac{\mathcal{O}(\check{X})}{(\partial_1 W, \ldots, \partial_n W)}.
 
 Here $$\x_1, \ldots, \x_n$$ are local coordinates on $$\check{X}$$, and the $$\partial_i$$ are the partial derivatives with respect to them. Geometrically, $$\Jac(W)$$ is the coordinate ring of the *critical scheme* $$\Crit(W) = \{dW = 0\} \subset \check{X}$$ of $$W$$. Then the mirror symmetry statement is that the Jacobi ring of the Hori-Vafa mirror in [Definition 4](#def4) recovers the data of the original A-side model. 
 
-<div class="definition" markdown="1">
-
-<ins id="def4">**Definition 4**</ins> For a smooth projective toric Fano variety $$X_\Sigma$$ and additional data $$q=(q_1,\ldots, q_r)\in \mathbb{C}^r$$, the *Hori-Vafa mirror* defined by this is the following Landau-Ginzburg model.
+::: Definition 4
+For a smooth projective toric Fano variety $$X_\Sigma$$ and additional data $$q=(q_1,\ldots, q_r)\in \mathbb{C}^r$$, the *Hori-Vafa mirror* defined by this is the following Landau-Ginzburg model.
 
 1. The *mirror domain* $$\check{X}$$ is the submanifold of the algebraic torus $$(\mathbb{C}^\ast)^N$$ defined as the set of points satisfying the $$r$$ restrictions imposed by the charge matrix $$Q$$:
     
@@ -99,8 +92,7 @@ Here $$\x_1, \ldots, \x_n$$ are local coordinates on $$\check{X}$$, and the $$\p
 2. The *superpotential* on $$\check{X}$$ is defined as the sum of local coordinates
     
     $$W_q : \check{X} \to \mathbb{C}, \qquad W_q(\x_1, \ldots, \x_N) = \x_1 + \x_2 + \cdots + \x_N.$$
-
-</div>
+:::
 
 Here $$q = (q_1, \ldots, q_r) \in (\mathbb{C}^\ast)^r$$ is the variable carrying the complex structure of the mirror LG model. The complex structure of the mirror domain $$\check{X}$$ itself is always the same affine torus $$(\mathbb{C}^\ast)^n$$, but the superpotential $$W_q$$ placed on it is determined by $$q$$. In other words, for each value of $$q$$ a unique LG model $$(\check{X}, W_q)$$ is determined, and it is more accurate to say that the whole family $$\{(\check{X}, W_q)\}_q$$ appears as the mirror of $$X_\Sigma$$. At this point, the complex structure $$q$$ appears as the Novikov parameter $$q$$ in the A-model.
 
@@ -132,9 +124,8 @@ holds. This statement fits the picture we already knew in many respects; for exa
 
 In general, examining $$QH^\ast(X_\Sigma)$$ on the right-hand side of the above isomorphism amounts to counting curves passing through given classes simultaneously, which is considered a relatively complex and difficult task, but mirror symmetry reduces this to a simple ring calculation. Let us verify that this actually holds in the two simple cases of $$\mathbb{P}^1$$ and $$\mathbb{P}^2$$. 
 
-<div class="example" markdown="1">
-
-<ins id="ex5">**Example 5 ($$\mathbb{P}^1$$ case)**</ins> We checked in [Example 2](#ex2) that the charge matrix of $$\mathbb{P}^1$$ is $$Q = (1, 1)$$. Hence the domain $$\check{X}$$ of the Hori-Vafa mirror is the submanifold of $$(\mathbb{C}^\ast)^2$$ satisfying the equation
+::: Example 5 ($$\mathbb{P}^1$$ case)
+We checked in [Example 2](#ex2) that the charge matrix of $$\mathbb{P}^1$$ is $$Q = (1, 1)$$. Hence the domain $$\check{X}$$ of the Hori-Vafa mirror is the submanifold of $$(\mathbb{C}^\ast)^2$$ satisfying the equation
 
 $$\x_0 \x_1 = q.$$
 
@@ -155,14 +146,12 @@ Meanwhile, the small quantum cohomology on the A-side is simple: since there is 
 $$QH^\ast(\mathbb{P}^1) = \mathbb{C}[H, q] \big/ (H^2 - q), \qquad \deg H = 2,\;\; \deg q = 4.$$
 
 Now forgetting the grading and making $$q$$ invertible, one can verify that this becomes exactly the same $$\mathbb{C}$$-algebra as the Jacobi ring above.
-
-</div>
+:::
 
 Let us look at $$\mathbb{P}^2$$ as a slightly more complicated example.
 
-<div class="example" markdown="1">
-
-<ins id="ex6">**Example 6 ($$\mathbb{P}^2$$ case)**</ins> The mirror dual of $$\mathbb{P}^2$$ is the variety satisfying the equation
+::: Example 6 ($$\mathbb{P}^2$$ case)
+The mirror dual of $$\mathbb{P}^2$$ is the variety satisfying the equation
 
 $$\x_0 \x_1 \x_2 = q$$
 
@@ -187,8 +176,7 @@ Geometrically this reflects the facts that (i) there is a unique $$\mathbb{P}^1 
 $$QH^\ast(\mathbb{P}^2) = \mathbb{C}[H, q] \big/ (H^3 - q), \qquad \deg H = 2,\;\; \deg q = 6.$$
 
 In this case too, one can verify that the expected isomorphism works well.
-
-</div>
+:::
 
 More generally, the above two examples hold for an arbitrary smooth projective toric Fano variety. In the next post we will look at the Batyrev mirror, which extends this to Calabi-Yau hypersurfaces inside toric varieties. 
 

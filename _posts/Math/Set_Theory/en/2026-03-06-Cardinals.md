@@ -18,33 +18,32 @@ last_polished_at: 2026-06-02T17:00:01+00:00
 
 Let us begin by briefly reviewing the key topics from the previous post. We constructed the natural numbers, then defined ordinal numbers and examined their properties. Well-ordering, though largely independent of ordinal numbers, was another topic we covered. A well-ordering is defined as follows.
 
-<div class="definition" markdown="1">
-
-<ins id="def-3">**Definition**</ins> A total order $$R$$ on a set $$A$$ is a *well-ordering* if every non-empty subset $$X$$ of $$A$$ has a least element.
-
-</div>
+::: definition Definition {#def-3}
+A total order $$R$$ on a set $$A$$ is a *well-ordering* if every non-empty subset $$X$$ of $$A$$ has a least element.
+:::
 
 We also proved that every set can be well-ordered, and this proof relied on the *Axiom of Choice*.
 
-**The Axiom of Choice.** Every set has a choice function.
-{: .misc}
+::: misc The Axiom of Choice. {#axiom-choice}
+Every set has a choice function.
+:::
 
 
-<ins id="thm-2">**Theorem (Zermelo)**</ins> Every set $$A$$ can be well-ordered.
-{: .proposition}
+::: proposition Theorem (Zermelo) {#thm-2}
+Every set $$A$$ can be well-ordered.
+:::
 
-<ins id="thm-1">**Theorem (Zorn's lemma)**</ins> Every inductive set has a maximal element.
-{: .proposition}
+::: proposition Theorem (Zorn's lemma) {#thm-1}
+Every inductive set has a maximal element.
+:::
 
 Of the results proved using these, the following theorem is the one we shall use.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop-0">**Proposition**</ins> Let $$A,B$$ be two well-ordered sets. Then at least one of the following holds.
+::: proposition Proposition {#prop-0}
+Let $$A,B$$ be two well-ordered sets. Then at least one of the following holds.
 1. There exists an order isomorphism from $$A$$ to a segment of $$B$$, or
 2. There exists an order isomorphism from $$B$$ to a segment of $$A$$.
-
-</div>
+:::
 
 Finally, we saw that ordinal numbers allow us to define the size of a set rigorously.
 
@@ -54,11 +53,9 @@ In this post, we define the size of a set in a somewhat less rigorous manner and
 
 Let us begin. The cardinal of a set is a generalization of its size—that is, of the number of its elements. However, since we have not yet defined the natural numbers, we must adopt a different perspective. While we cannot define how large an arbitrary set is, we can define when two sets have the same size, as follows.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> A set $$A$$ is *equipotent* to a set $$B$$ if there exists a bijection from $$A$$ to $$B$$.
-
-</div>
+::: Definition 1
+A set $$A$$ is *equipotent* to a set $$B$$ if there exists a bijection from $$A$$ to $$B$$.
+:::
 
 Then
 
@@ -70,36 +67,28 @@ Thus, the only condition in the definition of an equivalence relation that remai
 
 Although this is not a rigorous solution, we shall proceed under the assumption that this problem has been resolved. (See: [Wikipedia, Class](https://en.wikipedia.org/wiki/Class_(set_theory)))
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**Definition 2**</ins> A representative of the equivalence class of a set $$A$$ is called the *cardinal* of $$A$$, denoted by $$\card A$$.
-
-</div>
+::: Definition 2
+A representative of the equivalence class of a set $$A$$ is called the *cardinal* of $$A$$, denoted by $$\card A$$.
+:::
 
 Since the empty set is unique, $$\card\emptyset$$ is precisely $$\emptyset$$. When dealing with cardinals, we denote this by $$\mathbf{0}$$. All singletons, such as $$\{a\}$$ and $$\{b\}$$, are mutually equipotent, for $$\{(a,b)\}$$ is a bijection from $$\{a\}$$ to $$\{b\}$$. Let us denote this cardinal by $$\mathbf{1}$$. Although these are not yet natural numbers, we will soon endow cardinals with operations that allow us to regard them as natural numbers.
 
 Before defining operations, let us first define an ordering relation between cardinals.
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**Definition 3**</ins> The relation among cardinals
+::: Definition 3
+The relation among cardinals
 
 > $$\mathfrak{a}$$ is equipotent to a subset of $$\mathfrak{b}$$.
 
 is an order relation, denoted by $$\mathfrak{a}\leq\mathfrak{b}$$.
-
-</div>
+:::
 
 Of course, we have not yet verified that this relation is indeed an order relation. However, the only non-trivial part is antisymmetry.
 
-<div class="proposition" markdown="1">
-
-<ins id="lem4">**Lemma 4 (Cantor–Bernstein)**</ins> The relation $$\leq$$ defined above is antisymmetric.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Lemma 4 (Cantor–Bernstein)
+The relation $$\leq$$ defined above is antisymmetric.
+:::
+::: Proof
 Let $$\mathfrak{a}$$ and $$\mathfrak{b}$$ be two cardinals satisfying $$\mathfrak{a}\leq\mathfrak{b}$$ and $$\mathfrak{b}\leq\mathfrak{a}$$.
 
 If $$i$$ is a bijection from $$\mathfrak{a}$$ to a subset of $$\mathfrak{b}$$, then $$i(\mathfrak{a})\subset\mathfrak{b}$$ and $$\mathfrak{a}$$ is equipotent to $$i(\mathfrak{a})$$. Hence it suffices to show that a bijection exists between $$i(\mathfrak{a})$$ and $$\mathfrak{b}$$.  
@@ -115,27 +104,21 @@ Moreover, $$h$$ is injective. If $$h(x)=h(y)$$, then when $$x,y\in C$$ we have $
 The non-trivial case is when one of them lies in $$C$$ and the other does not. Suppose $$x\in C$$ and $$y\not\in C$$. Then $$x\in C_n$$ for some $$n$$, and in particular $$h(x)=f(x)\in C_{n+1}\subseteq C$$, so $$h(x)\in C$$. On the other hand, $$h(y)=y$$, and by assumption $$y\not\in C$$, contradicting $$h(x)=h(y)$$. Thus $$x=y$$ in all cases, and $$h$$ is injective.
 
 Finally, we show that $$h$$ is surjective. Take any $$y\in i(\mathfrak{a})$$. Either $$y\in C$$ or $$y\not\in C$$. If $$y\not\in C$$, then $$h(y)=y$$ by definition. If $$y\in C$$, then $$y\in C_{n}$$ for some $$n\geq 1$$ (since $$y\in C_0=\mathfrak{b}\setminus i(\mathfrak{a})$$ is impossible). Thus $$y\in f(C_{n-1})$$, so there exists $$x\in C_{n-1}$$ such that $$y=f(x)$$. This $$x$$ also lies in $$C$$, whence $$h(x)=f(x)=y$$. Therefore $$h$$ is surjective.
-
-</details>
+:::
 
 Moreover, any set of cardinals is well-ordered.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm5">**Theorem 5**</ins> Any set $$A$$ of cardinals has a least element.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Theorem 5
+Any set $$A$$ of cardinals has a least element.
+:::
+::: Proof
 Consider the set $$A=\bigcup_{\mathfrak{a}\in E}\mathfrak{a}$$. Then every cardinal $$\mathfrak{a}\in E$$ is a subset of $$A$$.
 
 By the well-ordering principle, there exists a well-ordering on this set; denote it by $$\leq$$. Moreover, every subset of $$A$$ is equipotent to a segment of $$A$$ ([Proposition](#prop-0) in Review). Thus for every cardinal $$\mathfrak{a}$$, the set of segments of $$A$$ equipotent to it is non-empty, and by the well-orderedness of $$A^\ast$$, there exists a least element. Denote this element by $$\varphi(\mathfrak{a})$$.  
 If we can show that $$\mathfrak{a}\leq\mathfrak{b}$$ is equivalent to $$\varphi(\mathfrak{a})\subset\varphi(\mathfrak{b})$$, then the proof will be complete by the well-orderedness of $$A$$.
 
 First, the latter condition clearly implies the former. Conversely, suppose $$\mathfrak{a}\leq\mathfrak{b}$$; that is, $$\mathfrak{a}$$ is equipotent to a subset of $$\mathfrak{b}=\varphi(\mathfrak{b})$$ (equality holds as cardinals). If $$\varphi(\mathfrak{b})\subset\varphi(\mathfrak{a})$$ and $$\varphi(\mathfrak{a})\neq\varphi(\mathfrak{b})$$, then some segment of $$\varphi(\mathfrak{b})$$ would be equipotent to $$\mathfrak{a}$$, contradicting the definition of $$\varphi(\mathfrak{b})$$. Therefore the two conditions are equivalent.
-
-</details>
+:::
 
 ---
 **References** 

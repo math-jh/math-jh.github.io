@@ -33,9 +33,8 @@ Toric variety ([\[토릭기하학\] §토릭 다양체의 정의, ⁋정의 3](/
 
 Smooth projective toric variety $$X=X_\Sigma$$의 fan을 $$\Sigma$$, 그 1차원 cone의 primitive generator들을 $$v_1, \ldots, v_m \in \mathbb{Z}^n$$이라 하자. $$\Sigma$$가 complete fan이라면 $$v_i$$들은 $$\mathbb{R}^n$$을 span한다. 그러나 $$m>n$$이므로, 이들은 $$\mathbb{Z}$$-linearly dependent하며 따라서 이들 사이의 $$r=m-n$$개의 integral equation이 존재한다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> $$X_\Sigma$$의 *charge matrix*는 위 ray 사이의 integral relation들
+::: 정의 1
+$$X_\Sigma$$의 *charge matrix*는 위 ray 사이의 integral relation들
 
 $$\sum_{i=1}^m Q_{ji}\, v_i = 0,\qquad j = 1, \ldots, r$$
 
@@ -44,8 +43,7 @@ $$\sum_{i=1}^m Q_{ji}\, v_i = 0,\qquad j = 1, \ldots, r$$
 $$Q = (Q_{ji}) \in \Mat_{r \times m}(\mathbb{Z})$$
 
 이다.
-
-</div>
+:::
 
 Charge matrix는 단순히 ray 관계식의 계수를 모은 행렬이지만, $$X_\Sigma$$를 Cox construction을 통해 GIT quotient
 
@@ -53,9 +51,8 @@ $$X_\Sigma \;=\; \big(\mathbb{C}^m \setminus Z\big) \,\big/\!/\, (\mathbb{C}^\as
 
 로 적으면 $$j$$번째 $$(\mathbb{C}^\ast)$$ factor가 Cox ring의 변수 $$\x_i$$에 weight $$Q_{ji}$$로 작용하며, 이로부터 toric variety의 기하를 결정하는 중요한 숫자들이 된다.
 
-<div class="example" markdown="1">
-
-<ins id="ex2">**예시 2**</ins> $$\mathbb{P}^n$$의 ray들을
+::: 예시 2
+$$\mathbb{P}^n$$의 ray들을
 
 $$v_0=-e_1-\cdots-e_n,\quad v_i=e_i\qquad (i=1,\ldots, n)$$
 
@@ -74,16 +71,13 @@ $$t\cdot(\x_0,\ldots, \x_n)=(t \x_0, \ldots, t \x_n)$$
 $$Q = \begin{pmatrix} 1 & 1 & 0 & 0 \\ 0 & 0 & 1 & 1 \end{pmatrix}$$
 
 가 된다. 이는 torus가 앞선 factor와 나중 factor $$\mathbb{P}^1$$ 각각에 standard scaling action으로 작용한다는 정보를 담고 있다. 
-
-</div>
+:::
 
 Mirror symmetry의 관점에서 charge matrix는 $$B$$-model의 데이터를 담고 있다. 다소 주의할 것은 현재 우리가 다루고 있는 상황은 도입부에서 설명한 Calabi-Yau manifold보다 일반적인 상황이라는 사실이다. 일반적으로 smooth projective toric variety $$X_\Sigma$$는 Calabi-Yau가 아니라 Fano variety로 주어지며, 이 경우 $$X_\Sigma$$의 mirror dual은 Calabi-Yau가 아니라 *Landau-Ginzburg model*로 표현된다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**정의 3**</ins> *Landau-Ginzburg model<sub>란다우-긴즈부르크 모델</sub>*은 complex manifold $$\check{X}$$와 그 위에 정의된 holomorphic function $$W : \check{X} \to \mathbb{C}$$의 쌍 $$(\check{X}, W)$$로 주어진다. 이 때, $$W$$를 *superpotential*이라 부른다.
-
-</div>
+::: 정의 3
+*Landau-Ginzburg model<sub>란다우-긴즈부르크 모델</sub>*은 complex manifold $$\check{X}$$와 그 위에 정의된 holomorphic function $$W : \check{X} \to \mathbb{C}$$의 쌍 $$(\check{X}, W)$$로 주어진다. 이 때, $$W$$를 *superpotential*이라 부른다.
+:::
 
 이번 글의 목적은 mirror symmetry의 개념들을 본격적으로 정의하기 전에 가벼운 계산을 통해 이 현상을 살펴보는 것이다. 따라서 우리는 양쪽의 데이터를 정확하게 설명하는 대신, 간략한 아이디어와 직관으로 이를 대체한다. 우선 $$B$$-model 측면에서, charge matrix는 *Jacobi ring* $$\Jac(W_q)$$를 정의하며 이는 앞서 언급한 oscillating integral의 classical limit으로 볼 수 있다. 주어진 Landau-Ginzburg model $$(\check{X}, W)$$에 대하여, 이것의 Jacobi ring은 그 정의에 의해
 
@@ -91,9 +85,8 @@ $$\Jac(W) = \frac{\mathcal{O}(\check{X})}{(\partial_1 W, \ldots, \partial_n W)}$
 
 으로 주어진다. 여기서 $$\x_1, \ldots, \x_n$$들은 $$\check{X}$$의 local coordinate이며 $$\partial_i$$들은 이에 대한 partial derivative들이다. 기하학적으로 $$\Jac(W)$$는 $$W$$의 *critical scheme* $$\Crit(W) = \{dW = 0\} \subset \check{X}$$의 coordinate ring이다. 그럼 [정의 4](#def4)의 Hori-Vafa mirror의 Jacobi ring이 원래의 A-side model의 데이터를 복원한다는 것이 mirror symmetry statement이다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def4">**정의 4**</ins> Smooth projective toric Fano variety $$X_\Sigma$$와 추가적인 데이터 $$q=(q_1,\ldots, q_r)\in \mathbb{C}^r$$에 대하여, 이것이 정의하는 *Hori-Vafa mirror*는 다음의 Landau-Ginzburg model을 의미한다.
+::: 정의 4
+Smooth projective toric Fano variety $$X_\Sigma$$와 추가적인 데이터 $$q=(q_1,\ldots, q_r)\in \mathbb{C}^r$$에 대하여, 이것이 정의하는 *Hori-Vafa mirror*는 다음의 Landau-Ginzburg model을 의미한다.
 
 1. *Mirror domain* $$\check{X}$$는 algebraic torus $$(\mathbb{C}^\ast)^m$$의 submanifold로, charge matrix $$Q$$가 부여하는 $$r$$개의 restriction
     
@@ -105,8 +98,7 @@ $$\Jac(W) = \frac{\mathcal{O}(\check{X})}{(\partial_1 W, \ldots, \partial_n W)}$
     $$W_q : \check{X} \to \mathbb{C}, \qquad W_q(\x_1, \ldots, \x_m) = \x_1 + \x_2 + \cdots + \x_m$$
     
     으로 정의된다.
-
-</div>
+:::
 
 여기서 $$q = (q_1, \ldots, q_r) \in (\mathbb{C}^\ast)^r$$은 mirror LG model의 complex structure를 담는 변수이다. Mirror domain $$\check{X}$$ 자체의 complex structure는 항상 같은 affine torus $$(\mathbb{C}^\ast)^n$$이지만, 그 위에 얹는 superpotential $$W_q$$가 $$q$$에 의해 결정된다. 즉, 한 $$q$$ 값마다 하나의 LG model $$(\check{X}, W_q)$$가 유일하게 결정되며, 이 family $$\{(\check{X}, W_q)\}_q$$ 전체가 $$X_\Sigma$$의 mirror로 등장한다는 것이 더 맞는 말이다. 이 때 complex structure $$q$$는 A-model에서는 Novikov parameter $$q$$로 등장한다.
 
@@ -138,9 +130,8 @@ $$\Jac(W_q) \cong QH^\ast(X_\Sigma)$$
 
 일반적으로 위 isomorphism 우변의 $$QH^\ast(X_\Sigma)$$를 살펴보는 것은 주어진 class들을 동시에 지나는 curve를 세는 것으로, 상대적으로 복잡하고 어려운 일로 여겨지지만 mirror symmetry는 이를 단순한 ring의 계산으로 환원시킨다. 단순한 두 경우 $$\mathbb{P}^1$$, $$\mathbb{P}^2$$에서 이것이 실제로 성립함을 확인하자. 
 
-<div class="example" markdown="1">
-
-<ins id="ex5">**예시 5 ($$\mathbb{P}^1$$ case)**</ins> [예시 2](#ex2)에서 본 $$\mathbb{P}^1$$의 charge matrix는 $$Q = (1, 1)$$임을 확인하였다. 따라서 Hori-Vafa mirror의 domain $$\check{X}$$은 다음의 식
+::: 예시 5 ($$\mathbb{P}^1$$ case)
+[예시 2](#ex2)에서 본 $$\mathbb{P}^1$$의 charge matrix는 $$Q = (1, 1)$$임을 확인하였다. 따라서 Hori-Vafa mirror의 domain $$\check{X}$$은 다음의 식
 
 $$\x_0 \x_1 = q$$
 
@@ -163,14 +154,12 @@ $$\Jac(W_q) = \mathbb{C}[\x_1^\pm, q^\pm] / (\partial_{\x_1} W_q) \;\cong\; \mat
 $$QH^\ast(\mathbb{P}^1) = \mathbb{C}[H, q] \big/ (H^2 - q), \qquad \deg H = 2,\;\; \deg q = 4$$
 
 가 된다. 이제 grading을 잊고 $$q$$를 invertible로 두면 위의 Jacobi ring과 정확히 같은 $$\mathbb{C}$$-algebra가 되는 것을 확인할 수 있다.
-
-</div>
+:::
 
 조금 더 복잡한 예시로 $$\mathbb{P}^2$$를 보자.
 
-<div class="example" markdown="1">
-
-<ins id="ex6">**예시 6 ($$\mathbb{P}^2$$ case)**</ins> $$\mathbb{P}^2$$의 mirror dual은 다음의 식
+::: 예시 6 ($$\mathbb{P}^2$$ case)
+$$\mathbb{P}^2$$의 mirror dual은 다음의 식
 
 $$\x_0 \x_1 \x_2 = q$$
 
@@ -197,8 +186,7 @@ $$\langle H, H^2, H^2 \rangle_{0,3,1}^{\mathbb{P}^2} = 1$$
 $$QH^\ast(\mathbb{P}^2) = \mathbb{C}[H, q] \big/ (H^3 - q), \qquad \deg H = 2,\;\; \deg q = 6$$
 
 로 결정되는 것을 안다. 이 경우에도 우리가 기대하던 isomorphism이 잘 작동하는 것을 확인할 수 있다.
-
-</div>
+:::
 
 더 일반적으로, 위의 두 예시는 임의의 smooth projective toric Fano variety에 대해서 성립한다. 우리는 다음 글에서 이를 toric variety 안의 Calabi-Yau hypersurface로 확장하는 Batyrev mirror를 살펴볼 것이다. 
 

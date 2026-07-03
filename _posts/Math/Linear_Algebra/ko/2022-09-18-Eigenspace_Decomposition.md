@@ -41,26 +41,20 @@ $$Av=\sum_{\lambda\in\sigma(A)}\lambda v_\lambda$$
 
 을 얻는다. 물론 위의 계산이 말이 되기 위해서는 $$v$$를 $$v_\lambda$$들의 합으로 나타내는 방법이 유일해야 한다. 이를 다음과 같이 정의한다.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> 임의의 $$\mathbb{K}$$-벡터공간 $$V$$가 그 부분공간 $$(W_i)_{i\in I}$$들의 *direct sum<sub>직합</sub>*이라는 것은, 임의의 $$v\in V$$가 주어질 때마다 적당한 $$(v_i)_{i\in I}$$가 <em-ko>유일하게</em-ko> 존재하여 
+::: 정의 1
+임의의 $$\mathbb{K}$$-벡터공간 $$V$$가 그 부분공간 $$(W_i)_{i\in I}$$들의 *direct sum<sub>직합</sub>*이라는 것은, 임의의 $$v\in V$$가 주어질 때마다 적당한 $$(v_i)_{i\in I}$$가 <em-ko>유일하게</em-ko> 존재하여 
 
 $$v=\sum_{i\in I} v_i$$
 
 이 성립하는 것이다.[^1] 이를 $$V=\bigoplus_{i\in I}W_i$$와 같이 적는다. 
-
-</div>
+:::
 
 자명하지 않은 경우 중 가장 쉬운 것은 $$I$$가 원소 두 개짜리 집합일 때이다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**명제 2**</ins> $$\mathbb{K}$$-벡터공간 $$V$$의 두 부분공간 $$W_1,W_2$$에 대하여, $$V=W_1\oplus W_2$$인 것은 $$V=W_1+W_2$$이고 $$W_1\cap W_2=\{0\}$$인 것과 동치이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 명제 2
+$$\mathbb{K}$$-벡터공간 $$V$$의 두 부분공간 $$W_1,W_2$$에 대하여, $$V=W_1\oplus W_2$$인 것은 $$V=W_1+W_2$$이고 $$W_1\cap W_2=\{0\}$$인 것과 동치이다.
+:::
+::: 증명
 우선 $$V=W_1\oplus W_2$$라 가정하자. 정의에 의해 $$W_1+W_2\subseteq V$$인 것은 자명하다. 거꾸로 임의의 $$v\in V$$를 택하면, $$v=w_1+w_2$$이도록 하는 $$w_i\in W_i$$가 존재하므로 $$V\subseteq W_1+W_2$$ 또한 성립한다. 이로부터 $$V=W_1+W_2$$임을 안다. 한편, 만일 $$W_1\cap W_2\neq \{0\}$$이라면, 영이 아닌 $$w\in W_1+W_2$$에 대하여
 
 $$w=0+w=w+0$$
@@ -76,8 +70,7 @@ $$v=w_1+w_2=w_1'+w_2'$$
 $$w_1-w_1'=w_2-w_2'$$
 
 에서 좌변은 $$W_1$$의 원소, 우변은 $$W_2$$의 원소이므로 조건 $$W_1\cap W_2=\{0\}$$으로부터 $$w_1-w_1'=w_2-w_2'=0$$이기 때문이다. 
-
-</details>
+:::
 
 위 명제의 한 쪽 방향은 $$I$$가 셋 이상의 원소를 가지고 있어도 성립한다. 즉, 만일 $$V=\bigoplus_{i\in I}W_i$$라면, $$V=\sum_{i\in I}W_i$$이고, $$i\neq j$$일 때마다 $$W_i\cap W_j=\{0\}$$이 성립하며, 그 증명 또한 위와 같다. 그러나 일반적으로 반대방향은 성립하지는 않는다. 
 
@@ -89,14 +82,10 @@ $$e_1+e_2=e_1+e_2+0=0+0+(e_1+e_2)$$
 
 또 다른 예시로, $$V$$의 basis $$\mathcal{B}=\{x_1,\ldots, x_n\}$$을 하나 택하자. $$W_i=\mathbb{K}x_i$$이라 하면, $$\mathcal{B}$$가 basis라는 조건은 정확하게 $$V$$가 $$W_i$$들의 direct sum이라는 조건과 일치하게 된다. 더 일반적으로 다음이 성립한다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop3">**명제 3**</ins> 임의의 $$\mathbb{K}$$-벡터공간 $$V$$와, 부분공간 $$(W_i)_{i\in I}$$에 대하여 $$V=\bigoplus_{i\in I} W_i$$인 것은 $$W_i$$의 basis $$\mathcal{B}_i$$들이 $$i\neq j$$일 때마다 $$\mathcal{B}_i\cap\mathcal{B}_j=\emptyset$$을 만족하고, $$\bigcup_{i\in I}\mathcal{B}_i$$가 $$V$$의 basis가 되는 것과 동치이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 명제 3
+임의의 $$\mathbb{K}$$-벡터공간 $$V$$와, 부분공간 $$(W_i)_{i\in I}$$에 대하여 $$V=\bigoplus_{i\in I} W_i$$인 것은 $$W_i$$의 basis $$\mathcal{B}_i$$들이 $$i\neq j$$일 때마다 $$\mathcal{B}_i\cap\mathcal{B}_j=\emptyset$$을 만족하고, $$\bigcup_{i\in I}\mathcal{B}_i$$가 $$V$$의 basis가 되는 것과 동치이다.
+:::
+::: 증명
 우선 $$V=\bigoplus W_i$$라 가정하고, $$W_i$$들의 basis $$\mathcal{B}_i$$를 택하자. 만일 $$\mathcal{B}_i\cap\mathcal{B}_j\neq\emptyset$$이라면 $$W_i\cap W_j\neq\emptyset$$가 되어 [명제 2](#prop2) 이후의 논의에 모순이므로, 반드시 $$\mathcal{B}_i\cap\mathcal{B}_j=\emptyset$$이어야 한다. 임의의 $$v\in V$$에 대하여, $$V=\bigoplus W_i$$로부터 다음의 식
 
 $$v=\sum_{i\in I} w_i$$
@@ -104,8 +93,7 @@ $$v=\sum_{i\in I} w_i$$
 을 만족하는 $$w_i$$들이 유일하게 존재한다. 또, $$W_i$$들 각각에서 $$w_i$$들을 $$\mathcal{B}_i$$의 원소들의 일차결합으로 유일하게 표현할 수 있다. 이로부터 $$\bigcup\mathcal{B}_i$$가 $$V$$의 basis가 된다는 것을 알 수 있다.
 
 이 논증을 거꾸로 뒤집으면 반대방향 또한 보일 수 있다.
-
-</details>
+:::
 
 따라서 $$\dim V=\sum_{i\in I}\dim W_i$$임을 알 수 있다. 
 
@@ -117,14 +105,10 @@ $$Ax_1=\lambda_1x_1\neq\lambda_2 x_1$$
 
 이므로 $$x_1\not\in E_{\lambda_2}$$임을 안다. 따라서 $$E_\lambda$$들의 basis를 어떻게 잡더라도, 서로 다른 $$\lambda_1,\lambda_2$$에 대하여 $$E_{\lambda_1}, E_{\lambda_2}$$의 basis가 겹치는 일은 없다. 뿐만 아니라 다음이 성립한다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**명제 4**</ins> 임의의 행렬 $$A$$에 대하여, $$x_1,\ldots, x_m$$들이 각각 서로 다른 고윳값들 $$\lambda_1,\ldots,\lambda_m$$들에 대응되는 고유벡터들이라 하자. 그럼 집합 $$\{x_1,\ldots,x_m\}$$은 일차독립이다. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 명제 4
+임의의 행렬 $$A$$에 대하여, $$x_1,\ldots, x_m$$들이 각각 서로 다른 고윳값들 $$\lambda_1,\ldots,\lambda_m$$들에 대응되는 고유벡터들이라 하자. 그럼 집합 $$\{x_1,\ldots,x_m\}$$은 일차독립이다. 
+:::
+::: 증명
 결론을 부정하여 집합 $$\{x_1,x_2,\ldots, x_m\}$$이 일차종속이라 하자. 즉, 다음의 식
 
 
@@ -165,8 +149,7 @@ $$\beta_i''=\begin{cases}\beta_i(\lambda_i-\lambda_m)&1\leq i\leq m-1\\0&i=m\end
 $$\beta_1''x_1+\beta_2''x_2+\cdots+\beta_m''x_m=0$$
 
 이 된다. 가정에 의해 $$\lambda_i-\lambda_m\neq 0$$이므로, $$1\leq i\leq m-1$$에 대해서는 $$\beta_i''=0$$인 것과 $$\beta_i=0$$인 것이 동치이다. 따라서 $$\beta_i''\neq 0$$을 만족하는 $$1\leq i\leq m-1$$은 $$k-1$$개이고, $$\beta_m''=0$$이므로 $$\supp(\beta_i'')_{1\leq i\leq m}$$의 크기는 $$k-1$$이다. 이는 $$(\beta_i)_{1\leq i\leq m}$$의 최소성에 모순이므로, 집합 $$\{x_1,x_2,\ldots, x_m\}$$은 일차독립이다.
-
-</details>
+:::
 
 이로부터, 임의의 행렬 $$A$$와 그 고윳값들 $$\lambda\in\sigma(A)$$, 이에 대응되는 고유공간들을 $$E_\lambda$$, 그리고 이들의 basis를 $$\mathcal{B}_\lambda$$라 한다면 $$\mathcal{B}=\bigcup_{\lambda\in\sigma(A)}\mathcal{B}_\lambda$$가 $$\mathbb{K}^n$$의 일차독립인 부분집합이 된다는 것을 안다. 그러나 일반적으로 $$\mathcal{B}$$가 $$\mathbb{K}^n$$의 basis가 될 이유는 없다. 가령 [§특성다항식, ⁋예시 7](/ko/math/linear_algebra/characteristic_polynomial#ex7)을 보면, $$\mathbb{K}=\mathbb{R}$$에서 $$\sigma(J)=\emptyset$$이므로 $$\mathcal{B}=\emptyset$$이다. 뿐만 아니라 $$A$$의 특성다항식이 정확히 $$n$$개의 해를 갖는다고 가정해도 비슷한 문제가 생길 수 있는데, 가령 다음의 행렬
 
@@ -176,14 +159,10 @@ $$A=\begin{pmatrix}1&1&1\\0&1&1\\0&0&1\end{pmatrix}$$
 
 다음 명제는 <em-ko>항상</em-ko> 행렬의 고윳값의 기하적 중복도는 대수적 중복도를 넘을 수 없음을 보여준다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**명제 5**</ins> $$n\times n$$ 행렬 $$A$$의 고윳값 $$\lambda\in\mathbb{K}$$에 대하여, $$\lambda$$의 기하적 중복도는 항상 $$\lambda$$의 대수적 중복도를 넘지 못한다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 명제 5
+$$n\times n$$ 행렬 $$A$$의 고윳값 $$\lambda\in\mathbb{K}$$에 대하여, $$\lambda$$의 기하적 중복도는 항상 $$\lambda$$의 대수적 중복도를 넘지 못한다.
+:::
+::: 증명
 $$\lambda$$의 기하적 중복도가 $$k$$라 하고, $$E_\lambda(A)$$를 span하는 $$k$$개의 일차독립인 벡터들 $$x_1,\ldots, x_k$$를 생각하자. 여기에 $$(n-k)$$개의 벡터 $$x_{k+1},\ldots, x_k$$를 추가하여 $$\mathbb{K}^n$$의 새로운 basis $$\{x_1,\ldots, x_n\}$$을 만들 수 있다. 이제 행렬 $$X$$를
 
 $$X=(x_1\vert x_2\vert \cdots\vert x_n)$$
@@ -205,19 +184,16 @@ $$\begin{aligned}A'&=X^{-1}(AX)=\begin{pmatrix}y_1\\ y_2\\ \vdots\\ y_n\end{pmat
 $$p_A(\mathbf{x}=p_{A'}(\mathbf{x})=\det(\mathbf{x}I-A')=(\mathbf{x}-\lambda)^k\det(\mathbf{x}I_{n-k}-C)$$
 
 임을 안다. 즉, $$p_A$$에서 $$\lambda$$의 대수적 중복도는 최소 $$k$$이다. 
-
-</details>
+:::
 
 $$n\times n$$ 행렬 $$A$$가 주어졌다 하고, $$A$$의 특성다항식을 $$p_A$$라 하면, 고윳값 $$\lambda$$들의 대수적 중복도의 합은 $$p_A$$의 차수인 $$n$$을 넘지 못한다. 또, 고정된 고윳값 $$\lambda$$에 대해, 위 명제는 $$\lambda$$의 기하적 중복도가 대수적 중복도를 넘지 못한다는 것을 보여준다. 마지막으로 [명제 4](#prop4) 이후의 논증으로부터, $$\mathbb{K}^n$$을 고유공간으로 분해하기 위해서는 $$\lambda$$들의 기하적 중복도를 모두 합쳤을 때 $$n$$이 되어야 한다는 사실을 알 수 있다. 이를 모두 정리하면 다음 명제를 얻는다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop6">**명제 6**</ins> 임의의 $$n\times n$$ 행렬 $$A$$에 대하여, $$\mathbb{K}^n$$이 $$A$$의 고유공간들의 direct sum으로 표현가능할 필요충분조건은 
+::: 명제 6
+임의의 $$n\times n$$ 행렬 $$A$$에 대하여, $$\mathbb{K}^n$$이 $$A$$의 고유공간들의 direct sum으로 표현가능할 필요충분조건은 
 
 1. $$A$$의 특성다항식이 중복도를 고려하였을 때 $$n$$개의 근을 가지며,
 2. 이 때 각각의 고윳값의 기하적 중복도와 대수적 중복도가 같은 것이다.
-
-</div>
+:::
 
 특별히 $$\mathbb{K}$$가 algebraically closed field라면 첫째 조건은 항상 만족되므로, 둘째 조건만 고려하면 된다.
 
@@ -235,23 +211,19 @@ $$y_i\cdot x_j=\begin{cases}1&i=j\\0&i\neq j\end{cases}$$
 
 으로부터 $$C$$도 대각행렬이 되고, $$B$$는 영행렬이 된다는 것을 알 수 있다. 따라서 다음이 성립한다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop7">**명제 7**</ins> [명제 6](#prop6)의 조건을 모두 만족하는 $$n\times n$$ 행렬 $$A$$를 생각하고, 고유공간들의 basis로 이루어진 $$\mathbb{R}^n$$의 basis를 잡아 이를 $$x_1,\ldots, x_n$$이라 하자. $$Ax_i=\lambda_ix_i$$라 하고, $$X=(x_1\mid\cdots\mid x_n)$$이라 하면, 대각행렬
+::: 명제 7
+[명제 6](#prop6)의 조건을 모두 만족하는 $$n\times n$$ 행렬 $$A$$를 생각하고, 고유공간들의 basis로 이루어진 $$\mathbb{R}^n$$의 basis를 잡아 이를 $$x_1,\ldots, x_n$$이라 하자. $$Ax_i=\lambda_ix_i$$라 하고, $$X=(x_1\mid\cdots\mid x_n)$$이라 하면, 대각행렬
 
 $$D=\begin{pmatrix}\lambda_1&0&\cdots&0\\ 0&\lambda_2&\cdots&0\\ \vdots&\vdots&\ddots&\vdots\\0&0&\cdots&\lambda_n\end{pmatrix}$$
 
 에 대하여 $$A=XDX^{-1}$$이 성립한다. 
-
-</div>
+:::
 
 따라서 이 조건을 만족하는 행렬 $$A$$에 그럴듯한 이름을 붙여줄 수 있다.
 
-<div class="definition" markdown="1">
-
-<ins id="def8">**정의 8**</ins> [명제 6](#prop6)의 조건을 모두 만족하는 $$n\times n$$ 행렬 $$A$$를 *diagonalizable<sub>대각화가능</sub>*이라 한다.
-
-</div>
+::: 정의 8
+[명제 6](#prop6)의 조건을 모두 만족하는 $$n\times n$$ 행렬 $$A$$를 *diagonalizable<sub>대각화가능</sub>*이라 한다.
+:::
 
 혹은, [명제 6](#prop6)은 필요충분조건이었으므로, 대각행렬과 닮은 행렬을 diagonalizable한 행렬이라 불러도 아무런 문제가 없다. 바꾸어 말하자면 임의의 diagonalizable matrix의 eigenvalue에 의해 완전하게 결정된다. 
 
@@ -267,11 +239,9 @@ $$A_1A_2\cdots A_k =XD_1D_2\cdots D_kX^{-1}$$
 
 이고 대각행렬의 곱은 대각성분들의 곱으로 이루어진 대각행렬에 불과하므로 $$A_1A_2\cdots A_k$$를 계산하는 것 또한 크게 어렵지 않은 일이 될 수도 있다. 이런 경우를 우리는 다음과 같이 이름붙인다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def9">**정의 9**</ins> 행렬들의 family $$\{A_i\}$$가 *simultaneously diagonalizable<sub>동시대각화가능</sub>*이라는 것은 적당한 invertible matrix $$X$$가 존재하여 모든 $$i$$에 대하여 $$X^{-1}A_iX$$이 대각행렬이도록 할 수 있다는 것이다. 
-
-</div>
+::: 정의 9
+행렬들의 family $$\{A_i\}$$가 *simultaneously diagonalizable<sub>동시대각화가능</sub>*이라는 것은 적당한 invertible matrix $$X$$가 존재하여 모든 $$i$$에 대하여 $$X^{-1}A_iX$$이 대각행렬이도록 할 수 있다는 것이다. 
+:::
 
 만일 두 행렬 $$A,B$$가 고정된 행렬 $$X$$를 통해 simultaneously diagonalizable이라면, 다음의 식
 
@@ -279,14 +249,10 @@ $$AB=XD_AX^{-1}XD_BX^{-1}=XD_AD_BX^{-1}=XD_BD_AX^{-1}=BA$$
 
 으로부터 두 행렬 $$A, B$$는 commute한다는 것을 안다. 다음 명제는 (diagonalizable인 행렬에 대해서는) 그 역 또한 성립함을 보여준다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop10">**명제 10**</ins> 두 diagonalizable matrix $$A,B$$가 조건 $$AB=BA$$를 만족한다면, $$A, B$$는 simultaneously diagonalizable이다. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 명제 10
+두 diagonalizable matrix $$A,B$$가 조건 $$AB=BA$$를 만족한다면, $$A, B$$는 simultaneously diagonalizable이다. 
+:::
+::: 증명
 본질적으로, 이는 두 행렬 $$A,B$$가 같은 eigenspace decomposition을 준다는 것을 보이면 충분하다. $$A$$를 사용한 eigenspace decomposition
 
 $$V=\bigoplus_{\lambda}E_\lambda(A)$$
@@ -296,8 +262,7 @@ $$V=\bigoplus_{\lambda}E_\lambda(A)$$
 $$A(Bv)=ABv=BAv=B(\lambda v)=\lambda(Bv)$$
 
 인 것으로부터 $$Bv\in E_\lambda(A)$$임을 안다. 이제 $$B$$를 벡터공간 $$E_\lambda(A)$$ 위에서의 linear operator로 보면, 원래의 linear operator $$B$$가 diabonalizable이었으므로 $$B$$는 $$E_\lambda(A)$$ 위에서도 diagonalizable이고 따라서 $$B$$의 eigenvector들로 이루어진 $$E_\lambda(A)$$의 basis가 존재한다. 이제 $$E_\lambda(A)$$의 임의의 원소는 $$A$$의 (eigenvalue $$\lambda$$에 해당하는) eigenvector들이므로, 이들은 $$A$$의 eigenvector이기도 하다. 
-
-</details>
+:::
 
 ## 선형연산자의 고유공간분해
 
@@ -313,14 +278,10 @@ $$A-I=\begin{pmatrix}0&1&1\\0&0&1\\0&0&0\end{pmatrix}$$
 
 이 정의하는 operator를 생각하면 $$\ker (A-I)\cap \im(A-I)\neq \{0\}$$이다. 허나 만일 $$\ker L\cap \im L=\{0\}$$이 성립하기만 한다면, [§벡터공간의 차원, ⁋예시 8](/ko/math/linear_algebra/dimension#ex8)과 [명제 2](#prop2)로부터 우리는 반드시 $$V=\ker L\oplus \im L$$인 것을 안다. 다음 보조정리는 이 조건과 동치인 조건을 준다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="lem11">**보조정리 11**</ins> 위와 같은 상황에서, $$\ker L\cap \im L=\{0\}$$인 것은 $$\ker L^2=\ker L$$인 것과 동치이다. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 보조정리 11
+위와 같은 상황에서, $$\ker L\cap \im L=\{0\}$$인 것은 $$\ker L^2=\ker L$$인 것과 동치이다. 
+:::
+::: 증명
 약간의 생각을 통해, $$\ker L^2=\ker L$$은 $$\ker L^2\subset \ker L$$과 동치임을 안다. 따라서 보여야 할 것은 다음의 동치관계
 
 $$\ker L\cap \im L=\{0\}\iff \ker L^2\subset\ker L$$
@@ -332,23 +293,18 @@ $$\ker L\cap \im L=\{0\}\iff \ker L^2\subset\ker L$$
 $$0=Lv=L(Lw)=L^2w\implies w\in\ker(L^2)\subset \ker L$$
 
 이므로 $$w\in \ker L$$이다. 즉, $$v=Lw=0$$이다. 
-
-</details>
+:::
 
 다시 원래의 이야기로 돌아오면, 우리는 특별히 $$L$$이 어떠한 linear operator와 그 eigenvalue에 대하여 $$A-\lambda I$$의 꼴인 경우가 특별히 궁금하다. 다음 명제는 [보조정리 11](#lem11)을 사용하여 diagonalizability를 간결하게 특징짓는다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop12">**명제 12**</ins> Linear operator $$A:V\rightarrow V$$가 diagonalizable인 것은 모든 고윳값 $$\lambda\in\sigma(A)$$에 대하여 
+::: 명제 12
+Linear operator $$A:V\rightarrow V$$가 diagonalizable인 것은 모든 고윳값 $$\lambda\in\sigma(A)$$에 대하여 
 
 $$\ker(A-\lambda I)^2=\ker(A-\lambda I)$$
 
 인 것과 동치이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 우선 $$A$$가 diagonalizable이라 하자. 그럼 $$V=\bigoplus_{\mu\in\sigma(A)} E_\mu(A)$$이다. 임의의 $$v\in\ker(A-\lambda I)^2$$를 취하면, $$v=\sum_{\mu\in\sigma(A)}v_\mu$$로 유일하게 쓸 수 있고, 
 
 $$(A-\lambda I)^2v=\sum_{\mu\in\sigma(A)}(A-\lambda I)^2v_\mu=\sum_{\mu\in\sigma(A)}(\mu-\lambda)^2v_\mu=0$$
@@ -380,8 +336,7 @@ $$A\vert_{W_\lambda(A)}: W_\lambda(A) \rightarrow W_\lambda(A)$$
 $$\ker (A_{W_\lambda(A)}-\mu I)=\ker (A_{W_\lambda(A)}-\mu I)^2$$
 
 도 비슷한 이유로 $$W_\lambda(A)$$ 위에서 성립하는 것을 안다. 즉, 우리는 이 과정을 귀납적으로 반복할 수 있다. 한편 우리는 $$\mathbb{K}$$가 algebraically closed임을 가정하고 있으므로 임의의 linear operator $$W \rightarrow W$$는, $$W$$가 $$0$$차원이 아닌 한, 항상 고유값을 가진다는 것을 알고 이로부터 이 귀납법이 <em-ko>정확히</em-ko> $$A$$의 eigenspace decomposition을 준다는 것을 안다. 
-
-</details>
+:::
 
 ---
 

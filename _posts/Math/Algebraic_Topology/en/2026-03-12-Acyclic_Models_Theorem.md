@@ -20,17 +20,14 @@ As mentioned in [§Cohomology](/en/math/algebraic_topology/cohomology), the acyc
 
 When developing homology theory, we usually employ $$n$$-simplices, which help us examine arbitrary objects of $$\Top$$. We can formulate this as the following definition.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> A *category with models* is a pair $$(\mathcal{A},\mathcal{M})$$ consisting of a category $$\mathcal{A}$$ and a collection $$\mathcal{M}$$ of objects of $$\mathcal{A}$$. The objects belonging to $$\mathcal{M}$$ are called *models*.
-
-</div>
+::: Definition 1
+A *category with models* is a pair $$(\mathcal{A},\mathcal{M})$$ consisting of a category $$\mathcal{A}$$ and a collection $$\mathcal{M}$$ of objects of $$\mathcal{A}$$. The objects belonging to $$\mathcal{M}$$ are called *models*.
+:::
 
 This definition is not very substantial on its own. We now define the following.
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**Definition 2**</ins> Let a category with models $$(\mathcal{A},\mathcal{M})$$ and a covariant functor $$F_\bullet:\mathcal{A}\rightarrow \Ch_{\geq0}(\lMod{A})$$ be given.
+::: Definition 2
+Let a category with models $$(\mathcal{A},\mathcal{M})$$ and a covariant functor $$F_\bullet:\mathcal{A}\rightarrow \Ch_{\geq0}(\lMod{A})$$ be given.
 
 1. The functor $$F_\bullet$$ is said to be *acyclic on $$\mathcal{M}$$* if for each $$M\in\mathcal{M}$$, we have $$H_i(F(M))=0$$ for all $$i>0$$.
 2. The functor $$F_\bullet$$ is said to be *free on $$\mathcal{M}$$* if for each $$n$$, the following natural isomorphism
@@ -38,8 +35,7 @@ This definition is not very substantial on its own. We now define the following.
     $$F_n(-)\cong \bigoplus_{M\in \mathcal{M}}\mathbb{Z}\Hom_\mathcal{A}(M,-)$$
 
     holds.
-
-</div>
+:::
 
 For example, consider the category with models $$(\Top, \mathcal{M})$$ where the collection $$\mathcal{M}$$ of standard $$n$$-simplices $$\Delta^n$$ is taken as the models. Then the functor $$C_\bullet:\Top \rightarrow \Ab$$ assigning to each $$X\in \Top$$ the chain complex of singular $$n$$-simplices $$C_\bullet(X)$$ is both acyclic on $$\mathcal{M}$$ and free on $$\mathcal{M}$$.
 
@@ -50,9 +46,8 @@ For example, consider the category with models $$(\Top, \mathcal{M})$$ where the
 
 The main theorem of this post is the following.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm3">**Theorem 3 (Acyclic models theorem)**</ins> Let a category with models $$(\mathcal{A},\mathcal{M})$$ and two functors $$F_\bullet, G_\bullet:\mathcal{A}\rightarrow \Ch_{\geq0}(\lMod{A})$$ be given, and suppose $$F_\bullet$$ is free on $$\mathcal{M}$$ and $$G_\bullet$$ is acyclic on $$\mathcal{M}$$. Then for any natural transformation
+::: Theorem 3 (Acyclic models theorem)
+Let a category with models $$(\mathcal{A},\mathcal{M})$$ and two functors $$F_\bullet, G_\bullet:\mathcal{A}\rightarrow \Ch_{\geq0}(\lMod{A})$$ be given, and suppose $$F_\bullet$$ is free on $$\mathcal{M}$$ and $$G_\bullet$$ is acyclic on $$\mathcal{M}$$. Then for any natural transformation
 
 $$f(-)_0:H_0(F(-)) \Rightarrow H_0(G(-))$$
 
@@ -65,8 +60,7 @@ there exists a natural transformation
 $$f_\bullet(-):F_\bullet(-) \rightarrow G_\bullet(-)$$
 
 such that $$H_0(f)=f_0$$, and such a natural transformation $$f$$ is unique up to natural chain homotopy.
-
-</div>
+:::
 
 That is, starting from $$f(X)_0: H_0(F(X))\rightarrow H_0(G(X))$$ defined at the homology level, we must construct a chain map $$f_\bullet(X):F_\bullet(X)\rightarrow G_\bullet(X)$$. To do this, we first define the $$0$$th component $$f_0(X)$$ of $$f_\bullet(X)$$. Since $$F_0(X)$$ is free, this amounts to defining where each $$u:M\rightarrow X$$ is sent. On the other hand, by the following commutative diagram
 

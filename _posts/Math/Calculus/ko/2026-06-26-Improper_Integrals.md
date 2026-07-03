@@ -18,9 +18,8 @@ weight: 12
 
 우선 다음을 정의한다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> $$f$$가 모든 $$t > a$$에서 $$[a, t]$$에서 적분가능할 때, 무한구간 *이상적분<sub>improper integral</sub>*을
+::: 정의 1
+$$f$$가 모든 $$t > a$$에서 $$[a, t]$$에서 적분가능할 때, 무한구간 *이상적분<sub>improper integral</sub>*을
 
 $$\int_a^{\infty} f(x) dx = \lim_{t \to \infty}\int_a^t f(x) dx$$
 
@@ -41,8 +40,7 @@ $$\int_{-\infty}^c f(x) dx + \int_c^{\infty} f(x) dx$$
 $$\int_{-\infty}^{\infty} f(x) dx$$
 
 으로 나타낸다. 
-
-</div>
+:::
 
 위의 정의에서 두 이상적분
 
@@ -64,9 +62,8 @@ $$\lim_{t\rightarrow\infty}\int_{-t}^t \sgn(x)dx=0$$
 
 비슷하게 우리는 한 점에서 발산하는 함수의 적분 또한 극한값으로 정의한다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**정의 2**</ins> $$f$$가 $$c$$에서 무한히 커지지만 모든 $$t < c$$에서 $$[a, t]$$에서 적분가능할 때, *특이적분*을
+::: 정의 2
+$$f$$가 $$c$$에서 무한히 커지지만 모든 $$t < c$$에서 $$[a, t]$$에서 적분가능할 때, *특이적분*을
 
 $$\int_a^c f(x) dx = \lim_{t \to c^-}\int_a^t f(x) dx$$
 
@@ -79,8 +76,7 @@ $$\int_c^b f(x) dx = \lim_{t \to c^+}\int_t^b f(x) dx$$
 $$\int_a^b f(x)dx=\lim_{t\rightarrow c^-}\int_a^t f(x)dx+\lim_{s\rightarrow c^+} \int_s^b f(x)dx$$
 
 으로 정의한다. 
-
-</div>
+:::
 
 역시 $$c$$가 구간 내부에 있는 경우 위의 [정의 1](#def1)과 같은 미묘함이 여전히 존재한다. 가령
 
@@ -96,39 +92,29 @@ $$\lim_{t\rightarrow 0^+}\left(\int_{-1}^{-t} \frac{dx}{x}+\int_t^1\frac{dx}{x}\
 
 많은 이상적분은 원시함수를 명시적으로 구할 수 없어 그 값을 직접 계산하기 어렵다. 그러나 수렴 여부만이라면 더 다루기 쉬운 함수와 비교하여 판정할 수 있다. 피적분함수가 음이 아니면 적분값이 적분구간에 대해 단조증가하므로, 급수에서와 같은 비교판정이 성립한다.
 
-<div class="proposition" markdown="1">
+::: 명제 3 (비교판정)
+$$x \geq a$$에서 $$0 \leq f(x) \leq g(x)$$라 하자. $$\int_a^\infty g(x) dx$$가 수렴하면 $$\int_a^\infty f(x) dx$$도 수렴하고, $$\int_a^\infty f(x) dx$$가 발산하면 $$\int_a^\infty g(x) dx$$도 발산한다.
+:::
 
-<ins id="prop3">**명제 3 (비교판정)**</ins> $$x \geq a$$에서 $$0 \leq f(x) \leq g(x)$$라 하자. $$\int_a^\infty g(x) dx$$가 수렴하면 $$\int_a^\infty f(x) dx$$도 수렴하고, $$\int_a^\infty f(x) dx$$가 발산하면 $$\int_a^\infty g(x) dx$$도 발산한다.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 $$F(t) = \int_a^t f(x) dx$$는 $$f \geq 0$$이므로 $$t$$에 대해 증가하고, [§적분, ⁋명제 11](/ko/math/calculus/integration#prop11)의 단조성에 의해
 
 $$F(t) \leq \int_a^t g(x) dx \leq \int_a^\infty g(x) dx$$
 
 로 위로 유계이다. 위로 유계인 증가함수는 $$t \to \infty$$에서 극한을 가지므로 $$\int_a^\infty f(x) dx$$가 수렴한다. 둘째 주장은 대우이다.
-
-</details>
+:::
 
 직접 부등식 $$0 \leq f \leq g$$를 세우기 어려울 때는 급수에서처럼 극한비교를 쓴다. 즉, 두 양함수가 $$f(x)/g(x) \to c$$ ($$0 < c < \infty$$) 를 만족하면 [§무한급수, ⁋명제 7](/ko/math/calculus/series#prop7)과 같은 논증으로 두 적분이 함께 수렴·발산하므로, 피적분함수가 $$x \to \infty$$에서 어떤 함수처럼 행동하는지만 알면 판정이 끝난다.
 
 부호가 바뀌는 피적분함수는 절댓값을 취해 양항으로 환원한다.
 
-<div class="proposition" markdown="1">
+::: 명제 4 (절대수렴)
+$$\int_a^\infty \lvert f(x)\rvert dx$$이 수렴하면 $$\int_a^\infty f(x) dx$$도 수렴한다.
+:::
 
-<ins id="prop4">**명제 4 (절대수렴)**</ins> $$\int_a^\infty \lvert f(x)\rvert dx$$이 수렴하면 $$\int_a^\infty f(x) dx$$도 수렴한다.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 $$0 \leq f + \lvert f\rvert \leq 2\lvert f\rvert$$이므로 [명제 3](#prop3)으로 $$\int_a^\infty (f(x) + \lvert f(x)\rvert) dx$$이 수렴하고, $$\int_a^\infty f(x) dx = \int_a^\infty (f(x) + \lvert f(x)\rvert) dx - \int_a^\infty \lvert f(x)\rvert dx$$도 수렴한다.
-
-</details>
+:::
 
 역은 성립하지 않는다. $$\int_0^\infty \frac{\sin x}{x} dx = \frac\pi2$$는 수렴하지만 $$\int_0^\infty \lvert \sin x/x\rvert dx$$는 발산하므로 *조건수렴*이며, 이는 급수의 조건수렴에 대응한다.
 
@@ -140,9 +126,8 @@ $$\int_c^b f(x) dx = \int_{1/(b-c)}^\infty \frac{f(c + 1/u)}{u^2} du$$
 
 이 판정들이 실제로 쓰이려면 비교할 표준 함수가 있어야 하는데, 그 역할은 거의 항상 거듭제곱함수나 지수함수 $$e^{-x}$$가 맡는다. 그중 거듭제곱함수의 적분은 수렴과 발산을 가르는 (거의) sharp한 경계를 보여 준다.
 
-<div class="example" markdown="1">
-
-<ins id="ex5">**예시 5 (p-적분)**</ins> 거듭제곱의 이상적분은 무한구간과 특이점에서 정확히 반대의 경계를 보인다. 무한구간 $$\int_1^{\infty} x^{-p} dx$$는 $$p > 1$$에서 수렴하고 $$p \leq 1$$에서 발산하는 반면, 특이점을 포함하는 $$\int_0^1 x^{-p} dx$$는 거꾸로 $$p < 1$$에서 수렴하고 $$p \geq 1$$에서 발산한다. 이 계산은 둘 다 같은 원시함수에서 나오는데, $$p \neq 1$$이면
+::: 예시 5 (p-적분)
+거듭제곱의 이상적분은 무한구간과 특이점에서 정확히 반대의 경계를 보인다. 무한구간 $$\int_1^{\infty} x^{-p} dx$$는 $$p > 1$$에서 수렴하고 $$p \leq 1$$에서 발산하는 반면, 특이점을 포함하는 $$\int_0^1 x^{-p} dx$$는 거꾸로 $$p < 1$$에서 수렴하고 $$p \geq 1$$에서 발산한다. 이 계산은 둘 다 같은 원시함수에서 나오는데, $$p \neq 1$$이면
 
 $$\int_1^t x^{-p} dx = \frac{t^{1-p} - 1}{1 - p}, \qquad \int_t^1 x^{-p} dx = \frac{1 - t^{1-p}}{1 - p}$$
 
@@ -153,8 +138,7 @@ $$\int_1^\infty x^{-p} dx = \frac{1}{p - 1} \quad (p > 1), \qquad \int_0^1 x^{-p
 이다. 직관적으로 이는 무한구간에서는 큰 $$p$$가 빨리 감소해 수렴을 돕지만, 특이점 근처에서는 큰 $$p$$가 더 빨리 증가해 발산이 일어나는 것으로 볼 수 있으며, 이는 $$1/x$$와 $$1/x^2$$를 그린 다음의 그림에서 명확하게 눈으로 볼 수 있다. 
 
 ![1/x와 1/x²의 그래프](/assets/images/Math/Calculus/Improper_Integrals-1.svg){:style="width:12.69em" class="invert" .align-center}
-
-</div>
+:::
 
 단 이 경계 $$p = 1$$은 약간 미묘한 것이다. 치환적분은 이상적분에도 그대로 쓸 수 있으므로, $$u = \ln x$$로 두면
 
@@ -164,9 +148,8 @@ $$\int_2^\infty \frac{dx}{x(\ln x)^p} = \int_{\ln 2}^\infty u^{-p} du$$
 
 한편, 수렴하는 이상적분은 새로운 함수를 정의하는 데 쓰인다.
 
-<div class="example" markdown="1">
-
-<ins id="ex6">**예시 6 (감마함수)**</ins> 이상적분으로 정의된 다음의 함수
+::: 예시 6 (감마함수)
+이상적분으로 정의된 다음의 함수
 
 $$\Gamma(s) = \int_0^\infty x^{s-1}e^{-x} dx$$
 
@@ -175,5 +158,4 @@ $$\Gamma(s) = \int_0^\infty x^{s-1}e^{-x} dx$$
 $$\Gamma(s+1) = \bigl[-x^s e^{-x}\bigr]_0^\infty + s\int_0^\infty x^{s-1}e^{-x} dx = s \Gamma(s)$$
 
 이고 $$\Gamma(1) = \int_0^\infty e^{-x} dx = 1$$이므로 $$\Gamma(n) = (n-1)!$$이다. 즉 감마함수는 팩토리얼을 실수로 확장한다.
-
-</div>
+:::

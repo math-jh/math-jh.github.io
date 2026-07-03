@@ -31,11 +31,9 @@ $${<}(1)=\{2,3,\ldots\}$$
 
 ## 함수의 정의
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> 공집합이 아닌 집합 $$A$$에 대하여, 이항관계 $$f=(F,A,B)$$가 *함수<sub>function</sub>*라는 것은 $$A=\pr_1F$$이고 각각의 $$x\in A$$에 대하여 $$F(\{x\})$$가 한원소집합[^1]인 것이다.
-
-</div>
+::: 정의 1
+공집합이 아닌 집합 $$A$$에 대하여, 이항관계 $$f=(F,A,B)$$가 *함수<sub>function</sub>*라는 것은 $$A=\pr_1F$$이고 각각의 $$x\in A$$에 대하여 $$F(\{x\})$$가 한원소집합[^1]인 것이다.
+:::
 
 조건 $$A=\pr_1F$$는 $$A$$의 모든 원소 $$x$$가 <em-ko>적어도</em-ko> 하나 이상의 $$y\in B$$에 대응됨을 의미하고, 둘째 조건은 모든 $$x\in A$$는 <em-ko>많아야</em-ko> 하나의 $$y\in B$$에 대응됨을 의미한다. 따라서 $$f=(F,A,B)$$가 함수라는 것은
 
@@ -55,11 +53,9 @@ $$F=\{(x,y)\mid (y=f(x))\wedge(x\in A)\}$$
 
 만일 $$f$$가 어떠한 집합 $$A$$에서 $$A$$로의 함수라면, $$x\in A$$가 $$f$$에 의해 *고정된다*는 것은 $$f(x)=x$$인 것이다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**정의 2**</ins> 임의의 집합 $$A$$에 대하여, *항등함수* $$\id_A$$를 triple $$(\Delta_A,A,A)$$으로 정의한다. 즉, $$\id_A$$는 임의의 $$x\in A$$에 대하여, 식 $$f(x)=x$$로 정의되는 함수이다.
-
-</div>
+::: 정의 2
+임의의 집합 $$A$$에 대하여, *항등함수* $$\id_A$$를 triple $$(\Delta_A,A,A)$$으로 정의한다. 즉, $$\id_A$$는 임의의 $$x\in A$$에 대하여, 식 $$f(x)=x$$로 정의되는 함수이다.
+:::
 
 정의에 의하여, $$\id_A$$는 $$A$$의 모든 원소를 고정하는 함수이다.
 
@@ -101,11 +97,9 @@ $${\id_A}=g\circ h\circ f,\quad {\id_B}=f\circ g\circ h,\quad {\id_C}=h\circ f\c
 
 ## 함수의 확장과 제한
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**정의 3**</ins> 두 함수 $$f=(F,A,B),f'=(F',A',B')$$가 집합 $$S$$에서 *compatible*하다는 것은 $$S$$가 $$f$$와 $$f'$$의 정의역에 각각 포함되어 있고, 모든 $$x\in S$$에 대하여 $$f(x)=f'(x)$$인 것이다.
-
-</div>
+::: 정의 3
+두 함수 $$f=(F,A,B),f'=(F',A',B')$$가 집합 $$S$$에서 *compatible*하다는 것은 $$S$$가 $$f$$와 $$f'$$의 정의역에 각각 포함되어 있고, 모든 $$x\in S$$에 대하여 $$f(x)=f'(x)$$인 것이다.
+:::
 
 두 함수 $$f$$와 $$f'$$가 주어졌고, $$S=\pr_1 F\cap\pr_1 F'$$가 공집합이 아니라 하자. $$S$$에서 두 함수가 compatible하다면 $$\pr_1F\cup\pr_1F'$$를 정의역으로 갖는 새로운 함수 $$g$$를 다음의 식
 
@@ -113,11 +107,9 @@ $$g(x)=\begin{cases}f(x)&x\in \pr_1F\setminus\pr_1F'\\ f(x)=f'(x)&x\in \pr_1F\ca
 
 으로 정의할 수 있다. 이러한 상황을 다음과 같이 정의한다.
 
-<div class="definition" markdown="1">
-
-<ins id="def4">**정의 4**</ins> 두 함수 $$f=(F,A,B)$$, $$f'=(F',A',B')$$가 주어졌다 하자. 만일 $$F\subseteq F'$$이고 $$B\subseteq B'$$라면 $$f'$$를 $$f$$의 *extension<sub>확장</sub>*이라 부르고, $$f'$$가 $$f$$를 확장한다고 말한다.
-
-</div>
+::: 정의 4
+두 함수 $$f=(F,A,B)$$, $$f'=(F',A',B')$$가 주어졌다 하자. 만일 $$F\subseteq F'$$이고 $$B\subseteq B'$$라면 $$f'$$를 $$f$$의 *extension<sub>확장</sub>*이라 부르고, $$f'$$가 $$f$$를 확장한다고 말한다.
+:::
 
 이와 반대로 어떠한 함수를 더 작은 정의역으로 제한시킬 수도 있다. $$f=(F,A,B)$$가 함수이고 $$X\subseteq A$$라 하자. 관계 $$R$$을 
 
@@ -125,11 +117,9 @@ $$g(x)=\begin{cases}f(x)&x\in \pr_1F\setminus\pr_1F'\\ f(x)=f'(x)&x\in \pr_1F\ca
 
 로 정의한다면, 이를 만족하는 $$(x,y)$$들을 모아둔 $$R$$은 함수가 되며, 이 함수의 정의역은 $$X$$가 된다. 따라서 다음과 같이 새로운 함수를 정의할 수 있다.
 
-<div class="definition" markdown="1">
-
-<ins id="def5">**정의 5**</ins> 위와 같이 정의된 함수 $$g$$를 $$f$$의 $$A$$ 위로의 *restriction<sub>제한</sub>*이라 부르며, 이를 $$f\vert_{X}$$와 같이 적는다.
-
-</div>
+::: 정의 5
+위와 같이 정의된 함수 $$g$$를 $$f$$의 $$A$$ 위로의 *restriction<sub>제한</sub>*이라 부르며, 이를 $$f\vert_{X}$$와 같이 적는다.
+:::
 
 
 

@@ -27,11 +27,9 @@ the map $$\phi^\ast\rho_N:A\otimes N \rightarrow N$$ satisfies all the condition
 
 we see that this assignment of an $$A$$-module is functorial.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> For a ring homomorphism $$\phi:A \rightarrow B$$, the functor defined above is denoted by $$\phi^\ast: \lMod{B} \rightarrow \lMod{A}$$ and called the *restriction of scalars*.
-
-</div>
+::: Definition 1
+For a ring homomorphism $$\phi:A \rightarrow B$$, the functor defined above is denoted by $$\phi^\ast: \lMod{B} \rightarrow \lMod{A}$$ and called the *restriction of scalars*.
+:::
 
 In other words, given any $$B$$-module $$\rho_N: B\otimes N \rightarrow N$$, we simply define an action of $$A$$ on $$N$$ by the formula
 
@@ -39,11 +37,9 @@ $$\alpha\cdot_A y:=\phi(\alpha)\cdot_B y$$
 
 In particular, consider the case $$N=B$$. Since $$\phi^\ast B$$ and $$B$$ coincide as sets, we can compare the original ring homomorphism $$\phi:A \rightarrow B$$ with the action on $$\phi^\ast B$$; here we find that $$\phi$$ is an $$A$$-linear map.
 
-<div class="example" markdown="1">
-
-<ins id="ex2">**Example 2**</ins> The forgetful functor $$U: \lMod{B} \rightarrow\Ab$$ is induced by the (unique) ring homomorphism $$\mathbb{Z}\rightarrow B$$.
-
-</div>
+::: Example 2
+The forgetful functor $$U: \lMod{B} \rightarrow\Ab$$ is induced by the (unique) ring homomorphism $$\mathbb{Z}\rightarrow B$$.
+:::
 
 ## Extension of Scalars
 
@@ -57,11 +53,9 @@ That this defines an action is readily verified by direct computation, or can be
 
 $$B\otimes_\mathbb{Z}(\phi^\ast B\otimes_AM)\cong (B\otimes_\mathbb{Z}\phi^\ast B)\otimes_AM \overset{\mu_B}{\longrightarrow} \phi^\ast B\otimes_AM$$[^1]. Furthermore, for any $$A$$-linear map $$u:M \rightarrow M'$$, we verify that $$\id_{\phi^\ast B}\otimes_A u$$ is a $$B$$-linear map between the $$B$$-modules defined above.
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**Definition 3**</ins> The functor $$\phi^\ast B\otimes_A-:\lMod{A} \rightarrow \lMod{B}$$ defined above is simply denoted by $$\phi_!$$ and called the *extension of scalars*.
-
-</div>
+::: Definition 3
+The functor $$\phi^\ast B\otimes_A-:\lMod{A} \rightarrow \lMod{B}$$ defined above is simply denoted by $$\phi_!$$ and called the *extension of scalars*.
+:::
 
 ## Coextension of Scalars
 
@@ -79,44 +73,33 @@ $$(\beta\cdot g)(\alpha\cdot \beta')=g(\phi(\alpha)\beta'\beta)=g(\alpha\cdot(\b
 
 so $$\beta\cdot g$$ is also an $$A$$-linear map. A short calculation shows that this is functorial as well, yielding the following definition.
 
-<div class="definition" markdown="1">
-
-<ins id="def4">**Definition 4**</ins> The functor $$\Hom_A(\phi^\ast B,-): \lMod{A} \rightarrow \lMod{B}$$ is called the *coextension of scalars* and written $$\phi_\ast$$.
-
-</div>
+::: Definition 4
+The functor $$\Hom_A(\phi^\ast B,-): \lMod{A} \rightarrow \lMod{B}$$ is called the *coextension of scalars* and written $$\phi_\ast$$.
+:::
 
 ## Adjoint Functors
 
 The three functors defined above are related by certain adjunctions. We first establish the following lemma.
 
-<div class="proposition" markdown="1">
-
-<ins id="lem5">**Lemma 5**</ins> Let $$N_1$$ be a right $$B$$-module and $$N_2$$ a left $$B$$-module, and consider the two abelian groups $$\phi^\ast N_1\otimes_A \phi^\ast N_2$$ and $$N_1\otimes_B N_2$$. Then there is a unique bilinear map $$\Phi:\phi^\ast N_1\otimes_A \phi^\ast N_2 \rightarrow N_1\otimes_BN_2$$ sending each $$y_1\otimes_A y_2\in \phi^\ast N_1\otimes_A\phi^\ast N_2$$ to $$y_1\otimes_B y_2\in N_1\otimes_BN_2$$.
+::: Lemma 5
+Let $$N_1$$ be a right $$B$$-module and $$N_2$$ a left $$B$$-module, and consider the two abelian groups $$\phi^\ast N_1\otimes_A \phi^\ast N_2$$ and $$N_1\otimes_B N_2$$. Then there is a unique bilinear map $$\Phi:\phi^\ast N_1\otimes_A \phi^\ast N_2 \rightarrow N_1\otimes_BN_2$$ sending each $$y_1\otimes_A y_2\in \phi^\ast N_1\otimes_A\phi^\ast N_2$$ to $$y_1\otimes_B y_2\in N_1\otimes_BN_2$$.
 
 If $$A$$ is a commutative ring, then $$\Phi$$ is an $$A$$-linear map $$\phi^\ast N_1\otimes_A\phi^\ast N_2 \rightarrow\phi^\ast(N_1\otimes_BN_2)$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 Define a map $$\phi^\ast N_1\times\phi^\ast N_2 \rightarrow N_1\otimes_B N_2$$ by $$(y_1,y_2)\mapsto y_1\otimes_B y_2$$, and verify that it is balanced with respect to the $$A$$-action. Since the $$A$$-action on $$\phi^\ast N_1,\phi^\ast N_2$$ is given by the $$B$$-action through $$\phi(\alpha)$$, for any $$\alpha\in A$$,
 
 $$(\alpha\cdot_A y_1,y_2)=(\phi(\alpha)\cdot_B y_1, y_2)\mapsto (\phi(\alpha)\cdot_B y_1)\otimes_B y_2=y_1\otimes_B(\phi(\alpha)\cdot_B y_1)$$
 
 holds, and therefore $$(\alpha\cdot_A y_1,y_2)$$ and $$y_1,\alpha\cdot_Ay_2$$ are sent to the same element; the claim follows from the universal property of the tensor product.
-
-</details>
+:::
 
 The following propositions hold in the general case as well, but for convenience we assume that $$A$$ and $$B$$ are both commutative rings.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop6">**Proposition 6**</ins> An adjunction $$\phi_!\dashv\phi^\ast$$ exists.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 6
+An adjunction $$\phi_!\dashv\phi^\ast$$ exists.
+:::
+::: Proof
 Fix arbitrary $$A$$-module $$M$$ and $$B$$-module $$N$$. First, for any $$v\in\Hom_B(\phi_!M,N)$$, consider the composition of maps
 
 ![Adjointness-1](/assets/images/Math/Algebraic_Structures/Change_of_Base_Ring-3.svg){:style="width:22.24em" class="invert" .align-center}
@@ -148,16 +131,13 @@ $$\Phi(\id_{\phi^\ast B}\otimes_A u(\beta'\cdot_B(\beta\otimes_Ax)))=\Phi((\beta
 and under the isomorphism $$B\otimes_BN\cong N$$ this corresponds to $$(\beta'\beta)\cdot_Bx=\beta'\cdot_B(\beta\cdot_Bx)$$. Hence the map defined above is $$B$$-linear.
 
 We now verify that the two maps defined above are mutually inverse, and moreover that they define a natural equivalence.
-
-</details>
+:::
 
 The following adjoint pair is proved similarly.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop7">**Proposition 7**</ins> An adjunction $$\phi^\ast\dashv\phi_\ast$$ exists.
-
-</div>
+::: Proposition 7
+An adjunction $$\phi^\ast\dashv\phi_\ast$$ exists.
+:::
 
 Thus $$\phi^\ast:\lMod{B} \rightarrow\lMod{A}$$ is both a left adjoint and a right adjoint, and therefore commutes with all limits and colimits.
 

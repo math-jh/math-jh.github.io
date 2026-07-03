@@ -56,11 +56,9 @@ $$\widetilde{M}(X)=M\otimes_A A=M$$
 
 일반적으로, 구체적인 기하적 언어에 비교했을 때 sheaf 언어의 장점은 더 일반적인 경우에 적용이 가능하다는 것이다. 가령 다음을 정의한다. ([\[가환대수학\] §기본 개념들, ⁋정의 8](/ko/math/commutative_algebra/basic_notions#def8))
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> 일반적인 variety $$X$$ 위의 $$\mathcal{O}_X$$-module $$\mathcal{F}$$가 *quasi-coherent sheaf<sub>준연접층</sub>*라는 것은, $$X$$의 affine open cover $$\{U_i\}$$와 각각의 coordinate ring $$A_i=\mathcal{O}_X(U_i)$$-module $$M_i$$가 존재하여 $$\mathcal{F}\vert_{U_i}\cong \widetilde{M_i}$$가 되는 것이다. 만일 각 $$M_i$$가 finitely generated $$A_i$$-module이라면, $$\mathcal{F}$$를 *coherent sheaf<sub>연접층</sub>*라 부른다.
-
-</div>
+::: 정의 1
+일반적인 variety $$X$$ 위의 $$\mathcal{O}_X$$-module $$\mathcal{F}$$가 *quasi-coherent sheaf<sub>준연접층</sub>*라는 것은, $$X$$의 affine open cover $$\{U_i\}$$와 각각의 coordinate ring $$A_i=\mathcal{O}_X(U_i)$$-module $$M_i$$가 존재하여 $$\mathcal{F}\vert_{U_i}\cong \widetilde{M_i}$$가 되는 것이다. 만일 각 $$M_i$$가 finitely generated $$A_i$$-module이라면, $$\mathcal{F}$$를 *coherent sheaf<sub>연접층</sub>*라 부른다.
+:::
 
 일반적으로 quasi-coherent sheaf를 다룰 때는 각각의 affine cover마다 다른 $$M$$이 붙어있을 수 있으므로 조심해야 하지만, affine case로만 한정할 경우 $$M\mapsto \widetilde{M}$$은 $$\lMod{A}$$에서 $$\QCoh(X)$$로의 categorical equivalence를 정의한다. 이는 임의의 quasi-coherent sheaf $$\mathcal{F}$$에 대하여, $$\widetilde{\Gamma(X,\mathcal{F})}$$가 $$\mathcal{F}$$ 자신을 복원한다는 것을 확인하면 된다. 즉 우리의 슬로건은, affine case에서는 quasi-coherent sheaf는 $$A$$-module이고, coherent sheaf는 finite rank $$A$$-module이라는 것이다. 
 
@@ -72,23 +70,17 @@ $$\widetilde{M}(X)=M\otimes_A A=M$$
 
 이제 우리는 canonical bundle을 정의할 준비가 되었다. 이를 위해서는 먼저 variety 위의 cotangent bundle을 도입해야 하는데, 다음 정의는 이미 [§선다발과 벡터다발, ⁋예시 24](/ko/math/algebraic_varieties/line_bundles#ex24)에서 살펴본 것이지만 완결성을 위해 다시 소개한다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**정의 2**</ins> Smooth variety $$X$$의 *cotangent bundle<sub>여접다발</sub>* $$\Omega_X^1$$는 tangent bundle $$\mathcal{T}_X$$의 dual vector bundle이다. 
-
-</div>
+::: 정의 2
+Smooth variety $$X$$의 *cotangent bundle<sub>여접다발</sub>* $$\Omega_X^1$$는 tangent bundle $$\mathcal{T}_X$$의 dual vector bundle이다. 
+:::
 
 그럼 우리가 이전 섹션에서 살펴본 construction은 다음을 위한 것이다. 
 
-<div class="proposition" markdown="1">
+::: 명제 3
+Affine variety $$X$$와 $$X$$의 coordinate ring $$A$$에 대하여, $$\Omega_X^1$$은 $$\widetilde{\Omega}_{A/\mathbb{K}}$$에 대응되는 vector bundle이다. ([\[가환대수학\] §미분, ⁋정의 3](/ko/math/commutative_algebra/differentials#def3))
+:::
 
-<ins id="prop3">**명제 3**</ins> Affine variety $$X$$와 $$X$$의 coordinate ring $$A$$에 대하여, $$\Omega_X^1$$은 $$\widetilde{\Omega}_{A/\mathbb{K}}$$에 대응되는 vector bundle이다. ([\[가환대수학\] §미분, ⁋정의 3](/ko/math/commutative_algebra/differentials#def3))
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 이를 위해서는 기존에 정의한 tangent bundle과 cotangent bundle을 sheaf 언어로 바꿔쓰는 것이 편할 것이다. 우선 tangent sheaf $$\mathcal{T}_X$$를 정의하자. $$X$$의 열린집합 $$U$$에 대하여, $$\mathcal{T}_X(U)$$를 $$\mathcal{O}_X(U)$$ 위의 $$\mathbb{K}$$-derivation들의 모임 $$\Der_\mathbb{K}(\mathcal{O}_X(U),\mathcal{O}_X(U))$$이 정의하는 sheaf를 tangent sheaf라 부른다. 
 
 우리의 메인 도구는 Kähler differential의 universal property이다. ([\[가환대수학\] §미분, ⁋보조정리 2](/ko/math/commutative_algebra/differentials#lem2)) 즉, 임의의 $$A$$-module $$N$$에 대하여 natural isomorphism
@@ -112,38 +104,31 @@ $$\Hom_{\mathcal{O}_X}(\widetilde{\Omega_{A/\mathbb{K}}}, \mathcal{O}_X)\cong\De
 $$\widetilde{\Omega_{A/\mathbb{K}}}^\vee\cong \widetilde{\Omega_{A/\mathbb{K}}^\vee}\cong \widetilde{\Der_\mathbb{K}(A,A)}\cong \mathcal{T}_X$$
 
 이므로 원하는 주장이 성립한다. 
-
-</details>
+:::
 
 이 결과는 cotangent bundle이 우리가 상상하는 것처럼 differential $$1$$-form들로 나타난다는 것을 보여준다. 
 
-<div class="example" markdown="1">
-
-<ins id="ex4">**예시 4**</ins> $$\mathbb{A}^n$$의 cotangent bundle은 $$\Omega_{\mathbb{A}^n}^1 \cong \mathcal{O}_{\mathbb{A}^n}^{\oplus n}$$이다. 대수적으로, 만일 $$\mathbb{A}^n$$의 coordinate ring $$\mathbb{K}[\x_1, \ldots, \x_n]$$을 고정하면 이 $$\mathbb{K}$$-algebra의 Kähler differentials은 free module $$\bigoplus_{i=1}^n \mathbb{K}[\x_1, \ldots, \x_n]  d\x_i$$이므로, 이 결과는 우리의 직관과 잘 맞아떨어진다.
-
-</div>
+::: 예시 4
+$$\mathbb{A}^n$$의 cotangent bundle은 $$\Omega_{\mathbb{A}^n}^1 \cong \mathcal{O}_{\mathbb{A}^n}^{\oplus n}$$이다. 대수적으로, 만일 $$\mathbb{A}^n$$의 coordinate ring $$\mathbb{K}[\x_1, \ldots, \x_n]$$을 고정하면 이 $$\mathbb{K}$$-algebra의 Kähler differentials은 free module $$\bigoplus_{i=1}^n \mathbb{K}[\x_1, \ldots, \x_n]  d\x_i$$이므로, 이 결과는 우리의 직관과 잘 맞아떨어진다.
+:::
 
 한편 우리는 임의의 smooth variety $$X$$ of dimension $$n$$과 그 위의 cotangent bundle $$\Omega_X^1$$에 대하여, $$\Omega_X^1$$의 각 fiber는 $$n$$차원이므로 이를 $$n$$번 exterior product한 것은 line bundle이 되는 것을 안다.
 
-<div class="definition" markdown="1">
-
-<ins id="def5">**정의 5**</ins> Smooth variety $$X$$ of dimension $$n$$의 *canonical line bundle<sub>표준 선다발</sub>* $$\omega_X$$를 cotangent bundle의 top exterior power
+::: 정의 5
+Smooth variety $$X$$ of dimension $$n$$의 *canonical line bundle<sub>표준 선다발</sub>* $$\omega_X$$를 cotangent bundle의 top exterior power
 
 $$\omega_X = \bigwedge\nolimits^{\!n} \Omega_X^1$$
 
 로 정의한다. 
-
-</div>
+:::
 
 우리는 canonical bundle $$\omega_X$$의 global section $$s\in \Gamma(X, \omega_X)$$을 $$X$$ 위의 *regular $$n$$-form*이라 부른다. 이들은 만일 $$\omega_X$$의 trivializing open set $$U$$를 잡고, 이를 [예시 4](#ex4)과 같이 affine space 위의 cotangent bundle로 identify할 경우 regular function $$f$$에 대하여 $$fd\x_1 \wedge \cdots \wedge d\x_n$$의 꼴로 나타나는 $$n$$-form들이다. 
 
 한편 우리는 line bundle과 divisor class의 대응으로부터 다음을 정의할 수 있다.
 
-<div class="definition" markdown="1">
-
-<ins id="def6">**정의 6**</ins> Canonical bundle $$\omega_X$$에 대응하는 divisor class를 *canonical divisor*라 하고 $$K_X$$로 표기한다. 즉, $$\omega_X \cong \mathcal{O}_X(K_X)$$이다.
-
-</div>
+::: 정의 6
+Canonical bundle $$\omega_X$$에 대응하는 divisor class를 *canonical divisor*라 하고 $$K_X$$로 표기한다. 즉, $$\omega_X \cong \mathcal{O}_X(K_X)$$이다.
+:::
 
 이를 위해서는 [§선다발과 벡터다발, ⁋명제 19](/ko/math/algebraic_varieties/line_bundles#prop19)를 사용하므로, $$K_X$$는 오직 divisor class로만 정의된다는 것에 유의하자.
 
@@ -159,15 +144,13 @@ $$0 \rightarrow \mathcal{O}_{\mathbb{P}^{n}}\rightarrow \mathcal{O}_{\mathbb{P}^
 
 가 존재하며 여기에 dual을 취하면 다음을 얻는다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop7">**명제 7 (Euler Exact Sequence)**</ins> $$\mathbb{P}^n$$ 위에 정의된 vector bundle들의 exact sequence
+::: 명제 7 (Euler Exact Sequence)
+$$\mathbb{P}^n$$ 위에 정의된 vector bundle들의 exact sequence
 
 $$0 \rightarrow \Omega_{\mathbb{P}^n}^1 \rightarrow \mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)} \rightarrow \mathcal{O}_{\mathbb{P}^n} \rightarrow 0$$
 
 가 존재한다. 
-
-</div>
+:::
 
 이제 $$\mathbb{P}^n$$의 canonical bundle을 계산하기 위해서는 이 exact sequence에 top exterior power를 취해야 한다. 더 일반적으로, 다음의 short exact sequence
 
@@ -187,9 +170,8 @@ $$\omega_{\mathbb{P}^n}=\det(\Omega_{\mathbb{P}^n}^1)\cong \mathcal{O}_{\mathbb{
 
 을 얻는다. 이 때 canonical divisor는 $$K_{\mathbb{P}^n}=-(n+1)H$$로 주어진다. 이 계산과 [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16)부터 $$\omega_{\mathbb{P}^n}$$은 regular section을 갖지 않는다는 것을 안다. 
 
-<div class="example" markdown="1">
-
-<ins id="ex8">**예시 8**</ins> 위의 계산을 $$n$$-form의 transition function 관점에서도 확인할 수 있다. $$\mathbb{P}^n$$의 standard open cover $$U_i = \{\x_i \neq 0\}$$ 위에서 affine coordinate을 $$\y_j^{(i)} = \x_j / \x_i$$ ($$j \neq i$$)로 놓으면, $$U_i$$ 위의 $$n$$-form 
+::: 예시 8
+위의 계산을 $$n$$-form의 transition function 관점에서도 확인할 수 있다. $$\mathbb{P}^n$$의 standard open cover $$U_i = \{\x_i \neq 0\}$$ 위에서 affine coordinate을 $$\y_j^{(i)} = \x_j / \x_i$$ ($$j \neq i$$)로 놓으면, $$U_i$$ 위의 $$n$$-form 
 
 $$d \y_1^{(i)} \wedge \cdots \wedge \widehat{d \y_i^{(i)}} \wedge \cdots \wedge d \y_n^{(i)}$$
 
@@ -202,8 +184,7 @@ $$d \y_k^{(j)} = d(\y_k^{(i)} / \y_j^{(i)}) = \frac{\y_j^{(i)} d \y_k^{(i)} - \y
 $$\bigwedge_{k \neq j} d \y_k^{(j)} = (\y_j^{(i)})^{-(n+1)} \cdot \bigwedge_{k \neq i} d \y_k^{(i)}$$
 
 로 변환된다. 여기서 $$(\y_j^{(i)})^{-(n+1)} = (\x_j / \x_i)^{-(n+1)}$$이므로, transition function이 $$g_{ij} = (\x_i / \x_j)^{-(n+1)}$$임을 확인할 수 있다. 이는 $$\mathcal{O}_{\mathbb{P}^n}(-n-1)$$의 transition function과 일치한다.
-
-</div>
+:::
 
 ## Adjunction Formula
 
@@ -227,23 +208,20 @@ $$0 \rightarrow \mathcal{I}_D/\mathcal{I}_D^2\rightarrow \Omega_X^1\lvert D\righ
 
 을 확인하여 얻어진다. 여기서 첫째 화살표는 $$f\mapsto df$$로 주어진다. 이 short exact sequence에 top exterior power를 취하면 다음을 얻는다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop9">**명제 9**</ins> (Adjunction Formula) Smooth variety $$X$$의 smooth divisor $$D$$에 대해
+::: 명제 9
+(Adjunction Formula) Smooth variety $$X$$의 smooth divisor $$D$$에 대해
 
 $$\omega_D \cong (\omega_X \otimes \mathcal{O}_X(D))\vert_D$$
 
 이다.
-
-</div>
+:::
 
 이로부터 canonical divisor에 대한 주장 또한 바로 따라온다. 어쨌든, 이 명제가 담고 있는 주장은 ambient variety $$X$$의 canonical bundle $$\omega_X$$를 normal bundle $$\mathcal{O}_X(D)$$로 twist한 후 $$D$$로 restrict하면, subvariety $$D$$의 canonical bundle $$\omega_D$$가 나온다. 쉽게 말해, $$D$$ 위의 differential form은 ambient space의 differential form에 normal direction의 정보를 추가하여 얻어진다는 것이다. 
 
 다음 예시는 이를 사용한 계산을 구체적으로 보여준다. 
 
-<div class="example" markdown="1">
-
-<ins id="ex10">**예시 10**</ins> $$C \subset \mathbb{P}^2$$가 degree $$d$$의 smooth curve라 하자. Adjunction formula에 의해
+::: 예시 10
+$$C \subset \mathbb{P}^2$$가 degree $$d$$의 smooth curve라 하자. Adjunction formula에 의해
 
 $$\omega_C \cong \omega_{\mathbb{P}^2}\vert_C \otimes \mathcal{O}_{\mathbb{P}^2}(C)\vert_C \cong \mathcal{O}_{\mathbb{P}^2}(-3)\vert_C \otimes \mathcal{O}_{\mathbb{P}^2}(d)\vert_C \cong \mathcal{O}_C(d-3)$$
 
@@ -258,8 +236,7 @@ $$g=\frac{(d-1)(d-2)}{2}$$
 $$\deg K_C=d(d-3)=(d-1)(d-2)-2=2g-2$$
 
 가 됨을 확인할 수 있다. 
-
-</div>
+:::
 
 Degree-genus formula는, 실은 나중에 살펴 볼 Riemann-Roch theorem의 특수한 경우이며, 우리는 해당 글에서 위의 계산의 결과 $$\deg K_C=2g-2$$와 degree-genus formula를 모두 유도할 것이다.
 
@@ -289,18 +266,14 @@ $$0 \to T_{E/Z} \to T_E \to \pi_E^\ast T_Z \to 0\tag{$\ast$}$$
 
 한편 가정에 의해 $$Z$$는 codimension $$r$$이었으므로, $$\mathcal{N}_{Z/X}$$는 rank $$r$$이고 따라서 $$E$$의 각 fiber는 $$\mathbb{P}^{r-1}$$이다. 우리는 [명제 7](#prop7)을 일반화하여 다음을 얻는다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop11">**명제 11 (Relative Euler sequence)**</ins> 임의의 vector bundle $$V\rightarrow B$$와 projectivized vector bundle $$\pi: \mathbb{P}(V)\rightarrow B$$에 대하여, 다음의 short exact sequence
+::: 명제 11 (Relative Euler sequence)
+임의의 vector bundle $$V\rightarrow B$$와 projectivized vector bundle $$\pi: \mathbb{P}(V)\rightarrow B$$에 대하여, 다음의 short exact sequence
 
 $$0\rightarrow \mathcal{O}\rightarrow \pi^\ast V\otimes \mathcal{O}(1)\rightarrow T_{\mathbb{P}(V)/B}\rightarrow 0$$
 
 가 존재한다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 정의에 의해 $$\mathbb{P}(V)$$의 각 점 $$[v]\in \mathbb{P}(V)$$는 $$V$$의 한 fiber 위의 1차원 부분공간이다. 이제 $$\mathbb{P}^n$$에서 그러하듯, $$\mathcal{O}_{\mathbb{P}(V)}(-1)$$은 이 직선들을 모아둔 line bundle이며 이로부터 tautological exact sequence
 
 $$0\rightarrow \mathcal{O}(-1)\rightarrow \pi^\ast V\rightarrow \mathcal{Q}\rightarrow 0$$
@@ -322,8 +295,7 @@ $$\Hom(\mathcal{O}(-1),\mathcal{Q})\cong T_{\mathbb{P}(V)/B}$$
 $$0\rightarrow \mathcal{O}\rightarrow \pi^\ast V\otimes \mathcal{O}(1)\rightarrow T_{\mathbb{P}(V)/B}\rightarrow 0$$
 
 을 얻는다.
-
-</details>
+:::
 
 따라서 우리 상황으로 돌아오면 다음의 exact sequence
 
@@ -331,19 +303,15 @@ $$0\rightarrow \mathcal{O}_E\rightarrow (\pi\vert_E)^\ast \mathcal{N}_{Z/X}\otim
 
 를 얻는다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop12">**명제 12 (Blow-up의 canonical bundle)**</ins> Smooth variety $$X$$의 codimension $$r$$인 smooth subvariety $$Z$$를 blow-up한 $$\pi: \widetilde{X} \to X$$에 대하여, exceptional divisor를 $$E$$라 하면
+::: 명제 12 (Blow-up의 canonical bundle)
+Smooth variety $$X$$의 codimension $$r$$인 smooth subvariety $$Z$$를 blow-up한 $$\pi: \widetilde{X} \to X$$에 대하여, exceptional divisor를 $$E$$라 하면
 
 $$K_{\widetilde{X}} = \pi^\ast K_X + (r-1)E$$
 
 가 성립한다.
+:::
 
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary> 
-
+::: 증명
 우선 $$\widetilde{X}$$ 위의 adjunction formula에 의해
 
 $$K_E = (K_{\widetilde{X}} + E)\vert_E$$
@@ -389,20 +357,17 @@ $$\omega_{E/Z} = \det(T_{E/Z})^{-1} = \pi_E^\ast \det(\mathcal{N}_{Z/X})^{-1} \o
 $$K_E = \det(T_E)^{-1} = \omega_{E/Z} \otimes \pi_E^\ast K_Z = \pi_E^\ast K_Z \otimes \pi_E^\ast \det(\mathcal{N}_{Z/X})^{-1} \otimes \mathcal{O}_E(-r)$$
 
 임을 안다. 이제 이 두 표현을 비교하면 $$-a-1 = -r$$, 즉 $$a = r-1$$을 얻는다.
-
-</details>
+:::
 
 구체적으로 다음을 살펴보자.
 
-<div class="example" markdown="1">
-
-<ins id="ex13">**예시 13 ($$\mathbb{A}^2$$의 점에서의 blow-up)**</ins> $$X = \mathbb{A}^2$$의 원점 $$Z = \{0\}$$에서의 blow-up을 고려하자. $$K_{\mathbb{A}^2} = 0$$이고 $$Z$$의 codimension은 $$r = 2$$이므로, [명제 12](#prop12)에 의해
+::: 예시 13 ($$\mathbb{A}^2$$의 점에서의 blow-up)
+$$X = \mathbb{A}^2$$의 원점 $$Z = \{0\}$$에서의 blow-up을 고려하자. $$K_{\mathbb{A}^2} = 0$$이고 $$Z$$의 codimension은 $$r = 2$$이므로, [명제 12](#prop12)에 의해
 
 $$K_{\widetilde{\mathbb{A}^2}} = E$$
 
 이다. $$K_{\widetilde{\mathbb{A}^2}} = E$$이므로 exceptional divisor $$E$$가 canonical divisor의 역할을 함을 알 수 있다.
-
-</div>
+:::
 
 ---
 

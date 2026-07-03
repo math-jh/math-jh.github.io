@@ -18,9 +18,8 @@ last_polished_at: 2026-06-01T08:30:06+00:00
 
 Using [§Tangent and Cotangent Bundles, ⁋Example 5](/en/math/manifolds/tangent_and_cotangent_bundles#ex5) and [§Tangent and Cotangent Bundles, ⁋Theorem 6](/en/math/manifolds/tangent_and_cotangent_bundles#thm6), we can make the following definitions.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> For a manifold $$M$$, we define
+::: Definition 1
+For a manifold $$M$$, we define
 
 $$\mathcal{T}^{r,s}(M)=\mathcal{T}^{r,s}(TM),\quad \bigwedge\nolimits^\ast(M)=\bigwedge(T^\ast M),\quad \bigwedge\nolimits^k(M)=\bigwedge\nolimits^k(T^\ast M)$$
 
@@ -29,8 +28,7 @@ and call them the *$$(r,s)$$-tensor bundle*, *exterior algebra bundle*, and *ext
 $$\Gamma\left(\mathcal{T}^{r,s}(M)\right),\quad\Omega^\ast(M):=\Gamma\left(\bigwedge\nolimits^\ast(M)\right),\quad\Omega^k(M):=\Gamma\left(\bigwedge\nolimits^k(M)\right)$$
 
 are called *tensor fields*, *differential forms*, and *differential $$k$$-forms*, respectively.
-
-</div>
+:::
 
 For two simple tensors
 
@@ -94,16 +92,14 @@ $$(F^\ast\omega)_p(X_1(p),\ldots, X_k(p))=(F^\ast_p\omega_{F(p)})\bigl(X_1(p),\l
 
 Earlier we verified that $$\Omega^0(M)=C^\infty(M)$$. For any $$f\in C^\infty(M)$$, its differential $$df$$ is the function that takes each point $$p\in M$$ and outputs $$df_p:T_pM\rightarrow\mathbb{R}$$. ([§Examples of Differentials, ⁋Definition 6](/en/math/manifolds/examples_of_differentials#def6)) That is, $$df\in T^\ast M=\Omega^1(M)$$. This operator $$d$$ is defined for general differential forms as follows.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm2">**Theorem 2**</ins> For a manifold $$M$$, there exists a unique degree $$1$$ anti-derivation $$d:\Omega^\ast(M)\rightarrow\Omega^\ast(M)$$ satisfying the following two conditions. (See **[War]** for a proof.)
+::: Theorem 2
+For a manifold $$M$$, there exists a unique degree $$1$$ anti-derivation $$d:\Omega^\ast(M)\rightarrow\Omega^\ast(M)$$ satisfying the following two conditions. (See **[War]** for a proof.)
 
 1. $$d^2=0$$,
 2. For any $$f\in\Omega^0(M)$$, $$df$$ coincides with the differential of $$f$$ as above.
 
 Moreover, this $$d$$ commutes with pullback $$F^\ast$$.
-
-</div>
+:::
 
 A graded algebra equipped with such a differential $$d$$ is called a *differential graded algebra*, or simply a *DG-algebra*. Meanwhile, by condition 1 above, the sequence
 
@@ -117,21 +113,17 @@ We call the cohomology group of the cochain complex (2) the *de Rham cohomology 
 
 ## Interior Multiplication
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**Definition 3**</ins> Consider a vector field $$X$$ on a manifold $$M$$. Then $$\iota_X:\Omega^\ast(M) \rightarrow\Omega^\ast(M)$$ is the map that assigns to any $$k$$-form $$\omega$$ the $$(k-1)$$-form $$\iota_X\omega$$ defined by the formula
+::: Definition 3
+Consider a vector field $$X$$ on a manifold $$M$$. Then $$\iota_X:\Omega^\ast(M) \rightarrow\Omega^\ast(M)$$ is the map that assigns to any $$k$$-form $$\omega$$ the $$(k-1)$$-form $$\iota_X\omega$$ defined by the formula
 
 $$(\iota_X\omega)(X_1,\ldots, X_{k-1})=\omega(X,X_1,\ldots, X_{k-1}).$$
 
 This is called *interior multiplication* by $$X$$.
+:::
 
-</div>
-
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**Proposition 4**</ins> For a manifold $$M$$ and any vector field $$X$$ on it, the interior multiplication $$\iota_X$$ is an antiderivation of degree $$-1$$.
-
-</div>
+::: Proposition 4
+For a manifold $$M$$ and any vector field $$X$$ on it, the interior multiplication $$\iota_X$$ is an antiderivation of degree $$-1$$.
+:::
 
 
 ---

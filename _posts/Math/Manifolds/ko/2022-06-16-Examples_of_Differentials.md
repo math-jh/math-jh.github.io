@@ -17,15 +17,13 @@ weight: 6
 
 ## 다양체에서의 곡선과 속도벡터
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> Manifold $$M$$에 대하여, $$C^\infty$$ 함수 $$\gamma:(a,b)\rightarrow M$$을 $$M$$ 위에서 정의된 $$C^\infty$$ 곡선이라 부르고, 임의의 $$t\in (a,b)$$에 대하여
+::: 정의 1
+Manifold $$M$$에 대하여, $$C^\infty$$ 함수 $$\gamma:(a,b)\rightarrow M$$을 $$M$$ 위에서 정의된 $$C^\infty$$ 곡선이라 부르고, 임의의 $$t\in (a,b)$$에 대하여
 
 $$d\gamma_t\left(\frac{d}{dr}\bigg\vert_t\right)$$
 
 을 점 $$\gamma(t)$$에서 이 곡선의 *속도벡터<sub>velocity vector</sub>*라 부르고, $$\gamma'(t)$$로 표기한다.
-
-</div>
+:::
 
 벡터 $$\gamma'(t)$$는 $$T_{\gamma(t)}M$$의 원소로서 $$\mathcal{C}^\infty_{M,\gamma(t)}$$의 각 원소들 $$f$$에 작용하는데, differential의 정의를 풀어쓰면
 
@@ -35,14 +33,10 @@ $$\gamma'(t)f=d\gamma_p\left(\frac{d}{dr}\bigg\vert_t\right)f=\frac{d}{dr}\bigg\
 
 사실은 $$T_pM$$을 정의할 때, 이를 점 $$p$$를 지나는 $$C^\infty$$ 곡선들의 모임[^1]으로 생각해도 큰 문제가 없다. 이 주장 중 일부인 다음의 명제는 사용할 일이 많으므로 증명을 해 둔다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**명제 2**</ins> Manifold $$M$$과 점 $$p\in M$$을 고정하자. 영벡터가 아닌 임의의 $$v\in T_pM$$에 대하여, 점 $$p$$를 지나고 점 $$p$$에서의 속도벡터가 $$v$$인 $$C^\infty$$ 곡선 $$\gamma$$가 존재한다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 명제 2
+Manifold $$M$$과 점 $$p\in M$$을 고정하자. 영벡터가 아닌 임의의 $$v\in T_pM$$에 대하여, 점 $$p$$를 지나고 점 $$p$$에서의 속도벡터가 $$v$$인 $$C^\infty$$ 곡선 $$\gamma$$가 존재한다.
+:::
+::: 증명
 점 $$p$$를 중심으로 하고, 다음의 식
 
 $$v=d\varphi^{-1}_{\varphi(p)}\left(\frac{\partial}{\partial r^1}\bigg\vert_0\right)$$
@@ -52,8 +46,7 @@ $$v=d\varphi^{-1}_{\varphi(p)}\left(\frac{\partial}{\partial r^1}\bigg\vert_0\ri
 $$\gamma: t\mapsto \varphi^{-1}(t, 0,\cdots, 0)$$
 
 의 $$t=0$$에서의 속도벡터가 되기 때문이다. 참고로 위의 조건을 만족하는 coordinate system을 찾는 것은 아주 쉬운데, 임의의 coordinate system $$(U,\psi)$$를 하나 고른 후, $$d\psi_p(v)$$가 옮겨진 벡터를 포함하는 $$\mathbb{R}^n$$의 새로운 기저를 만든 후, 원래의 $$\psi$$와 이렇게 얻어진 change of basis를 합성하면 된다.
-
-</details>
+:::
 
 특별히 $$M=\mathbb{R}^m$$인 경우, $$T_{\gamma(t)}M$$의 basis는
 
@@ -89,15 +82,13 @@ $$(F\circ\gamma)'(t)=dF_{\gamma(t)}(\gamma'(t))$$
 
 이를 약간 수정하면, 주어진 $$C^\infty$$ 함수 $$F:M\rightarrow N$$에 대하여, 임의의 $$v\in T_pM$$에서의 differential의 값 $$dF_p(v)$$를 알기 위해서는 점 $$p$$에서 $$v$$방향 속도벡터를 가지는 곡선을 아무거나 하나 고른 후[^2], 이 곡선 $$\gamma$$에 대해 $$F\circ\gamma$$의 시간 $$t$$에서의 속도벡터를 구하면 된다는 것을 알 수 있다. 즉,
 
-<div class="proposition" markdown="1">
-
-<ins id="prop3">**명제 3**</ins> 두 manifold $$M,N$$과 $$C^\infty$$ 함수 $$F:M\rightarrow N$$을 생각하자. 임의의 $$v\in T_pM$$에 대하여, $$\gamma(0)=p$$, $$\gamma'(0)=v$$를 만족하는 $$C^\infty$$ 곡선 $$\gamma:(a,b)\rightarrow M$$는 다음의 식
+::: 명제 3
+두 manifold $$M,N$$과 $$C^\infty$$ 함수 $$F:M\rightarrow N$$을 생각하자. 임의의 $$v\in T_pM$$에 대하여, $$\gamma(0)=p$$, $$\gamma'(0)=v$$를 만족하는 $$C^\infty$$ 곡선 $$\gamma:(a,b)\rightarrow M$$는 다음의 식
 
 $$dF_p(v)=(F\circ\gamma)'(0)$$
 
 또한 만족한다.
-
-</div>
+:::
 
 ## 벡터공간의 접공간
 
@@ -113,16 +104,12 @@ $$D_v\vert_x: f\mapsto \lim_{h\rightarrow 0}\frac{f(x+tv)-f(x)}{t}$$
 
 로 정의된 방향미분을 대응시키는 것이 이 isomorphism이기 때문이다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**명제 4**</ins> Manifold 구조가 주어진 $$m$$차원 $$\mathbb{R}$$-벡터공간 $$V$$를 생각하자. $$V$$의 임의의 점 $$x\in V$$에 대하여, basis의 선택에 의존하지 않는 isomorphism $$V\cong T_xV$$가 존재한다. 뿐만 아니라 $$V,W$$가 두 $$\mathbb{R}$$-벡터공간이고, $$L:V\rightarrow W$$가 linear map이라면 다음의 diagram이 commute한다.
+::: 명제 4
+Manifold 구조가 주어진 $$m$$차원 $$\mathbb{R}$$-벡터공간 $$V$$를 생각하자. $$V$$의 임의의 점 $$x\in V$$에 대하여, basis의 선택에 의존하지 않는 isomorphism $$V\cong T_xV$$가 존재한다. 뿐만 아니라 $$V,W$$가 두 $$\mathbb{R}$$-벡터공간이고, $$L:V\rightarrow W$$가 linear map이라면 다음의 diagram이 commute한다.
 
 ![tangent_space_of_vector_space](/assets/images/Math/Manifolds/Examples_of_Differentials-1.svg){:style="width:9.31em" class="invert" .align-center}
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 첫 번째 부분은 앞서 보인 방향미분의 식
 
 $$(D_v\vert_x)f=\lim_{t\rightarrow 0}\frac{f(x+tv)-f(x)}{t}$$
@@ -163,8 +150,7 @@ $$(L\circ\gamma)(t)=L(x+tv)=L(x)+tL(v)$$
 $$(L\circ\gamma)'(0)f=\lim_{t\rightarrow 0}\frac{f(L(x)+tL(v))-f(L(x))}{t}=(D_{L(v)}\vert_{L(x)})f$$
 
 를 만족한다. 따라서 주어진 diagram이 commute한다.
-
-</details>
+:::
 
 위의 명제에서 만든 isomorphism $$V\cong T_xV$$는 basis의 선택에 의존하지 않지만, 만일 $$V$$의 어떤 basis $$e_1,\ldots, e_n$$과 그 dual basis $$r^1,\ldots, r^n$$이 주어진다면 이 isomorphism은
 
@@ -172,13 +158,11 @@ $$\sum a_ie_i\leftrightarrow\sum a_i\frac{\partial}{\partial r^i}$$
 
 과 같다는 것을 확인할 수 있다. 
 
-<div class="example" markdown="1">
-
-<ins id="ex5">**예시 5**</ins> $$n\times n$$ 행렬들의 모임 $$\Mat_n(\mathbb{R})$$은 $$n^2$$차원 $$\mathbb{R}$$-벡터공간이다. 따라서, $$\Mat_n(\mathbb{R})$$의 임의의 점에서의 tangent space는 $$\Mat_n(\mathbb{R})$$과 동일하다. 
+::: 예시 5
+$$n\times n$$ 행렬들의 모임 $$\Mat_n(\mathbb{R})$$은 $$n^2$$차원 $$\mathbb{R}$$-벡터공간이다. 따라서, $$\Mat_n(\mathbb{R})$$의 임의의 점에서의 tangent space는 $$\Mat_n(\mathbb{R})$$과 동일하다. 
 
 특별히 $$\Mat_n(\mathbb{R})$$의 open submanifold인 $$\GL(n,\mathbb{R})$$을 생각하면, $$\GL(n,\mathbb{R})$$의 임의의 원소에서의 tangent space는 이 원소를 $$\Mat_n(\mathbb{R})$$의 원소로 보았을 때의 tangent space와 동일하고, 따라서 $$\Mat_n(\mathbb{R})$$과 같다. 
-
-</div>
+:::
 
 ## Tangent covector
 
@@ -188,11 +172,9 @@ $$T_pM\overset{df_p}{\longrightarrow}T_{f(p)}\mathbb{R}\overset{\sim}{\longright
 
 에 의하여 $$df_p$$를 $$(T_pM)^\ast$$의 원소로 볼 수 있다.
 
-<div class="definition" markdown="1">
-
-<ins id="def6">**정의 6**</ins> Manifold $$M$$과 한 점 $$p\in M$$에 대하여, $$\mathbb{R}$$-벡터공간 $$T_pM$$의 dual space $$(T_pM)^\ast$$를 *cotangent space<sub>여접공간</sub>*라 부르고 간단하게 $$T_p^\ast M$$으로 적는다. $$T_p^\ast M$$의 원소들을 *tangent covector* 혹은 간단하게 *covector*라 부른다.
-
-</div>
+::: 정의 6
+Manifold $$M$$과 한 점 $$p\in M$$에 대하여, $$\mathbb{R}$$-벡터공간 $$T_pM$$의 dual space $$(T_pM)^\ast$$를 *cotangent space<sub>여접공간</sub>*라 부르고 간단하게 $$T_p^\ast M$$으로 적는다. $$T_p^\ast M$$의 원소들을 *tangent covector* 혹은 간단하게 *covector*라 부른다.
+:::
 
 따라서 앞선 논의는 임의의 $$C^\infty$$ 함수 $$f:M\rightarrow\mathbb{R}$$이 tangent covector를 하나 지정한다고 요약할 수 있다.
 
@@ -208,21 +190,16 @@ $$(\xi^i \vert_p)\left(\frac{\partial}{\partial x^j}\bigg\vert_p\right)=\delta_{
 
 을 통해 유일하게 정의된다. 이 때 $$\delta_{ij}$$는 크로네커 델타를 의미한다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop7">**명제 7**</ins> 위와 같은 상황에서, $$\xi^i\vert_p=dx^i\vert_p$$이다. 즉, $$(U,\varphi)$$에 의하여 생기는 $$T_pM$$의 dual basis $$(\xi^i \vert_p)$$들은 사실 coordinate function들 $$x^i$$의 점 $$p$$에서의 differential과 같다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 명제 7
+위와 같은 상황에서, $$\xi^i\vert_p=dx^i\vert_p$$이다. 즉, $$(U,\varphi)$$에 의하여 생기는 $$T_pM$$의 dual basis $$(\xi^i \vert_p)$$들은 사실 coordinate function들 $$x^i$$의 점 $$p$$에서의 differential과 같다.
+:::
+::: 증명
 $$dx^i$$들이 위의 식 (1)을 만족한다는 것을 보이면 충분하다. 정의에 의하여,
 
 $$dx^i\vert_p\left(\frac{\partial}{\partial x^j}\bigg\vert_p\right)=\frac{\partial}{\partial x^j}\bigg\vert_p x^i=\delta_{ij}$$
 
 가 성립한다. 
-
-</details>
+:::
 
 위 증명은 우리가 tangent space를 처음 도입할 때 증명했던 [§여접공간, ⁋보조정리 1](/ko/math/manifolds/cotangent_space#lem1)을 떠올리면 좀 더 그럴듯하다. 즉 첫째 등식에서 둘째 식으로 넘어가는 것은 differential $$dx^i\vert_p$$의 정의이기도 하지만, 동시에 
 

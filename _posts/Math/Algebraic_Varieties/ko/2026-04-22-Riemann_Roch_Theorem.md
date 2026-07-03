@@ -17,15 +17,13 @@ weight: 15
 
 ## 리만-로흐 정리
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> Smooth projective curve $$C$$ 위의 divisor $$D$$에 대해 *Riemann–Roch dimension*을
+::: 정의 1
+Smooth projective curve $$C$$ 위의 divisor $$D$$에 대해 *Riemann–Roch dimension*을
 
 $$\ell(D) = \dim H^0(C, \mathcal{O}_C(D))$$
 
 로 정의한다.
-
-</div>
+:::
 
 일반적으로 우리는 $$\mathcal{O}_X(D)$$를 $$D$$를 따라 order $$1$$의 pole을 가질 수 있는 rational function들의 sheaf로 생각하므로, 이러한 관점에서 $$H^0(C, \mathcal{O}_C(D))$$는 $$X$$ 위에서 정의된 함수들이 이루는 공간이라 생각할 수 있다. 
 
@@ -49,18 +47,14 @@ $$H^1(C, \mathcal{O}_C(D)) \cong H^0(C, \omega_C \otimes \mathcal{O}_C(-D))^\vee
 
 이 성립한다 ([§세르 쌍대성, ⁋명제 2](/ko/math/algebraic_varieties/serre_duality#prop2)). 여기서 canonical divisor $$K_C$$는 canonical line bundle에 대응되는 divisor였던 것을 기억하자. 그럼 다음 보조정리에 의해 $$\mathcal{O}_C(D)$$의 Euler characteristic에서 등장하는 항은 단 두 개 뿐임을 유도할 수 있다. 이 글에서 우리는 $$\mathbb{K}$$가 *infinite* field임을 가정한다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="lem2">**보조정리 2**</ins> Smooth projective curve $$C$$ 위의 임의의 coherent sheaf $$\mathcal{F}$$에 대해
+::: 보조정리 2
+Smooth projective curve $$C$$ 위의 임의의 coherent sheaf $$\mathcal{F}$$에 대해
 
 $$H^i(C, \mathcal{F}) = 0 \quad (i \ge 2)$$
 
 가 성립한다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 Embedding $$C\hookrightarrow \mathbb{P}^N$$을 고정하면, dimension count를 통해 $$C\cap H_1\cap H_2=\emptyset$$이도록 하는 hyperplane $$H_1,H_2$$가 존재한다. 따라서 $$U_i=C\setminus H_i$$로 두면 이들은 $$C$$의 affine open cover를 이루는 것을 안다. 
 
 이제 $$\{U_1,U_2\}$$에 대한 Čech cohomology를 생각하자. [§층 코호몰로지, ⁋명제 12](/ko/math/algebraic_varieties/sheaf_cohomology#prop12) 직후에 간략하게 소개했듯, projective variety 위의 임의의 affine open cover는 [§층 코호몰로지, ⁋정리 11](/ko/math/algebraic_varieties/sheaf_cohomology#thm11)의 전제조건을 만족하며 따라서 구하고자 하는 sheaf cohomology는 정확하게 이 affine open cover에 대한 계산으로 귀결된다. 이제 Čech complex가 단순히
@@ -68,8 +62,7 @@ Embedding $$C\hookrightarrow \mathbb{P}^N$$을 고정하면, dimension count를 
 $$\check{C}(\mathcal{U}, \mathcal{F}):\qquad \mathcal{F}(U_1)\oplus \mathcal{F}(U_2)\rightarrow \mathcal{F}(U_1\cap U_2)\rightarrow 0$$
 
 으로 길이 1짜리 complex가 되므로 $$\check{H}^i = 0\ (i \ge 2)$$가 즉시 따라온다. 
-
-</details>
+:::
 
 따라서, 이 결과에 의해 임의의 divisor $$D$$에 대해
 
@@ -95,19 +88,15 @@ $$\rchi(\mathcal{O}_{C_S})=h^0(C_S, \mathcal{O}_{C_S})-h^1(C_S, \mathcal{O}_{C_S
 
 이번 글의 주제인 Riemann–Roch 정리는 여기에 한 가지의 작업을 추가한다. 위의 계산은 아무것도 붙이지 않은 trivial sheaf $$\mathcal{O}_{C_S}$$에 대한 것이므로, 이를 임의의 divisor $$D$$를 사용하여 twist한 sheaf $$\mathcal{O}_{C_S}(D)$$를 생각하는 것이다. 그럼 이 때의 보정항이 $$\deg D$$만큼 생긴다는 것이 Riemann-Roch 정리의 결과이다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop3">**명제 3**</ins> (Riemann–Roch for curves) Smooth projective curve $$C$$ 위의 divisor $$D$$에 대해
+::: 명제 3
+(Riemann–Roch for curves) Smooth projective curve $$C$$ 위의 divisor $$D$$에 대해
 
 $$\ell(D) - \ell(K_C - D) = \deg D + 1 - g$$
 
 이 성립한다. 여기서 $$g$$는 $$C$$의 genus, $$K_C$$는 canonical divisor이다.
+:::
 
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 위의 계산들과 정의들에 의하여
 
 $$\rchi(\mathcal{O}_C(D)) = h^0(C, \mathcal{O}_C(D)) - h^1(C, \mathcal{O}_C(D)) = \ell(D) - \ell(K_C - D)$$
@@ -119,8 +108,7 @@ $$0 \to \mathcal{O}_C \to \mathcal{O}_C(D) \to \mathcal{O}_D \to 0$$
 이 존재하며, 그럼 Euler characteristic의 additivity에 의해 $$\rchi(\mathcal{O}_C(D)) = \rchi(\mathcal{O}_C) + \rchi(\mathcal{O}_D)$$이다. 
 
 여기서 $$\mathcal{O}_D$$는 차수 $$\deg D$$의 skyscraper sheaf이므로 $$\rchi(\mathcal{O}_D) = \deg D$$이고, 위에서 살펴본 것과 같이 $$\rchi(\mathcal{O}_C)=1-g$$이므로 이를 앞선 식과 결합하면 원하는 결과를 얻는다. 일반적인 (effective가 아닌) divisor에 대해서는 $$D$$를 effective divisor $$D'$$과의 차이로 표현한 후 동일한 additivity 논증을 적용하면 된다. 
-
-</details>
+:::
 
 위의 증명은 깔끔하지만 그 기하학적 내용이 Euler characterstic 안에 압축되어 있어 직관적으로 잘 와닿지 않을 수 있다. 이를 보완하기 위해 등식을 항별로 읽어보자. 우선 정의에 의해 
 
@@ -190,9 +178,8 @@ $$\ell(K_C)-\ell(0)=\deg K_C +1-g$$
 
 어쨌든 지금까지의 계산을 정리하면 $$\ell(D)$$는 $$D$$의 complete linear system의 차원, $$\ell(K_C - D)$$는 $$K_C$$가 $$D$$ 위에 부과하는 수정항이며, 큰 degree에서는 이 수정항이 사라지고 작은 degree에서는 $$K_C$$의 기하학적 정보를 반영한다는 것으로 생각할 수 있다.
 
-<div class="example" markdown="1">
-
-<ins id="ex4">**예시 4**</ins> **$$\mathbb{P}^1$$**: $$\mathbb{P}^1$$의 genus는 $$g = 0$$이고, canonical divisor는 $$K_{\mathbb{P}^1} = -2H$$이다 ([§표준선다발, ⁋예시 8](/ko/math/algebraic_varieties/canonical_bundle#ex8)). 한편, 우리는 ([§선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_varieties/line_bundles#ex12))에서 $$\mathcal{O}_{\mathbb{P}^1}(d)$$의 global section이 차수 $$d$$의 동차다항식들임을 보였으므로,
+::: 예시 4
+**$$\mathbb{P}^1$$**: $$\mathbb{P}^1$$의 genus는 $$g = 0$$이고, canonical divisor는 $$K_{\mathbb{P}^1} = -2H$$이다 ([§표준선다발, ⁋예시 8](/ko/math/algebraic_varieties/canonical_bundle#ex8)). 한편, 우리는 ([§선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_varieties/line_bundles#ex12))에서 $$\mathcal{O}_{\mathbb{P}^1}(d)$$의 global section이 차수 $$d$$의 동차다항식들임을 보였으므로,
 
 $$\ell(dH) = d+1 \quad (d \ge 0), \qquad \ell(dH) = 0 \quad (d < 0)$$
 
@@ -201,26 +188,22 @@ $$\ell(dH) = d+1 \quad (d \ge 0), \qquad \ell(dH) = 0 \quad (d < 0)$$
 $$\ell(dH) - \ell(-2H-dH) = d + 1 - 0 = d + 1$$
 
 이 되어 양변이 모두 $$d+1$$로 일치함을 확인할 수 있다.
+:::
 
-</div>
-
-<div class="example" markdown="1">
-
-<ins id="ex5">**예시 5 (Elliptic curve)**</ins> Genus $$1$$ case $$g = 1$$의 경우, 우리는 위의 계산을 통해 $$\deg K_C=2g-2=0$$이고 $$\ell(K_C)=g=1$$임을 안다. $$\ell(K_C)=1>0$$이므로, 앞서 본 것처럼 $$K_C$$와 linearly equivalent한 effective divisor가 존재하는데, $$\deg K_C=0$$이고 degree가 $$0$$인 effective divisor는 $$0$$뿐이므로 $$K_C\sim 0$$이다. 이를 사용하여 Riemann-Roch를 다시 보면
+::: 예시 5 (Elliptic curve)
+Genus $$1$$ case $$g = 1$$의 경우, 우리는 위의 계산을 통해 $$\deg K_C=2g-2=0$$이고 $$\ell(K_C)=g=1$$임을 안다. $$\ell(K_C)=1>0$$이므로, 앞서 본 것처럼 $$K_C$$와 linearly equivalent한 effective divisor가 존재하는데, $$\deg K_C=0$$이고 degree가 $$0$$인 effective divisor는 $$0$$뿐이므로 $$K_C\sim 0$$이다. 이를 사용하여 Riemann-Roch를 다시 보면
 
 $$\ell(D) - \ell(-D) = \deg D$$
 
 이 된다. 특히 $$\deg D > 0$$이면 $$\ell(-D) = 0$$이므로 $$\ell(D) = \deg D$$이다. 
 
 $$\deg D=0$$인 경우가 위에서 언급한 작은 degree의 경우인데, 우선 부등식 ($$3$$)으로부터 $$\ell(D)=0$$이거나 $$\ell(D)=1$$이어야 한다. 만일 $$\ell(D)=1$$이면 $$D$$와 linearly equivalent한 유일한 effective divisor가 존재하는데 그 degree가 $$0$$이므로 이는 $$0$$이다. 따라서 $$D\sim 0$$이고, 거꾸로 $$D\sim 0$$이면 $$\mathcal{O}_C(D)\cong \mathcal{O}_C$$이므로 $$\ell(D)=1$$이다. 즉 $$D$$가 $$0$$과 linearly equivalent할 때만 $$\ell(K_C-D)$$ 항이 $$1$$이 되고, 그렇지 않으면 $$0$$이 되는 상황이 된다. 
-
-</div>
+:::
 
 $$K_C \sim 0$$이므로 elliptic curve에서 Riemann-Roch는 특히 단순해진다. $$\deg D > 0$$이면 보정항 $$\ell(K_C-D)=\ell(-D)$$가 사라지므로 $$\ell(D)=\deg D$$로 완벽히 결정되며, 이는 genus가 커질수록 보정항의 영향이 복잡해지는 과정에서 $$g=1$$이 가장 간단한 non-trivial case임을 보여준다.
 
-<div class="example" markdown="1">
-
-<ins id="ex6">**예시 6 ($$g=2$$)**</ins> 이제 한 단계 더 복잡한 상황인 $$g=2$$ 경우를 보자. 이 경우 $$\deg K_C = 2g - 2 = 2$$이고 $$\ell(K_C)=2$$이며, [명제 3](#prop3)에 $$D=p$$를 대입하면
+::: 예시 6 ($$g=2$$)
+이제 한 단계 더 복잡한 상황인 $$g=2$$ 경우를 보자. 이 경우 $$\deg K_C = 2g - 2 = 2$$이고 $$\ell(K_C)=2$$이며, [명제 3](#prop3)에 $$D=p$$를 대입하면
 
 $$\ell(p)-\ell(K_C-p)=2-g$$
 
@@ -235,8 +218,7 @@ $$\varphi_{K_C}:C\rightarrow \mathbb{P}^1$$
 1. $$d=1$$의 경우, $$\ell(p)\ge 2$$라면 degree 1 사상 $$C\to\mathbb{P}^1$$이 존재하여 $$C\cong\mathbb{P}^1$$이 되지만 $$g=2$$와 모순이므로 $$\ell(p)=1$$이다. Riemann-Roch에 의해 $$\ell(K_C-p)=1$$이다.
 2. $$d=2$$의 경우, 만약 $$2p\sim K_C$$이면 $$\ell(2p)=2$$이다. 이 경우 $$p$$를 *Weierstrass point*라 부르는데, 이 조건은 정확히 위의 canonical map $$\varphi_{K_C}$$에 대한 어떤 점의 preimage가 $$p$$로 겹쳐있는 상황에 해당한다. 일반적인 점에서는 $$2p\not\sim K_C$$이므로 $$\ell(2p)=1$$이다.
 3. $$d\ge 3$$이면 $$\deg(K_C-D)=2-d<0$$이므로 $$\ell(K_C-D)=0$$이고, 따라서 $$\ell(D)=d-1$$이다.
-
-</div>
+:::
 
 위의 예시에서 살펴 본 $$g=2$$의 canonical map $$\varphi_{K_C}: C \rightarrow \mathbb{P}^1$$은 2:1 branched covering이었다. 더 일반적으로, 우리는 genus $$g \ge 2$$인 curve 중 $$\mathbb{P}^1$$로의 degree 2 covering이 존재하는 것을 *hyperelliptic curve<sub>초타원곡선</sub>*라 부르고, 그렇지 않은 경우를 *non-hyperelliptic curve*라 한다. 관례적으로 genus $$0,1$$인 경우는 hyperelliptic curve에서 제외하는 것에 유의하자.
 
@@ -246,34 +228,27 @@ $$\varphi_{K_C}:C\rightarrow \mathbb{P}^1$$
 
 우리는 [§표준선다발, ⁋예시 10](/ko/math/algebraic_varieties/canonical_bundle#ex10)에서 $$\deg K_C=2g-2$$가 된다는 것을 보이기 위해 다음 명제를 잘 알려진 사실이라고 주장하며 넘겼지만, 이제는 이에 대한 증명을 엄밀하게 할 수 있다. 다만 이는 해당 예시와는 정반대로, 해당 예시에서는 adjunction formula와 degree-genus formula를 활용하여 $$\deg K_C=2g-2$$임을 증명하였지만 이제 우리는 $$\deg K_C=2g-2$$라는 사실과 adjunction formula로부터 degree-genus formula를 유도한다. $$K_C$$의 degree는 앞서 [예시 4](#ex4) 이전에 이미 Riemann-Roch로부터 (degree-genus formula를 사용하지 않고) 얻어졌음에 유의하자.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop7">**명제 7 (Degree-genus formula)**</ins> Degree $$d$$의 smooth plane curve $$C \subset \mathbb{P}^2$$에 대해
+::: 명제 7 (Degree-genus formula)
+Degree $$d$$의 smooth plane curve $$C \subset \mathbb{P}^2$$에 대해
 
 $$g(C) = \frac{(d-1)(d-2)}{2}$$
 
 이 성립한다.
+:::
 
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 Adjunction formula ([§표준선다발, ⁋명제 9](/ko/math/algebraic_varieties/canonical_bundle#prop9))에 의해 $$K_C = (K_{\mathbb{P}^2} + C)\vert_C = (d-3)H\vert_C$$이다. 따라서 $$\deg K_C = d(d-3)$$이고, 이를 $$\deg K_C = 2g - 2$$에 대입하면
 
 $$d(d-3) = 2g - 2 \implies g = \frac{d(d-3) + 2}{2} = \frac{(d-1)(d-2)}{2}$$
 
 을 얻는다.
-
-</details>
+:::
 
 이 공식은 평면곡선의 기하학적 성질을 직접적으로 계산해준다. 예를 들어 smooth plane cubic의 genus는 1이므로, 이는 [예시 5](#ex5)에서 다룬 elliptic curve와 같다. 반면 $$d = 1, 2$$인 경우에는 $$g = 0$$으로, 직선과 원뿔곡선이 모두 $$\mathbb{P}^1$$과 birationally equivalent임을 반영한다 ([§유리사상, ⁋명제 10](/ko/math/algebraic_varieties/rational_maps#prop10)).
 
-<div class="example" markdown="1">
-
-<ins id="ex8">**예시 8**</ins> Degree $$d$$에 따른 genus를 계산해보면, degree 3 (cubic)의 경우 $$g = \frac{2 \cdot 1}{2} = 1$$로 elliptic curve이고, degree 4 (quartic)의 경우 $$g = \frac{3 \cdot 2}{2} = 3$$, degree 5 (quintic)의 경우 $$g = \frac{4 \cdot 3}{2} = 6$$이다. Genus가 degree에 따라 빠르게 증가하므로, 고차원의 smooth plane curve는 점점 더 복잡한 위상적 구조를 갖는다.
-
-</div>
+::: 예시 8
+Degree $$d$$에 따른 genus를 계산해보면, degree 3 (cubic)의 경우 $$g = \frac{2 \cdot 1}{2} = 1$$로 elliptic curve이고, degree 4 (quartic)의 경우 $$g = \frac{3 \cdot 2}{2} = 3$$, degree 5 (quintic)의 경우 $$g = \frac{4 \cdot 3}{2} = 6$$이다. Genus가 degree에 따라 빠르게 증가하므로, 고차원의 smooth plane curve는 점점 더 복잡한 위상적 구조를 갖는다.
+:::
 ---
 
 **참고문헌**

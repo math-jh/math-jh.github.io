@@ -23,14 +23,10 @@ $$\mathcal{C}^\infty_p\supset\mathfrak{m}_p\supset\mathfrak{m}_p^2\supset\cdots$
 
 이 잘 정의된다. 그럼 특히 $$\mathfrak{m}_p/\mathfrak{m}_p^2$$를 $$\mathcal{C}^\infty_p/\mathfrak{m}_p\cong\mathbb{R}$$ 위의 벡터공간으로 볼 수 있다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="lem1">**보조정리 1**</ins> Manifold $$M$$과 임의의 한 점 $$p\in M$$에 대하여, $$T_pM\cong(\mathfrak{m}_p/\mathfrak{m}_p^2)^\ast$$가 성립한다. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 보조정리 1
+Manifold $$M$$과 임의의 한 점 $$p\in M$$에 대하여, $$T_pM\cong(\mathfrak{m}_p/\mathfrak{m}_p^2)^\ast$$가 성립한다. 
+:::
+::: 증명
 우선 임의의 $$v\in T_pM$$가 주어졌다 하자. 이를 부분집합 $$\mathfrak{m}_p$$으로 restrict하면 $$v\vert_{\mathfrak{m}_p}\in\Hom_\mathbb{R}(\mathfrak{m}_p,\mathbb{R})$$이 성립한다. 이제 $$v\vert_{\mathfrak{m}_p}$$이 linear map $$\mathfrak{m}_p/\mathfrak{m}_p^2\rightarrow\mathbb{R}$$을 잘 정의한다는 것을 보이려면 $$\mathfrak{m}_p^2\subset\ker (v\vert_{\mathfrak{m}_p})$$임을 보여야 한다. 적당한 index set $$I$$에 대하여, $$\mathfrak{m}_p$$가 $$\mathbf{f}_i$$들에 의해 생성되는 ideal이라 하자. 그럼 $$\mathfrak{m}_p^2$$은 $$\mathbf{f}_i\mathbf{f}_j$$들에 의하여 생성되는 ideal이다. 그런데
 
 $$v(\mathbf{f}_i\mathbf{f}_j)=\mathbf{f}_i(p)v(\mathbf{f}_j)+\mathbf{f}_j(p)v(\mathbf{f}_i)=0$$
@@ -52,8 +48,7 @@ $$\begin{aligned}
 $$
 
 을 계산할 수 있다. $$L\mapsto v_L$$ 또한 linear map이 된다는 것을 쉽게 보일 수 있으며, 뿐만 아니라 이 대응이 앞서 정의한 $$T_pM$$에서 $$(\mathfrak{m}_p/\mathfrak{m}_p^2)^\ast$$로의 linear map의 역함수가 된다는 것을 확인할 수 있다.
-
-</details>
+:::
 
 따라서 $$\mathfrak{m}_p/\mathfrak{m}_p^2$$이 유한차원이라면 $$T_pM$$도 유한차원이며, 이 때
 
@@ -61,14 +56,10 @@ $$(T_pM)^\ast\cong(\mathfrak{m}_p/\mathfrak{m}_p^2)^{\ast\ast}\cong\mathfrak{m}_
 
 이므로 $$\mathfrak{m}_p/\mathfrak{m}_p^2$$을 *cotangent space<sub>여접공간</sub>*이라 부른다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="thm2">**정리 2**</ins> $$\mathbb{R}$$-벡터공간 $$\mathfrak{m}_p/\mathfrak{m}_p^2$$의 차원은 유한하며, 그 값은 manifold $$M$$의 차원과 같다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 정리 2
+$$\mathbb{R}$$-벡터공간 $$\mathfrak{m}_p/\mathfrak{m}_p^2$$의 차원은 유한하며, 그 값은 manifold $$M$$의 차원과 같다.
+:::
+::: 증명
 이를 보이기 위해, 다음의 다변수 테일러 근사
 
 $$\begin{aligned}g(x)&=g(x_0)+\sum_{i=1}^m\frac{\partial g}{\partial r^i}\bigg\vert_{x_0}(r^i(x)-r^i(x_0))\\
@@ -111,20 +102,17 @@ $$\sum_{i=1}^m a_i\mathbf{r}^i=0\mod \mathfrak{m}^2_0$$
 $$a_j=\frac{\partial}{\partial r^j}\bigg\vert_0\sum a_i r^i=0$$
 
 이 된다. 따라서 $$a_j=0$$이 모든 $$j$$에 대해 성립하고 $$\mathbf{x}^i+\mathfrak{m}_p^2$$들은 일차독립이다.
-
-</details>
+:::
 
 이 정리의 증명을 잘 살펴보면, 단순히 차원에 대한 정보 뿐만 아니라 $$T_pM$$의 basis 또한 얻을 수 있다. 우리는 $$\mathbf{x}^i+\mathfrak{m}_p^2$$들이 $$\mathfrak{m}_p/\mathfrak{m}_p^2$$의 basis가 된다는 것을 보였는데, tangent space $$T_pM$$은 $$(\mathfrak{m}_p/\mathfrak{m}_p^2)^\ast$$와 isomorphic하다는 사실을 잘 알고 있으므로 $$T_pM$$의 basis를 이들의 dual basis로 잡는 것이 자연스러워 보인다. 즉,
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**정의 3**</ins> Manifold $$M$$과 $$p\in M$$이 주어졌다 하자. $$p$$을 포함하는 coordinate system $$(U,\varphi)$$, 그리고 $$\varphi$$의 component function들 $$x^i$$에 대하여, $$x^i$$ 방향의 *directional derivative*는 다음의 식
+::: 정의 3
+Manifold $$M$$과 $$p\in M$$이 주어졌다 하자. $$p$$을 포함하는 coordinate system $$(U,\varphi)$$, 그리고 $$\varphi$$의 component function들 $$x^i$$에 대하여, $$x^i$$ 방향의 *directional derivative*는 다음의 식
 
 $$\left(\frac{\partial}{\partial x^i}\bigg\vert_p\right)f=\frac{\partial(f\circ \varphi^{-1})}{\partial r^i}\bigg\vert_{\varphi(p)}$$
 
 으로 정의되는 tangent vector이다.
-
-</div>
+:::
 
 물론 모든 tangent vector들은 방향미분들로 생각할 수 있지만, 이들 벡터들 $$\partial/\partial x^i$$들의 특별한 점은 이들이 <em-ko>정확히</em-ko> coordinate system이 정의해주는 좌표축과 평행한 방향의 미분들이라는 것이다. 
 

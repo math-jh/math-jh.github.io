@@ -18,23 +18,19 @@ Now we define Hausdorff spaces. Before doing so, we first introduce the followin
 
 ## Convergence of Sequences
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> For a topological space $$X$$, a function $$\mathbb{N} \rightarrow X$$ is called a *sequence* of points in $$X$$, and is denoted by $$(x_n)_{n\geq 1}$$. We say that a sequence $$(x_n)_{n\geq 1}$$ *converges* to $$x\in X$$ if for every neighborhood $$U$$ of $$x$$, there exists an $$N\in \mathbb{N}$$ such that
+::: Definition 1
+For a topological space $$X$$, a function $$\mathbb{N} \rightarrow X$$ is called a *sequence* of points in $$X$$, and is denoted by $$(x_n)_{n\geq 1}$$. We say that a sequence $$(x_n)_{n\geq 1}$$ *converges* to $$x\in X$$ if for every neighborhood $$U$$ of $$x$$, there exists an $$N\in \mathbb{N}$$ such that
 
 $$n\geq N\implies x_n\in U$$
 
 holds.
-
-</div>
+:::
 
 This differs from the usual $$\epsilon$$-$$N$$ definition of convergence in calculus only in that an open set $$U$$ is used in place of an $$\epsilon$$-ball to represent points close to $$x$$. Naturally, if a sequence $$(x_n)$$ converges to $$x$$, one would like to write $$\lim_{n \rightarrow\infty}x_n$$, but the following example shows that this notation need not even be well-defined.
 
-<div class="example" markdown="1">
-
-<ins id="ex2">**Example 2**</ins> Let $$X$$ be any set endowed with the trivial topology, considered as a topological space. Then any sequence in $$X$$ converges to every point of $$X$$.
-
-</div>
+::: Example 2
+Let $$X$$ be any set endowed with the trivial topology, considered as a topological space. Then any sequence in $$X$$ converges to every point of $$X$$.
+:::
 
 ## Separation Axioms
 
@@ -52,9 +48,8 @@ The conditions above are listed in order of increasing strength. That is, two su
 
 Now we define the following.
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**Definition 3**</ins> For a topological space $$X$$, we define the following.
+::: Definition 3
+For a topological space $$X$$, we define the following.
 
 1. $$X$$ is a *$$T_0$$-space*, or a *Kolmogorov space*, if any two distinct points are topologically distinguishable.
 2. $$X$$ is an *$$R_0$$-space* if any two topologically distinguishable points are separated.
@@ -74,48 +69,37 @@ Now we define the following.
 16. $$X$$ is a *completely $$T_4$$-space* if $$X$$ is completely normal and $$T_1$$. Hence every completely $$T_4$$-space is $$T_4$$.
 17. $$X$$ is a *perfectly normal space* if any two disjoint closed subsets are precisely separated by continuous functions.
 18. $$X$$ is a *perfectly $$T_4$$-space* if $$X$$ is perfectly normal and $$T_0$$. 
-
-</div>
+:::
 
 ## Hausdorff Spaces
 
 One of the notions of particular importance in [Definition 3](#def3) is that of a Hausdorff space. Here our intuition is well-founded.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**Proposition 4**</ins> In a Hausdorff space $$X$$, any sequence $$(x_n)$$ converges to at most one point.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 4
+In a Hausdorff space $$X$$, any sequence $$(x_n)$$ converges to at most one point.
+:::
+::: Proof
 Suppose for contradiction that $$(x_n)$$ converges to two distinct points $$x,y$$. Then we can choose disjoint open neighborhoods $$U,V$$ of $$x$$ and $$y$$, respectively. From the assumption that $$(x_n)$$ converges to both $$x$$ and $$y$$, there exist $$M,N$$ such that
 
 $$m\geq M \implies x_m\in U,\qquad n\geq N\implies x_n\in V$$
 
 so letting $$K=\max(M,N)$$, the term $$x_K$$ must belong to both $$U$$ and $$V$$, a contradiction.
-
-</details>
+:::
 
 Meanwhile, the following lemma is also useful for showing that $$X$$ is Hausdorff.
 
-<div class="proposition" markdown="1">
-
-<ins id="lem5">**Lemma 5**</ins> A topological space $$X$$ is Hausdorff if and only if the subset
+::: Lemma 5
+A topological space $$X$$ is Hausdorff if and only if the subset
 
 $$\Delta_X=\{(x,x)\mid x\in X\}$$
 
 of $$X\times X$$ is closed.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 First, assume $$X$$ is Hausdorff. Then for any $$(x,y)\not\in\Delta_X$$, we have $$x\neq y$$, so we can choose disjoint neighborhoods $$U,V$$ of $$x$$ and $$y$$. Then $$U\times V$$ is an open set containing $$(x,y)$$ and disjoint from $$\Delta_X$$.
 
 Conversely, if $$\Delta_X$$ is a closed subset of $$X\times X$$, then for any $$x,y\in X$$ with $$x\neq y$$, we have $$(x,y)\not\in\Delta_X$$, so there exists an open neighborhood of $$(x,y)$$ disjoint from $$\Delta_X$$, and by considering the base for the product topology, there is a basic open set of the form $$U\times V$$ contained in it.
-
-</details>
+:::
 
 More generally, by the same argument one can show that $$X$$ is Hausdorff if and only if, for any index set $$I$$, the diagonal
 
@@ -123,54 +107,40 @@ $$\Delta_X=\{(x_i)_{i\in I}:\text{$x_i=x$ for all $i$, where $x\in X$}\}$$
 
 in $$X^I=\prod_{i\in I}X$$ is closed. From [Lemma 5](#lem5) we obtain the following.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor6">**Corollary 6**</ins> For continuous functions $$f,g:X \rightarrow Y$$, if $$Y$$ is Hausdorff then the set
+::: Corollary 6
+For continuous functions $$f,g:X \rightarrow Y$$, if $$Y$$ is Hausdorff then the set
 
 $$E=\{x\in X\mid f(x)=g(x)\}$$
 
 is a closed subset of $$X$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 Consider the continuous function $$x\mapsto (f(x), g(x))$$ from $$X$$ to $$Y\times Y$$; the given set is the preimage of the closed set $$\Delta_Y$$ under this map.
+:::
 
-</details>
-
-<div class="proposition" markdown="1">
-
-<ins id="cor7">**Corollary 7**</ins> For a continuous function $$f:X \rightarrow Y$$, if $$Y$$ is Hausdorff then the set
+::: Corollary 7
+For a continuous function $$f:X \rightarrow Y$$, if $$Y$$ is Hausdorff then the set
 
 $$\Gamma(f)=\{(x,f(x))\mid x\in X\}$$
 
 is a closed subset of $$X\times Y$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 Apply [Corollary 6](#cor6) to the two continuous functions
 
 $$(x,y)\mapsto f(x),\quad (x,y)\mapsto y$$
 
 from $$X\times Y$$ to $$Y$$.
-
-</details>
+:::
 
 ## Subspaces and Products of Hausdorff Spaces
 
 For any Hausdorff space $$X$$, it is easy to verify that any subspace $$A$$ of $$X$$ is also Hausdorff. Indeed, given any $$x,y\in A$$, if we choose disjoint open neighborhoods $$U,V$$ of them in $$X$$, then $$U\cap A$$ and $$V\cap A$$ are disjoint open neighborhoods of $$x,y$$ in $$A$$. On the other hand, the product of Hausdorff spaces is also Hausdorff.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop8">**Proposition 8**</ins> For nonempty spaces $$X_i$$, the product $$X=\prod_{i\in I}X_i$$ is Hausdorff if and only if each $$X_i$$ is Hausdorff.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 8
+For nonempty spaces $$X_i$$, the product $$X=\prod_{i\in I}X_i$$ is Hausdorff if and only if each $$X_i$$ is Hausdorff.
+:::
+::: Proof
 First, suppose the $$X_i$$ are Hausdorff and let $$x,y\in X$$ be given. Then there exists an index $$i$$ such that $$x_i\neq y_i$$, and in this $$X_i$$ we choose open neighborhoods $$U,V$$ separating $$x_i$$ and $$y_i$$. Considering the base for $$X=\prod X_i$$, the sets whose $$i$$th factor is $$U$$ or $$V$$ and whose remaining $$j$$th factors are $$X_j$$ separate $$x$$ and $$y$$.
 
 Conversely, if $$X$$ is Hausdorff, then for arbitrarily chosen elements $$x_j\in X_j$$, the set
@@ -178,22 +148,19 @@ Conversely, if $$X$$ is Hausdorff, then for arbitrarily chosen elements $$x_j\in
 $$\prod_{j\in I} A_j,\qquad A_j=\begin{cases}A_i&i=j\\\{x_j\}&\text{otherwise}\end{cases}$$
 
 is a subset of $$X$$ homeomorphic to $$X_i$$.
-
-</details>
+:::
 
 ## Quotient Spaces of Hausdorff Spaces
 
 In general, the quotient space $$X/R$$ of a Hausdorff space $$X$$ need not be Hausdorff. Moreover, a necessary and sufficient condition for $$X/R$$ to be Hausdorff is not hard to obtain: since open sets in $$X/R$$ correspond bijectively to $$R$$-saturated open sets in $$X$$, the quotient $$X/R$$ is Hausdorff if and only if for any $$x,y\in X$$ belonging to different equivalence classes, there exists an $$R$$-saturated open set separating them. In particular, the following holds.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop9">**Proposition 9**</ins> For a continuous function $$f:X \rightarrow Y$$, if $$Y$$ is Hausdorff then the quotient space $$X/{\sim}$$ with respect to the equivalence relation
+::: Proposition 9
+For a continuous function $$f:X \rightarrow Y$$, if $$Y$$ is Hausdorff then the quotient space $$X/{\sim}$$ with respect to the equivalence relation
 
 $$x\sim y\iff f(x)=f(y)$$
 
 is Hausdorff.
-
-</div>
+:::
 
 
 

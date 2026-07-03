@@ -22,19 +22,16 @@ Thus, a scheme morphism $$f:X \rightarrow Y$$ is fundamentally an object we have
 
 The first perspective is a fairly natural one. A scheme is essentially constructed by gluing affine schemes, and by the categorical equivalence $$\AffSch\cong\cRing^\op$$, a morphism between affine schemes is essentially a ring homomorphism. Therefore, one should be able to understand a scheme morphism as gluing morphisms between affine schemes. That is, it is reasonable to expect the following proposition.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop1">**Proposition 1**</ins> Let a scheme morphism $$\varphi: X \rightarrow Y$$ be given. If $$X$$ has an affine open subset $$U\cong\Spec A$$ and $$Y$$ has an affine open subset $$V\cong\Spec B$$ satisfying $$\varphi(U)\subseteq V$$, then the restriction $$\varphi\vert_U: U \rightarrow V$$ is a morphism of affine schemes. 
+::: Proposition 1
+Let a scheme morphism $$\varphi: X \rightarrow Y$$ be given. If $$X$$ has an affine open subset $$U\cong\Spec A$$ and $$Y$$ has an affine open subset $$V\cong\Spec B$$ satisfying $$\varphi(U)\subseteq V$$, then the restriction $$\varphi\vert_U: U \rightarrow V$$ is a morphism of affine schemes. 
 
 Conversely, let two affine open coverings $$\{U_i\}$$ of $$X$$ and $$\{V_j\}$$ of $$Y$$ be given, and let morphisms of affine schemes $$\varphi_{ij}: U_i \rightarrow V_j$$ be given. If these satisfy the gluing condition on each intersection and are thereby well defined, then the $$\varphi_{ij}$$ define a scheme morphism $$\varphi: X \rightarrow Y$$. 
-
-</div>
+:::
 
 One direction is merely a new version of the assertion that $$\AffSch$$ is a full subcategory of $$\LRS$$, by [§Affine Schemes, ⁋Proposition 11](/en/math/scheme_theory/affine_schemes#prop11), and the gluing for the converse is also obtained in an obvious manner. 
 
-<div class="example" markdown="1">
-
-<ins id="ex2">**Example 2**</ins> As an example of a scheme morphism that is not a morphism between affine schemes, consider the map
+::: Example 2
+As an example of a scheme morphism that is not a morphism between affine schemes, consider the map
 
 $$\varphi:\mathbb{A}_\mathbb{K}^{n+1}\setminus \{0\} \rightarrow \mathbb{P}^n_\mathbb{K}$$
 
@@ -63,8 +60,7 @@ $$(x_0,\ldots, x_n) \rightarrow \left[\frac{x_0}{x_i}:\cdots:\frac{x_{i-1}}{x_i}
 so it is appropriate to denote this as
 
 $$(x_0,\ldots, x_n)\rightarrow [x_0:\cdots:x_n]$$
-
-</div>
+:::
 
 We shall regard this perspective almost as the definition, and the remaining three perspectives introduced below are better understood as ways of interpreting it. 
 
@@ -72,19 +68,16 @@ We shall regard this perspective almost as the definition, and the remaining thr
 
 First we define the following. 
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**Definition 3**</ins> For any scheme $$S$$, we call the slice category $$\Sch_{/S}$$ over $$S$$ the category of *$$S$$-schemes*. ([[Category Theory] §Categories, ⁋Example 13](/en/math/category_theory/categories#ex13)) 
-
-</div>
+::: Definition 3
+For any scheme $$S$$, we call the slice category $$\Sch_{/S}$$ over $$S$$ the category of *$$S$$-schemes*. ([[Category Theory] §Categories, ⁋Example 13](/en/math/category_theory/categories#ex13)) 
+:::
 
 That is, an $$S$$-scheme is another name for a scheme morphism $$X \rightarrow S$$ to $$S$$, which is also called the *structure morphism*. 
 
 This becomes a little more intuitive when we look at the following example.
 
-<div class="example" markdown="1">
-
-<ins id="ex4">**Example 4**</ins> Consider affine $$n$$-space $$\mathbb{A}^n_\mathbb{K}=\Spec \mathbb{K}[\x_1,\ldots, \x_n]$$. Then $$\mathbb{K}[\x_1,\ldots, \x_n]$$ is a $$\mathbb{K}$$-algebra, and this means that a $$\mathbb{K}$$-algebra structure is given via the structure morphism
+::: Example 4
+Consider affine $$n$$-space $$\mathbb{A}^n_\mathbb{K}=\Spec \mathbb{K}[\x_1,\ldots, \x_n]$$. Then $$\mathbb{K}[\x_1,\ldots, \x_n]$$ is a $$\mathbb{K}$$-algebra, and this means that a $$\mathbb{K}$$-algebra structure is given via the structure morphism
 
 $$\mathbb{K}\hookrightarrow \mathbb{K}[\x_1,\ldots, \x_n]$$
 
@@ -93,8 +86,7 @@ $$\mathbb{K}\hookrightarrow \mathbb{K}[\x_1,\ldots, \x_n]$$
 Then through this structure morphism we may view $$\mathbb{A}^n_\mathbb{K}$$ as a $$\Spec\mathbb{K}$$-scheme
 
 $$\mathbb{A}^n_\mathbb{K}=\Spec \mathbb{K}[\x_1,\ldots, \x_n] \rightarrow \Spec \mathbb{K}$$
-
-</div>
+:::
 
 As above, when $$S$$ is an affine scheme $$S=\Spec A$$, it is common by a slight abuse of language to call an $$S$$-scheme $$X$$ an $$A$$-scheme. Then by [§Affine Schemes, ⁋Theorem 13](/en/math/scheme_theory/affine_schemes#thm13), fixing an arbitrary ring $$A$$ and giving an $$A$$-scheme structure on a scheme $$X$$ is precisely the same as
 
@@ -104,9 +96,8 @@ That is, giving an $$A$$-scheme structure on a scheme $$X$$ is algebraically equ
 
 Now let us look at the following example, which generalizes [Example 2](#ex2) further.
 
-<div class="example" markdown="1">
-
-<ins id="ex5">**Example 5**</ins> Consider a ring $$A$$ and an $$A$$-scheme $$X$$, let functions $$f_0,\ldots, f_n\in \Gamma(X, \mathcal{O}_X)$$ defined on $$X$$ be given, and let $$X=\bigcup U_j$$ be an affine open covering of $$X$$. Then
+::: Example 5
+Consider a ring $$A$$ and an $$A$$-scheme $$X$$, let functions $$f_0,\ldots, f_n\in \Gamma(X, \mathcal{O}_X)$$ defined on $$X$$ be given, and let $$X=\bigcup U_j$$ be an affine open covering of $$X$$. Then
 
 $$U_{ij}:=D(f_i)\cap U_j=D(f_i\vert_{U_j})\subseteq U_j$$
 
@@ -125,24 +116,20 @@ $$X \rightarrow \mathbb{P}^n_A$$
 Explicitly, this scheme morphism is given, in the same way as in [Example 2](#ex2), by
 
 $$x\mapsto [f_0(x):\cdots: f_n(x)]$$
-
-</div>
+:::
 
 ## Points
 
 Next, we define the following.
 
-<div class="definition" markdown="1">
-
-<ins id="def6">**Definition 6**</ins> We call a scheme morphism $$f: X \rightarrow Y$$ an *$$X$$-point* of $$Y$$. 
-
-</div>
+::: Definition 6
+We call a scheme morphism $$f: X \rightarrow Y$$ an *$$X$$-point* of $$Y$$. 
+:::
 
 Again, it helps intuitively to examine the case where $$X$$ is an affine scheme.
 
-<div class="example" markdown="1">
-
-<ins id="ex7">**Example 7**</ins> Consider an algebraically closed field $$\mathbb{K}$$, the affine $$n$$-space $$Y=\mathbb{A}^n_\mathbb{K}=\Spec \mathbb{K}[\x_1,\ldots, \x_n]$$ defined over it, and $$X=\Spec \mathbb{K}$$. Then a scheme morphism $$X \rightarrow Y$$ is a morphism of affine schemes
+::: Example 7
+Consider an algebraically closed field $$\mathbb{K}$$, the affine $$n$$-space $$Y=\mathbb{A}^n_\mathbb{K}=\Spec \mathbb{K}[\x_1,\ldots, \x_n]$$ defined over it, and $$X=\Spec \mathbb{K}$$. Then a scheme morphism $$X \rightarrow Y$$ is a morphism of affine schemes
 
 $$\Spec \mathbb{K} \rightarrow \Spec \mathbb{K}[\x_1,\ldots, \x_n]$$
 
@@ -165,28 +152,23 @@ $$\begin{aligned}\{\text{$\mathbb{K}$-point $\Spec \phi:\Spec\mathbb{K}\rightarr
 and
 
 $$\begin{aligned}\{\text{points $(x_1,\ldots, x_n)\in \mathbb{A}^n_\mathbb{K}$}\}&\rightarrow \{\text{$\mathbb{K}$-point $\Spec \phi:\Spec\mathbb{K}\rightarrow \mathbb{A}^n_\mathbb{K}$}\}\\a=(a_1,\ldots, a_n)&\mapsto \Spec \ev_a\end{aligned}$$
-
-</div>
+:::
 
 As above, if $$X$$ is of the form $$\Spec A$$, we simply call it an $$A$$-point. The usefulness of this concept can also be seen in the following example.
 
-<div class="example" markdown="1">
-
-<ins id="ex8">**Example 8**</ins> Let a $$\mathbb{C}$$-scheme $$X=\Spec\frac{\mathbb{C}[\x_1,\ldots, \x_n]}{(f_1,\ldots, f_r)}$$ be given, and consider the $$\mathbb{Q}$$-points of this scheme. Then from [[Commutative Algebra] §Nullstellensatz, ⁋Lemma 5](/en/math/commutative_algebra/nullstellensatz#lem5) and the calculation of [Example 7](#ex7), we know that there exists a one-to-one correspondence between the $$\mathbb{Q}$$-points $$\Spec\phi: \Spec \mathbb{Q}\rightarrow X$$ of $$X$$ and the rational solutions of
+::: Example 8
+Let a $$\mathbb{C}$$-scheme $$X=\Spec\frac{\mathbb{C}[\x_1,\ldots, \x_n]}{(f_1,\ldots, f_r)}$$ be given, and consider the $$\mathbb{Q}$$-points of this scheme. Then from [[Commutative Algebra] §Nullstellensatz, ⁋Lemma 5](/en/math/commutative_algebra/nullstellensatz#lem5) and the calculation of [Example 7](#ex7), we know that there exists a one-to-one correspondence between the $$\mathbb{Q}$$-points $$\Spec\phi: \Spec \mathbb{Q}\rightarrow X$$ of $$X$$ and the rational solutions of
 
 $$f_1(x_1,\ldots, x_n)=\cdots=f_r(x_1,\ldots, x_n)=0$$
 
 Similarly, the integer solutions of the above equations correspond exactly to the $$\mathbb{Z}$$-points of $$X$$. 
-
-</div>
+:::
 
 Based on this perspective we define the following.
 
-<div class="definition" markdown="1">
-
-<ins id="def9">**Definition 9**</ins> We call the functor $$\Hom_\Sch(-,X): \Sch^\op \rightarrow \Set$$ the *functor of points of $$X$$*. 
-
-</div>
+::: Definition 9
+We call the functor $$\Hom_\Sch(-,X): \Sch^\op \rightarrow \Set$$ the *functor of points of $$X$$*. 
+:::
 
 Then $$\Hom_\Sch(-,X)$$ is the functor that takes a scheme $$S$$ and returns the set of $$S$$-valued points of $$X$$. 
 
@@ -196,15 +178,13 @@ The final perspective is one for which our present language is still insufficien
 
 For geometric intuition, it basically suffices to consider the following (non-scheme) situation.
 
-<div class="example" markdown="1">
-
-<ins id="ex10">**Example 10**</ins> Consider the sphere $$S:x^2+y^2+z^2=1$$ defined in the coordinate space $$\mathbb{R}^3$$, and the projection $$\pi: S \rightarrow \mathbb{R}_x$$ onto the $$x$$-axis. Then for any $$x_0\in \mathbb{R}_x$$,
+::: Example 10
+Consider the sphere $$S:x^2+y^2+z^2=1$$ defined in the coordinate space $$\mathbb{R}^3$$, and the projection $$\pi: S \rightarrow \mathbb{R}_x$$ onto the $$x$$-axis. Then for any $$x_0\in \mathbb{R}_x$$,
 
 $$\pi^{-1}(x_0)=\{(x_0,y,z)\in \mathbb{R}: y^2+z^2=1-x_0^2\}$$
 
 Geometrically, this can be viewed as a situation in which to each $$x_0\in \mathbb{R}_x$$ there corresponds a circle $$y^2+z^2=1-x_0^2$$, and therefore we may think of $$\pi$$ as <em-ko>a family of circles parametrized by the $x$-axis</em-ko>. 
-
-</div>
+:::
 
 Among the reasons why this example cannot be immediately represented in the language of schemes, the less essential one is that $$S$$ is a closed subset of $$\mathbb{R}^3$$ and we do not yet know how to put a scheme structure on a closed subset. This will be resolved in [§Closed Subschemes](/en/math/scheme_theory/closed_subschemes). The more subtle and essential point is that there is no way to represent the fiber $$\pi^{-1}(x_0)$$ of the function $$\pi$$ at a point $$x_0$$. Of course a scheme morphism is basically a continuous map, so one could regard this as the fiber of a continuous map; but even if we do so, there is no way to give $$\pi^{-1}(x_0)$$ a scheme structure (even assuming the contents of [§Closed Subschemes](/en/math/scheme_theory/closed_subschemes)). We will have to wait a little longer to explain this. 
 

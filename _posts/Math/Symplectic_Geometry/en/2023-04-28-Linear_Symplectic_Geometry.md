@@ -20,31 +20,25 @@ Even aside from physical reasons, $$T^\ast M$$ is far more natural than the tang
 
 ## Symplectic form
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> A vector space $$(V,\omega)$$ is called a *symplectic vector space* if $$\omega:V\times V\rightarrow \mathbb{R}$$ satisfies the following two conditions.
+::: Definition 1
+A vector space $$(V,\omega)$$ is called a *symplectic vector space* if $$\omega:V\times V\rightarrow \mathbb{R}$$ satisfies the following two conditions.
 
 - (Skew-symmetry) For any $$v,w\in V$$, we have $$\omega(v,w)=-\omega(w,v)$$.
 - (Nondegeneracy) If $$\omega(v,w)=0$$ for all $$w\in V$$, then $$v=0$$.
 
 In this case, $$\omega$$ is called a *symplectic form*.
-
-</div>
+:::
 
 It is not difficult to see that every symplectic vector space must have even dimension.
 
-<div class="proposition" markdown="1">
-
-<ins id="lem2">**Lemma 2**</ins> Let a skew-symmetric bilinear map $$\omega:V\times V\rightarrow \mathbb{R}$$ be given. Then there exists a basis $$u_1,\ldots, u_k, e_1, \ldots,e_n,f_1,\ldots, f_n$$ of $$V$$ such that the following conditions are all satisfied.
+::: Lemma 2
+Let a skew-symmetric bilinear map $$\omega:V\times V\rightarrow \mathbb{R}$$ be given. Then there exists a basis $$u_1,\ldots, u_k, e_1, \ldots,e_n,f_1,\ldots, f_n$$ of $$V$$ such that the following conditions are all satisfied.
 
 - For all $$v\in V$$, we have $$\omega(u_i,v)=0$$.
 - For all $$i,j$$, we have $$\omega(e_i,e_j)=\omega(f_i,f_j)=0$$.
 - For all $$i,j$$, we have $$\omega(e_i,f_j)=\delta_{ij}$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 First, one can easily check that the set
 
 $$\{u\in V\mid \omega(u,v)=0\text{ for all $v\in V$}\}$$
@@ -83,8 +77,7 @@ instead of $$f_{k+1}$$, we may assume that $$f_{k+1}$$ satisfies
 $$\omega(f_{k+1},e_i)=\omega(f_{k+1},f_i)=0\qquad\text{for all $i=1,\ldots, k$}$$
 
 and then by an appropriate scalar multiplication we may assume $$\omega(e_{k+1},f_{k+1})=1$$.
-
-</details>
+:::
 
 In the above lemma, the subspace $$U=\span\{u_1,\ldots, u_k\}$$ is the space where $$\omega$$ vanishes identically, and thus on the complement $$W$$ of this subspace, $$\omega$$ becomes a symplectic form. Conversely, if a symplectic form is given on an arbitrary vector space, then since $$\omega$$ is non-degenerate we must have $$U=0$$, and therefore any symplectic vector space must have even dimension. In this case, the basis
 
@@ -92,9 +85,8 @@ $$e_1,\ldots, e_n, f_1,\ldots, f_n$$
 
 obtained from the above lemma is called a *symplectic basis*. If a linear map preserving the symplectic form is called a *(linear) symplectomorphism*, then by choosing a symplectic basis one can verify that any symplectic vector space is symplectomorphic to the space $$(\mathbb{R}^{2n},\omega_0)$$ that we studied in the previous post.
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**Definition 3**</ins> Let $$(V,\omega)$$ be a symplectic vector space and let $$W\leq V$$ be an arbitrary subspace. Then the *symplectic complement* of $$W$$ is the space defined by
+::: Definition 3
+Let $$(V,\omega)$$ be a symplectic vector space and let $$W\leq V$$ be an arbitrary subspace. Then the *symplectic complement* of $$W$$ is the space defined by
 
 $$W^\omega=\{v\in V\mid\omega(v,w)=0\text{ for all $w\in W$}\}$$
 
@@ -102,22 +94,17 @@ $$W^\omega=\{v\in V\mid\omega(v,w)=0\text{ for all $w\in W$}\}$$
 2. If $$W^\omega\subseteq W$$, then $$W$$ is called a *coisotropic subspace*.
 3. If $$W\cap W^\omega=\{0\}$$, then $$W$$ is called a *symplectic subspace*.
 4. If $$W=W^\omega$$, then $$W$$ is called a *Lagrangian subspace*.
+:::
 
-</div>
-
-<div class="proposition" markdown="1">
-
-<ins id="lem4">**Lemma 4**</ins> For a symplectic vector space $$(V,\omega)$$ and its subspace $$W$$, the following hold.
+::: Lemma 4
+For a symplectic vector space $$(V,\omega)$$ and its subspace $$W$$, the following hold.
 
 1. We have $$\dim W+\dim W^\omega=\dim V$$, and $$(W^\omega)^\omega=W$$.
 2. $$W$$ is a symplectic subspace if and only if $$W^\omega$$ is a symplectic subspace.
 3. $$W$$ is isotropic if and only if $$W^\omega$$ is coisotropic. Also, $$W$$ is coisotropic if and only if $$W^\omega$$ is isotropic.
 4. $$W$$ is Lagrangian if and only if $$W$$ is isotropic and $$\dim W=\frac{1}{2}\dim V$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 1. Since $$\omega$$ is a non-degenerate pairing, the map $$v\mapsto \omega(v,-)$$ defines an isomorphism from $$V$$ to $$V^\ast$$. ([\[Linear Algebra\] §Dual Space, ⁋Proposition 4](/en/math/linear_algebra/dual_space#prop4))
     
     Let $$W^\perp\subseteq V^\ast$$ be the annihilator of $$W$$. ([\[Linear Algebra\] §Dual Space, ⁋Definition 7](/en/math/linear_algebra/dual_space#def7)) For any $$u\in W^\omega$$,
@@ -137,8 +124,7 @@ $$W^\omega=\{v\in V\mid\omega(v,w)=0\text{ for all $w\in W$}\}$$
 2. Since $$(W^\omega)^\omega=W$$, we have $$W\cap W^\omega=(W^\omega)^\omega\cap W^\omega$$.
 3. If $$W\subseteq W^\omega$$, then $$(W^\omega)^\omega\subseteq W^\omega$$, so $$W^\omega$$ is coisotropic.
 4. If $$W$$ is Lagrangian, then $$W=W^\omega$$, so from $$\dim W+\dim W^\omega$$ we obtain $$\dim W=\frac{1}{2}\dim V$$ and $$W$$ is an isotropic subspace. Conversely, if $$\dim W=\frac{1}{2}\dim V$$, then $$\dim W^\omega$$ is also $$\frac{1}{2}\dim V$$, and therefore an isotropic subspace satisfying such a dimension condition is Lagrangian.
-
-</details>
+:::
 
 ## Symplectic quotient
 
@@ -156,14 +142,10 @@ must coincide with $$\omega(v_1,v_2)$$. If no condition is imposed on $$W$$, the
 
 To make this work, one can define the quotient space in the following manner.
 
-<div class="proposition" markdown="1">
-
-<ins id="lem5">**Lemma 5**</ins> Let $$(V,\omega)$$ be a symplectic vector space and let $$W$$ be a coisotropic subspace. Then there exists a unique symplectic structure $$\overline{\omega}$$ on $$W/W^\omega$$ such that the pullback of $$\overline{\omega}$$ by the projection $$W\rightarrow W/W^\omega$$ coincides with the restriction of $$\omega$$ to $$W$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Lemma 5
+Let $$(V,\omega)$$ be a symplectic vector space and let $$W$$ be a coisotropic subspace. Then there exists a unique symplectic structure $$\overline{\omega}$$ on $$W/W^\omega$$ such that the pullback of $$\overline{\omega}$$ by the projection $$W\rightarrow W/W^\omega$$ coincides with the restriction of $$\omega$$ to $$W$$.
+:::
+::: Proof
 For arbitrary $$[w_1],[w_2]\in W$$, define $$\overline{\omega}([w_1],[w_2])=\omega(w_1,w_2)$$. It is obvious that if this formula yields a well-defined symplectic form, then the desired property holds. First, for any $$u_1,u_2\in W^\omega$$,
 
 $$\omega(w_1+u_1,w_2+u_2)=\omega(w_1,w_2)+\omega(w_1,u_2)+\omega(u_1,w_2)+\omega(u_1,u_2)$$
@@ -173,7 +155,6 @@ holds, and since $$w_1,w_2,u_1,u_2$$ are all elements of $$W$$ and $$u_1,u_2$$ a
 $$0=\overline{\omega}([w],[w'])=\omega(w,w')\qquad\text{for all $w'\in W$}$$
 
 so by definition $$w\in W^\omega$$ and therefore $$[w]=0$$. That is, $$\overline{\omega}$$ is non-degenerate.
-
-</details>
+:::
 
 Since every 1-dimensional subspace of a symplectic vector space is an isotropic subspace, by [Lemma 4](#lem4) every codimension-1 subspace $$W$$ is a coisotropic subspace. Applying [Lemma 5](#lem5) to this space, we obtain a new symplectic vector space with dimension reduced by 2 from the original vector space.

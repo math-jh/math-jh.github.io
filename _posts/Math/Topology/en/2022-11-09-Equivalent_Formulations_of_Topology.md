@@ -22,9 +22,8 @@ By [§Interior, Closure, and Boundary, ⁋Proposition 2](/en/math/topology/other
 
 ## Closure Axiom
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1 (Kuratowski closure axiom)**</ins> For an arbitrary *set* $$X$$, suppose a function $$\cl:\mathcal{P}(X)\rightarrow\mathcal{P}(X)$$ satisfies all of the following conditions.
+::: Definition 1 (Kuratowski closure axiom)
+For an arbitrary *set* $$X$$, suppose a function $$\cl:\mathcal{P}(X)\rightarrow\mathcal{P}(X)$$ satisfies all of the following conditions.
 
 - $$A\subset\cl(A)$$
 - $$\cl(\cl(A))=\cl(A)$$
@@ -32,8 +31,7 @@ By [§Interior, Closure, and Boundary, ⁋Proposition 2](/en/math/topology/other
 - $$\cl(\emptyset)=\emptyset$$
 
 A function satisfying these conditions is called a *closure operator*. ([\[Set Theory\] §Filters, Ideals, and Galois Connections, ⁋Definition 8](/en/math/set_theory/filter_and_ideal#def8))
-
-</div>
+:::
 
 From the third condition, if $$A\subseteq B$$ then
 
@@ -55,17 +53,14 @@ Conversely, suppose a closure operator $$\cl:\mathcal{P}(X)\rightarrow\mathcal{P
 
 From this we obtain the following theorem.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm2">**Theorem 2**</ins> Suppose a function $$\cl:\mathcal{P}(X)\rightarrow\mathcal{P}(X)$$ satisfying all the conditions of [Definition 1](#def1) is given. Define $$\mathcal{C}$$ to be <phrase>the collection of all $C$ satisfying $\cl(C)=C$</phrase>. Then $$\mathcal{C}$$ satisfies all the conditions of [§Interior, Closure, and Boundary, ⁋Proposition 2](/en/math/topology/other_concepts#prop2), and therefore defines a unique topological structure.
-
-</div>
+::: Theorem 2
+Suppose a function $$\cl:\mathcal{P}(X)\rightarrow\mathcal{P}(X)$$ satisfying all the conditions of [Definition 1](#def1) is given. Define $$\mathcal{C}$$ to be <phrase>the collection of all $C$ satisfying $\cl(C)=C$</phrase>. Then $$\mathcal{C}$$ satisfies all the conditions of [§Interior, Closure, and Boundary, ⁋Proposition 2](/en/math/topology/other_concepts#prop2), and therefore defines a unique topological structure.
+:::
 
 Of course, one can just as easily define a topological structure using the interior of a set. In this case, the axioms that the interior operator $$\interior$$ must satisfy are as follows.
 
-<div class="misc" markdown="1">
-
-**Interior Axiom.** For an arbitrary set $$X$$, suppose a function $$\interior:\mathcal{P}(X)\rightarrow\mathcal{P}(X)$$ satisfies the following conditions.
+::: misc Interior Axiom. {#interior-axiom}
+For an arbitrary set $$X$$, suppose a function $$\interior:\mathcal{P}(X)\rightarrow\mathcal{P}(X)$$ satisfies the following conditions.
 
 - $$\interior(A)\subseteq A$$
 - $$\interior(\interior(A))=\interior(A)$$
@@ -73,79 +68,63 @@ Of course, one can just as easily define a topological structure using the inter
 - $$\interior(X)=X$$
 
 A function satisfying these conditions is called an *interior operator*.
-
-</div>
+:::
 
 ## Neighborhood Filter
 
 We verified in [§Open Sets, ⁋Proposition 6](/en/math/topology/open_sets#prop6) that giving a *neighborhood filter* $$\mathcal{N}(x)$$ for each point $$x$$ also endows $$X$$ with a topological structure in a unique way. In that proposition, the first three conditions that $$\mathcal{N}(x)$$ must satisfy are precisely the filter axioms. Although the following definition has already been introduced, we record it here for later reference.
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**Definition 3**</ins> A *filter* on a set $$X$$ is a subset $$\mathcal{F}$$ of $$\mathcal{P}(X)$$ satisfying the following three conditions.
+::: Definition 3
+A *filter* on a set $$X$$ is a subset $$\mathcal{F}$$ of $$\mathcal{P}(X)$$ satisfying the following three conditions.
 
 1. Any subset of $$X$$ containing an element of $$\mathcal{F}$$ belongs to $$\mathcal{F}$$.
 2. Any finite intersection of elements of $$\mathcal{F}$$ belongs to $$\mathcal{F}$$.
 3. $$\emptyset\not\in\mathcal{F}$$.
+:::
 
-</div>
-
-<div class="example" markdown="1">
-
-<ins id="ex4">**Example 4**</ins> For an infinite set $$X$$, the collection of all $$A$$ such that $$X\setminus A$$ is finite forms a filter. In particular, when $$X=\mathbb{N}$$, this filter is called the *Fréchet filter*.
-
-</div>
+::: Example 4
+For an infinite set $$X$$, the collection of all $$A$$ such that $$X\setminus A$$ is finite forms a filter. In particular, when $$X=\mathbb{N}$$, this filter is called the *Fréchet filter*.
+:::
 
 Regarding the ordered set $$(\mathcal{P}(X),\subseteq)$$, the above definition coincides with that given in [\[Set Theory\] §Filters, Ideals, and Galois Connections, ⁋Definition 1](/en/math/set_theory/filter_and_ideal#def1), except for the additional condition $$\emptyset\not\in\mathcal{F}$$. Likewise, an *ultrafilter* on $$X$$ is understood as a maximal filter not containing $$\emptyset$$.
 
 Thus, among the four conditions that $$\mathcal{N}(x)$$ must satisfy, the first three can be summarized as the requirement that $$\mathcal{N}(x)$$ be a filter for every $$x$$. The fourth condition has its own name.
 
-<div class="misc" markdown="1">
-
-**Neighborhood Axiom.** For an arbitrary $$z\in X$$, suppose a filter $$\mathcal{N}(z)$$ on $$X$$ is given whose elements each contain $$z$$. Then for every $$S\in\mathcal{N}(z)$$, there exists a suitable $$S'\in\mathcal{N}(z)$$ such that <phrase>for every $x\in S'$, $S\in\mathcal{N}(x)$</phrase>.
-
-</div>
+::: misc Neighborhood Axiom. {#neighborhood-axiom}
+For an arbitrary $$z\in X$$, suppose a filter $$\mathcal{N}(z)$$ on $$X$$ is given whose elements each contain $$z$$. Then for every $$S\in\mathcal{N}(z)$$, there exists a suitable $$S'\in\mathcal{N}(z)$$ such that <phrase>for every $x\in S'$, $S\in\mathcal{N}(x)$</phrase>.
+:::
 
 Moreover, regarding $$\mathcal{N}(x)$$ as playing a role similar to a local base, we showed that a topological space can also be defined via a base $$\mathcal{B}$$. ([§Bases of a Topological Space, ⁋Corollary 6](/en/math/topology/topological_bases#cor6))
 
 More generally, one can define a base for a filter.
 
-<div class="definition" markdown="1">
-
-<ins id="def5">**Definition 5**</ins> Suppose a subset $$\mathcal{B}$$ of $$\mathcal{P}(X)$$ satisfies the following two conditions.
+::: Definition 5
+Suppose a subset $$\mathcal{B}$$ of $$\mathcal{P}(X)$$ satisfies the following two conditions.
 
 1. The intersection of any two elements of $$\mathcal{B}$$ contains some element of $$\mathcal{B}$$.
 2. $$\mathcal{B}$$ contains at least one element, and $$\emptyset\not\in \mathcal{B}$$.
 
 Then $$\uparrow \mathcal{B}$$ defines a filter on $$X$$, and in this case we call $$\mathcal{B}$$ a *filter base* for $$\uparrow \mathcal{B}$$.
-
-</div>
+:::
 
 The following is easily verified.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop6">**Proposition 6**</ins> A subset $$\mathcal{B}$$ of a filter $$\mathcal{F}$$ on $$X$$ is a filter base for $$\mathcal{F}$$ if and only if every element of $$\mathcal{F}$$ contains some element of $$\mathcal{B}$$.
-
-</div>
+::: Proposition 6
+A subset $$\mathcal{B}$$ of a filter $$\mathcal{F}$$ on $$X$$ is a filter base for $$\mathcal{F}$$ if and only if every element of $$\mathcal{F}$$ contains some element of $$\mathcal{B}$$.
+:::
 
 Furthermore, the following holds.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop7">**Proposition 7**</ins> Let $$\mathcal{F}$$ be a filter on $$X$$. Then for any function $$f:X \rightarrow Y$$,
+::: Proposition 7
+Let $$\mathcal{F}$$ be a filter on $$X$$. Then for any function $$f:X \rightarrow Y$$,
 
 $$f(\mathcal{F})=\{f(F)\mid F\in \mathcal{F}\}$$
 
 is a filter base on $$Y$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 This is obvious from $$f(F_1\cap F_2)\subseteq f(F_1)\cap f(F_2)$$ and $$\emptyset\not\in\mathcal{F}\implies \emptyset\not\in f(\mathcal{F})$$.
-
-</details>
+:::
 
 Meanwhile, for a filter $$\mathcal{F}$$ on a set $$X$$ and an arbitrary subset $$A$$, the set
 
@@ -153,8 +132,6 @@ $$\mathcal{F}\vert_A=\{F\cap A\mid F\in \mathcal{F}\}$$
 
 does not generally form a filter on $$A$$. Upon reflection, this is solely because $$\mathcal{F}\vert_A$$ might contain the empty set. That is, if every element of $$\mathcal{F}$$ meets $$A$$, then $$\mathcal{F}\vert_A$$ defines a filter on $$A$$.
 
-<div class="definition" markdown="1">
-
-<ins id="def8">**Definition 8**</ins> If in the above situation $$\mathcal{F}\vert_A$$ defines a filter on $$A$$, we call the filter $$\mathcal{F}$$ a filter on $$A$$.
-
-</div>
+::: Definition 8
+If in the above situation $$\mathcal{F}\vert_A$$ defines a filter on $$A$$, we call the filter $$\mathcal{F}$$ a filter on $$A$$.
+:::

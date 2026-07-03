@@ -36,26 +36,20 @@ $$U_\mathbb{M}(\sigma)=\left\{\tau\in \Gal(\mathbb{L}/\mathbb{K})\mid \sigma\ver
 
 this set becomes an element of the local base at $$\sigma$$, and the collection $$(U_\mathbb{M}(\sigma))_{\sigma\in\Lambda}$$ is exactly the local base at $$\sigma$$.
 
-<div class="example" markdown="1">
-
-<ins id="ex1">**Example 1**</ins> Let us consider the special case where $$\mathbb{L}/\mathbb{K}$$ is a finite degree Galois extension. Then from the discussion following [§Galois Extensions, ⁋Definition 12](/en/math/field_theory/galois_extension#def12), we know that $$\Gal(\mathbb{L}/\mathbb{K})$$ is a finite set. On the other hand, from the local base above, since $$\mathbb{L}/\mathbb{K}$$ is of finite degree, $$\mathbb{L}/\mathbb{K}$$ is already an element of $$\Lambda$$, and therefore
+::: Example 1
+Let us consider the special case where $$\mathbb{L}/\mathbb{K}$$ is a finite degree Galois extension. Then from the discussion following [§Galois Extensions, ⁋Definition 12](/en/math/field_theory/galois_extension#def12), we know that $$\Gal(\mathbb{L}/\mathbb{K})$$ is a finite set. On the other hand, from the local base above, since $$\mathbb{L}/\mathbb{K}$$ is of finite degree, $$\mathbb{L}/\mathbb{K}$$ is already an element of $$\Lambda$$, and therefore
 
 $$U_\mathbb{L}(\sigma)=\left\{\tau\in\Gal(\mathbb{L}/\mathbb{K})\mid \sigma\vert_\mathbb{L}=\tau\vert_\mathbb{L}\right\}=\left\{\sigma\right\}$$
 
 so in this case $$\Gal(\mathbb{L}/\mathbb{K})$$ carries the discrete topology.
-
-</div>
+:::
 
 Moreover, the topological space $$\Gal(\mathbb{L}/\mathbb{K})$$ defined above is originally a group under composition of $$\mathbb{K}$$-automorphisms, and it is not difficult to show that composition of functions is compatible with this topological structure.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**Proposition 2**</ins> The $$\Gal(\mathbb{L}/\mathbb{K})$$ defined above is a topological group.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 2
+The $$\Gal(\mathbb{L}/\mathbb{K})$$ defined above is a topological group.
+:::
+::: Proof
 That is, we must show that the two homomorphisms
 
 $$\Gal(\mathbb{L}/\mathbb{K})\times\Gal(\mathbb{L}/\mathbb{K})\rightarrow\Gal(\mathbb{L}/\mathbb{K});\quad (\sigma,\sigma')\mapsto \sigma\sigma',\qquad \Gal(\mathbb{L}/\mathbb{K})\rightarrow\Gal(\mathbb{L}/\mathbb{K});\quad \sigma\mapsto \sigma^{-1}$$
@@ -71,8 +65,7 @@ Similarly, the local base element $$U_\mathbb{M}(\sigma^{-1})$$ at $$\sigma^{-1}
 $$U_\mathbb{M}(\sigma^{-1})=\left\{\tau\in\Gal(\mathbb{L}/\mathbb{K})\mid \tau\vert_\mathbb{M}=\sigma^{-1}\vert_\mathbb{M}\right\}$$
 
 and considering the local base element $$U_\mathbb{M}(\sigma)$$ at $$\sigma$$, this set is contained in the preimage of the above set.
-
-</details>
+:::
 
 In particular, the local base at any $$\sigma$$ is obtained by translating the local base at the identity $$\id_\mathbb{L}$$ via the translation map. That is, for any $$\sigma\in \Gal(\mathbb{L}/\mathbb{K})$$, the formula
 
@@ -98,32 +91,23 @@ $$\sigma\in\ker\rho\iff \sigma\vert_\mathbb{M}=\id\vert_\mathbb{M}\iff\sigma\in 
 
 so each $$U_\mathbb{M}(\id_\mathbb{L})$$ is clopen. On the other hand, any clopen set can always be written as a union of connected components, and therefore any non-empty intersection of clopen sets must contain a connected component. However, the following holds.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop3">**Proposition 3**</ins> In the above situation, the formula
+::: Proposition 3
+In the above situation, the formula
 
 $$\{\id_\mathbb{L}\}=\bigcap_{\mathbb{M}\in \Lambda'}U_\mathbb{M}(\id_\mathbb{L})$$
 
 holds.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 Let an arbitrary $$\sigma\in \Gal(\mathbb{L}/\mathbb{K})$$ be given. If $$\sigma\neq\id_\mathbb{L}$$, then there exists $$x\in \mathbb{L}$$ such that $$\sigma(x)\neq x$$. Then taking $$\mathbb{M}=\mathbb{K}(x)$$, we have $$\sigma\not\in U_\mathbb{M}(\id_\mathbb{L})$$. Now, as examined earlier, since $$\Lambda'$$ is a cofinal subset of $$\Lambda$$, we obtain the desired result.
-
-</details>
+:::
 
 Therefore, by the result of this proposition, the connected component containing $$\id_\mathbb{L}$$ is $$\left\{\id_\mathbb{L}\right\}$$, and from this we know that $$\Gal(\mathbb{L}/\mathbb{K})$$ is a totally disconnected space. ([[Topology] §Connected Spaces, ⁋Definition 7](/en/math/topology/connected_spaces#def7)) Moreover, the following holds.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**Proposition 4**</ins> $$\Gal(\mathbb{L}/\mathbb{K})$$ is compact.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 4
+$$\Gal(\mathbb{L}/\mathbb{K})$$ is compact.
+:::
+::: Proof
 First, for each $$x\in \mathbb{L}$$, since $$\mathbb{L}/\mathbb{K}$$ is an algebraic extension, $$x$$ is algebraic, and therefore there are only finitely many elements conjugate to $$x$$. ([§Galois Extensions, ⁋Proposition 3](/en/math/field_theory/galois_extension#prop3)) In other words, considering
 
 $$\Gal(\mathbb{L}/\mathbb{K})\hookrightarrow \prod_{x\in \mathbb{L}}\mathbb{L}\overset{\pr_x}{\longrightarrow}\mathbb{L};\qquad \sigma\mapsto \sigma(x)$$
@@ -139,8 +123,7 @@ is a basic open set in $$\mathbb{L}^\mathbb{L}$$, hence open, and moreover conta
 $$f(x+y)=u(x+y)\neq u(x)+u(y)=f(x)+f(y)$$
 
 so these $$f$$ are also not field homomorphisms. That is, the above open neighborhood does not meet $$\Gal(\mathbb{L}/\mathbb{K})$$, which contradicts the assumption that $$u$$ lies in the closure of $$\Gal(\mathbb{L}/\mathbb{K})$$. By similar logic all other cases can also be excluded, and from this we can prove that $$\Gal(\mathbb{L}/\mathbb{K})$$ is closed in $$\mathbb{L}^\mathbb{L}$$.
-
-</details>
+:::
 
 On the other hand, let $$\mathbb{L}/\mathbb{K}$$ be a Galois extension, and let $$\mathbb{L}_i/\mathbb{K}$$ be Galois subextensions of this extension satisfying $$\mathbb{L}=\bigcup_{i\in I}\mathbb{L}_i$$. Then we endow this with the partial order
 
@@ -162,17 +145,12 @@ $$\lambda_i:\Gal(\mathbb{L}/\mathbb{K})\rightarrow\Gal(\mathbb{L}_i/\mathbb{K})$
 
 since these satisfy $$\lambda_i=\rho_{ij}\circ\lambda_j$$, the continuous homomorphism $$\lambda:\Gal(\mathbb{L}/\mathbb{K})\rightarrow\varprojlim\Gal(\mathbb{L}_i/\mathbb{K})$$ induced by them exists.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**Proposition 5**</ins> The $$\lambda$$ defined above is an isomorphism of topological groups.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 5
+The $$\lambda$$ defined above is an isomorphism of topological groups.
+:::
+::: Proof
 By [Proposition 3](#prop3), each $$\Gal(\mathbb{L}_i/\mathbb{K})$$ is Hausdorff, and since products and subspaces of Hausdorff spaces are again Hausdorff, their inverse limit $$\varprojlim \Gal(\mathbb{L}_i/\mathbb{K})$$ is also Hausdorff. On the other hand, since $$\Gal(\mathbb{L}/\mathbb{K})$$ is compact by [Proposition 4](#prop4), by [[Topology] §Compact Spaces, ⁋Proposition 9](/en/math/topology/compact_spaces#prop9) it suffices to show that $$\lambda$$ is bijective, which is almost obvious from $$\mathbb{L}= \bigcup \mathbb{L}_i$$.
-
-</details>
+:::
 
 In particular, this proposition applies well to the family $$\Lambda'$$.
 
@@ -180,15 +158,13 @@ In particular, this proposition applies well to the family $$\Lambda'$$.
 
 The Galois group is not merely a group, but a group acting on $$\mathbb{L}$$, and in particular on the multiplicative group $$\mathbb{L}^\times$$. The standard tool for extracting the arithmetic information encoded in this action is *Galois cohomology*, and to close this article we examine the classical theorem at its origin, Hilbert's Theorem 90. In this section $$\mathbb{L}/\mathbb{K}$$ is a finite degree Galois extension and $$G=\Gal(\mathbb{L}/\mathbb{K})$$.
 
-<div class="definition" markdown="1">
-
-<ins id="def6">**Definition 6**</ins> A function $$\varphi:G \rightarrow \mathbb{L}^\times$$ is called a *1-cocycle* if for any $$\sigma,\tau\in G$$ the formula
+::: Definition 6
+A function $$\varphi:G \rightarrow \mathbb{L}^\times$$ is called a *1-cocycle* if for any $$\sigma,\tau\in G$$ the formula
 
 $$\varphi(\sigma\tau)=\varphi(\sigma)\cdot\sigma\bigl(\varphi(\tau)\bigr)$$
 
 holds. In particular, a 1-cocycle of the form $$\varphi(\sigma)=\sigma(c)/c$$ for some $$c\in\mathbb{L}^\times$$ is called a *1-coboundary*.
-
-</div>
+:::
 
 First, verifying that a 1-coboundary is indeed a 1-cocycle, we have
 
@@ -196,14 +172,10 @@ $$\varphi(\sigma)\cdot\sigma(\varphi(\tau))=\frac{\sigma(c)}{c}\cdot\sigma\left(
 
 Also, since the 1-cocycles form an abelian group under pointwise multiplication and the 1-coboundaries form a subgroup thereof, we can consider the quotient group, which we denote by $$H^1(G,\mathbb{L}^\times)$$. Hilbert's Theorem 90 is the somewhat deflating but extremely useful theorem that this group contains no information whatsoever.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm7">**Theorem 7 (Hilbert 90)**</ins> For a finite degree Galois extension $$\mathbb{L}/\mathbb{K}$$, every 1-cocycle $$\varphi:G \rightarrow \mathbb{L}^\times$$ is a 1-coboundary. That is, $$H^1(G,\mathbb{L}^\times)$$ is trivial.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Theorem 7 (Hilbert 90)
+For a finite degree Galois extension $$\mathbb{L}/\mathbb{K}$$, every 1-cocycle $$\varphi:G \rightarrow \mathbb{L}^\times$$ is a 1-coboundary. That is, $$H^1(G,\mathbb{L}^\times)$$ is trivial.
+:::
+::: Proof
 Since the elements of $$G$$ are distinct homomorphisms from $$\mathbb{L}$$ to $$\mathbb{L}$$, by Dedekind's theorem in [§Étale Algebras, ⁋Corollary 3](/en/math/field_theory/etale_algebras#cor3), they are linearly independent over the $$\mathbb{L}$$-vector space. Since the values of $$\varphi$$ are all non-zero, the linear combination
 
 $$\sum_{\tau\in G}\varphi(\tau)\,\tau$$
@@ -221,8 +193,7 @@ The last equality holds because as $$\tau$$ ranges over all of $$G$$, so does $$
 $$\varphi(\sigma)=\frac{b}{\sigma(b)}=\frac{\sigma(c)}{c}$$
 
 so $$\varphi$$ is a 1-coboundary.
-
-</details>
+:::
 
 The classical form of Hilbert 90 concerns cyclic extensions. Let $$G=\langle\sigma\rangle$$ be a cyclic group of order $$n$$, and define the *norm* of $$x\in\mathbb{L}$$ by
 
@@ -230,17 +201,13 @@ $$N_{\mathbb{L}/\mathbb{K}}(x)=\prod_{i=0}^{n-1}\sigma^i(x)$$
 
 Applying $$\sigma$$ merely permutes the factors, so $$N_{\mathbb{L}/\mathbb{K}}(x)$$ is $$G$$-invariant, and since $$\mathbb{L}/\mathbb{K}$$ is Galois, by [§Galois Extensions, ⁋Theorem 8](/en/math/field_theory/galois_extension#thm8) we have $$N_{\mathbb{L}/\mathbb{K}}(x)\in\mathbb{K}$$.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor8">**Corollary 8**</ins> Let $$\mathbb{L}/\mathbb{K}$$ be a finite degree Galois extension and let $$G=\Gal(\mathbb{L}/\mathbb{K})=\langle\sigma\rangle$$ be cyclic. Then for $$x\in\mathbb{L}^\times$$, the following are equivalent.
+::: Corollary 8
+Let $$\mathbb{L}/\mathbb{K}$$ be a finite degree Galois extension and let $$G=\Gal(\mathbb{L}/\mathbb{K})=\langle\sigma\rangle$$ be cyclic. Then for $$x\in\mathbb{L}^\times$$, the following are equivalent.
 
 1. $$N_{\mathbb{L}/\mathbb{K}}(x)=1$$.
 2. There exists $$y\in\mathbb{L}^\times$$ such that $$x=\sigma(y)/y$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 First, assuming the second condition,
 
 $$N_{\mathbb{L}/\mathbb{K}}\bigl(\sigma(y)/y\bigr)=\prod_{i=0}^{n-1}\frac{\sigma^{i+1}(y)}{\sigma^i(y)}=\frac{\sigma^n(y)}{y}=1$$
@@ -266,14 +233,11 @@ Now by [Theorem 7](#thm7), $$\varphi$$ is a 1-coboundary. That is, for some $$c\
 $$x=\varphi(\sigma)=\frac{\sigma(c)}{c}$$
 
 so taking $$y=c$$ suffices.
+:::
 
-</details>
-
-<div class="remark" markdown="1">
-
-<ins id="rmk9">**Remark 9**</ins> The 1-cocycle of [Definition 6](#def6) is the crossed homomorphism discussed in [[Homological Algebra] §Group Cohomology](/en/math/homological_algebra/group_cohomology), translated into multiplicative notation. That is, viewing $$\mathbb{L}^\times$$ as a $$G$$-module, $$H^1(G,\mathbb{L}^\times)$$ is the group cohomology $$H^1$$, [Theorem 7](#thm7) is the assertion that this vanishes, and [Corollary 8](#cor8) is obtained by combining this with the cohomology computation for cyclic groups. On the other hand, when $$\mathbb{L}/\mathbb{K}$$ is an infinite degree Galois extension, one must use cocycles that are continuous with respect to the Krull topology defined in this article to obtain the correct theory, which is another reason we took care to construct the topological structure in this article. The additive version—that is, the vanishing of $$H^1(G,\mathbb{L})$$ when $$\mathbb{L}$$ is viewed as an additive group—also holds; this is related to the normal basis theorem, so we shall cover it when needed later.
-
-</div>
+::: Remark 9
+The 1-cocycle of [Definition 6](#def6) is the crossed homomorphism discussed in [[Homological Algebra] §Group Cohomology](/en/math/homological_algebra/group_cohomology), translated into multiplicative notation. That is, viewing $$\mathbb{L}^\times$$ as a $$G$$-module, $$H^1(G,\mathbb{L}^\times)$$ is the group cohomology $$H^1$$, [Theorem 7](#thm7) is the assertion that this vanishes, and [Corollary 8](#cor8) is obtained by combining this with the cohomology computation for cyclic groups. On the other hand, when $$\mathbb{L}/\mathbb{K}$$ is an infinite degree Galois extension, one must use cocycles that are continuous with respect to the Krull topology defined in this article to obtain the correct theory, which is another reason we took care to construct the topological structure in this article. The additive version—that is, the vanishing of $$H^1(G,\mathbb{L})$$ when $$\mathbb{L}$$ is viewed as an additive group—also holds; this is related to the normal basis theorem, so we shall cover it when needed later.
+:::
 
 ---
 

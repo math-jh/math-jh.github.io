@@ -26,13 +26,11 @@ In this post, we examine Serre duality, the algebraic-geometry analogue of this 
 
 We first examine the case $$X=\mathbb{P}^n$$ in detail. We know that every line bundle on $$\mathbb{P}^n$$ is of the form $$\mathcal{O}(d)$$, and in particular we saw in [§Canonical Bundle, ⁋Proposition 7](/en/math/algebraic_varieties/canonical_bundle#prop7) that the canonical bundle is $$\mathcal{O}(-n-1)$$. Then from [§Cohomology of Projective Space, ⁋Proposition 1 (Bott)](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1) we obtain the following.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop1">**Proposition 1**</ins> For the canonical line bundle $$\omega_X$$ on projective space $$X=\mathbb{P}^n$$, there is an isomorphism
+::: Proposition 1
+For the canonical line bundle $$\omega_X$$ on projective space $$X=\mathbb{P}^n$$, there is an isomorphism
 
 $$H^n(X, \omega_X)\cong \mathbb{K}$$
-
-</div>
+:::
 
 In general, this is understood as the isomorphism that explicitly takes $$\x_0^{-1}\cdots\x_n^{-1}$$ as its basis, but it is only uniquely determined up to scalar multiplication. Choosing such a normalization is tantamount to choosing a *trace map* $$\tr:H^n(\mathbb{P}^n, \omega_{\mathbb{P}^n}) \to \mathbb{K}$$.
 
@@ -58,15 +56,13 @@ For the case of $$\mathcal{O}(d)$$, we establish non-degeneracy by direct comput
 
 From the discussion so far, we obtain the following.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**Proposition 2 (Serre duality pairing, projective case)**</ins> For a locally free sheaf $$\mathcal{E}$$ on $$\mathbb{P}^n$$, the bilinear form
+::: Proposition 2 (Serre duality pairing, projective case)
+For a locally free sheaf $$\mathcal{E}$$ on $$\mathbb{P}^n$$, the bilinear form
 
 $$H^k(\mathbb{P}^n, \mathcal{E}) \times H^{n-k}(\mathbb{P}^n, \omega_{\mathbb{P}^n} \otimes \mathcal{E}^\vee) \to \mathbb{K};\quad (\alpha, \beta) \mapsto \tr(\alpha \smile \beta)$$
 
 is a perfect pairing.
-
-</div>
+:::
 
 More explicitly, Serre duality generally refers to the following isomorphism obtained from this:
 
@@ -76,9 +72,8 @@ More generally, by the Noether normalization theorem, for any $$n$$-dimensional 
 
 $$H^i(X, \mathcal{E}) \cong H^{n-i}(X, \omega_X \otimes \mathcal{E}^\vee)^\ast$$
 
-<div class="example" markdown="1">
-
-<ins id="ex3">**Example 3**</ins> Let us examine [Proposition 2](#prop2) concretely in $$\mathbb{P}^2$$. Here $$\omega_{\mathbb{P}^2} \cong \mathcal{O}(-3)$$, so what Serre duality asserts is the isomorphism $$H^k(\mathbb{P}^2, \mathcal{O}(d)) \cong H^{2-k}(\mathbb{P}^2, \mathcal{O}(-d-3))^\ast$$.
+::: Example 3
+Let us examine [Proposition 2](#prop2) concretely in $$\mathbb{P}^2$$. Here $$\omega_{\mathbb{P}^2} \cong \mathcal{O}(-3)$$, so what Serre duality asserts is the isomorphism $$H^k(\mathbb{P}^2, \mathcal{O}(d)) \cong H^{2-k}(\mathbb{P}^2, \mathcal{O}(-d-3))^\ast$$.
 
 First, for $$d=0$$, by [§Cohomology of Projective Spaces, ⁋Proposition 1](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1) we have
 
@@ -97,8 +92,7 @@ and by Serre duality we must have $$H^0(\mathcal{O}(1)) \cong H^2(\mathcal{O}(-4
 $$\binom{2+(-4)}{2}=\binom{-2}{2} = 3$$
 
 so we can verify that they agree.
-
-</div>
+:::
 
 ## Generalization of Serre Duality
 
@@ -120,15 +114,13 @@ That an affine variety $$X$$ is defined over $$\mathbb{K}$$ means that its coord
 
 Relative Serre duality generalizes this setup by replacing the target $$\mathbb{A}^1_\mathbb{K}$$ with another variety. First, for arbitrary varieties $$X,Y$$, let us define that a morphism $$f:X\rightarrow Y$$ is a *smooth projective morphism* if for each $$y\in Y$$ the fiber $$f^{-1}(y)$$ is a smooth projective variety. Then in this case, each $$f^{-1}(y)$$ is a smooth projective variety so it will have a canonical line bundle $$\omega_{X_y}$$, and these can be assembled consistently into a *relative dualizing sheaf* $$\omega_{X/Y}$$ defined on $$X$$. That is, $$\omega_{X/Y}$$ is a sheaf satisfying $$\omega_{X/Y}\vert_{X_y}\cong\omega_{X_y}$$ for each $$y$$. Then the generalization in this setting is as follows.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**Proposition 4 (Relative Serre duality)**</ins> Let $$f \colon X \to Y$$ be a smooth projective morphism and let $$n = \dim X - \dim Y$$. Then
+::: Proposition 4 (Relative Serre duality)
+Let $$f \colon X \to Y$$ be a smooth projective morphism and let $$n = \dim X - \dim Y$$. Then
 
 $$R^n f_\ast \omega_{X/Y} \cong \mathcal{O}_Y$$
 
 and for $$i \neq n$$ we have $$R^i f_\ast \omega_{X/Y} = 0$$.
-
-</div>
+:::
 
 ## Grothendieck Duality
 
@@ -150,15 +142,13 @@ Here the *exceptional inverse image* $$f^!$$ is the functor defined as the right
 
 As mentioned earlier, Grothendieck duality is a result that encompasses relative Serre duality. To see this, consider the case of a smooth morphism $$f:X\rightarrow Y$$; then $$f^! \mathcal{O}_Y \cong \omega_{X/Y}[n]$$ holds, and from this we can see that $$\omega_{X/Y}$$ placed in the correct dimension is exactly $$f^!\mathcal{O}_Y$$.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**Proposition 5 (Grothendieck Duality)**</ins> For a proper morphism $$f \colon X \to Y$$ and a coherent sheaf $$\mathcal{F}$$ on $$X$$, the following isomorphism holds in the derived category:
+::: Proposition 5 (Grothendieck Duality)
+For a proper morphism $$f \colon X \to Y$$ and a coherent sheaf $$\mathcal{F}$$ on $$X$$, the following isomorphism holds in the derived category:
 
 $$R f_\ast R\mathcal{H}om_{\mathcal{O}_X}(\mathcal{F}, f^! \mathcal{G}) \cong R\mathcal{H}om_{\mathcal{O}_Y}(R f_\ast \mathcal{F}, \mathcal{G})$$
 
 Here $$R\mathcal{H}om$$ is derived Hom ([\[Homological Algebra\] §Derived Categories, ⁋Proposition 10](/en/math/homological_algebra/derived_categories#prop10)), and $$\mathcal{G}$$ is a bounded complex of coherent sheaves on $$Y$$.
-
-</div>
+:::
 
 Intuitively, this theorem means that "Hom after pushforward" and "pushforward after Hom" are the same. That is, computing the Hom between $$\mathcal{F}$$ and $$f^! \mathcal{G}$$ on $$X$$ and then pushing down to $$Y$$ is the same as first pushing $$\mathcal{F}$$ down to $$Y$$ and then computing the Hom with $$\mathcal{G}$$.
 

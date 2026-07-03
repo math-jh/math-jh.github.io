@@ -36,9 +36,8 @@ These can be viewed as categorical limits, as we saw in [\[Category Theory\] §L
 
 If $$G$$ is equipped with a ring structure and the $$H_i$$ are ideals, then $$\widehat{G}$$ naturally inherits a ring structure as well. The situation we shall study is the following.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> Fix a ring $$A$$ and an ideal $$\mathfrak{a}$$. For an $$\mathfrak{a}$$-filtration of ideals of $$A$$
+::: Definition 1
+Fix a ring $$A$$ and an ideal $$\mathfrak{a}$$. For an $$\mathfrak{a}$$-filtration of ideals of $$A$$
 
 $$\mathcal{J}:\qquad A=\mathfrak{a}_0\supseteq \mathfrak{a}_1\supseteq \mathfrak{a}_2\cdots$$
 
@@ -53,8 +52,7 @@ In particular, if the above filtration is given by
 $$A\supseteq\mathfrak{a}\supseteq \mathfrak{a}^2\cdots$$
 
 we call it the *$$\mathfrak{a}$$-adic completion* of $$A$$. In this case, if $$\mathfrak{a}$$ is a maximal ideal then $$\widehat{A}$$ becomes a local ring with unique maximal ideal $$\widehat{\mathfrak{a}}$$, so we call $$\widehat{A}$$ a *complete local ring*.
-
-</div>
+:::
 
 First, the natural map $$\rho:A \rightarrow \widehat{A}$$ is obtained by applying the universal property to the canonical morphisms $$\pr_i: A \rightarrow A/\mathfrak{a}_i$$. Then by definition
 
@@ -100,27 +98,23 @@ so the topology on $$A$$ thus defined is first countable.
 
 Returning to a general topological abelian group $$G$$, we can weaken the conditions of [##ref##]() to define the following.
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**Definition 2**</ins> For a topological group $$(G, +, 0)$$, a sequence $$(x_i)_{i\in \mathbb{N}}$$ of elements of $$G$$ is called a *Cauchy sequence* if for any neighborhood $$U$$ of $$0$$ there exists a natural number $$N$$ such that
+::: Definition 2
+For a topological group $$(G, +, 0)$$, a sequence $$(x_i)_{i\in \mathbb{N}}$$ of elements of $$G$$ is called a *Cauchy sequence* if for any neighborhood $$U$$ of $$0$$ there exists a natural number $$N$$ such that
 
 $$m,n>N \implies x_m-x_n\in U$$
 
 holds.
-
-</div>
+:::
 
 Then, just as in [##ref##]() where completion was defined as the set of equivalence classes of Cauchy filters, we can define when two Cauchy sequences $$(x_m)$$ and $$(y_n)$$ are regarded as the same, and through that define the (topological) completion. However, the object of our interest is the first countable topological group $$A$$ defined by the filtration (2) above, and since a first countable space is sequential, for convenience in the following definition we assume $$G$$ is a first countable space and use Cauchy sequences in place of Cauchy filters.
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**Definition 3**</ins> Two Cauchy sequences $$(x_m)$$, $$(y_n)$$ of a topological group $$(G, +, 0)$$ are called *equivalent* if for any neighborhood $$U$$ of $$0$$ there exists a natural number $$N$$ such that
+::: Definition 3
+Two Cauchy sequences $$(x_m)$$, $$(y_n)$$ of a topological group $$(G, +, 0)$$ are called *equivalent* if for any neighborhood $$U$$ of $$0$$ there exists a natural number $$N$$ such that
 
 $$m,n>N \implies x_m-y_n\in U$$
 
 holds. We call the set of equivalence classes of all Cauchy sequences of a first countable topological group $$G$$, equipped with this equivalence relation, the *completion* of $$G$$, and denote it by $$\widehat{G}$$.
-
-</div>
+:::
 
 Now for an open neighborhood $$U$$ of $$0\in G$$, define
 
@@ -140,11 +134,9 @@ $$\sum_{j=1}^\infty b_j$$
 
 defines an element of $$\widehat{A}$$. Conversely, given any element $$(a_n')$$ of $$\widehat{A}$$, using the local base (2) of $$0$$ we can find a Cauchy sequence equivalent to this element and having the form (3).
 
-<div class="example" markdown="1">
-
-<ins id="ex4">**Example 4**</ins> If $$A=\mathbb{K}[\x]$$ and $$\mathfrak{a}=(\x)$$, then $$\widehat{A}$$ is the ring of *formal power series* $$\mathbb{K}[[\x]]$$.
-
-</div>
+::: Example 4
+If $$A=\mathbb{K}[\x]$$ and $$\mathfrak{a}=(\x)$$, then $$\widehat{A}$$ is the ring of *formal power series* $$\mathbb{K}[[\x]]$$.
+:::
 
 The ring $$\mathbb{K}[[\x]]$$ is a discrete valuation ring with unique nonzero prime ideal $$\mathfrak{m}=(\x)$$. That is, any element not in $$(\x)$$ is a unit, which essentially follows from the identity
 
@@ -166,48 +158,34 @@ so this product is equivalent to the constant sequence $$(1)$$.
 
 Generalizing this calculation, we obtain the following two results.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**Proposition 5**</ins> Suppose $$A$$ is complete with respect to an ideal $$\mathfrak{a}$$. Then the set
+::: Proposition 5
+Suppose $$A$$ is complete with respect to an ideal $$\mathfrak{a}$$. Then the set
 
 $$U=\{1+a\mid a\in \mathfrak{a}\}$$
 
 consists of units of $$A$$, and $$U$$ is multiplicatively closed.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 Replace $$\x$$ by $$a$$ in the above argument.
+:::
 
-</details>
-
-<div class="proposition" markdown="1">
-
-<ins id="cor6">**Corollary 6**</ins> For a local ring $$(A, \mathfrak{m})$$, the ring $$A[[\x_1,\ldots, \x_n]]$$ is also a local ring, and its unique maximal ideal is $$\mathfrak{m}+(\x_1,\ldots, \x_n)$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Corollary 6
+For a local ring $$(A, \mathfrak{m})$$, the ring $$A[[\x_1,\ldots, \x_n]]$$ is also a local ring, and its unique maximal ideal is $$\mathfrak{m}+(\x_1,\ldots, \x_n)$$.
+:::
+::: Proof
 Any element outside $$\mathfrak{m}+(\x_1,\ldots,\x_n)$$ has a nonzero constant term, so by [Proposition 5](#prop5) it is a unit.
-
-</details>
+:::
 
 Moreover, the following holds.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop7">**Proposition 7**</ins> Fix a filtration of ideals of $$A$$
+::: Proposition 7
+Fix a filtration of ideals of $$A$$
 
 $$A=\mathfrak{a}_0\supseteq \mathfrak{a}_1\supseteq\cdots$$
 
 and the associated graded ring $$\gr A$$ with respect to this filtration. If $$A$$ is complete with respect to this filtration, then for an ideal $$\mathfrak{a}$$ of $$A$$ and its elements $$a_1,\ldots, a_n$$, if $$\initial(\mathfrak{a})$$ is generated by $$\initial(a_1),\ldots, \initial(a_n)$$, then $$\mathfrak{a}$$ is also generated by $$a_1,\ldots, a_n$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 Let $$\mathfrak{a}'$$ be the ideal generated by $$a_1,\ldots, a_n$$ and let us show $$\mathfrak{a}=\mathfrak{a}'$$. Without loss of generality we may assume all these elements are nonzero. Also, if $$a_k\in \mathfrak{a}_i$$ held for all $$i$$, then by the canonical morphism $$A \rightarrow \widehat{A}$$ the element $$a_k$$ is sent to $$0\in \widehat{A}$$, and since $$A$$ is complete this means $$a_k=0$$; thus we can choose $$d$$ so that $$a_k\not\in \mathfrak{a}_i$$ holds for all $$k$$.
 
 On the other hand, from the assumption that $$\initial(\mathfrak{a})$$ is generated by the $$\initial(a_k)$$, for any $$a\in \mathfrak{a}$$ there exist $$\beta_k\in \gr_\mathfrak{a}A$$ satisfying
@@ -241,8 +219,7 @@ can be regarded as an element $$c_k$$ of $$A$$. Then
 $$a-\sum_{k=1}^n c_k a_k\in \bigcap \mathfrak{a}_i=0$$
 
 so we obtain the desired result.
-
-</details>
+:::
 
 
 ---

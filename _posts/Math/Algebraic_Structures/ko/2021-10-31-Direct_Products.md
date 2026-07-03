@@ -17,14 +17,10 @@ weight: 7
 
 우리는 임의의 category $$\mathcal{A}$$에서 product를 정의하는 방법을 알고 있다. ([\[범주론\] §극한, ⁋예시 6](/ko/math/category_theory/limits#ex6)) 다음 보조정리는 category $$\Grp$$의 임의의 product가 항상 존재한다는 것을 보여준다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="lem1">**보조정리 1**</ins> $$\Grp$$은 cartesian monoidal category이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 보조정리 1
+$$\Grp$$은 cartesian monoidal category이다.
+:::
+::: 증명
 우선 $$\Set$$에서 product의 universal property을 만족하는 곱집합 $$\prod_{i\in I} G_i$$는 이미 [\[집합론\] §집합의 곱, ⁋정의 1](/ko/math/set_theory/product_of_sets#def1)에서 정의했다. 표기상의 편의를 위해 $$\prod_{i\in I}G_i$$의 원소 $$f:I\rightarrow \bigcup G_i$$를 순서쌍 $$(a_i)_{i\in I}$$으로 표기하기로 한다.
 
 이제 집합 $$\prod_{i\in I}G_i$$의 임의의 두 원소 $$x=(x_i)_{i\in I},y=(y_i)_{i\in I}$$에 대하여, 
@@ -42,35 +38,25 @@ $$\pr_j(xy)=\pr_j(x_iy_i)_{i\in I}=x_jy_j=\pr_j(x)\pr_j(y)$$
 $$f(xy)=(f_i(xy))_{i\in I}=(f_i(x)f_i(y))_{i\in I}=(f_i(x))_{i\in I}(f_i(y))_{i\in I}=f(x)f(y)$$
 
 이므로 $$f$$는 group homomorphism이 되고 따라서 위의 $$(G=\prod_{i\in I}G_i,(\pr_i)_{i\in I})$$가 universal property를 만족한다. 
-
-</details>
+:::
 
 다음 따름정리들 또한 product의 universal property에 의해 자명하다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="cor2">**따름정리 2**</ins> Group들의 family $$(G_i)$$에 대하여, 이들 family의 product는 유일한 isomorphism에 대해 유일하게 결정된다. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 따름정리 2
+Group들의 family $$(G_i)$$에 대하여, 이들 family의 product는 유일한 isomorphism에 대해 유일하게 결정된다. 
+:::
+::: 증명
 임의의 category의 terminal object는 유일한 isomorphism에 대하여 유일하게 결정된다.
+:::
 
-</details>
-
-<div class="proposition" markdown="1">
-
-<ins id="cor3">**따름정리 3**</ins> $$(G_i)$$, $$(H_i)$$가 동일한 집합 $$I$$를 index set으로 갖는 group들의 family이고, 각각의 $$i$$마다 group homomorphism $$f_i:G_i\rightarrow H_i$$가 주어졌다 하자. 그럼 다음의 diagram
+::: 따름정리 3
+$$(G_i)$$, $$(H_i)$$가 동일한 집합 $$I$$를 index set으로 갖는 group들의 family이고, 각각의 $$i$$마다 group homomorphism $$f_i:G_i\rightarrow H_i$$가 주어졌다 하자. 그럼 다음의 diagram
 
 ![Product_of_map](/assets/images/Math/Algebraic_Structures/Direct_Products-1.svg){:style="width:13.07em" class="invert" .align-center}
 
 을 commute하도록 하는 유일한 group homomorphism $$f:\prod G_i\rightarrow\prod H_i$$이 존재한다. 이 때 $$\ker f=\prod\ker f_i$$이고, $$\im f=\prod\im f_i$$이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 $$\prod H_i$$는 주어진 조건을 만족하는 cone들의 모임의 terminal object이다. ([\[범주론\] §극한, §§극한의 보편성질](/ko/math/category_theory/limits#극한의-보편성질)) 이렇게 정의되는 commutative diagram에 의하여
 
 $$x\in\ker f\iff f(x)=e\iff \forall i(\pr_i^H(f(x))=e_i)\iff \forall i((f_i\circ \pr_i^G)(x)=e_i)\iff \forall i(\pr_i^G(x)\in\ker f_i)$$
@@ -82,17 +68,12 @@ $$x\in\ker f\iff f(x)=e\iff \forall i(\pr_i^H(f(x))=e_i)\iff \forall i((f_i\circ
 $$\pr_i^H(y)=\pr_i^H(f(x))=f_i(\pr_i^G(x))\in\im f_i$$
 
 이므로 $$\im f=\prod\im f_i$$ 또한 성립한다.
+:::
 
-</details>
-
-<div class="proposition" markdown="1">
-
-<ins id="cor4">**따름정리 4**</ins> Group들의 family $$(G_i)_{i\in I}$$가 주어졌다 하자. 각각의 $$i\in I$$에 대하여 $$H_i$$들이 $$G_i$$의 normal subgroup이라면, $$\prod H_i$$도 $$\prod G_i$$의 normal subgroup이고 그 quotient group은 $$\prod (G_i/H_i)$$와 같다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 따름정리 4
+Group들의 family $$(G_i)_{i\in I}$$가 주어졌다 하자. 각각의 $$i\in I$$에 대하여 $$H_i$$들이 $$G_i$$의 normal subgroup이라면, $$\prod H_i$$도 $$\prod G_i$$의 normal subgroup이고 그 quotient group은 $$\prod (G_i/H_i)$$와 같다.
+:::
+::: 증명
 Canonical homomorphism들 $$p_i:G_i\rightarrow G_i/H_i$$들에 [따름정리 3](#cor3)를 적용하면 된다.
 
 ![product_of_normal_subgroups](/assets/images/Math/Algebraic_Structures/Direct_Products-2.svg){:style="width:18.32em" class="invert" .align-center}
@@ -102,22 +83,16 @@ $$p_i\circ\pr_i$$들 각각은 전사인 homomorphism들의 합성이므로 전�
 $$\biggl(\prod_{i\in I} G_i\biggr)\bigg/\biggl(\prod_{i\in I}H_i\biggr)\cong\prod_{i\in I} (G_i/H_i)$$
 
 가 성립한다.
-
-</details>
+:::
 
 물론, $$H_i$$들이 $$G_i$$들의 normal이 아닌 subgroup이더라도 $$\prod H_i$$는 $$\prod G_i$$의 subgroup이 된다.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor5">**따름정리 5**</ins> Group들의 family $$(G_i)_{i\in I}$$가 주어졌다 하자. 만일 각각의 $$i\in I$$에 대하여 $$H_i\leq G_i$$라면, $$\prod H_i$$는 $$\prod G_i$$의 subgroup이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 따름정리 5
+Group들의 family $$(G_i)_{i\in I}$$가 주어졌다 하자. 만일 각각의 $$i\in I$$에 대하여 $$H_i\leq G_i$$라면, $$\prod H_i$$는 $$\prod G_i$$의 subgroup이다.
+:::
+::: 증명
 Inclusion homomorphism들 $$\iota_i:H_i\hookrightarrow G_i$$에 [따름정리 3](#cor3)를 적용하면, $$\iota$$는 단사이고 $$\prod H_i$$는 정확히 $$\iota$$의 image이므로 $$\prod G_i$$의 subgroup이다.
-
-</details>
+:::
 
 ## 부분곱
 

@@ -22,9 +22,8 @@ $$X_w^\circ=BwP/P,\qquad X^w_\circ=B^-wP/P\qquad(w\in W^P)$$
 
 와 그 Zariski closure인 Schubert variety $$X_w=\overline{X_w^\circ}$$, opposite Schubert variety $$X^w=\overline{X^w_\circ}$$를 얻는다. 두 cell은 각각 $$X_w^\circ\cong\mathbb{A}^{\ell(w)}$$, $$X^w_\circ\cong\mathbb{A}^{\dim(G/P)-\ell(w)}$$이며, Richardson variety는 이 두 방향의 cell의 intersection이다.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> $$u,w\in W^P$$에 대하여, Schubert variety와 opposite Schubert variety의 intersection
+::: 정의 1
+$$u,w\in W^P$$에 대하여, Schubert variety와 opposite Schubert variety의 intersection
 
 $$R_{u,w}=X_w\cap X^u$$
 
@@ -33,8 +32,7 @@ $$R_{u,w}=X_w\cap X^u$$
 $$\mathring{R}_{u,w}=X_w^\circ\cap X^u_\circ$$
 
 을 *open Richardson variety*라 한다.
-
-</div>
+:::
 
 정의에 의해 $$R_{u,w}$$는 $$G/P$$의 closed subvariety이고, $$\mathring{R}_{u,w}$$는 그 안의 Zariski open subset이다. 이 intersection은 Kazhdan–Lusztig [KL80]와 Deodhar [Deo85]의 연구에서 이미 등장한 것으로, 나중 Richardson [Ric92]에 의해 일반적인 기하적 성질이 연구되었다.
 
@@ -46,11 +44,9 @@ $$\dim(E_i\cap\tilde{E}_j)=\max(0,\,i+j-n)$$
 
 을 만족한다. 곧 두 flag의 어느 piece 쌍을 잡아도 그 intersection이 가능한 한 작게 만난다는 뜻이다. Richardson variety는 바로 이렇게 generic position에 놓인 두 reference flag에 대한 Schubert 조건을 동시에 부과해 두 Schubert cell의 intersection을 보는 것으로, 정의에서 $$X_w$$가 $$B$$가 고정하는 표준 flag에 대한 조건, $$X^u$$가 $$B^-$$가 고정하는 opposite flag에 대한 조건이라는 사실이 바로 이 transversality에 해당한다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**명제 2 (Richardson [Ric92])**</ins> Open Richardson variety $$\mathring{R}_{u,w}$$가 비어있지 않을 필요충분조건은 Bruhat order에서 $$u\leq w$$인 것이다. 이 조건이 성립하면 $$\mathring{R}_{u,w}$$는 차원 $$\ell(w)-\ell(u)$$의 smooth irreducible affine variety이고, $$R_{u,w}$$는 그 Zariski closure이다.
-
-</div>
+::: 명제 2 (Richardson [Ric92])
+Open Richardson variety $$\mathring{R}_{u,w}$$가 비어있지 않을 필요충분조건은 Bruhat order에서 $$u\leq w$$인 것이다. 이 조건이 성립하면 $$\mathring{R}_{u,w}$$는 차원 $$\ell(w)-\ell(u)$$의 smooth irreducible affine variety이고, $$R_{u,w}$$는 그 Zariski closure이다.
+:::
 
 직관적으로, Schubert variety $$X_w$$는 한 점 $$X_e=\{eP\}$$에서 낮은 차원부터 커 가는 방향이고, opposite Schubert variety $$X^u$$는 $$G/P$$ 전체에서 큰 차원부터 내려오는 방향인 것을 기억하자. 구체적으로 $$\dim X_w=\ell(w)$$이고 $$\dim X^u=\dim(G/P)-\ell(u)$$이므로, 두 variety가 만나기 위해서는 우선 차원의 합이 $$\dim(G/P)$$ 이상, 곧 $$\ell(u)\leq\ell(w)$$이어야 하고, 이 때 교집합의 기대차원이 명제의
 
@@ -68,9 +64,8 @@ $$X_w\cap X^u\neq\emptyset\iff\text{$u\leq v\leq w$인 $v\in W^P$가 존재}\iff
 
 그렇다면 다음 명제를 기대하는 것이 자연스럽다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop3">**명제 3**</ins> $$u,w\in W^P$$에 대하여 cohomology ring $$H^\ast(G/P)$$에서
+::: 명제 3
+$$u,w\in W^P$$에 대하여 cohomology ring $$H^\ast(G/P)$$에서
 
 $$[X_w]\cdot[X^u]=[R_{u,w}]$$
 
@@ -79,22 +74,17 @@ $$[X_w]\cdot[X^u]=[R_{u,w}]$$
 $$\int_{G/P}[X_w]\cdot[X^u]=\delta_{u,w}$$
 
 이므로, opposite Schubert class들 $$\{[X^u]\}_{u\in W^P}$$은 Schubert class들 $$\{[X_w]\}_{w\in W^P}$$의 Poincaré dual basis를 이룬다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 $$X_w$$와 $$X^u$$는 $$B$$와 $$B^-$$가 주는 generic position에서 transversal하게 만나므로, 그 intersection class는 두 class의 곱과 같다. 이것이 $$[X_w]\cdot[X^u]=[R_{u,w}]$$이다 (Kleiman generic transversality, [Bri] 참조). $$\ell(u)=\ell(w)$$인 경우 $$R_{u,w}$$의 차원은 $$\ell(w)-\ell(u)=0$$이고, [명제 2](#prop2)에 의해 $$u=w$$이면 reduced point 하나, $$u\neq w$$이면 ($$u\leq w$$가 깨져) 공집합이다. 따라서 그 0차원 class의 차수, 곧 $$\int_{G/P}[X_w]\cdot[X^u]$$은 $$\delta_{u,w}$$이다.
-
-</details>
+:::
 
 [명제 3](#prop3)은 Schubert basis의 곱셈 structure constant를 Richardson variety의 차수로 환원한다. 세 class의 곱 $$[X_w]\cdot[X^u]\cdot[X_v]$$을 적분하면 세 generic position Schubert variety의 intersection number가 나오는데, 이것이 곧 structure constant이고, Grassmannian의 경우에는 Littlewood–Richardson 계수가 되며, 이로부터 classical Schubert calculus가 전개된다.
 
 역시 가장 손에 잡히는 경우는 $$G/P=\Gr(k,n)\cong\GL_n(\mathbb{C})/P_k$$인 Grassmannian이다. 이때 $$W=S_n$$, $$W_{P_k}=S_k\times S_{n-k}$$이고, minimal length coset representative $$W^{P_k}$$은 [§Bruhat decomposition, ⁋명제 14](/ko/math/lie_theory/bruhat_decomposition#prop14)에서 본 $$(k,n-k)$$-shuffle들이다. Schubert variety $$X_w$$는 표준 flag $$E_\bullet$$에 대한 $$\dim(V\cap E_{w(a)})\geq a$$ 꼴의 rank 조건으로, opposite Schubert variety $$X^u$$는 opposite flag $$\tilde{E}_\bullet$$ ($$\tilde{E}_j=\span\{e_n,\ldots,e_{n-j+1}\}$$)에 대한 대칭적 rank 조건으로 잘린다. Richardson variety는 이 두 조건을 동시에 부과한 것이다.
 
-<div class="example" markdown="1">
-
-<ins id="ex4">**예시 4**</ins> $$\Gr(2,4)$$에서 $$u=1324$$, $$w=2413$$을 택하자. [§Bruhat decomposition, ⁋예시 18](/ko/math/lie_theory/bruhat_decomposition#ex18)의 jump set 순서로 $$1324\leftrightarrow\{1,3\}$$, $$2413\leftrightarrow\{2,4\}$$이고 성분별로 $$1\leq2$$, $$3\leq4$$이므로 $$u\leq w$$이며, $$\ell(2413)-\ell(1324)=3-1=2$$이다. 두 Schubert 조건은 각각
+::: 예시 4
+$$\Gr(2,4)$$에서 $$u=1324$$, $$w=2413$$을 택하자. [§Bruhat decomposition, ⁋예시 18](/ko/math/lie_theory/bruhat_decomposition#ex18)의 jump set 순서로 $$1324\leftrightarrow\{1,3\}$$, $$2413\leftrightarrow\{2,4\}$$이고 성분별로 $$1\leq2$$, $$3\leq4$$이므로 $$u\leq w$$이며, $$\ell(2413)-\ell(1324)=3-1=2$$이다. 두 Schubert 조건은 각각
 
 $$X_{2413}=\{V\mid\dim(V\cap E_2)\geq1\},\qquad X^{1324}=\{V\mid\dim(V\cap\tilde{E}_2)\geq1\}$$
 
@@ -111,8 +101,7 @@ $$R_{1324,2413}\cong\mathbb{P}(E_2)\times\mathbb{P}(\tilde{E}_2)\cong\mathbb{P}^
 $$V=\operatorname{rowspan}\begin{pmatrix}1&s&0&0\\0&0&1&t\end{pmatrix}\qquad(s,t)\in\mathbb{A}^2$$
 
 로 좌표화되는데, 위 행렬의 jump set이 $$\{2,4\}$$이므로 $$V\in X_{2413}^\circ$$이고 둘째 행이 $$\tilde{E}_2$$ 안에 있으므로 $$V\in X^{1324}_\circ$$이다. 즉 $$\mathring{R}_{1324,2413}$$은 이 $$(s,t)$$-평면의 open subset으로, affine 차원 $$2$$임이 좌표에서 곧장 드러난다.
-
-</div>
+:::
 
 ## Peterson variety
 
@@ -132,11 +121,9 @@ $$\Ad((zg)^{-1})X=\Ad(g^{-1})X$$
 
 으로 변한다. 즉, 이 incidence condition은 $$z$$의 left translation에 대해 invariant이고 이로부터 우리가 생각하는 closed variety 위에 centralizer $$C_G(X)$$의 group action이 정의된다. 즉, 이 closed variety는 $$C_G(X)$$-orbit들의 합집합이고, 따라서 직관적으로는 centralizer가 클수록 이렇게 잘려나오는 $$G/B$$의 closed subvariety가 클 것으로 기대할 수 있다. 예를 들어 $$X=0$$인 경우는 centralizer가 $$G$$ 전체인 극단적인 경우였다. 그런데 centralizer의 차원은 어떤 $$X\in\mathfrak{g}$$를 택해도 $$\rank(\mathfrak{g})$$ 아래로 내려갈 수 없다는 것이 알려져 있으므로 ([Kos63]), 반대쪽 극단은 이 최솟값을 달성하는 원소들이다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def5">**정의 5**</ins> Nilpotent element $$X\in\mathfrak{g}$$가 *regular*라는 것은 그 centralizer $$\mathfrak{z}_{\mathfrak{g}}(X)=\{Z\in\mathfrak{g}\mid[Z,X]=0\}$$의 차원이 $$\rank(\mathfrak{g})$$와 같은 것이다.
-
-</div>
+::: 정의 5
+Nilpotent element $$X\in\mathfrak{g}$$가 *regular*라는 것은 그 centralizer $$\mathfrak{z}_{\mathfrak{g}}(X)=\{Z\in\mathfrak{g}\mid[Z,X]=0\}$$의 차원이 $$\rank(\mathfrak{g})$$와 같은 것이다.
+:::
 
 Regular nilpotent는 표준적인 구성으로 언제나 존재한다. 각각의 simple root $$\alpha_i$$마다 $$0\neq e_i\in\mathfrak{g}_{\alpha_i}$$를 골라 $$e=\sum_i e_i$$로 두면 regular nilpotent가 되기 때문이다. 
 
@@ -154,15 +141,13 @@ $$\mathfrak{z}_{\mathfrak{sl}_n}(N)=\span\{N,N^2,\ldots,N^{n-1}\}$$
 
 이제 $$X$$를 고정해 두고 보던 이 closed subvariety에 $$H$$에 대한 의존성을 추가하자. 우선 편의상 이름을 먼저 붙인다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def6">**정의 6**</ins> $$X\in\mathfrak{g}$$와 $$\mathfrak{b}$$를 포함하는 $$\ad(\mathfrak{b})$$-stable subspace $$H\subseteq\mathfrak{g}$$ (즉 $$[\mathfrak{b},H]\subseteq H$$)에 대하여, *Hessenberg variety*는
+::: 정의 6
+$$X\in\mathfrak{g}$$와 $$\mathfrak{b}$$를 포함하는 $$\ad(\mathfrak{b})$$-stable subspace $$H\subseteq\mathfrak{g}$$ (즉 $$[\mathfrak{b},H]\subseteq H$$)에 대하여, *Hessenberg variety*는
 
 $$\mathcal{B}(X,H)=\{\,gB\in G/B\;\mid\;\Ad(g^{-1})X\in H\,\}$$
 
 로 정의되는 $$G/B$$의 closed subvariety이다.
-
-</div>
+:::
 
 위에서 살펴봤듯 $$X$$는 그 centralizer를 통해 variety의 크기에 영향을 미치며, 이 subspace $$H$$ 또한 마찬가지이다. 두 극단적인 상황으로, 우리는 $$H=\mathfrak{g}$$인 경우 조건 $$\Ad(g^{-1})X\in\mathfrak{g}$$가 자명하게 성립하여 Hessenberg variety는 $$G/B$$전체이다. 반대쪽 극단 $$H=\mathfrak{b}$$에서는 조건 $$\Ad(g^{-1})X\in\mathfrak{b}$$가 Borel subalgebra $$\Ad(g)\mathfrak{b}$$가 $$X$$를 포함한다는 말과 같으며, 만일 $$X$$가 nilpotent라면 우리는 이를 $$X$$의 *Springer fiber*라 부른다. 
 
@@ -170,9 +155,8 @@ $$\mathcal{B}(X,H)=\{\,gB\in G/B\;\mid\;\Ad(g^{-1})X\in H\,\}$$
 
 $$H$$를 어느 방향으로 키울 수 있는지는 type $$A$$에서 [정의 6](#def6)의 조건을 좌표로 직접 풀어 보면 선명해진다.
 
-<div class="example" markdown="1">
-
-<ins id="ex7">**예시 7**</ins> 위에서 살펴본 type $$A_{n-1}$$로 돌아가자. 이 경우, $$G=\GL_n(\mathbb{C})$$이고 $$\mathfrak{b}$$는 upper triangular 행렬들의 공간이며, $$\gl_n$$의 Cartan subalgebra는 대각행렬들의 공간 $$\mathfrak{h}$$이다.[^1]
+::: 예시 7
+위에서 살펴본 type $$A_{n-1}$$로 돌아가자. 이 경우, $$G=\GL_n(\mathbb{C})$$이고 $$\mathfrak{b}$$는 upper triangular 행렬들의 공간이며, $$\gl_n$$의 Cartan subalgebra는 대각행렬들의 공간 $$\mathfrak{h}$$이다.[^1]
 
 이제 $$H$$는 $$\ad(\mathfrak{b})$$-stable이므로 $$\ad(\mathfrak{h})$$-stable이기도 해야 한다. 임의의 $$Y\in H$$와 임의의 대각행렬 $$\diag(t_1,\ldots, t_n)$$과의 bracket을 계산해보면 
 
@@ -203,30 +187,25 @@ $$\mathfrak{b}=H_{(1,2,3,4)}=\begin{pmatrix}\ast&\ast&\ast&\ast\\0&\ast&\ast&\as
 $$\Ad(g^{-1})X\in H_h\iff g^{-1}Xg\in H_h\iff XgE_i\subseteq gE_{h(i)}\iff XV_i\subseteq V_{h(i)}$$
 
 이 성립한다. 곧 type $$A$$의 Hessenberg variety는 $$X$$가 flag를 단계마다 $$h$$가 허용하는 만큼만 흘러내리게 한다는 조건으로 잘라낸 flag들의 variety이다.
-
-</div>
+:::
 
 [예시 7](#ex7)의 그림은 일반적인 경우에서도 그대로 성립한다. 이 경우, 위에서처럼 staircase가 $$\mathfrak{b}$$ 위로 더 채우는 자리들은 대각선 아래쪽, 곧 *negative* root 방향이다. 실제로 $$\mathfrak{b}=\mathfrak{h}\oplus\bigoplus_{\alpha>0}\mathfrak{g}_\alpha$$는 이미 모든 positive root 방향을 포함하므로, $$H$$를 $$\mathfrak{b}$$보다 키우는 일은 negative root 방향을 더하는 일일 수밖에 없다. 그러나, $$\ad(\mathfrak{b})$$-stability에 의하여 추가로 simple 조건이 강제되는데, 실제로 simple이 아닌 positive root $$\alpha=\beta+\gamma$$의 방향은 $$[\mathfrak{g}_\beta,\mathfrak{g}_{-\alpha}]=\mathfrak{g}_{-\gamma}$$를 통해 더 얕은 자리들을 함께 끌고 들어오는 반면, negative simple root 방향은 $$\mathfrak{b}\oplus\mathfrak{g}_{-\alpha_i}$$가 그 자체로 stable하다. 즉, $$\mathfrak{b}$$에서 한 칸씩 늘리는 최소 단위의 확장은 정확히 $$\mathfrak{g}_{-\alpha_i}$$들이고, type $$A$$에서는 위 그림의 subdiagonal 자리들이 이들이다. 그럼 $$\mathfrak{b}$$에 이 방향을 추가하여 만들어진 것이 Peterson variety의 $$H$$이다.
 
-<div class="definition" markdown="1">
-
-<ins id="def8">**정의 8**</ins> *Peterson variety* $$\mathcal{Y}$$는 $$G/B$$의 closed subvariety
+::: 정의 8
+*Peterson variety* $$\mathcal{Y}$$는 $$G/B$$의 closed subvariety
 
 $$\mathcal{Y}=\{\,gB\in G/B\;\mid\;\Ad(g^{-1})e\in H\,\}$$
 
 로 정의된다. 여기서 $$e=\sum_i e_i$$는 regular nilpotent element이고, $$H=\mathfrak{b}\oplus\bigoplus_i\mathbb{C}f_i$$이며 $$f_i\in\mathfrak{g}_{-\alpha_i}$$는 simple negative root의 root vector이다.
-
-</div>
+:::
 
 이 정의는 여러 선택에 의존하는 것처럼 보이지만 사실상 유일하다. $$f_i$$의 선택은 $$\mathbb{C}f_i=\mathfrak{g}_{-\alpha_i}$$가 $$1$$차원이므로 $$H$$를 바꾸지 않고, $$e$$를 다른 regular nilpotent로 바꾸는 것은 ([정의 5](#def5) 직후 논의의 conjugacy에 의해) $$\mathcal{Y}$$를 $$G/B$$ 안에서 translate할 뿐이기 따문이다.
 
 위에서 살펴봤듯, $$H$$가 $$\mathfrak{b}$$에 더한 자유도는 simple root마다 하나씩, 총 $$\rank(\mathfrak{g})$$개이다. $$H=\mathfrak{b}$$가 한 점을 주었으므로 ([정의 6](#def6) 직후의 논의), Peterson variety의 차원은 한 점에서 그만큼 자라리라 기대할 수 있다. 실제로 그렇게 된다는 것이 다음 명제의 내용이다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop9">**명제 9 (Tymoczko [Tym], Precup [Pre], Insko–Tymoczko [IT])**</ins> Peterson variety $$\mathcal{Y}$$는 Bruhat 분해와의 교집합으로 affine paving 구조를 이룬다. 즉, 각각의 $$\mathcal{Y}\cap BwB/B$$들이 각각 affine space와 isomorphic하며, $$\mathcal{Y}$$는 이들의 disjoint union이다. 특히, 이 구조 하에서 가장 큰 조각의 차원이 $$\rank(\mathfrak{g})$$가 되어 $$\mathcal{Y}$$의 차원 또한 $$\rank (\mathfrak{g})$$와 같다.
-
-</div>
+::: 명제 9 (Tymoczko [Tym], Precup [Pre], Insko–Tymoczko [IT])
+Peterson variety $$\mathcal{Y}$$는 Bruhat 분해와의 교집합으로 affine paving 구조를 이룬다. 즉, 각각의 $$\mathcal{Y}\cap BwB/B$$들이 각각 affine space와 isomorphic하며, $$\mathcal{Y}$$는 이들의 disjoint union이다. 특히, 이 구조 하에서 가장 큰 조각의 차원이 $$\rank(\mathfrak{g})$$가 되어 $$\mathcal{Y}$$의 차원 또한 $$\rank (\mathfrak{g})$$와 같다.
+:::
 
 이 명제의 증명은 생략하지만, 주장하는 affine paving 구조 자체는 기억할 필요가 있다. 핵심은 이 affine paving이 simple root들의 부분집합 $$\mathcal{P}(\Delta)$$로 index된다는 것으로, 가령 어떤 simple root 방향도 포함하지 않는 부분집합, 즉 공집합의 경우 $$\mathfrak{b}$$에 더해지는 방향이 없으므로 [정의 6](#def6) 이후의 논증에 의하여 이에 해당하는 affine space는 한 점이 된다. 그 위의 affine space들은 $$\Delta$$의 부분집합에 의해 결정되는 것들로, 이는 단순한 analogy가 아니라 이들의 위치관계 또한 실제로 $$\Delta$$의 부분집합이 결정한다. 
 
@@ -240,9 +219,8 @@ $$\overline{\mathcal{Y}\cap Bw_AB/B}\;=\;\bigsqcup_{A'\subseteq A}\bigl(\mathcal
 
 이 성립한다. 실제로 이 closure는 $$H$$를 $$A$$ 방향으로만 키운 중간 단계의 Hessenberg variety $$\mathcal{B}(e,\,\mathfrak{b}\oplus\bigoplus_{i\in A}\mathbb{C}f_i)$$와 일치하며, 나아가 $$A$$가 생성하는 Levi subgroup의 Peterson variety와 동형이다 ([IT]). 즉, Peterson variety는 더 작은 Peterson variety들이 부분집합 순서로 포개진 구조를 가지며, 자유도를 하나도 쓰지 않는 한 점 $$B/B$$ ($$A=\emptyset$$)에서 big Bruhat cell과의 교집합인 가장 큰 조각 ($$A=\Delta$$)까지 그 사이의 모든 위치관계를 simple root들의 조합론이 지배한다. 
 
-<div class="example" markdown="1">
-
-<ins id="ex10">**예시 10**</ins> 이 구조를 앞서 살펴본 type $$A$$에서 예시로 살펴보자. [예시 7](#ex7)과 마찬가지로 Hessenberg function을 $$h(i)=\min(i+1, n)$$으로 택하면, $$H$$는 대각선 아래로 정확히 한 칸씩을 내리는 것이 허용되는 행렬들의 모임이며, 이 예시의 마지막 동치관계에서 우리는 Peterson variety가 complete flag variety $$\Fl_n=\GL_n(\mathbb{C})/B$$ 안에서
+::: 예시 10
+이 구조를 앞서 살펴본 type $$A$$에서 예시로 살펴보자. [예시 7](#ex7)과 마찬가지로 Hessenberg function을 $$h(i)=\min(i+1, n)$$으로 택하면, $$H$$는 대각선 아래로 정확히 한 칸씩을 내리는 것이 허용되는 행렬들의 모임이며, 이 예시의 마지막 동치관계에서 우리는 Peterson variety가 complete flag variety $$\Fl_n=\GL_n(\mathbb{C})/B$$ 안에서
 
 $$\Pet_n=\{\,V_\bullet\mid NV_i\subseteq V_{i+1},\ i=1,\ldots,n-1\,\}$$
 
@@ -267,8 +245,7 @@ $$w\in\{e,\,s_1,\,s_2,\,w_0\}=\{123,\,213,\,132,\,321\}$$
 의 네 개만이 남는 것을 확인할 수 있다. 실제로, 빠진 두 원소 $$231, 312$$에 해당하는 Bruhat cell의 점들을 직접 적어준 후 $$\Pet_3$$과의 교집합을 생각하면 이것이 공집합임을 쉽게 확인할 수 있다. 
 
 위에서 구한 네 개의 flag들은 simple root 부분집합 $$A\subseteq\{\alpha_1,\alpha_2\}$$와, 이들이 정의하는 Weyl group $$W_A$$의 maximal length element $$w_A$$를 대응시킨 $$2^{n-1}=4$$개의 coordinate flag로, Peterson variety가 simple root들의 조합론을 기억하고 있음을 보여준다.
-
-</div>
+:::
 
 한편 [명제 9](#prop9)의 핵심적인 아이디어는 $$G/B$$의 Bruhat decomposition과 $$\mathcal{Y}$$의 교집합을 취하여 $$\mathcal{Y}$$를 분해하는 것이었다. 그런데 우리는 이미 [§Bruhat decomposition, ⁋정리 8](/ko/math/lie_theory/bruhat_decomposition#thm8)에서 opposite Borel subgroup을 통한 decomposition을 살펴보았으므로 $$\mathcal{Y}\cap B^-wB/B$$를 통해 $$\mathcal{Y}$$의 성질을 탐구할 수도 있다. 
 
@@ -288,13 +265,11 @@ $$\mathcal{Y}_B=\mathcal{Y}\cap B^-B/B$$
 
 이 분해가 단순히 $$B$$를 $$B^-$$으로 바꾼 것 이상의 의미를 갖는 이유는 이것이 quantum cohomology에 대한 정보를 담고 있기 때문이다. 다음 정리에서, Lie gruop $$G$$의 *Langlands dual group<sub>랭글랜즈 쌍대군</sub>* $$G^\vee$$는 root datum에서 root와 coroot를 맞바꾼 dual group으로, 이 상황에서 [정의 8](#def8)을 따라 만든 Peterson variety가 $$\mathcal{Y}^\vee$$이고, $$G$$의 parabolic subgroup $$P$$의 Langlands dual $$P^\vee$$에 해당하는 $$\mathcal{Y}^\vee$$의 stratum을 $$\mathcal{Y}^\vee_P$$으로 쓰자.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm11">**정리 11 (Peterson)**</ins> $$G$$의 Langlands dual $$G^\vee$$의 Peterson variety에서, 각 standard parabolic subgroup $$P\supseteq B$$에 대응하는 stratum $$\mathcal{Y}^\vee_P$$의 coordinate ring은 partial flag variety $$G/P$$의 small quantum cohomology ring과 동형이다.
+::: 정리 11 (Peterson)
+$$G$$의 Langlands dual $$G^\vee$$의 Peterson variety에서, 각 standard parabolic subgroup $$P\supseteq B$$에 대응하는 stratum $$\mathcal{Y}^\vee_P$$의 coordinate ring은 partial flag variety $$G/P$$의 small quantum cohomology ring과 동형이다.
 
 $$\mathbb{C}[\mathcal{Y}^\vee_P]\cong QH^\ast(G/P)$$
-
-</div>
+:::
 
 이 정리는 Peterson의 1997년 MIT lecture에서 소개된 것으로, 별도의 출판본은 없지만 [강의노트](https://math.soimeme.org/~arunram/Resources/PetersonGmodBcourse1997.pdf) 등에서 그 증명을 찾아볼 수 있다. 다만 우리가 주로 살펴보던 Grassmannian의 경우, $$\GL_n$$은 Langlands self-dual이므로 $$G\cong G^\vee$$가 되어 이 duality가 잘 보이지는 않는다. 
 
@@ -330,11 +305,9 @@ $$QH^\ast(G/P)\otimes_{\mathbb{C}[q]}\mathbb{C}[q]/(q-q_0)\cong QH^\ast(G/P)/(q-
 
 일반적인 $$\Gr(k,n)$$에서도 마찬가지로 generic $$q_0$$의 fiber는 $$\binom{n}{k}$$개의 서로 다른 점으로 이루어진다. 이 유한 개의 점들은 또 하나의 명시적인 모델을 갖는데, 이들이 어떤 Laurent 다항식, 곧 superpotential의 critical point들로 실현된다는 것이 mirror symmetry의 내용 중 하나이며, 일반적인 $$G/P$$에 대해 이 대응을 구성하는 것은 현재도 활발히 연구되는 주제다 ([거울대칭](/ko/mirror_symmetry/) 참조).
 
-<div class="remark" markdown="1">
-
-<ins id="rmk12">**참고 12**</ins> [명제 9](#prop9)의 affine paving은 cohomology 계산의 출발점이기도 하다. Paving에 의해 $$\mathcal{Y}$$의 cohomology는 cell들로 색인된 basis를 갖는 free module이고 홀수 차수에서 사라진다. 즉 [§Bruhat decomposition, ⁋명제 17](/ko/math/lie_theory/bruhat_decomposition#prop17)에서 본 flag variety의 affine paving 논법이 Peterson variety에도 그대로 작동하며, Insko–Tymoczko [IT]는 이를 바탕으로 Peterson variety의 intersection theory를 전개하였다.
-
-</div>
+::: 참고 12
+[명제 9](#prop9)의 affine paving은 cohomology 계산의 출발점이기도 하다. Paving에 의해 $$\mathcal{Y}$$의 cohomology는 cell들로 색인된 basis를 갖는 free module이고 홀수 차수에서 사라진다. 즉 [§Bruhat decomposition, ⁋명제 17](/ko/math/lie_theory/bruhat_decomposition#prop17)에서 본 flag variety의 affine paving 논법이 Peterson variety에도 그대로 작동하며, Insko–Tymoczko [IT]는 이를 바탕으로 Peterson variety의 intersection theory를 전개하였다.
+:::
 
 ---
 

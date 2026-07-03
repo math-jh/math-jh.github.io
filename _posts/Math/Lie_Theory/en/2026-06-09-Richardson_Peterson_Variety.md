@@ -24,9 +24,8 @@ $$X_w^\circ=BwP/P,\qquad X^w_\circ=B^-wP/P\qquad(w\in W^P)$$
 
 and their Zariski closures, the Schubert variety $$X_w=\overline{X_w^\circ}$$ and the opposite Schubert variety $$X^w=\overline{X^w_\circ}$$. The two cells satisfy $$X_w^\circ\cong\mathbb{A}^{\ell(w)}$$ and $$X^w_\circ\cong\mathbb{A}^{\dim(G/P)-\ell(w)}$$, and the Richardson variety is the intersection of these two cells.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> For $$u,w\in W^P$$, the intersection of a Schubert variety and an opposite Schubert variety
+::: Definition 1
+For $$u,w\in W^P$$, the intersection of a Schubert variety and an opposite Schubert variety
 
 $$R_{u,w}=X_w\cap X^u$$
 
@@ -35,8 +34,7 @@ is called a *Richardson variety*, and the intersection of the two open cells
 $$\mathring{R}_{u,w}=X_w^\circ\cap X^u_\circ$$
 
 is called an *open Richardson variety*.
-
-</div>
+:::
 
 By definition $$R_{u,w}$$ is a closed subvariety of $$G/P$$, and $$\mathring{R}_{u,w}$$ is a Zariski open subset of it. This intersection already appeared in the work of Kazhdan–Lusztig [KL80] and Deodhar [Deo85], and its general geometric properties were later studied by Richardson [Ric92].
 
@@ -48,11 +46,9 @@ $$\dim(E_i\cap\tilde{E}_j)=\max(0,\,i+j-n)$$
 
 for all $$i,j$$. In other words, any pair of pieces from the two flags meets as little as possible. The Richardson variety is precisely the simultaneous imposition of Schubert conditions with respect to two reference flags in generic position, and the fact that $$X_w$$ encodes the condition for the standard flag fixed by $$B$$ while $$X^u$$ encodes the condition for the opposite flag fixed by $$B^-$$ corresponds exactly to this transversality.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**Proposition 2 (Richardson [Ric92])**</ins> The open Richardson variety $$\mathring{R}_{u,w}$$ is nonempty if and only if $$u\leq w$$ in the Bruhat order. When this holds, $$\mathring{R}_{u,w}$$ is a smooth irreducible affine variety of dimension $$\ell(w)-\ell(u)$$, and $$R_{u,w}$$ is its Zariski closure.
-
-</div>
+::: Proposition 2 (Richardson [Ric92])
+The open Richardson variety $$\mathring{R}_{u,w}$$ is nonempty if and only if $$u\leq w$$ in the Bruhat order. When this holds, $$\mathring{R}_{u,w}$$ is a smooth irreducible affine variety of dimension $$\ell(w)-\ell(u)$$, and $$R_{u,w}$$ is its Zariski closure.
+:::
 
 Intuitively, recall that the Schubert variety $$X_w$$ grows outward from a point $$X_e=\{eP\}$$ in increasing dimension, while the opposite Schubert variety $$X^u$$ descends from all of $$G/P$$ in decreasing dimension. Concretely, $$\dim X_w=\ell(w)$$ and $$\dim X^u=\dim(G/P)-\ell(u)$$, so for the two varieties to meet, the sum of their dimensions must be at least $$\dim(G/P)$$, i.e. $$\ell(u)\leq\ell(w)$$, and the expected dimension of the intersection is then
 
@@ -68,9 +64,8 @@ In the example above, the jump set condition $$\{1,4\}\leq\{v(1),v(2)\}\leq\{2,3
 
 It is then natural to expect the following proposition.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop3">**Proposition 3**</ins> For $$u,w\in W^P$$, in the cohomology ring $$H^\ast(G/P)$$ we have
+::: Proposition 3
+For $$u,w\in W^P$$, in the cohomology ring $$H^\ast(G/P)$$ we have
 
 $$[X_w]\cdot[X^u]=[R_{u,w}]$$
 
@@ -79,22 +74,17 @@ $$[X_w]\cdot[X^u]=[R_{u,w}]$$
 $$\int_{G/P}[X_w]\cdot[X^u]=\delta_{u,w}$$
 
 so the opposite Schubert classes $$\{[X^u]\}_{u\in W^P}$$ form the Poincaré dual basis to the Schubert classes $$\{[X_w]\}_{w\in W^P}$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 $$X_w$$ and $$X^u$$ meet transversally in the generic position given by $$B$$ and $$B^-$$, so their intersection class equals the product of the two classes. This gives $$[X_w]\cdot[X^u]=[R_{u,w}]$$ (Kleiman's generic transversality, see [Bri]). When $$\ell(u)=\ell(w)$$, the dimension of $$R_{u,w}$$ is $$\ell(w)-\ell(u)=0$$, and by [Proposition 2](#prop2), if $$u=w$$ it is a reduced point, while if $$u\neq w$$ (so $$u\leq w$$ fails) it is empty. Hence the degree of this $$0$$-dimensional class, namely $$\int_{G/P}[X_w]\cdot[X^u]$$, is $$\delta_{u,w}$$.
-
-</details>
+:::
 
 [Proposition 3](#prop3) reduces the structure constants for multiplication in the Schubert basis to the degrees of Richardson varieties. Integrating the triple product $$[X_w]\cdot[X^u]\cdot[X_v]$$ gives the intersection number of three Schubert varieties in generic position, which is precisely the structure constant; in the case of the Grassmannian this becomes the Littlewood–Richardson coefficient, and from this classical Schubert calculus unfolds.
 
 Again, the most tangible case is the Grassmannian $$G/P=\Gr(k,n)\cong\GL_n(\mathbb{C})/P_k$$. Here $$W=S_n$$, $$W_{P_k}=S_k\times S_{n-k}$$, and the minimal length coset representatives $$W^{P_k}$$ are the $$(k,n-k)$$-shuffles from [§Bruhat decomposition, ⁋Proposition 14](/en/math/lie_theory/bruhat_decomposition#prop14). The Schubert variety $$X_w$$ is cut out by rank conditions of the form $$\dim(V\cap E_{w(a)})\geq a$$ with respect to the standard flag $$E_\bullet$$, and the opposite Schubert variety $$X^u$$ is cut out by symmetric rank conditions with respect to the opposite flag $$\tilde{E}_\bullet$$ ($$\tilde{E}_j=\span\{e_n,\ldots,e_{n-j+1}\}$$). The Richardson variety is the simultaneous imposition of both conditions.
 
-<div class="example" markdown="1">
-
-<ins id="ex4">**Example 4**</ins> In $$\Gr(2,4)$$, take $$u=1324$$ and $$w=2413$$. In the jump set order from [§Bruhat decomposition, ⁋Example 18](/en/math/lie_theory/bruhat_decomposition#ex18), we have $$1324\leftrightarrow\{1,3\}$$ and $$2413\leftrightarrow\{2,4\}$$, and since $$1\leq2$$ and $$3\leq4$$ componentwise, we have $$u\leq w$$, with $$\ell(2413)-\ell(1324)=3-1=2$$. The two Schubert conditions are
+::: Example 4
+In $$\Gr(2,4)$$, take $$u=1324$$ and $$w=2413$$. In the jump set order from [§Bruhat decomposition, ⁋Example 18](/en/math/lie_theory/bruhat_decomposition#ex18), we have $$1324\leftrightarrow\{1,3\}$$ and $$2413\leftrightarrow\{2,4\}$$, and since $$1\leq2$$ and $$3\leq4$$ componentwise, we have $$u\leq w$$, with $$\ell(2413)-\ell(1324)=3-1=2$$. The two Schubert conditions are
 
 $$X_{2413}=\{V\mid\dim(V\cap E_2)\geq1\},\qquad X^{1324}=\{V\mid\dim(V\cap\tilde{E}_2)\geq1\}$$
 
@@ -111,8 +101,7 @@ This is a variety of dimension $$2$$, matching exactly the dimension from [Propo
 $$V=\operatorname{rowspan}\begin{pmatrix}1&s&0&0\\0&0&1&t\end{pmatrix}\qquad(s,t)\in\mathbb{A}^2$$
 
 the jump set of the above matrix is $$\{2,4\}$$ so $$V\in X_{2413}^\circ$$, and the second row lies in $$\tilde{E}_2$$ so $$V\in X^{1324}_\circ$$. Thus $$\mathring{R}_{1324,2413}$$ is an open subset of this $$(s,t)$$-plane, and its affine dimension $$2$$ is immediately visible from the coordinates.
-
-</div>
+:::
 
 ## Peterson variety
 
@@ -132,11 +121,9 @@ $$\Ad((zg)^{-1})X=\Ad(g^{-1})X.$$
 
 Thus this incidence condition is invariant under left translation by $$z$$, and from this we obtain a group action of the centralizer $$C_G(X)$$ on the closed variety we are considering. That is, this closed variety is a union of $$C_G(X)$$-orbits, so intuitively we expect that the larger the centralizer, the larger the closed subvariety of $$G/B$$ cut out in this way. The case $$X=0$$ was the extreme case where the centralizer is all of $$G$$. However, it is known that the dimension of the centralizer cannot drop below $$\rank(\mathfrak{g})$$ for any $$X\in\mathfrak{g}$$ ([Kos63]), so the opposite extreme is the elements achieving this minimum.
 
-<div class="definition" markdown="1">
-
-<ins id="def5">**Definition 5**</ins> A nilpotent element $$X\in\mathfrak{g}$$ is called *regular* if the dimension of its centralizer $$\mathfrak{z}_{\mathfrak{g}}(X)=\{Z\in\mathfrak{g}\mid[Z,X]=0\}$$ equals $$\rank(\mathfrak{g})$$.
-
-</div>
+::: Definition 5
+A nilpotent element $$X\in\mathfrak{g}$$ is called *regular* if the dimension of its centralizer $$\mathfrak{z}_{\mathfrak{g}}(X)=\{Z\in\mathfrak{g}\mid[Z,X]=0\}$$ equals $$\rank(\mathfrak{g})$$.
+:::
 
 Regular nilpotents always exist by a standard construction: for each simple root $$\alpha_i$$ choose $$0\neq e_i\in\mathfrak{g}_{\alpha_i}$$ and set $$e=\sum_i e_i$$; this gives a regular nilpotent.
 
@@ -154,13 +141,11 @@ In general type, the fact that $$e=\sum_i e_i$$ is regular, that all regular nil
 
 Now let us add the dependence on $$H$$ to the closed subvariety we were considering with $$X$$ fixed. For convenience we give it a name first.
 
-<div class="definition" markdown="1">
-
-<ins id="def6">**Definition 6**</ins> For $$X\in\mathfrak{g}$$ and an $$\ad(\mathfrak{b})$$-stable subspace $$H\subseteq\mathfrak{g}$$ containing $$\mathfrak{b}$$ (i.e. $$[\mathfrak{b},H]\subseteq H$$), the *Hessenberg variety* is the closed subvariety of $$G/B$$ defined by
+::: Definition 6
+For $$X\in\mathfrak{g}$$ and an $$\ad(\mathfrak{b})$$-stable subspace $$H\subseteq\mathfrak{g}$$ containing $$\mathfrak{b}$$ (i.e. $$[\mathfrak{b},H]\subseteq H$$), the *Hessenberg variety* is the closed subvariety of $$G/B$$ defined by
 
 $$\mathcal{B}(X,H)=\{\,gB\in G/B\;\mid\;\Ad(g^{-1})X\in H\,\}.$$
-
-</div>
+:::
 
 As we saw above, $$X$$ influences the size of the variety through its centralizer, and the same holds for the subspace $$H$$. Two extreme situations: when $$H=\mathfrak{g}$$, the condition $$\Ad(g^{-1})X\in\mathfrak{g}$$ holds trivially and the Hessenberg variety is all of $$G/B$$. At the opposite extreme $$H=\mathfrak{b}$$, the condition $$\Ad(g^{-1})X\in\mathfrak{b}$$ says that the Borel subalgebra $$\Ad(g)\mathfrak{b}$$ contains $$X$$, and if $$X$$ is nilpotent we call this the *Springer fiber* of $$X$$.
 
@@ -168,9 +153,8 @@ The Peterson variety we will define can be thought of as the closed subvariety o
 
 To see in which direction we can enlarge $$H$$, it becomes clear if we work out the condition of [Definition 6](#def6) in coordinates in type $$A$$.
 
-<div class="example" markdown="1">
-
-<ins id="ex7">**Example 7**</ins> Let us return to type $$A_{n-1}$$ examined above. Here $$G=\GL_n(\mathbb{C})$$, $$\mathfrak{b}$$ is the space of upper triangular matrices, and the Cartan subalgebra of $$\gl_n$$ is the space of diagonal matrices $$\mathfrak{h}$$.[^1]
+::: Example 7
+Let us return to type $$A_{n-1}$$ examined above. Here $$G=\GL_n(\mathbb{C})$$, $$\mathfrak{b}$$ is the space of upper triangular matrices, and the Cartan subalgebra of $$\gl_n$$ is the space of diagonal matrices $$\mathfrak{h}$$.[^1]
 
 Since $$H$$ is $$\ad(\mathfrak{b})$$-stable, it must also be $$\ad(\mathfrak{h})$$-stable. Computing the bracket of an arbitrary $$Y\in H$$ with an arbitrary diagonal matrix $$\diag(t_1,\ldots, t_n)$$, we get
 
@@ -201,30 +185,25 @@ Now returning to the language of flag varieties, let the flag corresponding to a
 $$\Ad(g^{-1})X\in H_h\iff g^{-1}Xg\in H_h\iff XgE_i\subseteq gE_{h(i)}\iff XV_i\subseteq V_{h(i)}.$$
 
 Thus in type $$A$$, the Hessenberg variety is the variety of flags that $$X$$ is allowed to send down by at most the amount permitted by $$h$$ at each step.
-
-</div>
+:::
 
 The picture from [Example 7](#ex7) holds in the general case as well. Here, as above, the positions that the staircase fills above $$\mathfrak{b}$$ are below the diagonal, i.e. in the *negative* root directions. Indeed, $$\mathfrak{b}=\mathfrak{h}\oplus\bigoplus_{\alpha>0}\mathfrak{g}_\alpha$$ already contains all positive root directions, so enlarging $$H$$ beyond $$\mathfrak{b}$$ can only mean adding negative root directions. However, $$\ad(\mathfrak{b})$$-stability forces an additional simple condition: while the direction of a nonsimple positive root $$\alpha=\beta+\gamma$$ pulls in shallower positions together via $$[\mathfrak{g}_\beta,\mathfrak{g}_{-\alpha}]=\mathfrak{g}_{-\gamma}$$, the negative simple root directions are such that $$\mathfrak{b}\oplus\mathfrak{g}_{-\alpha_i}$$ is stable by itself. That is, the minimal units of expansion from $$\mathfrak{b}$$ one step at a time are precisely the $$\mathfrak{g}_{-\alpha_i}$$, and in type $$A$$ these are the subdiagonal positions in the picture above. Then the Peterson variety's $$H$$ is obtained by adding these directions to $$\mathfrak{b}$$.
 
-<div class="definition" markdown="1">
-
-<ins id="def8">**Definition 8**</ins> The *Peterson variety* $$\mathcal{Y}$$ is the closed subvariety of $$G/B$$ defined by
+::: Definition 8
+The *Peterson variety* $$\mathcal{Y}$$ is the closed subvariety of $$G/B$$ defined by
 
 $$\mathcal{Y}=\{\,gB\in G/B\;\mid\;\Ad(g^{-1})e\in H\,\}$$
 
 where $$e=\sum_i e_i$$ is a regular nilpotent element and $$H=\mathfrak{b}\oplus\bigoplus_i\mathbb{C}f_i$$ with $$f_i\in\mathfrak{g}_{-\alpha_i}$$ root vectors for the simple negative roots.
-
-</div>
+:::
 
 This definition appears to depend on several choices, but is in fact essentially unique. The choice of $$f_i$$ does not change $$H$$ since $$\mathbb{C}f_i=\mathfrak{g}_{-\alpha_i}$$ is $$1$$-dimensional, and replacing $$e$$ by another regular nilpotent merely translates $$\mathcal{Y}$$ inside $$G/B$$ (by the conjugacy discussed after [Definition 5](#def5)).
 
 As we saw above, the degrees of freedom added to $$\mathfrak{b}$$ by $$H$$ are one for each simple root, totaling $$\rank(\mathfrak{g})$$. Since $$H=\mathfrak{b}$$ gave a point (as discussed after [Definition 6](#def6)), we expect the Peterson variety to have dimension growing from a point by that amount. Indeed this is the content of the next proposition.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop9">**Proposition 9 (Tymoczko [Tym], Precup [Pre], Insko–Tymoczko [IT])**</ins> The Peterson variety $$\mathcal{Y}$$ admits an affine paving structure via its intersection with the Bruhat decomposition. That is, each $$\mathcal{Y}\cap BwB/B$$ is isomorphic to an affine space, and $$\mathcal{Y}$$ is their disjoint union. In particular, under this structure the largest piece has dimension $$\rank(\mathfrak{g})$$, so the dimension of $$\mathcal{Y}$$ also equals $$\rank(\mathfrak{g})$$.
-
-</div>
+::: Proposition 9 (Tymoczko [Tym], Precup [Pre], Insko–Tymoczko [IT])
+The Peterson variety $$\mathcal{Y}$$ admits an affine paving structure via its intersection with the Bruhat decomposition. That is, each $$\mathcal{Y}\cap BwB/B$$ is isomorphic to an affine space, and $$\mathcal{Y}$$ is their disjoint union. In particular, under this structure the largest piece has dimension $$\rank(\mathfrak{g})$$, so the dimension of $$\mathcal{Y}$$ also equals $$\rank(\mathfrak{g})$$.
+:::
 
 We omit the proof of this proposition, but the affine paving structure itself is worth remembering. The key point is that this affine paving is indexed by subsets $$\mathcal{P}(\Delta)$$ of the simple roots: for instance, the subset containing no simple root directions, i.e. the empty set, adds no directions to $$\mathfrak{b}$$, so by the argument after [Definition 6](#def6) the corresponding affine space is a point. The affine spaces above it are determined by subsets of $$\Delta$$, and this is not merely an analogy but their relative positions are also actually governed by the subsets of $$\Delta$$.
 
@@ -238,9 +217,8 @@ $$\overline{\mathcal{Y}\cap Bw_AB/B}\;=\;\bigsqcup_{A'\subseteq A}\bigl(\mathcal
 
 holds. In fact this closure coincides with the intermediate Hessenberg variety obtained by enlarging $$H$$ only in the $$A$$ directions, $$\mathcal{B}(e,\,\mathfrak{b}\oplus\bigoplus_{i\in A}\mathbb{C}f_i)$$, and furthermore it is isomorphic to the Peterson variety of the Levi subgroup generated by $$A$$ ([IT]). Thus the Peterson variety has a structure of smaller Peterson varieties nested according to the subset order, from the point $$B/B$$ ($$A=\emptyset$$) using no degrees of freedom, up to the largest piece ($$A=\Delta$$) which is the intersection with the big Bruhat cell, with all intermediate relative positions governed by the combinatorics of the simple roots.
 
-<div class="example" markdown="1">
-
-<ins id="ex10">**Example 10**</ins> Let us examine this structure in the type $$A$$ case discussed earlier. As in [Example 7](#ex7), choosing the Hessenberg function $$h(i)=\min(i+1, n)$$, $$H$$ is the set of matrices allowed to descend exactly one step below the diagonal, and from the last equivalence in that example we know that the Peterson variety is given inside the complete flag variety $$\Fl_n=\GL_n(\mathbb{C})/B$$ by
+::: Example 10
+Let us examine this structure in the type $$A$$ case discussed earlier. As in [Example 7](#ex7), choosing the Hessenberg function $$h(i)=\min(i+1, n)$$, $$H$$ is the set of matrices allowed to descend exactly one step below the diagonal, and from the last equivalence in that example we know that the Peterson variety is given inside the complete flag variety $$\Fl_n=\GL_n(\mathbb{C})/B$$ by
 
 $$\Pet_n=\{\,V_\bullet\mid NV_i\subseteq V_{i+1},\ i=1,\ldots,n-1\,\}.$$
 
@@ -265,8 +243,7 @@ $$w\in\{e,\,s_1,\,s_2,\,w_0\}=\{123,\,213,\,132,\,321\}$$
 and only these four remain. Indeed, writing out the points of the Bruhat cells corresponding to the two missing elements $$231, 312$$ and considering their intersection with $$\Pet_3$$, one easily verifies that it is empty.
 
 The four flags obtained above are the $$2^{n-1}=4$$ coordinate flags corresponding to subsets $$A\subseteq\{\alpha_1,\alpha_2\}$$ of simple roots and the maximal length elements $$w_A$$ of the Weyl groups $$W_A$$ they define, showing that the Peterson variety remembers the combinatorics of the simple roots.
-
-</div>
+:::
 
 Meanwhile, the key idea of [Proposition 9](#prop9) was to decompose $$\mathcal{Y}$$ by taking its intersection with the Bruhat decomposition of $$G/B$$. But we already examined in [§Bruhat decomposition, ⁋Theorem 8](/en/math/lie_theory/bruhat_decomposition#thm8) the decomposition via the opposite Borel subgroup, so we can also explore the properties of $$\mathcal{Y}$$ through $$\mathcal{Y}\cap B^-wB/B$$.
 
@@ -286,13 +263,11 @@ In general, the dimension of $$\mathcal{Y}_P$$ equals $$\lvert\Delta\setminus A\
 
 This decomposition has meaning beyond simply replacing $$B$$ by $$B^-$$: it carries information about quantum cohomology. In the following theorem, the *Langlands dual group* $$G^\vee$$ of the Lie group $$G$$ is the dual group obtained by interchanging roots and coroots in the root datum; in this situation let $$\mathcal{Y}^\vee$$ be the Peterson variety constructed following [Definition 8](#def8), and let $$\mathcal{Y}^\vee_P$$ denote the stratum of $$\mathcal{Y}^\vee$$ corresponding to the Langlands dual $$P^\vee$$ of a parabolic subgroup $$P$$ of $$G$$.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm11">**Theorem 11 (Peterson)**</ins> In the Peterson variety of the Langlands dual $$G^\vee$$ of $$G$$, the coordinate ring of the stratum $$\mathcal{Y}^\vee_P$$ corresponding to each standard parabolic subgroup $$P\supseteq B$$ is isomorphic to the small quantum cohomology ring of the partial flag variety $$G/P$$.
+::: Theorem 11 (Peterson)
+In the Peterson variety of the Langlands dual $$G^\vee$$ of $$G$$, the coordinate ring of the stratum $$\mathcal{Y}^\vee_P$$ corresponding to each standard parabolic subgroup $$P\supseteq B$$ is isomorphic to the small quantum cohomology ring of the partial flag variety $$G/P$$.
 
 $$\mathbb{C}[\mathcal{Y}^\vee_P]\cong QH^\ast(G/P)$$
-
-</div>
+:::
 
 This theorem was introduced in Peterson's 1997 MIT lecture; there is no separate publication, but the proof can be found in [lecture notes](https://math.soimeme.org/~arunram/Resources/PetersonGmodBcourse1997.pdf) and elsewhere. However, in the case of the Grassmannian that we have mainly been looking at, $$\GL_n$$ is Langlands self-dual so $$G\cong G^\vee$$ and this duality is not very visible.
 
@@ -326,11 +301,9 @@ In the smallest Grassmannian $$\mathbb{P}^1=\Gr(1,2)$$ we can see all of this by
 
 In general $$\Gr(k,n)$$ as well, the fiber over a generic $$q_0$$ consists of $$\binom{n}{k}$$ distinct points. These finitely many points have another explicit model: they are realized as critical points of a certain Laurent polynomial, a superpotential, which is one of the contents of mirror symmetry, and constructing this correspondence for general $$G/P$$ remains an actively studied topic (see [mirror symmetry](/en/mirror_symmetry/)).
 
-<div class="remark" markdown="1">
-
-<ins id="rmk12">**Remark 12**</ins> The affine paving of [Proposition 9](#prop9) is also the starting point for cohomology computations. By the paving, the cohomology of $$\mathcal{Y}$$ is a free module with a basis indexed by the cells, and vanishes in odd degrees. That is, the affine paving argument for flag varieties from [§Bruhat decomposition, ⁋Proposition 17](/en/math/lie_theory/bruhat_decomposition#prop17) works for Peterson varieties in exactly the same way, and Insko–Tymoczko [IT] developed the intersection theory of Peterson varieties on this basis.
-
-</div>
+::: Remark 12
+The affine paving of [Proposition 9](#prop9) is also the starting point for cohomology computations. By the paving, the cohomology of $$\mathcal{Y}$$ is a free module with a basis indexed by the cells, and vanishes in odd degrees. That is, the affine paving argument for flag varieties from [§Bruhat decomposition, ⁋Proposition 17](/en/math/lie_theory/bruhat_decomposition#prop17) works for Peterson varieties in exactly the same way, and Insko–Tymoczko [IT] developed the intersection theory of Peterson varieties on this basis.
+:::
 
 ---
 

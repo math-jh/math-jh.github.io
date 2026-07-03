@@ -17,17 +17,13 @@ For the time being, we explore properties of groups. Thus, we will simply refer 
 
 From [§Algebraic Structures, ⁋Definition 6](/en/math/algebraic_structures/algebraic_structures#def6), we can also define (group) isomorphisms, and from this definition and [\[Set Theory\] §Operations on Functions, ⁋Proposition 5](/en/math/set_theory/operation_of_functions#prop5), it is clear that any isomorphism must be a bijection. In many cases, the converse also holds.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop1">**Proposition 1**</ins> A magma homomorphism $$f:A\rightarrow A'$$ is an isomorphism if and only if $$f$$ is a bijection.
+::: Proposition 1
+A magma homomorphism $$f:A\rightarrow A'$$ is an isomorphism if and only if $$f$$ is a bijection.
 
 If $$A$$ has an identity element $$e$$ and $$f:A\rightarrow A'$$ is a bijection, then $$f(e)$$ is the identity element of $$A'$$, and consequently $$f^{-1}$$ is a magma homomorphism that sends the identity element of $$A'$$ to the identity element of $$A$$.
+:::
 
-</div>
-
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proof
 It suffices to prove the converse. Since $$f$$ is a bijection, there exists an inverse function $$f^{-1}:G'\rightarrow G$$. If $$f^{-1}$$ is a homomorphism, then by definition $$f$$ is an isomorphism.
 
 Take arbitrary $$y, y'\in  A'$$. Since $$f$$ is a bijection, there exist unique $$x$$ and $$x'$$ such that $$f(x)=y$$ and $$f(x')=y'$$. Now
@@ -41,32 +37,26 @@ On the other hand, if $$f:A\rightarrow A'$$ is a bijection, then for any $$y\in 
 $$y=f(x)=f(xe)=f(x)f(e),\qquad y=f(x)=f(ex)=f(e)f(x)$$
 
 so $$f(e)$$ is the identity element of $$A'$$.
-
-</details>
+:::
 
 ## Equalizer of Homomorphisms
 
 The following holds.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**Proposition 2**</ins> Let $$f,g:G \rightarrow H$$ be group homomorphisms. Then
+::: Proposition 2
+Let $$f,g:G \rightarrow H$$ be group homomorphisms. Then
 
 $$\Eq(f,g)=\{x\in G\mid f(x)=g(x)\}$$
 
 is a subgroup of $$G$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 If $$x,y\in \Eq(f,g)$$, then
 
 $$f(xy^{-1})=f(x)f(y)^{-1}=g(x)g(y)^{-1}=g(xy^{-1})$$
 
 so $$xy^{-1}\in\Eq(f,g)$$. Therefore, by [§Semigroups, Monoids, and Groups, ⁋Proposition 15](/en/math/algebraic_structures/groups#prop15), we obtain the desired result.
-
-</details>
+:::
 
 The map $$i:\Eq(f,g)\rightarrow G$$ defined in this way has the following property.
 
@@ -80,14 +70,10 @@ The group $$\{e\}$$ is a zero object in the category $$\Grp$$. Therefore, for an
 
 Meanwhile, whether a group homomorphism $$f$$ is injective can be expressed as follows.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop3">**Proposition 3**</ins> A homomorphism $$f:G\rightarrow G'$$ is injective if and only if $$f^{-1}(e')=\{e\}$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 3
+A homomorphism $$f:G\rightarrow G'$$ is injective if and only if $$f^{-1}(e')=\{e\}$$.
+:::
+::: Proof
 If $$f$$ is injective, then it is clear that $$f^{-1}(e')=\{e\}$$.
 
 Conversely, suppose $$f^{-1}(e')=\{e\}$$. Let $$x,y\in G$$ satisfy $$f(x)=f(y)$$. Then
@@ -95,48 +81,35 @@ Conversely, suppose $$f^{-1}(e')=\{e\}$$. Let $$x,y\in G$$ satisfy $$f(x)=f(y)$$
 $$e'=f(x)f(y)^{-1}=f(xy^{-1})$$
 
 and by assumption, $$xy^{-1}=e$$. Hence $$x=y$$.
-
-</details>
+:::
 
 For any homomorphism $$f:G\rightarrow G'$$, the set $$f^{-1}(e')$$ above shows how far $$f$$ is from being injective. This set is named as follows.
 
-<div class="definition" markdown="1">
-
-<ins id="def4">**Definition 4**</ins> The *kernel* of a homomorphism $$f:G\rightarrow G'$$ is defined as the set $$f^{-1}(e')$$ and denoted by $$\ker f$$.
-
-</div>
+::: Definition 4
+The *kernel* of a homomorphism $$f:G\rightarrow G'$$ is defined as the set $$f^{-1}(e')$$ and denoted by $$\ker f$$.
+:::
 
 Then $$f^{-1}(e')$$ is not merely a set but a subgroup of $$G$$.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**Proposition 5**</ins> For any homomorphism $$f:G\rightarrow G'$$, $$\ker f$$ is a subgroup of $$G$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 5
+For any homomorphism $$f:G\rightarrow G'$$, $$\ker f$$ is a subgroup of $$G$$.
+:::
+::: Proof
 By definition, $$\ker f=\Eq(f,e)$$.
-
-</details>
+:::
 
 On the other hand, we verified that for any magma homomorphism $$f:A\rightarrow A'$$, its image $$\im f$$ is a submagma of $$A'$$. (See the calculation before [§Algebraic Structures, ⁋Definition 8](/en/math/algebraic_structures/algebraic_structures#def8)) However, a submagma of a group is not necessarily a subgroup in general, so the following proposition requires a separate proof.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop6">**Proposition 6**</ins> For any homomorphism $$f:G\rightarrow G'$$, $$\im f$$ is a subgroup of $$G'$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 6
+For any homomorphism $$f:G\rightarrow G'$$, $$\im f$$ is a subgroup of $$G'$$.
+:::
+::: Proof
 We already know that $$\im f$$ is a submagma of $$G'$$, so by [§Semigroups, Monoids, and Groups, ⁋Proposition 15](/en/math/algebraic_structures/groups#prop15), it suffices to show that $$\im f$$ is closed under taking inverses. Let $$y\in\im f$$ and suppose $$x\in G$$ satisfies $$f(x)=y$$. Then
 
 $$f(x^{-1})=f(x)^{-1}=y^{-1}$$
 
 so $$y^{-1}\in\im f$$.
-
-</details>
+:::
 
 
 ---

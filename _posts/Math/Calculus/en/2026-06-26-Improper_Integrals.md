@@ -20,9 +20,8 @@ The integrals we have examined so far were defined for bounded functions on fini
 
 We first give the following definition.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> If $$f$$ is integrable on $$[a, t]$$ for every $$t > a$$, we define the *improper integral* over the infinite interval by
+::: Definition 1
+If $$f$$ is integrable on $$[a, t]$$ for every $$t > a$$, we define the *improper integral* over the infinite interval by
 
 $$\int_a^{\infty} f(x) dx = \lim_{t \to \infty}\int_a^t f(x) dx$$
 
@@ -41,8 +40,7 @@ $$\int_{-\infty}^c f(x) dx + \int_c^{\infty} f(x) dx$$
 concisely by the expression
 
 $$\int_{-\infty}^{\infty} f(x) dx$$
-
-</div>
+:::
 
 In the above definition, the two improper integrals
 
@@ -64,9 +62,8 @@ but according to the above definition the improper integral of $$\sgn$$ is not d
 
 Similarly, we define the integral of a function that blows up at a point as a limit.
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**Definition 2**</ins> If $$f$$ becomes infinite at $$c$$ but is integrable on $$[a, t]$$ for every $$t < c$$, we define the *singular integral* by
+::: Definition 2
+If $$f$$ becomes infinite at $$c$$ but is integrable on $$[a, t]$$ for every $$t < c$$, we define the *singular integral* by
 
 $$\int_a^c f(x) dx = \lim_{t \to c^-}\int_a^t f(x) dx$$
 
@@ -77,8 +74,7 @@ $$\int_c^b f(x) dx = \lim_{t \to c^+}\int_t^b f(x) dx$$
 If $$f$$ becomes infinite at a point $$c$$ inside $$[a,b]$$, we define this singular integral by
 
 $$\int_a^b f(x)dx=\lim_{t\rightarrow c^-}\int_a^t f(x)dx+\lim_{s\rightarrow c^+} \int_s^b f(x)dx$$
-
-</div>
+:::
 
 Again, when $$c$$ lies inside the interval, the same subtlety as in [Definition 1](#def1) remains. For instance,
 
@@ -94,39 +90,29 @@ the value would have become $$0$$, which is problematic.
 
 Many improper integrals cannot be evaluated explicitly because an antiderivative is unavailable. However, convergence alone can be decided by comparison with a more manageable function. When the integrand is non-negative the integral is monotone in the interval of integration, so a comparison test analogous to that for series holds.
 
-<div class="proposition" markdown="1">
+::: Proposition 3 (Comparison Test)
+Suppose $$0 \leq f(x) \leq g(x)$$ for $$x \geq a$$. If $$\int_a^\infty g(x) dx$$ converges then $$\int_a^\infty f(x) dx$$ also converges, and if $$\int_a^\infty f(x) dx$$ diverges then $$\int_a^\infty g(x) dx$$ also diverges.
+:::
 
-<ins id="prop3">**Proposition 3 (Comparison Test)**</ins> Suppose $$0 \leq f(x) \leq g(x)$$ for $$x \geq a$$. If $$\int_a^\infty g(x) dx$$ converges then $$\int_a^\infty f(x) dx$$ also converges, and if $$\int_a^\infty f(x) dx$$ diverges then $$\int_a^\infty g(x) dx$$ also diverges.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proof
 $$F(t) = \int_a^t f(x) dx$$ is increasing in $$t$$ because $$f \geq 0$$, and by monotonicity ([§Integration, ⁋Proposition 11](/en/math/calculus/integration#prop11))
 
 $$F(t) \leq \int_a^t g(x) dx \leq \int_a^\infty g(x) dx$$
 
 so it is bounded above. An increasing function bounded above has a limit as $$t \to \infty$$, so $$\int_a^\infty f(x) dx$$ converges. The second claim is the contrapositive.
-
-</details>
+:::
 
 When the direct inequality $$0 \leq f \leq g$$ is difficult to establish, we use a limit comparison as in series. That is, if two positive functions satisfy $$f(x)/g(x) \to c$$ ($$0 < c < \infty$$), then by the same argument as in [§Infinite Series, ⁋Proposition 7](/en/math/calculus/series#prop7) the two integrals converge or diverge together, so it suffices to know which function the integrand behaves like as $$x \to \infty$$.
 
 For integrands that change sign we reduce to the positive case by taking absolute values.
 
-<div class="proposition" markdown="1">
+::: Proposition 4 (Absolute Convergence)
+If $$\int_a^\infty \lvert f(x)\rvert dx$$ converges then $$\int_a^\infty f(x) dx$$ also converges.
+:::
 
-<ins id="prop4">**Proposition 4 (Absolute Convergence)**</ins> If $$\int_a^\infty \lvert f(x)\rvert dx$$ converges then $$\int_a^\infty f(x) dx$$ also converges.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proof
 Since $$0 \leq f + \lvert f\rvert \leq 2\lvert f\rvert$$, by [Proposition 3](#prop3) the integral $$\int_a^\infty (f(x) + \lvert f(x)\rvert) dx$$ converges, and therefore $$\int_a^\infty f(x) dx = \int_a^\infty (f(x) + \lvert f(x)\rvert) dx - \int_a^\infty \lvert f(x)\rvert dx$$ also converges.
-
-</details>
+:::
 
 The converse does not hold. $$\int_0^\infty \frac{\sin x}{x} dx = \frac\pi2$$ converges but $$\int_0^\infty \lvert \sin x/x\rvert dx$$ diverges, so it is *conditionally convergent*, corresponding to conditional convergence of series.
 
@@ -138,9 +124,8 @@ which becomes an integral over an infinite interval. The factor $$u^{-2} > 0$$ p
 
 For these tests to be useful in practice we need standard functions to compare against, and the role is almost always played by power functions or the exponential $$e^{-x}$$. Among them, the integral of a power function exhibits a (nearly) sharp boundary between convergence and divergence.
 
-<div class="example" markdown="1">
-
-<ins id="ex5">**Example 5 (p-integral)**</ins> The improper integral of a power shows exactly opposite boundaries at infinity and at a singularity. The infinite interval $$\int_1^{\infty} x^{-p} dx$$ converges for $$p > 1$$ and diverges for $$p \leq 1$$, whereas the singularity-inclusive integral $$\int_0^1 x^{-p} dx$$ conversely converges for $$p < 1$$ and diverges for $$p \geq 1$$. Both calculations come from the same antiderivative: for $$p \neq 1$$,
+::: Example 5 (p-integral)
+The improper integral of a power shows exactly opposite boundaries at infinity and at a singularity. The infinite interval $$\int_1^{\infty} x^{-p} dx$$ converges for $$p > 1$$ and diverges for $$p \leq 1$$, whereas the singularity-inclusive integral $$\int_0^1 x^{-p} dx$$ conversely converges for $$p < 1$$ and diverges for $$p \geq 1$$. Both calculations come from the same antiderivative: for $$p \neq 1$$,
 
 $$\int_1^t x^{-p} dx = \frac{t^{1-p} - 1}{1 - p}, \qquad \int_t^1 x^{-p} dx = \frac{1 - t^{1-p}}{1 - p}$$
 
@@ -151,8 +136,7 @@ $$\int_1^\infty x^{-p} dx = \frac{1}{p - 1} \quad (p > 1), \qquad \int_0^1 x^{-p
 Intuitively, on an infinite interval a large $$p$$ causes rapid decrease and helps convergence, whereas near a singularity a large $$p$$ causes more rapid increase and leads to divergence; this can be seen clearly by plotting $$1/x$$ and $$1/x^2$$.
 
 ![Graphs of 1/x and 1/x²](/assets/images/Math/Calculus/Improper_Integrals-1.svg){:style="width:12.69em" class="invert" .align-center}
-
-</div>
+:::
 
 However, the boundary $$p = 1$$ is somewhat subtle. Since substitution remains valid for improper integrals, setting $$u = \ln x$$ gives
 
@@ -162,9 +146,8 @@ which converges for $$p > 1$$. Thus $$1/x$$ itself diverges at $$p = 1$$, but at
 
 On the other hand, convergent improper integrals are used to define new functions.
 
-<div class="example" markdown="1">
-
-<ins id="ex6">**Example 6 (Gamma function)**</ins> The function defined by the improper integral
+::: Example 6 (Gamma function)
+The function defined by the improper integral
 
 $$\Gamma(s) = \int_0^\infty x^{s-1}e^{-x} dx$$
 
@@ -173,5 +156,4 @@ converges for $$s > 0$$. Near $$0$$ the singular integral of $$x^{s-1}$$ converg
 $$\Gamma(s+1) = \bigl[-x^s e^{-x}\bigr]_0^\infty + s\int_0^\infty x^{s-1}e^{-x} dx = s \Gamma(s)$$
 
 and since $$\Gamma(1) = \int_0^\infty e^{-x} dx = 1$$ we have $$\Gamma(n) = (n-1)!$$. Thus the gamma function extends the factorial to real numbers.
-
-</div>
+:::

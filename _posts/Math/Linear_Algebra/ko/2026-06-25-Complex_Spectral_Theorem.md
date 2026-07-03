@@ -21,25 +21,21 @@ weight: 121
 
 우선 첫 단계는 실수의 경우와 똑같이 자기 자신과 adjoint가 일치하는 operator에 이름을 붙여주는 것이다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> 복소내적공간 $$V$$ 위의 linear operator $$L:V\rightarrow V$$가 *self-adjoint<sub>self-adjoint</sub>*, 또는 *Hermitian*이라는 것은 $$L=L^\ast$$인 것, 즉 모든 $$v,w\in V$$에 대하여 $$\langle Lv,w\rangle=\langle v,Lw\rangle$$인 것이다.
-
-</div>
+::: 정의 1
+복소내적공간 $$V$$ 위의 linear operator $$L:V\rightarrow V$$가 *self-adjoint<sub>self-adjoint</sub>*, 또는 *Hermitian*이라는 것은 $$L=L^\ast$$인 것, 즉 모든 $$v,w\in V$$에 대하여 $$\langle Lv,w\rangle=\langle v,Lw\rangle$$인 것이다.
+:::
 
 즉, 이는 내적이 주는 isomorphism을 통해 $$V^\ast$$를 $$V$$로 옮겨왔을 때, dual operator $$L^\ast: V^\ast\rightarrow V^\ast$$가 $$V$$로 번역된 것이 곧 자기자신이라는 것이다. 실수행렬의 경우, 이는 symmetric matrix로 나왔으나 복소수의 경우 이것이 conjugate-tranpose matrix로 나온다는 점만 다르다. 다소 헷갈릴 수 있는 지점은 $$L^\ast$$가 이제 conjugate-transpose이자 dual map을 나타내는 표기가 된다는 것이지만, 위에서 살펴봤듯 complex inner product space가 주는 isomorphism을 통해 $$V$$와 $$V^\ast$$를 같은 것으로 보면 이들 둘이 실제로 같아지므로 큰 해는 없다. 
 
 실수에서와 다른 점 중 하나는 이제 self-adjoint operator들만이 orthonormal basis로 대각화되는 것이 <em-ko>아니라는</em-ko> 것으로, 이를 위해서는 다음 정의와 같이 일반화를 해야 한다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**정의 2**</ins> 복소내적공간 $$V$$ 위의 linear operator $$L:V\rightarrow V$$가 *normal operator<sub>normal operator</sub>*라는 것은
+::: 정의 2
+복소내적공간 $$V$$ 위의 linear operator $$L:V\rightarrow V$$가 *normal operator<sub>normal operator</sub>*라는 것은
 
 $$LL^\ast=L^\ast L$$
 
 이 성립하는 것이다.
-
-</div>
+:::
 
 그럼 특히 self-adjoint operator는 $$LL^\ast=L^2=L^\ast L$$이므로 normal operator이고, unitary operator 또한 그러하다. ([§복소내적공간, ⁋정의 5](/ko/math/linear_algebra/complex_inner_product_spaces#def5)) 뿐만 아니라, $$L^\ast=-L$$을 만족하는 *skew-Hermitian* operator도 $$LL^\ast=-L^2=L^\ast L$$이므로 normal operator이며, 이렇듯 normal operator는 여러 특수한 경우들을 포함하는 넓은 부류이며, 이 글의 목표는 이들이 정확히 orthonormal basis로 대각화되는 operator임을 보이는 것이다.
 
@@ -47,14 +43,10 @@ $$LL^\ast=L^\ast L$$
 
 복소내적공간 위에서는 임의의 linear operator라도 orthonormal basis에 대해 upper triangular matrix와 닮아있음을 보일 수 있다. 이것이 Schur decomposition이며, normal operator의 경우 이 upper triangular matrix가 자동으로 대각이 되어 복소 스펙트럼 정리를 되돌려준다.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm3">**정리 3 (Schur)**</ins> 복소내적공간 $$V$$ 위의 임의의 linear operator $$L:V\rightarrow V$$에 대하여, $$L$$의 행렬표현이 upper triangular matrix가 되도록 하는 $$V$$의 orthonormal basis가 존재한다. 행렬의 언어로는, 임의의 $$A\in\Mat_n(\mathbb{C})$$에 대하여 적당한 unitary matrix $$U$$와 upper triangular matrix $$T$$가 존재하여 $$A=UTU^\ast$$이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 정리 3 (Schur)
+복소내적공간 $$V$$ 위의 임의의 linear operator $$L:V\rightarrow V$$에 대하여, $$L$$의 행렬표현이 upper triangular matrix가 되도록 하는 $$V$$의 orthonormal basis가 존재한다. 행렬의 언어로는, 임의의 $$A\in\Mat_n(\mathbb{C})$$에 대하여 적당한 unitary matrix $$U$$와 upper triangular matrix $$T$$가 존재하여 $$A=UTU^\ast$$이다.
+:::
+::: 증명
 $$\dim V$$에 대한 귀납법으로 진행한다. 우리는 $$V$$의 orthonormal basis $$\{e_1,\ldots,e_n\}$$이 존재하여 각 $$j$$에 대해 $$Le_j\in\span(e_1,\ldots,e_j)$$임을 보여야 한다. $$\dim V\leq 1$$인 경우는 자명하므로, $$\dim V=n\geq 2$$라 하자.
 
 $$L^\ast$$의 특성다항식은 차수가 $$1$$ 이상이므로 [§특성다항식, ⁋정리 8](/ko/math/linear_algebra/characteristic_polynomial#thm8)에 의하여 근을 가지고, 따라서 $$L^\ast$$은 $$\lVert e_n\rVert=1$$인 고유벡터 $$e_n$$을 가진다. 이제 $$V$$에서 $$e_n$$이 span하는 직선의 complement $$W=(\span e_n)^\perp$$를 생각하자. 그럼
@@ -65,21 +57,16 @@ $$\langle Lw,e_n\rangle=\langle w,L^\ast e_n\rangle=\langle w,\mu e_n\rangle=\mu
  $$W$$의 orthonormal basis $$\{e_1,\ldots,e_{n-1}\}$$이 존재하여 각 $$j\leq n-1$$에 대해 $$Le_j\in\span(e_1,\ldots,e_j)$$이다.
 
 그럼 $$\{e_1,\ldots,e_n\}$$은 $$V$$의 orthonormal basis이고, $$j<n$$에 대해서는 $$Le_j\in\span(e_1,\ldots,e_j)$$이며 $$j=n$$에 대해서는 $$Le_n\in V=\span(e_1,\ldots,e_n)$$이 자명하게 성립한다. 즉 이 기저에 대한 $$L$$의 행렬표현은 upper triangular matrix가 된다. 이 기저의 벡터들을 열로 갖는 행렬을 $$U$$라 하면 $$U$$는 unitary이고 ([§복소내적공간, ⁋정의 5](/ko/math/linear_algebra/complex_inner_product_spaces#def5)) $$U^\ast AU=T$$가 upper triangular이므로 $$A=UTU^\ast$$이다.
-
-</details>
+:::
 
 Upper triangular matrix $$T$$는 $$A$$와 닮음이므로 같은 특성다항식을 가지며, upper triangular matrix의 특성다항식은 $$\prod_i(\x-T_{ii})$$이므로 $$T$$의 대각성분 $$T_{11},\ldots,T_{nn}$$은 정확히 $$A$$의 고윳값들을 중복도까지 담는다. Schur 분해는 임의의 복소행렬이 unitary transformation만으로 고윳값들을 대각선에 드러낼 수 있음을 말한다.
 
 만일 추가로 주어진 행렬이 normal이었다면, 이 upper triangular matrix가 추가로 diagonal matrix가 된다.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor4">**따름정리 4**</ins> Normal matrix $$A\in\Mat_n(\mathbb{C})$$는 unitary matrix로 대각화된다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 따름정리 4
+Normal matrix $$A\in\Mat_n(\mathbb{C})$$는 unitary matrix로 대각화된다.
+:::
+::: 증명
 [정리 3](#thm3)에 의하여 $$A=UTU^\ast$$이고 $$T$$는 upper triangular이도록 할 수 있으며, 우리가 보여야 할 것은 만일 $$A$$가 normal이라면 $$T$$가 diagonal matrix인 것을 보이는 것이다. 우선 $$U$$가 unitary이므로 $$T=U^\ast AU$$ 또한 normal matrix이며, 우리는 upper triangular이면서 normal인 $$T$$가 대각임을 $$T$$의 행에 대한 귀납법으로 보인다.
 
 우선, $$T$$가 upper triangular이므로 $$T$$의 첫째 열은 $$(T_{11},0,\ldots,0)^t$$이고, 따라서 $$\lVert Te_1\rVert^2=\lvert T_{11}\rvert^2$$이다. 한편 $$T^\ast$$의 첫째 열은 $$T$$의 첫째 행의 켤레이므로 $$\lVert T^\ast e_1\rVert^2=\sum_{j}\lvert T_{1j}\rvert^2$$이다. $$T$$가 normal이므로
@@ -87,8 +74,7 @@ Upper triangular matrix $$T$$는 $$A$$와 닮음이므로 같은 특성다항식
 $$\lVert Te_1\rVert^2=\langle Te_1,Te_1\rangle=\langle e_1,T^\ast Te_1\rangle=\langle e_1,TT^\ast e_1\rangle=\langle T^\ast e_1,T^\ast e_1\rangle=\lVert T^\ast e_1\rVert^2$$
 
 이고, 따라서 $$\lvert T_{11}\rvert^2=\sum_{j}\lvert T_{1j}\rvert^2$$이므로 $$j>1$$에 대해 $$T_{1j}=0$$이다. 즉 첫째 행은 대각성분을 제외하면 모두 $$0$$이다. 그럼 $$T$$의 둘째 행 이하는 첫째 행·열을 떼어 낸 $$(n-1)\times(n-1)$$ upper triangular normal matrix를 이루므로, 귀납적으로 그것도 대각이 되어 $$T$$ 전체가 대각이다. 따라서 $$A=UTU^\ast$$은 unitary diagonalization이다.
-
-</details>
+:::
 
 Schur 분해는 [§조르당 표준형](/ko/math/linear_algebra/Jordan_canonical_form)과 좋은 대조를 이룬다. 조르당 표준형은 일반적으로 unitary가 아닌 기저변환을 써서 행렬을 표준적인 block 형태로 만드는 반면, Schur 분해는 기저변환을 unitary로 제한하는 대신 표준형을 포기하고 upper triangular 형태에 만족한다. 후자는 orthonormality가 보존되어 수치적으로 안정적이라는 장점이 있어 응용에서 자주 쓰인다.
 
@@ -96,42 +82,31 @@ Schur 분해는 [§조르당 표준형](/ko/math/linear_algebra/Jordan_canonical
 
 Normal matrix의 unitary diagonalization은 [정리 3](#thm3)의 직접적 결과이다. 더 정밀하게, 복소수 버전의 스펙트럼 정리는 normal operator가 정확히 orthonormal basis로 대각화되는 operator임을 보인다.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm5">**정리 5 (복소 스펙트럼 정리)**</ins> 복소내적공간 $$V$$ 위의 linear operator $$L:V\rightarrow V$$가 normal operator인 것은, $$L$$의 고유벡터들로 이루어진 $$V$$의 orthonormal basis가 존재하는 것과 동치이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 정리 5 (복소 스펙트럼 정리)
+복소내적공간 $$V$$ 위의 linear operator $$L:V\rightarrow V$$가 normal operator인 것은, $$L$$의 고유벡터들로 이루어진 $$V$$의 orthonormal basis가 존재하는 것과 동치이다.
+:::
+::: 증명
 우선 $$L$$이 normal이라면 [따름정리 4](#cor4)에 의하여 $$L$$은 orthonormal basis로 대각화된다는 것이 자명하므로, 핵심은 반대방향이다. $$L$$의 고유벡터들로 이루어진 orthonormal basis $$\{v_1,\ldots,v_n\}$$이 존재하여 $$Lv_i=\lambda_i v_i$$라 하자. 그럼 [§복소내적공간, ⁋명제 4](/ko/math/linear_algebra/complex_inner_product_spaces#prop4)에 의해, 이 기저에 대한 $$L^\ast$$의 행렬표현은 $$\diag(\bar\lambda_1,\ldots,\bar\lambda_n)$$이다. 이제 두 diagonal matrix은 가환이므로 $$LL^\ast=L^\ast L$$이고, 따라서 $$L$$은 normal operator이다.
-
-</details>
+:::
 
 행렬의 언어로 옮기면, 이 정리는 (증명에서 보았듯) normal matrix의 unitary diagonalization에 대한 이야기이다.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor6">**따름정리 6**</ins> 행렬 $$A\in\Mat_n(\mathbb{C})$$가 normal matrix인 것은, 적당한 unitary matrix $$U$$와 diagonal matrix $$D$$가 존재하여
+::: 따름정리 6
+행렬 $$A\in\Mat_n(\mathbb{C})$$가 normal matrix인 것은, 적당한 unitary matrix $$U$$와 diagonal matrix $$D$$가 존재하여
 
 $$A=UDU^\ast$$
 
 이 성립하는 것과 동치이다. 이 때 $$D$$의 대각성분은 $$A$$의 고윳값들이고, $$U$$의 열들은 이에 대응되는 orthonormal eigenvector들이다.
-
-</div>
+:::
 
 ## 특수한 경우
 
 위에서 설명했듯, self-adjoint operator와 unitary operator는 normal operator이므로 [정리 5](#thm5)에 의하여 모두 orthonormal basis로 대각화된다. 이들을 특별하게 만드는 것은 대각화의 결과 얻어지는 diagonal matrix가 특수한 형태라는 것이다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop7">**명제 7**</ins> 복소내적공간 위의 self-adjoint operator의 모든 고윳값은 실수이고, unitary operator의 모든 고윳값은 절댓값이 $$1$$이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 명제 7
+복소내적공간 위의 self-adjoint operator의 모든 고윳값은 실수이고, unitary operator의 모든 고윳값은 절댓값이 $$1$$이다.
+:::
+::: 증명
 $$L$$이 self-adjoint이고 $$Lv=\lambda v$$, $$v\neq 0$$이라 하자. 그럼 $$\langle Lv,v\rangle=\langle v, Lv\rangle$$을 두 가지 방식으로 계산할 수 있다. 우선 둘째 변수의 linearity를 사용하면, 
 
 $$\langle v,Lv\rangle=\langle v,\lambda v\rangle=\lambda\lVert v\rVert^2$$
@@ -147,8 +122,7 @@ $$\langle Lv,v\rangle=\langle\lambda v,v\rangle=\bar\lambda\lVert v\rVert^2$$
 $$\lVert v\rVert^2=\langle Lv,Lv\rangle=\langle\lambda v,\lambda v\rangle=\bar\lambda\lambda\lVert v\rVert^2=\lvert\lambda\rvert^2\lVert v\rVert^2$$
 
 이고, $$\lVert v\rVert^2>0$$이므로 $$\lvert\lambda\rvert^2=1$$, 즉 $$\lvert\lambda\rvert=1$$이다.
-
-</details>
+:::
 
 복소 스펙트럼 정리는 실수판 ([§스펙트럼 정리, ⁋정리 5](/ko/math/linear_algebra/spectral_theorem#thm5))을 특수한 경우로 포함한다. 즉, 실수symmetric matrix $$A$$는 성분이 실수이므로 복소행렬로 보면 $$A^\ast=\bar A^t=A^t=A$$가 되어 복소수 상에서도 self-adjoint이고, 따라서 [명제 7](#prop7)에 의하여 그 고윳값은 모두 실수이기 때문이다.  
 

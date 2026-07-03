@@ -24,23 +24,17 @@ published: false
 
 거리공간 위의 사상이 두 점 사이의 거리를 일정 비율 이상으로 줄인다면, 그 사상을 반복 적용할 때 점들이 한곳으로 모일 것이라는 직관은 자연스럽다. 이 직관을 정확히 다듬은 것이 축약사상의 개념이다.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> 거리공간 $$(X, d)$$의 사상 $$T : X \to X$$가 *축약사상<sub>contraction</sub>*이라는 것은, 어떤 상수 $$0 \leq \lambda < 1$$에 대하여 모든 $$x, y$$에서 $$d(T x, T y) \leq \lambda  d(x, y)$$인 것이다.
-
-</div>
+::: 정의 1
+거리공간 $$(X, d)$$의 사상 $$T : X \to X$$가 *축약사상<sub>contraction</sub>*이라는 것은, 어떤 상수 $$0 \leq \lambda < 1$$에 대하여 모든 $$x, y$$에서 $$d(T x, T y) \leq \lambda  d(x, y)$$인 것이다.
+:::
 
 상수 $$\lambda$$를 *축약상수<sub>contraction constant</sub>*라 부른다. 부등식이 모든 점에서 같은 $$\lambda$$로 성립해야 한다는 점, 그리고 $$\lambda$$가 $$1$$보다 *진성으로* 작아야 한다는 점이 핵심이다. 만약 $$\lambda = 1$$만 보장된다면, 즉 $$d(Tx, Ty) \leq d(x, y)$$인 경우에는 $$T$$를 *비확장사상<sub>nonexpansive map</sub>*이라 부르며, 이때는 고정점이 존재하지 않거나 유일하지 않을 수 있다. 예컨대 실직선 위의 평행이동 $$Tx = x + 1$$은 거리를 정확히 보존하지만 고정점이 없다.
 
-<div class="proposition" markdown="1">
+::: 정리 2 (바나흐 고정점 정리)
+완비 거리공간 위의 축약사상 $$T$$는 유일한 고정점 $$x^\ast = T x^\ast$$를 가지며, 임의의 출발점 $$x_0$$에서 시작한 반복 $$x_{n+1} = T x_n$$이 그 고정점으로 수렴한다.
+:::
 
-<ins id="thm2">**정리 2 (바나흐 고정점 정리)**</ins> 완비 거리공간 위의 축약사상 $$T$$는 유일한 고정점 $$x^\ast = T x^\ast$$를 가지며, 임의의 출발점 $$x_0$$에서 시작한 반복 $$x_{n+1} = T x_n$$이 그 고정점으로 수렴한다.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 먼저 연속한 두 항 사이의 거리가 기하급수적으로 줄어듦을 본다. 축약 조건을 반복 적용하면
 
 $$\begin{aligned}
@@ -66,8 +60,7 @@ $$x^\ast = \lim_{n\to\infty} x_{n+1} = \lim_{n\to\infty} T x_n = T\Bigl(\lim_{n\
 $$d(x^\ast, y^\ast) = d(Tx^\ast, Ty^\ast) \leq \lambda  d(x^\ast, y^\ast)$$
 
 이고, $$\lambda < 1$$이므로 $$(1 - \lambda) d(x^\ast, y^\ast) \leq 0$$이 되어 $$d(x^\ast, y^\ast) = 0$$, 곧 $$x^\ast = y^\ast$$이다.
-
-</details>
+:::
 
 위 증명은 고정점의 존재와 유일성뿐 아니라 *수렴 속도*에 대한 정량적 정보까지 준다. 부등식 $$d(x_m, x_n) \leq \lambda^n/(1-\lambda) \cdot d(x_1, x_0)$$에서 $$m \to \infty$$로 보내면
 
@@ -85,11 +78,9 @@ $$y'(t) = f(t, y(t)), \qquad y(t_0) = y_0$$
 
 립시츠 조건이 등장하는 까닭은 다음과 같다. $$f$$가 단지 연속이기만 하면 페아노 정리에 의해 해의 존재는 보장되지만 유일성은 보장되지 않는다. 유일성을 끌어내려면 $$f$$가 둘째 변수에 대해 변하는 정도를 일정하게 제어해야 하는데, 그 제어 조건이 바로 립시츠 조건이다. 이 조건은 미분가능성보다는 약하고 연속성보다는 강한, 중간 세기의 정칙성이다.
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**정의 3**</ins> $$f(t, y)$$가 $$y$$에 대해 *립시츠 조건<sub>Lipschitz condition</sub>*을 만족한다는 것은, 상수 $$L$$이 존재하여 $$\lvert f(t, y_1) - f(t, y_2)\rvert \leq L\lvert y_1 - y_2\rvert$$이 성립하는 것이다.
-
-</div>
+::: 정의 3
+$$f(t, y)$$가 $$y$$에 대해 *립시츠 조건<sub>Lipschitz condition</sub>*을 만족한다는 것은, 상수 $$L$$이 존재하여 $$\lvert f(t, y_1) - f(t, y_2)\rvert \leq L\lvert y_1 - y_2\rvert$$이 성립하는 것이다.
+:::
 
 상수 $$L$$을 *립시츠 상수<sub>Lipschitz constant</sub>*라 부른다. 기하적으로 이 조건은 같은 $$t$$에서 그래프 $$y \mapsto f(t, y)$$의 두 점을 잇는 모든 할선의 기울기가 $$\lvert$$기울기$$\rvert \leq L$$로 균등하게 유계임을 뜻한다. 만약 $$f$$가 둘째 변수에 대해 연속미분가능하고 $$\partial f / \partial y$$가 유계이면, [§[§평균값 정리와 테일러 정리, ⁋정리 3](/ko/math/analysis/mean_value_theorem#thm3)와 테일러 정리, ⁋정리 3](/ko/math/analysis/mean_value_theorem#thm3)에 의해
 
@@ -97,15 +88,11 @@ $$\lvert f(t, y_1) - f(t, y_2)\rvert = \left\lvert \frac{\partial f}{\partial y}
 
 이 성립하므로 ($$L = \sup\lvert \partial f / \partial y\rvert$$), 립시츠 조건은 자동으로 만족된다. 이것이 실제 응용에서 립시츠 조건을 확인하는 가장 흔한 방법이다.
 
-<div class="proposition" markdown="1">
+::: 정리 4 (피카르–린델뢰프)
+$$f$$가 $$(t_0, y_0)$$ 근방에서 연속이고 $$y$$에 대해 립시츠 조건을 만족하면, $$t_0$$의 어떤 닫힌구간 $$I$$ 위에서 초기값 문제의 해가 유일하게 존재한다.
+:::
 
-<ins id="thm4">**정리 4 (피카르–린델뢰프)**</ins> $$f$$가 $$(t_0, y_0)$$ 근방에서 연속이고 $$y$$에 대해 립시츠 조건을 만족하면, $$t_0$$의 어떤 닫힌구간 $$I$$ 위에서 초기값 문제의 해가 유일하게 존재한다.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 미분방정식과 초기 조건을 적분하면, 미적분의 기본정리 ([§미적분의 기본정리, ⁋정리 3](/ko/math/analysis/fundamental_theorem_of_calculus#thm3))에 의해 문제는 적분방정식
 
 $$y(t) = y_0 + \int_{t_0}^t f(s, y(s)) ds$$
@@ -130,8 +117,7 @@ $$\begin{aligned}
 $$\lVert Ty_1 - Ty_2\rVert_\infty \leq L h \lVert y_1 - y_2\rVert_\infty$$
 
 이다. 이제 구간의 반폭 $$h$$를 $$Lh < 1$$이 되도록, 가령 $$h < 1/L$$로 잡으면 $$T$$가 축약상수 $$\lambda = Lh$$인 축약사상이 된다. [정리 2](#thm2)에 의해 $$T$$는 유일한 고정점 $$y \in C(I)$$를 가지며, 이 $$y$$가 초기값 문제의 유일한 해이다.
-
-</details>
+:::
 
 증명에서 구간의 길이를 $$Lh < 1$$이 되도록 줄인 점에 주목하자. 이는 해가 *국소적으로* 존재함만을 보장한다. 즉 초기점 $$t_0$$ 근방의 작은 구간에서만 해가 보장되며, 그 구간이 전 구간으로 확장되는지는 별개의 문제이다. 한편 립시츠 상수가 작거나 구간이 짧을수록 작용소의 축약 효과가 강해 피카르 반복이 빠르게 수렴한다. 다음에서는 이 반복을 실제로 수행해 해를 구하는 예를 본다.
 
@@ -141,9 +127,8 @@ $$\lVert Ty_1 - Ty_2\rVert_\infty \leq L h \lVert y_1 - y_2\rVert_\infty$$
 
 반대로 립시츠 조건이 빠지면 유일성이 어떻게 깨지는지를 명시적인 반례로 본다.
 
-<div class="example" markdown="1">
-
-<ins id="ex5">**예시 5 (유일성의 실패)**</ins> $$y' = \sqrt{\lvert y\rvert}$$, $$y(0) = 0$$을 생각하자. 여기서 $$f(t, y) = \sqrt{\lvert y\rvert}$$는 연속이지만 $$y = 0$$ 근방에서
+::: 예시 5 (유일성의 실패)
+$$y' = \sqrt{\lvert y\rvert}$$, $$y(0) = 0$$을 생각하자. 여기서 $$f(t, y) = \sqrt{\lvert y\rvert}$$는 연속이지만 $$y = 0$$ 근방에서
 
 $$\frac{\lvert f(t, y) - f(t, 0)\rvert}{\lvert y - 0\rvert} = \frac{\sqrt{\lvert y\rvert}}{\lvert y\rvert} = \frac{1}{\sqrt{\lvert y\rvert}} \to \infty \qquad (y \to 0)$$
 
@@ -152,22 +137,17 @@ $$\frac{\lvert f(t, y) - f(t, 0)\rvert}{\lvert y - 0\rvert} = \frac{\sqrt{\lvert
 $$y(t) = \begin{cases} t^2/4, & t \geq 0 \\ 0, & t < 0 \end{cases}$$
 
 도 해이다 ($$t \geq 0$$에서 $$y' = t/2 = \sqrt{t^2/4} = \sqrt{y}$$). 더 나아가 임의의 $$a > 0$$에 대해 $$t \leq a$$에서는 $$0$$이고 $$t > a$$에서는 $$(t - a)^2/4$$인 함수도 모두 해이므로, 해가 무수히 많다. 립시츠 조건의 부재가 유일성을 송두리째 무너뜨림을 보여 준다.
-
-</div>
+:::
 
 ## 응용
 
 존재 구간이 국소적이라는 한계는 우변의 정칙성에 따라 극복되기도 하고 본질적으로 남기도 한다. 다음 명제는 립시츠 조건이 *전역적*으로 성립할 때 해가 전 구간으로 확장됨을 보인다.
 
-<div class="proposition" markdown="1">
+::: 명제 6 (전역 존재)
+$$f(t, y)$$가 띠 영역 $$\lvert t - t_0\rvert \leq a$$, $$y \in \mathbb{R}$$ 전체에서 연속이고 $$y$$에 대해 상수 $$L$$의 전역 립시츠 조건을 만족하면, 초기값 문제의 해가 구간 $$[t_0 - a, t_0 + a]$$ 전체에서 유일하게 존재한다.
+:::
 
-<ins id="prop6">**명제 6 (전역 존재)**</ins> $$f(t, y)$$가 띠 영역 $$\lvert t - t_0\rvert \leq a$$, $$y \in \mathbb{R}$$ 전체에서 연속이고 $$y$$에 대해 상수 $$L$$의 전역 립시츠 조건을 만족하면, 초기값 문제의 해가 구간 $$[t_0 - a, t_0 + a]$$ 전체에서 유일하게 존재한다.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 피카르 반복 $$y_{n+1} = Ty_n$$을 $$y_0 \equiv y_0$$에서 시작하자. 연속한 두 근사의 차를 평가한다. $$M = \sup_{\lvert t - t_0\rvert \leq a}\lvert f(t, y_0)\rvert$$로 두면
 
 $$\lvert y_1(t) - y_0(t)\rvert = \left\lvert \int_{t_0}^t f(s, y_0) ds\right\rvert \leq M \lvert t - t_0\rvert$$
@@ -180,14 +160,12 @@ $$\begin{aligned}
 \end{aligned}$$
 
 을 얻는다. 따라서 $$\lvert t - t_0\rvert \leq a$$에서 $$\lVert y_{n+1} - y_n\rVert_\infty \leq M (La)^{n+1}/(L (n+1)!)$$이고, 우변은 지수급수의 항이라 그 합이 유한하다. 망원합 $$y_n = y_0 + \sum_{k=0}^{n-1}(y_{k+1} - y_k)$$이 상한노름에서 절대수렴하므로 $$y_n$$은 어떤 연속함수 $$y$$로 균등수렴하고, 극한에서 $$y = Ty$$이다. 유일성은 [정리 4](#thm4)의 논법을 구간 전체에서 그뢴발 부등식으로 잇거나, 구간을 길이 $$1/(2L)$$ 이하의 조각으로 나누어 각 조각에서 [정리 2](#thm2)를 적용해 얻는다.
-
-</details>
+:::
 
 [명제 6](#prop6)의 핵심은 립시츠 상수 $$L$$이 $$y$$의 크기에 무관하게 *하나의 상수*로 잡힌다는 데 있다. 그러면 피카르 반복의 차가 $$L^n / n!$$의 빠르기로 줄어 구간 길이에 관계없이 수렴하므로, [정리 4](#thm4)에서 구간을 줄일 필요가 없어진다. 전역 립시츠 조건이 성립하는 가장 중요한 경우가 우변이 $$y$$에 대해 선형인 방정식이다. 실제로 $$y' = a(t) y + b(t)$$에서 $$a, b$$가 닫힌구간 $$I$$에서 연속이면 $$\lvert a(t)\rvert$$이 $$I$$에서 유계라 그 상한 $$L$$이 전역 립시츠 상수가 되고, [명제 6](#prop6)에 의해 해가 $$I$$ 전체에서 유일하게 존재한다. 가령 $$y' = -2t y$$의 해 $$e^{-t^2}$$처럼 선형 방정식의 해는 정의 구간 밖으로 폭발하지 않고 끝까지 살아남는다. 반면 비선형 방정식에서는 해가 유한 시간에 발산할 수 있다.
 
-<div class="example" markdown="1">
-
-<ins id="ex7">**예시 7 (유한 시간 폭발)**</ins> $$y' = y^2$$, $$y(0) = 1$$을 보자. 여기서 $$f(t, y) = y^2$$는 임의의 유계 영역에서는 립시츠 조건을 만족하므로 국소해가 존재하고, 변수분리로
+::: 예시 7 (유한 시간 폭발)
+$$y' = y^2$$, $$y(0) = 1$$을 보자. 여기서 $$f(t, y) = y^2$$는 임의의 유계 영역에서는 립시츠 조건을 만족하므로 국소해가 존재하고, 변수분리로
 
 $$\int \frac{dy}{y^2} = \int dt  \Longrightarrow  -\frac{1}{y} = t + C$$
 
@@ -196,31 +174,25 @@ $$\int \frac{dy}{y^2} = \int dt  \Longrightarrow  -\frac{1}{y} = t + C$$
 $$y(t) = \frac{1}{1 - t}$$
 
 이다. 이 해는 $$t \to 1^-$$에서 $$+\infty$$로 발산하므로 구간 $$[0, 1)$$ 너머로 연장되지 않는다. $$\partial f / \partial y = 2y$$가 $$y$$와 함께 무한히 커져 전역 립시츠 조건이 깨지는 것이 폭발의 원인이며, [정리 4](#thm4)의 국소성이 본질적임을 보여 준다.
-
-</div>
+:::
 
 마지막으로 피카르 정리가 직접 주는 정량적 귀결 하나를 정리해 둔다. 증명의 오차 평가를 그대로 옮긴 것이다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop8">**명제 8 (반복의 오차)**</ins> [정리 4](#thm4)의 가정 아래, 피카르 반복 $$y_n = T^n y_0$$과 참해 $$y$$ 사이에는
+::: 명제 8 (반복의 오차)
+[정리 4](#thm4)의 가정 아래, 피카르 반복 $$y_n = T^n y_0$$과 참해 $$y$$ 사이에는
 
 $$\lVert y_n - y\rVert_\infty \leq \frac{(Lh)^n}{1 - Lh} \lVert y_1 - y_0\rVert_\infty$$
 
 이 성립한다. 여기서 $$h$$는 [정리 4](#thm4)에서 잡은 구간의 반폭이고 $$Lh < 1$$이다.
+:::
 
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 작용소 $$T$$는 $$C(I)$$ 위에서 축약상수 $$\lambda = Lh < 1$$의 축약사상이고 $$y$$는 그 고정점이므로, [정리 2](#thm2)의 증명에서 얻은 선험적 오차 평가
 
 $$d(x_n, x^\ast) \leq \frac{\lambda^n}{1 - \lambda} d(x_1, x_0)$$
 
 을 $$x_n = y_n$$, $$x^\ast = y$$, $$\lambda = Lh$$에 그대로 적용하면 주장하는 부등식을 얻는다.
-
-</details>
+:::
 
 이 평가 덕분에 피카르 반복은 단순한 존재 증명의 도구를 넘어, 정해진 오차 안에서 해를 근사하는 실제 계산법이 된다. $$Lh$$가 작을수록 한 번의 반복으로 오차가 더 크게 줄어든다.
 

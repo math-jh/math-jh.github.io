@@ -27,21 +27,18 @@ $$A=(A_1\;A_2\;\cdots\;A_n)\cong (A_1, A_2, \cdots, A_n)\cong \bigl((A_{11}, A_{
 
 을 통해 동일하게 취급하는 것과 같다.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> $$\mathbb{K}$$-벡터공간 $$V,W$$에 대하여, 다음의 함수
+::: 정의 1
+$$\mathbb{K}$$-벡터공간 $$V,W$$에 대하여, 다음의 함수
 
 $$f:\underbrace{V\times\cdots\times V}_\text{ {\footnotesize $n$} times}\rightarrow W$$
 
 가 *multilinear map<sub>다중선형사상</sub>*이라는 것은 $$f$$가 각각의 성분에 대해 linear인 것이다.
-
-</div>
+:::
 
 특별히 $$n=2$$인 경우, $$f$$를 *bilinear*하다고 부른다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**정의 2**</ins> 두 $$\mathbb{K}$$-벡터공간 $$V,W$$와 multilinear map 
+::: 정의 2
+두 $$\mathbb{K}$$-벡터공간 $$V,W$$와 multilinear map 
 
 $$f: \underbrace{V\times\cdots\times V}_\text{ {\footnotesize $n$} times}\rightarrow W$$
 
@@ -50,19 +47,14 @@ $$f: \underbrace{V\times\cdots\times V}_\text{ {\footnotesize $n$} times}\righta
 $$f(v_1,\ldots, v_i, \ldots, v_j,\ldots, v_n)=-f(v_1,\ldots, v_j,\ldots, v_i,\ldots, v_n)$$
 
 이 성립한다면 $$f$$를 *alternating multilinear map<sub>교대다중선형사상</sub>*이라 부른다.
-
-</div>
+:::
 
 위와 같이 multilinear map $$f:V\times\cdots\times V\rightarrow W$$이 주어졌다 하자. 그럼 $$f$$가 *antisymmetric*이라는 것은 임의의 $$v_1,\ldots, v_n$$와 임의의 $$i\neq j$$에 대하여, 만일 $$v_i=v_j$$이면 $$f(v_1,\ldots, v_n)=0$$인 것이다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop3">**명제 3**</ins> Multilinear map $$f:V\times\cdots\times V\rightarrow W$$가 alternating인 것은 $$f$$가 antisymmetric인 것과 동치이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 명제 3
+Multilinear map $$f:V\times\cdots\times V\rightarrow W$$가 alternating인 것은 $$f$$가 antisymmetric인 것과 동치이다.
+:::
+::: 증명
 우선 $$f$$가 alternating이라 가정하자. 그럼 임의의 $$v_i=v_j$$를 만족하는 임의의 $$v_1,\ldots, v_n\in V$$에 대하여
 
 $$\begin{aligned}f(v_1,\ldots,v_i,\ldots, v_j,\ldots, v_n)&=f(v_1\ldots, v_j,\ldots,v_i,\ldots, v_n)\\&=-f(v_1,\ldots, v_i,\ldots, v_j,\ldots, v_n)\end{aligned}$$
@@ -78,18 +70,15 @@ $$f(v_1,\ldots, v_i+v_j,\ldots, v_i+v_j,\ldots, v_n)=0$$
 $$\begin{aligned}0&=f(v_1,\ldots, v_i,\ldots, v_i,\ldots, v_n)+f(v_1,\ldots, v_i,\ldots, v_j,\ldots,v_n)\\&\phantom{==}+f(v_1,\ldots, v_j,\ldots, v_i,\ldots,v_n)+f(v_1,\ldots, v_j,\ldots, v_j,\ldots, v_n)\end{aligned}$$
 
 이 되고, 다시 $$f$$는 antisymmetric이므로 $$v_i, v_j$$가 각각 두 번 나오는 첫째 항, 마지막 항이 $$0$$이 된다. 이로부터 원하는 결론을 얻는다.
-
-</details>
+:::
 
 특히, $$f$$가 변수 $$n$$개의 alternating linear map이고 $$v_1,\ldots, v_n$$ 중 하나가 다른 $$n-1$$개의 벡터들의 일차결합이라 가정하자. 그럼 multilinearity를 적용한 후, 위의 명제를 적용하면 $$f(v_1,\ldots, v_n)=0$$임을 알 수 있다. 
 
 이제 우리는 행렬식을 정의할 수 있게 되었다.
 
-<div class="definition" markdown="1">
-
-<ins id="def4">**정의 4**</ins> $$D(e_1,\ldots, e_n)=1$$을 만족하는 alternating multilinear map $$D:(\mathbb{K}^n)^n\rightarrow \mathbb{K}$$를 *행렬식<sub>determinant</sub>*이라 부른다. 
-
-</div>
+::: 정의 4
+$$D(e_1,\ldots, e_n)=1$$을 만족하는 alternating multilinear map $$D:(\mathbb{K}^n)^n\rightarrow \mathbb{K}$$를 *행렬식<sub>determinant</sub>*이라 부른다. 
+:::
 
 우리는 아직 행렬식이 존재한다는 것도, 유일하다는 것도 보이지 않았기에 $$\det$$ 대신 $$D$$라는 표기를 사용했다. 다음 글에서 행렬식의 계산을 소개하며 이를 증명하고, 이후부터 표준적인 표기법 $$\det$$를 사용한다.
 

@@ -28,13 +28,11 @@ In this post, we treat the definition of intersection numbers and their basic pr
 
 Our starting point is a definition using the Euler characteristic, which may appear somewhat abstract. The advantage of this definition is that invariance under linear equivalence follows immediately, and we will verify right after the definition that it actually counts intersection points.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> For two divisors $$C, D$$ on a smooth surface $$S$$, the *intersection number* $$C \cdot D$$ is defined as follows.
+::: Definition 1
+For two divisors $$C, D$$ on a smooth surface $$S$$, the *intersection number* $$C \cdot D$$ is defined as follows.
 
 $$C \cdot D = \rchi(\mathcal{O}_S(C + D)) - \rchi(\mathcal{O}_S(C)) - \rchi(\mathcal{O}_S(D)) + \rchi(\mathcal{O}_S)$$
-
-</div>
+:::
 
 To examine the geometric meaning of this, suppose $$C$$ and $$D$$ are effective divisors defined by global sections $$s \in H^0(\mathcal{O}(C))$$, $$t \in H^0(\mathcal{O}(D))$$, respectively. Then their common zero locus is $$C \cap D$$, and the following exact sequence holds.
 
@@ -54,15 +52,13 @@ $$\rchi(\mathcal{O}_{C \cap D}) = \sum_{p \in C \cap D} (C \cdot D)_p$$
 
 holds, where $$(C \cdot D)_p$$ is the local intersection multiplicity at $$p$$. To prevent $$C \cap D$$ from being a curve instead of a finite set of points in this formula (for instance, in the situation $$C=D$$), we assume that $$C$$ and $$D$$ have no common component.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**Proposition 2**</ins> The following are properties of the intersection number.
+::: Proposition 2
+The following are properties of the intersection number.
 
 1. *Symmetry.* $$C \cdot D = D \cdot C$$ holds.
 2. *Bilinearity.* $$(aC_1 + bC_2) \cdot D = a(C_1 \cdot D) + b(C_2 \cdot D)$$ holds.
 3. *Linear invariance.* For two linearly equivalent divisors $$C \sim C'$$, we always have $$C \cdot D = C' \cdot D$$.
-
-</div>
+:::
 
 Symmetry is obvious from the intuition shown above, and linear invariance is also almost obvious. What is perhaps least obvious is bilinearity, which is usually explained by Snapper's theorem. By Snapper's theorem, for any coherent sheaf $$\mathcal{F}$$ on a projective variety and line bundles $$L_1, \ldots, L_k$$, the Euler characteristic
 
@@ -74,19 +70,15 @@ is given by a polynomial in $$n_1, \ldots, n_k$$. Then in particular $$\rchi(\ma
 
 We now have all the language needed to extend the Riemann–Roch theorem to surfaces. What we need is the following lemma.
 
-<div class="proposition" markdown="1">
-
-<ins id="lem3">**Lemma 3 (Genus formula)**</ins> For a smooth irreducible curve $$D$$ on a smooth projective surface $$S$$,
+::: Lemma 3 (Genus formula)
+For a smooth irreducible curve $$D$$ on a smooth projective surface $$S$$,
 
 $$2g(D) - 2 = D^2 + D \cdot K_S$$
 
 holds.
+:::
 
-</div>
-
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proof
 By the adjunction formula ([§Canonical Bundle, ⁋Proposition 9](/en/math/algebraic_varieties/canonical_bundle#prop9)),
 
 $$\omega_D \cong (\omega_S \otimes \mathcal{O}_S(D))\vert_D$$
@@ -100,24 +92,19 @@ holds. We previously derived from [§The Riemann–Roch Theorem for Curves, ⁋P
 $$2g(D) - 2 = D \cdot K_S + D^2$$
 
 is obtained.
-
-</details>
+:::
 
 Then the Riemann–Roch theorem on a surface is given as follows.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**Proposition 4 (Riemann–Roch for surfaces)**</ins> For a divisor $$D$$ on a smooth projective surface $$S$$,
+::: Proposition 4 (Riemann–Roch for surfaces)
+For a divisor $$D$$ on a smooth projective surface $$S$$,
 
 $$\rchi(\mathcal{O}_S(D)) = \frac{1}{2} D \cdot (D - K_S) + \rchi(\mathcal{O}_S)$$
 
 holds.
+:::
 
-</div>
-
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proof
 First consider the case where $$D$$ is a smooth irreducible effective divisor. From the short exact sequence
 
 $$0 \to \mathcal{O}_S \to \mathcal{O}_S(D) \to \mathcal{O}_D(D) \to 0$$
@@ -157,14 +144,12 @@ holds. On the other hand, since $$D+nH$$ is an effective divisor, the desired eq
 $$\rchi(\mathcal{O}(D)) = \frac{1}{2}D\cdot(D-K_S) + \rchi(\mathcal{O}_S)$$
 
 is obtained.
-
-</details>
+:::
 
 As in the case of curves, if $$D$$ is sufficiently "positive" then $$h^1$$ and $$h^2$$ vanish and $$\rchi(\mathcal{O}_S(D)) = h^0(S, \mathcal{O}_S(D))$$. This is closely related to the notion of ampleness defined in ([§Linear Systems, ⁋Definition 10](/en/math/algebraic_varieties/linear_systems#def10)).
 
-<div class="example" markdown="1">
-
-<ins id="ex5">**Example 5 ($$\mathbb{P}^2$$)**</ins> Fixing the hyperplane class $$H$$ in $$\mathbb{P}^2$$, we know
+::: Example 5 ($$\mathbb{P}^2$$)
+Fixing the hyperplane class $$H$$ in $$\mathbb{P}^2$$, we know
 
 $$K_{\mathbb{P}^2} = -3H, \qquad \rchi(\mathcal{O}_{\mathbb{P}^2}) = 1$$
 
@@ -173,12 +158,10 @@ $$K_{\mathbb{P}^2} = -3H, \qquad \rchi(\mathcal{O}_{\mathbb{P}^2}) = 1$$
 $$\rchi(\mathcal{O}_{\mathbb{P}^2}(d)) = \frac{1}{2}dH \cdot (dH + 3H) + 1 = \frac{1}{2}d(d+3) + 1$$
 
 holds. That this actually holds is the result of [§Cohomology of Projective Space, ⁋Corollary 3](/en/math/algebraic_varieties/cohomology_of_projective_spaces#cor3). In particular, for $$d \ge 0$$ we know $$h^0 = \binom{d+2}{2}$$ and $$h^1 = h^2 = 0$$, so this provides a direct example of the vanishing of $$h^1, h^2$$ mentioned above.
+:::
 
-</div>
-
-<div class="example" markdown="1">
-
-<ins id="ex6">**Example 6 (Blow-up of $$\mathbb{P}^2$$)**</ins> We now consider the blow-up $$\pi: \widetilde{\mathbb{P}}^2 \to \mathbb{P}^2$$ of $$\mathbb{P}^2$$ at a point $$p$$. By [§Canonical Bundle, ⁋Proposition 12 (Canonical Bundle of a Blow-up)](/en/math/algebraic_varieties/canonical_bundle#prop12), the canonical bundle is given by the formula
+::: Example 6 (Blow-up of $$\mathbb{P}^2$$)
+We now consider the blow-up $$\pi: \widetilde{\mathbb{P}}^2 \to \mathbb{P}^2$$ of $$\mathbb{P}^2$$ at a point $$p$$. By [§Canonical Bundle, ⁋Proposition 12 (Canonical Bundle of a Blow-up)](/en/math/algebraic_varieties/canonical_bundle#prop12), the canonical bundle is given by the formula
 
 $$K_{\widetilde{\mathbb{P}}^2} = \pi^\ast K_{\mathbb{P}^2} + E = -3H + E$$
 
@@ -187,8 +170,7 @@ In $$\mathbb{P}^2$$ the hyperplane class $$H$$ can be chosen to avoid the point 
 $$\rchi(\mathcal{O}_{\widetilde{\mathbb{P}}^2}(dH - kE)) = \frac{1}{2}(dH - kE) \cdot (dH - kE + 3H - E) + 1 = \frac{1}{2}d(d+3) - \frac{1}{2}k(k+1) + 1$$
 
 can be computed.
-
-</div>
+:::
 
 On the other hand, the Riemann–Roch theorem for curves was obtained from the above [Proposition 4](#prop4) by applying [§Serre Duality, ⁋Proposition 4](/en/math/algebraic_varieties/serre_duality#prop4) to replace the $$h^1$$ term with $$h^0$$. In the surface case as well, we can use this to write $$h^2(\mathcal{O}(D)) = h^0(\omega_S(-D))$$, and then the Riemann–Roch formula becomes
 
@@ -196,23 +178,20 @@ $$h^0(\mathcal{O}(D)) - h^1(\mathcal{O}(D)) + h^0(\omega_S(-D)) = \rchi(\mathcal
 
 In general $$h^1(\mathcal{O}(D))$$ is a term that is difficult to compute directly, but if we can assume that this value is zero or sufficiently small, we can show that at least one of $$h^0(\mathcal{O}(D))$$ and $$h^0(\omega_S(-D))$$ is sufficiently large. One powerful tool for this is the following Kodaira vanishing theorem.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop7">**Proposition 7 (Kodaira Vanishing Theorem)**</ins> For a smooth projective variety $$X$$ and an ample line bundle $$L$$,
+::: Proposition 7 (Kodaira Vanishing Theorem)
+For a smooth projective variety $$X$$ and an ample line bundle $$L$$,
 
 $$H^i(X, \omega_X \otimes L) = 0$$
 
 holds for all $$i > 0$$.
-
-</div>
+:::
 
 The full application of the Kodaira vanishing theorem is treated in the next post. To understand the utility of this formula, let us consider two extreme cases. If $$D$$ is sufficiently "positive", i.e., $$D \cdot H$$ is sufficiently large for an ample divisor $$H$$, then $$K_S - D$$ becomes "negative" so that $$h^0(\omega_S(-D)) = 0$$ and Riemann–Roch gives a lower bound for $$h^0$$. Conversely, if $$D$$ is "sufficiently negative" then $$h^0(\mathcal{O}(D)) = 0$$ and we obtain information about $$K_S - D$$. This "symmetry between positive and negative" is a phenomenon created by Serre duality.
 
 The Riemann–Roch calculation for $$\mathbb{P}^2$$ was already covered in [Example 5](#ex5). Here we examine another fundamental example.
 
-<div class="example" markdown="1">
-
-<ins id="ex8">**Example 8 ($$\mathbb{P}^1 \times \mathbb{P}^1$$)**</ins> Consider $$\mathbb{P}^1 \times \mathbb{P}^1$$. The divisor class group of this surface is $$\mathbb{Z} \oplus \mathbb{Z}$$, with the hyperplane classes $$H_1, H_2$$ of each factor as generators. Geometrically, $$H_1$$ is the "horizontal" fibers corresponding to points of the first factor, and $$H_2$$ is the "vertical" fibers corresponding to points of the second factor. Two horizontal fibers are parallel so they do not meet, hence $$H_1^2 = 0$$, and similarly $$H_2^2 = 0$$. On the other hand, a horizontal fiber and a vertical fiber always meet at one point, so $$H_1 \cdot H_2 = 1$$.
+::: Example 8 ($$\mathbb{P}^1 \times \mathbb{P}^1$$)
+Consider $$\mathbb{P}^1 \times \mathbb{P}^1$$. The divisor class group of this surface is $$\mathbb{Z} \oplus \mathbb{Z}$$, with the hyperplane classes $$H_1, H_2$$ of each factor as generators. Geometrically, $$H_1$$ is the "horizontal" fibers corresponding to points of the first factor, and $$H_2$$ is the "vertical" fibers corresponding to points of the second factor. Two horizontal fibers are parallel so they do not meet, hence $$H_1^2 = 0$$, and similarly $$H_2^2 = 0$$. On the other hand, a horizontal fiber and a vertical fiber always meet at one point, so $$H_1 \cdot H_2 = 1$$.
 
 The canonical divisor is $$K = -2H_1 - 2H_2$$, which comes from the canonical divisor $$-2H$$ of $$\mathbb{P}^1$$. Meanwhile, for the Euler characteristic of the structure sheaf, using the Künneth formula,
 
@@ -227,8 +206,7 @@ Here $$D^2 = (aH_1 + bH_2)^2 = 2ab$$, and $$D \cdot K = -2a - 2b$$, so
 $$\rchi(\mathcal{O}(D)) = 1 + \frac{1}{2}(2ab + 2a + 2b) = (a+1)(b+1)$$
 
 is obtained. This coincides with the number of parameters of bihomogeneous polynomials of bidegree $$(a, b)$$. For example, $$D = H_1 + H_2$$ is a curve of $$(1,1)$$-bidegree, with $$\rchi = 4$$, which is consistent with the fact that a $$(1,1)$$-curve on $$\mathbb{P}^1 \times \mathbb{P}^1$$ is equivalent to a conic.
-
-</div>
+:::
 
 ## The Hodge index theorem
 
@@ -236,29 +214,23 @@ For a fixed smooth variety $$X$$, we know that the collection of divisors $$\Pic
 
 Therefore, by collecting divisors and examining their intersection product, we can investigate the multiplicative structure of the cohomology ring. For this purpose, we first define the following.
 
-<div class="definition" markdown="1">
-
-<ins id="def9">**Definition 9**</ins> Two divisors $$D_1, D_2$$ are *numerically equivalent*, written $$D_1 \equiv D_2$$, if for every divisor $$E$$ we have $$D_1 \cdot E = D_2 \cdot E$$. The set of numerical equivalence classes is denoted
+::: Definition 9
+Two divisors $$D_1, D_2$$ are *numerically equivalent*, written $$D_1 \equiv D_2$$, if for every divisor $$E$$ we have $$D_1 \cdot E = D_2 \cdot E$$. The set of numerical equivalence classes is denoted
 
 $$\Num(S) = \Div(S) / \{\text{numerical equivalence}\}$$
 
 and the quadratic form on the real vector space $$\Num(S) \otimes \mathbb{R}$$ induced by the intersection product is called the *intersection form*.
-
-</div>
+:::
 
 The above equivalence relation is nothing other than an equivalence class that regards elements giving the same value when taking intersection products of divisors as the same. In general, numerical equivalence is a weaker relation than linear equivalence, so two numerically equivalent divisors may not be linearly equivalent to each other.
 
 On the other hand, the ample divisor $$H$$ corresponding to an ample line bundle ([§Linear Systems, ⁋Definition 10](/en/math/algebraic_varieties/linear_systems#def10)) plays a special role in the intersection product. This fundamentally stems from the fact that the intersection number of a (very) ample divisor and an effective divisor must be positive, which can be proved by considering the actual intersection of an effective divisor and a very ample divisor when the projective variety is embedded into projective space using the very ample divisor. Using this, we obtain the following.
 
-<div class="proposition" markdown="1">
+::: Proposition 10 (Hodge Index Theorem)
+Fix a smooth projective surface $$S$$ and an ample divisor $$H$$. If a divisor $$D$$ satisfies $$D \cdot H = 0$$ and $$D \not\equiv 0$$, then $$D^2 < 0$$.
+:::
 
-<ins id="prop10">**Proposition 10 (Hodge Index Theorem)**</ins> Fix a smooth projective surface $$S$$ and an ample divisor $$H$$. If a divisor $$D$$ satisfies $$D \cdot H = 0$$ and $$D \not\equiv 0$$, then $$D^2 < 0$$.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proof
 First assume $$D^2 > 0$$. Using [§Cohomology of Projective Space, ⁋Proposition 10](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop10), we can arrange that $$H_n = D + nH$$ is very ample. Then
 
 $$D \cdot H_n = D^2 + n(D \cdot H) = D^2 > 0$$
@@ -290,23 +262,17 @@ holds. Now similarly to the preceding argument, set $$F_n := nD + E'$$; then $$F
 $$F_n^2 = n^2 D^2 + 2n(D \cdot E') + E'^2 = 2n(D \cdot E') + E'^2$$
 
 holds. Since $$D \cdot E' \ne 0$$, by choosing the sign of $$n$$ appropriately and making $$\lvert n \rvert$$ large, we can arrange $$F_n^2 > 0$$. However, since $$F_n \cdot H = 0$$, applying the preceding argument with $$D = F_n$$ would require $$F_n^2 \le 0$$, a contradiction.
-
-</details>
+:::
 
 From this we obtain the following corollary.
 
-<div class="proposition" markdown="1">
+::: Corollary 11
+The intersection form on $$\Num(S) \otimes \mathbb{R}$$ has signature $$(1, \rho - 1)$$.
+:::
 
-<ins id="cor11">**Corollary 11**</ins> The intersection form on $$\Num(S) \otimes \mathbb{R}$$ has signature $$(1, \rho - 1)$$.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proof
 For an ample divisor $$H$$ we have $$H^2 > 0$$, so the intersection form has at least one positive direction. But by [Proposition 10](#prop10), every nonzero direction orthogonal to $$H$$ has negative self-intersection, which completes the proof.
-
-</details>
+:::
 
 That is, there is essentially only one "positive" direction on a surface, and all other directions can be thought of as "negative" in some sense. This result leads to deep consequences in the birational geometry of surfaces, such as the uniqueness of minimal models.
 
@@ -314,13 +280,11 @@ That is, there is essentially only one "positive" direction on a surface, and al
 
 In the case of curves, the genus $$g$$ completely determines the birational equivalence class of the curve. For surfaces the situation is more complicated, because birational equivalence does not preserve all dimensions of cohomology. However, the dimensions of global sections of tensor powers of the canonical bundle are birational invariants, and these values provide essential information about the birational type of the surface.
 
-<div class="definition" markdown="1">
-
-<ins id="def12">**Definition 12**</ins> The *$$m$$-th plurigenus* of a surface $$S$$ is
+::: Definition 12
+The *$$m$$-th plurigenus* of a surface $$S$$ is
 
 $$P_m(S) = h^0(S, \omega_S^{\otimes m})$$
-
-</div>
+:::
 
 Here $$\omega_S$$ is the canonical bundle defined in ([§Canonical Bundle, ⁋Definition 5](/en/math/algebraic_varieties/canonical_bundle#def5)). In particular, for $$m = 1$$, $$P_1(S) = h^0(\omega_S) = p_g(S)$$ is the geometric genus, and the sequence of plurigenera $$\{P_m(S)\}_{m \ge 1}$$ can be said to extend this in some sense. This is an important invariant that determines the birational equivalence class of the surface.
 

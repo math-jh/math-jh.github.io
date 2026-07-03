@@ -17,17 +17,15 @@ weight: 120
 
 우리는 이제 미분의 개념을 도입한다. 더 정확히 말하자면 우리가 생각할 것은 미분형식의 개념으로, 이를 다루기 위해서는 graded algebra가 필요하다. 앞으로 graded algebra의 구조를 주는 abelian group을 $$\Delta$$로 표기하기로 한다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> Abelian group $$(\Delta, +, 0)$$에 대하여, 함수 $$\varepsilon : \Delta \times \Delta \to \{ \pm 1 \}$$가 다음의 세 조건을 만족한다 하자. 
+::: 정의 1
+Abelian group $$(\Delta, +, 0)$$에 대하여, 함수 $$\varepsilon : \Delta \times \Delta \to \{ \pm 1 \}$$가 다음의 세 조건을 만족한다 하자. 
 
 - $$\varepsilon(\alpha + \alpha', \beta) = \varepsilon(\alpha, \beta)\varepsilon(\alpha', \beta)$$  
 - $$\varepsilon(\alpha, \beta + \beta') = \varepsilon(\alpha, \beta)\varepsilon(\alpha, \beta')$$  
 - $$\varepsilon(\beta, \alpha) = \varepsilon(\alpha, \beta)$$
 
 이 때, $$\varepsilon$$을 *commutation factor*라 부른다. 
-
-</div>
+:::
 
 그럼 특히 $$\varepsilon(2.\alpha, \beta) = \varepsilon(\alpha, 2.\beta) = 1$$이다.
 
@@ -49,15 +47,13 @@ $$E \otimes_A E' \to E'', \qquad F \otimes_A E' \to F'', \qquad E \otimes_A F' \
 
 이제 다음을 정의한다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**정의 2**</ins> 위의 상황에 더해 commutation factor $$\varepsilon: \Delta \times \Delta \to \{ \pm 1 \}$$이 주어졌다 하자. 그럼 $$(E, E', E'')$$에서 $$(F, F', F'')$$로 가는 degree $$\delta$$의 *$$(A, \varepsilon)$$-derivation<sub>$(A,\varepsilon)$-미분</sub>* 혹은 간단히 *$$\varepsilon$$-derivation*은 다음의 조건 
+::: 정의 2
+위의 상황에 더해 commutation factor $$\varepsilon: \Delta \times \Delta \to \{ \pm 1 \}$$이 주어졌다 하자. 그럼 $$(E, E', E'')$$에서 $$(F, F', F'')$$로 가는 degree $$\delta$$의 *$$(A, \varepsilon)$$-derivation<sub>$(A,\varepsilon)$-미분</sub>* 혹은 간단히 *$$\varepsilon$$-derivation*은 다음의 조건 
 
 $$d''(xx') = (dx)x' + \varepsilon(\delta, \deg(x))x(d'x')$$
 
 을 만족하는 degree $$\delta$$ graded $$A$$-module homomorphism들의 triple $$d: E \rightarrow F$$, $$d': E' \rightarrow F'$$, $$d'': E'' \rightarrow F''$$이다. 만일 $$\varepsilon$$이 항상 $$1$$이 되어, 위의 식에서 $$\varepsilon$$을 없앨 수 있다면 $$(d,d',d'')$$를 간단히 *derivation*이라 부른다. 
-
-</div>
+:::
 
 위의 정의에서 혼동을 피하기 위해서는 각 항들이 어디에 속하는지, 가령 우변의 $$(dx)x'$$는 $$dx\in F$$와 $$x'\in E'$$를 $$\lambda_1$$에 의해 곱하여 얻은 $$F''$$의 원소라는 것 등을 살펴보는 것도 좋다. 그러나 실제로는 우리는 다음과 같은 특별한 두 경우에 관심이 있다.
 
@@ -132,30 +128,26 @@ $$[x,y]_\varepsilon=xy-\varepsilon(\deg(x),\deg(y))yx$$
 
 으로 정의하자. 그럼 이를 통해 $$G=\End_{\bgr_\Delta \Alg{A}^3}(E, E', E'')$$에서의 $$\varepsilon$$-bracket을 정의할 수 있다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop3">**명제 3**</ins> $$d_1, d_2$$를 $$(E, E', E'')$$ 위의 $$\varepsilon$$-derivation들이라 하자. 각각의 degree를 $$\delta_1$$, $$\delta_2$$라 하면, 이들의 $$\varepsilon$$-bracket
+::: 명제 3
+$$d_1, d_2$$를 $$(E, E', E'')$$ 위의 $$\varepsilon$$-derivation들이라 하자. 각각의 degree를 $$\delta_1$$, $$\delta_2$$라 하면, 이들의 $$\varepsilon$$-bracket
 
 $$[d_1, d_2]_\varepsilon = d_1 \circ d_2 - \varepsilon_{\delta_1, \delta_2} \, d_2 \circ d_1$$
 
 은 degree $$\delta_1 + \delta_2$$를 갖는 또 다른 $$\varepsilon$$-derivation이 된다. 특히, 만일 $$d$$가 degree $$\delta$$를 갖는 $$\varepsilon$$-derivation이고, $$\varepsilon_{\delta, \delta} = -1$$이라면, $$d^2 = d \circ d$$는 derivation이다.
-
-</div>
+:::
 
 이에 대한 증명은 앞에서 계산한 $$(d_2\circ d_1)(xx')$$의 전개식을 사용하면 자명하다. 
 
 그럼 특히 $$\Delta=\mathbb{Z}$$인 경우로 한정지으면, 위의 명제는 다음의 따름정리를 갖는다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="cor4">**따름정리 4**</ins> $$\Delta = \mathbb{Z}$$라 하자. 이때 다음이 성립한다.
+::: 따름정리 4
+$$\Delta = \mathbb{Z}$$라 하자. 이때 다음이 성립한다.
 
 1. Antiderivation의 제곱은 derivation이다.  
 2. 두 derivation의 bracket은 derivation이다.  
 3. antiderivation과 짝수 차수 derivation의 bracket은 antiderivation이다.  
 4. $$d_1$$, $$d_2$$가 antiderivation이면, $$d_1 d_2 + d_2 d_1$$은 derivation이다.
-
-</div>
+:::
 
 한편, polynomial algebra 위에 정의된 편미분을 보면 이들은 임의의 $$i,j$$에 대하여 $$\partial_i\partial_j=\partial_j\partial_i$$를 만족한다. 이제 일반적인 미분연산자처럼 $$D=\partial_i+\partial_j$$를 적고, $$D^2$$를 생각하면 이는
 
@@ -167,9 +159,8 @@ $$D^2=\partial_i^2+2\partial_i\partial_j+\partial_j^2$$
 
 와 같이 적을 수도 있다. 다음 명제는 이를 더욱 일반화한 것이다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**명제 5**</ins> 위 가정과 표기 아래에서, 미지수 $$T_1, \dots, T_n, T_1', \dots, T_n'$$에 대한 다항식 
+::: 명제 5
+위 가정과 표기 아래에서, 미지수 $$T_1, \dots, T_n, T_1', \dots, T_n'$$에 대한 다항식 
 $$F \in A[\x_1, \dots, \x_k]$$가 주어졌다고 하자. 즉 $$F(T)$$, $$F(T')$$는 각각
 
 $$F(T) = F(T_1, \dots, T_n), \qquad F(T') = F(T_1', \dots, T_n')$$
@@ -189,21 +180,16 @@ $$P(T + T') = \sum_i Q_i(T) R_i(T')$$
 $$P(D)(x x') = \sum_i (Q_i(D) x)(R_i(D) x')$$
 
 이 성립한다. 
-
-</div>
+:::
 
 ## $$A$$-대수의 미분
 
 이제 우리는 [정의 2](#def2) 이후 다뤘던 두 가지 특별한 경우 중 두 번째 경우를 살펴본다. 즉 $$\Delta$$-graded $$A$$-algebra $$E$$와 graded $$A$$-module $$F$$, 그리고 두 개의 곱셈 $$E\otimes_AF \rightarrow F$$와 $$F\otimes_AE \rightarrow F$$가 주어졌다 하자. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop6">**명제 6**</ins> Degree $$\delta$$의 $$\varepsilon$$-derivation $$d:E \to F$$에 대하여, $$\ker(d)$$는 $$E$$의 graded subalgebra이며, 만약 $$E$$가 $$1$$을 갖는다면 $$1 \in \ker(d)$$이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 명제 6
+Degree $$\delta$$의 $$\varepsilon$$-derivation $$d:E \to F$$에 대하여, $$\ker(d)$$는 $$E$$의 graded subalgebra이며, 만약 $$E$$가 $$1$$을 갖는다면 $$1 \in \ker(d)$$이다.
+:::
+::: 증명
 우선 $$\ker(d)$$가 $$E$$의 $$A$$-submodule인 것은 자명하므로, $$\ker(d)$$가 곱셈에 대해 닫혀있다는 것만 보이면 된다. 임의의 homogeneous $$x, y \in \ker(d)$$에 대하여,
 
 $$d(xy) = (dx)y + \varepsilon(\delta, \deg(x))x(dy) = 0$$
@@ -215,24 +201,19 @@ $$d(xy) = (dx)y + \varepsilon(\delta, \deg(x))x(dy) = 0$$
 $$d(1) = d(1 \cdot 1) = (d1) \cdot 1 + \varepsilon_{\delta, 0} \cdot 1 \cdot (d1) = d1 + d1 = 2d1$$
 
 이 되어, $$d(1) = 0$$임을 알 수 있다.
-
-</details>
+:::
 
 따라서 만일 $$d_1,d_2$$가 $$E$$에서 $$F$$로의 degree $$\delta$$ $$\varepsilon$$-derivation이고 이들이 $$A$$의 algebra로서의 generator에서 그 값이 모두 같다면 $$d_1=d_2$$여야 한다. 한편 역원에 대해서는 다음이 성립한다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop7">**명제 7**</ins> $$E$$가 $$1$$을 갖는 $$\Delta$$-graded $$A$$-algebra라 하고, degree $$\delta$$의 $$\varepsilon$$-derivation $$d:E \to F$$를 생각하자. 만일 $$x$$가 $$E$$의 invertible homogeneous element라면, 그 역원 $$x^{-1}$$에 대하여 다음의 식
+::: 명제 7
+$$E$$가 $$1$$을 갖는 $$\Delta$$-graded $$A$$-algebra라 하고, degree $$\delta$$의 $$\varepsilon$$-derivation $$d:E \to F$$를 생각하자. 만일 $$x$$가 $$E$$의 invertible homogeneous element라면, 그 역원 $$x^{-1}$$에 대하여 다음의 식
 
 $$d(x^{-1}) = -\varepsilon_{\delta, \deg(x)} x^{-1}(d(x))x^{-1}
 = -\varepsilon_{\delta, \deg(x)} (d(x)) x^{-2}$$
 
 이 성립한다. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 [명제 6](#prop6)에 의해 $$d(1) = 0$$이므로,
 
 $$0 = d(xx^{-1}) = d(x))x^{-1} + \varepsilon_{\delta, \deg(x)}x(d(x^{-1})$$
@@ -247,18 +228,13 @@ $$d(x^{-1}) = -\varepsilon_{\delta, \deg(x)} x^{-1}(d(x))x^{-1}.
 $$
 
 을 얻는다. 또한 $$x^{-1}$$의 차수는 $$-\deg(x)$$인 것을 이용하여 $$d(x^{-1}x)$$를 계산하면 둘째 등식을 얻는다. 
+:::
 
-</details>
+::: 명제 8
+어떤 $$A$$-algebra $$E$$가 integral domain이라 하고, 그 field of fraction $$K=\Frac E$$를 생각하자. 임의의 $$K$$-vector space $$F$$를 $$E$$-module로 보아 $$A$$-derivation $$d:E \rightarrow F$$를 생각하면, $$d$$는 유일한 방식으로 $$K$$에서 $$F$$로의 $$A$$-derivation으로 확장된다. 
+:::
 
-<div class="proposition" markdown="1">
-
-<ins id="prop8">**명제 8**</ins> 어떤 $$A$$-algebra $$E$$가 integral domain이라 하고, 그 field of fraction $$K=\Frac E$$를 생각하자. 임의의 $$K$$-vector space $$F$$를 $$E$$-module로 보아 $$A$$-derivation $$d:E \rightarrow F$$를 생각하면, $$d$$는 유일한 방식으로 $$K$$에서 $$F$$로의 $$A$$-derivation으로 확장된다. 
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 임의의 derivation $$d:E \rightarrow f$$가 주어졌다 하고, $$d$$를 $$K$$ 위로 확장한 $$\bar{d}$$가 존재한다면, [명제 7](#prop7)을 적용하여 다음의 식
 
 $$\bar{d}(u/v) = v^{-1} d(u) - v^{-2} u\, d(v)$$
@@ -284,8 +260,7 @@ $$v v' d(u) - u\, v\, d(v') = v v' d(u') - u'\, v'\, d(v)$$
 $$v' d(u) - v^{-1} u\, d(v) = v' d(u') - v'^{-1} u'\, d(v')$$
 
 이다. 따라서 정의는 $$F$$의 원소 $$u/v$$의 표현에 무관하게 잘 정의되어 있다. 이제 $$\bar{d}$$가 실제로 $$K$$에서 $$F$$로의 $$A$$-derivation의 조건을 ㅁ낮곻나다는 것은 단순한 계산이다. 
-
-</details>
+:::
 
 다음 명제에서, 표기의 편의를 위해 임의의 degree $$\delta$$ $$\varepsilon$$-derivation $$d:A \rightarrow E$$에 대하여 
 
@@ -293,51 +268,41 @@ $$Z_\varepsilon=\{a\in A\mid \text{$xa_d=\varepsilon(\deg(a),\deg(x))a_dx$ for a
 
 으로 정의하자. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop9">**명제 9**</ins>  $$A$$가 unital graded associative $$A$$-algebra이고 $$E$$가 graded $$(A, A)$$-bimodule이라 하자. 이제 $$d: A \to E$$가 degree $$\delta$$의 $$\varepsilon$$-derivation이고, $$a$$가 degree $$\alpha$$의 $$Z_\varepsilon$$의 homogeneous element라 하자. 그러면 morphism
+::: 명제 9
+ $$A$$가 unital graded associative $$A$$-algebra이고 $$E$$가 graded $$(A, A)$$-bimodule이라 하자. 이제 $$d: A \to E$$가 degree $$\delta$$의 $$\varepsilon$$-derivation이고, $$a$$가 degree $$\alpha$$의 $$Z_\varepsilon$$의 homogeneous element라 하자. 그러면 morphism
 
 $$x \mapsto a (d x)$$
 
 는 degree $$\delta + \alpha$$의 $$\varepsilon$$-derivation이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 주어진 morphism을 $$d'$$로 적으면 이 morphism은 자명하게 $$A$$-linear이다. 이제 $$d'$$가 $$\varepsilon$$-derivation임을 보이기 위해 임의의 degree $$\delta'$$ homogeneous element $$x$$와 임의의 $$y\in A$$에 대하여 
 
 $$\begin{aligned}d'(xy)&=a(dx)y+\varepsilon(\delta, \delta')a(x(dy))\\&=a(dx)y+\varepsilon(\delta, \delta')\varepsilon(\alpha,\delta')xa(dy)\\&=(d'x)y+\varepsilon(\delta+\alpha,\delta')x(d'y)\end{aligned}$$
 
 이므로 $$d'$$는 degree $$\delta + \alpha$$ $$\varepsilon$$-derivation이 된다.
-
-</details>
+:::
 
 한편 $$E$$가 $$\varepsilon$$-bracket이 주어진 $$\Delta$$-graded (associative) $$A$$-algebra라면 이 위에는 자연스러운 $$\varepsilon$$-derivation이 존재한다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def10">**정의 10**</ins> Graded $$A$$-algebra $$E$$의 homogeneous element $$z\in E$$에 대하여, 다음의 morphism 
+::: 정의 10
+Graded $$A$$-algebra $$E$$의 homogeneous element $$z\in E$$에 대하여, 다음의 morphism 
 
 $$x\mapsto [z,x]_\varepsilon$$
 
 을 $$\ad_\varepsilon(z)$$으로 적는다. 
-
-</div>
+:::
 
 그럼 다음이 성립한다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop11">**명제 11**</ins>  $$E$$가 graded $$A$$-algebra라 하자. 
+::: 명제 11
+ $$E$$가 graded $$A$$-algebra라 하자. 
 
 1. 임의의 $$\varepsilon$$-derivation $$d : E \rightarrow E$$와 $$E$$의 모든 homogeneous 원소 $$z$$에 대하여 $${[d, \ad(a)]_\varepsilon = \ad(dz)}$$이 성립한다. 
 2. 만일 $$A$$가 associative라면, $$\ad(z)$$는 $$A$$의 $$\varepsilon$$-derivation이며, 그 degree는 $$\deg(z)$$이다.
-</div>
+:::
 
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 1. $$d$$가 degree $$\delta$$ $$\varepsilon$$-derivation이라 하고, $$\zeta = \deg(z)$$라고 하자. 이제 $$f = [d, \ad(z)]_\varepsilon$$라 하면, 모든 degree $$\xi$$ homogeneous element $$x \in A$$에 대해, 
 
     $$\begin{aligned}f(x)&=d(z x - \varepsilon(\zeta, \xi) x z) - \varepsilon(\delta, \zeta) (z (dx) - \varepsilon(\zeta, \delta+\xi) (dx) z) \\&= d(z x) - \varepsilon(\zeta, \xi) d(x z) - \varepsilon(\delta, \zeta) z (dx) + \varepsilon(\zeta,2.\delta+\xi) d(x) z \\&=(dz)x+\varepsilon(\delta, \zeta)z(dx)-\varepsilon(\zeta,\xi)((dx)z+\varepsilon(\delta, \xi)x(dz))- \varepsilon(\delta, \zeta) z (dx) + \varepsilon(\zeta,2.\delta+\xi) (dx) z\\&=(dz)x+\varepsilon(\delta,\zeta)z(dx)-\varepsilon(\zeta,\xi)(dx)z-\varepsilon(\delta+\zeta,\xi)x(dz)-\varepsilon(\delta,\zeta)z (dx)+\varepsilon(\zeta,\xi)(dx)z\\&=(dz)x-\varepsilon(\delta+\zeta,\xi)x(dz)=[dz,x]_\varepsilon=\ad_\varepsilon(dz)(x)\end{aligned}$$
@@ -348,22 +313,19 @@ $$x\mapsto [z,x]_\varepsilon$$
     $$\begin{aligned}\ad(z)(x y) &= z(x y) - \varepsilon(\zeta, \xi + \eta)(x y) z \\&= (z x) y - \varepsilon(\zeta, \xi) x z y + \varepsilon(\zeta, \xi) x z y - \varepsilon(\zeta, \xi + \eta) x y z \\&= (ax-\varepsilon(\zeta,\xi xz)y+\varepsilon(zeta,\xi)x(ay-\varepsilon(\zeta,\eta)ya)\\&=\ad(z)(x) \cdot y + \varepsilon(\zeta, \xi) x \cdot \ad(z)(y)\end{aligned}$$
 
     이다.
-
-</details>
+:::
 
 따라서, $$E$$가 associative graded $$A$$-algebra라면 [정의 10](#def10)을 통해 $$E$$의 임의의 homogeneous가 $$E$$에서 자기 자신으로의 $$\varepsilon$$-derivation을 정의하며, 우리는 이를 *inner $$\varepsilon$$-derivation*이라 부른다. 
 
 이것이 성립할 경우, 위의 식에서 $$d$$를 inner $$\varepsilon$$-derivation으로 대체해주면 다음 따름정리를 얻는다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="cor12">**따름정리 12**</ins> Associative graded algebra $$E$$의 두 homogeneous 원소 $$x,y$$에 대해 다음의 식
+::: 따름정리 12
+Associative graded algebra $$E$$의 두 homogeneous 원소 $$x,y$$에 대해 다음의 식
 
 $${[\ad_\varepsilon(x), \ad_\varepsilon(y)]_\varepsilon = \ad_\varepsilon([x,y]_\varepsilon)}$$
 
 이 항상 성립한다. 
-
-</div>
+:::
 
 또한, 위의 따름정리의 등식은 임의의 homogeneous $$z\in E$$에 대해 확인함으로써 얻을 수 있으므로, $$x,y,z$$가 각각 degree $$\xi,\eta,\zeta$$의 homogeneous element라 하면 다음의 식
 

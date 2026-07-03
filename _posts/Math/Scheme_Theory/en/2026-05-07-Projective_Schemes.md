@@ -100,15 +100,13 @@ In other words, to describe $$\mathbb{P}^n$$ in a manner similar to the spectrum
 
 In the remainder of this post we follow the process of taking $$\Proj$$ of a graded ring to obtain a projective scheme. To this end we fix some notation.
 
-<div class="remark" markdown="1">
-
+::: remark Remark {#rmk}
 Unless stated otherwise, a graded ring is always assumed to be $$\mathbb{N}_{\geq0}$$-graded. That is, the ring of interest is always of the form
 
 $$A_\bullet=\bigoplus_{i=0}^\infty A_i=A_0\oplus A_1\oplus\cdots$$
 
 Here, since $$A_0$$ is itself a ring, $$A_\bullet$$ can be regarded as a graded $$A_0$$-algebra, and for this reason we call $$A_0$$ the *base ring*. Also, when we occasionally forget the grading structure on $$A_\bullet$$ and regard it as an ordinary ring, we shall simply write $$A$$.
-
-</div>
+:::
 
 Let a graded ring $$A_\bullet$$ be given. Then the subset
 
@@ -118,44 +116,36 @@ is trivially a homogeneous ideal of $$A_\bullet$$. However, if we consider the c
 
 Now, as a set, $$\Proj A_\bullet$$ is defined as follows.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> For a graded ring $$A_\bullet$$, $$\Proj A_\bullet$$ is the set
+::: Definition 1
+For a graded ring $$A_\bullet$$, $$\Proj A_\bullet$$ is the set
 
 $$\Proj A_\bullet =\{\mathfrak{p}\in \Spec A\mid\text{$\mathfrak{p}$ is homogeneous and $A_+\not\subset \mathfrak{p}$}\}$$
-
-</div>
+:::
 
 By definition $$\Proj A_\bullet$$ is a subset of $$\Spec A$$. That is, the points of $$\Proj A_\bullet$$ are also points of $$\Spec A$$. This would be somewhat awkward if we had used $$\mSpec A$$ instead of $$\Spec A$$, but $$\Spec A$$ contains points corresponding to prime ideals in addition to traditional points. For example, considering the ideal $$(\x_1-\x_2)$$ of $$A=\mathbb{K}[\x_1,\x_2]$$, we have $$\mathbb{K}[\x_1,\x_2]/(\x_1-\x_2)\cong \mathbb{K}[\x_1]$$, so this ideal is a prime ideal. Moreover, when we regard $$\mathbb{K}[\x_1,\x_2]$$ as a graded ring $$A_\bullet$$, this ideal is a homogeneous prime ideal not containing $$A_+$$, so it is also a point of $$\Proj A_\bullet$$.
 
 So far $$\Proj A_\bullet$$ is only a set. To give it a topological structure we must use the zero locus of functions, and as observed above, we must use the zero locus of *homogeneous* polynomials.
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**Definition 2**</ins> Let a graded ring $$A_\bullet$$ be given. For a homogeneous ideal $$\mathfrak{a}$$ of $$A_\bullet$$, define
+::: Definition 2
+Let a graded ring $$A_\bullet$$ be given. For a homogeneous ideal $$\mathfrak{a}$$ of $$A_\bullet$$, define
 
 $$Z_+(\mathfrak{a})=\{\mathfrak{p}\in\Proj A_\bullet\mid \mathfrak{a}\subseteq \mathfrak{p}\}$$
-
-</div>
+:::
 
 Then, using the third result of [[Commutative Algebra] §Localization of Graded Rings, ⁋Lemma 2](/en/math/commutative_algebra/localization_of_graded_rings#lem2), we can prove the following lemma, similar to [§Spectra, ⁋Lemma 6](/en/math/scheme_theory/spectrums#lem6) and [§Spectra, ⁋Proposition 5](/en/math/scheme_theory/spectrums#prop5).
 
-<div class="proposition" markdown="1">
-
-<ins id="lem3">**Lemma 3**</ins> For a graded ring $$A_\bullet$$, the following hold.
+::: Lemma 3
+For a graded ring $$A_\bullet$$, the following hold.
 
 1. For any homogeneous ideals $$\mathfrak{a},\mathfrak{b}$$, we have $$Z_+(\mathfrak{a}\mathfrak{b})=Z_+(\mathfrak{a})\cup Z_+(\mathfrak{b})$$.
 2. For any family $$\{\mathfrak{a}_i\}$$ of homogeneous ideals, we have $$Z_+(\sum \mathfrak{a}_i)=\bigcap Z_+(\mathfrak{a}_i)$$.
 3. For any homogeneous ideal $$\mathfrak{a}$$, we have $$Z_+(\sqrt{\mathfrak{a}})=Z_+(\mathfrak{a})$$.
 4. For any homogeneous ideal $$\mathfrak{a}$$, we have $$Z_+(\mathfrak{a})=Z_+(\mathfrak{a}\cap A_+)$$.
-
-</div>
+:::
 
 Of course, it is obvious that $$\mathfrak{a}\mathfrak{b}$$, $$\sqrt{\mathfrak{a}}$$, and $$\sum \mathfrak{a}_i$$ appearing in the above lemma are homogeneous. The first through third results are already observed in the case of spectra; only the fourth is new.
 
-<details class="proof--alone" markdown="1">
-<summary>Proof of Lemma 3</summary>
-
+::: Proof (Lemma 3)
 1. It is obvious that a homogeneous prime ideal $$\mathfrak{p}$$ containing $$\mathfrak{a}$$ or $$\mathfrak{b}$$ also contains the smaller homogeneous ideal $$\mathfrak{ab}$$, so it suffices to show the reverse inclusion. Assume $$\mathfrak{p}\supset \mathfrak{ab}$$. If $$\mathfrak{p}\not\supseteq \mathfrak{b}$$, then we can find an element $$b\in\mathfrak{b}$$ with $$b\not\in \mathfrak{p}$$. Since $$\mathfrak{b}$$ is homogeneous, we can decompose it into a sum of homogeneous elements
 
 $$b=b_1+\cdots b_n,\qquad \text{$b_i\in \mathfrak{b}$ homogeneous}$$
@@ -170,45 +160,34 @@ of $$\mathfrak{ab}\subseteq \mathfrak{p}$$; since $$\mathfrak{p}$$ is homogeneou
 4. By definition $$Z_+(\mathfrak{a})\subseteq Z_+(\mathfrak{a}\cap A_+)$$ is obvious, so it suffices to show the reverse direction. That is, suppose $$\mathfrak{p}$$ is a prime ideal containing all homogeneous elements of $$\mathfrak{a}$$ of positive degree but not containing $$A_+$$ as a whole; let us show that $$\mathfrak{a}\subseteq \mathfrak{p}$$. To do this, it suffices to show that for any $$a\in \mathfrak{a}\cap A_0$$, the above assumption implies that $$a$$ also belongs to $$\mathfrak{p}$$. 
 
 Now, since $$A_+\not\subset\mathfrak{p}$$, there exists a homogeneous element $$f$$ not belonging to $$\mathfrak{p}$$. Then $$af\in \mathfrak{a}\cap A_+\subseteq \mathfrak{p}$$, and since $$f\not\in \mathfrak{p}$$, we have $$a\in \mathfrak{p}$$.
-
-</details>
+:::
 
 From the results of this lemma, the first and second results allow us to define the following.
 
-<div class="definition" markdown="1">
-
-<ins id="def4">**Definition 4**</ins> Let a graded ring $$A_\bullet$$ be given. The unique topology on $$\Proj A_\bullet$$ having the sets of the form $$Z_+(\mathfrak{a})$$ as closed sets is called the *Zariski topology*.
-
-</div>
+::: Definition 4
+Let a graded ring $$A_\bullet$$ be given. The unique topology on $$\Proj A_\bullet$$ having the sets of the form $$Z_+(\mathfrak{a})$$ as closed sets is called the *Zariski topology*.
+:::
 
 Also, by the fourth result of this lemma, we know that in defining $$\Proj A_\bullet$$ it suffices to consider only homogeneous ideals contained in $$A_+$$. This is intuitively obvious: if we set $$A=\mathbb{K}[\x_0,\ldots, \x_n]$$, the elements in $$A_0$$ are constant functions anyway.
 
 Now we define the following.
 
-<div class="definition" markdown="1">
-
-<ins id="def5">**Definition 5**</ins> For any homogeneous element $$f$$ of a graded ring $$A_\bullet$$, we write $$D_+(f)$$ for the complement of $$Z_+(f)$$ in $$\Proj A_\bullet$$.
-
-</div>
+::: Definition 5
+For any homogeneous element $$f$$ of a graded ring $$A_\bullet$$, we write $$D_+(f)$$ for the complement of $$Z_+(f)$$ in $$\Proj A_\bullet$$.
+:::
 
 The following corollary follows immediately from the first result of [Lemma 3](#lem3).
 
-<div class="proposition" markdown="1">
-
-<ins id="cor6">**Corollary 6**</ins> We have $$D_+(f)\cap D_+(g)=D_+(fg)$$.
-
-</div>
+::: Corollary 6
+We have $$D_+(f)\cap D_+(g)=D_+(fg)$$.
+:::
 
 Moreover, the following holds.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor7">**Corollary 7**</ins> The collection of $$D_+(f)$$ forms a base for $$\Proj A_\bullet$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Corollary 7
+The collection of $$D_+(f)$$ forms a base for $$\Proj A_\bullet$$.
+:::
+::: Proof
 Writing an arbitrary homogeneous ideal $$\mathfrak{a}$$ of $$A$$ using homogeneous generators as $$\mathfrak{a}=\sum_{i\in I} (f_i)$$,
 
 $$Z_+(\mathfrak{a})=\bigcap_{i\in I} Z_+((f_i))$$
@@ -216,23 +195,18 @@ $$Z_+(\mathfrak{a})=\bigcap_{i\in I} Z_+((f_i))$$
 and therefore
 
 $$D_+(\mathfrak{a})=\bigcup_{i\in I} D_+(f_i)$$
-
-</details>
+:::
 
 Meanwhile, we have seen that in the spectrum $$\Spec A$$ of a ring $$A$$, for any element $$f\in A$$, the set $$D(f)$$ is isomorphic (as a scheme) to $$\Spec A_f$$. A similar result holds for $$D_+(f)$$.
 
-<div class="proposition" markdown="1">
-
-<ins id="lem8">**Lemma 8**</ins> For a graded ring $$A_\bullet$$ and any homogeneous element $$f\in A_\bullet$$, define a function $$D_+(f) \rightarrow \Spec A_{(f)}$$ by the formula
+::: Lemma 8
+For a graded ring $$A_\bullet$$ and any homogeneous element $$f\in A_\bullet$$, define a function $$D_+(f) \rightarrow \Spec A_{(f)}$$ by the formula
 
 $$\mathfrak{p}\mapsto \mathfrak{p}A_f\cap A_{(f)}$$
 
 then this function is a homeomorphism. ([[Commutative Algebra] §Localization of Graded Rings, ⁋Definition 5](/en/math/commutative_algebra/localization_of_graded_rings#def5))
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 First, since $$f\not\in \mathfrak{p}$$, via the localization $$A \rightarrow A_f$$, $$\mathfrak{p}$$ is carried to the prime ideal $$\mathfrak{p}A_f$$ of $$A_f$$. ([[Commutative Algebra] §Localization, ⁋Proposition 8](/en/math/commutative_algebra/localization#prop8)) Now the right-hand side of the claim is the preimage of $$\mathfrak{p}A_f$$ under the inclusion $$i: A_{(f)} \rightarrow A_f$$, so it becomes a prime ideal of $$A_{(f)}$$.
 
 Now let us define the inverse function $$\Spec A_{(f)} \rightarrow D_+(f)$$ of this correspondence. Given an arbitrary prime ideal $$\mathfrak{q}\in\Spec A_{(f)}$$, consider the homogeneous ideal $$\mathfrak{p}$$ of $$A$$ generated by those homogeneous elements $$x$$ of $$A$$ satisfying the condition
@@ -244,48 +218,40 @@ Then for any homogeneous elements $$x,y\in \mathfrak{p}$$,
 $$xy\in \mathfrak{p}\iff \frac{x^{\deg f}}{f^{\deg x}}\frac{y^{\deg f}}{f^{\deg y}}\in \mathfrak{q}$$
 
 so from the fact that $$\mathfrak{q}$$ is a prime ideal, we know that $$\mathfrak{p}$$ is a prime ideal. Now one can easily check that the correspondences $$\mathfrak{p}\mapsto \mathfrak{p}A_f\cap A_{(f)}$$ and $$\mathfrak{q}\mapsto \mathfrak{p}$$ are inverse to each other, and for any homogeneous ideal $$\mathfrak{a}$$ of $$A_\bullet$$, the closed set $$Z_+(\mathfrak{a})\cap D_+(f)$$ of $$D_+(f)$$ is carried by this function to the closed set $$Z(\mathfrak{a}A_f\cap A_{(f)})$$ of $$\Spec A_{(f)}$$, so we see that this is a homeomorphism.
-
-</details>
+:::
 
 Then the way to give a scheme structure to $$\Proj A_\bullet$$ is now obvious. The proof of the following lemma is almost identical to [Lemma 8](#lem8).
 
-<div class="proposition" markdown="1">
-
-<ins id="lem9">**Lemma 9**</ins> For a graded ring $$A_\bullet$$ and nonzero homogeneous elements $$f,g$$, there exists an isomorphism
+::: Lemma 9
+For a graded ring $$A_\bullet$$ and nonzero homogeneous elements $$f,g$$, there exists an isomorphism
 
 $$\Spec A_{(fg)}\cong D(g^{\deg f}/f^{\deg g})\subseteq \Spec A_{(f)}$$
-
-</div>
+:::
 
 Therefore, there exists an isomorphism between the principal open set $$D(f^{\deg g}/g^{\deg f})\subseteq \Spec A_{(f)}$$ of $$\Spec A_{(g)}$$ and the principal open set $$\Spec A_{(fg)}\cong D(g^{\deg f}/f^{\deg g})$$ of $$\Spec A_{(f)}$$. Now the following theorem is a simple computation.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm10">**Theorem 10**</ins> The $$\Spec A_{(f)}$$ defined above, the open subschemes $$D(g^{\deg f}/f^{\deg g})$$, and the isomorphisms
+::: Theorem 10
+The $$\Spec A_{(f)}$$ defined above, the open subschemes $$D(g^{\deg f}/f^{\deg g})$$, and the isomorphisms
 
 $$D(f^{\deg g}/g^{\deg f})\cong \Spec A_{(fg)}\cong D(g^{\deg f}/f^{\deg g})$$
 
 all satisfy the conditions of [§Schemes, ⁋Lemma 9](/en/math/scheme_theory/schemes#lem9), and therefore give a unique scheme structure on $$\Proj A_\bullet$$.
-
-</div>
+:::
 
 In particular, since $$\Proj A_\bullet$$ is a locally ringed space, for any $$\mathfrak{p}\in \Proj A_\bullet$$ the stalk $$\mathcal{O}_{\Proj A_\bullet,\mathfrak{p}}$$ is a local ring. But anyway, since $$\mathfrak{p}$$ can be placed in a suitable affine open neighborhood, the following can be shown by essentially the same procedure as [§Affine Schemes, ⁋Lemma 8](/en/math/scheme_theory/affine_schemes#lem8).
 
-<div class="proposition" markdown="1">
-
-<ins id="lem11">**Lemma 11**</ins> For a graded ring $$A_\bullet$$ and any $$\mathfrak{p}\in \Proj A_\bullet$$, there exists an isomorphism
+::: Lemma 11
+For a graded ring $$A_\bullet$$ and any $$\mathfrak{p}\in \Proj A_\bullet$$, there exists an isomorphism
 
 $$\mathcal{O}_{\Proj A_\bullet,\mathfrak{p}}\cong A_{(\mathfrak{p})}$$
-
-</div>
+:::
 
 One slightly tricky point is that, unlike $$\Spec$$, $$\Proj$$ does not define a functor from $$\bgr_{\mathbb{N}_{\geq 0}}\cRing^\op$$ to $$\LRS$$. This is because even if a graded ring homomorphism $$\phi_\bullet:A_\bullet \rightarrow B_\bullet$$ and an arbitrary homogeneous ideal $$\mathfrak{q}$$ of $$B$$ do not contain $$B_+$$, their inverse image $$\phi^{-1}(\mathfrak{q})$$ may contain $$A_+$$.
 
 Finally, we translate the projective space we examined at the very beginning for motivation into the language of algebraic geometry (almost) completely.
 
-<div class="example" markdown="1">
-
-<ins id="ex12">**Example 12**</ins> In algebraic geometry, $$\mathbb{P}^n_\mathbb{K}$$ is defined by the formula
+::: Example 12
+In algebraic geometry, $$\mathbb{P}^n_\mathbb{K}$$ is defined by the formula
 
 $$\mathbb{P}^n_\mathbb{K}=\Proj \mathbb{K}[\x_0,\ldots, \x_n]$$
 
@@ -308,8 +274,7 @@ Now any $$\mathfrak{p}\in \mathbb{P}^n_\mathbb{K}$$ is contained in some $$D_+(\
 $$\mathcal{O}_{\mathbb{P}^n_\mathbb{K},\mathfrak{p}}\cong \mathcal{O}_{U_i, \mathfrak{q}}$$
 
 And of course this holds. ([[Commutative Algebra] §Localization of Graded Rings, ⁋Proposition 8](/en/math/commutative_algebra/localization_of_graded_rings#prop8))
-
-</div>
+:::
 
 ---
 **References**

@@ -15,9 +15,8 @@ last_polished_at: 2026-05-24T14:30:03+00:00
 ---
 Unlike in the category of abelian groups, the weak direct product defined in the previous post does not satisfy the universal property for general groups.
 
-<div class="example" markdown="1">
-
-<ins id="ex1">**Example 1**</ins> Consider an arbitrary nonabelian group $$G$$, and let $$a,b\in G$$ satisfy $$ab\neq ba$$. Define group homomorphisms $$f_1, f_2: (\mathbb{Z},+)\rightarrow (G,\cdot)$$ by
+::: Example 1
+Consider an arbitrary nonabelian group $$G$$, and let $$a,b\in G$$ satisfy $$ab\neq ba$$. Define group homomorphisms $$f_1, f_2: (\mathbb{Z},+)\rightarrow (G,\cdot)$$ by
 
 $$f_1(1)=a, \qquad f_2(1)=b$$
 
@@ -34,8 +33,7 @@ $$\begin{aligned}ab&=f_1(1)f_2(1)=f(\iota_1(1))f(\iota_2(1))=f(\iota_1(1)+\iota_
 &=ba\end{aligned}$$
 
 contradicting the choice of $$a,b$$.
-
-</div>
+:::
 
 Therefore, to find an object satisfying the universal property for general groups, just as direct sums do, we must introduce a new construction. For this we first define free groups.
 
@@ -47,13 +45,11 @@ $$\Hom_\Set(X, U(G))\cong\Hom_\Grp(F(X), G)$$
 
 ([\[Category Theory\] §Adjoint Functors, ⁋Definition 1](/en/math/category_theory/adjoints#def1)). In other words, for any set $$X$$ and any group $$G$$, the functor $$F$$ is given by a bijection assigning to each $$f\in\Hom_\Set(X, U(G))$$ a unique element of $$\Hom_\Grp(F(X),G)$$. This may be rewritten as follows.
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**Definition 2**</ins> For a nonempty set $$X$$, the *free group* $$F(X)$$ on $$X$$ is defined as the solution $$(F(X), \eta_X\in\Hom_\Set(X,UF(X)))$$ to the following universal mapping problem.
+::: Definition 2
+For a nonempty set $$X$$, the *free group* $$F(X)$$ on $$X$$ is defined as the solution $$(F(X), \eta_X\in\Hom_\Set(X,UF(X)))$$ to the following universal mapping problem.
 
 > For any group $$G$$, given any function $$f:X\rightarrow U(G)$$, there exists a unique group homomorphism $$\hat{f}:F(X)\rightarrow G$$ satisfying $$U(\hat{f})\circ\eta_X=f$$.
-
-</div>
+:::
 
 Here $$\eta_X$$ is merely the unit of the adjunction $$F\dashv U$$. Of course, to this end we must actually construct $$F(X)$$.
 
@@ -73,17 +69,12 @@ indeed, their product is $$e$$.
 
 Now we have constructed the group $$F$$. By identifying each element of $$X$$ with the corresponding word of length 1, we obtain $$\iota:X\rightarrow F$$. Then it is easy to verify that these satisfy the universal property of [Definition 2](#def2). For this, it suffices to define $$\bar{f}$$ as the map sending each $$x\in X$$ (regarded as an element of $$F$$) to $$g(x)$$, and to check that this defines a group homomorphism.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor3">**Corollary 3**</ins> Any group $$G$$ is a homomorphic image of a free group.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Corollary 3
+Any group $$G$$ is a homomorphic image of a free group.
+:::
+::: Proof
 Take a set $$X$$ of generators of $$G$$, and let $$F$$ be the free group on $$X$$. The inclusion $$X\hookrightarrow G$$ induces a group homomorphism $$F\rightarrow G$$, and since its image contains all generators of $$G$$, it is surjective.
-
-</details>
+:::
 
 ## Free Product
 
@@ -105,9 +96,8 @@ Given any word, the reduction procedure is simple. Check whether adjacent elemen
 
 Then the operation on $$\prod^\ast G_i$$ is, as with free groups, the *concatenation* operation, and one easily verifies that this set forms a group. Moreover, a situation like that of [Example 1](#ex1) no longer arises, because even if two groups $$G_1,G_2$$ are abelian, their free product $$G_1\ast G_2$$ is not an abelian group.
 
-<div class="example" markdown="1">
-
-<ins id="ex4">**Example 4**</ins> Consider the same situation as in [Example 1](#ex1). For notational convenience, let $$G_1=\langle a\rangle\cong\mathbb{Z}$$ and $$G_2=\langle b\rangle\cong\mathbb{Z}$$. Then the elements of $$G_1\ast G_2$$ are words such as
+::: Example 4
+Consider the same situation as in [Example 1](#ex1). For notational convenience, let $$G_1=\langle a\rangle\cong\mathbb{Z}$$ and $$G_2=\langle b\rangle\cong\mathbb{Z}$$. Then the elements of $$G_1\ast G_2$$ are words such as
 
 $$ab, a^2b, a^{-1}ba^3, bab^2, \cdots$$
 
@@ -118,20 +108,14 @@ $$(a^2b)(bab^2)=a^2bbab^2=a^2b^2ab^2$$
 Here $$\langle a\rangle$$ and $$\langle b\rangle$$ are cyclic subgroups of $$G_1\ast G_2$$. Defining homomorphisms $$G_1\rightarrow G_1\ast G_2$$ and $$G_2\rightarrow G_1\ast G_2$$ by $$a\mapsto a$$ and $$b\mapsto b$$, we obtain the natural inclusion maps $$\iota_1$$ and $$\iota_2$$.
 
 Of course, the problem of [Example 1](#ex1) does not arise here either: $$\iota_1(a)\iota_2(b)=ab$$ and $$\iota_2(b)\iota_1(a)=ba$$, but these are distinct elements of $$\prod^\ast G_i$$.
+:::
 
-</div>
-
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**Proposition 5**</ins> The free product $$\prod^\ast G_i$$ is the coproduct in $$\Grp$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 5
+The free product $$\prod^\ast G_i$$ is the coproduct in $$\Grp$$.
+:::
+::: Proof
 Let $$H$$ be an arbitrary group, and let $$f_i:G_i\rightarrow H$$ be group homomorphisms. By the universal property of the disjoint union $$X=\coprod U(G_i)$$, there exists a unique function $$f:X\rightarrow U(H)$$ such that $$U(f_i)=f\circ \iota_i$$ for the inclusion maps $$\iota_i:U(G_i)\rightarrow X$$. Now from the universal property of the free product ([Definition 2](#def2)), we obtain a group homomorphism $$\hat{f}:F(X)\rightarrow H$$. Using the fact that the $$f_i$$ are group homomorphisms, we see that $$f$$ factors through the reduction process described above, thereby defining a homomorphism $$\prod^\ast G_i\rightarrow H$$.
-
-</details>
+:::
 
 On the other hand, for any group $$G$$, a group homomorphism $$\mathbb{Z}\rightarrow G$$ is uniquely determined by the image of $$1\in \mathbb{Z}$$. That is, there is an isomorphism
 

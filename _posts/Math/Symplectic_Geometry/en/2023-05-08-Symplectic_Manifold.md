@@ -16,10 +16,8 @@ last_polished_at: 2026-06-03T00:00:02+00:00
 ---
 In **[MS]**, symplectic vector spaces are introduced, after which additional time is spent on the Maslov class and related topics. We will defer these to later, introducing them as needed in the context of Floer theory, and for now follow **[Cd]** in first defining symplectic manifolds.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> A *symplectic form* $$\omega$$ on a manifold $$M$$ is a differential $$2$$-form such that $$d\omega=0$$ and, for every $$p\in M$$, the map $$\omega_p:T_pM\times T_pM\rightarrow \mathbb{R}$$ is a linear symplectic form. We then call $$(M,\omega)$$ a *symplectic manifold*.
-
-</div>
+::: Definition 1
+A *symplectic form* $$\omega$$ on a manifold $$M$$ is a differential $$2$$-form such that $$d\omega=0$$ and, for every $$p\in M$$, the map $$\omega_p:T_pM\times T_pM\rightarrow \mathbb{R}$$ is a linear symplectic form. We then call $$(M,\omega)$$ a *symplectic manifold*.
+:::
 
 For a symplectic manifold $$(M,\omega)$$, each tangent space $$T_pM$$ carries a linear symplectic form $$\omega_p$$; hence $$\dim T_pM$$ is even, and therefore $$M$$ itself must be even-dimensional.

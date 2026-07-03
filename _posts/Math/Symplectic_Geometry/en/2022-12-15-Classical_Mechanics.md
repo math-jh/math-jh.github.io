@@ -58,16 +58,12 @@ What plays an important role in this process is the following *principle of leas
 
 In this formula, the newly introduced $$H$$ denotes the *Hamiltonian*, and for our purposes we may simply regard it as the energy. This principle holds locally even when $$H$$ depends on time; in that case one merely replaces $$H$$ by $$H_t$$. The mathematical treatment of such problems is very well known.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop1">**Proposition 1**</ins> A path $$z(t)=(x(t),y(t))$$ ($$t_0\leq t\leq t_1$$) in phase space is an extremum of $$\mathcal{A}_H$$ among paths satisfying the boundary conditions $$x(t_0)=x_0$$, $$x(t_1)=x_1$$ if and only if $$z$$ satisfies the following *Hamilton's equations*
+::: Proposition 1
+A path $$z(t)=(x(t),y(t))$$ ($$t_0\leq t\leq t_1$$) in phase space is an extremum of $$\mathcal{A}_H$$ among paths satisfying the boundary conditions $$x(t_0)=x_0$$, $$x(t_1)=x_1$$ if and only if $$z$$ satisfies the following *Hamilton's equations*
 
 $$\dot{x}=\frac{\partial H_t}{\partial y},\quad \dot{y}=-\frac{\partial H_t}{\partial x}$$
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 To prove this, suppose a 1-parameter family of paths $$(z_s)=(x_s,y_s)$$ satisfying the boundary conditions $$x_s(t_0)=x_0$$, $$x_s(t_1)=x_1$$ is given, and let $$z_0=z$$. Then
 
 $$\begin{aligned}\frac{\partial}{\partial s}\bigg\vert_{s=0}\mathcal{A}_H(z_s)&=\frac{\partial}{\partial s}\bigg\vert_{s=0}\int_{t_0}^{t_1}\langle y_s,\dot{x}_s\rangle-H_t(x_s,y_s)\mathop{dt}\\&=\int_{t_0}^{t_1}\frac{\partial}{\partial s}\bigg\vert_{s=0}\left(\langle y_s,\dot{x}_s\rangle-H_t(x_s,y_s)\right)\mathop{dt}\\&=\int_{t_0}^{t_1}\bigl\langle\partial_s y_s\vert_0,\dot{x}\bigr\rangle+\bigl\langle y,\partial_s\dot{x}\vert_0\bigr\rangle-\bigl\langle\partial_sx_s\vert_0,\partial_x H_t\bigr\rangle-\bigl\langle\partial_sy_s\vert_0,\partial_yH_t\bigr\rangle\mathop{dt}\end{aligned}$$
@@ -85,8 +81,7 @@ Since $$\partial_sx_s\vert_0$$ and $$\partial_sy_s\vert_0$$ can vary arbitrarily
 $$\dot{x}-\partial_yH_t=0,\qquad\dot{y}+\partial_xH_t=0$$
 
 holding.
-
-</details>
+:::
 
 Consider the (linear) complex structure[^1] $$J_0\in\End(\mathbb{R}^{2n})$$ defined on the vector space $$\mathbb{R}^{2n}$$. With respect to the basis $$\{x_1,\ldots, x_n,y_1,\ldots, y_n\}$$, this linear map is given by the matrix
 

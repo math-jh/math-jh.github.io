@@ -15,9 +15,8 @@ weight: 9
 
 Abelian group에서와는 다르게, 앞선 글에서 정의한 weak direct product는 일반적인 group에서 universal property를 만족하지 않는다.
 
-<div class="example" markdown="1">
-
-<ins id="ex1">**예시 1**</ins> 임의의 nonabelian group $$G$$를 생각하고, $$a,b\in G$$에 대해 $$ab\neq ba$$가 성립한다 하자. Group homomorphism $$f_1, f_2: (\mathbb{Z},+)\rightarrow (G,\cdot)$$을
+::: 예시 1
+임의의 nonabelian group $$G$$를 생각하고, $$a,b\in G$$에 대해 $$ab\neq ba$$가 성립한다 하자. Group homomorphism $$f_1, f_2: (\mathbb{Z},+)\rightarrow (G,\cdot)$$을
 
 $$f_1(1)=a, \qquad f_2(1)=b$$
 
@@ -34,8 +33,7 @@ $$\begin{aligned}ab&=f_1(1)f_2(1)=f(\iota_1(1))f(\iota_2(1))=f(\iota_1(1)+\iota_
 &=ba\end{aligned}$$
 
 가 되어 $$a,b$$의 선택에 모순이기 때문이다.
-
-</div>
+:::
 
 그러므로 일반적인 group들 사이에서 direct sum과 같이, universal property를 만족하는 대상을 찾기 위해서는 새로운 방법을 도입해야 한다. 이를 위해서는 우선 free group을 먼저 정의해야 한다. 
 
@@ -47,13 +45,11 @@ $$\Hom_\Set(X, U(G))\cong\Hom_\Grp(F(X), G)$$
 
 을 만족하는 functor이다. ([\[범주론\] §수반함자, ⁋정의 1](/ko/math/category_theory/adjoints#def1)) 즉 functor $$F$$는 임의의 집합 $$X$$와 임의의 group $$G$$에 대하여, $$f\in\Hom_\Set(X, U(G))$$마다 $$\Hom_\Grp(F(X),G)$$의 원소를 유일하게 대응시키는 bijection으로 주어진다. 이를 다시 쓰면 다음과 같다.
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**정의 2**</ins> 공집합이 아닌 집합 $$X$$에 대하여, $$X$$에 의해 정의된 *free group<sub>자유군</sub>* $$F(X)$$는 다음과 같은 universal mapping problem의 solution $$(F(X), \eta_X\in\Hom_\Set(X,UF(X)))$$으로 정해진다.
+::: 정의 2
+공집합이 아닌 집합 $$X$$에 대하여, $$X$$에 의해 정의된 *free group<sub>자유군</sub>* $$F(X)$$는 다음과 같은 universal mapping problem의 solution $$(F(X), \eta_X\in\Hom_\Set(X,UF(X)))$$으로 정해진다.
 
 > 임의의 group $$G$$에 대하여, 만일 어떤 함수 $$f:X\rightarrow U(G)$$가 주어졌다면 유일한 group homomorphism $$\hat{f}:F(X)\rightarrow G$$가 존재하여 $$U(\hat{f})\circ\eta_X=f$$를 만족한다.
-
-</div>
+:::
 
 여기에서 $$\eta_X$$는 adjunction $$F\dashv U$$의 unit에 불과하다. 물론 이를 위해서는 $$F(X)$$를 실제로 만들어내야 한다. 
 
@@ -73,17 +69,12 @@ $$x_3^{-2}x_2x_1^{-1}$$
 
 이제 우리는 group $$F$$를 만들었으며, 여기서 $$X$$의 원소로 이루어진 길이 1짜리 원소들을 $$X$$의 원소와 동일시하면 $$\iota:X\rightarrow F$$ 또한 얻는다. 그럼 이들이 [정의 2](#def2)의 universal property를 만족한다는 것을 쉽게 보일 수 있다. 이를 위해서는 $$\bar{f}$$를 $$F$$에 등장하는 원소들 $$x\in X$$들을 모두 $$g(x)$$로 바꿔주는 함수로 정의한 후, 이것이 group homomorphism이 된다는 것을 확인하면 된다.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor3">**따름정리 3**</ins> 임의의 group $$G$$는 free group의 homomorphic image이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 따름정리 3
+임의의 group $$G$$는 free group의 homomorphic image이다.
+:::
+::: 증명
 $$G$$의 generator들의 모임 $$X$$를 생각한 후, $$X$$에 대한 free group $$F$$를 생각하자. 함수 $$X\hookrightarrow G$$에 의해 정의되는 $$F$$에서 $$G$$로의 group homomorphism이 존재하며, 이 homomorphism의 image는 $$G$$의 generator들을 모두 포함하므로 surjective하다.
-
-</details>
+:::
 
 ## Free product
 
@@ -105,9 +96,8 @@ $$x_1x_2\cdots x_n$$
 
 그럼 $$\prod^\ast G_i$$ 위의 연산은 free group을 정의할 때와 동일하게 <em-ko>이어쓰기</em-ko>연산이며, 어렵지 않게 이 모임이 group structure를 갖는다는 것을 확인할 수 있다. 또, [예시 1](#ex1)과 같은 상황은 더 이상 일어나지 않는데, 이는 두 group $$G_1,G_2$$가 abelian이라 하더라도 그 free product $$G_1\ast G_2$$는 더 이상 abelian group이 아니기 때문이다.
 
-<div class="example" markdown="1">
-
-<ins id="ex4">**예시 4**</ins> [예시 1](#ex1)과 동일한 상황을 생각하자. 대신 표기상의 편의를 위해 $$G_1=\langle a\rangle\cong\mathbb{Z}$$, $$G_2=\langle b\rangle\cong\mathbb{Z}$$이라 하자. 그럼 $$G_1\ast G_2$$의 원소는 다음과 같은 원소들
+::: 예시 4
+[예시 1](#ex1)과 동일한 상황을 생각하자. 대신 표기상의 편의를 위해 $$G_1=\langle a\rangle\cong\mathbb{Z}$$, $$G_2=\langle b\rangle\cong\mathbb{Z}$$이라 하자. 그럼 $$G_1\ast G_2$$의 원소는 다음과 같은 원소들
 
 $$ab, a^2b, a^{-1}ba^3, bab^2, \cdots$$
 
@@ -120,20 +110,14 @@ $$(a^2b)(bab^2)=a^2bbab^2=a^2b^2ab^2$$
 이 때 $$\langle a\rangle$$과 $$\langle b\rangle$$은 $$G_1\ast G_2$$의 cyclic subgroup이고, 따라서 $$G_1$$과 $$G_2$$에서 $$G_1\ast G_2$$으로의 homomorphism을 $$a\mapsto a$$, $$b\mapsto b$$로 정의하면 자연스러운 inclusion map $$\iota_1$$과 $$\iota_2$$를 얻는다. 
 
 물론 [예시 1](#ex1)과 같은 문제 또한 일어나지 않는다. $$\iota_1(a)\iota_2(b)=ab$$이고 $$\iota_2(b)\iota_1(a)=ba$$인데, 이 두 원소는 $$\prod^\ast G_i$$의 서로 다른 원소이기 때문이다.
+:::
 
-</div>
-
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**명제 5**</ins> Free product $$\prod^\ast G_i$$는 $$\Grp$$에서의 coproduct이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 명제 5
+Free product $$\prod^\ast G_i$$는 $$\Grp$$에서의 coproduct이다.
+:::
+::: 증명
 임의의 group $$H$$와 group homomorphism들 $$f_i:G_i\rightarrow H$$가 주어졌다 하자. 그럼 $$X=\coprod U(G_i)$$의 universal property에 의하여, inclusion map $$\iota_i:U(G_i)\rightarrow X$$들에 대해 $$U(f_i)=f\circ \iota_i$$를 만족하는 유일한 함수 $$f:X\rightarrow U(H)$$가 존재한다. 이제 free product의 universal property ([정의 2](#def2))로부터 group homomorphism $$\hat{f}:F(X)\rightarrow H$$를 얻으며, 이 때 $$f_i$$들이 group homomorphism이었다는 사실을 사용하면 $$f$$가 위의 reduction 과정을 통해 factor하며, 따라서 $$\prod^\ast G_i\rightarrow H$$를 정의한다는 것을 안다.
-
-</details>
+:::
 
 한편 임의의 group $$G$$에 대하여, group homomorphism $$\mathbb{Z}\rightarrow G$$는 $$1\in \mathbb{Z}$$가 $$G$$의 어떠한 원소로 옮겨지는지에 의해 유일하게 결정된다. 즉 다음 isomorphism
 

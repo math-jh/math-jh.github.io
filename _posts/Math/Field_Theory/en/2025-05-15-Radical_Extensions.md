@@ -25,67 +25,51 @@ In this way, whenever a polynomial is given we can define an appropriate Galois 
 
 However, if we pursue this philosophy, defining a permutation action becomes quite awkward when a minimal polynomial has a repeated root. This is a false alarm over $$\mathbb{Q}$$, but in some cases such a thing can actually happen.
 
-<div class="remark" markdown="1">
-
-**Remark** Every field appearing in this post has characteristic exponent $$p$$.
-
-</div>
+::: remark Remark {#rmk}
+Every field appearing in this post has characteristic exponent $$p$$.
+:::
 
 ## $$p$$-Radical Extensions
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> For a field extension $$\mathbb{L}/\mathbb{K}$$, an element $$x\in \mathbb{L}$$ is called *$$p$$-radical* if there exists some $$m\geq 0$$ such that $$x^{p^m}\in \mathbb{K}$$. The smallest such $$m$$ is called the *height* of $$x$$.
-
-</div>
+::: Definition 1
+For a field extension $$\mathbb{L}/\mathbb{K}$$, an element $$x\in \mathbb{L}$$ is called *$$p$$-radical* if there exists some $$m\geq 0$$ such that $$x^{p^m}\in \mathbb{K}$$. The smallest such $$m$$ is called the *height* of $$x$$.
+:::
 
 If $$p=1$$, the above definition is essentially meaningless, and the same holds for the rest of the content in this post. In other words, the content of this post is essentially all about fields of characteristic $$p$$.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**Proposition 2**</ins> Fix a field extension $$\mathbb{L}/\mathbb{K}$$ and a $$p$$-radical element $$x\in \mathbb{K}$$ of height $$e$$. Then for $$a=x^{p^e}\in \mathbb{K}$$, the minimal polynomial of $$x$$ is given by
+::: Proposition 2
+Fix a field extension $$\mathbb{L}/\mathbb{K}$$ and a $$p$$-radical element $$x\in \mathbb{K}$$ of height $$e$$. Then for $$a=x^{p^e}\in \mathbb{K}$$, the minimal polynomial of $$x$$ is given by
 
 $$\x^{p^e}-a\in \mathbb{K}[\x]$$
 
 Hence $$[\mathbb{K}(x):\mathbb{K}]=p^e$$.
-
-</div>
+:::
 
 We write the image of the Frobenius endomorphism $$\Frob_p:\mathbb{K}\rightarrow \mathbb{K}$$ as $$\mathbb{K}^p$$. By the minimality of $$e$$, we have $$a\not\in \mathbb{K}^p$$, so the claim follows from the next lemma.
 
-<div class="proposition" markdown="1">
-
-<ins id="lem3">**Lemma 3**</ins> Suppose an element $$a$$ of a field $$\mathbb{K}$$ satisfies $$a\not\in \mathbb{K}^p$$. Then for any $$e\geq 0$$, the polynomial $$f(\x)=\x^{p^e}-a$$ is irreducible in $$\mathbb{K}[\x]$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
-
-
-</details>
+::: Lemma 3
+Suppose an element $$a$$ of a field $$\mathbb{K}$$ satisfies $$a\not\in \mathbb{K}^p$$. Then for any $$e\geq 0$$, the polynomial $$f(\x)=\x^{p^e}-a$$ is irreducible in $$\mathbb{K}[\x]$$.
+:::
+::: Proof
+:::
 
 The following definition would have been natural even immediately after [Definition 1](#def1).
 
-<div class="definition" markdown="1">
-
-<ins id="def4">**Definition 4**</ins> A field extension $$\mathbb{L}/\mathbb{K}$$ is called *$$p$$-radical* if every element of $$\mathbb{L}$$ is $$p$$-radical. If there exists an integer $$e$$ such that $$x^{p^e}\in \mathbb{K}$$ holds for *all* elements $$x$$ of $$\mathbb{L}$$, the smallest such $$e$$ is called the *height* of $$\mathbb{L}$$.
-
-</div>
+::: Definition 4
+A field extension $$\mathbb{L}/\mathbb{K}$$ is called *$$p$$-radical* if every element of $$\mathbb{L}$$ is $$p$$-radical. If there exists an integer $$e$$ such that $$x^{p^e}\in \mathbb{K}$$ holds for *all* elements $$x$$ of $$\mathbb{L}$$, the smallest such $$e$$ is called the *height* of $$\mathbb{L}$$.
+:::
 
 Thus the height of $$\mathbb{L}/\mathbb{K}$$, if defined, can be thought of as the maximum of the heights of the elements of $$\mathbb{L}$$. Also, by [Proposition 2](#prop2), any $$p$$-radical extension is naturally an algebraic extension.
 
 If the Frobenius endomorphism $$\Frob_p:A\rightarrow A$$ is a bijection, we called $$A$$ a *perfect ring*. Therefore, if $$\mathbb{K}$$ were a perfect field, then $$\mathbb{K}^p=\mathbb{K}$$, so any $$p$$-radical extension of a perfect field must be itself. Moreover, it is obvious from the definition that the compositum of $$p$$-radical extensions is $$p$$-radical. The following proposition concerns the existence of a (relative) $$p$$-radical closure.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**Proposition 5**</ins> Fix a field extension $$\mathbb{L}/\mathbb{K}$$, and for each $$n\geq 0$$ define
+::: Proposition 5
+Fix a field extension $$\mathbb{L}/\mathbb{K}$$, and for each $$n\geq 0$$ define
 
 $$\mathbb{L}_n=\{x\in \mathbb{L}\mid\text{$x$ is $p$-radical of height $\leq n$}\}$$
 
 Then the union $$\mathbb{L}_\infty$$ of the increasing sequence $$\mathbb{L}_n$$ is the largest $$p$$-radical subextension of $$\mathbb{L}$$ containing $$\mathbb{K}$$.
-
-</div>
+:::
 
 The proof of this is essentially obvious.
 
@@ -93,32 +77,23 @@ In the previous post we saw that any field $$\mathbb{K}$$ has an algebraic closu
 
 On the other hand, the following holds.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop6">**Proposition 6**</ins> Suppose a field extension $$\mathbb{L}/\mathbb{K}$$ is a $$p$$-radical extension, and a homomorphism $$u$$ from $$\mathbb{K}$$ to some perfect field $$\mathbb{F}$$ is given. Then there exists a unique homomorphism $$v:\mathbb{L} \rightarrow \mathbb{F}$$ extending $$u$$.
-
-</div>
+::: Proposition 6
+Suppose a field extension $$\mathbb{L}/\mathbb{K}$$ is a $$p$$-radical extension, and a homomorphism $$u$$ from $$\mathbb{K}$$ to some perfect field $$\mathbb{F}$$ is given. Then there exists a unique homomorphism $$v:\mathbb{L} \rightarrow \mathbb{F}$$ extending $$u$$.
+:::
 
 Hence the following holds.
 
-<div class="proposition" markdown="1">
+::: Corollary 7
+A field extension $$\mathbb{L}/\mathbb{K}$$ is the perfect closure of $$\mathbb{K}$$ if and only if $$\mathbb{L}$$ is a $$p$$-radical extension of $$\mathbb{K}$$ and $$\mathbb{L}$$ is a perfect field.
+:::
 
-<ins id="cor7">**Corollary 7**</ins> A field extension $$\mathbb{L}/\mathbb{K}$$ is the perfect closure of $$\mathbb{K}$$ if and only if $$\mathbb{L}$$ is a $$p$$-radical extension of $$\mathbb{K}$$ and $$\mathbb{L}$$ is a perfect field.
-
-</div>
-
-<div class="proposition" markdown="1">
-
-<ins id="prop8">**Proposition 8**</ins> 
-
-</div>
+::: Proposition 8
+:::
 
 We close this post by introducing the counterexample mentioned in the introduction.
 
-<div class="example" markdown="1">
-
-<ins id="ex9">**Example 9**</ins> Consider the field $$\mathbb{K}=\mathbb{F}_p(t)$$. Then consider the polynomial $$u(\x)=\x^p-t\in \mathbb{K}[\x]$$, and through this we can consider the $$p$$-radical extension $$\mathbb{L}=\mathbb{K}[\x]/(\x^p-t)$$. Then the minimal polynomial of a root $$\alpha$$ of $$u(\x)=0$$ in $$\mathbb{L}$$ must be $$u(\x)$$ itself ([Proposition 2](#prop2)), and differentiating this gives $$Du=p\x^{p-1}=0$$, so by [\[Ring Theory\] §Polynomial Rings, ⁋Proposition 11](/en/math/ring_theory/polynomial_rings#prop11) we know that $$\alpha$$ is a repeated root of $$u$$. In fact, by [§Fields, ⁋Theorem 10](/en/math/field_theory/fields#thm10) we have $$(\x-\alpha)^p=\x^p-\alpha^p=\x^p-t$$, so $$\alpha$$ has multiplicity $$p$$.
-
-</div>
+::: Example 9
+Consider the field $$\mathbb{K}=\mathbb{F}_p(t)$$. Then consider the polynomial $$u(\x)=\x^p-t\in \mathbb{K}[\x]$$, and through this we can consider the $$p$$-radical extension $$\mathbb{L}=\mathbb{K}[\x]/(\x^p-t)$$. Then the minimal polynomial of a root $$\alpha$$ of $$u(\x)=0$$ in $$\mathbb{L}$$ must be $$u(\x)$$ itself ([Proposition 2](#prop2)), and differentiating this gives $$Du=p\x^{p-1}=0$$, so by [\[Ring Theory\] §Polynomial Rings, ⁋Proposition 11](/en/math/ring_theory/polynomial_rings#prop11) we know that $$\alpha$$ is a repeated root of $$u$$. In fact, by [§Fields, ⁋Theorem 10](/en/math/field_theory/fields#thm10) we have $$(\x-\alpha)^p=\x^p-\alpha^p=\x^p-t$$, so $$\alpha$$ has multiplicity $$p$$.
+:::
 
 In the next post and the one after that, we will see how to exclude such cases from our discussion.

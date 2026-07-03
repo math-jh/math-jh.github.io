@@ -20,11 +20,9 @@ last_polished_at: 2026-06-25T06:00:04+00:00
 
 We now consider a more special case.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> A symmetric bilinear form $$\langle-,-\rangle$$ defined on an $$\mathbb{R}$$-vector space $$V$$ is called an *inner product* if $$\langle v,v\rangle\geq 0$$ for all $$v\in V$$, and equality holds only when $$v=0$$. A space $$V$$ equipped with an inner product is simply called an *inner product space*.
-
-</div>
+::: Definition 1
+A symmetric bilinear form $$\langle-,-\rangle$$ defined on an $$\mathbb{R}$$-vector space $$V$$ is called an *inner product* if $$\langle v,v\rangle\geq 0$$ for all $$v\in V$$, and equality holds only when $$v=0$$. A space $$V$$ equipped with an inner product is simply called an *inner product space*.
+:::
 
 Examining the definition, we see that the condition $$\langle v,v\rangle\geq 0$$ is not well-defined over a general field $$\mathbb{K}$$, because the field must possess a notion of order. Therefore, we develop the theory only over $$\mathbb{R}$$, where order is well-defined, and in the next post we use this to define an inner product over $$\mathbb{C}$$ as well. To avoid confusion, from now on we write an inner product space defined over the real numbers as an $$\mathbb{R}$$-inner product space.
 
@@ -40,30 +38,24 @@ and equality holds only when $$v=0$$.
 
 On the other hand, once an inner product is defined on an $$\mathbb{R}$$-vector space, one of the best consequences is that the <em-ko>size</em-ko> of a vector is well-defined.
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**Definition 2**</ins> A *norm* on an $$\mathbb{R}$$-vector space $$V$$ is a function $$\lVert -\rVert:V\rightarrow\mathbb{R}$$ satisfying the following conditions.
+::: Definition 2
+A *norm* on an $$\mathbb{R}$$-vector space $$V$$ is a function $$\lVert -\rVert:V\rightarrow\mathbb{R}$$ satisfying the following conditions.
 
 1. $$\lVert v\rVert\geq 0$$ for all $$v$$, and equality holds only when $$v=0$$.
 2. For any $$\alpha\in\mathbb{R}$$ and $$v\in V$$, $$\lVert\alpha v\rVert=\lvert\alpha\rvert\lVert v\rVert$$.
 3. (Triangle inequality) For any $$u,v\in V$$, $$\lVert u+v\rVert\leq\lVert u\rVert+\lVert v\rVert$$.
-
-</div>
+:::
 
 The following proposition is something we have been familiar with since high school.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop3">**Proposition 3 (Cauchy–Schwarz)**</ins> For any vectors $$v,w$$ of an $$\mathbb{R}$$-inner product space $$V$$, the inequality
+::: Proposition 3 (Cauchy–Schwarz)
+For any vectors $$v,w$$ of an $$\mathbb{R}$$-inner product space $$V$$, the inequality
 
 $$\lvert \langle v,w\rangle\rvert\leq\sqrt{\langle u,u\rangle}\sqrt{\langle v,v\rangle}$$
 
 holds. Equality holds when there exists a constant $$\lambda$$ satisfying $$u=\lambda v$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 If $$v=0$$, then both sides are 0, so the inequality holds. Assume $$v\neq 0$$. Then $$\langle v,v\rangle\neq 0$$. Define
 
 $$\lambda=\frac{\langle u,v\rangle}{\langle v,v\rangle}$$
@@ -77,22 +69,17 @@ to obtain
 $$0\leq \langle u,u\rangle-2\lambda\langle u,v\rangle+\lambda^2\langle v,v\rangle=\langle u,u\rangle-\frac{2\langle u,v\rangle^2}{\langle v,v\rangle}+\frac{\langle u,v\rangle^2}{\langle v,v\rangle}=\langle u,u\rangle-\frac{\langle u,v\rangle^2}{\langle v,v\rangle}$$
 
 Equality holds exactly when $$u-\lambda v=0$$. From this we obtain the desired inequality.
+:::
 
-</details>
 
-
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**Proposition 4**</ins> For an $$\mathbb{R}$$-inner product space $$V$$, the function $$\lVert-\rVert:V\rightarrow \mathbb{R}$$ defined by
+::: Proposition 4
+For an $$\mathbb{R}$$-inner product space $$V$$, the function $$\lVert-\rVert:V\rightarrow \mathbb{R}$$ defined by
 
 $$\lVert v\rVert:=\sqrt{\langle v,v\rangle}$$
 
 is a norm.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 First, the expression $$\lVert v\rVert$$ defines a function into $$\mathbb{R}$$, because $$(v,v)\geq 0$$ always holds.
 
 The first and second conditions for a norm are obvious, so it suffices to verify only the triangle inequality. For any $$u,v\in V$$,
@@ -104,26 +91,22 @@ and by the Cauchy–Schwarz inequality,
 $$\langle u,u\rangle+2\langle u,v\rangle+\langle v,v\rangle\leq \lVert u\rVert^2+2\lVert u\rVert\lVert v\rVert+\lVert v\rVert^2=(\lVert u\rVert+\lVert v\rVert)^2$$
 
 so the triangle inequality follows.
-
-</details>
+:::
 
 However, the converse of the above proposition does not hold in general. That is, an inner product on $$V$$ induces a norm, but a given norm need not arise from any inner product.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**Proposition 5**</ins> Let $$V$$ be an $$\mathbb{R}$$-inner product space. If $$\lVert -\rVert$$ is the norm obtained from the inner product of $$V$$ via the formula in [Proposition 4](#prop4), then the *parallelogram law*
+::: Proposition 5
+Let $$V$$ be an $$\mathbb{R}$$-inner product space. If $$\lVert -\rVert$$ is the norm obtained from the inner product of $$V$$ via the formula in [Proposition 4](#prop4), then the *parallelogram law*
 
 $$\lVert u+v\rVert^2+\lVert u-v\rVert^2=2\lVert u\rVert^2+2\lVert v\rVert^2$$
 
 holds for all $$u,v$$.
-
-</div>
+:::
 
 The proof is a straightforward computation. Moreover, this lets us find examples of norms that are not induced by any inner product.
 
-<div class="example" markdown="1">
-
-<ins id="ex6">**Example 6**</ins> On $$\mathbb{R}^n$$, define $$\lVert-\rVert_1:\mathbb{R}^n\rightarrow\mathbb{R}$$ by
+::: Example 6
+On $$\mathbb{R}^n$$, define $$\lVert-\rVert_1:\mathbb{R}^n\rightarrow\mathbb{R}$$ by
 
 $$\lVert v\rVert_1=\sum_{i=1}^n \lvert v_i\rvert$$
 
@@ -136,8 +119,7 @@ then by [Proposition 5](#prop5) the identity
 $$\lVert u+v\rVert_1^2+\lVert u-v\rVert_1^2=2\lVert u\rVert^2_1+2\lVert v\rVert^2_1$$
 
 would have to hold. But substituting $$u=(1,0,\ldots, 0)$$ and $$v=(0,1,\ldots, 0)$$ shows that the parallelogram law fails. Therefore $$\lVert -\rVert_1$$ is not induced by any inner product.
-
-</div>
+:::
 
 In fact, the converse of [Proposition 5](#prop5) also holds: if $$\lVert-\rVert$$ satisfies the parallelogram law, then the form defined by
 
@@ -195,15 +177,13 @@ $$\langle v,w\rangle=\langle Lv,Lw\rangle=\langle v, L^t Lw\rangle$$
 
 holds, and therefore $$L^t L=I$$. Thus we define the following.
 
-<div class="definition" markdown="1">
-
-<ins id="def7">**Definition 7**</ins> For any $$A\in\Mat_n(\mathbb{R})$$, if
+::: Definition 7
+For any $$A\in\Mat_n(\mathbb{R})$$, if
 
 $$A^tA=AA^t=I$$
 
 holds, then $$A$$ is called an *orthogonal matrix*.
-
-</div>
+:::
 
 From the rank-nullity theorem, we know that if $$A^tA=I$$ then necessarily $$AA^t=I$$ as well. Therefore, the matrix representation of any linear map preserving $$\langle-,-\rangle$$ is an orthogonal matrix.
 
@@ -231,38 +211,29 @@ $$\proj_U v=\sum_{i=1}^k \langle v, x_i\rangle x_i$$
 
 For this definition to be well-defined, the above vector must be independent of the choice of orthonormal basis $$\mathcal{B}$$ of $$U$$.
 
-<div class="proposition" markdown="1">
-
-<ins id="lem8">**Lemma 8**</ins> In the above situation, if $$\mathcal{B}=\{x_1,\ldots, x_k\},\mathcal{B}'=\{x_1',\ldots, x_k'\}$$ are two orthonormal bases of $$U$$, then for any $$v\in V$$,
+::: Lemma 8
+In the above situation, if $$\mathcal{B}=\{x_1,\ldots, x_k\},\mathcal{B}'=\{x_1',\ldots, x_k'\}$$ are two orthonormal bases of $$U$$, then for any $$v\in V$$,
 
 $$\sum_{i=1}^k \langle v, x_i\rangle x_i=\sum_{i=1}^k\langle v, x'_i\rangle x_i'$$
 
 holds.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 This is simply another expression of the formula
 
 $$[v]_\mathcal{B}=[\id]^{\mathcal{B}'}_{\mathcal{B}}[v]_{\mathcal{B}'}$$
-
-</details>
+:::
 
 The following *projection theorem* tells us that the vector $$\proj_Uv$$ defined in this way is the element of $$U$$ closest to $$v$$.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm9">**Theorem 9**</ins> Let $$V$$ be an $$\mathbb{R}$$-inner product space and $$U\subseteq V$$ a subspace. Then for any $$v\in V$$, $$\proj_Uv$$ satisfies
+::: Theorem 9
+Let $$V$$ be an $$\mathbb{R}$$-inner product space and $$U\subseteq V$$ a subspace. Then for any $$v\in V$$, $$\proj_Uv$$ satisfies
 
 $$\lVert \proj_Uv-v\rVert=\min_{w\in U}\lVert v-w\rVert$$
 
 and moreover, the only vector satisfying the above formula is $$\proj_Uv$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 First, suppose both $$u,u'\in U$$ minimize $$\lVert v-w\rVert$$. Then by minimality,
 
 $$\lVert v-u\rVert=\lVert v-u'\rVert\leq\left\lVert v-\frac{u+u'}{2}\right\rVert$$
@@ -290,8 +261,7 @@ and equality holds when $$v_i=w_i$$ for all $$1\leq i\leq k$$. Then
 $$\proj_Uv=\sum_{i=1}^k v_ix_i=\sum_{i=1}^k w_ix_i=w$$
 
 so we obtain the desired conclusion.
-
-</details>
+:::
 
 Moreover, from the definition of $$\proj_Uv$$ it is obvious that $$v-\proj_Uv$$ is a vector perpendicular to $$U$$. This fact will be useful in the next post.
 

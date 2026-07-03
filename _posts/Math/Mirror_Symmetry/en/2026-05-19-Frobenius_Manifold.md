@@ -24,15 +24,13 @@ between the Jacobi ring and quantum cohomology. However, as we also observed in 
 
 Intuitively, a Frobenius manifold is a manifold whose tangent space at each point carries a Frobenius algebra structure.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> Let $$A$$ be a finite-dimensional commutative, associative $$\mathbb{C}$$-algebra equipped with a non-degenerate symmetric bilinear form $$\eta: A \otimes A \to \mathbb{C}$$. If for all elements $$x,y,z\in A$$ the identity
+::: Definition 1
+Let $$A$$ be a finite-dimensional commutative, associative $$\mathbb{C}$$-algebra equipped with a non-degenerate symmetric bilinear form $$\eta: A \otimes A \to \mathbb{C}$$. If for all elements $$x,y,z\in A$$ the identity
 
 $$\eta(x \cdot y,z) = \eta(x,y \cdot z)$$
 
 holds, then the pair $$(A, \eta)$$ is called a *Frobenius algebra*.
-
-</div>
+:::
 
 This condition means that the multiplication $$\cdot : A \otimes A \to A$$ and the bilinear form $$\eta$$ are compatible, defining a trilinear form $$c(x,y,z) := \eta(x \cdot y,z)$$ that is symmetric in all three arguments. Indeed, commutativity gives
 
@@ -44,9 +42,8 @@ $$c(x,y,z) = \eta(x,y \cdot z) = \eta(y \cdot z, x) = c(y,z,x).$$
 
 Hence $$c$$ is completely symmetric in its three variables, and this trilinear form encodes all the information of the Frobenius structure.
 
-<div class="example" markdown="1">
-
-<ins id="ex2">**Example 2**</ins> The cohomology ring $$H^\ast(X, \mathbb{C})$$ of a compact Kähler manifold $$X$$, with the cup product and the Poincaré pairing
+::: Example 2
+The cohomology ring $$H^\ast(X, \mathbb{C})$$ of a compact Kähler manifold $$X$$, with the cup product and the Poincaré pairing
 
 $$\eta(\alpha, \beta) = \int_X \alpha \smile \beta,$$
 
@@ -55,19 +52,16 @@ is a Frobenius algebra. This means that the identity
 $$\eta(\alpha \smile \beta, \gamma) = \eta(\alpha, \beta \smile \gamma)$$
 
 holds for all $$\alpha,\beta,\gamma$$, which follows from the associativity of the cup product.
-
-</div>
+:::
 
 Meanwhile, in the examples of [§Overview of Mirror Symmetry](/en/math/mirror_symmetry/overview) we introduced the Landau–Ginzburg model, which consists of a holomorphic function $$W$$ on a given manifold $$\check{X}$$; the Jacobi ring containing the critical points of $$W$$ carried the information of the B-model. Locally this is written as follows.
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**Definition 3**</ins> A holomorphic function $$f : \mathbb{C}^n \to \mathbb{C}$$ is said to have an *isolated hypersurface singularity* at the origin if the following two conditions hold.
+::: Definition 3
+A holomorphic function $$f : \mathbb{C}^n \to \mathbb{C}$$ is said to have an *isolated hypersurface singularity* at the origin if the following two conditions hold.
 
 1. $$f(0) = 0$$, $$df(0) = 0$$.
 2. The origin is *isolated* among the critical points of $$f$$, i.e., in some neighborhood of the origin the only solution to $$df = 0$$ is the origin itself.
-
-</div>
+:::
 
 A standard example is $$f(\x) = \x^{k+1}$$ ($$k \geq 1$$), which we call an $$A_k$$-type singularity.
 
@@ -77,9 +71,8 @@ $$\Jac(f) = \mathbb{C}[\x_1, \ldots, \x_n]/(\partial_1 f, \ldots, \partial_n f).
 
 Its dimension $$\mu(f)=\dim \Jac(f)$$ counts the singularities of $$f$$ with multiplicity; intuitively, one may think of it as obtaining $$\mu(f)$$ simple critical points after a small perturbation. In singularity theory this $$\mu(f)$$ is called the *Milnor number* of $$f$$.
 
-<div class="example" markdown="1">
-
-<ins id="ex4">**Example 4**</ins> For a polynomial $$f : \mathbb{C}^n \to \mathbb{C}$$ all of whose critical points are isolated hypersurface singularities, the *residue pairing* $$\eta$$ on the Jacobi ring $$\Jac(f)$$ is defined by the formula
+::: Example 4
+For a polynomial $$f : \mathbb{C}^n \to \mathbb{C}$$ all of whose critical points are isolated hypersurface singularities, the *residue pairing* $$\eta$$ on the Jacobi ring $$\Jac(f)$$ is defined by the formula
 
 $$\eta(g, h) := \frac{1}{(2\pi i)^n} \oint_{\Gamma_\epsilon} \frac{g(\x) h(\x) \, d\x_1 \wedge \cdots \wedge d\x_n}{\partial_1 f \cdots \partial_n f}.$$
 
@@ -154,8 +147,7 @@ while in all other cases this sum is $$0$$. Thus for $$0 \leq a, b \leq 2$$ we h
 $$\begin{pmatrix} 0 & 0 & 1 \\ 0 & 1 & 0 \\ 1 & 0 & 0 \end{pmatrix},$$
 
 which coincides with the classical Poincaré pairing of $$\mathbb{P}^2$$.
-
-</div>
+:::
 
 ## Frobenius Manifolds
 
@@ -187,9 +179,8 @@ The Euler vector field is then an *affine* vector field satisfying $$\nabla^2 E=
 
 We now have all the ingredients needed to define a Frobenius manifold.
 
-<div class="definition" markdown="1">
-
-<ins id="def5">**Definition 5**</ins> A tuple $$(M, \eta, \circ, e, E)$$ is called a *Frobenius manifold* if the following conditions all hold.
+::: Definition 5
+A tuple $$(M, \eta, \circ, e, E)$$ is called a *Frobenius manifold* if the following conditions all hold.
 
 1. The Levi-Civita connection induced by the symmetric non-degenerate bilinear form $$\eta$$ on $$TM$$ is flat.
 2. At each $$p\in M$$ there exists a commutative associative product $$\circ_p: T_p M \otimes T_p M \to T_p M$$ that is smooth in $$p$$.
@@ -201,33 +192,27 @@ We now have all the ingredients needed to define a Frobenius manifold.
     holds.
 5. For all vector fields $$X,Y,Z$$ we have $$\eta(X \circ Y, Z) = \eta(X, Y \circ Z)$$.
 6. (Potentiality) The $$4$$-tensor $$\nabla c$$ defined by the trilinear form $$c(X,Y,Z):=\eta(X\circ Y, Z)$$ is symmetric in all four variables.
-
-</div>
+:::
 
 ## The WDVV Equation
 
 The last condition in [Definition 5](#def5) is called potentiality because it allows the trilinear form $$c$$ to be expressed as the third partial derivatives of a suitable scalar function $$F:M \rightarrow \mathbb{C}$$.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop6">**Proposition 6**</ins> For a Frobenius manifold $$(M, \eta, \circ, e, E)$$ with flat coordinates $$t^1, \ldots, t^n$$, there exists a holomorphic function $$F: M \to \mathbb{C}$$ (defined locally) such that
+::: Proposition 6
+For a Frobenius manifold $$(M, \eta, \circ, e, E)$$ with flat coordinates $$t^1, \ldots, t^n$$, there exists a holomorphic function $$F: M \to \mathbb{C}$$ (defined locally) such that
 
 $$c_{\alpha\beta\gamma}(t) := \eta(\partial_{t^\alpha} \circ \partial_{t^\beta}, \partial_{t^\gamma}) = \frac{\partial^3 F}{\partial t^\alpha \partial t^\beta \partial t^\gamma}$$
 
 holds for all $$\alpha, \beta, \gamma$$.
+:::
 
-</div>
-
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proof
 For flat coordinates $$t^\alpha$$ the covariant derivative $$\nabla_{\partial_{t^\delta}}$$ coincides with the ordinary partial derivative $$\partial_{t^\delta}$$, so the potentiality condition in [Definition 5](#def5) means that
 
 $$\partial_{t^\delta} c_{\alpha\beta\gamma} = \partial_{t^\alpha} c_{\delta\beta\gamma}$$
 
 holds symmetrically in the four indices. Since $$c$$ itself is symmetric in three indices, putting these together shows that the 1-form $$\omega_{\beta\gamma} := \sum_\alpha c_{\alpha\beta\gamma} dt^\alpha$$ is closed. By the Poincaré lemma there locally exist functions $$G_{\beta\gamma}$$ with $$\partial_{t^\alpha} G_{\beta\gamma} = c_{\alpha\beta\gamma}$$; the symmetry of $$c$$ implies $$G_{\beta\gamma} = G_{\gamma\beta}$$, and moreover $$\partial_{t^\alpha} G_{\beta\gamma} = \partial_{t^\beta} G_{\alpha\gamma}$$ holds. Applying the Poincaré lemma once more, there exist functions $$H_\gamma$$ with $$\partial_{t^\beta} H_\gamma = G_{\beta\gamma}$$, and from the symmetry $$\partial_{t^\delta} H_\gamma = \partial_{t^\gamma} H_\delta$$ we finally obtain a scalar function $$F$$ such that $$\partial_{t^\gamma} F = H_\gamma$$. Altogether we obtain $$\partial_{t^\alpha} \partial_{t^\beta} \partial_{t^\gamma} F = c_{\alpha\beta\gamma}$$.
-
-</details>
+:::
 
 Such a function $$F$$ is called the *potential* of the Frobenius manifold. Hence, choosing flat coordinates and letting $$\eta^{\alpha\beta}$$ be the inverse matrix of $$\eta_{\alpha\beta}$$, the structure constants of the multiplication are given by
 
@@ -235,17 +220,13 @@ $$\partial_{t^\alpha} \circ \partial_{t^\beta} = \sum_{\gamma, \delta} \frac{\pa
 
 Since this multiplication $$\circ$$ is associative, writing this out in structure constants yields the following.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop7">**Proposition 7 (Witten–Dijkgraaf–Verlinde–Verlinde)**</ins> The potential $$F$$ of [Proposition 6](#prop6) satisfies the following equation for all $$\alpha, \beta, \gamma, \delta$$:
+::: Proposition 7 (Witten–Dijkgraaf–Verlinde–Verlinde)
+The potential $$F$$ of [Proposition 6](#prop6) satisfies the following equation for all $$\alpha, \beta, \gamma, \delta$$:
 
 $$\sum_{e, f} \frac{\partial^3 F}{\partial t^\alpha \partial t^\beta \partial t^e} \eta^{ef} \frac{\partial^3 F}{\partial t^f \partial t^\gamma \partial t^\delta} = \sum_{e, f} \frac{\partial^3 F}{\partial t^\alpha \partial t^\gamma \partial t^e} \eta^{ef} \frac{\partial^3 F}{\partial t^f \partial t^\beta \partial t^\delta}.$$
+:::
 
-</div>
-
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proof
 Let us expand the associativity $$(\partial_{t^\alpha} \circ \partial_{t^\beta}) \circ \partial_{t^\gamma} = \partial_{t^\alpha} \circ (\partial_{t^\beta} \circ \partial_{t^\gamma})$$ of the multiplication $$\circ$$ in structure constants. Defining $$C_{\alpha\beta}{}^\gamma := \sum_\delta c_{\alpha\beta\delta} \eta^{\delta\gamma}$$, the multiplication is
 
 $$\partial_{t^\alpha} \circ \partial_{t^\beta} = \sum_\gamma C_{\alpha\beta}{}^\gamma \partial_{t^\gamma}\tag{1}$$
@@ -259,8 +240,7 @@ Substituting the result $$c_{\alpha\beta\gamma} = \partial_{t^\alpha} \partial_{
 $$\sum_{e, f} \frac{\partial^3 F}{\partial t^\alpha \partial t^\beta \partial t^e} \eta^{ef} \frac{\partial^3 F}{\partial t^f \partial t^\gamma \partial t^\delta} = \sum_{e, f} \frac{\partial^3 F}{\partial t^\alpha \partial t^\gamma \partial t^e} \eta^{ef} \frac{\partial^3 F}{\partial t^f \partial t^\beta \partial t^\delta}.$$
 
 Conversely, the multiplication defined from a function $$F$$ satisfying this system of PDEs is automatically associative, so the WDVV equation is exactly equivalent to the associativity of the Frobenius manifold.
-
-</details>
+:::
 
 The WDVV equation is a quadratic relation among the third derivatives of $$F$$, and for $$F$$ itself it is a system of third-order nonlinear partial differential equations. On the A-model side of mirror symmetry, the Gromov–Witten potential of quantum cohomology is a representative example satisfying this equation, which is reflected in the *splitting axiom* ([[Symplectic Geometry] §Gromov–Witten Invariants, ⁋Proposition 6](/en/math/symplectic_geometry/gromov_witten#prop6)). As the proof above shows, in the language of Frobenius manifolds the WDVV equation is essentially the associativity of $$\circ$$; note, however, that on the A-model side it takes the less obvious form of the splitting axiom. On the other hand, in the B-model the associativity of $$\circ$$ is immediate because $$\Jac(W)$$ is a quotient ring. Conversely, in the A-model it is transparent that the Gromov–Witten potential plays the role of $$F$$, whereas in the B-model constructing it requires considerable work. This is again an illustration of the philosophy of mirror symmetry: a difficult problem on one side becomes relatively easy when transferred to the opposite model via the mirror.
 
@@ -268,9 +248,8 @@ The WDVV equation is a quadratic relation among the third derivatives of $$F$$, 
 
 The following example is the most basic Frobenius manifold, and serves as a benchmark for the more complicated quantum cohomology examples that follow.
 
-<div class="example" markdown="1">
-
-<ins id="ex8">**Example 8**</ins> Introduce coordinates $$t^1, \ldots, t^n$$ on $$M = \mathbb{C}^n$$ and set
+::: Example 8
+Introduce coordinates $$t^1, \ldots, t^n$$ on $$M = \mathbb{C}^n$$ and set
 
 $$\eta = \sum_{i=1}^n dt^i \otimes dt^i,\qquad \partial_{t^i} \circ \partial_{t^j} = \delta_{ij} \partial_{t^i}.$$
 
@@ -295,8 +274,7 @@ Since $$\circ$$ is associative, the WDVV equation holds trivially; if one insist
 $$\sum_e C_{\alpha\beta}{}^e C_{e\gamma}{}^\delta = \delta_{\alpha\beta}\delta_{\alpha\gamma}\delta_{\gamma\delta} = \delta_{\alpha\beta\gamma\delta} = \delta_{\alpha\gamma}\delta_{\alpha\beta}\delta_{\beta\delta} = \sum_e C_{\alpha\gamma}{}^e C_{e\beta}{}^\delta$$
 
 holds trivially.
-
-</div>
+:::
 
 In this example the coordinates $$t^i$$ are very nice: in these coordinates the multiplication $$\circ$$ is naturally diagonalized. In general, if the multiplication $$\circ_p$$ is represented as a direct sum of idempotents at a generic point, we call this a *semisimple* Frobenius manifold; [Example 8](#ex8) is the simplest such example.
 
@@ -306,19 +284,15 @@ $$M = H^\ast(X, \mathbb{C}),$$
 
 and introduce formal coordinates $$t = \sum_\alpha t^\alpha \sigma^\alpha$$ dual to a cohomology basis $$\{\sigma^\alpha\}$$. Since $$M$$ is itself a vector space, the tangent space $$T_tM$$ at each point is canonically isomorphic to $$H^\ast(X, \mathbb{C})$$. Therefore endowing this with a Frobenius manifold structure is the same as giving a Frobenius product $$\circ_t$$ on $$T_tM\cong H^\ast(X, \mathbb{C})$$, and (naturally) we choose this to be the multiplication $$\circ_t$$ of big quantum cohomology, i.e., the multiplication defined by the third derivatives of the GW potential $$F(t)$$. ([[Symplectic Geometry] §Quantum Cohomology, ⁋Definition 12](/en/math/symplectic_geometry/quantum_cohomology#def12)) The next proposition shows that these data actually form a Frobenius manifold.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop9">**Proposition 9**</ins> For a compact Kähler manifold $$X$$, the tuple $$(M, \eta, \circ_t, e, E)$$ with $$M = H^\ast(X, \mathbb{C})$$, the big quantum product $$\circ_t$$ ([[Symplectic Geometry] §Quantum Cohomology, ⁋Definition 12](/en/math/symplectic_geometry/quantum_cohomology#def12)), the Poincaré pairing $$\eta$$, the unit $$e = 1 \in H^0(X)$$, and the Euler vector field
+::: Proposition 9
+For a compact Kähler manifold $$X$$, the tuple $$(M, \eta, \circ_t, e, E)$$ with $$M = H^\ast(X, \mathbb{C})$$, the big quantum product $$\circ_t$$ ([[Symplectic Geometry] §Quantum Cohomology, ⁋Definition 12](/en/math/symplectic_geometry/quantum_cohomology#def12)), the Poincaré pairing $$\eta$$, the unit $$e = 1 \in H^0(X)$$, and the Euler vector field
 
 $$E = \sum_\alpha \Bigl(1 - \frac{1}{2}\deg \sigma^\alpha\Bigr) t^\alpha \partial_{t^\alpha} + \sum_\alpha r^\alpha \partial_{t^\alpha}, \qquad c_1(X) = \sum_\alpha r^\alpha \sigma^\alpha$$
 
 is a Frobenius manifold ([Definition 5](#def5)).
+:::
 
-</div>
-
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proof
 We verify the six conditions of [Definition 5](#def5) in order.
 
 1. First, the Poincaré pairing $$\eta_{\alpha\beta} = \int_X \sigma_\alpha \smile \sigma_\beta$$ is constant in the linear coordinates $$t^\alpha$$, so its Levi-Civita connection is flat and the $$t^\alpha$$ form flat coordinates.
@@ -327,8 +301,7 @@ We verify the six conditions of [Definition 5](#def5) in order.
 4. Meanwhile, by [[Symplectic Geometry] §Quantum Cohomology, ⁋Definition 12](/en/math/symplectic_geometry/quantum_cohomology#def12) the structure constants are $$c_{\alpha\beta\gamma}(t) = \eta(\partial_{t^\alpha} \circ_t \partial_{t^\beta}, \partial_{t^\gamma}) = \partial_{t^\alpha}\partial_{t^\beta}\partial_{t^\gamma} F$$, and the symmetry of this expression in the three indices gives $$\eta(X \circ Y, Z) = \eta(X, Y \circ Z)$$.
 5. Similarly one checks that $$\nabla c$$ is symmetric in the four indices; under this potentiality, associativity is equivalent to the WDVV equation of [Proposition 7](#prop7), and on the A-model side it is guaranteed by the splitting axiom for GW invariants.
 6. Finally, the grading of quantum cohomology ([[Symplectic Geometry] §Quantum Cohomology, ⁋Definition 2](/en/math/symplectic_geometry/quantum_cohomology#def2)) translates as described in the main text into $$\Lie_E(\circ) = \circ$$ and $$\Lie_E(\eta) = (2-d)\eta$$, and the given $$E$$ satisfies this as an affine vector field with $$\nabla^2 E = 0$$.
-
-</details>
+:::
 
 Considering our mirror symmetry statement
 
@@ -336,9 +309,8 @@ $$\Jac(W_q)\cong QH^\ast(X),$$
 
 this ultimately depends on the deformation by the quantum parameter $$q$$, so if we only care about this level big quantum cohomology is somewhat too large, and we need only consider the deformation in the $$H^2$$ direction, or small quantum cohomology. At a more general level one can study mirror symmetry including bulk deformations of big quantum cohomology and of $$W_q$$, but this goes beyond our primary goal, so in most cases we shall consider only the deformation in the $$H^2$$ direction. In the following $$\mathbb{P}^1$$ example, apart from the unit direction $$H^0$$ the space $$H^2$$ is the whole cohomology (there are no classes of degree $$\ge 4$$), so big quantum cohomology coincides with small quantum cohomology; hence the computation below realizes [Proposition 9](#prop9) directly.
 
-<div class="example" markdown="1">
-
-<ins id="ex10">**Example 10**</ins> To verify explicitly that the above multiplication $$\circ_t$$ varies with $$t$$, let us compute the case $$X = \mathbb{P}^1$$. Since the manifold $$M = H^\ast(\mathbb{P}^1) = \mathbb{C}\langle 1, H\rangle$$ is itself a vector space, coordinates on it are given by the dual of the cohomology basis $$\{1, H\}$$; let us denote these by $$t^0, t^1$$.
+::: Example 10
+To verify explicitly that the above multiplication $$\circ_t$$ varies with $$t$$, let us compute the case $$X = \mathbb{P}^1$$. Since the manifold $$M = H^\ast(\mathbb{P}^1) = \mathbb{C}\langle 1, H\rangle$$ is itself a vector space, coordinates on it are given by the dual of the cohomology basis $$\{1, H\}$$; let us denote these by $$t^0, t^1$$.
 
 The Gromov–Witten potential of $$\mathbb{P}^1$$ is now given by
 
@@ -375,8 +347,7 @@ $$\Lie_E\bigl(e^{t^1}\, dt^1 \otimes dt^1 \otimes \partial_{t^0}\bigr) = (2 + 0 
 so $$\Lie_E(\circ) = \circ$$.
 
 Now setting the Novikov variable to $$q = e^{t^1}$$, the second equation becomes $$\partial_{t^1} \circ \partial_{t^1} = qe$$, which translates back into cohomology language as $$H \star H = q \cdot 1$$, recovering the small quantum ring of [§Overview of Mirror Symmetry, ⁋Example 5](/en/math/mirror_symmetry/overview#ex5). Moreover, this isomorphism is now parametrized by the variation of $$q=e^{t^1}$$, upgrading the previous mirror symmetry at the level of ring isomorphisms.
-
-</div>
+:::
 
 Thus a Frobenius manifold provides the stage on which the ring structure of quantum cohomology can be treated consistently as a *function of the deformation parameter $$t$$*. From the next post onward we can now explore mirror symmetry in earnest.
 

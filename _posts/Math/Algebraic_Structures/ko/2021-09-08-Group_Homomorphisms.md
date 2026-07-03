@@ -17,17 +17,13 @@ weight: 4
 
 [§대수적 구조, ⁋정의 6](/ko/math/algebraic_structures/algebraic_structures#def6)으로부터 (group) isomorphism 또한 정의할 수 있는데, 이 정의와 [\[집합론\] §함수들 사이의 연산, ⁋명제 5](/ko/math/set_theory/operation_of_functions#prop5)로부터 임의의 isomorphism은 반드시 전단사함수여야 함이 자명하다. 많은 경우에는 그 역 또한 성립한다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop1">**명제 1**</ins> 임의의 magma homomorphism $$f:A\rightarrow A'$$가 isomorphism인 것은 $$f$$가 전단사인 것과 동치이다. 
+::: 명제 1
+임의의 magma homomorphism $$f:A\rightarrow A'$$가 isomorphism인 것은 $$f$$가 전단사인 것과 동치이다. 
 
 만일 $$A$$가 항등원 $$e$$를 갖고, $$f:A\rightarrow A'$$가 전단사함수라면 $$f(e)$$는 $$A'$$의 항등원이며, 따라서 $$f^{-1}$$은 $$A'$$의 항등원을 $$A$$의 항등원으로 보내는 magma homomorphism이다.
+:::
 
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 반대쪽 방향만 보이면 충분하다. $$f$$는 전단사이므로, 함수로써 역함수 $$f^{-1}:G'\rightarrow G$$가 존재한다. 만일 $$f^{-1}$$이 homomorphism이기만 하다면, 정의에 의해 $$f$$는 isomorphism이 될 것이다.
 
 임의의 $$y, y'\in  A'$$를 택하자. 그럼 $$f$$는 전단사이므로, 적당한 $$x$$, $$x'$$가 유일하게 존재하여 $$f(x)=y$$이고 $$f(x')=y'$$이다. 이제
@@ -41,32 +37,26 @@ $$f^{-1}(yy')=f^{-1}(f(x)f(x'))=f^{-1}(f(xx'))=xx'=f^{-1}(y)f^{-1}(y')$$
 $$y=f(x)=f(xe)=f(x)f(e),\qquad y=f(x)=f(ex)=f(e)f(x)$$
 
 이므로 $$f(e)$$는 $$A'$$의 항등원이다.
-
-</details>
+:::
 
 ## 준동형사상의 equalizer
 
 다음이 성립한다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**명제 2**</ins> Group homomorphism $$f,g:G \rightarrow H$$가 주어졌다 하자. 그럼
+::: 명제 2
+Group homomorphism $$f,g:G \rightarrow H$$가 주어졌다 하자. 그럼
 
 $$\Eq(f,g)=\{x\in G\mid f(x)=g(x)\}$$
 
 은 $$G$$의 subgroup이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 만일 $$x,y\in \Eq(f,g)$$라면,
 
 $$f(xy^{-1})=f(x)f(y)^{-1}=g(x)g(y)^{-1}=g(xy^{-1})$$
 
 이므로 $$xy^{-1}\in\Eq(f,g)$$이다. 따라서 [§반군, 모노이드, 군, ⁋명제 15](/ko/math/algebraic_structures/groups#prop15)에 의해 원하는 결과를 얻는다. 
-
-</details>
+:::
 
 이렇게 정의한 $$i:\Eq(f,g)\rightarrow G$$는 다음과 같은 성질을 가진다.
 
@@ -80,14 +70,10 @@ Group $$\{e\}$$는 category $$\Grp$$의 zero object이다. 따라서 임의의 g
 
 한편, group homomorphism $$f$$가 단사함수라는 것은 다음과 같이 표현할 수 있다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop3">**명제 3**</ins> Homomorphism $$f:G\rightarrow G'$$가 단사함수인 것은 $$f^{-1}(e')=\{e\}$$인 것과 동치이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 명제 3
+Homomorphism $$f:G\rightarrow G'$$가 단사함수인 것은 $$f^{-1}(e')=\{e\}$$인 것과 동치이다.
+:::
+::: 증명
 $$f$$가 단사함수라면 $$f^{-1}(e')=\{e\}$$여야 하는 것은 자명하다.
 
 거꾸로 $$f^{-1}(e')=\{e\}$$가 성립한다 가정하자. $$f(x)=f(y)$$를 만족하는 $$x,y\in G$$가 주어졌다 하면,
@@ -95,48 +81,35 @@ $$f$$가 단사함수라면 $$f^{-1}(e')=\{e\}$$여야 하는 것은 자명하�
 $$e'=f(x)f(y)^{-1}=f(xy^{-1})$$
 
 이며, 가정에 의해 $$xy^{-1}=e$$이다. 이로부터 $$x=y$$임을 안다.
-
-</details>
+:::
 
 임의의 homomorphism $$f:G\rightarrow G'$$에 대하여, 위의 집합 $$f^{-1}(e')$$는 $$f$$가 단사함수로부터 얼마나 멀리 떨어져 있는지를 보여준다. 이 집합을 다음과 같이 부른다.
 
-<div class="definition" markdown="1">
-
-<ins id="def4">**정의 4**</ins> Homomorphism $$f:G\rightarrow G'$$의 *kernel<sub>핵</sub>*을 집합 $$f^{-1}(e')$$으로 정의하고, $$\ker f$$로 적는다.
-
-</div>
+::: 정의 4
+Homomorphism $$f:G\rightarrow G'$$의 *kernel<sub>핵</sub>*을 집합 $$f^{-1}(e')$$으로 정의하고, $$\ker f$$로 적는다.
+:::
 
 그럼 $$f^{-1}(e')$$는 단순한 집합일 뿐만 아니라, $$G$$의 subgroup이 된다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**명제 5**</ins> 임의의 homomorphism $$f:G\rightarrow G'$$에 대하여, $$\ker f$$는 $$G$$의 subgroup이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 명제 5
+임의의 homomorphism $$f:G\rightarrow G'$$에 대하여, $$\ker f$$는 $$G$$의 subgroup이다.
+:::
+::: 증명
 정의에 의해 $$\ker f=\Eq(f,e)$$이다.
-
-</details>
+:::
 
 한편, 우리는 임의의 magma homomorphism $$f:A\rightarrow A'$$이 주어졌을 때, 그 image $$\im f$$이 $$A'$$의 부분마그마가 되는 것을 확인했다. ([§대수적 구조, ⁋정의 8](/ko/math/algebraic_structures/algebraic_structures#def8) 이전의 계산) 그러나 일반적으로 group의 부분마그마는 subgroup일 필요가 없으므로, 다음의 명제는 별도로 증명해야 한다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop6">**명제 6**</ins> 임의의 homomorphism $$f:G\rightarrow G'$$에 대하여, $$\im f$$는 $$G'$$의 subgroup이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 명제 6
+임의의 homomorphism $$f:G\rightarrow G'$$에 대하여, $$\im f$$는 $$G'$$의 subgroup이다.
+:::
+::: 증명
 $$\im f$$가 $$G'$$의 부분마그마인 것은 이미 알고 있으므로, [§반군, 모노이드, 군, ⁋명제 15](/ko/math/algebraic_structures/groups#prop15)를 이용하면 $$\im f$$가 역원을 취하는 것에 대해 닫혀있음만 보이면 된다. $$y\in\im f$$라 하고, $$x\in G$$가 $$f(x)=y$$를 만족한다 하자. 그럼
 
 $$f(x^{-1})=f(x)^{-1}=y^{-1}$$
 
 로부터 $$y^{-1}\in\im f$$임을 안다.
-
-</details>
+:::
 
 
 ---

@@ -20,19 +20,16 @@ This article gathers topics scattered throughout **[Bou]** along with some topic
 
 First, we define the following two concepts.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> For an ordered set $$A$$, a subset $$X\subseteq A$$ is a *lower set* (resp. *upper set*) if whenever $$y\in A$$ satisfies $$y\leq x$$ (resp. $$x\leq y$$) for some $$x\in X$$, then $$y\in X$$.
+::: Definition 1
+For an ordered set $$A$$, a subset $$X\subseteq A$$ is a *lower set* (resp. *upper set*) if whenever $$y\in A$$ satisfies $$y\leq x$$ (resp. $$x\leq y$$) for some $$x\in X$$, then $$y\in X$$.
 
 A nonempty right directed lower set is called an *ideal*, and a nonempty left directed upper set is called a *filter*.
-
-</div>
+:::
 
 The set $$E$$ itself is both a filter and an ideal. Filters and ideals distinct from $$E$$ are called proper.
 
-<div class="example" markdown="1">
-
-<ins id="ex2">**Example 2**</ins> Let an ordered set $$A$$ be given. For any $$x\in A$$, the *downward closure*[^1]
+::: Example 2
+Let an ordered set $$A$$ be given. For any $$x\in A$$, the *downward closure*[^1]
 
 $$\downarrow x=\{y\in A\mid y\leq x\}$$
 
@@ -43,42 +40,33 @@ Similarly, the *upward closure*
 $$\uparrow x=\{y\in A\mid y\geq x\}$$
 
 is a filter of $$A$$, and such a filter is called a *principal filter*.
-
-</div>
+:::
 
 We are mostly interested in the case where $$A$$ is a lattice. In this case, ([§Directed Sets, ⁋Definition 4](/en/math/set_theory/directed_set#def4))
 
 - A nonempty lower set $$I$$ is an ideal if and only if $$x\vee y\in I$$ for all $$x,y\in I$$.
 - A nonempty upper set $$F$$ is a filter if and only if $$x\wedge y\in F$$ for all $$x,y\in F$$.
 
-<div class="example" markdown="1">
-
-<ins id="ex3">**Example 3**</ins> Let a set $$A$$ be given. Endowing $$\mathcal{P}(A)$$ with the natural order relation $$\subseteq$$ makes it a lattice, and in particular, for any $$X,Y\in\mathcal{P}(A)$$,
+::: Example 3
+Let a set $$A$$ be given. Endowing $$\mathcal{P}(A)$$ with the natural order relation $$\subseteq$$ makes it a lattice, and in particular, for any $$X,Y\in\mathcal{P}(A)$$,
 
 $$X\vee Y=X\cup Y,\qquad X\wedge Y=X\cap Y$$
 
 hold. In $$\mathcal{P}(A)$$, the two operations $$\vee$$ and $$\wedge$$ additionally satisfy the distributive laws
 
 $$X\vee(Y\wedge Z)=(X\vee Y)\wedge(X\vee Z),\qquad X\wedge(Y\vee Z)=(X\wedge Y)\vee(X\wedge Z).$$
+:::
 
-</div>
-
-<div class="definition" markdown="1">
-
-<ins id="def4">**Definition 4**</ins> Let a lattice $$A$$ be given, and let $$I$$ and $$F$$ be a proper ideal and a proper filter of $$E$$, respectively. $$I$$ is a *prime ideal* if for any $$x,y\in A$$, whenever $$x\wedge y\in I$$, then either $$x\in I$$ or $$y\in I$$. Similarly, $$F$$ is a *prime filter* if for any $$x,y\in A$$, whenever $$x\vee y\in F$$, then either $$x\in F$$ or $$y\in F$$. ([\[Algebraic Structures\] §Field of Fractions, ⁋Proposition 8](/en/math/algebraic_structures/field_of_fractions#prop8))
-
-</div>
+::: Definition 4
+Let a lattice $$A$$ be given, and let $$I$$ and $$F$$ be a proper ideal and a proper filter of $$E$$, respectively. $$I$$ is a *prime ideal* if for any $$x,y\in A$$, whenever $$x\wedge y\in I$$, then either $$x\in I$$ or $$y\in I$$. Similarly, $$F$$ is a *prime filter* if for any $$x,y\in A$$, whenever $$x\vee y\in F$$, then either $$x\in F$$ or $$y\in F$$. ([\[Algebraic Structures\] §Field of Fractions, ⁋Proposition 8](/en/math/algebraic_structures/field_of_fractions#prop8))
+:::
 
 Equivalently, one may define $$I$$ to be a prime ideal by requiring that $$A\setminus I$$ be a filter.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**Proposition 5**</ins> Let a lattice $$A$$ be given in which the distributive law between the two operations $$\vee$$ and $$\wedge$$ holds. Then every maximal ideal is a prime ideal, and every maximal filter is a prime filter.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proposition 5
+Let a lattice $$A$$ be given in which the distributive law between the two operations $$\vee$$ and $$\wedge$$ holds. Then every maximal ideal is a prime ideal, and every maximal filter is a prime filter.
+:::
+::: Proof
 Let $$I$$ be a maximal ideal, and suppose $$x\wedge y\in I$$. Assume, for contradiction, that $$x,y\not\in I$$. Define a new set $$J$$ as the set of all $$z$$ such that $$x\wedge z\in I$$.
 
 1. If $$z_1,z_2\in J$$, then $$x\wedge (z_1\vee z_2)=(x\wedge z_1)\vee(x\wedge z_2)\in I$$, so $$z_1\vee z_2\in J$$.
@@ -86,8 +74,7 @@ Let $$I$$ be a maximal ideal, and suppose $$x\wedge y\in I$$. Assume, for contra
 3. In particular, it is clear that $$x\not\in J$$ and $$y\in J$$.
 
 Therefore, $$J$$ is a proper ideal strictly containing $$I$$, which contradicts the maximality of $$I$$. Similarly, one can show that every maximal filter is prime.
-
-</details>
+:::
 
 
 Maximal filters are also called *ultrafilters*.
@@ -99,9 +86,8 @@ For two ordered sets $$A,B$$, consider an increasing function $$f:A\rightarrow B
 
 The Galois connection we are about to introduce, as its name suggests, originates from Galois theory for field extensions. However, it can be abstracted as a relation between two ordered sets, and this abstraction proves useful in many areas.
 
-<div class="definition" markdown="1">
-
-<ins id="def6">**Definition 6**</ins> Let two ordered sets $$A$$ and $$B$$ be given.
+::: Definition 6
+Let two ordered sets $$A$$ and $$B$$ be given.
 
 1. Let two increasing functions $$F:A\rightarrow B$$ and $$G:B\rightarrow A$$ satisfy
 
@@ -113,7 +99,7 @@ The Galois connection we are about to introduce, as its name suggests, originate
     $$b\leq F(a)\iff a\leq G(b)$$
 
     for all $$a\in A$$ and $$b\in B$$. Then $$F$$ and $$G$$ are each called a *polarity* of the other, and the pair $$(F,G)$$ is called an *antitone Galois connection* between $$A$$ and $$B$$.
-</div>
+:::
 
 In either case, the function $$G\circ F:A\rightarrow A$$ always satisfies $$a\leq G(F(a))$$. For a monotone Galois connection,
 
@@ -133,35 +119,28 @@ Meanwhile, $$G\circ F$$ and $$F\circ G$$ are compositions of two increasing func
 
 For convenience, we shall abbreviate $$G\circ F$$ and $$F\circ G$$ as $$GF$$ and $$FG$$, respectively, in the remainder of this article.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop7">**Proposition 7**</ins> Let two ordered sets $$A,B$$ be given with a monotone Galois connection $$F:A\rightarrow B$$ and $$G:B\rightarrow A$$ between them. Then $$GFG(y)=G(y)$$ holds for all $$y\in B$$.
+::: Proposition 7
+Let two ordered sets $$A,B$$ be given with a monotone Galois connection $$F:A\rightarrow B$$ and $$G:B\rightarrow A$$ between them. Then $$GFG(y)=G(y)$$ holds for all $$y\in B$$.
 
 If these form an antitone Galois connection, then $$GFG(y)=G(y)$$ and $$FGF(x)=F(x)$$ hold for all $$x\in A$$ and $$y\in B$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 First, substituting $$a=G(y)$$ into $$a\leq GF(a)$$ yields $$G(y)\leq GFG(y)$$. On the other hand, we have shown that $$FG$$ satisfies $$FG(b)\leq b$$ for all $$b\in B$$, and since $$G$$ is increasing, we also obtain $$GFG(y)\leq G(y)$$. Therefore, $$GFG(y)=G(y)$$.
 
 On the other hand, if the pair $$(F,G)$$ is an antitone Galois connection, $$G(y)\leq GFG(y)$$ is shown in the same way as above. Also, since $$b\leq FG(b)$$ always holds for all $$b\in B$$, and $$G$$ is decreasing, $$G(y)\geq GFG(y)$$ again holds, so $$GFG(y)=G(y)$$. The equality $$FGF(x)=F(x)$$ follows easily by interchanging the roles of $$F$$ and $$G$$.
-
-</details>
+:::
 
 The following definition is important not only in topology but also in lattice theory.
 
-<div class="definition" markdown="1">
-
-<ins id="def8">**Definition 8**</ins> For an ordered set $$A$$, a function $$f:A\rightarrow A$$ is a *closure operator* if the following three conditions are satisfied:
+::: Definition 8
+For an ordered set $$A$$, a function $$f:A\rightarrow A$$ is a *closure operator* if the following three conditions are satisfied:
 
 1. For all $$x\in A$$, $$x\leq f(x)$$.
 2. For all $$x\in A$$, $$f(x)=f(f(x))$$.
 3. If $$x\leq y$$, then $$f(x)\leq f(y)$$.
 
 In this case, $$x$$ is *closed* if $$f(x)=x$$.
-
-</div>
+:::
 
 Fix an antitone Galois connection. From the result $$GFG(y)=G(y)$$ in [Proposition 7](#prop7), substituting $$y=F(x)$$ for any $$x\in A$$ gives
 

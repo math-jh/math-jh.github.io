@@ -34,15 +34,13 @@ $$(\bar{1},\bar{1},\cdots)$$
 
 but the right-hand side contains only elements obtained by *finite* operations on the $$\iota_i(\bar{1})$$, so it cannot contain the element above.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> Let a family of groups $$(G_i)$$ be given, and fix subgroups $$H_i$$ of the $$G_i$$. Then the subgroup consisting of those $$x$$ such that $$\pr_ix\in H_i$$ for all but finitely many $$i$$ is called the *restricted sum* of the $$G_i$$ with respect to the $$H_i$$, and is denoted $$\prod^H G_i$$.
+::: Definition 1
+Let a family of groups $$(G_i)$$ be given, and fix subgroups $$H_i$$ of the $$G_i$$. Then the subgroup consisting of those $$x$$ such that $$\pr_ix\in H_i$$ for all but finitely many $$i$$ is called the *restricted sum* of the $$G_i$$ with respect to the $$H_i$$, and is denoted $$\prod^H G_i$$.
 
 In the special case where $$H_i=\{e\}$$ for all $$i$$, it is called the *weak direct product* of the $$G_i$$, and is simply denoted
 
 $${\prod_{i\in I}}^w G_i.$$
-
-</div>
+:::
 
 The notation $$\prod^H$$ is not particularly good, but fortunately we are only interested in the weak direct product, so we will never use this notation again.
 
@@ -54,18 +52,14 @@ holds. Also, if $$I$$ is a finite set, the weak direct product coincides with th
 
 Then $$\prod^wG_i$$ has the following universal property.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm2">**Theorem 2**</ins> Let a family of groups $$(G_i)$$ and their weak direct product $$\prod^w G_i$$ be given. For another group $$H$$, suppose that group homomorphisms $$f_i:G_i\rightarrow H$$ satisfy the condition
+::: Theorem 2
+Let a family of groups $$(G_i)$$ and their weak direct product $$\prod^w G_i$$ be given. For another group $$H$$, suppose that group homomorphisms $$f_i:G_i\rightarrow H$$ satisfy the condition
 
 > For any $$i\neq j$$, if $$x\in G_i$$ and $$y\in G_j$$, then $$f_i(x)f_j(y)=f_j(y)f_i(x)$$.
 
 Then there exists a unique group homomorphism $$f:\prod^w G_i\rightarrow H$$ such that $$f_i=f\circ\iota_i$$ holds for every $$i$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 First, we show uniqueness. If $$f, f'$$ satisfy the above, then they must agree on $$\bigcup\iota_i(G_i)$$, hence also on $$\prod^w G_i$$, and therefore $$f=f'$$.
 
 Now we show the existence of $$f$$. For any $$x\in \prod^w G_i$$, define $$f(x)$$ by the formula
@@ -87,8 +81,7 @@ and since $$f_i(\pr_ix)$$ and $$f_j(\pr_jy)$$ always commute when $$i\neq j$$, t
 $$f_1(\pr_1x)f_2(\pr_2x)\cdots f_n(\pr_nx)f_1(\pr_1y)f_2(\pr_2y)\cdots f_n(\pr_ny).$$
 
 Thus $$f(xy)=f(x)f(y)$$ and $$f$$ is a group homomorphism. That $$f_i=f\circ\iota_i$$ is obvious.
-
-</details>
+:::
 
 The condition imposed on the $$f_i$$,
 
@@ -98,11 +91,9 @@ is necessarily satisfied, because these are exactly the conditions satisfied by 
 
 Using the universal property of the weak direct product, one can prove several properties analogous to those for the direct product. For example, the following holds.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop3">**Proposition 3**</ins> Let the $$G_i$$ be groups and the $$H_i$$ be normal subgroups of the $$G_i$$. Then $$\prod^w H_i$$ is also a normal subgroup of $$\prod^w G_i$$, and its quotient group is $$\prod^w (G_i/H_i)$$.
-
-</div>
+::: Proposition 3
+Let the $$G_i$$ be groups and the $$H_i$$ be normal subgroups of the $$G_i$$. Then $$\prod^w H_i$$ is also a normal subgroup of $$\prod^w G_i$$, and its quotient group is $$\prod^w (G_i/H_i)$$.
+:::
 
 ## Internal weak product
 
@@ -110,11 +101,9 @@ Let $$G$$ be a group, and let $$(H_i)$$ be a family of subgroups of $$G$$. If th
 
 We also make the following definition.
 
-<div class="definition" markdown="1">
-
-<ins id="def4">**Definition 4**</ins> In the above situation, if $$\iota$$ is an isomorphism, then $$G$$ is called the *internal weak direct product* of the $$H_i$$.
-
-</div>
+::: Definition 4
+In the above situation, if $$\iota$$ is an isomorphism, then $$G$$ is called the *internal weak direct product* of the $$H_i$$.
+:::
 
 Thinking about the form of the homomorphism $$f$$ constructed in [Theorem 2](#thm2), one can verify that $$G$$ being the internal weak direct product of the $$H_i$$ is equivalent to the condition
 
@@ -122,19 +111,15 @@ Thinking about the form of the homomorphism $$f$$ constructed in [Theorem 2](#th
 
 If the subgroups $$H_i$$ are all normal in $$G$$, then the following additional condition guarantees that $$G$$ is the internal weak direct product of the $$H_i$$.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**Proposition 5**</ins> Let $$(H_i)$$ be normal subgroups of a group $$G$$ satisfying the two conditions
+::: Proposition 5
+Let $$(H_i)$$ be normal subgroups of a group $$G$$ satisfying the two conditions
 
 1. $$G=\bigl\langle\bigcup_{i\in I} H_i\bigr\rangle$$,
 2. $$H_k\cap \bigl\langle\bigcup_{i\neq k} H_i\bigr\rangle=\{e\}$$
 
 Then $$G$$ is the internal weak direct product of the $$H_i$$.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 First, condition 2 shows in particular that $$H_i\cap H_j=\{e\}$$ for every pair $$i\neq j$$. Now choose arbitrary $$x_i\in H_i, x_j\in H_j$$; then from
 
 $$x_ix_jx_i^{-1}x_j^{-1}=x_i\bigl(x_jx_i^{-1}x_j^{-1}\bigr)=\bigl(x_ix_jx_i^{-1}\bigr)x_j^{-1}\in H_i\cap H_j=\{e\}$$
@@ -160,8 +145,7 @@ if $$\supp(a_i)$$ contains at least one element and $$i\in\supp(a_i)$$, then
 $$a_i^{-1}=\prod_{j\in I\setminus\{i\}}a_j\in H_i\cap \left\langle\bigcup_{j\neq i} H_i\right\rangle=\{e\}$$
 
 which contradicts the assumption that $$i\in\supp(a_i)$$. Therefore $$\supp(a_i)$$ is empty and $$a$$ is the identity.
-
-</details>
+:::
 
 
 ---

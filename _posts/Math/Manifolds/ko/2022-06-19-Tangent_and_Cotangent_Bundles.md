@@ -17,17 +17,15 @@ weight: 10
 
 이제 우리는 벡터장을 정의해야 하는데, $$C^\infty$$ 벡터장과 같은 개념을 정의하기 위해서는 벡터다발의 개념을 먼저 정의하는 것이 좋다. 우선 위상공간 위에 정의된 벡터다발을 먼저 정의하자.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> 위상공간 $$B$$ 위에 정의된 *vector bundle<sub>벡터다발</sub>*은 $$\pi:E \rightarrow B$$는 다음과 같이 정의된 대상이다.
+::: 정의 1
+위상공간 $$B$$ 위에 정의된 *vector bundle<sub>벡터다발</sub>*은 $$\pi:E \rightarrow B$$는 다음과 같이 정의된 대상이다.
 
 - *Total space* $$E$$와 *base space* $$B$$는 모두 위상공간이며, $$\pi:E \rightarrow B$$는 연속인 전사함수다.
 - 각각의 $$b\in B$$에 대하여, $$E_b=\pi^{-1}(b)$$는 $$k$$차원 벡터공간의 구조를 갖는다.
 - 각각의 $$b_0\in B$$마다 적당한 열린근방 $$U\subseteq B$$, 그리고 homeomorphism $$h:U\times\mathbb{R}^k \rightarrow\pi^{-1}(U)$$가 존재하여, 모든 $$b\in U$$마다 $$x\mapsto h(b,x)$$가 isomorphism이도록 할 수 있다.
 
 이 때 $$k$$를 vector bundle $$E\rightarrow B$$의 *rank*라 부른다. 셋째 조건의 homomorphism $$h$$를 *local trivialization*이라 부르며, 만일 $$U=B$$로 둘 수 있다면 $$E$$를 *trivial vector bundle*이라 부른다.
-
-</div>
+:::
 
 이와 유사하게 manifold 위에도 vector bundle을 정의할 수 있다. 이를 위해서는 $$E$$와 $$B$$를 모두 manifold로, $$\pi$$를 $$C^\infty$$인 전사함수로 바꾸고, 셋째 조건을
 
@@ -39,9 +37,8 @@ weight: 10
 
 Vector bundle의 대표적인 예시는 tangent bundle이다.
 
-<div class="example" markdown="1">
-
-<ins id="ex2">**예시 2 (Tangent bundle)**</ins> 집합 $$TM$$을
+::: 예시 2 (Tangent bundle)
+집합 $$TM$$을
 
 $$TM=\bigsqcup_{p\in M} T_pM$$
 
@@ -82,8 +79,7 @@ $$v\vert_p\mapsto (p, dx^1(v),\ldots, dx^m(v))$$
 $$\tilde{\varphi}=(\varphi\times\id_{\mathbb{R}^m})\circ\phi$$
 
 이고, 이 식에서 $$\phi$$를 제외한 두 함수가 모두 diffeomorphism이기 때문에 성립한다.
-
-</div>
+:::
 
 특별히 $$TM$$이 trivial bundle일 경우, $$M$$을 *parallelizable manifold*라 부른다. 
 
@@ -93,15 +89,13 @@ Tangent bundle $$TM$$이 중요한 것은 manifold 위에 정의된 대다수의
 
 원래대로라면 이들을 정의할 때마다 이들이 vector bundle의 조건을 만족한다는 것을 보여야 하지만, **[Mil]**에 조금 더 근본적인 방식이 있다.
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**정의 3**</ins> 두 vector bundle $$E\rightarrow B$$, $$E'\rightarrow B'$$가 주어졌다 하자. 그럼 $$E \rightarrow B$$에서 $$E' \rightarrow B'$$의 *bundle map<sub>벡터다발 준동형사상</sub>*은 다음의 diagram
+::: 정의 3
+두 vector bundle $$E\rightarrow B$$, $$E'\rightarrow B'$$가 주어졌다 하자. 그럼 $$E \rightarrow B$$에서 $$E' \rightarrow B'$$의 *bundle map<sub>벡터다발 준동형사상</sub>*은 다음의 diagram
 
 ![bundle_map](/assets/images/Math/Manifolds/Tangent_and_Cotangent_Bundles-1.svg){:style="width:5.60em" class="invert" .align-center}
 
 을 commute하도록 하는 쌍 $$E\rightarrow E', B \rightarrow B'$$ 중, $$E_b\rightarrow E'_{b'}$$가 isomorphism인 것들을 의미한다.
-
-</div>
+:::
 
 이제 morphism들이 isomorphism으로 구성된 유한차원 $$\mathbb{R}$$-벡터공간들의 category $$\mathbf{FVect}_\text{iso}$$를 생각하자. 그럼 $$\mathbf{FVect}_\text{iso}\times\mathbf{FVect}_\text{iso}$$는 
 
@@ -110,11 +104,9 @@ Tangent bundle $$TM$$이 중요한 것은 manifold 위에 정의된 대다수의
 
 인 category이다. 따라서 $$\mathbf{FVect}_\text{iso}\times\mathbf{FVect}_\text{iso}$$에서 $$\mathbf{FVect}_\text{iso}$$로의 functor $$F$$는 $$(V,W)$$를 받아 $$\mathbb{R}$$-벡터공간 $$F(V,W)$$를, $$(f,g)$$를 받아 isomorphism $$F(f,g)$$를 내놓아야 한다.
 
-<div class="definition" markdown="1">
-
-<ins id="def4">**정의 4**</ins> Functor $$F:\mathbf{FVect}_\text{iso}\times\mathbf{FVect}_\text{iso}\rightarrow \mathbf{FVect}_\text{iso}$$이 *smooth functor<sub>매끄러운 함자</sub>*라는 것은 $$F(f,g)$$가 $$f,g$$에 대해 smooth하게 의존하는 것이다.
-
-</div>
+::: 정의 4
+Functor $$F:\mathbf{FVect}_\text{iso}\times\mathbf{FVect}_\text{iso}\rightarrow \mathbf{FVect}_\text{iso}$$이 *smooth functor<sub>매끄러운 함자</sub>*라는 것은 $$F(f,g)$$가 $$f,g$$에 대해 smooth하게 의존하는 것이다.
+:::
 
 만일 $$f\in\Hom(V,V'), g\in\Hom(W,W')$$라면 $$F(f,g)\in\Hom(F(V,W),F(V',W'))$$이다. 이들은 모두 벡터공간이므로 [§미분다양체의 예시들, ⁋예시 2](/ko/math/manifolds/examples_of_manifolds#ex2)와 같은 미분구조가 주어져 있고, 이를 통해 위의 정의를 적용할 수 있다. 또, 어렵지 않게 이 정의를 일반적인 $$k$$-fold product 
 
@@ -122,9 +114,8 @@ $$\mathbf{FVect}_\text{iso}\times\cdots\times\mathbf{FVect}_\text{iso}\rightarro
 
 으로도 확장할 수 있다. 
 
-<div class="example" markdown="1">
-
-<ins id="ex5">**예시 5**</ins> $$\Hom(-,-)$$은 smooth functor이다. 임의의 두 isomorphism $$f:V\rightarrow V'$$, $$g:W\rightarrow W'$$이 주어져 있다 하자. 그럼 $$\Hom(f,g)$$는 $$\Hom(V,W)$$에서 $$\Hom(V',W')$$로의 functor이며 아래 diagram
+::: 예시 5
+$$\Hom(-,-)$$은 smooth functor이다. 임의의 두 isomorphism $$f:V\rightarrow V'$$, $$g:W\rightarrow W'$$이 주어져 있다 하자. 그럼 $$\Hom(f,g)$$는 $$\Hom(V,W)$$에서 $$\Hom(V',W')$$로의 functor이며 아래 diagram
 
 ![Hom_functor](/assets/images/Math/Manifolds/Tangent_and_Cotangent_Bundles-2.svg){:style="width:7.11em" class="invert" .align-center}
 
@@ -142,20 +133,17 @@ $$(g+tw_i^j)\circ u\circ f^{-1}=g\circ u\circ f^{-1}+tw_i^j\circ u\circ f^{-1}$$
 - $$k$$-th exterior functor $$\bigwedge\nolimits^k(-)$$ ([\[다중선형대수학\] §텐서대수](/ko/math/multilinear_algebra/tensor_algebras)),
 - Tensor product $$-\otimes -$$,
 - Direct sum $$-\oplus-$$.
-
-</div>
+:::
 
 다음 정리의 증명은 **[MS]**의 정리 3.6에서 찾을 수 있다.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm6">**정리 6**</ins> 임의의 smooth functor $$F:(\mathbf{FVect}_\text{iso})^n\rightarrow \mathbf{FVect}_\text{iso}$$, 그리고 공통된 base space $$B$$를 갖는 $$n$$개의 vector bundle들 $$E_i\rightarrow B$$들이 주어졌다 하자. 그럼 각각의 $$b\in B$$에서의 fiber가
+::: 정리 6
+임의의 smooth functor $$F:(\mathbf{FVect}_\text{iso})^n\rightarrow \mathbf{FVect}_\text{iso}$$, 그리고 공통된 base space $$B$$를 갖는 $$n$$개의 vector bundle들 $$E_i\rightarrow B$$들이 주어졌다 하자. 그럼 각각의 $$b\in B$$에서의 fiber가
 
 $$E_b=F((E_1)_b,\ldots,(E_n)_b)$$
 
 로 주어진 vector bundle $$E\rightarrow B$$가 존재한다.
-
-</div>
+:::
 
 위와 같은 과정으로 얻어지는 vector bundle $$E$$를 간단히 $$F(E_1,\ldots, E_n)$$과 같이 표기한다. 
 
@@ -163,11 +151,9 @@ $$E_b=F((E_1)_b,\ldots,(E_n)_b)$$
 
 임의의 manifold $$M$$과 tangent bundle $$E=TM\rightarrow M$$, 그리고 dual functor $$(-)^\ast$$에 위의 [정리 6](#thm6)을 적용하면 다음을 얻는다.
 
-<div class="definition" markdown="1">
-
-<ins id="def7">**정의 7**</ins> Manifold $$M$$ 위에 정의된 *cotangent bundle<sub>여접다발</sub>*은 [정리 6](#thm6)에 의해 얻어진 vector bundle $$(TM)^\ast$$을 의미한다. Cotangent space $$T_p^\ast M$$의 표기에 맞추어 이를 $$T^\ast M$$으로 표기한다.
-
-</div>
+::: 정의 7
+Manifold $$M$$ 위에 정의된 *cotangent bundle<sub>여접다발</sub>*은 [정리 6](#thm6)에 의해 얻어진 vector bundle $$(TM)^\ast$$을 의미한다. Cotangent space $$T_p^\ast M$$의 표기에 맞추어 이를 $$T^\ast M$$으로 표기한다.
+:::
 
 $$T^\ast M$$은 점 $$p$$마다 벡터공간 $$T_p^\ast M$$이 붙어있는 공간이다. 이 때 $$T_p^\ast M$$은 벡터공간 $$T_pM$$의 dual space, 곧 $$T_pM$$의 벡터를 하나 받아 실수를 내놓는 linear map들의 공간이다. 또 다른 smooth functor들을 적용하여 얻어지는 vector bundle들은 조만간 다시 살펴보게 된다.
 

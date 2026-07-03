@@ -13,27 +13,23 @@ published: false
 
 Riemann-Roch 정리는 algebraic geometry의 핵심 정리 중 하나로, 주어진 다양체 위의 sheaf의 cohomology에 대한 정보를 그 다양체의 기하학적 불변량으로 계산하는 공식을 제공한다. Curve에서의 classical Riemann-Roch 정리는 divisor의 degree와 curve의 genus만을 사용하여 Euler characteristic을 계산하며, surface로의 일반화에서는 intersection number가 추가적으로 등장한다. Hirzebruch는 이러한 저차원의 결과들을 통일적인 공식으로 일반화하여, 임의의 차원을 갖는 smooth projective variety 위의 coherent sheaf에 대한 Riemann-Roch 공식을 얻었다. 본 글에서는 이 **Hirzebruch-Riemann-Roch (HRR)** 정리를 서술하고, 저차원으로의 환원, 증명의 개요, 그리고 구체적인 계산 예시를 다룬다.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> Smooth projective variety $$X$$ 위의 coherent sheaf $$\mathcal{F}$$에 대하여, 그 **Euler characteristic** $$\chi(X,\mathcal{F})$$를
+::: 정의 1
+Smooth projective variety $$X$$ 위의 coherent sheaf $$\mathcal{F}$$에 대하여, 그 **Euler characteristic** $$\chi(X,\mathcal{F})$$를
 
 $$\chi(X,\mathcal{F})=\sum_{i\geq 0}(-1)^i\dim H^i(X,\mathcal{F})$$
 
 으로 정의한다. 우리는 대개 $$X$$가 projective이고 $$\mathcal{F}$$가 coherent이므로 각 cohomology group이 finite dimensional이며, $$i>\dim X$$에서는 소멸하므로 위의 합은 유한합이다.
-
-</div>
+:::
 
 HRR 정리의 좌변은 바로 이 Euler characteristic이며, 우변은 $$X$$의 intersection theory 위에서의 적분으로 주어진다. 이를 위해서는 Chern character와 Todd class라는 두 가지 characteristic class가 필요하다. 이들의 정의와 성질은 [§Todd Class](/ko/math/algebraic_varieties/todd_class)에서 자세히 다루었으므로, 본 글에서는 필요한 최소한의 사실만을 상기시킨다.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm2">**정리 2 (Hirzebruch-Riemann-Roch)**</ins> Algebraically closed field 위의 smooth projective variety $$X$$와 그 위의 coherent sheaf $$\mathcal{F}$$에 대하여 다음이 성립한다.
+::: 정리 2 (Hirzebruch-Riemann-Roch)
+Algebraically closed field 위의 smooth projective variety $$X$$와 그 위의 coherent sheaf $$\mathcal{F}$$에 대하여 다음이 성립한다.
 
 $$\chi(X,\mathcal{F})=\int_X\operatorname{ch}(\mathcal{F})\cdot\operatorname{td}(T_X)$$
 
 여기서 $$\operatorname{ch}(\mathcal{F})$$는 $$\mathcal{F}$$의 Chern character, $$\operatorname{td}(T_X)$$는 tangent bundle $$T_X$$의 Todd class이며, $$\int_X$$는 Chow group $$A_{\dim X}(X)$$ (또는 cohomology $$H^{2\dim X}(X,\mathbb{Q})$$) 위의 degree map을 의미한다.
-
-</div>
+:::
 
 정리 [2](#thm2)에서 우변의 $$\operatorname{ch}(\mathcal{F})\cdot\operatorname{td}(T_X)$$는 Chow ring $$A^\bullet(X)\otimes_\mathbb{Z}\mathbb{Q}$$ 위에서의 곱셈이며, $$\int_X$$는 이 곱의 $$\dim X$$차 동차 성분을 취한 후 그 degree를 적분하는 연산이다. 즉, $$n=\dim X$$일 때
 
@@ -45,18 +41,14 @@ $$\int_X\operatorname{ch}(\mathcal{F})\cdot\operatorname{td}(T_X)=\bigl[\operato
 
 HRR 정리는 임의의 차원에서 성립하는 보편적인 공식이지만, 저차원으로 낮추면 classical하게 알려진 Riemann-Roch 공식들로 환원된다. 이는 HRR 정리의 검증과 동시에, 고차원의 기하학이 저차원의 결과들을 어떻게 통합하는지를 보여준다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop3">**명제 3 (곡선에서의 환원)**</ins> $$X=C$$를 genus $$g$$인 smooth projective curve라 하자. 임의의 divisor $$D$$에 대하여, HRR 정리는 classical Riemann-Roch 정리
+::: 명제 3 (곡선에서의 환원)
+$$X=C$$를 genus $$g$$인 smooth projective curve라 하자. 임의의 divisor $$D$$에 대하여, HRR 정리는 classical Riemann-Roch 정리
 
 $$\ell(D)-\ell(K_C-D)=\deg D+1-g$$
 
 로 환원된다. 여기서 $$K_C$$는 canonical divisor이며, $$\ell(D)=\dim H^0(C,\mathcal{O}_C(D))$$이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 Curve $$C$$의 차원은 $$n=1$$이다. Line bundle $$\mathscr{L}=\mathcal{O}_C(D)$$에 대하여 Chern character는 $$\operatorname{ch}(\mathscr{L})=1+c_1(\mathscr{L})$$이고, tangent bundle $$T_C$$의 rank가 $$1$$이므로 [§Todd Class, ⁋예시 5](/ko/math/algebraic_varieties/todd_class#ex5)에 의해
 
 $$\operatorname{td}(T_C)=1+\frac{1}{2}c_1(T_C)=1-\frac{1}{2}K_C$$
@@ -74,12 +66,10 @@ $$\chi(C,\mathscr{L})=\int_C c_1(\mathscr{L})-\frac{1}{2}K_C=\deg(\mathscr{L})+1
 $$\chi(C,\mathscr{L})=\dim H^0(C,\mathscr{L})-\dim H^1(C,\mathscr{L})=\ell(D)-\ell(K_C-D)$$
 
 이므로 classical Riemann-Roch 정리 [§곡선에서의 리만-로흐 정리, ⁋명제 3](/ko/math/algebraic_varieties/riemann_roch_theorem#prop3)을 복원한다. $$\square$$
+:::
 
-</details>
-
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**명제 4 (곡면에서의 환원)**</ins> $$X=S$$를 smooth projective surface라 하자. HRR 정리는 다음의 surface Riemann-Roch formula
+::: 명제 4 (곡면에서의 환원)
+$$X=S$$를 smooth projective surface라 하자. HRR 정리는 다음의 surface Riemann-Roch formula
 
 $$\chi(S,\mathcal{O}_S(D))=\frac{1}{2}D\cdot(D-K_S)+\chi(\mathcal{O}_S)$$
 
@@ -88,11 +78,8 @@ $$\chi(S,\mathcal{O}_S(D))=\frac{1}{2}D\cdot(D-K_S)+\chi(\mathcal{O}_S)$$
 $$K_S^2+c_2(S)=12\chi(\mathcal{O}_S)$$
 
 을 얻는다. 여기서 $$D\cdot D$$는 divisor의 self-intersection number, $$K_S$$는 canonical divisor, $$c_2(S)$$는 second Chern class이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 Surface $$S$$의 차원은 $$n=2$$이다. Line bundle $$\mathcal{O}_S(D)$$에 대하여 Chern character는
 
 $$\operatorname{ch}(\mathcal{O}_S(D))=1+D+\frac{D^2}{2}$$
@@ -118,22 +105,19 @@ $$K_S^2+c_2(S)=12\chi(\mathcal{O}_S)$$
 $$\chi(S,\mathcal{O}_S(D))=\frac{1}{2}D\cdot(D-K_S)+\chi(\mathcal{O}_S)$$
 
 를 얻어 [§곡면에서의 리만-로흐 정리](/ko/math/algebraic_varieties/riemann_roch_surfaces)의 결과와 일치함을 확인한다. $$\square$$
-
-</details>
+:::
 
 ## Grothendieck-Riemann-Roch 정리
 
 Hirzebruch의 정리는 하나의 다양체 위에서의 Euler characteristic을 계산하는 공식이었다. Grothendieck는 이를 두 다양체 사이의 proper morphism에 대한 상대적 형태로 일반화하였다.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm5">**정리 5 (Grothendieck-Riemann-Roch)**</ins> Smooth projective variety들 사이의 proper morphism $$f:X\rightarrow Y$$와 $$X$$ 위의 coherent sheaf $$\mathcal{F}$$에 대하여 다음이 성립한다.
+::: 정리 5 (Grothendieck-Riemann-Roch)
+Smooth projective variety들 사이의 proper morphism $$f:X\rightarrow Y$$와 $$X$$ 위의 coherent sheaf $$\mathcal{F}$$에 대하여 다음이 성립한다.
 
 $$f_\ast\bigl(\operatorname{ch}(\mathcal{F})\cdot\operatorname{td}(T_X)\bigr)=\operatorname{ch}(Rf_\ast\mathcal{F})\cdot\operatorname{td}(T_Y)$$
 
 여기서 $$f_\ast:A^\bullet(X)\otimes\mathbb{Q}\rightarrow A^\bullet(Y)\otimes\mathbb{Q}$$는 Chow group에서의 push-forward, $$Rf_\ast\mathcal{F}$$는 $$\mathcal{F}$$의 derived direct image이며, 이의 Chern character는 $$\operatorname{ch}(Rf_\ast\mathcal{F})=\sum_i(-1)^i\operatorname{ch}(R^i f_\ast\mathcal{F})$$로 정의된다.
-
-</div>
+:::
 
 정리 [5](#thm5)에서 $$Y=\operatorname{Spec}(k)$$로 두면, $$f_\ast$$는 적분 $$\int_X$$가 되고 $$Rf_\ast\mathcal{F}$$는 $$H^\bullet(X,\mathcal{F})$$를 나타내므로
 
@@ -173,18 +157,14 @@ Deformation to the normal cone의 핵심은 다음과 같다. $$X$$를 $$Y$$에 
 
 Projective space는 그 기하학이 명시적으로 파악되어 있으므로, HRR 정리를 검증하고 Hilbert polynomial을 유도하기에 적합한 예시이다.
 
-<div class="example" markdown="1">
-
-<ins id="ex6">**예시 6 ($$\mathbb{P}^n$$에서의 HRR)**</ins> $$\mathbb{P}^n$$ 위의 line bundle $$\mathcal{O}_{\mathbb{P}^n}(d)$$에 대하여 HRR 정리를 적용하면, $$\mathbb{P}^n$$의 Hilbert polynomial
+::: 예시 6 ($$\mathbb{P}^n$$에서의 HRR)
+$$\mathbb{P}^n$$ 위의 line bundle $$\mathcal{O}_{\mathbb{P}^n}(d)$$에 대하여 HRR 정리를 적용하면, $$\mathbb{P}^n$$의 Hilbert polynomial
 
 $$\chi(\mathbb{P}^n,\mathcal{O}_{\mathbb{P}^n}(d))=\binom{n+d}{n}$$
 
 이 유도된다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 [§Todd Class, ⁋예시 7](/ko/math/algebraic_varieties/todd_class#ex7)에서 살펴보았듯이, $$\mathbb{P}^n$$의 Chow ring은 $$A^\bullet(\mathbb{P}^n)\cong\mathbb{Z}[h]/(h^{n+1})$$이며, tangent bundle의 total Chern class는 $$c(T_{\mathbb{P}^n})=(1+h)^{n+1}$$이다. 따라서 Chern roots는 모두 hyperplane class $$h$$이며,
 
 $$\operatorname{td}(T_{\mathbb{P}^n})=\left(\frac{h}{1-e^{-h}}\right)^{n+1}$$
@@ -216,8 +196,7 @@ $$\operatorname{td}(T_{\mathbb{P}^2})=1+\frac{3h}{2}+h^2,\qquad \operatorname{ch
 $$\chi(\mathbb{P}^2,\mathcal{O}_{\mathbb{P}^2}(d))=\frac{d^2}{2}+\frac{3d}{2}+1=\frac{(d+1)(d+2)}{2}=\binom{d+2}{2}$$
 
 를 얻는다. 일반적으로는 residue theorem을 사용하거나, Todd class의 정의로부터 직접 계산하여 $$\binom{n+d}{n}$$이 됨을 확인할 수 있다. 이는 [§사영공간의 코호몰로지](/ko/math/algebraic_varieties/cohomology_of_projective_spaces)에서 직접 계산한 cohomology의 결과와 일치하며, 특히 $$d\geq 0$$일 때 $$H^i(\mathbb{P}^n,\mathcal{O}_{\mathbb{P}^n}(d))=0$$ for $$i>0$$이므로 $$\chi$$가 $$h^0$$와 일치하여 $$\binom{n+d}{n}$$이 됨을 알 수 있다. $$\square$$
-
-</details>
+:::
 
 예시 [6](#ex6)에서 얻어진 $$\chi(\mathbb{P}^n,\mathcal{O}_{\mathbb{P}^n}(d))$$는 $$d$$에 대한 $$n$$차 polynomial이며, 이를 $$\mathbb{P}^n$$ 위의 coherent sheaf에 대한 **Hilbert polynomial**의 원형으로 볼 수 있다. 임의의 coherent sheaf $$\mathcal{F}$$에 대하여 $$d\gg 0$$이면 Serre vanishing에 의해 $$H^i(\mathbb{P}^n,\mathcal{F}(d))=0$$ ($$i>0$$)이 되므로
 
@@ -229,18 +208,14 @@ $$P_{\mathcal{F}}(d)=\chi(\mathbb{P}^n,\mathcal{F}(d))$$
 
 Product of projective spaces는 두 개의 독립적인 projective line의 곱으로, 그 기하학이 각 요인의 기하학으로부터 직접적으로 결정되므로 HRR의 검증에 유용한 예시이다.
 
-<div class="example" markdown="1">
-
-<ins id="ex7">**예시 7 ($$\mathbb{P}^1\times\mathbb{P}^1$$에서의 HRR)**</ins> Product $$Q=\mathbb{P}^1\times\mathbb{P}^1$$ 위의 line bundle $$\mathcal{O}_Q(a,b)=\pi_1^\ast\mathcal{O}_{\mathbb{P}^1}(a)\otimes\pi_2^\ast\mathcal{O}_{\mathbb{P}^1}(b)$$에 대하여 HRR 정리를 적용하면
+::: 예시 7 ($$\mathbb{P}^1\times\mathbb{P}^1$$에서의 HRR)
+Product $$Q=\mathbb{P}^1\times\mathbb{P}^1$$ 위의 line bundle $$\mathcal{O}_Q(a,b)=\pi_1^\ast\mathcal{O}_{\mathbb{P}^1}(a)\otimes\pi_2^\ast\mathcal{O}_{\mathbb{P}^1}(b)$$에 대하여 HRR 정리를 적용하면
 
 $$\chi(Q,\mathcal{O}_Q(a,b))=(a+1)(b+1)$$
 
 이 성립한다. 특히 $$a,b\geq 0$$일 때 이는 $$H^0(Q,\mathcal{O}_Q(a,b))$$의 차원과 일치하며, 이는 bihomogeneous polynomial의 공간의 차원이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 $$Q=\mathbb{P}^1\times\mathbb{P}^1$$의 Chow ring은
 
 $$A^\bullet(Q)\cong\mathbb{Z}[h_1,h_2]/(h_1^2,h_2^2)$$
@@ -278,8 +253,7 @@ $$\chi(Q,\mathcal{O}_Q(a,b))=(a+1)(b+1)$$
 $$H^i(Q,\mathcal{O}_Q(a,b))\cong\bigoplus_{j+k=i}H^j(\mathbb{P}^1,\mathcal{O}_{\mathbb{P}^1}(a))\otimes H^k(\mathbb{P}^1,\mathcal{O}_{\mathbb{P}^1}(b))$$
 
 이므로, $$a,b\geq 0$$일 때 $$H^0(\mathbb{P}^1,\mathcal{O}_{\mathbb{P}^1}(a))$$의 차원은 $$a+1$$, $$H^0(\mathbb{P}^1,\mathcal{O}_{\mathbb{P}^1}(b))$$의 차원은 $$b+1$$이고 높은 차원의 cohomology는 소멸하므로 $$h^0(\mathcal{O}_Q(a,b))=(a+1)(b+1)$$이며 이는 Euler characteristic과 일치한다. $$\square$$
-
-</details>
+:::
 
 ---
 

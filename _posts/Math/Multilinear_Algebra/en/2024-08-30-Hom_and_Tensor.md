@@ -20,9 +20,8 @@ In this post we take a closer look at $$\Hom$$ and the tensor product.
 
 Previously we saw that $$\Hom_{\lMod{A}}(-,N)$$ and $$\Hom_\lMod{A}(M,-)$$ are left exact functors, and we called the modules $$M$$ and $$N$$ that make them exact functors *projective* and *injective* modules, respectively. The following two propositions go in a somewhat different direction, showing that any *splitting* exact sequence remains exact after applying $$\Hom$$.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop1">**Proposition 1**</ins> Given a splitting exact sequence
+::: Proposition 1
+Given a splitting exact sequence
 
 $$0 \longrightarrow M \overset{u}{\longrightarrow} L \overset{v}{\longrightarrow} N \rightarrow 0$$
 
@@ -31,11 +30,8 @@ and any $$A$$-module $$K$$, the induced sequence
 $$0 \rightarrow \Hom_\lMod{A}(N,K) \rightarrow\Hom_\lMod{A}(L,K) \rightarrow\Hom_\lMod{A}(M,K) \rightarrow 0$$
 
 is a splitting exact sequence. Conversely, if the above sequence is exact for every $$K$$, then the original exact sequence is a splitting exact sequence.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 That the given exact sequence $$0 \rightarrow M \rightarrow L \rightarrow N \rightarrow 0$$ splits is equivalent to the existence of a suitable retraction $$r:L \rightarrow M$$. ([§Exact Sequences, ⁋Proposition 10](/en/math/multilinear_algebra/exact_sequences#prop10)) Now consider
 
 $$\Hom_\lMod{A}(r, \id_K):\Hom_\lMod{A}(M,K) \rightarrow\Hom_\lMod{A}(L,K)$$
@@ -47,14 +43,12 @@ For the converse, set $$K=M$$ and consider the short exact sequence
 $$0 \rightarrow \Hom_\lMod{A}(N,M) \rightarrow \Hom_\lMod{A}(L,M) \rightarrow\Hom_\lMod{A}(M,M) \rightarrow 0$$
 
 Then there exists a suitable $$f\in\Hom_\lMod{A}(L,M)$$ with $$f\circ u=\id_M$$, so applying [§Exact Sequences, ⁋Proposition 10](/en/math/multilinear_algebra/exact_sequences#prop10) again completes the proof.
-
-</details>
+:::
 
 Similarly, the following holds.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**Proposition 2**</ins> Given a splitting exact sequence
+::: Proposition 2
+Given a splitting exact sequence
 
 $$0 \longrightarrow M \overset{u}{\longrightarrow} L \overset{v}{\longrightarrow} N \rightarrow 0$$
 
@@ -63,8 +57,7 @@ and any $$A$$-module $$K$$, the induced sequence
 $$0 \rightarrow \Hom_\lMod{A}(K,M) \rightarrow\Hom_\lMod{A}(K,L) \rightarrow\Hom_\lMod{A}(K,N) \rightarrow 0$$
 
 is a splitting exact sequence. Conversely, if the above sequence is exact for every $$K$$, then the original exact sequence is a splitting exact sequence.
-
-</div>
+:::
 
 ## Homomorphism $$M^\ast\otimes_AN \rightarrow \Hom_{\rMod{A}}(M,N)$$
 
@@ -84,30 +77,25 @@ $$x\mapsto u(x)\otimes_Ay$$
 
 defines an $$A$$-linear map from $$M$$ to $$L\otimes_AN$$. Then one checks that the above function sending $$(u,y)\in\Hom_{\rMod{A}}(M,L)\times N$$ to an element of $$\Hom_{\rMod{A}}(M, L\otimes_AB)$$ is $$A$$-balanced. Therefore it induces the $$A$$-linear map $$\nu$$.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop3">**Proposition 3**</ins> For $$\nu$$ defined as above, the following hold.
+::: Proposition 3
+For $$\nu$$ defined as above, the following hold.
 
 1. If $$N$$ is a projective $$A$$-module, then $$\nu$$ is injective. Moreover, if $$N$$ is finitely generated projective, then $$\nu$$ is bijective.
 2. If $$M$$ is a finitely generated projective $$A$$-module, then $$\nu$$ is bijective.
-
-</div>
+:::
 
 In particular, if $$L=A$$, we obtain the following corollary.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor4">**Corollary 4**</ins> Let two arbitrary $$A$$-modules $$M,N$$ be given. If either $$M$$ or $$N$$ is a finitely generated projective $$A$$-module, then there is an isomorphism
+::: Corollary 4
+Let two arbitrary $$A$$-modules $$M,N$$ be given. If either $$M$$ or $$N$$ is a finitely generated projective $$A$$-module, then there is an isomorphism
 
 $$M^\ast \otimes_AN\cong \Hom_{\rMod{A}}(M,N)$$
-
-</div>
+:::
 
 Also, setting $$N=\Hom_{\rMod{A}}(M', L')$$, we obtain the following corollary.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor5">**Corollary 5**</ins> There exists the following $$A$$-linear map
+::: Corollary 5
+There exists the following $$A$$-linear map
 
 $$\Hom_\rMod{A}(M,L)\otimes_A\Hom_\rMod{A}(M',L') \rightarrow \Hom_\rMod{A}(M\otimes M', L\otimes L')$$
 
@@ -116,8 +104,7 @@ and this is an isomorphism if one of the following pairs
 $$(M,M'),\quad (M,L),\quad (M',L')$$
 
 is a finitely generated projective $$A$$-module.
-
-</div>
+:::
 
 ## Trace
 
@@ -131,11 +118,9 @@ $$\tau: M^\ast\otimes_A M \rightarrow A$$
 
 Now if $$M$$ is a finitely generated projective $$A$$-module, then by [Corollary 4](#cor4) we can identify the left-hand side with $$\End_\rMod{A}(M)=\Hom_\rMod{A}(M,M)$$, and thus a unique $$A$$-linear map from $$\End_\rMod{A}(M)$$ to $$A$$ is defined.
 
-<div class="definition" markdown="1">
-
-<ins id="def6">**Definition 6**</ins> The map defined above is called the *trace map* and is denoted by $$\tr$$.
-
-</div>
+::: Definition 6
+The map defined above is called the *trace map* and is denoted by $$\tr$$.
+:::
 
 Let an arbitrary $$u\in\End_\rMod{A}(M)$$ be given. After identifying $$\End_\rMod{A}(M)$$ with $$M^\ast\otimes_AM$$, we can choose finitely many $$\xi_i\in M^\ast, x_i\in M$$ and write it as the sum
 
@@ -153,10 +138,8 @@ In general there may be infinitely many pairs $$\xi_i\in M^\ast, x_i\in M$$ sati
 
 Moreover, one can check that $$\tr$$ is an $$A$$-linear map, and furthermore the following holds.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop7">**Proposition 7**</ins> For any two finitely generated projective $$A$$-modules $$M,N$$ and $$A$$-linear maps $$u:M \rightarrow N$$, $$v:N \rightarrow M$$ between them,
+::: Proposition 7
+For any two finitely generated projective $$A$$-modules $$M,N$$ and $$A$$-linear maps $$u:M \rightarrow N$$, $$v:N \rightarrow M$$ between them,
 
 $$\tr(u\circ v)=\tr(v\circ u)$$
-
-</div>
+:::

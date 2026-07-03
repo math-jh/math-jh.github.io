@@ -20,33 +20,25 @@ In this post, we examine examples of equivalence relations that appear in variou
 
 In the previous post, we saw that from an equivalence relation $$(R,A,A)$$, the canonical function $$p:A\rightarrow A/R$$ is well defined; the converse also holds. That is, given any function, we can use it to construct an equivalence relation.
 
-<div class="proposition" markdown="1">
+::: Proposition 1
+Let a set $$A$$ and a function $$f$$ with domain $$A$$ be given. Then the relation between $$x$$ and $$y$$ defined by <phrase>$x,y\in A$ and $f(x)=f(y)$</phrase> is an equivalence relation on $$A$$.
+:::
 
-<ins id="prop1">**Proposition 1**</ins> Let a set $$A$$ and a function $$f$$ with domain $$A$$ be given. Then the relation between $$x$$ and $$y$$ defined by <phrase>$x,y\in A$ and $f(x)=f(y)$</phrase> is an equivalence relation on $$A$$.
-</div>
-
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proof
 That the given relation is reflexive on $$A$$ is obvious. On the other hand, if $$f(x)=f(y)$$ then $$f(y)=f(x)$$, and if $$f(x)=f(y)$$ and $$f(y)=f(z)$$ then $$f(x)=f(z)$$, so this relation is also symmetric and transitive.
+:::
 
-</details>
-
-<div class="definition" markdown="1">
-
-<ins id="def2">**Definition 2**</ins> The equivalence relation defined in the above proposition is called the *equivalence relation defined by $$f$$*.
-
-</div>
+::: Definition 2
+The equivalence relation defined in the above proposition is called the *equivalence relation defined by $$f$$*.
+:::
 
 For an equivalence relation $$(R,A,A)$$ and the induced $$p:A\rightarrow A/R$$, one can verify that the equivalence relation $$R$$ is exactly the same as the equivalence relation obtained by applying [Definition 2](#def2) to $$p$$.
 
 ## Equivalence relations compatible with a unary relation
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**Definition 3**</ins> Let $$(R,A,A)$$ be an equivalence relation. Then a unary relation $$P$$ is *compatible* with $$R$$ if $$P(x)\wedge (x\sim_{\tiny R}y)\implies P(y)$$.
-
-</div>
+::: Definition 3
+Let $$(R,A,A)$$ be an equivalence relation. Then a unary relation $$P$$ is *compatible* with $$R$$ if $$P(x)\wedge (x\sim_{\tiny R}y)\implies P(y)$$.
+:::
 
 For example, the unary relation
 
@@ -58,15 +50,11 @@ is compatible with the equivalence relation
 
 From the viewpoint of equivalence classes, the above definition can be rewritten as follows.
 
-<div class="proposition" markdown="1">
+::: Proposition 4
+Let $$R$$ be an equivalence relation on a set $$A$$, and let $$P$$ be a unary relation compatible with $$R$$. Then the statement <phrase>$t\in A/R$ and there exists some $x\in t$ such that $P(x)$</phrase> and the statement <phrase>$t\in A/R$ and $P(x)$ holds for all $x\in t$</phrase> are equivalent.
+:::
 
-<ins id="prop4">**Proposition 4**</ins> Let $$R$$ be an equivalence relation on a set $$A$$, and let $$P$$ be a unary relation compatible with $$R$$. Then the statement <phrase>$t\in A/R$ and there exists some $x\in t$ such that $P(x)$</phrase> and the statement <phrase>$t\in A/R$ and $P(x)$ holds for all $x\in t$</phrase> are equivalent.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proof
 In other words,
 
 > When $$P$$ is compatible with $$R$$, if a single element of an equivalence class satisfies $$P$$, then $$P$$ holds for all elements in the same class as that element.
@@ -74,16 +62,13 @@ In other words,
 And this is exactly the definition of a compatible unary relation.
 
 The converse direction is obvious. Suppose for some $$t\in A/R$$ there exists $$a\in t$$ such that $$P(a)$$. Then for every $$x\in t$$ we have $$a\sim_{\tiny R}x$$, so $$P(x)$$ holds.
-
-</details>
+:::
 
 ## Saturation of an equivalence relation
 
-<div class="definition" markdown="1">
-
-<ins id="def5">**Definition 5**</ins> Let $$R$$ be an equivalence relation on $$A$$ and let $$X$$ be a subset of $$A$$. We say that $$X$$ is *saturated* with respect to $$R$$ if the unary relation $$x\in A$$ is compatible with $$R$$.
-
-</div>
+::: Definition 5
+Let $$R$$ be an equivalence relation on $$A$$ and let $$X$$ be a subset of $$A$$. We say that $$X$$ is *saturated* with respect to $$R$$ if the unary relation $$x\in A$$ is compatible with $$R$$.
+:::
 
 ![saturated_set](/assets/images/Math/Set_Theory/Examples_of_Equivalence-1.png){:style="width:600px" class="invert" .align-center}
 
@@ -114,19 +99,15 @@ so $$p^{-1}(p(X))$$ is the smallest $$R$$-saturated subset containing $$X$$. We 
 
 ## Canonical decomposition
 
-<div class="definition" markdown="1">
-
-<ins id="def6">**Definition 6**</ins> For an equivalence relation $$(R,A,A)$$ and a function $$f$$ with domain $$A$$, we say that $$f$$ is *compatible* with $$R$$ if the unary relation $$y=f(x)$$ in $$x$$ is compatible with $$R$$.
-
-</div>
+::: Definition 6
+For an equivalence relation $$(R,A,A)$$ and a function $$f$$ with domain $$A$$, we say that $$f$$ is *compatible* with $$R$$ if the unary relation $$y=f(x)$$ in $$x$$ is compatible with $$R$$.
+:::
 
 That is, for $$f$$ to be compatible with $$R$$, $$f$$ must become a constant function when restricted to each equivalence class. Now applying [§Retraction and Section, ⁋Proposition 4](/en/math/set_theory/retraction_and_section#prop4), we obtain the following.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop7">**Proposition 7**</ins> Consider an equivalence relation $$(R,A,A)$$ and the canonical $$p:A\rightarrow A/R$$. Then $$f:A\rightarrow B$$ is compatible with $$R$$ if and only if there exists $$h:A/R\rightarrow B$$ such that $$f=h\circ p$$.
-
-</div>
+::: Proposition 7
+Consider an equivalence relation $$(R,A,A)$$ and the canonical $$p:A\rightarrow A/R$$. Then $$f:A\rightarrow B$$ is compatible with $$R$$ if and only if there exists $$h:A/R\rightarrow B$$ such that $$f=h\circ p$$.
+:::
 
 That is, the following diagram commutes.
 
@@ -162,11 +143,9 @@ Then the function $$p\circ f:A\rightarrow B/S$$ is naturally defined, and the eq
 
 The following definition was already mentioned in [§Equivalence Relations, ⁋Example 5](/en/math/set_theory/equivalence_relations#ex5).
 
-<div class="definition" markdown="1">
-
-<ins id="def8">**Definition 8**</ins> For two equivalence relations $$R,S$$ defined on a set $$A$$, we say that $$S$$ is *finer* than $$R$$ if $$x\sim_{\tiny S}y\implies x\sim_{\tiny R}y$$ always holds.
-
-</div>
+::: Definition 8
+For two equivalence relations $$R,S$$ defined on a set $$A$$, we say that $$S$$ is *finer* than $$R$$ if $$x\sim_{\tiny S}y\implies x\sim_{\tiny R}y$$ always holds.
+:::
 
 Let two equivalence relations $$R,S$$ be defined on a set $$A$$, and suppose $$S$$ is finer than $$R$$.
 

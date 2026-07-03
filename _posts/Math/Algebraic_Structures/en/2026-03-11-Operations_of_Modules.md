@@ -38,22 +38,18 @@ $$\CoEq(u,v)=N/N',\qquad N'=\langle u(x)-v(x)\rangle\rangle$$
 
 That is, the following holds.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm1">**Theorem 1**</ins> $$\lMod{A}$$ is a bicomplete category; in particular, the product of a family $$(M_i)$$ of $$A$$-modules is their direct product, and the coproduct is their direct sum.
-
-</div>
+::: Theorem 1
+$$\lMod{A}$$ is a bicomplete category; in particular, the product of a family $$(M_i)$$ of $$A$$-modules is their direct product, and the coproduct is their direct sum.
+:::
 
 Then the direct product preserves kernels, and the direct sum preserves cokernels. ([\[Category Theory\] §Limits, ⁋Proposition 10](/en/math/category_theory/limits#prop10)) Additionally, they satisfy the following proposition.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**Proposition 2**</ins> Let two families $$(M_i)_{i\in I},(N_i)_{i\in I}$$ of $$A$$-modules and linear maps $$u_i: M_i \rightarrow N_i$$ between them be given, and consider the induced maps $$\bigoplus u_i:\bigoplus M_i \rightarrow \bigoplus N_i$$ and $$\prod u_i: \prod M_i \rightarrow \prod N_i$$. Then the following hold.
+::: Proposition 2
+Let two families $$(M_i)_{i\in I},(N_i)_{i\in I}$$ of $$A$$-modules and linear maps $$u_i: M_i \rightarrow N_i$$ between them be given, and consider the induced maps $$\bigoplus u_i:\bigoplus M_i \rightarrow \bigoplus N_i$$ and $$\prod u_i: \prod M_i \rightarrow \prod N_i$$. Then the following hold.
 
 1. If each $$u_i$$ is surjective, then $$\prod u_i$$ is also surjective, and conversely.
 2. If each $$u_i$$ is injective, then $$\bigoplus u_i$$ is also injective, and conversely.
-
-</div>
+:::
 
 The proof of this is obtained by writing out $$\prod u_i$$ and $$\bigoplus u_i$$ directly coordinate-wise. In particular, from this proposition we see that the direct product also preserves cokernels, and the direct sum also preserves kernels.
 
@@ -79,11 +75,9 @@ $$F(X)=F\left(\coprod_{x\in X} \{x\}\right)\cong\bigoplus_{x\in X} F(\{x\})$$
 
 must hold, and using the representation above we know that we must define $$F(X)=\bigoplus_{x\in X}Ax$$. That is, the following holds.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop3">**Proposition 3**</ins> For the forgetful functor $$U:\lMod{A} \rightarrow\Set$$ and the free functor $$F:\Set \rightarrow\lMod{A}$$ defined above, the adjunction $$F\dashv U$$ exists.
-
-</div>
+::: Proposition 3
+For the forgetful functor $$U:\lMod{A} \rightarrow\Set$$ and the free functor $$F:\Set \rightarrow\lMod{A}$$ defined above, the adjunction $$F\dashv U$$ exists.
+:::
 
 For any set $$X$$, we call $$A$$-modules isomorphic to $$F(X)$$ *free $$A$$-modules*.
 
@@ -91,15 +85,13 @@ For any set $$X$$, we call $$A$$-modules isomorphic to $$F(X)$$ *free $$A$$-modu
 
 We can also define the tensor product of $$A$$-modules. We begin with the following definition.
 
-<div class="definition" markdown="1">
-
-<ins id="def4">**Definition 4**</ins> Let a ring $$A$$, a right $$A$$-module $$M$$, and a left $$A$$-module $$N$$ be given. Then for any abelian group $$L$$, a function $$f:M\times N \rightarrow L$$ is called *$$A$$-balanced* if $$f$$ is bilinear as a map of abelian groups and additionally the formula
+::: Definition 4
+Let a ring $$A$$, a right $$A$$-module $$M$$, and a left $$A$$-module $$N$$ be given. Then for any abelian group $$L$$, a function $$f:M\times N \rightarrow L$$ is called *$$A$$-balanced* if $$f$$ is bilinear as a map of abelian groups and additionally the formula
 
 $$f(x\alpha, y)=f(x,\alpha y)$$
 
 holds.
-
-</div>
+:::
 
 For fixed $$M\in\obj(\rMod{A}),N\in\obj(\lMod{A})$$, define the set $$\Balan_A(M,N;L)$$ by the formula
 
@@ -107,14 +99,10 @@ $$\Balan_A(M,N;L)=\{\text{$A$-balanced maps from $M\times N$ to $L$}\}$$
 
 Then the following theorem holds.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm5">**Theorem 5**</ins> The functor $$\Balan_A(M,N;-):\lMod{\mathbb{Z}}=\Ab\rightarrow\Set$$ is a representable functor.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Theorem 5
+The functor $$\Balan_A(M,N;-):\lMod{\mathbb{Z}}=\Ab\rightarrow\Set$$ is a representable functor.
+:::
+::: Proof
 Define the subgroup $$M'$$ of the free abelian group $$F(M\times N)$$ by
 
 $$M'=\left\langle (x, y_1+y_2)-(x,y_1)-(x,y_2), (x_1+x_2,y)-(x_1,y)-(x_2,y), (\alpha x,y)-(x,\alpha y)\right\rangle$$
@@ -122,20 +110,17 @@ $$M'=\left\langle (x, y_1+y_2)-(x,y_1)-(x,y_2), (x_1+x_2,y)-(x_1,y)-(x_2,y), (\a
 Then by the universal property of the free group, whenever a function $$f:M\times N \rightarrow L$$ is given, there exists a group homomorphism $$\hat{f}:F(M\times N)\rightarrow L$$, and if $$f$$ is $$A$$-balanced then the kernel of this $$\hat{f}$$ contains $$M'$$, so $$\hat{f}$$ defines a group homomorphism from $$F(M\times N)/M'$$ to $$L$$.
 
 The naturality of the isomorphism $$\Balan_A(M,N;L)\cong\Hom_\Ab(F(M\times N)/M',L)$$ should additionally be shown, but it is a simple computation so we omit it.
-
-</details>
+:::
 
 We write the representation thus obtained as $$M\otimes_AN$$. Then the following holds.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm6">**Theorem 6 ($$\otimes\dashv\Hom$$)**</ins> The adjunction 
+::: Theorem 6 ($$\otimes\dashv\Hom$$)
+The adjunction 
 
 $$\Hom_\mathbb{Z}(M\otimes_A N, L)\cong\Hom_{\rMod{A}}(M,\Hom_\mathbb{Z}(N, L))\cong\Hom_{\lMod{A}}(N,\Hom_\mathbb{Z}(M, L))$$
 
 exists. 
-
-</div>
+:::
 
 Therefore $$\otimes$$ commutes with colimits, and $$\Hom$$ commutes with limits. In particular, we obtain the following isomorphisms of abelian groups
 
@@ -175,36 +160,30 @@ $$\alpha(x\otimes_Ay)=(\alpha x)\otimes_Ay=x\otimes_A(\alpha y)$$
 
 This is again a representation of an appropriate functor.
 
-<div class="definition" markdown="1">
-
-<ins id="def7">**Definition 7**</ins> Let a commutative ring $$A$$ and three $$A$$-modules $$M,N,L$$ be given. Then a function $$f:M\times N \rightarrow L$$ is called *$$A$$-bilinear* if $$f$$ is bilinear as a map of abelian groups and additionally the formula
+::: Definition 7
+Let a commutative ring $$A$$ and three $$A$$-modules $$M,N,L$$ be given. Then a function $$f:M\times N \rightarrow L$$ is called *$$A$$-bilinear* if $$f$$ is bilinear as a map of abelian groups and additionally the formula
 
 $$\alpha f(x,y)=f(\alpha x,y)=f(x,\alpha y)$$
 
 holds.
-
-</div>
+:::
 
 Define the set $$\Bilin_A(M,N;L)$$ by the formula
 
 $$\Bilin_A(M,N;L)=\{\text{$A$-bilinear maps from $M\times N$ to $L$}\}$$
 
-<div class="proposition" markdown="1">
-
-<ins id="prop8">**Proposition 8**</ins> The functor $$\Bilin_A(M,N;-):\lMod{A}\rightarrow\Set$$ is a representable functor, and its representation is the *$$A$$-module* $$M\otimes_AN$$ defined above.
-
-</div>
+::: Proposition 8
+The functor $$\Bilin_A(M,N;-):\lMod{A}\rightarrow\Set$$ is a representable functor, and its representation is the *$$A$$-module* $$M\otimes_AN$$ defined above.
+:::
 
 On the other hand, if $$A$$ is a general ring then $$\Hom_{\lMod{A}}(M,M')$$ does not have an $$A$$-module structure, but if $$A$$ is a commutative ring then there is an $$A$$-module structure on $$\Hom_{\lMod{A}}(M,M')$$ as well. That is, $$\Hom_A$$ is an internal $$\Hom$$, and therefore we can refine the adjunction of [Theorem 6](#thm6) to prove the following.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm9">**Theorem 9**</ins> For a commutative ring $$A$$, the adjunction
+::: Theorem 9
+For a commutative ring $$A$$, the adjunction
 
 $$\Hom_A(M\otimes_AN, L)\cong\Hom_A(M,\Hom_A(N,L))\cong\Hom_A(N,\Hom_A(M,L))$$
 
 exists.
-
-</div>
+:::
 
 In particular, the formulas (1), (2) above become isomorphisms of $$A$$-modules. Also, one can check that $$(\lMod{A},\otimes_A,A)$$ is a symmetric monoidal category.

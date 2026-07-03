@@ -20,15 +20,13 @@ In the previous post we defined right/left derived functors for general left/rig
 
 For any $$M\in\lMod{A}$$, the functor $$\Hom_\lMod{A}(M,-)$$ is a left exact functor from $$\lMod{A}$$ to $$\Ab$$. Thus we make the following definition.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> We define the right derived functor of the left exact functor $$\Hom_\lMod{A}(M,-):\lMod{A} \rightarrow \Ab$$ by
+::: Definition 1
+We define the right derived functor of the left exact functor $$\Hom_\lMod{A}(M,-):\lMod{A} \rightarrow \Ab$$ by
 
 $$\Ext_A^i(M,N)=R^i\Hom_\lMod{A}(M,-)(N)$$
 
 and call these the *$$\Ext$$ groups*.
-
-</div>
+:::
 
 $$\Hom_\lMod{A}(-,N)$$ is an exact functor if and only if $$N$$ is an injective object. ([\[Multilinear Algebra\] §Projective, Injective, and Flat Modules, ⁋Definition 3](/en/math/multilinear_algebra/various_modules#def3)) From the viewpoint of derived functors, if $$N$$ were an injective module then $$0 \rightarrow N \rightarrow N \rightarrow 0$$ would be an injective resolution, so we would know that $$\Ext_A^1(M,N)=0$$ for all $$M$$. Then for any short exact sequence
 
@@ -47,15 +45,13 @@ On the other hand, instead of [Definition 1](#def1), we could have defined $$\Ex
 
 For any $$N\in\rMod{A}$$, the functor $$-\otimes_A N$$ is a right exact functor from $$\lMod{A}$$ to $$\Ab$$, so we may consider its left derived functor.
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**Definition 2**</ins> We define the left derived functor of the right exact functor $$-\otimes_A N:\lMod{A} \rightarrow \Ab$$ by
+::: Definition 2
+We define the left derived functor of the right exact functor $$-\otimes_A N:\lMod{A} \rightarrow \Ab$$ by
 
 $$\Tor_i^A(M,N)=L_i(-\otimes_A N)(M)$$
 
 and call these the *$$\Tor$$ groups*.
-
-</div>
+:::
 
 To compute $$\Tor$$ we must use a projective resolution of $$M$$. Thus, just as in the computation above, if $$M$$ were a projective $$A$$-module then $$0 \rightarrow M \rightarrow M \rightarrow 0$$ would be a projective resolution of $$M$$, and from this $$\Tor_1^A(M,N)=0$$ would hold for all $$N$$. In other words, we see once again that every projective $$A$$-module is a flat $$A$$-module.
 
@@ -79,19 +75,15 @@ $$\cdots \rightarrow M\otimes_AN_1\rightarrow M\otimes_AN_0\rightarrow M\otimes_
 
 We must therefore compare the cohomologies they yield. The proof strategy is to consider a double complex whose $$(p,q)$$-entry is $$\Hom_{\lMod{A}}(P_q, I^p)$$ (or, in the tensor case, $$P_p\otimes P'_q$$). ([§Homology, ⁋Definition 4](/en/math/homological_algebra/homology#def4))
 
-<div class="proposition" markdown="1">
-
-<ins id="prop3">**Proposition 3**</ins> For two $$A$$-modules $$M \in \lMod{A}$$, $$N \in \lMod{A}$$, and their projective resolution $$P_\bullet\rightarrow M\rightarrow 0$$ and injective resolution $$0\rightarrow N\rightarrow I^\bullet$$, the following isomorphism holds:
+::: Proposition 3
+For two $$A$$-modules $$M \in \lMod{A}$$, $$N \in \lMod{A}$$, and their projective resolution $$P_\bullet\rightarrow M\rightarrow 0$$ and injective resolution $$0\rightarrow N\rightarrow I^\bullet$$, the following isomorphism holds:
 
 $$H^n(\Hom_\lMod{A}(M, I^\bullet)) \cong H^n(\Hom_\lMod{A}(P_\bullet, N))$$
 
 Here $$P_\bullet \to M$$ is a projective resolution of $$M$$, and $$N \to I^\bullet$$ is an injective resolution of $$N$$.
+:::
 
-</div>
-
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proof
 Consider the double complex
 
 $$K^{p,q}=\Hom_\lMod{A}(P_q, I^p)$$
@@ -161,38 +153,31 @@ Similarly, computing with the following filtration on $$\Tot(K)^\bullet$$,
 $$G^q \Tot(K)^k = \bigoplus_{\substack{j \geq q \\ p+j=k}} K^{p,j}$$
 
 we obtain $$H^n(\Tot(K)^\bullet) = H^n(\Hom_\lMod{A}(P_\bullet, N))$$, and from this we get the desired result.
-
-</details>
+:::
 
 In a similar way one can prove balancing for $$\Tor$$. The proof structure is the same; the only difference is that projective modules are flat modules ([\[Multilinear Algebra\] §Projective, Injective, and Flat Modules, ⁋Definition 7](/en/math/multilinear_algebra/various_modules#def7)), and this is used to handle the computation. We omit the detailed proof.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**Proposition 4**</ins> For two $$A$$-modules $$M \in \lMod{A}$$, $$N \in \lMod{A}$$, and their projective resolutions $$P_\bullet\rightarrow M\rightarrow 0$$, $$P_\bullet'\rightarrow N\rightarrow 0$$,
+::: Proposition 4
+For two $$A$$-modules $$M \in \lMod{A}$$, $$N \in \lMod{A}$$, and their projective resolutions $$P_\bullet\rightarrow M\rightarrow 0$$, $$P_\bullet'\rightarrow N\rightarrow 0$$,
 
 $$H_n(P_\bullet \otimes_A N) \cong H_n(M \otimes_A P'_\bullet)$$
 
 holds.
-
-</div>
+:::
 
 ## Examples
 
 Finally, let us look at computations of Ext and Tor a little more concretely.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**Proposition 5**</ins> For two integers $$n, m \in \mathbb{Z}$$, the following holds:
+::: Proposition 5
+For two integers $$n, m \in \mathbb{Z}$$, the following holds:
 
 $$\Tor_i^\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, \mathbb{Z}/m\mathbb{Z}) \cong \begin{cases} \mathbb{Z}/(n,m)\mathbb{Z} & i = 0, 1\\ 0 & i \geq 2. \end{cases}$$
 
 Here $$(m,n)$$ is the greatest common divisor of $$m$$ and $$n$$.
+:::
 
-</div>
-
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proof
 The case $$i=0$$ is a standard computation, so let us verify that the sequence
 
 $$0 \rightarrow \mathbb{Z}\rightarrow \mathbb{Z}\rightarrow \mathbb{Z}/n\mathbb{Z}\rightarrow 0$$
@@ -206,26 +191,21 @@ and thus the first homology is
 $$H_1(P_\bullet)=\ker(\cdot n)= \{a \in \mathbb{Z}/m\mathbb{Z} \mid na \equiv 0 \pmod{m}\}=\mathbb{Z}/(m,n)\mathbb{Z}$$
 
 which gives the desired result.
-
-</details>
+:::
 
 This proposition reveals the origin of the name $$\Tor$$: $$\Tor_1^\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, \mathbb{Z}/m\mathbb{Z})$$ is nontrivial exactly when $$(n,m) > 1$$, i.e. when there exists an $$n$$-torsion element in $$\mathbb{Z}/m\mathbb{Z}$$, and then the greatest common divisor $$(n,m)$$ can be thought of as measuring the amount of torsion.
 
 We can examine the analogous statement for $$\Ext$$ in a similar way.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop6">**Proposition 6**</ins> For any abelian group $$A$$ and $$n \in \mathbb{Z}$$, the following holds:
+::: Proposition 6
+For any abelian group $$A$$ and $$n \in \mathbb{Z}$$, the following holds:
 
 $$\Ext^i_\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, A) \cong \begin{cases} A[n] & i = 0, \\ A/nA & i = 1, \\ 0 & i \geq 2. \end{cases}$$
 
 Here $$A[n] = \{a \in A \mid na = 0\}$$ is the $$n$$-torsion subgroup.
+:::
 
-</div>
-
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proof
 Consider the same projective resolution as in [Proposition 5](#prop5),
 
 $$0 \rightarrow \mathbb{Z}\rightarrow \mathbb{Z}\rightarrow \mathbb{Z}/n\mathbb{Z}\rightarrow 0$$
@@ -239,23 +219,20 @@ Here the first map is $$a \mapsto na$$, and therefore the first cohomology is
 $$\Ext^1_\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, A) \cong \coker(\cdot n ) = A/nA$$
 
 That $$\Hom_\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, A)=A[n]$$ is a simple computation.
-
-</details>
+:::
 
 More generally, $$\Ext^1(M,N)$$ is connected to equivalence classes of short exact sequences of the form $$0 \to N \to E \to M \to 0$$, i.e. extensions of $$M$$ by $$N$$, which can be seen through Yoneda Ext. ([Wikipedia](https://en.wikipedia.org/wiki/Ext_functor)) Although less intuitive than [Proposition 5](#prop5), [Proposition 6](#prop6) can also be said to show the origin of the name $$\Ext$$ in this sense.
 
 Finally we define the following.
 
-<div class="definition" markdown="1">
-
-<ins id="def7">**Definition 7**</ins> Let a commutative ring $$A$$, a free $$A$$-module $$F$$ of rank $$n$$, and an $$A$$-linear map $$\varphi : F \to A$$ be given. Then the *Koszul complex* $$K(\varphi)_\bullet$$ is the exterior algebra $$K=\bigwedge F$$ equipped with a chain complex structure as follows:
+::: Definition 7
+Let a commutative ring $$A$$, a free $$A$$-module $$F$$ of rank $$n$$, and an $$A$$-linear map $$\varphi : F \to A$$ be given. Then the *Koszul complex* $$K(\varphi)_\bullet$$ is the exterior algebra $$K=\bigwedge F$$ equipped with a chain complex structure as follows:
 
 1. For each $$i$$, $$K_i = \bigwedge\nolimits^i F$$.
 2. For each $$i$$, $$d_i: K_i \to K_{i-1}$$ is a graded derivation of degree $$-1$$ uniquely determined by the formula $$d(f) = \varphi(f)$$ and the Leibniz rule
 
     $$d(\xi \wedge \eta) = d(\xi) \wedge \eta + (-1)^{\degree(\xi)} \, \xi \wedge d(\eta)$$.
-
-</div>
+:::
 
 Defining the augmentation map $$\epsilon: K_0=A\to A/\im\varphi$$ as the canonical projection, we can regard $$K(\varphi)_\bullet$$ as a resolution of $$A/\im\varphi$$. For convenience, fix a basis $$e_1, \ldots, e_n$$ of $$F$$ and set $$\x_i = \varphi(e_i)$$; then $$\im\varphi = (\x_1, \ldots, \x_n)$$, so we also write this as $$K_\bullet(\x_1, \ldots, \x_n)$$.
 

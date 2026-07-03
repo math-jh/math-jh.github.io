@@ -57,15 +57,13 @@ $${\AW^\ast}\circ{(-\mathbin{\bar{\times}}-)}:H^p(X;A)\otimes_A H^q(Y;A)\rightar
 
 이제 우리는 합곱을 정의할 수 있다.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> Commutative ring $$A$$와 위상공간 $$X$$에 대하여, 다음의 합성
+::: 정의 1
+Commutative ring $$A$$와 위상공간 $$X$$에 대하여, 다음의 합성
 
 $${\smile}:H^\bullet(X;A)\otimes_A H^\bullet(X;A)\overset{\AW^\ast\circ\bar{\times}}{\longrightarrow}H^\bullet(X\times X)\overset{\Delta^\ast}{\longrightarrow} H^\bullet(X)$$
 
 을 $$H^\bullet(X;A)$$ 위의 *cup product<sub>합곱</sub>*이라 부른다. 
-
-</div>
+:::
 
 이 단계에서 cup product가 왜 homology에서는 명시적으로 보이지 않았는지가 나타난다. Eilenberg-Zilber map을 사용하면
 
@@ -81,15 +79,13 @@ $$(\alpha\smile\beta)(\sigma)=(\Delta^\ast\AW^\ast(\alpha\mathbin{\bar{\times}}\
 
 그럼 그 이름에서 짐작할 수 있듯, cup product는 cohomology ring 위의 곱셈구조를 정의한다. 그런데 $$H^\bullet(X;A)$$는 graded ring이기도 하므로, 이 위에 정의된 곱셈의 commutativity를 논할 때는 다음과 같이 주의를 기울여야 한다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**명제 2**</ins> 위상공간 $$X$$와 commutative ring $$A$$를 고정하자. 그럼 
+::: 명제 2
+위상공간 $$X$$와 commutative ring $$A$$를 고정하자. 그럼 
 
 $$(H^\bullet(X;A), {\smile}, 1)$$
 
 은 *grade*-commutative, $$\mathbb{N}$$-graded $$A$$-algebra를 이룬다. 여기서 $$1\in H^0(X;A)$$는 $$X$$의 임의의 $$\Delta$$-simplex를 모두 $$1\in A$$로 보내는 cocycle이다.
-
-</div>
+:::
 
 즉, homogeneous cycle들 $$\alpha\in H^p(X;A),\beta\in H^q(X;A),\gamma\in H^r(X;A)$$에 대하여, 
 
@@ -103,18 +99,14 @@ $$(H^\bullet(X;A), {\smile}, 1)$$
 
 위에서 증명한 성질은 functor $$H^\bullet(-;A)$$의 대상들이, 처음 정의할 때는 $$\lMod{A}$$로의 functor로 정의하였지만, 최종적으로는 $$\gr_{\mathbb{N}}\Alg{A}$$에 도착한다는 것을 보여준다. 그렇다면 $$H^\bullet(-;A)$$가 $$\Top$$에서 $$\gr_\mathbb{N}\Alg{A}$$로의 functor인지를 궁금해하는 것이 당연하다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop3">**명제 3**</ins> 임의의 위상공간 $$X,Y$$와 commutative ring $$A$$에 대하여, 
+::: 명제 3
+임의의 위상공간 $$X,Y$$와 commutative ring $$A$$에 대하여, 
 
 $$\times: H^\ast(X;A)\otimes_A H^\ast(Y;A) \to H^\ast(X\times Y;A)$$
 
 는 graded $$A$$-algebra homomorphism이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 즉 우리가 보이고 싶은 것은 다음 diagram
 
 ![functoriality_of_cup_products](/assets/images/Math/Algebraic_Topology/Cup_Products-1.svg){:style="width:41.10em" class="invert" .align-center}
@@ -124,20 +116,17 @@ $$\times: H^\ast(X;A)\otimes_A H^\ast(Y;A) \to H^\ast(X\times Y;A)$$
 $$(\alpha_1\times\beta_1)(\alpha_2\times\beta_2)=\Delta_{X\times Y}^\ast ((\alpha_1\times\beta_1)\times(\alpha_2\times\beta_2))$$
 
 이고, 이제 우변이 $$\alpha_1\times\beta_1\times\alpha_2\times\beta_2$$의 꼴이므로 이를 다시 적절하게 묶어주면 된다. 이것이 graded homomorphism이고 $$1$$을 보존하는 것은 자명하다.
-
-</details>
+:::
 
 그럼 이를 바탕으로 cup product의 functoriality 또한 보일 수 있다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**명제 4**</ins> 연속함수 $$f:X \rightarrow Y$$에 대하여, cohomology functor가 유도하는 $$f^\ast=H^\bullet(f;A):H^\bullet(Y;A)\rightarrow H^\bullet(X;A)$$는 graded $$A$$-algebra들 사이의 morphism이다. 즉, 다음의 식
+::: 명제 4
+연속함수 $$f:X \rightarrow Y$$에 대하여, cohomology functor가 유도하는 $$f^\ast=H^\bullet(f;A):H^\bullet(Y;A)\rightarrow H^\bullet(X;A)$$는 graded $$A$$-algebra들 사이의 morphism이다. 즉, 다음의 식
 
 $$f^\ast(\alpha\smile\beta)=(f^\ast\alpha)\smile(f^\ast\beta)$$
 
 이 성립한다. 
-
-</div>
+:::
 
 이 명제의 증명은 앞선 [명제 3](#prop3)에 의해 우리는 다음 diagram
 
@@ -175,29 +164,25 @@ $$\beta\frown \sigma=\sum_i(-1)^{\lvert\beta\rvert\lvert\sigma_i\rvert}\beta(\ta
 
 으로 정의해야만 한다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def5">**정의 5**</ins> 위와 같이 정의된 함수
+::: 정의 5
+위와 같이 정의된 함수
 
 $$\frown:H^p(X;A)\otimes H_{p+q}(X;A) \rightarrow H_q(X;A)$$
 
 를 *cap product*라 부른다. 
-
-</div>
+:::
 
 즉 $$\frown$$은 degree $$p+q$$의 homology chain과 degree $$p$$의 cohomology chain을 받아서, homology chain의 degree $$p$$인 부분과 cohomology chain을 Kronecker pairing을 통해 연산한 후, 이 상수를 남아있는 degree $$q$$의 homology chain에 scalar multiplication을 해 주어 얻어지는 것이다. 이는 다소 작위적인 정의로 보일 수 있으나 [§Acyclic models theorem, ⁋정리 3](/ko/math/algebraic_topology/acyclic_models_theorem#thm3)의 유일성에 의해 유일하게 말이 되는 정의라 할 수 있다. 뿐만 아니라, 이 표현으로부터 이것이 정확하게 interior product에 해당하는 연산임을 안다.
 
 그럼 다음이 성립한다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop6">**명제 6 (Projection formula)**</ins> 연속함수 $$f:X \rightarrow Y$$와 $$\alpha\in H^p(X)$$, $$\beta\in H^q(Y)$$, 그리고 $$\sigma\in H_{p+q}(X)$$에 대하여 다음의 식
+::: 명제 6 (Projection formula)
+연속함수 $$f:X \rightarrow Y$$와 $$\alpha\in H^p(X)$$, $$\beta\in H^q(Y)$$, 그리고 $$\sigma\in H_{p+q}(X)$$에 대하여 다음의 식
 
 $$f_\ast(f^\ast\beta\frown\sigma)=\beta\frown f_\ast\sigma$$
 
 이 성립한다. 
-
-</div>
+:::
 
 --- 
 

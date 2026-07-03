@@ -17,19 +17,16 @@ weight: 25
 
 이제 약속한 대로 cardinal들 간의 연산을 정의하자.
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> $$(\mathfrak{a}_i)_{i\in I}$$가 cardinal들의 family라 하자. 집합 $$\mathfrak{a}_i$$들의 곱 (resp. 합)의 cardinal을 이들의 *cardinal product*(resp. *cardinal sum*)이라 부르고 $$\prod_{i\in I}\mathfrak{a}_i$$ (resp. $$\sum_{i\in I}\mathfrak{a}_i$$)로 적는다.
-
-</div>
+::: 정의 1
+$$(\mathfrak{a}_i)_{i\in I}$$가 cardinal들의 family라 하자. 집합 $$\mathfrak{a}_i$$들의 곱 (resp. 합)의 cardinal을 이들의 *cardinal product*(resp. *cardinal sum*)이라 부르고 $$\prod_{i\in I}\mathfrak{a}_i$$ (resp. $$\sum_{i\in I}\mathfrak{a}_i$$)로 적는다.
+:::
 
 우리가 처음 집합의 합을 정의할 때, 굳이 분리합집합이라는 직관적인 이름을 놔두고 합이라는 용어를 쓴 이유가 여기에 있다.
 
 우선, 위 정의들은 잘 정의되어있다. 만일 $$A_i$$와 $$\mathfrak{a}_i$$가 equipotent하다면, $$\prod_{i\in I} A_i$$와 $$\prod_{i\in I}\mathfrak{a}_i$$ 사이에도 bijection이 존재하기 때문이다. 이 연산들을 가지고 있다면 합과 곱의 성질들이 다음과 같이 cardinal간의 연산의 성질로 바뀌게 된다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop2">**명제 2**</ins> $$(\mathfrak{a}_i)_{i\in I}$$가 cardinal들의 family이고, $$f$$가 $$K$$에서 $$I$$로의 bijection이라 하자. 그럼 
+::: 명제 2
+$$(\mathfrak{a}_i)_{i\in I}$$가 cardinal들의 family이고, $$f$$가 $$K$$에서 $$I$$로의 bijection이라 하자. 그럼 
 
 $$\sum_{k\in K}\mathfrak{a}_{f(k)}=\sum_{i\in I}\mathfrak{a}_i,\quad \prod_{k\in K}\mathfrak{a}_{f(k)}=\prod_{i\in I}\mathfrak{a}_i$$ 
 
@@ -38,41 +35,31 @@ $$\sum_{k\in K}\mathfrak{a}_{f(k)}=\sum_{i\in I}\mathfrak{a}_i,\quad \prod_{k\in
 $$\sum_{i\in I}\mathfrak{a}_{i}=\sum_{l\in L}\sum_{i\in J_l}\mathfrak{a}_i,\quad \prod_{i\in I}\mathfrak{a}_{i}=\prod_{l\in L}\prod_{i\in J_l}\mathfrak{a}_i$$
 
 이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 [§집합의 합, ⁋명제 7](/ko/math/set_theory/sum_of_sets#prop7)에 의하여 우리는 cardinal들의 합을 mutually disjoint family의 합집합으로 취급할 수 있다. 이제, 첫 번째 식들은 각각 [§합집합과 교집합, ⁋명제 4](/ko/math/set_theory/union_and_intersection#prop4), [§집합의 곱, ⁋명제 5](/ko/math/set_theory/product_of_sets#prop5)의 결과들이며, 두 번째 식들은 [§합집합과 교집합, ⁋명제 5](/ko/math/set_theory/union_and_intersection#prop5)와 [§곱집합의 성질, ⁋명제 3](/ko/math/set_theory/property_of_products#prop3)의 결과들이다.
+:::
 
-</details>
-
-<div class="proposition" markdown="1">
-
-<ins id="prop3">**명제 3**</ins> $$(\mathfrak{a}_i)_{i\in I}$$가 cardinal들의 family이고, $$J$$ (resp. $$K$$)가 $$I$$의 부분집합 중 다음의 식 $$\mathfrak{a}_i=\mathbf{0}$$ for all $$i\not\in J$$ (resp. $$\mathfrak{a}_i=\mathbf{1}$$ for all $$i\not\in K$$)을 만족하는 부분집합이라 하자. 그럼 
+::: 명제 3
+$$(\mathfrak{a}_i)_{i\in I}$$가 cardinal들의 family이고, $$J$$ (resp. $$K$$)가 $$I$$의 부분집합 중 다음의 식 $$\mathfrak{a}_i=\mathbf{0}$$ for all $$i\not\in J$$ (resp. $$\mathfrak{a}_i=\mathbf{1}$$ for all $$i\not\in K$$)을 만족하는 부분집합이라 하자. 그럼 
 
 $$\sum_{i\in I}\mathfrak{a}_i=\sum_{i\in J}\mathfrak{a}_i,\quad \prod_{i\in I}\mathfrak{a}_i=\prod_{i\in K}\mathfrak{a}_i$$
 
 가 성립한다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 공집합과 합집합을 하는 것과, 원소 하나짜리 집합과 곱을 하는 것은 cadrinal에 영향을 미치지 않는다. ($$x\mapsto (x,i)$$가 $$A$$에서 $$A\times\{i\}$$로의 bijection을 정의한다)
-
-</details>
+:::
 
 그리고, 이렇게 자명한 결과들 외에도, 곱과 합집합 사이의 분배법칙 ([§곱집합의 성질, ⁋명제 7](/ko/math/set_theory/property_of_products#prop7))를 이용하면 다음의 명제를 얻는다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**명제 4**</ins> Cardinal들의 double-index가 주어진 family $$((\mathfrak{a}_{j,k})_{j\in J_k})_{k\in K}$$에 대하여, $$I=\prod_{k\in K}J_k$$라 하면 
+::: 명제 4
+Cardinal들의 double-index가 주어진 family $$((\mathfrak{a}_{j,k})_{j\in J_k})_{k\in K}$$에 대하여, $$I=\prod_{k\in K}J_k$$라 하면 
 
 $$\prod_{k\in K}\left(\sum_{j\in J_k}\mathfrak{a}_{j,k}\right)=\sum_{f\in I}\left(\prod_{k\in K}\mathfrak{a}_{k, f(k)}\right)$$
 
 가 성립한다.
-</div>
+:::
 
 특별히, 위의 명제들을 유한한 경우에만 생각한다면 
 
@@ -90,85 +77,58 @@ $$\mathfrak{a}\mathfrak{b}=\mathfrak{a}\left(\sum_{i\in I}\mathfrak{c}_i\right)=
 
 을 얻는다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**명제 5**</ins> $$(\mathfrak{a}_i)_{i\in I}$$가 cardinal들의 family라 하자. 그럼 $$\prod_{i\in I}\mathfrak{a}_i\neq \mathbf{0}$$인 것은 모든 $$i\in I$$에 대하여 $$\mathfrak{a}_i\neq \mathbf{0}$$인 것과 동치이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 명제 5
+$$(\mathfrak{a}_i)_{i\in I}$$가 cardinal들의 family라 하자. 그럼 $$\prod_{i\in I}\mathfrak{a}_i\neq \mathbf{0}$$인 것은 모든 $$i\in I$$에 대하여 $$\mathfrak{a}_i\neq \mathbf{0}$$인 것과 동치이다.
+:::
+::: 증명
 [§순서쌍, ⁋명제 10](/ko/math/set_theory/ordered_pair#prop10)의 임의의 product로의 확장. 증명도 동일하게 하면 된다.
+:::
 
-</details>
-
-<div class="proposition" markdown="1">
-
-<ins id="prop6">**명제 6**</ins> 만일 $$\mathfrak{a}$$와 $$\mathfrak{b}$$가 $$\mathfrak{a}+\mathbf{1}=\mathfrak{b}+\mathbf{1}$$를 만족하는 cardinal들이라면, $$\mathfrak{a}=\mathfrak{b}$$이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 명제 6
+만일 $$\mathfrak{a}$$와 $$\mathfrak{b}$$가 $$\mathfrak{a}+\mathbf{1}=\mathfrak{b}+\mathbf{1}$$를 만족하는 cardinal들이라면, $$\mathfrak{a}=\mathfrak{b}$$이다.
+:::
+::: 증명
 $$X$$가 cardinal $$\mathfrak{a}+\mathbf{1}=\mathfrak{b}+\mathbf{1}$$짜리 집합이라 하자. 그럼 집합 $$X$$의 cardinal $$\mathfrak{a}$$와 $$\mathfrak{b}$$짜리 부분집합이 존재하여, $$X\setminus A$$와 $$X\setminus B$$가 singleton이다. $$X\setminus A=\{a\}$$, $$X\setminus B=\{b\}$$라 하고, $$A$$에서 $$B$$로의 bijection을 
 
 $$f(x)=\begin{cases}a&\text{if }x=b\\ x&\text{otherwise}\end{cases}$$ 
 
 로 정의하면 된다.
-
-</details>
+:::
 
 우리는 심지어 cardinal들 간의 지수관계까지 정의할 수 있다. 함수들의 집합 $$B^A$$를 이용하면 된다.
 
-<div class="definition" markdown="1">
-
-<ins id="def7">**정의 7**</ins> $$\mathfrak{a}$$와 $$\mathfrak{b}$$가 cardinal이라 하자. $$\mathfrak{b}$$에서 $$\mathfrak{a}$$로의 함수들의 집합의 cardinal를 $$\mathfrak{b}^\mathfrak{a}$$로 적는다.
-
-</div>
+::: 정의 7
+$$\mathfrak{a}$$와 $$\mathfrak{b}$$가 cardinal이라 하자. $$\mathfrak{b}$$에서 $$\mathfrak{a}$$로의 함수들의 집합의 cardinal를 $$\mathfrak{b}^\mathfrak{a}$$로 적는다.
+:::
 
 물론 엄밀히 말하자면 $$\mathfrak{b}^\mathfrak{a}$$의 equivalence class의 representative는 위의 함수들의 집합과 다를 수도 있으므로 약간의 abuse of notation이 있지만[^2] 문맥상 명확하므로 이렇게 쓰기로 한다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop8">**명제 8**</ins> $$\mathfrak{a}$$와 $$\mathfrak{b}$$가 cardinal이고 $$I$$가 $$\card I=\mathfrak{b}$$를 만족하는 집합이라 하자. 만일 모든 $$i\in I$$에 대하여 $$\mathfrak{a}_i=\mathfrak{a}$$라면 $$\mathfrak{a}^\mathfrak{b}=\prod_{i\in I}\mathfrak{a}_i$$이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 명제 8
+$$\mathfrak{a}$$와 $$\mathfrak{b}$$가 cardinal이고 $$I$$가 $$\card I=\mathfrak{b}$$를 만족하는 집합이라 하자. 만일 모든 $$i\in I$$에 대하여 $$\mathfrak{a}_i=\mathfrak{a}$$라면 $$\mathfrak{a}^\mathfrak{b}=\prod_{i\in I}\mathfrak{a}_i$$이다.
+:::
+::: 증명
 $$B^A$$와 $$\Fun(A,B)$$ 간의 bijection이 존재하므로 자명하다.
-
-</details>
+:::
 
 Cardinal $$\mathbf{0}$$과 $$\mathbf{1}$$에 대한 성질들, 예컨대 $$\mathfrak{a}^\mathbf{0}=\mathbf{1}$$, $$\mathfrak{a}^\mathbf{1}=\mathfrak{a}$$, $$\mathbf{1}^\mathfrak{a}=\mathbf{1}$$, $$\mathbf{0}^\mathfrak{a}=\mathbf{0}$$ 등등은 쉽게 증명할 수 있다. 여기에서 가장 중요한 정리들 중 하나는 다음의 정리이다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop9">**명제 9**</ins> $$A$$가 집합이고 $$\mathfrak{a}$$가 그 cardinal이라 하자. 그럼 $$\mathcal{P}(A)$$의 cardinal는 $$\mathbf{2}^\mathfrak{a}$$이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 명제 9
+$$A$$가 집합이고 $$\mathfrak{a}$$가 그 cardinal이라 하자. 그럼 $$\mathcal{P}(A)$$의 cardinal는 $$\mathbf{2}^\mathfrak{a}$$이다.
+:::
+::: 증명
 $$\mathbf{2}=\{\alpha, \beta\}$$가 cardinal이라 하자. 임의의 $$X\in\mathcal{P}(A)$$에 대하여, 만약 $$x\in X$$라면 $$x\mapsto\alpha$$이고, 그렇지 않을 때에는 $$x\mapsto\beta$$인 함수 $$f_X:A\rightarrow \mathbf{2}$$가 존재한다. 반대로 임의의 함수 $$f:A\rightarrow \mathbf{2}$$에 대하여, $$f^{-1}(\alpha)$$가 $$\mathcal{P}(A)$$의 원소를 하나 지정한다.
-
-</details>
+:::
 
 다음은 Cantor의 유명한 정리. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop10">**명제 10 (Cantor)**</ins> 임의의 cardinal $$\mathfrak{a}$$에 대하여 $$\mathbf{2}^\mathfrak{a}>\mathfrak{a}$$가 항상 성립한다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 명제 10 (Cantor)
+임의의 cardinal $$\mathfrak{a}$$에 대하여 $$\mathbf{2}^\mathfrak{a}>\mathfrak{a}$$가 항상 성립한다.
+:::
+::: 증명
 $$x\mapsto \{x\}$$가 $$\mathfrak{a}$$에서 멱집합으로의 단사함수이이므로, $$\mathfrak{a}\leq \mathbf{2}^\mathfrak{a}$$임은 자명하다. 따라서 $$\mathfrak{a}\neq\mathbf{2}^\mathfrak{a}$$임만 보이자. 즉, 임의의 함수 $$f:\mathfrak{a}\rightarrow\mathcal{P}(\mathfrak{a})$$에 대하여, $$\mathfrak{a}$$의 image 밖에 항상 어떤 원소가 존재한다는 걸 보이면 된다.
 
 $$X$$가 $$x\not\in f(x)$$를 만족하는 모든 $$x\in\mathfrak{a}$$들의 집합이라 하자. 만일 $$x\in X$$라면, $$x\not\in f(x)$$이고 따라서 $$f(x)\neq X$$이며, 반대로 $$x\not\in X$$라면 $$x\in f(x)$$이므로 다시 $$f(x)\neq X$$이다. 따라서 $$X\not\in f(\mathfrak{a})$$이므로 증명이 완료되었다. 
-
-</details>
+:::
 
 만약 $$\mathfrak{a}$$가 유한집합이라면, $$\mathfrak{a}$$와 $$\mathbf{2}^\mathfrak{a}$$ 사이에는 항상 어떤 cardinal이 존재한다. 그런데 무한대인 경우에는 이것이 그렇게 자명하지 않다. 예를 들어, 자연수집합 $$\mathbb{N}$$의 크기보다, $$\mathbb{N}$$의 멱집합의 크기가 더 큰 것은 위의 명제에 의해 자명하지만 그 둘 사이에 어떠한 cardinal이 있을것인지는 쉽게 예측할 수 없다.
 

@@ -18,13 +18,11 @@ We now examine in greater detail the complete linear system $$H^0(X, \mathcal{L}
 
 ## The Riemann–Roch Theorem
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**Definition 1**</ins> For a divisor $$D$$ on a smooth projective curve $$C$$, we define the *Riemann–Roch dimension* as
+::: Definition 1
+For a divisor $$D$$ on a smooth projective curve $$C$$, we define the *Riemann–Roch dimension* as
 
 $$\ell(D) = \dim H^0(C, \mathcal{O}_C(D)).$$
-
-</div>
+:::
 
 In general, we regard $$\mathcal{O}_X(D)$$ as the sheaf of rational functions that may have poles of order at most $$1$$ along $$D$$; from this perspective, $$H^0(C, \mathcal{O}_C(D))$$ can be viewed as a space of functions defined on $$X$$.
 
@@ -48,18 +46,14 @@ $$H^1(C, \mathcal{O}_C(D)) \cong H^0(C, \omega_C \otimes \mathcal{O}_C(-D))^\vee
 
 ([§Serre Duality, ⁋Proposition 2](/en/math/algebraic_varieties/serre_duality#prop2)). Recall here that the canonical divisor $$K_C$$ is the divisor corresponding to the canonical line bundle. Then the following lemma allows us to deduce that only two terms appear in the Euler characteristic of $$\mathcal{O}_C(D)$$. In this post we assume that $$\mathbb{K}$$ is an *infinite* field.
 
-<div class="proposition" markdown="1">
-
-<ins id="lem2">**Lemma 2**</ins> For any coherent sheaf $$\mathcal{F}$$ on a smooth projective curve $$C$$,
+::: Lemma 2
+For any coherent sheaf $$\mathcal{F}$$ on a smooth projective curve $$C$$,
 
 $$H^i(C, \mathcal{F}) = 0 \quad (i \ge 2)$$
 
 holds.
-
-</div>
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+:::
+::: Proof
 Fix an embedding $$C\hookrightarrow \mathbb{P}^N$$. Then by a dimension count, there exist hyperplanes $$H_1,H_2$$ such that $$C\cap H_1\cap H_2=\emptyset$$. Thus, setting $$U_i=C\setminus H_i$$, we know that these form an affine open cover of $$C$$.
 
 Now consider the Čech cohomology with respect to $$\{U_1,U_2\}$$. As was briefly introduced right after [§Sheaf Cohomology, ⁋Proposition 12](/en/math/algebraic_varieties/sheaf_cohomology#prop12), any affine open cover of a projective variety satisfies the hypotheses of [§Sheaf Cohomology, ⁋Theorem 11](/en/math/algebraic_varieties/sheaf_cohomology#thm11), and therefore the sheaf cohomology we seek reduces exactly to the computation for this affine open cover. The Čech complex is then simply
@@ -67,8 +61,7 @@ Now consider the Čech cohomology with respect to $$\{U_1,U_2\}$$. As was briefl
 $$\check{C}(\mathcal{U}, \mathcal{F}):\qquad \mathcal{F}(U_1)\oplus \mathcal{F}(U_2)\rightarrow \mathcal{F}(U_1\cap U_2)\rightarrow 0,$$
 
 a complex of length 1, so $$\check{H}^i = 0\ (i \ge 2)$$ follows immediately.
-
-</details>
+:::
 
 Therefore, by this result, for any divisor $$D$$,
 
@@ -94,19 +87,15 @@ That this value is half of the topological Euler characteristic is no coincidenc
 
 The Riemann–Roch theorem, the subject of this post, adds one further step. The computation above was for the trivial sheaf $$\mathcal{O}_{C_S}$$ with nothing attached, so we now consider the sheaf $$\mathcal{O}_{C_S}(D)$$ twisted by an arbitrary divisor $$D$$. The conclusion of the Riemann–Roch theorem is that a correction term of magnitude $$\deg D$$ appears.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop3">**Proposition 3**</ins> (Riemann–Roch for curves) For a divisor $$D$$ on a smooth projective curve $$C$$,
+::: Proposition 3
+(Riemann–Roch for curves) For a divisor $$D$$ on a smooth projective curve $$C$$,
 
 $$\ell(D) - \ell(K_C - D) = \deg D + 1 - g$$
 
 holds. Here $$g$$ is the genus of $$C$$, and $$K_C$$ is the canonical divisor.
+:::
 
-</div>
-
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proof
 By the computations and definitions above,
 
 $$\rchi(\mathcal{O}_C(D)) = h^0(C, \mathcal{O}_C(D)) - h^1(C, \mathcal{O}_C(D)) = \ell(D) - \ell(K_C - D).$$
@@ -118,8 +107,7 @@ $$0 \to \mathcal{O}_C \to \mathcal{O}_C(D) \to \mathcal{O}_D \to 0,$$
 and then by additivity of the Euler characteristic, $$\rchi(\mathcal{O}_C(D)) = \rchi(\mathcal{O}_C) + \rchi(\mathcal{O}_D)$$.
 
 Here $$\mathcal{O}_D$$ is a skyscraper sheaf of degree $$\deg D$$, so $$\rchi(\mathcal{O}_D) = \deg D$$, and as we saw above $$\rchi(\mathcal{O}_C)=1-g$$; combining this with the previous formula yields the desired result. For a general (not necessarily effective) divisor, one writes $$D$$ as a difference of effective divisors and applies the same additivity argument.
-
-</details>
+:::
 
 The proof above is clean, but its geometric content is compressed inside the Euler characteristic, so it may not be very intuitive. To remedy this, let us read the equation term by term. First, by definition
 
@@ -185,9 +173,8 @@ from which we recover the computation $$\deg(K_C)=2g-2$$ from [§Canonical Bundl
 
 In any case, summarizing the computations so far, we may think of $$\ell(D)$$ as the dimension of the complete linear system of $$D$$, and $$\ell(K_C - D)$$ as a correction term that $$K_C$$ imposes on $$D$$, which disappears for large degree and reflects geometric information of $$K_C$$ for small degree.
 
-<div class="example" markdown="1">
-
-<ins id="ex4">**Example 4**</ins> **$$\mathbb{P}^1$$**: The genus of $$\mathbb{P}^1$$ is $$g = 0$$, and the canonical divisor is $$K_{\mathbb{P}^1} = -2H$$ ([§Canonical Bundle, ⁋Example 8](/en/math/algebraic_varieties/canonical_bundle#ex8)). On the other hand, in ([§Line Bundles and Vector Bundles, ⁋Example 12](/en/math/algebraic_varieties/line_bundles#ex12)) we showed that the global sections of $$\mathcal{O}_{\mathbb{P}^1}(d)$$ are the homogeneous polynomials of degree $$d$$, so we know that
+::: Example 4
+**$$\mathbb{P}^1$$**: The genus of $$\mathbb{P}^1$$ is $$g = 0$$, and the canonical divisor is $$K_{\mathbb{P}^1} = -2H$$ ([§Canonical Bundle, ⁋Example 8](/en/math/algebraic_varieties/canonical_bundle#ex8)). On the other hand, in ([§Line Bundles and Vector Bundles, ⁋Example 12](/en/math/algebraic_varieties/line_bundles#ex12)) we showed that the global sections of $$\mathcal{O}_{\mathbb{P}^1}(d)$$ are the homogeneous polynomials of degree $$d$$, so we know that
 
 $$\ell(dH) = d+1 \quad (d \ge 0), \qquad \ell(dH) = 0 \quad (d < 0)$$
 
@@ -196,26 +183,22 @@ holds. Verifying the Riemann–Roch formula, for $$D = dH$$ we have $$\deg D = d
 $$\ell(dH) - \ell(-2H-dH) = d + 1 - 0 = d + 1,$$
 
 and both sides agree at $$d+1$$.
+:::
 
-</div>
-
-<div class="example" markdown="1">
-
-<ins id="ex5">**Example 5 (Elliptic curve)**</ins> In the genus $$1$$ case $$g = 1$$, the above computations give $$\deg K_C=2g-2=0$$ and $$\ell(K_C)=g=1$$. Since $$\ell(K_C)=1>0$$, as we saw earlier there exists an effective divisor linearly equivalent to $$K_C$$; but since $$\deg K_C=0$$ and the only effective divisor of degree $$0$$ is $$0$$, we have $$K_C\sim 0$$. Using this, the Riemann–Roch formula becomes
+::: Example 5 (Elliptic curve)
+In the genus $$1$$ case $$g = 1$$, the above computations give $$\deg K_C=2g-2=0$$ and $$\ell(K_C)=g=1$$. Since $$\ell(K_C)=1>0$$, as we saw earlier there exists an effective divisor linearly equivalent to $$K_C$$; but since $$\deg K_C=0$$ and the only effective divisor of degree $$0$$ is $$0$$, we have $$K_C\sim 0$$. Using this, the Riemann–Roch formula becomes
 
 $$\ell(D) - \ell(-D) = \deg D.$$
 
 In particular, if $$\deg D > 0$$ then $$\ell(-D) = 0$$, so $$\ell(D) = \deg D$$.
 
 The case $$\deg D=0$$ is the small-degree case mentioned above: from inequality ($$3$$) we must have $$\ell(D)=0$$ or $$\ell(D)=1$$. If $$\ell(D)=1$$, then there exists a unique effective divisor linearly equivalent to $$D$$, but its degree is $$0$$ so it is $$0$$. Therefore $$D\sim 0$$, and conversely if $$D\sim 0$$ then $$\mathcal{O}_C(D)\cong \mathcal{O}_C$$, so $$\ell(D)=1$$. That is, the term $$\ell(K_C-D)$$ equals $$1$$ precisely when $$D$$ is linearly equivalent to $$0$$, and is $$0$$ otherwise.
-
-</div>
+:::
 
 Since $$K_C \sim 0$$, the Riemann–Roch theorem becomes especially simple on an elliptic curve. If $$\deg D > 0$$ the correction term $$\ell(K_C-D)=\ell(-D)$$ vanishes, so $$\ell(D)=\deg D$$ is completely determined. This shows that $$g=1$$ is the simplest non-trivial case in the progression where the influence of the correction term becomes increasingly complicated as the genus grows.
 
-<div class="example" markdown="1">
-
-<ins id="ex6">**Example 6 ($$g=2$$)**</ins> Now consider the one-step more complicated situation of $$g=2$$. Here $$\deg K_C = 2g - 2 = 2$$ and $$\ell(K_C)=2$$, and substituting $$D=p$$ into [Proposition 3](#prop3) gives
+::: Example 6 ($$g=2$$)
+Now consider the one-step more complicated situation of $$g=2$$. Here $$\deg K_C = 2g - 2 = 2$$ and $$\ell(K_C)=2$$, and substituting $$D=p$$ into [Proposition 3](#prop3) gives
 
 $$\ell(p)-\ell(K_C-p)=2-g,$$
 
@@ -230,8 +213,7 @@ Now let us apply Riemann–Roch to multiples $$D=d\cdot p$$ of a single point $$
 1. For $$d=1$$, if $$\ell(p)\ge 2$$ then a degree 1 map $$C\to\mathbb{P}^1$$ would exist, implying $$C\cong\mathbb{P}^1$$, which contradicts $$g=2$$; hence $$\ell(p)=1$$. By Riemann–Roch, $$\ell(K_C-p)=1$$.
 2. For $$d=2$$, if $$2p\sim K_C$$ then $$\ell(2p)=2$$. In this case $$p$$ is called a *Weierstrass point*; this condition corresponds exactly to the situation where the preimage of some point under the canonical map $$\varphi_{K_C}$$ is ramified at $$p$$. For a generic point $$2p\not\sim K_C$$, so $$\ell(2p)=1$$.
 3. For $$d\ge 3$$, we have $$\deg(K_C-D)=2-d<0$$, so $$\ell(K_C-D)=0$$, and therefore $$\ell(D)=d-1$$.
-
-</div>
+:::
 
 The canonical map $$\varphi_{K_C}: C \rightarrow \mathbb{P}^1$$ for $$g=2$$ examined in the above example was a 2:1 branched covering. More generally, among curves of genus $$g \ge 2$$, those admitting a degree 2 covering to $$\mathbb{P}^1$$ are called *hyperelliptic curves*, and those admitting no such covering are called *non-hyperelliptic curves*. Note that by convention the cases of genus $$0,1$$ are excluded from hyperelliptic curves.
 
@@ -241,32 +223,25 @@ Now let us examine the behavior of the morphism $$\varphi_{K_C} : C \rightarrow 
 
 In [§Canonical Bundle, ⁋Example 10](/en/math/algebraic_varieties/canonical_bundle#ex10) we asserted the following proposition as a well-known fact to show that $$\deg K_C=2g-2$$, but now we can give a rigorous proof. Note, however, that this proceeds in exactly the opposite direction to that example: there the adjunction formula and degree-genus formula were used to prove $$\deg K_C=2g-2$$, whereas now we derive the degree-genus formula from $$\deg K_C=2g-2$$ together with the adjunction formula. The degree of $$K_C$$ was already obtained from Riemann–Roch before [Example 4](#ex4) (without using the degree-genus formula).
 
-<div class="proposition" markdown="1">
-
-<ins id="prop7">**Proposition 7 (Degree-genus formula)**</ins> For a smooth plane curve $$C \subset \mathbb{P}^2$$ of degree $$d$$,
+::: Proposition 7 (Degree-genus formula)
+For a smooth plane curve $$C \subset \mathbb{P}^2$$ of degree $$d$$,
 
 $$g(C) = \frac{(d-1)(d-2)}{2}$$
 
 holds.
+:::
 
-</div>
-
-<details class="proof" markdown="1">
-<summary>Proof</summary>
-
+::: Proof
 By the adjunction formula ([§Canonical Bundle, ⁋Proposition 9](/en/math/algebraic_varieties/canonical_bundle#prop9)), $$K_C = (K_{\mathbb{P}^2} + C)\vert_C = (d-3)H\vert_C$$. Therefore $$\deg K_C = d(d-3)$$, and substituting this into $$\deg K_C = 2g - 2$$ yields
 
 $$d(d-3) = 2g - 2 \implies g = \frac{d(d-3) + 2}{2} = \frac{(d-1)(d-2)}{2}.$$
-
-</details>
+:::
 
 This formula directly computes the geometric properties of plane curves. For example, a smooth plane cubic has genus 1, so it coincides with the elliptic curve treated in [Example 5](#ex5). On the other hand, for $$d = 1, 2$$ we have $$g = 0$$, reflecting that lines and conics are both birationally equivalent to $$\mathbb{P}^1$$ ([§Rational Maps, ⁋Proposition 10](/en/math/algebraic_varieties/rational_maps#prop10)).
 
-<div class="example" markdown="1">
-
-<ins id="ex8">**Example 8**</ins> Computing the genus by degree $$d$$, for degree 3 (cubic) we have $$g = \frac{2 \cdot 1}{2} = 1$$, an elliptic curve; for degree 4 (quartic) we have $$g = \frac{3 \cdot 2}{2} = 3$$, and for degree 5 (quintic) we have $$g = \frac{4 \cdot 3}{2} = 6$$. Since the genus grows rapidly with degree, higher-degree smooth plane curves have increasingly complex topological structure.
-
-</div>
+::: Example 8
+Computing the genus by degree $$d$$, for degree 3 (cubic) we have $$g = \frac{2 \cdot 1}{2} = 1$$, an elliptic curve; for degree 4 (quartic) we have $$g = \frac{3 \cdot 2}{2} = 3$$, and for degree 5 (quintic) we have $$g = \frac{4 \cdot 3}{2} = 6$$. Since the genus grows rapidly with degree, higher-degree smooth plane curves have increasingly complex topological structure.
+:::
 
 ---
 

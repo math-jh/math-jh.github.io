@@ -19,9 +19,8 @@ weight: 4
 
 우선 lattice $$M$$과 그 dual lattice $$N = \Hom(M, \mathbb{Z})$$를 고정하고, $$\langle -, - \rangle : M_{\mathbb{R}} \times N_{\mathbb{R}} \to \mathbb{R}$$를 자연스러운 dual pairing이라 하자. 그럼 이 pairing을 통해 주어진 polytope을 반대쪽 dual lattice로 옮길 수 있다. 그 정의에 의해 *reflexive polytope*은 그 결과 또한 lattice polytope으로 떨어지는 것이다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> $$M_{\mathbb{R}}$$의 $$d$$차원 *lattice polytope* $$\Delta$$가 다음 두 조건을 만족할 때, 이를 *reflexive polytope<sub>반사 다면체</sub>*라 부른다:
+::: 정의 1
+$$M_{\mathbb{R}}$$의 $$d$$차원 *lattice polytope* $$\Delta$$가 다음 두 조건을 만족할 때, 이를 *reflexive polytope<sub>반사 다면체</sub>*라 부른다:
 
 1. 원점 $$0$$이 $$\Delta$$의 내부에 포함된다.
 2. $$\Delta$$의 *dual polytope*<sub>쌍대 다면체</sub>
@@ -29,27 +28,21 @@ weight: 4
 $$\Delta^\circ = \{ v \in N_{\mathbb{R}} \mid \langle u, v \rangle \ge -1 \text{ for all } u \in \Delta \}$$
 
 이 다시 lattice polytope가 된다. 즉 $$\Delta^\circ$$의 모든 꼭짓점이 lattice $$N$$에 속한다.
-
-</div>
+:::
 
 두 번째 조건은 뜻하는 바가 꽤나 투명하지만, 첫째 조건은 다소 쓸모없는 것처럼 느껴질 수 있다. 직관적으로, 만일 $$\Delta$$가 원점을 포함하지 않는다면 $$\Delta$$ 내부의 어떤 벡터의 <em-ko>반대방향</em-ko> 벡터가 존재하지 않으므로 이 벡터와 pairing했을 때 양이 되는 방향의 dual vector를 하나 잡은 후 이를 계속 늘리면 $$\Delta^\circ$$을 정의하는 조건이 unbounded하게 정의된다. 때문에 우리는 위와 같은 두 조건을 필수로 요구하게 된다. 
 
 그 이름에 걸맞게, reflexive polytope의 가장 기본적인 성질은 dual 연산 $$\Delta \mapsto \Delta^\circ$$이 reflexive polytope들의 모임 위에서 involution을 이룬다는 것이다.
 
-<div class="proposition" markdown="1">
+::: 명제 2 (Bipolar theorem)
+$$\Delta \subset M_{\mathbb{R}}$$가 reflexive polytope이면 $$\Delta^\circ \subset N_{\mathbb{R}}$$도 reflexive polytope이며, $$(\Delta^\circ)^\circ = \Delta$$가 성립한다.
+:::
 
-<ins id="prop2">**명제 2 (Bipolar theorem)**</ins> $$\Delta \subset M_{\mathbb{R}}$$가 reflexive polytope이면 $$\Delta^\circ \subset N_{\mathbb{R}}$$도 reflexive polytope이며, $$(\Delta^\circ)^\circ = \Delta$$가 성립한다.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 $$\Delta$$가 reflexive이므로 $$\Delta^\circ$$는 정의에 의해 lattice polytope이다. $$\Delta$$의 모든 원소 $$u$$에 대해 $$\langle u, v \rangle \ge -1$$이 모든 $$v \in \Delta^\circ$$에서 성립하므로, $$\Delta \subseteq (\Delta^\circ)^\circ$$는 정의로부터 직접 확인할 수 있다. 
 
 이제 반대방향을 보이기 위해 $$w \in (\Delta^\circ)^\circ$$라 하면, $$w$$는 모든 $$v \in \Delta^\circ$$에 대해 $$\langle w, v \rangle \ge -1$$을 만족한다. 이제 $$\Delta$$의 각 facet $$\Theta$$를 생각하면, $$\Theta$$는 $$\Delta$$의 boundary 위의 $$(d-1)$$차원 면이며, reflexive polytope의 정의에 의해 $$\Theta$$는 방정식 $$\langle u, v_\Theta \rangle = -1$$으로 주어진다. 여기서 $$v_\Theta \in N$$은 $$\Theta$$에 대응하는 primitive inner normal vector이다. 그런데 $$v_\Theta \in \Delta^\circ$$의 꼭짓점이 되므로, $$\langle w, v_\Theta \rangle \ge -1$$이 성립한다. 이는 $$w$$가 $$\Delta$$의 모든 facet을 정의하는 반평면들의 교집합에 포함됨을 의미하며, 따라서 $$w \in \Delta$$이다. 이로부터 $$(\Delta^\circ)^\circ = \Delta$$를 얻는다. 마지막으로 $$(\Delta^\circ)^\circ = \Delta$$가 lattice polytope이므로 $$\Delta^\circ$$도 reflexive이다.
-
-</details>
+:::
 
 이 명제는 reflexive polytope의 대칭성을 보여준다. $$\Delta$$와 $$\Delta^\circ$$는 서로 다른 vector space $$M_{\mathbb{R}}$$와 $$N_{\mathbb{R}}$$에 놓이지만, 동일한 조합론적 대상의 두 가지 측면을 제공한다.
 
@@ -59,19 +52,15 @@ $$\Delta$$가 reflexive이므로 $$\Delta^\circ$$는 정의에 의해 lattice po
 
 [§토릭 다양체의 정의, ⁋명제 8](/ko/math/toric_geometry/toric_varieties#prop8)에서 보았듯, lattice polytope $$P \subset M_{\mathbb{R}}$$이 주어지면 이것이 정의하는 normal fan $$\Sigma_P$$을 통해 projective toric variety $$X_P = X_{\Sigma_P}$$를 구성할 수 있다. 이제 $$P = \Delta$$가 reflexive polytope라고 가정하자.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop3">**명제 3**</ins> Toric variety $$X_\Sigma$$의 anticanonical divisor $$-K_{X_\Sigma}$$, 즉 canonical divisor의 역원은 모든 boundary divisor의 합으로 주어진다.
+::: 명제 3
+Toric variety $$X_\Sigma$$의 anticanonical divisor $$-K_{X_\Sigma}$$, 즉 canonical divisor의 역원은 모든 boundary divisor의 합으로 주어진다.
 
 $$-K_{X_\Sigma} = \sum_{\rho \in \Sigma(1)} D_\rho.$$
 
 여기서 $$\Sigma(1)$$은 $$\Sigma$$의 1차원 cone들의 집합이고, 각 $$D_\rho$$는 $$\rho$$에 대응하는 torus-invariant prime divisor이다.
+:::
 
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 [\[대수다양체\] §표준선다발, ⁋정의 6](/ko/math/algebraic_varieties/canonical_bundle#def6)에서 canonical divisor $$K_X$$는 canonical bundle $$\omega_X = \det \Omega^1_X$$에 대응하는 divisor class로 정의되었다. 우리는 $$K_{X_\Sigma} = -\sum_\rho D_\rho$$임을 보여 그 역원이 위의 형태가 되는 것을 증명한다.
 
 Open dense torus $$T_N = \operatorname{Spec} \mathbb{C}[M] \subset X_\Sigma$$ 위에서, $$M$$의 기저 $$m_1, \ldots, m_n$$을 잡으면 character $$\chi^{m_i}$$들이 torus의 좌표가 되고, top form
@@ -85,22 +74,17 @@ $$\omega = \frac{d\chi^{m_1}}{\chi^{m_1}} \wedge \cdots \wedge \frac{d\chi^{m_n}
 $$\operatorname{div}(\omega) = -\sum_{\rho \in \Sigma(1)} D_\rho$$
 
 이며, $$K_{X_\Sigma}$$는 이 divisor의 class이므로 $$-K_{X_\Sigma} = \sum_\rho D_\rho$$이다. 
-
-</details>
+:::
 
 이 등식 자체는 임의의 fan에 대해 잘 정의되지만, 우리가 관심을 갖는 *ample* 조건은 (그리고 Fano 조건은) $$X_\Sigma$$가 complete일 때 의미를 가지므로 이하에서는 $$\Sigma$$가 complete fan임을 가정한다.
 
 Anticanonical divisor $$-K_{X_\Sigma}$$가 Cartier divisor일 때 그에 대응하는 piecewise linear function $$\psi_{-K} \in \PL(\Sigma, M)$$은 정확히 $$\psi_{-K}(v_\rho) = -1$$가 모든 $$\rho \in \Sigma(1)$$에 대해 성립하는 함수이다. 또, 우리는 [§토러스 인자와 선다발, ⁋명제 6](/ko/math/toric_geometry/toric_divisors#prop6)에서 maximal cone에서만 이 조건을 체크해도 될 뿐만 아니라, 해당 조건이 정확하게 주어진 divisor가 Cartier divisor일 조건과 일치하는 것을 살펴보았다. 이제 이 조건이 reflexive polytope의 dual $$\Delta^\circ$$의 꼭짓점 조건과 정확히 일치한다는 것이 다음 명제의 핵심이다.
 
-<div class="proposition" markdown="1">
+::: 명제 4
+Reflexive polytope $$\Delta \subset M_{\mathbb{R}}$$에 대해, $$\Delta$$의 normal fan을 $$\Sigma_\Delta$$라 하고 대응하는 toric variety를 $$X_\Delta = X_{\Sigma_\Delta}$$라 적으면, $$X_\Delta$$는 Gorenstein Fano variety이다. 역으로, 어떤 complete toric variety $$X_\Sigma$$가 Gorenstein Fano이면 $$\Sigma$$는 어떤 reflexive polytope의 normal fan이다.
+:::
 
-<ins id="prop4">**명제 4**</ins> Reflexive polytope $$\Delta \subset M_{\mathbb{R}}$$에 대해, $$\Delta$$의 normal fan을 $$\Sigma_\Delta$$라 하고 대응하는 toric variety를 $$X_\Delta = X_{\Sigma_\Delta}$$라 적으면, $$X_\Delta$$는 Gorenstein Fano variety이다. 역으로, 어떤 complete toric variety $$X_\Sigma$$가 Gorenstein Fano이면 $$\Sigma$$는 어떤 reflexive polytope의 normal fan이다.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 $$\Delta$$가 reflexive polytope라고 하자. $$\Sigma_\Delta$$의 각 maximal cone $$\sigma$$는 [§토릭 다양체의 정의, ⁋정의 6](/ko/math/toric_geometry/toric_varieties#def6)에 의해 $$\Delta$$의 어떤 꼭짓점 $$u_\sigma$$에 대응하며, $$\sigma$$의 ray generator $$v_\rho$$들은 정확히 $$u_\sigma$$를 포함하는 facet들의 inner primitive normal이다. $$\Delta$$의 facet 방정식이 $$\langle u, v_\Theta \rangle = -1$$이므로, $$u_\sigma$$는 $$\Delta$$ 위 $$\langle -, v_\rho\rangle$$의 최솟값을 정확히 $$-1$$로 달성한다. 즉
 
 $$\langle u_\sigma, v_\rho\rangle = -1 \le \langle u, v_\rho\rangle \quad \text{for all } u \in \Delta, \rho \in \sigma(1)$$
@@ -120,22 +104,17 @@ $$\langle u_{\sigma'}, v\rangle = \sum_{\rho \in \sigma(1)} c_\rho \langle u_{\s
 $$\Delta = \{ u \in M_{\mathbb{R}} \mid \langle u, v_\rho \rangle \ge -1 \text{ for all } \rho \in \Sigma(1) \}$$
 
 으로 정의하면, $$\Delta$$는 lattice polytope이며 $$0 \in \operatorname{int}(\Delta)$$이다. $$\Delta$$의 dual은 $$\Delta^\circ = \operatorname{conv}\{v_\rho \mid \rho \in \Sigma(1)\}$$가 되고, 이는 lattice polytope이므로 $$\Delta$$는 reflexive이다. $$\Sigma$$가 $$\Delta$$의 normal fan임은 정의로부터 확인할 수 있다.
-
-</details>
+:::
 
 한편, reflexive polytope $$\Delta$$와 Gorenstein Fano variety $$X_\Delta$$ 사이의 대응은 단순히 variety의 존재를 넘어, 그 위에 놓인 line bundle의 해들 사이의 대응으로도 확장된다. 구체적으로, anticanonical divisor $$-K_{X_\Delta}$$에 대응하는 line bundle $$\mathcal{O}_{X_\Delta}(-K_{X_\Delta})$$의 global section들은 reflexive polytope $$\Delta$$ 내부의 lattice point들과 일대일로 대응한다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop5">**명제 5**</ins> Reflexive polytope $$\Delta \subset M_{\mathbb{R}}$$와 대응하는 toric variety $$X_\Delta$$에 대해, 다음의 $$\mathbb{C}$$-vector space isomorphism이 성립한다.
+::: 명제 5
+Reflexive polytope $$\Delta \subset M_{\mathbb{R}}$$와 대응하는 toric variety $$X_\Delta$$에 대해, 다음의 $$\mathbb{C}$$-vector space isomorphism이 성립한다.
 
 $$H^0\bigl(X_\Delta, \mathcal{O}_{X_\Delta}(-K_{X_\Delta})\bigr) \cong \bigoplus_{u \in \Delta \cap M} \mathbb{C} \cdot \chi^u.$$
+:::
 
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 Toric variety에서 $$T_N$$-invariant Cartier divisor $$D$$에 대응하는 polytope $$P_D$$는
 
 $$P_D = \{ u \in M_{\mathbb{R}} \mid \langle u, v_\rho \rangle \ge -a_\rho \text{ for all } \rho \in \Sigma(1) \}$$
@@ -145,16 +124,14 @@ $$P_D = \{ u \in M_{\mathbb{R}} \mid \langle u, v_\rho \rangle \ge -a_\rho \text
 $$P_{-K} = \{ u \in M_{\mathbb{R}} \mid \langle u, v_\rho \rangle \ge -1 \text{ for all } \rho \in \Sigma_\Delta(1) \}$$
 
 이다. 그런데 $$\Sigma_\Delta$$가 $$\Delta$$의 normal fan이므로, 위의 부등식들이 정의하는 polytope는 정확히 $$\Delta$$와 일치한다. 따라서 $$P_{-K} = \Delta$$이고, 원하는 동형이 성립한다.
-
-</details>
+:::
 
 이 결과는 reflexive polytope의 lattice point 개수가 Gorenstein Fano variety의 anticanonical line bundle의 해들의 차원, 즉 *anticanonical degree*를 결정함을 의미한다. 특히 $$\Delta \cap M$$의 원소 개수는 $$h^0(X_\Delta, \mathcal{O}(-K_{X_\Delta}))$$와 같다.
 
 역시 가장 기본적인 reflexive polytope의 예시는 projective space $$\mathbb{P}^n$$에 대응하는 simplex이다. [§토릭 다양체의 정의, ⁋예시 10](/ko/math/toric_geometry/toric_varieties#ex10)에서 standard simplex $$\Delta_n$$의 normal fan이 $$\mathbb{P}^n$$의 표준 fan임을 보았다. 그러나 $$\Delta_n$$의 꼭짓점 중 하나가 원점이므로 $$0 \notin \operatorname{int}(\Delta_n)$$이다. 따라서 $$\Delta_n$$ 자체는 reflexive polytope가 아니다. 대신, 이 polytope의 각 변을 적절히 늘려 원점을 내부로 옮긴 (닮음인) polytope를 생각할 수 있다.
 
-<div class="example" markdown="1">
-
-<ins id="ex6">**예시 6**</ins> Lattice $$M = \mathbb{Z}^n$$에서 다음의 polytope
+::: 예시 6
+Lattice $$M = \mathbb{Z}^n$$에서 다음의 polytope
 
 $$\Delta = \{ (x_1, \ldots, x_n) \in \mathbb{R}^n \mid x_i \ge -1 \;\text{for all}\; i,\; x_1 + x_2 + \cdots + x_n \le 1 \}$$
 
@@ -169,8 +146,7 @@ $$\Delta^\circ = \operatorname{conv}\{ e_1, e_2, \ldots, e_n, -(e_1 + e_2 + \cdo
 $$(-1,-1), (-1,0), (-1,1), (-1,2), (0,-1), (0,0), (0,1), (1,-1), (1,0), (2,-1)$$
 
 으로 총 $$10$$개이며, 이는 $$h^0(\mathbb{P}^2, \mathcal{O}_{\mathbb{P}^2}(3)) = 10$$과 일치함을 확인할 수 있다.
-
-</div>
+:::
 
 ## 거울 대칭
 
@@ -178,22 +154,17 @@ $$(-1,-1), (-1,0), (-1,1), (-1,2), (0,-1), (0,0), (0,1), (1,-1), (1,0), (2,-1)$$
 
 자연스러운 질문은 이들 두 variety들 $$X_\Delta$$와 $$X_{\Delta^\circ}$$ 사이에 기하학적 관계가 있느냐는 것이다. 위의 간단한 예시에서 보았듯, 일반적으로 $$X_\Delta$$와 $$X_{\Delta^\circ}$$ 사이에는 직접적인 morphism이나 birational 동형이 존재하지 않는다. 대신 둘 사이의 진정한 연결은 anticanonical hypersurface를 매개로 드러난다. 그 출발점은 다음의 고전적인 adjunction 결과이다.
 
-<div class="proposition" markdown="1">
+::: 명제 7
+Smooth Fano variety $$X$$의 anticanonical linear system $$\lvert -K_X \rvert$$ 안의 smooth divisor $$V \subset X$$는 trivial canonical bundle을 갖는다. 즉 $$K_V = 0$$이다.
+:::
 
-<ins id="prop7">**명제 7**</ins> Smooth Fano variety $$X$$의 anticanonical linear system $$\lvert -K_X \rvert$$ 안의 smooth divisor $$V \subset X$$는 trivial canonical bundle을 갖는다. 즉 $$K_V = 0$$이다.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 [\[대수다양체\] §표준선다발](/ko/math/algebraic_varieties/canonical_bundle)에서의 adjunction formula $$K_V = (K_X + V)\vert_V$$를 사용한다. $$V \in \lvert -K_X \rvert$$이므로 $$V \sim -K_X$$이고 따라서
 
 $$K_V = (K_X + V)\vert_V = (K_X - K_X)\vert_V = 0$$
 
 이 성립한다.
-
-</details>
+:::
 
 위에서 언급했듯 $$X_\Delta$$와 $$X_{\Delta^\circ}$$ 사이의 관계는 쉽게 드러나는 종류의 것이 아니며, 이 글의 남은 부분에서 이를 엄밀하게 설명하는 것 또한 불가능하다. 이 둘은 mirror symmetry를 통해 서로 관련되어 있는데, 이는 한 마디로, 두 개의 (보통 isomorphic하지 않은) Calabi-Yau variety가 Hodge 데이터의 특정 대칭을 통해 *짝지어진다*는 가설이다.
 
@@ -216,15 +187,13 @@ $$K_V = (K_X + V)\vert_V = (K_X - K_X)\vert_V = 0$$
 
 따라서 Calabi-Yau 성질을 *보존하는* 유일한 종류의 resolution은 모든 $$a_i = 0$$인 것이며, 이러한 resolution을 다음과 같이 정의한다.
 
-<div class="definition" markdown="1">
-
-<ins id="def8">**정의 8**</ins> Normal Gorenstein variety $$X$$의 resolution of singularities $$\pi: \tilde{X} \to X$$ — 즉, $$\tilde{X}$$가 smooth이고 $$\pi$$가 proper birational morphism — 가
+::: 정의 8
+Normal Gorenstein variety $$X$$의 resolution of singularities $$\pi: \tilde{X} \to X$$ — 즉, $$\tilde{X}$$가 smooth이고 $$\pi$$가 proper birational morphism — 가
 
 $$K_{\tilde{X}} = \pi^\ast K_X$$
 
 를 만족할 때, 이를 *crepant resolution<sub>크레펀트 분해</sub>*이라 부른다.
-
-</div>
+:::
 
 즉 crepant resolution은 dis-crepancy가 없는 resolution이다. 그럼 이 조건이 정확히 [명제 7](#prop7)의 결론을 singular setting까지 끌고 가는 데 필요한 조건이라는 것을 즉시 확인할 수 있고, 이로부터 $$\widetilde{V}$$가 진정한 (smooth) Calabi-Yau가 된다.
 

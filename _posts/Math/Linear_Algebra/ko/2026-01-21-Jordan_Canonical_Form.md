@@ -24,18 +24,14 @@ $$E_\lambda(A)=\ker(A-\lambda I)$$
 
 이 <em-ko>너무 작은</em-ko> 것이다. 다음 보조정리는 이를 해결할만한 실마리를 준다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="lem1">**보조정리 1**</ins> 유한차원 벡터공간 $$V$$ 위에 정의된 임의의 linear operator $$L:V\rightarrow V$$이 주어졌다 하자. 표기의 편의를 위하여 $$L^0=\id_V$$라 하면, 다음 filtration
+::: 보조정리 1
+유한차원 벡터공간 $$V$$ 위에 정의된 임의의 linear operator $$L:V\rightarrow V$$이 주어졌다 하자. 표기의 편의를 위하여 $$L^0=\id_V$$라 하면, 다음 filtration
 
 $$0=\ker L^0\subsetneq \ker L^1\subsetneq \ker L^2\subsetneq \cdots \subsetneq \ker L^{k-1}\subsetneq \ker L^k=\ker L^{k+1}$$
 
 이 존재한다. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 우선 임의의 $$i$$에 대하여 만일 $$v\in \ker L^{i}$$가 성립한다면, 
 
 $$L^{i+1}v=L(L^iv)=L(0)=0$$
@@ -45,14 +41,12 @@ $$L^{i+1}v=L(L^iv)=L(0)=0$$
 $$L^{k+1}v=L^k(Lv)=0\implies v\in \ker L^{k+1}$$
 
 과 base step $$\ker L^k=\ker L^{k+1}$$로부터 원하는 결과를 얻는다. 
-
-</details>
+:::
 
 우리의 핵심 관찰은, 고유공간 $$E_\lambda(A)$$는 그 차원이 부족하지만, [보조정리 1](#lem1)을 $$L=A-\lambda I$$에 사용하여 이 공간을 늘려가다 보면 "맞는 차원"을 얻게 된다는 것이다. 
 
-<div class="example" markdown="1">
-
-<ins id="ex2">**예시 2**</ins> 다음의 행렬
+::: 예시 2
+다음의 행렬
 
 $$A=\begin{pmatrix}1&1&1\\0&1&1\\0&0&1\end{pmatrix}$$
 
@@ -83,31 +77,24 @@ $$(A-I)^3=\begin{pmatrix}0&0&0\\0&0&0\\0&0&0\end{pmatrix}$$
 $$\ker (A-I)^3=\span \{(1,0,0), (0,1,0), (0,0,1)\}$$
 
 임을 안다. 
-
-</div>
+:::
 
 직관이라 이름붙이기는 다소 거창하지만, 적어도 이 예시의 경우에서는 앞서 말한 관찰이 잘 성립한다는 것을 확인할 수 있다. 이제 본격적인 이야기를 위해 다음 정의를 도입하자. 
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**정의 3**</ins> 유한차원 벡터공간 $$V$$ 위에 정의된 linear operator $$A$$와 $$A$$의 한 eigenvalue $$\lambda$$에 대하여, $$A$$의 $$\lambda$$에 대한 *generalized eigenspace*를 다음의 식
+::: 정의 3
+유한차원 벡터공간 $$V$$ 위에 정의된 linear operator $$A$$와 $$A$$의 한 eigenvalue $$\lambda$$에 대하여, $$A$$의 $$\lambda$$에 대한 *generalized eigenspace*를 다음의 식
 
 $$G_\lambda(A)=\left\{v\in V\mid (A-\lambda I)^kv=0\text{ for some $k\geq 0$}\right\}$$
 
 으로 정의한다. 
-
-</div>
+:::
 
 그럼 우리는 [보조정리 1](#lem1)로부터 다음을 얻는다.
 
-<div class="proposition" markdown="1">
-
-<ins id="cor4">**따름정리 4**</ins> 유한차원 벡터공간 $$V$$ 위에 정의된 linear operator $$A:V\rightarrow V$$과 그 eigenvalue $$\lambda$$에 대하여, 적당한 양의 정수 $$k$$가 존재하여 $$G_\lambda(A)=\ker(A-\lambda I)^k$$이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 따름정리 4
+유한차원 벡터공간 $$V$$ 위에 정의된 linear operator $$A:V\rightarrow V$$과 그 eigenvalue $$\lambda$$에 대하여, 적당한 양의 정수 $$k$$가 존재하여 $$G_\lambda(A)=\ker(A-\lambda I)^k$$이다.
+:::
+::: 증명
 [보조정리 1](#lem1)을 linear operator $$A-\lambda I$$에 적용하면, 
 
 $$\ker(A-\lambda I)^k=\ker(A-\lambda I)^{k+1}=\cdots$$
@@ -121,8 +108,7 @@ $$(A-\lambda I)^lv=0$$
 $$(A-\lambda I)^{k'}v =0$$
 
 임을 안다. 즉 $$v\in\ker (A-\lambda I)^{k'}$$이다. 그런데 $$k$$의 정의에 의하여 $$\ker(A-\lambda I)^k=\ker(A-\lambda I)^{k'}$$이고 이로부터 $$v\in \ker (A-\lambda I)^k$$이다. ($$k'$$는 $$v$$에 의존하지만, $$k$$는 그렇지 않다.) 포함관계 $$\ker (A-\lambda I)^k\subset G_\lambda(A)$$은 자명하므로 원하는 결과를 얻는다. 
-
-</details>
+:::
 
 직관적으로 generalized eigenspace들은 진짜 고유벡터들 뿐만 아니라, linear operator $$(A-\lambda I)$$를 거듭해서 적용했을 때 결국 $$0$$이 되는 벡터들을 포함하는 공간이다. 
 
@@ -152,14 +138,10 @@ $$V=G_\lambda(A)\oplus W_\lambda(A)$$
 
 으로 쓰자. 그럼 $$W_\lambda(A)$$가 $$A$$-invariant이고 따라서 $$A\vert_{W_\lambda(A)}$$가 linear operator $$A\vert_{W_\lambda(A)}:W_\lambda(A)\rightarrow W_\lambda(A)$$을 정의하는 것 까지는 자명하다. 다소 신경써야 할 부분은 다음 보조정리이다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="lem5">**보조정리 5**</ins> 유한차원 벡터공간 $$V$$ 위에 정의된 linear operator $$A:V\rightarrow V$$와 $$A$$의 서로 다른 두 eigenvalue $$\lambda, \mu$$에 대하여, $$G_\lambda(A)\cap G_\mu(A)=\{0\}$$이 성립한다. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 보조정리 5
+유한차원 벡터공간 $$V$$ 위에 정의된 linear operator $$A:V\rightarrow V$$와 $$A$$의 서로 다른 두 eigenvalue $$\lambda, \mu$$에 대하여, $$G_\lambda(A)\cap G_\mu(A)=\{0\}$$이 성립한다. 
+:::
+::: 증명
 먼저 $$v\in G_{\lambda_i}(L)\cap G_{\lambda_j}(L)$$이고 $$v\neq 0$$이라 가정하자. [따름정리 4](#cor4)로부터 다음 두 식
 
 $$G_{\lambda_i}(L)=\ker(L-\lambda_i I)^{k_i},\qquad G_{\lambda_j}(L)=\ker(L-\lambda_j I)^{k_j}$$
@@ -185,8 +167,7 @@ $$0=(L-\lambda_jI)^{p_j}w=(L-\lambda_jI)w'$$
 $$Lw'=L(L-\lambda_jI)^{p_j-1}w=(L-\lambda_jI)^{p_j-1}Lw=(L-\lambda_jI)^{p_j-1}\lambda_iw=\lambda_i (L-\lambda_jI)^{p_j-1}w_\lambda w'$$
 
 으로부터 $$w'$$ 또한 $$\lambda_i$$에 해당하는 고유벡터임을 안다. 이는 [§고유공간분해, ⁋명제 4](/ko/math/linear_algebra/eigenspace_decomposition#prop4)에 모순이므로 귀류법에 의하여 $$i\neq j$$일 때 $$G_{\lambda_i}(L)\cap G_{\lambda_j}(L)=\{0\}$$임을 안다. 
-
-</details>
+:::
 
 그러므로 앞선 분해
 
@@ -194,15 +175,13 @@ $$V=G_\lambda(A)\oplus W_\lambda(A)$$
 
 와 linear operator를 제한한 $$A\vert_{W_\lambda(A)}: W_\lambda(A)\rightarrow W_\lambda(A)$$를 생각하면 이 linear operator의 eigenvalue는 정확하게 $$A$$의 eigenvalue 중 $$\lambda$$가 아닌 것들에 해당하는 것들이다. 즉 귀납법이 잘 작동하고, 따라서 다음이 성립한다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="thm6">**정리 6 (제1분해정리)**</ins> 유한차원 벡터공간 $$V$$ 위에 정의된 linear operator $$A:V\rightarrow V$$에 대하여, $$A$$의 모든 eigenvalue들을 $$\lambda_1,\ldots,\lambda_m$$이라 하자. 그럼 다음의 direct sum decomposition
+::: 정리 6 (제1분해정리)
+유한차원 벡터공간 $$V$$ 위에 정의된 linear operator $$A:V\rightarrow V$$에 대하여, $$A$$의 모든 eigenvalue들을 $$\lambda_1,\ldots,\lambda_m$$이라 하자. 그럼 다음의 direct sum decomposition
 
 $$V=G_{\lambda_1}(A)\oplus G_{\lambda_2}(A)\oplus\cdots\oplus G_{\lambda_m}(A)$$
 
 가 성립한다. 
-
-</div>
+:::
 
 ## 조르당 표준형
 
@@ -232,28 +211,22 @@ $$N_\lambda:=(A-\lambda I)\vert_{G_\lambda(A)}: G_\lambda(A)\rightarrow G_\lambd
 
 가 nilpotent operator라는 사실이다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def7">**정의 7**</ins> 벡터공간 $$V$$ 위에 정의된 linear operator $$N:V \rightarrow V$$가 *nilpotent<sub>멱영</sub>*라는 것은 적당한 정수 $$k$$가 존재하여 $$N^k\equiv 0$$을 만족하는 것이다. 이러한 $$k$$ 중 가장 작은 것을 $$N$$의 *(nilpotency) index<sub>멱영지수</sub>*라 부른다. 
-
-</div>
+::: 정의 7
+벡터공간 $$V$$ 위에 정의된 linear operator $$N:V \rightarrow V$$가 *nilpotent<sub>멱영</sub>*라는 것은 적당한 정수 $$k$$가 존재하여 $$N^k\equiv 0$$을 만족하는 것이다. 이러한 $$k$$ 중 가장 작은 것을 $$N$$의 *(nilpotency) index<sub>멱영지수</sub>*라 부른다. 
+:::
 
 즉, 만일 우리가 임의의 nilpotent operator의 표준형을 구할 수 있다면 우리는 전체 행렬 $$A$$ 또한 표준형으로 나타낼 수 있게 된다. 
 
 Index $$k$$의 nilpotent operator $$N: V\rightarrow V$$가 주어졌다 하자. 그럼 적당한 $$v\in V$$가 존재하여 $$N^{k-1}v\neq 0$$이다. 이 벡터를 이용하면 우리는 [보조정리 1](#lem1)에서 포함관계가 strict하다는 것도 보일 수 있는데, $$N^{k-i}v\in \ker N^i$$이지만 $$N^{k-1}v\not\in\ker N^{i-1}$$이기 때문이다. 바꾸어 말하자면 $$v, Nv, \ldots, N^{k-1}v$$는 모두 다른 원소들이다. 더 일반적으로 다음이 성립한다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="lem8">**보조정리 8**</ins> 벡터공간 $$V$$ 위에 정의된 linear operator $$N: V\rightarrow V$$와 벡터 $$v$$가 $$N^kv=0$$과 $$N^{k-1}v\neq 0$$을 만족한다 하자. 그럼 다음의 벡터들
+::: 보조정리 8
+벡터공간 $$V$$ 위에 정의된 linear operator $$N: V\rightarrow V$$와 벡터 $$v$$가 $$N^kv=0$$과 $$N^{k-1}v\neq 0$$을 만족한다 하자. 그럼 다음의 벡터들
 
 $$v, \quad Nv, \quad\cdots,\quad N^{k-1}v$$
 
 은 linearly independent이다. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 다음 식
 
 $$a_0v+a_1 Nv+\cdots a_{k-1}N^{k-1}v=0$$
@@ -263,8 +236,7 @@ $$a_0v+a_1 Nv+\cdots a_{k-1}N^{k-1}v=0$$
 $$a_1Nv+\cdots a_{k-1}N^{k-1}v=0$$
 
 이다. 다시 양 변에 $$N^{k-2}$$을 취하면 $$a_1=0$$을 얻고, 이를 반복하면 원하는 결과를 얻는다. 
-
-</details>
+:::
 
 즉 $$k$$개의 벡터들 $$v, Nv, \ldots, N^{k-1}v$$은 $$V$$의 $$k$$차원 부분공간 (이러한 꼴의 부분공간을 $$v$$가 정의하는 *cyclic subspace*라 부른다.) $$U$$의 basis가 된다. 이 특정한 basis가 흥미로운 이유는, $$N\vert_U$$를 이 basis $$N^{k-1}v, \ldots, Nv, v$$에 대하여 행렬로 표현해보면
 
@@ -274,15 +246,13 @@ $$\begin{pmatrix}0&1&0&\cdots&0\\ 0&0&1&\cdots&0\\\vdots&\vdots&\vdots&\ddots&\v
 
 즉, 임의의 벡터공간 $$V$$와 그 위에 정의된 nilpotent operator $$N$$이 주어졌을 때, 이를 cyclic subspace들의 direct sum으로 나타내는 것이 우리에게 주어진 일이다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="thm9">**정리 9 (Cyclic decomposition theorem 혹은, 제2분해정리)**</ins> 임의의 벡터공간 $$V$$와 그 위에 정의된 nilpotent operator $$N: V\rightarrow V$$에 대하여, cyclic subspace로의 decomposition
+::: 정리 9 (Cyclic decomposition theorem 혹은, 제2분해정리)
+임의의 벡터공간 $$V$$와 그 위에 정의된 nilpotent operator $$N: V\rightarrow V$$에 대하여, cyclic subspace로의 decomposition
 
 $$V=U_1\oplus \cdots\oplus U_e$$
 
 이 존재한다. 
-
-</div>
+:::
 
 이 정리에 대한 증명은 다음과 같다. $$N$$의 nilpotency index를 $$k_1$$이라 하고 $$N^{k_1}v_1=0$$이지만 $$N^{k_1-1}v_1\neq 0$$인 벡터 $$v_1$$를 택하자. 이 벡터가 정의하는 cyclic subspace
 
@@ -296,45 +266,38 @@ $$U_2=\span (N^{k-2-1}v_2, \cdots, Nv_2, v_2)$$
 
 이 증명에서 가장 핵심적인 부분은 $$U$$의 complement $$W$$를 $$T$$-invariant가 되도록 잡을 수 있다는 것이다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="lem10">**보조정리 10**</ins> 임의의 벡터공간 $$V$$와 그 위에서 정의된 index $$k$$의 nilpotent operator $$N$$을 생각하고, $$N^{k-1}v\neq 0$$을 만족하는 벡터 $$v$$를 택하자. 그럼 $$v$$가 생성하는 cyclic subspace 
+::: 보조정리 10
+임의의 벡터공간 $$V$$와 그 위에서 정의된 index $$k$$의 nilpotent operator $$N$$을 생각하고, $$N^{k-1}v\neq 0$$을 만족하는 벡터 $$v$$를 택하자. 그럼 $$v$$가 생성하는 cyclic subspace 
 
 $$U=\span(v, Nv, \ldots, N^{k-1}v)$$
 
 에 대하여, $$V=U\oplus W$$이도록 하는 $$T$$-invariant space $$W$$가 존재한다. 
-
-</div>
+:::
 
 이에 대한 증명은 $$N$$의 nilpotency index에 대한 귀납법을 쓰면 되지만, 증명이 다소 귀찮은 감이 있어 생략하기로 한다. 
 
 어쨌든 이러한 과정을 거치고 나면 우리는 임의의 nilpotent operator $$N$$를 위의 식 (1) 형태의 direct sum (즉, 위의 행렬들이 대각성분에 있는 block diagonal matrix들)으로 나타낼 수 있음을 안다. $$N$$이 나오게 된 것은 generalized eigenspace $$G_\lambda(A)$$ 위에서의 nilpotent operator $$A-\lambda I$$ 때문이었으므로, 다음을 정의한다.
 
-<div class="definition" markdown="1">
-
-<ins id="def11">**정의 11**</ins> 크기 $$k$$의 *Jordan block* $$J_k(\lambda)$$를 다음의 $$k\times k$$ 행렬
+::: 정의 11
+크기 $$k$$의 *Jordan block* $$J_k(\lambda)$$를 다음의 $$k\times k$$ 행렬
 
 $$J_k(\lambda)=\begin{pmatrix}\lambda&1&0&\cdots&0\\0&\lambda&1&\cdots&0\\\vdots&\vdots&\ddots&\ddots&\vdots\\0&0&\cdots&\lambda&1\\0&0&\cdots&0&\lambda\end{pmatrix}$$
 
 로 정의한다. 
-
-</div>
+:::
 
 그럼 [정리 6](#thm6)과 [정리 9](#thm9)을 합치면 다음의 정리를 얻는다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="thm12">**정리 12 (Jordan canonical form)**</ins> 유한차원 벡터공간 $$V$$ 위에 정의된 임의의 linear operator $$A:V\rightarrow V$$에 대하여, $$V$$의 적당한 basis를 선택하면 $$A$$의 행렬 표현이 다음의 형태를 갖는다:
+::: 정리 12 (Jordan canonical form)
+유한차원 벡터공간 $$V$$ 위에 정의된 임의의 linear operator $$A:V\rightarrow V$$에 대하여, $$V$$의 적당한 basis를 선택하면 $$A$$의 행렬 표현이 다음의 형태를 갖는다:
 
 $$J=\begin{pmatrix}J_{k_1}(\lambda_1)&0&\cdots&0\\0&J_{k_2}(\lambda_2)&\cdots&0\\\vdots&\vdots&\ddots&\vdots\\0&0&\cdots&J_{k_m}(\lambda_m)\end{pmatrix}$$
 
 여기서 각 $$J_{k_i}(\lambda_i)$$는 Jordan block이다. 이러한 형태의 행렬을 $$A$$의 *Jordan canonical form<sub>조르당 표준형</sub>*이라 한다.
+:::
 
-</div>
-
-<div class="example" markdown="1">
-
-<ins id="ex13">**예시 13**</ins> [예시 2](#ex2)의 행렬
+::: 예시 13
+[예시 2](#ex2)의 행렬
 
 $$A=\begin{pmatrix}1&1&1\\0&1&1\\0&0&1\end{pmatrix}$$
 
@@ -365,8 +328,7 @@ $$Av_3 = A\begin{pmatrix}0\\0\\1\end{pmatrix} = \begin{pmatrix}1\\1\\1\end{pmatr
 $$[A]_{\mathcal{B}} = \begin{pmatrix}1&1&0\\0&1&1\\0&0&1\end{pmatrix} = J_3(1)$$
 
 이 되어, 크기 3의 Jordan block 하나로 구성된 Jordan canonical form을 얻는다.
-
-</div>
+:::
 
 조르당 표준형의 유일성은 Jordan block들의 크기가 $$\dim\ker N^k-\dim\ker N^{k-1}$$에 의해 결정된다는 사실로부터 따라온다. 이는 basis의 선택과 무관하므로, Jordan canonical form은 Jordan block들의 순서를 제외하고는 유일하게 결정된다.
 
@@ -374,26 +336,20 @@ $$[A]_{\mathcal{B}} = \begin{pmatrix}1&1&0\\0&1&1\\0&0&1\end{pmatrix} = J_3(1)$$
 
 조르당 표준형은 각 block에 고유값 $$\lambda$$를 직접 담으므로 $$\mathbb{K}$$가 algebraically closed라는 가정에 의존한다. 같은 정보를 고유값을 명시하지 않고 다항식의 계수만으로 담는 표준형이 있는데, 그 기본 단위가 companion matrix이다.
 
-<div class="definition" markdown="1">
-
-<ins id="def14">**정의 14**</ins> Monic polynomial $$p(\x)=\x^d+c_{d-1}\x^{d-1}+\cdots+c_1\x+c_0$$에 대하여, 그 *companion matrix<sub>동반행렬</sub>* $$C(p)$$를 다음의 $$d\times d$$ 행렬
+::: 정의 14
+Monic polynomial $$p(\x)=\x^d+c_{d-1}\x^{d-1}+\cdots+c_1\x+c_0$$에 대하여, 그 *companion matrix<sub>동반행렬</sub>* $$C(p)$$를 다음의 $$d\times d$$ 행렬
 
 $$C(p)=\begin{pmatrix}0&0&\cdots&0&-c_0\\1&0&\cdots&0&-c_1\\0&1&\cdots&0&-c_2\\\vdots&\vdots&\ddots&\vdots&\vdots\\0&0&\cdots&1&-c_{d-1}\end{pmatrix}$$
 
 로 정의한다.
-
-</div>
+:::
 
 Operator $$T:V\rightarrow V$$가 *cyclic*이라는 것은 적당한 $$v\in V$$가 존재하여 $$\{v,Tv,\ldots,T^{d-1}v\}$$ ($$d=\dim V$$)가 $$V$$의 기저가 되는 것이며, 이러한 $$v$$를 cyclic vector라 부른다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop15">**명제 15**</ins> Cyclic vector $$v$$를 갖는 차원 $$d$$의 operator $$T:V\rightarrow V$$의 최소다항식 $$p$$는 차수가 $$d$$이고, cyclic basis $$\{v,Tv,\ldots,T^{d-1}v\}$$에 대한 $$T$$의 행렬표현은 $$C(p)$$이다. 특히 [정의 11](#def11)의 Jordan block $$J_k(\lambda)$$는 $$(\x-\lambda)^k$$의 companion matrix와 닮음이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 명제 15
+Cyclic vector $$v$$를 갖는 차원 $$d$$의 operator $$T:V\rightarrow V$$의 최소다항식 $$p$$는 차수가 $$d$$이고, cyclic basis $$\{v,Tv,\ldots,T^{d-1}v\}$$에 대한 $$T$$의 행렬표현은 $$C(p)$$이다. 특히 [정의 11](#def11)의 Jordan block $$J_k(\lambda)$$는 $$(\x-\lambda)^k$$의 companion matrix와 닮음이다.
+:::
+::: 증명
 $$\{v,Tv,\ldots,T^{d-1}v\}$$가 일차독립이므로 $$T^dv$$를 이들의 일차결합으로 나타낸
 
 $$T^dv=-(c_0v+c_1Tv+\cdots+c_{d-1}T^{d-1}v)$$
@@ -401,26 +357,20 @@ $$T^dv=-(c_0v+c_1Tv+\cdots+c_{d-1}T^{d-1}v)$$
 의 계수로 $$p(\x)=\x^d+c_{d-1}\x^{d-1}+\cdots+c_0$$을 정의하면 $$p(T)v=0$$이다. 그럼 임의의 $$T^iv$$에 대해서도 $$p(T)T^iv=T^ip(T)v=0$$이고 이들이 $$V$$를 생성하므로 $$p(T)=0$$이다. 한편 차수가 $$d$$보다 작은 $$0$$ 아닌 다항식 $$q$$에 대해서는 $$q(T)v$$가 $$\{v,\ldots,T^{d-1}v\}$$의 자명하지 않은 일차결합이라 $$0$$이 아니므로, $$p$$가 $$T$$의 최소다항식이다. 이 기저에서 $$T$$는 $$T^iv\mapsto T^{i+1}v$$ ($$i<d-1$$)로, 그리고 $$T^{d-1}v$$는 위의 식으로 작용하므로 그 행렬표현은 정확히 $$C(p)$$이다.
 
 $$J_k(\lambda)$$의 경우, $$N=J_k(\lambda)-\lambda I$$가 index $$k$$의 nilpotent이므로 $$N^{k-1}v\neq 0$$인 $$v$$를 택하면 [보조정리 8](#lem8)에 의하여 $$\{v,Nv,\ldots,N^{k-1}v\}$$이 기저이다. $$J_k(\lambda)=\lambda I+N$$이라 $$\{v,J_k(\lambda)v,\ldots,J_k(\lambda)^{k-1}v\}$$도 같은 공간을 생성하므로 $$v$$는 cyclic vector이고, $$J_k(\lambda)$$의 최소다항식이 $$(\x-\lambda)^k$$이므로 위의 결과에 의해 $$J_k(\lambda)$$는 $$(\x-\lambda)^k$$의 companion matrix와 닮음이다.
-
-</details>
+:::
 
 이것이 실제로 같은 행렬이 되지 않는 이유는 순전히 관례적인 것으로, [정의 14](#def14)의 companion matrix는 basis를 낮은 차수에서 높은 차수로 정렬한 반면 Jordan block은 높은 차수에서 낮은 차수로 정렬했기 때문이다. 그러나 이 두 표준형 모두 뿌리를 깊이 내린 형태들이고, 어느 하나를 다른 하나와 맞추면 이 표준이 깨지므로 이렇게 간략한 remark로만 대체한다. 그럼 더 일반적으로 다음을 얻는다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="thm16">**정리 16 (유리표준형)**</ins> Algebraically closed field 위의 유한차원 벡터공간에 정의된 임의의 linear operator $$A$$에 대하여, $$V$$의 적당한 기저를 택하면 $$A$$의 행렬표현이 companion matrix들의 block diagonal
+::: 정리 16 (유리표준형)
+Algebraically closed field 위의 유한차원 벡터공간에 정의된 임의의 linear operator $$A$$에 대하여, $$V$$의 적당한 기저를 택하면 $$A$$의 행렬표현이 companion matrix들의 block diagonal
 
 $$\begin{pmatrix}C(p_1)&&\\&\ddots&\\&&C(p_r)\end{pmatrix},\qquad p_i=(\x-\lambda_i)^{k_i}$$
 
 가 된다. 여기서 각 $$(\x-\lambda_i)^{k_i}$$는 $$A$$의 Jordan block $$J_{k_i}(\lambda_i)$$에 대응되는 *elementary divisor*이다.
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+:::
+::: 증명
 [정리 12](#thm12)에 의하여 $$A$$는 Jordan block들 $$J_{k_i}(\lambda_i)$$의 direct sum과 닮음이고, [명제 15](#prop15)에 의하여 각 $$J_{k_i}(\lambda_i)$$는 $$C((\x-\lambda_i)^{k_i})$$와 닮음이므로, 이들을 모으면 원하는 block diagonal 형태를 얻는다.
-
-</details>
+:::
 
 당연한 이야기지만, 유리표준형의 진정한 쓸모는 $$\mathbb{K}$$가 algebraically closed가 <em-ko>아닐</em-ko> 때에도 적용할 수 있다는 것에 있다. 흐름상 위의 증명에서는 Jordan form을 사용하여 elementary divisor $$(\x-\lambda_i)^{k_i}$$들의 companion form을 얻었지만, 고유값이 $$\mathbb{K}$$ 안에 존재하지 않는 경우에도 임의의 operator는 최소다항식의 기약인수분해와 cyclic 분해를 통해 *invariant factor* $$p_1\mid p_2\mid\cdots\mid p_r$$ ($$p_r$$이 최소다항식)들의 companion matrix들로 표준화된다. 이 일반적 형태는 $$\mathbb{K}[\x]$$-module의 structure theorem으로부터 따라오며, 고유값을 전혀 언급하지 않고 $$\mathbb{K}$$ 위에서만 정의되는 표준형을 준다.
 

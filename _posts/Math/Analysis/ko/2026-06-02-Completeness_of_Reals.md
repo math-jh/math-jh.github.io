@@ -24,70 +24,51 @@ published: false
 
 먼저 순서로부터 정해지는 상계와 상한의 개념을 정리한다 ([\[집합론\] §순서집합의 원소들](/ko/math/set_theory/elements_in_ordered_set)).
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> $$S \subseteq \mathbb{R}$$가 공집합이 아니라 하자. 실수 $$M$$이 $$S$$의 *상계<sub>upper bound</sub>*라는 것은 모든 $$s \in S$$에 대해 $$s \leq M$$인 것이고, 상계가 하나라도 존재하면 $$S$$를 *위로 유계<sub>bounded above</sub>*라 한다. $$S$$의 상계 중 가장 작은 것이 존재하면 그것을 $$S$$의 *상한<sub>supremum</sub>*이라 하고 $$\sup S$$로 적는다. 대칭적으로 *하계*, *아래로 유계*, *하한* $$\inf S$$를 정의한다.
-
-</div>
+::: 정의 1
+$$S \subseteq \mathbb{R}$$가 공집합이 아니라 하자. 실수 $$M$$이 $$S$$의 *상계<sub>upper bound</sub>*라는 것은 모든 $$s \in S$$에 대해 $$s \leq M$$인 것이고, 상계가 하나라도 존재하면 $$S$$를 *위로 유계<sub>bounded above</sub>*라 한다. $$S$$의 상계 중 가장 작은 것이 존재하면 그것을 $$S$$의 *상한<sub>supremum</sub>*이라 하고 $$\sup S$$로 적는다. 대칭적으로 *하계*, *아래로 유계*, *하한* $$\inf S$$를 정의한다.
+:::
 
 상한 $$\alpha = \sup S$$는 두 조건으로 특징지어진다: (i) $$\alpha$$는 상계이다 (모든 $$s \in S$$에 대해 $$s \leq \alpha$$); (ii) $$\alpha$$는 가장 작은 상계이다 — 즉 임의의 $$\varepsilon > 0$$에 대해 $$\alpha - \varepsilon$$은 더 이상 상계가 아니므로 $$s > \alpha - \varepsilon$$인 $$s \in S$$가 존재한다. 조건 (ii)의 이 형태는 앞으로 거듭 쓰인다.
 
 ## 완비성 공리
 
-<div class="definition" markdown="1">
-
-<ins id="def2">**정의 2 (완비성 공리)**</ins> 순서체 $$\mathbb{R}$$은 *완비<sub>complete</sub>*하다. 즉 위로 유계인 공집합이 아닌 모든 부분집합 $$S \subseteq \mathbb{R}$$은 상한 $$\sup S \in \mathbb{R}$$를 갖는다. 이를 *상한 성질<sub>least upper bound property</sub>*이라 부른다.
-
-</div>
+::: 정의 2 (완비성 공리)
+순서체 $$\mathbb{R}$$은 *완비<sub>complete</sub>*하다. 즉 위로 유계인 공집합이 아닌 모든 부분집합 $$S \subseteq \mathbb{R}$$은 상한 $$\sup S \in \mathbb{R}$$를 갖는다. 이를 *상한 성질<sub>least upper bound property</sub>*이라 부른다.
+:::
 
 이것이 실수를 정의하는 마지막 공리이며, $$\mathbb{Q}$$에서는 성립하지 않는다. 예를 들어 $$S = \{x \in \mathbb{Q} \mid x^2 < 2\}$$는 $$\mathbb{Q}$$ 안에서 위로 유계이지만, 그 상한은 $$\sqrt{2}$$여야 하는데 이것이 유리수가 아니므로 $$\mathbb{Q}$$ 안에는 상한이 없다. 완비성은 바로 이런 "빈틈"이 $$\mathbb{R}$$에는 없음을 단언한다.
 
 하한에 대한 대응 명제는 공리로 따로 둘 필요가 없다.
 
-<div class="proposition" markdown="1">
+::: 명제 3
+아래로 유계인 공집합이 아닌 모든 $$S \subseteq \mathbb{R}$$은 하한 $$\inf S$$를 갖는다.
+:::
 
-<ins id="prop3">**명제 3**</ins> 아래로 유계인 공집합이 아닌 모든 $$S \subseteq \mathbb{R}$$은 하한 $$\inf S$$를 갖는다.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 $$-S = \{-s \mid s \in S\}$$를 생각하자. $$S$$가 하계 $$m$$을 가지면 $$-m$$은 $$-S$$의 상계이므로 $$-S$$는 위로 유계이고, [정의 2](#def2)에 의해 $$\alpha = \sup(-S)$$가 존재한다. 그러면 $$-\alpha = \inf S$$임이 정의로부터 직접 확인된다.
-
-</details>
+:::
 
 ## 아르키메데스 성질과 조밀성
 
 완비성의 첫 수확은 "자연수가 한없이 커진다"는 당연해 보이는 사실인데, 놀랍게도 이는 완비성 없이는 보장되지 않는다.
 
-<div class="proposition" markdown="1">
+::: 정리 4 (아르키메데스 성질)
+임의의 실수 $$x$$에 대하여, $$n > x$$인 자연수 $$n$$이 존재한다.
+:::
 
-<ins id="thm4">**정리 4 (아르키메데스 성질)**</ins> 임의의 실수 $$x$$에 대하여, $$n > x$$인 자연수 $$n$$이 존재한다.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 자연수 집합 $$\mathbb{N}$$이 위로 유계라 가정하고 모순을 이끌자. 그러면 완비성에 의해 $$\alpha = \sup \mathbb{N}$$가 존재한다. $$\alpha$$가 가장 작은 상계이므로 $$\alpha - 1$$은 상계가 아니고, 따라서 $$n > \alpha - 1$$인 자연수 $$n$$이 있다. 그러면 $$n + 1 > \alpha$$인데 $$n + 1$$도 자연수이므로 $$\alpha$$가 상계라는 데 모순이다. 따라서 $$\mathbb{N}$$은 위로 유계가 아니고, 임의의 $$x$$에 대해 $$n > x$$인 $$n$$이 존재한다.
-
-</details>
+:::
 
 아르키메데스 성질의 동치 형태로, 임의의 $$\varepsilon > 0$$에 대해 $$1/n < \varepsilon$$인 자연수 $$n$$이 존재한다 ($$n > 1/\varepsilon$$을 잡으면 된다). 이로부터 유리수가 실수 안에 촘촘히 들어차 있음을 얻는다.
 
-<div class="proposition" markdown="1">
+::: 정리 5 (유리수의 조밀성)
+임의의 두 실수 $$a < b$$ 사이에는 유리수 $$q$$가 존재한다. 즉 $$a < q < b$$인 $$q \in \mathbb{Q}$$가 있다.
+:::
 
-<ins id="thm5">**정리 5 (유리수의 조밀성)**</ins> 임의의 두 실수 $$a < b$$ 사이에는 유리수 $$q$$가 존재한다. 즉 $$a < q < b$$인 $$q \in \mathbb{Q}$$가 있다.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 $$b - a > 0$$이므로 [정리 4](#thm4)에 의해 $$1/n < b - a$$, 즉 $$nb - na > 1$$인 자연수 $$n$$이 있다. 두 실수의 차가 $$1$$보다 크므로 그 사이에 정수가 존재한다. 구체적으로 $$m = \lfloor na\rfloor + 1$$로 두면 $$na < m \leq na + 1 < nb$$이고, 양변을 $$n$$으로 나누면 $$a < m/n < b$$이어서 $$q = m/n$$이 원하는 유리수이다.
-
-</details>
+:::
 
 조밀성은 한 번 더 쓰면 두 실수 사이에 유리수가 *무한히* 많이 있음을 준다. 실제로 $$a < q_1 < b$$인 유리수 $$q_1$$을 잡고, 다시 [정리 5](#thm5)를 구간 $$(q_1, b)$$에 적용하면 $$q_1 < q_2 < b$$인 $$q_2$$를 얻으며, 이를 되풀이하면 서로 다른 유리수 $$q_1 < q_2 < q_3 < \cdots$$가 모두 $$(a, b)$$ 안에 놓인다. 같은 방식으로 무리수도 조밀하다: $$a < b$$이면 $$a - \sqrt{2} < b - \sqrt{2}$$이므로 그 사이에 유리수 $$q$$가 있고, 그러면 $$q + \sqrt{2}$$는 $$(a, b)$$에 속하는 무리수이다 (유리수에 무리수를 더하면 무리수이므로). 따라서 유리수와 무리수는 실직선 위에 서로 뒤섞여 촘촘히 깔려 있다.
 
@@ -99,19 +80,15 @@ $$b - a > 0$$이므로 [정리 4](#thm4)에 의해 $$1/n < b - a$$, 즉 $$nb - n
 
 상한 연산은 집합의 평행이동·스칼라배와 잘 호환된다. 이 단순한 규칙들은 이후 극한 계산에서 거듭 쓰이므로 명제로 정리해 둔다.
 
-<div class="proposition" markdown="1">
-
-<ins id="prop6">**명제 6 (상한의 평행이동과 양의 스칼라배)**</ins> 위로 유계인 공집합이 아닌 $$S \subseteq \mathbb{R}$$와 실수 $$c$$, $$\lambda > 0$$에 대하여, $$c + S = \{c + s \mid s \in S\}$$와 $$\lambda S = \{\lambda s \mid s \in S\}$$ 역시 위로 유계이고
+::: 명제 6 (상한의 평행이동과 양의 스칼라배)
+위로 유계인 공집합이 아닌 $$S \subseteq \mathbb{R}$$와 실수 $$c$$, $$\lambda > 0$$에 대하여, $$c + S = \{c + s \mid s \in S\}$$와 $$\lambda S = \{\lambda s \mid s \in S\}$$ 역시 위로 유계이고
 
 $$\sup(c + S) = c + \sup S, \qquad \sup(\lambda S) = \lambda \sup S$$
 
 이다.
+:::
 
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 $$\alpha = \sup S$$로 두자. 평행이동의 경우, 모든 $$s \in S$$에 대해 $$s \leq \alpha$$이므로 $$c + s \leq c + \alpha$$이고, 따라서 $$c + \alpha$$는 $$c + S$$의 상계이다. 또 임의의 $$\varepsilon > 0$$에 대해 $$s > \alpha - \varepsilon$$인 $$s \in S$$가 있으므로
 
 $$\begin{aligned}
@@ -127,8 +104,7 @@ $$\begin{aligned}
 \end{aligned}$$
 
 이므로 $$\lambda\alpha - \varepsilon$$ 또한 상계가 아니다. 따라서 $$\sup(\lambda S) = \lambda\alpha$$이다.
-
-</details>
+:::
 
 위 명제에서 $$\lambda > 0$$이라는 가정은 본질적이다. $$\lambda = -1$$이면 부등호의 방향이 뒤집혀 상계가 하계로 바뀌고, 실제로 [명제 3](#prop3)의 증명에서 본 대로 $$\sup(-S) = -\inf S$$가 된다. 일반적으로 음수배는 상한과 하한을 맞바꾼다.
 
@@ -136,15 +112,11 @@ $$\begin{aligned}
 
 완비성의 가장 기하학적인 표현 가운데 하나는 "끝없이 줄어드는 닫힌 구간들의 사슬은 빈 곳을 남기지 않는다"는 것이다. 이는 십진법 전개로 실수를 구성하는 직관의 바탕이 된다.
 
-<div class="proposition" markdown="1">
+::: 정리 7 (중첩구간정리)
+닫힌 구간들의 중첩하는 사슬 $$I_1 \supseteq I_2 \supseteq I_3 \supseteq \cdots$$, $$I_n = [a_n, b_n]$$ ($$a_n \leq b_n$$) 에 대하여 교집합 $$\bigcap_{n=1}^\infty I_n$$은 공집합이 아니다.
+:::
 
-<ins id="thm7">**정리 7 (중첩구간정리)**</ins> 닫힌 구간들의 중첩하는 사슬 $$I_1 \supseteq I_2 \supseteq I_3 \supseteq \cdots$$, $$I_n = [a_n, b_n]$$ ($$a_n \leq b_n$$) 에 대하여 교집합 $$\bigcap_{n=1}^\infty I_n$$은 공집합이 아니다.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 중첩 조건 $$I_{n+1} \subseteq I_n$$은 좌끝점이 비감소, 우끝점이 비증가임을 뜻한다:
 
 $$\begin{aligned}
@@ -160,34 +132,27 @@ $$\alpha = \sup A$$
 $$a_n \leq \alpha \leq b_n \quad (\forall n), \qquad \text{즉} \quad \alpha \in \bigcap_{n=1}^\infty I_n$$
 
 이므로 교집합은 비어 있지 않다.
-
-</details>
+:::
 
 닫힌 구간이라는 조건은 없앨 수 없다. 반열린 구간 $$I_n = \left(0, \frac1n\right]$$을 보면 모두 중첩하지만 임의의 $$x > 0$$은 아르키메데스 성질로 $$\frac1n < x$$가 되는 순간 빠져나가므로 $$\bigcap_n I_n = \varnothing$$이다. 구간의 길이 $$b_n - a_n$$이 $$0$$으로 줄어드는 경우에는 교집합이 정확히 한 점이 되며, 이 한 점이 모든 $$a_n$$의 상한이자 모든 $$b_n$$의 하한이다.
 
-<div class="example" markdown="1">
-
-<ins id="ex8">**예시 8 (길이가 줄어드는 구간과 십진 전개)**</ins> 실수 $$x$$의 십진 전개는 중첩구간정리의 전형적 사례이다. $$x = 0. d_1 d_2 d_3 \cdots$$ ($$d_k \in \{0, 1, \dots, 9\}$$) 에 대해
+::: 예시 8 (길이가 줄어드는 구간과 십진 전개)
+실수 $$x$$의 십진 전개는 중첩구간정리의 전형적 사례이다. $$x = 0. d_1 d_2 d_3 \cdots$$ ($$d_k \in \{0, 1, \dots, 9\}$$) 에 대해
 
 $$I_n = \left[  0.d_1\cdots d_n,\ \ 0.d_1\cdots d_n + 10^{-n}  \right]$$
 
 로 두면 $$I_1 \supseteq I_2 \supseteq \cdots$$이고 길이는 $$10^{-n} \to 0$$이다. [정리 7](#thm7)에 의해 교집합은 비어 있지 않고, 길이가 $$0$$으로 가므로 교집합은 한 점뿐이다. 그 점이 바로 무한소수가 나타내는 실수 $$x$$이다. 완비성이 없다면 이 교집합이 빌 수도 있어, 무한소수가 수렴할 대상이 보장되지 않는다.
-
-</div>
+:::
 
 ## 제곱근의 존재
 
 완비성이 "빈틈"을 메운다는 말을 가장 또렷이 보여 주는 것은, $$\mathbb{Q}$$에는 없던 $$\sqrt{2}$$ 같은 수가 $$\mathbb{R}$$ 안에 실제로 존재함을 증명하는 일이다. 이는 도입부에서 예고한 집합 $$\{x \mid x^2 < 2\}$$의 상한이 정말로 제곱하면 $$2$$가 됨을 확인하는 작업이다.
 
-<div class="proposition" markdown="1">
+::: 정리 9 (양의 제곱근의 존재)
+임의의 실수 $$c > 0$$에 대하여 $$\alpha^2 = c$$인 유일한 양의 실수 $$\alpha$$가 존재한다. 이를 $$\sqrt{c}$$로 적는다.
+:::
 
-<ins id="thm9">**정리 9 (양의 제곱근의 존재)**</ins> 임의의 실수 $$c > 0$$에 대하여 $$\alpha^2 = c$$인 유일한 양의 실수 $$\alpha$$가 존재한다. 이를 $$\sqrt{c}$$로 적는다.
-
-</div>
-
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 증명
 $$S = \{x > 0 \mid x^2 < c\}$$로 두자. $$S$$는 공집합이 아니고 (작은 $$x$$에 대해 $$x^2 < c$$), $$1 + c$$가 상계이므로 (만약 $$x > 1 + c$$이면 $$x^2 > x > c$$) 위로 유계이다. 완비성에 의해 $$\alpha = \sup S > 0$$이 존재한다. 우리는 $$\alpha^2 = c$$임을 두 부등식을 배제하여 보인다.
 
 먼저 $$\alpha^2 < c$$라 가정하자. 작은 $$h \in (0, 1)$$에 대해
@@ -209,8 +174,7 @@ $$\begin{aligned}
 이다. 그러면 임의의 $$x \geq \alpha - k$$인 양수는 $$x^2 \geq (\alpha - k)^2 > c$$이어서 $$S$$에 속하지 않으므로, $$\alpha - k$$가 $$S$$의 상계가 된다. 이는 $$\alpha$$가 가장 작은 상계라는 데 모순이다.
 
 두 부등식이 모두 모순이므로 $$\alpha^2 = c$$이다. 유일성은 $$0 < \alpha < \beta$$이면 $$\alpha^2 < \beta^2$$이라는 단조성에서 즉시 따른다.
-
-</details>
+:::
 
 특히 $$c = 2$$를 넣으면 $$\alpha^2 = 2$$인 양의 실수가 존재하며, 이것이 곧 $$\sqrt{2}$$이다. 이 수가 유리수가 아님은 고전적 논증으로 확인된다: $$\sqrt{2} = p/q$$ ($$p, q$$는 서로소인 자연수) 라면 $$p^2 = 2q^2$$에서 $$p$$가 짝수, $$p = 2r$$로부터 $$q^2 = 2r^2$$이어서 $$q$$도 짝수가 되어 서로소 가정에 모순이다. 결정적인 점은 이 무리수가 *존재한다*는 사실 자체가 완비성에서 나온다는 것이다. $$\mathbb{Q}$$ 안에서는 $$\{x \mid x^2 < 2\}$$가 상한을 갖지 않아 제곱근이 아예 없지만, $$\mathbb{R}$$의 상한 성질이 그 빈자리를 정확히 채운다. 같은 논증을 $$n$$제곱근으로 일반화하면 모든 양수가 임의의 자연수 차수의 양의 실근을 가짐을 얻는다.
 

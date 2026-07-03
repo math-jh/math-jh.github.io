@@ -32,11 +32,9 @@ $$\cdots \longrightarrow C_k(X,A)\overset{\partial}{\longrightarrow} C_{k-1}(X,A
 
 를 만들 수 있다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def1">**정의 1**</ins> 위의 chain complex의 $$k$$번째 호몰로지 $$H_k(X,A)$$를 *relative homology*라 부른다. 
-
-</div>
+::: 정의 1
+위의 chain complex의 $$k$$번째 호몰로지 $$H_k(X,A)$$를 *relative homology*라 부른다. 
+:::
 
 이제 category $$\Ch_{\geq 0}(\Ab)$$에서의 short exact sequence
 
@@ -56,9 +54,8 @@ $$\cdots \rightarrow H_k(A) \rightarrow H_k(X) \rightarrow H_k(X,A)\rightarrow H
 
 직관적으로 $$(X,A)$$에 대한 realtive homology $$H_\bullet(X,A)$$는 inclusion $$C_\bullet(A)\hookrightarrow C_\bullet(X)$$의 cokernel에 해당하는 chain complex $$C_\bullet(X,A)$$의 호몰로지이다. 직관적으로 이 과정에서 $$C_\bullet(A)$$에 대한 정보는 quotient를 취하며 사라지게 되므로, $$A$$ 안에 들어있는 부분집합을 전체에서 뺀다고 해서 relative homology가 변하지 않을 것이라는 것은 직관적으로는 그럴듯해보인다. 이는 다음의 약한 조건 하에서는 참이다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="thm2">**정리 2 (Excision theorem)**</ins> 공간 $$X$$의 부분공간 $$A$$와, $$A$$의 부분공간 $$Z$$가 $$\cl Z\subseteq \interior A$$를 만족한다고 하자. 그럼 inclusion
+::: 정리 2 (Excision theorem)
+공간 $$X$$의 부분공간 $$A$$와, $$A$$의 부분공간 $$Z$$가 $$\cl Z\subseteq \interior A$$를 만족한다고 하자. 그럼 inclusion
 
 $$(X\setminus Z, A\setminus Z)\hookrightarrow (X,A)$$
 
@@ -67,18 +64,15 @@ $$(X\setminus Z, A\setminus Z)\hookrightarrow (X,A)$$
 $$H_k(X\setminus Z, A\setminus Z)\rightarrow H_k(X,A)$$
 
 는 isomorphism이다. 
-
-</div>
+:::
 
 그러나 이 정리가 직관적으로 자명한 것에 비해, 그 증명은 다소 기술적인 부분이 있어 여기에서는 그 증명을 생략하기로 한다. 
 
 한편 우리는 기하적인 상황에서 이와 같이 $$A$$에 들어있는 정보를 무시하는 방법을 알고 있다. 즉, $$A$$를 하나의 점으로 줄이는 quotient space $$X/A$$이다. 그럼 homology $$H_k(X/A)$$와 relative homology $$H_k(X,A)$$ 사이의 관계가 있다는 것이 합리적인 추측이다. 물론 위의 정리와 마찬가지로 이는 $$A$$가 아주 이상한 공간은 아니어야 가능하다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def3">**정의 3**</ins> 공간 $$X$$와 부분공간 $$A$$에 대하여, 이들 $$(X,A)$$가 *good pair*라는 것은 $$A$$가 닫힌집합이고, $$X$$의 적당한 열린집합 $$U$$가 존재하여 $$A\subset U$$이고 $$A$$가 $$U$$의 strong deformation retract인 것이다. 
-
-</div>
+::: 정의 3
+공간 $$X$$와 부분공간 $$A$$에 대하여, 이들 $$(X,A)$$가 *good pair*라는 것은 $$A$$가 닫힌집합이고, $$X$$의 적당한 열린집합 $$U$$가 존재하여 $$A\subset U$$이고 $$A$$가 $$U$$의 strong deformation retract인 것이다. 
+:::
 
 Good pair $$(X,A)$$가 주어졌다 하고, $$U$$가 [정의 3](#def3)의 가정을 만족하는 열린집합이라 하자. 그럼 다음의 diagram
 
@@ -144,15 +138,13 @@ $$\widetilde{H}_k(X)=H_k(X,x)$$
 
 으로 정의하면, 위의 isomorphism (2)의 우변을 $$\widetilde{H}_k(X/A)$$로 바꾸어 다음과 같이 쓸 수 있다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop4">**명제 4**</ins> Good pair $$(X,A)$$에 대하여, quotient map $$X \rightarrow X/A$$는 모든 $$k$$에 대해 다음의 isomorphism
+::: 명제 4
+Good pair $$(X,A)$$에 대하여, quotient map $$X \rightarrow X/A$$는 모든 $$k$$에 대해 다음의 isomorphism
 
 $$H_k(X,A)\cong \widetilde{H}_k(X/A)$$
 
 을 유도한다. 
-
-</div>
+:::
 
 ## 심플렉스 호몰로지와 특이 호몰로지
 
@@ -174,14 +166,10 @@ $$H_\bullet^\Delta(A)\rightarrow H_\bullet^\Delta(A),\qquad H_\bullet^\Delta(X,A
 
 을 정의한다. 이를 사용하면 다음이 성립한다.
 
-<div class="proposition" markdown="1">
-
-<ins id="thm5">**정리 5**</ins> 임의의 $$\Delta$$-complex $$X$$에 대하여, (3)의 homomorphism은 isomorphism이다. 
-
-</div>
-<details class="proof" markdown="1">
-<summary>증명</summary>
-
+::: 정리 5
+임의의 $$\Delta$$-complex $$X$$에 대하여, (3)의 homomorphism은 isomorphism이다. 
+:::
+::: 증명
 대략적인 흐름을 소개한다. 위의 commutative diagram에 의하여, $$X$$의 $$\Delta$$-complex 구조가 정의하는 filtration
 
 $$X_0\subset X_1\subset\cdots\subset X_l=X$$
@@ -209,16 +197,14 @@ $$H_k(\Delta^k, \partial\Delta^{k})\cong H_{k-1}(\Delta^{k-1}, \partial\Delta^{k
 을 얻고, 따라서 귀납적으로 원하는 결과를 보일 수 있다.
   
 이 과정을 살펴보면, $$H_k(\Delta^k,\partial\Delta^k)$$의 (singular homology로서의) generator는 정확히 $$k$$-simplex $$\Delta^k$$와 같다는 것을 안다. Pair $$(X^k,X^{k-1})$$은, 이러한 pair들 $$(\Delta^k,\partial\Delta^k)$$들의 합집합이므로, [§호몰로지, ⁋명제 9](/ko/math/algebraic_topology/homology#prop9)에 의해 원하는 결과를 얻는다. 
-
-</details>
+:::
 
 ## 메이어-피토리스 열
 
 분량상 증명을 적지는 않았지만, [정리 2](#thm2)의 excision theorem은 호몰로지 이론을 다룰 때 요긴하게 쓰인다. 가령 [정리 5](#thm5)의 증명에서 우리는 $$k-1$$ 미만의 simplex들을 무시할 때 excision theorem을 사용하였고, 이를 통해 귀납법을 사용할 수 있었으며 그 때의 base step은 one-point space의 homology였다. 이 과정이 본질적으로 homology가 만족해야 할 모든 성질들을 가지고 있는 것으로 볼 수 있으며, 이를 공리화하면 다음과 같다. 
 
-<div class="definition" markdown="1">
-
-<ins id="def6">**정의 6 (Eilenberg-Steenrod axioms)**</ins> 위상공간들의 pair들의 category에서 abelian group들의 category로의 functor들 $$H_k$$과, 이들 사이의 natural transformation
+::: 정의 6 (Eilenberg-Steenrod axioms)
+위상공간들의 pair들의 category에서 abelian group들의 category로의 functor들 $$H_k$$과, 이들 사이의 natural transformation
 
 $$\partial:H_k(X,A)\rightarrow H_{k-1}(A,\emptyset):=H_{k-1}(A)$$
 
@@ -233,8 +219,7 @@ $$\partial:H_k(X,A)\rightarrow H_{k-1}(A,\emptyset):=H_{k-1}(A)$$
     $$\cdots \rightarrow H_k(A)\rightarrow H_k(X) \rightarrow H_k(X,A) \rightarrow H_{k-1}(A)\rightarrow \cdots$$
 
     에 들어간다. 
-
-</div>
+:::
 
 그럼 Eilenberg와 Steenrod의 결과는 이러한 방식으로 정의된 homology theory들은, 만일 *coefficient group* $$H_0(\ast)$$가 고정된다면 이들은 모두 naturally isomorphic하다는 것을 보여준다. 예를 들어 우리는 앞서 simplicial homology와 singular homology가 $$\Delta$$-complex 위에서는 일치한다는 것을 증명하였으며, 그 증명을 하나하나 분리해보면 본질적으로 우리가 사용한 것은 위의 [정의 6](#def6)의 공리들임을 확인할 수 있다. 호몰로지의 실용적인 계산을 위해서는 *CW complex* 위에 정의된 *cellular homology*를 도입하는 것이 좋은데, 마찬가지로 이 homology 또한 위의 공리들을 만족하고 따라서 이 또한 simplicial homology, singular homology와 같은 계산을 준다. 
 
@@ -274,9 +259,8 @@ $$\cdots \rightarrow H_{n+1}(U)\oplus H_{n+1}(V)\rightarrow H_{n+1}(X)\rightarro
 
 의 direct sum으로 나타낼 수 있다는 것을 안다. 이 때 $$\Cone(\alpha)$$와 (4)가 모두 exact이므로 (5) 또한 exact이며, (5)의 exact sequence의 differential map들은 mapping cone exact sequence에서 isomorphism들 $$i_V$$가 정의하는 change of basis를 통해 얻어진다. 이를 명시적으로 계산하면 다음을 얻는다. 
 
-<div class="proposition" markdown="1">
-
-<ins id="prop7">**명제 7 (Mayer-Vietoris sequence)**</ins> 위상공간 $$X$$가 두 열린집합들의 합집합 $$X=U\cup V$$로 나타난다 하고, 이 위에 정의된 homology theory $$H$$를 생각하자. 그럼 long exact sequence
+::: 명제 7 (Mayer-Vietoris sequence)
+위상공간 $$X$$가 두 열린집합들의 합집합 $$X=U\cup V$$로 나타난다 하고, 이 위에 정의된 homology theory $$H$$를 생각하자. 그럼 long exact sequence
 
 $$\cdots \rightarrow H_{n+1}(U)\oplus H_{n+1}(V)\overset{\Psi}{\longrightarrow} H_{n+1}(X)\overset{\partial}{\longrightarrow} H_n(U\cap V)\overset{\Phi}{\longrightarrow} H_n(U)\oplus H_n(V)\rightarrow\cdots$$
 
@@ -285,8 +269,7 @@ $$\cdots \rightarrow H_{n+1}(U)\oplus H_{n+1}(V)\overset{\Psi}{\longrightarrow} 
 $$\Psi(u,v)=u+v,\qquad \Phi(x)=(x,-x)$$
 
 으로 주어진다. 
-
-</div>
+:::
 
 특히 $$n=1$$인 경우를 보면 우리는 맨 처음에 Seifert-van Kampen 정리를 abelianization을 통해 옮겨온 (1)을 얻으며, 이러한 측면에서 Mayer-Vietoris sequence는 Seifert-van Kampen 정리의 homology 버전으로 생각할 수 있다. 
 
