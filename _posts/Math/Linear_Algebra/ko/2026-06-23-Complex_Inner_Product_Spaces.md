@@ -13,6 +13,9 @@ date: 2026-06-23
 
 weight: 118
 
+published: false
+drift_needed: true
+
 ---
 
 ## 복소내적과 노름
@@ -104,11 +107,20 @@ $$v=\sum_{i=1}^n\langle x_i,v\rangle x_i$$
 
 이다. 둘째 변수가 linear이므로 계수를 뽑을 때 $$\langle x_i,v\rangle$$의 순서가 중요하며, $$\langle v,x_i\rangle$$을 쓰면 그 켤레가 나온다.
 
-부분공간으로의 직교분해 또한 그대로 성립한다. 복소내적공간 $$V$$의 부분공간 $$U\leq V$$에 대하여, 내적을 $$U$$로 제한한 것이 다시 Hermitian 내적이므로 $$U$$는 orthonormal basis $$\{x_1,\ldots,x_k\}$$를 가지며, 이를 포함하는 $$V$$의 orthonormal basis로 확장할 수 있다. $$U^\perp=\{v\in V:\langle u,v\rangle=0\text{ for all }u\in U\}$$로 두면
+부분공간으로의 직교분해 또한 그대로 성립한다. 복소내적공간 $$V$$의 부분공간 $$U\leq V$$에 대하여, 내적을 $$U$$로 제한한 것이 다시 Hermitian 내적이므로 $$U$$는 orthonormal basis $$\{x_1,\ldots,x_k\}$$를 가지며, 이를 포함하는 $$V$$의 orthonormal basis로 확장할 수 있다. $$U^\perp=\{v\in V:\langle u,v\rangle=0\text{ for all }u\in U\}$$로 두자.
+
+::: 명제 4
+복소내적공간 $$V$$의 임의의 부분공간 $$U\leq V$$에 대하여
 
 $$V=U\oplus U^\perp,\qquad\dim U^\perp=\dim V-\dim U$$
 
-가 성립한다.
+이 성립한다. 나아가 natural projection $$p:V\rightarrow V/U$$ ([§몫공간](/ko/math/linear_algebra/quotient_space))을 $$U^\perp$$로 제한한 $$p\vert_{U^\perp}:U^\perp\rightarrow V/U$$은 isomorphism이며, 따라서 $$U^\perp$$은 몫공간 $$V/U$$을 표준적으로 실현한다.
+:::
+::: 증명
+위에서 $$V$$의 orthonormal basis $$\{x_1,\ldots,x_n\}$$을 $$U$$의 것 $$\{x_1,\ldots,x_k\}$$로부터 확장했으므로, 나머지 $$\{x_{k+1},\ldots,x_n\}$$은 $$U$$와 직교하여 $$U^\perp$$을 span한다. 따라서 $$V=U\oplus U^\perp$$이고 $$\dim U^\perp=\dim V-\dim U$$이다. 그럼 $$\ker p=U$$이므로 $$p\vert_{U^\perp}$$의 kernel은 $$U^\perp\cap U=\{0\}$$이라 단사이고, $$V=U+U^\perp$$이라 전사이므로 isomorphism이다.
+:::
+
+여기서 positive-definiteness가 결정적이다. 내적이 positive-definite이면 $$U\cap U^\perp$$의 임의의 원소 $$u$$는 $$\langle u,u\rangle=0$$을 만족해 $$u=0$$이므로, 모든 부분공간 $$U$$가 $$U\cap U^\perp=\{0\}$$을 자동으로 만족한다. 일반적인 symmetric bilinear form에서는 이 직교분해와 표준동형이 부분공간의 non-degeneracy를 요구하지만 ([§쌍선형형식, ⁋명제 7](/ko/math/linear_algebra/bilinear_form#prop7)), Hermitian 내적을 포함한 positive-definite인 경우에는 아무 조건 없이 성립하는 것이다.
 
 ## 수반작용소와 unitary matrix
 
@@ -118,7 +130,7 @@ $$\langle Lv,w\rangle=\langle v,L^\ast w\rangle\qquad\text{for all }v,w\in V$$
 
 를 만족하는 유일한 operator로 정의한다. orthonormal basis에 대한 행렬표현을 통해 $$L^\ast$$의 정체를 알 수 있다.
 
-::: 명제 4
+::: 명제 5
 $$\mathcal{B}=\{e_1,\ldots,e_n\}$$이 복소내적공간 $$V$$의 orthonormal basis이고 $$A=[L]_\mathcal{B}^\mathcal{B}$$라 하면, $$L^\ast$$의 행렬표현은 $$A$$의 *conjugate transpose<sub>켤레전치</sub>* $$A^\ast=\bar A^t$$이다.
 :::
 ::: 증명
@@ -133,7 +145,7 @@ $$[L^\ast]_{ij}=\langle e_i,L^\ast e_j\rangle=\langle Le_i,e_j\rangle=\overline{
 
 한편 내적을 보존하는 operator는 실수의 경우 orthogonal matrix로 표현되었다. 복소의 경우 이에 대응하는 것이 unitary matrix이다.
 
-::: 정의 5
+::: 정의 6
 행렬 $$U\in\Mat_n(\mathbb{C})$$가 *unitary matrix<sub>unitary matrix</sub>*라는 것은
 
 $$U^\ast U=UU^\ast=I$$

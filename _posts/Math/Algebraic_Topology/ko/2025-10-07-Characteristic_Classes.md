@@ -206,11 +206,13 @@ $$\smile e:H^0(S^2)\rightarrow H^2(S^2)$$
 
 $$H^{k-n}(B)=H^{k-n+1}(B)=0$$
 
-이므로 $$\pi^\ast:H^k(B)\rightarrow H^k(S(E))$$가 isomorphism이라는 것이다. 즉, sphere bundle의 cohomology는 낮은 차원에서는 정확히 base의 cohomology와 일치하며, 그 이후부터는 
+이므로 $$\pi^\ast:H^k(B)\rightarrow H^k(S(E))$$가 isomorphism이라는 것이다. 즉, sphere bundle의 cohomology는 낮은 차원에서는 정확히 base의 cohomology와 일치하며, 그 이후부터는 base의 cohomology에서 오는 것에 더해 Euler class가 추가적인 기여를 한다. 
 
-낮은 차원 cohomology는 base의 것과 같고, 차원이 fiber의 크기 $$n-1$$에 다다르는 순간부터 Euler class와의 cup product가 그 차이를 지배한다. 
+계속 살펴보았던 deleted total space $$E_0=E\setminus 0(B)$$를 생각하자. $$E_0$$의 한 점은 base의 한 점 $$x\in B$$와, 이 점에서의 $$E$$의 fiber $$E_x$$의 *nonzero* $$v\in E_x$$의 순서쌍이다. 이제 $$E_0$$ 위에 *tautological bundle* $$\pi_0^\ast E$$를 정의하자. 이는 vector bundle $$E\rightarrow B$$를 projection map $$\pi_0:E_0\rightarrow B$$를 따라 pullback하여 얻어진 vector bundle이며, 그 정체는 각각의 점 $$(x,v)\in E_0$$마다 fiber $$(\pi_0^\ast E)_{(x,v)}= E_x$$를 갖는 vector bundle이다. 즉 $$v$$는 각각의 점 $$(x,v)$$에서 fiber로 붙어있는 벡터공간의 원소이기도 하며, nonzero이므로 이 벡터공간 안에서 1차원 부분공간 $$\langle v\rangle$$을 정의한다. 이제 $$E_0$$의 모든 점마다 이러한 방식으로 직선을 붙여 line bundle $$L\rightarrow E_0$$을 만들고, 이것이 $$\pi_0^\ast E$$ 안에서 정의하는 quotient $$(\pi_0^\ast E)/L\rightarrow E_0$$을 생각할 수 있다. 이는 각 점 $$(x,v)$$에서 fiber $$E_x/\langle v\rangle$$을 갖는 $$E_0$$ 위의 canonical complex rank $$(n-1)$$ bundle이며, fiber마다 Hermitian 내적을 주면 $$v$$의 orthogonal complement $$v^\perp\subseteq E_x$$로도 실현된다. ([\[선형대수학\] §복소내적공간, ⁋명제 4](/ko/math/linear_algebra/complex_inner_product_spaces#prop4)) 두 실현이 canonically isomorphic하므로, 앞으로 이 rank $$(n-1)$$ bundle을 표기의 편의상 $$L^\perp$$로 쓴다.
 
-Deleted total space $$E_0=E\setminus 0(B)$$를 본다. $$E_0$$의 한 점은 fiber $$F=E_x$$와 그 안의 nonzero vector $$v\in F$$의 쌍이다. 이 점 위에 $$v$$의 (Hermitian 내적에 대한) orthogonal complement $$v^\perp\subseteq F$$를 달아주면, $$E_0$$ 위의 canonical complex rank $$(n-1)$$ bundle $$E^\perp$$가 정의된다. 한편 $$E_0$$는 $$E_{\mathbb{R}}$$의 sphere bundle $$S(E_{\mathbb{R}})$$ (fiber $$S^{2n-1}$$) 와 homotopy equivalent하므로, [정리 5](#thm5)의 Gysin 완전열
+
+
+한편 $$E_0$$는 $$E_{\mathbb{R}}$$의 sphere bundle $$S(E_{\mathbb{R}})$$ (fiber $$S^{2n-1}$$) 와 homotopy equivalent하므로, [정리 5](#thm5)의 Gysin 완전열
 
 $$\cdots\rightarrow H^{k-2n}(B)\xrightarrow{\ \smile e\ }H^k(B)\xrightarrow{\ \pi_0^\ast\ }H^k(E_0)\rightarrow H^{k-2n+1}(B)\rightarrow\cdots$$
 
@@ -221,14 +223,14 @@ Complex rank $$n$$ vector bundle $$E\rightarrow B$$의 *Chern class<sub>천 특�
 
 $$c_n(E)=e(E_{\mathbb{R}})\in H^{2n}(B;\mathbb{Z})$$
 
-로 둔다. $$0<i<n$$에 대해서는, 위에서 만든 deleted total space $$E_0$$ 위의 canonical complex rank $$(n-1)$$ bundle $$E^\perp$$가 귀납가정에 의해 Chern class $$c_i(E^\perp)\in H^{2i}(E_0)$$를 가지므로, isomorphism $$\pi_0^\ast:H^{2i}(B)\xrightarrow{\cong}H^{2i}(E_0)$$ ($$2i\leq 2n-2$$이라 [정리 5](#thm5)로 isomorphism) 를 통해
+로 둔다. $$0<i<n$$에 대해서는, 위에서 만든 deleted total space $$E_0$$ 위의 canonical complex rank $$(n-1)$$ bundle $$L^\perp$$가 귀납가정에 의해 Chern class $$c_i(L^\perp)\in H^{2i}(E_0)$$를 가지므로, isomorphism $$\pi_0^\ast:H^{2i}(B)\xrightarrow{\cong}H^{2i}(E_0)$$ ($$2i\leq 2n-2$$이라 [정리 5](#thm5)로 isomorphism) 를 통해
 
-$$\pi_0^\ast c_i(E)=c_i(E^\perp)$$
+$$\pi_0^\ast c_i(E)=c_i(L^\perp)$$
 
 를 만족하는 유일한 $$c_i(E)\in H^{2i}(B)$$로 정의한다. 이들을 모두 더한 $$c(E)=1+c_1(E)+\cdots+c_n(E)\in H^\bullet(B;\mathbb{Z})$$를 *total Chern class*라 한다.
 :::
 
-정의가 잘 됨은 구성에 내장되어 있다. $$\pi_0^\ast$$가 해당 차수에서 isomorphism이므로 $$c_i(E)$$는 $$c_i(E^\perp)$$로부터 유일하게 결정된다. 이 정의의 기하학적 뜻은 명료하다. Complex vector bundle에서 nonzero vector $$v$$를 하나 고르는 일은 rank를 하나 떨어뜨려 $$v^\perp$$라는 rank $$(n-1)$$ bundle을 남기는데, 그 일이 일어나는 무대가 바로 deleted space $$E_0$$이다. 거기서 한 단계 작은 bundle의 Chern class를 읽고, Gysin 완전열이 보장하는 낮은 차수에서의 isomorphism으로 base까지 끌어내리는 것이다. 최고차에서는 더 내려갈 곳이 없어 Euler class가 그 자리를 직접 채운다.
+정의가 잘 됨은 구성에 내장되어 있다. $$\pi_0^\ast$$가 해당 차수에서 isomorphism이므로 $$c_i(E)$$는 $$c_i(L^\perp)$$로부터 유일하게 결정된다. 이 정의의 기하학적 뜻은 명료하다. Complex vector bundle에서 nonzero vector $$v$$를 하나 고르는 일은 rank를 하나 떨어뜨려 $$L^\perp$$라는 rank $$(n-1)$$ bundle을 남기는데, 그 일이 일어나는 무대가 바로 deleted space $$E_0$$이다. 거기서 한 단계 작은 bundle의 Chern class를 읽고, Gysin 완전열이 보장하는 낮은 차수에서의 isomorphism으로 base까지 끌어내리는 것이다. 최고차에서는 더 내려갈 곳이 없어 Euler class가 그 자리를 직접 채운다.
 
 ::: 명제 7
 Chern class는 다음을 만족한다.
@@ -238,7 +240,7 @@ Chern class는 다음을 만족한다.
 3. (최고차) $$c_n(E)=e(E_{\mathbb{R}})$$이며, 따라서 $$E$$가 nonzero section을 가지면 $$c_n(E)=0$$이다.
 :::
 ::: 증명
-(2)와 (3)은 정의 그 자체이며, $$c_n=e(E_{\mathbb{R}})$$의 vanishing은 [명제 4](#prop4)의 (3)이다. (1)은 $$n$$에 대한 귀납으로 본다. $$c_n$$의 naturality는 Euler class의 naturality ([명제 4](#prop4)의 (1)) 이다. $$0<i<n$$에서는 $$f$$가 deleted space와 complement bundle, 그리고 Gysin 완전열 전체와 호환되는 사상 $$E_0'\rightarrow E_0$$을 유도하고, 그 위에서 $$f^\ast(E^\perp)\cong(f^\ast E)^\perp$$이므로 귀납가정과 $$\pi_0^\ast$$의 자연성으로부터 $$c_i$$의 naturality가 따라온다.
+(2)와 (3)은 정의 그 자체이며, $$c_n=e(E_{\mathbb{R}})$$의 vanishing은 [명제 4](#prop4)의 (3)이다. (1)은 $$n$$에 대한 귀납으로 본다. $$c_n$$의 naturality는 Euler class의 naturality ([명제 4](#prop4)의 (1)) 이다. $$0<i<n$$에서는 $$f$$가 deleted space와 complement bundle, 그리고 Gysin 완전열 전체와 호환되는 사상 $$E_0'\rightarrow E_0$$을 유도하고, 그 위에서 $$f^\ast(L^\perp)\cong(f^\ast L)^\perp$$이므로 귀납가정과 $$\pi_0^\ast$$의 자연성으로부터 $$c_i$$의 naturality가 따라온다.
 :::
 
 Whitney sum에 대한 곱 공식은 Chern class의 가장 중요한 계산 도구이다. 그 증명은 *splitting principle*에 기댄다.
