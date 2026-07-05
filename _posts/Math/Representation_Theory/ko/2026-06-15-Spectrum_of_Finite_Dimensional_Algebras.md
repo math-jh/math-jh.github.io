@@ -205,7 +205,7 @@ $$A\longrightarrow \prod_\chi A_\chi;\qquad x\longmapsto (e_\chi x)_\chi$$
 대수 $$A$$가 *reduced<sub>감약</sub>*라는 것은 $$A$$의 nonzero nilpotent 원소가 존재하지 않는 것, 곧 $$a^n=0$$이면 $$a=0$$인 것이다.
 :::
 
-reduced라는 조건은 정리 8의 분해에서 nilpotent 부분이 완전히 사라지는 것과 동치이며, 이는 다시 정규표현이 동시대각화 가능하다는 선형대수학적 조건과 같다.
+Reduced라는 조건은 정리 8의 분해에서 nilpotent 부분이 완전히 사라지는 것과 동치이며, 이는 다시 정규표현이 동시대각화 가능하다는 선형대수학적 조건과 같다.
 
 ::: 명제 11
 $$k$$가 algebraically closed이고 $$A$$가 유한차원 commutative $$k$$-algebra이며 $$N=\dim A$$라 하자. 다음 네 조건이 동치이다.
@@ -256,7 +256,7 @@ kernel을 계산하자. $$\ev(a)=0$$인 것은 모든 character $$\chi$$에 대�
 그러므로 $$\ev$$이 injective인 것은 $$A$$에 nonzero nilpotent가 없는 것, 곧 $$A$$가 reduced인 것과 동치이다. 마지막으로 $$A$$가 reduced이면 [명제 11](#prop11)에 의하여 character의 개수가 $$\dim A$$와 같으므로 $$\dim k^{\Specm A}=\dim A$$이고, injective인 $$\ev$$은 차원 비교에 의하여 isomorphism이다.
 :::
 
-명제 13은 reduced인 유한차원 가환대수가 정확히 그 유한한 점집합 $$\Specm A$$ 위의 $$k$$-값 함수환임을 말해 준다. 이는 가환 Banach algebra에 대한 Gelfand 표현의 유한차원 대수적 판본으로, character를 점으로, 대수의 원소를 점 위의 함수로 보는 관점을 정당화한다. nilpotent가 존재하는 일반적인 경우에는 $$\ev$$이 nilradical만큼의 정보를 잃으며, 그 손실분이 각 점 위의 nilpotent 두께 $$\mathfrak{n}_\chi$$로 나타난다.
+명제 13은 reduced인 유한차원 가환대수가 정확히 그 유한한 점집합 $$\Specm A$$ 위의 $$k$$-값 함수환임을 말해 준다. 이는 가환 Banach algebra에 대한 Gelfand 표현의 유한차원 대수적 판본으로, character를 점으로, 대수의 원소를 점 위의 함수로 보는 관점을 정당화한다. Nilpotent가 존재하는 일반적인 경우에는 $$\ev$$이 nilradical만큼의 정보를 잃으며, 그 손실분이 각 점 위의 nilpotent 두께 $$\mathfrak{n}_\chi$$로 나타난다.
 
 ## 예시
 
@@ -308,7 +308,7 @@ $$\mathbb{C}[\mathbb{Z}/n]\cong\mathbb{C}^n$$
 
 ## 비가환 방향과 응용
 
-지금까지 우리는 commutativity를 본질적으로 사용하여, 정규표현의 모든 블록이 하나의 character로 색인되는 동시 일반화고유공간으로 떨어진다는 것을 보았다. Commutativity를 떼면 그림은 더 풍부해진다. semisimple algebra의 일반론에 따르면, algebraically closed field 위의 유한차원 semisimple algebra는 matrix algebra들의 곱 $$\prod_i\Mat_{n_i}(k)$$으로 분해된다. 우리가 다룬 commutative reduced인 경우는 모든 $$n_i=1$$인, 곧 모든 블록이 $$1\times 1$$인 가장 단순한 구석에 해당한다. 한편 $$\operatorname{char}k\nmid\lvert G\rvert$$인 경우 Maschke의 정리에 의해 group algebra $$k[G]$$가 semisimple이 되고 ([§유한군의 표현론, ⁋따름정리 7](/ko/math/representation_theory/representations_of_finite_groups#cor7)), 이로부터 유한군의 표현론이 회복된다. $$G$$가 abelian이면 $$k[G]$$가 commutative이므로 모든 기약표현이 $$1$$차원이고, 이는 [예시 16](#ex16)에서 본 것처럼 우리의 commutative 이론으로 완전히 설명된다.
+지금까지 우리는 commutativity를 본질적으로 사용하여, 정규표현의 모든 블록이 하나의 character로 색인되는 동시 일반화고유공간으로 떨어진다는 것을 보았다. Commutativity를 떼면 그림은 더 풍부해진다. Semisimple algebra의 일반론에 따르면, algebraically closed field 위의 유한차원 semisimple algebra는 matrix algebra들의 곱 $$\prod_i\Mat_{n_i}(k)$$으로 분해된다. 우리가 다룬 commutative reduced인 경우는 모든 $$n_i=1$$인, 곧 모든 블록이 $$1\times 1$$인 가장 단순한 구석에 해당한다. 한편 $$\operatorname{char}k\nmid\lvert G\rvert$$인 경우 Maschke의 정리에 의해 group algebra $$k[G]$$가 semisimple이 되고 ([§유한군의 표현론, ⁋따름정리 7](/ko/math/representation_theory/representations_of_finite_groups#cor7)), 이로부터 유한군의 표현론이 회복된다. $$G$$가 abelian이면 $$k[G]$$가 commutative이므로 모든 기약표현이 $$1$$차원이고, 이는 [예시 16](#ex16)에서 본 것처럼 우리의 commutative 이론으로 완전히 설명된다.
 
 이 사전은 표현론 바깥에서도 같은 모습으로 나타난다. 예컨대 적당히 국소화한 유한차원 가환 양자 코호몰로지 환의 maximal spectrum은 유한개의 점으로 이루어지며, 그 점들은 양자 곱셈 연산자들의 동시 고유값에 해당한다. 이는 정규표현의 동시 일반화고유공간 분해라는 우리의 이야기가 그대로 적용되는 한 사례이다.
 

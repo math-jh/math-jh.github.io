@@ -114,7 +114,7 @@ $$\mathcal{J}/\mathcal{J}^2 \longrightarrow \Omega_{Y/S}\vert_X \longrightarrow 
 
 ## Tangent sheaf와 Zariski 접공간
 
-cotangent sheaf의 쌍대를 취하면 접벡터들의 sheaf를 얻는다. 이는 다양체 위에서 접다발에 해당하는 대수기하학적 대상이다.
+Cotangent sheaf의 쌍대를 취하면 접벡터들의 sheaf를 얻는다. 이는 다양체 위에서 접다발에 해당하는 대수기하학적 대상이다.
 
 ::: 정의 5
 Scheme 사상 $$f:X \rightarrow S$$에 대하여, $$X$$의 *tangent sheaf<sub>접층</sub>*를

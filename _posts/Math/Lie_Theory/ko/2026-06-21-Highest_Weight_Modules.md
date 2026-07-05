@@ -27,7 +27,7 @@ $$\mathfrak{g}=\mathfrak{h}\oplus\bigoplus_{\alpha\in\Phi}\mathfrak{g}_\alpha$$
 는 이미 확립되어 있고, 각 $$\mathfrak{g}_\alpha$$가 $$1$$차원이라는 사실도 알고 있다 ([§근계, ⁋정의 5](/ko/math/lie_theory/root_systems#def5) 및 [§근계, ⁋명제 6](/ko/math/lie_theory/root_systems#prop6) 이후의 논의). positive root들의 모임 $$\Phi^+\subseteq\Phi$$를 하나 고정한다 ([§근계, ⁋정의 15](/ko/math/lie_theory/root_systems#def15)).
 
 ::: 정의 1
-positive root들에 대응하는 root space들의 합
+Positive root들에 대응하는 root space들의 합
 
 $$\mathfrak{n}^+=\bigoplus_{\alpha\in\Phi^+}\mathfrak{g}_\alpha,\qquad\mathfrak{n}^-=\bigoplus_{\alpha\in\Phi^+}\mathfrak{g}_{-\alpha}$$
 
@@ -139,7 +139,7 @@ $$f_1^{\,m_1}\cdots f_N^{\,m_N}\,H_1^{\,p_1}\cdots H_l^{\,p_l}\,e_1^{\,q_1}\cdot
 끝으로 weight 구조를 본다. $$f_k\in\mathfrak{g}_{-\beta_k}$$이므로 [명제 3](#prop3)에 의하여 $$f_1^{\,m_1}\cdots f_N^{\,m_N}\cdot v_\lambda^+$$는 weight $$\lambda-\sum_k m_k\beta_k$$를 갖는다. 고정된 weight $$\mu=\lambda-\sum_k m_k\beta_k$$를 주는 지수 $$(m_1,\ldots,m_N)$$의 개수는 유한하므로 각 weight space는 유한차원이며, $$M(\lambda)=\bigoplus_\mu M(\lambda)_\mu$$는 weight module이다.
 :::
 
-명제 7은 $$M(\lambda)$$가 $$\sl_2$$에서의 highest weight 사슬을 정확히 일반화함을 보여준다. $$\sl_2$$의 highest weight vector에서 $$f$$를 반복 적용하여 얻은 사슬 ([§sl₂의 표현론, ⁋명제 4](/ko/math/lie_theory/representations_of_sl2#prop4))이 여기에서는 여러 lowering operator의 모든 정렬된 곱으로 대체되며, 그 결과 $$M(\lambda)$$는 무한차원의 weight module이 된다. highest weight space $$M(\lambda)_\lambda$$는 $$v_\lambda^+$$ 하나로 생성되는 $$1$$차원이고, 다른 모든 weight는 $$\lambda$$에서 positive root들을 빼서 얻어지므로 $$\lambda$$보다 "아래"에 놓인다.
+명제 7은 $$M(\lambda)$$가 $$\sl_2$$에서의 highest weight 사슬을 정확히 일반화함을 보여준다. $$\sl_2$$의 highest weight vector에서 $$f$$를 반복 적용하여 얻은 사슬 ([§sl₂의 표현론, ⁋명제 4](/ko/math/lie_theory/representations_of_sl2#prop4))이 여기에서는 여러 lowering operator의 모든 정렬된 곱으로 대체되며, 그 결과 $$M(\lambda)$$는 무한차원의 weight module이 된다. Highest weight space $$M(\lambda)_\lambda$$는 $$v_\lambda^+$$ 하나로 생성되는 $$1$$차원이고, 다른 모든 weight는 $$\lambda$$에서 positive root들을 빼서 얻어지므로 $$\lambda$$보다 "아래"에 놓인다.
 
 ## 기약 quotient
 
@@ -207,12 +207,12 @@ $$e_i\cdot\bigl(f_i^{\,n_i+1}\cdot v\bigr)=(n_i+1)\,(n_i-n_i)\,f_i^{\,n_i}\cdot 
 
 이므로 $$w$$는 $$e_i$$에 의해서도 소멸된다. 곧 $$w$$는 모든 simple root vector에 의해 죽으므로 $$\mathfrak{n}^+\cdot w=0$$이고, $$w$$가 $$0$$이 아니라면 weight $$\lambda-(n_i+1)\alpha_i$$의 highest weight vector가 된다. 그러나 $$L(\lambda)$$가 기약이면서 highest weight $$\lambda$$를 가지므로 [명제 10](#prop10)에 의해 highest weight는 $$\lambda$$ 하나뿐이고 $$\lambda-(n_i+1)\alpha_i\neq\lambda$$이므로 $$w=0$$이어야 한다. 따라서 각 $$i$$에 대하여 $$f_i^{\,n_i+1}\cdot v=0$$이다.
 
-이제 유한차원성을 본다. $$L(\lambda)$$의 weight들의 집합 $$P(\lambda)$$는 [명제 7](#prop7)에 의해 $$\lambda-\sum_k m_k\beta_k$$ 꼴로 아래로 유계이고, 방금 본 $$f_i^{\,n_i+1}\cdot v=0$$은 각 $$\sl_{2,\alpha_i}$$-방향 사슬이 유한 길이에서 닫힘을 뜻한다. $$P(\lambda)$$가 Weyl group 작용에 대해 불변임을 보이면 유한성이 따라온다. 각 simple reflection $$s_i$$에 대하여, $$L(\lambda)$$를 $$\sl_{2,\alpha_i}$$-가군으로 분해하면 [§sl₂의 표현론, ⁋정리 9](/ko/math/lie_theory/representations_of_sl2#thm9)에 의해 유한차원 $$\sl_2$$-가군들의 직합이고, $$\sl_2$$의 각 기약 성분의 weight 집합이 $$h_i$$의 고윳값 $$\mapsto$$ 그 음수로 보내는 대칭에 대해 닫혀 있으므로, $$\mu\in P(\lambda)$$이면 $$s_i(\mu)=\mu-\mu(h_i)\alpha_i\in P(\lambda)$$이고 그 multiplicity도 보존된다. simple reflection들이 Weyl group $$W$$를 생성하므로 ([§근계, ⁋정의 17](/ko/math/lie_theory/root_systems#def17)) $$P(\lambda)$$는 $$W$$-불변이다. 임의의 weight는 $$W$$-작용으로 dominant chamber 안의 weight로 옮길 수 있고, $$\lambda$$ 아래의 dominant weight는 유한 개뿐이므로 $$P(\lambda)$$는 유한집합이다. 각 weight space가 유한차원이므로 ([명제 7](#prop7)) $$L(\lambda)=\bigoplus_{\mu\in P(\lambda)}L(\lambda)_\mu$$는 유한차원이다.
+이제 유한차원성을 본다. $$L(\lambda)$$의 weight들의 집합 $$P(\lambda)$$는 [명제 7](#prop7)에 의해 $$\lambda-\sum_k m_k\beta_k$$ 꼴로 아래로 유계이고, 방금 본 $$f_i^{\,n_i+1}\cdot v=0$$은 각 $$\sl_{2,\alpha_i}$$-방향 사슬이 유한 길이에서 닫힘을 뜻한다. $$P(\lambda)$$가 Weyl group 작용에 대해 불변임을 보이면 유한성이 따라온다. 각 simple reflection $$s_i$$에 대하여, $$L(\lambda)$$를 $$\sl_{2,\alpha_i}$$-가군으로 분해하면 [§sl₂의 표현론, ⁋정리 9](/ko/math/lie_theory/representations_of_sl2#thm9)에 의해 유한차원 $$\sl_2$$-가군들의 직합이고, $$\sl_2$$의 각 기약 성분의 weight 집합이 $$h_i$$의 고윳값 $$\mapsto$$ 그 음수로 보내는 대칭에 대해 닫혀 있으므로, $$\mu\in P(\lambda)$$이면 $$s_i(\mu)=\mu-\mu(h_i)\alpha_i\in P(\lambda)$$이고 그 multiplicity도 보존된다. Simple reflection들이 Weyl group $$W$$를 생성하므로 ([§근계, ⁋정의 17](/ko/math/lie_theory/root_systems#def17)) $$P(\lambda)$$는 $$W$$-불변이다. 임의의 weight는 $$W$$-작용으로 dominant chamber 안의 weight로 옮길 수 있고, $$\lambda$$ 아래의 dominant weight는 유한 개뿐이므로 $$P(\lambda)$$는 유한집합이다. 각 weight space가 유한차원이므로 ([명제 7](#prop7)) $$L(\lambda)=\bigoplus_{\mu\in P(\lambda)}L(\lambda)_\mu$$는 유한차원이다.
 
 (3) 단사성과 전사성을 정리한다. (1)에서 모든 $$0$$이 아닌 유한차원 기약 표현이 어떤 dominant integral $$\lambda$$에 대한 $$L(\lambda)$$와 동형임을 보였으므로 대응 $$\lambda\mapsto L(\lambda)$$는 전사이다. (2)에서 dominant integral $$\lambda$$마다 $$L(\lambda)$$가 실제로 유한차원 기약 표현임을 보였으므로 이 대응은 잘 정의된다. 단사성은 [명제 10](#prop10)에서 $$L(\mu)\cong L(\lambda)$$이면 $$\mu=\lambda$$임을 이미 보였으므로 성립한다. 따라서 대응은 전단사이다.
 :::
 
-증명의 핵심은 각 simple root 방향에서 표현을 $$\sl_{2,\alpha_i}$$-가군으로 잘라 $$\sl_2$$의 표현론을 적용하는 데에 있다. dominant integral 조건 $$\lambda(h_i)\in\mathbb{Z}_{\geq 0}$$은 각 방향의 highest weight 사슬이 $$\sl_2$$에서처럼 음이 아닌 정수 단계에서 닫히도록 강제하며, 이것이 무한차원이던 $$M(\lambda)$$의 기약 몫 $$L(\lambda)$$를 유한차원으로 떨어뜨린다. Weyl group 대칭이 이렇게 잘린 유한한 weight 집합을 하나로 묶어 표현 전체의 유한차원성을 보장한다. 
+증명의 핵심은 각 simple root 방향에서 표현을 $$\sl_{2,\alpha_i}$$-가군으로 잘라 $$\sl_2$$의 표현론을 적용하는 데에 있다. Dominant integral 조건 $$\lambda(h_i)\in\mathbb{Z}_{\geq 0}$$은 각 방향의 highest weight 사슬이 $$\sl_2$$에서처럼 음이 아닌 정수 단계에서 닫히도록 강제하며, 이것이 무한차원이던 $$M(\lambda)$$의 기약 몫 $$L(\lambda)$$를 유한차원으로 떨어뜨린다. Weyl group 대칭이 이렇게 잘린 유한한 weight 집합을 하나로 묶어 표현 전체의 유한차원성을 보장한다. 
 
 이 정리로 semisimple Lie algebra의 유한차원 표현론은 완결된 그림을 얻는다. Weyl 완전가약성 ([§Weyl 완전가약성 정리, ⁋정리 7](/ko/math/lie_theory/weyl_complete_reducibility#thm7))에 의해 임의의 유한차원 표현은 기약 표현들의 직합이고, 그 기약 인자들은 정리 12에 의해 dominant integral weight들로 색인된다. 따라서 임의의 유한차원 표현은 각 dominant integral weight $$\lambda$$에 대한 $$L(\lambda)$$의 multiplicity로 완전히 결정되며, 표현론의 모든 질문은 이 multiplicity를 계산하는 문제로 환원된다. $$\sl_2$$에서 모든 기약 표현이 음이 아닌 정수 $$n$$으로 색인되고 $$L(n)=V(n)$$이었던 것 ([§sl₂의 표현론, ⁋정의 5](/ko/math/lie_theory/representations_of_sl2#def5))이 이 일반적 그림의 가장 단순한 경우이다.
 

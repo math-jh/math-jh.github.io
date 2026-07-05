@@ -95,10 +95,10 @@ $$H^j(X, \mathbf{D}_X \mathcal{F}^\bullet) \cong H^{-j}_c(X, \mathcal{F}^\bullet
 $$R\Hom_{\{\ast\}}(R(a_X)_! \mathcal{F}^\bullet, k) = R\Hom_k(R\Gamma_c(X, \mathcal{F}^\bullet), k) = R\Gamma_c(X, \mathcal{F}^\bullet)^\vee$$
 인데, 여기서 $$R(a_X)_! = R\Gamma_c(X, -)$$은 [§고유 받음과 여섯 함자, ⁋정의 11](/ko/math/sheaf_theory/six_functors#def11)이고 dual은 $$(-)^\vee = R\Hom_k(-, k)$$이다. 좌변은 $$a_X^! k = \omega_X$$이므로
 $$R\Hom_X(\mathcal{F}^\bullet, a_X^! k) = R\Hom_X(\mathcal{F}^\bullet, \omega_X) = R\Gamma(X, R\mathcal{H}om(\mathcal{F}^\bullet, \omega_X)) = R\Gamma(X, \mathbf{D}_X \mathcal{F}^\bullet)$$
-이다. 두 변을 같게 두면 첫 동형이 성립한다. cohomology 차원의 식은, field $$k$$ 위에서 dual functor $$R\Hom_k(-, k)$$이 exact하여 $$H^j(C^\bullet{}^\vee) = (H^{-j}(C^\bullet))^\vee$$이 성립하므로 얻어진다.
+이다. 두 변을 같게 두면 첫 동형이 성립한다. Cohomology 차원의 식은, field $$k$$ 위에서 dual functor $$R\Hom_k(-, k)$$이 exact하여 $$H^j(C^\bullet{}^\vee) = (H^{-j}(C^\bullet))^\vee$$이 성립하므로 얻어진다.
 :::
 
-cohomological 형태 $$H^j(X, \mathbf{D}_X \mathcal{F}) \cong H^{-j}_c(X, \mathcal{F})^\vee$$이 모든 sheaf complex에 대해 성립한다는 점이 고전적 Poincaré 쌍대성을 넘어서는 일반성이다. 우변의 콤팩트 받침 cohomology가 차수의 부호를 뒤집어 좌변의 통상적 cohomology와 짝지어진다. field $$k$$를 택한 것이 결정적인데, $$\mathbb{Z}$$ 계수에서는 $$R\Hom_\mathbb{Z}(-, \mathbb{Z})$$이 $$\Ext^1_\mathbb{Z}$$ 항을 만들어 universal coefficient 보정이 붙으므로 위의 깔끔한 차수별 동형 대신 짧은 완전열이 끼어든다.
+cohomological 형태 $$H^j(X, \mathbf{D}_X \mathcal{F}) \cong H^{-j}_c(X, \mathcal{F})^\vee$$이 모든 sheaf complex에 대해 성립한다는 점이 고전적 Poincaré 쌍대성을 넘어서는 일반성이다. 우변의 콤팩트 받침 cohomology가 차수의 부호를 뒤집어 좌변의 통상적 cohomology와 짝지어진다. Field $$k$$를 택한 것이 결정적인데, $$\mathbb{Z}$$ 계수에서는 $$R\Hom_\mathbb{Z}(-, \mathbb{Z})$$이 $$\Ext^1_\mathbb{Z}$$ 항을 만들어 universal coefficient 보정이 붙으므로 위의 깔끔한 차수별 동형 대신 짧은 완전열이 끼어든다.
 
 ## Constructible complex와 biduality
 
@@ -124,7 +124,7 @@ biduality가 성립하면 $$\mathbf{D}_X$$는 다른 다섯 함자와의 호환 
 ::: 명제 8
 Compactifiable map $$f: X \to Y$$와 $$\mathcal{F}^\bullet \in D^b_c(X)$$, $$\mathcal{G}^\bullet \in D^b_c(Y)$$에 대해 자연스러운 동형
 $$\mathbf{D}_Y(Rf_! \mathcal{F}^\bullet) \cong Rf_\ast(\mathbf{D}_X \mathcal{F}^\bullet), \qquad f^!(\mathbf{D}_Y \mathcal{G}^\bullet) \cong \mathbf{D}_X(f^{-1}\mathcal{G}^\bullet)$$
-이 성립한다. biduality와 결합하면 이로부터 $$Rf_! \cong \mathbf{D}_Y Rf_\ast \mathbf{D}_X$$와 $$f^! \cong \mathbf{D}_X f^{-1} \mathbf{D}_Y$$을 얻는다.
+이 성립한다. Biduality와 결합하면 이로부터 $$Rf_! \cong \mathbf{D}_Y Rf_\ast \mathbf{D}_X$$와 $$f^! \cong \mathbf{D}_X f^{-1} \mathbf{D}_Y$$을 얻는다.
 :::
 ::: 증명
 첫 동형은 [정리 4](#thm4)의 국소적 형태에서 $$\mathcal{G}^\bullet$$를 $$\omega_Y$$로 둔 경우이다. 그러면 좌변은 $$Rf_\ast R\mathcal{H}om(\mathcal{F}^\bullet, f^!\omega_Y)$$인데, $$a_Y f = a_X$$이므로 $$f^! \omega_Y = f^! a_Y^! k = (a_Y f)^! k = a_X^! k = \omega_X$$이고, 따라서 좌변은 $$Rf_\ast R\mathcal{H}om(\mathcal{F}^\bullet, \omega_X) = Rf_\ast(\mathbf{D}_X \mathcal{F}^\bullet)$$이다. 우변은 $$R\mathcal{H}om(Rf_!\mathcal{F}^\bullet, \omega_Y) = \mathbf{D}_Y(Rf_!\mathcal{F}^\bullet)$$이다. 이로써 첫 동형이 성립한다.
@@ -174,7 +174,7 @@ $$\mathcal{H}^{-2}(\omega_X)_0 \cong k^2, \qquad \mathcal{H}^{-1}(\omega_X)_0 \c
 임을 보인다. 이는 $$2$$차원 다양체라면 가졌을 $$\omega \cong k_X[2]$$의 stalk, 즉 $$\mathcal{H}^{-2} \cong k$$, $$\mathcal{H}^{-1} \cong 0$$과 다르다.
 :::
 
-계산은 [명제 3](#prop3)에 기반한 국소적 묘사에서 출발한다. dualizing complex의 stalk는 작은 열린근방의 쌍대성으로 표현되는데, [명제 3](#prop3)에 의해 열린근방 $$U \ni 0$$ 위에서 $$\omega_X\vert_U = \omega_U$$이므로
+계산은 [명제 3](#prop3)에 기반한 국소적 묘사에서 출발한다. Dualizing complex의 stalk는 작은 열린근방의 쌍대성으로 표현되는데, [명제 3](#prop3)에 의해 열린근방 $$U \ni 0$$ 위에서 $$\omega_X\vert_U = \omega_U$$이므로
 $$\mathcal{H}^j(\omega_X)_0 = \varinjlim_{U \ni 0} H^j(U, \omega_U) = \varinjlim_{U \ni 0} H^j(U, \mathbf{D}_U k_U)$$
 이고, [따름정리 5](#cor5)를 $$U$$ 위에서 $$\mathcal{F}^\bullet = k_U$$에 적용하면 $$H^j(U, \mathbf{D}_U k_U) \cong H^{-j}_c(U, k)^\vee$$이다. 따라서 충분히 작은 원뿔형 근방 $$U$$에 대한 콤팩트 받침 cohomology $$H^\bullet_c(U, k)$$을 계산하면 된다. (이 colimit은 원뿔형 근방들의 cofinal 계열 위에서 안정화되며, 그 극한값이 곧 stalk이다. 이 사실은 $$\mathcal{H}^{-i}(\omega_X)_0 \cong H^{BM}_i(U)$$, 즉 dualizing complex의 stalk가 국소 Borel–Moore homology라는 표준적 해석의 한 형태이다.)
 
@@ -182,7 +182,7 @@ $$\mathcal{H}^j(\omega_X)_0 = \varinjlim_{U \ni 0} H^j(U, \omega_U) = \varinjlim
 $$H^1_c(V, k) \cong k^2, \qquad H^2_c(V, k) \cong k^2$$
 이고 나머지 차수는 $$0$$이다. 한편 $$H^q_c(\{0\}, k) = H^q(\{0\}, k)$$은 $$q = 0$$에서 $$k$$, 그 외 $$0$$이다.
 
-recollement triangle이 주는 long exact sequence
+Recollement triangle이 주는 long exact sequence
 $$\cdots \to H^q_c(V) \to H^q_c(U) \to H^q(\{0\}) \to H^{q+1}_c(V) \to \cdots$$
 를 차수별로 읽는다. $$U$$가 연결이고 콤팩트하지 않으므로 $$H^0_c(U) = 0$$이며, 따라서 $$q = 0$$ 부분
 $$0 = H^0_c(V) \to H^0_c(U) = 0 \to H^0(\{0\}) = k \xrightarrow{\delta} H^1_c(V) = k^2 \to H^1_c(U) \to H^1(\{0\}) = 0$$

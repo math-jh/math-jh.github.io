@@ -106,7 +106,7 @@ $$d_{ij}=\dim(V_i\cap E_j)=\#\{k\leq i\mid w(k)\leq j\}$$
 
 을 만족한다는 것이다. 즉, 이러한 방식으로 $$V_\bullet$$의 상대적인 위치가 $$W$$의 원소와 일대일로 대응되며, $$BwB$$는 상대적 위치가 $$w$$인 모든 $$g$$들의 모임이다. 이 때 각 조각 $$BwB$$를 *Bruhat cell*이라 부른다. 
 
-이는 그 이름 그대로 open cell을 이룬다. 구체적으로, $$B$$는 maximal torus $$T$$와 unipotent radical의 semidirect product $$B=U\rtimes T$$로 분해되며, 이 unipotent radical $$U$$는 positive root들의 subgroup의 곱 $$U=\prod_{\alpha\in\Phi^+}U_\alpha$$ (각 $$U_\alpha\cong\mathbb{G}_a$$)이다. opposite Borel subgroup $$B^-$$의 unipotent radical을 $$U^-$$라 할 때, 각 $$w\in W$$에 대하여
+이는 그 이름 그대로 open cell을 이룬다. 구체적으로, $$B$$는 maximal torus $$T$$와 unipotent radical의 semidirect product $$B=U\rtimes T$$로 분해되며, 이 unipotent radical $$U$$는 positive root들의 subgroup의 곱 $$U=\prod_{\alpha\in\Phi^+}U_\alpha$$ (각 $$U_\alpha\cong\mathbb{G}_a$$)이다. Opposite Borel subgroup $$B^-$$의 unipotent radical을 $$U^-$$라 할 때, 각 $$w\in W$$에 대하여
 
 $$U_w=U\cap wU^-w^{-1}$$
 
@@ -377,7 +377,7 @@ $$X_{2413}=\{V\in\Gr(2,4)\mid\dim(V\cap E_2)\ge1\},$$
 Maximal torus $$T\subseteq B$$의 $$G/P$$ 위 작용에 대하여, fixed point는 정확히 coordinate point $$wP$$ ($$w\in W^P$$)들이며, 각 Bruhat cell $$X_w^\circ$$마다 하나씩 들어 있다.
 :::
 ::: 증명
-우선 각 coordinate point가 fixed point이다. $$w$$의 대표원소 $$\dot w\in N_G(T)$$에 대하여 $$\dot w^{-1}t\dot w\in T\subseteq P$$이므로 $$t\cdot\dot wP=\dot w(\dot w^{-1}t\dot w)P=\dot wP$$이기 때문이다. 역으로 fixed point $$x$$를 잡으면, Bruhat 분해에 의해 $$x$$는 어떤 cell $$X_w^\circ=BwP/P$$에 속하고, $$T\subseteq B$$이므로 각 cell은 $$T$$-stable이다. 그런데 cell의 좌표화 $$X_w^\circ\cong\mathbb{A}^{\ell(w)}$$에서 $$T$$는 각 좌표를 nontrivial character로 scale한다. type $$A$$에서는 이를 [예시 15](#ex15)의 행렬 좌표에서 직접 볼 수 있는데, $$t=\diag(t_1,\ldots,t_n)$$는 pivot이 열 $$p$$인 행의 자유 성분 (열 $$b$$ 자리)을 $$t_bt_p^{-1}$$배 한다 (각 행을 $$t$$로 옮긴 뒤 pivot을 다시 $$1$$로 정규화하면 된다). 일반형에서는 cell이 root subgroup들의 곱 $$\prod_\alpha U_\alpha$$로 좌표화되고 $$T$$-conjugation이 각 $$U_\alpha\cong\mathbb{G}_a$$ 위에 root $$\alpha$$로 작용한다 ([Spr] 참조). 어느 쪽이든 모든 character가 nontrivial하므로, 좌표가 모두 $$0$$인 원점, 곧 $$wP$$만이 그 cell의 fixed point이다.
+우선 각 coordinate point가 fixed point이다. $$w$$의 대표원소 $$\dot w\in N_G(T)$$에 대하여 $$\dot w^{-1}t\dot w\in T\subseteq P$$이므로 $$t\cdot\dot wP=\dot w(\dot w^{-1}t\dot w)P=\dot wP$$이기 때문이다. 역으로 fixed point $$x$$를 잡으면, Bruhat 분해에 의해 $$x$$는 어떤 cell $$X_w^\circ=BwP/P$$에 속하고, $$T\subseteq B$$이므로 각 cell은 $$T$$-stable이다. 그런데 cell의 좌표화 $$X_w^\circ\cong\mathbb{A}^{\ell(w)}$$에서 $$T$$는 각 좌표를 nontrivial character로 scale한다. Type $$A$$에서는 이를 [예시 15](#ex15)의 행렬 좌표에서 직접 볼 수 있는데, $$t=\diag(t_1,\ldots,t_n)$$는 pivot이 열 $$p$$인 행의 자유 성분 (열 $$b$$ 자리)을 $$t_bt_p^{-1}$$배 한다 (각 행을 $$t$$로 옮긴 뒤 pivot을 다시 $$1$$로 정규화하면 된다). 일반형에서는 cell이 root subgroup들의 곱 $$\prod_\alpha U_\alpha$$로 좌표화되고 $$T$$-conjugation이 각 $$U_\alpha\cong\mathbb{G}_a$$ 위에 root $$\alpha$$로 작용한다 ([Spr] 참조). 어느 쪽이든 모든 character가 nontrivial하므로, 좌표가 모두 $$0$$인 원점, 곧 $$wP$$만이 그 cell의 fixed point이다.
 :::
 
 특히 fixed point의 개수는 $$\lvert W^P\rvert$$로 유한하다. $$\Gr(2,4)$$에서는 [예시 15](#ex15)의 여섯 coordinate flag가 그 전부이며, complete flag variety $$\Fl_n$$에서는 좌표 flag $$E^w_\bullet$$ ($$w\in S_n$$)들 $$n!$$개가 전부이다.

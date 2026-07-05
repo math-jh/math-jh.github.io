@@ -1,6 +1,6 @@
 ---
 title: "복소 스펙트럼 정리"
-description: "복소내적공간 위에서 self-adjoint operator를 일반화한 normal operator를 정의하고, normal operator가 정확히 orthonormal basis로 대각화되는 작용소임을 증명한다. self-adjoint operator의 실고윳값과 unitary operator의 단위원 고윳값을 특수한 경우로 얻는다."
+description: "복소내적공간 위에서 self-adjoint operator를 일반화한 normal operator를 정의하고, normal operator가 정확히 orthonormal basis로 대각화되는 작용소임을 증명한다. Self-adjoint operator의 실고윳값과 unitary operator의 단위원 고윳값을 특수한 경우로 얻는다."
 excerpt: "normal operator의 unitary 대각화"
 
 categories: [Math / Linear Algebra]
@@ -17,7 +17,7 @@ weight: 121
 
 [§스펙트럼 정리](/ko/math/linear_algebra/spectral_theorem)에서 우리는 $$\mathbb{R}$$-내적공간 위의 self-adjoint operator가 정확히 orthonormal basis로 대각화됨을 보았으며, 그 과정에서 필수적으로 $$\mathbb{C}$$로 올라가야 했었다. 이제 우리는 복소수 행렬들에 대해 spectral theorem이 어떠한 정리를 주는지를 살펴본다. 
 
-## self-adjoint operator와 normal operator
+## Self-adjoint operator와 normal operator
 
 우선 첫 단계는 실수의 경우와 똑같이 자기 자신과 adjoint가 일치하는 operator에 이름을 붙여주는 것이다. 
 

@@ -1,6 +1,6 @@
 ---
 title: "매끄러운 사상과 étale 사상"
-description: "스킴 사상의 매끄러움을 flat이면서 모든 기하적 올이 정칙인 유한표시 사상으로 정의하고, cotangent sheaf가 상대차원만큼의 국소자유층임과 동치임을 본다. unramified 사상을 대각선이 열린 immersion인 경우로 특징짓고, étale 사상을 매끄럽고 unramified한 상대차원 0의 사상으로 도입하며 standard étale 모형과 Jacobian 판정, square-zero 확대에 대한 무한소 lifting 판정을 다룬다."
+description: "스킴 사상의 매끄러움을 flat이면서 모든 기하적 올이 정칙인 유한표시 사상으로 정의하고, cotangent sheaf가 상대차원만큼의 국소자유층임과 동치임을 본다. Unramified 사상을 대각선이 열린 immersion인 경우로 특징짓고, étale 사상을 매끄럽고 unramified한 상대차원 0의 사상으로 도입하며 standard étale 모형과 Jacobian 판정, square-zero 확대에 대한 무한소 lifting 판정을 다룬다."
 excerpt: "Smooth, unramified, and étale morphisms; the Jacobian and infinitesimal lifting criteria"
 
 categories: [Math / Scheme Theory]

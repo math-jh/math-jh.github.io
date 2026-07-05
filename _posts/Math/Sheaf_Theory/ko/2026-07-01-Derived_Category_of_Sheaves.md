@@ -161,7 +161,7 @@ $$\Hom_{D(\operatorname{Mod}(\mathcal{O}_X))}(Lf^\ast \mathcal{G}^\bullet, \math
 
 이 adjunction은 sheaf 이론의 기본적인 functoriality를 derived 차원에서 한 줄로 정리한다. 특히 $$f: X \to \{\ast\}$$의 경우 [따름정리 3](#cor3)에 의해 $$Rf_\ast = R\Gamma(X, -)$$이고, $$f^{-1}$$은 abelian group $$A$$를 constant sheaf $$A_X$$로 보내므로, adjunction의 첫 부분은 $$\Hom_{D(\Ab)}(A, R\Gamma(X, \mathcal{F}^\bullet)) \cong \Hom_{D(\Sh(X))}(A_X, \mathcal{F}^\bullet)$$의 형태가 되어, constant sheaf로부터의 morphism이 cohomology를 계산하는 통로임을 derived 차원에서 보여 준다.
 
-derived category로 옮긴 가장 큰 이득은 합성에서 드러난다. 미유도 차원에서 $$(gf)_\ast = g_\ast f_\ast$$는 자명하지만, 그 유도 버전의 관계는 spectral sequence를 거쳐야만 기술된다. derived category에서는 이것이 단일한 동형으로 정리된다.
+derived category로 옮긴 가장 큰 이득은 합성에서 드러난다. 미유도 차원에서 $$(gf)_\ast = g_\ast f_\ast$$는 자명하지만, 그 유도 버전의 관계는 spectral sequence를 거쳐야만 기술된다. Derived category에서는 이것이 단일한 동형으로 정리된다.
 
 ::: 정리 10 (Grothendieck 합성 함자 정리)
 Continuous map $$f: X \to Y$$, $$g: Y \to Z$$에 대해 $$D^+(\Sh(X))$$ 위에서 자연스러운 동형
@@ -180,7 +180,7 @@ $$R(gf)_\ast \mathcal{F}^\bullet = g_\ast f_\ast \mathcal{I}^\bullet = Rg_\ast(f
 $$E_2^{p,q} = R^p g_\ast (R^q f_\ast \mathcal{F}) \Rightarrow R^{p+q}(gf)_\ast \mathcal{F}$$
 이다. 특히 $$Z = \{\ast\}$$로 두면 $$R^p g_\ast = H^p(Y, -)$$, $$R^{p+q}(gf)_\ast = H^{p+q}(X, -)$$가 되어
 $$E_2^{p,q} = H^p(Y, R^q f_\ast \mathcal{F}) \Rightarrow H^{p+q}(X, \mathcal{F})$$
-를 얻는다. 이것이 바로 [\[대수다양체\] §층 코호몰로지, ⁋명제 19](/ko/math/algebraic_varieties/sheaf_cohomology#prop19)에서 Cartan-Eilenberg resolution을 통해 직접 구성하였던 Leray spectral sequence이다. derived category의 관점에서 보면 Leray spectral sequence는 독립된 정리가 아니라 합성 동형 $$R(gf)_\ast \cong Rg_\ast Rf_\ast$$의 cohomology를 계산하는 한 가지 방법일 뿐이다. 같은 논법을 $$R\Gamma(X, R\mathcal{H}om(\mathcal{F}, \mathcal{G}))$$에 적용하면 local-to-global $$\Ext$$ spectral sequence $$E_2^{p,q} = H^p(X, \mathcal{E}xt^q(\mathcal{F}, \mathcal{G})) \Rightarrow \Ext^{p+q}(\mathcal{F}, \mathcal{G})$$를 같은 방식으로 얻는다.
+를 얻는다. 이것이 바로 [\[대수다양체\] §층 코호몰로지, ⁋명제 19](/ko/math/algebraic_varieties/sheaf_cohomology#prop19)에서 Cartan-Eilenberg resolution을 통해 직접 구성하였던 Leray spectral sequence이다. Derived category의 관점에서 보면 Leray spectral sequence는 독립된 정리가 아니라 합성 동형 $$R(gf)_\ast \cong Rg_\ast Rf_\ast$$의 cohomology를 계산하는 한 가지 방법일 뿐이다. 같은 논법을 $$R\Gamma(X, R\mathcal{H}om(\mathcal{F}, \mathcal{G}))$$에 적용하면 local-to-global $$\Ext$$ spectral sequence $$E_2^{p,q} = H^p(X, \mathcal{E}xt^q(\mathcal{F}, \mathcal{G})) \Rightarrow \Ext^{p+q}(\mathcal{F}, \mathcal{G})$$를 같은 방식으로 얻는다.
 
 ## Torus 위의 유도 당김과 Leray 분해
 
@@ -210,7 +210,7 @@ $$E_2^{0,0} = H^0(S^1, \mathbb{Z}_{S^1}) = \mathbb{Z}, \quad E_2^{1,0} = H^1(S^1
 $$H^0(T^2, \mathbb{Z}) = E_\infty^{0,0} = \mathbb{Z}, \qquad H^1(T^2, \mathbb{Z}) = E_\infty^{1,0} \oplus E_\infty^{0,1} = \mathbb{Z}^2, \qquad H^2(T^2, \mathbb{Z}) = E_\infty^{1,1} = \mathbb{Z}$$
 를 얻는다. 등급 군의 확장이 자유 $$\mathbb{Z}$$-module 사이의 것이라 분열되므로 $$H^1$$이 두 항의 직합이 된다. 이는 torus의 well-known한 cohomology $$H^\ast(T^2, \mathbb{Z}) = (\mathbb{Z}, \mathbb{Z}^2, \mathbb{Z})$$와 일치하며, derived pushforward $$Rp_\ast \mathbb{Z}_{T^2}$$가 fiber와 base의 cohomology를 어떻게 결합하는지를 명시적으로 보여 준다.
 
-이 계산에서 fibration이 곱구조라 monodromy가 없었기에 $$R^1 p_\ast$$가 constant sheaf가 되었지만, Klein bottle처럼 fiber가 부호를 바꾸며 붙는 비자명한 $$S^1$$-bundle에서는 $$R^1 p_\ast$$가 비자명한 monodromy를 갖는 rank $$1$$ local system이 되어 $$H^1$$의 계산이 달라진다. derived pushforward $$Rp_\ast$$는 이러한 fiber 위의 비틀림 정보를 base 위의 sheaf로 충실히 기록한다.
+이 계산에서 fibration이 곱구조라 monodromy가 없었기에 $$R^1 p_\ast$$가 constant sheaf가 되었지만, Klein bottle처럼 fiber가 부호를 바꾸며 붙는 비자명한 $$S^1$$-bundle에서는 $$R^1 p_\ast$$가 비자명한 monodromy를 갖는 rank $$1$$ local system이 되어 $$H^1$$의 계산이 달라진다. Derived pushforward $$Rp_\ast$$는 이러한 fiber 위의 비틀림 정보를 base 위의 sheaf로 충실히 기록한다.
 
 ---
 

@@ -152,7 +152,7 @@ $$\dim V$$에 대한 귀납법으로 보인다. $$V=0$$이면 빈 직합으로�
 $$\mathfrak{g}$$가 semisimple이면, adjoint representation $$\ad:\mathfrak{g}\rightarrow\gl(\mathfrak{g})$$는 완전가약이다. 그 기약 성분은 정확히 [§Killing 형식과 Cartan 판정법, ⁋정리 10](/ko/math/lie_theory/killing_form_and_cartan_criterion#thm10)의 simple ideal 분해 $$\mathfrak{g}=\mathfrak{g}_1\oplus\cdots\oplus\mathfrak{g}_r$$의 각 $$\mathfrak{g}_i$$이다.
 :::
 ::: 증명
-[정리 7](#thm7)을 표현 $$\ad:\mathfrak{g}\rightarrow\gl(\mathfrak{g})$$에 적용하면 $$\mathfrak{g}$$가 adjoint action에 대한 기약 부분표현들의 직합으로 분해된다. adjoint action에 대한 부분표현이란 정확히 $$\ad(\mathfrak{g})$$-불변 부분공간, 곧 $$\mathfrak{g}$$의 ideal이며, 그것이 기약이라는 것은 $$0$$이 아닌 진부분 ideal을 갖지 않는다는 것이다. abelian이 아닌 ideal 가운데 그러한 것이 simple ideal이므로, 기약 성분들은 simple ideal이다. (자명 표현으로 나타나는 abelian 성분이 있다면 그것은 $$\mathfrak{g}$$의 $$0$$이 아닌 abelian, 따라서 solvable인 ideal이 되어 semisimple성에 모순이므로 존재하지 않는다.)
+[정리 7](#thm7)을 표현 $$\ad:\mathfrak{g}\rightarrow\gl(\mathfrak{g})$$에 적용하면 $$\mathfrak{g}$$가 adjoint action에 대한 기약 부분표현들의 직합으로 분해된다. Adjoint action에 대한 부분표현이란 정확히 $$\ad(\mathfrak{g})$$-불변 부분공간, 곧 $$\mathfrak{g}$$의 ideal이며, 그것이 기약이라는 것은 $$0$$이 아닌 진부분 ideal을 갖지 않는다는 것이다. Abelian이 아닌 ideal 가운데 그러한 것이 simple ideal이므로, 기약 성분들은 simple ideal이다. (자명 표현으로 나타나는 abelian 성분이 있다면 그것은 $$\mathfrak{g}$$의 $$0$$이 아닌 abelian, 따라서 solvable인 ideal이 되어 semisimple성에 모순이므로 존재하지 않는다.)
 
 따라서 분해의 각 성분은 simple ideal이고, [§Killing 형식과 Cartan 판정법, ⁋정리 10](/ko/math/lie_theory/killing_form_and_cartan_criterion#thm10)에 의해 $$\mathfrak{g}$$의 simple ideal들은 유일하게 결정되므로, adjoint representation의 기약 분해는 simple ideal 분해 $$\mathfrak{g}=\mathfrak{g}_1\oplus\cdots\oplus\mathfrak{g}_r$$과 일치한다.
 :::

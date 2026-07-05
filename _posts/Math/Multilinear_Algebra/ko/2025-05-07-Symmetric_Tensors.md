@@ -349,7 +349,7 @@ $$s_k=\sum_{\substack{H\subset \{1,\ldots, n\}\\\lvert H\rvert=k}}\prod_{i\in H}
 $$s_0=1,\quad s_1=\sum_{i=1}^n \x_i,\quad s_2=\sum_{1\leq i< j\leq n} \x_i\x_j,\quad \cdots \quad s_n=\x_1\cdots\x_n$$
 
 으로 주어진다. 그럼 귀납법을 통해 $$s_i$$들이 $$A$$ 위에서 
-algebraically independent인 것을 보일 수 있다. 즉, 다음의 식
+Algebraically independent인 것을 보일 수 있다. 즉, 다음의 식
 
 $$u(s_0,\ldots, s_n)=0$$
 

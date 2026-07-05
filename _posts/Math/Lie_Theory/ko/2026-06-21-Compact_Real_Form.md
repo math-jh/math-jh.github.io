@@ -34,7 +34,7 @@ $$(\mathfrak{g}_0)_{\mathbb{C}}=\mathfrak{g}_0\otimes_{\mathbb{R}}\mathbb{C}\xri
 이 존재하는 것이다.
 :::
 
-복소화의 bracket이 $$\mathbb{C}$$-bilinear가 되도록 위와 같이 잘 정의됨은 $$\mathfrak{g}_0$$의 bracket이 $$\mathbb{R}$$-bilinear라는 데에서 곧바로 따른다. 실 벡터공간으로서 $$\mathfrak{g}_0\otimes_{\mathbb{R}}\mathbb{C}=\mathfrak{g}_0\oplus i\mathfrak{g}_0$$이므로, real form을 가진 $$\mathfrak{g}$$는 $$\dim_{\mathbb{C}}\mathfrak{g}=\dim_{\mathbb{R}}\mathfrak{g}_0$$을 만족한다. real form을 등가적으로 기술하는 것은 $$\mathfrak{g}$$ 위의 *conjugation*, 곧 복소 켤레의 추상적 대응물이다.
+복소화의 bracket이 $$\mathbb{C}$$-bilinear가 되도록 위와 같이 잘 정의됨은 $$\mathfrak{g}_0$$의 bracket이 $$\mathbb{R}$$-bilinear라는 데에서 곧바로 따른다. 실 벡터공간으로서 $$\mathfrak{g}_0\otimes_{\mathbb{R}}\mathbb{C}=\mathfrak{g}_0\oplus i\mathfrak{g}_0$$이므로, real form을 가진 $$\mathfrak{g}$$는 $$\dim_{\mathbb{C}}\mathfrak{g}=\dim_{\mathbb{R}}\mathfrak{g}_0$$을 만족한다. Real form을 등가적으로 기술하는 것은 $$\mathfrak{g}$$ 위의 *conjugation*, 곧 복소 켤레의 추상적 대응물이다.
 
 ::: 정의 2
 $$\mathbb{C}$$ 위의 Lie algebra $$\mathfrak{g}$$ 위에서 *conjugation<sub>켤레</sub>*은 다음을 만족하는 사상 $$\tau:\mathfrak{g}\rightarrow\mathfrak{g}$$이다.
@@ -63,7 +63,7 @@ Real form의 이름에 붙은 "compact"는 그 real form에 대응하는 연결 
 복소 semisimple Lie algebra $$\mathfrak{g}$$의 real form $$\mathfrak{u}$$가 *compact real form<sub>콤팩트 실형식</sub>*이라는 것은 $$\mathfrak{u}$$의 Killing form $$\kappa_{\mathfrak{u}}$$가 음의 정부호, 곧 모든 $$0\neq x\in\mathfrak{u}$$에 대하여 $$\kappa_{\mathfrak{u}}(x,x)<0$$인 것이다.
 :::
 
-음의 정부호인 Killing form은 그 자체로 nondegenerate이므로, compact real form $$\mathfrak{u}$$는 [§Killing 형식과 Cartan 판정법, ⁋정리 9](/ko/math/lie_theory/killing_form_and_cartan_criterion#thm9)에 의해 semisimple이다. 이 정의가 "compact"라는 이름을 정당화하는 까닭은 다음과 같다. $$\mathfrak{u}$$의 연결 단순연결 Lie group을 $$U$$라 하면 ([§리 군, ⁋정리 15](/ko/math/lie_theory/Lie_groups#thm15)), $$-\kappa_{\mathfrak{u}}$$는 $$\mathfrak{u}$$ 위의 양의 정부호 inner product이고 Killing form이 $$\Aut(\mathfrak{u})$$-불변이므로 ([§Killing 형식과 Cartan 판정법, ⁋명제 3](/ko/math/lie_theory/killing_form_and_cartan_criterion#prop3)) $$\Ad(U)$$-불변이다. 따라서 $$\Ad:U\rightarrow\GL(\mathfrak{u})$$의 상은 직교군 $$\mathrm{O}(\mathfrak{u},-\kappa_{\mathfrak{u}})$$ 안에 들어가는 closed subgroup이고, 이는 compact이다. semisimple의 경우 $$\ker\Ad=Z(U)$$가 이산이고 유한하므로 $$U$$ 자신도 compact가 된다. 우리는 이 군론적 사실을 동기로만 사용하고, 이후의 논증은 Killing form의 부호 조건만으로 진행한다.
+음의 정부호인 Killing form은 그 자체로 nondegenerate이므로, compact real form $$\mathfrak{u}$$는 [§Killing 형식과 Cartan 판정법, ⁋정리 9](/ko/math/lie_theory/killing_form_and_cartan_criterion#thm9)에 의해 semisimple이다. 이 정의가 "compact"라는 이름을 정당화하는 까닭은 다음과 같다. $$\mathfrak{u}$$의 연결 단순연결 Lie group을 $$U$$라 하면 ([§리 군, ⁋정리 15](/ko/math/lie_theory/Lie_groups#thm15)), $$-\kappa_{\mathfrak{u}}$$는 $$\mathfrak{u}$$ 위의 양의 정부호 inner product이고 Killing form이 $$\Aut(\mathfrak{u})$$-불변이므로 ([§Killing 형식과 Cartan 판정법, ⁋명제 3](/ko/math/lie_theory/killing_form_and_cartan_criterion#prop3)) $$\Ad(U)$$-불변이다. 따라서 $$\Ad:U\rightarrow\GL(\mathfrak{u})$$의 상은 직교군 $$\mathrm{O}(\mathfrak{u},-\kappa_{\mathfrak{u}})$$ 안에 들어가는 closed subgroup이고, 이는 compact이다. Semisimple의 경우 $$\ker\Ad=Z(U)$$가 이산이고 유한하므로 $$U$$ 자신도 compact가 된다. 우리는 이 군론적 사실을 동기로만 사용하고, 이후의 논증은 Killing form의 부호 조건만으로 진행한다.
 
 ::: 예시 5
 $$\su(n)$$은 trace가 $$0$$인 skew-Hermitian 복소행렬들의 실 Lie algebra, 곧
@@ -193,7 +193,7 @@ $$\langle-,-\rangle_0$$을 $$V$$ 위의 임의의 Hermitian inner product라 하
 
 $$\langle v,w\rangle=\int_U\langle\rho(u)v,\rho(u)w\rangle_0\,du$$
 
-로 평균낸 form을 정의한다. compactness가 이 적분의 수렴과 $$du$$의 존재를 보장하며, 적분 안의 각 피적분 함수가 양의 정부호 Hermitian form이므로 $$\langle-,-\rangle$$도 양의 정부호 Hermitian form이다. Haar measure의 좌불변성에서 임의의 $$g\in U$$에 대하여
+로 평균낸 form을 정의한다. Compactness가 이 적분의 수렴과 $$du$$의 존재를 보장하며, 적분 안의 각 피적분 함수가 양의 정부호 Hermitian form이므로 $$\langle-,-\rangle$$도 양의 정부호 Hermitian form이다. Haar measure의 좌불변성에서 임의의 $$g\in U$$에 대하여
 
 $$\langle\rho(g)v,\rho(g)w\rangle=\int_U\langle\rho(ug)v,\rho(ug)w\rangle_0\,du=\langle v,w\rangle$$
 

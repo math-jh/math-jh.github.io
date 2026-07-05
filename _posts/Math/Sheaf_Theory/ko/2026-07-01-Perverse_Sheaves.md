@@ -24,7 +24,7 @@ published: false
 
 ## t-structure의 정의
 
-Triangulated 범주는 그 자체로 abelian 범주가 아니다. ([\[호몰로지 대수학\] §유도카테고리, ⁋정의 11](/ko/math/homological_algebra/derived_categories#def11)) 유도 범주 $$D(\mathcal{A})$$에는 kernel과 cokernel이 없고, 대신 distinguished triangle이 short exact sequence의 역할을 대신한다. 그러나 $$D(\mathcal{A})$$에는 원래의 abelian 범주 $$\mathcal{A}$$가 차수 $$0$$에 집중된 complex로 다시 박혀 있으며, 임의의 complex에서 그 cohomology object $$H^i \in \mathcal{A}$$를 뽑아내는 함자가 있다. t-structure는 이 "어느 차수에 놓여 있는가"라는 정보와 "cohomology를 뽑아 abelian 범주로 떨어뜨리는" 조작을 임의의 triangulated 범주 위에서 공리화한 것이다.
+Triangulated 범주는 그 자체로 abelian 범주가 아니다. ([\[호몰로지 대수학\] §유도카테고리, ⁋정의 11](/ko/math/homological_algebra/derived_categories#def11)) 유도 범주 $$D(\mathcal{A})$$에는 kernel과 cokernel이 없고, 대신 distinguished triangle이 short exact sequence의 역할을 대신한다. 그러나 $$D(\mathcal{A})$$에는 원래의 abelian 범주 $$\mathcal{A}$$가 차수 $$0$$에 집중된 complex로 다시 박혀 있으며, 임의의 complex에서 그 cohomology object $$H^i \in \mathcal{A}$$를 뽑아내는 함자가 있다. T-structure는 이 "어느 차수에 놓여 있는가"라는 정보와 "cohomology를 뽑아 abelian 범주로 떨어뜨리는" 조작을 임의의 triangulated 범주 위에서 공리화한 것이다.
 
 ::: 정의 1
 Triangulated 범주 $$\mathcal{T}$$ 위의 *t-structure<sub>t-구조</sub>*는 충만한 부분범주들의 쌍 $$(\mathcal{T}^{\leq 0}, \mathcal{T}^{\geq 0})$$로서, $$\mathcal{T}^{\leq n} := \mathcal{T}^{\leq 0}[-n]$$, $$\mathcal{T}^{\geq n} := \mathcal{T}^{\geq 0}[-n]$$으로 적을 때 다음 세 조건을 만족하는 것이다.
@@ -36,7 +36,7 @@ $$A \longrightarrow X \longrightarrow B \xrightarrow{+1}$$
 이 존재하여 $$A \in \mathcal{T}^{\leq 0}$$, $$B \in \mathcal{T}^{\geq 1}$$이다.
 :::
 
-직관적으로 $$\mathcal{T}^{\leq 0}$$은 "차수 $$0$$ 이하에 놓인" 대상들, $$\mathcal{T}^{\geq 0}$$은 "차수 $$0$$ 이상에 놓인" 대상들의 모임이다. shift $$[-n]$$이 complex를 $$n$$칸 뒤로 밀므로 ([\[호몰로지 대수학\] §유도카테고리, ⁋정의 4](/ko/math/homological_algebra/derived_categories#def4)), $$\mathcal{T}^{\leq n} = \mathcal{T}^{\leq 0}[-n]$$은 "차수 $$n$$ 이하"를 뜻하고 첫째 조건은 $$\mathcal{T}^{\leq 0} \subseteq \mathcal{T}^{\leq 1} \subseteq \cdots$$, $$\cdots \subseteq \mathcal{T}^{\geq 1} \subseteq \mathcal{T}^{\geq 0}$$이라는 단조성을 말한다. 둘째 조건은 낮은 차수의 대상에서 더 높은 차수의 대상으로 가는 사상이 없다는 것이며, 셋째 조건은 임의의 대상을 낮은 부분 $$A$$와 높은 부분 $$B$$로 쪼개는 삼각형의 존재를 보장한다. 이 삼각형은 사실 유일하며, 그로부터 절단 함자가 나온다.
+직관적으로 $$\mathcal{T}^{\leq 0}$$은 "차수 $$0$$ 이하에 놓인" 대상들, $$\mathcal{T}^{\geq 0}$$은 "차수 $$0$$ 이상에 놓인" 대상들의 모임이다. Shift $$[-n]$$이 complex를 $$n$$칸 뒤로 밀므로 ([\[호몰로지 대수학\] §유도카테고리, ⁋정의 4](/ko/math/homological_algebra/derived_categories#def4)), $$\mathcal{T}^{\leq n} = \mathcal{T}^{\leq 0}[-n]$$은 "차수 $$n$$ 이하"를 뜻하고 첫째 조건은 $$\mathcal{T}^{\leq 0} \subseteq \mathcal{T}^{\leq 1} \subseteq \cdots$$, $$\cdots \subseteq \mathcal{T}^{\geq 1} \subseteq \mathcal{T}^{\geq 0}$$이라는 단조성을 말한다. 둘째 조건은 낮은 차수의 대상에서 더 높은 차수의 대상으로 가는 사상이 없다는 것이며, 셋째 조건은 임의의 대상을 낮은 부분 $$A$$와 높은 부분 $$B$$로 쪼개는 삼각형의 존재를 보장한다. 이 삼각형은 사실 유일하며, 그로부터 절단 함자가 나온다.
 
 ::: 명제 2
 $$(\mathcal{T}^{\leq 0}, \mathcal{T}^{\geq 0})$$이 t-structure이면 포함 함자 $$\mathcal{T}^{\leq n} \hookrightarrow \mathcal{T}$$는 오른쪽 수반 $$\tau_{\leq n}: \mathcal{T} \to \mathcal{T}^{\leq n}$$을, 포함 함자 $$\mathcal{T}^{\geq n} \hookrightarrow \mathcal{T}$$는 왼쪽 수반 $$\tau_{\geq n}: \mathcal{T} \to \mathcal{T}^{\geq n}$$을 가진다. 각 $$X$$에 대해 [정의 1](#def1)의 절단 삼각형은 유일하게 결정되며 $$X$$에 함자적이고, 표준적으로
@@ -61,7 +61,7 @@ $$H^0 := \tau_{\leq 0} \circ \tau_{\geq 0} \cong \tau_{\geq 0} \circ \tau_{\leq 
 으로 정의하고, $$n \in \mathbb{Z}$$에 대해 $$H^n(X) := H^0(X[n])$$으로 적는다.
 :::
 
-정의에서 두 절단의 합성이 순서에 무관함, 즉 $$\tau_{\leq 0}\tau_{\geq 0} \cong \tau_{\geq 0}\tau_{\leq 0}$$임은 절단 함자들의 형식적 성질에서 따라 나오며 ([BBD]의 Proposition 1.3.5), 그 공통의 값이 $$\mathcal{C}$$에 속한다. heart $$\mathcal{C}$$가 단순한 부분범주가 아니라 abelian 범주를 이룬다는 것이 t-structure 이론의 핵심 정리이다.
+정의에서 두 절단의 합성이 순서에 무관함, 즉 $$\tau_{\leq 0}\tau_{\geq 0} \cong \tau_{\geq 0}\tau_{\leq 0}$$임은 절단 함자들의 형식적 성질에서 따라 나오며 ([BBD]의 Proposition 1.3.5), 그 공통의 값이 $$\mathcal{C}$$에 속한다. Heart $$\mathcal{C}$$가 단순한 부분범주가 아니라 abelian 범주를 이룬다는 것이 t-structure 이론의 핵심 정리이다.
 
 ::: 정리 4
 t-structure의 heart $$\mathcal{C}$$는 abelian 범주이며, cohomology 함자 $$H^0: \mathcal{T} \to \mathcal{C}$$는 cohomological 함자이다. 즉 distinguished triangle $$X \to Y \to Z \xrightarrow{+1}$$에 대해 long exact sequence
@@ -71,7 +71,7 @@ $$\cdots \to H^n(X) \to H^n(Y) \to H^n(Z) \to H^{n+1}(X) \to \cdots$$
 ::: 증명
 핵심은 $$\mathcal{C}$$ 안의 사상 $$f: X \to Y$$에 대한 kernel과 cokernel을 절단으로 구성하는 것이다. $$\mathcal{T}$$ 안에서 $$f$$를 distinguished triangle $$X \xrightarrow{f} Y \to C \xrightarrow{+1}$$로 채우면 ([\[호몰로지 대수학\] §유도카테고리, ⁋정의 11](/ko/math/homological_algebra/derived_categories#def11))의 (TR1)에 의해 $$X, Y \in \mathcal{C} \subseteq \mathcal{T}^{\geq 0}$$이므로 $$C \in \mathcal{T}^{\geq -1}$$이고 마찬가지로 $$C \in \mathcal{T}^{\leq 0}$$이다. 그러면 $$\mathcal{C}$$ 안에서
 $$\ker f := H^{-1}(C) = \tau_{\leq 0}(C[-1]), \qquad \operatorname{coker} f := H^0(C) = \tau_{\geq 0}(C)$$
-으로 둘 수 있고, 직교성을 써서 이들이 kernel과 cokernel의 보편 성질을 만족함을 확인한다. abelian 범주의 나머지 공리, 곧 모든 monomorphism이 자기 cokernel의 kernel이라는 등의 성질도 절단과 직교성의 결합으로 따라 나온다. cohomology 함자가 cohomological임은, $$H^0$$이 절단의 합성이고 절단이 distinguished triangle을 적절히 절단된 삼각형으로 보낸다는 사실에서 나온다. 완전한 증명은 [BBD]의 Théorème 1.3.6에 있다.
+으로 둘 수 있고, 직교성을 써서 이들이 kernel과 cokernel의 보편 성질을 만족함을 확인한다. Abelian 범주의 나머지 공리, 곧 모든 monomorphism이 자기 cokernel의 kernel이라는 등의 성질도 절단과 직교성의 결합으로 따라 나온다. Cohomology 함자가 cohomological임은, $$H^0$$이 절단의 합성이고 절단이 distinguished triangle을 적절히 절단된 삼각형으로 보낸다는 사실에서 나온다. 완전한 증명은 [BBD]의 Théorème 1.3.6에 있다.
 :::
 
 t-structure가 추상적으로 무엇을 포착하는지는 가장 기본적인 예에서 분명해진다. 유도 범주 $$D(\mathcal{A})$$에는 원래의 abelian 범주 $$\mathcal{A}$$를 heart로 회복하는 t-structure가 있다.
@@ -84,11 +84,11 @@ $$D^{\leq 0}(\mathcal{A}) := \{ C^\bullet : H^i(C^\bullet) = 0 \text{ for } i > 
 
 세 공리를 점검한다. 포함 조건은 cohomology의 소멸 범위가 넓어지는 단조성이므로 자명하게 성립한다. 직교성은 $$C^\bullet \in D^{\leq 0}$$, $$D^\bullet \in D^{\geq 1}$$일 때 $$\Hom_{D(\mathcal{A})}(C^\bullet, D^\bullet) = 0$$임을 말하는데, $$D^\bullet$$을 차수 $$\geq 1$$에 놓인 $$K$$-injective resolution으로 바꾸고 $$C^\bullet$$의 cohomology가 차수 $$\leq 0$$에 갇혀 있음을 쓰면, chain map과 homotopy가 모두 차수 어긋남으로 소멸하여 derived 범주에서의 사상이 $$0$$이 된다. 절단 삼각형은 good truncation
 $$\tau_{\leq 0} C^\bullet = (\cdots \to C^{-1} \to \ker d^0 \to 0), \qquad \tau_{\geq 1} C^\bullet = (0 \to \operatorname{im} d^0 \to C^1 \to \cdots)$$
-이 주는 짧은 완전열에서 나온다. heart는 $$H^i = 0$$ ($$i \neq 0$$)인 complex들, 곧 한 차수에 집중된 complex들이고 이는 $$\mathcal{A}$$와 동치이다. 이 standard t-structure 위에서 [정리 4](#thm4)는 [\[호몰로지 대수학\] §유도카테고리, ⁋정의 11](/ko/math/homological_algebra/derived_categories#def11)의 삼각범주 공리가 주는 사실, 곧 $$\mathcal{A}$$가 abelian 범주이고 distinguished triangle이 cohomology long exact sequence를 준다는 것을 그대로 재생산한다. perverse 층의 이론은 같은 유도 범주 위에 standard t-structure와 *다른* t-structure를 얹고, 그 heart로 새로운 abelian 범주를 얻는 데에 있다.
+이 주는 짧은 완전열에서 나온다. Heart는 $$H^i = 0$$ ($$i \neq 0$$)인 complex들, 곧 한 차수에 집중된 complex들이고 이는 $$\mathcal{A}$$와 동치이다. 이 standard t-structure 위에서 [정리 4](#thm4)는 [\[호몰로지 대수학\] §유도카테고리, ⁋정의 11](/ko/math/homological_algebra/derived_categories#def11)의 삼각범주 공리가 주는 사실, 곧 $$\mathcal{A}$$가 abelian 범주이고 distinguished triangle이 cohomology long exact sequence를 준다는 것을 그대로 재생산한다. Perverse 층의 이론은 같은 유도 범주 위에 standard t-structure와 *다른* t-structure를 얹고, 그 heart로 새로운 abelian 범주를 얻는 데에 있다.
 
 ## Perverse (middle) t-structure
 
-이제 무대를 constructible 유도 범주로 옮긴다. $$X$$ 위의 유계 constructible complex들이 이루는 충만한 삼각부분범주 $$D^b_c(X)$$는 [§Verdier 쌍대성, ⁋정의 6](/ko/math/sheaf_theory/verdier_duality#def6)에서 정의하였고, 그것이 여섯 함자와 Verdier 쌍대 함자 $$\mathbf{D}_X$$ 모두에 대해 닫혀 있음을 그 글에서 확인하였다. standard t-structure의 support는 cohomology sheaf $$\mathcal{H}^i(\mathcal{F})$$가 어느 차수에서 살아 있는지만 보지만, constructible 세계에서는 각 $$\mathcal{H}^i$$가 받침을 갖는 부분다양체의 *차원*이라는 추가 정보가 있다. middle perversity t-structure는 차수와 차원을 한꺼번에 묶어, "cohomology가 높은 차수로 갈수록 받침이 그만큼 작아질 것"을 요구한다.
+이제 무대를 constructible 유도 범주로 옮긴다. $$X$$ 위의 유계 constructible complex들이 이루는 충만한 삼각부분범주 $$D^b_c(X)$$는 [§Verdier 쌍대성, ⁋정의 6](/ko/math/sheaf_theory/verdier_duality#def6)에서 정의하였고, 그것이 여섯 함자와 Verdier 쌍대 함자 $$\mathbf{D}_X$$ 모두에 대해 닫혀 있음을 그 글에서 확인하였다. Standard t-structure의 support는 cohomology sheaf $$\mathcal{H}^i(\mathcal{F})$$가 어느 차수에서 살아 있는지만 보지만, constructible 세계에서는 각 $$\mathcal{H}^i$$가 받침을 갖는 부분다양체의 *차원*이라는 추가 정보가 있다. Middle perversity t-structure는 차수와 차원을 한꺼번에 묶어, "cohomology가 높은 차수로 갈수록 받침이 그만큼 작아질 것"을 요구한다.
 
 ::: 정의 6
 $$\mathcal{F}^\bullet \in D^b_c(X)$$의 cohomology sheaf의 받침을 $$\operatorname{supp}\mathcal{H}^i(\mathcal{F}^\bullet) := \overline{\{x \in X : \mathcal{H}^i(\mathcal{F}^\bullet)_x \neq 0\}}$$로 적는다. *perverse t-structure* (middle perversity)를 다음 충만한 부분범주들로 정의한다.
@@ -103,13 +103,13 @@ $$\operatorname{Perv}(X) := {}^{p}D^{\leq 0}(X) \cap {}^{p}D^{\geq 0}(X)$$
 의 대상을 $$X$$ 위의 *perverse 층<sub>perverse sheaf</sub>*이라 부른다.
 :::
 
-support 조건은 차수 $$i$$가 커질수록 받침의 차원이 $$-i$$ 이하로 줄어들기를 요구하며, 특히 $$i > 0$$이면 $$\dim \operatorname{supp}\mathcal{H}^i \leq -i < 0$$이므로 $$\mathcal{H}^i = 0$$이다. 따라서 $${}^{p}D^{\leq 0}$$의 대상은 차수 $$\leq 0$$에 집중되고, 받침이 $$d$$차원인 곳에서는 차수 $$-d$$까지만 cohomology를 가질 수 있다. cosupport 조건은 이 제약을 $$\mathbf{D}_X$$로 옮긴 것으로, biduality $$\mathbf{D}_X^2 \cong \id$$ ([§Verdier 쌍대성, ⁋정리 7](/ko/math/sheaf_theory/verdier_duality#thm7)) 덕분에 두 조건이 $$\mathbf{D}_X$$ 아래에서 정확히 맞교환된다. 매끄러운 연결 $$n$$차원 다양체 $$X$$ 위의 rank 유한 local system $$L$$에 대해 $$L[n]$$을 보면, $$\mathcal{H}^{-n}(L[n]) = L$$의 받침이 $$X$$ 전체이므로 $$\dim X = n \leq -(-n) = n$$이 등호로 성립하고 다른 차수의 cohomology가 없어 support 조건을 만족하며, $$\mathbf{D}_X(L[n]) \cong L^\vee[n]$$ 역시 같은 이유로 support 조건을 만족하므로 $$L[n] \in \operatorname{Perv}(X)$$이다. 이것이 이름의 "middle"이 가리키는 정규화이다.
+support 조건은 차수 $$i$$가 커질수록 받침의 차원이 $$-i$$ 이하로 줄어들기를 요구하며, 특히 $$i > 0$$이면 $$\dim \operatorname{supp}\mathcal{H}^i \leq -i < 0$$이므로 $$\mathcal{H}^i = 0$$이다. 따라서 $${}^{p}D^{\leq 0}$$의 대상은 차수 $$\leq 0$$에 집중되고, 받침이 $$d$$차원인 곳에서는 차수 $$-d$$까지만 cohomology를 가질 수 있다. Cosupport 조건은 이 제약을 $$\mathbf{D}_X$$로 옮긴 것으로, biduality $$\mathbf{D}_X^2 \cong \id$$ ([§Verdier 쌍대성, ⁋정리 7](/ko/math/sheaf_theory/verdier_duality#thm7)) 덕분에 두 조건이 $$\mathbf{D}_X$$ 아래에서 정확히 맞교환된다. 매끄러운 연결 $$n$$차원 다양체 $$X$$ 위의 rank 유한 local system $$L$$에 대해 $$L[n]$$을 보면, $$\mathcal{H}^{-n}(L[n]) = L$$의 받침이 $$X$$ 전체이므로 $$\dim X = n \leq -(-n) = n$$이 등호로 성립하고 다른 차수의 cohomology가 없어 support 조건을 만족하며, $$\mathbf{D}_X(L[n]) \cong L^\vee[n]$$ 역시 같은 이유로 support 조건을 만족하므로 $$L[n] \in \operatorname{Perv}(X)$$이다. 이것이 이름의 "middle"이 가리키는 정규화이다.
 
 ::: 정리 7
 $$({}^{p}D^{\leq 0}(X), {}^{p}D^{\geq 0}(X))$$은 $$D^b_c(X)$$ 위의 유계 t-structure이다. 따라서 $$\operatorname{Perv}(X)$$은 abelian 범주이고, 그 위의 cohomology 함자 $${}^{p}\mathcal{H}^i: D^b_c(X) \to \operatorname{Perv}(X)$$이 정의된다. 또한 Verdier 쌍대 함자는 $$\mathbf{D}_X({}^{p}D^{\leq 0}) = {}^{p}D^{\geq 0}$$, $$\mathbf{D}_X({}^{p}D^{\geq 0}) = {}^{p}D^{\leq 0}$$을 만족하므로 $$\operatorname{Perv}(X)$$을 자기 자신으로 보내며, $$\operatorname{Perv}(X)$$은 noetherian이자 artinian, 즉 모든 대상이 유한 길이를 가진다.
 :::
 ::: 증명
-t-structure 공리 가운데 포함 조건과 직교성은 차원의 단조성과 [§Verdier 쌍대성, ⁋따름정리 5](/ko/math/sheaf_theory/verdier_duality#cor5)의 쌍대성을 써서 직접 확인된다. 비자명한 부분은 절단 삼각형의 존재, 곧 임의의 $$\mathcal{F}^\bullet \in D^b_c(X)$$를 $${}^{p}\tau_{\leq 0}\mathcal{F}^\bullet \to \mathcal{F}^\bullet \to {}^{p}\tau_{\geq 1}\mathcal{F}^\bullet \xrightarrow{+1}$$로 쪼개는 perverse 절단 함자의 구성이다. 이는 stratification에 대한 귀납으로 이루어지는데, 한 stratum을 닫힌 매장 $$i$$와 열린 매장 $$j$$로 분해하고 ([§고유 받음과 여섯 함자, ⁋정리 10](/ko/math/sheaf_theory/six_functors#thm10)의 recollement) 열린 부분 위에서 standard 절단을 차원만큼 shift하여 적용한 뒤, $$i_\ast, i^!, j_!, Rj_\ast$$의 t-완전성을 이용해 닫힌 부분으로 이어 붙인다. cosupport 조건이 $$\mathbf{D}_X$$로 정의되었으므로 $$\mathbf{D}_X$$가 두 부분범주를 맞교환함은 정의상 즉각적이고, biduality로 양방향이 성립한다. 유한 길이성은 constructible complex가 유한 stratification에 종속되고 각 stratum 위의 local system이 유한 rank라는 사실에서, 길이에 대한 귀납으로 얻어진다. 완전한 구성은 [BBD]의 §2.1, 특히 Théorème 2.1.1과 [KS]의 §10.2를 따른다.
+t-structure 공리 가운데 포함 조건과 직교성은 차원의 단조성과 [§Verdier 쌍대성, ⁋따름정리 5](/ko/math/sheaf_theory/verdier_duality#cor5)의 쌍대성을 써서 직접 확인된다. 비자명한 부분은 절단 삼각형의 존재, 곧 임의의 $$\mathcal{F}^\bullet \in D^b_c(X)$$를 $${}^{p}\tau_{\leq 0}\mathcal{F}^\bullet \to \mathcal{F}^\bullet \to {}^{p}\tau_{\geq 1}\mathcal{F}^\bullet \xrightarrow{+1}$$로 쪼개는 perverse 절단 함자의 구성이다. 이는 stratification에 대한 귀납으로 이루어지는데, 한 stratum을 닫힌 매장 $$i$$와 열린 매장 $$j$$로 분해하고 ([§고유 받음과 여섯 함자, ⁋정리 10](/ko/math/sheaf_theory/six_functors#thm10)의 recollement) 열린 부분 위에서 standard 절단을 차원만큼 shift하여 적용한 뒤, $$i_\ast, i^!, j_!, Rj_\ast$$의 t-완전성을 이용해 닫힌 부분으로 이어 붙인다. Cosupport 조건이 $$\mathbf{D}_X$$로 정의되었으므로 $$\mathbf{D}_X$$가 두 부분범주를 맞교환함은 정의상 즉각적이고, biduality로 양방향이 성립한다. 유한 길이성은 constructible complex가 유한 stratification에 종속되고 각 stratum 위의 local system이 유한 rank라는 사실에서, 길이에 대한 귀납으로 얻어진다. 완전한 구성은 [BBD]의 §2.1, 특히 Théorème 2.1.1과 [KS]의 §10.2를 따른다.
 :::
 
 [정리 7](#thm7)이 보장하는 self-duality가 perverse 층 이론의 출발 동기를 정확히 실현한다. $$\mathbf{D}_X$$가 $$\operatorname{Perv}(X)$$을 보존하므로, perverse 층 가운데 $$\mathbf{D}_X \mathcal{F} \cong \mathcal{F}$$인 자기쌍대 대상을 논할 수 있고, 그러한 대상의 hypercohomology가 Poincaré 쌍대성을 만족하게 된다. 가장 단순한 경우를 점검하자.
@@ -140,7 +140,7 @@ $$\operatorname{IC}_Z(L) := (i_Z)_\ast j_{!\ast}(L[d]) \in \operatorname{Perv}(X
 
 정의에서 $$L[d]$$는 매끄러운 $$d$$차원 다양체 $$U_Z$$ 위의 perverse 층이고 ([예시 8](#ex8)), 닫힌 매장에 대한 $$(i_Z)_\ast$$은 perverse 층을 perverse 층으로 보내는 t-완전 함자이므로 $$\operatorname{IC}_Z(L)$$은 $$X$$ 위의 perverse 층이다. 받침은 $$Z$$이며, $$Z$$의 매끄러운 부분으로 제한하면 $$L[d]$$로 돌아온다. $$X$$ 자신이 기약이고 $$L$$이 자명한 rank $$1$$ local system이면 $$\operatorname{IC}_X := \operatorname{IC}_X(k_{U})$$로 적고, 이것이 $$X$$의 intersection cohomology를 계산하는 complex이다. 매끄러운 $$X$$에서는 $$U = X$$, $$j = \id$$이므로 $$\operatorname{IC}_X = k_X[\dim X]$$이 되어 [예시 8](#ex8)의 상수 sheaf shift로 환원된다.
 
-intermediate extension의 결정적 성질은 그것이 열린 부분 위의 자료를 닫힌 부분으로 "과잉도 부족도 없이" 연장한다는 것이며, 이를 부분대상과 몫대상의 받침으로 특징짓는다.
+Intermediate extension의 결정적 성질은 그것이 열린 부분 위의 자료를 닫힌 부분으로 "과잉도 부족도 없이" 연장한다는 것이며, 이를 부분대상과 몫대상의 받침으로 특징짓는다.
 
 ::: 명제 11
 열린 매장 $$j: U \hookrightarrow X$$, 닫힌 보충 $$i: Z = X \setminus U \hookrightarrow X$$와 $$\mathcal{F} \in \operatorname{Perv}(U)$$에 대해 다음이 성립한다.
@@ -182,7 +182,7 @@ $$Rf_\ast \operatorname{IC}_X \cong \bigoplus_{i \in \mathbb{Z}} {}^{p}\mathcal{
 
 ## 근방·소멸 cycle과 disk 위의 perverse 층
 
-perverse 층의 범주를 구체적으로 손에 쥐는 가장 효과적인 방법은 그것을 선형대수적 자료로 번역하는 것이다. 가장 단순하지만 비자명한 경우, 곧 disk 위에서 한 점을 따라 stratify한 경우에 이 번역이 완전히 이루어지며, 그 번역의 두 축이 근방 cycle과 소멸 cycle 함자이다. 이 함자들은 한 정칙함수 $$f$$의 특이 fiber 근처에서 perverse 층이 어떻게 변하는지를 측정한다.
+Perverse 층의 범주를 구체적으로 손에 쥐는 가장 효과적인 방법은 그것을 선형대수적 자료로 번역하는 것이다. 가장 단순하지만 비자명한 경우, 곧 disk 위에서 한 점을 따라 stratify한 경우에 이 번역이 완전히 이루어지며, 그 번역의 두 축이 근방 cycle과 소멸 cycle 함자이다. 이 함자들은 한 정칙함수 $$f$$의 특이 fiber 근처에서 perverse 층이 어떻게 변하는지를 측정한다.
 
 ::: 정의 14
 정칙함수 $$f: X \to \mathbb{C}$$와 특이 fiber $$X_0 = f^{-1}(0)$$, 닫힌 매장 $$i: X_0 \hookrightarrow X$$를 생각하자. 표준적으로 정의되는 함자
@@ -192,7 +192,7 @@ $$\Psi_f := \psi_f[-1], \qquad \Phi_f := \phi_f[-1]$$
 로 둔다.
 :::
 
-근방 cycle은 $$f$$의 일반 fiber를 특이 fiber 쪽으로 극한을 취해 얻는 complex이고, 소멸 cycle은 일반 fiber와 특이 fiber의 차이를 재는 complex이다. 두 함자는 distinguished triangle $$i^{-1}\mathcal{F} \to \psi_f\mathcal{F} \to \phi_f\mathcal{F} \xrightarrow{+1}$$로 엮이며, 이로부터 표준 사상 $$\operatorname{can}: \Psi_f\mathcal{F} \to \Phi_f\mathcal{F}$$과 그 짝인 *variation* 사상 $$\operatorname{var}: \Phi_f\mathcal{F} \to \Psi_f\mathcal{F}$$이 나온다. 일반 fiber의 monodromy automorphism $$T$$는 $$\Psi_f\mathcal{F}$$ 위에 작용하며 그 단멱부분이 $$T - \id = \operatorname{var} \circ \operatorname{can}$$으로 인수분해된다. perverse 정규화 $$\Psi_f, \Phi_f$$이 결정적인데, 이들은 perverse t-완전, 곧 $$\operatorname{Perv}(X) \to \operatorname{Perv}(X_0)$$을 정의하며 ([KS], [Dim]), Verdier 쌍대성과도 교환한다. 이제 가장 단순한 경우인 disk에서 이 자료가 perverse 층을 완전히 결정함을 본다.
+근방 cycle은 $$f$$의 일반 fiber를 특이 fiber 쪽으로 극한을 취해 얻는 complex이고, 소멸 cycle은 일반 fiber와 특이 fiber의 차이를 재는 complex이다. 두 함자는 distinguished triangle $$i^{-1}\mathcal{F} \to \psi_f\mathcal{F} \to \phi_f\mathcal{F} \xrightarrow{+1}$$로 엮이며, 이로부터 표준 사상 $$\operatorname{can}: \Psi_f\mathcal{F} \to \Phi_f\mathcal{F}$$과 그 짝인 *variation* 사상 $$\operatorname{var}: \Phi_f\mathcal{F} \to \Psi_f\mathcal{F}$$이 나온다. 일반 fiber의 monodromy automorphism $$T$$는 $$\Psi_f\mathcal{F}$$ 위에 작용하며 그 단멱부분이 $$T - \id = \operatorname{var} \circ \operatorname{can}$$으로 인수분해된다. Perverse 정규화 $$\Psi_f, \Phi_f$$이 결정적인데, 이들은 perverse t-완전, 곧 $$\operatorname{Perv}(X) \to \operatorname{Perv}(X_0)$$을 정의하며 ([KS], [Dim]), Verdier 쌍대성과도 교환한다. 이제 가장 단순한 경우인 disk에서 이 자료가 perverse 층을 완전히 결정함을 본다.
 
 ::: 정리 15
 $$\Delta \subseteq \mathbb{C}$$를 원점을 포함한 disk라 하고, 좌표함수 $$f(z) = z$$에 대한 stratification $$\{0\} \sqcup \Delta^\ast$$ ($$\Delta^\ast = \Delta \setminus \{0\}$$)을 생각하자. 이 stratification에 종속된 perverse 층의 범주 $$\operatorname{Perv}(\Delta, 0)$$은, 다음 자료의 범주 $$\mathcal{Q}$$와 동치이다.
@@ -203,7 +203,7 @@ $$\Delta \subseteq \mathbb{C}$$를 원점을 포함한 disk라 하고, 좌표함
 단, $$T_\Psi := \id_\Psi + \operatorname{var} \circ \operatorname{can}$$이 가역 (동치로 $$\id_\Phi + \operatorname{can} \circ \operatorname{var}$$이 가역)이라는 조건을 만족한다. 이 동치 아래 $$\Psi = \Psi_f$$ (근방 cycle, 곧 $$\Delta^\ast$$ 위 local system의 stalk)이고 $$\Phi = \Phi_f$$ (소멸 cycle)이며, $$T_\Psi$$은 monodromy 작용이다.
 :::
 ::: 증명
-Beilinson의 gluing 구성이 핵심이다. 열린 매장 $$j: \Delta^\ast \hookrightarrow \Delta$$과 닫힌 매장 $$i: \{0\} \hookrightarrow \Delta$$에 대해 [§고유 받음과 여섯 함자, ⁋정리 10](/ko/math/sheaf_theory/six_functors#thm10)이 주는 recollement는, $$\Delta^\ast$$ 위의 perverse 층 (rank 유한 local system의 shift)과 $$\{0\}$$ 위의 perverse 층 (vector space), 그리고 둘을 잇는 사상 자료로부터 $$\Delta$$ 위의 perverse 층을 복원한다. $$\Delta^\ast$$ 위의 perverse 층은 그 monodromy 표현, 곧 $$T_\Psi$$이 작용하는 vector space $$\Psi$$로 주어지고, 잇는 자료가 정확히 소멸 cycle 공간 $$\Phi$$과 $$\operatorname{can}, \operatorname{var}$$이다. perverse 조건이 정확히 $$T_\Psi$$의 가역성 (monodromy가 automorphism이라는 것)으로 번역되며, 이는 $$\Psi_f$$이 generic stalk로서 잘 정의되기 위한 조건이다. 자세한 구성은 [Dim]의 §4.2와 [Ach]의 제4장을 따른다. 한편 부호 규약은 문헌마다 달라 $$T_\Psi = \id - \operatorname{var}\circ\operatorname{can}$$로 적기도 한다.
+Beilinson의 gluing 구성이 핵심이다. 열린 매장 $$j: \Delta^\ast \hookrightarrow \Delta$$과 닫힌 매장 $$i: \{0\} \hookrightarrow \Delta$$에 대해 [§고유 받음과 여섯 함자, ⁋정리 10](/ko/math/sheaf_theory/six_functors#thm10)이 주는 recollement는, $$\Delta^\ast$$ 위의 perverse 층 (rank 유한 local system의 shift)과 $$\{0\}$$ 위의 perverse 층 (vector space), 그리고 둘을 잇는 사상 자료로부터 $$\Delta$$ 위의 perverse 층을 복원한다. $$\Delta^\ast$$ 위의 perverse 층은 그 monodromy 표현, 곧 $$T_\Psi$$이 작용하는 vector space $$\Psi$$로 주어지고, 잇는 자료가 정확히 소멸 cycle 공간 $$\Phi$$과 $$\operatorname{can}, \operatorname{var}$$이다. Perverse 조건이 정확히 $$T_\Psi$$의 가역성 (monodromy가 automorphism이라는 것)으로 번역되며, 이는 $$\Psi_f$$이 generic stalk로서 잘 정의되기 위한 조건이다. 자세한 구성은 [Dim]의 §4.2와 [Ach]의 제4장을 따른다. 한편 부호 규약은 문헌마다 달라 $$T_\Psi = \id - \operatorname{var}\circ\operatorname{can}$$로 적기도 한다.
 :::
 
 [정리 15](#thm15)는 disk 위의 perverse 층 이론을 완전히 선형대수로 환원한다. 동치 아래 단순 대상과 표준 함자가 어떤 자료에 대응하는지를 구체적으로 계산해 보면 intermediate extension의 기제가 투명해진다.

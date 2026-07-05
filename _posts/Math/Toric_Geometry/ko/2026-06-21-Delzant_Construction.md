@@ -41,7 +41,7 @@ $$\mathbb{R}^n$$의 convex polytope $$\Delta$$가 *Delzant 다면체<sub>Delzant
 세 조건은 점점 강해지는 정수론적 매끄러움의 단계이다. 조건 1은 꼭짓점이 $$n$$개의 facet의 횡단 교차로만 생김을 요구하여, 가령 정팔면체의 꼭짓점처럼 $$n$$개보다 많은 facet이 모이는 경우를 배제한다. 조건 3은 꼭짓점에서 나가는 $$n$$개의 모서리 방향이 격자의 basis를 이룬다는 것으로, 동치로는 그 $$n$$개의 primitive 벡터를 열로 갖는 $$n\times n$$ 행렬의 행렬식이 $$\pm1$$이라는 조건이다. 이는 [§토릭 다양체의 정의, ⁋명제 11](/ko/math/toric_geometry/toric_varieties#prop11)에서 maximal cone의 generator들이 격자의 basis일 때 toric variety가 smooth였던 조건과 정확히 같은 형태이며, 실제로 두 매끄러움은 같은 대응의 양면이다.
 
 ::: 참고 3
-조건 3은 각 꼭짓점 $$p$$에서의 국소 모형을 표준화한다. 꼭짓점 $$p$$에서 만나는 $$n$$개의 facet의 안쪽을 향하는 primitive 법선 벡터 $$u_1,\ldots,u_n\in\mathbb{Z}^n$$이 격자의 basis를 이룰 때, 다면체는 $$p$$ 근방에서 표준 양사분면 $$\mathbb{R}_{\geq0}^n$$의 평행이동과 $$\GL(n,\mathbb{Z})$$ 변환으로 옮겨진다. 이 표준 모형이 아래 구성에서 각 꼭짓점에 대응하는 부분이 정확히 $$\mathbb{C}^n$$의 표준 toric chart가 되도록 보장하며, 그것이 결과 다양체의 smoothness의 근원이다. simple·rational만 만족하고 smooth가 깨지면 같은 구성이 매끄러운 다양체 대신 symplectic orbifold를 낳는다.
+조건 3은 각 꼭짓점 $$p$$에서의 국소 모형을 표준화한다. 꼭짓점 $$p$$에서 만나는 $$n$$개의 facet의 안쪽을 향하는 primitive 법선 벡터 $$u_1,\ldots,u_n\in\mathbb{Z}^n$$이 격자의 basis를 이룰 때, 다면체는 $$p$$ 근방에서 표준 양사분면 $$\mathbb{R}_{\geq0}^n$$의 평행이동과 $$\GL(n,\mathbb{Z})$$ 변환으로 옮겨진다. 이 표준 모형이 아래 구성에서 각 꼭짓점에 대응하는 부분이 정확히 $$\mathbb{C}^n$$의 표준 toric chart가 되도록 보장하며, 그것이 결과 다양체의 smoothness의 근원이다. Simple·rational만 만족하고 smooth가 깨지면 같은 구성이 매끄러운 다양체 대신 symplectic orbifold를 낳는다.
 :::
 
 ## Delzant 정리
@@ -127,7 +127,7 @@ $$\pi\lvert z_k\rvert^2-\pi\lambda_k=\langle x,u_k\rangle,\qquad\text{즉}\qquad
 
 이 성립한다. 마지막 부등식은 정확히 $$x\in\Delta$$임을 말한다. 이 $$x=\mu_\Delta(z)$$이 곧 잔여 운동량 사상의 값이 되며, 따라서 $$\phi_N^{-1}(c)$$의 점은 다면체의 점 $$x\in\Delta$$로 사영된다. $$z_k=0$$인 첨자는 정확히 $$x$$이 facet $$F_k$$ 위에 놓이는, 즉 $$\langle x,u_k\rangle+\lambda_k=0$$인 첨자이므로 $$I(z)=\{k:x\in F_k\}$$이다.
 
-$$x$$이 $$\Delta$$의 점일 때 그것이 놓이는 facet들의 집합 $$I(z)=\{k:x\in F_k\}$$을 보면, simple 조건에 의해 그 개수는 많아야 $$n$$이고 해당 법선 $$\{u_k:k\in I(z)\}$$은 일차독립이다. smooth 조건에 의해 이들은 $$\mathbb{Z}^n$$의 basis의 일부로 확장되므로, $$\beta$$을 $$\mathbb{R}^{I(z)}$$로 제한한 사상은 단사이다. 그런데 $$\mathfrak{n}=\ker\beta$$이므로 $$\mathfrak{n}\cap\mathbb{R}^{I(z)}=\ker(\beta\rvert_{\mathbb{R}^{I(z)}})=0$$이고, 따라서 위 판정에 의해 $$N$$은 $$\phi_N^{-1}(c)$$의 모든 점에서 자유롭게 작용한다. 자유로운 작용은 $$N$$이 compact이므로 proper하며, [\[사교기하학\] §사교 축약, ⁋보조정리 1](/ko/math/symplectic_geometry/symplectic_reduction#lem1)에 의해 stabilizer의 Lie algebra가 영이라는 것은 $$c$$이 $$\phi_N$$의 regular value임과 동치이다.
+$$x$$이 $$\Delta$$의 점일 때 그것이 놓이는 facet들의 집합 $$I(z)=\{k:x\in F_k\}$$을 보면, simple 조건에 의해 그 개수는 많아야 $$n$$이고 해당 법선 $$\{u_k:k\in I(z)\}$$은 일차독립이다. Smooth 조건에 의해 이들은 $$\mathbb{Z}^n$$의 basis의 일부로 확장되므로, $$\beta$$을 $$\mathbb{R}^{I(z)}$$로 제한한 사상은 단사이다. 그런데 $$\mathfrak{n}=\ker\beta$$이므로 $$\mathfrak{n}\cap\mathbb{R}^{I(z)}=\ker(\beta\rvert_{\mathbb{R}^{I(z)}})=0$$이고, 따라서 위 판정에 의해 $$N$$은 $$\phi_N^{-1}(c)$$의 모든 점에서 자유롭게 작용한다. 자유로운 작용은 $$N$$이 compact이므로 proper하며, [\[사교기하학\] §사교 축약, ⁋보조정리 1](/ko/math/symplectic_geometry/symplectic_reduction#lem1)에 의해 stabilizer의 Lie algebra가 영이라는 것은 $$c$$이 $$\phi_N$$의 regular value임과 동치이다.
 
 이제 [\[사교기하학\] §사교 축약, ⁋정리 2](/ko/math/symplectic_geometry/symplectic_reduction#thm2)의 모든 가정이 충족되었다. $$N$$은 compact torus이고 $$c$$은 regular value이며 작용은 자유롭고 proper하므로, 축약공간 $$M_\Delta=\phi_N^{-1}(c)/N$$은 매끄러운 다양체이고 유일한 사교형식 $$\omega_\Delta$$을 가지며 그 차원은
 

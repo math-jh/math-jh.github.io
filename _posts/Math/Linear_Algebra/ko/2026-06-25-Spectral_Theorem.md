@@ -123,7 +123,7 @@ $$\lambda\langle v,w\rangle=\langle Lv,w\rangle=\langle v,Lw\rangle=\mu\langle v
 이고, 따라서 $$(\lambda-\mu)\langle v,w\rangle=0$$이다. $$\lambda\neq\mu$$이므로 $$\langle v,w\rangle=0$$이다. [정리 5](#thm5)의 orthonormal basis를 같은 고윳값을 갖는 것들끼리 묶으면 각 고유공간의 orthonormal basis를 얻으며, 방금 보인 직교성에 의해 서로 다른 고유공간들은 직교한다. 
 :::
 
-## positive definite operator
+## Positive definite operator
 
 Self-adjoint operator 가운데 고윳값이 모두 양수인 것들은 따로 이름을 붙일 만하다. 
 

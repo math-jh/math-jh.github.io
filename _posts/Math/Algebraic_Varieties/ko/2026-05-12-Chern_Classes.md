@@ -40,7 +40,7 @@ $$c_1(\mathcal{L}) = [D] \in H^2(X, \mathbb{Z})$$
 :::
 
 ::: 증명
-exponential exact sequence
+Exponential exact sequence
 
 $$0 \to \mathbb{Z} \to \mathcal{O}_X \xrightarrow{f\mapsto e^{2\pi if}} \mathcal{O}_X^{\ast} \to 0$$
 
@@ -59,7 +59,7 @@ $$0 \to \mathbb{Z} \to \mathcal{O}_X \xrightarrow{f\mapsto e^{2\pi if}} \mathcal
 :::
 
 ::: 증명
-Line bundle은 transition cocycle로 $$H^1(X, \mathcal{O}_X^{\ast})$$의 원소를 주며, tensor product는 cocycle의 곱(즉 $$H^1$$에서의 덧셈)에, dual은 역원에 대응한다. [명제 2](#prop2)의 $$c_1 = \delta$$는 group homomorphism $$H^1(X, \mathcal{O}_X^{\ast}) \to H^2(X, \mathbb{Z})$$이므로 곱을 합으로, 역원을 음수로 보낸다. 따라서 1과 2가 성립한다. divisor의 언어로도 같은 결론을 얻는다. $$\mathcal{L} = \mathcal{O}_X(D)$$, $$\mathcal{M} = \mathcal{O}_X(E)$$이면 $$\mathcal{L} \otimes \mathcal{M} = \mathcal{O}_X(D+E)$$, $$\mathcal{L}^{\vee} = \mathcal{O}_X(-D)$$이므로 [명제 2](#prop2)로부터 $$c_1$$이 더해지고 부호가 뒤집힌다.
+Line bundle은 transition cocycle로 $$H^1(X, \mathcal{O}_X^{\ast})$$의 원소를 주며, tensor product는 cocycle의 곱(즉 $$H^1$$에서의 덧셈)에, dual은 역원에 대응한다. [명제 2](#prop2)의 $$c_1 = \delta$$는 group homomorphism $$H^1(X, \mathcal{O}_X^{\ast}) \to H^2(X, \mathbb{Z})$$이므로 곱을 합으로, 역원을 음수로 보낸다. 따라서 1과 2가 성립한다. Divisor의 언어로도 같은 결론을 얻는다. $$\mathcal{L} = \mathcal{O}_X(D)$$, $$\mathcal{M} = \mathcal{O}_X(E)$$이면 $$\mathcal{L} \otimes \mathcal{M} = \mathcal{O}_X(D+E)$$, $$\mathcal{L}^{\vee} = \mathcal{O}_X(-D)$$이므로 [명제 2](#prop2)로부터 $$c_1$$이 더해지고 부호가 뒤집힌다.
 :::
 
 이처럼 직선다발에서는 $$c_1$$이 $$\mathrm{Pic}(X) \to H^2(X, \mathbb{Z})$$의 group homomorphism으로 완전히 이해된다. 일반적인 vector bundle은 직선다발들의 직합으로 분해되지 않지만, 이는 실계수 다항식이 실수 위에서는 인수분해되지 않아도 복소수로 올라가면 일차식들로 쪼개지는 것과 같다. 다음의 splitting principle은 이 "확장"의 기하학적 버전으로, 임의의 다발의 Chern class 계산을 직선다발의 경우로 환원해 준다.
@@ -139,7 +139,7 @@ Chern character는 다음 성질을 만족한다.
 :::
 
 ::: 증명
-splitting principle로 $$\mathcal{E} = \bigoplus_i \mathcal{L}_i$$ (Chern root $$x_i$$), $$\mathcal{F} = \bigoplus_j \mathcal{M}_j$$ (Chern root $$y_j$$)로 가정한다. direct sum의 Chern root는 $$\{x_i\} \cup \{y_j\}$$이므로
+splitting principle로 $$\mathcal{E} = \bigoplus_i \mathcal{L}_i$$ (Chern root $$x_i$$), $$\mathcal{F} = \bigoplus_j \mathcal{M}_j$$ (Chern root $$y_j$$)로 가정한다. Direct sum의 Chern root는 $$\{x_i\} \cup \{y_j\}$$이므로
 
 $$\chern(\mathcal{E} \oplus \mathcal{F}) = \sum_i e^{x_i} + \sum_j e^{y_j} = \chern(\mathcal{E}) + \chern(\mathcal{F})$$
 

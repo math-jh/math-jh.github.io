@@ -159,7 +159,7 @@ $$F: X \longrightarrow X$$
 또한 평탄하지 않은 점들이 모여 있는 집합은 닫힌 집합을 이룬다는 사실도 중요하다.
 
 ::: 명제 13
-Locally finite presentation인 사상 $$f: X \to Y$$에 대하여, $$X$$에서 $$f$$가 평탄하지 않은 점들의 집합은 닫힌집합이다. equivalently, 평탄 영역(flat locus)은 $$X$$의 열린집합이다.
+Locally finite presentation인 사상 $$f: X \to Y$$에 대하여, $$X$$에서 $$f$$가 평탄하지 않은 점들의 집합은 닫힌집합이다. Equivalently, 평탄 영역(flat locus)은 $$X$$의 열린집합이다.
 :::
 ::: 증명
 문제는 국소적이므로 $$Y = \operatorname{Spec} A$$, $$X = \operatorname{Spec} B$$로 가정한다. $$B$$가 $$A$$ 위에서 finite presentation이라 하자. 평탄성은 국소적으로 $$\operatorname{Tor}$$ 함자의 소멸으로 판정되며, $$\operatorname{Tor}_1^A(B, -)$$의 소멸은 특정 행렬식의 비소멸 조건으로 기술된다. 이러한 조건은 열린 조건을 이루므로, 평탄한 점들의 집합은 열린집합이 된다. Noetherian 경우에는 이를 아이디얼들의 높이를 통해 더욱 명시적으로 기술할 수 있다.

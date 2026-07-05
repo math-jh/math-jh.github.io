@@ -86,7 +86,7 @@ $$X_\Sigma$$의 affine open cover로 maximal cone들이 주는 $$\{U_\sigma\}_{\
 
 ## Demazure vanishing
 
-이제 nef divisor에 대한 고차 코호몰로지 소멸을 본다. Divisor $$D$$가 *nef<sub>numerically effective</sub>*라는 것은 모든 irreducible complete curve $$C \subseteq X_\Sigma$$에 대해 교차수 $$D \cdot C \ge 0$$인 것이다. Complete toric variety에서 nef 조건은 $$D$$가 Cartier일 때 그에 대응하는 piecewise linear function $$\psi_D$$ ([§토러스 인자와 선다발, ⁋명제 6](/ko/math/toric_geometry/toric_divisors#prop6))가 *convex*한 것, 즉 $$\psi_D$$가 위로 볼록인 것과 동치이다. 이는 ample에 대응하는 strictly convex ([§토러스 인자와 선다발, ⁋정의 8](/ko/math/toric_geometry/toric_divisors#def8))의 부등호를 등호 허용으로 완화한 조건이다. nef인 Cartier divisor는 동치로 basepoint-free, 즉 대응 line bundle이 globally generated인 것으로도 특징지어진다 ([\[대수다양체\] §사영공간의 코호몰로지, ⁋정의 6](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#def6)).
+이제 nef divisor에 대한 고차 코호몰로지 소멸을 본다. Divisor $$D$$가 *nef<sub>numerically effective</sub>*라는 것은 모든 irreducible complete curve $$C \subseteq X_\Sigma$$에 대해 교차수 $$D \cdot C \ge 0$$인 것이다. Complete toric variety에서 nef 조건은 $$D$$가 Cartier일 때 그에 대응하는 piecewise linear function $$\psi_D$$ ([§토러스 인자와 선다발, ⁋명제 6](/ko/math/toric_geometry/toric_divisors#prop6))가 *convex*한 것, 즉 $$\psi_D$$가 위로 볼록인 것과 동치이다. 이는 ample에 대응하는 strictly convex ([§토러스 인자와 선다발, ⁋정의 8](/ko/math/toric_geometry/toric_divisors#def8))의 부등호를 등호 허용으로 완화한 조건이다. Nef인 Cartier divisor는 동치로 basepoint-free, 즉 대응 line bundle이 globally generated인 것으로도 특징지어진다 ([\[대수다양체\] §사영공간의 코호몰로지, ⁋정의 6](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#def6)).
 
 ::: 정리 5 (Demazure vanishing)
 $$X_\Sigma$$가 complete toric variety이고 $$D$$가 nef인 torus-invariant Cartier divisor라 하자. 그러면

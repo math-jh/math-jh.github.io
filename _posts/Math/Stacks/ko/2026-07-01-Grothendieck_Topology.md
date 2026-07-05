@@ -228,7 +228,7 @@ $$\Hom(U, X) \rightarrow \prod_i \Hom(U_i, X)\rightrightarrows \prod_{i, j}\Hom(
 $$\Sch$$ (또는 $$\Sch/S$$) 위의 fpqc 위상은 subcanonical이다. 즉 임의의 scheme $$X$$에 대하여 점함자 $$h_X=\Hom_{\Sch}(-, X)$$은 fpqc sheaf이다. 따라서 Zariski·étale·fppf 위상에서도 모든 representable presheaf는 sheaf이다.
 :::
 ::: 증명
-[명제 11](#prop11)에 의하여, fpqc 덮개 $$\{U_i \rightarrow U\}$$에 대한 equalizer 조건을 확인하면 된다. quasi-compact 조건으로 유한 부분덮개의 disjoint union을 취하면 문제는 $$U=\Spec A$$가 affine이고 덮개가 단일 충실평탄 사상 $$\{\Spec B \rightarrow \Spec A\}$$인 경우로 환원된다. 이 때 $$\Spec B\times_{\Spec A}\Spec B=\Spec(B\otimes_A B)$$이므로, 보여야 할 것은
+[명제 11](#prop11)에 의하여, fpqc 덮개 $$\{U_i \rightarrow U\}$$에 대한 equalizer 조건을 확인하면 된다. Quasi-compact 조건으로 유한 부분덮개의 disjoint union을 취하면 문제는 $$U=\Spec A$$가 affine이고 덮개가 단일 충실평탄 사상 $$\{\Spec B \rightarrow \Spec A\}$$인 경우로 환원된다. 이 때 $$\Spec B\times_{\Spec A}\Spec B=\Spec(B\otimes_A B)$$이므로, 보여야 할 것은
 
 $$\Hom(\Spec A, X) \rightarrow \Hom(\Spec B, X)\rightrightarrows \Hom(\Spec(B\otimes_A B), X)$$
 

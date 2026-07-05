@@ -146,7 +146,7 @@ $$\bigl\lvert f'(z_0)\bigr\rvert \leq \frac{1!\,M}{r} = \frac{M}{r}$$
 이다. $$f$$가 평면 전체에서 정칙이므로 $$r$$을 임의로 크게 잡을 수 있고, $$r \to \infty$$이면 우변이 $$0$$으로 가므로 $$f'(z_0) = 0$$이다. $$z_0$$이 임의였으므로 $$f' \equiv 0$$이다. 도함수가 항상 $$0$$인 정칙함수는 연결된 영역에서 상수이므로 (실수부와 허수부의 모든 편미분이 $$0$$이라 Cauchy–Riemann 관계 아래 $$u, v$$가 상수이다), $$f$$는 $$\mathbb{C}$$에서 상수함수이다.
 :::
 
-Liouville 정리는 정칙성과 유계성이 양립하기에는 너무 강한 조건임을 말한다. entire function이 상수가 아니라면 그 절댓값은 어딘가에서 반드시 무한히 커져야 한다. 가령 $$\sin z$$나 $$e^z$$ 같은 비상수 entire function은 ([§정칙함수, ⁋정의 10](/ko/math/complex_analysis/holomorphic_functions#def10)) 실축 위에서는 유계로 보이더라도 허수방향으로 가면 절댓값이 폭발한다. 이 단순한 정리가 대수학에서 가장 기본적인 사실 하나를 증명하는 열쇠가 된다.
+Liouville 정리는 정칙성과 유계성이 양립하기에는 너무 강한 조건임을 말한다. Entire function이 상수가 아니라면 그 절댓값은 어딘가에서 반드시 무한히 커져야 한다. 가령 $$\sin z$$나 $$e^z$$ 같은 비상수 entire function은 ([§정칙함수, ⁋정의 10](/ko/math/complex_analysis/holomorphic_functions#def10)) 실축 위에서는 유계로 보이더라도 허수방향으로 가면 절댓값이 폭발한다. 이 단순한 정리가 대수학에서 가장 기본적인 사실 하나를 증명하는 열쇠가 된다.
 
 ## 대수학의 기본정리
 
