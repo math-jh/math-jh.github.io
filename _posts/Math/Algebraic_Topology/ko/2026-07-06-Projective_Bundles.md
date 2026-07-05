@@ -52,20 +52,14 @@ $$a_j\vert_{E_U}=1\times(a_j\vert_F)+(\text{$U$의 차수가 양인 항들})$$
 
 이 성립한다. 곧 기저 $$\{1\times(a_k\vert_F)\}$$에 대한 $$\{a_j\vert_{E_U}\}$$의 전이행렬은 대각성분이 $$1$$이고 밑공간 차수를 올리는 방향으로만 어긋나는 삼각행렬이므로 $$H^\bullet(U)$$ 위에서 가역이다. 따라서 $$\Phi_U$$는 isomorphism이다.
 
-다음으로 $$U=U'\cup U''$$이고 $$\Phi_{U'}$$, $$\Phi_{U''}$$, $$\Phi_{U'\cap U''}$$이 모두 isomorphism이라 하자. $$E_{U'\cup U''}=E_{U'}\cup E_{U''}$$이고 $$E_{U'}\cap E_{U''}=E_{U'\cap U''}$$이므로, 밑공간과 전공간의 두 [§코호몰로지, ⁋명제 6](/ko/math/algebraic_topology/cohomology#prop6)의 Mayer–Vietoris 완전열이 얻어진다. 앞의 것을 자유 abelian group $$H^\bullet(F)$$와 tensor하면 (자유이므로 완전성이 보존된다) 다음의 사다리꼴 diagram
-
-$$\begin{aligned}
-\cdots\rightarrow H^\bullet(U)\otimes H^\bullet(F)&\rightarrow \bigl(H^\bullet(U')\oplus H^\bullet(U'')\bigr)\otimes H^\bullet(F)\rightarrow H^\bullet(U'\cap U'')\otimes H^\bullet(F)\rightarrow\cdots\\
-\Phi_U\big\downarrow\qquad\qquad&\qquad\quad\ \Phi_{U'}\oplus\Phi_{U''}\big\downarrow\qquad\qquad\qquad\quad\ \Phi_{U'\cap U''}\big\downarrow\\
-\cdots\rightarrow H^\bullet(E_U)&\rightarrow H^\bullet(E_{U'})\oplus H^\bullet(E_{U''})\rightarrow H^\bullet(E_{U'\cap U''})\rightarrow\cdots
-\end{aligned}$$
-
-을 얻는다. 세로 사상은 $$\Phi$$들이고, 각 사각형은 $$\pi^\ast$$와 고정된 class $$a_j$$와의 cup product가 restriction 및 Mayer–Vietoris의 connecting homomorphism과 (부호를 무시하면) 교환하므로 commute한다. 가정에 의해 오른쪽 두 세로 사상이 isomorphism이므로, [\[호몰로지 대수학\] §Diagram chasing, ⁋따름정리 2](/ko/math/homological_algebra/diagram_chasing#cor2)의 five lemma에 의하여 $$\Phi_U$$ 또한 isomorphism이다.
+다음으로 $$U=U'\cup U''$$이고 $$\Phi_{U'}$$, $$\Phi_{U''}$$, $$\Phi_{U'\cap U''}$$이 모두 isomorphism이라 하자. $$E_{U'\cup U''}=E_{U'}\cup E_{U''}$$이고 $$E_{U'}\cap E_{U''}=E_{U'\cap U''}$$이므로, 밑공간과 전공간의 두 [§코호몰로지, ⁋명제 6](/ko/math/algebraic_topology/cohomology#prop6)의 Mayer–Vietoris 완전열이 얻어진다. 앞의 완전열을 자유 abelian group $$H^\bullet(F)$$와 tensor하면 (자유이므로 완전성이 보존된다) 각 항이 $$H^\bullet(U)\otimes H^\bullet(F)$$, $$\bigl(H^\bullet(U')\oplus H^\bullet(U'')\bigr)\otimes H^\bullet(F)$$, $$H^\bullet(U'\cap U'')\otimes H^\bullet(F)$$로 이어지는 완전열을 얻는다. 이를 위 행에, 전공간의 Mayer–Vietoris 완전열을 아래 행에 두고 세로 방향으로 $$\Phi_U$$, $$\Phi_{U'}\oplus\Phi_{U''}$$, $$\Phi_{U'\cap U''}$$을 놓으면 사다리 모양의 diagram이 된다. $$\pi^\ast$$와 고정된 class $$a_j$$와의 cup product가 restriction 및 Mayer–Vietoris의 connecting homomorphism과 (부호를 무시하면) 교환하므로 각 사각형은 commute하며, 가정에 의해 $$\Phi_{U'}\oplus\Phi_{U''}$$과 $$\Phi_{U'\cap U''}$$이 isomorphism이므로 [\[호몰로지 대수학\] §Diagram chasing, ⁋따름정리 2](/ko/math/homological_algebra/diagram_chasing#cor2)의 five lemma에 의하여 $$\Phi_U$$ 또한 isomorphism이다.
 
 Trivializing open들의 교집합은 다시 trivializing open이므로, $$B$$가 유한 trivializing 덮개를 가지면 덮개의 크기에 대한 귀납으로 $$\Phi_B$$가 isomorphism임을 얻는다. 일반적인 paracompact 밑공간에 대해서는 열린덮개에 대한 직접극한 논증이 추가로 필요하며, 이는 [Hat]와 [BT]에 자세히 다루어져 있다.
 :::
 
 계수를 $$\mathbb{Z}$$로 두었지만, 위의 증명은 fiber의 코호몰로지가 자유가군이 되는 임의의 PID 계수에 대하여 그대로 성립한다. 조건의 핵심은 fiber의 코호몰로지가 전역적인 class로 "펼쳐진다"는 것으로, 이 때 전공간의 코호몰로지는 밑공간의 코호몰로지를 계수환으로 삼아 fiber의 코호몰로지를 그대로 복제한 모양이 된다. 아래에서 이 정리는 밑공간이 무한차원인 경우 ($$\CP^\infty$$ 등) 에도 쓰이므로 일반 판본이 실제로 필요하다.
+
+개념적으로 [정리 1](#thm1)은 [§올림과 호모토피 완전열, ⁋정리 14](/ko/math/algebraic_topology/fibrations#thm14)의 Serre 스펙트럼 열이 degenerate하는 특수한 경우이다. 전역 class $$a_j$$은 $$H^\bullet(E)$$에서 오므로 fiber 방향 열의 permanent cycle이고, 이들이 $$H^\bullet(F)$$ 전체를 생성하므로 곱 구조에 의해 모든 미분이 소멸하며, 동시에 그 존재가 $$\pi_1(B)$$의 $$H^\bullet(F)$$ 위 작용을 자명하게 만들어 $$E_2^{p,q}=H^p(B)\otimes H^q(F)$$이 비틀림 없이 성립한다. 따라서 $$E_2=E_\infty$$가 되어 위의 결론이 그대로 따라온다. 우리가 택한 Mayer–Vietoris 증명은 이 스펙트럼 열을 경유하지 않고 같은 결론에 이르는 초등적인 우회로이며, 그런 만큼 국소계수계에 얽힌 미묘함도 자연스럽게 비켜간다.
 
 ## 사영다발의 코호몰로지
 
@@ -104,7 +98,7 @@ $$H^\bullet(\CP^{n-1};\mathbb{Z})=\mathbb{Z}[x]/(x^n)$$
 
 $$a^n+\pi^\ast c_1(E)\smile a^{n-1}+\cdots+\pi^\ast c_n(E)=0$$
 
-을 만족하는 것으로 표현되며, 곧 $$H^\bullet(\mathbb{P}(E))=H^\bullet(B)[a]/\bigl(\textstyle\sum_{i=0}^n\pi^\ast c_i(E)\, a^{n-i}\bigr)$$이다. 거꾸로 이 관계식의 계수로 [§벡터다발의 특성류, ⁋정의 6](/ko/math/algebraic_topology/characteristic_classes#def6)의 Chern class를 정의할 수도 있으며, 이것이 Grothendieck을 따른 Chern class의 또 다른 정의이다. ([MS] §14)
+을 만족하는 것으로 표현되며, 곧 $$H^\bullet(\mathbb{P}(E))=H^\bullet(B)[a]/\bigl(\sum_{i=0}^n\pi^\ast c_i(E)a^{n-i}\bigr)$$이다. 거꾸로 이 관계식의 계수로 [§벡터다발의 특성류, ⁋정의 6](/ko/math/algebraic_topology/characteristic_classes#def6)의 Chern class를 정의할 수도 있으며, 이것이 Grothendieck을 따른 Chern class의 또 다른 정의이다. ([MS] §14)
 :::
 
 ## Splitting principle

@@ -102,7 +102,7 @@ $$\int_0^1 \int_0^y e^{y^2} \mathop{dx} \mathop{dy} = \int_0^1 y e^{y^2} \mathop
 ::: 정리 4 (변수변환)
 일대일 $$C^1$$ 사상 $$\mathbf{x} = \mathbf{T}(\mathbf{u})$$가 영역 $$D'\subset \mathbb{R}^n$$을 $$D$$로 보내고 야코비 행렬식이 $$D'$$에서 $$0$$이 아니면
 
-$$\int_D f(\mathbf{x}) \mathop{dV} = \int_{D'} f(\mathbf{T}(\mathbf{u})) \lvert \det J_{\mathbf{T}}(\mathbf{u})\rvert \mathop{dV}'$$
+$$\int_D f(\mathbf{x}) \mathop{dV} = \int_{D'} f(\mathbf{T}(\mathbf{u})) \lvert \det J_{\mathbf{T}}(\mathbf{u})\rvert \mathop{dV'}$$
 
 이다. 여기서 $$J_{\mathbf{T}}$$는 $$\mathbf{T}$$의 편도함수들을 모은 *야코비 행렬<sub>Jacobi matrix</sub>*
 
@@ -110,52 +110,66 @@ $$J_{\mathbf{T}}=\begin{pmatrix} \partial x_1/\partial u_1 & \cdots & \partial x
 
 이다.
 :::
-역시 이 또한 우리는 선형대수의 내용은 블랙박스로 두기로 하였으므로, 그 증명은 해석학에 미뤄둔다. 어쨌든 중요한 것은 직관으로, 야코비 행렬식 $$\lvert\det J_{\mathbf{T}}\rvert$$은 $$\mathbf{T}$$가 부피를 늘이는 국소 비율이다. 즉, $$\mathbf{u}$$ 공간의 작은 상자가 $$\mathbf{T}$$에 의해 $$\mathbf{x}$$ 공간의 작은 평행육면체로 옮겨지는데, 그 부피가 원래 상자의 부피에 $$\lvert\det J_{\mathbf{T}}\rvert$$를 곱해준 것가 되므로 부피 원소는 $$\mathop{dV} = \lvert\det J_{\mathbf{T}}(\mathbf{u})\rvert \mathop{dV}'$$로 변환된다. $$n=2$$에서 평행육면체는 평행사변형이 되어, 두 변 $$\mathbf{T}_u \Delta u$$와 $$\mathbf{T}_v \Delta v$$ ($$\mathbf{T}_u, \mathbf{T}_v$$는 $$\mathbf{T}$$의 편도함수 벡터) 가 이루는 넓이가 바로 $$\lvert\det J_{\mathbf{T}}\rvert \Delta u \Delta v$$인 것이다. 이 식을 리만 합에 대입해 극한을 취한 것이 [정리 4](#thm4)이며, 절댓값을 붙이는 이유는 부피가 항상 양수이기 때문이다 (한 변수의 치환적분에서 적분 구간의 방향이 부호를 흡수하던 것과 대비된다).
+역시 이 또한 우리는 선형대수의 내용은 블랙박스로 두기로 하였으므로, 그 증명은 해석학에 미뤄둔다. 어쨌든 중요한 것은 직관으로, 야코비 행렬식 $$\lvert\det J_{\mathbf{T}}\rvert$$은 $$\mathbf{T}$$가 부피를 늘이는 국소 비율이다. 즉, $$\mathbf{u}$$ 공간의 작은 상자가 $$\mathbf{T}$$에 의해 $$\mathbf{x}$$ 공간의 작은 평행육면체로 옮겨지는데, 그 부피가 원래 상자의 부피에 $$\lvert\det J_{\mathbf{T}}\rvert$$를 곱해준 것가 되므로 부피 원소는 $$\mathop{dV} = \lvert\det J_{\mathbf{T}}(\mathbf{u})\rvert \mathop{dV}'$$로 변환된다. $$n=2$$에서 평행육면체는 평행사변형이 되어, 두 변 $$\mathbf{T}_u \Delta u$$와 $$\mathbf{T}_v \Delta v$$ ($$\mathbf{T}_u, \mathbf{T}_v$$는 $$\mathbf{T}$$의 편도함수 벡터) 가 이루는 넓이가 바로 $$\lvert\det J_{\mathbf{T}}\rvert \Delta u \Delta v$$인 것이다. 이 식을 리만 합에 대입해 극한을 취한 것이 [정리 4](#thm4)이며, 절댓값을 붙이는 이유는 부피가 항상 양수이기 때문이다.
 
-다만 위는 직관에 불과하고, 엄밀한 증명은 임의의 $$C^1$$ 사상에 대해 작은 상자의 부피가 정확히 $$\lvert\det J_{\mathbf{T}}\rvert$$배로 늘어남을 — 선형 근사의 오차가 극한에서 사라짐을 통제하며 — 보이는 것이므로 실해석학적 논증이 필요해 이 글에서는 생략한다. 선형 사상 $$\mathbf{T}$$의 경우 $$\det J_{\mathbf{T}}$$이 상수라 위 논리가 곧 증명이 되지만, 일반적인 $$C^1$$ 사상에 대해서는 증명을 생략한다.
-
-좌표계를 바꾸는 것이 변수변환의 가장 흔한 쓰임이고, 여기서 이중적분과 삼중적분이 구체적인 계산 예시로 등장한다.
+변수변환의 가장 흔한 쓰임은 좌표계를 바꾸는 것으로, 우리는 $$2\times 2$$ 행렬과 $$3\times 3$$ 행렬의 행렬식만 도입하였으므로 이들이 우리 예시의 전부이다. 
 
 ::: 예시 5 (이중적분의 변수변환 — 극좌표)
-이중적분에서 가장 흔한 변환이 극좌표 $$x = r\cos\theta$$, $$y = r\sin\theta$$이며, 그 야코비 행렬식은
+이중적분에서 가장 흔한 변환은 극좌표 $$x = r\cos\theta$$, $$y = r\sin\theta$$이다. 그럼 그 야코비 행렬식은
 
 $$\det J = \det\begin{pmatrix}\cos\theta & -r\sin\theta \\ \sin\theta & r\cos\theta\end{pmatrix} = r$$
 
 이므로 $$dA = r dr d\theta$$이다. 이 여분의 인자 $$r$$이 직교좌표에서는 막히던 적분을 풀어 주는 일이 잦다. 가령 단위원판 $$D$$에서 이중적분
 
-$$\iint_D e^{-(x^2+y^2)} dA = \int_0^{2\pi} \int_0^1 e^{-r^2} r dr d\theta = \pi(1 - e^{-1})$$
+$$\iint_D e^{-(x^2+y^2)} \mathop{dA} = \int_0^{2\pi} \int_0^1 e^{-r^2} r \mathop{dr}\mathop{d\theta} = \pi(1 - e^{-1})$$
 
-인데, $$e^{-r^2} r$$의 부정적분 $$-\frac12 e^{-r^2}$$가 닫힌 꼴이라 계산이 끝난다. 같은 인자가 한 변수로는 풀 수 없는 가우스 적분도 닫는다.
+인데, $$e^{-r^2} r$$의 부정적분이 $$-\frac{1}{2} e^{-r^2}$$로 명시적으로 주어지므로 이 계산을 완료할 수 있다. 
 :::
 
+위의 예시를 이용하면, 우리는 하나의 변수로 풀리지 않던 가우스 적분의 값을 구할 수 있다.
+
 ::: 예시 6 (가우스 적분)
-한 변수로는 초등함수로 안 풀리는 $$I = \int_{-\infty}^{\infty} e^{-x^2} dx$$를 이중적분으로 구한다. 곱 $$I^2$$을 두 개의 독립 변수에 대한 적분으로 보아 하나로 묶으면
+적분 $$I = \int_{-\infty}^{\infty} e^{-x^2} \mathop{dx}$$의 값을 구하자. 이 값의 제곱 $$I^2$$을 두 개의 독립 변수에 대한 적분으로 보면
 
 $$\begin{aligned}
-I^2 &= \left(\int_{-\infty}^\infty e^{-x^2} dx\right) \left(\int_{-\infty}^\infty e^{-y^2} dy\right) \\
-&= \iint_{\mathbb{R}^2} e^{-x^2}e^{-y^2} dA = \iint_{\mathbb{R}^2} e^{-(x^2+y^2)} dA
+I^2 &= \left(\int_{-\infty}^\infty e^{-x^2} \mathop{dx}\right) \left(\int_{-\infty}^\infty e^{-y^2} \mathop{dy}\right) \\
+&= \iint_{\mathbb{R}^2} e^{-x^2}e^{-y^2} \mathop{dA} = \iint_{\mathbb{R}^2} e^{-(x^2+y^2)} \mathop{dA}
 \end{aligned}$$
 
 이고, 이를 극좌표로 바꾸면 $$x^2 + y^2 = r^2$$이라
 
 $$\begin{aligned}
-I^2 &= \int_0^{2\pi} \int_0^\infty e^{-r^2} r dr d\theta \\
-&= \int_0^{2\pi} \Bigl[-\frac12 e^{-r^2}\Bigr]_{r=0}^{r=\infty} d\theta = \int_0^{2\pi}\frac12 d\theta = \pi
+I^2 &= \int_0^{2\pi} \int_0^\infty e^{-r^2} r \mathop{dr} \mathop{d\theta} \\
+&= \int_0^{2\pi} \Bigl[-\frac{1}{2} e^{-r^2}\Bigr]_{r=0}^{r=\infty} \mathop{d\theta} = \int_0^{2\pi}\frac{1}{2} \mathop{d\theta} = \pi
 \end{aligned}$$
 
-이므로 $$I = \sqrt\pi$$이다. 차원을 하나 올려 회전대칭을 활용하는 이 기법이 가우스 적분의 고전적 풀이이며, 핵심은 직교좌표에서 풀리지 않던 안쪽 적분이 극좌표에서 생긴 여분의 인자 $$r$$ 덕분에 닫힌다는 데 있다.
+이므로 $$I = \sqrt\pi$$이다. 
 :::
 
+$$2$$차원에서의 고전적인 예시는 극좌표계 하나지만, $$3$$차원에서는 구면좌표계와 원기둥좌표계의 두 가지 치환방법이 있으며, 이를 적절한 방식으로 계산하는 것이 많은 적분을 계산할 때 도움이 된다.
+
 ::: 예시 7 (삼중적분의 변수변환 — 구면·원기둥 좌표)
-삼중적분에서는 공간의 회전대칭에 맞춘 두 좌표계가 쓰인다. *원기둥좌표<sub>cylindrical coordinates</sub>* $$(r, \theta, z)$$는 평면의 극좌표에 높이 $$z$$를 더한 것으로, $$x = r\cos\theta$$, $$y = r\sin\theta$$, $$z = z$$이고 야코비 행렬식이 $$r$$이라 $$\mathop{dV} = r dr d\theta dz$$이다. *구면좌표<sub>spherical coordinates</sub>* $$(\rho, \phi, \theta)$$는 원점으로부터의 거리 $$\rho$$, 양의 $$z$$축과의 각 $$\phi$$, 방위각 $$\theta$$로 점을 나타내며
+우선 *원기둥좌표<sub>cylindrical coordinates</sub>* $$(r, \theta, z)$$는 평면의 극좌표에 높이 $$z$$를 더한 것으로, 
+
+$$x = r\cos\theta,\quad y = r\sin\theta, \quad z = z$$
+
+이고 야코비 행렬식이
+
+(식)
+
+이므로 $$\mathop{dV} = r \mathop{dr} \mathop{d\theta} \mathop{dz}$$이다. 
+
+*구면좌표<sub>spherical coordinates</sub>* $$(\rho, \phi, \theta)$$의 경우, 원점으로부터의 거리 $$\rho$$, 양의 $$z$$축과의 각 $$\phi$$, 방위각 $$\theta$$로 점을 나타내며
 
 $$x = \rho\sin\phi\cos\theta, \quad y = \rho\sin\phi\sin\theta, \quad z = \rho\cos\phi$$
 
-이다. 그 야코비 행렬식을 계산하면 $$\det J = \rho^2\sin\phi$$이므로 $$\mathop{dV} = \rho^2\sin\phi d\rho d\phi d\theta$$이다. 회전대칭이 있는 입체에서 이 좌표들은 삼중적분을 크게 줄여 준다. 가령 반지름 $$R$$인 공의 부피는 구면좌표에서 세 변수가 분리되어
+이다. 그 야코비 행렬식을 계산하면 
 
-$$\iiint_{B_R} \mathop{dV} = \left(\int_0^{2\pi} d\theta\right)\left(\int_0^\pi \sin\phi d\phi\right)\left(\int_0^R \rho^2 d\rho\right) = 2\pi\cdot 2\cdot \frac{R^3}{3} = \frac{4\pi R^3}{3}$$
+$$\det J = \rho^2\sin\phi$$
 
-으로 곧장 나온다.
+이므로 $$\mathop{dV} = \rho^2\sin\phi \mathop{d\rho} \mathop{d\phi} \mathop{d\theta}$$이다. 가령 반지름 $$R$$인 공의 부피는 구면좌표에서 세 변수가 분리되어
+
+$$\iiint_{B_R} \mathop{dV} = \left(\int_0^{2\pi} \mathop{d\theta}\right)\left(\int_0^\pi \sin\phi \mathop{d\phi}\right)\left(\int_0^R \rho^2 \mathop{d\rho}\right) = 2\pi\cdot 2\cdot \frac{R^3}{3} = \frac{4\pi R^3}{3}$$
+
+으로 유도할 수 있다.
 :::
-
-야코비 행렬식이 부피의 국소 확대율로 나타나는 것은 미분을 선형사상으로 보는 관점에서 자연스럽다. 이로써 한 변수에서 시작한 미적분학이 다변수로 일관되게 확장된다.

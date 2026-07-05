@@ -262,6 +262,22 @@ $$\pi_3(S^2)\cong\pi_3(S^3)\cong H_3(S^3)\cong\mathbb{Z}$$
 
 이 예시는 [명제 12](#prop12)가 주는 $$\pi_i(S^n)=0$$ ($$i<n$$) 이라는 소극적 정보 너머에서 구의 호모토피 군이 얼마나 복잡할 수 있는지를 보여준다. 실제로 이러한 fibration을 겹겹이 쌓아 얻는 계산을 체계화하면, 밑공간과 fiber의 호몰로지로부터 전공간의 호몰로지 (그리고 호모토피) 를 근사하는 강력한 장치인 Serre spectral sequence에 이르게 되며, 이것이 고차 호모토피 군에 대한 현대적 계산의 출발점이 된다.
 
+## Serre 스펙트럼 열
+
+이 계산을 체계화하는 장치가 Serre 스펙트럼 열로, 밑공간과 fiber의 코호몰로지에서 출발하여 전공간의 코호몰로지를 근사해 나가는 [\[호몰로지 대수학\] §스펙트럼 열, ⁋정의 1](/ko/math/homological_algebra/spectral_sequences#def1)의 스펙트럼 열이다. 우리는 이 글에서 이를 증명 없이 서술하고 그 구성의 출처만 밝힌다.
+
+::: 정리 14 (Serre spectral sequence)
+Serre fibration $$F\rightarrow E\overset{\pi}{\rightarrow}B$$에서 $$B$$가 path-connected이고 $$\pi_1(B)$$이 $$H^\bullet(F;\mathbb{Z})$$에 자명하게 작용한다 하자. (가령 $$B$$가 simply connected이면 그러하다.) 그럼 first-quadrant cohomological 스펙트럼 열 $$\{E_r^{p,q}, d_r\}$$이 존재하여
+
+$$E_2^{p,q}=H^p\bigl(B;H^q(F;\mathbb{Z})\bigr)$$
+
+이고, 미분은 $$d_r:E_r^{p,q}\rightarrow E_r^{p+r,q-r+1}$$의 형태이며, 이 스펙트럼 열은 전공간의 코호몰로지에 수렴한다. 곧 $$E_2^{p,q}\Rightarrow H^{p+q}(E;\mathbb{Z})$$이다.
+:::
+
+$$E_2$$-page는 밑공간의 코호몰로지를 fiber의 코호몰로지를 계수로 삼아 적은 것이다. 만일 모든 미분 $$d_r$$이 소멸한다면 $$E_2=E_\infty$$가 되어 전공간의 코호몰로지가 $$H^\bullet(B)$$와 $$H^\bullet(F)$$의 tensor product처럼 나타나는데, 이는 [§코호몰로지, ⁋따름정리 10](/ko/math/algebraic_topology/cohomology#cor10)의 Künneth 공식이 곱공간 $$B\times F$$에 대해 주던 결론의 뒤틀린 fibration 판본이다. 일반적으로는 미분들이 이 곱을 보정하며, 그 보정을 누적한 것이 전공간의 코호몰로지를 준다. [정리 14](#thm14)에서 수렴이 뜻하는 바는 [\[호몰로지 대수학\] §스펙트럼 열, ⁋정의 5](/ko/math/homological_algebra/spectral_sequences#def5)에서와 같이 $$H^n(E)$$ 위의 filtration의 associated graded가 $$\bigoplus_{p+q=n}E_\infty^{p,q}$$이라는 것이다.
+
+이 스펙트럼 열은 전공간의 특이 cochain complex를 밑공간의 skeleton들의 preimage로 여과하여 얻은 filtered complex에 [\[호몰로지 대수학\] §스펙트럼 열, ⁋명제 10](/ko/math/homological_algebra/spectral_sequences#prop10)을 적용하여 얻어지며, 비자명한 부분은 그 $$E_2$$-page가 위와 같이 밑공간의 코호몰로지로 식별된다는 데 있다. 밑공간이 단순연결이 아닐 때에는 $$\pi_1(B)$$의 작용을 담는 국소계수계로 $$E_2$$를 적어야 한다. 자세한 구성은 [May]와 [tD]에 있다.
+
 --- 
 
 **참고문헌**
