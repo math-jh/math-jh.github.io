@@ -274,7 +274,7 @@ $$E_2^{p,q}=H^p\bigl(B;H^q(F;\mathbb{Z})\bigr)$$
 이고, 미분은 $$d_r:E_r^{p,q}\rightarrow E_r^{p+r,q-r+1}$$의 형태이며, 이 스펙트럼 열은 전공간의 코호몰로지에 수렴한다. 곧 $$E_2^{p,q}\Rightarrow H^{p+q}(E;\mathbb{Z})$$이다.
 :::
 
-$$E_2$$-page는 밑공간의 코호몰로지를 fiber의 코호몰로지를 계수로 삼아 적은 것이다. 만일 모든 미분 $$d_r$$이 소멸한다면 $$E_2=E_\infty$$가 되어 전공간의 코호몰로지가 $$H^\bullet(B)$$와 $$H^\bullet(F)$$의 tensor product처럼 나타나는데, 이는 [§코호몰로지, ⁋따름정리 10](/ko/math/algebraic_topology/cohomology#cor10)의 Künneth 공식이 곱공간 $$B\times F$$에 대해 주던 결론의 뒤틀린 fibration 판본이다. 일반적으로는 미분들이 이 곱을 보정하며, 그 보정을 누적한 것이 전공간의 코호몰로지를 준다. [정리 14](#thm14)에서 수렴이 뜻하는 바는 [\[호몰로지 대수학\] §스펙트럼 열, ⁋정의 5](/ko/math/homological_algebra/spectral_sequences#def5)에서와 같이 $$H^n(E)$$ 위의 filtration의 associated graded가 $$\bigoplus_{p+q=n}E_\infty^{p,q}$$이라는 것이다.
+$$E_2$$-page는 밑공간의 코호몰로지를 fiber의 코호몰로지를 계수로 삼아 적은 것이다. 만일 모든 미분 $$d_r$$이 소멸한다면 $$E_2=E_\infty$$가 되어 전공간의 코호몰로지가 $$H^\bullet(B)$$와 $$H^\bullet(F)$$의 tensor product처럼 나타나는데, 이는 [§코호몰로지, ⁋따름정리 10](/ko/math/algebraic_topology/cohomology#cor10)이 곱공간 $$B\times F$$에 대해 주던 결론의 뒤틀린 fibration 판본이다. 일반적으로는 미분들이 이 곱을 보정하며, 그 보정을 누적한 것이 전공간의 코호몰로지를 준다. [정리 14](#thm14)에서 수렴이 뜻하는 바는 [\[호몰로지 대수학\] §스펙트럼 열, ⁋정의 5](/ko/math/homological_algebra/spectral_sequences#def5)에서와 같이 $$H^n(E)$$ 위의 filtration의 associated graded가 $$\bigoplus_{p+q=n}E_\infty^{p,q}$$이라는 것이다.
 
 이 스펙트럼 열은 전공간의 특이 cochain complex를 밑공간의 skeleton들의 preimage로 여과하여 얻은 filtered complex에 [\[호몰로지 대수학\] §스펙트럼 열, ⁋명제 10](/ko/math/homological_algebra/spectral_sequences#prop10)을 적용하여 얻어지며, 비자명한 부분은 그 $$E_2$$-page가 위와 같이 밑공간의 코호몰로지로 식별된다는 데 있다. 밑공간이 단순연결이 아닐 때에는 $$\pi_1(B)$$의 작용을 담는 국소계수계로 $$E_2$$를 적어야 한다. 자세한 구성은 [May]와 [tD]에 있다.
 

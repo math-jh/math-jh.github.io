@@ -62,13 +62,13 @@ $$\operatorname{area}(D) = \oint_C xdy = -\oint_C ydx = \frac12\oint_C (xdy - yd
 ::: 명제 3
 $$D$$의 경계 $$C$$가 양의 방향이고 $$\mathbf{F} = (P, Q)$$가 $$C^1$$이면, 단위접선 $$\mathbf{T}$$와 바깥 단위법선 $$\mathbf{n}$$에 대해
 
-$$\oint_C \mathbf{F} \cdot \mathbf{T}ds = \iint_D \left(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\right)dA, \qquad \oint_C \mathbf{F} \cdot \mathbf{n}ds = \iint_D \operatorname{div} FdA$$
+$$\oint_C \mathbf{F} \cdot \mathbf{T}ds = \iint_D \left(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\right)dA, \qquad \oint_C \mathbf{F} \cdot \mathbf{n}ds = \iint_D \div FdA$$
 
 이다. 앞을 *회전형<sub>circulation form</sub>*, 뒤를 *발산형<sub>flux form</sub>*이라 한다.
 :::
 
 ::: 증명
-회전형은 $$\oint_C \mathbf{F}\cdot \mathbf{T}ds = \oint_C Pdx + Qdy$$가 바로 [정리 1](#thm1)의 좌변이고, 우변의 피적분함수 $$Q_x - P_y$$가 평면벡터장의 회전 ([§벡터장, ⁋정의 3](/ko/math/calculus/vector_fields#def3))이다. 발산형은 양의 방향 경계에서 바깥 단위법선이 $$\mathbf{n}ds = (dy, -dx)$$임을 쓰면 $$\oint_C \mathbf{F}\cdot \mathbf{n}ds = \oint_C Pdy - Qdx$$인데, [정리 1](#thm1)을 $$(P, Q) \mapsto (-Q, P)$$에 적용하면 이것이 $$\iint_D (P_x + Q_y)dA = \iint_D \operatorname{div} FdA$$와 같다.
+회전형은 $$\oint_C \mathbf{F}\cdot \mathbf{T}ds = \oint_C Pdx + Qdy$$가 바로 [정리 1](#thm1)의 좌변이고, 우변의 피적분함수 $$Q_x - P_y$$가 평면벡터장의 회전 ([§벡터장, ⁋정의 3](/ko/math/calculus/vector_fields#def3))이다. 발산형은 양의 방향 경계에서 바깥 단위법선이 $$\mathbf{n}ds = (dy, -dx)$$임을 쓰면 $$\oint_C \mathbf{F}\cdot \mathbf{n}ds = \oint_C Pdy - Qdx$$인데, [정리 1](#thm1)을 $$(P, Q) \mapsto (-Q, P)$$에 적용하면 이것이 $$\iint_D (P_x + Q_y)dA = \iint_D \div FdA$$와 같다.
 :::
 
 발산형은 평면에서의 발산정리로, 경계를 통해 흘러나가는 알짜 유량이 내부의 발산을 모은 것과 같음을 말한다. 회전형은 경계를 도는 순환이 내부 회전의 총합임을 말하며, 둘은 각각 공간의 발산정리와 스토크스 정리로 일반화된다. 회전형으로부터 앞서 미뤄 둔 보존장 판정의 역방향이 곧바로 따른다.

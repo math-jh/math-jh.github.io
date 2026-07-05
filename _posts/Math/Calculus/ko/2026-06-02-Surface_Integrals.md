@@ -78,5 +78,5 @@ $$\iint_S dS = \int_0^{2\pi} \int_0^\pi R^2\sin\phi d\phi d\theta = R^2 \cdot 2\
 
 $$\iint_S \mathbf{F}\cdot d\mathbf{S} = \int_0^{2\pi} \int_0^\pi R^3\sin\phi d\phi d\theta = 4\pi R^3$$
 
-이다. 이 값이 공의 부피 $$4\pi R^3/3$$의 세 배인 것은 우연이 아니다. $$\operatorname{div} \mathbf{F} = 3$$이라 부피에 $$3$$을 곱한 것이 흘러나가는 총량이라는 발산정리의 예고이다.
+이다. 이 값이 공의 부피 $$4\pi R^3/3$$의 세 배인 것은 우연이 아니다. $$\div \mathbf{F} = 3$$이라 부피에 $$3$$을 곱한 것이 흘러나가는 총량이라는 발산정리의 예고이다.
 :::
