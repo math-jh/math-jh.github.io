@@ -98,7 +98,7 @@ and patch it together via a partition of unity.
 
 ## Covariant Differentiation on the Cotangent Bundle
 
-We show that a connection $$\nabla$$ defined on the tangent bundle $$TM$$ extends nicely to any $$(r,s)$$-tensor field $$\mathcal{T}^{r,s}(M)$$. ([]()) To do this, we must first specify how $$\nabla$$ extends to the cotangent bundle $$T^\ast M$$.
+We show that a connection $$\nabla$$ defined on the tangent bundle $$TM$$ extends nicely to any $$(r,s)$$-tensor field $$\mathcal{T}^{r,s}(M)$$. ([Proposition 5](#prop5)) To do this, we must first specify how $$\nabla$$ extends to the cotangent bundle $$T^\ast M$$.
 
 ::: Proposition 4
 Let $$M$$ be a manifold and let $$\nabla$$ be a connection on the tangent bundle $$TM$$. Define a map $$\nabla^\ast:\mathfrak{X}(M)\times\Gamma(T^\ast M)\rightarrow\Gamma(T^\ast M)$$ by the formula

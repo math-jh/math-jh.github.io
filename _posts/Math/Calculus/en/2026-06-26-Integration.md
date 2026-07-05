@@ -34,9 +34,9 @@ If $$G$$ is also an antiderivative of $$f$$, then $$(G - F)' = f - f = 0$$. By [
 
 In view of this proposition, we collect all antiderivatives of $$f$$ into a single expression and write
 
-$$\int f(x)dx = F(x) + C,$$
+$$\int f(x)\mathop{dx} = F(x) + C,$$
 
-which we call the *indefinite integral* of $$f$$. Here $$C$$ is the *constant of integration*, $$f$$ is the *integrand*, and the symbol $$dx$$ indicates the variable of integration. Thanks to the fact guaranteed by [Proposition 2](#prop2)—that antiderivatives differ only by a constant—the single constant $$C$$ suffices to represent all of them at once.
+which we call the *indefinite integral* of $$f$$. Here $$C$$ is the *constant of integration*, $$f$$ is the *integrand*, and the symbol $$\mathop{dx}$$ indicates the variable of integration. Thanks to the fact guaranteed by [Proposition 2](#prop2)—that antiderivatives differ only by a constant—the single constant $$C$$ suffices to represent all of them at once.
 
 The assumption we are implicitly making, namely that the interval is connected, is not essential in all respects, but the above proposition holds only when the interval is connected. If the domain is broken into separate pieces, a different constant may be chosen on each piece. For instance, $$1/x$$ is defined separately on $$x > 0$$ and $$x < 0$$; adding different constants to $$F(x) = \ln\lvert x\rvert$$ on the two pieces still yields antiderivatives of $$1/x$$, so the literal statement "differ only by a constant" does not apply over the whole domain.
 
@@ -49,7 +49,7 @@ Meanwhile, in [§Differentiation Rules](/en/math/calculus/differentiation_rules)
 ::: Proposition 3 (Linearity of the Indefinite Integral)
 If $$f$$ and $$g$$ have antiderivatives and $$a, b$$ are constants, then
 
-$$\int \bigl(a f(x) + b g(x)\bigr)dx = a\int f(x)dx + b\int g(x)dx.$$
+$$\int \bigl(a f(x) + b g(x)\bigr)\mathop{dx} = a\int f(x)\mathop{dx} + b\int g(x)\mathop{dx}.$$
 :::
 
 ::: Proof
@@ -62,9 +62,9 @@ so $$aF + bG$$ is an antiderivative of $$af + bg$$.
 
 Now, reversing the derivative formulas from [§Differentiation Rules](/en/math/calculus/differentiation_rules), we obtain the following basic formulas. That is, differentiating the right-hand side of each formula yields the integrand.
 
-$$\int x^rdx = \frac{x^{r+1}}{r+1} + C\ (r \neq -1), \qquad \int \frac{1}{x}dx = \ln\lvert x\rvert + C,$$
+$$\int x^r\mathop{dx} = \frac{x^{r+1}}{r+1} + C\ (r \neq -1), \qquad \int \frac{1}{x}\mathop{dx} = \ln\lvert x\rvert + C,$$
 
-$$\int e^xdx = e^x + C, \qquad \int \cos xdx = \sin x + C, \qquad \int \sin xdx = -\cos x + C,\qquad \int \sec^2 xdx = \tan x + C,$$
+$$\int e^x\mathop{dx} = e^x + C, \qquad \int \cos x\mathop{dx} = \sin x + C, \qquad \int \sin x\mathop{dx} = -\cos x + C,\qquad \int \sec^2 x\mathop{dx} = \tan x + C,$$
 
 $$\int \frac{dx}{1 + x^2} = \arctan x + C, \qquad \int \frac{dx}{\sqrt{1 - x^2}} = \arcsin x + C.$$
 
@@ -79,35 +79,41 @@ In particular, the two especially useful techniques of substitution and integrat
 ::: Theorem 4 (Integration by Substitution)
 If $$g$$ is differentiable and $$f$$ is continuous, then
 
-$$\int f(g(x)) g'(x) dx = \int f(u) du \quad (u = g(x)).$$
+$$\int f(g(x)) g'(x) \mathop{dx} = \int f(u) \mathop{du} \quad (u = g(x)).$$
 :::
 
 ::: Proof
 Let $$F$$ be an antiderivative of $$f$$. Then by [§Differentiation Rules, ⁋Theorem 4](/en/math/calculus/differentiation_rules#thm4),
 
-$$\frac{d}{dx}F(g(x)) = F'(g(x))g'(x) = f(g(x))g'(x),$$
+$$\frac{d}{\mathop{dx}}F(g(x)) = F'(g(x))g'(x) = f(g(x))g'(x),$$
 
-so $$F(g(x))$$ is an antiderivative of the left-hand integrand. Therefore $$\int f(g(x))g'(x)dx = F(g(x)) + C = F(u) + C = \int f(u)du$$.
+so $$F(g(x))$$ is an antiderivative of the left-hand integrand. Therefore $$\int f(g(x))g'(x)\mathop{dx} = F(g(x)) + C = F(u) + C = \int f(u)\mathop{du}$$.
 :::
 
-In practice, one sets $$u = g(x)$$ and $$du = g'(x) dx$$, rewrites the expression entirely in terms of $$u$$, integrates, and then substitutes back. For example, with $$u = \cos x$$ we get $$\int \tan x dx = -\int du/u = -\ln\lvert\cos x\rvert + C$$, and by the same method $$\int x/(x^2+1) dx = \ln(x^2+1)/2 + C$$.
+In practice, one sets $$u = g(x)$$ and $$du = g'(x) \mathop{dx}$$, rewrites the expression entirely in terms of $$u$$, integrates, and then substitutes back. For example, with $$u = \cos x$$ we get 
+
+$$\int \tan x \mathop{dx} = -\int \frac{du}{u} = -\ln\lvert\cos x\rvert + C,$$
+
+and by the same method
+
+$$\int \frac{x}{x^2+1} \mathop{dx} = \ln(x^2+1) + C.$$
 
 ::: Theorem 5 (Integration by Parts)
 If $$u, v$$ are differentiable and their derivatives are continuous, then
 
-$$\int u v' dx = uv - \int u' v dx.$$
+$$\int u v' \mathop{dx} = uv - \int u' v \mathop{dx}.$$
 :::
 
 ::: Proof
-By [§Differentiation Rules, ⁋Proposition 3](/en/math/calculus/differentiation_rules#prop3), $$(uv)' = u'v + uv'$$, so $$uv' = (uv)' - u'v$$. Integrating both sides, we obtain the claim from $$\int (uv)' dx = uv$$.
+By [§Differentiation Rules, ⁋Proposition 3](/en/math/calculus/differentiation_rules#prop3), $$(uv)' = u'v + uv'$$, so $$uv' = (uv)' - u'v$$. Integrating both sides, we obtain the claim from $$\int (uv)' \mathop{dx} = uv$$.
 :::
 
-The key is to choose $$u$$ as the factor that simplifies upon differentiation and $$v'$$ as the factor that can be integrated. For example, $$\int x e^x dx$$ with $$u = x$$ gives $$xe^x - e^x + C$$; for functions like logarithms or inverse trigonometric functions whose derivatives are actually simpler, we place them in the $$u$$ slot with $$v' = 1$$ (so $$\int \ln x dx = x\ln x - x + C$$). Sometimes integration by parts does not simplify the integrand but returns it to itself; in that case we treat the original integral as an unknown and solve algebraically.
+The key is to choose $$u$$ as the factor that simplifies upon differentiation and $$v'$$ as the factor that can be integrated. For example, $$\int x e^x \mathop{dx}$$ with $$u = x$$ gives $$xe^x - e^x + C$$; for functions like logarithms or inverse trigonometric functions whose derivatives are actually simpler, we place them in the $$u$$ slot with $$v' = 1$$ (so $$\int \ln x \mathop{dx} = x\ln x - x + C$$). Sometimes integration by parts does not simplify the integrand but returns it to itself; in that case we treat the original integral as an unknown and solve algebraically.
 
 ::: Example 6
-For $$I = \int e^x\cos x dx$$, integrating by parts twice brings us back to the original integral. With $$u = e^x$$ and $$v' = \cos x$$,
+For $$I = \int e^x\cos x \mathop{dx}$$, integrating by parts twice brings us back to the original integral. With $$u = e^x$$ and $$v' = \cos x$$,
 
-$$I = e^x\sin x - \int e^x\sin x dx = e^x\sin x - \Bigl(-e^x\cos x + \int e^x\cos x dx\Bigr) = e^x(\sin x + \cos x) - I$$
+$$I = e^x\sin x - \int e^x\sin x \mathop{dx} = e^x\sin x - \Bigl(-e^x\cos x + \int e^x\cos x \mathop{dx}\Bigr) = e^x(\sin x + \cos x) - I$$
 
 so $$2I = e^x(\sin x + \cos x)$$, hence
 
@@ -126,22 +132,22 @@ and when the denominator contains an irreducible quadratic, completing the squar
 
 $$\int \frac{dx}{x^2 + 2x + 5} = \frac{1}{2}\arctan\frac{x+1}{2} + C.$$
 
-For radicals such as $$\sqrt{a^2 - x^2}$$ or $$\sqrt{a^2 + x^2}$$, a trigonometric substitution eliminates the radical. For example, in $$\int \sqrt{1 - x^2} dx$$ with $$x = \sin\theta$$,
+For radicals such as $$\sqrt{a^2 - x^2}$$ or $$\sqrt{a^2 + x^2}$$, a trigonometric substitution eliminates the radical. For example, in $$\int \sqrt{1 - x^2} \mathop{dx}$$ with $$x = \sin\theta$$,
 
-$$\int \cos^2\theta d\theta = \frac{1}{2}(\arcsin x + x\sqrt{1-x^2}) + C.$$
+$$\int \cos^2\theta \mathop{d\theta} = \frac{1}{2}(\arcsin x + x\sqrt{1-x^2}) + C.$$
 
 Powers of trigonometric functions themselves are handled by reducing the degree via identities or by substitution. Odd powers are integrated by peeling off one factor and substituting:
 
-$$\int \sin^3 x dx = -\cos x + \frac{1}{3}\cos^3 x + C,$$
+$$\int \sin^3 x \mathop{dx} = -\cos x + \frac{1}{3}\cos^3 x + C,$$
 
 while even powers are reduced using double-angle formulas:
 
-$$\int \sin^2 x dx = \frac{x}{2} - \frac{\sin 2x}{4} + C.$$
+$$\int \sin^2 x \mathop{dx} = \frac{x}{2} - \frac{\sin 2x}{4} + C.$$
 
 Repeated integration by parts yields recurrence relations that lower the degree step by step, allowing systematic treatment of integrals involving mixed powers.
 
 ::: Example 7 (Recurrence Relation)
-For $$I_n = \int x^n e^x dx$$, integrating by parts with $$u = x^n$$ and $$v' = e^x$$ gives
+For $$I_n = \int x^n e^x \mathop{dx}$$, integrating by parts with $$u = x^n$$ and $$v' = e^x$$ gives
 
 $$I_n = x^n e^x - n I_{n-1}.$$
 
@@ -151,10 +157,10 @@ $$I_1 = (x-1)e^x, \quad I_2 = (x^2 - 2x + 2)e^x,$$
 
 lowering the degree at each step. In the same way one obtains the recurrence
 
-$$\int \sin^n x dx = -\frac{1}{n} \sin^{n-1}x\cos x + \frac{n-1}{n}\int \sin^{n-2}x dx.$$
+$$\int \sin^n x \mathop{dx} = -\frac{1}{n} \sin^{n-1}x\cos x + \frac{n-1}{n}\int \sin^{n-2}x \mathop{dx}.$$
 :::
 
-Even with these techniques, some integrals cannot be expressed in terms of elementary functions; examples include $$\int e^{-x^2} dx$$ and $$\int (\sin x)/x dx$$. Such functions are nevertheless well defined as definite integrals, and they themselves define new functions, as we shall see from the Fundamental Theorem of Calculus.
+Even with these techniques, some integrals cannot be expressed in terms of elementary functions; examples include $$\int e^{-x^2} \mathop{dx}$$ and $$\int (\sin x)/x \mathop{dx}$$. Such functions are nevertheless well defined as definite integrals, and they themselves define new functions, as we shall see from the Fundamental Theorem of Calculus.
 
 ## Partitions and Riemann Sums
 
@@ -175,14 +181,14 @@ A Riemann sum approximates the area under the curve by rectangles of width $$\De
 ::: Definition 9
 If there exists a real number $$S$$ such that for every $$\varepsilon > 0$$ there is a $$\delta > 0$$ with $$\lvert S(P, f) - S\rvert < \varepsilon$$ for every partition and every choice of sample points satisfying $$\lVert P\rVert < \delta$$, then $$f$$ is said to be *integrable* on $$[a,b]$$, and $$S$$ is called the *definite integral*, written
 
-$$\int_a^b f(x)dx = S.$$
+$$\int_a^b f(x)\mathop{dx} = S.$$
 
 The numbers $$a$$ and $$b$$ are called the lower and upper limits of integration, respectively.
 :::
 
 We can apply this definition directly to compute definite integrals. Dividing $$[0,1]$$ into $$n$$ equal parts and choosing the right endpoints $$c_i = i/n$$, the Riemann sum for
 
-$$\int_0^1 xdx$$
+$$\int_0^1 x\mathop{dx}$$
 
 is
 
@@ -190,7 +196,7 @@ $$\sum_{i=1}^n \frac{i}{n}\cdot\frac1n = \frac{1}{n^2}\cdot\frac{n(n+1)}{2} = \f
 
 and similarly
 
-$$\int_0^1 x^2dx = \lim_{n\to\infty}\sum_{i=1}^n \frac{i^2}{n^3} = \lim_{n\to\infty}\frac{n(n+1)(2n+1)}{6n^3} = \frac13.$$
+$$\int_0^1 x^2\mathop{dx} = \lim_{n\to\infty}\sum_{i=1}^n \frac{i^2}{n^3} = \lim_{n\to\infty}\frac{n(n+1)(2n+1)}{6n^3} = \frac13.$$
 
 In particular, the first result can also be checked immediately from the area formula for a triangle.
 
@@ -207,57 +213,57 @@ Since a Riemann sum is defined as a sum and a limit, the definite integral inher
 ::: Proposition 11
 If $$f, g$$ are integrable on $$[a,b]$$, then the following hold.
 
-1. For constants $$\alpha, \beta$$, $$\int_a^b (\alpha f(x) + \beta g(x))dx = \alpha\int_a^b f(x)dx + \beta\int_a^b g(x)dx$$.
-2. For $$a < c < b$$, $$\int_a^b f(x)dx = \int_a^c f(x)dx + \int_c^b f(x)dx$$.
-3. If $$f(x) \leq g(x)$$ for all $$x$$, then $$\int_a^b f(x)dx \leq \int_a^b g(x)dx$$.
+1. For constants $$\alpha, \beta$$, $$\int_a^b (\alpha f(x) + \beta g(x))\mathop{dx} = \alpha\int_a^b f(x)\mathop{dx} + \beta\int_a^b g(x)\mathop{dx}$$.
+2. For $$a < c < b$$, $$\int_a^b f(x)\mathop{dx} = \int_a^c f(x)\mathop{dx} + \int_c^b f(x)\mathop{dx}$$.
+3. If $$f(x) \leq g(x)$$ for all $$x$$, then $$\int_a^b f(x)\mathop{dx} \leq \int_a^b g(x)\mathop{dx}$$.
 :::
 
 ::: Proof
 All three properties hold at the level of Riemann sums and are preserved in the limit. Linearity follows from $$S(P, \alpha f + \beta g) = \alpha S(P, f) + \beta S(P, g)$$, and monotonicity follows from $$f(c_i) \leq g(c_i)$$ implying $$S(P, f) \leq S(P, g)$$. The additivity over intervals is obtained by considering only partitions that include $$c$$ as a subdivision point, so the Riemann sum splits into the sums over the two subintervals.
 :::
 
-By convention we set $$\int_a^a f(x)dx = 0$$ and $$\int_b^a f(x)dx = -\int_a^b f(x)dx$$; then additivity holds regardless of the order of $$a, b, c$$. From monotonicity two useful estimates follow. First, if $$m \leq f \leq M$$, then
+By convention we set $$\int_a^a f(x)\mathop{dx} = 0$$ and $$\int_b^a f(x)\mathop{dx} = -\int_a^b f(x)\mathop{dx}$$; then additivity holds regardless of the order of $$a, b, c$$. From monotonicity two useful estimates follow. First, if $$m \leq f \leq M$$, then
 
-$$m(b-a) \leq \int_a^b f(x)dx \leq M(b-a).$$
+$$m(b-a) \leq \int_a^b f(x)\mathop{dx} \leq M(b-a).$$
 
 Second, applying this to $$-\lvert f\rvert \leq f \leq \lvert f\rvert$$ yields the integral version of the triangle inequality:
 
-$$\left\lvert \int_a^b f(x)dx\right\rvert  \leq \int_a^b \lvert f(x)\rvert dx.$$
+$$\left\lvert \int_a^b f(x)\mathop{dx}\right\rvert  \leq \int_a^b \lvert f(x)\rvert \mathop{dx}.$$
 
 Applying the first inequality to continuous functions, one can show that the integral value is exactly attained by the function value at some point.
 
 ::: Proposition 12 (Mean Value Theorem for Integrals)
 If $$f$$ is continuous on $$[a,b]$$, then there exists $$c \in [a,b]$$ such that
 
-$$\int_a^b f(x)dx = f(c)(b-a).$$
+$$\int_a^b f(x)\mathop{dx} = f(c)(b-a).$$
 :::
 
 ::: Proof
 By [§Continuous Functions, ⁋Theorem 4](/en/math/calculus/continuity#thm4), $$f$$ attains a minimum $$m$$ and a maximum $$M$$ on $$[a,b]$$. From the calculation above, the average value
 
-$$\frac{1}{b-a}\int_a^b f(x)dx$$
+$$\frac{1}{b-a}\int_a^b f(x)\mathop{dx}$$
 
-lies in $$[m, M]$$; hence by [§Continuous Functions, ⁋Theorem 5](/en/math/calculus/continuity#thm5) there exists $$c$$ with $$f(c) = \frac{1}{b-a}\int_a^b f(x)dx$$.
+lies in $$[m, M]$$; hence by [§Continuous Functions, ⁋Theorem 5](/en/math/calculus/continuity#thm5) there exists $$c$$ with $$f(c) = \frac{1}{b-a}\int_a^b f(x)\mathop{dx}$$.
 :::
 
 Here
 
-$$\frac{1}{b-a}\int_a^b f(x)dx$$
+$$\frac{1}{b-a}\int_a^b f(x)\mathop{dx}$$
 
 is called the *average value* of $$f$$ on $$[a,b]$$, and [Proposition 12](#prop12) states that a continuous function actually attains its average value at least at one point.
 
 ## Area and Applications
 
-The definite integral is most intuitively understood as <em>signed</em> area. For example, on an interval where $$f < 0$$, each term $$f(c_i)\Delta x_i$$ of the Riemann sum is negative, so $$\int_a^b f(x)dx$$ attaches a minus sign to the region enclosed by the $$x$$-axis and the graph of $$f$$. This viewpoint becomes especially clear when the function changes sign over the interval of integration, and it is here that the integral version of the triangle inequality appears as a strict inequality, distinguishing the case where a single integral cancels positive and negative areas to give $$0$$ from the case where the actual area requires absolute values.
+The definite integral is most intuitively understood as <em>signed</em> area. For example, on an interval where $$f < 0$$, each term $$f(c_i)\Delta x_i$$ of the Riemann sum is negative, so $$\int_a^b f(x)\mathop{dx}$$ attaches a minus sign to the region enclosed by the $$x$$-axis and the graph of $$f$$. This viewpoint becomes especially clear when the function changes sign over the interval of integration, and it is here that the integral version of the triangle inequality appears as a strict inequality, distinguishing the case where a single integral cancels positive and negative areas to give $$0$$ from the case where the actual area requires absolute values.
 
 ::: Example 13
-The reason $$\int_{-1}^{1} xdx = 0$$ is that the negative area on $$[-1,0]$$ and the positive area on $$[0,1]$$ exactly cancel. Each piece is a right triangle with base and height $$1$$, so its area is $$\frac{1}{2}$$; splitting the integral using the second part of [Proposition 11](#prop11),
+The reason $$\int_{-1}^{1} x\mathop{dx} = 0$$ is that the negative area on $$[-1,0]$$ and the positive area on $$[0,1]$$ exactly cancel. Each piece is a right triangle with base and height $$1$$, so its area is $$\frac{1}{2}$$; splitting the integral using the second part of [Proposition 11](#prop11),
 
-$$\int_{-1}^{1} xdx = \int_{-1}^{0} xdx + \int_{0}^{1} xdx = -\frac{1}{2} + \frac{1}{2} = 0.$$
+$$\int_{-1}^{1} x\mathop{dx} = \int_{-1}^{0} x\mathop{dx} + \int_{0}^{1} x\mathop{dx} = -\frac{1}{2} + \frac{1}{2} = 0.$$
 
 If one wants the *actual* area enclosed by the curve and the $$x$$-axis, one must integrate the absolute value $$\lvert x\rvert$$, obtaining
 
-$$\int_{-1}^{1} \lvert x\rvert dx = \int_{-1}^{0} (-x)dx + \int_{0}^{1} xdx = \frac{1}{2} + \frac{1}{2} = 1.$$
+$$\int_{-1}^{1} \lvert x\rvert \mathop{dx} = \int_{-1}^{0} (-x)\mathop{dx} + \int_{0}^{1} x\mathop{dx} = \frac{1}{2} + \frac{1}{2} = 1.$$
 
 This is a concrete instance where the integral triangle inequality $$\bigl\lvert\int f\bigr\rvert \leq \int \lvert f\rvert$$ holds as a strict inequality $$0 < 1$$, and each piece is immediately verified by the triangle area formula. This calculation also agrees with the earlier computation of the triangle area via Riemann sums.
 :::
@@ -267,19 +273,19 @@ Because the mean value theorem converts an integral into a function value at a s
 ::: Proposition 14 (Weighted Mean Value Theorem)
 If $$f$$ is continuous on $$[a,b]$$ and $$\mu$$ is integrable on $$[a,b]$$ with $$\mu \geq 0$$, then there exists $$c \in [a,b]$$ such that
 
-$$\int_a^b f(x)\mu(x)dx = f(c)\int_a^b \mu(x)dx.$$
+$$\int_a^b f(x)\mu(x)\mathop{dx} = f(c)\int_a^b \mu(x)\mathop{dx}.$$
 :::
 
 ::: Proof
 By [§Continuous Functions, ⁋Theorem 4](/en/math/calculus/continuity#thm4), $$f$$ attains a minimum $$m$$ and a maximum $$M$$. Since $$\mu \geq 0$$, we have $$m\mu(x) \leq f(x)\mu(x) \leq M\mu(x)$$; integrating and using monotonicity and linearity gives
 
-$$m\int_a^b \mu(x)dx \leq \int_a^b f(x)\mu(x) dx\leq M\int_a^b \mu(x) dx.$$
+$$m\int_a^b \mu(x)\mathop{dx} \leq \int_a^b f(x)\mu(x) \mathop{dx}\leq M\int_a^b \mu(x) \mathop{dx}.$$
 
-If $$\int_a^b \mu(x)dx = 0$$, then the middle integral is also $$0$$ and the equality holds for any $$c$$. If $$\int_a^b \mu(x)dx > 0$$, dividing the above inequality by that value yields
+If $$\int_a^b \mu(x)\mathop{dx} = 0$$, then the middle integral is also $$0$$ and the equality holds for any $$c$$. If $$\int_a^b \mu(x)\mathop{dx} > 0$$, dividing the above inequality by that value yields
 
-$$\frac{\int_a^b f(x)\mu(x) dx}{\int_a^b \mu(x)dx} \in [m, M],$$
+$$\frac{\int_a^b f(x)\mu(x) \mathop{dx}}{\int_a^b \mu(x)\mathop{dx}} \in [m, M],$$
 
-and by [§Continuous Functions, ⁋Theorem 5](/en/math/calculus/continuity#thm5) there exists $$c$$ attaining this value. Multiplying back by $$\int_a^b \mu(x)dx$$ completes the proof.
+and by [§Continuous Functions, ⁋Theorem 5](/en/math/calculus/continuity#thm5) there exists $$c$$ attaining this value. Multiplying back by $$\int_a^b \mu(x)\mathop{dx}$$ completes the proof.
 :::
 
 If we set $$\mu \equiv 1$$, the weighted mean value theorem reduces to [Proposition 12](#prop12); thus [Proposition 14](#prop14) is a generalization of the mean value theorem, which may be thought of as adding a kind of density.

@@ -175,7 +175,7 @@ $$W'$$를 $$W$$의 orthogonal complement로 잡으면, $$W'$$ 또한 $$G$$-invar
 
 $$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$
 
-을 살펴보았다. 그럼 [따름정리 7](#cor7)이 주장하는 것은 임의의 유한차원 $$G$$-representation $$V$$는 항상 *semisimple* $$\mathbb{C}[G]$$-module이라는 것이다. 따라서 $$\mathbb{C}[G]$$는 그 자체로 Artinian semisimple ring이 되며 ([semisimple](##ref##)) 따라서 Artin-Wedderburn 정리 ([artin-wedderburn](##ref##))에 의하여 simple module들로의 decomposition
+을 살펴보았다. 그럼 [따름정리 7](#cor7)이 주장하는 것은 임의의 유한차원 $$G$$-representation $$V$$는 항상 *semisimple* $$\mathbb{C}[G]$$-module이라는 것이다 ([\[환론\] §Semisimple module, ⁋정의 1](/ko/math/ring_theory/semisimple_modules#def1)). 따라서 $$\mathbb{C}[G]$$는 그 자체를 regular representation으로 보면 [따름정리 7](#cor7)에 의해 semisimple module이므로 Artinian semisimple ring이 되며, [\[환론\] §Artin-Wedderburn 정리, ⁋정리 11](/ko/math/ring_theory/artin_wedderburn#thm11)에 의하여 simple module들로의 decomposition
 
 $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r \Mat_{n_i}(\mathbb{C})\tag{1}$$
 
@@ -193,9 +193,9 @@ $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r \Mat_{n_i}(\mathbb{C})\tag{1}$$
 3. $$G$$-map들의 모임 $$\Hom_G(V,W)$$은 $$\mathbb{C}$$이거나 $$0$$이다. 
 :::
 ::: 증명
-1. 이는 kernel과 image를 각각 생각하면 자명하다. 
-2. 주어진 $$f$$는 $$G$$-linear map이기 이전에 $$\mathbb{C}$$-linear map이므로, $$f$$의 eigenvalue $$\lambda$$가 존재한다. 이제 이 eigenvalue에 대응되는 eigenspace를 $$W$$라 하고, 이것이 실은 $$G$$-submodule이 됨을 보이면 된다. 
-3. 위의 두 명제에 의해 자명하다. 
+1. $$G$$-map은 $$\mathbb{C}[G]$$-module homomorphism이고 irreducible $$G$$-module은 simple $$\mathbb{C}[G]$$-module이므로, 이는 [\[환론\] §Division ring, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10)의 특수한 경우이다. 
+2. 주어진 $$f$$는 $$G$$-linear map이기 이전에 $$\mathbb{C}$$-linear map이므로, $$f$$의 eigenvalue $$\lambda$$가 존재한다. 이 eigenvalue의 eigenspace를 $$V_\lambda$$라 하면, 임의의 $$w\in V_\lambda$$와 $$g\in G$$에 대하여 $$f(g\cdot w)=g\cdot f(w)=\lambda(g\cdot w)$$이므로 $$V_\lambda$$는 $$V$$의 nonzero $$G$$-submodule이다. $$V$$가 irreducible이므로 $$V_\lambda=V$$이고, 곧 $$f=\lambda\id_V$$이다. 
+3. $$V\not\cong W$$라면 1에 의하여 $$\Hom_G(V,W)=0$$이다. $$V\cong W$$라면 $$\Hom_G(V,W)\cong\End_G(V)$$이고, 임의의 nonzero $$f\in\End_G(V)$$가 2에 의해 $$\lambda\id_V$$의 꼴이므로 $$\End_G(V)=\mathbb{C}\id_V\cong\mathbb{C}$$이다. 
 :::
 
 이를 사용하면 우리는 다음 명제를 얻는다. 
@@ -207,19 +207,24 @@ $$d=\bigoplus_{W\in\Irr(G, \mathbb{C})} d_W:\bigoplus_{W\in \Irr(G, \mathbb{C})}
 
 는 isomorphism이다. 
 :::
-
-이에 대한 증명은, $$V$$가 irreducible decomposition $$V=\bigoplus V_j$$을 가지므로 다음의 식
+::: 증명
+[따름정리 7](#cor7)에 의해 irreducible decomposition $$V=\bigoplus_j V_j$$가 존재하고, 따라서 다음의 식
 
 $$\Hom_G(W, V)=\Hom_G\left(W, \bigoplus V_j\right)\cong \bigoplus \Hom_G(W, V_j) $$
 
-과 [보조정리 8](#lem8)에 의해 자명하다. 즉 복잡하게 써 두기는 했지만, 위의 $$d$$는 각각의 irreducible $$G$$-module $$W$$(의 isomorphism class)들이 $$V$$ 안에 얼마나 들어있는지를 세는 것이며, 따라서 다음 정의가 자연스럽다. 
+을 얻는다. [보조정리 8](#lem8)에 의해 각 항은 $$V_j\cong W$$일 때 $$1$$차원이고 그렇지 않으면 $$0$$이므로, $$V_j\cong W$$인 각 $$j$$마다 isomorphism $$u_j:W\rightarrow V_j$$를 하나씩 고르면 이들이 $$\Hom_G(W,V)$$의 기저를 이룬다. 그럼 $$d_W$$는 각 $$\mathbb{C}u_j\otimes_\mathbb{C}W$$를 $$u_j$$를 통해 $$V_j$$ 위로 보내는 isomorphism들의 직합이므로 $$\bigoplus_{V_j\cong W}V_j$$ 위로의 isomorphism이고, 모든 isomorphism class에 대하여 직합을 취하면 $$\bigoplus_jV_j=V$$ 전체를 얻으므로 $$d$$는 isomorphism이다.
+:::
+
+복잡하게 써 두기는 했지만, 위의 $$d$$는 각각의 irreducible $$G$$-module $$W$$(의 isomorphism class)들이 $$V$$ 안에 얼마나 들어있는지를 세는 것이며, 따라서 다음 정의가 자연스럽다. 
 
 ::: 정의 10
 위의 함수에 의한 $$W\in\Irr(G, \mathbb{C})$$의 image를 $$V$$의 *$$W$$-isotypical summand*라 부르고, $$\Hom_G(W, V)$$를 $$W$$의 *multiplicity*라 부른다. 
 :::
 
-약간의 믿음을 가지면 이러한 표현이 유일하다는 것도 납득할 수 있다. 즉, 우리는 임의의 representation $$V$$가 주어졌을 때 이를 다음의 decomposition
+이 정의는 일반론과 일치한다. $$d_W$$의 image는 $$W$$와 isomorphic한 $$V$$의 simple submodule들이 생성하는 부분공간이므로 정확히 [\[환론\] §Semisimple module, ⁋정의 7](/ko/math/ring_theory/semisimple_modules#def7)의 $$W$$-isotypic component이고, [같은 글, ⁋명제 8](/ko/math/ring_theory/semisimple_modules#prop8)에 의해 이 분해는 irreducible decomposition의 선택과 무관하게 canonical하다.
+
+표현의 유일성 또한 이제 [\[환론\] §Semisimple module, ⁋명제 9](/ko/math/ring_theory/semisimple_modules#prop9)로부터 얻어진다. 즉, 우리는 임의의 representation $$V$$가 주어졌을 때 이를 다음의 decomposition
 
 $$V=V_1^{\oplus r_1}\oplus\cdots\oplus V_k^{\oplus r_k}$$
 
-의 형태로 나타낼 수 있는 것을 안다. 
+의 형태로, 인자들의 isomorphism class와 중복도가 유일하도록 나타낼 수 있는 것을 안다. 

@@ -240,7 +240,7 @@ $$\mathbb{K}_h[x]=\mathbb{M}[x]=\mathbb{L}$$
 
 특히 만일 $$\mathbb{L}/\mathbb{K}$$가 finite degree separable extension이라면 이는 특히 finite degree étale $$\mathbb{K}$$-algebra이고, 따라서 [§에탈대수, ⁋명제 9](/ko/math/field_theory/etale_algebras#prop9)로부터 위 정리의 둘째 조건이 성립한다는 것을 안다. 
 
-[정리 14](#thm14)는 $$\mathbb{K}$$가 finite field여도 항상 성립하지만, 이를 증명하기 위해서는 [보조정리 13](#lem13)보다 조금 더 정교한 counting argument가 필요하므로 나중으로 미뤄둔다. ([##ref##]())
+[정리 14](#thm14)는 $$\mathbb{K}$$가 finite field여도 항상 성립하지만, 이를 증명하기 위해서는 [보조정리 13](#lem13)보다 조금 더 정교한 counting argument가 필요하므로 나중으로 미뤄둔다.
 
 한편 seperability는 본질적으로는 (거의) étale algebra이고, étale algebra는 base change에 대해 잘 행동하므로 ([§에탈대수, ⁋따름정리 14](/ko/math/field_theory/etale_algebras#cor14)) [명제 12](#prop12)의 증명에서와 마찬가지로 약간의 수정을 가하면 다음의 두 경우에 separability도 base change에 대해 잘 행동한다는 것을 보일 수 있다. 
 

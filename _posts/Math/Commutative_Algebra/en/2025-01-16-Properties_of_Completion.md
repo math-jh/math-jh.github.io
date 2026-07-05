@@ -96,7 +96,7 @@ For the second result, by [§Flatness, ⁋Proposition 1](/en/math/commutative_al
 
 ## Hensel's Lemma
 
-A typical example of a complete ring is the ring of formal power series $$A[[\x_i]]_{i\in I}$$ discussed in [§Completion, ⁋Example 4](). We saw in [\[Algebraic Structures\] §Algebras, ⁋Proposition 8](/en/math/algebraic_structures/algebras#prop8) that the ring of power series $$A[\x_i]_{i\in I}$$ plays the role of the free functor $$\Set \rightarrow \cAlg{A}$$, and a similar universal property holds for $$A[[\x_i]]_{i\in I}$$.
+A typical example of a complete ring is the ring of formal power series $$A[[\x_i]]_{i\in I}$$ discussed in [§Completion, ⁋Example 4](/en/math/commutative_algebra/completion#ex4). We saw in [\[Algebraic Structures\] §Algebras, ⁋Proposition 8](/en/math/algebraic_structures/algebras#prop8) that the ring of power series $$A[\x_i]_{i\in I}$$ plays the role of the free functor $$\Set \rightarrow \cAlg{A}$$, and a similar universal property holds for $$A[[\x_i]]_{i\in I}$$.
 
 ::: Theorem 5
 Fix a ring $$A$$ and an $$A$$-algebra $$E$$, and suppose $$E$$ is complete with respect to some ideal $$\mathfrak{a}\subseteq E$$. Let $$\alpha_1,\ldots,\alpha_n\in \mathfrak{a}$$. Then the following hold.

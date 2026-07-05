@@ -127,7 +127,7 @@ Minimal-mistakes 테마는 사이트의 각 아이콘을 [Font Awesome](https://
 
 이 커밋에서 수정한 것은 굉장히 많아서 일일히 적는 것이 힘들고 별 의미도 없을 것 같다. 크게 수정한 흐름만 정리하자면, 
 
-1. Google의 머터리얼 디자인 아이콘 [repository](https://github.com/marella/material-icons)에서 `material-icons-sharp.woff`와 `woff2` 파일을 다운받아, [폰트 추가]()에서 했던 것처럼 폰트를 추가해준다.
+1. Google의 머터리얼 디자인 아이콘 [repository](https://github.com/marella/material-icons)에서 `material-icons-sharp.woff`와 `woff2` 파일을 다운받아, [폰트 추가](/ko/misc/blog_development/fonts)에서 했던 것처럼 폰트를 추가해준다.
 2. Google에서 일러준 바와 같이 ([공식문서](https://developers.google.com/fonts/docs/material_icons)), 다음 코드를 적당한 곳에 붙여넣는다. 나는 `_base.scss`에 붙여넣었다.
     ````scss
     /* Material icons */

@@ -103,7 +103,7 @@ $$\nabla_vY:=v(Y^1)\frac{\partial}{\partial x^i}+\cdots+v(Y^n)\frac{\partial}{\p
 
 ## Cotangent bundle 위에서의 공변미분
 
-우리는 tangent bundle $$TM$$ 위에 정의된 connection $$\nabla$$가 임의의 $$(r,s)$$-tensor field $$\mathcal{T}^{r,s}(M)$$로 잘 확장된다는 것을 보인다. ([]()) 이를 위해서는 우선 $$\nabla$$가 cotangent bundle $$T^\ast M$$ 위에서는 어떻게 확장되는지를 정해줘야 한다.
+우리는 tangent bundle $$TM$$ 위에 정의된 connection $$\nabla$$가 임의의 $$(r,s)$$-tensor field $$\mathcal{T}^{r,s}(M)$$로 잘 확장된다는 것을 보인다. ([명제 5](#prop5)) 이를 위해서는 우선 $$\nabla$$가 cotangent bundle $$T^\ast M$$ 위에서는 어떻게 확장되는지를 정해줘야 한다.
 
 ::: 명제 4
 Manifold $$M$$과, tangent bundle $$TM$$ 위의 connection $$\nabla$$가 주어졌다 하자. 함수 $$\nabla^\ast:\mathfrak{X}(M)\times\Gamma(T^\ast M)\rightarrow\Gamma(T^\ast M)$$을 다음의 식

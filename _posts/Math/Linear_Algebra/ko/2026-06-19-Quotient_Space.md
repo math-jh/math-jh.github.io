@@ -12,6 +12,7 @@ sidebar:
 date: 2026-06-19
 
 weight: 8
+drift_needed: true
 
 ---
 
@@ -61,7 +62,7 @@ $$\mathbb{K}$$-벡터공간 $$V$$와 그 부분공간 $$W\leq V$$에 대하여, 
 
 $$(v+W)+(v'+W)=(v+v')+W,\qquad \alpha(v+W)=(\alpha v)+W$$
 
-으로 정의한다.
+으로 정의한다. 이 때, 임의의 $$v\in V$$를 $$v+W$$로 보내는 linear map $$p: V\rightarrow V/W$$를 *natural projection*이라 부른다. 
 :::
 
 위의 정의에서 덧셈과 스칼라곱은 coset을 대표하는 벡터 $$v$$를 통해 기술되었으므로, 이들이 대표원의 선택과 무관하게 잘 정의되는지를 확인해야 한다. 즉, $$v+W=v_1+W$$이고 $$v'+W=v_1'+W$$라면 
