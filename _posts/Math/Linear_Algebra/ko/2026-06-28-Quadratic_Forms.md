@@ -126,7 +126,7 @@ Sylvester's law는 곧바로 실수 대칭행렬의 합동에 의한 완전한 �
 두 행렬 $$G,G'$$이 합동이라 하면 이들은 같은 bilinear form을 서로 다른 basis로 적은 것이므로 signature가 같다. 거꾸로 signature가 $$(p,q,r)$$로 같다면, [명제 2](#prop2)에 의하여 $$G$$와 $$G'$$은 모두 $$1$$이 $$p$$개, $$-1$$이 $$q$$개, $$0$$이 $$r$$개인 같은 diagonal matrix와 합동이고, 합동은 동치관계이므로 $$G$$와 $$G'$$은 서로 합동이다. 
 :::
 
-## positive definiteness
+## Positive definiteness
 
 Signature가 $$(n,0,0)$$인 경우, 즉 모든 $$0\neq v\in V$$에 대하여 $$\langle v,v\rangle>0$$인 경우가 특별히 중요하다. 이는 Gram matrix가 [§스펙트럼 정리, ⁋정의 8](/ko/math/linear_algebra/spectral_theorem#def8)의 의미에서 positive definite인 것과 같으며, 이때 $$\langle-,-\rangle$$ 자체를 positive definite이라 한다. 
 

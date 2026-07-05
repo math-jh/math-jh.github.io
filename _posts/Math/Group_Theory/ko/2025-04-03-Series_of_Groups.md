@@ -307,7 +307,7 @@ $$A_5$$는 가해군이 아니다.
 $$n\geq 5$$이면 대칭군 $$S_n$$은 가해군이 아니다.
 :::
 ::: 증명
-먼저 가해군의 subgroup이 다시 가해임을 본다. subgroup $$H\subseteq G$$의 포함사상 $$\iota:H\hookrightarrow G$$에 [명제 10](#prop10)을 적용하면 $$D_n(H)\subseteq D_n(G)$$이므로, $$G$$가 가해여서 어떤 $$n$$에 $$D_n(G)=\{e\}$$이면 $$D_n(H)=\{e\}$$가 되어 $$H$$도 가해이다.
+먼저 가해군의 subgroup이 다시 가해임을 본다. Subgroup $$H\subseteq G$$의 포함사상 $$\iota:H\hookrightarrow G$$에 [명제 10](#prop10)을 적용하면 $$D_n(H)\subseteq D_n(G)$$이므로, $$G$$가 가해여서 어떤 $$n$$에 $$D_n(G)=\{e\}$$이면 $$D_n(H)=\{e\}$$가 되어 $$H$$도 가해이다.
 
 이제 $$n\geq 5$$이면 $$\{6,\ldots,n\}$$의 원소들을 고정하는 치환들이 $$S_5$$의 복제를 이루므로 $$A_5\subseteq S_5\subseteq S_n$$이다. 만일 $$S_n$$이 가해라면 그 subgroup인 $$A_5$$도 가해여야 하는데, 이는 [명제 18](#prop18)에 모순이다. 따라서 $$S_n$$은 가해군이 아니다.
 :::

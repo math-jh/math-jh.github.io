@@ -147,8 +147,3 @@ $$N\rtimes_\rho H \rightarrow G;\qquad (x,y)\mapsto xy$$
 **[Bou]** Bourbaki, N. Algebra I. *Elements of Mathematics*. Springer. 1998.  
 
 ---
-
-
-FTFGAG
-Sylow
-solvable S_5

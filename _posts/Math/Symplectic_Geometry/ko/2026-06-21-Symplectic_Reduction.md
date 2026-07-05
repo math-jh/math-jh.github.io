@@ -101,7 +101,7 @@ $$\omega_p(X_M(p),v)=\langle d\mu_p(v),X\rangle=0$$
 *Nondegeneracy.* $$\bar u\in T_{\pi(p)}(Z/G)$$이 모든 $$\bar v$$에 대해 $$(\omega_{\mathrm{red}})_{\pi(p)}(\bar u,\bar v)=0$$이라 하자. 들어 올림 $$u\in T_pZ$$을 택하면 모든 $$v\in T_pZ$$에 대해 $$\omega_p(u,v)=0$$이므로 $$u\in(T_pZ)^{\omega}$$이다. 그런데 $$T_pZ=(\mathfrak{g}\cdot p)^{\omega}$$이므로 $$(T_pZ)^{\omega}=\mathfrak{g}\cdot p$$이고, 따라서 $$u\in\mathfrak{g}\cdot p=\ker d\pi_p$$이다. 즉 $$\bar u=d\pi_p(u)=0$$이므로 $$\omega_{\mathrm{red}}$$은 nondegenerate이다.
 :::
 
-축약공간의 표기 $$M /\!\!/ G$$은 사교 몫임을 강조하는 기호로, 단순한 위상적 몫 $$M/G$$과 구별된다. 위 증명에서 사교형식이 내려올 수 있었던 두 기둥은 [보조정리 1](#lem1)의 등식 $$T_pZ=(\mathfrak{g}\cdot p)^{\omega}$$이다. 이 한 등식이 (i)에서는 $$\iota^\ast\omega$$의 퇴화방향이 정확히 orbit 방향임을, nondegeneracy에서는 그 퇴화방향을 몫으로 죽이고 나면 남는 형식이 nondegenerate임을 동시에 보장한다. coisotropic 부분다양체를 그 null 방향으로 나누어 사교다양체를 얻는 이 절차는 *coisotropic reduction*이라는 더 일반적인 구성의 특수한 경우이다.
+축약공간의 표기 $$M /\!\!/ G$$은 사교 몫임을 강조하는 기호로, 단순한 위상적 몫 $$M/G$$과 구별된다. 위 증명에서 사교형식이 내려올 수 있었던 두 기둥은 [보조정리 1](#lem1)의 등식 $$T_pZ=(\mathfrak{g}\cdot p)^{\omega}$$이다. 이 한 등식이 (i)에서는 $$\iota^\ast\omega$$의 퇴화방향이 정확히 orbit 방향임을, nondegeneracy에서는 그 퇴화방향을 몫으로 죽이고 나면 남는 형식이 nondegenerate임을 동시에 보장한다. Coisotropic 부분다양체를 그 null 방향으로 나누어 사교다양체를 얻는 이 절차는 *coisotropic reduction*이라는 더 일반적인 구성의 특수한 경우이다.
 
 ::: 참고 3
 정리의 가정은 결론을 위한 충분조건일 뿐 최선은 아니다. $$G$$의 compactness는 작용이 proper함을 보장하기 위한 것이며, $$G$$가 noncompact이더라도 작용이 $$\mu^{-1}(0)$$ 위에서 자유롭고 proper하기만 하면 같은 결론이 성립한다. 자유로운 작용 대신 단지 locally free인 경우에는 $$0$$이 여전히 regular value여서 $$\mu^{-1}(0)$$은 매끄럽지만 몫 $$\mu^{-1}(0)/G$$은 매끄러운 다양체가 아니라 orbifold가 될 수 있으며, $$\omega_{\mathrm{red}}$$은 orbifold 위의 사교형식으로 살아남는다. Stabilizer가 더 큰 일반적인 경우의 축약은 stratified symplectic space를 낳는다.
@@ -109,7 +109,7 @@ $$\omega_p(X_M(p),v)=\langle d\mu_p(v),X\rangle=0$$
 
 ## 일반값과 coadjoint orbit에서의 축약
 
-운동량 사상의 값으로 $$0$$이 아니라 임의의 $$\xi\in\mathfrak{g}^\ast$$을 고를 수도 있다. 그러나 $$G$$가 nonabelian이면 fiber $$\mu^{-1}(\xi)$$은 일반적으로 $$G$$-불변이 아니다. equivariance ([§운동량 사상, ⁋정의 2](/ko/math/symplectic_geometry/moment_map#def2)의 조건 2)에 의해 $$\mu(g\cdot p)=\Ad_g^\ast\mu(p)$$이므로, $$g\cdot p$$이 다시 $$\mu^{-1}(\xi)$$에 들려면 $$\Ad_g^\ast\xi=\xi$$, 즉 $$g$$이 $$\xi$$의 stabilizer $$G_\xi$$에 속해야 한다. 따라서 $$\mu^{-1}(\xi)$$을 보존하는 것은 전체 $$G$$이 아니라 부분군 $$G_\xi$$이다.
+운동량 사상의 값으로 $$0$$이 아니라 임의의 $$\xi\in\mathfrak{g}^\ast$$을 고를 수도 있다. 그러나 $$G$$가 nonabelian이면 fiber $$\mu^{-1}(\xi)$$은 일반적으로 $$G$$-불변이 아니다. Equivariance ([§운동량 사상, ⁋정의 2](/ko/math/symplectic_geometry/moment_map#def2)의 조건 2)에 의해 $$\mu(g\cdot p)=\Ad_g^\ast\mu(p)$$이므로, $$g\cdot p$$이 다시 $$\mu^{-1}(\xi)$$에 들려면 $$\Ad_g^\ast\xi=\xi$$, 즉 $$g$$이 $$\xi$$의 stabilizer $$G_\xi$$에 속해야 한다. 따라서 $$\mu^{-1}(\xi)$$을 보존하는 것은 전체 $$G$$이 아니라 부분군 $$G_\xi$$이다.
 
 ::: 정의 4
 $$(M,\omega,G,\mu)$$를 Hamiltonian $$G$$-공간, $$\xi\in\mathfrak{g}^\ast$$을 $$\mu$$의 regular value라 하고, $$G_\xi=\{g\in G:\Ad_g^\ast\xi=\xi\}$$을 $$\xi$$의 coadjoint stabilizer라 하자. $$G_\xi$$이 $$\mu^{-1}(\xi)$$ 위에 자유롭고 proper하게 작용할 때, $$\xi$$에서의 *축약공간*을
@@ -141,14 +141,14 @@ $$\dim\mu^{-1}(\xi)/G_\xi=(\dim M-\dim G)-\dim G_\xi$$
 
 이다.
 
-동형 $$\mu^{-1}(\xi)/G_\xi\cong\mu^{-1}(\mathcal{O}_\xi)/G$$은 다음 사상에서 온다. equivariance에 의해 $$\mu(\mu^{-1}(\mathcal{O}_\xi))=\mathcal{O}_\xi$$이고 $$G$$이 $$\mu^{-1}(\mathcal{O}_\xi)$$을 보존한다. 포함 $$\mu^{-1}(\xi)\hookrightarrow\mu^{-1}(\mathcal{O}_\xi)$$은 $$G_\xi$$-동변이므로 몫 사이의 사상
+동형 $$\mu^{-1}(\xi)/G_\xi\cong\mu^{-1}(\mathcal{O}_\xi)/G$$은 다음 사상에서 온다. Equivariance에 의해 $$\mu(\mu^{-1}(\mathcal{O}_\xi))=\mathcal{O}_\xi$$이고 $$G$$이 $$\mu^{-1}(\mathcal{O}_\xi)$$을 보존한다. 포함 $$\mu^{-1}(\xi)\hookrightarrow\mu^{-1}(\mathcal{O}_\xi)$$은 $$G_\xi$$-동변이므로 몫 사이의 사상
 
 $$\mu^{-1}(\xi)/G_\xi\rightarrow\mu^{-1}(\mathcal{O}_\xi)/G$$
 
 을 유도한다. 이 사상이 전단사임은 다음에서 나온다. $$\mathcal{O}_\xi\cong G/G_\xi$$이므로 임의의 $$q\in\mu^{-1}(\mathcal{O}_\xi)$$에 대해 $$\mu(q)=\Ad_g^\ast\xi$$인 $$g$$이 존재하여 $$g^{-1}\cdot q\in\mu^{-1}(\xi)$$이고, 따라서 모든 $$G$$-orbit은 $$\mu^{-1}(\xi)$$을 만난다 (전사). 그 교집합은 $$\mu^{-1}(\xi)$$ 위의 한 $$G_\xi$$-orbit과 정확히 일치하므로 (단사) 사상은 전단사이며, 매끄러운 동형이다.
 :::
 
-동형 $$M /\!\!/_{\!\xi}\,G\cong\mu^{-1}(\mathcal{O}_\xi)/G$$은 일반값에서의 축약을 다시 $$G$$ 전체에 대한 몫으로 보는 관점을 준다. coadjoint orbit $$\mathcal{O}_\xi$$ 자체가 Kirillov-Kostant-Souriau 형식이라 불리는 표준 사교형식을 갖는 Hamiltonian $$G$$-공간인데, 위 동형은 $$\xi$$에서의 축약이 곱공간 $$M\times\mathcal{O}_\xi^{-}$$을 $$0$$에서 축약한 것과 같음을 보이는 *shifting trick*으로 이어진다. 여기서 $$\mathcal{O}_\xi^{-}$$은 부호를 뒤집은 사교형식을 준 orbit이며, 곱의 운동량 사상은 [§운동량 사상, ⁋명제 6](/ko/math/symplectic_geometry/moment_map#prop6)에 따라 성분별 합이 된다. 이로써 임의 값에서의 축약 이론 전체가 [정리 2](#thm2)의 영점 축약으로 통일된다.
+동형 $$M /\!\!/_{\!\xi}\,G\cong\mu^{-1}(\mathcal{O}_\xi)/G$$은 일반값에서의 축약을 다시 $$G$$ 전체에 대한 몫으로 보는 관점을 준다. Coadjoint orbit $$\mathcal{O}_\xi$$ 자체가 Kirillov-Kostant-Souriau 형식이라 불리는 표준 사교형식을 갖는 Hamiltonian $$G$$-공간인데, 위 동형은 $$\xi$$에서의 축약이 곱공간 $$M\times\mathcal{O}_\xi^{-}$$을 $$0$$에서 축약한 것과 같음을 보이는 *shifting trick*으로 이어진다. 여기서 $$\mathcal{O}_\xi^{-}$$은 부호를 뒤집은 사교형식을 준 orbit이며, 곱의 운동량 사상은 [§운동량 사상, ⁋명제 6](/ko/math/symplectic_geometry/moment_map#prop6)에 따라 성분별 합이 된다. 이로써 임의 값에서의 축약 이론 전체가 [정리 2](#thm2)의 영점 축약으로 통일된다.
 
 ## 복소 사영공간
 

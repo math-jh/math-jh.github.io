@@ -125,7 +125,7 @@ $$\mathbb{P}^n_A$$이 separated scheme이므로 [따름정리 4](#cor4)에 의�
 
 $$\x_0^{a_0}\cdots\x_n^{a_n}, \qquad \sum_{j=0}^n a_j=d,\quad a_j\geq 0\ \text{for}\ j\not\in\{i_0,\ldots, i_p\}$$
 
-로 $$A$$ 위에서 생성되며, coboundary map 또한 동일한 교대합 공식으로 주어진다. variety의 경우 계수체 $$\mathbb{K}$$ 위에서 진행한 계산은 사실 어떤 base ring $$A$$ 위에서든 monomial 단위로 동일하게 작동하므로, 그 증명을 $$A$$-계수로 그대로 읽으면 위의 결과를 얻는다. 구체적으로 $$n=1$$에서는 Čech complex $$0 \rightarrow \check C^0 \xrightarrow{\delta} \check C^1 \rightarrow 0$$의 $$\ker\delta$$가 $$d\geq 0$$일 때 $$A[\x_0,\x_1]_d$$이고 $$\coker\delta$$가 $$d\leq -2$$일 때 두 지수가 모두 음수인 $$d$$차 monomial들로 생성됨을 직접 확인하며, 일반적인 $$n$$은 hyperplane $$\{\x_n=0\}$$이 주는 short exact sequence
+로 $$A$$ 위에서 생성되며, coboundary map 또한 동일한 교대합 공식으로 주어진다. Variety의 경우 계수체 $$\mathbb{K}$$ 위에서 진행한 계산은 사실 어떤 base ring $$A$$ 위에서든 monomial 단위로 동일하게 작동하므로, 그 증명을 $$A$$-계수로 그대로 읽으면 위의 결과를 얻는다. 구체적으로 $$n=1$$에서는 Čech complex $$0 \rightarrow \check C^0 \xrightarrow{\delta} \check C^1 \rightarrow 0$$의 $$\ker\delta$$가 $$d\geq 0$$일 때 $$A[\x_0,\x_1]_d$$이고 $$\coker\delta$$가 $$d\leq -2$$일 때 두 지수가 모두 음수인 $$d$$차 monomial들로 생성됨을 직접 확인하며, 일반적인 $$n$$은 hyperplane $$\{\x_n=0\}$$이 주는 short exact sequence
 
 $$0 \rightarrow \mathcal{O}(d-1)\xrightarrow{\times\x_n}\mathcal{O}(d) \rightarrow \mathcal{O}(d)\vert_{\mathbb{P}^{n-1}_A} \rightarrow 0$$
 

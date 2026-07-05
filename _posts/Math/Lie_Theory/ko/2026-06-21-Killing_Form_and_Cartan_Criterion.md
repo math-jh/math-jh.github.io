@@ -205,7 +205,7 @@ $$\kappa(a,x)=\tr(\ad a\,\ad x)=\tr(\phi)=0$$
 이다. $$x\in\mathfrak{g}$$가 임의였으므로 $$a\in\mathfrak{g}^{\perp}$$이고, 따라서 $$0\neq\mathfrak{a}\subseteq\mathfrak{g}^{\perp}$$이다. 곧 $$\kappa$$는 nondegenerate가 아니다.
 :::
 
-이 판정법은 [§근계, ⁋명제 3](/ko/math/lie_theory/root_systems#prop3)에서 증명 없이 인용했던 동치, 곧 반단순성과 Killing form의 nondegeneracy의 동치를 정확히 채운다. nondegenerate Killing form은 $$\mathfrak{g}$$ 위에 invariant nondegenerate symmetric bilinear form을 제공하며, 이는 반단순 Lie algebra의 구조 이론 전체에서 직교 분해의 도구로 쓰인다. 그 첫 적용으로, 반단순 Lie algebra가 simple ideal들의 직합으로 유일하게 분해됨을 본다.
+이 판정법은 [§근계, ⁋명제 3](/ko/math/lie_theory/root_systems#prop3)에서 증명 없이 인용했던 동치, 곧 반단순성과 Killing form의 nondegeneracy의 동치를 정확히 채운다. Nondegenerate Killing form은 $$\mathfrak{g}$$ 위에 invariant nondegenerate symmetric bilinear form을 제공하며, 이는 반단순 Lie algebra의 구조 이론 전체에서 직교 분해의 도구로 쓰인다. 그 첫 적용으로, 반단순 Lie algebra가 simple ideal들의 직합으로 유일하게 분해됨을 본다.
 
 ::: 정리 10
 $$\mathfrak{g}$$가 $$0$$이 아닌 유한차원 semisimple Lie algebra이면, $$\mathfrak{g}$$의 simple ideal들 $$\mathfrak{g}_1,\ldots,\mathfrak{g}_r$$이 존재하여

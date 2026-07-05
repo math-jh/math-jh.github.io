@@ -14,7 +14,7 @@ weight: 7.4
 published: false
 ---
 
-최고 무게 정리는 유한차원 기약 표현이 정확히 dominant integral weight $$\lambda$$에 대한 $$L(\lambda)$$들로 분류됨을 확립하였고, 이로써 표현론의 모든 질문은 각 $$L(\lambda)$$의 weight 구조, 곧 어떤 weight $$\mu$$가 어떤 multiplicity로 나타나는지를 계산하는 문제로 환원되었다 ([§최고 무게 가군, ⁋정리 12](/ko/math/lie_theory/highest_weight_modules#thm12)). $$\sl_2$$에서 이 정보는 단순하였다. highest weight $$m$$의 기약 표현은 $$m, m-2, \ldots, -m$$의 weight를 각각 중복도 $$1$$로 가졌다 ([§sl₂의 표현론, ⁋정의 5](/ko/math/lie_theory/representations_of_sl2#def5)). 그러나 rank가 큰 semisimple Lie algebra에서는 weight 중복도가 더 이상 자명하지 않으며, 이를 닫힌 형태로 주는 것이 Weyl 지표 공식이다.
+최고 무게 정리는 유한차원 기약 표현이 정확히 dominant integral weight $$\lambda$$에 대한 $$L(\lambda)$$들로 분류됨을 확립하였고, 이로써 표현론의 모든 질문은 각 $$L(\lambda)$$의 weight 구조, 곧 어떤 weight $$\mu$$가 어떤 multiplicity로 나타나는지를 계산하는 문제로 환원되었다 ([§최고 무게 가군, ⁋정리 12](/ko/math/lie_theory/highest_weight_modules#thm12)). $$\sl_2$$에서 이 정보는 단순하였다. Highest weight $$m$$의 기약 표현은 $$m, m-2, \ldots, -m$$의 weight를 각각 중복도 $$1$$로 가졌다 ([§sl₂의 표현론, ⁋정의 5](/ko/math/lie_theory/representations_of_sl2#def5)). 그러나 rank가 큰 semisimple Lie algebra에서는 weight 중복도가 더 이상 자명하지 않으며, 이를 닫힌 형태로 주는 것이 Weyl 지표 공식이다.
 
 이 글에서 우리는 표현 $$V$$의 모든 weight 중복도를 한꺼번에 담는 *형식 지표*를 weight lattice의 group ring 안의 원소로 정의하고, Verma module $$M(\mu)$$의 형식 지표가 $$e^\mu/\prod_{\alpha>0}(1-e^{-\alpha})$$라는 명료한 닫힌 형태를 가짐을 본다. 그런 뒤 Casimir 원소가 정하는 central character를 이용하여 $$\mathrm{ch}\,L(\lambda)$$를 Verma module 지표들의 교대합으로 풀고, 이를 정리하면 dominant integral $$\lambda$$에 대하여
 
@@ -24,7 +24,7 @@ $$\mathrm{ch}\,L(\lambda)=\frac{\sum_{w\in W}(-1)^{\ell(w)}e^{w(\lambda+\rho)}}{
 
 ## 형식 지표
 
-표현 $$V$$의 weight 중복도 전체를 하나의 대수적 대상으로 묶기 위해, weight들이 사는 격자의 group ring을 도입한다. 우선 무대가 될 격자를 정한다. weight $$\lambda\in\mathfrak{h}^\ast$$이 모든 simple coroot $$h_i$$ 위에서 정숫값 $$\lambda(h_i)\in\mathbb{Z}$$을 가질 때 이를 integral weight이라 부르며, 그러한 weight들의 모임
+표현 $$V$$의 weight 중복도 전체를 하나의 대수적 대상으로 묶기 위해, weight들이 사는 격자의 group ring을 도입한다. 우선 무대가 될 격자를 정한다. Weight $$\lambda\in\mathfrak{h}^\ast$$이 모든 simple coroot $$h_i$$ 위에서 정숫값 $$\lambda(h_i)\in\mathbb{Z}$$을 가질 때 이를 integral weight이라 부르며, 그러한 weight들의 모임
 
 $$P=\{\lambda\in\mathfrak{h}^\ast\mid\lambda(h_i)\in\mathbb{Z}\ \text{ for all simple roots }\alpha_i\}$$
 
@@ -48,7 +48,7 @@ $$\mathrm{ch}\,V=\sum_{\mu\in P}(\dim V_\mu)\,e^\mu$$
 이다. 곧 각 weight space의 차원을 그 weight의 형식기호에 계수로 단 것이다.
 :::
 
-형식 지표는 $$V$$의 weight들과 그 중복도를 빠짐없이 기록하므로, $$\mathrm{ch}\,V$$를 안다는 것은 $$V$$의 weight 구조 전부를 안다는 것과 같다. 두 표현의 직합과 텐서곱에 대하여 형식 지표는 환 연산과 정확히 맞물린다. weight space의 차원이 직합에서 더해지고 텐서곱에서 곱해지므로
+형식 지표는 $$V$$의 weight들과 그 중복도를 빠짐없이 기록하므로, $$\mathrm{ch}\,V$$를 안다는 것은 $$V$$의 weight 구조 전부를 안다는 것과 같다. 두 표현의 직합과 텐서곱에 대하여 형식 지표는 환 연산과 정확히 맞물린다. Weight space의 차원이 직합에서 더해지고 텐서곱에서 곱해지므로
 
 $$\mathrm{ch}(V\oplus W)=\mathrm{ch}\,V+\mathrm{ch}\,W,\qquad\mathrm{ch}(V\otimes W)=\mathrm{ch}\,V\cdot\mathrm{ch}\,W$$
 
@@ -64,7 +64,7 @@ $$\varepsilon(\mathrm{ch}\,V)=\sum_\mu\dim V_\mu=\dim V$$
 $$\mathbb{Z}[P]$$의 *완비화<sub>completion</sub>* $$\widehat{\mathbb{Z}[P]}$$는 유한 개의 weight $$\lambda_1,\ldots,\lambda_r$$이 존재하여 그 support가 $$\bigcup_i(\lambda_i-Q^+)$$ 안에 들어가는 형식합 $$\sum_\mu c_\mu e^\mu$$들의 집합이다. 여기에서 $$Q^+=\sum_{\alpha\in\Phi^+}\mathbb{Z}_{\geq 0}\,\alpha$$는 positive root들의 음이 아닌 정수 결합으로 이루어진 cone이다.
 :::
 
-이 support 조건 아래에서는 곱셈 $$\bigl(\sum_\mu c_\mu e^\mu\bigr)\bigl(\sum_\nu d_\nu e^\nu\bigr)=\sum_\xi\bigl(\sum_{\mu+\nu=\xi}c_\mu d_\nu\bigr)e^\xi$$의 각 계수가 유한합으로 잘 정의되므로 $$\widehat{\mathbb{Z}[P]}$$는 가환환이 되고 $$\mathbb{Z}[P]$$를 부분환으로 포함한다. weight가 highest weight $$\mu$$에서 positive root들을 빼서만 얻어지는 highest weight 가군의 형식 지표는 정확히 이 환 안에서 닫힌 형태를 갖는다.
+이 support 조건 아래에서는 곱셈 $$\bigl(\sum_\mu c_\mu e^\mu\bigr)\bigl(\sum_\nu d_\nu e^\nu\bigr)=\sum_\xi\bigl(\sum_{\mu+\nu=\xi}c_\mu d_\nu\bigr)e^\xi$$의 각 계수가 유한합으로 잘 정의되므로 $$\widehat{\mathbb{Z}[P]}$$는 가환환이 되고 $$\mathbb{Z}[P]$$를 부분환으로 포함한다. Weight가 highest weight $$\mu$$에서 positive root들을 빼서만 얻어지는 highest weight 가군의 형식 지표는 정확히 이 환 안에서 닫힌 형태를 갖는다.
 
 ## Verma module의 형식 지표
 
@@ -104,14 +104,14 @@ $$\prod_{\alpha\in\Phi^+}\frac{1}{1-e^{-\alpha}}=\prod_{\alpha\in\Phi^+}\Bigl(\s
 분모를 대칭적으로 정리하기 위해 Weyl vector를 도입한다. 이는 $$\sl_2$$에서 highest weight를 절반씩 옮기던 $$\rho$$-이동의 일반화이다.
 
 ::: 정의 6
-positive root들의 합의 절반
+Positive root들의 합의 절반
 
 $$\rho=\frac{1}{2}\sum_{\alpha\in\Phi^+}\alpha$$
 
 을 $$\mathfrak{g}$$의 *Weyl vector<sub>바일 벡터</sub>*라 부른다.
 :::
 
-Weyl vector는 모든 simple coroot 위에서 $$\rho(h_i)=1$$을 만족하는 유일한 weight로도 특징지어지며, 따라서 $$P$$의 원소이고 strictly dominant하다. positive root 집합의 절반이라는 정의로부터 곧바로 분모를 $$\rho$$로 대칭화한 형태로 다시 쓸 수 있다.
+Weyl vector는 모든 simple coroot 위에서 $$\rho(h_i)=1$$을 만족하는 유일한 weight로도 특징지어지며, 따라서 $$P$$의 원소이고 strictly dominant하다. Positive root 집합의 절반이라는 정의로부터 곧바로 분모를 $$\rho$$로 대칭화한 형태로 다시 쓸 수 있다.
 
 ::: 명제 7
 *Weyl denominator<sub>바일 분모</sub>*
@@ -131,7 +131,7 @@ $$e^{\alpha/2}-e^{-\alpha/2}=e^{\alpha/2}\bigl(1-e^{-\alpha}\bigr)$$
 
 이고, 이를 모든 $$\alpha\in\Phi^+$$에 대해 곱하면 묶여 나온 인자들의 곱이 $$\prod_{\alpha\in\Phi^+}e^{\alpha/2}=e^{\frac12\sum_{\alpha>0}\alpha}=e^\rho$$이므로 따라온다. 이로써 $$\mathrm{ch}\,M(\mu)=e^\mu/\prod_{\alpha>0}(1-e^{-\alpha})=e^{\mu+\rho}/\Delta$$도 [명제 5](#prop5)에서 곧장 나온다.
 
-둘째 등호를 본다. 먼저 $$\Delta$$가 Weyl group 작용에 대해 부호를 갖고 변함을 보인다. 곧 임의의 $$w\in W$$에 대하여 $$w\Delta=(-1)^{\ell(w)}\Delta$$이다. $$W$$가 simple reflection $$s_i$$들로 생성되고 $$\ell$$이 그 생성에 대해 가법적으로 작동하므로 ([§Bruhat decomposition, ⁋정의 3](/ko/math/lie_theory/bruhat_decomposition#def3)) $$w=s_i$$인 경우만 보이면 충분하다. simple reflection $$s_i$$는 positive root $$\alpha_i$$를 $$-\alpha_i$$로 보내고 나머지 positive root 전체를 자기들끼리 치환한다. 따라서 곱
+둘째 등호를 본다. 먼저 $$\Delta$$가 Weyl group 작용에 대해 부호를 갖고 변함을 보인다. 곧 임의의 $$w\in W$$에 대하여 $$w\Delta=(-1)^{\ell(w)}\Delta$$이다. $$W$$가 simple reflection $$s_i$$들로 생성되고 $$\ell$$이 그 생성에 대해 가법적으로 작동하므로 ([§Bruhat decomposition, ⁋정의 3](/ko/math/lie_theory/bruhat_decomposition#def3)) $$w=s_i$$인 경우만 보이면 충분하다. Simple reflection $$s_i$$는 positive root $$\alpha_i$$를 $$-\alpha_i$$로 보내고 나머지 positive root 전체를 자기들끼리 치환한다. 따라서 곱
 
 $$s_i\Delta=\prod_{\alpha\in\Phi^+}\bigl(e^{s_i\alpha/2}-e^{-s_i\alpha/2}\bigr)$$
 
@@ -232,7 +232,7 @@ $$F_t(\mathrm{ch}\,L(\lambda))\longrightarrow\prod_{\alpha\in\Phi^+}\frac{\langl
 가장 작은 두 경우에서 두 공식을 검산한다. 먼저 $$\sl_2$$에서는 모든 양이 한 변수로 적힌다.
 
 ::: 예시 11
-$$\mathfrak{g}=\sl_2$$에서 positive root는 $$\alpha$$ 하나뿐이고 Weyl group은 $$W=\{e,s_\alpha\}$$, $$\ell(s_\alpha)=1$$이다. fundamental weight $$\varpi$$로 $$\alpha=2\varpi$$이고 $$\rho=\tfrac12\alpha=\varpi$$이다. dominant integral weight를 $$\lambda=m\varpi$$ ($$m\in\mathbb{Z}_{\geq 0}$$)이라 하면 $$\lambda+\rho=(m+1)\varpi$$이다. 형식기호를 $$x=e^{\varpi}$$로 적으면 $$e^{w(\lambda+\rho)}$$는 $$w=e$$에서 $$x^{m+1}$$, $$w=s_\alpha$$에서 $$x^{-(m+1)}$$이고 마찬가지로 분모는 $$x-x^{-1}$$이다. [정리 9](#thm9)는
+$$\mathfrak{g}=\sl_2$$에서 positive root는 $$\alpha$$ 하나뿐이고 Weyl group은 $$W=\{e,s_\alpha\}$$, $$\ell(s_\alpha)=1$$이다. Fundamental weight $$\varpi$$로 $$\alpha=2\varpi$$이고 $$\rho=\tfrac12\alpha=\varpi$$이다. Dominant integral weight를 $$\lambda=m\varpi$$ ($$m\in\mathbb{Z}_{\geq 0}$$)이라 하면 $$\lambda+\rho=(m+1)\varpi$$이다. 형식기호를 $$x=e^{\varpi}$$로 적으면 $$e^{w(\lambda+\rho)}$$는 $$w=e$$에서 $$x^{m+1}$$, $$w=s_\alpha$$에서 $$x^{-(m+1)}$$이고 마찬가지로 분모는 $$x-x^{-1}$$이다. [정리 9](#thm9)는
 
 $$\mathrm{ch}\,L(m\varpi)=\frac{x^{m+1}-x^{-(m+1)}}{x-x^{-1}}=x^m+x^{m-2}+\cdots+x^{-m}$$
 

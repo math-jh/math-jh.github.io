@@ -232,7 +232,7 @@ $$A_s$$와 $$A_n$$은 $$A$$와 commute하는 모든 operator $$B$$와 commute한
 
 $$A=\begin{pmatrix}2&1&0\\0&2&0\\0&0&3\end{pmatrix}$$
 
-를 생각하자. eigenvalue $$2$$의 generalized eigenspace는 $$e_1,e_2$$가 생성하는 $$2$$차원 공간이고 그 위에서 $$A-2I$$의 nilpotency index는 $$2$$이며, eigenvalue $$3$$의 generalized eigenspace는 $$e_3$$이 생성한다. $$p(\x)=\x^2-4\x+6$$으로 두면 $$p(2)=2$$, $$p'(2)=0$$, $$p(3)=3$$이라 $$p$$는 [정리 11](#thm11)의 합동식 $$p\equiv 2\pmod{(\x-2)^2}$$, $$p\equiv 3\pmod{\x-3}$$을 만족하고,
+를 생각하자. Eigenvalue $$2$$의 generalized eigenspace는 $$e_1,e_2$$가 생성하는 $$2$$차원 공간이고 그 위에서 $$A-2I$$의 nilpotency index는 $$2$$이며, eigenvalue $$3$$의 generalized eigenspace는 $$e_3$$이 생성한다. $$p(\x)=\x^2-4\x+6$$으로 두면 $$p(2)=2$$, $$p'(2)=0$$, $$p(3)=3$$이라 $$p$$는 [정리 11](#thm11)의 합동식 $$p\equiv 2\pmod{(\x-2)^2}$$, $$p\equiv 3\pmod{\x-3}$$을 만족하고,
 
 $$A_s=p(A)=A^2-4A+6I=\begin{pmatrix}2&0&0\\0&2&0\\0&0&3\end{pmatrix},\qquad A_n=A-A_s=\begin{pmatrix}0&1&0\\0&0&0\\0&0&0\end{pmatrix}$$
 

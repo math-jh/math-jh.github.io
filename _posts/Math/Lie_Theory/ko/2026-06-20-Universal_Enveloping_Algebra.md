@@ -216,7 +216,7 @@ $$\omega:\S(\mathfrak{g})\longrightarrow\gr U(\mathfrak{g})$$
 는 graded 결합대수의 동형이다.
 :::
 ::: 증명
-$$\omega$$가 전사임은 [보조정리 8](#lem8) 이후 이미 확인하였으므로 단사임을 보이면 된다. 각 degree $$n$$에서 $$\omega$$가 단사임을 보이면 충분하다. $$\S^n(\mathfrak{g})$$는 길이 정확히 $$n$$인 정렬된 단항식 $$z_S$$ ($$\lvert S\rvert=n$$)들을 기저로 갖고, $$\omega$$는 이를 $$x_{i_1}\cdots x_{i_n}$$의 $$U_n/U_{n-1}$$에서의 상으로 보낸다. degree $$n$$ 성분에서 $$\sum_{\lvert S\rvert=n}\lambda_S\,\omega(z_S)=0$$이라 하면, 이는 $$U_n/U_{n-1}$$에서의 관계, 곧
+$$\omega$$가 전사임은 [보조정리 8](#lem8) 이후 이미 확인하였으므로 단사임을 보이면 된다. 각 degree $$n$$에서 $$\omega$$가 단사임을 보이면 충분하다. $$\S^n(\mathfrak{g})$$는 길이 정확히 $$n$$인 정렬된 단항식 $$z_S$$ ($$\lvert S\rvert=n$$)들을 기저로 갖고, $$\omega$$는 이를 $$x_{i_1}\cdots x_{i_n}$$의 $$U_n/U_{n-1}$$에서의 상으로 보낸다. Degree $$n$$ 성분에서 $$\sum_{\lvert S\rvert=n}\lambda_S\,\omega(z_S)=0$$이라 하면, 이는 $$U_n/U_{n-1}$$에서의 관계, 곧
 
 $$\sum_{\lvert S\rvert=n}\lambda_S\,x_{i_1^S}\cdots x_{i_n^S}\in U_{n-1}$$
 
