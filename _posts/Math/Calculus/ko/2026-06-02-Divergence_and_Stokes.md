@@ -20,7 +20,7 @@ published: false
 ::: 정리 1 (발산정리)
 $$E$$가 조각마다 매끄러운 닫힌 곡면 $$\partial E$$로 둘러싸인 공간의 입체이고 $$\mathbf{F}$$가 $$E$$를 포함하는 열린집합에서 $$C^1$$ 벡터장이면, $$\partial E$$를 바깥 방향으로 잡을 때
 
-$$\iint_{\partial E} \mathbf{F} \cdot d\mathbf{S} = \iiint_E \operatorname{div} FdV$$
+$$\iint_{\partial E} \mathbf{F} \cdot d\mathbf{S} = \iiint_E \div FdV$$
 
 이다.
 :::
@@ -33,10 +33,10 @@ $$\iiint_E \frac{\partial R}{\partial z}dV = \iint_D \bigl(R(x,y,u_2) - R(x,y,u_
 이다. 한편 $$\partial E$$는 윗면 $$z = u_2$$, 아랫면 $$z = u_1$$, 옆면으로 이루어지는데, 옆면에서는 바깥 법선이 수평이라 $$(0,0,R)\cdot \mathbf{n} = 0$$이라 기여가 없다. 윗면은 바깥 법선이 위를 향해 선속이 $$+\iint_D R(x,y,u_2)dA$$, 아랫면은 아래를 향해 $$-\iint_D R(x,y,u_1)dA$$를 주므로, 합이 위 이중적분과 같다. 일반 입체는 이런 조각들로 잘라 합치면 내부 경계면의 선속이 방향이 반대인 두 번으로 상쇄되어 정리가 성립한다.
 :::
 
-발산정리는 닫힌 곡면을 통해 흘러나가는 알짜 유량이 내부에서 솟아나는 양($$\operatorname{div} \mathbf{F}$$)을 모두 모은 것과 같음을 말한다. 이로써 발산이 "단위부피당 흘러나가는 양"이라는 [§벡터장](/ko/math/calculus/vector_fields)에서의 직관이 정리로 확정된다. 닫힌 곡면 위의 선속을, 곡면을 직접 적분하는 대신 부피적분으로 바꾸어 계산할 수 있다는 점에서 실용적이기도 하다.
+발산정리는 닫힌 곡면을 통해 흘러나가는 알짜 유량이 내부에서 솟아나는 양($$\div \mathbf{F}$$)을 모두 모은 것과 같음을 말한다. 이로써 발산이 "단위부피당 흘러나가는 양"이라는 [§벡터장](/ko/math/calculus/vector_fields)에서의 직관이 정리로 확정된다. 닫힌 곡면 위의 선속을, 곡면을 직접 적분하는 대신 부피적분으로 바꾸어 계산할 수 있다는 점에서 실용적이기도 하다.
 
 ::: 예시 2 (선속의 부피적분 환원)
-[§면적분과 선속, ⁋예시 6](/ko/math/calculus/surface_integrals#ex6)에서 반지름 $$R$$인 구를 통한 $$\mathbf{F} = (x,y,z)$$의 선속을 곡면적분으로 직접 계산해 $$4\pi R^3$$을 얻었다. 발산정리로는 $$\operatorname{div} \mathbf{F} = 3$$이라
+[§면적분과 선속, ⁋예시 6](/ko/math/calculus/surface_integrals#ex6)에서 반지름 $$R$$인 구를 통한 $$\mathbf{F} = (x,y,z)$$의 선속을 곡면적분으로 직접 계산해 $$4\pi R^3$$을 얻었다. 발산정리로는 $$\div \mathbf{F} = 3$$이라
 
 $$\iint_{\partial E} \mathbf{F}\cdot d\mathbf{S} = \iiint_E 3dV = 3\cdot\frac{4}{3}\pi R^3 = 4\pi R^3$$
 
@@ -48,7 +48,7 @@ $$\iint_{\partial E} \mathbf{F}\cdot d\mathbf{S} = \iiint_E 3dV = 3\cdot\frac{4}
 ::: 정리 3 (스토크스)
 $$S$$가 조각마다 매끄러운 경계곡선 $$\partial S$$를 갖는 방향지어진 곡면이고 $$\mathbf{F}$$가 $$S$$를 포함하는 열린집합에서 $$C^1$$이면, $$\partial S$$를 $$S$$의 방향과 맞게 (곡면을 왼쪽에 두고) 잡을 때
 
-$$\oint_{\partial S} \mathbf{F} \cdot d\mathbf{r} = \iint_S \operatorname{curl} \mathbf{F} \cdot d\mathbf{S}$$
+$$\oint_{\partial S} \mathbf{F} \cdot d\mathbf{r} = \iint_S \curl \mathbf{F} \cdot d\mathbf{S}$$
 
 이다.
 :::
@@ -62,23 +62,23 @@ $$\oint_{\partial S} \mathbf{F}\cdot d\mathbf{r} = \oint_{\partial D} Pdx + Qdy 
 
 $$(Q_x - P_y) + (Q_z - R_y)g_x + (R_x - P_z)g_y$$
 
-가 된다. 한편 그래프의 위쪽 법선은 $$\mathbf{N} = (-g_x, -g_y, 1)$$이고 $$\operatorname{curl} \mathbf{F} = (R_y - Q_z,\ P_z - R_x,\ Q_x - P_y)$$이므로 $$\operatorname{curl} \mathbf{F} \cdot \mathbf{N}$$이 정확히 같은 식이다. 따라서 위 이중적분은 $$\iint_D \operatorname{curl} \mathbf{F}\cdot \mathbf{N}dA = \iint_S \operatorname{curl} \mathbf{F}\cdot d\mathbf{S}$$이다.
+가 된다. 한편 그래프의 위쪽 법선은 $$\mathbf{N} = (-g_x, -g_y, 1)$$이고 $$\curl \mathbf{F} = (R_y - Q_z,\ P_z - R_x,\ Q_x - P_y)$$이므로 $$\curl \mathbf{F} \cdot \mathbf{N}$$이 정확히 같은 식이다. 따라서 위 이중적분은 $$\iint_D \curl \mathbf{F}\cdot \mathbf{N}dA = \iint_S \curl \mathbf{F}\cdot d\mathbf{S}$$이다.
 :::
 
 스토크스 정리는 경계를 도는 순환이 곡면을 꿰뚫는 회전의 총합과 같음을 말한다. 같은 경계곡선을 가지는 곡면이라면 어느 것으로 적분해도 값이 같다는 사실도 여기서 따른다. 평면곡면에 적용하면 회전적분이 $$\iint_S (Q_x - P_y)dA$$로 줄어 그린 정리의 회전형 ([§그린 정리, ⁋명제 3](/ko/math/calculus/greens_theorem#prop3))을 회복하므로, 스토크스 정리는 그린 정리의 공간판이다. 평면에서 미뤄 둔 보존장 판정의 역방향도 공간에서 그대로 성립한다.
 
 ::: 따름정리 4
-단순연결 열린 영역 $$D \subseteq \mathbb{R}^3$$에서 $$C^1$$ 벡터장 $$\mathbf{F}$$가 무회전($$\operatorname{curl} \mathbf{F} = 0$$)이면 $$\mathbf{F}$$는 보존장이다.
+단순연결 열린 영역 $$D \subseteq \mathbb{R}^3$$에서 $$C^1$$ 벡터장 $$\mathbf{F}$$가 무회전($$\curl \mathbf{F} = 0$$)이면 $$\mathbf{F}$$는 보존장이다.
 :::
 
 ::: 증명
-$$D$$가 단순연결이므로 $$D$$ 안의 임의의 닫힌 곡선 $$C$$는 $$D$$ 안에 놓인 곡면 $$S$$의 경계로 채울 수 있다. 스토크스 정리로 $$\oint_C \mathbf{F}\cdot d\mathbf{r} = \iint_S \operatorname{curl} \mathbf{F}\cdot d\mathbf{S} = 0$$이고, 모든 닫힌 곡선에서 적분이 $$0$$이므로 [§선적분, ⁋정리 4](/ko/math/calculus/line_integrals#thm4)에 의해 $$\mathbf{F}$$는 보존장이다.
+$$D$$가 단순연결이므로 $$D$$ 안의 임의의 닫힌 곡선 $$C$$는 $$D$$ 안에 놓인 곡면 $$S$$의 경계로 채울 수 있다. 스토크스 정리로 $$\oint_C \mathbf{F}\cdot d\mathbf{r} = \iint_S \curl \mathbf{F}\cdot d\mathbf{S} = 0$$이고, 모든 닫힌 곡선에서 적분이 $$0$$이므로 [§선적분, ⁋정리 4](/ko/math/calculus/line_integrals#thm4)에 의해 $$\mathbf{F}$$는 보존장이다.
 :::
 
 ::: 예시 5 (순환의 회전적분 환원)
-$$\mathbf{F} = (-y, x, z)$$의 단위원 $$C\colon \mathbf{r}(t) = (\cos t, \sin t, 0)$$ 위 순환을 구하자. $$\operatorname{curl} \mathbf{F} = (0, 0, 2)$$이고 $$C$$를 경계로 갖는 곡면으로 $$xy$$평면의 단위원판 $$S$$ (위 방향 법선 $$\mathbf{k}$$) 를 택하면 스토크스 정리로
+$$\mathbf{F} = (-y, x, z)$$의 단위원 $$C\colon \mathbf{r}(t) = (\cos t, \sin t, 0)$$ 위 순환을 구하자. $$\curl \mathbf{F} = (0, 0, 2)$$이고 $$C$$를 경계로 갖는 곡면으로 $$xy$$평면의 단위원판 $$S$$ (위 방향 법선 $$\mathbf{k}$$) 를 택하면 스토크스 정리로
 
-$$\oint_C \mathbf{F}\cdot d\mathbf{r} = \iint_S \operatorname{curl} \mathbf{F}\cdot d\mathbf{S} = \iint_S 2dA = 2\pi$$
+$$\oint_C \mathbf{F}\cdot d\mathbf{r} = \iint_S \curl \mathbf{F}\cdot d\mathbf{S} = \iint_S 2dA = 2\pi$$
 
 이다. 직접 계산해도 $$\mathbf{F}(\mathbf{r}(t))\cdot \mathbf{r}'(t) = (-\sin t, \cos t, 0)\cdot(-\sin t, \cos t, 0) = 1$$이라 $$\oint_C = \int_0^{2\pi} dt = 2\pi$$로 일치한다. 곡면을 반구로 바꾸어도 경계가 같으니 값은 변하지 않는다.
 :::

@@ -55,7 +55,7 @@ $$c_i^T(E):=c_i(E_T)\in H_T^{2i}(Y),\qquad e_T(E):=c_{\mathrm{rank}}^T(E)=e\big(
 로 정의한다. 여기서 우변의 보통 Chern class와 Euler class는 각각 [\[대수적 위상수학\] §벡터다발의 특성류, ⁋정의 6](/ko/math/algebraic_topology/characteristic_classes#def6)과 [\[대수적 위상수학\] §벡터다발의 특성류, ⁋정의 3](/ko/math/algebraic_topology/characteristic_classes#def3)의 것이다.
 :::
 
-보통의 특성류가 만족하던 naturality와 Whitney 합 공식은 Borel 구성이 함자적이므로 그대로 동변 판본으로 이어진다. ([\[대수적 위상수학\] §벡터다발의 특성류, ⁋정리 8](/ko/math/algebraic_topology/characteristic_classes#thm8)) 특히 $$T$$-동변 bundle의 직합에 대해 $$e_T(E\oplus E')=e_T(E)e_T(E')$$이다.
+보통의 특성류가 만족하던 naturality와 Whitney 합 공식은 Borel 구성이 함자적이므로 그대로 동변 판본으로 이어진다. ([\[대수적 위상수학\] §벡터다발의 특성류, ⁋정리 9](/ko/math/algebraic_topology/characteristic_classes#thm9)) 특히 $$T$$-동변 bundle의 직합에 대해 $$e_T(E\oplus E')=e_T(E)e_T(E')$$이다.
 
 이 정의가 명제 1의 fixed component $$F$$ 위에서 어떻게 구체화되는지를 살피자. $$F$$ 위에서 $$T$$가 자명하게 작용하므로 $$F_T=ET\times_T F=BT\times F$$이고, 따라서
 

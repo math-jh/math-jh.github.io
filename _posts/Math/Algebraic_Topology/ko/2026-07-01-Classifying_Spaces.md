@@ -209,7 +209,7 @@ $$B\mathrm{U}(n)\xrightarrow{\ \simeq\ }B\mathrm{GL}(n,\mathbb{C})$$
 
 $$H^\bullet(\CP^\infty;\mathbb{Z})=\mathbb{Z}[x],\qquad \lvert x\rvert=2$$
 
-임을 보았으며, 생성원 $$x$$는 tautological line bundle의 first Chern class였다. ([§벡터다발의 특성류, ⁋예시 9](/ko/math/algebraic_topology/characteristic_classes#ex9)) $$BS^1=\CP^\infty$$이므로 이는 곧
+임을 보았으며, 생성원 $$x$$는 tautological line bundle의 first Chern class였다. ([§벡터다발의 특성류, ⁋예시 8](/ko/math/algebraic_topology/characteristic_classes#ex8)) $$BS^1=\CP^\infty$$이므로 이는 곧
 
 $$H^\bullet(BS^1;\mathbb{Z})=\mathbb{Z}[t],\qquad \lvert t\rvert=2$$
 
