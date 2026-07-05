@@ -246,9 +246,29 @@ Chern class는 다음을 만족한다.
 첫째 조건은 $$n$$에 대한 귀납으로 보인다. $$c_n$$의 naturality는 Euler class의 naturality로부터 온다. ([명제 4](#prop4)의 첫째 조건) $$0<i<n$$에서는 $$f$$가 deleted space와 complement bundle, 그리고 Gysin sequence 전체와 호환되는 bundle map $$E_0'\rightarrow E_0$$을 유도하고, 그 위에서 $$f^\ast(L^\perp)\cong(f^\ast L)^\perp$$이므로 귀납가정과 $$\pi_0^\ast$$의 자연성으로부터 $$c_i$$의 naturality가 따라온다.
 :::
 
-Whitney sum에 대한 곱 공식은 Chern class의 가장 중요한 계산 도구이다. 그 증명은 [§사영다발과 Leray–Hirsch 정리, ⁋정리 5](/ko/math/algebraic_topology/projective_bundles#thm5)의 splitting principle에 기댄다.
+즉 Chern class는 Stiefel-Whitney class와 비슷한 종류의 공리적인 성질을 만족한다. ([§슈티펠-휘트니 특성류, ⁋정의 5](/ko/math/algebraic_topology/stiefel_whitney_classes#def5)) 우리는 Stiefel-Whitney class의 존재성을 보이기 위해 real infinite Grassmannian $$\Gr_k(\mathbb{R}^\infty)$$를 생각한 후, 여기서의 cohomology class를 원래의 공간으로 pullback해와서 이들이 Stiefel-Whitney class의 공리적 조건을 만족함을 보였었는데, Chern class에 대해서도 비슷한 종류의 construction이 가능하다. 
 
-::: 정리 8 (Whitney sum formula)
+::: 예시 8
+[§슈티펠-휘트니 특성류, ⁋예시 3](/ko/math/algebraic_topology/stiefel_whitney_classes#ex3)의 real tautological line bundle의 complex analogue로, $$\CP^\infty=\Gr_1(\mathbb{C}^\infty)$$ 위의 tautological complex line bundle $$\gamma$$를 생각하자. 그 first Chern class $$c_1(\gamma)$$는 $$H^2(\CP^\infty;\mathbb{Z})\cong\mathbb{Z}$$의 generator이며,
+
+$$H^\bullet(\CP^\infty;\mathbb{Z})=\mathbb{Z}[c_1(\gamma)]$$
+
+는 $$c_1(\gamma)$$가 생성하는 polynomial ring이다. [§슈티펠-휘트니 특성류, §§그라스만 다양체](/ko/math/algebraic_topology/stiefel_whitney_classes#그라스만-다양체)에서 real bundle에 대해 본 것과 같이, 이 $$\gamma$$는 complex line bundle의 *universal family*이다. 곧 임의의 complex line bundle이 $$\gamma$$의 pullback으로 유일하게 얻어지므로, first Chern class는 일대일 대응
+
+$$\{B\text{ 위의 complex line bundle}\}/\cong\ \xrightarrow{\ c_1\ }\ H^2(B;\mathbb{Z})$$
+
+를 주며, 이는 tensor product를 덧셈으로 보내는 group isomorphism이다. 곧 complex line bundle의 모든 정보가 $$c_1$$ 하나에 담긴다.
+:::
+
+더 일반적으로 real Grassmannian의 자리를 complex Grassmannian $$\Gr_n(\mathbb{C}^\infty)$$이 대신하고, 그 cohomology ring은
+
+$$H^\bullet(\Gr_n(\mathbb{C}^\infty);\mathbb{Z})=\mathbb{Z}[c_1,\ldots,c_n]$$
+
+으로 universal bundle의 Chern class들이 생성하는 polynomial ring이 된다 ([MS] §14). 이는 Stiefel-Whitney class에서 $$H^\bullet(\Gr_k(\mathbb{R}^\infty);\mathbb{Z}/2)=\mathbb{Z}/2[w_1,\ldots,w_k]$$이 했던 역할의 정수·complex 판본이며, complex vector bundle의 모든 특성류가 Chern class들의 다항식임을 뜻한다.
+
+Stiefel-Whitney class가 Whitney 합 공식을 따랐던 것처럼, 이 복소 판본에서도 Chern class가 같은 곱 공식을 만족하리라 기대된다. 이를 실제로 증명하는 핵심 스텝은 임의의 vector bundle을 line bundle들의 합으로 쪼개는 splitting principle인데, 이 원리와 그 바탕이 되는 Leray–Hirsch 정리는 위에서 본 사영공간의 코호몰로지와 지금까지 확보한 Euler class·Thom 동형만으로 세워진다. 곧 아래 공식은 현재까지의 지식만으로 증명되며, 다만 그 전개가 독립적인 주제이므로 별도의 글에서 다루고 여기서는 [§사영다발과 Leray–Hirsch 정리, ⁋정리 5](/ko/math/algebraic_topology/projective_bundles#thm5)를 인용한다.
+
+::: 정리 9 (Whitney sum formula)
 두 complex vector bundle $$E,E'\rightarrow B$$에 대하여
 
 $$c(E\oplus E')=c(E)\smile c(E')$$
@@ -286,26 +306,6 @@ $$j_1^\ast c_1(L_1\oplus L_2)=c_1(\gamma\oplus\varepsilon^1)=c_1(\gamma)=j_1^\as
 임의 개수의 line bundle에 대해서는 $$(\CP^\infty)^n$$ 위에서 같은 논증을 반복하면 된다. 좌표 하나를 점으로 고정하는 restriction들은 stability를 통해 line bundle이 하나 적은 경우로 내려가고, $$k<n$$인 차수에서는 이 restriction들이 모두 합쳐 단사이므로 (모든 좌표 성분이 양의 차수인 Künneth 항은 차수가 $$2n$$ 이상이다) 귀납적으로 $$c_k$$들이 결정되며, 최고차 $$c_n$$은 둘째 등식에서와 같은 Euler class 계산으로 직접 얻어진다.
 :::
 
-이 공식과 더불어 Chern class를 떠받치는 기본 예시는 complex projective space 위의 tautological bundle이다.
-
-::: 예시 9
-[§슈티펠-휘트니 특성류, ⁋예시 3](/ko/math/algebraic_topology/stiefel_whitney_classes#ex3)의 실 tautological line bundle의 complex analogue로, $$\CP^\infty=\Gr_1(\mathbb{C}^\infty)$$ 위의 tautological complex line bundle $$\gamma$$를 생각하자. (이는 앞 절에서 실 Grassmannian $$\Gr_k(\mathbb{R}^\infty)$$를 만든 것과 같은 방식으로 $$\mathbb{C}$$ 위에서 만든 infinite Grassmannian이며, $$\Gr_1$$이므로 complex projective space이다.) 그 first Chern class $$c_1(\gamma)$$는 $$H^2(\CP^\infty;\mathbb{Z})\cong\mathbb{Z}$$의 생성원이고,
-
-$$H^\bullet(\CP^\infty;\mathbb{Z})=\mathbb{Z}[c_1(\gamma)]$$
-
-는 $$c_1(\gamma)$$가 생성하는 polynomial ring이다. 임의의 complex line bundle은 $$\gamma$$의 pullback으로 유일하게 얻어지므로, first Chern class는 일대일 대응
-
-$$\{B\text{ 위의 complex line bundle}\}/\cong\ \xrightarrow{\ c_1\ }\ H^2(B;\mathbb{Z})$$
-
-를 주며, 이는 tensor product를 덧셈으로 보내는 group isomorphism이다. 곧 complex line bundle의 모든 정보가 $$c_1$$ 하나에 담긴다.
-:::
-
-더 일반적으로 실 Grassmannian의 자리를 complex Grassmannian $$\Gr_n(\mathbb{C}^\infty)$$이 대신하고, 그 cohomology ring은
-
-$$H^\bullet(\Gr_n(\mathbb{C}^\infty);\mathbb{Z})=\mathbb{Z}[c_1,\ldots,c_n]$$
-
-으로 universal bundle의 Chern class들이 생성하는 polynomial ring이 된다 ([MS] §14). 이는 Stiefel-Whitney class에서 $$H^\bullet(\Gr_k(\mathbb{R}^\infty);\mathbb{Z}/2)=\mathbb{Z}/2[w_1,\ldots,w_k]$$이 했던 역할의 정수·complex 판본이며, complex vector bundle의 모든 특성류가 Chern class들의 다항식임을 뜻한다.
-
 앞서 우리는 complex vector bundle $$E$$와 그 켤레 $$\bar{E}$$, 곧 같은 underlying real bundle에 scalar 곱을 $$z\cdot v=\bar{z}v$$로 뒤틀어 준 bundle을 Chern class가 구별할 수 있다고 하였다. 이제 이 주장을 정확하게 만들 수 있다.
 
 ::: 명제 10
@@ -318,19 +318,19 @@ $$c_i(\bar{E})=(-1)^ic_i(E)$$
 ::: 증명
 우선 line bundle $$L$$의 경우를 보자. [정의 6](#def6)에 의하여 $$c_1(L)=e(L_{\mathbb{R}})$$인데, $$L$$과 $$\bar{L}$$은 underlying real bundle이 같고 표준 방향만 서로 반대이다. 실제로 fiber의 nonzero vector $$v$$에 대하여 $$L$$의 표준 방향은 ordered basis $$(v,iv)$$가 주는 것이고, $$\bar{L}$$에서는 $$i$$가 $$v$$를 $$-iv$$로 보내므로 표준 방향은 $$(v,-iv)$$가 주는 것인데, 두 basis 사이의 change of basis 행렬식이 $$-1$$이다. 따라서 [명제 4](#prop4)의 (5)에 의하여 $$c_1(\bar{L})=-c_1(L)$$이다.
 
-일반적인 경우는 [§사영다발과 Leray–Hirsch 정리, ⁋정리 5](/ko/math/algebraic_topology/projective_bundles#thm5)의 splitting principle로 줄인다. $$\rho^\ast E\cong L_1\oplus\cdots\oplus L_n$$이면 켤레가 pullback 및 Whitney sum과 교환하므로 $$\rho^\ast\bar{E}\cong\bar{L}_1\oplus\cdots\oplus\bar{L}_n$$이고, [정리 8](#thm8)에 의하여
+일반적인 경우는 [§사영다발과 Leray–Hirsch 정리, ⁋정리 5](/ko/math/algebraic_topology/projective_bundles#thm5)로 줄인다. $$\rho^\ast E\cong L_1\oplus\cdots\oplus L_n$$이면 켤레가 pullback 및 Whitney sum과 교환하므로 $$\rho^\ast\bar{E}\cong\bar{L}_1\oplus\cdots\oplus\bar{L}_n$$이고, [정리 9](#thm9)에 의하여
 
 $$\rho^\ast c(\bar{E})=\prod_{i=1}^n\bigl(1-c_1(L_i)\bigr)$$
 
 이다. 차수별로 비교하면 $$\rho^\ast c_k(\bar{E})=(-1)^k\rho^\ast c_k(E)$$이고, $$\rho^\ast$$가 단사이므로 결론을 얻는다.
 :::
 
-가령 [예시 9](#ex9)의 tautological bundle $$\gamma$$는 $$c_1(\gamma)$$가 $$H^2(\CP^\infty;\mathbb{Z})\cong\mathbb{Z}$$의 생성원이라 $$c_1(\bar{\gamma})=-c_1(\gamma)\neq c_1(\gamma)$$이고, 따라서 $$\gamma\not\cong\bar{\gamma}$$이다. 물론 이 구별에는 한계가 있어서, 홀수 Chern class가 모두 $$2$$-torsion이거나 $$0$$인 bundle의 켤레는 Chern class만으로는 구별되지 않는다.
+가령 [예시 8](#ex8)의 tautological bundle $$\gamma$$는 $$c_1(\gamma)$$가 $$H^2(\CP^\infty;\mathbb{Z})\cong\mathbb{Z}$$의 생성원이라 $$c_1(\bar{\gamma})=-c_1(\gamma)\neq c_1(\gamma)$$이고, 따라서 $$\gamma\not\cong\bar{\gamma}$$이다. 물론 이 구별에는 한계가 있어서, 홀수 Chern class가 모두 $$2$$-torsion이거나 $$0$$인 bundle의 켤레는 Chern class만으로는 구별되지 않는다.
 
-한편 지금까지의 예시는 모두 line bundle이었으므로, rank가 높은 bundle에서 [정리 8](#thm8)의 Whitney 합 공식이 실제 계산에 어떻게 쓰이는지를 보여주는 예시를 하나 보기로 한다.
+한편 지금까지의 예시는 모두 line bundle이었으므로, rank가 높은 bundle에서 [정리 9](#thm9)이 실제 계산에 어떻게 쓰이는지를 보여주는 예시를 하나 보기로 한다.
 
 ::: 예시 11
-유한차원 complex projective space $$\CP^n=\Gr_1(\mathbb{C}^{n+1})$$와 그 위의 tautological line bundle $$\gamma\subseteq\CP^n\times\mathbb{C}^{n+1}$$을 생각하자. 이는 [예시 9](#ex9)의 $$\gamma$$를 $$\CP^n\subseteq\CP^\infty$$에 제한한 것이며, cell 구조가 짝수 차원에만 있으므로 restriction $$H^k(\CP^\infty;\mathbb{Z})\rightarrow H^k(\CP^n;\mathbb{Z})$$은 $$k\leq 2n$$에서 isomorphism이다. 따라서 [명제 10](#prop10)에 따라 $$x=c_1(\bar{\gamma})=-c_1(\gamma)$$로 두면
+유한차원 complex projective space $$\CP^n=\Gr_1(\mathbb{C}^{n+1})$$와 그 위의 tautological line bundle $$\gamma\subseteq\CP^n\times\mathbb{C}^{n+1}$$을 생각하자. 이는 [예시 8](#ex8)의 $$\gamma$$를 $$\CP^n\subseteq\CP^\infty$$에 제한한 것이며, cell 구조가 짝수 차원에만 있으므로 restriction $$H^k(\CP^\infty;\mathbb{Z})\rightarrow H^k(\CP^n;\mathbb{Z})$$은 $$k\leq 2n$$에서 isomorphism이다. 따라서 [명제 10](#prop10)에 따라 $$x=c_1(\bar{\gamma})=-c_1(\gamma)$$로 두면
 
 $$H^\bullet(\CP^n;\mathbb{Z})=\mathbb{Z}[x]/(x^{n+1})$$
 
@@ -344,7 +344,7 @@ $$T\CP^n\cong\Hom(\gamma,\gamma^\perp)$$
 
 $$T\CP^n\oplus\Hom(\gamma,\gamma)\cong\Hom(\gamma,\gamma^\perp\oplus\gamma)\cong\Hom(\gamma,\CP^n\times\mathbb{C}^{n+1})\cong\Hom(\gamma,\CP^n\times\mathbb{C})^{\oplus(n+1)}$$
 
-인데, Hermitian 내적이 주는 conjugate-linear isomorphism $$\gamma\cong\Hom(\gamma,\CP^n\times\mathbb{C})$$는 곧 complex vector bundle의 isomorphism $$\Hom(\gamma,\CP^n\times\mathbb{C})\cong\bar{\gamma}$$이다. Trivial bundle은 한 점으로부터의 pullback이므로 [명제 7](#prop7)의 naturality에 의해 total Chern class가 $$1$$이고, 따라서 [정리 8](#thm8)로부터
+인데, Hermitian 내적이 주는 conjugate-linear isomorphism $$\gamma\cong\Hom(\gamma,\CP^n\times\mathbb{C})$$는 곧 complex vector bundle의 isomorphism $$\Hom(\gamma,\CP^n\times\mathbb{C})\cong\bar{\gamma}$$이다. Trivial bundle은 한 점으로부터의 pullback이므로 [명제 7](#prop7)의 naturality에 의해 total Chern class가 $$1$$이고, 따라서 [정리 9](#thm9)로부터
 
 $$c(T\CP^n)=c\bigl(T\CP^n\oplus\Hom(\gamma,\gamma)\bigr)=c(\bar{\gamma})^{n+1}=(1+x)^{n+1}$$
 
@@ -379,13 +379,13 @@ Real vector bundle $$E,F\rightarrow B$$에 대하여 다음이 성립한다.
 ::: 증명
 (1)은 complexification이 pullback과 교환한다는 것과 [명제 7](#prop7)의 naturality에서 즉시 나온다.
 
-(2)를 보자. $$(E\oplus F)\otimes\mathbb{C}\cong(E\otimes\mathbb{C})\oplus(F\otimes\mathbb{C})$$이므로 [정리 8](#thm8)에 의하여
+(2)를 보자. $$(E\oplus F)\otimes\mathbb{C}\cong(E\otimes\mathbb{C})\oplus(F\otimes\mathbb{C})$$이므로 [정리 9](#thm9)에 의하여
 
 $$c_{2i}\bigl((E\oplus F)\otimes\mathbb{C}\bigr)=\sum_{j+k=2i}c_j(E\otimes\mathbb{C})\smile c_k(F\otimes\mathbb{C})$$
 
 이다. $$j,k$$가 모두 짝수인 항들은 $$j=2a$$, $$k=2b$$로 두면 $$c_{2a}(E\otimes\mathbb{C})=(-1)^ap_a(E)$$ 등에 의해 정확히 $$(-1)^i\sum_{a+b=i}p_a(E)\smile p_b(F)$$가 되고, $$j,k$$가 모두 홀수인 항들은 $$2$$-torsion class 두 개의 곱이므로 $$2$$를 곱하면 소멸한다. 양변에 $$(-1)^i$$를 곱하면 $$p_i(E\oplus F)-\sum_{a+b=i}p_a(E)\smile p_b(F)$$가 $$2$$-torsion임을 얻는다.
 
-(3)에서 $$E$$의 complex structure $$J$$를 $$E_{\mathbb{R}}\otimes\mathbb{C}$$에 $$\mathbb{C}$$-linear하게 확장하면 $$J$$는 고유값 $$\pm i$$를 갖고, 그 고유공간 분해가 complex vector bundle의 직합 분해를 준다. $$v\mapsto(v\otimes 1-Jv\otimes i)/2$$가 $$E$$에서 $$i$$-고유공간으로 가는 isomorphism이고, $$v\mapsto(v\otimes 1+Jv\otimes i)/2$$가 $$\bar{E}$$에서 $$(-i)$$-고유공간으로 가는 isomorphism임을 직접 확인할 수 있다. 그럼 [정리 8](#thm8)과 [명제 10](#prop10)에 의하여 $$c(E_{\mathbb{R}}\otimes\mathbb{C})=c(E)\smile c(\bar{E})$$이고, 차수 $$4$$ 부분을 읽으면
+(3)에서 $$E$$의 complex structure $$J$$를 $$E_{\mathbb{R}}\otimes\mathbb{C}$$에 $$\mathbb{C}$$-linear하게 확장하면 $$J$$는 고유값 $$\pm i$$를 갖고, 그 고유공간 분해가 complex vector bundle의 직합 분해를 준다. $$v\mapsto(v\otimes 1-Jv\otimes i)/2$$가 $$E$$에서 $$i$$-고유공간으로 가는 isomorphism이고, $$v\mapsto(v\otimes 1+Jv\otimes i)/2$$가 $$\bar{E}$$에서 $$(-i)$$-고유공간으로 가는 isomorphism임을 직접 확인할 수 있다. 그럼 [정리 9](#thm9)과 [명제 10](#prop10)에 의하여 $$c(E_{\mathbb{R}}\otimes\mathbb{C})=c(E)\smile c(\bar{E})$$이고, 차수 $$4$$ 부분을 읽으면
 
 $$c_2(E\oplus\bar{E})=c_2(E)+c_1(E)c_1(\bar{E})+c_2(\bar{E})=2c_2(E)-c_1(E)^2$$
 

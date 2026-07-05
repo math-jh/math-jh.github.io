@@ -1,6 +1,6 @@
 ---
 title: "다중적분"
-description: "여러 변수 함수의 다중적분을 리만 합으로 일반적으로 정의하고, 반복적분으로 환원하는 푸비니 정리를 다룬다. 야코비 행렬식을 통한 변수변환과 극·원기둥·구면 좌표, 가우스 적분, 부피·질량 응용을 이중·삼중적분 계산 예시로 본다."
+description: "여러 변수 함수의 다중적분을 리만 합으로 일반적으로 정의하고, 반복적분으로 환원하는 푸비니 정리를 다룬다. 야코비 행렬식을 통한 변수변환과 극·원기둥·구면 좌표, 가우스 적분, 부피 응용을 이중·삼중적분 계산 예시로 본다."
 excerpt: "다중적분, 푸비니 정리, 변수변환과 야코비 행렬식"
 
 categories: [Math / Calculus]
@@ -10,10 +10,9 @@ sidebar:
 
 date: 2026-07-03
 weight: 15
-published: false
 ---
 
-우리는[§다변수함수와 편미분](/ko/math/calculus/partial_derivatives)에서 다변수함수들을 정의하고, 이들의 미분을 살펴보았다. 이제는 적분을 살펴볼 차례다.
+우리는 [§다변수함수와 편미분](/ko/math/calculus/partial_derivatives)에서 다변수함수들을 정의하고, 이들의 미분을 살펴보았다. 이제는 적분을 살펴볼 차례다.
 
 ## 다중적분
 
@@ -110,7 +109,7 @@ $$J_{\mathbf{T}}=\begin{pmatrix} \partial x_1/\partial u_1 & \cdots & \partial x
 
 이다.
 :::
-역시 이 또한 우리는 선형대수의 내용은 블랙박스로 두기로 하였으므로, 그 증명은 해석학에 미뤄둔다. 어쨌든 중요한 것은 직관으로, 야코비 행렬식 $$\lvert\det J_{\mathbf{T}}\rvert$$은 $$\mathbf{T}$$가 부피를 늘이는 국소 비율이다. 즉, $$\mathbf{u}$$ 공간의 작은 상자가 $$\mathbf{T}$$에 의해 $$\mathbf{x}$$ 공간의 작은 평행육면체로 옮겨지는데, 그 부피가 원래 상자의 부피에 $$\lvert\det J_{\mathbf{T}}\rvert$$를 곱해준 것가 되므로 부피 원소는 $$\mathop{dV} = \lvert\det J_{\mathbf{T}}(\mathbf{u})\rvert \mathop{dV}'$$로 변환된다. $$n=2$$에서 평행육면체는 평행사변형이 되어, 두 변 $$\mathbf{T}_u \Delta u$$와 $$\mathbf{T}_v \Delta v$$ ($$\mathbf{T}_u, \mathbf{T}_v$$는 $$\mathbf{T}$$의 편도함수 벡터) 가 이루는 넓이가 바로 $$\lvert\det J_{\mathbf{T}}\rvert \Delta u \Delta v$$인 것이다. 이 식을 리만 합에 대입해 극한을 취한 것이 [정리 4](#thm4)이며, 절댓값을 붙이는 이유는 부피가 항상 양수이기 때문이다.
+역시 이 또한 우리는 선형대수의 내용은 블랙박스로 두기로 하였으므로, 그 증명은 해석학에 미뤄둔다. 어쨌든 중요한 것은 직관으로, 야코비 행렬식 $$\lvert\det J_{\mathbf{T}}\rvert$$은 $$\mathbf{T}$$가 부피를 늘이는 국소 비율이다. 즉, $$\mathbf{u}$$ 공간의 작은 상자가 $$\mathbf{T}$$에 의해 $$\mathbf{x}$$ 공간의 작은 평행육면체로 옮겨지는데, 그 부피가 원래 상자의 부피에 $$\lvert\det J_{\mathbf{T}}\rvert$$를 곱해준 것이 되므로 부피 원소는 $$\mathop{dV} = \lvert\det J_{\mathbf{T}}(\mathbf{u})\rvert \mathop{dV}'$$로 변환된다. $$n=2$$에서 평행육면체는 평행사변형이 되어, 두 변 $$\mathbf{T}_u \Delta u$$와 $$\mathbf{T}_v \Delta v$$ ($$\mathbf{T}_u, \mathbf{T}_v$$는 $$\mathbf{T}$$의 편도함수 벡터) 가 이루는 넓이가 바로 $$\lvert\det J_{\mathbf{T}}\rvert \Delta u \Delta v$$인 것이다. 이 식을 리만 합에 대입해 극한을 취한 것이 [정리 4](#thm4)이며, 절댓값을 붙이는 이유는 부피가 항상 양수이기 때문이다.
 
 변수변환의 가장 흔한 쓰임은 좌표계를 바꾸는 것으로, 우리는 $$2\times 2$$ 행렬과 $$3\times 3$$ 행렬의 행렬식만 도입하였으므로 이들이 우리 예시의 전부이다. 
 
@@ -123,7 +122,7 @@ $$\det J = \det\begin{pmatrix}\cos\theta & -r\sin\theta \\ \sin\theta & r\cos\th
 
 $$\iint_D e^{-(x^2+y^2)} \mathop{dA} = \int_0^{2\pi} \int_0^1 e^{-r^2} r \mathop{dr}\mathop{d\theta} = \pi(1 - e^{-1})$$
 
-인데, $$e^{-r^2} r$$의 부정적분이 $$-\frac{1}{2} e^{-r^2}$$로 명시적으로 주어지므로 이 계산을 완료할 수 있다. 
+인데, $$e^{-r^2} r$$의 부정적분이 $$-e^{-r^2}/2$$로 명시적으로 주어지므로 이 계산을 완료할 수 있다. 
 :::
 
 위의 예시를 이용하면, 우리는 하나의 변수로 풀리지 않던 가우스 적분의 값을 구할 수 있다.
@@ -153,9 +152,9 @@ $$2$$차원에서의 고전적인 예시는 극좌표계 하나지만, $$3$$차�
 
 $$x = r\cos\theta,\quad y = r\sin\theta, \quad z = z$$
 
-이고 야코비 행렬식이
+이고 야코비 행렬식은
 
-(식)
+$$\det J = \det\begin{pmatrix}\cos\theta & -r\sin\theta & 0 \\ \sin\theta & r\cos\theta & 0 \\ 0 & 0 & 1\end{pmatrix} = r$$
 
 이므로 $$\mathop{dV} = r \mathop{dr} \mathop{d\theta} \mathop{dz}$$이다. 
 
@@ -165,7 +164,7 @@ $$x = \rho\sin\phi\cos\theta, \quad y = \rho\sin\phi\sin\theta, \quad z = \rho\c
 
 이다. 그 야코비 행렬식을 계산하면 
 
-$$\det J = \rho^2\sin\phi$$
+$$\det J = \det\begin{pmatrix} \sin\phi\cos\theta & \rho\cos\phi\cos\theta & -\rho\sin\phi\sin\theta \\ \sin\phi\sin\theta & \rho\cos\phi\sin\theta & \rho\sin\phi\cos\theta \\ \cos\phi & -\rho\sin\phi & 0 \end{pmatrix} = \rho^2\sin\phi$$
 
 이므로 $$\mathop{dV} = \rho^2\sin\phi \mathop{d\rho} \mathop{d\phi} \mathop{d\theta}$$이다. 가령 반지름 $$R$$인 공의 부피는 구면좌표에서 세 변수가 분리되어
 
