@@ -20,7 +20,7 @@ published: false
 ::: 정리 1 (발산정리)
 $$E$$가 조각마다 매끄러운 닫힌 곡면 $$\partial E$$로 둘러싸인 공간의 입체이고 $$\mathbf{F}$$가 $$E$$를 포함하는 열린집합에서 $$C^1$$ 벡터장이면, $$\partial E$$를 바깥 방향으로 잡을 때
 
-$$\iint_{\partial E} \mathbf{F} \cdot d\mathbf{S} = \iiint_E \div FdV$$
+$$\iint_{\partial E} \mathbf{F} \cdot d\mathbf{S} = \iiint_E \divergence FdV$$
 
 이다.
 :::
@@ -33,10 +33,10 @@ $$\iiint_E \frac{\partial R}{\partial z}dV = \iint_D \bigl(R(x,y,u_2) - R(x,y,u_
 이다. 한편 $$\partial E$$는 윗면 $$z = u_2$$, 아랫면 $$z = u_1$$, 옆면으로 이루어지는데, 옆면에서는 바깥 법선이 수평이라 $$(0,0,R)\cdot \mathbf{n} = 0$$이라 기여가 없다. 윗면은 바깥 법선이 위를 향해 선속이 $$+\iint_D R(x,y,u_2)dA$$, 아랫면은 아래를 향해 $$-\iint_D R(x,y,u_1)dA$$를 주므로, 합이 위 이중적분과 같다. 일반 입체는 이런 조각들로 잘라 합치면 내부 경계면의 선속이 방향이 반대인 두 번으로 상쇄되어 정리가 성립한다.
 :::
 
-발산정리는 닫힌 곡면을 통해 흘러나가는 알짜 유량이 내부에서 솟아나는 양($$\div \mathbf{F}$$)을 모두 모은 것과 같음을 말한다. 이로써 발산이 "단위부피당 흘러나가는 양"이라는 [§벡터장](/ko/math/calculus/vector_fields)에서의 직관이 정리로 확정된다. 닫힌 곡면 위의 선속을, 곡면을 직접 적분하는 대신 부피적분으로 바꾸어 계산할 수 있다는 점에서 실용적이기도 하다.
+발산정리는 닫힌 곡면을 통해 흘러나가는 알짜 유량이 내부에서 솟아나는 양($$\divergence \mathbf{F}$$)을 모두 모은 것과 같음을 말한다. 이로써 발산이 "단위부피당 흘러나가는 양"이라는 [§벡터장](/ko/math/calculus/vector_fields)에서의 직관이 정리로 확정된다. 닫힌 곡면 위의 선속을, 곡면을 직접 적분하는 대신 부피적분으로 바꾸어 계산할 수 있다는 점에서 실용적이기도 하다.
 
 ::: 예시 2 (선속의 부피적분 환원)
-[§면적분과 선속, ⁋예시 6](/ko/math/calculus/surface_integrals#ex6)에서 반지름 $$R$$인 구를 통한 $$\mathbf{F} = (x,y,z)$$의 선속을 곡면적분으로 직접 계산해 $$4\pi R^3$$을 얻었다. 발산정리로는 $$\div \mathbf{F} = 3$$이라
+[§면적분과 선속, ⁋예시 6](/ko/math/calculus/surface_integrals#ex6)에서 반지름 $$R$$인 구를 통한 $$\mathbf{F} = (x,y,z)$$의 선속을 곡면적분으로 직접 계산해 $$4\pi R^3$$을 얻었다. 발산정리로는 $$\divergence \mathbf{F} = 3$$이라
 
 $$\iint_{\partial E} \mathbf{F}\cdot d\mathbf{S} = \iiint_E 3dV = 3\cdot\frac{4}{3}\pi R^3 = 4\pi R^3$$
 

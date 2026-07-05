@@ -71,7 +71,7 @@ $$\omega = \frac{d\chi^{m_1}}{\chi^{m_1}} \wedge \cdots \wedge \frac{d\chi^{m_n}
 
 이제 각 boundary divisor $$D_\rho$$ 위에서 $$\omega$$의 vanishing degree를 계산하자. Ray $$\rho \in \Sigma(1)$$의 primitive generator $$v_\rho \in N$$을 첫 번째 기저로 하는 $$N$$의 적절한 기저를 잡고 그 dual로 $$M$$의 기저 $$m_1, \ldots, m_n$$을 택하면, $$\rho$$를 face로 갖는 affine chart $$U_\sigma$$에서 $$D_\rho$$의 local equation은 $$\chi^{m_1} = 0$$이다. 그럼 위 표현에서 $$d\chi^{m_1}/\chi^{m_1}$$ 항이 $$D_\rho$$를 따라 정확히 1차 pole을 만들고, 다른 인자들은 $$D_\rho$$ 근방에서 regular하므로 $$\omega$$는 $$D_\rho$$를 따라 정확히 1차 pole을 갖는다. 따라서
 
-$$\operatorname{div}(\omega) = -\sum_{\rho \in \Sigma(1)} D_\rho$$
+$$\divisor(\omega) = -\sum_{\rho \in \Sigma(1)} D_\rho$$
 
 이며, $$K_{X_\Sigma}$$는 이 divisor의 class이므로 $$-K_{X_\Sigma} = \sum_\rho D_\rho$$이다. 
 :::

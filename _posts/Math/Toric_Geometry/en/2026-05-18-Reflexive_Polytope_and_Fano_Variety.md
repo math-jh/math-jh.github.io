@@ -73,7 +73,7 @@ trivializes $$\Omega^n_{T_N}$$. This is a $$T_N$$-invariant top form, independen
 
 Now let us compute the vanishing degree of $$\omega$$ along each boundary divisor $$D_\rho$$. Choose a suitable basis of $$N$$ with the primitive generator $$v_\rho \in N$$ of the ray $$\rho \in \Sigma(1)$$ as the first basis vector, and take the dual basis $$m_1, \ldots, m_n$$ of $$M$$. Then in the affine chart $$U_\sigma$$ having $$\rho$$ as a face, the local equation of $$D_\rho$$ is $$\chi^{m_1} = 0$$. In the above expression, the term $$d\chi^{m_1}/\chi^{m_1}$$ creates exactly a simple pole along $$D_\rho$$, while the other factors are regular near $$D_\rho$$; hence $$\omega$$ has exactly a simple pole along $$D_\rho$$. Therefore
 
-$$\operatorname{div}(\omega) = -\sum_{\rho \in \Sigma(1)} D_\rho$$
+$$\divisor(\omega) = -\sum_{\rho \in \Sigma(1)} D_\rho$$
 
 and since $$K_{X_\Sigma}$$ is the class of this divisor, we have $$-K_{X_\Sigma} = \sum_\rho D_\rho$$.
 :::
