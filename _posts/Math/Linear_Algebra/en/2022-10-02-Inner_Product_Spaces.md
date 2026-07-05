@@ -129,7 +129,7 @@ is an inner product. The proof is not very difficult, but it requires the fact t
 
 ## Orthonormal Bases
 
-Since we know that $$\ch\mathbb{R}=0$$, from [§Bilinear Forms, ⁋Proposition 10](/en/math/linear_algebra/bilinear_form#prop10) we know that every $$\mathbb{R}$$-inner product space $$V$$ admits an orthogonal basis.
+Since we know that $$\ch\mathbb{R}=0$$, from [§Bilinear Forms, ⁋Proposition 12](/en/math/linear_algebra/bilinear_form#prop12) we know that every $$\mathbb{R}$$-inner product space $$V$$ admits an orthogonal basis.
 
 Let $$V$$ be an $$\mathbb{R}$$-inner product space, and let $$\mathcal{B}=\{x_1,\ldots, x_n\}$$ be a basis of $$V$$. First define
 
