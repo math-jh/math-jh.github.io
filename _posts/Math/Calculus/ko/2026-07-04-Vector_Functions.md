@@ -135,7 +135,7 @@ $$L = \int_a^b \lVert \mathbf{r}'(t)\rVert dt$$
 이다.
 :::
 
-피적분함수 $$\lVert \mathbf{r}'(t)\rVert$$는 연속이므로 적분가능하다 ([§적분, ⁋정리 10](/ko/math/calculus/integration#thm10)). 가령 위 나선의 $$0 \leq t \leq 2\pi$$ 부분은 $$L = \int_0^{2\pi} \sqrt{2}dt = 2\sqrt{2}\pi$$이다. 이제 시작점에서 잰 호의 길이
+피적분함수 $$\lVert \mathbf{r}'(t)\rVert$$는 연속이므로 적분가능하다 ([§적분, ⁋정리 10](/ko/math/calculus/integration#thm10)). 이제 시작점에서 잰 호의 길이
 
 $$s(t) = \int_a^t \lVert \mathbf{r}'(\tau)\rVert d\tau$$
 

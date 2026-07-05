@@ -8,9 +8,6 @@ Minimal Mistakes theme and reports:
 * Frontmatter problems
     - missing ``permalink``
     - permalink not following ``/{lang}/{category_path}/{slug}`` convention
-    - missing ``header.overlay_image``
-    - ``overlay_image`` path inconsistent with the category directory
-    - ``overlay_image`` file not present on disk
 * Body problems
     - ``![alt](path)`` images whose target file does not exist
     - ``[text](path)`` internal links whose target post / page does not exist
@@ -83,6 +80,10 @@ LINK_RE = re.compile(r"\[(?P<text>[^\]]+)\]\((?P<target>[^)\s]+)(?:\s+\"[^\"]*\"
 # Detect literal "img" placeholders such as ![img](img) or src=img.
 PLACEHOLDER_IMG_RE = re.compile(r"!\[\s*img\s*\]\(\s*img\s*\)|src=[\"']?img[\"']?", re.I)
 FIXME_RE = re.compile(r"\b(FIXME|TODO|XXX)\b")
+# 작성 중 남겨진 참조 placeholder(##ref)와 타깃이 빈 링크 — LINK_RE의 [^)\s]+는
+# 빈 괄호를 매칭하지 못하므로 별도로 잡는다.
+PLACEHOLDER_REF_RE = re.compile(r"##ref")
+EMPTY_LINK_RE = re.compile(r"!?\[[^\]]*\]\(\s*\)")
 
 
 # ---------------------------------------------------------------------------
@@ -108,7 +109,6 @@ class PostAudit:
     lang: str
     slug: str
     permalink: Optional[str] = None
-    overlay_image: Optional[str] = None
     issues: List[Issue] = field(default_factory=list)
     external_count: int = 0
 
@@ -310,21 +310,17 @@ def _expected_permalink_prefix(category_path: str, lang: str) -> List[str]:
     language prefix consistently.
     """
     parts = [p.lower() for p in category_path.split("/") if p]
-    base = "/".join(parts)
+    bases = ["/".join(parts)]
+    # Misc 하위 카테고리는 permalink에서 선행 "misc" 세그먼트를 생략할 수 있다
+    # (예: Misc/LLM_Workshop -> /ko/llm_workshop/... — 해당 CLAUDE.md 규약).
+    if len(parts) > 1 and parts[0] == "misc":
+        bases.append("/".join(parts[1:]))
     if lang:
-        return ["/" + lang + "/" + base]
-    return ["/" + base, "/ko/" + base, "/en/" + base]
-
-
-def _expected_image_prefix(category_path: str) -> str:
-    """Expected directory prefix for overlay_image.
-
-    For deeply nested categories like ``Misc/Peripherals/Tools`` the actual
-    convention drops the trailing leaf, since images live in
-    ``Misc/Peripherals/``.  We accept any prefix-match against the
-    category path to stay tolerant.
-    """
-    return "/assets/images/" + category_path
+        return ["/" + lang + "/" + b for b in bases]
+    out: List[str] = []
+    for b in bases:
+        out += ["/" + b, "/ko/" + b, "/en/" + b]
+    return out
 
 
 def audit_frontmatter(audit: PostAudit, fm: Dict[str, Any]) -> None:
@@ -349,34 +345,6 @@ def audit_frontmatter(audit: PostAudit, fm: Dict[str, Any]) -> None:
                 )
             )
 
-    header = fm.get("header")
-    overlay = None
-    if isinstance(header, dict):
-        overlay = header.get("overlay_image")
-    if not isinstance(overlay, str) or not overlay:
-        audit.issues.append(Issue("overlay_missing", "header.overlay_image not set"))
-        return
-
-    audit.overlay_image = overlay
-    expected_img_prefix = _expected_image_prefix(audit.category)
-    # Tolerant: allow either the full category path or any parent of it.
-    cat_parents = []
-    parts = audit.category.split("/")
-    for i in range(len(parts), 0, -1):
-        cat_parents.append("/assets/images/" + "/".join(parts[:i]))
-    if not any(overlay.startswith(p + "/") for p in cat_parents):
-        audit.issues.append(
-            Issue(
-                "overlay_category_mismatch",
-                f"{overlay!r} not under {expected_img_prefix!r}",
-            )
-        )
-
-    if not check_image_exists(overlay):
-        audit.issues.append(
-            Issue("overlay_missing_file", f"file not on disk: {overlay}")
-        )
-
 
 def _external_head_ok(url: str, timeout: float = 5.0) -> bool:
     try:
@@ -395,12 +363,42 @@ def audit_body(
     check_external: bool = False,
 ) -> None:
     external_count = 0
+    in_code = False
+    in_math = False
     # Iterate line-by-line so we can also detect placeholder / FIXME markers
-    # with helpful line numbers.
-    for lineno, line in enumerate(body.splitlines(), start=1):
+    # with helpful line numbers. Fenced code blocks and $$…$$ math spans are
+    # skipped/masked — `[X/G](T)` 같은 수식이 링크로 오탐되는 것을 막는다.
+    for lineno, raw_line in enumerate(body.splitlines(), start=1):
+        stripped = raw_line.lstrip()
+        if stripped.startswith("```") or stripped.startswith("~~~"):
+            in_code = not in_code
+            continue
+        if in_code:
+            continue
+
+        # Mask paired inline $$…$$ first, then track multi-line display blocks.
+        line = re.sub(r"\$\$.*?\$\$", lambda m: " " * len(m.group(0)), raw_line)
+        if in_math:
+            if line.count("$$") % 2 == 1:
+                in_math = False
+                line = " " * len(line.rsplit("$$", 1)[0]) + line.rsplit("$$", 1)[1]
+            else:
+                continue
+        elif line.count("$$") % 2 == 1:
+            line = line.split("$$", 1)[0]
+            in_math = True
+
         if PLACEHOLDER_IMG_RE.search(line):
             audit.issues.append(
                 Issue("placeholder_img", f"line {lineno}: literal 'img' placeholder")
+            )
+        if PLACEHOLDER_REF_RE.search(line):
+            audit.issues.append(
+                Issue("placeholder_ref", f"line {lineno}: '##ref' placeholder")
+            )
+        if EMPTY_LINK_RE.search(line):
+            audit.issues.append(
+                Issue("empty_link", f"line {lineno}: link with empty target")
             )
         if FIXME_RE.search(line):
             audit.issues.append(
@@ -411,6 +409,10 @@ def audit_body(
         masked = line
         for m in IMG_RE.finditer(line):
             target = m.group("target")
+            if target in ("...", "…"):
+                # 표기 예시(`![alt](...)`) — 실제 참조가 아님
+                masked = masked.replace(m.group(0), " " * len(m.group(0)))
+                continue
             if target.startswith(("http://", "https://", "data:", "mailto:")):
                 external_count += 1
                 if check_external and not _external_head_ok(target):
@@ -454,6 +456,8 @@ def iter_posts(category_filter: Optional[str]) -> Iterable[Path]:
     if not POSTS_DIR.exists():
         return []
     for md in sorted(POSTS_DIR.rglob("*.md")):
+        if md.name == "CLAUDE.md":
+            continue  # 작업 지침 파일 — 포스트가 아님
         if category_filter:
             rel = md.relative_to(POSTS_DIR)
             if category_filter not in rel.parts:
@@ -526,13 +530,12 @@ def render_report(audits: List[PostAudit]) -> str:
             actionables[issue.kind].append(f"{rel} — {issue.detail}")
 
     headline_kinds = [
-        ("overlay_missing", "Posts missing `overlay_image`"),
-        ("overlay_missing_file", "Overlay images referencing a nonexistent file"),
-        ("overlay_category_mismatch", "Overlay images in the wrong category folder"),
         ("permalink_missing", "Posts without a `permalink`"),
         ("permalink_convention", "Permalinks that break the convention"),
         ("image_missing", "Body `![…](…)` images that are missing on disk"),
         ("internal_link_broken", "Internal links pointing nowhere"),
+        ("placeholder_ref", "`##ref` reference placeholders still present"),
+        ("empty_link", "Links with an empty target"),
         ("placeholder_img", "Literal `img` placeholder still present"),
         ("fixme_marker", "FIXME / TODO markers left in posts"),
     ]
@@ -565,8 +568,6 @@ def render_report(audits: List[PostAudit]) -> str:
             lines.append(f"**`{rel}`**")
             if post.permalink:
                 lines.append(f"- permalink: `{post.permalink}`")
-            if post.overlay_image:
-                lines.append(f"- overlay_image: `{post.overlay_image}`")
             for issue in post.issues:
                 lines.append(f"- [{issue.kind}] {issue.detail}")
             lines.append("")

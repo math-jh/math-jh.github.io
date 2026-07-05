@@ -264,4 +264,4 @@ which is a resolution of $$A/(\x_1,\ldots, \x_n)\cong \mathbb{K}$$. On the other
 
 $$\Tor_i^A(\mathbb{K}, \mathbb{K}) = H_i(K_\bullet \otimes_A \mathbb{K}) = K_i \otimes_A \mathbb{K} \cong \bigwedge\nolimits^i_{\mathbb{K}}(\mathbb{K}^n).$$
 
-This computation is later used to show that the global dimension of the polynomial ring $$\mathbb{K}[\x_1, \ldots, \x_n]$$ is $$n$$. ([##ref##](global-dimension/호몰로지?가환대수?))
+This computation is later used to show that the global dimension of the polynomial ring $$\mathbb{K}[\x_1, \ldots, \x_n]$$ is $$n$$.

@@ -35,11 +35,11 @@ $$0 \rightarrow Z_\bullet \rightarrow C_\bullet \rightarrow B_{\bullet-1}\righta
 
 를 생각하자. 여기에서 $$Z_k=\ker(\partial:C_k \rightarrow C_{k-1})$$이며 $$B_{k-1}=\im(\partial:C_k \rightarrow C_{k-1})$$이고 위의 sequence의 첫째 함수는 inclusion, 둘째 함수는 boundary map $$\partial$$이다. 
 
-이 때, $$Z_{k}$$과 $$B_{k-1}$$은 각각 free abelian group $$C_k,C_{k-1}$$의 subgroup이므로 free이고, 따라서 [##ref##](third_term_projective_splits)에 의해 이 short exact sequence는 split exact sequence이며 따라서 임의의 abelian group $$A$$에 대하여, 다음의 sequence
+이 때, $$Z_{k}$$과 $$B_{k-1}$$은 각각 free abelian group $$C_k,C_{k-1}$$의 subgroup이므로 free이고, 특히 셋째 항 $$B_{k-1}$$이 free이므로 그 basis의 각 원소에 preimage를 하나씩 지정하면 section $$B_{k-1}\rightarrow C_k$$을 얻는다. 즉 이 short exact sequence는 split exact sequence이며 따라서 임의의 abelian group $$A$$에 대하여, 다음의 sequence
 
 $$0 \rightarrow Z_\bullet\otimes_\mathbb{Z}A \rightarrow C_\bullet\otimes_\mathbb{Z}A \rightarrow B_{\bullet-1}\otimes_\mathbb{Z}A\rightarrow 0$$
 
-또한 spiltting short exact sequence이다. ([##ref](splitting_tensor_splits)) 이 때, 이들을 풀어쓰면 다음의 commutative diagram 
+또한 split short exact sequence이다. Splitting은 direct sum 분해 $$C_\bullet\cong Z_\bullet\oplus B_{\bullet-1}$$을 주고 tensor는 direct sum과 교환하므로, 이 분해가 $$\otimes_\mathbb{Z}A$$ 이후에도 그대로 유지되기 때문이다. 이 때, 이들을 풀어쓰면 다음의 commutative diagram 
 
 ![snake_lemma](/assets/images/Math/Algebraic_Topology/Cohomology-1.svg){:style="width:31.09em" class="invert" .align-center}
 

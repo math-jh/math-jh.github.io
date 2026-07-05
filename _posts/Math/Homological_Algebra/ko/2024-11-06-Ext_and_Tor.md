@@ -267,4 +267,4 @@ $$\Tor_i^A(\mathbb{K}, \mathbb{K}) = H_i(K_\bullet \otimes_A \mathbb{K}) = K_i \
 
 을 얻는다.
 
-이 계산은 나중에 다항식 환 $$\mathbb{K}[\x_1, \ldots, \x_n]$$의 global dimension이 $$n$$임을 보여주는 데 사용된다. ([##ref##](global-dimension/호몰로지?가환대수?))
+이 계산은 나중에 다항식 환 $$\mathbb{K}[\x_1, \ldots, \x_n]$$의 global dimension이 $$n$$임을 보여주는 데 사용된다.

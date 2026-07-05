@@ -36,11 +36,11 @@ $$0 \rightarrow Z_\bullet \rightarrow C_\bullet \rightarrow B_{\bullet-1}\righta
 
 Here $$Z_k=\ker(\partial:C_k \rightarrow C_{k-1})$$ and $$B_{k-1}=\im(\partial:C_k \rightarrow C_{k-1})$$, the first map is the inclusion, and the second is the boundary map $$\partial$$.
 
-Since $$Z_{k}$$ and $$B_{k-1}$$ are subgroups of the free abelian groups $$C_k$$ and $$C_{k-1}$$, they are themselves free; hence by [##ref##](third_term_projective_splits) the short exact sequence (1) is split exact. Therefore, for any abelian group $$A$$, the sequence
+Since $$Z_{k}$$ and $$B_{k-1}$$ are subgroups of the free abelian groups $$C_k$$ and $$C_{k-1}$$, they are themselves free; in particular the third term $$B_{k-1}$$ is free, so assigning a preimage to each basis element defines a section $$B_{k-1}\rightarrow C_k$$, and the short exact sequence (1) is split exact. Therefore, for any abelian group $$A$$, the sequence
 
 $$0 \rightarrow Z_\bullet\otimes_\mathbb{Z}A \rightarrow C_\bullet\otimes_\mathbb{Z}A \rightarrow B_{\bullet-1}\otimes_\mathbb{Z}A\rightarrow 0$$
 
-is also a split short exact sequence. ([##ref](splitting_tensor_splits)) Expanding these out gives a commutative diagram of the form
+is also a split short exact sequence: the splitting amounts to a direct sum decomposition $$C_\bullet\cong Z_\bullet\oplus B_{\bullet-1}$$, and tensoring commutes with direct sums, so the decomposition survives $$\otimes_\mathbb{Z}A$$. Expanding these out gives a commutative diagram of the form
 
 ![snake_lemma](/assets/images/Math/Algebraic_Topology/Cohomology-1.svg){:style="width:31.09em" class="invert" .align-center}
 
