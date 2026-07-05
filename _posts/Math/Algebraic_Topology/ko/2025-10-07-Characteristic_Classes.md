@@ -246,7 +246,7 @@ Chern class는 다음을 만족한다.
 첫째 조건은 $$n$$에 대한 귀납으로 보인다. $$c_n$$의 naturality는 Euler class의 naturality로부터 온다. ([명제 4](#prop4)의 첫째 조건) $$0<i<n$$에서는 $$f$$가 deleted space와 complement bundle, 그리고 Gysin sequence 전체와 호환되는 bundle map $$E_0'\rightarrow E_0$$을 유도하고, 그 위에서 $$f^\ast(L^\perp)\cong(f^\ast L)^\perp$$이므로 귀납가정과 $$\pi_0^\ast$$의 자연성으로부터 $$c_i$$의 naturality가 따라온다.
 :::
 
-Whitney sum에 대한 곱 공식은 Chern class의 가장 중요한 계산 도구이다. 그 증명은 *splitting principle*에 기댄다.
+Whitney sum에 대한 곱 공식은 Chern class의 가장 중요한 계산 도구이다. 그 증명은 [§사영다발과 Leray–Hirsch 정리, ⁋정리 5](/ko/math/algebraic_topology/projective_bundles#thm5)의 splitting principle에 기댄다.
 
 ::: 정리 8 (Whitney sum formula)
 두 complex vector bundle $$E,E'\rightarrow B$$에 대하여
@@ -257,7 +257,7 @@ $$c(E\oplus E')=c(E)\smile c(E')$$
 :::
 
 ::: 증명
-*Splitting principle*에 의하면, 임의의 complex vector bundle $$E\rightarrow B$$에 대하여 연속함수 $$\rho:F(E)\rightarrow B$$가 존재하여 (flag bundle을 택한다) pullback $$\rho^\ast:H^\bullet(B)\hookrightarrow H^\bullet(F(E))$$가 단사이고, $$\rho^\ast E$$가 complex line bundle들의 Whitney sum $$L_1\oplus\cdots\oplus L_n$$으로 쪼개진다. Naturality와 $$\rho^\ast$$의 단사성에 의해 공식은 모든 bundle을 line bundle들의 합으로 가정하고 증명해도 충분하다.
+[§사영다발과 Leray–Hirsch 정리, ⁋정리 5](/ko/math/algebraic_topology/projective_bundles#thm5)에 의하여, pullback $$\rho^\ast:H^\bullet(B)\hookrightarrow H^\bullet(F(E))$$이 단사이면서 $$\rho^\ast E$$를 complex line bundle들의 Whitney sum $$L_1\oplus\cdots\oplus L_n$$으로 쪼개는 연속함수 $$\rho:F(E)\rightarrow B$$가 존재한다. Naturality와 $$\rho^\ast$$의 단사성에 의해 공식은 모든 bundle을 line bundle들의 합으로 가정하고 증명해도 충분하다.
 
 그럼 line bundle들의 합에 대하여
 
@@ -318,7 +318,7 @@ $$c_i(\bar{E})=(-1)^ic_i(E)$$
 ::: 증명
 우선 line bundle $$L$$의 경우를 보자. [정의 6](#def6)에 의하여 $$c_1(L)=e(L_{\mathbb{R}})$$인데, $$L$$과 $$\bar{L}$$은 underlying real bundle이 같고 표준 방향만 서로 반대이다. 실제로 fiber의 nonzero vector $$v$$에 대하여 $$L$$의 표준 방향은 ordered basis $$(v,iv)$$가 주는 것이고, $$\bar{L}$$에서는 $$i$$가 $$v$$를 $$-iv$$로 보내므로 표준 방향은 $$(v,-iv)$$가 주는 것인데, 두 basis 사이의 change of basis 행렬식이 $$-1$$이다. 따라서 [명제 4](#prop4)의 (5)에 의하여 $$c_1(\bar{L})=-c_1(L)$$이다.
 
-일반적인 경우는 [정리 8](#thm8)의 증명에서 사용한 splitting principle로 줄인다. $$\rho^\ast E\cong L_1\oplus\cdots\oplus L_n$$이면 켤레가 pullback 및 Whitney sum과 교환하므로 $$\rho^\ast\bar{E}\cong\bar{L}_1\oplus\cdots\oplus\bar{L}_n$$이고, [정리 8](#thm8)에 의하여
+일반적인 경우는 [§사영다발과 Leray–Hirsch 정리, ⁋정리 5](/ko/math/algebraic_topology/projective_bundles#thm5)의 splitting principle로 줄인다. $$\rho^\ast E\cong L_1\oplus\cdots\oplus L_n$$이면 켤레가 pullback 및 Whitney sum과 교환하므로 $$\rho^\ast\bar{E}\cong\bar{L}_1\oplus\cdots\oplus\bar{L}_n$$이고, [정리 8](#thm8)에 의하여
 
 $$\rho^\ast c(\bar{E})=\prod_{i=1}^n\bigl(1-c_1(L_i)\bigr)$$
 

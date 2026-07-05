@@ -12,10 +12,9 @@ sidebar:
 date: 2026-06-23
 
 weight: 118
-
-drift_needed: true
-translated_at: 2026-07-05T16:01:29+00:00
+translated_at: 2026-07-05T18:00:01+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-05T18:00:01+00:00
 ---
 ## Complex Inner Product and Norm
 
