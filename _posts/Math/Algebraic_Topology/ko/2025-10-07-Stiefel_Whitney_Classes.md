@@ -199,6 +199,8 @@ Vector bundle $$E \rightarrow B$$ of rank $$n$$과 vector bundle $$F\rightarrow 
 
 과 isomorphic하다. 뿐만 아니라, vector bundle $$E$$의 Stiefel-Whitney class 또한 universal bundle $$\gamma^k_\infty$$의 Stiefel-Whitney class $$w(\gamma^k_\infty)$$를 pullback하여 얻어진다. 
 
+이렇게 모든 rank $$k$$ bundle을 자신의 pullback으로 남김없이 실현한다는 뜻에서 $$\gamma^k_\infty$$을 rank $$k$$ vector bundle의 *universal family*라 부른다. 곧 이 하나의 다발이 모든 rank $$k$$ bundle을 매개하며, bundle의 isomorphism class는 classifying map $$B\rightarrow\Gr_k(\mathbb{R}^\infty)$$의 homotopy class와 일대일로 대응한다. 
+
 따라서 우리는 (infinite) Grassmannian과 그 위의 universal bundle, 그리고 이 bundle의 Stiefel-Whitney class가 존재하는 infinite Grassmannian의 cohomology ring $$H^\bullet(\Gr_k(\mathbb{R}^\infty), \mathbb{Z}/2)$$에 대해 살펴보아야 한다. Grassmannian의 성질을 모두 엄밀하게 증명하는 것은 복잡한 일이므로, 이 절에서는 이들 성질에 대한 소개와, (가능하다면) 간단한 설명을 주는 것으로 만족하기로 한다.
 
 우선 우리는 $$\Gr_k(\mathbb{R}^n)$$의 기본적인 성질들과 cohomology ring을 살펴본다. 정의에 의해 $$\Gr_k(\mathbb{R}^{n})$$은 $$\mathbb{R}^{n}$$의 모든 $$k$$차원 linear subspace들의 공간이다. 예를 들어 $$\Gr_1(\mathbb{R}^{n+1})$$은 그 정의에 의하여 projective space $$\RP^n$$이다. $$\Gr_k(\mathbb{R}^{n})$$의 각각의 점들은 $$\mathbb{R}^{n}$$의 부분공간이므로, 우리는 두 점 (즉 $$\mathbb{R}^{n}$$의 두 $$k$$차원 부분공간)이 서로 얼마나 가까운지를 직관적으로 알고 있다. 이는 가령, $$\mathbb{R}^{n+1}$$에서 "기울기"가 비슷한 두 직선에 해당하는 점들이 $$\RP^n$$에서 가까운 점들인 것과 동일한 일이며, 이는 $$n\times k$$행렬을 이용하여 엄밀하게 정의할 수 있으며, 이 위상구조 하에서 $$\Gr_k(\mathbb{R}^{n})$$은 $$k(n-k)$$차원 compact topological manifold가 된다. 

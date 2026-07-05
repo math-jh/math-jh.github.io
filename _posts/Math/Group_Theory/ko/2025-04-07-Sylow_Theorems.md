@@ -247,3 +247,29 @@ $$\frac{P_3P_5}{P_3}\cong P_5/\{e\}\implies \lvert P_3P_5\rvert=\lvert P_3\rvert
 이므로 결국 $$G\cong \mathbb{Z}/3\mathbb{Z}\times \mathbb{Z}/5\mathbb{Z}$$여야 한다. 
 :::
 
+Sylow 정리의 또 다른 강력한 응용으로, 교대군 $$A_5$$가 simple group이라는 사실을 보이자. 이는 [§대칭군, ⁋예시 13](/ko/math/group_theory/symmetric_groups#ex13)에서 이미 conjugacy class의 구조를 직접 조사하여 증명하였다. 거기서는 $$A_5$$가 그다지 큰 group이 아니라는 점을 이용하여 원소의 종류를 일일이 분류하였는데, 여기서는 동일한 결론을 normal subgroup이 반드시 포함해야 하는 Sylow subgroup들을 세는 방식으로 다시 도출한다.
+
+::: 명제 14
+교대군 $$A_5$$는 simple group이다.
+:::
+
+::: 증명
+교대군의 크기는
+
+$$\lvert A_5\rvert=\frac{5!}{2}=60=2^2\cdot 3\cdot 5$$
+
+이다. 또 [§대칭군, ⁋예시 13](/ko/math/group_theory/symmetric_groups#ex13)에서 살펴본 바와 같이, $$A_5$$의 원소들은 항등원 1개, order 3의 원소(3-cycle) 20개, order 2의 원소(double transposition) 15개, order 5의 원소(5-cycle) 24개로 이루어진다.
+
+이제 $$N\triangleleft A_5$$가 $$N\neq\{e\}$$을 만족한다 하고, $$N=A_5$$임을 보이자. $$\lvert N\rvert$$은 $$60$$의 약수이며, $$60$$의 약수 중 소수 $$3$$이나 $$5$$로 나누어떨어지지 않는 것은 $$1,2,4$$뿐이다. 따라서 $$3$$ 또는 $$5$$가 $$\lvert N\rvert$$을 나누거나, 그렇지 않으면 $$\lvert N\rvert\in\{2,4\}$$이다.
+
+우선 $$5\mid\lvert N\rvert$$이라 하자. 그럼 $$N$$은 order $$5$$의 원소를 가지며, 이 원소가 생성하는 subgroup $$P$$는 곧 $$A_5$$의 Sylow 5-subgroup이다. $$N$$이 normal subgroup이므로 임의의 $$g\in A_5$$에 대하여 $$gPg^{-1}\subseteq gNg^{-1}=N$$이 성립하고, [정리 8](#thm8)에 의하여 $$A_5$$의 모든 Sylow 5-subgroup은 $$P$$와 conjugate이므로 결국 $$N$$은 이들 모두를 포함한다. 한편 $$A_5$$의 5-cycle은 24개이고, 각 Sylow 5-subgroup은 정확히 4개의 5-cycle을 원소로 가지며 서로 다른 Sylow 5-subgroup들은 order가 5인 subgroup이므로 항등원만을 공유한다. 따라서 Sylow 5-subgroup의 개수는 $$n_5=24/4=6$$이며, 이는 $$n_5\equiv 1\pmod{5}$$, $$n_5\mid 12$$라는 Sylow 정리의 결과와 일치한다. 그러므로 $$N$$은 24개의 order 5 원소를 포함하여 $$\lvert N\rvert\geq 25$$이고, $$5\mid\lvert N\rvert$$이며 $$\lvert N\rvert\mid 60$$이므로 $$\lvert N\rvert\in\{30,60\}$$이어야 한다.
+
+비슷하게 $$3\mid\lvert N\rvert$$인 경우에도 같은 논증으로 $$N$$이 $$A_5$$의 모든 Sylow 3-subgroup을 포함함을 안다. 3-cycle이 20개이고 각 Sylow 3-subgroup은 2개의 3-cycle을 가지며 서로 다른 것들은 항등원만 공유하므로 $$n_3=20/2=10$$이고, $$N$$은 20개의 order 3 원소를 포함하여 $$\lvert N\rvert\geq 21$$이다. 마찬가지로 $$\lvert N\rvert\in\{30,60\}$$이다.
+
+이제 $$\lvert N\rvert\in\{2,4\}$$인 경우를 배제하자. 만일 $$\lvert N\rvert=4$$라면 $$N$$은 $$A_5$$의 Sylow 2-subgroup이며, normal subgroup이므로 $$A_5$$의 유일한 Sylow 2-subgroup이다. 모든 order 2 원소는 자신이 생성하는 subgroup을 통해 어떤 Sylow 2-subgroup에 속하므로, 그러한 subgroup이 유일하다면 15개의 order 2 원소가 모두 그 안에 들어가야 한다. 그러나 $$A_5$$는 order $$4$$의 원소를 갖지 않으므로(가능한 order는 $$1,2,3,5$$뿐이다) 각 Sylow 2-subgroup은 Klein four-group $$\mathbb{Z}/2\mathbb{Z}\times\mathbb{Z}/2\mathbb{Z}$$이고, 따라서 order 2 원소를 정확히 3개만 가진다. 이는 모순이다. 한편 $$\lvert N\rvert=2$$라면 $$N=\langle x\rangle$$이고 $$x$$는 double transposition인데, $$N$$이 normal subgroup이려면 임의의 $$g\in A_5$$에 대하여 $$gxg^{-1}=x$$, 즉 $$x$$가 central이어야 한다. 그러나 임의의 double transposition $$(ab)(cd)$$를 3-cycle $$(abc)$$로 conjugate하면 $$(abc)(ab)(cd)(abc)^{-1}=(ad)(bc)$$가 되어 원래 원소와 다르므로, double transposition은 central일 수 없다. 이 또한 모순이다. 따라서 $$\lvert N\rvert\notin\{2,4\}$$이며, 앞선 논증에 의하여 $$\lvert N\rvert\in\{30,60\}$$이다.
+
+마지막으로 $$\lvert N\rvert=30$$인 경우를 배제하자. $$3\mid 30$$이고 $$5\mid 30$$이므로, 앞선 두 논증에 의하여 $$N$$은 20개의 order 3 원소와 24개의 order 5 원소를 모두 포함해야 한다. 이들은 order가 서로 다르므로 겹치지 않으며, 항등원까지 합치면 $$N$$은 적어도 $$20+24+1=45$$개의 원소를 갖는다. 이는 $$\lvert N\rvert=30$$에 모순이다.
+
+결론적으로 남는 가능성은 $$\lvert N\rvert=60$$뿐이며, 즉 $$N=A_5$$이다. 따라서 $$A_5$$는 simple group이다.
+:::
+

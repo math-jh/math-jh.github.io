@@ -19,9 +19,9 @@ drift_needed: true
 
 ## Leray–Hirsch 정리
 
-[§코호몰로지, ⁋따름정리 10](/ko/math/algebraic_topology/cohomology#cor10)의 Künneth 공식은 곱공간 $$X\times Y$$의 코호몰로지를 두 인자의 코호몰로지의 tensor product로 계산해 주었다. Fiber bundle $$\pi:E\rightarrow B$$는 밑공간 $$B$$ 위에 fiber $$F$$를 비틀어 붙인 뒤틀린 곱으로, 국소적으로는 $$U\times F$$의 꼴이지만 전역적으로는 그렇지 않을 수 있다. 그럼에도 전공간의 코호몰로지 $$H^\bullet(E)$$가 곱공간에서와 마찬가지로 밑공간과 fiber의 코호몰로지만으로 결정되는 경우가 있는데, Leray–Hirsch 정리는 이를 보장하는 충분조건을 준다. 그 조건은 fiber의 코호몰로지를 이루는 class들이 전공간 위의 전역적인 class의 제한으로 실현되는 것이다.
+[§코호몰로지, ⁋따름정리 10](/ko/math/algebraic_topology/cohomology#cor10)은 곱공간 $$X\times Y$$의 코호몰로지를 두 인자의 코호몰로지의 tensor product로 계산해 주었다. Fiber bundle $$\pi:E\rightarrow B$$는 밑공간 $$B$$ 위에 fiber $$F$$를 비틀어 붙인 뒤틀린 곱으로, 국소적으로는 $$U\times F$$의 꼴이지만 전역적으로는 그렇지 않을 수 있다. 그럼에도 전공간의 코호몰로지 $$H^\bullet(E)$$가 곱공간에서와 마찬가지로 밑공간과 fiber의 코호몰로지만으로 결정되는 경우가 있는데, Leray–Hirsch 정리는 이를 보장하는 충분조건을 준다. 그 조건은 fiber의 코호몰로지를 이루는 class들이 전공간 위의 전역적인 class의 제한으로 실현되는 것이다.
 
-우리가 이 정리를 사용하는 주된 목적은 splitting principle이다. [§벡터다발의 특성류, ⁋예시 9](/ko/math/algebraic_topology/characteristic_classes#ex9)에서 보았듯 line bundle의 Chern class는 first Chern class 하나로 완전히 통제되고 Whitney 합에 대해서도 단순하게 행동하므로, rank가 높은 bundle의 Chern class 계산은 그 bundle을 line bundle들의 합으로 쪼갤 수 있을 때 크게 간단해진다. 임의의 vector bundle이 실제로 line bundle들의 합인 것은 아니지만, Leray–Hirsch 정리를 아래에서 구성할 사영다발에 적용하면 코호몰로지 계산에 관한 한 언제나 그렇게 취급해도 좋다는 것이 splitting principle의 내용이다.
+우리가 이 정리를 사용하는 주된 목적은 splitting principle이다. [§벡터다발의 특성류, ⁋예시 8](/ko/math/algebraic_topology/characteristic_classes#ex8)에서 보았듯 line bundle의 Chern class는 first Chern class 하나로 완전히 통제되고 Whitney 합에 대해서도 단순하게 행동하므로, rank가 높은 bundle의 Chern class 계산은 그 bundle을 line bundle들의 합으로 쪼갤 수 있을 때 크게 간단해진다. 임의의 vector bundle이 실제로 line bundle들의 합인 것은 아니지만, Leray–Hirsch 정리를 아래에서 구성할 사영다발에 적용하면 코호몰로지 계산에 관한 한 언제나 그렇게 취급해도 좋다는 것이 splitting principle의 내용이다.
 
 여기서 fiber bundle이란 [§올림과 호모토피 완전열, ⁋참고 4](/ko/math/algebraic_topology/fibrations#rmk4)에서와 같이 밑공간이 열린집합들로 덮여 각 $$U$$ 위에서 $$\pi^{-1}(U)$$가 $$U\times F$$와 자연스럽게 homeomorphic한, 국소적으로 자명한 사상을 뜻한다. 이러한 $$U$$를 *trivializing open*이라 부르자.
 
@@ -42,7 +42,7 @@ $$\Phi_U:H^\bullet(U)\otimes H^\bullet(F)\rightarrow H^\bullet(E_U),\qquad \Phi_
 
 을 생각하자. $$a_j\vert_{E_U}$$은 여전히 각 fiber로 제한하면 기저를 주므로, 우리가 보일 것은 $$U=B$$에서 $$\Phi_B=\Phi$$가 isomorphism이라는 것이다. 이를 $$B$$의 유한 trivializing 덮개의 크기에 대한 귀납으로 보인다.
 
-우선 $$U$$가 하나의 trivializing open인 경우, $$E_U\cong U\times F$$이고 $$\pi$$는 projection이 된다. $$H^\bullet(F)$$가 자유이므로 [§코호몰로지, ⁋따름정리 10](/ko/math/algebraic_topology/cohomology#cor10)의 Künneth 공식에 의하여
+우선 $$U$$가 하나의 trivializing open인 경우, $$E_U\cong U\times F$$이고 $$\pi$$는 projection이 된다. $$H^\bullet(F)$$가 자유이므로 [§코호몰로지, ⁋따름정리 10](/ko/math/algebraic_topology/cohomology#cor10)에 의하여
 
 $$H^\bullet(U\times F)\cong H^\bullet(U)\otimes H^\bullet(F)$$
 
@@ -52,14 +52,14 @@ $$a_j\vert_{E_U}=1\times(a_j\vert_F)+(\text{$U$의 차수가 양인 항들})$$
 
 이 성립한다. 곧 기저 $$\{1\times(a_k\vert_F)\}$$에 대한 $$\{a_j\vert_{E_U}\}$$의 전이행렬은 대각성분이 $$1$$이고 밑공간 차수를 올리는 방향으로만 어긋나는 삼각행렬이므로 $$H^\bullet(U)$$ 위에서 가역이다. 따라서 $$\Phi_U$$는 isomorphism이다.
 
-다음으로 $$U=U'\cup U''$$이고 $$\Phi_{U'}$$, $$\Phi_{U''}$$, $$\Phi_{U'\cap U''}$$이 모두 isomorphism이라 하자. $$E_{U'\cup U''}=E_{U'}\cup E_{U''}$$이고 $$E_{U'}\cap E_{U''}=E_{U'\cap U''}$$이므로, 밑공간과 전공간의 두 [§코호몰로지, ⁋명제 6](/ko/math/algebraic_topology/cohomology#prop6)의 Mayer–Vietoris 완전열이 얻어진다. 앞의 완전열을 자유 abelian group $$H^\bullet(F)$$와 tensor하면 (자유이므로 완전성이 보존된다) 각 항이 $$H^\bullet(U)\otimes H^\bullet(F)$$, $$\bigl(H^\bullet(U')\oplus H^\bullet(U'')\bigr)\otimes H^\bullet(F)$$, $$H^\bullet(U'\cap U'')\otimes H^\bullet(F)$$로 이어지는 완전열을 얻는다. 이를 위 행에, 전공간의 Mayer–Vietoris 완전열을 아래 행에 두고 세로 방향으로 $$\Phi_U$$, $$\Phi_{U'}\oplus\Phi_{U''}$$, $$\Phi_{U'\cap U''}$$을 놓으면 사다리 모양의 diagram이 된다. $$\pi^\ast$$와 고정된 class $$a_j$$와의 cup product가 restriction 및 Mayer–Vietoris의 connecting homomorphism과 (부호를 무시하면) 교환하므로 각 사각형은 commute하며, 가정에 의해 $$\Phi_{U'}\oplus\Phi_{U''}$$과 $$\Phi_{U'\cap U''}$$이 isomorphism이므로 [\[호몰로지 대수학\] §Diagram chasing, ⁋따름정리 2](/ko/math/homological_algebra/diagram_chasing#cor2)의 five lemma에 의하여 $$\Phi_U$$ 또한 isomorphism이다.
+다음으로 $$U=U'\cup U''$$이고 $$\Phi_{U'}$$, $$\Phi_{U''}$$, $$\Phi_{U'\cap U''}$$이 모두 isomorphism이라 하자. $$E_{U'\cup U''}=E_{U'}\cup E_{U''}$$이고 $$E_{U'}\cap E_{U''}=E_{U'\cap U''}$$이므로, 밑공간과 전공간에서 [§코호몰로지, ⁋명제 6](/ko/math/algebraic_topology/cohomology#prop6)이 주는 두 완전열이 얻어진다. 앞의 완전열을 자유 abelian group $$H^\bullet(F)$$와 tensor하면 (자유이므로 완전성이 보존된다) 각 항이 $$H^\bullet(U)\otimes H^\bullet(F)$$, $$\bigl(H^\bullet(U')\oplus H^\bullet(U'')\bigr)\otimes H^\bullet(F)$$, $$H^\bullet(U'\cap U'')\otimes H^\bullet(F)$$로 이어지는 완전열을 얻는다. 이를 위 행에, 전공간의 Mayer–Vietoris 완전열을 아래 행에 두고 세로 방향으로 $$\Phi_U$$, $$\Phi_{U'}\oplus\Phi_{U''}$$, $$\Phi_{U'\cap U''}$$을 놓으면 사다리 모양의 diagram이 된다. $$\pi^\ast$$와 고정된 class $$a_j$$와의 cup product가 restriction 및 Mayer–Vietoris의 connecting homomorphism과 (부호를 무시하면) 교환하므로 각 사각형은 commute하며, 가정에 의해 $$\Phi_{U'}\oplus\Phi_{U''}$$과 $$\Phi_{U'\cap U''}$$이 isomorphism이므로 [\[호몰로지 대수학\] §Diagram chasing, ⁋따름정리 2](/ko/math/homological_algebra/diagram_chasing#cor2)에 의하여 $$\Phi_U$$ 또한 isomorphism이다.
 
 Trivializing open들의 교집합은 다시 trivializing open이므로, $$B$$가 유한 trivializing 덮개를 가지면 덮개의 크기에 대한 귀납으로 $$\Phi_B$$가 isomorphism임을 얻는다. 일반적인 paracompact 밑공간에 대해서는 열린덮개에 대한 직접극한 논증이 추가로 필요하며, 이는 [Hat]와 [BT]에 자세히 다루어져 있다.
 :::
 
 계수를 $$\mathbb{Z}$$로 두었지만, 위의 증명은 fiber의 코호몰로지가 자유가군이 되는 임의의 PID 계수에 대하여 그대로 성립한다. 조건의 핵심은 fiber의 코호몰로지가 전역적인 class로 "펼쳐진다"는 것으로, 이 때 전공간의 코호몰로지는 밑공간의 코호몰로지를 계수환으로 삼아 fiber의 코호몰로지를 그대로 복제한 모양이 된다. 아래에서 이 정리는 밑공간이 무한차원인 경우 ($$\CP^\infty$$ 등) 에도 쓰이므로 일반 판본이 실제로 필요하다.
 
-개념적으로 [정리 1](#thm1)은 [§올림과 호모토피 완전열, ⁋정리 14](/ko/math/algebraic_topology/fibrations#thm14)의 Serre 스펙트럼 열이 degenerate하는 특수한 경우이다. 전역 class $$a_j$$은 $$H^\bullet(E)$$에서 오므로 fiber 방향 열의 permanent cycle이고, 이들이 $$H^\bullet(F)$$ 전체를 생성하므로 곱 구조에 의해 모든 미분이 소멸하며, 동시에 그 존재가 $$\pi_1(B)$$의 $$H^\bullet(F)$$ 위 작용을 자명하게 만들어 $$E_2^{p,q}=H^p(B)\otimes H^q(F)$$이 비틀림 없이 성립한다. 따라서 $$E_2=E_\infty$$가 되어 위의 결론이 그대로 따라온다. 우리가 택한 Mayer–Vietoris 증명은 이 스펙트럼 열을 경유하지 않고 같은 결론에 이르는 초등적인 우회로이며, 그런 만큼 국소계수계에 얽힌 미묘함도 자연스럽게 비켜간다.
+개념적으로 [정리 1](#thm1)은 [§올림과 호모토피 완전열, ⁋정리 14](/ko/math/algebraic_topology/fibrations#thm14)이 degenerate하는 특수한 경우이다. 전역 class $$a_j$$은 $$H^\bullet(E)$$에서 오므로 fiber 방향 열의 permanent cycle이고, 이들이 $$H^\bullet(F)$$ 전체를 생성하므로 곱 구조에 의해 모든 미분이 소멸하며, 동시에 그 존재가 $$\pi_1(B)$$의 $$H^\bullet(F)$$ 위 작용을 자명하게 만들어 $$E_2^{p,q}=H^p(B)\otimes H^q(F)$$이 비틀림 없이 성립한다. 따라서 $$E_2=E_\infty$$가 되어 위의 결론이 그대로 따라온다. 우리가 택한 Mayer–Vietoris 증명은 이 스펙트럼 열을 경유하지 않고 같은 결론에 이르는 초등적인 우회로이며, 그런 만큼 국소계수계에 얽힌 미묘함도 자연스럽게 비켜간다.
 
 ## 사영다발의 코호몰로지
 
@@ -80,25 +80,25 @@ $$\pi^\ast E\cong\gamma_E\oplus\gamma_E^\perp$$
 로 쪼갤 수 있고, 여기서 $$\gamma_E^\perp$$는 rank $$(n-1)$$의 complex vector bundle이다.
 
 ::: 정리 3
-Complex rank $$n$$ vector bundle $$E\rightarrow B$$의 사영다발 $$\pi:\mathbb{P}(E)\rightarrow B$$와 tautological line bundle $$\gamma_E$$에 대하여, $$a=c_1(\bar\gamma_E)\in H^2(\mathbb{P}(E);\mathbb{Z})$$이라 두자. 그럼 $$H^\bullet(\mathbb{P}(E);\mathbb{Z})$$은 $$1,a,\ldots,a^{n-1}$$을 기저로 하는 $$H^\bullet(B;\mathbb{Z})$$ 위의 자유가군이다. 특히 $$\pi^\ast:H^\bullet(B)\rightarrow H^\bullet(\mathbb{P}(E))$$은 단사이다.
+Complex rank $$n$$ vector bundle $$E\rightarrow B$$의 사영다발 $$\pi:\mathbb{P}(E)\rightarrow B$$와 tautological line bundle $$\gamma_E$$에 대하여, $$a=c_1(\gamma_E)\in H^2(\mathbb{P}(E);\mathbb{Z})$$이라 두자. 그럼 $$H^\bullet(\mathbb{P}(E);\mathbb{Z})$$은 $$1,a,\ldots,a^{n-1}$$을 기저로 하는 $$H^\bullet(B;\mathbb{Z})$$ 위의 자유가군이다. 특히 $$\pi^\ast:H^\bullet(B)\rightarrow H^\bullet(\mathbb{P}(E))$$은 단사이다.
 :::
 
 ::: 증명
-각 fiber $$\mathbb{P}(E_x)$$는 $$\CP^{n-1}$$이고, 그 위로 $$\gamma_E$$를 제한하면 정확히 $$\CP^{n-1}$$의 tautological line bundle이 된다. 따라서 $$a$$를 이 fiber로 제한하면 [§벡터다발의 특성류, ⁋예시 11](/ko/math/algebraic_topology/characteristic_classes#ex11)의 생성원 $$x=c_1(\bar\gamma)$$이 되고, 그 글에서 보았듯
+각 fiber $$\mathbb{P}(E_x)$$는 $$\CP^{n-1}$$이고, 그 위로 $$\gamma_E$$를 제한하면 정확히 $$\CP^{n-1}$$의 tautological line bundle이 되므로, $$a$$를 이 fiber로 제한하면 그 first Chern class $$c_1(\gamma)$$가 된다. [§벡터다발의 특성류, ⁋예시 8](/ko/math/algebraic_topology/characteristic_classes#ex8)에서 $$H^\bullet(\CP^\infty;\mathbb{Z})=\mathbb{Z}[c_1(\gamma)]$$이고 $$c_1(\gamma)$$가 $$H^2$$의 생성원이었으며, $$\CP^{n-1}$$은 $$2(n-1)$$차 이하의 짝수 cell만 가지므로 restriction $$H^\bullet(\CP^\infty)\rightarrow H^\bullet(\CP^{n-1})$$이 그 범위에서 isomorphism이고 위로는 $$0$$이 되어
 
-$$H^\bullet(\CP^{n-1};\mathbb{Z})=\mathbb{Z}[x]/(x^n)$$
+$$H^\bullet(\CP^{n-1};\mathbb{Z})=\mathbb{Z}[c_1(\gamma)]/(c_1(\gamma)^n)$$
 
-이므로 $$1,a,\ldots,a^{n-1}$$의 fiber로의 제한은 $$H^\bullet(\CP^{n-1})$$의 기저를 이룬다. $$H^\bullet(\CP^{n-1})$$은 유한 rank의 자유가군이므로 [정리 1](#thm1)에 의하여 $$H^\bullet(\mathbb{P}(E))$$은 $$1,a,\ldots,a^{n-1}$$을 기저로 하는 $$H^\bullet(B)$$ 위의 자유가군이다. 이 기저에서 $$1$$에 대응하는 성분이 $$\pi^\ast\alpha=\pi^\ast\alpha\smile 1$$이고 $$\Phi$$가 isomorphism이므로 $$\pi^\ast$$은 단사이다.
+이다. 따라서 $$1,a,\ldots,a^{n-1}$$의 fiber로의 제한은 $$H^\bullet(\CP^{n-1})$$의 기저를 이룬다. $$H^\bullet(\CP^{n-1})$$은 유한 rank의 자유가군이므로 [정리 1](#thm1)에 의하여 $$H^\bullet(\mathbb{P}(E))$$은 $$1,a,\ldots,a^{n-1}$$을 기저로 하는 $$H^\bullet(B)$$ 위의 자유가군이다. 이 기저에서 $$1$$에 대응하는 성분이 $$\pi^\ast\alpha=\pi^\ast\alpha\smile 1$$이고 $$\Phi$$가 isomorphism이므로 $$\pi^\ast$$은 단사이다.
 :::
 
-여기서 $$a$$를 tautological line bundle의 켤레의 first Chern class로 잡은 것은 fiber 위에서 [§벡터다발의 특성류, ⁋예시 11](/ko/math/algebraic_topology/characteristic_classes#ex11)의 생성원 $$x$$와 부호까지 맞추기 위함이며, $$\gamma_E$$ 자신의 first Chern class $$c_1(\gamma_E)=-a$$를 기저로 삼아도 결과는 같다.
+생성원으로 $$a=c_1(\gamma_E)$$ 대신 그 dual $$\gamma_E^\vee$$의 first Chern class를 택해도 거듭제곱들이 같은 자유가군의 기저를 이루므로 결과는 같다. [정리 3](#thm3)은 사영다발의 코호몰로지가 밑공간의 코호몰로지 위에서 tautological class $$a$$의 거듭제곱들로 완전히 펼쳐짐을 뜻한다.
 
 ::: 참고 4
-[정리 3](#thm3)은 사실 관계식까지 담아 정밀하게 적을 수 있다. $$H^\bullet(\mathbb{P}(E))$$은 $$H^\bullet(B)$$-대수로서 생성원 $$a$$가 유일한 관계식
+[정리 3](#thm3)은 사실 관계식까지 담아 정밀하게 적을 수 있다. Tautological line bundle의 dual $$\gamma_E^\vee$$의 first Chern class를 $$\xi=c_1(\gamma_E^\vee)$$라 하면, $$H^\bullet(\mathbb{P}(E))$$은 $$H^\bullet(B)$$-대수로서 생성원 $$\xi$$가 유일한 관계식
 
-$$a^n+\pi^\ast c_1(E)\smile a^{n-1}+\cdots+\pi^\ast c_n(E)=0$$
+$$\xi^n+\pi^\ast c_1(E)\smile \xi^{n-1}+\cdots+\pi^\ast c_n(E)=0$$
 
-을 만족하는 것으로 표현되며, 곧 $$H^\bullet(\mathbb{P}(E))=H^\bullet(B)[a]/\bigl(\sum_{i=0}^n\pi^\ast c_i(E)a^{n-i}\bigr)$$이다. 거꾸로 이 관계식의 계수로 [§벡터다발의 특성류, ⁋정의 6](/ko/math/algebraic_topology/characteristic_classes#def6)의 Chern class를 정의할 수도 있으며, 이것이 Grothendieck을 따른 Chern class의 또 다른 정의이다. ([MS] §14)
+을 만족하는 것으로 표현되며, 곧 $$H^\bullet(\mathbb{P}(E))=H^\bullet(B)[\xi]/\bigl(\sum_{i=0}^n\pi^\ast c_i(E)\xi^{n-i}\bigr)$$이다. 거꾸로 이 관계식의 계수로 [§벡터다발의 특성류, ⁋정의 6](/ko/math/algebraic_topology/characteristic_classes#def6)의 Chern class를 정의할 수도 있으며, 이것이 Grothendieck을 따른 Chern class의 또 다른 정의이다. ([MS] §14)
 :::
 
 ## Splitting principle
@@ -126,7 +126,7 @@ $$\rho^\ast E=\rho'^\ast\pi^\ast E=\rho'^\ast(\gamma_E\oplus\gamma_E^\perp)=\rho
 이 되어 $$L_1=\rho'^\ast\gamma_E$$로 두면 line bundle들의 합이다.
 :::
 
-이렇게 얻어진 $$F(E)$$는 $$E$$의 *flag bundle*로, 각 점 $$x\in B$$ 위의 fiber가 $$E_x$$의 완전한 flag들의 공간인 fiber bundle이다. 두 조건 가운데 실질적인 힘은 단사성에 있다. Pullback과 호환되는 (곧 naturality를 갖는) 특성류의 등식을 증명하려 할 때, [정리 5](#thm5)에 의하여 그 등식을 $$F(E)$$ 위로 pullback한 뒤 증명해도 충분한데, 그 위에서는 $$E$$가 line bundle들의 합으로 쪼개져 모든 Chern class가 first Chern class들의 다항식으로 환원되기 때문이다. 등식이 $$F(E)$$ 위에서 성립하면 $$\rho^\ast$$의 단사성에 의해 $$B$$ 위에서도 성립한다. [§벡터다발의 특성류, ⁋정리 8](/ko/math/algebraic_topology/characteristic_classes#thm8)의 Whitney 합 공식과 [§벡터다발의 특성류, ⁋명제 10](/ko/math/algebraic_topology/characteristic_classes#prop10)의 켤레 공식이 바로 이 방식으로 증명된다.
+이렇게 얻어진 $$F(E)$$는 $$E$$의 *flag bundle*로, 각 점 $$x\in B$$ 위의 fiber가 $$E_x$$의 완전한 flag들의 공간인 fiber bundle이다. 두 조건 가운데 실질적인 힘은 단사성에 있다. Pullback과 호환되는 (곧 naturality를 갖는) 특성류의 등식을 증명하려 할 때, [정리 5](#thm5)에 의하여 그 등식을 $$F(E)$$ 위로 pullback한 뒤 증명해도 충분한데, 그 위에서는 $$E$$가 line bundle들의 합으로 쪼개져 모든 Chern class가 first Chern class들의 다항식으로 환원되기 때문이다. 등식이 $$F(E)$$ 위에서 성립하면 $$\rho^\ast$$의 단사성에 의해 $$B$$ 위에서도 성립한다. [§벡터다발의 특성류, ⁋정리 9](/ko/math/algebraic_topology/characteristic_classes#thm9)과 [§벡터다발의 특성류, ⁋명제 10](/ko/math/algebraic_topology/characteristic_classes#prop10)의 켤레 공식이 바로 이 방식으로 증명된다.
 
 ---
 
