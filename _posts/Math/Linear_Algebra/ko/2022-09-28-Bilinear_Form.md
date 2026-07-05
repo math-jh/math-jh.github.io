@@ -60,10 +60,10 @@ $$V\rightarrow V^\ast;\qquad v\mapsto \langle -,v\rangle\tag{1}$$
 
 을 정의한다는 것을 안다. 
 
-편의를 위해 앞으로는 $$\langle -,-\rangle$$이 처음부터 symmetric non-degenerate bilinear form이었던 것으로 가정하자. 그럼 $$\langle -,-\rangle$$는 식 (1)에 의해 정의된 isomorphism을 가지며, 이는 다음과 같이 쓸 수 있다.
+식 (1)의 isomorphism은 다음과 같이 다시 쓸 수 있다.
 
 ::: 따름정리 3
-Symmetric non-degenerate bilinear form $$\langle -,-\rangle$$이 주어진 유한차원 $$\mathbb{K}$$-벡터공간 $$V$$를 생각하자. 임의의 $$f\in V^\ast$$가 주어질 때마다, 적당한 $$w\in V$$가 유일하게 존재하여 
+Non-degenerate bilinear form $$\langle -,-\rangle$$이 주어진 유한차원 $$\mathbb{K}$$-벡터공간 $$V$$를 생각하자. 임의의 $$f\in V^\ast$$가 주어질 때마다, 적당한 $$w\in V$$가 유일하게 존재하여 
 
 $$f(v)=\langle v,w\rangle\qquad\text{for all $v\in V$}$$
 
@@ -73,18 +73,16 @@ $$f(v)=\langle v,w\rangle\qquad\text{for all $v\in V$}$$
 그럼 특히 이전 글에서 정의한 orthogonal complement의 개념을 $$V$$로 가져올 수 있다. 즉, 다음과 같이 정의하자.
 
 ::: 정의 4
-Symmetric non-degenerate bilinear form $$\langle -,-\rangle$$이 주어진 유한차원 $$\mathbb{K}$$-벡터공간 $$V$$를 생각하자. 임의의 $$v\in V$$에 대하여, 다음의 식 $$\langle w,v\rangle=0$$을 만족하는 모든 $$w\in V$$들의 모임을 $$v$$의 *orthogonal complement<sub>직교여공간</sub>*이라 하고, $$v^\perp$$로 적는다. 더 일반적으로, 임의의 집합 $$S$$에 대하여, 다음 집합
+Non-degenerate bilinear form $$\langle -,-\rangle$$이 주어진 유한차원 $$\mathbb{K}$$-벡터공간 $$V$$를 생각하자. 임의의 $$v\in V$$에 대하여, 다음의 식 $$\langle w,v\rangle=0$$을 만족하는 모든 $$w\in V$$들의 모임을 $$v$$의 *orthogonal complement<sub>직교여공간</sub>*이라 하고, $$v^\perp$$로 적는다. 더 일반적으로, 임의의 집합 $$S$$에 대하여, 다음 집합
 
 $$S^\perp=\bigcap_{v\in S}v^\perp$$
 
 을 $$S$$의 orthogonal complement로 정의한다.
 :::
 
-물론, 만일 $$\langle -,-\rangle$$이 symmetric하지 않았더라도 동일한 정의를 할 수 있으며, 실제로 $$v$$를 $$\langle -,v\rangle$$로 보내는지 혹은 $$\langle v,-\rangle$$으로 보내는지를 선택한 후 이 선택을 꾸준히 유지한다면 동일한 결과를 얻게 된다. 어쨌든 혹시 모를 혼란을 피하기 위해 우리는 $$\langle -,-\rangle$$이 symmetric이라는 조건을 유지한다.
-
 벡터 $$w\in V$$는 [따름정리 3](#cor3)에 의해 $$f\in V^\ast$$를 유일하게 지정하는데, 위의 정의는 만일 이렇게 얻어진 $$f$$가 [§쌍대공간, ⁋정의 7](/ko/math/linear_algebra/dual_space#def7)의 의미에서 $$v$$의 orthogonal complement라면, $$w$$를 $$v$$에 직교하는 것으로 생각하고, 이러한 $$w$$들을 모아둔 것을 orthogonal complement로 생각하겠다는 의미이다. 이러한 과정을 통해 [§쌍대공간](/ko/math/linear_algebra/dual_space)의 결과들을 모두 $$V$$로 가져올 수 있다. 남은 글에서 우리는 이 과정을 자세히 살펴본다.
 
-직교여공간을 다루기 전에, symmetric이라는 가정이 실제로 어디까지 필요한지를 짚어 두자. 아래의 정의와 명제에서 쓰이는 것은 $$\langle w,v\rangle=0$$과 $$\langle v,w\rangle=0$$이 서로 동치라는 점, 곧 $$W^\perp$$이 어느 변에서 재든 같다는 것뿐이다. 이 성질에 따로 이름을 붙인다.
+일반적인 bilinear form에서는 $$\langle w,v\rangle=0$$으로 정의한 $$v^\perp$$과 $$\langle v,w\rangle=0$$으로 정의한 것이 서로 다를 수 있어, $$W^\perp$$이 왼쪽에서 정의되었는지, 오른쪽에서 정의되었는지에 따라 그 정의가 달라질 수 있다. 이와 같은 현상을 피하기 위해서는 다음과 같은 성질을 생각하는 것이 현명하다. 
 
 ::: 정의 5
 Bilinear form $$\langle-,-\rangle$$이 임의의 $$v,w\in V$$에 대하여 $$\langle v,w\rangle=0$$과 $$\langle w,v\rangle=0$$이 서로 동치가 되도록 할 때, $$\langle-,-\rangle$$이 *reflexive<sub>반사적</sub>*라 한다.
