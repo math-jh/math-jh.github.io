@@ -122,9 +122,9 @@ $$\mathbb{P}^2\rightarrow \mathbb{P}^1;\qquad [\x_0,\x_1,\x_2]\mapsto [\x_0^2+\x
 ::: 정의 4
 Linear system $$L \subseteq \lvert \mathcal{L} \rvert$$의 *base locus* $$\operatorname{Bs}(L)$$는 $$L$$의 모든 원소가 공유하는 closed subset이다. 구체적으로, $$L = \mathbb{P}(V)$$에서 $$V \subseteq \Gamma(X, \mathcal{L})$$일 때,
 
-$$\operatorname{Bs}(L) = \bigcap_{s \in V \setminus \{0\}} \operatorname{Supp}(\operatorname{div}(s))$$
+$$\operatorname{Bs}(L) = \bigcap_{s \in V \setminus \{0\}} \operatorname{Supp}(\divisor(s))$$
 
-여기서 $$\operatorname{div}(s)$$는 section $$s$$의 zero divisor이다. 
+여기서 $$\divisor(s)$$는 section $$s$$의 zero divisor이다. 
 :::
 
 특히 $$\mathbb{P}^n$$의 hypersurface 계산에서는 $$V \subseteq \mathbb{K}[\x_0, \ldots, \x_n]_d$$에 대해 $$\operatorname{Bs}(L) = \bigcap_{[F] \in L} Z(F)$$와 동일하다. 그럼 우리가 하고 싶었던 정의는 다음의 정의이다. 

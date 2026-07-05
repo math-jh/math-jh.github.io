@@ -121,9 +121,9 @@ To describe this rigorously, we define the *support* of a Weil divisor $$D = \su
 ::: Definition 4
 The *base locus* $$\operatorname{Bs}(L)$$ of a linear system $$L \subseteq \lvert \mathcal{L} \rvert$$ is the closed subset shared by all elements of $$L$$. Specifically, when $$L = \mathbb{P}(V)$$ with $$V \subseteq \Gamma(X, \mathcal{L})$$,
 
-$$\operatorname{Bs}(L) = \bigcap_{s \in V \setminus \{0\}} \operatorname{Supp}(\operatorname{div}(s))$$
+$$\operatorname{Bs}(L) = \bigcap_{s \in V \setminus \{0\}} \operatorname{Supp}(\divisor(s))$$
 
-where $$\operatorname{div}(s)$$ is the zero divisor of the section $$s$$.
+where $$\divisor(s)$$ is the zero divisor of the section $$s$$.
 :::
 
 Especially in calculations of hypersurfaces in $$\mathbb{P}^n$$, for $$V \subseteq \mathbb{K}[\x_0, \ldots, \x_n]_d$$ this is the same as $$\operatorname{Bs}(L) = \bigcap_{[F] \in L} Z(F)$$. Then the definition we wanted is the following.
