@@ -13,8 +13,6 @@ date: 2022-09-28
 
 weight: 116
 
-published: false
-drift_needed: true
 
 ---
 
@@ -88,22 +86,45 @@ $$S^\perp=\bigcap_{v\in S}v^\perp$$
 Bilinear form $$\langle-,-\rangle$$이 임의의 $$v,w\in V$$에 대하여 $$\langle v,w\rangle=0$$과 $$\langle w,v\rangle=0$$이 서로 동치가 되도록 할 때, $$\langle-,-\rangle$$이 *reflexive<sub>반사적</sub>*라 한다.
 :::
 
-Symmetric form은 $$\langle v,w\rangle=\langle w,v\rangle$$이라, alternating form은 $$\langle v,w\rangle=-\langle w,v\rangle$$이라 모두 reflexive이며, 놀랍게도 그 역도 성립하여 reflexive form은 이 둘뿐이다.
+Symmetric form이 reflexive한 것은 자명하지만, 그 역은 성립하지 않는다. 가령 alternating form 역시
+
+$$\langle v,w\rangle=-\langle w,v\rangle$$
+
+이므로 reflexive이다. 놀랍게도 reflexive form은 정확히 이 둘, 곧 symmetric이거나 alternating인 form뿐이다.
 
 ::: 명제 6
 유한차원 $$\mathbb{K}$$-벡터공간 $$V$$ 위의 bilinear form $$\langle-,-\rangle$$이 reflexive인 것은 그것이 symmetric이거나 alternating인 것과 동치이다.
 :::
-::: 증명
-Symmetric이면 $$\langle v,w\rangle=\langle w,v\rangle$$이고 alternating이면 $$\langle v,w\rangle=-\langle w,v\rangle$$이므로, 어느 쪽이든 $$\langle v,w\rangle=0$$과 $$\langle w,v\rangle=0$$이 동치라 reflexive이다.
 
-거꾸로 $$\langle-,-\rangle$$이 reflexive라 하자. 임의의 $$u,v,w$$에 대하여 $$\langle u,\langle u,w\rangle v-\langle u,v\rangle w\rangle=\langle u,w\rangle\langle u,v\rangle-\langle u,v\rangle\langle u,w\rangle=0$$이므로, reflexivity로부터 $$\langle\langle u,w\rangle v-\langle u,v\rangle w,u\rangle=0$$, 곧
+::: 증명
+한쪽 방향은 이미 살펴보았으므로, $$\langle-,-\rangle$$이 reflexive라 가정하고 반대방향만 보이면 충분하다. 임의의 $$u,v,w$$에 대하여 
+
+$$\langle u,\langle u,w\rangle v-\langle u,v\rangle w\rangle=\langle u,w\rangle\langle u,v\rangle-\langle u,v\rangle\langle u,w\rangle=0$$
+
+이므로, reflexivity로부터 $$\langle\langle u,w\rangle v-\langle u,v\rangle w,u\rangle=0$$이고, 이를 같은 방식으로 전개하면
 
 $$\langle u,w\rangle\langle v,u\rangle=\langle u,v\rangle\langle w,u\rangle\tag{$\ast$}$$
 
-이 모든 $$u,v,w$$에 대해 성립한다. 만일 모든 $$u$$에 대해 $$\langle u,u\rangle=0$$이면 $$0=\langle u+v,u+v\rangle=\langle u,v\rangle+\langle v,u\rangle$$에서 $$\langle v,u\rangle=-\langle u,v\rangle$$이라 $$\langle-,-\rangle$$은 alternating이다. 그렇지 않으면 $$\langle u_0,u_0\rangle\neq 0$$인 $$u_0$$이 있다. $$(\ast)$$에 $$w=u=u_0$$을 넣으면 $$\langle u_0,u_0\rangle\bigl(\langle v,u_0\rangle-\langle u_0,v\rangle\bigr)=0$$이라 모든 $$v$$에 대해 $$\langle v,u_0\rangle=\langle u_0,v\rangle$$이고, 이를 이용해 $$(\ast)$$에 $$v=u_0$$을 넣으면 $$\langle u,u_0\rangle\bigl(\langle u,w\rangle-\langle w,u\rangle\bigr)=0$$을 얻는다. 이제 임의의 $$x,y$$에 대하여, $$\langle x,u_0\rangle\neq 0$$이면 곧바로 $$\langle x,y\rangle=\langle y,x\rangle$$이고, $$\langle x,u_0\rangle=0$$이면 $$x+u_0$$이 $$\langle x+u_0,u_0\rangle=\langle u_0,u_0\rangle\neq 0$$을 만족하므로 모든 $$w$$에 대해 $$\langle x+u_0,w\rangle=\langle w,x+u_0\rangle$$이 성립하고, 여기서 $$\langle u_0,w\rangle=\langle w,u_0\rangle$$을 빼면 $$\langle x,y\rangle=\langle y,x\rangle$$이다. 따라서 $$\langle-,-\rangle$$은 symmetric이다.
+이 모든 $$u,v,w$$에 대해 성립한다. 
+
+이제 만일 모든 $$u$$에 대해 $$\langle u,u\rangle=0$$이면 
+
+$$0=\langle u+v,u+v\rangle=\langle u,v\rangle+\langle v,u\rangle$$
+
+이므로 $$\langle-,-\rangle$$은 alternating이다. 
+
+그렇지 않으면 $$\langle u_0,u_0\rangle\neq 0$$인 $$u_0$$이 존재하며, $$(\ast)$$에 $$w=u=u_0$$을 넣으면 
+
+$$\langle u_0,u_0\rangle\bigl(\langle v,u_0\rangle-\langle u_0,v\rangle\bigr)=0$$
+
+이라 모든 $$v$$에 대해 $$\langle v,u_0\rangle=\langle u_0,v\rangle$$이 성립함을 안다. 따라서 다시 $$(\ast)$$에 $$v=u_0$$을 넣으면 
+
+$$\langle u,u_0\rangle\bigl(\langle u,w\rangle-\langle w,u\rangle\bigr)=0$$
+
+을 얻는다. 위의 $$u,w$$는 임의의 벡터가 될 수 있으며, 두 가지 경우가 존재한다. 우선 만일 $$\langle u,u_0\rangle\neq 0$$이라면 곧바로 $$\langle u,w\rangle=\langle w,u\rangle$$이다. 만일 $$\langle u,u_0\rangle=0$$인 경우, $$u'=u+u_0$$로 두면 $$\langle u', u_0\rangle=\langle u_0,u_0\rangle\neq 0$$이며 따라서 모든 $$w$$에 대하여 $$\langle u', w\rangle=\langle w,u'\rangle$$이 성립한다. 그런데 우리는 이미 모든 벡터에 대하여 $$\langle u_0,w\rangle=\langle w,u_0\rangle$$임을 위에서 보였고, 이로부터 결론을 얻는다.
 :::
 
-따라서 직교여공간이 좌우에 무관한 form은 정확히 symmetric form과 alternating form이다. 앞으로 부분공간에 대한 결과들은 이 두 경우를 아우르는 non-degenerate reflexive form에서 전개하며, 이는 특히 non-degenerate alternating form에도 그대로 적용된다. 그 대표적 예가 symplectic form이며, 거기서 $$W=W^\perp$$인 Lagrangian 부분공간이 핵심적으로 등장한다.
+따라서 orthogonal complement가 좌우에 무관한 form은 정확히 symmetric form과 alternating form이다. 앞으로 부분공간에 대한 결과들은 이 두 경우를 아우르는 non-degenerate reflexive form에서 전개하며, 이는 특히 non-degenerate alternating form에도 그대로 적용된다. 몇 가지 정의를 추가하자. 
 
 ::: 정의 7
 Non-degenerate reflexive bilinear form이 주어진 유한차원 $$\mathbb{K}$$-벡터공간 $$V$$의 부분공간 $$W\leq V$$에 대하여, 다음을 정의한다. 
@@ -112,9 +133,10 @@ Non-degenerate reflexive bilinear form이 주어진 유한차원 $$\mathbb{K}$$-
 2. Radical이 $$\{0\}$$이라면 $$W$$가 *non-degenerate<sub>비퇴화</sub>*라 부른다.
 3. $$W\subseteq W^\perp$$일 경우, $$\langle-,-\rangle$$을 $$W$$로 제한한 것이 항등적으로 $$0$$이며, 이 때 $$W$$가 *isotropic<sub>등방적</sub>*이라 말한다.
 4. $$W^\perp\subseteq W$$일 때 $$W$$가 *coisotropic<sub>여등방적</sub>*이라 한다.
+5. $$W=W^\perp$$인 공간을 *Lagrangian<sub>라그랑지안</sub>*이라 한다. 
 :::
 
-$$W$$의 radical은 $$W$$ 안에서 $$W$$ 전체와 직교하는 벡터들의 모임이므로, $$W$$가 non-degenerate라는 것은 정확히 $$\langle-,-\rangle$$을 $$W$$로 제한한 form이 다시 non-degenerate가 되는 것과 같다. Isotropic과 coisotropic은 아래 [명제 8](#prop8)의 $$(W^\perp)^\perp=W$$를 통해 $$W\mapsto W^\perp$$로 서로 옮겨가는 쌍대적인 개념이며, 둘을 동시에 만족하는 $$W=W^\perp$$인 부분공간을 *Lagrangian*이라 부르며, 이 경우 [명제 8](#prop8)의 첫 식이 $$2\dim W=\dim V$$을 준다. 가령 positive-definite인 경우처럼 $$0$$이 아닌 모든 $$v$$가 $$\langle v,v\rangle\neq 0$$을 만족하면 모든 부분공간이 non-degenerate가 되어 isotropic·coisotropic은 자명한 경우로만 나타나는 반면, alternating form에서는 $$\langle v,v\rangle=0$$이 언제나 성립해 모든 직선이 isotropic이 된다.
+$$W$$의 radical은 $$W$$ 안에서 $$W$$ 전체와 직교하는 벡터들의 모임이므로, $$W$$가 non-degenerate라는 것은 정확히 $$\langle-,-\rangle$$을 $$W$$로 제한한 form이 다시 non-degenerate가 되는 것과 같다.
 
 ::: 명제 8
 Non-degenerate reflexive bilinear form이 주어진 유한차원 $$\mathbb{K}$$-벡터공간 $$V$$의 임의의 부분공간 $$W\leq V$$에 대하여, 다음이 성립한다.
@@ -124,31 +146,41 @@ Non-degenerate reflexive bilinear form이 주어진 유한차원 $$\mathbb{K}$$-
 3. $$W$$가 non-degenerate인 것, $$W^\perp$$가 non-degenerate인 것, 그리고 $$V=W\oplus W^\perp$$인 것은 서로 동치이다.
 :::
 ::: 증명
-포함사상 $$W\hookrightarrow V$$의 dual인 restriction $$V^\ast\rightarrow W^\ast$$은 전사이다. ([§쌍대공간, ⁋명제 6](/ko/math/linear_algebra/dual_space#prop6)) 한편 $$\langle-,-\rangle$$이 non-degenerate이므로 $$v\mapsto\langle v,-\rangle$$은 단사이고 차원이 같아 isomorphism $$V\rightarrow V^\ast$$이며, 이를 위 restriction과 합성한 $$V\rightarrow W^\ast$$, $$v\mapsto\langle v,-\rangle\vert_W$$ 또한 전사이고 그 kernel은 정의에 의하여 $$W^\perp$$이다. 따라서 [§동형사상, ⁋정리 7](/ko/math/linear_algebra/isomorphic_vector_spaces#thm7)에 의하여 $$\dim W^\perp=\dim V-\dim W^\ast=\dim V-\dim W$$이니 1번이 성립한다. 2번은 reflexivity에 의해 $$W\subseteq(W^\perp)^\perp$$이고, 1번을 두 번 적용하면 $$\dim(W^\perp)^\perp=\dim V-\dim W^\perp=\dim W$$이므로 두 공간이 일치함에서 따른다.
+Inclusion map $$W\hookrightarrow V$$의 dual인 restriction $$V^\ast\rightarrow W^\ast$$은 전사이다. ([§쌍대공간, ⁋명제 6](/ko/math/linear_algebra/dual_space#prop6)) 한편 $$\langle-,-\rangle$$이 non-degenerate이므로, $$v\mapsto\langle v,-\rangle$$은 단사이고 차원이 같아 isomorphism $$V\rightarrow V^\ast$$을 정의한다. 따라서 이를 위 restriction과 합성한 
 
-3번을 보기 위해 [§벡터공간의 차원, ⁋예시 8](/ko/math/linear_algebra/dimension#ex8)과 1번을 결합하면
+$$V\rightarrow W^\ast;\qquad v\mapsto\langle v,-\rangle\vert_W$$
+
+또한 전사이고 그 kernel은 정의에 의하여 $$W^\perp$$이다. 따라서 [§동형사상, ⁋정리 7](/ko/math/linear_algebra/isomorphic_vector_spaces#thm7)에 의하여 $$\dim W^\perp=\dim V-\dim W^\ast=\dim V-\dim W$$이므로 첫째 등호가 성립한다. 둘째 주장은 reflexivity에 의해 $$W\subseteq(W^\perp)^\perp$$이고, 따라서 첫째 등식을 두 번 적용하면 
+
+$$\dim(W^\perp)^\perp=\dim V-\dim W^\perp=\dim W$$
+
+이므로 두 공간이 일치하게 되므로 자명하다.
+
+마지막으로 [§벡터공간의 차원, ⁋예시 8](/ko/math/linear_algebra/dimension#ex8)과 1번을 결합하면
 
 $$\dim(W+W^\perp)=\dim W+\dim W^\perp-\dim(W\cap W^\perp)=\dim V-\dim(W\cap W^\perp)$$
 
-이다. 따라서 $$W$$의 radical $$W\cap W^\perp$$이 $$\{0\}$$인 것은 $$W+W^\perp=V$$인 것과 동치이고, 이 때 차원 계산에 의해 합은 자동으로 직합이 되어 $$V=W\oplus W^\perp$$이다. 한편 2번에 의해 $$W\cap W^\perp=W^\perp\cap(W^\perp)^\perp$$은 $$W^\perp$$의 radical이기도 하므로, $$W$$가 non-degenerate인 것과 $$W^\perp$$가 non-degenerate인 것이 동치이다.
+이다. 따라서 $$W$$의 radical $$W\cap W^\perp$$이 $$\{0\}$$인 것은 $$W+W^\perp=V$$인 것과 동치이고, 이 때 차원 계산에 의해 합은 자동으로 직합이 되어 $$V=W\oplus W^\perp$$이다. 한편 둘째 주장에 의해 $$W\cap W^\perp=W^\perp\cap(W^\perp)^\perp$$은 $$W^\perp$$의 radical이기도 하므로, $$W$$가 non-degenerate인 것과 $$W^\perp$$가 non-degenerate인 것이 동치이다.
 :::
 
-이제 non-degenerate 부분공간에 대해서는 직교여공간이 몫공간을 대신함을 본다.
+위의 조건을 만족하는 non-degenerate 부분공간에 대해서는 이렇게 정의된 orthogonal complement가 quotient space와 canonical하게 isomorphic하다. 
 
 ::: 명제 9
-Non-degenerate reflexive bilinear form이 주어진 유한차원 $$\mathbb{K}$$-벡터공간 $$V$$의 non-degenerate 부분공간 $$W\leq V$$에 대하여, natural projection $$p:V\rightarrow V/W$$ ([§몫공간](/ko/math/linear_algebra/quotient_space))을 $$W^\perp$$로 제한한
+Non-degenerate reflexive bilinear form이 주어진 유한차원 $$\mathbb{K}$$-벡터공간 $$V$$의 non-degenerate 부분공간 $$W\leq V$$에 대하여, natural projection $$p:V\rightarrow V/W$$ ([§몫공간, ⁋정의 3](/ko/math/linear_algebra/quotient_space#def3))을 $$W^\perp$$로 제한한
 
 $$p\vert_{W^\perp}:W^\perp\rightarrow V/W$$
 
 은 isomorphism이다.
 :::
 ::: 증명
-$$W$$가 non-degenerate이므로 [명제 8](#prop8)에 의하여 $$V=W\oplus W^\perp$$이다. Natural projection은 $$\ker p=W$$를 만족하므로 ([§몫공간](/ko/math/linear_algebra/quotient_space)) $$p\vert_{W^\perp}$$의 kernel은 $$W^\perp\cap W=\{0\}$$이라 단사이고, $$V=W+W^\perp$$이므로 임의의 $$v=w+w'$$ ($$w\in W$$, $$w'\in W^\perp$$)에 대하여 $$p(w')=w'+W=v+W$$이라 전사이다. 따라서 $$p\vert_{W^\perp}$$은 isomorphism이다.
+$$W$$가 non-degenerate이므로 [명제 8](#prop8)에 의하여 $$V=W\oplus W^\perp$$이다. Natural projection은 $$\ker p=W$$를 만족하므로 $$p\vert_{W^\perp}$$의 kernel은 $$W^\perp\cap W=\{0\}$$이라 단사이고, $$V=W+W^\perp$$이므로 임의의 $$v=w+w'$$ ($$w\in W$$, $$w'\in W^\perp$$)에 대하여 $$p(w')=w'+W=v+W$$이라 전사이다. 따라서 $$p\vert_{W^\perp}$$은 isomorphism이다.
 :::
 
-곧 직합 $$V=W\oplus W^\perp$$에서 $$W$$를 몫으로 접어 없애면 $$W^\perp$$이 정확히 그 몫 $$V/W$$을 실현한다. 몫공간 $$V/W$$은 $$\langle-,-\rangle$$ 없이도 정의되는 표준적인 대상인 반면, 그 실현 $$W^\perp$$은 form에 의존하며, [명제 8](#prop8)의 non-degeneracy 없이는 이 실현이 무너진다. 실제로 $$W$$가 isotropic이면 $$W\cap W^\perp\neq\{0\}$$이라 $$p\vert_{W^\perp}$$이 단사가 되지 못한다.
+곧 직합 $$V=W\oplus W^\perp$$에서 $$W$$를 접어 없애면 $$W^\perp$$이 정확히 그 몫 $$V/W$$을 실현하게 된다. 일반적으로 몫공간 $$V/W$$은 $$\langle-,-\rangle$$ 없이도 정의되는 표준적인 대상인 반면, 이를 $$V$$ 안에서 실현한 대상인 $$W^\perp$$은 form에 의존하게 되며 [명제 8](#prop8)의 non-degeneracy 없이는 이러한 표현이 불가능하다. 가령 $$W$$가 isotropic이면 $$W\cap W^\perp\neq\{0\}$$이라 $$p\vert_{W^\perp}$$이 단사가 되지 못한다.
 
-우선 두 유한차원 $$\mathbb{K}$$-벡터공간 $$V,W$$ 위에 symmetric non-degnerate bilinear form $$\langle -,-\rangle_V$$와 $$\langle -,-\rangle_W$$가 주어졌다 하자. 또, 논의의 편의를 위하여 이들 bilinear form에 의해 결정되는 isomorphism들을 각각
+## 네 개의 기본공간들
+
+이제 두 유한차원 $$\mathbb{K}$$-벡터공간 $$V,W$$ 위에 non-degenerate bilinear form $$\langle -,-\rangle_V$$와 $$\langle -,-\rangle_W$$가 주어졌다 하자. 원칙적으로 이 절의 내용들은 이들 bilinear form들이 reflexive여도 전개할 수는 있지만, 이를 뒤에 나올 식 (2)와 같은 형태로 조금 더 깔끔하게 표현하기 위해서는 이들이 symmetric인 것이 편하므로 그렇게 가정하기로 하자. 또, 논의의 편의를 위하여 이들 bilinear form에 의해 결정되는 isomorphism들을 각각
 
 $$\varphi_V:V^\ast\rightarrow V,\qquad \varphi_W:W^\ast\rightarrow W$$
 
@@ -189,7 +221,7 @@ $$\langle Lv,w\rangle=(\varphi^{-1}(w))(Lv)=(\varphi^{-1}_W(w)\circ L)(v)=(L^\as
 [§쌍대공간, §§직교여공간](/ko/math/linear_algebra/dual_space#직교여공간)의 결과들은 모두 canonical pairing에 대한 식 $$(Lv,f)=(v,L^\ast f)$$로부터 얻어졌다. 따라서, 이를 위에서 얻은 non-degenerate bilinear form $$\langle -,-\rangle$$들에 대한 식 (2)로 대체하면 다음 결과들을 얻는다.
 
 ::: 명제 10
-Symmetric non-degnerate bilinear form들이 주어진 두 $$\mathbb{K}$$-벡터공간 $$V,W$$, linear map $$L:V\rightarrow W$$와 그 adjoint $$L^\ast:W\rightarrow V$$가 주어졌다 하자. 그럼
+Symmetric non-degenerate bilinear form들이 주어진 두 $$\mathbb{K}$$-벡터공간 $$V,W$$, linear map $$L:V\rightarrow W$$와 그 adjoint $$L^\ast:W\rightarrow V$$가 주어졌다 하자. 그럼
 
 1. 임의의 부분공간 $$U\subseteq V$$에 대하여, $$L(U)^\perp=(L^\ast)^{-1}(U^\perp)$$가 성립한다.
 2. 임의의 부분공간 $$U\subseteq W$$에 대하여, $$L^\ast(U)^\perp=L^{-1}(U^\perp)$$가 성립한다.
@@ -239,7 +271,7 @@ $$2\langle u,v\rangle=\langle u+v,u+v\rangle-\langle u,u\rangle-\langle v,v\rang
 
 이고, 두 조건 $$\langle u,v\rangle\neq 0$$과 $$\ch \mathbb{K}\neq 2$$에서 좌변은 0이 아니다. 따라서 우변의 세 항 $$\langle u+v,u+v\rangle, \langle u,u\rangle,\langle v,v\rangle$$ 가운데 적어도 하나는 0이 아니다. 따라서,
 
-> Non-degnerate symmetric bilinear form이 주어진 임의의 $$\mathbb{K}$$-벡터공간에는 $$\langle w,w\rangle\neq 0$$을 만족하는 $$w$$가 반드시 존재한다.
+> Non-degenerate symmetric bilinear form이 주어진 임의의 $$\mathbb{K}$$-벡터공간에는 $$\langle w,w\rangle\neq 0$$을 만족하는 $$w$$가 반드시 존재한다.
 
 원래의 명제는 $$V$$의 차원에 대한 귀납법으로 증명한다. $$\dim V=0$$인 경우는 증명할 것이 없다. 이제 $$\dim V=k$$인 경우 증명이 완료되었다 가정하자. 그럼 $$\dim V=k+1$$를 만족하는 임의의 벡터공간 $$V$$에 대하여, $$\langle w,w\rangle\neq 0$$을 만족하는 벡터 $$w$$가 존재한다. 
 
