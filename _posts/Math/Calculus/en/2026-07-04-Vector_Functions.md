@@ -10,8 +10,9 @@ sidebar:
 
 date: 2026-07-04
 weight: 13
-translated_at: 2026-07-05T15:00:02+00:00
+translated_at: 2026-07-05T16:30:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-05T16:30:02+00:00
 ---
 So far, the functions we have dealt with were only $$f:\mathbb{R}\to\mathbb{R}$$ sending real numbers to real numbers, and to be honest, apart from the fact that the concept of limits was rigorously defined using $$\epsilon$$-$$\delta$$, there was little difference from what we learned in high school. We now generalize this to actually explore new material. The direction of generalization is to increase dimension, which includes raising the dimension of the domain and raising the dimension of the codomain. In this post, we first deal with the latter, namely a function $$\mathbf{r}:\mathbb{R}\to\mathbb{R}^n$$ that sends one real number to several real numbers. This is a vector-valued function that draws a curve in space with a single parameter, and can be viewed as the locus of a point moving in time, so that differentiation acquires the physical meaning of velocity and acceleration, and integration measures the length of a curve.
 
