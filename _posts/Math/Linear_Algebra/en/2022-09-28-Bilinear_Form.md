@@ -12,10 +12,9 @@ sidebar:
 date: 2022-09-28
 
 weight: 116
-
-drift_needed: true
-translated_at: 2026-07-05T14:33:13+00:00
+translated_at: 2026-07-05T17:00:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-05T17:00:02+00:00
 ---
 In the previous post, we defined the dual space $$V^\ast$$ of a vector space $$V$$, and observed that if $$V$$ is finite-dimensional, then $$V$$ is isomorphic to $$V^{\ast\ast}$$, the dual of $$V^\ast$$. The key fact used in this process was that a non-degenerate pairing $$\langle -,-\rangle:V\times W \rightarrow \mathbb{K}$$ defines injective linear maps from $$V$$ to $$W^\ast$$ and from $$W$$ to $$V^\ast$$. We applied this to the canonical pairing
 
