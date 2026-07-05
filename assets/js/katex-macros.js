@@ -99,7 +99,7 @@ window.KATEX_MACROS = {
     "\\Diff":"\\operatorname{Diff}",
     "\\dim":"\\operatorname{dim}",
     "\\Div":"\\operatorname{Div}",
-    "\\div":"\\operatorname{div}",
+    "\\divergence":"\\operatorname{div}",
     "\\divisor":"\\operatorname{div}",
     "\\dom":"\\operatorname{dom}",
     "\\dR":"\\mathrm{dR}",

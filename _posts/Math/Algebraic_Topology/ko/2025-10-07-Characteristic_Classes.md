@@ -249,31 +249,37 @@ Chern class는 다음을 만족한다.
 즉 Chern class는 Stiefel-Whitney class와 비슷한 종류의 공리적인 성질을 만족한다. ([§슈티펠-휘트니 특성류, ⁋정의 5](/ko/math/algebraic_topology/stiefel_whitney_classes#def5)) 우리는 Stiefel-Whitney class의 존재성을 보이기 위해 real infinite Grassmannian $$\Gr_k(\mathbb{R}^\infty)$$를 생각한 후, 여기서의 cohomology class를 원래의 공간으로 pullback해와서 이들이 Stiefel-Whitney class의 공리적 조건을 만족함을 보였었는데, Chern class에 대해서도 비슷한 종류의 construction이 가능하다. 
 
 ::: 예시 8
-[§슈티펠-휘트니 특성류, ⁋예시 3](/ko/math/algebraic_topology/stiefel_whitney_classes#ex3)의 real tautological line bundle의 complex analogue로, $$\CP^\infty=\Gr_1(\mathbb{C}^\infty)$$ 위의 tautological complex line bundle $$\gamma$$를 생각하자. 그 first Chern class $$c_1(\gamma)$$는 $$H^2(\CP^\infty;\mathbb{Z})\cong\mathbb{Z}$$의 generator이며,
+[§슈티펠-휘트니 특성류, ⁋예시 3](/ko/math/algebraic_topology/stiefel_whitney_classes#ex3)의 real tautological line bundle의 complex analogue로, $$\CP^\infty=\Gr_1(\mathbb{C}^\infty)$$ 위의 tautological complex line bundle $$\gamma$$를 생각하자. 그럼 $$\gamma$$의 sphere bundle은 $$\mathbb{C}^\infty$$의 단위구 $$S^\infty$$이며 이는 contractible이므로[^1] 모든 $$k>0$$에 대해 $$H^k(S^\infty)=0$$이다. 따라서, [정리 5](#thm5)에 의해 $$H^1(\CP^\infty)=0$$이고 
+
+$$\smile c_1(\gamma):H^{k-2}(\CP^\infty)\rightarrow H^k(\CP^\infty)$$
+
+이 $$k\geq 2$$에서 isomorphism이다. 이제 $$H^0(\CP^\infty)=\mathbb{Z}$$에서 출발하면 $$c_1(\gamma)$$가 $$H^2(\CP^\infty;\mathbb{Z})\cong\mathbb{Z}$$의 generator이며, 
 
 $$H^\bullet(\CP^\infty;\mathbb{Z})=\mathbb{Z}[c_1(\gamma)]$$
 
-는 $$c_1(\gamma)$$가 생성하는 polynomial ring이다. [§슈티펠-휘트니 특성류, §§그라스만 다양체](/ko/math/algebraic_topology/stiefel_whitney_classes#그라스만-다양체)에서 real bundle에 대해 본 것과 같이, 이 $$\gamma$$는 complex line bundle의 *universal family*이다. 곧 임의의 complex line bundle이 $$\gamma$$의 pullback으로 유일하게 얻어지므로, first Chern class는 일대일 대응
+임을 얻는다. 
+
+이는 [§슈티펠-휘트니 특성류, §§그라스만 다양체](/ko/math/algebraic_topology/stiefel_whitney_classes#그라스만-다양체)에서 real bundle에 대해 본 것과 같이, 이 $$\gamma$$는 complex line bundle의 *universal family*이다. 곧 임의의 complex line bundle이 $$\gamma$$의 pullback으로 유일하게 얻어지므로, first Chern class는 일대일 대응
 
 $$\{B\text{ 위의 complex line bundle}\}/\cong\ \xrightarrow{\ c_1\ }\ H^2(B;\mathbb{Z})$$
 
-를 주며, 이는 tensor product를 덧셈으로 보내는 group isomorphism이다. 곧 complex line bundle의 모든 정보가 $$c_1$$ 하나에 담긴다.
+를 주며, 이는 tensor product를 덧셈으로 보내는 group isomorphism이다. 곧 complex line bundle의 모든 정보가 $$c_1$$ 하나에 담겨있게 된다.
 :::
 
 더 일반적으로 real Grassmannian의 자리를 complex Grassmannian $$\Gr_n(\mathbb{C}^\infty)$$이 대신하고, 그 cohomology ring은
 
 $$H^\bullet(\Gr_n(\mathbb{C}^\infty);\mathbb{Z})=\mathbb{Z}[c_1,\ldots,c_n]$$
 
-으로 universal bundle의 Chern class들이 생성하는 polynomial ring이 된다 ([MS] §14). 이는 Stiefel-Whitney class에서 $$H^\bullet(\Gr_k(\mathbb{R}^\infty);\mathbb{Z}/2)=\mathbb{Z}/2[w_1,\ldots,w_k]$$이 했던 역할의 정수·complex 판본이며, complex vector bundle의 모든 특성류가 Chern class들의 다항식임을 뜻한다.
+으로 universal bundle의 Chern class들이 생성하는 polynomial ring이 되며, 우리는 이러한 종류의 계산을 조만간 다시 살펴보게 될 것이다. 
 
-Stiefel-Whitney class가 Whitney 합 공식을 따랐던 것처럼, 이 복소 판본에서도 Chern class가 같은 곱 공식을 만족하리라 기대된다. 이를 실제로 증명하는 핵심 스텝은 임의의 vector bundle을 line bundle들의 합으로 쪼개는 splitting principle인데, 이 원리와 그 바탕이 되는 Leray–Hirsch 정리는 위에서 본 사영공간의 코호몰로지와 지금까지 확보한 Euler class·Thom 동형만으로 세워진다. 곧 아래 공식은 현재까지의 지식만으로 증명되며, 다만 그 전개가 독립적인 주제이므로 별도의 글에서 다루고 여기서는 [§사영다발과 Leray–Hirsch 정리, ⁋정리 5](/ko/math/algebraic_topology/projective_bundles#thm5)를 인용한다.
+한편, Stiefel-Whitney class가 Whitney 합 공식을 따랐던 것처럼, 여기서도 Chern class가 같은 공식을 만족하는 것을 기대하는 것이 자연스러울 것이다. 이를 실제로 증명하는 핵심 스텝은  [§사영다발과 Leray–Hirsch 정리, ⁋정리 5](/ko/math/algebraic_topology/projective_bundles#thm5)인데, 이 정리의 증명은 지금까지의 논의로도 충분히 가능하지만 오직 스토리의 흐름을 위해 이를 다음 글로 따로 묶어둔다. 
 
 ::: 정리 9 (Whitney sum formula)
 두 complex vector bundle $$E,E'\rightarrow B$$에 대하여
 
 $$c(E\oplus E')=c(E)\smile c(E')$$
 
-가 성립한다. 곧 모든 $$k$$에 대하여 $$c_k(E\oplus E')=\sum_{i+j=k}c_i(E)\smile c_j(E')$$이다.
+가 성립한다. 즉, 모든 $$k$$에 대하여 $$c_k(E\oplus E')=\sum_{i+j=k}c_i(E)\smile c_j(E')$$이다.
 :::
 
 ::: 증명
@@ -283,25 +289,33 @@ $$c(E\oplus E')=c(E)\smile c(E')$$
 
 $$c(L_1\oplus\cdots\oplus L_n)=\prod_{i=1}^n\bigl(1+c_1(L_i)\bigr)$$
 
-임을 보이면 충분하다. 핵심은 두 line bundle $$L,L'$$에 대한 두 등식 $$c_1(L\oplus L')=c_1(L)+c_1(L')$$과 $$c_2(L\oplus L')=c_1(L)\smile c_1(L')$$이다.
+임을 보이면 충분하다. 핵심은 두 line bundle $$L,L'$$에 대한 두 등식 
 
-둘째 등식은 임의의 base 위에서 바로 얻어진다. [정의 6](#def6)에 의하여 rank $$2$$ bundle의 최고차 class는 $$c_2(L\oplus L')=e\bigl((L\oplus L')_{\mathbb{R}}\bigr)$$인데, [명제 4](#prop4)의 (2)에 의하여 이는 $$e(L_{\mathbb{R}})\smile e(L'_{\mathbb{R}})=c_1(L)\smile c_1(L')$$과 같다.
+$$c_1(L\oplus L')=c_1(L)+c_1(L'),\qquad c_2(L\oplus L')=c_1(L)\smile c_1(L')$$이다.
 
-첫째 등식을 위해 우선 임의의 rank $$n$$ complex vector bundle $$E$$와 trivial line bundle $$\varepsilon^1$$에 대하여 stability
+둘째 등식은 임의의 base 위에서 바로 얻어진다. [정의 6](#def6)에 의하여 rank $$2$$ bundle의 최고차항은 
+
+$$c_2(L\oplus L')=e\bigl((L\oplus L')_{\mathbb{R}}\bigr)$$
+
+인데, [명제 4](#prop4)의 둘째 결과에 의하여 이는 $$e(L_{\mathbb{R}})\smile e(L'_{\mathbb{R}})=c_1(L)\smile c_1(L')$$과 같기 때문이다.
+
+첫째 등식을 위해 우선 임의의 rank $$n$$ complex vector bundle $$E$$와 trivial line bundle $$\varepsilon^1$$에 대하여 다음 식
 
 $$c(E\oplus\varepsilon^1)=c(E)$$
 
-가 성립함을 보이자. $$E'=E\oplus\varepsilon^1$$이라 하면, trivial 성분에서 상수 $$1$$을 취하는 section $$s(x)=(0,1)$$은 어디서도 $$0$$이 아니므로 section $$s:B\rightarrow E'_0$$을 주며 $$\pi_0\circ s=\mathrm{id}$$이다. 직합 metric에 대하여 각 점에서 $$(0,1)$$의 orthogonal complement는 정확히 $$E$$의 fiber이므로 $$s^\ast(E'^\perp)\cong E$$이고, 따라서 $$0<i\leq n$$에 대하여 [정의 6](#def6)의 식 $$\pi_0^\ast c_i(E')=c_i(E'^\perp)$$에 $$s^\ast$$를 적용하면 [명제 7](#prop7)의 naturality로부터
+가 성립함을 보이자. $$E'=E\oplus\varepsilon^1$$이라 하면, trivial 성분에서 상수 $$1$$을 취하는 section $$s(x)=(0,1)$$은 어디서도 $$0$$이 아니므로 section $$s:B\rightarrow E'_0$$을 주며 $$\pi_0\circ s=\mathrm{id}$$이다. 이제 각 점에서 $$(0,1)$$의 orthogonal complement는 정확히 $$E$$의 fiber이므로 $$s^\ast(E'^\perp)\cong E$$이고, 따라서 $$0<i\leq n$$에 대하여 [정의 6](#def6)의 식 $$\pi_0^\ast c_i(E')=c_i(E'^\perp)$$에 $$s^\ast$$를 적용하면 [명제 7](#prop7)의 naturality로부터
 
 $$c_i(E')=s^\ast\pi_0^\ast c_i(E')=s^\ast c_i(E'^\perp)=c_i(s^\ast E'^\perp)=c_i(E)$$
 
 를 얻는다. 최고차 $$c_{n+1}(E')=e(E'_{\mathbb{R}})$$는 어디서도 $$0$$이 아닌 section이 존재하므로 [명제 4](#prop4)의 (3)에 의하여 $$0$$이며, 이는 $$c_{n+1}(E)=0$$과 일치한다.
 
-이제 universal example $$B=\CP^\infty\times\CP^\infty$$ 위에서 두 projection $$\pi_1,\pi_2$$로 tautological bundle을 pullback한 $$L_1=\pi_1^\ast\gamma$$, $$L_2=\pi_2^\ast\gamma$$를 보자. $$\CP^\infty$$는 cell이 짝수 차원에만 있어 $$H^1(\CP^\infty;\mathbb{Z})=0$$이므로, Künneth formula에 의하여 $$H^2(\CP^\infty\times\CP^\infty;\mathbb{Z})\cong H^2(\CP^\infty;\mathbb{Z})\oplus H^2(\CP^\infty;\mathbb{Z})$$이고, 점 $$q\in\CP^\infty$$를 고정한 두 inclusion $$j_1:z\mapsto(z,q)$$와 $$j_2:z\mapsto(q,z)$$로의 restriction이 이 두 성분을 읽어낸다. 곧 $$H^2(\CP^\infty\times\CP^\infty;\mathbb{Z})$$의 원소는 $$j_1^\ast$$와 $$j_2^\ast$$의 값으로 결정된다. 그런데 $$j_1^\ast L_1=\gamma$$이고 $$j_1^\ast L_2$$는 상수함수를 따른 pullback이라 trivial이므로, stability에 의하여
+이제 이 등식을 universal example 위에서 확인한다. [예시 8](#ex8)에서 보았듯 $$\gamma$$가 complex line bundle의 universal family이므로, 임의의 base $$B$$ 위의 두 line bundle $$L,L'$$은 분류사상 $$f_1,f_2:B\rightarrow\CP^\infty$$를 따른 pullback $$f_1^\ast\gamma$$, $$f_2^\ast\gamma$$이다. 이 둘을 $$(f_1,f_2):B\rightarrow\CP^\infty\times\CP^\infty$$로 묶으면, 두 projection $$\pi_1,\pi_2$$가 주는 $$L_1=\pi_1^\ast\gamma$$, $$L_2=\pi_2^\ast\gamma$$의 pullback이 각각 $$L,L'$$이 된다. 그럼 [명제 7](#prop7)의 naturality에 의해 $$c_1(L\oplus L')=c_1(L)+c_1(L')$$은 이 $$(L_1,L_2)$$에 대해서만 확인하면 충분하며, 이것이 $$\CP^\infty\times\CP^\infty$$을 universal example이라 부르는 까닭이다.
+
+이 space의 코호몰로지는 [예시 8](#ex8)의 계산에서 나온다. $$H^\bullet(\CP^\infty;\mathbb{Z})=\mathbb{Z}[c_1(\gamma)]$$이라 $$H^1(\CP^\infty;\mathbb{Z})=0$$이므로, Künneth formula에 의하여 $$H^2(\CP^\infty\times\CP^\infty;\mathbb{Z})\cong H^2(\CP^\infty;\mathbb{Z})\oplus H^2(\CP^\infty;\mathbb{Z})$$이고, 점 $$q\in\CP^\infty$$를 고정한 두 inclusion $$j_1:z\mapsto(z,q)$$와 $$j_2:z\mapsto(q,z)$$로의 restriction이 이 두 성분을 읽어낸다. 곧 $$H^2(\CP^\infty\times\CP^\infty;\mathbb{Z})$$의 원소는 $$j_1^\ast$$와 $$j_2^\ast$$의 값으로 결정된다. 그런데 $$j_1^\ast L_1=\gamma$$이고 $$j_1^\ast L_2$$는 상수함수를 따른 pullback이라 trivial이므로, stability에 의하여
 
 $$j_1^\ast c_1(L_1\oplus L_2)=c_1(\gamma\oplus\varepsilon^1)=c_1(\gamma)=j_1^\ast\bigl(c_1(L_1)+c_1(L_2)\bigr)$$
 
-이고 $$j_2^\ast$$에 대해서도 마찬가지이므로 $$c_1(L_1\oplus L_2)=c_1(L_1)+c_1(L_2)$$이다. 임의의 base 위의 두 line bundle은 분류사상 $$(f_1,f_2):B\rightarrow\CP^\infty\times\CP^\infty$$를 따라 $$(L_1,L_2)$$를 pullback한 것이므로 naturality로 일반적인 경우를 얻는다.
+이고 $$j_2^\ast$$에 대해서도 마찬가지이므로 $$c_1(L_1\oplus L_2)=c_1(L_1)+c_1(L_2)$$이다. 위에서 보았듯 이 등식이 $$(L_1,L_2)$$에 대해 성립하면 naturality로 임의의 $$L,L'$$에 대해서도 성립한다.
 
 임의 개수의 line bundle에 대해서는 $$(\CP^\infty)^n$$ 위에서 같은 논증을 반복하면 된다. 좌표 하나를 점으로 고정하는 restriction들은 stability를 통해 line bundle이 하나 적은 경우로 내려가고, $$k<n$$인 차수에서는 이 restriction들이 모두 합쳐 단사이므로 (모든 좌표 성분이 양의 차수인 Künneth 항은 차수가 $$2n$$ 이상이다) 귀납적으로 $$c_k$$들이 결정되며, 최고차 $$c_n$$은 둘째 등식에서와 같은 Euler class 계산으로 직접 얻어진다.
 :::
@@ -423,3 +437,6 @@ $$TS^n\oplus\varepsilon^1\cong\varepsilon^{n+1}$$
 **[BT]** R. Bott and L. W. Tu, *Differential Forms in Algebraic Topology*, Springer, 1982.
 
 **[Hat]** A. Hatcher, *Vector Bundles and K-Theory*, online notes, 2017.
+
+---
+[^1]: $$S^\infty$$을 $$\mathbb{C}^\infty=\bigcup_n\mathbb{C}^n$$의 단위구로 보자. Shift 사상 $$T(x_1,x_2,\ldots)=(0,x_1,x_2,\ldots)$$에 대하여, 벡터를 $$v\mapsto v/\lvert v\rvert$$로 정규화한 두 직선 homotopy $$x\mapsto\bigl((1-t)x+tT(x)\bigr)/\lvert(1-t)x+tT(x)\rvert$$과 $$x\mapsto\bigl((1-t)T(x)+te_1\bigr)/\lvert(1-t)T(x)+te_1\rvert$$이 각각 항등사상을 $$T$$로, 그리고 $$T$$를 상수사상 $$x\mapsto e_1=(1,0,\ldots)$$으로 잇는다. 두 분모 모두 $$0$$이 되지 않는데, 앞의 것은 $$x$$와 $$T(x)$$의 좌표가 한 칸 어긋나 $$(1-t)x+tT(x)=0$$이 $$x=0$$을 강제하고, 뒤의 것은 합의 첫 좌표가 $$t$$라 $$0$$이려면 $$t=0$$이어야 하며 그럼 $$T(x)=0$$, 곧 $$x=0$$이기 때문이다. 이 둘을 이으면 $$S^\infty$$이 한 점으로 수축한다. 
