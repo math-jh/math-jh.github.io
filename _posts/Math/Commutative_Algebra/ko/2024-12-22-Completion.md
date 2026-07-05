@@ -97,7 +97,7 @@ $$\mathfrak{a}\supseteq \mathfrak{a}^2\supseteq\cdots\tag{2}$$
 
 를 가지므로 이렇게 정의된 $$A$$ 위에서의 위상은 first countable이다. 
 
-다시 일반적인 topological abelian group $$G$$로 돌아와서, 우리는 [##ref##]()의 조건을 약화시켜 다음을 정의할 수 있다. 
+다시 일반적인 topological abelian group $$G$$로 돌아와서, 우리는 수렴하는 수열의 조건을 약화시켜 다음을 정의할 수 있다. 
 
 ::: 정의 2
 Topological group $$(G, +, 0)$$에 대하여, $$G$$의 원소들의 수열 $$(x_i)_{i\in \mathbb{N}}$$이 *Cauchy sequence<sub>코시 수열</sub>*이라는 것은 $$0$$의 임의의 근방 $$U$$가 주어질 때마다 적당한 자연수 $$N$$이 존재하여, 다음 명제
@@ -107,7 +107,7 @@ $$m,n>N \implies x_m-x_n\in U$$
 가 참이도록 할 수 있는 것을 말한다. 
 :::
 
-그럼 [##ref##]()에서 Cauchy filter들의 equivalence class들의 모임으로 completion을 정의한 것과 같이, 우리는 두 Cauchy sequence $$(x_m)$$, $$(y_n)$$이 주어졌을 때 이들을 언제 같은 것으로 볼지를 정하고, 그를 통해 (위상적인) completion을 정의할 수 있다. 다만 우리가 관심있는 것은 위의 filtration (2)에 의해 정의되는 first countable topological group $$A$$이며, first countable space는 sequentual이므로 다음 정의에서는 편의를 위해 $$G$$가 first countable space라 가정하고, Cauchy filter 대신 Cauchy sequence를 사용한다.
+그럼 일반적인 topological group에서 Cauchy filter들의 equivalence class들의 모임으로 completion을 정의하는 것과 마찬가지로, 우리는 두 Cauchy sequence $$(x_m)$$, $$(y_n)$$이 주어졌을 때 이들을 언제 같은 것으로 볼지를 정하고, 그를 통해 (위상적인) completion을 정의할 수 있다. 다만 우리가 관심있는 것은 위의 filtration (2)에 의해 정의되는 first countable topological group $$A$$이며, first countable space는 sequentual이므로 다음 정의에서는 편의를 위해 $$G$$가 first countable space라 가정하고, Cauchy filter 대신 Cauchy sequence를 사용한다.
 
 ::: 정의 3
 Topological group $$(G, +, 0)$$의 두 Cauchy sequence $$(x_m)$$, $$(y_n)$$이 *equivalent<sub>동등</sub>*하다는 것은 $$0$$의 임의의 근방 $$U$$가 주어질 때마다 적당한 자연수 $$N$$이 존재하여, 다음 명제

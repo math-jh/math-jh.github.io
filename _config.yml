@@ -195,9 +195,8 @@ exclude:
   - .obsidian
   - .backups
   # CI deploy fix (2026-07-03): keep the GitHub Pages site under the 1 GB limit
+  # (2026-07-05: keyboard posts re-published with <video> references removed)
   - assets/videos                       # 510 MB of .mov keyboard sound-test clips
-  - _posts/Misc/Peripherals/Keyboards   # keyboard posts (video-heavy)
-  - _pages/ko/Misc-Keyboards.md         # keyboards redirect stub (/ko/keyboards)
 keep_files:
   - .git
   - .svn

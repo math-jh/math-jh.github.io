@@ -10,7 +10,6 @@ sidebar:
 
 date: 2026-07-04
 weight: 13
-published: false
 ---
 
 지금까지 우리가 다룬 함수는 실수를 실수로 보내는 $$f:\mathbb{R}\to\mathbb{R}$$ 뿐으로, 냉정하게 말하면 극한의 개념이 $$\epsilon$$-$$\delta$$를 사용하여 엄밀하게 정의되었다는 것 외에는 고등학교에서 배운 내용과 큰 차이가 없었다. 우리는 이제 이를 일반화하여 실제로 새로운 내용을 살펴본다. 일반화의 방향은 차원을 늘리는 것으로, 여기에는 정의역의 차원을 올리는 방향과 공역의 차원을 올리는 방향이 있다. 이 글에서는 후자, 곧 한 실수를 여러 실수로 보내는 함수 $$\mathbf{r}:\mathbb{R}\to\mathbb{R}^n$$을 먼저 다룬다. 이는 매개변수 하나로 공간 속의 곡선을 그리는 벡터값 함수로, 시간에 따라 움직이는 점의 자취로 볼 수 있어 미분이 속도와 가속도라는 물리적 의미를 얻고 적분이 곡선의 길이를 잰다.
@@ -108,14 +107,19 @@ $$(f \mathbf{u})' = f' \mathbf{u} + f \mathbf{u}', \qquad (\mathbf{u} \cdot \mat
 위에서 살펴봤듯 벡터 함수는 물리적 현상을 나타내는데 좋은 도구이다. 이제 그 물리적 직관을 설명해 보기로 한다. 
 
 ::: 정의 4
-매개곡선 $$\mathbf{r}(t)$$에 대해 $$\mathbf{r}'(t)$$를 *속도<sub>velocity</sub>*, 그 크기 $$\lVert \mathbf{r}'(t)\rVert$$를 *속력<sub>speed</sub>*, $$\mathbf{r}''(t)$$를 *가속도<sub>acceleration</sub>*라 한다. $$\mathbf{r}'(t) \neq 0$$인 점에서
+곡선 $$\mathbf{r}(t)$$에 대해 $$\mathbf{r}'(t)$$를 *속도<sub>velocity</sub>*, 그 크기 $$\lVert \mathbf{r}'(t)\rVert$$를 *속력<sub>speed</sub>*, $$\mathbf{r}''(t)$$를 *가속도<sub>acceleration</sub>*라 한다. $$\mathbf{r}'(t) \neq 0$$인 점에서
 
 $$\mathbf{T}(t) = \frac{\mathbf{r}'(t)}{\lVert \mathbf{r}'(t)\rVert}$$
 
 을 *단위접선벡터<sub>unit tangent vector</sub>*라 한다.
 :::
 
-속도는 곡선의 진행 방향을 가리키고 그 크기가 점이 움직이는 빠르기이며, 단위접선벡터는 속도의 방향만 남긴 것이다. 이것이 잘 정의되기 위한 조건은 매개곡선 $$\mathbf{r}$$이 *매끄럽다<sub>smooth</sub>*는 것으로, 이는 속도벡터 $$\mathbf{r}'(t)$$가 연속적으로 존재하며, 이 벡터가 $$0$$이 되는 곳이 없는 것을 뜻한다. 이 조건 아래에서 단위접선벡터 $$\mathbf{T}$$가 어디서나 잘 정의된며, 이 글의 뒤에서는 특별한 언급이 없는 한 매끄러운 곡선만 다룬다. 
+속도는 곡선의 진행 방향을 가리키고 그 크기가 점이 움직이는 빠르기이며, 단위접선벡터는 속도의 방향만 남긴 것이다. 이것이 잘 정의되기 위한 조건은 매개곡선 $$\mathbf{r}$$이 *일급정칙곡선<sub>$C^1$-regular curve</sub>*이라는 것으로, 이는 다음 두 조건을 모두 만족하는 곡선들이다. 
+
+1. $$\mathbf{r}$$이 *일급<sub>$C^1$</sub>*이다. 즉, 속도벡터 $$\mathbf{r}'(t)$$가 연속적으로 존재한다. 
+2. $$\mathbf{r}$$이 *정칙<sub>regular</sub>*이다. 즉, $$\mathbf{r}'(t)$$가 $$0$$이 되는 곳이 없다. 
+
+그럼 특히 둘째 조건에 의해 단위접선벡터 $$\mathbf{T}$$가 어디서나 잘 정의되며, 첫째 조건에 의해 $$\mathbf{T}(t)$$는 연속이다. 이 글에서는 특별한 언급이 없는 한 일급정칙 곡선을 기본으로 다룬다. 
 
 움직이는 대상이 주어졌을 때, 우리가 궁금한 것 중 하나는 시간동안 움직인 거리다. 이는 1차원에서와 마찬가지로, 속도 벡터를 적분하여 얻을 수 있으며, 엄밀하게는 곡선을 곡선 위의 점들을 잇는 다각형으로 근사하여, 분할 
 
@@ -128,77 +132,93 @@ $$\sum_k \lVert \mathbf{r}(t_k) - \mathbf{r}(t_{k-1})\rVert$$
 을 만들고 분할을 잘게 하여 이것이 $$\lVert \mathbf{r}'(t)\rVert$$의 리만 합으로 수렴한다는 것을 보이는 것으로, 이 과정을 압축하면 다음의 정의를 얻는다. 
 
 ::: 정의 5
-$$C^1$$ 매개곡선 $$\mathbf{r}\colon [a, b] \to \mathbb{R}^n$$의 *호의 길이<sub>arc length</sub>*는
+일급곡선 $$\mathbf{r}\colon [a, b] \to \mathbb{R}^n$$의 *arc length<sub>호의 길이</sub>*는
 
-$$L = \int_a^b \lVert \mathbf{r}'(t)\rVert dt$$
+$$L = \int_a^b \lVert \mathbf{r}'(t)\rVert \mathop{dt}$$
 
 이다.
 :::
 
 피적분함수 $$\lVert \mathbf{r}'(t)\rVert$$는 연속이므로 적분가능하다 ([§적분, ⁋정리 10](/ko/math/calculus/integration#thm10)). 이제 시작점에서 잰 호의 길이
 
-$$s(t) = \int_a^t \lVert \mathbf{r}'(\tau)\rVert d\tau$$
+$$s(t) = \int_a^t \lVert \mathbf{r}'(\tau)\rVert \mathop{d\tau}$$
 
-를 *arc length<sub>호의 길이</sub>*라 한다. 미적분의 기본정리로 $$s'(t) = \lVert \mathbf{r}'(t)\rVert > 0$$이므로 (정칙곡선, 곧 $$\mathbf{r}' \neq 0$$인 경우) $$s$$는 증가함수이고, $$t$$를 $$s$$로 풀어 곡선을 arc length로 다시 매개화할 수 있다.
+를 *arc length<sub>호의 길이</sub>*라 하며, 미적분의 기본정리에 의해 $$s'(t) = \lVert \mathbf{r}'(t)\rVert > 0$$이므로 $$s$$는 증가함수이고, $$t$$를 $$s$$로 풀어 곡선을 arc length로 다시 매개화할 수 있다.
 
 ::: 명제 6
 곡선을 arc length $$s$$로 매개화하면 단위속력이다. 즉 $$\lVert d\mathbf{r}/ds\rVert = 1$$이다.
 :::
 
 ::: 증명
-연쇄법칙으로 $$d\mathbf{r}/dt = (d\mathbf{r}/ds)(ds/dt)$$이고 $$ds/dt = \lVert \mathbf{r}'(t)\rVert = \lVert d\mathbf{r}/dt\rVert$$이므로, $$\lVert d\mathbf{r}/ds\rVert = \lVert d\mathbf{r}/dt\rVert / (ds/dt) = 1$$이다.
+연쇄법칙으로 $$d\mathbf{r}/\mathop{dt} = (d\mathbf{r}/ds)(ds/\mathop{dt})$$이고 $$ds/\mathop{dt} = \lVert \mathbf{r}'(t)\rVert = \lVert d\mathbf{r}/\mathop{dt}\rVert$$이므로, $$\lVert d\mathbf{r}/ds\rVert = \lVert d\mathbf{r}/\mathop{dt}\rVert / (ds/\mathop{dt}) = 1$$이다.
 :::
 
 이렇게 얻어지는 parametrization을 *arc length parametrization*이라 부른다. 
 
 ## 곡률
 
-곡선이 얼마나 휘는지는 단위접선벡터의 방향이 진행에 따라 얼마나 빨리 바뀌는가로 잰다. 
-
-빠르기에 휘둘리지 않으려면 시간이 아니라 arc length에 대한 변화율을 본다.
+곡선이 얼마나 휘는지는 단위접선벡터의 방향이 진행에 따라 얼마나 빨리 바뀌는가로 잰다. 그러나 곡선이 빠르게 움직인다면 바뀌는 속도 또한 같이 빨라질 것이므로, 곡선의 모양이 얼마나 휘었는지를 살펴보기 위해서는 이 속도를 똑같이 맞춰줘야 한다. 또, 직관적으로 이는 원래의 곡선을 미분한 단위접선벡터를 한 번 더 미분하여 얻어진 것이므로, 우리는 이제 <em-ko>이급</em-ko>곡선을 생각해야 한다. 즉, 가속도벡터 $$\mathbf{r}''(t)$$까지 연속적으로 존재한다.
 
 ::: 정의 7
-정칙곡선의 *곡률<sub>curvature</sub>*은 단위접선벡터가 arc length에 대해 변하는 비율의 크기
+이급정칙곡선의 *곡률<sub>curvature</sub>*은 단위접선벡터가 arc length에 대해 변하는 비율의 크기
 
 $$\kappa = \left\lVert \frac{d\mathbf{T}}{ds}\right\rVert$$
 
-이다. $$d\mathbf{T}/ds \neq 0$$일 때 그 방향의 단위벡터 $$\mathbf{N} = (d\mathbf{T}/ds)/\lVert d\mathbf{T}/ds\rVert$$를 *단위법선벡터<sub>unit normal vector</sub>*라 한다.
+이다. $$d\mathbf{T}/ds \neq 0$$일 때 그 방향의 단위벡터 
+
+$$\mathbf{N} = \frac{d\mathbf{T}/ds}{\lVert d\mathbf{T}/ds\rVert}$$
+
+를 *단위법선벡터<sub>unit normal vector</sub>*라 한다.
 :::
 
-[명제 6](#prop6)의 따름으로 $$\mathbf{T} = d\mathbf{r}/ds$$는 단위벡터이므로, 길이가 일정한 벡터의 변화율은 그 벡터에 수직이라는 앞의 관찰에 의해 $$d\mathbf{T}/ds \perp \mathbf{T}$$이다. 곧 단위법선벡터 $$\mathbf{N}$$은 항상 접선에 수직이며, 곡선이 휘어 들어가는 안쪽을 가리킨다. 정의는 arc length 매개변수를 쓰지만, 실제 계산에는 임의의 매개변수로 적은 다음 공식이 편하다.
+[명제 6](#prop6)에 의해 $$\mathbf{T} = d\mathbf{r}/ds$$는 단위벡터인 것에 주목하자. 그럼 [명제 3](#prop3) 직후에 살펴본, 길이가 일정한 벡터의 변화율은 그 벡터에 수직이라는 앞의 관찰에 의해 $$d\mathbf{T}/ds \perp \mathbf{T}$$이다. 즉, 단위법선벡터 $$\mathbf{N}$$은 항상 접선에 수직이며, 곡선이 휘어 들어가는 안쪽을 가리킨다. 
+
+위의 정의는 일반적인 $$n$$차원 공간 안에서의 곡선에 대한 것이지만, $$3$$차원 공간에서는 외적을 사용하면 이를 더 편하게 계산할 수 있다. 특히, 다음 공식은 arc length parametrization 없이 바로 적용 가능하므로 훨씬 편하다.
 
 ::: 명제 8 (곡률 공식)
-임의의 정칙 매개변수 $$t$$에 대해 공간곡선의 곡률은
+$$3$$차원 공간 안의 이급정칙곡선 $$\mathbf{r}(t)$$의 곡률은
 
 $$\kappa = \frac{\lVert \mathbf{r}' \times \mathbf{r}''\rVert}{\lVert \mathbf{r}'\rVert^3}$$
 
-이고, 특히 평면곡선 $$y = f(x)$$의 곡률은 $$\kappa = \lvert f''\rvert / (1 + f'^2)^{3/2}$$이다.
+이고, 특히 평면곡선 $$y = f(x)$$의 곡률은 
+
+$$\kappa = \frac{\lvert f''\rvert}{(1 + f'^2)^{3/2}}$$
+
+이다.
 :::
 
 ::: 증명
-$$v = \lVert \mathbf{r}'\rVert = ds/dt$$로 두면 $$\mathbf{r}' = v\mathbf{T}$$이다. 곱미분으로 $$\mathbf{r}'' = v'\mathbf{T} + v\mathbf{T}'(t)$$이고, 연쇄법칙 $$\mathbf{T}'(t) = (d\mathbf{T}/ds)v$$와 $$\lVert d\mathbf{T}/ds\rVert = \kappa$$에서 $$\mathbf{T}'(t) = \kappa v\mathbf{N}$$이다. 따라서
+$$v = \lVert \mathbf{r}'\rVert = ds/\mathop{dt}$$로 두면 $$\mathbf{r}' = v\mathbf{T}$$이다. 곱의 미분법에 의해
+
+$$\mathbf{r}'' = v'\mathbf{T} + v\mathbf{T}'(t)$$
+
+이고, 연쇄법칙 $$\mathbf{T}'(t) = (d\mathbf{T}/ds)v$$와 $$\lVert d\mathbf{T}/ds\rVert = \kappa$$에서 $$\mathbf{T}'(t) = \kappa v\mathbf{N}$$이다. 따라서
 
 $$\mathbf{r}' \times \mathbf{r}'' = (v\mathbf{T}) \times (v'\mathbf{T} + \kappa v^2\mathbf{N}) = v^3 \kappa(\mathbf{T} \times \mathbf{N})$$
 
-인데 ($$\mathbf{T} \times \mathbf{T} = 0$$) $$\mathbf{T} \perp \mathbf{N}$$이고 둘 다 단위벡터라 $$\lVert \mathbf{T} \times \mathbf{N}\rVert = 1$$이므로 $$\lVert \mathbf{r}' \times \mathbf{r}''\rVert = v^3 \kappa = \lVert \mathbf{r}'\rVert^3 \kappa$$, 곧 주장이 따른다. 평면곡선 $$y = f(x)$$는 $$\mathbf{r}(x) = (x, f(x))$$로 매개화하면 $$\mathbf{r}' = (1, f')$$, $$\mathbf{r}'' = (0, f'')$$이고 평면에서의 교차곱 크기 $$\lVert \mathbf{r}' \times \mathbf{r}''\rVert = \lvert f''\rvert$$, $$\lVert \mathbf{r}'\rVert = (1 + f'^2)^{1/2}$$이라 위 공식에서 곧바로 나온다.
+이다. 여기서 둘째 등호는 $$\mathbf{T}\times \mathbf{T}=0$$으로부터 얻어진다. 이제 $$\mathbf{T} \perp \mathbf{N}$$이고 둘 다 단위벡터라 $$\lVert \mathbf{T} \times \mathbf{N}\rVert = 1$$이므로, 
+
+$$\lVert \mathbf{r}' \times \mathbf{r}''\rVert = v^3 \kappa = \lVert \mathbf{r}'\rVert^3 \kappa$$
+
+가 되어 원하는 등식을 얻는다. 평면곡선 $$y = f(x)$$에 대한 공식은 $$\mathbf{r}(x) = (x, f(x),0)$$으로 두고 $$3$$차원에서의 공식을 그대로 적용하면 된다. 
 :::
 
-증명에 등장한 $$\mathbf{r}' = v\mathbf{T}$$를 한 번 더 미분한 $$\mathbf{r}'' = v'\mathbf{T} + \kappa v^2\mathbf{N}$$은 그 자체로 의미가 깊다. 가속도가 접선 방향 성분과 법선 방향 성분으로 갈라지는 것이다.
+증명에 등장한 $$\mathbf{r}' = v\mathbf{T}$$를 한 번 더 미분한 $$\mathbf{r}'' = v'\mathbf{T} + \kappa v^2\mathbf{N}$$은 그 자체로 의미가 깊다. 가속도가 접선 방향 성분과 법선 방향 성분으로 갈라지는 것이다. 이를 다음과 같은 별도의 명제로 적어두자. 
 
 ::: 명제 9 (가속도의 분해)
-정칙곡선의 가속도는 $$\mathbf{r}'' = \frac{dv}{dt}\mathbf{T} + \kappa v^2\mathbf{N}$$으로 분해된다. 여기서 $$v = \lVert \mathbf{r}'\rVert$$는 속력이다.
+이급정칙곡선의 가속도는 
+
+$$\mathbf{r}'' = \frac{dv}{\mathop{dt}}\mathbf{T} + \kappa v^2\mathbf{N}$$
+
+으로 분해된다. 여기서 $$v = \lVert \mathbf{r}'\rVert$$는 속력이다.
 :::
 
-접선 성분 $$dv/dt$$는 속력이 변하는 정도, 법선 성분 $$\kappa v^2$$은 방향이 휘는 정도이다. 등속운동이면 $$dv/dt = 0$$이라 가속도는 순전히 법선 방향, 곧 구심가속도뿐이고 그 크기는 $$\kappa v^2$$이다. 반지름 $$\rho$$인 원을 속력 $$v$$로 도는 운동은 $$\kappa = 1/\rho$$이므로 익숙한 $$v^2/\rho$$를 회복한다.
+접선 성분 $$dv/\mathop{dt}$$는 속력이 변하는 정도를 알려주고, 법선 성분 $$\kappa v^2$$은 방향이 휘는 정도를 알려준다. 등속운동이면 $$dv/\mathop{dt} = 0$$이라 가속도는 순전히 법선 방향, 곧 구심가속도뿐이고 그 크기는 $$\kappa v^2$$이다. 
 
 ::: 예시 10 (나선)
-나선 $$\mathbf{r}(t) = (\cos t, \sin t, t)$$에 대해 $$\mathbf{r}'(t) = (-\sin t, \cos t, 1)$$, $$\mathbf{r}''(t) = (-\cos t, -\sin t, 0)$$이다. 교차곱은
+나선 $$\mathbf{r}(t) = (\cos t, \sin t, t)$$에 대해 $$\mathbf{r}'(t) = (-\sin t, \cos t, 1)$$, $$\mathbf{r}''(t) = (-\cos t, -\sin t, 0)$$이다. 외적은
 
 $$\mathbf{r}' \times \mathbf{r}'' = (\sin t,\ -\cos t,\ 1), \qquad \lVert \mathbf{r}' \times \mathbf{r}''\rVert = \sqrt{2}$$
 
 이고 $$\lVert \mathbf{r}'\rVert = \sqrt{2}$$이므로 곡률은 $$\kappa = \sqrt{2}/(\sqrt{2})^3 = 1/2$$로 일정하다. 속력 $$v = \sqrt{2}$$가 일정하므로 [명제 9](#prop9)에서 가속도는 법선 성분뿐이고 그 크기는 $$\kappa v^2 = (1/2)\cdot 2 = 1$$인데, 실제로 $$\lVert \mathbf{r}''(t)\rVert = \lVert(-\cos t, -\sin t, 0)\rVert = 1$$로 일치한다.
-:::
-
-::: 예시 11 (포물선의 곡률)
-포물선 $$y = x^2$$은 $$f' = 2x$$, $$f'' = 2$$이므로 $$\kappa(x) = 2/(1 + 4x^2)^{3/2}$$이다. 꼭짓점 $$x = 0$$에서 $$\kappa = 2$$로 가장 크고, $$\lvert x\rvert \to \infty$$에서 $$\kappa \to 0$$으로 점점 직선에 가까워진다. 곡률이 최대인 꼭짓점은 곡선이 가장 급하게 휘는 점이다.
 :::

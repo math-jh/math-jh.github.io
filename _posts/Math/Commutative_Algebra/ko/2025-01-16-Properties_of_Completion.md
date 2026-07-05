@@ -95,7 +95,7 @@ $$F \rightarrow G \rightarrow M \rightarrow 0$$
 
 ## 헨젤의 보조정리
 
-Complete ring의 대표적인 예시는 [§완비화, ⁋예시 4]()에서 살펴본 ring of formal power series $$A[[\x_i]]
+Complete ring의 대표적인 예시는 [§완비화, ⁋예시 4](/ko/math/commutative_algebra/completion#ex4)에서 살펴본 ring of formal power series $$A[[\x_i]]
 _{i\in I}$$이다. 한편 우리는 [\[대수적 구조\] §대수, ⁋명제 8](/ko/math/algebraic_structures/algebras#prop8)에서 ring of power series $$A[\x_i]
 _{i\in I}$$가 free functor $$\Set \rightarrow \cAlg{A}$$의 역할을 하는 것을 살펴보았는데, 비슷한 종류의 universal property가 $$A[[\x_i]]_{i\in I}$$에 대해서도 성립한다. 
 

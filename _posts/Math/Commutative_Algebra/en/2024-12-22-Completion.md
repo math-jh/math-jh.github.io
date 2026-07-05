@@ -96,7 +96,7 @@ $$\mathfrak{a}\supseteq \mathfrak{a}^2\supseteq\cdots\tag{2}$$
 
 so the topology on $$A$$ thus defined is first countable.
 
-Returning to a general topological abelian group $$G$$, we can weaken the conditions of [##ref##]() to define the following.
+Returning to a general topological abelian group $$G$$, we can weaken the condition defining a convergent sequence to define the following.
 
 ::: Definition 2
 For a topological group $$(G, +, 0)$$, a sequence $$(x_i)_{i\in \mathbb{N}}$$ of elements of $$G$$ is called a *Cauchy sequence* if for any neighborhood $$U$$ of $$0$$ there exists a natural number $$N$$ such that
@@ -106,7 +106,7 @@ $$m,n>N \implies x_m-x_n\in U$$
 holds.
 :::
 
-Then, just as in [##ref##]() where completion was defined as the set of equivalence classes of Cauchy filters, we can define when two Cauchy sequences $$(x_m)$$ and $$(y_n)$$ are regarded as the same, and through that define the (topological) completion. However, the object of our interest is the first countable topological group $$A$$ defined by the filtration (2) above, and since a first countable space is sequential, for convenience in the following definition we assume $$G$$ is a first countable space and use Cauchy sequences in place of Cauchy filters.
+Then, just as the completion of a general topological group can be defined as the set of equivalence classes of Cauchy filters, we can define when two Cauchy sequences $$(x_m)$$ and $$(y_n)$$ are regarded as the same, and through that define the (topological) completion. However, the object of our interest is the first countable topological group $$A$$ defined by the filtration (2) above, and since a first countable space is sequential, for convenience in the following definition we assume $$G$$ is a first countable space and use Cauchy sequences in place of Cauchy filters.
 
 ::: Definition 3
 Two Cauchy sequences $$(x_m)$$, $$(y_n)$$ of a topological group $$(G, +, 0)$$ are called *equivalent* if for any neighborhood $$U$$ of $$0$$ there exists a natural number $$N$$ such that

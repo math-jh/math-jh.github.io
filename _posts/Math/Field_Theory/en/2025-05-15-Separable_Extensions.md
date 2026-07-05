@@ -240,7 +240,7 @@ Now assuming the second condition, since $$\mathbb{L}/\mathbb{K}$$ has only fini
 
 In particular, if $$\mathbb{L}/\mathbb{K}$$ is a finite degree separable extension, then it is in particular a finite degree étale $$\mathbb{K}$$-algebra, and therefore by [§Étale Algebras, ⁋Proposition 9](/en/math/field_theory/etale_algebras#prop9) we know that the second condition of the above theorem holds.
 
-[Theorem 14](#thm14) always holds even when $$\mathbb{K}$$ is a finite field, but to prove this requires a somewhat more delicate counting argument than [Lemma 13](#lem13), so we postpone it. ([##ref##]())
+[Theorem 14](#thm14) always holds even when $$\mathbb{K}$$ is a finite field, but to prove this requires a somewhat more delicate counting argument than [Lemma 13](#lem13), so we postpone it.
 
 On the other hand, separability is essentially (almost) an étale algebra, and since étale algebras behave well under base change ([§Étale Algebras, ⁋Corollary 14](/en/math/field_theory/etale_algebras#cor14)), with slight modifications as in the proof of [Proposition 12](#prop12), we can show that separability also behaves well under base change in the following two cases.
 

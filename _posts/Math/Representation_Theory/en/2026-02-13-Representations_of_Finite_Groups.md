@@ -172,7 +172,7 @@ Earlier we examined the categorical equivalence
 
 $$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$
 
-Then what [Corollary 7](#cor7) asserts is that any finite-dimensional $$G$$-representation $$V$$ is always a *semisimple* $$\mathbb{C}[G]$$-module. Therefore $$\mathbb{C}[G]$$ itself becomes an Artinian semisimple ring ([semisimple](##ref##)), and hence by the Artin–Wedderburn theorem ([artin-wedderburn](##ref##)) we know that a decomposition into simple modules
+Then what [Corollary 7](#cor7) asserts is that any finite-dimensional $$G$$-representation $$V$$ is always a *semisimple* $$\mathbb{C}[G]$$-module. Therefore $$\mathbb{C}[G]$$, viewed as the regular representation over itself, is a semisimple module by [Corollary 7](#cor7), so it is an Artinian semisimple ring, and hence by the Artin–Wedderburn theorem we know that a decomposition into simple modules
 
 $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r \Mat_{n_i}(\mathbb{C})\tag{1}$$
 

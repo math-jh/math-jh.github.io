@@ -20,12 +20,12 @@ We previously defined two different kinds of integrals: the indefinite integral 
 
 Since the indefinite integral is defined as the reverse of differentiation, the meaningful part of this process is that the definite integral actually yields a result similar to the reverse of differentiation. However, the definite integral is ultimately a tool that produces a value, so its output is not a function. To address this, we take the upper limit of the definite integral as a variable and define the following function:
 
-$$\int_a^x f(t)dt$$
+$$\int_a^x f(t)\mathop{dt}$$
 
 Here, $$t$$ is simply a dummy variable introduced to avoid confusion with $$x$$, which already appears in the upper limit; if no confusion arises, $$t$$ can just as well be replaced by $$x$$.
 
 ::: Theorem 1 (Fundamental Theorem of Calculus)
-If $$f$$ is continuous on $$[a,b]$$ and we define $$F(x) = \int_a^x f(t)dt$$, then $$F$$ is differentiable on $$[a,b]$$ and for every $$x$$,
+If $$f$$ is continuous on $$[a,b]$$ and we define $$F(x) = \int_a^x f(t)\mathop{dt}$$, then $$F$$ is differentiable on $$[a,b]$$ and for every $$x$$,
 
 $$F'(x) = f(x)$$
 :::
@@ -33,7 +33,7 @@ $$F'(x) = f(x)$$
 ::: Proof
 By the second result of [§Integration, ⁋Proposition 11](/en/math/calculus/integration#prop11), for $$h>0$$ we have
 
-$$F(x+h) - F(x) = \int_a^{x+h} f - \int_a^x f = \int_x^{x+h} f(t)dt$$
+$$F(x+h) - F(x) = \int_a^{x+h} f - \int_a^x f = \int_x^{x+h} f(t)\mathop{dt}$$
 
 Since $$f$$ is continuous on $$[x, x+h]$$, by [§Continuous Functions, ⁋Theorem 4](/en/math/calculus/continuity#thm4) it attains a minimum $$m_h$$ and a maximum $$M_h$$ on that interval, and by the third result of [§Integration, ⁋Proposition 11](/en/math/calculus/integration#prop11),
 
@@ -45,17 +45,17 @@ holds. Now as $$h \to 0$$, the interval $$[x, x+h]$$ shrinks to the single point
 This theorem is a rigorous expression of the intuition that <em-ko>the rate at which area accumulates is precisely the height</em-ko>. That is, the rate at which the function $$F(x)$$ defined by integration increases at a point, $$F'(x)$$, is exactly the value of the integrand at that point, $$f(x)$$.
 
 ::: Corollary 2
-Every function continuous on $$[a,b]$$ has a primitive. Specifically, $$F(x) = \int_a^x f(t)dt$$ is one such primitive.
+Every function continuous on $$[a,b]$$ has a primitive. Specifically, $$F(x) = \int_a^x f(t)\mathop{dt}$$ is one such primitive.
 :::
 
 The $$F(x)$$ defined above fixes the constant of integration $$C$$ to a single value; concretely, one may think of it as choosing the constant of integration so that $$F(a)=0$$.
 
-On the other hand, this corollary is a different story from the claim that the integral of an arbitrary function can be expressed in terms of elementary functions: it only says that $$\int_a^x f(t)dt$$ defined by the above formula is <em-ko>in itself</em-ko> a primitive of $$f$$. Consider the following example.
+On the other hand, this corollary is a different story from the claim that the integral of an arbitrary function can be expressed in terms of elementary functions: it only says that $$\int_a^x f(t)\mathop{dt}$$ defined by the above formula is <em-ko>in itself</em-ko> a primitive of $$f$$. Consider the following example.
 
 ::: Example 3 (Derivatives of special functions)
 The *error function* is defined by
 
-$$\erf(x) = \frac{2}{\sqrt{\pi}}\int_0^x e^{-t^2}dt$$
+$$\erf(x) = \frac{2}{\sqrt{\pi}}\int_0^x e^{-t^2}\mathop{dt}$$
 
 Since the primitive of $$e^{-t^2}$$ cannot be written in terms of elementary functions, this integral has no closed form; however, by [Theorem 1](#thm1), $$\erf$$ is differentiable and
 
@@ -71,7 +71,7 @@ Meanwhile, combining [Theorem 1](#thm1) with the fact that a function with zero 
 ::: Theorem 4
 If $$f$$ is continuous on $$[a,b]$$ and $$G$$ is any primitive of $$f$$, then
 
-$$\int_a^b f(x)dx = G(b) - G(a)$$
+$$\int_a^b f(x)\mathop{dx} = G(b) - G(a)$$
 :::
 
 ::: Proof
@@ -80,22 +80,22 @@ Let $$F(x) = \int_a^x f$$; then by [Theorem 1](#thm1), $$F$$ is also a primitive
 $$\int_a^b f = F(b) = G(b) + C = G(b) - G(a)$$
 :::
 
-The difference $$G(b) - G(a)$$ is commonly written as $$\bigl[G(x)\bigr]_a^b$$. Thanks to this theorem, the computation of a definite integral is reduced to the problem of finding a primitive rather than taking the limit of Riemann sums. For example, $$\int_0^1 x^2dx = \bigl[x^3/3\bigr]_0^1 = 1/3$$ agrees with the value obtained laboriously via Riemann sums in [§Integration](/en/math/calculus/integration), but here it is obtained by an entirely different calculation: substituting the endpoints into the primitive.
+The difference $$G(b) - G(a)$$ is commonly written as $$\bigl[G(x)\bigr]_a^b$$. Thanks to this theorem, the computation of a definite integral is reduced to the problem of finding a primitive rather than taking the limit of Riemann sums. For example, $$\int_0^1 x^2\mathop{dx} = \bigl[x^3/3\bigr]_0^1 = 1/3$$ agrees with the value obtained laboriously via Riemann sums in [§Integration](/en/math/calculus/integration), but here it is obtained by an entirely different calculation: substituting the endpoints into the primitive.
 
-In particular, [Theorem 1](#thm1) combines with [§Differentiation Rules, ⁋Theorem 4](/en/math/calculus/differentiation_rules#thm4) when the upper or lower limit of integration depends on a variable. If the upper limit is a function $$g(x)$$, letting $$F(u) = \int_a^u f$$ gives $$\int_a^{g(x)} f = F(g(x))$$, and since $$F'(u) = f(u)$$, the chain rule yields $$\frac{d}{dx}\int_a^{g(x)} f(t)dt = f(g(x))g'(x)$$. If both limits are variable, split the interval into two parts and apply the result to each side.
+In particular, [Theorem 1](#thm1) combines with [§Differentiation Rules, ⁋Theorem 4](/en/math/calculus/differentiation_rules#thm4) when the upper or lower limit of integration depends on a variable. If the upper limit is a function $$g(x)$$, letting $$F(u) = \int_a^u f$$ gives $$\int_a^{g(x)} f = F(g(x))$$, and since $$F'(u) = f(u)$$, the chain rule yields $$\frac{d}{dx}\int_a^{g(x)} f(t)\mathop{dt} = f(g(x))g'(x)$$. If both limits are variable, split the interval into two parts and apply the result to each side.
 
 ::: Proposition 5 (Leibniz rule)
 If $$f$$ is continuous and $$g, h$$ are differentiable, then
 
-$$\frac{d}{dx}\int_{h(x)}^{g(x)} f(t)dt = f(g(x))g'(x) - f(h(x))h'(x)$$
+$$\frac{d}{dx}\int_{h(x)}^{g(x)} f(t)\mathop{dt} = f(g(x))g'(x) - f(h(x))h'(x)$$
 :::
 
 ::: Proof
 Pick an arbitrary fixed point $$c$$ and split the integral into two parts using the additivity over intervals from [§Integration, ⁋Proposition 11](/en/math/calculus/integration#prop11):
 
-$$\int_{h(x)}^{g(x)} f(t)dt = \int_c^{g(x)} f(t)dt - \int_c^{h(x)} f(t)dt$$
+$$\int_{h(x)}^{g(x)} f(t)\mathop{dt} = \int_c^{g(x)} f(t)\mathop{dt} - \int_c^{h(x)} f(t)\mathop{dt}$$
 
-Letting $$F(u) = \int_c^v f(v)dv$$, by [Theorem 1](#thm1) we have $$F'(u) = f(u)$$, and the right-hand side is $$F(g(x)) - F(h(x))$$. Applying the chain rule to each term gives
+Letting $$F(u) = \int_c^v f(v)\mathop{dv}$$, by [Theorem 1](#thm1) we have $$F'(u) = f(u)$$, and the right-hand side is $$F(g(x)) - F(h(x))$$. Applying the chain rule to each term gives
 
 $$\begin{aligned}
 \frac{d}{dx}\bigl[F(g(x)) - F(h(x))\bigr] &= F'(g(x))g'(x) - F'(h(x))h'(x) \\[2pt]
@@ -124,7 +124,7 @@ Meanwhile, integration also pairs well with power series. The following proposit
 ::: Proposition 7 (Term-by-term integration of power series)
 If $$f(x) = \sum_{n=0}^\infty c_n x^n$$ has radius of convergence $$R > 0$$, then for $$\lvert x\rvert < R$$,
 
-$$\int_0^x f(t)dt = \sum_{n=0}^\infty \frac{c_n}{n+1} x^{n+1}$$
+$$\int_0^x f(t)\mathop{dt} = \sum_{n=0}^\infty \frac{c_n}{n+1} x^{n+1}$$
 
 and this series also has radius of convergence $$R$$.
 :::
@@ -138,7 +138,7 @@ $$e^{-t^2} = \sum_{n=0}^\infty \frac{(-1)^n}{n!}t^{2n}$$
 
 and its radius of convergence is $$\infty$$. Now integrating term by term using [Proposition 7](#prop7),
 
-$$\int_0^x e^{-t^2}dt = \sum_{n=0}^\infty \frac{(-1)^n}{n!(2n+1)}x^{2n+1}$$
+$$\int_0^x e^{-t^2}\mathop{dt} = \sum_{n=0}^\infty \frac{(-1)^n}{n!(2n+1)}x^{2n+1}$$
 
 and therefore
 

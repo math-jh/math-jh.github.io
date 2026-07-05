@@ -24,12 +24,24 @@ published: false
 
 $$\sum f(\mathbf{x}^\ast) \Delta V$$
 
-이 분할을 잘게 할 때 한 값으로 수렴하면, 그 값을 $$f$$의 *다중적분<sub>multiple integral</sub>*이라 하고 $$\int_R f dV$$로 적는다. 변수를 드러내어 $$\int\cdots\int_R f(x_1,\ldots,x_n) dx_1\cdots dx_n$$로도 쓴다.
+이 분할을 잘게 할 때 한 값으로 수렴하면, 그 값을 $$f$$의 *다중적분<sub>multiple integral</sub>*이라 하고 
+
+$$\int_R f \mathop{dV}$$
+
+로 적는다. 변수를 드러낼 필요가 있을 때는 
+
+$$\int\cdots\int_R f(x_1,\ldots,x_n) \mathop{dx_1}\cdots \mathop{dx_n}$$
+
+로도 쓰기도 한다.
 :::
 
-차원에 따라 이 적분은 서로 다른 양을 계산한다. $$n=1$$이면 익숙한 정적분, 곧 곡선 아래의 넓이로 돌아간다. $$n=2$$이고 $$f\geq 0$$이면, 밑면이 영역 $$R$$이고 윗면이 곡면 $$z=f(x,y)$$인 입체의 부피가 되며 이 경우를 특별히 *이중적분<sub>double integral</sub>*이라 하여 $$\iint_R f dA$$로 적는다. 리만 합의 각 항 $$f(x_i^\ast, y_j^\ast) \Delta A_{ij}$$은 밑면 넓이 $$\Delta A_{ij}$$에 높이 $$f$$를 곱한 가느다란 기둥의 부피이고, 이 기둥들을 모아 입체를 근사한 뒤 분할을 무한히 잘게 하는 극한이 이중적분이다. 차원을 하나 더 올려 $$n=3$$이면 *삼중적분<sub>triple integral</sub>* $$\iiint_E f dV$$이 되어, $$f\equiv 1$$을 넣으면 입체 $$E$$의 부피를, 밀도 $$\rho(x,y,z)$$를 넣으면 $$E$$의 질량을 준다. 일반적으로 $$f\equiv 1$$을 넣은 $$\int_D dV$$는 영역 $$D$$의 $$n$$차원 부피를 준다.
+차원에 따라 이 적분은 서로 다른 양을 계산한다. $$n=1$$이면 익숙한 정적분, 곧 곡선 아래의 넓이를 계산하는 것이다. $$n=2$$이고 $$f\geq 0$$이면, 이것이 계산하는 양은 밑면이 영역 $$R$$이고 윗면이 곡면 $$z=f(x,y)$$인 입체의 부피가 되며, 이 경우를 특별히 *이중적분<sub>double integral</sub>*이라 부른다. 위의 $$dV$$는 $$n$$-차원 부피를 염두에 둔 표기이지만, $$2$$차원 부피, 즉 넓이는 우리가 이미 익숙한 대상이므로 이를 나타낼 때는 관례적으로
 
-연속함수는 다중적분가능하며, 상자가 아닌 일반 영역 $$D$$ 위의 적분은 $$D$$를 포함하는 상자에서 $$D$$ 밖을 $$0$$으로 둔 함수를 적분하여 정의한다. $$D$$의 경계가 매끄러운 곡면들로 이루어져 있고 함수가 그 위에서 연속인 한 적분값은 잘 정의된다. 적분의 기본 성질도 한 변수의 경우와 똑같이 성립한다. 선형성 $$\int_D (\alpha f + \beta g) dV = \alpha\int_D f dV + \beta\int_D g dV$$, 단조성 ($$f\leq g$$이면 $$\int_D f dV \leq \int_D g dV$$), 영역가법성 ($$D = D_1\cup D_2$$가 겹치지 않는 두 조각이면 $$\int_D f dV = \int_{D_1} f dV + \int_{D_2} f dV$$) 이 그것이다. 영역 $$D$$ 위에서 함수 $$f$$의 *평균값<sub>average value</sub>*은 $$\frac{1}{\operatorname{vol}(D)}\int_D f dV$$로 정의되며, 한 변수 적분의 평균값을 다차원으로 옮긴 것이다.
+$$\iint_R f dA$$
+
+와 같이 적기도 한다. 여기서 보면 적분의 의미가 더 명확한데, 리만 합의 각 항 $$f(x_i^\ast, y_j^\ast) \Delta A_{ij}$$은 밑면 넓이 $$\Delta A_{ij}$$에 높이 $$f$$를 곱한 가느다란 기둥의 부피이고, 이 기둥들을 모아 입체를 근사한 뒤 분할을 무한히 잘게 하는 극한이 바로 이중적분이다. 차원을 하나 더 올려 $$n=3$$이면 *삼중적분<sub>triple integral</sub>* $$\iiint_E f \mathop{dV}$$이 된다.
+
+연속함수는 다중적분가능하며, 상자가 아닌 일반 영역 $$D$$ 위의 적분은 $$D$$를 포함하는 상자 안에서, $$D$$ 밖에서는 함수값을 $$0$$으로 갖도록 함수를 확장한 후 적분하여 정의한다. $$D$$의 경계가 매끄러운 곡면들로 이루어져 있고 함수가 그 위에서 연속인 한 적분값은 잘 정의되며, 적분의 기본 성질도 한 변수의 경우와 똑같이 성립한다는 것을 확인할 수 있다. 이 글에서 우리는 이들을 일일히 연거하는 대신, 새롭게 등장하는 것들만 간단히 정리한다. 
 
 ## 푸비니 정리
 
@@ -38,12 +50,12 @@ $$\sum f(\mathbf{x}^\ast) \Delta V$$
 ::: 정리 2 (푸비니)
 $$f$$가 상자 $$R = [a_1,b_1]\times\cdots\times[a_n,b_n]$$에서 연속이면
 
-$$\int_R f dV = \int_{a_1}^{b_1}\left(\int_{a_2}^{b_2}\cdots\left(\int_{a_n}^{b_n} f(x_1,\ldots,x_n) dx_n\right)\cdots dx_2\right)dx_1$$
+$$\int_R f \mathop{dV} = \int_{a_1}^{b_1}\left(\int_{a_2}^{b_2}\cdots\left(\int_{a_n}^{b_n} f(x_1,\ldots,x_n) \mathop{dx_n}\right)\cdots \mathop{dx_2}\right)\mathop{dx_1}$$
 
 이며, 적분 순서는 임의로 바꿀 수 있다.
 :::
 
-안쪽 적분은 한 변수를 상수로 고정하고 다른 변수로 적분하는 보통의 정적분이므로, 다중적분은 [§미적분의 기본정리](/ko/math/calculus/fundamental_theorem_of_calculus)와 적분법으로 푸는 한 변수 적분들의 연쇄로 환원된다. 피적분함수가 $$f(x_1,\ldots,x_n) = g_1(x_1)\cdots g_n(x_n)$$처럼 변수분리되고 영역이 상자이면 한 단계 더 나아가, 다중적분은 $$n$$개의 한 변수 적분의 곱 $$(\int_{a_1}^{b_1} g_1)\cdots(\int_{a_n}^{b_n} g_n)$$으로 분해된다.
+안쪽 적분은 한 변수를 상수로 고정하고 다른 변수로 적분하는 보통의 정적분이므로, 다중적분은 [§미적분의 기본정리](/ko/math/calculus/fundamental_theorem_of_calculus)와 적분법으로 푸는 한 변수 적분들의 반복이 된다. 피적분함수가 $$f(x_1,\ldots,x_n) = g_1(x_1)\cdots g_n(x_n)$$처럼 변수분리되고 영역이 상자이면 한 단계 더 나아가, 다중적분은 $$n$$개의 한 변수 적분의 곱 $$(\int_{a_1}^{b_1} g_1)\cdots(\int_{a_n}^{b_n} g_n)$$으로 분해된다.
 
 일반 영역에서는 적분 구간이 다른 변수에 의존한다. $$n=2$$로 예를 보면, $$D = \{(x,y) \mid a\leq x\leq b,\ g_1(x)\leq y\leq g_2(x)\}$$이면
 
@@ -72,12 +84,12 @@ $$\int_0^1 \int_0^y e^{y^2} dx dy = \int_0^1 y e^{y^2} dy = \frac12(e - 1)$$
 ::: 정리 4 (변수변환)
 일대일 $$C^1$$ 사상 $$\mathbf{x} = \mathbf{T}(\mathbf{u})$$가 영역 $$D'\subset \mathbb{R}^n$$을 $$D$$로 보내고 야코비 행렬식이 $$D'$$에서 $$0$$이 아니면
 
-$$\int_D f(\mathbf{x}) dV = \int_{D'} f(\mathbf{T}(\mathbf{u})) \lvert \det J_{\mathbf{T}}(\mathbf{u})\rvert dV'$$
+$$\int_D f(\mathbf{x}) \mathop{dV} = \int_{D'} f(\mathbf{T}(\mathbf{u})) \lvert \det J_{\mathbf{T}}(\mathbf{u})\rvert \mathop{dV}'$$
 
 이다. 여기서 $$J_{\mathbf{T}} = (\partial x_i/\partial u_j)$$는 $$\mathbf{T}$$의 야코비 행렬이다.
 :::
 
-야코비 행렬식 $$\lvert\det J_{\mathbf{T}}\rvert$$은 $$\mathbf{T}$$가 부피를 늘이는 국소 비율로, 한 변수에서 $$dx = \lvert g'(u)\rvert du$$에 해당한다. 직관적으로 보면, $$\mathbf{u}$$ 공간의 작은 상자가 $$\mathbf{T}$$에 의해 $$\mathbf{x}$$ 공간의 작은 평행육면체로 옮겨지는데, 그 부피가 $$\lvert\det J_{\mathbf{T}}\rvert$$ 곱하기 원래 상자의 부피가 되므로 부피 원소는 $$dV = \lvert\det J_{\mathbf{T}}(\mathbf{u})\rvert dV'$$로 변환된다. $$n=2$$에서 평행육면체는 평행사변형이 되어, 두 변 $$\mathbf{T}_u \Delta u$$와 $$\mathbf{T}_v \Delta v$$ ($$\mathbf{T}_u, \mathbf{T}_v$$는 $$\mathbf{T}$$의 편도함수 벡터) 가 이루는 넓이가 바로 $$\lvert\det J_{\mathbf{T}}\rvert \Delta u \Delta v$$인 것이다. 이 식을 리만 합에 대입해 극한을 취한 것이 [정리 4](#thm4)이며, 절댓값을 붙이는 이유는 부피가 항상 양수이기 때문이다 (한 변수의 치환적분에서 적분 구간의 방향이 부호를 흡수하던 것과 대비된다).
+야코비 행렬식 $$\lvert\det J_{\mathbf{T}}\rvert$$은 $$\mathbf{T}$$가 부피를 늘이는 국소 비율로, 한 변수에서 $$dx = \lvert g'(u)\rvert du$$에 해당한다. 직관적으로 보면, $$\mathbf{u}$$ 공간의 작은 상자가 $$\mathbf{T}$$에 의해 $$\mathbf{x}$$ 공간의 작은 평행육면체로 옮겨지는데, 그 부피가 $$\lvert\det J_{\mathbf{T}}\rvert$$ 곱하기 원래 상자의 부피가 되므로 부피 원소는 $$\mathop{dV} = \lvert\det J_{\mathbf{T}}(\mathbf{u})\rvert \mathop{dV}'$$로 변환된다. $$n=2$$에서 평행육면체는 평행사변형이 되어, 두 변 $$\mathbf{T}_u \Delta u$$와 $$\mathbf{T}_v \Delta v$$ ($$\mathbf{T}_u, \mathbf{T}_v$$는 $$\mathbf{T}$$의 편도함수 벡터) 가 이루는 넓이가 바로 $$\lvert\det J_{\mathbf{T}}\rvert \Delta u \Delta v$$인 것이다. 이 식을 리만 합에 대입해 극한을 취한 것이 [정리 4](#thm4)이며, 절댓값을 붙이는 이유는 부피가 항상 양수이기 때문이다 (한 변수의 치환적분에서 적분 구간의 방향이 부호를 흡수하던 것과 대비된다).
 
 좌표계를 바꾸는 것이 변수변환의 가장 흔한 쓰임이고, 여기서 이중적분과 삼중적분이 구체적인 계산 예시로 등장한다.
 
@@ -112,13 +124,13 @@ I^2 &= \int_0^{2\pi} \int_0^\infty e^{-r^2} r dr d\theta \\
 :::
 
 ::: 예시 7 (삼중적분의 변수변환 — 구면·원기둥 좌표)
-삼중적분에서는 공간의 회전대칭에 맞춘 두 좌표계가 쓰인다. *원기둥좌표<sub>cylindrical coordinates</sub>* $$(r, \theta, z)$$는 평면의 극좌표에 높이 $$z$$를 더한 것으로, $$x = r\cos\theta$$, $$y = r\sin\theta$$, $$z = z$$이고 야코비 행렬식이 $$r$$이라 $$dV = r dr d\theta dz$$이다. *구면좌표<sub>spherical coordinates</sub>* $$(\rho, \phi, \theta)$$는 원점으로부터의 거리 $$\rho$$, 양의 $$z$$축과의 각 $$\phi$$, 방위각 $$\theta$$로 점을 나타내며
+삼중적분에서는 공간의 회전대칭에 맞춘 두 좌표계가 쓰인다. *원기둥좌표<sub>cylindrical coordinates</sub>* $$(r, \theta, z)$$는 평면의 극좌표에 높이 $$z$$를 더한 것으로, $$x = r\cos\theta$$, $$y = r\sin\theta$$, $$z = z$$이고 야코비 행렬식이 $$r$$이라 $$\mathop{dV} = r dr d\theta dz$$이다. *구면좌표<sub>spherical coordinates</sub>* $$(\rho, \phi, \theta)$$는 원점으로부터의 거리 $$\rho$$, 양의 $$z$$축과의 각 $$\phi$$, 방위각 $$\theta$$로 점을 나타내며
 
 $$x = \rho\sin\phi\cos\theta, \quad y = \rho\sin\phi\sin\theta, \quad z = \rho\cos\phi$$
 
-이다. 그 야코비 행렬식을 계산하면 $$\det J = \rho^2\sin\phi$$이므로 $$dV = \rho^2\sin\phi d\rho d\phi d\theta$$이다. 회전대칭이 있는 입체에서 이 좌표들은 삼중적분을 크게 줄여 준다. 가령 반지름 $$R$$인 공의 부피는 구면좌표에서 세 변수가 분리되어
+이다. 그 야코비 행렬식을 계산하면 $$\det J = \rho^2\sin\phi$$이므로 $$\mathop{dV} = \rho^2\sin\phi d\rho d\phi d\theta$$이다. 회전대칭이 있는 입체에서 이 좌표들은 삼중적분을 크게 줄여 준다. 가령 반지름 $$R$$인 공의 부피는 구면좌표에서 세 변수가 분리되어
 
-$$\iiint_{B_R} dV = \left(\int_0^{2\pi} d\theta\right)\left(\int_0^\pi \sin\phi d\phi\right)\left(\int_0^R \rho^2 d\rho\right) = 2\pi\cdot 2\cdot \frac{R^3}{3} = \frac{4\pi R^3}{3}$$
+$$\iiint_{B_R} \mathop{dV} = \left(\int_0^{2\pi} d\theta\right)\left(\int_0^\pi \sin\phi d\phi\right)\left(\int_0^R \rho^2 d\rho\right) = 2\pi\cdot 2\cdot \frac{R^3}{3} = \frac{4\pi R^3}{3}$$
 
 으로 곧장 나온다.
 :::
