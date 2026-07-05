@@ -13,7 +13,6 @@ date: 2026-06-23
 
 weight: 118
 
-published: false
 drift_needed: true
 
 ---
@@ -89,7 +88,7 @@ $$\lVert v+w\rVert^2\leq\lVert v\rVert^2+2\lVert v\rVert\lVert w\rVert+\lVert w\
 
 이 되어 $$\lVert v+w\rVert\leq\lVert v\rVert+\lVert w\rVert$$을 얻는다. $$\lVert\alpha v\rVert=\lvert\alpha\rvert\lVert v\rVert$$은 $$\langle\alpha v,\alpha v\rangle=\bar\alpha\alpha\langle v,v\rangle=\lvert\alpha\rvert^2\lVert v\rVert^2$$로부터 자명하므로, $$\lVert-\rVert$$은 실제로 노름이다. ([§내적공간, ⁋정의 2](/ko/math/linear_algebra/inner_product_spaces#def2))
 
-## orthonormal basis
+## Orthonormal basis
 
 실수의 경우와 마찬가지로, 복소내적공간에서도 두 벡터 $$v,w$$가 $$\langle v,w\rangle=0$$을 만족할 때 서로 직교한다고 하며, 크기가 모두 $$1$$이고 서로 직교하는 기저를 orthonormal basis라 부른다. 이 때도 실수의 경우와 마찬가지로 Gram-Schmidt 과정이 그대로 작동하는데, 실제로 기저 $$\{x_1,\ldots,x_n\}$$이 주어졌을 때 $$\hat x_1=x_1$$로 두고
 
@@ -114,7 +113,7 @@ $$v=\sum_{i=1}^n\langle x_i,v\rangle x_i$$
 
 $$V=U\oplus U^\perp,\qquad\dim U^\perp=\dim V-\dim U$$
 
-이 성립한다. 나아가 natural projection $$p:V\rightarrow V/U$$ ([§몫공간](/ko/math/linear_algebra/quotient_space))을 $$U^\perp$$로 제한한 $$p\vert_{U^\perp}:U^\perp\rightarrow V/U$$은 isomorphism이며, 따라서 $$U^\perp$$은 몫공간 $$V/U$$을 표준적으로 실현한다.
+이 성립한다. 나아가 natural projection $$p:V\rightarrow V/U$$ ([§몫공간, ⁋정의 3](/ko/math/linear_algebra/quotient_space#def3))을 $$U^\perp$$로 제한한 $$p\vert_{U^\perp}:U^\perp\rightarrow V/U$$은 isomorphism이며, 따라서 $$U^\perp$$은 몫공간 $$V/U$$을 표준적으로 실현한다.
 :::
 ::: 증명
 위에서 $$V$$의 orthonormal basis $$\{x_1,\ldots,x_n\}$$을 $$U$$의 것 $$\{x_1,\ldots,x_k\}$$로부터 확장했으므로, 나머지 $$\{x_{k+1},\ldots,x_n\}$$은 $$U$$와 직교하여 $$U^\perp$$을 span한다. 따라서 $$V=U\oplus U^\perp$$이고 $$\dim U^\perp=\dim V-\dim U$$이다. 그럼 $$\ker p=U$$이므로 $$p\vert_{U^\perp}$$의 kernel은 $$U^\perp\cap U=\{0\}$$이라 단사이고, $$V=U+U^\perp$$이라 전사이므로 isomorphism이다.
@@ -128,7 +127,7 @@ $$V=U\oplus U^\perp,\qquad\dim U^\perp=\dim V-\dim U$$
 
 $$\langle Lv,w\rangle=\langle v,L^\ast w\rangle\qquad\text{for all }v,w\in V$$
 
-를 만족하는 유일한 operator로 정의한다. orthonormal basis에 대한 행렬표현을 통해 $$L^\ast$$의 정체를 알 수 있다.
+를 만족하는 유일한 operator로 정의한다. Orthonormal basis에 대한 행렬표현을 통해 $$L^\ast$$의 정체를 알 수 있다.
 
 ::: 명제 5
 $$\mathcal{B}=\{e_1,\ldots,e_n\}$$이 복소내적공간 $$V$$의 orthonormal basis이고 $$A=[L]_\mathcal{B}^\mathcal{B}$$라 하면, $$L^\ast$$의 행렬표현은 $$A$$의 *conjugate transpose<sub>켤레전치</sub>* $$A^\ast=\bar A^t$$이다.
@@ -153,7 +152,7 @@ $$U^\ast U=UU^\ast=I$$
 가 성립하는 것이다. 복소내적공간 위의 operator $$L$$이 $$L^\ast L=I$$를 만족할 때 *unitary operator<sub>unitary operator</sub>*라 부른다.
 :::
 
-[§동형사상, ⁋정리 7](/ko/math/linear_algebra/isomorphic_vector_spaces#thm7)로부터 $$U^\ast U=I$$이면 자동으로 $$UU^\ast=I$$임을 알 수 있으므로, 한쪽 조건만으로 충분하다. unitary operator는 정확히 내적을 보존하는 operator이다. 실제로 $$L$$이 내적을 보존하면 임의의 $$v,w$$에 대하여 $$\langle v,w\rangle=\langle Lv,Lw\rangle=\langle v,L^\ast Lw\rangle$$이 모든 $$v$$에 대해 성립하므로 $$L^\ast L=I$$이고, 거꾸로 $$L^\ast L=I$$이면
+[§동형사상, ⁋정리 7](/ko/math/linear_algebra/isomorphic_vector_spaces#thm7)로부터 $$U^\ast U=I$$이면 자동으로 $$UU^\ast=I$$임을 알 수 있으므로, 한쪽 조건만으로 충분하다. Unitary operator는 정확히 내적을 보존하는 operator이다. 실제로 $$L$$이 내적을 보존하면 임의의 $$v,w$$에 대하여 $$\langle v,w\rangle=\langle Lv,Lw\rangle=\langle v,L^\ast Lw\rangle$$이 모든 $$v$$에 대해 성립하므로 $$L^\ast L=I$$이고, 거꾸로 $$L^\ast L=I$$이면
 
 $$\langle Lv,Lw\rangle=\langle v,L^\ast Lw\rangle=\langle v,w\rangle$$
 
