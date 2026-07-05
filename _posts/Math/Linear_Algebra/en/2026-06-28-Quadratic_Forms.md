@@ -38,7 +38,7 @@ and therefore the formula
 
 $$\langle v,w\rangle=\frac{1}{2}\bigl(Q(v+w)-Q(v)-Q(w)\bigr)\tag{1}$$
 
-holds. This formula is called the *polarization identity*. Thus over $$\mathbb{R}$$, a symmetric bilinear form and a quadratic form uniquely determine each other, and since we can freely move between the two, they are essentially the same thing. The fact that formula (1) holds essentially uses the fact that we can divide by $$2$$, i.e., that $$\ch\mathbb{R}\neq 2$$, which was already the situation in [§Bilinear Forms, ⁋Proposition 10](/en/math/linear_algebra/bilinear_form#prop10).
+holds. This formula is called the *polarization identity*. Thus over $$\mathbb{R}$$, a symmetric bilinear form and a quadratic form uniquely determine each other, and since we can freely move between the two, they are essentially the same thing. The fact that formula (1) holds essentially uses the fact that we can divide by $$2$$, i.e., that $$\ch\mathbb{R}\neq 2$$, which was already the situation in [§Bilinear Forms, ⁋Proposition 12](/en/math/linear_algebra/bilinear_form#prop12).
 
 ## Congruence and Diagonal Form
 
@@ -60,7 +60,7 @@ the left-hand side is nonzero, so at least one of the three terms on the right-h
 
 $$v=\frac{\langle v,w\rangle}{\langle w,w\rangle}w+\left(v-\frac{\langle v,w\rangle}{\langle w,w\rangle}w\right)$$
 
-and see that $$V=W\oplus w^\perp$$. (This is the same as the proof of [§Bilinear Forms, ⁋Proposition 10](/en/math/linear_algebra/bilinear_form#prop10).) Here $$w^\perp=\{v\mid\langle v,w\rangle=0\}$$. The bilinear form restricted to $$w^\perp$$ is also symmetric, so by the inductive hypothesis there exists an orthogonal basis of $$w^\perp$$, and adding $$w$$ to it gives an orthogonal basis $$\{f_1,\ldots,f_n\}$$ of $$V$$.
+and see that $$V=W\oplus w^\perp$$. (This is the same as the proof of [§Bilinear Forms, ⁋Proposition 12](/en/math/linear_algebra/bilinear_form#prop12).) Here $$w^\perp=\{v\mid\langle v,w\rangle=0\}$$. The bilinear form restricted to $$w^\perp$$ is also symmetric, so by the inductive hypothesis there exists an orthogonal basis of $$w^\perp$$, and adding $$w$$ to it gives an orthogonal basis $$\{f_1,\ldots,f_n\}$$ of $$V$$.
 
 Now we scale each $$f_i$$ appropriately so that $$\langle f_i,f_i\rangle$$ becomes one of $$1$$, $$-1$$, or $$0$$. If $$\langle f_i,f_i\rangle=0$$, set $$e_i=f_i$$; otherwise, for $$c=\sqrt{\lvert\langle f_i,f_i\rangle\rvert}$$ set $$e_i=f_i/c$$, then
 

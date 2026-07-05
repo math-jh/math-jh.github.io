@@ -120,7 +120,7 @@ $$V=U\oplus U^\perp,\qquad\dim U^\perp=\dim V-\dim U$$
 위에서 $$V$$의 orthonormal basis $$\{x_1,\ldots,x_n\}$$을 $$U$$의 것 $$\{x_1,\ldots,x_k\}$$로부터 확장했으므로, 나머지 $$\{x_{k+1},\ldots,x_n\}$$은 $$U$$와 직교하여 $$U^\perp$$을 span한다. 따라서 $$V=U\oplus U^\perp$$이고 $$\dim U^\perp=\dim V-\dim U$$이다. 그럼 $$\ker p=U$$이므로 $$p\vert_{U^\perp}$$의 kernel은 $$U^\perp\cap U=\{0\}$$이라 단사이고, $$V=U+U^\perp$$이라 전사이므로 isomorphism이다.
 :::
 
-여기서 positive-definiteness가 결정적이다. 내적이 positive-definite이면 $$U\cap U^\perp$$의 임의의 원소 $$u$$는 $$\langle u,u\rangle=0$$을 만족해 $$u=0$$이므로, 모든 부분공간 $$U$$가 $$U\cap U^\perp=\{0\}$$을 자동으로 만족한다. 일반적인 symmetric bilinear form에서는 이 직교분해와 표준동형이 부분공간의 non-degeneracy를 요구하지만 ([§쌍선형형식, ⁋명제 7](/ko/math/linear_algebra/bilinear_form#prop7)), Hermitian 내적을 포함한 positive-definite인 경우에는 아무 조건 없이 성립하는 것이다.
+여기서 positive-definiteness가 결정적이다. 내적이 positive-definite이면 $$U\cap U^\perp$$의 임의의 원소 $$u$$는 $$\langle u,u\rangle=0$$을 만족해 $$u=0$$이므로, 모든 부분공간 $$U$$가 $$U\cap U^\perp=\{0\}$$을 자동으로 만족한다. 일반적인 symmetric bilinear form에서는 이 직교분해와 표준동형이 부분공간의 non-degeneracy를 요구하지만 ([§쌍선형형식, ⁋명제 9](/ko/math/linear_algebra/bilinear_form#prop9)), Hermitian 내적을 포함한 positive-definite인 경우에는 아무 조건 없이 성립하는 것이다.
 
 ## 수반작용소와 unitary matrix
 
