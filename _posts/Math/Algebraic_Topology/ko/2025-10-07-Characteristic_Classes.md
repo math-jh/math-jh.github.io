@@ -291,9 +291,9 @@ $$c(L_1\oplus\cdots\oplus L_n)=\prod_{i=1}^n\bigl(1+c_1(L_i)\bigr)$$
 
 임을 보이면 충분하다. 핵심은 두 line bundle $$L,L'$$에 대한 두 등식 
 
-$$c_1(L\oplus L')=c_1(L)+c_1(L'),\qquad c_2(L\oplus L')=c_1(L)\smile c_1(L')$$이다.
+$$c_1(L\oplus L')=c_1(L)+c_1(L'),\qquad c_2(L\oplus L')=c_1(L)\smile c_1(L')$$
 
-둘째 등식은 임의의 base 위에서 바로 얻어진다. [정의 6](#def6)에 의하여 rank $$2$$ bundle의 최고차항은 
+이다. 둘째 등식은 임의의 base 위에서 바로 얻어진다. [정의 6](#def6)에 의하여 rank $$2$$ bundle의 최고차항은 
 
 $$c_2(L\oplus L')=e\bigl((L\oplus L')_{\mathbb{R}}\bigr)$$
 
@@ -309,7 +309,19 @@ $$c_i(E')=s^\ast\pi_0^\ast c_i(E')=s^\ast c_i(E'^\perp)=c_i(s^\ast E'^\perp)=c_i
 
 를 얻는다. 최고차 $$c_{n+1}(E')=e(E'_{\mathbb{R}})$$는 어디서도 $$0$$이 아닌 section이 존재하므로 [명제 4](#prop4)의 (3)에 의하여 $$0$$이며, 이는 $$c_{n+1}(E)=0$$과 일치한다.
 
-이제 이 등식을 universal example 위에서 확인한다. [예시 8](#ex8)에서 보았듯 $$\gamma$$가 complex line bundle의 universal family이므로, 임의의 base $$B$$ 위의 두 line bundle $$L,L'$$은 각각 분류사상 $$f_1,f_2:B\rightarrow\CP^\infty$$를 따른 pullback $$f_1^\ast\gamma$$, $$f_2^\ast\gamma$$이다. 이 둘은 하나의 사상 $$(f_1,f_2):B\rightarrow\CP^\infty\times\CP^\infty$$로 묶을 수 있는데, 곱공간 위의 두 line bundle $$L_1=\pi_1^\ast\gamma$$, $$L_2=\pi_2^\ast\gamma$$($$\pi_1,\pi_2$$는 두 projection)을 이 사상으로 당겨오면 각각 $$L,L'$$이 된다. 따라서 [명제 7](#prop7)의 naturality에 의해 $$c_1(L\oplus L')=c_1(L)+c_1(L')$$은 $$\CP^\infty\times\CP^\infty$$ 위의 $$L_1,L_2$$에 대해서만 확인하면 충분하며, 이것이 이 곱공간을 universal example이라 부르는 까닭이다.
+한편, [예시 8](#ex8)에서 보았듯 $$\gamma$$가 complex line bundle의 universal family이므로, 임의의 base $$B$$ 위의 두 line bundle $$L,L'$$은 각각 base의 morphism $$f_1,f_2:B\rightarrow\CP^\infty$$를 따른 pullback $$f_1^\ast\gamma$$, $$f_2^\ast\gamma$$이다. 따라서 이들의 합은 다음의 식
+
+$$f=(f_1, f_2): B\rightarrow \CP^\infty\times\CP^\infty$$
+
+으로 $$\gamma\oplus\gamma$$를 끌고온 것으로 생각할 수 있으며, 우리가 보여야 할 것은 
+
+
+
+이다. 
+
+
+
+이 둘은 하나의 사상 $$(f_1,f_2):B\rightarrow\CP^\infty\times\CP^\infty$$로 묶을 수 있는데, 곱공간 위의 두 line bundle $$L_1=\pi_1^\ast\gamma$$, $$L_2=\pi_2^\ast\gamma$$($$\pi_1,\pi_2$$는 두 projection)을 이 사상으로 당겨오면 각각 $$L,L'$$이 된다. 따라서 [명제 7](#prop7)의 naturality에 의해 $$c_1(L\oplus L')=c_1(L)+c_1(L')$$은 $$\CP^\infty\times\CP^\infty$$ 위의 $$L_1,L_2$$에 대해서만 확인하면 충분하며, 이것이 이 곱공간을 universal example이라 부르는 까닭이다.
 
 이 곱공간의 코호몰로지는 [예시 8](#ex8)의 계산에서 바로 나온다. $$H^\bullet(\CP^\infty;\mathbb{Z})=\mathbb{Z}[c_1(\gamma)]$$, 특히 $$H^1(\CP^\infty;\mathbb{Z})=0$$이므로 Künneth formula에 의하여 $$H^2(\CP^\infty\times\CP^\infty;\mathbb{Z})\cong H^2(\CP^\infty;\mathbb{Z})\oplus H^2(\CP^\infty;\mathbb{Z})$$이다. 두 직합 성분은 점 $$q\in\CP^\infty$$를 고정한 inclusion $$j_1:z\mapsto(z,q)$$, $$j_2:z\mapsto(q,z)$$로의 restriction $$j_1^\ast$$, $$j_2^\ast$$가 각각 읽어내므로, $$H^2(\CP^\infty\times\CP^\infty;\mathbb{Z})$$의 원소는 이 두 값으로 결정된다. 이제 $$j_1^\ast L_1=\gamma$$인데 $$j_1^\ast L_2$$는 상수함수를 따른 pullback이라 trivial이므로, stability에 의하여
 
