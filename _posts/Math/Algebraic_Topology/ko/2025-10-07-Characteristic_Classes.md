@@ -279,7 +279,11 @@ $$H^\bullet(\Gr_n(\mathbb{C}^\infty);\mathbb{Z})=\mathbb{Z}[c_1,\ldots,c_n]$$
 
 $$c(E\oplus E')=c(E)\smile c(E')$$
 
-가 성립한다. 즉, 모든 $$k$$에 대하여 $$c_k(E\oplus E')=\sum_{i+j=k}c_i(E)\smile c_j(E')$$이다.
+가 성립한다. 즉, 모든 $$k$$에 대하여 
+
+$$c_k(E\oplus E')=\sum_{i+j=k}c_i(E)\smile c_j(E')$$
+
+이다.
 :::
 
 ::: 증명
@@ -309,27 +313,41 @@ $$c_i(E')=s^\ast\pi_0^\ast c_i(E')=s^\ast c_i(E'^\perp)=c_i(s^\ast E'^\perp)=c_i
 
 를 얻는다. 최고차 $$c_{n+1}(E')=e(E'_{\mathbb{R}})$$는 어디서도 $$0$$이 아닌 section이 존재하므로 [명제 4](#prop4)의 (3)에 의하여 $$0$$이며, 이는 $$c_{n+1}(E)=0$$과 일치한다.
 
-한편, [예시 8](#ex8)에서 보았듯 $$\gamma$$가 complex line bundle의 universal family이므로, 임의의 base $$B$$ 위의 두 line bundle $$L,L'$$은 각각 base의 morphism $$f_1,f_2:B\rightarrow\CP^\infty$$를 따른 pullback $$f_1^\ast\gamma$$, $$f_2^\ast\gamma$$이다. 따라서 이들의 합은 다음의 식
+한편, [예시 8](#ex8)에서 보았듯 $$\gamma$$가 complex line bundle의 universal family이므로, 임의의 base $$B$$ 위의 두 line bundle $$L,L'$$은 각각 base의 morphism $$f_1,f_2:B\rightarrow\CP^\infty$$를 따른 pullback $$f_1^\ast\gamma$$, $$f_2^\ast\gamma$$이다. 이제
 
 $$f=(f_1, f_2): B\rightarrow \CP^\infty\times\CP^\infty$$
 
-으로 $$\gamma\oplus\gamma$$를 끌고온 것으로 생각할 수 있으며, 우리가 보여야 할 것은 
+로 두면, 우리는 base들 사이에 다음의 commutative diagram
 
+![분류사상 분해](/assets/images/Math/Algebraic_Topology/Characteristic_Classes-2.svg){:style="width:20.62em" class="invert" .align-center}
 
+을 얻고, 따라서 $$B$$ 위의 $$L, L'$$에서의 식
 
-이다. 
+$$c_1(L\oplus L')=c_1(L)+c_1(L')$$
 
+즉
 
+$$c_1(f^\ast(\pi_1^\ast\gamma \oplus \pi_2^\ast\gamma))=c_1(f_1^\ast\gamma)+c_1(f_2^\ast\gamma)$$
 
-이 둘은 하나의 사상 $$(f_1,f_2):B\rightarrow\CP^\infty\times\CP^\infty$$로 묶을 수 있는데, 곱공간 위의 두 line bundle $$L_1=\pi_1^\ast\gamma$$, $$L_2=\pi_2^\ast\gamma$$($$\pi_1,\pi_2$$는 두 projection)을 이 사상으로 당겨오면 각각 $$L,L'$$이 된다. 따라서 [명제 7](#prop7)의 naturality에 의해 $$c_1(L\oplus L')=c_1(L)+c_1(L')$$은 $$\CP^\infty\times\CP^\infty$$ 위의 $$L_1,L_2$$에 대해서만 확인하면 충분하며, 이것이 이 곱공간을 universal example이라 부르는 까닭이다.
+를 보이는 것은, [명제 7](#prop7)의 첫째 결과에 의해,
 
-이 곱공간의 코호몰로지는 [예시 8](#ex8)의 계산에서 바로 나온다. $$H^\bullet(\CP^\infty;\mathbb{Z})=\mathbb{Z}[c_1(\gamma)]$$, 특히 $$H^1(\CP^\infty;\mathbb{Z})=0$$이므로 Künneth formula에 의하여 $$H^2(\CP^\infty\times\CP^\infty;\mathbb{Z})\cong H^2(\CP^\infty;\mathbb{Z})\oplus H^2(\CP^\infty;\mathbb{Z})$$이다. 두 직합 성분은 점 $$q\in\CP^\infty$$를 고정한 inclusion $$j_1:z\mapsto(z,q)$$, $$j_2:z\mapsto(q,z)$$로의 restriction $$j_1^\ast$$, $$j_2^\ast$$가 각각 읽어내므로, $$H^2(\CP^\infty\times\CP^\infty;\mathbb{Z})$$의 원소는 이 두 값으로 결정된다. 이제 $$j_1^\ast L_1=\gamma$$인데 $$j_1^\ast L_2$$는 상수함수를 따른 pullback이라 trivial이므로, stability에 의하여
+$$c_1(\pi_1^\ast\gamma\oplus \pi_2^\ast\gamma)=c_1(\pi_1^\ast\gamma)+c_1(\pi_2^\ast\gamma)$$
+
+를 보이는 것과 같다. 즉, 우리는 $$\CP^\infty\times\CP^\infty$$ 위의 임의의 두 line bundle $$L_1, L_2$$에 대해 위 식이 성립하는 것을 보이면 충분하다. 
+
+이를 위해 우선 [§코호몰로지, ⁋따름정리 10](/ko/math/algebraic_topology/cohomology#cor10)에 의해 
+
+$$H^2(\CP^\infty\times\CP^\infty;\mathbb{Z})\cong H^2(\CP^\infty;\mathbb{Z})\oplus H^2(\CP^\infty;\mathbb{Z})$$
+
+임을 관찰하자. 즉, inclusion $$j_1:z\mapsto(z,q)$$, $$j_2:z\mapsto(q,z)$$을 통해 restriction map $$j_1^\ast$$, $$j_2^\ast$$를 정의하면 이들이 각각의 성분을 읽어줄 수 있다. 한편 우리는 위에서 trivial line bundle에 대해서는 원하는 식이 성립함을 보았고, $$j_1^\ast L_2$$와 $$j_2^\ast L_1$$은 trivial이므로
 
 $$j_1^\ast c_1(L_1\oplus L_2)=c_1(\gamma\oplus\varepsilon^1)=c_1(\gamma)=j_1^\ast\bigl(c_1(L_1)+c_1(L_2)\bigr)$$
 
-이고 $$j_2^\ast$$에 대해서도 마찬가지이므로 $$c_1(L_1\oplus L_2)=c_1(L_1)+c_1(L_2)$$이다. 위에서 보았듯 이 등식이 $$(L_1,L_2)$$에 대해 성립하면 naturality로 임의의 $$L,L'$$에 대해서도 성립한다.
+과, 비슷한 식이 $$j_2^\ast$$에 대해서도 성립한다. 즉, 
 
-임의 개수의 line bundle에 대해서는 $$(\CP^\infty)^n$$ 위에서 같은 논증을 반복하면 된다. $$i$$번째 좌표를 점으로 고정하는 inclusion $$j_i$$를 생각하자. $$j_i^\ast$$는 stability에 의하여 line bundle을 하나 적은 경우로 내려가므로 귀납법에 그대로 쓸 수 있고, $$k<n$$인 차수에서는 $$n$$개의 restriction $$j_1^\ast,\ldots,j_n^\ast$$을 모두 합친 사상이 단사이다. 차수 $$2k<2n$$인 Künneth 항은 적어도 한 좌표 성분의 차수가 $$0$$이어야 하므로 (모든 좌표 성분이 양의 차수이려면 차수가 $$2n$$ 이상이어야 한다) 그 항을 살려 두는 $$j_i^\ast$$가 존재하기 때문이다. 따라서 귀납적으로 $$c_k$$($$k<n$$)들이 결정되며, 남은 최고차 $$c_n$$은 둘째 등식에서와 같은 Euler class 계산으로 직접 얻어진다.
+$$c_1(L_1\oplus L_2)=c_1(L_1)+c_1(L_2)$$
+
+이며, 위에서 보았듯 여기에 naturality를 더하면 임의의 $$L,L'$$에 대해서도 성립한다. 
 :::
 
 앞서 우리는 complex vector bundle $$E$$와 그 켤레 $$\bar{E}$$, 곧 같은 underlying real bundle에 scalar 곱을 $$z\cdot v=\bar{z}v$$로 뒤틀어 준 bundle을 Chern class가 구별할 수 있다고 하였다. 이제 이 주장을 정확하게 만들 수 있다.
@@ -344,29 +362,27 @@ $$c_i(\bar{E})=(-1)^ic_i(E)$$
 ::: 증명
 우선 line bundle $$L$$의 경우를 보자. [정의 6](#def6)에 의하여 $$c_1(L)=e(L_{\mathbb{R}})$$인데, $$L$$과 $$\bar{L}$$은 underlying real bundle이 같고 표준 방향만 서로 반대이다. 실제로 fiber의 nonzero vector $$v$$에 대하여 $$L$$의 표준 방향은 ordered basis $$(v,iv)$$가 주는 것이고, $$\bar{L}$$에서는 $$i$$가 $$v$$를 $$-iv$$로 보내므로 표준 방향은 $$(v,-iv)$$가 주는 것인데, 두 basis 사이의 change of basis 행렬식이 $$-1$$이다. 따라서 [명제 4](#prop4)의 (5)에 의하여 $$c_1(\bar{L})=-c_1(L)$$이다.
 
-일반적인 경우는 [§사영다발과 Leray–Hirsch 정리, ⁋정리 5](/ko/math/algebraic_topology/projective_bundles#thm5)로 줄인다. $$\rho^\ast E\cong L_1\oplus\cdots\oplus L_n$$이면 켤레가 pullback 및 Whitney sum과 교환하므로 $$\rho^\ast\bar{E}\cong\bar{L}_1\oplus\cdots\oplus\bar{L}_n$$이고, [정리 9](#thm9)에 의하여
-
-$$\rho^\ast c(\bar{E})=\prod_{i=1}^n\bigl(1-c_1(L_i)\bigr)$$
-
-이다. 차수별로 비교하면 $$\rho^\ast c_k(\bar{E})=(-1)^k\rho^\ast c_k(E)$$이고, $$\rho^\ast$$가 단사이므로 결론을 얻는다.
+일반적인 경우 또한 위의 증명과 마찬가지로 splitting principle을 사용하면 된다. 
 :::
 
-가령 [예시 8](#ex8)의 tautological bundle $$\gamma$$는 $$c_1(\gamma)$$가 $$H^2(\CP^\infty;\mathbb{Z})\cong\mathbb{Z}$$의 생성원이라 $$c_1(\bar{\gamma})=-c_1(\gamma)\neq c_1(\gamma)$$이고, 따라서 $$\gamma\not\cong\bar{\gamma}$$이다. 물론 이 구별에는 한계가 있어서, 홀수 Chern class가 모두 $$2$$-torsion이거나 $$0$$인 bundle의 켤레는 Chern class만으로는 구별되지 않는다.
+가령 [예시 8](#ex8)의 tautological bundle $$\gamma$$는 $$c_1(\gamma)$$가 $$H^2(\CP^\infty;\mathbb{Z})\cong\mathbb{Z}$$의 생성원이라 $$c_1(\bar{\gamma})=-c_1(\gamma)\neq c_1(\gamma)$$이고, 따라서 $$\gamma\not\cong\bar{\gamma}$$이다. 물론 이 구별에는 한계가 있어서, 홀수 Chern class가 모두 $$2$$-torsion이거나 $$0$$인 bundle의 켤레는 Chern class만으로는 구별되지 않지만 여전히 Chern class가 real bundle보다는 풍부한 정보를 갖고 있음을 확인할 수 있다.
 
 한편 지금까지의 예시는 모두 line bundle이었으므로, rank가 높은 bundle에서 [정리 9](#thm9)이 실제 계산에 어떻게 쓰이는지를 보여주는 예시를 하나 보기로 한다.
 
 ::: 예시 11
-유한차원 complex projective space $$\CP^n=\Gr_1(\mathbb{C}^{n+1})$$와 그 위의 tautological line bundle $$\gamma\subseteq\CP^n\times\mathbb{C}^{n+1}$$을 생각하자. 이는 [예시 8](#ex8)의 $$\gamma$$를 $$\CP^n\subseteq\CP^\infty$$에 제한한 것이며, cell 구조가 짝수 차원에만 있으므로 restriction $$H^k(\CP^\infty;\mathbb{Z})\rightarrow H^k(\CP^n;\mathbb{Z})$$은 $$k\leq 2n$$에서 isomorphism이다. 따라서 [명제 10](#prop10)에 따라 $$x=c_1(\bar{\gamma})=-c_1(\gamma)$$로 두면
+이번 글에서 우리는 유한차원 complex projective space $$\CP^n=\Gr_1(\mathbb{C}^{n+1})$$의 tangent bundle의 total Chern class를 계산한다. 
+
+이를 위해 우선 이 위에 정의된 tautological line bundle $$\gamma\subseteq\CP^n\times\mathbb{C}^{n+1}$$을 생각하자. 이는 [예시 8](#ex8)의 universal line bundle $$\gamma$$를 $$\CP^n\hookrightarrow\CP^\infty$$으로 제한한 것이며, cell 구조가 짝수 차원에만 있으므로 restriction $$H^k(\CP^\infty;\mathbb{Z})\rightarrow H^k(\CP^n;\mathbb{Z})$$은 $$k\leq 2n$$에서 isomorphism이다. 따라서 [명제 10](#prop10)에 따라 $$x=c_1(\bar{\gamma})=-c_1(\gamma)$$로 두면
 
 $$H^\bullet(\CP^n;\mathbb{Z})=\mathbb{Z}[x]/(x^{n+1})$$
 
 이다.
 
-이제 tangent bundle을 본다. 한 점 $$\ell\in\CP^n$$은 직선 $$\ell\subseteq\mathbb{C}^{n+1}$$이고, Hermitian 내적을 고정하면 $$\ell$$에 가까운 직선들은 linear map $$\ell\rightarrow\ell^\perp$$들의 graph로 유일하게 나타난다. 곧 fiber별 $$\mathbb{C}$$-linear map들의 bundle을 $$\Hom$$으로 적으면
+이제 tangent bundle을 보자. 이 공간의 한 점 $$\ell\in\CP^n$$은 직선 $$\ell\subseteq\mathbb{C}^{n+1}$$이고, Hermitian 내적을 고정하면 $$\ell$$에 가까운 직선들은 linear map $$\ell\rightarrow\ell^\perp$$들의 graph로 유일하게 나타난다. 곧 fiber별 $$\mathbb{C}$$-linear map들의 bundle을 $$\Hom$$으로 적으면
 
 $$T\CP^n\cong\Hom(\gamma,\gamma^\perp)$$
 
-이다. 여기에 line bundle $$\Hom(\gamma,\gamma)$$ (identity가 어디서도 $$0$$이 아닌 section을 주므로 trivial) 를 Whitney sum하면
+이다. 여기에 trivial line bundle $$\Hom(\gamma,\gamma)$$를 Whitney sum하면
 
 $$T\CP^n\oplus\Hom(\gamma,\gamma)\cong\Hom(\gamma,\gamma^\perp\oplus\gamma)\cong\Hom(\gamma,\CP^n\times\mathbb{C}^{n+1})\cong\Hom(\gamma,\CP^n\times\mathbb{C})^{\oplus(n+1)}$$
 
