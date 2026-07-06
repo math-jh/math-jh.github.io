@@ -66,6 +66,7 @@ window.KATEX_MACROS = {
     "\\Ad":"\\operatorname{Ad}",
     "\\ad":"\\operatorname{ad}",
     "\\ann":"\\operatorname{ann}",
+    "\\area":"\\operatorname{area}",
     "\\Ass":"\\operatorname{Ass}",
     "\\Aut":"\\operatorname{Aut}",
     "\\AW":"\\operatorname{AW}",

@@ -11,10 +11,6 @@ sidebar:
 date: 2025-10-07
 weight: 11
 
-published: false
-
-drift_needed: true
-
 ---
 
 ## 오일러 특성류
@@ -372,9 +368,9 @@ $$c_i(\bar{E})=(-1)^ic_i(E)$$
 ::: 예시 11
 이번 글에서 우리는 유한차원 complex projective space $$\CP^n=\Gr_1(\mathbb{C}^{n+1})$$의 tangent bundle의 total Chern class를 계산한다. 
 
-이를 위해 우선 이 위에 정의된 tautological line bundle $$\gamma\subseteq\CP^n\times\mathbb{C}^{n+1}$$을 생각하자. 이는 [예시 8](#ex8)의 universal line bundle $$\gamma$$를 $$\CP^n\hookrightarrow\CP^\infty$$으로 제한한 것이며, cell 구조가 짝수 차원에만 있으므로 restriction $$H^k(\CP^\infty;\mathbb{Z})\rightarrow H^k(\CP^n;\mathbb{Z})$$은 $$k\leq 2n$$에서 isomorphism이다. 따라서 [명제 10](#prop10)에 따라 $$x=c_1(\bar{\gamma})=-c_1(\gamma)$$로 두면
+이를 위해 우선 이 위에 정의된 tautological line bundle $$\gamma\subseteq\CP^n\times\mathbb{C}^{n+1}$$을 생각하자. 이는 [예시 8](#ex8)의 universal line bundle $$\gamma$$를 $$\CP^n\hookrightarrow\CP^\infty$$으로 제한한 것이며, cell 구조가 짝수 차원에만 있으므로 restriction $$H^k(\CP^\infty;\mathbb{Z})\rightarrow H^k(\CP^n;\mathbb{Z})$$은 $$k\leq 2n$$에서 isomorphism이다. 따라서 [명제 10](#prop10)에 따라 $$\x=c_1(\bar{\gamma})=-c_1(\gamma)$$로 두면
 
-$$H^\bullet(\CP^n;\mathbb{Z})=\mathbb{Z}[x]/(x^{n+1})$$
+$$H^\bullet(\CP^n;\mathbb{Z})=\mathbb{Z}[\x]/(\x^{n+1})$$
 
 이다.
 
@@ -384,15 +380,17 @@ $$T\CP^n\cong\Hom(\gamma,\gamma^\perp)$$
 
 이다. 여기에 trivial line bundle $$\Hom(\gamma,\gamma)$$를 Whitney sum하면
 
-$$T\CP^n\oplus\Hom(\gamma,\gamma)\cong\Hom(\gamma,\gamma^\perp\oplus\gamma)\cong\Hom(\gamma,\CP^n\times\mathbb{C}^{n+1})\cong\Hom(\gamma,\CP^n\times\mathbb{C})^{\oplus(n+1)}$$
+$$T\CP^n\oplus\Hom(\gamma,\gamma)\cong\Hom(\gamma,\gamma^\perp\oplus\gamma)\cong\Hom(\gamma,\varepsilon^{n+1})\cong\Hom(\gamma,\varepsilon^1)^{\oplus(n+1)}$$
 
-인데, Hermitian 내적이 주는 conjugate-linear isomorphism $$\gamma\cong\Hom(\gamma,\CP^n\times\mathbb{C})$$는 곧 complex vector bundle의 isomorphism $$\Hom(\gamma,\CP^n\times\mathbb{C})\cong\bar{\gamma}$$이다. Trivial bundle은 한 점으로부터의 pullback이므로 [명제 7](#prop7)의 naturality에 의해 total Chern class가 $$1$$이고, 따라서 [정리 9](#thm9)로부터
+이다. 여기서 $$\varepsilon^{n+1}$$은 rank $$n+1$$ trivial bundle이다. 따라서, 우변의 $$\Hom(\gamma, \varepsilon^1)$$을 $$\overline{\gamma}$$와 identify하면 [정리 9](#thm9)로부터 다음의 식
 
-$$c(T\CP^n)=c\bigl(T\CP^n\oplus\Hom(\gamma,\gamma)\bigr)=c(\bar{\gamma})^{n+1}=(1+x)^{n+1}$$
+$$c(T\CP^n)=c\bigl(T\CP^n\oplus\Hom(\gamma,\gamma)\bigr)=c(\bar{\gamma})^{n+1}=(1+\x)^{n+1}$$
 
-을 얻는다.
+을 얻으며, 이를 전개하면 $$H^\bullet(\CP^n)=\mathbb{Z}[\x]/(\x^{n+1})$$이므로 
 
-특히 top Chern class는 $$c_n(T\CP^n)=(n+1)x^n$$이다. $$\CP^n$$의 cohomology가 짝수 차수 $$0,2,\ldots,2n$$에서만 $$\mathbb{Z}$$이므로 $$\rchi(\CP^n)=n+1$$인데, $$c_n(T\CP^n)=e\bigl((T\CP^n)_{\mathbb{R}}\bigr)$$를 fundamental class 위에서 evaluate한 것이 $$\rchi$$를 준다는 앞 절의 논의와 비교하면 $$(n+1)\langle x^n,[\CP^n]\rangle=n+1$$, 곧 $$x^n$$이 complex 구조가 주는 방향과 호환되는 $$H^{2n}(\CP^n;\mathbb{Z})$$의 생성원이라는 것까지 알 수 있다.
+$$c(T\CP^n)=(n+1)\x^n+\cdots +1$$
+
+임을 안다. 
 :::
 
 ## 폰트랴긴 특성류
@@ -407,7 +405,7 @@ $$p_i(E)=(-1)^i c_{2i}(E\otimes_{\mathbb{R}}\mathbb{C})$$
 로 정의한다.
 :::
 
-Complexification $$E\otimes_{\mathbb{R}}\mathbb{C}$$는 $$v\otimes z\mapsto v\otimes\bar{z}$$를 통해 그 켤레 $$\overline{E\otimes\mathbb{C}}$$와 isomorphic하다. 그럼 [명제 10](#prop10)에 의하여 $$c_{2i+1}(E\otimes\mathbb{C})=-c_{2i+1}(E\otimes\mathbb{C})$$, 곧 홀수 Chern class들은 모두 $$2$$-torsion이 되어 ($$2c_{2i+1}=0$$) 본질적 정수 정보를 담지 못한다. 따라서 짝수 자리의 Chern class만 살아남고, 부호 $$(-1)^i$$를 붙여 $$p_i$$로 정의한 것이다. Pontryagin class는 $$H^{4i}(B;\mathbb{Z})$$에 살며, Stiefel-Whitney class가 $$\mathbb{Z}/2$$에서 하던 일의 real vector bundle 정수 판본을 $$4$$의 배수 차수에서 수행한다.
+Complexification $$E\otimes_{\mathbb{R}}\mathbb{C}$$는 $$v\otimes z\mapsto v\otimes\bar{z}$$를 통해 그 켤레 $$\overline{E\otimes\mathbb{C}}$$와 isomorphic하다. 그럼 [명제 10](#prop10)에 의하여 $$c_{2i+1}(E\otimes\mathbb{C})=-c_{2i+1}(E\otimes\mathbb{C})$$, 곧 홀수 Chern class들은 모두 $$2$$-torsion이 되어 ($$2c_{2i+1}=0$$) 본질적으로 유의미한 정보를 담지 못한다. 이때문에 우리는 짝수 자리의 (부호가 있는) Chern class만 사용하여 $$i$$번째 class를 정의하고, 또 Chern class는 본질적으로 자기 번호의 두 배의 index의 cohomology class에 살고 있으므로 Pontryagin class는 $$H^{4i}(B;\mathbb{Z})$$에 살게 된다. 직관적으로 이는 Stiefel-Whitney class가 $$\mathbb{Z}/2$$에서 하던 일을 (complex vector bundle로 넘어가지 않고) $$\mathbb{Z}$$-coefficient로 가져온 것이자, Chern class가 complex vector bundle에서 하던 일을 real vector bundle로 가지고 내려온 것으로 생각할 수 있다. 
 
 기본적인 성질들 역시 complexification을 따라 Chern class로부터 내려온다. Total Pontryagin class는 $$p(E)=1+p_1(E)+p_2(E)+\cdots$$로 적는다.
 
@@ -419,42 +417,10 @@ Real vector bundle $$E,F\rightarrow B$$에 대하여 다음이 성립한다.
 3. Complex vector bundle $$E$$에 대하여 $$E_{\mathbb{R}}\otimes_{\mathbb{R}}\mathbb{C}\cong E\oplus\bar{E}$$이며, 따라서 $$p_i(E_{\mathbb{R}})$$는 $$E$$의 Chern class들의 다항식이다. 가령 $$p_1(E_{\mathbb{R}})=c_1(E)^2-2c_2(E)$$이다.
 :::
 ::: 증명
-(1)은 complexification이 pullback과 교환한다는 것과 [명제 7](#prop7)의 naturality에서 즉시 나온다.
+(1)은 complexification이 pullback과 교환하고 [명제 7](#prop7)의 naturality에서 즉시 나온다. (2)도 $$(E\oplus F)\otimes\mathbb{C}\cong(E\otimes\mathbb{C})\oplus(F\otimes\mathbb{C})$$에 [정리 9](#thm9)를 적용하면 되는데, [정의 12](#def12) 아래 관찰대로 홀수 Chern class가 모두 $$2$$-torsion이므로 이들이 낀 항은 $$2$$를 곱하면 소멸하고, 남는 짝수항이 $$p(E)\smile p(F)$$를 준다.
 
-(2)를 보자. $$(E\oplus F)\otimes\mathbb{C}\cong(E\otimes\mathbb{C})\oplus(F\otimes\mathbb{C})$$이므로 [정리 9](#thm9)에 의하여
-
-$$c_{2i}\bigl((E\oplus F)\otimes\mathbb{C}\bigr)=\sum_{j+k=2i}c_j(E\otimes\mathbb{C})\smile c_k(F\otimes\mathbb{C})$$
-
-이다. $$j,k$$가 모두 짝수인 항들은 $$j=2a$$, $$k=2b$$로 두면 $$c_{2a}(E\otimes\mathbb{C})=(-1)^ap_a(E)$$ 등에 의해 정확히 $$(-1)^i\sum_{a+b=i}p_a(E)\smile p_b(F)$$가 되고, $$j,k$$가 모두 홀수인 항들은 $$2$$-torsion class 두 개의 곱이므로 $$2$$를 곱하면 소멸한다. 양변에 $$(-1)^i$$를 곱하면 $$p_i(E\oplus F)-\sum_{a+b=i}p_a(E)\smile p_b(F)$$가 $$2$$-torsion임을 얻는다.
-
-(3)에서 $$E$$의 complex structure $$J$$를 $$E_{\mathbb{R}}\otimes\mathbb{C}$$에 $$\mathbb{C}$$-linear하게 확장하면 $$J$$는 고유값 $$\pm i$$를 갖고, 그 고유공간 분해가 complex vector bundle의 직합 분해를 준다. $$v\mapsto(v\otimes 1-Jv\otimes i)/2$$가 $$E$$에서 $$i$$-고유공간으로 가는 isomorphism이고, $$v\mapsto(v\otimes 1+Jv\otimes i)/2$$가 $$\bar{E}$$에서 $$(-i)$$-고유공간으로 가는 isomorphism임을 직접 확인할 수 있다. 그럼 [정리 9](#thm9)과 [명제 10](#prop10)에 의하여 $$c(E_{\mathbb{R}}\otimes\mathbb{C})=c(E)\smile c(\bar{E})$$이고, 차수 $$4$$ 부분을 읽으면
-
-$$c_2(E\oplus\bar{E})=c_2(E)+c_1(E)c_1(\bar{E})+c_2(\bar{E})=2c_2(E)-c_1(E)^2$$
-
-이므로 $$p_1(E_{\mathbb{R}})=-c_2(E_{\mathbb{R}}\otimes\mathbb{C})=c_1(E)^2-2c_2(E)$$이다.
+(3)만 약간의 계산이 필요하다. $$E_{\mathbb{R}}\otimes\mathbb{C}$$으로 complexify하면, 이 과정에서 complex structure는 $$J\in \End(E)$$로 나오며, 그 고유값은 $$\pm i$$이다. 이제 이를 $$\mathbb{C}$$-linear로 확장하면 그 $$\pm i$$ 고유공간 분해가 $$E_{\mathbb{R}}\otimes\mathbb{C}\cong E\oplus\bar{E}$$를 준다. 그럼 이제 [정리 9](#thm9)와 [명제 10](#prop10)으로 $$c_2(E_{\mathbb{R}}\otimes\mathbb{C})=c_2(E\oplus\bar{E})=2c_2(E)-c_1(E)^2$$이므로 이를 Pontryagin class로 가지고 오면 원하는 결과를 얻는다.
 :::
-
-둘째 성질의 $$2$$-torsion 모호함은 $$F$$가 trivial bundle일 때는 사라진다. Rank $$k$$ trivial bundle을 $$\varepsilon^k$$로 적으면 $$\varepsilon^k\otimes\mathbb{C}$$도 trivial이라 total Chern class가 $$1$$이고, 따라서 정확한 등식
-
-$$p(E\oplus\varepsilon^k)=p(E)$$
-
-가 성립한다. 곧 Pontryagin class는 trivial bundle을 더해도 변하지 않는 *stable* 불변량이다.
-
-::: 예시 14
-[예시 11](#ex11)에서 $$c(T\CP^2)=(1+x)^3$$이므로 $$c_1(T\CP^2)=3x$$, $$c_2(T\CP^2)=3x^2$$이고, [명제 13](#prop13)의 (3)에 의하여
-
-$$p_1\bigl((T\CP^2)_{\mathbb{R}}\bigr)=(3x)^2-2\cdot 3x^2=3x^2$$
-
-이다. 더 높은 $$p_i$$들은 $$H^{4i}(\CP^2)=0$$이라 자동으로 사라지므로 $$p\bigl((T\CP^2)_{\mathbb{R}}\bigr)=1+3x^2$$이다. 특히 이것이 $$1$$이 아니므로, stability에 의하여 $$(T\CP^2)_{\mathbb{R}}$$는 trivial bundle을 아무리 더해도 trivial이 되지 않는다.
-
-반면 sphere $$S^n\subseteq\mathbb{R}^{n+1}$$의 tangent bundle은 outward unit normal이 normal bundle을 trivialize하므로
-
-$$TS^n\oplus\varepsilon^1\cong\varepsilon^{n+1}$$
-
-을 만족하고, 따라서 $$p(TS^n)=p(TS^n\oplus\varepsilon^1)=1$$이다. 그런데 $$n$$이 짝수이면 $$\rchi(S^n)=2$$이므로 $$e(TS^n)\neq 0$$이고 $$TS^n$$은 trivial bundle이 아니다. 곧 Pontryagin class는 stable 불변량인 대가로, trivial bundle 하나만 더하면 사라지는 이러한 nontriviality는 감지하지 못한다.
-:::
-
-이로써 우리는 기본적인 특성류 네 가지, 곧 Stiefel-Whitney class $$w_i$$, Euler class $$e$$, Chern class $$c_i$$, Pontryagin class $$p_i$$를 모두 구성하였다. 이들은 각기 다른 coefficient와 차수에서 bundle의 nontriviality에 대한 obstruction을 주며, [예시 14](#ex14)에서 보았듯 어느 하나가 놓치는 정보를 다른 하나가 붙잡기도 하므로 서로를 대체하지 않는다.
 
 ---
 
