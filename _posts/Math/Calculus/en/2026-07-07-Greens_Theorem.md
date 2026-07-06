@@ -10,8 +10,9 @@ sidebar:
 
 date: 2026-07-07
 weight: 18
-translated_at: 2026-07-06T19:00:02+00:00
+translated_at: 2026-07-06T21:30:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-06T21:30:02+00:00
 ---
 The fundamental theorem of calculus and the fundamental theorem of line integrals share a common spirit: what happens inside a region is expressed as an integral over its boundary. This can be seen as the prototype of later theorems such as the divergence theorem and Stokes' theorem, and Green's theorem, which we examine in this post, can be regarded as the two-dimensional version of this spirit.
 
