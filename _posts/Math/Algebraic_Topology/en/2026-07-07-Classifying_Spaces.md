@@ -179,7 +179,7 @@ Details for both steps follow §14 of [Mil], [tD], and §4 of [Hus].
 
 The classification theorem translates the geometric classification of principal $$G$$-bundles into purely homotopy-theoretic data $$[X,BG]$$. Combined with [Proposition 4](#prop4), the classification of rank $$n$$ real vector bundles is reduced to $$[X,B\GL(n,\mathbb{R})]$$, and in the complex case to $$[X,B\GL(n,\mathbb{C})]$$, and we will soon see that this is the same content as the classification via Grassmannians from the previous post.
 
-::: Remark 9
+::: Lemma 9
 The construction of the classifying space is functorial in $$G$$. Given a continuous group homomorphism $$\phi:G\rightarrow H$$, the associated bundle $$EG\times_G H$$ obtained by changing the $$G$$-action on $$EG$$ to an $$H$$-action via $$\phi$$ induces a map $$B\phi:BG\rightarrow BH$$ classifying it. This satisfies $$B(\psi\circ\phi)\simeq B\psi\circ B\phi$$, making $$G\mapsto BG$$ a functor on the homotopy category. For example, the inclusion $$\Umat(n)\hookrightarrow\GL(n,\mathbb{C})$$ induces $$B\Umat(n)\rightarrow B\GL(n,\mathbb{C})$$, which is used below.
 :::
 
@@ -239,7 +239,7 @@ Since $$BT=(\CP^\infty)^n$$, and from the calculation of $$BS^1=\CP^\infty$$ in 
 
 $$H^\bullet(BT;\mathbb{Z})\cong\bigotimes_{i=1}^n \mathbb{Z}[t_i]=\mathbb{Z}[t_1,\ldots,t_n].$$
 
-([§Cup Products](/en/math/algebraic_topology/cup_products)) A character $$\chi:T\rightarrow S^1$$ induces $$B\chi:BT\rightarrow BS^1=\CP^\infty$$ ([Remark 9](#rmk9)) and corresponds to $$B\chi^\ast(t)\in H^2(BT;\mathbb{Z})$$, and since the $$i$$-th coordinate projection $$T\rightarrow S^1$$ goes to $$t_i$$, this correspondence is the isomorphism sending $$\Hom(T,S^1)\cong\mathbb{Z}^n$$ to $$H^2(BT;\mathbb{Z})=\bigoplus_i\mathbb{Z}t_i$$. Since the polynomial ring is the symmetric algebra on its degree $$2$$ part, the final claim follows.
+([§Cup Products](/en/math/algebraic_topology/cup_products)) A character $$\chi:T\rightarrow S^1$$ induces $$B\chi:BT\rightarrow BS^1=\CP^\infty$$ ([Lemma 9](#lem9)) and corresponds to $$B\chi^\ast(t)\in H^2(BT;\mathbb{Z})$$, and since the $$i$$-th coordinate projection $$T\rightarrow S^1$$ goes to $$t_i$$, this correspondence is the isomorphism sending $$\Hom(T,S^1)\cong\mathbb{Z}^n$$ to $$H^2(BT;\mathbb{Z})=\bigoplus_i\mathbb{Z}t_i$$. Since the polynomial ring is the symmetric algebra on its degree $$2$$ part, the final claim follows.
 :::
 
 This isomorphism allows us to read polynomials on the character lattice as cohomology classes of $$BT$$, and becomes central when dealing with invariants of spaces with a torus action. The case of the unitary group requires a calculation one step further, but we already saw the result in the previous post.
