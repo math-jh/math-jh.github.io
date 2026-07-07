@@ -105,13 +105,13 @@ $$\Delta: B\rightarrow B\times B$$
 
 Sheaf cohomology는 sheaf의 global section의 존재에 대한 obstruction을 cohomology가 담고 있다는 것을 보여줬다. 지금 살펴볼 체흐 코호몰로지도 그 결과는 비슷하지만, 이에 대한 답을 local section들을 이어붙여 global section을 만드는 과정에서 살펴본다는 점에서 차이가 있다. 어쨌든, manifold를 포함하는 좋은 경우에 체흐 코호몰로지는 sheaf cohomology와 같은 결과를 주고, 따라서 constant sheaf의 체흐 코호몰로지는 우리가 원래 알던 cohomology를 복원한다.
 
-위상공간 $$X$$와 그 위에 정의된 sheaf $$\mathscr{F}$$, 그리고 $$X$$의 open cover $$\mathcal{U}=\{U_i\}_{i\in I}$$를 생각하자. 각각의 $$p\geq 0$$에 대하여, *Čech $$p$$-cochain*들의 group은 다음의 식
+위상공간 $$X$$와 그 위에 정의된 sheaf $$\mathcal{F}$$, 그리고 $$X$$의 open cover $$\mathcal{U}=\{U_i\}_{i\in I}$$를 생각하자. 각각의 $$p\geq 0$$에 대하여, *Čech $$p$$-cochain*들의 group은 다음의 식
 
-$$\check{C}^p(\mathcal{U},\mathscr{F})=\prod_{i_0,\ldots,i_p}\mathscr{F}(U_{i_0}\cap \cdots\cap U_{i_p})$$
+$$\check{C}^p(\mathcal{U},\mathcal{F})=\prod_{i_0,\ldots,i_p}\mathcal{F}(U_{i_0}\cap \cdots\cap U_{i_p})$$
 
 으로 정의된다. 즉 이는 모든 $$p$$개의 intersection들 위에 정의된 section들의 모임이다. 이 때 differential
 
-$$\check{C}^p(\mathcal{U},\mathscr{F})\rightarrow \check{C}^{p+1}(\mathcal{U}, \mathscr{F})$$
+$$\check{C}^p(\mathcal{U},\mathcal{F})\rightarrow \check{C}^{p+1}(\mathcal{U}, \mathcal{F})$$
 
 은 다음의 식
 
@@ -119,11 +119,11 @@ $$(\delta c)_{i_0,\ldots, i_{p+1}}=\sum_{k=0}^{p+1} (-1)^k c_{i_0,\ldots,\hat{i}
 
 로 주어진다. 그럼 *Čech cohomology*는 다음의 식
 
-$$\check{H}^p(\mathcal{U}, \mathscr{F})=\frac{\ker(\check{C}^p\rightarrow \check{C}^{p+1})}{\im(\check{C}^{p-1}\rightarrow \check{C}^{p})}$$
+$$\check{H}^p(\mathcal{U}, \mathcal{F})=\frac{\ker(\check{C}^p\rightarrow \check{C}^{p+1})}{\im(\check{C}^{p-1}\rightarrow \check{C}^{p})}$$
 
-으로 주어진다. 만일 $$\mathcal{U}$$가 충분히 좋은 cover라면, 가령 임의의 finite intersection이 contractible하거나, $$\mathscr{F}$$에 대해 acyclic하다면 우리는 canonical isomorphism
+으로 주어진다. 만일 $$\mathcal{U}$$가 충분히 좋은 cover라면, 가령 임의의 finite intersection이 contractible하거나, $$\mathcal{F}$$에 대해 acyclic하다면 우리는 canonical isomorphism
 
-$$H^p(X,\mathscr{F})\cong \check{H}^p(\mathcal{U},\mathscr{F})$$
+$$H^p(X,\mathcal{F})\cong \check{H}^p(\mathcal{U},\mathcal{F})$$
 
 을 얻는다. 
 
@@ -186,7 +186,7 @@ Vector bundle $$E \rightarrow B$$ of rank $$n$$과 vector bundle $$F\rightarrow 
 
 ## 그라스만 다양체
 
-더 일반적으로, 임의의 공간 위의 rank $$k$$ vector bundle은 *infinite Grassmannian* $$\Gr_k(\mathbb{R}^\infty)$$의 universal bundle $$\gamma^k_\infty:E(\gamma_\infty^k)\rightarrow \Gr_k(\mathbb{R}^\infty)$$을 pullback하여 얻어진다. 즉 임의의 vector bundle $$p:E \rightarrow B$$가 주어졌다면, $$p$$에서 $$\gamma_k^\infty$$로의 유일한 bundle map이 존재하여 다음의 diagram
+더 일반적으로, 임의의 공간 위의 rank $$k$$ vector bundle은 *infinite Grassmannian* $$\Gr(k,\mathbb{R}^\infty)$$의 universal bundle $$\gamma^k_\infty:E(\gamma_\infty^k)\rightarrow \Gr(k,\mathbb{R}^\infty)$$을 pullback하여 얻어진다. 즉 임의의 vector bundle $$p:E \rightarrow B$$가 주어졌다면, $$p$$에서 $$\gamma_k^\infty$$로의 유일한 bundle map이 존재하여 다음의 diagram
 
 ![universality](/assets/images/Math/Algebraic_Topology/Stiefel_Whitney_Classes-4.svg){:style="width:8.86em" class="invert" .align-center}
 
@@ -196,13 +196,13 @@ Vector bundle $$E \rightarrow B$$ of rank $$n$$과 vector bundle $$F\rightarrow 
 
 과 isomorphic하다. 뿐만 아니라, vector bundle $$E$$의 Stiefel-Whitney class 또한 universal bundle $$\gamma^k_\infty$$의 Stiefel-Whitney class $$w(\gamma^k_\infty)$$를 pullback하여 얻어진다. 
 
-이렇게 모든 rank $$k$$ bundle을 자신의 pullback으로 남김없이 실현한다는 뜻에서 $$\gamma^k_\infty$$을 rank $$k$$ vector bundle의 *universal family*라 부른다. 곧 이 하나의 다발이 모든 rank $$k$$ bundle을 매개하며, bundle의 isomorphism class는 classifying map $$B\rightarrow\Gr_k(\mathbb{R}^\infty)$$의 homotopy class와 일대일로 대응한다. 
+이렇게 모든 rank $$k$$ bundle을 자신의 pullback으로 남김없이 실현한다는 뜻에서 $$\gamma^k_\infty$$을 rank $$k$$ vector bundle의 *universal family*라 부른다. 곧 이 하나의 다발이 모든 rank $$k$$ bundle을 매개하며, bundle의 isomorphism class는 classifying map $$B\rightarrow\Gr(k,\mathbb{R}^\infty)$$의 homotopy class와 일대일로 대응한다. 
 
-따라서 우리는 (infinite) Grassmannian과 그 위의 universal bundle, 그리고 이 bundle의 Stiefel-Whitney class가 존재하는 infinite Grassmannian의 cohomology ring $$H^\bullet(\Gr_k(\mathbb{R}^\infty), \mathbb{Z}/2)$$에 대해 살펴보아야 한다. Grassmannian의 성질을 모두 엄밀하게 증명하는 것은 복잡한 일이므로, 이 절에서는 이들 성질에 대한 소개와, (가능하다면) 간단한 설명을 주는 것으로 만족하기로 한다.
+따라서 우리는 (infinite) Grassmannian과 그 위의 universal bundle, 그리고 이 bundle의 Stiefel-Whitney class가 존재하는 infinite Grassmannian의 cohomology ring $$H^\bullet(\Gr(k,\mathbb{R}^\infty), \mathbb{Z}/2)$$에 대해 살펴보아야 한다. Grassmannian의 성질을 모두 엄밀하게 증명하는 것은 복잡한 일이므로, 이 절에서는 이들 성질에 대한 소개와, (가능하다면) 간단한 설명을 주는 것으로 만족하기로 한다.
 
-우선 우리는 $$\Gr_k(\mathbb{R}^n)$$의 기본적인 성질들과 cohomology ring을 살펴본다. 정의에 의해 $$\Gr_k(\mathbb{R}^{n})$$은 $$\mathbb{R}^{n}$$의 모든 $$k$$차원 linear subspace들의 공간이다. 예를 들어 $$\Gr_1(\mathbb{R}^{n+1})$$은 그 정의에 의하여 projective space $$\RP^n$$이다. $$\Gr_k(\mathbb{R}^{n})$$의 각각의 점들은 $$\mathbb{R}^{n}$$의 부분공간이므로, 우리는 두 점 (즉 $$\mathbb{R}^{n}$$의 두 $$k$$차원 부분공간)이 서로 얼마나 가까운지를 직관적으로 알고 있다. 이는 가령, $$\mathbb{R}^{n+1}$$에서 "기울기"가 비슷한 두 직선에 해당하는 점들이 $$\RP^n$$에서 가까운 점들인 것과 동일한 일이며, 이는 $$n\times k$$행렬을 이용하여 엄밀하게 정의할 수 있으며, 이 위상구조 하에서 $$\Gr_k(\mathbb{R}^{n})$$은 $$k(n-k)$$차원 compact topological manifold가 된다. 
+우선 우리는 $$\Gr(k,\mathbb{R}^n)$$의 기본적인 성질들과 cohomology ring을 살펴본다. 정의에 의해 $$\Gr(k,\mathbb{R}^{n})$$은 $$\mathbb{R}^{n}$$의 모든 $$k$$차원 linear subspace들의 공간이다. 예를 들어 $$\Gr(1,\mathbb{R}^{n+1})$$은 그 정의에 의하여 projective space $$\RP^n$$이다. $$\Gr(k,\mathbb{R}^{n})$$의 각각의 점들은 $$\mathbb{R}^{n}$$의 부분공간이므로, 우리는 두 점 (즉 $$\mathbb{R}^{n}$$의 두 $$k$$차원 부분공간)이 서로 얼마나 가까운지를 직관적으로 알고 있다. 이는 가령, $$\mathbb{R}^{n+1}$$에서 "기울기"가 비슷한 두 직선에 해당하는 점들이 $$\RP^n$$에서 가까운 점들인 것과 동일한 일이며, 이는 $$n\times k$$행렬을 이용하여 엄밀하게 정의할 수 있으며, 이 위상구조 하에서 $$\Gr(k,\mathbb{R}^{n})$$은 $$k(n-k)$$차원 compact topological manifold가 된다. 
 
-이제 이들의 cohomology ring을 살펴보자. 우리는 어차피 $$\mathbb{Z}/2$$-coefficient를 사용하고 있으므로, [§푸앵카레 쌍대성, ⁋정리 11](/ko/math/algebraic_topology/Poincare_duality#thm11)에 의하여, $$\Gr_k(\mathbb{R}^n)$$의 homology cycle을 생각해도 된다.
+이제 이들의 cohomology ring을 살펴보자. 우리는 어차피 $$\mathbb{Z}/2$$-coefficient를 사용하고 있으므로, [§푸앵카레 쌍대성, ⁋정리 11](/ko/math/algebraic_topology/Poincare_duality#thm11)에 의하여, $$\Gr(k,\mathbb{R}^n)$$의 homology cycle을 생각해도 된다.
 
 이를 위해 $$\mathbb{R}^n$$의 full flag
 
@@ -236,20 +236,20 @@ $$F_0\subset F_1\subset\cdots\subset F_n$$
 
 이제 이를 바탕으로 다음의 부분집합
 
-$$\Omega_\lambda^\circ(F_\bullet)=\left\{V\in\Gr_k(F_n)\mid\text{$\dim(V\cap F_{n-k+i-\lambda_i})= i$ for all $1\leq i\leq k$}\right\}$$
+$$\Omega_\lambda^\circ(F_\bullet)=\left\{V\in\Gr(k,F_n)\mid\text{$\dim(V\cap F_{n-k+i-\lambda_i})= i$ for all $1\leq i\leq k$}\right\}$$
 
 을 생각하면, 이들은 각각 그 closure
 
-$$\Omega_\lambda(F_\bullet)=\left\{V\in\Gr_k(F_n)\mid\text{$\dim(V\cap F_{n-k+i-\lambda_i})\geq i$ for all $1\leq i\leq k$}\right\}$$
+$$\Omega_\lambda(F_\bullet)=\left\{V\in\Gr(k,F_n)\mid\text{$\dim(V\cap F_{n-k+i-\lambda_i})\geq i$ for all $1\leq i\leq k$}\right\}$$
 
 안에서 open submanifold이며, 이들 $$\Omega_\lambda(F_\bullet)$$들은 inclusion 
 
-$$\Omega_\lambda(F_\bullet)\hookrightarrow \Gr_k(\mathbb{R}^n)$$
+$$\Omega_\lambda(F_\bullet)\hookrightarrow \Gr(k,\mathbb{R}^n)$$
 
-을 통하여 $$\Gr_k(\mathbb{R}^n;\mathbb{Z}/2)$$의 homology class를 정의한다. 우리는 이들을 *Schubert cycle*이라 부르고, 이들의 Poincaré dual $$\sigma_\lambda$$을 *Schubert class*라 부른다. 이들은 degree $$\lvert \lambda\rvert=\sum \lambda_i$$의 cohomology class들이다. 이 때, 각각의 부분공간 $$\Omega_\lambda(F_\bullet)$$들은 flag $$F_\bullet$$의 선택에 의존하지만, 이들의 homology에서의 image인 Schubert cycle들은 $$F_\bullet$$의 선택에 의존하지 않고 따라서 Schubert class들도 그러하다. 또, $$H^\bullet(\Gr_k(\mathbb{R}^n);\mathbb{Z}/2)$$은 앞선 조건을 만족하는 partition $$\lambda$$들로 생성되는 polynomial algebra들이며, 따라서 우리는 이들 사이의 cup product 구조만 보면 충분하다.
+을 통하여 $$\Gr(k,\mathbb{R}^n;\mathbb{Z}/2)$$의 homology class를 정의한다. 우리는 이들을 *Schubert cycle*이라 부르고, 이들의 Poincaré dual $$\sigma_\lambda$$을 *Schubert class*라 부른다. 이들은 degree $$\lvert \lambda\rvert=\sum \lambda_i$$의 cohomology class들이다. 이 때, 각각의 부분공간 $$\Omega_\lambda(F_\bullet)$$들은 flag $$F_\bullet$$의 선택에 의존하지만, 이들의 homology에서의 image인 Schubert cycle들은 $$F_\bullet$$의 선택에 의존하지 않고 따라서 Schubert class들도 그러하다. 또, $$H^\bullet(\Gr(k,\mathbb{R}^n);\mathbb{Z}/2)$$은 앞선 조건을 만족하는 partition $$\lambda$$들로 생성되는 polynomial algebra들이며, 따라서 우리는 이들 사이의 cup product 구조만 보면 충분하다.
 
 ::: 예시 7
-예를 들어 $$\Gr_2(\mathbb{R}^4;\mathbb{Z}/2)$$를 보자. 우리는 여기에서 partition $$(1,0)$$에 해당하는 Schubert class $$\sigma_{(1,0)}$$의 제곱 
+예를 들어 $$\Gr(2,\mathbb{R}^4;\mathbb{Z}/2)$$를 보자. 우리는 여기에서 partition $$(1,0)$$에 해당하는 Schubert class $$\sigma_{(1,0)}$$의 제곱 
 
 $$\sigma_{(1,0)}\smile\sigma_{(1,0)}=\sigma_{(1,1)}+\sigma_{(2,0)}$$
 
@@ -276,48 +276,48 @@ $$G_\bullet:\quad \langle e_1+e_4\rangle\subset\langle e_1+e_4,e_2+e_3\rangle\su
 
 더 일반적으로 우리는 이들 partition을 *Young diagram*으로 나타내고, 이를 이용하여 두 Schubert class의 cup product $$\sigma_\lambda\smile\sigma_\mu$$를 계산했을 때, $$\lvert\nu\rvert=\lvert\lambda\rvert+\lvert\mu\rvert$$를 만족하는 $$\nu$$에 대해 $$\sigma_\nu$$ 앞에 붙는 계수를 계산할 수 있다.
 
-이제 우리는 $$\Gr_k(\mathbb{R}^\infty)$$와 그 위의 universal bundle을 정의해야 한다. 이를 위해 $$\Gr_k(\mathbb{R}^n)$$ 위의 tautoogical bundle을 먼저 정의한다. [예시 3](#ex3)과 같은 방식으로, $$\Gr_k(\mathbb{R}^{n+k})$$의 각각의 점마다 그 점에 해당하는 vector space를 달아주는 다음의 bundle
+이제 우리는 $$\Gr(k,\mathbb{R}^\infty)$$와 그 위의 universal bundle을 정의해야 한다. 이를 위해 $$\Gr(k,\mathbb{R}^n)$$ 위의 tautoogical bundle을 먼저 정의한다. [예시 3](#ex3)과 같은 방식으로, $$\Gr(k,\mathbb{R}^{n+k})$$의 각각의 점마다 그 점에 해당하는 vector space를 달아주는 다음의 bundle
 
-$$E(\gamma^k_n)=\left\{([V], x)\in \Gr_k(\mathbb{R}^{n+k})\mid \text{$V$ a $k$-dimensional subspace of $\mathbb{R}^{n+k}$ and $x\in V$}\right\}$$
+$$E(\gamma^k_n)=\left\{([V], x)\in \Gr(k,\mathbb{R}^{n+k})\mid \text{$V$ a $k$-dimensional subspace of $\mathbb{R}^{n+k}$ and $x\in V$}\right\}$$
 
-이 존재하며 이를 $$\Gr_k(\mathbb{R}^{n+k})$$의 *tautological bundle*이라 부른다. 
+이 존재하며 이를 $$\Gr(k,\mathbb{R}^{n+k})$$의 *tautological bundle*이라 부른다. 
 
 이제 각각의 $$n$$에 대하여, 다음의 식
 
 $$\mathbb{R}^{k+n} \rightarrow \mathbb{R}^{k+n+1};\qquad (x_1,\ldots,x_{k+n}) \mapsto (x_1,\ldots,x_{k+n},0)$$
 
-은 $$\mathbb{R}^{k+n}$$의 $$\mathbb{R}^{k+n+1}$$로의 inclusion을 정의하며, 우리는 이를 통해 $$\mathbb{R}^{k+n}$$의 $$k$$차원 subspace를 $$\mathbb{R}^{k+n+1}$$의 $$k$$차원 subspace로 볼 수 있다. 즉 위의 inclusion은 Grassmannian 사이의 inclusion $$\Gr_k(\mathbb{R}^{k+n})\rightarrow \Gr_k(\mathbb{R}^{k+n+1})$$을 유도한다. 이제 다음의 directed system
+은 $$\mathbb{R}^{k+n}$$의 $$\mathbb{R}^{k+n+1}$$로의 inclusion을 정의하며, 우리는 이를 통해 $$\mathbb{R}^{k+n}$$의 $$k$$차원 subspace를 $$\mathbb{R}^{k+n+1}$$의 $$k$$차원 subspace로 볼 수 있다. 즉 위의 inclusion은 Grassmannian 사이의 inclusion $$\Gr(k,\mathbb{R}^{k+n})\rightarrow \Gr(k,\mathbb{R}^{k+n+1})$$을 유도한다. 이제 다음의 directed system
 
-$$\Gr_k(\mathbb{R}^k)\hookrightarrow \Gr_k(\mathbb{R}^{k+1})\hookrightarrow\cdots$$
+$$\Gr(k,\mathbb{R}^k)\hookrightarrow \Gr(k,\mathbb{R}^{k+1})\hookrightarrow\cdots$$
 
 을 생각하면, 우리는 이들의 direct limit
 
-$$\Gr_k(\mathbb{R}^\infty)=\varinjlim_{n\geq 0}\Gr_k(\mathbb{R}^{k+i})$$
+$$\Gr(k,\mathbb{R}^\infty)=\varinjlim_{n\geq 0}\Gr(k,\mathbb{R}^{k+i})$$
 
 을 *infinite Grassmannian*이라 부른다. 마찬가지 방식으로 total space들의 direct limit
 
 $$E(\gamma_\infty^k)=\varinjlim_{n\geq 0} E(\gamma^k_{k+n})$$
 
-이 정의되며 이것이 $$\Gr_k(\mathbb{R}^\infty)$$ 위의 rank $$k$$ vector bundle을 정의한다. 이들은 당연히 inclusion $$\mathbb{R}^{k+n}\hookrightarrow \mathbb{R}^{k+n+1}$$의 선택에 의존하지 않는다. 
+이 정의되며 이것이 $$\Gr(k,\mathbb{R}^\infty)$$ 위의 rank $$k$$ vector bundle을 정의한다. 이들은 당연히 inclusion $$\mathbb{R}^{k+n}\hookrightarrow \mathbb{R}^{k+n+1}$$의 선택에 의존하지 않는다. 
 
-직관적으로 $$\Gr_k(\mathbb{R}^\infty)$$는 각각의 $$\Gr_k(\mathbb{R}^{k+n})$$들을 이어붙여 complex 구조를 주는 것으로 생각할 수 있다. 뿐만 아니라 tautological bundle들 $$E(\gamma^k_{n+k})$$들도 이 구조와 호환되도록 붙어있게 된다. 
+직관적으로 $$\Gr(k,\mathbb{R}^\infty)$$는 각각의 $$\Gr(k,\mathbb{R}^{k+n})$$들을 이어붙여 complex 구조를 주는 것으로 생각할 수 있다. 뿐만 아니라 tautological bundle들 $$E(\gamma^k_{n+k})$$들도 이 구조와 호환되도록 붙어있게 된다. 
 
-Finite Grassmannian의 Schubert class들을 infinite Grassmannian으로 옮기는 것은 방향이 맞지 않다. 그러나, 위에서 설명했듯 infinite Grassmannian은 finite Grassmannian들을 subcomplex로 가지는 공간이며, 위에서 만든 Schubert cycle들은 이 inclusion들에 대해 잘 행동한다. 즉 partition $$\lambda$$에 해당하는 $$\Gr_k(\mathbb{R}^{k+i})$$의 Schubert cycle을 $$\Gr_k(\mathbb{R}^{k+i})\rightarrow \Gr_k(\mathbb{R}^{k+i+1})$$를 통해 집어넣은 것이나, $$\Gr_k(\mathbb{R}^{k+i+1})$$에서 바로 partition $$\lambda$$에 해당하는 Schubert cycle을 $$\Gr_k(\mathbb{R}^n)\subset \Gr_k(\mathbb{R}^{k+i+1})$$과 교집합한 것이나 같은 결과를 준다.
+Finite Grassmannian의 Schubert class들을 infinite Grassmannian으로 옮기는 것은 방향이 맞지 않다. 그러나, 위에서 설명했듯 infinite Grassmannian은 finite Grassmannian들을 subcomplex로 가지는 공간이며, 위에서 만든 Schubert cycle들은 이 inclusion들에 대해 잘 행동한다. 즉 partition $$\lambda$$에 해당하는 $$\Gr(k,\mathbb{R}^{k+i})$$의 Schubert cycle을 $$\Gr(k,\mathbb{R}^{k+i})\rightarrow \Gr(k,\mathbb{R}^{k+i+1})$$를 통해 집어넣은 것이나, $$\Gr(k,\mathbb{R}^{k+i+1})$$에서 바로 partition $$\lambda$$에 해당하는 Schubert cycle을 $$\Gr(k,\mathbb{R}^n)\subset \Gr(k,\mathbb{R}^{k+i+1})$$과 교집합한 것이나 같은 결과를 준다.
 
 이제 $$k$$개의 partition들
 
 $$\lambda_1=(1,0,\cdots, 0),\quad \lambda_2=(2,0,\cdots,0),\qquad \lambda_k=(k,0,\cdots,0)$$
 
-을 생각하자. 그럼 이들은 위의 논증에 의하여 $$\Gr_k(\mathbb{R}^\infty)$$의 homology class들이 되어 다음의 함수
+을 생각하자. 그럼 이들은 위의 논증에 의하여 $$\Gr(k,\mathbb{R}^\infty)$$의 homology class들이 되어 다음의 함수
 
-$$w_i: H_\bullet(\Gr_k(\mathbb{R}^\infty);\mathbb{Z}/2)\rightarrow \mathbb{Z}/2; \qquad \text{$w_i(\Omega_{\lambda_i}(F_\bullet))=1$ and is $0$ otherwise}$$
+$$w_i: H_\bullet(\Gr(k,\mathbb{R}^\infty);\mathbb{Z}/2)\rightarrow \mathbb{Z}/2; \qquad \text{$w_i(\Omega_{\lambda_i}(F_\bullet))=1$ and is $0$ otherwise}$$
 
-들이 $$i$$번째 cohomology class $$H^i(\Gr_k(\mathbb{R}^\infty);\mathbb{Z}/2)$$에 있으며, 따라서 우리는 
+들이 $$i$$번째 cohomology class $$H^i(\Gr(k,\mathbb{R}^\infty);\mathbb{Z}/2)$$에 있으며, 따라서 우리는 
 
-$$w_1\in H^1(\Gr_k(\mathbb{R}^\infty);\mathbb{Z}/2),\cdots, w_k\in H^k(\Gr_k(\mathbb{R}^\infty);\mathbb{Z}/2)$$
+$$w_1\in H^1(\Gr(k,\mathbb{R}^\infty);\mathbb{Z}/2),\cdots, w_k\in H^k(\Gr(k,\mathbb{R}^\infty);\mathbb{Z}/2)$$
 
-임을 안다. 그럼 $$H^\bullet(\Gr_k(\mathbb{R}^\infty);\mathbb{Z}/2)$$는 *polynomial algebra로서* 이들 $$w_i$$에 의해 생성된다. 가령, 임의의 partition $$(a_1,\cdots,a_n)$$은 다음 monomial
+임을 안다. 그럼 $$H^\bullet(\Gr(k,\mathbb{R}^\infty);\mathbb{Z}/2)$$는 *polynomial algebra로서* 이들 $$w_i$$에 의해 생성된다. 가령, 임의의 partition $$(a_1,\cdots,a_n)$$은 다음 monomial
 
 $$w_1^{a_1}w_2^{a_2}\cdots w_k^{a_k}$$
 
-에 대응되며 이는 $$H^\bullet(\Gr_k(\mathbb{R}^\infty);\mathbb{Z}/2)$$의 (무한히 많은) *$$\mathbb{Z}/2$$-module로서의* gemerator 중 하나가 되며 이는 앞에서 언급한 Littlewood-Richardson rule에 의해 계산된다. 이제 이들 $$w_i$$들은 Stiefel-Whitney class가 만족하는 공리들을 모두 만족하며, 이것이 pullback에 의해 보존되는 것으로부터 존재성이 증명된다.
+에 대응되며 이는 $$H^\bullet(\Gr(k,\mathbb{R}^\infty);\mathbb{Z}/2)$$의 (무한히 많은) *$$\mathbb{Z}/2$$-module로서의* gemerator 중 하나가 되며 이는 앞에서 언급한 Littlewood-Richardson rule에 의해 계산된다. 이제 이들 $$w_i$$들은 Stiefel-Whitney class가 만족하는 공리들을 모두 만족하며, 이것이 pullback에 의해 보존되는 것으로부터 존재성이 증명된다.
