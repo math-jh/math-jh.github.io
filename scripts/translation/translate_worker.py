@@ -92,6 +92,7 @@ TRUNCATION_RATIO      = 0.60                 # min output/reference body length;
 # Local helper (label fix/audit)
 sys.path.insert(0, str(SCRIPT_DIR))
 from label_normalize import fix_text as label_fix, audit_text as label_audit  # noqa: E402
+from math_delimiters import normalize_if_safe  # noqa: E402
 
 
 # ---------------------------------------------------------------------------
@@ -986,6 +987,18 @@ def translate(
     # Blanket substring replacement; the math blog body never has legitimate
     # `/ko/` in prose or code, so we don't need a guarded regex.
     en_body = en_body.replace("/ko/", "/en/")
+    # Enforce the blog's `$$` unification rule (GUIDELINE §2). The model reflexively
+    # downgrades inline `$$x$$` to standard-markdown `$x$`, which both breaks the math
+    # (kramdown parses `_`/`*` inside `$...$` as emphasis) and collapses the `$$`-block
+    # count so the KO/EN check below mismatches and fires the expensive claude verify.
+    # Promote every top-level `$...$` back to `$$...$$` deterministically (the model
+    # instruction alone is not reliably followed — see 2026-07-07 en=51 vs ko=518).
+    # normalize_if_safe refuses a body with an odd/ambiguous `$` structure rather than
+    # risk corrupting a `\text{$k$}`/`\tag{$\ast$}`, leaving it for the count check.
+    en_body, _md_safe = normalize_if_safe(en_body)
+    if not _md_safe:
+        log(f"WARN ($-delimiter): normalization skipped for {ko_path.name} — "
+            f"odd/ambiguous `$` structure; left as-is for manual review")
 
     # ---- Step 4: compose final EN file ----
     polished_at_iso = translated_at_iso if reason == "polish" else None
@@ -1413,6 +1426,12 @@ def translate_drift_incremental(
         new_body = en_body                       # only fm/whitespace changed
     else:
         new_body = "\n\n".join(c for c in out_chunks if c) + "\n"
+    # Enforce the blog's `$$` unification rule on both re-translated and kept-verbatim
+    # regions (idempotent; promotion-only, so hand-fixed EN never regresses). See translate().
+    new_body, _md_safe = normalize_if_safe(new_body)
+    if not _md_safe:
+        log(f"WARN ($-delimiter): normalization skipped for {ko_path.name} (drift) — "
+            f"odd/ambiguous `$` structure")
 
     # Frontmatter: keep the existing EN translated fields (drift rarely edits
     # title/excerpt/description); only translate a field absent from EN.

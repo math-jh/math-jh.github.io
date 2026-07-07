@@ -81,7 +81,7 @@ $$\oint_C -y\mathop{dx} = \area(D)$$
 ::: 명제 3
 $$D$$의 경계 $$C$$가 양의 방향이고 $$\mathbf{F} = (P, Q)$$가 $$C^1$$이면, 단위접선 $$\mathbf{T}$$와 바깥 단위법선 $$\mathbf{n}$$에 대해
 
-$$\oint_C \mathbf{F} \cdot \mathbf{T}\mathop{ds} = \iint_D \left(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\right)\mathop{dA}, \qquad \oint_C \mathbf{F} \cdot \mathbf{n}\mathop{ds} = \iint_D \divergence F\mathop{dA}$$
+$$\oint_C \mathbf{F} \cdot \mathbf{T}\mathop{ds} = \iint_D \left(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\right)\mathop{dA}, \qquad \oint_C \mathbf{F} \cdot \mathbf{n}\mathop{ds} = \iint_D \divergence \mathbf{F}\mathop{dA}$$
 
 이다. 
 :::
@@ -99,7 +99,7 @@ $$\oint_C \mathbf{F}\cdot \mathbf{n}\mathop{ds} = \oint_C P\mathop{dy} - Q\matho
 
 인데, [정리 1](#thm1)을 $$(P, Q) \mapsto (-Q, P)$$에 적용하면 이것이 
 
-$$\iint_D (P_x + Q_y)\mathop{dA} = \iint_D \divergence F\mathop{dA}$$
+$$\iint_D (P_x + Q_y)\mathop{dA} = \iint_D \divergence \mathbf{F}\mathop{dA}$$
 
 와 같다.
 :::
