@@ -35,7 +35,7 @@ $$\bigl((\alpha x+y)z\bigr)_i=(\alpha x_i+y_i)z_i=\alpha(x_iz_i)+y_iz_i=\bigl(\a
 이고, 둘째 변수에 대해서도 마찬가지이다. 결합법칙과 교환법칙은 성분별로 확인되며, 모든 $$E_i$$가 항등원 $$1_{E_i}$$를 갖는다면 $$(1_{E_i})_{i\in I}$$가 $$\prod E_i$$의 항등원이 된다.
 :::
 
-이렇게 얻어진 $$A$$-algebra를 $$E_i$$들의 *직접곱<sub>direct product</sub>*이라 부른다. 곱셈을 성분별로 정의했으므로 canonical projection들 $$\pr_i:\prod E_i \rightarrow E_i$$는 $$A$$-algebra homomorphism이고, 실제로 직접곱은 $$A$$-algebra들과 $$A$$-algebra homomorphism들의 category에서의 product이다.
+이렇게 얻어진 $$A$$-algebra를 $$E_i$$들의 *direct product<sub>직접곱</sub>*이라 부른다. 곱셈을 성분별로 정의했으므로 canonical projection들 $$\pr_i:\prod E_i \rightarrow E_i$$는 $$A$$-algebra homomorphism이고, 실제로 direct product는 $$A$$-algebra들과 $$A$$-algebra homomorphism들의 category에서의 product이다.
 
 ::: 명제 2
 임의의 $$A$$-algebra $$F$$와 $$A$$-algebra homomorphism들 $$u_i:F \rightarrow E_i$$가 주어졌다 하자. 그럼 $$\pr_i\circ u=u_i$$가 모든 $$i$$에 대해 성립하도록 하는 유일한 $$A$$-algebra homomorphism $$u:F \rightarrow \prod_{i\in I}E_i$$가 존재한다.
@@ -48,7 +48,7 @@ $$u(xy)=(u_i(xy))_{i\in I}=(u_i(x)u_i(y))_{i\in I}=u(x)u(y)$$
 이기 때문이다.
 :::
 
-한편 $$A$$-module로서의 direct sum $$\bigoplus_{i\in I}E_i\subseteq \prod_{i\in I}E_i$$를 생각하면, finitely supported인 두 원소의 성분별 곱은 다시 finitely supported이므로 $$\bigoplus_{i\in I}E_i$$는 직접곱의 subalgebra가 된다. ([§대수, ⁋정의 9](/ko/math/algebraic_structures/algebras#def9)) 이렇게 얻어진 $$A$$-algebra를 $$E_i$$들의 *직합<sub>direct sum</sub>*이라 부른다.
+한편 $$A$$-module로서의 direct sum $$\bigoplus_{i\in I}E_i\subseteq \prod_{i\in I}E_i$$를 생각하면, finitely supported인 두 원소의 성분별 곱은 다시 finitely supported이므로 $$\bigoplus_{i\in I}E_i$$는 direct product의 subalgebra가 된다. ([§대수, ⁋정의 9](/ko/math/algebraic_structures/algebras#def9)) 이렇게 얻어진 $$A$$-algebra를 $$E_i$$들의 *direct sum<sub>직합</sub>*이라 부른다. 
 
 ::: 참고 3
 가군의 경우와 달리, 대수의 직합은 categorical한 의미를 잃는다는 점에 주의해야 한다. 우선 $$I$$가 무한집합이고 무한히 많은 $$E_i$$들이 $$0$$이 아닌 unital algebra라면, 직합의 항등원이 될 수 있는 유일한 후보 $$(1_{E_i})_{i\in I}$$가 finitely supported가 아니므로 $$\bigoplus E_i$$는 unital이 아니다. 또, canonical injection $$E_j \rightarrow \bigoplus E_i$$는 (unital algebra들의 category에서) 항등원을 항등원으로 보내지 않으므로, 직합은 가군에서와 달리 coproduct가 되지 않는다. 실제로 commutative unital $$A$$-algebra들의 coproduct는 아래에서 살펴볼 텐서곱으로 주어진다.

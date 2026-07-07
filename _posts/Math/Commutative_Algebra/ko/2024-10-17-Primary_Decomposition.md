@@ -14,9 +14,7 @@ published: false
 
 ---
 
-::: remark 참고 {#rmk}
 이번 글에서 $$A$$는 noetherian이고 $$M$$이 finitely generated $$A$$-module임을 가정한다. 
-:::
 
 ## 으뜸부분가군
 
