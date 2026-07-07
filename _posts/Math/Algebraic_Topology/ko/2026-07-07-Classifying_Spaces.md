@@ -101,11 +101,17 @@ $$\Fr(E)=\{(x,b)\mid x\in X,b\text{ an ordered basis of $E_x$}\}$$
 위상공간 $$X$$ 위에서, principal $$\GL(n,\mathbb{R})$$-bundle들의 isomorphism class와 rank $$n$$ real vector bundle들의 isomorphism class 사이에는 자연스러운 일대일 대응이 존재한다. 이 대응은 principal bundle $$P$$에 associated bundle $$P\times_{\GL(n,\mathbb{R})}\mathbb{R}^n$$을, vector bundle $$E$$에 frame bundle $$\Fr(E)$$를 대응시킨다.
 :::
 ::: 증명
-두 대응이 서로 역임을 확인하면 된다. Frame bundle $$\Fr(E)$$의 한 점은 fiber $$E_x$$의 기저, 즉 linear isomorphism $$b:\mathbb{R}^n\xrightarrow{\cong}E_x$$이다. 그럼 사상
+두 대응이 서로 역임을 확인하면 된다. 
+
+우선 정의에 의해 frame bundle $$\Fr(E)$$의 한 점은 fiber $$E_x$$의 한 ordered basis와 같으며, 이는 정확히 standard Euclidean space $$\mathbb{R}^n$$의 각 standard basis가 어디로 가는지를 보면 되므로 linear isomorphism $$b:\mathbb{R}^n\rightarrow E_x$$와 정확히 같은 정보량을 가진다. 이렇게 정의된 사상
 
 $$\Fr(E)\times_{\GL(n,\mathbb{R})}\mathbb{R}^n\rightarrow E,\qquad [(b,v)]\mapsto b(v)$$
 
-는 잘 정의된다. $$(b,v)$$를 $$(b\circ A, A^{-1}v)$$로 바꾸어도 $$b(Av\cdot A^{-1})$$ 꼴이 아니라 $$(b\circ A)(A^{-1}v)=b(v)$$로 같은 값을 주기 때문이다. 이 사상은 각 fiber 위에서 선형동형이므로 vector bundle의 isomorphism이다. 거꾸로 principal bundle $$P$$에서 출발하면, $$P\times_G\mathbb{R}^n$$의 frame bundle이 다시 $$P$$와 동형임을 local trivialization 위에서 transition function $$g_{ij}$$가 양쪽에서 일치함을 통해 확인한다. 두 구성 모두 transition function을 보존하므로 isomorphism class를 보존하고, 사상의 자연성은 pullback과의 호환에서 따라온다.
+는 잘 정의되는데, $$(b,v)$$를 $$(b\circ A, A^{-1}v)$$로 바꾸어도 $$(b\circ A)(A^{-1}v)=b(v)$$로 같은 값을 주기 때문이다. 이 사상은 각 fiber 위에서 선형동형이므로 vector bundle의 isomorphism이다. 
+
+거꾸로 principal bundle $$P$$에서 출발하면, $$P\times_G\mathbb{R}^n$$의 frame bundle이 다시 $$P$$와 동형임을 local trivialization 위에서 transition function $$g_{ij}$$가 양쪽에서 일치함을 통해 확인할 수 있다. 
+
+두 구성 모두 transition function을 보존하므로 isomorphism class를 보존하고, 사상의 naturality는 pullback과의 호환에서 따라온다.
 :::
 
 이 동치 덕분에 vector bundle에 대한 모든 분류 문제는 principal $$\GL(n,\mathbb{R})$$-bundle에 대한 문제로 번역된다. 같은 방식으로 complex vector bundle은 principal $$\GL(n,\mathbb{C})$$-bundle에, oriented real vector bundle은 principal $$\GL^+(n,\mathbb{R})$$-bundle에 대응한다. 따라서 임의의 구조군 $$G$$에 대하여 principal $$G$$-bundle을 분류할 수 있다면, 이 모든 경우가 한꺼번에 해결된다.
@@ -114,7 +120,7 @@ Vector bundle에서와 마찬가지로, 연속함수 $$f:X'\rightarrow X$$와 pr
 
 $$f^\ast P=\{(x',y)\in X'\times P\mid f(x')=p(y)\}$$
 
-이 정의된다. 여기에 $$(x',y)\cdot g=(x',y\cdot g)$$로 작용을 주면 $$f^\ast P\rightarrow X'$$은 다시 principal $$G$$-bundle이 되고, transition function의 관점에서는 $$g_{ij}$$를 $$g_{ij}\circ f$$로 끌어당기는 것에 해당한다. 핵심적인 사실은 이 pullback이 $$f$$의 homotopy class에만 의존한다는 사실이다.
+이 정의된다. 여기에 $$(x',y)\cdot g=(x',y\cdot g)$$로 작용을 주면 $$f^\ast P\rightarrow X'$$은 다시 principal $$G$$-bundle이 되며, 이는 transition function의 관점에서는 $$g_{ij}$$를 $$g_{ij}\circ f$$로 끌어당기는 것에 해당한다. 핵심적인 사실은 이 pullback이 $$f$$의 homotopy class에만 의존한다는 사실이다.
 
 ::: 정리 5 (Pullback의 homotopy 불변성)
 $$X$$가 paracompact이고 $$f_0,f_1:X\rightarrow Y$$가 homotopic이라 하자. ([§호모토피, ⁋정의 2](/ko/math/algebraic_topology/homotopy#def2)) 그럼 임의의 principal $$G$$-bundle $$p:P\rightarrow Y$$에 대하여 $$f_0^\ast P$$와 $$f_1^\ast P$$는 $$X$$ 위에서 isomorphic하다.
@@ -124,47 +130,47 @@ $$X$$가 paracompact이고 $$f_0,f_1:X\rightarrow Y$$가 homotopic이라 하자.
 
 > $$X$$가 paracompact일 때, $$X\times[0,1]$$ 위의 principal $$G$$-bundle $$Q$$는 $$X\times\{0\}$$으로의 제한을 projection $$X\times[0,1]\rightarrow X\times\{0\}$$으로 pullback한 것과 isomorphic하다.
 
-이는 bundle의 covering homotopy property로, paracompact base 위의 trivializing cover가 locally finite partition of unity를 갖는다는 사실에 기댄다. 증명의 골자는 $$[0,1]$$을 작은 구간들로 나누어 각 구간 위에서 trivialization을 잇고, partition of unity로 이 local isomorphism들을 붙이는 것이다. 
+이는 bundle의 covering homotopy property로, paracompact base 위의 trivializing cover가 locally finite partition of unity를 갖는다는 사실에 따른 것이다. 증명의 골자는 $$[0,1]$$을 작은 구간들로 나누어 각 구간 위에서 trivialization을 잇고, partition of unity로 이 local isomorphism들을 붙이는 것이다. 
 
-이제 homotopy $$H:X\times[0,1]\rightarrow Y$$가 $$f_0,f_1$$을 잇는다 하고 $$Q=H^\ast P$$로 정의하자. 위 사실에 의해 $$Q$$는 $$Q\vert_{X\times\{0\}}=f_0^\ast P$$를 projection으로 끌어당긴 것과 isomorphic하고, 같은 논증을 $$X\times\{1\}$$ 끝에서 반복하면 $$Q\vert_{X\times\{1\}}=f_1^\ast P$$ 역시 같은 bundle과 isomorphic이다. $$[0,1]$$이 connected이므로 두 끝점에서의 제한이 모두 같은 $$X$$ 위의 bundle과 동형이 되어 $$f_0^\ast P\cong f_1^\ast P$$를 얻는다.
+이제 homotopy $$H:X\times[0,1]\rightarrow Y$$가 $$f_0,f_1$$을 잇는다 하고 $$Q=H^\ast P$$로 정의하자. 위 사실에 의해 $$Q$$는 $$Q\vert_{X\times\{0\}}=f_0^\ast P$$를 projection으로 끌어당긴 것과 isomorphic하고, 같은 논증을 $$X\times\{1\}$$ 끝에서 반복하면 $$Q\vert_{X\times\{1\}}=f_1^\ast P$$ 역시 같은 bundle과 isomorphic이다. 
 :::
 
-특히 $$X$$가 contractible이면 항등사상이 상수사상과 homotopic하므로 $$X$$ 위의 모든 principal $$G$$-bundle은 trivial이다. CW complex는 항상 paracompact이므로 우리가 다루려는 base들에 대해서는 위 정리의 가정이 자동으로 성립한다.
+특히 $$X$$가 contractible이면 항등사상이 상수사상과 homotopic하므로 $$X$$ 위의 모든 principal $$G$$-bundle은 trivial이다. 일반적으로 CW complex는 항상 paracompact이므로 우리가 다루려는 base들에 대해서는 위 정리의 가정이 자동으로 성립한다.
 
 ## Universal bundle과 classifying space
 
-[정리 5](#thm5)는 함수 $$f$$를 $$f^\ast P$$로 대응시키는 것이 homotopy class에 의존함을 말해 준다. 따라서, 만일 어떤 고정된 principal $$G$$-bundle 하나를 모든 다른 bundle이 pullback으로 얻을 수 있는 원천으로 삼을 수 있다면, principal $$G$$-bundle의 분류는 그 원천 공간으로의 homotopy class를 세는 일로 환원될 것이며, 이는 vector bundle에서 $$\Gr_k(\mathbb{R}^\infty)$$ 위의 universal bundle이 그러한 원천이었던 것을 일반화한다.
+[정리 5](#thm5)는 함수 $$f$$를 $$f^\ast P$$로 대응시키는 것이 $$f$$의 homotopy class에만 의존함을 말해 준다. 따라서, 만일 어떤 고정된 principal $$G$$-bundle 하나를 모든 다른 bundle이 pullback으로 얻을 수 있는 원천으로 삼을 수 있다면, principal $$G$$-bundle의 분류는 그 원천 공간으로의 homotopy class를 세는 일로 환원될 것이며, 이는 vector bundle에서 $$\Gr_k(\mathbb{R}^\infty)$$ 위의 universal bundle이 그러한 원천이었던 것을 일반화한다.
 
 ::: 정의 6
 Topological group $$G$$에 대하여, principal $$G$$-bundle $$p:EG\rightarrow BG$$가 *universal bundle*이라는 것은 total space $$EG$$가 contractible인 것, 곧 $$EG$$가 한 점과 homotopy equivalent인 것이다. ([§호모토피, ⁋정의 4](/ko/math/algebraic_topology/homotopy#def4)) 이때 base space $$BG$$를 $$G$$의 *classifying space<sub>분류공간</sub>*라 부른다.
 :::
 
-곧 universal bundle이란 contractible한 공간 위의 free $$G$$-작용이며, $$BG$$는 그 orbit space $$EG/G$$이다. 이러한 공간의 존재는 자명하지 않으나, Milnor가 임의의 topological group에 대하여 그 구성을 주었다.
+즉, universal $$G$$-bundle은 contractible space 위의 free $$G$$-action이며, 그 orbit space $$BG=EG/G$$가 base space이며, 여기로의 projection map이 bundle map이다. $$EG$$가 contractible이라는 조건은 [정리 8](#thm8)에서 중요하게 사용될 것이다. 그 전에, 우선 다음이 성립한다. 
 
 ::: 정리 7 (Milnor)
 임의의 topological group $$G$$에 대하여 universal bundle $$EG\rightarrow BG$$가 존재한다.
 :::
-::: 증명
-Milnor의 구성은 $$G$$의 무한 join $$EG=G\ast G\ast G\ast\cdots$$를 사용한다. 대각 right translation은 free이며, 두 공간의 join이 connectivity를 $$\conn(A\ast B)\geq\conn(A)+\conn(B)+2$$만큼 올려주므로 colimit $$EG$$는 모든 차원에서 connected, 곧 weakly contractible이고 (따라서 CW 구조 하에서 contractible), $$EG\rightarrow EG/G=BG$$는 principal $$G$$-bundle이 된다. 자세한 내용은 [Mil]과 [tD]의 §14를 따른다.
-:::
+이에 대한 증명은 $$G$$의 무한 join 
 
-Universal bundle은 본질적으로 유일하다. 두 universal bundle $$EG\rightarrow BG$$와 $$EG'\rightarrow BG'$$이 주어지면, $$EG'$$이 contractible이므로 정리 5에 의해 $$BG$$로 끌어내린 분류사상이 존재하고, 이 논증을 양방향으로 적용하면 $$BG$$와 $$BG'$$이 서로 homotopy inverse인 사상으로 연결됨을 얻는다. 따라서 $$BG$$는 homotopy equivalence를 넘어서는 모호함 없이 결정되며, 우리는 $$BG$$를 *the* classifying space라 부른다.
+$$EG=G\ast G\ast G\ast\cdots$$
 
-## 분류정리
+를 사용하며, 이 공간은 임의의 $$n$$에 대해 $$n$$-connected이고, 따라서 weakly contractible이 되며 CW 구조 하에서 contractible이라는 것이 요지이다. 자세한 내용은 [Mil]에 맡겨둔다.
 
-이제 분류 이론의 중심 결과를 진술한다. Classifying space의 이름이 정당화되는 지점이다.
+한편, universal bundle은 본질적으로 유일하다. 두 universal bundle $$EG\rightarrow BG$$와 $$EG'\rightarrow BG'$$이 주어지면, $$EG'$$이 contractible이므로 [정리 5](#thm5)에 의해 $$BG$$로 끌어내린 분류사상이 존재하고, 이 논증을 양방향으로 적용하면 $$BG$$와 $$BG'$$이 서로 homotopy inverse인 사상으로 연결되기 때문이다. 따라서 $$BG$$는 homotopy equivalence를 넘어서는 모호함 없이 결정되며, 우리는 $$BG$$를 *the* classifying space라 부른다.
+
+그럼 이 글의 가장 핵심적인 결과는, 당연히 다음의 정리이다..
 
 ::: 정리 8 (분류정리)
-$$X$$를 paracompact 공간(가령 CW complex)이라 하고 $$[X,BG]$$를 $$X$$에서 $$BG$$로의 free homotopy class들의 집합이라 하자. 그럼 universal bundle $$EG\rightarrow BG$$를 pullback하는 사상
+Paracompact space $$X$$와 topological group $$G$$에 대하여, $$[X,BG]$$를 $$X$$에서 $$BG$$로의 free homotopy class들의 집합이라 하자. 그럼 universal bundle $$EG\rightarrow BG$$를 pullback하는 사상
 
-$$[X,BG]\xrightarrow{\ \cong\ }\{X\text{ 위의 principal }G\text{-bundle}\}/\cong,\qquad [f]\mapsto f^\ast EG$$
+$$[X,BG]\rightarrow\{\text{principal $G$-bundles over $X$}\}/{\cong};\qquad [f]\mapsto f^\ast EG$$
 
 은 잘 정의된 전단사이며, 사상 $$X'\rightarrow X$$에 대한 pullback과 호환된다는 의미에서 자연스럽다.
 :::
 ::: 증명
-$$[f]\mapsto f^\ast EG$$가 $$[f]$$의 대표 선택에 의존하지 않는 것은 [정리 5](#thm5)에 의한 것이다. 전사성과 단사성을 차례로 본다.
+$$[f]\mapsto f^\ast EG$$가 $$[f]$$의 대표 선택에 의존하지 않는 것은 [정리 5](#thm5)에 의한 것이다. 우리는 이것이 전단사임을 간략히 살펴본다.
 
-**전사성.** $$X$$ 위의 principal $$G$$-bundle $$P$$가 주어졌다 하자. $$X$$가 paracompact이므로 $$P$$를 trivialize하는 open cover $$\{U_i\}$$와, 이에 종속된 locally finite partition of unity $$\{\rho_i\}$$ (각 $$\operatorname{supp}\rho_i\subseteq U_i$$)를 함께 잡을 수 있다. 각 $$U_i$$ 위의 trivialization은 $$G$$-equivariant 사상 $$\psi_i:p^{-1}(U_i)\rightarrow G$$를 주므로,
+우선 $$X$$ 위의 principal $$G$$-bundle $$P$$가 주어졌다 하자. $$X$$가 paracompact이므로, [\[위상수학\] §옹골성, ⁋정리 27](/ko/math/topology/compactness#thm27)에 의하여 $$P$$를 trivialize하는 open cover $$\{U_i\}$$와 이에 종속된 locally finite partition of unity $$\{\rho_i\}$$를 함께 잡을 수 있다. 각 $$U_i$$ 위의 trivialization은 $$G$$-equivariant map $$\psi_i:p^{-1}(U_i)\rightarrow G$$를 주므로,
 
 $$\widetilde{f}:P\rightarrow EG,\qquad y\mapsto \sum_i \rho_i(p(y))\psi_i(y)$$
 
