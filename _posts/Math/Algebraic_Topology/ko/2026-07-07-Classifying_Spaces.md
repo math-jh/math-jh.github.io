@@ -10,7 +10,7 @@ sidebar:
 
 date: 2026-07-07
 weight: 12
-
+published: false
 
 ---
 
@@ -166,6 +166,9 @@ Paracompact space $$X$$와 topological group $$G$$에 대하여, $$[X,BG]$$를 $
 $$[X,BG]\rightarrow\{\text{principal $G$-bundles over $X$}\}/{\cong};\qquad [f]\mapsto f^\ast EG$$
 
 은 잘 정의된 전단사이며, 사상 $$X'\rightarrow X$$에 대한 pullback과 호환된다는 의미에서 자연스럽다.
+
+![분류사상의 pullback 사각형](/assets/images/Math/Algebraic_Topology/Classifying_Spaces-1.svg){:style="width:8.21em" class="invert" .align-center}
+
 :::
 ::: 증명
 $$[f]\mapsto f^\ast EG$$가 $$[f]$$의 대표 선택에 의존하지 않는 것은 [정리 5](#thm5)에 의한 것이다. 우리는 이것이 전단사임을 간략히 살펴본다.
@@ -174,18 +177,14 @@ $$[f]\mapsto f^\ast EG$$가 $$[f]$$의 대표 선택에 의존하지 않는 것�
 
 $$\widetilde{f}:P\rightarrow EG,\qquad y\mapsto \sum_i \rho_i(p(y))\psi_i(y)$$
 
-는 잘 정의된 $$G$$-equivariant 연속함수이다 (각 점에서 유한합이고, $$\psi_i$$가 $$\rho_i>0$$인 곳에서만 등장한다). $$G$$-equivariant 사상은 base space 사이의 사상 $$f:X\rightarrow BG$$로 내려가고, $$\widetilde{f}$$가 fiber마다 동형이므로 $$P\cong f^\ast EG$$를 얻는다.
+는 잘 정의된 $$G$$-equivariant map이다. 이 때 $$G$$-equivariant map은 base space 사이의 사상 $$f:X\rightarrow BG$$로 내려가고, $$\widetilde{f}$$가 fiber마다 동형이므로 $$P\cong f^\ast EG$$를 얻는다.
 
-**단사성.** $$f_0,f_1:X\rightarrow BG$$에 대하여 $$f_0^\ast EG\cong f_1^\ast EG=:P$$라 하자. 각 분류사상 $$f_i$$는 bundle 사상 $$P\cong f_i^\ast EG\rightarrow EG$$, 곧 $$P$$에서 universal bundle로 가는 $$G$$-equivariant 연속함수 $$\Phi_i:P\rightarrow EG$$를 덮개로 가지며 base에서 $$f_i$$를 유도한다. 그런데 $$EG$$가 contractible이므로, paracompact 공간 위의 principal bundle $$P$$에서 $$EG$$로 가는 임의의 두 $$G$$-equivariant 사상은 서로 $$G$$-equivariant homotopic하다. 따라서 $$\Phi_0$$과 $$\Phi_1$$을 잇는 $$G$$-equivariant homotopy $$P\times[0,1]\rightarrow EG$$가 존재하고, 이것이 base로 내려가 $$f_0$$과 $$f_1$$ 사이의 homotopy를 주므로 $$[f_0]=[f_1]$$이다. 여기서 두 $$G$$-equivariant 사상이 $$G$$-homotopic하다는 사실 자체는 $$EG$$의 contractibility와 $$X$$가 paracompact이라는 점에 기댄다.
-
-두 단계의 세부는 [Mil], [tD]의 §14, [Hus]의 §4를 따른다.
+이제 injectivity를 보이기 위해 $$f_0,f_1:X\rightarrow BG$$에 대하여 $$f_0^\ast EG\cong f_1^\ast EG=:P$$라 하자. 우리는 $$f_0$$과 $$f_1$$이 homotopic한 것을 보여야 한다. 각 $$f_i$$는 bundle map $$P\cong f_i^\ast EG\rightarrow EG$$, 곧 $$P$$에서 universal bundle로 가는 $$G$$-equivariant bundle map $$\Phi_i:P\rightarrow EG$$을 가진다. 그런데 $$EG$$가 contractible이므로, paracompact 공간 위의 principal bundle $$P$$에서 $$EG$$로 가는 임의의 두 $$G$$-equivariant map은 서로 $$G$$-equivariant homotopic하며, 따라서 $$\Phi_0$$과 $$\Phi_1$$을 잇는 $$G$$-equivariant homotopy $$P\times[0,1]\rightarrow EG$$가 존재하고, 이것이 base로 내려가 $$f_0$$과 $$f_1$$ 사이의 homotopy를 주므로 $$[f_0]=[f_1]$$이다. 
 :::
 
-![분류사상의 pullback 사각형](/assets/images/Math/Algebraic_Topology/Classifying_Spaces-1.svg){:style="width:8.21em" class="invert" .align-center}
+이 정리는 principal $$G$$-bundle의 기하학적 분류를 순수하게 homotopy의 데이터 $$[X,BG]$$로 옮긴다. [명제 4](#prop4)와 결합하면 rank $$n$$ real vector bundle의 분류가 $$[X,B\GL(n,\mathbb{R})]$$로, complex의 경우 $$[X,B\GL(n,\mathbb{C})]$$로 옮겨지게 되며, 실제로 이들 $$B\GL(n, \mathbb{R})$$과 $$B\GL(n, \mathbb{C})$$이 실은 (real/complex) Grassmannian인 것을 곧 살펴보게 될 것이다. 
 
-분류정리는 principal $$G$$-bundle의 기하학적 분류를 순수하게 homotopy 이론적인 데이터 $$[X,BG]$$로 옮긴다. [명제 4](#prop4)와 결합하면 rank $$n$$ real vector bundle의 분류가 $$[X,B\GL(n,\mathbb{R})]$$로, complex의 경우 $$[X,B\GL(n,\mathbb{C})]$$로 환원되며, 이것이 앞 글의 Grassmannian을 통한 분류와 같은 내용임을 곧 보게 된다.
-
-::: 참고 9
+::: 보조정리 9
 Classifying space의 구성은 $$G$$에 대해 functorial이다. 연속적인 group homomorphism $$\phi:G\rightarrow H$$가 주어지면, $$EG$$ 위의 $$G$$-작용을 $$\phi$$를 통해 $$H$$-작용으로 바꾸어 얻는 associated bundle $$EG\times_G H$$를 분류하는 사상이 $$B\phi:BG\rightarrow BH$$를 유도한다. 이는 $$B(\psi\circ\phi)\simeq B\psi\circ B\phi$$를 만족하여, $$G\mapsto BG$$가 homotopy category 위의 functor가 되게 한다. 가령 inclusion $$\Umat(n)\hookrightarrow\GL(n,\mathbb{C})$$이 유도하는 $$B\Umat(n)\rightarrow B\GL(n,\mathbb{C})$$이 아래에서 쓰인다.
 :::
 
@@ -245,7 +244,7 @@ $$BT=(\CP^\infty)^n$$이고, 앞 절의 $$BS^1=\CP^\infty$$ 계산으로부터 �
 
 $$H^\bullet(BT;\mathbb{Z})\cong\bigotimes_{i=1}^n \mathbb{Z}[t_i]=\mathbb{Z}[t_1,\ldots,t_n]$$
 
-을 준다. ([§합곱](/ko/math/algebraic_topology/cup_products)) Character $$\chi:T\rightarrow S^1$$은 $$B\chi:BT\rightarrow BS^1=\CP^\infty$$을 유도하고 ([참고 9](#rmk9)) $$B\chi^\ast(t)\in H^2(BT;\mathbb{Z})$$를 대응시키는데, $$i$$번째 좌표 projection $$T\rightarrow S^1$$이 $$t_i$$로 가므로 이 대응은 $$\Hom(T,S^1)\cong\mathbb{Z}^n$$을 $$H^2(BT;\mathbb{Z})=\bigoplus_i\mathbb{Z}t_i$$로 보내는 동형이다. Polynomial ring은 그 degree $$2$$ 부분 위의 symmetric algebra이므로 마지막 주장이 따라온다.
+을 준다. ([§합곱](/ko/math/algebraic_topology/cup_products)) Character $$\chi:T\rightarrow S^1$$은 $$B\chi:BT\rightarrow BS^1=\CP^\infty$$을 유도하고 ([보조정리 9](#lem9)) $$B\chi^\ast(t)\in H^2(BT;\mathbb{Z})$$를 대응시키는데, $$i$$번째 좌표 projection $$T\rightarrow S^1$$이 $$t_i$$로 가므로 이 대응은 $$\Hom(T,S^1)\cong\mathbb{Z}^n$$을 $$H^2(BT;\mathbb{Z})=\bigoplus_i\mathbb{Z}t_i$$로 보내는 동형이다. Polynomial ring은 그 degree $$2$$ 부분 위의 symmetric algebra이므로 마지막 주장이 따라온다.
 :::
 
 이 동형은 character lattice 위의 다항식을 $$BT$$의 cohomology class로 읽게 해 주며, torus가 작용하는 공간의 불변량을 다룰 때 핵심이 된다. Unitary group의 경우는 한 단계 더 나아간 계산이 필요하지만, 앞 글에서 이미 그 결과를 보았다.
