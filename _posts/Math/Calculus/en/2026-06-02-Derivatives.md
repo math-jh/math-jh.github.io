@@ -76,7 +76,7 @@ A similar example is $$f(x) = \sqrt[3]{x}$$, which has a *vertical tangent* at $
 
 On the other hand, $$f(x) = x^{2/3}$$ forms a *cusp* at $$0$$ where the left and right average rates of change diverge to $$\mp\infty$$.
 
-![Cusp of the $2/3$-power function](/assets/images/Math/Calculus/Derivatives-3.svg){:style="width:13.17em" class="invert" .align-center}
+![Cusp of the $$2/3$$-power function](/assets/images/Math/Calculus/Derivatives-3.svg){:style="width:13.17em" class="invert" .align-center}
 
 These are examples of non-differentiability at only one or two points, but non-differentiability can be far worse: there even exist functions like Weierstrass's function $$W(x) = \sum_{n=0}^\infty a^n\cos(b^n\pi x)$$ that are continuous everywhere on $$\mathbb{R}$$ yet have no tangent at any point.
 

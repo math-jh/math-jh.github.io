@@ -136,7 +136,7 @@ As in previous posts, the most familiar example for us is that of $$\mathbb{P}^n
 
 $$\mathbb{P}^n=(\mathbb{A}^{n+1}\setminus\{0\})/\mathbb{K}^\ast$$
 
-defining $$\mathbb{P}^n$$, the $$\mathbb{K}^\ast$$-action is the action in the direction radiating from the origin, that is, the direction defined by the Euler vector field, and from the perspective of $$\mathbb{P}^n$$ this is merely a trivial line bundle. Then the tangent space of $$\mathbb{P}^n$$ corresponds to the remaining part after quotienting the directions of $$\mathbb{A}^{n+1}$, that is, the linear forms, by this trivial line bundle. That is, the following short exact sequence corresponding to the tangent bundle
+defining $$\mathbb{P}^n$$, the $$\mathbb{K}^\ast$$-action is the action in the direction radiating from the origin, that is, the direction defined by the Euler vector field, and from the perspective of $$\mathbb{P}^n$$ this is merely a trivial line bundle. Then the tangent space of $$\mathbb{P}^n$$ corresponds to the remaining part after quotienting the directions of $$\mathbb{A}^{n+1}$$, that is, the linear forms, by this trivial line bundle. That is, the following short exact sequence corresponding to the tangent bundle
 
 $$0 \rightarrow \mathcal{O}_{\mathbb{P}^{n}}\rightarrow \mathcal{O}_{\mathbb{P}^n}(1)^{\oplus (n+1)}\rightarrow T_{\mathbb{P}^n}\rightarrow 0$$
 

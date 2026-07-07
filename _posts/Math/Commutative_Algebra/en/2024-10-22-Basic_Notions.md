@@ -21,7 +21,7 @@ In this category, every ring that appears is a commutative ring. Also, any $$A$$
 In this category we examine a commutative ring $$A$$ and a module $$M$$ defined over it. Since any ideal $$\mathfrak{a}$$ of the ring $$A$$ can always be regarded as an $$A$$-module, in many cases we develop the theory of $$A$$-modules. In the posts of the [\[Algebraic Structures\]](/en/algebraic_structures/) category, to avoid confusion we wrote elements of an $$A$$-module $$M$$ as $$x,y,\ldots$$ and elements of $$A$$ as $$\alpha,\beta,\ldots$$; however, if we regard $$\mathfrak{a}$$ also as an $$A$$-module, making such a distinction in notation causes more confusion rather than less, so in this category we do not make such a distinction.
 
 ::: Definition 1
-For any $$A$$-module $$M$$, we define the *annihilator* $\ann(M)$ of $$M$$ by the formula
+For any $$A$$-module $$M$$, we define the *annihilator* $$\ann(M)$$ of $$M$$ by the formula
 
 $$\ann(M)=\{a\in A\mid aM=0\}$$
 :::
