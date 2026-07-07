@@ -242,10 +242,10 @@ Chern class는 다음을 만족한다.
 첫째 조건은 $$n$$에 대한 귀납으로 보인다. $$c_n$$의 naturality는 Euler class의 naturality로부터 온다. ([명제 4](#prop4)의 첫째 조건) $$0<i<n$$에서는 $$f$$가 deleted space와 complement bundle, 그리고 Gysin sequence 전체와 호환되는 bundle map $$E_0'\rightarrow E_0$$을 유도하고, 그 위에서 $$f^\ast(L^\perp)\cong(f^\ast L)^\perp$$이므로 귀납가정과 $$\pi_0^\ast$$의 자연성으로부터 $$c_i$$의 naturality가 따라온다.
 :::
 
-즉 Chern class는 Stiefel-Whitney class와 비슷한 종류의 공리적인 성질을 만족한다. ([§슈티펠-휘트니 특성류, ⁋정의 5](/ko/math/algebraic_topology/stiefel_whitney_classes#def5)) 우리는 Stiefel-Whitney class의 존재성을 보이기 위해 real infinite Grassmannian $$\Gr_k(\mathbb{R}^\infty)$$를 생각한 후, 여기서의 cohomology class를 원래의 공간으로 pullback해와서 이들이 Stiefel-Whitney class의 공리적 조건을 만족함을 보였었는데, Chern class에 대해서도 비슷한 종류의 construction이 가능하다. 
+즉 Chern class는 Stiefel-Whitney class와 비슷한 종류의 공리적인 성질을 만족한다. ([§슈티펠-휘트니 특성류, ⁋정의 5](/ko/math/algebraic_topology/stiefel_whitney_classes#def5)) 우리는 Stiefel-Whitney class의 존재성을 보이기 위해 real infinite Grassmannian $$\Gr(k,\mathbb{R}^\infty)$$를 생각한 후, 여기서의 cohomology class를 원래의 공간으로 pullback해와서 이들이 Stiefel-Whitney class의 공리적 조건을 만족함을 보였었는데, Chern class에 대해서도 비슷한 종류의 construction이 가능하다. 
 
 ::: 예시 8
-[§슈티펠-휘트니 특성류, ⁋예시 3](/ko/math/algebraic_topology/stiefel_whitney_classes#ex3)의 real tautological line bundle의 complex analogue로, $$\CP^\infty=\Gr_1(\mathbb{C}^\infty)$$ 위의 tautological complex line bundle $$\gamma$$를 생각하자. 그럼 $$\gamma$$의 sphere bundle은 $$\mathbb{C}^\infty$$의 단위구 $$S^\infty$$이며 이는 contractible이므로[^1] 모든 $$k>0$$에 대해 $$H^k(S^\infty)=0$$이다. 따라서, [정리 5](#thm5)에 의해 $$H^1(\CP^\infty)=0$$이고 
+[§슈티펠-휘트니 특성류, ⁋예시 3](/ko/math/algebraic_topology/stiefel_whitney_classes#ex3)의 real tautological line bundle의 complex analogue로, $$\CP^\infty=\Gr(1,\mathbb{C}^\infty)$$ 위의 tautological complex line bundle $$\gamma$$를 생각하자. 그럼 $$\gamma$$의 sphere bundle은 $$\mathbb{C}^\infty$$의 단위구 $$S^\infty$$이며 이는 contractible이므로[^1] 모든 $$k>0$$에 대해 $$H^k(S^\infty)=0$$이다. 따라서, [정리 5](#thm5)에 의해 $$H^1(\CP^\infty)=0$$이고 
 
 $$\smile c_1(\gamma):H^{k-2}(\CP^\infty)\rightarrow H^k(\CP^\infty)$$
 
@@ -262,9 +262,9 @@ $$\{B\text{ 위의 complex line bundle}\}/\cong\ \xrightarrow{\ c_1\ }\ H^2(B;\m
 를 주며, 이는 tensor product를 덧셈으로 보내는 group isomorphism이다. 곧 complex line bundle의 모든 정보가 $$c_1$$ 하나에 담겨있게 된다.
 :::
 
-더 일반적으로 real Grassmannian의 자리를 complex Grassmannian $$\Gr_n(\mathbb{C}^\infty)$$이 대신하고, 그 cohomology ring은
+더 일반적으로 real Grassmannian의 자리를 complex Grassmannian $$\Gr(k,\mathbb{C}^\infty)$$이 대신하고, 그 cohomology ring은
 
-$$H^\bullet(\Gr_n(\mathbb{C}^\infty);\mathbb{Z})=\mathbb{Z}[c_1,\ldots,c_n]$$
+$$H^\bullet(\Gr(k,\mathbb{C}^\infty);\mathbb{Z})=\mathbb{Z}[c_1,\ldots,c_k]$$
 
 으로 universal bundle의 Chern class들이 생성하는 polynomial ring이 되며, 우리는 이러한 종류의 계산을 조만간 다시 살펴보게 될 것이다. 
 
@@ -366,7 +366,7 @@ $$c_i(\bar{E})=(-1)^ic_i(E)$$
 한편 지금까지의 예시는 모두 line bundle이었으므로, rank가 높은 bundle에서 [정리 9](#thm9)이 실제 계산에 어떻게 쓰이는지를 보여주는 예시를 하나 보기로 한다.
 
 ::: 예시 11
-이번 글에서 우리는 유한차원 complex projective space $$\CP^n=\Gr_1(\mathbb{C}^{n+1})$$의 tangent bundle의 total Chern class를 계산한다. 
+이번 글에서 우리는 유한차원 complex projective space $$\CP^n=\Gr(1,\mathbb{C}^{n+1})$$의 tangent bundle의 total Chern class를 계산한다. 
 
 이를 위해 우선 이 위에 정의된 tautological line bundle $$\gamma\subseteq\CP^n\times\mathbb{C}^{n+1}$$을 생각하자. 이는 [예시 8](#ex8)의 universal line bundle $$\gamma$$를 $$\CP^n\hookrightarrow\CP^\infty$$으로 제한한 것이며, cell 구조가 짝수 차원에만 있으므로 restriction $$H^k(\CP^\infty;\mathbb{Z})\rightarrow H^k(\CP^n;\mathbb{Z})$$은 $$k\leq 2n$$에서 isomorphism이다. 따라서 [명제 10](#prop10)에 따라 $$\x=c_1(\bar{\gamma})=-c_1(\gamma)$$로 두면
 
