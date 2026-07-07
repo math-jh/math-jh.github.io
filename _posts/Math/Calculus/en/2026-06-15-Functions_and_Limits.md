@@ -115,7 +115,7 @@ hold.
 
     and similarly we can choose $$\delta$$ so that $$\lvert g(x)\rvert <\lvert M\rvert+1$$. Now we choose $$\delta$$ so that all of these and the following two conditions
     
-    $\lvert g(x)-M\rvert < \frac{\epsilon}{2(\lvert L\rvert+1)},\qquad \lvert f(x)-L\rvert < \frac{\epsilon}{2(\lvert M\rvert+1)}$$
+    $$\lvert g(x)-M\rvert < \frac{\epsilon}{2(\lvert L\rvert+1)},\qquad \lvert f(x)-L\rvert < \frac{\epsilon}{2(\lvert M\rvert+1)}$$
     
     hold simultaneously.
 
