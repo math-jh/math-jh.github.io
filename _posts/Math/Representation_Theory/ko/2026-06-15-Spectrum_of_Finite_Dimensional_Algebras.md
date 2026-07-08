@@ -249,7 +249,7 @@ $$\ev:A\longrightarrow k^{\Specm A};\qquad a\longmapsto (\chi(a))_{\chi\in\Specm
 은 unital $$k$$-algebra homomorphism이고, 그 kernel은 $$A$$의 nilradical, 곧 nilpotent 원소들의 집합 $$\bigcap_\chi\mathfrak{m}_\chi$$이다. 따라서 $$\ev$$이 injective인 것과 $$A$$가 reduced인 것이 동치이며, 이 경우 $$\ev$$은 isomorphism $$A\cong k^{\Specm A}$$이다.
 :::
 ::: 증명
-$$\ev$$은 각 성분이 character $$\chi$$이므로 algebra homomorphism들의 곱이고, 따라서 그 자체로 algebra homomorphism이다. ([\[대수적 구조\] §대수의 직접곱, 직합, 텐서곱, ⁋명제 2](/ko/math/algebraic_structures/operations_of_algebras#prop2)) 또 각 $$\chi(1)=1$$이므로 $$\ev(1)=(1,\ldots,1)$$은 $$k^{\Specm A}$$의 항등원이고 $$\ev$$은 unital이다.
+$$\ev$$은 각 성분이 character $$\chi$$이므로 algebra homomorphism들의 곱이고, 따라서 그 자체로 algebra homomorphism이다. ([\[대수적 구조\] §대수의 직접곱, 직합, 텐서곱, ⁋명제 3](/ko/math/algebraic_structures/operations_of_algebras#prop3)) 또 각 $$\chi(1)=1$$이므로 $$\ev(1)=(1,\ldots,1)$$은 $$k^{\Specm A}$$의 항등원이고 $$\ev$$은 unital이다.
 
 kernel을 계산하자. $$\ev(a)=0$$인 것은 모든 character $$\chi$$에 대하여 $$\chi(a)=0$$, 곧 $$a\in\bigcap_\chi\ker\chi=\bigcap_\chi\mathfrak{m}_\chi$$인 것과 같다. 이제 이 교집합이 정확히 nilpotent 원소들의 집합임을 보이자. [따름정리 9](#cor9)의 isomorphism $$A\cong\prod_\chi A_\chi$$에서 $$a=(a_\chi)_\chi$$로 쓰면, $$\chi'(a)$$는 $$a_{\chi'}$$의 $$A_{\chi'}\rightarrow A_{\chi'}/\mathfrak{n}_{\chi'}\cong k$$에서의 image이다. 따라서 모든 $$\chi$$에 대하여 $$\chi(a)=0$$인 것은 각 성분 $$a_\chi$$가 $$\mathfrak{n}_\chi$$에 속하는 것과 같다. 그런데 [따름정리 9](#cor9)에 의하여 $$\mathfrak{n}_\chi$$의 원소는 모두 nilpotent이고, 곱이 성분별이므로 $$(a_\chi)_\chi$$이 nilpotent인 것은 각 $$a_\chi$$가 nilpotent인 것, 곧 각 $$a_\chi\in\mathfrak{n}_\chi$$인 것과 동치이다. 따라서 $$\ker\ev$$은 정확히 $$A$$의 nilpotent 원소들의 집합이다.
 

@@ -147,7 +147,7 @@ $$H_1(M)\rightarrow A^\times$$
 
 으로 factor through하고 이는 [§코호몰로지, ⁋명제 3](/ko/math/algebraic_topology/cohomology#prop3)에 의하여 $$H^1(M;A)$$의 원소이다. 만일 이 원소가 $$0$$이라면 monodromy action이 trivial action이라는 것과 같고, 이는 곧 $$\Spe(\or_M^A)$$이 trivial covering space라는 뜻이 되어 $$M$$이 $$A$$-orientable manifold가 되었다. 한편 임의의 commutative ring $$A$$에 대하여, $$\cRing$$의 initial object가 $$\mathbb{Z}$$이므로 임의의 manifold $$M$$에 대하여 $$\mathbb{Z}$$-orientation $$H_1(M)\rightarrow \mathbb{Z}^\times$$가 결정되면 이를 $$\mathbb{Z}^\times\rightarrow A^\times$$와 합성하여 $$A$$-orientation $$H_1(M)\rightarrow A^\times$$를 결정할 수 있으므로, $$\Spe(\or_M^A)$$가 trivial cover인지에 대한 본질적인 정보는 $$H^1(M;\mathbb{Z}/2)$$에 들어있는 것을 알고 있으며, $$\mathbb{Z}/2$$를 $$\GL(1;\mathbb{Z})$$로 생각하면 이것은 first cohomology가 어떻게 covering space에 대한 정보를 담고있는지에 대한 예시이다.
 
-이러한 방식으로, vector bundle $$E\rightarrow B$$ of rank $$k$$에 대한 정보는 $$\check{H}^1(B; \underline{\GL(k,\mathbb{R})})$$에 담겨있다고 볼 수 있다. 그러나 우리가 사용하는 $$B$$의 cohomology의 coefficient는 $$\mathbb{Z}$$이기 때문에 여기에 담겨있는 모든 데이터를 갖고있지는 않다. 대신 우리는 이를 약하게 대체할만한 대상, 즉 invariant들을 cohomology ring $$H^\bullet(B)$$에서 찾는 것이 목표이다.
+이러한 방식으로, vector bundle $$E\rightarrow B$$ of rank $$k$$에 대한 정보는 $$\check{H}^1(B; \underline{\GL(k;\mathbb{R})})$$에 담겨있다고 볼 수 있다. 그러나 우리가 사용하는 $$B$$의 cohomology의 coefficient는 $$\mathbb{Z}$$이기 때문에 여기에 담겨있는 모든 데이터를 갖고있지는 않다. 대신 우리는 이를 약하게 대체할만한 대상, 즉 invariant들을 cohomology ring $$H^\bullet(B)$$에서 찾는 것이 목표이다.
 
 ## 슈티펠-휘트니 특성류
 
