@@ -44,7 +44,7 @@ Given morphisms $$\Spec A \rightarrow \Spec C$$, $$\Spec B \rightarrow\Spec C$$ 
 $$\Spec A\times_{\Spec C}\Spec B\cong\Spec (A\otimes_C B).$$
 :::
 ::: Proof
-Using the equivalence $$\AffSch\cong\cRing^\op$$, convert $$\Spec A \rightarrow \Spec C$$, $$\Spec B \rightarrow \Spec C$$ into $$C \rightarrow A$$, $$C \rightarrow B$$, and compare the universal property of [\[Algebraic Structures\] §Direct Products, Direct Sums, Tensor Products of Algebras, ⁋Theorem 5](/en/math/algebraic_structures/operations_of_algebras#thm5) with the universal property of the fiber product.
+Using the equivalence $$\AffSch\cong\cRing^\op$$, convert $$\Spec A \rightarrow \Spec C$$, $$\Spec B \rightarrow \Spec C$$ into $$C \rightarrow A$$, $$C \rightarrow B$$, and compare the universal property of [\[Algebraic Structures\] §Direct Products, Direct Sums, Tensor Products of Algebras, ⁋Theorem 8](/en/math/algebraic_structures/operations_of_algebras#thm8) with the universal property of the fiber product.
 :::
 
 To show that fiber products exist for general schemes, it now suffices to show that we can glue together the results for affine schemes examined in [Lemma 2](#lem2).

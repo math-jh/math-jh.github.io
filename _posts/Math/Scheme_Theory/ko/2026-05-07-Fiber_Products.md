@@ -46,7 +46,7 @@ $$\Spec A\times_{\Spec C}\Spec B\cong\Spec (A\otimes_C B)$$
 가 성립한다.
 :::
 ::: 증명
-$$\AffSch\cong\cRing^\op$$를 통해 $$\Spec A \rightarrow \Spec C$$, $$\Spec B \rightarrow \Spec C$$를 $$C \rightarrow A$$, $$C \rightarrow B$$로 바꿔놓고 [\[대수적 구조\] §대수의 직접곱, 직합, 텐서곱, ⁋정리 5](/ko/math/algebraic_structures/operations_of_algebras#thm5)의 universal property와 fiber product의 universal property를 비교하면 된다.
+$$\AffSch\cong\cRing^\op$$를 통해 $$\Spec A \rightarrow \Spec C$$, $$\Spec B \rightarrow \Spec C$$를 $$C \rightarrow A$$, $$C \rightarrow B$$로 바꿔놓고 [\[대수적 구조\] §대수의 직접곱, 직합, 텐서곱, ⁋정리 8](/ko/math/algebraic_structures/operations_of_algebras#thm8)의 universal property와 fiber product의 universal property를 비교하면 된다.
 :::
 
 이제 일반적인 scheme에 대해 fiber product가 존재한다는 사실은 [보조정리 2](#lem2)에서 살펴본 affine scheme에서의 결과를 바탕으로, 이들을 잘 붙일 수 있다는 것을 보이면 된다. 
