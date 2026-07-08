@@ -1,3 +1,17 @@
+---
+title: "Compactness와 paracompactness"
+description: "Tychonoff 정리로 compactness를 마무리하고, paracompact Hausdorff 공간에서 open cover에 종속된 단위분할이 존재함을 보인다."
+excerpt: "Tychonoff theorem, paracompactness, and partition of unity"
+
+categories: [Math / Topology]
+permalink: /ko/math/topology/compactness
+sidebar:
+    nav: "topology-ko"
+
+date: 2024-12-15
+weight: 16
+
+---
 
 이제 우리는 옹골성과 관련된 남은 결과인 Tychonoff 정리를 살펴본다. 
 
