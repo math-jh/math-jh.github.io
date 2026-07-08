@@ -50,10 +50,6 @@ $$u(xy)=(u_i(xy))_{i\in I}=(u_i(x)u_i(y))_{i\in I}=u(x)u(y)$$
 
 한편 $$A$$-module로서의 direct sum $$\bigoplus_{i\in I}E_i\subseteq \prod_{i\in I}E_i$$를 생각하면, finitely supported인 두 원소의 성분별 곱은 다시 finitely supported이므로 $$\bigoplus_{i\in I}E_i$$는 direct product의 subalgebra가 된다. ([§대수, ⁋정의 9](/ko/math/algebraic_structures/algebras#def9)) 이렇게 얻어진 $$A$$-algebra를 $$E_i$$들의 *direct sum<sub>직합</sub>*이라 부른다. 
 
-::: 참고 3
-가군의 경우와 달리, 대수의 직합은 categorical한 의미를 잃는다는 점에 주의해야 한다. 우선 $$I$$가 무한집합이고 무한히 많은 $$E_i$$들이 $$0$$이 아닌 unital algebra라면, 직합의 항등원이 될 수 있는 유일한 후보 $$(1_{E_i})_{i\in I}$$가 finitely supported가 아니므로 $$\bigoplus E_i$$는 unital이 아니다. 또, canonical injection $$E_j \rightarrow \bigoplus E_i$$는 (unital algebra들의 category에서) 항등원을 항등원으로 보내지 않으므로, 직합은 가군에서와 달리 coproduct가 되지 않는다. 실제로 commutative unital $$A$$-algebra들의 coproduct는 아래에서 살펴볼 텐서곱으로 주어진다.
-:::
-
 ## 대수의 텐서곱
 
 이제 두 $$A$$-algebra $$E,E'$$의 텐서곱을 살펴보자. $$A$$-module $$E\otimes_AE'$$ 위에 우리가 원하는 곱셈은 다음의 식
@@ -62,7 +58,7 @@ $$(x\otimes x')(y\otimes y')=xy\otimes x'y'\tag{1}$$
 
 으로 주어지는 것이지만, $$E\otimes_AE'$$의 원소가 $$x\otimes x'$$ 꼴의 원소들의 합으로 유일하게 표현되는 것은 아니므로 이 식이 잘 정의된 $$A$$-bilinear map을 주는지 확인해야 한다.
 
-::: 명제 4
+::: 명제 3
 두 $$A$$-algebra $$E,E'$$에 대하여, 식 $$(1)$$을 만족하는 $$A$$-bilinear map $$\mu:(E\otimes_AE')\times(E\otimes_AE') \rightarrow E\otimes_AE'$$이 유일하게 존재한다.
 :::
 ::: 증명
@@ -83,8 +79,8 @@ $$\mu(s,t)=\tilde{m}(t)(s)$$
 로 정의하면 $$\mu$$는 각 변수에 대해 $$A$$-linear이고, 생성원들 위에서 식 $$(1)$$을 만족한다. 유일성은 $$E\otimes_AE'$$이 $$x\otimes x'$$ 꼴의 원소들로 생성된다는 것으로부터 자명하다.
 :::
 
-::: 정의 5
-두 $$A$$-algebra $$E,E'$$에 대하여, [명제 4](#prop4)의 곱셈이 주어진 $$A$$-algebra $$E\otimes_AE'$$을 $$E$$와 $$E'$$의 *tensor product<sub>텐서곱</sub>*이라 부른다.
+::: 정의 4
+두 $$A$$-algebra $$E,E'$$에 대하여, [명제 3](#prop3)의 곱셈이 주어진 $$A$$-algebra $$E\otimes_AE'$$을 $$E$$와 $$E'$$의 *tensor product<sub>텐서곱</sub>*이라 부른다.
 :::
 
 직접곱에서와 마찬가지로, 텐서곱은 두 대수의 성질을 그대로 물려받는다. $$E,E'$$이 모두 associative라면 생성원들 위에서
@@ -97,9 +93,11 @@ $$\iota:E \rightarrow E\otimes_AE';\quad x\mapsto x\otimes 1_{E'},\qquad \iota':
 
 이 정의되며, 이들의 image는 서로 commute한다. 즉 $$(x\otimes 1)(1\otimes x')=x\otimes x'=(1\otimes x')(x\otimes 1)$$이다.
 
-[참고 3](#rmk3)에서 언급한 것과 같이, commutative unital algebra들의 category에서 텐서곱은 coproduct의 역할을 한다. 이는 [§환의 곱, 쌍대곱, 텐서곱, §§환들의 텐서곱](/ko/math/algebraic_structures/operations_of_rings#환들의-텐서곱)에서 살펴본 환들의 텐서곱 이야기를 $$A$$ 위로 옮긴 것이다.
+한편 direct sum은 module에서 coproduct 역할을 했지만, algebra에서는 그렇지 못하다. Direct sum의 곱셈이 성분별로 주어져 서로 다른 성분의 곱이 $$0$$이 되므로, homomorphism $$\bigoplus E_i\to F$$를 만들려면 각 $$f_i:E_i\to F$$의 image들이 pairwise로 곱이 $$0$$이어야 한다. 가령 $$E_1=E_2=F=k$$, $$f_1=f_2=\mathrm{id}$$로 두면 유일한 linear map $$f(a,b)=a+b$$는 $$f\bigl((a,b)(c,d)\bigr)=ac+bd$$와 $$f(a,b)f(c,d)=(a+b)(c+d)$$가 일치하지 않아 homomorphism이 되지 못한다. 즉 direct sum은 algebra category에서 universal property를 만족하지 못한다. (Unital algebra에서는 직합이 unital이 아니라는 추가 장애물도 있지만, 이것과 무관하게 근본 원인은 universal property의 실패이다.)
 
-::: 정리 6
+commutative unital algebra들의 category에서 텐서곱은 coproduct의 역할을 한다. 이는 [§환의 곱, 쌍대곱, 텐서곱, §§환들의 텐서곱](/ko/math/algebraic_structures/operations_of_rings#환들의-텐서곱)에서 살펴본 환들의 텐서곱 이야기를 $$A$$ 위로 옮긴 것이다.
+
+::: 정리 5
 Commutative unital $$A$$-algebra $$E,E'$$과, 임의의 commutative unital $$A$$-algebra $$F$$, 그리고 unital $$A$$-algebra homomorphism들 $$u:E \rightarrow F$$, $$u':E' \rightarrow F$$가 주어졌다 하자. 그럼 $$w\circ\iota=u$$, $$w\circ\iota'=u'$$을 만족하는 유일한 unital $$A$$-algebra homomorphism $$w:E\otimes_AE' \rightarrow F$$가 존재한다. 즉, $$E\otimes_AE'$$은 commutative unital $$A$$-algebra들의 category에서 $$E$$와 $$E'$$의 coproduct이다.
 :::
 ::: 증명
@@ -116,12 +114,12 @@ $$w'(x\otimes x')=w'\bigl((x\otimes 1_{E'})(1_E\otimes x')\bigr)=w'(\iota(x))w'(
 이므로 $$w'=w$$이다.
 :::
 
-::: 예시 7
+::: 예시 6
 Polynomial algebra들의 텐서곱은 변수들을 합친 polynomial algebra이다. 즉
 
 $$A[\x]\otimes_AA[\y]\cong A[\x,\y]$$
 
-이 성립한다. 이는 [§대수, ⁋명제 8](/ko/math/algebraic_structures/algebras#prop8)에서 살펴본 functor $$A[-]:\Set \rightarrow \cAlg{A}$$가 left adjoint라는 사실로부터 나온다. Left adjoint는 colimit을 보존하므로, 한 점 집합들의 (집합에서의) coproduct $$\{\x\}\sqcup\{\y\}=\{\x,\y\}$$를 $$\cAlg{A}$$에서의 coproduct로 보내고, [정리 6](#thm6)에 의하여 이는 정확히 텐서곱이기 때문이다. 물론 두 isomorphism $$\x\otimes 1\mapsto \x$$, $$1\otimes \y\mapsto \y$$를 직접 확인할 수도 있다.
+이 성립한다. 이는 [§대수, ⁋명제 8](/ko/math/algebraic_structures/algebras#prop8)에서 살펴본 functor $$A[-]:\Set \rightarrow \cAlg{A}$$가 left adjoint라는 사실로부터 나온다. Left adjoint는 colimit을 보존하므로, 한 점 집합들의 (집합에서의) coproduct $$\{\x\}\sqcup\{\y\}=\{\x,\y\}$$를 $$\cAlg{A}$$에서의 coproduct로 보내고, [정리 5](#thm5)에 의하여 이는 정확히 텐서곱이기 때문이다. 물론 두 isomorphism $$\x\otimes 1\mapsto \x$$, $$1\otimes \y\mapsto \y$$를 직접 확인할 수도 있다.
 :::
 
 ---
