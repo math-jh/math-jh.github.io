@@ -35,9 +35,15 @@ $$\bigl((\alpha x+y)z\bigr)_i=(\alpha x_i+y_i)z_i=\alpha(x_iz_i)+y_iz_i=\bigl(\a
 이고, 둘째 변수에 대해서도 마찬가지이다. 결합법칙과 교환법칙은 성분별로 확인되며, 모든 $$E_i$$가 항등원 $$1_{E_i}$$를 갖는다면 $$(1_{E_i})_{i\in I}$$가 $$\prod E_i$$의 항등원이 된다.
 :::
 
-이렇게 얻어진 $$A$$-algebra를 $$E_i$$들의 *direct product<sub>직접곱</sub>*이라 부른다. 곱셈을 성분별로 정의했으므로 canonical projection들 $$\pr_i:\prod E_i \rightarrow E_i$$는 $$A$$-algebra homomorphism이고, 실제로 direct product는 $$A$$-algebra들과 $$A$$-algebra homomorphism들의 category에서의 product이다.
+이를 다음과 같이 이름붙인다. 
 
-::: 명제 2
+::: 정의 2
+[명제 1](#prop1)에서 정의된 곱셈이 주어진 $$A$$-algebra $$\prod_{i\in I}E_i$$를 $$E_i$$들의 *direct product<sub>직접곱</sub>*이라 부른다. Canonical projection $$\pr_i:\prod E_i \rightarrow E_i$$들은 모두 $$A$$-algebra homomorphism이다.
+:::
+
+그럼 이렇게 정의한 direct product는 $$A$$-algebra들의 category에서의 product이다, 즉, 다음의 universal property가 성립한다. 
+
+::: 명제 3
 임의의 $$A$$-algebra $$F$$와 $$A$$-algebra homomorphism들 $$u_i:F \rightarrow E_i$$가 주어졌다 하자. 그럼 $$\pr_i\circ u=u_i$$가 모든 $$i$$에 대해 성립하도록 하는 유일한 $$A$$-algebra homomorphism $$u:F \rightarrow \prod_{i\in I}E_i$$가 존재한다.
 :::
 ::: 증명
@@ -48,7 +54,18 @@ $$u(xy)=(u_i(xy))_{i\in I}=(u_i(x)u_i(y))_{i\in I}=u(x)u(y)$$
 이기 때문이다.
 :::
 
-한편 $$A$$-module로서의 direct sum $$\bigoplus_{i\in I}E_i\subseteq \prod_{i\in I}E_i$$를 생각하면, finitely supported인 두 원소의 성분별 곱은 다시 finitely supported이므로 $$\bigoplus_{i\in I}E_i$$는 direct product의 subalgebra가 된다. ([§대수, ⁋정의 9](/ko/math/algebraic_structures/algebras#def9)) 이렇게 얻어진 $$A$$-algebra를 $$E_i$$들의 *direct sum<sub>직합</sub>*이라 부른다. 
+::: 명제 4
+$$A$$-module direct sum $$\bigoplus_{i\in I}E_i\subseteq\prod_{i\in I}E_i$$는 direct product의 곱셈을 제한하면 그 subalgebra, 곧 $$A$$-algebra가 된다.
+:::
+::: 증명
+$$\bigoplus E_i$$의 두 원소 $$(x_i),(y_i)$$는 각각 finitely supported이므로, 성분별 곱 $$(x_iy_i)$$에서 $$i$$번째 성분이 $$0$$이 아닌 $$i$$는 $$x_i\neq 0$$이며 $$y_i\neq 0$$인 $$i$$들의 합집합 안에 든다. 이는 유한집합이므로 $$(x_iy_i)$$도 finitely supported이고, 따라서 $$\bigoplus E_i$$는 곱셈에 대해 닫혀 $$\prod E_i$$의 subalgebra이다. ([§대수, ⁋정의 9](/ko/math/algebraic_structures/algebras#def9))
+:::
+
+::: 정의 5
+[명제 4](#prop4)의 곱셈이 주어진 $$A$$-algebra $$\bigoplus_{i\in I}E_i$$를 $$E_i$$들의 *direct sum<sub>직합</sub>*이라 부른다.
+:::
+
+Canonical injection $$\iota_j:E_j\hookrightarrow\bigoplus E_i$$는 $$A$$-algebra homomorphism이며, 이 direct sum은 $$A$$-module로서의 direct sum과 같은 집합이다. 다만 $$A$$-algebra로서의 direct sum은 module과 달리 coproduct 역할을 하지 못하는데, 이는 아래 텐서곱 절에서 확인한다. 
 
 ## 대수의 텐서곱
 
@@ -58,7 +75,7 @@ $$(x\otimes x')(y\otimes y')=xy\otimes x'y'\tag{1}$$
 
 으로 주어지는 것이지만, $$E\otimes_AE'$$의 원소가 $$x\otimes x'$$ 꼴의 원소들의 합으로 유일하게 표현되는 것은 아니므로 이 식이 잘 정의된 $$A$$-bilinear map을 주는지 확인해야 한다.
 
-::: 명제 3
+::: 명제 6
 두 $$A$$-algebra $$E,E'$$에 대하여, 식 $$(1)$$을 만족하는 $$A$$-bilinear map $$\mu:(E\otimes_AE')\times(E\otimes_AE') \rightarrow E\otimes_AE'$$이 유일하게 존재한다.
 :::
 ::: 증명
@@ -79,8 +96,8 @@ $$\mu(s,t)=\tilde{m}(t)(s)$$
 로 정의하면 $$\mu$$는 각 변수에 대해 $$A$$-linear이고, 생성원들 위에서 식 $$(1)$$을 만족한다. 유일성은 $$E\otimes_AE'$$이 $$x\otimes x'$$ 꼴의 원소들로 생성된다는 것으로부터 자명하다.
 :::
 
-::: 정의 4
-두 $$A$$-algebra $$E,E'$$에 대하여, [명제 3](#prop3)의 곱셈이 주어진 $$A$$-algebra $$E\otimes_AE'$$을 $$E$$와 $$E'$$의 *tensor product<sub>텐서곱</sub>*이라 부른다.
+::: 정의 7
+두 $$A$$-algebra $$E,E'$$에 대하여, [명제 6](#prop6)의 곱셈이 주어진 $$A$$-algebra $$E\otimes_AE'$$을 $$E$$와 $$E'$$의 *tensor product<sub>텐서곱</sub>*이라 부른다.
 :::
 
 직접곱에서와 마찬가지로, 텐서곱은 두 대수의 성질을 그대로 물려받는다. $$E,E'$$이 모두 associative라면 생성원들 위에서
@@ -97,7 +114,7 @@ $$\iota:E \rightarrow E\otimes_AE';\quad x\mapsto x\otimes 1_{E'},\qquad \iota':
 
 commutative unital algebra들의 category에서 텐서곱은 coproduct의 역할을 한다. 이는 [§환의 곱, 쌍대곱, 텐서곱, §§환들의 텐서곱](/ko/math/algebraic_structures/operations_of_rings#환들의-텐서곱)에서 살펴본 환들의 텐서곱 이야기를 $$A$$ 위로 옮긴 것이다.
 
-::: 정리 5
+::: 정리 8
 Commutative unital $$A$$-algebra $$E,E'$$과, 임의의 commutative unital $$A$$-algebra $$F$$, 그리고 unital $$A$$-algebra homomorphism들 $$u:E \rightarrow F$$, $$u':E' \rightarrow F$$가 주어졌다 하자. 그럼 $$w\circ\iota=u$$, $$w\circ\iota'=u'$$을 만족하는 유일한 unital $$A$$-algebra homomorphism $$w:E\otimes_AE' \rightarrow F$$가 존재한다. 즉, $$E\otimes_AE'$$은 commutative unital $$A$$-algebra들의 category에서 $$E$$와 $$E'$$의 coproduct이다.
 :::
 ::: 증명
@@ -114,12 +131,12 @@ $$w'(x\otimes x')=w'\bigl((x\otimes 1_{E'})(1_E\otimes x')\bigr)=w'(\iota(x))w'(
 이므로 $$w'=w$$이다.
 :::
 
-::: 예시 6
+::: 예시 9
 Polynomial algebra들의 텐서곱은 변수들을 합친 polynomial algebra이다. 즉
 
 $$A[\x]\otimes_AA[\y]\cong A[\x,\y]$$
 
-이 성립한다. 이는 [§대수, ⁋명제 8](/ko/math/algebraic_structures/algebras#prop8)에서 살펴본 functor $$A[-]:\Set \rightarrow \cAlg{A}$$가 left adjoint라는 사실로부터 나온다. Left adjoint는 colimit을 보존하므로, 한 점 집합들의 (집합에서의) coproduct $$\{\x\}\sqcup\{\y\}=\{\x,\y\}$$를 $$\cAlg{A}$$에서의 coproduct로 보내고, [정리 5](#thm5)에 의하여 이는 정확히 텐서곱이기 때문이다. 물론 두 isomorphism $$\x\otimes 1\mapsto \x$$, $$1\otimes \y\mapsto \y$$를 직접 확인할 수도 있다.
+이 성립한다. 이는 [§대수, ⁋명제 8](/ko/math/algebraic_structures/algebras#prop8)에서 살펴본 functor $$A[-]:\Set \rightarrow \cAlg{A}$$가 left adjoint라는 사실로부터 나온다. Left adjoint는 colimit을 보존하므로, 한 점 집합들의 (집합에서의) coproduct $$\{\x\}\sqcup\{\y\}=\{\x,\y\}$$를 $$\cAlg{A}$$에서의 coproduct로 보내고, [정리 8](#thm8)에 의하여 이는 정확히 텐서곱이기 때문이다. 물론 두 isomorphism $$\x\otimes 1\mapsto \x$$, $$1\otimes \y\mapsto \y$$를 직접 확인할 수도 있다.
 :::
 
 ---

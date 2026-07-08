@@ -201,7 +201,7 @@ $$\Aut(E_H/B)\cong N_G(H)/H$$
 
 이 성립한다. 이를 $$E_H$$의 *Deck transformation group*이라 부른다. 더 일반적으로 (fiber $$p^{-1}(x)$$의 서로 다른 원소를 택하여 얻어지는) covering space들의 automorphism은 $$\pi_1(B,x)$$의 subgroup들에 inner automorphism을 취하는 것에 대응되며, 우리는 이를 *Deck transformation*이라 부른다.
 
-한편 $$\pi_1(B,x)$$의 subgroup(들의 conjugacy class들)의 poset에는 minimal한 원소 $$\left\{e\right\}$$가 존재한다. 그럼 위의 Galois correspondance에 의해 여기에 대응되는 *universal cover* $$\widetilde{B}$$가 존재한다. 이 covering space의 Deck transformation group은 $$\pi_1(B,x)$$와 isomorphic하며, 
+한편 $$\pi_1(B,x)$$의 subgroup(들의 conjugacy class들)의 poset에는 minimal한 원소 $$\left\{e\right\}$$가 존재한다. 그럼 위의 Galois correspondance에 의해 여기에 대응되는 *universal cover* $$\widetilde{B}$$가 존재한다. 이 covering space의 Deck transformation group은 $$\pi_1(B,x)$$와 isomorphic하며, $$\widetilde{B}$$는 simply connected이다.
 
 ## 자이페르트-반 캄펜 정리
 
@@ -233,26 +233,6 @@ $$\Aut(E_H/B)\cong N_G(H)/H$$
 
 이 pushout diagram이며 이로부터 나오는 $$\pi_1(U)\ast_{\pi_1(U\cap V)}\pi_1(V)\rightarrow \pi_1(X)$$는 isomorphism이다. 
 :::
-
-## Hurewicz theorem
-
-Homology group은 fundamental group보다 더 단순한 구조를 가지고 있다. 가령 $$\pi_1(X)$$는 일반적으로 abelian group일 필요가 없지만, $$H_1(X)$$는 그 정의에 의해 abelian group이다. 그러나 [§호몰로지, ⁋예시 8](/ko/math/algebraic_topology/homology#ex8)에서 살펴본 것처럼 $$H_1(X)$$의 원소들도 일단은 일종의 loop들처럼 생각할 수 있으므로 이들 사이의 관계를 기대하는 것이 자연스럽다. 
-
-::: 정리 15 (Hurewicz)
-Path-connected space $$X$$를 고정하자. 그럼 각각의 $$n$$에 대하여, group homomorphism  
-
-$$h_n:\pi_n(X) \rightarrow H_n(X)$$
-
-이 존재한다. 특별히 $$n=1$$인 경우, $$h_1$$은 surjective이고 $$\ker h_1$$은 $$\pi_1(X)$$의 commutator subgroup $$[\pi_1(X),\pi_1(X)]$$이 되어 first isomorphism theorem에 의해
-
-$$H_1(X)\cong \pi_1(X)/\ker h_1=\pi_1(X)/[\pi_1(X),\pi_1(X)]=\pi_1(X)^\ab$$
-
-이 성립한다. 더 일반적으로, 만일 모든 $$i< n$$에 대하여 $$\pi_i(X)=0$$이라면 $$h_n$$은 isomorphism이고 $$h_{n+1}$$은 surjective이다. 
-:::
-
-Hurewicz homomorphism $$h_n$$은 임의의 $$f:S^n \rightarrow X$$가 주어졌을 때 $$f_\ast([S^n])$$으로 주어진다. 여기에서 $$[S^n]$$은 $$H_n(S^n)\cong \mathbb{Z}$$의 generator이다.
-
-
 
 --- 
 
