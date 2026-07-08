@@ -22,15 +22,15 @@ $$E(\gamma_n^k)\rightarrow \Gr(k, \mathbb{C}^\infty)$$
 
 한편, vector bundle을 살펴보는 또 다른 관점은 이를 transition function들의 모임으로 생각하는 것이었다. 가령 임의의 vector bundle은 두 개의 trivializing open cover가 겹치는 곳에서
 
-$$g_{ij}: U_i\cap U_j\rightarrow \GL(k;\mathbb{R})$$
+$$g_{ij}: U_i\cap U_j\rightarrow \GL(k;;\mathbb{R})$$
 
-를 명시해주면 되었으며, 이 관점은 예를 들어, $$\GL(k;\mathbb{R})$$을 $$\GL^+(k;\mathbb{R})$$로 바꿔주면 *oriented* vector bundle 또한 설명할 수 있다는 점에서 강력했다. 
+를 명시해주면 되었으며, 이 관점은 예를 들어, $$\GL(k;;\mathbb{R})$$을 $$\GL^+(k;\mathbb{R})$$로 바꿔주면 *oriented* vector bundle 또한 설명할 수 있다는 점에서 강력했다. 
 
 이번 글의 목적은 이 두 관점을 이어주는 것이다. 즉 우리는 더 일반적으로, structure group이 (topological) group $$G$$인 경우 나타나는 *principal $$G$$-budnle*을 정의하고, 이러한 것들을 분류하는 공간인 *classifying space* $$BG$$를 정의할 것이다. 이번 글에서 $$G$$는 항상 topological group을 의미하며, 별다른 언급이 없는 한 base space는 paracompact인 것으로 가정한다.
 
 ## Principal bundle의 정의
 
-Vector bundle의 fiber에는 벡터공간 구조가 있었고, 그 transition function은 이 구조를 보존하는 linear automorphism, 곧 $$\GL(k,\mathbb{R})$$의 원소들이었다. 일반적인 구조군 $$G$$를 다룰 때는 fiber 자체를 $$G$$로 두고, transition을 $$G$$의 left translation으로 주는 것이 자연스럽다. 약간의 차이는 이러한 관점에서 특별한 점이 존재하지 않는다는 것으로, 하나의 chart 상에서 항등원인 fiber의 원소도 left translation을 통해 다른 chart에서는 fiber의 다른 원소로 이해된다. 즉, 이들 원소는 *$$G$$-torsor*들로 생각해야 하며, 이를 좌표에 의존하지 않고 기술하기 위해 우리는 total space 위의 $$G$$-action을 사용한다.
+Vector bundle의 fiber에는 벡터공간 구조가 있었고, 그 transition function은 이 구조를 보존하는 linear automorphism, 곧 $$\GL(k;,\mathbb{R})$$의 원소들이었다. 일반적인 구조군 $$G$$를 다룰 때는 fiber 자체를 $$G$$로 두고, transition을 $$G$$의 left translation으로 주는 것이 자연스럽다. 약간의 차이는 이러한 관점에서 특별한 점이 존재하지 않는다는 것으로, 하나의 chart 상에서 항등원인 fiber의 원소도 left translation을 통해 다른 chart에서는 fiber의 다른 원소로 이해된다. 즉, 이들 원소는 *$$G$$-torsor*들로 생각해야 하며, 이를 좌표에 의존하지 않고 기술하기 위해 우리는 total space 위의 $$G$$-action을 사용한다.
 
 ::: 정의 1
 Topological group $$G$$에 대하여, fiber bundle $$p:P\rightarrow X$$와 그 위의 연속적인 right action $$P\times G\rightarrow P$$가 주어졌다 하자. 이 데이터가 *principal $$G$$-bundle<sub>주다발</sub>*이라는 것은 다음 세 조건이 성립하는 것이다.
@@ -46,7 +46,7 @@ Topological group $$G$$에 대하여, fiber bundle $$p:P\rightarrow X$$와 그 �
 
 $$g_{ij}(x)g_{jk}(x)=g_{ik}(x),\qquad g_{ii}(x)=e$$
 
-를 만족하며, 두 cocycle $$(g_{ij})$$와 $$(g_{ij}')$$이 같은 bundle을 주는 것은 연속함수 $$\lambda_i:U_i\rightarrow G$$들이 존재하여 $$g_{ij}'=\lambda_i g_{ij}\lambda_j^{-1}$$인 것과 동치이다. 따라서 open cover $$\{U_i\}$$ 위에서 trivialize되는 principal $$G$$-bundle의 isomorphism class들은 nonabelian Čech cohomology $$\check{H}^1(X;G)$$로 분류되며, $$G=\GL(k,\mathbb{R})$$인 경우 이는 앞 글의 vector bundle 분류와 정확히 일치한다.
+를 만족하며, 두 cocycle $$(g_{ij})$$와 $$(g_{ij}')$$이 같은 bundle을 주는 것은 연속함수 $$\lambda_i:U_i\rightarrow G$$들이 존재하여 $$g_{ij}'=\lambda_i g_{ij}\lambda_j^{-1}$$인 것과 동치이다. 따라서 open cover $$\{U_i\}$$ 위에서 trivialize되는 principal $$G$$-bundle의 isomorphism class들은 nonabelian Čech cohomology $$\check{H}^1(X;G)$$로 분류되며, $$G=\GL(k;,\mathbb{R})$$인 경우 이는 앞 글의 vector bundle 분류와 정확히 일치한다.
 
 Vector bundle은 언제나 zero section을 가졌으나, principal bundle은 fiber가 $$G$$가 아니라 $$G$$-torsor이므로 이러한 역할을 하는 section을 잡는 것이 자명하지 않다. 실제로 다음 명제는 section의 존재 여부가 principal bundle의 자명성을 완전히 결정한다는 것을 보여준단.
 
@@ -75,7 +75,7 @@ $$(y,f)\cdot g=(y\cdot g,\ g^{-1}\cdot f)$$
 
 직관적으로 이는 principal $$G$$-bundle이 <em-ko>비틀려있는</em-ko> 구조를 따라 fiber $$F$$를 이어붙여주는 것으로, 가령 trivial $$G$$-bundle $$X\times G$$와 fiber $$F$$에 이를 적용하면 trivial fiber bundle $$X\times F$$가 나오고, 비슷하게 약간 비틀려있는 (즉 non-trivial한) principal $$G$$-bundle $$P$$와 fiber $$F$$에 이를 적용하면 그로부터 얻어지는 fiber bundle은 fiber가 $$F$$이고, $$P$$에서 비틀림 데이터를 받아오는 bundle이 된다. 
 
-가장 투명한 예시는 vector bundle이므로, 여기에서 정의를 차례차례 따라가보자. Topological group $$G=\GL(k, \mathbb{R})$$은 dimension $$k$$ real vector space $$F=V$$ 위에 왼쪽에서 작용한다. 또, 편의를 위해 trivial $$G$$-bundle $$P=X\times G$$가 주어졌다 하자. 그럼 우선 곱공간 $$P\times F=(X\times G)\times V$$ 위에 정의된 $$G$$-action은
+가장 투명한 예시는 vector bundle이므로, 여기에서 정의를 차례차례 따라가보자. Topological group $$G=\GL(k;, \mathbb{R})$$은 dimension $$k$$ real vector space $$F=V$$ 위에 왼쪽에서 작용한다. 또, 편의를 위해 trivial $$G$$-bundle $$P=X\times G$$가 주어졌다 하자. 그럼 우선 곱공간 $$P\times F=(X\times G)\times V$$ 위에 정의된 $$G$$-action은
 
 $$\bigl((x,g),v\bigr)\cdot h=\bigl((x, gh),h^{-1}v\bigr)$$
 
@@ -95,17 +95,17 @@ $$[((x,g),v)]\mapsto(x,gv)$$
 
 $$\Fr(E)=\{(x,b)\mid x\in X,b\text{ an ordered basis of $E_x$}\}$$
 
-는 기저를 행렬로 보내는 $$\GL(n,\mathbb{R})$$의 작용에 대하여 principal $$\GL(n,\mathbb{R})$$-bundle이 되며, 이를 $$E$$의 *frame bundle*이라 한다. 다음 명제는 이 두 구성이 서로 역과정임을 보여준다. 
+는 기저를 행렬로 보내는 $$\GL(n;\mathbb{R})$$의 작용에 대하여 principal $$\GL(n;\mathbb{R})$$-bundle이 되며, 이를 $$E$$의 *frame bundle*이라 한다. 다음 명제는 이 두 구성이 서로 역과정임을 보여준다. 
 
 ::: 명제 4
-위상공간 $$X$$ 위에서, principal $$\GL(n,\mathbb{R})$$-bundle들의 isomorphism class와 rank $$n$$ real vector bundle들의 isomorphism class 사이에는 자연스러운 일대일 대응이 존재한다. 이 대응은 principal bundle $$P$$에 associated bundle $$P\times_{\GL(n,\mathbb{R})}\mathbb{R}^n$$을, vector bundle $$E$$에 frame bundle $$\Fr(E)$$를 대응시킨다.
+위상공간 $$X$$ 위에서, principal $$\GL(n;\mathbb{R})$$-bundle들의 isomorphism class와 rank $$n$$ real vector bundle들의 isomorphism class 사이에는 자연스러운 일대일 대응이 존재한다. 이 대응은 principal bundle $$P$$에 associated bundle $$P\times_{\GL(n;\mathbb{R})}\mathbb{R}^n$$을, vector bundle $$E$$에 frame bundle $$\Fr(E)$$를 대응시킨다.
 :::
 ::: 증명
 두 대응이 서로 역임을 확인하면 된다. 
 
 우선 정의에 의해 frame bundle $$\Fr(E)$$의 한 점은 fiber $$E_x$$의 한 ordered basis와 같으며, 이는 정확히 standard Euclidean space $$\mathbb{R}^n$$의 각 standard basis가 어디로 가는지를 보면 되므로 linear isomorphism $$b:\mathbb{R}^n\rightarrow E_x$$와 정확히 같은 정보량을 가진다. 이렇게 정의된 사상
 
-$$\Fr(E)\times_{\GL(n,\mathbb{R})}\mathbb{R}^n\rightarrow E,\qquad [(b,v)]\mapsto b(v)$$
+$$\Fr(E)\times_{\GL(n;\mathbb{R})}\mathbb{R}^n\rightarrow E,\qquad [(b,v)]\mapsto b(v)$$
 
 는 잘 정의되는데, $$(b,v)$$를 $$(b\circ A, A^{-1}v)$$로 바꾸어도 $$(b\circ A)(A^{-1}v)=b(v)$$로 같은 값을 주기 때문이다. 이 사상은 각 fiber 위에서 선형동형이므로 vector bundle의 isomorphism이다. 
 
@@ -114,7 +114,7 @@ $$\Fr(E)\times_{\GL(n,\mathbb{R})}\mathbb{R}^n\rightarrow E,\qquad [(b,v)]\mapst
 두 구성 모두 transition function을 보존하므로 isomorphism class를 보존하고, 사상의 naturality는 pullback과의 호환에서 따라온다.
 :::
 
-이 동치 덕분에 vector bundle에 대한 모든 분류 문제는 principal $$\GL(n,\mathbb{R})$$-bundle에 대한 문제로 번역된다. 같은 방식으로 complex vector bundle은 principal $$\GL(n,\mathbb{C})$$-bundle에, oriented real vector bundle은 principal $$\GL^+(n,\mathbb{R})$$-bundle에 대응한다. 따라서 임의의 구조군 $$G$$에 대하여 principal $$G$$-bundle을 분류할 수 있다면, 이 모든 경우가 한꺼번에 해결된다.
+이 동치 덕분에 vector bundle에 대한 모든 분류 문제는 principal $$\GL(n;\mathbb{R})$$-bundle에 대한 문제로 번역된다. 같은 방식으로 complex vector bundle은 principal $$\GL(n;\mathbb{C})$$-bundle에, oriented real vector bundle은 principal $$\GL^+(n,\mathbb{R})$$-bundle에 대응한다. 따라서 임의의 구조군 $$G$$에 대하여 principal $$G$$-bundle을 분류할 수 있다면, 이 모든 경우가 한꺼번에 해결된다.
 
 Vector bundle에서와 마찬가지로, 연속함수 $$f:X'\rightarrow X$$와 principal $$G$$-bundle $$p:P\rightarrow X$$가 주어지면 *pullback bundle*
 
@@ -139,7 +139,7 @@ $$X$$가 paracompact이고 $$f_0,f_1:X\rightarrow Y$$가 homotopic이라 하자.
 
 ## Universal bundle과 classifying space
 
-[정리 5](#thm5)는 함수 $$f$$를 $$f^\ast P$$로 대응시키는 것이 $$f$$의 homotopy class에만 의존함을 말해 준다. 따라서, 만일 어떤 고정된 principal $$G$$-bundle 하나를 모든 다른 bundle이 pullback으로 얻을 수 있는 원천으로 삼을 수 있다면, principal $$G$$-bundle의 분류는 그 원천 공간으로의 homotopy class를 세는 일로 환원될 것이며, 이는 vector bundle에서 $$\Gr_k(\mathbb{R}^\infty)$$ 위의 universal bundle이 그러한 원천이었던 것을 일반화한다.
+[정리 5](#thm5)는 함수 $$f$$를 $$f^\ast P$$로 대응시키는 것이 $$f$$의 homotopy class에만 의존함을 말해 준다. 따라서, 만일 어떤 고정된 principal $$G$$-bundle 하나를 모든 다른 bundle이 pullback으로 얻을 수 있는 원천으로 삼을 수 있다면, principal $$G$$-bundle의 분류는 그 원천 공간으로의 homotopy class를 세는 일로 환원될 것이며, 이는 vector bundle에서 $$\Gr(k,\mathbb{R}^\infty)$$ 위의 universal bundle이 그러한 원천이었던 것을 일반화한다.
 
 ::: 정의 6
 Topological group $$G$$에 대하여, principal $$G$$-bundle $$p:EG\rightarrow BG$$가 *universal bundle*이라는 것은 total space $$EG$$가 contractible인 것, 곧 $$EG$$가 한 점과 homotopy equivalent인 것이다. ([§호모토피, ⁋정의 4](/ko/math/algebraic_topology/homotopy#def4)) 이때 base space $$BG$$를 $$G$$의 *classifying space<sub>분류공간</sub>*라 부른다.
@@ -158,7 +158,7 @@ $$EG=G\ast G\ast G\ast\cdots$$
 
 한편, universal bundle은 본질적으로 유일하다. 두 universal bundle $$EG\rightarrow BG$$와 $$EG'\rightarrow BG'$$이 주어지면, $$EG'$$이 contractible이므로 [정리 5](#thm5)에 의해 $$BG$$로 끌어내린 분류사상이 존재하고, 이 논증을 양방향으로 적용하면 $$BG$$와 $$BG'$$이 서로 homotopy inverse인 사상으로 연결되기 때문이다. 따라서 $$BG$$는 homotopy equivalence를 넘어서는 모호함 없이 결정되며, 우리는 $$BG$$를 *the* classifying space라 부른다.
 
-그럼 이 글의 가장 핵심적인 결과는, 당연히 다음의 정리이다..
+그럼 이 글의 가장 핵심적인 결과는, 당연히 다음의 정리이다.
 
 ::: 정리 8 (분류정리)
 Paracompact space $$X$$와 topological group $$G$$에 대하여, $$[X,BG]$$를 $$X$$에서 $$BG$$로의 free homotopy class들의 집합이라 하자. 그럼 universal bundle $$EG\rightarrow BG$$를 pullback하는 사상
@@ -182,23 +182,25 @@ $$\widetilde{f}:P\rightarrow EG,\qquad y\mapsto \sum_i \rho_i(p(y))\psi_i(y)$$
 이제 injectivity를 보이기 위해 $$f_0,f_1:X\rightarrow BG$$에 대하여 $$f_0^\ast EG\cong f_1^\ast EG=:P$$라 하자. 우리는 $$f_0$$과 $$f_1$$이 homotopic한 것을 보여야 한다. 각 $$f_i$$는 bundle map $$P\cong f_i^\ast EG\rightarrow EG$$, 곧 $$P$$에서 universal bundle로 가는 $$G$$-equivariant bundle map $$\Phi_i:P\rightarrow EG$$을 가진다. 그런데 $$EG$$가 contractible이므로, paracompact 공간 위의 principal bundle $$P$$에서 $$EG$$로 가는 임의의 두 $$G$$-equivariant map은 서로 $$G$$-equivariant homotopic하며, 따라서 $$\Phi_0$$과 $$\Phi_1$$을 잇는 $$G$$-equivariant homotopy $$P\times[0,1]\rightarrow EG$$가 존재하고, 이것이 base로 내려가 $$f_0$$과 $$f_1$$ 사이의 homotopy를 주므로 $$[f_0]=[f_1]$$이다. 
 :::
 
-이 정리는 principal $$G$$-bundle의 기하학적 분류를 순수하게 homotopy의 데이터 $$[X,BG]$$로 옮긴다. [명제 4](#prop4)와 결합하면 rank $$n$$ real vector bundle의 분류가 $$[X,B\GL(n,\mathbb{R})]$$로, complex의 경우 $$[X,B\GL(n,\mathbb{C})]$$로 옮겨지게 되며, 실제로 이들 $$B\GL(n, \mathbb{R})$$과 $$B\GL(n, \mathbb{C})$$이 실은 (real/complex) Grassmannian인 것을 곧 살펴보게 될 것이다. 
+이 정리는 principal $$G$$-bundle의 기하학적 분류를 순수하게 homotopy의 데이터 $$[X,BG]$$로 옮긴다. [명제 4](#prop4)와 결합하면 rank $$n$$ real vector bundle의 분류가 $$[X,B\GL(n;\mathbb{R})]$$로, complex의 경우 $$[X,B\GL(n;\mathbb{C})]$$로 옮겨지게 되며, 실제로 이들 $$B\GL(n; \mathbb{R})$$과 $$B\GL(n; \mathbb{C})$$이 실은 (real/complex) Grassmannian인 것을 곧 살펴보게 될 것이다. 
 
 ::: 보조정리 9
-Classifying space의 구성은 $$G$$에 대해 functorial이다. 연속적인 group homomorphism $$\phi:G\rightarrow H$$가 주어지면, $$EG$$ 위의 $$G$$-작용을 $$\phi$$를 통해 $$H$$-작용으로 바꾸어 얻는 associated bundle $$EG\times_G H$$를 분류하는 사상이 $$B\phi:BG\rightarrow BH$$를 유도한다. 이는 $$B(\psi\circ\phi)\simeq B\psi\circ B\phi$$를 만족하여, $$G\mapsto BG$$가 homotopy category 위의 functor가 되게 한다. 가령 inclusion $$\Umat(n)\hookrightarrow\GL(n,\mathbb{C})$$이 유도하는 $$B\Umat(n)\rightarrow B\GL(n,\mathbb{C})$$이 아래에서 쓰인다.
+Classifying space의 구성은 $$G$$에 대해 functorial이다. 연속적인 group homomorphism $$\phi:G\rightarrow H$$가 주어지면, $$EG$$ 위의 $$G$$-작용을 $$\phi$$를 통해 $$H$$-작용으로 바꾸어 얻는 associated bundle $$EG\times_G H$$를 분류하는 사상이 $$B\phi:BG\rightarrow BH$$를 유도한다. 이는 $$B(\psi\circ\phi)\simeq B\psi\circ B\phi$$를 만족하여, $$G\mapsto BG$$가 homotopy category 위의 functor가 되게 한다. 가령 inclusion $$\Umat(n)\hookrightarrow\GL(n;\mathbb{C})$$이 유도하는 $$B\Umat(n)\rightarrow B\GL(n;\mathbb{C})$$이 아래에서 쓰인다.
 :::
 
 ## 분류공간의 예
 
-가장 단순하면서도 시사적인 경우는 $$G$$가 discrete group일 때이다. 이때 principal $$G$$-bundle은 fiber가 discrete set인 fiber bundle, 곧 $$G$$를 deck transformation group으로 갖는 regular covering space와 같다.
+현실적으로, 이 글에서 가장 유용한 부분은 존재성보다도 이 분류공간들이 어떻게 주어지는지에 대한 것이다. 가장 단순한 경우는 다음과 같다. 
 
 ::: 예시 10
-$$G$$가 discrete group이라 하자. Universal bundle $$EG\rightarrow BG$$에서 $$EG$$는 contractible이고 $$G$$가 free하게, 그리고 discrete하게 작용하므로, $$EG\rightarrow BG$$는 $$BG$$의 universal cover이며 그 deck transformation group은 $$G$$이다. ([§피복공간, ⁋정리 11](/ko/math/algebraic_topology/covering_spaces#thm11)) 따라서 $$\pi_1(BG)\cong G$$이고, $$EG$$가 contractible이라 $$BG$$의 universal cover 또한 contractible이므로 $$\pi_n(BG)=0$$ ($$n\geq 2$$) 이다. 곧 $$BG$$는 Eilenberg–MacLane 공간 $$K(G,1)$$이다.
+$$G$$가 discrete group이라 하자. 그럼 임의의 base $$B$$ 위에 정의된 principal $$G$$-bundle은 그 fiber가 discrete이므로 $$B$$ 위의 covering space가 된다. 그럼 이 이해에서 $$G$$의 right action은 Deck transformation이 되며, fiber 위에서 Deck group이 transitive하게 작용하므로 이 covering space는 *regular* covering space이다. 
 
-이로부터 구체적인 분류공간이 covering space 이론으로부터 직접 읽힌다. $$G=\mathbb{Z}/2$$일 때 $$S^\infty$$는 contractible이고 antipodal 작용이 free하므로 $$E(\mathbb{Z}/2)=S^\infty$$, $$B(\mathbb{Z}/2)=S^\infty/(\mathbb{Z}/2)=\RP^\infty$$이다. $$G=\mathbb{Z}$$일 때는 $$\mathbb{R}$$ 위의 평행이동 작용으로부터 $$B\mathbb{Z}=\mathbb{R}/\mathbb{Z}=S^1$$을 얻으며, 이는 $$S^1$$의 universal cover $$\mathbb{R}\rightarrow S^1$$이 deck group $$\mathbb{Z}$$를 갖는다는 사실과 정확히 일치한다. ([§피복공간, ⁋따름정리 12](/ko/math/algebraic_topology/covering_spaces#cor12))
+이제 이를 universal bundle $$EG \rightarrow BG$$에 적용하자. 그럼 [§피복공간, ⁋따름정리 12](/ko/math/algebraic_topology/covering_spaces#cor12)에 의해 이 covering space의 Deck transformation group은 $$\pi_1(BG)$$와 isomorphic한데, 우리는 앞서 이 Deck group이 곧 $$G$$가 되어야 하는 것을 살펴보았으므로 $$\pi_1(BG)\cong G$$이고, $$EG$$가 contractible이라 $$BG$$의 universal cover 또한 contractible이므로 $$\pi_n(BG)=0$$ ($$n\geq 2$$) 이다. 곧 $$BG$$는 Eilenberg–MacLane 공간 $$K(G,1)$$이다.
+
+더 구체적인 예시로 $$G=\mathbb{Z}/2$$인 경우와 $$G=\mathbb{Z}$$인 경우를 각각 보자. 우선 $$\mathbb{Z}/2$$의 경우 우리는 $$\mathbb{Z}/2$$이 free하게 작용하는 contractible space를 찾아야 하는데, $$S^\infty$$에 antipodal action을 준 게 정확히 이 두 조건을 모두 만족한다. 그럼 이 action의 orbit space는 $$\RP^\infty$$가 된다. $$\mathbb{Z}$$의 경우도 이미 우리와 친숙한 예시에서 찾아올 수 있는데, 바로 [§피복공간, ⁋정의 3](/ko/math/algebraic_topology/covering_spaces#def3) 직후에 covering space의 표준적인 예시로 소개한 $$\mathbb{R}\rightarrow S^1$$이 그러하다. 
 :::
 
-연속군의 경우 가장 기본적인 예는 원군 $$G=S^1$$이다. $$S^1$$은 $$\mathbb{C}^\infty\setminus\{0\}$$ 위에 스칼라곱으로 free하게 작용하고 이 공간은 단위구면 $$S^\infty=\varinjlim_n S^{2n-1}$$으로 deformation retract되어 contractible이므로, $$ES^1=\mathbb{C}^\infty\setminus\{0\}$$이고 그 orbit space는 복소 직선들의 공간
+이제 실제로 우리가 관심있는 group들의 covering space들을 살펴보자. Discrete이 아닌 group 중 가장 기본적인 예는 $$G=S^1$$이며 이는 보편적으로 $$\mathbb{C}^\times$$에 들어있는 길이 $$1$$짜리 복소수들 $$e^{2\pi it}$$들의 모임으로 생각한다. 그럼 $$S^1$$은 $$\mathbb{C}^\infty\setminus\{0\}$$ 위에 스칼라곱으로 free하게 작용한다. 각 $$\mathbb{C}^n\setminus\{0\}$$은 radial deformation retract로 단위구면 $$S^{2n-1}\subseteq\mathbb{C}^n\cong\mathbb{R}^{2n}$$과 같은 호모토피형이며, 표준 inclusion $$\mathbb{C}^n\hookrightarrow\mathbb{C}^{n+1}$$이 equator inclusion $$S^{2n-1}\hookrightarrow S^{2n+1}$$을 유도하므로 $$\mathbb{C}^\infty\setminus\{0\}$$는 그 colimit $$S^\infty=\varinjlim_n S^{2n-1}$$로 deformation retract된다. 유한 차원 구면과 달리 이 colimit은 shift 사상 $$(x_1,x_2,\ldots)\mapsto(0,x_1,x_2,\ldots)$$이 항등사상과 homotopic이라 한 점으로 수축하므로 contractible이고, 따라서 $$ES^1=\mathbb{C}^\infty\setminus\{0\}$$이며 그 orbit space는 복소 직선들의 공간
 
 $$BS^1=(\mathbb{C}^\infty\setminus\{0\})/S^1=\CP^\infty$$
 
@@ -206,16 +208,16 @@ $$BS^1=(\mathbb{C}^\infty\setminus\{0\})/S^1=\CP^\infty$$
 
 $$BT=B(S^1)^n=(\CP^\infty)^n$$
 
-이다. 같은 방식으로 임의의 $$n$$에 대하여 unitary group과 orthogonal group의 분류공간은 앞 글의 infinite Grassmannian으로 실현된다. 즉 $$B\Umat(n)=\Gr_n(\mathbb{C}^\infty)$$이고 $$B\Omat(n)=\Gr_n(\mathbb{R}^\infty)$$인데, 이는 $$\Gr_n(\mathbb{C}^\infty)$$ 위의 universal vector bundle의 frame bundle이 universal principal $$\Umat(n)$$-bundle을 주고 그 total space (Stiefel 공간의 colimit) 가 contractible이기 때문이다.
+이다. 같은 방식으로 임의의 $$n$$에 대하여 unitary group과 orthogonal group의 분류공간은 앞 글의 infinite Grassmannian으로 실현된다. 즉 $$B\Umat(n)=\Gr(n,\mathbb{C}^\infty)$$이고 $$B\Omat(n)=\Gr(n,\mathbb{R}^\infty)$$인데, 이는 $$\Gr(n,\mathbb{C}^\infty)$$ 위의 universal vector bundle의 frame bundle이 universal principal $$\Umat(n)$$-bundle을 주고 그 total space (Stiefel 공간의 colimit) 가 contractible이기 때문이다.
 
 마지막으로 일반선형군과 그 maximal compact subgroup의 분류공간이 같은 homotopy type을 갖는다는 사실은 분류 이론에서 자주 쓰인다.
 
 ::: 예시 11
-Inclusion $$\Umat(n)\hookrightarrow\GL(n,\mathbb{C})$$은 homotopy equivalence
+Inclusion $$\Umat(n)\hookrightarrow\GL(n;\mathbb{C})$$은 homotopy equivalence
 
-$$B\Umat(n)\xrightarrow{\ \simeq\ }B\GL(n,\mathbb{C})$$
+$$B\Umat(n)\xrightarrow{\ \simeq\ }B\GL(n;\mathbb{C})$$
 
-를 유도한다. 이는 Gram–Schmidt 직교화가 $$\GL(n,\mathbb{C})$$을 $$\Umat(n)$$ 위로 deformation retract시키는 데서 나온다. 구체적으로 $$\GL(n,\mathbb{C})$$의 임의의 행렬은 unitary 행렬과 양의 정부호 upper-triangular 행렬의 곱으로 유일하게 분해되고($$QR$$ 분해), upper-triangular 인자를 항등원 쪽으로 연속적으로 수축시키면 $$\GL(n,\mathbb{C})$$이 $$\Umat(n)$$으로 deformation retract됨을 얻는다. Group 수준의 이 homotopy equivalence가 $$B$$를 거쳐 분류공간 수준의 homotopy equivalence를 준다. 따라서 rank $$n$$ complex vector bundle은 그 구조군을 $$\GL(n,\mathbb{C})$$에서 $$\Umat(n)$$으로 줄여도 분류에 손실이 없으며, 이것이 모든 complex bundle에 Hermitian metric을 줄 수 있다는 사실의 분류공간 판본이다.
+를 유도한다. 이는 Gram–Schmidt 직교화가 $$\GL(n;\mathbb{C})$$을 $$\Umat(n)$$ 위로 deformation retract시키는 데서 나온다. 구체적으로 $$\GL(n;\mathbb{C})$$의 임의의 행렬은 unitary 행렬과 양의 정부호 upper-triangular 행렬의 곱으로 유일하게 분해되고($$QR$$ 분해), upper-triangular 인자를 항등원 쪽으로 연속적으로 수축시키면 $$\GL(n;\mathbb{C})$$이 $$\Umat(n)$$으로 deformation retract됨을 얻는다. Group 수준의 이 homotopy equivalence가 $$B$$를 거쳐 분류공간 수준의 homotopy equivalence를 준다. 따라서 rank $$n$$ complex vector bundle은 그 구조군을 $$\GL(n;\mathbb{C})$$에서 $$\Umat(n)$$으로 줄여도 분류에 손실이 없으며, 이것이 모든 complex bundle에 Hermitian metric을 줄 수 있다는 사실의 분류공간 판본이다.
 :::
 
 ## 분류공간의 코호몰로지
