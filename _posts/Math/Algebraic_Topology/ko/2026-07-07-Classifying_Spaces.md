@@ -200,9 +200,26 @@ $$G$$가 discrete group이라 하자. 그럼 임의의 base $$B$$ 위에 정의�
 더 구체적인 예시로 $$G=\mathbb{Z}/2$$인 경우와 $$G=\mathbb{Z}$$인 경우를 각각 보자. 우선 $$\mathbb{Z}/2$$의 경우 우리는 $$\mathbb{Z}/2$$이 free하게 작용하는 contractible space를 찾아야 하는데, $$S^\infty$$에 antipodal action을 준 게 정확히 이 두 조건을 모두 만족한다. 그럼 이 action의 orbit space는 $$\RP^\infty$$가 된다. $$\mathbb{Z}$$의 경우도 이미 우리와 친숙한 예시에서 찾아올 수 있는데, 바로 [§피복공간, ⁋정의 3](/ko/math/algebraic_topology/covering_spaces#def3) 직후에 covering space의 표준적인 예시로 소개한 $$\mathbb{R}\rightarrow S^1$$이 그러하다. 
 :::
 
-이제 실제로 우리가 관심있는 group들의 covering space들을 살펴보자. Discrete이 아닌 group 중 가장 기본적인 예는 $$G=S^1$$이며 이는 보편적으로 $$\mathbb{C}^\times$$에 들어있는 길이 $$1$$짜리 복소수들 $$e^{2\pi it}$$들의 모임으로 생각한다. 그럼 $$S^1$$은 $$\mathbb{C}^\infty\setminus\{0\}$$ 위에 스칼라곱으로 free하게 작용한다. 각 $$\mathbb{C}^n\setminus\{0\}$$은 radial deformation retract로 단위구면 $$S^{2n-1}\subseteq\mathbb{C}^n\cong\mathbb{R}^{2n}$$과 같은 호모토피형이며, 표준 inclusion $$\mathbb{C}^n\hookrightarrow\mathbb{C}^{n+1}$$이 equator inclusion $$S^{2n-1}\hookrightarrow S^{2n+1}$$을 유도하므로 $$\mathbb{C}^\infty\setminus\{0\}$$는 그 colimit $$S^\infty=\varinjlim_n S^{2n-1}$$로 deformation retract된다. 유한 차원 구면과 달리 이 colimit은 shift 사상 $$(x_1,x_2,\ldots)\mapsto(0,x_1,x_2,\ldots)$$이 항등사상과 homotopic이라 한 점으로 수축하므로 contractible이고, 따라서 $$ES^1=\mathbb{C}^\infty\setminus\{0\}$$이며 그 orbit space는 복소 직선들의 공간
+이제 실제로 우리가 관심있는 group들의 covering space들을 살펴보자. Discrete이 아닌 group 중 가장 기본적인 예는 $$G=S^1$$이며 이는 보편적으로 $$\mathbb{C}^\times$$에 들어있는 길이 $$1$$짜리 복소수들 $$e^{2\pi it}$$들의 모임으로 생각한다. 그럼 $$S^1$$은 $$\mathbb{C}^\infty\setminus\{0\}$$ 위에 스칼라곱으로 free하게 작용한다. 
+
+이제 각각의 $$\mathbb{C}^n\setminus 0$$을 radial deformation retract를 통해 단위구면 
+
+$$S^{2n-1}\subseteq\mathbb{C}^n\cong\mathbb{R}^{2n}$$
+
+로 deformation retract할 수 있으며, canonical inclusion
+
+$$\mathbb{C}^n\hookrightarrow\mathbb{C}^{n+1}\hookrightarrow \mathbb{C}^{n+2}\hookrightarrow \cdots$$
+
+이 이전의 단위구면을 다음 단위구면의 적도에 넣어주는 inclusion $$S^{2n-1}\hookrightarrow S^{2n+1}$$을 유도하는 것을 보자. 따라서 $$\mathbb{C}^\infty\setminus \{0\}$$을 colimit $$\varinjlim_n (\mathbb{C}^n\setminus \{0\})$$으로 본다면, 이는 colimit $$\varinjlim_n S^{2n-1}$$로 deformation retract되며, 이는 $$S^\infty$$를 정의할 때 등장하는 inclusion
+
+$$S^1\subset S^2\subset S^3\cdots $$
+
+의 cofinal subsequence이므로 그 결과는 $$S^\infty$$와 같다. 즉, $$ES^1=\mathbb{C}^\infty\setminus\{0\}$$으로 잡으면 이는 $$S^1$$이 free하게 작용하는 contractible space이며, 그 orbit space는 complex projective space
 
 $$BS^1=(\mathbb{C}^\infty\setminus\{0\})/S^1=\CP^\infty$$
+
+이 된다. 
+
 
 이다. 한편 $$\CP^\infty=\Gr_1(\mathbb{C}^\infty)$$은 $$\Umat(1)=S^1$$의 분류공간으로 앞 글에서 $$B\Umat(1)$$이라 적은 바로 그 공간이며, 따라서 $$BS^1=B\Umat(1)=\CP^\infty$$이다. 더 일반적으로 $$n$$차원 torus $$T=(S^1)^n$$에 대해서는 곱이 분류공간의 곱으로 가므로
 
