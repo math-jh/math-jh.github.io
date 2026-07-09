@@ -54,6 +54,8 @@ $$u(xy)=(u_i(xy))_{i\in I}=(u_i(x)u_i(y))_{i\in I}=u(x)u(y)$$
 이기 때문이다.
 :::
 
+한편, 우리는 다른 대수적인 구조들에서 했던 것처럼 다음의 subalgebra를 생각할 수 있다. 
+
 ::: 명제 4
 $$A$$-module direct sum $$\bigoplus_{i\in I}E_i\subseteq\prod_{i\in I}E_i$$는 direct product의 곱셈을 제한하면 그 subalgebra, 곧 $$A$$-algebra가 된다.
 :::
@@ -65,15 +67,31 @@ $$\bigoplus E_i$$의 두 원소 $$(x_i),(y_i)$$는 각각 finitely supported이�
 [명제 4](#prop4)의 곱셈이 주어진 $$A$$-algebra $$\bigoplus_{i\in I}E_i$$를 $$E_i$$들의 *direct sum<sub>직합</sub>*이라 부른다.
 :::
 
-Canonical injection $$\iota_j:E_j\hookrightarrow\bigoplus E_i$$는 $$A$$-algebra homomorphism이며, 이 direct sum은 $$A$$-module로서의 direct sum과 같은 집합이다. 다만 $$A$$-algebra로서의 direct sum은 module과 달리 coproduct 역할을 하지 못하는데, 이는 아래 텐서곱 절에서 확인한다. 
+주의할 것은 이것이 $$A$$-algebra의 category에서의 coproduct가 <em-ko>아니라는</em-ko> 것이다. 즉 canonical injection $$\iota_j:E_j\hookrightarrow\bigoplus E_i$$는 $$A$$-algebra homomorphism이며, 집합으로서 [정의 5](#def5)의 집합은 $$A$$-module로서의 direct sum과 같은 집합이지만 이들 데이터가 universal property를 만족하지는 않는다. 가령 $$E_1=E_2=A$$이고, 
+
+$$f_i: E_i\rightarrow A$$
+
+각각이 $$\id_A$$로 주어진 상황을 생각해보자. $$E_1\oplus E_2$$가 coproduct이기 위해서는 다음의 diagram
+
+![coproduct](/assets/images/Math/Algebraic_Structures/Operations_of_Algebras-1.svg){:style="width:13.63em" class="invert" .align-center}
+
+을 commute하도록 하는 $$f: E_1\oplus E_2\rightarrow A$$가 존재해야 한다. 그런데 임의의 $$(a,b)\in E_1\oplus E_2$$에 대하여, 
+
+$$f\bigl((a,b)\bigr)=f\bigl((a,0)+(0,b)\bigr)=f\bigl((a,0)\bigr)+f\bigl((0,b)\bigr)=(f\circ i_1)(a)+(f\circ i_2)(b)=a+b$$
+
+여야 하는데, 다음의 두 계산
+
+$$f\bigl((a,b)(c,d)\bigr)=ac+bd\neq (a+b)(c+d)=f(a,b)f(c,d)$$
+
+에 의해 $$f$$는 곱셈을 보존하지 못한다. 
 
 ## 대수의 텐서곱
 
-이제 두 $$A$$-algebra $$E,E'$$의 텐서곱을 살펴보자. $$A$$-module $$E\otimes_AE'$$ 위에 우리가 원하는 곱셈은 다음의 식
+$$A$$-algebra들의 category에서 올바른 coproduct의 개념을 주는 것은 텐서곱이다. 기본적으로 이는 $$A$$-module $$E\otimes_AE'$$ ([§가군의 직접곱과 직합, 텐서곱, ⁋정리 6](/ko/math/algebraic_structures/operations_of_modules#thm6)) 위에 곱셈을 적당히 정의하여 얻어지는 $$A$$-algebra로, 우리가 원하는 곱셈은 다음의 식
 
 $$(x\otimes x')(y\otimes y')=xy\otimes x'y'\tag{1}$$
 
-으로 주어지는 것이지만, $$E\otimes_AE'$$의 원소가 $$x\otimes x'$$ 꼴의 원소들의 합으로 유일하게 표현되는 것은 아니므로 이 식이 잘 정의된 $$A$$-bilinear map을 주는지 확인해야 한다.
+으로 주어지는 것이다. 그러나 일반적으로 $$E\otimes_AE'$$의 원소가 $$x\otimes x'$$ 꼴의 원소들의 합으로 유일하게 표현되는 것은 아니므로 이 식이 잘 정의된 $$A$$-bilinear map을 주는지부터 확인해야 한다.
 
 ::: 명제 6
 두 $$A$$-algebra $$E,E'$$에 대하여, 식 $$(1)$$을 만족하는 $$A$$-bilinear map $$\mu:(E\otimes_AE')\times(E\otimes_AE') \rightarrow E\otimes_AE'$$이 유일하게 존재한다.
@@ -100,7 +118,7 @@ $$\mu(s,t)=\tilde{m}(t)(s)$$
 두 $$A$$-algebra $$E,E'$$에 대하여, [명제 6](#prop6)의 곱셈이 주어진 $$A$$-algebra $$E\otimes_AE'$$을 $$E$$와 $$E'$$의 *tensor product<sub>텐서곱</sub>*이라 부른다.
 :::
 
-직접곱에서와 마찬가지로, 텐서곱은 두 대수의 성질을 그대로 물려받는다. $$E,E'$$이 모두 associative라면 생성원들 위에서
+직접곱에서와 마찬가지로, 텐서곱은 두 대수의 성질을 그대로 물려받는다. 가령 $$E,E'$$이 모두 associative라면 생성원들 위에서
 
 $$\bigl((x\otimes x')(y\otimes y')\bigr)(z\otimes z')=(xy)z\otimes (x'y')z'=x(yz)\otimes x'(y'z')=(x\otimes x')\bigl((y\otimes y')(z\otimes z')\bigr)$$
 
@@ -108,11 +126,9 @@ $$\bigl((x\otimes x')(y\otimes y')\bigr)(z\otimes z')=(xy)z\otimes (x'y')z'=x(yz
 
 $$\iota:E \rightarrow E\otimes_AE';\quad x\mapsto x\otimes 1_{E'},\qquad \iota':E' \rightarrow E\otimes_AE';\quad x'\mapsto 1_E\otimes x'$$
 
-이 정의되며, 이들의 image는 서로 commute한다. 즉 $$(x\otimes 1)(1\otimes x')=x\otimes x'=(1\otimes x')(x\otimes 1)$$이다.
+이 정의되며, 이들의 image는 서로 commute한다. 즉 $$(x\otimes 1)(1\otimes x')=x\otimes x'=(1\otimes x')(x\otimes 1)$$이다. 
 
-한편 direct sum은 module에서 coproduct 역할을 했지만, algebra에서는 그렇지 못하다. Direct sum의 곱셈이 성분별로 주어져 서로 다른 성분의 곱이 $$0$$이 되므로, homomorphism $$\bigoplus E_i\to F$$를 만들려면 각 $$f_i:E_i\to F$$의 image들이 pairwise로 곱이 $$0$$이어야 한다. 가령 $$E_1=E_2=F=k$$, $$f_1=f_2=\mathrm{id}$$로 두면 유일한 linear map $$f(a,b)=a+b$$는 $$f\bigl((a,b)(c,d)\bigr)=ac+bd$$와 $$f(a,b)f(c,d)=(a+b)(c+d)$$가 일치하지 않아 homomorphism이 되지 못한다. 즉 direct sum은 algebra category에서 universal property를 만족하지 못한다. (Unital algebra에서는 직합이 unital이 아니라는 추가 장애물도 있지만, 이것과 무관하게 근본 원인은 universal property의 실패이다.)
-
-commutative unital algebra들의 category에서 텐서곱은 coproduct의 역할을 한다. 이는 [§환의 곱, 쌍대곱, 텐서곱, §§환들의 텐서곱](/ko/math/algebraic_structures/operations_of_rings#환들의-텐서곱)에서 살펴본 환들의 텐서곱 이야기를 $$A$$ 위로 옮긴 것이다.
+우리가 처음 도입했던 것과 같이, 
 
 ::: 정리 8
 Commutative unital $$A$$-algebra $$E,E'$$과, 임의의 commutative unital $$A$$-algebra $$F$$, 그리고 unital $$A$$-algebra homomorphism들 $$u:E \rightarrow F$$, $$u':E' \rightarrow F$$가 주어졌다 하자. 그럼 $$w\circ\iota=u$$, $$w\circ\iota'=u'$$을 만족하는 유일한 unital $$A$$-algebra homomorphism $$w:E\otimes_AE' \rightarrow F$$가 존재한다. 즉, $$E\otimes_AE'$$은 commutative unital $$A$$-algebra들의 category에서 $$E$$와 $$E'$$의 coproduct이다.
