@@ -142,9 +142,19 @@ body {
 }
 
 .page__content {
+  /* h2 밑줄은 정리 박스의 라벨 헤어라인과 헷갈려 제거했다. padding-bottom 은 남겨
+     아래 본문과의 간격을 그대로 유지한다. */
   h2 {
     padding-bottom: 0.5em;
-    border-bottom: 1px solid $border-color;
+  }
+
+  /* 본문 h2(마크다운 ##)는 § 기호로 시작한다. ::before 라 복사·TOC·헤더 앵커에는
+     들어가지 않는다. 글 레이아웃에만 적용해 아카이브/카테고리의 h2
+     (.archive__subtitle — 자기 ::before 로 색상 마름모를 그린다)는 건드리지 않는다. */
+  @at-root .layout--single #{&} h2::before {
+    content: "§§";
+    margin-right: 0.4em;
+    color: $muted-text-color; /* 크기·굵기는 h2 를 그대로 상속하고 색만 낮춘다 */
   }
 
 	h1, h2, h3, h4, h5, h6 {
