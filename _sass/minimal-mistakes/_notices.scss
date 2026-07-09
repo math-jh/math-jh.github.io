@@ -10,22 +10,17 @@
  *  </div>
  */
 
-@mixin notice($notice-color) {
-  margin: 1em 0 !important;  /* override*/
-  padding: 1em;
+/* 라벨행 박스의 내용 들여쓰기. 라벨 행은 음수 마진으로 다시 왼쪽 끝에 걸린다.
+   rem 이라 라벨(1.05em)·본문(1em) 어디에 쓰든 같은 픽셀이 나온다. */
+$thm-indent: 1.1rem;
+
+/* 박스 내부 공통 규칙 (외형과 무관). admonition(notice)·라벨행(notice-labelrow)
+   두 외형이 이걸 공유한다. */
+@mixin notice-content($notice-color) {
   color: $text-color;
   font-family: $global-font-family;
   font-size: $type-size-5 !important;
   text-indent: initial; /* override*/
-  /* Admonition style: faint tint + 4px accent left border (instead of a solid
-     fill), square corners. $notice-color is a mid-strength accent in BOTH
-     skins, so the tint stays subtle and the border carries the colour.
-     The low tint alpha and square corners are deliberate (print-leaning look);
-     don't re-round or re-darken without a design pass. */
-  background-color: rgba($notice-color, 0.08);
-  border-left: 4px solid $notice-color;
-  border-radius: 0;
-  box-shadow: none;
 
   /* Inline theorem label: <ins>정의 1 (…)</ins> — bold sans in the box's accent
      colour, no underline. Overrides the global <ins> (which has a border-bottom
@@ -99,6 +94,59 @@
   }
 }
 
+/* Admonition 외형: 옅은 채움 + 4px 좌측 띠 + 직각 모서리.
+   $notice-color 는 두 스킨 모두 중간 세기 강조색이라 채움은 옅게 두고 띠가 색을
+   책임진다. 낮은 tint alpha 와 직각 모서리는 의도된 인쇄물풍 — 디자인 논의 없이
+   다시 둥글리거나 진하게 만들지 말 것.
+   일반 notice(.notice--warning 등)와 .spoiler 가 계속 이 외형을 쓴다. */
+@mixin notice($notice-color) {
+  margin: 1em 0 !important;  /* override*/
+  padding: 1em;
+  background-color: rgba($notice-color, 0.08);
+  border-left: 4px solid $notice-color;
+  border-radius: 0;
+  box-shadow: none;
+
+  @include notice-content($notice-color);
+}
+
+/* 라벨 행 외형(수학 정리 박스): 채움·테두리·좌측 띠·들여쓰기 없음. 본문과 같은 폭.
+   라벨(.thm-head)은 한 줄로 올라가고 오른쪽으로 헤어라인이 이어진다(아래 .thm-head).
+   박스가 사라져 끝이 흐려지므로, 같은 톤의 더 연한 마감선(border-bottom)으로 닫는다.
+   하단 padding + border 는 Proof_animate.js 의 markTop() 이 그대로 빼서 QED 표식을
+   마감선 위에 안착시킨다 (JS 변경 불필요).
+
+   마감선을 지우는 두 예외는 아래 별도 규칙 참고:
+     (1) 증명이 바로 뒤따르는 박스  (2) 접혀 있는 접기 박스
+   두 경우 모두 border 만 지우고 padding 은 남긴다. padding 까지 지우면 접힘
+   애니메이션의 목표 높이(collapsedHeight)가 [open] 상태로 계산돼 끝에서 튄다. */
+@mixin notice-labelrow($notice-color) {
+  /* 헤드 헤어라인: 강조색을 테두리색에 38% 섞는다.
+     마감선: 그 헤어라인을 배경 쪽으로 흐리게(38% 배경) — 색조는 그대로 두고 대비만
+     낮춘다. border-color 를 더 섞는 방식은 회색이 지배해 "같은 톤"이 사라진다. */
+  $hairline: mix($notice-color, $border-color, 38%);
+
+  margin: 1.9em 0 !important;
+  /* 내용은 $thm-indent 만큼 들여쓰고, 라벨 행(.thm-head / summary)만 같은 크기의
+     음수 마진으로 다시 왼쪽 끝에 건다(hanging label). 단위가 rem 인 이유는 라벨이
+     1.05em 이라 em 으로 맞추면 패딩과 픽셀이 어긋나기 때문. */
+  padding: 0 0 0.85em $thm-indent;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid mix($hairline, $background-color, 62%);
+  border-radius: 0;
+  box-shadow: none;
+
+  @include notice-content($notice-color);
+
+  /* 라벨 줄 오른쪽으로 이어지는 헤어라인 — 박스별 강조색 */
+  > p > .thm-head::after,
+  > .thm-head::after,
+  > summary::after {
+    background-color: $hairline;
+  }
+}
+
 /* Personal */
 @mixin select($select-color) {
   margin: 1vw 0 !important;  /* override*/
@@ -152,25 +200,24 @@
 /* Math notice settings */
 
 .definition {
-  @include notice($definition-color);
+  @include notice-labelrow($definition-color);
 }
 
 .proposition {
-  @include notice($proposition-color);
+  @include notice-labelrow($proposition-color);
 }
 
 .proof {
-  @include notice($proof-color);
-  margin-top: -.5em !important;
+  @include notice-labelrow($proof-color);
 }
 
 .proof--alone {
-  @include notice($proof-color);
+  @include notice-labelrow($proof-color);
 }
 
-/* Generic collapsible admonition: <details class="details"><summary>…</summary> */
+/* Generic collapsible: <details class="details"><summary>…</summary> */
 .details {
-  @include notice($details-color);
+  @include notice-labelrow($details-color);
 }
 
 /* Themed disclosure caret for proof / details summaries (replaces the native
@@ -197,15 +244,50 @@ details[open] > summary::before {
 }
 
 .example {
-  @include notice($example-color);
+  @include notice-labelrow($example-color);
 }
 
 .remark {
-  @include notice($remark-color);
+  @include notice-labelrow($remark-color);
 }
 
 .misc {
-  @include notice($misc-color);
+  @include notice-labelrow($misc-color);
+}
+
+/* 증명을 앞 박스에 붙인다 — 단, 박스 *바로* 뒤일 때만. 형제 마진은 상쇄되어
+   max(양수)+min(음수) 이므로 1.9em-1.4em = 0.5em (admonition 시절 1em-0.5em 과 같은
+   붙임 간격). 이 음수 마진을 .proof 전체에 걸면 박스가 아닌 일반 문단 뒤에 오는 증명
+   까지 끌어올려 문단과 겹쳐 보인다 (문단 margin-bottom 이 1.4em 보다 작다). */
+.definition + .proof,
+.proposition + .proof,
+.example + .proof,
+.remark + .proof,
+.misc + .proof {
+  margin-top: -1.4em !important;
+}
+
+/* 마감선 예외 (1): 증명이 바로 뒤따르면 앞 박스의 마감선을 지운다.
+   .proof 는 음수 margin-top 으로 앞 박스에 붙어 있어 "명제+증명"이 한 단위로 읽히고,
+   그 단위의 마감은 증명 쪽이 맡는다. 사이에 선을 두 번 긋지 않는다.
+   ($notice-color 별 색이 필요 없으므로 믹스인 밖에서 일괄 처리) */
+.definition:has(+ .proof),
+.proposition:has(+ .proof),
+.example:has(+ .proof),
+.remark:has(+ .proof),
+.misc:has(+ .proof) {
+  border-bottom: 0;
+}
+
+/* 마감선 예외 (2): 접혀 있는 접기 박스는 마감선을 그리지 않는다. 라벨 행만 남아
+   내용 없는 얇은 띠가 생기지 않는다. [open] 은 네이티브 속성이라 JS 없이도 맞고,
+   Proof_animate.js 는 접힘 애니메이션 *끝*에 [open] 을 떼므로 애니메이션 도중에는
+   마감선이 남아 있다가 마지막에 사라진다(1px 이라 눈에 띄지 않는다).
+   padding 은 남겨 둔다 — 위 믹스인 주석 참고. */
+details.proof:not([open]),
+details.proof--alone:not([open]),
+details.details:not([open]) {
+  border-bottom: 0;
 }
 
 .spoiler {
@@ -213,18 +295,35 @@ details[open] > summary::before {
 }
 
 /* ==========================================================================
-   정리 박스 스타일
-   박스 외형은 admonition(옅은 채움 + 4px 좌측 띠 + 직각 모서리, notice 믹스인).
-   라벨만 손봤다: theorem-label-splitter.rb 가 <ins> 라벨을 종류+번호(.thm-n)와 괄호
-   설명(.thm-name)으로 쪼개고, 라벨+설명은 한 줄(.thm-head)·본문은 아래 줄로 둔다.
+   정리 박스 스타일 — 라벨 행(Option C)
+   박스 외형은 채움·테두리 없이 라벨 행 하나뿐 (notice-labelrow 믹스인).
+   theorem-label-splitter.rb 가 <ins> 라벨을 종류+번호(.thm-n)와 괄호 설명(.thm-name)
+   으로 쪼개 .thm-head 로 묶고, 본문은 같은 <p> 안에서 그 아래 줄로 흐른다.
    ========================================================================== */
 
-/* 라벨: 라벨+괄호설명은 한 줄(.thm-head 블록), 본문은 그 아래 줄로. 종류+번호는
-   볼드, 괄호 설명은 이탤릭. 글자색은 그 박스의 강조색(좌측 띠 색)과 동일. */
+$qed-size: 0.65em;
+
+/* 라벨 행: [종류+번호] [괄호 설명] [──── 헤어라인 ────].
+   .thm-head 는 <p> 안의 <span> 이지만 display:flex 라 블록 레벨 flex 컨테이너가 되어
+   한 줄을 차지하고, 뒤따르는 본문 텍스트는 익명 블록으로 아래 줄에 흐른다. 덕분에
+   .thm-body 래퍼(마크업 변경)가 없어도 라벨 행이 성립한다.
+   종류+번호는 볼드 sans, 괄호 설명은 이탤릭. 글자색은 그 박스의 강조색. */
 .thm-head {
-  display: block;
-  margin-bottom: 0.2em;
+  display: flex;
+  align-items: baseline;
+  gap: 0.6em;
+  margin-bottom: 0.45em;
+  margin-left: -$thm-indent; /* 들여쓴 내용 밖으로 라벨을 건다 (hanging label) */
   font-size: 1.05em; /* 라벨을 본문(1em)보다 살짝 크게 */
+
+  /* 남는 폭을 채우는 헤어라인. 색은 notice-labelrow 가 박스별로 준다. */
+  &::after {
+    content: "";
+    flex: 1 1 auto;
+    align-self: center;
+    height: 1px;
+    min-width: 36px;
+  }
 }
 
 .thm-n {
@@ -257,15 +356,45 @@ details[open] > summary::before {
    theme 기본값 summary{font-style:italic} 때문에 sans 에서 faux slant 가 생기므로
    font-style:normal 로 상쇄한다. 접힘/펼침 표식은 아래 마름모↔정사각형 참고. */
 .proof > summary,
+.proof--alone > summary,
+.details > summary {
+  margin-left: -$thm-indent; /* summary 도 라벨 행이므로 왼쪽 끝에 건다 */
+}
+
+.proof > summary,
 .proof--alone > summary {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
+  gap: 0.6em;
   font-family: $sans-serif;
   font-weight: bold;
   font-style: normal;
   font-size: 1.05em; /* 라벨과 동일하게 본문보다 살짝 크게 */
   color: $proof-color;
+
+  /* 다른 박스의 .thm-head 와 같은 라벨 행 헤어라인. 오른쪽 끝은 QED 표식
+     (absolute, right:0) 자리를 비워 둔다. */
+  &::after {
+    content: "";
+    flex: 1 1 auto;
+    align-self: center;
+    height: 1px;
+    min-width: 36px;
+    margin-right: calc(#{$qed-size} + 0.55em);
+  }
+}
+
+/* 펼쳤을 때만 라벨 행과 본문 사이 간격 (.thm-head 의 margin-bottom 과 동일) */
+details.proof[open] > summary,
+details.proof--alone[open] > summary {
+  margin-bottom: 0.45em;
+}
+
+/* 펼치면 QED 표식이 본문 끝으로 내려가므로 summary 오른쪽에 자리를 비워둘 필요가
+   없다. 헤어라인을 다른 박스처럼 끝까지 잇는다(오른쪽 노치 제거). */
+details.proof[open] > summary::after,
+details.proof--alone[open] > summary::after {
+  margin-right: 0;
 }
 
 /* 기존 왼쪽 삼각형(summary::before) 제거 */
@@ -278,8 +407,10 @@ details[open] > summary::before {
    위치(top)는 Proof_animate.js 가 toggle 마다, 회전은 .qed-open 클래스(Proof_animate.js 가
    펼침·접힘 *시작*에 토글)가 맡고, 둘 다 CSS transition 으로 부드럽게 이어진다.
    회전을 [open] 아닌 클래스에 묶는 이유: 접힘에서 [open]은 애니메이션 끝에 제거되므로,
-   그에 묶으면 회전이 접힘과 동기되지 않고 끝에 튄다. */
-$qed-size: 0.65em;
+   그에 묶으면 회전이 접힘과 동기되지 않고 끝에 튄다.
+   ($qed-size 는 위 라벨 행 절에서 선언 — summary::after 가 자리를 비울 때 쓴다.)
+   펼침 위치는 markTop() 이 박스의 padding-bottom·border-bottom 을 빼서 계산하므로,
+   표식은 마감선 바로 위(본문 마지막 줄 오른쪽 끝)에 안착한다. */
 
 .proof,
 .proof--alone {
@@ -288,7 +419,7 @@ $qed-size: 0.65em;
 
 .qed-mark {
   position: absolute;
-  right: 1em;
+  right: 0; /* 라벨행 외형은 좌우 padding 이 0 — 본문 오른쪽 끝에 맞춘다 */
   width: $qed-size;
   height: $qed-size;
   background: $proof-color;

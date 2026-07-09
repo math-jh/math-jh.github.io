@@ -220,21 +220,19 @@ $$BS^1=(\mathbb{C}^\infty\setminus\{0\})/S^1=\CP^\infty$$
 
 이 된다.
 
-한편 $$\CP^\infty=\Gr_1(\mathbb{C}^\infty)$$은 $$\Umat(1)=S^1$$의 분류공간으로 앞 글에서 $$B\Umat(1)$$이라 적은 바로 그 공간이며, 따라서 $$BS^1=B\Umat(1)=\CP^\infty$$이다.
-
-더 일반적으로 $$n$$차원 torus $$T=(S^1)^n$$을 보자. 분류공간 구성은 곱을 보존하여 $$B(G_1\times G_2)\cong BG_1\times BG_2$$를 만족하는데, 이는 $$E(G_1\times G_2)=EG_1\times EG_2$$가 역시 contractible이고 그 위의 $$G_1\times G_2$$-작용이 자유롭기 때문이다. 따라서
+더 일반적으로 $$n$$차원 torus $$T=(S^1)^n$$을 보자. 분류공간 구성은 곱을 보존하여 $$B(G_1\times G_2)\cong BG_1\times BG_2$$를 만족하는데, 이는 $$E(G_1\times G_2)=EG_1\times EG_2$$가 역시 contractible이고 그 위의 $$G_1\times G_2$$-action이 자유롭기 때문이다. 따라서
 
 $$BT=B(S^1)^n\cong(BS^1)^n=(\CP^\infty)^n$$
 
-이다. 임의의 $$n$$에 대하여 unitary group과 orthogonal group의 분류공간은 앞 글의 infinite Grassmannian으로 실현된다. complex Grassmannian $$\Gr(n,\mathbb{C}^\infty)$$ 위에는 rank $$n$$의 universal vector bundle이 올려져 있으며, 이 bundle의 orthonormal frame bundle의 total space는 복소 Stiefel 공간
+이다. 임의의 $$n$$에 대하여 unitary group과 orthogonal group의 분류공간은 앞 글의 infinite Grassmannian으로 실현된다. 먼저 complex인 경우를 보자. Grassmannian $$\Gr(n,\mathbb{C}^\infty)$$ 위에는 각 점 $$n$$차원 부분공간 $$V$$에 fiber $$V$$ 자체를 대응시키는 tautological $$n$$-plane bundle $$\gamma^n$$이 올려져 있다. 이 bundle에 표준 Hermitian metric을 주어 orthonormal frame bundle을 취하면, 그 total space의 한 점은 $$\mathbb{C}^\infty$$의 orthonormal $$n$$-frame $$(v_1,\ldots,v_n)$$이고 그것이 spanning하는 부분공간 $$\operatorname{span}(v_1,\ldots,v_n)$$이 곧 base의 점이 되므로, total space는 복소 Stiefel 공간
 
 $$V_n(\mathbb{C}^\infty)=\varinjlim_k V_n(\mathbb{C}^k)$$
 
-이다. 여기서 $$V_n(\mathbb{C}^k)$$는 $$\mathbb{C}^k$$ 안의 orthonormal $$n$$-frame들의 공간이고, 유한 차원 Stiefel 공간과 달리 이 colimit는 $$k$$가 커질수록 frame을 밀어낼 여유 차원이 생겨 한 점으로 deformation retract되므로 contractible이다. 이 frame bundle의 구조군이 $$\Umat(n)$$이고 total space가 contractible이므로 이것이 universal principal $$\Umat(n)$$-bundle이 되어
+이다. $$\Umat(n)$$이 오른쪽에서 행렬곱으로 frame에 작용하여 base를 고정한 채 frame만 바꾸므로, 이는 principal $$\Umat(n)$$-bundle $$V_n(\mathbb{C}^\infty)\to\Gr(n,\mathbb{C}^\infty)$$이 된다. 유한 차원 Stiefel 공간과 달리 이 colimit에서는 $$k$$가 커질수록 frame을 밀어낼 여유 차원이 무한히 생겨, 앞서 $$S^\infty$$에서 본 것과 같은 논증으로 한 점으로 deformation retract되어 contractible이다. Total space가 contractible인 principal bundle은 분류공간의 정의에 의해 universal이므로 그 base가 곧 $$B\Umat(n)$$이다:
 
-$$B\Umat(n)=\Gr(n,\mathbb{C}^\infty)$$
+$$B\Umat(n)=\Gr(n,\mathbb{C}^\infty).$$
 
-이다. Real Grassmannian $$\Gr(n,\mathbb{R}^\infty)$$에 대해서도 동일한 논증이 real orthonormal frame과 구조군 $$\Omat(n)$$에 적용되어 $$B\Omat(n)=\Gr(n,\mathbb{R}^\infty)$$를 준다.
+$$n=1$$이면 $$V_1(\mathbb{C}^\infty)=S^\infty$$이고 $$\Gr(1,\mathbb{C}^\infty)=\CP^\infty$$이므로 $$\Umat(1)=S^1$$의 경우 앞서 얻은 $$BS^1=\CP^\infty$$를 회수한다. Real Grassmannian $$\Gr(n,\mathbb{R}^\infty)$$에 대해서도 tautological bundle의 orthonormal frame bundle이 real Stiefel 공간 $$V_n(\mathbb{R}^\infty)\to\Gr(n,\mathbb{R}^\infty)$$을 주고 동일한 논증이 구조군 $$\Omat(n)$$에 적용되어 $$B\Omat(n)=\Gr(n,\mathbb{R}^\infty)$$를 준다.
 
 마지막으로 일반선형군과 그 maximal compact subgroup의 분류공간이 같은 homotopy type을 갖는다는 사실은 분류 이론에서 자주 쓰인다.
 

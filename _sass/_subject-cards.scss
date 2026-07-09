@@ -134,21 +134,27 @@
   }
 }
 
-/* /xx/categories/ — match the mockup: a "spectrum" jump-index of filled
-   chips (faint fill + left colour bar), section headers with a colour dot to
-   the LEFT + a colour underline bar, and clean title/date/excerpt rows.
+/* /xx/categories/ — jump-index of square, undecorated chips (faint fill only;
+   the colour lives in a diamond next to the category name), section headers
+   with a colour diamond to the LEFT + a colour underline bar, and clean
+   title/date/excerpt rows.
    All scoped to .taxonomy__* so other archive pages are untouched.
-   Colour comes from _data/hues.yml via inline --cat-hue/--cat-sat/--cat-l. */
+   Colour comes from _data/hues.yml via inline --cat-hue/--cat-sat/--cat-l.
 
-// jump-index → spectrum chips
+   마름모는 정사각형을 45° 회전해 만든다. transform 은 레이아웃 박스를 바꾸지 않으므로
+   간격은 그대로지만, 대각선이 변 × √2 라 좌우 꼭짓점이 각각 0.207 × 변 만큼 삐져나온다.
+   왼쪽 정렬이 눈에 띄는 소제목에서는 그만큼 margin-left 로 보정한다. */
+
+$cat-color: hsl(var(--cat-hue, 220), var(--cat-sat, 26%), calc(var(--cat-l, 50) * 1%));
+
+// jump-index → square chips, no left bar
 .taxonomy__index {
   a {
     -webkit-box-align: center;
     align-items: center;
     padding: 0.45em 0.7em;
     border: 0;
-    border-left: 4px solid hsl(var(--cat-hue, 220), var(--cat-sat, 26%), calc(var(--cat-l, 50) * 1%));
-    border-radius: 6px;
+    border-radius: 0; // 각진 모서리
     background: rgba(#808080, 0.06);
     transition: background 0.14s ease, transform 0.14s ease;
 
@@ -158,11 +164,27 @@
       transform: translateX(2px);
     }
 
-    strong { font-weight: bold; }
+    /* 색은 박스가 아니라 카테고리명 왼쪽의 마름모가 나른다. <a> 는
+       justify-content:space-between 이라 ::before 를 <a> 에 붙이면 세 항목이
+       흩어진다 — 이름과 한 덩어리로 두려면 <strong> 안에 넣어야 한다. */
+    strong {
+      font-weight: bold;
+
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 0.5em;
+        height: 0.5em;
+        margin-right: 0.62em;
+        background: $cat-color;
+        transform: rotate(45deg);
+        vertical-align: middle;
+      }
+    }
   }
 }
 
-// section header: colour dot LEFT + colour underline bar
+// section header: colour diamond LEFT + colour underline bar
 .taxonomy__section > .archive__subtitle {
   display: -webkit-box;
   display: flex;
@@ -170,17 +192,19 @@
   align-items: center;
   margin-bottom: 0.2em;
   padding-bottom: 0.4em;
-  border-bottom: 2px solid hsl(var(--cat-hue, 220), var(--cat-sat, 26%), calc(var(--cat-l, 50) * 1%));
+  border-bottom: 2px solid $cat-color;
 
   &::before {
     content: "";
     display: inline-block;
-    width: 0.62em;
-    height: 0.62em;
-    margin-right: 0.5em;
-    border-radius: 50%;
-    background: hsl(var(--cat-hue, 220), var(--cat-sat, 26%), calc(var(--cat-l, 50) * 1%));
-    vertical-align: middle;
+    -ms-flex: none;
+    flex: none;
+    width: 0.5em;
+    height: 0.5em;
+    margin-left: 0.104em; // 회전으로 왼쪽 꼭짓점이 튀어나온 만큼(0.207 × 0.5em) 보정
+    margin-right: 0.6em;
+    background: $cat-color;
+    transform: rotate(45deg);
   }
 }
 
