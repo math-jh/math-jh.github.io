@@ -33,7 +33,7 @@
       {% if page.eyebrow %}
         <p class="page__hero-eyebrow">{{ page.eyebrow }}</p>
       {% elsif hero_cat %}
-        <p class="page__hero-eyebrow">{{ site.data.category_labels[hero_cat] | default: hero_cat }}</p>
+        <p class="page__hero-eyebrow">{{ site.data.categories.subjects[hero_cat].ko | default: hero_cat }}</p>
       {% endif %}
       <h1 id="page-title" class="page__title" itemprop="headline">
         {% if paginator and site.paginate_show_page_num %}

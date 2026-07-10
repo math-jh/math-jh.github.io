@@ -25,22 +25,6 @@ module GraphData
     %r{\]\((/(?:ko|en)/[A-Za-z0-9_\-/]+?)(?:#[^)\s]*)?\)}
   ].freeze
 
-  # 카테고리(slug) → family(필터 칩·구분선·family 색용). 표에 없으면 misc.
-  FAMILY = {
-    "linear_algebra" => "foundations", "calculus" => "foundations",
-    "set_theory" => "foundations", "category_theory" => "foundations",
-    "algebraic_structures" => "algebra", "group_theory" => "algebra",
-    "ring_theory" => "algebra", "multilinear_algebra" => "algebra",
-    "field_theory" => "algebra", "homological_algebra" => "algebra",
-    "commutative_algebra" => "algebra", "representation_theory" => "algebra",
-    "number_theory" => "algebra",
-    "analysis" => "analysis",
-    "topology" => "geometry", "algebraic_topology" => "geometry",
-    "manifolds" => "geometry", "lie_theory" => "geometry",
-    "riemannian_geometry" => "geometry", "algebraic_varieties" => "geometry",
-    "scheme_theory" => "geometry", "toric_geometry" => "geometry",
-    "mirror_symmetry" => "geometry", "symplectic_geometry" => "geometry"
-  }.freeze
 
   module_function
 
@@ -55,15 +39,40 @@ module GraphData
     url.to_s.sub(/#.*\z/, "").sub(/\.html\z/, "").sub(%r{/\z}, "")
   end
 
-  # _data/hues.yml(키 "Math / Set_Theory" → {hue, sat})을 slug(set_theory) → hue 로.
+  # _data/categories.yml 의 subjects("Math / Set Theory" → {ko, section, hue, sat, l})를
+  # slug(set_theory) → hue 로.
   def hue_map(site)
     map = {}
-    (site.data["hues"] || {}).each do |key, val|
+    subjects(site).each do |key, val|
       next unless val.is_a?(Hash) && val["hue"]
-      slug = key.to_s.split(" / ").last.to_s.downcase.gsub(" ", "_")
-      map[slug] = val["hue"]
+
+      map[slug_of(key)] = val["hue"]
     end
     map
+  end
+
+  # slug → family(필터 칩·family 색). subjects 의 section 을 sections 의 family 로 옮긴다.
+  # 예전에는 이 표가 여기 상수로 하드코딩돼 있었고, 거기 빠진 카테고리(복소해석학·
+  # 복소기하학·층론·스택·유도대수기하·GW)가 조용히 "misc" 로 떨어져 그래프에서
+  # 채도 0 의 회색 노드로 그려졌다. 이제 categories.yml 한 곳에서 파생한다.
+  def family_map(site)
+    sections = (site.data["categories"] || {})["sections"] || {}
+    map = {}
+    subjects(site).each do |key, val|
+      next unless val.is_a?(Hash)
+
+      section = sections[val["section"]] || {}
+      map[slug_of(key)] = section["family"] || "misc"
+    end
+    map
+  end
+
+  def subjects(site)
+    ((site.data["categories"] || {})["subjects"] || {})
+  end
+
+  def slug_of(category)
+    category.to_s.split(" / ").last.to_s.downcase.gsub(" ", "_")
   end
 
   def color_for(cat, hmap)
@@ -73,6 +82,7 @@ module GraphData
 
   def build(site, lang)
     hmap = hue_map(site)
+    fmap = family_map(site)
     # 수학 글만(/<lang>/math/…). llm_workshop·blog_development·독서노트 등 메타 글 제외.
     docs = site.posts.docs.select { |d| d.url.start_with?("/#{lang}/math/") }
     by_url = {}
@@ -93,7 +103,7 @@ module GraphData
         url: d.url,
         category: cat,
         hue: (hmap[cat] || 0),
-        family: (FAMILY[cat] || "misc"),
+        family: (fmap[cat] || "misc"),
         color: color_for(cat, hmap)
       }
     end

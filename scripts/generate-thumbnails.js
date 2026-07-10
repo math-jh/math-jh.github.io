@@ -1,12 +1,22 @@
 #!/usr/bin/env node
 /*
  * Regenerate home subject-tile thumbnails (assets/images/Pages/Thumbnails/Files/*.jpeg)
- * from _data/hues.yml + _config.yml order. Each tile = 1920×1080 diagonal
- * gradient in the subject hue + a big translucent ORDER NUMBER baked into the
- * corner (01, 02, …, in categories-ko_order). The home cards overlay the
- * EN/KO names + "Read more" in HTML, so NO title text is baked here.
+ * from _data/categories.yml (subjects, in file order). Each tile = 1920×1080
+ * diagonal gradient in the subject hue + a big translucent ORDER NUMBER baked
+ * into the corner (01, 02, …). The home cards overlay the EN/KO names +
+ * "Read more" in HTML, so NO title text is baked here.
  *
- * USAGE:  npm i canvas js-yaml   then   node scripts/generate-thumbnails.js
+ * The number is the subject's running position in _data/categories.yml — exactly
+ * the order the cards appear on the home page. (The order used to live in
+ * _config.yml's categories-ko_order and then _data/home_sections.yml; both were
+ * folded into _data/categories.yml.)
+ *
+ * USAGE:  npm i canvas js-yaml
+ *         node scripts/generate-thumbnails.js              # 전부 다시 만든다
+ *         node scripts/generate-thumbnails.js Toric_Geometry Mirror_Symmetry
+ *                                                          # 지정한 타일만
+ * 인자를 주면 그 파일명(확장자 제외)만 다시 그린다. 번호는 언제나 전체 순서
+ * 기준이므로, 일부만 다시 그려도 나머지 타일과 어긋나지 않는다.
  *
  * Filenames are derived from the English subject name (the part after " / ")
  * with spaces → underscores, e.g. "Math / Algebraic Varieties" →
@@ -19,11 +29,13 @@ const { createCanvas } = require('canvas');
 
 const ROOT = path.join(__dirname, '..');
 const OUT = path.join(ROOT, 'assets/images/Pages/Thumbnails/Files');
-const hues = yaml.load(fs.readFileSync(path.join(ROOT, '_data/hues.yml'), 'utf8'));
-const config = yaml.load(fs.readFileSync(path.join(ROOT, '_config.yml'), 'utf8'));
+const data = yaml.load(fs.readFileSync(path.join(ROOT, '_data/categories.yml'), 'utf8'));
+const hues = data.subjects;
 
-// Numbering follows the KO category order (the canonical full list).
-const order = config['categories-ko_order'] || [];
+// Numbering follows the master order in _data/categories.yml (= home grid order).
+const order = Object.keys(hues);
+// 인자가 있으면 그 타일만 (번호는 전체 순서 기준으로 유지).
+const only = new Set(process.argv.slice(2).map((a) => a.replace(/\.jpeg$/, '')));
 fs.mkdirSync(OUT, { recursive: true });
 
 const W = 1920, H = 1080;
@@ -37,6 +49,7 @@ order.forEach((key, i) => {
   const num = String(i + 1).padStart(2, '0');
   const en = key.split(' / ').pop();
   const file = en.replace(/ /g, '_') + '.jpeg';
+  if (only.size && !only.has(file.replace(/\.jpeg$/, ''))) return;
 
   const hue = d.hue;
   const sat = parseInt(d.sat, 10) + 6;

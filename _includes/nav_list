@@ -7,26 +7,37 @@
 {% endif %}
 
 {%- comment -%}
-  Auto category sidebar. When _data/navigation.yml has NO block for this nav key,
-  build the list straight from the posts: header name from _data/category_labels.yml,
-  entries = every post in the category (this lang) ordered by its `weight`.
-  Curated/special sidebars (main, category-*, mirror_symmetry-*, *-research,
-  blog_development-*, …) keep their explicit block and take the
-  manual path instead. So a normal category needs ZERO navigation.yml upkeep —
-  add a post (with categories + weight) and it appears automatically.
+  두 가지 자동 사이드바가 있다. 둘 다 _data/navigation.yml 에 블록이 없을 때만 탄다.
+
+  (1) nav="category-ko" / "category-en" — 과목 전체 목록.
+      섹션·순서·표시명은 _data/categories.yml (플러그인이 site.data.home_sections
+      로 그룹핑해 준다), 링크는 과목홈의 실제 URL.
+      과목홈이 빌드되지 않은 과목(그 언어 글 0편)은 자동으로 빠진다 — 예전엔
+      미발행 카테고리를 navigation.yml 에서 손으로 주석 처리해야 했다.
+
+  (2) 그 밖의 nav 키 — 카테고리 하나짜리 사이드바.
+      키의 슬러그로 카테고리를 찾아, 그 카테고리의 글을 weight 순으로 깐다.
+      일반 카테고리는 navigation.yml 을 전혀 건드릴 필요가 없다.
+
+  큐레이션 사이드바(main, mirror_symmetry-*, *-research, blog_development-* …)는
+  navigation.yml 의 명시적 블록을 그대로 쓰며 수동 경로를 탄다.
 {%- endcomment -%}
 {%- unless navigation -%}
+  {%- if include.nav == "category-ko" or include.nav == "category-en" -%}
+    {%- assign cat_nav = true -%}
+    {%- assign subject_urls = site.data.subject_pages[lang] -%}
+  {%- endif -%}
   {%- assign nav_slug = include.nav | remove_first: "-ko" | remove_first: "-en" -%}
   {%- assign nav_slug_lc = nav_slug | downcase -%}
   {%- assign auto_cat = nil -%}
-  {%- for pair in site.data.category_labels -%}
+  {%- for pair in site.data.categories.subjects -%}
     {%- assign cslug = pair[0] | split: " / " | last | downcase | replace: " ", "_" -%}
     {%- if cslug == nav_slug_lc -%}{%- assign auto_cat = pair[0] -%}{%- break -%}{%- endif -%}
   {%- endfor -%}
   {%- if auto_cat -%}
     {%- assign lang_seg = "/" | append: lang | append: "/" -%}
     {%- assign auto_posts = site.posts | where_exp: "p", "p.categories contains auto_cat" | where_exp: "p", "p.url contains lang_seg" | sort: "weight" -%}
-    {%- assign auto_label = site.data.category_labels[auto_cat] -%}
+    {%- assign auto_label = site.data.categories.subjects[auto_cat].ko -%}
     {%- if lang == "en" -%}{%- assign auto_label = auto_cat | split: " / " | last -%}{%- endif -%}
     {%- assign auto_home = "/" | append: lang | append: "/" | append: nav_slug_lc | append: "/" -%}
   {%- endif -%}
@@ -55,6 +66,37 @@
         {% endif %}
       </li>
     {% endfor %}
+    {% elsif cat_nav %}
+      {% for sec in site.data.home_sections %}
+        {% assign sec_shown = 0 %}
+        {% for subj in sec.subjects %}{% if subject_urls[subj] %}{% assign sec_shown = sec_shown | plus: 1 %}{% endif %}{% endfor %}
+        {% if sec_shown > 0 %}
+        <li>
+          <span class="nav__sub-title">{{ sec.en }}</span>
+          <ul>
+            {% for subj in sec.subjects %}
+              {% assign subj_url = subject_urls[subj] %}
+              {% if subj_url %}
+                {% assign subj_label = site.data.categories.subjects[subj].ko %}
+                {% if lang == "en" %}{% assign subj_label = subj | split: " / " | last %}{% endif %}
+                <li><a href="{{ subj_url | relative_url }}"{% if subj_url == page.url %} class="active"{% endif %}>{{ subj_label }}</a></li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </li>
+        {% endif %}
+      {% endfor %}
+      <li>
+        <span class="nav__sub-title"></span>
+        <ul>
+          {% if lang == "en" %}
+            <li><a href="{{ '/en/about' | relative_url }}">About This Site</a></li>
+          {% else %}
+            <li><a href="{{ '/ko/about' | relative_url }}">블로그 소개</a></li>
+            <li><a href="{{ '/ko/misc/index_ko' | relative_url }}">찾아보기</a></li>
+          {% endif %}
+        </ul>
+      </li>
     {% elsif auto_cat %}
       <li>
         <span class="nav__sub-title"><a href="{{ auto_home | relative_url }}" class="sidebar_title">{{ auto_label }}</a></span>

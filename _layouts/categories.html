@@ -1,0 +1,75 @@
+---
+layout: archive
+---
+
+{%- comment -%}
+  카테고리별 글 목록 (/ko/categories/, /en/categories/). 두 언어가 같은 레이아웃을
+  쓴다 — 예전에는 categories-ko.html / categories-en.html 두 파일이었는데, 실질
+  차이는 표시명 한 줄(ko 는 한국어 라벨, en 은 " / " 뒤의 영문명)뿐이었다.
+
+  카테고리·순서·표시명·색은 _data/categories.yml 한 곳에서 온다 (YAML 매핑의 키
+  순서 = 표시 순서). pair[0] = "Math / Set Theory", pair[1] = { ko, hue, sat, l }.
+
+  글이 하나도 없는 카테고리는 통째로 건너뛴다.
+  site.categories[cat] 은 그 카테고리에 글이 하나도 없으면 nil 이고, nil 을 sort 에
+  넘기면 Liquid 가 "Cannot sort a null object" 로 빌드를 중단시킨다. 그래서 예전에는
+  미발행 카테고리를 손으로 주석 처리해야 했다. nil 을 빈 배열로 바꾸고 size 로
+  거르면 목록에 남겨 둬도 알아서 숨는다.
+  (published: false 초안은 Jekyll 이 site.posts 에서 빼므로 production 에서만 숨고
+   --unpublished 로 띄운 로컬 프리뷰에서는 보인다.)
+{%- endcomment -%}
+
+{% assign lang_prefix = page.url | truncate: 3, "" %}
+{% if lang_prefix contains "en" or lang_prefix contains "ko" %}
+  {% assign lang = lang_prefix | remove_first: "/" %}
+  {% assign lang_full = lang_prefix | append: "/" %}
+{% endif %}
+
+{{ content }}
+
+<ul class="taxonomy__index">
+{% for pair in site.data.categories.subjects %}
+  {%- assign ordered_cat = pair[0] -%}
+  {%- assign cat_posts = site.categories[ordered_cat] -%}
+  {%- if cat_posts -%}
+    {%- assign posts = cat_posts | where_exp: "post", "post.permalink contains lang_full" -%}
+  {%- else -%}
+    {%- assign posts = "" | split: "" -%}
+  {%- endif -%}
+  {%- if posts.size > 0 -%}
+  {% assign hue_data = pair[1] %}
+  {% assign cat_label = hue_data.ko | default: ordered_cat %}
+  {% if lang == "en" %}{% assign cat_label = ordered_cat | split: " / " | last %}{% endif %}
+  <li>
+    <a href="#{{ ordered_cat | slugify }}" style="--cat-hue: {{ hue_data.hue | default: 220 }}; --cat-sat: {{ hue_data.sat | default: '26%' }}; --cat-l: {{ hue_data.l | default: 50 }};">
+      <strong>{{ cat_label }}</strong> <span class="taxonomy__count">{{ posts.size }}</span>
+    </a>
+  </li>
+  {%- endif -%}
+{% endfor %}
+</ul>
+
+{% assign entries_layout = page.entries_layout | default: 'list'%}
+{% for pair in site.data.categories.subjects %}
+  {%- assign ordered_cat = pair[0] -%}
+  {%- assign cat_posts = site.categories[ordered_cat] -%}
+  {%- if cat_posts -%}
+    {%- assign posts = cat_posts | where_exp: "post", "post.permalink contains lang_full" | sort: 'weight' | reverse -%}
+  {%- else -%}
+    {%- assign posts = "" | split: "" -%}
+  {%- endif -%}
+  {%- if posts.size > 0 -%}
+   {% assign hue_data = pair[1] %}
+   {% assign cat_label = hue_data.ko | default: ordered_cat %}
+   {% if lang == "en" %}{% assign cat_label = ordered_cat | split: " / " | last %}{% endif %}
+   <section id="{{ ordered_cat | slugify }}" class="taxonomy__section">
+     <h2 class="archive__subtitle" style="--cat-hue: {{ hue_data.hue | default: 220 }}; --cat-sat: {{ hue_data.sat | default: '26%' }}; --cat-l: {{ hue_data.l | default: 50 }};">{{ cat_label }}</h2>
+     <div class="entries-{{ entries_layout }}">
+       {% for post in posts reversed %}
+         {% include archive-single.html type=entries_layout %}
+       {% endfor %}
+     </div>
+     <a href="#page-title" class="back-to-top">{{ site.data.ui-text[lang].back_to_top | default: 'Back to Top' }} &uarr;</a>
+   </section>
+  {%- endif -%}
+{% endfor %}
