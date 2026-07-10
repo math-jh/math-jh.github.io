@@ -237,31 +237,38 @@ $$S^\infty\times_{S^1}\mathbb{C}\longrightarrow\CP^\infty$$
 
 $$G\rightarrow\GL(n;\mathbb{C})$$
 
-이 주어지면 임의의 principal $$G$$-bundle $$P$$에 대해 associated bundle $$P\times_G\mathbb{C}^n$$은 rank $$n$$ complex vector bundle이 된다는 것을 관찰하자. 
+이 주어지면 임의의 principal $$G$$-bundle $$P$$에 대해 associated bundle $$P\times_G\mathbb{C}^n$$은 rank $$n$$ complex vector bundle이 된다는 것을 관찰하자. Line bundle이 principal $$\Umat(1)=S^1$$-bundle에 표준 표현 $$\mathbb{C}$$를 붙인 것이었으므로, rank $$n$$ complex vector bundle은 principal $$\Umat(n)$$-bundle에 표준 표현 $$\mathbb{C}^n$$을 붙여 얻어질 것을 기대하는 것이 자연스럽다. 
 
-Line bundle이 principal $$S^1$$-bundle에 표준 표현 $$\mathbb{C}$$를 붙인 것이었으므로, rank $$n$$ complex vector bundle은 principal $$\Umat(n)$$-bundle에 표준 표현 $$\mathbb{C}^n$$을 붙여 얻어질 것이고, 그럼 필요한 것은 universal principal $$\Umat(n)$$-bundle이다. 이는 $$\mathbb{C}^\infty$$의 orthonormal $$n$$-frame 전체의 공간인 complex Stiefel manifold
+이를 위해 필요한 것은 universal principal $$\Umat(n)$$-bundle로, 이는 $$\mathbb{C}^\infty$$의 orthonormal $$n$$-frame 전체의 공간인 *complex Stiefel manifold*
 
 $$V_n(\mathbb{C}^\infty)=\varinjlim_k V_n(\mathbb{C}^k)$$
 
-위에 $$\Umat(n)$$이 오른쪽에서 행렬곱으로 작용하고 그 orbit space가 $$\Gr(n,\mathbb{C}^\infty)$$가 되는 것으로 주어진다. Orthonormal $$1$$-frame은 unit vector에 불과하므로 $$n=1$$인 경우 이는 정확히 본문의 $$ES^1=S^\infty\rightarrow\CP^\infty$$이며, 일반적인 $$n$$에 대해서도 유한 차원의 $$V_n(\mathbb{C}^k)$$와 달리 이 colimit에서는 $$k$$가 커질수록 frame을 밀어낼 여유 차원이 무한히 생겨, 앞서 $$S^\infty$$에서 본 것과 같은 논증으로 $$V_n(\mathbb{C}^\infty)$$가 한 점으로 deformation retract되어 contractible이므로 이 principal bundle은 universal이다.
+위에 $$\Umat(n)$$이 오른쪽에서 행렬곱으로 작용하고 그 orbit space가 $$\Gr(n,\mathbb{C}^\infty)$$가 되는 것으로 주어진다. Orthonormal $$1$$-frame은 unit vector에 불과하므로 $$n=1$$인 경우 이는 정확히 본문의 $$ES^1=S^\infty\rightarrow\CP^\infty$$이며, 일반적인 $$n$$에 대해서도 앞서 $$S^\infty$$에서 본 것과 같은 논증으로 $$V_n(\mathbb{C}^\infty)$$가 한 점으로 deformation retract되어 contractible이므로 이 principal bundle은 universal이다.
 
-이제 여기에 표준 표현 $$\mathbb{C}^n$$을 붙이면 associated bundle
+이제 여기에 canonical representation $$\mathbb{C}^n$$을 붙이면 associated bundle
 
 $$V_n(\mathbb{C}^\infty)\times_{\Umat(n)}\mathbb{C}^n\longrightarrow\Gr(n,\mathbb{C}^\infty)$$
 
-을 얻는다. 점 $$[V]$$ 위의 fiber를 살피면 $$z=(z_1,\ldots,z_n)\in\mathbb{C}^n$$에 대해 동치류 $$[(e_1,\ldots,e_n),z]$$는 frame이 span하는 부분공간 $$V$$의 원소 $$z_1e_1+\cdots+z_ne_n\in V$$와 같으므로, line bundle에서와 마찬가지로 이는 각 부분공간을 그 자신을 fiber로 갖는 tautological $$n$$-plane bundle $$\gamma^n$$이며, 거꾸로 $$\gamma^n$$의 각 fiber의 orthonormal frame 전체를 모으면 $$V_n(\mathbb{C}^\infty)$$가 회수되는 것도 line bundle에서와 같다. 정리하면
+을 얻는다. 점 $$[V]$$ 위의 fiber를 살피면 $$z=(z_1,\ldots,z_n)\in\mathbb{C}^n$$에 대해 동치류 $$[(e_1,\ldots,e_n),z]$$는 frame이 span하는 부분공간 $$V$$의 원소 $$z_1e_1+\cdots+z_ne_n\in V$$와 같으므로, line bundle에서와 마찬가지로 이는 각 부분공간을 그 자신을 fiber로 갖는 tautological $$n$$-plane bundle $$\gamma^n$$이며, 거꾸로 $$\gamma^n$$의 각 fiber의 orthonormal frame 전체를 모으면 $$V_n(\mathbb{C}^\infty)$$가 복원되는 것도 line bundle에서와 같다. 즉
 
-$$B\Umat(n)=\Gr(n,\mathbb{C}^\infty),\qquad B\Omat(n)=\Gr(n,\mathbb{R}^\infty)$$
+$$B\Umat(n)=\Gr(n,\mathbb{C}^\infty)$$
 
-이며, 둘째 등식은 $$\mathbb{R}^\infty$$의 orthonormal $$n$$-frame들의 공간 $$V_n(\mathbb{R}^\infty)$$와 $$\Omat(n)$$에 대해 같은 논증을 반복하여 얻는다.
+이고, 그 위의 universal bundle은 tautological line bundle이다. 
 
-마지막으로 일반선형군은 Gram–Schmidt 직교화로 다룬다. $$\GL(n;\mathbb{C})$$의 임의의 원소는 unitary 행렬과 양의 정부호 upper-triangular 행렬의 곱으로 유일하게 분해되고($$QR$$ 분해), upper-triangular 인자를 항등원 쪽으로 수축시키면 $$\GL(n;\mathbb{C})$$이 $$\Umat(n)$$ 위로 deformation retract된다. 즉 inclusion $$\Umat(n)\hookrightarrow\GL(n;\mathbb{C})$$은 homotopy equivalence이고, 분류공간의 functoriality [보조정리 9](#lem9)에 의하여
+한편 [명제 4](#prop4)의 complex 버전이 rank $$n$$ complex vector bundle에 대응시키는 것은 엄밀히 말하면 principal $$\Umat(n)$$-bundle이 아니라 principal $$\GL(n;\mathbb{C})$$-bundle이므로, 이것이 어떻게 $$B\GL(n;\mathbb{C})$$와 이어지고 
+
+
+ 임의의 vector bundle의 분류로 이어지려면 $$B\GL(n;\mathbb{C})$$와 $$B\Umat(n)$$이 같아야 한다. 실제로 [\[선형대수학\] §복소내적공간, ⁋명제 7](/ko/math/linear_algebra/complex_inner_product_spaces#prop7)의 $$QR$$ 분해에 의하여 $$\GL(n;\mathbb{C})$$의 임의의 원소는 unitary 행렬과 대각성분이 양수인 upper-triangular 행렬의 곱으로 유일하게, 그리고 연속적으로 분해되므로, Gram–Schmidt 직교화에 해당하는 이 분해에서 upper-triangular 인자를 항등원 쪽으로 수축시키면 $$\GL(n;\mathbb{C})$$이 $$\Umat(n)$$ 위로 deformation retract된다. 즉 inclusion $$\Umat(n)\hookrightarrow\GL(n;\mathbb{C})$$은 homotopy equivalence이고, 분류공간의 functoriality [보조정리 9](#lem9)에 의하여
 
 $$B\GL(n;\mathbb{C})\simeq B\Umat(n)=\Gr(n,\mathbb{C}^\infty)$$
 
-이며, 마찬가지로 $$B\GL(n;\mathbb{R})\simeq\Gr(n,\mathbb{R}^\infty)$$이다. 일반적으로 topological group과 그 deformation retract는 같은 분류공간을 갖는다.
+이다. 일반적으로 topological group과 그 deformation retract는 같은 분류공간을 갖는다. 같은 이야기 전체를 $$\mathbb{R}^\infty$$의 orthonormal $$n$$-frame 전체의 공간인 real Stiefel manifold $$V_n(\mathbb{R}^\infty)$$와 $$\Omat(n)$$, 그리고 Gram–Schmidt 직교화에 대해 반복하면
 
-이 등식은 이 글의 서론에서 제시한 두 관점을 하나로 잇는다. Rank $$n$$ complex vector bundle은 구조군 $$\GL(n;\mathbb{C})$$를 갖는 principal bundle로 그 분류가 $$[X,B\GL(n;\mathbb{C})]$$로 주어지는가 하면, infinite Grassmannian의 universal bundle의 pullback으로 그 분류가 $$[X,\Gr(n,\mathbb{C}^\infty)]$$로도 주어진다. $$B\GL(n;\mathbb{C})\simeq\Gr(n,\mathbb{C}^\infty)$$가 바로 이 두 분류가 일치함을, 나아가 모든 complex vector bundle에 Hermitian metric을 주어 구조군을 $$\Umat(n)$$으로 줄여도 분류에 손실이 없음을 말해준다. Real vector bundle과 $$\GL(n;\mathbb{R})$$, $$\Omat(n)$$의 경우도 마찬가지다.
+$$B\GL(n;\mathbb{R})\simeq B\Omat(n)=\Gr(n,\mathbb{R}^\infty)$$
+
+을 얻는다.
+
+이 등식은 이 글의 서론에서 제시한 두 관점을 하나로 잇는다. Rank $$n$$ complex vector bundle은 구조군 $$\GL(n;\mathbb{C})$$를 갖는 principal bundle로 그 분류가 $$[X,B\GL(n;\mathbb{C})]$$로 주어지는가 하면, infinite Grassmannian의 universal bundle의 pullback으로 그 분류가 $$[X,\Gr(n,\mathbb{C}^\infty)]$$로도 주어지는데, $$B\GL(n;\mathbb{C})\simeq\Gr(n,\mathbb{C}^\infty)$$가 바로 이 두 분류가 일치함을 말해준다. 또한 $$\Umat(n)$$을 거쳐 온 것은 모든 complex vector bundle에 Hermitian metric을 주어 구조군을 $$\Umat(n)$$으로 줄여도 분류에 손실이 없음을 함께 보여준다.
 :::
 
 ## 분류공간의 코호몰로지
