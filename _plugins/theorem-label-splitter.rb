@@ -24,10 +24,14 @@
 #   이탤릭 그대로 둔다: "(Whitney 합 공식)" → (Whitney <span…>합 공식</span>).
 
 module TheoremLabelSplitter
+  # 박스 class 목록은 fenced_theorem_blocks.rb 가 원본이다 (이 파일보다 먼저 로드된다:
+  # _plugins/ 는 알파벳 순). 예전엔 여기에 목록을 한 벌 더 적어 두고 있었다.
+  BOX_ALT = FencedTheoremBlocks::EXPLICIT_CLASSES.map { |c| Regexp.escape(c) }.join("|")
+
   # 박스 시작부:  <div class="X"> <p><ins id="…"><strong>라벨</strong></ins> …
   #   $1 = 여는 div,  $2 = 앵커 id,  $3 = 라벨 내부 HTML("정의 1" 또는 "예시 5 (이름)")
   BOX_START = %r{
-    (<div\ class="(?:definition|proposition|example|remark|misc)">)
+    (<div\ class="(?:#{BOX_ALT})">)
     \s*<p><ins\ id="([^"]+)"><strong>(.*?)</strong></ins>\s*
   }x
 

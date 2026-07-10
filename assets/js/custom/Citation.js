@@ -29,16 +29,24 @@ document.addEventListener('DOMContentLoaded', function () {
   var h1 = document.querySelector('h1');
   var postTitle = h1 ? h1.textContent.trim() : document.title.replace(/-.*$/, '').trim();
 
-  // 3. 라벨마다 클릭 핸들러
+  // 3. 라벨 종류 정규식 (단일 출처: window.THEOREM_KINDS.labels)
+  var kinds = (window.THEOREM_KINDS && window.THEOREM_KINDS.labels) || [];
+  if (!kinds.length) return; // 어휘가 안 실렸으면 조용히 no-op
+  var kindRe = new RegExp(
+    '(' + kinds.map(function (k) { return k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }).join('|') + ')\\s*([0-9]+)'
+  );
+
+  // 4. 라벨마다 클릭 핸들러
   var labels = document.querySelectorAll('.thm-n[id], ins[id]');
   labels.forEach(function (el) {
     el.style.cursor = 'pointer';
 
     el.addEventListener('click', function (e) {
-      // 종류+번호 추출 (따름정리/보조정리가 정의/정리보다 먼저 와야 부분매치 방지)
-      var match = el.textContent.match(
-        /(따름정리|보조정리|정의|정리|명제|예시|주의|Corollary|Lemma|Definition|Theorem|Proposition|Example|Remark)\s*([0-9]+)/
-      );
+      // 종류+번호 추출. 종류 목록은 window.THEOREM_KINDS(=_plugins/fenced_theorem_blocks.rb
+      // 의 KIND_MAP, head.html 이 실어 보냄)에서 온다 — 긴 것 우선 정렬이라 '보조정리'가
+      // '정리'보다 먼저 매치된다. 예전엔 이 정규식이 목록을 따로 들고 있었고, remark 를
+      // '참고'가 아니라 쓰이지도 않는 '주의'로 알고 있어 참고 라벨이 복사되지 않았다.
+      var match = el.textContent.match(kindRe);
       if (!match) return;
       var type = match[1];
       var number = match[2];

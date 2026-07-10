@@ -81,6 +81,9 @@ module FencedTheoremBlocks
   # 명시형(비유도 라벨·커스텀 id 전용, 전 class):  <class> <라벨 verbatim> {#id}
   # class 는 소문자 div class 이므로 유도형 종류 키워드(정의/…/Definition/…)와 겹치지 않는다.
   EXPLICIT_CLASSES = %w[definition proposition example remark misc].freeze
+  # 접기 박스(<details>). 라벨 번호가 없어 KIND_MAP 에는 없지만, 박스 어휘를 쓰는
+  # 소비처(Xref_preview.js 의 셀렉터, _notices.scss)는 이것도 알아야 한다.
+  COLLAPSIBLE_CLASSES = %w[proof proof--alone details].freeze
   EXPLICIT_ALT     = EXPLICIT_CLASSES.map { |c| Regexp.escape(c) }.join("|")
   EXPLICIT_RE      = /\A(#{EXPLICIT_ALT})[ \t]+(.+?)[ \t]*\{#([^}]+)\}[ \t]*\z/
 
@@ -269,6 +272,25 @@ end
 # 문서 훅(둘 다 priority 20)보다 먼저 돌아, link_normalizer 가 변환된 <ins id> 를
 # 읽도록 보장한다. env 게이트 없음(로컬 미리보기 포함 전 환경 적용).
 if defined?(Jekyll::Hooks)
+  # 정리 박스 어휘의 단일 출처. 예전에는 같은 목록이 네 곳에 복사돼 있었고
+  # (theorem-label-splitter.rb / Citation.js / Xref_preview.js / _notices.scss),
+  # 실제로 어긋나 있었다 — Citation.js 정규식이 remark 를 '참고' 가 아니라 쓰이지도
+  # 않는 '주의' 로 알고 있어서, 참고 라벨(글에 87개)을 클릭해도 아무것도 복사되지
+  # 않았다. 여기서 site.data 로 노출하고 head.html 이 window.THEOREM_KINDS 로 실어
+  # 보낸다. Ruby 쪽 소비처는 FencedTheoremBlocks 의 상수를 직접 참조한다.
+  Jekyll::Hooks.register :site, :post_read do |site|
+    site.data["theorem_kinds"] = {
+      # 정규식 alternation 용 — 긴 것 우선(보조정리가 정리보다 먼저 매치되도록).
+      "labels" => FencedTheoremBlocks::KIND_MAP.keys.sort_by { |k| -k.length },
+      # 라벨을 감싸는 div class
+      "boxes" => FencedTheoremBlocks::EXPLICIT_CLASSES,
+      # <details> 로 나오는 접기 박스 (라벨 번호가 없다)
+      "collapsibles" => FencedTheoremBlocks::COLLAPSIBLE_CLASSES,
+      # 라벨 종류 → 앵커 id 접두사
+      "prefixes" => FencedTheoremBlocks::KIND_MAP.transform_values(&:last)
+    }
+  end
+
   Jekyll::Hooks.register :site, :pre_render, priority: Jekyll::Hooks::PRIORITY_MAP[:high] do |site|
     site.posts.docs.each do |doc|
       next unless doc.content.is_a?(String)

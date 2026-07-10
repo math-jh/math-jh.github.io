@@ -12,7 +12,12 @@
 (function () {
   'use strict';
 
-  var BOX_SEL =
+  // 박스 class 목록의 단일 출처는 _plugins/fenced_theorem_blocks.rb 이고,
+  // head.html 이 window.THEOREM_KINDS 로 실어 보낸다. 예전엔 여기 하드코딩돼 있었다.
+  var TK = window.THEOREM_KINDS || {};
+  var BOX_SEL = (TK.boxes || []).concat(TK.collapsibles || [])
+    .map(function (c) { return '.' + c; })
+    .join(',') ||
     '.definition,.proposition,.example,.remark,.misc,.proof,.proof--alone,.details';
 
   // _includes/scripts.html 의 본문 렌더 설정과 동일하게 유지할 것.

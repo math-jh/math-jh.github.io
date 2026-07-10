@@ -71,6 +71,15 @@ module GraphData
     ((site.data["categories"] || {})["subjects"] || {})
   end
 
+  # 필터 칩용 family 목록. Graph_page.js 가 data.families 로 받는다 — 예전엔 거기
+  # FAMILIES 상수로 한 벌 더 있어서, categories.yml 에 family 를 추가해도 JS 가
+  # 모르면 그 노드가 조용히 "misc"(채도 0 회색)로 떨어졌다.
+  def families(site)
+    ((site.data["categories"] || {})["families"] || {}).map do |key, val|
+      { key: key, label: val["label"], label_ko: val["label_ko"], hue: val["hue"] }
+    end
+  end
+
   def slug_of(category)
     category.to_s.split(" / ").last.to_s.downcase.gsub(" ", "_")
   end
@@ -142,7 +151,7 @@ module GraphData
     end
 
     links = edges.map { |(s, t), w| { source: s, target: t, weight: w } }
-    { nodes: nodes, links: links }
+    { nodes: nodes, links: links, families: families(site) }
   end
 end
 
