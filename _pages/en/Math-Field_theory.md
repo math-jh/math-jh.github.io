@@ -5,20 +5,5 @@ regenerate: true
 permalink: /en/field_theory/
 header:
   overlay_color: "transparent"
-hero_hue: 222
 excerpt: "Field theory studies fields, where all four operations are freely available, and their extensions. Through Galois theory it recasts the solvability of polynomials and classical construction problems in the language of symmetry."
 ---
-{% assign lang = site.locale %}
-{% assign lang_prefix = page.url | truncate: 3, "" %}
-{% if lang_prefix contains "en" or lang_prefix contains "ko" %}
-  {% assign lang = lang_prefix | append: "/" %}
-{% endif %}
-
-{% assign cat_posts = site.categories['Math / Field Theory'] %}
-{% if cat_posts %}
-{% assign posts = cat_posts | where_exp: "post", "post.permalink contains lang" | sort: 'weight' %}
-{% else %}
-{% assign posts = "" | split: "" %}
-{% endif %}
-{% include subject-cards.html posts=posts %}
-

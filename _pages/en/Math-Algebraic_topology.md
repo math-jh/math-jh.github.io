@@ -5,20 +5,5 @@ regenerate: true
 permalink: /en/algebraic_topology/
 header:
   overlay_color: "transparent"
-hero_hue: 156
 excerpt: "Algebraic topology distinguishes the shape of spaces by assigning algebraic invariants such as groups and rings. Through homotopy, homology, and cohomology, it translates topological information into algebra."
 ---
-{% assign lang = site.locale %}
-{% assign lang_prefix = page.url | truncate: 3, "" %}
-{% if lang_prefix contains "en" or lang_prefix contains "ko" %}
-  {% assign lang = lang_prefix | append: "/" %}
-{% endif %}
-
-{% assign cat_posts = site.categories['Math / Algebraic Topology'] %}
-{% if cat_posts %}
-{% assign posts = cat_posts | where_exp: "post", "post.permalink contains lang" | sort: 'weight' %}
-{% else %}
-{% assign posts = "" | split: "" %}
-{% endif %}
-{% include subject-cards.html posts=posts %}
-

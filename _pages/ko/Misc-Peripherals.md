@@ -3,11 +3,9 @@ title: "주변기기"
 layout: archive_custom
 regenerate: true
 permalink: /ko/peripherals
-eyebrow: "기타"
 header:
   overlay_color: "transparent"
-hero_hue: 0
-hero_sat: "0%"
+cards: false
 ---
 {% assign lang = site.locale %}
 {% assign lang_prefix = page.url | truncate: 3, "" %}
