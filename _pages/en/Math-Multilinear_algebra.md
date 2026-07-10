@@ -5,20 +5,5 @@ regenerate: true
 permalink: /en/multilinear_algebra/
 header:
   overlay_color: "transparent"
-hero_hue: 218
 excerpt: "Multilinear algebra studies maps that are linear in several vectors at once, that is, tensors. Through tensor products and the exterior and symmetric algebras, it supplies the tools of differential geometry and representation theory."
 ---
-{% assign lang = site.locale %}
-{% assign lang_prefix = page.url | truncate: 3, "" %}
-{% if lang_prefix contains "en" or lang_prefix contains "ko" %}
-  {% assign lang = lang_prefix | append: "/" %}
-{% endif %}
-
-{% assign cat_posts = site.categories['Math / Multilinear Algebra'] %}
-{% if cat_posts %}
-{% assign posts = cat_posts | where_exp: "post", "post.permalink contains lang" | sort: 'weight' %}
-{% else %}
-{% assign posts = "" | split: "" %}
-{% endif %}
-{% include subject-cards.html posts=posts %}
-
