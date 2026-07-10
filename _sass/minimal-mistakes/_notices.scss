@@ -14,6 +14,11 @@
    rem 이라 라벨(1.05em)·본문(1em) 어디에 쓰든 같은 픽셀이 나온다. */
 $thm-indent: 1.1rem;
 
+/* 정리 박스의 괘선 굵기 — 라벨 행 헤어라인(.thm-head::after, summary::after)과
+   블록을 닫는 마감선(border-bottom)이 같이 쓴다. 세 곳을 따로 두면 어긋난다.
+   정수라 화면 배율과 무관하게 그대로 스냅된다 (1.5px 은 1x 에서 1px 로 내림됐다). */
+$thm-rule: 2px;
+
 /* 박스 내부 공통 규칙 (외형과 무관). admonition(notice)·라벨행(notice-labelrow)
    두 외형이 이걸 공유한다. */
 @mixin notice-content($notice-color) {
@@ -133,7 +138,7 @@ $thm-indent: 1.1rem;
   padding: 0 0 0.85em $thm-indent;
   background-color: transparent;
   border: 0;
-  border-bottom: 1px solid mix($hairline, $background-color, 62%);
+  border-bottom: $thm-rule solid mix($hairline, $background-color, 62%);
   border-radius: 0;
   box-shadow: none;
 
@@ -282,7 +287,7 @@ details[open] > summary::before {
 /* 마감선 예외 (2): 접혀 있는 접기 박스는 마감선을 그리지 않는다. 라벨 행만 남아
    내용 없는 얇은 띠가 생기지 않는다. [open] 은 네이티브 속성이라 JS 없이도 맞고,
    Proof_animate.js 는 접힘 애니메이션 *끝*에 [open] 을 떼므로 애니메이션 도중에는
-   마감선이 남아 있다가 마지막에 사라진다(1px 이라 눈에 띄지 않는다).
+   마감선이 남아 있다가 마지막에 사라진다($thm-rule 이라 눈에 띄지 않는다).
    padding 은 남겨 둔다 — 위 믹스인 주석 참고. */
 details.proof:not([open]),
 details.proof--alone:not([open]),
@@ -329,7 +334,7 @@ $qed-size: 0.65em;
     content: "";
     flex: 1 1 auto;
     align-self: center;
-    height: 1px;
+    height: $thm-rule;
     min-width: 36px;
   }
 }
@@ -386,7 +391,7 @@ $qed-size: 0.65em;
     content: "";
     flex: 1 1 auto;
     align-self: center;
-    height: 1px;
+    height: $thm-rule;
     min-width: 36px;
     margin-right: calc(#{$qed-size} + 0.55em);
   }

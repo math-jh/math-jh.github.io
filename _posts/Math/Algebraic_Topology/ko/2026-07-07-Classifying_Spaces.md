@@ -200,7 +200,7 @@ $$G$$가 discrete group이라 하자. 그럼 임의의 base $$B$$ 위에 정의�
 더 구체적인 예시로 $$G=\mathbb{Z}/2$$인 경우와 $$G=\mathbb{Z}$$인 경우를 각각 보자. 우선 $$\mathbb{Z}/2$$의 경우 우리는 $$\mathbb{Z}/2$$이 free하게 작용하는 contractible space를 찾아야 하는데, $$S^\infty$$에 antipodal action을 준 게 정확히 이 두 조건을 모두 만족한다. 그럼 이 action의 orbit space는 $$\RP^\infty$$가 된다. $$\mathbb{Z}$$의 경우도 이미 우리와 친숙한 예시에서 찾아올 수 있는데, 바로 [§피복공간, ⁋정의 3](/ko/math/algebraic_topology/covering_spaces#def3) 직후에 covering space의 표준적인 예시로 소개한 $$\mathbb{R}\rightarrow S^1$$이 그러하다. 
 :::
 
-이제 실제로 우리가 관심있는 group들의 covering space들을 살펴보자. Discrete이 아닌 group 중 가장 기본적인 예는 $$G=S^1$$이며 이는 보편적으로 $$\mathbb{C}^\times$$에 들어있는 길이 $$1$$짜리 복소수들 $$e^{2\pi it}$$들의 모임으로 생각한다. 그럼 $$S^1$$은 $$\mathbb{C}^\infty\setminus\{0\}$$ 위에 스칼라곱으로 free하게 작용한다. 
+이제 실제로 우리가 관심있는 group들의 분류공간들을 살펴보자. Discrete이 아닌 group 중 가장 기본적인 예는 $$G=S^1$$이며 이는 보편적으로 $$\mathbb{C}^\times$$에 들어있는 길이 $$1$$짜리 복소수들 $$e^{2\pi it}$$들의 모임으로 생각한다. 그럼 $$S^1$$은 $$\mathbb{C}^\infty\setminus\{0\}$$ 위에 스칼라곱으로 free하게 작용한다. 
 
 이제 각각의 $$\mathbb{C}^n\setminus 0$$을 radial deformation retract를 통해 단위구면 
 
@@ -214,28 +214,46 @@ $$\mathbb{C}^n\hookrightarrow\mathbb{C}^{n+1}\hookrightarrow \mathbb{C}^{n+2}\ho
 
 $$S^1\subset S^2\subset S^3\cdots $$
 
-의 cofinal subsequence이므로 그 결과는 $$S^\infty$$와 같다. 즉, $$ES^1=\mathbb{C}^\infty\setminus\{0\}$$으로 잡으면 이는 $$S^1$$이 free하게 작용하는 contractible space이며, 그 orbit space는 complex projective space
+의 cofinal subsequence이므로 그 결과는 $$S^\infty$$와 같다. 한편 $$S^1$$의 스칼라곱은 norm을 보존하므로, 이 action은 단위구면 $$S^\infty\subseteq\mathbb{C}^\infty\setminus\{0\}$$ 위의 free action으로 제한된다. 즉 $$ES^1=S^\infty$$로 잡으면 이는 $$S^1$$이 free하게 작용하는 contractible space이며, $$\mathbb{C}^\infty$$의 각 complex line이 $$S^\infty$$와 만나는 자취가 정확히 하나의 $$S^1$$-orbit, 곧 그 직선 안의 unit circle이므로 그 orbit space는 complex projective space
 
-$$BS^1=(\mathbb{C}^\infty\setminus\{0\})/S^1=\CP^\infty$$
+$$BS^1=S^\infty/S^1=\CP^\infty$$
 
 이 된다.
 
+이것이 vector bundle의 언어로 갖는 의미를 살펴보기 위해 [정의 3](#def3)의 associated bundle로 돌아가자. $$S^1$$은 $$\mathbb{C}$$ 위에 스칼라곱으로 작용하므로, 임의의 principal $$S^1$$-bundle $$P\rightarrow X$$마다 associated bundle
+
+$$P\times_{S^1}\mathbb{C}\rightarrow X$$
+
+가 정의된다. 앞서 살펴보았듯 이는 $$P$$와 같은 open cover 위에서 fiber가 $$\mathbb{C}$$이고 transition이 $$g_{ij}$$의 $$\mathbb{C}$$ 위에서의 작용으로 주어지는 bundle인데, 스칼라곱은 $$\mathbb{C}$$-linear하므로 이 transition들은 $$S^1\subseteq\mathbb{C}^\times=\GL(1;\mathbb{C})$$의 원소들이 주는 linear automorphism들이고, 따라서 $$P\times_{S^1}\mathbb{C}$$는 complex line bundle이다. 즉 principal $$S^1$$-bundle은 $$\mathbb{C}$$를 붙이는 것만으로 자연스럽게 line bundle이 된다. 거꾸로 line bundle $$L\rightarrow X$$가 주어지면 paracompactness에 의해 Hermitian metric을 잡을 수 있고, 각 fiber의 unit vector들의 모임인 sphere bundle $$S(L)\subseteq L$$은 $$S^1$$의 스칼라곱에 대하여 principal $$S^1$$-bundle이 된다. [명제 4](#prop4)에서 ordered basis를 unit vector로 바꾼 것과 같은 논증으로 이 두 구성이 서로의 역임을 확인할 수 있으며, 이것이 line bundle의 구조군을 $$\GL(1;\mathbb{C})$$에서 $$S^1=\Umat(1)$$로 줄여 잡을 수 있는 이유이다. 
+
+이를 명시적으로 universal bundle $$ES^1=S^\infty\rightarrow\CP^\infty$$에 적용하면 line bundle
+
+$$S^\infty\times_{S^1}\mathbb{C}\longrightarrow\CP^\infty$$
+
+을 얻는다. 점 $$[\ell]\in\CP^\infty$$ 위의 fiber를 살피면 동치류 $$[e,z]$$는 unit vector $$e$$가 결정하는 직선 $$\ell=\mathbb{C}e$$의 원소 $$ze\in\ell$$와 같으므로, 이는 각 직선을 그 자신을 fiber로 갖는 tautological line bundle $$\gamma$$이다. 즉 [§벡터다발의 특성류, ⁋예시 8](/ko/math/algebraic_topology/characteristic_classes#ex8)에서 $$\gamma$$가 complex line bundle의 universal family가 되었던 것은 universal principal $$S^1$$-bundle에 $$\mathbb{C}$$를 붙인 결과가 정확히 $$\gamma$$이기 때문이며, 거꾸로 그곳에서 $$\gamma$$의 sphere bundle로 등장했던 $$S^\infty$$가 바로 $$ES^1$$이다.
+
 ::: 예시 11 (선형군의 분류공간)
-본문에서 얻은 $$BS^1=\CP^\infty$$를 출발점으로 주요 선형군들의 분류공간을 계산해 보자. 먼저 분류공간 구성이 곱을 보존한다는 점에서, $$E(G_1\times G_2)=EG_1\times EG_2$$가 역시 contractible이고 그 위의 $$G_1\times G_2$$-작용이 자유롭기 때문에 $$B(G_1\times G_2)\cong BG_1\times BG_2$$이며, 이로부터 torus $$T=(S^1)^n$$의 분류공간이
+위의 논의는 임의의 rank $$n$$ bundle로 일반화된다. 우선 일반적으로 topological group $$G$$의 연속적인 representation 
 
-$$BT=(BS^1)^n=(\CP^\infty)^n$$
+$$G\rightarrow\GL(n;\mathbb{C})$$
 
-임을 얻는다.
+이 주어지면 임의의 principal $$G$$-bundle $$P$$에 대해 associated bundle $$P\times_G\mathbb{C}^n$$은 rank $$n$$ complex vector bundle이 된다는 것을 관찰하자. 
 
-다음으로 unitary group $$\Umat(n)$$을 보자. Grassmannian $$\Gr(n,\mathbb{C}^\infty)$$ 위의 tautological $$n$$-plane bundle $$\gamma^n$$에 표준 Hermitian metric을 주어 orthonormal frame bundle을 취하면, 그 total space의 한 점은 $$\mathbb{C}^\infty$$의 orthonormal $$n$$-frame $$(v_1,\ldots,v_n)$$이고 그것이 spanning하는 부분공간 $$\operatorname{span}(v_1,\ldots,v_n)$$이 곧 base의 점이 되므로 total space는 복소 Stiefel 공간
+Line bundle이 principal $$S^1$$-bundle에 표준 표현 $$\mathbb{C}$$를 붙인 것이었으므로, rank $$n$$ complex vector bundle은 principal $$\Umat(n)$$-bundle에 표준 표현 $$\mathbb{C}^n$$을 붙여 얻어질 것이고, 그럼 필요한 것은 universal principal $$\Umat(n)$$-bundle이다. 이는 $$\mathbb{C}^\infty$$의 orthonormal $$n$$-frame 전체의 공간인 complex Stiefel manifold
 
 $$V_n(\mathbb{C}^\infty)=\varinjlim_k V_n(\mathbb{C}^k)$$
 
-이다. $$\Umat(n)$$이 오른쪽에서 행렬곱으로 frame에 작용하여 base를 고정한 채 frame만 바꾸므로 이는 principal $$\Umat(n)$$-bundle $$V_n(\mathbb{C}^\infty)\to\Gr(n,\mathbb{C}^\infty)$$이 된다. 유한 차원 Stiefel 공간과 달리 이 colimit에서는 $$k$$가 커질수록 frame을 밀어낼 여유 차원이 무한히 생겨, 앞서 $$S^\infty$$에서 본 것과 같은 논증으로 한 점으로 deformation retract되어 contractible이다. Total space가 contractible인 principal bundle은 분류공간의 정의에 의해 universal이므로
+위에 $$\Umat(n)$$이 오른쪽에서 행렬곱으로 작용하고 그 orbit space가 $$\Gr(n,\mathbb{C}^\infty)$$가 되는 것으로 주어진다. Orthonormal $$1$$-frame은 unit vector에 불과하므로 $$n=1$$인 경우 이는 정확히 본문의 $$ES^1=S^\infty\rightarrow\CP^\infty$$이며, 일반적인 $$n$$에 대해서도 유한 차원의 $$V_n(\mathbb{C}^k)$$와 달리 이 colimit에서는 $$k$$가 커질수록 frame을 밀어낼 여유 차원이 무한히 생겨, 앞서 $$S^\infty$$에서 본 것과 같은 논증으로 $$V_n(\mathbb{C}^\infty)$$가 한 점으로 deformation retract되어 contractible이므로 이 principal bundle은 universal이다.
 
-$$B\Umat(n)=\Gr(n,\mathbb{C}^\infty)$$
+이제 여기에 표준 표현 $$\mathbb{C}^n$$을 붙이면 associated bundle
 
-이다. $$n=1$$이면 $$V_1(\mathbb{C}^\infty)=S^\infty$$이고 $$\Gr(1,\mathbb{C}^\infty)=\CP^\infty$$이므로 $$\Umat(1)=S^1$$의 경우 본문의 결과 $$BS^1=\CP^\infty$$를 회수한다. Real Grassmannian $$\Gr(n,\mathbb{R}^\infty)$$에 대해서도 동일한 논증이 구조군 $$\Omat(n)$$에 적용되어 $$B\Omat(n)=\Gr(n,\mathbb{R}^\infty)$$를 준다.
+$$V_n(\mathbb{C}^\infty)\times_{\Umat(n)}\mathbb{C}^n\longrightarrow\Gr(n,\mathbb{C}^\infty)$$
+
+을 얻는다. 점 $$[V]$$ 위의 fiber를 살피면 $$z=(z_1,\ldots,z_n)\in\mathbb{C}^n$$에 대해 동치류 $$[(e_1,\ldots,e_n),z]$$는 frame이 span하는 부분공간 $$V$$의 원소 $$z_1e_1+\cdots+z_ne_n\in V$$와 같으므로, line bundle에서와 마찬가지로 이는 각 부분공간을 그 자신을 fiber로 갖는 tautological $$n$$-plane bundle $$\gamma^n$$이며, 거꾸로 $$\gamma^n$$의 각 fiber의 orthonormal frame 전체를 모으면 $$V_n(\mathbb{C}^\infty)$$가 회수되는 것도 line bundle에서와 같다. 정리하면
+
+$$B\Umat(n)=\Gr(n,\mathbb{C}^\infty),\qquad B\Omat(n)=\Gr(n,\mathbb{R}^\infty)$$
+
+이며, 둘째 등식은 $$\mathbb{R}^\infty$$의 orthonormal $$n$$-frame들의 공간 $$V_n(\mathbb{R}^\infty)$$와 $$\Omat(n)$$에 대해 같은 논증을 반복하여 얻는다.
 
 마지막으로 일반선형군은 Gram–Schmidt 직교화로 다룬다. $$\GL(n;\mathbb{C})$$의 임의의 원소는 unitary 행렬과 양의 정부호 upper-triangular 행렬의 곱으로 유일하게 분해되고($$QR$$ 분해), upper-triangular 인자를 항등원 쪽으로 수축시키면 $$\GL(n;\mathbb{C})$$이 $$\Umat(n)$$ 위로 deformation retract된다. 즉 inclusion $$\Umat(n)\hookrightarrow\GL(n;\mathbb{C})$$은 homotopy equivalence이고, 분류공간의 functoriality [보조정리 9](#lem9)에 의하여
 
