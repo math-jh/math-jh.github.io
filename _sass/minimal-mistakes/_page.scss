@@ -153,8 +153,7 @@ body {
      (.archive__subtitle — 자기 ::before 로 색상 마름모를 그린다)는 건드리지 않는다. */
   @at-root .layout--single #{&} h2::before {
     content: "§§";
-    margin-right: 0.4em;
-    color: $muted-text-color; /* 크기·굵기는 h2 를 그대로 상속하고 색만 낮춘다 */
+    margin-right: 0.4em; /* 크기·굵기·색 모두 h2 를 그대로 상속한다 */
   }
 
 	h1, h2, h3, h4, h5, h6 {

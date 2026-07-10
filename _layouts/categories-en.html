@@ -10,21 +10,41 @@ layout: archive
 
 {{ content }}
 
+{%- comment -%}
+  글이 하나도 없는 카테고리는 통째로 건너뛴다 (categories-ko.html 의 설명 참고).
+  site.categories[cat] 이 nil 일 때 sort 에 넘기면 "Cannot sort a null object" 로
+  빌드가 중단되므로, nil 을 빈 배열로 바꾼 뒤 size 로 거른다. 덕분에 EN 글이 없는
+  카테고리(Misc / …)도 _config.yml 목록에 그냥 남겨 둘 수 있다.
+{%- endcomment -%}
+
 <ul class="taxonomy__index">
 {% for ordered_cat in site.categories-en_order %}
-  {% assign posts=site.categories[ordered_cat] | where_exp: "post", "post.permalink contains lang_full" %}
+  {%- assign cat_posts = site.categories[ordered_cat] -%}
+  {%- if cat_posts -%}
+    {%- assign posts = cat_posts | where_exp: "post", "post.permalink contains lang_full" -%}
+  {%- else -%}
+    {%- assign posts = "" | split: "" -%}
+  {%- endif -%}
+  {%- if posts.size > 0 -%}
   {% assign hue_data = site.data.hues[ordered_cat] %}
   <li>
     <a href="#{{ ordered_cat | slugify }}" style="--cat-hue: {{ hue_data.hue | default: 220 }}; --cat-sat: {{ hue_data.sat | default: '26%' }}; --cat-l: {{ hue_data.l | default: 50 }};">
       <strong>{{ ordered_cat | split: " / " | last }}</strong> <span class="taxonomy__count">{{ posts.size }}</span>
     </a>
   </li>
+  {%- endif -%}
 {% endfor %}
 </ul>
 
 {% assign entries_layout = page.entries_layout | default: 'list'%}
 {% for ordered_cat in site.categories-en_order %}
-  {% assign posts=site.categories[ordered_cat] | where_exp: "post", "post.permalink contains lang_full"  | sort: 'weight' | reverse %}
+  {%- assign cat_posts = site.categories[ordered_cat] -%}
+  {%- if cat_posts -%}
+    {%- assign posts = cat_posts | where_exp: "post", "post.permalink contains lang_full" | sort: 'weight' | reverse -%}
+  {%- else -%}
+    {%- assign posts = "" | split: "" -%}
+  {%- endif -%}
+  {%- if posts.size > 0 -%}
    {% assign hue_data = site.data.hues[ordered_cat] %}
    <section id="{{ ordered_cat | slugify }}" class="taxonomy__section">
      <h2 class="archive__subtitle" style="--cat-hue: {{ hue_data.hue | default: 220 }}; --cat-sat: {{ hue_data.sat | default: '26%' }}; --cat-l: {{ hue_data.l | default: 50 }};">{{ ordered_cat | split: " / " | last }}</h2>
@@ -35,4 +55,5 @@ layout: archive
      </div>
      <a href="#page-title" class="back-to-top">{{ site.data.ui-text[lang].back_to_top | default: 'Back to Top' }} &uarr;</a>
    </section>
+  {%- endif -%}
 {% endfor %}

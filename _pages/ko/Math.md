@@ -34,11 +34,6 @@ author_profile: true
 ## 해석학
 
 - [미적분학](/ko/calculus/)
-- [해석학](/ko/analysis/)
-
-## 정수론
-
-- [정수론](/ko/number_theory/)
 
 ## 기하학 및 위상수학
 
