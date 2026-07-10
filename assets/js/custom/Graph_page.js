@@ -31,12 +31,17 @@
     return force;
   }
 
-  var FAMILIES = [
+  /* 필터 칩(family) 정의는 그래프 JSON 이 실어 온다 (_data/categories.yml 의
+     families → _plugins/graph_data.rb). 예전엔 여기 상수로 한 벌 더 있었고, JSON 에만
+     있는 family 는 칩이 없어 노드가 회색(misc)으로 떨어졌다. 아래는 옛 JSON 을 위한
+     폴백일 뿐이다. */
+  var FAMILIES_FALLBACK = [
     { key: 'foundations', label: 'Foundations', label_ko: '기초', hue: 258 },
     { key: 'algebra', label: 'Algebra', label_ko: '대수', hue: 220 },
     { key: 'analysis', label: 'Analysis', label_ko: '해석', hue: 188 },
     { key: 'geometry', label: 'Geometry', label_ko: '기하', hue: 24 }
   ];
+
 
   var ICON = {
     search: '<svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><circle cx="7" cy="7" r="4.2" fill="none" stroke="currentColor" stroke-width="1.4"/><line x1="10.2" y1="10.2" x2="14" y2="14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>',
@@ -425,9 +430,10 @@
           font: '"MySansSerifFont", system-ui, sans-serif',
           openLabel: lang === 'ko' ? '글로 이동 →' : 'Open post →'
         };
-        var card = createGraphCard(stage, data, FAMILIES, cfg);
+        var fams = (data.families && data.families.length) ? data.families : FAMILIES_FALLBACK;
+        var card = createGraphCard(stage, data, fams, cfg);
         if (!card) return;
-        var idx = buildIndex(panel, data, card.deg, card.byId, FAMILIES, card, lang);
+        var idx = buildIndex(panel, data, card.deg, card.byId, fams, card, lang);
         cfg.onReset = function () { card.clear(); idx.reset(); };
       })
       .catch(function () {});

@@ -29,6 +29,15 @@
 #   해석학 → teal(~188) · 기하학(위상·미분·대수·거울대칭) → warm band(8–48)
 #   Misc → 무채색
 
+# 의존성 그래프의 굵은 묶음. 순서 = 필터 칩 순서. hue 는 칩 색.
+# _plugins/graph_data.rb 가 그래프 JSON 에 그대로 실어 보내고 Graph_page.js 가 읽는다
+# (예전엔 이 표가 Graph_page.js 안에 FAMILIES 상수로 한 벌 더 있었다).
+families:
+  foundations:            { label: "Foundations", label_ko: "기초", hue: 258 }
+  algebra:                { label: "Algebra", label_ko: "대수", hue: 220 }
+  analysis:               { label: "Analysis", label_ko: "해석", hue: 188 }
+  geometry:               { label: "Geometry", label_ko: "기하", hue: 24 }
+
 sections:
   liberal_arts:           { ko: "교양수학", en: "Liberal Arts", family: foundations }
   foundations:            { ko: "수학기초론", en: "Foundations", family: foundations }

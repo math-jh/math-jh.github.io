@@ -295,6 +295,14 @@ details.details:not([open]) {
 }
 
 /* ==========================================================================
+   박스 class 목록(definition/proposition/example/remark/misc + proof/proof--alone/
+   details)의 단일 출처는 _plugins/fenced_theorem_blocks.rb 의 EXPLICIT_CLASSES ·
+   COLLAPSIBLE_CLASSES 다. Ruby 소비처는 그 상수를, JS 는 window.THEOREM_KINDS 를
+   쓴다. SCSS 는 그 데이터를 읽을 수 없어 여기만 손으로 맞춘 사본이다 —
+   박스 종류를 추가하면 이 파일도 같이 고칠 것.
+   ========================================================================== */
+
+/* ==========================================================================
    정리 박스 스타일 — 라벨 행(Option C)
    박스 외형은 채움·테두리 없이 라벨 행 하나뿐 (notice-labelrow 믹스인).
    theorem-label-splitter.rb 가 <ins> 라벨을 종류+번호(.thm-n)와 괄호 설명(.thm-name)

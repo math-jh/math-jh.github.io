@@ -17,6 +17,13 @@
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
 </script>
 
+{%- comment -%}
+  정리 박스 어휘의 단일 출처는 _plugins/fenced_theorem_blocks.rb 의 KIND_MAP 이다.
+  거기서 site.data.theorem_kinds 로 노출한 것을 여기서 브라우저로 넘긴다.
+  Citation.js(라벨 → 인용 문자열)와 Xref_preview.js(박스 셀렉터)가 이걸 쓴다.
+{%- endcomment -%}
+<script>window.THEOREM_KINDS = {{ site.data.theorem_kinds | jsonify }};</script>
+
 <!-- Google Analytics 는 config(analytics.provider: google-gtag) 기반의
      analytics.html(scripts.html 에서 include, production 한정)에서 한 번만 emit
      한다. 여기에 인라인 gtag 를 또 두면 production 에서 GA 가 이중 발사된다. -->
