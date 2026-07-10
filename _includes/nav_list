@@ -86,17 +86,6 @@
         </li>
         {% endif %}
       {% endfor %}
-      <li>
-        <span class="nav__sub-title"></span>
-        <ul>
-          {% if lang == "en" %}
-            <li><a href="{{ '/en/about' | relative_url }}">About This Site</a></li>
-          {% else %}
-            <li><a href="{{ '/ko/about' | relative_url }}">블로그 소개</a></li>
-            <li><a href="{{ '/ko/misc/index_ko' | relative_url }}">찾아보기</a></li>
-          {% endif %}
-        </ul>
-      </li>
     {% elsif auto_cat %}
       <li>
         <span class="nav__sub-title"><a href="{{ auto_home | relative_url }}" class="sidebar_title">{{ auto_label }}</a></span>
@@ -106,6 +95,14 @@
           {% endfor %}
         </ul>
       </li>
+    {% endif %}
+
+    {%- comment -%}
+      두 자동 사이드바가 공유하는 푸터 (예전엔 분기마다 한 벌씩 있었다).
+      cat_nav / auto_cat 은 navigation 블록이 없을 때만 세팅되므로 이 조건으로 충분하다.
+      (Liquid 는 조건을 오른쪽에서 왼쪽으로 평가하니 and/or 를 섞지 않는다.)
+    {%- endcomment -%}
+    {% if cat_nav or auto_cat %}
       <li>
         <span class="nav__sub-title"></span>
         <ul>
