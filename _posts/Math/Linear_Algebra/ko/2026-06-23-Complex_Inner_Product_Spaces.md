@@ -1,6 +1,6 @@
 ---
 title: "복소내적공간"
-description: "복소벡터공간 위에 conjugate-symmetric한 Hermitian 내적을 정의하고, 코시-슈바르츠 부등식과 Gram-Schmidt 과정이 그대로 성립함을 본다. 나아가 켤레전치로 주어지는 adjoint와 내적을 보존하는 unitary matrix를 다룬다."
+description: "복소벡터공간 위에 conjugate-symmetric한 Hermitian 내적을 정의하고, 코시-슈바르츠 부등식과 Gram-Schmidt 과정이 그대로 성립함을 본다. 나아가 켤레전치로 주어지는 adjoint와 내적을 보존하는 unitary matrix를 다루고, 이들을 결합해 가역행렬의 QR 분해를 증명한다."
 excerpt: "복소수 위에서 정의된 Hermitian 내적"
 
 categories: [Math / Linear Algebra]
@@ -40,7 +40,7 @@ $$\langle \alpha v,w\rangle=\overline{\langle w,\alpha v\rangle}=\overline{\alph
 
 $$\langle v,w\rangle=\sum_{i=1}^n\bar v_iw_i=\bar v^tw$$
 
-이다. 여기서 conjugate-symmetry는 $$\overline{\bar v^tw}=v^t\bar w=\overline{w}^{\,t}v$$로부터, 둘째 변수의 linearity는 행렬곱의 성질로부터 곧바로 따라오며, $$\langle v,v\rangle=\sum_i\lvert v_i\rvert^2$$이 $$v\neq 0$$일 때 양수이므로 positive-definite이다.
+이다. 여기서 conjugate-symmetry는 $$\overline{\bar v^tw}=v^t\bar w=\overline{w}^tv$$로부터, 둘째 변수의 linearity는 행렬곱의 성질로부터 곧바로 따라오며, $$\langle v,v\rangle=\sum_i\lvert v_i\rvert^2$$이 $$v\neq 0$$일 때 양수이므로 positive-definite이다.
 
 한편, 셋째 조건에 의해 $$\langle v,v\rangle$$이 음이 아닌 실수이므로, 실수의 경우와 똑같이 벡터의 크기를 정의할 수 있다.
 
@@ -156,6 +156,39 @@ $$U^\ast U=UU^\ast=I$$
 $$\langle Lv,Lw\rangle=\langle v,L^\ast Lw\rangle=\langle v,w\rangle$$
 
 이 되어 내적을 보존한다. 두 orthonormal basis 사이의 기저변환행렬이 항상 unitary matrix가 된다는 것도 실수의 경우와 똑같은 계산으로 확인되며, 다만 conjugate-symmetry 때문에 한쪽 기저변환행렬이 다른 쪽의 켤레전치가 된다. 이 unitary matrix와 켤레전치 adjoint가 self-adjoint operator를 일반화한 normal operator의 스펙트럼 정리를 전개하는 토대가 된다.
+
+## QR 분해
+
+Gram-Schmidt 과정과 unitary matrix를 결합하면 가역행렬의 표준적인 분해 하나가 따라나온다. 가역행렬 $$A\in\Mat_n(\mathbb{C})$$의 열 $$a_1,\ldots,a_n$$은 $$\mathbb{C}^n$$의 basis를 이루므로 여기에 Gram-Schmidt 과정을 적용할 수 있는데, 이 과정에서 $$k$$번째 벡터는 처음 $$k$$개의 열만을 사용해 만들어진다. 따라서 직교화의 결과를 원래의 열들과 비교하는 행렬은 upper triangular일 수밖에 없으며, 이를 정리하면 다음을 얻는다.
+
+::: 명제 7 (QR 분해)
+임의의 가역행렬 $$A\in\Mat_n(\mathbb{C})$$는 unitary matrix $$Q$$와, 대각성분이 모두 양의 실수인 upper triangular matrix $$R$$의 곱
+
+$$A=QR$$
+
+로 유일하게 분해된다.
+:::
+::: 증명
+$$A$$가 가역이므로 그 열 $$a_1,\ldots,a_n$$은 $$\mathbb{C}^n$$의 basis이다. 여기에 standard Hermitian inner product에 대한 Gram-Schmidt 과정을 적용하여 orthogonal basis $$\hat a_1,\ldots,\hat a_n$$을 얻고, $$q_k=\hat a_k/\lVert\hat a_k\rVert$$로 정규화하자. Gram-Schmidt의 식을 $$a_k$$에 대해 풀어 적으면
+
+$$a_k=\hat a_k+\sum_{i=1}^{k-1}\frac{\langle\hat a_i,a_k\rangle}{\langle\hat a_i,\hat a_i\rangle}\hat a_i=\lVert\hat a_k\rVert q_k+\sum_{i=1}^{k-1}\langle q_i,a_k\rangle q_i$$
+
+이다. 그러므로 $$q_1,\ldots,q_n$$을 열로 갖는 행렬을 $$Q$$라 하고, 행렬 $$R$$을
+
+$$R_{kk}=\lVert\hat a_k\rVert,\qquad R_{ik}=\langle q_i,a_k\rangle\quad(i<k),\qquad R_{ik}=0\quad(i>k)$$
+
+로 정의하면 위 식은 정확히 $$A=QR$$이 된다. $$Q$$의 열들이 orthonormal basis를 이루므로 $$(Q^\ast Q)_{ij}=\langle q_i,q_j\rangle$$은 $$i=j$$일 때 $$1$$, 그 외에는 $$0$$이 되어 $$Q^\ast Q=I$$, 곧 $$Q$$는 unitary matrix이고, $$R$$은 대각성분이 $$\lVert\hat a_k\rVert>0$$인 upper triangular matrix이다.
+
+유일성을 보이기 위해 $$A=Q_1R_1=Q_2R_2$$가 조건을 만족하는 두 분해라 하고 $$T=Q_2^\ast Q_1=R_2R_1^{-1}$$로 두자. 우선 upper triangular 가역행렬은 정확히 각 $$k=1,\ldots,n$$마다 부분공간 $$\span(e_1,\ldots,e_k)$$을 자기 자신 위로 보내는 가역행렬이므로, 이러한 행렬들의 역행렬과 곱은 다시 upper triangular이다. 또 두 triangular matrix의 곱의 대각성분은 대각성분끼리의 곱이므로, $$R_1^{-1}$$의 대각성분은 $$(R_1)_{kk}^{-1}$$이고 $$T=R_2R_1^{-1}$$의 대각성분은 $$(R_2)_{kk}/(R_1)_{kk}$$, 곧 모두 양의 실수이다. 한편 $$T=Q_2^\ast Q_1$$은 unitary matrix들의 곱이므로 unitary이고, 따라서 $$T^{-1}=T^\ast$$인데, 좌변은 upper triangular matrix의 역행렬이라 upper triangular이고 우변은 upper triangular matrix의 켤레전치라 lower triangular이다. 그러므로 $$T^{-1}$$, 따라서 $$T$$는 diagonal matrix이다. Unitary diagonal matrix의 대각성분은 크기가 $$1$$이어야 하는데 $$T$$의 대각성분은 양의 실수이므로 모두 $$1$$이고, 곧 $$T=I$$이다. 이는 $$Q_1=Q_2$$, $$R_1=R_2$$를 뜻한다.
+:::
+
+이 분해를 *QR 분해<sub>QR decomposition</sub>*라 부르며, 증명이 보여주듯 이는 Gram-Schmidt 과정을 행렬의 언어로 옮겨 적은 것이다. $$Q$$의 열에는 직교화의 결과가, $$R$$에는 그 과정에 사용된 계수들이 기록된다. 특히 $$A$$의 열들이 이미 orthonormal이라면, 즉 $$A$$가 이미 unitary matrix라면 분해는 $$Q=A$$, $$R=I$$로 퇴화한다. 같은 증명이 실수의 경우에도 그대로 작동하여, 임의의 가역행렬 $$A\in\Mat_n(\mathbb{R})$$는 orthogonal matrix ([§내적공간, §§직교행렬](/ko/math/linear_algebra/inner_product_spaces#직교행렬))와 대각성분이 모두 양의 실수인 upper triangular matrix의 곱으로 유일하게 분해되며, 위 증명의 모든 단계가 $$A$$의 성분들에 대한 사칙연산과 내적, 노름만으로 이루어져 있으므로 두 인자 $$Q,R$$은 $$A$$에 연속적으로 의존한다.
+
+한편 Gram-Schmidt 과정 대신 반사를 사용해 같은 분해에 도달할 수도 있다. 벡터 $$0\neq v\in\mathbb{C}^n$$에 대하여 *Householder reflection<sub>Householder 반사</sub>*
+
+$$H_v=I-2\frac{vv^\ast}{v^\ast v}$$
+
+는 $$H_v^\ast=H_v$$와 $$H_v^2=I$$를 만족하므로 unitary matrix이며, $$v^\perp$$의 벡터를 고정하고 $$v$$를 $$-v$$로 보내는, 곧 초평면 $$v^\perp$$에 대한 반사이다. 크기가 같고 $$\langle y,x\rangle$$이 실수인 두 벡터 $$x\neq y$$에 대하여 $$v=x-y$$로 두면 $$H_vx=y$$가 되는 것을 직접 계산으로 확인할 수 있으므로, 가역행렬 $$A$$의 첫 열 $$a_1$$에 대해 $$\lvert\alpha\rvert=\lVert a_1\rVert$$이고 $$\langle\alpha e_1,a_1\rangle$$이 실수가 되도록 $$\alpha$$를 잡으면 $$a_1$$을 $$\alpha e_1$$로 보내는 Householder reflection $$H_1$$을 얻는다. 그럼 $$H_1A$$의 첫 열이 $$e_1$$ 방향으로 정렬되고, 남은 오른쪽 아래 블록에 같은 과정을 반복하면 (아래 블록의 반사는 앞쪽 좌표를 고정하는 $$\mathbb{C}^n$$의 반사로 확장된다) $$H_{n-1}\cdots H_1A$$가 upper triangular matrix가 된다. 즉 $$Q=H_1\cdots H_{n-1}$$로 두면 $$A=QR$$인데, 이렇게 얻은 $$R$$의 대각성분은 크기 $$1$$인 복소수 배만큼 양의 실수에서 어긋날 수 있으므로, diagonal unitary matrix로 보정하면 [명제 7](#prop7)의 꼴을 회수한다. 이 구성은 부동소수점 연산에서 Gram-Schmidt 과정보다 수치적으로 안정적이므로, 수치적인 계산에서 $$QR$$ 분해를 구하는 표준적인 방법으로 쓰인다.
 
 ---
 
