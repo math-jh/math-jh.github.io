@@ -49,6 +49,7 @@
 "Math / Toric Geometry":         { hue: 36, sat: "28%", l: 52 }
 "Math / Mirror Symmetry":        { hue: 40, sat: "28%", l: 46 }
 "Math / Symplectic Geometry":    { hue: 44, sat: "28%", l: 50 }
+"Math / Gromov-Witten Theory":   { hue: 48, sat: "28%", l: 44 }   # 밴드를 8–48 로 한 칸 넓힘
 
 # --- Misc — achromatic grey ---
 "Misc / Blog Development":       { hue: 0, sat: "0%", l: 44 }

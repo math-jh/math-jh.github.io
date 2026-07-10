@@ -22,7 +22,7 @@ $$E(\gamma_n^k)\rightarrow \Gr(k, \mathbb{C}^\infty)$$
 
 한편, vector bundle을 살펴보는 또 다른 관점은 이를 transition function들의 모임으로 생각하는 것이었다. 가령 임의의 vector bundle은 두 개의 trivializing open cover가 겹치는 곳에서
 
-$$g_{ij}: U_i\cap U_j\rightarrow \GL(k;;\mathbb{R})$$
+$$g_{ij}: U_i\cap U_j\rightarrow \GL(k;\mathbb{R})$$
 
 를 명시해주면 되었으며, 이 관점은 예를 들어, $$\GL(k;;\mathbb{R})$$을 $$\GL^+(k;\mathbb{R})$$로 바꿔주면 *oriented* vector bundle 또한 설명할 수 있다는 점에서 강력했다. 
 
@@ -220,28 +220,30 @@ $$BS^1=(\mathbb{C}^\infty\setminus\{0\})/S^1=\CP^\infty$$
 
 이 된다.
 
-더 일반적으로 $$n$$차원 torus $$T=(S^1)^n$$을 보자. 분류공간 구성은 곱을 보존하여 $$B(G_1\times G_2)\cong BG_1\times BG_2$$를 만족하는데, 이는 $$E(G_1\times G_2)=EG_1\times EG_2$$가 역시 contractible이고 그 위의 $$G_1\times G_2$$-action이 자유롭기 때문이다. 따라서
+::: 예시 11 (선형군의 분류공간)
+본문에서 얻은 $$BS^1=\CP^\infty$$를 출발점으로 주요 선형군들의 분류공간을 계산해 보자. 먼저 분류공간 구성이 곱을 보존한다는 점에서, $$E(G_1\times G_2)=EG_1\times EG_2$$가 역시 contractible이고 그 위의 $$G_1\times G_2$$-작용이 자유롭기 때문에 $$B(G_1\times G_2)\cong BG_1\times BG_2$$이며, 이로부터 torus $$T=(S^1)^n$$의 분류공간이
 
-$$BT=B(S^1)^n\cong(BS^1)^n=(\CP^\infty)^n$$
+$$BT=(BS^1)^n=(\CP^\infty)^n$$
 
-이다. 임의의 $$n$$에 대하여 unitary group과 orthogonal group의 분류공간은 앞 글의 infinite Grassmannian으로 실현된다. 먼저 complex인 경우를 보자. Grassmannian $$\Gr(n,\mathbb{C}^\infty)$$ 위에는 각 점 $$n$$차원 부분공간 $$V$$에 fiber $$V$$ 자체를 대응시키는 tautological $$n$$-plane bundle $$\gamma^n$$이 올려져 있다. 이 bundle에 표준 Hermitian metric을 주어 orthonormal frame bundle을 취하면, 그 total space의 한 점은 $$\mathbb{C}^\infty$$의 orthonormal $$n$$-frame $$(v_1,\ldots,v_n)$$이고 그것이 spanning하는 부분공간 $$\operatorname{span}(v_1,\ldots,v_n)$$이 곧 base의 점이 되므로, total space는 복소 Stiefel 공간
+임을 얻는다.
+
+다음으로 unitary group $$\Umat(n)$$을 보자. Grassmannian $$\Gr(n,\mathbb{C}^\infty)$$ 위의 tautological $$n$$-plane bundle $$\gamma^n$$에 표준 Hermitian metric을 주어 orthonormal frame bundle을 취하면, 그 total space의 한 점은 $$\mathbb{C}^\infty$$의 orthonormal $$n$$-frame $$(v_1,\ldots,v_n)$$이고 그것이 spanning하는 부분공간 $$\operatorname{span}(v_1,\ldots,v_n)$$이 곧 base의 점이 되므로 total space는 복소 Stiefel 공간
 
 $$V_n(\mathbb{C}^\infty)=\varinjlim_k V_n(\mathbb{C}^k)$$
 
-이다. $$\Umat(n)$$이 오른쪽에서 행렬곱으로 frame에 작용하여 base를 고정한 채 frame만 바꾸므로, 이는 principal $$\Umat(n)$$-bundle $$V_n(\mathbb{C}^\infty)\to\Gr(n,\mathbb{C}^\infty)$$이 된다. 유한 차원 Stiefel 공간과 달리 이 colimit에서는 $$k$$가 커질수록 frame을 밀어낼 여유 차원이 무한히 생겨, 앞서 $$S^\infty$$에서 본 것과 같은 논증으로 한 점으로 deformation retract되어 contractible이다. Total space가 contractible인 principal bundle은 분류공간의 정의에 의해 universal이므로 그 base가 곧 $$B\Umat(n)$$이다:
+이다. $$\Umat(n)$$이 오른쪽에서 행렬곱으로 frame에 작용하여 base를 고정한 채 frame만 바꾸므로 이는 principal $$\Umat(n)$$-bundle $$V_n(\mathbb{C}^\infty)\to\Gr(n,\mathbb{C}^\infty)$$이 된다. 유한 차원 Stiefel 공간과 달리 이 colimit에서는 $$k$$가 커질수록 frame을 밀어낼 여유 차원이 무한히 생겨, 앞서 $$S^\infty$$에서 본 것과 같은 논증으로 한 점으로 deformation retract되어 contractible이다. Total space가 contractible인 principal bundle은 분류공간의 정의에 의해 universal이므로
 
-$$B\Umat(n)=\Gr(n,\mathbb{C}^\infty).$$
+$$B\Umat(n)=\Gr(n,\mathbb{C}^\infty)$$
 
-$$n=1$$이면 $$V_1(\mathbb{C}^\infty)=S^\infty$$이고 $$\Gr(1,\mathbb{C}^\infty)=\CP^\infty$$이므로 $$\Umat(1)=S^1$$의 경우 앞서 얻은 $$BS^1=\CP^\infty$$를 회수한다. Real Grassmannian $$\Gr(n,\mathbb{R}^\infty)$$에 대해서도 tautological bundle의 orthonormal frame bundle이 real Stiefel 공간 $$V_n(\mathbb{R}^\infty)\to\Gr(n,\mathbb{R}^\infty)$$을 주고 동일한 논증이 구조군 $$\Omat(n)$$에 적용되어 $$B\Omat(n)=\Gr(n,\mathbb{R}^\infty)$$를 준다.
+이다. $$n=1$$이면 $$V_1(\mathbb{C}^\infty)=S^\infty$$이고 $$\Gr(1,\mathbb{C}^\infty)=\CP^\infty$$이므로 $$\Umat(1)=S^1$$의 경우 본문의 결과 $$BS^1=\CP^\infty$$를 회수한다. Real Grassmannian $$\Gr(n,\mathbb{R}^\infty)$$에 대해서도 동일한 논증이 구조군 $$\Omat(n)$$에 적용되어 $$B\Omat(n)=\Gr(n,\mathbb{R}^\infty)$$를 준다.
 
-마지막으로 일반선형군과 그 maximal compact subgroup의 분류공간이 같은 homotopy type을 갖는다는 사실은 분류 이론에서 자주 쓰인다.
+마지막으로 일반선형군은 Gram–Schmidt 직교화로 다룬다. $$\GL(n;\mathbb{C})$$의 임의의 원소는 unitary 행렬과 양의 정부호 upper-triangular 행렬의 곱으로 유일하게 분해되고($$QR$$ 분해), upper-triangular 인자를 항등원 쪽으로 수축시키면 $$\GL(n;\mathbb{C})$$이 $$\Umat(n)$$ 위로 deformation retract된다. 즉 inclusion $$\Umat(n)\hookrightarrow\GL(n;\mathbb{C})$$은 homotopy equivalence이고, 분류공간의 functoriality [보조정리 9](#lem9)에 의하여
 
-::: 예시 11
-Inclusion $$\Umat(n)\hookrightarrow\GL(n;\mathbb{C})$$은 homotopy equivalence
+$$B\GL(n;\mathbb{C})\simeq B\Umat(n)=\Gr(n,\mathbb{C}^\infty)$$
 
-$$B\Umat(n)\xrightarrow{\ \simeq\ }B\GL(n;\mathbb{C})$$
+이며, 마찬가지로 $$B\GL(n;\mathbb{R})\simeq\Gr(n,\mathbb{R}^\infty)$$이다. 일반적으로 topological group과 그 deformation retract는 같은 분류공간을 갖는다.
 
-를 유도한다. 이는 Gram–Schmidt 직교화가 $$\GL(n;\mathbb{C})$$을 $$\Umat(n)$$ 위로 deformation retract시키는 데서 나온다. 구체적으로 $$\GL(n;\mathbb{C})$$의 임의의 행렬은 unitary 행렬과 양의 정부호 upper-triangular 행렬의 곱으로 유일하게 분해되고($$QR$$ 분해), upper-triangular 인자를 항등원 쪽으로 연속적으로 수축시키면 $$\GL(n;\mathbb{C})$$이 $$\Umat(n)$$으로 deformation retract됨을 얻는다. Group 수준의 이 homotopy equivalence가 $$B$$를 거쳐 분류공간 수준의 homotopy equivalence를 준다. 따라서 rank $$n$$ complex vector bundle은 그 구조군을 $$\GL(n;\mathbb{C})$$에서 $$\Umat(n)$$으로 줄여도 분류에 손실이 없으며, 이것이 모든 complex bundle에 Hermitian metric을 줄 수 있다는 사실의 분류공간 판본이다.
+이 등식은 이 글의 서론에서 제시한 두 관점을 하나로 잇는다. Rank $$n$$ complex vector bundle은 구조군 $$\GL(n;\mathbb{C})$$를 갖는 principal bundle로 그 분류가 $$[X,B\GL(n;\mathbb{C})]$$로 주어지는가 하면, infinite Grassmannian의 universal bundle의 pullback으로 그 분류가 $$[X,\Gr(n,\mathbb{C}^\infty)]$$로도 주어진다. $$B\GL(n;\mathbb{C})\simeq\Gr(n,\mathbb{C}^\infty)$$가 바로 이 두 분류가 일치함을, 나아가 모든 complex vector bundle에 Hermitian metric을 주어 구조군을 $$\Umat(n)$$으로 줄여도 분류에 손실이 없음을 말해준다. Real vector bundle과 $$\GL(n;\mathbb{R})$$, $$\Omat(n)$$의 경우도 마찬가지다.
 :::
 
 ## 분류공간의 코호몰로지

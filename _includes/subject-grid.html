@@ -6,7 +6,14 @@
   categories-en_order are hidden (their number is simply skipped).
 {%- endcomment -%}
 {%- if include.lang == 'en' -%}{%- assign order_list = site['categories-en_order'] -%}{%- else -%}{%- assign order_list = site['categories-ko_order'] -%}{%- endif -%}
+{%- assign lang_full = include.lang | prepend: '/' | append: '/' -%}
 {%- assign counter = 0 -%}
+
+{%- comment -%}
+  그 언어의 글이 하나도 없는 과목은 카드도 그리지 않는다. 과목홈 자체가
+  _plugins/hide_empty_subject_pages.rb 에 의해 빌드되지 않으므로, 안 그리면 죽은
+  링크가 된다. (site.categories[subj] 는 글이 없으면 nil 이라 먼저 걸러야 한다.)
+{%- endcomment -%}
 
 <div class="subj-grid">
 {%- for sec in site.data.home_sections -%}
@@ -15,6 +22,9 @@
   {%- for subj in sec.subjects -%}
     {%- assign vis = true -%}
     {%- if include.lang == 'en' and order_list -%}{%- unless order_list contains subj -%}{%- assign vis = false -%}{%- endunless -%}{%- endif -%}
+    {%- assign subj_posts = site.categories[subj] -%}
+    {%- if subj_posts -%}{%- assign subj_posts = subj_posts | where_exp: "p", "p.permalink contains lang_full" -%}{%- endif -%}
+    {%- unless subj_posts and subj_posts.size > 0 -%}{%- assign vis = false -%}{%- endunless -%}
     {%- if vis -%}{%- assign sec_count = sec_count | plus: 1 -%}{%- endif -%}
   {%- endfor -%}
 
@@ -29,6 +39,9 @@
       {%- assign counter = counter | plus: 1 -%}
       {%- assign vis = true -%}
       {%- if include.lang == 'en' and order_list -%}{%- unless order_list contains subj -%}{%- assign vis = false -%}{%- endunless -%}{%- endif -%}
+      {%- assign subj_posts = site.categories[subj] -%}
+      {%- if subj_posts -%}{%- assign subj_posts = subj_posts | where_exp: "p", "p.permalink contains lang_full" -%}{%- endif -%}
+      {%- unless subj_posts and subj_posts.size > 0 -%}{%- assign vis = false -%}{%- endunless -%}
       {%- if vis -%}
         {%- assign en = subj | split: ' / ' | last -%}
         {%- assign ko = site.data.category_labels[subj] | default: en -%}

@@ -173,9 +173,9 @@ $cat-color: hsl(var(--cat-hue, 220), var(--cat-sat, 26%), calc(var(--cat-l, 50) 
       &::before {
         content: "";
         display: inline-block;
-        width: 0.5em;
-        height: 0.5em;
-        margin-right: 0.62em;
+        width: 0.62em;
+        height: 0.62em;
+        margin-right: 0.6em;
         background: $cat-color;
         transform: rotate(45deg);
         vertical-align: middle;

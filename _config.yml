@@ -314,6 +314,7 @@ categories-ko_order:
   - Math / Toric Geometry
   - Math / Symplectic Geometry
   - Math / Mirror Symmetry
+  - Math / Gromov-Witten Theory
   - Misc / Blog Development
   - Misc / Peripherals
   - Misc / LLM Workshop
@@ -341,8 +342,10 @@ categories-en_order:
   - Math / Toric Geometry
   - Math / Symplectic Geometry
   - Math / Mirror Symmetry
-#  - Misc / Blog Development
-#  - Misc / Peripherals
+  - Math / Gromov-Witten Theory
+  - Misc / Blog Development
+  - Misc / Peripherals
+  - Misc / LLM Workshop
 
 github: [metadata]
 
