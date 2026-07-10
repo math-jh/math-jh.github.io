@@ -291,61 +291,10 @@ category_archive:
 #     category: /categories/:name/
 #     tag: /tags/:name/
 
-categories-ko_order:
-  - Math / Calculus
-  - Math / Linear Algebra
-  - Math / Set Theory
-  - Math / Category Theory
-  - Math / Algebraic Structures
-  - Math / Group Theory
-  - Math / Ring Theory
-  - Math / Multilinear Algebra
-  - Math / Field Theory
-  - Math / Homological Algebra
-  - Math / Commutative Algebra
-  - Math / Representation Theory
-  - Math / Topology
-  - Math / Algebraic Topology
-  - Math / Manifolds
-  - Math / Lie Theory
-  - Math / Riemannian Geometry
-  - Math / Algebraic Varieties
-  - Math / Scheme Theory
-  - Math / Toric Geometry
-  - Math / Symplectic Geometry
-  - Math / Mirror Symmetry
-  - Math / Gromov-Witten Theory
-  - Misc / Blog Development
-  - Misc / Peripherals
-  - Misc / LLM Workshop
-
-categories-en_order:
-  - Math / Calculus
-  - Math / Linear Algebra
-  - Math / Set Theory
-  - Math / Category Theory
-  - Math / Algebraic Structures
-  - Math / Group Theory
-  - Math / Ring Theory
-  - Math / Multilinear Algebra
-  - Math / Field Theory
-  - Math / Homological Algebra
-  - Math / Commutative Algebra
-  - Math / Representation Theory
-  - Math / Topology
-  - Math / Algebraic Topology
-  - Math / Manifolds
-  - Math / Lie Theory
-  - Math / Riemannian Geometry
-  - Math / Algebraic Varieties
-  - Math / Scheme Theory
-  - Math / Toric Geometry
-  - Math / Symplectic Geometry
-  - Math / Mirror Symmetry
-  - Math / Gromov-Witten Theory
-  - Misc / Blog Development
-  - Misc / Peripherals
-  - Misc / LLM Workshop
+# 카테고리 목록·순서·표시명·색은 _data/categories.yml 한 곳에서 관리한다.
+# (예전엔 순서가 여기(categories-ko_order / categories-en_order), 표시명이
+#  _data/category_labels.yml, 색이 _data/hues.yml 로 흩어져 있었다. 셋 다 합쳤다.
+#  두 순서 목록이 같아졌고, 빈 카테고리는 이제 자동으로 숨는다.)
 
 github: [metadata]
 
@@ -375,7 +324,7 @@ defaults:
       # NOTE: posts no longer force the generative gradient hero band. The title
       # now renders inline at the top of the content column (see single.html's
       # .page__header--lead) with a category eyebrow + hue dot. The category
-      # hue/sat is still computed on <body> (--hero-hue) from _data/hues.yml,
+      # hue/sat is still computed on <body> (--hero-hue) from _data/categories.yml,
       # so the colour cue stays — just as an accent, not a full banner.
       # (Subject-home / category pages set their own overlay in frontmatter and
       # keep their hero.)

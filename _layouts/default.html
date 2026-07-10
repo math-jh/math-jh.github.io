@@ -47,19 +47,19 @@
   </head>
 
   {%- comment -%}
-    Generative gradient hero colour (no image files), SINGLE SOURCE = _data/hues.yml.
-      • posts          → look up page.categories[0] in hues.yml (+ per-post lightness)
-      • subject homes  → match the page permalink to a hues.yml key (slug = the
+    Generative gradient hero colour (no image files), SINGLE SOURCE = _data/categories.yml.
+      • posts          → look up page.categories[0] there (+ per-post lightness)
+      • subject homes  → match the page permalink to a categories.yml key (slug = the
                          EN subject name), so the subject home, its post cards,
                          the /categories anchors+headers and the home thumbnails
                          all share ONE hue per subject. No per-page hue needed.
-      • page.hero_hue  → manual fallback only for pages absent from hues.yml.
+      • page.hero_hue  → manual fallback only for pages absent from categories.yml.
     lightness (--hero-l) is the per-post 2nd axis (position in the weight-sorted
     category); subject homes use a single tone.
   {%- endcomment -%}
   {%- if page.categories and page.categories.size > 0 -%}
     {%- assign post_category = page.categories[0] -%}
-    {%- assign hue_data = site.data.hues[post_category] -%}
+    {%- assign hue_data = site.data.categories.subjects[post_category] -%}
     {%- if hue_data -%}
       {%- assign hero_hue = hue_data.hue -%}
       {%- assign hero_sat = hue_data.sat | default: '24%' -%}
@@ -80,18 +80,19 @@
       {%- endif -%}
     {%- endif -%}
   {%- else -%}
-    {%- comment -%} subject home: find the hues.yml key whose slug is this permalink {%- endcomment -%}
-    {%- for pair in site.data.hues -%}
-      {%- assign _slug = pair[0] | split: ' / ' | last | downcase | replace: ' ', '_' -%}
-      {%- capture _seg -%}/{{ _slug }}/{%- endcapture -%}
-      {%- if page.url contains _seg -%}
-        {%- assign hero_hue = pair[1].hue -%}
-        {%- assign hero_sat = pair[1].sat | default: '24%' -%}
-        {%- break -%}
-      {%- endif -%}
-    {%- endfor -%}
+    {%- comment -%}
+      subject home: page.category 는 _plugins/hide_empty_subject_pages.rb 가 permalink
+      슬러그에서 풀어 심어 준다. 예전엔 여기서 "/{slug}/" 를 page.url 에 대고 찾았는데,
+      끝 슬래시 없는 permalink(/ko/peripherals)는 걸리지 않아 그 페이지만 frontmatter
+      hero_hue 에 몰래 의존하고 있었다.
+    {%- endcomment -%}
+    {%- assign hue_data = site.data.categories.subjects[page.category] -%}
+    {%- if hue_data -%}
+      {%- assign hero_hue = hue_data.hue -%}
+      {%- assign hero_sat = hue_data.sat | default: '24%' -%}
+    {%- endif -%}
   {%- endif -%}
-  {%- comment -%} manual fallback for pages not covered by hues.yml {%- endcomment -%}
+  {%- comment -%} manual fallback for pages not covered by categories.yml {%- endcomment -%}
   {%- unless hero_hue -%}
     {%- if page.hero_hue -%}
       {%- assign hero_hue = page.hero_hue -%}

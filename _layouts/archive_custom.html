@@ -23,5 +23,29 @@ classes: wide
       <div><h1 id="page-title" class="page__title">{{ page.title }}<span style="float: right"><a class="material-icons" href="javascript:history.back()">close</a></span></h1></div>
     {% endunless %}
     {{ content }}
+
+    {%- comment -%}
+      과목홈(subject home)이면 그 카테고리의 글을 weight 순으로 카드로 깐다.
+      page.category 는 _plugins/hide_empty_subject_pages.rb 가 permalink 슬러그에서
+      풀어 심어 준다. 예전에는 이 열 줄이 과목홈 47개에 그대로 복사돼 있었다.
+
+      허브 페이지(/ko/misc/ 등)는 page.category 가 없어 여기를 타지 않고 위의
+      {{ content }} 만 렌더된다.
+
+      frontmatter 노브:
+        cards: false        → 카드를 손수 그리는 페이지 (예: 주변기기는 두 벌을 깐다)
+        cards_minimal: true → 번호·발췌 없이 (Misc)
+        cards_splitweight: N → weight >= N 인 첫 글 앞에 행 구분
+    {%- endcomment -%}
+    {%- if page.category and page.cards != false -%}
+      {%- assign lang_full = page.url | truncate: 3, "" | append: "/" -%}
+      {%- assign cat_posts = site.categories[page.category] -%}
+      {%- if cat_posts -%}
+        {%- assign posts = cat_posts | where_exp: "post", "post.permalink contains lang_full" | sort: 'weight' -%}
+      {%- else -%}
+        {%- assign posts = "" | split: "" -%}
+      {%- endif -%}
+      {% include subject-cards.html posts=posts minimal=page.cards_minimal splitweight=page.cards_splitweight %}
+    {%- endif -%}
   </div>
 </div>

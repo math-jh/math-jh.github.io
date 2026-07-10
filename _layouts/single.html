@@ -40,7 +40,7 @@ layout: default
         <header class="page__header--lead">
           {% assign hero_cat = page.categories[0] %}
           {% if hero_cat %}
-            <p class="page__eyebrow"><span class="hue-dot"></span>{{ site.data.category_labels[hero_cat] | default: hero_cat }}</p>
+            <p class="page__eyebrow"><span class="hue-dot"></span>{{ site.data.categories.subjects[hero_cat].ko | default: hero_cat }}</p>
           {% endif %}
           {% if page.title %}<h1 id="page-title" class="page__title p-name" itemprop="headline">
             <a href="{{ page.url | absolute_url }}" class="u-url" itemprop="url">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</a>
