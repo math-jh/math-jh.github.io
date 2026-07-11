@@ -13,6 +13,7 @@ date: 2026-06-23
 
 weight: 118
 
+drift_needed: true
 
 ---
 
@@ -112,7 +113,7 @@ $$v=\sum_{i=1}^n\langle x_i,v\rangle x_i$$
 
 $$V=U\oplus U^\perp,\qquad\dim U^\perp=\dim V-\dim U$$
 
-이 성립한다. 나아가 natural projection $$p:V\rightarrow V/U$$ ([§몫공간, ⁋정의 3](/ko/math/linear_algebra/quotient_space#def3))을 $$U^\perp$$로 제한한 $$p\vert_{U^\perp}:U^\perp\rightarrow V/U$$은 isomorphism이며, 따라서 $$U^\perp$$은 몫공간 $$V/U$$을 표준적으로 실현한다.
+이 성립한다. 나아가 natural projection $$p:V\rightarrow V/U$$을 ([§몫공간, ⁋정의 3](/ko/math/linear_algebra/quotient_space#def3)) $$U^\perp$$로 제한한 $$p\vert_{U^\perp}:U^\perp\rightarrow V/U$$은 isomorphism이며, 따라서 $$U^\perp$$은 몫공간 $$V/U$$을 표준적으로 실현한다.
 :::
 ::: 증명
 위에서 $$V$$의 orthonormal basis $$\{x_1,\ldots,x_n\}$$을 $$U$$의 것 $$\{x_1,\ldots,x_k\}$$로부터 확장했으므로, 나머지 $$\{x_{k+1},\ldots,x_n\}$$은 $$U$$와 직교하여 $$U^\perp$$을 span한다. 따라서 $$V=U\oplus U^\perp$$이고 $$\dim U^\perp=\dim V-\dim U$$이다. 그럼 $$\ker p=U$$이므로 $$p\vert_{U^\perp}$$의 kernel은 $$U^\perp\cap U=\{0\}$$이라 단사이고, $$V=U+U^\perp$$이라 전사이므로 isomorphism이다.
@@ -182,7 +183,7 @@ $$R_{kk}=\lVert\hat a_k\rVert,\qquad R_{ik}=\langle q_i,a_k\rangle\quad(i<k),\qq
 유일성을 보이기 위해 $$A=Q_1R_1=Q_2R_2$$가 조건을 만족하는 두 분해라 하고 $$T=Q_2^\ast Q_1=R_2R_1^{-1}$$로 두자. 우선 upper triangular 가역행렬은 정확히 각 $$k=1,\ldots,n$$마다 부분공간 $$\span(e_1,\ldots,e_k)$$을 자기 자신 위로 보내는 가역행렬이므로, 이러한 행렬들의 역행렬과 곱은 다시 upper triangular이다. 또 두 triangular matrix의 곱의 대각성분은 대각성분끼리의 곱이므로, $$R_1^{-1}$$의 대각성분은 $$(R_1)_{kk}^{-1}$$이고 $$T=R_2R_1^{-1}$$의 대각성분은 $$(R_2)_{kk}/(R_1)_{kk}$$, 곧 모두 양의 실수이다. 한편 $$T=Q_2^\ast Q_1$$은 unitary matrix들의 곱이므로 unitary이고, 따라서 $$T^{-1}=T^\ast$$인데, 좌변은 upper triangular matrix의 역행렬이라 upper triangular이고 우변은 upper triangular matrix의 켤레전치라 lower triangular이다. 그러므로 $$T^{-1}$$, 따라서 $$T$$는 diagonal matrix이다. Unitary diagonal matrix의 대각성분은 크기가 $$1$$이어야 하는데 $$T$$의 대각성분은 양의 실수이므로 모두 $$1$$이고, 곧 $$T=I$$이다. 이는 $$Q_1=Q_2$$, $$R_1=R_2$$를 뜻한다.
 :::
 
-이 분해를 *QR 분해<sub>QR decomposition</sub>*라 부르며, 증명이 보여주듯 이는 Gram-Schmidt 과정을 행렬의 언어로 옮겨 적은 것이다. $$Q$$의 열에는 직교화의 결과가, $$R$$에는 그 과정에 사용된 계수들이 기록된다. 특히 $$A$$의 열들이 이미 orthonormal이라면, 즉 $$A$$가 이미 unitary matrix라면 분해는 $$Q=A$$, $$R=I$$로 퇴화한다. 같은 증명이 실수의 경우에도 그대로 작동하여, 임의의 가역행렬 $$A\in\Mat_n(\mathbb{R})$$는 orthogonal matrix ([§내적공간, §§직교행렬](/ko/math/linear_algebra/inner_product_spaces#직교행렬))와 대각성분이 모두 양의 실수인 upper triangular matrix의 곱으로 유일하게 분해되며, 위 증명의 모든 단계가 $$A$$의 성분들에 대한 사칙연산과 내적, 노름만으로 이루어져 있으므로 두 인자 $$Q,R$$은 $$A$$에 연속적으로 의존한다.
+이 분해를 *QR 분해<sub>QR decomposition</sub>*라 부르며, 증명이 보여주듯 이는 Gram-Schmidt 과정을 행렬의 언어로 옮겨 적은 것이다. $$Q$$의 열에는 직교화의 결과가, $$R$$에는 그 과정에 사용된 계수들이 기록된다. 특히 $$A$$의 열들이 이미 orthonormal이라면, 즉 $$A$$가 이미 unitary matrix라면 분해는 $$Q=A$$, $$R=I$$로 퇴화한다. 같은 증명이 실수의 경우에도 그대로 작동하여, 임의의 가역행렬 $$A\in\Mat_n(\mathbb{R})$$는 orthogonal matrix와 ([§내적공간, §§직교행렬](/ko/math/linear_algebra/inner_product_spaces#직교행렬)) 대각성분이 모두 양의 실수인 upper triangular matrix의 곱으로 유일하게 분해되며, 위 증명의 모든 단계가 $$A$$의 성분들에 대한 사칙연산과 내적, 노름만으로 이루어져 있으므로 두 인자 $$Q,R$$은 $$A$$에 연속적으로 의존한다.
 
 한편 Gram-Schmidt 과정 대신 반사를 사용해 같은 분해에 도달할 수도 있다. 벡터 $$0\neq v\in\mathbb{C}^n$$에 대하여 *Householder reflection<sub>Householder 반사</sub>*
 

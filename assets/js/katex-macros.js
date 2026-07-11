@@ -70,6 +70,7 @@ window.KATEX_MACROS = {
     "\\Ass":"\\operatorname{Ass}",
     "\\Aut":"\\operatorname{Aut}",
     "\\AW":"\\operatorname{AW}",
+    "\\B":"\\mathopen{B}",
     "\\Balan":"\\operatorname{Balan}",
     "\\Bilin":"\\operatorname{Bilin}",
     "\\Bl":"\\operatorname{Bl}",
