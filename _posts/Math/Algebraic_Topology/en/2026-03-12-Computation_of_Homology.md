@@ -10,12 +10,11 @@ sidebar:
 
 date: 2025-08-05
 weight: 5
-
-drift_needed: true
-translated_at: 2026-07-10T20:00:01+00:00
+translated_at: 2026-07-11T05:00:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-11T05:00:02+00:00
 ---
-We now examine tools that allow us to compute homology in practice. Directly calculating the homology of an arbitrary space from the definition is almost impossible, so we need to develop machinery that breaks large spaces into smaller pieces and reconstructs the homology of the whole from those of the pieces. The most intuitive situation is that of [§Covering Spaces, ⁋Theorem 13](/en/math/algebraic_topology/covering_spaces#thm13), where we saw that the functor $$\pi_1:\Top \rightarrow \Grp$$ preserves colimits. Now the abelianization functor $$\ab:\Grp \rightarrow \Ab$$ is the left adjoint of the forgetful functor $$U:\Ab \rightarrow \Grp$$ ([\[Algebraic Structures\] §Abelian Groups, ⁋Proposition 7](/en/math/algebraic_structures/abelian_groups#prop7)), and left adjoints preserve colimits ([\[Category Theory\] §Adjoints, ⁋Theorem 9](/en/math/category_theory/adjoints#thm9)); the first homology functor $$H_1:\Top \rightarrow \Ab$$ is their composite. Indeed, the map $$\pi_1(X)\rightarrow H_1(X)$$ sending a loop $$\gamma$$ to a singular $$1$$-simplex is well-defined (loops in the same homotopy class give the same homology class, and a homotopy supplies the difference as a boundary of $$2$$-simplices), and its kernel is exactly the commutator subgroup $$[\pi_1(X),\pi_1(X)]$$, so we obtain $$H_1(X)\cong\pi_1(X)^\ab$$. Hence $$H_1$$ also preserves colimits. In particular, as in [§Covering Spaces, ⁋Corollary 14](/en/math/algebraic_topology/covering_spaces#cor14), suppose a topological space $$X$$ is the union of two connected open subsets $$U,V$$. Then in the category $$\Ab$$, the pushout of two abelian groups is given by the coequalizer of their direct sum, so the following isomorphism
+We now examine the tools that let us compute homology in practice. Directly calculating the homology of an arbitrary space from the definition is almost impossible, so we must develop machinery that breaks large spaces into smaller pieces and reconstructs the homology of the whole from those of the parts. The most intuitive situation is that of [§Covering Spaces, ⁋Theorem 13](/en/math/algebraic_topology/covering_spaces#thm13), where we saw that the functor $$\pi_1:\Top \rightarrow \Grp$$ preserves colimits. The abelianization functor $$\ab:\Grp \rightarrow \Ab$$ is the left adjoint of the forgetful functor $$U:\Ab \rightarrow \Grp$$ ([\[Algebraic Structures\] §Abelian Groups, ⁋Proposition 7](/en/math/algebraic_structures/abelian_groups#prop7)), and left adjoints preserve colimits ([\[Category Theory\] §Adjoints, ⁋Theorem 9](/en/math/category_theory/adjoints#thm9)); the first homology functor $$H_1:\Top \rightarrow \Ab$$ is their composite. Indeed, the map $$\pi_1(X)\rightarrow H_1(X)$$ sending a loop $$\gamma$$ to a singular $$1$$-simplex is well-defined (loops in the same homotopy class give the same homology class, and a homotopy supplies the difference as a boundary of $$2$$-simplices), and its kernel is exactly the commutator subgroup $$[\pi_1(X),\pi_1(X)]$$, so we obtain $$H_1(X)\cong\pi_1(X)^\ab$$. Hence $$H_1$$ also preserves colimits. In particular, as in [§Covering Spaces, ⁋Corollary 14](/en/math/algebraic_topology/covering_spaces#cor14), suppose a topological space $$X$$ is the union of two connected open subsets $$U,V$$. Then in the category $$\Ab$$, the pushout of two abelian groups is given by the coequalizer of their direct sum, so the following isomorphism
 
 $$H_1(X)=H_1(U\cup V)\cong \frac{H_1(U)\oplus H_1(V)}{\left\langle (f(x),-g(x))\mid x\in H_1(U\cap V)\right\rangle}\tag{1}$$
 
@@ -27,7 +26,7 @@ To do this we must first generalize homology. For a space $$X$$ and any subspace
 
 $$C_k(X,A):=C_k(X)/C_k(A).$$
 
-Then one easily sees that the boundary map $$\partial_k:C_k(X) \rightarrow C_{k-1}(X)$$ induces a map $$C_k(X,A) \rightarrow C_{k-1}(X,A)$$ between the quotient groups. From this we obtain the chain complex
+One easily sees that the boundary map $$\partial_k:C_k(X) \rightarrow C_{k-1}(X)$$ induces a map $$C_k(X,A) \rightarrow C_{k-1}(X,A)$$ between the quotient groups. From this we obtain the chain complex
 
 $$\cdots \longrightarrow C_k(X,A)\overset{\partial}{\longrightarrow} C_{k-1}(X,A)\longrightarrow\cdots$$
 
@@ -68,7 +67,7 @@ However, despite the theorem being intuitively obvious, its proof involves some 
 On the other hand, in geometric situations we already know a way to ignore the information contained in $$A$$ like this: namely, the quotient space $$X/A$$ obtained by collapsing $$A$$ to a point. Then it is a reasonable guess that there is a relationship between the homology $$H_k(X/A)$$ and the relative homology $$H_k(X,A)$$. Of course, as with the theorem above, this is only possible if $$A$$ is not too pathological a space.
 
 ::: Definition 3
-For a space $$X$$ and a subspace $$A$$, we say that $$(X,A)$$ is a *good pair* if $$A$$ is a closed set and there exists a suitable open set $$U$$ of $$X$$ such that $$A\subset U$$ and $$A$$ is a strong deformation retract of $$U$$.
+For a space $$X$$ and a subspace $$A$$, we say that $$(X,A)$$ is a *good pair* if $$A$$ is closed and there exists a suitable open set $$U$$ of $$X$$ such that $$A\subset U$$ and $$A$$ is a strong deformation retract of $$U$$.
 :::
 
 Suppose a good pair $$(X,A)$$ is given, and let $$U$$ be an open set satisfying the hypothesis of [Definition 3](#def3). Then in the following diagram
@@ -141,7 +140,7 @@ $$H_k(X,A)\cong \widetilde{H}_k(X/A)$$
 
 ## Simplicial Homology and Singular Homology
 
-Meanwhile, the relative homology was defined by taking the cokernel of the monomorphism $$C_\bullet(A)\rightarrow C_\bullet(X)$$ in $$\Ch_{\geq 0}(\Ab)$$, so the same process can be repeated for $$C^\Delta_\bullet(A) \rightarrow C^\Delta_\bullet(X)$$. Then as a result we obtain the simplicial homology version of relative homology $$H_n^\Delta(X,A)$$. Now since simplicial homology consists of "non-singular" chains, the canonical homomorphism
+Meanwhile, relative homology was defined by taking the cokernel of the monomorphism $$C_\bullet(A)\rightarrow C_\bullet(X)$$ in $$\Ch_{\geq 0}(\Ab)$$, so the same process can be repeated for $$C^\Delta_\bullet(A) \rightarrow C^\Delta_\bullet(X)$$. Then as a result we obtain the simplicial homology version of relative homology $$H_n^\Delta(X,A)$$. Now since simplicial homology consists of "non-singular" chains, the canonical homomorphism
 
 $$H_\bullet^\Delta(X)\rightarrow H_\bullet(X)\tag{3}$$
 
