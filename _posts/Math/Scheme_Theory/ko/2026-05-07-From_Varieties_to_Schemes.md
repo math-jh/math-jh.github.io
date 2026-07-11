@@ -11,9 +11,9 @@ weight: 1
 published: false
 ---
 
-우리는 지금까지 classical algebraic geometry의 기본적인 틀을 따라 왔다. Algebraically closed field $$k$$ 위에서 affine space $$\mathbb{A}_k^n$$의 부분집합으로 정의되는 affine variety, 그리고 이들을 적절히 paste하여 얻어지는 projective variety의 이론은 여러 방면에서 풍부한 결과를 낳았다. 특히 variety의 좌표환(coordinate ring)과 정의ideal 사이의 대응, Zariski topology 위에서의 regular function과 rational map 등은 기하와 대수의 깊은 연관성을 보여주는 대표적인 예이다.
+[대수다양체](/ko/algebraic_varieties/) 카테고리의 글에서는 classical algebraic geometry의 기본적인 틀을 따라 왔다. 즉, algebraically closed field $$\mathbb{k}$$ 위에서 affine space $$\mathbb{A}_k^n$$의 부분집합으로 정의되는 affine variety, 그리고 이들을 적절히 붙여 얻어지는 projective variety의 이론은 여러 방면에서 풍부한 결과를 낳았다. 특히 variety의 coordinate ring과 variety가 정의하는 ideal 사이의 대응 ([\[대수다양체\] §아핀다양체, ⁋명제 18](/ko/math/algebraic_varieties/affine_varieties#prop18)) 등은 기하와 대수의 깊은 연관성을 보여주는 대표적인 예이다.
 
-그러나 20세기 중반 이후 Grothendieck에 의해 체계화된 scheme theory는 이러한 classical framework를 크게 확장하였다. 본 글에서는 classical variety의 관점이 갖는 본질적인 한계를 구체적인 예와 함께 살펴 보고, 이를 scheme theory가 어떻게 극복하는지 직관적으로 설명한다. 우리의 목표는 scheme의 엄밀한 정의를 제시하는 것이 아니라, 다양체에서 스킴으로의 전환이 왜 자연스러운지, 그리고 어떤 새로운 기하학적 직관을 제공하는지를 밝히는 데 있다.
+Scheme은 이러한 다양체들이 놓치는 것들을 극복하기 위해 체계화된 공간이다. 이번 글은 scheme theory를 전개하기 전에, 이것이 어떤 차원에서 variety를 확장하고, 어떠한 새로운 기하학적 직관을 제공하는지를 살펴보아 큰 흐름을 미리 잡아두는 것에 있다. 
 
 ::: 정의 1
 Algebraically closed field $$k$$ 위의 <em-ko>affine variety</em-ko>는 $$\mathbb{A}_k^n$$의 어떤 algebraic subset $$V$$를, <em-ko>projective variety</em-ko>는 $$\mathbb{P}_k^n$$의 어떤 algebraic subset $$V$$를 의미한다. 이 때 $$V$$는 Zariski topology 위에서 irreducible인 closed subset으로, regular functions들의 sheaf $$\mathcal{O}_V$$를 갖는 locally ringed space $$(V,\mathcal{O}_V)$$로도 <em-ko>이해</em-ko>한다.
