@@ -12,9 +12,10 @@ sidebar:
 date: 2026-06-23
 
 weight: 118
-translated_at: 2026-07-10T17:00:03+00:00
+
+drift_needed: true
+translated_at: 2026-07-11T03:30:02+00:00
 translation_source: kimi-cli
-last_polished_at: 2026-07-10T17:00:03+00:00
 ---
 ## Complex Inner Product and Norm
 
@@ -30,19 +31,19 @@ A function $$\langle-,-\rangle:V\times V\rightarrow\mathbb{C}$$ on a $$\mathbb{C
 A $$V$$ equipped with such a $$\langle-,-\rangle$$ is called a *complex inner product space*.
 :::
 
-Setting $$v=w$$ in condition 1 gives $$\langle v,v\rangle=\overline{\langle v,v\rangle}$$, so $$\langle v,v\rangle$$ is always real, and thus the inequality in the third condition makes sense. As for the second condition, by definition this inner product is linear in the second variable but conjugate-linear in the first; indeed, combining conditions 1 and 2 yields
+If we set $$v=w$$ in condition 1, then $$\langle v,v\rangle=\overline{\langle v,v\rangle}$$, so $$\langle v,v\rangle$$ is always real, and hence the inequality in the third condition makes sense. As for the second condition, by definition this inner product is linear in the second variable but conjugate-linear in the first; indeed, combining conditions 1 and 2 yields
 
 $$\langle \alpha v,w\rangle=\overline{\langle w,\alpha v\rangle}=\overline{\alpha\langle w,v\rangle}=\bar\alpha\overline{\langle w,v\rangle}=\bar\alpha\langle v,w\rangle$$
 
-so the scalar emerges with its conjugate in the first variable. A form that is linear in one variable and conjugate-linear in the other is called a *sesquilinear form*. The choice of making the second variable linear is a matter of convention; in physics it is common to make the first variable linear.
+so the scalar comes out with its conjugate in the first variable. A form that is linear in one variable and conjugate-linear in the other is called a *sesquilinear form*. The choice of which variable is linear is a matter of convention; in physics it is common to take the first variable to be linear.
 
 The most basic example is the *standard Hermitian inner product* on $$\mathbb{C}^n$$,
 
 $$\langle v,w\rangle=\sum_{i=1}^n\bar v_iw_i=\bar v^tw.$$
 
-Here conjugate-symmetry follows from $$\overline{\bar v^tw}=v^t\bar w=\overline{w}^tv$$, linearity in the second variable follows immediately from the properties of matrix multiplication, and $$\langle v,v\rangle=\sum_i\lvert v_i\rvert^2$$ is positive when $$v\neq 0$$, so it is positive-definite.
+Here conjugate-symmetry follows from $$\overline{\bar v^tw}=v^t\bar w=\overline{w}^tv$$, linearity in the second variable follows immediately from the properties of matrix multiplication, and $$\langle v,v\rangle=\sum_i\lvert v_i\rvert^2$$ is positive whenever $$v\neq 0$$, so it is positive-definite.
 
-Meanwhile, since $$\langle v,v\rangle$$ is a non-negative real number by the third condition, we can define the length of a vector in exactly the same way as in the real case.
+Meanwhile, since $$\langle v,v\rangle$$ is a nonnegative real number by the third condition, we can define the length of a vector in exactly the same way as in the real case.
 
 ::: Definition 2
 On a complex inner product space $$V$$, the *norm* $$\lVert-\rVert:V\rightarrow\mathbb{R}$$ is defined by
@@ -110,21 +111,21 @@ For any subspace $$U\leq V$$ of a complex inner product space $$V$$,
 
 $$V=U\oplus U^\perp,\qquad\dim U^\perp=\dim V-\dim U$$
 
-holds. Moreover, the natural projection $$p:V\rightarrow V/U$$ ([§Quotient Spaces, ⁋Definition 3](/en/math/linear_algebra/quotient_space#def3)), restricted to $$U^\perp$$, gives $$p\vert_{U^\perp}:U^\perp\rightarrow V/U$$ an isomorphism; thus $$U^\perp$$ realizes the quotient space $$V/U$$ canonically.
+hold. Furthermore, the natural projection $$p:V\rightarrow V/U$$ (from [§Quotient Spaces, ⁋Definition 3](/en/math/linear_algebra/quotient_space#def3)) restricted to $$U^\perp$$ gives $$p\vert_{U^\perp}:U^\perp\rightarrow V/U$$, which is an isomorphism; thus $$U^\perp$$ realizes the quotient space $$V/U$$ canonically.
 :::
 ::: Proof
-Since we extended an orthonormal basis $$\{x_1,\ldots,x_k\}$$ of $$U$$ to one $$\{x_1,\ldots,x_n\}$$ of $$V$$, the remaining vectors $$\{x_{k+1},\ldots,x_n\}$$ are orthogonal to $$U$$ and span $$U^\perp$$. Hence $$V=U\oplus U^\perp$$ and $$\dim U^\perp=\dim V-\dim U$$. Since $$\ker p=U$$, the kernel of $$p\vert_{U^\perp}$$ is $$U^\perp\cap U=\{0\}$$, so it is injective; and since $$V=U+U^\perp$$, it is surjective, hence an isomorphism.
+Above, we extended an orthonormal basis $$\{x_1,\ldots,x_n\}$$ of $$V$$ from one $$\{x_1,\ldots,x_k\}$$ of $$U$$, so the remaining vectors $$\{x_{k+1},\ldots,x_n\}$$ are orthogonal to $$U$$ and span $$U^\perp$$. Hence $$V=U\oplus U^\perp$$ and $$\dim U^\perp=\dim V-\dim U$$. Now $$\ker p=U$$, so the kernel of $$p\vert_{U^\perp}$$ is $$U^\perp\cap U=\{0\}$$, making it injective; and since $$V=U+U^\perp$$, it is surjective, hence an isomorphism.
 :::
 
-Here positive-definiteness is decisive. If the inner product is positive-definite, any element $$u$$ of $$U\cap U^\perp$$ satisfies $$\langle u,u\rangle=0$$, so $$u=0$$; thus every subspace $$U$$ automatically satisfies $$U\cap U^\perp=\{0\}$$. For a general symmetric bilinear form, this orthogonal decomposition and canonical isomorphism require non-degeneracy of the subspace ([§Bilinear Forms, ⁋Proposition 9](/en/math/linear_algebra/bilinear_form#prop9)), but for positive-definite cases including the Hermitian inner product, it holds without any additional condition.
+Here positive-definiteness is decisive. If the inner product is positive-definite, then any element $$u$$ of $$U\cap U^\perp$$ satisfies $$\langle u,u\rangle=0$$, so $$u=0$$; thus every subspace $$U$$ automatically satisfies $$U\cap U^\perp=\{0\}$$. For a general symmetric bilinear form this orthogonal decomposition and canonical isomorphism require non-degeneracy of the subspace ([§Bilinear Forms, ⁋Proposition 9](/en/math/linear_algebra/bilinear_form#prop9)), but for positive-definite cases, including Hermitian inner products, it holds without any condition.
 
-## Adjoint operator and unitary matrix
+## Adjoint Operators and Unitary Matrices
 
-For a linear operator $$L:V\rightarrow V$$ on a complex inner product space $$V$$, we define its *adjoint* $$L^\ast$$, just as in the real case, as the unique operator satisfying
+For a linear operator $$L:V\rightarrow V$$ on a complex inner product space $$V$$, we define its *adjoint* $$L^\ast$$ as the unique operator satisfying
 
-$$\langle Lv,w\rangle=\langle v,L^\ast w\rangle\qquad\text{for all }v,w\in V.$$
+$$\langle Lv,w\rangle=\langle v,L^\ast w\rangle\qquad\text{for all }v,w\in V$$
 
-We can identify $$L^\ast$$ concretely through its matrix representation with respect to an orthonormal basis.
+just as in the real case. The nature of $$L^\ast$$ can be understood through its matrix representation with respect to an orthonormal basis.
 
 ::: Proposition 5
 Let $$\mathcal{B}=\{e_1,\ldots,e_n\}$$ be an orthonormal basis of a complex inner product space $$V$$ and let $$A=[L]_\mathcal{B}^\mathcal{B}$$. Then the matrix representation of $$L^\ast$$ is the *conjugate transpose* $$A^\ast=\bar A^t$$ of $$A$$.
@@ -149,15 +150,15 @@ $$U^\ast U=UU^\ast=I$$
 holds. An operator $$L$$ on a complex inner product space is called a *unitary operator* if it satisfies $$L^\ast L=I$$.
 :::
 
-From [§Isomorphisms, ⁋Theorem 7](/en/math/linear_algebra/isomorphic_vector_spaces#thm7), we know that if $$U^\ast U=I$$ then automatically $$UU^\ast=I$$ as well, so one condition suffices. A unitary operator is precisely an operator that preserves the inner product. Indeed, if $$L$$ preserves the inner product, then for any $$v,w$$ we have $$\langle v,w\rangle=\langle Lv,Lw\rangle=\langle v,L^\ast Lw\rangle$$, which holds for all $$v$$, so $$L^\ast L=I$$; conversely, if $$L^\ast L=I$$ then
+From [§Isomorphisms, ⁋Theorem 7](/en/math/linear_algebra/isomorphic_vector_spaces#thm7), we know that if $$U^\ast U=I$$ then automatically $$UU^\ast=I$$ as well, so one condition is sufficient. A unitary operator is precisely an operator that preserves the inner product. Indeed, if $$L$$ preserves the inner product, then for any $$v,w$$ we have $$\langle v,w\rangle=\langle Lv,Lw\rangle=\langle v,L^\ast Lw\rangle$$ for all $$v$$, so $$L^\ast L=I$$; conversely, if $$L^\ast L=I$$ then
 
 $$\langle Lv,Lw\rangle=\langle v,L^\ast Lw\rangle=\langle v,w\rangle$$
 
-and the inner product is preserved. The fact that the change-of-basis matrix between two orthonormal bases is always a unitary matrix can be verified by the same computation as in the real case, except that due to conjugate-symmetry, one change-of-basis matrix becomes the conjugate transpose of the other. This unitary matrix and its conjugate transpose adjoint form the foundation for developing the spectral theorem of normal operators, which generalizes self-adjoint operators.
+so it preserves the inner product. The fact that the change-of-basis matrix between two orthonormal bases is always unitary can also be verified by the same computation as in the real case, except that due to conjugate-symmetry, one change-of-basis matrix becomes the conjugate transpose of the other. This unitary matrix and the conjugate transpose adjoint form the foundation for developing the spectral theorem of normal operators, which generalizes self-adjoint operators.
 
 ## QR Decomposition
 
-Combining the Gram–Schmidt process with unitary matrices yields a standard decomposition of invertible matrices. Since the columns $$a_1,\ldots,a_n$$ of an invertible matrix $$A\in\Mat_n(\mathbb{C})$$ form a basis of $$\mathbb{C}^n$$, we can apply the Gram–Schmidt process to them; in this process, the $$k$$th vector is constructed using only the first $$k$$ columns. Therefore, the matrix comparing the orthogonalization results with the original columns must be upper triangular, and organizing this observation gives the following.
+Combining the Gram-Schmidt process with unitary matrices yields a standard decomposition of invertible matrices. The columns $$a_1,\ldots,a_n$$ of an invertible matrix $$A\in\Mat_n(\mathbb{C})$$ form a basis of $$\mathbb{C}^n$$, so we can apply the Gram-Schmidt process to them; in this process, the $$k$$th vector is constructed using only the first $$k$$ columns. Therefore, the matrix comparing the orthogonalization result to the original columns must be upper triangular, and organizing this observation gives the following.
 
 ::: Proposition 7 (QR decomposition)
 Any invertible matrix $$A\in\Mat_n(\mathbb{C})$$ is uniquely decomposed as a product of a unitary matrix $$Q$$ and an upper triangular matrix $$R$$ whose diagonal entries are all positive real numbers:
@@ -165,26 +166,26 @@ Any invertible matrix $$A\in\Mat_n(\mathbb{C})$$ is uniquely decomposed as a pro
 $$A=QR$$
 :::
 ::: Proof
-Since $$A$$ is invertible, its columns $$a_1,\ldots,a_n$$ form a basis of $$\mathbb{C}^n$$. Applying the Gram–Schmidt process to this basis with respect to the standard Hermitian inner product, we obtain an orthogonal basis $$\hat a_1,\ldots,\hat a_n$$, and normalize by setting $$q_k=\hat a_k/\lVert\hat a_k\rVert$$. Solving the Gram–Schmidt formula for $$a_k$$, we get
+Since $$A$$ is invertible, its columns $$a_1,\ldots,a_n$$ form a basis of $$\mathbb{C}^n$$. Applying the Gram–Schmidt process for the standard Hermitian inner product, we obtain an orthogonal basis $$\hat a_1,\ldots,\hat a_n$$, and normalize by setting $$q_k=\hat a_k/\lVert\hat a_k\rVert$$. Solving the Gram–Schmidt formula for $$a_k$$ gives
 
 $$a_k=\hat a_k+\sum_{i=1}^{k-1}\frac{\langle\hat a_i,a_k\rangle}{\langle\hat a_i,\hat a_i\rangle}\hat a_i=\lVert\hat a_k\rVert q_k+\sum_{i=1}^{k-1}\langle q_i,a_k\rangle q_i$$
 
-Let $$Q$$ be the matrix whose columns are $$q_1,\ldots,q_n$$, and define the matrix $$R$$ by
+Let $$Q$$ be the matrix with columns $$q_1,\ldots,q_n$$, and define the matrix $$R$$ by
 
 $$R_{kk}=\lVert\hat a_k\rVert,\qquad R_{ik}=\langle q_i,a_k\rangle\quad(i<k),\qquad R_{ik}=0\quad(i>k)$$
 
-Then the above equation becomes exactly $$A=QR$$. Since the columns of $$Q$$ form an orthonormal basis, $$(Q^\ast Q)_{ij}=\langle q_i,q_j\rangle$$ is $$1$$ when $$i=j$$ and $$0$$ otherwise, so $$Q^\ast Q=I$$; hence $$Q$$ is a unitary matrix, and $$R$$ is an upper triangular matrix whose diagonal entries are $$\lVert\hat a_k\rVert>0$$.
+Then the above equation becomes exactly $$A=QR$$. Since the columns of $$Q$$ form an orthonormal basis, $$(Q^\ast Q)_{ij}=\langle q_i,q_j\rangle$$ equals $$1$$ when $$i=j$$ and $$0$$ otherwise, so $$Q^\ast Q=I$$; hence $$Q$$ is unitary, and $$R$$ is an upper triangular matrix with diagonal entries $$\lVert\hat a_k\rVert>0$$.
 
-To show uniqueness, suppose $$A=Q_1R_1=Q_2R_2$$ are two decompositions satisfying the conditions, and set $$T=Q_2^\ast Q_1=R_2R_1^{-1}$$. First, an invertible upper triangular matrix is exactly an invertible matrix that sends each subspace $$\span(e_1,\ldots,e_k)$$ to itself for every $$k=1,\ldots,n$$; therefore the inverse and product of such matrices are again upper triangular. Moreover, the diagonal entries of a product of two triangular matrices are the products of the corresponding diagonal entries, so the diagonal entries of $$R_1^{-1}$$ are $$(R_1)_{kk}^{-1}$$, and the diagonal entries of $$T=R_2R_1^{-1}$$ are $$(R_2)_{kk}/(R_1)_{kk}$$, which are all positive real numbers. On the other hand, $$T=Q_2^\ast Q_1$$ is a product of unitary matrices, hence unitary; thus $$T^{-1}=T^\ast$$, where the left-hand side is the inverse of an upper triangular matrix and so is upper triangular, while the right-hand side is the conjugate transpose of an upper triangular matrix and so is lower triangular. Therefore $$T^{-1}$$, and hence $$T$$, is a diagonal matrix. The diagonal entries of a unitary diagonal matrix must have absolute value $$1$$, but the diagonal entries of $$T$$ are positive real numbers, so they are all $$1$$; hence $$T=I$$. This means $$Q_1=Q_2$$ and $$R_1=R_2$$.
+To show uniqueness, suppose $$A=Q_1R_1=Q_2R_2$$ are two decompositions satisfying the conditions, and set $$T=Q_2^\ast Q_1=R_2R_1^{-1}$$. First, an invertible upper triangular matrix is precisely an invertible matrix that sends the subspace $$\span(e_1,\ldots,e_k)$$ to itself for each $$k=1,\ldots,n$$; therefore the inverse and product of such matrices are again upper triangular. Moreover, the diagonal entries of a product of two triangular matrices are the products of the corresponding diagonal entries, so the diagonal entries of $$R_1^{-1}$$ are $$(R_1)_{kk}^{-1}$$, and the diagonal entries of $$T=R_2R_1^{-1}$$ are $$(R_2)_{kk}/(R_1)_{kk}$$, hence all positive real numbers. On the other hand, $$T=Q_2^\ast Q_1$$ is a product of unitary matrices, so it is unitary; thus $$T^{-1}=T^\ast$$, where the left-hand side is the inverse of an upper triangular matrix and hence upper triangular, while the right-hand side is the conjugate transpose of an upper triangular matrix and hence lower triangular. Therefore $$T^{-1}$$, and consequently $$T$$, is a diagonal matrix. The diagonal entries of a unitary diagonal matrix must have absolute value $$1$$, but the diagonal entries of $$T$$ are positive real numbers, so they are all $$1$$; hence $$T=I$$. This means $$Q_1=Q_2$$ and $$R_1=R_2$$.
 :::
 
-This decomposition is called the *QR decomposition*, and as the proof shows, it is simply the Gram–Schmidt process expressed in the language of matrices. The columns of $$Q$$ record the result of orthogonalization, and $$R$$ records the coefficients used in that process. In particular, if the columns of $$A$$ are already orthonormal, that is, if $$A$$ is already a unitary matrix, then the decomposition degenerates to $$Q=A$$, $$R=I$$. The same proof works verbatim for the real case: any invertible matrix $$A\in\Mat_n(\mathbb{R})$$ is uniquely decomposed as a product of an orthogonal matrix ([§Inner Product Spaces, §§Orthogonal Matrices](/en/math/linear_algebra/inner_product_spaces#Orthogonal_Matrices)) and an upper triangular matrix whose diagonal entries are all positive real numbers. Since every step in the above proof involves only the four basic arithmetic operations on the entries of $$A$$, together with inner products and norms, the two factors $$Q,R$$ depend continuously on $$A$$.
+We call this decomposition the *QR decomposition*. As the proof shows, this is simply the Gram–Schmidt process translated into the language of matrices. The columns of $$Q$$ record the result of orthogonalization, and $$R$$ records the coefficients used in that process. In particular, if the columns of $$A$$ are already orthonormal, i.e. if $$A$$ is already unitary, then the decomposition degenerates to $$Q=A$$, $$R=I$$. The same proof works verbatim for the real case: any invertible matrix $$A\in\Mat_n(\mathbb{R})$$ is uniquely decomposed as a product of an orthogonal matrix and ([§Inner Product Spaces, §§Orthogonal Matrices](/en/math/linear_algebra/inner_product_spaces#직교행렬)) an upper triangular matrix whose diagonal entries are all positive real numbers. Since every step of the above proof consists only of the four arithmetic operations, inner products, and norms on the entries of $$A$$, the two factors $$Q,R$$ depend continuously on $$A$$.
 
-On the other hand, one can also arrive at the same decomposition using reflections instead of the Gram–Schmidt process. For a nonzero vector $$v\in\mathbb{C}^n$$, the *Householder reflection*
+On the other hand, one can arrive at the same decomposition using reflections instead of the Gram–Schmidt process. For a nonzero vector $$v\in\mathbb{C}^n$$, the *Householder reflection*
 
 $$H_v=I-2\frac{vv^\ast}{v^\ast v}$$
 
-satisfies $$H_v^\ast=H_v$$ and $$H_v^2=I$$, so it is a unitary matrix; it fixes the vectors in $$v^\perp$$ and sends $$v$$ to $$-v$$, that is, it is the reflection across the hyperplane $$v^\perp$$. For two vectors $$x\neq y$$ of equal magnitude with $$\langle y,x\rangle$$ real, setting $$v=x-y$$ gives $$H_vx=y$$, which can be checked by direct computation. Therefore, for the first column $$a_1$$ of an invertible matrix $$A$$, choosing $$\alpha$$ so that $$\lvert\alpha\rvert=\lVert a_1\rVert$$ and $$\langle\alpha e_1,a_1\rangle$$ is real, we obtain a Householder reflection $$H_1$$ that sends $$a_1$$ to $$\alpha e_1$$. Then the first column of $$H_1A$$ is aligned in the $$e_1$$ direction, and repeating the same process on the remaining lower-right block (where the reflection on the lower block is extended to a reflection of $$\mathbb{C}^n$$ that fixes the leading coordinates) makes $$H_{n-1}\cdots H_1A$$ an upper triangular matrix. That is, setting $$Q=H_1\cdots H_{n-1}$$ gives $$A=QR$$; however, the diagonal entries of $$R$$ obtained this way may deviate from positive real numbers by a factor of a complex number of absolute value $$1$$, so correcting by a diagonal unitary matrix recovers the form of [Proposition 7](#prop7). This construction is numerically more stable than the Gram–Schmidt process in floating-point arithmetic, and is the standard method for computing the $$QR$$ decomposition in numerical calculations.
+satisfies $$H_v^\ast=H_v$$ and $$H_v^2=I$$, so it is a unitary matrix; it fixes the vectors in $$v^\perp$$ and sends $$v$$ to $$-v$$, i.e. it is the reflection across the hyperplane $$v^\perp$$. For two vectors $$x\neq y$$ of equal norm with $$\langle y,x\rangle$$ real, setting $$v=x-y$$ gives $$H_vx=y$$, which can be checked by direct computation. Thus for the first column $$a_1$$ of an invertible matrix $$A$$, choosing $$\alpha$$ so that $$\lvert\alpha\rvert=\lVert a_1\rVert$$ and $$\langle\alpha e_1,a_1\rangle$$ is real, we obtain a Householder reflection $$H_1$$ sending $$a_1$$ to $$\alpha e_1$$. Then the first column of $$H_1A$$ is aligned in the $$e_1$$ direction, and repeating the same process on the remaining lower-right block (the reflection of the lower block is extended to a reflection of $$\mathbb{C}^n$$ fixing the earlier coordinates) makes $$H_{n-1}\cdots H_1A$$ upper triangular. That is, setting $$Q=H_1\cdots H_{n-1}$$ gives $$A=QR$$; however, the diagonal entries of $$R$$ obtained this way may deviate from positive real numbers by a factor of a complex number of absolute value $$1$$, so correcting by a diagonal unitary matrix recovers the form of [Proposition 7](#prop7). This construction is numerically more stable than the Gram–Schmidt process in floating-point arithmetic, and is therefore the standard method for computing the $$QR$$ decomposition in numerical computation.
 
 ---
 
@@ -192,3 +193,5 @@ satisfies $$H_v^\ast=H_v$$ and $$H_v^2=I$$, so it is a unitary matrix; it fixes 
 
 **[Goc]** M.S. Gockenbach, *Finite-dimensional linear algebra*, Discrete Mathematics and its applications, Taylor&Francis, 2011.  
 **[Lee]** 이인석, *선형대수와 군*, 서울대학교 출판문화원, 2005.
+
+---

@@ -106,6 +106,7 @@ window.KATEX_MACROS = {
     "\\divisor":"\\operatorname{div}",
     "\\dom":"\\operatorname{dom}",
     "\\dR":"\\mathrm{dR}",
+    "\\E":"\\mathopen{E}",
     "\\End":"\\operatorname{End}",
     "\\erf":"\\operatorname{erf}",
     "\\et":"\\mathrm{\\acute{e}t}",
