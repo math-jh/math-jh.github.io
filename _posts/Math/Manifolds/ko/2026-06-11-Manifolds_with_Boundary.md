@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-06-11
 weight: 21
+
 published: false
 
 ---
@@ -65,7 +66,7 @@ $$\varphi(p)\in\interior\mathbb{H}^m$$이므로, $$W$$를 줄여 $$W$$가 $$\var
 
 $$\tilde{\sigma}\circ\tilde{\tau}=\sigma\circ\tau=\id_W$$
 
-가 성립하고, $$W$$는 $$\mathbb{R}^m$$의 열린집합이므로 chain rule에 의하여 $$D\tilde\sigma(\tau(\varphi(p)))\circ D\tilde\tau(\varphi(p))=\id$$이다. 특히 $$D\tilde\tau(\varphi(p))$$는 invertible이고, 역함수 정리 ([§부분다양체와 역함수 정리, ⁋정리 4](/ko/math/manifolds/submanifolds#thm4))에 의하여 $$\tilde\tau$$는 $$\varphi(p)$$의 적당한 열린근방을 $$\psi(p)=\tau(\varphi(p))$$를 포함하는 $$\mathbb{R}^m$$의 *열린집합*으로 보낸다. 이 열린집합은 $$\tau$$의 image, 즉 $$\mathbb{H}^m$$의 부분집합에 포함되므로, $$\psi(p)$$는 $$\mathbb{H}^m$$ 안에서 $$\mathbb{R}^m$$-열린근방을 갖는다. 그런데 $$\partial\mathbb{H}^m$$의 점의 임의의 $$\mathbb{R}^m$$-열린근방은 $$x^m<0$$인 점을 포함하므로, $$\psi(p)\not\in\partial\mathbb{H}^m$$이다.
+가 성립하고, $$W$$는 $$\mathbb{R}^m$$의 열린집합이므로 chain rule에 의하여 $$D\tilde\sigma(\tau(\varphi(p)))\circ D\tilde\tau(\varphi(p))=\id$$이다. 특히 $$D\tilde\tau(\varphi(p))$$는 invertible이고, [§부분다양체와 역함수 정리, ⁋정리 4](/ko/math/manifolds/submanifolds#thm4)에 의하여 $$\tilde\tau$$는 $$\varphi(p)$$의 적당한 열린근방을 $$\psi(p)=\tau(\varphi(p))$$를 포함하는 $$\mathbb{R}^m$$의 *열린집합*으로 보낸다. 이 열린집합은 $$\tau$$의 image, 즉 $$\mathbb{H}^m$$의 부분집합에 포함되므로, $$\psi(p)$$는 $$\mathbb{H}^m$$ 안에서 $$\mathbb{R}^m$$-열린근방을 갖는다. 그런데 $$\partial\mathbb{H}^m$$의 점의 임의의 $$\mathbb{R}^m$$-열린근방은 $$x^m<0$$인 점을 포함하므로, $$\psi(p)\not\in\partial\mathbb{H}^m$$이다.
 :::
 
 따라서 $$M$$은 서로소인 두 집합 $$\interior M$$과 $$\partial M$$으로 나뉜다. 이들 각각은 다시 다양체가 된다.

@@ -198,7 +198,7 @@ $$f'(z) = \sum_{n=1}^{\infty} n\,a_n (z - z_0)^{n-1}$$
 :::
 
 ::: 증명
-평행이동으로 $$z_0 = 0$$이라 두어도 일반성을 잃지 않는다. 먼저 항별미분 급수 $$g(z) = \sum_{n\geq 1} n a_n z^{n-1}$$의 수렴반지름을 본다. $$\limsup_n \lvert n a_n\rvert^{1/n} = \limsup_n \lvert a_n\rvert^{1/n}$$인데 이는 $$\sqrt[n]{n} \to 1$$이기 때문이며 ([\[해석학\] §수열의 수렴, ⁋예시 9](/ko/math/analysis/convergence_of_sequences#ex9)에서 본 $$\sqrt[n]{n} \to 1$$), Cauchy–Hadamard 공식 ([\[해석학\] §멱급수와 해석함수, ⁋정리 1](/ko/math/analysis/power_series#thm1))에 의해 $$g$$의 수렴반지름도 $$R$$이다. 따라서 $$g$$는 $$B(0, R)$$에서 잘 정의된다.
+평행이동으로 $$z_0 = 0$$이라 두어도 일반성을 잃지 않는다. 먼저 항별미분 급수 $$g(z) = \sum_{n\geq 1} n a_n z^{n-1}$$의 수렴반지름을 본다. $$\limsup_n \lvert n a_n\rvert^{1/n} = \limsup_n \lvert a_n\rvert^{1/n}$$인데 이는 $$\sqrt[n]{n} \to 1$$이기 때문이며 ([\[해석학\] §수열의 수렴, ⁋예시 9](/ko/math/analysis/convergence_of_sequences#ex9)에서 본 $$\sqrt[n]{n} \to 1$$), [\[해석학\] §멱급수와 해석함수, ⁋정리 1](/ko/math/analysis/power_series#thm1)에 의해 $$g$$의 수렴반지름도 $$R$$이다. 따라서 $$g$$는 $$B(0, R)$$에서 잘 정의된다.
 
 이제 $$\lvert w\rvert < R$$을 고정하고 $$\lvert w\rvert < \rho < R$$인 $$\rho$$를 잡는다. $$\lvert z - w\rvert$$가 작아 $$\lvert z\rvert < \rho$$인 $$z \neq w$$에 대하여, 차분비에서 $$g(w)$$를 빼면
 
@@ -233,7 +233,7 @@ $$\frac{d}{dz}e^z = \sum_{n=1}^{\infty} \frac{n z^{n-1}}{n!} = \sum_{n=1}^{\inft
 
 $$e^{iz} = \cos z + i\sin z$$
 
-가 성립하며, 이로써 ([§복소수와 복소평면, ⁋정의 5](/ko/math/complex_analysis/complex_numbers#def5))에서 표기상의 약속으로 받아들였던 $$e^{i\theta} = \cos\theta + i\sin\theta$$가 이제 정의된 함수들 사이의 진짜 등식으로 정당화된다. 특히 $$z = x + iy$$에 대해 덧셈정리 $$e^{z+w} = e^z e^w$$ (이는 두 멱급수의 Cauchy 곱으로 증명된다) 와 결합하면 $$e^z = e^x(\cos y + i\sin y)$$이고, 이 형태에 따름정리 6을 적용해도 정칙성과 도함수 $$e^z$$를 다시 확인할 수 있다.
+가 성립하며, 이로써 [§복소수와 복소평면, ⁋정의 5](/ko/math/complex_analysis/complex_numbers#def5)에서 표기상의 약속으로 받아들였던 $$e^{i\theta} = \cos\theta + i\sin\theta$$가 이제 정의된 함수들 사이의 진짜 등식으로 정당화된다. 특히 $$z = x + iy$$에 대해 덧셈정리 $$e^{z+w} = e^z e^w$$ (이는 두 멱급수의 Cauchy 곱으로 증명된다) 와 결합하면 $$e^z = e^x(\cos y + i\sin y)$$이고, 이 형태에 따름정리 6을 적용해도 정칙성과 도함수 $$e^z$$를 다시 확인할 수 있다.
 
 ## 조화함수
 

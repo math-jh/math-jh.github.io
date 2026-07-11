@@ -16,7 +16,7 @@ published: false
 
 ---
 
-[§Semisimple module](/ko/math/ring_theory/semisimple_modules)에서 우리는 simple module들의 직합으로 분해되는 module을 다루었다. 이 글에서는 그 개념을 환 자신에 적용한다. 환 $$R$$을 자기 자신 위의 left module로 보아 semisimple이 되는 환이 semisimple ring인데, 이는 그 위의 모든 module이 semisimple인 환과 정확히 일치하며, module 이론이 완전히 분해되는 환이라 할 수 있다. 이 글의 목표는 이러한 환의 완전한 분류인 Artin-Wedderburn 정리이다. Semisimple ring은 division ring 위의 행렬환 유한개의 곱과 정확히 같으며, 이 분해는 본질적으로 유일하다. [§Division ring, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10)의 Schur 보조정리가 여기 등장하는 division ring의 출처이고, [§Idempotent과 곱분해, ⁋정리 5](/ko/math/ring_theory/idempotents#thm5)의 central idempotent 기계가 곱분해를 담당한다.
+[§Semisimple module](/ko/math/ring_theory/semisimple_modules)에서 우리는 simple module들의 직합으로 분해되는 module을 다루었다. 이 글에서는 그 개념을 환 자신에 적용한다. 환 $$R$$을 자기 자신 위의 left module로 보아 semisimple이 되는 환이 semisimple ring인데, 이는 그 위의 모든 module이 semisimple인 환과 정확히 일치하며, module 이론이 완전히 분해되는 환이라 할 수 있다. 이 글의 목표는 이러한 환의 완전한 분류인 Artin-Wedderburn 정리이다. Semisimple ring은 division ring 위의 행렬환 유한개의 곱과 정확히 같으며, 이 분해는 본질적으로 유일하다. [§Division ring, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10)가 여기 등장하는 division ring의 출처이고, [§Idempotent과 곱분해, ⁋정리 5](/ko/math/ring_theory/idempotents#thm5)의 central idempotent 기계가 곱분해를 담당한다.
 
 이 글에서도 환은 항등원을 갖는, 가환이라 가정하지 않는 환이며, module은 언제나 left module이다.
 
@@ -194,7 +194,7 @@ $$R\cong\prod_{i=1}^k\Mat_{n_i}(D_i)$$가 semisimple ring이라 하자. 그럼 s
 :::
 
 ::: 참고 14
-유한군 $$G$$의 group algebra $$\mathbb{C}[G]$$는 이 정리의 대표적인 응용처이다. Maschke 정리 ([\[표현론\] §유한군의 표현론, ⁋따름정리 7](/ko/math/representation_theory/representations_of_finite_groups#cor7))에 의해 모든 유한차원 representation이 semisimple $$\mathbb{C}[G]$$-module이고, 특히 regular representation $$\mathbb{C}[G]$$ 자신이 그러하므로 $$\mathbb{C}[G]$$는 semisimple ring이다. [정리 11](#thm11)의 분해에 등장하는 division ring들은 simple module $$V_i$$의 endomorphism ring으로부터 나오는데, algebraically closed field 위의 유한차원 표현에서는 $$\End_{\mathbb{C}[G]}(V_i)\cong\mathbb{C}$$이므로 ([같은 글, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)) 모든 $$D_i$$가 $$\mathbb{C}$$가 된다. 따라서
+유한군 $$G$$의 group algebra $$\mathbb{C}[G]$$는 이 정리의 대표적인 응용처이다. [\[표현론\] §유한군의 표현론, ⁋따름정리 7](/ko/math/representation_theory/representations_of_finite_groups#cor7)에 의해 모든 유한차원 representation이 semisimple $$\mathbb{C}[G]$$-module이고, 특히 regular representation $$\mathbb{C}[G]$$ 자신이 그러하므로 $$\mathbb{C}[G]$$는 semisimple ring이다. [정리 11](#thm11)의 분해에 등장하는 division ring들은 simple module $$V_i$$의 endomorphism ring으로부터 나오는데, algebraically closed field 위의 유한차원 표현에서는 $$\End_{\mathbb{C}[G]}(V_i)\cong\mathbb{C}$$이므로 ([같은 글, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)) 모든 $$D_i$$가 $$\mathbb{C}$$가 된다. 따라서
 
 $$\mathbb{C}[G]\cong\prod_{i=1}^k\Mat_{d_i}(\mathbb{C})$$
 

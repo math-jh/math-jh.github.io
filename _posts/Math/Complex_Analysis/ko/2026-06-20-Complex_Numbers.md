@@ -80,7 +80,7 @@ $$z = a + bi$$, $$w = c + di$$로 둔다.
 ::: 증명
 1. $$\lvert z\rvert = \sqrt{a^2 + b^2} \geq 0$$이고, 이것이 $$0$$인 것은 $$a^2 + b^2 = 0$$, 곧 $$a = b = 0$$인 것과 동치이다.
 
-2. 곱셈의 보존성은 켤레의 곱셈성 ([명제 3](#prop3))으로부터 따라 나온다.
+2. 곱셈의 보존성은 [명제 3](#prop3)의 켤레의 곱셈성으로부터 따라 나온다.
 
     $$\lvert zw\rvert^2 = (zw)\overline{(zw)} = zw\bar{z}\bar{w} = (z\bar{z})(w\bar{w}) = \lvert z\rvert^2\,\lvert w\rvert^2$$
 
@@ -208,7 +208,7 @@ $$(\mathbb{C}, d)$$는 완비 거리공간이다. 곧 $$\mathbb{C}$$의 모든 C
 :::
 
 ::: 증명
-$$z_n = a_n + b_n i$$가 $$\mathbb{C}$$에서 Cauchy라 하자. 좌표별 부등식 $$\lvert a_m - a_n\rvert \leq \lvert z_m - z_n\rvert$$과 $$\lvert b_m - b_n\rvert \leq \lvert z_m - z_n\rvert$$에 의해 두 실수열 $$(a_n)$$, $$(b_n)$$도 각각 Cauchy이다. 실수의 완비성 ([\[해석학\] §Cauchy 수열과 완비성, ⁋정리 4](/ko/math/analysis/cauchy_sequences#thm4))에 의해 $$a_n \to a$$, $$b_n \to b$$인 실수 $$a, b$$가 존재한다. 그러면 명제 9에 의해 $$z_n \to a + bi \in \mathbb{C}$$이다. 따라서 임의의 Cauchy 점열이 $$\mathbb{C}$$ 안에서 수렴하므로 $$(\mathbb{C}, d)$$는 완비이다.
+$$z_n = a_n + b_n i$$가 $$\mathbb{C}$$에서 Cauchy라 하자. 좌표별 부등식 $$\lvert a_m - a_n\rvert \leq \lvert z_m - z_n\rvert$$과 $$\lvert b_m - b_n\rvert \leq \lvert z_m - z_n\rvert$$에 의해 두 실수열 $$(a_n)$$, $$(b_n)$$도 각각 Cauchy이다. [\[해석학\] §Cauchy 수열과 완비성, ⁋정리 4](/ko/math/analysis/cauchy_sequences#thm4)에 의해 $$a_n \to a$$, $$b_n \to b$$인 실수 $$a, b$$가 존재한다. 그러면 명제 9에 의해 $$z_n \to a + bi \in \mathbb{C}$$이다. 따라서 임의의 Cauchy 점열이 $$\mathbb{C}$$ 안에서 수렴하므로 $$(\mathbb{C}, d)$$는 완비이다.
 :::
 
 이는 $$\mathbb{R}^2$$가 완비라는 사실 ([\[해석학\] §거리공간](/ko/math/analysis/metric_spaces)에서 좌표별 논증으로 언급된 것) 의 한 표현이기도 하다. 완비성은 멱급수의 수렴, 적분의 존재, 부동점 논증 등 복소해석학의 거의 모든 존재 정리가 의지하는 토대이다. 컴팩트성 또한 같은 동일시를 통해 그대로 따라 나온다.
@@ -218,9 +218,9 @@ $$\mathbb{C}$$의 부분집합 $$K$$가 점렬컴팩트인 것은 $$K$$가 닫�
 :::
 
 ::: 증명
-명제 9에 의해 $$(\mathbb{C}, d)$$는 거리공간으로서 $$(\mathbb{R}^2, d_{\text{euc}})$$와 동일하며, 닫힘·유계·점렬컴팩트는 모두 거리만으로 정의되는 개념이므로 두 공간에서 일치한다. 따라서 $$\mathbb{R}^2$$에 대한 Heine–Borel 정리 ([\[해석학\] §컴팩트성, ⁋정리 2](/ko/math/analysis/compactness#thm2))를 그대로 옮기면 결론을 얻는다.
+명제 9에 의해 $$(\mathbb{C}, d)$$는 거리공간으로서 $$(\mathbb{R}^2, d_{\text{euc}})$$와 동일하며, 닫힘·유계·점렬컴팩트는 모두 거리만으로 정의되는 개념이므로 두 공간에서 일치한다. 따라서 $$\mathbb{R}^2$$에 대한 [\[해석학\] §컴팩트성, ⁋정리 2](/ko/math/analysis/compactness#thm2)를 그대로 옮기면 결론을 얻는다.
 
-뒷부분은 다음과 같이도 직접 볼 수 있다. $$(z_n)$$이 유계, 곧 모든 $$n$$에서 $$\lvert z_n\rvert \leq M$$이라 하자. $$z_n = a_n + b_n i$$로 적으면 $$\lvert a_n\rvert, \lvert b_n\rvert \leq \lvert z_n\rvert \leq M$$이므로 두 실수열이 유계이다. 먼저 $$(a_n)$$에 Bolzano–Weierstrass 정리 ([\[해석학\] §부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4))를 적용하여 $$a_{n_k} \to a$$인 부분수열을 뽑고, 그 부분수열 위에서 $$(b_{n_k})$$가 여전히 유계이므로 다시 Bolzano–Weierstrass를 적용하여 $$b_{n_{k_j}} \to b$$인 부분수열을 뽑는다. 이 부분수열 위에서 두 좌표가 동시에 수렴하므로 명제 9에 의해 $$z_{n_{k_j}} \to a + bi$$이다.
+뒷부분은 다음과 같이도 직접 볼 수 있다. $$(z_n)$$이 유계, 곧 모든 $$n$$에서 $$\lvert z_n\rvert \leq M$$이라 하자. $$z_n = a_n + b_n i$$로 적으면 $$\lvert a_n\rvert, \lvert b_n\rvert \leq \lvert z_n\rvert \leq M$$이므로 두 실수열이 유계이다. 먼저 $$(a_n)$$에 [\[해석학\] §부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4)를 적용하여 $$a_{n_k} \to a$$인 부분수열을 뽑고, 그 부분수열 위에서 $$(b_{n_k})$$가 여전히 유계이므로 다시 Bolzano–Weierstrass를 적용하여 $$b_{n_{k_j}} \to b$$인 부분수열을 뽑는다. 이 부분수열 위에서 두 좌표가 동시에 수렴하므로 명제 9에 의해 $$z_{n_{k_j}} \to a + bi$$이다.
 :::
 
 따라서 닫힌 원판 $$\overline{B}(z_0, R) = \{z \in \mathbb{C} \mid \lvert z - z_0\rvert \leq R\}$$이나 원 $$\{z \mid \lvert z\rvert = 1\}$$ 같은 집합은 컴팩트이고, 반면 열린 원판이나 $$\mathbb{C}$$ 전체는 컴팩트가 아니다. 이 컴팩트성은 곧 연속함수가 컴팩트집합 위에서 최댓값을 가진다는 결과로 이어져, 최대절댓값원리나 Liouville 정리 같은 복소해석학의 정리들이 서는 발판이 된다.

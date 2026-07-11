@@ -179,7 +179,7 @@ $$\ell(K_C)-\ell(0)=\deg K_C +1-g$$
 어쨌든 지금까지의 계산을 정리하면 $$\ell(D)$$는 $$D$$의 complete linear system의 차원, $$\ell(K_C - D)$$는 $$K_C$$가 $$D$$ 위에 부과하는 수정항이며, 큰 degree에서는 이 수정항이 사라지고 작은 degree에서는 $$K_C$$의 기하학적 정보를 반영한다는 것으로 생각할 수 있다.
 
 ::: 예시 4
-**$$\mathbb{P}^1$$**: $$\mathbb{P}^1$$의 genus는 $$g = 0$$이고, canonical divisor는 $$K_{\mathbb{P}^1} = -2H$$이다 ([§표준선다발, ⁋예시 8](/ko/math/algebraic_varieties/canonical_bundle#ex8)). 한편, 우리는 ([§선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_varieties/line_bundles#ex12))에서 $$\mathcal{O}_{\mathbb{P}^1}(d)$$의 global section이 차수 $$d$$의 동차다항식들임을 보였으므로,
+**$$\mathbb{P}^1$$**: $$\mathbb{P}^1$$의 genus는 $$g = 0$$이고, canonical divisor는 $$K_{\mathbb{P}^1} = -2H$$이다 ([§표준선다발, ⁋예시 8](/ko/math/algebraic_varieties/canonical_bundle#ex8)). 한편, 우리는 [§선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_varieties/line_bundles#ex12)에서 $$\mathcal{O}_{\mathbb{P}^1}(d)$$의 global section이 차수 $$d$$의 동차다항식들임을 보였으므로,
 
 $$\ell(dH) = d+1 \quad (d \ge 0), \qquad \ell(dH) = 0 \quad (d < 0)$$
 
@@ -237,7 +237,7 @@ $$g(C) = \frac{(d-1)(d-2)}{2}$$
 :::
 
 ::: 증명
-Adjunction formula ([§표준선다발, ⁋명제 9](/ko/math/algebraic_varieties/canonical_bundle#prop9))에 의해 $$K_C = (K_{\mathbb{P}^2} + C)\vert_C = (d-3)H\vert_C$$이다. 따라서 $$\deg K_C = d(d-3)$$이고, 이를 $$\deg K_C = 2g - 2$$에 대입하면
+[§표준선다발, ⁋명제 9](/ko/math/algebraic_varieties/canonical_bundle#prop9)의 adjunction formula에 의해 $$K_C = (K_{\mathbb{P}^2} + C)\vert_C = (d-3)H\vert_C$$이다. 따라서 $$\deg K_C = d(d-3)$$이고, 이를 $$\deg K_C = 2g - 2$$에 대입하면
 
 $$d(d-3) = 2g - 2 \implies g = \frac{d(d-3) + 2}{2} = \frac{(d-1)(d-2)}{2}$$
 

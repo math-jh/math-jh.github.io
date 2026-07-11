@@ -78,7 +78,7 @@ $$
 
 조건 $$d\omega = 0$$은 $$\omega$$가 de Rham 코호몰로지류 $$[\omega] \in H^2(X, \mathbb{R})$$를 정의하게 하며, 이 류를 $$X$$의 *Kähler class<sub>Kähler 류</sub>*라 한다. 모든 복소다양체가 Hermitian 계량을 갖는 것과 달리, Kähler 계량의 존재는 진정한 제약이다. 아래에서 보듯 콤팩트 Kähler 다양체는 짝수 차수의 코호몰로지가 모두 비자명해야 하므로, 이 조건을 어기는 콤팩트 복소다양체는 Kähler 계량을 전혀 가질 수 없다.
 
-좌표에서 Kähler 조건은 계량 성분의 미분에 대한 깔끔한 대칭으로 번역된다. 기본형식 $$\omega = \frac{i}{2}\sum g_{j\bar{k}}\, dz_j \wedge d\bar{z}_k$$에 외미분을 적용하면 $$d = \partial + \bar\partial$$ ([§Dolbeault 코호몰로지, ⁋명제 2](/ko/math/complex_geometry/dolbeault_cohomology#prop2))에 의해 $$d\omega$$는 $$(2,1)$$-성분 $$\partial\omega$$와 $$(1,2)$$-성분 $$\bar\partial\omega$$로 갈라진다. $$\omega$$가 실형식이므로 $$\partial\omega = 0$$과 $$\bar\partial\omega = 0$$은 켤레로 동치이고, 따라서 $$d\omega = 0$$은 $$\partial\omega = 0$$ 하나와 동치이다. 이를 좌표로 풀면 다음 명제가 된다.
+좌표에서 Kähler 조건은 계량 성분의 미분에 대한 깔끔한 대칭으로 번역된다. 기본형식 $$\omega = \frac{i}{2}\sum g_{j\bar{k}}\, dz_j \wedge d\bar{z}_k$$에 외미분을 적용하면 [§Dolbeault 코호몰로지, ⁋명제 2](/ko/math/complex_geometry/dolbeault_cohomology#prop2)의 $$d = \partial + \bar\partial$$에 의해 $$d\omega$$는 $$(2,1)$$-성분 $$\partial\omega$$와 $$(1,2)$$-성분 $$\bar\partial\omega$$로 갈라진다. $$\omega$$가 실형식이므로 $$\partial\omega = 0$$과 $$\bar\partial\omega = 0$$은 켤레로 동치이고, 따라서 $$d\omega = 0$$은 $$\partial\omega = 0$$ 하나와 동치이다. 이를 좌표로 풀면 다음 명제가 된다.
 
 ::: 명제 4
 Hermitian 다양체 $$(X, J, g)$$에 대하여, 기본형식을 $$\omega = \frac{i}{2}\sum_{j,k} g_{j\bar{k}}\, dz_j \wedge d\bar{z}_k$$로 쓸 때 다음이 동치이다.
@@ -119,7 +119,7 @@ Hermitian 다양체 $$(X, J, g)$$에 대하여 다음 네 조건이 서로 동�
 :::
 
 ::: 증명
-(1) ⟺ (4)를 먼저 보인다. (4) ⟹ (1)은 $$\bar\partial\partial = -\partial\bar\partial$$ ([§Dolbeault 코호몰로지, ⁋명제 3](/ko/math/complex_geometry/dolbeault_cohomology#prop3))와 $$\partial^2 = \bar\partial^2 = 0$$에서 따라온다. $$\omega = i\partial\bar\partial\varphi$$이면
+(1) ⟺ (4)를 먼저 보인다. (4) ⟹ (1)은 [§Dolbeault 코호몰로지, ⁋명제 3](/ko/math/complex_geometry/dolbeault_cohomology#prop3)의 $$\bar\partial\partial = -\partial\bar\partial$$와 $$\partial^2 = \bar\partial^2 = 0$$에서 따라온다. $$\omega = i\partial\bar\partial\varphi$$이면
 
 $$
 d\omega = (\partial + \bar\partial)(i\partial\bar\partial\varphi) = i\partial^2\bar\partial\varphi + i\bar\partial\partial\bar\partial\varphi = 0 + i\bar\partial\partial\bar\partial\varphi
@@ -127,11 +127,11 @@ $$
 
 이고, $$\bar\partial\partial = -\partial\bar\partial$$와 $$\bar\partial^2 = 0$$으로 $$\bar\partial\partial\bar\partial\varphi = -\partial\bar\partial\bar\partial\varphi = 0$$이므로 $$d\omega = 0$$이다. 또 $$i\partial\bar\partial\varphi = i\sum_{j,k}(\partial^2\varphi/\partial z_j\partial\bar{z}_k)\, dz_j \wedge d\bar{z}_k$$이므로, 계수를 $$\frac{i}{2}g_{j\bar{k}}$$와 맞추면 $$\frac{i}{2}g_{j\bar{k}} = i\,\partial^2\varphi/\partial z_j\partial\bar{z}_k$$, 곧 $$g_{j\bar{k}} = 2\,\partial^2\varphi/\partial z_j\partial\bar{z}_k$$이다.
 
-역으로 (1) ⟹ (4)는 [명제 4](#prop4)의 조건 (2)에서 나온다. $$d\omega = 0$$이면 $$\partial g_{j\bar{k}}/\partial z_l$$이 $$j, l$$에 대칭이고, 켤레를 취하면 $$\partial g_{j\bar{k}}/\partial\bar{z}_l$$이 $$k, l$$에 대칭이다. 이 대칭성 아래에서, $$(0,1)$$-형식 $$\eta = \frac{i}{2}\sum_{j,k} g_{j\bar{k}}\, z_j$$ 꼴의 풀이를 폴리디스크에서 $$\bar\partial$$-Poincaré 보조정리 ([§Dolbeault 코호몰로지, ⁋보조정리 6](/ko/math/complex_geometry/dolbeault_cohomology#lem6))로 구성하여 $$\omega = d\beta$$인 실 $$1$$-형식 $$\beta$$를 얻고, $$\beta$$의 $$(1,0)$$·$$(0,1)$$-성분을 다시 $$\bar\partial$$·$$\partial$$-Poincaré로 풀면 실값 함수 $$\varphi$$로서 $$\omega = i\partial\bar\partial\varphi$$가 국소적으로 성립한다. 구체적으로, $$d\omega = 0$$인 실 $$(1,1)$$-형식은 국소적으로 $$\omega = d\beta = (\partial + \bar\partial)(\beta^{1,0} + \beta^{0,1})$$로 쓰이고, 차수별로 $$\partial\beta^{1,0} = 0$$, $$\bar\partial\beta^{0,1} = 0$$, $$\omega = \partial\beta^{0,1} + \bar\partial\beta^{1,0}$$이 된다. $$\partial$$-Poincaré로 $$\beta^{1,0} = \partial f$$, $$\bar\partial$$-Poincaré로 $$\beta^{0,1} = \bar\partial h$$ ($$h = \bar{f}$$로 택할 수 있다)를 얻으면 $$\omega = \partial\bar\partial h + \bar\partial\partial f = \bar\partial\partial(f - h)$$이고, $$\varphi = i(f - h)$$를 실값이 되도록 조정하면 $$\omega = i\partial\bar\partial\varphi$$이다.
+역으로 (1) ⟹ (4)는 [명제 4](#prop4)의 조건 (2)에서 나온다. $$d\omega = 0$$이면 $$\partial g_{j\bar{k}}/\partial z_l$$이 $$j, l$$에 대칭이고, 켤레를 취하면 $$\partial g_{j\bar{k}}/\partial\bar{z}_l$$이 $$k, l$$에 대칭이다. 이 대칭성 아래에서, $$(0,1)$$-형식 $$\eta = \frac{i}{2}\sum_{j,k} g_{j\bar{k}}\, z_j$$ 꼴의 풀이를 폴리디스크에서 [§Dolbeault 코호몰로지, ⁋보조정리 6](/ko/math/complex_geometry/dolbeault_cohomology#lem6)으로 구성하여 $$\omega = d\beta$$인 실 $$1$$-형식 $$\beta$$를 얻고, $$\beta$$의 $$(1,0)$$·$$(0,1)$$-성분을 다시 $$\bar\partial$$·$$\partial$$-Poincaré로 풀면 실값 함수 $$\varphi$$로서 $$\omega = i\partial\bar\partial\varphi$$가 국소적으로 성립한다. 구체적으로, $$d\omega = 0$$인 실 $$(1,1)$$-형식은 국소적으로 $$\omega = d\beta = (\partial + \bar\partial)(\beta^{1,0} + \beta^{0,1})$$로 쓰이고, 차수별로 $$\partial\beta^{1,0} = 0$$, $$\bar\partial\beta^{0,1} = 0$$, $$\omega = \partial\beta^{0,1} + \bar\partial\beta^{1,0}$$이 된다. $$\partial$$-Poincaré로 $$\beta^{1,0} = \partial f$$, $$\bar\partial$$-Poincaré로 $$\beta^{0,1} = \bar\partial h$$ ($$h = \bar{f}$$로 택할 수 있다)를 얻으면 $$\omega = \partial\bar\partial h + \bar\partial\partial f = \bar\partial\partial(f - h)$$이고, $$\varphi = i(f - h)$$를 실값이 되도록 조정하면 $$\omega = i\partial\bar\partial\varphi$$이다.
 
 (1) ⟺ (3)을 본다. (3) ⟹ (1)은 즉각적이다. 점 $$p$$에서 계량의 일차 미분이 모두 소멸하면, [명제 4](#prop4)의 조건 (2) $$\partial g_{j\bar{k}}/\partial z_l = \partial g_{l\bar{k}}/\partial z_j$$가 $$p$$에서 양변 $$0$$으로 성립하므로 $$d\omega$$가 $$p$$에서 소멸한다. $$p$$가 임의였으므로 $$d\omega = 0$$이다. (1) ⟹ (3)은 (4)를 거친다. (4)에 의해 국소 퍼텐셜 $$\varphi$$가 존재하므로, $$p$$를 원점으로 하는 정칙좌표에서 $$\varphi$$의 Taylor 전개를 정칙 좌표변환으로 정규화한다. $$\varphi = \varphi(p) + 2\Real\big(\text{정칙항}\big) + \sum_{j,k} g_{j\bar{k}}(p)\, z_j\bar{z}_k + (\text{삼차 이상})$$에서, 정칙항은 $$\partial\bar\partial$$로 죽으므로 무시할 수 있고, 이차항의 Hermitian 부분을 표준형으로 보내는 $$\mathbb{C}$$-선형 좌표변환으로 $$g_{j\bar{k}}(p) = \delta_{jk}$$를 만든다. 남은 삼차 이상 항 가운데 $$z_j z_k \bar{z}_l$$ 꼴의 혼합 삼차항을 정칙 이차 좌표변환 $$z_j \mapsto z_j + (\text{이차 정칙})$$으로 흡수하면 $$g_{j\bar{k}}$$의 일차 미분이 $$p$$에서 모두 소멸한다. 이 정규화가 가능한 것이 바로 Kähler 조건이며, 이렇게 얻은 좌표를 *normal coordinate*라 한다.
 
-(2) ⟺ (1)을 본다. Levi-Civita 접속은 계량과 호환되고 비틀림이 없다. $$g$$가 Hermitian이므로 $$\omega(X, Y) = g(JX, Y)$$이고, $$\nabla g = 0$$이므로 $$\nabla\omega$$와 $$\nabla J$$는 $$\nabla\omega(X; Y, Z) = g((\nabla_X J)Y, Z)$$로 직접 이어진다. 따라서 $$\nabla J = 0$$은 $$\nabla\omega = 0$$과 동치이고, $$\nabla\omega = 0$$이면 특히 $$\omega$$의 반대칭화인 $$d\omega$$가 소멸한다 ($$d\omega(X,Y,Z) = \sum_{\text{cyc}} (\nabla_X\omega)(Y,Z)$$, 비틀림이 없으므로). 곧 (2) ⟹ (1)이다. 역의 함의 (1) ⟹ (2)가 Kähler 기하의 핵심이며, 다음과 같이 본다. $$\nabla\omega$$는 $$g$$, $$J$$, $$d\omega$$, 그리고 $$N_J$$ (Nijenhuis 텐서)로 대수적으로 표현되는데, $$X$$가 복소다양체라 $$N_J = 0$$ ([§거의 복소구조, ⁋정리 12](/ko/math/complex_geometry/almost_complex_structures#thm12))이고 가정에서 $$d\omega = 0$$이므로 $$\nabla\omega = 0$$이 따라온다. 정밀하게는, 비틀림 없는 Levi-Civita 접속에 대하여 $$2\, g\big((\nabla_X J)Y, Z\big)$$가 기본형식의 외미분값 $$d\omega(X, Y, Z)$$·$$d\omega(X, JY, JZ)$$와 Nijenhuis 항 $$g\big(N_J(Y, Z), JX\big)$$의 일차결합으로 표현된다 (각 항의 계수는 $$\omega$$와 $$N_J$$의 부호 규약에 따라 정해진다). $$X$$가 복소다양체라 $$N_J = 0$$이고 가정에서 $$d\omega = 0$$이므로 이 결합의 모든 항이 소멸하여 $$(\nabla_X J)Y = 0$$, 곧 $$\nabla J = 0$$을 얻는다.
+(2) ⟺ (1)을 본다. Levi-Civita 접속은 계량과 호환되고 비틀림이 없다. $$g$$가 Hermitian이므로 $$\omega(X, Y) = g(JX, Y)$$이고, $$\nabla g = 0$$이므로 $$\nabla\omega$$와 $$\nabla J$$는 $$\nabla\omega(X; Y, Z) = g((\nabla_X J)Y, Z)$$로 직접 이어진다. 따라서 $$\nabla J = 0$$은 $$\nabla\omega = 0$$과 동치이고, $$\nabla\omega = 0$$이면 특히 $$\omega$$의 반대칭화인 $$d\omega$$가 소멸한다 ($$d\omega(X,Y,Z) = \sum_{\text{cyc}} (\nabla_X\omega)(Y,Z)$$, 비틀림이 없으므로). 곧 (2) ⟹ (1)이다. 역의 함의 (1) ⟹ (2)가 Kähler 기하의 핵심이며, 다음과 같이 본다. $$\nabla\omega$$는 $$g$$, $$J$$, $$d\omega$$, 그리고 $$N_J$$ (Nijenhuis 텐서)로 대수적으로 표현되는데, $$X$$가 복소다양체라 [§거의 복소구조, ⁋정리 12](/ko/math/complex_geometry/almost_complex_structures#thm12)에 의해 $$N_J = 0$$이고 가정에서 $$d\omega = 0$$이므로 $$\nabla\omega = 0$$이 따라온다. 정밀하게는, 비틀림 없는 Levi-Civita 접속에 대하여 $$2\, g\big((\nabla_X J)Y, Z\big)$$가 기본형식의 외미분값 $$d\omega(X, Y, Z)$$·$$d\omega(X, JY, JZ)$$와 Nijenhuis 항 $$g\big(N_J(Y, Z), JX\big)$$의 일차결합으로 표현된다 (각 항의 계수는 $$\omega$$와 $$N_J$$의 부호 규약에 따라 정해진다). $$X$$가 복소다양체라 $$N_J = 0$$이고 가정에서 $$d\omega = 0$$이므로 이 결합의 모든 항이 소멸하여 $$(\nabla_X J)Y = 0$$, 곧 $$\nabla J = 0$$을 얻는다.
 :::
 
 이 네 동치조건은 Kähler 다양체를 보는 네 가지 시점을 준다. 조건 (1)은 사교적, (2)는 리만적, (3)은 국소 해석적, (4)는 복소 해석적 시점이다. 특히 (3)은 Kähler 다양체가 각 점에서 평탄한 $$\mathbb{C}^n$$과 이차까지 구별되지 않음을 뜻하며, 이 "이차 osculation"이 Kähler 항등식과 같은 강력한 국소 공식들이 성립하는 근거이다. 조건 (2)는 holonomy 군이 $$U(n)$$ 안에 들어감을 뜻하여, Kähler 다양체를 holonomy 관점에서 특징짓는다. 조건 (4)의 국소 퍼텐셜 $$\varphi$$를 *Kähler potential<sub>Kähler 퍼텐셜</sub>* 이라 부르며, 다음 절의 Fubini–Study 계량 구성에서 핵심 도구가 된다.
@@ -153,13 +153,13 @@ $$
 다음으로 격자 몫에서 평탄한 콤팩트 예시가 나온다.
 
 ::: 예시 7 (복소토러스)
-격자 $$\Lambda \subseteq \mathbb{C}^n$$에 의한 복소토러스 $$T = \mathbb{C}^n/\Lambda$$ ([§복소다양체, ⁋예시 7](/ko/math/complex_geometry/complex_manifolds#ex7))는 Kähler 다양체이다. $$\mathbb{C}^n$$의 표준 Kähler 형식 $$\omega_0 = \frac{i}{2}\sum dz_j \wedge d\bar{z}_j$$가 평행이동 $$z \mapsto z + \lambda$$에 대해 불변이므로 (계수가 상수이고 $$dz_j$$가 평행이동 불변), $$\omega_0$$는 몫 $$T$$ 위의 잘 정의된 $$2$$-형식으로 내려가고, 상수계수라 여전히 닫힌형식이다. 따라서 모든 복소토러스는 평탄한 Kähler 계량을 가진다. 차원 $$1$$에서는 이것이 타원곡선의 평탄 계량이고, 높은 차원에서는 복소토러스가 사영적이지 않을 수 있음에도 ([§복소다양체, ⁋예시 7](/ko/math/complex_geometry/complex_manifolds#ex7)) Kähler 계량은 언제나 존재한다. 곧 Kähler는 사영성보다 약한 조건이다.
+격자 $$\Lambda \subseteq \mathbb{C}^n$$에 의한 복소토러스 $$T = \mathbb{C}^n/\Lambda$$는 Kähler 다양체이다 ([§복소다양체, ⁋예시 7](/ko/math/complex_geometry/complex_manifolds#ex7)). $$\mathbb{C}^n$$의 표준 Kähler 형식 $$\omega_0 = \frac{i}{2}\sum dz_j \wedge d\bar{z}_j$$가 평행이동 $$z \mapsto z + \lambda$$에 대해 불변이므로 (계수가 상수이고 $$dz_j$$가 평행이동 불변), $$\omega_0$$는 몫 $$T$$ 위의 잘 정의된 $$2$$-형식으로 내려가고, 상수계수라 여전히 닫힌형식이다. 따라서 모든 복소토러스는 평탄한 Kähler 계량을 가진다. 차원 $$1$$에서는 이것이 타원곡선의 평탄 계량이고, 높은 차원에서는 복소토러스가 사영적이지 않을 수 있음에도 ([§복소다양체, ⁋예시 7](/ko/math/complex_geometry/complex_manifolds#ex7)) Kähler 계량은 언제나 존재한다. 곧 Kähler는 사영성보다 약한 조건이다.
 :::
 
 가장 중요한 콤팩트 예시는 Fubini–Study 계량을 갖춘 복소사영공간이다.
 
 ::: 예시 8 ($$\mathbb{CP}^n$$의 Fubini–Study 계량)
-복소사영공간 $$\mathbb{CP}^n$$ ([§복소다양체, ⁋예시 6](/ko/math/complex_geometry/complex_manifolds#ex6))에 다음과 같이 Kähler 형식을 준다. 표준 열린집합 $$U_i = \{z_i \neq 0\}$$ 위에서 국소 함수
+복소사영공간 $$\mathbb{CP}^n$$에 다음과 같이 Kähler 형식을 준다 ([§복소다양체, ⁋예시 6](/ko/math/complex_geometry/complex_manifolds#ex6)). 표준 열린집합 $$U_i = \{z_i \neq 0\}$$ 위에서 국소 함수
 
 $$
 \varphi_i = \log \lVert z \rVert^2 = \log\left( \sum_{j=0}^n \lvert z_j \rvert^2 \right)
@@ -187,7 +187,7 @@ Fubini–Study 계량의 정규화 상수 $$1/2\pi$$는 Kähler 류가 정수 �
 복소사영공간이 Kähler라는 사실은 곧바로 그 부분다양체로 전파된다.
 
 ::: 명제 9
-Kähler 다양체 $$(X, J, g)$$의 복소 부분다양체 $$Y \subseteq X$$는 유도 계량에 대해 다시 Kähler 다양체이다. 특히 매끄러운 사영다양체 ([\[대수다양체\] §사영다양체, ⁋정의 1](/ko/math/algebraic_varieties/projective_varieties#def1))는 모두 Kähler 다양체이다.
+Kähler 다양체 $$(X, J, g)$$의 복소 부분다양체 $$Y \subseteq X$$는 유도 계량에 대해 다시 Kähler 다양체이다. 특히 매끄러운 사영다양체는 모두 Kähler 다양체이다 ([\[대수다양체\] §사영다양체, ⁋정의 1](/ko/math/algebraic_varieties/projective_varieties#def1)).
 :::
 
 ::: 증명
@@ -199,10 +199,10 @@ $$
 
 이다. 따라서 $$\omega_Y$$는 닫힌형식이고 $$Y$$는 Kähler 다양체이다.
 
-특히 매끄러운 사영다양체 $$Y \subseteq \mathbb{CP}^n$$은 Fubini–Study 계량을 갖춘 Kähler 다양체 $$\mathbb{CP}^n$$ ([예시 8](#ex8))의 복소 부분다양체이므로, 위 논법에 의해 유도된 Fubini–Study 계량에 대해 Kähler 다양체이다.
+특히 매끄러운 사영다양체 $$Y \subseteq \mathbb{CP}^n$$은 [예시 8](#ex8)의 Kähler 다양체 $$\mathbb{CP}^n$$의 복소 부분다양체이므로, 위 논법에 의해 유도된 Fubini–Study 계량에 대해 Kähler 다양체이다.
 :::
 
-이 명제는 Kähler 다양체의 세계가 얼마나 넓은지를 보여준다. 사영대수기하의 모든 매끄러운 대상, 곧 곡선·곡면·고차원 사영다양체가 자동으로 Kähler 구조를 가지므로, Kähler 기하는 복소대수기하 전체를 포괄하는 해석적 틀이 된다. 동시에 복소토러스의 비사영적 예시 ([예시 7](#ex7))가 보여주듯 Kähler는 사영보다 진정으로 넓어, 대수기하 바깥의 콤팩트 복소다양체까지 담는다.
+이 명제는 Kähler 다양체의 세계가 얼마나 넓은지를 보여준다. 사영대수기하의 모든 매끄러운 대상, 곧 곡선·곡면·고차원 사영다양체가 자동으로 Kähler 구조를 가지므로, Kähler 기하는 복소대수기하 전체를 포괄하는 해석적 틀이 된다. 동시에 [예시 7](#ex7)의 비사영적 복소토러스가 보여주듯 Kähler는 사영보다 진정으로 넓어, 대수기하 바깥의 콤팩트 복소다양체까지 담는다.
 
 ## 사교구조와 위상적 귀결
 
@@ -263,7 +263,7 @@ $$
 ::: 증명
 핵심은 두 항등식이 평탄한 $$\mathbb{C}^n$$의 표준 Kähler 구조에서 성립함을 보이고, 그 다음 일반 Kähler 다양체로 옮기는 것이다.
 
-평탄한 경우, 곧 $$X = \mathbb{C}^n$$에 표준 계량 ([예시 6](#ex6))을 주면 $$L$$, $$\Lambda$$, $$\partial$$, $$\bar\partial$$, $$\partial^\ast$$, $$\bar\partial^\ast$$가 모두 상수계수 작용소이고, $$dz_j \wedge$$·$$d\bar{z}_j\wedge$$와 그 contraction의 대수적 교환관계를 직접 계산하여 $$[\Lambda, \bar\partial] = -i\partial^\ast$$와 $$[\Lambda, \partial] = i\bar\partial^\ast$$를 확인한다. 이는 외대수와 그 내적이 만드는 유한차원 선형대수 항등식이며, 미분이 아니라 계수 함수의 일차 미분과 wedge·contraction의 결합으로 환원된다.
+평탄한 경우, 곧 $$X = \mathbb{C}^n$$에 [예시 6](#ex6)의 표준 계량을 주면 $$L$$, $$\Lambda$$, $$\partial$$, $$\bar\partial$$, $$\partial^\ast$$, $$\bar\partial^\ast$$가 모두 상수계수 작용소이고, $$dz_j \wedge$$·$$d\bar{z}_j\wedge$$와 그 contraction의 대수적 교환관계를 직접 계산하여 $$[\Lambda, \bar\partial] = -i\partial^\ast$$와 $$[\Lambda, \partial] = i\bar\partial^\ast$$를 확인한다. 이는 외대수와 그 내적이 만드는 유한차원 선형대수 항등식이며, 미분이 아니라 계수 함수의 일차 미분과 wedge·contraction의 결합으로 환원된다.
 
 일반 Kähler 다양체에서는 [정리 5](#thm5)의 조건 (3)을 쓴다. 임의의 점 $$p$$에서 정규좌표를 택하면 계량이 $$p$$에서 표준 Hermitian 계량과 이차까지 일치하므로, $$L$$, $$\Lambda$$와 $$\partial$$, $$\bar\partial$$, 그리고 그 수반작용소들이 $$p$$에서 평탄한 경우와 같은 일차 자료를 가진다. 위 항등식은 작용소들의 일차 미분 정보만으로 결정되는 일차 관계식이므로, $$p$$에서 평탄한 모델의 항등식이 그대로 성립한다. $$p$$가 임의였으므로 항등식이 $$X$$ 전체에서 성립한다. 정규좌표가 존재한다는 것, 곧 계량을 한 점에서 이차까지 표준형으로 만들 수 있다는 것이 바로 Kähler 조건이며, 이것이 평탄 모델에서 일반 다양체로 항등식을 전파하는 다리이다.
 :::

@@ -44,7 +44,7 @@ Division ring $$A$$에서는 $$0$$을 제외한 모든 원소가 정의상 역�
 한 환의 unit이 다른 부분환에서는 unit이 아닐 수 있다. 가령 $$2\in\mathbb{Q}$$는 $$\mathbb{Q}^\times$$의 원소이지만, $$\mathbb{Z}$$ 안에서는 $$2v=1$$을 만족하는 정수 $$v$$가 없으므로 $$2\notin\mathbb{Z}^\times$$이다. 즉 unit인지의 여부는 어느 환 안에서 보는지에 달려 있다.
 :::
 
-Unit의 개념은 앞선 글들에서 이미 쓰였다. Integral domain에서 두 원소가 같은 principal ideal을 생성하는 것이 unit배만큼 차이나는 것과 동치라는 사실 ([§정역, ⁋명제 6](/ko/math/ring_theory/integral_domains#prop6))과, irreducible · prime · associate의 정의 ([§정역, ⁋정의 11](/ko/math/ring_theory/integral_domains#def11))가 모두 unit에 기대고 있다. 정의 1은 이 용어를 명시적으로 고정한 것이다.
+Unit의 개념은 앞선 글들에서 이미 쓰였다. Integral domain에서 두 원소가 같은 principal ideal을 생성하는 것이 unit배만큼 차이나는 것과 동치라는 [§정역, ⁋명제 6](/ko/math/ring_theory/integral_domains#prop6)과, irreducible · prime · associate를 정의하는 [§정역, ⁋정의 11](/ko/math/ring_theory/integral_domains#def11)이 모두 unit에 기대고 있다. 정의 1은 이 용어를 명시적으로 고정한 것이다.
 
 ## Zero divisor와 regular element
 
@@ -142,7 +142,7 @@ $$A^\times\longrightarrow A_1^\times\times\cdots\times A_n^\times,\qquad (a_1,\l
 은 위의 동치에 의해 잘 정의된 전단사이고, 곱셈이 성분별이므로 군준동형사상이다. 즉 군동형사상이다.
 :::
 
-가령 $$\mathbb{Z}/6\mathbb{Z}\cong\mathbb{Z}/2\mathbb{Z}\times\mathbb{Z}/3\mathbb{Z}$$ ([§중국인의 나머지정리, ⁋명제 5](/ko/math/ring_theory/chinese_remainder_theorem#prop5))에 명제 8을 적용하면
+가령 [§중국인의 나머지정리, ⁋명제 5](/ko/math/ring_theory/chinese_remainder_theorem#prop5)의 $$\mathbb{Z}/6\mathbb{Z}\cong\mathbb{Z}/2\mathbb{Z}\times\mathbb{Z}/3\mathbb{Z}$$에 명제 8을 적용하면
 
 $$(\mathbb{Z}/6\mathbb{Z})^\times\cong(\mathbb{Z}/2\mathbb{Z})^\times\times(\mathbb{Z}/3\mathbb{Z})^\times$$
 

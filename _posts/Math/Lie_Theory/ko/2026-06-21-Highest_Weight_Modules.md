@@ -44,7 +44,7 @@ $$\mathfrak{g}=\mathfrak{n}^-\oplus\mathfrak{h}\oplus\mathfrak{n}^+=\mathfrak{n}
 
 라는 삼각 분해를 얻으며, 이 분해가 아래 Verma module의 구성과 그 PBW 기저의 토대가 된다. 이름의 nilpotent는 $$\mathfrak{n}^\pm$$가 실제로 nilpotent Lie algebra라는 사실에서 온 것으로, root 높이에 대한 grading이 bracket을 한 단계씩 올려 유한 번 안에 $$0$$이 되기 때문이다.
 
-이제 임의의 $$\mathfrak{g}$$-가군 위에서 $$\mathfrak{h}$$의 작용에 대한 동시 고유공간 분해를 정의한다. 이는 $$\sl_2$$에서 $$h$$ 하나의 고유공간 분해 ([§sl₂의 표현론, ⁋정의 1](/ko/math/lie_theory/representations_of_sl2#def1))를 Cartan subalgebra 전체로 일반화한 것이다.
+이제 임의의 $$\mathfrak{g}$$-가군 위에서 $$\mathfrak{h}$$의 작용에 대한 동시 고유공간 분해를 정의한다. 이는 $$\sl_2$$에서 $$h$$ 하나의 고유공간 분해를 ([§sl₂의 표현론, ⁋정의 1](/ko/math/lie_theory/representations_of_sl2#def1)) Cartan subalgebra 전체로 일반화한 것이다.
 
 ::: 정의 2
 $$\mathfrak{g}$$-가군 $$V$$와 $$\lambda\in\mathfrak{h}^\ast$$에 대하여, 부분공간
@@ -81,7 +81,7 @@ $$H\cdot v=\lambda(H)\,v\ \text{ for all }H\in\mathfrak{h},\qquad \mathfrak{n}^+
 이 성립하는 것이다. 곧 $$v\in V_\lambda$$이고 모든 positive root vector가 $$v$$를 소멸시키는 것이다. 이 때 $$\lambda$$를 $$v$$의 *highest weight<sub>최고무게</sub>*라 부른다.
 :::
 
-$$\mathfrak{n}^+$$가 $$\Phi^+$$의 root vector들로 생성되므로, $$\mathfrak{n}^+\cdot v=0$$이라는 조건은 각 simple root $$\alpha_i$$에 대응하는 raising operator $$e_i\in\mathfrak{g}_{\alpha_i}$$가 $$v$$를 소멸시키는 것과 동치이다. 실제로 임의의 positive root는 simple root들의 음이 아닌 정수 결합이고 $$[\mathfrak{g}_{\alpha},\mathfrak{g}_{\beta}]\subseteq\mathfrak{g}_{\alpha+\beta}$$이므로, $$\mathfrak{n}^+$$는 simple root vector들로 생성되는 부분대수이다. $$\sl_2$$에서 $$e\cdot v=0$$이라는 조건이 highest weight vector를 규정하였던 것 ([§sl₂의 표현론, ⁋정의 3](/ko/math/lie_theory/representations_of_sl2#def3))과 정확히 대응한다.
+$$\mathfrak{n}^+$$가 $$\Phi^+$$의 root vector들로 생성되므로, $$\mathfrak{n}^+\cdot v=0$$이라는 조건은 각 simple root $$\alpha_i$$에 대응하는 raising operator $$e_i\in\mathfrak{g}_{\alpha_i}$$가 $$v$$를 소멸시키는 것과 동치이다. 실제로 임의의 positive root는 simple root들의 음이 아닌 정수 결합이고 $$[\mathfrak{g}_{\alpha},\mathfrak{g}_{\beta}]\subseteq\mathfrak{g}_{\alpha+\beta}$$이므로, $$\mathfrak{n}^+$$는 simple root vector들로 생성되는 부분대수이다. $$\sl_2$$에서 $$e\cdot v=0$$이라는 조건이 highest weight vector를 규정하였던 것과 정확히 대응한다. ([§sl₂의 표현론, ⁋정의 3](/ko/math/lie_theory/representations_of_sl2#def3))
 
 ## Verma module
 
@@ -126,7 +126,7 @@ $$f_1^{\,m_1}f_2^{\,m_2}\cdots f_N^{\,m_N}\cdot v_\lambda^+,\qquad m_1,\ldots,m_
 들은 $$M(\lambda)$$의 $$\mathbb{C}$$-기저를 이룬다. 따라서 $$M(\lambda)$$는 $$U(\mathfrak{n}^-)$$ 위의 계수 $$1$$의 자유가군 $$U(\mathfrak{n}^-)\cdot v_\lambda^+$$이며, 그 weight들은 $$\lambda-\sum_k m_k\beta_k$$ ($$m_k\geq 0$$)의 꼴이고 각 weight space는 유한차원이다.
 :::
 ::: 증명
-$$\mathfrak{g}$$의 기저를 $$\mathfrak{n}^-$$의 기저 $$(f_1,\ldots,f_N)$$, $$\mathfrak{h}$$의 기저 $$(H_1,\ldots,H_l)$$, $$\mathfrak{n}^+$$의 기저 $$(e_1,\ldots,e_N)$$를 이어 붙여 만들고, 이 순서로 첨자에 전순서를 준다. 그럼 PBW 정리 ([§보편 포락 대수, ⁋정리 9](/ko/math/lie_theory/universal_enveloping_algebra#thm9))에 의하여 $$U(\mathfrak{g})$$는 정렬된 단항식
+$$\mathfrak{g}$$의 기저를 $$\mathfrak{n}^-$$의 기저 $$(f_1,\ldots,f_N)$$, $$\mathfrak{h}$$의 기저 $$(H_1,\ldots,H_l)$$, $$\mathfrak{n}^+$$의 기저 $$(e_1,\ldots,e_N)$$를 이어 붙여 만들고, 이 순서로 첨자에 전순서를 준다. 그럼 [§보편 포락 대수, ⁋정리 9](/ko/math/lie_theory/universal_enveloping_algebra#thm9)에 의하여 $$U(\mathfrak{g})$$는 정렬된 단항식
 
 $$f_1^{\,m_1}\cdots f_N^{\,m_N}\,H_1^{\,p_1}\cdots H_l^{\,p_l}\,e_1^{\,q_1}\cdots e_N^{\,q_N}$$
 
@@ -139,7 +139,7 @@ $$f_1^{\,m_1}\cdots f_N^{\,m_N}\,H_1^{\,p_1}\cdots H_l^{\,p_l}\,e_1^{\,q_1}\cdot
 끝으로 weight 구조를 본다. $$f_k\in\mathfrak{g}_{-\beta_k}$$이므로 [명제 3](#prop3)에 의하여 $$f_1^{\,m_1}\cdots f_N^{\,m_N}\cdot v_\lambda^+$$는 weight $$\lambda-\sum_k m_k\beta_k$$를 갖는다. 고정된 weight $$\mu=\lambda-\sum_k m_k\beta_k$$를 주는 지수 $$(m_1,\ldots,m_N)$$의 개수는 유한하므로 각 weight space는 유한차원이며, $$M(\lambda)=\bigoplus_\mu M(\lambda)_\mu$$는 weight module이다.
 :::
 
-명제 7은 $$M(\lambda)$$가 $$\sl_2$$에서의 highest weight 사슬을 정확히 일반화함을 보여준다. $$\sl_2$$의 highest weight vector에서 $$f$$를 반복 적용하여 얻은 사슬 ([§sl₂의 표현론, ⁋명제 4](/ko/math/lie_theory/representations_of_sl2#prop4))이 여기에서는 여러 lowering operator의 모든 정렬된 곱으로 대체되며, 그 결과 $$M(\lambda)$$는 무한차원의 weight module이 된다. Highest weight space $$M(\lambda)_\lambda$$는 $$v_\lambda^+$$ 하나로 생성되는 $$1$$차원이고, 다른 모든 weight는 $$\lambda$$에서 positive root들을 빼서 얻어지므로 $$\lambda$$보다 "아래"에 놓인다.
+명제 7은 $$M(\lambda)$$가 $$\sl_2$$에서의 highest weight 사슬을 정확히 일반화함을 보여준다. $$\sl_2$$의 highest weight vector에서 $$f$$를 반복 적용하여 얻은 사슬이 ([§sl₂의 표현론, ⁋명제 4](/ko/math/lie_theory/representations_of_sl2#prop4)) 여기에서는 여러 lowering operator의 모든 정렬된 곱으로 대체되며, 그 결과 $$M(\lambda)$$는 무한차원의 weight module이 된다. Highest weight space $$M(\lambda)_\lambda$$는 $$v_\lambda^+$$ 하나로 생성되는 $$1$$차원이고, 다른 모든 weight는 $$\lambda$$에서 positive root들을 빼서 얻어지므로 $$\lambda$$보다 "아래"에 놓인다.
 
 ## 기약 quotient
 
@@ -195,7 +195,7 @@ $$\mathfrak{g}$$가 유한차원 semisimple Lie algebra이면, 대응 $$\lambda\
 ::: 증명
 증명은 세 부분으로 이루어진다. 첫째, 유한차원 기약 표현이 dominant integral highest weight를 가짐을 보인다. 둘째, dominant integral $$\lambda$$에 대하여 $$L(\lambda)$$가 유한차원임을 보인다. 셋째, 단사성과 전사성을 정리한다.
 
-(1) $$V$$를 $$0$$이 아닌 유한차원 기약 표현이라 하자. $$V$$는 weight module이다. 실제로 $$\mathfrak{g}$$가 semisimple이므로 Cartan subalgebra의 각 원소는 $$V$$ 위에서 반단순하게 작용하고 $$\mathfrak{h}$$가 abelian이므로 동시 대각화되어, $$V=\bigoplus_\mu V_\mu$$이다. $$V$$가 유한차원이므로 weight들 가운데 어떤 positive root를 더해도 다시 weight가 되지 않는 극대 weight $$\lambda$$가 존재한다. 이러한 $$\lambda$$의 $$0$$이 아닌 벡터 $$v\in V_\lambda$$는 [명제 3](#prop3)에 의해 $$\mathfrak{n}^+\cdot v\subseteq\bigoplus_{\alpha\in\Phi^+}V_{\lambda+\alpha}=0$$을 만족하므로 highest weight vector이다. $$V$$가 기약이므로 $$v$$가 $$V$$를 생성하고, [명제 10](#prop10)에 의해 $$V\cong L(\lambda)$$이다. 이제 각 simple root $$\alpha_i$$에 대하여 $$\sl_{2,\alpha_i}=\langle e_i,f_i,h_i\rangle$$의 작용으로 $$V$$를 $$\sl_2$$-가군으로 보면, $$e_i\cdot v=0$$이고 $$h_i\cdot v=\lambda(h_i)v$$이므로 $$v$$는 이 $$\sl_2$$-가군의 highest weight vector이다. $$V$$가 유한차원이므로 $$\sl_2$$ 표현론 ([§sl₂의 표현론, ⁋명제 6](/ko/math/lie_theory/representations_of_sl2#prop6))에 의해 그 highest weight $$\lambda(h_i)$$는 음이 아닌 정수이다. 따라서 $$\lambda$$는 dominant integral이다.
+(1) $$V$$를 $$0$$이 아닌 유한차원 기약 표현이라 하자. $$V$$는 weight module이다. 실제로 $$\mathfrak{g}$$가 semisimple이므로 Cartan subalgebra의 각 원소는 $$V$$ 위에서 반단순하게 작용하고 $$\mathfrak{h}$$가 abelian이므로 동시 대각화되어, $$V=\bigoplus_\mu V_\mu$$이다. $$V$$가 유한차원이므로 weight들 가운데 어떤 positive root를 더해도 다시 weight가 되지 않는 극대 weight $$\lambda$$가 존재한다. 이러한 $$\lambda$$의 $$0$$이 아닌 벡터 $$v\in V_\lambda$$는 [명제 3](#prop3)에 의해 $$\mathfrak{n}^+\cdot v\subseteq\bigoplus_{\alpha\in\Phi^+}V_{\lambda+\alpha}=0$$을 만족하므로 highest weight vector이다. $$V$$가 기약이므로 $$v$$가 $$V$$를 생성하고, [명제 10](#prop10)에 의해 $$V\cong L(\lambda)$$이다. 이제 각 simple root $$\alpha_i$$에 대하여 $$\sl_{2,\alpha_i}=\langle e_i,f_i,h_i\rangle$$의 작용으로 $$V$$를 $$\sl_2$$-가군으로 보면, $$e_i\cdot v=0$$이고 $$h_i\cdot v=\lambda(h_i)v$$이므로 $$v$$는 이 $$\sl_2$$-가군의 highest weight vector이다. $$V$$가 유한차원이므로 [§sl₂의 표현론, ⁋명제 6](/ko/math/lie_theory/representations_of_sl2#prop6)에 의해 그 highest weight $$\lambda(h_i)$$는 음이 아닌 정수이다. 따라서 $$\lambda$$는 dominant integral이다.
 
 (2) 역으로 $$\lambda$$가 dominant integral이라 하고 $$L(\lambda)$$가 유한차원임을 보인다. $$L(\lambda)$$의 생성 highest weight vector를 $$v$$라 하고 각 $$i$$에 대하여 $$n_i=\lambda(h_i)\in\mathbb{Z}_{\geq 0}$$이라 두자. 핵심은 벡터 $$f_i^{\,n_i+1}\cdot v$$가 $$0$$이라는 것이다. 이를 보이기 위해 $$\sl_{2,\alpha_i}$$-부분작용만을 본다. $$v$$는 $$e_i\cdot v=0$$, $$h_i\cdot v=n_i v$$를 만족하는 $$\sl_{2,\alpha_i}$$-highest weight vector이고, $$j\neq i$$인 다른 simple root vector $$e_j$$에 대해서는 $$e_j$$가 $$f_i^{\,m}\cdot v$$를 어떻게 옮기는지를 따져야 한다. $$\alpha_i$$가 simple root이므로 $$j\neq i$$이면 $$\alpha_i-\alpha_j$$는 root가 아니어서 $$[e_j,f_i]\in\mathfrak{g}_{\alpha_j-\alpha_i}=0$$, 곧 $$e_j$$와 $$f_i$$가 교환한다. 따라서
 
@@ -214,7 +214,7 @@ $$e_i\cdot\bigl(f_i^{\,n_i+1}\cdot v\bigr)=(n_i+1)\,(n_i-n_i)\,f_i^{\,n_i}\cdot 
 
 증명의 핵심은 각 simple root 방향에서 표현을 $$\sl_{2,\alpha_i}$$-가군으로 잘라 $$\sl_2$$의 표현론을 적용하는 데에 있다. Dominant integral 조건 $$\lambda(h_i)\in\mathbb{Z}_{\geq 0}$$은 각 방향의 highest weight 사슬이 $$\sl_2$$에서처럼 음이 아닌 정수 단계에서 닫히도록 강제하며, 이것이 무한차원이던 $$M(\lambda)$$의 기약 몫 $$L(\lambda)$$를 유한차원으로 떨어뜨린다. Weyl group 대칭이 이렇게 잘린 유한한 weight 집합을 하나로 묶어 표현 전체의 유한차원성을 보장한다. 
 
-이 정리로 semisimple Lie algebra의 유한차원 표현론은 완결된 그림을 얻는다. Weyl 완전가약성 ([§Weyl 완전가약성 정리, ⁋정리 7](/ko/math/lie_theory/weyl_complete_reducibility#thm7))에 의해 임의의 유한차원 표현은 기약 표현들의 직합이고, 그 기약 인자들은 정리 12에 의해 dominant integral weight들로 색인된다. 따라서 임의의 유한차원 표현은 각 dominant integral weight $$\lambda$$에 대한 $$L(\lambda)$$의 multiplicity로 완전히 결정되며, 표현론의 모든 질문은 이 multiplicity를 계산하는 문제로 환원된다. $$\sl_2$$에서 모든 기약 표현이 음이 아닌 정수 $$n$$으로 색인되고 $$L(n)=V(n)$$이었던 것 ([§sl₂의 표현론, ⁋정의 5](/ko/math/lie_theory/representations_of_sl2#def5))이 이 일반적 그림의 가장 단순한 경우이다.
+이 정리로 semisimple Lie algebra의 유한차원 표현론은 완결된 그림을 얻는다. [§Weyl 완전가약성 정리, ⁋정리 7](/ko/math/lie_theory/weyl_complete_reducibility#thm7)에 의해 임의의 유한차원 표현은 기약 표현들의 직합이고, 그 기약 인자들은 정리 12에 의해 dominant integral weight들로 색인된다. 따라서 임의의 유한차원 표현은 각 dominant integral weight $$\lambda$$에 대한 $$L(\lambda)$$의 multiplicity로 완전히 결정되며, 표현론의 모든 질문은 이 multiplicity를 계산하는 문제로 환원된다. $$\sl_2$$에서 모든 기약 표현이 음이 아닌 정수 $$n$$으로 색인되고 $$L(n)=V(n)$$이었던 것이 이 일반적 그림의 가장 단순한 경우이다. ([§sl₂의 표현론, ⁋정의 5](/ko/math/lie_theory/representations_of_sl2#def5))
 
 ---
 

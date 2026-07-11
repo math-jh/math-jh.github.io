@@ -10,7 +10,7 @@ sidebar:
 
 date: 2025-06-18
 weight: 9
- 
+
 ---
 
 우리는 앞서 Galois extension과 Galois group을 정의했다. Galois theory의 핵심적인 결과는 field extension $$\mathbb{L}/\mathbb{K}$$에 대하여 Galois group $$\Gal(\mathbb{L}/\mathbb{K})$$의 subgroup들의 lattice와, $$\mathbb{L}/\mathbb{K}$$의 Galois subextension들의 lattice 사이에 order-preserving bijection이 존재한다는 것이다. 많은 경우에 이 결과는 Galois group $$\Gal(\mathbb{L}/\mathbb{K})$$이 유한한 경우만 다루지만, 우리는 $$\Gal(\mathbb{L}/\mathbb{K})$$가 무한할 경우 또한 다룰 것이므로 이를 위해서는 $$\Gal(\mathbb{L}/\mathbb{K})$$에 적절한 위상구조를 주어야 한다. 
@@ -175,7 +175,7 @@ $$\varphi(\sigma)\cdot\sigma(\varphi(\tau))=\frac{\sigma(c)}{c}\cdot\sigma\left(
 Finite degree Galois extension $$\mathbb{L}/\mathbb{K}$$에 대하여, 임의의 1-cocycle $$\varphi:G \rightarrow \mathbb{L}^\times$$는 1-coboundary이다. 즉 $$H^1(G,\mathbb{L}^\times)$$는 자명하다.
 :::
 ::: 증명
-$$G$$의 원소들은 $$\mathbb{L}$$에서 $$\mathbb{L}$$로의 서로 다른 homomorphism들이므로, [§에탈대수, ⁋따름정리 3](/ko/math/field_theory/etale_algebras#cor3)의 Dedekind 정리에 의하여 $$\mathbb{L}$$-벡터공간 안에서 일차독립이다. $$\varphi$$의 값들은 모두 $$0$$이 아니므로, 일차결합
+$$G$$의 원소들은 $$\mathbb{L}$$에서 $$\mathbb{L}$$로의 서로 다른 homomorphism들이므로, [§에탈대수, ⁋따름정리 3](/ko/math/field_theory/etale_algebras#cor3)에 의하여 $$\mathbb{L}$$-벡터공간 안에서 일차독립이다. $$\varphi$$의 값들은 모두 $$0$$이 아니므로, 일차결합
 
 $$\sum_{\tau\in G}\varphi(\tau)\,\tau$$
 

@@ -15,7 +15,7 @@ published: false
 
 ---
 
-앞선 글 ([§중국인의 나머지정리, ⁋명제 5](/ko/math/ring_theory/chinese_remainder_theorem#prop5))에서 우리는 쌍별로 comaximal한 two-sided ideal들에 대해 환이 몫환들의 곱으로 분해됨을 보았다. 그 글의 마지막 ([§중국인의 나머지정리, ⁋명제 6](/ko/math/ring_theory/chinese_remainder_theorem#prop6))에서는 이러한 곱분해가 환의 center에 놓인 특정한 원소들, 즉 idempotent들로 기술된다는 사실이 짧게 언급되었다. 이 글에서는 그 원소들을 본격적으로 다룬다. 우리는 idempotent의 성질을 정리하고, central idempotent의 complete orthogonal set이 환의 직접곱 분해와 일대일대응함을 증명한 뒤, 이로부터 일반 환에서의 중국인의 나머지정리를 다시 조명한다.
+앞선 글에서 ([§중국인의 나머지정리, ⁋명제 5](/ko/math/ring_theory/chinese_remainder_theorem#prop5)) 우리는 쌍별로 comaximal한 two-sided ideal들에 대해 환이 몫환들의 곱으로 분해됨을 보았다. 그 글의 마지막에서는 ([§중국인의 나머지정리, ⁋명제 6](/ko/math/ring_theory/chinese_remainder_theorem#prop6)) 이러한 곱분해가 환의 center에 놓인 특정한 원소들, 즉 idempotent들로 기술된다는 사실이 짧게 언급되었다. 이 글에서는 그 원소들을 본격적으로 다룬다. 우리는 idempotent의 성질을 정리하고, central idempotent의 complete orthogonal set이 환의 직접곱 분해와 일대일대응함을 증명한 뒤, 이로부터 일반 환에서의 중국인의 나머지정리를 다시 조명한다.
 
 별도의 언급이 없는 한 $$A$$는 항등원 $$1\neq 0$$을 갖는 환이며, commutativity는 가정하지 않는다. 가환성이 필요한 곳에서는 그때그때 명시한다.
 
@@ -164,18 +164,18 @@ $$\frac{A}{\bigcap_{i=1}^n\mathfrak{a}_i}\cong\prod_{i=1}^n A/\mathfrak{a}_i$$
 가 존재한다. 특히 $$\bigcap_{i=1}^n\mathfrak{a}_i=0$$이면 $$A\cong\prod_{i=1}^n A/\mathfrak{a}_i$$이다.
 :::
 ::: 증명
-이는 앞선 글 ([§중국인의 나머지정리, ⁋명제 5](/ko/math/ring_theory/chinese_remainder_theorem#prop5))에서 증명되었다. 간략히 다시 적으면, $$\ker\pi=\bigcap\mathfrak{a}_i$$임은 정의에서 곧바로 따라오고, 전사성은 다음과 같이 귀납적으로 얻어진다. $$n=1$$인 경우는 quotient의 성질로부터 자명하다. 모든 $$i<n$$에 대해 $$\pi_i(y)$$를 원하는 값으로 맞추는 $$y$$가 있다 하면, $$x=y+z$$ 꼴로 $$z\in\bigcap_{i<n}\mathfrak{a}_i$$이면서 $$z+\mathfrak{a}_n=x_n-y+\mathfrak{a}_n$$인 $$z$$를 찾으면 된다. 이러한 $$z$$의 존재는 comaximal 조건이 주는 등식
+이는 앞선 글에서 ([§중국인의 나머지정리, ⁋명제 5](/ko/math/ring_theory/chinese_remainder_theorem#prop5)) 증명되었다. 간략히 다시 적으면, $$\ker\pi=\bigcap\mathfrak{a}_i$$임은 정의에서 곧바로 따라오고, 전사성은 다음과 같이 귀납적으로 얻어진다. $$n=1$$인 경우는 quotient의 성질로부터 자명하다. 모든 $$i<n$$에 대해 $$\pi_i(y)$$를 원하는 값으로 맞추는 $$y$$가 있다 하면, $$x=y+z$$ 꼴로 $$z\in\bigcap_{i<n}\mathfrak{a}_i$$이면서 $$z+\mathfrak{a}_n=x_n-y+\mathfrak{a}_n$$인 $$z$$를 찾으면 된다. 이러한 $$z$$의 존재는 comaximal 조건이 주는 등식
 
 $$\mathfrak{a}_n+\bigcap_{i<n}\mathfrak{a}_i=A$$
 
-([§중국인의 나머지정리, ⁋명제 3](/ko/math/ring_theory/chinese_remainder_theorem#prop3))으로부터 보장된다. 마지막의 동형사상은 first isomorphism theorem의 직접적 귀결이다.
+으로부터 보장된다 ([§중국인의 나머지정리, ⁋명제 3](/ko/math/ring_theory/chinese_remainder_theorem#prop3)). 마지막의 동형사상은 first isomorphism theorem의 직접적 귀결이다.
 :::
 
 이 정리가 [정리 5](#thm5)의 곱분해를 어떻게 만들어내는지 살펴보자. $$\bigcap\mathfrak{a}_i=0$$이라 가정하면 $$\pi:A\xrightarrow{\sim}\prod A/\mathfrak{a}_i$$는 환동형사상이다. 곱환 $$\prod A/\mathfrak{a}_i$$에는 자연스러운 central complete set이 있는데, 바로 $$i$$번째 성분만 $$1$$이고 나머지가 $$0$$인 원소
 
 $$\bar e_i=(0,\ldots, 0,\underset{i}{1},0,\ldots, 0)$$
 
-들이다. 이들이 $$\prod A/\mathfrak{a}_i$$의 central한 orthogonal idempotent의 complete set임은 성분별로 확인된다. $$\pi$$가 동형이므로 $$e_i:=\pi^{-1}(\bar e_i)$$는 $$A$$의 central한 orthogonal idempotent의 complete set을 이루고, [정리 5](#thm5)의 대응에 따라 분해 $$A\cong\prod Ae_i$$를 준다. 이 때 $$Ae_i\cong A/\mathfrak{a}_i$$이며, 실제로 $$\mathfrak{a}_i=\ker(A\to A/\mathfrak{a}_i)$$는 $$\pi$$ 아래에서 $$i$$번째 성분이 $$0$$인 부분, 즉 $$A(1-e_i)$$에 대응한다. 이는 앞선 글의 ([§중국인의 나머지정리, ⁋명제 6](/ko/math/ring_theory/chinese_remainder_theorem#prop6))에서 $$\mathfrak{a}_i=A(1-e_i)$$로 기술된 idempotent들이 바로 위의 $$e_i$$임을 말해 준다.
+들이다. 이들이 $$\prod A/\mathfrak{a}_i$$의 central한 orthogonal idempotent의 complete set임은 성분별로 확인된다. $$\pi$$가 동형이므로 $$e_i:=\pi^{-1}(\bar e_i)$$는 $$A$$의 central한 orthogonal idempotent의 complete set을 이루고, [정리 5](#thm5)의 대응에 따라 분해 $$A\cong\prod Ae_i$$를 준다. 이 때 $$Ae_i\cong A/\mathfrak{a}_i$$이며, 실제로 $$\mathfrak{a}_i=\ker(A\to A/\mathfrak{a}_i)$$는 $$\pi$$ 아래에서 $$i$$번째 성분이 $$0$$인 부분, 즉 $$A(1-e_i)$$에 대응한다. 이는 앞선 글의 [§중국인의 나머지정리, ⁋명제 6](/ko/math/ring_theory/chinese_remainder_theorem#prop6)에서 $$\mathfrak{a}_i=A(1-e_i)$$로 기술된 idempotent들이 바로 위의 $$e_i$$임을 말해 준다.
 
 요약하면, 쌍별 comaximal이고 $$\bigcap\mathfrak{a}_i=0$$인 ideal들이 주어지는 것은 $$A$$가 곱으로 분해되는 것과 같고, 이는 다시 $$A$$가 central한 orthogonal idempotent의 complete set을 갖는 것과 같다. 중국인의 나머지정리는 이 세 관점을 하나로 묶는 다리이다.
 

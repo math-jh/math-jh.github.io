@@ -102,7 +102,7 @@ $$d_Z\bigl(g(f(x)), g(f(a))\bigr) < \varepsilon$$
 
 [명제 2](#prop2)의 [명제 2](#prop2)를 쓰면 같은 사실이 한층 짧게 나온다. $$x_n \to a$$이면 $$f$$의 연속으로 $$f(x_n) \to f(a)$$이고, 다시 $$g$$의 연속으로 $$g(f(x_n)) \to g(f(a))$$이므로 $$(g \circ f)(x_n) \to (g \circ f)(a)$$이다. 두 증명은 본질적으로 같은 내용을 $$\varepsilon$$-$$\delta$$의 언어와 점열의 언어로 각각 옮긴 것이다.
 
-치역이 $$\mathbb{R}$$인 경우, 연속함수의 합·곱·몫도 연속이다. 이는 실수열의 극한이 대수 연산과 교환한다는 사실 ([§수열의 수렴, ⁋정리 4](/ko/math/analysis/convergence_of_sequences#thm4))을 [명제 2](#prop2)를 통해 함수에 옮긴 것이다.
+치역이 $$\mathbb{R}$$인 경우, 연속함수의 합·곱·몫도 연속이다. 이는 실수열의 극한이 대수 연산과 교환한다는 [§수열의 수렴, ⁋정리 4](/ko/math/analysis/convergence_of_sequences#thm4)를 [명제 2](#prop2)를 통해 함수에 옮긴 것이다.
 
 ::: 명제 6 (합과 곱의 연속)
 $$f, g : X \to \mathbb{R}$$가 $$a$$에서 연속이면 $$f + g$$와 $$fg$$도 $$a$$에서 연속이며, $$g(a) \neq 0$$이면 $$f/g$$도 $$a$$에서 연속이다.
@@ -127,10 +127,10 @@ $$\frac{f}{g}(x_n) = \frac{f(x_n)}{g(x_n)} \to \frac{f(a)}{g(a)} = \frac{f}{g}(a
 
 ## 예시와 계산
 
-위상적 특징화([명제 3](#prop3))가 가장 잘 드러나는 함수는 거리 그 자체이다.
+[명제 3](#prop3)가 가장 잘 드러나는 함수는 거리 그 자체이다.
 
 ::: 예시 7 (거리함수의 연속)
-거리공간 $$(X, d)$$에서 한 점 $$p$$를 고정하고 $$f(x) = d(x, p)$$로 두자. 삼각부등식 ([§거리공간, ⁋정의 1](/ko/math/analysis/metric_spaces#def1))에서 임의의 $$x, y$$에 대해
+거리공간 $$(X, d)$$에서 한 점 $$p$$를 고정하고 $$f(x) = d(x, p)$$로 두자. [§거리공간, ⁋정의 1](/ko/math/analysis/metric_spaces#def1)의 삼각부등식에서 임의의 $$x, y$$에 대해
 
 $$d(x, p) \leq d(x, y) + d(y, p), \qquad d(y, p) \leq d(y, x) + d(x, p)$$
 

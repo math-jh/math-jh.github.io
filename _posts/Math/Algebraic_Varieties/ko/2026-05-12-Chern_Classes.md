@@ -11,6 +11,7 @@ sidebar:
 date: 2026-05-12
 weight: 22
 published: false
+
 ---
 
 벡터다발은 대수기하학에서 기하적 대상을 다루는 핵심 도구이며, 이번 글에서는 주어진 벡터다발이 얼마나 뒤틀려 있는지를 재는 *Chern class*를 정의한다. 이는 complex vector bundle에 대해 정의되는 위상적·기하학적 불변량으로, 대수위상에서와 마찬가지로 공리적으로 정의한 뒤, 직선다발에서의 기하학적 의미를 보고, 계산의 핵심인 splitting principle을 거쳐, 접다발의 천 특성류와 Euler 지표의 관계 및 구체적 계산까지 다룬다. 모든 논의는 적당한 base space $$X$$ 위의 complex vector bundle에 대해 이루어지며, cohomology는 $$H^\bullet(X, \mathbb{Z})$$를 사용한다. Cohomology convention상 $$k$$차 Chern class가 $$2k$$차 cohomology에 들어감을 기억하자.
@@ -100,7 +101,7 @@ Splitting principle의 핵심은 $$f^{\ast}$$이 단사라는 점이다. $$Y$$�
 ::: 증명
 **존재성.** [명제 4](#prop4)의 관계식 $$\xi^r + \pi^{\ast}c_1\xi^{r-1} + \cdots + \pi^{\ast}c_r = 0$$을 $$c_i(\mathcal{E})$$의 정의로 삼으면 (Grothendieck), 이렇게 얻은 $$c_i$$가 세 공리를 모두 만족함을 확인할 수 있다 ([BT]).
 
-**유일성.** 공리를 만족하는 두 이론 $$c, c'$$가 있다 하자. 먼저 직선다발에서는 둘이 일치한다. 임의의 line bundle $$\mathcal{L}$$은 분류공간 $$\mathbb{P}^{\infty}$$로의 사상 $$g: X \to \mathbb{P}^{\infty}$$에 대해 $$\mathcal{L} = g^{\ast}\mathcal{O}(1)$$의 꼴이고, naturality와 normalization에 의해 $$c_1(\mathcal{L}) = g^{\ast}c_1(\mathcal{O}(1)) = c_1'(\mathcal{L})$$이기 때문이다. 일반 $$\mathcal{E}$$에 대해서는 splitting principle ([명제 5](#prop5))로 $$f^{\ast}\mathcal{E} = \bigoplus_i \mathcal{L}_i$$이고 $$f^{\ast}$$이 단사인 $$f: Y \to X$$를 택하면, Whitney 공식과 normalization으로
+**유일성.** 공리를 만족하는 두 이론 $$c, c'$$가 있다 하자. 먼저 직선다발에서는 둘이 일치한다. 임의의 line bundle $$\mathcal{L}$$은 분류공간 $$\mathbb{P}^{\infty}$$로의 사상 $$g: X \to \mathbb{P}^{\infty}$$에 대해 $$\mathcal{L} = g^{\ast}\mathcal{O}(1)$$의 꼴이고, naturality와 normalization에 의해 $$c_1(\mathcal{L}) = g^{\ast}c_1(\mathcal{O}(1)) = c_1'(\mathcal{L})$$이기 때문이다. 일반 $$\mathcal{E}$$에 대해서는 [명제 5](#prop5)로 $$f^{\ast}\mathcal{E} = \bigoplus_i \mathcal{L}_i$$이고 $$f^{\ast}$$이 단사인 $$f: Y \to X$$를 택하면, Whitney 공식과 normalization으로
 
 $$f^{\ast}c(\mathcal{E}) = \prod_i \bigl(1 + c_1(\mathcal{L}_i)\bigr) = f^{\ast}c'(\mathcal{E})$$
 
@@ -143,7 +144,7 @@ splitting principle로 $$\mathcal{E} = \bigoplus_i \mathcal{L}_i$$ (Chern root $
 
 $$\chern(\mathcal{E} \oplus \mathcal{F}) = \sum_i e^{x_i} + \sum_j e^{y_j} = \chern(\mathcal{E}) + \chern(\mathcal{F})$$
 
-이다. 한편 $$\mathcal{E} \otimes \mathcal{F} = \bigoplus_{i,j} \mathcal{L}_i \otimes \mathcal{M}_j$$의 Chern root는 $$c_1(\mathcal{L}_i \otimes \mathcal{M}_j) = x_i + y_j$$ ([명제 3](#prop3))이므로
+이다. 한편 $$\mathcal{E} \otimes \mathcal{F} = \bigoplus_{i,j} \mathcal{L}_i \otimes \mathcal{M}_j$$의 Chern root는 [명제 3](#prop3)에 의하여 $$c_1(\mathcal{L}_i \otimes \mathcal{M}_j) = x_i + y_j$$이므로
 
 $$\chern(\mathcal{E} \otimes \mathcal{F}) = \sum_{i,j} e^{x_i + y_j} = \Bigl(\sum_i e^{x_i}\Bigr)\Bigl(\sum_j e^{y_j}\Bigr) = \chern(\mathcal{E}) \smile \chern(\mathcal{F})$$
 

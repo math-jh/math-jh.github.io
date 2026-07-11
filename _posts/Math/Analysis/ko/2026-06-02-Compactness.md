@@ -37,7 +37,7 @@ $$\mathbb{R}^n$$의 부분집합 $$K$$가 점렬컴팩트인 것은 $$K$$가 닫
 
 $$x_m = (x_m^{(1)}, x_m^{(2)}, \ldots, x_m^{(n)}) \in \mathbb{R}^n$$
 
-이고, $$K$$가 유계이므로 각 좌표열 $$(x_m^{(j)})_m$$도 유계인 실수열이다. 먼저 첫 좌표열 $$(x_m^{(1)})$$에 Bolzano–Weierstrass 정리 ([§부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4))를 적용하여 수렴하는 부분수열의 첨자 집합 $$S_1 \subseteq \mathbb{N}$$을 얻는다. 그 부분수열 위에서 둘째 좌표열은 여전히 유계이므로 다시 [§부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4)를 적용하여 $$S_2 \subseteq S_1$$을 얻고, 이를 반복하면
+이고, $$K$$가 유계이므로 각 좌표열 $$(x_m^{(j)})_m$$도 유계인 실수열이다. 먼저 첫 좌표열 $$(x_m^{(1)})$$에 [§부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4)를 적용하여 수렴하는 부분수열의 첨자 집합 $$S_1 \subseteq \mathbb{N}$$을 얻는다. 그 부분수열 위에서 둘째 좌표열은 여전히 유계이므로 다시 [§부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4)를 적용하여 $$S_2 \subseteq S_1$$을 얻고, 이를 반복하면
 
 $$S_1 \supseteq S_2 \supseteq \cdots \supseteq S_n, \qquad x_m^{(j)} \xrightarrow[ m \in S_j ]{} \xi_j \ (1 \leq j \leq n)$$
 
@@ -51,7 +51,7 @@ $$x = (\xi_1, \xi_2, \ldots, \xi_n) \in \mathbb{R}^n$$
 
 $$\lVert x_m \rVert > m$$
 
-인 점 $$x_m \in K$$을 고를 수 있고, 이 점열의 임의의 부분수열도 노름이 무한대로 발산하므로 수렴할 수 없다. 따라서 $$K$$는 점렬컴팩트가 아니다. 다음으로 $$K$$가 닫혀 있지 않다 하자. 명제 4 ([§열린집합과 닫힌집합, ⁋명제 4](/ko/math/analysis/open_and_closed_sets#prop4))에 의해 $$K$$의 점열 $$x_m \to x$$이면서 $$x \notin K$$인 경우가 존재한다. 이때 $$(x_m)$$의 모든 부분수열은 같은 극한 $$x$$로 수렴하는데 ([§부분수열과 Bolzano–Weierstrass 정리, ⁋명제 2](/ko/math/analysis/bolzano_weierstrass#prop2)) $$x \notin K$$이므로, $$K$$ 안의 점으로 수렴하는 부분수열이 하나도 없다. 따라서 $$K$$는 점렬컴팩트가 아니다. 두 경우를 종합하면, $$K$$가 점렬컴팩트이면 $$K$$는 닫혀 있고 유계이다.
+인 점 $$x_m \in K$$을 고를 수 있고, 이 점열의 임의의 부분수열도 노름이 무한대로 발산하므로 수렴할 수 없다. 따라서 $$K$$는 점렬컴팩트가 아니다. 다음으로 $$K$$가 닫혀 있지 않다 하자. [§열린집합과 닫힌집합, ⁋명제 4](/ko/math/analysis/open_and_closed_sets#prop4)에 의해 $$K$$의 점열 $$x_m \to x$$이면서 $$x \notin K$$인 경우가 존재한다. 이때 $$(x_m)$$의 모든 부분수열은 같은 극한 $$x$$로 수렴하는데 ([§부분수열과 Bolzano–Weierstrass 정리, ⁋명제 2](/ko/math/analysis/bolzano_weierstrass#prop2)) $$x \notin K$$이므로, $$K$$ 안의 점으로 수렴하는 부분수열이 하나도 없다. 따라서 $$K$$는 점렬컴팩트가 아니다. 두 경우를 종합하면, $$K$$가 점렬컴팩트이면 $$K$$는 닫혀 있고 유계이다.
 :::
 
 따라서 닫힌구간 $$[a, b]$$, 닫힌 공, 닫힌 직육면체 등은 모두 점렬컴팩트이다. 반면 개구간 $$(0, 1)$$은 닫혀 있지 않아, $$\mathbb{R}$$ 전체는 유계가 아니어서 점렬컴팩트가 아니다.

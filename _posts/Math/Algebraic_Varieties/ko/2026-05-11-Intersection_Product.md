@@ -11,6 +11,7 @@ sidebar:
 date: 2026-05-11
 weight: 19
 
+
 ---
 
 [§저우 군](/ko/math/algebraic_varieties/chow_groups)에서 우리는 Chow group $$\CH^\ast(X)$$를 정의하였다. 우리는 해당 글의 말미에서 여기에 intersection product를 정의하여 ring구조를 줄 수 있다고 주장했었는데, 이번 글에서는 이를 정의하고 성질들을 살펴본다. 
@@ -103,7 +104,7 @@ Intersection product에 의해 $$\CH^\ast(X) = \bigoplus_k \CH^k(X)$$는 *graded
 Smooth quasi-projective variety $$X$$와 cycle $$Z \in \CH^k(X)$$, 그리고 임의의 cycle $$W \in \CH^l(X)$$에 대해, $$Z' \sim_{\text{rat}} Z$$이고 $$Z'$$과 $$W$$가 properly intersect하는 $$Z'$$가 존재한다.
 :::
 
-핵심 아이디어는 다음과 같다. $$Z$$를 구성하는 irreducible component $$V_i$$마다, $$V_i$$를 포함하는 충분히 "일반적인" hypersurface $$H_i$$로 자르고, $$V_i \cap H_1 \cap \cdots \cap H_s$$와 같은 형태의 cycle을 취한다. 이때 "일반적"이라는 것은 $$H_i$$가 $$W$$와 generic한 위치에서 만나도록 선택한다는 것으로, 이렇게 하면 차원이 적절히 떨어져 proper intersection을 이룬다. ([§선형계, ⁋정의 5](/ko/math/algebraic_varieties/linear_systems#def5))에서 보았듯 basepoint-free linear system을 사용하면 이러한 "일반적인" 이동을 regular map으로 실현할 수 있으며, 이 과정이 rational equivalence를 보존함을 보이는 것이 증명의 핵심이다.
+핵심 아이디어는 다음과 같다. $$Z$$를 구성하는 irreducible component $$V_i$$마다, $$V_i$$를 포함하는 충분히 "일반적인" hypersurface $$H_i$$로 자르고, $$V_i \cap H_1 \cap \cdots \cap H_s$$와 같은 형태의 cycle을 취한다. 이때 "일반적"이라는 것은 $$H_i$$가 $$W$$와 generic한 위치에서 만나도록 선택한다는 것으로, 이렇게 하면 차원이 적절히 떨어져 proper intersection을 이룬다. [§선형계, ⁋정의 5](/ko/math/algebraic_varieties/linear_systems#def5)에서 보았듯 basepoint-free linear system을 사용하면 이러한 "일반적인" 이동을 regular map으로 실현할 수 있으며, 이 과정이 rational equivalence를 보존함을 보이는 것이 증명의 핵심이다.
 
 그럼 우리는 위의 보조정리를 사용하여 $$Z$$를 $$Z'$$로 옮겨준 후, 다음의 식
 
@@ -125,7 +126,7 @@ Closed embedding $$i: Y \hookrightarrow X$$에 대해, $$\mathbb{A}^1$$을 매�
 구성은 blow-up을 사용한다. 먼저 $$X \times \mathbb{A}^1$$ 안에서 $$Y \times \{0\}$$를 따라 blow-up하여 $$\widetilde{M} = \Bl_{Y \times \{0\}}(X \times \mathbb{A}^1)$$을 얻고, 그 후 $$X \times \{0\}$$의 proper transform을 제거하여 $$M = \widetilde{M} \setminus \widetilde{X \times \{0\}}$$로 정의한다. 이 blow-up의 exceptional divisor는 $$\mathbb{P}(C_{Y/X} \oplus \mathcal{O}_Y)$$이며, proper transform을 제거하면 $$t=0$$ fiber에서 정확히 normal cone $$C_{Y/X}$$가 남는다. $$t \neq 0$$에서는 blow-up이 isomorphism이므로 fiber가 $$X$$ 그대로이다. 따라서 $$M \to \mathbb{A}^1$$은 $$t=1$$에서의 $$X$$를 $$t=0$$에서의 $$C_{Y/X}$$로 연결하는 deformation을 제공한다. Chow group에서 $$M$$ 위의 specialization map $$\sigma: \CH^\ast(X) \to \CH^\ast(C_{Y/X})$$을 정의할 수 있고, normal cone이 vector bundle 구조를 가질 때 (즉 regular embedding의 경우) Thom isomorphism에 의해 $$\CH^\ast(C_{Y/X}) \cong \CH^\ast(Y)$$가 되어 intersection product의 well-definedness가 확립된다.
 :::
 
-이 방법의 아이디어는 $$X$$를 연속적으로 변형하여 $$Y$$의 normal cone으로 수축시키는 것이다. 기하적으로, $$t=1$$에서는 원래 공간 $$X$$를 보고, $$t$$가 $$0$$으로 갈수록 $$X$$가 $$Y$$를 따라 점점 더 "펴지면서" 결국 $$t=0$$에서는 $$Y$$를 따라 벌어진 normal cone이 된다. ([§유리사상, ⁋예시 12](/ko/math/algebraic_varieties/rational_maps#ex12))의 blow-up이 한 점을 $$\mathbb{P}^1$$로 펼쳐 놓는 변형이었다면, deformation to normal cone은 이를 더 일반적인 embedding에 대해 수행하는 것이다.
+이 방법의 아이디어는 $$X$$를 연속적으로 변형하여 $$Y$$의 normal cone으로 수축시키는 것이다. 기하적으로, $$t=1$$에서는 원래 공간 $$X$$를 보고, $$t$$가 $$0$$으로 갈수록 $$X$$가 $$Y$$를 따라 점점 더 "펴지면서" 결국 $$t=0$$에서는 $$Y$$를 따라 벌어진 normal cone이 된다. [§유리사상, ⁋예시 12](/ko/math/algebraic_varieties/rational_maps#ex12)의 blow-up이 한 점을 $$\mathbb{P}^1$$로 펼쳐 놓는 변형이었다면, deformation to normal cone은 이를 더 일반적인 embedding에 대해 수행하는 것이다.
 
 ## 예시들
 

@@ -110,7 +110,7 @@ $$\rchi(\mathcal{O}_S(D)) = \frac{1}{2} D \cdot (D - K_S) + \rchi(\mathcal{O}_S)
 
 $$\rchi(\mathcal{O}_S(mK_S)) = \frac{m(m-1)}{2} K_S^2 + \rchi(\mathcal{O}_S)$$
 
-이다. 그런데 만일 $$m \geq 2$$이고 $$K_S$$가 ample이면 $$(m-1)K_S$$도 ample이므로, $$mK_S = K_S + (m-1)K_S$$에 [명제 1](#prop1)의 Kodaira vanishing을 적용하여 $$h^1 = h^2 = 0$$을 얻는다. 따라서 이 formula로부터 직접 $$P_m(S) = h^0(S, \mathcal{O}_S(mK_S))$$를 계산할 수 있게 된다.
+이다. 그런데 만일 $$m \geq 2$$이고 $$K_S$$가 ample이면 $$(m-1)K_S$$도 ample이므로, $$mK_S = K_S + (m-1)K_S$$에 [명제 1](#prop1)을 적용하여 $$h^1 = h^2 = 0$$을 얻는다. 따라서 이 formula로부터 직접 $$P_m(S) = h^0(S, \mathcal{O}_S(mK_S))$$를 계산할 수 있게 된다.
 
 한편 이러한 경우 plurigenera의 식은 asymptotically 2차식인 것으로 생각할 수 있다. 이는 
 
@@ -173,7 +173,7 @@ $$H^0(X, \mathcal{L}^{\otimes m}) \longrightarrow H^0(Z, \mathcal{L}^{\otimes m}
 
 를 고려하면, $$H^1(X, \mathcal{I}_p^2 \otimes \mathcal{L}^{\otimes m}) = 0$$이면 separation of tangent vectors가 성립한다.
 
-구체적으로, $$\mathcal{L}$$이 ample이면 Kodaira vanishing은 $$H^i(X, \omega_X \otimes \mathcal{L}^{\otimes m}) = 0$$ ($$i > 0$$)을 보장한다. 적절한 twist와 Serre duality를 사용하면 위의 $$H^1$$들 역시 vanishing하게 되어, 충분히 큰 $$m$$에서 $$\mathcal{L}^{\otimes m}$$의 sections가 위의 separation 조건들을 만족함을 보일 수 있다. 이는 [명제 6](#prop6)의 Kodaira embedding theorem의 증명에서 핵심적으로 사용되는 바이다. 더 나아가 $$\mathcal{L}^{\otimes m}$$이 very ample일 뿐만 아니라 그에 의한 embedding이 projectively normal이 되도록 하는 조건도, Kodaira vanishing을 통해 관련된 multiplication map
+구체적으로, $$\mathcal{L}$$이 ample이면 Kodaira vanishing은 $$H^i(X, \omega_X \otimes \mathcal{L}^{\otimes m}) = 0$$ ($$i > 0$$)을 보장한다. 적절한 twist와 Serre duality를 사용하면 위의 $$H^1$$들 역시 vanishing하게 되어, 충분히 큰 $$m$$에서 $$\mathcal{L}^{\otimes m}$$의 sections가 위의 separation 조건들을 만족함을 보일 수 있다. 이는 [명제 6](#prop6)의 증명에서 핵심적으로 사용되는 바이다. 더 나아가 $$\mathcal{L}^{\otimes m}$$이 very ample일 뿐만 아니라 그에 의한 embedding이 projectively normal이 되도록 하는 조건도, Kodaira vanishing을 통해 관련된 multiplication map
 
 $$S^\mu H^0(X, \mathcal{L}^{\otimes m}) \longrightarrow H^0(X, \mathcal{L}^{\otimes \mu m})$$
 

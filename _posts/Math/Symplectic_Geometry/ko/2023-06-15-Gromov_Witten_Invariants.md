@@ -28,7 +28,7 @@ $$\langle \alpha_1, \ldots, \alpha_n \rangle_{g, n, \beta}^X := \int_{[\overline
 으로 정의된다. 여기서 $$\mathrm{ev}_i: \overline{\mathcal{M}}_{g, n}(X, \beta) \to X$$는 $$i$$번째 marked point에서의 evaluation map이다.
 :::
 
-비유한 적분이 되려면 형식적으로 $$\sum_i \deg \alpha_i = 2\, \mathrm{vdim}_\mathbb{C}\, \overline{\mathcal{M}}_{g, n}(X, \beta)$$ ([§Stable maps의 moduli space, ⁋명제 5](/ko/math/symplectic_geometry/stable_maps#prop5))를 요구하며, 그 외에는 GW invariant가 정의상 $$0$$이다.
+비유한 적분이 되려면 형식적으로 $$\sum_i \deg \alpha_i = 2\, \mathrm{vdim}_\mathbb{C}\, \overline{\mathcal{M}}_{g, n}(X, \beta)$$를 요구하며 ([§Stable maps의 moduli space, ⁋명제 5](/ko/math/symplectic_geometry/stable_maps#prop5)), 그 외에는 GW invariant가 정의상 $$0$$이다.
 
 ## Descendant Gromov-Witten invariant
 
@@ -42,7 +42,7 @@ $$\langle \tau_{a_1}(\alpha_1), \ldots, \tau_{a_n}(\alpha_n) \rangle_{g, n, \bet
 으로 정의된다. 여기서 $$\psi_i$$는 $$i$$번째 marked point에서의 cotangent line bundle의 first Chern class이다.
 :::
 
-$$a_i = 0$$이면 primary GW invariant ([정의 1](#def1))로 환원된다. $$\psi$$ class의 power는 *gravitational descendant*라 불리며, 물리에서 *gravitational coupling*의 quantum 보정과 관련된다.
+$$a_i = 0$$이면 [정의 1](#def1)의 primary GW invariant로 환원된다. $$\psi$$ class의 power는 *gravitational descendant*라 불리며, 물리에서 *gravitational coupling*의 quantum 보정과 관련된다.
 
 ## Genus-0 axiom: string, divisor, dilaton
 

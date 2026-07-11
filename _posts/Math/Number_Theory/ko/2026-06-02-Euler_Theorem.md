@@ -35,7 +35,7 @@ $$a^{\varphi(n)} \equiv 1 \pmod n$$
 :::
 
 ::: 증명
-$$r_1, r_2, \ldots, r_{\varphi(n)}$$을 기약잉여계라 하자. $$\gcd(a, n) = 1$$이면 $$a r_1, a r_2, \ldots, a r_{\varphi(n)}$$ 역시 모두 $$n$$과 서로소이고, 소거법칙 ([§합동식, ⁋명제 6](/ko/math/number_theory/congruences#prop6))에 의해 법 $$n$$에 대해 서로 다르다. 따라서 이들은 기약잉여계 $$\{r_1, \ldots, r_{\varphi(n)}\}$$을 순서만 바꾸어 놓은 것이다. 양쪽을 모두 곱하면
+$$r_1, r_2, \ldots, r_{\varphi(n)}$$을 기약잉여계라 하자. $$\gcd(a, n) = 1$$이면 $$a r_1, a r_2, \ldots, a r_{\varphi(n)}$$ 역시 모두 $$n$$과 서로소이고, [§합동식, ⁋명제 6](/ko/math/number_theory/congruences#prop6)에 의해 법 $$n$$에 대해 서로 다르다. 따라서 이들은 기약잉여계 $$\{r_1, \ldots, r_{\varphi(n)}\}$$을 순서만 바꾸어 놓은 것이다. 양쪽을 모두 곱하면
 
 $$a^{\varphi(n)} r_1 r_2 \cdots r_{\varphi(n)} \equiv r_1 r_2 \cdots r_{\varphi(n)} \pmod n$$
 
@@ -53,14 +53,14 @@ $$\gcd(m, n) = 1$$이면 $$\varphi(mn) = \varphi(m)\varphi(n)$$이다.
 :::
 
 ::: 증명
-중국인의 나머지 정리 ([§중국인의 나머지 정리, ⁋참고 4](/ko/math/number_theory/chinese_remainder_theorem#rmk4))에 의해 환 동형 $$\mathbb{Z}/mn\mathbb{Z} \cong \mathbb{Z}/m\mathbb{Z} \times \mathbb{Z}/n\mathbb{Z}$$가 성립한다. 동형은 역원을 갖는 원소를 역원을 갖는 원소로 보내므로, $$\mathbb{Z}/mn\mathbb{Z}$$에서 가역인 원소는 양쪽 성분이 모두 가역인 쌍에 정확히 대응한다. 가역원의 개수를 세면 $$\varphi(mn) = \varphi(m)\varphi(n)$$이다.
+[§중국인의 나머지 정리, ⁋참고 4](/ko/math/number_theory/chinese_remainder_theorem#rmk4)에 의해 환 동형 $$\mathbb{Z}/mn\mathbb{Z} \cong \mathbb{Z}/m\mathbb{Z} \times \mathbb{Z}/n\mathbb{Z}$$가 성립한다. 동형은 역원을 갖는 원소를 역원을 갖는 원소로 보내므로, $$\mathbb{Z}/mn\mathbb{Z}$$에서 가역인 원소는 양쪽 성분이 모두 가역인 쌍에 정확히 대응한다. 가역원의 개수를 세면 $$\varphi(mn) = \varphi(m)\varphi(n)$$이다.
 :::
 
 소수 거듭제곱에서의 값은 직접 센다: $$1$$부터 $$p^k$$까지 중 $$p$$와 서로소가 *아닌* 수는 $$p$$의 배수 $$p, 2p, \ldots, p^{k-1}p$$의 $$p^{k-1}$$개이므로
 
 $$\varphi(p^k) = p^k - p^{k-1} = p^k\left(1 - \frac1p\right)$$
 
-이다. 곱셈성과 결합하면, $$n = p_1^{e_1}\cdots p_r^{e_r}$$의 소인수분해 ([§소수와 산술의 기본정리, ⁋정리 3](/ko/math/number_theory/primes#thm3))로부터
+이다. 곱셈성과 결합하면, $$n = p_1^{e_1}\cdots p_r^{e_r}$$의 소인수분해로부터 ([§소수와 산술의 기본정리, ⁋정리 3](/ko/math/number_theory/primes#thm3))
 
 $$\varphi(n) = n\prod_{p \mid n}\left(1 - \frac1p\right)$$
 

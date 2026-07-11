@@ -11,6 +11,7 @@ sidebar:
 
 date: 2026-06-20
 weight: 7
+
 published: false
 ---
 
@@ -70,7 +71,7 @@ $$\sum_{\rho \in \Sigma(1)} \langle m, v_\rho \rangle [D_\rho] = 0$$
 ::: 증명
 (1) 먼저 $$k = 2$$인 경우를 보고 귀납적으로 일반화한다. 두 ray $$\rho_1, \rho_2$$가 $$2$$차원 cone $$\tau = \rho_1 + \rho_2 \in \Sigma$$를 이룬다고 하자. $$X_\Sigma$$가 smooth이므로 $$v_{\rho_1}, v_{\rho_2}$$는 $$N$$의 $$\mathbb{Z}$$-basis의 일부를 이루며, 두 divisor $$D_{\rho_1}, D_{\rho_2}$$는 affine chart $$U_\tau \cong \mathbb{C}^n$$ 위에서 서로 다른 두 좌표 hyperplane으로 나타난다. 이 두 hyperplane은 transverse하게 만나므로 그 교차는 정확히 codimension $$2$$의 부분다양체 $$V(\tau)$$이고, 교차 중복도는 $$1$$이다 ([\[대수다양체\] §교차곱, ⁋명제 4](/ko/math/algebraic_varieties/intersection_product#prop4)). 따라서 $$[D_{\rho_1}] \cdot [D_{\rho_2}] = [V(\tau)]$$이다.
 
-이제 $$\sigma = \rho_1 + \cdots + \rho_k$$가 smooth cone이라 하자. Affine chart $$U_\sigma \cong \mathbb{C}^n$$ 위에서 $$v_{\rho_1}, \ldots, v_{\rho_k}$$는 $$N$$의 basis $$v_{\rho_1}, \ldots, v_{\rho_n}$$로 확장되며, 각 $$D_{\rho_i}$$는 이에 dual인 좌표 $$\rchi^{v_{\rho_i}^\ast}$$의 zero locus, 즉 한 좌표 hyperplane으로 나타난다. 서로 다른 $$k$$개의 좌표 hyperplane들은 transverse하게 만나 codimension $$k$$의 좌표 부분공간 $$V(\sigma)$$를 이루고, 그 교차 중복도는 모두 $$1$$이다. Chow ring의 결합성 ([\[대수다양체\] §교차곱, ⁋명제 6](/ko/math/algebraic_varieties/intersection_product#prop6))과 위 $$k=2$$ 계산을 반복 적용하면
+이제 $$\sigma = \rho_1 + \cdots + \rho_k$$가 smooth cone이라 하자. Affine chart $$U_\sigma \cong \mathbb{C}^n$$ 위에서 $$v_{\rho_1}, \ldots, v_{\rho_k}$$는 $$N$$의 basis $$v_{\rho_1}, \ldots, v_{\rho_n}$$로 확장되며, 각 $$D_{\rho_i}$$는 이에 dual인 좌표 $$\rchi^{v_{\rho_i}^\ast}$$의 zero locus, 즉 한 좌표 hyperplane으로 나타난다. 서로 다른 $$k$$개의 좌표 hyperplane들은 transverse하게 만나 codimension $$k$$의 좌표 부분공간 $$V(\sigma)$$를 이루고, 그 교차 중복도는 모두 $$1$$이다. Chow ring의 결합성과 ([\[대수다양체\] §교차곱, ⁋명제 6](/ko/math/algebraic_varieties/intersection_product#prop6)) 위 $$k=2$$ 계산을 반복 적용하면
 
 $$[D_{\rho_1}] \cdots [D_{\rho_k}] = [V(\sigma)]$$
 
@@ -123,7 +124,7 @@ $$\CH^\ast(X_\Sigma) \cong \mathbb{Z}[\x_\rho \mid \rho \in \Sigma(1)] \,/\, (\m
 
 $$\varphi$$가 $$\mathcal{I}_{SR}$$과 $$\mathcal{J}_{\mathrm{lin}}$$을 모두 $$0$$으로 보냄은 이미 보았다. 즉 $$\mathcal{J}_{\mathrm{lin}}$$의 generator는 $$\varphi$$ 하에서 $$\sum_\rho \langle m, v_\rho\rangle [D_\rho] = [\divisor(\rchi^m)] = 0$$이 되고 ([§토러스 인자와 선다발, ⁋명제 3](/ko/math/toric_geometry/toric_divisors#prop3)), $$\mathcal{I}_{SR}$$의 generator는 명제 2의 (2)에 의해 $$0$$이 된다. 따라서 $$\varphi$$는 quotient ring $$\overline{\varphi}: R/(\mathcal{I}_{SR} + \mathcal{J}_{\mathrm{lin}}) \to \CH^\ast(X_\Sigma)$$로 factor된다.
 
-다음으로 $$\overline{\varphi}$$의 surjectivity를 본다. $$X_\Sigma$$가 smooth이므로 Chow group은 orbit closure들로 generate된다. 구체적으로, complete toric variety에 대해 cycle class들 $$\{[V(\sigma)] : \sigma \in \Sigma\}$$이 $$\CH^\ast(X_\Sigma)$$를 $$\mathbb{Z}$$-module로서 generate한다. 이는 fan의 cone들이 주는 affine cell들에 의한 stratification과 localization exact sequence ([\[대수다양체\] §저우 군, ⁋명제 8](/ko/math/algebraic_varieties/chow_groups#prop8))를 cone 차원에 대해 귀납적으로 적용하여 얻어진다. 각 $$[V(\sigma)]$$는 명제 2의 (1)에 의해 $$\sigma$$를 generate하는 ray들의 divisor 곱 $$[D_{\rho_1}] \cdots [D_{\rho_k}]$$로 표현되므로 $$[D_\rho]$$들의 monomial이며, 따라서 $$\varphi$$의 image에 속한다. 결국 $$\overline{\varphi}$$는 surjective이다.
+다음으로 $$\overline{\varphi}$$의 surjectivity를 본다. $$X_\Sigma$$가 smooth이므로 Chow group은 orbit closure들로 generate된다. 구체적으로, complete toric variety에 대해 cycle class들 $$\{[V(\sigma)] : \sigma \in \Sigma\}$$이 $$\CH^\ast(X_\Sigma)$$를 $$\mathbb{Z}$$-module로서 generate한다. 이는 fan의 cone들이 주는 affine cell들에 의한 stratification과 [\[대수다양체\] §저우 군, ⁋명제 8](/ko/math/algebraic_varieties/chow_groups#prop8)를 cone 차원에 대해 귀납적으로 적용하여 얻어진다. 각 $$[V(\sigma)]$$는 명제 2의 (1)에 의해 $$\sigma$$를 generate하는 ray들의 divisor 곱 $$[D_{\rho_1}] \cdots [D_{\rho_k}]$$로 표현되므로 $$[D_\rho]$$들의 monomial이며, 따라서 $$\varphi$$의 image에 속한다. 결국 $$\overline{\varphi}$$는 surjective이다.
 
 마지막으로 injectivity를 본다. 이를 직접 보이는 대신, $$X_\Sigma$$가 smooth complete일 때 두 graded abelian group이 각 차수에서 같은 유한 rank를 가짐을 이용한다. $$X_\Sigma$$가 smooth complete이면 maximal cone들이 주는 affine cell에 의한 cellular decomposition이 존재하여 $$\CH^k(X_\Sigma)$$는 free abelian group이며 그 차수별 rank는 fan의 $$h$$-vector로 주어진다. 한편 quotient $$R/(\mathcal{I}_{SR} + \mathcal{J}_{\mathrm{lin}})$$의 차수별 rank도 동일한 $$h$$-vector로 계산됨이 알려져 있다 ([Sta] 또는 [CLS] Theorem 12.4.4). 두 graded group이 surjection $$\overline{\varphi}$$로 연결되어 있고 각 차수에서 같은 유한 rank를 가지므로, free abelian group 사이의 차수별 surjection이 rank를 보존하면 isomorphism이라는 사실로부터 $$\overline{\varphi}$$는 isomorphism이다.
 :::
@@ -131,7 +132,7 @@ $$\varphi$$가 $$\mathcal{I}_{SR}$$과 $$\mathcal{J}_{\mathrm{lin}}$$을 모두 
 정리 5는 smooth complete toric variety의 Chow ring을 fan으로부터 완전히 기계적으로 계산하게 해 준다. 변수는 ray의 개수 $$\lvert \Sigma(1) \rvert$$만큼이고, linear ideal이 $$n$$개의 변수를 소거하므로 $$\CH^1(X_\Sigma) \cong \Cl(X_\Sigma)$$의 rank가 $$\lvert \Sigma(1) \rvert - n$$이 되는 것은 [§토러스 인자와 선다발, ⁋명제 4](/ko/math/toric_geometry/toric_divisors#prop4)의 exact sequence와 부합한다.
 
 ::: 참고 6
-정리 5의 표현은 $$X_\Sigma$$가 smooth complete일 때 위상적 cohomology ring $$H^\ast(X_\Sigma, \mathbb{Z})$$의 표현과도 일치한다. Smooth complete toric variety는 odd cohomology가 사라지고 cycle class map ([\[대수다양체\] §저우 군, ⁋명제 12](/ko/math/algebraic_varieties/chow_groups#prop12))이 isomorphism $$\CH^k(X_\Sigma) \cong H^{2k}(X_\Sigma, \mathbb{Z})$$을 주기 때문이다. 따라서 위 ideal 표현은 Danilov와 Jurkiewicz에 의한 toric variety의 cohomology ring 계산으로도 알려져 있다.
+정리 5의 표현은 $$X_\Sigma$$가 smooth complete일 때 위상적 cohomology ring $$H^\ast(X_\Sigma, \mathbb{Z})$$의 표현과도 일치한다. Smooth complete toric variety는 odd cohomology가 사라지고 cycle class map이 ([\[대수다양체\] §저우 군, ⁋명제 12](/ko/math/algebraic_varieties/chow_groups#prop12)) isomorphism $$\CH^k(X_\Sigma) \cong H^{2k}(X_\Sigma, \mathbb{Z})$$을 주기 때문이다. 따라서 위 ideal 표현은 Danilov와 Jurkiewicz에 의한 toric variety의 cohomology ring 계산으로도 알려져 있다.
 :::
 
 ## 교차수와 polytope

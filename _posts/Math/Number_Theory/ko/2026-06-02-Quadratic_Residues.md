@@ -53,9 +53,9 @@ $$\left(\frac{a}{p}\right) \equiv a^{(p-1)/2} \pmod p$$
 :::
 
 ::: 증명
-페르마 소정리 ([§페르마 소정리, ⁋정리 1](/ko/math/number_theory/fermat_little_theorem#thm1))로 $$a^{p-1} \equiv 1$$이므로 $$\bigl(a^{(p-1)/2} - 1\bigr)\bigl(a^{(p-1)/2} + 1\bigr) \equiv 0 \pmod p$$이고, 따라서 $$a^{(p-1)/2} \equiv \pm 1 \pmod p$$이다.
+[§페르마 소정리, ⁋정리 1](/ko/math/number_theory/fermat_little_theorem#thm1)로 $$a^{p-1} \equiv 1$$이므로 $$\bigl(a^{(p-1)/2} - 1\bigr)\bigl(a^{(p-1)/2} + 1\bigr) \equiv 0 \pmod p$$이고, 따라서 $$a^{(p-1)/2} \equiv \pm 1 \pmod p$$이다.
 
-$$a$$가 이차 잉여이면 $$a \equiv x^2$$인 $$x$$가 있어 $$a^{(p-1)/2} \equiv x^{p-1} \equiv 1$$이다. 거꾸로 $$g$$를 법 $$p$$의 원시근 ([§원시근, ⁋정리 4](/ko/math/number_theory/primitive_roots#thm4))이라 하고 $$a \equiv g^j$$로 쓰면, $$a$$가 이차 잉여인 것은 $$j$$가 짝수인 것과 동치이다. 한편 $$a^{(p-1)/2} \equiv g^{j(p-1)/2} \equiv 1$$인 것은 $$\ord_p(g) = p-1$$이 $$j(p-1)/2$$를 나누는 것, 곧 $$j$$가 짝수인 것과 동치이다. 따라서 $$a^{(p-1)/2} \equiv 1$$인 것과 $$a$$가 이차 잉여인 것이 일치하고, 비잉여이면 $$a^{(p-1)/2} \equiv -1$$이다.
+$$a$$가 이차 잉여이면 $$a \equiv x^2$$인 $$x$$가 있어 $$a^{(p-1)/2} \equiv x^{p-1} \equiv 1$$이다. 거꾸로 $$g$$를 법 $$p$$의 원시근이라 하고 ([§원시근, ⁋정리 4](/ko/math/number_theory/primitive_roots#thm4)) $$a \equiv g^j$$로 쓰면, $$a$$가 이차 잉여인 것은 $$j$$가 짝수인 것과 동치이다. 한편 $$a^{(p-1)/2} \equiv g^{j(p-1)/2} \equiv 1$$인 것은 $$\ord_p(g) = p-1$$이 $$j(p-1)/2$$를 나누는 것, 곧 $$j$$가 짝수인 것과 동치이다. 따라서 $$a^{(p-1)/2} \equiv 1$$인 것과 $$a$$가 이차 잉여인 것이 일치하고, 비잉여이면 $$a^{(p-1)/2} \equiv -1$$이다.
 :::
 
 오일러 판정법은 거듭제곱의 합동을 계산하여 이차 잉여 여부를 판정하게 해 줄 뿐 아니라, 르장드르 기호가 곱셈적임을 즉시 준다.

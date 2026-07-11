@@ -72,7 +72,7 @@ $$A/\ker\chi\xrightarrow{\ \cong\ } k$$
 는 isomorphism이다.
 :::
 ::: 증명
-$$\chi$$는 algebra homomorphism이므로 그 kernel $$\ker\chi$$는 $$A$$의 ideal이다. ([\[대수적 구조\] §대수, ⁋정의 10](/ko/math/algebraic_structures/algebras#def10)) $$\chi(1)=1\neq 0$$이므로 $$\chi$$는 nonzero이고, $$k$$가 field이므로 $$\chi$$는 surjective이다. 따라서 첫째 동형정리 ([\[대수적 구조\] §대수, ⁋명제 12](/ko/math/algebraic_structures/algebras#prop12))에 의하여
+$$\chi$$는 algebra homomorphism이므로 그 kernel $$\ker\chi$$는 $$A$$의 ideal이다. ([\[대수적 구조\] §대수, ⁋정의 10](/ko/math/algebraic_structures/algebras#def10)) $$\chi(1)=1\neq 0$$이므로 $$\chi$$는 nonzero이고, $$k$$가 field이므로 $$\chi$$는 surjective이다. 따라서 [\[대수적 구조\] §대수, ⁋명제 12](/ko/math/algebraic_structures/algebras#prop12)에 의하여
 
 $$A/\ker\chi\cong \im\chi=k$$
 
@@ -80,7 +80,7 @@ $$A/\ker\chi\cong \im\chi=k$$
 :::
 
 ::: 참고 5
-여기에서 정의한 character는 [§유한군의 표현론](/ko/math/representation_theory/representations_of_finite_groups)과 [§표현의 지표](/ko/math/representation_theory/character_theory)에서 다룬 *지표*<sub>character</sub>와 이름은 같으나 일반적으로는 서로 다른 개념이다. 후자는 표현 $$\rho:G\rightarrow \Aut(V)$$에 대하여 각 $$g$$를 $$\tr\rho(g)$$로 보내는 함수 $$\rchi_\rho:G\rightarrow k$$, 곧 trace character이다 ([§표현의 지표, ⁋정의 1](/ko/math/representation_theory/character_theory#def1)). 이는 일반적으로 곱셈을 보존하지 않으므로 algebra homomorphism이 아니다. 두 개념이 일치하는 것은 표현이 $$1$$차원일 때이다. $$1$$차원 표현 $$\rho:G\rightarrow k^\times$$에 대하여 $$\tr\rho(g)=\rho(g)$$이고, 이를 group algebra 위로 선형확장한 $$\mathbb{C}[G]\rightarrow k$$는 곱셈을 보존하므로, 정의 3의 의미에서 $$\mathbb{C}[G]$$의 character가 된다. 실제로 $$A=\mathbb{C}[G]$$의 character $$\mathbb{C}[G]\rightarrow \mathbb{C}$$들은 정확히 $$G$$의 $$1$$차원 표현들과 일대일로 대응되는데, 이는 group algebra의 universal property ([\[대수적 구조\] §대수, ⁋명제 6](/ko/math/algebraic_structures/algebras#prop6))로부터 algebra homomorphism $$\mathbb{C}[G]\rightarrow \mathbb{C}$$들이 group homomorphism $$G\rightarrow \mathbb{C}^\times$$들과 대응되기 때문이다.
+여기에서 정의한 character는 [§유한군의 표현론](/ko/math/representation_theory/representations_of_finite_groups)과 [§표현의 지표](/ko/math/representation_theory/character_theory)에서 다룬 *지표*<sub>character</sub>와 이름은 같으나 일반적으로는 서로 다른 개념이다. 후자는 표현 $$\rho:G\rightarrow \Aut(V)$$에 대하여 각 $$g$$를 $$\tr\rho(g)$$로 보내는 함수 $$\rchi_\rho:G\rightarrow k$$, 곧 trace character이다 ([§표현의 지표, ⁋정의 1](/ko/math/representation_theory/character_theory#def1)). 이는 일반적으로 곱셈을 보존하지 않으므로 algebra homomorphism이 아니다. 두 개념이 일치하는 것은 표현이 $$1$$차원일 때이다. $$1$$차원 표현 $$\rho:G\rightarrow k^\times$$에 대하여 $$\tr\rho(g)=\rho(g)$$이고, 이를 group algebra 위로 선형확장한 $$\mathbb{C}[G]\rightarrow k$$는 곱셈을 보존하므로, 정의 3의 의미에서 $$\mathbb{C}[G]$$의 character가 된다. 실제로 $$A=\mathbb{C}[G]$$의 character $$\mathbb{C}[G]\rightarrow \mathbb{C}$$들은 정확히 $$G$$의 $$1$$차원 표현들과 일대일로 대응되는데, 이는 [\[대수적 구조\] §대수, ⁋명제 6](/ko/math/algebraic_structures/algebras#prop6)의 universal property로부터 algebra homomorphism $$\mathbb{C}[G]\rightarrow \mathbb{C}$$들이 group homomorphism $$G\rightarrow \mathbb{C}^\times$$들과 대응되기 때문이다.
 :::
 
 명제 4가 보여 주듯, character는 항상 maximal ideal을 낳는다. 그 역, 곧 모든 maximal ideal이 character로부터 온다는 것은 $$k$$가 algebraically closed일 때 성립하며, 이는 character와 maximal ideal을 동일시할 수 있게 해 준다.
@@ -140,7 +140,7 @@ $$A=\bigoplus_{s=1}^r A_{\lambda^{(s)}}$$
 
 $$M_a\vert_{A_\lambda}=\lambda(a)\id+N_a,\qquad N_a:=M_a\vert_{A_\lambda}-\lambda(a)\id$$
 
-이고 $$N_a$$는 nilpotent이다. 더욱이 $$M_a$$들이 서로 commute하므로 $$N_a$$들도 서로 commute한다. 한편 $$\lambda$$가 $$k$$-선형이라는 것은 대응 $$a\mapsto M_a$$가 $$k$$-선형 ([명제 2](#prop2))이라는 것과 고유값이 $$k$$-선형으로 추출된다는 것으로부터 따라온다. 구체적으로 임의의 $$\alpha\in k$$와 $$a,b\in A$$에 대하여
+이고 $$N_a$$는 nilpotent이다. 더욱이 $$M_a$$들이 서로 commute하므로 $$N_a$$들도 서로 commute한다. 한편 $$\lambda$$가 $$k$$-선형이라는 것은 대응 $$a\mapsto M_a$$가 [명제 2](#prop2)에 의해 $$k$$-선형이라는 것과 고유값이 $$k$$-선형으로 추출된다는 것으로부터 따라온다. 구체적으로 임의의 $$\alpha\in k$$와 $$a,b\in A$$에 대하여
 
 $$M_{\alpha a+b}\vert_{A_\lambda}=\alpha M_a\vert_{A_\lambda}+M_b\vert_{A_\lambda}=(\alpha\lambda(a)+\lambda(b))\id+(\alpha N_a+N_b)$$
 

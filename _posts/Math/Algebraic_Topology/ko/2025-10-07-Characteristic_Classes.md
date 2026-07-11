@@ -11,6 +11,7 @@ sidebar:
 date: 2025-10-07
 weight: 11
 
+
 ---
 
 ## 오일러 특성류
@@ -206,7 +207,7 @@ $$H^{k-n}(B)=H^{k-n+1}(B)=0$$
 
 계속 살펴보았던 deleted total space $$E_0=E\setminus 0(B)$$를 생각하자. $$E_0$$의 한 점은 base의 한 점 $$x\in B$$와, 이 점에서의 $$E$$의 fiber $$E_x$$의 *nonzero* $$v\in E_x$$의 순서쌍이다. 이제 $$E_0$$ 위에 *tautological bundle* $$\pi_0^\ast E$$를 정의하자. 이는 vector bundle $$E\rightarrow B$$를 projection map $$\pi_0:E_0\rightarrow B$$를 따라 pullback하여 얻어진 vector bundle이며, 그 정체는 각각의 점 $$(x,v)\in E_0$$마다 fiber $$(\pi_0^\ast E)_{(x,v)}= E_x$$를 갖는 vector bundle이다. 즉 $$v$$는 각각의 점 $$(x,v)$$에서 fiber로 붙어있는 벡터공간의 원소이기도 하며, nonzero이므로 이 벡터공간 안에서 1차원 부분공간 $$\langle v\rangle$$을 정의한다. 이제 $$E_0$$의 모든 점마다 이러한 방식으로 직선을 붙여 line bundle $$L\rightarrow E_0$$을 만들고, 이것이 $$\pi_0^\ast E$$ 안에서 정의하는 quotient $$(\pi_0^\ast E)/L\rightarrow E_0$$을 생각할 수 있다. 이는 각 점 $$(x,v)$$에서 fiber $$E_x/\langle v\rangle$$을 갖는 $$E_0$$ 위의 canonical complex rank $$(n-1)$$ bundle이며, fiber마다 Hermitian 내적을 주면 $$v$$의 orthogonal complement $$v^\perp\subseteq E_x$$로도 실현된다. ([\[선형대수학\] §복소내적공간, ⁋명제 4](/ko/math/linear_algebra/complex_inner_product_spaces#prop4)) 두 실현이 canonically isomorphic하므로, 앞으로 이 rank $$(n-1)$$ bundle을 표기의 편의상 $$L^\perp$$로 쓴다.
 
-이제 <em-ko>complex</em-ko> vector bundle $$E$$가 주어졌다 하고, 이를 (oriented) real vector bundle로 본 것을 $$E_\mathbb{R}$$로 표기하자. 만일 $$E$$가 complex dimension $$n$$이라면 $$E_\mathbb{R}$$은 real dimension $$2n$$이다. 그럼 $$E_0$$는 $$E_{\mathbb{R}}$$의 sphere bundle $$S(E_{\mathbb{R}})$$와 homotopy equivalent하므로 [정리 5](#thm5)의 Gysin exact sequence
+이제 <em-ko>complex</em-ko> vector bundle $$E$$가 주어졌다 하고, 이를 (oriented) real vector bundle로 본 것을 $$E_\mathbb{R}$$로 표기하자. 만일 $$E$$가 complex dimension $$n$$이라면 $$E_\mathbb{R}$$은 real dimension $$2n$$이다. 그럼 $$E_0$$는 $$E_{\mathbb{R}}$$의 sphere bundle $$S(E_{\mathbb{R}})$$와 homotopy equivalent하므로 [정리 5](#thm5)에 의해
 
 $$\cdots\rightarrow H^{k-2n}(B)\xrightarrow{\ \smile e\ }H^k(B)\xrightarrow{\ \pi_0^\ast\ }H^k(E_0)\rightarrow H^{k-2n+1}(B)\rightarrow\cdots$$
 

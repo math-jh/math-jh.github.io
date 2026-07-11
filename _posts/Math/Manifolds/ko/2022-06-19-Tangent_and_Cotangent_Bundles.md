@@ -85,7 +85,7 @@ $$\tilde{\varphi}=(\varphi\times\id_{\mathbb{R}^m})\circ\phi$$
 
 ## Smooth functors
 
-Tangent bundle $$TM$$이 중요한 것은 manifold 위에 정의된 대다수의 vector bundle이 $$TM$$으로부터 정의되기 때문이다. 가령 cotangent bundle $$T^\ast M$$은 각각의 $$p\in M$$마다 tangent space의 dual space인 cotangent space $$T_p^\ast M$$이 붙어있는 vector bundle이다. 이와 비슷하게, 각 점 $$p$$마다 선형대수에서의 연산들([예시 5](#ex5))을 통해 다양한 vector bundle이 정의된다. 
+Tangent bundle $$TM$$이 중요한 것은 manifold 위에 정의된 대다수의 vector bundle이 $$TM$$으로부터 정의되기 때문이다. 가령 cotangent bundle $$T^\ast M$$은 각각의 $$p\in M$$마다 tangent space의 dual space인 cotangent space $$T_p^\ast M$$이 붙어있는 vector bundle이다. 이와 비슷하게, 각 점 $$p$$마다 선형대수에서의 연산들을 ([예시 5](#ex5)) 통해 다양한 vector bundle이 정의된다. 
 
 원래대로라면 이들을 정의할 때마다 이들이 vector bundle의 조건을 만족한다는 것을 보여야 하지만, **[Mil]**에 조금 더 근본적인 방식이 있다.
 

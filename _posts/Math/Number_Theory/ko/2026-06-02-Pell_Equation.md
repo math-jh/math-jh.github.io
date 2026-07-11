@@ -35,7 +35,7 @@ published: false
 :::
 
 ::: 증명
-연분수 근사 ([§연분수, ⁋정리 3](/ko/math/number_theory/continued_fractions#thm3))에 의해 $$\left\lvert \sqrt D - \dfrac{p}{q}\right\rvert < \dfrac{1}{q^2}$$인 유리수가 무한히 많다. 이런 $$p, q$$에 대해 $$\lvert p^2 - Dq^2\rvert = \lvert p - q\sqrt D\rvert\,\lvert p + q\sqrt D\rvert < \dfrac1q\cdot(2q\sqrt D + 1)$$이 유계이므로, $$p^2 - Dq^2$$이 같은 값 $$k$$를 갖는 해가 무한히 많다. 그중 $$p, q$$가 법 $$\lvert k\rvert$$에 대해 같은 잉여류인 두 해 $$\alpha_1, \alpha_2$$를 고르면, 비 $$\alpha_1/\alpha_2$$가 노름 $$1$$인 자명하지 않은 정수해 $$\mathbb{Z}[\sqrt D]$$의 원소를 준다. 실제로 $$\sqrt D$$의 순환연분수의 한 주기에서 나오는 점근분수가 기본해를 직접 산출한다.
+[§연분수, ⁋정리 3](/ko/math/number_theory/continued_fractions#thm3)에 의해 $$\left\lvert \sqrt D - \dfrac{p}{q}\right\rvert < \dfrac{1}{q^2}$$인 유리수가 무한히 많다. 이런 $$p, q$$에 대해 $$\lvert p^2 - Dq^2\rvert = \lvert p - q\sqrt D\rvert\,\lvert p + q\sqrt D\rvert < \dfrac1q\cdot(2q\sqrt D + 1)$$이 유계이므로, $$p^2 - Dq^2$$이 같은 값 $$k$$를 갖는 해가 무한히 많다. 그중 $$p, q$$가 법 $$\lvert k\rvert$$에 대해 같은 잉여류인 두 해 $$\alpha_1, \alpha_2$$를 고르면, 비 $$\alpha_1/\alpha_2$$가 노름 $$1$$인 자명하지 않은 정수해 $$\mathbb{Z}[\sqrt D]$$의 원소를 준다. 실제로 $$\sqrt D$$의 순환연분수의 한 주기에서 나오는 점근분수가 기본해를 직접 산출한다.
 :::
 
 자명하지 않은 양의 해 중 $$x + y\sqrt D$$가 가장 작은 것을 *기본해<sub>fundamental solution</sub>* $$\varepsilon_1 = x_1 + y_1\sqrt D$$라 한다.

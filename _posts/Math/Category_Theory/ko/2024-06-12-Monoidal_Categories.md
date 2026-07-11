@@ -95,7 +95,7 @@ Associator와 unitor들의 coherence condition은 Mac Lane의 coherence theorem�
 ::: 예시 2
 다음은 모두 monoidal category의 예시들이다.
 
-- $$\Set$$에 일반적인 product ([§극한, ⁋예시 6](/ko/math/category_theory/limits#ex6))를 장착하고, $$I$$는 아무 singleton으로 가져오면 $$\Set$$은 symmetric monoidal category가 된다.
+- $$\Set$$에 일반적인 product를 장착하고 ([§극한, ⁋예시 6](/ko/math/category_theory/limits#ex6)), $$I$$는 아무 singleton으로 가져오면 $$\Set$$은 symmetric monoidal category가 된다.
 - $$\Grp$$에 일반적인 product를 장착하고, $$I$$는 trivial group $$\{e\}$$으로 가져오면 $$\Grp$$이 symmetric monoidal category가 된다. 
 - $$\Top$$에 product 구조를 product topology로 주고, $$I$$는 아무 singleton으로 가져오면 $$\Top$$은 symmetric monoidal category가 된다. 
 - 임의의 commutative ring $$R$$에 대하여, $$R$$-module들의 카테고리 $$\lMod{R}$$은 tensor product $$\otimes$$에 대해 symmetric monoidal category이다.

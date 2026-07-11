@@ -130,10 +130,10 @@ $$ef\cdot v_j=(j+1)\,e\cdot v_{j+1}=(j+1)(n-j)v_j,\qquad fe\cdot v_j=(n-j+1)\,f\
 
 ## 완전가약성
 
-기약 표현의 분류는 임의의 표현을 기약 표현들로 분해할 수 있을 때에 비로소 완결된 그림을 준다. $$\SL(2;\mathbb{C})$$는 compact가 아니므로 invariant inner product를 적분으로 평균내는 unitarian trick을 직접 쓸 수 없고, 따라서 완전가약성은 별도의 논증을 요구한다. 우리는 ([§보편 포락 대수, ⁋예시 12](/ko/math/lie_theory/universal_enveloping_algebra#ex12))에서 정의된 Casimir element를 사용한다.
+기약 표현의 분류는 임의의 표현을 기약 표현들로 분해할 수 있을 때에 비로소 완결된 그림을 준다. $$\SL(2;\mathbb{C})$$는 compact가 아니므로 invariant inner product를 적분으로 평균내는 unitarian trick을 직접 쓸 수 없고, 따라서 완전가약성은 별도의 논증을 요구한다. 우리는 [§보편 포락 대수, ⁋예시 12](/ko/math/lie_theory/universal_enveloping_algebra#ex12)에서 정의된 Casimir element를 사용한다.
 
 ::: 정의 7
-$$\sl_2$$-representation $$V$$ 위에서, ([§보편 포락 대수, ⁋예시 12](/ko/math/lie_theory/universal_enveloping_algebra#ex12))의 Casimir element $$\Omega=ef+fe+\tfrac{1}{2}h^2$$가 정의하는 연산자
+$$\sl_2$$-representation $$V$$ 위에서, [§보편 포락 대수, ⁋예시 12](/ko/math/lie_theory/universal_enveloping_algebra#ex12)의 Casimir element $$\Omega=ef+fe+\tfrac{1}{2}h^2$$가 정의하는 연산자
 
 $$C=e\circ f+f\circ e+\tfrac{1}{2}h\circ h:V\rightarrow V$$
 

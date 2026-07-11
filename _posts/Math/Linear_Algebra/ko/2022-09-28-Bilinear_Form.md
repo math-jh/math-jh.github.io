@@ -166,7 +166,7 @@ $$\dim(W+W^\perp)=\dim W+\dim W^\perp-\dim(W\cap W^\perp)=\dim V-\dim(W\cap W^\p
 위의 조건을 만족하는 non-degenerate 부분공간에 대해서는 이렇게 정의된 orthogonal complement가 quotient space와 canonical하게 isomorphic하다. 
 
 ::: 명제 9
-Non-degenerate reflexive bilinear form이 주어진 유한차원 $$\mathbb{K}$$-벡터공간 $$V$$의 non-degenerate 부분공간 $$W\leq V$$에 대하여, natural projection $$p:V\rightarrow V/W$$ ([§몫공간, ⁋정의 3](/ko/math/linear_algebra/quotient_space#def3))을 $$W^\perp$$로 제한한
+Non-degenerate reflexive bilinear form이 주어진 유한차원 $$\mathbb{K}$$-벡터공간 $$V$$의 non-degenerate 부분공간 $$W\leq V$$에 대하여, [§몫공간, ⁋정의 3](/ko/math/linear_algebra/quotient_space#def3)의 natural projection $$p:V\rightarrow V/W$$을 $$W^\perp$$로 제한한
 
 $$p\vert_{W^\perp}:W^\perp\rightarrow V/W$$
 

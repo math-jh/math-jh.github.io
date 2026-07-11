@@ -196,10 +196,10 @@ $$0\longrightarrow I/I^2\overset{\overline{d}}{\longrightarrow}\Omega_{P/k}\otim
 
 이 왼쪽에서도 split되는 짧은 완전열이 되어 $$\overline{d}$$가 injective이고 그 cokernel $$\Omega_{B/k}$$이 projective이다. 따라서 $$H_1(\operatorname{NL}_{B/k})=\ker\overline{d}=0$$이고 $$\operatorname{NL}_{B/k}$$은 projective module $$\Omega_{B/k}$$ 하나에 quasi-isomorphic하다. 그럼 $$\Hom_B(\operatorname{NL}_{B/k},M)$$이 $$\Hom_B(\Omega_{B/k},M)$$ 한 항에 집중되어 $$T^1=0$$이다. $$T^2=0$$도 split된 완전열로부터 $$L_2$$가 소멸하여 따른다. 무한소 자기동형에 관한 주장은 [정리 7](#thm7)의 일반 형태이다.
 
-이 결론은 [\[스킴\] §매끄러운 사상과 étale 사상, ⁋정리 11](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm11)의 무한소 lifting 판정과 정확히 일치한다. Smooth는 모든 square-zero 확대에 대한 lifting의 존재($$T^2=0$$, 장애 없음)와 그 lifting의 일대일적 통제($$T^1=0$$, 동형 유일)에 해당하기 때문이다.
+이 결론은 [\[스킴\] §매끄러운 사상과 étale 사상, ⁋정리 11](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm11)과 정확히 일치한다. Smooth는 모든 square-zero 확대에 대한 lifting의 존재($$T^2=0$$, 장애 없음)와 그 lifting의 일대일적 통제($$T^1=0$$, 동형 유일)에 해당하기 때문이다.
 :::
 
-조금 더 약한 가정인 *local complete intersection* (국소 완전교차)에서도 장애는 사라진다. $$B=P/I$$에서 $$I$$가 국소적으로 regular sequence로 생성되면 완전한 여접 복합체 $$L_{B/k}$$가 $$[0,1]$$ 두 degree에 projective module로 집중되어, 그 dual의 둘째 cohomology가 자동으로 $$0$$이 되기 때문이다. 곧 $$T^2(B/k,M)=0$$이고 lci 특이점은 항상 *unobstructed<sub>장애 없음</sub>*이다. 다만 lci라고 해서 $$H_1(\operatorname{NL}_{B/k})$$이 소멸하는 것은 아니며, 반대로 아래 [예시 11](#ex11)의 node처럼 singular한 lci가 $$H_1(\operatorname{NL}_{B/k})=0$$을 만족하기도 한다. 곧 $$H_1(\operatorname{NL})$$의 소멸만으로는 lci 여부가 판정되지 않으며, smoothness는 $$H_1(\operatorname{NL}_{B/k})=0$$과 $$\Omega_{B/k}$$의 국소자유성이 함께 성립하는 것으로 특징지어진다.
+조금 더 약한 가정인 *local complete intersection* (국소 완전교차)에서도 장애는 사라진다. $$B=P/I$$에서 $$I$$가 국소적으로 regular sequence로 생성되면 완전한 여접 복합체 $$L_{B/k}$$가 $$[0,1]$$ 두 degree에 projective module로 집중되어, 그 dual의 둘째 cohomology가 자동으로 $$0$$이 되기 때문이다. 곧 $$T^2(B/k,M)=0$$이고 lci 특이점은 항상 *unobstructed<sub>장애 없음</sub>*이다. 다만 lci라고 해서 $$H_1(\operatorname{NL}_{B/k})$$이 소멸하는 것은 아니며, 반대로 아래 [예시 11](#ex11)처럼 singular한 lci가 $$H_1(\operatorname{NL}_{B/k})=0$$을 만족하기도 한다. 곧 $$H_1(\operatorname{NL})$$의 소멸만으로는 lci 여부가 판정되지 않으며, smoothness는 $$H_1(\operatorname{NL}_{B/k})=0$$과 $$\Omega_{B/k}$$의 국소자유성이 함께 성립하는 것으로 특징지어진다.
 
 ## 예시: 매끄러운 변형부터 장애까지
 
@@ -246,7 +246,7 @@ $$X=\Spec k[\z_0,\z_1,\z_2,\z_3,\z_4]/I_2(M),\qquad M=\begin{pmatrix}\z_0&\z_1&\
 
 이다. 여기서 $$I_2(M)$$은 $$M$$의 $$2\times2$$ minor들로 생성되는 ideal로, 여차원 $$3$$의 isolated 특이점을 정의한다. Pinkham이 계산한 이 특이점의 semiuniversal deformation의 base는 한 점에서 만나는 두 component, 곧 차원 $$3$$인 성분과 차원 $$1$$인 성분으로 이루어져, base가 그 교점에서 singular하다. 이는 $$T^1$$의 어떤 접방향(한 component의 접방향에서 벗어난 방향)이 [정리 9](#thm9)의 의미에서 *obstructed*임을, 곧 그 first-order deformation을 이차로 연장할 때 $$\operatorname{ob}(\xi)\neq0\in T^2(X/k,\mathcal{O}_X)$$임을 뜻한다.
 
-여차원 $$3$$ 이상에서 이러한 장애가 일반적으로 나타나는 반면, $$\mathbb{P}^3$$ 위 rational normal cubic의 cone과 같은 여차원 $$2$$ Cohen–Macaulay 특이점은 항상 unobstructed하여 base가 매끄럽다. 따라서 [예시 12](#ex12)의 세 좌표축처럼 lci가 아니어도 장애가 없을 수 있으며, "non-lci"와 "obstructed"는 서로 다른 현상이다. 장애의 유무는 $$T^2$$와 그 위에서 정의되는 이차 사상 $$\operatorname{ob}$$이 결정하는 것이지, $$\Omega$$나 $$H_1(\operatorname{NL})$$만으로 읽히지 않는다. 이 예시의 명시적 계산은 ([Ser], [Har])를 참조하라.
+여차원 $$3$$ 이상에서 이러한 장애가 일반적으로 나타나는 반면, $$\mathbb{P}^3$$ 위 rational normal cubic의 cone과 같은 여차원 $$2$$ Cohen–Macaulay 특이점은 항상 unobstructed하여 base가 매끄럽다. 따라서 [예시 12](#ex12)처럼 lci가 아니어도 장애가 없을 수 있으며, "non-lci"와 "obstructed"는 서로 다른 현상이다. 장애의 유무는 $$T^2$$와 그 위에서 정의되는 이차 사상 $$\operatorname{ob}$$이 결정하는 것이지, $$\Omega$$나 $$H_1(\operatorname{NL})$$만으로 읽히지 않는다. 이 예시의 명시적 계산은 ([Ser], [Har])를 참조하라.
 :::
 
 ## 완전한 여접 복합체의 필요성

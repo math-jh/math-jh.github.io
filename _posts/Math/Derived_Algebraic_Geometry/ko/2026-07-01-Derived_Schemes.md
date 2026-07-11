@@ -99,7 +99,7 @@ $$F(R)\overset{\sim}{\longrightarrow}\lim_{[n]\in \Delta}F(R_n)$$
 이 동치인 것, 곧 $$F$$이 étale 위상에 대하여 hyperdescent를 만족하는 것을 뜻한다. Derived stack들의 $$\infty$$-범주를 $$\mathrm{dSt}$$로 적는다.
 :::
 
-여기서 극한은 cosimplicial diagram 위의 homotopy 극한이며, 이것이 고전적 stack의 하강 조건, 곧 두 겹 겹침에서의 cocycle 조건을 모든 차수의 겹침으로 정합적으로 확장한 것이다. ([\[Stacks\] §Grothendieck 위상과 site, ⁋예시 8](/ko/math/stacks/grothendieck_topology#ex8)의 étale site와 [\[Stacks\] §Grothendieck 위상과 site, ⁋정의 10](/ko/math/stacks/grothendieck_topology#def10)의 site 위 sheaf 조건을 space값으로 승격한 것이다.) 값을 truncated groupoid로 제한하고 밑을 discrete 환으로 제한하면 고전적 stack의 정의가 정확히 되살아난다. Fpqc 위상이 준표준이어서 표현가능 함자가 모두 sheaf였듯 ([\[Stacks\] §Grothendieck 위상과 site, ⁋정리 17](/ko/math/stacks/grothendieck_topology#thm17)), affine derived scheme의 점함자는 자동으로 derived stack이며, 이로써 $$\mathrm{dSch}$$이 $$\mathrm{dSt}$$에 완전 충실하게 들어간다.
+여기서 극한은 cosimplicial diagram 위의 homotopy 극한이며, 이것이 고전적 stack의 하강 조건, 곧 두 겹 겹침에서의 cocycle 조건을 모든 차수의 겹침으로 정합적으로 확장한 것이다. ([\[Stacks\] §Grothendieck 위상과 site, ⁋예시 8](/ko/math/stacks/grothendieck_topology#ex8)와 [\[Stacks\] §Grothendieck 위상과 site, ⁋정의 10](/ko/math/stacks/grothendieck_topology#def10)의 site 위 sheaf 조건을 space값으로 승격한 것이다.) 값을 truncated groupoid로 제한하고 밑을 discrete 환으로 제한하면 고전적 stack의 정의가 정확히 되살아난다. Fpqc 위상이 준표준이어서 표현가능 함자가 모두 sheaf였듯 ([\[Stacks\] §Grothendieck 위상과 site, ⁋정리 17](/ko/math/stacks/grothendieck_topology#thm17)), affine derived scheme의 점함자는 자동으로 derived stack이며, 이로써 $$\mathrm{dSch}$$이 $$\mathrm{dSt}$$에 완전 충실하게 들어간다.
 
 ::: 명제 7
 Yoneda 매장 $$X\mapsto \operatorname{Map}_{\mathrm{dSch}}(-,X)\vert_{\mathrm{dAff}}$$은 완전 충실한 포함 $$\mathrm{dSch}\hookrightarrow \mathrm{dSt}$$을 주며, derived scheme과 (뒤에서 정의할) geometric derived stack에 대하여 truncation 함자 $$t_0$$이 이들의 밑에 깔린 고전적 스킴·대수적 stack을 준다. 특히 고전적 대수적 stack은 discrete 환 위에서 truncated groupoid값을 갖는 derived stack으로서 $$\mathrm{dSt}$$에 완전 충실하게 들어간다.
@@ -146,7 +146,7 @@ $$f^\ast L_{Y/Z}\longrightarrow L_{X/Z}\longrightarrow L_{X/Y}\longrightarrow f^
 2. (base change) derived scheme의 유도 올곱 $$X'=X\times_Y^hY'$$과 그 사영 $$g:X'\rightarrow X$$에 대하여 $$L_{X'/Y'}\simeq g^\ast L_{X/Y}$$이다.
 :::
 ::: 증명
-두 성질은 모두 affine 국소적이며, 그 국소 형태가 각각 [§Simplicial 가환환과 animation, ⁋정리 12](/ko/math/derived_algebraic_geometry/animated_rings#thm12)의 추이 삼각형과, 유도 텐서곱에 대한 base change 불변성이다. Affine 국소적으로 $$X=\Spec B$$, $$Y=\Spec A$$, $$Y'=\Spec A'$$이면 $$X'=\Spec(B\otimes_A^{\mathbb{L}}A')$$이고, 여접 복합체가 유도 텐서곱과 교환하여 $$L_{(B\otimes_A^{\mathbb{L}}A')/A'}\simeq L_{B/A}\otimes_B^{\mathbb{L}}(B\otimes_A^{\mathbb{L}}A')$$이 됨은 free simplicial 분해를 base change하여 직접 확인된다. 이 국소 동형들이 [정의 10](#def10)의 접착과 호환되므로 대역적으로 성립한다. 자세한 논증은 ([Ill], [Lur, SAG])에 있다.
+두 성질은 모두 affine 국소적이며, 그 국소 형태가 각각 [§Simplicial 가환환과 animation, ⁋정리 12](/ko/math/derived_algebraic_geometry/animated_rings#thm12)과, 유도 텐서곱에 대한 base change 불변성이다. Affine 국소적으로 $$X=\Spec B$$, $$Y=\Spec A$$, $$Y'=\Spec A'$$이면 $$X'=\Spec(B\otimes_A^{\mathbb{L}}A')$$이고, 여접 복합체가 유도 텐서곱과 교환하여 $$L_{(B\otimes_A^{\mathbb{L}}A')/A'}\simeq L_{B/A}\otimes_B^{\mathbb{L}}(B\otimes_A^{\mathbb{L}}A')$$이 됨은 free simplicial 분해를 base change하여 직접 확인된다. 이 국소 동형들이 [정의 10](#def10)의 접착과 호환되므로 대역적으로 성립한다. 자세한 논증은 ([Ill], [Lur, SAG])에 있다.
 :::
 
 추이 삼각형과 base change는 여접 복합체를 계산 가능한 대상으로 만들며, 특히 base change 불변성은 유도 올곱 위의 여접 복합체가 원래 사상의 여접 복합체를 그대로 물려받음을 말한다. 이 두 성질이 다음 절에서 quasi-smooth 사상이 유도 올곱에 대하여 닫혀 있음을 보장한다.

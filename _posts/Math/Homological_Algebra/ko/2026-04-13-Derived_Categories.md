@@ -142,7 +142,7 @@ $$H^i(R F(A[0])) = (R^i F)(A)$$
 $$R F$$와 $$L F$$는 derived category에서의 functor이다. 즉 quasi-isomorphism을 quasi-isomorphism으로 보낸다.
 :::
 ::: 증명
-Quasi-isomorphism $$s : A^\bullet \rightarrow B^\bullet$$이 주어졌다고 하고, $$A^\bullet \rightarrow I^\bullet$$, $$B^\bullet \rightarrow J^\bullet$$을 각각 $$K$$-injective resolution이라 하자. $$K$$-injective resolution의 lifting property ([정의 6](#def6))에 의해, quasi-isomorphism $$s$$는 $$I^\bullet$$과 $$J^\bullet$$ 사이의 map $$\tilde{s} : I^\bullet \rightarrow J^\bullet$$으로 유일하게 (homotopy까지) 확장된다. 따라서 $$F(\tilde{s}) : F(I^\bullet) \rightarrow F(J^\bullet)$$을 얻는다. $$K$$-injective resolution 위에서 $$F$$를 적용한 것이므로 $$F(\tilde{s})$$는 quasi-isomorphism이며, 따라서 $$D(\mathcal{B})$$에서 $$R F(A^\bullet) \cong R F(B^\bullet)$$이다. Left derived functor에 대해서도 비슷하다.
+Quasi-isomorphism $$s : A^\bullet \rightarrow B^\bullet$$이 주어졌다고 하고, $$A^\bullet \rightarrow I^\bullet$$, $$B^\bullet \rightarrow J^\bullet$$을 각각 $$K$$-injective resolution이라 하자. $$K$$-injective resolution의 lifting property에 의해 ([정의 6](#def6)), quasi-isomorphism $$s$$는 $$I^\bullet$$과 $$J^\bullet$$ 사이의 map $$\tilde{s} : I^\bullet \rightarrow J^\bullet$$으로 유일하게 (homotopy까지) 확장된다. 따라서 $$F(\tilde{s}) : F(I^\bullet) \rightarrow F(J^\bullet)$$을 얻는다. $$K$$-injective resolution 위에서 $$F$$를 적용한 것이므로 $$F(\tilde{s})$$는 quasi-isomorphism이며, 따라서 $$D(\mathcal{B})$$에서 $$R F(A^\bullet) \cong R F(B^\bullet)$$이다. Left derived functor에 대해서도 비슷하다.
 :::
 
 구체적인 예로서, $$\mathcal{A}$$ 위에서의 Hom functor $$\Hom(-, B)$$는 contravariant left exact functor이므로 이를 derived하여 complex 수준의 derived Hom $$R\Hom$$을 정의하면, $$R\Hom(A, B)$$의 cohomology는 $$\Ext^i(A, B)$$와 일치한다.

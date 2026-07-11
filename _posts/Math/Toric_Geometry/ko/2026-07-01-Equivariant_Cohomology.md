@@ -24,7 +24,7 @@ published: false
 
 ## Borel 구성
 
-우리는 $$EG$$를 곱하여 작용을 free하게 만든 뒤 quotient를 취하는 위 아이디어를 정의로 옮긴다. ([\[대수적 위상수학\] §분류공간, ⁋정의 6](/ko/math/algebraic_topology/classifying_spaces#def6))에서 구성한 universal bundle $$EG\rightarrow BG$$와 분류공간 $$BG$$를 다시 쓰면, $$EG$$는 contractible하며 $$G$$는 그 위에 right action으로 free하게 작용한다. 한편 $$X$$ 위의 $$G$$-작용은 왼쪽 작용으로 둔다.
+우리는 $$EG$$를 곱하여 작용을 free하게 만든 뒤 quotient를 취하는 위 아이디어를 정의로 옮긴다. [\[대수적 위상수학\] §분류공간, ⁋정의 6](/ko/math/algebraic_topology/classifying_spaces#def6)에서 구성한 universal bundle $$EG\rightarrow BG$$와 분류공간 $$BG$$를 다시 쓰면, $$EG$$는 contractible하며 $$G$$는 그 위에 right action으로 free하게 작용한다. 한편 $$X$$ 위의 $$G$$-작용은 왼쪽 작용으로 둔다.
 
 ::: 정의 1
 Topological group $$G$$와 left $$G$$-space $$X$$에 대하여, 곱공간 $$EG\times X$$ 위에 $$G$$-작용을
@@ -115,7 +115,7 @@ $$H_T^\bullet(\mathrm{pt};\mathbb{Z})=H^\bullet(BT;\mathbb{Z})=\mathrm{Sym}_{\ma
 $$H^\bullet(BT;\mathbb{Z})=\mathbb{Z}[t_1,\ldots,t_n]$$이며 degree $$2$$ 부분 $$H^2(BT;\mathbb{Z})$$이 character lattice $$\mathrm{Hom}(T,S^1)$$과 표준적으로 동형이라는 사실은 [\[대수적 위상수학\] §분류공간, ⁋따름정리 12](/ko/math/algebraic_topology/classifying_spaces#cor12)에서 보였다. 그 동형은 character $$\chi:T\rightarrow S^1$$에 $$B\chi:BT\rightarrow BS^1=\mathbb{CP}^\infty$$의 pullback $$(B\chi)^\ast(t)\in H^2(BT;\mathbb{Z})$$를 대응시키는 것이었고, $$t=c_1$$이 $$BS^1=\mathbb{CP}^\infty$$ 위의 tautological line bundle의 first Chern class였으므로, 이 pullback은 곧 $$\chi$$가 주는 일차원 표현 $$\mathbb{C}_\chi$$에 대한 associated line bundle $$L_\chi=ET\times_T\mathbb{C}_\chi$$의 $$c_1(L_\chi)$$이다. Polynomial ring이 그 degree $$2$$ 부분 위의 symmetric algebra이므로 $$\mathbb{Z}[t_1,\ldots,t_n]=\mathrm{Sym}_{\mathbb{Z}}(M)$$이다.
 :::
 
-이 동형은 character lattice의 원소, 곧 ([\[리 이론\] §원환면의 작용, ⁋정의 4](/ko/math/lie_theory/torus_action#def4))에서 정의한 torus 표현의 weight를 $$H_T^\bullet(\mathrm{pt})$$의 degree $$2$$ class로 읽게 해 준다. 좌표 character $$T\rightarrow S^1$$, $$(\lambda_1,\ldots,\lambda_n)\mapsto\lambda_i$$를 $$t_i$$로 적으면, weight $$a=(a_1,\ldots,a_n)\in M\cong\mathbb{Z}^n$$인 표현은 degree $$2$$ class $$a_1t_1+\cdots+a_nt_n$$에 대응한다. 이 차수의 두 배 차이 (weight는 차수 $$1$$처럼 세지만 cohomology에서는 차수 $$2$$에 놓인다) 는 $$\mathbb{CP}^\infty$$의 cohomology가 짝수 차수에만 있다는 사실에서 비롯한다. 앞으로 보게 될 계산에서 fixed point에 놓인 표현의 weight들이 $$H_T^\bullet(\mathrm{pt})=\mathbb{Z}[t_1,\ldots,t_n]$$의 일차식으로 직접 나타난다.
+이 동형은 character lattice의 원소, 곧 [\[리 이론\] §원환면의 작용, ⁋정의 4](/ko/math/lie_theory/torus_action#def4)에서 정의한 torus 표현의 weight를 $$H_T^\bullet(\mathrm{pt})$$의 degree $$2$$ class로 읽게 해 준다. 좌표 character $$T\rightarrow S^1$$, $$(\lambda_1,\ldots,\lambda_n)\mapsto\lambda_i$$를 $$t_i$$로 적으면, weight $$a=(a_1,\ldots,a_n)\in M\cong\mathbb{Z}^n$$인 표현은 degree $$2$$ class $$a_1t_1+\cdots+a_nt_n$$에 대응한다. 이 차수의 두 배 차이 (weight는 차수 $$1$$처럼 세지만 cohomology에서는 차수 $$2$$에 놓인다) 는 $$\mathbb{CP}^\infty$$의 cohomology가 짝수 차수에만 있다는 사실에서 비롯한다. 앞으로 보게 될 계산에서 fixed point에 놓인 표현의 weight들이 $$H_T^\bullet(\mathrm{pt})=\mathbb{Z}[t_1,\ldots,t_n]$$의 일차식으로 직접 나타난다.
 
 ## 사영다발 정리
 

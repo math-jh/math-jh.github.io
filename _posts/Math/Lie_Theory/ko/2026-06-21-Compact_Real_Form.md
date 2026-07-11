@@ -157,7 +157,7 @@ $$H_\tau(x,x)=-\kappa(u+iv,\,u-iv)=-\kappa(u,u)-\kappa(v,v)+i\bigl(\kappa(u,v)-\
 
 인데 $$\kappa$$가 symmetric이라 허수부가 사라지고, $$\kappa_{\mathfrak{u}}$$가 음의 정부호이므로 $$-\kappa(u,u)-\kappa(v,v)\geq0$$이며 $$x\neq0$$이면 $$u,v$$ 중 하나가 $$0$$이 아니어서 양수이다.
 
-skew-Hermitian성은 $$\kappa$$의 invariance ([§Killing 형식과 Cartan 판정법, ⁋명제 2](/ko/math/lie_theory/killing_form_and_cartan_criterion#prop2))에서 따른다. $$x\in\mathfrak{u}$$이면 $$\tau x=x$$이고 $$\tau$$가 bracket을 보존하므로 $$\tau([x,y])=[x,\tau y]$$이다. 따라서
+skew-Hermitian성은 $$\kappa$$의 invariance에서 ([§Killing 형식과 Cartan 판정법, ⁋명제 2](/ko/math/lie_theory/killing_form_and_cartan_criterion#prop2)) 따른다. $$x\in\mathfrak{u}$$이면 $$\tau x=x$$이고 $$\tau$$가 bracket을 보존하므로 $$\tau([x,y])=[x,\tau y]$$이다. 따라서
 
 $$H_\tau([x,y],z)=-\kappa([x,y],\tau z)=-\kappa(y,[\,\tau z,x\,])=\kappa(y,[x,\tau z])=\kappa(y,\tau[x,z])=-H_\tau(y,[x,z])$$
 
@@ -215,7 +215,7 @@ $$\rho$$를 $$\mathfrak{u}\subseteq\mathfrak{g}$$로 제한하면 실 Lie algebr
 마지막으로 각 $$W_j$$가 $$\mathfrak{g}$$-기약임을 본다. $$W_j$$가 $$0$$이 아닌 $$\mathfrak{g}$$-부분표현 $$W'\subsetneq W_j$$를 가진다면, 위와 같은 이유로 $$W'$$는 $$\mathfrak{u}$$-불변이고 따라서 ($$U$$가 연결이므로) $$U$$-불변인 진부분표현이 되어 $$W_j$$의 $$U$$-기약성에 모순이다. 그러므로 $$V=\bigoplus_j W_j$$는 $$\mathfrak{g}$$-기약 부분표현들의 직합이고, $$\rho$$는 완전가약이다.
 :::
 
-이로써 Weyl 완전가약성 정리 ([§Weyl 완전가약성 정리, ⁋정리 7](/ko/math/lie_theory/weyl_complete_reducibility#thm7))를 Casimir element를 통한 순수 대수적 증명과는 독립적으로, compact 군의 평균화 논법으로 다시 얻었다. 두 증명은 같은 결론에 이르지만 강조점이 다르다. Casimir element를 쓰는 증명은 표수 $$0$$의 임의의 대수적으로 닫힌 체 위에서 작동하는 반면, unitarian trick은 $$\mathbb{C}$$ 위에서 compact 군의 위상적·해석적 성질에 의존한다. Weyl의 원래 동기는 후자였으며, compact real form은 복소 semisimple Lie algebra의 표현론과 compact Lie group의 표현론을 잇는 핵심 고리로 남는다.
+이로써 [§Weyl 완전가약성 정리, ⁋정리 7](/ko/math/lie_theory/weyl_complete_reducibility#thm7)를 Casimir element를 통한 순수 대수적 증명과는 독립적으로, compact 군의 평균화 논법으로 다시 얻었다. 두 증명은 같은 결론에 이르지만 강조점이 다르다. Casimir element를 쓰는 증명은 표수 $$0$$의 임의의 대수적으로 닫힌 체 위에서 작동하는 반면, unitarian trick은 $$\mathbb{C}$$ 위에서 compact 군의 위상적·해석적 성질에 의존한다. Weyl의 원래 동기는 후자였으며, compact real form은 복소 semisimple Lie algebra의 표현론과 compact Lie group의 표현론을 잇는 핵심 고리로 남는다.
 
 ---
 

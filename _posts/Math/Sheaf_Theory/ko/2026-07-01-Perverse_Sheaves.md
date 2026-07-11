@@ -48,7 +48,7 @@ $$X \in \mathcal{T}$$에 [정의 1](#def1)의 셋째 조건을 적용해 삼각�
 $$\Hom(A', B[-1]) \to \Hom(A', A) \to \Hom(A', X) \to \Hom(A', B)$$
 를 얻는다. $$B \in \mathcal{T}^{\geq 1}$$이고 $$B[-1] \in \mathcal{T}^{\geq 2} \subseteq \mathcal{T}^{\geq 1}$$이므로 직교성에 의해 양 끝 항이 $$0$$이고, 따라서
 $$\Hom_{\mathcal{T}}(A', A) \xrightarrow{\ \sim\ } \Hom_{\mathcal{T}}(A', X)$$
-이 모든 $$A' \in \mathcal{T}^{\leq 0}$$에 대해 성립한다. 이것이 바로 $$A$$가 포함 함자에 대한 $$X$$의 오른쪽 수반의 값임을 뜻하므로 $$\tau_{\leq 0} X := A$$로 둔다. 수반의 보편성에 의해 $$A$$는 유일한 동형을 제외하고 결정되고, 같은 보편성이 사상 $$X \to X'$$에 대한 $$\tau_{\leq 0} X \to \tau_{\leq 0} X'$$을 유일하게 주므로 함자성이 따른다. 삼각형의 셋째 꼭짓점 $$B$$는 처음 두 사상의 cone으로 결정되므로 ([\[호몰로지 대수학\] §유도카테고리, ⁋정의 11](/ko/math/homological_algebra/derived_categories#def11))의 (TR1)에 의해 $$\tau_{\geq 1} X := B$$ 역시 유일하게 결정되고, 대칭적인 논증으로 $$\tau_{\geq 1}$$이 포함 함자의 왼쪽 수반이 된다. 일반 차수 $$n$$에 대한 결과는 shift $$[-n]$$을 적용하여 얻는다. 더 자세한 논증은 [BBD]의 Proposition 1.3.3을 따른다.
+이 모든 $$A' \in \mathcal{T}^{\leq 0}$$에 대해 성립한다. 이것이 바로 $$A$$가 포함 함자에 대한 $$X$$의 오른쪽 수반의 값임을 뜻하므로 $$\tau_{\leq 0} X := A$$로 둔다. 수반의 보편성에 의해 $$A$$는 유일한 동형을 제외하고 결정되고, 같은 보편성이 사상 $$X \to X'$$에 대한 $$\tau_{\leq 0} X \to \tau_{\leq 0} X'$$을 유일하게 주므로 함자성이 따른다. 삼각형의 셋째 꼭짓점 $$B$$는 처음 두 사상의 cone으로 결정되므로 [\[호몰로지 대수학\] §유도카테고리, ⁋정의 11](/ko/math/homological_algebra/derived_categories#def11)의 (TR1)에 의해 $$\tau_{\geq 1} X := B$$ 역시 유일하게 결정되고, 대칭적인 논증으로 $$\tau_{\geq 1}$$이 포함 함자의 왼쪽 수반이 된다. 일반 차수 $$n$$에 대한 결과는 shift $$[-n]$$을 적용하여 얻는다. 더 자세한 논증은 [BBD]의 Proposition 1.3.3을 따른다.
 :::
 
 절단 함자 $$\tau_{\leq n}$$, $$\tau_{\geq n}$$이 갖추어졌으니, 이제 abelian 범주에서 cohomology를 뽑던 조작을 일반화할 수 있다. 두 절단을 합성하여 한 차수에 집중된 부분만을 추려내는 것이다.
@@ -69,7 +69,7 @@ $$\cdots \to H^n(X) \to H^n(Y) \to H^n(Z) \to H^{n+1}(X) \to \cdots$$
 이 $$\mathcal{C}$$ 안에서 성립한다.
 :::
 ::: 증명
-핵심은 $$\mathcal{C}$$ 안의 사상 $$f: X \to Y$$에 대한 kernel과 cokernel을 절단으로 구성하는 것이다. $$\mathcal{T}$$ 안에서 $$f$$를 distinguished triangle $$X \xrightarrow{f} Y \to C \xrightarrow{+1}$$로 채우면 ([\[호몰로지 대수학\] §유도카테고리, ⁋정의 11](/ko/math/homological_algebra/derived_categories#def11))의 (TR1)에 의해 $$X, Y \in \mathcal{C} \subseteq \mathcal{T}^{\geq 0}$$이므로 $$C \in \mathcal{T}^{\geq -1}$$이고 마찬가지로 $$C \in \mathcal{T}^{\leq 0}$$이다. 그러면 $$\mathcal{C}$$ 안에서
+핵심은 $$\mathcal{C}$$ 안의 사상 $$f: X \to Y$$에 대한 kernel과 cokernel을 절단으로 구성하는 것이다. $$\mathcal{T}$$ 안에서 $$f$$를 distinguished triangle $$X \xrightarrow{f} Y \to C \xrightarrow{+1}$$로 채우면 [\[호몰로지 대수학\] §유도카테고리, ⁋정의 11](/ko/math/homological_algebra/derived_categories#def11)의 (TR1)에 의해 $$X, Y \in \mathcal{C} \subseteq \mathcal{T}^{\geq 0}$$이므로 $$C \in \mathcal{T}^{\geq -1}$$이고 마찬가지로 $$C \in \mathcal{T}^{\leq 0}$$이다. 그러면 $$\mathcal{C}$$ 안에서
 $$\ker f := H^{-1}(C) = \tau_{\leq 0}(C[-1]), \qquad \operatorname{coker} f := H^0(C) = \tau_{\geq 0}(C)$$
 으로 둘 수 있고, 직교성을 써서 이들이 kernel과 cokernel의 보편 성질을 만족함을 확인한다. Abelian 범주의 나머지 공리, 곧 모든 monomorphism이 자기 cokernel의 kernel이라는 등의 성질도 절단과 직교성의 결합으로 따라 나온다. Cohomology 함자가 cohomological임은, $$H^0$$이 절단의 합성이고 절단이 distinguished triangle을 적절히 절단된 삼각형으로 보낸다는 사실에서 나온다. 완전한 증명은 [BBD]의 Théorème 1.3.6에 있다.
 :::

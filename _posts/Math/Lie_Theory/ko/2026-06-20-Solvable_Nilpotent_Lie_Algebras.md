@@ -89,7 +89,7 @@ $$\ad x:\mathfrak{g}\rightarrow\mathfrak{g};\qquad (\ad x)(y)=[x,y]$$
 를 대응시키는 사상 $$\ad:\mathfrak{g}\rightarrow\mathfrak{gl}(\mathfrak{g})$$를 $$\mathfrak{g}$$의 *adjoint representation<sub>수반 표현</sub>*이라 부른다.
 :::
 
-이 정의는 Lie group $$G$$의 adjoint representation을 미분하여 얻어지는 사상 ([§리 군, ⁋정의 19](/ko/math/lie_theory/Lie_groups#def19))의 추상적·대수적 판본이며, 그 글에서 확인한 $$\ad(x)y=[x,y]$$를 그대로 정의로 채택한 것이다. 다음 명제는 $$\ad$$가 표현, 곧 $$\mathfrak{g}$$에서 $$\mathfrak{gl}(\mathfrak{g})$$로의 homomorphism임을 보이며, 그 본질은 Jacobi identity이다.
+이 정의는 Lie group $$G$$의 adjoint representation을 ([§리 군, ⁋정의 19](/ko/math/lie_theory/Lie_groups#def19)) 미분하여 얻어지는 사상의 추상적·대수적 판본이며, 그 글에서 확인한 $$\ad(x)y=[x,y]$$를 그대로 정의로 채택한 것이다. 다음 명제는 $$\ad$$가 표현, 곧 $$\mathfrak{g}$$에서 $$\mathfrak{gl}(\mathfrak{g})$$로의 homomorphism임을 보이며, 그 본질은 Jacobi identity이다.
 
 ::: 명제 7
 $$\ad:\mathfrak{g}\rightarrow\mathfrak{gl}(\mathfrak{g})$$은 Lie algebra homomorphism이며, $$\ker(\ad)=Z(\mathfrak{g})$$이다.

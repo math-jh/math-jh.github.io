@@ -234,7 +234,7 @@ $$
 들로 정의되는 층이라 한다. 곧 국소적으로 $$\omega = \sum_{\lvert I \rvert = p} f_I\, dz_I$$이되 모든 계수 $$f_I$$가 정칙인 형식들의 층이다.
 :::
 
-$$p = 0$$일 때 $$\Omega^0$$은 정칙함수의 구조층 $$\mathcal{O}_X$$이다. $$p = 1$$일 때 $$\Omega^1$$은 정칙 1-형식의 층으로, 정칙여접다발의 정칙 단면들이 이루는 층 ([§복소다양체, ⁋정의 11](/ko/math/complex_geometry/complex_manifolds#def11))이다. 조건 $$\bar\partial\omega = 0$$은 $$(p,0)$$-형식의 계수에 대한 Cauchy–Riemann 방정식이며, 정의에 의해 $$\Omega^p = \ker(\bar\partial : \Omega^{p,0} \to \Omega^{p,1})$$로 $$\bar\partial$$-닫힌 $$(p,0)$$-형식들의 층이다. 이 층의 층 코호몰로지 $$H^q(X, \Omega^p)$$ ([\[대수다양체\] §층 코호몰로지, ⁋정의 1](/ko/math/algebraic_varieties/sheaf_cohomology#def1))가 Dolbeault 코호몰로지의 정체임을 보이려 한다.
+$$p = 0$$일 때 $$\Omega^0$$은 정칙함수의 구조층 $$\mathcal{O}_X$$이다. $$p = 1$$일 때 $$\Omega^1$$은 정칙 1-형식의 층으로, 정칙여접다발의 정칙 단면들이 이루는 층이다 ([§복소다양체, ⁋정의 11](/ko/math/complex_geometry/complex_manifolds#def11)). 조건 $$\bar\partial\omega = 0$$은 $$(p,0)$$-형식의 계수에 대한 Cauchy–Riemann 방정식이며, 정의에 의해 $$\Omega^p = \ker(\bar\partial : \Omega^{p,0} \to \Omega^{p,1})$$로 $$\bar\partial$$-닫힌 $$(p,0)$$-형식들의 층이다. 이 층의 층 코호몰로지 ([\[대수다양체\] §층 코호몰로지, ⁋정의 1](/ko/math/algebraic_varieties/sheaf_cohomology#def1)) $$H^q(X, \Omega^p)$$가 Dolbeault 코호몰로지의 정체임을 보이려 한다.
 
 추상 de Rham 논법의 핵심은 매끄러운 형식의 층 $$\mathcal{A}^{p,q}$$ (각 $$U$$에 $$\Omega^{p,q}(U)$$를 대응시키는 층)가 *fine sheaf<sub>미세층</sub>* 라는 점이다. 미세층은 임의의 열린덮개에 종속된 partition of unity를 가지는 층으로, 그러한 단위분할이 존재하면 그 층은 층 코호몰로지에서 acyclic하다. 매끄러운 함수의 단위분할이 $$\mathcal{A}^{p,q}$$의 단면에 그대로 곱해지므로 $$\mathcal{A}^{p,q}$$는 미세층이고, 따라서 모든 $$q' > 0$$에 대하여 $$H^{q'}(X, \mathcal{A}^{p,q}) = 0$$이다. 이제 $$\bar\partial$$-복합체가 $$\Omega^p$$의 분해임을 확인한다.
 
@@ -253,7 +253,7 @@ $$
 
 먼저 $$\Omega^p \to \mathcal{A}^{p,0}$$의 위치에서의 완전성, 곧 $$\Omega^p = \ker(\bar\partial : \mathcal{A}^{p,0} \to \mathcal{A}^{p,1})$$이다. 이는 [정의 7](#def7) 그 자체이다. $$\Omega^p$$로의 사상은 포함사상이고, 정칙 $$(p,0)$$-형식이 정확히 $$\bar\partial$$로 죽는 매끄러운 $$(p,0)$$-형식이므로 이 위치에서 완전하다 ($$\Omega^p \to \mathcal{A}^{p,0}$$이 단사이고 그 상이 $$\bar\partial$$의 핵과 같다).
 
-다음으로 $$q \geq 1$$에서 $$\ker(\bar\partial : \mathcal{A}^{p,q} \to \mathcal{A}^{p,q+1}) = \Img(\bar\partial : \mathcal{A}^{p,q-1} \to \mathcal{A}^{p,q})$$임을 보인다. 포함 $$\Img \subseteq \ker$$은 $$\bar\partial^2 = 0$$ ([명제 3](#prop3))에서 따라온다. 반대 포함을 줄기에서 본다. $$x \in X$$와 $$x$$ 근방의 $$\bar\partial$$-닫힌 $$(p,q)$$-형식 $$\omega$$의 줄기가 주어지면, $$x$$의 충분히 작은 폴리디스크 근방 $$\Delta$$를 잡아 $$\omega$$가 $$\Delta$$에서 정의된 $$\bar\partial$$-닫힌 형식이게 할 수 있다. [보조정리 6](#lem6)에 의해 $$\Delta$$에서 $$\omega = \bar\partial\eta$$인 $$\eta \in \mathcal{A}^{p,q-1}(\Delta)$$가 존재하므로, 줄기 수준에서 $$\omega$$는 $$\bar\partial$$의 상에 든다. 따라서 $$\ker \subseteq \Img$$이고 이 위치에서도 완전하다.
+다음으로 $$q \geq 1$$에서 $$\ker(\bar\partial : \mathcal{A}^{p,q} \to \mathcal{A}^{p,q+1}) = \Img(\bar\partial : \mathcal{A}^{p,q-1} \to \mathcal{A}^{p,q})$$임을 보인다. 포함 $$\Img \subseteq \ker$$은 [명제 3](#prop3)의 $$\bar\partial^2 = 0$$에서 따라온다. 반대 포함을 줄기에서 본다. $$x \in X$$와 $$x$$ 근방의 $$\bar\partial$$-닫힌 $$(p,q)$$-형식 $$\omega$$의 줄기가 주어지면, $$x$$의 충분히 작은 폴리디스크 근방 $$\Delta$$를 잡아 $$\omega$$가 $$\Delta$$에서 정의된 $$\bar\partial$$-닫힌 형식이게 할 수 있다. [보조정리 6](#lem6)에 의해 $$\Delta$$에서 $$\omega = \bar\partial\eta$$인 $$\eta \in \mathcal{A}^{p,q-1}(\Delta)$$가 존재하므로, 줄기 수준에서 $$\omega$$는 $$\bar\partial$$의 상에 든다. 따라서 $$\ker \subseteq \Img$$이고 이 위치에서도 완전하다.
 
 각 $$\mathcal{A}^{p,q}$$가 미세층임은 매끄러운 함수의 단위분할 $$\{\rho_i\}$$를 $$(p,q)$$-형식의 단면에 점별로 곱하는 연산 $$\omega \mapsto \rho_i\omega$$이 층사상이고 $$\sum_i \rho_i = 1$$을 주므로 따라온다. 따라서 sequence는 $$\Omega^p$$의 fine resolution이다.
 :::
@@ -279,13 +279,13 @@ $$
 
 는 $$\Omega^p$$의 분해이고, 각 $$\mathcal{A}^{p,q}$$는 미세층이라 $$\Gamma(X, -)$$-acyclic하다 (미세층은 모든 양의 차수 층 코호몰로지가 소멸한다). 따라서 이는 acyclic resolution이다.
 
-acyclic resolution에 대한 추상 de Rham 정리 ([\[대수다양체\] §층 코호몰로지, ⁋명제 17](/ko/math/algebraic_varieties/sheaf_cohomology#prop17))는, $$0 \to \mathcal{F} \to \mathcal{A}^0 \to \mathcal{A}^1 \to \cdots$$이 $$\Gamma(X,-)$$-acyclic resolution이면
+acyclic resolution에 대한 추상 de Rham 정리는, $$0 \to \mathcal{F} \to \mathcal{A}^0 \to \mathcal{A}^1 \to \cdots$$이 $$\Gamma(X,-)$$-acyclic resolution이면
 
 $$
 H^q(X, \mathcal{F}) \cong \frac{\ker\left( \Gamma(X, \mathcal{A}^q) \to \Gamma(X, \mathcal{A}^{q+1}) \right)}{\Img\left( \Gamma(X, \mathcal{A}^{q-1}) \to \Gamma(X, \mathcal{A}^q) \right)}
 $$
 
-임을 준다. 우리 분해에 적용하면 $$\mathcal{F} = \Omega^p$$, $$\mathcal{A}^q = \mathcal{A}^{p,q}$$이고 전역단면은 $$\Gamma(X, \mathcal{A}^{p,q}) = \Omega^{p,q}(X)$$, 그 사이의 사상은 $$\bar\partial$$이다. 따라서
+임을 준다 ([\[대수다양체\] §층 코호몰로지, ⁋명제 17](/ko/math/algebraic_varieties/sheaf_cohomology#prop17)). 우리 분해에 적용하면 $$\mathcal{F} = \Omega^p$$, $$\mathcal{A}^q = \mathcal{A}^{p,q}$$이고 전역단면은 $$\Gamma(X, \mathcal{A}^{p,q}) = \Omega^{p,q}(X)$$, 그 사이의 사상은 $$\bar\partial$$이다. 따라서
 
 $$
 H^q(X, \Omega^p) \cong \frac{\ker\left( \bar\partial : \Omega^{p,q}(X) \to \Omega^{p,q+1}(X) \right)}{\Img\left( \bar\partial : \Omega^{p,q-1}(X) \to \Omega^{p,q}(X) \right)} = H^{p,q}_{\bar\partial}(X)

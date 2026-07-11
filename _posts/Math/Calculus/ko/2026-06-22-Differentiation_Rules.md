@@ -11,7 +11,6 @@ sidebar:
 date: 2026-06-22
 weight: 7
 
-
 ---
 
 우리는 [§미분과 도함수](/ko/math/calculus/derivatives)에서 미분의 정의와 기본적인 성질들을 다루었다. 이번 글에서 우리는 구체적인 함수에 대한 미분들과, 일반적인 함수들에 대해 적용되는 미분규칙들을 다룬다.
@@ -89,7 +88,7 @@ $$(fg)'(a) = f'(a) g(a) + f(a) g'(a)$$
 
 $$\frac{f(a+h)g(a+h) - f(a)g(a)}{h} = \frac{f(a+h)-f(a)}{h} g(a+h) + f(a) \frac{g(a+h)-g(a)}{h}$$
 
-이다. $$h \to 0$$일 때 첫 항의 평균변화율은 $$f'(a)$$로, $$g(a+h)$$는 $$g$$의 연속성 ([§미분과 도함수, ⁋명제 2](/ko/math/calculus/derivatives#prop2))으로 $$g(a)$$로, 둘째 항의 평균변화율은 $$g'(a)$$로 수렴하므로, [§함수의 극한, ⁋명제 5](/ko/math/calculus/functions_and_limits#prop5)에 의해 합은 $$f'(a)g(a) + f(a)g'(a)$$로 수렴한다.
+이다. $$h \to 0$$일 때 첫 항의 평균변화율은 $$f'(a)$$로, $$g(a+h)$$는 $$g$$의 연속성으로 ([§미분과 도함수, ⁋명제 2](/ko/math/calculus/derivatives#prop2)) $$g(a)$$로, 둘째 항의 평균변화율은 $$g'(a)$$로 수렴하므로, [§함수의 극한, ⁋명제 5](/ko/math/calculus/functions_and_limits#prop5)에 의해 합은 $$f'(a)g(a) + f(a)g'(a)$$로 수렴한다.
 :::
 
 가장 널리 쓰이는 규칙은 합성함수의 미분이다.

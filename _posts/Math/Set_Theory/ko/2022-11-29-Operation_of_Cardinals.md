@@ -51,7 +51,7 @@ $$\sum_{i\in I}\mathfrak{a}_i=\sum_{i\in J}\mathfrak{a}_i,\quad \prod_{i\in I}\m
 공집합과 합집합을 하는 것과, 원소 하나짜리 집합과 곱을 하는 것은 cadrinal에 영향을 미치지 않는다. ($$x\mapsto (x,i)$$가 $$A$$에서 $$A\times\{i\}$$로의 bijection을 정의한다)
 :::
 
-그리고, 이렇게 자명한 결과들 외에도, 곱과 합집합 사이의 분배법칙 ([§곱집합의 성질, ⁋명제 7](/ko/math/set_theory/property_of_products#prop7))를 이용하면 다음의 명제를 얻는다. 
+그리고, 이렇게 자명한 결과들 외에도, 곱과 합집합 사이의 분배법칙을 이용하면 다음의 명제를 얻는다 ([§곱집합의 성질, ⁋명제 7](/ko/math/set_theory/property_of_products#prop7)). 
 
 ::: 명제 4
 Cardinal들의 double-index가 주어진 family $$((\mathfrak{a}_{j,k})_{j\in J_k})_{k\in K}$$에 대하여, $$I=\prod_{k\in K}J_k$$라 하면 

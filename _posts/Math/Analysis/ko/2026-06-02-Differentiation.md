@@ -12,6 +12,7 @@ date: 2026-06-02
 weight: 12
 
 published: false
+
 ---
 
 [\[미적분학\] §미분과 도함수](/ko/math/calculus/derivatives)에서 미분을 차분몫의 극한으로 정의하였다. 이제 극한과 연속의 엄밀한 이론을 갖추었으므로, 미분을 다시 정초하되 차분몫의 분모가 사라지는 번거로움을 피하는 Carathéodory의 동치 형태를 채택한다.
@@ -99,7 +100,7 @@ $$\left(\frac{f}{g}\right)'(a) = \frac{f'(a)g(a) - f(a)g'(a)}{g(a)^2}$$
 :::
 
 ::: 증명
-$$g$$가 $$a$$에서 연속이고 $$g(a) \neq 0$$이므로, 연속함수의 부호 보존성 ([§함수의 극한과 연속](/ko/math/analysis/limits_and_continuity))에 의해 $$a$$의 한 근방에서 $$g$$는 $$0$$이 되지 않아 $$f/g$$가 정의된다. 그 근방에서 [명제 1](#prop1)의 $$\varphi, \psi$$를 써서 차이를 정리하면
+$$g$$가 $$a$$에서 연속이고 $$g(a) \neq 0$$이므로, [§함수의 극한과 연속](/ko/math/analysis/limits_and_continuity)의 부호 보존성에 의해 $$a$$의 한 근방에서 $$g$$는 $$0$$이 되지 않아 $$f/g$$가 정의된다. 그 근방에서 [명제 1](#prop1)의 $$\varphi, \psi$$를 써서 차이를 정리하면
 
 $$\begin{aligned}
 \frac{f(x)}{g(x)} - \frac{f(a)}{g(a)} &= \frac{f(x)g(a) - f(a)g(x)}{g(x)g(a)} \\

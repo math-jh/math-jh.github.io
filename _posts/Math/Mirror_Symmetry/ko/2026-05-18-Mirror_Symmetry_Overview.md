@@ -29,7 +29,7 @@ Mirror symmetry는 수학 체계 안에서 자연스럽게 생겨난 분야가 �
 
 ## Hori-Vafa Mirror Construction
 
-Toric variety ([\[토릭기하학\] §토릭 다양체의 정의, ⁋정의 3](/ko/math/toric_geometry/toric_varieties#def3))의 경우 mirror symmetry는 매우 구체적인 형태를 띄므로, 본격적인 이야기를 시작하기 전에 mirror symmetry가 어떻게 작동하는지를 이 위에서 살펴보기로 한다. 
+Toric variety의 경우 ([\[토릭기하학\] §토릭 다양체의 정의, ⁋정의 3](/ko/math/toric_geometry/toric_varieties#def3)) mirror symmetry는 매우 구체적인 형태를 띄므로, 본격적인 이야기를 시작하기 전에 mirror symmetry가 어떻게 작동하는지를 이 위에서 살펴보기로 한다. 
 
 Smooth projective toric variety $$X=X_\Sigma$$의 fan을 $$\Sigma$$, 그 1차원 cone의 primitive generator들을 $$v_1, \ldots, v_m \in \mathbb{Z}^n$$이라 하자. $$\Sigma$$가 complete fan이라면 $$v_i$$들은 $$\mathbb{R}^n$$을 span한다. 그러나 $$m>n$$이므로, 이들은 $$\mathbb{Z}$$-linearly dependent하며 따라서 이들 사이의 $$r=m-n$$개의 integral equation이 존재한다. 
 

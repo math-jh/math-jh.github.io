@@ -56,7 +56,7 @@ Category $$\Open(X)$$를 ordered set $$(\mathcal{T}, \subseteq)$$를 category로
 그럼 $$\mathcal{F}$$는 presheaf가 된다. 
 :::
 
-특별히 이 정의는 projection $$p:Y \rightarrow X$$가 주어졌을 때, $$X$$에서 $$Y$$로의 continuous section들 ([\[집합론\] §Retraction과 section, ⁋정의 2](/ko/math/set_theory/retraction_and_section#def2))의 presheaf $$\mathcal{F}$$의 모임을 생각하는 식으로 응용할 수 있다. 이를 일반화하여 다음과 같은 정의를 내린다. 
+특별히 이 정의는 projection $$p:Y \rightarrow X$$가 주어졌을 때, $$X$$에서 $$Y$$로의 continuous section들의 ([\[집합론\] §Retraction과 section, ⁋정의 2](/ko/math/set_theory/retraction_and_section#def2)) presheaf $$\mathcal{F}$$의 모임을 생각하는 식으로 응용할 수 있다. 이를 일반화하여 다음과 같은 정의를 내린다. 
 
 ::: 정의 4
 위상공간 $$X$$ 위에서 정의된 presheaf $$\mathcal{F}$$가 주어졌다 하자. 
@@ -66,7 +66,7 @@ Category $$\Open(X)$$를 ordered set $$(\mathcal{T}, \subseteq)$$를 category로
 - 특별히 열린집합들 $$U\subseteq V$$와 $$s\in \mathcal{F}(V)$$에 대하여, $$\rho_{VU}(s)\in \mathcal{F}(U)$$를 간단히 $$s\vert_U$$로 표기한다.
 :::
 
-한편 위의 [정의 2](#def2)에서, $$\Set$$은 적절한 카테고리, 예를 들어 $$\Ab$$와 같은 카테고리로 바꿀 수도 있다. 가령 [예시 3](#ex3)에서 $$Y=\mathbb{R}$$이었다면, $$\mathbb{R}$$ 위에 정의된 덧셈을 사용하여 연속함수들의 덧셈을 정의할 수도 있었을 것이며, 그럼 $$\mathcal{F}(U)$$는 abelian group의 구조를 가지게 되었을 것이다. 이러한 경우 $$\mathcal{F}$$를 $$X$$ 위에 정의된 abelian group들의 presheaf라 부른다. 편의상 앞으로 presheaf $$\mathcal{F}: \Open(X)^\op \rightarrow \mathcal{A}$$를 $$\mathcal{A}$$-valued presheaf라 부르기로 한다. Presheaf 중 위의 gluing condition ([보조정리 1](#lem1))을 만족하는 것들을 sheaf라 부르는데, 이는 다음 글에서 정의한다. 
+한편 위의 [정의 2](#def2)에서, $$\Set$$은 적절한 카테고리, 예를 들어 $$\Ab$$와 같은 카테고리로 바꿀 수도 있다. 가령 [예시 3](#ex3)에서 $$Y=\mathbb{R}$$이었다면, $$\mathbb{R}$$ 위에 정의된 덧셈을 사용하여 연속함수들의 덧셈을 정의할 수도 있었을 것이며, 그럼 $$\mathcal{F}(U)$$는 abelian group의 구조를 가지게 되었을 것이다. 이러한 경우 $$\mathcal{F}$$를 $$X$$ 위에 정의된 abelian group들의 presheaf라 부른다. 편의상 앞으로 presheaf $$\mathcal{F}: \Open(X)^\op \rightarrow \mathcal{A}$$를 $$\mathcal{A}$$-valued presheaf라 부르기로 한다. Presheaf 중 위의 [보조정리 1](#lem1)의 gluing condition을 만족하는 것들을 sheaf라 부르는데, 이는 다음 글에서 정의한다. 
 
 ## 준층의 예시들
 

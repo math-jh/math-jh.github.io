@@ -11,7 +11,6 @@ sidebar:
 date: 2025-04-03
 weight: 3
 
-
 ---
 
 
@@ -296,9 +295,9 @@ $$\length(G)=\length(G/N)+\length(N)$$
 $$A_5$$는 가해군이 아니다.
 :::
 ::: 증명
-먼저 $$A_5$$가 non-abelian임을 본다. 만일 $$A_5$$가 abelian이라면 임의의 $$g\neq e$$에 대하여 cyclic subgroup $$\langle g\rangle$$이 (abelian group의 모든 subgroup이 그러하듯) normal subgroup이고 $$\{e\}$$가 아니므로, $$A_5$$의 simple성 ([§대칭군, ⁋예시 13](/ko/math/group_theory/symmetric_groups#ex13))에 의해 $$\langle g\rangle=A_5$$, 곧 $$A_5$$가 위수 $$60$$의 cyclic group이 된다. 그러나 그렇다면 $$\langle g^{30}\rangle$$이 위수 $$2$$의 자명하지 않은 proper normal subgroup을 이루어 simple성에 모순이다. 따라서 $$A_5$$는 non-abelian이다.
+먼저 $$A_5$$가 non-abelian임을 본다. 만일 $$A_5$$가 abelian이라면 임의의 $$g\neq e$$에 대하여 cyclic subgroup $$\langle g\rangle$$이 (abelian group의 모든 subgroup이 그러하듯) normal subgroup이고 $$\{e\}$$가 아니므로, [§대칭군, ⁋예시 13](/ko/math/group_theory/symmetric_groups#ex13)의 simple성에 의해 $$\langle g\rangle=A_5$$, 곧 $$A_5$$가 위수 $$60$$의 cyclic group이 된다. 그러나 그렇다면 $$\langle g^{30}\rangle$$이 위수 $$2$$의 자명하지 않은 proper normal subgroup을 이루어 simple성에 모순이다. 따라서 $$A_5$$는 non-abelian이다.
 
-이제 derived series ([정의 9](#def9))를 본다. 교환자부분군 $$D_1(A_5)=[A_5,A_5]$$는 언제나 normal subgroup이며, $$A_5$$가 non-abelian이므로 $$D_1(A_5)\neq\{e\}$$이다. $$A_5$$가 simple이므로 $$D_1(A_5)=A_5$$일 수밖에 없고, 따라서 귀납적으로 모든 $$n$$에 대하여 $$D_n(A_5)=A_5\neq\{e\}$$이다. 어떤 $$n$$에서도 $$D_{n+1}(A_5)=\{e\}$$가 성립할 수 없으므로, [정의 11](#def11)에 의해 $$A_5$$는 가해군이 아니다.
+이제 [정의 9](#def9)의 derived series를 본다. 교환자부분군 $$D_1(A_5)=[A_5,A_5]$$는 언제나 normal subgroup이며, $$A_5$$가 non-abelian이므로 $$D_1(A_5)\neq\{e\}$$이다. $$A_5$$가 simple이므로 $$D_1(A_5)=A_5$$일 수밖에 없고, 따라서 귀납적으로 모든 $$n$$에 대하여 $$D_n(A_5)=A_5\neq\{e\}$$이다. 어떤 $$n$$에서도 $$D_{n+1}(A_5)=\{e\}$$가 성립할 수 없으므로, [정의 11](#def11)에 의해 $$A_5$$는 가해군이 아니다.
 :::
 
 가해성이 subgroup으로 유전된다는 사실과 결합하면, 대칭군의 가해성에 대한 결론이 곧바로 따라온다.

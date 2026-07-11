@@ -145,7 +145,7 @@ $$\langle \rchi_W,\rchi_V\rangle=\delta_{VW}$$
 
 ## Regular representation
 
-이 섹션에서 우리는 지난 글에서 고려했던 Artin-Wedderburn decomposition ([§유한군의 표현론](/ko/math/representation_theory/representations_of_finite_groups#cor7))을 character를 이용해 얻어낸다. 이를 위해, 우선 $$\mathbb{C}[G]$$는 자기자신 위에 정의된 left $$\mathbb{C}[G]$$-module이고 따라서 categorical equivalence
+이 섹션에서 우리는 지난 글에서 고려했던 Artin-Wedderburn decomposition을 ([§유한군의 표현론](/ko/math/representation_theory/representations_of_finite_groups#cor7)) character를 이용해 얻어낸다. 이를 위해, 우선 $$\mathbb{C}[G]$$는 자기자신 위에 정의된 left $$\mathbb{C}[G]$$-module이고 따라서 categorical equivalence
 
 $$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$
 

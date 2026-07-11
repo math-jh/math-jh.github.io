@@ -101,7 +101,7 @@ $$(x\otimes x')(y\otimes y')=xy\otimes x'y'\tag{1}$$
 
 $$E\times E' \rightarrow E\otimes_AE';\qquad (x,x')\mapsto xy\otimes x'y'$$
 
-은 $$E,E'$$의 곱셈이 각 변수에 대해 $$A$$-linear이므로 $$A$$-bilinear이고, 따라서 텐서곱의 universal property ([§가군의 직접곱과 직합, 텐서곱, ⁋명제 8](/ko/math/algebraic_structures/operations_of_modules#prop8))에 의하여 $$x\otimes x'\mapsto xy\otimes x'y'$$이도록 하는 유일한 $$A$$-linear map $$m_{(y,y')}:E\otimes_AE' \rightarrow E\otimes_AE'$$을 유도한다.
+은 $$E,E'$$의 곱셈이 각 변수에 대해 $$A$$-linear이므로 $$A$$-bilinear이고, 따라서 [§가군의 직접곱과 직합, 텐서곱, ⁋명제 8](/ko/math/algebraic_structures/operations_of_modules#prop8)의 universal property에 의하여 $$x\otimes x'\mapsto xy\otimes x'y'$$이도록 하는 유일한 $$A$$-linear map $$m_{(y,y')}:E\otimes_AE' \rightarrow E\otimes_AE'$$을 유도한다.
 
 이제 대응 $$(y,y')\mapsto m_{(y,y')}$$를 생각하면, 이는 $$E\times E'$$에서 $$\End_{\lMod{A}}(E\otimes_AE')$$로 가는 함수이며, 다시 곱셈의 bilinearity에 의해 $$A$$-bilinear이다. 가령
 

@@ -90,7 +90,7 @@ $$\varphi(p^e) = \sum_{j=0}^{e}\mu(p^j)\,p^{e-j} = \mu(1)\,p^e + \mu(p)\,p^{e-1}
 
 $$\varphi(n) = \prod_i p_i^{e_i - 1}(p_i - 1) = n\prod_{p \mid n}\Bigl(1 - \frac1p\Bigr)$$
 
-이라는 익숙한 형태를 얻는다. 합성곱과 반전이라는 대수적 도구만으로 ([§오일러 정리와 phi 함수](/ko/math/number_theory/euler_theorem))에서 직접 센 결과가 재생산되는 것이다.
+이라는 익숙한 형태를 얻는다. 합성곱과 반전이라는 대수적 도구만으로 [§오일러 정리와 phi 함수](/ko/math/number_theory/euler_theorem)에서 직접 센 결과가 재생산되는 것이다.
 
 ## 합성곱의 대수적 구조
 

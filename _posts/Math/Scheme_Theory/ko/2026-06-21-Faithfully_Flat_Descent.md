@@ -18,7 +18,7 @@ published: false
 
 ## 충실평탄 사상
 
-충실평탄성은 평탄성에 전사성을 더한 조건이다. 가군 수준에서 ring homomorphism $$\varphi: A \rightarrow B$$가 충실평탄이라 함은 $$B$$가 평탄 $$A$$-가군이면서 ([\[가환대수학\] §평탄성, ⁋명제 1](/ko/math/commutative_algebra/flatness#prop1)) 다음 명제가 보여주듯 정확성을 단순히 보존할 뿐 아니라 반영하는 것이다. 사상 수준에서는 이를 ([§평탄사상, ⁋정의 2](/ko/math/scheme_theory/flat_morphisms#def2))에서 평탄이면서 surjective인 morphism으로 정의하였다.
+충실평탄성은 평탄성에 전사성을 더한 조건이다. 가군 수준에서 ring homomorphism $$\varphi: A \rightarrow B$$가 충실평탄이라 함은 $$B$$가 평탄 $$A$$-가군이면서 ([\[가환대수학\] §평탄성, ⁋명제 1](/ko/math/commutative_algebra/flatness#prop1)) 다음 명제가 보여주듯 정확성을 단순히 보존할 뿐 아니라 반영하는 것이다. 사상 수준에서는 이를 [§평탄사상, ⁋정의 2](/ko/math/scheme_theory/flat_morphisms#def2)에서 평탄이면서 surjective인 morphism으로 정의하였다.
 
 ::: 정의 1
 Ring homomorphism $$\varphi: A \rightarrow B$$가 *faithfully flat<sub>충실평탄</sub>*하다는 것은, $$B$$가 평탄 $$A$$-가군이고, 동시에 임의의 $$A$$-가군 $$M$$에 대하여 $$M\otimes_A B=0$$이면 $$M=0$$인 것이다.
@@ -213,7 +213,7 @@ $$0 \rightarrow M \rightarrow M\otimes_A B \rightarrow M\otimes_A B\otimes_A B$$
 $$\{f_i: U_i \rightarrow X\}$$가 fpqc cover라 하자. 그럼 $$X$$ 위의 준연접층을 주는 것은, 각 $$U_i$$ 위의 준연접층 $$\mathcal{F}_i$$들과, $$U_i\times_X U_j$$ 위에서 cocycle 조건을 만족하는 동형사상 $$\varphi_{ij}: \operatorname{pr}_2^\ast \mathcal{F}_j\cong \operatorname{pr}_1^\ast \mathcal{F}_i$$들의 데이터를 주는 것과 동치이다. 즉 준연접층은 fpqc 위상에 대하여 *effective descent*를 가진다.
 :::
 ::: 증명
-문제가 국소적이므로 $$X=\Spec A$$이고 덮개가 단일 충실평탄 사상 $$\Spec B \rightarrow \Spec A$$인 경우로 환원된다. 이 때 $$U_i\times_X U_j$$는 $$\Spec(B\otimes_A B)$$이고, 주어진 데이터는 정확히 $$B$$-가군 $$N=\Gamma(\Spec B, \mathcal{F}_1)$$과 $$B\otimes_A B$$-가군 동형 $$\varphi_N$$의 cocycle 쌍, 즉 [정의 4](#def4)의 descent datum이다. 준연접층과 가군의 대응 ([§준연접층, ⁋정리 9](/ko/math/scheme_theory/quasicoherent_sheaves#thm9))과 pullback의 base change 해석 ([§준연접층, ⁋명제 18](/ko/math/scheme_theory/quasicoherent_sheaves#prop18)) 아래에서, 이 데이터는 $$\operatorname{Desc}(B/A)$$의 대상에 정확히 대응한다. 따라서 [정리 6](#thm6)에 의해 이는 유일한 $$A$$-가군 $$M$$, 즉 유일한 준연접층 $$\widetilde M$$으로부터 오며, 그 사상까지 동치이다.
+문제가 국소적이므로 $$X=\Spec A$$이고 덮개가 단일 충실평탄 사상 $$\Spec B \rightarrow \Spec A$$인 경우로 환원된다. 이 때 $$U_i\times_X U_j$$는 $$\Spec(B\otimes_A B)$$이고, 주어진 데이터는 정확히 $$B$$-가군 $$N=\Gamma(\Spec B, \mathcal{F}_1)$$과 $$B\otimes_A B$$-가군 동형 $$\varphi_N$$의 cocycle 쌍, 즉 [정의 4](#def4)의 descent datum이다. [§준연접층, ⁋정리 9](/ko/math/scheme_theory/quasicoherent_sheaves#thm9)의 준연접층과 가군의 대응과 pullback의 base change 해석 ([§준연접층, ⁋명제 18](/ko/math/scheme_theory/quasicoherent_sheaves#prop18)) 아래에서, 이 데이터는 $$\operatorname{Desc}(B/A)$$의 대상에 정확히 대응한다. 따라서 [정리 6](#thm6)에 의해 이는 유일한 $$A$$-가군 $$M$$, 즉 유일한 준연접층 $$\widetilde M$$으로부터 오며, 그 사상까지 동치이다.
 
 일반적인 fpqc cover의 경우, quasi-compact 조건으로 유한 부분덮개를 잡고 그 disjoint union을 단일 affine 충실평탄 사상으로 만들어 위 affine 경우를 적용한 뒤, 결과들을 $$X$$의 affine open들 위에서 접합한다. 접합의 정합성은 [정리 9](#thm9)의 sheaf 성질이 보장한다.
 :::
@@ -231,7 +231,7 @@ $$\{U_i \rightarrow X\}$$가 fpqc cover이고, 각 $$U_i$$ 위에서 affine morp
 Affine morphism $$V_i \rightarrow U_i$$은 $$U_i$$ 위의 준연접 $$\mathcal{O}_{U_i}$$-대수층 $$\mathcal{A}_i=(g_i)_\ast \mathcal{O}_{V_i}$$에 의해 $$V_i=\operatorname{\mathbf{Spec}}\mathcal{A}_i$$로 복원된다. 주어진 cocycle 데이터는 $$\mathcal{A}_i$$들 위의 준연접층 동형으로서 대수 구조를 보존하는 것이므로, [정리 10](#thm10)에 의해 $$X$$ 위의 준연접 $$\mathcal{O}_X$$-대수층 $$\mathcal{A}$$로 유일하게 하강한다. 대수 구조의 하강은 곱셈 사상 $$\mathcal{A}_i\otimes \mathcal{A}_i \rightarrow \mathcal{A}_i$$ 또한 [정리 10](#thm10)의 동치 아래에서 함께 내려오기 때문이다. 그럼 $$V=\operatorname{\mathbf{Spec}}\mathcal{A} \rightarrow X$$가 원하는 affine morphism이며, 그 base change가 주어진 $$V_i \rightarrow U_i$$들을 회복함은 affine morphism과 준연접 대수층의 대응이 base change와 호환되기 때문이다.
 :::
 
-[정리 11](#thm11)은 affine 또는 더 일반적으로 quasi-affine scheme이 fpqc 하강에 대해 effective임을 말하며, 이것이 표현가능성 이론과 만나는 지점이다. 어떤 함자 $$F:\Sch^\op \rightarrow \Set$$이 fpqc sheaf이고, 적절한 fpqc cover 위에서 representable이며 그 위의 데이터가 affine으로 하강한다면, $$F$$ 자신이 어떤 scheme에 의해 representable이라고 결론지을 수 있다. ([§점함자, ⁋정의 5](/ko/math/scheme_theory/functor_of_points#def5)) 즉 하강은 함자적으로 정의된 moduli 문제가 실제 scheme을 산출하는지를 검증하는 표준 도구이다. 실제로 [§점함자](/ko/math/scheme_theory/functor_of_points)에서 다룬 fiber product의 점함자 기술 ([§점함자, ⁋명제 13](/ko/math/scheme_theory/functor_of_points#prop13))처럼, 점별로 정의된 함자의 representability는 국소적 representability와 하강의 결합으로 환원된다.
+[정리 11](#thm11)은 affine 또는 더 일반적으로 quasi-affine scheme이 fpqc 하강에 대해 effective임을 말하며, 이것이 표현가능성 이론과 만나는 지점이다. 어떤 함자 $$F:\Sch^\op \rightarrow \Set$$이 fpqc sheaf이고, 적절한 fpqc cover 위에서 representable이며 그 위의 데이터가 affine으로 하강한다면, $$F$$ 자신이 어떤 scheme에 의해 representable이라고 결론지을 수 있다. ([§점함자, ⁋정의 5](/ko/math/scheme_theory/functor_of_points#def5)) 즉 하강은 함자적으로 정의된 moduli 문제가 실제 scheme을 산출하는지를 검증하는 표준 도구이다. 실제로 [§점함자](/ko/math/scheme_theory/functor_of_points)에서 다룬 fiber product의 점함자 기술처럼 ([§점함자, ⁋명제 13](/ko/math/scheme_theory/functor_of_points#prop13)), 점별로 정의된 함자의 representability는 국소적 representability와 하강의 결합으로 환원된다.
 
 성질들의 하강 또한 같은 원리로 정리된다. Scheme morphism $$f: X \rightarrow Y$$의 여러 성질은 fpqc-local on the base이다. 즉 어떤 fpqc cover $$\{Y_i \rightarrow Y\}$$를 잡아 각 base change $$f_i: X\times_Y Y_i \rightarrow Y_i$$가 그 성질을 가지면, $$f$$ 자신도 그 성질을 가진다.
 

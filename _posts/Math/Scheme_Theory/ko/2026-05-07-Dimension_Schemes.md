@@ -11,7 +11,6 @@ sidebar:
 date: 2025-03-14
 weight: 16
 
-
 ---
 
 ## 스킴의 차원
@@ -79,7 +78,7 @@ $$A_n\supsetneq A_{n-1}\supsetneq\cdots\supsetneq A_0=\cl_X(Y)$$
 의 length의 supremum으로 정의한다. 
 :::
 
-그럼 ring $$A$$의 prime ideal $$\mathfrak{p}$$의 codimension ([\[가환대수학\] §차원, ⁋정의 2](/ko/math/commutative_algebra/Krull_dimension#def2))은 $$\Spec A$$에서 점 $$\mathfrak{p}$$의 codimension과 같은 것을 확인할 수 있다. 
+그럼 ring $$A$$의 prime ideal $$\mathfrak{p}$$의 codimension은 ([\[가환대수학\] §차원, ⁋정의 2](/ko/math/commutative_algebra/Krull_dimension#def2)) $$\Spec A$$에서 점 $$\mathfrak{p}$$의 codimension과 같은 것을 확인할 수 있다. 
 
 ::: 명제 7
 $$X$$의 irreducible closed subset $$Y$$와 $$Y$$의 generic point $$y$$에 대하여, $$\codim Y=\dim \mathcal{O}_{X, y}$$이 성립한다. 

@@ -126,13 +126,13 @@ $$
 이 명제가 양의 선다발과 Kähler 기하를 잇는 다리이다. 양의 선다발을 갖는 콤팩트 복소다양체는 자동으로 Kähler 다양체이며, 그 Kähler 류는 $$H^2(X, \mathbb{Z})$$ 안에 놓이는 정수류이다. 거꾸로 이 정수성이 매장정리의 핵심이다. 정수 Kähler 류는 어떤 선다발의 제1 Chern 류로 실현되고, 그 선다발이 바로 사영매장을 만들어 내는 양의 선다발이 된다. 가장 단순한 예는 복소사영공간의 초평면다발이다.
 
 ::: 예시 6 ($$\mathbb{CP}^n$$의 $$\mathcal{O}(1)$$)
-복소사영공간 $$\mathbb{CP}^n$$ ([§복소다양체, ⁋예시 6](/ko/math/complex_geometry/complex_manifolds#ex6)) 위의 초평면다발 $$\mathcal{O}(1)$$ ([\[대수다양체\] §선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_varieties/line_bundles#ex12))을 생각하자. 그 쌍대인 tautological bundle $$\mathcal{O}(-1)$$에 표준 Hermitian 계량 $$h([z])(v, v) = \lVert v \rVert^2$$ ($$v \in \mathcal{O}(-1)_{[z]} \subseteq \mathbb{C}^{n+1}$$이 직선 위의 벡터) 를 주면, 그 쌍대계량을 $$\mathcal{O}(1)$$에 얹었을 때 곡률 형식이
+복소사영공간 $$\mathbb{CP}^n$$ ([§복소다양체, ⁋예시 6](/ko/math/complex_geometry/complex_manifolds#ex6)) 위의 초평면다발 $$\mathcal{O}(1)$$을 ([\[대수다양체\] §선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_varieties/line_bundles#ex12)) 생각하자. 그 쌍대인 tautological bundle $$\mathcal{O}(-1)$$에 표준 Hermitian 계량 $$h([z])(v, v) = \lVert v \rVert^2$$ ($$v \in \mathcal{O}(-1)_{[z]} \subseteq \mathbb{C}^{n+1}$$이 직선 위의 벡터) 를 주면, 그 쌍대계량을 $$\mathcal{O}(1)$$에 얹었을 때 곡률 형식이
 
 $$
 \frac{i}{2\pi}\Theta(\mathcal{O}(1), h) = \omega_{\mathrm{FS}}
 $$
 
-로 정확히 Fubini–Study 형식 ([§Kähler 다양체, ⁋예시 8](/ko/math/complex_geometry/kahler_manifolds#ex8))이 된다. $$\omega_{\mathrm{FS}}$$는 양정치 Kähler 형식이므로 $$\mathcal{O}(1)$$은 양의 선다발이고, $$c_1(\mathcal{O}(1)) = [\omega_{\mathrm{FS}}]$$는 $$H^2(\mathbb{CP}^n, \mathbb{Z})$$의 생성원이다. 곧 $$\mathbb{CP}^n$$은 양의 선다발을 가지며, 항등 매장 $$\mathbb{CP}^n \hookrightarrow \mathbb{CP}^n$$이 $$\mathcal{O}(1)$$의 전역단면(동차좌표 $$z_0, \ldots, z_n$$)으로 주어진다는 점에서 매장정리의 결론을 자명하게 실현한다.
+로 정확히 Fubini–Study 형식이 된다. ([§Kähler 다양체, ⁋예시 8](/ko/math/complex_geometry/kahler_manifolds#ex8)) $$\omega_{\mathrm{FS}}$$는 양정치 Kähler 형식이므로 $$\mathcal{O}(1)$$은 양의 선다발이고, $$c_1(\mathcal{O}(1)) = [\omega_{\mathrm{FS}}]$$는 $$H^2(\mathbb{CP}^n, \mathbb{Z})$$의 생성원이다. 곧 $$\mathbb{CP}^n$$은 양의 선다발을 가지며, 항등 매장 $$\mathbb{CP}^n \hookrightarrow \mathbb{CP}^n$$이 $$\mathcal{O}(1)$$의 전역단면(동차좌표 $$z_0, \ldots, z_n$$)으로 주어진다는 점에서 매장정리의 결론을 자명하게 실현한다.
 :::
 
 ## Kodaira 소멸정리
@@ -262,7 +262,7 @@ Kodaira 판정의 힘은 사영성과 비사영성을 가르는 구체적인 예
 대조적인 예가 복소토러스이다. 모든 복소토러스는 Kähler이지만 ([§Kähler 다양체, ⁋예시 7](/ko/math/complex_geometry/kahler_manifolds#ex7)), 사영적인 것은 그 가운데 일부뿐이다.
 
 ::: 예시 14 (복소토러스와 abelian variety)
-격자 $$\Lambda \subseteq \mathbb{C}^n$$에 의한 복소토러스 $$T = \mathbb{C}^n/\Lambda$$ ([§복소다양체, ⁋예시 7](/ko/math/complex_geometry/complex_manifolds#ex7))를 생각하자. $$T$$가 사영적이려면 [따름정리 11](#cor11)에 의해 정수 Kähler 류를 가져야 하는데, $$T$$ 위의 평행이동 불변 Kähler 형식은 $$\mathbb{C}^n$$ 위의 양의 정부호 Hermitian 형식 $$H$$로 주어지고, 그 류가 정수류인 것은 $$H$$의 허수부 $$\Img H$$가 격자 $$\Lambda$$ 위에서 정수값을 갖고 $$\Lambda \times \Lambda$$ 위에서 정수 반대칭형식을 이루는 것과 동치이다. 이 조건이 *Riemann bilinear relations<sub>Riemann 쌍선형 관계</sub>*이다. Riemann 관계를 만족하는 양의 정부호 $$H$$가 존재할 때, 그리고 오직 그때 $$T$$는 사영적이며 이러한 $$T$$를 *abelian variety<sub>아벨 다양체</sub>*라 한다.
+격자 $$\Lambda \subseteq \mathbb{C}^n$$에 의한 복소토러스 $$T = \mathbb{C}^n/\Lambda$$를 ([§복소다양체, ⁋예시 7](/ko/math/complex_geometry/complex_manifolds#ex7)) 생각하자. $$T$$가 사영적이려면 [따름정리 11](#cor11)에 의해 정수 Kähler 류를 가져야 하는데, $$T$$ 위의 평행이동 불변 Kähler 형식은 $$\mathbb{C}^n$$ 위의 양의 정부호 Hermitian 형식 $$H$$로 주어지고, 그 류가 정수류인 것은 $$H$$의 허수부 $$\Img H$$가 격자 $$\Lambda$$ 위에서 정수값을 갖고 $$\Lambda \times \Lambda$$ 위에서 정수 반대칭형식을 이루는 것과 동치이다. 이 조건이 *Riemann bilinear relations<sub>Riemann 쌍선형 관계</sub>*이다. Riemann 관계를 만족하는 양의 정부호 $$H$$가 존재할 때, 그리고 오직 그때 $$T$$는 사영적이며 이러한 $$T$$를 *abelian variety<sub>아벨 다양체</sub>*라 한다.
 
 차원 $$n = 1$$에서는 모든 격자가 Riemann 관계를 만족하므로 모든 복소토러스가 타원곡선으로 사영적이다. 그러나 $$n \geq 2$$에서는 일반적인 격자 $$\Lambda$$가 Riemann 관계를 만족하는 $$H$$를 전혀 허용하지 않는다. 정수 반대칭형식과 양정치 Hermitian 형식을 동시에 맞추는 것은 격자의 주기에 대한 비자명한 산술적 제약이며, 일반적인 $$\Lambda$$는 이를 어긴다. 따라서 *generic 복소토러스*는 양의 선다발을 갖지 않아 사영적이지 않다. 이것이 Kähler이면서 사영적이지 않은 콤팩트 복소다양체의 가장 표준적인 예이며, Kodaira 판정이 빈 정리가 아님을 보여 준다.
 :::

@@ -142,7 +142,7 @@ $$\sum_{e, f, \beta_1, \beta_2} \langle T_a, T_b, T_e \rangle_{0, 3, \beta_1}\, 
 가 $$(a, b) \vert (c, d)$$ splitting과 $$(a, c) \vert (b, d)$$ splitting에 대해 일치한다. 좌변을 다시 쓰면 정확히 $$\int_X ((T_a \ast_q T_b) \ast_q T_c) \cup T_d$$와 $$\int_X (T_a \ast_q (T_b \ast_q T_c)) \cup T_d$$의 비교가 되며, 따라서 모든 $$T_d$$에 대해 두 값이 같음으로부터 $$(T_a \ast_q T_b) \ast_q T_c = T_a \ast_q (T_b \ast_q T_c)$$이 따른다. 자세한 부호 계산은 [MS Chapter 11]을 보라.
 :::
 
-(1)은 $$1 \in H^0(X)$$이 ring identity로 작동함을 보장하고, (3)은 GW invariant의 깊은 정합성 ([§Gromov-Witten 불변량, ⁋명제 6](/ko/math/symplectic_geometry/gromov_witten#prop6))의 가장 비자명한 결과이다. (3)의 증명에서 사용되는 splitting axiom은 $$\overline{\mathcal{M}}_{0, 4}(X, \beta)$$의 nodal degeneration boundary 위에서의 virtual class의 분해에 의존한다.
+(1)은 $$1 \in H^0(X)$$이 ring identity로 작동함을 보장하고, (3)은 GW invariant의 깊은 정합성인 [§Gromov-Witten 불변량, ⁋명제 6](/ko/math/symplectic_geometry/gromov_witten#prop6)의 가장 비자명한 결과이다. (3)의 증명에서 사용되는 splitting axiom은 $$\overline{\mathcal{M}}_{0, 4}(X, \beta)$$의 nodal degeneration boundary 위에서의 virtual class의 분해에 의존한다.
 
 ::: 정의 7
 [정리 6](#thm6)의 graded commutative associative unital $$\Lambda$$-algebra
@@ -251,7 +251,7 @@ $$\mathbb{P}^n$$의 경우 $$X$$가 Fano이므로 ([§Stable maps의 moduli spac
 
 ## 큰 양자 코호몰로지와 고전 극한
 
-위에서 정의한 small quantum product는 cohomology의 *고정된* 기저 위에서의 곱셈이고, 그 deformation은 오직 Novikov 변수 $$q$$를 통해서만 일어났다. 이제 이를 cohomology class 자체를 추가 deformation 매개변수로 삼아 확장해보자. Cohomology class $$t = \sum_a t^a T_a$$를 GW invariant에 추가로 삽입하되, 우선 그 $$H^2$$ 성분 $$t_2 = \sum_{a:\, \deg T_a = 2} t^a T_a$$만 켜자. Divisor equation ([§Gromov-Witten 불변량, ⁋명제 4](/ko/math/symplectic_geometry/gromov_witten#prop4))에 의하여 $$H^2$$ class 하나를 추가로 삽입하면 GW invariant가 교차수 $$\langle t_2, \beta\rangle = \int_\beta t_2$$만큼 곱해질 뿐이므로 (primary 삽입에는 $$\psi$$-보정이 없다), $$t_2$$를 $$k$$번 삽입하여 합하면
+위에서 정의한 small quantum product는 cohomology의 *고정된* 기저 위에서의 곱셈이고, 그 deformation은 오직 Novikov 변수 $$q$$를 통해서만 일어났다. 이제 이를 cohomology class 자체를 추가 deformation 매개변수로 삼아 확장해보자. Cohomology class $$t = \sum_a t^a T_a$$를 GW invariant에 추가로 삽입하되, 우선 그 $$H^2$$ 성분 $$t_2 = \sum_{a:\, \deg T_a = 2} t^a T_a$$만 켜자. [§Gromov-Witten 불변량, ⁋명제 4](/ko/math/symplectic_geometry/gromov_witten#prop4)에 의하여 $$H^2$$ class 하나를 추가로 삽입하면 GW invariant가 교차수 $$\langle t_2, \beta\rangle = \int_\beta t_2$$만큼 곱해질 뿐이므로 (primary 삽입에는 $$\psi$$-보정이 없다), $$t_2$$를 $$k$$번 삽입하여 합하면
 
 $$\sum_{k \ge 0} \frac{1}{k!}\, \langle T_a, T_b, T_c, \underbrace{t_2, \ldots, t_2}_{k} \rangle_{0, k+3, \beta}^X\, q^\beta = e^{\langle t_2, \beta\rangle}\, q^\beta\, \langle T_a, T_b, T_c \rangle_{0, 3, \beta}^X$$
 
@@ -271,7 +271,7 @@ $$T_a \circ_t T_b := \sum_{c, d}\, \partial_a \partial_b \partial_c F(t)\, \eta^
 
 Big quantum product에서 $$t \to 0$$의 극한은 small quantum product의 specialization과 일치한다. 즉 $$T_a \circ_0 T_b = T_a \ast_q T_b$$. 더욱이 small quantum product와 마찬가지로 $$q \to 0$$의 극한은 classical cup product $$T_a \cup T_b$$을 회복한다. 이로써 quantum cohomology는 cohomology class 방향 ($$t$$)과 Novikov variable 방향 ($$q$$)의 두 deformation을 동시에 갖는 구조임이 드러난다.
 
-[정리 6](#thm6)의 ring 공리는 small과 big 양쪽에 모두 적용되며, 두 deformation 방향 모두에서 결합법칙과 super-commutativity가 보존된다. 이러한 다중 deformation 구조의 정합성은 GW invariant의 string, divisor, dilaton axiom ([§Gromov-Witten 불변량](/ko/math/symplectic_geometry/gromov_witten)의 [⁋명제 3](/ko/math/symplectic_geometry/gromov_witten#prop3), [⁋명제 4](/ko/math/symplectic_geometry/gromov_witten#prop4), [⁋명제 5](/ko/math/symplectic_geometry/gromov_witten#prop5))의 통합적 귀결이라 할 수 있다.
+[정리 6](#thm6)의 ring 공리는 small과 big 양쪽에 모두 적용되며, 두 deformation 방향 모두에서 결합법칙과 super-commutativity가 보존된다. 이러한 다중 deformation 구조의 정합성은 GW invariant의 [§Gromov-Witten 불변량, ⁋명제 3](/ko/math/symplectic_geometry/gromov_witten#prop3), [⁋명제 4](/ko/math/symplectic_geometry/gromov_witten#prop4), [⁋명제 5](/ko/math/symplectic_geometry/gromov_witten#prop5)의 통합적 귀결이라 할 수 있다.
 
 ---
 

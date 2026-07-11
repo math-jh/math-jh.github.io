@@ -11,12 +11,13 @@ sidebar:
 
 date: 2026-06-20
 weight: 8
+
 published: false
 ---
 
 [§토러스 인자와 선다발, ⁋명제 7](/ko/math/toric_geometry/toric_divisors#prop7)에서 우리는 torus-invariant Weil divisor $$D$$가 정의하는 sheaf $$\mathcal{O}_{X_\Sigma}(D)$$의 global section이 lattice $$M$$ 위의 조합론적 조건으로 완전히 기술됨을 보았다. 이번 글의 목표는 이 기술을 고차 코호몰로지 $$H^i(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))$$ ($$i > 0$$)까지 확장하는 것이다. 일반적인 variety에서 층 코호몰로지를 명시적으로 계산하는 일은 어렵지만 ([\[대수다양체\] §층 코호몰로지](/ko/math/algebraic_varieties/sheaf_cohomology)), toric variety에서는 모든 차수의 코호몰로지가 fan $$\Sigma$$의 조합론으로 환원되며, 특히 nef divisor에 대한 Demazure vanishing과 complete toric variety에서 구조층의 고차 코호몰로지 소멸이라는 강력한 결론을 얻는다.
 
-이하에서 $$N \cong \mathbb{Z}^n$$은 rank $$n$$의 lattice, $$M = \Hom_\mathbb{Z}(N, \mathbb{Z})$$는 그 dual lattice이며, $$\Sigma$$는 $$N_\mathbb{R}$$ 위의 fan으로 $$X_\Sigma$$를 그것이 정의하는 toric variety로 둔다. $$\Sigma(1)$$은 ray들의 모임이고 각 $$\rho \in \Sigma(1)$$에 대해 $$v_\rho \in N$$은 그 primitive generator이다. Torus-invariant Weil divisor는 $$D = \sum_{\rho \in \Sigma(1)} a_\rho D_\rho$$ ([§토러스 인자와 선다발, ⁋정의 2](/ko/math/toric_geometry/toric_divisors#def2))의 꼴이며, 우리는 $$\mathcal{O}_{X_\Sigma}(D)$$의 코호몰로지가 lattice $$M$$의 character로 graded됨을 본질적으로 사용한다. 계수체는 $$\mathbb{C}$$로 둔다.
+이하에서 $$N \cong \mathbb{Z}^n$$은 rank $$n$$의 lattice, $$M = \Hom_\mathbb{Z}(N, \mathbb{Z})$$는 그 dual lattice이며, $$\Sigma$$는 $$N_\mathbb{R}$$ 위의 fan으로 $$X_\Sigma$$를 그것이 정의하는 toric variety로 둔다. $$\Sigma(1)$$은 ray들의 모임이고 각 $$\rho \in \Sigma(1)$$에 대해 $$v_\rho \in N$$은 그 primitive generator이다. Torus-invariant Weil divisor는 $$D = \sum_{\rho \in \Sigma(1)} a_\rho D_\rho$$의 꼴이며 ([§토러스 인자와 선다발, ⁋정의 2](/ko/math/toric_geometry/toric_divisors#def2)), 우리는 $$\mathcal{O}_{X_\Sigma}(D)$$의 코호몰로지가 lattice $$M$$의 character로 graded됨을 본질적으로 사용한다. 계수체는 $$\mathbb{C}$$로 둔다.
 
 ## Global section의 격자점 기술
 
@@ -71,7 +72,7 @@ $$H^i(X_\Sigma, \mathcal{O}_{X_\Sigma}(D)) = \bigoplus_{m \in M} \widetilde{H}^{
 ::: 증명
 증명의 골격은 $$\mathcal{O}_{X_\Sigma}(D)$$를 Čech 복합체로 계산하되, $$T_N$$-작용에 의한 weight decomposition을 각 차수에서 취하는 것이다. 자세한 전개는 [CLS] Theorem 9.1.3을 따른다.
 
-$$X_\Sigma$$의 affine open cover로 maximal cone들이 주는 $$\{U_\sigma\}_{\sigma \in \Sigma_{\max}}$$를 택한다. 각 $$U_\sigma$$는 affine이므로 $$\mathcal{O}_{X_\Sigma}(D)$$에 대해 acyclic하고 ([\[대수다양체\] §층 코호몰로지, ⁋명제 12](/ko/math/algebraic_varieties/sheaf_cohomology#prop12)), 유한 교집합 $$U_{\sigma_0} \cap \cdots \cap U_{\sigma_p} = U_{\sigma_0 \cap \cdots \cap \sigma_p}$$ 역시 affine이므로, Leray의 정리 ([\[대수다양체\] §층 코호몰로지, ⁋정리 11](/ko/math/algebraic_varieties/sheaf_cohomology#thm11))에 의해 이 cover로 계산한 Čech 코호몰로지가 층 코호몰로지와 일치한다.
+$$X_\Sigma$$의 affine open cover로 maximal cone들이 주는 $$\{U_\sigma\}_{\sigma \in \Sigma_{\max}}$$를 택한다. 각 $$U_\sigma$$는 affine이므로 $$\mathcal{O}_{X_\Sigma}(D)$$에 대해 acyclic하고 ([\[대수다양체\] §층 코호몰로지, ⁋명제 12](/ko/math/algebraic_varieties/sheaf_cohomology#prop12)), 유한 교집합 $$U_{\sigma_0} \cap \cdots \cap U_{\sigma_p} = U_{\sigma_0 \cap \cdots \cap \sigma_p}$$ 역시 affine이므로, [\[대수다양체\] §층 코호몰로지, ⁋정리 11](/ko/math/algebraic_varieties/sheaf_cohomology#thm11)에 의해 이 cover로 계산한 Čech 코호몰로지가 층 코호몰로지와 일치한다.
 
 각 affine chart 위의 section $$H^0(U_\sigma, \mathcal{O}_{X_\Sigma}(D))$$은 [§토러스 인자와 선다발, ⁋명제 7](/ko/math/toric_geometry/toric_divisors#prop7)의 국소판에 의해 $$\langle m, v_\rho \rangle \ge -a_\rho$$ ($$\rho \in \sigma(1)$$)를 만족하는 $$\rchi^m$$들로 spanned되며, 따라서 $$T_N$$-작용에 대해 $$M$$으로 graded된다. 이 grading은 교집합 위에서도 보존되고 Čech coboundary와 호환되므로, 전체 Čech 복합체가 weight $$m$$ 성분으로 분해된다. 고정된 $$m$$에 대한 weight-$$m$$ Čech 복합체에서, chart $$U_\sigma$$가 $$\rchi^m$$을 section으로 가질 조건은 모든 $$\rho \in \sigma(1)$$에 대해 $$\langle m, v_\rho \rangle \ge -a_\rho$$인 것, 즉 $$\sigma$$가 $$\langle m, v_\rho \rangle < -a_\rho$$인 ray를 하나도 갖지 않는 것이다.
 
@@ -86,7 +87,7 @@ $$X_\Sigma$$의 affine open cover로 maximal cone들이 주는 $$\{U_\sigma\}_{\
 
 ## Demazure vanishing
 
-이제 nef divisor에 대한 고차 코호몰로지 소멸을 본다. Divisor $$D$$가 *nef<sub>numerically effective</sub>*라는 것은 모든 irreducible complete curve $$C \subseteq X_\Sigma$$에 대해 교차수 $$D \cdot C \ge 0$$인 것이다. Complete toric variety에서 nef 조건은 $$D$$가 Cartier일 때 그에 대응하는 piecewise linear function $$\psi_D$$ ([§토러스 인자와 선다발, ⁋명제 6](/ko/math/toric_geometry/toric_divisors#prop6))가 *convex*한 것, 즉 $$\psi_D$$가 위로 볼록인 것과 동치이다. 이는 ample에 대응하는 strictly convex ([§토러스 인자와 선다발, ⁋정의 8](/ko/math/toric_geometry/toric_divisors#def8))의 부등호를 등호 허용으로 완화한 조건이다. Nef인 Cartier divisor는 동치로 basepoint-free, 즉 대응 line bundle이 globally generated인 것으로도 특징지어진다 ([\[대수다양체\] §사영공간의 코호몰로지, ⁋정의 6](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#def6)).
+이제 nef divisor에 대한 고차 코호몰로지 소멸을 본다. Divisor $$D$$가 *nef<sub>numerically effective</sub>*라는 것은 모든 irreducible complete curve $$C \subseteq X_\Sigma$$에 대해 교차수 $$D \cdot C \ge 0$$인 것이다. Complete toric variety에서 nef 조건은 $$D$$가 Cartier일 때 그에 대응하는 piecewise linear function ([§토러스 인자와 선다발, ⁋명제 6](/ko/math/toric_geometry/toric_divisors#prop6)) $$\psi_D$$가 *convex*한 것, 즉 $$\psi_D$$가 위로 볼록인 것과 동치이다. 이는 ample에 대응하는 strictly convex의 부등호를 등호 허용으로 완화한 조건이다 ([§토러스 인자와 선다발, ⁋정의 8](/ko/math/toric_geometry/toric_divisors#def8)). Nef인 Cartier divisor는 동치로 basepoint-free, 즉 대응 line bundle이 globally generated인 것으로도 특징지어진다 ([\[대수다양체\] §사영공간의 코호몰로지, ⁋정의 6](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#def6)).
 
 ::: 정리 5 (Demazure vanishing)
 $$X_\Sigma$$가 complete toric variety이고 $$D$$가 nef인 torus-invariant Cartier divisor라 하자. 그러면
@@ -110,7 +111,7 @@ $$h_m(v) = \langle m, v \rangle - \psi_D(v)$$
 그러므로 모든 $$i > 0$$과 모든 $$m \in M$$에 대해 $$H^i(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))_m = \widetilde{H}^{i-1}(V_{D, m}; \mathbb{C}) = 0$$이고, weight를 모두 합하면 $$H^i(X_\Sigma, \mathcal{O}_{X_\Sigma}(D)) = 0$$을 얻는다. Smooth인 경우 Cartier와 Weil이 일치하므로 nef Weil divisor에 대해서도 같은 결론이 성립한다.
 :::
 
-Demazure vanishing은 toric variety에서 nef line bundle이 acyclic임을 말한다. 이는 일반적인 projective variety에서 ample line bundle에 대한 Serre vanishing ([\[대수다양체\] §사영공간의 코호몰로지, ⁋명제 4](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop4))이 "충분히 큰 twist에 대해서만" 소멸을 주는 것에 비해 훨씬 강하다. Toric의 조합론적 강성 덕분에 twist 없이 nef 자체에서 즉시 소멸이 일어나며, 이는 nef cone의 모든 lattice point에서 코호몰로지가 $$H^0$$에 집중됨을 뜻한다. 한 가지 직접적 귀결로, nef divisor의 Euler characteristic이 $$H^0$$의 차원과 같아져 lattice point counting $$\#(P_D \cap M)$$로 계산된다.
+Demazure vanishing은 toric variety에서 nef line bundle이 acyclic임을 말한다. 이는 일반적인 projective variety에서 ample line bundle에 대한 [\[대수다양체\] §사영공간의 코호몰로지, ⁋명제 4](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop4)가 "충분히 큰 twist에 대해서만" 소멸을 주는 것에 비해 훨씬 강하다. Toric의 조합론적 강성 덕분에 twist 없이 nef 자체에서 즉시 소멸이 일어나며, 이는 nef cone의 모든 lattice point에서 코호몰로지가 $$H^0$$에 집중됨을 뜻한다. 한 가지 직접적 귀결로, nef divisor의 Euler characteristic이 $$H^0$$의 차원과 같아져 lattice point counting $$\#(P_D \cap M)$$로 계산된다.
 
 ::: 따름정리 6
 $$X_\Sigma$$가 complete toric variety이고 $$D$$가 nef Cartier divisor이면
@@ -121,7 +122,7 @@ $$\chi(\mathcal{O}_{X_\Sigma}(D)) = \dim_\mathbb{C} H^0(X_\Sigma, \mathcal{O}_{X
 :::
 
 ::: 증명
-Euler characteristic의 정의 $$\chi(\mathcal{O}_{X_\Sigma}(D)) = \sum_{i \ge 0} (-1)^i \dim H^i(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))$$ ([\[대수다양체\] §사영공간의 코호몰로지, ⁋정의 2](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#def2))에서, 정리 5에 의해 $$i > 0$$ 항이 모두 사라지므로 $$\chi = \dim H^0$$이다. 명제 1에 의해 $$\dim H^0 = \#(P_D \cap M)$$이다.
+Euler characteristic의 정의 $$\chi(\mathcal{O}_{X_\Sigma}(D)) = \sum_{i \ge 0} (-1)^i \dim H^i(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))$$에서 ([\[대수다양체\] §사영공간의 코호몰로지, ⁋정의 2](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#def2)), 정리 5에 의해 $$i > 0$$ 항이 모두 사라지므로 $$\chi = \dim H^0$$이다. 명제 1에 의해 $$\dim H^0 = \#(P_D \cap M)$$이다.
 :::
 
 ## 구조층의 고차 코호몰로지 소멸
@@ -140,11 +141,11 @@ $$H^i(X_\Sigma, \mathcal{O}_{X_\Sigma}) = 0 \qquad (i > 0)$$
 $$D = 0$$은 $$\psi_D \equiv 0$$에 대응하며 이는 convex piecewise linear function이므로 nef Cartier divisor이다. 따라서 정리 5에 의해 $$H^i(X_\Sigma, \mathcal{O}_{X_\Sigma}) = 0$$ ($$i > 0$$)이다. $$H^0$$의 경우 명제 1에서 $$P_0 = \{m \in M_\mathbb{R} \mid \langle m, v_\rho \rangle \ge 0 \ \forall \rho\}$$인데, $$X_\Sigma$$가 complete이면 ray들이 $$N_\mathbb{R}$$를 span하므로 이 조건을 만족하는 $$m$$은 $$m = 0$$뿐이다. 따라서 $$P_0 \cap M = \{0\}$$이고 $$H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}) = \mathbb{C} \cdot \rchi^0 = \mathbb{C}$$이다.
 :::
 
-따름정리 7은 complete toric variety가 코호몰로지의 관점에서 매우 "단순"함을 말한다. 구조층의 고차 코호몰로지가 통째로 사라지므로, 가령 smooth complete toric variety는 Hodge 수 $$h^{0, q} = \dim H^q(X_\Sigma, \mathcal{O}_{X_\Sigma}) = 0$$ ($$q > 0$$)을 가지며, 이는 smooth complete toric variety가 홀수 차수 코호몰로지를 갖지 않고 그 코호몰로지가 algebraic cycle로 채워진다는 사실 ([§토릭 다양체의 교차 이론, ⁋참고 6](/ko/math/toric_geometry/toric_intersection_theory#rmk6))과 정합적이다. 또한 이로부터 picard group과 class group을 잇는 exponential 계열 논증에서 $$\Pic(X_\Sigma)$$가 free이고 위상적 $$H^2$$와 일치함을 끌어낼 수 있다.
+따름정리 7은 complete toric variety가 코호몰로지의 관점에서 매우 "단순"함을 말한다. 구조층의 고차 코호몰로지가 통째로 사라지므로, 가령 smooth complete toric variety는 Hodge 수 $$h^{0, q} = \dim H^q(X_\Sigma, \mathcal{O}_{X_\Sigma}) = 0$$ ($$q > 0$$)을 가지며, 이는 smooth complete toric variety가 홀수 차수 코호몰로지를 갖지 않고 그 코호몰로지가 algebraic cycle로 채워진다는 사실과 정합적이다 ([§토릭 다양체의 교차 이론, ⁋참고 6](/ko/math/toric_geometry/toric_intersection_theory#rmk6)). 또한 이로부터 picard group과 class group을 잇는 exponential 계열 논증에서 $$\Pic(X_\Sigma)$$가 free이고 위상적 $$H^2$$와 일치함을 끌어낼 수 있다.
 
 ## 사영공간
 
-이제 위 도구들을 구체적 예시에 적용해 고전적 답을 회복한다. 먼저 $$\mathbb{P}^n$$ 위의 $$\mathcal{O}(d)$$의 코호몰로지가 [\[대수다양체\] §사영공간의 코호몰로지, ⁋명제 1](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop1)의 Bott 공식과 일치함을 확인한다.
+이제 위 도구들을 구체적 예시에 적용해 고전적 답을 회복한다. 먼저 $$\mathbb{P}^n$$ 위의 $$\mathcal{O}(d)$$의 코호몰로지가 [\[대수다양체\] §사영공간의 코호몰로지, ⁋명제 1](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop1)과 일치함을 확인한다.
 
 ::: 예시 8 ($$\mathbb{P}^n$$ 위의 $$\mathcal{O}(d)$$)
 [§Cox 구성과 GIT quotient, ⁋예시 10](/ko/math/toric_geometry/cox_construction#ex10)에서 보았듯 $$\mathbb{P}^n$$의 fan은 ray $$\rho_0, \ldots, \rho_n$$을 가지며 그 primitive generator는

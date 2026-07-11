@@ -24,7 +24,7 @@ Site $$(\Sch, \mathrm{fppf})$$ 위의 stack은 충실평탄 하강을 groupoid �
 
 ## Stack의 올곱
 
-기하학적 stack을 정의하려면 먼저 stack 사이의 사상을 base change할 수 있어야 한다. Scheme의 fiber product ([\[스킴\] §올곱, ⁋정리 8](/ko/math/scheme_theory/fiber_products#thm8))에 대응하는 개념이 CFG의 *2-fiber product*이다. Scheme의 fiber product가 두 사상이 base 위에서 *같아지는* 점들을 모으는 데 비해, stack에서는 두 대상이 *동형이 되게 하는 isomorphism까지 자료로* 기억해야 한다. 등호가 동형으로 약화되는 이 차이가 stack 이론 전반을 관통한다.
+기하학적 stack을 정의하려면 먼저 stack 사이의 사상을 base change할 수 있어야 한다. Scheme의 fiber product에 대응하는 개념이 CFG의 *2-fiber product*이다 ([\[스킴\] §올곱, ⁋정리 8](/ko/math/scheme_theory/fiber_products#thm8)). Scheme의 fiber product가 두 사상이 base 위에서 *같아지는* 점들을 모으는 데 비해, stack에서는 두 대상이 *동형이 되게 하는 isomorphism까지 자료로* 기억해야 한다. 등호가 동형으로 약화되는 이 차이가 stack 이론 전반을 관통한다.
 
 ::: 정의 1
 Site $$\mathcal{C}$$ 위의 CFG들의 사상 $$f:\mathcal{X} \rightarrow \mathcal{Z}$$과 $$g:\mathcal{Y} \rightarrow \mathcal{Z}$$이 주어졌다 하자. 이들의 *2-fiber product<sub>2-올곱</sub>* $$\mathcal{X}\times_\mathcal{Z}\mathcal{Y}$$은 다음 CFG이다. $$T\in \mathcal{C}$$ 위의 대상은 삼중쌍 $$(x, y, \alpha)$$로서, $$x\in \mathcal{X}(T)$$, $$y\in \mathcal{Y}(T)$$이고
@@ -54,7 +54,7 @@ Stack 조건을 본다. 덮개 $$\{T_i \rightarrow T\}$$ 위의 $$\mathcal{W}$$�
 Stack을 기하학적으로 만드는 첫 단계는 그 사상 가운데 "scheme적인" 것을 가려내는 일이다. 사상 $$f:\mathcal{X} \rightarrow \mathcal{Y}$$이 표현가능하다는 것은, $$\mathcal{Y}$$의 임의의 scheme 값 점을 따라 $$f$$를 base change하면 통상적인 기하학적 대상이 나온다는 뜻이다.
 
 ::: 정의 3
-Stack의 사상 $$f:\mathcal{X} \rightarrow \mathcal{Y}$$이 *표현가능<sub>representable</sub>*하다는 것은, 임의의 scheme $$T$$과 사상 $$T \rightarrow \mathcal{Y}$$ (즉 $$y\in \mathcal{Y}(T)$$)에 대하여 fiber product $$\mathcal{X}\times_\mathcal{Y}T$$이 algebraic space ([정의 4](#def4))인 것이다. Scheme(또는 algebraic space)의 사상에 대한 성질 $$P$$가 base change에 대하여 안정적이고 target에 대하여 fppf-국소적일 때, 표현가능 사상 $$f$$이 *성질 $$P$$을 가진다*는 것은 모든 그러한 base change $$\mathcal{X}\times_\mathcal{Y}T \rightarrow T$$이 algebraic space의 사상으로서 $$P$$을 만족하는 것이다.
+Stack의 사상 $$f:\mathcal{X} \rightarrow \mathcal{Y}$$이 *표현가능<sub>representable</sub>*하다는 것은, 임의의 scheme $$T$$과 사상 $$T \rightarrow \mathcal{Y}$$ (즉 $$y\in \mathcal{Y}(T)$$)에 대하여 fiber product $$\mathcal{X}\times_\mathcal{Y}T$$이 algebraic space인 것이다 ([정의 4](#def4)). Scheme(또는 algebraic space)의 사상에 대한 성질 $$P$$가 base change에 대하여 안정적이고 target에 대하여 fppf-국소적일 때, 표현가능 사상 $$f$$이 *성질 $$P$$을 가진다*는 것은 모든 그러한 base change $$\mathcal{X}\times_\mathcal{Y}T \rightarrow T$$이 algebraic space의 사상으로서 $$P$$을 만족하는 것이다.
 :::
 
 이 정의는 $$f$$의 기하학적 성질(매끄러움, étale, 평탄, 전사, 분리, 유한 등)을 전부 algebraic space의 사상에 대한 통상적 성질로 환원한다. 가령 표현가능 사상 $$f$$이 *smooth surjective*라는 것은 모든 base change $$\mathcal{X}\times_\mathcal{Y}T \rightarrow T$$이 smooth하고 전사인 것이다. ([\[스킴\] §매끄러운 사상과 étale 사상, ⁋정의 3](/ko/math/scheme_theory/smooth_and_etale_morphisms#def3)) Target에 대한 fppf-국소성 덕분에, 뒤에서 보듯 이러한 성질은 단 하나의 좋은 base change(atlas를 따른 것)에서 검사해도 충분하다.
@@ -115,7 +115,7 @@ Site $$(\Sch, \mathrm{fppf})$$ 위의 stack $$\mathcal{X}$$ (base scheme $$S$$ �
 DM stack과 Artin stack의 차이는 정확히 이 stabilizer가 양의 차원을 가질 수 있는지에 있다. Étale atlas는 상대차원 $$0$$의 atlas이므로, DM stack에서는 각 점의 automorphism group이 유한하고 무한소 변형을 갖지 않는다. 이 직관을 정밀하게 다듬은 것이 다음의 동치들이다.
 
 ::: 참고 7
-대수적 stack $$\mathcal{X}$$에 대하여 다음 조건들이 동치임이 알려져 있다 (증명은 [\[스킴\] §매끄러운 사상과 étale 사상, ⁋정리 11](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm11)의 무한소 lifting 판정과 group scheme의 매끄러움 이론을 쓰며, 자세한 논증은 [Ols] 또는 [LMB]를 참조하라).
+대수적 stack $$\mathcal{X}$$에 대하여 다음 조건들이 동치임이 알려져 있다 (증명은 [\[스킴\] §매끄러운 사상과 étale 사상, ⁋정리 11](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm11)과 group scheme의 매끄러움 이론을 쓰며, 자세한 논증은 [Ols] 또는 [LMB]를 참조하라).
 
 1. $$\mathcal{X}$$이 DM stack이다.
 2. 대각선 $$\Delta:\mathcal{X} \rightarrow \mathcal{X}\times_S \mathcal{X}$$이 unramified하다. ([\[스킴\] §매끄러운 사상과 étale 사상, ⁋정의 1](/ko/math/scheme_theory/smooth_and_etale_morphisms#def1))
@@ -128,7 +128,7 @@ DM stack과 Artin stack의 차이는 정확히 이 stabilizer가 양의 차원�
 
 ## Quotient stack의 구성
 
-대수적 stack의 가장 풍부한 원천은 algebraic group의 작용이다. Group $$G$$이 scheme $$X$$에 작용할 때, 순진한 몫 $$X/G$$은 흔히 scheme으로 존재하지 않거나 작용의 stabilizer 정보를 잃는다. 이를 stack 차원에서 올바르게 다루는 것이 quotient stack $$[X/G]$$이며, 그 점은 $$X$$로 가는 equivariant 사상으로 *비틀린* torsor들이다. 이는 분류 stack $$\mathbf{B}G$$ ([§Fibered category와 stack, ⁋정의 18](/ko/math/stacks/fibered_categories_and_stacks#def18))을 $$X$$-값 자료로 확장한 것이다.
+대수적 stack의 가장 풍부한 원천은 algebraic group의 작용이다. Group $$G$$이 scheme $$X$$에 작용할 때, 순진한 몫 $$X/G$$은 흔히 scheme으로 존재하지 않거나 작용의 stabilizer 정보를 잃는다. 이를 stack 차원에서 올바르게 다루는 것이 quotient stack $$[X/G]$$이며, 그 점은 $$X$$로 가는 equivariant 사상으로 *비틀린* torsor들이다. 이는 분류 stack $$\mathbf{B}G$$을 $$X$$-값 자료로 확장한 것이다 ([§Fibered category와 stack, ⁋정의 18](/ko/math/stacks/fibered_categories_and_stacks#def18)).
 
 이하에서 $$G$$은 base scheme $$S$$ 위의 평탄·분리 group scheme이고 ([\[스킴\] §점함자, ⁋정의 14](/ko/math/scheme_theory/functor_of_points#def14)), $$X$$은 $$S$$-scheme으로서 $$G$$의 좌작용 $$\sigma: G\times_S X \rightarrow X$$을 받는다 하자. Torsor는 [§Fibered category와 stack, ⁋정의 18](/ko/math/stacks/fibered_categories_and_stacks#def18)의 좌작용 convention을 따른다.
 

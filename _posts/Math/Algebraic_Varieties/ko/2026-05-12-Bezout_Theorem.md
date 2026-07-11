@@ -11,6 +11,7 @@ sidebar:
 date: 2026-03-15
 weight: 20
 
+
 ---
 
 우리는 이번 글에서 대수기하학의 고전적인 정리인 베주 정리를 소개한다. 직관적으로, 평면 위의 두 곡선 $$C,D$$가 주어졌다 하자. 그럼 $$C$$와 $$D$$가 만나는 교점의 개수는 이들의 차수에 의족하는데, 가령 평면 위에서 정의된 이차곡선 $$\y=x^2$$과 직선은 일반적으로 두 점에서 만난다. 베주 정리는 이를 일반화한 결과이다.
@@ -107,7 +108,7 @@ $$\mathbb{K}[\x, \y]/(f, g) \cong \prod_{p \in V(f,g)} \mathcal{O}_{\mathbb{A}^2
 $$0 \to S(-m) \xrightarrow{\cdot F} S \to S/(F) \to 0$$
 $$0 \to S/(F)(-n) \xrightarrow{\cdot G} S/(F) \to S/(F, G) \to 0$$
 
-명제 3([명제 3](#prop3))에서 차수를 $$m$$으로 읽으면, $$S/(F)$$의 Hilbert 다항식은 $$P_F(t) = mt + c_1$$의 꼴이 된다. 두 번째 exact sequence에 Hilbert 다항식을 적용하면 $$S/(F, G)$$의 Hilbert 다항식은
+[명제 3](#prop3)에서 차수를 $$m$$으로 읽으면, $$S/(F)$$의 Hilbert 다항식은 $$P_F(t) = mt + c_1$$의 꼴이 된다. 두 번째 exact sequence에 Hilbert 다항식을 적용하면 $$S/(F, G)$$의 Hilbert 다항식은
 
 $$P_{F,G}(t) = P_F(t) - P_F(t - n) = \bigl(mt + c_1\bigr) - \bigl(m(t-n) + c_1\bigr) = mn$$
 
@@ -138,7 +139,7 @@ $$\deg(V \cap W) \leq \deg(V) \cdot \deg(W)$$
 $$\mathbb{P}^3$$ 안의 두 이차곡면(quadric surface) $$Q_1, Q_2$$를 생각하자. 각각 차수 2이므로 proper intersection을 가질 때 교차 $$Q_1 \cap Q_2$$는 차원 1, 차수 4인 곡선이다. 구체적으로, $$Q_1 = Z(\x_0\x_3 - \x_1\x_2)$$와 $$Q_2 = Z(\x_0\x_2 - \x_1\x_3)$$를 잡으면 교차는 네 개의 직선(line)으로 분해되며, 이들의 차수 합은 여전히 4이다.
 :::
 
-명제 6의 증명은 Chow ring을 통한 교차이론의 일반론에 의존한다. 자세한 내용은 ([§교차곱](/ko/math/algebraic_varieties/intersection_product))을 참조하라. ([§차원, ⁋예시 14](/ko/math/algebraic_varieties/dimension#ex14))의 부등식이 성분의 codimension에 대한 것으로 다시 나타난다.
+명제 6의 증명은 Chow ring을 통한 교차이론의 일반론에 의존한다. 자세한 내용은 [§교차곱](/ko/math/algebraic_varieties/intersection_product)을 참조하라. [§차원, ⁋예시 14](/ko/math/algebraic_varieties/dimension#ex14)의 부등식이 성분의 codimension에 대한 것으로 다시 나타난다.
 
 ## 응용
 
@@ -173,7 +174,7 @@ $$X = \overline{AB} \cup \overline{CD} \cup \overline{EF},\quad Y = \overline{BC
 
 $$X \cap Y$$는 $$A, B, C, D, E, F$$와 $$P, Q, R$$을 모두 포함하므로 적어도 9개의 서로 다른 점을 포함한다. Bézout의 정리에 의하여 $$\sum_{p \in X \cap Y} i_p(X, Y) = 3 \times 3 = 9$$이므로, $$X \cap Y$$는 정확히 이 9점이며 각 점에서의 교차 중복도는 1이다.
 
-이제 새로운 세차곡선 $$Z = \Gamma \cup \overline{PQ}$$를 정의하자. 이는 차수 3의 곡선으로, $$X \cap Y$$의 9점 중 $$A, B, C, D, E, F$$와 $$P, Q$$, 즉 8점을 지난다. 명제 8([명제 8](#prop8))에 의하여 $$Z$$는 9번째 점 $$R$$도 지나야 한다. $$R \in Z = \Gamma \cup \overline{PQ}$$이므로, $$R \in \Gamma$$이거나 $$R \in \overline{PQ}$$이다.
+이제 새로운 세차곡선 $$Z = \Gamma \cup \overline{PQ}$$를 정의하자. 이는 차수 3의 곡선으로, $$X \cap Y$$의 9점 중 $$A, B, C, D, E, F$$와 $$P, Q$$, 즉 8점을 지난다. [명제 8](#prop8)에 의하여 $$Z$$는 9번째 점 $$R$$도 지나야 한다. $$R \in Z = \Gamma \cup \overline{PQ}$$이므로, $$R \in \Gamma$$이거나 $$R \in \overline{PQ}$$이다.
 
 만일 $$R \in \Gamma$$라면 $$R = \overline{CD} \cap \overline{FA} \in \Gamma$$이어야 한다. 그러나 $$\overline{CD}$$와 $$\Gamma$$는 Bézout의 정리에 의해 최대 2점에서 만나며, 이미 $$C, D \in \Gamma$$이므로 $$\overline{CD} \cap \Gamma = \{C, D\}$$이다. 마찬가지로 $$\overline{FA} \cap \Gamma = \{F, A\}$$이므로 $$R \in \Gamma$$일 수 없다. 결론적으로 $$R \in \overline{PQ}$$이며, 즉 $$P, Q, R$$은 공선형이다.
 :::
