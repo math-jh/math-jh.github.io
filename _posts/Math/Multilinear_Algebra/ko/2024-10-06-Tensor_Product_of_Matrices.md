@@ -10,6 +10,7 @@ sidebar:
 
 date: 2024-10-06
 weight: 9
+
 published: false
 
 ---
@@ -22,7 +23,7 @@ published: false
 
 $$M\times M' \rightarrow L\otimes_AL';\qquad (x,x')\mapsto u(x)\otimes u'(x')$$
 
-는 $$A$$-bilinear이므로, 텐서곱의 universal property ([\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋명제 8](/ko/math/algebraic_structures/operations_of_modules#prop8))에 의하여 다음 정의가 잘 정의된다.
+는 $$A$$-bilinear이므로, [\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋명제 8](/ko/math/algebraic_structures/operations_of_modules#prop8)의 universal property에 의하여 다음 정의가 잘 정의된다.
 
 ::: 정의 1
 위와 같은 상황에서, $$u$$와 $$u'$$의 *tensor product<sub>텐서곱</sub>* $$u\otimes u': M\otimes_AM' \rightarrow L\otimes_AL'$$은 다음 식
@@ -96,7 +97,7 @@ $$[u\otimes u']_{\mathcal{C}\otimes\mathcal{C}'}^{\mathcal{B}\otimes\mathcal{B}'
 이 성립한다.
 :::
 ::: 증명
-$$[u]_\mathcal{C}^\mathcal{B}=(x_{ji})$$, $$[u']_{\mathcal{C}'}^{\mathcal{B}'}=(x'_{j'i'})$$라 하자. 행렬표현의 정의 ([§행렬과 선형사상, ⁋정의 1](/ko/math/multilinear_algebra/matrices_and_linear_maps#def1))에 의하여
+$$[u]_\mathcal{C}^\mathcal{B}=(x_{ji})$$, $$[u']_{\mathcal{C}'}^{\mathcal{B}'}=(x'_{j'i'})$$라 하자. [§행렬과 선형사상, ⁋정의 1](/ko/math/multilinear_algebra/matrices_and_linear_maps#def1)에 의하여
 
 $$u(e_i)=\sum_{j\in J}x_{ji}f_j,\qquad u'(e'_{i'})=\sum_{j'\in J'}x'_{j'i'}f'_{j'}$$
 
@@ -126,7 +127,7 @@ $$\sum_{(j,j')\in J\times J'}(X\otimes X')_{(k,k'),(j,j')}(Y\otimes Y')_{(j,j'),
 이고, 이는 $$(XY)_{ki}(X'Y')_{k'i'}$$, 즉 우변의 해당 성분과 같다. 마지막 등식에서 $$A$$의 commutativity를 사용하였다.
 :::
 
-물론 이 명제는 [명제 2](#prop2)와 [명제 5](#prop5), 그리고 합성의 행렬표현이 행렬곱이라는 사실 ([§행렬과 선형사상, ⁋따름정리 4](/ko/math/multilinear_algebra/matrices_and_linear_maps#cor4))을 조합하여 얻을 수도 있다. 이로부터 다음의 성질들이 따라나온다.
+물론 이 명제는 [명제 2](#prop2)와 [명제 5](#prop5), 그리고 합성의 행렬표현이 행렬곱이라는 [§행렬과 선형사상, ⁋따름정리 4](/ko/math/multilinear_algebra/matrices_and_linear_maps#cor4)를 조합하여 얻을 수도 있다. 이로부터 다음의 성질들이 따라나온다.
 
 ::: 명제 7
 행렬 $$X\in\Mat_{J\times I}(A)$$, $$X'\in\Mat_{J'\times I'}(A)$$에 대하여 다음이 성립한다.
@@ -155,7 +156,7 @@ $$\tr(X\otimes X')=\sum_{(i,i')\in I\times I'}(X\otimes X')_{(i,i'),(i,i')}=\sum
 이다.
 :::
 
-셋째 성질은 linear map의 단계에서 보면 $$\tr(u\otimes u')=\tr(u)\tr(u')$$이라는 것으로, trace가 행렬표현의 선택에 의존하지 않는다는 사실 ([§행렬과 선형사상, §§행렬표현과 trace](/ko/math/multilinear_algebra/matrices_and_linear_maps))과 [명제 5](#prop5)를 결합한 것이다.
+셋째 성질은 linear map의 단계에서 보면 $$\tr(u\otimes u')=\tr(u)\tr(u')$$이라는 것으로, trace가 행렬표현의 선택에 의존하지 않는다는 사실과 [명제 5](#prop5)를 결합한 것이다 ([§행렬과 선형사상, §§행렬표현과 trace](/ko/math/multilinear_algebra/matrices_and_linear_maps)).
 
 ---
 

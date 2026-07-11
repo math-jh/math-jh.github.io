@@ -146,7 +146,7 @@ $$F: X \longrightarrow X$$
 평탄성은 기본적인 연산들 아래에서 잘 거동한다.
 
 ::: 명제 12
-(1) 평탄 사상의 기저변환([§올곱](/ko/math/scheme_theory/fiber_products))은 평탄이다. 즉, $$f: X \to Y$$가 평탄이고 $$Z \to Y$$가 임의의 사상이면, 투영사상 $$X \times_Y Z \to Z$$는 평탄이다.
+(1) 평탄 사상의 기저변환은 ([§올곱](/ko/math/scheme_theory/fiber_products)) 평탄이다. 즉, $$f: X \to Y$$가 평탄이고 $$Z \to Y$$가 임의의 사상이면, 투영사상 $$X \times_Y Z \to Z$$는 평탄이다.
 
 (2) 평탄 사상들의 합성은 평탄이다. 즉, $$f: X \to Y$$와 $$g: Y \to Z$$가 모두 평탄이면 $$g \circ f: X \to Z$$도 평탄이다.
 :::

@@ -11,6 +11,7 @@ sidebar:
 date: 2022-12-07
 weight: 9
 
+
 ---
 
 Abelian group에서와는 다르게, 앞선 글에서 정의한 weak direct product는 일반적인 group에서 universal property를 만족하지 않는다.
@@ -116,7 +117,7 @@ $$(a^2b)(bab^2)=a^2bbab^2=a^2b^2ab^2$$
 Free product $$\prod^\ast G_i$$는 $$\Grp$$에서의 coproduct이다.
 :::
 ::: 증명
-임의의 group $$H$$와 group homomorphism들 $$f_i:G_i\rightarrow H$$가 주어졌다 하자. 그럼 $$X=\coprod U(G_i)$$의 universal property에 의하여, inclusion map $$\iota_i:U(G_i)\rightarrow X$$들에 대해 $$U(f_i)=f\circ \iota_i$$를 만족하는 유일한 함수 $$f:X\rightarrow U(H)$$가 존재한다. 이제 free product의 universal property ([정의 2](#def2))로부터 group homomorphism $$\hat{f}:F(X)\rightarrow H$$를 얻으며, 이 때 $$f_i$$들이 group homomorphism이었다는 사실을 사용하면 $$f$$가 위의 reduction 과정을 통해 factor하며, 따라서 $$\prod^\ast G_i\rightarrow H$$를 정의한다는 것을 안다.
+임의의 group $$H$$와 group homomorphism들 $$f_i:G_i\rightarrow H$$가 주어졌다 하자. 그럼 $$X=\coprod U(G_i)$$의 universal property에 의하여, inclusion map $$\iota_i:U(G_i)\rightarrow X$$들에 대해 $$U(f_i)=f\circ \iota_i$$를 만족하는 유일한 함수 $$f:X\rightarrow U(H)$$가 존재한다. 이제 [정의 2](#def2)의 universal property로부터 group homomorphism $$\hat{f}:F(X)\rightarrow H$$를 얻으며, 이 때 $$f_i$$들이 group homomorphism이었다는 사실을 사용하면 $$f$$가 위의 reduction 과정을 통해 factor하며, 따라서 $$\prod^\ast G_i\rightarrow H$$를 정의한다는 것을 안다.
 :::
 
 한편 임의의 group $$G$$에 대하여, group homomorphism $$\mathbb{Z}\rightarrow G$$는 $$1\in \mathbb{Z}$$가 $$G$$의 어떠한 원소로 옮겨지는지에 의해 유일하게 결정된다. 즉 다음 isomorphism

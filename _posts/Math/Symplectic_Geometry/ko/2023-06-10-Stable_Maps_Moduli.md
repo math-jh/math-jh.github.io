@@ -14,7 +14,7 @@ weight: 6
 published: false
 ---
 
-[§J-holomorphic curves, ⁋명제 8](/ko/math/symplectic_geometry/j_holomorphic_curves#prop8)의 Gromov compactness theorem은 J-holomorphic curve의 sequence가 일반적으로 smooth limit을 갖지 않으며 *nodal* limit이 발생할 수 있음을 시사한다. 이 nodal limit을 정합적으로 다루는 객체가 *stable map*이며, 그것이 만드는 moduli space $$\overline{\mathcal{M}}_{g, n}(X, \beta)$$가 Gromov-Witten 이론의 토대가 된다. Kontsevich-Manin (1994)에 의해 algebraic 측면에서, Li-Tian과 Fukaya-Ono (1996–1999)에 의해 symplectic 측면에서 정합적으로 구성되었다.
+[§J-holomorphic curves, ⁋명제 8](/ko/math/symplectic_geometry/j_holomorphic_curves#prop8)은 J-holomorphic curve의 sequence가 일반적으로 smooth limit을 갖지 않으며 *nodal* limit이 발생할 수 있음을 시사한다. 이 nodal limit을 정합적으로 다루는 객체가 *stable map*이며, 그것이 만드는 moduli space $$\overline{\mathcal{M}}_{g, n}(X, \beta)$$가 Gromov-Witten 이론의 토대가 된다. Kontsevich-Manin (1994)에 의해 algebraic 측면에서, Li-Tian과 Fukaya-Ono (1996–1999)에 의해 symplectic 측면에서 정합적으로 구성되었다.
 
 본 글에서는 stable map의 정의, moduli space의 compactness, expected dimension의 계산, 그리고 virtual fundamental class의 존재까지 간략히 정리한다.
 
@@ -72,7 +72,7 @@ $$\overline{\mathcal{M}}_{g, n}(X, \beta) := \big\{ (C, p_\bullet, f) \big\} \bi
 은 compact (Hausdorff) topological space를 이룬다.
 :::
 
-증명은 [§J-holomorphic curves, ⁋명제 8](/ko/math/symplectic_geometry/j_holomorphic_curves#prop8)의 Gromov compactness theorem의 직접적 적용이다. Stable map들의 sequence가 energy bound (homology class가 fixed이므로 자동) 하에서 reparametrization과 bubble formation 후 stable limit을 갖는다는 statement이다. Stability 조건이 *unique한* limit object를 보장한다.
+증명은 [§J-holomorphic curves, ⁋명제 8](/ko/math/symplectic_geometry/j_holomorphic_curves#prop8)의 직접적 적용이다. Stable map들의 sequence가 energy bound (homology class가 fixed이므로 자동) 하에서 reparametrization과 bubble formation 후 stable limit을 갖는다는 statement이다. Stability 조건이 *unique한* limit object를 보장한다.
 
 ## Evaluation map과 cotangent line bundle
 

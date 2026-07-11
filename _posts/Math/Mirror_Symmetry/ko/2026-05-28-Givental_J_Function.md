@@ -17,7 +17,7 @@ weight: 6
 
 ## Descendant Gromov-Witten invariant
 
-$$J$$-function의 정의를 시작하기 전에, 본 글 전반에서 사용할 *descendant* invariant ([\[사교기하학\] §Gromov-Witten 불변량, ⁋정의 2](/ko/math/symplectic_geometry/gromov_witten#def2))를 본 글의 표기에 맞춰 짧게 정리해 두자. Genus $$0$$, $$(n+1)$$-marked, class $$\beta$$의 stable map의 moduli space 
+$$J$$-function의 정의를 시작하기 전에, 본 글 전반에서 사용할 *descendant* invariant를 ([\[사교기하학\] §Gromov-Witten 불변량, ⁋정의 2](/ko/math/symplectic_geometry/gromov_witten#def2)) 본 글의 표기에 맞춰 짧게 정리해 두자. Genus $$0$$, $$(n+1)$$-marked, class $$\beta$$의 stable map의 moduli space 
 
 $$\overline{\mathcal{M}}_{0, n+1}(X, \beta)$$
 
@@ -220,7 +220,7 @@ $$\sum_{k \geq 1} z^{-k-1}\langle \tau_{k-1}(T_a)\rangle_{0, 1, \beta} = \sum_{m
 
 ## Mirror theorem
 
-우리는 앞서 A-side의 fundamental solution matrix $$S$$ ([명제 4](#prop4))와 B-side의 period matrix $$\mathcal{I}$$ ([§가우스-마닌 접속, ⁋명제 7](/ko/math/mirror_symmetry/gauss-manin_connection#prop7))를 각각 독립적으로 구성하였다. 두 행렬이 실제로 일치한다는 것이 바로 mirror theorem의 통찰 중 하나이다.
+우리는 앞서 A-side의 fundamental solution matrix $$S$$와 ([명제 4](#prop4)) B-side의 period matrix $$\mathcal{I}$$를 ([§가우스-마닌 접속, ⁋명제 7](/ko/math/mirror_symmetry/gauss-manin_connection#prop7)) 각각 독립적으로 구성하였다. 두 행렬이 실제로 일치한다는 것이 바로 mirror theorem의 통찰 중 하나이다.
 
 ::: misc 주장 5 (Mirror theorem, $$J$$-function form) {#conj5}
 Mirror pair $$(X, \check{X})$$에 대하여, $$X$$의 $$J$$-function은 $$T_0 = 1$$ normalization에 대응하는 특정 Lefschetz thimble $$\Gamma_0$$ (large radius limit 근방에서 결정되는 *distinguished* thimble)에 대한 oscillating integral의 cohomology basis $$\{T^a\}$$ 성분들로 적힌다. 즉
@@ -230,9 +230,9 @@ $$J_X(q, z) = \sum_a J^a(q, z) T^a,\qquad J^a(q, z) \;\propto\; \mathcal{I}^a_{\
 가 up to normalization으로 성립한다. 여기서 우변은 [§가우스-마닌 접속, ⁋명제 7](/ko/math/mirror_symmetry/gauss-manin_connection#prop7)에서 도입한 period matrix $$\mathcal{I}^a_p$$의 $$p = \Gamma_0$$ 열이다. 
 :::
 
-위의 [주장 5](#conj5)는 mirror symmetry의 가장 강한 표현 중 하나로, A-side의 descendant Gromov-Witten invariant 전체가 B-side에서 period integral으로 복원된다는 것이다. 그럼 특히 classical한 버전의 ring-level mirror symmetry $$QH^\ast(X) \cong \Jac(W_q)$$은 $$z\rightarrow 0$$일 때의 leading order로 복원된다. 구체적으로 $$z \to 0$$ stationary phase asymptotic ([§가우스-마닌 접속, ⁋명제 3](/ko/math/mirror_symmetry/gauss-manin_connection#prop3))은 $$W_q$$의 critical point들에 의한 합으로 풀어지며, 그 leading order의 critical value들 $$\{W_q(p)\}$$가 quantum cohomology의 canonical coordinate들을 복원한다.
+위의 [주장 5](#conj5)는 mirror symmetry의 가장 강한 표현 중 하나로, A-side의 descendant Gromov-Witten invariant 전체가 B-side에서 period integral으로 복원된다는 것이다. 그럼 특히 classical한 버전의 ring-level mirror symmetry $$QH^\ast(X) \cong \Jac(W_q)$$은 $$z\rightarrow 0$$일 때의 leading order로 복원된다. 구체적으로 $$z \to 0$$ stationary phase asymptotic은 ([§가우스-마닌 접속, ⁋명제 3](/ko/math/mirror_symmetry/gauss-manin_connection#prop3)) $$W_q$$의 critical point들에 의한 합으로 풀어지며, 그 leading order의 critical value들 $$\{W_q(p)\}$$가 quantum cohomology의 canonical coordinate들을 복원한다.
 
-이 주장은 단순히 [§두브로빈 접속, ⁋주장 4](/ko/math/mirror_symmetry/dubrovin_connection#conj4)를 반복한 것이 아니다. 이를 보이기 위해 우리는 우선 $$J$$-function이 만족하는 QDE ([명제 4](#prop4))와 period matrix가 만족하는 Gauss-Manin system ([§가우스-마닌 접속, ⁋명제 7](/ko/math/mirror_symmetry/gauss-manin_connection#prop7))이 동일한 $$D$$-module을 정의함을 보여야 하며, 이것이 [§두브로빈 접속, ⁋주장 4](/ko/math/mirror_symmetry/dubrovin_connection#conj4)의 내용이다. 그 후에 우리는 $$J$$-function, 즉 행렬 $$S$$의 첫 열이 [§두브로빈 접속, ⁋주장 4](/ko/math/mirror_symmetry/dubrovin_connection#conj4)의 isomorphism 아래 thimble period들의 임의의 선형결합이 아니라 하필 distinguished thimble $$\Gamma_0$$ 위의 oscillating integral 하나로 옮겨짐을 확인해야 한다. 이를 위해서는 추가적인 양 변의 *integral structure*가 일치한다는 주장이 필요하며, A-side에서는 $$K$$-theory와 $$\hat{\Gamma}$$-class가 정의하는 lattice, 그리고 B-side에서는 Lefschetz thimble들이 생성하는 lattice들이 이 역할을 한다. 
+이 주장은 단순히 [§두브로빈 접속, ⁋주장 4](/ko/math/mirror_symmetry/dubrovin_connection#conj4)를 반복한 것이 아니다. 이를 보이기 위해 우리는 우선 $$J$$-function이 만족하는 QDE와 ([명제 4](#prop4)) period matrix가 만족하는 Gauss-Manin system이 ([§가우스-마닌 접속, ⁋명제 7](/ko/math/mirror_symmetry/gauss-manin_connection#prop7)) 동일한 $$D$$-module을 정의함을 보여야 하며, 이것이 [§두브로빈 접속, ⁋주장 4](/ko/math/mirror_symmetry/dubrovin_connection#conj4)의 내용이다. 그 후에 우리는 $$J$$-function, 즉 행렬 $$S$$의 첫 열이 [§두브로빈 접속, ⁋주장 4](/ko/math/mirror_symmetry/dubrovin_connection#conj4)의 isomorphism 아래 thimble period들의 임의의 선형결합이 아니라 하필 distinguished thimble $$\Gamma_0$$ 위의 oscillating integral 하나로 옮겨짐을 확인해야 한다. 이를 위해서는 추가적인 양 변의 *integral structure*가 일치한다는 주장이 필요하며, A-side에서는 $$K$$-theory와 $$\hat{\Gamma}$$-class가 정의하는 lattice, 그리고 B-side에서는 Lefschetz thimble들이 생성하는 lattice들이 이 역할을 한다. 
 
 Calabi-Yau hypersurface in toric variety의 경우 Givental과 Lian-Liu-Yau가 이를 증명하였으며, 우리의 주된 관심 대상인 toric Fano variety의 경우 다음 절의 *$$I = J$$* 정리가 이 주장의 explicit하고 계산 가능한 형태를 제공한다.
 
@@ -291,7 +291,7 @@ $$v_0 = -e_1 - \cdots - e_n,\qquad v_i = e_i\quad (i = 1, \ldots, n)$$
 
 이제 [정의 5](#def5)의 $$I$$-function 공식에 들어가는 데이터를 $$\mathbb{P}^n$$에 맞춰 풀어 보자. 우선 $$H^2(\mathbb{P}^n)$$이 $$H$$ 하나로 생성되므로 $$t_{(2)} = tH$$이며, Novikov variable이 $$q = e^t$$로 주어진다. 즉, $$t = \ln q$$이므로 $$e^{t_{(2)}/z} = e^{H \ln q / z}$$로 쓸 수 있다. 
 
-다음으로 effective curve class는 line class $$H^\vee$$의 음이 아닌 배수 $$\beta = d H^\vee$$ ($$d \geq 0$$)로 매개되므로 $$q^\beta = q^d$$이고, $$\mathbb{P}^n$$의 $$n+1$$개 toric divisor $$D_0, \ldots, D_n$$ ([\[토릭 기하학\] §토러스 인자와 선다발, ⁋예시 11](/ko/math/toric_geometry/toric_divisors#ex11))은 모두 $$D_i \cdot \beta = H \cdot d H^\vee = d$$을 만족하므로, 이를 대입하면 각 인자는 $$-\infty$$로의 무한곱이 상쇄되어
+다음으로 effective curve class는 line class $$H^\vee$$의 음이 아닌 배수 $$\beta = d H^\vee$$ ($$d \geq 0$$)로 매개되므로 $$q^\beta = q^d$$이고, $$\mathbb{P}^n$$의 $$n+1$$개 toric divisor $$D_0, \ldots, D_n$$은 ([\[토릭 기하학\] §토러스 인자와 선다발, ⁋예시 11](/ko/math/toric_geometry/toric_divisors#ex11)) 모두 $$D_i \cdot \beta = H \cdot d H^\vee = d$$을 만족하므로, 이를 대입하면 각 인자는 $$-\infty$$로의 무한곱이 상쇄되어
 
 $$\frac{\prod_{k=-\infty}^{0}(D_i + kz)}{\prod_{k=-\infty}^{D_i \cdot \beta}(D_i + kz)} = \frac{\prod_{k=-\infty}^{0}(H + kz)}{\prod_{k=-\infty}^{d}(H + kz)} = \frac{1}{\prod_{j=1}^{d}(H + jz)}$$
 
@@ -354,7 +354,7 @@ $$J_X^{\mathrm{big}}(t, z) := e^{t_{(2)}/z}\left( 1 + \sum_{\substack{\beta \in 
 
 Big $$J$$-function이 big QDE의 horizontal section을 이룬다는 사실은 [명제 4](#prop4)의 small 버전과 같은 논증을 따르면 된다. Small $$J$$-function은 big $$J$$-function의 $$t = t_{(2)} \in H^2(X)$$ specialization으로 복원되는데, $$H^2$$ 삽입에 (descendant 보정항이 붙은) divisor equation을 $$n$$번 적용하면 $$t_{(2)}$$ 삽입들이 $$(t_{(2)} \cdot \beta)^n$$ 인자와 $$\psi$$-shift 보정으로 빠져나오고, 이들이 $$\sum_n (t_{(2)}\cdot \beta)^n/n! = q^\beta$$로 합산되며 $$\psi$$-shift 보정이 추가 $$z^{-1}$$ 인자를 만들어내어, 결과적으로 marked point가 $$1$$개로 줄어든 [정의 3](#def3)의 small $$J$$-function 형태가 그대로 복원된다. 
 
-Big $$J$$-function이 담고 있는 추가 정보는 임의의 cohomology class들로 정해지는 모든 descendant invariant들이다. 이를 토대로 mirror theorem ([주장 5](#conj5))도 big 버전으로 격상되어 *전체* $$S$$-matrix와 *전체* period matrix의 일치를 주장하는 더 강한 statement가 되며, $$I = J$$ ([명제 6](#prop6))도 mirror map $$\tau(q)$$가 일반적으로 자명하지 않은 big version에서 더 풍부한 내용을 갖는다. 
+Big $$J$$-function이 담고 있는 추가 정보는 임의의 cohomology class들로 정해지는 모든 descendant invariant들이다. 이를 토대로 [주장 5](#conj5)도 big 버전으로 격상되어 *전체* $$S$$-matrix와 *전체* period matrix의 일치를 주장하는 더 강한 statement가 되며, $$I = J$$도 ([명제 6](#prop6)) mirror map $$\tau(q)$$가 일반적으로 자명하지 않은 big version에서 더 풍부한 내용을 갖는다. 
 
 ---
 

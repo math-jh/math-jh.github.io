@@ -43,7 +43,7 @@ $$b=1\cdot b=(a^{-1}a)b=a^{-1}(ab)=a^{-1}\cdot 0=0$$
 이다. 따라서 $$a\neq 0$$이면 $$b=0$$이고, 이는 $$ab=0$$에서 $$a=0$$ 또는 $$b=0$$임을 뜻한다. 따라서 $$D$$에는 nonzero zero divisor가 없다. $$D$$가 field이면 추가로 가환이고 $$0\neq 1$$이므로 integral domain이다 ([\[대수적 구조\] §분수체, ⁋정의 5](/ko/math/algebraic_structures/field_of_fractions#def5)).
 :::
 
-이는 unit이 결코 zero divisor가 아니라는 일반적 사실 ([§Unit과 zero divisor, ⁋명제 4](/ko/math/ring_theory/units_and_zero_divisors#prop4))의 직접적 귀결이기도 하다. Division ring에서는 모든 nonzero 원소가 unit이므로, nonzero zero divisor가 존재할 여지가 없다. 명제 2의 역, 곧 zero divisor가 없는 환이 항상 division ring이 되는 것은 일반적으로 거짓이다. $$\mathbb{Z}$$는 zero divisor가 없지만 $$2$$가 unit이 아니므로 division ring이 아니다. 이 간극이 유한환에서 사라진다는 사실은 [정리 8](#thm8)에서 다시 다룬다.
+이는 unit이 결코 zero divisor가 아니라는 일반적 사실의 직접적 귀결이기도 하다. ([§Unit과 zero divisor, ⁋명제 4](/ko/math/ring_theory/units_and_zero_divisors#prop4)) Division ring에서는 모든 nonzero 원소가 unit이므로, nonzero zero divisor가 존재할 여지가 없다. 명제 2의 역, 곧 zero divisor가 없는 환이 항상 division ring이 되는 것은 일반적으로 거짓이다. $$\mathbb{Z}$$는 zero divisor가 없지만 $$2$$가 unit이 아니므로 division ring이 아니다. 이 간극이 유한환에서 사라진다는 사실은 [정리 8](#thm8)에서 다시 다룬다.
 
 ## Quaternion
 

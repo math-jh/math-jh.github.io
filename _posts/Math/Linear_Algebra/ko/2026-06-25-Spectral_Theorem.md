@@ -39,7 +39,7 @@ Self-adjoint operator의 대각화에서 핵심이 되는 사실은, (실수) sy
 실수 symmetric matrix $$A$$의 모든 고윳값은 실수이다. 즉 $$A$$의 특성다항식의 모든 근은 실수이다. 
 :::
 ::: 증명
-$$A$$의 특성다항식은 실수를 계수로 갖는 $$n$$차 다항식이며, 대수학의 기본정리 ([§특성다항식, ⁋정리 8](/ko/math/linear_algebra/characteristic_polynomial#thm8))에 의하여, 이 다항식은 $$\mathbb{C}$$까지 포함하면 $$n$$개의 근 $$\lambda$$를 가진다. 
+$$A$$의 특성다항식은 실수를 계수로 갖는 $$n$$차 다항식이며, [§특성다항식, ⁋정리 8](/ko/math/linear_algebra/characteristic_polynomial#thm8)에 의하여, 이 다항식은 $$\mathbb{C}$$까지 포함하면 $$n$$개의 근 $$\lambda$$를 가진다. 
 
 이제 이에 해당하는 eigenvector $$z\in\mathbb{C}^n$$를 생각하고, $$z$$의 각 성분을 켤레복소수로 바꾼 벡터를 $$\bar z$$라 하고, 다음의 복소수
 
@@ -142,7 +142,7 @@ $$\langle Lv,v\rangle=\left\langle\sum_i a_i\lambda_iv_i,\sum_j a_jv_j\right\ran
 이다. 마지막 등호는 $$\langle v_i,v_j\rangle=\delta_{ij}$$인 것으로부터 따라온다. 만일 모든 $$\lambda_i\geq 0$$이라면 이 값은 항상 $$0$$ 이상이고, 거꾸로 어떤 $$\lambda_i<0$$이라면 $$v=v_i$$에 대하여 $$\langle Lv_i,v_i\rangle=\lambda_i<0$$이다. 따라서 positive semidefiniteness와 모든 고윳값이 $$0$$ 이상인 것이 동치이다. $$0\neq v$$에 대하여 $$\sum_i\lambda_ia_i^2>0$$인 것과 모든 $$\lambda_i>0$$인 것이 동치임도 같은 방식으로 확인되므로 positive definiteness에 대한 주장도 성립한다. 
 :::
 
-Positive definite operator의 행렬은 또한 삼각행렬을 통해 간결하게 분해된다. 사실 이 분해는 일반적인 정사각행렬의 LU 분해 ([§가우스 소거법, ⁋정의 8](/ko/math/linear_algebra/Gaussian_elimination#def8))가 symmetric positive definite matrix에 대해 더욱 단순해진 형태로, 오직 $$L$$만 계산하면 $$U$$ 부분은 자동으로 나온다는 점에서 계산량을 절반으로 줄인다.
+Positive definite operator의 행렬은 또한 삼각행렬을 통해 간결하게 분해된다. 사실 이 분해는 [§가우스 소거법, ⁋정의 8](/ko/math/linear_algebra/Gaussian_elimination#def8)에서 정의한 일반적인 정사각행렬의 LU 분해가 symmetric positive definite matrix에 대해 더욱 단순해진 형태로, 오직 $$L$$만 계산하면 $$U$$ 부분은 자동으로 나온다는 점에서 계산량을 절반으로 줄인다.
 
 ::: 명제 10 (Cholesky 분해)
 Positive definite인 실수 대칭행렬 $$A$$에 대하여, 대각성분이 모두 양수인 하삼각행렬 $$L$$이 유일하게 존재하여 $$A=LL^t$$이다.

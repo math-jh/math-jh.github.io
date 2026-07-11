@@ -10,6 +10,7 @@ sidebar:
 
 date: 2023-05-15
 weight: 4
+
 published: false
 
 ---
@@ -25,7 +26,7 @@ $$\mathcal{I}(z) = \int_\gamma e^{W(x)/z}\,\omega$$
 우선 critical point와 그 non-degeneracy 개념을 정확히 하자.
 
 ::: 정의 1
-Smooth manifold $$M$$([\[미분다양체\] §미분다양체, ⁋정의 1](/ko/math/manifolds/smooth_manifolds#def1))과 smooth function $$f:M\to\mathbb{R}$$이 주어졌다 하자. 점 $$p\in M$$이 $$f$$의 *critical point<sub>임계점</sub>*라는 것은 differential $$df_p:T_pM\to\mathbb{R}$$([\[미분다양체\] §미분사상, ⁋정의 7](/ko/math/manifolds/differentials#def7))이 영사상인 것을 뜻한다. 여기서 $$T_pM$$은 $$p$$에서의 tangent space ([\[미분다양체\] §접공간, ⁋정의 3](/ko/math/manifolds/tangent_space#def3))이다.
+Smooth manifold ([\[미분다양체\] §미분다양체, ⁋정의 1](/ko/math/manifolds/smooth_manifolds#def1)) $$M$$과 smooth function $$f:M\to\mathbb{R}$$이 주어졌다 하자. 점 $$p\in M$$이 $$f$$의 *critical point<sub>임계점</sub>*라는 것은 differential ([\[미분다양체\] §미분사상, ⁋정의 7](/ko/math/manifolds/differentials#def7)) $$df_p:T_pM\to\mathbb{R}$$이 영사상인 것을 뜻한다. 여기서 $$T_pM$$은 $$p$$에서의 tangent space이다 ([\[미분다양체\] §접공간, ⁋정의 3](/ko/math/manifolds/tangent_space#def3)).
 :::
 
 좌표 $$(x_1,\ldots,x_n)$$을 점 $$p$$ 근방에 잡으면 위 조건은 $$\partial f/\partial x_i(p)=0$$이 모든 $$i$$에 대해 성립한다는 것과 동치이다. 임계점에서는 일차 정보가 사라지므로, 함수의 국소적 형상은 이차 정보, 즉 Hessian이 결정한다.
@@ -161,7 +162,7 @@ $$I(\hbar) = (2\pi\hbar)^{n/2}\sum_{p\in\operatorname{Crit}(\phi)\cap\operatorna
 
 $$X\bigl(e^{i\phi/\hbar}\bigr) = \frac{i}{\hbar}(X\phi)e^{i\phi/\hbar} = \frac{i}{\hbar}e^{i\phi/\hbar}$$
 
-이므로 $$e^{i\phi/\hbar} = (\hbar/i)\,X(e^{i\phi/\hbar})$$로 쓸 수 있다. 이를 적분에 대입하고 divergence theorem (즉 $$X$$의 transpose에 대한 부분적분)을 $$N$$번 적용하면 $$I(\hbar)$$ 중 critical point의 밖에 해당하는 기여가 $$O(\hbar^N)$$임을 알 수 있다. 따라서 smooth partition of unity ([\[미분다양체\] §미분다양체](/ko/math/manifolds/smooth_manifolds))를 이용하여 $$a$$의 support를 critical point들의 작은 근방으로 잘라내도 점근전개의 오차는 임의의 차수로 통제된다. 이제 $$\operatorname{supp}(a)$$가 단 하나의 critical point $$p$$의 작은 근방에 들어 있는 경우만 다루면 충분하다.
+이므로 $$e^{i\phi/\hbar} = (\hbar/i)\,X(e^{i\phi/\hbar})$$로 쓸 수 있다. 이를 적분에 대입하고 divergence theorem (즉 $$X$$의 transpose에 대한 부분적분)을 $$N$$번 적용하면 $$I(\hbar)$$ 중 critical point의 밖에 해당하는 기여가 $$O(\hbar^N)$$임을 알 수 있다. 따라서 [\[미분다양체\] §미분다양체](/ko/math/manifolds/smooth_manifolds)의 smooth partition of unity를 이용하여 $$a$$의 support를 critical point들의 작은 근방으로 잘라내도 점근전개의 오차는 임의의 차수로 통제된다. 이제 $$\operatorname{supp}(a)$$가 단 하나의 critical point $$p$$의 작은 근방에 들어 있는 경우만 다루면 충분하다.
 
 **2단계 (Morse lemma에 의한 표준화).** [정리 6](#thm6)을 $$\phi$$에 적용하면 $$p$$ 근방에서 좌표 $$y=(y_1,\ldots,y_n)$$이 존재하여
 
@@ -308,7 +309,7 @@ $$e^{W(p)/\hbar}\,\alpha(p)\,\prod_{i=1}^n \int_{\mathbb{R}} e^{e^{2i\theta_i}t_
 으로 환원되며, 각 1차원 적분은 [정리 10](#thm10)의 증명 3단계와 동일한 방식으로 $$\sqrt{2\pi\hbar/(-e^{2i\theta_i})}=\sqrt{2\pi\hbar}/\sqrt{-e^{2i\theta_i}}$$를 준다. 이를 모두 곱하면 $$(2\pi\hbar)^{n/2}/\sqrt{\det\operatorname{Hess}_p(W)}$$가 나오며, square root의 branch는 thimble의 orientation $$\{e^{i\theta_i}\}$$에 의해 결정된다. 자세한 부호 추적은 **[Pha]** §5를 참조한다.
 :::
 
-[명제 16](#prop16)는 위의 stationary phase formula ([정리 10](#thm10))를 holomorphic 세팅으로 확장한 것이며, holomorphic superpotential에 대한 oscillating integral의 thimble별 점근 분해의 표준적인 출발점이다. 일반적으로 critical point가 매개변수에 따라 이동할 때, thimble들의 monodromy는 Picard–Lefschetz 변환을 통해 적분의 분해를 통제한다.
+[명제 16](#prop16)는 위의 [정리 10](#thm10)을 holomorphic 세팅으로 확장한 것이며, holomorphic superpotential에 대한 oscillating integral의 thimble별 점근 분해의 표준적인 출발점이다. 일반적으로 critical point가 매개변수에 따라 이동할 때, thimble들의 monodromy는 Picard–Lefschetz 변환을 통해 적분의 분해를 통제한다.
 
 ---
 

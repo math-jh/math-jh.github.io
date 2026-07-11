@@ -106,7 +106,7 @@ $$\langle d,e\rangle=\sum_{i\in Q_0}d_i e_i-\sum_{\alpha\in Q_1}d_{s(\alpha)}e_{
 
 $$s_k(d)=d-(d,e_k)\,e_k$$
 
-을 정의할 수 있다. 이는 근계의 reflection ([\[리 이론\] §근계, ⁋정의 9](/ko/math/lie_theory/root_systems#def9))과 같은 꼴이며, vertex $$k$$ 좌표만 바꾸는 변환이다. 구체적으로 $$k$$가 sink일 때 $$k$$로 들어오는 arrow의 개수를 $$m$$이라 하면 $$(d,e_k)$$의 계산에서 $$s_k(d)$$의 $$k$$-좌표는 $$\sum_{\alpha:i\rightarrow k}d_{s(\alpha)}-d_k$$로 바뀐다. 다음 명제가 이 변환이 정확히 반사 함자의 효과임을 말한다.
+을 정의할 수 있다. 이는 [\[리 이론\] §근계, ⁋정의 9](/ko/math/lie_theory/root_systems#def9)의 reflection과 같은 꼴이며, vertex $$k$$ 좌표만 바꾸는 변환이다. 구체적으로 $$k$$가 sink일 때 $$k$$로 들어오는 arrow의 개수를 $$m$$이라 하면 $$(d,e_k)$$의 계산에서 $$s_k(d)$$의 $$k$$-좌표는 $$\sum_{\alpha:i\rightarrow k}d_{s(\alpha)}-d_k$$로 바뀐다. 다음 명제가 이 변환이 정확히 반사 함자의 효과임을 말한다.
 
 ::: 명제 7
 $$k$$가 $$Q$$의 sink이고 $$V$$가 $$Q$$의 indecomposable representation으로서 vertex $$k$$에 얹힌 simple representation $$S_k$$ (곧 dimension vector $$e_k$$인 것) 와 isomorphic하지 않다고 하자. 그럼 사상 $$V_{\mathrm{in}}$$이 전사이고,
@@ -174,7 +174,7 @@ $$C^+=S_{k_n}^+\cdots S_{k_2}^+ S_{k_1}^+:\Rep(Q)\longrightarrow\Rep(Q)$$
 로 정의한다. 대칭적으로 admissible source sequence를 따라 $$S^-$$들을 합성하여 $$C^-:\Rep(Q)\rightarrow\Rep(Q)$$를 정의한다.
 :::
 
-각 vertex를 정확히 한 번씩 sink로 만들어 모든 인접 화살표를 뒤집으므로, 모든 vertex를 거치고 나면 $$\sigma_{k_n}\cdots\sigma_{k_1}Q=Q$$가 되어 $$C^+$$는 $$\Rep(Q)$$를 자기 자신으로 보낸다. Admissible sink sequence는 $$Q$$에 oriented cycle이 없으므로 항상 존재한다. 매 단계에서 sink를 하나 골라 제거하는 방식으로 위상정렬을 하면 되기 때문이다. 서로 다른 admissible sink sequence는 다른 함자를 줄 수 있으나, dimension vector 위에서는 모두 같은 변환, 곧 Weyl group ([\[리 이론\] §근계, ⁋정의 17](/ko/math/lie_theory/root_systems#def17))의 *Coxeter element* $$c=s_{k_n}\cdots s_{k_1}$$로 작용한다.
+각 vertex를 정확히 한 번씩 sink로 만들어 모든 인접 화살표를 뒤집으므로, 모든 vertex를 거치고 나면 $$\sigma_{k_n}\cdots\sigma_{k_1}Q=Q$$가 되어 $$C^+$$는 $$\Rep(Q)$$를 자기 자신으로 보낸다. Admissible sink sequence는 $$Q$$에 oriented cycle이 없으므로 항상 존재한다. 매 단계에서 sink를 하나 골라 제거하는 방식으로 위상정렬을 하면 되기 때문이다. 서로 다른 admissible sink sequence는 다른 함자를 줄 수 있으나, dimension vector 위에서는 모두 같은 변환, 곧 Weyl group의 ([\[리 이론\] §근계, ⁋정의 17](/ko/math/lie_theory/root_systems#def17)) *Coxeter element* $$c=s_{k_n}\cdots s_{k_1}$$로 작용한다.
 
 ::: 명제 10
 $$(k_1,\ldots,k_n)$$이 admissible sink sequence이고 $$V$$가 $$Q$$의 indecomposable representation이라 하자. $$C^+ V\neq 0$$이면

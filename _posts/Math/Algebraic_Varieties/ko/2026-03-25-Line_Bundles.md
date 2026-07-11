@@ -12,6 +12,7 @@ sidebar:
 date: 2026-03-25
 weight: 9
 
+
 ---
 
 우리는 앞선 글에서 다양체 $$X$$ 위의 divisor들을 정의하고, 이들의 linear equivalence class들이 $$\Cl(X)$$를 이룸을 보았다. 그러나 모든 divisor가 어떤 유리함수의 zero/pole으로부터 오는 것은 아니다. 예를 들어 $$\Cl(\mathbb{P}^n) \cong \mathbb{Z}$$이므로 ([§인자, ⁋예시 11](/ko/math/algebraic_varieties/divisors#ex11)), $$\mathbb{P}^n$$에서 일반적인 divisor $$dH$$는 $$d \ge 0$$일 때만 어떤 함수의 zero set으로 나온다.
@@ -143,7 +144,7 @@ $$\Pic(X)$$는 abelian group이다.
 앞선 글에서와 마찬가지로, 우리의 toy example은 $$\mathbb{A}^n$$과 $$\mathbb{P}^n$$이다. 
 
 ::: 예시 11
-$$\mathbb{A}^n$$의 coordinate ring $$R = \mathbb{K}[\x_1, \ldots, \x_n]$$은 UFD이며, 위 논의에 의해 $$\mathbb{A}^n$$ 위의 line bundle은 $$R$$ 위의 invertible module과 correspondence한다. ([\[가환대수학\] §분수아이디얼, ⁋정리 4](/ko/math/commutative_algebra/fractional_ideals#thm4))에 의해 UFD 위의 invertible module은 free이므로, $$\Pic(\mathbb{A}^n) = 0$$이다.
+$$\mathbb{A}^n$$의 coordinate ring $$R = \mathbb{K}[\x_1, \ldots, \x_n]$$은 UFD이며, 위 논의에 의해 $$\mathbb{A}^n$$ 위의 line bundle은 $$R$$ 위의 invertible module과 correspondence한다. [\[가환대수학\] §분수아이디얼, ⁋정리 4](/ko/math/commutative_algebra/fractional_ideals#thm4)에 의해 UFD 위의 invertible module은 free이므로, $$\Pic(\mathbb{A}^n) = 0$$이다.
 :::
 
 

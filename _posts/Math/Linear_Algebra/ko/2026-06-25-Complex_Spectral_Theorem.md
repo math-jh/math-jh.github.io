@@ -124,7 +124,7 @@ $$\lVert v\rVert^2=\langle Lv,Lv\rangle=\langle\lambda v,\lambda v\rangle=\bar\l
 이고, $$\lVert v\rVert^2>0$$이므로 $$\lvert\lambda\rvert^2=1$$, 즉 $$\lvert\lambda\rvert=1$$이다.
 :::
 
-복소 스펙트럼 정리는 실수판 ([§스펙트럼 정리, ⁋정리 5](/ko/math/linear_algebra/spectral_theorem#thm5))을 특수한 경우로 포함한다. 즉, 실수symmetric matrix $$A$$는 성분이 실수이므로 복소행렬로 보면 $$A^\ast=\bar A^t=A^t=A$$가 되어 복소수 상에서도 self-adjoint이고, 따라서 [명제 7](#prop7)에 의하여 그 고윳값은 모두 실수이기 때문이다.  
+복소 스펙트럼 정리는 실수판인 [§스펙트럼 정리, ⁋정리 5](/ko/math/linear_algebra/spectral_theorem#thm5)를 특수한 경우로 포함한다. 즉, 실수symmetric matrix $$A$$는 성분이 실수이므로 복소행렬로 보면 $$A^\ast=\bar A^t=A^t=A$$가 되어 복소수 상에서도 self-adjoint이고, 따라서 [명제 7](#prop7)에 의하여 그 고윳값은 모두 실수이기 때문이다.  
 
 ---
 

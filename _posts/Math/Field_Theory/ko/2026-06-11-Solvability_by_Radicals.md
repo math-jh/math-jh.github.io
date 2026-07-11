@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-06-11
 weight: 11
+
 published: false
 
 ---
@@ -77,7 +78,7 @@ $$(\sigma\tau)(\alpha)/\alpha=\sigma\bigl(\tau(\alpha)/\alpha\bigr)\cdot\sigma(\
 $$\mathbb{L}/\mathbb{K}$$가 degree $$n$$의 Galois extension이고 $$\Gal(\mathbb{L}/\mathbb{K})$$가 cyclic group이라 하자. 그럼 ($$\zeta\in\mathbb{K}$$ 가정 하에) 적당한 $$\alpha\in\mathbb{L}$$가 존재하여 $$\mathbb{L}=\mathbb{K}(\alpha)$$이고 $$\alpha^n\in\mathbb{K}$$이다.
 :::
 ::: 증명
-$$\Gal(\mathbb{L}/\mathbb{K})$$의 generator를 $$\sigma$$라 하자. [§갈루아 이론의 기본정리](/ko/math/field_theory/fundamental_theorem_of_galois_theory)의 마지막에 언급한 counting에 의하여 $$\card\Gal(\mathbb{L}/\mathbb{K})=[\mathbb{L}:\mathbb{K}]=n$$이고, 따라서 $$\id,\sigma,\sigma^2,\ldots,\sigma^{n-1}$$은 $$\mathbb{L}$$에서 $$\mathbb{L}$$로의 서로 다른 homomorphism들이다. [§에탈대수, ⁋따름정리 3](/ko/math/field_theory/etale_algebras#cor3)의 Dedekind 정리에 의하여 이들은 $$\mathbb{L}$$-벡터공간 안에서 일차독립이므로, 일차결합
+$$\Gal(\mathbb{L}/\mathbb{K})$$의 generator를 $$\sigma$$라 하자. [§갈루아 이론의 기본정리](/ko/math/field_theory/fundamental_theorem_of_galois_theory)의 마지막에 언급한 counting에 의하여 $$\card\Gal(\mathbb{L}/\mathbb{K})=[\mathbb{L}:\mathbb{K}]=n$$이고, 따라서 $$\id,\sigma,\sigma^2,\ldots,\sigma^{n-1}$$은 $$\mathbb{L}$$에서 $$\mathbb{L}$$로의 서로 다른 homomorphism들이다. [§에탈대수, ⁋따름정리 3](/ko/math/field_theory/etale_algebras#cor3)에 의하여 이들은 $$\mathbb{L}$$-벡터공간 안에서 일차독립이므로, 일차결합
 
 $$\id+\zeta\sigma+\zeta^2\sigma^2+\cdots+\zeta^{n-1}\sigma^{n-1}$$
 

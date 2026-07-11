@@ -41,7 +41,7 @@ $$\begin{aligned}
 &\leq \lVert A(t)\rVert \lvert y_1 - y_2\rvert
 \end{aligned}$$
 
-이 성립한다. 여기서 $$\lVert A(t)\rVert$$은 행렬의 작용소노름이다. $$A(t)$$의 각 성분이 $$I$$에서 연속이므로 $$t \mapsto \lVert A(t)\rVert$$도 연속이고, 따라서 $$I$$의 임의의 컴팩트 부분구간에서 유계이다 ([§연속함수의 성질, ⁋따름정리 2](/ko/math/analysis/continuous_functions#cor2)). 그 유계값을 립시츠 상수로 삼으면 $$f$$는 $$y$$에 대해 균일하게 립시츠 조건을 만족하므로, [§미분방정식의 존재성과 유일성, ⁋정리 4](/ko/math/analysis/existence_uniqueness_ode#thm4) 정리 ([§미분방정식의 존재성과 유일성, ⁋정리 4](/ko/math/analysis/existence_uniqueness_ode#thm4))에 의해 국소해가 존재한다.
+이 성립한다. 여기서 $$\lVert A(t)\rVert$$은 행렬의 작용소노름이다. $$A(t)$$의 각 성분이 $$I$$에서 연속이므로 $$t \mapsto \lVert A(t)\rVert$$도 연속이고, 따라서 $$I$$의 임의의 컴팩트 부분구간에서 유계이다 ([§연속함수의 성질, ⁋따름정리 2](/ko/math/analysis/continuous_functions#cor2)). 그 유계값을 립시츠 상수로 삼으면 $$f$$는 $$y$$에 대해 균일하게 립시츠 조건을 만족하므로, [§미분방정식의 존재성과 유일성, ⁋정리 4](/ko/math/analysis/existence_uniqueness_ode#thm4)에 의해 국소해가 존재한다.
 
 전역으로의 확장이 핵심인데, 비선형의 경우와 달리 립시츠 상수가 해의 크기 $$\lvert y\rvert$$에 전혀 의존하지 않는다는 점이 결정적이다. 실제로 해가 존재하는 구간에서 $$\lvert y(t)\rvert$$의 성장은
 
@@ -210,4 +210,4 @@ $$\lvert t^j e^{\lambda t}\rvert = t^j e^{(\Real\lambda) t}$$
 
 대칭적으로, 어떤 고윳값이 $$\Real\lambda > 0$$이면 그 모드를 따라 해가 지수적으로 발산하고, 고윳값이 모두 순허수이면 [예시 6](#ex6)처럼 해가 진동하며 유계로 머문다. 이렇게 평형 $$y = 0$$의 안정·불안정·중립 거동이 고윳값의 실수부 부호로 한꺼번에 읽힌다.
 
-이렇게 선형 미분방정식의 풀이는 행렬의 고윳값·고유벡터, 곧 선형사상의 스펙트럼 구조 ([\[다중선형대수학\] §행렬과 선형사상](/ko/math/multilinear_algebra/matrices_and_linear_maps))로 완전히 귀착된다. 미분방정식의 해의 정성적 거동(평형의 안정성, 진동, 발산)이 고윳값의 실수부와 허수부로 읽힌다는 사실은 동역학계 이론의 출발점이며, 해석학·선형대수·기하가 만나는 지점이다.
+이렇게 선형 미분방정식의 풀이는 행렬의 고윳값·고유벡터, 곧 선형사상의 스펙트럼 구조로 완전히 귀착된다 ([\[다중선형대수학\] §행렬과 선형사상](/ko/math/multilinear_algebra/matrices_and_linear_maps)). 미분방정식의 해의 정성적 거동(평형의 안정성, 진동, 발산)이 고윳값의 실수부와 허수부로 읽힌다는 사실은 동역학계 이론의 출발점이며, 해석학·선형대수·기하가 만나는 지점이다.

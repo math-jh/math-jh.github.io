@@ -14,7 +14,7 @@ weight: 9
 published: false
 ---
 
-[\[사교기하학\] §운동량 사상, ⁋정리 10](/ko/math/symplectic_geometry/moment_map#thm10)의 Atiyah-Guillemin-Sternberg 볼록성 정리는 compact connected symplectic manifold 위의 torus 작용이 Hamiltonian일 때 그 운동량 사상의 상이 볼록 다면체가 됨을 말한다. 작용하는 torus의 차원이 다양체의 절반, 즉 가능한 가장 큰 차원에 이르는 극단적인 경우에 이 대응은 완벽해진다. 이때 다양체는 운동량 다면체에 의해 그 사교 구조와 작용까지 통째로 복원되며, 거꾸로 다면체가 만족해야 할 조합론적 조건도 정확히 결정된다. 이것이 1988년 Delzant가 증명한 정리이며, symplectic 기하의 한 부류 전체를 순전히 볼록 다면체의 데이터로 번역한다.
+[\[사교기하학\] §운동량 사상, ⁋정리 10](/ko/math/symplectic_geometry/moment_map#thm10)은 compact connected symplectic manifold 위의 torus 작용이 Hamiltonian일 때 그 운동량 사상의 상이 볼록 다면체가 됨을 말한다. 작용하는 torus의 차원이 다양체의 절반, 즉 가능한 가장 큰 차원에 이르는 극단적인 경우에 이 대응은 완벽해진다. 이때 다양체는 운동량 다면체에 의해 그 사교 구조와 작용까지 통째로 복원되며, 거꾸로 다면체가 만족해야 할 조합론적 조건도 정확히 결정된다. 이것이 1988년 Delzant가 증명한 정리이며, symplectic 기하의 한 부류 전체를 순전히 볼록 다면체의 데이터로 번역한다.
 
 이 글에서 우리는 먼저 그 대응에 참여하는 다양체와 다면체를 각각 *symplectic toric manifold*와 *Delzant 다면체*로 정의하고, Delzant 정리를 서술한다. 정리의 핵심은 임의의 Delzant 다면체로부터 실제로 symplectic toric manifold를 만들어 내는 구성에 있다. 이 구성은 다면체의 $$d$$개 facet이 결정하는 짧은 완전열 $$0\to N\to\mathbb{T}^d\to\mathbb{T}^n\to0$$의 부분 torus $$N$$을 $$\mathbb{C}^d$$의 표준 Hamiltonian 작용에 제한하고, 이를 [\[사교기하학\] §사교 축약, ⁋정리 2](/ko/math/symplectic_geometry/symplectic_reduction#thm2)의 사교 축약으로 나누어 다양체를 얻는 것이다. 끝으로 같은 다면체가 [§토릭 다양체의 정의](/ko/math/toric_geometry/toric_varieties)에서 다룬 대수기하의 projective toric variety도 결정한다는 점을 정리하고, $$\mathbb{CP}^n$$과 $$\mathbb{CP}^1\times\mathbb{CP}^1$$, Hirzebruch 곡면을 예시로 든다.
 
@@ -23,7 +23,7 @@ published: false
 운동량 다면체가 다양체를 완전히 결정하려면 torus의 차원이 충분히 커야 한다. $$2n$$차원 symplectic manifold 위에서 효과적으로 작용하는 torus의 차원은 많아야 $$n$$인데, 이 최대치에 도달하는 작용을 따로 이름 붙인다.
 
 ::: 정의 1
-$$(M,\omega)$$를 차원 $$2n$$의 compact connected symplectic manifold라 하자. $$n$$차원 torus $$\mathbb{T}^n=(S^1)^n$$이 $$M$$ 위에 운동량 사상 $$\mu:M\rightarrow(\mathfrak{t}^n)^\ast$$을 갖는 *효과적<sub>effective</sub>* Hamiltonian 작용 ([\[사교기하학\] §운동량 사상, ⁋정의 2](/ko/math/symplectic_geometry/moment_map#def2))을 할 때, 네 쌍 $$(M,\omega,\mathbb{T}^n,\mu)$$을 *symplectic toric manifold<sub>사교 토릭 다양체</sub>*라 부른다. 여기서 작용이 효과적이라는 것은 모든 점을 고정하는 원소가 항등원뿐인 것, 즉 $$\mathbb{T}^n\rightarrow\Diff(M)$$이 단사인 것이다.
+$$(M,\omega)$$를 차원 $$2n$$의 compact connected symplectic manifold라 하자. $$n$$차원 torus $$\mathbb{T}^n=(S^1)^n$$이 $$M$$ 위에 운동량 사상 $$\mu:M\rightarrow(\mathfrak{t}^n)^\ast$$을 갖는 *효과적<sub>effective</sub>* [\[사교기하학\] §운동량 사상, ⁋정의 2](/ko/math/symplectic_geometry/moment_map#def2)의 Hamiltonian 작용을 할 때, 네 쌍 $$(M,\omega,\mathbb{T}^n,\mu)$$을 *symplectic toric manifold<sub>사교 토릭 다양체</sub>*라 부른다. 여기서 작용이 효과적이라는 것은 모든 점을 고정하는 원소가 항등원뿐인 것, 즉 $$\mathbb{T}^n\rightarrow\Diff(M)$$이 단사인 것이다.
 :::
 
 torus의 차원 $$n$$이 정확히 $$\tfrac12\dim M$$이라는 점이 결정적이다. 효과성은 이 작용이 더 작은 torus의 작용으로 환원되지 않음을, 즉 $$\mathbb{T}^n$$ 전체가 실질적으로 움직임을 보장한다. 두 symplectic toric manifold $$(M_1,\omega_1,\mathbb{T}^n,\mu_1)$$과 $$(M_2,\omega_2,\mathbb{T}^n,\mu_2)$$이 *동형*이라는 것은, $$\mathbb{T}^n$$-동변인 symplectomorphism $$\varphi:M_1\rightarrow M_2$$, 즉 $$\varphi^\ast\omega_2=\omega_1$$이고 작용과 가환인 미분동형이 존재하여 $$\mu_2\circ\varphi=\mu_1$$이 성립하는 것이다. 운동량 사상은 [\[사교기하학\] §운동량 사상, ⁋명제 4](/ko/math/symplectic_geometry/moment_map#prop4)에 의해 상수만큼의 자유도를 가지므로, 다면체를 평행이동시키는 자유도를 허용하여 $$\mu_2\circ\varphi=\mu_1+\text{(상수)}$$까지 같은 것으로 본다.
@@ -149,7 +149,7 @@ $$\dim M_\Delta=\dim\mathbb{C}^d-2\dim N=2d-2(d-n)=2n$$
 같은 다면체 $$\Delta$$은 [§토릭 다양체의 정의](/ko/math/toric_geometry/toric_varieties)와 [§토러스 인자와 선다발](/ko/math/toric_geometry/toric_divisors)에서 다룬 대수기하의 toric variety도 결정한다. 그쪽에서는 $$\Delta$$의 *normal fan* ([§토릭 다양체의 정의, ⁋정의 6](/ko/math/toric_geometry/toric_varieties#def6)) $$\Sigma_\Delta$$을 만들고, 이로부터 projective toric variety $$X_\Sigma$$을 얻는다 ([§토릭 다양체의 정의, ⁋명제 8](/ko/math/toric_geometry/toric_varieties#prop8)). 두 구성이 같은 입력에서 출발하므로, 한 다면체가 사교 쪽의 $$M_\Delta$$과 대수 쪽의 $$X_{\Sigma_\Delta}$$을 동시에 준다.
 
 ::: 명제 7
-$$\Delta\subseteq\mathbb{R}^n$$을 Delzant 다면체라 하자. [정리 6](#thm6)의 사교 축약으로 얻은 symplectic toric manifold $$M_\Delta$$은, $$\Delta$$의 normal fan $$\Sigma_\Delta$$이 정의하는 smooth projective toric variety $$X_{\Sigma_\Delta}$$과 미분동형이며, 그 미분동형은 두 다양체 위의 $$\mathbb{T}^n$$-작용을 옮긴다. 나아가 $$M_\Delta$$ 위의 사교형식 $$\omega_\Delta$$은 $$\Delta$$이 결정하는 ample line bundle ([§토러스 인자와 선다발, ⁋명제 9](/ko/math/toric_geometry/toric_divisors#prop9))의 Chern 형식을 대표하는 Kähler 형식과 cohomology류가 같다.
+$$\Delta\subseteq\mathbb{R}^n$$을 Delzant 다면체라 하자. [정리 6](#thm6)의 사교 축약으로 얻은 symplectic toric manifold $$M_\Delta$$은, $$\Delta$$의 normal fan $$\Sigma_\Delta$$이 정의하는 smooth projective toric variety $$X_{\Sigma_\Delta}$$과 미분동형이며, 그 미분동형은 두 다양체 위의 $$\mathbb{T}^n$$-작용을 옮긴다. 나아가 $$M_\Delta$$ 위의 사교형식 $$\omega_\Delta$$은 $$\Delta$$이 결정하는 [§토러스 인자와 선다발, ⁋명제 9](/ko/math/toric_geometry/toric_divisors#prop9)의 ample line bundle의 Chern 형식을 대표하는 Kähler 형식과 cohomology류가 같다.
 :::
 ::: 증명
 $$\Delta$$의 simple 조건은 $$\Sigma_\Delta$$의 모든 maximal cone이 simplicial임을, smooth 조건은 그 generator들이 $$\mathbb{Z}^n$$의 basis를 이룸을 준다. 따라서 [§토릭 다양체의 정의, ⁋명제 11](/ko/math/toric_geometry/toric_varieties#prop11)에 의해 $$X_{\Sigma_\Delta}$$은 smooth이고, $$\Delta$$이 full-dimensional lattice polytope의 normal fan이므로 [§토릭 다양체의 정의, ⁋명제 8](/ko/math/toric_geometry/toric_varieties#prop8)에 의해 projective이다.

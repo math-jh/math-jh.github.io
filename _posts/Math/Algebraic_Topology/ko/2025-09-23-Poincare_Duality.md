@@ -12,9 +12,10 @@ date: 2025-09-23
 weight: 9
 
 
+
 ---
 
-이번 글에서 우리는 대수적 위상수학의 아름다운 정리인 푸앵카레 쌍대성에 대해 다룬다. 이전 글에서 언급한 것과 같이, 푸앵카레 쌍대성은 호몰로지와 코호몰로지 사이의 쌍대성을 보여준다. 우리가 이미 살펴본 universal coefficient theorem ([§코호몰로지, ⁋정리 5](/ko/math/algebraic_topology/cohomology#thm5))의 경우, $$C^\bullet(X;A)$$를 $$C_\bullet(X;A)$$의 dual로서 정의했을 때 어느정도 예상 가능한 결과였지만 푸앵카레 쌍대성은 보다 더 기하학적인 의미를 가지고 있다. 
+이번 글에서 우리는 대수적 위상수학의 아름다운 정리인 푸앵카레 쌍대성에 대해 다룬다. 이전 글에서 언급한 것과 같이, 푸앵카레 쌍대성은 호몰로지와 코호몰로지 사이의 쌍대성을 보여준다. 우리가 이미 살펴본 [§코호몰로지, ⁋정리 5](/ko/math/algebraic_topology/cohomology#thm5)의 경우, $$C^\bullet(X;A)$$를 $$C_\bullet(X;A)$$의 dual로서 정의했을 때 어느정도 예상 가능한 결과였지만 푸앵카레 쌍대성은 보다 더 기하학적인 의미를 가지고 있다. 
 
 ## 방향층
 
@@ -31,7 +32,7 @@ $$H_m(M, M\setminus V;\mathbb{Z})\rightarrow H_m(M,M\setminus U;\mathbb{Z})\tag{
 을 가지므로 presheaf이다. 
 
 ::: 정의 1
-대응 (1)의 sheafification ([\[위상수학\] §층, ⁋정의 5](/ko/math/topology/sheaves#def5))을 *orientation sheaf<sub>방향층</sub>*라 부르고 $$\or_M$$로 적는다.
+대응 (1)의 sheafification을 *orientation sheaf<sub>방향층</sub>*라 부르고 $$\or_M$$로 적는다. ([\[위상수학\] §층, ⁋정의 5](/ko/math/topology/sheaves#def5))
 :::
 
 그럼 임의의 $$x\in M$$와 $$x$$의 임의의 열린근방 $$U$$에 대하여, 다음의 canonical map 
@@ -283,7 +284,7 @@ $$-\frown s_K: H^p(M,M\setminus K;A) \rightarrow H_{m-p}(M;A)$$
 
 $$i^\ast\alpha\frown s_{K'}=\alpha\frown i_\ast s_{K'}$$
 
-가 projection formula([§합곱, ⁋명제 6](/ko/math/algebraic_topology/cup_products#prop6))에 의해 성립하며, [보조정리 8](#lem8)의 유일성에 의하여 $$i_\ast s_{K'}=s_K$$이므로 이것이 homomorphism $$H_c^p(M;A)\rightarrow H_{n-p}(M;A)$$을 잘 정의하는 것을 안다. 
+가 [§합곱, ⁋명제 6](/ko/math/algebraic_topology/cup_products#prop6)에 의해 성립하며, [보조정리 8](#lem8)의 유일성에 의하여 $$i_\ast s_{K'}=s_K$$이므로 이것이 homomorphism $$H_c^p(M;A)\rightarrow H_{n-p}(M;A)$$을 잘 정의하는 것을 안다. 
 
 우리 주장은 이 homomorphism $$D_M:H_c^p(M;A)\rightarrow H_{n-p}(M;A)$$이 isomorphism이라는 것이며, 이를 보이기 위해 [보조정리 8](#lem8)의 증명과 마찬가지로 Mayer-Vietoris sequence를 이용한 귀납법을 사용한다. 
 

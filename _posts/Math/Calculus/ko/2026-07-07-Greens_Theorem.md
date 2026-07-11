@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-07-07
 weight: 18
+
 ---
 
 미적분의 기본정리와 선적분의 기본정리가 공통적으로 갖고 있는 정신은 영역 내부에서 일어나는 일이 경계의 적분으로 나타난다는 것이다. 이는 나중에 발산정리와 스토크스 정리 등의 원형으로 볼 수 있으며, 이번 글에서 살펴볼 그린 정리는 이 정신의 $$2$$차원 버전이라 할 수 있다.
@@ -91,7 +92,7 @@ $$\oint_C \mathbf{F} \cdot \mathbf{T}\mathop{ds} = \iint_D \left(\frac{\partial 
 
 $$\oint_C \mathbf{F}\cdot \mathbf{T}\mathop{ds} = \oint_C P\mathop{dx} + Q\mathop{dy}$$
 
-가 바로 [정리 1](#thm1)의 좌변이고, 우변의 피적분함수 $$Q_x - P_y$$가 평면벡터장의 회전 ([§벡터장, ⁋정의 3](/ko/math/calculus/vector_fields#def3))이다. 
+가 바로 [정리 1](#thm1)의 좌변이고, 우변의 피적분함수 $$Q_x - P_y$$가 평면벡터장의 회전이다. ([§벡터장, ⁋정의 3](/ko/math/calculus/vector_fields#def3)) 
 
 둘째 등식의 경우, 양의 방향 경계에서 바깥 단위법선이 $$\mathbf{n}ds = (dy, -dx)$$임을 쓰면 
 

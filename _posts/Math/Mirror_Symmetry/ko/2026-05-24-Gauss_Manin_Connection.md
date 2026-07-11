@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-05-24
 weight: 5
+
 published: false
 ---
 
@@ -163,7 +164,7 @@ $$\nabla^z_{B, \partial_{q_i}}[e^{W_q/z}\omega] = \partial_{q_i} W_q \cdot [e^{W
 
 $$z\,\partial_{q_i}\mathcal{I}_\Gamma = \int_\Gamma \partial_{q_i}W_q\cdot e^{W_q/z}\,\omega,\qquad z^2\,\partial_z\mathcal{I}_\Gamma = -\int_\Gamma W_q\cdot e^{W_q/z}\,\omega \tag{$\ast$}$$
 
-이다. 그런데 ($$\ast$$)의 우변은 우리가 알고 있는 형태 ([정의 2](#def2))와는 다른 것으로, 이를 해결하기 위해서는 $$f$$가 rapid decay homology의 decaying condition을 깨지 않는 한에서 $$f e^{W_q/z}\omega$$ 꼴로 integrand를 넓혀주어야 한다. Thimble $$\Gamma$$의 boundary 부근에서 $$\lvert e^{W_q/z}\rvert = e^{\Real(W_q/z)}$$가 지수적으로 $$0$$으로 사라지므로, $$f$$가 polynomial 정도의 성장만 한다면 충분히 컨트롤이 가능하며 따라서 자연스러운 함수 공간은 regular function들의 공간 $$\mathcal{O}(\check{X})$$이다. 
+이다. 그런데 ($$\ast$$)의 우변은 우리가 알고 있는 [정의 2](#def2)의 형태와는 다른 것으로, 이를 해결하기 위해서는 $$f$$가 rapid decay homology의 decaying condition을 깨지 않는 한에서 $$f e^{W_q/z}\omega$$ 꼴로 integrand를 넓혀주어야 한다. Thimble $$\Gamma$$의 boundary 부근에서 $$\lvert e^{W_q/z}\rvert = e^{\Real(W_q/z)}$$가 지수적으로 $$0$$으로 사라지므로, $$f$$가 polynomial 정도의 성장만 한다면 충분히 컨트롤이 가능하며 따라서 자연스러운 함수 공간은 regular function들의 공간 $$\mathcal{O}(\check{X})$$이다. 
 
 문제는 이렇게 정의할 경우 regular function들의 모임은 (벡터공간으로서) 무한차원이므로 이들을 모두 추가하는 것이 불가능하다는 것에 있다. 이를 해결하기 위해 우리는 period integral을 사용해서 pairing을 정의할 경우, 그 값이 cohomology class에만 의존한다는 것을 관찰한다. 이는 만일 $$f, g \in \mathcal{O}(\check{X})$$가 같은 cohomology class를 정의한다면, 즉 만일 적당한 rapid decay form $$\alpha$$에 대하여 다음의 식 $$(f-g)\cdot e^{W_q/z}\omega = d\alpha$$이 성립한다면, Stokes 정리로부터
 

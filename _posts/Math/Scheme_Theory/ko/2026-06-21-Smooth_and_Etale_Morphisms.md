@@ -14,7 +14,7 @@ weight: 21
 published: false
 ---
 
-미분기하에서 submersion과 covering map은 매끄러운 사상 가운데 각각 fiber가 양의 차원을 가지는 경우와 이산적인 경우에 해당한다. 대수기하에서 이 두 개념의 유사물이 *smooth* 사상과 *étale* 사상이며, 둘을 함께 묶는 약한 조건이 *unramified* 사상이다. 이들은 모두 fiber가 base 위에서 균일하게 정칙임을 요구하므로, 평탄성 ([§평탄사상, ⁋정의 2](/ko/math/scheme_theory/flat_morphisms#def2))과 cotangent sheaf ([§Kähler 미분과 여접층, ⁋정의 3](/ko/math/scheme_theory/sheaf_of_differentials#def3))의 국소자유성을 조합하여 정의된다. 이 글에서는 먼저 unramified 사상을 cotangent sheaf의 소멸로 정의하고 대각선 사상을 통한 특징을 제시한 뒤, smooth 사상을 flat이면서 기하적 올이 정칙인 사상으로 정의하고 그 Jacobian 판정을 본다. 이어서 étale 사상을 두 개념의 교집합으로 도입하고 standard étale 모형과 예시를 살펴본 다음, 세 개념을 통일적으로 다루는 square-zero 확대에 대한 무한소 lifting 판정으로 마무리한다.
+미분기하에서 submersion과 covering map은 매끄러운 사상 가운데 각각 fiber가 양의 차원을 가지는 경우와 이산적인 경우에 해당한다. 대수기하에서 이 두 개념의 유사물이 *smooth* 사상과 *étale* 사상이며, 둘을 함께 묶는 약한 조건이 *unramified* 사상이다. 이들은 모두 fiber가 base 위에서 균일하게 정칙임을 요구하므로, 평탄성과 ([§평탄사상, ⁋정의 2](/ko/math/scheme_theory/flat_morphisms#def2)) cotangent sheaf의 ([§Kähler 미분과 여접층, ⁋정의 3](/ko/math/scheme_theory/sheaf_of_differentials#def3)) 국소자유성을 조합하여 정의된다. 이 글에서는 먼저 unramified 사상을 cotangent sheaf의 소멸로 정의하고 대각선 사상을 통한 특징을 제시한 뒤, smooth 사상을 flat이면서 기하적 올이 정칙인 사상으로 정의하고 그 Jacobian 판정을 본다. 이어서 étale 사상을 두 개념의 교집합으로 도입하고 standard étale 모형과 예시를 살펴본 다음, 세 개념을 통일적으로 다루는 square-zero 확대에 대한 무한소 lifting 판정으로 마무리한다.
 
 우리는 이 글 전체에서 사상이 *locally of finite presentation*임을 기본 가정으로 둔다. Locally Noetherian base 위에서는 이것이 locally of finite type과 일치하므로, 독자는 Noetherian 맥락에서 후자로 읽어도 무방하다.
 
@@ -38,7 +38,7 @@ Unramified 조건은 대각선 사상을 통해 좌표 독립적으로 표현된
 Locally of finite presentation인 사상 $$f:X \rightarrow S$$에 대하여 다음이 동치이다.
 
 1. $$f$$는 unramified하다.
-2. 대각선 사상 $$\Delta_f:X \rightarrow X\times_SX$$ ([§값매김환, ⁋정의 3](/ko/math/scheme_theory/valuative_criteria#def3))이 열린 immersion이다.
+2. 대각선 사상 $$\Delta_f:X \rightarrow X\times_SX$$이 ([§값매김환, ⁋정의 3](/ko/math/scheme_theory/valuative_criteria#def3)) 열린 immersion이다.
 :::
 ::: 증명
 $$\Delta_f$$는 항상 immersion, 즉 어떤 열린 부분scheme 위로의 닫힌 immersion이다. 따라서 $$\Delta_f$$가 열린 immersion인 것은 그 닫힌 immersion 성분이 동형, 곧 그 image의 ideal sheaf $$\mathcal{I}$$가 영인 것과 동치이다.
@@ -54,7 +54,7 @@ $$\Delta_f$$는 항상 immersion, 즉 어떤 열린 부분scheme 위로의 닫�
 
 ## Smooth 사상
 
-Unramified 사상이 fiber의 무한소 방향을 모두 죽인다면, smooth 사상은 fiber가 base 위에서 균일하게 정칙인 family를 이루도록 한다. 정칙성 ([\[가환대수학\] §정칙국소환](/ko/math/commutative_algebra/regular_local_rings))은 국소환에 대한 절대적 조건이므로, 이를 상대적 상황으로 옮기려면 base의 각 점 위 fiber를 그 잉여류체의 대수적 폐포 위로 끌어올린 *geometric fiber*에서 정칙성을 요구해야 한다.
+Unramified 사상이 fiber의 무한소 방향을 모두 죽인다면, smooth 사상은 fiber가 base 위에서 균일하게 정칙인 family를 이루도록 한다. 정칙성은 ([\[가환대수학\] §정칙국소환](/ko/math/commutative_algebra/regular_local_rings)) 국소환에 대한 절대적 조건이므로, 이를 상대적 상황으로 옮기려면 base의 각 점 위 fiber를 그 잉여류체의 대수적 폐포 위로 끌어올린 *geometric fiber*에서 정칙성을 요구해야 한다.
 
 ::: 정의 3
 Locally of finite presentation인 scheme 사상 $$f:X \rightarrow S$$가 *smooth<sub>매끄러운</sub>*하다는 것은 다음 두 조건이 성립하는 것이다.
@@ -75,14 +75,14 @@ Smooth 사상은 cotangent sheaf의 국소자유성으로 동치적으로 특징
 Locally of finite presentation인 사상 $$f:X \rightarrow S$$에 대하여 다음이 동치이다.
 
 1. $$f$$는 smooth하다.
-2. $$f$$는 flat하고, $$\Omega_{X/S}$$는 국소자유층 ([§준연접층, ⁋정의 15](/ko/math/scheme_theory/quasicoherent_sheaves#def15))이며, 각 $$x\in X$$에서 그 rank가 $$s=f(x)$$ 위 fiber의 국소차원 $$\dim_x X_s$$와 같다.
+2. $$f$$는 flat하고, $$\Omega_{X/S}$$는 국소자유층이며 ([§준연접층, ⁋정의 15](/ko/math/scheme_theory/quasicoherent_sheaves#def15)), 각 $$x\in X$$에서 그 rank가 $$s=f(x)$$ 위 fiber의 국소차원 $$\dim_x X_s$$와 같다.
 
 이 때 $$\Omega_{X/S}$$의 rank를 $$f$$의 *상대차원<sub>relative dimension</sub>*이라 부른다.
 :::
 ::: 증명
 문제가 국소적이므로 $$S=\Spec A$$, $$X=\Spec B$$이고 한 점 $$x$$에 해당하는 prime $$\mathfrak{p}\subseteq B$$ 근방에서 작업한다. $$s=f(x)$$에 해당하는 prime을 $$\mathfrak{q}\subseteq A$$라 하자.
 
-먼저 $$f$$가 smooth하다고 가정한다. Geometric fiber $$X_{\bar s}$$가 정칙이고 flat하므로, fiber 위에서 cotangent sheaf의 거동을 본다. Field $$k=\overline{\kappa(s)}$$ 위의 정칙 scheme $$X_{\bar s}$$의 점 $$\bar x$$에서, Zariski 접공간 ([§Kähler 미분과 여접층, ⁋정의 6](/ko/math/scheme_theory/sheaf_of_differentials#def6))의 차원은 국소차원과 같다. 즉
+먼저 $$f$$가 smooth하다고 가정한다. Geometric fiber $$X_{\bar s}$$가 정칙이고 flat하므로, fiber 위에서 cotangent sheaf의 거동을 본다. Field $$k=\overline{\kappa(s)}$$ 위의 정칙 scheme $$X_{\bar s}$$의 점 $$\bar x$$에서, Zariski 접공간의 ([§Kähler 미분과 여접층, ⁋정의 6](/ko/math/scheme_theory/sheaf_of_differentials#def6)) 차원은 국소차원과 같다. 즉
 
 $$\dim_{\kappa(\bar x)}\bigl(\Omega_{X_{\bar s}/k}\otimes \kappa(\bar x)\bigr)=\dim \mathcal{O}_{X_{\bar s},\bar x}=\dim_{\bar x}X_{\bar s}$$
 
@@ -109,7 +109,7 @@ $$J=\Bigl(\frac{\partial f_i}{\partial \x_j}\Bigr)_{\substack{1\leq i\leq r\\ 1\
 의 $$\kappa(x)$$ 위에서의 rank가 $$r$$이면, $$f:X \rightarrow S$$는 $$x$$의 어떤 열린 근방에서 상대차원 $$n-r$$의 smooth 사상이다.
 :::
 ::: 증명
-$$B=A[\x_1,\ldots, \x_n]/(f_1,\ldots, f_r)$$, $$P=A[\x_1,\ldots, \x_n]$$이라 하고 $$I=(f_1,\ldots, f_r)$$라 하자. 닫힌 immersion $$X\hookrightarrow \mathbb{A}^n_S$$의 conormal 완전열 ([§Kähler 미분과 여접층, ⁋명제 2](/ko/math/scheme_theory/sheaf_of_differentials#prop2))은
+$$B=A[\x_1,\ldots, \x_n]/(f_1,\ldots, f_r)$$, $$P=A[\x_1,\ldots, \x_n]$$이라 하고 $$I=(f_1,\ldots, f_r)$$라 하자. 닫힌 immersion $$X\hookrightarrow \mathbb{A}^n_S$$의 conormal 완전열은 ([§Kähler 미분과 여접층, ⁋명제 2](/ko/math/scheme_theory/sheaf_of_differentials#prop2))
 
 $$I/I^2 \overset{\bar d}{\longrightarrow} \Omega_{P/A}\otimes_PB \longrightarrow \Omega_{B/A} \longrightarrow 0$$
 
@@ -144,7 +144,7 @@ Locally of finite presentation인 사상 $$f:X \rightarrow S$$에 대하여 다�
 3. $$f$$는 flat하고 $$\Omega_{X/S}=0$$이다.
 :::
 ::: 증명
-(1)과 (2)의 동치를 보이면 (3)은 unramified의 정의 ([정의 1](#def1))로부터 곧바로 따른다.
+(1)과 (2)의 동치를 보이면 (3)은 unramified의 정의로부터 곧바로 따른다 ([정의 1](#def1)).
 
 (1) $$\Rightarrow$$ (2)는 정의에 포함되어 있다. $$f$$가 étale하면 smooth하므로 flat하고, unramified하다.
 
@@ -199,7 +199,7 @@ Locally of finite presentation인 사상 $$f:X \rightarrow S$$가 주어졌다 �
 3. $$f$$가 étale한 것은 모든 그러한 $$(T_0, T, g_0)$$에 대하여 lifting $$g$$가 정확히 하나 존재하는 것과 동치이다.
 :::
 ::: 증명
-(3)은 (1)과 (2)의 결합이고, étale이 smooth와 unramified의 교집합 ([정의 6](#def6))이므로 (1)과 (2)만 보이면 충분하다.
+(3)은 (1)과 (2)의 결합이고, étale이 smooth와 unramified의 교집합이므로 ([정의 6](#def6)) (1)과 (2)만 보이면 충분하다.
 
 핵심은 두 lifting의 차이가 $$\Omega_{X/S}$$로 측정된다는 사실이다. $$T=\Spec R$$, $$T_0=\Spec R_0$$이고 $$J=\ker(R \rightarrow R_0)$$가 $$J^2=0$$을 만족한다 하자. $$g_0$$의 두 lifting $$g, g'$$가 주어지면, 대응하는 ring homomorphism $$B \rightarrow R$$의 차이 $$D=g^\sharp-g'^\sharp:B \rightarrow J$$는 $$J^2=0$$에 의하여 $$A$$-derivation이 된다. 실제로 $$g, g'$$이 mod $$J$$로 일치하므로 임의의 $$b, b'\in B$$에 대하여
 

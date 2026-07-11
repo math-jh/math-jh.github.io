@@ -84,7 +84,7 @@ $$\mathcal{O}_T^n\twoheadrightarrow \mathcal{Q},\qquad \mathcal{Q}\text{ is loca
 
 앞 절의 예들이 작동한 까닭이 강성에 있었다면, 강성이 깨진 문제, 곧 분류 대상이 비자명한 automorphism을 본질적으로 가지는 문제에서는 fine moduli가 어떻게 되는지를 물어야 한다. 결론은 부정적이다. 비자명한 automorphism은 동형류가 같으면서도 서로 다른 *비자명한 등질 족*을 만들어내며, 이것이 표현가능성을 정면으로 막는다.
 
-핵심은 다음 관찰이다. Fine moduli space가 존재한다면 set-값 moduli functor $$\underline{M}$$은 표현가능 함자 $$\Hom_\Sch(-, M)$$과 동형이고, 표현가능 함자는 fpqc 위상(따라서 그보다 거친 étale·Zariski 위상)에 대한 sheaf이다. 이는 충실평탄 하강의 표준적 귀결로, affine한 $$M=\Spec R$$의 경우 전역절단 presheaf $$T\mapsto \Gamma(T, \mathcal{O}_T)$$이 fpqc sheaf라는 사실 ([\[스킴\] §충실평탄 하강, ⁋정리 9](/ko/math/scheme_theory/faithfully_flat_descent#thm9))로부터 $$\Hom_\Sch(-, \Spec R)=\Hom_{\mathrm{Ring}}(R, \Gamma(-, \mathcal{O}))$$을 통해 따라오고, 일반적인 $$M$$은 affine open으로 덮어 접합하여 얻는다. 즉 한 scheme으로 가는 morphism들은 덮개 위에서 정합적으로 주어지면 유일하게 이어 붙는다. 그러므로 $$\underline{M}$$이 sheaf가 아니면 fine moduli는 존재할 수 없다. 비자명한 automorphism은 정확히 이 sheaf 조건의 분리성, 곧 "덮개 위에서 같은 족은 원래 같다"는 부분을 깨뜨린다.
+핵심은 다음 관찰이다. Fine moduli space가 존재한다면 set-값 moduli functor $$\underline{M}$$은 표현가능 함자 $$\Hom_\Sch(-, M)$$과 동형이고, 표현가능 함자는 fpqc 위상(따라서 그보다 거친 étale·Zariski 위상)에 대한 sheaf이다. 이는 충실평탄 하강의 표준적 귀결로, affine한 $$M=\Spec R$$의 경우 전역절단 presheaf $$T\mapsto \Gamma(T, \mathcal{O}_T)$$이 fpqc sheaf라는 [\[스킴\] §충실평탄 하강, ⁋정리 9](/ko/math/scheme_theory/faithfully_flat_descent#thm9)로부터 $$\Hom_\Sch(-, \Spec R)=\Hom_{\mathrm{Ring}}(R, \Gamma(-, \mathcal{O}))$$을 통해 따라오고, 일반적인 $$M$$은 affine open으로 덮어 접합하여 얻는다. 즉 한 scheme으로 가는 morphism들은 덮개 위에서 정합적으로 주어지면 유일하게 이어 붙는다. 그러므로 $$\underline{M}$$이 sheaf가 아니면 fine moduli는 존재할 수 없다. 비자명한 automorphism은 정확히 이 sheaf 조건의 분리성, 곧 "덮개 위에서 같은 족은 원래 같다"는 부분을 깨뜨린다.
 
 ::: 명제 5
 한 moduli 문제에 대하여, 어떤 scheme $$T$$와 그 위의 surjective étale 덮개 $$S \rightarrow T$$, 그리고 족 $$X\in \mathcal{M}(T)$$이 존재하여 다음을 만족한다고 하자. 어떤 고정된 대상 $$E$$에 대하여 $$S$$로 끌어당기면 $$X\times_T S\cong E\times S$$이지만 ($$X$$이 *isotrivial<sub>등질</sub>*하지만), $$X$$이 $$T$$ 위에서 상수 족 $$E\times T$$과 동형이 아니다. 그럼 이 문제는 fine moduli space를 가지지 않는다.
@@ -99,7 +99,7 @@ $$\underline{M}(T) \rightarrow \underline{M}(S)$$
 이제 가정의 두 족 $$X$$과 $$E\times T$$을 $$\underline{M}(T)$$의 원소로 본다. $$S$$로 끌어당기면 $$X\times_T S\cong E\times S\cong (E\times T)\times_T S$$이므로, 두 동형류는 $$\underline{M}(S)$$에서 같은 원소로 보내진다. 그러나 가정에 의하여 $$X$$과 $$E\times T$$은 $$T$$ 위에서 동형이 아니므로 $$\underline{M}(T)$$에서 서로 다른 원소이다. 이는 제한사상 $$\underline{M}(T) \rightarrow \underline{M}(S)$$의 단사성에 모순이다. 따라서 $$\underline{M}$$은 분리된 presheaf조차 될 수 없고, 표현가능할 수 없으므로 fine moduli space는 존재하지 않는다.
 :::
 
-명제 5의 가정에 등장하는 비자명한 등질 족은, 분류 대상 $$E$$이 비자명한 automorphism군 $$\Aut(E)$$을 가질 때 그 군의 비자명한 torsor로부터 만들어진다. 위수 $$d$$의 automorphism $$\sigma\in \Aut(E)$$과 차수 $$d$$의 cyclic étale 덮개 $$S \rightarrow T$$ (곧 비자명한 $$\mathbb{Z}/d$$-torsor, [§Fibered category와 stack, ⁋정의 18](/ko/math/stacks/fibered_categories_and_stacks#def18))이 주어지면, $$\mathbb{Z}/d$$을 $$E$$에는 $$\sigma$$로 $$S$$에는 덮개변환으로 대각작용시켜 얻는 몫
+명제 5의 가정에 등장하는 비자명한 등질 족은, 분류 대상 $$E$$이 비자명한 automorphism군 $$\Aut(E)$$을 가질 때 그 군의 비자명한 torsor로부터 만들어진다. 위수 $$d$$의 automorphism $$\sigma\in \Aut(E)$$과 차수 $$d$$의 cyclic étale 덮개 $$S \rightarrow T$$이 (곧 비자명한 $$\mathbb{Z}/d$$-torsor, [§Fibered category와 stack, ⁋정의 18](/ko/math/stacks/fibered_categories_and_stacks#def18)) 주어지면, $$\mathbb{Z}/d$$을 $$E$$에는 $$\sigma$$로 $$S$$에는 덮개변환으로 대각작용시켜 얻는 몫
 
 $$X=(E\times S)/(\mathbb{Z}/d) \rightarrow S/(\mathbb{Z}/d)=T$$
 
@@ -142,7 +142,7 @@ $$\mathcal{M}$$이 noetherian base 위에서 locally of finite type인 대수적
 완전한 증명은 이 글의 범위를 넘으므로 핵심 착상만 적는다. Inertia stack $$I_\mathcal{M} \rightarrow \mathcal{M}$$은 각 점에 그 automorphism군을 fiber로 붙이는 stack이며, 이것이 유한하다는 것이 정확히 stabilizer들이 유한군이라는 조건이다. 이 조건 아래에서 stack을 국소적으로 유한군 $$G$$에 의한 quotient stack $$[U/G]$$으로 표현할 수 있고 ([§대수적 stack과 quotient stack, ⁋정의 8](/ko/math/stacks/algebraic_stacks#def8)), 국소적인 후보 coarse space로 불변량환의 spectrum $$U/G=\Spec \Gamma(U, \mathcal{O}_U)^G$$을 취한다. 핵심은 이 국소적 몫들이 étale 위상에 대하여 정합적으로 이어 붙어 algebraic space $$M$$을 이루고, 그 위에서 [정의 8](#def8)의 두 조건이 성립함을 보이는 것이다. Inertia의 유한성은 이 접합을 가능케 하는 본질적 가정으로, 실제로 separated classifying morphism을 갖는 coarse moduli space가 존재하는 것은 inertia가 유한한 것과 동치이다. 자세한 논증은 Keel–Mori의 원논문과 [Stacks]를 참조하라.
 :::
 
-정리 9의 가정에서 inertia의 유한성이 결정적이다. Stabilizer가 양의 차원을 가지는 stack, 예컨대 $$\mathbf{B}\mathbb{G}_m$$이나 $$[\mathbb{A}^1/\mathbb{G}_m]$$ ([§대수적 stack과 quotient stack, ⁋예시 13](/ko/math/stacks/algebraic_stacks#ex13))은 이 정리의 적용 범위 밖이며, 이들의 coarse moduli space는 stabilizer 정보를 잃으면서 점들을 심하게 뭉갠다. 반면 Deligne–Mumford stack은 정의상 stabilizer가 유한하므로, 분리성과 finite type 조건만 더하면 곧바로 coarse moduli space를 가진다. 다음 절의 타원곡선 moduli가 바로 이 상황에 해당한다.
+정리 9의 가정에서 inertia의 유한성이 결정적이다. Stabilizer가 양의 차원을 가지는 stack, 예컨대 $$\mathbf{B}\mathbb{G}_m$$이나 $$[\mathbb{A}^1/\mathbb{G}_m]$$은 ([§대수적 stack과 quotient stack, ⁋예시 13](/ko/math/stacks/algebraic_stacks#ex13)) 이 정리의 적용 범위 밖이며, 이들의 coarse moduli space는 stabilizer 정보를 잃으면서 점들을 심하게 뭉갠다. 반면 Deligne–Mumford stack은 정의상 stabilizer가 유한하므로, 분리성과 finite type 조건만 더하면 곧바로 coarse moduli space를 가진다. 다음 절의 타원곡선 moduli가 바로 이 상황에 해당한다.
 
 ## 타원곡선의 moduli $$\mathcal{M}_{1, 1}$$
 

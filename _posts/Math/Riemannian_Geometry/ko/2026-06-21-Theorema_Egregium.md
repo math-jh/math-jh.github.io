@@ -16,7 +16,7 @@ published: false
 
 곡면 $$M \subseteq \mathbb{R}^3$$의 Gauss 곡률은 본래 외재적인 양으로 정의된다. 각 점에서 곡면이 주변 공간 안에서 법선 방향으로 얼마나 휘는지를 재는 shape operator의 행렬식이 곧 Gauss 곡률이며, 이는 곡면이 $$\mathbb{R}^3$$ 안에 어떻게 놓여 있는지에 의존하는 듯 보인다. 그런데 Gauss가 1827년에 발견한 *놀라운 정리<sub>Theorema Egregium</sub>*는 이 양이 실제로는 곡면 위의 거리, 즉 제1기본형식만으로 결정되는 *내재적* 불변량이라고 말한다. 따라서 Gauss 곡률은 곡면을 휘거나 구부려도 길이를 보존하는 한 변하지 않는다. 이 글에서는 [§제2기본형식, ⁋정리 6](/ko/math/riemannian_geometry/second_fundamental_form#thm6)에서 일반 submanifold에 대해 증명한 Gauss 방정식을 곡면의 경우에 적용하여 이 사실을 증명한다.
 
-이 글 전체에서 $$M \subseteq \mathbb{R}^3$$은 매장된 2차원 곡면이고, $$g = \iota^\ast \bar g$$는 표준 Euclid metric $$\bar g$$의 제한이며, $$\nabla, \bar\nabla$$는 각각 $$(M, g)$$와 $$\mathbb{R}^3$$의 Levi-Civita 접속이다. $$M$$의 codimension이 $$1$$이므로 각 점 $$p$$에서 단위 법벡터 $$\nu$$는 부호를 빼면 유일하고, 이에 대응하는 shape operator $$S_\nu : T_p M \to T_p M$$ ([§제2기본형식, ⁋정의 4](/ko/math/riemannian_geometry/second_fundamental_form#def4))를 단순히 $$S$$로 적는다.
+이 글 전체에서 $$M \subseteq \mathbb{R}^3$$은 매장된 2차원 곡면이고, $$g = \iota^\ast \bar g$$는 표준 Euclid metric $$\bar g$$의 제한이며, $$\nabla, \bar\nabla$$는 각각 $$(M, g)$$와 $$\mathbb{R}^3$$의 Levi-Civita 접속이다. $$M$$의 codimension이 $$1$$이므로 각 점 $$p$$에서 단위 법벡터 $$\nu$$는 부호를 빼면 유일하고, 이에 대응하는 shape operator $$S_\nu : T_p M \to T_p M$$를 ([§제2기본형식, ⁋정의 4](/ko/math/riemannian_geometry/second_fundamental_form#def4)) 단순히 $$S$$로 적는다.
 
 ## 곡면의 Gauss 곡률
 
@@ -32,7 +32,7 @@ $$K := \det S = k_1 k_2$$
 
 행렬식은 기저 선택에 무관하므로 $$K$$는 well-defined이다. 법벡터 $$\nu$$를 반대 방향 $$-\nu$$로 바꾸면 [§제2기본형식, ⁋정의 4](/ko/math/riemannian_geometry/second_fundamental_form#def4)의 정의에서 $$S$$가 $$-S$$로 바뀌어 두 주곡률이 모두 부호를 바꾸므로, 그 곱인 $$K$$는 법벡터의 방향 선택에 무관하다. 이는 평균곡률 $$\tr S = k_1 + k_2$$가 법선 방향에 따라 부호를 바꾸는 것과 대조된다. $$K > 0$$인 점에서는 두 주곡률이 같은 부호여서 곡면이 한쪽으로 볼록하게 휘고 (구면, 타원면), $$K < 0$$인 점에서는 두 주곡률이 반대 부호여서 안장 모양을 이루며 (쌍곡포물면), $$K = 0$$인 점에서는 적어도 한 방향으로 곡면이 직선처럼 펴진다 (원기둥, 평면).
 
-Gauss 곡률을 두 기본형식의 좌표 표현으로 적으면 고전적 곡면론의 공식을 얻는다. 곡면의 국소 매개화 $$\mathbf{x}(u, v)$$를 잡고, 제1기본형식 $$g$$와 제2기본형식 $$\mathrm{II}$$ ([§제2기본형식, ⁋정의 2](/ko/math/riemannian_geometry/second_fundamental_form#def2))의 성분을
+Gauss 곡률을 두 기본형식의 좌표 표현으로 적으면 고전적 곡면론의 공식을 얻는다. 곡면의 국소 매개화 $$\mathbf{x}(u, v)$$를 잡고, 제1기본형식 $$g$$와 [§제2기본형식, ⁋정의 2](/ko/math/riemannian_geometry/second_fundamental_form#def2)의 제2기본형식 $$\mathrm{II}$$의 성분을
 
 $$\mathrm{I} = \begin{pmatrix} E & F \\ F & G \end{pmatrix}, \qquad \mathrm{II} = \begin{pmatrix} L & M \\ M & N \end{pmatrix}$$
 
@@ -62,7 +62,7 @@ $$K = \det S = \det([S]) = \det(\mathrm{I}^{-1} \mathrm{II}) = \frac{\det \mathr
 
 ## Theorema Egregium
 
-Gauss 곡률이 내재적임을 보이는 열쇠는 [§제2기본형식, ⁋정리 6](/ko/math/riemannian_geometry/second_fundamental_form#thm6)의 Gauss 방정식이다. 그 식은 곡면의 내재적 곡률 텐서 $$R$$과 주변 곡률 $$\bar R$$, 그리고 제2기본형식의 이차식을 잇는다. 주변 공간이 평탄한 $$\mathbb{R}^3$$이면 $$\bar R = 0$$이므로 제2기본형식의 이차식이 통째로 내재적 곡률 $$R$$로 표현되고, 그로부터 $$\det \mathrm{II}$$가 내재적 자료가 된다.
+Gauss 곡률이 내재적임을 보이는 열쇠는 [§제2기본형식, ⁋정리 6](/ko/math/riemannian_geometry/second_fundamental_form#thm6)이다. 그 식은 곡면의 내재적 곡률 텐서 $$R$$과 주변 곡률 $$\bar R$$, 그리고 제2기본형식의 이차식을 잇는다. 주변 공간이 평탄한 $$\mathbb{R}^3$$이면 $$\bar R = 0$$이므로 제2기본형식의 이차식이 통째로 내재적 곡률 $$R$$로 표현되고, 그로부터 $$\det \mathrm{II}$$가 내재적 자료가 된다.
 
 ::: 정리 3 (Theorema Egregium)
 곡면 $$M \subseteq \mathbb{R}^3$$의 Gauss 곡률 $$K$$는 점 $$p$$에서 정규직교기저 $$\{e_1, e_2\}$$를 잡을 때
@@ -73,7 +73,7 @@ $$K = \langle R(e_1, e_2) e_2, e_1\rangle$$
 :::
 
 ::: 증명
-$$\bar M = \mathbb{R}^3$$이 평탄하여 $$\bar R = 0$$이므로, Gauss 방정식 ([§제2기본형식, ⁋정리 6](/ko/math/riemannian_geometry/second_fundamental_form#thm6))은 정규직교 vector $$e_1, e_2 \in T_p M$$에 대해
+$$\bar M = \mathbb{R}^3$$이 평탄하여 $$\bar R = 0$$이므로, [§제2기본형식, ⁋정리 6](/ko/math/riemannian_geometry/second_fundamental_form#thm6)은 정규직교 vector $$e_1, e_2 \in T_p M$$에 대해
 
 $$0 = \langle R(e_1, e_2) e_2, e_1\rangle + \langle \mathrm{II}(e_1, e_2), \mathrm{II}(e_2, e_1)\rangle - \langle \mathrm{II}(e_2, e_2), \mathrm{II}(e_1, e_1)\rangle$$
 
@@ -89,7 +89,7 @@ $$\langle \mathrm{II}(e_1, e_1), \mathrm{II}(e_2, e_2)\rangle - \lvert \mathrm{I
 
 $$\langle R(e_1, e_2) e_2, e_1\rangle = K$$
 
-를 얻는다. 좌변은 $$g$$의 Levi-Civita 접속의 곡률 텐서 $$R$$ ([§리만 곡률, ⁋정의 2](/ko/math/riemannian_geometry/curvature#def2))만으로 적혀 있고, $$R$$은 $$g$$로부터 내재적으로 정의되므로 $$K$$도 그러하다.
+를 얻는다. 좌변은 $$g$$의 Levi-Civita 접속의 곡률 텐서 $$R$$만으로 ([§리만 곡률, ⁋정의 2](/ko/math/riemannian_geometry/curvature#def2)) 적혀 있고, $$R$$은 $$g$$로부터 내재적으로 정의되므로 $$K$$도 그러하다.
 :::
 
 [정리 3](#thm3)의 좌변 $$K = \det \mathrm{II} / \det \mathrm{I}$$는 외재적으로, 우변 $$\langle R(e_1, e_2) e_2, e_1\rangle$$는 내재적으로 적힌 같은 수이다. 이 등식이 정리의 핵심이다. 정의에서 $$K$$는 제2기본형식을 통해 곡면이 $$\mathbb{R}^3$$ 안에서 어떻게 휘는지에 의존하는 듯 보이지만, Gauss 방정식이 그 휘는 정보를 내재적 곡률 $$R$$로 흡수해 버린다. 곡면을 $$\mathbb{R}^3$$ 안에서 다르게 매장하더라도 길이를 보존하는 한 제1기본형식 $$g$$가 같고, 따라서 $$R$$도 같으며, 결국 $$K$$도 같다.

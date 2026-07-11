@@ -20,7 +20,7 @@ published: false
 
 ## 순서체로서의 실수
 
-실수 $$\mathbb{R}$$은 사칙연산과 대소관계를 갖춘 *순서체<sub>ordered field</sub>*이다. 즉 $$\mathbb{R}$$은 체이면서 전순서 $$\leq$$ ([\[집합론\] §순서관계의 정의](/ko/math/set_theory/order_relations))를 가지고, 그 순서가 연산과 다음과 같이 호환된다: $$a \leq b$$이면 $$a + c \leq b + c$$이고, $$a \leq b$$이고 $$0 \leq c$$이면 $$ac \leq bc$$이다. 유리수 $$\mathbb{Q}$$ 역시 순서체이므로, 이 성질만으로는 $$\mathbb{R}$$과 $$\mathbb{Q}$$가 구별되지 않는다. 둘을 가르는 것이 바로 다음에 도입할 완비성이다.
+실수 $$\mathbb{R}$$은 사칙연산과 대소관계를 갖춘 *순서체<sub>ordered field</sub>*이다. 즉 $$\mathbb{R}$$은 체이면서 전순서 $$\leq$$를 가지고 ([\[집합론\] §순서관계의 정의](/ko/math/set_theory/order_relations)), 그 순서가 연산과 다음과 같이 호환된다: $$a \leq b$$이면 $$a + c \leq b + c$$이고, $$a \leq b$$이고 $$0 \leq c$$이면 $$ac \leq bc$$이다. 유리수 $$\mathbb{Q}$$ 역시 순서체이므로, 이 성질만으로는 $$\mathbb{R}$$과 $$\mathbb{Q}$$가 구별되지 않는다. 둘을 가르는 것이 바로 다음에 도입할 완비성이다.
 
 먼저 순서로부터 정해지는 상계와 상한의 개념을 정리한다 ([\[집합론\] §순서집합의 원소들](/ko/math/set_theory/elements_in_ordered_set)).
 

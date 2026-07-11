@@ -19,7 +19,7 @@ weight: 5
 
 ## Coxeter group과 length function
 
-Bruhat decomposition이 일반적인 cell decomposition과 다른 점은, cell들이 임의로 붙은 것이 아니라 $$G/B$$ 위 Borel subgroup $$B$$의 작용에서 orbit으로 자연스럽게 나온다는 것이다. 더 중요한 것은, 이 orbit들의 집합 $$B\backslash G/B$$가 정확히 Weyl group $$W$$ ([§근계, ⁋정의 17](/ko/math/lie_theory/root_systems#def17))로 색인된다는 점이다. 따라서 각 cell의 기하는 전적으로 $$W$$의 조합론으로 환원되며, 바로 여기서 root system이 다시 등장한다. 
+Bruhat decomposition이 일반적인 cell decomposition과 다른 점은, cell들이 임의로 붙은 것이 아니라 $$G/B$$ 위 Borel subgroup $$B$$의 작용에서 orbit으로 자연스럽게 나온다는 것이다. 더 중요한 것은, 이 orbit들의 집합 $$B\backslash G/B$$가 정확히 [§근계, ⁋정의 17](/ko/math/lie_theory/root_systems#def17)의 Weyl group $$W$$로 색인된다는 점이다. 따라서 각 cell의 기하는 전적으로 $$W$$의 조합론으로 환원되며, 바로 여기서 root system이 다시 등장한다. 
 
 이를 위해 우선 Coxeter group을 정의한다. 
 
@@ -33,7 +33,7 @@ $$W=\left\langle s_1,\ldots,s_r\;\middle\vert\;(s_is_j)^{m_{ij}}=e\right\rangle$
 
 조건 $$m_{ii}=1$$은 각 generator가 $$s_i^2=e$$를 만족하는 involution임을 뜻하고, $$i\neq j$$에 대한 관계 $$(s_is_j)^{m_{ij}}=e$$는 *braid relation*이라 불린다. 가령 $$m_{ij}=2$$이면 $$s_is_j=s_js_i$$, 즉 두 생성원이 commute하며, $$m_{ij}=3$$이면 $$s_is_js_i=s_js_is_j$$가 된다. $$m_{ij}=\infty$$인 경우는 $$s_i$$와 $$s_j$$ 사이에 아무런 관계도 부과하지 않음을 의미한다. 
 
-가장 작은 비자명한 경우는 생성원이 둘인 경우다. $$S=\{s_1,s_2\}$$이고 $$m_{12}=m$$이면 $$(W,S)$$는 정확히 order $$2m$$의 dihedral group ([\[대수적 구조\] §반군, 모노이드, 군, ⁋예시 16](/ko/math/algebraic_structures/groups#ex16))이며, 두 생성원은 정$$m$$각형의 인접한 두 대칭축에 대한 reflection으로, 그 곱 $$s_1s_2$$는 order $$m$$의 회전으로 실현된다. 일반적인 Coxeter group은 이러한 dihedral 조각들을 생성원을 공유하며 이어붙인 것으로 이해할 수 있다. 실제로 임의의 두 generator $$s_i,s_j$$가 만드는 부분군 $$\langle s_i,s_j\rangle$$는 언제나 위수 $$2m_{ij}$$의 dihedral group이고, [정의 1](#def1)의 presentation이 말하는 핵심은 이러한 pairwise relation 외에 셋 이상의 generator가 얽히는 새로운 relation이 없다는 것이다.
+가장 작은 비자명한 경우는 생성원이 둘인 경우다. $$S=\{s_1,s_2\}$$이고 $$m_{12}=m$$이면 $$(W,S)$$는 정확히 order $$2m$$의 dihedral group이며 ([\[대수적 구조\] §반군, 모노이드, 군, ⁋예시 16](/ko/math/algebraic_structures/groups#ex16)), 두 생성원은 정$$m$$각형의 인접한 두 대칭축에 대한 reflection으로, 그 곱 $$s_1s_2$$는 order $$m$$의 회전으로 실현된다. 일반적인 Coxeter group은 이러한 dihedral 조각들을 생성원을 공유하며 이어붙인 것으로 이해할 수 있다. 실제로 임의의 두 generator $$s_i,s_j$$가 만드는 부분군 $$\langle s_i,s_j\rangle$$는 언제나 위수 $$2m_{ij}$$의 dihedral group이고, [정의 1](#def1)의 presentation이 말하는 핵심은 이러한 pairwise relation 외에 셋 이상의 generator가 얽히는 새로운 relation이 없다는 것이다.
 
 이 정수들 $$m_{ij}$$를 모은 대칭행렬이 Coxeter system의 모든 정보를 담으며, 유한 reflection group은 정확히 유한 Coxeter group으로 특징지어진다.
 

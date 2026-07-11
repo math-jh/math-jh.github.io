@@ -12,7 +12,7 @@ date: 2026-04-06
 weight: 13
 ---
 
-우리는 일찍이 [§선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_varieties/line_bundles#ex12)에서 line bundle $$\mathcal{O}(d)$$를 정의하고, [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16)의 계산을 통해 그 global section $$H^0(\mathbb{P}^n, \mathcal{O}(d))$$이 degree $$d$$의 homogeneous polynomial들과 동형임을 확인하였다. 그러나 우리가 이전 글에서 도입한 sheaf cohomology ([§층 코호몰로지, ⁋정의 1](/ko/math/algebraic_varieties/sheaf_cohomology#def1))는 $$H^0$$뿐만 아니라 higher cohomology group들 $$H^1, H^2, \ldots$$까지 포함하는 더 풍부한 불변량이므로, 이제 우리는 $$H^0$$ 뿐만 아니라 higher cohomology group들을 사용하여 $$\mathcal{O}(d)$$의 정보를 모두 알아낼 것이다.
+우리는 일찍이 [§선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_varieties/line_bundles#ex12)에서 line bundle $$\mathcal{O}(d)$$를 정의하고, [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16)의 계산을 통해 그 global section $$H^0(\mathbb{P}^n, \mathcal{O}(d))$$이 degree $$d$$의 homogeneous polynomial들과 동형임을 확인하였다. 그러나 우리가 이전 글에서 도입한 [§층 코호몰로지, ⁋정의 1](/ko/math/algebraic_varieties/sheaf_cohomology#def1)의 sheaf cohomology는 $$H^0$$뿐만 아니라 higher cohomology group들 $$H^1, H^2, \ldots$$까지 포함하는 더 풍부한 불변량이므로, 이제 우리는 $$H^0$$ 뿐만 아니라 higher cohomology group들을 사용하여 $$\mathcal{O}(d)$$의 정보를 모두 알아낼 것이다.
 
 ## Bott's Formula
 
@@ -354,7 +354,7 @@ $$H^{i-1}(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-i}) \to H
 :::
 
 ::: 예시 8
-$$\mathbb{P}^n$$ 위의 line bundle $$\mathcal{O}(d)$$의 regularity를 계산해보자. 여기서 $$\mathcal{L} = \mathcal{O}(1)$$이므로 twist는 $$\mathcal{O}(d) \otimes \mathcal{O}(m) = \mathcal{O}(d+m)$$이다. $$m$$-regularity 조건은 $$H^i(\mathbb{P}^n, \mathcal{O}(d+m-i)) = 0$$ ($$i > 0$$)이다. $$d \geq 0$$이고 $$m = 0$$을 택하면 $$H^i(\mathcal{O}(d-i))$$를 확인해야 하는데, $$i = 1$$일 때 $$H^1(\mathcal{O}(d-1))$$은 $$d \geq 1$$이면 $$0$$이고 $$d = 0$$이면 $$H^1(\mathcal{O}(-1)) = 0$$ (Bott's formula에서 $$-1 \geq -n$$이므로 모든 cohomology가 $$0$$)이다. 일반적으로 $$d \geq 0$$이고 $$i > 0$$일 때 $$d - i \geq -n$$이면 $$H^i(\mathcal{O}(d-i)) = 0$$이고, $$d - i < -n$$, 즉 $$i > d + n$$인 경우에는 $$i > n$$이 되어 어차피 $$H^i = 0$$이다. 따라서 $$\mathcal{O}(d)$$는 $$\mathcal{L} = \mathcal{O}(1)$$에 대해 $$0$$-regular이다. 반면 $$d < 0$$인 경우, $$\mathcal{O}(d)$$는 $$(-d)$$-regular이다. [명제 7](#prop7)에 의해 $$\mathcal{O}(d) \otimes \mathcal{L}^{\otimes 0} = \mathcal{O}(d)$$는 $$d \geq 0$$일 때 globally generated이며, 이는 ([§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16))에서 확인한 바와 일치한다.
+$$\mathbb{P}^n$$ 위의 line bundle $$\mathcal{O}(d)$$의 regularity를 계산해보자. 여기서 $$\mathcal{L} = \mathcal{O}(1)$$이므로 twist는 $$\mathcal{O}(d) \otimes \mathcal{O}(m) = \mathcal{O}(d+m)$$이다. $$m$$-regularity 조건은 $$H^i(\mathbb{P}^n, \mathcal{O}(d+m-i)) = 0$$ ($$i > 0$$)이다. $$d \geq 0$$이고 $$m = 0$$을 택하면 $$H^i(\mathcal{O}(d-i))$$를 확인해야 하는데, $$i = 1$$일 때 $$H^1(\mathcal{O}(d-1))$$은 $$d \geq 1$$이면 $$0$$이고 $$d = 0$$이면 $$H^1(\mathcal{O}(-1)) = 0$$ (Bott's formula에서 $$-1 \geq -n$$이므로 모든 cohomology가 $$0$$)이다. 일반적으로 $$d \geq 0$$이고 $$i > 0$$일 때 $$d - i \geq -n$$이면 $$H^i(\mathcal{O}(d-i)) = 0$$이고, $$d - i < -n$$, 즉 $$i > d + n$$인 경우에는 $$i > n$$이 되어 어차피 $$H^i = 0$$이다. 따라서 $$\mathcal{O}(d)$$는 $$\mathcal{L} = \mathcal{O}(1)$$에 대해 $$0$$-regular이다. 반면 $$d < 0$$인 경우, $$\mathcal{O}(d)$$는 $$(-d)$$-regular이다. [명제 7](#prop7)에 의해 $$\mathcal{O}(d) \otimes \mathcal{L}^{\otimes 0} = \mathcal{O}(d)$$는 $$d \geq 0$$일 때 globally generated이며, 이는 [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16)에서 확인한 바와 일치한다.
 :::
 
 ## Very ample과 ample의 성질

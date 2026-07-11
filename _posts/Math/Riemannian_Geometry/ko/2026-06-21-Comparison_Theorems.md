@@ -252,7 +252,7 @@ $$M$$이 complete이므로 Hopf-Rinow 정리에 의해 모든 측지선이 $$\ma
 
 이제 국소등거리사상이자 국소 미분동형인 $$\exp_p$$가 출발공간이 complete이고 도착공간이 연결일 때 덮개사상임을 쓴다 (완비 manifold 사이의 국소등거리 surjection은 덮개사상이라는 사실의 적용이며, surjectivity는 Hopf-Rinow에서 $$\exp_p$$의 상이 닫혀 있고 열려 있어 연결인 $$M$$ 전체가 되는 데서 나온다). 따라서 $$\exp_p : T_p M \to M$$은 덮개사상이다. $$T_p M \cong \mathbb{R}^n$$은 단순연결이므로 universal cover이고, $$M$$이 단순연결이라는 가정에서 덮개사상 $$\exp_p$$는 한 겹, 즉 미분동형이다.
 
-$$\exp_p$$가 전단사이므로 임의의 $$q \in M$$에 대해 $$q = \exp_p(v)$$인 $$v$$가 유일하게 존재하고, 그 측지선 $$\gamma_v$$가 $$p$$와 $$q$$를 잇는 유일한 측지선이다. [§지수사상, ⁋정리 9](/ko/math/riemannian_geometry/exponential_map#thm9)의 Gauss lemma가 함의하듯 $$\exp_p$$가 미분동형인 영역에서 방사 측지선은 길이를 최소화하므로, 이 유일한 측지선이 $$p$$와 $$q$$ 사이의 최단 곡선이다.
+$$\exp_p$$가 전단사이므로 임의의 $$q \in M$$에 대해 $$q = \exp_p(v)$$인 $$v$$가 유일하게 존재하고, 그 측지선 $$\gamma_v$$가 $$p$$와 $$q$$를 잇는 유일한 측지선이다. [§지수사상, ⁋정리 9](/ko/math/riemannian_geometry/exponential_map#thm9)가 함의하듯 $$\exp_p$$가 미분동형인 영역에서 방사 측지선은 길이를 최소화하므로, 이 유일한 측지선이 $$p$$와 $$q$$ 사이의 최단 곡선이다.
 :::
 
 [정리 11](#thm11)은 단면곡률이 비양인 단순연결 완비 manifold가 위상적으로 가장 단순한 manifold, 즉 $$\mathbb{R}^n$$임을 말한다. 이런 manifold를 *Cartan–Hadamard manifold*라 부르며, 유클리드 공간 $$\mathbb{R}^n$$ ($$K \equiv 0$$)과 hyperbolic space $$\mathbb{H}^n$$ ($$K \equiv -1$$)이 대표적인 예이다. 두 정리를 나란히 놓으면 곡률의 부호가 전역 위상에 미치는 영향이 선명하다. Ricci curvature의 양의 하한은 manifold를 콤팩트하게 닫아 fundamental group을 유한하게 만들고, 단면곡률의 비양성은 단순연결인 경우 manifold를 콤팩트성과 정반대인 $$\mathbb{R}^n$$으로 완전히 펼친다. 단면곡률의 부호가 [명제 4](#prop4) 뒤에서 본 Jacobi field의 수렴·발산 양상을 통해 측지선 다발의 거동을 지배하고, 그 거동이 다시 전역 구조로 번역되는 것이다.

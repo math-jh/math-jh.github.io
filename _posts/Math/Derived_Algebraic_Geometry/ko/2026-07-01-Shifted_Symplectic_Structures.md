@@ -122,7 +122,7 @@ $$T_{\Crit(f)}\overset{\sim}{\longrightarrow}L_{\Crit(f)}[-1]$$
 은 Hessian $$\Hess(f)$$의 대칭성에서 나오며, 이로써 $$\Crit(f)$$은 자기쌍대적 대칭 obstruction 이론을 가진다.
 :::
 ::: 증명
-$$Z=\Crit(f)$$이라 적자. 이는 rank $$\dim U$$의 다발 $$\Omega_U$$의 절단 $$df$$의 유도 영점자리이므로, [§Derived scheme과 derived stack, ⁋명제 13](/ko/math/derived_algebraic_geometry/derived_schemes#prop13)을 $$E=\Omega_U$$, $$s=df$$에 적용하면 매장 $$Z\hookrightarrow U$$의 상대 여접 복합체가 $$L_{Z/U}\simeq(T_U\vert_Z)[1]$$이 된다. $$U$$이 매끄러우므로 $$L_U=\Omega_U$$은 degree $$0$$에 집중되고, 추이 삼각형 ([§Derived scheme과 derived stack, ⁋명제 11](/ko/math/derived_algebraic_geometry/derived_schemes#prop11))이
+$$Z=\Crit(f)$$이라 적자. 이는 rank $$\dim U$$의 다발 $$\Omega_U$$의 절단 $$df$$의 유도 영점자리이므로, [§Derived scheme과 derived stack, ⁋명제 13](/ko/math/derived_algebraic_geometry/derived_schemes#prop13)을 $$E=\Omega_U$$, $$s=df$$에 적용하면 매장 $$Z\hookrightarrow U$$의 상대 여접 복합체가 $$L_{Z/U}\simeq(T_U\vert_Z)[1]$$이 된다. $$U$$이 매끄러우므로 $$L_U=\Omega_U$$은 degree $$0$$에 집중되고, [§Derived scheme과 derived stack, ⁋명제 11](/ko/math/derived_algebraic_geometry/derived_schemes#prop11)의 추이 삼각형이
 
 $$L_Z\simeq\Bigl[T_U\vert_Z\xrightarrow{\Hess(f)}\Omega_U\vert_Z\Bigr]$$
 

@@ -10,12 +10,13 @@ sidebar:
 
 date: 2025-01-03
 weight: 2
+
 published: false
 ---
 
-Toric geometry에서 ([\[토릭 기하학\] §토릭 다양체의 정의, ⁋명제 8](/ko/math/toric_geometry/toric_varieties#prop8))에서 살펴 보았듯이, full-dimensional lattice polytope $$P$$의 normal fan $$\Sigma_P$$로부터 projective toric variety $$X_{\Sigma_P}$$를 구성할 수 있다. Batyrev는 이러한 toric variety의 특별한 경우, 즉 reflexive polytope이라는 조건 아래에서 두 개의 dual polytope으로부터 자연스럽게 mirror pair가 생겨남을 보였다. 본 글에서는 reflexive polytope과 그 dual의 정의를 소개하고, Batyrev mirror construction의 정수를 설명한다. 마지막으로 $$\mathbb{P}^2$$ 예제를 통해 이 construction이 실제로 어떻게 작동하는지를 구체적으로 계산하고, 이후 논의될 Grassmannian mirror symmetry와의 연결을 예고한다.
+[\[토릭 기하학\] §토릭 다양체의 정의, ⁋명제 8](/ko/math/toric_geometry/toric_varieties#prop8)에서 살펴 보았듯이, full-dimensional lattice polytope $$P$$의 normal fan $$\Sigma_P$$로부터 projective toric variety $$X_{\Sigma_P}$$를 구성할 수 있다. Batyrev는 이러한 toric variety의 특별한 경우, 즉 reflexive polytope이라는 조건 아래에서 두 개의 dual polytope으로부터 자연스럽게 mirror pair가 생겨남을 보였다. 본 글에서는 reflexive polytope과 그 dual의 정의를 소개하고, Batyrev mirror construction의 정수를 설명한다. 마지막으로 $$\mathbb{P}^2$$ 예제를 통해 이 construction이 실제로 어떻게 작동하는지를 구체적으로 계산하고, 이후 논의될 Grassmannian mirror symmetry와의 연결을 예고한다.
 
-Reflexive polytope의 정의와 기본 성질은 ([\[토릭 기하학\] §파노 다양체, ⁋정의 1](/ko/math/toric_geometry/reflexive_polytope_fano#def1))에서 자세히 다루었으므로, 여기서는 그 결과를 바탕으로 Batyrev mirror construction을 설명한다. 핵심 사실은 reflexive polytope $$\Delta \subset M_{\mathbb{R}}$$와 그 dual $$\Delta^\circ \subset N_{\mathbb{R}}$$가 서로 쌍대 관계를 이루며, 그 normal fan으로부터 정의되는 toric variety $$X_\Delta$$, $$X_{\Delta^\circ}$$가 각각 Gorenstein Fano variety가 된다는 것이다.
+Reflexive polytope의 정의와 기본 성질은 [\[토릭 기하학\] §파노 다양체, ⁋정의 1](/ko/math/toric_geometry/reflexive_polytope_fano#def1)에서 자세히 다루었으므로, 여기서는 그 결과를 바탕으로 Batyrev mirror construction을 설명한다. 핵심 사실은 reflexive polytope $$\Delta \subset M_{\mathbb{R}}$$와 그 dual $$\Delta^\circ \subset N_{\mathbb{R}}$$가 서로 쌍대 관계를 이루며, 그 normal fan으로부터 정의되는 toric variety $$X_\Delta$$, $$X_{\Delta^\circ}$$가 각각 Gorenstein Fano variety가 된다는 것이다.
 
 ## Batyrev mirror construction
 
@@ -103,7 +104,7 @@ $$n=2$$인 경우 anticanonical hypersurface $$Y_\Delta \subset X_\Delta = \math
 
 Toric variety에 대한 Batyrev mirror construction은 조합론적 데이터의 쌍대성을 통해 mirror pair를 명시적으로 구성하는 아름다운 예시이다. 그러나 toric variety는 homogeneous space의 특별한 경우에 불과하며, 더 일반적인 공간으로의 확장은 비자명한 문제이다. 특히 Grassmannian $$\Gr(k, n)$$은 toric variety가 아니므로 Batyrev의 construction을 직접 적용할 수 없다.
 
-([§거울대칭 개요](/ko/math/mirror_symmetry/overview))에서 살펴 보았듯이, toric variety의 mirror는 Landau-Ginzburg model $$(\bar{X}, W)$$의 형태를 띠며, 이는 charge matrix를 통해 구체적으로 기술된다. Grassmannian의 경우 Marsh와 Rietsch는 Plücker coordinate를 이용하여 이와 유사한 Landau-Ginzburg model을 구성하였고 ([§Marsh–Rietsch superpotential](/ko/math/mirror_symmetry/marsh_rietsch_superpotential)), 그 Jacobi ring이 quantum cohomology ring과 동형임을 보였다 ([§Marsh-Rietsch Mirror Theorem](/ko/math/mirror_symmetry/mr_mirror_theorem)). 이 construction은 toric case에서의 Batyrev mirror가 갖는 조합론적 투명성을 완전히 잃는 대신, Lie theory와 cluster algebra의 풍부한 구조를 대신 활용한다. Grassmannian mirror symmetry는 본 시리즈의 연구용 stream에 모아 두었으며, Bruhat decomposition, Richardson variety, Peterson variety 등의 Lie-theoretic 도구들이 본 글의 toric/Batyrev 흐름과 어떻게 차별화되는지 그 stream에서 다룬다. 그 stream은 거울 대칭의 우변에 해당하는 [§Grassmannian의 양자 코호몰로지](/ko/math/mirror_symmetry/quantum_cohomology_of_grassmannians)에서 출발하여, 거울 대칭이 Grassmannian을 넘어 그 안의 특이 Schubert variety로까지 확장되는 [§Schubert variety의 거울과 head-over-tails superpotential](/ko/math/mirror_symmetry/schubert_variety_mirror)에서 정점에 이른다.
+[§거울대칭 개요](/ko/math/mirror_symmetry/overview)에서 살펴 보았듯이, toric variety의 mirror는 Landau-Ginzburg model $$(\bar{X}, W)$$의 형태를 띠며, 이는 charge matrix를 통해 구체적으로 기술된다. Grassmannian의 경우 Marsh와 Rietsch는 Plücker coordinate를 이용하여 이와 유사한 Landau-Ginzburg model을 구성하였고 ([§Marsh–Rietsch superpotential](/ko/math/mirror_symmetry/marsh_rietsch_superpotential)), 그 Jacobi ring이 quantum cohomology ring과 동형임을 보였다 ([§Marsh-Rietsch Mirror Theorem](/ko/math/mirror_symmetry/mr_mirror_theorem)). 이 construction은 toric case에서의 Batyrev mirror가 갖는 조합론적 투명성을 완전히 잃는 대신, Lie theory와 cluster algebra의 풍부한 구조를 대신 활용한다. Grassmannian mirror symmetry는 본 시리즈의 연구용 stream에 모아 두었으며, Bruhat decomposition, Richardson variety, Peterson variety 등의 Lie-theoretic 도구들이 본 글의 toric/Batyrev 흐름과 어떻게 차별화되는지 그 stream에서 다룬다. 그 stream은 거울 대칭의 우변에 해당하는 [§Grassmannian의 양자 코호몰로지](/ko/math/mirror_symmetry/quantum_cohomology_of_grassmannians)에서 출발하여, 거울 대칭이 Grassmannian을 넘어 그 안의 특이 Schubert variety로까지 확장되는 [§Schubert variety의 거울과 head-over-tails superpotential](/ko/math/mirror_symmetry/schubert_variety_mirror)에서 정점에 이른다.
 
 ---
 

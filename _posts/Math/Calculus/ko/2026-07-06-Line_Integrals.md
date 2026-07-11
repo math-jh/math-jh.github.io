@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-07-06
 weight: 17
+
 ---
 
 이제 우리는 벡터함수의 적분을 살펴본다. 이를 위한 첫째 단계는 선적분으로, 이는 벡터장이 정의된 공간 $$\mathbb{R}^n$$ 안에서 정의된 곡선을 따라가며, 각각의 점에서의 벡터가 기여하는 힘들을 모두 더해 누적시키는 것이다. 흥미로운 것은 벡터장이 보존장이었다면 이 적분이 경로에 <em-ko>무관</em-ko>해져서 오직 끝점에만 의존한다는 것으로, 이는 [§미적분의 기본정리](/ko/math/calculus/fundamental_theorem_of_calculus)의 고차원 버전이라 할 수 있다. 
@@ -59,7 +60,7 @@ $$\int_C \nabla f \cdot d\mathbf{r} = f(\mathbf{B}) - f(\mathbf{A})$$
 :::
 
 ::: 증명
-다변수 연쇄법칙 ([§다변수함수와 편미분, ⁋정리 6](/ko/math/calculus/partial_derivatives#thm6))으로 $$\frac{d}{dt} f(\mathbf{r}(t)) = \nabla f(\mathbf{r}(t)) \cdot \mathbf{r}'(t)$$이다. 따라서 [§미적분의 기본정리, ⁋정리 4](/ko/math/calculus/fundamental_theorem_of_calculus#thm4)를 적용하면 
+[§다변수함수와 편미분, ⁋정리 6](/ko/math/calculus/partial_derivatives#thm6)으로 $$\frac{d}{dt} f(\mathbf{r}(t)) = \nabla f(\mathbf{r}(t)) \cdot \mathbf{r}'(t)$$이다. 따라서 [§미적분의 기본정리, ⁋정리 4](/ko/math/calculus/fundamental_theorem_of_calculus#thm4)를 적용하면 
 
 $$\int_C \nabla f \cdot d\mathbf{r} = \int_a^b \nabla f(\mathbf{r}(t)) \cdot \mathbf{r}'(t)\mathop{dt} = \int_a^b \frac{d}{dt} f(\mathbf{r}(t))\mathop{dt} = f(\mathbf{r}(b)) - f(\mathbf{r}(a))$$
 

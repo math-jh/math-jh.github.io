@@ -11,6 +11,7 @@ sidebar:
 
 date: 2026-03-09
 weight: 5
+
 published: false
 ---
 
@@ -46,7 +47,7 @@ Categorical quotient $$\varphi: X \to Y$$가 *geometric quotient<sub>기하학�
 Geometric quotient는 통상 $$Y = X/G$$로 표기하며, $$Y$$의 점은 정확히 $$X$$의 $$G$$-궤도와 일대일 대응한다. Categorical quotient는 닫힌 궤도들을 한 점으로 묶을 뿐이지만 ([명제 3](#prop3)), geometric quotient는 모든 궤도를 분리한다. 직관적으로 두 개념 사이의 간극은 $$X$$ 안에 *다른 궤도의 폐포에 포함되는 궤도*가 있을 때 발생한다.
 
 ::: 명제 3
-Reductive group $$G$$가 affine variety $$X = \Spec A$$ 위에 작용한다고 하자. 그러면 invariant subring $$A^G \subseteq A$$ ([\[스킴\] §대수적 군, ⁋정의 14](/ko/math/scheme_theory/algebraic_groups#def14))는 finitely generated이며, 자연스러운 morphism
+Reductive group $$G$$가 affine variety $$X = \Spec A$$ 위에 작용한다고 하자. 그러면 [\[스킴\] §대수적 군, ⁋정의 14](/ko/math/scheme_theory/algebraic_groups#def14)의 invariant subring $$A^G \subseteq A$$는 finitely generated이며, 자연스러운 morphism
 
 $$\varphi : X \longrightarrow X /\!/ G := \Spec(A^G)$$
 
@@ -90,7 +91,7 @@ $$\mathbb{C}^2 /\!/ \mathbb{C}^\ast = \Spec \mathbb{C} = \{\mathrm{pt}\}$$
 
 으로 한 점으로 붕괴한다. 모든 비원점 궤도의 폐포가 원점을 포함하여 [명제 3](#prop3)에 의해 모든 점이 같은 동치류에 속한 결과이다.
 
-이제 비자명 character $$\chi(t) = t$$로 자명 line bundle $$L = X \times \mathbb{C}$$를 linearize ([\[스킴\] §대수적 군, ⁋정의 18](/ko/math/scheme_theory/algebraic_groups#def18))하면 invariant section은
+이제 비자명 character $$\chi(t) = t$$로 자명 line bundle $$L = X \times \mathbb{C}$$를 linearize하면 ([\[스킴\] §대수적 군, ⁋정의 18](/ko/math/scheme_theory/algebraic_groups#def18)) invariant section은
 
 $$H^0(X, L^{\otimes n})^{G, \chi^n} = \{f \in \mathbb{C}[\z_1, \z_2] \mid f(tz_1, tz_2) = t^n f(z_1, z_2)\} = \mathbb{C}[\z_1, \z_2]_n,$$
 
@@ -98,7 +99,7 @@ $$H^0(X, L^{\otimes n})^{G, \chi^n} = \{f \in \mathbb{C}[\z_1, \z_2] \mid f(tz_1
 
 $$\bigoplus_{n \ge 0} H^0(X, L^{\otimes n})^{G, \chi^n} = \mathbb{C}[\z_1, \z_2]$$
 
-이고, projective GIT quotient ([\[스킴\] §대수적 군, ⁋정의 20](/ko/math/scheme_theory/algebraic_groups#def20))는
+이고, [\[스킴\] §대수적 군, ⁋정의 20](/ko/math/scheme_theory/algebraic_groups#def20)의 projective GIT quotient는
 
 $$\mathbb{C}^2 /\!/_\chi \mathbb{C}^\ast = \Proj \mathbb{C}[\z_1, \z_2] = \mathbb{P}^1$$
 

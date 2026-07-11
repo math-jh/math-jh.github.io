@@ -21,7 +21,7 @@ published: false
 Scheme $$X$$ 위에서도 abelian group들의 sheaf 범주 $$\Sh(X)$$는 abelian category이며 enough injective를 가진다. 따라서 [\[대수다양체\] §층 코호몰로지](/ko/math/algebraic_varieties/sheaf_cohomology)에서와 동일한 방식으로 global section functor의 유도 함자를 정의할 수 있다. 우리의 주된 관심은 항상 준연접층이지만, injective resolution은 $$\Sh(X)$$ 안에서 잡는다는 점에 유의한다.
 
 ::: 정의 1
-Scheme $$X$$ 위의 $$\mathcal{O}_X$$-가군층 $$\mathcal{F}$$에 대하여, global section functor $$\Gamma(X, -):\Sh(X) \rightarrow \Ab$$의 right derived functor ([\[호몰로지 대수학\] §유도함자, ⁋정의 9](/ko/math/homological_algebra/derived_functors#def9))를 취하여 $$i$$번째 *sheaf cohomology<sub>층 코호몰로지</sub>*를
+Scheme $$X$$ 위의 $$\mathcal{O}_X$$-가군층 $$\mathcal{F}$$에 대하여, global section functor $$\Gamma(X, -):\Sh(X) \rightarrow \Ab$$의 right derived functor를 ([\[호몰로지 대수학\] §유도함자, ⁋정의 9](/ko/math/homological_algebra/derived_functors#def9)) 취하여 $$i$$번째 *sheaf cohomology<sub>층 코호몰로지</sub>*를
 
 $$H^i(X, \mathcal{F})=R^i\Gamma(X, -)(\mathcal{F})=\frac{\ker\bigl(\Gamma(X, \mathcal{I}^i) \rightarrow \Gamma(X, \mathcal{I}^{i+1})\bigr)}{\im\bigl(\Gamma(X, \mathcal{I}^{i-1}) \rightarrow \Gamma(X, \mathcal{I}^i)\bigr)}$$
 
@@ -85,7 +85,7 @@ $$A$$가 noetherian이 아닌 경우에는, $$\Spec A$$의 임의의 open cover�
 이로부터 곧바로 affine 덮개에 대한 Leray 정리를 scheme 수준에서 얻는다. [\[대수다양체\] §층 코호몰로지, ⁋정리 11](/ko/math/algebraic_varieties/sheaf_cohomology#thm11)은 cover $$\mathcal{U}$$의 모든 유한 교집합 위에서 $$\mathcal{F}$$가 acyclic이면 $$\check H^p(\mathcal{U}, \mathcal{F})\cong H^p(X, \mathcal{F})$$임을 주는데, 이는 위상공간 수준의 정리이므로 scheme 위에서도 그대로 적용된다.
 
 ::: 따름정리 4
-Separated scheme $$X$$ ([§값매김환, ⁋정의 3](/ko/math/scheme_theory/valuative_criteria#def3))와 그 위의 준연접층 $$\mathcal{F}$$, 그리고 affine open cover $$\mathcal{U}=\{U_i\}$$에 대하여, 모든 $$p$$에 대해
+Separated scheme $$X$$와 ([§값매김환, ⁋정의 3](/ko/math/scheme_theory/valuative_criteria#def3)) 그 위의 준연접층 $$\mathcal{F}$$, 그리고 affine open cover $$\mathcal{U}=\{U_i\}$$에 대하여, 모든 $$p$$에 대해
 
 $$\check H^p(\mathcal{U}, \mathcal{F})\cong H^p(X, \mathcal{F})$$
 
@@ -129,7 +129,7 @@ $$\x_0^{a_0}\cdots\x_n^{a_n}, \qquad \sum_{j=0}^n a_j=d,\quad a_j\geq 0\ \text{f
 
 $$0 \rightarrow \mathcal{O}(d-1)\xrightarrow{\times\x_n}\mathcal{O}(d) \rightarrow \mathcal{O}(d)\vert_{\mathbb{P}^{n-1}_A} \rightarrow 0$$
 
-의 long exact sequence ([명제 2](#prop2))를 사용한 $$n$$에 대한 귀납으로 처리한다. 중간 차원에서의 소멸과 top 차원에서의 $$\coker$$ 계산이 모두 variety의 경우와 일치한다.
+의 long exact sequence를 ([명제 2](#prop2)) 사용한 $$n$$에 대한 귀납으로 처리한다. 중간 차원에서의 소멸과 top 차원에서의 $$\coker$$ 계산이 모두 variety의 경우와 일치한다.
 
 마지막으로 $$q=n$$, $$d\leq -n-1$$에서 얻어지는 공간이 표기 $$A[\x_0^{-1},\ldots, \x_n^{-1}]_{-d-n-1}$$로 적히는 이유는 [\[대수다양체\] §사영공간의 코호몰로지, ⁋명제 1](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop1) 직후의 설명과 동일하다. 즉 모든 지수가 $$-1$$ 이하인 $$d$$차 monomial들을 $$\y_j=\x_j^{-1}$$로 치환하면 $$\lvert d\rvert-(n+1)=-d-n-1$$차의 "음의 차수" monomial 공간이 된다.
 :::
@@ -142,7 +142,7 @@ $$H^n(\mathbb{P}^n_A, \mathcal{O}(d))\cong H^0(\mathbb{P}^n_A, \mathcal{O}(-d-n-
 
 ## Noetherian projective scheme 위의 연접층
 
-이제 임의의 Noetherian projective scheme $$X$$와 그 위의 연접층 $$\mathcal{F}$$ ([§준연접층, ⁋정의 11](/ko/math/scheme_theory/quasicoherent_sheaves#def11))에 대하여, 코호몰로지의 두 가지 근본적 성질을 다룬다. 하나는 각 $$H^i(X, \mathcal{F})$$이 유한차원이라는 것이고, 다른 하나는 충분히 twist하면 higher cohomology가 소멸한다는 Serre vanishing이다. Projective scheme $$X$$는 어떤 사영공간 $$\mathbb{P}^n_{\mathbb{K}}$$의 closed subscheme이며, 그 위에 $$\mathcal{O}_X(1)=\mathcal{O}_{\mathbb{P}^n}(1)\vert_X$$을 twisting을 위한 ample line bundle로 사용한다. 연접층 $$\mathcal{F}$$에 대해 $$\mathcal{F}(d)=\mathcal{F}\otimes_{\mathcal{O}_X}\mathcal{O}_X(d)$$로 적는다.
+이제 임의의 Noetherian projective scheme $$X$$와 그 위의 연접층 ([§준연접층, ⁋정의 11](/ko/math/scheme_theory/quasicoherent_sheaves#def11)) $$\mathcal{F}$$에 대하여, 코호몰로지의 두 가지 근본적 성질을 다룬다. 하나는 각 $$H^i(X, \mathcal{F})$$이 유한차원이라는 것이고, 다른 하나는 충분히 twist하면 higher cohomology가 소멸한다는 Serre vanishing이다. Projective scheme $$X$$는 어떤 사영공간 $$\mathbb{P}^n_{\mathbb{K}}$$의 closed subscheme이며, 그 위에 $$\mathcal{O}_X(1)=\mathcal{O}_{\mathbb{P}^n}(1)\vert_X$$을 twisting을 위한 ample line bundle로 사용한다. 연접층 $$\mathcal{F}$$에 대해 $$\mathcal{F}(d)=\mathcal{F}\otimes_{\mathcal{O}_X}\mathcal{O}_X(d)$$로 적는다.
 
 먼저 closed immersion을 따라 코호몰로지가 보존된다는 관찰이 핵심이다. Closed immersion $$\iota:X\hookrightarrow\mathbb{P}^n_{\mathbb{K}}$$은 affine 사상이므로, pushforward $$\iota_\ast$$가 affine 위에서 정확하고 higher direct image를 만들지 않아 $$H^i(X, \mathcal{F})\cong H^i(\mathbb{P}^n, \iota_\ast\mathcal{F})$$이 성립한다. 따라서 두 성질 모두 $$X=\mathbb{P}^n_{\mathbb{K}}$$인 경우로 환원된다.
 
@@ -162,14 +162,14 @@ $$\mathcal{O}_{\mathbb{P}^n}^{\oplus r} \twoheadrightarrow \mathcal{F}(d)$$
 
 $$0 \rightarrow \mathcal{G} \rightarrow \mathcal{O}(-d)^{\oplus r} \rightarrow \mathcal{F} \rightarrow 0$$
 
-의 long exact sequence ([명제 2](#prop2))에서
+의 long exact sequence에서 ([명제 2](#prop2))
 
 $$H^i(\mathbb{P}^n, \mathcal{O}(-d)^{\oplus r}) \rightarrow H^i(\mathbb{P}^n, \mathcal{F}) \rightarrow H^{i+1}(\mathbb{P}^n, \mathcal{G})$$
 
 을 본다. 좌변은 [정리 6](#thm6)에 의하여 유한차원이고, 우변은 귀납 가정에 의하여 유한차원이므로 ($$i+1$$에서의 유한차원성), 가운데 항 $$H^i(\mathbb{P}^n, \mathcal{F})$$ 또한 유한차원이다. 이로써 모든 $$i$$에 대한 유한차원성을 얻는다.
 :::
 
-[정리 7](#thm7)은 projective scheme 위의 연접층이 좋은 유한성을 가짐을 보장한다. 이는 affine 위의 finitely generated 가군에 대한 유한성이 코호몰로지 수준에서 사영적 상황으로 옮겨진 것이며, Euler characteristic ([\[대수다양체\] §사영공간의 코호몰로지, ⁋정의 2](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#def2))과 같은 불변량이 잘 정의되는 근거가 된다. 위 증명의 귀납에 사용한 globally generated 성질과 twist 후의 소멸은 다음 Serre vanishing에서 정량적으로 다시 등장한다.
+[정리 7](#thm7)은 projective scheme 위의 연접층이 좋은 유한성을 가짐을 보장한다. 이는 affine 위의 finitely generated 가군에 대한 유한성이 코호몰로지 수준에서 사영적 상황으로 옮겨진 것이며, [\[대수다양체\] §사영공간의 코호몰로지, ⁋정의 2](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#def2)의 Euler characteristic과 같은 불변량이 잘 정의되는 근거가 된다. 위 증명의 귀납에 사용한 globally generated 성질과 twist 후의 소멸은 다음 Serre vanishing에서 정량적으로 다시 등장한다.
 
 ::: 정리 8 (Serre Vanishing)
 Field $$\mathbb{K}$$ 위의 Noetherian projective scheme $$X$$와 ample line bundle $$\mathcal{O}_X(1)$$, 그리고 연접층 $$\mathcal{F}$$에 대하여, 충분히 큰 $$d\gg 0$$에 대해
@@ -191,7 +191,7 @@ $$0 \rightarrow \mathcal{K} \rightarrow \mathcal{O}^{\oplus r} \rightarrow \math
 
 $$0 \rightarrow \mathcal{K}(d-d_0) \rightarrow \mathcal{O}(d-d_0)^{\oplus r} \rightarrow \mathcal{F}(d) \rightarrow 0$$
 
-이고, 그 long exact sequence ([명제 2](#prop2))에서
+이고, 그 long exact sequence에서 ([명제 2](#prop2))
 
 $$H^i(\mathbb{P}^n, \mathcal{O}(d-d_0)^{\oplus r}) \rightarrow H^i(\mathbb{P}^n, \mathcal{F}(d)) \rightarrow H^{i+1}(\mathbb{P}^n, \mathcal{K}(d-d_0))$$
 

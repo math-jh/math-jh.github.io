@@ -27,7 +27,7 @@ $$a^{p-1} \equiv 1 \pmod p$$
 :::
 
 ::: 증명
-$$0$$이 아닌 잉여류들 $$1, 2, \ldots, p-1$$에 각각 $$a$$를 곱한 $$a, 2a, \ldots, (p-1)a$$를 생각한다. $$p \nmid a$$이고 $$1 \leq i \leq p-1$$이면 $$p \nmid ia$$이므로 이들은 모두 $$0$$이 아니고, $$ia \equiv ja \pmod p$$이면 소거법칙 ([§합동식, ⁋명제 6](/ko/math/number_theory/congruences#prop6))에 의해 $$i \equiv j$$이므로 서로 다르다. 따라서 $$a, 2a, \ldots, (p-1)a$$는 법 $$p$$에 대해 $$1, 2, \ldots, p-1$$을 순서만 바꾸어 놓은 것이다. 양쪽을 모두 곱하면
+$$0$$이 아닌 잉여류들 $$1, 2, \ldots, p-1$$에 각각 $$a$$를 곱한 $$a, 2a, \ldots, (p-1)a$$를 생각한다. $$p \nmid a$$이고 $$1 \leq i \leq p-1$$이면 $$p \nmid ia$$이므로 이들은 모두 $$0$$이 아니고, $$ia \equiv ja \pmod p$$이면 [§합동식, ⁋명제 6](/ko/math/number_theory/congruences#prop6)에 의해 $$i \equiv j$$이므로 서로 다르다. 따라서 $$a, 2a, \ldots, (p-1)a$$는 법 $$p$$에 대해 $$1, 2, \ldots, p-1$$을 순서만 바꾸어 놓은 것이다. 양쪽을 모두 곱하면
 
 $$\begin{aligned}
 a \cdot 2a \cdots (p-1)a &= a^{p-1}\cdot \bigl(1 \cdot 2 \cdots (p-1)\bigr) \\

@@ -46,7 +46,7 @@ $$\begin{aligned}
 &\equiv (-1)^{\mu}\, a^{(p-1)/2} \left(\tfrac{p-1}{2}\right)! \pmod p
 \end{aligned}$$
 
-이다. 부호 $$(-1)^\mu$$는 $$r_j > p/2$$인 $$\mu$$개의 항에서 $$p - r_j$$를 $$-r_j$$로 바꾼 데서 나온다. 양변에서 $$\left(\tfrac{p-1}{2}\right)!$$은 $$p$$와 서로소이므로 소거할 수 있고, 남은 합동식에 오일러 판정법 ([§이차 잉여, ⁋정리 4](/ko/math/number_theory/quadratic_residues#thm4))을 쓰면
+이다. 부호 $$(-1)^\mu$$는 $$r_j > p/2$$인 $$\mu$$개의 항에서 $$p - r_j$$를 $$-r_j$$로 바꾼 데서 나온다. 양변에서 $$\left(\tfrac{p-1}{2}\right)!$$은 $$p$$와 서로소이므로 소거할 수 있고, 남은 합동식에 [§이차 잉여, ⁋정리 4](/ko/math/number_theory/quadratic_residues#thm4)을 쓰면
 
 $$\left(\frac{a}{p}\right) \equiv a^{(p-1)/2} \equiv (-1)^\mu \pmod p$$
 

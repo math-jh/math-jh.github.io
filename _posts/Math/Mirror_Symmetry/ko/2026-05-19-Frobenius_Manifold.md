@@ -243,7 +243,7 @@ $$\sum_{e, f} \frac{\partial^3 F}{\partial t^\alpha \partial t^\beta \partial t^
 를 얻는다. 역으로 이 PDE 시스템을 만족하는 $$F$$로부터 정의된 곱셈은 자동으로 associative하므로 WDVV equation은 Frobenius manifold의 associativity와 정확히 동치인 조건이 된다.
 :::
 
-WDVV equation은 $$F$$의 삼계도함수들 사이의 quadratic relation이며, $$F$$ 자체에 대해서는 3차 비선형 편미분방정식 시스템이다. Mirror symmetry의 A-model 측에서 quantum cohomology의 Gromov-Witten potential은 이 equation을 만족하는 대표적 예시로, 이는 *splitting axiom* ([\[사교기하학\] §Gromov-Witten 불변량, ⁋명제 6](/ko/math/symplectic_geometry/gromov_witten#prop6))에 반영되어 있다. 
+WDVV equation은 $$F$$의 삼계도함수들 사이의 quadratic relation이며, $$F$$ 자체에 대해서는 3차 비선형 편미분방정식 시스템이다. Mirror symmetry의 A-model 측에서 quantum cohomology의 Gromov-Witten potential은 이 equation을 만족하는 대표적 예시로, 이는 *splitting axiom*에 반영되어 있다 ([\[사교기하학\] §Gromov-Witten 불변량, ⁋명제 6](/ko/math/symplectic_geometry/gromov_witten#prop6)). 
 
 위의 증명에서 알 수 있듯 Frobenius manifold의 언어에서 WDVV equation은 본질적으로 $$\circ$$의 associativity이지만, A-model에서는 이와 같이 덜 자명한 splitting axiom의 형태를 띤다는 것에 주목하자. 반면 B-model에서 $$\circ$$의 associativity는, $$\Jac(W)$$이 ring의 quotient이므로, 자명하게 얻어지는 것이다. 반대로, A-model에서는 Gromov-Witten potential이 $$F$$의 역할을 하는 것이 투명하게 보이지만 B-model에서 이를 만들기 위해서는 꽤나 많은 작업이 필요하다. 이는 mirror symmetry의 철학을 다시 보여주는 예시로, 한쪽에서는 어려운 문제를 mirror를 통해 반대쪽 모델로 옮기면 상대적으로 쉬운 문제로 바뀐다는 것이다. 
 
@@ -292,7 +292,7 @@ Compact Kähler manifold $$X$$에 대하여, $$M = H^\ast(X, \mathbb{C})$$ 위�
 
 $$E = \sum_\alpha \Bigl(1 - \frac{1}{2}\deg \sigma^\alpha\Bigr) t^\alpha \partial_{t^\alpha} + \sum_\alpha r^\alpha \partial_{t^\alpha}, \qquad c_1(X) = \sum_\alpha r^\alpha \sigma^\alpha$$
 
-를 두면 $$(M, \eta, \circ_t, e, E)$$는 Frobenius manifold ([정의 5](#def5))이다.
+를 두면 $$(M, \eta, \circ_t, e, E)$$는 Frobenius manifold이다 ([정의 5](#def5)).
 :::
 
 ::: 증명
@@ -303,7 +303,7 @@ $$E = \sum_\alpha \Bigl(1 - \frac{1}{2}\deg \sigma^\alpha\Bigr) t^\alpha \partia
 3. 이 곱셈의 항등원은 $$1 \in H^0(X)$$이며, 이는 flat coordinate에서 constant section이므로 $$\nabla e = 0$$이다. 
 4. 한편 [\[사교기하학\] §양자 코호몰로지, ⁋정의 12](/ko/math/symplectic_geometry/quantum_cohomology#def12)에 의해 structure constant는 $$c_{\alpha\beta\gamma}(t) = \eta(\partial_{t^\alpha} \circ_t \partial_{t^\beta}, \partial_{t^\gamma}) = \partial_{t^\alpha}\partial_{t^\beta}\partial_{t^\gamma} F$$이므로, 이것이 세 index에 대해 대칭이라는 사실로부터 $$\eta(X \circ Y, Z) = \eta(X, Y \circ Z)$$를 얻는다.
 5. 비슷하게 $$\nabla c$$가 네 index에 대해 대칭이라는 것을 확인할 수 있으며, 이 potentiality 아래에서 associativity는 [명제 7](#prop7)의 WDVV equation과 동치이며, A-model 측에서는 GW invariant의 splitting axiom으로 보장된다. 
-6. 마지막으로 quantum cohomology의 grading ([\[사교기하학\] §양자 코호몰로지, ⁋정의 2](/ko/math/symplectic_geometry/quantum_cohomology#def2))이 위 본문에서 본 대로 $$\Lie_E(\circ) = \circ$$, $$\Lie_E(\eta) = (2-d)\eta$$로 번역되고, 주어진 $$E$$가 $$\nabla^2 E = 0$$인 affine vector field로서 이를 만족한다.
+6. 마지막으로 [\[사교기하학\] §양자 코호몰로지, ⁋정의 2](/ko/math/symplectic_geometry/quantum_cohomology#def2)의 grading이 위 본문에서 본 대로 $$\Lie_E(\circ) = \circ$$, $$\Lie_E(\eta) = (2-d)\eta$$로 번역되고, 주어진 $$E$$가 $$\nabla^2 E = 0$$인 affine vector field로서 이를 만족한다.
 :::
 
 한편 우리의 mirror symmetry statement

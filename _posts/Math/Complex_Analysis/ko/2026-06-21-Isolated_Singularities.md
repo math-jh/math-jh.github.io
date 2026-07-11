@@ -47,7 +47,7 @@ $$a_n = \frac{1}{2\pi i}\oint_{\lvert w - z_0\rvert = \rho} \frac{f(w)}{(w - z_0
 :::
 
 ::: 증명
-$$z \in A$$을 고정하고 $$r < \rho_1 < \lvert z - z_0\rvert < \rho_2 < R$$이 되도록 두 반지름을 잡는다. $$f$$가 닫힌 환형 영역 $$\{\rho_1 \leq \lvert w - z_0\rvert \leq \rho_2\}$$를 품는 영역에서 정칙이므로, 이 닫힌 환형 영역의 두 경계원에 Cauchy의 homotopy 정리 ([§Cauchy 정리, ⁋정리 6](/ko/math/complex_analysis/cauchy_theorem#thm6))를 적용해 얻는 환형 영역에서의 Cauchy 적분공식에 의해
+$$z \in A$$을 고정하고 $$r < \rho_1 < \lvert z - z_0\rvert < \rho_2 < R$$이 되도록 두 반지름을 잡는다. $$f$$가 닫힌 환형 영역 $$\{\rho_1 \leq \lvert w - z_0\rvert \leq \rho_2\}$$를 품는 영역에서 정칙이므로, 이 닫힌 환형 영역의 두 경계원에 [§Cauchy 정리, ⁋정리 6](/ko/math/complex_analysis/cauchy_theorem#thm6)를 적용해 얻는 환형 영역에서의 Cauchy 적분공식에 의해
 
 $$f(z) = \frac{1}{2\pi i}\oint_{\lvert w - z_0\rvert = \rho_2}\frac{f(w)}{w - z}\,dw \;-\; \frac{1}{2\pi i}\oint_{\lvert w - z_0\rvert = \rho_1}\frac{f(w)}{w - z}\,dw$$
 

@@ -129,7 +129,7 @@ $$(ds)_{ij} = s_j\vert_{U_i \cap U_j} - s_i\vert_{U_i \cap U_j}$$
 
 $$\check{H}^0(\mathcal{U}, \mathcal{F}) = \ker(d: \check{C}^0 \to \check{C}^1) = \left\{(s_i) \in \prod_i \mathcal{F}(U_i) \mid s_i\vert_{U_i \cap U_j} = s_j\vert_{U_i \cap U_j} \text{ for all } i, j\right\}$$
 
-이다. Sheaf의 gluing condition ([\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1))에 의해 이러한 section들의 family는 정확히 $$X$$ 전체 위에서의 section, 즉 $$\Gamma(X, \mathcal{F})$$와 일치한다. 즉, $$\check{H}^0(\mathcal{U}, \mathcal{F}) = H^0(X, \mathcal{F})$$이며 이는 open cover의 선택과 무관하다.
+이다. [\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1)의 gluing condition에 의해 이러한 section들의 family는 정확히 $$X$$ 전체 위에서의 section, 즉 $$\Gamma(X, \mathcal{F})$$와 일치한다. 즉, $$\check{H}^0(\mathcal{U}, \mathcal{F}) = H^0(X, \mathcal{F})$$이며 이는 open cover의 선택과 무관하다.
 :::
 
 우리는 곧 좋은 상황에서는 위와 같이 Čech cohomology와 sheaf cohomology가 항상 같다는 것을 보일 것이다. 지금은 우선 $$p=1$$인 경우 이것이 어떻게 gluing의 failure를 측정하는지를 보자.
@@ -375,7 +375,7 @@ $$H^q(\Gamma(X, \mathcal{A}^\bullet)) \cong H^q(X, \mathcal{F})$$
 :::
 
 ::: 증명
-$$\mathcal{F}$$의 injective resolution $$0 \to \mathcal{F} \to \mathcal{I}^\bullet$$을 고정하자. Comparison theorem ([\[호몰로지 대수학\] §분해, ⁋정리 6](/ko/math/homological_algebra/resolutions#thm6))에 의해 acyclic resolution과 injective resolution 사이에 chain map $$f\colon \mathcal{A}^\bullet \to \mathcal{I}^\bullet$$이 존재한다. $$f$$의 *mapping cone* $$C(f)^\bullet$$을 생각하자. 각 차수에서
+$$\mathcal{F}$$의 injective resolution $$0 \to \mathcal{F} \to \mathcal{I}^\bullet$$을 고정하자. [\[호몰로지 대수학\] §분해, ⁋정리 6](/ko/math/homological_algebra/resolutions#thm6)에 의해 acyclic resolution과 injective resolution 사이에 chain map $$f\colon \mathcal{A}^\bullet \to \mathcal{I}^\bullet$$이 존재한다. $$f$$의 *mapping cone* $$C(f)^\bullet$$을 생각하자. 각 차수에서
 
 $$C(f)^n = \mathcal{A}^{n+1} \oplus \mathcal{I}^n$$
 
@@ -572,7 +572,7 @@ $$g_{ij}^{\mathcal{M}} \cdot \varphi_j(v) = g_{ij}^{\mathcal{M}} h_j^{-1} v = h_
 
 에서 확인할 수 있으며, 따라서 map $$\check{H}^1(\mathcal{U}, \mathcal{O}_X^\ast) \to \Pic(X)$$가 well-defined이다.
 
-역으로, 임의의 line bundle $$\mathcal{L}$$은 ([§선다발과 벡터다발, ⁋정의 1](/ko/math/algebraic_varieties/line_bundles#def1))에 의해 적당한 open cover $$\mathcal{U}$$ 위에서 transition function $$g_{ij}$$로 표현되며, 이는 Čech 1-cocycle을 이룬다. Line bundle isomorphism은 정확히 coboundary에 의한 동치관계에 해당하므로, 이 map의 kernel은 coboundary들이다. 따라서 $$\check{H}^1(\mathcal{U}, \mathcal{O}_X^\ast) \to \Pic(X)$$는 injective이다. 이제 direct limit을 취하면 $$\check{H}^1(X, \mathcal{O}_X^\ast) \cong \Pic(X)$$를 얻는다.
+역으로, 임의의 line bundle $$\mathcal{L}$$은 [§선다발과 벡터다발, ⁋정의 1](/ko/math/algebraic_varieties/line_bundles#def1)에 의해 적당한 open cover $$\mathcal{U}$$ 위에서 transition function $$g_{ij}$$로 표현되며, 이는 Čech 1-cocycle을 이룬다. Line bundle isomorphism은 정확히 coboundary에 의한 동치관계에 해당하므로, 이 map의 kernel은 coboundary들이다. 따라서 $$\check{H}^1(\mathcal{U}, \mathcal{O}_X^\ast) \to \Pic(X)$$는 injective이다. 이제 direct limit을 취하면 $$\check{H}^1(X, \mathcal{O}_X^\ast) \cong \Pic(X)$$를 얻는다.
 :::
 
 이 명제는 line bundle의 classification이 cohomology의 계산으로 귀결된다는 것을 보여준다. 즉, $$\Pic(X)$$의 원소를 분류하는 문제는 이제 $$\mathcal{O}_X^\ast$$-valued Čech 1-cocycle을 분류하는 문제가 되며, 이는 어쨌든 명시적인 계산이 가능하다는 점에서 고무적이다. 다음 글 [§사영공간의 코호몰로지](/ko/math/algebraic_varieties/cohomology_of_projective_spaces)에서 우리는 $$\mathbb{P}^n$$ 위의 line bundle $$\mathcal{O}(d)$$의 cohomology를 계산한다.

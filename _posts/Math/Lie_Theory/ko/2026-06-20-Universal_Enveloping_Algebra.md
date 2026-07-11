@@ -59,7 +59,7 @@ $$U(\mathfrak{g})=\T(\mathfrak{g})/\mathfrak{I}$$
 를 $$\mathfrak{g}$$의 *universal enveloping algebra<sub>보편 포락 대수</sub>*라 부른다. 합성 $$\mathfrak{g}=\T^1(\mathfrak{g})\hookrightarrow\T(\mathfrak{g})\twoheadrightarrow U(\mathfrak{g})$$로 얻어지는 $$k$$-linear map을 $$\iota:\mathfrak{g}\rightarrow U(\mathfrak{g})$$로 표기한다.
 :::
 
-생성원 $$x\otimes y-y\otimes x-[x,y]$$는 텐서대수의 degree $$2$$ 성분과 degree $$1$$ 성분이 섞인 비동차<sub>inhomogeneous</sub> 원소이므로, $$\mathfrak{I}$$는 동차 이데알이 아니다. 이는 대칭대수나 외대수를 정의할 때 사용한 동차 이데알 ([\[다중선형대수학\] §텐서대수, ⁋정의 5](/ko/math/multilinear_algebra/tensor_algebras#def5))과의 결정적인 차이이며, 따라서 $$U(\mathfrak{g})$$는 grading을 갖지 않는다. 그 대신 $$U(\mathfrak{g})$$는 아래 [정의 6](#def6)에서 보듯 자연스러운 여과를 가지며, PBW 정리의 핵심은 이 여과의 associated graded가 대칭대수와 동형이라는 데에 있다.
+생성원 $$x\otimes y-y\otimes x-[x,y]$$는 텐서대수의 degree $$2$$ 성분과 degree $$1$$ 성분이 섞인 비동차<sub>inhomogeneous</sub> 원소이므로, $$\mathfrak{I}$$는 동차 이데알이 아니다. 이는 대칭대수나 외대수를 정의할 때 사용한 [\[다중선형대수학\] §텐서대수, ⁋정의 5](/ko/math/multilinear_algebra/tensor_algebras#def5)의 동차 이데알과의 결정적인 차이이며, 따라서 $$U(\mathfrak{g})$$는 grading을 갖지 않는다. 그 대신 $$U(\mathfrak{g})$$는 아래 [정의 6](#def6)에서 보듯 자연스러운 여과를 가지며, PBW 정리의 핵심은 이 여과의 associated graded가 대칭대수와 동형이라는 데에 있다.
 
 $$U(\mathfrak{g})$$에서 $$\iota(x)\iota(y)-\iota(y)\iota(x)=\iota([x,y])$$가 성립함을 강조해 둔다. 정의에 의하여 $$x\otimes y-y\otimes x-[x,y]\in\mathfrak{I}$$이므로 몫에서 이 원소는 $$0$$이 되고, $$\iota$$가 $$\T^1$$에서의 사상이라는 점을 함께 쓰면 위 등식을 얻는다. 표기의 번거로움을 피하기 위해, 이후 $$\iota$$를 생략하고 $$\mathfrak{g}$$의 원소와 그 $$U(\mathfrak{g})$$에서의 상을 같은 기호로 적으며, $$U(\mathfrak{g})$$에서의 곱은 병치<sub>juxtaposition</sub>로 적는다. 이 표기 하에서 위의 관계는 $$U(\mathfrak{g})$$ 안에서
 
@@ -87,7 +87,7 @@ $$\iota:\mathfrak{g}\rightarrow U(\mathfrak{g}),\qquad f=\bar{f}\circ\iota$$
 을 만족하는 결합 단위 대수 준동형 $$\bar{f}:U(\mathfrak{g})\rightarrow A$$가 유일하게 존재한다.
 :::
 ::: 증명
-$$f$$를 단순히 벡터공간 사이의 $$k$$-linear map으로 보면, 텐서대수의 보편 성질 ([\[다중선형대수학\] §텐서대수, ⁋명제 2](/ko/math/multilinear_algebra/tensor_algebras#prop2))에 의하여 결합 단위 대수 준동형 $$\tilde{f}:\T(\mathfrak{g})\rightarrow A$$가 유일하게 존재하여 $$\T^1(\mathfrak{g})=\mathfrak{g}$$ 위에서 $$\tilde{f}=f$$이도록 할 수 있다. 이제 $$\tilde{f}$$가 이데알 $$\mathfrak{I}$$를 $$0$$으로 보냄을 보이면 충분하다. $$\mathfrak{I}$$는 $$x\otimes y-y\otimes x-[x,y]$$ 꼴의 원소들로 생성되는 two-sided ideal이므로, 이 생성원들이 $$\ker\tilde{f}$$에 속함을 확인하면 된다. 임의의 $$x,y\in\mathfrak{g}$$에 대하여
+$$f$$를 단순히 벡터공간 사이의 $$k$$-linear map으로 보면, [\[다중선형대수학\] §텐서대수, ⁋명제 2](/ko/math/multilinear_algebra/tensor_algebras#prop2)의 보편 성질에 의하여 결합 단위 대수 준동형 $$\tilde{f}:\T(\mathfrak{g})\rightarrow A$$가 유일하게 존재하여 $$\T^1(\mathfrak{g})=\mathfrak{g}$$ 위에서 $$\tilde{f}=f$$이도록 할 수 있다. 이제 $$\tilde{f}$$가 이데알 $$\mathfrak{I}$$를 $$0$$으로 보냄을 보이면 충분하다. $$\mathfrak{I}$$는 $$x\otimes y-y\otimes x-[x,y]$$ 꼴의 원소들로 생성되는 two-sided ideal이므로, 이 생성원들이 $$\ker\tilde{f}$$에 속함을 확인하면 된다. 임의의 $$x,y\in\mathfrak{g}$$에 대하여
 
 $$\tilde{f}(x\otimes y-y\otimes x-[x,y])=f(x)f(y)-f(y)f(x)-f([x,y])=[f(x),f(y)]_A-f([x,y])$$
 
@@ -154,7 +154,7 @@ $$\bar{x}\bar{y}-\bar{y}\bar{x}=\overline{xy-yx}\in U_2/U_1$$
 인데, $$U(\mathfrak{g})$$에서 $$xy-yx=[x,y]\in\mathfrak{g}\subseteq U_1$$이므로 $$xy-yx$$의 $$U_2/U_1$$에서의 상은 $$0$$이다. 따라서 $$\bar{x}\bar{y}=\bar{y}\bar{x}$$이고, 생성원들이 서로 가환이므로 $$\gr U(\mathfrak{g})$$ 전체가 가환이다.
 :::
 
-$$\gr U(\mathfrak{g})$$가 가환이고 $$\mathfrak{g}$$의 상으로 생성되므로, 대칭대수의 보편 성질 ([\[다중선형대수학\] §텐서대수, ⁋명제 6](/ko/math/multilinear_algebra/tensor_algebras#prop6))에 의하여 자연스러운 결합대수 준동형이 하나 정해진다. $$\mathfrak{g}$$를 $$U_1/U_0\subseteq\gr U(\mathfrak{g})$$로 보내는 $$k$$-linear map은 가환대수로 들어가므로, 유일한 결합대수 준동형
+$$\gr U(\mathfrak{g})$$가 가환이고 $$\mathfrak{g}$$의 상으로 생성되므로, [\[다중선형대수학\] §텐서대수, ⁋명제 6](/ko/math/multilinear_algebra/tensor_algebras#prop6)의 보편 성질에 의하여 자연스러운 결합대수 준동형이 하나 정해진다. $$\mathfrak{g}$$를 $$U_1/U_0\subseteq\gr U(\mathfrak{g})$$로 보내는 $$k$$-linear map은 가환대수로 들어가므로, 유일한 결합대수 준동형
 
 $$\omega:\S(\mathfrak{g})\longrightarrow\gr U(\mathfrak{g})$$
 
@@ -193,7 +193,7 @@ $$x_i\cdot z_S=x_j\cdot(x_i\cdot z_{S'})+[x_i,x_j]\cdot z_{S'}$$
 
 로 정의한다. 우변의 $$x_i\cdot z_{S'}$$은 길이 $$n-1$$짜리 원소에 대한 작용이라 귀납 가정으로 이미 정의되어 있고, 그 결과에 $$x_j$$를 작용시키는 것 또한, $$x_i\cdot z_{S'}$$을 기저 $$z_T$$들로 전개했을 때 각 $$T$$의 길이가 $$n-1$$ 이하이므로 다시 귀납 가정 안에 든다. $$[x_i,x_j]\cdot z_{S'}$$도 길이 $$n-1$$짜리에 대한 작용이다. 이 정의가 조건 1을 만족함은 구성에서 자명하다.
 
-이제 조건 2가 모든 $$i,j$$와 모든 기저원소 $$z_S$$에 대하여 성립함을 $$\lvert S\rvert$$에 대한 귀납법으로 확인한다. 대칭성에 의해 $$i>j$$인 경우만 보면 되고, $$i=j$$이면 좌변이 자명히 $$0$$이며 $$[x_i,x_i]=0$$이다. $$i>j$$이고 $$j\leq S$$인 경우, 작용의 정의가 정확히 $$x_i\cdot(x_j\cdot z_S)=x_j\cdot(x_i\cdot z_S)+[x_i,x_j]\cdot z_S$$가 되도록 위에서 $$x_i\cdot z_{(j,S)}$$을 정의하였으므로 조건 2가 성립한다. $$j\leq S$$가 아닌 일반적인 경우는 $$S=(l,S')$$ ($$l\leq S'$$, $$l<j<i$$)로 쓰고, $$x_l$$을 한 칸 끄집어낸 뒤 길이 $$n-1$$인 $$S'$$에 대한 귀납 가정과 $$\mathfrak{g}$$의 Jacobi identity를 사용하여 정리하면 얻어진다. Jacobi identity가 들어가는 곳은 세 첨자 $$i,j,l$$에 대한 이중 commutator들이 상쇄되어야 하는 부분이며, 이는 $$\mathfrak{g}$$가 Lie algebra라는 가정 ([§리 군, ⁋정의 8](/ko/math/lie_theory/Lie_groups#def8))이 사용되는 유일한 지점이다.
+이제 조건 2가 모든 $$i,j$$와 모든 기저원소 $$z_S$$에 대하여 성립함을 $$\lvert S\rvert$$에 대한 귀납법으로 확인한다. 대칭성에 의해 $$i>j$$인 경우만 보면 되고, $$i=j$$이면 좌변이 자명히 $$0$$이며 $$[x_i,x_i]=0$$이다. $$i>j$$이고 $$j\leq S$$인 경우, 작용의 정의가 정확히 $$x_i\cdot(x_j\cdot z_S)=x_j\cdot(x_i\cdot z_S)+[x_i,x_j]\cdot z_S$$가 되도록 위에서 $$x_i\cdot z_{(j,S)}$$을 정의하였으므로 조건 2가 성립한다. $$j\leq S$$가 아닌 일반적인 경우는 $$S=(l,S')$$ ($$l\leq S'$$, $$l<j<i$$)로 쓰고, $$x_l$$을 한 칸 끄집어낸 뒤 길이 $$n-1$$인 $$S'$$에 대한 귀납 가정과 $$\mathfrak{g}$$의 Jacobi identity를 사용하여 정리하면 얻어진다. Jacobi identity가 들어가는 곳은 세 첨자 $$i,j,l$$에 대한 이중 commutator들이 상쇄되어야 하는 부분이며, 이는 $$\mathfrak{g}$$가 [§리 군, ⁋정의 8](/ko/math/lie_theory/Lie_groups#def8)의 Lie algebra라는 가정이 사용되는 유일한 지점이다.
 
 조건 2가 확립되면, 대응 $$x_i\mapsto\bigl(s\mapsto x_i\cdot s\bigr)$$은 $$\mathfrak{g}$$에서 $$\End_k(\S(\mathfrak{g}))_{\mathrm{Lie}}$$로의 Lie algebra 준동형이다. 실제로 조건 2가 바로 $$[x_i,x_j]$$의 작용이 작용들의 commutator와 일치한다는 진술이고, $$\bigl(x_i\bigr)$$가 $$\mathfrak{g}$$의 기저이므로 이는 $$\mathfrak{g}$$ 전체에서의 Lie algebra 준동형으로 확장된다. [명제 4](#prop4)에 의하여 이는 결합대수 준동형, 곧 $$U(\mathfrak{g})$$-가군 구조
 
@@ -279,7 +279,7 @@ $$\begin{aligned}
 
 $$\Omega=2fe+h+\tfrac{1}{2}h^2$$
 
-으로 다시 쓸 수 있는데, 이는 $$ef=fe+h$$를 사용해 $$ef+fe=2fe+h$$로 정렬한 것이다. 이 Casimir element는 $$\sl_2$$의 유한차원 표현 분류 ([§근계, ⁋정의 8](/ko/math/lie_theory/root_systems#def8))에서 각 기약 표현 위에 스칼라로 작용하여, 표현을 구별하는 불변량의 역할을 한다.
+으로 다시 쓸 수 있는데, 이는 $$ef=fe+h$$를 사용해 $$ef+fe=2fe+h$$로 정렬한 것이다. 이 Casimir element는 $$\sl_2$$의 유한차원 표현 분류에서 각 기약 표현 위에 스칼라로 작용하여, 표현을 구별하는 불변량의 역할을 한다. ([§근계, ⁋정의 8](/ko/math/lie_theory/root_systems#def8))
 
 ---
 

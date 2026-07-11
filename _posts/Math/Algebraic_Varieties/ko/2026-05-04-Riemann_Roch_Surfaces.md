@@ -81,7 +81,7 @@ $$2g(D) - 2 = D^2 + D \cdot K_S$$
 :::
 
 ::: 증명
-Adjunction formula ([§표준선다발, ⁋명제 9](/ko/math/algebraic_varieties/canonical_bundle#prop9))에 의해
+[§표준선다발, ⁋명제 9](/ko/math/algebraic_varieties/canonical_bundle#prop9)의 adjunction formula에 의해
 
 $$\omega_D \cong (\omega_S \otimes \mathcal{O}_S(D))\vert_D$$
 
@@ -115,7 +115,7 @@ $$0 \to \mathcal{O}_S \to \mathcal{O}_S(D) \to \mathcal{O}_D(D) \to 0$$
 
 $$\rchi(\mathcal{O}_S(D)) = \rchi(\mathcal{O}_S) + \rchi(\mathcal{O}_D(D))$$
 
-이다. 이 때, $$\mathcal{O}_D(D)$$는 $$D$$ 위에 정의된 line bundle이므로, 곡선에서의 Riemann–Roch ([§곡선에서의 리만-로흐 정리, ⁋명제 3](/ko/math/algebraic_varieties/riemann_roch_theorem#prop3))에 의해
+이다. 이 때, $$\mathcal{O}_D(D)$$는 $$D$$ 위에 정의된 line bundle이므로, [§곡선에서의 리만-로흐 정리, ⁋명제 3](/ko/math/algebraic_varieties/riemann_roch_theorem#prop3)에 의해
 
 $$\rchi(\mathcal{O}_D(D)) = D^2 + 1 - g(D)$$
 
@@ -133,7 +133,7 @@ $$\rchi(\mathcal{O}_S(D)) = \rchi(\mathcal{O}_S) + \frac{1}{2}D \cdot (D - K_S)$
 
 를 얻는다.
 
-이제 우리는 이를 일반적인 divisor $$D$$에 대해 이를 일반화해야 한다. 우리는 우선 $$S$$ 위의 ample divisor $$H$$를 고정하자. 그럼 Serre vanishing theorem ([§사영공간의 코호몰로지, ⁋명제 4](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop4))에 의해, 충분히 큰 $$n$$에 대해 
+이제 우리는 이를 일반적인 divisor $$D$$에 대해 이를 일반화해야 한다. 우리는 우선 $$S$$ 위의 ample divisor $$H$$를 고정하자. 그럼 [§사영공간의 코호몰로지, ⁋명제 4](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop4)에 의해, 충분히 큰 $$n$$에 대해 
 
 $$H^1(S, \mathcal{O}_S(D + nH)) = H^2(S, \mathcal{O}_S(D + nH)) = 0$$
 
@@ -148,7 +148,7 @@ $$\rchi(\mathcal{O}(D)) = \frac{1}{2}D\cdot(D-K_S) + \rchi(\mathcal{O}_S)$$
 를 얻는다.
 :::
 
-Curve의 경우와 마찬가지로, 만약 $$D$$가 충분히 "양의" 방향이라면 $$h^1$$과 $$h^2$$가 사라져 $$\rchi(\mathcal{O}_S(D)) = h^0(S, \mathcal{O}_S(D))$$가 된다. 이는 ([§선형계, ⁋정의 10](/ko/math/algebraic_varieties/linear_systems#def10))에서 정의한 ampleness 개념과 밀접하게 관련되어 있다.
+Curve의 경우와 마찬가지로, 만약 $$D$$가 충분히 "양의" 방향이라면 $$h^1$$과 $$h^2$$가 사라져 $$\rchi(\mathcal{O}_S(D)) = h^0(S, \mathcal{O}_S(D))$$가 된다. 이는 [§선형계, ⁋정의 10](/ko/math/algebraic_varieties/linear_systems#def10)에서 정의한 ampleness 개념과 밀접하게 관련되어 있다.
 
 ::: 예시 5 ($$\mathbb{P}^2$$)
 우리는 $$\mathbb{P}^2$$에서 hyperplane class $$H$$를 고정하면
@@ -290,7 +290,7 @@ $$P_m(S) = h^0(S, \omega_S^{\otimes m})$$
 이다. 
 :::
 
-여기서 $$\omega_S$$는 ([§표준선다발, ⁋정의 5](/ko/math/algebraic_varieties/canonical_bundle#def5))에서 정의한 canonical bundle이다. 특히 $$m = 1$$인 경우 $$P_1(S) = h^0(\omega_S) = p_g(S)$$는 geometric genus이며, plurigenus들의 열 $$\{P_m(S)\}_{m \ge 1}$$은 어떤 의미에서 이것을 확장한 것이라 할 수 있다. 이는 surface의 birational equivalence class를 결정하는 중요한 불변량이다.
+여기서 $$\omega_S$$는 [§표준선다발, ⁋정의 5](/ko/math/algebraic_varieties/canonical_bundle#def5)에서 정의한 canonical bundle이다. 특히 $$m = 1$$인 경우 $$P_1(S) = h^0(\omega_S) = p_g(S)$$는 geometric genus이며, plurigenus들의 열 $$\{P_m(S)\}_{m \ge 1}$$은 어떤 의미에서 이것을 확장한 것이라 할 수 있다. 이는 surface의 birational equivalence class를 결정하는 중요한 불변량이다.
 
 다음 글에서는 Kodaira vanishing theorem을 다루며, 이 정리가 plurigenera의 계산과 surface의 classification에 어떻게 활용되는지 살펴 본다.
 

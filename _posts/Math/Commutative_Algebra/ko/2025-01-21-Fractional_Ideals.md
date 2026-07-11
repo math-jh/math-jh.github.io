@@ -13,7 +13,7 @@ weight: 19
 
 ---
 
-다음 글에서 우리는 regular local ring ([§차원, ⁋정의 12](/ko/math/commutative_algebra/Krull_dimension#def12))에 대해 살펴본다. 그 전에 몇가지 개념들을 정의해야 한다. 
+다음 글에서 우리는 [§차원, ⁋정의 12](/ko/math/commutative_algebra/Krull_dimension#def12)의 regular local ring에 대해 살펴본다. 그 전에 몇가지 개념들을 정의해야 한다. 
 
 ## 가역가군
 

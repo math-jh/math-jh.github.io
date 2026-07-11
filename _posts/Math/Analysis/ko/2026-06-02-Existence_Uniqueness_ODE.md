@@ -93,7 +93,7 @@ $$f$$가 $$(t_0, y_0)$$ 근방에서 연속이고 $$y$$에 대해 립시츠 조�
 :::
 
 ::: 증명
-미분방정식과 초기 조건을 적분하면, 미적분의 기본정리 ([§미적분의 기본정리, ⁋정리 3](/ko/math/analysis/fundamental_theorem_of_calculus#thm3))에 의해 문제는 적분방정식
+미분방정식과 초기 조건을 적분하면, [§미적분의 기본정리, ⁋정리 3](/ko/math/analysis/fundamental_theorem_of_calculus#thm3)에 의해 문제는 적분방정식
 
 $$y(t) = y_0 + \int_{t_0}^t f(s, y(s)) ds$$
 

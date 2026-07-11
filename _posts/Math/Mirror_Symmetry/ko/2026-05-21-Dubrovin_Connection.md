@@ -49,7 +49,7 @@ $$\nabla^z_{\partial_\alpha} = \partial_\alpha + \frac{1}{z}\, \mathcal{C}_\alph
 
 $$\nabla^z_{\partial_z} = \partial_z - \frac{1}{z^2}E\circ(-) + \frac{1}{z}\mu$$
 
-으로 주어진다. 여기서 $$E$$는 Euler vector field ([§프로베니우스 다양체, ⁋정의 5](/ko/math/mirror_symmetry/frobenius_manifold#def5))이고, $$\mu$$는 *grading operator*로, flat coordinate $$t^\alpha$$에 대응하는 cohomology class $$\sigma^\alpha$$의 절반 차수 $$d_\alpha = \tfrac{1}{2}\deg\sigma^\alpha$$와 conformal dimension $$d$$로부터 $$\mu(\partial_\alpha) = (d_\alpha - d/2)\, \partial_\alpha$$로 정의된다.
+으로 주어진다. 여기서 $$E$$는 [§프로베니우스 다양체, ⁋정의 5](/ko/math/mirror_symmetry/frobenius_manifold#def5)의 Euler vector field이고, $$\mu$$는 *grading operator*로, flat coordinate $$t^\alpha$$에 대응하는 cohomology class $$\sigma^\alpha$$의 절반 차수 $$d_\alpha = \tfrac{1}{2}\deg\sigma^\alpha$$와 conformal dimension $$d$$로부터 $$\mu(\partial_\alpha) = (d_\alpha - d/2)\, \partial_\alpha$$로 정의된다.
 :::
 
 앞서 [§프로베니우스 다양체, ⁋정의 5](/ko/math/mirror_symmetry/frobenius_manifold#def5)에서 Frobenius manifold를 정의할 때, 각 점에서의 Frobenius algebra의 grading structure를 담기 위해 $$E$$를 도입했던 것을 기억하자. 구체적으로, 
@@ -76,10 +76,10 @@ $$[\nabla^z_{\partial_\alpha}, \nabla^z_{\partial_\beta}] = [\partial_\alpha + z
 
 로 전개된다. 이 곡률이 모든 $$z$$에서 vanish하려면 $$z^{-1}$$과 $$z^{-2}$$의 계수가 각각 사라져야 하는데, $$z^{-1}$$ 항은 $$\mathcal{C}$$의 *potentiality* $$\partial_\alpha\mathcal{C}_\beta = \partial_\beta\mathcal{C}_\alpha$$에서, $$z^{-2}$$ 항은 product의 *associativity* $$[\mathcal{C}_\alpha, \mathcal{C}_\beta] = 0$$에서 사라진다. 
 
-뿐만 아니라 다음 명제는 이러한 connection들의 flatness가 *정확하게* 이 두 조건과 동치임을 보여준다. 이들은 Frobenius manifold ([§프로베니우스 다양체, ⁋정의 5](/ko/math/mirror_symmetry/frobenius_manifold#def5))의 공리들이었으며, 따라서 $$\nabla^z$$의 $$M$$-방향 flatness는 단순히 moduli를 맞추기 위한 결과가 아니라 Frobenius structure 그 자체라 할 수 있다. 
+뿐만 아니라 다음 명제는 이러한 connection들의 flatness가 *정확하게* 이 두 조건과 동치임을 보여준다. 이들은 Frobenius manifold의 공리들이었으며 ([§프로베니우스 다양체, ⁋정의 5](/ko/math/mirror_symmetry/frobenius_manifold#def5)), 따라서 $$\nabla^z$$의 $$M$$-방향 flatness는 단순히 moduli를 맞추기 위한 결과가 아니라 Frobenius structure 그 자체라 할 수 있다. 
 
 ::: 명제 2
-Frobenius manifold $$M$$ 위의 connection $$\nabla^z$$ ([정의 1](#def1))를 생각하자. Product $$\circ$$가 commutative라는 가정 아래, $$\nabla^z$$가 모든 $$z$$에 대해 $$M$$-방향 (즉 $$\partial_\alpha$$ 방향들 사이)으로 flat인 것은 다음 두 조건이 모두 성립하는 것과 동치이다.
+Frobenius manifold $$M$$ 위의 connection $$\nabla^z$$를 ([정의 1](#def1)) 생각하자. Product $$\circ$$가 commutative라는 가정 아래, $$\nabla^z$$가 모든 $$z$$에 대해 $$M$$-방향 (즉 $$\partial_\alpha$$ 방향들 사이)으로 flat인 것은 다음 두 조건이 모두 성립하는 것과 동치이다.
 
 1. *Potentiality*: $$\partial_\alpha\, c_{\beta\gamma}^\delta = \partial_\beta\, c_{\alpha\gamma}^\delta$$. 즉 $$c_{\alpha\beta}^\delta$$가 어떤 potential $$F$$의 세 번째 도함수이다.
 2. *Associativity (WDVV)*: $$[\mathcal{C}_\alpha, \mathcal{C}_\beta] = 0$$, 성분으로는 $$\sum_\delta c_{\alpha\beta}^\delta\, c_{\delta\gamma}^\epsilon = \sum_\delta c_{\beta\gamma}^\delta\, c_{\alpha\delta}^\epsilon$$. 즉 $$\circ$$가 associative이다.
@@ -100,7 +100,7 @@ $$[\nabla^z_{\partial_\alpha}, \nabla^z_{\partial_\beta}] = \frac{1}{z}\,(\parti
 Connection $$\nabla$$는 본질적으로 section을 *미분*하는 도구이다. Vector bundle을 $$\mathcal{O}_X$$-module로 볼 때 우리가 가진 연산은 함수와의 곱셈뿐이지만, 미분까지 할 수 있게 되면 그 bundle은 함수에 더해 미분연산자들의 작용까지 받는 대상, 곧 *$$\mathcal{D}_X$$-module*이 되며, 이것이 flat이어야 그 정의가 말이 될 것이다. 
 
 ::: 정의 3
-Complex manifold $$B$$ 위에서, $$B$$ 위 미분 연산자들의 sheaf of rings $$\mathcal{D}_B$$는 structure sheaf $$\mathcal{O}_B$$와 vector field들, 즉 $$\mathcal{O}_B$$ 위의 derivation ([\[가환대수학\] §미분, ⁋정의 1](/ko/math/commutative_algebra/differentials#def1))이 생성하는 operator들의 sheaf이다. 이 때, vector field $$\partial$$과 함수 $$f$$는 다음의 관계식
+Complex manifold $$B$$ 위에서, $$B$$ 위 미분 연산자들의 sheaf of rings $$\mathcal{D}_B$$는 structure sheaf $$\mathcal{O}_B$$와 vector field들, 즉 $$\mathcal{O}_B$$ 위의 derivation이 ([\[가환대수학\] §미분, ⁋정의 1](/ko/math/commutative_algebra/differentials#def1)) 생성하는 operator들의 sheaf이다. 이 때, vector field $$\partial$$과 함수 $$f$$는 다음의 관계식
 
 $$[\partial, f] = \partial(f)$$
 

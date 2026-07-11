@@ -10,6 +10,7 @@ sidebar:
 
 date: 2026-06-20
 weight: 6
+
 published: false
 
 ---
@@ -95,7 +96,7 @@ Riemannian manifold $$(M, g)$$의 점 $$p$$에 대해, $$0$$의 star-shaped 열�
 :::
 
 ::: 증명
-[명제 3](#prop3)에 의해 $$\exp_p$$는 $$0$$의 star-shaped 열린근방 위에서 매끄러우며, [명제 4](#prop4)에 의해 $$(d\exp_p)_0 = \id_{T_p M}$$은 isomorphism이다. 따라서 manifold 사이의 매끄러운 함수에 대한 역함수 정리 ([\[미분다양체\] §부분다양체와 역함수 정리, ⁋따름정리 5](/ko/math/manifolds/submanifolds#cor5))에 의해, $$0$$의 적당한 열린근방 $$V_0$$ 위에서 $$\exp_p$$가 $$V_0$$와 $$\exp_p(V_0)$$ 사이의 미분동형을 정의한다. $$V_0$$ 안에 $$0$$ 중심의 star-shaped 열린 공 $$V$$를 잡으면 ([명제 3](#prop3)의 증명처럼 $$\lVert \cdot \rVert_g$$에 대한 충분히 작은 공) $$\exp_p\vert_V$$도 미분동형이며, $$U = \exp_p(V)$$는 normal neighborhood이다.
+[명제 3](#prop3)에 의해 $$\exp_p$$는 $$0$$의 star-shaped 열린근방 위에서 매끄러우며, [명제 4](#prop4)에 의해 $$(d\exp_p)_0 = \id_{T_p M}$$은 isomorphism이다. 따라서 manifold 사이의 매끄러운 함수에 대한 [\[미분다양체\] §부분다양체와 역함수 정리, ⁋따름정리 5](/ko/math/manifolds/submanifolds#cor5)에 의해, $$0$$의 적당한 열린근방 $$V_0$$ 위에서 $$\exp_p$$가 $$V_0$$와 $$\exp_p(V_0)$$ 사이의 미분동형을 정의한다. $$V_0$$ 안에 $$0$$ 중심의 star-shaped 열린 공 $$V$$를 잡으면 ([명제 3](#prop3)의 증명처럼 $$\lVert \cdot \rVert_g$$에 대한 충분히 작은 공) $$\exp_p\vert_V$$도 미분동형이며, $$U = \exp_p(V)$$는 normal neighborhood이다.
 :::
 
 Normal neighborhood 위에서 exponential map의 역사상은 $$T_p M$$ 위로의 매끄러운 좌표를 준다. 여기에 접공간의 정규직교기저를 통한 선형동형을 합성하면 manifold 위의 구체적인 좌표계를 얻는다.

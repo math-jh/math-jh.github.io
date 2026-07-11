@@ -136,7 +136,7 @@ CFG에서 pseudofunctor로 가는 방향은 [명제 7](#prop7)이다. Cleavage�
 
 ## Descent와 stack
 
-지금까지의 정의에는 밑범주의 위상이 전혀 쓰이지 않았다. CFG는 순수하게 범주론적인 자료이다. Stack은 여기에 site의 덮개 ([§Grothendieck 위상과 site, ⁋정의 5](/ko/math/stacks/grothendieck_topology#def5))를 따라 사상과 대상이 국소에서 대역으로 붙는다는 sheaf 조건을 부과한 것이다. 이는 두 단계로 나뉜다. 먼저 사상이 붙는 조건 (prestack)을, 이어 대상이 붙는 조건 (stack)을 요구한다. 사상이 붙는다는 것을 정식화하기 위해 두 대상 사이의 동형사상이 이루는 presheaf를 도입한다.
+지금까지의 정의에는 밑범주의 위상이 전혀 쓰이지 않았다. CFG는 순수하게 범주론적인 자료이다. Stack은 여기에 [§Grothendieck 위상과 site, ⁋정의 5](/ko/math/stacks/grothendieck_topology#def5)의 덮개를 따라 사상과 대상이 국소에서 대역으로 붙는다는 sheaf 조건을 부과한 것이다. 이는 두 단계로 나뉜다. 먼저 사상이 붙는 조건 (prestack)을, 이어 대상이 붙는 조건 (stack)을 요구한다. 사상이 붙는다는 것을 정식화하기 위해 두 대상 사이의 동형사상이 이루는 presheaf를 도입한다.
 
 이하에서 $$(\mathcal{C}, \tau)$$은 site이고, 위상은 covering family $$\{U_i \rightarrow U\}$$로 주어지는 pretopology로 기술한다. ([§Grothendieck 위상과 site, ⁋정의 3](/ko/math/stacks/grothendieck_topology#def3)) CFG $$p:\mathcal{F} \rightarrow \mathcal{C}$$의 cleavage를 하나 고정하여 pullback $$f^\ast$$과 제한 $$x\vert_V=f^\ast x$$ (단, $$f: V \rightarrow U$$)을 사용한다.
 
@@ -148,7 +148,7 @@ $$\operatorname{\underline{Isom}}_U(x, y):(\mathcal{C}/U)^\op \rightarrow \Set;\
 은 slice site $$\mathcal{C}/U$$ 위의 presheaf이다. 사상 $$g: W \rightarrow V$$ (단, $$V, W$$은 $$U$$ 위에 있다)에 대한 restriction은 pullback 함자 $$g^\ast$$과 합성 동형 $$g^\ast f^\ast\cong(f\circ g)^\ast$$이 유도하는 사상이다.
 :::
 
-각 fiber가 groupoid이므로 ([명제 7](#prop7)) $$\operatorname{\underline{Isom}}_U(x, y)$$의 값은 모두 동형사상들의 집합이고, $$x=y$$이면 이는 automorphism의 presheaf $$\operatorname{\underline{Aut}}_U(x)$$이다. 직관적으로 이 presheaf는 "$$x$$와 $$y$$을 잇는 동형이 $$U$$ 위에서 어떻게 변하는가"를 기록한다. 사상이 국소에서 대역으로 붙는다는 것은 정확히 이 presheaf가 sheaf라는 것이다. 다음으로 대상이 붙는 조건을 위해 descent datum을 정의한다. 이는 충실평탄 하강의 descent datum ([\[스킴\] §충실평탄 하강, ⁋정의 4](/ko/math/scheme_theory/faithfully_flat_descent#def4))을 임의의 CFG로 옮긴 것이다.
+각 fiber가 groupoid이므로 ([명제 7](#prop7)) $$\operatorname{\underline{Isom}}_U(x, y)$$의 값은 모두 동형사상들의 집합이고, $$x=y$$이면 이는 automorphism의 presheaf $$\operatorname{\underline{Aut}}_U(x)$$이다. 직관적으로 이 presheaf는 "$$x$$와 $$y$$을 잇는 동형이 $$U$$ 위에서 어떻게 변하는가"를 기록한다. 사상이 국소에서 대역으로 붙는다는 것은 정확히 이 presheaf가 sheaf라는 것이다. 다음으로 대상이 붙는 조건을 위해 descent datum을 정의한다. 이는 [\[스킴\] §충실평탄 하강, ⁋정의 4](/ko/math/scheme_theory/faithfully_flat_descent#def4)의 descent datum을 임의의 CFG로 옮긴 것이다.
 
 ::: 정의 12
 CFG $$p:\mathcal{F} \rightarrow \mathcal{C}$$과 covering family $$\{f_i: U_i \rightarrow U\}_{i\in I}$$이 주어졌다 하자. $$U_{ij}=U_i\times_U U_j$$, $$U_{ijk}=U_i\times_U U_j\times_U U_k$$로 적고, 사영 $$\operatorname{pr}: U_{ij} \rightarrow U_i$$ 등을 따른 pullback을 $$\vert_{U_{ij}}$$로 표기한다. ([\[범주론\] §극한, ⁋예시 8](/ko/math/category_theory/limits#ex8)) 이 덮개에 대한 *descent datum<sub>하강 자료</sub>*은 다음으로 이루어진다.
@@ -159,7 +159,7 @@ CFG $$p:\mathcal{F} \rightarrow \mathcal{C}$$과 covering family $$\{f_i: U_i \r
 으로서 $$U_{ijk}$$ 위에서 *cocycle 조건* $$\varphi_{ik}\vert_{U_{ijk}}=\varphi_{ij}\vert_{U_{ijk}}\circ \varphi_{jk}\vert_{U_{ijk}}$$을 만족하는 것이다 (각 $$\varphi$$을 적절한 사영을 따라 $$U_{ijk}$$로 pullback한 것으로 이해한다). 이 descent datum이 *effective<sub>실효적</sub>*이라는 것은, 대상 $$x\in \mathcal{F}(U)$$과 동형사상 $$\psi_i: x\vert_{U_i}\xrightarrow{\sim}x_i$$들이 존재하여 $$U_{ij}$$ 위에서 $$\varphi_{ij}\circ(\psi_j\vert_{U_{ij}})=\psi_i\vert_{U_{ij}}$$이 성립하는 것이다.
 :::
 
-Cocycle 조건은 세 겹 겹침 $$U_{ijk}$$ 위에서 세 동형 $$\varphi_{ij}, \varphi_{jk}, \varphi_{ik}$$이 모순 없이 합성됨을 요구하며, 이는 sheaf를 열린덮개에서 붙일 때 transition 함수가 만족하던 cocycle 관계의 직접적 일반화이다. Effectivity는 이 국소 자료 $$(x_i, \varphi_{ij})$$이 실제로 어떤 대역 대상 $$x\in \mathcal{F}(U)$$의 제한으로부터 옴을 뜻한다. 충실평탄 하강에서 가군에 대한 descent datum이 항상 effective였던 것 ([\[스킴\] §충실평탄 하강, ⁋정리 6](/ko/math/scheme_theory/faithfully_flat_descent#thm6))과 달리, 일반적인 CFG에서는 effectivity가 별도의 조건이다. 이 두 조건을 합하여 stack을 정의한다.
+Cocycle 조건은 세 겹 겹침 $$U_{ijk}$$ 위에서 세 동형 $$\varphi_{ij}, \varphi_{jk}, \varphi_{ik}$$이 모순 없이 합성됨을 요구하며, 이는 sheaf를 열린덮개에서 붙일 때 transition 함수가 만족하던 cocycle 관계의 직접적 일반화이다. Effectivity는 이 국소 자료 $$(x_i, \varphi_{ij})$$이 실제로 어떤 대역 대상 $$x\in \mathcal{F}(U)$$의 제한으로부터 옴을 뜻한다. 충실평탄 하강에서 가군에 대한 descent datum이 항상 effective였던 [\[스킴\] §충실평탄 하강, ⁋정리 6](/ko/math/scheme_theory/faithfully_flat_descent#thm6)과 달리, 일반적인 CFG에서는 effectivity가 별도의 조건이다. 이 두 조건을 합하여 stack을 정의한다.
 
 ::: 정의 13
 Site $$(\mathcal{C}, \tau)$$ 위의 CFG $$p:\mathcal{F} \rightarrow \mathcal{C}$$에 대하여,
@@ -168,7 +168,7 @@ Site $$(\mathcal{C}, \tau)$$ 위의 CFG $$p:\mathcal{F} \rightarrow \mathcal{C}$
 2. $$\mathcal{F}$$이 *stack<sub>스택</sub>*이라는 것은, $$\mathcal{F}$$이 prestack이고 동시에 임의의 covering family에 대한 모든 descent datum이 effective인 것이다.
 :::
 
-Prestack 조건은 "사상이 붙는다"는 것이다. 덮개 $$\{U_i \rightarrow U\}$$ 위에서 정합적으로 주어진 동형사상들 $$x\vert_{U_i}\cong y\vert_{U_i}$$이 두 겹 겹침에서 일치하면 $$U$$ 전체의 동형 $$x\cong y$$으로 유일하게 붙는다는 것이며, 이는 $$\operatorname{\underline{Isom}}_U(x, y)$$의 sheaf 조건 ([§Grothendieck 위상과 site, ⁋명제 11](/ko/math/stacks/grothendieck_topology#prop11))에 다름 아니다. Stack 조건은 여기에 "대상이 붙는다", 곧 effective descent를 더한 것이다. 정의상 stack은 prestack이고, prestack은 다시 CFG이다. 충실평탄 하강 전체가 이 정의 한 줄로 요약된다. Prestack 조건은 사상의 하강 (충실평탄 사상을 따른 사상의 유일성)이고, effectivity는 [\[스킴\] §충실평탄 하강, ⁋정리 10](/ko/math/scheme_theory/faithfully_flat_descent#thm10)의 effective descent, 즉 대상의 하강이다.
+Prestack 조건은 "사상이 붙는다"는 것이다. 덮개 $$\{U_i \rightarrow U\}$$ 위에서 정합적으로 주어진 동형사상들 $$x\vert_{U_i}\cong y\vert_{U_i}$$이 두 겹 겹침에서 일치하면 $$U$$ 전체의 동형 $$x\cong y$$으로 유일하게 붙는다는 것이며, 이는 $$\operatorname{\underline{Isom}}_U(x, y)$$의 sheaf 조건에 다름 아니다. ([§Grothendieck 위상과 site, ⁋명제 11](/ko/math/stacks/grothendieck_topology#prop11)) Stack 조건은 여기에 "대상이 붙는다", 곧 effective descent를 더한 것이다. 정의상 stack은 prestack이고, prestack은 다시 CFG이다. 충실평탄 하강 전체가 이 정의 한 줄로 요약된다. Prestack 조건은 사상의 하강 (충실평탄 사상을 따른 사상의 유일성)이고, effectivity는 [\[스킴\] §충실평탄 하강, ⁋정리 10](/ko/math/scheme_theory/faithfully_flat_descent#thm10)의 effective descent, 즉 대상의 하강이다.
 
 ::: 참고 14
 문헌마다 명칭이 갈린다. 우리의 prestack과 stack은 [Stacks]와 [Ols]의 용법을 따른 것으로, prestack은 $$\operatorname{\underline{Isom}}$$이 sheaf인 CFG, stack은 거기에 effective descent를 더한 것이다. 반면 [Vis]는 fibered category를 "prestack of categories", $$\operatorname{\underline{Isom}}$$이 sheaf인 것을 "prestack" (즉 우리의 prestack), effective descent까지 가지는 것을 "stack"이라 부르되, 우리가 prestack이라 부른 것을 별도로 "separated prestack"이라 칭하기도 한다. 이 글에서는 일관되게 [정의 13](#def13)의 용법을 사용한다.
@@ -202,7 +202,7 @@ Prestack. $$T=\Spec A$$ 위의 두 준연접층 $$\mathcal{F}, \mathcal{G}$$, �
 Effectivity. covering family $$\{T_i \rightarrow T\}$$ 위의 descent datum은 각 $$T_i$$ 위의 준연접층 $$\mathcal{F}_i$$과 $$T_{ij}$$ 위의 cocycle 동형 $$\varphi_{ij}$$의 자료이다. 이는 정확히 준연접층의 하강 자료이며, 준연접층이 fpqc 위상에 대하여 effective descent를 가지므로 ([\[스킴\] §충실평탄 하강, ⁋정리 10](/ko/math/scheme_theory/faithfully_flat_descent#thm10)) $$T$$ 위의 준연접층 $$\mathcal{F}$$과 동형 $$\mathcal{F}\vert_{T_i}\cong \mathcal{F}_i$$으로 유일하게 붙는다. 따라서 모든 descent datum이 effective이고, prestack 조건과 합하여 $$\mathcal{QC}$$은 stack이다.
 :::
 
-[정리 16](#thm16)은 stack의 정의가 충실평탄 하강의 재포장임을 명시적으로 보여준다. Prestack 조건은 하강 functor의 fully faithfulness ([\[스킴\] §충실평탄 하강, ⁋정리 6](/ko/math/scheme_theory/faithfully_flat_descent#thm6))로, effectivity는 essential surjectivity, 곧 effective descent ([\[스킴\] §충실평탄 하강, ⁋정리 10](/ko/math/scheme_theory/faithfully_flat_descent#thm10))로 각각 환원된다. ([\[범주론\] §자연변환, ⁋정리 5](/ko/math/category_theory/natural_transformations#thm5)) 모든 CFG가 stack인 것은 아니므로, prestack을 stack으로 보편적으로 보완하는 조작이 필요하다. 이것이 [§Grothendieck 위상과 site, ⁋정리 14](/ko/math/stacks/grothendieck_topology#thm14)의 sheafification의 stack 판본인 stackification이다.
+[정리 16](#thm16)은 stack의 정의가 충실평탄 하강의 재포장임을 명시적으로 보여준다. Prestack 조건은 [\[스킴\] §충실평탄 하강, ⁋정리 6](/ko/math/scheme_theory/faithfully_flat_descent#thm6)의 fully faithfulness로, effectivity는 essential surjectivity, 곧 [\[스킴\] §충실평탄 하강, ⁋정리 10](/ko/math/scheme_theory/faithfully_flat_descent#thm10)의 effective descent로 각각 환원된다. ([\[범주론\] §자연변환, ⁋정리 5](/ko/math/category_theory/natural_transformations#thm5)) 모든 CFG가 stack인 것은 아니므로, prestack을 stack으로 보편적으로 보완하는 조작이 필요하다. 이것이 [§Grothendieck 위상과 site, ⁋정리 14](/ko/math/stacks/grothendieck_topology#thm14)의 sheafification의 stack 판본인 stackification이다.
 
 ::: 정리 17 (stackification)
 Site $$(\mathcal{C}, \tau)$$ 위의 임의의 CFG $$\mathcal{F}$$에 대하여, stack $$\mathcal{F}^a$$과 morphism $$\iota:\mathcal{F} \rightarrow \mathcal{F}^a$$이 존재하여 다음 보편성을 가진다. 임의의 stack $$\mathcal{G}$$에 대하여 $$\iota$$와의 합성
@@ -240,20 +240,20 @@ Site $$(\mathcal{C}, \tau)$$ 위의 sheaf of group $$G$$에 대하여, 대상 $$
 $$\Sch$$ (또는 $$\Sch/S$$) 위의 fpqc site에서, $$\mathbb{G}_m$$-torsor의 classifying stack $$\mathbf{B}\mathbb{G}_m$$은 $$T$$ 위의 line bundle들의 groupoid $$\mathcal{L}(T)$$을 fiber로 하는 CFG와 동치이며, 이 CFG는 stack이다.
 :::
 ::: 증명
-먼저 $$\mathbb{G}_m$$-torsor와 line bundle의 동치를 본다. $$T$$ 위의 invertible sheaf $$\mathcal{L}$$ ([\[스킴\] §준연접층, ⁋정의 15](/ko/math/scheme_theory/quasicoherent_sheaves#def15))에 대하여, 그 frame들의 sheaf
+먼저 $$\mathbb{G}_m$$-torsor와 line bundle의 동치를 본다. $$T$$ 위의 [\[스킴\] §준연접층, ⁋정의 15](/ko/math/scheme_theory/quasicoherent_sheaves#def15)의 invertible sheaf $$\mathcal{L}$$에 대하여, 그 frame들의 sheaf
 
 $$P_\mathcal{L}=\operatorname{\underline{Isom}}_{\mathcal{O}}(\mathcal{O}_T, \mathcal{L})$$
 
 을 두면, $$\mathbb{G}_m=\operatorname{\underline{Aut}}(\mathcal{O}_T)$$이 합성으로 $$P_\mathcal{L}$$에 단순추이적으로 작용한다. $$\mathcal{L}$$이 국소적으로 $$\mathcal{O}_T$$과 동형이므로 ([\[스킴\] §준연접층, ⁋정의 15](/ko/math/scheme_theory/quasicoherent_sheaves#def15)) $$P_\mathcal{L} \rightarrow \ast$$은 국소적으로 절단을 가져 [정의 18](#def18)의 두 조건을 만족하고, 따라서 $$P_\mathcal{L}$$은 $$\mathbb{G}_m$$-torsor이다. 역으로 $$\mathbb{G}_m$$-torsor $$P$$에 대하여 결합 line bundle $$\mathcal{L}_P=(P\times \mathbb{A}^1)/\mathbb{G}_m$$ (스칼라 작용에 대한 몫)을 두면 invertible sheaf를 얻는다. 두 대응이 서로 quasi-inverse이며 동형사상과 호환되므로 ([\[범주론\] §자연변환, ⁋정의 2](/ko/math/category_theory/natural_transformations#def2)), groupoid $$\mathbf{B}\mathbb{G}_m(T)$$과 $$\mathcal{L}(T)$$은 동치이고, 따라서 두 CFG가 동치이다.
 
-이제 $$\mathcal{L}$$이 stack임을 본다. $$\mathcal{L}$$은 준연접층 stack $$\mathcal{QC}$$ ([정리 16](#thm16))의 충만한 부분 CFG로, invertible sheaf만을 대상으로 취한 것이다.
+이제 $$\mathcal{L}$$이 stack임을 본다. $$\mathcal{L}$$은 [정리 16](#thm16)의 준연접층 stack $$\mathcal{QC}$$의 충만한 부분 CFG로, invertible sheaf만을 대상으로 취한 것이다.
 
 Prestack. 두 invertible sheaf $$\mathcal{L}, \mathcal{M}$$에 대하여 $$\operatorname{\underline{Isom}}_T(\mathcal{L}, \mathcal{M})$$은 $$\mathcal{QC}$$의 $$\operatorname{\underline{Isom}}$$의 부분presheaf이고, 후자가 sheaf이므로 ([정리 16](#thm16)의 prestack 부분) 전자가 sheaf임을 보이려면 그것이 닫힌 부분sheaf 조건으로 잘라짐을 확인하면 된다. $$\mathcal{O}_T$$-가군층 사상 $$\mathcal{L} \rightarrow \mathcal{M}$$이 동형인지는 국소적으로 검사되는 조건이므로 ([\[스킴\] §준연접층, ⁋명제 16](/ko/math/scheme_theory/quasicoherent_sheaves#prop16)의 가역성), $$\operatorname{\underline{Isom}}$$은 $$\operatorname{\underline{Hom}}$$의 sheaf 부분대상이고 sheaf이다.
 
 Effective descent. covering family $$\{T_i \rightarrow T\}$$ 위에 invertible sheaf $$\mathcal{L}_i$$들과 cocycle 동형 $$\varphi_{ij}$$의 descent datum이 주어졌다 하자. 이를 준연접층의 descent datum으로 보면, $$\mathcal{QC}$$이 stack이므로 ([정리 16](#thm16)) $$T$$ 위의 준연접층 $$\mathcal{L}$$과 $$\mathcal{L}\vert_{T_i}\cong \mathcal{L}_i$$으로 유일하게 붙는다. 남은 것은 이 $$\mathcal{L}$$이 invertible임을 보이는 것이다. "Invertible" (rank 1 locally free)은 fpqc 충실평탄 base change에 대하여 내려오는 성질이므로 ([\[스킴\] §충실평탄 하강, ⁋명제 7](/ko/math/scheme_theory/faithfully_flat_descent#prop7)의 locally free of finite rank 하강), $$\mathcal{L}\vert_{T_i}=\mathcal{L}_i$$이 각각 invertible이고 $$\{T_i \rightarrow T\}$$이 덮개이므로 $$\mathcal{L}$$도 invertible이다. 따라서 descent datum이 $$\mathcal{L}(T)$$ 안에서 effective이고, prestack 조건과 합하여 $$\mathcal{L}\cong \mathbf{B}\mathbb{G}_m$$은 stack이다.
 :::
 
-[정리 19](#thm19)은 stack 이론의 출발점을 압축한다. Line bundle은 동형류의 집합 $$\Pic$$으로는 sheaf로 분류되지 않지만, automorphism $$\mathbb{G}_m$$을 함께 기억하는 groupoid 값 함자로 보면 stack $$\mathbf{B}\mathbb{G}_m$$으로 완벽히 분류된다. 그 stack 성질은 [정리 16](#thm16)의 준연접층 하강에서 invertible이라는 국소 성질이 충실평탄 base change로 내려온다는 사실 ([\[스킴\] §충실평탄 하강, ⁋명제 7](/ko/math/scheme_theory/faithfully_flat_descent#prop7))을 더하여 따라온다. 더 일반적인 group $$G$$에 대한 $$\mathbf{B}G$$이나 [예시 10](#ex10)의 moduli CFG $$\mathcal{M}_g$$이 stack인지, 나아가 그것이 algebraic stack이라는 더 강한 기하학적 조건을 만족하는지는 같은 하강 원리를 토대로 이후의 글에서 전개한다.
+[정리 19](#thm19)은 stack 이론의 출발점을 압축한다. Line bundle은 동형류의 집합 $$\Pic$$으로는 sheaf로 분류되지 않지만, automorphism $$\mathbb{G}_m$$을 함께 기억하는 groupoid 값 함자로 보면 stack $$\mathbf{B}\mathbb{G}_m$$으로 완벽히 분류된다. 그 stack 성질은 [정리 16](#thm16)의 준연접층 하강에서 invertible이라는 국소 성질이 충실평탄 base change로 내려온다는 [\[스킴\] §충실평탄 하강, ⁋명제 7](/ko/math/scheme_theory/faithfully_flat_descent#prop7)을 더하여 따라온다. 더 일반적인 group $$G$$에 대한 $$\mathbf{B}G$$이나 [예시 10](#ex10)의 moduli CFG $$\mathcal{M}_g$$이 stack인지, 나아가 그것이 algebraic stack이라는 더 강한 기하학적 조건을 만족하는지는 같은 하강 원리를 토대로 이후의 글에서 전개한다.
 
 ---
 

@@ -20,7 +20,7 @@ $$
 H^k_{\mathrm{dR}}(X, \mathbb{C}) \overset{?}{\cong} \bigoplus_{p+q=k} H^{p,q}_{\bar\partial}(X)
 $$
 
-가 일반 복소다양체에서는 성립하지 않으며, 그것이 성립하려면 추가 기하구조가 필요함을 예고하였다. 그 추가 구조가 바로 Kähler 조건 $$d\omega = 0$$이며 ([§Kähler 다양체, ⁋정의 3](/ko/math/complex_geometry/kahler_manifolds#def3)), 거기서 따라오는 Kähler 항등식 ([§Kähler 다양체, ⁋정리 12](/ko/math/complex_geometry/kahler_manifolds#thm12))이 위 분해를 콤팩트 Kähler 다양체에서 정확히 성립하게 만든다. 이 분해와 그에 동반하는 대칭을 규명하는 것이 Hodge 이론이며, 그것이 콤팩트 Kähler 다양체의 위상에 부과하는 제약이 이 글의 주제이다.
+가 일반 복소다양체에서는 성립하지 않으며, 그것이 성립하려면 추가 기하구조가 필요함을 예고하였다. 그 추가 구조가 바로 Kähler 조건 $$d\omega = 0$$이며 ([§Kähler 다양체, ⁋정의 3](/ko/math/complex_geometry/kahler_manifolds#def3)), 거기서 따라오는 [§Kähler 다양체, ⁋정리 12](/ko/math/complex_geometry/kahler_manifolds#thm12)가 위 분해를 콤팩트 Kähler 다양체에서 정확히 성립하게 만든다. 이 분해와 그에 동반하는 대칭을 규명하는 것이 Hodge 이론이며, 그것이 콤팩트 Kähler 다양체의 위상에 부과하는 제약이 이 글의 주제이다.
 
 핵심 발상은 코호몰로지류마다 표준 대표원을 고르는 것이다. de Rham 코호몰로지류 $$[\alpha] \in H^k_{\mathrm{dR}}(X)$$는 $$\alpha + d\beta$$ 꼴의 닫힌형식 전체로 이루어진 affine 공간이며, 그 가운데 어느 하나를 본받아 류 전체를 다룰 자연스러운 방법이 없다. 그러나 리만 계량을 도입하면 형식들에 길이가 생기고, 각 류에서 $$L^2$$-노름을 최소화하는 유일한 대표원을 고를 수 있다. 이 최소 대표원이 *조화형식<sub>harmonic form</sub>*이며, Laplace 작용소의 핵으로 특징지어진다. 조화형식들의 공간 $$\mathcal{H}^k$$가 코호몰로지를 그대로 실현한다는 것이 Hodge 정리이고, Kähler 조건 아래에서 $$\mathcal{H}^k$$가 $$(p,q)$$-차수로 쪼개진다는 것이 Hodge 분해이다.
 
@@ -182,7 +182,7 @@ $$
 \Delta_\partial = \partial\partial^\ast + \partial^\ast\partial = i\big( \partial(\Lambda\bar\partial - \bar\partial\Lambda) + (\Lambda\bar\partial - \bar\partial\Lambda)\partial \big)
 $$
 
-이다. 이를 전개하고 $$\partial\bar\partial = -\bar\partial\partial$$ ([§Dolbeault 코호몰로지, ⁋명제 3](/ko/math/complex_geometry/dolbeault_cohomology#prop3))를 써서 정리하면 $$\Delta_\partial = \Delta_{\bar\partial}$$가 따라온다. 마찬가지로 $$\bar\partial^\ast = -i[\Lambda, \partial]$$를 $$\Delta_{\bar\partial}$$에 대입해 같은 표현을 얻으면 두 작용소가 같음이 확인된다. 핵심은 $$\partial$$과 $$\bar\partial$$가 반가환하고, $$L$$·$$\Lambda$$와의 교환자가 위 항등식으로 주어진다는 데 있다.
+이다. 이를 전개하고 [§Dolbeault 코호몰로지, ⁋명제 3](/ko/math/complex_geometry/dolbeault_cohomology#prop3)의 $$\partial\bar\partial = -\bar\partial\partial$$를 써서 정리하면 $$\Delta_\partial = \Delta_{\bar\partial}$$가 따라온다. 마찬가지로 $$\bar\partial^\ast = -i[\Lambda, \partial]$$를 $$\Delta_{\bar\partial}$$에 대입해 같은 표현을 얻으면 두 작용소가 같음이 확인된다. 핵심은 $$\partial$$과 $$\bar\partial$$가 반가환하고, $$L$$·$$\Lambda$$와의 교환자가 위 항등식으로 주어진다는 데 있다.
 
 다음으로 $$\Delta_d = \Delta_\partial + \Delta_{\bar\partial}$$를 본다. $$d = \partial + \bar\partial$$, $$d^\ast = \partial^\ast + \bar\partial^\ast$$이므로
 
@@ -211,7 +211,7 @@ $$
 로, 곧 $$(p,q)$$-차수의 조화형식이 대표하는 de Rham 코호몰로지류들의 공간으로 정의한다. 그 복소차원 $$h^{p,q}(X) = \dim_{\mathbb{C}} H^{p,q}(X)$$를 *Hodge number<sub>Hodge 수</sub>*라 한다.
 :::
 
-[정리 7](#thm7)에 의해 $$\mathcal{H}^{p,q}_{\bar\partial}(X) \subseteq \mathcal{H}^{p+q}_d(X)$$이므로, 각 $$(p,q)$$-조화형식은 닫힌형식이고 de Rham 류를 잘 정의한다. 또 콤팩트 Hermitian 다양체에서 Dolbeault 코호몰로지가 $$\bar\partial$$-조화형식으로 실현되므로 ([정리 6](#thm6)의 $$\bar\partial$$-판본), $$H^{p,q}(X)$$는 $$H^{p,q}_{\bar\partial}(X)$$와 자연히 동형이다. 곧 $$H^{p,q}(X) \cong H^{p,q}_{\bar\partial}(X) \cong H^q(X, \Omega^p)$$로, 마지막 동형은 Dolbeault 정리 ([§Dolbeault 코호몰로지, ⁋정리 9](/ko/math/complex_geometry/dolbeault_cohomology#thm9))에서 온다. 이 동일시가 Hodge 수가 [§Dolbeault 코호몰로지, ⁋정의 4](/ko/math/complex_geometry/dolbeault_cohomology#def4)의 Hodge 수와 일치함을 보장한다.
+[정리 7](#thm7)에 의해 $$\mathcal{H}^{p,q}_{\bar\partial}(X) \subseteq \mathcal{H}^{p+q}_d(X)$$이므로, 각 $$(p,q)$$-조화형식은 닫힌형식이고 de Rham 류를 잘 정의한다. 또 콤팩트 Hermitian 다양체에서 Dolbeault 코호몰로지가 $$\bar\partial$$-조화형식으로 실현되므로 ([정리 6](#thm6)의 $$\bar\partial$$-판본), $$H^{p,q}(X)$$는 $$H^{p,q}_{\bar\partial}(X)$$와 자연히 동형이다. 곧 $$H^{p,q}(X) \cong H^{p,q}_{\bar\partial}(X) \cong H^q(X, \Omega^p)$$로, 마지막 동형은 [§Dolbeault 코호몰로지, ⁋정리 9](/ko/math/complex_geometry/dolbeault_cohomology#thm9)에서 온다. 이 동일시가 Hodge 수가 [§Dolbeault 코호몰로지, ⁋정의 4](/ko/math/complex_geometry/dolbeault_cohomology#def4)의 Hodge 수와 일치함을 보장한다.
 
 ::: 정리 9 (Hodge 분해와 Hodge 대칭)
 $$X$$를 콤팩트 Kähler 다양체라 하자. 그러면 각 $$k$$에 대하여 직합 분해
@@ -236,7 +236,7 @@ $$
 H^k_{\mathrm{dR}}(X, \mathbb{C}) = \bigoplus_{p+q=k} H^{p,q}(X)
 $$
 
-이다. 둘째 동형 $$H^{p,q}(X) \cong H^q(X, \Omega^p)$$은 $$\mathcal{H}^{p,q}_{\bar\partial}(X) \cong H^{p,q}_{\bar\partial}(X)$$ ([정리 6](#thm6)의 $$\bar\partial$$-판)과 Dolbeault 정리 ([§Dolbeault 코호몰로지, ⁋정리 9](/ko/math/complex_geometry/dolbeault_cohomology#thm9))를 잇대어 얻는다.
+이다. 둘째 동형 $$H^{p,q}(X) \cong H^q(X, \Omega^p)$$은 $$\mathcal{H}^{p,q}_{\bar\partial}(X) \cong H^{p,q}_{\bar\partial}(X)$$ ([정리 6](#thm6)의 $$\bar\partial$$-판)과 [§Dolbeault 코호몰로지, ⁋정리 9](/ko/math/complex_geometry/dolbeault_cohomology#thm9)를 잇대어 얻는다.
 
 대칭을 본다. 계량 $$g$$가 실계량이고 $$X$$가 Kähler이므로 Laplace 작용소 $$\Delta_d$$는 실작용소이고 복소켤레와 교환한다. 곧 $$\alpha$$가 조화이면 $$\bar\alpha$$도 조화이다. 한편 복소켤레는 $$(p,q)$$-형식을 $$(q,p)$$-형식으로 보낸다 (좌표에서 $$\overline{dz_I \wedge d\bar{z}_J} = d\bar{z}_I \wedge dz_J$$이므로 정칙·반정칙 인덱스가 맞바뀐다). 따라서 켤레사상 $$\alpha \mapsto \bar\alpha$$는 $$\mathcal{H}^{p,q}_{\bar\partial}(X)$$를 $$\mathcal{H}^{q,p}_{\bar\partial}(X)$$로 보내는 $$\mathbb{R}$$-선형 동형(반선형 $$\mathbb{C}$$-동형)이다. 이것이 코호몰로지 수준에서 $$\overline{H^{p,q}(X)} = H^{q,p}(X)$$를 준다. 반선형 동형은 복소차원을 보존하므로 $$h^{p,q}(X) = \dim_{\mathbb{C}} H^{p,q}(X) = \dim_{\mathbb{C}} H^{q,p}(X) = h^{q,p}(X)$$이다.
 :::
@@ -260,7 +260,7 @@ $$
 ::: 증명
 [정리 9](#thm9)의 직합 분해에서 차원을 세면 $$b_k(X) = \dim_{\mathbb{C}} H^k_{\mathrm{dR}}(X, \mathbb{C}) = \sum_{p+q=k} \dim_{\mathbb{C}} H^{p,q}(X) = \sum_{p+q=k} h^{p,q}(X)$$이다.
 
-홀수 차수의 경우 $$k = 2l+1$$로 두면, 합 $$\sum_{p+q=2l+1} h^{p,q}$$의 항들은 $$p \neq q$$인 쌍 $$(p,q)$$로만 이루어진다 ($$p + q$$가 홀수라 $$p = q$$가 불가능). 이 항들은 Hodge 대칭 $$h^{p,q} = h^{q,p}$$ ([정리 9](#thm9))에 의해 $$(p,q)$$와 $$(q,p)$$가 같은 값을 갖는 쌍으로 묶이며, 두 인덱스가 서로 다르므로 각 쌍이 서로 다른 두 항을 준다. 따라서
+홀수 차수의 경우 $$k = 2l+1$$로 두면, 합 $$\sum_{p+q=2l+1} h^{p,q}$$의 항들은 $$p \neq q$$인 쌍 $$(p,q)$$로만 이루어진다 ($$p + q$$가 홀수라 $$p = q$$가 불가능). 이 항들은 [정리 9](#thm9)의 Hodge 대칭 $$h^{p,q} = h^{q,p}$$에 의해 $$(p,q)$$와 $$(q,p)$$가 같은 값을 갖는 쌍으로 묶이며, 두 인덱스가 서로 다르므로 각 쌍이 서로 다른 두 항을 준다. 따라서
 
 $$
 b_{2l+1}(X) = \sum_{p+q=2l+1} h^{p,q}(X) = 2 \sum_{\substack{p+q=2l+1 \\ p < q}} h^{p,q}(X)
@@ -271,7 +271,7 @@ $$
 
 가장 단순한 경우 $$k = 1$$에서 $$b_1(X) = h^{1,0}(X) + h^{0,1}(X) = 2 h^{1,0}(X)$$로, 첫 Betti 수가 정칙 1-형식 공간 차원의 두 배가 된다. 이 짝수성은 콤팩트 복소다양체가 Kähler인지를 가르는 가장 손쉬운 장애이다. Hopf 곡면 $$S^1 \times S^3$$은 콤팩트 복소다양체이면서 $$b_1 = 1$$이 홀수이므로, 어떤 Hermitian 계량으로도 Kähler 구조를 가질 수 없다 ([§Kähler 다양체, ⁋명제 11](/ko/math/complex_geometry/kahler_manifolds#prop11)이 짝수 차수에 준 장애를 홀수 차수로 보완한다). 이로써 Kähler 조건은 짝수 Betti 수의 양성($$b_{2k} \geq 1$$)과 홀수 Betti 수의 짝수성이라는 두 위상적 제약을 동시에 부과한다.
 
-Hodge 수들을 차수에 따라 마름모꼴로 배열한 것을 Hodge 다이아몬드라 부르며, 이는 한 콤팩트 Kähler 다양체의 코호몰로지 구조를 한눈에 담는다. $$h^{p,q}$$를 $$(p,q)$$ 위치에 두고 위에서 아래로 $$k = p + q$$가 커지도록 쌓으면, Hodge 대칭은 수직축에 대한 좌우 대칭으로, 복소차원 $$n$$의 Poincaré 쌍대성 ([\[대수적 위상수학\] §푸앵카레 쌍대성, ⁋정리 11](/ko/math/algebraic_topology/Poincare_duality#thm11))에서 오는 $$h^{p,q} = h^{n-p, n-q}$$는 중심에 대한 점대칭으로 나타난다. 아래 그림은 복소곡면($$n = 2$$)의 Hodge 다이아몬드를 보여준다.
+Hodge 수들을 차수에 따라 마름모꼴로 배열한 것을 Hodge 다이아몬드라 부르며, 이는 한 콤팩트 Kähler 다양체의 코호몰로지 구조를 한눈에 담는다. $$h^{p,q}$$를 $$(p,q)$$ 위치에 두고 위에서 아래로 $$k = p + q$$가 커지도록 쌓으면, Hodge 대칭은 수직축에 대한 좌우 대칭으로, 복소차원 $$n$$의 [\[대수적 위상수학\] §푸앵카레 쌍대성, ⁋정리 11](/ko/math/algebraic_topology/Poincare_duality#thm11)에서 오는 $$h^{p,q} = h^{n-p, n-q}$$는 중심에 대한 점대칭으로 나타난다. 아래 그림은 복소곡면($$n = 2$$)의 Hodge 다이아몬드를 보여준다.
 
 ![복소곡면 n=2의 Hodge 다이아몬드: h^{p,q}를 마름모꼴로 배열, 수직축 좌우대칭이 Hodge 대칭](/assets/images/Math/Complex_Geometry/Hodge_Theory-1.svg){:style="width:22.97em" class="invert" .align-center}
 
@@ -311,7 +311,7 @@ $$
 로 정의한다. 그 $$L^2$$-수반작용소 $$\Lambda : H^k(X, \mathbb{C}) \to H^{k-2}(X, \mathbb{C})$$를 *contraction operator<sub>축약 연산자</sub>*라 한다.
 :::
 
-연산자 $$L$$이 코호몰로지에서 잘 정의됨은 $$\omega$$가 닫힌형식이라 닫힌형식을 닫힌형식으로, 완전형식을 완전형식으로 보내기 때문이다. $$L$$은 차수를 $$2$$씩 올리며, $$\omega$$가 실 $$(1,1)$$-형식이므로 $$H^{p,q}$$를 $$H^{p+1, q+1}$$로 보내 Hodge 분해와 어울린다. 형식 수준에서 $$L$$과 $$\Lambda = L^\ast$$는 [§Kähler 다양체, ⁋정리 12](/ko/math/complex_geometry/kahler_manifolds#thm12)의 Kähler 항등식에 나온 바로 그 작용소들이며, 코호몰로지로 내려와 다음 정리를 만족한다.
+연산자 $$L$$이 코호몰로지에서 잘 정의됨은 $$\omega$$가 닫힌형식이라 닫힌형식을 닫힌형식으로, 완전형식을 완전형식으로 보내기 때문이다. $$L$$은 차수를 $$2$$씩 올리며, $$\omega$$가 실 $$(1,1)$$-형식이므로 $$H^{p,q}$$를 $$H^{p+1, q+1}$$로 보내 Hodge 분해와 어울린다. 형식 수준에서 $$L$$과 $$\Lambda = L^\ast$$는 [§Kähler 다양체, ⁋정리 12](/ko/math/complex_geometry/kahler_manifolds#thm12)에 나온 바로 그 작용소들이며, 코호몰로지로 내려와 다음 정리를 만족한다.
 
 ::: 정리 13 (Hard Lefschetz 정리)
 $$X$$를 콤팩트 Kähler 다양체, $$n = \dim_{\mathbb{C}} X$$라 하자. 그러면 각 $$0 \leq k \leq n$$에 대하여 $$L$$의 거듭제곱

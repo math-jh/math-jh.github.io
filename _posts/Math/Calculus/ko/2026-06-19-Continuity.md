@@ -11,6 +11,7 @@ sidebar:
 date: 2026-06-19
 weight: 2
 
+
 ---
 
 우리는 [§함수의 극한](/ko/math/calculus/functions_and_limits)에서 극한을 엄밀하게 정의하였으니, 그 위에서 연속성을 정의한다.
@@ -43,7 +44,7 @@ $$\lvert x - a\rvert < \delta\Rightarrow\lvert f(x) - f(a)\rvert < \epsilon$$
 
 ## 연속함수의 연산
 
-연속은 극한값이 함숫값과 일치한다는 진술이므로, 극한의 사칙연산법칙 ([§함수의 극한, ⁋명제 5](/ko/math/calculus/functions_and_limits#prop5))이 그대로 연속함수의 연산으로 옮겨 온다.
+연속은 극한값이 함숫값과 일치한다는 진술이므로, [§함수의 극한, ⁋명제 5](/ko/math/calculus/functions_and_limits#prop5)이 그대로 연속함수의 연산으로 옮겨 온다.
 
 ::: 명제 2
 $$f$$와 $$g$$가 $$a$$에서 연속이면 $$f+g$$, $$cf$$ ($$c$$는 상수), $$fg$$도 $$a$$에서 연속이고, $$g(a) \neq 0$$이면 $$f/g$$도 $$a$$에서 연속이다. 또한 $$f$$가 $$a$$에서 연속이고 $$g$$가 $$f(a)$$에서 연속이면 합성함수 $$g \circ f$$는 $$a$$에서 연속이다.

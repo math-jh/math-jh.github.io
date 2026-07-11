@@ -94,7 +94,7 @@ $$\iota_{X_t}\omega_t=-\alpha\tag{$\ast$}$$
 
 $$\frac{d}{dt}(\phi_t^\ast\omega_t)=\phi_t^\ast\left(\mathcal{L}_{X_t}\omega_t+\frac{d\omega_t}{dt}\right)$$
 
-이다. 여기서 첫째 항은 흐름에 의한 pullback의 시간미분이 Lie derivative로 주어진다는 사실에서, 둘째 항은 $$\omega_t$$ 자체가 $$t$$에 의존하는 부분에서 나온다. 이제 Cartan 공식 $$\mathcal{L}_{X_t}=d\iota_{X_t}+\iota_{X_t}d$$ ([\[미분다양체\] §리 미분, ⁋명제 4](/ko/math/manifolds/Lie_derivative#prop4))를 적용하고, $$\omega_t$$가 closed이므로 $$\iota_{X_t}(d\omega_t)=0$$임과 $$\frac{d\omega_t}{dt}=\omega-\omega_0=d\alpha$$임을 쓰면
+이다. 여기서 첫째 항은 흐름에 의한 pullback의 시간미분이 Lie derivative로 주어진다는 사실에서, 둘째 항은 $$\omega_t$$ 자체가 $$t$$에 의존하는 부분에서 나온다. 이제 [\[미분다양체\] §리 미분, ⁋명제 4](/ko/math/manifolds/Lie_derivative#prop4)의 Cartan 공식 $$\mathcal{L}_{X_t}=d\iota_{X_t}+\iota_{X_t}d$$를 적용하고, $$\omega_t$$가 closed이므로 $$\iota_{X_t}(d\omega_t)=0$$임과 $$\frac{d\omega_t}{dt}=\omega-\omega_0=d\alpha$$임을 쓰면
 
 $$\begin{aligned}
 \mathcal{L}_{X_t}\omega_t+\frac{d\omega_t}{dt}&=d(\iota_{X_t}\omega_t)+\iota_{X_t}(d\omega_t)+d\alpha\\
@@ -141,7 +141,7 @@ $$\frac{d\omega_t}{dt}=d\alpha_t$$
 
 $$\iota_{X_t}\omega_t=-\alpha_t$$
 
-로 유일하게 정의한다. $$M$$이 compact이므로 $$X_t$$의 흐름 $$\phi_t$$는 모든 $$t\in[0,1]$$에 대해 $$M$$ 전체에서 정의된다. 이제 [정리 2](#thm2)의 5단계와 동일한 계산을 수행하면, Cartan 공식 ([\[미분다양체\] §리 미분, ⁋명제 4](/ko/math/manifolds/Lie_derivative#prop4))과 $$d\omega_t=0$$에 의하여
+로 유일하게 정의한다. $$M$$이 compact이므로 $$X_t$$의 흐름 $$\phi_t$$는 모든 $$t\in[0,1]$$에 대해 $$M$$ 전체에서 정의된다. 이제 [정리 2](#thm2)의 5단계와 동일한 계산을 수행하면, [\[미분다양체\] §리 미분, ⁋명제 4](/ko/math/manifolds/Lie_derivative#prop4)의 Cartan 공식과 $$d\omega_t=0$$에 의하여
 
 $$\frac{d}{dt}(\phi_t^\ast\omega_t)=\phi_t^\ast\left(\mathcal{L}_{X_t}\omega_t+\frac{d\omega_t}{dt}\right)=\phi_t^\ast\,d(\iota_{X_t}\omega_t+\alpha_t)=\phi_t^\ast\,d(0)=0$$
 

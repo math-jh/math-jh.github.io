@@ -43,7 +43,7 @@ $$\mathbb{Z}[i]$$는 유클리드 정역이다. 즉 임의의 $$\alpha, \beta \i
 
 $$N(\rho) = N(\beta)\,N\!\left(\frac{\alpha}{\beta} - \kappa\right) = N(\beta)\bigl((u-m)^2 + (v-n)^2\bigr) \leq N(\beta)\left(\tfrac14 + \tfrac14\right) = \tfrac12 N(\beta) < N(\beta)$$
 
-이다. 유클리드 나눗셈이 성립하면 $$\mathbb{Z}$$에서와 똑같은 논증 ([§유클리드 호제법과 Bézout 항등식](/ko/math/number_theory/euclidean_algorithm), [§소수와 산술의 기본정리](/ko/math/number_theory/primes))으로 최대공약수·Bézout·유일인수분해가 모두 따라온다.
+이다. 유클리드 나눗셈이 성립하면 $$\mathbb{Z}$$에서와 똑같은 논증으로 ([§유클리드 호제법과 Bézout 항등식](/ko/math/number_theory/euclidean_algorithm), [§소수와 산술의 기본정리](/ko/math/number_theory/primes)) 최대공약수·Bézout·유일인수분해가 모두 따라온다.
 :::
 
 ## 두 제곱수의 합
@@ -55,7 +55,7 @@ $$N(\rho) = N(\beta)\,N\!\left(\frac{\alpha}{\beta} - \kappa\right) = N(\beta)\b
 :::
 
 ::: 증명
-$$p \equiv 3 \pmod 4$$이면, $$x^2 + y^2 \equiv 0 \pmod p$$에서 $$p \nmid x$$라면 $$(xy^{-1})^2 \equiv -1 \pmod p$$가 되어 $$-1$$이 이차 잉여여야 하는데, $$\left(\frac{-1}{p}\right) = (-1)^{(p-1)/2} = -1$$ ([§이차 잉여, ⁋따름정리 5](/ko/math/number_theory/quadratic_residues#cor5))이므로 불가능하다. 따라서 $$p \mid x, p\mid y$$이고 $$x^2 + y^2$$은 $$p^2$$의 배수가 되어 $$p$$와 같을 수 없다.
+$$p \equiv 3 \pmod 4$$이면, $$x^2 + y^2 \equiv 0 \pmod p$$에서 $$p \nmid x$$라면 $$(xy^{-1})^2 \equiv -1 \pmod p$$가 되어 $$-1$$이 이차 잉여여야 하는데, $$\left(\frac{-1}{p}\right) = (-1)^{(p-1)/2} = -1$$이므로 불가능하다. ([§이차 잉여, ⁋따름정리 5](/ko/math/number_theory/quadratic_residues#cor5)) 따라서 $$p \mid x, p\mid y$$이고 $$x^2 + y^2$$은 $$p^2$$의 배수가 되어 $$p$$와 같을 수 없다.
 
 $$p \equiv 1 \pmod 4$$이면 $$\left(\frac{-1}{p}\right) = 1$$이므로 $$m^2 \equiv -1 \pmod p$$인 $$m$$이 있다. 그러면 $$p \mid m^2 + 1 = (m+i)(m-i)$$이지만, $$p$$는 $$\tfrac{m\pm i}{p} = \tfrac{m}{p} \pm \tfrac1p i \notin \mathbb{Z}[i]$$이므로 $$m + i$$도 $$m - i$$도 나누지 못한다. 즉 $$p$$는 $$\mathbb{Z}[i]$$에서 소수가 아니어서 $$p = \pi\overline{\pi}$$로 비단원 인수분해되고, 노름을 취하면 $$p^2 = N(\pi)^2$$에서 $$N(\pi) = p$$, 곧 $$\pi = x + yi$$에 대해 $$p = x^2 + y^2$$이다.
 :::

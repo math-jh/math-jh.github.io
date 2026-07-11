@@ -107,7 +107,7 @@ Smooth variety $$X$$ 위의 reduced effective divisor $$D \subset X$$가 *simple
 먼저 임의의 smooth variety와 SNC divisor에 대해 logarithmic pole만 허용한 form들의 sheaf를 정의한 뒤 (Saito-Deligne의 표준 정의), 이를 toric variety의 toric boundary에 적용한다.
 
 ::: 정의 6
-Smooth variety $$X$$와 SNC divisor $$D \subset X$$ ([정의 5](#def5))의 쌍 $$(X, D)$$에 대해, *logarithmic cotangent sheaf<sub>로그 코탄젠트 층</sub>* $$\Omega^1_X(\log D)$$는 $$D$$ 바깥에서 holomorphic이며 $$D$$를 따라서는 1차 이하의 극만 갖는 rational 1-form들로 이루어진 $$\mathcal{O}_X$$-module subsheaf이다. 추상적으로 affine open $$U \subset X$$에 대해
+Smooth variety $$X$$와 [정의 5](#def5)의 SNC divisor $$D \subset X$$의 쌍 $$(X, D)$$에 대해, *logarithmic cotangent sheaf<sub>로그 코탄젠트 층</sub>* $$\Omega^1_X(\log D)$$는 $$D$$ 바깥에서 holomorphic이며 $$D$$를 따라서는 1차 이하의 극만 갖는 rational 1-form들로 이루어진 $$\mathcal{O}_X$$-module subsheaf이다. 추상적으로 affine open $$U \subset X$$에 대해
 
 $$\Omega^1_X(\log D)(U) = \{\omega \in \Omega^1_{\mathbb{C}(X)/\mathbb{C}}(U) \mid \omega \text{와 } d\omega \text{가 } U \text{ 위에서 } D\text{를 따라 1차 이하의 극을 가짐}\}$$
 
@@ -118,7 +118,7 @@ $$\frac{dz_1}{z_1}, \ldots, \frac{dz_k}{z_k}, dz_{k+1}, \ldots, dz_n$$
 으로 자유롭게 생성되는 free $$\mathcal{O}_X$$-module이다. 더 높은 차수의 logarithmic form sheaf는 외적으로 $$\Omega^p_X(\log D) := \bigwedge^p \Omega^1_X(\log D)$$로 정의한다.
 :::
 
-[§아핀 토릭 다양체, ⁋명제 9](/ko/math/toric_geometry/affine_toric_varieties#prop9)에서 보았듯 smooth toric variety $$X_\Sigma$$의 affine chart $$U_\sigma$$는 적당한 좌표에서 $$\mathbb{C}^k \times (\mathbb{C}^\ast)^{n-k}$$이고 boundary는 좌표 hyperplane $$\{\x_1 = 0\}, \ldots, \{\x_k = 0\}$$의 합이므로, smooth toric variety의 toric boundary는 자동으로 SNC ([정의 5](#def5))이며 [정의 6](#def6)의 logarithmic cotangent sheaf $$\Omega^p_{X_\Sigma}(\log D)$$가 잘 정의된다.
+[§아핀 토릭 다양체, ⁋명제 9](/ko/math/toric_geometry/affine_toric_varieties#prop9)에서 보았듯 smooth toric variety $$X_\Sigma$$의 affine chart $$U_\sigma$$는 적당한 좌표에서 $$\mathbb{C}^k \times (\mathbb{C}^\ast)^{n-k}$$이고 boundary는 좌표 hyperplane $$\{\x_1 = 0\}, \ldots, \{\x_k = 0\}$$의 합이므로, smooth toric variety의 toric boundary는 자동으로 [정의 5](#def5)의 SNC divisor이며 [정의 6](#def6)의 logarithmic cotangent sheaf $$\Omega^p_{X_\Sigma}(\log D)$$가 잘 정의된다.
 
 ::: 정의 7
 Toric variety $$X_\Sigma$$의 *toric boundary<sub>토릭 경계</sub>* $$D \subset X_\Sigma$$를

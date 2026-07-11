@@ -68,7 +68,7 @@ Locally noetherian scheme $$X$$ 위의 effective Cartier divisor $$\iota:Z\hookr
 이제 이를 여러 번 잘라낸 일반적인 경우를 정의한다. 핵심은 자르는 section들이 단순한 non-zerodivisor를 넘어 *정칙열*을 이루어야 한다는 것이다.
 
 ::: 정의 4
-Locally noetherian scheme $$X$$의 closed embedding $$\iota:Z\hookrightarrow X$$가 codimension $$k$$의 *완전교차<sub>complete intersection</sub>*, 혹은 codimension $$k$$의 *regular embedding*이라는 것은 $$X$$의 affine open cover $$\{U_i=\Spec A_i\}$$가 존재하여, 각각의 $$U_i$$에 대해 $$Z\cap U_i=Z(s_{i,1},\ldots, s_{i,k})$$이고 $$(s_{i,1},\ldots, s_{i,k})$$가 $$A_i$$-regular sequence ([\[가환대수학\] §정칙국소환, ⁋정의 2](/ko/math/commutative_algebra/regular_local_rings#def2))인 것이다.
+Locally noetherian scheme $$X$$의 closed embedding $$\iota:Z\hookrightarrow X$$가 codimension $$k$$의 *완전교차<sub>complete intersection</sub>*, 혹은 codimension $$k$$의 *regular embedding*이라는 것은 $$X$$의 affine open cover $$\{U_i=\Spec A_i\}$$가 존재하여, 각각의 $$U_i$$에 대해 $$Z\cap U_i=Z(s_{i,1},\ldots, s_{i,k})$$이고 $$(s_{i,1},\ldots, s_{i,k})$$가 [\[가환대수학\] §정칙국소환, ⁋정의 2](/ko/math/commutative_algebra/regular_local_rings#def2)의 의미에서 $$A_i$$-regular sequence인 것이다.
 :::
 
 엄밀히는 def4의 성질은 국소적으로만 정칙열을 요구하므로 *국소 완전교차<sub>local complete intersection</sub>*라 부르는 것이 정확하다. 한편 $$k=1$$의 완전교차는 정확히 effective Cartier divisor인데, regular sequence의 첫 원소는 그저 $$(s)$$가 proper이도록 하는 non-zerodivisor이기 때문이다. 다음 명제는 완전교차가 그 이름값을 한다는 것, 즉 codimension이 자르는 방정식의 개수와 정확히 일치함을 보여준다.

@@ -232,7 +232,7 @@ $$(X\times_S Y)(T)\cong \{(\psi_X, \psi_Y)\in X(T)\times Y(T)\mid \psi_X, \psi_Y
 이다. 자연스러움은 $$g: T' \rightarrow T$$에 대하여 양변의 끌어당김이 일치한다는 것으로, universal property의 자연스러움으로부터 따라온다. 
 :::
 
-[명제 13](#prop13)은 fiber product를 함자 수준에서 "점별로 fiber product를 취하는" 연산으로 해석하게 해준다. 이 관점에서 fiber product의 존재성 증명 ([§올곱, ⁋정리 8](/ko/math/scheme_theory/fiber_products#thm8))은, 점별로 자명하게 정의되는 함자 $$T\mapsto X(T)\times_{S(T)} Y(T)$$가 representable임을 보이는 일로 재해석된다. 특히 product $$X\times Y=X\times_{\Spec \mathbb{Z}} Y$$의 경우에는 단순히 $$(X\times Y)(T)\cong X(T)\times Y(T)$$이 된다. 
+[명제 13](#prop13)은 fiber product를 함자 수준에서 "점별로 fiber product를 취하는" 연산으로 해석하게 해준다. 이 관점에서 [§올곱, ⁋정리 8](/ko/math/scheme_theory/fiber_products#thm8)의 존재성 증명은, 점별로 자명하게 정의되는 함자 $$T\mapsto X(T)\times_{S(T)} Y(T)$$가 representable임을 보이는 일로 재해석된다. 특히 product $$X\times Y=X\times_{\Spec \mathbb{Z}} Y$$의 경우에는 단순히 $$(X\times Y)(T)\cong X(T)\times Y(T)$$이 된다. 
 
 ## Group scheme
 
@@ -270,7 +270,7 @@ $$\GL_n=\Spec \mathbb{Z}[\x_{11},\ldots, \x_{nn}, \det{}^{-1}]$$
 
 [예시 15](#ex15)의 각 경우에서 group 구조는 test scheme $$T$$에 대해 점별로 통상적인 대수 구조를 주는 것만으로 정의되었으며, 별도의 가환 도식을 그릴 필요가 없었다. 특히 $$\mu_n$$의 경우, $$\mathbb{Z}[\x]/(\x^n-1)$$이 $$n$$이 base ring에서 가역이 아닐 때에는 reduced가 아닐 수 있으므로, 이는 고전적인 variety의 언어로는 잘 포착되지 않는 nilpotent를 가진 group scheme의 예이다. 이러한 대상까지 자연스럽게 다룰 수 있다는 점이 함자적 관점과 scheme 언어의 강점이다. 
 
-마지막으로, 위의 모든 구성은 base scheme $$S$$를 고정한 상대적인 상황으로 일반화된다. 즉 임의의 함자 $$F:(\Sch_{/S})^\op \rightarrow \Set$$을 다룰 수 있으며, 이 경우 representability는 $$S$$-scheme의 존재로 묻게 된다. Affine space, 사영공간, Grassmannian, group scheme의 함자적 정의는 모두 $$\Spec \mathbb{Z}$$ 위에서 주어졌으므로, 임의의 base $$S$$ 위로 base change ([§올곱, ⁋예시 9](/ko/math/scheme_theory/fiber_products#ex9))하여 상대적인 버전 $$\mathbb{A}^n_S, \mathbb{P}^n_S, \Gr(k,n)_S, \GL_{n,S}$$를 얻는다. 점함자의 언어에서 이는 단지 test scheme을 $$\Sch_{/S}$$로 제한하는 것에 해당하며, 따라서 절대적인 경우와 상대적인 경우가 하나의 틀 안에서 통일적으로 다루어진다. 
+마지막으로, 위의 모든 구성은 base scheme $$S$$를 고정한 상대적인 상황으로 일반화된다. 즉 임의의 함자 $$F:(\Sch_{/S})^\op \rightarrow \Set$$을 다룰 수 있으며, 이 경우 representability는 $$S$$-scheme의 존재로 묻게 된다. Affine space, 사영공간, Grassmannian, group scheme의 함자적 정의는 모두 $$\Spec \mathbb{Z}$$ 위에서 주어졌으므로, 임의의 base $$S$$ 위로 base change하여 상대적인 버전 $$\mathbb{A}^n_S, \mathbb{P}^n_S, \Gr(k,n)_S, \GL_{n,S}$$를 얻는다. ([§올곱, ⁋예시 9](/ko/math/scheme_theory/fiber_products#ex9)) 점함자의 언어에서 이는 단지 test scheme을 $$\Sch_{/S}$$로 제한하는 것에 해당하며, 따라서 절대적인 경우와 상대적인 경우가 하나의 틀 안에서 통일적으로 다루어진다. 
 
 ---
 

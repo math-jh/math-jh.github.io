@@ -26,14 +26,14 @@ $$a \equiv b \pmod{n}$$
 으로 적는다. $$n$$을 *법<sub>modulus</sub>*이라 한다.
 :::
 
-나눗셈 정리 ([§나눗셈과 최대공약수, ⁋정리 3](/ko/math/number_theory/divisibility#thm3))에 의해 $$a \equiv b \pmod n$$인 것은 $$a$$와 $$b$$를 $$n$$으로 나눈 나머지가 같은 것과 동치이다. 즉 합동은 "나머지가 같음"을 그대로 옮긴 것이다.
+[§나눗셈과 최대공약수, ⁋정리 3](/ko/math/number_theory/divisibility#thm3)에 의해 $$a \equiv b \pmod n$$인 것은 $$a$$와 $$b$$를 $$n$$으로 나눈 나머지가 같은 것과 동치이다. 즉 합동은 "나머지가 같음"을 그대로 옮긴 것이다.
 
 ::: 명제 2
 법 $$n$$에 대한 합동은 정수 위의 동치관계이다. 즉 반사적($$a \equiv a$$), 대칭적($$a\equiv b \Rightarrow b \equiv a$$), 추이적($$a \equiv b,\ b\equiv c \Rightarrow a \equiv c$$)이다.
 :::
 
 ::: 증명
-$$n \mid 0 = a - a$$이므로 반사적이다. $$n \mid (a-b)$$이면 $$n \mid (b - a)$$이므로 대칭적이다. $$n \mid (a-b)$$이고 $$n \mid (b-c)$$이면 선형결합 성질 ([§나눗셈과 최대공약수, ⁋명제 2](/ko/math/number_theory/divisibility#prop2))에 의해 $$n \mid (a - c)$$이므로 추이적이다.
+$$n \mid 0 = a - a$$이므로 반사적이다. $$n \mid (a-b)$$이면 $$n \mid (b - a)$$이므로 대칭적이다. $$n \mid (a-b)$$이고 $$n \mid (b-c)$$이면 [§나눗셈과 최대공약수, ⁋명제 2](/ko/math/number_theory/divisibility#prop2)의 선형결합 성질에 의해 $$n \mid (a - c)$$이므로 추이적이다.
 :::
 
 ## 합동의 연산
@@ -91,7 +91,7 @@ $$\gcd(c, n) = 1$$이면, $$ca \equiv cb \pmod n$$에서 $$a \equiv b \pmod n$$�
 :::
 
 ::: 증명
-$$ca \equiv cb$$이면 정의에 의해 $$n \mid c(a - b)$$이다. $$\gcd(c, n) = 1$$이므로 Bézout 항등식 ([§유클리드 호제법과 Bézout 항등식, ⁋정리 3](/ko/math/number_theory/euclidean_algorithm#thm3))으로 $$cx + ny = 1$$인 정수 $$x, y$$가 존재한다. 이 등식의 양변에 $$a - b$$를 곱하면
+$$ca \equiv cb$$이면 정의에 의해 $$n \mid c(a - b)$$이다. $$\gcd(c, n) = 1$$이므로 [§유클리드 호제법과 Bézout 항등식, ⁋정리 3](/ko/math/number_theory/euclidean_algorithm#thm3)으로 $$cx + ny = 1$$인 정수 $$x, y$$가 존재한다. 이 등식의 양변에 $$a - b$$를 곱하면
 
 $$\begin{aligned}
 a - b &= (cx + ny)(a - b) \\
@@ -126,7 +126,7 @@ $$ax \equiv 1$$이고 $$ax' \equiv 1 \pmod n$$이라 하자. 그러면
 
 $$ax \equiv ax' \pmod n$$
 
-이고, $$\gcd(a, n) = 1$$이므로 소거법칙 ([명제 6](#prop6))으로 $$a$$를 소거하여 $$x \equiv x' \pmod n$$, 곧 $$[x] = [x']$$을 얻는다.
+이고, $$\gcd(a, n) = 1$$이므로 [명제 6](#prop6)으로 $$a$$를 소거하여 $$x \equiv x' \pmod n$$, 곧 $$[x] = [x']$$을 얻는다.
 :::
 
 이 유일한 잉여류를 $$a$$의 *법 $$n$$에서의 역원*이라 하고 $$a^{-1} \pmod n$$으로 적는다. 역원을 실제로 구하는 일은 Bézout 계수 $$x$$를 찾는 일, 곧 확장 유클리드 호제법을 돌리는 일과 같다.

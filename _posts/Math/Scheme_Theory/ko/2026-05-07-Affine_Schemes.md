@@ -147,7 +147,7 @@ $$\rho_{ji}: S(f_j)^{-1}(A) \rightarrow S(f_i)^{-1}(A)$$
 을 canonical morphism $$A\rightarrow S(f_i)^{-1}(A)$$에 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)을 적용하여 얻어지는 함수로 정의하자. 그럼 이들 데이터는 [\[위상수학\] §층, ⁋명제 8](/ko/math/topology/sheaves#prop8)의 두 조건을 만족하고, 따라서 $$\mathcal{F}$$를 확장하는 $$\Spec A$$의 ($$\cRing$$-valued) sheaf가 유일하게 결정된다. 
 :::
 ::: 증명
-$$\rho_{ji}$$들이 restriction map의 조건([\[위상수학\] §준층, ⁋정의 2](/ko/math/topology/presheaves#def2))을 만족하는 것은 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)의 universal property로부터 자명하다. 여기에서 $$\rho_{ji}: S(f_j)^{-1}(A) \rightarrow S(f_i)^{-1}(A)$$는, [보조정리 5](#lem5)에 의하여, 단순히 $$S(f_j)^{-1}(A)$$의 원소를 다음의 꼴
+$$\rho_{ji}$$들이 [\[위상수학\] §준층, ⁋정의 2](/ko/math/topology/presheaves#def2)의 restriction map의 조건을 만족하는 것은 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)의 universal property로부터 자명하다. 여기에서 $$\rho_{ji}: S(f_j)^{-1}(A) \rightarrow S(f_i)^{-1}(A)$$는, [보조정리 5](#lem5)에 의하여, 단순히 $$S(f_j)^{-1}(A)$$의 원소를 다음의 꼴
 
 $$g/h,\qquad\text{where $h\in S(f_j)$}\tag{$\ast$}$$
 
@@ -254,7 +254,7 @@ $$\mathcal{O}_{\Spec A, \mathfrak{p}}=\varinjlim_{D(f)\ni\mathfrak{p}} \mathcal{
 
 $$A_\mathfrak{p}\cong \varinjlim_{\mathfrak{p}\not\ni f} A_f\tag{$\ast\ast$}$$
 
-을 보이는 것과 같고, 이는 localization의 universal property ([\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6))와 direct limit의 universal property를 각각 사용하면 된다. 주장의 diagram은 isomorphism ($$\ast\ast$$)을 통해 위의 diagram에서 $$\varinjlim A_f$$를 $$A_\mathfrak{p}$$로 바꾸어주면 된다. 
+을 보이는 것과 같고, 이는 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)의 universal property와 direct limit의 universal property를 각각 사용하면 된다. 주장의 diagram은 isomorphism ($$\ast\ast$$)을 통해 위의 diagram에서 $$\varinjlim A_f$$를 $$A_\mathfrak{p}$$로 바꾸어주면 된다. 
 :::
 
 이제 드디어 $$\Spec$$의 functoriality를 우리가 원하는 형태로 적을 준비가 되었다. 

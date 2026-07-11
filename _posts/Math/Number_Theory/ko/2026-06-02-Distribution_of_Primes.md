@@ -27,7 +27,7 @@ published: false
 
 $$N = p_1 p_2 \cdots p_k + 1$$
 
-을 생각하자. $$N > 1$$이므로 산술의 기본정리 ([§소수와 산술의 기본정리, ⁋정리 3](/ko/math/number_theory/primes#thm3))에 의해 $$N$$은 어떤 소수 $$p$$로 나누어떨어지고, 가정에 의해 $$p$$는 $$p_1, \ldots, p_k$$ 중 하나이다. 그러면 $$p \mid N$$이고 $$p \mid p_1\cdots p_k$$이므로 선형결합 성질 ([§나눗셈과 최대공약수, ⁋명제 2](/ko/math/number_theory/divisibility#prop2))에 의해 $$p \mid (N - p_1\cdots p_k) = 1$$이 되어, 소수가 $$1$$을 나눈다는 모순이 생긴다. 따라서 소수는 유한할 수 없다.
+을 생각하자. $$N > 1$$이므로 [§소수와 산술의 기본정리, ⁋정리 3](/ko/math/number_theory/primes#thm3)에 의해 $$N$$은 어떤 소수 $$p$$로 나누어떨어지고, 가정에 의해 $$p$$는 $$p_1, \ldots, p_k$$ 중 하나이다. 그러면 $$p \mid N$$이고 $$p \mid p_1\cdots p_k$$이므로 [§나눗셈과 최대공약수, ⁋명제 2](/ko/math/number_theory/divisibility#prop2)의 선형결합 성질에 의해 $$p \mid (N - p_1\cdots p_k) = 1$$이 되어, 소수가 $$1$$을 나눈다는 모순이 생긴다. 따라서 소수는 유한할 수 없다.
 :::
 
 ## 소수 사이의 간격

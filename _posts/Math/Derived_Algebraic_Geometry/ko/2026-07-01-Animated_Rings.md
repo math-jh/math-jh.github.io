@@ -196,7 +196,7 @@ $$L_{C/B}\simeq (I/I^2)[1]$$
 추이 삼각형은 여접 복합체를 실제로 계산 가능한 대상으로 만든다. 임의의 $$B$$를 polynomial algebra 위의 몫으로 놓으면, smooth한 부분의 여접 복합체는 이미 알고 있고, 몫에서 오는 conormal 부분을 삼각형이 이어 붙여 주기 때문이다. 이를 곧바로 하나의 fat point에 적용해 본다.
 
 ::: 예시 13 (이중점의 여접 복합체)
-$$B=k[\x]/(\x^2)$$, 곧 아핀 직선 위 원점의 이중점을 생각하고, $$k$$의 characteristic이 $$2$$가 아니라 하자. 사슬 $$k\rightarrow k[\x]\rightarrow B$$에 추이 삼각형 ([정리 12](#thm12))을 적용한다. $$k[\x]$$는 $$k$$ 위에서 smooth하므로 $$L_{k[x]/k}=\Omega_{k[x]/k}=k[\x]d\x$$는 degree $$0$$에 집중된 free module이다. 한편 $$\x^2$$은 $$k[\x]$$의 nonzerodivisor이므로 $$k[\x]\rightarrow B$$는 lci이고, [정리 12](#thm12)에 의하여
+$$B=k[\x]/(\x^2)$$, 곧 아핀 직선 위 원점의 이중점을 생각하고, $$k$$의 characteristic이 $$2$$가 아니라 하자. 사슬 $$k\rightarrow k[\x]\rightarrow B$$에 [정리 12](#thm12)을 적용한다. $$k[\x]$$는 $$k$$ 위에서 smooth하므로 $$L_{k[x]/k}=\Omega_{k[x]/k}=k[\x]d\x$$는 degree $$0$$에 집중된 free module이다. 한편 $$\x^2$$은 $$k[\x]$$의 nonzerodivisor이므로 $$k[\x]\rightarrow B$$는 lci이고, [정리 12](#thm12)에 의하여
 
 $$L_{B/k[x]}\simeq(I/I^2)[1]\simeq B[1],\qquad I=(\x^2)$$
 
@@ -220,7 +220,7 @@ $$H_0(L_{B/k})=\coker(\times2\x)=B/(\x)=k\cong\Omega_{B/k},\qquad H_1(L_{B/k})=\
 2. $$L_{B/A}$$가 degree $$0$$에 집중되어 있고, $$H_0(L_{B/A})=\Omega_{B/A}$$가 유한생성 projective $$B$$-module이다.
 :::
 ::: 증명
-$$(1)\Rightarrow(2)$$. $$B$$가 smooth하면 [§변형이론과 여접 복합체, ⁋명제 10](/ko/math/derived_algebraic_geometry/deformation_theory#prop10)에 의하여 $$H_1(\operatorname{NL}_{B/A})=0$$이고 $$\Omega_{B/A}$$가 유한생성 projective이다. 국소적으로 $$B$$는 $$A$$ 위의 polynomial algebra $$P$$ 위에서 étale하다. Étale 사상 $$P\rightarrow B$$는 $$L_{B/P}\simeq0$$을 주므로, 사슬 $$A\rightarrow P\rightarrow B$$에 [정리 12](#thm12)의 추이 삼각형을 적용하면 $$L_{B/A}\simeq L_{P/A}\otimes_P^{\mathbb{L}}B$$를 얻는다. $$P$$는 $$A$$ 위에서 polynomial algebra이므로 $$L_{P/A}\simeq\Omega_{P/A}$$가 degree $$0$$에 집중된 free module이고, $$P\rightarrow B$$가 étale하여 $$\Omega_{P/A}\otimes_PB\cong\Omega_{B/A}$$이므로 $$L_{B/A}\simeq\Omega_{B/A}$$도 degree $$0$$에 집중된다.
+$$(1)\Rightarrow(2)$$. $$B$$가 smooth하면 [§변형이론과 여접 복합체, ⁋명제 10](/ko/math/derived_algebraic_geometry/deformation_theory#prop10)에 의하여 $$H_1(\operatorname{NL}_{B/A})=0$$이고 $$\Omega_{B/A}$$가 유한생성 projective이다. 국소적으로 $$B$$는 $$A$$ 위의 polynomial algebra $$P$$ 위에서 étale하다. Étale 사상 $$P\rightarrow B$$는 $$L_{B/P}\simeq0$$을 주므로, 사슬 $$A\rightarrow P\rightarrow B$$에 [정리 12](#thm12)을 적용하면 $$L_{B/A}\simeq L_{P/A}\otimes_P^{\mathbb{L}}B$$를 얻는다. $$P$$는 $$A$$ 위에서 polynomial algebra이므로 $$L_{P/A}\simeq\Omega_{P/A}$$가 degree $$0$$에 집중된 free module이고, $$P\rightarrow B$$가 étale하여 $$\Omega_{P/A}\otimes_PB\cong\Omega_{B/A}$$이므로 $$L_{B/A}\simeq\Omega_{B/A}$$도 degree $$0$$에 집중된다.
 
 $$(2)\Rightarrow(1)$$. $$L_{B/A}$$가 degree $$0$$에 집중되면 [정리 11](#thm11)에 의하여 $$\tau_{\leq1}L_{B/A}=\operatorname{NL}_{B/A}$$도 degree $$0$$에 집중되어 $$H_1(\operatorname{NL}_{B/A})=0$$이고, $$H_0=\Omega_{B/A}$$가 유한생성 projective이다. 그럼 [§변형이론과 여접 복합체, ⁋명제 10](/ko/math/derived_algebraic_geometry/deformation_theory#prop10) 직전에서 본 대로, conormal 완전열이 왼쪽에서도 split하는 짧은 완전열이 되어 무한소 lifting 판정이 성립하고, 이는 $$B$$가 $$A$$ 위에서 smooth한 것과 동치이다. 완전한 논증은 ([Qui], [Stacks, Cotangent Complex])에 있다.
 :::

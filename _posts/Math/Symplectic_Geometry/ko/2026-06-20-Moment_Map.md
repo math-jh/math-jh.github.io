@@ -23,7 +23,7 @@ published: false
 
 Lie group $$G$$가 manifold $$M$$ 위에 왼쪽에서 매끄럽게 작용한다는 것은, 매끄러운 사상 $$\psi:G\times M\rightarrow M$$이 주어져 $$\psi(e,p)=p$$이고 $$\psi(g,\psi(h,p))=\psi(gh,p)$$가 성립하는 것이다. 우리는 $$\psi(g,p)$$를 간단히 $$g\cdot p$$로 적고, 고정된 $$g$$에 대한 사상 $$p\mapsto g\cdot p$$를 $$\psi_g:M\rightarrow M$$으로 적는다. 각 $$\psi_g$$는 diffeomorphism이다.
 
-이 작용으로부터 $$\mathfrak{g}$$의 각 원소는 $$M$$ 위의 벡터장을 얻는다. $$X\in\mathfrak{g}$$에 대하여 exponential map ([\[리 이론\] §리 군, ⁋정의 16](/ko/math/lie_theory/Lie_groups#def16))이 일매개변수 부분군 $$t\mapsto\exp(tX)$$을 주므로, 이를 작용시켜 각 점 $$p$$를 지나는 곡선 $$t\mapsto\exp(tX)\cdot p$$를 얻는다.
+이 작용으로부터 $$\mathfrak{g}$$의 각 원소는 $$M$$ 위의 벡터장을 얻는다. $$X\in\mathfrak{g}$$에 대하여 [\[리 이론\] §리 군, ⁋정의 16](/ko/math/lie_theory/Lie_groups#def16)의 exponential map이 일매개변수 부분군 $$t\mapsto\exp(tX)$$을 주므로, 이를 작용시켜 각 점 $$p$$를 지나는 곡선 $$t\mapsto\exp(tX)\cdot p$$를 얻는다.
 
 ::: 정의 1
 Lie group $$G$$가 manifold $$M$$에 작용할 때, $$X\in\mathfrak{g}$$의 *fundamental vector field<sub>기본 벡터장</sub>* $$X_M$$을
@@ -35,7 +35,7 @@ $$X_M(p)=\left.\frac{d}{dt}\right\vert_{t=0}\bigl(\exp(tX)\cdot p\bigr)$$
 
 즉 $$X_M$$은 일매개변수 부분군 $$\exp(tX)$$의 흐름이 $$M$$ 위에 만드는 속도장이며, $$X_M$$의 흐름은 정확히 $$\psi_{\exp(tX)}$$이다. 대응 $$X\mapsto X_M$$은 선형이며, Lie bracket을 보존하는지의 여부는 부호의 관례에 따라 달라진다. 우리의 정의에서는 $$[X,Y]_M=-[X_M,Y_M]$$이 성립하여 부호 하나를 동반하는 Lie algebra 반준동형이 되는데, 이는 본문에서 직접 쓰이지 않으므로 [참고 5](#rmk5)로 미룬다.
 
-이제 $$M$$이 symplectic manifold이고 $$G$$가 symplectomorphism으로 작용하는 경우, 즉 모든 $$g\in G$$에 대해 $$\psi_g^\ast\omega=\omega$$인 경우를 생각하자. 이를 $$X$$ 방향으로 미분하면 $$\mathcal{L}_{X_M}\omega=0$$을 얻는다. Cartan 공식 ([\[미분다양체\] §리 미분, ⁋명제 4](/ko/math/manifolds/Lie_derivative#prop4))과 $$d\omega=0$$에 의하여
+이제 $$M$$이 symplectic manifold이고 $$G$$가 symplectomorphism으로 작용하는 경우, 즉 모든 $$g\in G$$에 대해 $$\psi_g^\ast\omega=\omega$$인 경우를 생각하자. 이를 $$X$$ 방향으로 미분하면 $$\mathcal{L}_{X_M}\omega=0$$을 얻는다. [\[미분다양체\] §리 미분, ⁋명제 4](/ko/math/manifolds/Lie_derivative#prop4)의 Cartan 공식과 $$d\omega=0$$에 의하여
 
 $$0=\mathcal{L}_{X_M}\omega=d(\iota_{X_M}\omega)+\iota_{X_M}(d\omega)=d(\iota_{X_M}\omega)$$
 
@@ -56,7 +56,7 @@ $$\mu:M\rightarrow\mathfrak{g}^\ast$$
 이때 $$\mu$$를 작용의 *moment map<sub>운동량 사상</sub>*이라 부르고, $$(M,\omega,G,\mu)$$를 *Hamiltonian $$G$$-공간*이라 부른다.
 :::
 
-여기서 $$\mathfrak{g}^\ast$$ 위의 *coadjoint 작용* $$\Ad^\ast$$는 adjoint 작용 ([\[리 이론\] §리 군, ⁋정의 19](/ko/math/lie_theory/Lie_groups#def19))의 dual로 정의된다. 즉 $$\xi\in\mathfrak{g}^\ast$$, $$X\in\mathfrak{g}$$에 대하여 $$\langle\Ad_g^\ast\xi,X\rangle=\langle\xi,\Ad_{g^{-1}}X\rangle$$이다. 역원 $$g^{-1}$$이 들어가는 것은 $$g\mapsto\Ad_g^\ast$$가 왼쪽 작용이 되도록 하기 위함이다.
+여기서 $$\mathfrak{g}^\ast$$ 위의 *coadjoint 작용* $$\Ad^\ast$$는 [\[리 이론\] §리 군, ⁋정의 19](/ko/math/lie_theory/Lie_groups#def19)의 adjoint 작용의 dual로 정의된다. 즉 $$\xi\in\mathfrak{g}^\ast$$, $$X\in\mathfrak{g}$$에 대하여 $$\langle\Ad_g^\ast\xi,X\rangle=\langle\xi,\Ad_{g^{-1}}X\rangle$$이다. 역원 $$g^{-1}$$이 들어가는 것은 $$g\mapsto\Ad_g^\ast$$가 왼쪽 작용이 되도록 하기 위함이다.
 
 조건 1은 정의 1 직전의 관찰을 정합적으로 만든 것이다. 각 $$X$$마다 $$X_M$$의 Hamiltonian 함수 $$\mu^X$$를 주되, 그 함수가 $$X$$에 선형으로 의존하도록 $$\mathfrak{g}^\ast$$-값 사상 하나로 묶은 것이다. $$\mu^X$$가 $$X$$에 선형임은 $$\mu(p)$$가 $$\mathfrak{g}^\ast$$의 원소라는 데에 이미 담겨 있다. 조건 2는 운동량 사상이 군의 대칭성과 양립함을 요구하는데, 다음 명제에서 보듯 이는 조건 1로부터 거의 자동으로 따라온다.
 
@@ -157,7 +157,7 @@ $$\mu(\mathbb{C}^n)=\mathbb{R}_{\leq0}^n=\{(a_1,\ldots,a_n):a_j\leq0\}$$
 마지막으로 cotangent bundle 위의 작용은 운동량 사상이 고전적 운동량과 일치하는 가장 직접적인 예시이다.
 
 ::: 예시 9
-Manifold $$Q$$ 위에 Lie group $$G$$가 작용하면, 이를 cotangent bundle $$T^\ast Q$$로 들어 올린 *cotangent lift* 작용을 얻는다. $$g\in G$$의 $$Q$$ 위의 작용을 $$\phi_g:Q\rightarrow Q$$라 하면, $$T^\ast Q$$ 위의 작용은 $$(\phi_{g^{-1}})^\ast$$로 정의된다. 즉 $$g\cdot(q,p)=(\phi_g(q),\,(d\phi_{g^{-1}})^\ast_{\phi_g(q)}\,p)$$이다. 역원이 들어가는 것은 이것이 왼쪽 작용이 되게 하기 위함이며, 이 작용은 tautological $$1$$-form $$\lambda$$ ([§사교다양체, ⁋예시 2](/ko/math/symplectic_geometry/symplectic_manifold#ex2))를 보존하므로 $$\omega=-d\lambda$$ 또한 보존한다.
+Manifold $$Q$$ 위에 Lie group $$G$$가 작용하면, 이를 cotangent bundle $$T^\ast Q$$로 들어 올린 *cotangent lift* 작용을 얻는다. $$g\in G$$의 $$Q$$ 위의 작용을 $$\phi_g:Q\rightarrow Q$$라 하면, $$T^\ast Q$$ 위의 작용은 $$(\phi_{g^{-1}})^\ast$$로 정의된다. 즉 $$g\cdot(q,p)=(\phi_g(q),\,(d\phi_{g^{-1}})^\ast_{\phi_g(q)}\,p)$$이다. 역원이 들어가는 것은 이것이 왼쪽 작용이 되게 하기 위함이며, 이 작용은 [§사교다양체, ⁋예시 2](/ko/math/symplectic_geometry/symplectic_manifold#ex2)의 tautological $$1$$-form $$\lambda$$를 보존하므로 $$\omega=-d\lambda$$ 또한 보존한다.
 
 이 작용은 항상 Hamiltonian이며, 운동량 사상은
 
