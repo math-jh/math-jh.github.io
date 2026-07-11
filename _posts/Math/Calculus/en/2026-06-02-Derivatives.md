@@ -10,10 +10,9 @@ sidebar:
 
 date: 2026-06-02
 weight: 6
-
-drift_needed: true
-translated_at: 2026-07-11T01:01:55+00:00
+translated_at: 2026-07-11T10:00:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-11T10:00:02+00:00
 ---
 We previously reformulated the notion of a function being continuous in the language of $$\epsilon$$–$$\delta$$ introduced in [§Continuous Functions](/en/math/calculus/continuity). The natural next step is to define the derivative of a function.
 
@@ -29,17 +28,17 @@ $$f'(a) := \lim_{x \to a} \frac{f(x) - f(a)}{x - a} = \lim_{h \to 0} \frac{f(a+h
 exists. This value $$f'(a)$$ is called the *derivative* of $$f$$ at $$a$$. If $$f$$ is differentiable at every point of its domain, the function $$f'$$ defined by $$a \mapsto f'(a)$$ is called the *derivative function* of $$f$$.
 :::
 
-Of course, the two expressions are obviously the same upon setting $$x = a + h$$, and by the preceding discussion on average rate of change, the derivative $$f'(a)$$ is the slope of the tangent line drawn to the graph at the point $$(a, f(a))$$. On the other hand, any straight line is completely determined by its slope and one point on it; in particular, since this tangent line passes through $$(a, f(a))$$ by construction, the tangent line to a function differentiable at $$a$$ is given by
+Of course, the two expressions are obviously the same upon setting $$x = a + h$$, and by the preceding discussion on the average rate of change, the derivative $$f'(a)$$ is the slope of the tangent line to the graph at the point $$(a, f(a))$$. Moreover, any straight line is completely determined by its slope and one point on it; in particular, since this tangent line passes through $$(a, f(a))$$ by construction, the tangent line to a function differentiable at $$a$$ is given by
 
 $$y = f(a) + f'(a)(x - a).$$
 
-This linear function approximates $$f$$ best near $$a$$, so for small $$h$$ we write $$f(a+h) \approx f(a) + f'(a)h$$. The derivative is also written, following Leibniz, as
+This linear function approximates $$f$$ best near $$a$$, so for small $$h$$ we write $$f(a+h) \approx f(a) + f'(a)h$$. Following Leibniz, the derivative is also written as
 
 $$\frac{df}{dx},\qquad \frac{d}{dx}f$$
 
 and so on, but in calculus the notation $$f'$$ is often sufficient.
 
-Applying the definition directly, for instance, the average rate of change of $$f(x) = x^2$$ is $$\frac{(a+h)^2 - a^2}{h} = 2a + h$$, so $$f'(a) = 2a$$, and the derivative of a constant function is always $$0$$. In the same way, for $$f(x) = 1/x$$ ($$x \neq 0$$) we put the average rate of change over a common denominator to obtain $$f'(a) = -1/a^2$$, and for $$f(x) = \sqrt x$$ ($$x > 0$$) we rationalize the numerator to get $$f'(a) = 1/(2\sqrt a)$$.
+Applying the definition directly, for instance, the average rate of change of $$f(x) = x^2$$ is $$\frac{(a+h)^2 - a^2}{h} = 2a + h$$, so $$f'(a) = 2a$$; the derivative of a constant function is always $$0$$. In the same way, for $$f(x) = 1/x$$ ($$x \neq 0$$) we put the average rate of change over a common denominator to obtain $$f'(a) = -1/a^2$$, and for $$f(x) = \sqrt x$$ ($$x > 0$$) we rationalize the numerator to get $$f'(a) = 1/(2\sqrt a)$$.
 
 ## Differentiability and Continuity
 
@@ -97,7 +96,7 @@ so $$f'(0) = 0$$ exists. That is, $$f$$ is differentiable only at $$0$$.
 
 ## Properties of Differentiation
 
-Meanwhile, since the derivative is ultimately the limit of the function called the average rate of change, we can prove from [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5) that differentiation also enjoys linearity.
+Meanwhile, since the derivative is ultimately the limit of the average rate of change, we can prove from [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5) that differentiation also enjoys linearity.
 
 ::: Proposition 4
 If $$f$$ and $$g$$ are differentiable at $$a$$ and $$c$$ is a constant, then $$f + g$$ and $$cf$$ are also differentiable at $$a$$, and
@@ -119,7 +118,7 @@ On the other hand, since the derivative $$f'$$ is again a function, if it is dif
 If the derivative $$f'$$ of $$f$$ is differentiable, its derivative is called the *second derivative* $$f'' = (f')'$$. Repeating this, the result of differentiating $$n$$ times is called the *$$n$$th derivative* $$f^{(n)}$$, and we set $$f^{(0)} = f$$. If $$f^{(n)}$$ exists and is continuous on some interval, we say $$f$$ is *of class $$C^n$$* on that interval, and if derivatives of all orders exist, we say $$f$$ is *of class $$C^\infty$$* or *smooth*.
 :::
 
-The second derivative $$f''$$ is the rate of change of the rate of change; if $$f$$ is position, then $$f''$$ is acceleration. The sign of $$f''$$ also tells us the direction in which the graph bends (convex or concave). In this post we do not aim to differentiate specific functions, but in the next post we will see that polynomials and functions such as $$\sin$$, $$\cos$$, and $$\exp$$ are smooth.
+The second derivative $$f''$$ is the rate of change of the rate of change; if $$f$$ represents position, then $$f''$$ is acceleration. The sign of $$f''$$ also tells us the direction in which the graph bends (convex or concave). In this post we do not aim to differentiate specific functions, but in the next post we will see that polynomials and functions such as $$\sin$$, $$\cos$$, and $$\exp$$ are smooth.
 
 Finally, just as a limit exists only when the left and right limits agree, the existence of a derivative also depends on whether the left and right average rates of change agree. Stating this separately allows us to treat differentiability at corners and endpoints precisely.
 

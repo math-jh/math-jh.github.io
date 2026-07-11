@@ -10,10 +10,9 @@ sidebar:
 
 date: 2026-03-15
 weight: 20
-
-drift_needed: true
-translated_at: 2026-07-11T00:30:01+00:00
+translated_at: 2026-07-11T09:30:01+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-11T09:30:01+00:00
 ---
 We introduce Bézout's theorem, a classical result in algebraic geometry, in this post. Intuitively, suppose two curves $$C,D$$ on the plane are given. Then the number of intersection points of $$C$$ and $$D$$ depends on their degrees: for example, a conic $$\y=x^2$$ defined on the plane and a line generally meet at two points. Bézout's theorem is a generalization of this observation.
 
@@ -25,7 +24,7 @@ $$\deg(H_1 \cap \cdots \cap H_n) = d_1 \cdots d_n$$
 holds. Here the intersection is taken with multiplicity into account.
 :::
 
-In particular, inside $$\mathbb{P}^2$$ two curves of degrees $$m$$ and $$n$$ meet at $$mn$$ points. One should be somewhat careful that they must not have a common component; for instance, one cannot use this to compute the intersection of two identical curves.
+In particular, inside $$\mathbb{P}^2$$ two curves of degrees $$m$$ and $$n$$ meet at $$mn$$ points. One must be somewhat careful that they must not have a common component; for instance, one cannot use this to compute the intersection of two identical curves.
 
 ::: Example 2 (Two conics)
 Consider two conics in $$\mathbb{P}^2$$

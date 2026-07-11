@@ -10,10 +10,9 @@ sidebar:
 
 date: 2026-04-21
 weight: 14
-
-drift_needed: true
-translated_at: 2026-07-10T19:01:37+00:00
+translated_at: 2026-07-11T08:00:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-11T08:00:02+00:00
 ---
 Geometrically, in favorable situations there is a natural duality between dimension $$k$$ cohomology and codimension $$k$$ cohomology. To prove this we used the perfect pairing
 
@@ -21,11 +20,11 @@ $$H^k(M;R)\times H^{n-k}(M;R)\rightarrow R$$
 
 and obtained results such as [[Algebraic Topology] §Poincaré Duality, ⁋Theorem 11](/en/math/algebraic_topology/Poincare_duality#thm11). More concretely, since this pairing is constructed via the cap product and the fundamental class $$[M] \in H_n(M;R)$$, we can say that the source of duality in topology is the orientation class $$[M]$$.
 
-In this post we examine Serre duality, the algebraic geometry version of duality.
+In this post we examine Serre duality, the algebraic-geometry version of duality.
 
 ## Serre Duality on Projective Space
 
-We first look carefully at the case where $$X=\mathbb{P}^n$$. We know that every line bundle defined on $$\mathbb{P}^n$$ is of the form $$\mathcal{O}(d)$$, and in particular we saw in [[§Canonical Bundle, ⁋Proposition 7](/en/math/algebraic_varieties/canonical_bundle#prop7) that this is $$\mathcal{O}(-n-1)$$. Then from [[§Cohomology of Projective Spaces, ⁋Proposition 1](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1) we obtain the following.
+We first look carefully at the case $$X=\mathbb{P}^n$$. We know that every line bundle on $$\mathbb{P}^n$$ is of the form $$\mathcal{O}(d)$$, and in particular we saw in [[§Canonical Bundle, ⁋Proposition 7](/en/math/algebraic_varieties/canonical_bundle#prop7) that this is $$\mathcal{O}(-n-1)$$. Then from [[§Cohomology of Projective Spaces, ⁋Proposition 1](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1) we obtain the following.
 
 ::: Proposition 1
 For the canonical line bundle $$\omega_X$$ on projective space $$X=\mathbb{P}^n$$, there exists an isomorphism
