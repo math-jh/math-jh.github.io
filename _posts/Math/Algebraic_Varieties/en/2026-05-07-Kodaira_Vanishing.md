@@ -10,18 +10,17 @@ sidebar:
     
 date: 2026-05-07
 weight: 17
-
-drift_needed: true
-translated_at: 2026-07-10T22:30:02+00:00
+translated_at: 2026-07-11T08:30:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-11T08:30:02+00:00
 ---
-[§Cohomology of Projective Spaces, ⁋Proposition 4](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop4)'s Serre vanishing theorem guarantees that for an ample line bundle $$\mathcal{L}$$ and a coherent sheaf $$\mathcal{F}$$ on a projective variety, we have $$H^i(X, \mathcal{F} \otimes \mathcal{L}^{\otimes m}) = 0$$ ($$i > 0$$) for sufficiently large $$m$$. However, this result is merely an asymptotic property and gives no information whatsoever about the specific value of $$m$$ from which the vanishing begins.
+[§Cohomology of Projective Spaces, ⁋Proposition 4](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop4)'s Serre vanishing theorem guarantees that for an ample line bundle $$\mathcal{L}$$ and a coherent sheaf $$\mathcal{F}$$ on a projective variety, we have $$H^i(X, \mathcal{F} \otimes \mathcal{L}^{\otimes m}) = 0$$ ($$i > 0$$) for sufficiently large $$m$$. However, this result is merely an asymptotic property and gives no information whatsoever about the specific value of $$m$$ at which vanishing begins.
 
-Kodaira vanishing theorem is a much more refined result, guaranteeing that the higher cohomology of the tensor product $$\omega_X \otimes \mathcal{L}$$ of the canonical bundle $$\omega_X$$ and an ample line bundle $$\mathcal{L}$$ *always* vanishes. In this article, we examine the Kodaira vanishing theorem, its applications, and how this theorem is used in algebraic geometry.
+The Kodaira vanishing theorem is a far more refined result, guaranteeing that the higher cohomology of the tensor product $$\omega_X \otimes \mathcal{L}$$ of the canonical bundle $$\omega_X$$ and an ample line bundle $$\mathcal{L}$$ *always* vanishes. In this article, we examine the Kodaira vanishing theorem, its applications, and how this theorem is used in algebraic geometry.
 
 ## Kodaira Vanishing Theorem
 
-The basic setup we consider is as follows. $$X$$ is an $$n$$-dimensional smooth projective variety, $$\mathcal{L}$$ is an ample line bundle on $$X$$, and $$\omega_X = \det \Omega_X^1 = \Omega_X^n$$ is the canonical line bundle. ([§Canonical Bundle, ⁋Definition 5](/en/math/algebraic_varieties/canonical_bundle#def5)) Then the Kodaira vanishing theorem can be stated as follows.
+The basic setup we consider is as follows. Let $$X$$ be an $$n$$-dimensional smooth projective variety, $$\mathcal{L}$$ an ample line bundle on $$X$$, and $$\omega_X = \det \Omega_X^1 = \Omega_X^n$$ the canonical line bundle. ([§Canonical Bundle, ⁋Definition 5](/en/math/algebraic_varieties/canonical_bundle#def5)) The Kodaira vanishing theorem can then be stated as follows.
 
 ::: Proposition 1 (Kodaira vanishing)
 Let $$X$$ be an $$n$$-dimensional smooth projective variety and let $$\mathcal{L}$$ be an ample line bundle. Then for every $$p > 0$$,
@@ -37,7 +36,7 @@ holds.
 
 The first statement is obtained from the second by setting $$q=n$$. The proof of this proposition involves quite technical aspects, so in this post we focus on how it is used in algebraic geometry rather than giving a rigorous proof.
 
-As can be seen from the statement of the proposition, Kodaira vanishing kills the higher cohomology after twisting by the canonical bundle. Using Serre duality, this can be rewritten as the following equivalent statement.
+As the statement of the proposition shows, Kodaira vanishing kills the higher cohomology after twisting by the canonical bundle. Using Serre duality, this can be rewritten as the following equivalent statement.
 
 ::: Proposition 2
 Under the assumptions of [Proposition 1](#prop1), for all $$p < n$$,
@@ -55,16 +54,16 @@ $$H^p(X, \mathcal{L}^{-1}) \cong H^{n-p}(X, \omega_X \otimes \mathcal{L})^\vee$$
 holds. If $$p < n$$ then $$n - p > 0$$, so by [Proposition 1](#prop1) the right-hand side is $$0$$.
 :::
 
-These two formulations are completely equivalent via Serre duality, as we examined in the proof above, so we may use whichever is more convenient depending on the situation.
+These two formulations are completely equivalent via Serre duality, as we saw in the proof above, so we may use whichever is more convenient depending on the situation.
 
-The simplest nontrivial example where Kodaira vanishing applies is the projective space $$X = \mathbb{P}^n$$.
+The simplest nontrivial example where Kodaira vanishing applies is projective space $$X = \mathbb{P}^n$$.
 
 ::: Example 3
 We verified in [§Standard Line Bundles, ⁋Proposition 7](/en/math/algebraic_varieties/canonical_bundle#prop7) that
 
 $$\omega_{\mathbb{P}^n} \cong \mathcal{O}(-n-1)$$
 
-and in [§Line Bundles and Vector Bundles, ⁋Example 12](/en/math/algebraic_varieties/line_bundles#ex12) that every line bundle on $$\mathbb{P}^n$$ is of the form $$\mathcal{O}(d)$$. Among these, the $$\mathcal{O}(d)$$ with $$d>0$$ are ample line bundles. Thus, Kodaira vanishing claims that the following vanishing
+and in [§Line Bundles and Vector Bundles, ⁋Example 12](/en/math/algebraic_varieties/line_bundles#ex12) that every line bundle on $$\mathbb{P}^n$$ is of the form $$\mathcal{O}(d)$$. Among these, the $$\mathcal{O}(d)$$ with $$d>0$$ are ample line bundles. Thus, Kodaira vanishing asserts that the vanishing
 
 $$H^p(\mathbb{P}^n, \mathcal{O}(d - n - 1)) = 0$$
 
@@ -103,7 +102,7 @@ Another application is the computation of plurigenera. The plurigenus $$P_m(X)$$
 
 For instance, in the case of a curve $$C$$, we know that its birational class is determined by the genus, and the plurigenus $$P_m(g)$$ is given as a function of $$g$$ (and $$m$$). That is, for a curve $$C$$ the plurigenus is not a particularly interesting invariant. The interesting case is for higher-dimensional objects such as surfaces, where the birational invariant is not determined by a single number and all the plurigenera become genuinely necessary.
 
-As seen in [§Riemann–Roch Theorem for Surfaces](/en/math/algebraic_varieties/riemann_roch_surfaces), for a divisor $$D$$ on a surface $$S$$ the Riemann–Roch formula is given by
+As seen in [§Riemann–Roch Theorem for Surfaces](/en/math/algebraic_varieties/riemann_roch_surfaces), for a divisor $$D$$ on a surface $$S$$ the Riemann–Roch formula is
 
 $$\rchi(\mathcal{O}_S(D)) = \frac{1}{2} D \cdot (D - K_S) + \rchi(\mathcal{O}_S)$$
 
@@ -113,7 +112,7 @@ $$\rchi(\mathcal{O}_S(mK_S)) = \frac{m(m-1)}{2} K_S^2 + \rchi(\mathcal{O}_S)$$
 
 Now if $$m \geq 2$$ and $$K_S$$ is ample, then $$(m-1)K_S$$ is also ample, so applying [Proposition 1](#prop1) to $$mK_S = K_S + (m-1)K_S$$ yields $$h^1 = h^2 = 0$$. Therefore, from this formula we can directly compute $$P_m(S) = h^0(S, \mathcal{O}_S(mK_S))$$.
 
-On the other hand, in such cases the expression for plurigenera can be thought of as asymptotically quadratic. This
+On the other hand, in such cases the expression for plurigenera can be thought of as asymptotically quadratic. This leads to
 
 ::: Definition 4
 The *Kodaira dimension* $$\kappa(X)$$ of a smooth projective variety $$X$$ is defined as follows. If $$P_m(X) = 0$$ for all $$m \geq 1$$, then $$\kappa(X) = -\infty$$. Otherwise, $$\kappa(X)$$ is defined as the smallest integer $$\kappa \geq 0$$ satisfying $$P_m(X) = O(m^\kappa)$$. That is,

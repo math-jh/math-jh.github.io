@@ -10,14 +10,13 @@ sidebar:
 
 date: 2026-04-05
 weight: 12
-
-drift_needed: true
-translated_at: 2026-07-10T21:34:57+00:00
+translated_at: 2026-07-11T07:30:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-11T07:30:02+00:00
 ---
 We have seen that line bundles can be used to define various invariants. For example, in [§Line Bundles and Vector Bundles](/en/math/algebraic_varieties/line_bundles) we defined the global section space $$\Gamma(X, \mathcal{L})$$ of a line bundle $$\mathcal{L}$$. In particular, in [§Linear Systems, ⁋Definition 9](/en/math/algebraic_varieties/linear_systems#def9) we observed that this dimension plays a crucial role in determining the dimension of the complete linear system, and hence the projective embedding of the variety.
 
-So far we have mainly used the language of line bundles for geometric intuition, but as we saw right after [§Canonical Bundle, ⁋Definition 1](/en/math/algebraic_varieties/canonical_bundle#def1), thinking in terms of the section sheaf of a line bundle means that this can fundamentally be rewritten in the language of sheaves. In this post we define the notion of sheaf cohomology.
+So far we have mainly used the language of line bundles for geometric intuition, but as we saw right after [§Canonical Bundle, ⁋Definition 1](/en/math/algebraic_varieties/canonical_bundle#def1), thinking in terms of the section sheaf of a line bundle means that this can fundamentally be recast in the language of sheaves. In this post we define the notion of sheaf cohomology.
 
 ## Definition as a Derived Functor
 
@@ -53,7 +52,7 @@ But as we saw in [§Line Bundles and Vector Bundles, ⁋Example 16](/en/math/alg
 
 $$\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)}) = 0$$
 
-while $$\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n})=\mathbb{K}$$, so the surjectivity on the right cannot hold.
+while $$\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n})=\mathbb{K}$$, so surjectivity on the right cannot hold.
 
 The standard way to resolve this is to consider the right derived functor. ([[Homological Algebra] §Derived Functors, ⁋Definition 9](/en/math/homological_algebra/derived_functors#def9)). Specifically, since $$\lMod{A}$$ has enough injectives, we can show that $$\QCoh(X)$$ also has enough injective objects, so any quasi-coherent sheaf $$\mathcal{F}$$ always has an injective resolution $$\mathcal{I}^\bullet$$, and from this we can define sheaf cohomology via
 
@@ -138,7 +137,7 @@ $$s_{ij} + s_{jk} = s_{ik} \qquad\text{on}\quad U_i \cap U_j \cap U_k$$
 
 On the other hand, a 1-coboundary is one induced from a 0-cochain $$(t_i)$$, that is, of the form $$s_{ij} = t_j\vert_{U_i \cap U_j} - t_i\vert_{U_i \cap U_j}$$.
 
-Therefore, a nontrivial element of $$\check{H}^1(\mathcal{U}, \mathcal{F})$$ reflects the difference that appears when trying to glue these three pieces of data $$s_{ij}, s_{jk}, s_{ik}$$ together, and this is what we call the failure of gluing mentioned above.
+Therefore, a nontrivial element of $$\check{H}^1(\mathcal{U}, \mathcal{F})$$ reflects the discrepancy that appears when trying to glue these three pieces of data $$s_{ij}, s_{jk}, s_{ik}$$ together, and this is what we call the failure of gluing mentioned above.
 :::
 
 So far we have defined Čech cohomology $$\check{H}^p(\mathcal{U}, \mathcal{F})$$ for a single open cover $$\mathcal{U}$$. However, different open covers generally give different Čech cohomologies. For example, for the cover consisting of a single open set $$U_0 = X$$, all intersections are $$X$$, so $$\check{H}^p$$ is nonzero only for $$p = 0$$. The finer the cover, the more topological information we can capture, so we need to clarify the relationship between open covers and synthesize the information over all open covers. That is, we impose an ordering on <em>all</em> open covers using refinement. Then for a refinement $$\mathcal{V} \preceq \mathcal{U}$$, there is a natural map $$\check{H}^p(\mathcal{U}, \mathcal{F}) \to \check{H}^p(\mathcal{V}, \mathcal{F})$$, and thus we can define a direct system $$\check{H}^p(\mathcal{U}, \mathcal{F})$$ indexed by all open covers. From this we define the following.

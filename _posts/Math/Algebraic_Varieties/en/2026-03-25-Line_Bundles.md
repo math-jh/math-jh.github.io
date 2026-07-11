@@ -11,10 +11,9 @@ sidebar:
 
 date: 2026-03-25
 weight: 9
-
-drift_needed: true
-translated_at: 2026-07-10T21:06:16+00:00
+translated_at: 2026-07-11T07:00:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-11T07:00:02+00:00
 ---
 We defined divisors on a variety $$X$$ in the previous post and saw that their linear equivalence classes form $$\Cl(X)$$. However, not every divisor arises as the zero or pole locus of some rational function. For instance, since $$\Cl(\mathbb{P}^n) \cong \mathbb{Z}$$ ([§Divisors, ⁋Example 11](/en/math/algebraic_varieties/divisors#ex11)), a general divisor $$dH$$ on $$\mathbb{P}^n$$ is the zero set of some function only when $$d \ge 0$$.
 
@@ -22,7 +21,7 @@ To overcome this restriction, we introduce *line bundles*. A line bundle $$\math
 
 ## Definition of Line Bundles
 
-Line bundles, and more generally vector bundles which we will define later in this post, are defined in the same way as in other fields such as differential geometry. ([\[Differential Manifolds\] §Tangent and Cotangent Bundles, ⁋Definition 1](/en/math/manifolds/tangent_and_cotangent_bundles#def1) or [\[Algebraic Topology\] §Stiefel-Whitney Characteristic Classes, ⁋Definition 2](/en/math/algebraic_topology/stiefel_whitney_classes#def2), etc.)
+Line bundles, and more generally vector bundles, which we will define later in this post, are defined in the same way as in other fields such as differential geometry. ([\[Differential Manifolds\] §Tangent and Cotangent Bundles, ⁋Definition 1](/en/math/manifolds/tangent_and_cotangent_bundles#def1) or [\[Algebraic Topology\] §Stiefel-Whitney Characteristic Classes, ⁋Definition 2](/en/math/algebraic_topology/stiefel_whitney_classes#def2), etc.)
 
 ::: Definition 1
 A *line bundle* $$\mathcal{L}$$ on a variety $$X$$ consists of the following data.
@@ -45,7 +44,7 @@ $$g^{\mathcal{M}}_{kl} \circ \varphi_l = \varphi_k \circ g^{\mathcal{L}}_{kl}$$
 
 holds. Since the fiber of a line bundle is one-dimensional, each $$\varphi_k$$ is given by multiplication by some $$h_k \in \mathcal{O}_X(U_k)$$, i.e. $$s \mapsto h_k s$$. When $$\varphi$$ is bijective on each fiber, we call it an *isomorphism* and write $$\mathcal{L} \cong \mathcal{M}$$. Because the fibers are one-dimensional, this is equivalent to giving a nonzero scalar at each point, i.e. choosing $$h_k \in \mathcal{O}_X(U_k)^\ast$$ compatibly.
 
-Then the following proposition follows directly from the definition of the cocycle condition.
+The following proposition follows directly from the definition of the cocycle condition.
 
 ::: Proposition 2 (Cocycle condition)
 The transition functions $$\{g_{ij}\}$$ satisfy the following *cocycle condition*.
@@ -56,12 +55,12 @@ The transition functions $$\{g_{ij}\}$$ satisfy the following *cocycle condition
 :::
 
 ::: Example 3
-The *trivial line bundle* $$X \times \mathbb{A}^1$$ is the line bundle with all transition functions $$g_{ij} = 1$$. This is the simplest line bundle with no twist.
+The *trivial line bundle* $$X \times \mathbb{A}^1$$ is the line bundle with all transition functions $$g_{ij} = 1$$. This is the simplest line bundle, with no twist.
 :::
 
 Thus the second condition in [Definition 1](#def1) means that the line bundle $$\mathcal{L}$$ becomes isomorphic to the trivial line bundle when restricted to a suitable open subset $$U \subseteq X$$.
 
-[Proposition 2](#prop2) is a common gluing condition, and by this condition a line bundle can be thought of as a kind of sheaf. ([\[Topology\] §Sheaves, ⁋Definition 1](/en/math/topology/sheaves#def1)) Concretely, given a line bundle $$\mathcal{L}$$, we define its sheaf of sections by
+[Proposition 2](#prop2) is a common gluing condition, and by it a line bundle can be thought of as a kind of sheaf. ([\[Topology\] §Sheaves, ⁋Definition 1](/en/math/topology/sheaves#def1)) Concretely, given a line bundle $$\mathcal{L}$$, we define its sheaf of sections by
 
 $$U\mapsto \mathcal{O}_X(\mathcal{L})(U)=\{s: U \to \mathcal{L} \mid \pi \circ s = \id_U\}$$
 
@@ -126,7 +125,7 @@ As always, we can understand the structure of a line bundle by looking at it on 
 
 $$\pi\vert_{\pi^{-1}(U_i)}:\pi^{-1}(U_i) \rightarrow U_i$$
 
-is a function between affine varieties, and therefore induces a ring homomorphism between coordinate rings by [§Affine Varieties, ⁋Proposition 16](/en/math/algebraic_varieties/affine_varieties#prop16). This ring homomorphism makes the coordinate ring of $$\pi^{-1}(U_i)$$ into a module over the coordinate ring of $$U_i$$, and considering dimensions, its rank is 1. Since $$\mathcal{L}$$ is trivial on any open subset of $$U_i$$ as well, we can verify that a line bundle becomes, affine-locally, an invertible module over the coordinate ring. ([\[Commutative Algebra\] §Fractional Ideals, ⁋Definition 1](/en/math/commutative_algebra/fractional_ideals#def1)) Then the operations $$\otimes$$ and $$\vee$$ defined on line bundles come from the operations in [\[Commutative Algebra\] §Fractional Ideals, ⁋Theorem 3](/en/math/commutative_algebra/fractional_ideals#thm3), and therefore it is not unnatural to adopt the following name following [\[Commutative Algebra\] §Fractional Ideals, ⁋Definition 5](/en/math/commutative_algebra/fractional_ideals#def5).
+is a morphism between affine varieties, and therefore induces a ring homomorphism between coordinate rings by [§Affine Varieties, ⁋Proposition 16](/en/math/algebraic_varieties/affine_varieties#prop16). This ring homomorphism makes the coordinate ring of $$\pi^{-1}(U_i)$$ into a module over the coordinate ring of $$U_i$$, and considering dimensions, its rank is 1. Since $$\mathcal{L}$$ is trivial on any open subset of $$U_i$$ as well, we can verify that a line bundle becomes, affine-locally, an invertible module over the coordinate ring. ([\[Commutative Algebra\] §Fractional Ideals, ⁋Definition 1](/en/math/commutative_algebra/fractional_ideals#def1)) Then the operations $$\otimes$$ and $$\vee$$ defined on line bundles come from the operations in [\[Commutative Algebra\] §Fractional Ideals, ⁋Theorem 3](/en/math/commutative_algebra/fractional_ideals#thm3), and therefore it is not unnatural to adopt the following name following [\[Commutative Algebra\] §Fractional Ideals, ⁋Definition 5](/en/math/commutative_algebra/fractional_ideals#def5).
 
 ::: Definition 9
 The *Picard group* $$\Pic(X)$$ of a variety $$X$$ is the group obtained by endowing the set of isomorphism classes of line bundles on $$X$$ with the tensor product as the operation. The identity element is the trivial bundle $$\mathcal{O}_X$$, and the inverse of $$\mathcal{L}$$ is $$\mathcal{L}^\vee$$.
@@ -150,11 +149,11 @@ The coordinate ring $$R = \mathbb{K}[\x_1, \ldots, \x_n]$$ of $$\mathbb{A}^n$$ i
 
 
 ::: Example 12
-We define the line bundle $$\mathcal{O}_{\mathbb{P}^n}(d)$$ on $$\mathbb{P}^n$$ as follows. First, each standard open cover
+We define the line bundle $$\mathcal{O}_{\mathbb{P}^n}(d)$$ on $$\mathbb{P}^n$$ as follows. First, the standard open cover
 
 $$U_i = \{[x_0 : \cdots : x_n] \mid x_i \ne 0\}$$
 
-is a trivializing open set for this bundle. We explicitly define the trivialization on each of these by
+gives trivializing open sets for this bundle. We explicitly define the trivialization on each of these by
 
 $$\phi_i\colon \mathcal{O}(d)\vert_{U_i} \xrightarrow{\sim} \mathcal{O}_{U_i}, \qquad \phi_i(s) = s \cdot \x_i^{-d}$$
 
@@ -174,7 +173,7 @@ Now we can define a group homomorphism
 
 $$\mathbb{Z}\rightarrow \Pic(\mathbb{P}^n);\qquad d\mapsto [\mathcal{O}_{\mathbb{P}^n}(d)]$$
 
-Our claim is that this is an isomorphism. First, for any line bundle $$\mathcal{L}$$, since $$\mathcal{L}\vert_{U_i}$$ is isomorphic to the trivial line bundle by [Example 11](#ex11), the transition functions $$h_{ij}$$ on each $$U_i\cap U_j$$ completely determine $$\mathcal{L}$$. But by definition, on $$U_i\cap U_j$$ we have $$h_{ij}\in \mathcal{O}_{\mathbb{P}^n}(U_i\cap U_j)^\ast$$, so $$h_{ij}$$ must be of the form $$c_{ij}(\x_i/\x_j)^d$$. Since a line bundle whose transition functions differ by a constant is trivial, we know that the above group homomorphism is surjective. Similarly, assuming $$\mathcal{O}_{\mathbb{P}^n}(d)\cong \mathcal{O}_{\mathbb{P}^n}(d')$$ and comparing transition functions,
+Our claim is that this is an isomorphism. First, for any line bundle $$\mathcal{L}$$, since $$\mathcal{L}\vert_{U_i}$$ is isomorphic to the trivial line bundle by [Example 11](#ex11), the transition functions $$h_{ij}$$ on each $$U_i\cap U_j$$ completely determine $$\mathcal{L}$$. But by definition, on $$U_i\cap U_j$$ we have $$h_{ij}\in \mathcal{O}_{\mathbb{P}^n}(U_i\cap U_j)^\ast$$, so $$h_{ij}$$ must be of the form $$c_{ij}(\x_i/\x_j)^d$$. Since a line bundle whose transition functions differ by a constant factor is trivial, we know that the above group homomorphism is surjective. Similarly, assuming $$\mathcal{O}_{\mathbb{P}^n}(d)\cong \mathcal{O}_{\mathbb{P}^n}(d')$$ and comparing transition functions,
 
 $$\mathcal{O}_{\mathbb{P}^n}(d-d')\cong \mathcal{O}_{\mathbb{P}^n}(d)\otimes \mathcal{O}_{\mathbb{P}^n}(-d')\cong \mathcal{O}_{\mathbb{P}^n}(d)\otimes \mathcal{O}_{\mathbb{P}^n}(d')^\vee\cong \mathcal{O}_{\mathbb{P}^n}$$
 
@@ -203,7 +202,7 @@ The tautological bundle $$\mathcal{O}_{\mathbb{P}^n}(-1)$$ is the dual of $$\mat
 Let us construct a local trivialization of $$\mathcal{O}_{\mathbb{P}^n}(-1)$$ on the standard open cover $$U_i = \{x \mid x_i \ne 0\}$$. For any $$(x, v) \in \mathcal{O}_{\mathbb{P}^n}(-1)$$, we can write $$v = \lambda x$$ ($$\lambda \in \mathbb{K}$$), so defining $$\phi_i(x, v) = (x, v_i)$$ gives $$\phi_i: \pi^{-1}(U_i) \to U_i \times \mathbb{A}^1$$. The inverse is $$\phi_i^{-1}(x, t) = (x, (t/x_i)\, x)$$. The transition function on $$U_i \cap U_j$$ is obtained from $$\phi_j \circ \phi_i^{-1}(x, t) = (x, t x_j / x_i)$$ as $$g_{ij}(x) = x_j/x_i$$. This is the inverse of the transition function $$x_i/x_j$$ of $$\mathcal{O}_{\mathbb{P}^n}(1)$$.
 :::
 
-In particular, looking at $$\mathcal{O}(-1)$$ on $$\mathbb{P}^1$$ makes the meaning of the intuitive <em>twist</em> explained above much clearer. The process of making $$\mathbb{P}^1$$ from $$\mathbb{A}^2\setminus \{0\}$$ can be thought of as first mapping $$\mathbb{A}^2\setminus\{0\}$$ to the unit circle via radial projection, and then identifying antipodal points of the unit circle; during this process, vectors in opposite directions are identified, which causes the fibers to twist. One way to see this twist is to look at sections of the line bundle $$\mathcal{L}$$.
+In particular, examining $$\mathcal{O}(-1)$$ on $$\mathbb{P}^1$$ makes the meaning of the intuitive <em>twist</em> explained above much clearer. The process of making $$\mathbb{P}^1$$ from $$\mathbb{A}^2\setminus \{0\}$$ can be thought of as first mapping $$\mathbb{A}^2\setminus\{0\}$$ to the unit circle via radial projection, and then identifying antipodal points of the unit circle; during this process, vectors in opposite directions are identified, which causes the fibers to twist. One way to see this twist is to look at sections of the line bundle $$\mathcal{L}$$.
 
 ::: Definition 15
 We denote the space of *global sections* of a line bundle $$\mathcal{L}$$ by $$\Gamma(X, \mathcal{L})$$. That is, $$\Gamma(X, \mathcal{L})$$ is the set of regular maps assigning to each point $$x\in X$$ an element of the fiber $$\pi^{-1}(x)\subset \mathcal{L}$$.
