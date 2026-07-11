@@ -1,7 +1,7 @@
 ---
 title: "Continuous Functions"
-description: "We define continuity of a function using limits and explore the arithmetic and composition of continuous functions. We also cover the extreme value theorem and the intermediate value theorem, which are fundamental properties of continuous functions on a closed interval."
-excerpt: "Definition of continuity and properties of continuous functions — the extreme and intermediate value theorems"
+description: "This post defines continuity of a function using limits and explores the algebraic operations and composition of continuous functions. It also covers the extreme value theorem and the intermediate value theorem, which are fundamental properties of continuous functions on closed intervals."
+excerpt: "Definition of continuity and properties of continuous functions: extreme value and intermediate value theorems"
 
 categories: [Math / Calculus]
 permalink: /en/math/calculus/continuity
@@ -10,110 +10,109 @@ sidebar:
 
 date: 2026-06-19
 weight: 2
-translated_at: 2026-06-19T16:30:02+00:00
+
+drift_needed: true
+translated_at: 2026-07-11T03:02:55+00:00
 translation_source: kimi-cli
-last_polished_at: 2026-06-19T16:30:02+00:00
 ---
-We rigorously defined limits in [§Functions and Limits of Sequences](/en/math/calculus/functions_and_limits), and the natural next step is continuity.
+We have already defined limits rigorously in [§Limits of Functions](/en/math/calculus/functions_and_limits), so we now define continuity on top of them.
 
 ## Definition of Continuity
 
-Essentially, the only part of the definition of continuity that was not rigorous was the limit part, and since we have already rigorously defined limits in the previous post, the following definition is essentially free.
+Intuitively, a continuous function is one that is "connected without breaks," but the tools needed to make this precise are already at hand in the form of limits.
 
 ::: Definition 1
 A function $$f$$ is said to be *continuous* at a point $$a$$ in its domain if
 
 $$\lim_{x \to a} f(x) = f(a)$$
 
-holds. If $$f$$ is continuous at every point in its domain, we call $$f$$ a *continuous function*.
+holds. If $$f$$ is continuous at every point of its domain, we call $$f$$ a *continuous function*.
 :::
 
-Unpacked, this means that for any $$\epsilon > 0$$, there exists some $$\delta > 0$$ such that
+Rewriting this in the $$\epsilon$$-$$\delta$$ language, for any $$\epsilon > 0$$ there exists some $$\delta > 0$$ such that
 
 $$\lvert x - a\rvert < \delta\Rightarrow\lvert f(x) - f(a)\rvert < \epsilon$$
 
-holds. Here the condition $$0 < \lvert x-a\rvert$$ excluding $$x = a$$ has disappeared, because when $$x = a$$, we have $$\lvert f(a)-f(a)\rvert = 0 < \epsilon$$ automatically, so there is no need to exclude it.
+holds. Here the condition $$0 < \lvert x-a\rvert$$ excluding $$x = a$$ has disappeared, because when $$x = a$$ we have $$\lvert f(a)-f(a)\rvert = 0 < \epsilon$$ automatically, so there is no need to exclude it.
 
-Taking this definition apart, we see that for continuity to hold, three conditions must all be satisfied:
+Unpacking this definition, we see that three things must all be satisfied for continuity to hold.
 
-1. $$f(a)$$ is defined.
+1. $$f(a)$$ is defined. 
 2. The limit $$\lim_{x\to a} f(x)$$ exists.
-3. The two values above are equal to each other.
+3. The two values above are equal.
 
-Depending on which of these conditions fails, the type of discontinuity varies; we will return to this after examining the basic properties of continuous functions.
+The type of discontinuity depends on which of these conditions fails; we will return to this after examining some basic properties of continuous functions.
 
 ## Operations on Continuous Functions
 
-First, the following proposition is an immediate consequence of [§Functions and Limits, ⁋Proposition 4](/en/math/calculus/functions_and_limits#prop4).
+Since continuity is the statement that the limit value equals the function value, [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5) carries over directly as operations on continuous functions.
 
 ::: Proposition 2
-If $$f$$ and $$g$$ are continuous at $$a$$, then $$f+g$$, $$cf$$ (where $$c$$ is a constant), and $$fg$$ are also continuous at $$a$$, and if $$g(a) \neq 0$$, then $$f/g$$ is continuous at $$a$$ as well. Moreover, if $$f$$ is continuous at $$a$$ and $$g$$ is continuous at $$f(a)$$, then the composite function $$g \circ f$$ is continuous at $$a$$.
+If $$f$$ and $$g$$ are continuous at $$a$$, then $$f+g$$, $$cf$$ (where $$c$$ is a constant), and $$fg$$ are also continuous at $$a$$; and if $$g(a) \neq 0$$, then $$f/g$$ is continuous at $$a$$ as well. Moreover, if $$f$$ is continuous at $$a$$ and $$g$$ is continuous at $$f(a)$$, then the composite function $$g \circ f$$ is continuous at $$a$$.
 :::
 
 ::: Proof
-Only the composition is a new result. Let an arbitrary $$\epsilon > 0$$ be given. Since $$g$$ is continuous at $$b := f(a)$$, there exists some $$\eta > 0$$ such that
+Only the composite function case is new. Let any $$\epsilon > 0$$ be given. Since $$g$$ is continuous at $$b := f(a)$$, there exists some $$\eta > 0$$ such that
 
 $$\lvert y - b\rvert < \eta\Rightarrow\lvert g(y) - g(b)\rvert < \epsilon$$
 
-holds. Again, since $$f$$ is continuous at $$a$$, there exists a corresponding $$\delta > 0$$ for this $$\eta$$ such that
+holds. Again, since $$f$$ is continuous at $$a$$, for this $$\eta$$ there exists a corresponding $$\delta > 0$$ such that
 
 $$\lvert x-a\rvert < \delta\Rightarrow\lvert f(x) - b\rvert < \eta$$
 
-holds. Chaining the two steps, when $$\lvert x-a\rvert < \delta$$, we have $$y = f(x)$$ satisfying $$\lvert y - b\rvert < \eta$$, and therefore $$\lvert g(f(x)) - g(f(a))\rvert < \epsilon$$.
+holds. Chaining the two steps, when $$\lvert x-a\rvert < \delta$$ we have $$y = f(x)$$ satisfying $$\lvert y - b\rvert < \eta$$, and therefore $$\lvert g(f(x)) - g(f(a))\rvert < \epsilon$$.
 :::
 
-We can verify that constant functions and the identity function $$f(x)=x$$ are continuous. Therefore, by repeatedly taking sums and products of these, any polynomial is continuous, and by further taking quotients, any rational function is continuous everywhere except at points where the denominator is zero. The following is a slightly less obvious example of a continuous function.
+We can verify that constant functions and the identity function $$f(x)=x$$ are continuous. Hence, by repeatedly taking sums and products of these, any polynomial is continuous; and by further taking quotients, any rational function is continuous everywhere except where its denominator is zero. Here is a slightly less obvious example of a continuous function.
 
 ::: Example 3
-Let us show that the sine function $$\sin x$$ is continuous at every point in its domain. From the addition formula for sine, we know that
+Let us show that the trigonometric function $$\sin x$$ is continuous at every point of its domain. From the sum-to-product formulas for trigonometric functions, we know that
 
 $$\lvert \sin x - \sin a\rvert= \left\lvert 2\cos\frac{x+a}{2}\sin\frac{x-a}{2}\right\rvert \leq 2\left\lvert \sin\frac{x-a}{2}\right\rvert$$
 
-always holds. Now applying the inequality $$\lvert \sin t\rvert \leq \lvert t\rvert$$ obtained in [§Functions and Limits of Sequences, ⁋Example 10](/en/math/calculus/functions_and_limits#ex10), we have for any $$a \in \mathbb{R}$$
+always holds. Now applying the inequality $$\lvert \sin t\rvert \leq \lvert t\rvert$$ obtained in [§Limits of Functions, ⁋Example 10](/en/math/calculus/functions_and_limits#ex10), we get for any $$a \in \mathbb{R}$$
 
 $$\lvert \sin x - \sin a\rvert\leq\lvert x-a\rvert$$
 
-holds, so we may take $$\delta = \epsilon$$.
+so it suffices to take $$\delta = \epsilon$$.
 :::
 
-Now the cosine function can be obtained by translating the sine function, so it is continuous by [Proposition 2](#prop2), and therefore by the same argument as above, $$\tan x$$ is also continuous everywhere except at points where the denominator is zero.
+Now the $$\cos$$ function can be obtained by translating the $$\sin$$ function, so it is continuous by [Proposition 2](#prop2); and consequently, by the same kind of argument as above, $$\tan x$$ is also continuous everywhere except where its denominator is zero.
 
 ## Properties of Continuous Functions on a Closed Interval
 
-On the other hand, one useful property of continuous functions is that if $$f$$ is continuous at $$a$$ and $$f(a) > 0$$, then taking the $$\delta$$ corresponding to $$\epsilon = f(a)/2$$, we see that $$f$$ is always positive in the $$\delta$$-neighborhood of $$a$$. This simple fact is useful in itself, and is also generalized by the following theorems.
+On the other hand, one useful property of continuous functions is that if $$f$$ is continuous at $$a$$ and $$f(a) > 0$$, then by taking $$\delta$$ corresponding to $$\epsilon = f(a)/2$$ we can ensure that $$f$$ remains positive in the $$\delta$$-neighborhood of $$a$$. This simple fact is useful in itself, and it also generalizes to the following theorems.
 
 ::: Theorem 4 (Extreme Value Theorem)
-If $$f$$ is continuous on a closed interval $$[a,b]$$, then $$f$$ attains a maximum and a minimum on $$[a,b]$$. That is, there exist some $$c, d \in [a,b]$$ such that for all $$x \in [a,b]$$, we have $$f(d) \leq f(x) \leq f(c)$$.
+If $$f$$ is continuous on a closed interval $$[a,b]$$, then $$f$$ attains a maximum and a minimum on $$[a,b]$$. That is, there exist $$c, d \in [a,b]$$ such that $$f(d) \leq f(x) \leq f(c)$$ for all $$x \in [a,b]$$.
 :::
 
 ::: Theorem 5 (Intermediate Value Theorem)
-If $$f$$ is continuous on a closed interval $$[a,b]$$ and $$f(a) \neq f(b)$$, then for any value $$y$$ between $$f(a)$$ and $$f(b)$$, there exists $$c \in (a,b)$$ such that $$f(c) = y$$.
+If $$f$$ is continuous on a closed interval $$[a,b]$$ and $$f(a) \neq f(b)$$, then for any value $$y$$ between $$f(a)$$ and $$f(b)$$ there exists $$c \in (a,b)$$ such that $$f(c) = y$$.
 :::
 
-The proofs of these two theorems essentially require the *completeness* of the real numbers, so we postpone rigorous proofs until after introducing completeness, to be covered in the analysis category.
+The proofs of these two theorems essentially require the *completeness* of the real numbers.
 
 Finally, it is convenient to classify the ways in which continuity can fail, as this helps describe the behavior of functions.
 
 ::: Definition 6 (Classification of Discontinuities)
-When a function $$f$$ is discontinuous at a point $$a$$, we divide it into the following three cases according to the behavior of the two one-sided limits $$\lim_{x\to a^\pm} f(x)$$.
+When a function $$f$$ is discontinuous at a point $$a$$, we divide the situation into three cases according to the behavior of the two one-sided limits $$\lim_{x\to a^\pm} f(x)$$.
 
-1. *Removable discontinuity*: The limit $$\lim_{x\to a} f(x)$$ exists but is different from $$f(a)$$, or $$f(a)$$ is undefined. If we (re)define $$f(a)$$ to be the limit value, the function becomes continuous. Example: $$\frac{x^2-1}{x-1}$$ ($$a=1$$).
-2. *Jump discontinuity*: Both one-sided limits exist but are different from each other. Example: $$\frac{\lvert x\rvert}{x}$$ ($$a=0$$).
-3. *Essential discontinuity*: At least one of the one-sided limits does not exist (oscillates or diverges). Example: $$\sin\frac1x$$ ($$a=0$$).
+1. *Removable discontinuity*: the limit $$\lim_{x\to a} f(x)$$ exists but is different from $$f(a)$$, or $$f(a)$$ is undefined. Redefining (or defining) $$f(a)$$ to be the limit value restores continuity. Example: $$(x^2-1)/(x-1)$$ at $$a=1$$.
+2. *Jump discontinuity*: both one-sided limits exist but are different. Example: $$\lvert x\rvert/x$$ at $$a=0$$.
+3. *Essential discontinuity*: at least one of the one-sided limits does not exist (oscillates or diverges). Example: $$\sin(1/x)$$ at $$a=0$$.
 :::
 
 ## Monotone Functions and Inverse Functions
 
-One important application of the intermediate value theorem is the continuity of inverse functions. A function is said to be *strictly increasing* (or strictly decreasing) on an interval if $$x_1 < x_2$$ always implies $$f(x_1) < f(x_2)$$ (or $$>$$), and such functions are collectively called *strictly monotone*. A strictly monotone function is obviously injective, so it has an inverse function on its image.
+An important application of the Intermediate Value Theorem is the continuity of inverse functions. A function is said to be *strictly increasing* (or strictly decreasing) on an interval if $$x_1 < x_2$$ always implies $$f(x_1) < f(x_2)$$ (or $$>$$); such functions are collectively called *strictly monotone*. A strictly monotone function is obviously injective, so it has an inverse on its image.
 
 ::: Proposition 7
-If $$f$$ is continuous and strictly monotone on an interval $$I$$, then its image $$J = f(I)$$ is also an interval, and the inverse function $$f^{-1} : J \to I$$ is also a continuous strictly monotone function.
+If $$f$$ is continuous and strictly monotone on an interval $$I$$, then its image $$J = f(I)$$ is also an interval, and the inverse function $$f^{-1} : J \to I$$ is likewise a continuous strictly monotone function.
 :::
 
 ::: Proof
-Suppose $$f$$ is strictly increasing. That $$J$$ is an interval follows from the intermediate value theorem: since $$f$$ takes every value between two of its values, there are no gaps in $$J$$. That the inverse function $$f^{-1}$$ is strictly increasing follows immediately from the strict monotonicity of $$f$$. To show continuity, if $$f^{-1}$$ had a point of discontinuity, there would be a jump in the image of $$f^{-1}$$, making $$I$$ not an interval, which contradicts the fact that $$I$$ is an interval. Therefore $$f^{-1}$$ is continuous.
+Suppose $$f$$ is strictly increasing. That $$J$$ is an interval follows from the Intermediate Value Theorem: since $$f$$ takes every value between any two of its values, there are no gaps in $$J$$. That the inverse function $$f^{-1}$$ is strictly increasing follows immediately from the strict increasingness of $$f$$. To show continuity, if $$f^{-1}$$ had a point of discontinuity, then a jump would occur in the image of $$f^{-1}$$, making $$I$$ not an interval; but this contradicts the fact that $$I$$ is an interval. Therefore $$f^{-1}$$ is continuous.
 :::
 
-For example, $$f(x) = x^n$$ ($$x \geq 0$$, $$n$$ a natural number) is continuous and strictly increasing, so its inverse function, the $$n$$th root $$\sqrt[n]{x}$$, is also continuous. Likewise, inverse trigonometric functions, which are inverses of suitably restricted trigonometric functions, are all continuous. This proposition forms the foundation for establishing the inverse function differentiation formula in [§Differentiation Rules](/en/math/calculus/differentiation_rules).
-
-With this, we have established the basic properties of continuous functions. In the next post, [§Derivatives and Differentiation](/en/math/calculus/derivatives), we define the local rate of change, namely differentiation, for "smooth" functions among continuous functions. There we will see that differentiability is a stronger condition than continuity.
+For instance, $$f(x) = x^n$$ (for $$x \geq 0$$, with $$n$$ a natural number) is continuous and strictly increasing, so its inverse, the $$n$$th root $$\sqrt[n]{x}$$, is also continuous. Likewise, the inverse trigonometric functions, which are inverses of suitably restricted trigonometric functions, are all continuous. With this we have assembled the basic properties of continuous functions.

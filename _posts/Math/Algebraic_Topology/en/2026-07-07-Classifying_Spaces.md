@@ -1,7 +1,7 @@
 ---
 title: "Classifying Spaces"
 description: "We define principal bundles with an arbitrary topological group as structure group, and classify them using homotopy theory via universal bundles and classifying spaces."
-excerpt: "Classification of principal G-bundles and construction of the classifying space BG"
+excerpt: "Classification of principal G-bundles and construction of the classifying space \B G"
 
 categories: [Math / Algebraic Topology]
 permalink: /en/math/algebraic_topology/classifying_spaces
@@ -26,7 +26,7 @@ $$g_{ij}: U_i\cap U_j\rightarrow \GL(k;\mathbb{R})$$
 
 on the overlap of two trivializing open sets, and this perspective was powerful in that, for instance, replacing $$\GL(k;\mathbb{R})$$ with $$\GL^+(k;\mathbb{R})$$ also allowed us to describe *oriented* vector bundles.
 
-The goal of this post is to connect these two perspectives. That is, we will define, more generally, the *principal $$G$$-bundle* that appears when the structure group is a (topological) group $$G$$, and define the *classifying space* $$BG$$, which is the space that classifies such bundles. In this post, $$G$$ always denotes a topological group, and unless otherwise stated, the base space is assumed to be paracompact.
+The goal of this post is to connect these two perspectives. That is, we will define, more generally, the *principal $$G$$-bundle* that appears when the structure group is a (topological) group $$G$$, and define the *classifying space* $$\B G$$, which is the space that classifies such bundles. In this post, $$G$$ always denotes a topological group, and unless otherwise stated, the base space is assumed to be paracompact.
 
 ## Definition of Principal Bundle
 
@@ -136,28 +136,28 @@ In particular, if $$X$$ is contractible, then the identity map is homotopic to a
 [Theorem 5](#thm5) tells us that the correspondence sending a function $$f$$ to $$f^\ast P$$ depends on the homotopy class. Therefore, if we can take some fixed principal $$G$$-bundle as a source from which all other bundles can be obtained by pullback, the classification of principal $$G$$-bundles would be reduced to counting homotopy classes into that source space, which generalizes the fact that the universal bundle over $$\Gr_k(\mathbb{R}^\infty)$$ was such a source in the case of vector bundles.
 
 ::: Definition 6
-For a topological group $$G$$, a principal $$G$$-bundle $$p:EG\rightarrow BG$$ is called a *universal bundle* if the total space $$EG$$ is contractible, that is, $$EG$$ is homotopy equivalent to a point. ([§Homotopy, ⁋Definition 4](/en/math/algebraic_topology/homotopy#def4)) In this case, we call the base space $$BG$$ the *classifying space* of $$G$$.
+For a topological group $$G$$, a principal $$G$$-bundle $$p:EG\rightarrow \B G$$ is called a *universal bundle* if the total space $$EG$$ is contractible, that is, $$EG$$ is homotopy equivalent to a point. ([§Homotopy, ⁋Definition 4](/en/math/algebraic_topology/homotopy#def4)) In this case, we call the base space $$\B G$$ the *classifying space* of $$G$$.
 :::
 
-That is, a universal bundle is a free $$G$$-action on a contractible space, and $$BG$$ is its orbit space $$EG/G$$. The existence of such a space is not obvious, but Milnor gave a construction for any topological group.
+That is, a universal bundle is a free $$G$$-action on a contractible space, and $$\B G$$ is its orbit space $$EG/G$$. The existence of such a space is not obvious, but Milnor gave a construction for any topological group.
 
 ::: Theorem 7 (Milnor)
-For any topological group $$G$$, a universal bundle $$EG\rightarrow BG$$ exists.
+For any topological group $$G$$, a universal bundle $$EG\rightarrow \B G$$ exists.
 :::
 ::: Proof
-Milnor's construction uses the infinite join $$EG=G\ast G\ast G\ast\cdots$$ of $$G$$. The diagonal right translation is free, and since the join of two spaces raises connectivity by $$\conn(A\ast B)\geq\conn(A)+\conn(B)+2$$, the colimit $$EG$$ is connected in every dimension, hence weakly contractible (and thus contractible under a CW structure), and $$EG\rightarrow EG/G=BG$$ becomes a principal $$G$$-bundle. For details, we follow §14 of [Mil] and [tD].
+Milnor's construction uses the infinite join $$EG=G\ast G\ast G\ast\cdots$$ of $$G$$. The diagonal right translation is free, and since the join of two spaces raises connectivity by $$\conn(A\ast B)\geq\conn(A)+\conn(B)+2$$, the colimit $$EG$$ is connected in every dimension, hence weakly contractible (and thus contractible under a CW structure), and $$EG\rightarrow EG/G=\B G$$ becomes a principal $$G$$-bundle. For details, we follow §14 of [Mil] and [tD].
 :::
 
-The universal bundle is essentially unique. Given two universal bundles $$EG\rightarrow BG$$ and $$EG'\rightarrow BG'$$, since $$EG'$$ is contractible, by Theorem 5 there exists a classifying map pulled back to $$BG$$, and applying this argument in both directions yields that $$BG$$ and $$BG'$$ are connected by maps that are homotopy inverse to each other. Thus, $$BG$$ is determined without ambiguity beyond homotopy equivalence, and we speak of *the* classifying space.
+The universal bundle is essentially unique. Given two universal bundles $$EG\rightarrow \B G$$ and $$EG'\rightarrow \B G'$$, since $$EG'$$ is contractible, by Theorem 5 there exists a classifying map pulled back to $$\B G$$, and applying this argument in both directions yields that $$\B G$$ and $$\B G'$$ are connected by maps that are homotopy inverse to each other. Thus, $$\B G$$ is determined without ambiguity beyond homotopy equivalence, and we speak of *the* classifying space.
 
 ## Classification Theorem
 
 We now state the central result of classification theory. This is the point that justifies the name "classifying space."
 
 ::: Theorem 8 (Classification Theorem)
-Let $$X$$ be a paracompact space (e.g., a CW complex) and let $$[X,BG]$$ be the set of free homotopy classes from $$X$$ to $$BG$$. Then the map pulling back the universal bundle $$EG\rightarrow BG$$
+Let $$X$$ be a paracompact space (e.g., a CW complex) and let $$[X,\B G]$$ be the set of free homotopy classes from $$X$$ to $$\B G$$. Then the map pulling back the universal bundle $$EG\rightarrow \B G$$
 
-$$[X,BG]\xrightarrow{\ \cong\ }\{X\text{ 위의 principal }G\text{-bundle}\}/\cong,\qquad [f]\mapsto f^\ast EG$$
+$$[X,\B G]\xrightarrow{\ \cong\ }\{X\text{ 위의 principal }G\text{-bundle}\}/\cong,\qquad [f]\mapsto f^\ast EG$$
 
 is a well-defined bijection, and is natural in the sense that it is compatible with pullback along maps $$X'\rightarrow X$$.
 :::
@@ -168,19 +168,19 @@ That $$[f]\mapsto f^\ast EG$$ does not depend on the choice of representative fo
 
 $$\widetilde{f}:P\rightarrow EG,\qquad y\mapsto \sum_i \rho_i(p(y))\psi_i(y)$$
 
-is a well-defined $$G$$-equivariant continuous map (it is a finite sum at each point, and $$\psi_i$$ appears only where $$\rho_i>0$$). A $$G$$-equivariant map descends to a map $$f:X\rightarrow BG$$ between base spaces, and since $$\widetilde{f}$$ is an isomorphism on each fiber, we obtain $$P\cong f^\ast EG$$.
+is a well-defined $$G$$-equivariant continuous map (it is a finite sum at each point, and $$\psi_i$$ appears only where $$\rho_i>0$$). A $$G$$-equivariant map descends to a map $$f:X\rightarrow \B G$$ between base spaces, and since $$\widetilde{f}$$ is an isomorphism on each fiber, we obtain $$P\cong f^\ast EG$$.
 
-**Injectivity.** Let $$f_0,f_1:X\rightarrow BG$$ be such that $$f_0^\ast EG\cong f_1^\ast EG=:P$$. Each classifying map $$f_i$$ has as a lift a bundle map $$P\cong f_i^\ast EG\rightarrow EG$$, that is, a $$G$$-equivariant continuous map $$\Phi_i:P\rightarrow EG$$ from $$P$$ to the universal bundle inducing $$f_i$$ on the base. However, since $$EG$$ is contractible, any two $$G$$-equivariant maps from a principal bundle $$P$$ over a paracompact space to $$EG$$ are $$G$$-equivariantly homotopic. Thus, there exists a $$G$$-equivariant homotopy $$P\times[0,1]\rightarrow EG$$ connecting $$\Phi_0$$ and $$\Phi_1$$, and this descends to the base to give a homotopy between $$f_0$$ and $$f_1$$, so $$[f_0]=[f_1]$$. The fact that the two $$G$$-equivariant maps are $$G$$-homotopic itself relies on the contractibility of $$EG$$ and the paracompactness of $$X$$.
+**Injectivity.** Let $$f_0,f_1:X\rightarrow \B G$$ be such that $$f_0^\ast EG\cong f_1^\ast EG=:P$$. Each classifying map $$f_i$$ has as a lift a bundle map $$P\cong f_i^\ast EG\rightarrow EG$$, that is, a $$G$$-equivariant continuous map $$\Phi_i:P\rightarrow EG$$ from $$P$$ to the universal bundle inducing $$f_i$$ on the base. However, since $$EG$$ is contractible, any two $$G$$-equivariant maps from a principal bundle $$P$$ over a paracompact space to $$EG$$ are $$G$$-equivariantly homotopic. Thus, there exists a $$G$$-equivariant homotopy $$P\times[0,1]\rightarrow EG$$ connecting $$\Phi_0$$ and $$\Phi_1$$, and this descends to the base to give a homotopy between $$f_0$$ and $$f_1$$, so $$[f_0]=[f_1]$$. The fact that the two $$G$$-equivariant maps are $$G$$-homotopic itself relies on the contractibility of $$EG$$ and the paracompactness of $$X$$.
 
 Details for both steps follow §14 of [Mil], [tD], and §4 of [Hus].
 :::
 
 ![Pullback square of the classifying map](/assets/images/Math/Algebraic_Topology/Classifying_Spaces-1.svg){:style="width:8.21em" class="invert" .align-center}
 
-The classification theorem translates the geometric classification of principal $$G$$-bundles into purely homotopy-theoretic data $$[X,BG]$$. Combined with [Proposition 4](#prop4), the classification of rank $$n$$ real vector bundles is reduced to $$[X,B\GL(n,\mathbb{R})]$$, and in the complex case to $$[X,B\GL(n,\mathbb{C})]$$, and we will soon see that this is the same content as the classification via Grassmannians from the previous post.
+The classification theorem translates the geometric classification of principal $$G$$-bundles into purely homotopy-theoretic data $$[X,\B G]$$. Combined with [Proposition 4](#prop4), the classification of rank $$n$$ real vector bundles is reduced to $$[X,\B\GL(n,\mathbb{R})]$$, and in the complex case to $$[X,\B\GL(n,\mathbb{C})]$$, and we will soon see that this is the same content as the classification via Grassmannians from the previous post.
 
 ::: Lemma 9
-The construction of the classifying space is functorial in $$G$$. Given a continuous group homomorphism $$\phi:G\rightarrow H$$, the associated bundle $$EG\times_G H$$ obtained by changing the $$G$$-action on $$EG$$ to an $$H$$-action via $$\phi$$ induces a map $$B\phi:BG\rightarrow BH$$ classifying it. This satisfies $$B(\psi\circ\phi)\simeq B\psi\circ B\phi$$, making $$G\mapsto BG$$ a functor on the homotopy category. For example, the inclusion $$\Umat(n)\hookrightarrow\GL(n,\mathbb{C})$$ induces $$B\Umat(n)\rightarrow B\GL(n,\mathbb{C})$$, which is used below.
+The construction of the classifying space is functorial in $$G$$. Given a continuous group homomorphism $$\phi:G\rightarrow H$$, the associated bundle $$EG\times_G H$$ obtained by changing the $$G$$-action on $$EG$$ to an $$H$$-action via $$\phi$$ induces a map $$\B\phi:\B G\rightarrow \B H$$ classifying it. This satisfies $$\B(\psi\circ\phi)\simeq \B\psi\circ \B\phi$$, making $$G\mapsto \B G$$ a functor on the homotopy category. For example, the inclusion $$\Umat(n)\hookrightarrow\GL(n,\mathbb{C})$$ induces $$\B\Umat(n)\rightarrow \B\GL(n,\mathbb{C})$$, which is used below.
 :::
 
 ## Examples of Classifying Spaces
@@ -188,78 +188,78 @@ The construction of the classifying space is functorial in $$G$$. Given a contin
 The simplest yet most suggestive case is when $$G$$ is a discrete group. In this case, a principal $$G$$-bundle is a fiber bundle whose fiber is a discrete set, that is, a regular covering space with $$G$$ as its deck transformation group.
 
 ::: Example 10
-Let $$G$$ be a discrete group. In the universal bundle $$EG\rightarrow BG$$, since $$EG$$ is contractible and $$G$$ acts freely and discretely, $$EG\rightarrow BG$$ is the universal cover of $$BG$$ and its deck transformation group is $$G$$. ([§Covering Spaces, ⁋Theorem 11](/en/math/algebraic_topology/covering_spaces#thm11)) Therefore, $$\pi_1(BG)\cong G$$, and since $$EG$$ is contractible, the universal cover of $$BG$$ is also contractible, so $$\pi_n(BG)=0$$ for $$n\geq 2$$. That is, $$BG$$ is an Eilenberg–MacLane space $$K(G,1)$$.
+Let $$G$$ be a discrete group. In the universal bundle $$EG\rightarrow \B G$$, since $$EG$$ is contractible and $$G$$ acts freely and discretely, $$EG\rightarrow \B G$$ is the universal cover of $$\B G$$ and its deck transformation group is $$G$$. ([§Covering Spaces, ⁋Theorem 11](/en/math/algebraic_topology/covering_spaces#thm11)) Therefore, $$\pi_1(\B G)\cong G$$, and since $$EG$$ is contractible, the universal cover of $$\B G$$ is also contractible, so $$\pi_n(\B G)=0$$ for $$n\geq 2$$. That is, $$\B G$$ is an Eilenberg–MacLane space $$K(G,1)$$.
 
-From this, concrete classifying spaces are read directly from covering space theory. For $$G=\mathbb{Z}/2$$, since $$S^\infty$$ is contractible and the antipodal action is free, we have $$E(\mathbb{Z}/2)=S^\infty$$ and $$B(\mathbb{Z}/2)=S^\infty/(\mathbb{Z}/2)=\RP^\infty$$. For $$G=\mathbb{Z}$$, we obtain $$B\mathbb{Z}=\mathbb{R}/\mathbb{Z}=S^1$$ from the translation action on $$\mathbb{R}$$, which exactly matches the fact that the universal cover $$\mathbb{R}\rightarrow S^1$$ of $$S^1$$ has deck group $$\mathbb{Z}$$. ([§Covering Spaces, ⁋Corollary 12](/en/math/algebraic_topology/covering_spaces#cor12))
+From this, concrete classifying spaces are read directly from covering space theory. For $$G=\mathbb{Z}/2$$, since $$S^\infty$$ is contractible and the antipodal action is free, we have $$E(\mathbb{Z}/2)=S^\infty$$ and $$\B(\mathbb{Z}/2)=S^\infty/(\mathbb{Z}/2)=\RP^\infty$$. For $$G=\mathbb{Z}$$, we obtain $$B\mathbb{Z}=\mathbb{R}/\mathbb{Z}=S^1$$ from the translation action on $$\mathbb{R}$$, which exactly matches the fact that the universal cover $$\mathbb{R}\rightarrow S^1$$ of $$S^1$$ has deck group $$\mathbb{Z}$$. ([§Covering Spaces, ⁋Corollary 12](/en/math/algebraic_topology/covering_spaces#cor12))
 :::
 
 In the case of continuous groups, the most basic example is the circle group $$G=S^1$$. $$S^1$$ acts freely on $$\mathbb{C}^\infty\setminus\{0\}$$ by scalar multiplication, and this space deformation retracts onto the unit sphere $$S^\infty=\varinjlim_n S^{2n-1}$$, which is contractible, so $$ES^1=\mathbb{C}^\infty\setminus\{0\}$$ and its orbit space is the space of complex lines
 
-$$BS^1=(\mathbb{C}^\infty\setminus\{0\})/S^1=\CP^\infty.$$
+$$\B S^1=(\mathbb{C}^\infty\setminus\{0\})/S^1=\CP^\infty.$$
 
-On the other hand, $$\CP^\infty=\Gr_1(\mathbb{C}^\infty)$$ is the classifying space of $$\Umat(1)=S^1$$, exactly the space written as $$B\Umat(1)$$ in the previous post, and thus $$BS^1=B\Umat(1)=\CP^\infty$$. More generally, for the $$n$$-dimensional torus $$T=(S^1)^n$$, since the product goes to the product of classifying spaces,
+On the other hand, $$\CP^\infty=\Gr_1(\mathbb{C}^\infty)$$ is the classifying space of $$\Umat(1)=S^1$$, exactly the space written as $$\B\Umat(1)$$ in the previous post, and thus $$\B S^1=\B\Umat(1)=\CP^\infty$$. More generally, for the $$n$$-dimensional torus $$T=(S^1)^n$$, since the product goes to the product of classifying spaces,
 
-$$BT=B(S^1)^n=(\CP^\infty)^n.$$
+$$\B T=\B(S^1)^n=(\CP^\infty)^n.$$
 
-In the same way, for any $$n$$, the classifying spaces of the unitary group and the orthogonal group are realized by the infinite Grassmannians from the previous post. That is, $$B\Umat(n)=\Gr_n(\mathbb{C}^\infty)$$ and $$B\Omat(n)=\Gr_n(\mathbb{R}^\infty)$$, because the frame bundle of the universal vector bundle over $$\Gr_n(\mathbb{C}^\infty)$$ gives the universal principal $$\Umat(n)$$-bundle, and its total space (the colimit of Stiefel spaces) is contractible.
+In the same way, for any $$n$$, the classifying spaces of the unitary group and the orthogonal group are realized by the infinite Grassmannians from the previous post. That is, $$\B\Umat(n)=\Gr_n(\mathbb{C}^\infty)$$ and $$\B\Omat(n)=\Gr_n(\mathbb{R}^\infty)$$, because the frame bundle of the universal vector bundle over $$\Gr_n(\mathbb{C}^\infty)$$ gives the universal principal $$\Umat(n)$$-bundle, and its total space (the colimit of Stiefel spaces) is contractible.
 
 Finally, the fact that the classifying spaces of the general linear group and its maximal compact subgroup have the same homotopy type is frequently used in classification theory.
 
 ::: Example 11
 The inclusion $$\Umat(n)\hookrightarrow\GL(n,\mathbb{C})$$ induces a homotopy equivalence
 
-$$B\Umat(n)\xrightarrow{\ \simeq\ }B\GL(n,\mathbb{C}).$$
+$$\B\Umat(n)\xrightarrow{\ \simeq\ }\B\GL(n,\mathbb{C}).$$
 
 This comes from the Gram–Schmidt orthogonalization deformation retracting $$\GL(n,\mathbb{C})$$ onto $$\Umat(n)$$. Specifically, any matrix in $$\GL(n,\mathbb{C})$$ decomposes uniquely as a product of a unitary matrix and a positive definite upper-triangular matrix ($$QR$$ decomposition), and continuously contracting the upper-triangular factor toward the identity yields that $$\GL(n,\mathbb{C})$$ deformation retracts onto $$\Umat(n)$$. This homotopy equivalence at the group level passes through $$B$$ to give a homotopy equivalence at the classifying space level. Therefore, reducing the structure group of a rank $$n$$ complex vector bundle from $$\GL(n,\mathbb{C})$$ to $$\Umat(n)$$ causes no loss in classification, and this is the classifying-space version of the fact that every complex bundle can be given a Hermitian metric.
 :::
 
 ## Cohomology of Classifying Spaces
 
-According to the classification theorem, a characteristic class of a bundle with structure group $$G$$ is the pullback of a cohomology class of $$BG$$ by the classifying map. Therefore, characteristic class theory is the same as computing the cohomology ring of $$BG$$, and we summarize this for the most basic groups.
+According to the classification theorem, a characteristic class of a bundle with structure group $$G$$ is the pullback of a cohomology class of $$\B G$$ by the classifying map. Therefore, characteristic class theory is the same as computing the cohomology ring of $$\B G$$, and we summarize this for the most basic groups.
 
 The starting point is the cohomology ring of complex projective space. In the previous post, we saw that
 
 $$H^\bullet(\CP^\infty;\mathbb{Z})=\mathbb{Z}[x],\qquad \lvert x\rvert=2$$
 
-and the generator $$x$$ was the first Chern class of the tautological line bundle. ([§Characteristic Classes of Vector Bundles, ⁋Example 8](/en/math/algebraic_topology/characteristic_classes#ex8)) Since $$BS^1=\CP^\infty$$, this means
+and the generator $$x$$ was the first Chern class of the tautological line bundle. ([§Characteristic Classes of Vector Bundles, ⁋Example 8](/en/math/algebraic_topology/characteristic_classes#ex8)) Since $$\B S^1=\CP^\infty$$, this means
 
-$$H^\bullet(BS^1;\mathbb{Z})=\mathbb{Z}[t],\qquad \lvert t\rvert=2.$$
+$$H^\bullet(\B S^1;\mathbb{Z})=\mathbb{Z}[t],\qquad \lvert t\rvert=2.$$
 
 The case of the torus follows from the cohomology of a product space.
 
 ::: Corollary 12
 For the $$n$$-dimensional torus $$T=(S^1)^n$$,
 
-$$H^\bullet(BT;\mathbb{Z})=\mathbb{Z}[t_1,\ldots,t_n],\qquad \lvert t_i\rvert=2$$
+$$H^\bullet(\B T;\mathbb{Z})=\mathbb{Z}[t_1,\ldots,t_n],\qquad \lvert t_i\rvert=2$$
 
-is a polynomial ring generated by $$n$$ degree $$2$$ generators. Moreover, the degree $$2$$ part $$H^2(BT;\mathbb{Z})$$ is canonically isomorphic to the character lattice $$\Hom(T,S^1)$$, and $$H^\bullet(BT;\mathbb{Z})$$ is the symmetric algebra on this lattice.
+is a polynomial ring generated by $$n$$ degree $$2$$ generators. Moreover, the degree $$2$$ part $$H^2(\B T;\mathbb{Z})$$ is canonically isomorphic to the character lattice $$\Hom(T,S^1)$$, and $$H^\bullet(\B T;\mathbb{Z})$$ is the symmetric algebra on this lattice.
 :::
 ::: Proof
-Since $$BT=(\CP^\infty)^n$$, and from the calculation of $$BS^1=\CP^\infty$$ in the previous section, the cohomology $$H^\bullet(\CP^\infty;\mathbb{Z})=\mathbb{Z}[t_i]$$ of each factor is a free abelian group in each degree, so no Tor terms appear in the Künneth theorem. Therefore, the cross product gives an isomorphism of cohomology rings
+Since $$\B T=(\CP^\infty)^n$$, and from the calculation of $$\B S^1=\CP^\infty$$ in the previous section, the cohomology $$H^\bullet(\CP^\infty;\mathbb{Z})=\mathbb{Z}[t_i]$$ of each factor is a free abelian group in each degree, so no Tor terms appear in the Künneth theorem. Therefore, the cross product gives an isomorphism of cohomology rings
 
-$$H^\bullet(BT;\mathbb{Z})\cong\bigotimes_{i=1}^n \mathbb{Z}[t_i]=\mathbb{Z}[t_1,\ldots,t_n].$$
+$$H^\bullet(\B T;\mathbb{Z})\cong\bigotimes_{i=1}^n \mathbb{Z}[t_i]=\mathbb{Z}[t_1,\ldots,t_n].$$
 
-([§Cup Products](/en/math/algebraic_topology/cup_products)) A character $$\chi:T\rightarrow S^1$$ induces $$B\chi:BT\rightarrow BS^1=\CP^\infty$$ ([Lemma 9](#lem9)) and corresponds to $$B\chi^\ast(t)\in H^2(BT;\mathbb{Z})$$, and since the $$i$$-th coordinate projection $$T\rightarrow S^1$$ goes to $$t_i$$, this correspondence is the isomorphism sending $$\Hom(T,S^1)\cong\mathbb{Z}^n$$ to $$H^2(BT;\mathbb{Z})=\bigoplus_i\mathbb{Z}t_i$$. Since the polynomial ring is the symmetric algebra on its degree $$2$$ part, the final claim follows.
+([§Cup Products](/en/math/algebraic_topology/cup_products)) A character $$\chi:T\rightarrow S^1$$ induces $$\B\chi:\B T\rightarrow \B S^1=\CP^\infty$$ ([Lemma 9](#lem9)) and corresponds to $$\B\chi^\ast(t)\in H^2(\B T;\mathbb{Z})$$, and since the $$i$$-th coordinate projection $$T\rightarrow S^1$$ goes to $$t_i$$, this correspondence is the isomorphism sending $$\Hom(T,S^1)\cong\mathbb{Z}^n$$ to $$H^2(\B T;\mathbb{Z})=\bigoplus_i\mathbb{Z}t_i$$. Since the polynomial ring is the symmetric algebra on its degree $$2$$ part, the final claim follows.
 :::
 
-This isomorphism allows us to read polynomials on the character lattice as cohomology classes of $$BT$$, and becomes central when dealing with invariants of spaces with a torus action. The case of the unitary group requires a calculation one step further, but we already saw the result in the previous post.
+This isomorphism allows us to read polynomials on the character lattice as cohomology classes of $$\B T$$, and becomes central when dealing with invariants of spaces with a torus action. The case of the unitary group requires a calculation one step further, but we already saw the result in the previous post.
 
 ::: Proposition 13
 For the unitary group $$\Umat(n)$$,
 
-$$H^\bullet(B\Umat(n);\mathbb{Z})=\mathbb{Z}[c_1,\ldots,c_n],\qquad \lvert c_i\rvert=2i$$
+$$H^\bullet(\B\Umat(n);\mathbb{Z})=\mathbb{Z}[c_1,\ldots,c_n],\qquad \lvert c_i\rvert=2i$$
 
 is a polynomial ring generated by the Chern classes $$c_i$$ of the universal complex bundle.
 :::
 ::: Proof
-Since $$B\Umat(n)=\Gr_n(\mathbb{C}^\infty)$$, we stated in the previous post that its cohomology ring is the polynomial ring generated by the Chern classes of the universal bundle
+Since $$\B\Umat(n)=\Gr_n(\mathbb{C}^\infty)$$, we stated in the previous post that its cohomology ring is the polynomial ring generated by the Chern classes of the universal bundle
 
 $$H^\bullet(\Gr_n(\mathbb{C}^\infty);\mathbb{Z})=\mathbb{Z}[c_1,\ldots,c_n].$$
 
-([§Characteristic Classes of Vector Bundles](/en/math/algebraic_topology/characteristic_classes)) The gist of its proof is that the map $$BT\rightarrow B\Umat(n)$$ induced by the maximal torus $$T\subset\Umat(n)$$ gives an injection in cohomology onto the invariants under the action of the Weyl group $$S_n$$, and the $$S_n$$-invariant part inside $$\mathbb{Z}[t_1,\ldots,t_n]$$ of [Corollary 12](#cor12) is $$\mathbb{Z}[c_1,\ldots,c_n]$$ generated by the elementary symmetric polynomials. Here, $$c_i$$ is expressed as the $$i$$-th elementary symmetric polynomial in $$t_1,\ldots,t_n$$, which is the same formula as decomposing the Chern class into Chern roots in the splitting principle. The complete calculation follows §14 of [MS].
+([§Characteristic Classes of Vector Bundles](/en/math/algebraic_topology/characteristic_classes)) The gist of its proof is that the map $$\B T\rightarrow \B\Umat(n)$$ induced by the maximal torus $$T\subset\Umat(n)$$ gives an injection in cohomology onto the invariants under the action of the Weyl group $$S_n$$, and the $$S_n$$-invariant part inside $$\mathbb{Z}[t_1,\ldots,t_n]$$ of [Corollary 12](#cor12) is $$\mathbb{Z}[c_1,\ldots,c_n]$$ generated by the elementary symmetric polynomials. Here, $$c_i$$ is expressed as the $$i$$-th elementary symmetric polynomial in $$t_1,\ldots,t_n$$, which is the same formula as decomposing the Chern class into Chern roots in the splitting principle. The complete calculation follows §14 of [MS].
 :::
 
-Since the cohomology of $$B\Umat(n)$$ consists entirely of polynomials in the Chern classes, every characteristic class of a complex vector bundle is a polynomial in the Chern classes. In the same way, $$H^\bullet(B\Omat(n);\mathbb{Z}/2)=\mathbb{Z}/2[w_1,\ldots,w_n]$$ is classified by the Stiefel–Whitney class, and for oriented bundles, the Euler class appears in the cohomology of $$B\SO(n)$$. When dealing with a space with a $$G$$-action instead of a space $$X$$, $$BG$$ and the homotopy quotient over it form the basis of equivariant cohomology, which takes this cohomology as its base.
+Since the cohomology of $$\B\Umat(n)$$ consists entirely of polynomials in the Chern classes, every characteristic class of a complex vector bundle is a polynomial in the Chern classes. In the same way, $$H^\bullet(\B\Omat(n);\mathbb{Z}/2)=\mathbb{Z}/2[w_1,\ldots,w_n]$$ is classified by the Stiefel–Whitney class, and for oriented bundles, the Euler class appears in the cohomology of $$B\SO(n)$$. When dealing with a space with a $$G$$-action instead of a space $$X$$, $$\B G$$ and the homotopy quotient over it form the basis of equivariant cohomology, which takes this cohomology as its base.
 
 ---
 
