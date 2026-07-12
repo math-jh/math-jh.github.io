@@ -126,7 +126,7 @@ $$\cl(\Delta(X))=\bigcup_{i=1}^r\cl(\{\Delta(\eta_i)\})$$
 
 를 얻는다. 곧 $$\cl(\Delta(X))$$의 임의의 점은 적당한 $$\Delta(\eta_i)\in \Delta(X)$$의 specialization이다. ([§스킴의 위상구조, ⁋정의 2](/ko/math/scheme_theory/topology_of_schemes#def2)) 그러므로 $$\Delta(X)$$가 specialization에 대해 닫혀 있음을 보이면 $$\Delta(X)=\cl(\Delta(X))$$가 되어 증명이 끝난다.
 
-$$\xi=\Delta(x)\in \Delta(X)$$이고 $$\eta\in\cl(\{\xi\})$$라 하자. 닫힌집합 $$T=\cl(\{\xi\})$$에 reduced scheme structure를 주면 ([§닫힌 부분스킴, ⁋정의 14](/ko/math/scheme_theory/closed_subschemes#def14)) $$T$$는 generic point $$\xi$$를 갖는 integral scheme이다. $$\eta$$를 포함하는 affine open subset $$\Spec B\subseteq T$$를 택하면 $$B$$는 domain이고 $$\xi$$는 $$B$$의 zero ideal에 대응하므로
+$$\xi=\Delta(x)\in \Delta(X)$$이고 $$\eta\in\cl(\{\xi\})$$라 하자. 닫힌집합 $$T=\cl(\{\xi\})$$에 reduced scheme structure를 주면 ([§닫힌 부분스킴, ⁋정의 14](/ko/math/scheme_theory/closed_subschemes#def14)) $$T$$는 generic point $$\xi$$를 갖는 integral scheme이다. $$\eta$$를 포함하는 affine open subset $$\Spec B\subseteq T$$를 택하자. Generic point는 공집합이 아닌 모든 열린집합에 속하므로 $$\Spec B$$는 $$\xi$$ 또한 포함하며, $$B$$는 domain이고 $$\xi$$는 $$B$$의 zero ideal에 대응하므로
 
 $$K:=\kappa(\xi)=\mathcal{O}_{T,\xi}=\Frac(B), \qquad \mathcal{O}:=\mathcal{O}_{T,\eta}=B_\mathfrak{q}\subseteq K$$
 
@@ -136,7 +136,7 @@ $$q:\Spec A \longrightarrow \Spec \mathcal{O} \longrightarrow T \hookrightarrow 
 
 는 $$\Spec A$$의 generic point $$(0)$$을 $$\xi$$로, closed point $$\mathfrak{m}_A$$를 $$\eta$$로 보낸다.
 
-이제 $$g_1=p_1\circ q$$, $$g_2=p_2\circ q$$라 하고, $$f\circ p_1=f\circ p_2$$이므로 잘 정의되는 $$w=f\circ g_1=f\circ g_2:\Spec A \rightarrow Y$$를 생각하자. [명제 4](#prop4)의 증명에서 보았듯 $$x$$의 적당한 affine open neighborhood $$U$$에 대해 $$U\times_VU$$는 $$\xi$$의 open neighborhood이고 그 위에서 $$\Delta$$는 closed immersion이므로 ([보조정리 5](#lem5)), stalk 사이의 사상 $$\mathcal{O}_{X\times_YX,\xi} \rightarrow \mathcal{O}_{X,x}$$는 surjective이고 따라서 $$\kappa(\xi) \rightarrow \kappa(x)$$ 또한 surjective이다. 한편 $$p_1\circ\Delta=\id_X$$이므로 합성 $$\kappa(x) \rightarrow \kappa(\xi) \rightarrow \kappa(x)$$는 항등사상이고, 그러므로 두 사상은 서로의 역이 되는 isomorphism이다. 곧 $$K=\kappa(\xi)\cong\kappa(x)$$이다. 이 동일시 아래에서 점 $$x$$와 $$\kappa(x)\cong K$$가 정의하는 canonical morphism을 $$u:\Spec K \rightarrow X$$라 하면, $$\Delta\circ u$$는 점 $$\xi$$와 $$\kappa(\xi)\cong K$$가 정의하는 canonical morphism이고 이는 $$q\circ j$$와 같다. 실제로 $$q\circ j$$는 $$\xi$$를 상으로 갖고 residue field 위에서 $$\kappa(\xi)=\Frac(\mathcal{O})=K$$의 항등사상을 유도하기 때문이다. 따라서
+이제 $$g_1=p_1\circ q$$, $$g_2=p_2\circ q$$라 하고, $$f\circ p_1=f\circ p_2$$이므로 잘 정의되는 $$w=f\circ g_1=f\circ g_2:\Spec A \rightarrow Y$$를 생각하자. [명제 4](#prop4)의 증명에서 보았듯 $$x$$의 affine open neighborhood $$U$$와 $$f(U)$$를 포함하는 $$Y$$의 affine open subset $$V$$를 택하면 $$U\times_VU$$는 $$X\times_YX$$에서 $$\xi$$의 open neighborhood이고 그 위에서 $$\Delta$$는 closed immersion이므로 ([보조정리 5](#lem5)), stalk 사이의 사상 $$\mathcal{O}_{X\times_YX,\xi} \rightarrow \mathcal{O}_{X,x}$$는 surjective이고 따라서 $$\kappa(\xi) \rightarrow \kappa(x)$$ 또한 surjective이다. 한편 $$p_1\circ\Delta=\id_X$$이므로 합성 $$\kappa(x) \rightarrow \kappa(\xi) \rightarrow \kappa(x)$$는 항등사상이고, 그러므로 두 사상은 서로의 역이 되는 isomorphism이다. 곧 $$K=\kappa(\xi)\cong\kappa(x)$$이다. 이 동일시 아래에서 점 $$x$$와 $$\kappa(x)\cong K$$가 정의하는 canonical morphism을 $$u:\Spec K \rightarrow X$$라 하면, $$\Delta\circ u$$는 점 $$\xi$$와 $$\kappa(\xi)\cong K$$가 정의하는 canonical morphism이고 이는 $$q\circ j$$와 같다. 실제로 $$q\circ j$$는 $$\xi$$를 상으로 갖고 residue field 위에서 $$\kappa(\xi)=\Frac(\mathcal{O})=K$$의 항등사상을 유도하기 때문이다. 따라서
 
 $$g_1\circ j=p_1\circ q\circ j=p_1\circ \Delta\circ u=u,\qquad g_2\circ j=p_2\circ q\circ j=p_2\circ\Delta\circ u=u$$
 
@@ -177,7 +177,7 @@ Noetherian scheme $$X$$와 finite type scheme morphism $$f:X \rightarrow Y$$에 
 의 바깥쪽 square가 주어질 때마다, 정확히 하나의 $$\Spec A \rightarrow X$$가 존재하여 전체 diagram이 commute하는 것이 동치이다.
 :::
 ::: 증명
-[정리 6](#thm6)의 증명에서와 같이 바깥쪽 square를 $$u:\Spec K \rightarrow X$$, $$v:\Spec A \rightarrow Y$$, $$j:\Spec K \rightarrow \Spec A$$로 적고, 그 증명에서 인용한 두 표준적인 사실을 계속 사용한다. 곧 field $$K$$ 안의 local subring은 항상 $$\Frac(A)=K$$인 valuation ring $$A$$에 의해 dominate되며, morphism $$\Spec K \rightarrow X$$는 점 $$x\in X$$와 field homomorphism $$\kappa(x) \rightarrow K$$의 쌍과 같은 것이다. 여기에 valuation ring의 다음 극대성을 덧붙인다. 만일 $$K$$의 valuation ring $$A$$를 dominate하는 local subring $$\mathcal{O}\subseteq K$$가 주어졌다면 $$\mathcal{O}=A$$이다. 실제로 $$x\in\mathcal{O}$$가 $$0$$이 아니고 $$x\notin A$$라면 valuation ring의 정의에 의해 $$x^{-1}\in A$$이며, $$x\notin A$$이므로 $$x^{-1}$$은 $$A$$의 unit이 아니다. 곧 $$x^{-1}\in\mathfrak{m}_A\subseteq \mathfrak{m}_\mathcal{O}$$인데 $$x\in\mathcal{O}$$이므로 $$x^{-1}$$은 $$\mathcal{O}$$의 unit이 되어 모순이다. 따라서 $$\mathcal{O}\subseteq A$$이고, dominate의 정의에서 $$A\subseteq\mathcal{O}$$이므로 $$\mathcal{O}=A$$이다.
+[정리 6](#thm6)의 증명에서와 같이 바깥쪽 square를 $$u:\Spec K \rightarrow X$$, $$v:\Spec A \rightarrow Y$$, $$j:\Spec K \rightarrow \Spec A$$로 적고, 그 증명에서 인용한 두 표준적인 사실을 계속 사용한다. 곧 field $$K$$ 안의 local subring은 항상 $$\Frac(A)=K$$인 valuation ring $$A$$에 의해 dominate되며, morphism $$\Spec K \rightarrow X$$는 점 $$x\in X$$와 field homomorphism $$\kappa(x) \rightarrow K$$의 쌍과 같은 것이다. 여기에 valuation ring의 다음 극대성을 덧붙인다. 만일 $$K$$의 valuation ring $$A$$를 dominate하는 local subring $$\mathcal{O}\subseteq K$$가 주어졌다면 $$\mathcal{O}=A$$이다. 실제로 $$c\in\mathcal{O}$$가 $$0$$이 아니고 $$c\notin A$$라면 valuation ring의 정의에 의해 $$c^{-1}\in A$$이며, $$c\notin A$$이므로 $$c^{-1}$$은 $$A$$의 unit이 아니다. 곧 $$c^{-1}\in\mathfrak{m}_A\subseteq \mathfrak{m}_\mathcal{O}$$인데 $$c\in\mathcal{O}$$이므로 $$c^{-1}$$은 $$\mathcal{O}$$의 unit이 되어 모순이다. 따라서 $$\mathcal{O}\subseteq A$$이고, dominate의 정의에서 $$A\subseteq\mathcal{O}$$이므로 $$\mathcal{O}=A$$이다.
 
 먼저 $$f$$가 proper라 하자. Proper morphism은 separated이므로 [정리 6](#thm6)에 의하여 lifting은 많아야 하나이고, 따라서 존재성만 보이면 된다. $$v$$를 따라 base change하여 $$X_A=X\times_Y\Spec A$$와 projection $$\pi:X_A \rightarrow \Spec A$$를 얻자. $$f$$가 universally closed이므로 $$\pi$$는 closed map이다. ([정의 8](#def8)) 한편 $$u$$와 $$j$$는 fiber product의 universal property에 의해 $$\Spec A$$ 위의 morphism $$\tilde{u}:\Spec K \rightarrow X_A$$를 유도하며, $$\Spec A \rightarrow X_A$$ 꼴의 $$\pi$$의 section으로서 $$\tilde{u}$$를 연장하는 것을 찾으면 이를 $$X$$로 project하여 원하는 lifting을 얻는다.
 
@@ -230,4 +230,41 @@ Noetherian scheme들에 대하여,
 
 ::: 정리 11
 Noetherian scheme들 사이의 projective morphism은 proper morphism이고, quasi-projective morphism은 separated, finite type morphism이다. 
+:::
+::: 증명
+증명의 핵심은 $$\pi:\mathbb{P}^n_\mathbb{Z} \rightarrow \Spec\mathbb{Z}$$가 proper라는 것이며, 이는 [정리 9](#thm9)의 판정법을 직접 확인하여 얻어진다. 우선 $$\mathbb{P}^n_\mathbb{Z}$$는 $$n+1$$개의 affine chart
+
+$$U_i=\Spec \mathbb{Z}[\x_0/\x_i,\ldots,\x_n/\x_i]\qquad (i=0,\ldots,n)$$
+
+을 $$U_i\cap U_j=D(\x_j/\x_i)\subseteq U_i$$를 따라 붙여 얻어진다. 여기에서 $$\x_i/\x_i=1$$이므로 각 $$U_i$$는 $$\mathbb{Z}$$ 위의 $$n$$변수 polynomial ring의 spectrum이다. 특히 각 $$U_i$$는 Noetherian ring의 spectrum이고 chart의 개수가 유한하므로 $$\mathbb{P}^n_\mathbb{Z}$$는 Noetherian scheme이며, $$\pi$$는 finite type이다. ([§스킴 사상의 성질들, ⁋정의 13](/ko/math/scheme_theory/properties_of_scheme_morphisms#def13))
+
+$$\pi$$가 separated인 것은 chart 위에서 직접 확인된다. $$\mathbb{P}^n_\mathbb{Z}\times_\mathbb{Z}\mathbb{P}^n_\mathbb{Z}$$는 affine open subset들 $$U_i\times_\mathbb{Z}U_j$$로 덮이고 $$p_1\circ\Delta=p_2\circ\Delta=\id$$이므로 $$\Delta^{-1}(U_i\times_\mathbb{Z}U_j)=U_i\cap U_j$$이다. 이제 $$\Delta$$가 이 위에서 유도하는 ring homomorphism
+
+$$\mathbb{Z}[\x_0/\x_i,\ldots,\x_n/\x_i]\otimes_\mathbb{Z}\mathbb{Z}[\x_0/\x_j,\ldots,\x_n/\x_j] \longrightarrow \mathcal{O}(U_i\cap U_j)=\mathbb{Z}[\x_0/\x_i,\ldots,\x_n/\x_i]_{\x_j/\x_i}$$
+
+를 보면, 우변은 $$\mathbb{Z}$$ 위에서 $$\x_l/\x_i$$들과 $$(\x_j/\x_i)^{-1}=\x_i/\x_j$$로 생성되는데 앞의 것들은 첫째 인자에서, 뒤의 것은 둘째 인자에서 오므로 이 사상은 surjective이다. 따라서 $$\Delta$$는 각 $$U_i\times_\mathbb{Z}U_j$$ 위에서 closed immersion이고, closed immersion은 target에 대해 affine-local이므로 ([§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)) $$\Delta$$ 자체가 closed immersion이다.
+
+$$\Spec \mathbb{Z}$$는 scheme들의 category에서 terminal object이므로, valuation ring $$A$$와 $$K=\Frac(A)$$에 대한 바깥쪽 square를 주는 것은 morphism $$\Spec K \rightarrow \mathbb{P}^n_\mathbb{Z}$$를 주는 것과 같다. Lifting의 유일성은 $$\pi$$가 separated인 것과 [정리 6](#thm6)에서 따르므로 존재성만 보이면 된다. $$\Spec K$$는 한 점이므로 주어진 morphism의 상은 적당한 chart $$U_i$$에 들어가고, 따라서 이 morphism은 ring homomorphism
+
+$$\mathbb{Z}[\x_0/\x_i,\ldots,\x_n/\x_i] \longrightarrow K$$
+
+에 대응한다. $$\x_j/\x_i$$의 상을 $$a_j\in K$$라 하면 $$a_i=1$$이다. 이제 $$K^\times$$ 위에서 $$s\preceq t$$를 $$t/s\in A$$로 정의하면, valuation ring의 정의에 의하여 임의의 $$s,t$$에 대해 $$s\preceq t$$이거나 $$t\preceq s$$이고, $$t/s\in A$$이고 $$r/t\in A$$일 때 $$r/s=(r/t)(t/s)\in A$$이므로 $$\preceq$$는 $$K^\times$$ 위의 total preorder이다. $$a_i=1\neq 0$$이므로 유한집합 $$\{a_j : a_j\neq 0\}$$은 공집합이 아니고, 따라서 이 집합의 최소원 $$a_k$$를 택할 수 있다. 곧 모든 $$j$$에 대하여
+
+$$b_j:=a_j/a_k\in A$$
+
+이다. ($$a_j=0$$인 경우 $$b_j=0\in A$$이다.) 특별히 $$b_k=1$$이므로 ring homomorphism
+
+$$\mathbb{Z}[\x_0/\x_k,\ldots,\x_n/\x_k] \longrightarrow A;\qquad \x_j/\x_k\mapsto b_j$$
+
+가 정의되고, 이는 morphism $$\Spec A \rightarrow U_k\subseteq\mathbb{P}^n_\mathbb{Z}$$를 준다. 이것이 lifting임을 보이려면 $$A\hookrightarrow K$$와의 합성이 처음 주어진 morphism과 같음을 확인하면 된다. $$a_k\neq 0$$이므로 처음의 ring homomorphism은 $$\x_k/\x_i$$를 $$K$$의 unit $$a_k$$로 보내고, 따라서 처음 morphism의 상은 $$D(\x_k/\x_i)=U_i\cap U_k$$에 들어간다. 그럼 $$U_k$$ 위에서 이 morphism은 transition 관계
+
+$$\x_j/\x_k=(\x_j/\x_i)\cdot(\x_k/\x_i)^{-1}$$
+
+에 의하여 $$\x_j/\x_k\mapsto a_j/a_k=b_j$$로 주어지므로, 위에서 만든 $$\Spec A \rightarrow U_k$$를 $$\Spec K$$로 제한한 것과 정확히 같다. 곧 판정법의 존재성이 성립하고, [정리 9](#thm9)에 의하여 $$\pi$$는 proper이다.
+
+임의의 Noetherian scheme $$Y$$에 대하여 $$\mathbb{P}^n_Y=\mathbb{P}^n_\mathbb{Z}\times_{\Spec\mathbb{Z}}Y$$이다. $$Y=\Spec B$$인 경우 $$\mathbb{P}^n_B$$의 chart $$\Spec B[\x_0/\x_i,\ldots,\x_n/\x_i]$$가 $$U_i\times_{\Spec\mathbb{Z}}\Spec B$$와 일치하기 때문이며, 일반적인 $$Y$$에 대해서는 이들을 붙이면 된다. 따라서 [따름정리 10](#cor10)에 의하여 $$\mathbb{P}^n_Y \rightarrow Y$$는 proper이고, 특히 finite type이므로 $$\mathbb{P}^n_Y$$는 Noetherian scheme이다.
+
+이제 $$f:X \rightarrow Y$$가 projective라 하면 $$f$$는 closed immersion $$X\hookrightarrow \mathbb{P}^n_Y$$와 projection $$\mathbb{P}^n_Y \rightarrow Y$$의 합성이다. ([정의 1](#def1)) Closed immersion은 proper이고 두 proper morphism의 합성은 proper이므로 ([따름정리 10](#cor10)), $$f$$는 proper이다.
+
+마지막으로 $$f:X \rightarrow Y$$가 quasi-projective라 하고, 이를 open immersion $$\iota: X \rightarrow X'$$와 projective morphism $$g:X' \rightarrow Y$$의 합성 $$f=g\circ\iota$$로 분해하자. ([정의 1](#def1)) 방금 보인 것에 의해 $$g$$는 proper이고, 따라서 separated이며 finite type이다. 한편 open immersion은 separated이고 두 separated morphism의 합성은 separated이므로 ([따름정리 7](#cor7)), $$f$$는 separated이다. 또 open immersion은 locally of finite type이며, $$X$$가 Noetherian이므로 $$X'$$의 임의의 affine open subset의 $$\iota$$에 의한 preimage는 Noetherian space의 열린집합으로서 quasi-compact이다. 곧 $$\iota$$는 finite type이고 ([§스킴 사상의 성질들, ⁋정의 13](/ko/math/scheme_theory/properties_of_scheme_morphisms#def13)), 두 finite type morphism의 합성은 finite type이므로 $$f$$ 또한 finite type이다.
 :::
