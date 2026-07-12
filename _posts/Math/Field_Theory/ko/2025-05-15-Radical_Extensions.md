@@ -5,6 +5,7 @@ excerpt: "Radical extension의 정의와 Galois theory에서의 역할"
 
 categories: [Math / Field Theory]
 permalink: /ko/math/field_theory/radical_extensions
+drift_needed: true
 sidebar: 
     nav: "field_theory-ko"
 

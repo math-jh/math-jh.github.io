@@ -5,6 +5,7 @@ excerpt: "편미분과 기울기, 미분가능성, 다변수 연쇄법칙, 극�
 
 categories: [Math / Calculus]
 permalink: /ko/math/calculus/partial_derivatives
+drift_needed: true
 sidebar: 
     nav: "calculus-ko"
 

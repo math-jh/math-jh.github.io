@@ -5,6 +5,7 @@ excerpt: "매개곡면과 법선벡터, 곡면넓이, 스칼라 면적분, 선�
 
 categories: [Math / Calculus]
 permalink: /ko/math/calculus/surface_integrals
+drift_needed: true
 sidebar: 
     nav: "calculus-ko"
 

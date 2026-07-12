@@ -5,6 +5,7 @@ excerpt: "Manifold 위의 orientation"
 
 categories: [Math / Manifolds]
 permalink: /ko/math/manifolds/orientation
+drift_needed: true
 sidebar: 
     nav: "manifolds-ko"
 

@@ -5,6 +5,7 @@ excerpt: "Free module의 정의와 기저, universal property"
 
 categories: [Math / Multilinear Algebra]
 permalink: /ko/math/multilinear_algebra/basis_of_free_modules
+drift_needed: true
 sidebar: 
     nav: "multilinear_algebra-ko"
 

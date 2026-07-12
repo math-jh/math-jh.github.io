@@ -5,6 +5,7 @@ excerpt: "Tychonoff theorem, paracompactness, and partition of unity"
 
 categories: [Math / Topology]
 permalink: /ko/math/topology/compactness
+drift_needed: true
 sidebar:
     nav: "topology-ko"
 
