@@ -254,6 +254,25 @@ $$\mathcal{I}(V):=\ker(\varphi^\sharp(V))\subset B$$
 ::: 따름정리 12
 Scheme morphism $$\varphi: X \rightarrow Y$$가 주어졌다 하자. 만일 $$X$$가 reduced이거나, $$\varphi$$가 quasi-compact라면 위에서 정의한 ideal sheaf $$\mathcal{I}$$는 [명제 6](#prop6)의 조건을 만족하고 따라서 $$\mathcal{I}$$는 $$Y$$의 closed subscheme을 정의하며 이것이 $$\varphi$$의 scheme-theoretic image가 된다.
 :::
+::: 증명
+$$Y$$의 affine open subset $$V=\Spec B$$와 $$f\in B$$를 고정하고 $$U=\varphi^{-1}(V)$$, $$U'=\varphi^{-1}(D(f))$$이라 하자. 그럼 [명제 6](#prop6)이 요구하는 것은 canonical map $$\mathcal{I}(V)_f \rightarrow \mathcal{I}(D(f))$$이 isomorphism이라는 것이다. 편의상 $$f$$의 $$\varphi^\sharp(V): B \rightarrow \mathcal{O}_X(U)$$에 의한 상을 $$g$$라 하자. 
+
+$$\varphi$$가 locally ringed space들 사이의 morphism이므로 각각의 $$x\in U$$에서 $$\varphi^\sharp_x$$는 local homomorphism이고, 따라서 $$U'$$은 정확히 $$g$$의 stalk이 $$\mathcal{O}_{X,x}$$의 maximal ideal에 속하지 <em-ko>않는</em-ko> 점들의 집합이다. 특히 $$U$$의 임의의 affine open subset $$\Spec A$$에 대하여 $$U'\cap \Spec A=D(g\vert_{\Spec A})$$이므로 $$g$$의 $$U'$$로의 restriction은 $$\mathcal{O}_X(U')$$의 unit이고, 따라서 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)의 universal property에 의하여 restriction map $$\mathcal{O}_X(U) \rightarrow \mathcal{O}_X(U')$$은 canonical map
+
+$$\alpha: \mathcal{O}_X(U)_g \rightarrow \mathcal{O}_X(U')$$
+
+을 유도한다. 또 $$\varphi^\sharp$$이 sheaf morphism이라는 것으로부터 $$\varphi^\sharp(D(f)): B_f \rightarrow \mathcal{O}_X(U')$$은 $$\varphi^\sharp(V)$$의 국소화 $$B_f \rightarrow \mathcal{O}_X(U)_g$$와 $$\alpha$$의 합성이다. 그런데 localization은 exact functor이므로 ([\[가환대수학\] §국소화의 성질들, ⁋명제 2](/ko/math/commutative_algebra/properties_of_localization#prop2))
+
+$$\ker\bigl(B_f \rightarrow \mathcal{O}_X(U)_g\bigr)=\ker\bigl(\varphi^\sharp(V)\bigr)_f=\mathcal{I}(V)_f$$
+
+이고, 따라서 $$\alpha$$가 injective이기만 하면 $$\mathcal{I}(D(f))=\ker (\varphi^\sharp(D(f)))=\mathcal{I}(V)_f$$가 되어 [명제 6](#prop6)의 조건이 성립한다. 이제 두 가정 각각에서 $$\alpha$$가 injective임을 보인다. 
+
+우선 $$\varphi$$가 quasi-compact이라 하자. 그럼 $$U$$는 quasi-compact이므로 유한히 많은 affine open subset $$\Spec A_1,\ldots, \Spec A_n$$으로 덮인다. $$s\in \mathcal{O}_X(U)$$가 $$s\vert_{U'}=0$$을 만족한다 하면, 각각의 $$l$$에 대하여 $$s\vert_{\Spec A_l}\in A_l$$의 $$U'\cap \Spec A_l=D(g\vert_{\Spec A_l})$$로의 restriction이 $$0$$이므로 적당한 $$n_l$$에 대하여 $$(g^{n_l}s)\vert_{\Spec A_l}=0$$이다. $$l$$이 유한개이므로 공통의 $$N$$을 택하면 $$g^Ns$$는 모든 $$\Spec A_l$$ 위에서 $$0$$이고, 따라서 [\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1)의 첫째 조건에 의하여 $$g^Ns=0$$이다. 즉 $$\mathcal{O}_X(U)_g$$에서 $$s/g^m=0$$이므로 $$\alpha$$는 injective이다. 
+
+이번에는 $$X$$가 reduced라 하자. ([§스킴의 대수구조, ⁋정의 1](/ko/math/scheme_theory/algebra_of_schemes#def1)) $$s\in \mathcal{O}_X(U)$$가 $$s\vert_{U'}=0$$을 만족한다 하고 $$gs$$를 생각하면, $$U'$$의 점에서는 $$s$$의 stalk이 $$0$$이므로 $$gs$$의 stalk이 $$0$$이고, $$U'$$에 속하지 않는 점 $$x$$에서는 $$g$$의 stalk이 $$\mathcal{O}_{X,x}$$의 maximal ideal에 속한다. 따라서 $$U$$의 임의의 affine open subset $$\Spec A$$에 대하여 $$(gs)\vert_{\Spec A}$$는 $$A$$의 모든 prime ideal에 속하고, [\[가환대수학\] §국소화의 성질들, ⁋따름정리 8](/ko/math/commutative_algebra/properties_of_localization#cor8)과 $$A$$가 reduced ring이라는 사실로부터 $$(gs)\vert_{\Spec A}=0$$이다. 그럼 다시 층 조건에 의하여 $$gs=0$$이고, 따라서 $$s/g^m=(gs)/g^{m+1}=0$$이므로 $$\alpha$$는 injective이다. 
+
+이상에서 [명제 6](#prop6)에 의하여 $$\mathcal{I}$$는 $$Y$$의 closed subscheme $$\iota: Z \rightarrow Y$$를 유일하게 유도한다. 이것이 [정의 10](#def10)의 의미에서 $$\varphi$$의 image를 포함한다는 것은, $$Y$$의 임의의 affine open subset $$V$$에 대하여 $$\mathcal{I}_{Z/Y}(V)=\ker (\varphi^\sharp(V))$$이므로 합성 $$\mathcal{I}_{Z/Y}(V) \rightarrow \mathcal{O}_Y(V) \rightarrow (\varphi_\ast \mathcal{O}_X)(V)$$이 $$0$$이 되고, affine open subset들이 $$Y$$의 base를 이루기 때문이다. 거꾸로 $$\varphi$$의 image를 포함하는 $$Y$$의 임의의 closed subscheme $$\iota': Z' \rightarrow Y$$에 대하여 같은 합성이 $$0$$이므로 $$\mathcal{I}_{Z'/Y}(V)\subseteq \ker (\varphi^\sharp(V))=\mathcal{I}_{Z/Y}(V)$$이고, 두 ideal sheaf가 모두 $$\mathcal{O}_Y$$의 subsheaf이므로 이로부터 $$\mathcal{I}_{Z'/Y}\subseteq \mathcal{I}_{Z/Y}$$를 얻는다. 따라서 [보조정리 9](#lem9)에 의하여 closed embedding $$Z \rightarrow Z'$$가 존재하고, 곧 $$Z$$는 $$\varphi$$의 image를 포함하는 가장 작은 closed subscheme, 즉 $$\varphi$$의 scheme-theoretic image이다. 
+:::
 
 위의 조건을 가정하고 $$\varphi$$의 image를 각각의 affine open subset에서 확인해보면 $$\varphi$$의 scheme-theoretic image는 $$\varphi$$의 (연속함수로서의) image의 closure 위에 structure sheaf가 정의된 형태임을 확인할 수 있다. 
 
