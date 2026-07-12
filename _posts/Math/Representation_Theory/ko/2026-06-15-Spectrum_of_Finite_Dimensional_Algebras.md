@@ -236,27 +236,27 @@ $$k$$가 algebraically closed이고 $$A$$가 유한차원 commutative $$k$$-alge
 지금까지의 사전을 기하학적인 언어로 다시 쓰면, character들은 대수의 "점"을 이루고 대수는 그 점들 위의 함수환처럼 행동한다.
 
 ::: 정의 12
-유한차원 commutative $$k$$-algebra $$A$$에 대하여, $$A$$의 character들의 집합을 $$A$$의 *maximal spectrum* $$\Specm A$$라 부른다.
+유한차원 commutative $$k$$-algebra $$A$$에 대하여, $$A$$의 character들의 집합을 $$A$$의 *maximal spectrum* $$\MaxSpec A$$라 부른다.
 :::
 
-$$k$$가 algebraically closed일 때, [명제 6](#prop6)에 의하여 $$\Specm A$$는 $$A$$의 maximal ideal들의 집합과 동일시되며, [따름정리 9](#cor9)에 의하여 유한집합이다. 각 점 $$\chi\in\Specm A$$에는 $$\dim A_\chi$$라는 양의 정수가 따라붙는데, 이를 점 $$\chi$$의 *multiplicity*라 부른다. 그럼 $$\dim A=\sum_\chi\dim A_\chi$$는 점들의 multiplicity를 모두 합한 것이다. 각 원소 $$a\in A$$는 character에서의 값들을 통해 $$\Specm A$$ 위의 함수로 볼 수 있으며, 이를 정식화하면 다음을 얻는다.
+$$k$$가 algebraically closed일 때, [명제 6](#prop6)에 의하여 $$\MaxSpec A$$는 $$A$$의 maximal ideal들의 집합과 동일시되며, [따름정리 9](#cor9)에 의하여 유한집합이다. 각 점 $$\chi\in\MaxSpec A$$에는 $$\dim A_\chi$$라는 양의 정수가 따라붙는데, 이를 점 $$\chi$$의 *multiplicity*라 부른다. 그럼 $$\dim A=\sum_\chi\dim A_\chi$$는 점들의 multiplicity를 모두 합한 것이다. 각 원소 $$a\in A$$는 character에서의 값들을 통해 $$\MaxSpec A$$ 위의 함수로 볼 수 있으며, 이를 정식화하면 다음을 얻는다.
 
 ::: 명제 13
 $$k$$가 algebraically closed이고 $$A$$가 유한차원 commutative $$k$$-algebra라 하자. 평가사상
 
-$$\ev:A\longrightarrow k^{\Specm A};\qquad a\longmapsto (\chi(a))_{\chi\in\Specm A}$$
+$$\ev:A\longrightarrow k^{\MaxSpec A};\qquad a\longmapsto (\chi(a))_{\chi\in\MaxSpec A}$$
 
-은 unital $$k$$-algebra homomorphism이고, 그 kernel은 $$A$$의 nilradical, 곧 nilpotent 원소들의 집합 $$\bigcap_\chi\mathfrak{m}_\chi$$이다. 따라서 $$\ev$$이 injective인 것과 $$A$$가 reduced인 것이 동치이며, 이 경우 $$\ev$$은 isomorphism $$A\cong k^{\Specm A}$$이다.
+은 unital $$k$$-algebra homomorphism이고, 그 kernel은 $$A$$의 nilradical, 곧 nilpotent 원소들의 집합 $$\bigcap_\chi\mathfrak{m}_\chi$$이다. 따라서 $$\ev$$이 injective인 것과 $$A$$가 reduced인 것이 동치이며, 이 경우 $$\ev$$은 isomorphism $$A\cong k^{\MaxSpec A}$$이다.
 :::
 ::: 증명
-$$\ev$$은 각 성분이 character $$\chi$$이므로 algebra homomorphism들의 곱이고, 따라서 그 자체로 algebra homomorphism이다. ([\[대수적 구조\] §대수의 직접곱, 직합, 텐서곱, ⁋명제 3](/ko/math/algebraic_structures/operations_of_algebras#prop3)) 또 각 $$\chi(1)=1$$이므로 $$\ev(1)=(1,\ldots,1)$$은 $$k^{\Specm A}$$의 항등원이고 $$\ev$$은 unital이다.
+$$\ev$$은 각 성분이 character $$\chi$$이므로 algebra homomorphism들의 곱이고, 따라서 그 자체로 algebra homomorphism이다. ([\[대수적 구조\] §대수의 직접곱, 직합, 텐서곱, ⁋명제 3](/ko/math/algebraic_structures/operations_of_algebras#prop3)) 또 각 $$\chi(1)=1$$이므로 $$\ev(1)=(1,\ldots,1)$$은 $$k^{\MaxSpec A}$$의 항등원이고 $$\ev$$은 unital이다.
 
 kernel을 계산하자. $$\ev(a)=0$$인 것은 모든 character $$\chi$$에 대하여 $$\chi(a)=0$$, 곧 $$a\in\bigcap_\chi\ker\chi=\bigcap_\chi\mathfrak{m}_\chi$$인 것과 같다. 이제 이 교집합이 정확히 nilpotent 원소들의 집합임을 보이자. [따름정리 9](#cor9)의 isomorphism $$A\cong\prod_\chi A_\chi$$에서 $$a=(a_\chi)_\chi$$로 쓰면, $$\chi'(a)$$는 $$a_{\chi'}$$의 $$A_{\chi'}\rightarrow A_{\chi'}/\mathfrak{n}_{\chi'}\cong k$$에서의 image이다. 따라서 모든 $$\chi$$에 대하여 $$\chi(a)=0$$인 것은 각 성분 $$a_\chi$$가 $$\mathfrak{n}_\chi$$에 속하는 것과 같다. 그런데 [따름정리 9](#cor9)에 의하여 $$\mathfrak{n}_\chi$$의 원소는 모두 nilpotent이고, 곱이 성분별이므로 $$(a_\chi)_\chi$$이 nilpotent인 것은 각 $$a_\chi$$가 nilpotent인 것, 곧 각 $$a_\chi\in\mathfrak{n}_\chi$$인 것과 동치이다. 따라서 $$\ker\ev$$은 정확히 $$A$$의 nilpotent 원소들의 집합이다.
 
-그러므로 $$\ev$$이 injective인 것은 $$A$$에 nonzero nilpotent가 없는 것, 곧 $$A$$가 reduced인 것과 동치이다. 마지막으로 $$A$$가 reduced이면 [명제 11](#prop11)에 의하여 character의 개수가 $$\dim A$$와 같으므로 $$\dim k^{\Specm A}=\dim A$$이고, injective인 $$\ev$$은 차원 비교에 의하여 isomorphism이다.
+그러므로 $$\ev$$이 injective인 것은 $$A$$에 nonzero nilpotent가 없는 것, 곧 $$A$$가 reduced인 것과 동치이다. 마지막으로 $$A$$가 reduced이면 [명제 11](#prop11)에 의하여 character의 개수가 $$\dim A$$와 같으므로 $$\dim k^{\MaxSpec A}=\dim A$$이고, injective인 $$\ev$$은 차원 비교에 의하여 isomorphism이다.
 :::
 
-명제 13은 reduced인 유한차원 가환대수가 정확히 그 유한한 점집합 $$\Specm A$$ 위의 $$k$$-값 함수환임을 말해 준다. 이는 가환 Banach algebra에 대한 Gelfand 표현의 유한차원 대수적 판본으로, character를 점으로, 대수의 원소를 점 위의 함수로 보는 관점을 정당화한다. Nilpotent가 존재하는 일반적인 경우에는 $$\ev$$이 nilradical만큼의 정보를 잃으며, 그 손실분이 각 점 위의 nilpotent 두께 $$\mathfrak{n}_\chi$$로 나타난다.
+명제 13은 reduced인 유한차원 가환대수가 정확히 그 유한한 점집합 $$\MaxSpec A$$ 위의 $$k$$-값 함수환임을 말해 준다. 이는 가환 Banach algebra에 대한 Gelfand 표현의 유한차원 대수적 판본으로, character를 점으로, 대수의 원소를 점 위의 함수로 보는 관점을 정당화한다. Nilpotent가 존재하는 일반적인 경우에는 $$\ev$$이 nilradical만큼의 정보를 잃으며, 그 손실분이 각 점 위의 nilpotent 두께 $$\mathfrak{n}_\chi$$로 나타난다.
 
 ## 예시
 
@@ -271,7 +271,7 @@ $$p(\x)=\prod_{i=1}^r(\x-c_i)^{m_i},\qquad \sum_{i=1}^r m_i=n$$
 
 $$A\cong\prod_{i=1}^r k[\x]/\bigl((\x-c_i)^{m_i}\bigr)$$
 
-이고, 각 인수 $$A_i=k[\x]/((\x-c_i)^{m_i})$$은 차원 $$m_i$$의 local algebra로 그 maximal ideal은 $$(\x-c_i)$$의 image가 생성하는 nilpotent ideal이다. $$A$$의 character는 각 인수에서 $$\x\mapsto c_i$$로 평가하는 것들, 곧 근 $$\{c_1,\ldots,c_r\}$$과 일대일로 대응하며, 이것이 정확히 $$\Specm A$$이다.
+이고, 각 인수 $$A_i=k[\x]/((\x-c_i)^{m_i})$$은 차원 $$m_i$$의 local algebra로 그 maximal ideal은 $$(\x-c_i)$$의 image가 생성하는 nilpotent ideal이다. $$A$$의 character는 각 인수에서 $$\x\mapsto c_i$$로 평가하는 것들, 곧 근 $$\{c_1,\ldots,c_r\}$$과 일대일로 대응하며, 이것이 정확히 $$\MaxSpec A$$이다.
 
 정규표현의 입장에서 $$M_\x:A\rightarrow A$$는 $$\x$$의 곱셈연산자이고, basis $$\{1,\x,\ldots,\x^{n-1}\}$$에 대하여 $$p$$의 companion matrix로 표현된다. 그 고유값은 $$p$$의 근 $$c_1,\ldots,c_r$$이며, 이는 [정리 8](#thm8)이 말하는 $$\{\chi(\x)\}$$과 정확히 일치한다. 점 $$c_i$$의 multiplicity는 $$\dim A_i=m_i$$, 곧 근의 중복도이다. 따라서 $$A$$가 reduced인 것은 모든 $$m_i=1$$인 것, 곧 $$p$$가 squarefree인 것과 동치이고, 이 경우 $$A\cong k^n$$이며 $$M_\x$$는 대각화 가능하다.
 :::
@@ -279,7 +279,7 @@ $$A\cong\prod_{i=1}^r k[\x]/\bigl((\x-c_i)^{m_i}\bigr)$$
 위 예시의 가장 작은 비자명한 경우들을 따로 떼어 보면 reduced와 non-reduced의 대비가 분명해진다.
 
 ::: 예시 15
-$$A=k[\sigma]/(\sigma^2)$$을 생각하자. 여기서 $$p(\sigma)=\sigma^2=(\sigma-0)^2$$이므로 근은 $$0$$ 하나뿐이고 중복도는 $$2$$이다. 따라서 character는 $$\chi:\sigma\mapsto 0$$ 하나뿐이고 $$\Specm A$$는 한 점이다. $$M_\sigma$$는 basis $$\{1,\sigma\}$$에 대하여
+$$A=k[\sigma]/(\sigma^2)$$을 생각하자. 여기서 $$p(\sigma)=\sigma^2=(\sigma-0)^2$$이므로 근은 $$0$$ 하나뿐이고 중복도는 $$2$$이다. 따라서 character는 $$\chi:\sigma\mapsto 0$$ 하나뿐이고 $$\MaxSpec A$$는 한 점이다. $$M_\sigma$$는 basis $$\{1,\sigma\}$$에 대하여
 
 $$M_\sigma=\begin{pmatrix}0&0\\1&0\end{pmatrix}$$
 

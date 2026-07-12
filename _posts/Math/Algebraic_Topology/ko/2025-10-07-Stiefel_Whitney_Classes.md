@@ -151,7 +151,7 @@ $$H_1(M)\rightarrow A^\times$$
 
 ## 슈티펠-휘트니 특성류
 
-첫 번째로 살펴볼 characteristic class는 *Stiefel-Whitney class*이다. 우선 이는 임의의 vector bundle $$p:E\rightarrow B$$가 주어질 때마다 정의되는 cohomology ring $$H^\bullet(B;\mathbb{Z}/2)$$의 원소 $$w(p)$$이며, 위와 마찬가지로 만일 $$w(p)=0$$이라면 $$E$$는 trivial bundle이 된다. 즉 만일 $$w(p)=0$$이라면, [명제 4](#prop4)에 의하여, $$n=\rank(E)$$개의 everywhere linearly independent continuous section이 존재한다. 뿐만 아니라 $$w(p)$$를 cohomology ring의 degree에 맞춰 
+첫 번째로 살펴볼 characteristic class는 *Stiefel-Whitney class*이다. 우선 이는 임의의 vector bundle $$p:E\rightarrow B$$가 주어질 때마다 정의되는 cohomology ring $$H^\bullet(B;\mathbb{Z}/2)$$의 원소 $$w(p)$$이며, 위와 마찬가지로 만일 $$E$$가 trivial bundle이라면 $$w(p)=1$$이 된다. 실제로 trivial bundle은 [명제 4](#prop4)에 의하여 $$n=\rank(E)$$개의 everywhere linearly independent continuous section을 가지며, $$w(p)$$가 $$1$$에서 벗어나는 정도가 곧 그러한 section을 고르는 데 대한 장애를 잰다. 이를 보기 위해 $$w(p)$$를 cohomology ring의 degree에 맞춰 
 
 $$w(p)=w_0(p)+w_1(p)+\cdots$$
 
@@ -171,7 +171,7 @@ Vector bundle $$E \rightarrow B$$ of rank $$n$$과 vector bundle $$F\rightarrow 
 그럼 다음 결과들이 자명하다. 
 
 ::: 명제 6
-두 vector bundle $$p_1:E_1\rightarrow B_1$$, $$p_2:E_2\rightarrow B_2$$에 대하여, 만일 $$p_1,p_2$$이 isomorphic하다면 $$w(E_1)=w(E_2)$$이다. 특히, 만일 $$p:E\rightarrow B$$가 trivial bundle이라면 $$w(E)=0$$이다. 
+두 vector bundle $$p_1:E_1\rightarrow B_1$$, $$p_2:E_2\rightarrow B_2$$에 대하여, 만일 $$p_1,p_2$$이 isomorphic하다면 $$w(E_1)=w(E_2)$$이다. 특히, 만일 $$p:E\rightarrow B$$가 trivial bundle이라면 $$w(E)=1$$이다. 
 :::
 
 첫째 주장은 자명하다. 둘째 주장의 경우, trivial bundle은 다음의 pullback

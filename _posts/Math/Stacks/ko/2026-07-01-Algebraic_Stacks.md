@@ -184,7 +184,7 @@ $$\varphi_b(hg, t)=hg\cdot b(t)\overset{!}{=}h\cdot a(t)=\varphi_a(h, t)$$
 ::: 정리 11
 $$G$$이 base scheme $$S$$ 위의 평탄·분리·smooth group scheme이고 $$X$$이 $$S$$-scheme에 $$G$$의 작용을 받는다 하자. 그럼 quotient stack $$[X/G]$$은 대수적 stack이며, [명제 9](#prop9)의 $$\pi: X \rightarrow [X/G]$$이 atlas이다. 나아가 다음이 성립한다.
 
-1. $$X$$이 $$S$$ 위에서 분리하면 $$[X/G]$$의 대각선이 닫힌 immersion으로 표현가능하여 $$[X/G]$$이 분리한다.
+1. $$X$$이 $$S$$ 위에서 분리하면 $$[X/G]$$의 대각선이 분리 사상으로 표현가능하다. 나아가 $$[X/G]$$이 분리하는 것은 작용사상 $$G\times_S X \rightarrow X\times_S X$$, $$(g, x)\mapsto(g\cdot x, x)$$이 proper인 것과 동치이다.
 2. 모든 geometric point의 stabilizer가 유한·étale하면 (가령 $$G$$이 유한 étale하거나, characteristic $$0$$에서 작용이 유한 stabilizer를 가지면) $$[X/G]$$은 DM stack이다.
 :::
 ::: 증명
@@ -192,7 +192,7 @@ $$G$$이 base scheme $$S$$ 위의 평탄·분리·smooth group scheme이고 $$X$
 
 $$\operatorname{\underline{Isom}}_T((G_T, \varphi_a), (G_T, \varphi_{a'}))(T')=\{g\in G(T'): g\cdot a'\vert_{T'}=a\vert_{T'}\}$$
 
-이 된다. 이는 사상 $$(g\mapsto(g\cdot a', a')): G_T \rightarrow X\times_S X$$과 $$X$$의 대각선 $$X \rightarrow X\times_S X$$의 fiber product이다. Scheme의 대각선은 항상 immersion이므로 (따라서 표현가능) 그 base change인 위 sheaf는 $$G_T$$의 locally closed 부분scheme으로 표현가능하다. fppf 덮개 위에서 표현가능한 algebraic space는 하강하여 표현가능하므로, $$G$$의 affine·분리 가정 없이도 $$\operatorname{\underline{Isom}}$$이 algebraic space로 표현가능하고, [명제 5](#prop5)에 의해 대각선이 표현가능하다. 나아가 $$X$$이 $$S$$ 위에서 분리하면 $$X$$의 대각선이 닫힌 immersion이라 위 fiber가 $$G_T$$의 닫힌 부분scheme이 되며, 하강으로 $$[X/G]$$의 대각선이 닫힌 immersion으로 표현가능, 곧 $$[X/G]$$이 분리한다.
+이 된다. 이는 사상 $$(g\mapsto(g\cdot a', a')): G_T \rightarrow X\times_S X$$과 $$X$$의 대각선 $$X \rightarrow X\times_S X$$의 fiber product이다. Scheme의 대각선은 항상 immersion이므로 (따라서 표현가능) 그 base change인 위 sheaf는 $$G_T$$의 locally closed 부분scheme으로 표현가능하다. fppf 덮개 위에서 표현가능한 algebraic space는 하강하여 표현가능하므로, $$G$$의 affine·분리 가정 없이도 $$\operatorname{\underline{Isom}}$$이 algebraic space로 표현가능하고, [명제 5](#prop5)에 의해 대각선이 표현가능하다. 나아가 $$X$$이 $$S$$ 위에서 분리하면 $$X$$의 대각선이 닫힌 immersion이라 위 fiber가 $$G_T$$의 닫힌 부분scheme이 되고, $$G$$이 분리하므로 $$\operatorname{\underline{Isom}} \rightarrow T$$은 닫힌 immersion에 이어 분리 사상 $$G_T \rightarrow T$$을 합성한 분리 사상이 된다. 하강으로 $$[X/G]$$의 대각선이 분리 사상으로 표현가능하다. 다만 $$G_T \rightarrow T$$이 일반적으로 proper가 아니어서 이 대각선은 닫힌 immersion이 되지는 않으며 (가령 아래 $$\mathbf{B}\mathbb{G}_m$$에서 $$\operatorname{\underline{Isom}}$$은 비proper인 $$\mathbb{G}_{m,T}$$이다), $$[X/G]$$의 분리성은 대각선의 properness, 곧 작용사상 $$G\times_S X \rightarrow X\times_S X$$, $$(g, x)\mapsto(g\cdot x, x)$$의 properness와 동치이다.
 
 **매끄러운 atlas.** $$\pi: X \rightarrow [X/G]$$은 표현가능하다 (대각선 표현가능성과 [명제 5](#prop5)). 그 매끄러움·전사성을 보이려면 임의의 $$T \rightarrow [X/G]$$에 대한 base change $$X\times_{[X/G]}T \rightarrow T$$이 smooth 전사임을 보여야 한다. $$T$$의 점은 torsor $$(P, \varphi)$$이고, $$P$$이 fppf 덮개 $$\{T_i \rightarrow T\}$$ 위에서 자명해지므로, 그 덮개 위에서 $$T_i \rightarrow [X/G]$$은 $$\pi$$을 거쳐 인수분해되어 $$X\times_{[X/G]}T_i\cong X\times_{[X/G]}X\times_X T_i\cong(G\times_S X)\times_X T_i$$이 된다 ([명제 10](#prop10)을 사용). 우변에서 $$(G\times_S X) \rightarrow X$$은 사영, 곧 $$G \rightarrow S$$의 base change이므로 smooth 전사이고 ($$G$$이 $$S$$ 위에서 smooth하고 단위절단으로 전사하므로), 따라서 $$X\times_{[X/G]}T_i \rightarrow T_i$$이 smooth 전사이다. Smooth성과 전사성이 target에 대해 fppf-국소적이므로 ([\[스킴\] §충실평탄 하강, ⁋명제 7](/ko/math/scheme_theory/faithfully_flat_descent#prop7)) $$X\times_{[X/G]}T \rightarrow T$$이 smooth 전사이다. 그러므로 $$\pi$$은 표현가능 smooth 전사, 곧 atlas이다. 이로써 [정의 6](#def6)의 두 조건이 모두 성립하여 $$[X/G]$$은 대수적 stack이다.
 

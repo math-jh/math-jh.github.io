@@ -189,7 +189,7 @@ window.KATEX_MACROS = {
     "\\span":"\\operatorname{span}",
     "\\Spe":"\\operatorname{Sp\\acute{e}}",
     "\\Spec":"\\operatorname{Spec}",
-    "\\Specm":"\\operatorname{Specm}",
+    "\\MaxSpec":"\\operatorname{MaxSpec}",
     "\\Stab":"\\operatorname{Stab}",
     "\\stab":"\\operatorname{stab}",
     "\\std":"\\mathrm{std}",

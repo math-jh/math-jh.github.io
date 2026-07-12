@@ -14,16 +14,16 @@ published: false
 
 ---
 
-벡터다발은 대수기하학에서 기하적 대상을 다루는 핵심 도구이며, 이번 글에서는 주어진 벡터다발이 얼마나 뒤틀려 있는지를 재는 *Chern class*를 정의한다. 이는 complex vector bundle에 대해 정의되는 위상적·기하학적 불변량으로, 대수위상에서와 마찬가지로 공리적으로 정의한 뒤, 직선다발에서의 기하학적 의미를 보고, 계산의 핵심인 splitting principle을 거쳐, 접다발의 천 특성류와 Euler 지표의 관계 및 구체적 계산까지 다룬다. 모든 논의는 적당한 base space $$X$$ 위의 complex vector bundle에 대해 이루어지며, cohomology는 $$H^\bullet(X, \mathbb{Z})$$를 사용한다. Cohomology convention상 $$k$$차 Chern class가 $$2k$$차 cohomology에 들어감을 기억하자.
+벡터다발은 대수기하학에서 기하적 대상을 다루는 핵심 도구이며, 이번 글에서는 주어진 벡터다발이 얼마나 뒤틀려 있는지를 재는 *Chern class*를 정의한다. 이는 complex vector bundle에 대해 정의되는 위상적·기하학적 불변량으로, 우리는 대수위상에서는 이를 Gysin sequence를 타고 내려오는 방식을 취했지만 ([\[대수적 위상수학\] §벡터다발의 특성류, ⁋정의 6](/ko/math/algebraic_topology/characteristic_classes#def6)) 이번 글에서는 공리적인 접근으로 시작한다. 모든 논의는 적당한 base space $$X$$ 위의 complex vector bundle에 대해 이루어지며, cohomology는 $$H^\bullet(X, \mathbb{Z})$$를 사용한다. Cohomology convention상 $$k$$차 Chern class가 $$2k$$차 cohomology에 들어감을 기억하자.
 
 ## 천 특성류의 공리
 
 ::: 정의 1
-Complex vector bundle $$\mathcal{E} \to X$$마다 cohomology class $$c_i(\mathcal{E}) \in H^{2i}(X, \mathbb{Z})$$ ($$i \geq 0$$, $$c_0(\mathcal{E})=1$$)가 주어지며, 이들을 *Chern class<sub>천 특성류</sub>*라 부른다. 이들은 다음 공리를 만족한다.
+Complex vector bundle $$\mathcal{E} \to X$$마다 cohomology class $$c_i(\mathcal{E}) \in H^{2i}(X, \mathbb{Z})$$가 주어지며, 이들을 *Chern class<sub>천 특성류</sub>*라 부른다. 이들은 다음 공리를 만족한다.
 
 1. (*Naturality*) 연속사상 $$f: Y \to X$$에 대하여 $$c_i(f^{\ast}\mathcal{E}) = f^{\ast}c_i(\mathcal{E})$$이다. 여기서 $$f^{\ast}$$은 cohomology에서의 pullback이다.
 2. (*Whitney sum formula*) 두 vector bundle $$\mathcal{E}, \mathcal{F}$$에 대하여 $$c(\mathcal{E} \oplus \mathcal{F}) = c(\mathcal{E}) \smile c(\mathcal{F})$$이다. 여기서 $$c(\mathcal{E}) = \sum_{i \geq 0} c_i(\mathcal{E})$$는 *total Chern class*이고 우변은 cup product이다.
-3. (*Normalization*) line bundle $$\mathcal{L} \to X$$에 대하여 $$c(\mathcal{L}) = 1 + c_1(\mathcal{L})$$이고, $$\mathbb{P}^n$$ 위의 hyperplane bundle $$\mathcal{O}(1)$$에 대하여 $$c_1(\mathcal{O}(1))$$은 $$H^2(\mathbb{P}^n, \mathbb{Z}) \cong \mathbb{Z}$$의 생성원이다.
+3. (*Normalization*) $$c_0(\mathcal{E}=1$$이며, line bundle $$\mathcal{L} \to X$$에 대하여 $$c(\mathcal{L}) = 1 + c_1(\mathcal{L})$$이고, $$\mathbb{P}^n$$ 위의 hyperplane bundle $$\mathcal{O}(1)$$에 대하여 $$c_1(\mathcal{O}(1))$$은 $$H^2(\mathbb{P}^n, \mathbb{Z}) \cong \mathbb{Z}$$의 생성원이다.
 :::
 
 공리는 Chern class를 직접 구성하지 않고 그것이 따라야 할 규칙만 못박는다. Naturality는 Chern class가 다발의 위상적 정보만에 의존함을, Whitney 공식은 직합을 곱으로 옮김을, normalization은 가장 단순한 다발인 직선다발에서의 값을 고정한다. 놀랍게도 이 세 규칙만으로 Chern class가 유일하게 결정되고 또 실제로 존재하는데, 이는 splitting principle을 확립한 뒤 [명제 6](#prop6)에서 증명한다. 한편 rank $$r$$ 다발에서는 $$c_i(\mathcal{E}) = 0$$ ($$i > r$$)이므로 total Chern class는 $$c(\mathcal{E}) = 1 + c_1(\mathcal{E}) + \cdots + c_r(\mathcal{E})$$로 끝난다.
