@@ -10,7 +10,7 @@ sidebar:
 
 date: 2026-03-15
 weight: 20
-
+published: false
 
 ---
 
@@ -157,12 +157,12 @@ $$\mathbb{P}^2$$ 안의 두 세차곡선 $$C_1 = Z(F_1)$$, $$C_2 = Z(F_2)$$가 �
 
 ### Pascal의 정리
 
-::: 명제 9 (Pascal의 정리)
-이차곡선(conic) 위의 6점 $$A, B, C, D, E, F$$에 대해, 세 교점
+::: 명제 9 (Pascal)
+이차곡선 위의 6점 $$A, B, C, D, E, F$$에 대해, 세 교점
 
 $$P = \overline{AB} \cap \overline{DE},\quad Q = \overline{BC} \cap \overline{EF},\quad R = \overline{CD} \cap \overline{FA}$$
 
-이 모두 존재하면 이 세 점은 공선형(collinear)이다.
+이 모두 존재하면 이 세 점은 collinear이다.
 :::
 
 ::: 증명
@@ -181,10 +181,10 @@ $$X \cap Y$$는 $$A, B, C, D, E, F$$와 $$P, Q, R$$을 모두 포함하므로 �
 
 ### 이중점의 최대 개수
 
-Bézout 정리로 평면곡선의 특이점 개수에 대한 상계를 얻을 수 있다.
+Bézout 정리로 평면곡선의 특이점 개수에 대한 상한을 얻을 수 있다.
 
 ::: 명제 10
-차수 $$d$$ 기약평면곡선이 가질 수 있는 최대 ordinary double point(서로 다른 두 접선을 갖는 이중점)의 개수는 $$\binom{d-1}{2} = \frac{(d-1)(d-2)}{2}$$이다.
+차수 $$d$$ 기약평면곡선이 가질 수 있는 최대 ordinary double point의 개수는 $$\binom{d-1}{2} = \frac{(d-1)(d-2)}{2}$$이다.
 :::
 
 ::: 증명
@@ -196,7 +196,7 @@ $$g = \frac{(d-1)(d-2)}{2} - \sum_{i=1}^n \delta_{p_i} = \frac{(d-1)(d-2)}{2} - 
 
 $$n \leq \frac{(d-1)(d-2)}{2}$$
 
-이다. 이 상계는 달성 가능하다. 예를 들어 매끄러운 차수 $$d$$ 곡선을 일반적인 사영(projection)으로 $$\mathbb{P}^2$$에 놓으면, 정확히 $$\frac{(d-1)(d-2)}{2}$$개의 ordinary double point를 갖는 기약 곡선을 얻는다.
+이다. 이 상한은 달성 가능하다. 예를 들어 매끄러운 차수 $$d$$ 곡선을 일반적인 사영(projection)으로 $$\mathbb{P}^2$$에 놓으면, 정확히 $$\frac{(d-1)(d-2)}{2}$$개의 ordinary double point를 갖는 기약 곡선을 얻는다.
 :::
 
 ---

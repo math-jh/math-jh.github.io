@@ -178,14 +178,14 @@ $$X\simeq Z(s)=P\times_{E}^hP$$
 
 로 국소적으로 표현되는 것과 동치이다. 여기서 두 사상 $$P\rightrightarrows E$$은 각각 영절단과 $$s$$이다.
 
-2. $$f$$이 quasi-smooth이면 그 truncation $$t_0(f):t_0(X)\rightarrow t_0(Y)$$은 고전적 lci 사상이며, $$f$$이 discrete할 (곧 $$X$$이 고전적 스킴일) 필요충분조건은 $$H_1(L_f)=0$$인 것, 곧 $$\pi_1(\mathcal{O}_X)=0$$인 것이다.
+2. $$f$$이 quasi-smooth이면 그 truncation $$t_0(f):t_0(X)\rightarrow t_0(Y)$$은 고전적 lci 사상이며, $$f$$이 discrete할 (곧 $$X$$이 고전적 스킴일) 필요충분조건은 $$\pi_1(\mathcal{O}_X)=0$$인 것이다.
 
 3. Quasi-smooth 사상은 임의의 base change에 대하여 닫혀 있고, virtual 상대차원을 보존한다. 곧 $$f$$이 quasi-smooth이고 $$Y'\rightarrow Y$$이 임의의 사상이면 $$f':X\times_Y^hY'\rightarrow Y'$$도 quasi-smooth이며 $$\operatorname{vdim}(f')=\operatorname{vdim}(f)$$이다.
 :::
 ::: 증명
 **(1)** 절단 $$s:P\rightarrow E$$의 유도 영점자리 $$Z(s)=P\times_E^hP$$은 국소적으로 $$E$$을 rank $$r$$의 자명 다발로 놓아 $$s=(s_1,\ldots,s_r)$$으로 쓰면 $$\mathcal{O}_{Z(s)}=\operatorname{Kos}(\mathcal{O}_P;s_1,\ldots,s_r)$$, 곧 $$s_i$$들에 대한 Koszul 복합체이다. 매장 $$Z(s)\hookrightarrow P$$의 여접 복합체는 [명제 11](#prop11)의 base change로 계산되어 $$L_{Z(s)/P}\simeq(E^\vee\vert_{Z(s)})[1]$$, 곧 degree $$1$$에 집중된 국소자유 층이다. $$P$$이 $$Y$$ 위에서 smooth하므로 $$L_{P/Y}$$은 degree $$0$$의 국소자유 층이고, [명제 11](#prop11)의 추이 삼각형이 $$L_{X/Y}$$을 degree $$0,1$$의 두 항으로 준다. 따라서 $$Z(s)$$은 quasi-smooth이다. 역으로 $$f$$이 quasi-smooth이면 $$L_f\simeq[E_1\rightarrow E_0]$$의 $$E_0$$을 실현하는 매끄러운 인수 $$P$$을 국소적으로 잡고, $$E_1$$을 실현하는 절단 $$s$$을 그 위에서 택하여 위 인수분해를 얻는다. 세부는 ([Kha], [Lur, SAG])에 있다.
 
-**(2)** $$X=Z(s)$$이면 $$t_0(X)=\{s=0\}$$은 $$P$$의 고전적 영점자리이고, 이는 국소적으로 $$r$$개의 방정식으로 잘린 lci이다. $$X$$이 discrete함은 $$s_1,\ldots,s_r$$이 정칙렬을 이루어 Koszul 복합체가 $$\pi_0$$에 집중되는 것, 곧 $$H_1(L_f)=0$$인 것과 동치이다. 정칙렬이 아니면 Koszul homology가 $$\pi_{\geq1}\mathcal{O}_X\neq0$$을 낳아 $$X$$은 discrete하지 않다.
+**(2)** $$X=Z(s)$$이면 $$t_0(X)=\{s=0\}$$은 $$P$$의 고전적 영점자리이고, 이는 국소적으로 $$r$$개의 방정식으로 잘린 lci이다. $$X$$이 discrete함은 $$s_1,\ldots,s_r$$이 정칙렬을 이루어 Koszul 복합체가 $$\pi_0$$에 집중되는 것, 곧 $$\pi_1(\mathcal{O}_X)=0$$인 것과 동치이다. 정칙렬이 아니면 Koszul homology가 $$\pi_{\geq1}\mathcal{O}_X\neq0$$을 낳아 $$X$$은 discrete하지 않다.
 
 **(3)** Base change 안정성은 유도 올곱이 여접 복합체를 pullback으로 보존하고 ([명제 11](#prop11)의 base change), pullback이 perfect 복합체의 Tor-amplitude를 넓히지 않으며 국소자유 층의 rank를 보존하는 데서 따른다. 따라서 $$L_{f'}\simeq g^\ast L_f$$이 다시 Tor-amplitude $$[-1,0]$$이고 $$\operatorname{vdim}$$이 rank로 정해지므로 보존된다.
 :::

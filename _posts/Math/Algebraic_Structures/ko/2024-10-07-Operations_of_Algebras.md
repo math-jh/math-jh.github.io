@@ -10,7 +10,6 @@ sidebar:
 
 date: 2024-10-07
 weight: 302
-published: false
 
 ---
 
@@ -23,7 +22,7 @@ $$A$$-algebra들의 family $$(E_i)_{i\in I}$$가 주어졌다 하자. 그럼 우
 ::: 명제 1
 $$A$$-algebra들의 family $$(E_i)_{i\in I}$$에 대하여, $$A$$-module $$\prod_{i\in I}E_i$$ 위에 다음의 식
 
-$$(x_i)_{i\in I}\,(y_i)_{i\in I}=(x_iy_i)_{i\in I}$$
+$$(x_i)_{i\in I}(y_i)_{i\in I}=(x_iy_i)_{i\in I}$$
 
 으로 곱셈을 정의하면 $$\prod_{i\in I}E_i$$는 $$A$$-algebra가 된다. 또, 모든 $$E_i$$들이 associative (resp. commutative, unital)라면 $$\prod_{i\in I}E_i$$도 그러하다.
 :::
@@ -87,7 +86,7 @@ $$f\bigl((a,b)(c,d)\bigr)=ac+bd\neq (a+b)(c+d)=f(a,b)f(c,d)$$
 
 ## 대수의 텐서곱
 
-$$A$$-algebra들의 category에서 올바른 coproduct의 개념을 주는 것은 텐서곱이다. 기본적으로 이는 $$A$$-module $$E\otimes_AE'$$ ([§가군의 직접곱과 직합, 텐서곱, ⁋정리 6](/ko/math/algebraic_structures/operations_of_modules#thm6)) 위에 곱셈을 적당히 정의하여 얻어지는 $$A$$-algebra로, 우리가 원하는 곱셈은 다음의 식
+Commutative $$A$$-algebra들의 category에서 올바른 coproduct의 개념을 주는 것은 텐서곱이다. 기본적으로 이는 $$A$$-module $$E\otimes_AE'$$ ([§가군의 직접곱과 직합, 텐서곱, ⁋정리 6](/ko/math/algebraic_structures/operations_of_modules#thm6)) 위에 곱셈을 적당히 정의하여 얻어지는 $$A$$-algebra로, 우리가 원하는 곱셈은 다음의 식
 
 $$(x\otimes x')(y\otimes y')=xy\otimes x'y'\tag{1}$$
 
@@ -128,10 +127,10 @@ $$\iota:E \rightarrow E\otimes_AE';\quad x\mapsto x\otimes 1_{E'},\qquad \iota':
 
 이 정의되며, 이들의 image는 서로 commute한다. 즉 $$(x\otimes 1)(1\otimes x')=x\otimes x'=(1\otimes x')(x\otimes 1)$$이다. 
 
-우리가 처음 도입했던 것과 같이, 
+우리가 처음 도입했던 것과 같이, tensor product는 commutative $$A$$-algebra들의 category에서 coproduct가 된다. 이를 설명하는 것이 다음의 명제이다. 
 
 ::: 정리 8
-Commutative unital $$A$$-algebra $$E,E'$$과, 임의의 commutative unital $$A$$-algebra $$F$$, 그리고 unital $$A$$-algebra homomorphism들 $$u:E \rightarrow F$$, $$u':E' \rightarrow F$$가 주어졌다 하자. 그럼 $$w\circ\iota=u$$, $$w\circ\iota'=u'$$을 만족하는 유일한 unital $$A$$-algebra homomorphism $$w:E\otimes_AE' \rightarrow F$$가 존재한다. 즉, $$E\otimes_AE'$$은 commutative unital $$A$$-algebra들의 category에서 $$E$$와 $$E'$$의 coproduct이다.
+Commutative $$A$$-algebra $$E,E'$$과, 임의의 commutative $$A$$-algebra $$F$$, 그리고 $$A$$-algebra homomorphism들 $$u:E \rightarrow F$$, $$u':E' \rightarrow F$$가 주어졌다 하자. 그럼 $$w\circ\iota=u$$, $$w\circ\iota'=u'$$을 만족하는 유일한 $$A$$-algebra homomorphism $$w:E\otimes_AE' \rightarrow F$$가 존재한다. 
 :::
 ::: 증명
 함수 $$E\times E' \rightarrow F$$를 $$(x,x')\mapsto u(x)u'(x')$$으로 정의하면 이는 $$A$$-bilinear이므로, $$w(x\otimes x')=u(x)u'(x')$$이도록 하는 유일한 $$A$$-linear map $$w:E\otimes_AE' \rightarrow F$$가 존재한다. $$w$$가 곱셈을 보존하는 것은 생성원들 위에서 확인하면 충분한데,
@@ -146,6 +145,8 @@ $$w'(x\otimes x')=w'\bigl((x\otimes 1_{E'})(1_E\otimes x')\bigr)=w'(\iota(x))w'(
 
 이므로 $$w'=w$$이다.
 :::
+
+즉, $$E\otimes_AE'$$은 commutative $$A$$-algebra들의 category에서 $$E$$와 $$E'$$의 coproduct이다.
 
 ::: 예시 9
 Polynomial algebra들의 텐서곱은 변수들을 합친 polynomial algebra이다. 즉

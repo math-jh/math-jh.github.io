@@ -13,9 +13,9 @@ weight: 12
 
 ---
 
-앞선 글들에서 우리는 vector bundle을 분류하기 위해 특성류를 도입하였다. 흥미로운 것 중 하나는 이들의 존재성을 보이는 방식으로, 우리는 큰 공간 위에 정의된 어떤 *universal* bundle이 존재하여, 임의의 bundle이 이것의 pullback으로 나타날 수 있다는 것을 살펴보았다. 가령 real vector bundle의 경우, infinite real Grassmannian 위의 tautological line bundle
+앞선 글들에서 우리는 vector bundle을 분류하기 위해 특성류를 도입하였다. 흥미로운 것 중 하나는 이들의 존재성을 보이는 방식으로, 우리는 큰 공간 위에 정의된 어떤 *universal* bundle이 존재하여, 임의의 bundle이 이것의 pullback으로 나타날 수 있다는 것을 살펴보았다. 가령 real vector bundle의 경우, infinite real Grassmannian 위의 tautological $$k$$-plane bundle
 
-$$E(\gamma_n^k)\rightarrow \Gr(k, \mathbb{C}^\infty)$$
+$$E(\gamma^k_\infty)\rightarrow \Gr(k, \mathbb{R}^\infty)$$
 
 이 그러한 역할을 하였으며 ([§슈티펠-휘트니 특성류, §§그라스만 다양체](/ko/math/algebraic_topology/stiefel_whitney_classes#그라스만-다양체)) complex vector bundle에서도 비슷한 construction이 존재했다. ([§벡터다발의 특성류, ⁋예시 8](/ko/math/algebraic_topology/characteristic_classes#ex8)) 한편 vector bundle의 pullback은 오직 map의 homotopy class에만 의존하므로, 고정된 공간 $$B$$ 위의 rank $$k$$ vector bundle의 isomorphism class는 이들 공간으로의 함수들의 homotopy class들의 모임 $$[B, \Gr(k, \mathbb{R}^\infty)]$$ (혹은 $$[B, \Gr(k, \mathbb{C}^\infty)]$$)이 된다. 
 

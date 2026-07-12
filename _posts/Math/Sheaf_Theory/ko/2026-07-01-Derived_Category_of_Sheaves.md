@@ -148,7 +148,7 @@ $$R\mathcal{H}om_{\mathcal{O}_X}(\mathcal{F}^\bullet \otimes^L_{\mathcal{O}_X} \
 ::: 정리 9
 Continuous map $$f: X \to Y$$에 대해 다음의 derived adjunction이 성립한다.
 
-1. $$\Sh(-, \Ab)$$ 차원에서 $$(f^{-1}, Rf_\ast)$$는 adjoint pair이다. 즉 $$\mathcal{F}^\bullet \in D(\Sh(X))$$, $$\mathcal{G}^\bullet \in D^+(\Sh(Y))$$에 대해
+1. $$\Sh(-, \Ab)$$ 차원에서 $$(f^{-1}, Rf_\ast)$$는 adjoint pair이다. 즉 $$\mathcal{F}^\bullet \in D^+(\Sh(X))$$, $$\mathcal{G}^\bullet \in D^-(\Sh(Y))$$에 대해
 $$\Hom_{D(\Sh(X))}(f^{-1}\mathcal{G}^\bullet, \mathcal{F}^\bullet) \cong \Hom_{D(\Sh(Y))}(\mathcal{G}^\bullet, Rf_\ast \mathcal{F}^\bullet)$$
 이 성립한다.
 2. Ringed space morphism $$f: (X, \mathcal{O}_X) \to (Y, \mathcal{O}_Y)$$에 대해 $$(Lf^\ast, Rf_\ast)$$는 adjoint pair이다. 즉 $$\mathcal{F}^\bullet \in D^+(\operatorname{Mod}(\mathcal{O}_X))$$, $$\mathcal{G}^\bullet \in D^-(\operatorname{Mod}(\mathcal{O}_Y))$$에 대해

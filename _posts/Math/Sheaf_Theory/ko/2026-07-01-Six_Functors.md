@@ -100,7 +100,7 @@ $$\Hom_{D(\Sh(Y))}(Rf_! \mathcal{F}^\bullet, \mathcal{G}^\bullet) \cong \Hom_{D(
 이 성립한다.
 :::
 
-$$f^!$$의 존재는 자명하지 않다. 오른쪽 수반이 존재하려면 $$Rf_!$$이 임의의 직합을 보존해야 하는데, $$j_!$$과 $$Rp_\ast$$(유한 cohomological dimension을 가진 proper $$p$$에 대한)가 모두 직합을 보존하므로 $$Rf_!$$도 그러하다. 우리가 가정한 공간들의 derived category는 compactly generated triangulated category이므로, Brown representability에 의해 직합을 보존하는 exact functor는 오른쪽 수반을 가진다. 따라서 $$f^!$$이 존재한다. 유계 derived category에 한정할 때에는 Kashiwara와 Schapira가 $$Rf_!$$의 유한 cohomological amplitude를 이용해 명시적 kernel로 $$f^!$$을 구성하였으며 ([KS], §3.1), 추상적 형식의 차원에서는 Scholze의 정리가 같은 결과를 준다 ([Sch]). 어느 구성에서나 $$f^!$$은 [정의 6](#def6)의 adjunction으로 유일하게 결정된다.
+$$f^!$$의 존재는 자명하지 않다. 오른쪽 수반이 존재하려면 $$Rf_!$$이 임의의 직합을 보존해야 하는데, $$j_!$$과 $$Rp_\ast$$(유한 cohomological dimension을 가진 proper $$p$$에 대한)가 모두 직합을 보존하므로 $$Rf_!$$도 그러하다. $$\Sh(X)$$가 Grothendieck abelian category이므로 그 derived category $$D(\Sh(X))$$는 well generated triangulated category이고, 이 경우의 Brown representability에 의해 직합을 보존하는 exact functor는 오른쪽 수반을 가진다. 따라서 $$f^!$$이 존재한다. 유계 derived category에 한정할 때에는 Kashiwara와 Schapira가 $$Rf_!$$의 유한 cohomological amplitude를 이용해 명시적 kernel로 $$f^!$$을 구성하였으며 ([KS], §3.1), 추상적 형식의 차원에서는 Scholze의 정리가 같은 결과를 준다 ([Sch]). 어느 구성에서나 $$f^!$$은 [정의 6](#def6)의 adjunction으로 유일하게 결정된다.
 
 $$f^!$$은 일반적으로 $$f^{-1}$$과 전혀 다른 함자이다. 그러나 $$f$$가 적당히 매끄러운 경우, 두 함자는 받침 차원만큼의 shift와 orientation에 의한 비틀림을 빼면 일치한다. 이것이 Poincaré–Verdier duality의 국소적 형태이다.
 
