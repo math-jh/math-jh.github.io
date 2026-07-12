@@ -5,6 +5,7 @@ excerpt: "Covering dimension과 대수기하용 Krull dimension의 정의"
 
 categories: [Math / Topology]
 permalink: /ko/math/topology/dimension
+drift_needed: true
 sidebar: 
     nav: "topology-ko"
 

@@ -5,6 +5,7 @@ excerpt: "함수의 극한을 ε-δ로 정의하고 극한법칙·조임정리�
 
 categories: [Math / Calculus]
 permalink: /ko/math/calculus/functions_and_limits
+drift_needed: true
 sidebar: 
     nav: "calculus-ko"
 

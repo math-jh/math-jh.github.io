@@ -5,12 +5,12 @@ excerpt: "긴 완전열"
 
 categories: [Math / Homological Algebra]
 permalink: /ko/math/homological_algebra/long_exact_sequence
+drift_needed: true
 sidebar: 
     nav: "homological_algebra-ko"
 
 date: 2023-01-02
 weight: 3
-published: false
 
 ---
 

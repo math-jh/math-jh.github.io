@@ -5,6 +5,7 @@ excerpt: "스칼라·벡터 선적분과 일, 선적분의 기본정리, 경로�
 
 categories: [Math / Calculus]
 permalink: /ko/math/calculus/line_integrals
+drift_needed: true
 sidebar: 
     nav: "calculus-ko"
 

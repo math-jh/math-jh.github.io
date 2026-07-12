@@ -5,6 +5,7 @@ excerpt: "Kähler differential module의 대수적 정의와 universal property"
 
 categories: [Math / Commutative Algebra]
 permalink: /ko/math/commutative_algebra/differentials
+drift_needed: true
 sidebar: 
     nav: "commutative_algebra-ko"
 
