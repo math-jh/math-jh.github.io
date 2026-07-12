@@ -10,6 +10,7 @@ sidebar:
 
 date: 2025-01-27
 weight: 3
+drift_needed: true
 
 ---
 
@@ -185,11 +186,11 @@ $$D(f_if_j)=D(f_i)\cap D(f_j)=D(f_i^{m_i})\cap D(f_j^{m_j})=D(f_i^{m_i}f_j^{m_j}
 
 이고, 따라서 적당한 $$N_{ij}$$가 존재하여
 
-$$(f_i^{m_i}f_j^{m_j})^{N_{ij}}(a_jf_i^{m_j}-a_if_j^{m_i})=0$$
+$$(f_i^{m_i}f_j^{m_j})^{N_{ij}}(a_if_j^{m_j}-a_jf_i^{m_i})=0$$
 
 이도록 할 수 있다. $$N=\max_{i,j}\{N_{ij}\}$$라 하여 
 
-$$(f_i^{m_i}f_j^{m_j})^N(a_jf_i^{m_j}-a_if_j^{m_i})=0$$
+$$(f_i^{m_i}f_j^{m_j})^N(a_if_j^{m_j}-a_jf_i^{m_i})=0$$
 
 즉,
 
@@ -201,7 +202,7 @@ $$\Spec A=\bigcup_{i=1}^n D(f_i)=\bigcup_{i=1}^n D(f_i^{Nm_i+m_i})$$
 
 로부터 우리는 적당한 $$b_i\in A$$들이 존재하여
 
-$$1=\sum_{i=1}^n b_ia_if_i^{Nm_i+m_i}$$
+$$1=\sum_{i=1}^n b_if_i^{Nm_i+m_i}$$
 
 이도록 할 수 있다. 이제 $$s=\sum_{i=1}^n b_ia_i f_i^{Nm_i}$$라 하면,
 
@@ -367,6 +368,99 @@ $$\mathcal{O}_{\Spec A}(A)=\mathcal{O}_{\Spec A}(D(1))\cong A$$
 $$\Hom_\LRS(X, \Spec A)\cong \Hom_{\cRing^\op}(\Gamma(X), A)=\Hom_{\cRing}(A, \Gamma(X))$$
 
 이 존재한다. 즉, global section functor $$\Gamma: \LRS \rightarrow \cRing^\op$$는 $$\Spec$$ functor $$\Spec:\cRing^\op \rightarrow \LRS$$의 left adjoint이다. 
+:::
+::: 증명
+[보조정리 6](#lem6)의 isomorphism $$\mathcal{O}_{\Spec A}(D(f))\cong A_f$$를 통해 $$\mathcal{O}_{\Spec A}(\Spec A)=\mathcal{O}_{\Spec A}(D(1))$$을 $$A$$와 동일시하기로 하자. 그럼 이 동일시 하에서 $$\mathcal{O}_{\Spec A}$$의 restriction map $$\mathcal{O}_{\Spec A}(\Spec A) \rightarrow \mathcal{O}_{\Spec A}(D(f))$$은 canonical morphism $$\epsilon_f: A \rightarrow A_f$$이다. 
+
+우선 두 대응 $$\Phi$$와 $$\Psi$$를 정의한 후, 이들이 서로의 역임을 보인다. Locally ringed space들 사이의 morphism $$(\varphi,\varphi^\sharp): X \rightarrow \Spec A$$가 주어졌다 하면, $$\varphi^\sharp$$를 열린집합 $$\Spec A$$에서 계산하여 ring homomorphism
+
+$$\Phi(\varphi,\varphi^\sharp)=\varphi^\sharp(\Spec A): A=\mathcal{O}_{\Spec A}(\Spec A) \rightarrow (\varphi_\ast\mathcal{O}_X)(\Spec A)=\mathcal{O}_X(X)=\Gamma(X)$$
+
+를 얻는다. 
+
+거꾸로 ring homomorphism $$\phi:A \rightarrow \Gamma(X)$$가 주어졌다 하자. 각각의 $$x\in X$$마다 $$\phi$$와 germ을 취하는 함수 $$\Gamma(X) \rightarrow \mathcal{O}_{X,x}$$를 합성하여 얻어지는 ring homomorphism을 $$\phi_x:A \rightarrow \mathcal{O}_{X,x}$$라 적자. 즉 $$\phi_x(a)=\phi(a)_x$$이다. 이제 $$(X,\mathcal{O}_X)$$가 locally ringed space이므로 $$\mathcal{O}_{X,x}$$는 유일한 maximal ideal $$\mathfrak{m}_x$$를 갖는 local ring이고, 따라서 [\[대수적 구조\] §분수체, ⁋명제 9](/ko/math/algebraic_structures/field_of_fractions#prop9)에 의하여
+
+$$\varphi(x)=\phi_x^{-1}(\mathfrak{m}_x)$$
+
+는 $$A$$의 prime ideal, 즉 $$\Spec A$$의 점이다. 
+
+이렇게 정의된 함수 $$\varphi: X \rightarrow \Spec A$$가 연속임을 보이자. 이를 위해 임의의 $$s\in \Gamma(X)$$에 대하여 
+
+$$X_s=\{x\in X\mid \text{$s_x\not\in \mathfrak{m}_x$}\}$$
+
+이 $$X$$의 열린집합임을 보인다. [\[가환대수학\] §국소화, ⁋명제 2](/ko/math/commutative_algebra/localization#prop2)에 의하여 local ring $$\mathcal{O}_{X,x}$$의 non-unit들을 모두 모아둔 것이 $$\mathfrak{m}_x$$이므로, $$x\in X_s$$인 것은 $$s_x$$가 $$\mathcal{O}_{X,x}$$의 unit인 것과 동치이다. 이제 $$x\in X_s$$라 하면 $$s_xt=1$$을 만족하는 $$t\in \mathcal{O}_{X,x}$$가 존재하고, $$x$$의 적당한 열린근방 $$W$$와 $$t$$를 대표하는 section $$u\in \mathcal{O}_X(W)$$를 택하면 $$(s\vert_Wu)_x=1_x$$이므로, 필요하다면 $$W$$를 더 작게 잡아 $$\mathcal{O}_X(W)$$에서 $$s\vert_Wu=1$$이도록 할 수 있다. 그럼 임의의 $$y\in W$$에 대하여 $$s_yu_y=1$$이므로 $$s_y$$는 $$\mathcal{O}_{X,y}$$의 unit이고, 따라서 $$W\subseteq X_s$$이다. 즉 $$X_s$$는 열린집합이다. 
+
+한편 임의의 $$f\in A$$에 대하여
+
+$$\varphi^{-1}(D(f))=\{x\in X\mid f\not\in \varphi(x)\}=\{x\in X\mid \phi(f)_x\not\in \mathfrak{m}_x\}=X_{\phi(f)}$$
+
+이고, principal open set들이 $$\Spec A$$의 base를 이루므로 ([§스펙트럼, ⁋보조정리 11](/ko/math/scheme_theory/spectrums#lem11)) $$\varphi$$는 연속함수이다. 
+
+이제 sheaf morphism $$\varphi^\sharp: \mathcal{O}_{\Spec A} \rightarrow \varphi_\ast \mathcal{O}_X$$를 정의한다. 각각의 $$f\in A$$마다 $$V_f=\varphi^{-1}(D(f))=X_{\phi(f)}$$라 하고, $$\phi$$와 restriction map을 합성하여 얻어지는 ring homomorphism을
+
+$$\theta_f: A\overset{\phi}{\longrightarrow} \Gamma(X) \longrightarrow \mathcal{O}_X(V_f)$$
+
+라 적자. 우리의 주장은 $$\theta_f(f)=\phi(f)\vert_{V_f}$$가 $$\mathcal{O}_X(V_f)$$의 unit이라는 것이다. 실제로 $$V_f$$의 정의에 의하여 임의의 $$y\in V_f$$마다 $$\phi(f)_y$$는 $$\mathcal{O}_{X,y}$$의 unit이므로, 위의 논증을 반복하면 $$y$$의 열린근방 $$W_y\subseteq V_f$$와 $$u_y\in \mathcal{O}_X(W_y)$$가 존재하여 $$\phi(f)\vert_{W_y}u_y=1$$이도록 할 수 있다. 그럼 교집합 $$W_y\cap W_{y'}$$ 위에서 $$u_y$$와 $$u_{y'}$$의 restriction은 모두 $$\phi(f)\vert_{W_y\cap W_{y'}}$$의 곱셈에 대한 역원이므로 서로 같고, 따라서 [\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1)의 gluability axiom에 의하여 이들은 하나의 $$u\in \mathcal{O}_X(V_f)$$로 붙는다. 이제 $$\phi(f)\vert_{V_f}u$$와 $$1$$은 각각의 $$W_y$$로 제한하면 서로 같으므로, identity axiom에 의하여 $$\phi(f)\vert_{V_f}u=1$$이다. 
+
+특히 $$\theta_f$$는 multiplicative subset $$S_f=\{1,f,f^2,\ldots\}$$의 원소들을 모두 $$\mathcal{O}_X(V_f)$$의 unit으로 보내므로, [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)에 의하여
+
+$$\varphi^\sharp(D(f))\circ \epsilon_f=\theta_f$$
+
+를 만족하는 ring homomorphism
+
+$$\varphi^\sharp(D(f)): A_f=\mathcal{O}_{\Spec A}(D(f)) \rightarrow \mathcal{O}_X(V_f)=(\varphi_\ast\mathcal{O}_X)(D(f))$$
+
+가 유일하게 존재한다. 만일 $$D(g)\subseteq D(f)$$라면 $$V_g\subseteq V_f$$이고, 두 합성
+
+$$A_f \overset{\varphi^\sharp(D(f))}{\longrightarrow} \mathcal{O}_X(V_f) \longrightarrow \mathcal{O}_X(V_g),\qquad A_f \longrightarrow A_g \overset{\varphi^\sharp(D(g))}{\longrightarrow} \mathcal{O}_X(V_g)$$
+
+은 모두 $$\epsilon_f$$와 합성하면 $$\theta_g$$가 되므로, 다시 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)의 유일성에 의하여 서로 같다. 즉 $$\varphi^\sharp(D(f))$$들은 restriction map과 가환한다. 
+
+이제 임의의 열린집합 $$U\subseteq \Spec A$$와 $$s\in \mathcal{O}_{\Spec A}(U)$$에 대하여, $$U$$에 포함되는 principal open set $$D(f)$$들마다 section
+
+$$\varphi^\sharp(D(f))(s\vert_{D(f)})\in (\varphi_\ast\mathcal{O}_X)(D(f))$$
+
+을 생각하자. 두 principal open set의 교집합 $$D(f)\cap D(g)=D(fg)$$ 또한 principal open set이므로, 위의 가환성으로부터 이 section들은 교집합 위에서 서로 일치하고, 따라서 sheaf $$\varphi_\ast\mathcal{O}_X$$의 gluability axiom과 identity axiom에 의하여 이들은 유일한 $$\varphi^\sharp(U)(s)\in (\varphi_\ast\mathcal{O}_X)(U)$$로 붙는다. 이렇게 정의된 $$\varphi^\sharp(U)$$가 ring homomorphism이며 restriction map과 가환한다는 것은 다시 identity axiom으로부터 얻어지고, 따라서 우리는 sheaf morphism $$\varphi^\sharp$$을 얻는다. 
+
+마지막으로 $$(\varphi,\varphi^\sharp)$$가 locally ringed space들 사이의 morphism임을 보이자. 임의의 $$x\in X$$와 $$\mathfrak{p}=\varphi(x)$$에 대하여, [보조정리 8](#lem8)에 의하여 $$\mathcal{O}_{\Spec A,\mathfrak{p}}\cong A_\mathfrak{p}$$이며 이 동일시 하에서 $$\varphi^\sharp$$이 유도하는 stalk 사이의 morphism $$\varphi_x^\sharp: A_\mathfrak{p} \rightarrow \mathcal{O}_{X,x}$$는, 식 $$\varphi^\sharp(D(f))\circ\epsilon_f=\theta_f$$의 양변에 $$x$$에서의 germ을 취하면
+
+$$\varphi^\sharp_x\circ\epsilon=\phi_x$$
+
+를 만족함을 알 수 있다. 여기에서 $$\epsilon: A \rightarrow A_\mathfrak{p}$$는 canonical morphism이다. 이제 임의의 $$a/s\in A_\mathfrak{p}$$에 대하여 $$s\not\in \mathfrak{p}=\phi_x^{-1}(\mathfrak{m}_x)$$이므로 $$\phi_x(s)$$는 unit이고, 따라서
+
+$$\varphi_x^\sharp(a/s)=\phi_x(a)\phi_x(s)^{-1}$$
+
+이 성립한다. 특히 $$a\in \mathfrak{p}$$라면 $$\phi_x(a)\in \mathfrak{m}_x$$이므로 $$\varphi_x^\sharp(a/s)\in \mathfrak{m}_x$$이고, 즉 ideal $$(\varphi_x^\sharp)^{-1}(\mathfrak{m}_x)$$는 $$\mathfrak{p}A_\mathfrak{p}$$를 포함한다. 한편 $$\varphi_x^\sharp(1)=1\not\in \mathfrak{m}_x$$이므로 이 ideal은 $$A_\mathfrak{p}$$ 전체가 아니며, $$\mathfrak{p}A_\mathfrak{p}$$가 $$A_\mathfrak{p}$$의 유일한 maximal ideal이므로 ([\[가환대수학\] §국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8))
+
+$$(\varphi_x^\sharp)^{-1}(\mathfrak{m}_x)=\mathfrak{p}A_\mathfrak{p}$$
+
+이다. 즉 $$\varphi_x^\sharp$$는 local homomorphism이고, [정의 2](#def2)에 의하여 $$\Psi(\phi)=(\varphi,\varphi^\sharp)$$는 locally ringed space들 사이의 morphism이다. 
+
+이제 $$\Phi$$와 $$\Psi$$가 서로의 역임을 보이자. 우선 $$\Psi(\phi)=(\varphi,\varphi^\sharp)$$에 대하여, $$f=1$$로 두면 $$D(1)=\Spec A$$, $$V_1=X$$이고 $$\epsilon_1=\id_A$$이므로 위의 construction은
+
+$$\Phi(\Psi(\phi))=\varphi^\sharp(\Spec A)=\theta_1=\phi$$
+
+를 준다. 
+
+거꾸로 locally ringed space들 사이의 morphism $$(\varphi,\varphi^\sharp): X \rightarrow \Spec A$$가 주어졌다 하고, $$\phi=\Phi(\varphi,\varphi^\sharp)=\varphi^\sharp(\Spec A)$$, 그리고 $$\Psi(\phi)=(\varphi',(\varphi')^\sharp)$$라 하자. 임의의 $$x\in X$$에 대하여, $$\varphi^\sharp$$이 restriction map과 가환하므로 $$\varphi^\sharp$$이 유도하는 stalk 사이의 morphism $$\varphi_x^\sharp: \mathcal{O}_{\Spec A, \varphi(x)}\cong A_{\varphi(x)} \rightarrow \mathcal{O}_{X,x}$$는 $$\varphi_x^\sharp\circ\epsilon=\phi_x$$를 만족하며, 여기에서 $$\epsilon: A \rightarrow A_{\varphi(x)}$$가 canonical morphism인 것은 [보조정리 8](#lem8)로부터 얻어진다. 한편 $$(\varphi,\varphi^\sharp)$$가 locally ringed space들 사이의 morphism이므로 $$\varphi_x^\sharp$$는 local homomorphism이고, 즉 ideal $$(\varphi_x^\sharp)^{-1}(\mathfrak{m}_x)$$는 $$\varphi(x)A_{\varphi(x)}$$를 포함하는 proper ideal, 즉 $$\varphi(x)A_{\varphi(x)}$$ 자기 자신이다. 따라서 [\[가환대수학\] §국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8)에 의하여
+
+$$\varphi'(x)=\phi_x^{-1}(\mathfrak{m}_x)=\epsilon^{-1}\left((\varphi_x^\sharp)^{-1}(\mathfrak{m}_x)\right)=\epsilon^{-1}\left(\varphi(x)A_{\varphi(x)}\right)=\varphi(x)$$
+
+를 얻고, 두 연속함수 $$\varphi$$와 $$\varphi'$$은 같다. 이제 $$\varphi^\sharp$$이 restriction map과 가환하는 것으로부터 임의의 $$f\in A$$에 대하여
+
+$$\varphi^\sharp(D(f))\circ\epsilon_f=\theta_f$$
+
+가 성립하고, 이는 정확히 $$(\varphi')^\sharp(D(f))$$를 정의한 식이므로 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)의 유일성에 의하여 $$\varphi^\sharp(D(f))=(\varphi')^\sharp(D(f))$$이다. 두 sheaf morphism이 base $$\{D(f)\}_{f\in A}$$ 위에서 일치하므로, $$\varphi_\ast\mathcal{O}_X$$의 identity axiom에 의하여 $$\varphi^\sharp=(\varphi')^\sharp$$이고 따라서 $$\Psi(\Phi(\varphi,\varphi^\sharp))=(\varphi,\varphi^\sharp)$$이다. 
+
+마지막으로 이 전단사가 natural임을 확인하자. Locally ringed space들 사이의 morphism $$\psi: X' \rightarrow X$$가 주어지면, 합성 $$(\varphi\circ\psi)^\sharp$$을 $$\Spec A$$에서 계산한 것은 $$\psi^\sharp(X)\circ\varphi^\sharp(\Spec A)$$이므로
+
+$$\Phi(\varphi\circ\psi)=\Gamma(\psi)\circ\Phi(\varphi)$$
+
+이다. 또 ring homomorphism $$\theta: A \rightarrow A'$$가 주어지면, [명제 9](#prop9)의 construction에서 $$f=1$$로 두었을 때 $$(\Spec\theta)^\sharp(\Spec A)=\theta$$이므로 임의의 $$\varphi: X \rightarrow \Spec A'$$에 대하여
+
+$$\Phi((\Spec\theta)\circ\varphi)=\Phi(\varphi)\circ\theta$$
+
+이다. 즉 주어진 전단사는 $$X$$와 $$A$$ 모두에 대해 natural하며, 이로부터 주장의 natural isomorphism을 얻는다. 
 :::
 
 ---

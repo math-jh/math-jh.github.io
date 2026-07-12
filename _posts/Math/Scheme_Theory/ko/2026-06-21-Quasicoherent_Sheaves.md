@@ -171,7 +171,11 @@ $$\theta_f:M_f \rightarrow \mathcal{F}(D(f))$$
 
 가 결정된다. 이들은 base $$\{D(f)\}$$ 위에서 morphism $$\theta:\widetilde M \rightarrow \mathcal{F}$$를 정의하므로, $$\theta$$가 stalk마다 동형임을 보이면 된다.
 
-이를 위해 $$\mathcal{F}$$의 준연접성을 사용한다. 각 점 $$\mathfrak{p}$$에 대하여 $$\mathfrak{p}\in D(g)$$이고 $$\mathcal{F}\vert_{D(g)}\cong \widetilde N$$인 적당한 $$g$$와 $$A_g$$-가군 $$N$$이 존재한다. ([정의 8](#def8)에서 affine open neighborhood를 principal open set으로 줄일 수 있는 것은 이들이 base이기 때문이다.) 그럼 $$N=\mathcal{F}(D(g))$$이고, [명제 5](#prop5)에 의하여 $$D(g)$$ 위로 제한된 $$\theta$$는 $$\widetilde{M_g} \rightarrow \widetilde N$$의 꼴이다. 한편 $$M_g=\mathcal{F}(\Spec A)_g$$와 $$N=\mathcal{F}(D(g))$$ 사이의 사상은, $$\mathcal{F}\vert_{D(g)}\cong \widetilde N$$가 준연접층이므로 [정리 7](#thm7)의 논증에 의해 동형이다. 따라서 $$\theta$$는 각 $$D(g)$$ 위에서 동형이고, 이로부터 모든 stalk에서 동형이므로 $$\theta:\widetilde M \rightarrow \mathcal{F}$$는 sheaf의 동형사상이다.
+이를 위해 $$\mathcal{F}$$의 준연접성을 사용한다. 각 점 $$\mathfrak{p}$$에 대하여 $$\mathfrak{p}\in D(g)$$이고 $$\mathcal{F}\vert_{D(g)}\cong \widetilde N$$인 적당한 $$g$$와 $$A_g$$-가군 $$N$$이 존재한다. ([정의 8](#def8)에서 affine open neighborhood를 principal open set으로 줄일 수 있는 것은 이들이 base이기 때문이다.) 그럼 $$N=\mathcal{F}(D(g))$$이고, [명제 5](#prop5)에 의하여 $$D(g)$$ 위로 제한된 $$\theta$$는 $$\widetilde{M_g} \rightarrow \widetilde N$$의 꼴이다. 두 연관층 사이의 사상은 [정리 7](#thm7)에 의해 그 global section 사상으로 결정되므로, 이 제한이 동형인 것은 자연스러운 국소화 사상 $$M_g=\mathcal{F}(\Spec A)_g \rightarrow \mathcal{F}(D(g))=N$$이 동형인 것과 같다. 이제 이 사상이 동형임을 확인한다. $$\Spec A$$이 quasi-compact하므로 그 위에서 $$\mathcal{F}$$가 연관층이 되는 유한 개의 principal open $$D(h_1),\ldots,D(h_m)$$으로 $$\Spec A$$을 덮을 수 있고, sheaf 조건은 완전열
+
+$$0 \rightarrow \mathcal{F}(\Spec A) \rightarrow \prod_i \mathcal{F}(D(h_i)) \rightarrow \prod_{i,j}\mathcal{F}(D(h_ih_j))$$
+
+을 준다. 각 $$D(h_i)$$·$$D(h_ih_j)$$ 위에서 $$\mathcal{F}$$가 연관층이라 그 단면은 $$A$$-가군이고 곱이 유한하므로, 완전한 국소화 $$(-)\otimes_A A_g$$은 이 열의 완전성을 보존할 뿐 아니라 곱을 통과한다. 그 결과 위 열을 $$g$$에서 국소화한 것은 덮개 $$\{D(h_ig)\}$$에 대한 $$D(g)$$ 위의 sheaf 조건과 정확히 일치하는 완전열이 되어 $$M_g\cong \mathcal{F}(D(g))=N$$을 얻는다. 여기서 $$\Spec A$$의 quasi-compactness가 유한 덮개를 보장하는 데 본질적으로 쓰였다. 따라서 $$\theta$$는 각 $$D(g)$$ 위에서 동형이고, 이로부터 모든 stalk에서 동형이므로 $$\theta:\widetilde M \rightarrow \mathcal{F}$$는 sheaf의 동형사상이다.
 :::
 
 [정리 9](#thm9)는 affine scheme 위에서 준연접층을 다루는 것이 곧 가군을 다루는 것과 같음을 말해준다. 즉 $$\Spec A$$ 위의 모든 준연접층은 그 global section 가군 $$M=\Gamma(\Spec A, \mathcal{F})$$으로 완전히 복원되며, 이 대응은 [명제 6](#prop6)의 exactness와 위에서 언급한 tensor product 호환성을 통해 가군의 대수와 sheaf의 대수를 일치시킨다.

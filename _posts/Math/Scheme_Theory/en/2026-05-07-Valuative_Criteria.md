@@ -91,7 +91,7 @@ An example of a non-separated scheme is the line with double origin constructed 
 ::: Theorem 6
 For a Noetherian scheme $$X$$ and a scheme morphism $$f:X \rightarrow Y$$, $$f$$ being separated is equivalent to the following: for any valuation ring $$A$$ and its quotient field $$K=\Frac(A)$$, for any scheme morphisms $$\Spec A \rightarrow Y$$, $$\Spec K \rightarrow X$$ and the following commutative diagram
 
-![valuative_criterion_for_separatedness](/assets/images/Math/Scheme_Theory/Valuative_Criteria-2.svg){:style="width:8.27em" class="invert" .align-center}
+![valuative_criterion](/assets/images/Math/Scheme_Theory/Valuative_Criteria-2.svg){:style="width:8.27em" class="invert" .align-center}
 
 whenever the outer square is given, there is at most one $$\Spec A \rightarrow X$$ making the whole diagram commute.
 :::
@@ -121,7 +121,7 @@ Just as for [Theorem 6](#thm6), there is also a valuative criterion for proper m
 ::: Theorem 9
 For a Noetherian scheme $$X$$ and a scheme morphism $$f:X \rightarrow Y$$, $$f$$ being proper is equivalent to the following: for any valuation ring $$A$$ and its quotient field $$K=\Frac(A)$$, for any scheme morphisms $$\Spec A \rightarrow Y$$, $$\Spec K \rightarrow X$$ and the following commutative diagram
 
-![valuative_criterion_for_separatedness](/assets/images/Math/Scheme_Theory/Valuative_Criteria-2.svg){:style="width:8.27em" class="invert" .align-center}
+![valuative_criterion](/assets/images/Math/Scheme_Theory/Valuative_Criteria-2.svg){:style="width:8.27em" class="invert" .align-center}
 
 whenever the outer square is given, there exists exactly one $$\Spec A \rightarrow X$$ making the whole diagram commute.
 :::

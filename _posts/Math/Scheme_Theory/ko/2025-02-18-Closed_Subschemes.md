@@ -10,7 +10,7 @@ sidebar:
 
 date: 2025-02-18
 weight: 12
-
+drift_needed: true
 ---
 
 [§스킴, ⁋보조정리 2](/ko/math/scheme_theory/schemes#lem2)에서 우리는 affine scheme $$\Spec A$$에 대하여, 임의의 원소 $$f$$가 open affine subscheme $$D(f)\cong \Spec A_f$$를 정의하는 것을 살펴보았으며, 특히 이 두 structure sheaf를 비교하기 위해 우리는 $$\epsilon: A \rightarrow A_f$$로부터 얻어지는
@@ -51,7 +51,7 @@ $$\pi_1:\mathbb{K}[\x] \rightarrow \mathbb{K}[\x]/(\x)\cong \mathbb{K},\qquad \p
 
 한편 $$\mathbb{K}[\x]/(\x)\cong \mathbb{K}$$이므로 $$\Spec \mathbb{K}[\x]/(\x)$$는 한 점 $$(0)$$만을 가진다. 마찬가지로 $$\Spec \mathbb{K}[\x]/(\x^2)$$ 또한 한 점만을 가진다. 이는 $$\mathbb{K}[\x]/(\x^2)$$의 prime ideal과 $$\x^2$$을 포함하는 $$\mathbb{K}[\x]$$의 prime ideal 사이의 일대일대응이 존재하고, $$\mathbb{K}[\x]$$는 principal ideal domain이므로, $$\mathbb{K}[\x]$$의 prime ideal을 $$(p(\x))$$라 쓴다면 이 ideal이 $$\x^2$$을 포함하기 위해서는 $$p(\x)$$가 $$\x^2$$을 나눠야 하기 때문에 반드시 $$p(\x)=\x$$여야 함을 안다. 
 
-따라서 이들이 정의하는 schememorphism
+따라서 이들이 정의하는 scheme morphism
 
 $$\Spec\pi_1:\Spec \mathbb{K}[\x]/(\x) \rightarrow \Spec \mathbb{K}[\x],\qquad \Spec\pi_2:\Spec \mathbb{K}[\x]/(\x^2) \rightarrow \Spec \mathbb{K}[\x]$$
 
@@ -78,9 +78,9 @@ $$B=\im\phi\cong A/\ker\phi$$
 Scheme morphism $$\iota: Z \rightarrow X$$가 *closed embedding<sub>닫힌 몰입</sub>*이라는 것은 $$\iota$$가 연속함수로서 $$Z$$와 $$X$$의 닫힌집합 사이의 homeomorphism이고, sheaf morphism $$\iota^\sharp: \mathcal{O}_X \rightarrow \iota_\ast \mathcal{O}_Z$$가 surjective인 것이다.
 :::
 
-연속함수 $$\iota$$에 대한 조건은 자명한 것이며, $$\iota^\sharp$$에 대한 직관 또한 기하적인 해석이 가능한데, 그것은 $$Z$$의 함수들, 더 정확하게는 $$\iota(Z)$$의 함수들은 모두 $$X$$의 함수를 $$Z$$로 제한하여 얻어진 것이어야 한다는 것이다. 혹은, 반대로 말하면 $$Z$$의 임의의 함수가 주어졌을 때 이를 $$X$$에서의 함수로 확장하는 것이 가능해야 한다는 것이다. 한편 만일 $$\iota$$가 open embedding이라면, $$\iota^\sharp$$는 isomorphism이어야 한다. 
+연속함수 $$\iota$$에 대한 조건은 자명한 것이며, $$\iota^\sharp$$에 대한 직관 또한 기하적인 해석이 가능한데, 그것은 $$Z$$의 함수들, 더 정확하게는 $$\iota(Z)$$의 함수들은 모두 $$X$$의 함수를 $$Z$$로 제한하여 얻어진 것이어야 한다는 것이다. 혹은, 반대로 말하면 $$Z$$의 임의의 함수가 주어졌을 때 이를 $$X$$에서의 함수로 확장하는 것이 가능해야 한다는 것이다. 한편 $$\iota$$가 open embedding인 경우와 대조해 볼 만하다. 이 경우 $$\iota^\sharp:\mathcal{O}_X \rightarrow \iota_\ast\mathcal{O}_Z$$ 자체는 isomorphism이 아니다. 가령 $$X=\mathbb{A}^1_k=\Spec k[t]$$와 그 열린부분 $$Z=D(t)=\Spec k[t,t^{-1}]$$을 생각하면 $$(\iota_\ast\mathcal{O}_Z)(X)=k[t,t^{-1}]$$이라 $$k[t] \rightarrow k[t,t^{-1}]$$은 전사가 아니다. 올바른 진술은 $$\iota$$가 $$Z$$를 열린집합으로 옮기므로 $$\iota^{-1}\mathcal{O}_X\cong\mathcal{O}_Z$$, 곧 $$\iota(Z)$$의 각 점에서의 stalk 사이에 isomorphism이 유도된다는 것이다. 
 
-이 정의는 자연스러운 것이지만, 우리가 앞선 글에서 정의한 scheme morphism의 성질들과는 약간 결이 다르다. 따라서 우리는 이와 동치인 다음 정의를 (증명없이) 사용한다. 
+이 정의는 자연스러운 것이지만, 우리가 앞선 글에서 정의한 scheme morphism의 성질들과는 약간 결이 다르다. 따라서 우리는 이와 동치인 다음 조건을 살펴본다. 
 
 ::: 명제 3
 Scheme morphism $$\varphi: X \rightarrow Y$$에 대하여 다음 두 조건이 동치이다.
@@ -89,14 +89,52 @@ Scheme morphism $$\varphi: X \rightarrow Y$$에 대하여 다음 두 조건이 �
 2. $$\varphi$$가 affine morphism이고, $$Y$$의 임의의 affine open subset $$V\cong \Spec B$$가 주어질 떄마다, 그 preimage $$\varphi^{-1}(V)\cong \Spec A$$에 대하여 $$B \rightarrow A$$가 surjective이다. 
 :::
 ::: 증명
-[The equivalence of two definitions of closed subscheme, Vakil's Ex 8.1.K](https://math.stackexchange.com/questions/1720902/the-equivalence-of-two-definitions-of-closed-subscheme-vakils-ex-8-1-k), Stack Exchange.
+우선 둘째 조건을 가정하고 $$\varphi$$가 closed embedding임을 보이자. $$Y$$를 affine open subset들 $$\{V_i=\Spec B_i\}$$로 덮으면, 가정에 의하여 $$\varphi^{-1}(V_i)\cong \Spec A_i$$이며 이에 대응하는 $$\beta_i: B_i \rightarrow A_i$$가 surjective이다. 그럼 first isomorphism theorem에 의하여 $$\mathfrak{b}_i=\ker\beta_i$$라 둘 때 $$A_i\cong B_i/\mathfrak{b}_i$$이고, 따라서 $$\varphi$$를 $$\varphi^{-1}(V_i)$$로 제한한 것은 canonical projection $$\pi: B_i \rightarrow B_i/\mathfrak{b}_i$$가 정의하는 $$\Spec\pi$$이다.
+
+이제 [§스펙트럼, ⁋명제 9](/ko/math/scheme_theory/spectrums#prop9)에 의하여 $$\Spec\pi$$는 injective이고 그 image는 닫힌집합 $$Z(\mathfrak{b}_i)$$이며, $$\Spec\pi$$는 이 image 위로의 homeomorphism이다. 우선 이로부터 $$\varphi$$가 injective인 것을 안다. 실제로 $$\varphi(x)=\varphi(x')$$이라면 이 점을 포함하는 $$V_i$$를 택할 때 $$x,x'\in \varphi^{-1}(V_i)$$이고, $$\varphi$$를 $$\varphi^{-1}(V_i)$$로 제한한 것이 injective이기 때문이다. 또 각각의 $$i$$에 대하여 $$\varphi(X)\cap V_i=Z(\mathfrak{b}_i)$$가 $$V_i$$의 닫힌집합이고 $$\{V_i\}$$가 $$Y$$의 열린덮개이므로 $$\varphi(X)$$는 $$Y$$의 닫힌집합이다. 마지막으로 $$X$$의 임의의 열린집합 $$U$$에 대하여, $$\varphi$$가 injective인 것으로부터
+
+$$\varphi(U)\cap V_i=\varphi(U\cap \varphi^{-1}(V_i))$$
+
+이고 우변은 $$\varphi(X)\cap V_i$$의 열린집합이므로, $$\varphi(U)$$는 $$\varphi(X)$$의 열린집합이다. 즉 $$\varphi$$는 $$X$$와 $$Y$$의 닫힌집합 $$\varphi(X)$$ 사이의 homeomorphism이다.
+
+다음으로 $$\varphi^\sharp$$이 surjective인 것을 보이자. [\[위상수학\] §층, ⁋명제 15](/ko/math/topology/sheaves#prop15)에 의하여 이는 각각의 $$y\in Y$$에서 stalk을 확인하면 충분하다. 만일 $$y\not\in \varphi(X)$$라면, $$\varphi(X)$$가 닫힌집합이므로 $$\varphi(X)$$와 만나지 않는 $$y$$의 열린근방 $$W$$가 존재하고, 이 때 $$(\varphi_\ast \mathcal{O}_X)(W)=\mathcal{O}_X(\emptyset)=0$$이므로 $$(\varphi_\ast \mathcal{O}_X)_y=0$$이 되어 볼 것이 없다. 이제 $$y=\varphi(x)$$라 하자. $$\varphi$$가 image 위로의 homeomorphism이므로, $$x$$를 포함하는 $$X$$의 임의의 열린집합 $$U$$에 대하여 $$\varphi(U)=W\cap \varphi(X)$$이도록 하는 $$Y$$의 열린집합 $$W\ni y$$가 존재하고 이 때 $$\varphi^{-1}(W)=U$$이다. 즉 $$y$$의 열린근방들의 preimage들은 $$x$$의 열린근방들 사이에서 cofinal하며, 따라서
+
+$$(\varphi_\ast \mathcal{O}_X)_y=\varinjlim_{W\ni y}\mathcal{O}_X(\varphi^{-1}(W))\cong \mathcal{O}_{X,x}$$
+
+이다. 이제 $$y\in V_i$$인 $$i$$를 택하고 $$y$$에 해당하는 $$B_i$$의 prime ideal을 $$\mathfrak{q}$$, $$x$$에 해당하는 $$A_i$$의 prime ideal을 $$\mathfrak{p}=\mathfrak{q}/\mathfrak{b}_i$$라 하면, [§아핀스킴, ⁋보조정리 8](/ko/math/scheme_theory/affine_schemes#lem8)에 의하여 $$y$$에서의 stalk 사이의 사상은 $$\beta_i$$의 국소화
+
+$$(B_i)_\mathfrak{q} \rightarrow (A_i)_\mathfrak{p}\cong (B_i/\mathfrak{b}_i)_\mathfrak{q}$$
+
+이다. 그런데 localization은 exact functor이므로 ([\[가환대수학\] §국소화의 성질들, ⁋명제 2](/ko/math/commutative_algebra/properties_of_localization#prop2)) 이 사상은 surjective이고, 따라서 $$\varphi^\sharp$$은 surjective이다. 즉 $$\varphi$$는 closed embedding이다.
+
+반대 방향은 형식적이지 않다. $$\varphi$$가 closed embedding이라 가정하고, $$Y$$의 affine open subset $$V=\Spec B$$를 고정한 후 $$W=\varphi^{-1}(V)$$라 쓰자. 앞선 논증에서와 마찬가지로 $$\varphi$$가 image 위로의 homeomorphism이라는 사실로부터, 임의의 $$\mathfrak{q}=\varphi(x)\in \varphi(X)\cap V$$에 대하여 $$(\varphi_\ast \mathcal{O}_X)_\mathfrak{q}\cong \mathcal{O}_{X,x}$$이고 $$\varphi(X)$$ 바깥의 점에서는 $$(\varphi_\ast \mathcal{O}_X)_\mathfrak{q}=0$$이다. 즉 우리는 $$\varphi_\ast \mathcal{O}_X$$의 stalk들을 알고 있다. 그러나 이것만으로는 $$\varphi_\ast \mathcal{O}_X$$가 $$V$$의 열린집합들 위에서 어떤 section을 갖는지 알 수 없으며, 특히 $$W$$가 affine scheme인지도 알 수 없다. 이를 위해 필요한 것은 closed embedding $$\varphi$$에 대하여 $$\varphi_\ast \mathcal{O}_X$$와 ideal sheaf $$\ker\varphi^\sharp$$이 *quasi-coherent*하다는 사실, 즉 $$Y$$의 임의의 affine open subset $$V=\Spec B$$와 임의의 $$f\in B$$에 대하여 canonical한 사상
+
+$$\left((\varphi_\ast \mathcal{O}_X)(V)\right)_f \rightarrow (\varphi_\ast \mathcal{O}_X)(D(f))$$
+
+이 isomorphism이라는 사실이다. 이는 [명제 6](#prop6)에서 ideal들에 요구했던 국소화 조건과 정확히 같은 형태의 조건이지만, 지금은 $$\varphi$$가 affine morphism인지조차 모르는 상황이므로 이를 우리가 가진 도구만으로 얻을 수는 없다. 따라서 우리는 이 사실만을 증명 없이 인용하고 (Stacks 01QO), 나머지 논증은 우리가 이미 가진 도구들로 완결한다.
+
+$$C=(\varphi_\ast \mathcal{O}_X)(V)=\Gamma(W, \mathcal{O}_W)$$라 두고 $$\beta=\varphi^\sharp(V): B \rightarrow C$$라 하자. 그럼 $$D(f)$$들이 $$V$$의 base를 이루므로 [§아핀스킴, ⁋보조정리 8](/ko/math/scheme_theory/affine_schemes#lem8)의 논증을 그대로 반복하여, 위의 사실로부터 임의의 $$\mathfrak{q}\in V$$에 대하여
+
+$$(\varphi_\ast \mathcal{O}_X)_\mathfrak{q}\cong C_\mathfrak{q}$$
+
+를 얻는다. 여기에서 $$C_\mathfrak{q}$$는 $$B$$-module $$C$$를 $$\mathfrak{q}$$에서 국소화한 것이고, 이 isomorphism은 restriction map들로부터 유도된 것이다.
+
+첫째로 $$\beta$$는 surjective이다. 실제로 $$\varphi^\sharp$$이 surjective이므로 [\[위상수학\] §층, ⁋명제 15](/ko/math/topology/sheaves#prop15)에 의하여 각각의 $$\mathfrak{q}$$에서 stalk 사이의 사상 $$B_\mathfrak{q} \rightarrow C_\mathfrak{q}$$가 surjective이고, 이는 $$B$$-module homomorphism $$\beta$$의 국소화이므로 [\[가환대수학\] §국소화의 성질들, ⁋명제 4](/ko/math/commutative_algebra/properties_of_localization#prop4)에 의하여 $$\beta$$가 surjective이다. 따라서 $$\mathfrak{b}=\ker\beta$$라 하면 $$C\cong B/\mathfrak{b}$$이다.
+
+둘째로 $$W$$는 affine scheme이다. 우선 위상적으로, $$\mathfrak{q}\in V$$가 $$\varphi(X)$$에 속하는 것은 위에서 계산한 stalk이 $$0$$이 아닌 것과 동치이다. $$\varphi(X)$$ 바깥의 점에서 stalk이 $$0$$인 것은 이미 보았고, $$\mathfrak{q}=\varphi(x)$$인 경우 stalk은 local ring $$\mathcal{O}_{X,x}$$이므로 $$0$$이 아니기 때문이다. 그런데 $$(\varphi_\ast \mathcal{O}_X)_\mathfrak{q}\cong (B/\mathfrak{b})_\mathfrak{q}$$이고 이것이 $$0$$이 아닌 것은 $$\mathfrak{b}\subseteq \mathfrak{q}$$인 것과 동치이므로
+
+$$\varphi(X)\cap V=Z(\mathfrak{b})$$
+
+이다. 이제 [§아핀스킴, ⁋정리 13](/ko/math/scheme_theory/affine_schemes#thm13)의 adjunction을 항등사상 $$C \rightarrow \Gamma(W, \mathcal{O}_W)$$에 적용하면 canonical한 morphism $$j: W \rightarrow \Spec C$$를 얻고, adjunction의 naturality에 의하여 $$\Spec\beta\circ j=\varphi\vert_W$$이다. 한편 $$\Spec\beta: \Spec B/\mathfrak{b} \rightarrow \Spec B$$는 $$Z(\mathfrak{b})$$ 위로의 homeomorphism이고 ([§스펙트럼, ⁋명제 9](/ko/math/scheme_theory/spectrums#prop9)), $$\varphi\vert_W$$ 또한 $$\varphi(X)\cap V=Z(\mathfrak{b})$$ 위로의 homeomorphism이므로 $$j$$는 homeomorphism이다. 또 임의의 $$x\in W$$와 $$\mathfrak{q}=\varphi(x)$$에 대하여 $$j$$가 stalk에서 유도하는 사상은 [§아핀스킴, ⁋보조정리 8](/ko/math/scheme_theory/affine_schemes#lem8)에 의하여 $$C_\mathfrak{q} \rightarrow \mathcal{O}_{W,x}$$이며, 이는 restriction map들로부터 유도된 사상, 곧 위에서 얻은 isomorphism $$C_\mathfrak{q}\cong (\varphi_\ast \mathcal{O}_X)_\mathfrak{q}\cong \mathcal{O}_{W,x}$$과 같은 것이다. 따라서 $$j$$는 homeomorphism이면서 모든 stalk에서 isomorphism이므로 locally ringed space들의 isomorphism이다.
+
+이상에서 $$W\cong \Spec C=\Spec B/\mathfrak{b}$$는 affine scheme이고 $$B \rightarrow C$$는 surjective이다. $$V$$는 $$Y$$의 임의의 affine open subset이었으므로 $$\varphi$$는 affine morphism이며 둘째 조건이 성립한다.
 :::
 
 그럼 임의의 closed embedding은 국소적으로는 항상 위에서 살펴본 것과 같이 적당한 $$\pi: A \rightarrow A/\mathfrak{a}$$로부터 오는 것으로 생각할 수 있다. 특히 $$Y$$가 affine scheme $$\Spec B$$라 하면 위의 동치에 의해 $$Y$$로의 임의의 closed embedding $$\varphi: X \rightarrow Y$$는 정확하게 $$B \rightarrow B/\mathfrak{b}$$에 대응되는 것을 안다. 
 
 ## 닫힌 매장의 성질들
 
-[명제 3](#prop3)를 받아들이고 나면 임의의 closed embedding은 항상 affine-local on target이고, closed embedding은 합성에 대해서도 닫혀있다는 것을 안다. 뿐만 아니라 다음이 성립한다.
+[명제 3](#prop3)에 의하여 임의의 closed embedding은 항상 affine-local on target이고, closed embedding은 합성에 대해서도 닫혀있다는 것을 안다. 뿐만 아니라 다음이 성립한다.
 
 ::: 명제 4
 임의의 closed embedding은 항상 finite morphism이다.
@@ -199,7 +237,7 @@ $$\mathcal{I}(V):=\ker(\varphi^\sharp(V))\subset B$$
 가 $$V$$의 closed subscheme을 정의하지만, 이들을 이어붙여 $$Y$$ 전체에서 정의된 단일한 closed subscheme을 만들 수 있는지는 다른 문제이기 때문이다. 물론 우리는 이를 위해 [명제 6](#prop6)을 사용할 것이며, 이 가정은 특히 $$X$$가 reduced scheme이거나 $$\varphi$$가 quasi-compact일 경우 만족된다.
 
 ::: 따름정리 12
-Scheme morphism $$\varphi: X \rightarrow Y$$가 주어졌다 하자. 만일 $$X$$가 reduced이거나, $$\varphi$$가 quasi-comapct라면 위에서 정의한 ideal sheaf $$\mathcal{I}$$는 [명제 6](#prop6)의 조건을 만족하고 따라서 $$\mathcal{I}$$는 $$Y$$의 closed subscheme을 정의하며 이것이 $$\varphi$$의 scheme-theoretic image가 된다.
+Scheme morphism $$\varphi: X \rightarrow Y$$가 주어졌다 하자. 만일 $$X$$가 reduced이거나, $$\varphi$$가 quasi-compact라면 위에서 정의한 ideal sheaf $$\mathcal{I}$$는 [명제 6](#prop6)의 조건을 만족하고 따라서 $$\mathcal{I}$$는 $$Y$$의 closed subscheme을 정의하며 이것이 $$\varphi$$의 scheme-theoretic image가 된다.
 :::
 
 위의 조건을 가정하고 $$\varphi$$의 image를 각각의 affine open subset에서 확인해보면 $$\varphi$$의 scheme-theoretic image는 $$\varphi$$의 (연속함수로서의) image의 closure 위에 structure sheaf가 정의된 형태임을 확인할 수 있다. 

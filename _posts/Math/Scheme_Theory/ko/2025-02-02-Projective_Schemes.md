@@ -10,6 +10,7 @@ sidebar:
 
 date: 2025-02-02
 weight: 13
+drift_needed: true
 
 ---
 
@@ -73,7 +74,7 @@ $$x_{k/i}/x_{j/i}=x_{k/j}\quad\text{for all $k\neq i,j$},\qquad\text{and}\qquad 
 
 이제 이 계산을 바탕으로 [§스킴, ⁋예시 10](/ko/math/scheme_theory/schemes#ex10)를 일반화하자. 우선 $$n+1$$개의 affine $$n$$-space들
 
-$$P_i=\Spec \mathbb{K}[\x_{0/i},\ldots, \x_{n/i}]/(x_{i/i}-1)=\Spec A^i$$
+$$P_i=\Spec \mathbb{K}[\x_{0/i},\ldots, \x_{n/i}]/(\x_{i/i}-1)=\Spec A^i$$
 
 를 생각하자. 그럼 $$P_i$$의 open subscheme들 $$P_{ij}=D(\x_{j/i})=(A^i)_{\x_{j/i}}$$과, 다음의 ring homomorphism
 
@@ -162,7 +163,7 @@ Graded ring $$A_\bullet$$에 대하여 다음이 성립한다.
     를 생각하면, $$\mathfrak{p}$$가 homogeneous이므로 $$ab_i$$들은 모두 $$\mathfrak{p}$$의 원소이다. 한편 앞선 가정에 의해 $$b\not\in \mathfrak{p}$$이므로, $$b_i\not\in \mathfrak{p}$$를 만족하는 $$i$$가 존재하고, 그럼 $$ab_i$$는 $$\mathfrak{p}$$에 속하는 homogeneous element이며 $$b_i\not\in \mathfrak{p}$$이므로 [\[가환대수학\] §등급환의 국소화, ⁋보조정리 2](/ko/math/commutative_algebra/localization_of_graded_rings#lem2)에 의해 $$a\in \mathfrak{p}$$이다. 따라서 $$\mathfrak{a}\subseteq \mathfrak{p}$$가 성립한다. 
 2. 이는 $$\sum \mathfrak{a}_i$$가 ideal들 $$\mathfrak{a}_i$$ 각각을 모두 포함하는 ideal 중 가장 작은 것으로 정의되므로 자명하다.
 3. [\[가환대수학\] §국소화의 성질들, ⁋따름정리 8](/ko/math/commutative_algebra/properties_of_localization#cor8).
-4. 정의에 의해 $$Z_+(\mathfrak{a})\subseteq Z_+(\mathfrak{a}\cap A_+)$$는 자명하므로 반대방향만 보이면 충분하다. 즉, $$\mathfrak{p}$$가 $$\mathfrak{a}$$의 양의 차수를 갖는 homogeneous element들을 모두 가지며, $$A_+$$를 통째로 포함하지는 않는 prime ideal이라 하고 $$\mathfrak{a}\subseteq \mathfrak{p}$$임을 보이자. 이를 위해서는 임의의 $$a\in \mathfrak{a}\cap A_0$$을 택했을 때, 위의 가정으로부터 $$a$$ 또한 $$\mathfrak{p}$$에 석함을 보이면 충분하다.  
+4. 정의에 의해 $$Z_+(\mathfrak{a})\subseteq Z_+(\mathfrak{a}\cap A_+)$$는 자명하므로 반대방향만 보이면 충분하다. 즉, $$\mathfrak{p}$$가 $$\mathfrak{a}$$의 양의 차수를 갖는 homogeneous element들을 모두 가지며, $$A_+$$를 통째로 포함하지는 않는 prime ideal이라 하고 $$\mathfrak{a}\subseteq \mathfrak{p}$$임을 보이자. 이를 위해서는 임의의 $$a\in \mathfrak{a}\cap A_0$$을 택했을 때, 위의 가정으로부터 $$a$$ 또한 $$\mathfrak{p}$$에 속함을 보이면 충분하다.  
     이제 $$A_+\not\subset\mathfrak{p}$$이므로, $$\mathfrak{p}$$에 속하지 않는 homogeneous element $$f$$가 존재한다. 이제 $$af\in \mathfrak{a}\cap A_+\subseteq \mathfrak{p}$$이고, $$f\not\in \mathfrak{p}$$이므로 $$a\in \mathfrak{p}$$이다. 
 :::
 
@@ -235,6 +236,57 @@ $$\Spec A_{(fg)}\cong D(g^{\deg f}/f^{\deg g})\subseteq \Spec A_{(f)}$$
 
 이 존재한다. 
 :::
+::: 증명
+$$\Proj A_\bullet$$의 임의의 점 $$\mathfrak{p}$$는 $$A_+\not\subseteq \mathfrak{p}$$를 만족하므로 $$\mathfrak{p}$$에 속하지 않는 $$A_+$$의 homogeneous element를 갖는다. 즉 $$\Proj A_\bullet$$을 덮는 것은 양의 차수를 갖는 $$f$$들이 주는 $$D_+(f)$$들이므로, 이하에서 $$f$$와 $$g$$는 모두 양의 차수를 갖는 것으로 두고 $$d=\deg f\geq 1$$과 $$e=\deg g\geq 1$$로 적는다. 그럼 $$\deg (g^d)=de=\deg (f^e)$$이므로
+
+$$\theta=\frac{g^{\deg f}}{f^{\deg g}}=\frac{g^d}{f^e}$$
+
+는 $$A_f$$의 degree $$0$$ 원소, 즉 $$\theta\in A_{(f)}$$이다. ([\[가환대수학\] §등급환의 국소화, ⁋명제 3](/ko/math/commutative_algebra/localization_of_graded_rings#prop3)) 한편 $$D(\theta)$$는 $$\Spec (A_{(f)})_\theta$$와 isomorphic한 $$\Spec A_{(f)}$$의 open subscheme이므로 ([§스킴, ⁋보조정리 2](/ko/math/scheme_theory/schemes#lem2)), 우리는 ring isomorphism $$(A_{(f)})_\theta\cong A_{(fg)}$$를 만들면 충분하다.
+
+우선 localization $$A_f \rightarrow A_{fg}$$는 grading을 보존하므로, 이를 degree $$0$$ 부분으로 제한하여 canonical ring homomorphism
+
+$$\rho: A_{(f)} \rightarrow A_{(fg)};\qquad \frac{a}{f^n}\mapsto \frac{ag^n}{(fg)^n}$$
+
+을 얻는다. 이 때 $$f^e/g^d$$는 $$A_{fg}$$의 degree $$0$$ 원소이고
+
+$$\frac{g^d}{f^e}\cdot\frac{f^e}{g^d}=1$$
+
+이므로, $$\rho(\theta)$$는 $$A_{(fg)}$$의 unit이다. 따라서 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)에 의하여 $$\rho$$를 확장하는 유일한 ring homomorphism
+
+$$\Phi:(A_{(f)})_\theta \rightarrow A_{(fg)};\qquad \frac{x}{\theta^n}\mapsto \rho(x)\left(\frac{f^e}{g^d}\right)^n$$
+
+이 존재한다.
+
+$$\Phi$$가 surjective인 것을 보이자. $$A_{(fg)}$$의 임의의 원소는 homogeneous element $$a$$와 $$n\geq 0$$에 대하여 $$a/(fg)^n$$의 꼴로 쓸 수 있으며, 이 원소의 degree가 $$0$$이므로 $$\deg a=n(d+e)$$이다. 이제
+
+$$x=\frac{ag^{n(d-1)}}{f^{n(e+1)}}$$
+
+으로 두면, 분자의 degree는
+
+$$n(d+e)+en(d-1)=n(d+ed)=nd(e+1)$$
+
+이고 분모의 degree는 $$dn(e+1)$$로 이와 같으므로 $$x\in A_{(f)}$$이다. (여기에서 $$d\geq 1$$이 사용된다.) 그럼 $$A_{fg}$$에서
+
+$$\Phi\left(\frac{x}{\theta^n}\right)=\frac{ag^{n(d-1)}}{f^{n(e+1)}}\cdot\frac{f^{ne}}{g^{nd}}=\frac{a}{f^ng^n}=\frac{a}{(fg)^n}$$
+
+이므로 $$\Phi$$는 surjective이다.
+
+이제 $$\Phi$$가 injective인 것을 보이자. $$(A_{(f)})_\theta$$의 원소 $$x/\theta^n$$이 $$\Phi$$에 의해 $$0$$으로 옮겨졌다 하자. $$\Phi(\theta)$$가 unit이므로 이는 $$\rho(x)=0$$인 것과 같다. $$x=b/f^m$$이라 쓰면 여기에서 $$b$$는 $$\deg b=md$$인 homogeneous element이고, $$\rho(x)=0$$은 $$A_{fg}$$에서 $$b/f^m=0$$인 것이므로 적당한 $$k\geq 0$$이 존재하여 $$(fg)^kb=0$$이다. 그럼 $$d\geq 1$$이므로
+
+$$f^k\cdot bg^{dk}=(f^kg^kb)g^{(d-1)k}=0$$
+
+이고 따라서 $$A_f$$에서 $$bg^{dk}=0$$이다. 이로부터 $$A_{(f)}$$에서
+
+$$\theta^kx=\frac{g^{dk}}{f^{ek}}\cdot\frac{b}{f^m}=\frac{bg^{dk}}{f^{ek+m}}=0$$
+
+이 되어 $$(A_{(f)})_\theta$$에서 $$x/\theta^n=0$$이다. 즉 $$\Phi$$는 injective이며, 이상에서 $$\Phi$$는 isomorphism이다.
+
+마지막으로 이 isomorphism이 [보조정리 8](#lem8)의 homeomorphism과 정합적임을 확인해두자. $$\mathfrak{p}\in D_+(f)$$의 image를 $$\mathfrak{q}=\mathfrak{p}A_f\cap A_{(f)}$$라 하면, $$f\not\in \mathfrak{p}$$이므로
+
+$$\theta=\frac{g^d}{f^e}\in \mathfrak{q}\iff g^d\in \mathfrak{p}\iff g\in \mathfrak{p}$$
+
+이다. 따라서 [보조정리 8](#lem8)의 homeomorphism은 [따름정리 6](#cor6)의 $$D_+(fg)=D_+(f)\cap D_+(g)$$를 정확히 $$D(\theta)$$ 위로 옮긴다.
+:::
 
 따라서, $$\Spec A_{(g)}$$의 principal open set $$D(f^{\deg g}/g^{\deg f})\subseteq \Spec A_{(f)}$$와 $$\Spec A_{(f)}$$의 principal open set $$\Spec A_{(fg)}\cong D(g^{\deg f}/f^{\deg g})$$ 사이의 isomorphism이 존재한다. 이제 다음 정리는 단순한 계산이다. 
 
@@ -245,6 +297,75 @@ $$D(f^{\deg g}/g^{\deg f})\cong \Spec A_{(fg)}\cong D(g^{\deg f}/f^{\deg g})$$
 
 들은 [§스킴, ⁋보조정리 9](/ko/math/scheme_theory/schemes#lem9)의 조건들을 모두 만족하고, 따라서 $$\Proj A_\bullet$$ 위에 유일한 scheme structure를 준다. 
 :::
+::: 증명
+Index set으로는 $$A_+$$의 nonzero homogeneous element들 전체를 택한다. 두 원소 $$f,g$$에 대하여 [보조정리 9](#lem9)의 증명에서와 같이
+
+$$\theta_{f,g}=\frac{g^{\deg f}}{f^{\deg g}}\in A_{(f)}$$
+
+로 적기로 하면, 그 증명이 준 것은 canonical ring homomorphism $$\rho_{f,fg}:A_{(f)} \rightarrow A_{(fg)}$$가 $$\theta_{f,g}$$를 unit으로 보내고, 이로부터 유도되는
+
+$$\Phi_{f,g}:(A_{(f)})_{\theta_{f,g}} \rightarrow A_{(fg)}$$
+
+가 $$\rho_{f,fg}$$를 확장하는 isomorphism이라는 것이다. 이제 $$X_f=\Spec A_{(f)}$$와 그 open subscheme $$X_{fg}=D(\theta_{f,g})$$를 생각하고, $$A_{(fg)}=A_{(gf)}$$인 것에 주의하여 isomorphism $$\varphi_{fg}:X_{fg} \rightarrow X_{gf}$$를 ring isomorphism
+
+$$\Phi_{f,g}^{-1}\circ \Phi_{g,f}:(A_{(g)})_{\theta_{g,f}} \rightarrow (A_{(f)})_{\theta_{f,g}}$$
+
+의 spectrum으로 정의한다. 우선 $$f=g$$인 경우 $$\theta_{f,f}=1$$이므로 $$X_{ff}=X_f$$이고, $$A_{f\cdot f}=A_f$$이므로 $$\rho_{f,ff}$$가 identity이며 따라서 $$\varphi_{ff}=\id$$이다.
+
+이제 cocycle condition을 확인하자. Nonzero homogeneous element $$f,g,h\in A_+$$를 택하고 $$d=\deg f$$, $$e=\deg g$$, $$m=\deg h$$라 하자. 그럼 $$A_{(f)}$$에서
+
+$$\theta_{f,g}\theta_{f,h}=\frac{g^d}{f^e}\cdot\frac{h^d}{f^m}=\frac{(gh)^d}{f^{e+m}}=\theta_{f,gh}$$
+
+이므로, $$X_f$$ 안에서의 삼중 교집합은
+
+$$X_{fg}\cap X_{fh}=D(\theta_{f,g})\cap D(\theta_{f,h})=D(\theta_{f,gh})$$
+
+이며, [보조정리 9](#lem9)를 $$f$$와 $$gh$$에 적용하면 isomorphism
+
+$$\Psi_f=\Phi_{f,gh}:(A_{(f)})_{\theta_{f,gh}} \rightarrow A_{(fgh)}$$
+
+를 얻는다. 마찬가지로 $$\Psi_g=\Phi_{g,fh}$$와 $$\Psi_h=\Phi_{h,fg}$$를 정의하면, 이들은 각각 canonical homomorphism $$\rho_{f,fgh}$$, $$\rho_{g,fgh}$$, $$\rho_{h,fgh}$$를 확장한다. 한편 이들 canonical homomorphism은 모두 $$A_f \rightarrow A_{fg} \rightarrow A_{fgh}$$와 같은 localization들의 degree $$0$$ 부분이므로
+
+$$\rho_{fg,fgh}\circ\rho_{f,fg}=\rho_{f,fgh}$$
+
+와 같은 transitivity를 만족한다.
+
+우선 $$\varphi_{fg}$$가 삼중 교집합을 삼중 교집합으로 옮기는 것을 확인하자. $$\Phi_{f,g}$$와 $$\Phi_{g,f}$$는 각각 $$\theta_{f,h}$$와 $$\theta_{g,h}$$를 $$A_{(fg)}$$의 원소
+
+$$u=\frac{h^d}{f^m},\qquad v=\frac{h^e}{g^m}$$
+
+으로 보내는데, $$A_{(fg)}$$에서
+
+$$\frac{u^e}{v^d}=\frac{h^{de}}{f^{me}}\cdot\frac{g^{md}}{h^{de}}=\left(\frac{g^d}{f^e}\right)^m$$
+
+이고 우변은 $$\rho_{f,fg}(\theta_{f,g})^m$$, 즉 unit이다. 따라서 $$u^e$$와 $$v^d$$는 unit 배만큼만 차이나고, $$\Spec A_{(fg)}$$에서 $$D(u)=D(v)$$이며 $$A_{(fg)}$$를 $$u$$에서 국소화한 것과 $$v$$에서 국소화한 것은 같은 ring이다. 즉 $$\varphi_{fg}$$는 $$X_{fg}\cap X_{fh}$$를 $$X_{gf}\cap X_{gh}$$ 위로 옮기며, 이 제한은 ring homomorphism
+
+$$\alpha:(A_{(g)})_{\theta_{g,fh}} \rightarrow (A_{(f)})_{\theta_{f,gh}}$$
+
+의 spectrum이다. 여기에서 $$\alpha$$는 $$\Phi_{f,g}^{-1}\circ\Phi_{g,f}$$를 국소화하여 얻어진다. 그럼 합성
+
+$$\tau: A_{(fg)}\overset{\Phi_{f,g}^{-1}}{\longrightarrow}(A_{(f)})_{\theta_{f,g}} \longrightarrow (A_{(f)})_{\theta_{f,gh}}\overset{\Psi_f}{\longrightarrow} A_{(fgh)}$$
+
+을 생각하면, $$\Phi_{f,g}$$와 $$\Psi_f$$가 각각 $$\rho_{f,fg}$$와 $$\rho_{f,fgh}$$를 확장하므로 $$\tau\circ\rho_{f,fg}=\rho_{f,fgh}$$이다. 그런데 $$A_{(fg)}$$는 $$\Phi_{f,g}$$를 통해 $$A_{(f)}$$의 $$\theta_{f,g}$$에서의 국소화이며 $$\rho_{fg,fgh}$$ 또한 같은 식을 만족하므로, [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)의 유일성에 의하여 $$\tau=\rho_{fg,fgh}$$이다. 이로부터
+
+$$\Psi_f\circ\alpha\vert_{A_{(g)}}=\tau\circ \rho_{g,fg}=\rho_{fg,fgh}\circ\rho_{g,fg}=\rho_{g,fgh}=\Psi_g\vert_{A_{(g)}}$$
+
+를 얻고, 다시 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)의 유일성을 $$A_{(g)}$$의 국소화 $$(A_{(g)})_{\theta_{g,fh}}$$에 적용하면 $$\Psi_f\circ\alpha=\Psi_g$$, 곧 $$\alpha=\Psi_f^{-1}\circ\Psi_g$$이다. 즉
+
+$$\varphi_{fg}\vert_{X_{fg}\cap X_{fh}}=\Spec(\Psi_f^{-1}\circ \Psi_g)$$
+
+이며, 같은 논증을 $$(g,h)$$와 $$(f,h)$$에 적용하면 삼중 교집합 위에서
+
+$$\varphi_{gh}=\Spec(\Psi_g^{-1}\circ\Psi_h),\qquad \varphi_{fh}=\Spec(\Psi_f^{-1}\circ\Psi_h)$$
+
+이다. $$\Spec$$이 contravariant이므로
+
+$$\varphi_{gh}\circ\varphi_{fg}=\Spec\left((\Psi_f^{-1}\circ\Psi_g)\circ(\Psi_g^{-1}\circ \Psi_h)\right)=\Spec(\Psi_f^{-1}\circ\Psi_h)=\varphi_{fh}$$
+
+가 되어 cocycle condition이 성립한다. 따라서 [§스킴, ⁋보조정리 9](/ko/math/scheme_theory/schemes#lem9)에 의하여 유일한 scheme $$X$$가 존재하여 $$X_f$$들을 open subscheme으로 가지며 $$X_f\cap X_g=X_{fg}$$이다.
+
+마지막으로 $$X$$의 바탕 위상공간이 $$\Proj A_\bullet$$인 것을 확인하자. [보조정리 8](#lem8)은 homeomorphism $$\psi_f: D_+(f) \rightarrow \Spec A_{(f)}=X_f$$들을 주며, [보조정리 9](#lem9)의 증명에서 확인했듯 $$\psi_f$$는 $$D_+(fg)$$를 $$X_{fg}=D(\theta_{f,g})$$ 위로 옮긴다. 뿐만 아니라 임의의 $$\mathfrak{p}\in D_+(fg)$$에 대하여 $$\rho_{f,fg}$$에 의한 $$\mathfrak{p}A_{fg}\cap A_{(fg)}$$의 preimage는 $$\mathfrak{p}A_f\cap A_{(f)}$$이므로 ([\[가환대수학\] §국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8)), $$\psi_f$$와 $$\psi_g$$는 $$\varphi_{fg}$$와 정합적이다. 즉 $$\psi_g=\varphi_{fg}\circ\psi_f$$가 $$D_+(fg)$$ 위에서 성립한다. 한편 위에서 관찰했듯 $$D_+(f)$$들은 $$\Proj A_\bullet$$을 덮으므로, $$\psi_f$$들을 붙여 $$X$$의 바탕 위상공간과 $$\Proj A_\bullet$$ 사이의 homeomorphism을 얻는다. 이를 통해 $$\Proj A_\bullet$$은 scheme 구조를 가지며, [§스킴, ⁋보조정리 9](/ko/math/scheme_theory/schemes#lem9)의 유일성에 의해 이러한 scheme 구조는 유일하다.
+:::
 
 특히 $$\Proj A_\bullet$$은 locally ringed space이므로, 임의의 $$\mathfrak{p}\in \Proj A_\bullet$$에 대하여 stalk $$\mathcal{O}_{\Proj A_\bullet,\mathfrak{p}}$$은 local ring이다. 그런데 어차피 $$\mathfrak{p}$$는 적당한 affine open neighborhood에 넣을 수 있으므로, 본질적으로 [§아핀스킴, ⁋보조정리 8](/ko/math/scheme_theory/affine_schemes#lem8)과 동일한 과정으로 다음을 보일 수 있다. 
 
@@ -254,6 +375,47 @@ Graded ring $$A_\bullet$$과 임의의 $$\mathfrak{p}\in \Proj A_\bullet$$에 �
 $$\mathcal{O}_{\Proj A_\bullet,\mathfrak{p}}\cong A_{(\mathfrak{p})}$$
 
 이 존재한다. 
+:::
+::: 증명
+$$\mathfrak{p}\in \Proj A_\bullet$$이므로 $$A_+\not\subseteq \mathfrak{p}$$이고, 따라서 $$\mathfrak{p}$$에 속하지 않는 $$A_+$$의 homogeneous element $$f$$가 존재한다. $$d=\deg f\geq 1$$이라 두자. 그럼 $$\mathfrak{p}\in D_+(f)$$이고, [정리 10](#thm10)에 의하여 $$D_+(f)$$는 $$\Spec A_{(f)}$$와 isomorphic한 $$\Proj A_\bullet$$의 open subscheme이다. 열린 부분스킴의 stalk은 원래 scheme의 stalk과 같으므로, [보조정리 8](#lem8)이 $$\mathfrak{p}$$를 옮기는 점 $$\mathfrak{q}=\mathfrak{p}A_f\cap A_{(f)}$$에 대하여 [§아핀스킴, ⁋보조정리 8](/ko/math/scheme_theory/affine_schemes#lem8)로부터
+
+$$\mathcal{O}_{\Proj A_\bullet,\mathfrak{p}}\cong \mathcal{O}_{\Spec A_{(f)},\mathfrak{q}}\cong (A_{(f)})_\mathfrak{q}$$
+
+를 얻는다. 따라서 isomorphism $$(A_{(f)})_\mathfrak{q}\cong A_{(\mathfrak{p})}$$를 만들면 충분하다.
+
+$$S$$를 $$\mathfrak{p}$$에 속하지 않는 homogeneous element들이 이루는 multiplicative set이라 하면 $$A_{(\mathfrak{p})}=(S^{-1}A)_0$$이다. ([\[가환대수학\] §등급환의 국소화, ⁋정의 5](/ko/math/commutative_algebra/localization_of_graded_rings#def5)) 이제 $$f\in S$$이므로 localization $$A_f \rightarrow S^{-1}A$$가 존재하며, 이는 grading을 보존하므로 degree $$0$$ 부분으로 제한하여 canonical ring homomorphism
+
+$$\sigma: A_{(f)} \rightarrow A_{(\mathfrak{p})};\qquad \frac{a}{f^n}\mapsto \frac{a}{f^n}$$
+
+을 얻는다. 이 때 $$\sigma$$는 $$A_{(f)}\setminus \mathfrak{q}$$의 원소를 unit으로 보낸다. 실제로 $$x=a/f^n\in A_{(f)}$$라 하면 $$a$$는 $$\deg a=nd$$인 homogeneous element이고, $$f\not\in \mathfrak{p}$$이므로 [\[가환대수학\] §국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8)에 의하여
+
+$$x\in \mathfrak{q}\iff a\in \mathfrak{p}$$
+
+이다. 따라서 $$x\not\in \mathfrak{q}$$라면 $$a\in S$$이고, $$f^n/a$$는 degree $$0$$을 갖는 $$S^{-1}A$$의 원소로 $$\sigma(x)$$의 inverse가 된다. 이제 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)에 의하여 $$\sigma$$를 확장하는 유일한 ring homomorphism
+
+$$\Theta:(A_{(f)})_\mathfrak{q} \rightarrow A_{(\mathfrak{p})}$$
+
+가 존재한다.
+
+$$\Theta$$가 surjective인 것을 보이자. $$A_{(\mathfrak{p})}$$의 임의의 원소는 homogeneous element $$a$$와 $$s\in S$$에 대하여 $$a/s$$의 꼴이며, 이 원소의 degree가 $$0$$이므로 $$l=\deg s=\deg a$$이다. 이제
+
+$$u=\frac{as^{d-1}}{f^l},\qquad v=\frac{s^d}{f^l}$$
+
+로 두면 $$\deg (as^{d-1})=l+l(d-1)=ld=\deg (f^l)$$이고 $$\deg (s^d)=ld$$이므로 $$u,v\in A_{(f)}$$이다. 또 $$s\not\in \mathfrak{p}$$이고 $$\mathfrak{p}$$가 prime ideal이므로 $$s^d\not\in \mathfrak{p}$$이고, 따라서 $$v\not\in \mathfrak{q}$$이다. 그럼 $$S^{-1}A$$에서
+
+$$\Theta\left(\frac{u}{v}\right)=\frac{as^{d-1}}{f^l}\cdot\frac{f^l}{s^d}=\frac{a}{s}$$
+
+이므로 $$\Theta$$는 surjective이다.
+
+이제 $$\Theta$$가 injective인 것을 보이자. $$(A_{(f)})_\mathfrak{q}$$의 원소 $$x/v$$가 $$\Theta$$에 의해 $$0$$으로 옮겨졌다 하면, $$\Theta(v)$$가 unit이므로 $$\sigma(x)=0$$이다. $$x=a/f^n$$이라 쓰면 이는 $$S^{-1}A$$에서 $$a/f^n=0$$인 것이므로, 적당한 homogeneous element $$t\in S$$가 존재하여 $$ta=0$$이다. 이제 $$\deg (t^d)=d\deg t=\deg (f^{\deg t})$$이므로
+
+$$w=\frac{t^d}{f^{\deg t}}$$
+
+는 $$A_{(f)}$$의 원소이며, $$t\not\in \mathfrak{p}$$이므로 $$w\not\in \mathfrak{q}$$이다. 한편 $$d\geq 1$$이므로 $$t^da=0$$이고 따라서 $$A_{(f)}$$에서
+
+$$wx=\frac{t^da}{f^{\deg t+n}}=0$$
+
+이다. 즉 $$(A_{(f)})_\mathfrak{q}$$에서 $$x=0$$이므로 $$x/v=0$$이고, $$\Theta$$는 injective이다. 이상에서 $$\Theta$$는 isomorphism이다.
 :::
 
 다소 주의할 것은 $$\Proj$$는 $$\Spec$$과 다르게, $$\bgr_{\mathbb{N}_{\geq 0}}\cRing^\op$$에서 $$\LRS$$로의 functor를 정의하지 않는다는 것이다. 이는 graded ring homomorphism $$\phi_\bullet:A_\bullet \rightarrow B_\bullet$$과 $$B$$의 임의의 homogeneous ideal $$\mathfrak{q}$$가 $$B_+$$를 포함하지 않더라도 그 inverse image $$\phi^{-1}(\mathfrak{q})$$는 $$A_+$$를 포함할 수도 있기 때문이다. 

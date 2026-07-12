@@ -10,7 +10,7 @@ sidebar:
 
 date: 2025-02-05
 weight: 6
-
+drift_needed: true
 ---
 
 스킴은 기하적인 동시에 대수적인 대상이므로, 이를 잘 알기 위해서는 앞선 글에서 살펴본 스킴의 위상구조 뿐만 아니라 대수적인 구조도 동시에 고려할 필요가 있으며, 우리는 이전 글에서 이러한 철학이 어떻게 반영되는지를 간략하게 살펴보았다. 이번 글에서는 이 철학을 더욱 발전시킨다. 
@@ -94,7 +94,7 @@ $$D_V(f)=\{x\in V\mid f_x\not\in \mathfrak{m}_x\}$$
 로 정의하면 $$D_V(f)=D_U(f)\cap V=D(f\vert_{U\cap D_U(f)})\subseteq V$$이고, 이것이 공집합이기 위해서는 $$f\vert_{U\cap D_U(f)}$$가 $$\mathcal{O}_X(V)$$의 nilpotent element이다. 그런데 $$\mathcal{O}_X(V)$$는 위의 주장에 의하여 integral domain이므로, 이로부터 $$f\vert_{U\cap D_U(f)}=0$$이어야 함을 알고, 이것이 $$U$$의 임의의 open affine subset $$V$$에 대해 성립하므로 $$f=0$$이어야 한다. 
 :::
 
-한편 [§스킴의 위상구조, ⁋예시 6](/ko/math/scheme_theory/topology_of_schemes#ex6)을 보면, 임의의 scheme $$X$$의 irreduciblity를 stalk만 보아서는 판단할 수 없다는 것을 안다. 가령 $$Z(\x(\x-1))$$는 두 개의 component로 쪼개지므로 각 component의 점은 다른 component의 점에 대한 정보를 알지 못한다. 따라서 integrality 또한 stalk만 보아서는 판단하지 못한다. 
+한편 [§스킴의 위상구조, ⁋예시 6](/ko/math/scheme_theory/topology_of_schemes#ex6)을 보면, 임의의 scheme $$X$$의 irreducibility를 stalk만 보아서는 판단할 수 없다는 것을 안다. 가령 $$Z(\x(\x-1))$$는 두 개의 component로 쪼개지므로 각 component의 점은 다른 component의 점에 대한 정보를 알지 못한다. 따라서 integrality 또한 stalk만 보아서는 판단하지 못한다. 
 
 그러나 만일 $$X$$가 *connected* scheme이었다면, irreducible component들은 반드시 어떠한 점에서는 만나야 하고, 이 점에서의 stalk을 보면 irreducibility를 판단할 수도 있을 것이다. 다음 명제는 이 아이디어를 엄밀하게 적은 것이다. 
 
@@ -125,7 +125,7 @@ $$X_1\cap \bigcup_{j=2}^s X_j$$
 
 $$x\in \Spec A_i\cap X_1\cap X_j=(\Spec A_i\cap X_1)\cap (\Spec A_i\cap X_j)$$
 
-이다. 이제 앞선 논증으로부터 $$\Spec A_i\cap X_1$$은 generic point $$\mathfrak{q}_1$$을, $$\Spec A_i\cap X_j$$는 generic point $$\mathfrak{q}_j$$를 가지며, 이들은 $$A_i$$의 minimal prime ideal이다. 이제 $$x$$에서의 stalk $$\mathcal{O}_{X,x}\cong (A_i)_\mathfrak{p}$$를 생각하면, $$\mathfrak{q}_1,\mathfrak{q}_2$$의 minimality로부터 $$\mathfrak{q}_1,\mathfrak{q}_2\subseteq \mathfrak{p}$$이고 따라서 $$\mathfrak{q}_1 A_i, \mathfrak{q}_2 A_i$$는 각각 $$A_i$$의 minimal prime ideal이 된다. ([\[가환대수학\] §국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8)) 그런데 integral domain은 유일한 minimal prime ideal $$(0)$$을 가지므로 이는 $$\mathcal{O}_{X,x}$$가 integral domain이라는 가정에 모순이다.
+이다. 이제 앞선 논증으로부터 $$\Spec A_i\cap X_1$$은 generic point $$\mathfrak{q}_1$$을, $$\Spec A_i\cap X_j$$는 generic point $$\mathfrak{q}_j$$를 가지며, 이들은 $$A_i$$의 minimal prime ideal이다. 이제 $$x$$에서의 stalk $$\mathcal{O}_{X,x}\cong (A_i)_\mathfrak{p}$$를 생각하자. $$x$$가 $$X_1$$과 $$X_j$$ 모두에 속하므로 $$\mathfrak{q}_1,\mathfrak{q}_j\subseteq \mathfrak{p}$$이고, 따라서 [\[가환대수학\] §국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8)에 의하여 $$\mathfrak{q}_1(A_i)_\mathfrak{p}$$와 $$\mathfrak{q}_j(A_i)_\mathfrak{p}$$는 $$(A_i)_\mathfrak{p}\cong\mathcal{O}_{X,x}$$의 서로 다른 minimal prime ideal이 된다. 그런데 integral domain은 유일한 minimal prime ideal $$(0)$$을 가지므로 이는 $$\mathcal{O}_{X,x}$$가 integral domain이라는 가정에 모순이다.
 :::
 
 위의 증명에서 핵심적인 논리는 

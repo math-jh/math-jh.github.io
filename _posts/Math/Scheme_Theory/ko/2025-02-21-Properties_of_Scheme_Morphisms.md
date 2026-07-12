@@ -10,7 +10,7 @@ sidebar:
 
 date: 2025-02-21
 weight: 8
-
+drift_needed: true
 ---
 
 앞선 글에서 우리는 scheme morphism을 살펴보는 몇 가지 관점을 살펴보았다. 이번 글에서 우리는 본격적으로 scheme morphism이 갖는 성질들을 정의한다. 우선 이들이 공유하는 다음 성질을 정의한다.
@@ -98,7 +98,7 @@ $$\Hom_\Sch(\Spec A,\Spec B)\cong\Hom_\cRing (B, A)$$
 
 가 성립하는 것을 안다. ([§아핀스킴, ⁋명제 11](/ko/math/scheme_theory/affine_schemes#prop11)) 따라서, 위와 같이 affine-local on target인 스킴 사상의 성질을 살펴볼 때에는, $$Y$$의 임의의 affine open subset $$V\cong\Spec B$$에 대하여 $$U=\varphi^{-1}(V)$$도 $$X$$의 open subscheme $$U\cong \Spec A$$이고, 따라서 $$\varphi\vert_U: U \rightarrow V$$가 affine scheme들 사이의 morphism이 되어 이 성질을 ring homomorphism 
 
-$$(\varphi\vert_U)^\sharp(V): \mathcal{O}_V(V) \rightarrow \varphi^\ast \mathcal{O}_U(V)=\mathcal{O}_U(U)$$
+$$(\varphi\vert_U)^\sharp(V): \mathcal{O}_V(V) \rightarrow \mathcal{O}_U(U)$$
 
 으로부터 얻어낼 수 있으면 좋을 것이다. 그러나 물론 임의의 scheme morphism $$\varphi: X \rightarrow Y$$에 대하여, $$Y$$의 affine open subset의 preimage가 affine이 되지는 않는다. ([§스킴, ⁋예시 8](/ko/math/scheme_theory/schemes#ex8))
 
@@ -117,7 +117,7 @@ Scheme morphism $$\varphi:X \rightarrow Y$$에 대하여, 만일 $$Y$$의 affine
 ::: 정의 10
 Scheme morphism $$\varphi:X \rightarrow Y$$가 *finite<sub>유한</sub>*인 것은 $$\varphi$$가 affine이고, $$Y$$의 임의의 affine open subset $$V$$에 대하여, ring homomorphism
 
-$$(\varphi\vert_{\varphi^{-1}(V)})^\sharp(V): \mathcal{O}_V(V) \rightarrow \varphi^\ast \mathcal{O}_{\varphi^{-1}(V)}(V)$$
+$$(\varphi\vert_{\varphi^{-1}(V)})^\sharp(V): \mathcal{O}_V(V) \rightarrow \mathcal{O}_{\varphi^{-1}(V)}(\varphi^{-1}(V))$$
 
 이 finite ring homomorphism인 것이다. ([\[가환대수학\] §정수적 확장, ⁋정의 3](/ko/math/commutative_algebra/integral_extension#def3))
 :::
@@ -127,7 +127,7 @@ $$(\varphi\vert_{\varphi^{-1}(V)})^\sharp(V): \mathcal{O}_V(V) \rightarrow \varp
 ::: 정의 11
 Scheme morphism $$\varphi:X \rightarrow Y$$가 *integral<sub>정수형</sub>*인 것은 $$\varphi$$가 affine이고, $$Y$$의 임의의 affine open subset $$V$$에 대하여, ring homomorphism
 
-$$(\varphi\vert_{\varphi^{-1}(V)})^\sharp(V): \mathcal{O}_V(V) \rightarrow \varphi^\ast \mathcal{O}_{\varphi^{-1}(V)}(V)$$
+$$(\varphi\vert_{\varphi^{-1}(V)})^\sharp(V): \mathcal{O}_V(V) \rightarrow \mathcal{O}_{\varphi^{-1}(V)}(\varphi^{-1}(V))$$
 
 이 integral ring homomorphism인 것이다. ([\[가환대수학\] §정수적 확장, ⁋정의 3](/ko/math/commutative_algebra/integral_extension#def3)) 
 :::
@@ -139,7 +139,7 @@ $$(\varphi\vert_{\varphi^{-1}(V)})^\sharp(V): \mathcal{O}_V(V) \rightarrow \varp
 ::: 정의 12
 Scheme morphism $$\varphi:X \rightarrow Y$$가 *locally of finite type<sub>국소적으로 유한형</sub>*인 것은 $$Y$$의 임의의 affine open subset $$V$$와 $$\varphi^{-1}(V)$$의 임의의 affine open subset $$U$$에 대하여, 
 
-$$(\varphi\vert_{U})^\sharp(V): \mathcal{O}_V(V) \rightarrow \varphi^\ast \mathcal{O}_{\varphi^{-1}(V)}(V)$$
+$$(\varphi\vert_{U})^\sharp(V): \mathcal{O}_V(V) \rightarrow \mathcal{O}_U(U)$$
 
 이 finite type인 것이다. ([\[가환대수학\] §정수적 확장, ⁋정의 3](/ko/math/commutative_algebra/integral_extension#def3)) 
 :::

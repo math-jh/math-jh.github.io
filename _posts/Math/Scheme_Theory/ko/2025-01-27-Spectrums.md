@@ -10,6 +10,7 @@ sidebar:
 
 date: 2025-01-27
 weight: 2
+drift_needed: true
 
 ---
 
@@ -278,6 +279,17 @@ $$(D(f)\cap Y)\cap (D(g)\cap Y)=D(f)\cap D(g)\cap Y=D(fg)\cap Y$$
 ::: 따름정리 17
 Ring $$A$$의 minimal prime ideal들과 $$\Spec A$$의 irreducible component 사이의 Galois correspondence가 존재한다. 
 :::
+::: 증명
+[명제 14](#prop14)에 의하여 임의의 prime ideal $$\mathfrak{p}$$에 대해서는 $$IZ(\mathfrak{p})=\sqrt{\mathfrak{p}}=\mathfrak{p}$$이고, $$\Spec A$$의 임의의 닫힌집합 $$Y$$에 대해서는 $$ZI(Y)=\cl(Y)=Y$$이므로, $$Z$$와 $$I$$는 서로 역이 되는 대응이다. 따라서 [명제 16](#prop16)에 의하여 $$\mathfrak{p}\mapsto Z(\mathfrak{p})$$는 $$A$$의 prime ideal들과 $$\Spec A$$의 irreducible closed subset들 사이의 전단사이며, 그 역은 $$Y\mapsto I(Y)$$이다. 뿐만 아니라 두 prime ideal $$\mathfrak{p},\mathfrak{q}$$에 [보조정리 6](#lem6)의 셋째 결과를 적용하면 
+
+$$Z(\mathfrak{q})\subseteq Z(\mathfrak{p})\iff \sqrt{\mathfrak{q}}\supseteq \sqrt{\mathfrak{p}}\iff \mathfrak{q}\supseteq \mathfrak{p}$$
+
+이므로 이 전단사는 포함관계를 뒤집는다.
+
+한편 [\[위상수학\] §차원, ⁋정의 9](/ko/math/topology/dimension#def9)에 의하여 $$\Spec A$$의 irreducible component는 irreducible subset들 가운데 극대인 것이고, irreducible set의 closure는 다시 irreducible이므로 이들은 항상 닫힌집합이다. 거꾸로 irreducible closed subset들 가운데 극대인 $$Y$$가 주어졌다 하고, $$Y$$를 포함하는 임의의 irreducible subset $$S$$를 생각하자. 그럼 $$\cl(S)$$는 $$Y$$를 포함하는 irreducible closed subset이므로 $$Y$$의 극대성에 의하여 $$\cl(S)=Y$$이고, 따라서 $$S\subseteq Y$$, 즉 $$S=Y$$이다. 이상에서 $$\Spec A$$의 irreducible component들은 정확히 irreducible closed subset들 가운데 포함관계에 대해 극대인 것들이다.
+
+이제 위의 전단사가 포함관계를 뒤집으므로, 이는 prime ideal들 가운데 극소인 것들, 즉 minimal prime ideal들과, irreducible closed subset들 가운데 극대인 것들, 즉 $$\Spec A$$의 irreducible component들을 서로 대응시킨다. 
+:::
 
 특히 위에서 생각한 예시인 integral domain의 spectrum은 irreducible이다.
 
@@ -342,7 +354,7 @@ $$I(T)=\{f\in A\mid \text{$f(x_1,\ldots, x_n)=0$ for all $x\in T$}\}$$
   <tr>
     <td class="ag-bl">$$\mathfrak{m}\subset A$$</td>
     <td class="ag-bc">$$\longleftrightarrow$$</td>
-    <td class="ag-br">$$\mathfrak{m}\in \text{(m)}\Spec A$$</td>
+    <td class="ag-br">$$\mathfrak{m}\in \mSpec A$$</td>
   </tr>
   <tr>
     <td class="ag-tl">prime ideal</td>

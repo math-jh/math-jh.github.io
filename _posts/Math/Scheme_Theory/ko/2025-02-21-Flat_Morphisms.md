@@ -10,17 +10,17 @@ sidebar:
 
 date: 2025-02-21
 weight: 10
-
+drift_needed: true
 ---
 
-대수기하학에서 모양들의 family를 다룰 때, 우리는 기저 위의 점이 변함에 따라 fiber가 "연속적으로" 변하기를 기대한다. 그러나 단순히 사상의 연속성만으로는 이 직관을 포착하기에 부족하다. 예를 들어 기저의 한 점에서 fiber의 차원이 갑자기 뛰거나, 특이점의 개수가 달라지는 등의 비연속적인 변화가 일어날 수 있다. 이러한 현상을 배제하고 fiber들이 일정한 대수적·기하학적 성질을 유지하도록 하는 개념이 바로 **평탄성**(flatness)이다. 본 글에서는 먼저 가환대수학적 맥락에서 평탄 가군을 정의한 뒤, 이를 바탕으로 [§스킴](/ko/math/scheme_theory/schemes) 사이의 평탄 사상을 소개하고 그 기하학적 의미와 판정법, 예시들을 살펴본다.
+대수기하학에서 모양들의 family를 다룰 때, 우리는 기저 위의 점이 변함에 따라 fiber가 "연속적으로" 변하기를 기대한다. 그러나 단순히 사상의 연속성만으로는 이 직관을 포착하기에 부족하다. 예를 들어 기저의 한 점에서 fiber의 차원이 갑자기 뛰거나, 특이점의 개수가 달라지는 등의 비연속적인 변화가 일어날 수 있다. 이러한 현상을 배제하고 fiber들이 일정한 대수적·기하학적 성질을 유지하도록 하는 개념이 바로 평탄성이다. 본 글에서는 먼저 가환대수학적 맥락에서 평탄 가군을 정의한 뒤, 이를 바탕으로 scheme 사이의 ([§스킴](/ko/math/scheme_theory/schemes)) 평탄 사상을 소개하고 그 기하학적 의미와 판정법, 예시들을 살펴본다.
 
 ## 평탄 가군
 
 가환환 $$A$$ 위의 가군 $$M$$이 평탄하다는 것은 대수적으로 자연스러운 조건이다. $$A$$-가군 사이의 텐서곱 함자 $$-\otimes_A M$$은 일반적으로 완전열을 보존하지 않는다. 즉, 단사 가군 동형사상 $$N' \hookrightarrow N$$에 대하여 $$N' \otimes_A M \rightarrow N \otimes_A M$$이 단사가 되지 않을 수 있다. 텐서곱이 가군들 사이의 "관계"를 망가뜨리는 이러한 현상을 방지하는 것이 평탄 가군의 본질이다.
 
 ::: 정의 1
-가환환 $$A$$ 위의 가군 $$M$$이 **평탄**(flat)하다고 하면, 텐서곱 함자 $$-\otimes_A M$$이 정확한 함자(exact functor)인 것을 말한다. 즉, 임의의 $$A$$-가군의 짧은 완전열
+가환환 $$A$$ 위의 가군 $$M$$이 *flat module<sub>평탄가군</sub>*이라는 것은 텐서곱 함자 $$-\otimes_A M$$이 exact functor인 것이다. 이는 [\[다중선형대수학\] §사영가군, 단사가군, 평탄가군, ⁋정의 7](/ko/math/multilinear_algebra/various_modules#def7)을 가환환의 경우로 다시 적은 것으로, 임의의 $$A$$-가군의 짧은 완전열
 
 $$0 \longrightarrow N' \longrightarrow N \longrightarrow N'' \longrightarrow 0$$
 
@@ -42,14 +42,14 @@ $$\mathbb{Z}/2\mathbb{Z} \xrightarrow{\times 2} \mathbb{Z}/2\mathbb{Z}$$
 이제 scheme의 맥락으로 넘어가보자. Morphism $$f: X \to Y$$가 평탄하다는 것은 대역적으로 말해 $$X$$의 구조층이 $$Y$$의 구조층 위에서 평탄한 가군 구조를 가진다는 의미이다.
 
 ::: 정의 2
-Morphism $$f: X \to Y$$가 **평탄**(flat)하다고 하면, 임의의 $$x \in X$$에 대하여 국소환 $$\mathcal{O}_{X,x}$$가 $$\mathcal{O}_{Y,f(x)}$$-가군으로서 평탄한 것을 말한다. 추가로 $$f$$가 대응하는 위상공간의 사상이 surjective이면 **충실히 평탄**(faithfully flat)하다고 부른다.
+Morphism $$f: X \to Y$$가 *flat<sub>평탄</sub>*이라는 것은 임의의 $$x \in X$$에 대하여 국소환 $$\mathcal{O}_{X,x}$$가 $$\mathcal{O}_{Y,f(x)}$$-가군으로서 평탄한 것이다. 추가로 $$f$$가 대응하는 위상공간의 사상이 surjective이면 *faithfully flat<sub>충실히 평탄</sub>*이라 부른다.
 :::
 
-평탄성은 [§스킴 사이의 사상](/ko/math/scheme_theory/morphism_of_schemes)이 가지는 가장 중요한 대수적 성질 중 하나이다. 특히 평탄 사상의 fiber는 기저의 변화에 따라 예측 가능한 방식으로 변화하며, 이는 곧 기하학적 성질들이 family를 따라 일정하게 유지됨을 의미한다.
+평탄성은 scheme morphism이 ([§스킴 사이의 사상](/ko/math/scheme_theory/morphism_of_schemes)) 가지는 가장 중요한 대수적 성질 중 하나이다. 특히 평탄 사상의 fiber는 기저의 변화에 따라 예측 가능한 방식으로 변화하며, 이는 곧 기하학적 성질들이 family를 따라 일정하게 유지됨을 의미한다.
 
 ## 기하학적 성질
 
-평탄 사상의 가장 기하학적으로 직관적인 특징은 fiber의 [§차원](/ko/math/scheme_theory/dimension)이 기저 위에서 locally constant하다는 점이다. 일반적인 morphism의 경우 Chevalley의 정리에 의해 fiber 차원은 위로 반연속(upper semi-continuous)이지만, 평탄성이 주어지면 이 반연속성이 양방향이 되어 fiber 차원이 일정해진다.
+평탄 사상의 가장 기하학적으로 직관적인 특징은 fiber의 차원이 ([§차원](/ko/math/scheme_theory/dimension)) 기저 위에서 locally constant하다는 점이다. 일반적인 morphism의 경우 Chevalley의 정리에 의해 fiber 차원은 위로 반연속(upper semi-continuous)이지만, 평탄성이 주어지면 이 반연속성이 양방향이 되어 fiber 차원이 일정해진다.
 
 ::: 명제 3
 Locally Noetherian scheme 사이의 평탄 사상 $$f: X \to Y$$가 locally of finite type이면, 함수
@@ -91,7 +91,7 @@ $$f: X \to Y$$가 매끄러운 사상이라 하자. 매끄러움은 locally of f
 아이디얼 $$I$$에 대하여, $$M$$이 $$A$$-평탄임을 보이기 위해 $$\operatorname{Tor}_1^A(M, N) = 0$$이 임의의 유한생성 $$A$$-가군 $$N$$에 대해 성립함을 보인다. $$N$$에 대한 filtration을 사용하여, 귀납적으로 $$N = A/\mathfrak{p}$$인 소아이디얼 $$\mathfrak{p}$$에 대한 경우만 확인하면 충분하다. 국소 판정법의 표준적인 증명은 $$I$$-adic 완비화와 Artin-Rees 보조정리를 사용하여, $$M$$의 완비화가 평탄임을 보이고 이로부터 $$M$$ 자체의 평탄성을 유도한다. 자세한 내용은 [\[가환대수학\] §평탄성과 국소화, ⁋정의 4](/ko/math/commutative_algebra/local_criterion_for_flatness#def4)를 참고하라.
 :::
 
-호몰로지 대수학의 관점에서는 [§Ext와 Tor](/ko/math/homological_algebra/ext_and_tor)를 이용하여 평탄성을 판정할 수 있다.
+호몰로지 대수학의 관점에서는 Tor 함자를 ([\[호몰로지 대수학\] §Ext와 Tor](/ko/math/homological_algebra/ext_and_tor)) 이용하여 평탄성을 판정할 수 있다.
 
 ::: 명제 7
 ($$\operatorname{Tor}$$ 판정법). $$A$$-가군 $$M$$이 평탄인 것은 임의의 아이디얼 $$I \subseteq A$$에 대하여 $$\operatorname{Tor}_1^A(M, A/I) = 0$$이 되는 것과 동치이다.
@@ -120,17 +120,21 @@ $$-\otimes_A M$$이 정확한 함자임을 보이기 위해, 단사사상 $$N' \
 :::
 
 ::: 예시 10
-평탄하지 않은 대표적인 예로, cusp의 family를 고려하자. $$k$$를 체로 하고, $$\mathbb{A}_k^1 = \operatorname{Spec} k[t]$$ 위의 family
+평탄성이 깨지는 가장 단순한 예는 fiber의 차원이 갑자기 뛰는 family이다. $$k$$를 체로 하고, $$\mathbb{A}_k^1 = \operatorname{Spec} k[t]$$ 위의 family
 
-$$X = \operatorname{Spec} k[t, x, y]/(y^2 - x^3 - t) \longrightarrow \mathbb{A}_k^1$$
+$$X = \operatorname{Spec} k[t, x]/(tx) \longrightarrow \mathbb{A}_k^1$$
 
-를 생각한다. $$t \neq 0$$인 점에서는 fiber가 non-singular한 타원곡선(genus 1)이 되지만, $$t = 0$$에서는 fiber가 cusp $$y^2 = x^3$$가 되어 singular해진다. 이 사상은 $$t = 0$$에서 평탄하지 않다. 사실 $$k[t]_{(t)}$$ 위에서 $$k[t, x, y]/(y^2 - x^3 - t)_{(t)}$$를 생각하면, 이 가군은 $$t$$에 의해 영이 되는 원소를 가지므로 $$t$$-torsion이 존재하여 평탄성이 깨진다. 직관적으로 fiber의 위상적 형태가 갑자기 변하기 때문에 평탄성이 상실된 것이다.
+를 생각하자. $$X$$는 평면의 두 좌표축의 합집합이며, $$t = a \neq 0$$ 위의 fiber는 $$ax = 0$$이 강제하는 한 점 $$x = 0$$인 반면, $$t = 0$$ 위의 fiber는 $$x$$가 자유로운 직선 $$\mathbb{A}^1_k$$ 전체이다. 즉 fiber의 차원이 $$0$$에서 $$1$$로 뛴다. 이 사상이 평탄하지 않다는 것은 정의에서 곧바로 나오는데, $$M = k[t, x]/(tx)$$가 $$k[t]$$-평탄이라면 단사사상 $$k[t] \xrightarrow{\ \cdot t\ } k[t]$$에 $$-\otimes_{k[t]} M$$을 적용하여 얻는 $$M \xrightarrow{\ \cdot t\ } M$$ 또한 단사여야 하지만, $$x \neq 0$$이면서 $$tx = 0$$이므로 그렇지 않기 때문이다.
 
-비슷하게 node의 family
+한편 fiber가 특이해지는 것과 평탄성이 깨지는 것은 서로 다른 현상임에 주의해야 한다. cusp의 family
+
+$$\operatorname{Spec} k[t, x, y]/(y^2 - x^3 - t) \longrightarrow \mathbb{A}_k^1$$
+
+에서 $$t = 0$$ 위의 fiber는 cusp $$y^2 = x^3$$이 되어 특이해지지만, 이 사상은 평탄하다. 관계식 $$y^2 = x^3 + t$$를 이용하면 좌표환이 $$k[t]$$-가군으로서 $$\{x^iy^j : i \geq 0,\ j = 0, 1\}$$을 기저로 갖는 자유가군이기 때문이다. node의 family
 
 $$\operatorname{Spec} k[t, x, y]/(xy - t) \longrightarrow \mathbb{A}_k^1$$
 
-역시 $$t = 0$$에서 평탄하지 않다. $$t \neq 0$$일 때는 fiber가 두 개의 교차하는 직선이지만, $$t = 0$$에서는 노드(node) $$xy = 0$$가 되어 위상적으로 다른 형태를 띤다.
+도 마찬가지로, $$t = xy$$로 두면 좌표환이 $$k[x, y]$$와 동형이고 이는 $$k[t] = k[xy]$$ 위에서 $$\{x^i\}_{i \geq 0} \cup \{y^j\}_{j \geq 1}$$을 기저로 갖는 자유가군이므로 평탄하다. 이 경우 $$t \neq 0$$ 위의 fiber는 매끄러운 쌍곡선 $$xy = t$$이고, $$t = 0$$ 위의 fiber가 두 직선이 만나는 node $$xy = 0$$이다. 요컨대 평탄성이 통제하는 것은 fiber가 특이해지는지의 여부가 아니라, fiber들이 "같은 크기"로 남는지의 여부이다.
 :::
 
 ::: 예시 11
@@ -151,9 +155,13 @@ $$F: X \longrightarrow X$$
 (2) 평탄 사상들의 합성은 평탄이다. 즉, $$f: X \to Y$$와 $$g: Y \to Z$$가 모두 평탄이면 $$g \circ f: X \to Z$$도 평탄이다.
 :::
 ::: 증명
-(1) 기저변환은 국소적으로 텐서곱 $$B \otimes_A C$$의 형태를 띤다. $$B$$가 $$A$$-평탄이면, $$-\otimes_A (B \otimes_A C) \cong (-\otimes_A B) \otimes_B (B \otimes_A C)$$이므로 정확성이 보존된다. 따라서 $$B \otimes_A C$$는 $$C$$-평탄이다.
+(1) 기저변환은 국소적으로 $$A \rightarrow B$$가 평탄일 때 $$C \rightarrow B \otimes_A C$$가 평탄임을 보이는 문제로 환원된다. 임의의 $$C$$-가군 $$M$$에 대하여
 
-(2) 합성의 경우, $$(g \circ f)^{-1}$$에 대한 구조층의 전진은 $$g_\ast f_\ast \mathcal{O}_X$$이다. $$f_\ast \mathcal{O}_X$$가 $$\mathcal{O}_Y$$-평탄 가군이고, $$g_\ast$$에 의해 평탄성이 보존되므로, 합성사상 역시 평탄이다. 대수적으로, $$A \to B$$와 $$B \to C$$가 모두 평탄이면 임의의 $$A$$-가군 $$N$$에 대해 $$N \otimes_A C \cong (N \otimes_A B) \otimes_B C$$이며, 각 단계에서 정확성이 보존되어 $$-\otimes_A C$$도 정확하다.
+$$(B \otimes_A C) \otimes_C M \cong B \otimes_A (C \otimes_C M) \cong B \otimes_A M$$
+
+이므로, $$C$$-가군의 단사사상 $$M' \hookrightarrow M$$에 $$-\otimes_C (B \otimes_A C)$$를 적용한 것은 $$B \otimes_A M' \rightarrow B \otimes_A M$$과 같다. $$B$$가 $$A$$-평탄이므로 이 사상은 단사이고, 따라서 $$B \otimes_A C$$는 $$C$$-평탄이다.
+
+(2) 합성의 경우, $$A \rightarrow B$$와 $$B \rightarrow C$$가 모두 평탄이라 하자. 임의의 $$A$$-가군 $$N$$에 대하여 $$N \otimes_A C \cong (N \otimes_A B) \otimes_B C$$이므로, 함자 $$-\otimes_A C$$는 $$-\otimes_A B$$와 $$-\otimes_B C$$의 합성이다. 두 함자가 모두 정확하므로 그 합성 또한 정확하고, 따라서 $$C$$는 $$A$$-평탄이다.
 :::
 
 또한 평탄하지 않은 점들이 모여 있는 집합은 닫힌 집합을 이룬다는 사실도 중요하다.
