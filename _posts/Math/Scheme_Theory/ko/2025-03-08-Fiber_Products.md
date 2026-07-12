@@ -5,7 +5,6 @@ excerpt: "Category of S-schemes에서의 fiber product 정의와 존재성"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/fiber_products
-drift_needed: true
 sidebar: 
     nav: "scheme_theory-ko"
 
@@ -248,5 +247,66 @@ Affine인 경우만 보이면 충분하다. 즉, 임의의 finite ring homomorph
 ::: 명제 15
 만일 scheme morphism $$\varphi:X \rightarrow Z$$가 quasicompact (resp. quasiseparated, affine, finite, integral, locally of finite type, finite type, locally of finite presentation, finite presentation, quasi-finite, surjective) 라면, 임의의 scheme morphism $$Y \rightarrow Z$$를 통해 $$\varphi$$를 base change한 $$X\times_ZY \rightarrow Y$$ 또한 그러하다.
 :::
+::: 증명
+모든 성질에 공통되는 환원을 먼저 해 두자. $$Z$$의 affine open covering을 이루는 $$\Spec A$$들을 택하고, 각각의 $$\Spec A$$에 대하여 $$Y \rightarrow Z$$에 의한 그 preimage를 affine open subset $$\Spec C$$들로 덮으면, 이렇게 얻어진 $$\Spec C$$들은 $$Y$$의 affine open covering을 이룬다. 이제 projection을 $$\rho_Y: X\times_ZY \rightarrow Y$$라 하면, [보조정리 3](#lem3)과 [보조정리 4](#lem4)의 증명에서 사용한 "작은 두 사각형이 fiber diagram이면 외곽의 큰 사각형도 fiber diagram"이라는 사실로부터
 
-가령 integral morphism과 finite morphism에 대하여는 [\[가환대수학\] §정수적 확장, ⁋명제 14](/ko/math/commutative_algebra/integral_extension#prop14)에서 이를 증명하였으며, 다른 성질에 대해서도 위의 명제를 어렵지 않게 보일 수 있다. 
+$$\rho_Y^{-1}(\Spec C)\cong X\times_Z\Spec C\cong \varphi^{-1}(\Spec A)\times_{\Spec A}\Spec C$$
+
+를 얻는다. 따라서 $$X_A=\varphi^{-1}(\Spec A)$$, $$W=X_A\times_{\Spec A}\Spec C$$라 쓰면, base change $$\rho_Y$$를 $$\Spec C$$ 위에서 살펴보는 것은 $$X_A \rightarrow \Spec A$$의 $$\Spec C \rightarrow \Spec A$$를 따른 base change $$W \rightarrow \Spec C$$를 살펴보는 것과 같다. 뿐만 아니라 같은 이유로, $$X_A$$의 임의의 affine open subset $$\Spec B$$에 대하여 projection $$\rho: W \rightarrow X_A$$에 의한 그 preimage는 [보조정리 2](#lem2)에 의하여
+
+$$\rho^{-1}(\Spec B)\cong \Spec B\times_{\Spec A}\Spec C\cong \Spec (B\otimes_AC)$$
+
+이므로, $$X_A$$의 affine open covering $$\{\Spec B_i\}$$가 주어질 때마다 $$\{\Spec (B_i\otimes_AC)\}$$는 $$W$$의 affine open covering이 된다. 즉 모든 문제는 ring homomorphism $$C \rightarrow B\otimes_AC$$에 대한 문제로 환원된다. 이제 각각의 성질을 살펴본다.
+
+우선 $$\varphi$$가 affine이라 하자. 그럼 $$X_A$$는 affine scheme $$\Spec B$$이고 따라서 $$\rho_Y^{-1}(\Spec C)=W\cong\Spec (B\otimes_AC)$$는 affine이므로, $$Y$$의 affine open covering $$\{\Spec C\}$$와 [§스킴 사상의 성질들, ⁋명제 9](/ko/math/scheme_theory/properties_of_scheme_morphisms#prop9)에 의하여 $$\rho_Y$$는 affine이다.
+
+$$\varphi$$가 quasi-compact이라 하자. 그럼 $$X_A$$는 quasi-compact이므로 유한히 많은 affine open subset $$\Spec B_1,\ldots, \Spec B_n$$으로 덮이고, 따라서 $$W$$는 유한히 많은 affine open subset $$\Spec (B_i\otimes_AC)$$들로 덮여 quasi-compact이다. 이제 [§스킴 사상의 성질들, ⁋명제 7](/ko/math/scheme_theory/properties_of_scheme_morphisms#prop7)의 첫째 결과에 의하여 $$\rho_Y$$는 quasi-compact이다.
+
+$$\varphi$$가 quasi-separated라 하자. 그럼 $$X_A$$는 quasi-separated scheme이다. $$X_A$$의 affine open covering $$\{\Spec B_i\}$$를 택하면 $$\{W_i=\Spec (B_i\otimes_AC)\}$$는 $$W$$의 affine open covering이고, $$\Spec B_i\cap \Spec B_j$$가 quasi-compact이므로 이를 $$\Spec B_i$$의 유한히 많은 principal open set $$D(h_1),\ldots, D(h_s)$$의 합집합으로 쓸 수 있어 ([§스펙트럼, ⁋보조정리 11](/ko/math/scheme_theory/spectrums#lem11))
+
+$$W_i\cap W_j=\rho^{-1}(\Spec B_i\cap \Spec B_j)=\bigcup_{t=1}^s\Spec \bigl((B_i)_{h_t}\otimes_AC\bigr)$$
+
+는 유한히 많은 affine open subset의 합집합, 곧 quasi-compact이다. 이제 일반적으로 scheme $$W$$가 $$W_i\cap W_j$$들이 모두 quasi-compact인 affine open covering $$\{W_i\}$$를 갖는다면 $$W$$가 quasi-separated임을 보이자. $$W$$의 임의의 quasi-compact open subset은 유한히 많은 affine open subset의 합집합이므로, $$W$$의 임의의 두 affine open subset $$P,Q$$에 대하여 $$P\cap Q$$가 quasi-compact임을 보이면 충분하다. [§스킴의 위상구조, ⁋보조정리 11](/ko/math/scheme_theory/topology_of_schemes#lem11)과 $$P,Q$$의 quasi-compactness에 의하여 $$P$$와 $$Q$$는 각각 유한히 많은, 자기 자신과 어떤 $$W_i$$ 모두에서 principal open set인 열린집합들로 덮이므로, 결국 $$W_i$$의 principal open set $$D(f)$$와 $$W_j$$의 principal open set $$D(g)$$에 대하여 $$D(f)\cap D(g)$$가 quasi-compact임을 보이면 된다. 그런데 $$D(f)\cap D(g)\subseteq W_i\cap W_j$$이고 $$W_i\cap W_j$$는 quasi-compact이므로 이를 $$W_i$$의 유한히 많은 principal open set $$D(h_1),\ldots, D(h_s)$$의 합집합으로 쓸 수 있고, 따라서
+
+$$D(f)\cap D(g)=\bigcup_{t=1}^s\bigl(D(fh_t)\cap D(g)\bigr)$$
+
+이다. 이 때 각각의 $$D(fh_t)$$는 $$W_i\cap W_j$$에 포함되는 affine open subset이므로 이를 $$W_j$$의 affine open subset으로 보면 $$D(fh_t)\cap D(g)$$는 $$g$$의 restriction이 affine scheme $$D(fh_t)$$ 위에서 정의하는 principal open set이고 ([§스펙트럼, ⁋명제 8](/ko/math/scheme_theory/spectrums#prop8)) 따라서 affine이다. 즉 $$D(f)\cap D(g)$$는 유한히 많은 affine open subset의 합집합이므로 quasi-compact이다. 이상에서 $$W$$는 quasi-separated이고, [§스킴 사상의 성질들, ⁋명제 7](/ko/math/scheme_theory/properties_of_scheme_morphisms#prop7)의 둘째 결과에 의하여 $$\rho_Y$$는 quasi-separated이다.
+
+$$\varphi$$가 integral (resp. finite)이라 하자. 그럼 $$\varphi$$는 affine이므로 $$X_A=\Spec B$$이고 $$A \rightarrow B$$가 integral (resp. finite)이다. 따라서 $$\rho_Y^{-1}(\Spec C)=\Spec (B\otimes_AC)$$이고 [\[가환대수학\] §정수적 확장, ⁋명제 14](/ko/math/commutative_algebra/integral_extension#prop14)에 의하여 $$C \rightarrow B\otimes_AC$$ 또한 integral (resp. finite)이다. 이 두 성질이 affine-local on target이라는 것은 [§스킴 사상의 성질들, ⁋정의 11](/ko/math/scheme_theory/properties_of_scheme_morphisms#def11) 직후에 살펴보았으므로, $$Y$$의 affine open covering $$\{\Spec C\}$$ 위에서 확인한 것으로 충분하다.
+
+$$\varphi$$가 locally of finite type이라 하자. $$X_A$$의 affine open covering $$\{\Spec B_i\}$$를 택하면 각각의 $$A \rightarrow B_i$$는 finite type이고, $$B_i$$를 $$A$$-algebra로서 생성하는 원소들을 $$x_1,\ldots, x_n$$이라 하면 $$B_i\otimes_AC$$는 $$C$$-algebra로서 $$x_1\otimes 1,\ldots, x_n\otimes 1$$에 의해 생성되므로 $$C \rightarrow B_i\otimes_AC$$ 또한 finite type이다. 이제 $$W$$의 <em-ko>모든</em-ko> affine open subset에 대하여 같은 결론을 얻어야 하는데, 이를 위해 $$W$$의 affine open subset $$\Spec R$$에 대한 성질 $$Q$$를 "$$C \rightarrow R$$이 finite type이다"로 정의하고 $$Q$$가 [§스킴의 위상구조, ⁋정의 9](/ko/math/scheme_theory/topology_of_schemes#def9)의 affine-local property임을 보이자. 그럼 방금 만든 affine open covering $$\{\Spec (B_i\otimes_AC)\}$$와 [§스킴의 위상구조, ⁋보조정리 12](/ko/math/scheme_theory/topology_of_schemes#lem12)로부터 원하는 결론을 얻는다.
+
+첫째 조건은 $$C \rightarrow R$$이 finite type일 때 $$R$$의 생성원들에 $$1/h$$를 추가하면 $$R_h$$가 $$C$$-algebra로서 유한생성이 되므로 자명하다. 둘째 조건을 위해 $$R=(h_1,\ldots, h_m)$$이고 각각의 $$C \rightarrow R_{h_t}$$가 finite type이라 하자. 각각의 $$t$$에 대하여 $$R_{h_t}$$를 $$C$$-algebra로서 생성하는 유한집합을 택한 후 분모를 없애면, $$R$$의 원소들 $$x_{t1},\ldots, x_{tn_t}$$가 존재하여 $$R_{h_t}$$가 $$x_{tk}/1$$들과 $$1/h_t$$에 의해 $$C$$-algebra로서 생성되도록 할 수 있다. 또 $$1=\sum_{t=1}^ma_th_t$$인 $$a_t\in R$$을 택하자. 이제 유한집합 $$\{h_t\}\cup\{a_t\}\cup\{x_{tk}\}$$가 생성하는 $$R$$의 $$C$$-subalgebra를 $$R'$$이라 하면 $$R'$$은 finite type $$C$$-algebra이므로 $$R'=R$$임을 보이면 충분하다. 임의의 $$x\in R$$에 대하여, $$R_{h_t}$$에서 $$x/1$$은 $$x_{tk}/1$$들과 $$1/h_t$$의 $$C$$-계수 다항식이므로 적당한 $$r_t\in R'$$과 $$n_t\geq 0$$에 대하여 $$x/1=r_t/h_t^{n_t}$$이고, 따라서 적당한 $$N_t$$에 대하여 $$R$$에서 $$h_t^{N_t}(h_t^{n_t}x-r_t)=0$$, 곧 $$h_t^{N_t+n_t}x=h_t^{N_t}r_t\in R'$$이다. $$t$$가 유한개이므로 공통의 $$M$$을 택하여 모든 $$t$$에 대해 $$h_t^Mx\in R'$$이도록 할 수 있다. 한편 $$1=\sum_ta_th_t$$에서 $$a_t,h_t\in R'$$이므로 $$h_1,\ldots, h_m$$은 $$R'$$의 unit ideal을 생성하고, 이 식의 양변을 충분히 큰 거듭제곱하면 $$h_1^M,\ldots, h_m^M$$ 또한 $$R'$$의 unit ideal을 생성함을 안다. 즉 $$1=\sum_tc_th_t^M$$인 $$c_t\in R'$$이 존재하고 따라서
+
+$$x=\sum_{t=1}^mc_t(h_t^Mx)\in R'$$
+
+이다. 이상에서 $$Q$$는 affine-local property이고, locally of finite type이 affine-local on target이라는 것은 [§스킴 사상의 성질들, ⁋정의 13](/ko/math/scheme_theory/properties_of_scheme_morphisms#def13) 직후에 살펴보았으므로 $$\rho_Y$$는 locally of finite type이다. 또 morphism of finite type은 quasi-compact이면서 locally of finite type인 morphism이므로, 위의 quasi-compact인 경우와 종합하면 finite type 또한 base change에 대해 보존된다.
+
+$$\varphi$$가 locally of finite presentation이라 하자. [§스킴 사상의 성질들, ⁋정의 17](/ko/math/scheme_theory/properties_of_scheme_morphisms#def17)의 조건은 preimage의 <em-ko>어떤</em-ko> affine open covering에 대한 조건이므로 이 경우는 오히려 간단하다. 가정에 의하여 $$X_A$$의 affine open covering $$\{\Spec B_i\}$$가 존재하여 각각의 $$B_i$$가
+
+$$B_i\cong A[\x_1,\ldots, \x_n]/(f_1,\ldots, f_m)$$
+
+의 꼴이도록 할 수 있고, 그럼 [예시 9](#ex9) 이후에 살펴본 isomorphism $$C\otimes_AA[\x_1,\ldots, \x_n]\cong C[\x_1,\ldots, \x_n]$$과 [보조정리 10](#lem10)으로부터
+
+$$B_i\otimes_AC\cong C[\x_1,\ldots, \x_n]/(\bar{f}_1,\ldots, \bar{f}_m)$$
+
+이므로 ($$\bar{f}_k$$는 $$f_k$$의 계수를 $$C$$로 보낸 것) $$C \rightarrow B_i\otimes_AC$$ 또한 finitely presented이다. 즉 $$W$$의 affine open covering $$\{\Spec (B_i\otimes_AC)\}$$가 $$\Spec C$$ 위에서 요구되는 조건을 증언한다. 이 성질이 affine-local on target이라는 것은 [§스킴의 위상구조, ⁋보조정리 12](/ko/math/scheme_theory/topology_of_schemes#lem12)를 성질 "$$\varphi^{-1}(\Spec B)$$가, $$B \rightarrow R_i$$가 모두 finitely presented인 affine open covering $$\{\Spec R_i\}$$를 갖는다"에 적용하여 얻어진다. 실제로 [§스킴의 위상구조, ⁋정의 9](/ko/math/scheme_theory/topology_of_schemes#def9)의 첫째 조건은 $$\varphi^{-1}(D(f))$$가 $$\Spec (R_i)_f$$들로 덮이고 $$(R_i)_f\cong R_i\otimes_BB_f$$가 finitely presented homomorphism의 base change라는 것으로부터, 둘째 조건은 $$B \rightarrow B_f\cong B[\y]/(f\y-1)$$가 finitely presented이고 finitely presented homomorphism들의 합성이 다시 finitely presented라는 것으로부터 얻어진다. 마지막으로 morphism of finite presentation은 quasi-compact, quasi-separated이면서 locally of finite presentation인 morphism이므로, 앞의 결과들과 종합하면 이 성질 또한 base change에 대해 보존된다.
+
+이제 남은 두 성질을 위해 fiber를 계산하자. $$y\in Y$$와 그 상 $$z\in Z$$에 대하여, $$\mathcal{O}_{Z,z} \rightarrow \mathcal{O}_{Y,y}$$가 local homomorphism이므로 $$\Spec \kappa(y) \rightarrow Y \rightarrow Z$$는 $$\Spec\kappa(z) \rightarrow Z$$를 통해 인수분해되고, 따라서 위에서와 같이 fiber diagram들을 합성하면 [정의 12](#def12)에 의하여
+
+$$\rho_Y^{-1}(y)=(X\times_ZY)\times_Y\Spec \kappa(y)\cong X\times_Z\Spec \kappa(y)\cong \varphi^{-1}(z)\times_{\Spec \kappa(z)}\Spec \kappa(y)$$
+
+를 얻는다. 또 [보조정리 3](#lem3)에 의하여, $$\varphi^{-1}(z)$$의 affine open subset $$\Spec R$$에 대하여 $$\Spec (R\otimes_{\kappa(z)}\kappa(y))$$는 $$\rho_Y^{-1}(y)$$의 열린집합이며 이러한 것들이 $$\rho_Y^{-1}(y)$$를 덮는다.
+
+$$\varphi$$가 surjective라 하자. 우선 $$\varphi^{-1}(z)$$가 공집합이 아님을 확인한다. $$\varphi(x)=z$$인 $$x\in X$$를 택하고, $$x$$를 포함하며 $$\varphi$$에 의해 $$\Spec A$$ 안으로 들어가는 affine open subset $$\Spec B\subseteq X$$와 이에 대응되는 ring homomorphism $$\phi:A \rightarrow B$$를 택하자. $$x$$와 $$z$$에 대응되는 prime ideal을 각각 $$\mathfrak{q}\subset B$$, $$\mathfrak{p}\subset A$$라 하면 $$\phi^{-1}(\mathfrak{q})=\mathfrak{p}$$이고, [보조정리 10](#lem10)과 localization의 성질로부터
+
+$$B\otimes_A\kappa(\mathfrak{p})\cong (B/\mathfrak{p}B)_\mathfrak{p}$$
+
+이므로 $$\mathfrak{q}$$는 이 ring의 prime ideal을 정의한다. 즉 $$\varphi^{-1}(z)\neq\emptyset$$이다. 이제 $$\varphi^{-1}(z)$$의 공집합이 아닌 affine open subset $$\Spec R$$을 택하면 $$R$$은 $$0$$이 아닌 $$\kappa(z)$$-algebra이고, $$\kappa(y)$$가 $$0$$이 아닌 $$\kappa(z)$$-vector space이므로 $$R\otimes_{\kappa(z)}\kappa(y)\neq 0$$이다. $$0$$이 아닌 ring은 항상 prime ideal을 가지므로 $$\Spec (R\otimes_{\kappa(z)}\kappa(y))\neq\emptyset$$이고, 따라서 $$\rho_Y^{-1}(y)\neq\emptyset$$이다. $$y$$는 임의였으므로 $$\rho_Y$$는 surjective이다.
+
+마지막으로 $$\varphi$$가 quasi-finite라 하자. $$\varphi$$는 finite type이므로 위에서 본 대로 $$\rho_Y$$ 또한 finite type이고, 따라서 $$\rho_Y$$의 fiber들이 모두 유한집합임만 보이면 된다. $$\varphi$$가 quasi-compact이므로 base change에 대한 quasi-compactness의 보존을 $$\Spec \kappa(z) \rightarrow Z$$에 적용하면 $$\varphi^{-1}(z)$$가 quasi-compact임을 알고, 따라서 이를 유한히 많은 affine open subset $$\Spec R_1,\ldots, \Spec R_n$$으로 덮을 수 있다. 마찬가지로 $$\varphi$$가 locally of finite type이므로 각각의 $$R_l$$은 finite type $$\kappa(z)$$-algebra이며, 가정에 의하여 각각의 $$\Spec R_l$$은 유한집합이다.
+
+이제 유한히 많은 prime ideal만을 갖는 finite type $$\mathbb{K}$$-algebra $$R$$은 항상 유한차원 $$\mathbb{K}$$-vector space임을 보이자. 우선 $$R$$의 임의의 prime ideal $$\mathfrak{p}$$가 maximal임을 보인다. 만일 $$\mathfrak{p}$$를 진부분집합으로 포함하는 prime ideal이 존재한다면 $$d=\dim R/\mathfrak{p}\geq 1$$이고, [\[가환대수학\] §뇌터 정규화, ⁋정리 1](/ko/math/commutative_algebra/noether_normalization#thm1)에 의하여 $$R/\mathfrak{p}$$는 다항식환 $$\mathbb{K}[\x_1,\ldots, \x_d]$$를 subring으로 가지며 그 위에서 finitely generated module, 특히 integral extension이다. 그런데 $$d\geq 1$$이므로 $$\mathbb{K}[\x_1,\ldots, \x_d]$$는 $$\mathbb{K}[\x_1]$$의 서로 다른 irreducible polynomial들이 생성하는 무한히 많은 prime ideal을 갖고, [\[가환대수학\] §정수적 확장과 아이디얼, ⁋명제 1](/ko/math/commutative_algebra/lying_over_and_going_up#prop1)에 의하여 이들 각각 위에 $$R/\mathfrak{p}$$의 prime ideal이 놓이므로, $$R$$이 유한히 많은 prime ideal만을 갖는다는 가정에 모순이다. 따라서 $$R$$의 모든 prime ideal은 maximal이고, [\[가환대수학\] §기본 개념들, ⁋정리 12](/ko/math/commutative_algebra/basic_notions#thm12)에 의하여 $$R$$이 noetherian이므로 [\[가환대수학\] §조르단-횔더 정리, ⁋정리 4](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm4)에 의하여 $$R$$은 $$R$$-module로서 유한한 length를 갖는다. 이 때 composition factor들은 모두 $$R/\mathfrak{m}$$의 꼴인데, field는 Jacobson ring이므로 [\[가환대수학\] §영점정리, ⁋정리 4](/ko/math/commutative_algebra/nullstellensatz#thm4)에 의하여 $$R/\mathfrak{m}$$은 $$\mathbb{K}$$의 finite extension이다. 따라서 $$R$$은 유한차원 $$\mathbb{K}$$-vector space이다.
+
+그럼 각각의 $$R_l$$은 유한차원 $$\kappa(z)$$-vector space이므로 $$R_l\otimes_{\kappa(z)}\kappa(y)$$ 또한 유한차원 $$\kappa(y)$$-vector space이고, 따라서 artinian ring이 되어 유한히 많은 prime ideal만을 갖는다. ([\[가환대수학\] §조르단-횔더 정리, ⁋정리 4](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm4)) 이제 $$\rho_Y^{-1}(y)$$는 유한히 많은 $$\Spec (R_l\otimes_{\kappa(z)}\kappa(y))$$들로 덮이므로 유한집합이고, 이로써 $$\rho_Y$$가 quasi-finite임을 안다. 
+:::
