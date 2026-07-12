@@ -24,6 +24,7 @@ Cron suggestion:
 from __future__ import annotations
 
 import argparse
+import collections
 import difflib
 import hashlib
 import json
@@ -238,6 +239,11 @@ TRANSLATION_SOURCE_TAG = "kimi-cli"
 
 _META_KEYS = ("translated_at", "translation_source", "last_polished_at")
 
+# KO-side pipeline switches. They steer the worker and mean nothing on the EN
+# side, so they must not ride along when EN frontmatter is composed from KO's —
+# `drift_needed` leaking into an EN file is exactly what happened on 2026-07-12.
+_KO_ONLY_KEYS = ("drift_needed",)
+
 # Frontmatter fields that are LLM-translated (rest are deterministic).
 _LLM_FRONTMATTER_FIELDS = ("title", "excerpt", "description")
 
@@ -324,11 +330,13 @@ def _compose_en_frontmatter(
     - permalink: `/ko/` → `/en/` (whole-token swap)
     - sidebar.nav: trailing `-ko` → `-en`
     - existing translation_source / translated_at / last_polished_at: stripped
+    - KO-only pipeline switches (drift_needed): dropped
     - new translated_at / translation_source / (optionally last_polished_at): appended
     """
     fm = ko_fm
-    # Strip any existing translation meta to keep frontmatter idempotent.
-    for k in _META_KEYS:
+    # Strip any existing translation meta to keep frontmatter idempotent, and any
+    # KO-only switch that must not cross over to the EN side.
+    for k in _META_KEYS + _KO_ONLY_KEYS:
         fm = re.sub(rf"^{k}\s*:.*\n?", "", fm, flags=re.M)
 
     out_lines: list[str] = []
@@ -1398,6 +1406,20 @@ def translate_drift_incremental(
     ko_content = ko_path.read_text(encoding="utf-8")
     ko_fm_text, ko_body = _split_fm_block(ko_content)
 
+    # Incremental drift asks "what changed in the KO since we translated it?" — it
+    # never compares the KO against the EN. So an EN that was *born* damaged (the
+    # model silently dropped a box at translation time, with the KO untouched
+    # since) is invisible to it: every region matches its baseline, nothing is
+    # re-sent, and the damage survives the drift run. Seen for real on 2026-07-12
+    # (Divisors: "re-translated 0/17 region(s)" while the EN was missing an
+    # Example the KO has). So: if the two sides are structurally out of step,
+    # incremental cannot be the repair — fall back to a full re-translation.
+    struct = lint_structure(ko_content, en_text)
+    if struct:
+        log(f"drift: EN structurally diverges from KO ({'; '.join(struct[:3])}"
+            f"{' …' if len(struct) > 3 else ''}); full re-translation")
+        return None
+
     old_regions = dict(_split_regions(old_body))
     en_regions  = dict(_split_regions(en_body))
     cur_regions = _split_regions(ko_body)
@@ -1525,6 +1547,88 @@ def lint_latex(text: str) -> list:
     return out
 
 
+# --- Structural KO/EN comparison (deterministic; no model in the loop) -------
+# The semantic verifier hallucinates (see the telegram policy note in run_verify),
+# so it cannot be trusted alone. But whole boxes going missing and proof bodies
+# coming out empty are *countable*: parse both sides' `:::` fences and compare.
+# This finds nothing that isn't there and costs no tokens. On 2026-07-12 it caught
+# 21 posts whose EN had silently gone stale after the KO was edited (Compactness:
+# KO 49 boxes vs EN 13; a 2669-char proof in Resolutions absent from EN).
+
+_KIND_CANON = {
+    "정의": "Definition", "명제": "Proposition", "정리": "Theorem",
+    "보조정리": "Lemma", "따름정리": "Corollary", "예시": "Example",
+    "참고": "Remark", "증명": "Proof",
+    # Labels outside the plugin's derivation table, written with the explicit
+    # form (`::: misc 주장 4 {#conj4}`). They still have to canonicalize, or the
+    # counts diverge for a perfectly good translation.
+    "주장": "Conjecture", "주의": "Remark",
+}
+_EXPLICIT_CLASSES = {"definition", "proposition", "example", "remark", "misc"}
+
+
+def _canon_kind(label: str) -> str:
+    """Fence label -> a KO/EN-neutral kind name, so the two sides are comparable.
+    `::: 정리 2 (Tychonoff)` and `::: Theorem 2 (Tychonoff)` both give "Theorem".
+
+    For the explicit form (`::: misc 주장 4 {#conj4}`) the class word is skipped;
+    the token after it carries the kind. Compound kinds (`명제--정의` /
+    `Proposition--Definition`) canonicalize part by part. An unknown label is
+    returned as-is, which is harmless while both sides spell it the same way
+    (`Peano`, `The`, ...) and is a genuine finding when they do not."""
+    toks = label.split()
+    if not toks:
+        return "?"
+    head = toks[0]
+    if head in _EXPLICIT_CLASSES and len(toks) > 1:
+        head = toks[1]
+    return "--".join(_KIND_CANON.get(p, p) for p in head.split("--"))
+
+
+def _fence_blocks(text: str) -> list:
+    """[(kind, body, line_no), ...] for every `:::` box, in document order.
+    Code fences and {% raw %} blocks are skipped (_iter_source_lines)."""
+    lines = text.split("\n")
+    stack, out = [], []
+    for idx, line in _iter_source_lines(text):
+        s = line.strip()
+        if not s.startswith(":::"):
+            continue
+        m = _FENCE_LABEL_RE.match(line)
+        if m:
+            stack.append((m.group(1).strip(), idx))
+        elif s == ":::" and stack:
+            label, start = stack.pop()
+            body = "\n".join(lines[start + 1:idx]).strip()
+            out.append((_canon_kind(label), body, start + 1))
+    return out
+
+
+def lint_structure(ko_text: str, en_text: str) -> list:
+    """Deterministic KO/EN structural findings: boxes that vanished in EN, and
+    EN blocks whose body is empty while the KO counterpart's is not."""
+    ko_b, en_b = _fence_blocks(ko_text), _fence_blocks(en_text)
+    out = []
+
+    kc = collections.Counter(k for k, _, _ in ko_b)
+    ec = collections.Counter(k for k, _, _ in en_b)
+    for kind in sorted(set(kc) | set(ec)):
+        a, b = kc.get(kind, 0), ec.get(kind, 0)
+        if a != b:
+            out.append(f"box count mismatch: {kind} ko={a} en={b}")
+
+    # Positional pairing only means something while the two sides line up: once a
+    # box is missing, everything after it shifts. The count mismatch above already
+    # reports that case, so here we just pair up to the shorter side.
+    for i, (kind, body, ln) in enumerate(en_b):
+        if body or i >= len(ko_b):
+            continue
+        if ko_b[i][1]:
+            out.append(f"empty EN block: #{i + 1} {kind} (en line {ln}) "
+                       f"- KO has {len(ko_b[i][1])} chars")
+    return out
+
+
 def run_verify(state: dict, ko_path: Path, en_path: Path, key: str) -> int:
     """Read-only verification of an existing EN translation against KO.
 
@@ -1538,16 +1642,18 @@ def run_verify(state: dict, ko_path: Path, en_path: Path, key: str) -> int:
     ko_n = len(_MATH_BLOCK_RE.findall(_SUB_STRIP_RE.sub("", ko_text)))
     en_n = len(_MATH_BLOCK_RE.findall(_SUB_STRIP_RE.sub("", en_text)))
     lints = lint_latex(en_text)
+    struct = lint_structure(ko_text, en_text)
     verdict_text = ""
     if ko_n != en_n:
         verdict_text = verify_math_mismatch(ko_text, en_text, ko_n, en_n)
     verdict_safe = bool(re.search(r"^VERDICT:\s*safe\b", verdict_text, re.M | re.I))
-    clean = (not lints) and (ko_n == en_n or verdict_safe)
+    clean = (not lints) and (not struct) and (ko_n == en_n or verdict_safe)
 
     entry = state["files"].get(key, {})
     entry["verified_at"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
     entry["verify_math_counts"] = [ko_n, en_n]
     entry["verify_lints"] = lints[:20] or None
+    entry["verify_structure"] = struct[:20] or None
     if verdict_text:
         entry["verify_verdict"] = verdict_text[:4000]
     state["files"][key] = entry
@@ -1558,31 +1664,42 @@ def run_verify(state: dict, ko_path: Path, en_path: Path, key: str) -> int:
         return 0
 
     head = []
+    if struct:
+        head.append(f"{len(struct)} structure")
     if lints:
         head.append(f"{len(lints)} latex-lint")
     if verdict_text and not verdict_safe:
         head.append(verdict_text.splitlines()[0])
-    log(f"VERIFY ({key}): FLAGGED \u2014 {'; '.join(head)}")
+    log(f"VERIFY ({key}): FLAGGED — {'; '.join(head)}")
+    for ln in struct:
+        log(f"  STRUCT ({key}): {ln}")
     for ln in lints:
         log(f"  LINT ({key}): {ln}")
     for ln in verdict_text.splitlines():
         log(f"  VERIFY ({key}): {ln}")
 
-    # Telegram policy: deterministic latex-lints are reliable and always alert.
-    # The semantic "lossy" verdict is extremely false-positive-prone (2026-06-04
-    # audit: 0 real losses across 30 manually source-checked flags — the model
-    # hallucinates diffs, misaligns pairs, and mistakes typo-correction or
-    # math-mode→prose rephrasing for loss). So a semantic-lossy verdict alerts
-    # ONLY when the math-block gap is large; a small gap is virtually always
-    # benign rephrasing and is logged + recorded (above) for optional review,
-    # not pushed.
+    # Telegram policy. Two of the three signals are deterministic and always
+    # alert: the latex-lints, and the structural KO/EN comparison (a box that
+    # exists in KO and not in EN is a fact, not an opinion).
+    #
+    # The semantic "lossy" verdict is the unreliable one — false-positive-prone
+    # (2026-06-04 audit: 0 real losses across 30 manually source-checked flags;
+    # the model hallucinates diffs, misaligns pairs, and mistakes typo-correction
+    # or math-mode→prose rephrasing for loss). So it alerts ONLY when the
+    # math-block gap is large; a small gap is virtually always benign rephrasing
+    # and is logged + recorded (above) for optional review, not pushed.
+    #
+    # Note the division of labour: the real losses found on 2026-07-12 (EN gone
+    # stale after a KO edit) were all caught by `struct`, which needs no model.
     gap = abs(ko_n - en_n)
     semantic_flag = bool(verdict_text) and not verdict_safe
     big_gap = ko_n > 0 and gap / ko_n >= 0.15
-    if not (lints or (semantic_flag and big_gap)):
+    if not (lints or struct or (semantic_flag and big_gap)):
         return 0
 
     body = ""
+    if struct:
+        body += "STRUCTURE (deterministic):\n" + "\n".join(struct) + "\n"
     if semantic_flag:
         body += verdict_text + "\n"
     if lints:
@@ -1596,11 +1713,39 @@ def run_verify(state: dict, ko_path: Path, en_path: Path, key: str) -> int:
 # Main
 # ---------------------------------------------------------------------------
 
+def cmd_lint_structure() -> int:
+    """Sweep every ko/en pair through the deterministic structural lint.
+
+    Needs neither the model nor the state file, so it is safe to run any time —
+    including before a translation, to see what the verify phase would flag."""
+    n_bad = 0
+    for ko in sorted(POSTS_ROOT.glob("*/ko/*.md")):
+        en = find_en_counterpart(ko)
+        if en is None or not en.exists():
+            continue
+        findings = lint_structure(ko.read_text(encoding="utf-8"),
+                                  en.read_text(encoding="utf-8"))
+        if not findings:
+            continue
+        n_bad += 1
+        print(f"\n{ko.relative_to(BLOG_ROOT)}")
+        for f in findings:
+            print(f"   {f}")
+    print(f"\n{n_bad} post(s) with structural KO/EN divergence")
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     ap.add_argument("--status",  action="store_true", help="print stats and exit")
     ap.add_argument("--dry-run", action="store_true", help="show next target without translating")
+    ap.add_argument("--lint-structure", action="store_true",
+                    help="compare ko/en theorem-box structure for every pair and exit "
+                         "(deterministic, no model, no state)")
     args = ap.parse_args()
+
+    if args.lint_structure:
+        return cmd_lint_structure()
 
     if not Path(KIMI_BIN).exists():
         log(f"kimi CLI not found at {KIMI_BIN}")
