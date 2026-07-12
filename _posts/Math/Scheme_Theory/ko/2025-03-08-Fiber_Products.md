@@ -5,18 +5,18 @@ excerpt: "Category of S-schemes에서의 fiber product 정의와 존재성"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/fiber_products
+drift_needed: true
 sidebar: 
     nav: "scheme_theory-ko"
 
 date: 2025-03-08
 weight: 11
-
-
+drift_needed: true
 ---
 
 ## 올곱의 정의와 존재성
 
-우리는 [§스킴 사이의 사상, ⁋정의 3](/ko/math/scheme_theory/morphism_of_schemes#def3)에서 scheme morpihsm $$X \rightarrow S$$를 *$$S$$-scheme*이라 부르기로 하였다. 이번 글에서 우리는 category $$\Sch_{/S}$$에서의 product를 정의할 것이다. 
+우리는 [§스킴 사이의 사상, ⁋정의 3](/ko/math/scheme_theory/morphism_of_schemes#def3)에서 scheme morphism $$X \rightarrow S$$를 *$$S$$-scheme*이라 부르기로 하였다. 이번 글에서 우리는 category $$\Sch_{/S}$$에서의 product를 정의할 것이다. 
 
 ::: 정의 1
 두 scheme morphism $$\varphi_X:X \rightarrow S$$, $$\varphi_Y:Y \rightarrow S$$의 fiber product를 $$X\times_SY$$로 적는다. ([\[범주론\] §극한, ⁋예시 8](/ko/math/category_theory/limits#ex8))
@@ -78,7 +78,7 @@ Affine scheme들 $$X, Y, Z$$가 주어졌다 하고, $$Y$$의 open subscheme $$Y
 
 ![open_fiber_product-2](/assets/images/Math/Scheme_Theory/Fiber_Products-5.svg){:style="width:8.55em" class="invert" .align-center}
 
-를 생각하면, 우리는 [보조정리 3](#lem3)으로부터 $$X\times_SY$$의 open subscheme $$\rho_Y^{-1}(Y')$$가 fiber product가 되는 것을 확인할 수 있다. 이제 일반적으로 다음의 diagram
+를 생각하면, 우리는 [보조정리 3](#lem3)으로부터 $$X\times_ZY$$의 open subscheme $$\rho_Y^{-1}(Y')$$가 fiber product가 되는 것을 확인할 수 있다. 이제 일반적으로 다음의 diagram
 
 ![magic_square](/assets/images/Math/Scheme_Theory/Fiber_Products-6.svg){:style="width:8.55em" class="invert" .align-center}
 
@@ -93,7 +93,7 @@ Affine scheme들 $$X, Z$$ 그리고 임의의 scheme $$Y$$에 대하여, $$X\rig
 ::: 증명
 이를 위해 $$Y$$를 affine open subset들 $$Y_i$$들로 덮자. 그럼 우리는 [보조정리 2](#lem2)으로부터 $$X\times_ZY_i$$들이 존재함을 안다. 또, $$Y_{ij}=Y_i\cap Y_j$$는 affine scheme $$Y_i$$의 open subscheme이므로 역시 $$X\times_Z Y_{ij}$$가 [보조정리 4](#lem4)에 의하여 존재한다. 
 
-한편, [보조정리 4](#lem4)의 증명을 보면 $$X\times_ZY_{ij}$$는 각각 $$X\times_ZY_i$$와 $$X\times_ZY_{ij}$$의 open subscheme인 것을 알 수 있다. 이들 데이터가 [§스킴, ⁋보조정리 9](/ko/math/scheme_theory/schemes#lem9)의 조건들을 만족하는 것을 쉽게 확인할 수 있으므로, 이들을 붙여 scheme $$X\times_ZY$$를 만들 수 있다. 이것이 fiber product의 universal property를 만족하는 것은 scheme morphism $$W \rightarrow Y$$의 공역을 $$Y_i$$들로 제한하여 $$X\times_ZY_i$$들 각각의 universal property를 사용한 후, [§스킴 사이의 사상, ⁋명제 1](/ko/math/scheme_theory/morphism_of_schemes#prop1)과 같이 scheme morphism을 붙여서 만들면 확인할 수 있다. 
+한편, [보조정리 4](#lem4)의 증명을 보면 $$X\times_ZY_{ij}$$는 각각 $$X\times_ZY_i$$와 $$X\times_ZY_j$$의 open subscheme인 것을 알 수 있다. 이들 데이터가 [§스킴, ⁋보조정리 9](/ko/math/scheme_theory/schemes#lem9)의 조건들을 만족하는 것을 쉽게 확인할 수 있으므로, 이들을 붙여 scheme $$X\times_ZY$$를 만들 수 있다. 이것이 fiber product의 universal property를 만족하는 것은 scheme morphism $$W \rightarrow Y$$의 공역을 $$Y_i$$들로 제한하여 $$X\times_ZY_i$$들 각각의 universal property를 사용한 후, [§스킴 사이의 사상, ⁋명제 1](/ko/math/scheme_theory/morphism_of_schemes#prop1)과 같이 scheme morphism을 붙여서 만들면 확인할 수 있다. 
 :::
 
 이 보조정리에서 $$X$$가 affine scheme이라는 가정은 오직 $$X\times_ZY_i$$가 존재한다는 것을 보이기 위해서만 사용되었다. 따라서, 임의의 두 scheme $$X,Y$$와 affine scheme $$Z$$, 그리고 scheme morphism $$X \rightarrow Z$$와 $$Y \rightarrow Z$$가 주어졌다 하면 우리는 $$Y$$의 affine open cover $$\{Y_i\}$$를 택한 후, $$X\times_ZY_i$$가 [보조정리 5](#lem5)에 의해 존재하는 것을 알고 따라서 이들을 붙여서 $$X\times_ZY$$를 만들 수 있다. 즉 다음이 성립한다.
@@ -105,7 +105,12 @@ Affine scheme $$Z$$, 임의의 scheme $$X,Y$$와 scheme morphism $$X \rightarrow
 이제 마지막으로 $$Z$$를 임의의 scheme으로 확장해야 한다. 우선 다음이 성립한다.
 
 ::: 보조정리 7
-임의의 scheme $$X,Y,Z$$가 주어졌다 하고, scheme morphism $$\varphi_X:X \rightarrow Z$$, $$\varphi_Y:Y \rightarrow Z$$ 그리고 affine scheme $$Z'$$로의 morphism $$\iota: Z \rightarrow Z'$$가 주어졌다 하자. 그럼 $$\iota\circ\varphi_X$$와 $$\iota\circ\varphi_Y$$의 fiber product $$X\times_{Z'}Y$$는 $$X\times_ZY$$의 universal property를 만족하고, 따라서 $$X\times_ZY$$가 존재한다.  
+임의의 scheme $$X,Y,Z$$가 주어졌다 하고, scheme morphism $$\varphi_X:X \rightarrow Z$$, $$\varphi_Y:Y \rightarrow Z$$ 그리고 affine scheme $$Z'$$로의 monomorphism $$\iota: Z \rightarrow Z'$$가 주어졌다 하자. 가령 $$\iota$$가 open immersion이거나 closed immersion인 경우가 이에 해당한다. 그럼 $$\iota\circ\varphi_X$$와 $$\iota\circ\varphi_Y$$의 fiber product $$X\times_{Z'}Y$$는 $$X\times_ZY$$의 universal property를 만족하고, 따라서 $$X\times_ZY$$가 존재한다.  
+:::
+::: 증명
+$$Z'$$이 affine이므로 $$X\times_{Z'}Y$$는 존재한다. 이제 임의의 scheme $$T$$와 morphism $$a:T \rightarrow X$$, $$b:T \rightarrow Y$$가 주어졌다 하자. $$X\times_ZY$$의 universal property에서 요구하는 조건은 $$\varphi_X\circ a=\varphi_Y\circ b$$이고, $$X\times_{Z'}Y$$의 것은 $$\iota\circ\varphi_X\circ a=\iota\circ\varphi_Y\circ b$$인데, $$\iota$$가 monomorphism이므로 이 두 조건은 서로 동치이다. 따라서 두 fiber product는 같은 universal property를 만족하고, 유일성에 의하여 $$X\times_{Z'}Y$$가 $$X\times_ZY$$의 역할을 한다.
+
+한편 $$\iota$$에 대한 가정이 없으면 이는 성립하지 않는다. 가령 $$k$$-scheme의 구조사상 $$\iota:Z \rightarrow \Spec k$$를 택하고 $$X=Y=Z=\mathbb{A}^1_k$$에 항등사상을 주면, $$X\times_ZY=\mathbb{A}^1_k$$이지만 $$X\times_{\Spec k}Y=\mathbb{A}^2_k$$이다.
 :::
 
 이제 위의 보조정리를 이용하여 우리는 임의의 $$X,Y,Z$$와 scheme morphism $$\varphi_X:X \rightarrow Z$$, $$\varphi_Y: Y \rightarrow Z$$에 대하여 $$Z$$를 affine open cover $$\{Z_i\}$$들로 덮으면 $$\varphi_X\vert^{Z_i}:\varphi_X^{-1}(Z_i) \rightarrow Z_i$$와 $$\varphi_Y\vert^{Z_i}:\varphi_Y^{-1}(Z_i) \rightarrow Z_i$$에 대해서는 fiber product $$X_i\times_{Z_i}Y_i$$가 존재하는 것을 안다. 이제 교집합 $$Z_{ij}=Z_i\cap Z_j$$은 $$Z_i$$의 열린집합이므로 [보조정리 7](#lem7)에 의하여 $$\varphi_X\vert^{Z_{ij}}$$와 $$\varphi_Y\vert^{Z_{ij}}$$의 fiber product들도 존재하며 이는 $$X_i\times_{Z_i}Y_i$$와 $$X_j\times_{Z_j}Y_j$$의 open subscheme이다. 따라서 [보조정리 5](#lem5)의 증명과 마찬가지로, 이들 데이터가 [§스킴, ⁋보조정리 9](/ko/math/scheme_theory/schemes#lem9)의 조건을 만족한다는 것을 보이면 다음 정리를 얻는다.
@@ -118,7 +123,7 @@ Affine scheme $$Z$$, 임의의 scheme $$X,Y$$와 scheme morphism $$X \rightarrow
 
 Scheme morphism을 해석하는 방법이 여러가지가 존재하듯, fiber product도 이해하는 방법이 여러가지가 있다. 
 
-앞서 우리는 scheme morphism $$X \rightarrow S$$를 $$S$$로 parametrize된 family로 생각하기로 하였으며 ([§스킴 사이의 사상, ⁋예시 10](/ko/math/scheme_theory/morphism_of_schemes#ex10)) 이 관점에서 $$S$$는 family $$X$$의 base로 생각할 수 있다. 이제 임의의 $$S$$-family $$X \rightarrow S$$가 주어졌다 하고, scheme morphism $$S' \rightarrow S$$가 주어졌다 하면 fiber product를 통해 우리는 새로운 $$S'$$-family $$X\times_SS' \rightarrow S'$$를 얻는다. 이러한 관점에서서 우리는 종종 fiber product를 *base change*라 부르기도 한다. 
+앞서 우리는 scheme morphism $$X \rightarrow S$$를 $$S$$로 parametrize된 family로 생각하기로 하였으며 ([§스킴 사이의 사상, ⁋예시 10](/ko/math/scheme_theory/morphism_of_schemes#ex10)) 이 관점에서 $$S$$는 family $$X$$의 base로 생각할 수 있다. 이제 임의의 $$S$$-family $$X \rightarrow S$$가 주어졌다 하고, scheme morphism $$S' \rightarrow S$$가 주어졌다 하면 fiber product를 통해 우리는 새로운 $$S'$$-family $$X\times_SS' \rightarrow S'$$를 얻는다. 이러한 관점에서 우리는 종종 fiber product를 *base change*라 부르기도 한다. 
 
 ::: 예시 9
 Affine scheme으로 우리의 관심범위를 좁혀보면, $$\Spec B$$가 $$C$$-scheme이라는 것은 scheme morphism $$\Spec B \rightarrow \Spec C$$가 주어졌다는 것이고 이는 다시 ring homomorphism $$C \rightarrow B$$가 주어진 것과 같고 이는 다시 $$B$$가 $$C$$-algebra라는 것과 같은 말이다. 
@@ -235,13 +240,13 @@ $$\varphi^{-1}((0))=\Spec \mathbb{K}[\y]\otimes_{\Spec \mathbb{K}[\x]}\Spec \mat
 Finite morphism $$\varphi: X \rightarrow Y$$는 quasi-finite morphism이다. 
 :::
 ::: 증명
-Affine인 경우만 보이면 충분하다. 즉, 임의의 finite ring homomorphism $$\phi: B \rightarrow A$$와 $$B$$의 prime ideal $$\mathfrak{q}$$에 대하여 $$A\otimes_B\kappa(\mathfrak{q})$$가 유한히 많은 prime ideal을 갖는다는 것을 보이면 충분하다. 그런데 $$\phi$$가 fintite이므로 $$A\otimes_B\kappa(\mathfrak{q})$$는 finite $$\kappa(\mathfrak{q})$$-algebra이고 따라서 artinian이므로 이로부터 원하는 결과를 얻는다. ([\[가환대수학\] §조르단-횔더 정리, ⁋정리 4](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm4))
+Affine인 경우만 보이면 충분하다. 즉, 임의의 finite ring homomorphism $$\phi: B \rightarrow A$$와 $$B$$의 prime ideal $$\mathfrak{q}$$에 대하여 $$A\otimes_B\kappa(\mathfrak{q})$$가 유한히 많은 prime ideal을 갖는다는 것을 보이면 충분하다. 그런데 $$\phi$$가 finite이므로 $$A\otimes_B\kappa(\mathfrak{q})$$는 finite $$\kappa(\mathfrak{q})$$-algebra이고 따라서 artinian이므로 이로부터 원하는 결과를 얻는다. ([\[가환대수학\] §조르단-횔더 정리, ⁋정리 4](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm4))
 :::
 
 위의 예시와 명제들에서 우리는 중요한 관찰을 할 수 있는데, 만일 $$X \rightarrow S$$가 scheme morphism의 어떠한 성질 $$P$$를 만족한다면, 임의의 $$S' \rightarrow S$$로의 base change $$X\times_SS' \rightarrow S'$$ 또한 그러하다는 것이다. 이는 우연이 아니며, 실제로 우리가 관심을 가지는 대부분의 성질은 base change에 대해 닫혀있다. 
 
 ::: 명제 15
-만일 scheme morphism $$\varphi:X \rightarrow Z$$가 quasicompact (resp. quasiseparated, affine, finite, integral, locally of finite type, finite type, locally of finite presentation, finite presentation, quasi-finite, surjective) 라면, 임의의 scheme morphism $$Y \rightarrow Z$$를 통해 $$\varphi$$를 base change한 $$X\times_ZY \rightarrow X$$ 또한 그러하다.
+만일 scheme morphism $$\varphi:X \rightarrow Z$$가 quasicompact (resp. quasiseparated, affine, finite, integral, locally of finite type, finite type, locally of finite presentation, finite presentation, quasi-finite, surjective) 라면, 임의의 scheme morphism $$Y \rightarrow Z$$를 통해 $$\varphi$$를 base change한 $$X\times_ZY \rightarrow Y$$ 또한 그러하다.
 :::
 
 가령 integral morphism과 finite morphism에 대하여는 [\[가환대수학\] §정수적 확장, ⁋명제 14](/ko/math/commutative_algebra/integral_extension#prop14)에서 이를 증명하였으며, 다른 성질에 대해서도 위의 명제를 어렵지 않게 보일 수 있다. 

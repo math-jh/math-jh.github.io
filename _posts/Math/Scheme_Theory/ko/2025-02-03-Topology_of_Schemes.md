@@ -10,7 +10,7 @@ sidebar:
 
 date: 2025-02-03
 weight: 5
-
+drift_needed: true
 ---
 
 ## 일반점
@@ -99,7 +99,7 @@ $$Z(\mathfrak{a}_1)\supseteq Z(\mathfrak{a}_2)\supseteq\cdots$$
 
 이 주어졌다 하면, $$A$$의 ideal들의 chain
 
-$$IZ(\mathfrak{a}_1)\subseteq IZ(\mathfrak{a}_2)\supseteq\cdots$$
+$$IZ(\mathfrak{a}_1)\subseteq IZ(\mathfrak{a}_2)\subseteq\cdots$$
 
 을 얻고 이것은
 
@@ -135,9 +135,9 @@ $$D(f)\cong \Spec A_f$$
 
 이므로 $$\Spec A$$의 principal open set $$D(f)$$의 global section $$\mathcal{O}_{\Spec A}(D(f))$$ 또한 $$P$$를 만족한다. 거꾸로, 만일 $$A$$가 $$f_1,\ldots, f_r$$로부터 생성된다면 다음의 식
 
-$$A=A\setminus \emptyset=A\setminus Z(1)=A\setminus Z\left(\sum_{i=1}^r Z(f_i)\right)=A\setminus\bigcap_{i=1}^r Z(f_i)=\bigcup_{i=1}^rA\setminus Z(f_i)=\bigcup_{i=1}^r D(f_i)$$
+$$\Spec A=\Spec A\setminus \emptyset=\Spec A\setminus Z(1)=\Spec A\setminus Z(f_1,\ldots,f_r)=\Spec A\setminus\bigcap_{i=1}^r Z(f_i)=\bigcup_{i=1}^r D(f_i)$$
 
-으로부터 $$D(f_i)$$들이 $$\Spec A$$를 덮는 것을 알 수 있다. 편의상 affine scheme $$X$$의 global section들의 ring $$\mathcal{O}_X(X)$$가 성질 $$Q$$를 갖는다면, $$X$$가 성질 $$P$$를 갖는다고 하자. 그럼  이상에서 [정의 8](#def8)의 두 조건은 다음과 같이 번역할 수 있다. 
+으로부터 $$D(f_i)$$들이 $$\Spec A$$를 덮는 것을 알 수 있다. 편의상 affine scheme $$X$$의 global section들의 ring $$\mathcal{O}_X(X)$$가 성질 $$Q$$를 갖는다면, $$X$$가 성질 $$P$$를 갖는다고 하자. 그럼 이상에서 [정의 8](#def8)의 두 조건은 다음과 같이 번역할 수 있다. 
 
 1. $$\Spec A$$가 $$P$$를 만족한다면, 임의의 principal open set $$D(f)$$ 또한 $$P$$를 만족한다.
 2. $$\Spec A$$를 덮는 open covering $$D(f_1),\ldots, D(f_r)$$가 각각 $$P$$를 만족한다면, $$\Spec A$$도 $$P$$를 만족한다. 
@@ -208,20 +208,22 @@ Ring $$A$$가 noetherian인 것은 local property이고, 따라서 affine-local 
 ::: 증명
 [정의 8](#def8)의 두 조건을 증명해야 한다. 
 
-첫째 조건은 [\[가환대수학\] §국소화, ⁋따름정리 9](/ko/math/commutative_algebra/localization#cor9)로부터 얻어지며, 혹은 [\[위상수학\] §차원, ⁋명제 13](/ko/math/topology/dimension#prop13)의 첫쨰 결과를 사용해도 충분하다.
+첫째 조건은 [\[가환대수학\] §국소화, ⁋따름정리 9](/ko/math/commutative_algebra/localization#cor9)로부터 얻어지며, 혹은 [\[위상수학\] §차원, ⁋명제 13](/ko/math/topology/dimension#prop13)의 첫째 결과를 사용해도 충분하다.
 
-둘쨰 조건을 보자. 만일 $$A=(f_1,\ldots, f_r)$$이라 하면, 우리는 $$D(f_i)$$들이 $$\Spec A$$의 open covering이라는 것을 알고, 따라서 $$\mathcal{O}_{\Spec A}$$가 [\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1)의 첫째 조건을 만족하는 것으로부터 다음의 inclusion
+둘째 조건을 보자. $$A=(f_1,\ldots, f_r)$$이고 각 $$A_{f_i}$$가 noetherian이라 가정한 뒤, $$A$$의 임의의 ideal $$\mathfrak{a}$$가 유한생성임을 보이면 된다. 각 $$i$$에 대하여 $$A_{f_i}$$가 noetherian이므로 ideal $$\mathfrak{a}A_{f_i}$$는 유한생성이며, 생성원들의 분모를 없애면 $$\mathfrak{a}$$의 원소 $$a_{i1},\ldots, a_{in_i}$$이 존재하여 이들의 상이 $$\mathfrak{a}A_{f_i}$$를 생성하게 할 수 있다. 이제 이 유한개의 원소들 전체가 생성하는 ideal을 $$\mathfrak{b}\subseteq \mathfrak{a}$$라 하면, 구성에 의하여 모든 $$i$$에 대해 $$\mathfrak{b}A_{f_i}=\mathfrak{a}A_{f_i}$$이다.
 
-$$A \cong \mathcal{O}_{\Spec A}(\Spec A) \hookrightarrow \prod_{i=1}^r \mathcal{O}_{\Spec A}(D(f_i))\cong\prod_{i=1}^r A_{f_i}$$
+이제 $$\mathfrak{a}=\mathfrak{b}$$임을 보이면 된다. Localization이 완전함수이므로 $$M=\mathfrak{a}/\mathfrak{b}$$는 모든 $$i$$에 대하여 $$M_{f_i}=0$$을 만족한다. 임의의 $$m\in M$$을 잡으면 각 $$i$$마다 $$f_i^{n}m=0$$이 되는 $$n$$이 존재하고, $$i$$가 유한개이므로 충분히 큰 $$n$$ 하나를 공통으로 잡을 수 있다. 한편 $$D(f_i)=D(f_i^n)$$이므로 $$D(f_i^n)$$들 또한 $$\Spec A$$를 덮고, 따라서 $$f_1^n,\ldots, f_r^n$$은 단위 ideal을 생성하여 $$1=\sum_{i=1}^r g_if_i^n$$인 $$g_i\in A$$가 존재한다. 그럼
 
-을 얻는다. 이제 만일 $$A_{f_i}$$들이 모두 noetherian이라면, 그들의 (유한한) 곱 $$\prod A_{f_i}$$ 또한 noetherian이고 따라서 $$A$$는 noetherian ring의 subring이므로 [\[가환대수학\] §기본 개념들, ⁋정리 3](/ko/math/commutative_algebra/basic_notions#thm3)에 의하여 noetherian이다.
+$$m=\sum_{i=1}^r g_if_i^nm=0$$
+
+이므로 $$M=0$$, 곧 $$\mathfrak{a}=\mathfrak{b}$$가 유한생성이다.
 :::
 
 ::: 정의 14
 Scheme $$X$$가 *locally noetherian scheme<sub>국소뇌터스킴</sub>*인 것은 $$A_i$$가 모두 noetherian인 $$X$$의 affine open covering $$\{U_i=\Spec A_i\}$$가 존재하는 것이다. 만일 $$X$$가 quasi-compact locally noetherian scheme이라면 이를 *noetherian scheme<sub>뇌터스킴</sub>*이라 부른다. 
 :::
 
-그럼 만일 $$A$$가 noetherian이라면 $$\Spec A$$가 noetherian scheme인 것은 정의와 [§스펙트럼, ⁋보조정리 12](/ko/math/scheme_theory/spectrums#lem12)로부터 자명하다. 또, [명제 7](#prop7)과 마차나지로 임의의 noetherian scheme은 위상공간으로서 noetherian이다. 그러나 [명제 7](#prop7) 이후에 지적했듯, scheme $$X$$가 위상공간으로서 noetherian이라 해서 위의 조건이 성립하는 것은 아니라는 것에 주의해야 한다.
+그럼 만일 $$A$$가 noetherian이라면 $$\Spec A$$가 noetherian scheme인 것은 정의와 [§스펙트럼, ⁋보조정리 12](/ko/math/scheme_theory/spectrums#lem12)로부터 자명하다. 또, [명제 7](#prop7)과 마찬가지로 임의의 noetherian scheme은 위상공간으로서 noetherian이다. 그러나 [명제 7](#prop7) 이후에 지적했듯, scheme $$X$$가 위상공간으로서 noetherian이라 해서 위의 조건이 성립하는 것은 아니라는 것에 주의해야 한다.
 
 마지막으로 우리는 [정의 9](#def9)와는 조금 다른 국소성의 개념을 정의하는데, *stalk-local*의 개념이 그것이다. 
 
@@ -243,7 +245,7 @@ Scheme $$X$$의 stalk-local property $$P$$에 대하여, 다음이 모두 동치
 ::: 증명
 우선 $$2\implies 3\implies 4\implies 5$$임은 자명하므로, $$5\implies 1$$ 그리고 $$1\implies 2$$만 보이면 충분하며, 이들은 다음의 isomorphism
 
-$$\mathcal{O}_{X,x}= \varinjlim_{V\ni x} \mathcal{O}_X(U)\cong \varinjlim_{U\supseteq V\ni x}\mathcal{O}(V)=\mathcal{O}_{U, x}$$
+$$\mathcal{O}_{X,x}= \varinjlim_{V\ni x} \mathcal{O}_X(V)\cong \varinjlim_{V\ni x, V\subseteq U}\mathcal{O}_X(V)=\mathcal{O}_{U, x}$$
 
 으로부터 자명하다. 
 :::

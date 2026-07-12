@@ -10,7 +10,7 @@ sidebar:
 
 date: 2025-02-19
 weight: 7
-
+drift_needed: true
 ---
 
 정의에 의해 $$\Sch$$는 $$\LRS$$의 full subcategory이다. ([§스킴, ⁋정의 1](/ko/math/scheme_theory/schemes#def1)) 즉 두 scheme $$X,Y$$가 주어졌을 떄, $$X$$에서 $$Y$$로의 scheme morphism은 연속함수 $$\varphi: X \rightarrow Y$$와 structure sheaf 사이의 morphism $$\varphi^\sharp: \mathcal{O}_Y \rightarrow \varphi_\ast \mathcal{O}_X$$으로 주어지며, 이 때 $$\varphi^\sharp$$는 각각의 stalk으로 제한하였을 때 local homomorphism이 되어야 한다. ([§아핀스킴, ⁋정의 2](/ko/math/scheme_theory/affine_schemes#def2)) 
@@ -142,7 +142,7 @@ $$\Spec \mathbb{K} \rightarrow \Spec \mathbb{K}[\x_1,\ldots, \x_n]$$
 
 $$\phi:\mathbb{K}[\x_1,\ldots, \x_n] \rightarrow \mathbb{K}$$
 
-에 대응된다. 그럼 이 ring homomorphism은 반드시 surjective이다. Ring homomorphism의 정의로부터 $$\phi(1)=1$$이고 따라서 임의의 $$x\in \mathbb{K}$$에 대하여 $$\phi(x)=x$$이기 때문이다. 따라서 first isomorphism theorem에 의하여
+에 대응된다. 그럼 이 ring homomorphism은 반드시 surjective이다. $$\phi$$가 $$\mathbb{K}$$-algebra homomorphism이므로 상수항들 위에서 항등사상, 곧 임의의 $$x\in \mathbb{K}$$에 대하여 $$\phi(x)=x$$이기 때문이다. 따라서 first isomorphism theorem에 의하여
 
 $$\mathbb{K}[\x_1,\ldots, \x_n]/\ker\phi\cong \mathbb{K}$$
 
