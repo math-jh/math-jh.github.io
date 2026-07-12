@@ -107,9 +107,9 @@ $$(B_i)_\mathfrak{q} \rightarrow (A_i)_\mathfrak{p}\cong (B_i/\mathfrak{b}_i)_\m
 
 이다. 그런데 localization은 exact functor이므로 ([\[가환대수학\] §국소화의 성질들, ⁋명제 2](/ko/math/commutative_algebra/properties_of_localization#prop2)) 이 사상은 surjective이고, 따라서 $$\varphi^\sharp$$은 surjective이다. 즉 $$\varphi$$는 closed embedding이다.
 
-반대 방향은 형식적이지 않다. $$\varphi$$가 closed embedding이라 가정하고, $$Y$$의 affine open subset $$V=\Spec B$$를 고정한 후 $$W=\varphi^{-1}(V)$$라 쓰자. 앞선 논증에서와 마찬가지로 $$\varphi$$가 image 위로의 homeomorphism이라는 사실로부터, 임의의 $$\mathfrak{q}=\varphi(x)\in \varphi(X)\cap V$$에 대하여 $$(\varphi_\ast \mathcal{O}_X)_\mathfrak{q}\cong \mathcal{O}_{X,x}$$이고 $$\varphi(X)$$ 바깥의 점에서는 $$(\varphi_\ast \mathcal{O}_X)_\mathfrak{q}=0$$이다. 즉 우리는 $$\varphi_\ast \mathcal{O}_X$$의 stalk들을 알고 있다. 그러나 이것만으로는 $$\varphi_\ast \mathcal{O}_X$$가 $$V$$의 열린집합들 위에서 어떤 section을 갖는지 알 수 없으며, 특히 $$W$$가 affine scheme인지도 알 수 없다. 이를 위해 필요한 것은 closed embedding $$\varphi$$에 대하여 $$\varphi_\ast \mathcal{O}_X$$와 ideal sheaf $$\ker\varphi^\sharp$$이 *quasi-coherent*하다는 사실, 즉 $$Y$$의 임의의 affine open subset $$V=\Spec B$$와 임의의 $$f\in B$$에 대하여 canonical한 사상
+반대 방향은 형식적이지 않다. $$\varphi$$가 closed embedding이라 가정하고, $$Y$$의 affine open subset $$V=\Spec B$$를 고정한 후 $$W=\varphi^{-1}(V)$$라 쓰자. 앞선 논증에서와 마찬가지로 $$\varphi$$가 image 위로의 homeomorphism이라는 사실로부터, 임의의 $$\mathfrak{q}=\varphi(x)\in \varphi(X)\cap V$$에 대하여 $$(\varphi_\ast \mathcal{O}_X)_\mathfrak{q}\cong \mathcal{O}_{X,x}$$이고 $$\varphi(X)$$ 바깥의 점에서는 $$(\varphi_\ast \mathcal{O}_X)_\mathfrak{q}=0$$이다. 즉 우리는 $$\varphi_\ast \mathcal{O}_X$$의 stalk들을 알고 있다. 그러나 이것만으로는 $$\varphi_\ast \mathcal{O}_X$$가 $$V$$의 열린집합들 위에서 어떤 section을 갖는지 알 수 없으며, 특히 $$W$$가 affine scheme인지도 알 수 없다. 이를 위해 필요한 것은 closed embedding $$\varphi$$에 대하여 $$\varphi_\ast \mathcal{O}_X$$와 ideal sheaf $$\ker\varphi^\sharp$$이 *quasi-coherent*하다는 사실, 즉 $$Y$$의 affine open subset $$\Spec B$$와 임의의 $$f\in B$$에 대하여 canonical한 사상
 
-$$\left((\varphi_\ast \mathcal{O}_X)(V)\right)_f \rightarrow (\varphi_\ast \mathcal{O}_X)(D(f))$$
+$$\left((\varphi_\ast \mathcal{O}_X)(\Spec B)\right)_f \rightarrow (\varphi_\ast \mathcal{O}_X)(D(f))$$
 
 이 isomorphism이라는 사실이다. 이는 [명제 6](#prop6)에서 ideal들에 요구했던 국소화 조건과 정확히 같은 형태의 조건이지만, 지금은 $$\varphi$$가 affine morphism인지조차 모르는 상황이므로 이를 우리가 가진 도구만으로 얻을 수는 없다. 따라서 우리는 이 사실만을 증명 없이 인용하고 (Stacks 01QO), 나머지 논증은 우리가 이미 가진 도구들로 완결한다.
 
@@ -139,8 +139,11 @@ $$\varphi(X)\cap V=Z(\mathfrak{b})$$
 ::: 명제 4
 임의의 closed embedding은 항상 finite morphism이다.
 :::
+::: 증명
+Closed embedding $$\varphi: X \rightarrow Y$$가 주어졌다 하자. [명제 3](#prop3)에 의하여 $$\varphi$$는 affine morphism이고, $$Y$$의 임의의 affine open subset $$V\cong \Spec B$$에 대하여 $$\varphi^{-1}(V)\cong\Spec A$$이며 이에 대응되는 ring homomorphism $$\beta: B \rightarrow A$$는 surjective이다. 그럼 임의의 $$a\in A$$는 적당한 $$b\in B$$에 대하여 $$a=\beta(b)=b\cdot 1$$이므로 $$A$$는 $$B$$-module로서 $$1$$에 의해 생성되고, 따라서 $$\beta$$는 finite ring homomorphism이다. ([\[가환대수학\] §정수적 확장, ⁋정의 3](/ko/math/commutative_algebra/integral_extension#def3)의 넷째 조건) 이제 [§스킴 사상의 성질들, ⁋정의 10](/ko/math/scheme_theory/properties_of_scheme_morphisms#def10)에 의하여 $$\varphi$$는 finite morphism이다. 
+:::
 
-이는 정의에 의해 자명하며, [§스킴 사상의 성질들, ⁋예시 15](/ko/math/scheme_theory/properties_of_scheme_morphisms#ex15)에서 만든 (quasi-)finite morphism의 기하학적 직관에 비추어볼 때, 적어도 closed embedding은 항상 quasi-finite이어야 하는 것이 자명하고, 여기에서 더 나아가 finite이기도 하다는 기하적인 해석이 가능하다. 
+[§스킴 사상의 성질들, ⁋예시 15](/ko/math/scheme_theory/properties_of_scheme_morphisms#ex15)에서 만든 (quasi-)finite morphism의 기하학적 직관에 비추어볼 때, 적어도 closed embedding은 항상 quasi-finite이어야 하는 것이 자명하고, 여기에서 더 나아가 finite이기도 하다는 기하적인 해석이 가능하다. 
 
 ::: 정의 5
 임의의 scheme $$Z$$에 대하여, $$\mathcal{O}_Z$$의 subsheaf $$\mathcal{I}$$를 $$Z$$의 *ideal sheaf*라 부른다. 특별히 closed embedding $$\iota: Z \rightarrow X$$에 대하여, $$\mathcal{O}_X$$의 subsheaf $$\ker\iota^\sharp$$를 $$\iota$$에 의해 정의되는 ideal sheaf라 부르고, 이를 $$\mathcal{I}_{Z/X}$$로 표기한다. 
@@ -200,11 +203,23 @@ $$X\overset{\varphi\vert^Z}{\longrightarrow}Z\overset{\iota}{\longrightarrow} Y$
 두 closed embedding $$\iota_1: Z_1 \rightarrow X$$, $$\iota_2: Z_2 \rightarrow X$$가 주어졌다 하자. 그럼 적당한 scheme morphism $$\varphi: Z_1 \rightarrow Z_2$$가 존재하여 $$\iota_1=\iota_2\circ\varphi$$를 만족하는 것은 $$\mathcal{I}_{Z_2/X}\subseteq \mathcal{I}_{Z_1/X}$$인 것과 동치이다. 이 경우 $$\varphi$$는 closed embedding이 된다. 
 :::
 
-이는 affine open subset $$\Spec A$$에서 보면 두 closed embedding은 각각
+::: 증명
+우선 $$\iota_1=\iota_2\circ\varphi$$를 만족하는 $$\varphi$$가 존재한다 하자. 그럼 $$\iota_1^\sharp$$은 다음의 합성
 
-$$A \rightarrow A/\mathcal{I}_{Z_1/X}(A),\qquad A \rightarrow A/\mathcal{I}_{Z_2/X}(A)$$
+$$\mathcal{O}_X\overset{\iota_2^\sharp}{\longrightarrow}(\iota_2)_\ast \mathcal{O}_{Z_2}\overset{(\iota_2)_\ast \varphi^\sharp}{\longrightarrow}(\iota_2)_\ast \varphi_\ast \mathcal{O}_{Z_1}=(\iota_1)_\ast \mathcal{O}_{Z_1}$$
 
-에 대응되며, 위의 조건을 만족하는 $$\varphi$$가 존재하는 것은 ring homomorphism $$A \rightarrow A/ \mathcal{I}_{Z_1/X}(A)$$이 $$A \rightarrow A/ \mathcal{I}_{Z_2/X}(A)$$로 factor through해야 하는 것과 같은 것이며 이것이 다시 $$\mathcal{I}_{Z_2/X}(A)\subseteq \mathcal{I}_{Z_1/X}(A)$$와 동치이기 때문이다. 
+이므로 $$\ker\iota_2^\sharp\subseteq \ker\iota_1^\sharp$$이고, 곧 [정의 5](#def5)에 의하여 $$\mathcal{I}_{Z_2/X}\subseteq \mathcal{I}_{Z_1/X}$$이다. 
+
+거꾸로 $$\mathcal{I}_{Z_2/X}\subseteq \mathcal{I}_{Z_1/X}$$이라 가정하자. $$X$$의 임의의 affine open subset $$U=\Spec A$$를 택하면 [명제 3](#prop3)에 의하여 $$\iota_k^{-1}(U)$$는 affine open subset이고, [정의 5](#def5) 직후의 exact sequence로부터
+
+$$\iota_k^{-1}(U)\cong \Spec A/\mathfrak{a}_k,\qquad \mathfrak{a}_k=\mathcal{I}_{Z_k/X}(U)$$
+
+이며 이 때 $$\iota_k$$의 $$\iota_k^{-1}(U)$$로의 제한은 canonical projection $$A \rightarrow A/\mathfrak{a}_k$$에 대응된다. 가정에 의하여 $$\mathfrak{a}_2\subseteq \mathfrak{a}_1$$이므로 $$A \rightarrow A/\mathfrak{a}_1$$은 $$A \rightarrow A/\mathfrak{a}_2$$를 통해 유일하게 인수분해되며, 이렇게 얻어지는 $$\pi_U: A/\mathfrak{a}_2 \rightarrow A/\mathfrak{a}_1$$은 surjective이다. 따라서 [정의 2](#def2) 직전의 논의에 의하여 $$\varphi_U=\Spec\pi_U: \iota_1^{-1}(U) \rightarrow \iota_2^{-1}(U)$$는 closed embedding이고, 구성에 의하여 $$\iota_1$$의 $$\iota_1^{-1}(U)$$로의 제한은 $$\iota_2$$의 제한과 $$\varphi_U$$의 합성이다. 
+
+이제 $$X$$의 두 affine open subset $$U=\Spec A$$, $$U'$$에 대하여 $$\varphi_U$$와 $$\varphi_{U'}$$이 교집합 위에서 일치함을 보이면 된다. [§스킴의 위상구조, ⁋보조정리 11](/ko/math/scheme_theory/topology_of_schemes#lem11)에 의하여 $$U\cap U'$$을 $$U$$와 $$U'$$ 모두에서 principal open set인 열린집합들로 덮을 수 있고, localization이 exact functor이므로 ([\[가환대수학\] §국소화의 성질들, ⁋명제 2](/ko/math/commutative_algebra/properties_of_localization#prop2)) 이러한 $$D(f)\cong \Spec A_f$$ 위에서 $$\mathcal{I}_{Z_k/X}(D(f))=\mathfrak{a}_kA_f$$이다. 따라서 $$\varphi_U$$와 $$\varphi_{U'}$$은 모두 $$D(f)$$ 위에서 $$\mathfrak{a}_2A_f\subseteq \mathfrak{a}_1A_f$$가 유도하는 canonical projection $$A_f/\mathfrak{a}_2A_f \rightarrow A_f/\mathfrak{a}_1A_f$$에 대응되어 서로 같다. 그럼 [§스킴 사이의 사상, ⁋명제 1](/ko/math/scheme_theory/morphism_of_schemes#prop1)에 의하여 이들은 scheme morphism $$\varphi: Z_1 \rightarrow Z_2$$로 붙고, 구성에 의하여 $$\iota_1=\iota_2\circ\varphi$$이다. 
+
+마지막으로 $$\iota_1=\iota_2\circ\varphi$$를 만족하는 <em-ko>임의의</em-ko> $$\varphi$$가 closed embedding임을 보이자. $$X$$의 affine open subset $$U$$에 대하여 $$\varphi^{-1}(\iota_2^{-1}(U))=\iota_1^{-1}(U)$$이고, $$\varphi$$의 이 열린집합으로의 제한에 대응되는 ring homomorphism $$A/\mathfrak{a}_2 \rightarrow A/\mathfrak{a}_1$$은 $$A$$로부터의 두 canonical projection과 가환이어야 하므로 위의 $$\pi_U$$일 수밖에 없다. 그런데 $$\iota_2$$가 affine morphism이므로 $$U$$가 $$X$$의 affine open covering을 훑을 때 $$\iota_2^{-1}(U)$$들은 $$Z_2$$의 affine open covering을 이루고, closed embedding은 affine-local on target이므로 ([명제 3](#prop3)) $$\varphi$$는 closed embedding이다. 
+:::
 
 Scheme $$X$$의 두 closed subscheme $$Z_1,Z_2$$에 대하여, closed embedding $$\varphi:Z_1 \rightarrow Z_2$$가 존재한다면 $$Z_1$$이 $$Z_2$$보다 <em-ko>작은</em-ko> closed subscheme인 것으로 생각하자. 
 
