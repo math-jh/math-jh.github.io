@@ -1193,11 +1193,21 @@ Only mark a pair LOSSY when you are CONFIDENT that a mathematical statement, hyp
 
 Set the overall VERDICT to lossy if ANY pair is LOSSY, otherwise safe.
 
+Separately: whenever the English differs from the Korean BECAUSE THE KOREAN IS WRONG
+— a wrong index or subscript, a swapped operator, a missing prime, a misspelling, a
+garbled symbol, an equation that says something the surrounding prose contradicts —
+report it under KO-TYPOS, quoting the Korean as written and the correct form. Do this
+even though the pair is SAFE: the English needs no fix, but the Korean does. Report
+ONLY things you are confident are errors in the Korean; omit the section if there are
+none. Never invent one to fill the section.
+
 Output (terse, no preamble, no closing remarks):
 
 VERDICT: <safe | lossy>
 FINDINGS:
 - [pair N] <SAFE | LOSSY>: <one short sentence; for LOSSY, name exactly what meaning differs>
+KO-TYPOS:
+- <the Korean as written> -> <the correct form>: <a few words on why>
 """
 
 
@@ -1643,6 +1653,48 @@ def lint_structure(ko_text: str, en_text: str) -> list:
     return out
 
 
+# The verifier is asked (VERIFY_SEM_INSTRUCTIONS) to list errors it found in the
+# *Korean* under a KO-TYPOS heading. Those reports used to be thrown away: they
+# arrive attached to a SAFE verdict (the EN is fine — it is the KO that is wrong),
+# and the telegram policy suppresses SAFE. On 2026-07-13 a sweep of the stored
+# verdicts found 19 posts with such reports, 16 of them never surfaced, and
+# source-checking them turned up 13 real KO errors (\cap for \cup in Seifert-van
+# Kampen, \mathbb{2} for \mathbb{K}, varprojlim for varinjlim, "infumum", …).
+# So parse them out and always report, independently of the verdict.
+_KO_TYPO_HEAD_RE = re.compile(r"^\s*KO-TYPOS\s*:?\s*$", re.M)
+# Fallback for verdicts written before the KO-TYPOS section existed, where the
+# report is buried in a FINDINGS line.
+_KO_TYPO_INLINE_RE = re.compile(
+    r"\b(typos?"                                    # plural too: "apparent typos in ..."
+    r"|corrects?\s+(?:an?\s+)?(?:evident\s+|apparent\s+|minor\s+)?(?:typos?|errors?)"
+    r"|errors?\s+in\s+the\s+Korean"
+    r"|Korean\s+(?:source\s+)?(?:has|contains)\s+(?:a\s+)?"
+    r"(?:genuine\s+)?(?:mathematical\s+)?(?:errors?|typos?))\b", re.I)
+
+
+def extract_ko_typos(verdict_text: str) -> list:
+    """Errors the verifier spotted in the KO source. Reported whether the verdict
+    was safe or lossy — a KO typo is not an EN defect, so it never shows up as
+    'lossy', which is exactly why these went unnoticed for so long."""
+    if not verdict_text:
+        return []
+    m = _KO_TYPO_HEAD_RE.search(verdict_text)
+    if m:
+        out = []
+        for line in verdict_text[m.end():].splitlines():
+            s = line.strip()
+            if not s:
+                continue
+            if not s.startswith("-"):      # next section began
+                break
+            out.append(s.lstrip("- ").strip())
+        if out:
+            return out
+    # Legacy / narrated form.
+    return [ln.strip().lstrip("- ").strip()
+            for ln in verdict_text.splitlines() if _KO_TYPO_INLINE_RE.search(ln)]
+
+
 def run_verify(state: dict, ko_path: Path, en_path: Path, key: str) -> int:
     """Read-only verification of an existing EN translation against KO.
 
@@ -1661,6 +1713,10 @@ def run_verify(state: dict, ko_path: Path, en_path: Path, key: str) -> int:
     if ko_n != en_n:
         verdict_text = verify_math_mismatch(ko_text, en_text, ko_n, en_n)
     verdict_safe = bool(re.search(r"^VERDICT:\s*safe\b", verdict_text, re.M | re.I))
+    ko_typos = extract_ko_typos(verdict_text)
+    # `clean` is about the EN: a KO typo means the KO needs fixing, not the EN, so
+    # it must not make the translation look defective. But it still has to be
+    # surfaced, so it is checked separately at the early return below.
     clean = (not lints) and (not struct) and (ko_n == en_n or verdict_safe)
 
     entry = state["files"].get(key, {})
@@ -1668,12 +1724,13 @@ def run_verify(state: dict, ko_path: Path, en_path: Path, key: str) -> int:
     entry["verify_math_counts"] = [ko_n, en_n]
     entry["verify_lints"] = lints[:20] or None
     entry["verify_structure"] = struct[:20] or None
+    entry["verify_ko_typos"] = ko_typos[:20] or None
     if verdict_text:
         entry["verify_verdict"] = verdict_text[:4000]
     state["files"][key] = entry
     save_state(state)
 
-    if clean:
+    if clean and not ko_typos:
         log(f"VERIFY ({key}): clean (math ko={ko_n} en={en_n})")
         return 0
 
@@ -1682,6 +1739,8 @@ def run_verify(state: dict, ko_path: Path, en_path: Path, key: str) -> int:
         head.append(f"{len(struct)} structure")
     if lints:
         head.append(f"{len(lints)} latex-lint")
+    if ko_typos:
+        head.append(f"{len(ko_typos)} ko-typo")
     if verdict_text and not verdict_safe:
         head.append(verdict_text.splitlines()[0])
     log(f"VERIFY ({key}): FLAGGED — {'; '.join(head)}")
@@ -1689,12 +1748,23 @@ def run_verify(state: dict, ko_path: Path, en_path: Path, key: str) -> int:
         log(f"  STRUCT ({key}): {ln}")
     for ln in lints:
         log(f"  LINT ({key}): {ln}")
+    for ln in ko_typos:
+        log(f"  KO-TYPO ({key}): {ln}")
     for ln in verdict_text.splitlines():
         log(f"  VERIFY ({key}): {ln}")
 
-    # Telegram policy. Two of the three signals are deterministic and always
-    # alert: the latex-lints, and the structural KO/EN comparison (a box that
-    # exists in KO and not in EN is a fact, not an opinion).
+    # Telegram policy. Three of the four signals always alert.
+    #
+    # Deterministic and therefore trustworthy: the latex-lints, and the structural
+    # KO/EN comparison (a box that exists in KO and not in EN is a fact, not an
+    # opinion).
+    #
+    # KO-typos also always alert. They are model-reported, but they point at the
+    # *Korean*, and they were being dropped precisely because they ride along with
+    # a SAFE verdict. A 2026-07-13 sweep of stored verdicts found 19 posts with
+    # such reports (16 never surfaced); source-checking them confirmed 13 real KO
+    # errors. False positives here cost one grep; the misses cost a wrong theorem
+    # standing on the site for a year.
     #
     # The semantic "lossy" verdict is the unreliable one — false-positive-prone
     # (2026-06-04 audit: 0 real losses across 30 manually source-checked flags;
@@ -1708,12 +1778,14 @@ def run_verify(state: dict, ko_path: Path, en_path: Path, key: str) -> int:
     gap = abs(ko_n - en_n)
     semantic_flag = bool(verdict_text) and not verdict_safe
     big_gap = ko_n > 0 and gap / ko_n >= 0.15
-    if not (lints or struct or (semantic_flag and big_gap)):
+    if not (lints or struct or ko_typos or (semantic_flag and big_gap)):
         return 0
 
     body = ""
     if struct:
         body += "STRUCTURE (deterministic):\n" + "\n".join(struct) + "\n"
+    if ko_typos:
+        body += "KO-TYPOS (fix the Korean, not the English):\n" + "\n".join(ko_typos) + "\n"
     if semantic_flag:
         body += verdict_text + "\n"
     if lints:
