@@ -184,7 +184,7 @@ $$\gamma_k(x)=\underbrace{x\otimes\cdots\otimes x}_\text{\scriptsize $k$ times}$
     $$\gamma_p(x)\gamma_q(x)=\frac{(p+q)!}{p!q!}\gamma_{p+q}(x)$$
 
     이 성립한다.
-5. 임의의 $$x_1,\ldots, x_n\in M$$이 주어졌다 하고, 임의의 부분집합 $$H\subseteq \{1,\ldots, n\}$$에 대하여 $$x_H+\sum_{i\in H}x_i$$라 하자. 그럼 다음의 식
+5. 임의의 $$x_1,\ldots, x_n\in M$$이 주어졌다 하고, 임의의 부분집합 $$H\subseteq \{1,\ldots, n\}$$에 대하여 $$x_H=\sum_{i\in H}x_i$$라 하자. 그럼 다음의 식
     
     $$(-1)^nx_1x_2\cdots x_n=\sum_{H\subset\{1,\ldots, n\}}(-1)^{\lvert H\rvert}\gamma_n(x_H)$$
 
@@ -202,7 +202,7 @@ Finite group $$H$$와 left $$AH$$-module $$N$$에 대하여, $$N$$의 $$H$$-inva
 ::: 증명
 우선 $$y_\omega$$들과 $$B'$$의 원소들을 모두 모으면, 이는 단지 $$\omega$$의 한 원소 $$z_\omega$$를 $$y_\omega$$로 교체한 것에 불과하므로, 간단한 선형대수에 의해 이것이 $$N$$의 $$A$$-basis임을 안다. 즉, 주어진 decomposition을 따라
 
-$$N_1=\sum_{\omega\in\Omega} Ay_\omega,\qquad N_2=\sum_{b'\in B'}Ab$$
+$$N_1=\sum_{\omega\in\Omega} Ay_\omega,\qquad N_2=\sum_{b'\in B'}Ab'$$
 
 라 하면 $$N=N_1\oplus N_2$$이다. 
 

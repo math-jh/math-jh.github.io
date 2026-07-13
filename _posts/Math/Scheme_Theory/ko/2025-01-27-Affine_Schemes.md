@@ -294,7 +294,7 @@ $$A \overset{\phi}{\longrightarrow}B \overset{\epsilon}{\longrightarrow} B_{\phi
 
 $$(\Spec\phi)^\sharp_\mathfrak{q}:\mathcal{O}_{\Spec A, (\Spec \phi)(\mathfrak{q})} \rightarrow\mathcal{O}_{\Spec B, \mathfrak{q}}$$
 
-이 local homomorphism이면 된다. 그런데 $$(\Spec \phi)(\mathfrak{q})=\phi^{-1}(\mathfrak{q})$$이고, 따라서 [보조정리 8](#lem8)에 의하여 $$(\Spec\phi)^\sharp_\mathfrak{q}$$는 $$A_{\phi^{-1}(\mathfrak{q})}$$에서 $$B_{\mathfrak{q}}$$로의 ring homomorphism이며 이는 $$A_{\phi^{-1}(\mathfrak{p})}$$의 유일한 maximal ideal $$\phi^{-1}(\mathfrak{q})A_{\phi^{-1}(\mathfrak{q})}$$를 $$B_\mathfrak{p}$$의 유일한 maximal ideal $$\mathfrak{q}B_\mathfrak{q}$$로 보낸다. 
+이 local homomorphism이면 된다. 그런데 $$(\Spec \phi)(\mathfrak{q})=\phi^{-1}(\mathfrak{q})$$이고, 따라서 [보조정리 8](#lem8)에 의하여 $$(\Spec\phi)^\sharp_\mathfrak{q}$$는 $$A_{\phi^{-1}(\mathfrak{q})}$$에서 $$B_{\mathfrak{q}}$$로의 ring homomorphism이며 이는 $$A_{\phi^{-1}(\mathfrak{q})}$$의 유일한 maximal ideal $$\phi^{-1}(\mathfrak{q})A_{\phi^{-1}(\mathfrak{q})}$$를 $$B_\mathfrak{q}$$의 유일한 maximal ideal $$\mathfrak{q}B_\mathfrak{q}$$로 보낸다. 
 :::
 
 ## 아핀스킴

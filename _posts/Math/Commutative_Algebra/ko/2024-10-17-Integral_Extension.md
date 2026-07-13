@@ -192,7 +192,7 @@ Ring $$A\subseteq B$$와 $$A$$의 multiplicative subset $$S$$를 고정하자. �
 Semilocal ring $$A$$와 finitely presented $$A$$-module $$M,N$$에 대하여, 만일 $$M_\mathfrak{m}\cong N_\mathfrak{m}$$이 모든 maximal ideal $$\mathfrak{m}$$에 대해 성립한다면 $$M\cong N$$이 성립한다. 
 :::
 ::: 증명
-우선 $$A$$의 maximal ideal들 $$\mathfrak{m}_1,\ldots, \mathfrak{m}_n$$이 주어졌다 하고, 각각의 $$k$$에 대하여 $$u_k: M_{\mathfrak{p}_k}\rightarrow N_{\mathfrak{p}_k}$$가 주어졌다 하자. 그럼 $$A_\mathfrak{p}$$는 flat $$A$$-module이고, 가정에 의해 $$M$$이 finitely presented이므로 다음의 isomorphism
+우선 $$A$$의 maximal ideal들 $$\mathfrak{m}_1,\ldots, \mathfrak{m}_n$$이 주어졌다 하고, 각각의 $$k$$에 대하여 $$u_k: M_{\mathfrak{m}_k}\rightarrow N_{\mathfrak{m}_k}$$가 주어졌다 하자. 그럼 $$A_{\mathfrak{m}_k}$$는 flat $$A$$-module이고, 가정에 의해 $$M$$이 finitely presented이므로 다음의 isomorphism
 
 $$\Hom_{A_{\mathfrak{m}_k}}( M_{\mathfrak{m}_k}, N_{\mathfrak{m}_k}) \rightarrow \Hom_A(M,N)_{\mathfrak{m}_k}$$
 

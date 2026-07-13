@@ -20,7 +20,7 @@ weight: 17
 ::: 따름정리 1
 Noetherian local ring $$(A, \mathfrak{m})$$이 주어졌다 하자. 그럼 $$\dim A$$는 다음의 조건
 
-> 충분히 큰 $$n$$에 대하여, 항상 $$\mathfrak{m}^n\subseteq (a_1,\ldots, a_d)$$이도록 하는 $$d$$개의 원소 $$a_1,\ldots, a\in \mathfrak{m}$$가 존재한다. 
+> 충분히 큰 $$n$$에 대하여, 항상 $$\mathfrak{m}^n\subseteq (a_1,\ldots, a_d)$$이도록 하는 $$d$$개의 원소 $$a_1,\ldots, a_d\in \mathfrak{m}$$가 존재한다. 
 
 이 성립하도록 하는 $$d$$ 가운데 가장 작은 것이다.
 :::

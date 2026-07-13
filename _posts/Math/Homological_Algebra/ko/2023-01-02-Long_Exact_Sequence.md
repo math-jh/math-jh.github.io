@@ -158,7 +158,7 @@ $$(d_{n+1}^D\circ h_n)(a)+(h_{n-1}\circ d_n^C)(a)=f_n(a)-g_n(a)$$
 
 으로부터, $$a\in \ker(d_n^C)$$이므로 
 
-$$f_n(a)-g_n(a)=d_{n+1}^D)(h_n(a))\in\im(d_{n+1}^D)$$
+$$f_n(a)-g_n(b)=d_{n+1}^D(h_n(a))\in\im(d_{n+1}^D)$$
 
 을 얻는다.
 :::

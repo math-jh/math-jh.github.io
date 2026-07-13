@@ -52,7 +52,7 @@ $$(x_i),(y_i)\in\prod A_i$$라 하자. 그럼 각각의 $$i$$에 대하여, $$x_
 Ordered set $$A$$가 *lattice*라는 것은 $$A$$의 임의의 원소 두 개짜리 부분집합이 supremum과 infimum을 갖는 것이다. 이 때, 두 원소 $$\sup\{x,y\}$$와 $$\inf\{x,y\}$$를 각각 $$x,y$$의 *join*과 *meet*이라 부르고, $$x\vee y$$와 $$x\wedge y$$로 적는다. 
 :::
 
-Lattice $$A$$의 임의의 <em-ko>유한한</em-ko> 부분집합은 supremum과 infimum을 갖는다. 만일 $$A$$의 <em-ko>모든</em-ko> 부분집합이 supremum과 infumum을 갖는다면, $$A$$를 *complete lattice*라 부른다.
+Lattice $$A$$의 임의의 <em-ko>유한한</em-ko> 부분집합은 supremum과 infimum을 갖는다. 만일 $$A$$의 <em-ko>모든</em-ko> 부분집합이 supremum과 infimum을 갖는다면, $$A$$를 *complete lattice*라 부른다.
 
 ## Totally ordered set
 

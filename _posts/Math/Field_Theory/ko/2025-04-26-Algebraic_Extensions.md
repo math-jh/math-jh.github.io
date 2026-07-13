@@ -170,7 +170,7 @@ $$\Frac(G)\cong \mathbb{K}(\mathbb{L}_1\cup\mathbb{L}_2)$$
 을 얻는다. 다음 명제는 이 관찰을 linearly disjoint extension의 언어로 확장한 것이다. 
 
 ::: 명제 11
- 두 $$\mathbb{K}$$의 두 extension이라 하고, $$E_1$$, $$E_2$$가 $$\Omega$$의 $$\mathbb{K}$$-subalgebra들이라 하자. $$\mathbb{L}_1=\Frac(E_i)$$라 하면, $$\mathbb{L}_1$$와 $$\mathbb{L}_2$$가 linearly disjoint인 것과 $$E_1$$와 $$E_2$$가 linearly disjoint인 것이 동치이다. 
+ 두 $$\mathbb{K}$$의 두 extension이라 하고, $$E_1$$, $$E_2$$가 $$\Omega$$의 $$\mathbb{K}$$-subalgebra들이라 하자. $$\mathbb{L}_i=\Frac(E_i)$$라 하면, $$\mathbb{L}_1$$와 $$\mathbb{L}_2$$가 linearly disjoint인 것과 $$E_1$$와 $$E_2$$가 linearly disjoint인 것이 동치이다. 
 :::
 ::: 증명
 한쪽 방향은 자명하므로 $$E_1, E_2$$가 linearly disjoint라 가정하자. 그럼 우선 $$E_1$$과 $$\mathbb{L}_2$$가 linearly disjoint임을 보일 수 있는데, $$\Omega$$의 임의의 $$E_2$$-free family는 $$\mathbb{L}_2$$-free이기도 하기 때문이다. 이제 같은 논리로 $$\mathbb{L}_1$$와 $$\mathbb{L}_2$$가 linearly disjoint이다. 

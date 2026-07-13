@@ -309,7 +309,7 @@ $$T/W$$와 $$\Conj(G)$$ 사이에는 자연스러운 일대일대응이 존재�
 
 ## Conjugation action의 분해
 
-이제 $$G$$가 자기 자신에게 conjugation으로 작용하는 상황을 살펴보자. 이를 위해 각 $$g'\in G$$에 대하여, conjugation map
+이제 $$G$$가 자기 자신에게 conjugation으로 작용하는 상황을 살펴보자. 이를 위해 각 $$h\in G$$에 대하여, conjugation map
 
 $$c_{h}:G\rightarrow G;\qquad g\mapsto hgh^{-1}$$
 
