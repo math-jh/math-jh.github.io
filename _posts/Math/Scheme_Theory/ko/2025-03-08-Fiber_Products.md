@@ -10,7 +10,6 @@ sidebar:
 
 date: 2025-03-08
 weight: 10
-drift_needed: true
 ---
 
 우리가 scheme을 도입하며 약속한 것들 중 하나는 fiber product였으며, 이는 $\Sch/S$ 위에서의 곱이므로 이를 위해서는 $S$-scheme들 (그리고 scheme morphism들)을 정의했어야 했다. 이제 우리는 준비를 마치고 fiber product를 정의한다. 
