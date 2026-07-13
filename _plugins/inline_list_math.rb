@@ -2,11 +2,10 @@
 #
 # Inline math in single-item list entries.
 #
-# This blog writes ALL math as $$...$$ — single $ is unsafe because kramdown
-# parses _ / * inside it as emphasis before KaTeX ever sees it. kramdown turns
-# $$...$$ into DISPLAY math (\[...\]) when it is the sole content of a block, and
-# into INLINE math (\(...\)) when it sits inside running text. A list item that
-# contains only $$...$$ is therefore emitted as a centered display block:
+# kramdown turns $$...$$ into DISPLAY math (\[...\]) when it is the sole content
+# of a block, and into INLINE math (\(...\)) when it sits inside running text. A
+# list item that contains only $$...$$ is therefore emitted as a centered display
+# block:
 #
 #     1. $$(a^{-1})^{-1}=a$$   ->   <li>\[(a^{-1})^{-1}=a\]</li>   (centered)
 #
