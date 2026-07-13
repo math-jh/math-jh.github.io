@@ -36,13 +36,13 @@ weight: 3
 
 이제 $\mathcal{O}_{\Spec A}$를 정의해야 한다. 이는 이 글의 서두에서 언급한 것과 같이, $\Spec A$ 위에 정의된 대수적인 함수들의 sheaf이며, 이는 정확히 [\[대수다양체\] §아핀다양체, ⁋정의 14](/ko/math/algebraic_varieties/affine_varieties#def14)의 일반화이다. 
 
-이 논의를 scheme으로 일반화하기 위해 다음과 같이 생각하자. 우선 $A$의 원소는 대수다양체에서와 마찬가지로 함수 $f$로 생각한다. 그럼 이 때 $f$의 점 $\mathfrak{p}\in\Spec A$에서의 <em-ko>함숫값</em-ko>은 canonical projection $\pr_\mathfrak{p}: A \rightarrow A/\mathfrak{p}$에 의한 $f$의 image이다. 그럼 특히 $f$가 점 $\mathfrak{p}$에서 $0$이 된다는 것은
+이 논의를 scheme으로 일반화하자. 우선 $A$의 원소는 대수다양체에서와 마찬가지로 함수 $f$로 생각한다. 그럼 이 때 $f$의 점 $\mathfrak{p}\in\Spec A$에서의 <em-ko>함숫값</em-ko>은 canonical projection $\pi: A \rightarrow A/\mathfrak{p}$에 의한 $f$의 image이다. 그럼 특히 $f$가 점 $\mathfrak{p}$에서 $0$이 된다는 것은
 
 $$f\equiv 0\pmod{\mathfrak{p}}\iff f\in \mathfrak{p}\iff \mathfrak{p}\in Z(f)$$
 
 이다. 즉 $Z(f)$는 $f=0$인 점들의 모임으로 이해할 수 있으며, 그 여집합인 principal open set $D(f)$는 $f\neq 0$인 점들의 모임으로 이해할 수 있다. 
 
-이러한 관점에서 우리는 $\Spec A$의 <em-ko>대수적인 함수들</em-ko>이 무엇인지 묘사할 수 있다. [§스펙트럼, §§고전적인 대수기하학](/ko/math/scheme_theory/spectrums#고전적인-대수기하학)과 마찬가지로, 이들은 각각의 열린집합이 주어질 때마다, 해당 열린집합에서 $0$이 되지 않는 함수들을 분모로 가질 수 있는 유리함수의 꼴로 나타날 수 있는 함수들이라 정의하면 된다. 
+이러한 관점에서 우리는 $\Spec A$의 <em-ko>대수적인 함수들</em-ko>이 무엇인지 묘사할 수 있다. [\[대수다양체\] §아핀다양체, ⁋정의 14](/ko/math/algebraic_varieties/affine_varieties#def14)와 마찬가지로, 이들은 각각의 열린집합이 주어질 때마다, 해당 열린집합에서 $0$이 되지 않는 함수들을 분모로 가질 수 있는 유리함수의 꼴로 나타날 수 있는 함수들이라 정의하면 된다. 
 
 이제 principal open set $D(f)$가 주어졌다 하자. 그럼 정의에 의해, $D(f)$ 위의 대수적인 함수를 유리함수 $g/h$의 형태로 나타냈을 때, 그 분모에 들어갈 수 있는 함수 $h$들은 $D(f)\subseteq D(h)$를 만족해야 한다. 
 

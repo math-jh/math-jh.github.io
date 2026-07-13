@@ -33,7 +33,7 @@ A morphism between two locally ringed spaces $(X, \mathcal{O}_X)$ and $(Y, \math
 
 ## Algebraic functions on $\Spec A$
 
-We now need to define $\mathcal{O}_{\Spec A}$. As mentioned at the beginning of this post, this is the sheaf of algebraic functions on $\Spec A$, and we saw in [§Spectrums, §§Classical algebraic geometry](/en/math/scheme_theory/spectrums#classical-algebraic-geometry) that when $A=\mathbb{K}[\x_1,\ldots, \x_n]$, these are functions that can be represented as rational functions on a suitable neighborhood. What played an important role in this process was that elements of $A$, i.e., polynomials, could be treated as functions on $\mathbb{A}_\mathbb{K}^n=\MaxSpec A$; in the general case, elements of $A$ are not polynomials, and we cannot evaluate points of $\Spec A$ at elements of $A$.
+We now need to define $\mathcal{O}_{\Spec A}$. As mentioned at the beginning of this post, this is the sheaf of algebraic functions on $\Spec A$, and we saw in [[Algebraic Varieties] §Affine Varieties, ⁋Definition 14](/en/math/algebraic_varieties/affine_varieties#def14) that when $A=\mathbb{K}[\x_1,\ldots, \x_n]$, these are functions that can be represented as rational functions on a suitable neighborhood. What played an important role in this process was that elements of $A$, i.e., polynomials, could be treated as functions on $\mathbb{A}_\mathbb{K}^n=\MaxSpec A$; in the general case, elements of $A$ are not polynomials, and we cannot evaluate points of $\Spec A$ at elements of $A$.
 
 Therefore, to generalize this discussion, let us think as follows. First, we regard elements of $A$ as functions $f$, just as in the previous example. Then the *function value* of $f$ at a point $\mathfrak{p}\in\Spec A$ is the image of $f$ under the canonical projection $\pr_\mathfrak{p}: A \rightarrow A/\mathfrak{p}$. In particular, the statement that $f$ vanishes at the point $\mathfrak{p}$ is
 
@@ -41,7 +41,7 @@ $$f\equiv 0\pmod{\mathfrak{p}}\iff f\in \mathfrak{p}\iff \mathfrak{p}\in Z(f)$$
 
 That is, $Z(f)$ can be understood as the set of points where $f=0$, and its complement, the principal open set $D(f)$, can be understood as the set of points where $f\neq 0$.
 
-From this perspective, we can describe what the *algebraic functions* on $\Spec A$ are. As in [§Spectrums, §§Classical algebraic geometry](/en/math/scheme_theory/spectrums#classical-algebraic-geometry), it suffices to define them as functions that can be represented as rational functions whose denominators are functions that do not vanish on the given open set, whenever an open set is specified.
+From this perspective, we can describe what the *algebraic functions* on $\Spec A$ are. As in [[Algebraic Varieties] §Affine Varieties, ⁋Definition 14](/en/math/algebraic_varieties/affine_varieties#def14), it suffices to define them as functions that can be represented as rational functions whose denominators are functions that do not vanish on the given open set, whenever an open set is specified.
 
 Now suppose a principal open set $D(f)$ is given. Then by definition, when we represent an algebraic function on $D(f)$ in the form of a rational function $g/h$, the functions $h$ that can appear in the denominator must satisfy $D(f)\subseteq D(h)$.
 
