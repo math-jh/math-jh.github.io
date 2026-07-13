@@ -207,7 +207,7 @@ $$\Aut(E_H/B)\cong N_G(H)/H$$
 
 우리가 알고있는 좋은 공간들은 정의로부터 fundamental group 혹은 homology를 계산할 수도 있지만, 대부분의 경우 이를 정의로부터 계산하는 것은 과도하게 복잡하거나 거의 불가능하다. 우리의 아이디어는 큰 공간의 fundamental group을 계산하기 위해 이를 작은 공간들로 나타내는 것이다. 
 
-이러한 방법 중 가장 단순한 것은 공간 $$X$$가 두 열린집합들의 합집합 $$X=U\cap V$$로 나타나는 경우일 것이다. 그럼 [\[위상수학\] §준층, ⁋보조정리 1](/ko/math/topology/presheaves#lem1)에 의하여 우리는 다음의 diagram 
+이러한 방법 중 가장 단순한 것은 공간 $$X$$가 두 열린집합들의 합집합 $$X=U\cup V$$로 나타나는 경우일 것이다. 그럼 [\[위상수학\] §준층, ⁋보조정리 1](/ko/math/topology/presheaves#lem1)에 의하여 우리는 다음의 diagram 
 
 ![union_as_colimit](/assets/images/Math/Algebraic_Topology/Covering_Spaces-3.svg){:style="width:7.54em" class="invert" .align-center}
 
@@ -221,7 +221,7 @@ $$\Aut(E_H/B)\cong N_G(H)/H$$
 위상공간 $$X$$의 path-connected open cover $$\mathcal{O}=(U_i)$$가 주어졌다 하고, $$\mathcal{O}$$의 원소들의 유한한 교집합이 다시 $$\mathcal{O}$$에 속한다고 가정하자. 그럼 $$\mathcal{O}$$-shaped diagram $$\Pi_1:\mathcal{O}\rightarrow\Grpd$$의 colimit이 존재하며 이는 $$\Pi_1(X)$$와 isomorphic하다. 
 :::
 ::: 증명
-즉 임의의 groupoid $$\mathscr{G}\in\Grpd$$와 임의의 cocone $$\lambda:\Pi_1\vert_\mathcal{O}\Rightarrow \mathscr{G}$$에 대하여, 각각의 $$U\in \mathcal{O}$$마다 $$\widetilde{\lambda}$$와 $$\lambda$$가 같아지도록 하는 $$\widetilde{\lambda}$$가 존재한다는 것을 보이면 된다. 당연히 우리는 임의의 $$x\in X$$마다, $$x\in U$$를 만족하는 $$U$$를 찾은 뒤 이 위에서는 $$\lambda_U$$가 정의되므로 $$\widetilde{\lambda}(x)$$를 이 값 $$\lambda_U(x)$$로 정의하면 된다. 이것이 $$U$$의 선택에 무관하다는 것은 $$x$$를 포함하는 임의의 $$U_1,U_2$$에 대해 $$\lambda_{U_1}(x)$$와 $$\lambda_{U_2}(x)$$는 모두 $$\lambda_{U_1\cap U_2}(x)$$와 같은 값을 가져야 한다는 것으로부터 자명하다. 한편 morphism에 대하여도 비슷한 식으로 정의를 할 수 있는데, 어떠한 $$U\in \mathcal{O}$$에 완전하게 포함되는 path $$f$$에 대해서는 위와 마찬가지 이유로 이 정의가 잘 정의되며, 유일하게 보여야 하는 것은 path가 단일한 $$U\in \mathcal{O}$$에 속해있지 않은 경우 어떻게 정의해야 할지에 대한 것이다. 그런데 이 경우 그냥 path의 concatenation을 사융하면 된다. 이것이 항상 정의되며 잘 정의된다는 것을 보이면 된다. 
+즉 임의의 groupoid $$\mathscr{G}\in\Grpd$$와 임의의 cocone $$\lambda:\Pi_1\vert_\mathcal{O}\Rightarrow \mathscr{G}$$에 대하여, 각각의 $$U\in \mathcal{O}$$마다 $$\widetilde{\lambda}$$와 $$\lambda$$가 같아지도록 하는 $$\widetilde{\lambda}$$가 존재한다는 것을 보이면 된다. 당연히 우리는 임의의 $$x\in X$$마다, $$x\in U$$를 만족하는 $$U$$를 찾은 뒤 이 위에서는 $$\lambda_U$$가 정의되므로 $$\widetilde{\lambda}(x)$$를 이 값 $$\lambda_U(x)$$로 정의하면 된다. 이것이 $$U$$의 선택에 무관하다는 것은 $$x$$를 포함하는 임의의 $$U_1,U_2$$에 대해 $$\lambda_{U_1}(x)$$와 $$\lambda_{U_2}(x)$$는 모두 $$\lambda_{U_1\cap U_2}(x)$$와 같은 값을 가져야 한다는 것으로부터 자명하다. 한편 morphism에 대하여도 비슷한 식으로 정의를 할 수 있는데, 어떠한 $$U\in \mathcal{O}$$에 완전하게 포함되는 path $$f$$에 대해서는 위와 마찬가지 이유로 이 정의가 잘 정의되며, 유일하게 보여야 하는 것은 path가 단일한 $$U\in \mathcal{O}$$에 속해있지 않은 경우 어떻게 정의해야 할지에 대한 것이다. 그런데 이 경우 그냥 path의 concatenation을 사용하면 된다. 이것이 항상 정의되며 잘 정의된다는 것을 보이면 된다. 
 :::
 
 이제 위의 [따름정리 12](#cor12)를 얻어낼 때와 마찬가지로 하나의 대상에서만 이 정리를 적용하고, 따라서 $$\Grpd$$를 $$\Grp$$로 바꿔준 후, $$\Grp$$의 colimit이 free product임을 사용하면 다음의 결과를 얻는다. 
