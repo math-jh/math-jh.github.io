@@ -56,16 +56,17 @@ function stripNonMath(src) {
 function extract(src) {
   const text = stripNonMath(src);
   const items = [];
-  let m;
-  const dd = /\$\$([\s\S]+?)\$\$/g;           // $$ display $$
-  while ((m = dd.exec(text)) !== null) items.push({ tex: m[1], display: true });
-  const tag = /<(cap|phrase|em-ko)\b[^>]*>([\s\S]*?)<\/\1>/g;   // single-$ in custom inline tags
-  let t;
-  while ((t = tag.exec(text)) !== null) {
-    const sre = /(?<!\$)\$(?!\$)([^$\n]+?)\$(?!\$)/g;
-    let s;
-    while ((s = sre.exec(t[2])) !== null) items.push({ tex: s[1], display: false });
-  }
+  // $$...$$ 를 먼저 떠내고 같은 길이의 공백으로 덮는다. 그래야 그 내부의 single $
+  // (\text{$k$}, \tag{$\ast$}) 가 아래 인라인 스캔에 걸리지 않는다.
+  const masked = text.replace(/\$\$([\s\S]+?)\$\$/g, (whole, tex) => {
+    items.push({ tex, display: true });
+    return ' '.repeat(whole.length);
+  });
+  // 남은 top-level single-$ 인라인 수식. 2026-07-13 부터 본문 인라인 수식의 정본이다
+  // (그 전에는 <cap>/<phrase>/<em-ko> 안에서만 쓰였다).
+  const sre = /(?<!\\)\$(?!\$)([^$\n]+?)(?<!\\)\$(?!\$)/g;
+  let s;
+  while ((s = sre.exec(masked)) !== null) items.push({ tex: s[1], display: false });
   return items;
 }
 
