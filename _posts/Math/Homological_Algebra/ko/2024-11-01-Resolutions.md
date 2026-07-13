@@ -5,7 +5,6 @@ excerpt: "Abelian category에서의 projective와 injective resolution"
 
 categories: [Math / Homological Algebra]
 permalink: /ko/math/homological_algebra/resolutions
-drift_needed: true
 sidebar: 
     nav: "homological_algebra-ko"
 
@@ -19,9 +18,9 @@ weight: 4
 우리는 [\[다중선형대수학\] §사영가군, 단사가군, 평탄가군, ⁋정의 3](/ko/math/multilinear_algebra/various_modules#def3)에서 사영가군과 단사가군을 정의하였다. 이를 diagram의 언어로 바꾸어 쓰면 일반적인 abelian category에서 projective object와 injective object의 개념을 얻는다.
 
 ::: 정의 1
-Abelian category $$\mathcal{A}$$를 고정하자.
+Abelian category $\mathcal{A}$를 고정하자.
 
-1. $$\mathcal{A}$$의 대상 $$P$$가 *projective object<sub>사영 대상</sub>*라는 것은 다음의 diagram
+1. $\mathcal{A}$의 대상 $P$가 *projective object<sub>사영 대상</sub>*라는 것은 다음의 diagram
     
     ![Projective_object-1](/assets/images/Math/Homological_Algebra/Resolutions-1.svg){:style="width:9.44em" class="invert" .align-center}
 
@@ -29,9 +28,9 @@ Abelian category $$\mathcal{A}$$를 고정하자.
 
     ![Projective_object-2](/assets/images/Math/Homological_Algebra/Resolutions-2.svg){:style="width:9.44em" class="invert" .align-center}
 
-    을 commute하게 하는 $$P \rightarrow B$$가 적어도 하나 존재하는 것이다.  
-    만일 $$\mathcal{A}$$의 임의의 대상 $$A$$마다 적당한 projective object $$P$$가 존재하여 $$P \rightarrow A \rightarrow 0$$이 exact이도록 할 수 있다면, $$\mathcal{A}$$가 *enough projective*를 갖는다 말한다. 
-1. $$\mathcal{A}$$의 대상 $$I$$가 *injective object<sub>단사 대상</sub>*라는 것은 다음의 diagram
+    을 commute하게 하는 $P \rightarrow B$가 적어도 하나 존재하는 것이다.  
+    만일 $\mathcal{A}$의 임의의 대상 $A$마다 적당한 projective object $P$가 존재하여 $P \rightarrow A \rightarrow 0$이 exact이도록 할 수 있다면, $\mathcal{A}$가 *enough projective*를 갖는다 말한다. 
+1. $\mathcal{A}$의 대상 $I$가 *injective object<sub>단사 대상</sub>*라는 것은 다음의 diagram
     
     ![Injective_object-1](/assets/images/Math/Homological_Algebra/Resolutions-3.svg){:style="width:9.40em" class="invert" .align-center}
 
@@ -39,38 +38,38 @@ Abelian category $$\mathcal{A}$$를 고정하자.
 
     ![Injective_object-2](/assets/images/Math/Homological_Algebra/Resolutions-4.svg){:style="width:9.40em" class="invert" .align-center}
 
-    을 commute하게 하는 $$B \rightarrow I$$가 적어도 하나 존재하는 것이다.  
-    만일 $$\mathcal{A}$$의 임의의 대상 $$A$$마다 적당한 injective object $$I$$가 존재하여 $$0 \rightarrow A \rightarrow I$$이 exact이도록 할 수 있다면, $$\mathcal{A}$$가 *enough injective*를 갖는다 말한다. 
+    을 commute하게 하는 $B \rightarrow I$가 적어도 하나 존재하는 것이다.  
+    만일 $\mathcal{A}$의 임의의 대상 $A$마다 적당한 injective object $I$가 존재하여 $0 \rightarrow A \rightarrow I$이 exact이도록 할 수 있다면, $\mathcal{A}$가 *enough injective*를 갖는다 말한다. 
 :::
 
 또, 다음을 정의한다.
 
 ::: 정의 2
-Abelian category $$\mathcal{A}$$의 대상 $$M$$에 대하여, 다음을 정의한다.
+Abelian category $\mathcal{A}$의 대상 $M$에 대하여, 다음을 정의한다.
 
-1. $$M$$의 *left resolution<sub>왼쪽 분해</sub>*은 다음의 chain complex
+1. $M$의 *left resolution<sub>왼쪽 분해</sub>*은 다음의 chain complex
     
     $$\cdots \longrightarrow P_2 \longrightarrow P_1 \longrightarrow P_0 \overset{\epsilon}{\longrightarrow} M \longrightarrow 0$$
 
-    가 exact이도록 하는 chain complex $$P_\bullet$$과 *augmentation map* $$\epsilon: P_0 \rightarrow M$$이다. 만일 각 $$P_i$$들이 모두 projective object들이라면 이를 *projective resolution<sub>사영분해</sub>*라 부른다.
-2. $$M$$의 *right resolution<sub>오른쪽 분해</sub>*은 다음의 chain complex
+    가 exact이도록 하는 chain complex $P_\bullet$과 *augmentation map* $\epsilon: P_0 \rightarrow M$이다. 만일 각 $P_i$들이 모두 projective object들이라면 이를 *projective resolution<sub>사영분해</sub>*라 부른다.
+2. $M$의 *right resolution<sub>오른쪽 분해</sub>*은 다음의 chain complex
     
     $$0 \longrightarrow M \overset{\eta}{\longrightarrow} I^0 \longrightarrow I^1 \longrightarrow I^2 \longrightarrow \cdots$$
 
-    가 exact이도록 하는 cochain complex $$I^\bullet$$과 *augmentation map* $$\eta: M \rightarrow I^0$$이다. 만일 각 $$I^i$$들이 모두 injective object들이라면 이를 *injective resolution<sub>단사분해</sub>*라 부른다.
+    가 exact이도록 하는 cochain complex $I^\bullet$과 *augmentation map* $\eta: M \rightarrow I^0$이다. 만일 각 $I^i$들이 모두 injective object들이라면 이를 *injective resolution<sub>단사분해</sub>*라 부른다.
 :::
 
-$$\mathcal{A}$$의 projective object는 $$\mathcal{A}^\op$$의 injective object이다. 마찬가지로 $$\mathcal{A}$$가 enough projective를 갖는다면 $$\mathcal{A}^\op$$는 enough injective를 갖는다. 또, $$M$$의 $$\mathcal{A}$$에서의 projective resolution은 $$M$$의 $$\mathcal{A}^\op$$에서의 injective resolution과 동일하다. 때문에 다음 명제는 projective resolution에 대한 것만 증명해도 충분하다.
+$\mathcal{A}$의 projective object는 $\mathcal{A}^\op$의 injective object이다. 마찬가지로 $\mathcal{A}$가 enough projective를 갖는다면 $\mathcal{A}^\op$는 enough injective를 갖는다. 또, $M$의 $\mathcal{A}$에서의 projective resolution은 $M$의 $\mathcal{A}^\op$에서의 injective resolution과 동일하다. 때문에 다음 명제는 projective resolution에 대한 것만 증명해도 충분하다.
 
 ::: 명제 3
-Abelian category $$\mathcal{A}$$가 enough projective를 갖는다면, $$\mathcal{A}$$의 임의의 대상 $$M$$은 projective resolution을 갖는다. 마찬가지로, abelian category $$\mathcal{A}$$가 enough injective를 갖는다면, $$\mathcal{A}$$의 임의의 대상 $$M$$은 injective resolution을 갖는다.
+Abelian category $\mathcal{A}$가 enough projective를 갖는다면, $\mathcal{A}$의 임의의 대상 $M$은 projective resolution을 갖는다. 마찬가지로, abelian category $\mathcal{A}$가 enough injective를 갖는다면, $\mathcal{A}$의 임의의 대상 $M$은 injective resolution을 갖는다.
 :::
 ::: 증명
-우선 $$\mathcal{A}$$가 enough projective를 갖는 것으로부터 적당한 surjection $$\epsilon_0:P_0 \rightarrow M$$을 잡을 수 있다. $$M_0=\ker \epsilon_0$$이라 하자. 그럼 $$\mathcal{A}$$는 enough projective를 가지므로, 적당한 surjection $$\epsilon_1:P_1 \rightarrow M_0$$을 잡을 수 있다. 이제 $$\epsilon_1: P_1 \rightarrow M_0$$과 inclusion $$\iota_0: M_0 \rightarrow P_0$$을 합성한 $$d_1=\iota_0\circ\epsilon_1$$까지를 diagram으로 그리면 다음과 같다. 
+우선 $\mathcal{A}$가 enough projective를 갖는 것으로부터 적당한 surjection $\epsilon_0:P_0 \rightarrow M$을 잡을 수 있다. $M_0=\ker \epsilon_0$이라 하자. 그럼 $\mathcal{A}$는 enough projective를 가지므로, 적당한 surjection $\epsilon_1:P_1 \rightarrow M_0$을 잡을 수 있다. 이제 $\epsilon_1: P_1 \rightarrow M_0$과 inclusion $\iota_0: M_0 \rightarrow P_0$을 합성한 $d_1=\iota_0\circ\epsilon_1$까지를 diagram으로 그리면 다음과 같다. 
 
 ![splicing-1](/assets/images/Math/Homological_Algebra/Resolutions-5.svg){:style="width:19.97em" class="invert" .align-center}
 
-이러한 방식으로, $$\epsilon_n:P_n \rightarrow M_{n-1}$$이 주어질 때마다 $$M_n=\ker \epsilon_n$$으로 잡아 다음과 같은 commutative diagram
+이러한 방식으로, $\epsilon_n:P_n \rightarrow M_{n-1}$이 주어질 때마다 $M_n=\ker \epsilon_n$으로 잡아 다음과 같은 commutative diagram
 
 ![splicing-2](/assets/images/Math/Homological_Algebra/Resolutions-6.svg){:style="width:39.85em" class="invert" .align-center}
 
@@ -82,29 +81,29 @@ $$\cdots \overset{d_3}{\longrightarrow} P_2 \overset{d_2}{\longrightarrow} P_1 \
 
 $$\im(d_n)=\im(\iota_{n-1}\circ\epsilon_n)=\im(\iota_{n-1})=\ker(\epsilon_{n-1})=\ker(\iota_{n-2}\circ\epsilon_{n-1})=\ker(d_{n-1})$$
 
-을 얻는다. 여기서 식 $$\im(\iota_{n-1}\circ\epsilon_n)=\im(\iota_{n-1})$$는 $$\epsilon_n$$이 surjective라는 것을, 식 $$\ker(\epsilon_{n-1})=\ker(d_{n-1})$$은 $$\iota_{n-2}$$이 injective라는 것을 각각 이용하였다. 따라서 $$P_\bullet$$은 $$M$$의 projective resolution이다.
+을 얻는다. 여기서 식 $\im(\iota_{n-1}\circ\epsilon_n)=\im(\iota_{n-1})$는 $\epsilon_n$이 surjective라는 것을, 식 $\ker(\epsilon_{n-1})=\ker(d_{n-1})$은 $\iota_{n-2}$이 injective라는 것을 각각 이용하였다. 따라서 $P_\bullet$은 $M$의 projective resolution이다.
 :::
 
-이번 글에서 우리의 목표 중 하나는 임의의 $$A$$-module은 항상 projective resolution과 injective resolution을 갖는다는 것을 증명하는 것이다. [명제 3](#prop3)을 사용하면 이는 $$\lMod{A}$$가 enough projective와 enough injective를 갖는다는 것을 증명하면 충분하다. $$\lMod{A}$$가 enough projective를 갖는다는 것은 자명하다.
+이번 글에서 우리의 목표 중 하나는 임의의 $A$-module은 항상 projective resolution과 injective resolution을 갖는다는 것을 증명하는 것이다. [명제 3](#prop3)을 사용하면 이는 $\lMod{A}$가 enough projective와 enough injective를 갖는다는 것을 증명하면 충분하다. $\lMod{A}$가 enough projective를 갖는다는 것은 자명하다.
 
 ::: 명제 4
-Category $$\lMod{A}$$는 enough projective를 갖는다.
+Category $\lMod{A}$는 enough projective를 갖는다.
 :::
 ::: 증명
 [\[다중선형대수학\] §기저, ⁋명제 2](/ko/math/multilinear_algebra/basis_of_free_modules#prop2) 그리고 [\[다중선형대수학\] §사영가군, 단사가군, 평탄가군, ⁋명제 4](/ko/math/multilinear_algebra/various_modules#prop4)에 의하여 자명하다.
 :::
 
-그러나 $$\lMod{A}^\op$$에 대해서는 아는 것이 아무것도 없으므로, $$\lMod{A}$$가 enough injective를 갖는다는 것은 위의 결과로부터 따라나오지 않는다. 따라서 다음의 명제는 별도의 증명이 필요하다.
+그러나 $\lMod{A}^\op$에 대해서는 아는 것이 아무것도 없으므로, $\lMod{A}$가 enough injective를 갖는다는 것은 위의 결과로부터 따라나오지 않는다. 따라서 다음의 명제는 별도의 증명이 필요하다.
 
 ::: 명제 5
-Category $$\lMod{A}$$는 enough injective를 갖는다.
+Category $\lMod{A}$는 enough injective를 갖는다.
 :::
 ::: 증명
-어렵지 않게 right adjoint는 injective object를 보존함을 보일 수 있다. 그럼 ring homomorphism $$\mathbb{Z}\rightarrow A$$로부터 얻어지는 coextension of scalar $$\Ab \rightarrow \lMod{A}$$는 restriction of scalar의 right adjoint이므로 $$\Ab$$의 injective object는 $$\lMod{A}$$로 갔을 때 injective object가 된다. ([\[대수적 구조\] §스칼라의 변환, ⁋명제 7](/ko/math/algebraic_structures/change_of_base_ring#prop7)) 따라서 원하는 증명은 $$\Ab$$가 enough injective를 갖는다는 사실을 증명하면 충분하다. 이는 임의의 $$A\in\Ab$$에 대하여,
+어렵지 않게 right adjoint는 injective object를 보존함을 보일 수 있다. 그럼 ring homomorphism $\mathbb{Z}\rightarrow A$로부터 얻어지는 coextension of scalar $\Ab \rightarrow \lMod{A}$는 restriction of scalar의 right adjoint이므로 $\Ab$의 injective object는 $\lMod{A}$로 갔을 때 injective object가 된다. ([\[대수적 구조\] §스칼라의 변환, ⁋명제 7](/ko/math/algebraic_structures/change_of_base_ring#prop7)) 따라서 원하는 증명은 $\Ab$가 enough injective를 갖는다는 사실을 증명하면 충분하다. 이는 임의의 $A\in\Ab$에 대하여,
 
 $$I(A)=\prod_{f\in\Hom_\Ab(A, \mathbb{Q}/\mathbb{Z})} \mathbb{Q}/\mathbb{Z}$$
 
-그리고 $$e_A:A \rightarrow I(A)$$를 $$a\mapsto (f(a))_{f\in\Hom(A, \mathbb{Q}/\mathbb{Z})}$$으로 정의하면 된다. 
+그리고 $e_A:A \rightarrow I(A)$를 $a\mapsto (f(a))_{f\in\Hom(A, \mathbb{Q}/\mathbb{Z})}$으로 정의하면 된다. 
 :::
 
 ## 분해의 유일성
@@ -112,35 +111,35 @@ $$I(A)=\prod_{f\in\Hom_\Ab(A, \mathbb{Q}/\mathbb{Z})} \mathbb{Q}/\mathbb{Z}$$
 한편, 사영분해와 단사분해의 유일성은 다음의 더 강력한 정리로부터 얻어진다. 
 
 ::: 정리 6
-Projective resolution $$P_\bullet \rightarrow M$$과 임의의 $$u:M \rightarrow N$$이 주어졌다 하자. 그럼 임의의 left resolution $$Q_\bullet \rightarrow N$$가 주어질 때마다 다음의 diagram
+Projective resolution $P_\bullet \rightarrow M$과 임의의 $u:M \rightarrow N$이 주어졌다 하자. 그럼 임의의 left resolution $Q_\bullet \rightarrow N$가 주어질 때마다 다음의 diagram
 
 ![comparison_proj](/assets/images/Math/Homological_Algebra/Resolutions-7.svg){:style="width:20.02em" class="invert" .align-center}
 
-을 commute하게 하는 chain map $$f:P_\bullet \rightarrow Q_\bullet$$이 up to homotopy로 유일하게 존재한다.  
-비슷하게, injective resolution $$N \rightarrow I^\bullet$$과 임의의 $$u: M \rightarrow N$$이 주어졌다 하자. 그럼 임의의 right resolution $$M \rightarrow J^\bullet$$가 주어질 때마다 다음의 diagram
+을 commute하게 하는 chain map $f:P_\bullet \rightarrow Q_\bullet$이 up to homotopy로 유일하게 존재한다.  
+비슷하게, injective resolution $N \rightarrow I^\bullet$과 임의의 $u: M \rightarrow N$이 주어졌다 하자. 그럼 임의의 right resolution $M \rightarrow J^\bullet$가 주어질 때마다 다음의 diagram
 
 ![comparison_inj](/assets/images/Math/Homological_Algebra/Resolutions-8.svg){:style="width:19.71em" class="invert" .align-center}
 
-을 commute하게 하는 chain map $$f:J^\bullet \rightarrow I^\bullet$$이 존재한다. 
+을 commute하게 하는 chain map $f:J^\bullet \rightarrow I^\bullet$이 존재한다. 
 :::
 ::: 증명
-우선 첫째 주장을 보이자. 두 resolution의 augmentation을 각각 $$\varepsilon:P_0 \rightarrow M$$, $$\varepsilon':Q_0 \rightarrow N$$이라 적자.
+우선 첫째 주장을 보이자. 두 resolution의 augmentation을 각각 $\varepsilon:P_0 \rightarrow M$, $\varepsilon':Q_0 \rightarrow N$이라 적자.
 
-**(Chain map의 존재성)** $$f_n$$들을 귀납적으로 만든다. $$\varepsilon'$$이 surjective이고 $$P_0$$가 projective이므로, $$u\circ\varepsilon:P_0 \rightarrow N$$에 대하여 $$\varepsilon'\circ f_0=u\circ \varepsilon$$이도록 하는 $$f_0:P_0 \rightarrow Q_0$$가 존재한다. 이제 $$f_0,\ldots,f_{n-1}$$이 주어진 diagram을 commute하게 하도록 만들어졌다 하고, 합성 $$\varphi=f_{n-1}\circ d_n^P:P_n \rightarrow Q_{n-1}$$을 생각하자. 그럼 $$n\geq 2$$일 때
+**(Chain map의 존재성)** $f_n$들을 귀납적으로 만든다. $\varepsilon'$이 surjective이고 $P_0$가 projective이므로, $u\circ\varepsilon:P_0 \rightarrow N$에 대하여 $\varepsilon'\circ f_0=u\circ \varepsilon$이도록 하는 $f_0:P_0 \rightarrow Q_0$가 존재한다. 이제 $f_0,\ldots,f_{n-1}$이 주어진 diagram을 commute하게 하도록 만들어졌다 하고, 합성 $\varphi=f_{n-1}\circ d_n^P:P_n \rightarrow Q_{n-1}$을 생각하자. 그럼 $n\geq 2$일 때
 
 $$d_{n-1}^Q\circ\varphi=d_{n-1}^Q\circ f_{n-1}\circ d_n^P=f_{n-2}\circ d_{n-1}^P\circ d_n^P=0$$
 
-이고, $$n=1$$일 때도 $$\varepsilon'\circ f_0\circ d_1^P=u\circ\varepsilon\circ d_1^P=0$$이다. 따라서 $$\im\varphi$$는 $$\ker d_{n-1}^Q$$ (혹은 $$n=1$$일 때 $$\ker\varepsilon'$$)에 포함되는데, $$Q_\bullet \rightarrow N$$이 resolution이므로 이는 $$\im d_n^Q$$와 같다. 그럼 $$P_n$$이 projective이고 $$d_n^Q:Q_n \rightarrow \im d_n^Q$$가 surjective이므로, $$d_n^Q\circ f_n=\varphi$$이도록 하는 $$f_n:P_n \rightarrow Q_n$$이 존재한다.
+이고, $n=1$일 때도 $\varepsilon'\circ f_0\circ d_1^P=u\circ\varepsilon\circ d_1^P=0$이다. 따라서 $\im\varphi$는 $\ker d_{n-1}^Q$ (혹은 $n=1$일 때 $\ker\varepsilon'$)에 포함되는데, $Q_\bullet \rightarrow N$이 resolution이므로 이는 $\im d_n^Q$와 같다. 그럼 $P_n$이 projective이고 $d_n^Q:Q_n \rightarrow \im d_n^Q$가 surjective이므로, $d_n^Q\circ f_n=\varphi$이도록 하는 $f_n:P_n \rightarrow Q_n$이 존재한다.
 
-**(Up to homotopy 유일성)** $$f,f'$$이 모두 주어진 diagram을 commute하게 하는 chain map이라 하고 $$g=f-f'$$이라 하자. 그럼 $$g$$는 $$\varepsilon'\circ g_0=u\circ\varepsilon-u\circ\varepsilon=0$$을 만족하는 chain map이다. 우리는 $$g_n=d_{n+1}^Q\circ s_n+s_{n-1}\circ d_n^P$$이 모든 $$n$$에 대해 성립하도록 하는 homotopy $$s_n:P_n \rightarrow Q_{n+1}$$을 귀납적으로 만든다. 여기서 $$s_{-1}=0$$이다.
+**(Up to homotopy 유일성)** $f,f'$이 모두 주어진 diagram을 commute하게 하는 chain map이라 하고 $g=f-f'$이라 하자. 그럼 $g$는 $\varepsilon'\circ g_0=u\circ\varepsilon-u\circ\varepsilon=0$을 만족하는 chain map이다. 우리는 $g_n=d_{n+1}^Q\circ s_n+s_{n-1}\circ d_n^P$이 모든 $n$에 대해 성립하도록 하는 homotopy $s_n:P_n \rightarrow Q_{n+1}$을 귀납적으로 만든다. 여기서 $s_{-1}=0$이다.
 
-우선 $$\varepsilon'\circ g_0=0$$으로부터 $$\im g_0\subseteq \ker\varepsilon'=\im d_1^Q$$이므로, $$P_0$$의 projectivity에 의해 $$d_1^Q\circ s_0=g_0$$이도록 하는 $$s_0:P_0 \rightarrow Q_1$$이 존재한다. 이제 $$s_0,\ldots,s_{n-1}$$이 만들어졌다 하고 $$\psi=g_n-s_{n-1}\circ d_n^P$$라 하자. 그럼
+우선 $\varepsilon'\circ g_0=0$으로부터 $\im g_0\subseteq \ker\varepsilon'=\im d_1^Q$이므로, $P_0$의 projectivity에 의해 $d_1^Q\circ s_0=g_0$이도록 하는 $s_0:P_0 \rightarrow Q_1$이 존재한다. 이제 $s_0,\ldots,s_{n-1}$이 만들어졌다 하고 $\psi=g_n-s_{n-1}\circ d_n^P$라 하자. 그럼
 
 $$d_n^Q\circ\psi=d_n^Q\circ g_n-(d_n^Q\circ s_{n-1})\circ d_n^P=g_{n-1}\circ d_n^P-(g_{n-1}-s_{n-2}\circ d_{n-1}^P)\circ d_n^P=s_{n-2}\circ d_{n-1}^P\circ d_n^P=0$$
 
-이므로 $$\im\psi\subseteq\ker d_n^Q=\im d_{n+1}^Q$$이고, 다시 $$P_n$$의 projectivity에 의해 $$d_{n+1}^Q\circ s_n=\psi$$이도록 하는 $$s_n:P_n \rightarrow Q_{n+1}$$이 존재한다. 그럼 정의에 의해 $$g_n=d_{n+1}^Q\circ s_n+s_{n-1}\circ d_n^P$$이다.
+이므로 $\im\psi\subseteq\ker d_n^Q=\im d_{n+1}^Q$이고, 다시 $P_n$의 projectivity에 의해 $d_{n+1}^Q\circ s_n=\psi$이도록 하는 $s_n:P_n \rightarrow Q_{n+1}$이 존재한다. 그럼 정의에 의해 $g_n=d_{n+1}^Q\circ s_n+s_{n-1}\circ d_n^P$이다.
 
-이제 둘째 주장을 보이자. 이는 첫째 주장의 증명을 그대로 dualize하면 된다. 두 resolution의 augmentation을 $$\eta:M \rightarrow J^0$$, $$\eta':N \rightarrow I^0$$이라 하자. $$\eta$$가 injective이고 $$I^0$$가 injective object이므로, $$\eta'\circ u:M \rightarrow I^0$$에 대하여 $$f^0\circ\eta=\eta'\circ u$$이도록 하는 $$f^0:J^0 \rightarrow I^0$$가 존재한다. 귀납적으로 $$f^0,\ldots,f^{n-1}$$이 만들어졌다 하고 합성 $$d_I^{n-1}\circ f^{n-1}:J^{n-1} \rightarrow I^n$$을 생각하면, 앞에서와 같은 계산으로 이 map은 $$\im d_J^{n-2}=\ker d_J^{n-1}$$ 위에서 $$0$$이고, 따라서 injective morphism $$J^{n-1}/\ker d_J^{n-1}\hookrightarrow J^n$$을 통해 $$I^n$$으로 가는 morphism을 유도한다. $$I^n$$이 injective object이므로 이를 $$J^n$$ 전체로 확장하여 $$f^n:J^n \rightarrow I^n$$을 얻고, 이 construction에 의해 $$f^n\circ d_J^{n-1}=d_I^{n-1}\circ f^{n-1}$$이 성립한다.
+이제 둘째 주장을 보이자. 이는 첫째 주장의 증명을 그대로 dualize하면 된다. 두 resolution의 augmentation을 $\eta:M \rightarrow J^0$, $\eta':N \rightarrow I^0$이라 하자. $\eta$가 injective이고 $I^0$가 injective object이므로, $\eta'\circ u:M \rightarrow I^0$에 대하여 $f^0\circ\eta=\eta'\circ u$이도록 하는 $f^0:J^0 \rightarrow I^0$가 존재한다. 귀납적으로 $f^0,\ldots,f^{n-1}$이 만들어졌다 하고 합성 $d_I^{n-1}\circ f^{n-1}:J^{n-1} \rightarrow I^n$을 생각하면, 앞에서와 같은 계산으로 이 map은 $\im d_J^{n-2}=\ker d_J^{n-1}$ 위에서 $0$이고, 따라서 injective morphism $J^{n-1}/\ker d_J^{n-1}\hookrightarrow J^n$을 통해 $I^n$으로 가는 morphism을 유도한다. $I^n$이 injective object이므로 이를 $J^n$ 전체로 확장하여 $f^n:J^n \rightarrow I^n$을 얻고, 이 construction에 의해 $f^n\circ d_J^{n-1}=d_I^{n-1}\circ f^{n-1}$이 성립한다.
 :::
 
 마지막으로, 다음 글에서 중요하게 사용할 다음 보조정리를 증명하고 마친다. 
@@ -150,7 +149,7 @@ $$d_n^Q\circ\psi=d_n^Q\circ g_n-(d_n^Q\circ s_{n-1})\circ d_n^P=g_{n-1}\circ d_n
 
 $$0 \longrightarrow A'\overset{i}{\longrightarrow}A\overset{p}{\longrightarrow}A'' \longrightarrow 0$$
 
-가 주어졌다 하고, $$A'$$, $$A''$$의 projective resolution들 $$P_\bullet'$$, $$P_\bullet''$$이 주어졌다 하자. 그럼 $$P_n=P_n'\oplus P_n''$$으로 정의되는 chain complex $$P_\bullet$$은 $$A$$의 projective resolution이 되며, 이들 complex들 사이의 exact sequence
+가 주어졌다 하고, $A'$, $A''$의 projective resolution들 $P_\bullet'$, $P_\bullet''$이 주어졌다 하자. 그럼 $P_n=P_n'\oplus P_n''$으로 정의되는 chain complex $P_\bullet$은 $A$의 projective resolution이 되며, 이들 complex들 사이의 exact sequence
 
 $$0 \rightarrow P' \rightarrow P \rightarrow P'' \rightarrow 0$$
 
@@ -161,7 +160,7 @@ $$0 \rightarrow P' \rightarrow P \rightarrow P'' \rightarrow 0$$
 
 ![horseshoe-initial](/assets/images/Math/Homological_Algebra/Resolutions-9.svg){:style="width:20.34em" class="invert" .align-center}
 
-이제 $$P_0''$$이 projective라는 조건으로부터 $$P_0'' \rightarrow A$$을 정의할 수 있다. 한편 $$P_0' \rightarrow A$$는 $$i_A$$와 $$\epsilon'$$의 합성으로 이미 주어지므로, 이들의 direct sum을 생각하면 $$\epsilon:P_0 \rightarrow A$$를 얻는다. 이제 [§Diagram chasing, ⁋보조정리 5](/ko/math/homological_algebra/diagram_chasing#lem5)으로부터 다음의 diagram
+이제 $P_0''$이 projective라는 조건으로부터 $P_0'' \rightarrow A$을 정의할 수 있다. 한편 $P_0' \rightarrow A$는 $i_A$와 $\epsilon'$의 합성으로 이미 주어지므로, 이들의 direct sum을 생각하면 $\epsilon:P_0 \rightarrow A$를 얻는다. 이제 [§Diagram chasing, ⁋보조정리 5](/ko/math/homological_algebra/diagram_chasing#lem5)으로부터 다음의 diagram
 
 ![horseshoe-induction](/assets/images/Math/Homological_Algebra/Resolutions-10.svg){:style="width:20.84em" class="invert" .align-center}
 
@@ -169,5 +168,5 @@ $$0 \rightarrow P' \rightarrow P \rightarrow P'' \rightarrow 0$$
 
 ![horseshoe-finish](/assets/images/Math/Homological_Algebra/Resolutions-11.svg){:style="width:21.61em" class="invert" .align-center}
 
-을 얻게 된다. 이 과정을 반복하여 $$P_\bullet$$을 얻는다.
+을 얻게 된다. 이 과정을 반복하여 $P_\bullet$을 얻는다.
 :::
