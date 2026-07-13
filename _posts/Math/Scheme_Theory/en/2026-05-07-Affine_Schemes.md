@@ -1,7 +1,7 @@
 ---
 title: "Affine Schemes"
-description: "We define the structure sheaf on the spectrum of a ring to construct an affine scheme, and discuss locally ringed spaces and their morphisms."
-excerpt: "Affine schemes defined by the structure sheaf on the spectrum of a ring"
+description: "We construct affine schemes by defining structure sheaves on spectra of rings, and cover the definitions of locally ringed spaces and their morphisms."
+excerpt: "Affine schemes defined by structure sheaves on ring spectra"
 
 categories: [Math / Scheme Theory]
 permalink: /en/math/scheme_theory/affine_schemes
@@ -10,41 +10,40 @@ sidebar:
 
 date: 2025-01-27
 weight: 3
-translated_at: 2026-06-02T00:00:02+00:00
+translated_at: 2026-07-13T15:30:02+00:00
 translation_source: kimi-cli
-last_polished_at: 2026-06-02T00:00:02+00:00
 ---
-The most basic example of a sheaf on a topological space is the collection of continuous functions on that space, and the $\mathcal{O}_{\Spec A}$ we are about to define is similar. However, if $\mathcal{O}_{\Spec A}$ were merely the sheaf of continuous functions on $\Spec A$, there would be no need to give it a new name. For the simplest example, since the only prime ideal of any field $\mathbb{K}$ is $(0)$, the topological space $\Spec \mathbb{K}$ is always a singleton, and there is only one topology on it. In other words, if we wish to distinguish the spectra of two non-isomorphic fields, that information must be encoded in the structure sheaf of $\Spec \mathbb{K}$. To ensure that the spectrum carries enough algebraic information, we define $\mathcal{O}_{\Spec A}$ as the sheaf of algebraic functions on $A$.
+The most basic example of a sheaf defined on a topological space is the collection of continuous functions on that space, and the $\mathcal{O}_{\Spec A}$ we will define is similar. However, if $\mathcal{O}_{\Spec A}$ were simply the sheaf of continuous functions on $\Spec A$, there would be no need to give it a new name. For the simplest example, the unique prime ideal of any field $\mathbb{K}$ is $(0)$, so as a topological space $\Spec \mathbb{K}$ is always a singleton, and there is only one way to put a topology on it. In other words, if we want to distinguish the spectra of two non-isomorphic fields, that information must be contained in the structure sheaf of $\Spec \mathbb{K}$. To ensure that the spectrum carries enough algebraic information, we define $\mathcal{O}_{\Spec A}$ as the sheaf of algebraic functions on $A$.
 
 ## Locally ringed space
 
-We have already treated sheaves on a topological space in [[Topology] §Sheaves](/en/math/topology/sheaves), but the definitions given there are insufficient to describe the structure sheaf we will define on $\Spec A$.
+We have already covered sheaves on topological spaces in [\[Topology\] §Sheaves](/en/math/topology/sheaves), but the definitions given there are insufficient to describe the structure sheaf on $\Spec A$.
 
 ::: Definition 1
-A pair $(X,\mathcal{O}_X)$ consisting of a topological space $X$ and a $\cRing$-valued sheaf $\mathcal{O}_X$ on it is called a *ringed space*. If for every point $x$ of $X$, the stalk $\mathcal{O}_{X,x}$ at $x$ is always a local ring, then this pair $(X, \mathcal{O}_X)$ is called a *locally ringed space*.
+A pair $(X,\mathcal{O}_X)$ of a topological space $X$ and a $\cRing$-valued sheaf $\mathcal{O}_X$ on it is called a *ringed space*. If for every point $x$ of $X$, the stalk $\mathcal{O}_{X,x}$ at $x$ is always a local ring, then this pair $(X, \mathcal{O}_X)$ is called a *locally ringed space*.
 :::
 
-Our claim is that we can define a suitable structure sheaf $\mathcal{O}_{\Spec A}$ on $\Spec A$ to make $(\Spec A, \mathcal{O}_{\Spec A})$ a locally ringed space, and that $\Spec$ defined in this way enjoys the same functoriality as in [§Spectra, ⁋Proposition 2](/en/math/scheme_theory/spectrums#prop2) or [§Spectra, ⁋Proposition 8](/en/math/scheme_theory/spectrums#prop8). To write this down mathematically, we must first define morphisms between locally ringed spaces.
+Our claim is that we can define an appropriate structure sheaf $\mathcal{O}_{\Spec A}$ on $\Spec A$ to make $(\Spec A, \mathcal{O}_{\Spec A})$ a locally ringed space, and that $\Spec$ defined in this way has functoriality as in [§Spectrums, ⁋Proposition 2](/en/math/scheme_theory/spectrums#prop2) or [§Spectrums, ⁋Proposition 8](/en/math/scheme_theory/spectrums#prop8). To write this mathematically, we first need to define morphisms between locally ringed spaces.
 
 ::: Definition 2
-For two ringed spaces $(X, \mathcal{O}_X)$ and $(Y, \mathcal{O}_Y)$, a morphism between them is a pair consisting of a continuous map $\varphi:X \rightarrow Y$ and a morphism $\varphi^\sharp:\mathcal{O}_Y \rightarrow \varphi_\ast \mathcal{O}_X$ in $\Sh(Y,\cRing)$.
+For two ringed spaces $(X, \mathcal{O}_X)$ and $(Y, \mathcal{O}_Y)$, a morphism between them means a pair of a continuous function $\varphi:X \rightarrow Y$ and a morphism $\varphi^\sharp:\mathcal{O}_Y \rightarrow \varphi_\ast \mathcal{O}_X$ in $\Sh(Y;\cRing)$.
 
 A morphism between two locally ringed spaces $(X, \mathcal{O}_X)$ and $(Y, \mathcal{O}_Y)$ is a morphism $(\varphi,\varphi^\sharp)$ of ringed spaces that additionally induces a local homomorphism $\varphi_x^\sharp:\mathcal{O}_{Y,\varphi(x)} \rightarrow \mathcal{O}_{X,x}$ for each $x\in X$.
 :::
 
-## Algebraic Functions on $\Spec A$
+## Algebraic functions on $\Spec A$
 
-Now we must define $\mathcal{O}_{\Spec A}$. As mentioned at the beginning of this post, it is the sheaf of algebraic functions on $\Spec A$, and we saw in [§Spectra, §§Classical algebraic geometry](/en/math/scheme_theory/spectrums#classical-algebraic-geometry) that when $A=\mathbb{K}[\x_1,\ldots, \x_n]$, these are functions that can be represented as rational functions on a suitable neighborhood. What played an important role in this process was that elements of $A$, i.e., polynomials, could be treated as functions on $\mathbb{A}_\mathbb{K}^n=\mSpec A$; however, in the general case, elements of $A$ are not polynomials, and moreover we cannot evaluate points of $\Spec A$ at elements of $A$.
+We now need to define $\mathcal{O}_{\Spec A}$. As mentioned at the beginning of this post, this is the sheaf of algebraic functions on $\Spec A$, and we saw in [§Spectrums, §§Classical algebraic geometry](/en/math/scheme_theory/spectrums#classical-algebraic-geometry) that when $A=\mathbb{K}[\x_1,\ldots, \x_n]$, these are functions that can be represented as rational functions on a suitable neighborhood. What played an important role in this process was that elements of $A$, i.e., polynomials, could be treated as functions on $\mathbb{A}_\mathbb{K}^n=\MaxSpec A$; in the general case, elements of $A$ are not polynomials, and we cannot evaluate points of $\Spec A$ at elements of $A$.
 
-Therefore, to generalize this discussion, we argue as follows. First, we regard an element of $A$ as a function $f$, just as in the preceding example. Then the *function value* of $f$ at a point $\mathfrak{p}\in\Spec A$ is the image of $f$ under the canonical projection $\pr_\mathfrak{p}: A \rightarrow A/\mathfrak{p}$. In particular, the condition that $f$ vanishes at the point $\mathfrak{p}$ is
+Therefore, to generalize this discussion, let us think as follows. First, we regard elements of $A$ as functions $f$, just as in the previous example. Then the *function value* of $f$ at a point $\mathfrak{p}\in\Spec A$ is the image of $f$ under the canonical projection $\pr_\mathfrak{p}: A \rightarrow A/\mathfrak{p}$. In particular, the statement that $f$ vanishes at the point $\mathfrak{p}$ is
 
 $$f\equiv 0\pmod{\mathfrak{p}}\iff f\in \mathfrak{p}\iff \mathfrak{p}\in Z(f)$$
 
-That is, $Z(f)$ can be understood as the set of points where $f=0$, and its complement, the principal open set $D(f)$, as the set of points where $f\neq 0$.
+That is, $Z(f)$ can be understood as the set of points where $f=0$, and its complement, the principal open set $D(f)$, can be understood as the set of points where $f\neq 0$.
 
-From this perspective, we can describe what the *algebraic functions* on $\Spec A$ are. As in [§Spectra, §§Classical algebraic geometry](/en/math/scheme_theory/spectrums#classical-algebraic-geometry), these are defined as functions that can be represented as rational functions whose denominators are functions not vanishing on the given open set.
+From this perspective, we can describe what the *algebraic functions* on $\Spec A$ are. As in [§Spectrums, §§Classical algebraic geometry](/en/math/scheme_theory/spectrums#classical-algebraic-geometry), it suffices to define them as functions that can be represented as rational functions whose denominators are functions that do not vanish on the given open set, whenever an open set is specified.
 
-Now suppose a principal open set $D(f)$ is given. Then by definition, when an algebraic function on $D(f)$ is represented as a rational function $g/h$, the functions $h$ that can appear in the denominator must satisfy $D(f)\subseteq D(h)$.
+Now suppose a principal open set $D(f)$ is given. Then by definition, when we represent an algebraic function on $D(f)$ in the form of a rational function $g/h$, the functions $h$ that can appear in the denominator must satisfy $D(f)\subseteq D(h)$.
 
 ::: Lemma 3
 For a fixed element $f\in A$, define
@@ -54,26 +53,26 @@ $$S(f)=\{h\in A\mid D(f)\subseteq D(h)\}$$
 Then $S(f)$ is a multiplicative subset of $A$.
 :::
 ::: Proof
-First, since $D(1)=\Spec A$, it is obvious that $S(f)$ contains the empty product $1$. Now if $h_1,h_2\in S(f)$, then from the equality
+First, since $D(1)=\Spec A$, it is obvious that $S(f)$ contains the empty product $1$. Now if $h_1,h_2\in S(f)$, then from the identity
 
 $$D(h_1h_2)=\Spec A\setminus Z(h_1h_2)=\Spec A\setminus (Z(h_1)\cup Z(h_2))=(\Spec A\setminus Z(h_1))\cap (\Spec A\setminus Z(h_2))=D(h_1)\cap D(h_2)$$
 
-we know that $D(f)\subseteq D(h_1)\cap D(h_2)=D(h_1h_2)$. This equality is nothing but a geometric explanation of [[Algebraic Structures] §Field of Fractions, ⁋Proposition 8](/en/math/algebraic_structures/field_of_fractions#prop8).
+we know that $D(f)\subseteq D(h_1)\cap D(h_2)=D(h_1h_2)$. This identity is merely a geometric interpretation of [\[Algebraic Structures\] §Field of fractions, ⁋Proposition 8](/en/math/algebraic_structures/field_of_fractions#prop8).
 :::
 
-It is intuitive that the collection of algebraic functions on the subset $D(f)$ of $\Spec A$ should be defined as $S(f)^{-1}A$, and indeed we will define it this way. Before doing so, we prove the following lemma.
+It is now intuitive that we should define the collection of algebraic functions defined on the subset $D(f)$ of $\Spec A$ as $S(f)^{-1}A$, and indeed we will define it that way. Before that, we prove the following lemma.
 
 ::: Lemma 4
-$D(f)\subseteq D(h)$ holds if and only if there exists an integer $n\geq 1$ such that $f^n\in (h)$.
+The condition $D(f)\subseteq D(h)$ is equivalent to the existence of some $n\geq 1$ such that $f^n\in (h)$.
 :::
 ::: Proof
-That $D(f)\subseteq D(h)$ is equivalent to $Z(h)\subseteq Z(f)$, which by the third result of [§Spectra, ⁋Lemma 6](/en/math/scheme_theory/spectrums#lem6) is equivalent to $\sqrt{(f)}\subseteq \sqrt{(h)}$.
+$D(f)\subseteq D(h)$ is equivalent to $Z(h)\subseteq Z(f)$, and by the third result of [§Spectrums, ⁋Lemma 6](/en/math/scheme_theory/spectrums#lem6), this is equivalent to $\sqrt{(f)}\subseteq \sqrt{(h)}$.
 
-If $\sqrt{(f)}\subseteq \sqrt{(h)}$, then from $(f)\subseteq \sqrt{(f)}\subseteq \sqrt{(h)}$ we get $f\in \sqrt{(h)}$, and thus there exists an integer $n\geq 1$ such that $f^n\in (h)$. Conversely, if there exists an integer $n\geq 1$ such that $f^n\in (h)$, then from $f\in \sqrt{(h)}$ we get $(f)\subseteq \sqrt{(h)}$, and therefore
+If $\sqrt{(f)}\subseteq \sqrt{(h)}$, then from $(f)\subseteq \sqrt{(f)}\subseteq \sqrt{(h)}$ we have $f\in \sqrt{(h)}$, and thus there exists some $n\geq 1$ such that $f^n\in (h)$. Conversely, if there exists some $n\geq 1$ such that $f^n\in (h)$, then from $f\in \sqrt{(h)}$ we have $(f)\subseteq \sqrt{(h)}$, and therefore
 
 $$\sqrt{(f)}\subseteq\sqrt{\sqrt{(h)}}=\sqrt{(h)}$$
 
-.
+as desired.
 :::
 
 Using this lemma, we can express $S(f)^{-1}A$ in a cleaner way.
@@ -90,11 +89,9 @@ Moreover, if $S(g)\subseteq S(f)$, then the following diagram
 commutes.
 :::
 ::: Proof
-First, let us denote the canonical morphisms by $\epsilon(f): A \rightarrow S(f)^{-1}A$ and $\epsilon_f:A \rightarrow S_f^{-1}A$. Then since $D(f)=D(f^n)$ for any $n\geq 1$, we have $f^n\in S(f)$, and therefore the image of $S_f$ under $\epsilon(f)$ consists entirely of units in $S(f)^{-1}A$. Hence from [[Commutative Algebra] §Localization, ⁋Proposition 6](/en/math/commutative_algebra/localization#prop6) we obtain the following commutative diagram
+First, let us denote the canonical morphisms by $\epsilon(f): A \rightarrow S(f)^{-1}A$ and $\epsilon_f:A \rightarrow S_f^{-1}A$. Then for any $n\geq 1$, since $D(f)=D(f^n)$, we have $f^n\in S(f)$, and thus the image of $S_f$ under $\epsilon(f)$ consists entirely of units in $S(f)^{-1}A$. Therefore, from [\[Commutative Algebra\] §Localization, ⁋Proposition 6](/en/math/commutative_algebra/localization#prop6) we obtain the following commutative diagram
 
 ![universal_property-1](/assets/images/Math/Scheme_Theory/Affine_Schemes-2.svg){:style="width:8.64em" class="invert" .align-center}
-
-.
 
 Now observe the following equivalence
 
@@ -104,25 +101,25 @@ Then for any $g$ satisfying $D(f)\subseteq D(g)$, we can find suitable $n\geq 1$
 
 $$\frac{g}{1}\frac{a}{f^n}=1\qquad\text{in $S_f^{-1}A$}$$
 
-we know that $g$ is a unit in $S_f^{-1}A$. Therefore, again from [[Commutative Algebra] §Localization, ⁋Proposition 6](/en/math/commutative_algebra/localization#prop6) we obtain the following commutative diagram
+we know that $g$ is a unit in $S_f^{-1}A$. Therefore, again from [\[Commutative Algebra\] §Localization, ⁋Proposition 6](/en/math/commutative_algebra/localization#prop6) we obtain the following commutative diagram
 
 ![universal_property-2](/assets/images/Math/Scheme_Theory/Affine_Schemes-3.svg){:style="width:8.64em" class="invert" .align-center}
 
-That $\overline{\epsilon(f)}$ and $\overline{\epsilon_f}$ are inverse to each other is obvious from uniqueness.
+That $\overline{\epsilon(f)}$ and $\overline{\epsilon_f}$ are inverses of each other is now obvious from uniqueness.
 
-Now suppose $S(g)\subseteq S(f)$. Then $\widehat{\epsilon(f)}:S(g)^{-1}A \rightarrow S(f)^{-1}A$ is again obviously defined via [[Commutative Algebra] §Localization, ⁋Proposition 6](/en/math/commutative_algebra/localization#prop6) by the following diagram
+Now suppose $S(g)\subseteq S(f)$. Then $\widehat{\epsilon(f)}:S(g)^{-1}A \rightarrow S(f)^{-1}A$ is similarly defined through [\[Commutative Algebra\] §Localization, ⁋Proposition 6](/en/math/commutative_algebra/localization#prop6) by the following diagram
 
 ![universal_property-3](/assets/images/Math/Scheme_Theory/Affine_Schemes-4.svg){:style="width:8.64em" class="invert" .align-center}
 
-and since $S(g)\subseteq S(f)\iff D(f)\subseteq D(g)$, from the equivalence ($\ast$) above we know that $g$ is a unit in $S_f^{-1}A$, and therefore so are all $g^k$. From this we obtain the following commutative diagram involving $\widecheck{\epsilon_f}: S_g^{-1}A \rightarrow S_f^{-1}A$:
+and since $S(g)\subseteq S(f)\iff D(f)\subseteq D(g)$, from the equivalence ($\ast$) above we know that $g$ is a unit in $S_f^{-1}A$, and thus so are all $g^k$. From this, there exists the following commutative diagram containing $\widecheck{\epsilon_f}: S_g^{-1}A \rightarrow S_f^{-1}$:
 
 ![universal_property-4](/assets/images/Math/Scheme_Theory/Affine_Schemes-5.svg){:style="width:7.13em" class="invert" .align-center}
 
-Then that the diagram in question commutes is obvious from considering the following diagram:
+That the diagram in the claim commutes is then obvious from considering the following diagram
 
 ![universal_property-5](/assets/images/Math/Scheme_Theory/Affine_Schemes-6.png){:style="width:18.59em" class="invert" .align-center}
 
-That is, from
+that is, from
 
 $$\epsilon_f=\widecheck{\epsilon_f}\circ\epsilon_g=\widecheck{\epsilon_f}\circ\overline{\epsilon_g}\circ\epsilon(g)$$
 
@@ -130,13 +127,13 @@ and
 
 $$\epsilon_f=\overline{\epsilon_f}\circ\epsilon(f)=\overline{\epsilon_f}\circ\widehat{\epsilon(f)}\circ\epsilon(g)$$
 
-we know that $\epsilon_f$ sends elements of $S(g)$ to units in $S_f^{-1}A$, and moreover from the uniqueness of $\widetilde{\epsilon_f}$ defined to satisfy $\epsilon_f=\widetilde{\epsilon_f}\circ\epsilon(g)$ via [[Commutative Algebra] §Localization, ⁋Proposition 6](/en/math/commutative_algebra/localization#prop6), we obtain $\widecheck{\epsilon_f}\circ\overline{\epsilon_g}=\overline{\epsilon_f}\circ\widehat{\epsilon(f)}$.
+we know that $\epsilon_f$ sends elements of $S(g)$ to units in $S_f^{-1}A$, and moreover from the uniqueness of $\widetilde{\epsilon_f}$ defined by $\epsilon_f=\widetilde{\epsilon_f}\circ\epsilon(g)$ via [\[Commutative Algebra\] §Localization, ⁋Proposition 6](/en/math/commutative_algebra/localization#prop6) we obtain $\widecheck{\epsilon_f}\circ\overline{\epsilon_g}=\overline{\epsilon_f}\circ\widehat{\epsilon(f)}$.
 :::
 
-Therefore, it suffices to regard algebraic functions on $D(f)$ as elements of $S_f^{-1}A$. In the previous post we agreed to write $S_f^{-1}A$ as $A_f$ for convenience.
+Therefore, it is sufficient to think of algebraic functions defined on $D(f)$ as elements of $S_f^{-1}A$. For convenience, in the previous post we agreed to write $S_f^{-1}A$ as $A_f$.
 
 ::: Lemma 6
-For the base $\{D(f)\}_{f\in A}$ of $\Spec A$, define for each $f_i\in A$
+For the base $\{D(f)\}_{f\in A}$ of $\Spec A$, for each $f_i\in A$ define
 
 $$\mathcal{F}(D(f_i))=S(f_i)^{-1}A\cong A_{f_i}$$
 
@@ -144,38 +141,34 @@ Also, for each $f_i,f_j\in A$ satisfying $D(f_i)\subseteq D(f_j)$, define the re
 
 $$\rho_{ji}: S(f_j)^{-1}(A) \rightarrow S(f_i)^{-1}(A)$$
 
-as the map obtained by applying [[Commutative Algebra] §Localization, ⁋Proposition 6](/en/math/commutative_algebra/localization#prop6) to the canonical morphism $A\rightarrow S(f_i)^{-1}(A)$. Then these data satisfy the two conditions of [[Topology] §Sheaves, ⁋Proposition 8](/en/math/topology/sheaves#prop8), and therefore the ($\cRing$-valued) sheaf on $\Spec A$ extending $\mathcal{F}$ is uniquely determined.
+as the map obtained by applying [\[Commutative Algebra\] §Localization, ⁋Proposition 6](/en/math/commutative_algebra/localization#prop6) to the canonical morphism $A\rightarrow S(f_i)^{-1}(A)$. Then these data satisfy the two conditions of [\[Topology\] §Sheaves, ⁋Proposition 8](/en/math/topology/sheaves#prop8), and therefore a ($\cRing$-valued) sheaf on $\Spec A$ extending $\mathcal{F}$ is uniquely determined.
 :::
 ::: Proof
-That the $\rho_{ji}$ satisfy the conditions for restriction maps ([[Topology] §Presheaves, ⁋Definition 2](/en/math/topology/presheaves#def2)) is obvious from the universal property of [[Commutative Algebra] §Localization, ⁋Proposition 6](/en/math/commutative_algebra/localization#prop6). Here, by [Lemma 5](#lem5), the map $\rho_{ji}: S(f_j)^{-1}(A) \rightarrow S(f_i)^{-1}(A)$ simply takes an element of $S(f_j)^{-1}(A)$, written in the form
+That the $\rho_{ji}$ satisfy the conditions of restriction maps in [\[Topology\] §Presheaves, ⁋Definition 2](/en/math/topology/presheaves#def2) is obvious from the universal property of [\[Commutative Algebra\] §Localization, ⁋Proposition 6](/en/math/commutative_algebra/localization#prop6). Here, $\rho_{ji}: S(f_j)^{-1}(A) \rightarrow S(f_i)^{-1}(A)$ is, by [Lemma 5](#lem5), simply the map that understands an element of $S(f_j)^{-1}(A)$, when written in the form
 
 $$g/h,\qquad\text{where $h\in S(f_j)$}\tag{$\ast$}$$
 
-and views it as an element of $S(f_i)^{-1}(A)$; indeed, from the relation
+as an element of $S(f_i)^{-1}(A)$ through the identity
 
 $$h\in S(f_j)\iff D(f_j)\subseteq D(h)\implies D(f_i)\subseteq D(h)\iff h\in S(f_i)$$
 
-we can regard ($\ast$) as an element of $S(f_i)^{-1}(A)$.
+We now prove the two conditions of [\[Topology\] §Sheaves, ⁋Proposition 8](/en/math/topology/sheaves#prop8). For notational convenience, since $D(f)=\Spec A_f$, it suffices to consider only the case $f=1$ after replacing $A$ with $A_f$. Fix $f_i\in A$ satisfying $\Spec A=\bigcup_{i\in I}D(f_i)$.
 
-We now prove the two conditions of [[Topology] §Sheaves, ⁋Proposition 8](/en/math/topology/sheaves#prop8). For notational convenience, since $D(f)=\Spec A_f$, it suffices to consider the case $f=1$ after replacing $A$ by $A_f$. Fix elements $f_i\in A$ satisfying $\Spec A=\bigcup_{i\in I}D(f_i)$.
-
-First, to show the first condition, suppose an element $s\in A$ satisfies $s=0$ in $S(f_i)^{-1}A$ for all $i\in I$, and let us show that $s$ is also $0$ as an element of $A$. Then by [§Spectra, ⁋Lemma 12](/en/math/scheme_theory/spectrums#lem12) we can choose $f_1,\ldots, f_n$ among the $f_i$ such that $\Spec A=\bigcup_{i=1}^n D(f_i)$, and by assumption there exist integers $m_i$ satisfying
+First, to show the first condition, suppose an element $s\in A$ satisfies $s=0$ in $S(f_i)^{-1}A$ for all $i\in I$, and let us show that $s$ is also $0$ as an element of $A$. Then by [§Spectrums, ⁋Lemma 12](/en/math/scheme_theory/spectrums#lem12), we can choose $f_1,\ldots, f_n$ among the elements of $(f_i)$ such that $\Spec A=\bigcup_{i=1}^n D(f_i)$, and by assumption there exist $m_i$ satisfying
 
 $$f_i^{m_i}s=0$$
 
-for all $i=1,\ldots, n$. On the other hand, from the calculation after [§Spectra, ⁋Lemma 11](/en/math/scheme_theory/spectrums#lem11) we have $D(f_i^{m_i})=D(f_i)$ for all $i$, so
+for all $i=1,\ldots, n$. On the other hand, from the computation after [§Spectrums, ⁋Lemma 11](/en/math/scheme_theory/spectrums#lem11), we have $D(f_i^{m_i})=D(f_i)$ for all $i$, so
 
 $$\Spec A=\bigcup_{i=1}^n D(f_i^{m_i})$$
 
-and from this there exist elements $a_i\in A$ such that $1=\sum_{i=1}^n a_i f_i^{m_i}$. (See the proof of [§Spectra, ⁋Lemma 12](/en/math/scheme_theory/spectrums#lem12), or the proof of [[Commutative Algebra] §Integral Extensions, ⁋Proposition 15](/en/math/commutative_algebra/integral_extension#prop15))
+and from this there exist $a_i\in A$ such that $1=\sum_{i=1}^n a_i f_i^{m_i}$. (See: proof of [§Spectrums, ⁋Lemma 12](/en/math/scheme_theory/spectrums#lem12), or proof of [\[Commutative Algebra\] §Integral extension, ⁋Proposition 15](/en/math/commutative_algebra/integral_extension#prop15))
 
 Therefore
 
 $$s=1s=\left(\sum_{i=1}^n a_i f_i^{m_i}\right)s=\sum_{i=1}^n a_i (f_i^{m_i}s)=0$$
 
-.
-
-Now to show the second condition, suppose that for each $i$ there exists an element $s_i=a_i/f_i^{m_i}$ in $S(f_i)^{-1}A$ such that for each $i,j$
+Now to show the second condition, suppose for each $i$ there exists an element $s_i=a_i/f_i^{m_i}$ of $S(f_i)^{-1}A$ such that for each $i,j$
 
 $$\frac{a_i}{f_i^{m_i}}=\frac{a_j}{f_j^{m_j}}\quad\text{ in $D(f_i)\cap D(f_j)=D(f_if_j)$}$$
 
@@ -183,13 +176,13 @@ But since $D(f_i)=D(f_i^{m_i})$ and $D(f_j)=D(f_j^{m_j})$, we have
 
 $$D(f_if_j)=D(f_i)\cap D(f_j)=D(f_i^{m_i})\cap D(f_j^{m_j})=D(f_i^{m_i}f_j^{m_j})$$
 
-and therefore there exists an integer $N_{ij}$ such that
+and thus there exists suitable $N_{ij}$ such that
 
-$$(f_i^{m_i}f_j^{m_j})^{N_{ij}}(a_jf_i^{m_j}-a_if_j^{m_i})=0$$
+$$(f_i^{m_i}f_j^{m_j})^{N_{ij}}(a_if_j^{m_j}-a_jf_i^{m_i})=0$$
 
-Let $N=\max_{i,j}\{N_{ij}\}$, so that
+Let $N=\max_{i,j}\{N_{ij}\}$ so that
 
-$$(f_i^{m_i}f_j^{m_j})^N(a_jf_i^{m_j}-a_if_j^{m_i})=0$$
+$$(f_i^{m_i}f_j^{m_j})^N(a_if_j^{m_j}-a_jf_i^{m_i})=0$$
 
 that is,
 
@@ -199,11 +192,11 @@ From the given assumption
 
 $$\Spec A=\bigcup_{i=1}^n D(f_i)=\bigcup_{i=1}^n D(f_i^{Nm_i+m_i})$$
 
-there exist elements $b_i\in A$ such that
+we can find suitable $b_i\in A$ such that
 
-$$1=\sum_{i=1}^n b_ia_if_i^{Nm_i+m_i}$$
+$$1=\sum_{i=1}^n b_if_i^{Nm_i+m_i}$$
 
-Now set $s=\sum_{i=1}^n b_ia_i f_i^{Nm_i}$; then
+Now if we set $s=\sum_{i=1}^n b_ia_i f_i^{Nm_i}$, then
 
 $$sf_j^{Nm_j+m_j}=\sum_{i=1}^n b_ia_i f_i^{Nm_i} f_j^{Nm_j+m_j}=\sum_{i=1}^nb_ia_jf_j^{Nm_j}f_i^{Nm_i+m_i}=a_jf_j^{Nm_j}$$
 
@@ -213,15 +206,15 @@ $$\frac{s}{1}=\frac{a_j}{f_j^{m_j}}$$
 
 From this we obtain the desired $s$.
 
-If $I$ is infinite, choose a finite subset $J=\{1,\ldots, n\}$ of $I$ satisfying $\Spec A=\bigcup_{j\in J} D(f_j)$ and repeat the above to obtain $s\in \mathcal{F}(\Spec A)$; then it suffices to show that this also satisfies $s_\alpha=s\vert_{D(f_\alpha)}$ on $D(f_\alpha)$ for $\alpha\in I\setminus J$. To show this, repeat the same process for the finite set
+If $I$ is infinite, choose a finite subset $J=\{1,\ldots, n\}$ of $I$ satisfying $\Spec A=\bigcup_{j\in J} D(f_j)$, and repeat the above to obtain $s\in \mathcal{F}(\Spec A)$; then we need to show that this also satisfies $s_\alpha=s\vert_{D(f_\alpha)}$ for $D(f_\alpha)$ with $\alpha\in I\setminus J$. To show this, repeat the same process for the finite set
 
 $$J\cup\{\alpha\}=\{1,2,\ldots, n,\alpha\}\subseteq I$$
 
-to obtain $s'\in \mathcal{F}(\Spec A)$. Then by definition $s$ and $s'$ satisfy $s\vert_{D(f_i)}=s'\vert_{D(f_i)}$ for all $i=1,\ldots, n$, and since $\Spec A=\bigcup D(f_i)$, by the first condition of [[Topology] §Sheaves, ⁋Proposition 8](/en/math/topology/sheaves#prop8) shown above we know $s=s'$, and from this
+to obtain $s'\in \mathcal{F}(\Spec A)$. Then by definition $s$ and $s'$ satisfy $s\vert_{D(f_i)}=s'\vert_{D(f_i)}$ for all $i=1,\ldots, n$, and since $\Spec A=\bigcup D(f_i)$, from the first condition of [\[Topology\] §Sheaves, ⁋Proposition 8](/en/math/topology/sheaves#prop8) shown above we know $s=s'$, and thus
 
 $$s\vert_{D(f_\alpha)}=s'\vert_{D(f_\alpha)}=s_\alpha$$
 
-Since this holds for every $\alpha$, the restriction of $s$ to any $D(f_\alpha)$ equals $s_\alpha$.
+Since this holds for all $\alpha$, $s$ becomes $s_\alpha$ when restricted to any $D(f_\alpha)$.
 :::
 
 ::: Definition 7
@@ -242,137 +235,228 @@ Moreover, for any $f\in A$ satisfying $\mathfrak{p}\in D(f)$, the following diag
 commutes.
 :::
 ::: Proof
-Since the $D(f)$ form a base for $\Spec A$ by [[Topology] §Bases of Topological Spaces, ⁋Proposition 2](/en/math/topology/topological_bases#prop2), we have
+By [\[Topology\] §Topological bases, ⁋Proposition 2](/en/math/topology/topological_bases#prop2), the $D(f)$ form a base for $\Spec A$, so by [\[Topology\] §Topological bases, ⁋Proposition 5](/en/math/topology/topological_bases#prop5)
 
 $$\mathcal{O}_{\Spec A, \mathfrak{p}}=\varinjlim_{D(f)\ni\mathfrak{p}} \mathcal{O}_{\Spec A}(D(f))$$
 
-by [[Topology] §Bases of Topological Spaces, ⁋Proposition 5](/en/math/topology/topological_bases#prop5). On the other hand, since $\mathfrak{p}\in D(f)\iff f\not\in \mathfrak{p}$, we obtain the following diagram
+On the other hand, since $\mathfrak{p}\in D(f)\iff f\not\in \mathfrak{p}$, we obtain the following diagram
 
 ![stalk_and_localization-2](/assets/images/Math/Scheme_Theory/Affine_Schemes-8.png){:style="width:38.50em" class="invert" .align-center}
 
-and therefore proving the given isomorphism is the same as proving the following algebraic isomorphism
+and therefore showing the given isomorphism is the same as showing the following algebraic isomorphism
 
 $$A_\mathfrak{p}\cong \varinjlim_{\mathfrak{p}\not\ni f} A_f\tag{$\ast\ast$}$$
 
-which follows by using the universal property of localization ([[Commutative Algebra] §Localization, ⁋Proposition 6](/en/math/commutative_algebra/localization#prop6)) and the universal property of direct limits. For the diagram in question, one simply replaces $\varinjlim A_f$ by $A_\mathfrak{p}$ in the above diagram via the isomorphism ($\ast\ast$).
+which follows from using the universal property of [\[Commutative Algebra\] §Localization, ⁋Proposition 6](/en/math/commutative_algebra/localization#prop6) and the universal property of direct limits. The diagram in the claim is obtained by replacing $\varinjlim A_f$ with $A_\mathfrak{p}$ in the above diagram via the isomorphism ($\ast\ast$).
 :::
 
-Now we are finally ready to write down the functoriality of $\Spec$ in the form we want.
+We are now finally ready to write the functoriality of $\Spec$ in the form we want.
 
 ::: Proposition 9
 The correspondence $A\mapsto (\Spec A, \mathcal{O}_{\Spec A})$ defines a contravariant functor $\Spec: \cRing^\op \rightarrow \LRS$.
 :::
 ::: Proof
-We already know that a ring homomorphism $\phi: A \rightarrow B$ induces a continuous map $\Spec\phi: \Spec B \rightarrow \Spec A$. ([§Spectra, ⁋Proposition 8](/en/math/scheme_theory/spectrums#prop8)) Therefore it suffices to describe
+We already know that a ring homomorphism $\phi: A \rightarrow B$ induces a continuous function $\Spec\phi: \Spec B \rightarrow \Spec A$. ([§Spectrums, ⁋Proposition 8](/en/math/scheme_theory/spectrums#prop8)) Therefore, it suffices to describe
 
 $$(\Spec\phi)^\sharp: \mathcal{O}_{\Spec A} \rightarrow (\Spec\phi)_\ast \mathcal{O}_{\Spec B}$$
 
-For this, we look at the map on principal open sets
+To do this, we look at the functions on principal open sets
 
 $$(\Spec\phi)^\sharp(D(f)): \mathcal{O}_{\Spec A}(D(f)) \rightarrow \mathcal{O}_{\Spec B}((\Spec \phi)^{-1}(D(f)))$$
 
-On the other hand, from the proof of [§Spectra, ⁋Proposition 8](/en/math/scheme_theory/spectrums#prop8) we know that
+On the other hand, from the proof of [§Spectrums, ⁋Proposition 8](/en/math/scheme_theory/spectrums#prop8)
 
 $$(\Spec\phi)^{-1}(Z(f))=Z(\phi(f))$$
 
-and therefore
+so
 
 $$(\Spec\phi)^{-1}(D(f))=D(\phi(f))$$
 
-Thus, by the definition of the structure sheaf, defining $(\Spec\phi)^\sharp(D(f))$ is the same as defining
+Therefore, by the definition of the structure sheaf, defining $(\Spec\phi)^\sharp(D(f))$ is the same as defining
 
 $$A_f \rightarrow B_{\phi(f)}$$
 
-and this is obtained by applying [[Commutative Algebra] §Localization, ⁋Proposition 6](/en/math/commutative_algebra/localization#prop6) to the composition
+and this is obtained by applying [\[Commutative Algebra\] §Localization, ⁋Proposition 6](/en/math/commutative_algebra/localization#prop6) to the composition
 
 $$A \overset{\phi}{\longrightarrow}B \overset{\epsilon}{\longrightarrow} B_{\phi(f)}$$
 
-Of course, we must show that this $(\Spec\phi)^\sharp$ defines the same map on the intersection $D(f)\cap D(g)$, but this follows from using the uniqueness result in [[Commutative Algebra] §Localization, ⁋Proposition 6](/en/math/commutative_algebra/localization#prop6) on $D(f)\cap D(g)$.
+Of course, we must show that $(\Spec\phi)^\sharp$ defined in this way defines the same function on the intersection $D(f)\cap D(g)$, but this follows from using the uniqueness result in [\[Commutative Algebra\] §Localization, ⁋Proposition 6](/en/math/commutative_algebra/localization#prop6) with the fact that $D(f)\cap D(g)$.
 
-From the above we know that $(\Spec\phi, (\Spec\phi)^\sharp): (\Spec B, \mathcal{O}_{\Spec B}) \rightarrow (\Spec A, \mathcal{O}_{\Spec A})$ is a morphism of ringed spaces. Now to show that this is a morphism of locally ringed spaces, it suffices to show that for any $\mathfrak{q}\in \Spec B$,
+From the above, we know that $(\Spec\phi, (\Spec\phi)^\sharp): (\Spec B, \mathcal{O}_{\Spec B}) \rightarrow (\Spec A, \mathcal{O}_{\Spec A})$ is a morphism of ringed spaces. To show that this is a morphism of locally ringed spaces, for any $\mathfrak{q}\in \Spec B$ we need
 
 $$(\Spec\phi)^\sharp_\mathfrak{q}:\mathcal{O}_{\Spec A, (\Spec \phi)(\mathfrak{q})} \rightarrow\mathcal{O}_{\Spec B, \mathfrak{q}}$$
 
-is a local homomorphism. But $(\Spec \phi)(\mathfrak{q})=\phi^{-1}(\mathfrak{q})$, and therefore by [Lemma 8](#lem8) the map $(\Spec\phi)^\sharp_\mathfrak{q}$ is a ring homomorphism from $A_{\phi^{-1}(\mathfrak{q})}$ to $B_{\mathfrak{q}}$ that sends the unique maximal ideal $\phi^{-1}(\mathfrak{q})A_{\phi^{-1}(\mathfrak{q})}$ of $A_{\phi^{-1}(\mathfrak{q})}$ to the unique maximal ideal $\mathfrak{q}B_\mathfrak{q}$ of $B_{\mathfrak{q}}$.
+to be a local homomorphism. But $(\Spec \phi)(\mathfrak{q})=\phi^{-1}(\mathfrak{q})$, and therefore by [Lemma 8](#lem8), $(\Spec\phi)^\sharp_\mathfrak{q}$ is a ring homomorphism from $A_{\phi^{-1}(\mathfrak{q})}$ to $B_{\mathfrak{q}}$ that sends the unique maximal ideal $\phi^{-1}(\mathfrak{q})A_{\phi^{-1}(\mathfrak{q})}$ of $A_{\phi^{-1}(\mathfrak{q})}$ to the unique maximal ideal $\mathfrak{q}B_\mathfrak{q}$ of $B_\mathfrak{q}$.
 :::
 
-## Affine Schemes
+## Affine scheme
 
 ::: Definition 10
-We define the essential image of the functor $\Spec:\cRing^\op \rightarrow \LRS$ from [Proposition 9](#prop9) as the *affine scheme*.
+We define the *affine scheme* as the essential image of the functor $\Spec:\cRing^\op \rightarrow \LRS$ in [Proposition 9](#prop9).
 :::
 
-We write the category of affine schemes as $\AffSch$. Then the contravariant functor $\Spec:\cRing^\op \rightarrow \AffSch$ is essentially surjective by definition. ([[Category Theory] §Natural Transformations, ⁋Theorem 5](/en/math/category_theory/natural_transformations#thm5)) Also, if $(\varphi, \varphi^\sharp): (\Spec B, \mathcal{O}_{\Spec B}) \rightarrow (\Spec A, \mathcal{O}_{\Spec A})$ is induced by some ring homomorphism $\phi$, then taking $1=f\in A$ in the proof of [Proposition 9](#prop9) gives
+We write the category of affine schemes as $\AffSch$. Then the contravariant functor $\Spec:\cRing^\op \rightarrow \AffSch$ is essentially surjective by definition. ([\[Category Theory\] §Natural transformations, ⁋Theorem 5](/en/math/category_theory/natural_transformations#thm5)) Also, if $(\varphi, \varphi^\sharp): (\Spec B, \mathcal{O}_{\Spec B}) \rightarrow (\Spec A, \mathcal{O}_{\Spec A})$ is induced from some ring homomorphism $\phi$, then from the proof of [Proposition 9](#prop9) with $1=f\in A$
 
 $$\varphi^\sharp(D(1))= \bigl(A \overset{\phi}{\longrightarrow} B \overset{\id_B}{\longrightarrow} B_{\phi(1)}=B\bigr)=\phi$$
 
-and therefore this functor is necessarily faithful. Moreover, the following holds.
+so this functor is necessarily faithful. Moreover, the following holds.
 
 ::: Proposition 11
 The functor $\Spec: \cRing^\op \rightarrow \LRS$ is fully faithful.
 :::
 ::: Proof
-Suppose we are given two affine schemes $(X, \mathcal{O}_{X})$ and $(Y, \mathcal{O}_{Y})$ and a morphism
+Given any two affine schemes $(X, \mathcal{O}_{X})$, $(Y, \mathcal{O}_{Y})$ and a morphism between them
 
 $$(X, \mathcal{O}_{X}) \rightarrow (Y, \mathcal{O}_{Y})$$
 
-between them. Then via isomorphisms $(\Spec B, \mathcal{O}_{\Spec B})\cong (X, \mathcal{O}_X)$ and $(\Spec A, \mathcal{O}_{\Spec A})\cong (Y, \mathcal{O}_Y)$, we can view this as a morphism
+through isomorphisms $(\Spec B, \mathcal{O}_{\Spec B})\cong (X, \mathcal{O}_X)$ and $(\Spec A, \mathcal{O}_{\Spec A})\cong (Y, \mathcal{O}_Y)$, we can view this as a morphism (as locally ringed spaces) between two spectra
 
 $$(\varphi, \varphi^\sharp): (\Spec B, \mathcal{O}_{\Spec B}) \rightarrow (\Spec A, \mathcal{O}_{\Spec A})$$
 
-between the two spectra (as locally ringed spaces). Therefore it suffices to prove that this morphism of locally ringed spaces comes from some ring homomorphism $\phi$. Taking a hint from the above proof that $\Spec$ is faithful, define a ring homomorphism $\phi:A \rightarrow B$ by
+Therefore, it suffices to prove that this morphism of locally ringed spaces comes from a suitable ring homomorphism $\phi$. Taking a hint from the above proof that $\Spec$ is faithful, define a ring homomorphism $\phi:A \rightarrow B$ by
 
 $$\phi=\varphi^\sharp(D(1)):A \rightarrow B$$
 
-Now to complete the claim we must show that $\Spec\phi=(\varphi,\varphi^\sharp)$. This is shown by proving that for any $\mathfrak{q}\in \Spec B$,
+To complete the claim, we now need to show that $\Spec\phi=(\varphi,\varphi^\sharp)$. This is
+
+For any $\mathfrak{q}\in \Spec B$
 
 $$(\Spec \phi)(\mathfrak{q})=\phi^{-1}(\mathfrak{q})=\varphi(\mathfrak{q})$$
 
-First, putting $f=1$ in [Lemma 8](#lem8), we obtain the following diagram
+Let us show this. First, putting $f=1$ in [Lemma 8](#lem8), we obtain the following diagram
 
 ![faithful](/assets/images/Math/Scheme_Theory/Affine_Schemes-9.png){:style="width:40.92em" class="invert" .align-center}
 
-In this diagram, the vertical maps are all isomorphisms, and we know that all faces except the following one
+In this diagram, the vertical maps are all isomorphisms, and we know that all faces except the following face
 
 ![commuting_square](/assets/images/Math/Scheme_Theory/Affine_Schemes-10.svg){:style="width:13.26em" class="invert" .align-center}
 
-are commuting squares. Therefore, in the above diagram the map $A \rightarrow \mathcal{O}_{\Spec B, \mathfrak{q}}$ is determined equally no matter which path we take, and applying [[Commutative Algebra] §Localization, ⁋Proposition 6](/en/math/commutative_algebra/localization#prop6) to this map uniquely determines $A_{\varphi(\mathfrak{q})} \rightarrow \mathcal{O}_{\Spec B, \mathfrak{q}}$. From this we know that *all* faces of the above diagram are commuting squares. That is, $\phi_\mathfrak{q}:A_{\varphi(\mathfrak{q})}\rightarrow B_\mathfrak{q}$ is also a local homomorphism, and therefore $\phi^{-1}(\mathfrak{q})=\varphi(\mathfrak{q})$. Now that $\phi$ equals $\varphi^\sharp$ on the structure sheaf follows by considering only restriction maps, so the desired claim is proved from the above.
+are commuting squares. Therefore, in the above diagram, $A \rightarrow \mathcal{O}_{\Spec B, \mathfrak{q}}$ is determined identically no matter which path we take, and applying [\[Commutative Algebra\] §Localization, ⁋Proposition 6](/en/math/commutative_algebra/localization#prop6) to this map uniquely determines $A_{\varphi(\mathfrak{q})} \rightarrow \mathcal{O}_{\Spec B, \mathfrak{q}}$. From this we know that *all* faces of the above diagram are commuting squares. That is, $\phi_\mathfrak{q}:A_{\varphi(\mathfrak{q})}\rightarrow B_\mathfrak{q}$ is also a local homomorphism, and thus $\phi^{-1}(\mathfrak{q})=\varphi(\mathfrak{q})$. Now that $\phi$ equals $\varphi^\sharp$ on the structure sheaf, it suffices to consider only restriction maps, and therefore the desired claim is proved.
 :::
 
-Therefore, viewing $\Spec$ as a contravariant functor from $\cRing$ to $\AffSch$, it is a categorical equivalence between the two categories $\cRing^\op$ and $\AffSch$. Moreover, by [Proposition 11](#prop11), $\AffSch$ is a full subcategory of $\LRS$.
+Thus, viewing $\Spec$ as a contravariant functor from $\cRing$ to $\AffSch$, we see that $\Spec$ is a categorical equivalence between the two categories $\cRing^\op$ and $\AffSch$. Moreover, by [Proposition 11](#prop11), $\AffSch$ is a full subcategory of $\LRS$.
 
-By [[Category Theory] §Natural Transformations, ⁋Theorem 5](/en/math/category_theory/natural_transformations#thm5), it suffices to show that $\Spec$ is full.
+By [\[Category Theory\] §Natural transformations, ⁋Theorem 5](/en/math/category_theory/natural_transformations#thm5), it suffices to show that $\Spec$ is full.
 
-On the other hand, for any spectrum $(\Spec A, \mathcal{O}_{\Spec A})$, we know by definition that
+On the other hand, for any spectrum $(\Spec A, \mathcal{O}_{\Spec A})$, by definition we know
 
 $$\mathcal{O}_{\Spec A}(A)=\mathcal{O}_{\Spec A}(D(1))\cong A$$
 
-If a locally ringed space $(X, \mathcal{O}_X)$ is an affine scheme, then by examining $\mathcal{O}_X(X)$ in the same way we can determine whether $(X, \mathcal{O}_X)$ is isomorphic to the spectrum of some ring. That is, for an affine scheme $(X, \mathcal{O}_X)$, if we set $A=\mathcal{O}_X(X)$ then $(X, \mathcal{O}_X)\cong (\Spec A, \mathcal{O}_{\Spec A})$ holds. More generally, we define the following.
+If the locally ringed space $(X, \mathcal{O}_X)$ were an affine scheme, we could similarly examine $\mathcal{O}_X(X)$ to see whether $(X, \mathcal{O}_X)$ is isomorphic to the spectrum of some ring. That is, for an affine scheme $(X, \mathcal{O}_X)$, letting $A=\mathcal{O}_X(X)$, we have $(X, \mathcal{O}_X)\cong (\Spec A, \mathcal{O}_{\Spec A})$. More generally, we define the following.
 
 ::: Definition 12
 For any locally ringed space $(X, \mathcal{O}_X)$, we define the *global section functor* $\Gamma:\LRS \rightarrow \cRing^\op$ by $X\mapsto \Gamma(X, \mathcal{O}_X)=\mathcal{O}_X(X)$.[^1]
 :::
 
-A notable fact in the proof of [Proposition 11](#prop11) is that the hypothesis that $(X, \mathcal{O}_X)$ is an affine scheme is unnecessary. That is, even if we drop the assumption $(X, \mathcal{O}_X)\cong(\Spec B, \mathcal{O}_{\Spec B})$ and use the following diagram instead of the diagram in [Proposition 11](#prop11),
+A notable fact from the proof of [Proposition 11](#prop11) is that the assumption that $(X, \mathcal{O}_X)$ is an affine scheme is unnecessary. That is, even if we drop the assumption $(X, \mathcal{O}_X)\cong(\Spec B, \mathcal{O}_{\Spec B})$ and use the following diagram instead of the diagram in [Proposition 11](#prop11)
 
 ![adjoint](/assets/images/Math/Scheme_Theory/Affine_Schemes-11.png){:style="width:36.41em" class="invert" .align-center}
 
-we can carry out a similar argument, and in this case the $B$ in the conclusion is replaced by $\Gamma(X, \mathcal{O}_X)$. Since $\mathcal{O}_X$ is data determined by $X$ anyway, writing this briefly as $\Gamma(X)$, we obtain the following theorem.
+we can carry out a similar argument, and in this case the conclusion's $B$ is replaced by $\Gamma(X, \mathcal{O}_X)$. Since $\mathcal{O}_X$ is data determined by $X$ anyway, if we briefly write this as $\Gamma(X)$, we obtain the following theorem.
 
 ::: Theorem 13
-For any locally ringed space $(X, \mathcal{O}_X)$ and any ring $A$, there exists a natural isomorphism
+For any locally ringed space $(X, \mathcal{O}_X)$ and ring $A$, there exists a natural isomorphism
 
 $$\Hom_\LRS(X, \Spec A)\cong \Hom_{\cRing^\op}(\Gamma(X), A)=\Hom_{\cRing}(A, \Gamma(X))$$
 
 That is, the global section functor $\Gamma: \LRS \rightarrow \cRing^\op$ is the left adjoint of the $\Spec$ functor $\Spec:\cRing^\op \rightarrow \LRS$.
+:::
+::: Proof
+Through the isomorphism $\mathcal{O}_{\Spec A}(D(f))\cong A_f$ of [Lemma 6](#lem6), let us identify $\mathcal{O}_{\Spec A}(\Spec A)=\mathcal{O}_{\Spec A}(D(1))$ with $A$. Under this identification, the restriction map of $\mathcal{O}_{\Spec A}$ from $\mathcal{O}_{\Spec A}(\Spec A) \rightarrow \mathcal{O}_{\Spec A}(D(f))$ is the canonical morphism $\epsilon_f: A \rightarrow A_f$.
+
+First, we define two correspondences $\Phi$ and $\Psi$, and then show that they are inverses of each other. Given a morphism $(\varphi,\varphi^\sharp): X \rightarrow \Spec A$ of locally ringed spaces, computing $\varphi^\sharp$ on the open set $\Spec A$ gives the ring homomorphism
+
+$$\Phi(\varphi,\varphi^\sharp)=\varphi^\sharp(\Spec A): A=\mathcal{O}_{\Spec A}(\Spec A) \rightarrow (\varphi_\ast\mathcal{O}_X)(\Spec A)=\mathcal{O}_X(X)=\Gamma(X)$$
+
+Conversely, suppose a ring homomorphism $\phi:A \rightarrow \Gamma(X)$ is given. For each $x\in X$, write the ring homomorphism obtained by composing $\phi$ with the map taking germs $\Gamma(X) \rightarrow \mathcal{O}_{X,x}$ as $\phi_x:A \rightarrow \mathcal{O}_{X,x}$. That is, $\phi_x(a)=\phi(a)_x$. Now since $(X,\mathcal{O}_X)$ is a locally ringed space, $\mathcal{O}_{X,x}$ is a local ring with unique maximal ideal $\mathfrak{m}_x$, and therefore by [\[Algebraic Structures\] §Field of fractions, ⁋Proposition 9](/en/math/algebraic_structures/field_of_fractions#prop9)
+
+$$\varphi(x)=\phi_x^{-1}(\mathfrak{m}_x)$$
+
+is a prime ideal of $A$, that is, a point of $\Spec A$.
+
+Let us show that the function $\varphi: X \rightarrow \Spec A$ defined in this way is continuous. To do this, for any $s\in \Gamma(X)$ we show that
+
+$$X_s=\{x\in X\mid \text{$s_x\not\in \mathfrak{m}_x$}\}$$
+
+is an open set of $X$. By [\[Commutative Algebra\] §Localization, ⁋Proposition 2](/en/math/commutative_algebra/localization#prop2), $\mathfrak{m}_x$ is the set of all non-units of the local ring $\mathcal{O}_{X,x}$, so $x\in X_s$ is equivalent to $s_x$ being a unit of $\mathcal{O}_{X,x}$. Now if $x\in X_s$, there exists $t\in \mathcal{O}_{X,x}$ satisfying $s_xt=1$, and choosing a suitable open neighborhood $W$ of $x$ and a section $u\in \mathcal{O}_X(W)$ representing $t$, we have $(s\vert_Wu)_x=1_x$, so if necessary we can shrink $W$ so that $s\vert_Wu=1$ in $\mathcal{O}_X(W)$. Then for any $y\in W$, since $s_yu_y=1$, $s_y$ is a unit of $\mathcal{O}_{X,y}$, and therefore $W\subseteq X_s$. That is, $X_s$ is an open set.
+
+On the other hand, for any $f\in A$
+
+$$\varphi^{-1}(D(f))=\{x\in X\mid f\not\in \varphi(x)\}=\{x\in X\mid \phi(f)_x\not\in \mathfrak{m}_x\}=X_{\phi(f)}$$
+
+and since principal open sets form a base for $\Spec A$ ([§Spectrums, ⁋Lemma 11](/en/math/scheme_theory/spectrums#lem11)), $\varphi$ is a continuous function.
+
+We now define the sheaf morphism $\varphi^\sharp: \mathcal{O}_{\Spec A} \rightarrow \varphi_\ast \mathcal{O}_X$. For each $f\in A$, let $V_f=\varphi^{-1}(D(f))=X_{\phi(f)}$, and write the ring homomorphism obtained by composing $\phi$ with the restriction map as
+
+$$\theta_f: A\overset{\phi}{\longrightarrow} \Gamma(X) \longrightarrow \mathcal{O}_X(V_f)$$
+
+Our claim is that $\theta_f(f)=\phi(f)\vert_{V_f}$ is a unit of $\mathcal{O}_X(V_f)$. Indeed, by the definition of $V_f$, for any $y\in V_f$ the germ $\phi(f)_y$ is a unit of $\mathcal{O}_{X,y}$, so repeating the above argument we can find an open neighborhood $W_y\subseteq V_f$ of $y$ and $u_y\in \mathcal{O}_X(W_y)$ such that $\phi(f)\vert_{W_y}u_y=1$. Then on the intersection $W_y\cap W_{y'}$, the restrictions of $u_y$ and $u_{y'}$ are both multiplicative inverses of $\phi(f)\vert_{W_y\cap W_{y'}}$, so they agree, and therefore by the gluability axiom of [\[Topology\] §Sheaves, ⁋Definition 1](/en/math/topology/sheaves#def1) they glue to a single $u\in \mathcal{O}_X(V_f)$. Now $\phi(f)\vert_{V_f}u$ and $1$ agree on each $W_y$, so by the identity axiom $\phi(f)\vert_{V_f}u=1$.
+
+In particular, $\theta_f$ sends all elements of the multiplicative subset $S_f=\{1,f,f^2,\ldots\}$ to units of $\mathcal{O}_X(V_f)$, so by [\[Commutative Algebra\] §Localization, ⁋Proposition 6](/en/math/commutative_algebra/localization#prop6)
+
+$$\varphi^\sharp(D(f))\circ \epsilon_f=\theta_f$$
+
+there exists a unique ring homomorphism
+
+$$\varphi^\sharp(D(f)): A_f=\mathcal{O}_{\Spec A}(D(f)) \rightarrow \mathcal{O}_X(V_f)=(\varphi_\ast\mathcal{O}_X)(D(f))$$
+
+satisfying this. If $D(g)\subseteq D(f)$, then $V_g\subseteq V_f$, and both compositions
+
+$$A_f \overset{\varphi^\sharp(D(f))}{\longrightarrow} \mathcal{O}_X(V_f) \longrightarrow \mathcal{O}_X(V_g),\qquad A_f \longrightarrow A_g \overset{\varphi^\sharp(D(g))}{\longrightarrow} \mathcal{O}_X(V_g)$$
+
+become $\theta_g$ when composed with $\epsilon_f$, so by the uniqueness of [\[Commutative Algebra\] §Localization, ⁋Proposition 6](/en/math/commutative_algebra/localization#prop6) they are equal. That is, the $\varphi^\sharp(D(f))$ commute with restriction maps.
+
+Now for any open set $U\subseteq \Spec A$ and $s\in \mathcal{O}_{\Spec A}(U)$, for each principal open set $D(f)$ contained in $U$ consider the section
+
+$$\varphi^\sharp(D(f))(s\vert_{D(f)})\in (\varphi_\ast\mathcal{O}_X)(D(f))$$
+
+Since the intersection of two principal open sets $D(f)\cap D(g)=D(fg)$ is also a principal open set, from the above commutativity these sections agree on the intersection, and therefore by the gluability axiom and identity axiom of the sheaf $\varphi_\ast\mathcal{O}_X$ they glue to a unique $\varphi^\sharp(U)(s)\in (\varphi_\ast\mathcal{O}_X)(U)$. That this $\varphi^\sharp(U)$ is a ring homomorphism and commutes with restriction maps follows again from the identity axiom, and thus we obtain the sheaf morphism $\varphi^\sharp$.
+
+Finally, let us show that $(\varphi,\varphi^\sharp)$ is a morphism of locally ringed spaces. For any $x\in X$ and $\mathfrak{p}=\varphi(x)$, by [Lemma 8](#lem8) we have $\mathcal{O}_{\Spec A,\mathfrak{p}}\cong A_\mathfrak{p}$, and under this identification the stalk morphism $\varphi_x^\sharp: A_\mathfrak{p} \rightarrow \mathcal{O}_{X,x}$ induced by $\varphi^\sharp$ satisfies, taking germs at $x$ of both sides of the identity $\varphi^\sharp(D(f))\circ\epsilon_f=\theta_f$,
+
+$$\varphi^\sharp_x\circ\epsilon=\phi_x$$
+
+Here $\epsilon: A \rightarrow A_\mathfrak{p}$ is the canonical morphism. Now for any $a/s\in A_\mathfrak{p}$, since $s\not\in \mathfrak{p}=\phi_x^{-1}(\mathfrak{m}_x)$, the element $\phi_x(s)$ is a unit, and therefore
+
+$$\varphi_x^\sharp(a/s)=\phi_x(a)\phi_x(s)^{-1}$$
+
+In particular, if $a\in \mathfrak{p}$ then $\phi_x(a)\in \mathfrak{m}_x$, so $\varphi_x^\sharp(a/s)\in \mathfrak{m}_x$, and thus the ideal $(\varphi_x^\sharp)^{-1}(\mathfrak{m}_x)$ contains $\mathfrak{p}A_\mathfrak{p}$. On the other hand, since $\varphi_x^\sharp(1)=1\not\in \mathfrak{m}_x$, this ideal is not all of $A_\mathfrak{p}$, and since $\mathfrak{p}A_\mathfrak{p}$ is the unique maximal ideal of $A_\mathfrak{p}$ ([\[Commutative Algebra\] §Localization, ⁋Proposition 8](/en/math/commutative_algebra/localization#prop8))
+
+$$(\varphi_x^\sharp)^{-1}(\mathfrak{m}_x)=\mathfrak{p}A_\mathfrak{p}$$
+
+That is, $\varphi_x^\sharp$ is a local homomorphism, and by [Definition 2](#def2), $\Psi(\phi)=(\varphi,\varphi^\sharp)$ is a morphism of locally ringed spaces.
+
+Now let us show that $\Phi$ and $\Psi$ are inverses of each other. First, for $\Psi(\phi)=(\varphi,\varphi^\sharp)$, putting $f=1$ gives $D(1)=\Spec A$, $V_1=X$, and $\epsilon_1=\id_A$, so the above construction gives
+
+$$\Phi(\Psi(\phi))=\varphi^\sharp(\Spec A)=\theta_1=\phi$$
+
+Conversely, suppose a morphism $(\varphi,\varphi^\sharp): X \rightarrow \Spec A$ of locally ringed spaces is given, let $\phi=\Phi(\varphi,\varphi^\sharp)=\varphi^\sharp(\Spec A)$, and let $\Psi(\phi)=(\varphi',(\varphi')^\sharp)$. For any $x\in X$, since $\varphi^\sharp$ commutes with restriction maps, the stalk morphism $\varphi_x^\sharp: \mathcal{O}_{\Spec A, \varphi(x)}\cong A_{\varphi(x)} \rightarrow \mathcal{O}_{X,x}$ induced by $\varphi^\sharp$ satisfies $\varphi_x^\sharp\circ\epsilon=\phi_x$, where $\epsilon: A \rightarrow A_{\varphi(x)}$ being the canonical morphism follows from [Lemma 8](#lem8). On the other hand, since $(\varphi,\varphi^\sharp)$ is a morphism of locally ringed spaces, $\varphi_x^\sharp$ is a local homomorphism, and thus the ideal $(\varphi_x^\sharp)^{-1}(\mathfrak{m}_x)$ is a proper ideal containing $\varphi(x)A_{\varphi(x)}$, that is, $\varphi(x)A_{\varphi(x)}$ itself. Therefore, by [\[Commutative Algebra\] §Localization, ⁋Proposition 8](/en/math/commutative_algebra/localization#prop8)
+
+$$\varphi'(x)=\phi_x^{-1}(\mathfrak{m}_x)=\epsilon^{-1}\left((\varphi_x^\sharp)^{-1}(\mathfrak{m}_x)\right)=\epsilon^{-1}\left(\varphi(x)A_{\varphi(x)}\right)=\varphi(x)$$
+
+and the two continuous functions $\varphi$ and $\varphi'$ are equal. Now from the fact that $\varphi^\sharp$ commutes with restriction maps, for any $f\in A$
+
+$$\varphi^\sharp(D(f))\circ\epsilon_f=\theta_f$$
+
+holds, and this is exactly the equation defining $(\varphi')^\sharp(D(f))$, so by the uniqueness of [\[Commutative Algebra\] §Localization, ⁋Proposition 6](/en/math/commutative_algebra/localization#prop6) we have $\varphi^\sharp(D(f))=(\varphi')^\sharp(D(f))$. Since the two sheaf morphisms agree on the base $\{D(f)\}_{f\in A}$, by the identity axiom of $\varphi_\ast\mathcal{O}_X$ we have $\varphi^\sharp=(\varphi')^\sharp$, and therefore $\Psi(\Phi(\varphi,\varphi^\sharp))=(\varphi,\varphi^\sharp)$.
+
+Finally, let us verify that this bijection is natural. Given a morphism $\psi: X' \rightarrow X$ of locally ringed spaces, computing the composition $(\varphi\circ\psi)^\sharp$ on $\Spec A$ gives $\psi^\sharp(X)\circ\varphi^\sharp(\Spec A)$, so
+
+$$\Phi(\varphi\circ\psi)=\Gamma(\psi)\circ\Phi(\varphi)$$
+
+Also, given a ring homomorphism $\theta: A \rightarrow A'$, from the construction in [Proposition 9](#prop9) with $f=1$ we have $(\Spec\theta)^\sharp(\Spec A)=\theta$, so for any $\varphi: X \rightarrow \Spec A'$
+
+$$\Phi((\Spec\theta)\circ\varphi)=\Phi(\varphi)\circ\theta$$
+
+That is, the given bijection is natural in both $X$ and $A$, and from this we obtain the natural isomorphism in the claim.
 :::
 
 ---
 **References**
 
 **[Har]** R. Hartshorne, *Algebraic geometry*. Graduate texts in mathematics. Springer, 1977.  
-**[Vak]** R. Vakil, *The rising sea: Foundation of algebraic geometry*. Available [online](https://math.stanford.edu/~vakil/216blog/). 
+**[Vak]** R. Vakil, *The rising sea: Foundation of algebraic geometry*. Available [online](https://math.stanford.edu/~vakil/216blog/).
 
 ---
 
-[^1]: In general, for any sheaf $$\mathcal{F}$$ on $$X$$ we write $$\mathcal{F}(X)$$ as $$\Gamma(X, \mathcal{F})$$.
+[^1]: In general, for any sheaf $\mathcal{F}$ on $X$, we write $\mathcal{F}(X)$ as $\Gamma(X, \mathcal{F})$.
