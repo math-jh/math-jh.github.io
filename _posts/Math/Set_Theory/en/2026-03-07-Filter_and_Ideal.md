@@ -21,136 +21,136 @@ This article gathers topics scattered throughout **[Bou]** along with some topic
 First, we define the following two concepts.
 
 ::: Definition 1
-For an ordered set $$A$$, a subset $$X\subseteq A$$ is a *lower set* (resp. *upper set*) if whenever $$y\in A$$ satisfies $$y\leq x$$ (resp. $$x\leq y$$) for some $$x\in X$$, then $$y\in X$$.
+For an ordered set $A$, a subset $X\subseteq A$ is a *lower set* (resp. *upper set*) if whenever $y\in A$ satisfies $y\leq x$ (resp. $x\leq y$) for some $x\in X$, then $y\in X$.
 
 A nonempty right directed lower set is called an *ideal*, and a nonempty left directed upper set is called a *filter*.
 :::
 
-The set $$E$$ itself is both a filter and an ideal. Filters and ideals distinct from $$E$$ are called proper.
+The set $E$ itself is both a filter and an ideal. Filters and ideals distinct from $E$ are called proper.
 
 ::: Example 2
-Let an ordered set $$A$$ be given. For any $$x\in A$$, the *downward closure*[^1]
+Let an ordered set $A$ be given. For any $x\in A$, the *downward closure*[^1]
 
 $$\downarrow x=\{y\in A\mid y\leq x\}$$
 
-is an ideal of $$A$$. Such an ideal is called a *principal ideal*.
+is an ideal of $A$. Such an ideal is called a *principal ideal*.
 
 Similarly, the *upward closure*
 
 $$\uparrow x=\{y\in A\mid y\geq x\}$$
 
-is a filter of $$A$$, and such a filter is called a *principal filter*.
+is a filter of $A$, and such a filter is called a *principal filter*.
 :::
 
-We are mostly interested in the case where $$A$$ is a lattice. In this case, ([§Directed Sets, ⁋Definition 4](/en/math/set_theory/directed_set#def4))
+We are mostly interested in the case where $A$ is a lattice. In this case, ([§Directed Sets, ⁋Definition 4](/en/math/set_theory/directed_set#def4))
 
-- A nonempty lower set $$I$$ is an ideal if and only if $$x\vee y\in I$$ for all $$x,y\in I$$.
-- A nonempty upper set $$F$$ is a filter if and only if $$x\wedge y\in F$$ for all $$x,y\in F$$.
+- A nonempty lower set $I$ is an ideal if and only if $x\vee y\in I$ for all $x,y\in I$.
+- A nonempty upper set $F$ is a filter if and only if $x\wedge y\in F$ for all $x,y\in F$.
 
 ::: Example 3
-Let a set $$A$$ be given. Endowing $$\mathcal{P}(A)$$ with the natural order relation $$\subseteq$$ makes it a lattice, and in particular, for any $$X,Y\in\mathcal{P}(A)$$,
+Let a set $A$ be given. Endowing $\mathcal{P}(A)$ with the natural order relation $\subseteq$ makes it a lattice, and in particular, for any $X,Y\in\mathcal{P}(A)$,
 
 $$X\vee Y=X\cup Y,\qquad X\wedge Y=X\cap Y$$
 
-hold. In $$\mathcal{P}(A)$$, the two operations $$\vee$$ and $$\wedge$$ additionally satisfy the distributive laws
+hold. In $\mathcal{P}(A)$, the two operations $\vee$ and $\wedge$ additionally satisfy the distributive laws
 
-$$X\vee(Y\wedge Z)=(X\vee Y)\wedge(X\vee Z),\qquad X\wedge(Y\vee Z)=(X\wedge Y)\vee(X\wedge Z).$$
+$X\vee(Y\wedge Z)=(X\vee Y)\wedge(X\vee Z),\qquad X\wedge(Y\vee Z)=(X\wedge Y)\vee(X\wedge Z).$
 :::
 
 ::: Definition 4
-Let a lattice $$A$$ be given, and let $$I$$ and $$F$$ be a proper ideal and a proper filter of $$E$$, respectively. $$I$$ is a *prime ideal* if for any $$x,y\in A$$, whenever $$x\wedge y\in I$$, then either $$x\in I$$ or $$y\in I$$. Similarly, $$F$$ is a *prime filter* if for any $$x,y\in A$$, whenever $$x\vee y\in F$$, then either $$x\in F$$ or $$y\in F$$. ([\[Algebraic Structures\] §Field of Fractions, ⁋Proposition 8](/en/math/algebraic_structures/field_of_fractions#prop8))
+Let a lattice $A$ be given, and let $I$ and $F$ be a proper ideal and a proper filter of $E$, respectively. $I$ is a *prime ideal* if for any $x,y\in A$, whenever $x\wedge y\in I$, then either $x\in I$ or $y\in I$. Similarly, $F$ is a *prime filter* if for any $x,y\in A$, whenever $x\vee y\in F$, then either $x\in F$ or $y\in F$. ([\[Algebraic Structures\] §Field of Fractions, ⁋Proposition 8](/en/math/algebraic_structures/field_of_fractions#prop8))
 :::
 
-Equivalently, one may define $$I$$ to be a prime ideal by requiring that $$A\setminus I$$ be a filter.
+Equivalently, one may define $I$ to be a prime ideal by requiring that $A\setminus I$ be a filter.
 
 ::: Proposition 5
-Let a lattice $$A$$ be given in which the distributive law between the two operations $$\vee$$ and $$\wedge$$ holds. Then every maximal ideal is a prime ideal, and every maximal filter is a prime filter.
+Let a lattice $A$ be given in which the distributive law between the two operations $\vee$ and $\wedge$ holds. Then every maximal ideal is a prime ideal, and every maximal filter is a prime filter.
 :::
 ::: Proof
-Let $$I$$ be a maximal ideal, and suppose $$x\wedge y\in I$$. Assume, for contradiction, that $$x,y\not\in I$$. Define a new set $$J$$ as the set of all $$z$$ such that $$x\wedge z\in I$$.
+Let $I$ be a maximal ideal, and suppose $x\wedge y\in I$. Assume, for contradiction, that $x,y\not\in I$. Define a new set $J$ as the set of all $z$ such that $x\wedge z\in I$.
 
-1. If $$z_1,z_2\in J$$, then $$x\wedge (z_1\vee z_2)=(x\wedge z_1)\vee(x\wedge z_2)\in I$$, so $$z_1\vee z_2\in J$$.
-2. If $$z\in J$$ and $$z'\leq z$$, then $$z'\in J$$. Since $$(x\wedge z')\vee (x\wedge z)=x\wedge (z'\vee z)=x\wedge z$$, we have $$x\wedge z'\leq x\wedge z$$, and since $$x\wedge z\in I$$, it follows that $$x\wedge z'\in I$$ as well.
-3. In particular, it is clear that $$x\not\in J$$ and $$y\in J$$.
+1. If $z_1,z_2\in J$, then $x\wedge (z_1\vee z_2)=(x\wedge z_1)\vee(x\wedge z_2)\in I$, so $z_1\vee z_2\in J$.
+2. If $z\in J$ and $z'\leq z$, then $z'\in J$. Since $(x\wedge z')\vee (x\wedge z)=x\wedge (z'\vee z)=x\wedge z$, we have $x\wedge z'\leq x\wedge z$, and since $x\wedge z\in I$, it follows that $x\wedge z'\in I$ as well.
+3. In particular, it is clear that $x\not\in J$ and $y\in J$.
 
-Therefore, $$J$$ is a proper ideal strictly containing $$I$$, which contradicts the maximality of $$I$$. Similarly, one can show that every maximal filter is prime.
+Therefore, $J$ is a proper ideal strictly containing $I$, which contradicts the maximality of $I$. Similarly, one can show that every maximal filter is prime.
 :::
 
 
 Maximal filters are also called *ultrafilters*.
 
 
-For two ordered sets $$A,B$$, consider an increasing function $$f:A\rightarrow B$$. Let $$Y$$ be any lower set of $$B$$ and let $$X=f^{-1}(Y)$$. If for some $$y\in A$$ there exists $$x\in X$$ such that $$y\leq x$$, then $$f(y)\leq f(x)$$, and since $$Y$$ is a lower set, $$f(y)\in Y$$, so $$y\in X$$. Thus the preimage of a lower set is again a lower set.
+For two ordered sets $A,B$, consider an increasing function $f:A\rightarrow B$. Let $Y$ be any lower set of $B$ and let $X=f^{-1}(Y)$. If for some $y\in A$ there exists $x\in X$ such that $y\leq x$, then $f(y)\leq f(x)$, and since $Y$ is a lower set, $f(y)\in Y$, so $y\in X$. Thus the preimage of a lower set is again a lower set.
 
 ## Galois Connection
 
 The Galois connection we are about to introduce, as its name suggests, originates from Galois theory for field extensions. However, it can be abstracted as a relation between two ordered sets, and this abstraction proves useful in many areas.
 
 ::: Definition 6
-Let two ordered sets $$A$$ and $$B$$ be given.
+Let two ordered sets $A$ and $B$ be given.
 
-1. Let two increasing functions $$F:A\rightarrow B$$ and $$G:B\rightarrow A$$ satisfy
+1. Let two increasing functions $F:A\rightarrow B$ and $G:B\rightarrow A$ satisfy
 
     $$F(a)\leq b\iff a\leq G(b)$$
 
-    for all $$a\in A$$ and $$b\in B$$. Then $$F$$ is called the *lower adjoint* of $$G$$, $$G$$ is called the *upper adjoint* of $$F$$, and the pair $$(F,G)$$ is called a *monotone Galois connection* between $$A$$ and $$B$$.
-2. Let two decreasing functions $$F:A\rightarrow B$$ and $$G:B\rightarrow A$$ satisfy
+    for all $a\in A$ and $b\in B$. Then $F$ is called the *lower adjoint* of $G$, $G$ is called the *upper adjoint* of $F$, and the pair $(F,G)$ is called a *monotone Galois connection* between $A$ and $B$.
+2. Let two decreasing functions $F:A\rightarrow B$ and $G:B\rightarrow A$ satisfy
 
     $$b\leq F(a)\iff a\leq G(b)$$
 
-    for all $$a\in A$$ and $$b\in B$$. Then $$F$$ and $$G$$ are each called a *polarity* of the other, and the pair $$(F,G)$$ is called an *antitone Galois connection* between $$A$$ and $$B$$.
+    for all $a\in A$ and $b\in B$. Then $F$ and $G$ are each called a *polarity* of the other, and the pair $(F,G)$ is called an *antitone Galois connection* between $A$ and $B$.
 :::
 
-In either case, the function $$G\circ F:A\rightarrow A$$ always satisfies $$a\leq G(F(a))$$. For a monotone Galois connection,
+In either case, the function $G\circ F:A\rightarrow A$ always satisfies $a\leq G(F(a))$. For a monotone Galois connection,
 
 $$a\leq G(F(a))\iff F(a)\leq F(a)$$
 
-and the latter is always true; the same holds for an antitone Galois connection. On the other hand, the behavior of $$F\circ G$$ depends on whether the connection is monotone or antitone. For a monotone Galois connection,
+and the latter is always true; the same holds for an antitone Galois connection. On the other hand, the behavior of $F\circ G$ depends on whether the connection is monotone or antitone. For a monotone Galois connection,
 
 $$F(G(b))\leq b\iff G(b)\leq G(b)$$
 
-and the latter is always true, so $$F(G(b))\leq b$$ holds. For an antitone Galois connection,
+and the latter is always true, so $F(G(b))\leq b$ holds. For an antitone Galois connection,
 
 $$b\leq F(G(b))\iff G(b)\leq G(b)$$
 
-so $$b\leq F(G(b))$$ always holds.
+so $b\leq F(G(b))$ always holds.
 
-Meanwhile, $$G\circ F$$ and $$F\circ G$$ are compositions of two increasing functions or two decreasing functions, so in either case they must be increasing.
+Meanwhile, $G\circ F$ and $F\circ G$ are compositions of two increasing functions or two decreasing functions, so in either case they must be increasing.
 
-For convenience, we shall abbreviate $$G\circ F$$ and $$F\circ G$$ as $$GF$$ and $$FG$$, respectively, in the remainder of this article.
+For convenience, we shall abbreviate $G\circ F$ and $F\circ G$ as $GF$ and $FG$, respectively, in the remainder of this article.
 
 ::: Proposition 7
-Let two ordered sets $$A,B$$ be given with a monotone Galois connection $$F:A\rightarrow B$$ and $$G:B\rightarrow A$$ between them. Then $$GFG(y)=G(y)$$ holds for all $$y\in B$$.
+Let two ordered sets $A,B$ be given with a monotone Galois connection $F:A\rightarrow B$ and $G:B\rightarrow A$ between them. Then $GFG(y)=G(y)$ holds for all $y\in B$.
 
-If these form an antitone Galois connection, then $$GFG(y)=G(y)$$ and $$FGF(x)=F(x)$$ hold for all $$x\in A$$ and $$y\in B$$.
+If these form an antitone Galois connection, then $GFG(y)=G(y)$ and $FGF(x)=F(x)$ hold for all $x\in A$ and $y\in B$.
 :::
 ::: Proof
-First, substituting $$a=G(y)$$ into $$a\leq GF(a)$$ yields $$G(y)\leq GFG(y)$$. On the other hand, we have shown that $$FG$$ satisfies $$FG(b)\leq b$$ for all $$b\in B$$, and since $$G$$ is increasing, we also obtain $$GFG(y)\leq G(y)$$. Therefore, $$GFG(y)=G(y)$$.
+First, substituting $a=G(y)$ into $a\leq GF(a)$ yields $G(y)\leq GFG(y)$. On the other hand, we have shown that $FG$ satisfies $FG(b)\leq b$ for all $b\in B$, and since $G$ is increasing, we also obtain $GFG(y)\leq G(y)$. Therefore, $GFG(y)=G(y)$.
 
-On the other hand, if the pair $$(F,G)$$ is an antitone Galois connection, $$G(y)\leq GFG(y)$$ is shown in the same way as above. Also, since $$b\leq FG(b)$$ always holds for all $$b\in B$$, and $$G$$ is decreasing, $$G(y)\geq GFG(y)$$ again holds, so $$GFG(y)=G(y)$$. The equality $$FGF(x)=F(x)$$ follows easily by interchanging the roles of $$F$$ and $$G$$.
+On the other hand, if the pair $(F,G)$ is an antitone Galois connection, $G(y)\leq GFG(y)$ is shown in the same way as above. Also, since $b\leq FG(b)$ always holds for all $b\in B$, and $G$ is decreasing, $G(y)\geq GFG(y)$ again holds, so $GFG(y)=G(y)$. The equality $FGF(x)=F(x)$ follows easily by interchanging the roles of $F$ and $G$.
 :::
 
 The following definition is important not only in topology but also in lattice theory.
 
 ::: Definition 8
-For an ordered set $$A$$, a function $$f:A\rightarrow A$$ is a *closure operator* if the following three conditions are satisfied:
+For an ordered set $A$, a function $f:A\rightarrow A$ is a *closure operator* if the following three conditions are satisfied:
 
-1. For all $$x\in A$$, $$x\leq f(x)$$.
-2. For all $$x\in A$$, $$f(x)=f(f(x))$$.
-3. If $$x\leq y$$, then $$f(x)\leq f(y)$$.
+1. For all $x\in A$, $x\leq f(x)$.
+2. For all $x\in A$, $f(x)=f(f(x))$.
+3. If $x\leq y$, then $f(x)\leq f(y)$.
 
-In this case, $$x$$ is *closed* if $$f(x)=x$$.
+In this case, $x$ is *closed* if $f(x)=x$.
 :::
 
-Fix an antitone Galois connection. From the result $$GFG(y)=G(y)$$ in [Proposition 7](#prop7), substituting $$y=F(x)$$ for any $$x\in A$$ gives
+Fix an antitone Galois connection. From the result $GFG(y)=G(y)$ in [Proposition 7](#prop7), substituting $y=F(x)$ for any $x\in A$ gives
 
 $$GFGF(x)=GF(x)$$
 
-Thus the function $$GF$$ satisfies all the conditions above and is therefore a closure operator. Similarly, in an antitone Galois connection, $$FG$$ is also a closure operator.
+Thus the function $GF$ satisfies all the conditions above and is therefore a closure operator. Similarly, in an antitone Galois connection, $FG$ is also a closure operator.
 
-By definition, $$x$$ and $$y$$ being closed with respect to $$GF$$ and $$FG$$, respectively, means that $$GF(x)=x$$ and $$FG(y)=y$$. From [Proposition 7](#prop7), we know that all elements in the images of $$F$$ and $$G$$ are closed. Conversely, if an arbitrary element $$x$$ is closed with respect to $$GF$$, then $$GF(x)=x$$ implies that $$x$$ belongs to the image of $$G$$, and the corresponding statement for $$FG$$ is proved similarly.
+By definition, $x$ and $y$ being closed with respect to $GF$ and $FG$, respectively, means that $GF(x)=x$ and $FG(y)=y$. From [Proposition 7](#prop7), we know that all elements in the images of $F$ and $G$ are closed. Conversely, if an arbitrary element $x$ is closed with respect to $GF$, then $GF(x)=x$ implies that $x$ belongs to the image of $G$, and the corresponding statement for $FG$ is proved similarly.
 
-Through this process, for a Galois connection between ordered sets $$A$$ and $$B$$, we can construct collections $$A'\subseteq A$$ and $$B'\subseteq B$$ of closed subsets, and the restrictions of $$F$$ and $$G$$ to these collections are well defined. Moreover, these restrictions $$F\vert_{A'}$$ and $$G\vert_{B'}$$ are bijections and form an *anti-isomorphism*. These are specifically called *Galois correspondences*.
+Through this process, for a Galois connection between ordered sets $A$ and $B$, we can construct collections $A'\subseteq A$ and $B'\subseteq B$ of closed subsets, and the restrictions of $F$ and $G$ to these collections are well defined. Moreover, these restrictions $F\vert_{A'}$ and $G\vert_{B'}$ are bijections and form an *anti-isomorphism*. These are specifically called *Galois correspondences*.
 
 
 ---

@@ -17,52 +17,52 @@ last_polished_at: 2026-06-01T18:00:06+00:00
 ## Square Matrices
 
 ::: Definition 1
-An $$I\times I$$ matrix is called a *square matrix*. We denote the collection of all such matrices by $$\Mat_I(A)$$.
+An $I\times I$ matrix is called a *square matrix*. We denote the collection of all such matrices by $\Mat_I(A)$.
 :::
 
-In particular, when $$I$$ is finite and $$A$$ is commutative, $$\Mat_{n}(A)$$ has additional structure: it is not merely an $$A$$-module, but also carries a multiplication. That is, $$\Mat_{n}(A)$$ is an $$A$$-algebra.
+In particular, when $I$ is finite and $A$ is commutative, $\Mat_{n}(A)$ has additional structure: it is not merely an $A$-module, but also carries a multiplication. That is, $\Mat_{n}(A)$ is an $A$-algebra.
 
 ::: Proposition 2
-In this situation, $$\Mat_n(A)$$ is a unital associative algebra.
+In this situation, $\Mat_n(A)$ is a unital associative algebra.
 :::
 ::: Proof
-That $$\Mat_n(A)$$ is an associative $$A$$-algebra follows immediately from [§Matrices, §§Matrix Multiplication](/en/math/multilinear_algebra/matrices#matrix-multiplication). The identity element for multiplication in $$\Mat_n(A)$$ is the identity matrix
+That $\Mat_n(A)$ is an associative $A$-algebra follows immediately from [§Matrices, §§Matrix Multiplication](/en/math/multilinear_algebra/matrices#matrix-multiplication). The identity element for multiplication in $\Mat_n(A)$ is the identity matrix
 
 $$I_n=\begin{pmatrix}1&0&\cdots&0\\0&1&\cdots&0\\\vdots&\vdots&\ddots&\vdots\\0&0&\cdots&1\end{pmatrix}$$
 
 as is readily verified.
 :::
 
-$$M_n(A)$$ has the canonical basis $$(E_{ij})$$, and the structure constants with respect to this basis are given by
+$M_n(A)$ has the canonical basis $(E_{ij})$, and the structure constants with respect to this basis are given by
 
 $$E_{ij}E_{jk}=\delta_{jh}E_{ik}$$
 
 ::: Definition 3
-We denote by $$\GL_n(A)$$ the subset of $$\Mat_n(A)$$ consisting of those elements that admit a multiplicative inverse.
+We denote by $\GL_n(A)$ the subset of $\Mat_n(A)$ consisting of those elements that admit a multiplicative inverse.
 :::
 
-Fix a basis $$\mathcal{B}=(e_i)_{i\in I}$$ of a free $$A$$-module $$M$$, and let $$\lvert I\rvert=n$$. Then for any $$u\in \End_{\lMod{A}}(M)$$, we have $$[u]_{\mathcal{B}}^\mathcal{B}\in\Mat_n(A)$$; moreover, if $$u$$ is an isomorphism, then by [§Matrices and Linear Maps, ⁋Corollary 4](/en/math/multilinear_algebra/matrices_and_linear_maps#cor4) we have $$[u]_{\mathcal{B}}^\mathcal{B}\in\GL_n(A)$$. In this case, [§Dual Spaces, ⁋Proposition 5](/en/math/multilinear_algebra/dual_spaces#prop5) and [§Matrices and Linear Maps, ⁋Proposition 5](/en/math/multilinear_algebra/matrices_and_linear_maps#prop5) yield the identity
+Fix a basis $\mathcal{B}=(e_i)_{i\in I}$ of a free $A$-module $M$, and let $\lvert I\rvert=n$. Then for any $u\in \End_{\lMod{A}}(M)$, we have $[u]_{\mathcal{B}}^\mathcal{B}\in\Mat_n(A)$; moreover, if $u$ is an isomorphism, then by [§Matrices and Linear Maps, ⁋Corollary 4](/en/math/multilinear_algebra/matrices_and_linear_maps#cor4) we have $[u]_{\mathcal{B}}^\mathcal{B}\in\GL_n(A)$. In this case, [§Dual Spaces, ⁋Proposition 5](/en/math/multilinear_algebra/dual_spaces#prop5) and [§Matrices and Linear Maps, ⁋Proposition 5](/en/math/multilinear_algebra/matrices_and_linear_maps#prop5) yield the identity
 
 $$\bigl([u^{-1}]_{\mathcal{B}}^\mathcal{B}\bigr)^t=\bigl(\bigl[u^\ast\bigr]_{\mathcal{B}^\ast}^{\mathcal{B}^\ast}\bigr)^{-1}$$
 
 ## Change of Basis
 
 ::: Proposition 4
-Let $$M$$ be an arbitrary $$A$$-module and let $$\mathcal{B}=(e_i)_{i\in I}$$ be a finite basis of $$M$$. Then the formula
+Let $M$ be an arbitrary $A$-module and let $\mathcal{B}=(e_i)_{i\in I}$ be a finite basis of $M$. Then the formula
 
 $$e_i'=\sum_{j=1}^n a_{ji}e_i,\qquad 1\leq i\leq n$$
 
-defines a basis of $$M$$ if and only if the square matrix $$(a_{ji})$$ is invertible.
+defines a basis of $M$ if and only if the square matrix $(a_{ji})$ is invertible.
 :::
 ::: Proof
-The given matrix $$(a_{ji})$$ is precisely the matrix representation $$[u]_{\mathcal{B}}^\mathcal{B}\in\Mat_n(A)$$ with respect to $$\mathcal{B}$$ of the linear map $$u\in\End_{\lMod{A}}(M)$$ defined by
+The given matrix $(a_{ji})$ is precisely the matrix representation $[u]_{\mathcal{B}}^\mathcal{B}\in\Mat_n(A)$ with respect to $\mathcal{B}$ of the linear map $u\in\End_{\lMod{A}}(M)$ defined by
 
 $$u:e_i\mapsto e_i'=\sum_{j=1}^n a_{ji}e_i$$
 
-This matrix is invertible if and only if $$u$$ is an isomorphism, which in turn holds if and only if $$(u(e_i))_{i\in I}$$ is a basis of $$M$$.
+This matrix is invertible if and only if $u$ is an isomorphism, which in turn holds if and only if $(u(e_i))_{i\in I}$ is a basis of $M$.
 :::
 
-Conversely, we may also regard the matrix $$(a_{ji})$$ as the matrix representation of the identity map $$\id_M:M \rightarrow M$$ with respect to different bases. Write the basis $$(e_i')$$ as $$\mathcal{B}'$$. Then
+Conversely, we may also regard the matrix $(a_{ji})$ as the matrix representation of the identity map $\id_M:M \rightarrow M$ with respect to different bases. Write the basis $(e_i')$ as $\mathcal{B}'$. Then
 
 $$\id_M(e_i')=\sum_{j=1}^n a_{ji}e_i$$
 
@@ -70,12 +70,12 @@ and thus
 
 $$([\id_M]^{\mathcal{B}'}_\mathcal{B})=(\langle \id_M(e_i'), e_j^\ast\rangle)_{(j,i)\in J\times I}=(a_{ji})_{(j,i)\in J\times I}$$
 
-From this perspective, this matrix is also called the *change-of-basis matrix* from $$\mathcal{B}'$$ to $$\mathcal{B}$$.
+From this perspective, this matrix is also called the *change-of-basis matrix* from $\mathcal{B}'$ to $\mathcal{B}$.
 
 More generally, we have the following.
 
 ::: Proposition 5
-Let $$M$$ and $$N$$ be $$A$$-modules with finite bases $$\mathcal{B}=(e_i)_{i\in I}$$ and $$\mathcal{C}=(f_j)_{j\in J}$$, respectively. For other bases $$\mathcal{B}'=(e_i')_{i\in I}$$ of $$M$$ and $$\mathcal{C}'=(f_j')_{j\in J}$$ of $$N$$, the formula
+Let $M$ and $N$ be $A$-modules with finite bases $\mathcal{B}=(e_i)_{i\in I}$ and $\mathcal{C}=(f_j)_{j\in J}$, respectively. For other bases $\mathcal{B}'=(e_i')_{i\in I}$ of $M$ and $\mathcal{C}'=(f_j')_{j\in J}$ of $N$, the formula
 
 $$[u]_{\mathcal{C}'}^{\mathcal{B}'}=[\id_N]^\mathcal{C}_{\mathcal{C}'}[u]^\mathcal{B}_\mathcal{C}[\id_M]^{\mathcal{B}'}_{\mathcal{B}}$$
 
@@ -85,13 +85,13 @@ holds.
 ## Similar Matrices
 
 ::: Definition 6
-Two $$m\times n$$ matrices $$X, X'$$ are called *equivalent* if there exist square matrices $$P\in\GL_m(A)$$ and $$Q\in\GL_n(A)$$ such that $$X'=PXQ$$.
+Two $m\times n$ matrices $X, X'$ are called *equivalent* if there exist square matrices $P\in\GL_m(A)$ and $Q\in\GL_n(A)$ such that $X'=PXQ$.
 :::
 
 In the same context as the discussion preceding [§Change of Basis, ⁋Definition 6](/en/math/multilinear_algebra/change_of_basis#def6), it is preferable to consider the following finer equivalence relation rather than mere equivalence of matrices.
 
 ::: Definition 7
-Two $$n\times n$$ matrices $$X, X'$$ are called *similar* if there exists a square matrix $$P\in\GL_n(A)$$ such that $$X'=PXP^{-1}$$.
+Two $n\times n$ matrices $X, X'$ are called *similar* if there exists a square matrix $P\in\GL_n(A)$ such that $X'=PXP^{-1}$.
 :::
 
-Then, setting $$M=N$$, $$\mathcal{B}=\mathcal{C}$$, and $$\mathcal{B}'=\mathcal{C}'$$ in [Proposition 5](#prop5) above, we see that the matrix representations of an element $$u\in\End_\rMod{A}(M)$$ with respect to different bases are similar to one another.
+Then, setting $M=N$, $\mathcal{B}=\mathcal{C}$, and $\mathcal{B}'=\mathcal{C}'$ in [Proposition 5](#prop5) above, we see that the matrix representations of an element $u\in\End_\rMod{A}(M)$ with respect to different bases are similar to one another.

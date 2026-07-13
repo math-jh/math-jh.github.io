@@ -18,7 +18,7 @@ last_polished_at: 2026-05-31T08:30:05+00:00
 We can now finally prove the fundamental theorem of Galois theory.
 
 ::: Theorem 1
-Consider a Galois extension $$\mathbb{L}/\mathbb{K}$$ of a field $$\mathbb{K}$$ and its Galois group $$\Gamma=\Gal(\mathbb{L}/\mathbb{K})$$. Let $$\mathscr{K}$$ be the collection of subextensions of $$\mathbb{L}$$, and let $$\mathscr{G}$$ be the collection of closed subgroups of $$\Gamma$$. Then the two functions between $$\mathscr{K}$$ and $$\mathscr{G}$$
+Consider a Galois extension $\mathbb{L}/\mathbb{K}$ of a field $\mathbb{K}$ and its Galois group $\Gamma=\Gal(\mathbb{L}/\mathbb{K})$. Let $\mathscr{K}$ be the collection of subextensions of $\mathbb{L}$, and let $\mathscr{G}$ be the collection of closed subgroups of $\Gamma$. Then the two functions between $\mathscr{K}$ and $\mathscr{G}$
 
 $$k:\mathscr{G}\rightarrow\mathscr{K};\qquad G\mapsto k(G)\text{ the field of invariants of $G$}$$
 
@@ -32,7 +32,7 @@ are inverses of each other.
 To prove this, we divide the proof into two steps as follows.
 
 ::: Lemma 2
-For any subextension $$\mathbb{M}\in \mathscr{K}$$, $$\mathbb{L}/\mathbb{M}$$ is also a Galois extension. In this case, if we regard the Galois group $$\Gal(\mathbb{L}/\mathbb{M})$$ as a subgroup of $$\Gal(\mathbb{L}/\mathbb{K})$$ in the obvious way, it is a *closed* subgroup of $$\Gal(\mathbb{L}/\mathbb{K})$$, and therefore $$g$$ is well-defined.
+For any subextension $\mathbb{M}\in \mathscr{K}$, $\mathbb{L}/\mathbb{M}$ is also a Galois extension. In this case, if we regard the Galois group $\Gal(\mathbb{L}/\mathbb{M})$ as a subgroup of $\Gal(\mathbb{L}/\mathbb{K})$ in the obvious way, it is a *closed* subgroup of $\Gal(\mathbb{L}/\mathbb{K})$, and therefore $g$ is well-defined.
 :::
 ::: Proof
 :::

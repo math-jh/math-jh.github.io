@@ -16,41 +16,41 @@ last_polished_at: 2026-06-24T09:00:03+00:00
 ---
 ## Generalized Eigenspaces
 
-Previously, we saw that whenever a diagonalizable operator $$A$$ is given, we can decompose the given space into eigenspaces on which $$A$$ acts like scalar multiplication. However, as examined in [§Eigenspace Decomposition, ⁋Proposition 6](/en/math/linear_algebra/eigenspace_decomposition#prop6), even if we assume $$\mathbb{K}$$ is an algebraically closed field (and, as we examined after that proposition, we will always assume this), not every linear operator is diagonalizable.
+Previously, we saw that whenever a diagonalizable operator $A$ is given, we can decompose the given space into eigenspaces on which $A$ acts like scalar multiplication. However, as examined in [§Eigenspace Decomposition, ⁋Proposition 6](/en/math/linear_algebra/eigenspace_decomposition#prop6), even if we assume $\mathbb{K}$ is an algebraically closed field (and, as we examined after that proposition, we will always assume this), not every linear operator is diagonalizable.
 
-The second condition of [§Eigenspace Decomposition, ⁋Proposition 6](/en/math/linear_algebra/eigenspace_decomposition#prop6) tells us that for some eigenvalue $$\lambda$$ of $$A$$, the geometric multiplicity of $$\lambda$$ is less than the algebraic multiplicity of $$\lambda$$. ([§Eigenspace Decomposition, ⁋Proposition 5](/en/math/linear_algebra/eigenspace_decomposition#prop5)) In other words, intuitively, the following vector space
+The second condition of [§Eigenspace Decomposition, ⁋Proposition 6](/en/math/linear_algebra/eigenspace_decomposition#prop6) tells us that for some eigenvalue $\lambda$ of $A$, the geometric multiplicity of $\lambda$ is less than the algebraic multiplicity of $\lambda$. ([§Eigenspace Decomposition, ⁋Proposition 5](/en/math/linear_algebra/eigenspace_decomposition#prop5)) In other words, intuitively, the following vector space
 
 $$E_\lambda(A)=\ker(A-\lambda I)$$
 
 is <em>too small</em>. The following lemma gives a clue for resolving this.
 
 ::: Lemma 1
-Let an arbitrary linear operator $$L:V\rightarrow V$$ defined on a finite-dimensional vector space $$V$$ be given. For notational convenience, let $$L^0=\id_V$$. Then the following filtration
+Let an arbitrary linear operator $L:V\rightarrow V$ defined on a finite-dimensional vector space $V$ be given. For notational convenience, let $L^0=\id_V$. Then the following filtration
 
 $$0=\ker L^0\subsetneq \ker L^1\subsetneq \ker L^2\subsetneq \cdots \subsetneq \ker L^{k-1}\subsetneq \ker L^k=\ker L^{k+1}$$
 
 exists.
 :::
 ::: Proof
-First, for arbitrary $$i$$, if $$v\in \ker L^{i}$$ holds, then
+First, for arbitrary $i$, if $v\in \ker L^{i}$ holds, then
 
 $$L^{i+1}v=L(L^iv)=L(0)=0$$
 
-so $$\ker L^i\subseteq \ker L^{i+1}$$ is obvious. On the other hand, since $$V$$ is finite-dimensional, this filtration must eventually stop increasing. What we need to show is that if $$\ker L^k=\ker L^{k+1}$$, then all subsequent terms are equal to $$\ker L^k$$. For this, let $$k$$ be the smallest integer satisfying $$\ker L^k=\ker L^{k+1}$$. Then by definition $$\ker L^k=\ker L^{k+1}$$, and we use this as the base step to inductively show that $$\ker L^k=\ker L^{k+j}$$ holds for all $$j$$. That is, assuming $$\ker L^k=\ker L^{k+j}$$ holds, we show $$\ker L^k=\ker L^{k+j+1}$$. For this, it suffices to show $$\ker L^{k+j+1}\subseteq \ker L^k$$. Now for arbitrary $$v\in \ker L^{k+j+1}$$, we know that $$Lv\in \ker L^{k+j}=\ker L^k$$, so from the following calculation
+so $\ker L^i\subseteq \ker L^{i+1}$ is obvious. On the other hand, since $V$ is finite-dimensional, this filtration must eventually stop increasing. What we need to show is that if $\ker L^k=\ker L^{k+1}$, then all subsequent terms are equal to $\ker L^k$. For this, let $k$ be the smallest integer satisfying $\ker L^k=\ker L^{k+1}$. Then by definition $\ker L^k=\ker L^{k+1}$, and we use this as the base step to inductively show that $\ker L^k=\ker L^{k+j}$ holds for all $j$. That is, assuming $\ker L^k=\ker L^{k+j}$ holds, we show $\ker L^k=\ker L^{k+j+1}$. For this, it suffices to show $\ker L^{k+j+1}\subseteq \ker L^k$. Now for arbitrary $v\in \ker L^{k+j+1}$, we know that $Lv\in \ker L^{k+j}=\ker L^k$, so from the following calculation
 
 $$L^{k+1}v=L^k(Lv)=0\implies v\in \ker L^{k+1}$$
 
-and the base step $$\ker L^k=\ker L^{k+1}$$, we obtain the desired result.
+and the base step $\ker L^k=\ker L^{k+1}$, we obtain the desired result.
 :::
 
-Our key observation is that although the eigenspace $$E_\lambda(A)$$ has insufficient dimension, if we apply [Lemma 1](#lem1) to $$L=A-\lambda I$$ and enlarge this space, we eventually obtain the "correct dimension."
+Our key observation is that although the eigenspace $E_\lambda(A)$ has insufficient dimension, if we apply [Lemma 1](#lem1) to $L=A-\lambda I$ and enlarge this space, we eventually obtain the "correct dimension."
 
 ::: Example 2
 Consider the following matrix
 
 $$A=\begin{pmatrix}1&1&1\\0&1&1\\0&0&1\end{pmatrix}$$
 
-In a previous post, we saw that the characteristic polynomial of this matrix is $$(\x-1)^3=0$$ (that is, the algebraic multiplicity of the unique eigenvalue $$1$$ is $$3$$), but the corresponding eigenspace $$E_1(A)$$ is the 1-dimensional space generated by the vector $$(1,0,0)$$.
+In a previous post, we saw that the characteristic polynomial of this matrix is $(\x-1)^3=0$ (that is, the algebraic multiplicity of the unique eigenvalue $1$ is $3$), but the corresponding eigenspace $E_1(A)$ is the 1-dimensional space generated by the vector $(1,0,0)$.
 
 Now let us apply the above lemma to the linear operator
 
@@ -74,13 +74,13 @@ $$(A-I)^3=\begin{pmatrix}0&0&0\\0&0&0\\0&0&0\end{pmatrix}$$
 
 so
 
-$$\ker (A-I)^3=\span \{(1,0,0), (0,1,0), (0,0,1)\}$$
+$\ker (A-I)^3=\span \{(1,0,0), (0,1,0), (0,0,1)\}$
 :::
 
 Though calling it intuition is perhaps a bit grandiose, we can at least verify that the observation mentioned above works well in this example. Now let us introduce the following definition for the main story.
 
 ::: Definition 3
-For a linear operator $$A$$ defined on a finite-dimensional vector space $$V$$ and an eigenvalue $$\lambda$$ of $$A$$, we define the *generalized eigenspace* of $$A$$ for $$\lambda$$ by the formula
+For a linear operator $A$ defined on a finite-dimensional vector space $V$ and an eigenvalue $\lambda$ of $A$, we define the *generalized eigenspace* of $A$ for $\lambda$ by the formula
 
 $$G_\lambda(A)=\left\{v\in V\mid (A-\lambda I)^kv=0\text{ for some $k\geq 0$}\right\}$$
 :::
@@ -88,29 +88,29 @@ $$G_\lambda(A)=\left\{v\in V\mid (A-\lambda I)^kv=0\text{ for some $k\geq 0$}\ri
 Then from [Lemma 1](#lem1) we obtain the following.
 
 ::: Corollary 4
-For a linear operator $$A:V\rightarrow V$$ defined on a finite-dimensional vector space $$V$$ and its eigenvalue $$\lambda$$, there exists a suitable positive integer $$k$$ such that $$G_\lambda(A)=\ker(A-\lambda I)^k$$.
+For a linear operator $A:V\rightarrow V$ defined on a finite-dimensional vector space $V$ and its eigenvalue $\lambda$, there exists a suitable positive integer $k$ such that $G_\lambda(A)=\ker(A-\lambda I)^k$.
 :::
 ::: Proof
-Applying [Lemma 1](#lem1) to the linear operator $$A-\lambda I$$, there exists $$k$$ satisfying
+Applying [Lemma 1](#lem1) to the linear operator $A-\lambda I$, there exists $k$ satisfying
 
 $$\ker(A-\lambda I)^k=\ker(A-\lambda I)^{k+1}=\cdots$$
 
-On the other hand, whenever $$v\in G_\lambda(A)$$ is given, by definition there exists $$l$$ such that
+On the other hand, whenever $v\in G_\lambda(A)$ is given, by definition there exists $l$ such that
 
 $$(A-\lambda I)^lv=0$$
 
-Then letting $$k'=\max (k,l)$$, since $$k'\geq l$$,
+Then letting $k'=\max (k,l)$, since $k'\geq l$,
 
 $$(A-\lambda I)^{k'}v =0$$
 
-That is, $$v\in\ker (A-\lambda I)^{k'}$$. But by the definition of $$k$$, $$\ker(A-\lambda I)^k=\ker(A-\lambda I)^{k'}$$, and from this $$v\in \ker (A-\lambda I)^k$$. ($$k'$$ depends on $$v$$, but $$k$$ does not.) The inclusion $$\ker (A-\lambda I)^k\subset G_\lambda(A)$$ is obvious, so we obtain the desired result.
+That is, $v\in\ker (A-\lambda I)^{k'}$. But by the definition of $k$, $\ker(A-\lambda I)^k=\ker(A-\lambda I)^{k'}$, and from this $v\in \ker (A-\lambda I)^k$. ($k'$ depends on $v$, but $k$ does not.) The inclusion $\ker (A-\lambda I)^k\subset G_\lambda(A)$ is obvious, so we obtain the desired result.
 :::
 
-Intuitively, generalized eigenspaces include not only genuine eigenvectors but also vectors that eventually become $$0$$ when the linear operator $$(A-\lambda I)$$ is applied repeatedly.
+Intuitively, generalized eigenspaces include not only genuine eigenvectors but also vectors that eventually become $0$ when the linear operator $(A-\lambda I)$ is applied repeatedly.
 
 ## Primary Decomposition Theorem
 
-Before introducing the main result, let us briefly summarize the proof of [§Eigenspace Decomposition, ⁋Proposition 12](/en/math/linear_algebra/eigenspace_decomposition#prop12). To show the diagonalizability of $$A$$, for a fixed eigenvalue $$\lambda$$ we assumed that
+Before introducing the main result, let us briefly summarize the proof of [§Eigenspace Decomposition, ⁋Proposition 12](/en/math/linear_algebra/eigenspace_decomposition#prop12). To show the diagonalizability of $A$, for a fixed eigenvalue $\lambda$ we assumed that
 
 $$\ker(A-\lambda I)=\ker(A-\lambda I)^2$$
 
@@ -118,9 +118,9 @@ holds, and then by [§Eigenspace Decomposition, ⁋Lemma 11](/en/math/linear_alg
 
 $$\ker (A-\lambda I)\cap \im (A-\lambda I)=\{0\}$$
 
-so we saw that necessarily $$V=\ker (A-\lambda I)\oplus \im(A-\lambda I)$$. Then $$\im (A-\lambda I)$$ becomes $$A$$-invariant, so we can view $$A$$ as a linear operator on this space, and at that time (since by [§Eigenspace Decomposition, ⁋Proposition 4](/en/math/linear_algebra/eigenspace_decomposition#prop4), $$E_\lambda(A)\cap E_\mu(A)=\{0\}$$), the eigenvalue--eigenvector pairs match up, so repeating this inductively gives the eigenspace decomposition; this was the gist of the proof.
+so we saw that necessarily $V=\ker (A-\lambda I)\oplus \im(A-\lambda I)$. Then $\im (A-\lambda I)$ becomes $A$-invariant, so we can view $A$ as a linear operator on this space, and at that time (since by [§Eigenspace Decomposition, ⁋Proposition 4](/en/math/linear_algebra/eigenspace_decomposition#prop4), $E_\lambda(A)\cap E_\mu(A)=\{0\}$), the eigenvalue--eigenvector pairs match up, so repeating this inductively gives the eigenspace decomposition; this was the gist of the proof.
 
-Now, thinking about how to utilize [Definition 3](#def3) from the above perspective, for an arbitrary linear operator $$L$$ and $$k$$ satisfying
+Now, thinking about how to utilize [Definition 3](#def3) from the above perspective, for an arbitrary linear operator $L$ and $k$ satisfying
 
 $$\ker L^k=\ker L^{k+1}=\cdots$$
 
@@ -128,49 +128,49 @@ we know that
 
 $$\ker L^k=\ker L^{2k}$$
 
-holds. In other words, for $$L^k:V \rightarrow V$$, the premise of [§Eigenspace Decomposition, ⁋Lemma 11](/en/math/linear_algebra/eigenspace_decomposition#lem11) is satisfied. Applying this to $$L=A-\lambda I$$, we obtain the first step of induction---that is, the direct sum decomposition $$V=\ker (A-\lambda I)^k \oplus \im (A-\lambda I)^k$$. As in the proof of [§Eigenspace Decomposition, ⁋Proposition 12](/en/math/linear_algebra/eigenspace_decomposition#prop12), let us write this as
+holds. In other words, for $L^k:V \rightarrow V$, the premise of [§Eigenspace Decomposition, ⁋Lemma 11](/en/math/linear_algebra/eigenspace_decomposition#lem11) is satisfied. Applying this to $L=A-\lambda I$, we obtain the first step of induction---that is, the direct sum decomposition $V=\ker (A-\lambda I)^k \oplus \im (A-\lambda I)^k$. As in the proof of [§Eigenspace Decomposition, ⁋Proposition 12](/en/math/linear_algebra/eigenspace_decomposition#prop12), let us write this as
 
 $$V=G_\lambda(A)\oplus W_\lambda(A)$$
 
-Then it is obvious that $$W_\lambda(A)$$ is $$A$$-invariant and therefore $$A\vert_{W_\lambda(A)}$$ defines a linear operator $$A\vert_{W_\lambda(A)}:W_\lambda(A)\rightarrow W_\lambda(A)$$. The part that requires some care is the following lemma.
+Then it is obvious that $W_\lambda(A)$ is $A$-invariant and therefore $A\vert_{W_\lambda(A)}$ defines a linear operator $A\vert_{W_\lambda(A)}:W_\lambda(A)\rightarrow W_\lambda(A)$. The part that requires some care is the following lemma.
 
 ::: Lemma 5
-For a linear operator $$A:V\rightarrow V$$ defined on a finite-dimensional vector space $$V$$ and two distinct eigenvalues $$\lambda, \mu$$ of $$A$$, we have $$G_\lambda(A)\cap G_\mu(A)=\{0\}$$.
+For a linear operator $A:V\rightarrow V$ defined on a finite-dimensional vector space $V$ and two distinct eigenvalues $\lambda, \mu$ of $A$, we have $G_\lambda(A)\cap G_\mu(A)=\{0\}$.
 :::
 ::: Proof
-First, assume $$v\in G_{\lambda_i}(L)\cap G_{\lambda_j}(L)$$ and $$v\neq 0$$. From [Corollary 4](#cor4), there exist integers $$k_i, k_j$$ satisfying
+First, assume $v\in G_{\lambda_i}(L)\cap G_{\lambda_j}(L)$ and $v\neq 0$. From [Corollary 4](#cor4), there exist integers $k_i, k_j$ satisfying
 
 $$G_{\lambda_i}(L)=\ker(L-\lambda_i I)^{k_i},\qquad G_{\lambda_j}(L)=\ker(L-\lambda_j I)^{k_j}$$
 
-Now let $$p_i$$ be the smallest $$k$$ such that $$(L-\lambda_iI)^kv=0$$. Then from the formula
+Now let $p_i$ be the smallest $k$ such that $(L-\lambda_iI)^kv=0$. Then from the formula
 
 $$(L-\lambda_iI)^{p_i}v=0\implies L(L-\lambda_iI)^{p_i-1}v=\lambda_i(L-\lambda_iI)^{p_i-1}v$$
 
-we know that $$w=(L-\lambda_iI)^{p_i-1}v\neq 0$$ is an eigenvector corresponding to the eigenvalue $$\lambda_i$$ of $$L$$. On the other hand, since $$v\in G_{\lambda_j}(L)$$, we have $$(L-\lambda_j I)^{k_j}v=0$$, and since $$(L-\lambda_i I)$$ and $$(L-\lambda_j I)$$ commute,
+we know that $w=(L-\lambda_iI)^{p_i-1}v\neq 0$ is an eigenvector corresponding to the eigenvalue $\lambda_i$ of $L$. On the other hand, since $v\in G_{\lambda_j}(L)$, we have $(L-\lambda_j I)^{k_j}v=0$, and since $(L-\lambda_i I)$ and $(L-\lambda_j I)$ commute,
 
 $$(L-\lambda_j I)^{k_j}w=(L-\lambda_j I)^{k_j}(L-\lambda_i I)^{p_i}v=(L-\lambda_i I)^{p_i}(L-\lambda_j I)^{k_j}v=0$$
 
-That is, $$w\in G_{\lambda_j}(L)$$, so $$w$$ becomes an eigenvector corresponding to eigenvalue $$\lambda_i$$ while also belonging to $$G_{\lambda_j}(L)$$.
+That is, $w\in G_{\lambda_j}(L)$, so $w$ becomes an eigenvector corresponding to eigenvalue $\lambda_i$ while also belonging to $G_{\lambda_j}(L)$.
 
-Let us show that this is impossible. Since $$w\in G_{\lambda_j}(L)$$, by definition there exists an integer $$k$$ such that $$(L-\lambda_jI)^kw=0$$. (For example, we saw above that $$k=k_j$$ satisfies this.) Letting $$p_j$$ be the smallest such integer, by minimality $$w'=(L-\lambda_jI)^{p_j-1}w\neq 0$$ and
+Let us show that this is impossible. Since $w\in G_{\lambda_j}(L)$, by definition there exists an integer $k$ such that $(L-\lambda_jI)^kw=0$. (For example, we saw above that $k=k_j$ satisfies this.) Letting $p_j$ be the smallest such integer, by minimality $w'=(L-\lambda_jI)^{p_j-1}w\neq 0$ and
 
 $$0=(L-\lambda_jI)^{p_j}w=(L-\lambda_jI)w'$$
 
-so $$w'$$ is an eigenvector corresponding to eigenvalue $$\lambda_j$$. On the other hand, since $$w$$ is an eigenvector corresponding to eigenvalue $$\lambda_i$$, from the formula
+so $w'$ is an eigenvector corresponding to eigenvalue $\lambda_j$. On the other hand, since $w$ is an eigenvector corresponding to eigenvalue $\lambda_i$, from the formula
 
 $$Lw'=L(L-\lambda_jI)^{p_j-1}w=(L-\lambda_jI)^{p_j-1}Lw=(L-\lambda_jI)^{p_j-1}\lambda_iw=\lambda_i (L-\lambda_jI)^{p_j-1}w_\lambda w'$$
 
-we know that $$w'$$ is also an eigenvector corresponding to $$\lambda_i$$. This contradicts [§Eigenspace Decomposition, ⁋Proposition 4](/en/math/linear_algebra/eigenspace_decomposition#prop4), so by contradiction we know that $$G_{\lambda_i}(L)\cap G_{\lambda_j}(L)=\{0\}$$ when $$i\neq j$$.
+we know that $w'$ is also an eigenvector corresponding to $\lambda_i$. This contradicts [§Eigenspace Decomposition, ⁋Proposition 4](/en/math/linear_algebra/eigenspace_decomposition#prop4), so by contradiction we know that $G_{\lambda_i}(L)\cap G_{\lambda_j}(L)=\{0\}$ when $i\neq j$.
 :::
 
 Therefore, considering the preceding decomposition
 
 $$V=G_\lambda(A)\oplus W_\lambda(A)$$
 
-and the restricted linear operator $$A\vert_{W_\lambda(A)}: W_\lambda(A)\rightarrow W_\lambda(A)$$, the eigenvalues of this linear operator are exactly those of $$A$$ except $$\lambda$$. That is, induction works well, and thus the following holds.
+and the restricted linear operator $A\vert_{W_\lambda(A)}: W_\lambda(A)\rightarrow W_\lambda(A)$, the eigenvalues of this linear operator are exactly those of $A$ except $\lambda$. That is, induction works well, and thus the following holds.
 
 ::: Theorem 6 (Primary Decomposition Theorem)
-For a linear operator $$A:V\rightarrow V$$ defined on a finite-dimensional vector space $$V$$, let all eigenvalues of $$A$$ be $$\lambda_1,\ldots,\lambda_m$$. Then the following direct sum decomposition
+For a linear operator $A:V\rightarrow V$ defined on a finite-dimensional vector space $V$, let all eigenvalues of $A$ be $\lambda_1,\ldots,\lambda_m$. Then the following direct sum decomposition
 
 $$V=G_{\lambda_1}(A)\oplus G_{\lambda_2}(A)\oplus\cdots\oplus G_{\lambda_m}(A)$$
 
@@ -179,42 +179,42 @@ holds.
 
 ## Jordan Canonical Form
 
-Now for each $$\lambda$$, we need to compute the dimension of $$G_\lambda(A)$$. Let a linear operator $$A:V \rightarrow V$$ be given, and let its characteristic polynomial
+Now for each $\lambda$, we need to compute the dimension of $G_\lambda(A)$. Let a linear operator $A:V \rightarrow V$ be given, and let its characteristic polynomial
 
 $$p_A(\x)=\prod_{\lambda\in\sigma(A)}(\x-\lambda)^{d_\lambda}$$
 
-be given. Here $$d_\lambda$$ is the algebraic multiplicity of $$\lambda$$, and $$\sum d_\lambda$$ equals $$\dim V$$, the degree of $$p_A$$. However, from the above decomposition we obtain the formula
+be given. Here $d_\lambda$ is the algebraic multiplicity of $\lambda$, and $\sum d_\lambda$ equals $\dim V$, the degree of $p_A$. However, from the above decomposition we obtain the formula
 
 $$p_A(\x)=\prod_{\lambda\in\sigma(A)} p_{G_\lambda(A)}(\x)$$
 
-([§Existence and Uniqueness of Determinant, ⁋Corollary 10](/en/math/linear_algebra/existence_and_uniqueness_of_determinant#cor10)) Since we verified in [Lemma 5](#lem5) that when $$A$$ is restricted to $$G_\lambda(A)$$, the only eigenvalue is $$\lambda$$, each $$p_{G_\lambda(A)}(\x)$$ must have only $$\x-\lambda$$ as a factor. Therefore, for the two formulas above to be equal, we know that $$p_{G_\lambda(A)}(\x)$$ must be exactly the polynomial of degree $$d_\lambda$$
+([§Existence and Uniqueness of Determinant, ⁋Corollary 10](/en/math/linear_algebra/existence_and_uniqueness_of_determinant#cor10)) Since we verified in [Lemma 5](#lem5) that when $A$ is restricted to $G_\lambda(A)$, the only eigenvalue is $\lambda$, each $p_{G_\lambda(A)}(\x)$ must have only $\x-\lambda$ as a factor. Therefore, for the two formulas above to be equal, we know that $p_{G_\lambda(A)}(\x)$ must be exactly the polynomial of degree $d_\lambda$
 
 $$p_{G_\lambda(A)}(\x)=(\x-\lambda)^{d_\lambda}$$
 
-and from this we know that $$\dim G_\lambda(A)=d_\lambda$$.
+and from this we know that $\dim G_\lambda(A)=d_\lambda$.
 
-Thus, we have now verified that for an arbitrary linear operator $$A:V \rightarrow V$$, the decomposition
+Thus, we have now verified that for an arbitrary linear operator $A:V \rightarrow V$, the decomposition
 
 $$V=\bigoplus_{\lambda\in\sigma(A)}G_\lambda(A)$$
 
-holds, and moreover for each $$\lambda$$, $$\dim G_\lambda(A)$$ matches the expected dimension, namely the algebraic multiplicity of $$\lambda$$ in the characteristic polynomial of $$A$$. Then what remains for us is to find a suitable basis of $$V$$ and represent an arbitrary matrix in a form similar to [§Eigenspace Decomposition, ⁋Proposition 7](/en/math/linear_algebra/eigenspace_decomposition#prop7).
+holds, and moreover for each $\lambda$, $\dim G_\lambda(A)$ matches the expected dimension, namely the algebraic multiplicity of $\lambda$ in the characteristic polynomial of $A$. Then what remains for us is to find a suitable basis of $V$ and represent an arbitrary matrix in a form similar to [§Eigenspace Decomposition, ⁋Proposition 7](/en/math/linear_algebra/eigenspace_decomposition#prop7).
 
-A useful fact here is that for an arbitrary eigenvalue $$\lambda\in \sigma(A)$$ of a linear operator $$A:V\rightarrow V$$, when restricted to the generalized eigenspace $$G_\lambda(A)$$, the linear operator
+A useful fact here is that for an arbitrary eigenvalue $\lambda\in \sigma(A)$ of a linear operator $A:V\rightarrow V$, when restricted to the generalized eigenspace $G_\lambda(A)$, the linear operator
 
 $$N_\lambda:=(A-\lambda I)\vert_{G_\lambda(A)}: G_\lambda(A)\rightarrow G_\lambda(A)$$
 
 is a nilpotent operator.
 
 ::: Definition 7
-A linear operator $$N:V \rightarrow V$$ defined on a vector space $$V$$ is called *nilpotent* if there exists a suitable integer $$k$$ such that $$N^k\equiv 0$$. The smallest such $$k$$ is called the *(nilpotency) index* of $$N$$.
+A linear operator $N:V \rightarrow V$ defined on a vector space $V$ is called *nilpotent* if there exists a suitable integer $k$ such that $N^k\equiv 0$. The smallest such $k$ is called the *(nilpotency) index* of $N$.
 :::
 
-That is, if we can find the canonical form of an arbitrary nilpotent operator, then we can also represent the entire matrix $$A$$ in canonical form.
+That is, if we can find the canonical form of an arbitrary nilpotent operator, then we can also represent the entire matrix $A$ in canonical form.
 
-Let a nilpotent operator $$N: V\rightarrow V$$ of index $$k$$ be given. Then there exists suitable $$v\in V$$ such that $$N^{k-1}v\neq 0$$. Using this vector, we can also show that the inclusions in [Lemma 1](#lem1) are strict, because $$N^{k-i}v\in \ker N^i$$ but $$N^{k-1}v\not\in\ker N^{i-1}$$. In other words, $$v, Nv, \ldots, N^{k-1}v$$ are all distinct elements. More generally, the following holds.
+Let a nilpotent operator $N: V\rightarrow V$ of index $k$ be given. Then there exists suitable $v\in V$ such that $N^{k-1}v\neq 0$. Using this vector, we can also show that the inclusions in [Lemma 1](#lem1) are strict, because $N^{k-i}v\in \ker N^i$ but $N^{k-1}v\not\in\ker N^{i-1}$. In other words, $v, Nv, \ldots, N^{k-1}v$ are all distinct elements. More generally, the following holds.
 
 ::: Lemma 8
-Let a linear operator $$N: V\rightarrow V$$ defined on a vector space $$V$$ and a vector $$v$$ satisfying $$N^kv=0$$ and $$N^{k-1}v\neq 0$$ be given. Then the following vectors
+Let a linear operator $N: V\rightarrow V$ defined on a vector space $V$ and a vector $v$ satisfying $N^kv=0$ and $N^{k-1}v\neq 0$ be given. Then the following vectors
 
 $$v, \quad Nv, \quad\cdots,\quad N^{k-1}v$$
 
@@ -225,67 +225,67 @@ Assume the following formula
 
 $$a_0v+a_1 Nv+\cdots a_{k-1}N^{k-1}v=0$$
 
-holds. Applying $$N^{k-1}$$ to both sides, from $$N^k=0$$ we know that $$a_0N^{k-1}v=0$$. But by assumption $$N^{k-1}v\neq 0$$, so necessarily $$a_0=0$$, and
+holds. Applying $N^{k-1}$ to both sides, from $N^k=0$ we know that $a_0N^{k-1}v=0$. But by assumption $N^{k-1}v\neq 0$, so necessarily $a_0=0$, and
 
 $$a_1Nv+\cdots a_{k-1}N^{k-1}v=0$$
 
-Applying $$N^{k-2}$$ to both sides again, we obtain $$a_1=0$$, and repeating this gives the desired result.
+Applying $N^{k-2}$ to both sides again, we obtain $a_1=0$, and repeating this gives the desired result.
 :::
 
-That is, the $$k$$ vectors $$v, Nv, \ldots, N^{k-1}v$$ become a basis of a $$k$$-dimensional subspace $$U$$ of $$V$$ (such a subspace is called the *cyclic subspace* defined by $$v$$). The reason this particular basis is interesting is that when we represent $$N\vert_U$$ as a matrix with respect to this basis $$N^{k-1}v, \ldots, Nv, v$$, we obtain
+That is, the $k$ vectors $v, Nv, \ldots, N^{k-1}v$ become a basis of a $k$-dimensional subspace $U$ of $V$ (such a subspace is called the *cyclic subspace* defined by $v$). The reason this particular basis is interesting is that when we represent $N\vert_U$ as a matrix with respect to this basis $N^{k-1}v, \ldots, Nv, v$, we obtain
 
 $$\begin{pmatrix}0&1&0&\cdots&0\\ 0&0&1&\cdots&0\\\vdots&\vdots&\vdots&\ddots&\vdots\\ 0&0&0&\cdots&1\\ 0&0&0&\cdots&0\end{pmatrix}\tag{1}$$
 
 This is our idea for taking as the canonical form of a nilpotent operator.
 
-That is, given an arbitrary vector space $$V$$ and a nilpotent operator $$N$$ defined on it, our task is to represent this as a direct sum of cyclic subspaces.
+That is, given an arbitrary vector space $V$ and a nilpotent operator $N$ defined on it, our task is to represent this as a direct sum of cyclic subspaces.
 
 ::: Theorem 9 (Cyclic Decomposition Theorem, or Second Decomposition Theorem)
-For an arbitrary vector space $$V$$ and a nilpotent operator $$N: V\rightarrow V$$ defined on it, a decomposition into cyclic subspaces
+For an arbitrary vector space $V$ and a nilpotent operator $N: V\rightarrow V$ defined on it, a decomposition into cyclic subspaces
 
 $$V=U_1\oplus \cdots\oplus U_e$$
 
 exists.
 :::
 
-The proof of this theorem is as follows. Let the nilpotency index of $$N$$ be $$k_1$$ and choose a vector $$v_1$$ such that $$N^{k_1}v_1=0$$ but $$N^{k_1-1}v_1\neq 0$$. Consider the cyclic subspace defined by this vector
+The proof of this theorem is as follows. Let the nilpotency index of $N$ be $k_1$ and choose a vector $v_1$ such that $N^{k_1}v_1=0$ but $N^{k_1-1}v_1\neq 0$. Consider the cyclic subspace defined by this vector
 
 $$U_1=\span (N^{k_1-1}v_1, \cdots, Nv_1, v_1)$$
 
-If $$U_1=V$$, there is nothing more to prove. Otherwise, we find a *$$T$$-invariant* subspace $$W_1$$ such that $$V=U_1\oplus W_1$$. That $$N$$ is also nilpotent on $$W_1$$ is obvious, so we take the nilpotency index $$k_2$$ of $$N\vert_{W_1}$$, and can choose $$v_2$$ such that $$N^{k_2}v_2=0$$ but $$N^{k_2-1}v_2\neq 0$$. Now again obtaining the cyclic subspace
+If $U_1=V$, there is nothing more to prove. Otherwise, we find a *$T$-invariant* subspace $W_1$ such that $V=U_1\oplus W_1$. That $N$ is also nilpotent on $W_1$ is obvious, so we take the nilpotency index $k_2$ of $N\vert_{W_1}$, and can choose $v_2$ such that $N^{k_2}v_2=0$ but $N^{k_2-1}v_2\neq 0$. Now again obtaining the cyclic subspace
 
 $$U_2=\span (N^{k-2-1}v_2, \cdots, Nv_2, v_2)$$
 
-and repeating the process of obtaining a $$T$$-invariant complement of $$U_2$$, we obtain the desired decomposition.
+and repeating the process of obtaining a $T$-invariant complement of $U_2$, we obtain the desired decomposition.
 
-The most crucial part of this proof is that we can choose the complement $$W$$ of $$U$$ to be $$T$$-invariant.
+The most crucial part of this proof is that we can choose the complement $W$ of $U$ to be $T$-invariant.
 
 ::: Lemma 10
-Consider an arbitrary vector space $$V$$ and a nilpotent operator $$N$$ of index $$k$$ defined on it, and choose a vector $$v$$ satisfying $$N^{k-1}v\neq 0$$. Then for the cyclic subspace generated by $$v$$
+Consider an arbitrary vector space $V$ and a nilpotent operator $N$ of index $k$ defined on it, and choose a vector $v$ satisfying $N^{k-1}v\neq 0$. Then for the cyclic subspace generated by $v$
 
 $$U=\span(v, Nv, \ldots, N^{k-1}v)$$
 
-there exists a $$T$$-invariant space $$W$$ such that $$V=U\oplus W$$.
+there exists a $T$-invariant space $W$ such that $V=U\oplus W$.
 :::
 
-The proof of this can be done by induction on the nilpotency index of $$N$$, but the proof is somewhat tedious, so we omit it.
+The proof of this can be done by induction on the nilpotency index of $N$, but the proof is somewhat tedious, so we omit it.
 
-Anyway, after going through this process, we know that an arbitrary nilpotent operator $$N$$ can be represented as a direct sum of the form (1) above (that is, block diagonal matrices with the above matrices on the diagonal). Since $$N$$ arose as the nilpotent operator $$A-\lambda I$$ on the generalized eigenspace $$G_\lambda(A)$$, we define the following.
+Anyway, after going through this process, we know that an arbitrary nilpotent operator $N$ can be represented as a direct sum of the form (1) above (that is, block diagonal matrices with the above matrices on the diagonal). Since $N$ arose as the nilpotent operator $A-\lambda I$ on the generalized eigenspace $G_\lambda(A)$, we define the following.
 
 ::: Definition 11
-The *Jordan block* of size $$k$$, $$J_k(\lambda)$$, is defined as the following $$k\times k$$ matrix
+The *Jordan block* of size $k$, $J_k(\lambda)$, is defined as the following $k\times k$ matrix
 
-$$J_k(\lambda)=\begin{pmatrix}\lambda&1&0&\cdots&0\\0&\lambda&1&\cdots&0\\\vdots&\vdots&\ddots&\ddots&\vdots\\0&0&\cdots&\lambda&1\\0&0&\cdots&0&\lambda\end{pmatrix}$$
+$J_k(\lambda)=\begin{pmatrix}\lambda&1&0&\cdots&0\\0&\lambda&1&\cdots&0\\\vdots&\vdots&\ddots&\ddots&\vdots\\0&0&\cdots&\lambda&1\\0&0&\cdots&0&\lambda\end{pmatrix}$
 :::
 
 Then combining [Theorem 6](#thm6) and [Theorem 9](#thm9), we obtain the following theorem.
 
 ::: Theorem 12 (Jordan Canonical Form)
-For an arbitrary linear operator $$A:V\rightarrow V$$ defined on a finite-dimensional vector space $$V$$, by choosing a suitable basis of $$V$$, the matrix representation of $$A$$ takes the following form:
+For an arbitrary linear operator $A:V\rightarrow V$ defined on a finite-dimensional vector space $V$, by choosing a suitable basis of $V$, the matrix representation of $A$ takes the following form:
 
 $$J=\begin{pmatrix}J_{k_1}(\lambda_1)&0&\cdots&0\\0&J_{k_2}(\lambda_2)&\cdots&0\\\vdots&\vdots&\ddots&\vdots\\0&0&\cdots&J_{k_m}(\lambda_m)\end{pmatrix}$$
 
-where each $$J_{k_i}(\lambda_i)$$ is a Jordan block. A matrix of this form is called the *Jordan canonical form* of $$A$$.
+where each $J_{k_i}(\lambda_i)$ is a Jordan block. A matrix of this form is called the *Jordan canonical form* of $A$.
 :::
 
 ::: Example 13
@@ -293,7 +293,7 @@ Let us find the Jordan canonical form of the matrix from [Example 2](#ex2)
 
 $$A=\begin{pmatrix}1&1&1\\0&1&1\\0&0&1\end{pmatrix}$$
 
-The unique eigenvalue of $$A$$ is $$\lambda=1$$, and
+The unique eigenvalue of $A$ is $\lambda=1$, and
 
 $$A-I=\begin{pmatrix}0&1&1\\0&0&1\\0&0&0\end{pmatrix}$$
 
@@ -301,13 +301,13 @@ and
 
 $$\ker(A-I)=\span\{(1,0,0)\},\quad \ker(A-I)^2=\span\{(1,0,0),(0,1,0)\},\quad \ker(A-I)^3=\mathbb{R}^3$$
 
-which we have already computed. That is, applying [Theorem 6](#thm6) to $$A$$ simply gives $$V=G_1(A)$$.
+which we have already computed. That is, applying [Theorem 6](#thm6) to $A$ simply gives $V=G_1(A)$.
 
-Now we need to apply [Theorem 9](#thm9) on $$G_1(A)$$. As examined earlier, $$(A-I)^3=0$$ but $$(A-I)^2\neq 0$$, and we know that $$v=(0,0,1)$$ actually satisfies $$(A-I)^2 v\neq 0$$. Then
+Now we need to apply [Theorem 9](#thm9) on $G_1(A)$. As examined earlier, $(A-I)^3=0$ but $(A-I)^2\neq 0$, and we know that $v=(0,0,1)$ actually satisfies $(A-I)^2 v\neq 0$. Then
 
 $$v_1=(A-I)^2v=(1,0,0),\qquad v_2=(A-I)v=(1,1,0),\qquad v_3=v=(0,0,1)$$
 
-and these generate $$G_1(A)$$. Now taking $$\mathcal{B}=(v_1, v_2, v_3)$$ as a basis of $$V$$ and representing $$A$$:
+and these generate $G_1(A)$. Now taking $\mathcal{B}=(v_1, v_2, v_3)$ as a basis of $V$ and representing $A$:
 
 $$Av_1 = A\begin{pmatrix}1\\0\\0\end{pmatrix} = \begin{pmatrix}1\\0\\0\end{pmatrix} = v_1$$
 
@@ -315,54 +315,54 @@ $$Av_2 = A\begin{pmatrix}1\\1\\0\end{pmatrix} = \begin{pmatrix}2\\1\\0\end{pmatr
 
 $$Av_3 = A\begin{pmatrix}0\\0\\1\end{pmatrix} = \begin{pmatrix}1\\1\\1\end{pmatrix} = v_2 + v_3$$
 
-Therefore, the matrix representation of $$A$$ with respect to basis $$\mathcal{B}$$ is
+Therefore, the matrix representation of $A$ with respect to basis $\mathcal{B}$ is
 
 $$[A]_{\mathcal{B}} = \begin{pmatrix}1&1&0\\0&1&1\\0&0&1\end{pmatrix} = J_3(1)$$
 
 thus obtaining a Jordan canonical form consisting of a single Jordan block of size 3.
 :::
 
-The uniqueness of the Jordan canonical form follows from the fact that the sizes of the Jordan blocks are determined by $$\dim\ker N^k-\dim\ker N^{k-1}$$. Since this is independent of the choice of basis, the Jordan canonical form is uniquely determined up to the order of the Jordan blocks.
+The uniqueness of the Jordan canonical form follows from the fact that the sizes of the Jordan blocks are determined by $\dim\ker N^k-\dim\ker N^{k-1}$. Since this is independent of the choice of basis, the Jordan canonical form is uniquely determined up to the order of the Jordan blocks.
 
 ## Rational Canonical Form
 
-The Jordan canonical form depends on the assumption that $$\mathbb{K}$$ is algebraically closed, because each block directly contains the eigenvalue $$\lambda$$. There is a canonical form that encodes the same information without explicitly mentioning eigenvalues, using only polynomial coefficients; its basic unit is the companion matrix.
+The Jordan canonical form depends on the assumption that $\mathbb{K}$ is algebraically closed, because each block directly contains the eigenvalue $\lambda$. There is a canonical form that encodes the same information without explicitly mentioning eigenvalues, using only polynomial coefficients; its basic unit is the companion matrix.
 
 ::: Definition 14
-For a monic polynomial $$p(\x)=\x^d+c_{d-1}\x^{d-1}+\cdots+c_1\x+c_0$$, its *companion matrix* $$C(p)$$ is defined as the following $$d\times d$$ matrix
+For a monic polynomial $p(\x)=\x^d+c_{d-1}\x^{d-1}+\cdots+c_1\x+c_0$, its *companion matrix* $C(p)$ is defined as the following $d\times d$ matrix
 
-$$C(p)=\begin{pmatrix}0&0&\cdots&0&-c_0\\1&0&\cdots&0&-c_1\\0&1&\cdots&0&-c_2\\\vdots&\vdots&\ddots&\vdots&\vdots\\0&0&\cdots&1&-c_{d-1}\end{pmatrix}$$
+$C(p)=\begin{pmatrix}0&0&\cdots&0&-c_0\\1&0&\cdots&0&-c_1\\0&1&\cdots&0&-c_2\\\vdots&\vdots&\ddots&\vdots&\vdots\\0&0&\cdots&1&-c_{d-1}\end{pmatrix}$
 :::
 
-An operator $$T:V\rightarrow V$$ is called *cyclic* if there exists suitable $$v\in V$$ such that $$\{v,Tv,\ldots,T^{d-1}v\}$$ ($$d=\dim V$$) is a basis of $$V$$; such a $$v$$ is called a cyclic vector.
+An operator $T:V\rightarrow V$ is called *cyclic* if there exists suitable $v\in V$ such that $\{v,Tv,\ldots,T^{d-1}v\}$ ($d=\dim V$) is a basis of $V$; such a $v$ is called a cyclic vector.
 
 ::: Proposition 15
-The minimal polynomial $$p$$ of an operator $$T:V\rightarrow V$$ of dimension $$d$$ having a cyclic vector $$v$$ has degree $$d$$, and the matrix representation of $$T$$ with respect to the cyclic basis $$\{v,Tv,\ldots,T^{d-1}v\}$$ is $$C(p)$$. In particular, the Jordan block $$J_k(\lambda)$$ of [Definition 11](#def11) is similar to the companion matrix of $$(\x-\lambda)^k$$.
+The minimal polynomial $p$ of an operator $T:V\rightarrow V$ of dimension $d$ having a cyclic vector $v$ has degree $d$, and the matrix representation of $T$ with respect to the cyclic basis $\{v,Tv,\ldots,T^{d-1}v\}$ is $C(p)$. In particular, the Jordan block $J_k(\lambda)$ of [Definition 11](#def11) is similar to the companion matrix of $(\x-\lambda)^k$.
 :::
 ::: Proof
-Since $$\{v,Tv,\ldots,T^{d-1}v\}$$ is linearly independent, expressing $$T^dv$$ as their linear combination
+Since $\{v,Tv,\ldots,T^{d-1}v\}$ is linearly independent, expressing $T^dv$ as their linear combination
 
 $$T^dv=-(c_0v+c_1Tv+\cdots+c_{d-1}T^{d-1}v)$$
 
-and defining $$p(\x)=\x^d+c_{d-1}\x^{d-1}+\cdots+c_0$$ with these coefficients, we have $$p(T)v=0$$. Then for arbitrary $$T^iv$$, we have $$p(T)T^iv=T^ip(T)v=0$$, and since these generate $$V$$, $$p(T)=0$$. On the other hand, for a nonzero polynomial $$q$$ of degree less than $$d$$, $$q(T)v$$ is a nontrivial linear combination of $$\{v,\ldots,T^{d-1}v\}$$, so it is not $$0$$; therefore $$p$$ is the minimal polynomial of $$T$$. In this basis, $$T$$ acts as $$T^iv\mapsto T^{i+1}v$$ ($$i<d-1$$), and $$T^{d-1}v$$ acts by the above formula, so its matrix representation is exactly $$C(p)$$.
+and defining $p(\x)=\x^d+c_{d-1}\x^{d-1}+\cdots+c_0$ with these coefficients, we have $p(T)v=0$. Then for arbitrary $T^iv$, we have $p(T)T^iv=T^ip(T)v=0$, and since these generate $V$, $p(T)=0$. On the other hand, for a nonzero polynomial $q$ of degree less than $d$, $q(T)v$ is a nontrivial linear combination of $\{v,\ldots,T^{d-1}v\}$, so it is not $0$; therefore $p$ is the minimal polynomial of $T$. In this basis, $T$ acts as $T^iv\mapsto T^{i+1}v$ ($i<d-1$), and $T^{d-1}v$ acts by the above formula, so its matrix representation is exactly $C(p)$.
 
-For $$J_k(\lambda)$$, since $$N=J_k(\lambda)-\lambda I$$ is a nilpotent of index $$k$$, choosing $$v$$ with $$N^{k-1}v\neq 0$$, by [Lemma 8](#lem8), $$\{v,Nv,\ldots,N^{k-1}v\}$$ is a basis. Since $$J_k(\lambda)=\lambda I+N$$, $$\{v,J_k(\lambda)v,\ldots,J_k(\lambda)^{k-1}v\}$$ also generates the same space, so $$v$$ is a cyclic vector, and since the minimal polynomial of $$J_k(\lambda)$$ is $$(\x-\lambda)^k$$, by the above result $$J_k(\lambda)$$ is similar to the companion matrix of $$(\x-\lambda)^k$$.
+For $J_k(\lambda)$, since $N=J_k(\lambda)-\lambda I$ is a nilpotent of index $k$, choosing $v$ with $N^{k-1}v\neq 0$, by [Lemma 8](#lem8), $\{v,Nv,\ldots,N^{k-1}v\}$ is a basis. Since $J_k(\lambda)=\lambda I+N$, $\{v,J_k(\lambda)v,\ldots,J_k(\lambda)^{k-1}v\}$ also generates the same space, so $v$ is a cyclic vector, and since the minimal polynomial of $J_k(\lambda)$ is $(\x-\lambda)^k$, by the above result $J_k(\lambda)$ is similar to the companion matrix of $(\x-\lambda)^k$.
 :::
 
 The reason this does not actually become the same matrix is purely conventional: the companion matrix of [Definition 14](#def14) orders the basis from lower degree to higher degree, whereas the Jordan block orders from higher degree to lower degree. However, both of these canonical forms are deeply rooted, and if we align one with the other, the standard breaks, so we replace this with the brief remark above. Then more generally we obtain the following.
 
 ::: Theorem 16 (Rational Canonical Form)
-For an arbitrary linear operator $$A$$ defined on a finite-dimensional vector space over an algebraically closed field, by choosing a suitable basis of $$V$$, the matrix representation of $$A$$ becomes a block diagonal of companion matrices
+For an arbitrary linear operator $A$ defined on a finite-dimensional vector space over an algebraically closed field, by choosing a suitable basis of $V$, the matrix representation of $A$ becomes a block diagonal of companion matrices
 
 $$\begin{pmatrix}C(p_1)&&\\&\ddots&\\&&C(p_r)\end{pmatrix},\qquad p_i=(\x-\lambda_i)^{k_i}$$
 
-where each $$(\x-\lambda_i)^{k_i}$$ is the *elementary divisor* corresponding to the Jordan block $$J_{k_i}(\lambda_i)$$ of $$A$$.
+where each $(\x-\lambda_i)^{k_i}$ is the *elementary divisor* corresponding to the Jordan block $J_{k_i}(\lambda_i)$ of $A$.
 :::
 ::: Proof
-By [Theorem 12](#thm12), $$A$$ is similar to a direct sum of Jordan blocks $$J_{k_i}(\lambda_i)$$, and by [Proposition 15](#prop15), each $$J_{k_i}(\lambda_i)$$ is similar to $$C((\x-\lambda_i)^{k_i})$$, so collecting these gives the desired block diagonal form.
+By [Theorem 12](#thm12), $A$ is similar to a direct sum of Jordan blocks $J_{k_i}(\lambda_i)$, and by [Proposition 15](#prop15), each $J_{k_i}(\lambda_i)$ is similar to $C((\x-\lambda_i)^{k_i})$, so collecting these gives the desired block diagonal form.
 :::
 
-Of course, the true usefulness of the rational canonical form lies in the fact that it can be applied even when $$\mathbb{K}$$ is <em>not</em> algebraically closed. In the flow of the proof above, we used the Jordan form to obtain the companion form of elementary divisors $$(\x-\lambda_i)^{k_i}$$, but even when eigenvalues do not exist in $$\mathbb{K}$$, an arbitrary operator is standardized by companion matrices of *invariant factors* $$p_1\mid p_2\mid\cdots\mid p_r$$ ($$p_r$$ being the minimal polynomial) through the irreducible factorization of the minimal polynomial and cyclic decomposition. This general form follows from the structure theorem for $$\mathbb{K}[\x]$$-modules, and gives a canonical form defined entirely over $$\mathbb{K}$$ without mentioning eigenvalues at all.
+Of course, the true usefulness of the rational canonical form lies in the fact that it can be applied even when $\mathbb{K}$ is <em>not</em> algebraically closed. In the flow of the proof above, we used the Jordan form to obtain the companion form of elementary divisors $(\x-\lambda_i)^{k_i}$, but even when eigenvalues do not exist in $\mathbb{K}$, an arbitrary operator is standardized by companion matrices of *invariant factors* $p_1\mid p_2\mid\cdots\mid p_r$ ($p_r$ being the minimal polynomial) through the irreducible factorization of the minimal polynomial and cyclic decomposition. This general form follows from the structure theorem for $\mathbb{K}[\x]$-modules, and gives a canonical form defined entirely over $\mathbb{K}$ without mentioning eigenvalues at all.
 
 ---
 

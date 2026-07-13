@@ -13,28 +13,28 @@ weight: 4
 
 ---
 
-[§근계](/ko/math/lie_theory/root_systems)에서 우리는 semisimple Lie algebra $$\mathfrak{g}$$의 root system $$\Phi$$를 정의하고, 그 대칭성을 Weyl group이 포착한다는 것을 확인하였다. 또한 [§원환면의 작용](/ko/math/lie_theory/torus_action)에서 compact Lie group $$G$$의 maximal torus $$T$$와 Weyl group $$W=N(T)/T$$의 관계를 살펴보았다. 이 글에서는 root system의 구조를 통해 Lie algebra를 분류하고, 이로부터 자연스럽게 등장하는 기하적 대상인 flag variety를 소개한다.
+[§근계](/ko/math/lie_theory/root_systems)에서 우리는 semisimple Lie algebra $\mathfrak{g}$의 root system $\Phi$를 정의하고, 그 대칭성을 Weyl group이 포착한다는 것을 확인하였다. 또한 [§원환면의 작용](/ko/math/lie_theory/torus_action)에서 compact Lie group $G$의 maximal torus $T$와 Weyl group $W=N(T)/T$의 관계를 살펴보았다. 이 글에서는 root system의 구조를 통해 Lie algebra를 분류하고, 이로부터 자연스럽게 등장하는 기하적 대상인 flag variety를 소개한다.
 
 ## Dynkin diagram
 
-Root system $$\Phi$$의 구조는 simple root들 사이의 관계로 완전히 결정된다. [§근계, ⁋정의 16](/ko/math/lie_theory/root_systems#def16)에서 정의한 Cartan matrix는 이 관계를 행렬로 표현한 것이지만, 시각화를 통해 root system의 구조를 더 직관적으로 파악할 수 있다.
+Root system $\Phi$의 구조는 simple root들 사이의 관계로 완전히 결정된다. [§근계, ⁋정의 16](/ko/math/lie_theory/root_systems#def16)에서 정의한 Cartan matrix는 이 관계를 행렬로 표현한 것이지만, 시각화를 통해 root system의 구조를 더 직관적으로 파악할 수 있다.
 
 ::: 정의 1
-Root system $$\Phi$$와 simple root들의 모임 $$\Delta=\{\alpha_1,\ldots,\alpha_l\}$$에 대하여, $$\Phi$$의 *Dynkin diagram*은 다음과 같이 정의되는 그래프이다.
+Root system $\Phi$와 simple root들의 모임 $\Delta=\{\alpha_1,\ldots,\alpha_l\}$에 대하여, $\Phi$의 *Dynkin diagram*은 다음과 같이 정의되는 그래프이다.
 
-1. 각 simple root $$\alpha_i$$에 대해 하나의 vertex를 둔다.
-2. 두 vertex $$\alpha_i$$, $$\alpha_j$$ ($$i\neq j$$) 사이에 $$\lvert\langle\alpha_i,\alpha_j\rangle\rvert$$개의 edge를 둔다.
-3. 만일 $$\lvert\alpha_i\rvert\neq\lvert\alpha_j\rvert$$라면, 더 긴 root를 향하는 화살표를 edge에 추가한다.
+1. 각 simple root $\alpha_i$에 대해 하나의 vertex를 둔다.
+2. 두 vertex $\alpha_i$, $\alpha_j$ ($i\neq j$) 사이에 $\lvert\langle\alpha_i,\alpha_j\rangle\rvert$개의 edge를 둔다.
+3. 만일 $\lvert\alpha_i\rvert\neq\lvert\alpha_j\rvert$라면, 더 긴 root를 향하는 화살표를 edge에 추가한다.
 :::
 
-Cartan matrix $$A=(a_{ij})$$에서 $$a_{ij}=\langle\alpha_i,\alpha_j\rangle$$이므로, Dynkin diagram은 Cartan matrix의 정보를 그래프로 표현한 것이라 생각할 수 있다. [§근계](/ko/math/lie_theory/root_systems)에서 살펴본 것과 같이 $$a_{ij}\leq 0$$이고 $$a_{ij}=0$$인 것은 $$a_{ji}=0$$인 것과 동치이므로, edge의 개수는 대칭적으로 결정된다. 또한 $$a_{ij}\in\{0,-1,-2,-3\}$$이므로 두 vertex 사이의 edge는 최대 3개이다.
+Cartan matrix $A=(a_{ij})$에서 $a_{ij}=\langle\alpha_i,\alpha_j\rangle$이므로, Dynkin diagram은 Cartan matrix의 정보를 그래프로 표현한 것이라 생각할 수 있다. [§근계](/ko/math/lie_theory/root_systems)에서 살펴본 것과 같이 $a_{ij}\leq 0$이고 $a_{ij}=0$인 것은 $a_{ji}=0$인 것과 동치이므로, edge의 개수는 대칭적으로 결정된다. 또한 $a_{ij}\in\{0,-1,-2,-3\}$이므로 두 vertex 사이의 edge는 최대 3개이다.
 
 ::: 예시 2
-[§근계, ⁋예시 13](/ko/math/lie_theory/root_systems#ex13)의 $$\Phi(A_n)$$을 생각하자. Simple root는 $$\alpha_i=e_i-e_{i+1}$$ ($$1\leq i\leq n$$)로 선택할 수 있다. 이들 사이의 내적을 계산하면
+[§근계, ⁋예시 13](/ko/math/lie_theory/root_systems#ex13)의 $\Phi(A_n)$을 생각하자. Simple root는 $\alpha_i=e_i-e_{i+1}$ ($1\leq i\leq n$)로 선택할 수 있다. 이들 사이의 내적을 계산하면
 
 $$(\alpha_i,\alpha_j)=\begin{cases}2 & i=j\\ -1 & \lvert i-j\rvert=1\\ 0 & \text{otherwise}\end{cases}$$
 
-이므로 $$\langle\alpha_i,\alpha_j\rangle$$은 $$i=j$$일 때 $$2$$, $$\lvert i-j\rvert=1$$일 때 $$-1$$, 그 외에는 $$0$$이다. 따라서 Dynkin diagram은 $$n$$개의 vertex가 chain으로 연결된 형태이며, 모든 root의 길이가 같으므로 화살표는 없다.
+이므로 $\langle\alpha_i,\alpha_j\rangle$은 $i=j$일 때 $2$, $\lvert i-j\rvert=1$일 때 $-1$, 그 외에는 $0$이다. 따라서 Dynkin diagram은 $n$개의 vertex가 chain으로 연결된 형태이며, 모든 root의 길이가 같으므로 화살표는 없다.
 :::
 
 Dynkin diagram의 핵심 성질은 다음과 같다.
@@ -43,7 +43,7 @@ Dynkin diagram의 핵심 성질은 다음과 같다.
 Dynkin diagram은 연결되어 있거나, 연결 성분들의 disjoint union으로 나타난다. 각 연결 성분은 irreducible root system에 대응한다.
 :::
 ::: 증명
-Dynkin diagram의 연결 성분들은 simple root들의 partition $$\Delta=\Delta_1\sqcup\cdots\sqcup\Delta_k$$를 정의한다. 각 $$\Delta_i$$로 생성되는 root subsystem $$\Phi_i$$를 생각하면, [§근계, ⁋명제 6](/ko/math/lie_theory/root_systems#prop6)에 의하여 서로 다른 $$\Delta_i$$에 속한 root들은 orthogonal이다. 따라서 $$\Phi=\Phi_1\sqcup\cdots\sqcup\Phi_k$$이고, 각 $$\Phi_i$$는 irreducible이다.
+Dynkin diagram의 연결 성분들은 simple root들의 partition $\Delta=\Delta_1\sqcup\cdots\sqcup\Delta_k$를 정의한다. 각 $\Delta_i$로 생성되는 root subsystem $\Phi_i$를 생각하면, [§근계, ⁋명제 6](/ko/math/lie_theory/root_systems#prop6)에 의하여 서로 다른 $\Delta_i$에 속한 root들은 orthogonal이다. 따라서 $\Phi=\Phi_1\sqcup\cdots\sqcup\Phi_k$이고, 각 $\Phi_i$는 irreducible이다.
 
 역으로 irreducible root system의 Dynkin diagram이 연결되어 있지 않다면 위의 논증에 의해 reducible이 되어 모순이다.
 :::
@@ -52,13 +52,13 @@ Dynkin diagram의 연결 성분들은 simple root들의 partition $$\Delta=\Delt
 Dynkin diagram에 cycle이 존재하지 않는다. 즉, Dynkin diagram은 항상 tree 혹은 forest이다.
 :::
 ::: 증명
-귀류법으로 cycle $$\alpha_{i_1},\ldots,\alpha_{i_k}=\alpha_{i_1}$$이 존재한다 하자. Cycle 내의 edge 개수를 $$k$$라 하면, 각 edge에 대해 $$\langle\alpha_{i_j},\alpha_{i_{j+1}}\rangle\neq 0$$이고 따라서 $$\langle\alpha_{i_j},\alpha_{i_{j+1}}\rangle\leq -1$$이다.
+귀류법으로 cycle $\alpha_{i_1},\ldots,\alpha_{i_k}=\alpha_{i_1}$이 존재한다 하자. Cycle 내의 edge 개수를 $k$라 하면, 각 edge에 대해 $\langle\alpha_{i_j},\alpha_{i_{j+1}}\rangle\neq 0$이고 따라서 $\langle\alpha_{i_j},\alpha_{i_{j+1}}\rangle\leq -1$이다.
 
-이제 $$\alpha=\sum_{j=1}^{k-1}\alpha_{i_j}$$를 생각하자. 그럼
+이제 $\alpha=\sum_{j=1}^{k-1}\alpha_{i_j}$를 생각하자. 그럼
 
 $$(\alpha,\alpha)=\sum_{j=1}^{k-1}(\alpha_{i_j},\alpha_{i_j})+2\sum_{j<\ell}(\alpha_{i_j},\alpha_{i_\ell})$$
 
-이다. Cycle이므로 각 $$\alpha_{i_j}$$는 정확히 두 개의 이웃과 연결되어 있고, 따라서
+이다. Cycle이므로 각 $\alpha_{i_j}$는 정확히 두 개의 이웃과 연결되어 있고, 따라서
 
 $$(\alpha,\alpha)\leq 2(k-1)-2(k-1)=0$$
 
@@ -66,16 +66,16 @@ $$(\alpha,\alpha)\leq 2(k-1)-2(k-1)=0$$
 :::
 
 ::: 명제 5
-Dynkin diagram에서 한 vertex에서 나가는 edge의 총 개수는 $$4$$를 넘지 않는다. 즉, 임의의 simple root $$\alpha$$에 대하여
+Dynkin diagram에서 한 vertex에서 나가는 edge의 총 개수는 $4$를 넘지 않는다. 즉, 임의의 simple root $\alpha$에 대하여
 
 $$\sum_{\beta\in\Delta,\beta\neq\alpha}\lvert\langle\alpha,\beta\rangle\rvert\leq 4$$
 
 이다.
 :::
 ::: 증명
-Simple root $$\alpha$$에 수직인 초평면을 $$H_\alpha$$라 하자. $$\alpha$$와 이웃한 simple root들 $$\beta_1,\ldots,\beta_m$$을 생각하면, 각 $$\beta_i$$는 $$H_\alpha$$와 다른 각도를 이룬다. 
+Simple root $\alpha$에 수직인 초평면을 $H_\alpha$라 하자. $\alpha$와 이웃한 simple root들 $\beta_1,\ldots,\beta_m$을 생각하면, 각 $\beta_i$는 $H_\alpha$와 다른 각도를 이룬다. 
 
-$$\beta_i$$를 $$H_\alpha$$에 정사영한 벡터들의 linear independence로부터 $$m\leq 3$$임을 보일 수 있다. 또한 각 $$\beta_i$$에 대해 $$\lvert\langle\alpha,\beta_i\rangle\rvert\leq 3$$이므로 총합은 $$4$$를 넘지 않는다.
+$\beta_i$를 $H_\alpha$에 정사영한 벡터들의 linear independence로부터 $m\leq 3$임을 보일 수 있다. 또한 각 $\beta_i$에 대해 $\lvert\langle\alpha,\beta_i\rangle\rvert\leq 3$이므로 총합은 $4$를 넘지 않는다.
 :::
 
 ## ADE 분류
@@ -86,15 +86,15 @@ $$\beta_i$$를 $$H_\alpha$$에 정사영한 벡터들의 linear independence로�
 Irreducible root system의 Dynkin diagram은 다음 type들 중 하나이다.
 
 1. **Classical types:**
-   - $$A_n$$ ($$n\geq 1$$): $$n$$개의 vertex가 chain으로 연결
-   - $$B_n$$ ($$n\geq 2$$): $$A_n$$의 한쪽 끝에 double edge와 화살표 추가
-   - $$C_n$$ ($$n\geq 2$$): $$A_n$$의 한쪽 끝에 double edge와 반대 방향 화살표 추가
-   - $$D_n$$ ($$n\geq 4$$): $$A_{n-1}$$의 한쪽 끝에서 분기
+   - $A_n$ ($n\geq 1$): $n$개의 vertex가 chain으로 연결
+   - $B_n$ ($n\geq 2$): $A_n$의 한쪽 끝에 double edge와 화살표 추가
+   - $C_n$ ($n\geq 2$): $A_n$의 한쪽 끝에 double edge와 반대 방향 화살표 추가
+   - $D_n$ ($n\geq 4$): $A_{n-1}$의 한쪽 끝에서 분기
 
 2. **Exceptional types:**
-   - $$E_6, E_7, E_8$$: 각각 6, 7, 8개의 vertex를 갖는 특별한 형태
-   - $$F_4$$: 4개의 vertex, 중간에 double edge
-   - $$G_2$$: 2개의 vertex, triple edge
+   - $E_6, E_7, E_8$: 각각 6, 7, 8개의 vertex를 갖는 특별한 형태
+   - $F_4$: 4개의 vertex, 중간에 double edge
+   - $G_2$: 2개의 vertex, triple edge
 :::
 
 이 분류의 증명은 Dynkin diagram이 만족해야 할 조건들을 체계적으로 분석하는 것으로 이루어진다. 핵심 아이디어는 다음과 같다.

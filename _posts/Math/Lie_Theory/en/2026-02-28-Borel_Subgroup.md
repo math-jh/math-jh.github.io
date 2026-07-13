@@ -14,28 +14,28 @@ translated_at: 2026-05-31T17:30:04+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-05-31T17:30:04+00:00
 ---
-In [§Root Systems](/en/math/lie_theory/root_systems) we defined the root system $$\Phi$$ of a semisimple Lie algebra $$\mathfrak{g}$$ and verified that its symmetries are captured by the Weyl group. In [§Torus Actions](/en/math/lie_theory/torus_action) we also examined the relationship between a maximal torus $$T$$ of a compact Lie group $$G$$ and the Weyl group $$W=N(T)/T$$. In this post we classify Lie algebras via the structure of root systems, and introduce the geometric object that arises naturally from this: the flag variety.
+In [§Root Systems](/en/math/lie_theory/root_systems) we defined the root system $\Phi$ of a semisimple Lie algebra $\mathfrak{g}$ and verified that its symmetries are captured by the Weyl group. In [§Torus Actions](/en/math/lie_theory/torus_action) we also examined the relationship between a maximal torus $T$ of a compact Lie group $G$ and the Weyl group $W=N(T)/T$. In this post we classify Lie algebras via the structure of root systems, and introduce the geometric object that arises naturally from this: the flag variety.
 
 ## Dynkin Diagram
 
-The structure of a root system $$\Phi$$ is completely determined by the relations among its simple roots. The Cartan matrix defined in [§Root Systems, ⁋Definition 16](/en/math/lie_theory/root_systems#def16) encodes these relations in matrix form, but the structure of a root system can be grasped more intuitively through visualization.
+The structure of a root system $\Phi$ is completely determined by the relations among its simple roots. The Cartan matrix defined in [§Root Systems, ⁋Definition 16](/en/math/lie_theory/root_systems#def16) encodes these relations in matrix form, but the structure of a root system can be grasped more intuitively through visualization.
 
 ::: Definition 1
-For a root system $$\Phi$$ and a set of simple roots $$\Delta=\{\alpha_1,\ldots,\alpha_l\}$$, the *Dynkin diagram* of $$\Phi$$ is the graph defined as follows.
+For a root system $\Phi$ and a set of simple roots $\Delta=\{\alpha_1,\ldots,\alpha_l\}$, the *Dynkin diagram* of $\Phi$ is the graph defined as follows.
 
-1. Place one vertex for each simple root $$\alpha_i$$.
-2. Place $$\lvert\langle\alpha_i,\alpha_j\rangle\rvert$$ edges between the two vertices $$\alpha_i$$ and $$\alpha_j$$ ($$i\neq j$$).
-3. If $$\lvert\alpha_i\rvert\neq\lvert\alpha_j\rvert$$, add an arrow on the edge pointing toward the longer root.
+1. Place one vertex for each simple root $\alpha_i$.
+2. Place $\lvert\langle\alpha_i,\alpha_j\rangle\rvert$ edges between the two vertices $\alpha_i$ and $\alpha_j$ ($i\neq j$).
+3. If $\lvert\alpha_i\rvert\neq\lvert\alpha_j\rvert$, add an arrow on the edge pointing toward the longer root.
 :::
 
-Since $$a_{ij}=\langle\alpha_i,\alpha_j\rangle$$ in the Cartan matrix $$A=(a_{ij})$$, one may regard the Dynkin diagram as a graphical encoding of the Cartan matrix. As we saw in [§Root Systems](/en/math/lie_theory/root_systems), $$a_{ij}\leq 0$$, and $$a_{ij}=0$$ is equivalent to $$a_{ji}=0$$; hence the number of edges is determined symmetrically. Moreover, since $$a_{ij}\in\{0,-1,-2,-3\}$$, there are at most three edges between any two vertices.
+Since $a_{ij}=\langle\alpha_i,\alpha_j\rangle$ in the Cartan matrix $A=(a_{ij})$, one may regard the Dynkin diagram as a graphical encoding of the Cartan matrix. As we saw in [§Root Systems](/en/math/lie_theory/root_systems), $a_{ij}\leq 0$, and $a_{ij}=0$ is equivalent to $a_{ji}=0$; hence the number of edges is determined symmetrically. Moreover, since $a_{ij}\in\{0,-1,-2,-3\}$, there are at most three edges between any two vertices.
 
 ::: Example 2
-Consider $$\Phi(A_n)$$ from [§Root Systems, ⁋Example 13](/en/math/lie_theory/root_systems#ex13). We may choose simple roots $$\alpha_i=e_i-e_{i+1}$$ ($$1\leq i\leq n$$). Computing their inner products gives
+Consider $\Phi(A_n)$ from [§Root Systems, ⁋Example 13](/en/math/lie_theory/root_systems#ex13). We may choose simple roots $\alpha_i=e_i-e_{i+1}$ ($1\leq i\leq n$). Computing their inner products gives
 
 $$(\alpha_i,\alpha_j)=\begin{cases}2 & i=j\\ -1 & \lvert i-j\rvert=1\\ 0 & \text{otherwise}\end{cases}$$
 
-Thus $$\langle\alpha_i,\alpha_j\rangle$$ equals $$2$$ when $$i=j$$, $$-1$$ when $$\lvert i-j\rvert=1$$, and $$0$$ otherwise. Hence the Dynkin diagram consists of $$n$$ vertices connected in a chain, and since all roots have the same length there are no arrows.
+Thus $\langle\alpha_i,\alpha_j\rangle$ equals $2$ when $i=j$, $-1$ when $\lvert i-j\rvert=1$, and $0$ otherwise. Hence the Dynkin diagram consists of $n$ vertices connected in a chain, and since all roots have the same length there are no arrows.
 :::
 
 The key properties of Dynkin diagrams are as follows.
@@ -44,7 +44,7 @@ The key properties of Dynkin diagrams are as follows.
 A Dynkin diagram is either connected or a disjoint union of connected components. Each connected component corresponds to an irreducible root system.
 :::
 ::: Proof
-The connected components of a Dynkin diagram define a partition $$\Delta=\Delta_1\sqcup\cdots\sqcup\Delta_k$$ of the simple roots. Let $$\Phi_i$$ be the root subsystem generated by each $$\Delta_i$$. By [§Root Systems, ⁋Proposition 6](/en/math/lie_theory/root_systems#prop6), roots belonging to distinct $$\Delta_i$$ are orthogonal. Thus $$\Phi=\Phi_1\sqcup\cdots\sqcup\Phi_k$$, and each $$\Phi_i$$ is irreducible.
+The connected components of a Dynkin diagram define a partition $\Delta=\Delta_1\sqcup\cdots\sqcup\Delta_k$ of the simple roots. Let $\Phi_i$ be the root subsystem generated by each $\Delta_i$. By [§Root Systems, ⁋Proposition 6](/en/math/lie_theory/root_systems#prop6), roots belonging to distinct $\Delta_i$ are orthogonal. Thus $\Phi=\Phi_1\sqcup\cdots\sqcup\Phi_k$, and each $\Phi_i$ is irreducible.
 
 Conversely, if the Dynkin diagram of an irreducible root system were not connected, the preceding argument would make it reducible, a contradiction.
 :::
@@ -53,13 +53,13 @@ Conversely, if the Dynkin diagram of an irreducible root system were not connect
 A Dynkin diagram contains no cycles; equivalently, every Dynkin diagram is a tree or a forest.
 :::
 ::: Proof
-Suppose for contradiction that a cycle $$\alpha_{i_1},\ldots,\alpha_{i_k}=\alpha_{i_1}$$ exists. Let $$k$$ be the number of edges in the cycle. For each edge we have $$\langle\alpha_{i_j},\alpha_{i_{j+1}}\rangle\neq 0$$, and therefore $$\langle\alpha_{i_j},\alpha_{i_{j+1}}\rangle\leq -1$$.
+Suppose for contradiction that a cycle $\alpha_{i_1},\ldots,\alpha_{i_k}=\alpha_{i_1}$ exists. Let $k$ be the number of edges in the cycle. For each edge we have $\langle\alpha_{i_j},\alpha_{i_{j+1}}\rangle\neq 0$, and therefore $\langle\alpha_{i_j},\alpha_{i_{j+1}}\rangle\leq -1$.
 
-Now set $$\alpha=\sum_{j=1}^{k-1}\alpha_{i_j}$$. Then
+Now set $\alpha=\sum_{j=1}^{k-1}\alpha_{i_j}$. Then
 
 $$(\alpha,\alpha)=\sum_{j=1}^{k-1}(\alpha_{i_j},\alpha_{i_j})+2\sum_{j<\ell}(\alpha_{i_j},\alpha_{i_\ell}).$$
 
-Since the vertices form a cycle, each $$\alpha_{i_j}$$ is adjacent to exactly two neighbors, and thus
+Since the vertices form a cycle, each $\alpha_{i_j}$ is adjacent to exactly two neighbors, and thus
 
 $$(\alpha,\alpha)\leq 2(k-1)-2(k-1)=0.$$
 
@@ -67,14 +67,14 @@ This contradicts the positive-definiteness of the inner product.
 :::
 
 ::: Proposition 5
-In a Dynkin diagram, the total number of edges incident to any single vertex does not exceed $$4$$. That is, for any simple root $$\alpha$$,
+In a Dynkin diagram, the total number of edges incident to any single vertex does not exceed $4$. That is, for any simple root $\alpha$,
 
-$$\sum_{\beta\in\Delta,\beta\neq\alpha}\lvert\langle\alpha,\beta\rangle\rvert\leq 4.$$
+$\sum_{\beta\in\Delta,\beta\neq\alpha}\lvert\langle\alpha,\beta\rangle\rvert\leq 4.$
 :::
 ::: Proof
-Let $$H_\alpha$$ be the hyperplane orthogonal to the simple root $$\alpha$$, and let $$\beta_1,\ldots,\beta_m$$ be the simple roots adjacent to $$\alpha$$. Each $$\beta_i$$ makes a distinct angle with $$H_\alpha$$.
+Let $H_\alpha$ be the hyperplane orthogonal to the simple root $\alpha$, and let $\beta_1,\ldots,\beta_m$ be the simple roots adjacent to $\alpha$. Each $\beta_i$ makes a distinct angle with $H_\alpha$.
 
-Linear independence of the projections of the $$\beta_i$$ onto $$H_\alpha$$ implies $$m\leq 3$$. Moreover, $$\lvert\langle\alpha,\beta_i\rangle\rvert\leq 3$$ for each $$\beta_i$$, so the total sum does not exceed $$4$$.
+Linear independence of the projections of the $\beta_i$ onto $H_\alpha$ implies $m\leq 3$. Moreover, $\lvert\langle\alpha,\beta_i\rangle\rvert\leq 3$ for each $\beta_i$, so the total sum does not exceed $4$.
 :::
 
 ## ADE Classification
@@ -85,15 +85,15 @@ Let us now examine the classification of irreducible root systems. The preceding
 The Dynkin diagram of an irreducible root system is one of the following types.
 
 1. **Classical types:**
-   - $$A_n$$ ($$n\geq 1$$): $$n$$ vertices connected in a chain
-   - $$B_n$$ ($$n\geq 2$$): a double edge and arrow attached to one end of $$A_n$$
-   - $$C_n$$ ($$n\geq 2$$): a double edge and arrow in the opposite direction attached to one end of $$A_n$$
-   - $$D_n$$ ($$n\geq 4$$): a branch at one end of $$A_{n-1}$$
+   - $A_n$ ($n\geq 1$): $n$ vertices connected in a chain
+   - $B_n$ ($n\geq 2$): a double edge and arrow attached to one end of $A_n$
+   - $C_n$ ($n\geq 2$): a double edge and arrow in the opposite direction attached to one end of $A_n$
+   - $D_n$ ($n\geq 4$): a branch at one end of $A_{n-1}$
 
 2. **Exceptional types:**
-   - $$E_6, E_7, E_8$$: special forms with 6, 7, and 8 vertices respectively
-   - $$F_4$$: 4 vertices with a double edge in the middle
-   - $$G_2$$: 2 vertices joined by a triple edge
+   - $E_6, E_7, E_8$: special forms with 6, 7, and 8 vertices respectively
+   - $F_4$: 4 vertices with a double edge in the middle
+   - $G_2$: 2 vertices joined by a triple edge
 :::
 
 The proof of this classification proceeds by systematically analyzing the conditions that a Dynkin diagram must satisfy. The key ideas are as follows.

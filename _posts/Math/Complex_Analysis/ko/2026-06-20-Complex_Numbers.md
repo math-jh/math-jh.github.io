@@ -15,78 +15,78 @@ weight: 1
 published: false
 ---
 
-복소해석학은 복소수 위에서 정의된 함수의 미분과 적분을 다룬다. 실해석학과 달리 복소미분가능성은 매우 강한 조건이어서, 한 번 미분가능한 함수가 자동으로 무한히 미분가능하고 멱급수로 전개되는 등 풍부한 구조가 따라 나온다. 이 모든 이론의 무대가 되는 것이 복소수 전체의 집합 $$\mathbb{C}$$이며, 이 글에서는 $$\mathbb{C}$$를 대수적 대상(체)으로, 또 기하적·위상적 대상(평면과 거리공간)으로 정비한다. 복소수의 체 구조 자체는 선형대수학에서 이미 다루었으므로 ([\[선형대수학\] §가환군과 체, ⁋예시 4](/ko/math/linear_algebra/fields#ex4)) 여기서 다시 구성하지 않고, 절댓값·켤레·극형식이라는 추가 구조와 그로부터 따라 나오는 해석학적 성질에 집중한다.
+복소해석학은 복소수 위에서 정의된 함수의 미분과 적분을 다룬다. 실해석학과 달리 복소미분가능성은 매우 강한 조건이어서, 한 번 미분가능한 함수가 자동으로 무한히 미분가능하고 멱급수로 전개되는 등 풍부한 구조가 따라 나온다. 이 모든 이론의 무대가 되는 것이 복소수 전체의 집합 $\mathbb{C}$이며, 이 글에서는 $\mathbb{C}$를 대수적 대상(체)으로, 또 기하적·위상적 대상(평면과 거리공간)으로 정비한다. 복소수의 체 구조 자체는 선형대수학에서 이미 다루었으므로 ([\[선형대수학\] §가환군과 체, ⁋예시 4](/ko/math/linear_algebra/fields#ex4)) 여기서 다시 구성하지 않고, 절댓값·켤레·극형식이라는 추가 구조와 그로부터 따라 나오는 해석학적 성질에 집중한다.
 
 ## 체 ℂ와 그 위의 대수적 구조
 
-복소수 전체의 집합 $$\mathbb{C}$$가 덧셈과 곱셈에 대하여 field<sub>체</sub>를 이룬다는 것은 이미 알고 있다 ([\[선형대수학\] §가환군과 체, ⁋정의 5](/ko/math/linear_algebra/fields#def5)). 우리는 그 표준적 표현, 곧 $$i^2 = -1$$을 만족하는 *허수단위<sub>imaginary unit</sub>* $$i$$를 도입하여 모든 복소수를 실수 두 개로 적는 방식을 출발점으로 삼는다.
+복소수 전체의 집합 $\mathbb{C}$가 덧셈과 곱셈에 대하여 field<sub>체</sub>를 이룬다는 것은 이미 알고 있다 ([\[선형대수학\] §가환군과 체, ⁋정의 5](/ko/math/linear_algebra/fields#def5)). 우리는 그 표준적 표현, 곧 $i^2 = -1$을 만족하는 *허수단위<sub>imaginary unit</sub>* $i$를 도입하여 모든 복소수를 실수 두 개로 적는 방식을 출발점으로 삼는다.
 
 ::: 정의 1
-*복소수<sub>complex number</sub>*는 실수 $$a, b$$에 대하여 $$z = a + bi$$ 꼴로 적히는 수이며, 여기서 $$i$$는 $$i^2 = -1$$을 만족하는 기호이다. 이때 $$a$$를 $$z$$의 *실수부<sub>real part</sub>*라 하여 $$\Real z$$로, $$b$$를 *허수부<sub>imaginary part</sub>*라 하여 $$\Img z$$로 적는다. 두 복소수의 덧셈과 곱셈은
+*복소수<sub>complex number</sub>*는 실수 $a, b$에 대하여 $z = a + bi$ 꼴로 적히는 수이며, 여기서 $i$는 $i^2 = -1$을 만족하는 기호이다. 이때 $a$를 $z$의 *실수부<sub>real part</sub>*라 하여 $\Real z$로, $b$를 *허수부<sub>imaginary part</sub>*라 하여 $\Img z$로 적는다. 두 복소수의 덧셈과 곱셈은
 
 $$(a + bi) + (c + di) = (a + c) + (b + d)i, \qquad (a + bi)(c + di) = (ac - bd) + (ad + bc)i$$
 
 로 정의된다.
 :::
 
-곱셈의 정의는 분배법칙을 형식적으로 전개한 뒤 $$i^2 = -1$$을 대입한 것에 지나지 않는다. 실수부와 허수부를 좌표로 읽으면 $$z = a + bi$$를 평면의 점 $$(a, b) \in \mathbb{R}^2$$와 동일시할 수 있으며, 이렇게 본 $$\mathbb{R}^2$$를 *복소평면<sub>complex plane</sub>*이라 부른다. 덧셈은 평면에서의 벡터 덧셈과 정확히 일치하고, 실수배 $$\lambda z = \lambda a + \lambda b i$$ ($$\lambda \in \mathbb{R}$$) 또한 벡터의 스칼라배와 일치하므로, $$\mathbb{C}$$는 $$\mathbb{R}$$ 위의 $$2$$차원 벡터공간이기도 하다. 복소수 곱셈만이 평면의 벡터 구조에 없는 새로운 연산이며, 그 기하적 의미는 아래 극형식에서 드러난다.
+곱셈의 정의는 분배법칙을 형식적으로 전개한 뒤 $i^2 = -1$을 대입한 것에 지나지 않는다. 실수부와 허수부를 좌표로 읽으면 $z = a + bi$를 평면의 점 $(a, b) \in \mathbb{R}^2$와 동일시할 수 있으며, 이렇게 본 $\mathbb{R}^2$를 *복소평면<sub>complex plane</sub>*이라 부른다. 덧셈은 평면에서의 벡터 덧셈과 정확히 일치하고, 실수배 $\lambda z = \lambda a + \lambda b i$ ($\lambda \in \mathbb{R}$) 또한 벡터의 스칼라배와 일치하므로, $\mathbb{C}$는 $\mathbb{R}$ 위의 $2$차원 벡터공간이기도 하다. 복소수 곱셈만이 평면의 벡터 구조에 없는 새로운 연산이며, 그 기하적 의미는 아래 극형식에서 드러난다.
 
 ::: 정의 2
-복소수 $$z = a + bi$$에 대하여 그 *복소켤레<sub>complex conjugate</sub>*를 $$\bar{z} = a - bi$$로 정의하고, *절댓값<sub>modulus</sub>* 혹은 *modulus<sub>절댓값</sub>*를
+복소수 $z = a + bi$에 대하여 그 *복소켤레<sub>complex conjugate</sub>*를 $\bar{z} = a - bi$로 정의하고, *절댓값<sub>modulus</sub>* 혹은 *modulus<sub>절댓값</sub>*를
 
 $$\lvert z\rvert = \sqrt{a^2 + b^2}$$
 
 로 정의한다.
 :::
 
-절댓값 $$\lvert z\rvert$$는 복소평면에서 점 $$z$$와 원점 사이의 유클리드 거리이며, 켤레 $$\bar{z}$$는 $$z$$를 실수축에 대해 반사한 점이다. 이 두 연산은 서로 긴밀히 얽혀 있어, 절댓값을 켤레로 표현할 수 있다. 실제로 $$z\bar{z} = (a+bi)(a-bi) = a^2 + b^2 = \lvert z\rvert^2$$이므로 $$\lvert z\rvert = \sqrt{z\bar{z}}$$이다. 이 항등식 덕분에 $$0$$이 아닌 $$z$$의 역원을 명시적으로 적을 수 있다.
+절댓값 $\lvert z\rvert$는 복소평면에서 점 $z$와 원점 사이의 유클리드 거리이며, 켤레 $\bar{z}$는 $z$를 실수축에 대해 반사한 점이다. 이 두 연산은 서로 긴밀히 얽혀 있어, 절댓값을 켤레로 표현할 수 있다. 실제로 $z\bar{z} = (a+bi)(a-bi) = a^2 + b^2 = \lvert z\rvert^2$이므로 $\lvert z\rvert = \sqrt{z\bar{z}}$이다. 이 항등식 덕분에 $0$이 아닌 $z$의 역원을 명시적으로 적을 수 있다.
 
 ::: 명제 3
-임의의 복소수 $$z, w$$에 대하여 다음이 성립한다.
+임의의 복소수 $z, w$에 대하여 다음이 성립한다.
 
-1. $$\overline{z + w} = \bar{z} + \bar{w}$$이고 $$\overline{zw} = \bar{z}\,\bar{w}$$이다.
-2. $$\overline{\bar{z}} = z$$이고, $$z + \bar{z} = 2\Real z$$, $$z - \bar{z} = 2i\Img z$$이다. 특히 $$z = \bar{z}$$인 것은 $$z$$가 실수인 것과 동치이다.
-3. $$z\bar{z} = \lvert z\rvert^2$$이고, $$z \neq 0$$이면 $$z^{-1} = \dfrac{\bar{z}}{\lvert z\rvert^2}$$이다.
+1. $\overline{z + w} = \bar{z} + \bar{w}$이고 $\overline{zw} = \bar{z}\,\bar{w}$이다.
+2. $\overline{\bar{z}} = z$이고, $z + \bar{z} = 2\Real z$, $z - \bar{z} = 2i\Img z$이다. 특히 $z = \bar{z}$인 것은 $z$가 실수인 것과 동치이다.
+3. $z\bar{z} = \lvert z\rvert^2$이고, $z \neq 0$이면 $z^{-1} = \dfrac{\bar{z}}{\lvert z\rvert^2}$이다.
 :::
 
 ::: 증명
-$$z = a + bi$$, $$w = c + di$$로 둔다.
+$z = a + bi$, $w = c + di$로 둔다.
 
-1. 덧셈에 대하여 $$\overline{z + w} = \overline{(a+c)+(b+d)i} = (a+c)-(b+d)i = (a-bi)+(c-di) = \bar{z}+\bar{w}$$이다. 곱셈에 대하여는 [정의 1](#def1)의 곱셈 공식으로
+1. 덧셈에 대하여 $\overline{z + w} = \overline{(a+c)+(b+d)i} = (a+c)-(b+d)i = (a-bi)+(c-di) = \bar{z}+\bar{w}$이다. 곱셈에 대하여는 [정의 1](#def1)의 곱셈 공식으로
 
     $$\overline{zw} = \overline{(ac - bd) + (ad + bc)i} = (ac - bd) - (ad + bc)i$$
 
-    이고, 한편 $$\bar{z}\,\bar{w} = (a - bi)(c - di) = (ac - bd) - (ad + bc)i$$이므로 둘이 같다.
+    이고, 한편 $\bar{z}\,\bar{w} = (a - bi)(c - di) = (ac - bd) - (ad + bc)i$이므로 둘이 같다.
 
-2. $$\overline{\bar{z}} = \overline{a - bi} = a + bi = z$$이다. 또 $$z + \bar{z} = (a+bi)+(a-bi) = 2a = 2\Real z$$이고 $$z - \bar{z} = 2bi = 2i\Img z$$이다. 따라서 $$z = \bar{z}$$인 것은 $$\Img z = b = 0$$, 곧 $$z$$가 실수인 것과 동치이다.
+2. $\overline{\bar{z}} = \overline{a - bi} = a + bi = z$이다. 또 $z + \bar{z} = (a+bi)+(a-bi) = 2a = 2\Real z$이고 $z - \bar{z} = 2bi = 2i\Img z$이다. 따라서 $z = \bar{z}$인 것은 $\Img z = b = 0$, 곧 $z$가 실수인 것과 동치이다.
 
-3. 위에서 본 대로 $$z\bar{z} = a^2 + b^2 = \lvert z\rvert^2$$이다. $$z \neq 0$$이면 $$\lvert z\rvert^2 > 0$$이고
+3. 위에서 본 대로 $z\bar{z} = a^2 + b^2 = \lvert z\rvert^2$이다. $z \neq 0$이면 $\lvert z\rvert^2 > 0$이고
 
     $$z \cdot \frac{\bar{z}}{\lvert z\rvert^2} = \frac{z\bar{z}}{\lvert z\rvert^2} = \frac{\lvert z\rvert^2}{\lvert z\rvert^2} = 1$$
 
-    이므로 $$\bar{z}/\lvert z\rvert^2$$가 $$z$$의 곱셈에 대한 역원이다. 역원의 유일성 ([\[선형대수학\] §가환군과 체, ⁋명제 2](/ko/math/linear_algebra/fields#prop2)) 에 의해 이것이 $$z^{-1}$$이다.
+    이므로 $\bar{z}/\lvert z\rvert^2$가 $z$의 곱셈에 대한 역원이다. 역원의 유일성 ([\[선형대수학\] §가환군과 체, ⁋명제 2](/ko/math/linear_algebra/fields#prop2)) 에 의해 이것이 $z^{-1}$이다.
 :::
 
-명제 3의 셋째 항은 복소수 나눗셈을 실질적으로 계산하는 방법을 준다. 분모와 분자에 분모의 켤레를 곱하면 분모가 실수가 되어, 가령 $$\dfrac{1}{1+i} = \dfrac{1-i}{(1+i)(1-i)} = \dfrac{1-i}{2}$$와 같이 표준형 $$a + bi$$로 정리된다. 이어서 절댓값이 곱셈과 어떻게 어울리는지를 보면, 절댓값은 곱셈을 정확히 보존하며 덧셈에 대해서는 삼각부등식을 만족한다.
+명제 3의 셋째 항은 복소수 나눗셈을 실질적으로 계산하는 방법을 준다. 분모와 분자에 분모의 켤레를 곱하면 분모가 실수가 되어, 가령 $\dfrac{1}{1+i} = \dfrac{1-i}{(1+i)(1-i)} = \dfrac{1-i}{2}$와 같이 표준형 $a + bi$로 정리된다. 이어서 절댓값이 곱셈과 어떻게 어울리는지를 보면, 절댓값은 곱셈을 정확히 보존하며 덧셈에 대해서는 삼각부등식을 만족한다.
 
 ::: 명제 4
-임의의 복소수 $$z, w$$에 대하여 다음이 성립한다.
+임의의 복소수 $z, w$에 대하여 다음이 성립한다.
 
-1. $$\lvert z\rvert \geq 0$$이고, $$\lvert z\rvert = 0$$인 것은 $$z = 0$$인 것과 동치이다.
-2. $$\lvert zw\rvert = \lvert z\rvert\,\lvert w\rvert$$이고 $$\lvert \bar{z}\rvert = \lvert z\rvert$$이다.
-3. (삼각부등식) $$\lvert z + w\rvert \leq \lvert z\rvert + \lvert w\rvert$$이며, 또한 $$\bigl\lvert \lvert z\rvert - \lvert w\rvert \bigr\rvert \leq \lvert z - w\rvert$$이다.
+1. $\lvert z\rvert \geq 0$이고, $\lvert z\rvert = 0$인 것은 $z = 0$인 것과 동치이다.
+2. $\lvert zw\rvert = \lvert z\rvert\,\lvert w\rvert$이고 $\lvert \bar{z}\rvert = \lvert z\rvert$이다.
+3. (삼각부등식) $\lvert z + w\rvert \leq \lvert z\rvert + \lvert w\rvert$이며, 또한 $\bigl\lvert \lvert z\rvert - \lvert w\rvert \bigr\rvert \leq \lvert z - w\rvert$이다.
 :::
 
 ::: 증명
-1. $$\lvert z\rvert = \sqrt{a^2 + b^2} \geq 0$$이고, 이것이 $$0$$인 것은 $$a^2 + b^2 = 0$$, 곧 $$a = b = 0$$인 것과 동치이다.
+1. $\lvert z\rvert = \sqrt{a^2 + b^2} \geq 0$이고, 이것이 $0$인 것은 $a^2 + b^2 = 0$, 곧 $a = b = 0$인 것과 동치이다.
 
 2. 곱셈의 보존성은 [명제 3](#prop3)의 켤레의 곱셈성으로부터 따라 나온다.
 
     $$\lvert zw\rvert^2 = (zw)\overline{(zw)} = zw\bar{z}\bar{w} = (z\bar{z})(w\bar{w}) = \lvert z\rvert^2\,\lvert w\rvert^2$$
 
-    이고 양변이 음이 아니므로 $$\lvert zw\rvert = \lvert z\rvert\,\lvert w\rvert$$이다. 또 $$\lvert \bar{z}\rvert^2 = \bar{z}\,\overline{\bar{z}} = \bar{z}z = \lvert z\rvert^2$$이므로 $$\lvert \bar{z}\rvert = \lvert z\rvert$$이다.
+    이고 양변이 음이 아니므로 $\lvert zw\rvert = \lvert z\rvert\,\lvert w\rvert$이다. 또 $\lvert \bar{z}\rvert^2 = \bar{z}\,\overline{\bar{z}} = \bar{z}z = \lvert z\rvert^2$이므로 $\lvert \bar{z}\rvert = \lvert z\rvert$이다.
 
-3. 먼저 임의의 복소수 $$u$$에 대해 $$\Real u \leq \lvert u\rvert$$임에 유의한다. $$u = x + yi$$이면 $$x \leq \sqrt{x^2 + y^2}$$이기 때문이다. 이를 $$u = z\bar{w}$$에 적용하면
+3. 먼저 임의의 복소수 $u$에 대해 $\Real u \leq \lvert u\rvert$임에 유의한다. $u = x + yi$이면 $x \leq \sqrt{x^2 + y^2}$이기 때문이다. 이를 $u = z\bar{w}$에 적용하면
 
     $$\begin{aligned}
     \lvert z + w\rvert^2
