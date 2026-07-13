@@ -9,7 +9,7 @@ sidebar:
     nav: "ring_theory-ko"
 
 date: 2025-04-01
-weight: 1
+weight: 2
 
 ---
 

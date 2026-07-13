@@ -10,7 +10,7 @@ sidebar:
 
 date: 2026-07-05
 
-weight: 2.6
+weight: 7
 
 published: false
 

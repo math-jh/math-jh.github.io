@@ -9,7 +9,7 @@ sidebar:
     nav: "scheme_theory-ko"
 
 date: 2025-02-05
-weight: 6
+weight: 7
 drift_needed: true
 ---
 

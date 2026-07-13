@@ -9,7 +9,7 @@ sidebar:
     nav: "scheme_theory-en"
 
 date: 2025-02-18
-weight: 12
+weight: 11
 translated_at: 2026-06-02T02:00:02+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-06-02T02:00:02+00:00
