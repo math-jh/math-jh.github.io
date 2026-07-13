@@ -18,17 +18,17 @@ last_polished_at: 2026-06-26T20:00:01+00:00
 ---
 ## Direct Sums of Subspaces
 
-Consider an $$n\times n$$ matrix $$A$$ and one of its eigenvalues $$\lambda$$. By definition, any vector $$v$$ in the eigenspace $$E_\lambda$$ corresponding to $$\lambda$$ must satisfy
+Consider an $n\times n$ matrix $A$ and one of its eigenvalues $\lambda$. By definition, any vector $v$ in the eigenspace $E_\lambda$ corresponding to $\lambda$ must satisfy
 
 $$Av=\lambda v$$
 
-Thus, when restricted to $$E_\lambda$$, the matrix $$A$$ becomes the very simple map $$v\mapsto \lambda v$$.
+Thus, when restricted to $E_\lambda$, the matrix $A$ becomes the very simple map $v\mapsto \lambda v$.
 
-More generally, regard $$A$$ as a linear map from $$\mathbb{K}^n$$ to $$\mathbb{K}^n$$, and assume that the domain $$\mathbb{K}^n$$ is spanned by the eigenspaces $$E_\lambda$$. That is, suppose
+More generally, regard $A$ as a linear map from $\mathbb{K}^n$ to $\mathbb{K}^n$, and assume that the domain $\mathbb{K}^n$ is spanned by the eigenspaces $E_\lambda$. That is, suppose
 
 $$\mathbb{K}^n=\span\left(\bigcup_{\lambda\in\sigma(A)}E_\lambda\right)$$
 
-Then for any $$v\in\mathbb{K}^n$$, there exist vectors $$v_\lambda\in E_\lambda$$ such that
+Then for any $v\in\mathbb{K}^n$, there exist vectors $v_\lambda\in E_\lambda$ such that
 
 $$v=\sum_{\lambda\in\sigma(A)}v_\lambda$$
 
@@ -36,33 +36,33 @@ and therefore
 
 $$Av=A\left(\sum_{\lambda\in\sigma(A)}v_\lambda\right)=\sum_{\lambda\in\sigma(A)}Av_\lambda$$
 
-By the argument above, since $$Av_\lambda=\lambda v_\lambda$$, we obtain
+By the argument above, since $Av_\lambda=\lambda v_\lambda$, we obtain
 
 $$Av=\sum_{\lambda\in\sigma(A)}\lambda v_\lambda$$
 
-Of course, for this calculation to make sense, the representation of $$v$$ as a sum of the $$v_\lambda$$ must be unique. We define this as follows.
+Of course, for this calculation to make sense, the representation of $v$ as a sum of the $v_\lambda$ must be unique. We define this as follows.
 
 ::: Definition 1
-A $$\mathbb{K}$$-vector space $$V$$ is called the *direct sum* of its subspaces $$(W_i)_{i\in I}$$ if, for every $$v\in V$$, there exist unique $$(v_i)_{i\in I}$$ such that
+A $\mathbb{K}$-vector space $V$ is called the *direct sum* of its subspaces $(W_i)_{i\in I}$ if, for every $v\in V$, there exist unique $(v_i)_{i\in I}$ such that
 
 $$v=\sum_{i\in I} v_i$$
 
-holds.[^1] We write this as $$V=\bigoplus_{i\in I}W_i$$.
+holds.[^1] We write this as $V=\bigoplus_{i\in I}W_i$.
 :::
 
-The easiest nontrivial case is when $$I$$ has two elements.
+The easiest nontrivial case is when $I$ has two elements.
 
 ::: Proposition 2
-For two subspaces $$W_1,W_2$$ of a $$\mathbb{K}$$-vector space $$V$$, the condition $$V=W_1\oplus W_2$$ is equivalent to $$V=W_1+W_2$$ and $$W_1\cap W_2=\{0\}$$.
+For two subspaces $W_1,W_2$ of a $\mathbb{K}$-vector space $V$, the condition $V=W_1\oplus W_2$ is equivalent to $V=W_1+W_2$ and $W_1\cap W_2=\{0\}$.
 :::
 ::: Proof
-First, assume $$V=W_1\oplus W_2$$. By definition, $$W_1+W_2\subseteq V$$ is clear. Conversely, for any $$v\in V$$, there exist $$w_i\in W_i$$ such that $$v=w_1+w_2$$, so $$V\subseteq W_1+W_2$$ also holds. Hence $$V=W_1+W_2$$. On the other hand, if $$W_1\cap W_2\neq \{0\}$$, then for a nonzero $$w\in W_1\cap W_2$$,
+First, assume $V=W_1\oplus W_2$. By definition, $W_1+W_2\subseteq V$ is clear. Conversely, for any $v\in V$, there exist $w_i\in W_i$ such that $v=w_1+w_2$, so $V\subseteq W_1+W_2$ also holds. Hence $V=W_1+W_2$. On the other hand, if $W_1\cap W_2\neq \{0\}$, then for a nonzero $w\in W_1\cap W_2$,
 
 $$w=0+w=w+0$$
 
 which contradicts the uniqueness in [Definition 1](#def1).
 
-Conversely, suppose $$V=W_1+W_2$$ and $$W_1\cap W_2=\{0\}$$. For any $$v\in V$$, since $$V=W_1+W_2$$, there exist $$w_i\in W_i$$ such that $$v=w_1+w_2$$. Moreover, this expression is unique: if
+Conversely, suppose $V=W_1+W_2$ and $W_1\cap W_2=\{0\}$. For any $v\in V$, since $V=W_1+W_2$, there exist $w_i\in W_i$ such that $v=w_1+w_2$. Moreover, this expression is unique: if
 
 $$v=w_1+w_2=w_1'+w_2'$$
 
@@ -70,65 +70,65 @@ then
 
 $$w_1-w_1'=w_2-w_2'$$
 
-The left side lies in $$W_1$$ and the right side lies in $$W_2$$, so the condition $$W_1\cap W_2=\{0\}$$ implies $$w_1-w_1'=w_2-w_2'=0$$.
+The left side lies in $W_1$ and the right side lies in $W_2$, so the condition $W_1\cap W_2=\{0\}$ implies $w_1-w_1'=w_2-w_2'=0$.
 :::
 
-One direction of the above proposition holds even when $$I$$ has three or more elements. That is, if $$V=\bigoplus_{i\in I}W_i$$, then $$V=\sum_{i\in I}W_i$$ and $$W_i\cap W_j=\{0\}$$ whenever $$i\neq j$$, and the proof is the same as above. However, the converse does not hold in general.
+One direction of the above proposition holds even when $I$ has three or more elements. That is, if $V=\bigoplus_{i\in I}W_i$, then $V=\sum_{i\in I}W_i$ and $W_i\cap W_j=\{0\}$ whenever $i\neq j$, and the proof is the same as above. However, the converse does not hold in general.
 
-For example, let $$V=\mathbb{R}^2$$ and take the standard basis vectors $$e_1,e_2$$. If we set $$W_1=\mathbb{R}e_1$$, $$W_2=\mathbb{R}e_2$$, and $$W_3=\mathbb{R}(e_1+e_2)$$, then $$V=W_1+W_2+W_3$$ and $$W_i\cap W_j=\{0\}$$ whenever $$i\neq j$$, but $$V\neq W_1\oplus W_2\oplus W_3$$.
+For example, let $V=\mathbb{R}^2$ and take the standard basis vectors $e_1,e_2$. If we set $W_1=\mathbb{R}e_1$, $W_2=\mathbb{R}e_2$, and $W_3=\mathbb{R}(e_1+e_2)$, then $V=W_1+W_2+W_3$ and $W_i\cap W_j=\{0\}$ whenever $i\neq j$, but $V\neq W_1\oplus W_2\oplus W_3$.
 
-This is because the representation of $$e_1+e_2\in V$$ is not unique, as shown by
+This is because the representation of $e_1+e_2\in V$ is not unique, as shown by
 
 $$e_1+e_2=e_1+e_2+0=0+0+(e_1+e_2)$$
 
-As another example, choose a basis $$\mathcal{B}=\{x_1,\ldots, x_n\}$$ of $$V$$. If we set $$W_i=\mathbb{K}x_i$$, then the condition that $$\mathcal{B}$$ is a basis is exactly the condition that $$V$$ is the direct sum of the $$W_i$$. More generally, the following holds.
+As another example, choose a basis $\mathcal{B}=\{x_1,\ldots, x_n\}$ of $V$. If we set $W_i=\mathbb{K}x_i$, then the condition that $\mathcal{B}$ is a basis is exactly the condition that $V$ is the direct sum of the $W_i$. More generally, the following holds.
 
 ::: Proposition 3
-For any $$\mathbb{K}$$-vector space $$V$$ and subspaces $$(W_i)_{i\in I}$$, the condition $$V=\bigoplus_{i\in I} W_i$$ is equivalent to the bases $$\mathcal{B}_i$$ of $$W_i$$ satisfying $$\mathcal{B}_i\cap\mathcal{B}_j=\emptyset$$ whenever $$i\neq j$$, and $$\bigcup_{i\in I}\mathcal{B}_i$$ being a basis of $$V$$.
+For any $\mathbb{K}$-vector space $V$ and subspaces $(W_i)_{i\in I}$, the condition $V=\bigoplus_{i\in I} W_i$ is equivalent to the bases $\mathcal{B}_i$ of $W_i$ satisfying $\mathcal{B}_i\cap\mathcal{B}_j=\emptyset$ whenever $i\neq j$, and $\bigcup_{i\in I}\mathcal{B}_i$ being a basis of $V$.
 :::
 ::: Proof
-First, assume $$V=\bigoplus W_i$$ and choose bases $$\mathcal{B}_i$$ of the $$W_i$$. If $$\mathcal{B}_i\cap\mathcal{B}_j\neq\emptyset$$, then $$W_i\cap W_j\neq\emptyset$$, which contradicts the discussion after [Proposition 2](#prop2), so we must have $$\mathcal{B}_i\cap\mathcal{B}_j=\emptyset$$. For any $$v\in V$$, from $$V=\bigoplus W_i$$ there exist unique $$w_i$$ satisfying
+First, assume $V=\bigoplus W_i$ and choose bases $\mathcal{B}_i$ of the $W_i$. If $\mathcal{B}_i\cap\mathcal{B}_j\neq\emptyset$, then $W_i\cap W_j\neq\emptyset$, which contradicts the discussion after [Proposition 2](#prop2), so we must have $\mathcal{B}_i\cap\mathcal{B}_j=\emptyset$. For any $v\in V$, from $V=\bigoplus W_i$ there exist unique $w_i$ satisfying
 
 $$v=\sum_{i\in I} w_i$$
 
-Also, in each $$W_i$$ the $$w_i$$ can be uniquely expressed as linear combinations of elements of $$\mathcal{B}_i$$. From this we see that $$\bigcup\mathcal{B}_i$$ is a basis of $$V$$.
+Also, in each $W_i$ the $w_i$ can be uniquely expressed as linear combinations of elements of $\mathcal{B}_i$. From this we see that $\bigcup\mathcal{B}_i$ is a basis of $V$.
 
 Reversing this argument shows the converse as well.
 :::
 
-Thus we see that $$\dim V=\sum_{i\in I}\dim W_i$$.
+Thus we see that $\dim V=\sum_{i\in I}\dim W_i$.
 
 ## Diagonalization
 
-Now we examine how to decompose $$\mathbb{K}^n$$ into eigenspaces. From [Proposition 3](#prop3) we know that decomposing the vector space $$\mathbb{K}^n$$ into the eigenspaces $$E_\lambda$$ is the same as collecting bases of the $$E_\lambda$$ to form a basis of $$\mathbb{K}^n$$. Also, if a nonzero vector $$x_1$$ is an eigenvector corresponding to an eigenvalue $$\lambda_1$$, then for another eigenvalue $$\lambda_2$$,
+Now we examine how to decompose $\mathbb{K}^n$ into eigenspaces. From [Proposition 3](#prop3) we know that decomposing the vector space $\mathbb{K}^n$ into the eigenspaces $E_\lambda$ is the same as collecting bases of the $E_\lambda$ to form a basis of $\mathbb{K}^n$. Also, if a nonzero vector $x_1$ is an eigenvector corresponding to an eigenvalue $\lambda_1$, then for another eigenvalue $\lambda_2$,
 
 $$Ax_1=\lambda_1x_1\neq\lambda_2 x_1$$
 
-so $$x_1\not\in E_{\lambda_2}$$. Therefore, however we choose bases of the $$E_\lambda$$, the bases of $$E_{\lambda_1}$$ and $$E_{\lambda_2}$$ never overlap for distinct $$\lambda_1,\lambda_2$$. Moreover, the following holds.
+so $x_1\not\in E_{\lambda_2}$. Therefore, however we choose bases of the $E_\lambda$, the bases of $E_{\lambda_1}$ and $E_{\lambda_2}$ never overlap for distinct $\lambda_1,\lambda_2$. Moreover, the following holds.
 
 ::: Proposition 4
-For any matrix $$A$$, suppose $$x_1,\ldots, x_m$$ are eigenvectors corresponding to distinct eigenvalues $$\lambda_1,\ldots,\lambda_m$$ respectively. Then the set $$\{x_1,\ldots,x_m\}$$ is linearly independent.
+For any matrix $A$, suppose $x_1,\ldots, x_m$ are eigenvectors corresponding to distinct eigenvalues $\lambda_1,\ldots,\lambda_m$ respectively. Then the set $\{x_1,\ldots,x_m\}$ is linearly independent.
 :::
 ::: Proof
-Suppose for contradiction that the set $$\{x_1,x_2,\ldots, x_m\}$$ is linearly dependent. That is, there exist scalars $$\alpha_i$$, not all zero, satisfying
+Suppose for contradiction that the set $\{x_1,x_2,\ldots, x_m\}$ is linearly dependent. That is, there exist scalars $\alpha_i$, not all zero, satisfying
 
 $$\alpha_1x_1+\alpha_2x_2+\cdots+\alpha_mx_m=0\tag{1}$$
 
-Among the $$(\alpha_i)_{1\leq i\leq m}$$ satisfying this, choose one with the smallest support and call it $$(\beta_i)_{1\leq i\leq m}$$. That is, if the number of $$i$$ with $$\beta_i\neq0$$ is $$k$$, then no $$(\alpha_i)_{1\leq i\leq m}$$ with fewer than $$k$$ nonzero entries satisfies equation (1).
+Among the $(\alpha_i)_{1\leq i\leq m}$ satisfying this, choose one with the smallest support and call it $(\beta_i)_{1\leq i\leq m}$. That is, if the number of $i$ with $\beta_i\neq0$ is $k$, then no $(\alpha_i)_{1\leq i\leq m}$ with fewer than $k$ nonzero entries satisfies equation (1).
 
-Since at least two of the $$\beta_i$$ are nonzero, we may assume without loss of generality that $$\beta_m\neq 0$$. Then
+Since at least two of the $\beta_i$ are nonzero, we may assume without loss of generality that $\beta_m\neq 0$. Then
 
 $$x_m=\sum_{i=1}^{m-1}\left(-\frac{\beta_i}{\beta_m}\right)x_i$$
 
-For convenience, write this as $$x_m=\sum_{i=1}^{m-1}\beta'_ix_i$$. Multiplying both sides by $$A$$,
+For convenience, write this as $x_m=\sum_{i=1}^{m-1}\beta'_ix_i$. Multiplying both sides by $A$,
 
 $$Ax_m=\sum_{i=1}^{m-1}\beta'_i(Ax_i)$$
 
-and since the $$x_m$$ are eigenvectors,
+and since the $x_m$ are eigenvectors,
 
 $$\lambda_mx_m=\sum_{i=1}^{m-1}\beta'_i\lambda_i x_i$$
 
-But multiplying both sides of $$x_m=\sum_{i=1}^{m-1}\beta'_ix_i$$ by $$\lambda_m$$ gives
+But multiplying both sides of $x_m=\sum_{i=1}^{m-1}\beta'_ix_i$ by $\lambda_m$ gives
 
 $$\lambda_mx_m=\sum_{i=1}^{m-1}\beta_i'\lambda_mx_i$$
 
@@ -136,11 +136,11 @@ so combining this with the equation obtained above,
 
 $$0=\sum_{i=1}^{m-1}\beta_i'(\lambda_i-\lambda_m)x_i$$
 
-and since $$\beta_i'=-(\beta_i/\beta_m)$$, multiplying both sides by $$\beta_m$$ and rearranging gives
+and since $\beta_i'=-(\beta_i/\beta_m)$, multiplying both sides by $\beta_m$ and rearranging gives
 
 $$0=\sum_{i=1}^{m-1}\beta_i(\lambda_i-\lambda_m)x_i$$
 
-If we define $$(\beta''_i)_{1\leq i\leq n}$$ by
+If we define $(\beta''_i)_{1\leq i\leq n}$ by
 
 $$\beta_i''=\begin{cases}\beta_i(\lambda_i-\lambda_m)&1\leq i\leq m-1\\0&i=m\end{cases}$$
 
@@ -148,22 +148,22 @@ then the above equation becomes
 
 $$\beta_1''x_1+\beta_2''x_2+\cdots+\beta_m''x_m=0$$
 
-By assumption, $$\lambda_i-\lambda_m\neq 0$$, so for $$1\leq i\leq m-1$$, the condition $$\beta_i''=0$$ is equivalent to $$\beta_i=0$$. Therefore, the number of $$1\leq i\leq m-1$$ with $$\beta_i''\neq 0$$ is $$k-1$$, and since $$\beta_m''=0$$, the size of $$\supp(\beta_i'')_{1\leq i\leq m}$$ is $$k-1$$. This contradicts the minimality of $$(\beta_i)_{1\leq i\leq m}$$, so the set $$\{x_1,x_2,\ldots, x_m\}$$ is linearly independent.
+By assumption, $\lambda_i-\lambda_m\neq 0$, so for $1\leq i\leq m-1$, the condition $\beta_i''=0$ is equivalent to $\beta_i=0$. Therefore, the number of $1\leq i\leq m-1$ with $\beta_i''\neq 0$ is $k-1$, and since $\beta_m''=0$, the size of $\supp(\beta_i'')_{1\leq i\leq m}$ is $k-1$. This contradicts the minimality of $(\beta_i)_{1\leq i\leq m}$, so the set $\{x_1,x_2,\ldots, x_m\}$ is linearly independent.
 :::
 
-From this, for any matrix $$A$$ with eigenvalues $$\lambda\in\sigma(A)$$, corresponding eigenspaces $$E_\lambda$$, and bases $$\mathcal{B}_\lambda$$, we know that $$\mathcal{B}=\bigcup_{\lambda\in\sigma(A)}\mathcal{B}_\lambda$$ is a linearly independent subset of $$\mathbb{K}^n$$. However, there is no reason for $$\mathcal{B}$$ to be a basis of $$\mathbb{K}^n$$ in general. For example, in [§Characteristic Polynomial, ⁋Example 7](/en/math/linear_algebra/characteristic_polynomial#ex7), when $$\mathbb{K}=\mathbb{R}$$ we have $$\sigma(J)=\emptyset$$, so $$\mathcal{B}=\emptyset$$. Moreover, even if we assume that the characteristic polynomial of $$A$$ has exactly $$n$$ roots, a similar problem can arise; for instance, for the matrix
+From this, for any matrix $A$ with eigenvalues $\lambda\in\sigma(A)$, corresponding eigenspaces $E_\lambda$, and bases $\mathcal{B}_\lambda$, we know that $\mathcal{B}=\bigcup_{\lambda\in\sigma(A)}\mathcal{B}_\lambda$ is a linearly independent subset of $\mathbb{K}^n$. However, there is no reason for $\mathcal{B}$ to be a basis of $\mathbb{K}^n$ in general. For example, in [§Characteristic Polynomial, ⁋Example 7](/en/math/linear_algebra/characteristic_polynomial#ex7), when $\mathbb{K}=\mathbb{R}$ we have $\sigma(J)=\emptyset$, so $\mathcal{B}=\emptyset$. Moreover, even if we assume that the characteristic polynomial of $A$ has exactly $n$ roots, a similar problem can arise; for instance, for the matrix
 
 $$A=\begin{pmatrix}1&1&1\\0&1&1\\0&0&1\end{pmatrix}$$
 
-the characteristic polynomial is $$(\mathbf{x}-1)^3=0$$, but the only eigenvector corresponding to the eigenvalue $$1$$ is $$(1,0,0)$$. In the language introduced in the previous post, the algebraic multiplicity of the eigenvalue $$1$$ is $$3$$, and the geometric multiplicity is $$1$$.
+the characteristic polynomial is $(\mathbf{x}-1)^3=0$, but the only eigenvector corresponding to the eigenvalue $1$ is $(1,0,0)$. In the language introduced in the previous post, the algebraic multiplicity of the eigenvalue $1$ is $3$, and the geometric multiplicity is $1$.
 
 The following proposition shows that the geometric multiplicity of an eigenvalue of a matrix can never exceed its algebraic multiplicity.
 
 ::: Proposition 5
-For an eigenvalue $$\lambda\in\mathbb{K}$$ of an $$n\times n$$ matrix $$A$$, the geometric multiplicity of $$\lambda$ never exceeds its algebraic multiplicity.
+For an eigenvalue $\lambda\in\mathbb{K}$ of an $n\times n$ matrix $A$, the geometric multiplicity of $\lambda$ never exceeds its algebraic multiplicity.
 :::
 ::: Proof
-Let the geometric multiplicity of $$\lambda$$ be $$k$$, and consider $$k$$ linearly independent vectors $$x_1,\ldots, x_k$$ spanning $$E_\lambda(A)$$. We can add $$(n-k)$$ vectors $$x_{k+1},\ldots, x_n$$ to form a new basis $$\{x_1,\ldots, x_n\}$$ of $$\mathbb{K}^n$$. Now define the matrix $$X$$ by
+Let the geometric multiplicity of $$\lambda$be$k$, and consider$k$linearly independent vectors$x_1,\ldots, x_k$spanning$E_\lambda(A)$. We can add$(n-k)$vectors$x_{k+1},\ldots, x_n$to form a new basis$\{x_1,\ldots, x_n\}$of$\mathbb{K}^n$. Now define the matrix$X$$ by
 
 $$X=(x_1\vert x_2\vert \cdots\vert x_n)$$
 
