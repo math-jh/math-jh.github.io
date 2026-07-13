@@ -82,7 +82,7 @@ X_{rr} & \ast  & \cdots & \ast  \\
 
 ::: 명제 3
 $$E, E'$$를 $$A$$-algebra라 하고, $$M$$과 $$M'$$을 각각 $$E$$, $$E'$$-module이라 하자.  
-$$M$$과 $$M'$$이 각각 $$A$$-module로서 free이고, 각각 rank $$n$$, $$n'$$을 갖는다 하자. 먼알 $$M \otimes_A M'$$은 $$E \otimes_A E'$$-module로 취급한다면, 임의의 $$\alpha \in E$$, $$\alpha' \in E'$$에 대해 다음의 식
+$$M$$과 $$M'$$이 각각 $$A$$-module로서 free이고, 각각 rank $$n$$, $$n'$$을 갖는다 하자. 만일 $$M \otimes_A M'$$을 $$E \otimes_A E'$$-module로 취급한다면, 임의의 $$\alpha \in E$$, $$\alpha' \in E'$$에 대해 다음의 식
 
 $$\tr_{M \otimes M'/A}(\alpha \otimes \alpha') = \tr_{M/A}(\alpha) \cdot \tr_{M'/A}(\alpha'),\qquad N_{M \otimes M'/A}(\alpha \otimes \alpha') = N_{M/A}(\alpha)^{n'} \cdot N_{M'/A}(\alpha')^n$$
 

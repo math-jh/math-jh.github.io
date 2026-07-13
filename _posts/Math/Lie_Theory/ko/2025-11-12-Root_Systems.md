@@ -35,7 +35,7 @@ $$K(X,Y)=\tr(\ad(X)\ad(Y))$$
 으로 정의된 symmetric bilinear form을 *Killing form*이라 부른다. 
 :::
 
-Killing form이 symmetric이고, $$\mathbb{C}$$-bilnear인 것은 정의에 의해 자명하다. 심지어 이 Killing form은 별도의 조작을 거치지 않아도 이미 $$G$$에 의한 adjoint action에 대해 invariant하기도 하다. 즉 다음 식
+Killing form이 symmetric이고, $$\mathbb{C}$$-bilinear인 것은 정의에 의해 자명하다. 심지어 이 Killing form은 별도의 조작을 거치지 않아도 이미 $$G$$에 의한 adjoint action에 대해 invariant하기도 하다. 즉 다음 식
 
 $$K(\Ad_g(X), \Ad_g(Y))=K(X,Y)$$
 

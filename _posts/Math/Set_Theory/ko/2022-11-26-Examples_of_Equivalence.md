@@ -51,7 +51,7 @@ $$(R,A,A)$$가 동치관계라 하자. 그럼 단항관계 $$P$$가 $$R$$과 *co
 와 compatible하다. Equivalence class의 관점에서 위 정의를 다시 쓰면 다음과 같다.
 
 ::: 명제 4
-$$R$$이 집합 $$A$$ 위에서의 동치관계이고, $$P$$가 $$R$$과 compatible한 단항관계라 하자. 그럼 <phrase>$t\in A/R$이고 어떤 x\in t$가 존재하여 $P(x)$인 것</phrase>과 <phrase>$t\in A/R$이고 모든 $x\in t$에 대하여 $P(x)$인 것</phrase>이 서로 동치이다.
+$$R$$이 집합 $$A$$ 위에서의 동치관계이고, $$P$$가 $$R$$과 compatible한 단항관계라 하자. 그럼 <phrase>$t\in A/R$이고 어떤 $x\in t$가 존재하여 $P(x)$인 것</phrase>과 <phrase>$t\in A/R$이고 모든 $x\in t$에 대하여 $P(x)$인 것</phrase>이 서로 동치이다.
 :::
 
 ::: 증명
@@ -169,7 +169,7 @@ $$f=j\circ\tilde{f}=j\circ h\circ p$$
 
 - $$u\sim_{\tiny S}u$$가 항상 성립하는 것은 자명하다. $$x\sim_{\tiny R}x$$이고 $$x'\sim_{\tiny R'}x'$$이기 때문이다.
 - $$u\sim_{\tiny S}v$$라면 <phrase>$x\sim_{\tiny R}y$이고 $x'\sim_{\tiny R'}y'$</phrase>이므로 <phrase>$y\sim_{\tiny R}x$이고 $y'\sim_{\tiny R'}x'$</phrase>이고, 따라서 $$v\sim_{\tiny S}u$$이다.
-- $$u\sim_{\tiny S}v$$이고 $$v\sim_{\tiny S}$$라 하자. 그럼 <phrase>$x\sim_{\tiny R}y,x'\sim_{\tiny R'}y',y\sim_{\tiny R}z,y'\sim_{\tiny R'}z'$</phrase>가 각각 성립한다. 이제 $$x\sim_{\tiny R}y$$와 $$y\sim_{\tiny R}z$$로부터 $$x\sim_{\tiny R}z$$이고, $$x'\sim_{\tiny R'}y'$$와 $$y'\sim_{\tiny R'}z'$$로부터 $$x'\sim_{\tiny R'}z'$$이다. 즉 $$u\sim_{\tiny S}w$$가 성립한다.
+- $$u\sim_{\tiny S}v$$이고 $$v\sim_{\tiny S}w$$라 하자. 그럼 <phrase>$x\sim_{\tiny R}y,x'\sim_{\tiny R'}y',y\sim_{\tiny R}z,y'\sim_{\tiny R'}z'$</phrase>가 각각 성립한다. 이제 $$x\sim_{\tiny R}y$$와 $$y\sim_{\tiny R}z$$로부터 $$x\sim_{\tiny R}z$$이고, $$x'\sim_{\tiny R'}y'$$와 $$y'\sim_{\tiny R'}z'$$로부터 $$x'\sim_{\tiny R'}z'$$이다. 즉 $$u\sim_{\tiny S}w$$가 성립한다.
 
 따라서 $$S$$는 동치관계가 된다. 이 동치관계를 $$R$$과 $$R'$$의 *곱<sub>product</sub>*이라 부르고 $$R\times R'$$로 적는다.
 
