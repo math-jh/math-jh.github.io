@@ -24,12 +24,12 @@ published: false
 
 ## $\Sh(X)$의 abelian 구조
 
-이 글에서 $X$는 위상공간이고, $\Sh(X) = \Sh(X, \Ab)$는 $X$ 위의 abelian group들의 sheaf로 이루어진 category를 뜻한다. 더 일반적으로 $\mathcal{O}_X$가 $X$ 위의 ring들의 sheaf일 때 ([\[위상수학\] §준층, ⁋예시 14](/ko/math/topology/presheaves#ex14)), $\mathcal{O}_X$-module들의 category를 $\operatorname{Mod}(\mathcal{O}_X)$로 적는다. $\mathcal{O}_X = \mathbb{Z}_X$, 즉 $\mathbb{Z}$를 stalk로 갖는 constant sheaf로 두면 $\operatorname{Mod}(\mathbb{Z}_X) = \Sh(X, \Ab)$이므로, abelian group의 sheaf는 ringed space $(X, \mathbb{Z}_X)$ 위의 module의 특수한 경우이다.
+이 글에서 $X$는 위상공간이고, $\Sh(X) = \Sh(X; \Ab)$는 $X$ 위의 abelian group들의 sheaf로 이루어진 category를 뜻한다. 더 일반적으로 $\mathcal{O}_X$가 $X$ 위의 ring들의 sheaf일 때 ([\[위상수학\] §준층, ⁋예시 14](/ko/math/topology/presheaves#ex14)), $\mathcal{O}_X$-module들의 category를 $\operatorname{Mod}(\mathcal{O}_X)$로 적는다. $\mathcal{O}_X = \mathbb{Z}_X$, 즉 $\mathbb{Z}$를 stalk로 갖는 constant sheaf로 두면 $\operatorname{Mod}(\mathbb{Z}_X) = \Sh(X; \Ab)$이므로, abelian group의 sheaf는 ringed space $(X, \mathbb{Z}_X)$ 위의 module의 특수한 경우이다.
 
 derived category를 세우기 위해서는 우선 작업 대상이 abelian category여야 한다. Sheaf morphism의 kernel은 presheaf 차원의 kernel이 곧바로 sheaf가 되어 별다른 조작 없이 정의되지만 ([\[위상수학\] §준층, ⁋정의 16](/ko/math/topology/presheaves#def16)), image와 cokernel은 presheaf 단계에서 sheaf 조건을 만족하지 않아 sheafification을 거쳐야 한다는 점이 핵심이다. ([\[위상수학\] §층, ⁋정의 5](/ko/math/topology/sheaves#def5))
 
 ::: 명제 1
-$\Sh(X, \Ab)$와 $\operatorname{Mod}(\mathcal{O}_X)$는 abelian category이다. 이때 sheaf morphism $\phi: \mathcal{F} \to \mathcal{G}$의 kernel, cokernel, image는 stalk 차원에서
+$\Sh(X; \Ab)$와 $\operatorname{Mod}(\mathcal{O}_X)$는 abelian category이다. 이때 sheaf morphism $\phi: \mathcal{F} \to \mathcal{G}$의 kernel, cokernel, image는 stalk 차원에서
 $(\ker \phi)_x = \ker(\phi_x), \qquad (\operatorname{coker} \phi)_x = \operatorname{coker}(\phi_x), \qquad (\im \phi)_x = \im(\phi_x)$
 로 주어진다.
 :::
@@ -46,10 +46,10 @@ Sheaf morphism $\phi$의 presheaf 차원 kernel $U \mapsto \ker(\phi(U))$는 그
 Derived category 위에서 right derived functor $RF$를 정의하려면 $\mathcal{A}$가 충분한 injective를 가져야 한다 ([\[호몰로지 대수학\] §유도카테고리, ⁋정의 8](/ko/math/homological_algebra/derived_categories#def8)). 즉 모든 대상이 어떤 injective object 안으로 단사적으로 들어가야 한다. Module category에서는 이 사실이 표준적이지만, sheaf의 경우에는 별도의 논증이 필요하다. 다음은 Grothendieck이 Tôhoku 논문에서 정립한 일반 정리의 특수한 경우이다.
 
 ::: 정리 2 (Grothendieck)
-$\Sh(X, \Ab)$와 $\operatorname{Mod}(\mathcal{O}_X)$는 충분한 injective를 가진다.
+$\Sh(X; \Ab)$와 $\operatorname{Mod}(\mathcal{O}_X)$는 충분한 injective를 가진다.
 :::
 ::: 증명
-$\operatorname{Mod}(\mathcal{O}_X)$에 대해 증명하면 $\mathcal{O}_X = \mathbb{Z}_X$의 경우로 $\Sh(X, \Ab)$가 따라 나온다. 구체적인 embedding을 구성한다. $\mathcal{F} \in \operatorname{Mod}(\mathcal{O}_X)$가 주어졌다 하자. 각 점 $x \in X$에서 stalk $\mathcal{F}_x$는 $\mathcal{O}_{X,x}$-module이고, module category는 충분한 injective를 가지므로 injective $\mathcal{O}_{X,x}$-module $I_x$와 단사 $\mathcal{F}_x \hookrightarrow I_x$를 택할 수 있다.
+$\operatorname{Mod}(\mathcal{O}_X)$에 대해 증명하면 $\mathcal{O}_X = \mathbb{Z}_X$의 경우로 $\Sh(X; \Ab)$가 따라 나온다. 구체적인 embedding을 구성한다. $\mathcal{F} \in \operatorname{Mod}(\mathcal{O}_X)$가 주어졌다 하자. 각 점 $x \in X$에서 stalk $\mathcal{F}_x$는 $\mathcal{O}_{X,x}$-module이고, module category는 충분한 injective를 가지므로 injective $\mathcal{O}_{X,x}$-module $I_x$와 단사 $\mathcal{F}_x \hookrightarrow I_x$를 택할 수 있다.
 
 각 $x$에 대해 inclusion $i_x: \{x\} \hookrightarrow X$를 따라 skyscraper sheaf $(i_x)_\ast I_x$를 만들고 ([\[위상수학\] §준층, ⁋예시 5](/ko/math/topology/presheaves#ex5)), 이들의 곱
 $\mathcal{I} = \prod_{x \in X} (i_x)_\ast I_x$
@@ -103,7 +103,7 @@ Continuous map $f: X \to Y$에 대해 $f^{-1}: \Sh(Y) \to \Sh(X)$는 exact funct
 $f^{-1}$은 stalk를 보존한다. 정확히는 임의의 sheaf $\mathcal{G} \in \Sh(Y)$와 점 $x \in X$에 대해 $(f^{-1}\mathcal{G})_x \cong \mathcal{G}_{f(x)}$이다. 이는 $f^{-1}\mathcal{G}$가 presheaf $U \mapsto \varinjlim_{V \supseteq f(U)} \mathcal{G}(V)$의 sheafification으로 정의되는 것 ([\[위상수학\] §층, ⁋정의 10](/ko/math/topology/sheaves#def10) 및 그 구성식)으로부터, stalk를 취하면 $f(x)$를 포함하는 열린집합들에 대한 colimit가 되어 $\mathcal{G}_{f(x)}$가 되기 때문이다. Stalk functor $\mathcal{G} \mapsto \mathcal{G}_{f(x)}$는 exact하므로 ([명제 1](#prop1)의 stalk 판정), $f^{-1}$은 short exact sequence를 short exact sequence로 보낸다. Exact functor는 quasi-isomorphism을 보존하므로 $D(\Sh(Y)) \to D(\Sh(X))$로 곧바로 내려가며, derived functor의 정의에서 resolution이 불필요해 $Lf^{-1} = f^{-1} = Rf^{-1}$이다.
 :::
 
-$\Sh(X, \Ab)$ 수준에서는 이것으로 충분하지만, ringed space의 경우에는 더 미묘한 점이 있다. $f: (X, \mathcal{O}_X) \to (Y, \mathcal{O}_Y)$가 ringed space 사이의 morphism일 때, $\mathcal{O}_Y$-module의 당김은 단순한 $f^{-1}$이 아니라 $f^{-1}\mathcal{O}_Y$-module을 $\mathcal{O}_X$-module로 확장하는 단계를 포함한다.
+$\Sh(X; \Ab)$ 수준에서는 이것으로 충분하지만, ringed space의 경우에는 더 미묘한 점이 있다. $f: (X, \mathcal{O}_X) \to (Y, \mathcal{O}_Y)$가 ringed space 사이의 morphism일 때, $\mathcal{O}_Y$-module의 당김은 단순한 $f^{-1}$이 아니라 $f^{-1}\mathcal{O}_Y$-module을 $\mathcal{O}_X$-module로 확장하는 단계를 포함한다.
 
 ::: 정의 6
 Ringed space 사이의 morphism $f: (X, \mathcal{O}_X) \to (Y, \mathcal{O}_Y)$가 주어졌다 하자. $\mathcal{O}_Y$-module $\mathcal{G}$의 *module pullback<sub>가군 당김</sub>* $f^\ast \mathcal{G}$를
@@ -148,7 +148,7 @@ $R\mathcal{H}om_{\mathcal{O}_X}(\mathcal{F}^\bullet \otimes^L_{\mathcal{O}_X} \m
 ::: 정리 9
 Continuous map $f: X \to Y$에 대해 다음의 derived adjunction이 성립한다.
 
-1. $\Sh(-, \Ab)$ 차원에서 $(f^{-1}, Rf_\ast)$는 adjoint pair이다. 즉 $\mathcal{F}^\bullet \in D^+(\Sh(X))$, $\mathcal{G}^\bullet \in D^-(\Sh(Y))$에 대해
+1. $\Sh(-; \Ab)$ 차원에서 $(f^{-1}, Rf_\ast)$는 adjoint pair이다. 즉 $\mathcal{F}^\bullet \in D^+(\Sh(X))$, $\mathcal{G}^\bullet \in D^-(\Sh(Y))$에 대해
 $\Hom_{D(\Sh(X))}(f^{-1}\mathcal{G}^\bullet, \mathcal{F}^\bullet) \cong \Hom_{D(\Sh(Y))}(\mathcal{G}^\bullet, Rf_\ast \mathcal{F}^\bullet)$
 이 성립한다.
 2. Ringed space morphism $f: (X, \mathcal{O}_X) \to (Y, \mathcal{O}_Y)$에 대해 $(Lf^\ast, Rf_\ast)$는 adjoint pair이다. 즉 $\mathcal{F}^\bullet \in D^+(\operatorname{Mod}(\mathcal{O}_X))$, $\mathcal{G}^\bullet \in D^-(\operatorname{Mod}(\mathcal{O}_Y))$에 대해

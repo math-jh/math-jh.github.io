@@ -373,7 +373,7 @@ $$C(\widetilde{M})\otimes_{\mathbb{Z}[\pi_1(X)]} A$$
 
 임의의 위상공간 $X$와 그 위에 정의된 sheaf $\mathscr{F}$에 대하여, global section functor 
 
-$$\Gamma(X,-):\Sh(X,\mathcal{A})\rightarrow \mathcal{A}$$
+$$\Gamma(X,-):\Sh(X;\mathcal{A})\rightarrow \mathcal{A}$$
 
 는 left exact functor이므로, 이 functor의 right derived functor가 존재한다. 이를 직접 계산하기 위해서는 Godement resolution을 사용하는데, 이는 다음과 같이 정의된다.
 
