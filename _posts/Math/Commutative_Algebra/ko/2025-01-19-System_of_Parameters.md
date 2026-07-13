@@ -163,11 +163,11 @@ $$\phi\otimes_A\id_{A/\mathfrak{p}_2}: A/\mathfrak{p}_2\cong A\otimes_A A/\mathf
 그럼 다음이 성립한다.
 
 ::: 정리 9
-Noetherian local ring 사이의 map $$(A,\mathfrak{m}) \rightarrow (B, \mathfrak{n})$$이 존재한다면
+Noetherian local ring 사이의 국소사상 $$\phi:(A,\mathfrak{m}) \rightarrow (B, \mathfrak{n})$$이 존재한다면
 
-$$\dim B\leq \dim A +\dim A/\mathfrak{m}$$
+$$\dim B\leq \dim A +\dim B/\mathfrak{m}B$$
 
-이 성립하며, 만일 $$\phi:A \rightarrow B$$가 flat일 경우 등호가 성립한다.
+이 성립하며, 만일 $$\phi$$가 $$B$$를 flat $$A$$-module로 만든다면 등호가 성립한다.
 :::
 ::: 증명
 편의상 $$\dim A=d$$, $$e=\dim B/\mathfrak{m}B$$로 표기하자. 우선 [따름정리 1](#cor1)에 의해 $$a_1,\ldots, a_d$$이 존재하여, 충분히 큰 $$s$$에 대하여는 항상 $$\mathfrak{m}^s\subseteq (a_1,\ldots, a_d)$$이도록 할 수 있고, 비슷하게 $$b_1,\ldots, b_e\in B$$가 존재하여, 충분히 큰 $$t$$에 대하여는 항상 $$\mathfrak{n}^t\subseteq \phi(\mathfrak{m})B+(b_1,\ldots, b_e)$$이도록 할 수 있다. 그럼 이제

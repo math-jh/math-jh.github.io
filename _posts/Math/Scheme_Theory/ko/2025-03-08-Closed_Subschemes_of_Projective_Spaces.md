@@ -10,7 +10,7 @@ sidebar:
     nav: "scheme_theory-ko"
 
 date: 2025-03-08
-weight: 14
+weight: 15
 published: false
 
 ---
@@ -60,27 +60,27 @@ $$\mathfrak{a}_{(\x_i)}=\left\{\frac{a}{\x_i^d}\;\middle\vert\;\text{$a\in\mathf
 $$\mathbb{P}^n$$의 임의의 closed subscheme $$Z$$에 대하여, $$Z=V_+(\mathfrak{a})$$이도록 하는 homogeneous ideal $$\mathfrak{a}\subseteq S_\bullet$$이 존재한다.
 :::
 ::: 증명
-각각의 $$i$$에 대하여 $$Z\cap D_+(\x_i)$$는 affine scheme $$D_+(\x_i)\cong\Spec S_{(\x_i)}$$의 closed subscheme이므로, [§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3) 이후의 논의에 의하여 유일한 ideal $$I_i\subseteq S_{(\x_i)}$$에 대응된다. 이제 homogeneous element들의 집합
+각각의 $$i$$에 대하여 $$Z\cap D_+(\x_i)$$는 affine scheme $$D_+(\x_i)\cong\Spec S_{(\x_i)}$$의 closed subscheme이므로, [§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3) 이후의 논의에 의하여 유일한 ideal $$\mathfrak{b}_i\subseteq S_{(\x_i)}$$에 대응된다. 이제 homogeneous element들의 집합
 
-$$T=\left\{f\in S_\bullet\;\middle\vert\;\text{$f$ homogeneous,}\quad \frac{f}{\x_i^{\deg f}}\in I_i\text{ for all }i\right\}$$
+$$T=\left\{f\in S_\bullet\;\middle\vert\;\text{$f$ homogeneous,}\quad \frac{f}{\x_i^{\deg f}}\in \mathfrak{b}_i\text{ for all }i\right\}$$
 
-을 생각하고, $$\mathfrak{a}$$를 $$T$$로 생성되는 ideal이라 하자. $$T$$가 homogeneous element들로 이루어져 있으므로 $$\mathfrak{a}$$는 homogeneous ideal이다. 우리의 주장은 모든 $$i$$에 대해 $$\mathfrak{a}_{(\x_i)}=I_i$$가 성립한다는 것이다.
+을 생각하고, $$\mathfrak{a}$$를 $$T$$로 생성되는 ideal이라 하자. $$T$$가 homogeneous element들로 이루어져 있으므로 $$\mathfrak{a}$$는 homogeneous ideal이다. 우리의 주장은 모든 $$i$$에 대해 $$\mathfrak{a}_{(\x_i)}=\mathfrak{b}_i$$가 성립한다는 것이다.
 
-우선 $$\mathfrak{a}_{(\x_i)}$$는 $$f/\x_i^{\deg f}$$ ($$f\in T$$) 꼴의 원소들로 생성되는 $$S_{(\x_i)}$$의 ideal인데, $$T$$의 정의에 의해 이들 생성원이 모두 $$I_i$$에 속하므로 $$\mathfrak{a}_{(\x_i)}\subseteq I_i$$이다.
+우선 $$\mathfrak{a}_{(\x_i)}$$는 $$f/\x_i^{\deg f}$$ ($$f\in T$$) 꼴의 원소들로 생성되는 $$S_{(\x_i)}$$의 ideal인데, $$T$$의 정의에 의해 이들 생성원이 모두 $$\mathfrak{b}_i$$에 속하므로 $$\mathfrak{a}_{(\x_i)}\subseteq \mathfrak{b}_i$$이다.
 
-거꾸로 $$g=f/\x_i^d\in I_i$$가 주어졌다 하자. 여기서 $$f$$는 degree $$d$$의 homogeneous polynomial이다. 충분히 큰 $$N$$에 대하여 $$\x_i^Nf\in T$$임을 보이면, $$g=(\x_i^Nf)/\x_i^{N+d}\in\mathfrak{a}_{(\x_i)}$$가 되어 증명이 끝난다. 이를 위해 각각의 $$j$$에 대하여 $$(\x_i^Nf)/\x_j^{N+d}\in I_j$$이도록 하는 $$N$$을 찾자. $$j=i$$인 경우는 임의의 $$N$$에 대해 성립하므로 $$j\neq i$$라 하자.
+거꾸로 $$g=f/\x_i^d\in \mathfrak{b}_i$$가 주어졌다 하자. 여기서 $$f$$는 degree $$d$$의 homogeneous polynomial이다. 충분히 큰 $$N$$에 대하여 $$\x_i^Nf\in T$$임을 보이면, $$g=(\x_i^Nf)/\x_i^{N+d}\in\mathfrak{a}_{(\x_i)}$$가 되어 증명이 끝난다. 이를 위해 각각의 $$j$$에 대하여 $$(\x_i^Nf)/\x_j^{N+d}\in \mathfrak{b}_j$$이도록 하는 $$N$$을 찾자. $$j=i$$인 경우는 임의의 $$N$$에 대해 성립하므로 $$j\neq i$$라 하자.
 
-핵심은 $$I_i$$와 $$I_j$$가 교집합 $$D_+(\x_i\x_j)$$ 위에서 호환된다는 것이다. $$Z$$의 ideal sheaf $$\mathcal{I}_{Z/\mathbb{P}^n}=\ker\iota^\sharp$$를 생각하면 ([§닫힌 부분스킴, ⁋정의 5](/ko/math/scheme_theory/closed_subschemes#def5)), kernel은 단면들 위에서 계산되므로 $$\mathcal{I}_{Z/\mathbb{P}^n}(D_+(\x_i))=I_i$$이다. 한편 [§사영스킴, ⁋보조정리 9](/ko/math/scheme_theory/projective_schemes#lem9)에 의하여 $$D_+(\x_i\x_j)$$는 $$\Spec S_{(\x_i)}$$의 principal open subset $$D(\x_j/\x_i)$$이고, affine scheme 위에서 structure sheaf와 $$\iota_\ast\mathcal{O}_Z$$의 단면들은 모두 localization으로 주어지므로, localization의 exactness에 의해
+핵심은 $$\mathfrak{b}_i$$와 $$\mathfrak{b}_j$$가 교집합 $$D_+(\x_i\x_j)$$ 위에서 호환된다는 것이다. $$Z$$의 ideal sheaf $$\mathcal{I}_{Z/\mathbb{P}^n}=\ker\iota^\sharp$$를 생각하면 ([§닫힌 부분스킴, ⁋정의 5](/ko/math/scheme_theory/closed_subschemes#def5)), kernel은 단면들 위에서 계산되므로 $$\mathcal{I}_{Z/\mathbb{P}^n}(D_+(\x_i))=\mathfrak{b}_i$$이다. 한편 [§사영스킴, ⁋보조정리 9](/ko/math/scheme_theory/projective_schemes#lem9)에 의하여 $$D_+(\x_i\x_j)$$는 $$\Spec S_{(\x_i)}$$의 principal open subset $$D(\x_j/\x_i)$$이고, affine scheme 위에서 structure sheaf와 $$\iota_\ast\mathcal{O}_Z$$의 단면들은 모두 localization으로 주어지므로, localization의 exactness에 의해
 
-$$\mathcal{I}_{Z/\mathbb{P}^n}(D_+(\x_i\x_j))=(I_i)_{\x_j/\x_i}=(I_j)_{\x_i/\x_j}$$
+$$\mathcal{I}_{Z/\mathbb{P}^n}(D_+(\x_i\x_j))=(\mathfrak{b}_i)_{\x_j/\x_i}=(\mathfrak{b}_j)_{\x_i/\x_j}$$
 
 이다. 여기서 양변은 모두 $$S_{(\x_i\x_j)}$$의 ideal이다.
 
-이제 $$g\in I_i$$의 $$S_{(\x_i\x_j)}$$에서의 image는 $$(I_j)_{\x_i/\x_j}$$에 속한다. 한편 $$h=f/\x_j^d\in S_{(\x_j)}$$에 대하여 $$S_{(\x_i\x_j)}$$ 안에서 $$h=(\x_i/\x_j)^d\,g$$이므로 $$h$$의 image도 $$(I_j)_{\x_i/\x_j}$$에 속한다. 즉 적당한 $$m_j\geq 0$$이 존재하여
+이제 $$g\in \mathfrak{b}_i$$의 $$S_{(\x_i\x_j)}$$에서의 image는 $$(\mathfrak{b}_j)_{\x_i/\x_j}$$에 속한다. 한편 $$h=f/\x_j^d\in S_{(\x_j)}$$에 대하여 $$S_{(\x_i\x_j)}$$ 안에서 $$h=(\x_i/\x_j)^d\,g$$이므로 $$h$$의 image도 $$(\mathfrak{b}_j)_{\x_i/\x_j}$$에 속한다. 즉 적당한 $$m_j\geq 0$$이 존재하여
 
-$$\left(\frac{\x_i}{\x_j}\right)^{m_j}h=\frac{\x_i^{m_j}f}{\x_j^{m_j+d}}\in I_j$$
+$$\left(\frac{\x_i}{\x_j}\right)^{m_j}h=\frac{\x_i^{m_j}f}{\x_j^{m_j+d}}\in \mathfrak{b}_j$$
 
-이다. 그럼 $$N=\max_{j\neq i}m_j$$로 두면, $$I_j$$가 ideal이므로 모든 $$j$$에 대하여 $$(\x_i^Nf)/\x_j^{N+d}=(\x_i/\x_j)^{N-m_j}\cdot(\x_i^{m_j}f)/\x_j^{m_j+d}\in I_j$$이고, 따라서 $$\x_i^Nf\in T$$이다.
+이다. 그럼 $$N=\max_{j\neq i}m_j$$로 두면, $$\mathfrak{b}_j$$가 ideal이므로 모든 $$j$$에 대하여 $$(\x_i^Nf)/\x_j^{N+d}=(\x_i/\x_j)^{N-m_j}\cdot(\x_i^{m_j}f)/\x_j^{m_j+d}\in \mathfrak{b}_j$$이고, 따라서 $$\x_i^Nf\in T$$이다.
 
 종합하면 $$Z$$와 $$V_+(\mathfrak{a})$$는 $$\mathbb{P}^n$$의 closed subscheme으로서 같은 ideal sheaf를 가지므로, [§닫힌 부분스킴, ⁋보조정리 9](/ko/math/scheme_theory/closed_subschemes#lem9)를 양방향으로 적용하면 $$Z=V_+(\mathfrak{a})$$이다.
 :::

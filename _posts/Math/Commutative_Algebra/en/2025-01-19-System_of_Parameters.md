@@ -163,11 +163,11 @@ Keeping $$B/\mathfrak{p}_2B$$ as in the above proof, we see that when choosing $
 Then the following holds.
 
 ::: Theorem 9
-If there exists a map $$(A,\mathfrak{m}) \rightarrow (B, \mathfrak{n})$$ between Noetherian local rings, then
+If there exists a local homomorphism $$\phi:(A,\mathfrak{m}) \rightarrow (B, \mathfrak{n})$$ between Noetherian local rings, then
 
-$$\dim B\leq \dim A +\dim A/\mathfrak{m}$$
+$$\dim B\leq \dim A +\dim B/\mathfrak{m}B$$
 
-holds, and if $$\phi:A \rightarrow B$$ is flat, then equality holds.
+holds, and if $$\phi$$ makes $$B$$ into a flat $$A$$-module, then equality holds.
 :::
 ::: Proof
 For convenience, write $$\dim A=d$$ and $$e=\dim B/\mathfrak{m}B$$. First, by [Corollary 1](#cor1), there exist $$a_1,\ldots, a_d$$ such that $$\mathfrak{m}^s\subseteq (a_1,\ldots, a_d)$$ for all sufficiently large $$s$$, and similarly there exist $$b_1,\ldots, b_e\in B$$ such that $$\mathfrak{n}^t\subseteq \phi(\mathfrak{m})B+(b_1,\ldots, b_e)$$ for all sufficiently large $$t$$. Then

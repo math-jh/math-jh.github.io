@@ -10,7 +10,7 @@ sidebar:
 
 date: 2026-06-20
 
-weight: 1.5
+weight: 1
 
 published: false
 
@@ -30,80 +30,76 @@ published: false
 
 $$v=v\cdot 1=v(uw)=(vu)w=1\cdot w=w$$
 
-이므로 좌역원과 우역원이 일치하고, 따라서 양쪽 역원을 갖는 원소의 역원은 하나뿐이다. 이제 $$A^\times$$가 곱셈에 대해 닫혀 있음을 확인하자. $$1\in A^\times$$임은 $$1\cdot 1=1$$에서 자명하고, $$u,u'\in A^\times$$이면
+이므로 left inverse와 right inverse이 일치하고, 따라서 양쪽에서 역원을 갖는 원소의 역원은 하나뿐이다. 
+
+뿐만 아니라, $$A^\times$$는 곱셈에 대해 닫혀 있다. 우선 empty product에 대해 닫혀있는 것, 즉 $$1\in A^\times$$임은 $$1\cdot 1=1$$에서 자명하고, $$u,u'\in A^\times$$이면
 
 $$(uu')(u'^{-1}u^{-1})=u(u'u'^{-1})u^{-1}=uu^{-1}=1$$
 
-이며 같은 방식으로 $$(u'^{-1}u^{-1})(uu')=1$$이므로 $$uu'\in A^\times$$이고 그 역원은 $$u'^{-1}u^{-1}$$이다. 또 $$u\in A^\times$$이면 $$u^{-1}$$도 $$u$$를 역원으로 가지므로 $$u^{-1}\in A^\times$$이다. 따라서 $$A^\times$$는 $$A$$의 곱셈을 연산으로 갖는 군이며, 이를 $$A$$의 *unit group<sub>가역원군</sub>* 혹은 group of units라 부른다.
+이며 같은 방식으로 $$(u'^{-1}u^{-1})(uu')=1$$이므로 $$uu'\in A^\times$$이고 그 역원은 $$u'^{-1}u^{-1}$$이다. 또 $$u\in A^\times$$이면 $$u^{-1}$$도 $$u$$를 역원으로 가지므로 $$u^{-1}\in A^\times$$이다. 따라서 $$A^\times$$는 $$A$$의 곱셈을 연산으로 갖는 군이며, 이를 $$A$$의 *unit group<sub>가역원군</sub>*이라 부른다.
 
 ::: 예시 2
-정수환 $$\mathbb{Z}$$에서 $$uv=1$$을 만족하는 정수 $$u,v$$는 $$u=v=1$$ 또는 $$u=v=-1$$뿐이므로 $$\mathbb{Z}^\times=\{1,-1\}$$이다.
+Ring $$\mathbb{Z}$$에서 $$uv=1$$을 만족하는 정수 $$u,v$$는 $$u=v=1$$ 또는 $$u=v=-1$$뿐이므로 $$\mathbb{Z}^\times=\{1,-1\}$$이다.
 
-Division ring $$A$$에서는 $$0$$을 제외한 모든 원소가 정의상 역원을 가지므로 $$A^\times=A\setminus\{0\}$$이다 ([\[대수적 구조\] §분수체, ⁋정의 3](/ko/math/algebraic_structures/field_of_fractions#def3)). 특히 field $$\mathbb{K}$$에 대해 $$\mathbb{K}^\times=\mathbb{K}\setminus\{0\}$$은 곱셈에 대한 가환군이다.
+임의의 division ring $$A$$에서는 $$0$$을 제외한 모든 원소가 정의상 역원을 가지므로 $$A^\times=A\setminus\{0\}$$이다 ([\[대수적 구조\] §분수체, ⁋정의 3](/ko/math/algebraic_structures/field_of_fractions#def3)). 특히 field $$\mathbb{K}$$에 대해 $$\mathbb{K}^\times=\mathbb{K}\setminus\{0\}$$은 곱셈에 대한 가환군이다.
 
-한 환의 unit이 다른 부분환에서는 unit이 아닐 수 있다. 가령 $$2\in\mathbb{Q}$$는 $$\mathbb{Q}^\times$$의 원소이지만, $$\mathbb{Z}$$ 안에서는 $$2v=1$$을 만족하는 정수 $$v$$가 없으므로 $$2\notin\mathbb{Z}^\times$$이다. 즉 unit인지의 여부는 어느 환 안에서 보는지에 달려 있다.
+주의할 것 중 하나는 한 ring의 unit이 그 특정 subring에서는 unit이 아닐 수 있다. 가령 $$2\in\mathbb{Q}$$는 $$\mathbb{Q}^\times$$의 원소이지만, $$\mathbb{Z}$$ 안에서는 $$2v=1$$을 만족하는 정수 $$v$$가 없으므로 $$2\not\in\mathbb{Z}^\times$$이다. 
 :::
-
-Unit의 개념은 앞선 글들에서 이미 쓰였다. Integral domain에서 두 원소가 같은 principal ideal을 생성하는 것이 unit배만큼 차이나는 것과 동치라는 [§정역, ⁋명제 6](/ko/math/ring_theory/integral_domains#prop6)과, irreducible · prime · associate를 정의하는 [§정역, ⁋정의 11](/ko/math/ring_theory/integral_domains#def11)이 모두 unit에 기대고 있다. 정의 1은 이 용어를 명시적으로 고정한 것이다.
 
 ## Zero divisor와 regular element
 
-이제 곱셈 구조의 반대편 극단, 즉 곱하여 $$0$$을 만드는 원소들을 본다. Zero divisor와 integral domain은 이미 정의되었다.
+곱셈 구조의 반대편 극단은 $$0$$이라 할 수 있다. 이를 확장하여 우리는 서로 곱하면 $$0$$이 되는 원소들, 즉 zero divisor들을 살펴본다. ([\[대수적 구조\] §분수체, ⁋정의 5](/ko/math/algebraic_structures/field_of_fractions#def5)) 우선 정의를 조금 더 세밀하게 다듬자. 
 
 ::: 정의 3
-([\[대수적 구조\] §분수체, ⁋정의 5](/ko/math/algebraic_structures/field_of_fractions#def5)) 환 $$A$$의 원소 $$a\in A$$가 *left zero divisor<sub>왼쪽 영인자</sub>*라는 것은 적당한 nonzero 원소 $$b\neq 0$$이 존재하여 $$ab=0$$인 것이다. 마찬가지로 적당한 $$b\neq 0$$에 대해 $$ba=0$$이면 $$a$$를 *right zero divisor<sub>오른쪽 영인자</sub>*라 한다. 어느 쪽도 아닌 원소, 즉 nonzero 원소 $$b$$에 대해 $$ab=0$$이나 $$ba=0$$이 결코 성립하지 않는 원소를 *regular element<sub>정칙원</sub>* 혹은 non-zero-divisor라 부른다.
+ Ring $$A$$의 원소 $$a\in A$$에 대하여, 다음을 정의한다. 
+ 
+ 1. $$a$$가 *left zero divisor<sub>왼쪽 영인자</sub>*라는 것은 적당한 nonzero 원소 $$b\neq 0$$이 존재하여 $$ab=0$$인 것이다. 
+ 2. 마찬가지로 적당한 $$b\neq 0$$에 대해 $$ba=0$$이면 $$a$$를 *right zero divisor<sub>오른쪽 영인자</sub>*라 한다. 
+ 3. Zero divisor가 아닌 원소를 *regular element<sub>정칙원</sub>* 혹은 non-zero-divisor라 부른다.
 :::
 
-가환환에서는 left zero divisor와 right zero divisor의 구별이 사라지므로 이들을 통틀어 *zero divisor<sub>영인자</sub>*라 부른다. 정의에서 $$0$$ 자신은 $$A\neq 0$$인 한 nonzero 원소 $$1$$과 $$0\cdot 1=0$$을 이루므로 zero divisor이며, regular element는 항상 nonzero이다. Integral domain은 가환환 $$A\neq 0$$ 중에서 $$0$$ 이외의 zero divisor가 없는 것, 즉 모든 nonzero 원소가 regular element인 것으로 특징지어진다. 우리의 관심사는 regular element와 unit 사이의 관계이다.
+[\[대수적 구조\] §분수체, ⁋정의 5](/ko/math/algebraic_structures/field_of_fractions#def5)는 left zero divisor와 right zero divisor를 구별하지 않고 사용한 것으로, 이들 두 개념을 모두 포함하는 것이다. 특별히 commutative ring에 대해서는 이들의 구별이 사라지므로 방향을 명시하지 않아도 혼동의 여지가 없다. 
 
-먼저 한 방향은 일반적인 환에서 항상 성립한다.
+정의에 위해, $$0$$ 자신은 $$A\neq 0$$인 한 nonzero 원소 $$1$$과 $$0\cdot 1=0$$을 이루므로 zero divisor이며, 그 대우명제를 생각하면 regular element는 항상 nonzero여야 한다. 
+
+우리의 관심사는 regular element와 unit 사이의 관계이다. 먼저 한 방향은 일반적인 환에서 항상 성립한다.
 
 ::: 명제 4
-환 $$A$$의 unit은 left zero divisor도 right zero divisor도 아니다. 즉 모든 unit은 regular element이다.
+Ring $$A$$의 임의의 unit은 regular element이다.
 :::
 ::: 증명
-$$u\in A^\times$$이라 하고 적당한 $$b\in A$$에 대해 $$ub=0$$이라 하자. 양변의 왼쪽에 $$u^{-1}$$을 곱하면
+결론에 반하여 $$u\in A^\times$$이라 하고 적당한 $$b\in A$$에 대해 $$ub=0$$이라 하자. 양변의 왼쪽에 $$u^{-1}$$을 곱하면
 
 $$b=1\cdot b=(u^{-1}u)b=u^{-1}(ub)=u^{-1}\cdot 0=0$$
 
-이므로 $$b=0$$이다. 따라서 $$ub=0$$이 nonzero $$b$$에서 성립할 수 없고, $$u$$는 left zero divisor가 아니다. 마찬가지로 $$bu=0$$이라 하면 오른쪽에 $$u^{-1}$$을 곱하여 $$b=0$$을 얻으므로 $$u$$는 right zero divisor도 아니다. 따라서 $$u$$는 regular element이다.
+이므로 $$b=0$$이므로 이는 모순이다. 비슷한 논증이 $$bu=0$$이라 가정해도 성립하며 따라서 $$u$$는 regular element이다.
 :::
-
-명제의 대우를 취하면, zero divisor는 결코 unit이 될 수 없다. 이는 곱셈에 대한 역원을 갖는 원소를 다룰 때 자주 쓰는 사실이다. 가령 [예시 2](#ex2)에서 $$2\in\mathbb{Z}$$가 unit이 아닌 것은 별도의 계산 없이도 다음 절의 관점에서 다시 설명되는데, $$\mathbb{Z}$$ 같은 무한환에서는 regular element가 반드시 unit이 되지는 않는다. 실제로 $$2$$는 $$\mathbb{Z}$$에서 regular element이지만 unit이 아니다. 즉 명제 4의 역은 일반적으로 거짓이다.
-
-그러나 환이 유한하면 사정이 달라진다.
 
 ## 유한가환환에서의 regular element
 
-명제 4의 역, 곧 "regular element는 unit이다"가 무한환에서 거짓임을 보았다. 핵심은 곱셈사상의 단사성과 전사성 사이의 간극에 있다. 환 $$A$$의 원소 $$a$$에 대해 left multiplication 사상
+위의 [명제 4](#prop4)는 임의의 unit이 regular임을 보여주지만, 일반적으로 그 역은 성립하지 않는다. 가령 $$\mathbb{Z}$$에서 $$2$$는 regular element인 것을 쉽게 확인할 수 있지만 $$2$$는 $$\mathbb{Z}$$의 unit이 아니다. ([예시 2](#ex2))
 
-$$\lambda_a:A\longrightarrow A,\qquad \lambda_a(x)=ax$$
-
-를 생각하면, $$a$$가 left zero divisor가 아니라는 것은 $$\lambda_a$$가 단사라는 것과 같다. 실제로 $$\lambda_a(x)=\lambda_a(y)$$이면 $$a(x-y)=0$$이고, $$a$$가 left zero divisor가 아니면 $$x-y=0$$이다. 반대로 $$a$$가 unit이라는 것은 (가환환에서) $$\lambda_a$$가 전단사이며 그 역사상이 $$\lambda_{a^{-1}}$$이라는 것에 대응한다. 유한집합에서는 단사사상이 자동으로 전사이므로, 유한환에서는 이 간극이 사라진다.
+그러나 만일 ring이 *finite* ring이라면 그 역이 성립하는데, 이는 기본적으로 유한집합의 정의 ([\[집합론\] §자연수와 무한집합, ⁋정의 1](/ko/math/set_theory/natural_numbers#def1))에 의하여, 유한집합에서 자기자신으로 가는 함수는 전사이거나 단사이기만 해도 자동으로 전단사가 보장되기 때문이다. 
 
 ::: 정리 5
-$$A$$가 유한가환환이라 하자. 그럼 $$A$$의 원소 $$a$$가 regular element인 것과 unit인 것이 동치이다.
+Finite ring $$A$$와 임의의 원소 $$a$$에 대하여, $$a$$가 regular element인 것과 unit인 것이 동치이다.
 :::
 ::: 증명
 [명제 4](#prop4)에 의해 unit은 항상 regular element이므로, regular element가 unit임만 보이면 된다. $$a\in A$$를 regular element라 하고, 곱셈사상
 
-$$\lambda_a:A\longrightarrow A,\qquad \lambda_a(x)=ax$$
+$$\lambda_a:A\rightarrow A;\qquad x\mapsto ax$$
 
-를 생각하자. $$\lambda_a(x)=\lambda_a(y)$$이면 $$a(x-y)=0$$인데, $$a$$가 regular element이므로 $$x-y=0$$, 즉 $$x=y$$이다. 따라서 $$\lambda_a$$는 단사이다. 그런데 $$A$$는 유한집합이고, 유한집합에서 자기 자신으로 가는 단사함수는 전사이므로 $$\lambda_a$$는 전사이다. 따라서 $$\lambda_a(v)=1$$을 만족하는 $$v\in A$$가 존재하고, 이는 $$av=1$$을 뜻한다. $$A$$가 가환이므로 $$va=av=1$$이고, 따라서 $$v$$는 $$a$$의 양쪽 역원이다. 즉 $$a\in A^\times$$이다.
+를 생각하자. 그럼 $$\lambda_a(x)=\lambda_a(y)$$이면 $$a(x-y)=0$$인데, $$a$$가 regular element이므로 $$x-y=0$$, 즉 $$x=y$$이다. 따라서 $$\lambda_a$$는 단사이다. 그런데 $$A$$는 유한집합이고, 유한집합에서 자기 자신으로 가는 단사함수는 전사이므로 $$\lambda_a$$는 전사이다. 따라서 $$\lambda_a(v)=1$$을 만족하는 $$v\in A$$가 존재하고, 이는 $$av=1$$을 뜻한다. 비슷한 방식으로 우리는 right multiplication map이 전사임을 이용하여 $$a$$의 left inverse를 구성해줄 수 있으며, 앞서 [정의 1](#def1) 직후의 논증에서 이렇게 만든 두 inverse가 서로 반드시 일치해야 하는 것을 안다. 
 :::
 
-증명에서 가환성은 $$av=1$$로부터 $$va=1$$을 얻는 마지막 단계에만 쓰였다. 비가환환에서도 $$\lambda_a$$의 전사성은 우역원 $$av=1$$을 주지만, 좌역원의 존재까지 보장하려면 right multiplication 사상의 단사성을 따로 써야 한다. Regular element는 양쪽 zero divisor가 아니므로 이 두 사상이 모두 단사이고, 따라서 유한환에서는 가환성 없이도 같은 결론이 성립한다. 우리는 가환의 경우만 필요하므로 위의 진술로 충분하다.
-
-이 정리의 가장 중요한 귀결은 integral domain에 관한 것이다.
+그럼 이 정리의 가장 중요한 귀결은 integral domain에 관한 것이다.
 
 ::: 따름정리 6
-모든 유한 integral domain은 field이다.
+모든 finite integral domain은 field이다.
 :::
 ::: 증명
-$$A$$를 유한 integral domain이라 하자. 정의상 $$A$$는 가환이고 $$0\neq 1$$이다 ([\[대수적 구조\] §분수체, ⁋정의 5](/ko/math/algebraic_structures/field_of_fractions#def5)). Field임을 보이려면 모든 nonzero 원소가 unit임을 보이면 된다. Integral domain에는 $$0$$ 이외의 zero divisor가 없으므로 임의의 nonzero 원소 $$a$$는 regular element이다. $$A$$가 유한가환환이므로 [정리 5](#thm5)에 의해 $$a$$는 unit이다. 따라서 모든 nonzero 원소가 unit이고, $$A$$는 field이다.
+정의상 임의의 finite integral domain $$A$$는 commutative이고 $$0\neq 1$$이다. ([\[대수적 구조\] §분수체, ⁋정의 5](/ko/math/algebraic_structures/field_of_fractions#def5)) 이제 추가로 $$A$$가 field임을 보이려면 모든 nonzero 원소가 unit임을 보이면 되는데, integral domain에는 $$0$$ 이외의 zero divisor가 없으므로 임의의 nonzero 원소 $$a$$는 regular element이고 따라서 [정리 5](#thm5)에 의해 $$a$$는 unit이다. 
 :::
-
-이 결과는 유한성이 정수론적 상황에서 갖는 힘을 잘 보여준다. 다음 절에서 보듯 $$\mathbb{Z}/p\mathbb{Z}$$가 소수 $$p$$에 대해 field가 되는 것이 그 전형적인 예이며, 더 일반적으로 임의의 유한 integral domain은 자동으로 그 nonzero 원소들이 곱셈군을 이루는 field가 된다.
 
 ## 정수의 잉여류환과 unit group
 

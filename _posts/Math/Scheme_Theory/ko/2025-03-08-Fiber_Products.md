@@ -9,13 +9,15 @@ sidebar:
     nav: "scheme_theory-ko"
 
 date: 2025-03-08
-weight: 11
+weight: 10
 drift_needed: true
 ---
 
+우리가 scheme을 도입하며 약속한 것들 중 하나는 fiber product였으며, 이는 $$\Sch/S$$ 위에서의 곱이므로 이를 위해서는 $$S$$-scheme들 (그리고 scheme morphism들)을 정의했어야 했다. 이제 우리는 준비를 마치고 fiber product를 정의한다. 
+
 ## 올곱의 정의와 존재성
 
-우리는 [§스킴 사이의 사상, ⁋정의 3](/ko/math/scheme_theory/morphism_of_schemes#def3)에서 scheme morphism $$X \rightarrow S$$를 *$$S$$-scheme*이라 부르기로 하였다. 이번 글에서 우리는 category $$\Sch_{/S}$$에서의 product를 정의할 것이다. 
+우리는 [§스킴 사이의 사상, ⁋정의 3](/ko/math/scheme_theory/morphism_of_schemes#def3)에서 scheme morphism $$X \rightarrow S$$를 *$$S$$-scheme*이라 부르기로 하였다. 이번 글에서 우리는 category $$\Sch/S$$에서의 product를 정의할 것이다. 
 
 ::: 정의 1
 두 scheme morphism $$\varphi_X:X \rightarrow S$$, $$\varphi_Y:Y \rightarrow S$$의 fiber product를 $$X\times_SY$$로 적는다. ([\[범주론\] §극한, ⁋예시 8](/ko/math/category_theory/limits#ex8))
@@ -104,7 +106,7 @@ Affine scheme $$Z$$, 임의의 scheme $$X,Y$$와 scheme morphism $$X \rightarrow
 이제 마지막으로 $$Z$$를 임의의 scheme으로 확장해야 한다. 우선 다음이 성립한다.
 
 ::: 보조정리 7
-임의의 scheme $$X,Y,Z$$가 주어졌다 하고, scheme morphism $$\varphi_X:X \rightarrow Z$$, $$\varphi_Y:Y \rightarrow Z$$ 그리고 affine scheme $$Z'$$로의 monomorphism $$\iota: Z \rightarrow Z'$$가 주어졌다 하자. 가령 $$\iota$$가 open immersion이거나 closed immersion인 경우가 이에 해당한다. 그럼 $$\iota\circ\varphi_X$$와 $$\iota\circ\varphi_Y$$의 fiber product $$X\times_{Z'}Y$$는 $$X\times_ZY$$의 universal property를 만족하고, 따라서 $$X\times_ZY$$가 존재한다.  
+임의의 scheme $$X,Y,Z$$가 주어졌다 하고, scheme morphism $$\varphi_X:X \rightarrow Z$$, $$\varphi_Y:Y \rightarrow Z$$ 그리고 affine scheme $$Z'$$로의 monomorphism $$\iota: Z \rightarrow Z'$$가 주어졌다 하자. 가령 $$\iota$$가 open immersion이거나 closed embedding인 경우가 이에 해당한다. 그럼 $$\iota\circ\varphi_X$$와 $$\iota\circ\varphi_Y$$의 fiber product $$X\times_{Z'}Y$$는 $$X\times_ZY$$의 universal property를 만족하고, 따라서 $$X\times_ZY$$가 존재한다.  
 :::
 ::: 증명
 $$Z'$$이 affine이므로 $$X\times_{Z'}Y$$는 존재한다. 이제 임의의 scheme $$T$$와 morphism $$a:T \rightarrow X$$, $$b:T \rightarrow Y$$가 주어졌다 하자. $$X\times_ZY$$의 universal property에서 요구하는 조건은 $$\varphi_X\circ a=\varphi_Y\circ b$$이고, $$X\times_{Z'}Y$$의 것은 $$\iota\circ\varphi_X\circ a=\iota\circ\varphi_Y\circ b$$인데, $$\iota$$가 monomorphism이므로 이 두 조건은 서로 동치이다. 따라서 두 fiber product는 같은 universal property를 만족하고, 유일성에 의하여 $$X\times_{Z'}Y$$가 $$X\times_ZY$$의 역할을 한다.

@@ -40,17 +40,17 @@ $$\Omega_{B/A}\otimes_BC \longrightarrow \Omega_{C/A} \longrightarrow \Omega_{C/
 이 완전열은 미분이 "두 단계의 확장"을 어떻게 누적하는지를 보여준다. $$\Omega_{C/B}$$는 $$B$$에서 온 좌표를 상수로 본 미분이므로, $$\Omega_{C/A}$$에서 $$B$$ 방향의 미분 $$\Omega_{B/A}\otimes_BC$$의 image를 quotient한 것이 $$\Omega_{C/B}$$가 된다. 둘째는 $$C$$가 $$B$$의 quotient로 주어질 때의 완전열로, conormal 완전열이라 불린다.
 
 ::: 명제 2 (Conormal 완전열)
-$$A$$-대수 $$B$$의 ideal $$I$$에 대하여 $$C=B/I$$라 하자. 그럼 $$C$$-가군들의 sequence
+$$A$$-대수 $$B$$의 ideal $$\mathfrak{a}$$에 대하여 $$C=B/\mathfrak{a}$$라 하자. 그럼 $$C$$-가군들의 sequence
 
-$$I/I^2 \overset{\bar{d}}{\longrightarrow} \Omega_{B/A}\otimes_BC \longrightarrow \Omega_{C/A} \longrightarrow 0$$
+$$\mathfrak{a}/\mathfrak{a}^2 \overset{\bar{d}}{\longrightarrow} \Omega_{B/A}\otimes_BC \longrightarrow \Omega_{C/A} \longrightarrow 0$$
 
-은 exact이며, 첫째 사상 $$\bar{d}$$는 $$f+I^2\mapsto df\otimes 1$$로 주어진다.
+은 exact이며, 첫째 사상 $$\bar{d}$$는 $$f+\mathfrak{a}^2\mapsto df\otimes 1$$로 주어진다.
 :::
 ::: 증명
-surjection $$\varphi:B \rightarrow C=B/I$$에 [\[가환대수학\] §미분, ⁋명제 6](/ko/math/commutative_algebra/differentials#prop6)을 적용하면, $$K=\ker\varphi=I$$이므로 주어진 sequence를 그대로 얻는다. 첫째 사상 $$\bar{d}:I/I^2 \rightarrow \Omega_{B/A}\otimes_BC$$는 $$d_{B/A}\vert_I$$를 base change한 뒤 $$I^2$$을 kernel에 포함시켜 유도한 것으로, 인용한 명제의 증명에서 보았듯 $$f+I^2\mapsto df\otimes 1$$로 주어진다.
+surjection $$\varphi:B \rightarrow C=B/\mathfrak{a}$$에 [\[가환대수학\] §미분, ⁋명제 6](/ko/math/commutative_algebra/differentials#prop6)을 적용하면, $$K=\ker\varphi=\mathfrak{a}$$이므로 주어진 sequence를 그대로 얻는다. 첫째 사상 $$\bar{d}:\mathfrak{a}/\mathfrak{a}^2 \rightarrow \Omega_{B/A}\otimes_BC$$는 $$d_{B/A}\vert_\mathfrak{a}$$를 base change한 뒤 $$\mathfrak{a}^2$$을 kernel에 포함시켜 유도한 것으로, 인용한 명제의 증명에서 보았듯 $$f+\mathfrak{a}^2\mapsto df\otimes 1$$로 주어진다.
 :::
 
-여기서 $$C=B/I$$를 닫힌 부분 scheme으로 생각하면, $$I/I^2$$은 그 *conormal module*에 해당한다. 즉 $$I$$가 정의하는 부분다양체의 법선 방향을 ideal의 일차항 $$I/I^2$$이 담고 있으며, conormal 완전열은 부분다양체 위의 미분 $$\Omega_{C/A}$$를 ambient의 미분 $$\Omega_{B/A}\otimes_BC$$에서 법선 방향을 잘라내어 얻는다는 것을 말한다. 이 두 완전열은 모두 $$\otimes_B C$$나 quotient에 대해 자연스러우므로, affine open에서 affine open으로 제한하더라도 그대로 유지되며, 이것이 다음 절에서 미분층을 gluing할 수 있게 하는 형식적 근거이다.
+여기서 $$C=B/\mathfrak{a}$$를 닫힌 부분 scheme으로 생각하면, $$\mathfrak{a}/\mathfrak{a}^2$$은 그 *conormal module*에 해당한다. 즉 $$\mathfrak{a}$$가 정의하는 부분다양체의 법선 방향을 ideal의 일차항 $$\mathfrak{a}/\mathfrak{a}^2$$이 담고 있으며, conormal 완전열은 부분다양체 위의 미분 $$\Omega_{C/A}$$를 ambient의 미분 $$\Omega_{B/A}\otimes_BC$$에서 법선 방향을 잘라내어 얻는다는 것을 말한다. 이 두 완전열은 모두 $$\otimes_B C$$나 quotient에 대해 자연스러우므로, affine open에서 affine open으로 제한하더라도 그대로 유지되며, 이것이 다음 절에서 미분층을 gluing할 수 있게 하는 형식적 근거이다.
 
 ## Cotangent sheaf
 
@@ -70,7 +70,7 @@ $$\Omega_{X/S}=\Delta^\ast\bigl(\mathcal{I}/\mathcal{I}^2\bigr)$$
 로 정의한다. 여기에서 $$\Delta^\ast$$는 pullback이다. ([§준연접층, ⁋정의 17](/ko/math/scheme_theory/quasicoherent_sheaves#def17))
 :::
 
-이 정의에서 $$\mathcal{I}/\mathcal{I}^2$$은 $$\Delta(X)$$ 위의 sheaf로 볼 수 있고, $$\Delta$$가 $$X$$를 그 image와 동일시하므로 $$\Delta^\ast$$를 통해 $$X$$ 위의 sheaf로 끌어온 것이다. 대각선의 ideal sheaf를 conormal로 취하는 것은 affine 수준에서 $$B\otimes_AB \rightarrow B$$의 kernel $$I$$를 $$I/I^2$$로 보는 것에 대응하며, 다음 명제가 이 좌표 독립적 정의와 앞서의 국소 모형이 일치함을 보장한다.
+이 정의에서 $$\mathcal{I}/\mathcal{I}^2$$은 $$\Delta(X)$$ 위의 sheaf로 볼 수 있고, $$\Delta$$가 $$X$$를 그 image와 동일시하므로 $$\Delta^\ast$$를 통해 $$X$$ 위의 sheaf로 끌어온 것이다. 대각선의 ideal sheaf를 conormal로 취하는 것은 affine 수준에서 $$B\otimes_AB \rightarrow B$$의 kernel $$\mathfrak{a}$$를 $$\mathfrak{a}/\mathfrak{a}^2$$로 보는 것에 대응하며, 다음 명제가 이 좌표 독립적 정의와 앞서의 국소 모형이 일치함을 보장한다.
 
 ::: 명제 4
 Scheme 사상 $$f:X \rightarrow S$$에 대하여, $$\Omega_{X/S}$$는 $$X$$ 위의 준연접층이다. 더욱이 $$U=\Spec B\subseteq X$$와 $$V=\Spec A\subseteq S$$가 $$f(U)\subseteq V$$인 affine open subset들이면
@@ -80,24 +80,24 @@ $$\Omega_{X/S}\vert_U\cong \widetilde{\Omega_{B/A}}$$
 가 성립한다.
 :::
 ::: 증명
-먼저 affine 사상 $$f:\Spec B \rightarrow \Spec A$$의 경우에 [정의 3](#def3)을 계산한다. 이 경우 $$X\times_SX=\Spec(B\otimes_AB)$$이고 ([§올곱, ⁋보조정리 2](/ko/math/scheme_theory/fiber_products#lem2)), 대각선 사상 $$\Delta$$는 곱사상 $$\mu:B\otimes_AB \rightarrow B$$, $$b\otimes b'\mapsto bb'$$로부터 온다. $$I=\ker\mu$$라 하면 $$\Delta$$의 image의 ideal sheaf는 $$\widetilde I$$이고, [§준연접층, ⁋명제 6](/ko/math/scheme_theory/quasicoherent_sheaves#prop6)의 exactness로부터 $$\mathcal{I}/\mathcal{I}^2\cong \widetilde{I/I^2}$$이다.
+먼저 affine 사상 $$f:\Spec B \rightarrow \Spec A$$의 경우에 [정의 3](#def3)을 계산한다. 이 경우 $$X\times_SX=\Spec(B\otimes_AB)$$이고 ([§올곱, ⁋보조정리 2](/ko/math/scheme_theory/fiber_products#lem2)), 대각선 사상 $$\Delta$$는 곱사상 $$\mu:B\otimes_AB \rightarrow B$$, $$b\otimes b'\mapsto bb'$$로부터 온다. $$\mathfrak{a}=\ker\mu$$라 하면 $$\Delta$$의 image의 ideal sheaf는 $$\widetilde{\mathfrak{a}}$$이고, [§준연접층, ⁋명제 6](/ko/math/scheme_theory/quasicoherent_sheaves#prop6)의 exactness로부터 $$\mathcal{I}/\mathcal{I}^2\cong \widetilde{\mathfrak{a}/\mathfrak{a}^2}$$이다.
 
 이제 $$B$$-가군으로서
 
-$$I/I^2\cong \Omega_{B/A}$$
+$$\mathfrak{a}/\mathfrak{a}^2\cong \Omega_{B/A}$$
 
-임을 보인다. 사상 $$I/I^2 \rightarrow \Omega_{B/A}$$를 $$b\otimes 1-1\otimes b\mapsto db$$로 정의하고, 역사상 $$\Omega_{B/A} \rightarrow I/I^2$$을 universal derivation으로부터 얻는다. 구체적으로 $$\delta:B \rightarrow I/I^2$$를 $$\delta(b)=(b\otimes 1-1\otimes b)+I^2$$로 정의하면, 임의의 $$b, b'\in B$$에 대하여 $$B\otimes_AB$$ 안에서
+임을 보인다. 사상 $$\mathfrak{a}/\mathfrak{a}^2 \rightarrow \Omega_{B/A}$$를 $$b\otimes 1-1\otimes b\mapsto db$$로 정의하고, 역사상 $$\Omega_{B/A} \rightarrow \mathfrak{a}/\mathfrak{a}^2$$을 universal derivation으로부터 얻는다. 구체적으로 $$\delta:B \rightarrow \mathfrak{a}/\mathfrak{a}^2$$를 $$\delta(b)=(b\otimes 1-1\otimes b)+\mathfrak{a}^2$$로 정의하면, 임의의 $$b, b'\in B$$에 대하여 $$B\otimes_AB$$ 안에서
 
 $$\begin{aligned}
 (bb'\otimes 1-1\otimes bb')&=(b\otimes 1-1\otimes b)(1\otimes b')+(b'\otimes 1-1\otimes b')(b\otimes 1)\\
-&\equiv b'\,(b\otimes 1-1\otimes b)+b\,(b'\otimes 1-1\otimes b')\pmod{I^2}
+&\equiv b'\,(b\otimes 1-1\otimes b)+b\,(b'\otimes 1-1\otimes b')\pmod{\mathfrak{a}^2}
 \end{aligned}$$
 
-이 성립하므로 ($$I/I^2$$ 위에서 $$b\otimes 1$$과 $$1\otimes b$$가 같은 작용을 하므로) $$\delta$$는 $$A$$-derivation이다. 따라서 universal property에 의하여 $$\Omega_{B/A} \rightarrow I/I^2$$이 유도되고, 두 사상이 서로 역임은 생성원 위에서 확인된다. ($$db\mapsto \delta(b)\mapsto db$$이고 $$I/I^2$$은 $$\delta(b)$$들로 생성된다.) 그러므로
+이 성립하므로 ($$\mathfrak{a}/\mathfrak{a}^2$$ 위에서 $$b\otimes 1$$과 $$1\otimes b$$가 같은 작용을 하므로) $$\delta$$는 $$A$$-derivation이다. 따라서 universal property에 의하여 $$\Omega_{B/A} \rightarrow \mathfrak{a}/\mathfrak{a}^2$$이 유도되고, 두 사상이 서로 역임은 생성원 위에서 확인된다. ($$db\mapsto \delta(b)\mapsto db$$이고 $$\mathfrak{a}/\mathfrak{a}^2$$은 $$\delta(b)$$들로 생성된다.) 그러므로
 
-$$\Omega_{\Spec B/\Spec A}=\Delta^\ast\widetilde{I/I^2}\cong \widetilde{I/I^2}\cong \widetilde{\Omega_{B/A}}$$
+$$\Omega_{\Spec B/\Spec A}=\Delta^\ast\widetilde{\mathfrak{a}/\mathfrak{a}^2}\cong \widetilde{\mathfrak{a}/\mathfrak{a}^2}\cong \widetilde{\Omega_{B/A}}$$
 
-이고, 특히 affine 위에서 $$\Omega_{X/S}$$는 연관층이므로 준연접층이다. ($$\Delta^\ast$$는 $$\Delta$$가 closed immersion일 때 $$\Delta(X)$$ 위의 sheaf를 그 위에서 동일시하여 끌어오는 것이므로 가군은 그대로 $$I/I^2$$이다.)
+이고, 특히 affine 위에서 $$\Omega_{X/S}$$는 연관층이므로 준연접층이다. ($$\Delta^\ast$$는 $$\Delta$$가 closed immersion일 때 $$\Delta(X)$$ 위의 sheaf를 그 위에서 동일시하여 끌어오는 것이므로 가군은 그대로 $$\mathfrak{a}/\mathfrak{a}^2$$이다.)
 
 일반적인 $$f$$의 경우, $$U=\Spec B\subseteq X$$와 $$V=\Spec A\subseteq S$$가 $$f(U)\subseteq V$$인 affine open이면 $$\Delta(U)\subseteq U\times_VU$$이고 이는 $$X\times_SX$$의 open subset이다. 대각선의 ideal sheaf를 이 open 위로 제한하면 다시 곱사상 $$B\otimes_AB \rightarrow B$$의 kernel이 되므로, 위의 계산에 의하여 $$\Omega_{X/S}\vert_U\cong \widetilde{\Omega_{B/A}}$$이다. 이러한 affine open들이 $$X$$를 덮고, 그 위에서 연관층이므로 $$\Omega_{X/S}$$는 준연접층이다. ([§준연접층, ⁋정리 10](/ko/math/scheme_theory/quasicoherent_sheaves#thm10))
 :::
