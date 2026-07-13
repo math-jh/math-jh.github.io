@@ -465,6 +465,16 @@ def find_next_target(state: dict) -> Optional[Tuple[Path, Path, str]]:
     for ko in ko_files:
         if is_draft(ko):
             continue
+        # Honour the failure backoff, as Phase 1 does. Without it a post that
+        # fails validation every time is picked again on the very next tick, and
+        # since drift is scanned in a fixed order it stays at the head of the
+        # queue forever — starving every other flagged post while burning a full
+        # re-translation each pass. That is what a bad `drift_needed` exemption
+        # did on 2026-07-12: 48 wasted re-translations of one post over 26h.
+        entry = state["files"].get(str(ko.relative_to(BLOG_ROOT)), {})
+        if entry.get("status") == "failed" and \
+           now - entry.get("last_attempt_ts", 0) < FAIL_RETRY_AFTER_SEC:
+            continue
         existing_en = find_en_counterpart(ko)
         if existing_en is None:
             continue
@@ -865,8 +875,12 @@ def validate_translation(
         more = f" (+{len(label_issues)-1} more)" if len(label_issues) > 1 else ""
         return f"residual KO label — {label_issues[0]}{more}"
 
-    # Frontmatter keys: ko ⊆ en (en may add translated_at / translation_source / last_polished_at)
-    ko_keys = _fm_top_keys(ko_content)
+    # Frontmatter keys: ko ⊆ en (en may add translated_at / translation_source /
+    # last_polished_at). _KO_ONLY_KEYS are deliberately stripped by
+    # _compose_en_frontmatter, so they must be exempt here — otherwise every
+    # translation of a drift-flagged post fails validation and the worker
+    # re-translates it forever (this is exactly what happened on 2026-07-12).
+    ko_keys = _fm_top_keys(ko_content) - set(_KO_ONLY_KEYS)
     en_keys = _fm_top_keys(translated)
     missing_keys = ko_keys - en_keys
     if missing_keys:
