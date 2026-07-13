@@ -18,15 +18,15 @@ last_polished_at: 2026-05-24T11:00:03+00:00
 We begin with a simple lemma.
 
 ::: Lemma 1
-For any homomorphism $$f:G\rightarrow G'$$, $$\ker f$$ is a normal subgroup of $$G$$.
+For any homomorphism $f:G\rightarrow G'$, $\ker f$ is a normal subgroup of $G$.
 :::
 ::: Proof
-For any $$g\in G$$ and $$x\in \ker f$$,
+For any $g\in G$ and $x\in \ker f$,
 
-$$f(gxg^{-1})=f(g)f(x)f(g^{-1})=f(g)e'f(g)^{-1}=f(g)f(g)^{-1}=e'.$$
+$f(gxg^{-1})=f(g)f(x)f(g^{-1})=f(g)e'f(g)^{-1}=f(g)f(g)^{-1}=e'.$
 :::
 
-Now consider the equivalence relation defined by $$\ker f$$
+Now consider the equivalence relation defined by $\ker f$
 
 $$x\sim y\iff xy^{-1}\ker f$$
 
@@ -34,47 +34,47 @@ From the equation
 
 $$f(y)=e'f(y)=f(xy^{-1})f(y)=f(xy^{-1}y)=f(x)$$
 
-we see that $$x\sim y\iff f(x)=f(y)$$. That is, $$\sim$$ is nothing but the equivalence relation defined by the function $$f$$ ([\[Set Theory\] §Examples of Equivalence Relations, ⁋Definition 2](/en/math/set_theory/examples_of_equivalence#def2)), and from the definition of quotient groups, the canonical map $$p:G\rightarrow G/\ker f$$ is a homomorphism. Now considering the canonical decomposition of $$f$$, we obtain a bijection $$h:G/\ker f\rightarrow\im f$$. Then for any $$[x], [x']\in G/\ker f$$,
+we see that $x\sim y\iff f(x)=f(y)$. That is, $\sim$ is nothing but the equivalence relation defined by the function $f$ ([\[Set Theory\] §Examples of Equivalence Relations, ⁋Definition 2](/en/math/set_theory/examples_of_equivalence#def2)), and from the definition of quotient groups, the canonical map $p:G\rightarrow G/\ker f$ is a homomorphism. Now considering the canonical decomposition of $f$, we obtain a bijection $h:G/\ker f\rightarrow\im f$. Then for any $[x], [x']\in G/\ker f$,
 
 $$h([x][x'])=h([xx'])=f(xx')=f(x)f(x')=h([x])h([x'])$$
 
-so $$h$$ is a homomorphism, and therefore an isomorphism.
+so $h$ is a homomorphism, and therefore an isomorphism.
 
 ::: Theorem 2 (The First Isomorphism Theorem)
-For any homomorphism $$f:G\rightarrow G'$$, $$G/\ker f\cong \im f$$ always holds.
+For any homomorphism $f:G\rightarrow G'$, $G/\ker f\cong \im f$ always holds.
 :::
 
 On the other hand, using [\[Set Theory\] §Examples of Equivalence Relations, ⁋Proposition 7](/en/math/set_theory/examples_of_equivalence#prop7), we obtain the following proposition.
 
 ::: Proposition 3
-For any homomorphism $$f:G\rightarrow G'$$ and normal subgroup $$N$$ of $$G$$, there exists $$\bar{f}:G/N\rightarrow G'$$ satisfying $$f=\bar{f}\circ p$$ if and only if $$N\leq \ker f$$.
+For any homomorphism $f:G\rightarrow G'$ and normal subgroup $N$ of $G$, there exists $\bar{f}:G/N\rightarrow G'$ satisfying $f=\bar{f}\circ p$ if and only if $N\leq \ker f$.
 :::
 
 ## The Second Isomorphism Theorem
 
-To prove the second isomorphism theorem, we need the following lemma. In the following proposition, $$N\vee K$$ denotes the smallest subgroup of $$G$$ containing the union $$N\cup K$$, i.e., $$\langle N\cup K\rangle$$, and $$NK$$ denotes the set
+To prove the second isomorphism theorem, we need the following lemma. In the following proposition, $N\vee K$ denotes the smallest subgroup of $G$ containing the union $N\cup K$, i.e., $\langle N\cup K\rangle$, and $NK$ denotes the set
 
 $$NK=\{nk\mid n\in N,k\in K\}$$
 
 ::: Lemma 4
-Let $$K$$ be a subgroup of a group $$G$$ and $$N$$ a normal subgroup of $$G$$. Then the following hold.
+Let $K$ be a subgroup of a group $G$ and $N$ a normal subgroup of $G$. Then the following hold.
 
-1. $$N\cap K$$ is a normal subgroup of $$K$$.
-2. $$N$$ is a normal subgroup of $$N\vee K$$.
-3. $$NK=N\vee K=KN$$ holds.
+1. $N\cap K$ is a normal subgroup of $K$.
+2. $N$ is a normal subgroup of $N\vee K$.
+3. $NK=N\vee K=KN$ holds.
 :::
 ::: Proof
-1. For any $$n\in N\cap K$$ and $$k\in K$$, the element $$knk^{-1}$$ is a product of elements of $$K$$, hence lies in $$K$$; and since $$N$$ is a normal subgroup of $$G$$, it also lies in $$N$$. Therefore $$knk^{-1}\in N\cap K$$.
-2. It is clear that $$N$$ is a subgroup of $$N\vee K$$. Moreover, for any $$g\in N\vee K$$ and $$n\in N$$, we have $$gng^{-1}\in N$$.
-3. For any $$nk\in NK$$, since $$n,k\in N\vee K$$, we have $$nk\in N\vee K$$. Thus it suffices to show the reverse inclusion. Consider the subset of $$G$$ containing all products $$n_1k_1\cdots n_rk_r$$ of elements of $$N$$ and $$K$$. It is easy to verify that this set is a subgroup, and since this subgroup contains both $$N$$ and $$K$$, it also contains $$N\vee K$$.[^1]  
-Therefore, every element of $$N\vee K$$ can be written in the form $$n_1k_1\cdots n_rk_r$$. Now since $$N$$ is a normal subgroup of $$N\vee K$$, there exists $$n_1'\in N$$ such that $$k_1n_2=n_2'k_1$$. Repeating this process, we can rewrite $$n_1k_1\cdots n_rk_r$$ in the form of an element of $$NK$$.
+1. For any $n\in N\cap K$ and $k\in K$, the element $knk^{-1}$ is a product of elements of $K$, hence lies in $K$; and since $N$ is a normal subgroup of $G$, it also lies in $N$. Therefore $knk^{-1}\in N\cap K$.
+2. It is clear that $N$ is a subgroup of $N\vee K$. Moreover, for any $g\in N\vee K$ and $n\in N$, we have $gng^{-1}\in N$.
+3. For any $nk\in NK$, since $n,k\in N\vee K$, we have $nk\in N\vee K$. Thus it suffices to show the reverse inclusion. Consider the subset of $G$ containing all products $n_1k_1\cdots n_rk_r$ of elements of $N$ and $K$. It is easy to verify that this set is a subgroup, and since this subgroup contains both $N$ and $K$, it also contains $N\vee K$.[^1]  
+Therefore, every element of $N\vee K$ can be written in the form $n_1k_1\cdots n_rk_r$. Now since $N$ is a normal subgroup of $N\vee K$, there exists $n_1'\in N$ such that $k_1n_2=n_2'k_1$. Repeating this process, we can rewrite $n_1k_1\cdots n_rk_r$ in the form of an element of $NK$.
 :::
 
 ::: Theorem 5 (The Second Isomorphism Theorem)
-Let $$K$$ be a subgroup of a group $$G$$ and $$N$$ a normal subgroup of $$G$$. Then $$K/(N\cap K)\cong NK/N$$ holds.
+Let $K$ be a subgroup of a group $G$ and $N$ a normal subgroup of $G$. Then $K/(N\cap K)\cong NK/N$ holds.
 :::
 ::: Proof
-From the previous lemma, $$N$$ is a normal subgroup of $$NK=N\vee K=KN$$. Now since $$K\subset NK$$, we can consider the composition of homomorphisms
+From the previous lemma, $N$ is a normal subgroup of $NK=N\vee K=KN$. Now since $K\subset NK$, we can consider the composition of homomorphisms
 
 $$K\overset{\iota}{\hookrightarrow}NK\overset{\pi}{\twoheadrightarrow}NK/N$$
 
@@ -82,11 +82,11 @@ Then
 
 $$\ker(\pi\iota)=(\pi\iota)^{-1}(e)=\iota^{-1}(\ker\pi)=\iota^{-1}(N)=K\cap N$$
 
-so applying the first isomorphism theorem to $$\pi\iota$$, we obtain
+so applying the first isomorphism theorem to $\pi\iota$, we obtain
 
 $$K/\ker(\pi\iota)=K/(K\cap N)\cong\im(\pi\iota)$$
 
-But every element of $$NK/N$$ has the form $$nkN$$, and there exists $$n'\in N$$ such that $$nk=kn'$$, so every element $$nkN$$ of $$NK/N$$ satisfies
+But every element of $NK/N$ has the form $nkN$, and there exists $n'\in N$ such that $nk=kn'$, so every element $nkN$ of $NK/N$ satisfies
 
 $$nkN=kn'N=kN=\pi(k)=\pi(\iota(k))\in\im(\pi\iota)$$
 
@@ -96,7 +96,7 @@ and thus we obtain the desired result.
 ## The Third Isomorphism Theorem
 
 ::: Theorem 6 (The Third Isomorphism Theorem)
-Let $$H$$ and $$K$$ be normal subgroups of a group $$G$$ with $$K<H$$. Then $$H/K$$ is a normal subgroup of $$G/K$$, and $$(G/K)/(H/K)\cong G/H$$ holds.
+Let $H$ and $K$ be normal subgroups of a group $G$ with $K<H$. Then $H/K$ is a normal subgroup of $G/K$, and $(G/K)/(H/K)\cong G/H$ holds.
 :::
 ::: Proof
 This follows from the decomposition after [\[Set Theory\] §Examples of Equivalence Relations, ⁋Definition 8](/en/math/set_theory/examples_of_equivalence#def8).
@@ -107,34 +107,34 @@ This follows from the decomposition after [\[Set Theory\] §Examples of Equivale
 The following theorem is used extensively; while its proof is not difficult, there is too much to verify, so we omit it.
 
 ::: Theorem 7 (The Fourth Isomorphism Theorem)
-Let $$G$$ be a group and $$N$$ a normal subgroup of $$G$$. Then there exists an inclusion-preserving bijection between *the set of subgroups of $$G$$ containing $$N$$* and *the set of subgroups of $$G/N$$*. Moreover, this bijection preserves all relations such as intersections, indices, and normal subgroups.
+Let $G$ be a group and $N$ a normal subgroup of $G$. Then there exists an inclusion-preserving bijection between *the set of subgroups of $G$ containing $N$* and *the set of subgroups of $G/N$*. Moreover, this bijection preserves all relations such as intersections, indices, and normal subgroups.
 :::
 
 ## Coequalizer of Homomorphisms
 
-Now let $$f,g:G \rightarrow H$$ be two group homomorphisms. We previously saw that the equalizer $$\Eq(f,g)$$ of $$f$$ and $$g$$ is always a subgroup of $$G$$. Their coequalizer is somewhat more complicated.
+Now let $f,g:G \rightarrow H$ be two group homomorphisms. We previously saw that the equalizer $\Eq(f,g)$ of $f$ and $g$ is always a subgroup of $G$. Their coequalizer is somewhat more complicated.
 
-First, considering the universal property of coequalizers, $$q:H\rightarrow\CoEq(f,g)$$ is initial among those satisfying $$q\circ f=q\circ g$$. If we encountered this situation in $$\Set$$, we would define an equivalence relation $$\sim$$ on $$H$$ as the relation generated by
+First, considering the universal property of coequalizers, $q:H\rightarrow\CoEq(f,g)$ is initial among those satisfying $q\circ f=q\circ g$. If we encountered this situation in $\Set$, we would define an equivalence relation $\sim$ on $H$ as the relation generated by
 
 $$f(x)\sim g(x)\qquad\text{for all $x\in G$}$$
 
-and then the projection $$H\rightarrow H/{\sim}$$ would be the coequalizer. However, in $$\Grp$$, we do not know whether $$\sim$$ defined above is compatible with the group operation of $$H$$. That is, the subset
+and then the projection $H\rightarrow H/{\sim}$ would be the coequalizer. However, in $\Grp$, we do not know whether $\sim$ defined above is compatible with the group operation of $H$. That is, the subset
 
 $$S=\{f(x)g(x)^{-1}:x\in X\}$$
 
-is not a normal subgroup, so $$H/S$$ is not defined.
+is not a normal subgroup, so $H/S$ is not defined.
 
-To resolve this, let $$\overline{S}$$ be the *normal closure* of $$S$$, i.e., the smallest normal subgroup containing $$S$$. Then the quotient $$H/\overline{S}$$ of $$H$$ by $$\overline{S}$$ is well-defined.
+To resolve this, let $\overline{S}$ be the *normal closure* of $S$, i.e., the smallest normal subgroup containing $S$. Then the quotient $H/\overline{S}$ of $H$ by $\overline{S}$ is well-defined.
 
 ::: Proposition 8
-The quotient $$q: H \rightarrow H/\overline{S}$$ defined as above is a coequalizer.
+The quotient $q: H \rightarrow H/\overline{S}$ defined as above is a coequalizer.
 :::
 ::: Proof
-Let $$q': G \rightarrow H'$$ be a group homomorphism satisfying $$q'\circ f=q'\circ g$$. Then by [Lemma 1](#lem1), $$\ker q'$$ is a normal subgroup, and by the condition $$q'\circ f=q'\circ g$$,
+Let $q': G \rightarrow H'$ be a group homomorphism satisfying $q'\circ f=q'\circ g$. Then by [Lemma 1](#lem1), $\ker q'$ is a normal subgroup, and by the condition $q'\circ f=q'\circ g$,
 
 $$q'(f(x))=q'(g(x))\iff q'(f(x)g(x)^{-1})=e$$
 
-so $$f(x)g(x)^{-1}\in\ker q'$$ holds for all $$x\in g$$. Therefore, by the definition of $$\overline{S}$$, $$\overline{S}\leq\ker q'$$, and applying [Proposition 3](#prop3) yields the desired result.
+so $f(x)g(x)^{-1}\in\ker q'$ holds for all $x\in g$. Therefore, by the definition of $\overline{S}$, $\overline{S}\leq\ker q'$, and applying [Proposition 3](#prop3) yields the desired result.
 :::
 
 ---

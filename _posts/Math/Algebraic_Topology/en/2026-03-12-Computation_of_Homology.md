@@ -14,7 +14,7 @@ translated_at: 2026-07-11T05:00:02+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-07-11T05:00:02+00:00
 ---
-We now examine the tools that let us compute homology in practice. Directly calculating the homology of an arbitrary space from the definition is almost impossible, so we must develop machinery that breaks large spaces into smaller pieces and reconstructs the homology of the whole from those of the parts. The most intuitive situation is that of [§Covering Spaces, ⁋Theorem 13](/en/math/algebraic_topology/covering_spaces#thm13), where we saw that the functor $$\pi_1:\Top \rightarrow \Grp$$ preserves colimits. The abelianization functor $$\ab:\Grp \rightarrow \Ab$$ is the left adjoint of the forgetful functor $$U:\Ab \rightarrow \Grp$$ ([\[Algebraic Structures\] §Abelian Groups, ⁋Proposition 7](/en/math/algebraic_structures/abelian_groups#prop7)), and left adjoints preserve colimits ([\[Category Theory\] §Adjoints, ⁋Theorem 9](/en/math/category_theory/adjoints#thm9)); the first homology functor $$H_1:\Top \rightarrow \Ab$$ is their composite. Indeed, the map $$\pi_1(X)\rightarrow H_1(X)$$ sending a loop $$\gamma$$ to a singular $$1$$-simplex is well-defined (loops in the same homotopy class give the same homology class, and a homotopy supplies the difference as a boundary of $$2$$-simplices), and its kernel is exactly the commutator subgroup $$[\pi_1(X),\pi_1(X)]$$, so we obtain $$H_1(X)\cong\pi_1(X)^\ab$$. Hence $$H_1$$ also preserves colimits. In particular, as in [§Covering Spaces, ⁋Corollary 14](/en/math/algebraic_topology/covering_spaces#cor14), suppose a topological space $$X$$ is the union of two connected open subsets $$U,V$$. Then in the category $$\Ab$$, the pushout of two abelian groups is given by the coequalizer of their direct sum, so the following isomorphism
+We now examine the tools that let us compute homology in practice. Directly calculating the homology of an arbitrary space from the definition is almost impossible, so we must develop machinery that breaks large spaces into smaller pieces and reconstructs the homology of the whole from those of the parts. The most intuitive situation is that of [§Covering Spaces, ⁋Theorem 13](/en/math/algebraic_topology/covering_spaces#thm13), where we saw that the functor $\pi_1:\Top \rightarrow \Grp$ preserves colimits. The abelianization functor $\ab:\Grp \rightarrow \Ab$ is the left adjoint of the forgetful functor $U:\Ab \rightarrow \Grp$ ([\[Algebraic Structures\] §Abelian Groups, ⁋Proposition 7](/en/math/algebraic_structures/abelian_groups#prop7)), and left adjoints preserve colimits ([\[Category Theory\] §Adjoints, ⁋Theorem 9](/en/math/category_theory/adjoints#thm9)); the first homology functor $H_1:\Top \rightarrow \Ab$ is their composite. Indeed, the map $\pi_1(X)\rightarrow H_1(X)$ sending a loop $\gamma$ to a singular $1$-simplex is well-defined (loops in the same homotopy class give the same homology class, and a homotopy supplies the difference as a boundary of $2$-simplices), and its kernel is exactly the commutator subgroup $[\pi_1(X),\pi_1(X)]$, so we obtain $H_1(X)\cong\pi_1(X)^\ab$. Hence $H_1$ also preserves colimits. In particular, as in [§Covering Spaces, ⁋Corollary 14](/en/math/algebraic_topology/covering_spaces#cor14), suppose a topological space $X$ is the union of two connected open subsets $U,V$. Then in the category $\Ab$, the pushout of two abelian groups is given by the coequalizer of their direct sum, so the following isomorphism
 
 $$H_1(X)=H_1(U\cup V)\cong \frac{H_1(U)\oplus H_1(V)}{\left\langle (f(x),-g(x))\mid x\in H_1(U\cap V)\right\rangle}\tag{1}$$
 
@@ -22,19 +22,19 @@ must hold. In this post we treat this in a more general way.
 
 ## Relative homology
 
-To do this we must first generalize homology. For a space $$X$$ and any subspace $$A$$, we define the $$k$$th relative chain group $$C_k(X,A)$$ as the quotient
+To do this we must first generalize homology. For a space $X$ and any subspace $A$, we define the $k$th relative chain group $C_k(X,A)$ as the quotient
 
 $$C_k(X,A):=C_k(X)/C_k(A).$$
 
-One easily sees that the boundary map $$\partial_k:C_k(X) \rightarrow C_{k-1}(X)$$ induces a map $$C_k(X,A) \rightarrow C_{k-1}(X,A)$$ between the quotient groups. From this we obtain the chain complex
+One easily sees that the boundary map $\partial_k:C_k(X) \rightarrow C_{k-1}(X)$ induces a map $C_k(X,A) \rightarrow C_{k-1}(X,A)$ between the quotient groups. From this we obtain the chain complex
 
 $$\cdots \longrightarrow C_k(X,A)\overset{\partial}{\longrightarrow} C_{k-1}(X,A)\longrightarrow\cdots$$
 
 ::: Definition 1
-We call the $$k$$th homology $$H_k(X,A)$$ of the above chain complex *relative homology*.
+We call the $k$th homology $H_k(X,A)$ of the above chain complex *relative homology*.
 :::
 
-Now consider the short exact sequence in the category $$\Ch_{\geq 0}(\Ab)$$
+Now consider the short exact sequence in the category $\Ch_{\geq 0}(\Ab)$
 
 $$0 \rightarrow C_\bullet(A) \rightarrow C_\bullet(X) \rightarrow C_\bullet(X,A) \rightarrow 0$$ 
 
@@ -42,35 +42,35 @@ Then by [[Homological Algebra] §Long Exact Sequence, ⁋Theorem 1](/en/math/hom
 
 $$\cdots \rightarrow H_k(A) \rightarrow H_k(X) \rightarrow H_k(X,A)\rightarrow H_{k-1}(A) \rightarrow \cdots$$
 
-exists. Here, the connecting map $$H_k(X,A) \rightarrow H_{k-1}(A)$$ is nothing but taking the boundary map of an arbitrary cycle (of an arbitrary representative) in $$H_k(X,A)$$. Moreover, if a continuous map $$f:X \rightarrow Y$$ satisfies $$f(A)\subseteq B$$, then $$f$$ induces not only the original chain map $$C_\bullet(X)\rightarrow C_\bullet(Y)$$ but also $$C_\bullet(A) \rightarrow C_\bullet(B)$$, and from the fact that the following diagram
+exists. Here, the connecting map $H_k(X,A) \rightarrow H_{k-1}(A)$ is nothing but taking the boundary map of an arbitrary cycle (of an arbitrary representative) in $H_k(X,A)$. Moreover, if a continuous map $f:X \rightarrow Y$ satisfies $f(A)\subseteq B$, then $f$ induces not only the original chain map $C_\bullet(X)\rightarrow C_\bullet(Y)$ but also $C_\bullet(A) \rightarrow C_\bullet(B)$, and from the fact that the following diagram
 
 ![relative_homology](/assets/images/Math/Algebraic_Topology/Computation_of_Homology-1.svg){:style="width:12.65em" class="invert" .align-center}
 
-commutes, a chain map $$C_\bullet(X,A) \rightarrow C_\bullet(Y,B)$$ is also induced. That is, such an $$f:(X,A) \rightarrow (Y,B)$$ satisfying this condition also induces a map $$H_k(f):H_k(X,A) \rightarrow H_k(Y,B)$$ in homology. Then applying [§Homotopy, ⁋Proposition 6](/en/math/algebraic_topology/homotopy#prop6) to each of $$X$$ and $$A$$ and using [[Homological Algebra] §Diagram Chasing, ⁋Corollary 2 (The five lemma)](/en/math/homological_algebra/diagram_chasing#cor2), we see that homotopic continuous functions $$f,g$$ satisfying this condition induce the same map in homology.
+commutes, a chain map $C_\bullet(X,A) \rightarrow C_\bullet(Y,B)$ is also induced. That is, such an $f:(X,A) \rightarrow (Y,B)$ satisfying this condition also induces a map $H_k(f):H_k(X,A) \rightarrow H_k(Y,B)$ in homology. Then applying [§Homotopy, ⁋Proposition 6](/en/math/algebraic_topology/homotopy#prop6) to each of $X$ and $A$ and using [[Homological Algebra] §Diagram Chasing, ⁋Corollary 2 (The five lemma)](/en/math/homological_algebra/diagram_chasing#cor2), we see that homotopic continuous functions $f,g$ satisfying this condition induce the same map in homology.
 
 ## Excision theorem
 
-Intuitively, the relative homology $$H_\bullet(X,A)$$ for $$(X,A)$$ is the homology of the chain complex $$C_\bullet(X,A)$$, which corresponds to the cokernel of the inclusion $$C_\bullet(A)\hookrightarrow C_\bullet(X)$$. Intuitively, since the information about $$C_\bullet(A)$$ disappears when taking the quotient, it seems plausible that removing a subset contained in $$A$$ from the whole space would not change the relative homology. This is indeed true under the following mild condition.
+Intuitively, the relative homology $H_\bullet(X,A)$ for $(X,A)$ is the homology of the chain complex $C_\bullet(X,A)$, which corresponds to the cokernel of the inclusion $C_\bullet(A)\hookrightarrow C_\bullet(X)$. Intuitively, since the information about $C_\bullet(A)$ disappears when taking the quotient, it seems plausible that removing a subset contained in $A$ from the whole space would not change the relative homology. This is indeed true under the following mild condition.
 
 ::: Theorem 2 (Excision theorem)
-Let $$A$$ be a subspace of a space $$X$$, and $$Z$$ a subspace of $$A$$ satisfying $$\cl Z\subseteq \interior A$$. Then the inclusion
+Let $A$ be a subspace of a space $X$, and $Z$ a subspace of $A$ satisfying $\cl Z\subseteq \interior A$. Then the inclusion
 
 $$(X\setminus Z, A\setminus Z)\hookrightarrow (X,A)$$
 
 induces an isomorphism
 
-$$H_k(X\setminus Z, A\setminus Z)\rightarrow H_k(X,A).$$
+$H_k(X\setminus Z, A\setminus Z)\rightarrow H_k(X,A).$
 :::
 
 However, despite the theorem being intuitively obvious, its proof involves some technical details, so we omit it here.
 
-On the other hand, in geometric situations we already know a way to ignore the information contained in $$A$$ like this: namely, the quotient space $$X/A$$ obtained by collapsing $$A$$ to a point. Then it is a reasonable guess that there is a relationship between the homology $$H_k(X/A)$$ and the relative homology $$H_k(X,A)$$. Of course, as with the theorem above, this is only possible if $$A$$ is not too pathological a space.
+On the other hand, in geometric situations we already know a way to ignore the information contained in $A$ like this: namely, the quotient space $X/A$ obtained by collapsing $A$ to a point. Then it is a reasonable guess that there is a relationship between the homology $H_k(X/A)$ and the relative homology $H_k(X,A)$. Of course, as with the theorem above, this is only possible if $A$ is not too pathological a space.
 
 ::: Definition 3
-For a space $$X$$ and a subspace $$A$$, we say that $$(X,A)$$ is a *good pair* if $$A$$ is closed and there exists a suitable open set $$U$$ of $$X$$ such that $$A\subset U$$ and $$A$$ is a strong deformation retract of $$U$$.
+For a space $X$ and a subspace $A$, we say that $(X,A)$ is a *good pair* if $A$ is closed and there exists a suitable open set $U$ of $X$ such that $A\subset U$ and $A$ is a strong deformation retract of $U$.
 :::
 
-Suppose a good pair $$(X,A)$$ is given, and let $$U$$ be an open set satisfying the hypothesis of [Definition 3](#def3). Then in the following diagram
+Suppose a good pair $(X,A)$ is given, and let $U$ be an open set satisfying the hypothesis of [Definition 3](#def3). Then in the following diagram
 
 ![3*3_diagram](/assets/images/Math/Algebraic_Topology/Computation_of_Homology-2.svg){:style="width:27.21em" class="invert" .align-center}
 
@@ -82,13 +82,13 @@ and the long exact sequence derived from it
 
 $$\cdots \rightarrow H_k(U,A) \rightarrow H_k(X,A)\rightarrow H_k(X,U)\rightarrow H_{k-1}(U,A)\rightarrow \cdots$$
 
-However, from the assumption that $$A$$ is a strong deformation retract of $$U$$, we have $$H_k(U,A)=0$$ for all $$k$$, and therefore the isomorphism $$H_k(X,A)\cong H_k(X,U)$$ holds for all $$k$$.
+However, from the assumption that $A$ is a strong deformation retract of $U$, we have $H_k(U,A)=0$ for all $k$, and therefore the isomorphism $H_k(X,A)\cong H_k(X,U)$ holds for all $k$.
 
-On the other hand, for any closed subspace $$A$$, the quotient space $$X/A$$ obtained by collapsing $$A$$ to a point is well-defined, and the projection $$X \rightarrow X/A$$ sends $$A$$ to a single point $$[A]$$ and is a homeomorphism outside $$A$$. Applying the same argument as above to the inclusion
+On the other hand, for any closed subspace $A$, the quotient space $X/A$ obtained by collapsing $A$ to a point is well-defined, and the projection $X \rightarrow X/A$ sends $A$ to a single point $[A]$ and is a homeomorphism outside $A$. Applying the same argument as above to the inclusion
 
 $$\{[A]\}\subseteq U/A\subseteq X/A$$
 
-we see that $$U/A$$ strongly deformation retracts onto the point $$[A]$$, so from $$H_k(U/A,[A])=0$$ we obtain the following isomorphism
+we see that $U/A$ strongly deformation retracts onto the point $[A]$, so from $H_k(U/A,[A])=0$ we obtain the following isomorphism
 
 $$H_k(X/A, [A])\cong H_k(X/A, U/A)$$
 
@@ -96,11 +96,11 @@ and these can be placed into the following diagram induced by the quotient map
 
 ![excision-1](/assets/images/Math/Algebraic_Topology/Computation_of_Homology-3.svg){:style="width:17.12em" class="invert" .align-center}
 
-Now from the assumption that $$(X,A)$$ is a good pair, $$A\subset U\subset X$$ satisfies the condition $$\cl A\subseteq \interior U$$ of [Theorem 2](#thm2), and therefore the map $$H_k(X\setminus A, U\setminus A)\rightarrow H_k(X,U)$$ induced by the inclusion
+Now from the assumption that $(X,A)$ is a good pair, $A\subset U\subset X$ satisfies the condition $\cl A\subseteq \interior U$ of [Theorem 2](#thm2), and therefore the map $H_k(X\setminus A, U\setminus A)\rightarrow H_k(X,U)$ induced by the inclusion
 
 $$(X\setminus A, U\setminus A)\hookrightarrow (X,U)$$
 
-is an isomorphism. Likewise, applying [Theorem 2](#thm2) to the inclusion $$\{[A]\}\subseteq U/A\subseteq X/A$$, we know that the following map
+is an isomorphism. Likewise, applying [Theorem 2](#thm2) to the inclusion $\{[A]\}\subseteq U/A\subseteq X/A$, we know that the following map
 
 $$H_k((X/A)\setminus [A], (U/A)\setminus [A])$$
 
@@ -108,39 +108,39 @@ is an isomorphism. These also fit into the following diagram induced by the quot
 
 ![excision-2](/assets/images/Math/Algebraic_Topology/Computation_of_Homology-4.svg){:style="width:24.44em" class="invert" .align-center}
 
-At this point, the left vertical map $$H_k(X\setminus A, U\setminus A)\rightarrow H_k((X/A)\setminus [A], (U/A)\setminus [A])$$ is an isomorphism because the quotient map $$p:X\rightarrow X/A$$ is a homeomorphism outside $$A$$. Combining these results, we obtain the following isomorphism
+At this point, the left vertical map $H_k(X\setminus A, U\setminus A)\rightarrow H_k((X/A)\setminus [A], (U/A)\setminus [A])$ is an isomorphism because the quotient map $p:X\rightarrow X/A$ is a homeomorphism outside $A$. Combining these results, we obtain the following isomorphism
 
 $$H_k(X,A)\cong H_k(X/A,[A])\tag{2}$$
 
-On the other hand, by [§Homology, ⁋Proposition 11](/en/math/algebraic_topology/homology#prop11) and [\[Homological Algebra\] §Diagram Chasing, ⁋Corollary 2 (The five lemma)](/en/math/homological_algebra/diagram_chasing#cor2), for any space $$X$$ and a point $$x\in X$$, the following long exact sequence
+On the other hand, by [§Homology, ⁋Proposition 11](/en/math/algebraic_topology/homology#prop11) and [\[Homological Algebra\] §Diagram Chasing, ⁋Corollary 2 (The five lemma)](/en/math/homological_algebra/diagram_chasing#cor2), for any space $X$ and a point $x\in X$, the following long exact sequence
 
 $$\begin{aligned}\cdots &\rightarrow H_k(x)\rightarrow H_k(X)\rightarrow H_k(X,x) \rightarrow H_{k-1}(x)\rightarrow\cdots \\\cdots&\rightarrow H_1(x)\rightarrow H_1(X) \rightarrow H_1(X,x) \rightarrow H_0(x) \rightarrow H_0(X)\rightarrow H_0(X,x)\rightarrow 0\end{aligned}$$
 
-gives the isomorphism $$H_k(X)\cong H_k(X,x)$$ for all $$k>1$$. Moreover, looking at the long exact sequence for the case $$k=1$$,
+gives the isomorphism $H_k(X)\cong H_k(X,x)$ for all $k>1$. Moreover, looking at the long exact sequence for the case $k=1$,
 
 $$0 \rightarrow H_1(X) \rightarrow H_1(X, x) \overset{\partial}{\longrightarrow} H_{0}(x) \overset{\iota_\ast}{\longrightarrow} H_{0}(X)$$
 
-here $$\iota_\ast$$ sends the generator of $$H_0(x)$$ to the path component of $$X$$ containing $$x$$, so it is injective; therefore $$\partial$$ is the zero map, and from this we obtain the same isomorphism $$H_1(X)\cong H_1(X,x)$$.
+here $\iota_\ast$ sends the generator of $H_0(x)$ to the path component of $X$ containing $x$, so it is injective; therefore $\partial$ is the zero map, and from this we obtain the same isomorphism $H_1(X)\cong H_1(X,x)$.
 
-On the other hand, from the fact that $$\iota_\ast$$ is injective we obtain the following long exact sequence
+On the other hand, from the fact that $\iota_\ast$ is injective we obtain the following long exact sequence
 
 $$0 \rightarrow H_0(x)\rightarrow H_0(X) \rightarrow H_0(X,x)\rightarrow 0$$
 
-and from this the isomorphism $$H_0(X,x)\cong H_0(X)/\mathbb{Z}$$. Geometrically, this is the same as removing the path component of $$H_0(X)$$ containing $$x$$. For notational convenience, defining the *reduced homology* $$\widetilde{H}_k(X)$$ for a fixed $$x\in X$$ by
+and from this the isomorphism $H_0(X,x)\cong H_0(X)/\mathbb{Z}$. Geometrically, this is the same as removing the path component of $H_0(X)$ containing $x$. For notational convenience, defining the *reduced homology* $\widetilde{H}_k(X)$ for a fixed $x\in X$ by
 
 $$\widetilde{H}_k(X)=H_k(X,x)$$
 
-we can rewrite the right-hand side of the above isomorphism (2) as $$\widetilde{H}_k(X/A)$$.
+we can rewrite the right-hand side of the above isomorphism (2) as $\widetilde{H}_k(X/A)$.
 
 ::: Proposition 4
-For a good pair $$(X,A)$$, the quotient map $$X \rightarrow X/A$$ induces the following isomorphism for all $$k$$:
+For a good pair $(X,A)$, the quotient map $X \rightarrow X/A$ induces the following isomorphism for all $k$:
 
-$$H_k(X,A)\cong \widetilde{H}_k(X/A)$$
+$H_k(X,A)\cong \widetilde{H}_k(X/A)$
 :::
 
 ## Simplicial Homology and Singular Homology
 
-Meanwhile, relative homology was defined by taking the cokernel of the monomorphism $$C_\bullet(A)\rightarrow C_\bullet(X)$$ in $$\Ch_{\geq 0}(\Ab)$$, so the same process can be repeated for $$C^\Delta_\bullet(A) \rightarrow C^\Delta_\bullet(X)$$. Then as a result we obtain the simplicial homology version of relative homology $$H_n^\Delta(X,A)$$. Now since simplicial homology consists of "non-singular" chains, the canonical homomorphism
+Meanwhile, relative homology was defined by taking the cokernel of the monomorphism $C_\bullet(A)\rightarrow C_\bullet(X)$ in $\Ch_{\geq 0}(\Ab)$, so the same process can be repeated for $C^\Delta_\bullet(A) \rightarrow C^\Delta_\bullet(X)$. Then as a result we obtain the simplicial homology version of relative homology $H_n^\Delta(X,A)$. Now since simplicial homology consists of "non-singular" chains, the canonical homomorphism
 
 $$H_\bullet^\Delta(X)\rightarrow H_\bullet(X)\tag{3}$$
 
@@ -159,10 +159,10 @@ exist. Then by [\[Homological Algebra\] §Long Exact Sequences, ⁋Proposition 2
 Using this, the following holds.
 
 ::: Theorem 5
-For any $$\Delta$$-complex $$X$$, the homomorphism in (3) is an isomorphism.
+For any $\Delta$-complex $X$, the homomorphism in (3) is an isomorphism.
 :::
 ::: Proof
-We sketch the main idea. Using the commutative diagram above, we consider the filtration defined by the $$\Delta$$-complex structure on $$X$$,
+We sketch the main idea. Using the commutative diagram above, we consider the filtration defined by the $\Delta$-complex structure on $X$,
 
 $$X_0\subset X_1\subset\cdots\subset X_l=X$$
 
@@ -170,63 +170,63 @@ and then apply [\[Homological Algebra\] §Diagram chasing, ⁋Corollary 2](/en/m
 
 ![induction](/assets/images/Math/Algebraic_Topology/Computation_of_Homology-6.svg){:style="width:56.75em" class="invert" .align-center}
 
-to run the induction. For the induction, it suffices to show that for any $$n$$ and any $$k$$, the homomorphism between relative homologies
+to run the induction. For the induction, it suffices to show that for any $n$ and any $k$, the homomorphism between relative homologies
 
 $$H_n^\Delta(X^k, X^{k-1})\rightarrow H_n(X^k, X^{k-1})$$
 
-is an isomorphism. Once this is assumed, first by [§Homology, ⁋Proposition 11](/en/math/algebraic_topology/homology#prop11) we have $$H_n^\Delta(X^0)\cong H_n(X^0)$$ for all $$n$$ when $$k=1$$, so by [\[Homological Algebra\] §Diagram chasing, ⁋Corollary 2](/en/math/homological_algebra/diagram_chasing#cor2) we can show $$H_n^\Delta(X^1)\cong H_n(X^1)$$, and again from this we can inductively construct the desired isomorphism for larger $$k$$.
+is an isomorphism. Once this is assumed, first by [§Homology, ⁋Proposition 11](/en/math/algebraic_topology/homology#prop11) we have $H_n^\Delta(X^0)\cong H_n(X^0)$ for all $n$ when $k=1$, so by [\[Homological Algebra\] §Diagram chasing, ⁋Corollary 2](/en/math/homological_algebra/diagram_chasing#cor2) we can show $H_n^\Delta(X^1)\cong H_n(X^1)$, and again from this we can inductively construct the desired isomorphism for larger $k$.
 
-First, by definition, $$C_\bullet^\Delta(X^k, X^{k-1})$$ is nontrivial only when $$n=k$$, and thus $$H_n^\Delta(X^k, X^{k-1})$$ is a nontrivial free abelian group (generated by $$k$$-simplices) only when $$n=k$$, and trivial otherwise.
+First, by definition, $C_\bullet^\Delta(X^k, X^{k-1})$ is nontrivial only when $n=k$, and thus $H_n^\Delta(X^k, X^{k-1})$ is a nontrivial free abelian group (generated by $k$-simplices) only when $n=k$, and trivial otherwise.
 
-A similar result holds for singular homology as well: specifically, $$H_n(\Delta^k,\partial\Delta^k)$$ is a free abelian group only when $$n=k$$, and its generator is $$\id:\Delta^k \rightarrow \Delta^k$$. To verify this, define $$\Lambda$$ to be $$\Delta^k$$ with one of its $$(k-1)$$-dimensional faces removed, and look at the long exact sequence for $$(\Delta^k, \partial\Delta^k, \Lambda)$$
+A similar result holds for singular homology as well: specifically, $H_n(\Delta^k,\partial\Delta^k)$ is a free abelian group only when $n=k$, and its generator is $\id:\Delta^k \rightarrow \Delta^k$. To verify this, define $\Lambda$ to be $\Delta^k$ with one of its $(k-1)$-dimensional faces removed, and look at the long exact sequence for $(\Delta^k, \partial\Delta^k, \Lambda)$
 
 $$\cdots\rightarrow H_n(\Delta^k,\Lambda)\rightarrow H_n(\Delta^k, \partial\Delta^k)\rightarrow H_{n-1}(\partial\Delta^k, \Lambda)\rightarrow H_{n-1}(\Delta^k,\Lambda)\rightarrow \cdots$$
 
-Since $$\Delta^k$$ deformation retracts onto $$\Lambda$$, the $$H_\bullet(\Delta^k,\Lambda)$$ terms are $$0$$, and therefore $$H_k(\Delta^k, \partial\Delta^k)\cong H_{n-1}(\partial\Delta^k,\Lambda)$$; on the other hand, for the good pair $$(\partial\Delta^k,\Lambda)$$, the quotient space $$\partial\Delta^k/\Lambda$$ is homeomorphic to the quotient space $$\Delta^{k-1}/\partial\Delta^{k-1}$$, so using these we obtain
+Since $\Delta^k$ deformation retracts onto $\Lambda$, the $H_\bullet(\Delta^k,\Lambda)$ terms are $0$, and therefore $H_k(\Delta^k, \partial\Delta^k)\cong H_{n-1}(\partial\Delta^k,\Lambda)$; on the other hand, for the good pair $(\partial\Delta^k,\Lambda)$, the quotient space $\partial\Delta^k/\Lambda$ is homeomorphic to the quotient space $\Delta^{k-1}/\partial\Delta^{k-1}$, so using these we obtain
 
 $$H_k(\Delta^k, \partial\Delta^{k})\cong H_{k-1}(\Delta^{k-1}, \partial\Delta^{k-1})$$
 
 and thus the desired result follows inductively.
 
-Looking at this process, we see that the generator of $$H_k(\Delta^k,\partial\Delta^k)$$ (as singular homology) is exactly the $$k$$-simplex $$\Delta^k$$ itself. Since the pair $$(X^k,X^{k-1})$$ is the union of such pairs $$(\Delta^k,\partial\Delta^k)$$, the desired result follows by [§Homology, ⁋Proposition 9](/en/math/algebraic_topology/homology#prop9).
+Looking at this process, we see that the generator of $H_k(\Delta^k,\partial\Delta^k)$ (as singular homology) is exactly the $k$-simplex $\Delta^k$ itself. Since the pair $(X^k,X^{k-1})$ is the union of such pairs $(\Delta^k,\partial\Delta^k)$, the desired result follows by [§Homology, ⁋Proposition 9](/en/math/algebraic_topology/homology#prop9).
 :::
 
 ## Mayer–Vietoris Sequence
 
-We have omitted the proof for brevity, but the excision theorem of [Theorem 2](#thm2) is extremely useful when dealing with homology theory. For example, in the proof of [Theorem 5](#thm5) we used the excision theorem to ignore simplices of dimension less than $$k-1$$, which allowed us to use induction, and the base step of that induction was the homology of a one-point space. This process can be viewed as essentially having all the properties that homology should satisfy, and axiomatizing this gives the following.
+We have omitted the proof for brevity, but the excision theorem of [Theorem 2](#thm2) is extremely useful when dealing with homology theory. For example, in the proof of [Theorem 5](#thm5) we used the excision theorem to ignore simplices of dimension less than $k-1$, which allowed us to use induction, and the base step of that induction was the homology of a one-point space. This process can be viewed as essentially having all the properties that homology should satisfy, and axiomatizing this gives the following.
 
 ::: Definition 6 (Eilenberg-Steenrod axioms)
 
-For functors $$H_k$$ from the category of pairs of topological spaces to the category of abelian groups, and natural transformations
+For functors $H_k$ from the category of pairs of topological spaces to the category of abelian groups, and natural transformations
 
 $$\partial:H_k(X,A)\rightarrow H_{k-1}(A,\emptyset):=H_{k-1}(A)$$
 
 between them, the *Eilenberg-Steenrod axiom* refers to the following axioms.
 
-- (Homotopy) Given two homotopic maps $$(X,A) \rightarrow (Y,B)$$, the two homomorphisms $$H_k(X,A) \rightarrow H_k(Y,B)$$ they induce are identical.
-- (Excision) For $$(X,A,Z)$$ satisfying the conditions of [Theorem 2](#thm2), the inclusion $$(X\setminus Z, A\setminus Z)\hookrightarrow (X,A)$$ induces an isomorphism.
-- (Dimension) For the one-point space $$\ast$$, $$H_k(\ast)=0$$ holds for all $$k>0$$.
-- (Additivity) If $$X=\coprod X_\alpha$$, then $$H_k(X)\cong\bigoplus H_k(X_\alpha)$$.
-- (Exactness) For each pair $$(X,A)$$, the two inclusions $$(A,\emptyset) \hookrightarrow (X,\emptyset)$$ and $$(X,\emptyset)\hookrightarrow (X,A)$$ fit into the following long exact sequence
+- (Homotopy) Given two homotopic maps $(X,A) \rightarrow (Y,B)$, the two homomorphisms $H_k(X,A) \rightarrow H_k(Y,B)$ they induce are identical.
+- (Excision) For $(X,A,Z)$ satisfying the conditions of [Theorem 2](#thm2), the inclusion $(X\setminus Z, A\setminus Z)\hookrightarrow (X,A)$ induces an isomorphism.
+- (Dimension) For the one-point space $\ast$, $H_k(\ast)=0$ holds for all $k>0$.
+- (Additivity) If $X=\coprod X_\alpha$, then $H_k(X)\cong\bigoplus H_k(X_\alpha)$.
+- (Exactness) For each pair $(X,A)$, the two inclusions $(A,\emptyset) \hookrightarrow (X,\emptyset)$ and $(X,\emptyset)\hookrightarrow (X,A)$ fit into the following long exact sequence
 
     $$\cdots \rightarrow H_k(A)\rightarrow H_k(X) \rightarrow H_k(X,A) \rightarrow H_{k-1}(A)\rightarrow \cdots$$
 
     .
 :::
 
-Then the result of Eilenberg and Steenrod shows that homology theories defined in this way are all naturally isomorphic once the *coefficient group* $$H_0(\ast)$$ is fixed. For example, we previously proved that simplicial homology and singular homology agree on $$\Delta$$-complexes, and examining that proof step by step reveals that what we essentially used were the axioms of [Definition 6](#def6) above. For practical computations of homology, it is good to introduce *cellular homology* defined on *CW complexes*; likewise, this homology also satisfies the above axioms and therefore gives the same computations as simplicial homology and singular homology.
+Then the result of Eilenberg and Steenrod shows that homology theories defined in this way are all naturally isomorphic once the *coefficient group* $H_0(\ast)$ is fixed. For example, we previously proved that simplicial homology and singular homology agree on $\Delta$-complexes, and examining that proof step by step reveals that what we essentially used were the axioms of [Definition 6](#def6) above. For practical computations of homology, it is good to introduce *cellular homology* defined on *CW complexes*; likewise, this homology also satisfies the above axioms and therefore gives the same computations as simplicial homology and singular homology.
 
-On the other hand, in all these homology theories the coefficient group is fixed to be $$\mathbb{Z}$$, but even if we replace it with an arbitrary abelian group $$A$$, all the axioms of [Definition 6](#def6) still hold unchanged. Indeed, when defining singular homology or simplicial homology, if we took the chain groups
+On the other hand, in all these homology theories the coefficient group is fixed to be $\mathbb{Z}$, but even if we replace it with an arbitrary abelian group $A$, all the axioms of [Definition 6](#def6) still hold unchanged. Indeed, when defining singular homology or simplicial homology, if we took the chain groups
 
 $$C^\Delta_\bullet(X),\qquad C_\bullet(X)$$
 
-not as free abelian groups but as free $$A$$-modules
+not as free abelian groups but as free $A$-modules
 
 $$C^\Delta_\bullet(X;A):=C^\Delta_\bullet(X)\otimes_\mathbb{Z}A,\qquad C_\bullet(X;A):=C_\bullet(X)\otimes_\mathbb{Z}A$$
 
 , we would have obtained this kind of homology.
 
-Most properties of homology follow from the axioms of [Definition 6](#def6). For example, the generalization of equation (1), which is the goal of this post, can be derived from them. Suppose a topological space $$X$$ is expressed as the union of two open sets $$X=U\cup V$$. Then the following inclusions
+Most properties of homology follow from the axioms of [Definition 6](#def6). For example, the generalization of equation (1), which is the goal of this post, can be derived from them. Suppose a topological space $X$ is expressed as the union of two open sets $X=U\cup V$. Then the following inclusions
 
 ![inclusions](/assets/images/Math/Algebraic_Topology/Computation_of_Homology-7.svg){:style="width:7.54em" class="invert" .align-center}
 
@@ -238,7 +238,7 @@ induces an isomorphism in homology by the excision axiom, so the morphisms corre
 
 ![morphism_of_les](/assets/images/Math/Algebraic_Topology/Computation_of_Homology-8.svg){:style="width:43.25em" class="invert" .align-center}
 
-. Here $$i,j,k$$ are the maps induced by the respective inclusions, $$\partial$$ are the connecting maps, and $$p$$ are the cokernel morphisms. For convenience, the indices are omitted. Now let this long exact sequence morphism be $$\alpha$$, and let $$\Cone(\alpha)$$ be the mapping cone exact sequence of $$\alpha$$
+. Here $i,j,k$ are the maps induced by the respective inclusions, $\partial$ are the connecting maps, and $p$ are the cokernel morphisms. For convenience, the indices are omitted. Now let this long exact sequence morphism be $\alpha$, and let $\Cone(\alpha)$ be the mapping cone exact sequence of $\alpha$
 
 $$\begin{aligned}\cdots &\overset{\overline{\partial}}{\longrightarrow} H_{n+1}(X)\oplus H_{n+1}(V, U\cap V)\overset{\overline{\Phi}}{\longrightarrow} H_{n+1}(X,U)\oplus H_n(U\cap V)\overset{\overline{\Psi}}{\longrightarrow} H_n(U)\oplus H_n(V)\\ \phantom{\cdots}&\overset{\overline{\partial}}{\longrightarrow} H_n(X)\oplus H_n(V, U\cap V)\rightarrow \cdots\end{aligned}$$
 
@@ -246,25 +246,25 @@ $$\begin{aligned}\cdots &\overset{\overline{\partial}}{\longrightarrow} H_{n+1}(
 
 $$\cdots \rightarrow 0 \rightarrow H_{n+1}(V, U\cap V)\rightarrow H_{n+1}(X,U)\rightarrow 0 \rightarrow \cdots\tag{4}$$
 
-exists, and using this we know that $$\Cone(\alpha)$$ can be expressed as the direct sum of this trivial long exact sequence and the following long exact sequence
+exists, and using this we know that $\Cone(\alpha)$ can be expressed as the direct sum of this trivial long exact sequence and the following long exact sequence
 
 $$\cdots \rightarrow H_{n+1}(U)\oplus H_{n+1}(V)\rightarrow H_{n+1}(X)\rightarrow H_n(U\cap V)\rightarrow H_n(U)\oplus H_n(V)\rightarrow\cdots\tag{5}$$
 
-. Since both $$\Cone(\alpha)$$ and (4) are exact, (5) is also exact, and the differential maps of the exact sequence (5) are obtained through the change of basis defined by the isomorphisms $$i_V$$ in the mapping cone exact sequence. Computing this explicitly yields the following.
+. Since both $\Cone(\alpha)$ and (4) are exact, (5) is also exact, and the differential maps of the exact sequence (5) are obtained through the change of basis defined by the isomorphisms $i_V$ in the mapping cone exact sequence. Computing this explicitly yields the following.
 
 ::: Proposition 7 (Mayer-Vietoris sequence)
-Suppose a topological space $$X$$ is expressed as the union of two open sets $$X=U\cup V$$, and consider a homology theory $$H$$ defined on it. Then there exists a long exact sequence
+Suppose a topological space $X$ is expressed as the union of two open sets $X=U\cup V$, and consider a homology theory $H$ defined on it. Then there exists a long exact sequence
 
 $$\cdots \rightarrow H_{n+1}(U)\oplus H_{n+1}(V)\overset{\Psi}{\longrightarrow} H_{n+1}(X)\overset{\partial}{\longrightarrow} H_n(U\cap V)\overset{\Phi}{\longrightarrow} H_n(U)\oplus H_n(V)\rightarrow\cdots$$
 
-and in this case the maps $$\Psi, \Phi$$ are given by
+and in this case the maps $\Psi, \Phi$ are given by
 
 $$\Psi(u,v)=u+v,\qquad \Phi(x)=(x,-x)$$
 
 respectively.
 :::
 
-In particular, looking at the case $$n=1$$, we first obtain (1) which was carried over from the Seifert-van Kampen theorem via abelianization, and from this perspective the Mayer-Vietoris sequence can be thought of as a homology version of the Seifert-van Kampen theorem.
+In particular, looking at the case $n=1$, we first obtain (1) which was carried over from the Seifert-van Kampen theorem via abelianization, and from this perspective the Mayer-Vietoris sequence can be thought of as a homology version of the Seifert-van Kampen theorem.
 
 ---
 

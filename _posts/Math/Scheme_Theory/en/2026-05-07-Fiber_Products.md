@@ -16,56 +16,56 @@ last_polished_at: 2026-06-27T00:00:01+00:00
 ---
 ## Definition and Existence of Fiber Products
 
-In [§Morphisms of Schemes, ⁋Definition 3](/en/math/scheme_theory/morphism_of_schemes#def3), we agreed to call a scheme morphism $$X \rightarrow S$$ an *$$S$$-scheme*. In this post, we define the product in the category $$\Sch_{/S}$$.
+In [§Morphisms of Schemes, ⁋Definition 3](/en/math/scheme_theory/morphism_of_schemes#def3), we agreed to call a scheme morphism $X \rightarrow S$ an *$S$-scheme*. In this post, we define the product in the category $\Sch_{/S}$.
 
 ::: Definition 1
-The fiber product of two scheme morphisms $$\varphi_X:X \rightarrow S$$, $$\varphi_Y:Y \rightarrow S$$ is denoted by $$X\times_SY$$. ([\[Category Theory\] §Limits, ⁋Example 8](/en/math/category_theory/limits#ex8))
+The fiber product of two scheme morphisms $\varphi_X:X \rightarrow S$, $\varphi_Y:Y \rightarrow S$ is denoted by $X\times_SY$. ([\[Category Theory\] §Limits, ⁋Example 8](/en/math/category_theory/limits#ex8))
 :::
 
-That is, $$X\times_SY$$ satisfies the following property.
+That is, $X\times_SY$ satisfies the following property.
 
 > The following diagram
 > 
 > ![fiber_diagram](/assets/images/Math/Scheme_Theory/Fiber_Products-1.svg){:style="width:9.32em" class="invert" .align-center}
 > 
-> commutes. Moreover, whenever arbitrary $$\psi_X:Z \rightarrow X$$, $$\psi_Y:Z \rightarrow Y$$ satisfying the equation $$\varphi_Y\circ\psi_Y=\varphi_X\circ\psi_X$$ are given, there exists a unique $$\psi:Z \rightarrow X\times_SY$$ such that $$\psi_X=\rho_X\circ\psi$$ and $$\psi_Y=\rho_Y\circ\psi$$.
+> commutes. Moreover, whenever arbitrary $\psi_X:Z \rightarrow X$, $\psi_Y:Z \rightarrow Y$ satisfying the equation $\varphi_Y\circ\psi_Y=\varphi_X\circ\psi_X$ are given, there exists a unique $\psi:Z \rightarrow X\times_SY$ such that $\psi_X=\rho_X\circ\psi$ and $\psi_Y=\rho_Y\circ\psi$.
 > 
 > ![universal_product](/assets/images/Math/Scheme_Theory/Fiber_Products-2.svg){:style="width:13.72em" class="invert" .align-center}
 
-Therefore, there exists a canonical morphism from $$X\times_SY$$ to $$S$$, and from this we may view $$X\times_SY$$ as an $$S$$-scheme. Moreover, from this perspective it is immediate from the definition that $$X\times_SY$$ is also the product in $$\Sch_{/S}$$.
+Therefore, there exists a canonical morphism from $X\times_SY$ to $S$, and from this we may view $X\times_SY$ as an $S$-scheme. Moreover, from this perspective it is immediate from the definition that $X\times_SY$ is also the product in $\Sch_{/S}$.
 
-After [§Morphisms of Schemes, ⁋Example 4](/en/math/scheme_theory/morphism_of_schemes#ex4), we saw that an arbitrary scheme $$X$$ can always be regarded as a $$\mathbb{Z}$$-scheme in a unique way. Thus, assuming that a fiber product $$X\times_SY$$ satisfying [Definition 1](#def1) always exists, we know that for any two schemes $$X, Y$$, the product $$X\times_{\Spec \mathbb{Z}}Y$$ gives the product of $$X$$ and $$Y$$.
+After [§Morphisms of Schemes, ⁋Example 4](/en/math/scheme_theory/morphism_of_schemes#ex4), we saw that an arbitrary scheme $X$ can always be regarded as a $\mathbb{Z}$-scheme in a unique way. Thus, assuming that a fiber product $X\times_SY$ satisfying [Definition 1](#def1) always exists, we know that for any two schemes $X, Y$, the product $X\times_{\Spec \mathbb{Z}}Y$ gives the product of $X$ and $Y$.
 
-Since [Definition 1](#def1) guarantees nothing about the existence of the fiber product $$X\times_SY$$, for this to be a genuine definition we must separately prove the existence of $$X\times_SY$$. ([Theorem 8](#thm8)) However, the existence of fiber products in $$\AffSch$$ is almost obvious, and this will be the starting point of our proof.
+Since [Definition 1](#def1) guarantees nothing about the existence of the fiber product $X\times_SY$, for this to be a genuine definition we must separately prove the existence of $X\times_SY$. ([Theorem 8](#thm8)) However, the existence of fiber products in $\AffSch$ is almost obvious, and this will be the starting point of our proof.
 
 ::: Lemma 2
-Given morphisms $$\Spec A \rightarrow \Spec C$$, $$\Spec B \rightarrow\Spec C$$ between affine schemes, we have
+Given morphisms $\Spec A \rightarrow \Spec C$, $\Spec B \rightarrow\Spec C$ between affine schemes, we have
 
-$$\Spec A\times_{\Spec C}\Spec B\cong\Spec (A\otimes_C B).$$
+$\Spec A\times_{\Spec C}\Spec B\cong\Spec (A\otimes_C B).$
 :::
 ::: Proof
-Using the equivalence $$\AffSch\cong\cRing^\op$$, convert $$\Spec A \rightarrow \Spec C$$, $$\Spec B \rightarrow \Spec C$$ into $$C \rightarrow A$$, $$C \rightarrow B$$, and compare the universal property of [\[Algebraic Structures\] §Direct Products, Direct Sums, Tensor Products of Algebras, ⁋Theorem 8](/en/math/algebraic_structures/operations_of_algebras#thm8) with the universal property of the fiber product.
+Using the equivalence $\AffSch\cong\cRing^\op$, convert $\Spec A \rightarrow \Spec C$, $\Spec B \rightarrow \Spec C$ into $C \rightarrow A$, $C \rightarrow B$, and compare the universal property of [\[Algebraic Structures\] §Direct Products, Direct Sums, Tensor Products of Algebras, ⁋Theorem 8](/en/math/algebraic_structures/operations_of_algebras#thm8) with the universal property of the fiber product.
 :::
 
 To show that fiber products exist for general schemes, it now suffices to show that we can glue together the results for affine schemes examined in [Lemma 2](#lem2).
 
-First, when an open subscheme $$U$$ of $$Z$$ is given, writing it in the form $$\iota:U \rightarrow Z$$ using the inclusion morphism, the following lemma is almost a tautology.
+First, when an open subscheme $U$ of $Z$ is given, writing it in the form $\iota:U \rightarrow Z$ using the inclusion morphism, the following lemma is almost a tautology.
 
 ::: Lemma 3
-Given a scheme morphism $$\varphi: Y \rightarrow Z$$ and an open subscheme $$\iota: U \rightarrow Z$$ of $$Z$$, the following diagram
+Given a scheme morphism $\varphi: Y \rightarrow Z$ and an open subscheme $\iota: U \rightarrow Z$ of $Z$, the following diagram
 
 ![open_subscheme](/assets/images/Math/Scheme_Theory/Fiber_Products-3.svg){:style="width:8.22em" class="invert" .align-center}
 
 is a fiber diagram.
 :::
 ::: Proof
-$$\varphi^{-1}(U)$$ satisfies the universal property of the fiber product.
+$\varphi^{-1}(U)$ satisfies the universal property of the fiber product.
 :::
 
 Now, using this slightly, we can prove the following lemma.
 
 ::: Lemma 4
-Given affine schemes $$X, Y, Z$$ and an open subscheme $$Y'\hookrightarrow Y$$ of $$Y$$, the fiber product $$X\times_ZY'$$ of $$X\rightarrow Z$$ and $$Y'\hookrightarrow Y \rightarrow Z$$ exists.
+Given affine schemes $X, Y, Z$ and an open subscheme $Y'\hookrightarrow Y$ of $Y$, the fiber product $X\times_ZY'$ of $X\rightarrow Z$ and $Y'\hookrightarrow Y \rightarrow Z$ exists.
 :::
 ::: Proof
 First, from [Lemma 2](#lem2) we know that the following fiber diagram
@@ -76,7 +76,7 @@ exists. Now, considering the following data
 
 ![open_fiber_product-2](/assets/images/Math/Scheme_Theory/Fiber_Products-5.svg){:style="width:8.55em" class="invert" .align-center}
 
-we can check from [Lemma 3](#lem3) that the open subscheme $$\rho_Y^{-1}(Y')$$ of $$X\times_SY$$ becomes a fiber product. Now, in general, if the two small squares in the following diagram
+we can check from [Lemma 3](#lem3) that the open subscheme $\rho_Y^{-1}(Y')$ of $X\times_SY$ becomes a fiber product. Now, in general, if the two small squares in the following diagram
 
 ![magic_square](/assets/images/Math/Scheme_Theory/Fiber_Products-6.svg){:style="width:8.55em" class="invert" .align-center}
 
@@ -86,49 +86,49 @@ are fiber diagrams, then the outer large square is also a fiber diagram, so we o
 Now, using this, we can show that the fiber product of an affine scheme and an arbitrary scheme exists.
 
 ::: Lemma 5
-For affine schemes $$X, Z$$ and an arbitrary scheme $$Y$$, the fiber product $$X\times_ZY$$ of $$X\rightarrow Z$$ and $$Y \rightarrow Z$$ exists.
+For affine schemes $X, Z$ and an arbitrary scheme $Y$, the fiber product $X\times_ZY$ of $X\rightarrow Z$ and $Y \rightarrow Z$ exists.
 :::
 ::: Proof
-For this, cover $$Y$$ by affine open subsets $$Y_i$$. Then we know from [Lemma 2](#lem2) that the $$X\times_ZY_i$$ exist. Also, since $$Y_{ij}=Y_i\cap Y_j$$ is an open subscheme of the affine scheme $$Y_i$$, the $$X\times_Z Y_{ij}$$ also exist by [Lemma 4](#lem4).
+For this, cover $Y$ by affine open subsets $Y_i$. Then we know from [Lemma 2](#lem2) that the $X\times_ZY_i$ exist. Also, since $Y_{ij}=Y_i\cap Y_j$ is an open subscheme of the affine scheme $Y_i$, the $X\times_Z Y_{ij}$ also exist by [Lemma 4](#lem4).
 
-On the other hand, looking at the proof of [Lemma 4](#lem4), we see that $$X\times_ZY_{ij}$$ is an open subscheme of each of $$X\times_ZY_i$$ and $$X\times_ZY_{ij}$$. We can easily check that these data satisfy the conditions of [§Schemes, ⁋Lemma 9](/en/math/scheme_theory/schemes#lem9), so we can glue them together to form a scheme $$X\times_ZY$$. That this satisfies the universal property of the fiber product can be checked by restricting the codomain of a scheme morphism $$W \rightarrow Y$$ to the $$Y_i$$, using the universal property of each $$X\times_ZY_i$$, and then gluing the scheme morphisms together as in [§Morphisms of Schemes, ⁋Proposition 1](/en/math/scheme_theory/morphism_of_schemes#prop1).
+On the other hand, looking at the proof of [Lemma 4](#lem4), we see that $X\times_ZY_{ij}$ is an open subscheme of each of $X\times_ZY_i$ and $X\times_ZY_{ij}$. We can easily check that these data satisfy the conditions of [§Schemes, ⁋Lemma 9](/en/math/scheme_theory/schemes#lem9), so we can glue them together to form a scheme $X\times_ZY$. That this satisfies the universal property of the fiber product can be checked by restricting the codomain of a scheme morphism $W \rightarrow Y$ to the $Y_i$, using the universal property of each $X\times_ZY_i$, and then gluing the scheme morphisms together as in [§Morphisms of Schemes, ⁋Proposition 1](/en/math/scheme_theory/morphism_of_schemes#prop1).
 :::
 
-In this lemma, the assumption that $$X$$ is an affine scheme was used only to show that $$X\times_ZY_i$$ exists. Therefore, given arbitrary schemes $$X,Y$$, an affine scheme $$Z$$, and scheme morphisms $$X \rightarrow Z$$ and $$Y \rightarrow Z$$, we choose an affine open cover $$\{Y_i\}$$ of $$Y$$, then know that $$X\times_ZY_i$$ exists by [Lemma 5](#lem5), and thus can glue them together to form $$X\times_ZY$$. That is, the following holds.
+In this lemma, the assumption that $X$ is an affine scheme was used only to show that $X\times_ZY_i$ exists. Therefore, given arbitrary schemes $X,Y$, an affine scheme $Z$, and scheme morphisms $X \rightarrow Z$ and $Y \rightarrow Z$, we choose an affine open cover $\{Y_i\}$ of $Y$, then know that $X\times_ZY_i$ exists by [Lemma 5](#lem5), and thus can glue them together to form $X\times_ZY$. That is, the following holds.
 
 ::: Lemma 6
-For an affine scheme $$Z$$, arbitrary schemes $$X,Y$$, and scheme morphisms $$X \rightarrow Z$$, $$Y \rightarrow Z$$, the fiber product $$X\times_ZY$$ exists.
+For an affine scheme $Z$, arbitrary schemes $X,Y$, and scheme morphisms $X \rightarrow Z$, $Y \rightarrow Z$, the fiber product $X\times_ZY$ exists.
 :::
 
-Finally, we must extend $$Z$$ to an arbitrary scheme. First, the following holds.
+Finally, we must extend $Z$ to an arbitrary scheme. First, the following holds.
 
 ::: Lemma 7
-Given arbitrary schemes $$X,Y,Z$$, scheme morphisms $$\varphi_X:X \rightarrow Z$$, $$\varphi_Y:Y \rightarrow Z$$, and a morphism $$\iota: Z \rightarrow Z'$$ to an affine scheme $$Z'$$, the fiber product $$X\times_{Z'}Y$$ of $$\iota\circ\varphi_X$$ and $$\iota\circ\varphi_Y$$ satisfies the universal property of $$X\times_ZY$$, and therefore $$X\times_ZY$$ exists.
+Given arbitrary schemes $X,Y,Z$, scheme morphisms $\varphi_X:X \rightarrow Z$, $\varphi_Y:Y \rightarrow Z$, and a morphism $\iota: Z \rightarrow Z'$ to an affine scheme $Z'$, the fiber product $X\times_{Z'}Y$ of $\iota\circ\varphi_X$ and $\iota\circ\varphi_Y$ satisfies the universal property of $X\times_ZY$, and therefore $X\times_ZY$ exists.
 :::
 
-Now, using the above lemma, for arbitrary $$X,Y,Z$$ and scheme morphisms $$\varphi_X:X \rightarrow Z$$, $$\varphi_Y: Y \rightarrow Z$$, if we cover $$Z$$ by an affine open cover $$\{Z_i\}$$, we know that fiber products $$X_i\times_{Z_i}Y_i$$ exist for $$\varphi_X\vert^{Z_i}:\varphi_X^{-1}(Z_i) \rightarrow Z_i$$ and $$\varphi_Y\vert^{Z_i}:\varphi_Y^{-1}(Z_i) \rightarrow Z_i$$. Now, the intersection $$Z_{ij}=Z_i\cap Z_j$$ is an open subset of $$Z_i$$, so by [Lemma 7](#lem7) the fiber products of $$\varphi_X\vert^{Z_{ij}}$$ and $$\varphi_Y\vert^{Z_{ij}}$$ also exist and are open subschemes of $$X_i\times_{Z_i}Y_i$$ and $$X_j\times_{Z_j}Y_j$$. Therefore, just as in the proof of [Lemma 5](#lem5), if we show that these data satisfy the conditions of [§Schemes, ⁋Lemma 9](/en/math/scheme_theory/schemes#lem9), we obtain the following theorem.
+Now, using the above lemma, for arbitrary $X,Y,Z$ and scheme morphisms $\varphi_X:X \rightarrow Z$, $\varphi_Y: Y \rightarrow Z$, if we cover $Z$ by an affine open cover $\{Z_i\}$, we know that fiber products $X_i\times_{Z_i}Y_i$ exist for $\varphi_X\vert^{Z_i}:\varphi_X^{-1}(Z_i) \rightarrow Z_i$ and $\varphi_Y\vert^{Z_i}:\varphi_Y^{-1}(Z_i) \rightarrow Z_i$. Now, the intersection $Z_{ij}=Z_i\cap Z_j$ is an open subset of $Z_i$, so by [Lemma 7](#lem7) the fiber products of $\varphi_X\vert^{Z_{ij}}$ and $\varphi_Y\vert^{Z_{ij}}$ also exist and are open subschemes of $X_i\times_{Z_i}Y_i$ and $X_j\times_{Z_j}Y_j$. Therefore, just as in the proof of [Lemma 5](#lem5), if we show that these data satisfy the conditions of [§Schemes, ⁋Lemma 9](/en/math/scheme_theory/schemes#lem9), we obtain the following theorem.
 
 ::: Theorem 8
-For arbitrary schemes $$X,Y,Z$$ and scheme morphisms $$X \rightarrow Z$$, $$Y \rightarrow Z$$, the fiber product $$X\times_ZY$$ exists.
+For arbitrary schemes $X,Y,Z$ and scheme morphisms $X \rightarrow Z$, $Y \rightarrow Z$, the fiber product $X\times_ZY$ exists.
 :::
 
 ## Interpretations of the Fiber Product
 
 Just as there are various ways to interpret a scheme morphism, there are various ways to understand the fiber product.
 
-Earlier, we agreed to think of a scheme morphism $$X \rightarrow S$$ as a family parametrized by $$S$$ ([§Morphisms of Schemes, ⁋Example 10](/en/math/scheme_theory/morphism_of_schemes#ex10)), and from this perspective $$S$$ can be thought of as the base of the family $$X$$. Now, given an arbitrary $$S$$-family $$X \rightarrow S$$ and a scheme morphism $$S' \rightarrow S$$, through the fiber product we obtain a new $$S'$$-family $$X\times_SS' \rightarrow S'$$. From this perspective, we often call the fiber product a *base change*.
+Earlier, we agreed to think of a scheme morphism $X \rightarrow S$ as a family parametrized by $S$ ([§Morphisms of Schemes, ⁋Example 10](/en/math/scheme_theory/morphism_of_schemes#ex10)), and from this perspective $S$ can be thought of as the base of the family $X$. Now, given an arbitrary $S$-family $X \rightarrow S$ and a scheme morphism $S' \rightarrow S$, through the fiber product we obtain a new $S'$-family $X\times_SS' \rightarrow S'$. From this perspective, we often call the fiber product a *base change*.
 
 ::: Example 9
-Narrowing our scope to affine schemes, the fact that $$\Spec B$$ is a $$C$$-scheme means that a scheme morphism $$\Spec B \rightarrow \Spec C$$ is given, which in turn means that a ring homomorphism $$C \rightarrow B$$ is given, which is the same as saying that $$B$$ is a $$C$$-algebra.
+Narrowing our scope to affine schemes, the fact that $\Spec B$ is a $C$-scheme means that a scheme morphism $\Spec B \rightarrow \Spec C$ is given, which in turn means that a ring homomorphism $C \rightarrow B$ is given, which is the same as saying that $B$ is a $C$-algebra.
 
-Now, additionally given a scheme morphism $$\Spec A \rightarrow \Spec C$$, let us see what the above base change gives. By [Lemma 2](#lem2), we know that what is obtained in this way is
+Now, additionally given a scheme morphism $\Spec A \rightarrow \Spec C$, let us see what the above base change gives. By [Lemma 2](#lem2), we know that what is obtained in this way is
 
 $$\Spec A\times_{\Spec C}\Spec B=\Spec(A\otimes_CB) \rightarrow \Spec A$$
 
-that is, the ring homomorphism $$A \rightarrow A\otimes_CB$$. In other words, base change is (in the case of affine schemes) nothing other than [\[Algebraic Structures\] §Change of Base Ring, ⁋Definition 3](/en/math/algebraic_structures/change_of_base_ring#def3).
+that is, the ring homomorphism $A \rightarrow A\otimes_CB$. In other words, base change is (in the case of affine schemes) nothing other than [\[Algebraic Structures\] §Change of Base Ring, ⁋Definition 3](/en/math/algebraic_structures/change_of_base_ring#def3).
 :::
 
-In particular, from the fact that for a $$B$$-algebra $$B[\x_1,\ldots,\x_n]$$ and an arbitrary ring homomorphism $$B \rightarrow A$$, the following equation
+In particular, from the fact that for a $B$-algebra $B[\x_1,\ldots,\x_n]$ and an arbitrary ring homomorphism $B \rightarrow A$, the following equation
 
 $$A\otimes_BB[\x_1,\ldots,\x_n]\cong A[\x_1,\ldots, \x_n]$$
 
@@ -138,19 +138,19 @@ holds, we know that the following diagram
 
 is a fiber diagram.
 
-This perspective is important, but for now the geometric intuition here is not very visible. For this, let us think specifically of the case where $$S' \rightarrow S$$ is an embedding.
+This perspective is important, but for now the geometric intuition here is not very visible. For this, let us think specifically of the case where $S' \rightarrow S$ is an embedding.
 
-First, given an arbitrary $$S$$-family $$X \rightarrow S$$ and an open embedding $$S' \rightarrow S$$, [Lemma 3](#lem3) shows that the $$S'$$-family $$X\times_SS' \rightarrow S'$$ is simply obtained by restricting the base of $$X \rightarrow S$$ to $$S'$$. Moreover, if we also assume that $$X \rightarrow S$$ is an open embedding, we know that $$X\times_SS'$$ is the intersection of $$X$$ and $$S'$$ (inside $$S$$).
+First, given an arbitrary $S$-family $X \rightarrow S$ and an open embedding $S' \rightarrow S$, [Lemma 3](#lem3) shows that the $S'$-family $X\times_SS' \rightarrow S'$ is simply obtained by restricting the base of $X \rightarrow S$ to $S'$. Moreover, if we also assume that $X \rightarrow S$ is an open embedding, we know that $X\times_SS'$ is the intersection of $X$ and $S'$ (inside $S$).
 
 The above argument also holds for closed embeddings. For this, we must show the following lemma corresponding to [Lemma 3](#lem3).
 
 ::: Lemma 10
-For a ring homomorphism $$\phi: B \rightarrow A$$ and an arbitrary ideal $$\mathfrak{b}$$ of $$B$$, there exists an isomorphism
+For a ring homomorphism $\phi: B \rightarrow A$ and an arbitrary ideal $\mathfrak{b}$ of $B$, there exists an isomorphism
 
-$$A/\phi(\mathfrak{b})A\cong A \otimes_B(B/\mathfrak{b}).$$
+$A/\phi(\mathfrak{b})A\cong A \otimes_B(B/\mathfrak{b}).$
 :::
 ::: Proof
-Taking $$\otimes_BA$$ of the following exact sequence obtained from the ideal $$\mathfrak{b}$$
+Taking $\otimes_BA$ of the following exact sequence obtained from the ideal $\mathfrak{b}$
 
 $$\mathfrak{b} \rightarrow B \rightarrow B/\mathfrak{b} \rightarrow 0$$
 
@@ -158,82 +158,82 @@ gives the exact sequence
 
 $$A\otimes_B \mathfrak{b} \rightarrow A\otimes_BB \rightarrow A\otimes_B (B/\mathfrak{b}) \rightarrow 0$$
 
-and since the image of $$A\otimes_B \mathfrak{b}$$ in $$A\otimes_BB\cong A$$ is $$\phi(\mathfrak{b})A$$, we obtain the desired result.
+and since the image of $A\otimes_B \mathfrak{b}$ in $A\otimes_BB\cong A$ is $\phi(\mathfrak{b})A$, we obtain the desired result.
 :::
 
-Now, an arbitrary closed embedding locally always comes from some $$B \rightarrow B/\mathfrak{b}$$, so the above discussion can be applied identically to closed embeddings as well. In particular, the intersection of two closed embeddings is well-defined.
+Now, an arbitrary closed embedding locally always comes from some $B \rightarrow B/\mathfrak{b}$, so the above discussion can be applied identically to closed embeddings as well. In particular, the intersection of two closed embeddings is well-defined.
 
 ::: Example 11
-Consider the two closed subschemes of $$Z=\Spec\mathbb{K}[\x,\y]$$
+Consider the two closed subschemes of $Z=\Spec\mathbb{K}[\x,\y]$
 
 $$X=\Spec \mathbb{K}[\x,\y]/(\y)=\Spec \mathbb{K}[\x],\qquad Y=\Spec \mathbb{K}[\x,\y]/(\x)=\Spec \mathbb{K}[\y].$$
 
-Then $$X$$ and $$Y$$ correspond to the $$\x$$-axis and $$\y$$-axis of $$Z=\mathbb{A}^2_\mathbb{K}$$ respectively, and their closed embeddings are given by the projections
+Then $X$ and $Y$ correspond to the $\x$-axis and $\y$-axis of $Z=\mathbb{A}^2_\mathbb{K}$ respectively, and their closed embeddings are given by the projections
 
 $$\mathbb{K}[\x,\y] \rightarrow \mathbb{K}[\x],\qquad \mathbb{K}[\x,\y] \rightarrow \mathbb{K}[\y].$$
 
-Now, $$X\times_ZY$$ is, by [Lemma 2](#lem2), given by
+Now, $X\times_ZY$ is, by [Lemma 2](#lem2), given by
 
 $$\Spec\left(\frac{\mathbb{K}[\x,\y]}{(\x)}\otimes_{\mathbb{K}[\x,\y]} \frac{\mathbb{K}[\x,\y]}{(\y)}\right)\cong \Spec \mathbb{K}[\x,\y]/(\x,\y)\cong\Spec \mathbb{K}$$
 
-which can be checked to correspond exactly to the origin, the intersection point of the $$\x$$-axis and the $$\y$$-axis.
+which can be checked to correspond exactly to the origin, the intersection point of the $\x$-axis and the $\y$-axis.
 
-Now, let us replace $$Y$$ in the above computation with the following closed subscheme
+Now, let us replace $Y$ in the above computation with the following closed subscheme
 
 $$Y=\Spec \mathbb{K}[\x,\y]/(\y-\x^2).$$
 
-The intersection of $$\y=\x^2$$ and the $$\x$$-axis is again the origin, but this time a double root exists, so the scheme structure must be given differently from above. Indeed, repeating the computation, $$X\times_ZY$$ becomes
+The intersection of $\y=\x^2$ and the $\x$-axis is again the origin, but this time a double root exists, so the scheme structure must be given differently from above. Indeed, repeating the computation, $X\times_ZY$ becomes
 
-$$\Spec\left(\frac{\mathbb{K}[\x,\y]}{(\y)}\otimes_{\mathbb{K}[\x,\y]}\frac{\mathbb{K}[\x,\y]}{(\y-\x^2)}\right)\cong\Spec \mathbb{K}[\x,\y]/(\y,\y-\x^2)\cong\Spec \mathbb{K}[\x]/(\x^2).$$
+$\Spec\left(\frac{\mathbb{K}[\x,\y]}{(\y)}\otimes_{\mathbb{K}[\x,\y]}\frac{\mathbb{K}[\x,\y]}{(\y-\x^2)}\right)\cong\Spec \mathbb{K}[\x,\y]/(\y,\y-\x^2)\cong\Spec \mathbb{K}[\x]/(\x^2).$
 :::
 
-From this perspective, we can also see how to define the fiber $$\varphi^{-1}(y_0)$$ of a scheme morphism $$\varphi:X \rightarrow Y$$ at a point $$y_0\in Y$$. Whether $$y_0$$ is a closed point or not, viewing it as $$\iota:\{y_0\}\hookrightarrow Y$$ and taking the fiber product with $$\varphi$$ suffices. For this, we must describe $$\iota$$ as a scheme morphism.
+From this perspective, we can also see how to define the fiber $\varphi^{-1}(y_0)$ of a scheme morphism $\varphi:X \rightarrow Y$ at a point $y_0\in Y$. Whether $y_0$ is a closed point or not, viewing it as $\iota:\{y_0\}\hookrightarrow Y$ and taking the fiber product with $\varphi$ suffices. For this, we must describe $\iota$ as a scheme morphism.
 
-For this, consider the residue field $$\kappa(y)$$ at $$y$$. Then $$\Spec\kappa(y)$$ is always a one-point set. Moreover, considering an affine open subset $$V=\Spec B$$ of $$Y$$ containing $$y$$, and assuming that $$y$$ corresponds to the prime ideal $$\mathfrak{q}_y$$, the canonical morphism
+For this, consider the residue field $\kappa(y)$ at $y$. Then $\Spec\kappa(y)$ is always a one-point set. Moreover, considering an affine open subset $V=\Spec B$ of $Y$ containing $y$, and assuming that $y$ corresponds to the prime ideal $\mathfrak{q}_y$, the canonical morphism
 
 $$B \rightarrow B_{\mathfrak{q}_y} \rightarrow B_{\mathfrak{q}_y}/\mathfrak{q}_y B_{\mathfrak{q}_y} =\kappa(\mathfrak{q}_y)=\kappa(y)$$
 
-defines $$\Spec\kappa(y)\rightarrow \Spec B$$, and the (unique) point $$(0)$$ of $$\Spec \kappa(y)$$ is mapped to $$\mathfrak{q}_y$$ via the above morphism. Therefore, we define the following.
+defines $\Spec\kappa(y)\rightarrow \Spec B$, and the (unique) point $(0)$ of $\Spec \kappa(y)$ is mapped to $\mathfrak{q}_y$ via the above morphism. Therefore, we define the following.
 
 ::: Definition 12
-For a scheme morphism $$\varphi: X \rightarrow Y$$, the *fiber* at a point $$y\in Y$$ is defined as
+For a scheme morphism $\varphi: X \rightarrow Y$, the *fiber* at a point $y\in Y$ is defined as
 
 $$\varphi^{-1}(y)=X\times_Y\Spec \kappa(y).$$
 
-If $$Y$$ is irreducible, the fiber at the generic point of $$Y$$ is called the *generic fiber*.
+If $Y$ is irreducible, the fiber at the generic point of $Y$ is called the *generic fiber*.
 :::
 
 ::: Example 13
-For an algebraically closed field $$\mathbb{K}$$, define the ring homomorphism $$\mathbb{K}[\x] \rightarrow \mathbb{K}[\y]$$ by the formula $$\x \mapsto \y^2$$, and consider the scheme morphism $$\varphi: \Spec \mathbb{K}[\y] \rightarrow \Spec \mathbb{K}[\x]$$ obtained from it. Then the residue field at an arbitrary point $$(\x-a)$$ of $$\Spec\mathbb{K}[\x]$$ is
+For an algebraically closed field $\mathbb{K}$, define the ring homomorphism $\mathbb{K}[\x] \rightarrow \mathbb{K}[\y]$ by the formula $\x \mapsto \y^2$, and consider the scheme morphism $\varphi: \Spec \mathbb{K}[\y] \rightarrow \Spec \mathbb{K}[\x]$ obtained from it. Then the residue field at an arbitrary point $(\x-a)$ of $\Spec\mathbb{K}[\x]$ is
 
 $$\Frac(\mathbb{K}[\x]/(\x-a))=\mathbb{K}[\x]/(\x-a).$$
 
-Now, for arbitrary $$a\in \mathbb{K}$$,
+Now, for arbitrary $a\in \mathbb{K}$,
 
 $$\varphi^{-1}((\x-a))=\Spec \mathbb{K}[\y]\otimes_{\Spec \mathbb{K}[\x]}\Spec \mathbb{K}[\x]/(\x-a)\cong \Spec(\mathbb{K}[\y]\otimes_{\mathbb{K}[\x]}\mathbb{K}[\x]/(\x-a))=\Spec \mathbb{K}[\y]/(\y^2-a)$$
 
-and therefore if $$a=0$$ then $$\varphi^{-1}((\x))\cong\Spec \mathbb{K}[\y]/(\y^2)$$, and if $$a\neq 0$$ then from the assumption that $$\mathbb{K}$$ is algebraically closed we know that
+and therefore if $a=0$ then $\varphi^{-1}((\x))\cong\Spec \mathbb{K}[\y]/(\y^2)$, and if $a\neq 0$ then from the assumption that $\mathbb{K}$ is algebraically closed we know that
 
 $$\Spec \mathbb{K}[\y]/(\y^2-a)\cong \Spec \mathbb{K}[\y]/(\y-\sqrt{a})\coprod \Spec \mathbb{K}[\y]/(\y+\sqrt{a}).$$
 
-On the other hand, for the generic point $$(0)$$ of $$\mathbb{K}[\x]$$, since $$\kappa((0))=\mathbb{K}(\x)$$, we have
+On the other hand, for the generic point $(0)$ of $\mathbb{K}[\x]$, since $\kappa((0))=\mathbb{K}(\x)$, we have
 
-$$\varphi^{-1}((0))=\Spec \mathbb{K}[\y]\otimes_{\Spec \mathbb{K}[\x]}\Spec \mathbb{K}(\x)\cong \Spec\mathbb{K}(\y).$$
+$\varphi^{-1}((0))=\Spec \mathbb{K}[\y]\otimes_{\Spec \mathbb{K}[\x]}\Spec \mathbb{K}(\x)\cong \Spec\mathbb{K}(\y).$
 :::
 
 The above example is what we already examined in [§Properties of Scheme Morphisms, ⁋Example 15](/en/math/scheme_theory/properties_of_scheme_morphisms#ex15). In that example, we claimed that a finite morphism is always quasi-finite, and now we can prove this.
 
 ::: Proposition 14
-A finite morphism $$\varphi: X \rightarrow Y$$ is a quasi-finite morphism.
+A finite morphism $\varphi: X \rightarrow Y$ is a quasi-finite morphism.
 :::
 ::: Proof
-It suffices to show the affine case. That is, it suffices to show that for an arbitrary finite ring homomorphism $$\phi: B \rightarrow A$$ and a prime ideal $$\mathfrak{q}$$ of $$B$$, $$A\otimes_B\kappa(\mathfrak{q})$$ has only finitely many prime ideals. Since $$\phi$$ is finite, $$A\otimes_B\kappa(\mathfrak{q})$$ is a finite $$\kappa(\mathfrak{q})$$-algebra and hence artinian, from which we obtain the desired result. ([\[Commutative Algebra\] §Jordan–Hölder Theorem, ⁋Theorem 4](/en/math/commutative_algebra/Jordan-Holder_theorem#thm4))
+It suffices to show the affine case. That is, it suffices to show that for an arbitrary finite ring homomorphism $\phi: B \rightarrow A$ and a prime ideal $\mathfrak{q}$ of $B$, $A\otimes_B\kappa(\mathfrak{q})$ has only finitely many prime ideals. Since $\phi$ is finite, $A\otimes_B\kappa(\mathfrak{q})$ is a finite $\kappa(\mathfrak{q})$-algebra and hence artinian, from which we obtain the desired result. ([\[Commutative Algebra\] §Jordan–Hölder Theorem, ⁋Theorem 4](/en/math/commutative_algebra/Jordan-Holder_theorem#thm4))
 :::
 
-From the above examples and propositions, we can make an important observation: if $$X \rightarrow S$$ satisfies some property $$P$$ of scheme morphisms, then the base change $$X\times_SS' \rightarrow S'$$ via an arbitrary $$S' \rightarrow S$$ also satisfies it. This is no accident; in fact, most properties of interest to us are closed under base change.
+From the above examples and propositions, we can make an important observation: if $X \rightarrow S$ satisfies some property $P$ of scheme morphisms, then the base change $X\times_SS' \rightarrow S'$ via an arbitrary $S' \rightarrow S$ also satisfies it. This is no accident; in fact, most properties of interest to us are closed under base change.
 
 ::: Proposition 15
-If a scheme morphism $$\varphi:X \rightarrow Z$$ is quasicompact (resp. quasiseparated, affine, finite, integral, locally of finite type, finite type, locally of finite presentation, finite presentation, quasi-finite, surjective), then the base change $$X\times_ZY \rightarrow X$$ of $$\varphi$$ via an arbitrary scheme morphism $$Y \rightarrow Z$$ is also such.
+If a scheme morphism $\varphi:X \rightarrow Z$ is quasicompact (resp. quasiseparated, affine, finite, integral, locally of finite type, finite type, locally of finite presentation, finite presentation, quasi-finite, surjective), then the base change $X\times_ZY \rightarrow X$ of $\varphi$ via an arbitrary scheme morphism $Y \rightarrow Z$ is also such.
 :::
 
 For instance, for integral morphisms and finite morphisms, this was proved in [\[Commutative Algebra\] §Integral Extensions, ⁋Proposition 14](/en/math/commutative_algebra/integral_extension#prop14), and for the other properties the above proposition can be shown without difficulty.

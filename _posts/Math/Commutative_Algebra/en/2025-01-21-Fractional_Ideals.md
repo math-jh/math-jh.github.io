@@ -21,121 +21,121 @@ In the following we examine regular local rings ([§Dimension, ⁋Definition 12]
 First, we define the following.
 
 ::: Definition 1
-For a ring $$A$$, an $$A$$-module $$M$$ is called *invertible* if $$M$$ is finitely generated and for every prime ideal $$\mathfrak{p}$$ of $$A$$ we have $$M_\mathfrak{p}\cong A_\mathfrak{p}$$.
+For a ring $A$, an $A$-module $M$ is called *invertible* if $M$ is finitely generated and for every prime ideal $\mathfrak{p}$ of $A$ we have $M_\mathfrak{p}\cong A_\mathfrak{p}$.
 :::
 
-For a prime ideal $$\mathfrak{p}$$ and a maximal ideal $$\mathfrak{m}$$ containing $$\mathfrak{p}$$, if $$A_\mathfrak{m}\cong M_\mathfrak{m}$$ then we would have $$A_\mathfrak{p}\cong M_\mathfrak{p}$$; hence it suffices to check the above condition only for maximal ideals.
+For a prime ideal $\mathfrak{p}$ and a maximal ideal $\mathfrak{m}$ containing $\mathfrak{p}$, if $A_\mathfrak{m}\cong M_\mathfrak{m}$ then we would have $A_\mathfrak{p}\cong M_\mathfrak{p}$; hence it suffices to check the above condition only for maximal ideals.
 
-Now define $$M^\ast=\Hom_A(M,A)$$. Since $$A$$ is commutative, $$\Hom_A(M, A)$$ is again an $$A$$-module, and moreover the trace map $$M^\ast\otimes M \rightarrow A$$ exists. ([\[Multilinear Algebra\] §Hom and Tensor Products, ⁋Definition 6](/en/math/multilinear_algebra/hom_and_tensor#def6))
+Now define $M^\ast=\Hom_A(M,A)$. Since $A$ is commutative, $\Hom_A(M, A)$ is again an $A$-module, and moreover the trace map $M^\ast\otimes M \rightarrow A$ exists. ([\[Multilinear Algebra\] §Hom and Tensor Products, ⁋Definition 6](/en/math/multilinear_algebra/hom_and_tensor#def6))
 
 ::: Definition 2
-Let $$A$$ be a ring and let $$K$$ be the total ring of fractions of $$A$$. Then an $$A$$-submodule $$\mathfrak{A}$$ of $$K$$ is called a *fractional ideal* of $$A$$ if there exists a nonzero element $$a\in A$$ such that $$a \mathfrak{A}\subseteq A$$.
+Let $A$ be a ring and let $K$ be the total ring of fractions of $A$. Then an $A$-submodule $\mathfrak{A}$ of $K$ is called a *fractional ideal* of $A$ if there exists a nonzero element $a\in A$ such that $a \mathfrak{A}\subseteq A$.
 :::
 
-That the $$a \mathfrak{A}$$ obtained from the above definition is an ideal of $$A$$ is obvious. Intuitively, if $$\mathfrak{A}$$ is finitely generated, the condition $$a \mathfrak{A}\subseteq A$$ corresponds to multiplying the generators of $$\mathfrak{A}$$ by a common denominator to view the result as a subset of $$A$$. In particular, any finitely generated $$A$$-submodule of $$K$$
+That the $a \mathfrak{A}$ obtained from the above definition is an ideal of $A$ is obvious. Intuitively, if $\mathfrak{A}$ is finitely generated, the condition $a \mathfrak{A}\subseteq A$ corresponds to multiplying the generators of $\mathfrak{A}$ by a common denominator to view the result as a subset of $A$. In particular, any finitely generated $A$-submodule of $K$
 
 $$\left(\frac{a_1}{s_1},\ldots, \frac{a_n}{s_n}\right)A$$
 
-is always a fractional ideal via the element $$s_1\cdots s_n\in A$$, and if $$A$$ is Noetherian then the converse also holds. As with ordinary ideals, the product of fractional ideals is defined by
+is always a fractional ideal via the element $s_1\cdots s_n\in A$, and if $A$ is Noetherian then the converse also holds. As with ordinary ideals, the product of fractional ideals is defined by
 
 $$\mathfrak{A}\mathfrak{B}=\left\{\sum_{i=1}^n a_ib_i: a_i\in \mathfrak{A}, b_i\in \mathfrak{B}\right\}.$$
 
-In the following theorem, for any subset $$X$$ of $$K$$,
+In the following theorem, for any subset $X$ of $K$,
 
 $$X^{-1}=(A:_KX)=\{y\in K\mid yX\subseteq A\}$$
 
-and, following the above intuition, this can be thought of roughly as the collection of denominators of $$X$$.
+and, following the above intuition, this can be thought of roughly as the collection of denominators of $X$.
 
 ::: Theorem 3
-For a Noetherian ring $$A$$, the following hold.
+For a Noetherian ring $A$, the following hold.
 
-1. An $$A$$-module $$M$$ is invertible if and only if the trace map $$M^\ast\otimes_A M \rightarrow A$$ is an isomorphism.
-2. Any invertible module is isomorphic to some fractional ideal of $$A$$, and thus any invertible $$A$$-submodule of $$K$$ is a fractional ideal of $$A$$. Any invertible fractional ideal obtained in this way contains a non-zerodivisor of $$A$$.
-3. For two invertible $$A$$-submodules $$M,N$$ of $$K$$, the morphisms defined by the following two formulas
+1. An $A$-module $M$ is invertible if and only if the trace map $M^\ast\otimes_A M \rightarrow A$ is an isomorphism.
+2. Any invertible module is isomorphic to some fractional ideal of $A$, and thus any invertible $A$-submodule of $K$ is a fractional ideal of $A$. Any invertible fractional ideal obtained in this way contains a non-zerodivisor of $A$.
+3. For two invertible $A$-submodules $M,N$ of $K$, the morphisms defined by the following two formulas
     
     $$M\otimes N \rightarrow MN;\quad s\otimes t\mapsto st,\qquad M^{-1}N \rightarrow \Hom_A(M,N);\quad t\mapsto u_t(-)=t-$$
 
-    are isomorphisms. In particular, $$M^{-1}\cong M^\ast$$ holds.
-4. For any $$A$$-submodule $$M\subseteq K$$, $$M$$ is invertible if and only if $$M^{-1}M=A$$.
+    are isomorphisms. In particular, $M^{-1}\cong M^\ast$ holds.
+4. For any $A$-submodule $M\subseteq K$, $M$ is invertible if and only if $M^{-1}M=A$.
 :::
 ::: Proof
 1. First, one direction is obvious by [§Properties of Localization, ⁋Proposition 4](/en/math/commutative_algebra/properties_of_localization#prop4).  
-    Conversely, suppose the trace map $$\tr:M^\ast\otimes_A M \rightarrow A$$ is an isomorphism; we must show that $$M_\mathfrak{p}\cong A_\mathfrak{p}$$. Since $$\tr$$ is an isomorphism, there exists an element of $$M^\ast\otimes M$$ such that
+    Conversely, suppose the trace map $\tr:M^\ast\otimes_A M \rightarrow A$ is an isomorphism; we must show that $M_\mathfrak{p}\cong A_\mathfrak{p}$. Since $\tr$ is an isomorphism, there exists an element of $M^\ast\otimes M$ such that
     
     $$\tr\left(\sum_{i=1}^n\xi_i\otimes x_i\right)=1$$
 
-    and we show that $$M_\mathfrak{p}$$ is generated by the $$a_i$$. Then $$M$$ must be generated by these $$x_1,\ldots, x_n$$ by [§Properties of Localization, ⁋Proposition 4](/en/math/commutative_algebra/properties_of_localization#prop4).
+    and we show that $M_\mathfrak{p}$ is generated by the $a_i$. Then $M$ must be generated by these $x_1,\ldots, x_n$ by [§Properties of Localization, ⁋Proposition 4](/en/math/commutative_algebra/properties_of_localization#prop4).
 
-    Again by this proposition, from the given hypothesis we obtain that for any prime ideal $$\mathfrak{p}$$, the localized trace $$\tr_\mathfrak{p}$$ is an isomorphism via the following isomorphism
+    Again by this proposition, from the given hypothesis we obtain that for any prime ideal $\mathfrak{p}$, the localized trace $\tr_\mathfrak{p}$ is an isomorphism via the following isomorphism
     
     $$\tr_\mathfrak{p}: (M^\ast\otimes_AM)_\mathfrak{p}\cong M^\ast_\mathfrak{p}\otimes_{A_\mathfrak{p}}M_\mathfrak{p} \rightarrow A_\mathfrak{p}.$$
     
-    Similarly, we can localize $$\xi_i:M \rightarrow A$$ to define $$(\xi_i)_\mathfrak{p}: M_\mathfrak{p}\rightarrow A_\mathfrak{p}$$, and these will be the desired isomorphisms.  
-    On the other hand, for a fixed $$\mathfrak{p}$$, since $$1\not\in \mathfrak{p}$$, among the chosen $$\xi_i\otimes x_i$$ above, at least one must satisfy $$\tr(\xi_i\otimes x_i)=\xi_i(x_i)\not\in \mathfrak{p}$$. Then the inverse of this element exists in $$A_\mathfrak{p}$$; writing it as $$a_i$$ for convenience, we know from the equation
+    Similarly, we can localize $\xi_i:M \rightarrow A$ to define $(\xi_i)_\mathfrak{p}: M_\mathfrak{p}\rightarrow A_\mathfrak{p}$, and these will be the desired isomorphisms.  
+    On the other hand, for a fixed $\mathfrak{p}$, since $1\not\in \mathfrak{p}$, among the chosen $\xi_i\otimes x_i$ above, at least one must satisfy $\tr(\xi_i\otimes x_i)=\xi_i(x_i)\not\in \mathfrak{p}$. Then the inverse of this element exists in $A_\mathfrak{p}$; writing it as $a_i$ for convenience, we know from the equation
 
     $$(\xi_i)_\mathfrak{p}(a_i x_i)=1$$
 
-    that $$(\xi_i)_{\mathfrak{p}}: M_\mathfrak{p} \rightarrow A_\mathfrak{p}$$ sends $$a_i x_i$$ to $$1\in A_\mathfrak{p}$$. Now define $$A_\mathfrak{p} \rightarrow M_\mathfrak{p}$$ by $$1\mapsto a_ix_i$$; this is a section of $$(\xi_i)_\mathfrak{p}$$, and thus the following short exact sequence
+    that $(\xi_i)_{\mathfrak{p}}: M_\mathfrak{p} \rightarrow A_\mathfrak{p}$ sends $a_i x_i$ to $1\in A_\mathfrak{p}$. Now define $A_\mathfrak{p} \rightarrow M_\mathfrak{p}$ by $1\mapsto a_ix_i$; this is a section of $(\xi_i)_\mathfrak{p}$, and thus the following short exact sequence
 
     $$0 \longrightarrow \ker (\xi_i)_\mathfrak{p}\longrightarrow M_\mathfrak{p}\overset{(\xi_i)_\mathfrak{p}}{\longrightarrow}A_\mathfrak{p}\longrightarrow 0$$
 
-    splits. From this we know that $$M_\mathfrak{p}\cong A_\mathfrak{p}x_i\oplus\ker(\xi_i)_\mathfrak{p}$$. Similarly, via $$M_\mathfrak{p}\hookrightarrow M^{\ast\ast}_\mathfrak{p}$$, viewing $$x_i$$ as a map $$M^\ast_\mathfrak{p} \rightarrow A_\mathfrak{p}$$, we obtain $$M_\mathfrak{p}^\ast\cong A_\mathfrak{p}\xi_i\oplus \ker(x_i)$$, and now
+    splits. From this we know that $M_\mathfrak{p}\cong A_\mathfrak{p}x_i\oplus\ker(\xi_i)_\mathfrak{p}$. Similarly, via $M_\mathfrak{p}\hookrightarrow M^{\ast\ast}_\mathfrak{p}$, viewing $x_i$ as a map $M^\ast_\mathfrak{p} \rightarrow A_\mathfrak{p}$, we obtain $M_\mathfrak{p}^\ast\cong A_\mathfrak{p}\xi_i\oplus \ker(x_i)$, and now
 
     $$M^\ast_\mathfrak{p}\otimes M_\mathfrak{p}\cong (A_\mathfrak{p}\xi_i\otimes A_\mathfrak{p}x_i)\oplus ( A_\mathfrak{p}\xi_i\otimes\ker (\xi_i)_\mathfrak{p})\oplus(\ker(x_i)_\mathfrak{p}\otimes A_\mathfrak{p}x_i)\oplus (\ker(x_i)_\mathfrak{p}\otimes \ker(\xi_i)_\mathfrak{p}).$$
 
-    However, since the first term on the right-hand side exactly recovers all elements of $$A_\mathfrak{p}$$, when mapped by $$\tr_\mathfrak{p}$$ the remaining terms must go to $$0$$, and in particular from the second term going to $$0$$ we know that $$(\ker\xi_i)_\mathfrak{p}=\ker(\xi_i)_\mathfrak{p}=0$$. That is, $$\xi_i$$ is an isomorphism from $$M_\mathfrak{p}$$ to $$A_\mathfrak{p}$$ as claimed above, and through this we can regard $$M_\mathfrak{p}$$ as the free $$A_\mathfrak{p}$$-module generated by $$x_i$$.
-2. Now suppose $$M$$ is an invertible module. To compare it with a fractional ideal of $$A$$, we must first embed $$M$$ into $$K$$. First, we can check that the maximal ideals of the total ring of fractions $$K$$ of $$A$$ correspond exactly to the maximal associated prime ideals of $$A$$, and since $$\Ass A$$ is finite, $$K$$ is a semilocal ring. Thus from [§Integral Extensions, ⁋Proposition 13](/en/math/commutative_algebra/integral_extension#prop13) and the following isomorphisms
+    However, since the first term on the right-hand side exactly recovers all elements of $A_\mathfrak{p}$, when mapped by $\tr_\mathfrak{p}$ the remaining terms must go to $0$, and in particular from the second term going to $0$ we know that $(\ker\xi_i)_\mathfrak{p}=\ker(\xi_i)_\mathfrak{p}=0$. That is, $\xi_i$ is an isomorphism from $M_\mathfrak{p}$ to $A_\mathfrak{p}$ as claimed above, and through this we can regard $M_\mathfrak{p}$ as the free $A_\mathfrak{p}$-module generated by $x_i$.
+2. Now suppose $M$ is an invertible module. To compare it with a fractional ideal of $A$, we must first embed $M$ into $K$. First, we can check that the maximal ideals of the total ring of fractions $K$ of $A$ correspond exactly to the maximal associated prime ideals of $A$, and since $\Ass A$ is finite, $K$ is a semilocal ring. Thus from [§Integral Extensions, ⁋Proposition 13](/en/math/commutative_algebra/integral_extension#prop13) and the following isomorphisms
     
     $$M\otimes K_{\mathfrak{m}K}=M_\mathfrak{m}\cong A_\mathfrak{m}\cong K_{\mathfrak{m}K}$$
 
-    we obtain $$M\otimes K\cong K$$. Composing this with the localization map $$\epsilon: M \rightarrow S^{-1}M=K\otimes M$$, we obtain the desired embedding, and the fact that $$\epsilon$$ is injective also follows by applying [§Properties of Localization, ⁋Proposition 4](/en/math/commutative_algebra/properties_of_localization#prop4) to any maximal ideal $$\mathfrak{m}$$ of $$A$$ to obtain the map
+    we obtain $M\otimes K\cong K$. Composing this with the localization map $\epsilon: M \rightarrow S^{-1}M=K\otimes M$, we obtain the desired embedding, and the fact that $\epsilon$ is injective also follows by applying [§Properties of Localization, ⁋Proposition 4](/en/math/commutative_algebra/properties_of_localization#prop4) to any maximal ideal $\mathfrak{m}$ of $A$ to obtain the map
 
     $$\epsilon_\mathfrak{m}: M_\mathfrak{m}\cong A_\mathfrak{m} \rightarrow K\otimes_{A_\mathfrak{m}} A_\mathfrak{m}=S^{-1}A_\mathfrak{m}$$
 
-    and noting that the elements of $$S$$ (i.e., the non-zerodivisors of $$A$$) are non-zerodivisors in $$A_\mathfrak{m}$$.  
-    Now suppose a fractional ideal $$\mathfrak{A}$$ is given and assume that $$\mathfrak{A}\cap A$$ consists only of zerodivisors. Then, since $$\mathfrak{A}$$ is a (finitely generated) fractional ideal, we can find a common denominator $$a$$ such that $$a \mathfrak{A}\subseteq A$$ becomes an ideal of $$A$$, and now applying [§Associated Primes, ⁋Theorem 7](/en/math/commutative_algebra/associated_primes#thm7) we see that $$a\mathfrak{A}$$ is an ideal of $$A$$ consisting only of non-zerodivisors, so it belongs to the union of associated prime ideals, and applying [§Associated Primes, ⁋Lemma 2](/en/math/commutative_algebra/associated_primes#lem2) here we know that $$a\mathfrak{A}$$ actually annihilates some $$b\in A$$. That is, $$ab$$ annihilates $$\mathfrak{A}$$, and thus localizing at a prime ideal $$\mathfrak{p}$$ containing $$\ann(ab)$$, we know that $$M_\mathfrak{p}\not\cong A_\mathfrak{p}$$.
-3. Suppose two invertible modules $$M,N$$ are given. Then by the second result we can regard them as fractional ideals inside $$K$$, and the maps given in the claim are defined in this way. Since the fact that the given morphisms are isomorphisms will be shown via [§Properties of Localization, ⁋Proposition 4](/en/math/commutative_algebra/properties_of_localization#prop4), we may assume from the beginning that $$A$$ is local, and then by the argument in the second result and the definition of invertible module, both $$M$$ and $$N$$ are isomorphic to $$A$$. Now letting $$s$$ and $$t$$ be non-zerodivisors of $$K$$ generating $$M$$ and $$N$$ respectively, the first morphism is already an epimorphism, and moreover viewing $$M\otimes_A N$$ as $$A\cong As\otimes_AAt$$, the map $$M\otimes N \rightarrow MN$$ can be understood as sending $$1\otimes1$$ to $$st$$, so from the fact that $$st$$ is a non-zerodivisor we know that it is also a monomorphism.
-  For the second morphism, first by the second result we can choose a suitable non-zerodivisor $$a\in A\cap M$$. Then for any nonzero $$t\in M^{-1}N$$ we have $$ta\neq 0$$, so $$u_t$$ is not the zero morphism, and thus the morphism in the claim is a monomorphism. That it is an epimorphism follows because for any $$u\in \Hom_A(M,N)$$, if $$u(x)=y$$ then $$u=u_{y/x}$$ holds. In particular, setting $$N=A$$ we obtain the last claim.
-4. First, if $$M$$ is invertible then by result 3 we can regard $$M^{-1}\otimes M \rightarrow M^{-1}M$$ and the trace map $$M^\ast\otimes M \rightarrow A$$ as the same. Conversely, if an arbitrary $$A$$-submodule $$M$$ of $$K$$ satisfies $$M^{-1}M=A$$, then as above we may assume via localization that $$(A,\mathfrak{m})$$ is a local ring and show that $$M\cong A$$. But by the condition $$M^{-1}M=A$$, we can arrange that for some suitable $$y\in M^{-1}$$, $$yM\not\subseteq \mathfrak{m}$$, and then by the maximality of $$\mathfrak{m}$$ we must have $$yM=A$$, from which we obtain the isomorphism $$y-$$ between $$M$$ and $$A$$.
+    and noting that the elements of $S$ (i.e., the non-zerodivisors of $A$) are non-zerodivisors in $A_\mathfrak{m}$.  
+    Now suppose a fractional ideal $\mathfrak{A}$ is given and assume that $\mathfrak{A}\cap A$ consists only of zerodivisors. Then, since $\mathfrak{A}$ is a (finitely generated) fractional ideal, we can find a common denominator $a$ such that $a \mathfrak{A}\subseteq A$ becomes an ideal of $A$, and now applying [§Associated Primes, ⁋Theorem 7](/en/math/commutative_algebra/associated_primes#thm7) we see that $a\mathfrak{A}$ is an ideal of $A$ consisting only of non-zerodivisors, so it belongs to the union of associated prime ideals, and applying [§Associated Primes, ⁋Lemma 2](/en/math/commutative_algebra/associated_primes#lem2) here we know that $a\mathfrak{A}$ actually annihilates some $b\in A$. That is, $ab$ annihilates $\mathfrak{A}$, and thus localizing at a prime ideal $\mathfrak{p}$ containing $\ann(ab)$, we know that $M_\mathfrak{p}\not\cong A_\mathfrak{p}$.
+3. Suppose two invertible modules $M,N$ are given. Then by the second result we can regard them as fractional ideals inside $K$, and the maps given in the claim are defined in this way. Since the fact that the given morphisms are isomorphisms will be shown via [§Properties of Localization, ⁋Proposition 4](/en/math/commutative_algebra/properties_of_localization#prop4), we may assume from the beginning that $A$ is local, and then by the argument in the second result and the definition of invertible module, both $M$ and $N$ are isomorphic to $A$. Now letting $s$ and $t$ be non-zerodivisors of $K$ generating $M$ and $N$ respectively, the first morphism is already an epimorphism, and moreover viewing $M\otimes_A N$ as $A\cong As\otimes_AAt$, the map $M\otimes N \rightarrow MN$ can be understood as sending $1\otimes1$ to $st$, so from the fact that $st$ is a non-zerodivisor we know that it is also a monomorphism.
+  For the second morphism, first by the second result we can choose a suitable non-zerodivisor $a\in A\cap M$. Then for any nonzero $t\in M^{-1}N$ we have $ta\neq 0$, so $u_t$ is not the zero morphism, and thus the morphism in the claim is a monomorphism. That it is an epimorphism follows because for any $u\in \Hom_A(M,N)$, if $u(x)=y$ then $u=u_{y/x}$ holds. In particular, setting $N=A$ we obtain the last claim.
+4. First, if $M$ is invertible then by result 3 we can regard $M^{-1}\otimes M \rightarrow M^{-1}M$ and the trace map $M^\ast\otimes M \rightarrow A$ as the same. Conversely, if an arbitrary $A$-submodule $M$ of $K$ satisfies $M^{-1}M=A$, then as above we may assume via localization that $(A,\mathfrak{m})$ is a local ring and show that $M\cong A$. But by the condition $M^{-1}M=A$, we can arrange that for some suitable $y\in M^{-1}$, $yM\not\subseteq \mathfrak{m}$, and then by the maximality of $\mathfrak{m}$ we must have $yM=A$, from which we obtain the isomorphism $y-$ between $M$ and $A$.
 :::
 
 ::: Theorem 4
-For a UFD $$R$$, we have $$\Pic(R)=0$$. That is, every invertible module over a UFD is free.
+For a UFD $R$, we have $\Pic(R)=0$. That is, every invertible module over a UFD is free.
 :::
 ::: Proof
-Suppose $$R$$ is a UFD and $$I$$ is an invertible fractional ideal of $$R$$. For sufficiency we may assume $$I \subseteq R$$ (otherwise we can choose a suitable $$s \in R$$ such that $$sI \subseteq R$$; if $$I$$ is principal then $$sI$$ is also principal).
+Suppose $R$ is a UFD and $I$ is an invertible fractional ideal of $R$. For sufficiency we may assume $I \subseteq R$ (otherwise we can choose a suitable $s \in R$ such that $sI \subseteq R$; if $I$ is principal then $sI$ is also principal).
 
-Since $$I$$ is invertible we have $$I^{-1}I = R$$, and by [Definition 1](#def1) we have $$I_\mathfrak{p} \cong R_\mathfrak{p}$$ at any prime $$\mathfrak{p}$$. Thus $$I$$ is **locally principal**: for any height 1 prime $$\mathfrak{p}$$, the localization $$R_\mathfrak{p}$$ is a DVR (since $$R$$ is a UFD, $$R_\mathfrak{p}$$ is a regular local ring of dimension 1), and in a DVR every nonzero fractional ideal is principal, so for some suitable $$v_\mathfrak{p}(I) \in \mathbb{Z}$$ we have $$I_\mathfrak{p} = (\pi_\mathfrak{p}^{v_\mathfrak{p}(I)})$$. Here $$\pi_\mathfrak{p}$$ is the uniformizer of $$R_\mathfrak{p}$$, and $$v_\mathfrak{p}$$ is the normalized valuation of $$R_\mathfrak{p}$$. Since $$I \subseteq R$$, we have $$v_\mathfrak{p}(I) \ge 0$$.
+Since $I$ is invertible we have $I^{-1}I = R$, and by [Definition 1](#def1) we have $I_\mathfrak{p} \cong R_\mathfrak{p}$ at any prime $\mathfrak{p}$. Thus $I$ is **locally principal**: for any height 1 prime $\mathfrak{p}$, the localization $R_\mathfrak{p}$ is a DVR (since $R$ is a UFD, $R_\mathfrak{p}$ is a regular local ring of dimension 1), and in a DVR every nonzero fractional ideal is principal, so for some suitable $v_\mathfrak{p}(I) \in \mathbb{Z}$ we have $I_\mathfrak{p} = (\pi_\mathfrak{p}^{v_\mathfrak{p}(I)})$. Here $\pi_\mathfrak{p}$ is the uniformizer of $R_\mathfrak{p}$, and $v_\mathfrak{p}$ is the normalized valuation of $R_\mathfrak{p}$. Since $I \subseteq R$, we have $v_\mathfrak{p}(I) \ge 0$.
 
-Moreover, there are only finitely many $$\mathfrak{p}$$ with $$v_\mathfrak{p}(I) > 0$$ (since $$I$$ is finitely generated). Let $$a = \prod \pi_\mathfrak{p}^{v_\mathfrak{p}(I)}$$. Then
+Moreover, there are only finitely many $\mathfrak{p}$ with $v_\mathfrak{p}(I) > 0$ (since $I$ is finitely generated). Let $a = \prod \pi_\mathfrak{p}^{v_\mathfrak{p}(I)}$. Then
 
 $$I = \bigcap_{\mathfrak{p}} I_\mathfrak{p} \cap R = \bigcap_{\mathfrak{p}} (\pi_\mathfrak{p}^{v_\mathfrak{p}(I)}) = (a).$$
 
-For the first equality, the $$\subseteq$$ direction is obvious, and the converse follows from the fact that if $$x \in R$$ and $$v_\mathfrak{p}(x) \ge v_\mathfrak{p}(I)$$ for all height 1 primes $$\mathfrak{p}$$, then by comparing valuations at each $$\mathfrak{p}$$ in the UFD we have $$x/a \in R$$, i.e., $$x \in (a)$$. In the last equality, $$\bigcap_{\mathfrak{p}} (\pi_\mathfrak{p}^{v_\mathfrak{p}(I)})$$ is the set of $$x \in K$$ satisfying $$v_\mathfrak{p}(x) \ge v_\mathfrak{p}(I)$$ for all $$\mathfrak{p}$$, so this coincides with $$(a)$$. Therefore $$I$$ is a principal ideal.
+For the first equality, the $\subseteq$ direction is obvious, and the converse follows from the fact that if $x \in R$ and $v_\mathfrak{p}(x) \ge v_\mathfrak{p}(I)$ for all height 1 primes $\mathfrak{p}$, then by comparing valuations at each $\mathfrak{p}$ in the UFD we have $x/a \in R$, i.e., $x \in (a)$. In the last equality, $\bigcap_{\mathfrak{p}} (\pi_\mathfrak{p}^{v_\mathfrak{p}(I)})$ is the set of $x \in K$ satisfying $v_\mathfrak{p}(x) \ge v_\mathfrak{p}(I)$ for all $\mathfrak{p}$, so this coincides with $(a)$. Therefore $I$ is a principal ideal.
 :::
 
-Let us consider the set of isomorphism classes of invertible modules defined over a ring $$A$$. Then $$\otimes$$ preserves this isomorphism class, so it defines a binary operation on this set; $$\otimes$$ satisfies associativity and commutativity, and has identity element $$A$$. Moreover, by the first result of [Theorem 3](#thm3), any invertible module has an inverse $$M^\ast$$ with respect to $$\otimes$$. From this we know that this set becomes an abelian group.
+Let us consider the set of isomorphism classes of invertible modules defined over a ring $A$. Then $\otimes$ preserves this isomorphism class, so it defines a binary operation on this set; $\otimes$ satisfies associativity and commutativity, and has identity element $A$. Moreover, by the first result of [Theorem 3](#thm3), any invertible module has an inverse $M^\ast$ with respect to $\otimes$. From this we know that this set becomes an abelian group.
 
-Similarly, the invertible $$A$$-submodules of $$K$$ (i.e., the invertible fractional ideals of $$A$$) also have a group structure via ideal product, and here the fourth condition of [Theorem 3](#thm3) shows that the inverse of $$M$$ is $$M^{-1}$$. We name these as follows.
+Similarly, the invertible $A$-submodules of $K$ (i.e., the invertible fractional ideals of $A$) also have a group structure via ideal product, and here the fourth condition of [Theorem 3](#thm3) shows that the inverse of $M$ is $M^{-1}$. We name these as follows.
 
 ::: Definition 5
-For a ring $$A$$, we define the following.
+For a ring $A$, we define the following.
 
-1. The *Picard group* $$\Pic(A)$$ of $$A$$ is the group of isomorphism classes of invertible $$A$$-modules with operation given by $$\otimes$$.
-2. The group of *Cartier divisors* $$\CaDiv(A)$$ of $$A$$ is the group of invertible $$A$$-submodules of $$K$$, i.e., the group of fractional ideals of $$A$$.
+1. The *Picard group* $\Pic(A)$ of $A$ is the group of isomorphism classes of invertible $A$-modules with operation given by $\otimes$.
+2. The group of *Cartier divisors* $\CaDiv(A)$ of $A$ is the group of invertible $A$-submodules of $K$, i.e., the group of fractional ideals of $A$.
 :::
 
 Then the following is obvious from [Theorem 3](#thm3).
 
 ::: Corollary 6
-For a Noetherian ring $$A$$, the following hold.
+For a Noetherian ring $A$, the following hold.
 
-1. The function $$\CaDiv(A) \rightarrow \Pic(A)$$ taking an arbitrary invertible $$A$$-submodule of $$K$$ to its isomorphism class is surjective, and its kernel is isomorphic to the group $$K^\times$$ of units of $$K$$.
-2. $$\CaDiv(A)$$ is the free abelian group generated by the invertible ideals of $$A$$.
+1. The function $\CaDiv(A) \rightarrow \Pic(A)$ taking an arbitrary invertible $A$-submodule of $K$ to its isomorphism class is surjective, and its kernel is isomorphic to the group $K^\times$ of units of $K$.
+2. $\CaDiv(A)$ is the free abelian group generated by the invertible ideals of $A$.
 :::
 ::: Proof
-1. That the given function is surjective is the second result of [Theorem 3](#thm3), and for any unit $$x$$ of $$K$$, $$Ax\subseteq K$$ is an invertible module mapped to $$A$$ by this function. Thus if arbitrary invertible submodules $$M,N$$ are isomorphic, we can write $$I=xJ$$ for some suitable $$x\in K^\times$$, so the claim about the kernel also follows.
-2. For any invertible fractional ideal $$\mathfrak{A}$$, by the second and fourth results of [Theorem 3](#thm3), $$\mathfrak{A}^{-1}$$ is also an invertible fractional ideal, and then by the second result of [Theorem 3](#thm3) again, $$\mathfrak{A}^{-1}$$ contains a non-zerodivisor of $$A$$. Letting this be $$a$$, since $$a \mathfrak{A}\subseteq A$$ we have $$\mathfrak{A}=a \mathfrak{A}\cdot (a)^{-1}$$.
+1. That the given function is surjective is the second result of [Theorem 3](#thm3), and for any unit $x$ of $K$, $Ax\subseteq K$ is an invertible module mapped to $A$ by this function. Thus if arbitrary invertible submodules $M,N$ are isomorphic, we can write $I=xJ$ for some suitable $x\in K^\times$, so the claim about the kernel also follows.
+2. For any invertible fractional ideal $\mathfrak{A}$, by the second and fourth results of [Theorem 3](#thm3), $\mathfrak{A}^{-1}$ is also an invertible fractional ideal, and then by the second result of [Theorem 3](#thm3) again, $\mathfrak{A}^{-1}$ contains a non-zerodivisor of $A$. Letting this be $a$, since $a \mathfrak{A}\subseteq A$ we have $\mathfrak{A}=a \mathfrak{A}\cdot (a)^{-1}$.
 :::
 
 ---
