@@ -221,7 +221,7 @@ $$\Hom(\mathcal{F}^a, \mathcal{G})\xrightarrow{\ \sim\ }\Hom(\mathcal{F}, \mathc
 
 [정리 17](#thm17)은 [§Grothendieck 위상과 site, ⁋정리 14](/ko/math/stacks/grothendieck_topology#thm14)의 sheafification adjunction의 2-범주 판본이다. Sheafification이 presheaf를 sheaf로 보내는 left adjoint였듯, stackification은 CFG를 stack으로 보내는 2-범주적 reflection이다. 이 조작 덕분에 우리는 moduli 문제를 우선 CFG로 자유롭게 적은 뒤, 필요하면 stackify하여 하강이 성립하는 대상으로 바꿀 수 있다. 다음 예시가 그 전형이다.
 
-이제 group이 작용하는 대상의 분류 stack을 구성한다. 그 기본 단위가 torsor이다. Site 위의 sheaf of group $G$ (즉 $\Sh(\mathcal{C}, \tau)$의 group 대상)에 대하여, $G$-torsor는 group bundle의 sheaf적 일반화이다.
+이제 group이 작용하는 대상의 분류 stack을 구성한다. 그 기본 단위가 torsor이다. Site 위의 sheaf of group $G$ (즉 $\Sh(\mathcal{C}; \tau)$의 group 대상)에 대하여, $G$-torsor는 group bundle의 sheaf적 일반화이다.
 
 ::: 정의 18
 Site $(\mathcal{C}, \tau)$ 위의 sheaf of group $G$에 대하여, 대상 $T\in \mathcal{C}$ 위의 *$G$-torsor* (또는 *principal $G$-bundle*)란, $\mathcal{C}/T$ 위의 sheaf $P$과 $G\vert_T$의 좌작용 $G\vert_T\times P \rightarrow P$으로서 다음을 만족하는 것이다.

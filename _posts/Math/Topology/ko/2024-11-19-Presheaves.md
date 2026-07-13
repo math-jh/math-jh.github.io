@@ -140,7 +140,7 @@ $$\tilde{s}:U \rightarrow \Spe(\mathcal{F}); \quad x\mapsto (x,s_x)$$
 고정된 위상공간 $X$ 위에서 정의된 두 presheaf $\mathcal{F}, \mathcal{G}:\Open(X) \rightarrow \mathcal{A}$ 사이의 natural transformation을 *presheaf morphism<sub>준층 사상</sub>*으로 정의한다.
 :::
 
-즉 $X$ 위에서 정의된 $\mathcal{A}$-valued presheaf들의 카테고리는 functor category $[\Open(X)^\op, \mathcal{A}]$이다. 이를 $\PSh(X, \mathcal{A})$로 표기하며, 문맥상 혼동의 여지가 없을 때에는 $\PSh(X)$로만 적기도 한다. 여담으로 [예시 8](#ex8)의 $f_\ast$는 functor $\PSh(X, \mathcal{A})\rightarrow \PSh(Y, \mathcal{A})$이다. 
+즉 $X$ 위에서 정의된 $\mathcal{A}$-valued presheaf들의 카테고리는 functor category $[\Open(X)^\op, \mathcal{A}]$이다. 이를 $\PSh(X; \mathcal{A})$로 표기하며, 문맥상 혼동의 여지가 없을 때에는 $\PSh(X)$로만 적기도 한다. 여담으로 [예시 8](#ex8)의 $f_\ast$는 functor $\PSh(X; \mathcal{A})\rightarrow \PSh(Y; \mathcal{A})$이다. 
 
 우리에게 직관을 주는 [예시 3](#ex3)를 생각해보면, 열린집합 $U$에 대하여 정의된 $\phi(U):\mathcal{F}(U) \rightarrow \mathcal{G}(U)$는 $\phi:\mathcal{F}\rightarrow \mathcal{G}$를 열린집합 $U$로 제한하여 얻어지는 함수라 생각할 수 있으므로, 이를 종종 $\phi(U)$ 대신 $\phi\vert_U$로 적는다. 
 
@@ -168,10 +168,10 @@ $$\left(\prod_{i\in I} \mathcal{F}_i\right)(U)=\prod_{i\in I} \mathcal{F}_i(U)$$
 으로 정의할 수 있다.
 :::
 
-위와 같은 정의를 이용하여 category $\mathcal{A}$에 정의된 구조, 예를 들면 product나 coproduct, limit, colimit, monoidal product 등을 $\PSh(X, \mathcal{A})$에 옮겨올 수 있다. 특히 $\PSh(X, \Ab)$는 $\Ab$ 위에 정의된 monoidal structure $(\Ab,\otimes, \mathbb{Z})$를 물려받으며 여기에서의 monoidal object는 $\PSh(X, \Ring)$이다. 같은 맥락에서 다음 예시를 이해할 수 있다.
+위와 같은 정의를 이용하여 category $\mathcal{A}$에 정의된 구조, 예를 들면 product나 coproduct, limit, colimit, monoidal product 등을 $\PSh(X; \mathcal{A})$에 옮겨올 수 있다. 특히 $\PSh(X; \Ab)$는 $\Ab$ 위에 정의된 monoidal structure $(\Ab,\otimes, \mathbb{Z})$를 물려받으며 여기에서의 monoidal object는 $\PSh(X; \Ring)$이다. 같은 맥락에서 다음 예시를 이해할 수 있다.
 
 ::: 예시 14
-위상공간 $X$ 위에 정의된 $\Ring$-valued presheaf $\mathcal{O}_X$에 대하여, left $\mathcal{O}_X$-module object $\mathcal{F}\in\PSh(X,\Ab)$을 간단히 $\mathcal{O}_X$-module이라 부른다.
+위상공간 $X$ 위에 정의된 $\Ring$-valued presheaf $\mathcal{O}_X$에 대하여, left $\mathcal{O}_X$-module object $\mathcal{F}\in\PSh(X;\Ab)$을 간단히 $\mathcal{O}_X$-module이라 부른다.
 :::
 
 ## 가환준층
@@ -208,7 +208,7 @@ $$\left(\prod_{i\in I} \mathcal{F}_i\right)(U)=\prod_{i\in I} \mathcal{F}_i(U)$$
 와 kernel의 universal property에 의해 자명하다. 
 :::
 
-이와 마찬가지 방법으로, *presheaf cokernel*, *presheaf image*, *presheaf coimage* 혹은 *presheaf quotient* 등등을 모두 정의할 수 있다. 따라서 주어진 위상공간 $X$ 위에서 정의된 abelian presheaf들의 카테고리 $\PSh(X,\Ab)$은 abelian category가 된다.
+이와 마찬가지 방법으로, *presheaf cokernel*, *presheaf image*, *presheaf coimage* 혹은 *presheaf quotient* 등등을 모두 정의할 수 있다. 따라서 주어진 위상공간 $X$ 위에서 정의된 abelian presheaf들의 카테고리 $\PSh(X;\Ab)$은 abelian category가 된다.
   
 ---
 **참고문헌**

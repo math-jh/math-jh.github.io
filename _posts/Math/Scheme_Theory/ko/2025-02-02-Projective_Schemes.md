@@ -10,7 +10,6 @@ sidebar:
 
 date: 2025-02-02
 weight: 5
-drift_needed: true
 
 ---
 
@@ -126,7 +125,7 @@ $$\Proj A_\bullet =\{\mathfrak{p}\in \Spec A\mid\text{$\mathfrak{p}$ is homogene
 으로 정의된다.
 :::
 
-정의에 의해 $\Proj A_\bullet$은 $\Spec A$의 부분집합이다. 즉, $\Proj A_\bullet$의 점들은 모두 $\Spec A$의 점들이기도 하다. 이는 $\Spec A$ 대신 $\mSpec A$를 사용했다면 다소 어색한 결과이지만, $\Spec A$에는 전통적인 점들 외에도 prime ideal들에 해당하는 점들이 존재한다. 가령 $A=\mathbb{K}[\x_1,\x_2]$의 ideal $(\x_1-\x_2)$를 생각하면, $\mathbb{K}[\x_1,\x_2]/(\x_1-\x_2)\cong \mathbb{K}[\x_1]$이므로 이 ideal은 prime ideal이다. 또, 이 ideal은 $\mathbb{K}[\x_1,\x_2]$를 graded ring $A_\bullet$으로 보았을 때, $A_+$를 포함하지 않는 homogeneous prime ideal이므로 $\Proj A_\bullet$의 점이기도 하다. 
+정의에 의해 $\Proj A_\bullet$은 $\Spec A$의 부분집합이다. 즉, $\Proj A_\bullet$의 점들은 모두 $\Spec A$의 점들이기도 하다. 이는 $\Spec A$ 대신 $\MaxSpec A$를 사용했다면 다소 어색한 결과이지만, $\Spec A$에는 전통적인 점들 외에도 prime ideal들에 해당하는 점들이 존재한다. 가령 $A=\mathbb{K}[\x_1,\x_2]$의 ideal $(\x_1-\x_2)$를 생각하면, $\mathbb{K}[\x_1,\x_2]/(\x_1-\x_2)\cong \mathbb{K}[\x_1]$이므로 이 ideal은 prime ideal이다. 또, 이 ideal은 $\mathbb{K}[\x_1,\x_2]$를 graded ring $A_\bullet$으로 보았을 때, $A_+$를 포함하지 않는 homogeneous prime ideal이므로 $\Proj A_\bullet$의 점이기도 하다. 
 
 아직까지 $\Proj A_\bullet$은 집합일 뿐이다. 여기에 위상구조를 주기 위해서는 함수의 zero locus를 사용해야 하고, 앞서 관찰했듯 우리는 *homogeneous* polynomial의 zero locus를 사용해야 한다. 
 

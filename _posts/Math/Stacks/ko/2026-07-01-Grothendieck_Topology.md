@@ -129,7 +129,7 @@ $$F(g)(x_f)=x_{f\circ g}$$
 1. *separated presheaf<sub>분리 준층</sub>*라는 것은 임의의 covering sieve 위의 matching family가 많아야 하나의 amalgamation을 가지는 것이고,
 2. *sheaf<sub>층</sub>*라는 것은 임의의 covering sieve 위의 matching family가 정확히 하나의 amalgamation을 가지는 것이다.
 
-Sheaf들이 이루는 $\PSh(\mathcal{C})$의 full subcategory를 $\Sh(\mathcal{C}, \tau)$로 적는다.
+Sheaf들이 이루는 $\PSh(\mathcal{C})$의 full subcategory를 $\Sh(\mathcal{C}; \tau)$로 적는다.
 :::
 
 Matching family는 covering sieve의 각 마디 위에 정합적으로 주어진 국소 자료이고, amalgamation은 그것을 $U$ 전체로 붙인 대역 자료이다. Separated 조건은 붙인 결과가 유일함(identity axiom)을, sheaf 조건은 그것이 항상 존재함(gluability)을 추가한다. 이 sieve 형태의 정의는 임의의 위상에 대해 작동하지만, 위상이 pretopology로 주어진 경우 matching family는 covering family 위의 자료로 다시 쓸 수 있고, sheaf 조건은 익숙한 equalizer 형태가 된다.
@@ -188,7 +188,7 @@ $$\check{H}^0(\{U_i \rightarrow U\}, F)=\operatorname{eq}\Big(\prod_i F(U_i)\rig
 
 1. $F^+$은 separated presheaf이다.
 2. $F$가 separated이면 $F^+$은 sheaf이다. 따라서 $F^{++}=(F^+)^+$은 항상 sheaf이다.
-3. 대응 $a(F)=F^{++}$은 forgetful functor $\iota:\Sh(\mathcal{C}, \tau)\hookrightarrow \PSh(\mathcal{C})$의 left adjoint이며, 자연스러운 사상 $F \rightarrow F^{++}$이 그 unit이다. 즉 임의의 sheaf $G$에 대하여
+3. 대응 $a(F)=F^{++}$은 forgetful functor $\iota:\Sh(\mathcal{C}; \tau)\hookrightarrow \PSh(\mathcal{C})$의 left adjoint이며, 자연스러운 사상 $F \rightarrow F^{++}$이 그 unit이다. 즉 임의의 sheaf $G$에 대하여
 
 $$\Hom_{\Sh}(F^{++}, G)\cong \Hom_{\PSh}(F, G)$$
 
@@ -207,7 +207,7 @@ $$\Hom_{\Sh}(F^{++}, G)\cong \Hom_{\PSh}(F, G)$$
 [정리 14](#thm14)는 [\[위상수학\] §층, ⁋정의 5](/ko/math/topology/sheaves#def5)에서 다룬 sheafification adjunction을 임의의 site로 확장한다. Left adjoint $a$가 유한 극한을 보존한다는 사실은 특히 중요한데, 이로부터 sheaf 범주가 위상공간의 sheaf 범주와 같은 종류의 좋은 구조를 가짐이 따라온다.
 
 ::: 참고 15
-Site $(\mathcal{C}, \tau)$ 위의 sheaf 범주 $\Sh(\mathcal{C}, \tau)$를 *Grothendieck topos<sub>그로텐디크 토포스</sub>*라 부른다. 이는 작은 site 위의 sheaf 범주와 동치인 범주로 정의되며, 모든 작은 극한과 여극한을 가지고, cartesian closed이며, subobject classifier를 가지는 등 집합 범주 $\Set$이 누리는 형식적 성질의 대부분을 공유한다. $\Set$ 자신은 한원소 위상공간(또는 자명한 site) 위의 sheaf 범주로서 가장 단순한 topos이다. Topos 이론은 그 자체로 방대한 주제이므로 여기에서는 정의를 언급하는 데 그치고, 이후 stack의 맥락에서 필요한 만큼만 다룬다.
+Site $(\mathcal{C}, \tau)$ 위의 sheaf 범주 $\Sh(\mathcal{C}; \tau)$를 *Grothendieck topos<sub>그로텐디크 토포스</sub>*라 부른다. 이는 작은 site 위의 sheaf 범주와 동치인 범주로 정의되며, 모든 작은 극한과 여극한을 가지고, cartesian closed이며, subobject classifier를 가지는 등 집합 범주 $\Set$이 누리는 형식적 성질의 대부분을 공유한다. $\Set$ 자신은 한원소 위상공간(또는 자명한 site) 위의 sheaf 범주로서 가장 단순한 topos이다. Topos 이론은 그 자체로 방대한 주제이므로 여기에서는 정의를 언급하는 데 그치고, 이후 stack의 맥락에서 필요한 만큼만 다룬다.
 :::
 
 ## Subcanonical 위상과 representable presheaf

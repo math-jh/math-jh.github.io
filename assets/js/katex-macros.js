@@ -148,7 +148,6 @@ window.KATEX_MACROS = {
     "\\Mor":"\\operatorname{Mor}",
     "\\Mat":"\\operatorname{Mat}",
     "\\mult":"\\operatorname{mult}",
-    "\\mSpec":"\\operatorname{mSpec}",
     "\\nullity":"\\operatorname{nullity}",
     "\\Num":"\\operatorname{Num}",
     "\\obj":"\\operatorname{obj}",
