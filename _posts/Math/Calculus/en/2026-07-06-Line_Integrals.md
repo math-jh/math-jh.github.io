@@ -10,10 +10,11 @@ sidebar:
 
 date: 2026-07-06
 weight: 17
-translated_at: 2026-07-13T12:00:02+00:00
+translated_at: 2026-07-13T22:30:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-13T22:30:02+00:00
 ---
-Now we examine the integral of vector functions. The first step toward this is the line integral, which follows a curve defined within the space $\mathbb{R}^n$ where the vector field is defined, accumulating the contributions of the vector at each point. What is interesting is that if the vector field is conservative, this integral becomes <em>independent</em> of the path and depends only on the endpoints; this can be regarded as a higher-dimensional version of the [§Fundamental Theorem of Calculus](/en/math/calculus/fundamental_theorem_of_calculus).
+Now we examine the integral of vector functions. The first step is the line integral, which traces a curve defined within the space $\mathbb{R}^n$ where the vector field is defined, accumulating the contributions of the vector at each point. What is interesting is that if the vector field is conservative, this integral becomes <em>independent</em> of the path and depends only on the endpoints; this can be regarded as a higher-dimensional version of the [§Fundamental Theorem of Calculus](/en/math/calculus/fundamental_theorem_of_calculus).
 
 ## Line Integral
 
@@ -25,7 +26,7 @@ $$\int_C f\mathop{ds} = \int_a^b f(\mathbf{r}(t))\lvert \mathbf{r}'(t)\rvert \ma
 Here, $ds = \lvert \mathbf{r}'(t)\rvert \mathop{dt}$ is the arc-length element.
 :::
 
-By definition, the above integral is the value using an arc-length parametrization, so it does not depend on the parametrization of the curve. As a special case, if $f \equiv 1$, then $\int_C \mathop{ds}$ gives the length of the curve.
+By definition, the integral above is evaluated using an arc-length parametrization, so it does not depend on the parametrization of the curve. As a special case, if $f \equiv 1$, then $\int_C \mathop{ds}$ gives the length of the curve.
 
 To lift this to the integral of a vector function, we must take the direction of the curve into account and define it as follows.
 
@@ -44,7 +45,7 @@ In particular, in the plane, if $\mathbf{F} = (P, Q)$ and $\mathbf{r}(t) = (x(t)
 
 $$\int_C \mathbf{F}\cdot d\mathbf{r} = \int_C P\mathop{dx} + Q\mathop{dy}$$
 
-is also commonly used. Also, the symbol $\oint$ is sometimes used to denote the integral along a closed curve, but this is merely a matter of notation and no essentially new content is added.
+is also commonly used. The symbol $\oint$ is sometimes used to denote the integral along a closed curve, but this is merely a matter of notation and no essentially new content is added.
 
 ## Fundamental Theorem for Line Integrals
 
@@ -63,7 +64,6 @@ By [§Multivariable Functions and Partial Derivatives, ⁋Theorem 6](/en/math/ca
 
 $$\int_C \nabla f \cdot d\mathbf{r} = \int_a^b \nabla f(\mathbf{r}(t)) \cdot \mathbf{r}'(t)\mathop{dt} = \int_a^b \frac{d}{dt} f(\mathbf{r}(t))\mathop{dt} = f(\mathbf{r}(b)) - f(\mathbf{r}(a))$$
 
-we obtain.
 :::
 
 [Theorem 3](#thm3) says that the line integral of a conservative field is independent of the path. Surprisingly, the converse also holds.
@@ -77,7 +77,7 @@ When $\mathbf{F}$ is continuous on a connected open region $D$, the following ar
 :::
 
 ::: Proof
-$(1 \Rightarrow 3)$ is [Theorem 3](#thm3). $(3 \Leftrightarrow 2)$ is obvious: break a closed curve at one point into two paths, and if one path is reversed and joined, it becomes a closed curve.
+$(1 \Rightarrow 3)$ is [Theorem 3](#thm3). $(3 \Leftrightarrow 2)$ is obvious: break a closed curve at one point into two paths, reverse one, and join them to form a closed curve.
 
 Hence the core claim is $(3 \Rightarrow 1)$. For this we must construct a potential directly. Fix a base point $\mathbf{x}_0 \in D$, and for any $\mathbf{x}\in D$ define $f(\mathbf{x})$ as the line integral of $\mathbf{F}$ from $\mathbf{x}_0$ to $\mathbf{x}$. Ordinarily this would depend on the choice of curve $\mathbf{r}$ joining $\mathbf{x}_0$ and $\mathbf{x}$, but we are assuming the third condition, so this definition is well-defined. Now the average rate of change in the coordinate direction $\mathbf{e}_i$,
 
@@ -122,7 +122,7 @@ Differentiating this directly,
 
 $$\frac{\partial Q}{\partial x} = \frac{\partial P}{\partial y} = \frac{y^2 - x^2}{(x^2+y^2)^2}$$
 
-so this vector field is irrotational. However, going once around the unit circle $\mathbf{r}(t) = (\cos t, \sin t)$, we have $\mathbf{F}(\mathbf{r}(t)) = (-\sin t, \cos t) = \mathbf{r}'(t)$, so
+so this vector field is irrotational. However, traversing the unit circle $\mathbf{r}(t) = (\cos t, \sin t)$ once, we have $\mathbf{F}(\mathbf{r}(t)) = (-\sin t, \cos t) = \mathbf{r}'(t)$, so
 
 $$\oint_C \mathbf{F}\cdot d\mathbf{r} = \int_0^{2\pi} (\sin^2 t + \cos^2 t)\mathop{dt} = 2\pi \neq 0$$
 
