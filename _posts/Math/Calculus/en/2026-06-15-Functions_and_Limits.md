@@ -10,18 +10,19 @@ sidebar:
 
 date: 2026-06-15
 weight: 1
-translated_at: 2026-07-13T11:10:18+00:00
+translated_at: 2026-07-13T21:30:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-13T21:30:02+00:00
 ---
 ## Definition of the Limit
 
-To define the differentiation and integration of functions, we need the concept of the limit, just as we learned in high school. What makes the limit we are dealing with now more advanced than what we studied then is that we now *define* the limit.
+To define the differentiation and integration of functions, we need the concept of the limit, just as we learned in high school. What makes the limit we are now dealing with more advanced than what we studied then is that we now *define* the limit.
 
 ::: Definition 1
 Any open interval $(c,d)$ containing a real number $a$ ($c<a<d$) is called a *neighborhood* of the point $a$.
 :::
 
-For now, this definition of a neighborhood of the point $a$ is sufficient. For convenience, we call the set obtained by removing $a$ itself from a neighborhood of $a$ a *deleted neighborhood*.
+For now, this definition of a neighborhood of $a$ is sufficient. For convenience, we call the set obtained by removing $a$ itself from a neighborhood of $a$ a *deleted neighborhood*.
 
 ::: Definition 2
 Consider a function $f$ defined on some deleted neighborhood of the point $a$. Then a real number $L$ is called the *limit* of $f$ as $x \to a$ if, for every $\epsilon > 0$, there exists a $\delta > 0$ such that
@@ -30,30 +31,30 @@ $$0 < \lvert x - a \rvert < \delta \implies \lvert f(x) - L \rvert < \epsilon$$
 
 holds. We write this as
 
-$\lim_{x \to a} f(x) = L$
+$$\lim_{x \to a} f(x) = L$$
 :::
 
-The intuitive explanation for this is as follows. The reason why the high school notion that $f(x)$ gets *infinitely close* to $L$ cannot be a rigorous mathematical definition is that the concept of *closeness* is not mathematical. It is analogous to saying that a collection of numbers close to $L$ does not define a set mathematically.
+The intuitive explanation is as follows. The reason why the high school description that $f(x)$ gets *infinitely close* to $L$ cannot be made into a rigorous mathematical definition is that the notion of *closeness* is not mathematical. It is analogous to saying that a collection of numbers close to $L$ does not define a set in mathematical terms.
 
-Intuitively, it is helpful to think of the above $\epsilon-\delta$ definition as a process of reaching a consensus that applies to everyone in order to resolve this. That is, no matter how close we demand $f(x)$ to be to $L$ (i.e., no matter what $\epsilon>0$ is given), as long as we make $x$ sufficiently close to $a$ ($0 < \lvert x - a\rvert < \delta$), we can satisfy that demand $\lvert f(x) - L\rvert < \epsilon$. Let us examine this in the following example.
+Intuitively, it is helpful to think of the above $\epsilon$-$\delta$ definition as a process of reaching a consensus that works for everyone. That is, no matter how close we demand $f(x)$ to be to $L$ (i.e., no matter what $\epsilon>0$ is given), as long as we make $x$ sufficiently close to $a$ ($0 < \lvert x - a\rvert < \delta$), we can meet that demand: $\lvert f(x) - L\rvert < \epsilon$. Let us examine this in the following example.
 
 ::: Example 3
-When proving a limit directly from the definition, if $\lvert f(x) - L\rvert$ is a constant multiple of $\lvert x - a\rvert$ as in a linear function, we can read off $\delta$ immediately. However, for functions whose rate of change is not constant, a bit of adjustment is needed. Consider $g(x) = x^2$ and let us show that the limit as $x \to 2$ is $4$. First, we compute
+When proving a limit directly from the definition, if $\lvert f(x) - L\rvert$ is a constant multiple of $\lvert x - a\rvert$ as in a linear function, we can read off $\delta$ immediately. However, for functions whose rate of change is not constant, a small adjustment is needed. Consider $g(x) = x^2$ and let us show that the limit as $x \to 2$ is $4$. First, we compute
 
 $$\lvert g(x)-4\rvert=\lvert x^2-4\rvert=\lvert x-2\rvert \lvert x+2\rvert$$
 
-The key point is that while $\lvert x-2\rvert$ is small near $2$, the factor $\lvert x+2\rvert$ in front of it can blow up the product if it is not controlled. Therefore, we first restrict to $\delta\leq 1$ to secure $\lvert x+2\rvert<5$ (regions where $\delta>1$ are not of interest in the first place), and then set $\delta=\min(1,\epsilon/5)$, so that
+The key point is that while $\lvert x-2\rvert$ is small near $2$, the factor $\lvert x+2\rvert$ in front of it can inflate the product if it is not controlled. Therefore, we first restrict to $\delta\leq 1$ to secure $\lvert x+2\rvert<5$ (regions where $\delta>1$ are not of interest in the first place), and then set $\delta=\min(1,\epsilon/5)$, so that
 
 $$0 < \lvert x-2\rvert < \delta \implies \lvert x^2 - 4\rvert < 5\delta \leq \epsilon$$
 
 holds.
 :::
 
-As above, the essence of this definition is that we can choose $\delta$ to be determined by $\epsilon$. Continuing the intuition from above, what we do when proving the limit of a function is precisely to find a *rule* that, no matter what $\epsilon>0$ is brought forward, can produce a $\delta>0$ satisfying this condition.
+As above, the essence of this definition is that we can choose $\delta$ to be determined by $\epsilon$. Continuing the intuition from above, what we do when proving the limit of a function is precisely to find a *rule* that, no matter what $\epsilon>0$ is brought forward, produces a $\delta>0$ satisfying this condition.
 
 ## Properties of Limits
 
-Now let us examine the properties of limits based on this. First, the first property is that if a limit exists, it is unique.
+Now let us examine the properties of limits based on this. First, if a limit exists, it is unique.
 
 ::: Proposition 4 (Uniqueness of the Limit)
 If $\lim_{x\to a} f(x) = L$ and $\lim_{x\to a} f(x) = L'$, then $L = L'$.
@@ -90,15 +91,15 @@ hold.
     $$\lvert (f(x)+g(x)) - (L+M)\rvert \leq \lvert f(x)-L\rvert + \lvert g(x)-M\rvert < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon$$
     
     holds.
-2. If $c=0$, any $\delta$ will do, so it is trivial. If $c \neq 0$, we simply take the $\delta$ corresponding to $\epsilon/\lvert c\rvert$.
+2. If $c=0$, any $\delta$ will do, so this is trivial. If $c \neq 0$, we simply take the $\delta$ corresponding to $\epsilon/\lvert c\rvert$.
 
-3. We use the following inequality
+3. We use the inequality
     
     $$\lvert f(x)g(x) - LM\rvert = \lvert f(x)(g(x)-M) + M(f(x)-L)\rvert \leq \lvert f(x)\rvert \lvert g(x)-M\rvert + \lvert M\rvert \lvert f(x)-L\rvert$$
     
-    Intuitively, as $x$ approaches $a$, both $\lvert g(x)-M\rvert$ and $\lvert f(x)-L\rvert$ go to $0$, so if we can guarantee that the coefficients $\lvert f(x)\rvert, \lvert g(x)\rvert$ in front of them are finite, we can make this smaller than $\epsilon$ through a calculation similar to 1 above.
+    Intuitively, as $x$ approaches $a$, both $\lvert g(x)-M\rvert$ and $\lvert f(x)-L\rvert$ go to $0$, so if we can guarantee that the coefficients $\lvert f(x)\rvert$ and $\lvert g(x)\rvert$ in front of them are finite, we can make this smaller than $\epsilon$ through a calculation similar to 1 above.
     
-    The trick is to set $\epsilon=1$ and apply [Definition 2](#def2) to $f$ and $g$ each. Then there exist appropriate $\delta_1, \delta_2$ such that
+    The trick is to set $\epsilon=1$ and apply [Definition 2](#def2) to $f$ and $g$ separately. Then there exist appropriate $\delta_1, \delta_2$ such that
         
     $$0<\lvert x-a\rvert<\delta_1\implies 0<\lvert f(x)-L\rvert<1\implies \lvert f(x)\rvert< \lvert L\rvert+1$$
 
@@ -132,7 +133,7 @@ hold.
     
     $$0 < \lvert x-a\rvert < \delta_1\implies\lvert f(x)-L\rvert < L/2$$
     
-    so $f(x) > L/2 > 0$. Meanwhile, for any positive real numbers $u,v$, considering the following expansion
+    so $f(x) > L/2 > 0$. Meanwhile, for any positive real numbers $u,v$, considering the expansion
     
     $$u - v = \bigl(u^{1/k}-v^{1/k}\bigr)\bigl(u^{(k-1)/k}+u^{(k-2)/k}v^{1/k}+\cdots+v^{(k-1)/k}\bigr)$$
     
@@ -165,7 +166,7 @@ Then for any polynomial function
 
 $$f(x)=c_nx^n+\cdots +c_1x+c_0$$
 
-by separating the limit into each term using the sum and constant multiple laws of [Proposition 5](#prop5) and applying [Corollary 6](#cor6) to the powers, we get
+by separating the limit into each term using the sum and constant-multiple laws of [Proposition 5](#prop5) and applying [Corollary 6](#cor6) to the powers, we get
 
 $$\lim_{x\rightarrow a}f(x)=c_n\Bigl(\lim_{x\rightarrow a}x\Bigr)^n+\cdots +c_1\lim_{x\rightarrow a}x+\lim_{x\rightarrow a}c_0$$
 
@@ -206,11 +207,11 @@ That is, $\sin x \leq x \leq \tan x$.
 
 ![Comparison of triangle, sector, and right triangle areas](/assets/images/Math/Calculus/functions_and_limits-1.svg){:style="width:33.66em" class="invert" .align-center}
 
-Now dividing both sides of the above inequality by $\sin x > 0$ and taking reciprocals, we know that
+Now dividing both sides of the above inequality by $\sin x > 0$ and taking reciprocals, we obtain
 
 $$\cos x \leq \frac{\sin x}{x} \leq 1$$
 
-Our claim is that $\cos x \to 1$. To see this, using the half-angle formula for trigonometric functions and the $\sin(x/2) \leq x/2$ obtained above, we have
+Our claim is that $\cos x \to 1$. To see this, using the half-angle formula for trigonometric functions and the inequality $\sin(x/2) \leq x/2$ obtained above, we have
 
 $$0 \leq \lvert 1 - \cos x\rvert = \left\lvert2\sin^2\frac{x}{2}\right\rvert \leq 2\left(\frac{x}{2}\right)^2 = \frac{x^2}{2}$$
 
@@ -218,7 +219,7 @@ so
 
 $$-\frac{x^2}{2}\leq 1 - \cos x \leq \frac{x^2}{2}$$
 
-and applying [Proposition 8](#prop8) shows that $\cos x \to 1$. Now using this and applying [Proposition 8](#prop8) again to the earlier inequality, we know that the limit of $(\sin x)/x$ is $1$.
+and applying [Proposition 8](#prop8) shows that $\cos x \to 1$. Now using this and applying [Proposition 8](#prop8) again to the earlier inequality, we find that the limit of $(\sin x)/x$ is $1$.
 :::
 
 The following example is also classical.
@@ -247,7 +248,7 @@ $$a-\delta < x < a \implies \lvert f(x) - L\rvert < \epsilon$$
 and we write $\lim_{x\to a^-} f(x) = L$.
 :::
 
-The existence of the limit $\lim_{x\to a} f(x)$ is equivalent to both one-sided limits existing and being equal to each other. For example, for $f(x) = \lvert x\rvert/x$, the two one-sided limits are different: $1$ as $x \to 0^+$ and $-1$ as $x \to 0^-$, so the limit as $x \to 0$ does not exist. A point where the two one-sided limits are finite but different from each other is called a *jump* discontinuity of the function.
+The existence of the limit $\lim_{x\to a} f(x)$ is equivalent to both one-sided limits existing and being equal. For example, for $f(x) = \lvert x\rvert/x$, the two one-sided limits are different: $1$ as $x \to 0^+$ and $-1$ as $x \to 0^-$, so the limit as $x \to 0$ does not exist. A point where the two one-sided limits are finite but different is called a *jump* discontinuity of the function.
 
 ::: Definition 13
 For a function $f$ defined on a deleted neighborhood of a real number $a$, $\lim_{x\to a} f(x) = \infty$ means that for every $M > 0$, there exists a $\delta > 0$ such that if $0 < \lvert x-a\rvert < \delta$, then $f(x) > M$. Similarly, $\lim_{x\to a} f(x) = -\infty$ means that for every $M > 0$, there exists a $\delta > 0$ such that if $0 < \lvert x-a\rvert < \delta$, then $f(x) < -M$.
@@ -262,7 +263,7 @@ $$x > N\implies\lvert f(x) - L\rvert < \epsilon$$
 
 Similarly, for a function defined for $x$ less than some $N_0$, $\lim_{x\to-\infty} f(x) = L$ means that there exists an $N$ such that
 
-$x < N\implies\lvert f(x) - L\rvert < \epsilon$
+$$x < N\implies\lvert f(x) - L\rvert < \epsilon$$
 :::
 
 For example, $\lim_{x\to\infty}1/x = 0$, and for rational functions, the leading term dominates the behavior, so $\lim_{x\to\infty}(2x^2 + 1)/(3x^2 - x) = 2/3$. If such a finite limit $L$ exists, the line $y = L$ becomes a *horizontal asymptote* of the graph.
