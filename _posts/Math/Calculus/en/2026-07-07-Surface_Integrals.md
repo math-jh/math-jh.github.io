@@ -10,8 +10,9 @@ sidebar:
 
 date: 2026-07-07
 weight: 19
-translated_at: 2026-07-13T12:30:02+00:00
+translated_at: 2026-07-13T23:00:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-13T23:00:02+00:00
 ---
 Now we define the surface integral by adding one more variable to the line integral.
 
@@ -26,7 +27,7 @@ is called a *parametrized surface*.
 :::
 
 
-Fixing $u$ and varying $v$ traces a curve on the surface whose tangent is $\mathbf{r}_v$; likewise $\mathbf{r}_u$ is the tangent of another curve on the surface. The plane spanned by the two tangent vectors is the tangent plane, and $\mathbf{r}_u \times \mathbf{r}_v$, perpendicular to it, gives the normal direction. That is, the partial-derivative vectors $\mathbf{r}_u = \partial \mathbf{r}/\partial u$ and $\mathbf{r}_v = \partial \mathbf{r}/\partial v$ are tangent to the surface, and their cross product
+Fixing $u$ and varying $v$ traces a curve on the surface whose tangent is $\mathbf{r}_v$; likewise $\mathbf{r}_u$ is the tangent of another curve on the surface. The plane spanned by the two tangent vectors is the tangent plane, and $\mathbf{r}_u \times \mathbf{r}_v$, being perpendicular to it, gives the normal direction. That is, the partial-derivative vectors $\mathbf{r}_u = \partial \mathbf{r}/\partial u$ and $\mathbf{r}_v = \partial \mathbf{r}/\partial v$ are tangent to the surface, and their cross product
 
 $$\mathbf{N} = \mathbf{r}_u \times \mathbf{r}_v$$
 
@@ -34,7 +35,7 @@ is the normal vector of the surface. We call a surface with $\mathbf{N} \neq 0$ 
 
 ## Surface Area
 
-If we chop the surface into small rectangles in the parameter domain, each piece is approximated by a small parallelogram on the tangent plane, specifically the parallelogram spanned by $\mathbf{r}_u\Delta u$ and $\mathbf{r}_v\Delta v$. Since its area is $\lvert \mathbf{r}_u \times \mathbf{r}_v\rvert\Delta u\Delta v$, taking the limit of the sum gives the surface area.
+If we partition the surface into small rectangles in the parameter domain, each piece is approximated by a small parallelogram on the tangent plane—specifically, the parallelogram spanned by $\mathbf{r}_u\Delta u$ and $\mathbf{r}_v\Delta v$. Since its area is $\lvert \mathbf{r}_u \times \mathbf{r}_v\rvert\Delta u\Delta v$, taking the limit of the sum gives the surface area.
 
 ::: Definition 2
 The *surface area* of a regular parametrized surface $\mathbf{r}\colon D \to \mathbb{R}^3$ is
@@ -44,7 +45,7 @@ $$\iint_D \lvert \mathbf{r}_u \times \mathbf{r}_v\rvert \mathop{du}\mathop{dv}$$
 and we write the area element as $dS = \lvert \mathbf{r}_u \times \mathbf{r}_v\rvert \mathop{du}\mathop{dv}$.
 :::
 
-The area element $dS$ plays the same role as the Jacobian determinant in multiple integrals, and with this area element $dS$ we can integrate a scalar quantity distributed over the surface.
+The area element $dS$ plays the same role as the Jacobian determinant in multiple integrals, and with this area element we can integrate a scalar quantity distributed over the surface.
 
 ::: Definition 3
 The *surface integral* of a continuous scalar field $f$ on a surface $S$ is
@@ -66,7 +67,7 @@ $$\iint_S \mathbf{F} \cdot d\mathbf{S} = \iint_S \mathbf{F} \cdot \mathbf{n}\mat
 Here we take $\mathbf{n} = (\mathbf{r}_u \times \mathbf{r}_v)/\lvert \mathbf{r}_u \times \mathbf{r}_v\rvert$ to match the orientation of the surface.
 :::
 
-Flux is the amount flowing across the surface per unit time. For example, if $\mathbf{F}$ is the velocity of a fluid, then $\iint_S \mathbf{F}\cdot d\mathbf{S}$ can be thought of as the amount of fluid passing through the surface. It is intuitively obvious that only the normal component $\mathbf{F}\cdot \mathbf{n}$ contributes to the flow while the tangential component does not, and it is easy to check that reversing the orientation flips $\mathbf{n}$ and changes the sign of the flux.
+Flux is the amount flowing across the surface per unit time. For example, if $\mathbf{F}$ is the velocity of a fluid, then $\iint_S \mathbf{F}\cdot d\mathbf{S}$ can be thought of as the amount of fluid passing through the surface. It is intuitively clear that only the normal component $\mathbf{F}\cdot \mathbf{n}$ contributes to the flow while the tangential component does not, and it is easy to check that reversing the orientation flips $\mathbf{n}$ and changes the sign of the flux.
 
 Here are two examples of this integral.
 
@@ -104,4 +105,3 @@ $$\mathbf{F}\cdot(\mathbf{r}_\phi\times \mathbf{r}_\theta) = \mathbf{r} \cdot R\
 Therefore
 
 $$\iint_S \mathbf{F}\cdot d\mathbf{S} = \int_0^{2\pi} \int_0^\pi R^3\sin\phi \mathop{d\phi} \mathop{d\theta} = 4\pi R^3.$$
-:::
