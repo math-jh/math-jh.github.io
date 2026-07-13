@@ -366,7 +366,7 @@ This may be seen as somewhat excessive a generalization, because to describe the
 
 For any topological space $X$ and a sheaf $\mathscr{F}$ defined on it, the global section functor
 
-$$\Gamma(X,-):\Sh(X,\mathcal{A})\rightarrow \mathcal{A}$$
+$$\Gamma(X,-):\Sh(X;\mathcal{A})\rightarrow \mathcal{A}$$
 
 is a left exact functor, so its right derived functor exists. To compute this directly, we use the Godement resolution, which is defined as follows.
 

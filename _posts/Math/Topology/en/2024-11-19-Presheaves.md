@@ -139,7 +139,7 @@ exist. We endow $\Spe(\mathcal{F})$ with the final topology defined by this fami
 Let $\mathcal{F}, \mathcal{G}:\Open(X) \rightarrow \mathcal{A}$ be two presheaves on a fixed topological space $X$. A natural transformation between them is called a *presheaf morphism*.
 :::
 
-Thus the category of $\mathcal{A}$-valued presheaves on $X$ is the functor category $[\Open(X)^\op, \mathcal{A}]$. We denote this by $\PSh(X, \mathcal{A})$, and when there is no risk of confusion from context, we simply write $\PSh(X)$. As a side note, the $f_\ast$ from [Example 8](#ex8) is a functor $\PSh(X, \mathcal{A})\rightarrow \PSh(Y, \mathcal{A})$.
+Thus the category of $\mathcal{A}$-valued presheaves on $X$ is the functor category $[\Open(X)^\op, \mathcal{A}]$. We denote this by $\PSh(X; \mathcal{A})$, and when there is no risk of confusion from context, we simply write $\PSh(X)$. As a side note, the $f_\ast$ from [Example 8](#ex8) is a functor $\PSh(X; \mathcal{A})\rightarrow \PSh(Y; \mathcal{A})$.
 
 Thinking of the intuitive [Example 3](#ex3), for an open set $U$ the map $\phi(U):\mathcal{F}(U) \rightarrow \mathcal{G}(U)$ can be thought of as the function obtained by restricting $\phi:\mathcal{F}\rightarrow \mathcal{G}$ to $U$, so we sometimes write $\phi\vert_U$ instead of $\phi(U)$.
 
@@ -163,10 +163,10 @@ For a family of presheaves $(\mathcal{F}_i:\Open(X) \rightarrow \Set)_{i\in I}$ 
 $\left(\prod_{i\in I} \mathcal{F}_i\right)(U)=\prod_{i\in I} \mathcal{F}_i(U)$
 :::
 
-Using definitions as above, structures defined in a category $\mathcal{A}$—for example products, coproducts, limits, colimits, monoidal products, etc.—can be transferred to $\PSh(X, \mathcal{A})$. In particular, $\PSh(X, \Ab)$ inherits the monoidal structure $(\Ab,\otimes, \mathbb{Z})$, and the monoidal objects here are $\PSh(X, \Ring)$. In the same vein, the following example can be understood.
+Using definitions as above, structures defined in a category $\mathcal{A}$—for example products, coproducts, limits, colimits, monoidal products, etc.—can be transferred to $\PSh(X; \mathcal{A})$. In particular, $\PSh(X; \Ab)$ inherits the monoidal structure $(\Ab,\otimes, \mathbb{Z})$, and the monoidal objects here are $\PSh(X; \Ring)$. In the same vein, the following example can be understood.
 
 ::: Example 14
-For a $\Ring$-valued presheaf $\mathcal{O}_X$ on a topological space $X$, a left $\mathcal{O}_X$-module object $\mathcal{F}\in\PSh(X,\Ab)$ is simply called an $\mathcal{O}_X$-module.
+For a $\Ring$-valued presheaf $\mathcal{O}_X$ on a topological space $X$, a left $\mathcal{O}_X$-module object $\mathcal{F}\in\PSh(X;\Ab)$ is simply called an $\mathcal{O}_X$-module.
 :::
 
 ## Abelian presheaves
@@ -197,7 +197,7 @@ This is immediate from the following diagram and the universal property of kerne
 ![presheaf_kernel-2](/assets/images/Math/Topology/Presheaves-2.png){:style="width:22.77em" class="invert" .align-center}
 :::
 
-In the same way, one can define *presheaf cokernel*, *presheaf image*, *presheaf coimage*, *presheaf quotient*, and so on. Therefore, the category $\PSh(X,\Ab)$ of abelian presheaves on a given topological space $X$ is an abelian category.
+In the same way, one can define *presheaf cokernel*, *presheaf image*, *presheaf coimage*, *presheaf quotient*, and so on. Therefore, the category $\PSh(X;\Ab)$ of abelian presheaves on a given topological space $X$ is an abelian category.
   
 ---
 **References**
