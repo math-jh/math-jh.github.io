@@ -1,7 +1,7 @@
 ---
-title: "Unit과 zero divisor"
-description: "환의 unit과 그 모임 R^×, zero divisor와 regular element를 정의하고, unit이 결코 zero divisor가 아님을 보인다. 유한가환환에서는 모든 regular element가 unit임을 곱셈사상의 단사성으로 증명하여, 유한 integral domain이 field임을 따름정리로 얻는다."
-excerpt: "Unit의 모임 R^×, regular element, 그리고 유한가환환에서 regular element가 unit이 되는 현상"
+title: "가역원과 영인자"
+description: "환의 unit, zero divisor와 regular element를 정의하고, unit이 결코 zero divisor가 아님을 보인다. 유한가환환에서는 모든 regular element가 unit임을 곱셈사상의 단사성으로 증명하여, 유한 integral domain이 field임을 따름정리로 얻는다."
+excerpt: "Unit, regular element, 그리고 유한가환환에서 regular element가 unit이 되는 현상"
 
 categories: [Math / Ring Theory]
 permalink: /ko/math/ring_theory/units_and_zero_divisors
@@ -16,80 +16,78 @@ published: false
 
 ---
 
-이 글에서 우리는 환의 곱셈 구조에서 가장 기본적인 두 부류의 원소, 즉 곱셈에 대한 역원을 갖는 *unit*과, 곱하여 $$0$$을 만드는 짝을 갖는 *zero divisor*를 정리한다. 이 두 개념은 이미 여러 곳에서 암묵적으로 쓰였다. Integral domain은 zero divisor가 없는 가환환으로 정의되었고 ([\[대수적 구조\] §분수체, ⁋정의 5](/ko/math/algebraic_structures/field_of_fractions#def5)), field는 모든 nonzero 원소가 unit인 division ring이었다 ([\[대수적 구조\] §분수체, ⁋정의 3](/ko/math/algebraic_structures/field_of_fractions#def3)). 여기서는 unit을 본격적으로 정의하여 그 모임이 군을 이룸을 확인하고, unit과 zero divisor가 서로 배타적임을 보인 뒤, 유한가환환에서는 zero divisor가 아닌 모든 원소가 자동으로 unit이 된다는 사실을 증명한다. 그 직접적 귀결로 유한 integral domain이 field임을 얻는다.
+이 글에서 우리는 환의 곱셈 구조에서 가장 기본적인 두 부류의 원소, 즉 곱셈에 대한 역원을 갖는 *unit*과, 곱하여 $0$을 만드는 짝을 갖는 *zero divisor*를 정리한다. 이 두 개념은 이미 여러 곳에서 암묵적으로 쓰였다. Integral domain은 zero divisor가 없는 가환환으로 정의되었고 ([\[대수적 구조\] §분수체, ⁋정의 5](/ko/math/algebraic_structures/field_of_fractions#def5)), field는 모든 nonzero 원소가 unit인 division ring이었다 ([\[대수적 구조\] §분수체, ⁋정의 3](/ko/math/algebraic_structures/field_of_fractions#def3)). 여기서는 unit을 본격적으로 정의하여 그 모임이 군을 이룸을 확인하고, unit과 zero divisor가 서로 배타적임을 보인 뒤, 유한가환환에서는 zero divisor가 아닌 모든 원소가 자동으로 unit이 된다는 사실을 증명한다. 그 직접적 귀결로 유한 integral domain이 field임을 얻는다.
 
-별도의 언급이 없는 한 $$A$$는 항등원 $$1\neq 0$$을 갖는 환이며, commutativity는 필요한 곳에서 그때그때 명시한다.
+별도의 언급이 없는 한 $A$는 항등원 $1\neq 0$을 갖는 ring이며, commutativity는 필요한 곳에서 그때그때 명시한다.
 
-## Unit
+## 가역원
 
 ::: 정의 1
-환 $$A$$의 원소 $$u\in A$$가 *unit<sub>가역원</sub>*이라는 것은 $$A$$ 안에 $$uv=vu=1$$을 만족하는 원소 $$v$$가 존재하는 것이다. 이러한 $$v$$는 존재한다면 유일하며, 이를 $$u$$의 *역원<sub>inverse</sub>* $$u^{-1}$$이라 적는다. $$A$$의 unit 전체의 모임을 $$A^\times$$로 표기한다.
+Ring $A$의 원소 $u\in A$가 *unit<sub>가역원</sub>*이라는 것은 $A$ 안에 $uv=vu=1$을 만족하는 원소 $v$가 존재하는 것이다. 이러한 $v$는 존재한다면 유일하며, 이를 $u$의 *역원<sub>inverse</sub>* $u^{-1}$이라 적는다. $A$의 unit 전체의 모임을 $A^\times$로 표기한다.
 :::
 
-역원의 유일성은 곱셈의 결합법칙에서 곧바로 따라온다. 만일 $$vu=1$$이고 $$uw=1$$이면
+역원의 유일성은 곱셈의 결합법칙에서 곧바로 따라온다. 가령 만일 $vu=1$이고 $uw=1$이면
 
 $$v=v\cdot 1=v(uw)=(vu)w=1\cdot w=w$$
 
-이므로 left inverse와 right inverse이 일치하고, 따라서 양쪽에서 역원을 갖는 원소의 역원은 하나뿐이다. 
+이므로 left inverse와 right inverse가 일치하고, 따라서 양쪽에서 역원을 갖는 원소의 역원은 하나뿐이다. 
 
-뿐만 아니라, $$A^\times$$는 곱셈에 대해 닫혀 있다. 우선 empty product에 대해 닫혀있는 것, 즉 $$1\in A^\times$$임은 $$1\cdot 1=1$$에서 자명하고, $$u,u'\in A^\times$$이면
+뿐만 아니라, $A^\times$는 곱셈에 대해 닫혀 있다. 우선 empty product에 대해 닫혀있는 것, 즉 $1\in A^\times$임은 $1\cdot 1=1$에서 자명하고, $u,u'\in A^\times$이면
 
 $$(uu')(u'^{-1}u^{-1})=u(u'u'^{-1})u^{-1}=uu^{-1}=1$$
 
-이며 같은 방식으로 $$(u'^{-1}u^{-1})(uu')=1$$이므로 $$uu'\in A^\times$$이고 그 역원은 $$u'^{-1}u^{-1}$$이다. 또 $$u\in A^\times$$이면 $$u^{-1}$$도 $$u$$를 역원으로 가지므로 $$u^{-1}\in A^\times$$이다. 따라서 $$A^\times$$는 $$A$$의 곱셈을 연산으로 갖는 군이며, 이를 $$A$$의 *unit group<sub>가역원군</sub>*이라 부른다.
+이며 같은 방식으로 $(u'^{-1}u^{-1})(uu')=1$이므로 $uu'\in A^\times$이고 그 역원은 $u'^{-1}u^{-1}$이다. 또 $u\in A^\times$이면 $u^{-1}$도 $u$를 역원으로 가지므로 $u^{-1}\in A^\times$이다. 따라서 $A^\times$는 $A$의 곱셈을 연산으로 갖는 군이며, 이를 $A$의 *unit group<sub>가역원군</sub>*이라 부른다.
 
 ::: 예시 2
-Ring $$\mathbb{Z}$$에서 $$uv=1$$을 만족하는 정수 $$u,v$$는 $$u=v=1$$ 또는 $$u=v=-1$$뿐이므로 $$\mathbb{Z}^\times=\{1,-1\}$$이다.
+Ring $\mathbb{Z}$에서 $uv=1$을 만족하는 정수 $u,v$는 $u=v=1$ 또는 $u=v=-1$뿐이므로 $\mathbb{Z}^\times=\{1,-1\}$이다.
 
-임의의 division ring $$A$$에서는 $$0$$을 제외한 모든 원소가 정의상 역원을 가지므로 $$A^\times=A\setminus\{0\}$$이다 ([\[대수적 구조\] §분수체, ⁋정의 3](/ko/math/algebraic_structures/field_of_fractions#def3)). 특히 field $$\mathbb{K}$$에 대해 $$\mathbb{K}^\times=\mathbb{K}\setminus\{0\}$$은 곱셈에 대한 가환군이다.
+임의의 division ring $A$에서는 $0$을 제외한 모든 원소가 정의상 역원을 가지므로 $A^\times=A\setminus\{0\}$이다 ([\[대수적 구조\] §분수체, ⁋정의 3](/ko/math/algebraic_structures/field_of_fractions#def3)). 특히 field $\mathbb{K}$에 대해 $\mathbb{K}^\times=\mathbb{K}\setminus\{0\}$은 곱셈에 대한 commutative ring이다.
 
-주의할 것 중 하나는 한 ring의 unit이 그 특정 subring에서는 unit이 아닐 수 있다. 가령 $$2\in\mathbb{Q}$$는 $$\mathbb{Q}^\times$$의 원소이지만, $$\mathbb{Z}$$ 안에서는 $$2v=1$$을 만족하는 정수 $$v$$가 없으므로 $$2\not\in\mathbb{Z}^\times$$이다. 
+주의할 것 중 하나는 한 ring의 unit이 그 특정 subring에서는 unit이 아닐 수 있다는 것이다. 가령 $2\in\mathbb{Q}$는 $\mathbb{Q}^\times$의 원소이지만, $\mathbb{Z}$ 안에서는 $2v=1$을 만족하는 정수 $v$가 없으므로 $2\not\in\mathbb{Z}^\times$이다. 
 :::
 
 ## Zero divisor와 regular element
 
-곱셈 구조의 반대편 극단은 $$0$$이라 할 수 있다. 이를 확장하여 우리는 서로 곱하면 $$0$$이 되는 원소들, 즉 zero divisor들을 살펴본다. ([\[대수적 구조\] §분수체, ⁋정의 5](/ko/math/algebraic_structures/field_of_fractions#def5)) 우선 정의를 조금 더 세밀하게 다듬자. 
+곱셈 구조에서, unit의 반대편 극단은 $0$이라 할 수 있다. 이를 확장하여 우리는 서로 곱하면 $0$이 되는 원소들, 즉 zero divisor들을 살펴본다. ([\[대수적 구조\] §분수체, ⁋정의 5](/ko/math/algebraic_structures/field_of_fractions#def5)) 우선 정의를 조금 더 세밀하게 다듬자. 
 
 ::: 정의 3
- Ring $$A$$의 원소 $$a\in A$$에 대하여, 다음을 정의한다. 
+ Ring $A$의 원소 $a\in A$에 대하여, 다음을 정의한다. 
  
- 1. $$a$$가 *left zero divisor<sub>왼쪽 영인자</sub>*라는 것은 적당한 nonzero 원소 $$b\neq 0$$이 존재하여 $$ab=0$$인 것이다. 
- 2. 마찬가지로 적당한 $$b\neq 0$$에 대해 $$ba=0$$이면 $$a$$를 *right zero divisor<sub>오른쪽 영인자</sub>*라 한다. 
+ 1. $a$가 *left zero divisor<sub>왼쪽 영인자</sub>*라는 것은 적당한 nonzero 원소 $b\neq 0$이 존재하여 $ab=0$인 것이다. 
+ 2. 마찬가지로 적당한 $b\neq 0$에 대해 $ba=0$이면 $a$를 *right zero divisor<sub>오른쪽 영인자</sub>*라 한다. 
  3. Zero divisor가 아닌 원소를 *regular element<sub>정칙원</sub>* 혹은 non-zero-divisor라 부른다.
 :::
 
-[\[대수적 구조\] §분수체, ⁋정의 5](/ko/math/algebraic_structures/field_of_fractions#def5)는 left zero divisor와 right zero divisor를 구별하지 않고 사용한 것으로, 이들 두 개념을 모두 포함하는 것이다. 특별히 commutative ring에 대해서는 이들의 구별이 사라지므로 방향을 명시하지 않아도 혼동의 여지가 없다. 
+[\[대수적 구조\] §분수체, ⁋정의 5](/ko/math/algebraic_structures/field_of_fractions#def5)는 left zero divisor와 right zero divisor를 구별하지 않고 서술한 것으로, 이들 두 개념을 모두 포함하는 것이다. 특별히 commutative ring에 대해서는 이들의 구별이 사라지므로 방향을 명시하지 않아도 혼동의 여지가 없다. 
 
-정의에 위해, $$0$$ 자신은 $$A\neq 0$$인 한 nonzero 원소 $$1$$과 $$0\cdot 1=0$$을 이루므로 zero divisor이며, 그 대우명제를 생각하면 regular element는 항상 nonzero여야 한다. 
+정의에 위해, $0$ 자신은 $A\neq 0$인 한 nonzero 원소 (가령 $1$)와 곱했을 때 항상 $0$이므로 zero divisor이며, 그 대우명제를 생각하면 regular element는 항상 nonzero여야 한다. 
 
 우리의 관심사는 regular element와 unit 사이의 관계이다. 먼저 한 방향은 일반적인 환에서 항상 성립한다.
 
 ::: 명제 4
-Ring $$A$$의 임의의 unit은 regular element이다.
+Ring $A$의 임의의 unit은 regular element이다.
 :::
 ::: 증명
-결론에 반하여 $$u\in A^\times$$이라 하고 적당한 $$b\in A$$에 대해 $$ub=0$$이라 하자. 양변의 왼쪽에 $$u^{-1}$$을 곱하면
+결론에 반하여 $u\in A^\times$이라 하고 적당한 $b\in A$에 대해 $ub=0$이라 하자. 양변의 왼쪽에 $u^{-1}$을 곱하면
 
 $$b=1\cdot b=(u^{-1}u)b=u^{-1}(ub)=u^{-1}\cdot 0=0$$
 
-이므로 $$b=0$$이므로 이는 모순이다. 비슷한 논증이 $$bu=0$$이라 가정해도 성립하며 따라서 $$u$$는 regular element이다.
+이므로 $b=0$이므로 이는 모순이다. 비슷한 논증이 $bu=0$이라 가정해도 성립하며 따라서 $u$는 regular element이다.
 :::
 
-## 유한가환환에서의 regular element
-
-위의 [명제 4](#prop4)는 임의의 unit이 regular임을 보여주지만, 일반적으로 그 역은 성립하지 않는다. 가령 $$\mathbb{Z}$$에서 $$2$$는 regular element인 것을 쉽게 확인할 수 있지만 $$2$$는 $$\mathbb{Z}$$의 unit이 아니다. ([예시 2](#ex2))
+위의 [명제 4](#prop4)는 임의의 unit이 regular임을 보여주지만, 일반적으로 그 역은 성립하지 않는다. 가령 $\mathbb{Z}$에서 $2$는 regular element인 것을 쉽게 확인할 수 있지만 $2$는 $\mathbb{Z}$의 unit이 아니다. ([예시 2](#ex2))
 
 그러나 만일 ring이 *finite* ring이라면 그 역이 성립하는데, 이는 기본적으로 유한집합의 정의 ([\[집합론\] §자연수와 무한집합, ⁋정의 1](/ko/math/set_theory/natural_numbers#def1))에 의하여, 유한집합에서 자기자신으로 가는 함수는 전사이거나 단사이기만 해도 자동으로 전단사가 보장되기 때문이다. 
 
 ::: 정리 5
-Finite ring $$A$$와 임의의 원소 $$a$$에 대하여, $$a$$가 regular element인 것과 unit인 것이 동치이다.
+Finite ring $A$와 임의의 원소 $a$에 대하여, $a$가 regular element인 것과 unit인 것이 동치이다.
 :::
 ::: 증명
-[명제 4](#prop4)에 의해 unit은 항상 regular element이므로, regular element가 unit임만 보이면 된다. $$a\in A$$를 regular element라 하고, 곱셈사상
+[명제 4](#prop4)에 의해 unit은 항상 regular element이므로, regular element가 unit임만 보이면 된다. $a\in A$를 regular element라 하고, 곱셈사상
 
 $$\lambda_a:A\rightarrow A;\qquad x\mapsto ax$$
 
-를 생각하자. 그럼 $$\lambda_a(x)=\lambda_a(y)$$이면 $$a(x-y)=0$$인데, $$a$$가 regular element이므로 $$x-y=0$$, 즉 $$x=y$$이다. 따라서 $$\lambda_a$$는 단사이다. 그런데 $$A$$는 유한집합이고, 유한집합에서 자기 자신으로 가는 단사함수는 전사이므로 $$\lambda_a$$는 전사이다. 따라서 $$\lambda_a(v)=1$$을 만족하는 $$v\in A$$가 존재하고, 이는 $$av=1$$을 뜻한다. 비슷한 방식으로 우리는 right multiplication map이 전사임을 이용하여 $$a$$의 left inverse를 구성해줄 수 있으며, 앞서 [정의 1](#def1) 직후의 논증에서 이렇게 만든 두 inverse가 서로 반드시 일치해야 하는 것을 안다. 
+를 생각하자. 그럼 $\lambda_a(x)=\lambda_a(y)$이면 $a(x-y)=0$인데, $a$가 regular element이므로 $x-y=0$, 즉 $x=y$이다. 따라서 $\lambda_a$는 단사이다. 그런데 $A$는 유한집합이고, 유한집합에서 자기 자신으로 가는 단사함수는 전사이므로 $\lambda_a$는 전사이다. 따라서 $\lambda_a(v)=1$을 만족하는 $v\in A$가 존재하고, 이는 $av=1$을 뜻한다. 비슷한 방식으로 우리는 right multiplication map이 전사임을 이용하여 $a$의 left inverse를 구성해줄 수 있으며, 앞서 [정의 1](#def1) 직후의 논증에서 이렇게 만든 두 inverse가 서로 반드시 일치해야 하는 것을 안다. 
 :::
 
 그럼 이 정리의 가장 중요한 귀결은 integral domain에 관한 것이다.
@@ -98,76 +96,66 @@ $$\lambda_a:A\rightarrow A;\qquad x\mapsto ax$$
 모든 finite integral domain은 field이다.
 :::
 ::: 증명
-정의상 임의의 finite integral domain $$A$$는 commutative이고 $$0\neq 1$$이다. ([\[대수적 구조\] §분수체, ⁋정의 5](/ko/math/algebraic_structures/field_of_fractions#def5)) 이제 추가로 $$A$$가 field임을 보이려면 모든 nonzero 원소가 unit임을 보이면 되는데, integral domain에는 $$0$$ 이외의 zero divisor가 없으므로 임의의 nonzero 원소 $$a$$는 regular element이고 따라서 [정리 5](#thm5)에 의해 $$a$$는 unit이다. 
+정의상 임의의 finite integral domain $A$는 commutative이고 $0\neq 1$이다. ([\[대수적 구조\] §분수체, ⁋정의 5](/ko/math/algebraic_structures/field_of_fractions#def5)) 이제 추가로 $A$가 field임을 보이려면 모든 nonzero 원소가 unit임을 보이면 되는데, integral domain에는 $0$ 이외의 zero divisor가 없으므로 임의의 nonzero 원소 $a$는 regular element이고 따라서 [정리 5](#thm5)에 의해 $a$는 unit이다. 
 :::
 
-## 정수의 잉여류환과 unit group
+## 예시
 
-위의 결과들을 가장 친숙한 유한가환환인 $$\mathbb{Z}/n\mathbb{Z}$$에 적용하면, unit과 zero divisor의 분포가 정수론의 언어로 정확히 기술된다.
+이제 위 결과들에 대한 예시를 살펴보자. 
 
 ::: 예시 7
-$$n\geq 1$$에 대해 환 $$\mathbb{Z}/n\mathbb{Z}$$를 보자. 잉여류 $$\bar a$$가 unit이라는 것은 $$\bar a\bar x=\bar 1$$을 만족하는 $$\bar x$$가 존재하는 것, 즉 적당한 정수 $$x,k$$에 대해 $$ax-kn=1$$이 성립하는 것이다. Bézout의 정리에 의해 이러한 $$x,k$$가 존재하는 것은 $$\gcd(a,n)=1$$, 즉 $$a$$가 $$n$$과 서로소인 것과 동치이다. 따라서
+$n\geq 1$에 대해 정의된 ring $\mathbb{Z}/n\mathbb{Z}$를 보자. 이 ring의 원소 $a+n\mathbb{Z}$가 unit이라는 것은 어떠한 $x+n\mathbb{Z}$가 존재하여 
 
-$$(\mathbb{Z}/n\mathbb{Z})^\times=\{\bar a:\gcd(a,n)=1\}$$
+$$(a+n\mathbb{Z})(x+n\mathbb{Z})=1+n\mathbb{Z}$$
 
-이고, 이 군의 위수는 $$n$$과 서로소인 $$1$$ 이상 $$n$$ 이하 정수의 개수, 즉 Euler totient $$\varphi(n)$$이다.
+인 것, 즉 적당한 정수 $x,k$에 대해 $ax-kn=1$이 성립하는 것이다. [\[정수론\] §유클리드 호제법과 Bézout 항등식, ⁋정리 3](/ko/math/number_theory/euclidean_algorithm#thm3)에 의해 이러한 $x,k$가 존재하는 것은 $\gcd(a,n)=1$, 즉 $a$가 $n$과 서로소인 것과 동치이므로,
 
-반면 $$\gcd(a,n)=d>1$$이고 $$\bar a\neq\bar 0$$이면 $$\bar a$$는 zero divisor이다. 이는 $$\bar a\cdot\overline{n/d}=\overline{a\cdot n/d}=\overline{(a/d)n}=\bar 0$$이고 $$1\le n/d<n$$이라 $$\overline{n/d}\neq\bar 0$$이기 때문이다. 따라서 $$\mathbb{Z}/n\mathbb{Z}$$의 모든 nonzero 원소는 unit이거나 zero divisor이며, 이 분류는 [정리 5](#thm5)의 유한환 판정 ("regular element $$\Leftrightarrow$$ unit")과 정확히 일치한다. 가령 $$n=6$$이면 unit은 $$\bar 1,\bar 5$$의 둘($$\varphi(6)=2$$)이고, $$\bar 2,\bar 3,\bar 4$$는 zero divisor이다. 실제로 $$\bar 2\cdot\bar 3=\bar 0$$이다.
+$$(\mathbb{Z}/n\mathbb{Z})^\times=\{a+n\mathbb{Z}:\gcd(a,n)=1\}$$
 
-특히 $$n=p$$가 소수이면 $$1,\ldots,p-1$$이 모두 $$p$$와 서로소이므로 $$(\mathbb{Z}/p\mathbb{Z})^\times=\mathbb{Z}/p\mathbb{Z}\setminus\{\bar 0\}$$이고, $$\mathbb{Z}/p\mathbb{Z}$$는 zero divisor를 갖지 않는 유한 integral domain이다. [따름정리 6](#cor6)에 의해 이는 field이며, 이것이 $$p$$개의 원소를 갖는 소체 $$\mathbb{F}_p$$이다.
+이고, 이 group의 크기는 $n$과 서로소인 $1$ 이상 $n$ 이하 정수의 개수 $\varphi(n)$이다 ([\[정수론\] §오일러 정리와 phi 함수, ⁋정의 1](/ko/math/number_theory/euler_theorem#def1)).
+
+반면 $\gcd(a,n)=d>1$이고 $a+n\mathbb{Z}\neq 0+n\mathbb{Z}$이면 $a+n\mathbb{Z}$는 zero divisor이다. 이는 $n/d+n\mathbb{Z}\neq 0+n\mathbb{Z}$이고,
+
+$$(a+n\mathbb{Z})(n/d+n\mathbb{Z})=a\cdot(n/d)+n\mathbb{Z}=(a/d)n+n\mathbb{Z}=0+n\mathbb{Z}$$
+
+이기 때문이다. 따라서 $\mathbb{Z}/n\mathbb{Z}$의 모든 nonzero 원소는 unit이거나 zero divisor이며, 이 분류가 다시 [정리 5](#thm5)를 잘 보여준다. 
+
+특히 $n=p$가 소수이면 $1,\ldots,p-1$이 모두 $p$와 서로소이므로 $(\mathbb{Z}/p\mathbb{Z})^\times=\mathbb{Z}/p\mathbb{Z}\setminus\{0+p\mathbb{Z}\}$이고, $\mathbb{Z}/p\mathbb{Z}$는 zero divisor를 갖지 않는 유한 integral domain이다. [따름정리 6](#cor6)에 의해 이는 field이며, 이것이 $p$개의 원소를 갖는 *prime field* $\mathbb{F}_p$이다 ([\[체론\] §체, §§소체](/ko/math/field_theory/fields#소체)).
 :::
 
-위 예시에서 $$\mathbb{Z}/n\mathbb{Z}$$가 소수의 거듭제곱들의 곱으로 분해되는 모습은 중국인의 나머지정리로 정리된다 ([§중국인의 나머지정리, ⁋명제 5](/ko/math/ring_theory/chinese_remainder_theorem#prop5)). 여기서는 unit group이 곱분해와 어떻게 어울리는지를 본다.
-
-## 곱환과 행렬환의 unit group
-
-곱환의 unit group은 성분별로 결정된다. 이는 곱환에서 곱셈이 성분별로 이루어진다는 사실의 직접적 귀결이다.
+한편, product ring의 unit group은 성분별로 결정된다. 이는 product ring에서 곱셈이 성분별로 계산되기 때문이다.
 
 ::: 명제 8
-환들 $$A_1,\ldots,A_n$$의 곱환 $$A=A_1\times\cdots\times A_n$$에 대하여, 원소 $$(a_1,\ldots,a_n)$$이 $$A$$의 unit인 것과 각 $$a_i$$가 $$A_i$$의 unit인 것이 동치이다. 따라서 군으로서
+Ring들 $A_1,\ldots,A_n$의 product $A=A_1\times\cdots\times A_n$에 대하여, 원소 $(a_1,\ldots,a_n)$이 $A$의 unit인 것과 각 $a_i$가 $A_i$의 unit인 것이 동치이다. 즉, group으로서
 
 $$A^\times=A_1^\times\times\cdots\times A_n^\times$$
 
 이 성립한다.
 :::
 ::: 증명
-$$A$$의 곱셈은 성분별로 이루어지고 항등원은 $$(1,\ldots,1)$$이다. 원소 $$a=(a_1,\ldots,a_n)$$이 unit이면 $$ab=ba=(1,\ldots,1)$$을 만족하는 $$b=(b_1,\ldots,b_n)$$이 존재하는데, 이는 각 성분에서 $$a_ib_i=b_ia_i=1$$임을 뜻하므로 각 $$a_i$$가 unit이고 $$b_i=a_i^{-1}$$이다. 거꾸로 각 $$a_i$$가 unit이면 $$b=(a_1^{-1},\ldots,a_n^{-1})$$이 $$ab=ba=(1,\ldots,1)$$을 만족하므로 $$a$$가 unit이다. 따라서 $$a\in A^\times$$인 것과 각 $$a_i\in A_i^\times$$인 것이 동치이며, 사상
+$A$의 곱셈은 성분별로 이루어지고 항등원은 $(1,\ldots,1)$이다. 원소 $a=(a_1,\ldots,a_n)$이 unit이면 $ab=ba=(1,\ldots,1)$을 만족하는 $b=(b_1,\ldots,b_n)$이 존재하는데, 이는 각 성분에서 $a_ib_i=b_ia_i=1$임을 뜻하므로 각 $a_i$가 unit이고 $b_i=a_i^{-1}$이다. 
+
+거꾸로 각 $a_i$가 unit이면 $b=(a_1^{-1},\ldots,a_n^{-1})$이 $ab=ba=(1,\ldots,1)$을 만족하므로 $a$가 unit이다. 따라서 $a\in A^\times$인 것과 각 $a_i\in A_i^\times$인 것이 동치이며, 사상
 
 $$A^\times\longrightarrow A_1^\times\times\cdots\times A_n^\times,\qquad (a_1,\ldots,a_n)\longmapsto(a_1,\ldots,a_n)$$
 
-은 위의 동치에 의해 잘 정의된 전단사이고, 곱셈이 성분별이므로 군준동형사상이다. 즉 군동형사상이다.
+은 위의 동치에 의해 잘 정의된 전단사이고, 곱셈이 성분별이므로 group homomorphism이 되어 isomorphism을 정의한다.
 :::
 
-가령 [§중국인의 나머지정리, ⁋명제 5](/ko/math/ring_theory/chinese_remainder_theorem#prop5)의 $$\mathbb{Z}/6\mathbb{Z}\cong\mathbb{Z}/2\mathbb{Z}\times\mathbb{Z}/3\mathbb{Z}$$에 명제 8을 적용하면
-
-$$(\mathbb{Z}/6\mathbb{Z})^\times\cong(\mathbb{Z}/2\mathbb{Z})^\times\times(\mathbb{Z}/3\mathbb{Z})^\times$$
-
-이고, 위수를 비교하면 $$\varphi(6)=\varphi(2)\varphi(3)=1\cdot 2=2$$를 얻는다. 이것이 Euler totient의 곱셈성 $$\varphi(mn)=\varphi(m)\varphi(n)$$ ($$\gcd(m,n)=1$$)의 환론적 출처이다.
-
-행렬환의 경우 unit group은 일반선형군이 된다.
+한편 matrix ring의 경우 unit group은 general linear group이 된다.
 
 ::: 예시 9
-환 $$R$$에 대해 $$n\times n$$ 행렬환 $$M_n(R)$$을 생각하자. 정의상 $$M_n(R)$$의 unit은 곱셈에 대한 양쪽 역원을 갖는 행렬, 즉 invertible matrix이다. 이러한 행렬 전체의 모임을 *general linear group<sub>일반선형군</sub>* $$\GL_n(R)$$이라 적으므로
+Ring $R$을 각 성분으로 갖는 $n\times n$ 행렬들의 ring $\Mat_n(R)$을 생각하자. 정의상 $\Mat_n(R)$의 unit은 곱셈에 대한 양쪽 역원을 갖는 행렬, 즉 invertible matrix이다. 이러한 행렬 전체의 모임을 *general linear group<sub>일반선형군</sub>* $\GL(n;R)$이라 부른다. 즉
 
-$$M_n(R)^\times=\GL_n(R)$$
+$$\Mat_n(R)^\times=\GL(n;R)$$
 
-이다. $$R$$가 가환환이면 행렬 $$M\in M_n(R)$$이 invertible인 것과 그 행렬식 $$\det M$$이 $$R^\times$$의 원소인 것이 동치인데, 이는 adjugate 공식 $$M\cdot\operatorname{adj}(M)=\operatorname{adj}(M)\cdot M=(\det M)I$$가 임의의 가환환 위에서 성립하기 때문이다. 실제로 $$\det M\in R^\times$$이면 $$(\det M)^{-1}\operatorname{adj}(M)$$이 $$M$$의 역행렬이고, 거꾸로 $$MN=I$$이면 $$\det M\cdot\det N=\det I=1$$이라 $$\det M\in R^\times$$이다. 따라서
+이다 ([\[다중선형대수학\] §행렬, ⁋정의 1](/ko/math/multilinear_algebra/matrices#def1)). $R$가 가환환이면 행렬 $M\in \Mat_n(R)$이 invertible인 것과 그 행렬식 $\det M$이 $R^\times$의 원소인 것이 동치인데, 이는 adjugate 공식 $M\cdot\operatorname{adj}(M)=\operatorname{adj}(M)\cdot M=(\det M)I$가 임의의 가환환 위에서 성립하기 때문이다. 실제로 $\det M\in R^\times$이면 $(\det M)^{-1}\operatorname{adj}(M)$이 $M$의 역행렬이고, 거꾸로 $MN=I$이면 $\det M\cdot\det N=\det I=1$이라 $\det M\in R^\times$이다. 따라서
 
-$$\GL_n(R)=\{M\in M_n(R):\det M\in R^\times\}$$
+$$\GL(n;R)=\{M\in \Mat_n(R):\det M\in R^\times\}$$
 
-이다. 예를 들어 $$R=\mathbb{Z}$$이면 $$\mathbb{Z}^\times=\{1,-1\}$$이므로 $$\GL_n(\mathbb{Z})$$는 행렬식이 $$\pm 1$$인 정수행렬들로 이루어진다.
+이다. 예를 들어 $R=\mathbb{Z}$이면 $\mathbb{Z}^\times=\{1,-1\}$이므로 $\GL(n;\mathbb{Z})$는 행렬식이 $\pm 1$인 정수행렬들로 이루어진다.
 
-$$M_n(R)$$은 $$n\geq 2$$이면 nontrivial한 zero divisor를 가지므로 unit과 zero divisor의 구별이 의미를 갖는다. 가령 $$n=2$$에서 matrix unit $$E_{11},E_{12}$$는 $$E_{12}E_{11}=0$$이지만 $$E_{12}\neq 0$$, $$E_{11}\neq 0$$이므로 둘 다 zero divisor이고, 따라서 [명제 4](#prop4)에 의해 invertible하지 않다.
-:::
-
-## Field와 division ring의 관점
-
-마지막으로, unit의 언어로 division ring과 field를 다시 본다.
-
-::: 참고 10
-환 $$A\neq 0$$이 division ring이라는 것은 $$A^\times=A\setminus\{0\}$$인 것, 즉 모든 nonzero 원소가 unit인 것이다 ([\[대수적 구조\] §분수체, ⁋정의 3](/ko/math/algebraic_structures/field_of_fractions#def3)). 가환인 경우가 field이다. 이 관점에서 [명제 4](#prop4)는 division ring에 zero divisor가 없음을 곧바로 함의한다. 모든 nonzero 원소가 unit이고 unit은 zero divisor가 아니므로, division ring (특히 field)에는 $$0$$ 이외의 zero divisor가 없다. 따라서 모든 field는 integral domain이다.
-
-[따름정리 6](#cor6)은 이 함의가 유한한 경우 부분적으로 역전됨을 말한다. 일반적으로 integral domain이 field가 될 필요는 없지만 ($$\mathbb{Z}$$가 반례이다), 유한한 integral domain은 반드시 field이다. 무한한 경우 regular element와 unit의 간극을 메우는 것은 division ring 구조 자체이지 유한성이 아니므로, integral domain을 field로 만드는 표준적 방법은 [정리 5](#thm5)의 유한성 논증 대신 field of fractions를 취하는 것이다 ([\[대수적 구조\] §분수체, ⁋정의 7](/ko/math/algebraic_structures/field_of_fractions#def7)).
+$\Mat_n(R)$은 $n\geq 2$이면 nontrivial한 zero divisor를 가지므로 unit과 zero divisor의 구별이 의미를 갖는다. 가령 $n=2$에서 matrix unit $E_{11},E_{12}$는 $E_{12}E_{11}=0$이지만 $E_{12}\neq 0$, $E_{11}\neq 0$이므로 둘 다 zero divisor이고, 따라서 [명제 4](#prop4)에 의해 invertible하지 않다.
 :::
 
 ---
