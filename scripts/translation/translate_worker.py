@@ -234,6 +234,86 @@ def clear_drift_flag(ko_path: Path) -> None:
         ko_path.write_text(new_fm + body, encoding="utf-8")
 
 
+# ── git: 봇 산출물은 봇이 커밋한다 ─────────────────────────────────────────
+#
+# EN 은 사실상 봇 산출물이라 사람이 손댈 일이 거의 없다. 워커가 자기 산출물을 직접
+# 커밋하면 autopush 의 haiku 분류기가 거대한 EN diff 를 볼 일이 없어진다. 그 분류기는
+# staged .md diff 가 8만 자를 넘으면 오분류를 피하려고 HALT 하는데, EN 재번역 몇 편이면
+# 쉽게 넘어서 실제로 autopush 가 계속 멈춰 있었다 (2026-07-14).
+#
+# push 는 하지 않는다 — autopush 가 밀린 커밋까지 함께 밀어준다.
+AUTOPUSH_LOCK = Path("/tmp/blog-autopush.lock")
+COMMIT_LOCK_WAIT_SEC = 120
+
+
+def _git(*args: str) -> Tuple[int, str, str]:
+    p = subprocess.run(["git", *args], cwd=str(BLOG_ROOT),
+                       capture_output=True, text=True)
+    return p.returncode, p.stdout, p.stderr
+
+
+def _post_title(path: Path) -> str:
+    try:
+        m = re.search(r'^title:\s*"?(.+?)"?\s*$',
+                      path.read_text(encoding="utf-8")[:2000], re.MULTILINE)
+        return m.group(1) if m else path.stem
+    except OSError:
+        return path.stem
+
+
+def commit_translation(ko_path: Path, en_path: Path, reason: str) -> None:
+    """방금 쓴 EN(과 drift 면 KO 플래그)을 커밋한다. 실패해도 번역은 살린다.
+
+    drift 일 때 KO 는 `drift_needed` 한 줄만 지워진 상태이므로 mechanical
+    (`[lastmod-skip]`), EN 본문은 content 로 **따로** 커밋한다. 한 커밋에 묶으면
+    KO 의 last_modified_at 까지 바뀐다.
+
+    autopush 와 같은 락을 쓴다 (둘 다 같은 레포에 git 을 건다). 못 잡으면 커밋을
+    건너뛴다 — 파일은 워킹트리에 남으므로 다음 autopush 가 가져간다.
+    """
+    import fcntl
+
+    deadline = time.time() + COMMIT_LOCK_WAIT_SEC
+    fd = os.open(str(AUTOPUSH_LOCK), os.O_CREAT | os.O_RDWR)
+    try:
+        while True:
+            try:
+                fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+                break
+            except OSError:
+                if time.time() >= deadline:
+                    log("commit: autopush 가 락을 쥐고 있다 — 커밋 건너뜀 "
+                        "(다음 autopush 가 가져간다)")
+                    return
+                time.sleep(5)
+
+        rel_en = str(en_path.relative_to(BLOG_ROOT))
+        rel_ko = str(ko_path.relative_to(BLOG_ROOT))
+        title = _post_title(en_path)
+
+        # 1) KO: drift 플래그 소거 (mechanical). 실제로 바뀐 게 있을 때만.
+        rc, out, _ = _git("status", "--porcelain", "--", rel_ko)
+        if reason == "drift" and out.strip():
+            _git("add", "--", rel_ko)
+            rc, _, err = _git("commit", "-m",
+                              "재번역 완료된 글의 drift 플래그 소거 [lastmod-skip]")
+            if rc != 0:
+                log(f"commit(ko) 실패: {err.strip()[:200]}")
+                _git("reset", "-q", "--", rel_ko)
+
+        # 2) EN: 번역 결과 (content)
+        subject = ("EN 신규 번역" if reason == "pending" else "EN 재번역(drift)")
+        _git("add", "--", rel_en)
+        rc, _, err = _git("commit", "-m", f"{subject}: {title}")
+        if rc != 0:
+            log(f"commit(en) 실패: {err.strip()[:200]}")
+            _git("reset", "-q", "--", rel_en)
+            return
+        log(f"committed: {subject}: {title}")
+    finally:
+        os.close(fd)
+
+
 TRANSLATION_SOURCE_TAG = "kimi-cli"
 
 
@@ -302,6 +382,8 @@ def _translate_fm_fields_via_kimi(ko_fields: dict) -> dict:
     `ko_fields` only includes keys whose values exist in KO frontmatter.
     Returns a dict with the same keys mapped to English strings.
     """
+    # (프롬프트에 "no code fences" 라고 써도 모델은 종종 ```json 으로 감싸 내놓는다.
+    #  _parse_json_object 가 벗겨낸다 — 2026-07-14 실제로 이 때문에 실패했다.)
     if not ko_fields:
         return {}
     prompt = _FM_FIELDS_PROMPT.format(
@@ -309,10 +391,9 @@ def _translate_fm_fields_via_kimi(ko_fields: dict) -> dict:
         keys=list(ko_fields.keys()),
     )
     out = call_kimi(prompt, thinking=False)
-    out = _FENCE_RE.sub("", out).strip()
     try:
-        data = json.loads(out)
-    except json.JSONDecodeError as e:
+        data = _parse_json_object(out)
+    except (json.JSONDecodeError, ValueError) as e:
         raise RuntimeError(f"frontmatter-fields translation: invalid JSON output ({e}): {out[:200]!r}")
     return {k: str(data.get(k, "")).strip() for k in ko_fields.keys()}
 
@@ -640,6 +721,29 @@ def build_polish_prompt(ko_body: str, en_body: str) -> str:
 # ---------------------------------------------------------------------------
 
 _FENCE_RE     = re.compile(r"^\s*```(?:markdown|md)?\s*\n|\n```\s*$", re.MULTILINE)
+
+
+def _parse_json_object(out: str) -> dict:
+    """모델이 낸 JSON 을 관대하게 파싱한다.
+
+    `_FENCE_RE` 는 ```markdown / ```md / bare ``` 만 벗기므로 ```json 은 그대로 남아
+    파싱이 터졌다. 여기서는 **어떤 언어 태그든** 벗겨내고, 그래도 안 되면 첫 `{` 부터
+    마지막 `}` 까지를 떼어 다시 시도한다 (모델이 앞뒤로 군말을 붙인 경우).
+
+    본문 경로에는 쓰지 않는다 — 본문은 코드블럭으로 시작·끝날 수 있어서 펜스를 넓게
+    벗기면 진짜 코드블럭을 먹는다.
+    """
+    t = out.strip()
+    t = re.sub(r"\A```[A-Za-z0-9_+-]*[ \t]*\n", "", t)
+    t = re.sub(r"\n```[ \t]*\Z", "", t).strip()
+    try:
+        return json.loads(t)
+    except json.JSONDecodeError:
+        i, j = t.find("{"), t.rfind("}")
+        if i == -1 or j <= i:
+            raise
+        return json.loads(t[i:j + 1])
+
 _MATH_BLOCK_RE = re.compile(r"\$\$.*?\$\$", re.DOTALL)
 _KO_PATH_RE    = re.compile(r"/ko/[A-Za-z0-9_\-/]+")
 
@@ -2038,6 +2142,7 @@ def main() -> int:
         stats["total_out_chars"] = stats.get("total_out_chars", 0) + out_chars
         save_state(state)
         log(f"DONE: {en_path.relative_to(BLOG_ROOT)} (in={in_chars}c, out={out_chars}c)")
+        commit_translation(ko_path, en_path, reason)
         return 0
     finally:
         release_lock()
