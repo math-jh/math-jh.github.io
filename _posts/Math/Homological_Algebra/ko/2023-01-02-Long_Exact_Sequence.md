@@ -5,7 +5,6 @@ excerpt: "긴 완전열"
 
 categories: [Math / Homological Algebra]
 permalink: /ko/math/homological_algebra/long_exact_sequence
-drift_needed: true
 sidebar: 
     nav: "homological_algebra-ko"
 
@@ -14,21 +13,21 @@ weight: 3
 
 ---
 
-이제 우리는 $$\Ch(\mathcal{A})$$에서의 short exact sequence가 *long exact sequence*를 유도한다는 것을 보인다. 
+이제 우리는 $\Ch(\mathcal{A})$에서의 short exact sequence가 *long exact sequence*를 유도한다는 것을 보인다. 
 
 ## 긴 완전열
 
-우리는 앞서 chain map $$f_\bullet$$의 image와 kernel이 각각의 $$f_n$$의 image와 kernel로 이루어진 chain complex가 된다는 것을 보았다. 따라서 
+우리는 앞서 chain map $f_\bullet$의 image와 kernel이 각각의 $f_n$의 image와 kernel로 이루어진 chain complex가 된다는 것을 보았다. 따라서 
 
 $$0\rightarrow A_\bullet\rightarrow B_\bullet\rightarrow C_\bullet\rightarrow 0$$
 
-이 *short exact sequence*라는 것은 모든 $$n$$에 대하여
+이 *short exact sequence*라는 것은 모든 $n$에 대하여
 
 $$0\rightarrow A_n\rightarrow B_n\rightarrow C_n\rightarrow 0$$
 
 이 short exact sequence라는 것과 동치라는 것을 확인할 수 있다. 
 
-이번 글의 가장 큰 정리는 다음의 [정리 1](#thm1)이다. 이 때 증명에서 snake lemma가 중요한 역할을 하며, 또 카테고리가 $$\lMod{A}$$인 경우에 명시적으로 얻어지는 connecting map을 이용하면 증명을 쉽게 마칠 수 있으므로, [§Diagram chasing](/ko/math/homological_algebra/diagram_chasing)에서와 마찬가지로 Freyd-Mitchell embedding theorem을 적극적으로 이용하여 $$\lMod{A}$$에서 다음 정리에 대한 증명을 진행한다.
+이번 글의 가장 큰 정리는 다음의 [정리 1](#thm1)이다. 이 때 증명에서 snake lemma가 중요한 역할을 하며, 또 카테고리가 $\lMod{A}$인 경우에 명시적으로 얻어지는 connecting map을 이용하면 증명을 쉽게 마칠 수 있으므로, [§Diagram chasing](/ko/math/homological_algebra/diagram_chasing)에서와 마찬가지로 Freyd-Mitchell embedding theorem을 적극적으로 이용하여 $\lMod{A}$에서 다음 정리에 대한 증명을 진행한다.
 
 ::: 정리 1 (The long exact sequence)
 다음의 short exact sequence
@@ -46,7 +45,7 @@ $$\cdots\rightarrow H_n(A)\rightarrow H_n(B)\rightarrow H_n(C)\rightarrow H_{n-1
 
 ![long_exact_sequence](/assets/images/Math/Homological_Algebra/Long_Exact_Sequence-1.svg){:style="width:32.84em" class="invert" .align-center}
 
-을 생각하면 된다. 여기에서 $$\partial$$들은 모두 $$\partial^A(a+\im d^A_{n+1})=d_n^Aa\in\ker d^A_{n-1}$$과 같이 정의된 함수들이다. 그럼 위의 diagram에서 $$\ker\partial^A$$는 $$H_{n+1}(A)=\ker d_n^A/\im(d^A_{n+1})$$와 같고, $$\coker\partial^A$$는 $$H_{n-1}(A)=\ker d^A_{n-1}/\im d^A_n$$과 같다는 것을 쉽게 확인할 수 있다. 
+을 생각하면 된다. 여기에서 $\partial$들은 모두 $\partial^A(a+\im d^A_{n+1})=d_n^Aa\in\ker d^A_{n-1}$과 같이 정의된 함수들이다. 그럼 위의 diagram에서 $\ker\partial^A$는 $H_{n+1}(A)=\ker d_n^A/\im(d^A_{n+1})$와 같고, $\coker\partial^A$는 $H_{n-1}(A)=\ker d^A_{n-1}/\im d^A_n$과 같다는 것을 쉽게 확인할 수 있다. 
 
 따라서, 위와 아래의 행이 모두 exact라는 것만 보인다면, snake lemma에 의해 주어진 long exact sequence가 잘 유도된다. 이를 보이기 위해 다시 다음의 diagram
 
@@ -81,19 +80,19 @@ $$\coker(d_n^A)\rightarrow\coker(d_n^B)\rightarrow\coker(d_n^C)\rightarrow 0$$
 
 $$0 \rightarrow A_\bullet\overset{u}{\rightarrow}B_\bullet\overset{v}{\rightarrow}C_\bullet \rightarrow 0,\qquad 0 \rightarrow A_\bullet'\overset{u'}{\rightarrow}B_\bullet'\overset{v'}{\rightarrow}C_\bullet' \rightarrow 0$$
 
-이라 적고, 이들 사이의 chain map들을 $$f:A_\bullet \rightarrow A_\bullet'$$, $$g:B_\bullet \rightarrow B_\bullet'$$, $$h:C_\bullet \rightarrow C_\bullet'$$이라 하자. 즉 $$u'f=gu$$, $$v'g=hv$$가 성립한다.
+이라 적고, 이들 사이의 chain map들을 $f:A_\bullet \rightarrow A_\bullet'$, $g:B_\bullet \rightarrow B_\bullet'$, $h:C_\bullet \rightarrow C_\bullet'$이라 하자. 즉 $u'f=gu$, $v'g=hv$가 성립한다.
 
-만들어야 하는 diagram에서 connecting morphism $$\partial$$를 포함하지 않는 사각형들은 homology의 functoriality로부터 바로 commute한다. 가령
+만들어야 하는 diagram에서 connecting morphism $\partial$를 포함하지 않는 사각형들은 homology의 functoriality로부터 바로 commute한다. 가령
 
 $$H_n(g)\circ H_n(u)=H_n(gu)=H_n(u'f)=H_n(u')\circ H_n(f)$$
 
-이고, $$v$$ 쪽 사각형도 마찬가지이다. 따라서 다음의 사각형
+이고, $v$ 쪽 사각형도 마찬가지이다. 따라서 다음의 사각형
 
 $$\begin{aligned}H_n(C)&\overset{\partial}{\longrightarrow} H_{n-1}(A)\\ H_n(h)\downarrow\quad&\qquad\quad\downarrow H_{n-1}(f)\\ H_n(C')&\overset{\partial'}{\longrightarrow}H_{n-1}(A')\end{aligned}$$
 
-이 commute하는 것만 보이면 충분하다. [정리 1](#thm1)의 증명에서의 construction을 따라가면 $$\partial$$는 다음과 같이 계산된다. 임의의 $$[c]\in H_n(C)$$에 대하여, $$v_n$$이 surjective이므로 $$v_n(b)=c$$이도록 하는 $$b\in B_n$$이 존재하고, $$v_{n-1}(d_n^Bb)=d_n^Cv_n(b)=d_n^Cc=0$$이므로 exactness에 의해 $$u_{n-1}(a)=d_n^Bb$$이도록 하는 유일한 $$a\in A_{n-1}$$이 존재하며, $$\partial[c]=[a]$$이다. 이 값이 lift $$b$$의 선택에 무관하다는 것도 확인할 수 있는데, $$v_n(b)=v_n(\tilde{b})=c$$라면 $$b-\tilde{b}=u_n(\alpha)$$이도록 하는 $$\alpha\in A_n$$이 존재하고, 그럼 대응되는 두 원소 $$a,\tilde{a}$$가 $$u_{n-1}(a-\tilde{a})=d^B_n(b-\tilde{b})=u_{n-1}(d^A_n\alpha)$$과 $$u_{n-1}$$의 injectivity로부터 $$a-\tilde{a}=d_n^A\alpha$$를 만족하여 $$[a]=[\tilde{a}]$$이기 때문이다.
+이 commute하는 것만 보이면 충분하다. [정리 1](#thm1)의 증명에서의 construction을 따라가면 $\partial$는 다음과 같이 계산된다. 임의의 $[c]\in H_n(C)$에 대하여, $v_n$이 surjective이므로 $v_n(b)=c$이도록 하는 $b\in B_n$이 존재하고, $v_{n-1}(d_n^Bb)=d_n^Cv_n(b)=d_n^Cc=0$이므로 exactness에 의해 $u_{n-1}(a)=d_n^Bb$이도록 하는 유일한 $a\in A_{n-1}$이 존재하며, $\partial[c]=[a]$이다. 이 값이 lift $b$의 선택에 무관하다는 것도 확인할 수 있는데, $v_n(b)=v_n(\tilde{b})=c$라면 $b-\tilde{b}=u_n(\alpha)$이도록 하는 $\alpha\in A_n$이 존재하고, 그럼 대응되는 두 원소 $a,\tilde{a}$가 $u_{n-1}(a-\tilde{a})=d^B_n(b-\tilde{b})=u_{n-1}(d^A_n\alpha)$과 $u_{n-1}$의 injectivity로부터 $a-\tilde{a}=d_n^A\alpha$를 만족하여 $[a]=[\tilde{a}]$이기 때문이다.
 
-이제 $$[c]\in H_n(C)$$와 위의 construction에서 등장하는 $$b,a$$를 고정하자. 그럼 $$h_n(c)\in C_n'$$의 lift로는 $$g_n(b)$$를 택할 수 있다. 실제로
+이제 $[c]\in H_n(C)$와 위의 construction에서 등장하는 $b,a$를 고정하자. 그럼 $h_n(c)\in C_n'$의 lift로는 $g_n(b)$를 택할 수 있다. 실제로
 
 $$v_n'(g_n(b))=h_n(v_n(b))=h_n(c)$$
 
@@ -101,7 +100,7 @@ $$v_n'(g_n(b))=h_n(v_n(b))=h_n(c)$$
 
 $$d_n^{B'}(g_n(b))=g_{n-1}(d_n^Bb)=g_{n-1}(u_{n-1}(a))=u_{n-1}'(f_{n-1}(a))$$
 
-이므로, $$\partial'$$의 정의에 의하여
+이므로, $\partial'$의 정의에 의하여
 
 $$\partial'[h_n(c)]=[f_{n-1}(a)]=H_{n-1}(f)(\partial[c])$$
 
@@ -113,15 +112,15 @@ $$\partial'[h_n(c)]=[f_{n-1}(a)]=H_{n-1}(f)(\partial[c])$$
 지금까지 살펴본 chain complex들 사이의 isomorphism을 어떻게 정의해야 하는지는 명확하다.
 
 ::: 정의 3
-두 chain complex $$C_\bullet$$, $$D_\bullet$$이 주어졌다 하자. 그럼 $$C_\bullet$$과 $$D_\bullet$$이 *isomorphic*하다는 것은 임의의 두 chain map $$f:C_\bullet\rightarrow D_\bullet$$, $$g:D_\bullet\rightarrow C_\bullet$$이 존재하여 $$fg=\id_D$$이고 $$gf=\id_C$$인 것이다. 이 때, $$f,g$$를 두 chain complex 사이의 *isomorphism*이라 부른다.
+두 chain complex $C_\bullet$, $D_\bullet$이 주어졌다 하자. 그럼 $C_\bullet$과 $D_\bullet$이 *isomorphic*하다는 것은 임의의 두 chain map $f:C_\bullet\rightarrow D_\bullet$, $g:D_\bullet\rightarrow C_\bullet$이 존재하여 $fg=\id_D$이고 $gf=\id_C$인 것이다. 이 때, $f,g$를 두 chain complex 사이의 *isomorphism*이라 부른다.
 :::
 
-이는 곧, 각각의 $$f_n$$들이 모두 isomorphism인 chain map $$(f_n)_{n\in\mathbb{Z}}$$이 존재한다는 것과 동치이다.
+이는 곧, 각각의 $f_n$들이 모두 isomorphism인 chain map $(f_n)_{n\in\mathbb{Z}}$이 존재한다는 것과 동치이다.
 
 한편 호몰로지 대수학에서 우리가 사용할 수 있는 도구는 호몰로지 뿐이므로, 다음과 같이 동형사상의 개념을 약화시킬 수 있다.
 
 ::: 정의 4
-두 chain complex $$C_\bullet$$, $$D_\bullet$$이 *quasi-isomorphic<sub>유사동형</sub>*하다는 것은 모든 $$n$$에 대하여 $$H_n(C)\cong H_n(D)$$인 것이다. 만일 어떤 chain map $$f:C\rightarrow D$$과 모든 $$n$$에 대해 $$H_n(f)$$가 isomorphism이 된다면, $$f$$를 *quasi-isomorphism<sub>유사동형사상</sub>*이라 부른다.[^1]
+두 chain complex $C_\bullet$, $D_\bullet$이 *quasi-isomorphic<sub>유사동형</sub>*하다는 것은 모든 $n$에 대하여 $H_n(C)\cong H_n(D)$인 것이다. 만일 어떤 chain map $f:C\rightarrow D$과 모든 $n$에 대해 $H_n(f)$가 isomorphism이 된다면, $f$를 *quasi-isomorphism<sub>유사동형사상</sub>*이라 부른다.[^1]
 :::
 
 정의에 의해 isomorphic한 두 chain complex들은 quasi-isomorphic하기도 하다. 그러나 그 역은 성립하지 않는다. 모든 성분이 0인 sequence
@@ -135,20 +134,20 @@ $$\cdots\rightarrow 0\rightarrow 0\rightarrow 0\rightarrow\cdots$$
 한편, 두 개의 chain complex의 동치관계를 위와 같이 quasi-isomorphism으로 약화시킨다면, 마찬가지 논리로 두 chain map이 각각의 호몰로지에서 같은 함수를 정의한다면 이들 또한 같은 것으로 취급하는 것이 조금 더 타당할 것이다. 이를 위해 다음을 정의한다.
 
 ::: 정의 5
-두 chain complex $$C,D$$와 chain map $$f,g:C\rightarrow D$$가 주어졌다 하자. 그럼 $$f$$와 $$g$$ 사이의 *chain homotopy<sub>사슬 호모토피</sub>*은 다음 diagram
+두 chain complex $C,D$와 chain map $f,g:C\rightarrow D$가 주어졌다 하자. 그럼 $f$와 $g$ 사이의 *chain homotopy<sub>사슬 호모토피</sub>*은 다음 diagram
 
 ![chain_homotopy](/assets/images/Math/Homological_Algebra/Long_Exact_Sequence-5.svg){:style="width:30.61em" class="invert" .align-center}
 
-에서, $$f_n-g_n=d_{n+1}^Dh_n+h_{n-1}d_n^C$$가 성립하도록 하는 $$h_n:C_n\rightarrow D_{n+1}$$의 모임이다. 만일 $$f,g$$ 사이의 chain homotopy가 존재한다면, $$f$$와 $$g$$가 *homotopic*한 chain map이라 부른다. 
+에서, $f_n-g_n=d_{n+1}^Dh_n+h_{n-1}d_n^C$가 성립하도록 하는 $h_n:C_n\rightarrow D_{n+1}$의 모임이다. 만일 $f,g$ 사이의 chain homotopy가 존재한다면, $f$와 $g$가 *homotopic*한 chain map이라 부른다. 
 :::
 
-만일 어떤 chain map $$f$$에 대하여, $$f=dh+hd$$를 만족하는 $$h$$가 존재한다면, $$h$$를 $$f$$와 $$0$$ 사이의 chain homotopy로 볼 수 있다. 따라서 이와 같은 $$h$$가 존재할 경우 $$f$$를 *null homotopic*하다 부른다. 
+만일 어떤 chain map $f$에 대하여, $f=dh+hd$를 만족하는 $h$가 존재한다면, $h$를 $f$와 $0$ 사이의 chain homotopy로 볼 수 있다. 따라서 이와 같은 $h$가 존재할 경우 $f$를 *null homotopic*하다 부른다. 
 
 ::: 명제 6
-두 homotopic chain map $$f,g:C\rightarrow D$$는 homology들 위에서 같은 함수를 유도한다.
+두 homotopic chain map $f,g:C\rightarrow D$는 homology들 위에서 같은 함수를 유도한다.
 :::
 ::: 증명
-임의의 $$[a]\in H_n(C)=\ker(d^C_{n})/\im(d^C_{n+1})$$을 택하고, $$a\in\ker(d_{n}^C)$$가 representative라 하자. 우리는 
+임의의 $[a]\in H_n(C)=\ker(d^C_{n})/\im(d^C_{n+1})$을 택하고, $a\in\ker(d_{n}^C)$가 representative라 하자. 우리는 
 
 $$f_n(a)-g_n(b)\in\im(d_{n+1}^D)$$
 
@@ -156,28 +155,28 @@ $$f_n(a)-g_n(b)\in\im(d_{n+1}^D)$$
 
 $$(d_{n+1}^D\circ h_n)(a)+(h_{n-1}\circ d_n^C)(a)=f_n(a)-g_n(a)$$
 
-으로부터, $$a\in \ker(d_n^C)$$이므로 
+으로부터, $a\in \ker(d_n^C)$이므로 
 
 $$f_n(a)-g_n(b)=d_{n+1}^D(h_n(a))\in\im(d_{n+1}^D)$$
 
 을 얻는다.
 :::
 
-만일 어떤 chain map $$f:C\rightarrow D$$에 대하여, 적당한 chain map $$g:D\rightarrow C$$가 존재하여 $$gf$$가 $$\id_C$$와 homotopic하고, $$fg$$가 $$\id_D$$와 homotopic하다면 $$f$$를 *chain homotopy equivalence*라 부른다. 
+만일 어떤 chain map $f:C\rightarrow D$에 대하여, 적당한 chain map $g:D\rightarrow C$가 존재하여 $gf$가 $\id_C$와 homotopic하고, $fg$가 $\id_D$와 homotopic하다면 $f$를 *chain homotopy equivalence*라 부른다. 
 
 ## Homotopy category
 
-[명제 6](#prop6)에 힘입어, 우리는 *homotopy category* $$\mathbf{K}(\mathcal{C})$$를 다음 과정을 통해 정의할 수 있다. 우선 다음의 첫 번째 보조정리는 자명하다.
+[명제 6](#prop6)에 힘입어, 우리는 *homotopy category* $\mathbf{K}(\mathcal{C})$를 다음 과정을 통해 정의할 수 있다. 우선 다음의 첫 번째 보조정리는 자명하다.
 
 ::: 보조정리 7
 두 chain map 사이의 homotopy relation은 동치관계다.
 :::
 
-이를 통해 $$\Hom_{\mathbf{Ch}(\mathcal{C})}(C_\bullet,D_\bullet)$$ 위에 동치관계를 정의할 수 있다. 이 동치관계에 의해 생긴 quotient set을 $$\Hom_{\mathbf{K}(\mathcal{C})}(C_\bullet,D_\bullet)$$으로 정의하자. 
+이를 통해 $\Hom_{\mathbf{Ch}(\mathcal{C})}(C_\bullet,D_\bullet)$ 위에 동치관계를 정의할 수 있다. 이 동치관계에 의해 생긴 quotient set을 $\Hom_{\mathbf{K}(\mathcal{C})}(C_\bullet,D_\bullet)$으로 정의하자. 
 
-$$\mathbf{K}(\mathcal{C})$$는 $$\mathbf{Ch}(\mathcal{C})$$와 동일한 object를 갖고, 이들 사이의 morphism들의 집합은 위와 같이 정의된 $$\Hom_{\mathbf{K}(\mathcal{C})}$$와 같고, 이 집합이 abelian group의 구조를 갖는다는 것을 확인할 수 있다. 
+$\mathbf{K}(\mathcal{C})$는 $\mathbf{Ch}(\mathcal{C})$와 동일한 object를 갖고, 이들 사이의 morphism들의 집합은 위와 같이 정의된 $\Hom_{\mathbf{K}(\mathcal{C})}$와 같고, 이 집합이 abelian group의 구조를 갖는다는 것을 확인할 수 있다. 
 
-두 homotopic chain map $$f,g:C\rightarrow D$$가 주어졌다 하자. 임의의 $$u:B\rightarrow C$$, $$v:D\rightarrow E$$에 대하여 두 map $$vfu$$와 $$vgu$$를 생각하자. 다음 diagram
+두 homotopic chain map $f,g:C\rightarrow D$가 주어졌다 하자. 임의의 $u:B\rightarrow C$, $v:D\rightarrow E$에 대하여 두 map $vfu$와 $vgu$를 생각하자. 다음 diagram
 
 ![composition_in_homotopy_category](/assets/images/Math/Homological_Algebra/Long_Exact_Sequence-6.svg){:style="width:30.61em" class="invert" .align-center}
 
@@ -185,22 +184,22 @@ $$\mathbf{K}(\mathcal{C})$$는 $$\mathbf{Ch}(\mathcal{C})$$와 동일한 object�
 
 $$\begin{aligned}v_nf_nu_n-v_ng_nu_n&=v_n(f_n-g_n)u_n\\&=v_n(d_{n+1}h_n+h_{n-1}d_n)u_n\\&=d_{n+1}v_{n+1}h_nu_n+v_nh_{n-1}u_{n-1}d_n\end{aligned}$$
 
-이 되어, $$vfu$$와 $$vgu$$ 사이에 chain homotopy
+이 되어, $vfu$와 $vgu$ 사이에 chain homotopy
 
 $$(h'_n=v_{n+1}h_nu_n)_{n\in\mathbb{Z}}$$
 
-이 존재한다는 것을 안다. 즉 위에서 정의한 동치관계는 $$\mathbf{Ch}(\mathcal{C})$$의 합성과도 잘 맞아 떨어진다. 
+이 존재한다는 것을 안다. 즉 위에서 정의한 동치관계는 $\mathbf{Ch}(\mathcal{C})$의 합성과도 잘 맞아 떨어진다. 
 
-비슷한 논리로 $$\mathbf{K}(\mathcal{C})$$가 additive category라는 것을 보일 수 있으며, 자명한 functor $$\mathbf{Ch}(\mathcal{C})\rightarrow\mathbf{K}(\mathcal{C})$$가 additive functor가 된다. 
+비슷한 논리로 $\mathbf{K}(\mathcal{C})$가 additive category라는 것을 보일 수 있으며, 자명한 functor $\mathbf{Ch}(\mathcal{C})\rightarrow\mathbf{K}(\mathcal{C})$가 additive functor가 된다. 
 
-그러나 일반적으로 $$\mathbf{K}(\mathcal{C})$$는 abelian category가 되지는 않는다.
+그러나 일반적으로 $\mathbf{K}(\mathcal{C})$는 abelian category가 되지는 않는다.
 
 ## Mapping cone
 
-[정의 4](#def4)에서, 우리는 isomorphic한 homology를 갖는 chain complex들을 quasi-isomorphic하다 부르고, 이들을 같은 것으로 취급하기로 하였다. Mapping cone은 chain map $$f:C_\bullet \rightarrow D_\bullet$$이 주어졌을 때 이것이 quasi-isomorphism인지를 판별하는 도구가 된다.
+[정의 4](#def4)에서, 우리는 isomorphic한 homology를 갖는 chain complex들을 quasi-isomorphic하다 부르고, 이들을 같은 것으로 취급하기로 하였다. Mapping cone은 chain map $f:C_\bullet \rightarrow D_\bullet$이 주어졌을 때 이것이 quasi-isomorphism인지를 판별하는 도구가 된다.
 
 ::: 정의 8
-임의의 chain map $$f:C_\bullet\rightarrow D_\bullet$$에 대하여, $$f$$의 *mapping cone* $$\cone(f)$$는 다음의 chain complex
+임의의 chain map $f:C_\bullet\rightarrow D_\bullet$에 대하여, $f$의 *mapping cone* $\cone(f)$는 다음의 chain complex
 
 $$\cdots\longrightarrow\underbrace{C_n\oplus D_{n+1}}_{\cone(f)_{n+1}}\overset{d_{n+1}}{\longrightarrow}\underbrace{C_{n-1}\oplus D_n}_{\cone(f)_n}\overset{d_n}{\longrightarrow}\underbrace{C_{n-2}\oplus D_{n-1}}_{\cone(f)_{n-1}}\longrightarrow\cdots$$
 
@@ -211,18 +210,18 @@ $$d_n(x,y)=(-d_{n-1}(x), d_n(y)-f_{n-1}(x))\qquad (x\in C_{n-1},y\in D_n)$$
 으로 주어진다. 
 :::
 
-Chain map $$f: C_\bullet \rightarrow D_\bullet$$이 주어졌다 하고, $$f$$의 mapping cone $$\cone(f)$$에 대하여, chain complex들의 sequence
+Chain map $f: C_\bullet \rightarrow D_\bullet$이 주어졌다 하고, $f$의 mapping cone $\cone(f)$에 대하여, chain complex들의 sequence
 
 $$0 \longrightarrow D \longrightarrow \cone(f) \overset{\delta}{\longrightarrow} C[-1] \longrightarrow0$$
 
-을 생각하자. 여기서 $$D \rightarrow\cone(f)$$는 $$y$$를 $$(0,y)$$로 보내고, $$\delta$$는 $$(x,y)$$를 $$-x$$로 보낸다. 그럼 이 함수들의 정의에 의하여 위의 sequence가 short exact sequence가 되는 것이 자명하므로, [정리 1](#thm1)에 의하여 다음의 long exact sequence
+을 생각하자. 여기서 $D \rightarrow\cone(f)$는 $y$를 $(0,y)$로 보내고, $\delta$는 $(x,y)$를 $-x$로 보낸다. 그럼 이 함수들의 정의에 의하여 위의 sequence가 short exact sequence가 되는 것이 자명하므로, [정리 1](#thm1)에 의하여 다음의 long exact sequence
 
 $$\cdots \rightarrow H_{n+1}(\cone(f)) \rightarrow H_n(B) \rightarrow H_n(C) \rightarrow H_n(\cone(f)) \rightarrow H_{n-1}(B) \rightarrow \cdots$$
 
-가 존재한다. 한편 이 정리의 증명을 뜯어보면, 위에서 얻어지는 connecting map $$H_n(B) \rightarrow H_n(C)$$들이 정확히 $$H_n(f)$$가 되는 것을 알 수 있다. 따라서 다음이 성립한다.
+가 존재한다. 한편 이 정리의 증명을 뜯어보면, 위에서 얻어지는 connecting map $H_n(B) \rightarrow H_n(C)$들이 정확히 $H_n(f)$가 되는 것을 알 수 있다. 따라서 다음이 성립한다.
 
 ::: 따름정리 9
-Chain map $$f: C_\bullet \rightarrow D_\bullet$$이 quasi-isomorphism인 것은 $$\cone(f)$$가 exact sequence인 것과 동치이다. 
+Chain map $f: C_\bullet \rightarrow D_\bullet$이 quasi-isomorphism인 것은 $\cone(f)$가 exact sequence인 것과 동치이다. 
 :::
 
 
