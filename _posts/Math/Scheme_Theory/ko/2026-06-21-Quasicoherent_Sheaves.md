@@ -210,13 +210,13 @@ Locally Noetherian scheme 위에서는 finitely generated와 finitely presented�
 
 ## Ideal sheaf와 closed subscheme
 
-준연접층의 중요한 예시로 ideal sheaf가 있다. Affine scheme $$\Spec A$$에서 ideal $$I\subseteq A$$는 그 자체로 $$A$$-가군이므로 연관층 $$\widetilde I$$를 정의하며, 이는 $$\mathcal{O}_{\Spec A}=\widetilde A$$의 부분 sheaf이다. 일반적인 scheme 위에서는 이를 다음과 같이 정의한다.
+준연접층의 중요한 예시로 ideal sheaf가 있다. Affine scheme $$\Spec A$$에서 ideal $$\mathfrak{a}\subseteq A$$는 그 자체로 $$A$$-가군이므로 연관층 $$\widetilde{\mathfrak{a}}$$를 정의하며, 이는 $$\mathcal{O}_{\Spec A}=\widetilde A$$의 부분 sheaf이다. 일반적인 scheme 위에서는 이를 다음과 같이 정의한다.
 
 ::: 정의 12
 Scheme $$X$$ 위의 준연접층 $$\mathcal{I}$$가 *ideal sheaf<sub>아이디얼층</sub>*라는 것은, $$\mathcal{I}$$가 $$\mathcal{O}_X$$의 부분 $$\mathcal{O}_X$$-가군층인 것이다. 즉 각각의 열린집합 $$U$$에 대하여 $$\mathcal{I}(U)$$가 환 $$\mathcal{O}_X(U)$$의 ideal이며, restriction map과 호환되는 것이다.
 :::
 
-Ideal sheaf는 자연스럽게 $$X$$의 닫힌 부분집합과 그 위의 scheme 구조를 결정한다. Affine 위에서 ideal $$I\subseteq A$$는 quotient ring $$A/I$$를 정의하며, $$\Spec A/I$$는 $$Z(I)\subseteq \Spec A$$ 위의 affine scheme이다. ([§스펙트럼](/ko/math/scheme_theory/spectrums)) 이를 붙여 다음을 얻는다.
+Ideal sheaf는 자연스럽게 $$X$$의 닫힌 부분집합과 그 위의 scheme 구조를 결정한다. Affine 위에서 ideal $$\mathfrak{a}\subseteq A$$는 quotient ring $$A/\mathfrak{a}$$를 정의하며, $$\Spec A/\mathfrak{a}$$는 $$Z(\mathfrak{a})\subseteq \Spec A$$ 위의 affine scheme이다. ([§스펙트럼](/ko/math/scheme_theory/spectrums)) 이를 붙여 다음을 얻는다.
 
 ::: 명제 13
 Scheme $$X$$ 위의 ideal sheaf $$\mathcal{I}$$에 대하여, quotient sheaf $$\mathcal{O}_X/\mathcal{I}$$의 support
@@ -226,22 +226,22 @@ $$Y=\supp(\mathcal{O}_X/\mathcal{I})=\{x\in X\mid (\mathcal{O}_X/\mathcal{I})_x\
 는 $$X$$의 닫힌 부분집합이며, $$(Y, (\mathcal{O}_X/\mathcal{I})\vert_Y)$$는 scheme이다. 더욱이 inclusion $$\iota:Y\hookrightarrow X$$는 scheme들 사이의 morphism이다.
 :::
 ::: 증명
-문제가 국소적이므로 $$X=\Spec A$$인 경우만 보이면 충분하다. [정리 9](#thm9)에 의하여 $$\mathcal{I}=\widetilde I$$인 ideal $$I\subseteq A$$가 존재한다. 그럼 [명제 6](#prop6)의 exactness로부터 short exact sequence
+문제가 국소적이므로 $$X=\Spec A$$인 경우만 보이면 충분하다. [정리 9](#thm9)에 의하여 $$\mathcal{I}=\widetilde{\mathfrak{a}}$$인 ideal $$\mathfrak{a}\subseteq A$$가 존재한다. 그럼 [명제 6](#prop6)의 exactness로부터 short exact sequence
 
-$$0 \rightarrow \widetilde I \rightarrow \widetilde A \rightarrow \widetilde{A/I} \rightarrow 0$$
+$$0 \rightarrow \widetilde{\mathfrak{a}} \rightarrow \widetilde A \rightarrow \widetilde{A/\mathfrak{a}} \rightarrow 0$$
 
-를 얻으므로 $$\mathcal{O}_X/\mathcal{I}\cong \widetilde{A/I}$$이다. 이 sheaf의 stalk은 $$\mathfrak{p}$$에서 $$(A/I)_\mathfrak{p}$$이며, 이것이 $$0$$이 아닌 것은 $$\mathfrak{p}\supseteq I$$인 것과 동치이므로 ([\[가환대수학\] §국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8))
+를 얻으므로 $$\mathcal{O}_X/\mathcal{I}\cong \widetilde{A/\mathfrak{a}}$$이다. 이 sheaf의 stalk은 $$\mathfrak{p}$$에서 $$(A/\mathfrak{a})_\mathfrak{p}$$이며, 이것이 $$0$$이 아닌 것은 $$\mathfrak{p}\supseteq \mathfrak{a}$$인 것과 동치이므로 ([\[가환대수학\] §국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8))
 
-$$Y=\{\mathfrak{p}\mid \mathfrak{p}\supseteq I\}=Z(I)$$
+$$Y=\{\mathfrak{p}\mid \mathfrak{p}\supseteq \mathfrak{a}\}=Z(\mathfrak{a})$$
 
-이고, 이는 [§스펙트럼](/ko/math/scheme_theory/spectrums)에서 본 바와 같이 닫힌집합이다. 한편 canonical projection $$A \rightarrow A/I$$는 [§스펙트럼, ⁋명제 9](/ko/math/scheme_theory/spectrums#prop9)에 의하여 homeomorphism $$\Spec A/I\cong Z(I)$$를 주며, 이 위에서 $$(\mathcal{O}_X/\mathcal{I})\vert_Y\cong \mathcal{O}_{\Spec A/I}$$이므로 $$(Y, (\mathcal{O}_X/\mathcal{I})\vert_Y)\cong (\Spec A/I, \mathcal{O}_{\Spec A/I})$$는 affine scheme이다. 마지막으로 ring homomorphism $$A \rightarrow A/I$$가 유도하는 ([§아핀스킴, ⁋명제 9](/ko/math/scheme_theory/affine_schemes#prop9)) scheme morphism이 곧 inclusion $$\iota$$이다.
+이고, 이는 [§스펙트럼](/ko/math/scheme_theory/spectrums)에서 본 바와 같이 닫힌집합이다. 한편 canonical projection $$A \rightarrow A/\mathfrak{a}$$는 [§스펙트럼, ⁋명제 9](/ko/math/scheme_theory/spectrums#prop9)에 의하여 homeomorphism $$\Spec A/\mathfrak{a}\cong Z(\mathfrak{a})$$를 주며, 이 위에서 $$(\mathcal{O}_X/\mathcal{I})\vert_Y\cong \mathcal{O}_{\Spec A/\mathfrak{a}}$$이므로 $$(Y, (\mathcal{O}_X/\mathcal{I})\vert_Y)\cong (\Spec A/\mathfrak{a}, \mathcal{O}_{\Spec A/\mathfrak{a}})$$는 affine scheme이다. 마지막으로 ring homomorphism $$A \rightarrow A/\mathfrak{a}$$가 유도하는 ([§아핀스킴, ⁋명제 9](/ko/math/scheme_theory/affine_schemes#prop9)) scheme morphism이 곧 inclusion $$\iota$$이다.
 :::
 
 ::: 정의 14
 [명제 13](#prop13)에서 얻어지는 scheme $$(Y, \mathcal{O}_Y)$$ (단, $$\mathcal{O}_Y=(\mathcal{O}_X/\mathcal{I})\vert_Y$$)와 inclusion morphism $$\iota:Y\hookrightarrow X$$를 ideal sheaf $$\mathcal{I}$$가 정의하는 *closed subscheme<sub>닫힌 부분스킴</sub>*이라 부른다.
 :::
 
-따라서 ideal sheaf와 closed subscheme은 서로 대응된다. Affine 위에서 이 대응은 ideal $$I\subseteq A$$와 quotient $$A/I$$ 사이의 대응에 다름 아니며, 특히 같은 닫힌 부분집합 $$Z(I)$$ 위에 서로 다른 scheme 구조를 줄 수 있다는 점이 중요하다. 예를 들어 $$I=(\x)$$와 $$I'=(\x^2)$$는 $$\mathbb{A}^1_\mathbb{K}$$ 위에서 같은 닫힌집합 $$\{0\}$$을 정의하지만, $$A/I=\mathbb{K}$$와 $$A/I'=\mathbb{K}[\x]/(\x^2)$$는 서로 다른 scheme 구조를 주며 후자는 nilpotent를 가진다.
+따라서 ideal sheaf와 closed subscheme은 서로 대응된다. Affine 위에서 이 대응은 ideal $$\mathfrak{a}\subseteq A$$와 quotient $$A/\mathfrak{a}$$ 사이의 대응에 다름 아니며, 특히 같은 닫힌 부분집합 $$Z(\mathfrak{a})$$ 위에 서로 다른 scheme 구조를 줄 수 있다는 점이 중요하다. 예를 들어 $$\mathfrak{a}=(\x)$$와 $$\mathfrak{a}'=(\x^2)$$는 $$\mathbb{A}^1_\mathbb{K}$$ 위에서 같은 닫힌집합 $$\{0\}$$을 정의하지만, $$A/\mathfrak{a}=\mathbb{K}$$와 $$A/\mathfrak{a}'=\mathbb{K}[\x]/(\x^2)$$는 서로 다른 scheme 구조를 주며 후자는 nilpotent를 가진다.
 
 ## Locally free sheaf와 invertible sheaf
 

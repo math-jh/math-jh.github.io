@@ -18,7 +18,7 @@ published: false
 
 ## 충실평탄 사상
 
-충실평탄성은 평탄성에 전사성을 더한 조건이다. 가군 수준에서 ring homomorphism $$\varphi: A \rightarrow B$$가 충실평탄이라 함은 $$B$$가 평탄 $$A$$-가군이면서 ([\[가환대수학\] §평탄성, ⁋명제 1](/ko/math/commutative_algebra/flatness#prop1)) 다음 명제가 보여주듯 정확성을 단순히 보존할 뿐 아니라 반영하는 것이다. 사상 수준에서는 이를 [§평탄사상, ⁋정의 2](/ko/math/scheme_theory/flat_morphisms#def2)에서 평탄이면서 surjective인 morphism으로 정의하였다.
+충실평탄성은 평탄성에 전사성을 더한 조건이다. 가군 수준에서 ring homomorphism $$\varphi: A \rightarrow B$$가 충실평탄이라 함은 $$B$$가 평탄 $$A$$-가군이면서 ([\[가환대수학\] §평탄성, ⁋명제 1](/ko/math/commutative_algebra/flatness#prop1)) 다음 명제가 보여주듯 정확성을 단순히 보존할 뿐 아니라 반영하는 것이다. 사상 수준에서는 이를 [§평탄사상, ⁋정의 1](/ko/math/scheme_theory/flat_morphisms#def1)에서 평탄이면서 surjective인 morphism으로 정의하였다.
 
 ::: 정의 1
 Ring homomorphism $$\varphi: A \rightarrow B$$가 *faithfully flat<sub>충실평탄</sub>*하다는 것은, $$B$$가 평탄 $$A$$-가군이고, 동시에 임의의 $$A$$-가군 $$M$$에 대하여 $$M\otimes_A B=0$$이면 $$M=0$$인 것이다.
@@ -40,10 +40,10 @@ Ring homomorphism $$\varphi: A \rightarrow B$$가 *faithfully flat<sub>충실평
 
 (1) $$\Rightarrow$$ (3). 임의의 $$\mathfrak{p}\in \Spec A$$에 대하여 잔여체 $$\kappa(\mathfrak{p})=A_\mathfrak{p}/\mathfrak{p}A_\mathfrak{p}$$를 생각하면, $$\mathfrak{p}$$가 $$\varphi$$의 상에 속하는 것은 fiber $$\Spec(B\otimes_A \kappa(\mathfrak{p}))$$가 비어있지 않은 것, 즉 $$B\otimes_A \kappa(\mathfrak{p})\neq 0$$인 것과 동치이다. ([§올곱, ⁋예시 9](/ko/math/scheme_theory/fiber_products#ex9)) 그런데 $$\kappa(\mathfrak{p})\neq 0$$이므로 충실성에 의해 $$\kappa(\mathfrak{p})\otimes_A B\neq 0$$이고, 따라서 $$\mathfrak{p}$$는 상에 속한다.
 
-(3) $$\Rightarrow$$ (1). $$M\neq 0$$인 $$A$$-가군을 잡고 $$0\neq x\in M$$을 택하면, $$Ax\cong A/I$$ ($$I=\operatorname{Ann}(x)$$)인 부분가군이 있다. $$I\subseteq \mathfrak{m}$$인 maximal ideal $$\mathfrak{m}$$을 잡으면, (3)에 의해 $$\mathfrak{m}$$은 $$\varphi$$의 상에 속하므로 $$\kappa(\mathfrak{m})\otimes_A B\neq 0$$이다. 전사 $$A/I\twoheadrightarrow A/\mathfrak{m}=\kappa(\mathfrak{m})$$에 $$-\otimes_A B$$를 적용하면 (텐서곱은 우완전) 전사 $$(A/I)\otimes_A B\twoheadrightarrow \kappa(\mathfrak{m})\otimes_A B$$를 얻는데, 우변이 $$0$$이 아니므로 $$(A/I)\otimes_A B\neq 0$$이다. 다시 $$A/I=Ax\hookrightarrow M$$에 평탄성을 적용하면 $$(A/I)\otimes_A B\hookrightarrow M\otimes_A B$$이므로 $$M\otimes_A B\neq 0$$이다.
+(3) $$\Rightarrow$$ (1). $$M\neq 0$$인 $$A$$-가군을 잡고 $$0\neq x\in M$$을 택하면, $$Ax\cong A/\mathfrak{a}$$ ($$\mathfrak{a}=\operatorname{Ann}(x)$$)인 부분가군이 있다. $$\mathfrak{a}\subseteq \mathfrak{m}$$인 maximal ideal $$\mathfrak{m}$$을 잡으면, (3)에 의해 $$\mathfrak{m}$$은 $$\varphi$$의 상에 속하므로 $$\kappa(\mathfrak{m})\otimes_A B\neq 0$$이다. 전사 $$A/\mathfrak{a}\twoheadrightarrow A/\mathfrak{m}=\kappa(\mathfrak{m})$$에 $$-\otimes_A B$$를 적용하면 (텐서곱은 우완전) 전사 $$(A/\mathfrak{a})\otimes_A B\twoheadrightarrow \kappa(\mathfrak{m})\otimes_A B$$를 얻는데, 우변이 $$0$$이 아니므로 $$(A/\mathfrak{a})\otimes_A B\neq 0$$이다. 다시 $$A/\mathfrak{a}=Ax\hookrightarrow M$$에 평탄성을 적용하면 $$(A/\mathfrak{a})\otimes_A B\hookrightarrow M\otimes_A B$$이므로 $$M\otimes_A B\neq 0$$이다.
 :::
 
-[명제 2](#prop2)의 둘째 조건이 하강 이론 전체를 떠받치는 사실이다. 정확성을 base change로 검사할 수 있다는 것은, $$B$$ 위에서 성립하는 정확성에 관한 진술이 $$A$$ 위로 그대로 내려온다는 것을 뜻한다. 특별히 $$M' \rightarrow M$$이 단사 또는 전사인 것도 $$-\otimes_A B$$ 후의 단사·전사로 판정된다. 셋째 조건은 이 대수적 성질이 정확히 사상 $$\Spec B \rightarrow \Spec A$$의 전사성에 대응함을 보여주며, 따라서 충실평탄 ring homomorphism은 [§평탄사상, ⁋정의 2](/ko/math/scheme_theory/flat_morphisms#def2)의 affine 충실평탄 사상에 다름 아니다.
+[명제 2](#prop2)의 둘째 조건이 하강 이론 전체를 떠받치는 사실이다. 정확성을 base change로 검사할 수 있다는 것은, $$B$$ 위에서 성립하는 정확성에 관한 진술이 $$A$$ 위로 그대로 내려온다는 것을 뜻한다. 특별히 $$M' \rightarrow M$$이 단사 또는 전사인 것도 $$-\otimes_A B$$ 후의 단사·전사로 판정된다. 셋째 조건은 이 대수적 성질이 정확히 사상 $$\Spec B \rightarrow \Spec A$$의 전사성에 대응함을 보여주며, 따라서 충실평탄 ring homomorphism은 [§평탄사상, ⁋정의 1](/ko/math/scheme_theory/flat_morphisms#def1)의 affine 충실평탄 사상에 다름 아니다.
 
 가장 중요한 예시는 $$A$$의 원소들 $$f_1,\ldots, f_n$$이 $$A$$ 전체를 생성할 때 ($$\sum f_i A=A$$) 얻어지는 $$A \rightarrow \prod_i A_{f_i}$$이다. 각 $$A_{f_i}$$가 평탄이므로 그 곱도 평탄이고, $$\Spec \prod A_{f_i}=\coprod D(f_i)$$가 $$\Spec A$$를 덮으므로 surjective이다. 즉 한 affine scheme의 principal open cover는 충실평탄 사상의 한 경우이며, 이 점에서 충실평탄 하강은 열린덮개를 따른 sheaf의 접합을 포함하는 일반화이다. 더 나아가 field extension $$\mathbb{K}\subseteq L$$은 항상 충실평탄인데, $$L$$이 $$\mathbb{K}$$ 위의 vector space로서 free이고 $$L\neq 0$$이기 때문이다.
 
@@ -239,7 +239,7 @@ Affine morphism $$V_i \rightarrow U_i$$은 $$U_i$$ 위의 준연접 $$\mathcal{O
 $$\{Y_i \rightarrow Y\}$$를 fpqc cover라 하고 $$f: X \rightarrow Y$$를 scheme morphism이라 하자. 그럼 $$f$$가 다음 성질들 가운데 하나를 가지는 것은, 각 base change $$f_i: X\times_Y Y_i \rightarrow Y_i$$가 그 성질을 가지는 것과 동치이다: 평탄, 충실평탄, 그리고 affine, locally of finite type, locally of finite presentation, 그리고 surjective.
 :::
 ::: 증명
-각 성질이 base change에 대해 보존됨은 표준적이므로 (평탄성의 경우 [§평탄사상, ⁋명제 12](/ko/math/scheme_theory/flat_morphisms#prop12)), fpqc cover 위에서 성립하면 원래 사상에서도 성립함만 보이면 된다. 문제가 $$Y$$ 위에서 국소적이고 quasi-compact 조건으로 유한 덮개로 환원되므로, $$Y=\Spec A$$, 덮개가 단일 충실평탄 $$\Spec A' \rightarrow \Spec A$$인 경우만 본다.
+각 성질이 base change에 대해 보존됨은 표준적이므로 (평탄성의 경우 [§평탄사상, ⁋명제 3](/ko/math/scheme_theory/flat_morphisms#prop3)), fpqc cover 위에서 성립하면 원래 사상에서도 성립함만 보이면 된다. 문제가 $$Y$$ 위에서 국소적이고 quasi-compact 조건으로 유한 덮개로 환원되므로, $$Y=\Spec A$$, 덮개가 단일 충실평탄 $$\Spec A' \rightarrow \Spec A$$인 경우만 본다.
 
 평탄성의 경우, 이는 affine 위에서 $$X$$를 덮는 각 $$\Spec B \rightarrow \Spec A$$에 대한 $$B$$의 $$A$$-평탄성으로 판정된다. $$B\otimes_A A'$$가 $$A'$$-평탄이라 가정하면, $$A \rightarrow A'$$가 충실평탄이므로 임의의 단사 $$A$$-가군 사상 $$M' \hookrightarrow M''$$에 대하여 $$(M'\otimes_A B \rightarrow M''\otimes_A B)\otimes_A A'$$이 단사이고 ($$B\otimes_A A'$$ 평탄), [명제 2](#prop2)로 단사성을 $$A$$ 위로 반영하면 $$M'\otimes_A B \rightarrow M''\otimes_A B$$가 단사이므로 $$B$$는 $$A$$-평탄이다. 충실평탄성은 평탄성에 surjective를 더한 것이고, surjective는 $$\coprod (X\times_Y Y_i) \rightarrow \coprod Y_i \rightarrow Y$$의 합성이 전사임과 $$\coprod Y_i \rightarrow Y$$가 전사임으로부터 $$X \rightarrow Y$$의 전사가 따라오므로 성립한다.
 

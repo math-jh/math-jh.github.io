@@ -144,7 +144,7 @@ $$H^n(\mathbb{P}^n_A, \mathcal{O}(d))\cong H^0(\mathbb{P}^n_A, \mathcal{O}(-d-n-
 
 이제 임의의 Noetherian projective scheme $$X$$와 그 위의 연접층 ([§준연접층, ⁋정의 11](/ko/math/scheme_theory/quasicoherent_sheaves#def11)) $$\mathcal{F}$$에 대하여, 코호몰로지의 두 가지 근본적 성질을 다룬다. 하나는 각 $$H^i(X, \mathcal{F})$$이 유한차원이라는 것이고, 다른 하나는 충분히 twist하면 higher cohomology가 소멸한다는 Serre vanishing이다. Projective scheme $$X$$는 어떤 사영공간 $$\mathbb{P}^n_{\mathbb{K}}$$의 closed subscheme이며, 그 위에 $$\mathcal{O}_X(1)=\mathcal{O}_{\mathbb{P}^n}(1)\vert_X$$을 twisting을 위한 ample line bundle로 사용한다. 연접층 $$\mathcal{F}$$에 대해 $$\mathcal{F}(d)=\mathcal{F}\otimes_{\mathcal{O}_X}\mathcal{O}_X(d)$$로 적는다.
 
-먼저 closed immersion을 따라 코호몰로지가 보존된다는 관찰이 핵심이다. Closed immersion $$\iota:X\hookrightarrow\mathbb{P}^n_{\mathbb{K}}$$은 affine 사상이므로, pushforward $$\iota_\ast$$가 affine 위에서 정확하고 higher direct image를 만들지 않아 $$H^i(X, \mathcal{F})\cong H^i(\mathbb{P}^n, \iota_\ast\mathcal{F})$$이 성립한다. 따라서 두 성질 모두 $$X=\mathbb{P}^n_{\mathbb{K}}$$인 경우로 환원된다.
+먼저 closed immersion을 따라 코호몰로지가 보존된다는 관찰이 핵심이다. Closed embedding $$\iota:X\hookrightarrow\mathbb{P}^n_{\mathbb{K}}$$은 affine 사상이므로, pushforward $$\iota_\ast$$가 affine 위에서 정확하고 higher direct image를 만들지 않아 $$H^i(X, \mathcal{F})\cong H^i(\mathbb{P}^n, \iota_\ast\mathcal{F})$$이 성립한다. 따라서 두 성질 모두 $$X=\mathbb{P}^n_{\mathbb{K}}$$인 경우로 환원된다.
 
 ::: 정리 7
 Field $$\mathbb{K}$$ 위의 Noetherian projective scheme $$X$$와 그 위의 연접층 $$\mathcal{F}$$에 대하여, 각 $$H^i(X, \mathcal{F})$$은 유한차원 $$\mathbb{K}$$-벡터공간이며, 충분히 큰 $$i$$에 대해서는 $$0$$이다.

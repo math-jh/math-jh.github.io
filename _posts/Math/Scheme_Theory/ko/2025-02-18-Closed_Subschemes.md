@@ -9,7 +9,7 @@ sidebar:
     nav: "scheme_theory-ko"
 
 date: 2025-02-18
-weight: 12
+weight: 11
 drift_needed: true
 ---
 
@@ -76,6 +76,8 @@ $$B=\im\phi\cong A/\ker\phi$$
 
 ::: 정의 2
 Scheme morphism $$\iota: Z \rightarrow X$$가 *closed embedding<sub>닫힌 몰입</sub>*이라는 것은 $$\iota$$가 연속함수로서 $$Z$$와 $$X$$의 닫힌집합 사이의 homeomorphism이고, sheaf morphism $$\iota^\sharp: \mathcal{O}_X \rightarrow \iota_\ast \mathcal{O}_Z$$가 surjective인 것이다.
+
+$$X$$로의 두 closed embedding $$\iota: Z \rightarrow X$$와 $$\iota': Z' \rightarrow X$$에 대하여 isomorphism $$i: Z' \rightarrow Z$$가 존재하여 $$\iota'=\iota\circ i$$이도록 할 수 있다면 이 둘을 서로 equivalent하다 하고, 이 equivalence class를 $$X$$의 *closed subscheme<sub>닫힌 부분스킴</sub>*이라 부른다.
 :::
 
 연속함수 $$\iota$$에 대한 조건은 자명한 것이며, $$\iota^\sharp$$에 대한 직관 또한 기하적인 해석이 가능한데, 그것은 $$Z$$의 함수들, 더 정확하게는 $$\iota(Z)$$의 함수들은 모두 $$X$$의 함수를 $$Z$$로 제한하여 얻어진 것이어야 한다는 것이다. 혹은, 반대로 말하면 $$Z$$의 임의의 함수가 주어졌을 때 이를 $$X$$에서의 함수로 확장하는 것이 가능해야 한다는 것이다. 한편 $$\iota$$가 open embedding인 경우와 대조해 볼 만하다. 이 경우 $$\iota^\sharp:\mathcal{O}_X \rightarrow \iota_\ast\mathcal{O}_Z$$ 자체는 isomorphism이 아니다. 가령 $$X=\mathbb{A}^1_k=\Spec k[t]$$와 그 열린부분 $$Z=D(t)=\Spec k[t,t^{-1}]$$을 생각하면 $$(\iota_\ast\mathcal{O}_Z)(X)=k[t,t^{-1}]$$이라 $$k[t] \rightarrow k[t,t^{-1}]$$은 전사가 아니다. 올바른 진술은 $$\iota$$가 $$Z$$를 열린집합으로 옮기므로 $$\iota^{-1}\mathcal{O}_X\cong\mathcal{O}_Z$$, 곧 $$\iota(Z)$$의 각 점에서의 stalk 사이에 isomorphism이 유도된다는 것이다. 
