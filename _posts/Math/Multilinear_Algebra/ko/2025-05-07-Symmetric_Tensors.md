@@ -5,7 +5,6 @@ excerpt: "Symmetric group의 작용과 symmetric tensor, symmetric power"
 
 categories: [Math / Multilinear Algebra]
 permalink: /ko/math/multilinear_algebra/symmetric_tensors
-drift_needed: true
 sidebar: 
     nav: "multilinear_algebra-ko"
 

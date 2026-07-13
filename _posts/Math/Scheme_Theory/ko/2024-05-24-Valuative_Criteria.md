@@ -10,7 +10,6 @@ sidebar:
 
 date: 2024-05-24
 weight: 14
-drift_needed: true
 ---
 
 이번 글에서 우리는 separated morphism과 proper morphism을 정의한다. 이들은 위상수학에서 Hausdorff 조건과 compact 조건을 대수기하로 옮겨온 것이라고 생각하면 편하다. 
