@@ -10,8 +10,9 @@ sidebar:
 
 date: 2026-07-01
 weight: 14
-translated_at: 2026-07-13T11:30:02+00:00
+translated_at: 2026-07-13T22:00:03+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-13T22:00:03+00:00
 ---
 In the previous post, we dealt with functions that raise the dimension of the codomain, sending one real number to several real numbers—that is, parameterized curves $\mathbf{r}:\mathbb{R}\to\mathbb{R}^n$. Now we go the other way, raising the dimension of the domain, and deal with multivariable functions $f:\mathbb{R}^m\to\mathbb{R}$ that send several real numbers to one real number. Differentiation still retains its essence as a linear approximation near a point, but because the domain becomes a vector space, there are infinitely many directions from which one can approach, so direction becomes important, and the linear approximation is given not by a single number but by a linear map. Since vector spaces, inner products, and norms were covered in [§Curves and Vector Functions](/en/math/calculus/vector_functions), in this post we briefly review linear maps, matrices, and determinants—the core tools of multivariable differentiation—and then treat partial derivatives and the gradient, differentiability, the multivariable chain rule, and extrema.
 
@@ -47,7 +48,7 @@ $$0 < \lVert \mathbf{x} - \mathbf{a}\rVert < \delta \quad\Rightarrow\quad \lvert
 holds for all $\mathbf{x}$ satisfying $0 < \lVert \mathbf{x} - \mathbf{a}\rVert < \delta$. We write this as $\lim_{\mathbf{x}\to\mathbf{a}} f(\mathbf{x}) = L$, and in particular when $\lim_{\mathbf{x}\to\mathbf{a}} f(\mathbf{x}) = f(\mathbf{a})$ we say $f$ is *continuous* at $\mathbf{a}$.
 :::
 
-The form of this definition is essentially the same as for single-variable functions; the only difference is that the one-dimensional distance $\lvert x - a\rvert$ is replaced by the $m$-dimensional distance $\lVert\mathbf{x} - \mathbf{a}\rVert$. However, for example, to verify that the limit of a given function is $L$, it is <em-ko>not enough</em-ko> to check that the following limit
+The form of this definition is essentially the same as for single-variable functions; the only difference is that the one-dimensional distance $\lvert x - a\rvert$ is replaced by the $m$-dimensional distance $\lVert\mathbf{x} - \mathbf{a}\rVert$. However, for example, to verify that the limit of a given function is $L$, it is **not enough** to check that the following limit
 
 $$\lim_{t\rightarrow 0}f(\mathbf{a}+t\mathbf{v})=L$$
 
@@ -81,7 +82,7 @@ However, differentiability requires some caution. To see this, recall that the e
 
 $$\lim_{h\rightarrow 0} \frac{f(a+h)-f(a)}{h}$$
 
-means looking at the limit from both directions. In this case the limit yields <em-ko>a single number</em-ko>, which is exactly the slope of the tangent line touching the curve.
+means looking at the limit from both directions. In this case the limit yields **a single number**, which is exactly the slope of the tangent line touching the curve.
 
 To generalize this, we must pay attention to two things: one is that $h$ is now an element of a vector space and can approach $0$ from every direction, and the other is that the linear approximation is no longer expressed by a single number. For example, think of a plane tangent to a surface; to parametrize this plane, two variables are needed in addition to the point of tangency.
 
@@ -133,7 +134,7 @@ $$\lim_{t \to 0}\frac{f(\mathbf{a} + t \mathbf{e}_i) - f(\mathbf{a}) - \mathbf{n
 We have $\mathbf{n}\cdot (t \mathbf{e}_i) = t n_i$. When $t>0$, $\lvert t\rvert = t$, so rearranging the numerator of the limit by $t$ gives $\frac{f(\mathbf{a} + t \mathbf{e}_i) - f(\mathbf{a})}{t} - n_i$, which by the definition of the partial derivative converges to $\frac{\partial f}{\partial x_i}(\mathbf{a}) - n_i$. The same logic for $t<0$ gives the same conclusion, so for the limit to be $0$ we must have $n_i = \frac{\partial f}{\partial x_i}(\mathbf{a})$. Collecting this for all $i$ gives $\mathbf{n} = \nabla f(\mathbf{a})$.
 :::
 
-Note here that we have explicitly separated [Definition 3](#def3) and [Proposition 4](#prop4). [Proposition 4](#prop4) says that <em-ko>if</em-ko> the function $f$ is differentiable, then the vector $\mathbf{n}$ satisfying that condition is $\nabla f$; one must <em-ko>not</em-ko> interpret this conversely to mean that if all partial derivatives exist and $\nabla f$ is well defined, then $f$ is differentiable. Instead, the following condition shows that a continuous function $f$ is differentiable if each of its partial derivatives is continuous.
+Note here that we have explicitly separated [Definition 3](#def3) and [Proposition 4](#prop4). [Proposition 4](#prop4) says that **if** the function $f$ is differentiable, then the vector $\mathbf{n}$ satisfying that condition is $\nabla f$; one must **not** interpret this conversely to mean that if all partial derivatives exist and $\nabla f$ is well defined, then $f$ is differentiable. Instead, the following condition shows that a continuous function $f$ is differentiable if each of its partial derivatives is continuous.
 
 ::: Proposition 5
 If all partial derivatives of a continuous function $f$ exist in a neighborhood of $\mathbf{a}$ and are all continuous at $\mathbf{a}$, then $f$ is differentiable at $\mathbf{a}$.
