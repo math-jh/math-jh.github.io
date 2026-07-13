@@ -1,101 +1,50 @@
-"""Deterministic `$...$` → `$$...$$` normalizer for the math blog, with a safety gate.
+"""수식 구분자 프로필 — KO/EN 번역쌍의 수식 구조가 같은지 재는 자.
 
-The blog writes ALL top-level math — inline and display alike — as `$$...$$`
-(GUIDELINE-New/Edit §2, GUIDELINE-Translation): single `$` is unsafe because
-kramdown parses `_`/`*` inside `$...$` as emphasis before KaTeX runs, breaking
-the math. The translation model (kimi), however, reflexively downgrades inline
-`$$x$$` to standard-markdown `$x$`. That (a) violates the rule and (b) collapses
-the `$$`-block count, so translate_worker's KO/EN count check mismatches and
-fires the expensive interactive-claude verify pass — which times out on large
-posts (see the 2026-07-07 Characteristic_Classes incident: en=51 vs ko=518).
+**2026-07-13 이전과 정반대다.** 예전에는 이 모듈이 `$...$` → `$$...$$` 로 **승격**
+시켰다. 블로그가 인라인 수식까지 전부 `$$...$$` 로 적었기 때문인데, 그 이유는
+kramdown 이 `$...$` 를 수식으로 인식하지 못해 그 안의 `_`/`*`/`|`/`\\{` 를 마크다운으로
+먹어치웠기 때문이다. 이제 `_plugins/kramdown_inline_math.rb` 가 kramdown 에게 single
+`$...$` 도 수식으로 가르치므로, 인라인은 표준대로 `$...$`, 디스플레이는 `$$...$$` 다.
 
-`normalize_math_delimiters` — mask, then promote:
-  1. Hide every span that must stay verbatim, replacing it with a placeholder:
-       - `$$...$$` display blocks — this ALSO protects their interior single `$`
-         (`\\text{$k$-forms on $\\mathbb{R}^n$}`, `\\tag{$\\ast$}`), the documented
-         exception (GUIDELINE §2);
-       - fenced code ``` ``` ``` and inline code `` `...` ``;
-       - the interior of protected inline tags <cap>/<phrase>/<em>/<em-ko>.
-  2. In what remains (top-level prose), promote every BALANCED `$...$` to `$$...$$`.
-  3. Restore the placeholders.
+따라서 kimi 가 원래 하던 짓(인라인을 `$...$` 로 적는 것)이 이제 **정답**이고, 승격은
+오히려 해가 된다. 남은 위험은 하나뿐이다: kimi 가 KO 의 **디스플레이** `$$...$$` 를
+인라인 `$...$` 로 낮추는 것 (가운데 정렬 수식이 문장 속으로 들어가 버린다).
 
-`normalize_if_safe` wraps it with a gate. A body with an ODD count of unescaped
-`$` (a pre-existing translation defect — a dropped/added `$`) cannot be promoted
-unambiguously: left-to-right pairing desyncs and can pull a `$$`-display opener
-into an inline span, corrupting a downstream `\\text{$k$}`/`\\tag{$\\ast$}`. The
-gate refuses such bodies (and any residual `$$`-inside-`\\text{}` corruption)
-and returns the text UNCHANGED so the caller can flag it for manual repair
-instead of shipping a broken file.
-
-Both functions are idempotent and promotion-only (never `$$`→`$`).
+`math_profile` 은 그걸 잡기 위한 결정적 지표다. 수식 내용은 verbatim 보존이 원칙이므로
+KO 와 EN 의 (`$$` 스팬 수, `$` 스팬 수) 는 정확히 같아야 한다. 어긋나면 구분자가
+바뀐 것이다.
 """
 import re
 
-# Spans kept verbatim. `\1` binds the protected-tag name for the close tag.
-# `$$...$$` is masked whole, so its interior single `$` (\text/\tag) is protected.
-_PROTECT = re.compile(
-    r"```.*?```"                                    # fenced code block
-    r"|`[^`\n]*`"                                   # inline code
-    r"|\$\$.*?\$\$"                                 # display math block
-    r"|<(cap|phrase|em-ko|em)\b[^>]*>.*?</\1\s*>",  # protected inline tags
+# 세지 않고 통째로 가리는 구간. `\1` 은 보호 태그 이름을 묶는다.
+# `$$...$$` 를 통째로 가리므로 그 내부의 single `$` (\text{$k$}, \tag{$\ast$}) 는
+# 인라인으로 오인되지 않는다.
+_CODE = re.compile(
+    r"```.*?```"      # fenced code block
+    r"|`[^`\n]*`",    # inline code
     re.DOTALL,
 )
-
-# A balanced top-level inline span: unescaped `$`, no `$` inside, unescaped closing
-# `$`. `(?!\$)` avoids biting a stray `$$` remnant. A lone `$` never matches.
-_INLINE = re.compile(r"(?<!\\)\$(?!\$)([^$]*?)(?<!\\)\$")
-
-# LaTeX text-mode groups whose interior legitimately holds single `$`; a `$$`
-# appearing inside one is a promotion-corruption signature.
-_TEXTISH = re.compile(
-    r"\\(?:text|tag|mbox|hbox|textrm|textbf|textit|textsf|textnormal|"
-    r"operatorname|substack)\s*\{"
-)
+_DISPLAY = re.compile(r"\$\$.*?\$\$", re.DOTALL)
+# 균형 잡힌 top-level 인라인 스팬. `(?!\$)` 로 `$$` 잔재를 물지 않는다.
+_INLINE = re.compile(r"(?<!\\)\$(?!\$)[^$]*?(?<!\\)\$")
 
 
-def normalize_math_delimiters(text: str) -> str:
-    stash = []
+def math_profile(text: str) -> tuple[int, int]:
+    """(디스플레이 `$$...$$` 스팬 수, 인라인 `$...$` 스팬 수).
 
-    def hide(m):
-        stash.append(m.group(0))
-        return f"\x00{len(stash) - 1}\x00"
-
-    masked = _PROTECT.sub(hide, text)
-    masked = _INLINE.sub(lambda m: "$$" + m.group(1) + "$$", masked)
-    return re.sub(r"\x00(\d+)\x00", lambda m: stash[int(m.group(1))], masked)
-
-
-def _dollar2_inside_textgroup(s: str) -> bool:
-    """True if any `\\text{...}`/`\\tag{...}`-style group contains `$$` (corruption)."""
-    for m in _TEXTISH.finditer(s):
-        depth, j, n = 1, m.end(), len(s)
-        while j < n and depth:
-            c = s[j]
-            if c == "{":
-                depth += 1
-            elif c == "}":
-                depth -= 1
-            elif s[j:j + 2] == "$$":
-                return True
-            j += 1
-    return False
+    코드 블록·코드 스팬은 제외한다. `$$` 안의 single `$` 도 제외된다.
+    """
+    masked = _CODE.sub(lambda m: " " * len(m.group(0)), text)
+    n_display = len(_DISPLAY.findall(masked))
+    without_display = _DISPLAY.sub(lambda m: " " * len(m.group(0)), masked)
+    n_inline = len(_INLINE.findall(without_display))
+    return n_display, n_inline
 
 
-def normalize_if_safe(text):
-    """Return (normalized, True) if promotion is provably non-corrupting, else
-    (text_unchanged, False). Unsafe = odd `$` parity (imbalance/desync risk),
-    non-`$` content changed, `$$` leaked into a `\\text{}`/`\\tag{}` group, or a
-    non-idempotent result."""
-    if len(re.findall(r"(?<!\\)\$", text)) % 2 == 1:
-        return text, False
-    norm = normalize_math_delimiters(text)
-    if text.replace("$", "") != norm.replace("$", ""):
-        return text, False
-    if _dollar2_inside_textgroup(norm):
-        return text, False
-    if normalize_math_delimiters(norm) != norm:
-        return text, False
-    return norm, True
+def unbalanced_dollars(text: str) -> bool:
+    """이스케이프 안 된 `$` 의 개수가 홀수면 수식 마크업이 깨진 것이다."""
+    masked = _CODE.sub(lambda m: " " * len(m.group(0)), text)
+    return len(re.findall(r"(?<!\\)\$", masked)) % 2 == 1
 
 
 # ---------------------------------------------------------------------------
@@ -103,49 +52,32 @@ if __name__ == "__main__":
     import sys
     if len(sys.argv) >= 2 and sys.argv[1] == "--selftest":
         cases = [
-            (r"a $x$ b", r"a $$x$$ b"),
-            (r"$H_k$ inline", r"$$H_k$$ inline"),
-            (r"$$H_k$$ already", r"$$H_k$$ already"),
-            (r"map $$f\colon X\to Y$$ mix $g$", r"map $$f\colon X\to Y$$ mix $$g$$"),
-            (r"$$\Omega=\{\text{$k$-forms on $\mathbb{R}^n$}\}$$",
-             r"$$\Omega=\{\text{$k$-forms on $\mathbb{R}^n$}\}$$"),
-            (r"$$0\to A\to B\to 0\tag{$\ast$}$$", r"$$0\to A\to B\to 0\tag{$\ast$}$$"),
-            (r"chain $$D\tag{$\ast$}$$ and $g$", r"chain $$D\tag{$\ast$}$$ and $$g$$"),
-            (r"see <cap>$x$</cap> and <phrase>$y$</phrase> then $z$",
-             r"see <cap>$x$</cap> and <phrase>$y$</phrase> then $$z$$"),
-            (r"<em>emph $y$ word</em> $z$", r"<em>emph $y$ word</em> $$z$$"),
-            (r"<em-ko>나가는</em-ko> $w$", r"<em-ko>나가는</em-ko> $$w$$"),
-            (r"costs \$5 and $q$", r"costs \$5 and $$q$$"),
-            ("code `$x$` and $y$", "code `$x$` and $$y$$"),
-            (r"$$A$$$$B$$", r"$$A$$$$B$$"),
+            (r"a $x$ b", (0, 1)),
+            (r"$$D$$ alone", (1, 0)),
+            (r"map $$f\colon X\to Y$$ mix $g$", (1, 1)),
+            # `$$` 안의 single `$` 는 인라인으로 세지 않는다 (문서화된 예외)
+            (r"$$\Omega=\{\text{$k$-forms on $\mathbb{R}^n$}\}$$", (1, 0)),
+            (r"$$0\to A\to B\to 0\tag{$\ast$}$$", (1, 0)),
+            (r"see <cap>$x$</cap> then $z$", (0, 2)),
+            (r"costs \$5 and $q$", (0, 1)),
+            ("code `$x$` and $y$", (0, 1)),
+            (r"$$A$$$$B$$", (2, 0)),
         ]
         ok = True
         for src, exp in cases:
-            got = normalize_math_delimiters(src)
+            got = math_profile(src)
             if got != exp:
                 ok = False
                 print(f"FAIL\n  in : {src}\n  exp: {exp}\n  got: {got}")
             else:
-                print(f"ok   norm  {src}")
-        for src, _ in cases:
-            a = normalize_math_delimiters(src)
-            if normalize_math_delimiters(a) != a:
+                print(f"ok   profile {got}  {src}")
+        for src, exp_bad in [(r"$$D$$ stray $ here", True), (r"clean $a$ and $$B$$", False)]:
+            got = unbalanced_dollars(src)
+            if got != exp_bad:
                 ok = False
-                print(f"NOT IDEMPOTENT: {src!r}")
-        # safety gate: odd-$ body must be refused unchanged; a body whose promotion
-        # would leak $$ into \text{} must be refused.
-        gate = [
-            (r"$$D\tag{$\ast$}$$ has a stray $ here", False),   # odd $
-            (r"clean $a$ and $$B$$", True),                     # even, safe
-            (r"$$\text{$k$}$$ plus $m$", True),                 # even, \text protected
-        ]
-        for src, exp_safe in gate:
-            out, safe = normalize_if_safe(src)
-            if safe != exp_safe or (not safe and out != src):
-                ok = False
-                print(f"GATE FAIL: {src!r} -> safe={safe} (exp {exp_safe}), out={out!r}")
+                print(f"FAIL unbalanced: {src!r} -> {got} (exp {exp_bad})")
             else:
-                print(f"ok   gate  safe={safe}  {src}")
+                print(f"ok   unbal={got}  {src}")
         sys.exit(0 if ok else 1)
 
-    sys.stdout.write(normalize_math_delimiters(sys.stdin.read()))
+    print(math_profile(sys.stdin.read()))

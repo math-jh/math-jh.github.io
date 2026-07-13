@@ -93,7 +93,7 @@ TRUNCATION_RATIO      = 0.60                 # min output/reference body length;
 # Local helper (label fix/audit)
 sys.path.insert(0, str(SCRIPT_DIR))
 from label_normalize import fix_text as label_fix, audit_text as label_audit  # noqa: E402
-from math_delimiters import normalize_if_safe  # noqa: E402
+from math_delimiters import math_profile  # noqa: E402
 
 
 # ---------------------------------------------------------------------------
@@ -531,10 +531,11 @@ INSTRUCTIONS = """You translate the BODY of a Korean math blog post (Jekyll mark
 
 Conversion rules for the body:
 
-1. Math content: preserve every `$$...$$` block VERBATIM — same LaTeX, same count, same order, AND the SAME DELIMITER. A KO `$$...$$` display block MUST remain a `$$...$$` display block in EN; never downgrade a display block into inline `$...$`. Likewise keep inline `$...$` inline. Do not translate variable names or LaTeX commands.
-   - WRONG: KO `... 사상 $$f\\colon X \\to Y$$ 가 주어지면 ...` → EN `... given a map $f\\colon X \\to Y$, ...` (display block collapsed into inline — FORBIDDEN).
-   - RIGHT: EN `... given a map $$f\\colon X \\to Y$$, ...` (delimiter preserved).
-   - Single `$...$` is correct ONLY inside `\\text{...}`/`\\tag{...}` (within a `$$` block) or inside inline HTML tags (`<cap>`, `<phrase>`, `<em>`, `<em-ko>`); preserve those. A top-level single `$...$` whose content has an unescaped `_` or `*` is broken (kramdown parses it as emphasis) — put such math in `$$...$$`.
+1. Math content: preserve every math span VERBATIM — same LaTeX, same count, same order, AND the SAME DELIMITER. Do not translate variable names or LaTeX commands. The blog uses standard delimiters: inline math is `$...$`, display (centered, standalone) math is `$$...$$`. Copy whichever the KO used; never swap one for the other.
+   - WRONG: KO `... 다음 식이 성립한다.\\n\\n$$\\int_0^1 f = 1$$\\n\\n` → EN `... the identity $\\int_0^1 f = 1$ holds.` (a display block collapsed into inline — FORBIDDEN).
+   - WRONG: KO `... 사상 $f\\colon X \\to Y$ 가 주어지면 ...` → EN `... given a map $$f\\colon X \\to Y$$, ...` (inline promoted to display — also FORBIDDEN).
+   - RIGHT: the EN has exactly as many `$$...$$` spans, and exactly as many `$...$` spans, as the KO.
+   - Inside a `$$...$$` (or `$...$`) span, a single `$` may legitimately appear within `\\text{...}`/`\\tag{...}` — that is LaTeX re-entering math mode from text mode. Leave it alone.
 
 2. Cross-reference links:
    - Path: `/ko/...` → `/en/...` (slug stays the same).
@@ -565,7 +566,7 @@ Conversion rules for the body:
 
 # Self-check before responding (must all pass)
 
-- Same number of `$$...$$` blocks as the KO body — count the `$$` markers: EN must have exactly as many `$$...$$` display blocks as KO, none silently downgraded to inline `$...$`, none added/dropped/split/merged.
+- Same math delimiters as the KO body: EN must have exactly as many `$$...$$` display spans AND exactly as many `$...$` inline spans as KO. None downgraded, none promoted, none added/dropped/split/merged.
 - Every `:::` opener from KO appears in EN with the label translated but the SAME derived anchor: the kind→prefix mapping (정의→def, 명제→prop, 정리→thm, 보조정리→lem, 따름정리→cor, 예시→ex, 참고→rmk) plus the unchanged number, and every `::: misc … {#id}` keeps its `{#id}` intact. The `:::` fence lines have the same count and order as KO; no Korean kind word survives on any opener.
 - No Korean labels remain (정의, 명제, 정리, 보조정리, 따름정리, 예시, 참고, 증명, 참고문헌).
 - The body ends at the final content line — do not truncate mid-sentence.
@@ -594,7 +595,7 @@ Given the Korean source body (for meaning reference) and the current English tra
 
 # What to preserve VERBATIM — mathematical fidelity is non-negotiable
 
-1. **Math blocks `$$...$$`** — byte-for-byte: LaTeX commands, variable names, spacing, ordering, AND delimiter. The COUNT and ORDER of `$$...$$` display blocks MUST match the KO source exactly. NEVER downgrade a `$$...$$` display block into inline `$...$` (and never promote inline into display). Easiest rule: never touch what is inside `$$...$$`, and never change a `$$` delimiter into `$`. Single `$...$` is legitimate ONLY inside `\\text{...}`/`\\tag{...}` or inside inline HTML tags (`<cap>`, `<phrase>`, `<em>`, `<em-ko>`); preserve it there and use `$$...$$` everywhere else.
+1. **Math spans** — byte-for-byte: LaTeX commands, variable names, spacing, ordering, AND delimiter. The blog uses standard delimiters: inline `$...$`, display (centered, standalone) `$$...$$`. The COUNT and ORDER of both kinds MUST match the KO source exactly. NEVER swap one for the other — no downgrading a `$$...$$` display block into inline `$...$`, no promoting inline into display. Easiest rule: never touch anything between math delimiters, and never change a delimiter's length. A single `$` inside `\\text{...}`/`\\tag{...}` is LaTeX re-entering math mode from text mode — leave it.
 2. **Fenced theorem-box `:::` openers** — every `:::` fence line (the labeled opener and the bare `:::` closer) stays in place, with the same count and order. The opener's derived anchor MUST be unchanged: the kind→prefix mapping (Definition→def, Proposition→prop, Theorem→thm, Lemma→lem, Corollary→cor, Example→ex, Remark→rmk) plus the integer N, and every `::: misc … {#id}` keeps its `{#id}`. Never change N.
 3. Cross-reference **paths** (`/en/math/...`) and **anchors** (`#def1`, `#prop2`) — unchanged. Visible labels may be lightly refined only if materially clearer.
    - **Verification rule**: do NOT change an anchor target or invent a new `[display](url)` pairing unless you have actually seen the target with that exact form. If unsure, leave the existing form untouched.
@@ -605,7 +606,7 @@ Given the Korean source body (for meaning reference) and the current English tra
 
 # Self-check before responding
 
-- Same number of `$$...$$` blocks as the KO body — none downgraded to inline `$...$`.
+- Same math delimiters as the KO body — as many `$$...$$` display spans and as many `$...$` inline spans; none downgraded, none promoted.
 - Every `:::` opener present with its derived anchor (kind→prefix + N) unchanged and every `::: misc … {#id}` intact; `:::` line count and order match the KO source.
 - No Korean labels remain (정의, 명제, 정리, 보조정리, 따름정리, 예시, 참고, 증명, 참고문헌).
 - Output is body only — no frontmatter or `---` lines.
@@ -838,10 +839,17 @@ def validate_translation(
     # False positives (rephrasings that merge/split blocks) are common enough that
     # a hard fail wastes a whole day per file; we log + notify instead.
     _SUB_RE = re.compile(r"<sub>.*?</sub>", re.DOTALL)
-    ko_math = len(_MATH_BLOCK_RE.findall(_SUB_RE.sub("", ko_content)))
-    en_math = len(_MATH_BLOCK_RE.findall(_SUB_RE.sub("", translated)))
+    # 수식 구분자 프로필: (디스플레이 `$$...$$` 수, 인라인 `$...$` 수). 수식 내용은
+    # verbatim 보존이 원칙이므로 KO 와 EN 이 정확히 같아야 한다. 어긋나면 모델이 구분자를
+    # 바꾼 것이다 — 특히 디스플레이를 인라인으로 낮추면 가운데 정렬 수식이 문장 속으로
+    # 들어가 버린다. (`<sub>` 한영병기는 ko/en 이 서로 다르므로 빼고 센다.)
+    ko_math = math_profile(_SUB_RE.sub("", ko_content))
+    en_math = math_profile(_SUB_RE.sub("", translated))
     if ko_math != en_math:
-        warnings.append(f"math block count mismatch: ko={ko_math}, en={en_math}")
+        warnings.append(
+            f"math block count mismatch: ko=display {ko_math[0]}/inline {ko_math[1]}, "
+            f"en=display {en_math[0]}/inline {en_math[1]}"
+        )
 
     # Theorem-box anchor ids must match the KO source exactly. Ids come from the
     # `:::` openers (kind→prefix + number for derived boxes, the explicit `{#id}`
@@ -1009,18 +1017,10 @@ def translate(
     # Blanket substring replacement; the math blog body never has legitimate
     # `/ko/` in prose or code, so we don't need a guarded regex.
     en_body = en_body.replace("/ko/", "/en/")
-    # Enforce the blog's `$$` unification rule (GUIDELINE §2). The model reflexively
-    # downgrades inline `$$x$$` to standard-markdown `$x$`, which both breaks the math
-    # (kramdown parses `_`/`*` inside `$...$` as emphasis) and collapses the `$$`-block
-    # count so the KO/EN check below mismatches and fires the expensive claude verify.
-    # Promote every top-level `$...$` back to `$$...$$` deterministically (the model
-    # instruction alone is not reliably followed — see 2026-07-07 en=51 vs ko=518).
-    # normalize_if_safe refuses a body with an odd/ambiguous `$` structure rather than
-    # risk corrupting a `\text{$k$}`/`\tag{$\ast$}`, leaving it for the count check.
-    en_body, _md_safe = normalize_if_safe(en_body)
-    if not _md_safe:
-        log(f"WARN ($-delimiter): normalization skipped for {ko_path.name} — "
-            f"odd/ambiguous `$` structure; left as-is for manual review")
+    # 수식 구분자는 더 이상 정규화하지 않는다. 2026-07-13 부터 인라인은 표준 `$...$`,
+    # 디스플레이는 `$$...$$` 이므로, 모델이 원래 내던 출력이 곧 정답이다. 남은 위험
+    # (KO 의 디스플레이를 인라인으로 낮추는 것) 은 validate_translation 의 KO/EN
+    # 수식 프로필 대조가 잡는다. 자세한 배경은 math_delimiters.py 참고.
 
     # ---- Step 4: compose final EN file ----
     polished_at_iso = translated_at_iso if reason == "polish" else None
@@ -1077,6 +1077,14 @@ _SUB_STRIP_RE = re.compile(r"<sub>.*?</sub>", re.DOTALL)
 
 _DISPLAY_RE = re.compile(r"\$\$(.*?)\$\$", re.DOTALL)
 _INLINE_RE  = re.compile(r"\$([^$\n]+?)\$")
+# 수식 스팬 하나 — `$$...$$` 를 먼저 시도하므로 `$$` 를 single-$ 두 개로 쪼개지 않는다.
+# (kramdown 의 inline_math 파서와 같은 교대 순서다.)
+_MATH_SPAN_RE = re.compile(r"\$\$(.*?)\$\$|(?<!\\)\$(?!\$)([^$\n]+?)(?<!\\)\$(?!\$)", re.DOTALL)
+
+
+def _span_tex(m: "re.Match") -> str:
+    """_MATH_SPAN_RE 매치에서 LaTeX 본문만 꺼낸다 (display 든 inline 이든)."""
+    return m.group(1) if m.group(1) is not None else m.group(2)
 _PREAMBLE   = "__preamble__"
 _VERIFY_MAX_REGIONS = 12
 
@@ -1122,10 +1130,13 @@ def _locate_divergences(ko: str, en: str):
     blocks go sparse exactly in the downgrade-heavy posts we care about (EN keeps
     ~20% of KO's `$$`), which misaligns any block-bracketed window."""
     ko_body, en_body = _SUB_STRIP_RE.sub("", ko), _SUB_STRIP_RE.sub("", en)
-    ko_iter = list(_DISPLAY_RE.finditer(ko_body))
-    ko_blocks = [_norm_math(m.group(1)) for m in ko_iter]
+    # 디스플레이와 인라인을 **둘 다** 센다. 2026-07-13 부터 본문 수식의 90% 이상이
+    # 인라인 `$...$` 이므로, 예전처럼 `$$` 블록만 훑으면 인라인 수식이 통째로
+    # 사라져도 "0 differing block" 이라며 통과해 버린다.
+    ko_iter = list(_MATH_SPAN_RE.finditer(ko_body))
+    ko_blocks = [_norm_math(_span_tex(m)) for m in ko_iter]
     ko_lines = [ko_body.count("\n", 0, m.start()) for m in ko_iter]
-    en_blocks = [_norm_math(m.group(1)) for m in _DISPLAY_RE.finditer(en_body)]
+    en_blocks = [_norm_math(_span_tex(m)) for m in _MATH_SPAN_RE.finditer(en_body)]
     inventory = _en_math_inventory(en)
 
     sm = difflib.SequenceMatcher(None, ko_blocks, en_blocks, autojunk=False)
@@ -1472,12 +1483,6 @@ def translate_drift_incremental(
         new_body = en_body                       # only fm/whitespace changed
     else:
         new_body = "\n\n".join(c for c in out_chunks if c) + "\n"
-    # Enforce the blog's `$$` unification rule on both re-translated and kept-verbatim
-    # regions (idempotent; promotion-only, so hand-fixed EN never regresses). See translate().
-    new_body, _md_safe = normalize_if_safe(new_body)
-    if not _md_safe:
-        log(f"WARN ($-delimiter): normalization skipped for {ko_path.name} (drift) — "
-            f"odd/ambiguous `$` structure")
 
     # Frontmatter: keep the existing EN translated fields (drift rarely edits
     # title/excerpt/description); only translate a field absent from EN.
@@ -1705,23 +1710,26 @@ def run_verify(state: dict, ko_path: Path, en_path: Path, key: str) -> int:
     """
     ko_text = ko_path.read_text(encoding="utf-8")
     en_text = en_path.read_text(encoding="utf-8")
-    ko_n = len(_MATH_BLOCK_RE.findall(_SUB_STRIP_RE.sub("", ko_text)))
-    en_n = len(_MATH_BLOCK_RE.findall(_SUB_STRIP_RE.sub("", en_text)))
+    # (디스플레이, 인라인) 프로필로 비교한다 — 총 개수만 보면 디스플레이가 인라인으로
+    # 바뀐 것(합계 불변)을 놓친다. gap 계산·로그는 총합을 쓴다.
+    ko_p = math_profile(_SUB_STRIP_RE.sub("", ko_text))
+    en_p = math_profile(_SUB_STRIP_RE.sub("", en_text))
+    ko_n, en_n = sum(ko_p), sum(en_p)
     lints = lint_latex(en_text)
     struct = lint_structure(ko_text, en_text)
     verdict_text = ""
-    if ko_n != en_n:
+    if ko_p != en_p:
         verdict_text = verify_math_mismatch(ko_text, en_text, ko_n, en_n)
     verdict_safe = bool(re.search(r"^VERDICT:\s*safe\b", verdict_text, re.M | re.I))
     ko_typos = extract_ko_typos(verdict_text)
     # `clean` is about the EN: a KO typo means the KO needs fixing, not the EN, so
     # it must not make the translation look defective. But it still has to be
     # surfaced, so it is checked separately at the early return below.
-    clean = (not lints) and (not struct) and (ko_n == en_n or verdict_safe)
+    clean = (not lints) and (not struct) and (ko_p == en_p or verdict_safe)
 
     entry = state["files"].get(key, {})
     entry["verified_at"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
-    entry["verify_math_counts"] = [ko_n, en_n]
+    entry["verify_math_counts"] = [list(ko_p), list(en_p)]
     entry["verify_lints"] = lints[:20] or None
     entry["verify_structure"] = struct[:20] or None
     entry["verify_ko_typos"] = ko_typos[:20] or None
@@ -1952,8 +1960,8 @@ def main() -> int:
                 break
 
             ko_text = ko_path.read_text(encoding="utf-8")
-            ko_n = len(_MATH_BLOCK_RE.findall(_SUB_STRIP_RE.sub("", ko_text)))
-            en_n = len(_MATH_BLOCK_RE.findall(_SUB_STRIP_RE.sub("", translated)))
+            ko_n = sum(math_profile(_SUB_STRIP_RE.sub("", ko_text)))
+            en_n = sum(math_profile(_SUB_STRIP_RE.sub("", translated)))
             log(f"VERIFY ({key}) attempt {attempt}/{MAX_TRANSLATE_ATTEMPTS}: "
                 f"math mismatch ko={ko_n}/en={en_n}"
                 + (" (with en_old)" if en_old_snapshot else ""))
