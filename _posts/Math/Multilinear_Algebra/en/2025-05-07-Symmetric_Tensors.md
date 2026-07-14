@@ -10,14 +10,15 @@ sidebar:
 
 date: 2025-05-07
 weight: 201
-translated_at: 2026-07-13T14:00:02+00:00
+translated_at: 2026-07-14T01:00:03+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-14T01:00:03+00:00
 ---
 Given a group $H$ and a ring $A$, we have defined the group ring $AH$. ([[Algebraic Structures] §Algebras, ⁋Definition 5](/en/math/algebraic_structures/algebras#def5)) Now fix an $AH$-module $M$, and define $M^H$ as the set
 
 $$M^H=\left\{x\in M\mid \text{$hx=x$ for all $h\in H$}\right\}.$$
 
-Here, $hx$ is of course defined by viewing $h$ as an element of $AH$ via $h\mapsto \delta_h$, then using the $AH$-module structure. Then $M^H$ is an $A$-submodule of $M$, but if the group $H$ is not commutative, it is generally not an $AH$-submodule. Also, if a subgroup $G$ of $H$ is given, then $M^H\leq M^G$ is obvious.
+Here $hx$ is of course defined by viewing $h$ as an element of $AH$ via $h\mapsto \delta_h$, then using the $AH$-module structure. Then $M^H$ is an $A$-submodule of $M$, but if $H$ is not commutative, it is generally not an $AH$-submodule. Also, if a subgroup $G$ of $H$ is given, then $M^H\leq M^G$ is obvious.
 
 Now suppose $x\in M^G$ and $h\in H$ are given, and let $\bar{h}=hG$ be an element of $H/G$. Then
 
@@ -81,7 +82,7 @@ their product as tensors
 
 $$x\otimes y=x_1\otimes x_2\otimes \cdots\otimes x_p\otimes y_1\otimes y_2\otimes \cdots\otimes y_q$$
 
-is not guaranteed to be a symmetric tensor. Simply consider an element that swaps the positions of $x_i$ and $y_j$ in the above form, and it may fail to satisfy the symmetric tensor condition.
+is not guaranteed to be a symmetric tensor. Simply consider an element that swaps the positions of some $x_i$ and $y_j$ in the above expression; this may fail to satisfy the symmetric tensor condition.
 
 Instead, the product of the above form is invariant under the action of the subgroup $S_p\times S_q$ of $S_{p+q}$. Therefore, if we define
 
