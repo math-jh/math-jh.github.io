@@ -10,6 +10,7 @@ sidebar:
 date: 2026-05-04
 weight: 16
 translated_at: 2026-05-28T11:36:15+00:00
+translation_source: kimi-cli
 ---
 
 We examined the Riemann–Roch theorem for curves in the previous post. Essentially, the Riemann–Roch theorem computes the Euler characteristic in terms of other quantitative invariants, and although we could generalize it to arbitrary cases, in this post we only discuss its generalization to surfaces.
