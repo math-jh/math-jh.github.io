@@ -10,8 +10,9 @@ sidebar:
 
 date: 2024-11-01
 weight: 4
-translated_at: 2026-07-13T13:00:02+00:00
+translated_at: 2026-07-14T00:30:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-14T00:30:02+00:00
 ---
 ## Projective and Injective Resolutions
 
@@ -99,7 +100,7 @@ However, since we know nothing about $\lMod{A}^\op$, it does not follow from the
 The category $\lMod{A}$ has enough injectives.
 :::
 ::: Proof
-One can easily show that right adjoints preserve injective objects. Then the coextension of scalars $\Ab \rightarrow \lMod{A}$ obtained from the ring homomorphism $\mathbb{Z}\rightarrow A$ is a right adjoint of restriction of scalars, so injective objects in $\Ab$ become injective objects in $\lMod{A}$. ([[Algebraic Structures] §Change of Base Ring, ⁋Proposition 7](/en/math/algebraic_structures/change_of_base_ring#prop7)) Thus it suffices to prove that $\Ab$ has enough injectives. For any $A\in\Ab$, this is achieved by setting
+One can easily show that a right adjoint preserves injective objects. Then the coextension of scalars $\Ab \rightarrow \lMod{A}$ obtained from the ring homomorphism $\mathbb{Z}\rightarrow A$ is a right adjoint of restriction of scalars, so injective objects in $\Ab$ become injective objects in $\lMod{A}$. ([[Algebraic Structures] §Change of Base Ring, ⁋Proposition 7](/en/math/algebraic_structures/change_of_base_ring#prop7)) Thus it suffices to prove that $\Ab$ has enough injectives. For any $A\in\Ab$, this is achieved by setting
 
 $$I(A)=\prod_{f\in\Hom_\Ab(A, \mathbb{Q}/\mathbb{Z})} \mathbb{Q}/\mathbb{Z}$$
 
