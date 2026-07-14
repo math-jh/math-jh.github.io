@@ -261,6 +261,13 @@ def _post_title(path: Path) -> str:
         return path.stem
 
 
+_COMMIT_SUBJECT = {
+    "pending": "EN 신규 번역",       # Phase 1: EN 이 아예 없던 글
+    "drift":   "EN 재번역(drift)",   # Phase 2: KO 가 바뀌어 `drift_needed` 가 걸린 글
+    "polish":  "EN 다듬기(polish)",  # Phase 3: 글당 1회, EN 산문만 손보는 패스
+}
+
+
 def commit_translation(ko_path: Path, en_path: Path, reason: str) -> None:
     """방금 쓴 EN(과 drift 면 KO 플래그)을 커밋한다. 실패해도 번역은 살린다.
 
@@ -302,7 +309,7 @@ def commit_translation(ko_path: Path, en_path: Path, reason: str) -> None:
                 _git("reset", "-q", "--", rel_ko)
 
         # 2) EN: 번역 결과 (content)
-        subject = ("EN 신규 번역" if reason == "pending" else "EN 재번역(drift)")
+        subject = _COMMIT_SUBJECT.get(reason, f"EN 재번역({reason})")
         _git("add", "--", rel_en)
         rc, _, err = _git("commit", "-m", f"{subject}: {title}")
         if rc != 0:
