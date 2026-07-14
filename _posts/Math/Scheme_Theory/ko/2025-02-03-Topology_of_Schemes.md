@@ -11,29 +11,25 @@ sidebar:
 date: 2025-02-03
 weight: 6
 drift_needed: true
+published: false
 ---
 
 ## 일반점
 
-이제 우리는 스킴이 갖는 위상적인 구조를 살펴볼 것이다. [§스펙트럼](/ko/math/scheme_theory/spectrums)에서 이미 살펴보았듯, scheme $X$는 일반적으로 우리가 생각하는 위상공간과는 다른 위상이 주어져 있다. 가장 특이한 것 중 하나는 한점집합이 닫힌집합이 아닐 수도 있다는 것이다.
+이제 우리는 스킴이 갖는 위상적인 구조를 살펴볼 것이다. 가장 특이한 것 중 하나는 한점집합이 닫힌집합이 아닐 수도 있다는 것이다. 
+
 
 ::: 정의 1
 위상공간 $X$의 한 점 $x$가 *closed point<sub>닫힌점</sub>*이라는 것은 $\{x\}$가 $X$의 닫힌집합이라는 것이다.
 :::
 
-따라서 공간 $X$가 $T_1$-space인 것과 $X$의 모든 점이 closed point인 것이 동치임을 안다. ([\[위상수학\] §하우스도르프 공간, ⁋정의 3](/ko/math/topology/Hausdorff_spaces#def3)) 특히 우리는 field가 아닌 integral domain의 스펙트럼은 closed point가 아닌 점을 갖는다는 것을 보았다. 
-
-한편, 임의의 affine scheme은 반드시 closed point를 갖는다.[^1] 이는 ring $A$의 maximal ideal $\mathfrak{m}$을 하나 택하면 $Z(\mathfrak{m})=\{\mathfrak{m}\}$이고, 따라서 [§스펙트럼, ⁋명제 14](/ko/math/scheme_theory/spectrums#prop14)과 [\[집합론\] §필터와 아이디얼, 갈루아 대응, ⁋명제 7](/ko/math/set_theory/filter_and_ideal#prop7)을 적용하면
+따라서 공간 $X$가 $T_1$-space인 것과 $X$의 모든 점이 closed point인 것이 동치임을 안다. ([\[위상수학\] §하우스도르프 공간, ⁋정의 3](/ko/math/topology/Hausdorff_spaces#def3)) [§스킴, ⁋예시 7](/ko/math/scheme_theory/schemes#ex7)에서 보았듯 classical algebraic geometry에서는 maximal ideal들만 생각하였으므로, 이러한 maximal ideal $\mathfrak{m}$에 대해서는 $Z(\mathfrak{m})=\{\mathfrak{m}\}$이고, 따라서 [§스펙트럼, ⁋명제 14](/ko/math/scheme_theory/spectrums#prop14)과 [\[집합론\] §필터와 아이디얼, 갈루아 대응, ⁋명제 7](/ko/math/set_theory/filter_and_ideal#prop7)을 적용하면
 
 $$\cl(\{\mathfrak{m}\})=ZI(\{\mathfrak{m}\})=ZIZ(\mathfrak{m})=Z(\mathfrak{m})=\{\mathfrak{m}\}$$
 
-이기 때문이다. 비슷하게, 만일 임의의 affine scheme $\Spec A$가 closed point $\mathfrak{p}$를 갖는다면, $I(\{\mathfrak{p}\})=\mathfrak{p}$와 [§스펙트럼, ⁋명제 14](/ko/math/scheme_theory/spectrums#prop14)로부터
+이 되어, 모든 점이 closed point가 되었다. 그러나 field가 아닌 integral domain의 스펙트럼을 생각하면 이는 maximal ideal $\mathfrak{m}\neq 0$을 가지는 동시에 integral domain의 정의에 의하여 $0$이 prime ideal이 되므로, 이러한 scheme은 closed point가 아닌 점을 갖는다. 
 
-$$Z(\mathfrak{p})=ZI(\{\mathfrak{p}\})=\cl(\{\mathfrak{p}\})=\{\mathfrak{p}\}$$
-
-이므로 $\mathfrak{p}$는 반드시 maximal ideal이어야 한다. 
-
-정의에 의하여, $\Spec A$의 점 $\mathfrak{p}$가 closed point가 아니라면 $\mathfrak{q}\in \cl(\{\mathfrak{p}\})$를 만족하는 $\Spec A$의 점 $\mathfrak{q}\neq \mathfrak{p}$가 존재한다. 
+우리의 첫째 목표는 이러한 점을 직관적으로 이해하는 것이다. 
 
 ::: 정의 2
 위상공간 $X$의 두 점 $x,y$가 $x\in\cl(\{y\})$를 만족한다 하자. 그럼 $x$를 $y$의 *specialization*이라 하고, $y$는 $x$의 *generalization*이라 한다. 만일 위상공간 $X$의 닫힌집합 $C$에 대하여, $C=\cl(\{x\})$가 성립한다면 $x$를 $C$의 *generic point<sub>일반점</sub>*라 부른다. 
@@ -41,9 +37,11 @@ $$Z(\mathfrak{p})=ZI(\{\mathfrak{p}\})=\cl(\{\mathfrak{p}\})=\{\mathfrak{p}\}$$
 
 그럼 정의에 의하여, $x$가 $C$의 generic point라면 $A$의 임의의 열린집합 $U$는 항상 $x$를 포함한다. 따라서 generic point는 $C$의 모든 점에 가까운 점으로 생각할 수 있다.
 
-특별히 $X$가 affine scheme $\Spec A$인 경우, 우리는 $\Spec A$의 임의의 irreducible closed set은 $A$의 적당한 prime ideal $\mathfrak{p}$에 대하여 $Z(\mathfrak{p})$의 꼴로 나타난다는 것을 확인하였다. 그럼 자명하게 $\mathfrak{p}\in Z(\mathfrak{p})$이고, 이 때 $Z(\mathfrak{p})$에 속하는 prime ideal들 중 $\mathfrak{p}$가 (유일하게) minimal한 것은 자명하므로 $Z(\mathfrak{p})$의 (유일한) generic point가 된다.
+이를 더욱 기하적으로 설명하면 다음과 같다. 예를 들어 $\mathbb{A}^n=\Spec\mathbb{K}[\x_1,\ldots, \x_n]$을 보자. 그럼 classical한 대수기하학에서 우리는 적당한 함수 $f$의 zero locus $Z(f)$가 $\mathbb{A}^n_\text{classical}$의 subscheme을 이룬다는 것을 안다. 
 
-이를 더욱 기하학적으로 만들기 위해, $A=\mathbb{K}[\x_1,\x_2]/(\x_2-\x_1^2)$이라 하자. 그럼 [§스펙트럼, ⁋명제 9](/ko/math/scheme_theory/spectrums#prop9)에서 우리는 $\Spec A$가 $\mathbb{A}_\mathbb{K}^2=\Spec \mathbb{K}[\x_1,\x_2]$의 닫힌집합임을 보였다. 이제 우리는 prime ideal $(\x_2-\x_1^2)\in \Spec \mathbb{K}[\x_1,\x_2]$이 $\Spec A\cong Z(\x_2-\x_1^2)$의 generic point임을 안다. 즉 generic point는 곡선 $\x_2-\x_1^2$ 그 자체를 나타내는 것으로 해석할 수 있다. 
+논리 전개의 편의상 $f$가 prime element여서, $f$가 생성하는 ideal $\mathfrak{p}_f=(f)$가 prime ideal이라 하자. 그럼 $\mathfrak{p}_f$는 우선 정의에 의해 $\mathbb{A}^n$의 (closed일 필요는 없는) 점이며, 바로 이 점이 $f$가 정의하는 closed subscheme의 generic point이다. 이 점은 $Z(f)$의 대부분의 정보를 담고 있는데, 가령 $Z(f)$에 포함된 (classical한) 점들을 얻기 위해서는 $\mathfrak{p}_f$에 closure를 취하여 $Z(f)$를 얻은 후 maximal ideal들만 택하면 되고, 대수적으로는 $\mathfrak{p}_f$를 포함하는 maximal ideal들을 모두 가져오면 된다. 
+
+이 논증은 일반적인 $A$의 ideal $\mathfrak{a}$에 대해서도 확장된다. 즉, $Z(\mathfrak{a})$의 irreducible component들은 $\mathfrak{a}$를 포함하는 minimal prime ideal들에 일대일로 대응되며, 이 때 각각의 minimal prime ideal들이 해당 component의 generic point에 대응되며 따라서 일반적인 경우도 component별로 위에서의 직관을 그대로 가져온 것이라 생각할 수 있다. 
 
 ## 스킴의 위상적 성질들
 
@@ -53,7 +51,7 @@ Scheme은, structure sheaf를 빼고 보면 그냥 위상공간이므로, 위상
 Scheme $(X,\mathcal{O}_X)$가 주어졌다 하자. 만일 $X$가 위상공간으로서 quasi-compact (resp. irreducible, connected)라면, $X$를 quasi-compact (resp. irreducible, connected) scheme이라 부른다. 
 :::
 
-위 정의에 해당하는 위상수학의 정의들은 각각 [\[위상수학\] §옹골공간, ⁋정의 1](/ko/math/topology/compact_spaces#def1), [\[위상수학\] §차원, ⁋정의 6](/ko/math/topology/dimension#def6)과 [\[위상수학\] §연결공간, ⁋정의 1](/ko/math/topology/connected_spaces#def1)에서 각각 찾아볼 수 있다.[^2] 다음은 이 정의에 대한 예시와 반례들이다. 
+위 정의에 해당하는 위상수학의 정의들은 각각 [\[위상수학\] §옹골공간, ⁋정의 1](/ko/math/topology/compact_spaces#def1), [\[위상수학\] §차원, ⁋정의 6](/ko/math/topology/dimension#def6)과 [\[위상수학\] §연결공간, ⁋정의 1](/ko/math/topology/connected_spaces#def1)에서 각각 찾아볼 수 있다.[^1] 다음은 이 정의에 대한 예시와 반례들이다. 
 
 ::: 예시 4
 우리는 [§스펙트럼, ⁋보조정리 12](/ko/math/scheme_theory/spectrums#lem12)에 의해 임의의 affine scheme은 quasi-compact임을 안다. Quasi-compact가 아닌 scheme의 예시로는, 당연히 무한히 많은 scheme들의 disjoint union이 있다. 
@@ -274,5 +272,4 @@ $$\mathbb{Z}/2\mathbb{Z}\times \{0\}\times\{0\}\times\cdots\subseteq \mathbb{Z}/
 
 ---
 
-[^1]: 그러나 closed point를 갖지 않는 scheme이 존재한다. 
-[^2]: 우리는 [§스펙트럼, ⁋보조정리 11](/ko/math/scheme_theory/spectrums#lem11) 이후에 (Hausdorff가 아닐 수 있는) compact한 위상공간을 *quasi-compact*라 부르기로 하였다. 
+[^1]: 우리는 [§스펙트럼, ⁋보조정리 11](/ko/math/scheme_theory/spectrums#lem11) 이후에 (Hausdorff가 아닐 수 있는) compact한 위상공간을 *quasi-compact*라 부르기로 하였다. 
