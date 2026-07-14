@@ -10,8 +10,9 @@ sidebar:
 
 date: 2023-01-02
 weight: 3
-translated_at: 2026-07-13T12:43:05+00:00
+translated_at: 2026-07-14T00:00:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-14T00:00:02+00:00
 ---
 Now we show that a short exact sequence in $\Ch(\mathcal{A})$ induces a *long exact sequence*.
 
@@ -27,7 +28,7 @@ $$0\rightarrow A_n\rightarrow B_n\rightarrow C_n\rightarrow 0$$
 
 is a short exact sequence for all $n$.
 
-The main theorem of this post is the following [Theorem 1](#thm1). In its proof, the snake lemma plays an important role, and since the proof can be easily completed by using the connecting map that is explicitly obtained when the category is $\lMod{A}$, we actively use the Freyd-Mitchell embedding theorem as in [§Diagram Chasing](/en/math/homological_algebra/diagram_chasing) to carry out the proof of the following theorem in $\lMod{A}$.
+The main theorem of this post is the following [Theorem 1](#thm1). In its proof, the snake lemma plays an important role, and since the proof can be completed easily by using the connecting map that is obtained explicitly when the category is $\lMod{A}$, we actively use the Freyd–Mitchell embedding theorem as in [§Diagram Chasing](/en/math/homological_algebra/diagram_chasing) to carry out the proof of the following theorem in $\lMod{A}$.
 
 ::: Theorem 1 (The long exact sequence)
 Given a short exact sequence
@@ -43,9 +44,9 @@ It suffices to consider the following diagram
 
 ![long_exact_sequence](/assets/images/Math/Homological_Algebra/Long_Exact_Sequence-1.svg){:style="width:32.84em" class="invert" .align-center}
 
-Here, the $\partial$'s are all functions defined similarly to $\partial^A(a+\im d^A_{n+1})=d_n^Aa\in\ker d^A_{n-1}$. Then in the above diagram, one can easily verify that $\ker\partial^A$ is equal to $H_{n+1}(A)=\ker d_n^A/\im(d^A_{n+1})$, and $\coker\partial^A$ is equal to $H_{n-1}(A)=\ker d^A_{n-1}/\im d^A_n$.
+Here, the $\partial$'s are all functions defined by $\partial^A(a+\im d^A_{n+1})=d_n^Aa\in\ker d^A_{n-1}$. Then in the above diagram, one can easily verify that $\ker\partial^A$ is equal to $H_{n+1}(A)=\ker d_n^A/\im(d^A_{n+1})$, and $\coker\partial^A$ is equal to $H_{n-1}(A)=\ker d^A_{n-1}/\im d^A_n$.
 
-Therefore, if we only show that the top and bottom rows are exact, the given long exact sequence is well induced by the snake lemma. To show this, consider again the following diagram
+Therefore, it suffices to show that the top and bottom rows are exact; then the snake lemma yields the desired long exact sequence. To show this, consider again the following diagram
 
 ![long_exact_sequence_exactness](/assets/images/Math/Homological_Algebra/Long_Exact_Sequence-2.svg){:style="width:22.98em" class="invert" .align-center}
 
@@ -76,7 +77,7 @@ $$0 \rightarrow A_\bullet\overset{u}{\rightarrow}B_\bullet\overset{v}{\rightarro
 
 and denote the chain maps between them by $f:A_\bullet \rightarrow A_\bullet'$, $g:B_\bullet \rightarrow B_\bullet'$, $h:C_\bullet \rightarrow C_\bullet'$. That is, $u'f=gu$ and $v'g=hv$ hold.
 
-In the diagram we need to construct, the squares not containing the connecting morphism $\partial$ commute immediately from the functoriality of homology. For example,
+In the diagram we need to construct, the squares not containing the connecting morphism $\partial$ commute immediately by the functoriality of homology. For example,
 
 $$H_n(g)\circ H_n(u)=H_n(gu)=H_n(u'f)=H_n(u')\circ H_n(f)$$
 
@@ -103,13 +104,13 @@ That is, the above square commutes.
 
 ## Quasi-Isomorphic Chain Complexes
 
-It is clear how to define an isomorphism between chain complexes that we have examined so far.
+It is clear how to define an isomorphism between the chain complexes we have examined so far.
 
 ::: Definition 3
-Given two chain complexes $C_\bullet$, $D_\bullet$, we say that $C_\bullet$ and $D_\bullet$ are *isomorphic* if there exist two chain maps $f:C_\bullet\rightarrow D_\bullet$, $g:D_\bullet\rightarrow C_\bullet$ such that $fg=\id_D$ and $gf=\id_C$. In this case, we call $f,g$ an *isomorphism* between the two chain complexes.
+Given two chain complexes $C_\bullet$, $D_\bullet$, we say that $C_\bullet$ and $D_\bullet$ are *isomorphic* if there exist two chain maps $f:C_\bullet\rightarrow D_\bullet$, $g:D_\bullet\rightarrow C_\bullet$ such that $fg=\id_D$ and $gf=\id_C$. In this case, we call $f,g$ *isomorphisms* between the two chain complexes.
 :::
 
-This is equivalent to the existence of a chain map $(f_n)_{n\in\mathbb{Z}}$ where each $f_n$ is an isomorphism.
+This is equivalent to the existence of a chain map $(f_n)_{n\in\mathbb{Z}}$ such that each $f_n$ is an isomorphism.
 
 On the other hand, since the only tool we have available in homological algebra is homology, we can weaken the notion of isomorphism as follows.
 
@@ -135,7 +136,7 @@ Given two chain complexes $C,D$ and chain maps $f,g:C\rightarrow D$, a *chain ho
 such that $f_n-g_n=d_{n+1}^Dh_n+h_{n-1}d_n^C$ holds. If a chain homotopy between $f,g$ exists, we say that $f$ and $g$ are *homotopic* chain maps.
 :::
 
-If for a chain map $f$, there exists $h$ satisfying $f=dh+hd$, then $h$ can be viewed as a chain homotopy between $f$ and $0$. Therefore, when such $h$ exists, we call $f$ *null homotopic*.
+If for a chain map $f$, there exists $h$ satisfying $f=dh+hd$, then $h$ can be viewed as a chain homotopy between $f$ and $0$. Therefore, when such an $h$ exists, we call $f$ *null-homotopic*.
 
 ::: Proposition 6
 Two homotopic chain maps $f,g:C\rightarrow D$ induce the same function on homologies.
@@ -143,7 +144,7 @@ Two homotopic chain maps $f,g:C\rightarrow D$ induce the same function on homolo
 ::: Proof
 Choose arbitrary $[a]\in H_n(C)=\ker(d^C_{n})/\im(d^C_{n+1})$ and let $a\in\ker(d_{n}^C)$ be a representative. We need to show
 
-$$f_n(a)-g_n(b)\in\im(d_{n+1}^D)$$
+$$f_n(a)-g_n(a)\in\im(d_{n+1}^D)$$
 
 However, from the equation
 
@@ -151,10 +152,10 @@ $$(d_{n+1}^D\circ h_n)(a)+(h_{n-1}\circ d_n^C)(a)=f_n(a)-g_n(a)$$
 
 since $a\in \ker(d_n^C)$, we obtain
 
-$$f_n(a)-g_n(b)=d_{n+1}^D(h_n(a))\in\im(d_{n+1}^D)$$
+$$f_n(a)-g_n(a)=d_{n+1}^D(h_n(a))\in\im(d_{n+1}^D)$$
 :::
 
-If for a chain map $f:C\rightarrow D$, there exists an appropriate chain map $g:D\rightarrow C$ such that $gf$ is homotopic to $\id_C$ and $fg$ is homotopic to $\id_D$, we call $f$ a *chain homotopy equivalence*.
+If for a chain map $f:C\rightarrow D$, there exists a chain map $g:D\rightarrow C$ such that $gf$ is homotopic to $\id_C$ and $fg$ is homotopic to $\id_D$, we call $f$ a *chain homotopy equivalence*.
 
 ## Homotopy Category
 
@@ -180,11 +181,11 @@ so we know that a chain homotopy
 
 $$(h'_n=v_{n+1}h_nu_n)_{n\in\mathbb{Z}}$$
 
-exists between $vfu$ and $vgu$. That is, the equivalence relation defined above is also compatible with the composition in $\mathbf{Ch}(\mathcal{C})$.
+exists between $vfu$ and $vgu$. That is, the equivalence relation defined above is also compatible with composition in $\mathbf{Ch}(\mathcal{C})$.
 
 By similar logic, one can show that $\mathbf{K}(\mathcal{C})$ is an additive category, and the obvious functor $\mathbf{Ch}(\mathcal{C})\rightarrow\mathbf{K}(\mathcal{C})$ is an additive functor.
 
-However, in general $\mathbf{K}(\mathcal{C})$ does not become an abelian category.
+However, in general $\mathbf{K}(\mathcal{C})$ is not an abelian category.
 
 ## Mapping Cone
 
