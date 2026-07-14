@@ -145,17 +145,21 @@ $$A^\times\longrightarrow A_1^\times\times\cdots\times A_n^\times,\qquad (a_1,\l
 한편 matrix ring의 경우 unit group은 general linear group이 된다.
 
 ::: 예시 9
-Ring $R$을 각 성분으로 갖는 $n\times n$ 행렬들의 ring $\Mat_n(R)$을 생각하자. 정의상 $\Mat_n(R)$의 unit은 곱셈에 대한 양쪽 역원을 갖는 행렬, 즉 invertible matrix이다. 이러한 행렬 전체의 모임을 *general linear group<sub>일반선형군</sub>* $\GL(n;R)$이라 부른다. 즉
+Ring $R$을 각 성분으로 갖는 $n\times n$ 행렬들의 ring $\Mat_n(R)$을 생각하자. 정의상 $\Mat_n(R)$의 unit은 곱셈에 대한 양쪽 역원을 갖는 행렬, 즉 invertible matrix이다. 이러한 행렬 전체의 모임을 *general linear group<sub>일반선형군</sub>*이라 부르고 $\GL(n;R)$으로 쓴다. 즉
 
 $$\Mat_n(R)^\times=\GL(n;R)$$
 
-이다 ([\[다중선형대수학\] §행렬, ⁋정의 1](/ko/math/multilinear_algebra/matrices#def1)). $R$가 가환환이면 행렬 $M\in \Mat_n(R)$이 invertible인 것과 그 행렬식 $\det M$이 $R^\times$의 원소인 것이 동치인데, 이는 adjugate 공식 $M\cdot\operatorname{adj}(M)=\operatorname{adj}(M)\cdot M=(\det M)I$가 임의의 가환환 위에서 성립하기 때문이다. 실제로 $\det M\in R^\times$이면 $(\det M)^{-1}\operatorname{adj}(M)$이 $M$의 역행렬이고, 거꾸로 $MN=I$이면 $\det M\cdot\det N=\det I=1$이라 $\det M\in R^\times$이다. 따라서
+이다 ([\[다중선형대수학\] §행렬, ⁋정의 1](/ko/math/multilinear_algebra/matrices#def1)). $R$가 commutative ring이면 행렬 $M\in \Mat_n(R)$이 invertible인 것과 그 행렬식 $\det M$이 $R^\times$의 원소인 것이 동치라는 것이 알려져 있다. ([\[다중선형대수학\] §행렬식, ⁋따름정리 3](/ko/math/multilinear_algebra/determinants#cor3)) 즉 이 경우
 
 $$\GL(n;R)=\{M\in \Mat_n(R):\det M\in R^\times\}$$
 
 이다. 예를 들어 $R=\mathbb{Z}$이면 $\mathbb{Z}^\times=\{1,-1\}$이므로 $\GL(n;\mathbb{Z})$는 행렬식이 $\pm 1$인 정수행렬들로 이루어진다.
 
-$\Mat_n(R)$은 $n\geq 2$이면 nontrivial한 zero divisor를 가지므로 unit과 zero divisor의 구별이 의미를 갖는다. 가령 $n=2$에서 matrix unit $E_{11},E_{12}$는 $E_{12}E_{11}=0$이지만 $E_{12}\neq 0$, $E_{11}\neq 0$이므로 둘 다 zero divisor이고, 따라서 [명제 4](#prop4)에 의해 invertible하지 않다.
+$\Mat_n(R)$은 $n\geq 2$이면 nontrivial zero divisor를 가지므로 unit과 zero divisor의 구별이 의미를 갖는다. 가령 $n=2$에서 matrix unit 
+
+$$E_{11}=\begin{pmatrix}1&0\\0&0\end{pmatrix},\qquad E_{12}=\begin{pmatrix}0&1\\0&0\end{pmatrix}$
+
+는 $E_{12}E_{11}=0$이지만 $E_{12}\neq 0$, $E_{11}\neq 0$이므로 둘 다 zero divisor이고, 따라서 [명제 4](#prop4)에 의해 invertible하지 않다.
 :::
 
 ---
