@@ -10,14 +10,15 @@ sidebar:
 
 date: 2025-02-02
 weight: 5
-translated_at: 2026-07-13T16:30:02+00:00
+translated_at: 2026-07-14T03:30:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-14T03:30:02+00:00
 ---
-In [§Schemes, ⁋Example 10](/en/math/scheme_theory/schemes#ex10) we glued two copies of the affine line $\mathbb{A}^1=\Spec \mathbb{K}[\x]$ in a suitable way to produce the projective space $\mathbb{P}^1$. This time we generalize this to define projective schemes.
+In [§Schemes, ⁋Example 10](/en/math/scheme_theory/schemes#ex10) we glued two copies of the affine line $\mathbb{A}^1=\Spec \mathbb{K}[\x]$ in a suitable way to produce the projective space $\mathbb{P}^1$. We now generalize this construction to define projective schemes.
 
 ## Projective Space
 
-Generalizing [§Schemes, ⁋Example 10](/en/math/scheme_theory/schemes#ex10) directly, it is not difficult to define $\mathbb{P}^n$ as a scheme. However, to generalize this to define projective schemes, it helps to understand $\mathbb{P}^n$ intuitively, so let us examine it more carefully.
+Generalizing [§Schemes, ⁋Example 10](/en/math/scheme_theory/schemes#ex10) directly, it is not difficult to define $\mathbb{P}^n$ as a scheme. However, to generalize this to define projective schemes, it helps to understand $\mathbb{P}^n$ intuitively, so we examine it more carefully.
 
 First, we briefly review the projective space defined in topology. To construct the topological space $\mathbb{P}^n$, we considered the topological space $\mathbb{R}^{n+1}\setminus \{0\}$. Then, defining the following equivalence relation
 
@@ -53,7 +54,7 @@ Explicitly, the above identification $U_i\cong P_i$ is expressed by the formula
 
 $$[x_0:\cdots:x_n]\text{ in $U_i\subseteq \mathbb{P}^n$}\leftrightarrow\left(\frac{x_0}{x_i},\ldots, \frac{x_{i-1}}{x_i},1,\frac{x_{i+1}}{x_i},\ldots, \frac{x_n}{x_i}\right)\text{ in $P_i\subseteq \mathbb{R}^{n+1}$}$$
 
-On the other hand, the process of [§Schemes, ⁋Example 10](/en/math/scheme_theory/schemes#ex10) is the reverse of this process. That is, we are first given $n+1$ copies of $n$-dimensional planes $P_0,\ldots, P_n$, and we transport them via isomorphisms satisfying the cocycle condition. Then how the cocycle condition should be written is obtained by examining how a point of $\mathbb{P}^n$ is written in different $P_i$ and $P_j$ via the above identification. Let us examine this. First, any point of $P_i$ and $P_j$ can be written in the form
+On the other hand, the process of [§Schemes, ⁋Example 10](/en/math/scheme_theory/schemes#ex10) is the reverse of this. That is, we are first given $n+1$ copies of $n$-dimensional planes $P_0,\ldots, P_n$, and we transport them via isomorphisms satisfying the cocycle condition. Then how the cocycle condition should be written is obtained by examining how a point of $\mathbb{P}^n$ is written in different $P_i$ and $P_j$ via the above identification. Let us examine this. First, any point of $P_i$ and $P_j$ can be written in the form
 
 $$(x_{0/i},\ldots, x_{(i-1)/i}, 1, x_{(i+1)/i}, \ldots, x_{n/i})\in P_i,\qquad (x_{0/j},\ldots, x_{(j-1)/j}, 1, x_{(j+1)/j}, \ldots, x_{n/j})\in P_j$$
 
