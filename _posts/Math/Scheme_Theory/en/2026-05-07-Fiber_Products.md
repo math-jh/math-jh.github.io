@@ -10,8 +10,9 @@ sidebar:
 
 date: 2025-03-08
 weight: 10
-translated_at: 2026-07-13T19:30:02+00:00
+translated_at: 2026-07-14T07:00:03+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-14T07:00:03+00:00
 ---
 One of the things we promised when introducing schemes was the fiber product, which is the product in $\Sch/S$; to define it we had to define $S$-schemes (and scheme morphisms). Now that we are prepared, we define the fiber product.
 
