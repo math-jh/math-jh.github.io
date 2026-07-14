@@ -10,12 +10,13 @@ sidebar:
 
 date: 2024-05-24
 weight: 14
-translated_at: 2026-07-13T15:00:01+00:00
+translated_at: 2026-07-14T02:00:01+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-14T02:00:01+00:00
 ---
-In this post we define separated morphisms and proper morphisms. It is helpful to think of them as the algebraic-geometric analogues of the Hausdorff and compactness conditions in topology.
+In this post we define separated morphisms and proper morphisms. It is helpful to think of them as the algebraic-geometric transplants of the Hausdorff and compactness conditions from topology.
 
-In previous posts we defined open subschemes ([§Schemes, ⁋Definition 4](/en/math/scheme_theory/schemes#def4)), and examined closed embeddings and the resulting closed subschemes, as well as ideal sheaves ([§Closed Subschemes, ⁋Definition 2](/en/math/scheme_theory/closed_subschemes#def2), [⁋Definition 5](/en/math/scheme_theory/closed_subschemes#def5)). We now add the following concepts.
+In previous posts we defined open subschemes ([§Schemes, ⁋Definition 4](/en/math/scheme_theory/schemes#def4)), examined closed embeddings and the resulting closed subschemes, and studied ideal sheaves ([§Closed Subschemes, ⁋Definition 2](/en/math/scheme_theory/closed_subschemes#def2), [⁋Definition 5](/en/math/scheme_theory/closed_subschemes#def5)). We now add the following concepts.
 
 ::: Definition 1
 Let an arbitrary scheme $X$ be given.
@@ -25,7 +26,7 @@ Let an arbitrary scheme $X$ be given.
 3. A morphism $f:X \rightarrow Y$ is called *quasi-projective* if it can be factored as a composition of a suitable open immersion $X \rightarrow X'$ and a projective morphism $X' \rightarrow Y$.
 :::
 
-Before starting the main discussion, it is good to look at the following example.
+Before starting the main discussion, it is helpful to examine the following example.
 
 ::: Example 2
 Let $A$ be a discrete valuation ring. That is, $A$ is a principal ideal domain with exactly two prime ideals $(0)$ and $\mathfrak{m}$, of which $\mathfrak{m}$ is the unique maximal ideal consisting of the non-units.
@@ -53,7 +54,7 @@ we obtain
 $$\kappa((0))=\Frac(A), \qquad \kappa(\mathfrak{m})=A_\mathfrak{m}/\mathfrak{m}A_\mathfrak{m}\cong \Frac(A/\mathfrak{m})\cong A/\mathfrak{m}.$$
 :::
 
-Let us take note of what this example means. Since $Z((0))=\Spec A$, the closure of $(0)$ is all of $\Spec A$, so $(0)$ is the generic point and the unique closed point $\mathfrak{m}$ is a specialization of $(0)$. Removing the closed point yields the only nontrivial open subset $D(\mathfrak{m})=\{(0)\}$, and the functions on it were $K=\Frac(A)$; thus the canonical morphism $\Spec K \rightarrow \Spec A$ is exactly this "punctured" inclusion. Geometrically, one can think of $\Spec A$ as a germ of a curve at a point, and $\Spec K$ as that germ with the point removed.
+Let us take note of what this example means. Since $Z((0))=\Spec A$, the closure of $(0)$ is all of $\Spec A$, so $(0)$ is the generic point and the unique closed point $\mathfrak{m}$ is a specialization of $(0)$. Removing the closed point yields the only nontrivial open subset $D(\mathfrak{m})=\{(0)\}$, and the functions on it were $K=\Frac(A)$; thus the canonical morphism $\Spec K \rightarrow \Spec A$ is exactly this "punctured" inclusion. Geometrically, one may think of $\Spec A$ as a germ of a curve at a point, and $\Spec K$ as that germ with the point removed.
 
 Then a morphism $\Spec K \rightarrow X$ is a punctured curve germ mapping into $X$, and extending it to $\Spec A \rightarrow X$ amounts to recovering the missing point inside $X$ and gluing the curve back together, i.e., finding the limit of the curve. The statement that there is at most one such extension is separatedness, and that there is exactly one is properness; this is the content of the two criteria we will see below. This exactly mirrors the topological picture: limits are unique in a Hausdorff space, and limits always exist in a compact space.
 
