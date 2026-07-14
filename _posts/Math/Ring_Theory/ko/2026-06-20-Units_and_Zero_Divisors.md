@@ -12,8 +12,6 @@ date: 2026-06-20
 
 weight: 1
 
-published: false
-
 ---
 
 이 글에서 우리는 환의 곱셈 구조에서 가장 기본적인 두 부류의 원소, 즉 곱셈에 대한 역원을 갖는 *unit*과, 곱하여 $0$을 만드는 짝을 갖는 *zero divisor*를 정리한다. 이 두 개념은 이미 여러 곳에서 암묵적으로 쓰였다. Integral domain은 zero divisor가 없는 가환환으로 정의되었고 ([\[대수적 구조\] §분수체, ⁋정의 5](/ko/math/algebraic_structures/field_of_fractions#def5)), field는 모든 nonzero 원소가 unit인 division ring이었다 ([\[대수적 구조\] §분수체, ⁋정의 3](/ko/math/algebraic_structures/field_of_fractions#def3)). 여기서는 unit을 본격적으로 정의하여 그 모임이 군을 이룸을 확인하고, unit과 zero divisor가 서로 배타적임을 보인 뒤, 유한가환환에서는 zero divisor가 아닌 모든 원소가 자동으로 unit이 된다는 사실을 증명한다. 그 직접적 귀결로 유한 integral domain이 field임을 얻는다.
@@ -41,7 +39,7 @@ $$(uu')(u'^{-1}u^{-1})=u(u'u'^{-1})u^{-1}=uu^{-1}=1$$
 ::: 예시 2
 Ring $\mathbb{Z}$에서 $uv=1$을 만족하는 정수 $u,v$는 $u=v=1$ 또는 $u=v=-1$뿐이므로 $\mathbb{Z}^\times=\{1,-1\}$이다.
 
-임의의 division ring $A$에서는 $0$을 제외한 모든 원소가 정의상 역원을 가지므로 $A^\times=A\setminus\{0\}$이다 ([\[대수적 구조\] §분수체, ⁋정의 3](/ko/math/algebraic_structures/field_of_fractions#def3)). 특히 field $\mathbb{K}$에 대해 $\mathbb{K}^\times=\mathbb{K}\setminus\{0\}$은 곱셈에 대한 commutative ring이다.
+임의의 division ring $A$에서는 $0$을 제외한 모든 원소가 정의상 역원을 가지므로 $A^\times=A\setminus\{0\}$이다 ([\[대수적 구조\] §분수체, ⁋정의 3](/ko/math/algebraic_structures/field_of_fractions#def3)). 특히 field $\mathbb{K}$에 대해 $\mathbb{K}^\times=\mathbb{K}\setminus\{0\}$은 곱셈에 대한 commutative group이다.
 
 주의할 것 중 하나는 한 ring의 unit이 그 특정 subring에서는 unit이 아닐 수 있다는 것이다. 가령 $2\in\mathbb{Q}$는 $\mathbb{Q}^\times$의 원소이지만, $\mathbb{Z}$ 안에서는 $2v=1$을 만족하는 정수 $v$가 없으므로 $2\not\in\mathbb{Z}^\times$이다. 
 :::
@@ -60,7 +58,7 @@ Ring $\mathbb{Z}$에서 $uv=1$을 만족하는 정수 $u,v$는 $u=v=1$ 또는 $u
 
 [\[대수적 구조\] §분수체, ⁋정의 5](/ko/math/algebraic_structures/field_of_fractions#def5)는 left zero divisor와 right zero divisor를 구별하지 않고 서술한 것으로, 이들 두 개념을 모두 포함하는 것이다. 특별히 commutative ring에 대해서는 이들의 구별이 사라지므로 방향을 명시하지 않아도 혼동의 여지가 없다. 
 
-정의에 위해, $0$ 자신은 $A\neq 0$인 한 nonzero 원소 (가령 $1$)와 곱했을 때 항상 $0$이므로 zero divisor이며, 그 대우명제를 생각하면 regular element는 항상 nonzero여야 한다. 
+정의에 의해, $0$ 자신은 $A\neq 0$인 한 nonzero 원소 (가령 $1$)와 곱했을 때 항상 $0$이므로 zero divisor이며, 그 대우명제를 생각하면 regular element는 항상 nonzero여야 한다. 
 
 우리의 관심사는 regular element와 unit 사이의 관계이다. 먼저 한 방향은 일반적인 환에서 항상 성립한다.
 
@@ -120,7 +118,7 @@ $$(a+n\mathbb{Z})(n/d+n\mathbb{Z})=a\cdot(n/d)+n\mathbb{Z}=(a/d)n+n\mathbb{Z}=0+
 
 이기 때문이다. 따라서 $\mathbb{Z}/n\mathbb{Z}$의 모든 nonzero 원소는 unit이거나 zero divisor이며, 이 분류가 다시 [정리 5](#thm5)를 잘 보여준다. 
 
-특히 $n=p$가 소수이면 $1,\ldots,p-1$이 모두 $p$와 서로소이므로 $(\mathbb{Z}/p\mathbb{Z})^\times=\mathbb{Z}/p\mathbb{Z}\setminus\{0+p\mathbb{Z}\}$이고, $\mathbb{Z}/p\mathbb{Z}$는 zero divisor를 갖지 않는 유한 integral domain이다. [따름정리 6](#cor6)에 의해 이는 field이며, 이것이 $p$개의 원소를 갖는 *prime field* $\mathbb{F}_p$이다 ([\[체론\] §체, §§소체](/ko/math/field_theory/fields#소체)).
+특히 $n=p$가 소수이면 $1,\ldots,p-1$이 모두 $p$와 서로소이므로 $(\mathbb{Z}/p\mathbb{Z})^\times=\mathbb{Z}/p\mathbb{Z}\setminus\{0+p\mathbb{Z}\}$이고, $\mathbb{Z}/p\mathbb{Z}$는 zero divisor를 갖지 않는 유한 integral domain이다. [따름정리 6](#cor6)에 의해 이는 field이며, 이것이 $p$개의 원소를 갖는 *prime field<sub>소체</sub>* $\mathbb{F}_p$이다 ([\[체론\] §체, §§소체](/ko/math/field_theory/fields#소체)).
 :::
 
 한편, product ring의 unit group은 성분별로 결정된다. 이는 product ring에서 곱셈이 성분별로 계산되기 때문이다.
@@ -157,7 +155,7 @@ $$\GL(n;R)=\{M\in \Mat_n(R):\det M\in R^\times\}$$
 
 $\Mat_n(R)$은 $n\geq 2$이면 nontrivial zero divisor를 가지므로 unit과 zero divisor의 구별이 의미를 갖는다. 가령 $n=2$에서 matrix unit 
 
-$$E_{11}=\begin{pmatrix}1&0\\0&0\end{pmatrix},\qquad E_{12}=\begin{pmatrix}0&1\\0&0\end{pmatrix}$
+$$E_{11}=\begin{pmatrix}1&0\\0&0\end{pmatrix},\qquad E_{12}=\begin{pmatrix}0&1\\0&0\end{pmatrix}$$
 
 는 $E_{12}E_{11}=0$이지만 $E_{12}\neq 0$, $E_{11}\neq 0$이므로 둘 다 zero divisor이고, 따라서 [명제 4](#prop4)에 의해 invertible하지 않다.
 :::
