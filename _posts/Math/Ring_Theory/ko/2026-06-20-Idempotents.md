@@ -164,11 +164,7 @@ $$\frac{A}{\bigcap_{i=1}^n\mathfrak{a}_i}\cong\prod_{i=1}^n A/\mathfrak{a}_i$$
 가 존재한다. 특히 $\bigcap_{i=1}^n\mathfrak{a}_i=0$이면 $A\cong\prod_{i=1}^n A/\mathfrak{a}_i$이다.
 :::
 ::: 증명
-이는 앞선 글에서 ([§중국인의 나머지정리, ⁋명제 5](/ko/math/ring_theory/chinese_remainder_theorem#prop5)) 증명되었다. 간략히 다시 적으면, $\ker\pi=\bigcap\mathfrak{a}_i$임은 정의에서 곧바로 따라오고, 전사성은 다음과 같이 귀납적으로 얻어진다. $n=1$인 경우는 quotient의 성질로부터 자명하다. 모든 $i<n$에 대해 $\pi_i(y)$를 원하는 값으로 맞추는 $y$가 있다 하면, $x=y+z$ 꼴로 $z\in\bigcap_{i<n}\mathfrak{a}_i$이면서 $z+\mathfrak{a}_n=x_n-y+\mathfrak{a}_n$인 $z$를 찾으면 된다. 이러한 $z$의 존재는 comaximal 조건이 주는 등식
-
-$$\mathfrak{a}_n+\bigcap_{i<n}\mathfrak{a}_i=A$$
-
-으로부터 보장된다 ([§중국인의 나머지정리, ⁋명제 3](/ko/math/ring_theory/chinese_remainder_theorem#prop3)). 마지막의 동형사상은 first isomorphism theorem의 직접적 귀결이다.
+이는 앞선 글에서 ([§중국인의 나머지정리, ⁋명제 5](/ko/math/ring_theory/chinese_remainder_theorem#prop5)) 증명되었다. 간략히 다시 적으면, $\ker\pi=\bigcap\mathfrak{a}_i$임은 정의에서 곧바로 따라오고, 전사성은 각 $i$에 대하여 $e_i\equiv 1\pmod{\mathfrak{a}_i}$, $e_i\equiv 0\pmod{\mathfrak{a}_j}$ ($j\ne i$)인 원소를 쌍별 comaximal 조건 $1=u_{ij}+v_{ij}$로부터 $e_i=\prod_{j\ne i}v_{ij}$로 명시적으로 만든 뒤 $x=\sum_i x_ie_i$로 목표값을 맞추는 방식으로 얻어진다. 마지막의 동형사상은 first isomorphism theorem의 직접적 귀결이다.
 :::
 
 이 정리가 [정리 5](#thm5)의 곱분해를 어떻게 만들어내는지 살펴보자. $\bigcap\mathfrak{a}_i=0$이라 가정하면 $\pi:A\xrightarrow{\sim}\prod A/\mathfrak{a}_i$는 환동형사상이다. 곱환 $\prod A/\mathfrak{a}_i$에는 자연스러운 central complete set이 있는데, 바로 $i$번째 성분만 $1$이고 나머지가 $0$인 원소
