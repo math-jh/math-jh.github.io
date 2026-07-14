@@ -9,7 +9,7 @@ sidebar:
     nav: "ring_theory-ko"
 
 date: 2025-05-06
-weight: 3
+weight: 4
 
 ---
 
@@ -150,7 +150,7 @@ $$b_n^k u(\x)=(b_n^{k-1}a_m\x^{m-n}+q_1(\x))v(\x)+r(\x)$$
 
 $$u=qv+r,\qquad \deg r < n$$
 
-을 만족하는 $q,r$을 유일하게 결정할 수 있다. 뿐만 아니라, 이 경우 polynomial ring $\mathbb{K}[\x]$는 [보조정리 3](#lem3)에 의하여 integral domain이고, 따라서 $N:\mathbb{K}[\x] \rightarrow \mathbb{Z}^{\geq0}$를 
+을 만족하는 $q,r$을 유일하게 결정할 수 있다. 뿐만 아니라, 이 경우 polynomial ring $\mathbb{K}[\x]$는 [보조정리 3](#lem3)에 의하여 integral domain이고, 따라서 $N:\mathbb{K}[\x] \rightarrow \mathbb{Z}_{\geq 0}$를 
 
 $$N: u\mapsto \deg(u)\qquad \text{단, $N(0)=0$}$$
 

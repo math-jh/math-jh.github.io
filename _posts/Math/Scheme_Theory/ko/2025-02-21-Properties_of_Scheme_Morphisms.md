@@ -212,7 +212,7 @@ Scheme morphism $\varphi:X \rightarrow Y$가 finite인 것은 $\varphi$가 integ
 
 한편 우리는 ring homomorphism $\pi:A \rightarrow A/\mathfrak{a}$는 기하적으로 $\mathfrak{a}$가 정의하는 닫힌집합의 inclusion에 해당하는 것을 안다. 따라서 합성
 
-$$\phi: \mathbb{K}[\x] \rightarrow \mathbb{K}[\x,\y] \rightarrow \mathbb{K}[\x,y]/(\x-\y^2)$$
+$$\phi: \mathbb{K}[\x] \rightarrow \mathbb{K}[\x,\y] \rightarrow \mathbb{K}[\x,\y]/(\x-\y^2)$$
 
 이 정의하는 scheme morphism
 
@@ -227,7 +227,7 @@ $$\Spec\phi: \Spec \frac{\mathbb{K}[\x,\y]}{(\x-\y^2)}\rightarrow \Spec \mathbb{
 이와 같이, finite type morphism은 기하적으로는 fiber가 유한차원인 것과 관련이 있고, finite morphism은 fiber가 유한집합인 것과 관련이 있다. 
 :::
 
-아직은 위의 [예시 15](#ex15)과 같은 상황에서 scheme morphism의 fiber를 계산하기 위해서는 그때그떄 상황에 맞추어 우직하게 계산을 해 나가는 수밖에 없지만, 나중에 fiber product를 계산하고 나면 조금 더 정형화된 방식을 사용할 수 있게 된다. 그 떄를 위해  다음을 정의한다.
+아직은 위의 [예시 15](#ex15)과 같은 상황에서 scheme morphism의 fiber를 계산하기 위해서는 그때그때 상황에 맞추어 우직하게 계산을 해 나가는 수밖에 없지만, 나중에 fiber product를 계산하고 나면 조금 더 정형화된 방식을 사용할 수 있게 된다. 그 때를 위해 다음을 정의한다.
 
 ::: 정의 16
 Scheme morphism $\varphi: X \rightarrow Y$가 *quasi-finite<sub>준유한</sub>*인 것은 $\varphi$가 morphism of finite type이고 임의의 $y\in Y$에 대하여 집합 $\varphi^{-1}(y)$가 항상 유한집합인 것이다. 

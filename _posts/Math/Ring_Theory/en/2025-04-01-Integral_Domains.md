@@ -9,7 +9,7 @@ sidebar:
     nav: "ring_theory-en"
 
 date: 2025-04-01
-weight: 1
+weight: 2
 translated_at: 2026-06-01T22:30:02+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-06-01T22:30:02+00:00
@@ -19,7 +19,7 @@ In the posts in this category, we examine properties of rings in somewhat greate
 ## Euclidean Domains
 
 ::: Definition 1
-Fix an integral domain $A$. If a function $N : A \to \mathbb{Z}^{\geq0}$ satisfies $N(0) = 0$, we call it a *norm* on $A$. If $N(a) > 0$ for every $a \neq 0$, we call this norm a *positive norm*. 
+Fix an integral domain $A$. If a function $N : A \to \mathbb{Z}_{\geq 0}$ satisfies $N(0) = 0$, we call it a *norm* on $A$. If $N(a) > 0$ for every $a \neq 0$, we call this norm a *positive norm*. 
 :::
 
 The condition defining a norm is very weak; for instance, given a fixed integral domain, there are many ways to define a norm on it. 
@@ -32,7 +32,7 @@ $$a = qb + r \qquad\text{with $r = 0$ or $N(r) < N(b)$}$$
 Here $q$ is called the *quotient* and $r$ the *remainder*.
 :::
 
-If we replace $A$ by the integers $\mathbb{Z}$ and regard $N$ as the absolute value function $\lvert-\rvert:\mathbb{Z} \rightarrow \mathbb{Z}^{\geq0}$, this is exactly the familiar division algorithm for integers. As another example, if we define $N$ on the polynomial ring $\mathbb{K}[\x]$ to be the degree function, we obtain the polynomial division algorithm. Finally, any field $\mathbb{K}$ is a Euclidean domain, via the function $N$ sending every $x\in\mathbb{K}$ to $0$. The reason this satisfies the above condition is that every nonzero element of a field divides every other element. 
+If we replace $A$ by the integers $\mathbb{Z}$ and regard $N$ as the absolute value function $\lvert-\rvert:\mathbb{Z} \rightarrow \mathbb{Z}_{\geq 0}$, this is exactly the familiar division algorithm for integers. As another example, if we define $N$ on the polynomial ring $\mathbb{K}[\x]$ to be the degree function, we obtain the polynomial division algorithm. Finally, any field $\mathbb{K}$ is a Euclidean domain, via the function $N$ sending every $x\in\mathbb{K}$ to $0$. The reason this satisfies the above condition is that every nonzero element of a field divides every other element. 
 
 ::: Proposition 3
 Every ideal of a Euclidean domain is principal. More precisely, for any nonzero ideal $\mathfrak{a}$ of a Euclidean domain $A$, if we let $a$ be an element of $\mathfrak{a}$ with minimal norm, then $\mathfrak{a}=(a)$. 
@@ -40,7 +40,7 @@ Every ideal of a Euclidean domain is principal. More precisely, for any nonzero 
 ::: Proof
 If $\mathfrak{a}$ is the zero ideal there is nothing to prove, so assume $\mathfrak{a}\neq 0$. 
 
-The image of $\mathfrak{a}\setminus \{0\}$ under $N$ is a subset of $\mathbb{Z}^{\geq 0}$, which is well-ordered; hence we can choose a nonzero element $a$ of $\mathfrak{a}$ with minimal norm. 
+The image of $\mathfrak{a}\setminus \{0\}$ under $N$ is a subset of $\mathbb{Z}_{\geq 0}$, which is well-ordered; hence we can choose a nonzero element $a$ of $\mathfrak{a}$ with minimal norm. 
 
 Since $(a)\subseteq \mathfrak{a}$ is obvious, to show $(a)=\mathfrak{a}$ it suffices to prove the reverse inclusion. Applying the division algorithm to an arbitrary element $x$ of $\mathfrak{a}$, we have
 

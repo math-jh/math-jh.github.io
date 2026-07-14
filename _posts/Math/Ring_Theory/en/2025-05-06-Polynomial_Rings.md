@@ -9,7 +9,7 @@ sidebar:
     nav: "ring_theory-en"
 
 date: 2025-05-06
-weight: 3
+weight: 4
 translated_at: 2026-06-26T23:00:01+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-06-26T23:00:01+00:00
@@ -145,7 +145,7 @@ The coefficient $b_n^k$ appearing here arises when we raise the degree one by on
 
 $$u=qv+r,\qquad \deg r < n$$
 
-Moreover, in this case the polynomial ring $\mathbb{K}[\x]$ is an integral domain by [Lemma 3](#lem3), and thus defining $N:\mathbb{K}[\x] \rightarrow \mathbb{Z}^{\geq0}$ by
+Moreover, in this case the polynomial ring $\mathbb{K}[\x]$ is an integral domain by [Lemma 3](#lem3), and thus defining $N:\mathbb{K}[\x] \rightarrow \mathbb{Z}_{\geq 0}$ by
 
 $$N: u\mapsto \deg(u)\qquad \text{where $N(0)=0$}$$
 

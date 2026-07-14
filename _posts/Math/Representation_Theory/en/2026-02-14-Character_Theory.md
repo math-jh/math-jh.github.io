@@ -316,7 +316,7 @@ From the computation of the character of the regular representation we know that
 
 $$\rho_{\mathbb{C}[S_3]}(g)=\begin{cases}6&\text{if $g=e$}\\0&\text{otherwise}\end{cases}$$
 
-(Equation (2)). This must be a $\mathbb{Z}^{\geq 0}$-linear combination of the above three characters, and indeed we can verify that
+(Equation (2)). This must be a $\mathbb{Z}_{\geq 0}$-linear combination of the above three characters, and indeed we can verify that
 
 $$\rchi_{\mathbb{C}[S_3]}=\rchi_0+\rchi_\sgn+2\rchi_\std$$
 
