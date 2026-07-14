@@ -18,7 +18,7 @@ weight: 2
 ## 유클리드 정역
 
 ::: 정의 1
-Integral domain $A$를 고정하자. 함수 $N : A \to \mathbb{Z}^{\geq0}$가 조건 $N(0) = 0$를 만족하면, 이를 $A$ 위의 *norm<sub>노름</sub>*이라고 한다. 만약 $N(a) > 0$이 모든 $a \neq 0$에 대해 성립하면, 이 norm을 *positive norm*이라 한다. 
+Integral domain $A$를 고정하자. 함수 $N : A \to \mathbb{Z}_{\geq 0}$가 조건 $N(0) = 0$를 만족하면, 이를 $A$ 위의 *norm<sub>노름</sub>*이라고 한다. 만약 $N(a) > 0$이 모든 $a \neq 0$에 대해 성립하면, 이 norm을 *positive norm*이라 한다. 
 :::
 
 Norm의 조건은 매우 약한 것으로, 가령 동일한 integral domain이 주어졌을 때 이 위에 norm을 정의하는 방법은 매우 많다. 
@@ -31,7 +31,7 @@ $$a = qb + r \qquad\text{with $r = 0$ or $N(r) < N(b)$}$$
 를 만족하는 것이다. 여기서 $q$를 *몫<sub>quotient</sub>*, $r$을 *나머지<sub>remainder</sub>*라고 부른다.
 :::
 
-이는 $A$를 정수 $\mathbb{Z}$로 대체하고, $N$을 절댓값 함수 $\lvert-\rvert:\mathbb{Z} \rightarrow \mathbb{Z}^{\geq0}$으로 보면 우리가 잘 알고 있는 정수에서의 나눗셈 알고리즘과 동일하다. 또 다른 예로, polynomial ring $\mathbb{K}[\x]$ 위에 $N$을 다항식의 차수를 주는 함수로 정의하면 다항식의 나눗셈 알고리즘을 얻게 될 것이다. 마지막으로, 임의의 field $\mathbb{K}$는 Euclidean domain이며, 이는 모든 $x\in\mathbb{K}$를 $0$으로 보내는 함수 $N$에 의해 얻어진다. 이것이 위의 조건을 만족하는 이유는 field의 모든 (nonzero) 원소는 항상 다른 원소를 나누기 때문이다. 
+이는 $A$를 정수 $\mathbb{Z}$로 대체하고, $N$을 절댓값 함수 $\lvert-\rvert:\mathbb{Z} \rightarrow \mathbb{Z}_{\geq 0}$으로 보면 우리가 잘 알고 있는 정수의 나눗셈 알고리즘, 즉 [\[정수론\] §나눗셈과 최대공약수, ⁋정리 3](/ko/math/number_theory/divisibility#thm3)과 동일하다. 또 다른 예로, polynomial ring $\mathbb{K}[\x]$ 위에 $N$을 다항식의 차수를 주는 함수로 정의하면 다항식의 나눗셈 알고리즘을 얻게 될 것이다. 마지막으로, 임의의 field $\mathbb{K}$는 Euclidean domain이며, 이는 모든 $x\in\mathbb{K}$를 $0$으로 보내는 함수 $N$에 의해 얻어진다. 이것이 위의 조건을 만족하는 이유는 field의 모든 (nonzero) 원소는 항상 다른 원소를 나누기 때문이다. 
 
 ::: 명제 3
 Euclidean Domain의 모든 ideal은 principal이다. 좀 더 정확히 말하면, Euclidean Domain $A$의 임의의 영이 아닌 ideal $\mathfrak{a}$에 대하여, $\mathfrak{a}$의 minimal norm을 갖는 원소를 $a$라 하면 $\mathfrak{a}=a$이다. 
@@ -39,7 +39,7 @@ Euclidean Domain의 모든 ideal은 principal이다. 좀 더 정확히 말하면
 ::: 증명
 $\mathfrak{a}$가 zero ideal이라면 증명할 것이 없으므로, $\mathfrak{a}\neq 0$이라 가정하자. 
 
-$\mathfrak{a}\setminus \{0\}$의 $N$에 의한 ㅑmage를 보면, $\mathbb{Z}^{\geq 0}$은 well-ordered set이므로 norm이 최소인 $\mathfrak{a}$의 nonzero element $a$를 택할 수 있다. 
+$\mathfrak{a}\setminus \{0\}$의 $N$에 의한 image를 보면, $\mathbb{Z}_{\geq 0}$은 well-ordered set이므로 norm이 최소인 $\mathfrak{a}$의 nonzero element $a$를 택할 수 있다. 
 
 $(a)\subseteq \mathfrak{a}$인 것은 자명하므로, $(a)=\mathfrak{a}$임을 보이기 위해서는 반대방향 포함관계만 보이면 충분하다. $\mathfrak{a}$의 임의의 원소 $x$에 대하여 division algorithm을 적용하면
 
@@ -57,14 +57,14 @@ Commutative ring $A$와 그 안의 원소 $a, b \in A$ ($b \neq 0$)에 대하여
 1. $a$가 $b$의 *배수*라는 것은 어떤 $x \in A$가 존재하여 $a = bx$인 것을 말한다. 이 경우 $b$가 $a$를 *나눈다*고 하며, 기호로 $b \mid a$라고 쓴다. 
 2. $a$와 $b$의 *최대공약수<sub>greatest common divisor</sub>*는 다음 조건을 만족하는 nonzero element $d$를 말한다.
    - $d \mid a$이고 $d \mid b$, 그리고
-   - $d'$가 $a \mid d'$이고 $b \mid d'$를 만족하면 항상 $d \mid d'$
+   - $d'$가 $d' \mid a$이고 $d' \mid b$를 만족하면 항상 $d' \mid d$
 
 $a$와 $b$의 greatest common divisor는 $\gcd(a, b)$ 또는 간단히 $(a, b)$로 쓴다.
 :::
 
-정의에 의해, $b \mid a$가 $A$의 ring에서 성립함은 $(a) \subset (b)$와 동치이다. 특히, $d$가 $a$, $b$의 모든 공약수이면 $(d)$는 $(a, b)$를 포함해야 한다. 따라서 위의 두 조건은 ideal의 언어로 다음과 같이 번역할 수 있다:
+정의에 의해, $b \mid a$가 $A$의 ring에서 성립함은 $(a) \subseteq (b)$와 동치이다. 특히, $d$가 $a$, $b$의 모든 공약수이면 $(d)$는 $(a, b)$를 포함해야 한다. 따라서 위의 두 조건은 ideal의 언어로 다음과 같이 번역할 수 있다:
 
-- $$\mathfrak{a} \subseteq (d)$$
+- $\mathfrak{a} \subseteq (d)$
 - $(d) \subseteq (d')$ for any principal ideal $(d')$ such that $a, b \in (d')$
 
 즉, $a$, $b$의 greatest common divisor는 (존재한다면) $a$, $b$를 포함하는 가장 작은 principal ideal을 생성하는 원소가 된다. 이것이 가능한 integral domain을 *GCD domain*이라 부르지만, 우리의 논의에서 이 정의가 별도로 등장할 일은 없다. 
@@ -78,7 +78,7 @@ Commutative ring $A$ 안의 $a, b \in A$가 $0$이 아니라고 하자. 만약 $
 그럼 최대공약수는 유일하게 결정된다. 이 유일성을 말할 때는 다소 주의해야 하는데, 가령 정수에서 $(2)$와 $(-2)$는 같은 ideal이 되기 때문이다. 
 
 ::: 명제 6
-$A$를 integral domain이라 하자. $A$의 두 원소 $d, d' \in A$가 같은 principal ideal, 즉 $(d) = (d')$를 생성한다고 하자. 그러면 $d' = ud$인 어떤 unit $u \in A$가 존재한다.
+$A$를 integral domain이라 하자. $A$의 두 원소 $d, d' \in A$가 같은 principal ideal, 즉 $(d) = (d')$를 생성한다고 하자. 그러면 $d' = ud$인 어떤 unit $u \in A$가 존재한다. ([§가역원과 영인자, ⁋정의 1](/ko/math/ring_theory/units_and_zero_divisors#def1))
 :::
 
 ::: 증명
@@ -89,7 +89,7 @@ $$d = xd',\qquad d' = yd$$
 를 만족한다. 그러면 $d = xyd$로부터 $(1-xy)d=0$이다. 이제 $A$가 integral domain이라는 가정과 $d \neq 0$으로부터 $xy = 1$이라는 것을 알고, 따라서 $xy$는 각각이 서로의 역원이 되는 unit이다. 
 :::
 
-그럼 정수에서의 Bézout lemma와 마찬가지로, Euclidean domain에 대해서 다음이 성립한다. 
+정수의 경우 [\[정수론\] §유클리드 호제법과 Bézout 항등식, ⁋정리 3](/ko/math/number_theory/euclidean_algorithm#thm3)이 Bézout lemma에 해당하며, Euclidean domain에 대해서도 다음과 같은 Bézout 항등식이 성립한다. 
 
 ::: 정리 7
 $A$를 Euclidean domain이라 하자. $a, b \in A$가 $0$이 아닌 원소들이고, $r_n$을 $a, b$에 대하여 [정의 2](#def2)의 과정을 반복하였을 때 더 진행이 불가능한 마지막 nonzero remainder라 하자. 그러면 다음이 성립한다:
@@ -109,7 +109,7 @@ $$r_{k-2}=q_{k}r_{k-1}+r_{k}$$
 
 의 형태가 된다. 여기서 $r_{-2}=a$, $r_{-1}=b$로 잡는다. 우리의 주장은 모든 나머지 $r_k$들이 $r_n$으로 나누어진다는 것이다. 이를 위해 위의 식을 거꾸로 따라가며 귀납법을 사용하자.
 
-우선 $r_n\mid r_{n-1}$은 자명하다. 따라서 $r_n \mid r_k$와 $r_n \mid r_{k-1}$을 가정하면, 위의 식을 통해 $r_n$이 $r_{k-2}$ 또한 나눈다는 것을 알 수 있고 이로부터 귀납적으로 $r_n$이 $a$와 $b$ 각각을 나누는 것을 안다. 즉, $(a), (b)\subset (r_n)$이므로 이로부터 $(a,b)\subset (r_n)$임을 안다. 한편 $r_n$이 $a$와 $b$의 최대공약수이기 위해서는 $(a,b)=(r_n)$이 성립해야 하며, 이는 마찬가지로 위의 식들을 통해 $r_n$을 $a$와 $b$의 $A$-linear combination으로 나타낼 수 있기 때문에 자명하다. 
+우선 $r_n\mid r_{n-1}$은 자명하다. 따라서 $r_n \mid r_k$와 $r_n \mid r_{k-1}$을 가정하면, 위의 식을 통해 $r_n$이 $r_{k-2}$ 또한 나눈다는 것을 알 수 있고 이로부터 귀납적으로 $r_n$이 $a$와 $b$ 각각을 나누는 것을 안다. 즉, $(a), (b)\subseteq (r_n)$이므로 이로부터 $(a,b)\subseteq (r_n)$임을 안다. 한편 $r_n$이 $a$와 $b$의 최대공약수이기 위해서는 $(a,b)=(r_n)$이 성립해야 하며, 이는 마찬가지로 위의 식들을 통해 $r_n$을 $a$와 $b$의 $A$-linear combination으로 나타낼 수 있기 때문에 자명하다. 
 :::
 
 
@@ -145,7 +145,7 @@ Principal Ideal Domain $A$의 모든 $0$이 아닌 prime ideal은 maximal ideal�
 :::
 
 ::: 증명
-결론에 반하여 $A$의 nonzero prime idea$\mathfrak{p} = (p)$에 대하여 $\mathfrak{p} \subsetneq \mathfrak{m} = (m)$인 ideal $\mathfrak{m}$이 있다고 하자. 그럼 우선 $p \in \mathfrak{m} = (m)$이므로, 적당한 $r\in A$에 대하여 $p = rm$이고, $\mathfrak{p}$가 prime ideal이라는 가정으로부터 $r\in \mathfrak{p}$이거나 $m\in\mathfrak{p}$이고, 가정 $\mathfrak{p} \subsetneq \mathfrak{m}$로부터 $m\not\in \mathfrak{p}$여야 한다. 그런데 만약 $r \in \mathfrak{p} = (p)$라면 적당한 $s\in A$에 대하여 $r = ps$이고, 따라서 $p = rm = psm$이므로 $1 = sm$이이다. 즉, $m$은 unit이고 이는 $\mathfrak{m}$이 maximal ideal이라는 가정에 모순이다. (정의에 의해, $A$ 자기자신은 maximal ideal이 아니다.)
+결론에 반하여 $A$의 nonzero prime ideal $\mathfrak{p} = (p)$에 대하여 $\mathfrak{p} \subsetneq \mathfrak{m} = (m)$인 ideal $\mathfrak{m}$이 있다고 하자. 그럼 우선 $p \in \mathfrak{m} = (m)$이므로, 적당한 $r\in A$에 대하여 $p = rm$이고, $\mathfrak{p}$가 prime ideal이라는 가정으로부터 $r\in \mathfrak{p}$이거나 $m\in\mathfrak{p}$이고, 가정 $\mathfrak{p} \subsetneq \mathfrak{m}$로부터 $m\not\in \mathfrak{p}$여야 한다. 그런데 만약 $r \in \mathfrak{p} = (p)$라면 적당한 $s\in A$에 대하여 $r = ps$이고, 따라서 $p = rm = psm$이므로 $1 = sm$이다. 즉, $m$은 unit이고 이는 $\mathfrak{m}$이 maximal ideal이라는 가정에 모순이다. (정의에 의해, $A$ 자기자신은 maximal ideal이 아니다.)
 :::
 
 ## 단일인수분해정역
@@ -160,7 +160,7 @@ $A$를 integral domain이라 하자.
 3. 두 원소 $a,b$에 대하여, 만일 $A$의 적당한 unit $u$가 존재하여 $a=ub$라면 이들이 *associate in $A$*이라 부른다. 
 :::
 
-가령 $\mathbb{Z}$를 보자. 우리는 $\mathbb{Z}$의 임의의 원소, 예를 들어 $10$이 주어졌을 떄 이를 유일하게 $2\times 5$의 꼴로 인수분해할 수 있다고 주장하고 싶다. 그러나 $\mathbb{Z}$의 $1$이 아닌 unit, 즉 $-1$ 때문에 다음의 식
+가령 $\mathbb{Z}$를 보자. 우리는 $\mathbb{Z}$의 임의의 원소, 예를 들어 $10$이 주어졌을 때 이를 유일하게 $2\times 5$의 꼴로 인수분해할 수 있다고 주장하고 싶다. 그러나 $\mathbb{Z}$의 $1$이 아닌 unit, 즉 $-1$ 때문에 다음의 식
 
 $$10=2\times 5=(-2)\times (-5)=(-1)^2\times 2\times 5=\cdots$$
 

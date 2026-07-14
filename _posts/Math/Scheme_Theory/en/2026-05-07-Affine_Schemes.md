@@ -337,8 +337,6 @@ are commuting squares. Therefore, in the above diagram, $A \rightarrow \mathcal{
 
 Thus, viewing $\Spec$ as a contravariant functor from $\cRing$ to $\AffSch$, we see that $\Spec$ is a categorical equivalence between the two categories $\cRing^\op$ and $\AffSch$. Moreover, by [Proposition 11](#prop11), $\AffSch$ is a full subcategory of $\LRS$.
 
-By [\[Category Theory\] §Natural transformations, ⁋Theorem 5](/en/math/category_theory/natural_transformations#thm5), it suffices to show that $\Spec$ is full.
-
 On the other hand, for any spectrum $(\Spec A, \mathcal{O}_{\Spec A})$, by definition we know
 
 $$\mathcal{O}_{\Spec A}(A)=\mathcal{O}_{\Spec A}(D(1))\cong A$$

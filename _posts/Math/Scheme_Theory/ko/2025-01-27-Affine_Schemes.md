@@ -343,8 +343,6 @@ $$(\Spec \phi)(\mathfrak{q})=\phi^{-1}(\mathfrak{q})=\varphi(\mathfrak{q})$$
 
 따라서 $\Spec$을 $\cRing$에서 $\AffSch$로의 contravariant functor로 보면 $\Spec$은 두 카테고리 $\cRing^\op$와 $\AffSch$ 사이의 categorical equivalence이다. 뿐만 아니라, [명제 11](#prop11)에 의해 $\AffSch$는 $\LRS$의 full subcategory이다. 
 
-[\[범주론\] §자연변환, ⁋정리 5](/ko/math/category_theory/natural_transformations#thm5)에 의해 $\Spec$이 full인 것만 보이면 충분하다.
-
 한편 임의의 스펙트럼 $(\Spec A, \mathcal{O}_{\Spec A})$에 대하여, 우리는 정의에 의해 
 
 $$\mathcal{O}_{\Spec A}(A)=\mathcal{O}_{\Spec A}(D(1))\cong A$$

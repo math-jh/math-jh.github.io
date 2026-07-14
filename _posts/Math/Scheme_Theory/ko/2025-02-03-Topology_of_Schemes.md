@@ -1,6 +1,6 @@
 ---
 title: "스킴의 위상구조"
-description: "스ܦ의 위상 구조에서 닫힌점, 일반점, 특수화 개념을 정의하고, 아핀 스킴의 점들이 아이디얼과 어떤 관계를 맺으며 위상적 성질을 나타내는지 살펴본다."
+description: "스킴의 위상 구조에서 닫힌점, 일반점, 특수화 개념을 정의하고, 아핀 스킴의 점들이 아이디얼과 어떤 관계를 맺으며 위상적 성질을 나타내는지 살펴본다."
 excerpt: "Generic point와 Zariski topology, irreducible component"
 
 categories: [Math / Scheme Theory]
@@ -21,7 +21,7 @@ drift_needed: true
 위상공간 $X$의 한 점 $x$가 *closed point<sub>닫힌점</sub>*이라는 것은 $\{x\}$가 $X$의 닫힌집합이라는 것이다.
 :::
 
-따라서 공간 $X$가 $T_1$-space인 것과 $X$의 모든 점이 closed point인 것이 동치임을 안다. ([\[위상수학\] §하우스도르프 공간, ⁋정의 3](/ko/math/topology/Hausdorff_spaces#def3)) 특히 우리는 field가 아닌 integral domain의 스펙트럼은 closed point를 갖지 않는다는 것을 보았다. 
+따라서 공간 $X$가 $T_1$-space인 것과 $X$의 모든 점이 closed point인 것이 동치임을 안다. ([\[위상수학\] §하우스도르프 공간, ⁋정의 3](/ko/math/topology/Hausdorff_spaces#def3)) 특히 우리는 field가 아닌 integral domain의 스펙트럼은 closed point가 아닌 점을 갖는다는 것을 보았다. 
 
 한편, 임의의 affine scheme은 반드시 closed point를 갖는다.[^1] 이는 ring $A$의 maximal ideal $\mathfrak{m}$을 하나 택하면 $Z(\mathfrak{m})=\{\mathfrak{m}\}$이고, 따라서 [§스펙트럼, ⁋명제 14](/ko/math/scheme_theory/spectrums#prop14)과 [\[집합론\] §필터와 아이디얼, 갈루아 대응, ⁋명제 7](/ko/math/set_theory/filter_and_ideal#prop7)을 적용하면
 
@@ -193,7 +193,7 @@ Scheme $X$와 scheme의 affine-local property $P$에 대하여 다음이 모두 
 
 $$V=\bigcup_{i\in I} V\cap U_i=\bigcup_{i\in I} \bigcup_{j\in J_i} \Spec (A_i)_{f_j}$$
 
-를 만족하는 $f_j\in A_j$들을 찾을 수 있고, $\Spec (A_i)_{f_j}$들 각각은 $\Spec A$의 적당한 localization $\Spec A_{g_j}$들로 둘 수 있다는 것을 알고 [§스펙트럼, ⁋보조정리 12](/ko/math/scheme_theory/spectrums#lem12)를 사용하면 $g_j$들이 유한하게 주어졌다 가정할 수 있다. 이제 [정의 9](#def9) 이전의 논의로부터 $P$가 local이라는 가정으로부터 각각의 $\Spec (A_i)_{f_j}=\Spec A_{g_j}$가 $P$를 만족하는 것을 알고, 이로부터 $\Spec A$가 $P$를 만족하는 것을 안다.
+를 만족하는 $f_j\in A_i$들을 찾을 수 있고, $\Spec (A_i)_{f_j}$들 각각은 $\Spec A$의 적당한 localization $\Spec A_{g_j}$들로 둘 수 있다는 것을 알고 [§스펙트럼, ⁋보조정리 12](/ko/math/scheme_theory/spectrums#lem12)를 사용하면 $g_j$들이 유한하게 주어졌다 가정할 수 있다. 이제 [정의 9](#def9) 이전의 논의로부터 $P$가 local이라는 가정으로부터 각각의 $\Spec (A_i)_{f_j}=\Spec A_{g_j}$가 $P$를 만족하는 것을 알고, 이로부터 $\Spec A$가 $P$를 만족하는 것을 안다.
 
 이상에서 첫째 조건부터 셋째 조건이 모두 동치임을 안다. 
 
@@ -262,7 +262,7 @@ $$X=\Spec A=\Spec\left(\prod_{i=1}^\infty \mathbb{Z}/2\mathbb{Z}\right)$$
 
 을 생각하면 $A$의 임의의 원소 $x$는 $x^2=x$를 만족하고, 따라서 임의의 localization $A_\mathfrak{p}$의 원소도 그러하다. 이제 $A_{\mathfrak{p}}$에서 성립하는 $x(1-x)=0$으로부터 우리는 $x\in \mathfrak{p}A_\mathfrak{p}$이거나 $1-x\in \mathfrak{p}A_\mathfrak{p}$임을 알고, $\mathfrak{p}A_\mathfrak{p}$에 속하지 않는 원소는 unit임을 안다. ([\[가환대수학\] §국소화, ⁋명제 2](/ko/math/commutative_algebra/localization#prop2)) 따라서 $x=0$ 혹은 $x=1$이므로 $A_\mathfrak{p}$의 ideal의 chain은 $(0)\subseteq (1)=A_\mathfrak{p}$ 뿐이다. 이로부터 $A_\mathfrak{p}$ 각각은 noetherian이지만, 
 
-$$A\times \{0\}\times\{0\}\times\cdots\subseteq A\times A\times\{0\}\subseteq\cdots$$
+$$\mathbb{Z}/2\mathbb{Z}\times \{0\}\times\{0\}\times\cdots\subseteq \mathbb{Z}/2\mathbb{Z}\times \mathbb{Z}/2\mathbb{Z}\times\{0\}\subseteq\cdots$$
 
 을 생각하면 $A$는 noetherian이 아니라는 것을 알 수 있다. 
 
