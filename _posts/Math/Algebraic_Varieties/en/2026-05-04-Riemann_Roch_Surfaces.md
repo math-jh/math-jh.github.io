@@ -10,8 +10,9 @@ sidebar:
 
 date: 2026-05-04
 weight: 16
-translated_at: 2026-07-14T08:30:02+00:00
+translated_at: 2026-07-14T10:00:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-14T10:00:02+00:00
 ---
 We previously examined the Riemann–Roch theorem for curves. In essence, the Riemann–Roch theorem computes the Euler characteristic in terms of other numerical quantities, and although we could generalize it to arbitrary dimension, in this post we shall only discuss the generalization to surfaces.
 
@@ -67,9 +68,9 @@ $$\rchi(\mathcal{F} \otimes L_1^{\otimes n_1} \otimes \cdots \otimes L_k^{\otime
 
 is given by a polynomial in $n_1, \ldots, n_k$. Then in particular, from the definition of the intersection number, $\rchi(\mathcal{O}_S(aC_1 + bC_2 + D))$ becomes a polynomial in $a, b$, and comparing the quadratic coefficients of this polynomial gives bilinearity.
 
-## Riemann-Roch for Surfaces
+## Riemann–Roch for Surfaces
 
-We now have all the language needed to extend the Riemann-Roch theorem to surfaces. What we need next is the following lemma.
+We now have all the language needed to extend the Riemann–Roch theorem to surfaces. What we need next is the following lemma.
 
 ::: Lemma 3 (Genus formula)
 For a smooth irreducible curve $D$ on a smooth projective surface $S$,
@@ -168,7 +169,7 @@ $$\rchi(\mathcal{O}_{\widetilde{\mathbb{P}}^2}(dH - kE)) = \frac{1}{2}(dH - kE) 
 
 :::
 
-Meanwhile, the Riemann-Roch theorem for curves is obtained by applying [§Serre Duality](/en/math/algebraic_varieties/serre_duality) to the $h^1$ term in [Proposition 4](#prop4) above and replacing it with $h^0$. In the surface case, we can likewise use this to write $h^2(\mathcal{O}(D)) = h^0(\omega_S(-D))$, so the Riemann–Roch formula becomes
+Meanwhile, the Riemann–Roch theorem for curves is obtained by applying [§Serre Duality](/en/math/algebraic_varieties/serre_duality) to the $h^1$ term in [Proposition 4](#prop4) above and replacing it with $h^0$. In the surface case, we can likewise use this to write $h^2(\mathcal{O}(D)) = h^0(\omega_S(-D))$, so the Riemann–Roch formula becomes
 
 $$h^0(\mathcal{O}(D)) - h^1(\mathcal{O}(D)) + h^0(\omega_S(-D)) = \rchi(\mathcal{O}_S) + \frac{1}{2}(D^2 - D \cdot K_S)$$
 
@@ -263,18 +264,18 @@ Since $D \cdot E' \ne 0$, by choosing the sign of $n$ appropriately and making $
 From this we obtain the following corollary.
 
 ::: Corollary 11
-$\Num(S) \otimes \mathbb{R}$ 위의 intersection form은 signature $(1, \rho - 1)$를 갖는다. 
+The intersection form on $\Num(S) \otimes \mathbb{R}$ has signature $(1, \rho - 1)$.
 :::
 
 ::: Proof
-Ample divisor $H$에 대해 $H^2 > 0$이므로 intersection form은 적어도 하나의 positive direction을 갖는다. 그런데 [Proposition 10](#prop10)에 의해 $H$에 orthogonal인 모든 nonzero 방향은 음의 self-intersection을 가지므로 증명이 완료된다. 
+For an ample divisor $H$ we have $H^2 > 0$, so the intersection form has at least one positive direction. But by [Proposition 10](#prop10), every nonzero direction orthogonal to $H$ has negative self-intersection, which completes the proof.
 :::
 
-즉, surface 위의 "양수" 방향은 본질적으로 하나뿐이며, 다른 모든 방향은 어떤 의미에서 "음수"로 생각할 수 있다. 이 결과는 surface의 birational geometry에서 minimal model의 유일성과 같은 깊은 결과들을 이끌어낸다.
+Thus there is essentially only one "positive" direction on a surface, and every other direction can be thought of as "negative" in a certain sense. This result leads to deep consequences in the birational geometry of surfaces, such as the uniqueness of the minimal model.
 
 ## Plurigenera
 
-Curve의 경우, genus $g$는 curve의 birational equivalence class를 완전히 결정한다. Surface에서는 상황이 더 복잡한데, 그 이유는 birational equivalence가 cohomology의 차원을 모두 보존하지 않기 때문이다. 그러나 canonical bundle의 tensor power의 global section 차원은 birational invariant이며, 이 값들이 surface의 birational type에 대한 필수적인 정보를 제공한다.
+In the case of curves, the genus $g$ completely determines the birational equivalence class of a curve. For surfaces the situation is more complicated, because birational equivalence does not preserve all cohomological dimensions. However, the dimensions of global sections of tensor powers of the canonical bundle are birational invariants, and these values provide essential information about the birational type of a surface.
 
 ::: Definition 12
 The *$m$-th plurigenus* of a surface $S$ is
