@@ -10,8 +10,9 @@ sidebar:
 
 date: 2026-05-28
 weight: 6
-translated_at: 2026-07-14T09:00:03+00:00
+translated_at: 2026-07-14T10:30:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-14T10:30:02+00:00
 ---
 In [§Dubrovin Connection, §§D-module](/en/math/mirror_symmetry/dubrovin_connection#d-module) we showed that the quantum differential equation (QDE) on the quantum cohomology side admits a flat section of dimension $\dim_\mathbb{C} H^\ast(X)$ in its space of solutions, and we announced that the explicit fundamental solution is *Givental's $J$-function*. Meanwhile, in [§Gauss-Manin Connection, ⁋Proposition 7](/en/math/mirror_symmetry/gauss-manin_connection#prop7) we examined how the period matrix $\mathcal{I}^a_p$ on the B-side forms the fundamental solution matrix of the B-model connection $\nabla^z_B$. The mirror theorem we foreshadowed will be concretized as the statement that the A-side $J$-function and the B-side period matrix are fundamental solutions of the same $D$-module, and this post will fill in the missing A-side slot in that claim.
 
