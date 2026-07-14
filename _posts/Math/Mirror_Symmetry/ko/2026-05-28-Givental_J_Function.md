@@ -5,7 +5,6 @@ excerpt: "Quantum differential equation의 fundamental solution과 I=J 정리"
 
 categories: [Math / Mirror Symmetry]
 permalink: /ko/math/mirror_symmetry/givental_j_function
-drift_needed: true
 sidebar: 
     nav: "mirror_symmetry-ko"
 
