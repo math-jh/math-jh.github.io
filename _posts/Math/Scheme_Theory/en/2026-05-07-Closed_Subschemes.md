@@ -10,8 +10,9 @@ sidebar:
 
 date: 2025-02-18
 weight: 11
-translated_at: 2026-07-14T09:30:03+00:00
+translated_at: 2026-07-14T11:00:03+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-14T11:00:03+00:00
 ---
 In [§Schemes, ⁋Lemma 2](/en/math/scheme_theory/schemes#lem2) we saw that for an affine scheme $\Spec A$, any element $f$ defines an open affine subscheme $D(f)\cong \Spec A_f$, and in particular, to compare the two structure sheaves we applied [\[Topology\] §Sheaves, ⁋Lemma 11](/en/math/topology/sheaves#lem11) to the morphism
 
@@ -35,14 +36,14 @@ and from
 
 $$(\Spec\pi)^\sharp: \mathcal{O}_{\Spec A} \rightarrow (\Spec\pi)_\ast \mathcal{O}_{\Spec A/\mathfrak{a}}$$
 
-we can construct a morphism of sheaves defined on $Z(\mathfrak{a}))$
+we can construct a morphism of sheaves defined on $Z(\mathfrak{a})$
 
 $$\iota^{-1} \mathcal{O}_{\Spec A} \rightarrow (\Spec\pi\vert^{Z(\mathfrak{a})})_\ast \mathcal{O}_{\Spec A/\mathfrak{a}}$$
 
-but we have not yet defined a scheme structure on $Z(\mathfrak{a})$, and therefore we do not know the relationship between $\iota^{-1}\mathcal{O}_{\Spec A}$ and $\mathcal{O}_{Z(\mathfrak{a})}$, nor can we guarantee that this is an isomorphism. In fact, it is much more likely not to be an isomorphism, because $\iota^{-1}\mathcal{O}_{\Spec A}$ is defined using only the topological data of the closed set $Z(\mathfrak{a})$ from the structure sheaf of $\Spec A$, whereas $(\Spec\pi)_\ast\mathcal{O}_{\Spec A/\mathfrak{a}}$ also carries algebraic information about the ring $A/\mathfrak{a}$.
+but we have not yet defined a scheme structure on $Z(\mathfrak{a})$, and therefore we do not know the relationship between $\iota^{-1}\mathcal{O}_{\Spec A}$ and $\mathcal{O}_{Z(\mathfrak{a})}$, nor can we guarantee that this is an isomorphism. In fact, it is far more likely not to be an isomorphism, because $\iota^{-1}\mathcal{O}_{\Spec A}$ is defined using only the topological data of the closed set $Z(\mathfrak{a})$ from the structure sheaf of $\Spec A$, whereas $(\Spec\pi)_\ast\mathcal{O}_{\Spec A/\mathfrak{a}}$ also carries algebraic information about the ring $A/\mathfrak{a}$.
 
 ::: Example 1
-For example, fix a field $\mathbb{K}$ and consider the affine $1$-line $\mathbb{A}_\mathbb{K}^1=\Spec \mathbb{K}[\x]$. Then there are canonical surjections
+For example, fix a field $\mathbb{K}$ and consider the affine line $\mathbb{A}_\mathbb{K}^1=\Spec \mathbb{K}[\x]$. Then there are canonical surjections
 
 $$\pi_1:\mathbb{K}[\x] \rightarrow \mathbb{K}[\x]/(\x)\cong \mathbb{K},\qquad \pi_2:\mathbb{K}[\x] \rightarrow \mathbb{K}[\x]/(\x^2)$$
 
@@ -243,7 +244,7 @@ $$(\Spec\phi)(\epsilon)=\phi^{-1}(\epsilon)=\left(\frac{\x_1}{b_1}-\frac{a_1}{b_
 
 That is, as a continuous map $\Spec\phi$ sends the one-point space $\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$ to the point $(a_1,\ldots, a_n)$ of $\mathbb{A}^n$.
 
-Geometrically, $\Spec\phi$ corresponds to the tangent vector $(b_1,\ldots, b_n)$ at the point $(a_1,\ldots, a_n)$ of $\mathbb{A}^n$. This can be checked from the fact that the directional derivative of any function $f\in \mathbb{K}[\x_1,\ldots, \x_n]$ on $\mathbb{A}^n$ at the point $(a_1,\ldots, a_n)$ in the direction of the vector $(b_1,\ldots, b_n)$ is exactly given by $\phi(f)$. More generally, thinking of $\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$ as $\Spec \mathbb{K}[\epsilon]/(\epsilon^k)$, we can see derivatives up to order $k-1$.
+Geometrically, $\Spec\phi$ corresponds to the tangent vector $(b_1,\ldots, b_n)$ at the point $(a_1,\ldots, a_n)$ of $\mathbb{A}^n$. This can be checked from the fact that the directional derivative of any function $f\in \mathbb{K}[\x_1,\ldots, \x_n]$ on $\mathbb{A}^n$ at the point $(a_1,\ldots, a_n)$ in the direction of the vector $(b_1,\ldots, b_n)$ is exactly given by $\phi(f)$. More generally, replacing $\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$ by $\Spec \mathbb{K}[\epsilon]/(\epsilon^k)$, we can see derivatives up to order $k-1$.
 :::
 
 In the above example we assumed $X$ is an affine scheme, but $\varphi^\sharp:\mathcal{O}_Y \rightarrow \varphi_\ast \mathcal{O}_X$ is anyway information contained in the scheme morphism $\varphi$, so there is nothing new here. The difference arises when we generalize $Y$ to a general scheme: when any affine open subset $V=\Spec B$ of $Y$ is given, the ideal
