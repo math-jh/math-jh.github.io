@@ -10,8 +10,9 @@ sidebar:
 
 date: 2025-02-19
 weight: 8
-translated_at: 2026-07-13T18:44:02+00:00
+translated_at: 2026-07-14T05:00:03+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-14T05:00:03+00:00
 ---
 By definition, $\Sch$ is a full subcategory of $\LRS$. ([§Schemes, ⁋Definition 1](/en/math/scheme_theory/schemes#def1)) That is, given two schemes $X,Y$, a scheme morphism from $X$ to $Y$ is given by a continuous function $\varphi: X \rightarrow Y$ and a morphism of structure sheaves $\varphi^\sharp: \mathcal{O}_Y \rightarrow \varphi_\ast \mathcal{O}_X$, where $\varphi^\sharp$ must be a local homomorphism when restricted to each stalk. ([§Affine Schemes, ⁋Definition 2](/en/math/scheme_theory/affine_schemes#def2))
 
