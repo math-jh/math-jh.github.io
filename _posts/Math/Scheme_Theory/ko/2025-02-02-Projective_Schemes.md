@@ -151,11 +151,11 @@ Graded ring $A_\bullet$에 대하여 다음이 성립한다.
 물론 위의 보조정리에서 등장하는 $\mathfrak{a}\mathfrak{b}$나 $\sqrt{\mathfrak{a}}$, $\sum \mathfrak{a}_i$들은 homogeneous임이 자명하다. 그럼 첫째 결과부터 셋째 결과까지는 이미 스펙트럼에서 관찰한 결과들이며, 오직 넷째 결과만이 새롭다. 
 
 ::: 증명 (보조정리 3)
-1. $\mathfrak{a}$ 혹은 $\mathfrak{b}$를 포함하는 homogeneous prime ideal $\mathfrak{p}$는 그보다 작은 homogeneous ideal $\mathfrak{ab}$ 또한 포함하는 것이 자명하므로, 반대방향 포함관계만 보이면 충분하다. $\mathfrak{p}\supset \mathfrak{ab}$라 가정하자. 만일 $\mathfrak{p}\not\supseteq \mathfrak{b}$라 하면, $b\not\in \mathfrak{p}$인 $\mathfrak{b}$의 원소 $b$를 찾을 수 있다. 그럼 $\mathfrak{b}$가 homogeneous이므로, 이를 homogeneous element들의 합으로 분해하여
+1. $\mathfrak{a}$ 혹은 $\mathfrak{b}$를 포함하는 homogeneous prime ideal $\mathfrak{p}$는 그보다 작은 homogeneous ideal $\mathfrak{a}\mathfrak{b}$ 또한 포함하는 것이 자명하므로, 반대방향 포함관계만 보이면 충분하다. $\mathfrak{p}\supset \mathfrak{a}\mathfrak{b}$라 가정하자. 만일 $\mathfrak{p}\not\supseteq \mathfrak{b}$라 하면, $b\not\in \mathfrak{p}$인 $\mathfrak{b}$의 원소 $b$를 찾을 수 있다. 그럼 $\mathfrak{b}$가 homogeneous이므로, 이를 homogeneous element들의 합으로 분해하여
     
     $$b=b_1+\cdots b_n,\qquad \text{$b_i\in \mathfrak{b}$ homogeneous}$$
 
-    으로 쓸 수 있다. 한편, 임의의 homogeneous element $a\in \mathfrak{a}$에 대하여, $ab\in \mathfrak{ab}\subseteq \mathfrak{p}$이다. 한편 $\mathfrak{ab}\subseteq \mathfrak{p}$의 원소
+    으로 쓸 수 있다. 한편, 임의의 homogeneous element $a\in \mathfrak{a}$에 대하여, $ab\in \mathfrak{a}\mathfrak{b}\subseteq \mathfrak{p}$이다. 한편 $\mathfrak{a}\mathfrak{b}\subseteq \mathfrak{p}$의 원소
 
     $$ab=ab_1+\cdots+ab_n$$
 

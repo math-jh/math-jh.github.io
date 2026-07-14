@@ -291,7 +291,7 @@ $$\rchi_0=(1,1,1),\qquad \rchi_\sgn=(1,-1,1),\qquad \rchi_\std=(2,0,-1)$$
 
 $$\rho_{\mathbb{C}[S_3]}(g)=\begin{cases}6&\text{if $g=e$}\\0&\text{otherwise}\end{cases}$$
 
-임을 안다. (식 (2)) 이는 반드시 위의 세 character들의 $\mathbb{Z}^{\geq 0}$-linear combination이어야 할 것이며 실제로 
+임을 안다. (식 (2)) 이는 반드시 위의 세 character들의 $\mathbb{Z}_{\geq 0}$-linear combination이어야 할 것이며 실제로 
 
 $$\rchi_{\mathbb{C}[S_3]}=\rchi_0+\rchi_\sgn+2\rchi_\std$$
 
