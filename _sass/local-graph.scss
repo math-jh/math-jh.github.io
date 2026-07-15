@@ -80,33 +80,29 @@
 
   &__title { font-weight: bold; }
 
-  &__full {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    z-index: 5;
+  &__full { // 헤더 안, 제목 옆. 마스트헤드 그래프 링크와 통일(graph_3 · 시그니처 골드)
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    border-radius: 8px;
-    color: $highlight-color;
-    background: rgba($background-color, 0.85);
-    border: 1px solid $border-color;
+    gap: 0.25em;
+    font-size: 0.82em; // 옆 '의존성' 제목보다 작게
     text-decoration: none;
-    backdrop-filter: blur(4px);
 
-    &:hover { color: $text-color; border-color: $highlight-color; }
+    // 전역 a:visited/a:hover (specificity 0,1,1) 가 이기므로 상태를 명시해 덮는다.
+    &, &:visited { color: #a9874a; } // 마스트헤드 시그니처 골드
+    &:hover { color: $masthead-link-color-hover; }
   }
 
   &__close {
+    margin-left: auto; // 상단 바 가장 오른쪽으로
     background: none;
     border: 0;
     color: inherit;
     cursor: pointer;
     font-size: 18px;
     line-height: 1;
+    padding: 0 2px;
+    display: inline-flex;
+    align-items: center;
   }
 
   &__canvas { flex: 1; position: relative; }

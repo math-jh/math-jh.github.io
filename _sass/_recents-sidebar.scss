@@ -221,3 +221,60 @@
     }
   }
 }
+
+/* ==========================================================================
+   카테고리별 글 목록(/xx/categories/)의 우측 최근 글·댓글.
+   차례가 없어 비어 있던 우측을 채운다. 좌측 nav_list 는 page.recents_right 를
+   보고 여기(categories.html)로 넘긴다.
+
+   .taxonomy__index 가 display:grid(BFC)라 float 로 넣으면 회피하며 통째로 아래로
+   밀린다. 그래서 본문 taxonomy 와 recents 를 하나의 2단 grid 로 묶고, recents 는
+   그 컬럼 안에서 position:sticky 로 붙인다 — grid 컬럼이라 본문을 밀지 않는다.
+
+   글자는 좌측 사이드바와 동일하게: .nav__list .nav__items 는 $type-size-4 라
+   커서, 좌측은 .sidebar 의 `p,li { font-family:$sans-serif; font-size:$type-size-6 }`
+   로 줄이고 sans-serif 로 바꾼다. 우측엔 그 규칙이 없어 본문 serif·큰 글자로 나왔다.
+   그 규칙을 그대로 복제한다.
+   ========================================================================== */
+.layout--categories {
+  // 우측 gutter(padding-right)는 이제 grid 컬럼이 대신하므로 회수한다.
+  @include breakpoint($large) {
+    .archive { padding-right: 0; }
+  }
+
+  .cat-layout {
+    @include breakpoint($large) {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) $right-sidebar-width-narrow;
+      column-gap: 1.5em;
+      align-items: start;
+    }
+    @include breakpoint($x-large) {
+      grid-template-columns: minmax(0, 1fr) $right-sidebar-width;
+    }
+  }
+
+  .cat-layout__recents {
+    margin-top: 1em;
+
+    @include breakpoint($large) {
+      position: sticky;
+      top: 2em;
+      align-self: start;   // 컬럼 높이만큼 늘어나지 않아야 sticky 가 동작
+      margin-top: 0;
+    }
+
+    .nav__list { margin-bottom: 0; }
+
+    // 좌측 .sidebar 의 `p, li` 규칙을 복제 (글꼴·크기·행간)
+    li,
+    p {
+      font-family: $sans-serif;
+      font-size: $type-size-6;
+      line-height: 1.5;
+    }
+
+    // 좌측에서 카테고리 nav 와 recents 를 벌리던 6em 상단 여백은 우측엔 불필요
+    .nav__recents-section--posts { margin-top: 0; }
+  }
+}

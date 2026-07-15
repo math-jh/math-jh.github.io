@@ -52,13 +52,15 @@
 
     var overlay = document.createElement('div');
     overlay.className = 'lg-overlay';
+    // 전체 그래프 링크는 헤더 안, 제목 바로 옆. force-graph 가 캔버스 컨테이너의
+    // innerHTML 을 비우므로(§init: t.innerHTML="") 캔버스 위 오버레이로 두면 지워진다.
+    // 헤더는 force-graph 가 손대지 않아 안전하다.
     overlay.innerHTML =
       '<div class="lg-overlay__card"><div class="lg-overlay__head">' +
       '<span class="lg-overlay__title">' + t.title + '</span>' +
+      '<a class="lg-overlay__full" href="/' + lang + '/graph/" title="' + t.full + '" aria-label="' + t.full + '">' + t.full + '<span class="material-icons md-14">graph_3</span></a>' +
       '<button class="lg-overlay__close" type="button" aria-label="close">✕</button>' +
-      '</div><div class="lg-overlay__canvas">' +
-      '<a class="lg-overlay__full" href="/' + lang + '/graph/" title="' + t.full + '" aria-label="' + t.full + '"><span class="material-icons md-20">graph_3</span></a>' +
-      '</div></div>';
+      '</div><div class="lg-overlay__canvas"></div></div>';
     document.body.appendChild(overlay);
     var ovCanvas = overlay.querySelector('.lg-overlay__canvas');
 

@@ -27,6 +27,14 @@ layout: archive
 
 {{ content }}
 
+{%- comment -%}
+  카테고리 목록(taxonomy)을 캡처해 두고, page.recents_right 면 2단 그리드
+  [ 본문 | 최근 글·댓글 ] 로 감싼다. 차례가 없어 비어 있던 우측을 채우는 것.
+  최근 글·댓글은 grid 컬럼 안의 sticky 라 본문(display:grid 인 taxonomy)을
+  밀지 않고 스크롤에 붙는다. 좌측 nav_list 는 recents_right 를 보고 여기로 넘긴다.
+  스타일·글자 매칭은 _recents-sidebar.scss 의 .layout--categories 블록.
+{%- endcomment -%}
+{%- capture taxonomy_content -%}
 <ul class="taxonomy__index">
 {% for pair in site.data.categories.subjects %}
   {%- assign ordered_cat = pair[0] -%}
@@ -73,3 +81,19 @@ layout: archive
    </section>
   {%- endif -%}
 {% endfor %}
+{%- endcapture -%}
+
+{%- if page.recents_right -%}
+<div class="cat-layout">
+  <div class="cat-layout__main">{{ taxonomy_content }}</div>
+  <aside class="cat-layout__recents">
+    <nav class="nav__list">
+      <ul class="nav__items">
+        {% include nav_recents.html lang=lang %}
+      </ul>
+    </nav>
+  </aside>
+</div>
+{%- else -%}
+{{ taxonomy_content }}
+{%- endif -%}
