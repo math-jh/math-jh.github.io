@@ -4,6 +4,7 @@ layout: categories
 regenerate: true
 permalink: /ko/categories/
 author_profile: true
+recents_right: true
 sidebar: 
     nav: "category-ko"
 ---
