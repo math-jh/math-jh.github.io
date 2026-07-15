@@ -118,7 +118,7 @@ $$Z(\sqrt{\mathfrak{a}_k})=Z(\sqrt{\mathfrak{a}_{k+1}})=\cdots$$
 
 ## 국소성
 
-다음 글에서 우리는 scheme의 대수적인 성질들을 살펴볼 것이다. 이번 글에서 살펴본 위상적인 성질들과 다음 글에서 살펴볼 대수적인 성질들은 물론, 긴밀한 관계가 있으며 이를 동시에 살펴보는 것이 스킴에 대한 우리의 이해를 더 깊게 해 준다. 이를 더 잘 살펴볼 수 있는 정의들을 내리고 이번 글을 마친다. 특히 남은 부분에서 우리는 ring $A$의 localization $A_f$와 $A_\mathfrak{p}$에 기하적인 직관을 부여할 수 있다.
+지금까지 우리는 scheme을 위상공간으로 바라보았다. 그러나 scheme이 갖는 본질적인 정보는 구조층 $\mathcal{O}_X$에 들어있으며, scheme의 대부분 성질은 affine 조각 $\Spec A$의 ring $A=\mathcal{O}_X(\Spec A)$에서 검사하는 것으로 충분하다. 더 나아가 ring $A$의 localization $A_f$와 $A_\mathfrak{p}$는 각각 principal open set $D(f)$의 section과 점 $\mathfrak{p}$에서의 stalk에 대응하므로, 이들은 단순한 대수적 조작이 아니라 scheme의 국소적인 기하를 읽어내는 도구이다. 이 절에서는 '성질이 국소적으로 결정된다'는 직관을 정확히 잡기 위하여 *local property*의 개념을 정의하며 이번 글을 마친다. 이 개념은 다음 글에서 다룰 대수적인 성질을 scheme 전체로 확장하는 토대가 된다.
 
 ::: 정의 8
 Ring의 성질 $Q$가 *local*이라는 것은 다음의 두 조건이 성립하는 것이다.
@@ -127,20 +127,16 @@ Ring의 성질 $Q$가 *local*이라는 것은 다음의 두 조건이 성립하�
 2. 임의의 ring $A$와, $f_1,\ldots, f_n\in A$가 $A=(f_1,\ldots, f_n)$을 만족한다 하자. 그럼 만일 모든 $A_{f_i}$가 $Q$를 만족한다면 $A$도 $Q$를 만족한다. 
 :::
 
-이를 affine scheme의 언어로 이를 바꾸어보자. 만일 ring $A$가 local property $Q$를 만족한다면, 
+이를 affine scheme의 언어로 바꾸어보자. Ring의 성질 $Q$에 대하여, affine scheme $X=\Spec A$의 global section ring $\mathcal{O}_X(X)=A$가 $Q$를 만족할 때 $X$가 성질 $P$를 갖는다고 하자. 그럼 $D(f)\cong\Spec A_f$이고, 또 $A=(f_1,\ldots, f_r)$이면
 
-$$D(f)\cong \Spec A_f$$
+$$\Spec A=\Spec A\setminus Z(f_1,\ldots, f_r)=\Spec A\setminus\bigcap_{i=1}^r Z(f_i)=\bigcup_{i=1}^r D(f_i)$$
 
-이므로 $\Spec A$의 principal open set $D(f)$의 global section $\mathcal{O}_{\Spec A}(D(f))$ 또한 $P$를 만족한다. 거꾸로, 만일 $A$가 $f_1,\ldots, f_r$로부터 생성된다면 다음의 식
-
-$$\Spec A=\Spec A\setminus \emptyset=\Spec A\setminus Z(1)=\Spec A\setminus Z(f_1,\ldots,f_r)=\Spec A\setminus\bigcap_{i=1}^r Z(f_i)=\bigcup_{i=1}^r D(f_i)$$
-
-으로부터 $D(f_i)$들이 $\Spec A$를 덮는 것을 알 수 있다. 편의상 affine scheme $X$의 global section들의 ring $\mathcal{O}_X(X)$가 성질 $Q$를 갖는다면, $X$가 성질 $P$를 갖는다고 하자. 그럼 이상에서 [정의 8](#def8)의 두 조건은 다음과 같이 번역할 수 있다. 
+으로부터 $D(f_i)$들이 $\Spec A$를 덮는다는 것을 안다. 이를 사용하여 [정의 8](#def8)의 두 조건은 다음과 같이 번역된다.
 
 1. $\Spec A$가 $P$를 만족한다면, 임의의 principal open set $D(f)$ 또한 $P$를 만족한다.
 2. $\Spec A$를 덮는 open covering $D(f_1),\ldots, D(f_r)$가 각각 $P$를 만족한다면, $\Spec A$도 $P$를 만족한다. 
 
-한편 $\Spec A$의 일반적인 open set $U$는 principal open set들의 합집합으로 나타낼 수 있고 ([§스펙트럼, ⁋보조정리 11](/ko/math/scheme_theory/spectrums#lem11)) 따라서 만일 $\Spec A$가 $P$를 만족한다면 $\Spec A$의 임의의 *affine* open subset $U$가 $P$를 만족하는 것을 안다. 이러한 측면에서, 위의 두 조건을 만족하는 scheme의 성질 $P$를 *affine-local property*라 부르기도 한다. 
+한편 $\Spec A$의 일반적인 open set은 principal open set들의 합집합으로 나타낼 수 있고 ([§스펙트럼, ⁋보조정리 11](/ko/math/scheme_theory/spectrums#lem11)), 따라서 $\Spec A$가 $P$를 만족하면 $\Spec A$의 임의의 *affine* open subset 또한 $P$를 만족한다. 이처럼 principal open set들로 검사하여 결정되는 성질을 *affine-local property*라 부르며, 이를 임의의 scheme의 affine subscheme들에 대한 성질로 일반화한 것이 다음 정의이다. 
 
 ::: 정의 9
 Scheme $X$의 적당한 affine subscheme들에 대해 정의된 성질 $P$가 *affine-local property*라는 것은 다음 두 조건이 성립하는 것이다. 
@@ -185,7 +181,7 @@ Scheme $X$와 scheme의 affine-local property $P$에 대하여 다음이 모두 
 특히, 만일 $X$가 locally $P$라면 $X$의 임의의 open subscheme이 locally $P$이다. 
 :::
 ::: 증명
-첫째 조건이 성립한다면 각각의 $x$마다 open affine neighborhood $U_x$가 존재한다. 따라서 $\{U_x\}_{x\in X}$가 셋째 조건에서 요구하는 $X$의 affine open covering이 된다. 거꾸로 셋째 조건에 의해 주어지는 affine open covering $\{U_i\}$가 주어진다면, $X$의 임의의 점 $x$가 주어질 때마다 $x\in U_i$를 만족하는 $U_i$를 택할 수 있고, 이렇게 얻어지는 $U_i$가 [정의 9](#def9)에서 요구하는 $x$의 open affine neighoborhood가 된다. 따라서 첫째 조건과 셋째 조건은 동치이다. 또, 둘째 조건이 첫째 조건을 함의하는 것은 자명하다. 
+첫째 조건이 성립한다면 각각의 $x$마다 open affine neighborhood $U_x$가 존재한다. 따라서 $\{U_x\}_{x\in X}$가 셋째 조건에서 요구하는 $X$의 affine open covering이 된다. 거꾸로 셋째 조건에 의해 주어지는 affine open covering $\{U_i\}$가 주어진다면, $X$의 임의의 점 $x$가 주어질 때마다 $x\in U_i$를 만족하는 $U_i$를 택할 수 있고, 이렇게 얻어지는 $U_i$가 [정의 9](#def9)에서 요구하는 $x$의 open affine neighborhood가 된다. 따라서 첫째 조건과 셋째 조건은 동치이다. 또, 둘째 조건이 첫째 조건을 함의하는 것은 자명하다. 
 
 이제 셋째 조건이 성립한다 가정하고 둘째 조건이 성립함을 보인다. 셋째 조건을 만족하는 $X$의 affine open covering $\{U_i=\Spec A_i\}$가 주어졌다 하자. 그럼 $X$의 임의의 affine open subset $V=\Spec A$에 대하여, 각각의 $V\cap U_i$들은 $V$의 열린집합이기도 하므로 [보조정리 11](#lem11)로부터 
 
