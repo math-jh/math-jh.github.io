@@ -22,7 +22,7 @@ $thm-rule: 2px;
 /* 라벨 헤어라인 아래로 까는 연한 배경 tint(강조색 alpha). 헤어라인 위(라벨 윗부분)
    엔 색이 없고, 아래(라벨 아랫부분+본문)만 이 색이 채우며 하단 마감선이 닫는다.
    admonition 의 0.08 보다 연하게. */
-$thm-fill: 0.04;
+$thm-fill: 0.03;
 
 /* tint 상단 경계 = 라벨 줄 헤어라인의 높이(박스 최상단에서의 거리).
    라벨 font-size 1.05em × line-height 1.5 의 세로 중앙 ≈ 0.79em (align-items:center).
@@ -30,7 +30,7 @@ $thm-fill: 0.04;
    폰트·행간을 바꾸면 이 값도 같이 맞춰야 헤어라인과 색 경계가 어긋나지 않는다. */
 $thm-tint-top: 0.79em;
 
-/* 라벨 칩(.thm-tag) 배경 alpha. 본문 tint($thm-fill=0.04)보다 진하게 해 라벨을
+/* 라벨 칩(.thm-tag) 배경 alpha. 본문 tint($thm-fill=0.03)보다 진하게 해 라벨을
    강조한다(별개 변수라 여기만 올리면 라벨 배경만 진해진다; 칩은 불투명 mix 라 겹침 무관). */
 $thm-label-fill: 0.17;
 

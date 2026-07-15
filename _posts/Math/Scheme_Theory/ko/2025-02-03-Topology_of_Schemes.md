@@ -57,7 +57,7 @@ Scheme $(X,\mathcal{O}_X)$가 주어졌다 하자. 만일 $X$가 위상공간으
 우리는 [§스펙트럼, ⁋보조정리 12](/ko/math/scheme_theory/spectrums#lem12)에 의해 임의의 affine scheme은 quasi-compact임을 안다. Quasi-compact가 아닌 scheme의 예시로는, 당연히 무한히 많은 scheme들의 disjoint union이 있다. 
 :::
 
-Irreducibilty의 경우 다음 예시들을 보자. 
+Irreducibility의 경우 다음 예시들을 보자. 
 
 ::: 예시 5
 임의의 integral domain $A$에 대하여, $\Spec A$는 항상 irreducible이다. Generic point $\{0\}$을 생각하면, $\{0\}$를 포함하는 닫힌집합은 오직 $\Spec A$ 자신뿐이어야 하므로, $\Spec A$를 두 개의 proper closed subset의 합집합으로 나타내는 것이 불가능하기 때문이다. 따라서 $A=\mathbb{K}[\x_0,\ldots, \x_n]$으로 두면 affine $n$-space $\mathbb{A}_\mathbb{K}^n$은 irreducible인 것을 안다. 그럼 projective space $\mathbb{P}^n_\mathbb{K}$는 irreducible open subset들 $D_+(\x_i)$을 가지므로 [\[위상수학\] §차원, ⁋명제 8](/ko/math/topology/dimension#prop8)에 의해 $\mathbb{P}^n_\mathbb{K}$ 또한 irreducible이다. 
@@ -87,7 +87,7 @@ $$Z(\x\y)=\Spec \frac{\mathbb{K}[\x,\y]}{(\x\y)}$$
 이들은 generic point의 관점에서도 설명할 수 있다. 앞서 우리는 함수 $f$가 정의하는 generic point는 $f$가 정의하는 ideal 그 자체라고 하였으며, 따라서, 예를 들어 $y$축을 나타내는 아이디얼 $(\x)$가 바로 $y$축의 generic point이며, 비슷하게 $(\y)$는 $x$축을 나타내는 generic point이다. 문제는 위에서 살펴본 $Z(\x\y)$를 나타내는 아이디얼이 없다는 것으로, 두 축을 합집합하여 얻어지는 대상에 해당하는 아이디얼은 이들 두 아이디얼의 교집합에 포함되어야 할테지만 이 두 아이디얼의 교집합은 $(0)$ 뿐이며, 이는 전체 ring $\mathbb{K}[\x,\y]/(\x\y)$의 prime ideal이 <em-ko>아니다</em-ko>, 즉, $\mathbb{K}[\x,\y]/(\x\y)$는 integral domain이 아니며, 이는 $\x\y=0$임에도 $\x,\y\neq 0$이기 때문이다. 이 때 zero-divisor의 역할을 해 주는 $\x,\y$들은 각각 서로 다른 component에서 $0$이 되는 함수들로, 더 복잡한 scheme의 경우에서도 약간의 계산은 추가되지만 그 정신은 같은 원리로 나타나게 된다. 
 :::
 
-한편, noetherian scheme의 예시는 다음 명제에 의해 얻어진다.
+우리는 [\[위상수학\] §차원, ⁋정의 11](/ko/math/topology/dimension#def11)에서 위상공간이 noetherian이라는 개념을 정의하였다. 이를 scheme의 언어로 옮겨올 때에는 약간의 주의가 필요한데, 우선 affine scheme에 대해서는 다음 명제가 성립한다.
 
 ::: 명제 7
 Noetherian ring $A$에 대하여, $\Spec A$는 항상 noetherian topological space이다. 
@@ -105,7 +105,7 @@ $$IZ(\mathfrak{a}_1)\subseteq IZ(\mathfrak{a}_2)\subseteq\cdots$$
 
 $$\sqrt{\mathfrak{a}_1}\subseteq \sqrt{\mathfrak{a}_2}\subseteq\cdots$$
 
-와 같다. 이제 $A$가 noetherian ring이라는 가정으로부터 적당한 $k$가 존재하어
+와 같다. 이제 $A$가 noetherian ring이라는 가정으로부터 적당한 $k$가 존재하여
 
 $$\sqrt{\mathfrak{a}_k}=\sqrt{\mathfrak{a}_{k+1}}=\cdots$$
 
@@ -116,19 +116,21 @@ $$Z(\sqrt{\mathfrak{a}_k})=Z(\sqrt{\mathfrak{a}_{k+1}})=\cdots$$
 이다. 이제 [§스펙트럼, ⁋명제 5](/ko/math/scheme_theory/spectrums#prop5)로부터 원하는 결과를 얻는다.
 :::
 
-그러나 일반적으로 그 역은 성립하지 않는다. 
+그러나 일반적으로 그 역은 성립하지 않는다. 즉 어떠한 affine scheme이 주어졌을 때, 이 scheme이 위상공간으로서 noetherian이더라도 이를 정의하는 ring은 noetherian이 아닐 수 있다. 
 
 ## 국소성
 
 Scheme은 정의상 affine scheme들을 붙여서 얻어지는 대상이므로, 그 성질을 탐구하기 위해 선택하는 전략 중 하나는 어떠한 성질들을 local하게 탐구하는 것이다. 실제로 위에서 다룬 많은 예시가 affine scheme이었듯, 일반적인 scheme의 성질도 affine 조각을 이어붙여 다루는 것이 이 전략의 핵심이다. 뿐만 아니라, 이 접근방식의 장점은 우리의 affine scheme에 대한 이해가 위상적인 영역에만 국한되지는 <em-ko>않는다</em-ko>는 점에 있다. 즉, 이번 글에서 도입한 위상적인 데이터 뿐만 아니라, affine scheme $\Spec A$는 $A$가 ring으로서 가지는 대수적인 성질도 가지고 있으며, 이 국소성은 이러한 대수적인 성질들도 global하게 이어붙이는 데에 도움을 줄 것이다. 
 
-이를 위해 우선 ring의 성질이 local하다는 것이 어떤 의미인지 살펴보자.
+이러한 상황에서 흥미롭게 동작하는 개념 중 하나는 noetherian property로, 이는 noetherian이라는 조건이 위상수학에서도, 대수학에서도 각각 정의되기 때문이며, 이것이 [명제 7](#prop7)을 도입하기 전에 지적한 ambiguity의 정체이다.
+
+우리는 이번 글에서 local property를 정의하고, 이를 noetherian property에 적용하며 글을 마친다. 우선 ring의 성질이 local하다는 것이 어떤 의미인지 살펴보자.
 
 ::: 정의 8
-Ring의 성질 $Q$가 *local*이라는 것은 다음의 두 조건이 성립하는 것이다.
+Ring의 성질 $P_\alg$가 *local*이라는 것은 다음의 두 조건이 성립하는 것이다.
 
-1. 임의의 ring $A$와 $f\in A$에 대하여, 만일 $A$가 $Q$를 만족한다면 $A_f$도 $Q$를 만족한다.
-2. 임의의 ring $A$와, $f_1,\ldots, f_n\in A$가 $A=(f_1,\ldots, f_n)$을 만족한다 하자. 그럼 만일 모든 $A_{f_i}$가 $Q$를 만족한다면 $A$도 $Q$를 만족한다. 
+1. 임의의 ring $A$와 $f\in A$에 대하여, 만일 $A$가 $P_\alg$를 만족한다면 $A_f$도 $P_\alg$를 만족한다.
+2. 임의의 ring $A$와, $f_1,\ldots, f_n\in A$가 $A=(f_1,\ldots, f_n)$을 만족한다 하자. 그럼 만일 모든 $A_{f_i}$가 $P_\alg$를 만족한다면 $A$도 $P_\alg$를 만족한다. 
 :::
 
 이를 affine scheme의 언어로 바꾸어보자. Ring의 성질 $P_\alg$에 대하여, affine scheme $X=\Spec A$의 global section ring $\mathcal{O}_X(X)=A$가 $P_\alg$를 만족할 때 $X$가 성질 $P_\geo$를 갖는다고 하자. 그럼 $D(f)\cong\Spec A_f$이고, 또 $A=(f_1,\ldots, f_r)$이면
@@ -149,7 +151,7 @@ Scheme $X$의 적당한 affine subscheme들에 대해 정의된 성질 $P$가 *a
 2. 만일 $A=(f_1,\ldots, f_r)$이고 $\Spec A_{f_i}\subseteq X$가 모두 $P$를 만족한다면 $\Spec A \subseteq X$ 또한 $P$를 만족한다. 
 :::
 
-반면 우리는 [§스킴, ⁋예시 8](/ko/math/scheme_theory/schemes#ex8)에서 affine scheme의 open subscheme이 affine이 되지 않을 수 있다는 것을 이미 살펴보았으므로 $P$가 ring의 local property라고 하여도 이러한 식으로 정의한 성질 $P$는 진정한 의미에서 local한 성질이 아니다. 이를 위해서는 다음과 같이 정의하면 된다. 
+반면 우리는 [§스킴, ⁋예시 8](/ko/math/scheme_theory/schemes#ex8)에서 affine scheme의 open subscheme이 affine이 되지 않을 수 있다는 것을 이미 살펴보았으므로 $P$가 ring의 local property라고 하여도 이러한 식으로 정의한 성질 $P$는 진정한 의미에서 local한 성질이 아니다. 정말로 local한 성질을 살펴보기 위해서는 다음과 같이 정의하면 된다. 
 
 ::: 정의 10
 Scheme의 affine-local property $P$에 대하여, scheme $(X, \mathcal{O}_X)$가 *locally $P$*라는 것은 임의의 $x\in X$마다 적절한 open affine neighborhood $U$가 존재하여 $X$의 affine open subscheme $U$가 $P$를 만족하는 것이다. 
