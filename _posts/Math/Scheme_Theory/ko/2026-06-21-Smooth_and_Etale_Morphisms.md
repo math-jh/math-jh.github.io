@@ -12,6 +12,7 @@ date: 2026-06-21
 weight: 21
 
 published: false
+drift_needed: true
 ---
 
 미분기하에서 submersion과 covering map은 매끄러운 사상 가운데 각각 fiber가 양의 차원을 가지는 경우와 이산적인 경우에 해당한다. 대수기하에서 이 두 개념의 유사물이 *smooth* 사상과 *étale* 사상이며, 둘을 함께 묶는 약한 조건이 *unramified* 사상이다. 이들은 모두 fiber가 base 위에서 균일하게 정칙임을 요구하므로, 평탄성과 ([§평탄사상, ⁋정의 1](/ko/math/scheme_theory/flat_morphisms#def1)) cotangent sheaf의 ([§Kähler 미분과 여접층, ⁋정의 3](/ko/math/scheme_theory/sheaf_of_differentials#def3)) 국소자유성을 조합하여 정의된다. 이 글에서는 먼저 unramified 사상을 cotangent sheaf의 소멸로 정의하고 대각선 사상을 통한 특징을 제시한 뒤, smooth 사상을 flat이면서 기하적 올이 정칙인 사상으로 정의하고 그 Jacobian 판정을 본다. 이어서 étale 사상을 두 개념의 교집합으로 도입하고 standard étale 모형과 예시를 살펴본 다음, 세 개념을 통일적으로 다루는 square-zero 확대에 대한 무한소 lifting 판정으로 마무리한다.
@@ -86,7 +87,7 @@ Locally of finite presentation인 사상 $f:X \rightarrow S$에 대하여 다음
 
 $$\dim_{\kappa(\bar x)}\bigl(\Omega_{X_{\bar s}/k}\otimes \kappa(\bar x)\bigr)=\dim \mathcal{O}_{X_{\bar s},\bar x}=\dim_{\bar x}X_{\bar s}$$
 
-이다. 이는 정확히 정칙국소환의 cotangent space $\mathfrak{m}/\mathfrak{m}^2$이 차원만큼의 dimension을 가진다는 사실이다. ([\[가환대수학\] §정칙국소환, ⁋따름정리 1](/ko/math/commutative_algebra/regular_local_rings#cor1)의 정칙국소환은 그 정의상 $\mathfrak{m}$이 $\dim$개의 원소로 생성되며, 이는 $\dim\mathfrak{m}/\mathfrak{m}^2=\dim$과 동치이다.) Cotangent sheaf는 base change와 commute하므로 $\Omega_{X_{\bar s}/k}=\Omega_{X/S}\otimes_S k$이고, 따라서 $\Omega_{X/S}\otimes \kappa(\bar x)$의 차원이 fiber 차원과 같다.
+이다. 이는 정확히 정칙국소환의 cotangent space $\mathfrak{m}/\mathfrak{m}^2$이 차원만큼의 dimension을 가진다는 사실이다. ([\[가환대수학\] §정칙국소환](/ko/math/commutative_algebra/regular_local_rings)의 정칙국소환은 그 정의상 $\mathfrak{m}$이 $\dim$개의 원소로 생성되며, 이는 $\dim\mathfrak{m}/\mathfrak{m}^2=\dim$과 동치이다.) Cotangent sheaf는 base change와 commute하므로 $\Omega_{X_{\bar s}/k}=\Omega_{X/S}\otimes_S k$이고, 따라서 $\Omega_{X/S}\otimes \kappa(\bar x)$의 차원이 fiber 차원과 같다.
 
 이제 평탄성과 결합한다. $f$가 flat이고 fiber 위에서 $\Omega$의 fiber 차원이 일정하므로, 유한표시 가군에 대한 국소자유성 판정에 의하여 $\Omega_{X/S}$는 $\mathfrak{p}$ 근방에서 그 차원만큼의 rank를 가지는 국소자유층이다. 구체적으로 $\Omega_{B/A}$는 finitely presented $B$-가군이고, $f$가 flat이고 모든 fiber에서 $\dim_{\kappa(x)}\Omega_{B/A}\otimes\kappa(x)$가 일정하므로 $\Omega_{B/A}$는 사영가군, 곧 국소자유이다 (유한표시·평탄 가군의 fiber rank가 국소상수이면 국소자유, Stacks 00NX). 그 rank가 fiber 차원과 같음은 위 계산에서 따른다.
 
@@ -113,7 +114,7 @@ $B=A[\x_1,\ldots, \x_n]/(f_1,\ldots, f_r)$, $P=A[\x_1,\ldots, \x_n]$이라 하�
 
 $$\mathfrak{a}/\mathfrak{a}^2 \overset{\bar d}{\longrightarrow} \Omega_{P/A}\otimes_PB \longrightarrow \Omega_{B/A} \longrightarrow 0$$
 
-이며, $\Omega_{P/A}\otimes_PB$는 $d\x_1,\ldots, d\x_n$을 기저로 하는 rank $n$의 자유 $B$-가군이다. ([§Kähler 미분과 여접층, ⁋명제 7](/ko/math/scheme_theory/sheaf_of_differentials#prop7)) 사상 $\bar d$는 $f_i+\mathfrak{a}^2\mapsto df_i=\sum_j(\partial f_i/\partial \x_j)\,d\x_j$로 주어지므로, $\bar d$를 $d\x_j$ 기저에 대하여 표현한 행렬이 정확히 Jacobian $J$의 transpose이다.
+이며, $\Omega_{P/A}\otimes_PB$는 $d\x_1,\ldots, d\x_n$을 기저로 하는 rank $n$의 자유 $B$-가군이다. ([§Kähler 미분과 여접층, ⁋명제 7](/ko/math/scheme_theory/sheaf_of_differentials#prop7)) 사상 $\bar d$는 $f_i+\mathfrak{a}^2\mapsto df_i=\sum_j(\partial f_i/\partial \x_j)d\x_j$로 주어지므로, $\bar d$를 $d\x_j$ 기저에 대하여 표현한 행렬이 정확히 Jacobian $J$의 transpose이다.
 
 $x$에서 $J$의 rank가 $r$이면, $\kappa(x)$ 위에서 $\bar d\otimes\kappa(x)$가 단사이고 그 image가 $n$차원 공간의 $r$차원 부분공간이다. 따라서 conormal 완전열을 $\kappa(x)$로 텐서한
 
@@ -172,7 +173,7 @@ Field $k$ 위의 곱셈군 $\mathbb{G}_m=\Spec k[t, t^{-1}]$에서 자기 자신
 
 $$[n]:\mathbb{G}_m \longrightarrow \mathbb{G}_m,\qquad t\longmapsto t^n$$
 
-을 생각하자. 이는 ring homomorphism $k[s, s^{-1}] \rightarrow k[t, t^{-1}]$, $s\mapsto t^n$으로부터 온다. 상대미분은 $d(t^n)=n t^{n-1}\,dt$로 생성되므로
+을 생각하자. 이는 ring homomorphism $k[s, s^{-1}] \rightarrow k[t, t^{-1}]$, $s\mapsto t^n$으로부터 온다. 상대미분은 $d(t^n)=n t^{n-1}dt$로 생성되므로
 
 $$\Omega_{\mathbb{G}_m/\mathbb{G}_m}\cong k[t, t^{-1}]/(nt^{n-1})$$
 
