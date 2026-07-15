@@ -12,6 +12,7 @@ date: 2026-06-21
 weight: 22
 
 published: false
+drift_needed: true
 ---
 
 우리는 [§스킴 사이의 사상, ⁋정의 6](/ko/math/scheme_theory/morphism_of_schemes#def6)에서 scheme morphism $f: T \rightarrow X$를 $X$의 *$T$-point*라 불렀고, $T=\Spec A$인 경우 이를 $A$-point라 불렀다. 또 [§스킴 사이의 사상, ⁋예시 7](/ko/math/scheme_theory/morphism_of_schemes#ex7)에서 algebraically closed field $\mathbb{K}$ 위의 affine space $\mathbb{A}^n_\mathbb{K}$의 $\mathbb{K}$-point들이 정확히 고전적인 의미에서의 $n$-tuple $(x_1,\ldots, x_n)$들과 일대일대응한다는 것을 보았다. 이번 글의 목표는 이 관찰을 하나의 체계로 정립하는 것이다. 핵심은 scheme $X$를 위상공간과 structure sheaf로 이루어진 데이터로 보는 대신, 모든 가능한 test scheme $T$에 대하여 $X$의 $T$-point들이 어떻게 모여있는가, 즉 functor
@@ -259,7 +260,7 @@ $$m: G\times_S G \rightarrow G,\qquad i: G \rightarrow G,\qquad e: S \rightarrow
 
 2. *Multiplicative group<sub>곱셈군</sub>* $\mathbb{G}_m=\Spec \mathbb{Z}[\x, \x^{-1}]$. [명제 9](#prop9)에 의하여 $\mathbb{G}_m(T)\cong \Gamma(T, \mathcal{O}_T)^\times$이며, 여기에 가역원들의 곱셈을 주면 group이 된다. 
 
-3. *$n$-th roots of unity* $\mu_n=\Spec \mathbb{Z}[\x]/(\x^n-1)$. 그럼 $\mu_n(T)\cong \{a\in \Gamma(T, \mathcal{O}_T)^\times\mid a^n=1\}$이며, 이는 $\mathbb{G}_m(T)$의 부분group이다. 따라서 $\mu_n$은 $\mathbb{G}_m$의 closed subgroup scheme이다. 
+3. *$n$-th roots of unity* $\mu_n=\Spec \mathbb{Z}[\x]/(\x^n-1)$. 그럼 $\mu_n(T)\cong \{a\in \Gamma(T, \mathcal{O}_T)^\times\mid a^n=1\}$이며, 이는 $\mathbb{G}_m(T)$의 subgroup이다. 따라서 $\mu_n$은 $\mathbb{G}_m$의 closed subgroup scheme이다. 
 
 4. *General linear group* $\GL_n$. 각각의 ring $R$에 대하여 $\GL_n(R)$을 $R$ 성분의 가역행렬들의 group으로 두면, 이는 
 
