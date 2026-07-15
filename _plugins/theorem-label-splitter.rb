@@ -65,8 +65,9 @@ module TheoremLabelSplitter
         else
           ""
         end
-      # 라벨+설명을 .thm-head 한 블록으로 묶어 한 줄에 두고, 본문은 그 아래 줄로 흐른다.
-      %(#{div}<p><span class="thm-head"><span class="thm-n" id="#{id}">#{kindnum}</span>#{name_part}</span> )
+      # 라벨(종류+번호+이름)을 .thm-tag(라벨 칩)로 감싸 .thm-head 에 담는다. CSS 가 칩에
+      # 연한 배경을 깔고, 오른쪽 헤어라인(::after)은 배경 없이 이어진다. 본문은 아래 줄로.
+      %(#{div}<p><span class="thm-head"><span class="thm-tag"><span class="thm-n" id="#{id}">#{kindnum}</span>#{name_part}</span></span> )
     end
   end
 end

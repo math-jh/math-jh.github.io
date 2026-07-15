@@ -240,7 +240,8 @@ module FencedTheoremBlocks
     body = strip_blank_edges(block[:body])
     lines = []
     lines << %(<details class="#{block[:cls]}" markdown="1">)
-    lines << %(<summary>#{block[:summary]}</summary>)
+    # summary 텍스트도 .thm-tag(라벨 칩)로 감싼다(박스 라벨과 통일; 폰트는 그대로).
+    lines << %(<summary><span class="thm-tag">#{block[:summary]}</span></summary>)
     lines << ""
     body.each { |l| lines << l }
     lines << ""

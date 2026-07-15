@@ -19,6 +19,24 @@ $thm-indent: 1.1rem;
    정수라 화면 배율과 무관하게 그대로 스냅된다 (1.5px 은 1x 에서 1px 로 내림됐다). */
 $thm-rule: 2px;
 
+/* 라벨 헤어라인 아래로 까는 연한 배경 tint(강조색 alpha). 헤어라인 위(라벨 윗부분)
+   엔 색이 없고, 아래(라벨 아랫부분+본문)만 이 색이 채우며 하단 마감선이 닫는다.
+   admonition 의 0.08 보다 연하게. */
+$thm-fill: 0.06;
+
+/* tint 상단 경계 = 라벨 줄 헤어라인의 높이(박스 최상단에서의 거리).
+   라벨 font-size 1.05em × line-height 1.5 의 세로 중앙 ≈ 0.79em (align-items:center).
+   .thm-head/summary 의 헤어라인(::after)이 이 높이에 오고, 여기서부터 색이 시작한다.
+   폰트·행간을 바꾸면 이 값도 같이 맞춰야 헤어라인과 색 경계가 어긋나지 않는다. */
+$thm-tint-top: 0.79em;
+
+/* 라벨 칩(.thm-tag) 배경 alpha. 지금은 본문 tint 와 같은 값이지만, 추후 라벨만 더
+   진하게 하고 싶을 수 있어 별개 변수로 둔다(여기만 올리면 라벨 배경만 진해진다). */
+$thm-label-fill: $thm-fill;
+
+/* 박스 좌우 안쪽 여백. 헤어라인·마감선·QED 를 박스 오른쪽 끝에 맞출 때 이 값을 되돌린다. */
+$thm-pad-x: 0.9em;
+
 /* 박스 내부 공통 규칙 (외형과 무관). admonition(notice)·라벨행(notice-labelrow)
    두 외형이 이걸 공유한다. */
 @mixin notice-content($notice-color) {
@@ -132,17 +150,28 @@ $thm-rule: 2px;
   $hairline: mix($notice-color, $border-color, 38%);
 
   margin: 1.9em 0 !important;
-  /* 내용은 $thm-indent 만큼 들여쓰고, 라벨 행(.thm-head / summary)만 같은 크기의
-     음수 마진으로 다시 왼쪽 끝에 건다(hanging label). 단위가 rem 인 이유는 라벨이
-     1.05em 이라 em 으로 맞추면 패딩과 픽셀이 어긋나기 때문. */
-  padding: 0 0 0.85em $thm-indent;
-  background-color: transparent;
+  /* 라벨 헤어라인($thm-tint-top) 아래로만 연한 tint. 그 선 위(라벨 윗부분)엔 색이
+     없다(선형 그라디언트의 hard-stop). 하단은 마감선(border-bottom)이 색을 닫는다.
+     상단 padding 0(라벨이 박스 최상단), 좌우/하단은 읽기용 여백. hanging label 없음
+     — 라벨과 본문을 왼쪽 정렬한다. */
+  padding: 0 $thm-pad-x 0.8em $thm-pad-x;
+  background: linear-gradient(to bottom,
+    transparent $thm-tint-top,
+    rgba($notice-color, $thm-fill) $thm-tint-top);
   border: 0;
   border-bottom: $thm-rule solid mix($hairline, $background-color, 62%);
   border-radius: 0;
   box-shadow: none;
 
   @include notice-content($notice-color);
+
+  /* 라벨이 담긴 첫 문단은 박스 최상단에 붙어야 헤어라인이 $thm-tint-top 에 온다. */
+  > p:first-child { margin-top: 0; }
+
+  /* 라벨 칩(.thm-tag): 박스 왼쪽 끝부터 헤어라인 시작점까지 채우는 라벨 배경.
+     불투명(mix)이라 헤어라인 아래 본문 tint 와 겹치는 구간에서도 alpha 가 겹쳐
+     진해지지 않는다. 표준 배경 위에선 rgba($notice-color,$thm-label-fill) 와 같은 색. */
+  .thm-tag { background-color: mix($notice-color, $background-color, percentage($thm-label-fill)); }
 
   /* 라벨 줄 오른쪽으로 이어지는 헤어라인 — 박스별 강조색 */
   > p > .thm-head::after,
@@ -272,27 +301,19 @@ details[open] > summary::before {
   margin-top: -1.4em !important;
 }
 
-/* 마감선 예외 (1): 증명이 바로 뒤따르면 앞 박스의 마감선을 지운다.
-   .proof 는 음수 margin-top 으로 앞 박스에 붙어 있어 "명제+증명"이 한 단위로 읽히고,
-   그 단위의 마감은 증명 쪽이 맡는다. 사이에 선을 두 번 긋지 않는다.
-   ($notice-color 별 색이 필요 없으므로 믹스인 밖에서 일괄 처리) */
-.definition:has(+ .proof),
-.proposition:has(+ .proof),
-.example:has(+ .proof),
-.remark:has(+ .proof),
-.misc:has(+ .proof) {
-  border-bottom: 0;
-}
+/* (예전엔 증명이 바로 뒤따르는 박스의 하단 마감선을 지웠지만, A안에서는 모든 박스가
+   자기 하단 마감선을 갖는다 — 명제와 증명이 각각 상·하단 선으로 닫힌다. 예외 삭제.) */
 
-/* 마감선 예외 (2): 접혀 있는 접기 박스는 마감선을 그리지 않는다. 라벨 행만 남아
-   내용 없는 얇은 띠가 생기지 않는다. [open] 은 네이티브 속성이라 JS 없이도 맞고,
-   Proof_animate.js 는 접힘 애니메이션 *끝*에 [open] 을 떼므로 애니메이션 도중에는
-   마감선이 남아 있다가 마지막에 사라진다($thm-rule 이라 눈에 띄지 않는다).
-   padding 은 남겨 둔다 — 위 믹스인 주석 참고. */
+/* 접힌 증명/접기 박스: 색은 라벨(summary)에만 둔다. 헤어라인 아래(빈 본문)와 하단
+   마감선엔 색을 두지 않는다 — 박스 그라디언트 tint 를 끄고, summary 에만 연한 색을
+   깐다. padding-bottom 은 남긴다(접힘 애니메이션의 목표 높이 계산용). [open] 은
+   네이티브 속성이라 JS 없이도 맞고, Proof_animate.js 는 접힘 *끝*에 [open] 을 뗀다. */
 details.proof:not([open]),
 details.proof--alone:not([open]),
 details.details:not([open]) {
-  border-bottom: 0;
+  background: none;   // 접힘: 헤어라인 아래 tint 없음(박스 그라디언트 끔)
+  border-bottom: 0;   // 하단 마감선 없음
+  // 색은 라벨 칩(.thm-tag)에만 남는다 — mixin 이 이미 깔았으므로 여기선 손대지 않는다.
 }
 
 .spoiler {
@@ -323,10 +344,10 @@ $qed-size: 0.65em;
    종류+번호는 볼드 sans, 괄호 설명은 이탤릭. 글자색은 그 박스의 강조색. */
 .thm-head {
   display: flex;
-  align-items: baseline;
-  gap: 0.6em;
+  align-items: center; /* 헤어라인(::after)이 라벨 세로 중앙 = $thm-tint-top 에 오도록 */
+  gap: 0; /* 칩 배경 오른쪽 끝이 헤어라인 시작점에 딱 붙도록(간격은 칩 오른쪽 padding) */
   margin-bottom: 0.45em;
-  margin-left: -$thm-indent; /* 들여쓴 내용 밖으로 라벨을 건다 (hanging label) */
+  margin-right: -$thm-pad-x; /* 우측 padding 을 되돌려 헤어라인을 박스 오른쪽 끝(=하단선 끝)까지 */
   font-size: 1.05em; /* 라벨을 본문(1em)보다 살짝 크게 */
 
   /* 남는 폭을 채우는 헤어라인. 색은 notice-labelrow 가 박스별로 준다. */
@@ -337,6 +358,19 @@ $qed-size: 0.65em;
     height: $thm-rule;
     min-width: 36px;
   }
+}
+
+/* 라벨 칩: 박스 왼쪽 끝(margin-left 로 좌측 padding 되돌림)부터 헤어라인 시작점
+   (.thm-head/summary 의 gap:0)까지 이어지는 라벨 배경. 왼쪽 padding 으로 글자를 본문과
+   좌측 정렬, 오른쪽 padding 으로 글자와 헤어라인 사이를 띄운다. 길면 줄어든다. */
+.thm-tag {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35em;
+  flex: 0 1 auto;
+  min-width: 0;
+  padding: 0.05em 0.5em 0.05em $thm-pad-x;
+  margin-left: -$thm-pad-x;
 }
 
 .thm-n {
@@ -369,16 +403,11 @@ $qed-size: 0.65em;
    theme 기본값 summary{font-style:italic} 때문에 sans 에서 faux slant 가 생기므로
    font-style:normal 로 상쇄한다. 접힘/펼침 표식은 아래 마름모↔정사각형 참고. */
 .proof > summary,
-.proof--alone > summary,
-.details > summary {
-  margin-left: -$thm-indent; /* summary 도 라벨 행이므로 왼쪽 끝에 건다 */
-}
-
-.proof > summary,
 .proof--alone > summary {
   display: flex;
-  align-items: baseline;
-  gap: 0.6em;
+  align-items: center; /* 헤어라인이 라벨 세로 중앙 = $thm-tint-top 에 오도록 */
+  gap: 0; /* 칩 배경 오른쪽 끝이 헤어라인 시작점에 딱 붙도록(간격은 칩 오른쪽 padding) */
+  margin-right: -$thm-pad-x; /* 우측 padding 되돌려 헤어라인·QED 를 박스 오른쪽 끝까지 */
   font-family: $sans-serif;
   font-weight: bold;
   font-style: normal;
@@ -432,7 +461,7 @@ details.proof--alone[open] > summary::after {
 
 .qed-mark {
   position: absolute;
-  right: 0; /* 라벨행 외형은 좌우 padding 이 0 — 본문 오른쪽 끝에 맞춘다 */
+  right: 0; /* 박스 오른쪽 끝(=상·하단선 끝)에 마름모 오른쪽 꼭짓점을 맞춘다 */
   width: $qed-size;
   height: $qed-size;
   background: $proof-color;
