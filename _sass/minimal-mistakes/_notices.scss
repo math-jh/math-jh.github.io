@@ -22,7 +22,7 @@ $thm-rule: 2px;
 /* 라벨 헤어라인 아래로 까는 연한 배경 tint(강조색 alpha). 헤어라인 위(라벨 윗부분)
    엔 색이 없고, 아래(라벨 아랫부분+본문)만 이 색이 채우며 하단 마감선이 닫는다.
    admonition 의 0.08 보다 연하게. */
-$thm-fill: 0.06;
+$thm-fill: 0.04;
 
 /* tint 상단 경계 = 라벨 줄 헤어라인의 높이(박스 최상단에서의 거리).
    라벨 font-size 1.05em × line-height 1.5 의 세로 중앙 ≈ 0.79em (align-items:center).
@@ -30,9 +30,9 @@ $thm-fill: 0.06;
    폰트·행간을 바꾸면 이 값도 같이 맞춰야 헤어라인과 색 경계가 어긋나지 않는다. */
 $thm-tint-top: 0.79em;
 
-/* 라벨 칩(.thm-tag) 배경 alpha. 지금은 본문 tint 와 같은 값이지만, 추후 라벨만 더
-   진하게 하고 싶을 수 있어 별개 변수로 둔다(여기만 올리면 라벨 배경만 진해진다). */
-$thm-label-fill: $thm-fill;
+/* 라벨 칩(.thm-tag) 배경 alpha. 본문 tint($thm-fill=0.04)보다 진하게 해 라벨을
+   강조한다(별개 변수라 여기만 올리면 라벨 배경만 진해진다; 칩은 불투명 mix 라 겹침 무관). */
+$thm-label-fill: 0.17;
 
 /* 박스 좌우 안쪽 여백. 헤어라인·마감선·QED 를 박스 오른쪽 끝에 맞출 때 이 값을 되돌린다. */
 $thm-pad-x: 0.9em;
@@ -361,15 +361,16 @@ $qed-size: 0.65em;
 }
 
 /* 라벨 칩: 박스 왼쪽 끝(margin-left 로 좌측 padding 되돌림)부터 헤어라인 시작점
-   (.thm-head/summary 의 gap:0)까지 이어지는 라벨 배경. 왼쪽 padding 으로 글자를 본문과
-   좌측 정렬, 오른쪽 padding 으로 글자와 헤어라인 사이를 띄운다. 길면 줄어든다. */
+   (.thm-head/summary 의 gap:0)까지 이어지는 라벨 배경. padding 이 좌우 대칭이라 글자가
+   칩(라벨 영역) 안에서 가운데 정렬돼, 본문(0.9em 들여쓰기)보다 덜 들여쓴 것처럼 보인다.
+   길면 줄어든다. */
 .thm-tag {
   display: inline-flex;
   align-items: baseline;
   gap: 0.35em;
   flex: 0 1 auto;
   min-width: 0;
-  padding: 0.05em 0.5em 0.05em $thm-pad-x;
+  padding: 0.05em 0.5em;
   margin-left: -$thm-pad-x;
 }
 
@@ -461,18 +462,25 @@ details.proof--alone[open] > summary::after {
 
 .qed-mark {
   position: absolute;
-  right: 0; /* 박스 오른쪽 끝(=상·하단선 끝)에 마름모 오른쪽 꼭짓점을 맞춘다 */
+  /* 접힘=마름모(45°)의 오른쪽 꼭짓점을 박스 오른쪽 끝에 맞춘다. 45° 회전한 정사각형은
+     제 layout 상자보다 (√2−1)/2 만큼 옆으로 튀어나오므로, 그만큼(=0.2071·$qed-size)
+     안으로 들인다. 회전 중심이 고정이라 펼침=정사각형(0°)은 오른쪽에 같은 양의 여백이
+     남는다(마름모 폭 √2·$qed-size → 정사각형 폭 $qed-size). */
+  right: $qed-size * 0.2071;
   width: $qed-size;
   height: $qed-size;
   background: $proof-color;
-  transform: rotate(45deg); /* 접힘 = 마름모 */
+  transform: translateX(0) rotate(45deg); /* 접힘 = 마름모 (translateX 0 → 오른쪽 꼭짓점이 박스 끝) */
   transition: top 0.3s ease, transform 0.3s ease; /* Proof_animate.js DUR 과 동기 */
   pointer-events: none;
 }
 
 details.proof.qed-open .qed-mark,
 details.proof--alone.qed-open .qed-mark {
-  transform: rotate(0deg); /* 펼침 = 정사각형 */
+  /* 펼침 = 정사각형. 회전만으로 남는 여백(≈0.135em)은 좁아, 펼치는 동안 왼쪽으로 0.3em
+     더 밀어(회전과 같은 transition 으로 함께 이동) 오른쪽 여백을 넉넉히 확보한다.
+     transform 함수 목록을 translateX+rotate 로 맞춰 보간이 매끄럽다. */
+  transform: translateX(-0.3em) rotate(0deg);
 }
 
 @media (prefers-reduced-motion: reduce) {
