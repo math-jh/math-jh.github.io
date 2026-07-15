@@ -79,8 +79,8 @@ $$\mathcal{O}_X(U_1\cup U_2)=\mathcal{O}_X(U_1)\times \mathcal{O}_X(U_2)$$
 
 거꾸로 irreducible reduced scheme $X$가 주어졌다 하고, $X$가 integral scheme임을 보이자. 즉, $X$의 임의의 열린집합 $U$가 주어졌을 때, $\mathcal{O}_X(U)$가 integral domain임을 보여야 한다. 우선 다음 주장을 보이자.
 
-**주장** 임의의 affine open subset $\Spec A\cong V\subseteq X$에 대하여, $\mathcal{O}_X(V)\cong A$는 항상 integral domain이다. 
-> $X$가 reduced라는 가정으로부터 $A$가 reduced ring이어야 하는 것을 안다. 한편, $X$는 $X$의 irreducible closed subset이므로 $V$도 irreducible이고 ([\[위상수학\] §차원, ⁋명제 14](/ko/math/topology/dimension#prop14)) 따라서 [보조정리 3](#lem3)으로부터 $\mathfrak{N}(A)=0$는 prime ideal이 되어 $A$가 integral domain이다. 
+> **주장.** 임의의 affine open subset $\Spec A\cong V\subseteq X$에 대하여, $\mathcal{O}_X(V)\cong A$는 항상 integral domain이다.  
+> **증명.** $X$가 reduced라는 가정으로부터 $A$가 reduced ring이어야 하는 것을 안다. 한편, $X$는 $X$의 irreducible closed subset이므로 $V$도 irreducible이고 ([\[위상수학\] §차원, ⁋명제 14](/ko/math/topology/dimension#prop14)) 따라서 [보조정리 3](#lem3)으로부터 $\mathfrak{N}(A)=0$는 prime ideal이 되어 $A$가 integral domain이다. 
 
 이제 일반적으로 $X$의 임의의 열린집합 $U$에 대하여 $\mathcal{O}_X(U)$가 integral domain임을 보인다. 이를 위해 두 원소 $f,g\in \mathcal{O}_X(U)$가 $fg=0$을 만족한다고 하자. 그럼 $U$의 두 열린집합
 
