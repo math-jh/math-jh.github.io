@@ -9,7 +9,9 @@ sidebar:
     nav: "scheme_theory-ko"
 
 date: 2025-03-08
-weight: 10
+weight: 11
+published: false
+drift_needed: true
 ---
 
 우리가 scheme을 도입하며 약속한 것들 중 하나는 fiber product였으며, 이는 $\Sch/S$ 위에서의 곱이므로 이를 위해서는 $S$-scheme들 (그리고 scheme morphism들)을 정의했어야 했다. 이제 우리는 준비를 마치고 fiber product를 정의한다. 
@@ -147,7 +149,7 @@ $$A\otimes_BB[\x_1,\ldots,\x_n]\cong A[\x_1,\ldots, \x_n]$$
 
 이 관점은 중요한 것이지만, 지금 당장은 여기에 있는 기하학적인 직관이 잘 보이지 않는다. 이를 위해 특별히 $S' \rightarrow S$가 embedding인 경우를 생각하자. 
 
-우선 임의로 주어진 $S$-family $X \rightarrow S$와 open embedding $S' \rightarrow S$가 open embedding에 대하여, [보조정리 3](#lem3)은 $S'$-family $X\times_SS' \rightarrow S'$가 단순히 $X \rightarrow S$의 base를 $S'$로 제한하여 얻어진 것임을 보여준다. 여기에 더하여 $X \rightarrow S$ 또한 open embedding이라 가정하면, 우리는 $X\times_SS'$가 ($S$ 안에서의) $X$와 $S'$의 교집합임을 안다. 
+우선 임의로 주어진 $S$-family $X \rightarrow S$와 open embedding $S' \rightarrow S$에 대하여, [보조정리 3](#lem3)은 $S'$-family $X\times_SS' \rightarrow S'$가 단순히 $X \rightarrow S$의 base를 $S'$로 제한하여 얻어진 것임을 보여준다. 여기에 더하여 $X \rightarrow S$ 또한 open embedding이라 가정하면, 우리는 $X\times_SS'$가 ($S$ 안에서의) $X$와 $S'$의 교집합임을 안다. 
 
 위의 논증은 closed embedding인 경우에도 성립한다. 이를 위해서는 [보조정리 3](#lem3)에 해당하는 다음 보조정리를 보여야 한다.
 
@@ -221,7 +223,7 @@ $$\Frac(\mathbb{K}[\x]/(\x-a))=\mathbb{K}[\x]/(\x-a)$$
 
 이다. 이제 임의의 $a\in \mathbb{K}$에 대하여,
 
-$$\varphi^{-1}((\x-a))=\Spec \mathbb{K}[\y]\otimes_{\Spec \mathbb{K}[\x]}\Spec \mathbb{K}[\x]/(\x-a)\cong \Spec(\mathbb{K}[\y]\otimes_{\mathbb{K}[\x]}\mathbb{K}[\x]/(\x-a))=\Spec \mathbb{K}[\y]/(\y^2-a)$$
+$$\varphi^{-1}((\x-a))=\Spec \mathbb{K}[\y]\times_{\Spec \mathbb{K}[\x]}\Spec \mathbb{K}[\x]/(\x-a)\cong \Spec(\mathbb{K}[\y]\otimes_{\mathbb{K}[\x]}\mathbb{K}[\x]/(\x-a))=\Spec \mathbb{K}[\y]/(\y^2-a)$$
 
 이며, 따라서 만일 $a=0$이라면 $\varphi^{-1}((\x))\cong\Spec \mathbb{K}[\y]/(\y^2)$이고, $a\neq 0$이라면 $\mathbb{K}$가 algebraically closed라는 가정으로부터 
 
@@ -229,7 +231,7 @@ $$\Spec \mathbb{K}[\y]/(\y^2-a)\cong \Spec \mathbb{K}[\y]/(\y-\sqrt{a})\coprod \
 
 임을 안다. 한편 $\mathbb{K}[\x]$의 generic point $(0)$에 대해서는 $\kappa((0))=\mathbb{K}(\x)$이므로 
 
-$$\varphi^{-1}((0))=\Spec \mathbb{K}[\y]\otimes_{\Spec \mathbb{K}[\x]}\Spec \mathbb{K}(\x)\cong \Spec\mathbb{K}(\y)$$
+$$\varphi^{-1}((0))=\Spec \mathbb{K}[\y]\times_{\Spec \mathbb{K}[\x]}\Spec \mathbb{K}(\x)\cong \Spec\mathbb{K}(\y)$$
 
 이 된다. 
 :::

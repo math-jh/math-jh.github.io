@@ -10,6 +10,8 @@ sidebar:
 
 date: 2024-05-24
 weight: 14
+published: false
+drift_needed: true
 ---
 
 이번 글에서 우리는 separated morphism과 proper morphism을 정의한다. 이들은 위상수학에서 Hausdorff 조건과 compact 조건을 대수기하로 옮겨온 것이라고 생각하면 편하다. 
@@ -37,13 +39,13 @@ $$Z((0))=\{(0),\mathfrak{m}\},\quad Z(\mathfrak{m})=\{\mathfrak{m}\}$$
 
 $$D(\mathfrak{m})=\{(0)\}$$
 
-뿐이다. 한편 $\mathfrak{m}=(\pi)$라 하면 [§스펙트럼, ⁋명제 5](/ko/math/scheme_theory/spectrums#prop5)에 의하여
+뿐이다. 한편 $\mathfrak{m}=(\pi)$라 하면 [§아핀스킴, ⁋보조정리 6](/ko/math/scheme_theory/affine_schemes#lem6)에 의하여
 
 $$\mathcal{O}(D(\mathfrak{m}))=\mathcal{O}(D(\pi))\cong A_\pi\cong \Frac(A)$$
 
 이다. 물론 $\mathcal{O}(\Spec A)\cong A$이다. 
 
-한편 $\Spec A$의 두 점은 기하적으로 다음과 같이 살펴볼 수 있다: 각 점은 $A$에서 그 residue field로 가는 ring homomorphism에 의해 결정되는데, 즉 $\kappa((0))$와 $\kappa(\mathfrak{m})$이다. 다시 [§스펙트럼, ⁋명제 5](/ko/math/scheme_theory/spectrums#prop5)를 사용하면
+한편 $\Spec A$의 두 점은 기하적으로 다음과 같이 살펴볼 수 있다: 각 점은 $A$에서 그 residue field로 가는 ring homomorphism에 의해 결정되는데, 즉 $\kappa((0))$와 $\kappa(\mathfrak{m})$이다. 다시 [§아핀스킴, ⁋보조정리 8](/ko/math/scheme_theory/affine_schemes#lem8)를 사용하면
 
 $$\mathcal{O}_{(0)}\cong A_{(0)}\cong \Frac(A),\qquad \mathcal{O}_\mathfrak{m}\cong A_\mathfrak{m}$$
 
@@ -92,7 +94,7 @@ Separated가 아닌 scheme의 예시는 [§스킴, ⁋예시 10](/ko/math/scheme
 $X\times X$에 어떻게 들어갈지를 생각해보면 좌표축 바깥에서는 일반적인 대각선 모양이 될 것이지만, $X$의 두 원점이 $\Delta$를 통해 $X\times X$로 옮겨졌을 때, 이 네 원점 중 어느 두 개에 들어갈지를 알 수 없다. 실제로 이 네 원점은 모두 $\Delta(X)$의 closure에 들어가므로 separated가 아닌 것을 알 수 있다. 역시, 위상수학에서 이 공간은 Hausdorff가 아닌 공간의 예시였다. 
 
 ::: 정리 6
-Noetherian scheme $X$와 scheme morphism $f:X \rightarrow Y$에 대하여, $f$가 separated인 것은 임의의 valuation ring $A$과 그 quotient field $K=\Frac(A)$에 대하여, 임의의 scheme morphism $\Spec A \rightarrow Y$, $\Spec K \rightarrow X$와 다음 commutative diagram
+Noetherian scheme $X$와 scheme morphism $f:X \rightarrow Y$에 대하여, $f$가 separated인 것은 임의의 valuation ring $A$와 그 quotient field $K=\Frac(A)$에 대하여, 임의의 scheme morphism $\Spec A \rightarrow Y$, $\Spec K \rightarrow X$와 다음 commutative diagram
 
 ![valuative_criterion](/assets/images/Math/Scheme_Theory/Valuative_Criteria-2.svg){:style="width:8.27em" class="invert" .align-center}
 
@@ -171,7 +173,7 @@ $f:X \rightarrow Y$가 *universally closed*라는 것은 $f$가 closed map이고
 [정리 6](#thm6)과 마찬가지로 proper morphism에 대해서도 valuative criterion이 존재한다.
 
 ::: 정리 9
-Noetherian scheme $X$와 finite type scheme morphism $f:X \rightarrow Y$에 대하여, $f$가 proper인 것은 임의의 valuation ring $A$과 그 quotient field $K=\Frac(A)$에 대하여, 임의의 scheme morphism $\Spec A \rightarrow Y$, $\Spec K \rightarrow X$와 다음 commutative diagram
+Noetherian scheme $X$와 finite type scheme morphism $f:X \rightarrow Y$에 대하여, $f$가 proper인 것은 임의의 valuation ring $A$와 그 quotient field $K=\Frac(A)$에 대하여, 임의의 scheme morphism $\Spec A \rightarrow Y$, $\Spec K \rightarrow X$와 다음 commutative diagram
 
 ![valuative_criterion](/assets/images/Math/Scheme_Theory/Valuative_Criteria-2.svg){:style="width:8.27em" class="invert" .align-center}
 

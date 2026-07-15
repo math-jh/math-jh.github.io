@@ -10,6 +10,8 @@ sidebar:
 
 date: 2026-03-11
 weight: 17
+published: false
+drift_needed: true
 
 ---
 
@@ -145,7 +147,7 @@ Torus $T = (\mathbb{C}^\ast)^n$의 coordinate ring은 character들의 polynomial
 :::
 
 ::: 증명
-Torus $T = (\mathbb{C}^\ast)^n$은 $n$개의 $\mathbb{C}^\ast$의 direct product이므로, 그 coordinate ring은 각 $\mathbb{C}^\ast$의 coordinate ring들의 tensor product이다. 이 때 $\mathbb{C}^\ast = \mathbb{C} \setminus \{0\}$의 coordinate ring은 $\mathbb{C}[x, x^{-1}]$임을 안다. ([§스킴, ⁋예시 10](/ko/math/scheme_theory/schemes#ex10))
+Torus $T = (\mathbb{C}^\ast)^n$은 $n$개의 $\mathbb{C}^\ast$의 direct product이므로, 그 coordinate ring은 각 $\mathbb{C}^\ast$의 coordinate ring들의 tensor product이다. 이 때 $\mathbb{C}^\ast = \mathbb{C} \setminus \{0\}$의 coordinate ring은 $\mathbb{C}[x, x^{-1}]$임을 안다.
 
 따라서 $T$의 coordinate ring은
 
@@ -210,7 +212,7 @@ Affine algebraic group $G$가 *reductive*라는 것은 $G$의 모든 유한차�
 1. *Algebraic torus* $(\mathbb{C}^\ast)^n$은 reductive이다.
 2. *General linear group* $\GL(n, \mathbb{C})$는 reductive이다.
 3. *Special linear group* $\SL(n, \mathbb{C})$는 reductive이다.
-4. *Orthogonal group, Unitary group* $\operatorname{O}(n)$, $\operatorname{U}(n)$ 등도 reductive이다.
+4. *Orthogonal group, Symplectic group* $\operatorname{O}(n, \mathbb{C})$, $\operatorname{Sp}(2n, \mathbb{C})$ 등도 reductive이다.
 
 반면, $\mathbb{G}_a = \mathbb{C}$는 reductive가 아니다.
 :::
@@ -231,7 +233,9 @@ $$X /\!/ G = \Spec(A^G)$$
 
 $$t \cdot [x:y] = [tx:y]$$
 
-로 작용한다고 하자. Homogeneous coordinate ring $\mathbb{C}[x,y]$에서 $t$가 $x$에 대해서는 $t$-배, $y$에 대해서는 1-배로 작용한다고 하면, 각 차수 $d$의 성분 $\mathbb{C}_d[x,y]$에서 monomial $x^a y^{d-a}$는 $t$에 의해 $t^a$-배로 작용한다. 즉, 각 monomial이 서로 다른 weight를 갖습니다.\n\n이 경우 $\mathbb{C}_d[x,y]$ 전체를 보존하는 $G$-invariant subspace는 $y^d$뿐이며, $A_d^G = \mathbb{C} \cdot y^d$로 well-defined합니다. 그러나 일반적인 projective variety의 action에서는 action이 $\mathbb{P}^n$ 전체로 확장되지 않으면, grading과 action이 서로 compatible하지 않아 $A_d^G$가 잘 정의되지 않습니다.
+로 작용한다고 하자. Homogeneous coordinate ring $\mathbb{C}[x,y]$에서 $t$가 $x$에 대해서는 $t$-배, $y$에 대해서는 1-배로 작용한다고 하면, 각 차수 $d$의 성분 $\mathbb{C}_d[x,y]$에서 monomial $x^a y^{d-a}$는 $t$에 의해 $t^a$-배로 작용한다. 즉, 각 monomial이 서로 다른 weight를 갖는다.
+
+이 경우 $\mathbb{C}_d[x,y]$ 전체를 보존하는 $G$-invariant subspace는 $y^d$뿐이며, $A_d^G = \mathbb{C} \cdot y^d$로 well-defined이다. 그러나 일반적인 projective variety의 action에서는 action이 $\mathbb{P}^n$ 전체로 확장되지 않으면, grading과 action이 서로 compatible하지 않아 $A_d^G$가 잘 정의되지 않는다.
 
 ::: 정의 18
 Reductive group $G$의 projective variety $X$ 위로의 action에 대한 *linearization*이란, 다음을 만족하는 $G$의 $\mathbb{P}^n$ 위로의 action의 extension이다:

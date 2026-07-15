@@ -10,6 +10,8 @@ sidebar:
 
 date: 2025-02-05
 weight: 7
+published: false
+drift_needed: true
 ---
 
 스킴은 기하적인 동시에 대수적인 대상이므로, 이를 잘 알기 위해서는 앞선 글에서 살펴본 스킴의 위상구조 뿐만 아니라 대수적인 구조도 동시에 고려할 필요가 있으며, 우리는 이전 글에서 이러한 철학이 어떻게 반영되는지를 간략하게 살펴보았다. 이번 글에서는 이 철학을 더욱 발전시킨다. 
@@ -90,7 +92,7 @@ $$D_U(f)=\{x\in U\mid f_x\not\in \mathfrak{m}_x\},\qquad D_U(g)=\{x\in U\mid g_x
 
 $$D_V(f)=\{x\in V\mid f_x\not\in \mathfrak{m}_x\}$$
 
-로 정의하면 $D_V(f)=D_U(f)\cap V=D(f\vert_{U\cap D_U(f)})\subseteq V$이고, 이것이 공집합이기 위해서는 $f\vert_{U\cap D_U(f)}$가 $\mathcal{O}_X(V)$의 nilpotent element이다. 그런데 $\mathcal{O}_X(V)$는 위의 주장에 의하여 integral domain이므로, 이로부터 $f\vert_{U\cap D_U(f)}=0$이어야 함을 알고, 이것이 $U$의 임의의 open affine subset $V$에 대해 성립하므로 $f=0$이어야 한다. 
+로 정의하면 $D_V(f)=D_U(f)\cap V$이고, 이것이 공집합이기 위해서는 $f\vert_V$가 $\mathcal{O}_X(V)$의 nilpotent element이다. 그런데 $\mathcal{O}_X(V)$는 위의 주장에 의하여 integral domain이므로, 이로부터 $f\vert_V=0$이어야 함을 알고, 이것이 $U$의 임의의 open affine subset $V$에 대해 성립하므로 $f=0$이어야 한다. 
 :::
 
 한편 [§스킴의 위상구조, ⁋예시 6](/ko/math/scheme_theory/topology_of_schemes#ex6)을 보면, 임의의 scheme $X$의 irreducibility를 stalk만 보아서는 판단할 수 없다는 것을 안다. 가령 $Z(\x(\x-1))$는 두 개의 component로 쪼개지므로 각 component의 점은 다른 component의 점에 대한 정보를 알지 못한다. 따라서 integrality 또한 stalk만 보아서는 판단하지 못한다. 
@@ -215,11 +217,13 @@ $$\supp(f)=Z(\ann(f))$$
 더 일반적으로, $A$가 integral domain이 아니라면 $\ann(f)$가 $0$도, $A$도 아닌 경우가 존재하므로 embedded point가 존재할 가능성이 있다. 
 
 ::: 예시 11
-Affine scheme $X=\Spec \mathbb{K}[\x_1,\x_2]/(\x_2^2, \x_1\x_2)$를 생각하자. 그럼 [§스펙트럼, ⁋보조정리 6](/ko/math/scheme_theory/spectrums#lem6)과 [§스펙트럼, ⁋명제 9](/ko/math/scheme_theory/spectrums#prop9)에 의하여, 집합으로서 
+Affine scheme $X=\Spec \mathbb{K}[\x_1,\x_2]/(\x_2^2, \x_1\x_2)$를 생각하자. 그럼 [§스펙트럼, ⁋명제 9](/ko/math/scheme_theory/spectrums#prop9)에 의하여 집합으로서 $X=Z(\x_2^2,\x_1\x_2)$이며, $\sqrt{(\x_2^2,\x_1\x_2)}=(\x_2)$이므로 이는 $Z(\x_2)$, 즉 $\x_1$-축($\Spec\mathbb{K}[\x_1]$)이다. 
 
-$$X= Z(\x_2^2,\x_1\x_2)=Z(\x_2^2)\cap Z(\x_1\x_2)=\{(0,0)\}$$
+그럼에도 불구하고 ring $A=\mathbb{K}[\x_1,\x_2]/(\x_2^2,\x_1\x_2)$는 primary 분해
 
-이다. 
+$$(\x_2^2,\x_1\x_2)=(\x_2)\cap(\x_1,\x_2)^2$$
+
+가 보여주듯 두 개의 associated prime $(\x_2)$와 $(\x_1,\x_2)$를 가진다. 전자는 $\x_1$-축의 generic point로 $X$의 유일한 irreducible component를 결정하고, 후자는 이 component의 generic point가 아니므로 embedded point가 되며 원점에 해당한다. 
 :::
 
 ## 유리함수
@@ -243,7 +247,7 @@ Locally noetherian scheme $X$와, $X$의 associated point들을 모두 포함하
 ::: 예시 13
 Affine scheme $X=\Spec \mathbb{K}[\x_1,\x_2]/(\x_2-\x_1^2)$을 생각하자. 그럼 $X$는 유일한 associated prime $(0)$을 가지며, $X$의 임의의 열린집합은 이 점을 포함하므로 $X$의 rational function은 공집합이 아닌 임의의 열린집합 $U$와 그 위에서의 함수 $f\in\Gamma(U, \mathcal{O}_X)$로 이루어진다. 
 
-한편, 우리는 affine scheme $X=\Spec A$의 임의의 (공집합이 아닌) 열린집합은 적당한 nonzero $f\in A$에 대하여 $\Spec A_f$의 꼴이며, 이 위에서의 함수는 $A_f$로 주어지는 것을 안다. 가령 이 예시에서 $f$를 $\x_1$(의 $A$에서의 image)로 택했다고 하면, isomorphism
+한편, 우리는 affine scheme $X=\Spec A$의 principal open subset $\Spec A_f$들이 위상의 basis를 이루며, 이 위에서의 함수는 $A_f$로 주어지는 것을 안다. 가령 이 예시에서 $f$를 $\x_1$(의 $A$에서의 image)로 택했다고 하면, isomorphism
 
 $$\left(\frac{\mathbb{K}[\x_1,\x_2]}{(\x_2-\x_1^2)}\right)_{\x_1}\cong\frac{\mathbb{K}[\x_1,\x_2]_{\x_1}}{(\x_2-\x_1^2)_{\x_1}}$$
 

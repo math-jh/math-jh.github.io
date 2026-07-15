@@ -9,7 +9,9 @@ sidebar:
     nav: "scheme_theory-ko"
 
 date: 2025-02-18
-weight: 11
+weight: 10
+published: false
+drift_needed: true
 ---
 
 [§스킴, ⁋보조정리 2](/ko/math/scheme_theory/schemes#lem2)에서 우리는 affine scheme $\Spec A$에 대하여, 임의의 원소 $f$가 open affine subscheme $D(f)\cong \Spec A_f$를 정의하는 것을 살펴보았으며, 특히 이 두 structure sheaf를 비교하기 위해 우리는 $\epsilon: A \rightarrow A_f$로부터 얻어지는
@@ -54,7 +56,7 @@ $$\pi_1:\mathbb{K}[\x] \rightarrow \mathbb{K}[\x]/(\x)\cong \mathbb{K},\qquad \p
 
 $$\Spec\pi_1:\Spec \mathbb{K}[\x]/(\x) \rightarrow \Spec \mathbb{K}[\x],\qquad \Spec\pi_2:\Spec \mathbb{K}[\x]/(\x^2) \rightarrow \Spec \mathbb{K}[\x]$$
 
-을 생각하면, 연속함수로서 $\Spec\pi_1$은 $\Spec \mathbb{K}[\x]/(\x)$의 유일한 한 점 $(0)$을 $\Spec \mathbb{K}[\x]$의 한 점 $(\x)$으로, $\Spec\pi_2$는 $\Spec \mathbb{K}[\x]/(\x^2)$의 유일한 한 점 $(\x)$를 $\Spec \mathbb{K}[\x]$의 한 점 $(\x)$으로 보내는 것을 안다. 즉 연속함수로서 이들은 같은 함수를 정의하지만, 물론 $\Spec \mathbb{K}[\x]/(\x)$와 $\mathbb{K}[\x]/(\x^2)$는 scheme으로서 isomorphic하지 않다. 
+을 생각하면, 연속함수로서 $\Spec\pi_1$은 $\Spec \mathbb{K}[\x]/(\x)$의 유일한 한 점 $(0)$을 $\Spec \mathbb{K}[\x]$의 한 점 $(\x)$으로, $\Spec\pi_2$는 $\Spec \mathbb{K}[\x]/(\x^2)$의 유일한 한 점 $(\x)$를 $\Spec \mathbb{K}[\x]$의 한 점 $(\x)$으로 보내는 것을 안다. 즉 연속함수로서 이들은 같은 함수를 정의하지만, 물론 $\Spec \mathbb{K}[\x]/(\x)$와 $\Spec \mathbb{K}[\x]/(\x^2)$는 scheme으로서 isomorphic하지 않다. 
 :::
 
 당연히 우리가 바라는 structure sheaf는 대수적인 정보를 포함하는 $(\Spec\pi)_\ast \mathcal{O}_{\Spec A/\mathfrak{a}}$의 형태이며, 이것이 $\iota^{-1}\mathcal{O}_{\Spec A}$와 어떠한 관계가 있는지는 이 글의 말미에서 살펴보게 된다.
@@ -239,7 +241,7 @@ $$\mathcal{I}_{Z/Y} \rightarrow \mathcal{O}_Y \rightarrow \varphi_\ast \mathcal{
 
 우리는 [\[대수적 구조\] §대수, ⁋명제 8](/ko/math/algebraic_structures/algebras#prop8)에 의하여 $\mathbb{K}$-algebra homomorphism $\phi:\mathbb{K}[\x_1,\ldots, \x_n] \rightarrow \mathbb{K}[\epsilon]/(\epsilon^2)$는 $\x_i$의 값에 의해 완전히 결정된다는 것을 안다. 따라서 $\phi(\x_i)=a_i+b_i\epsilon$이라 하자. 만일 $0$이 아닌 $b_i$가 존재한다면 $\phi$가 surjective임을 보일 수 있고, 따라서 $\Spec\phi$는 closed embedding이며 $\Spec\phi$의 scheme-theoretic image는 $\Spec\phi$가 정의하는 closed subscheme 자기 자신이다. 구체적으로 이를 써 보면 $\Spec\phi$는 $\mathbb{K}[\epsilon]/(\epsilon^2)$의 유일한 prime ideal $(\epsilon)$을 $\Spec \mathbb{K}[\x_1,\ldots, \x_n]$의 prime ideal
 
-$$(\Spec\phi)(\epsilon)=\phi^{-1}(\epsilon)=\left(\frac{\x_1}{b_1}-\frac{a_1}{b_1},\ldots \frac{\x_n}{b_n}-\frac{a_n}{b_n}\right)=(\x_1-a_1,\ldots, \x_n-a_n)$$
+$$(\Spec\phi)(\epsilon)=\phi^{-1}(\epsilon)=\left(\frac{\x_1}{b_1}-\frac{a_1}{b_1},\ldots, \frac{\x_n}{b_n}-\frac{a_n}{b_n}\right)=(\x_1-a_1,\ldots, \x_n-a_n)$$
 
 로 보낸다. 즉 연속함수로서 $\Spec\phi$는 한점공간 $\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$을 $\mathbb{A}^n$의 한 점 $(a_1,\ldots, a_n)$으로 보낸다.
 
