@@ -10,6 +10,8 @@ sidebar:
 
 date: 2025-01-27
 weight: 3
+published: false
+drift_needed: true
 
 ---
 
@@ -225,7 +227,7 @@ $$s\vert_{D(f_\alpha)}=s'\vert_{D(f_\alpha)}=s_\alpha$$
 :::
 
 ::: 정의 7
-[보조정리 5](#lem5)에 의해 정의되는 $\Spec A$ 위의 sheaf를 $\mathcal{O}_{\Spec A}$로 쓰고, 이를 *structure sheaf*라 부른다. 
+[보조정리 6](#lem6)에 의해 정의되는 $\Spec A$ 위의 sheaf를 $\mathcal{O}_{\Spec A}$로 쓰고, 이를 *structure sheaf*라 부른다. 
 :::
 
 그럼 $(\Spec A,\mathcal{O}_{\Spec A})$는 locally ringed space 이다. 

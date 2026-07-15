@@ -44,7 +44,7 @@ Closed embedding $\iota: Z \hookrightarrow X$가 *effective Cartier divisor*라�
 
 $$\iota\vert^{U_i}:\iota^{-1}(U_i) \rightarrow U_i$$
 
-마다 적당한 non-zerodivisor $s_i\in A_i=\Gamma(U_i, \mathcal{O}_X)$가 존재하여 두 closed embedding $\iota^{U_i}$와 $Z(s_i)\hookrightarrow U_i$가 isomorphic한 것이다.
+마다 적당한 non-zerodivisor $s_i\in A_i=\Gamma(U_i, \mathcal{O}_X)$가 존재하여 두 closed embedding $\iota\vert^{U_i}$와 $Z(s_i)\hookrightarrow U_i$가 isomorphic한 것이다.
 :::
 
 정의에 의해 locally principal embedding은 대략적으로 ideal sheaf가 (국소적으로는) 하나의 원소로 생성되는 것, 즉 principal ideal인 것이고 effective Cartier divisor는 적절한 affine cover를 잡으면 이 하나의 원소가 non-zerodivisor이도록 할 수 있는 것이다. 따라서 임의의 effective Cartier divisor는 locally principal이지만 그 역은 성립하지 않는다.

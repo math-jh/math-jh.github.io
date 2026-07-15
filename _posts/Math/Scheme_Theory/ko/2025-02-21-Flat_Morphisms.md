@@ -376,7 +376,7 @@ $$\Tor_1^{\mathcal{O}_{Y,y}}(\kappa(y), \mathcal{O}_{X,x})=0$$
 $Y$가 locally Noetherian이므로 $A=\mathcal{O}_{Y,y}$는 Noetherian local ring이고, $f$가 locally of finite type이므로 $X$ 또한 locally Noetherian이어서 $E=\mathcal{O}_{X,x}$도 Noetherian local ring이다. $f$가 유도하는 $A \rightarrow E$는 국소사상이므로 $\mathfrak{m}_yE\subseteq \mathfrak{m}_x$를 만족한다. 이제 $M=E$로 두면 $M$은 유한생성 $E$-가군이므로 [\[가환대수학\] §평탄성과 국소화, ⁋정리 1](/ko/math/commutative_algebra/local_criterion_for_flatness#thm1)의 가정이 모두 충족되며, 그 결론이 정확히 주장하는 동치이다.
 :::
 
-평탄한 점들의 집합이 $X$의 열린집합을 이룬다는 사실 또한 성립한다. 즉 $f$가 locally of finite presentation이면 평탄 영역은 열린집합이며, 이는 [명제 11](#prop11)을 $X$ 쪽에서 본 형태에 해당한다. 그러나 그 증명은 Fitting ideal에 대한 별도의 이론을 필요로 하므로 여기에서는 다루지 않고 **[EGA]** IV.11.1.1과 [\[Stacks\] Tag 00RC](https://stacks.math.columbia.edu)를 인용하는 데에 그친다.
+평탄한 점들의 집합이 $X$의 열린집합을 이룬다는 사실 또한 성립한다. 즉 $f$가 locally of finite presentation이면 평탄 영역은 열린집합이며, 이는 [명제 11](#prop11)을 $X$ 쪽에서 본 형태에 해당한다. 그러나 그 증명은 Fitting ideal에 대한 별도의 이론을 필요로 하므로 여기에서는 다루지 않고 **[EGA]** IV.11.1.1과 [\[Stacks\] Tag 00RC](https://stacks.math.columbia.edu/tag/00RC)를 인용하는 데에 그친다.
 
 또한 매끄러운 사상은 그 정의에 평탄성을 직접 조건으로 포함하므로 언제나 평탄이다. ([§매끄러운 사상과 étale 사상](/ko/math/scheme_theory/smooth_and_etale_morphisms))
 

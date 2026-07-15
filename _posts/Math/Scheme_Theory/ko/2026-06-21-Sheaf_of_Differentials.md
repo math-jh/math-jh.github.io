@@ -12,6 +12,7 @@ date: 2026-06-21
 weight: 20
 
 published: false
+drift_needed: true
 ---
 
 대수다양체나 manifold 위에서 미분형식은 접공간과 그 쌍대를 통해 기하학을 해석학적으로 다루는 도구이다. Scheme의 세계에서는 좌표나 극한을 직접 쓸 수 없으므로, 미분을 순수하게 대수적으로 정의해야 한다. 그 출발점은 Kähler 미분 가군으로, 이는 Leibniz rule을 만족하는 도분 가운데 가장 보편적인 것을 표현한다. ([\[가환대수학\] §미분, ⁋정의 3](/ko/math/commutative_algebra/differentials#def3)) 이번 글에서는 우선 affine 수준에서 Kähler 미분 가군과 그에 딸린 두 완전열을 상기한 뒤, 이를 scheme 사상 $f:X \rightarrow S$에 대해 sheaf로 옮긴 *cotangent sheaf* $\Omega_{X/S}$를 정의한다. 이 sheaf는 affine 위에서 Kähler 미분 가군의 연관층을 붙인 것이자, 동시에 대각선 사상의 conormal로도 얻어진다. 이로부터 tangent sheaf와 Zariski 접공간, 그리고 affine space와 사영공간 위의 미분층의 구조를 살펴본다.
@@ -22,7 +23,7 @@ published: false
 
 $$\Der_A(B, M)\cong \Hom_B(\Omega_{B/A}, M)$$
 
-이 성립한다. ([\[가환대수학\] §미분, ⁋보조정리 2](/ko/math/commutative_algebra/differentials#lem2)) 즉 $\Omega_{B/A}$는 원소들 $db$ ($b\in B$)로 생성되며, $d(xy)=x\,dy+y\,dx$와 $A$-선형성을 relation으로 가지는 $B$-가군이다.
+이 성립한다. ([\[가환대수학\] §미분, ⁋보조정리 2](/ko/math/commutative_algebra/differentials#lem2)) 즉 $\Omega_{B/A}$는 원소들 $db$ ($b\in B$)로 생성되며, $d(xy)=xdy+ydx$와 $A$-선형성을 relation으로 가지는 $B$-가군이다.
 
 scheme 사상으로 옮기기에 앞서, $\Omega$가 환의 합성과 quotient에 대해 가지는 두 가지 functorial한 완전열을 정리해 둔다. 이들은 이후 cotangent sheaf의 국소적 거동을 통제하는 핵심 도구이다. 첫째는 환들의 합성 $A \rightarrow B \rightarrow C$에 대한 추이 완전열이다.
 
@@ -90,7 +91,7 @@ $$\mathfrak{a}/\mathfrak{a}^2\cong \Omega_{B/A}$$
 
 $$\begin{aligned}
 (bb'\otimes 1-1\otimes bb')&=(b\otimes 1-1\otimes b)(1\otimes b')+(b'\otimes 1-1\otimes b')(b\otimes 1)\\
-&\equiv b'\,(b\otimes 1-1\otimes b)+b\,(b'\otimes 1-1\otimes b')\pmod{\mathfrak{a}^2}
+&\equiv b'(b\otimes 1-1\otimes b)+b(b'\otimes 1-1\otimes b')\pmod{\mathfrak{a}^2}
 \end{aligned}$$
 
 이 성립하므로 ($\mathfrak{a}/\mathfrak{a}^2$ 위에서 $b\otimes 1$과 $1\otimes b$가 같은 작용을 하므로) $\delta$는 $A$-derivation이다. 따라서 universal property에 의하여 $\Omega_{B/A} \rightarrow \mathfrak{a}/\mathfrak{a}^2$이 유도되고, 두 사상이 서로 역임은 생성원 위에서 확인된다. ($db\mapsto \delta(b)\mapsto db$이고 $\mathfrak{a}/\mathfrak{a}^2$은 $\delta(b)$들로 생성된다.) 그러므로
@@ -156,9 +157,9 @@ $$\Omega_{\mathbb{A}^n_S/S}\cong \mathcal{O}_{\mathbb{A}^n_S}^{\oplus n}$$
 
 $\Omega_{B/A}$는 정의에 의하여 원소들 $df$ ($f\in B$)로 생성되는데, $d$가 $A$-derivation이므로 임의의 다항식 $f$에 대하여 chain rule
 
-$$df=\sum_{i=1}^n\frac{\partial f}{\partial \x_i}\,d\x_i$$
+$$df=\sum_{i=1}^n\frac{\partial f}{\partial \x_i}d\x_i$$
 
-가 성립한다. 따라서 $\Omega_{B/A}$는 $d\x_1,\ldots, d\x_n$으로 생성된다. 한편 이들이 $B$ 위에서 일차독립임을 보이기 위해, 각 $j$에 대하여 $j$번째 편미분 $\partial/\partial \x_j:B \rightarrow B$가 $A$-derivation임을 이용한다. 이는 universal property에 의하여 $B$-linear map $\partial_j:\Omega_{B/A} \rightarrow B$를 유도하며 $\partial_j(d\x_i)=\delta_{ij}$이므로, $\sum_i b_i\,d\x_i=0$이면 $\partial_j$를 적용하여 $b_j=0$을 얻는다. 그러므로 $d\x_1,\ldots, d\x_n$은 자유 기저이고 $\Omega_{B/A}\cong B^{\oplus n}$이다.
+가 성립한다. 따라서 $\Omega_{B/A}$는 $d\x_1,\ldots, d\x_n$으로 생성된다. 한편 이들이 $B$ 위에서 일차독립임을 보이기 위해, 각 $j$에 대하여 $j$번째 편미분 $\partial/\partial \x_j:B \rightarrow B$가 $A$-derivation임을 이용한다. 이는 universal property에 의하여 $B$-linear map $\partial_j:\Omega_{B/A} \rightarrow B$를 유도하며 $\partial_j(d\x_i)=\delta_{ij}$이므로, $\sum_i b_i d\x_i=0$이면 $\partial_j$를 적용하여 $b_j=0$을 얻는다. 그러므로 $d\x_1,\ldots, d\x_n$은 자유 기저이고 $\Omega_{B/A}\cong B^{\oplus n}$이다.
 :::
 
 이렇듯 affine space 위에서 미분층은 좌표함수의 미분이 자유 기저를 이루는 trivial bundle이다. 사영공간으로 넘어가면 상황이 더 흥미로워지는데, $\mathbb{P}^n$의 cotangent sheaf는 자유롭지 않지만 twisting sheaf들 사이의 짧은 완전열, 곧 Euler 완전열로 표현된다.
@@ -175,7 +176,7 @@ $\mathbb{P}^n=\Proj S$, $S=k[\x_0,\ldots, \x_n]$이라 하고 ([§사영스킴, 
 
 오른쪽 사상 $\mathcal{O}(-1)^{\oplus(n+1)} \rightarrow \mathcal{O}$를 정의하자. $\mathcal{O}(-1)^{\oplus(n+1)}$의 표준 기저를 $e_0,\ldots, e_n$이라 할 때, 이 사상을 $e_j\mapsto \x_j$로 정의한다. 여기에서 $\x_j$는 $\mathcal{O}(-1) \rightarrow \mathcal{O}$, 곧 $\mathcal{O} \rightarrow \mathcal{O}(1)$의 전역 section으로서 $\mathcal{O}(-1)$을 $\mathcal{O}$로 보내는 곱이다. 각 $U_i$ 위에서 $\x_i$가 가역이므로 이 사상은 surjective이다.
 
-이제 kernel을 계산하여 그것이 $\Omega_{\mathbb{P}^n/k}$임을 보인다. $U_i$ 위에서 $\mathcal{O}(-1)$을 $\x_i^{-1}$로 trivialize하면 위 사상은 $(a_0,\ldots, a_n)\mapsto \sum_j a_j (\x_j/\x_i)$로 주어지고, 그 kernel은 $\sum_j a_j\,d(\x_j/\x_i)=0$를 만족하는 관계와 동일한 rank $n$의 자유 가군이 된다. 구체적으로 사상 $\Omega_{\mathbb{P}^n/k}\vert_{U_i} \rightarrow \mathcal{O}(-1)^{\oplus(n+1)}\vert_{U_i}$을
+이제 kernel을 계산하여 그것이 $\Omega_{\mathbb{P}^n/k}$임을 보인다. $U_i$ 위에서 $\mathcal{O}(-1)$을 $\x_i^{-1}$로 trivialize하면 위 사상은 $(a_0,\ldots, a_n)\mapsto \sum_j a_j (\x_j/\x_i)$로 주어지고, 그 kernel은 $\sum_j a_j d(\x_j/\x_i)=0$를 만족하는 관계와 동일한 rank $n$의 자유 가군이 된다. 구체적으로 사상 $\Omega_{\mathbb{P}^n/k}\vert_{U_i} \rightarrow \mathcal{O}(-1)^{\oplus(n+1)}\vert_{U_i}$을
 
 $$d\Bigl(\frac{\x_j}{\x_i}\Bigr)\longmapsto \frac{1}{\x_i}\Bigl(e_j-\frac{\x_j}{\x_i}e_i\Bigr)$$
 
