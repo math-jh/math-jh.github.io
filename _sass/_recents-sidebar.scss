@@ -258,10 +258,17 @@
     margin-top: 1em;
 
     @include breakpoint($large) {
+      // 짧은 최근 글 블록을 컬럼(= 좌측 taxonomy 높이) 바닥에 맞춘다. align-self:end 면
+      // 위에 남는 공간이 vfill 처럼 블록을 바닥으로 밀고, 목록이 길어지면 그 공간이 0 으로
+      // 접히며 위로 자란다 (absolute 가 아니라 grid 정렬이라 overflow 없이 행이 늘어난다).
+      // sticky 도 top 이 아니라 bottom 기준으로 둬, 바닥 정렬과 어긋나지 않게 한다.
+      align-self: end;
       position: sticky;
-      top: 2em;
-      align-self: start;   // 컬럼 높이만큼 늘어나지 않아야 sticky 가 동작
+      bottom: 2em;
       margin-top: 0;
+      // 바닥에서 10em 들어올린다. margin-bottom 은 슬랙을 넘으면 grid 행 높이를 키워버려
+      // 리프트 대신 아래 공간만 늘어나므로, 행 높이와 무관한 transform 으로 확실히 올린다.
+      transform: translateY(-10em);
     }
 
     .nav__list { margin-bottom: 0; }

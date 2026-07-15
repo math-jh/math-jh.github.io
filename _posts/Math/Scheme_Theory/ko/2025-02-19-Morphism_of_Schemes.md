@@ -10,6 +10,8 @@ sidebar:
 
 date: 2025-02-19
 weight: 8
+published: false
+drift_needed: true
 ---
 
 정의에 의해 $\Sch$는 $\LRS$의 full subcategory이다. ([§스킴, ⁋정의 1](/ko/math/scheme_theory/schemes#def1)) 즉 두 scheme $X,Y$가 주어졌을 때, $X$에서 $Y$로의 scheme morphism은 연속함수 $\varphi: X \rightarrow Y$와 structure sheaf 사이의 morphism $\varphi^\sharp: \mathcal{O}_Y \rightarrow \varphi_\ast \mathcal{O}_X$으로 주어지며, 이 때 $\varphi^\sharp$는 각각의 stalk으로 제한하였을 때 local homomorphism이 되어야 한다. ([§아핀스킴, ⁋정의 2](/ko/math/scheme_theory/affine_schemes#def2)) 
@@ -69,7 +71,7 @@ $$(x_0,\ldots, x_n)\rightarrow [x_0:\cdots:x_n]$$
 우선 우리는 다음을 정의한다. 
 
 ::: 정의 3
-임의의 scheme $S$에 대하여, slice category $\Sch_{/S}$ over $S$를 *$S$-scheme*들의 category라 부른다. ([\[범주론\] §범주, ⁋예시 13](/ko/math/category_theory/categories#ex13)) 
+임의의 scheme $S$에 대하여, slice category $\Sch/S$ over $S$를 *$S$-scheme*들의 category라 부른다. ([\[범주론\] §범주, ⁋예시 13](/ko/math/category_theory/categories#ex13)) 
 :::
 
 즉 $S$-scheme은 $S$로의 scheme morphism $X \rightarrow S$를 부르는 다른 이름이며, 이를 *structure morphism*이라 부르기도 한다. 
@@ -99,7 +101,7 @@ $$\Hom_\Sch(X, \Spec A)=\Hom_\LRS(X, \Spec A)\cong \Hom_\cRing(A, \Gamma(X, \mat
 이제 [예시 2](#ex2)를 더욱 일반화하는 다음의 예시를 보자.
 
 ::: 예시 5
-Ring $A$와 $A$-scheme $X$를 생각하고, $X$ 위에 정의된 함수들 $f_0,\ldots, f_n\in \Gamma(X, \mathcal{O}_X)$이 주어졌다 하고, $X$의 affine open covering $X=\bigcup U_j$를 생각하자. 그럼
+Ring $A$와 $A$-scheme $X$를 생각하고, $X$ 위에 정의된 함수들 $f_0,\ldots, f_n\in \Gamma(X, \mathcal{O}_X)$이 주어졌다 하자. 이때 이들이 단위아이디얼을 생성한다, 즉 $(f_0,\ldots, f_n)=\mathcal{O}_X$를 만족한다 하자. 또한 $X$의 affine open covering $X=\bigcup U_j$를 생각하자. 그럼
 
 $$U_{ij}:=D(f_i)\cap U_j=D(f_i\vert_{U_j})\subseteq U_j$$
 
@@ -163,11 +165,11 @@ $$\begin{aligned}\{\text{points $(x_1,\ldots, x_n)\in \mathbb{A}^n_\mathbb{K}$}\
 위에서와 마찬가지로, $X$가 $\Spec A$ 꼴이라면 이를 간단히 $A$-point라 부른다. 이 개념의 유용성은 다음 예시에서도 확인할 수 있다.
 
 ::: 예시 8
-$\mathbb{C}$-scheme $X=\Spec\frac{\mathbb{C}[\x_1,\ldots, \x_n]}{(f_1,\ldots, f_r)}$이 주어졌다 하고, 이 scheme의 $\mathbb{Q}$-point를 생각하자. 그럼 [\[가환대수학\] §영점정리, ⁋보조정리 5](/ko/math/commutative_algebra/nullstellensatz#lem5)와 [예시 7](#ex7)의 계산으로부터 우리는 $X$의 $\mathbb{Q}$-point $\Spec\phi: \Spec \mathbb{Q}\rightarrow X$와, 
+정수 계수 다항식 $f_1,\ldots, f_r\in\mathbb{Z}[\x_1,\ldots, \x_n]$이 정의하는 $\mathbb{Z}$-scheme $X=\Spec\mathbb{Z}[\x_1,\ldots, \x_n]/(f_1,\ldots, f_r)$를 생각하자. 그럼 [§아핀스킴, ⁋정리 13](/ko/math/scheme_theory/affine_schemes#thm13)에 의하여 $X$의 $\mathbb{Q}$-point $\Spec\phi: \Spec \mathbb{Q}\rightarrow X$는 ring homomorphism $\phi:\mathbb{Z}[\x_1,\ldots, \x_n]/(f_1,\ldots, f_r)\rightarrow\mathbb{Q}$에 대응되고, $\phi$는 $\mathbb{Z}$ 위에서 표준적으로 주어지므로 이는 다시
 
 $$f_1(x_1,\ldots, x_n)=\cdots=f_r(x_1,\ldots, x_n)=0$$
 
-의 유리수해 사이의 일대일대응이 존재함을 안다. 비슷하게 위의 방정식의 정수해는 정확히 $X$의 $\mathbb{Z}$-point에 대응된다. 
+의 유리수해 $(x_1,\ldots, x_n)\in\mathbb{Q}^n$와 일대일대응된다. 비슷하게 위 방정식의 정수해는 정확히 $X$의 $\mathbb{Z}$-point에 대응된다. 
 :::
 
 이러한 관점을 바탕으로 다음을 정의한다.
@@ -180,14 +182,14 @@ Functor $\Hom_\Sch(-,X): \Sch^\op \rightarrow \Set$을 *functor of points of $X$
 
 ## 스킴의 족
 
-마지막 관점은 아직 엄밀하게 정의하기에는 우리가 가진 언어가 부족하므로, 기하학적인 직관만 설명하기로 한다. 우리는 scheme morphism $f:X \rightarrow S$를 *family parametrized by $S$* 혹은 간단히 $S$-family라 부른다. 따라서 정의에 의하여 $\Sch_{/S}$는 $S$로 parametrize된 family들의 category로 생각할 수 있다. 
+마지막 관점은 아직 엄밀하게 정의하기에는 우리가 가진 언어가 부족하므로, 기하학적인 직관만 설명하기로 한다. 우리는 scheme morphism $f:X \rightarrow S$를 *family parametrized by $S$* 혹은 간단히 $S$-family라 부른다. 따라서 정의에 의하여 $\Sch/S$는 $S$로 parametrize된 family들의 category로 생각할 수 있다. 
 
 기하학적인 직관을 위해서는 기본적으로 다음과 같은 (scheme이 아닌) 상황을 생각하면 된다.
 
 ::: 예시 10
 좌표공간 $\mathbb{R}^3$에서 정의된 구 $S:x^2+y^2+z^2=1$과, $x$축으로의 projection $\pi: S \rightarrow \mathbb{R}_x$를 생각하자. 그럼 임의의 $x_0\in \mathbb{R}_x$에 대하여, 
 
-$$\pi^{-1}(x_0)=\{(x_0,y,z)\in \mathbb{R}: y^2+z^2=1-x_0^2\}$$
+$$\pi^{-1}(x_0)=\{(x_0,y,z)\in \mathbb{R}^3: y^2+z^2=1-x_0^2\}$$
 
 이다. 이를 기하학적으로 표현하면, 각각의 $x_0\in \mathbb{R}_x$마다 원 $y^2+z^2=1-x_0^2$가 대응된 상황으로 볼 수 있으며, 따라서 $\pi$를 <em-ko>$x$축으로 parametrize된 원들의 family</em-ko>로 생각할 수 있다. 
 :::

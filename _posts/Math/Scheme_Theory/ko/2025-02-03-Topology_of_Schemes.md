@@ -35,7 +35,7 @@ $$\cl(\{\mathfrak{m}\})=ZI(\{\mathfrak{m}\})=ZIZ(\mathfrak{m})=Z(\mathfrak{m})=\
 위상공간 $X$의 두 점 $x,y$가 $x\in\cl(\{y\})$를 만족한다 하자. 그럼 $x$를 $y$의 *specialization*이라 하고, $y$는 $x$의 *generalization*이라 한다. 만일 위상공간 $X$의 닫힌집합 $C$에 대하여, $C=\cl(\{x\})$가 성립한다면 $x$를 $C$의 *generic point<sub>일반점</sub>*라 부른다. 
 :::
 
-그럼 정의에 의하여, $x$가 $C$의 generic point라면 $A$의 임의의 열린집합 $U$는 항상 $x$를 포함한다. 따라서 generic point는 $C$의 모든 점에 가까운 점으로 생각할 수 있다.
+그럼 정의에 의하여, $x$가 $C$의 generic point라면 임의의 점 $y\in C$와 그 열린근방 $U$에 대하여 $U$는 항상 $x$를 포함한다. 따라서 generic point는 $C$의 모든 점에 가까운 점으로 생각할 수 있다.
 
 이를 더욱 기하적으로 설명하면 다음과 같다. 예를 들어 $\mathbb{A}^n=\Spec\mathbb{K}[\x_1,\ldots, \x_n]$을 보자. 그럼 classical한 대수기하학에서 우리는 적당한 함수 $f$의 zero locus $Z(f)$가 $\mathbb{A}^n_\text{classical}$의 subscheme을 이룬다는 것을 안다. 
 
@@ -62,7 +62,7 @@ Irreducibility의 경우 다음 예시들을 보자.
 ::: 예시 5
 임의의 integral domain $A$에 대하여, $\Spec A$는 항상 irreducible이다. Generic point $\{0\}$을 생각하면, $\{0\}$를 포함하는 닫힌집합은 오직 $\Spec A$ 자신뿐이어야 하므로, $\Spec A$를 두 개의 proper closed subset의 합집합으로 나타내는 것이 불가능하기 때문이다. 따라서 $A=\mathbb{K}[\x_0,\ldots, \x_n]$으로 두면 affine $n$-space $\mathbb{A}_\mathbb{K}^n$은 irreducible인 것을 안다. 그럼 projective space $\mathbb{P}^n_\mathbb{K}$는 irreducible open subset들 $D_+(\x_i)$을 가지므로 [\[위상수학\] §차원, ⁋명제 8](/ko/math/topology/dimension#prop8)에 의해 $\mathbb{P}^n_\mathbb{K}$ 또한 irreducible이다. 
 
-거꾸로 scheme $X$의 임의의 irreducible closed set $Z$는 항상 generic point $I(Z)$를 갖는다. ([§스펙트럼, ⁋명제 16](/ko/math/scheme_theory/spectrums#prop16)) 
+거꾸로 affine scheme $\Spec A$의 임의의 irreducible closed set $Z$는 항상 generic point $I(Z)$를 갖는다. ([§스펙트럼, ⁋명제 16](/ko/math/scheme_theory/spectrums#prop16)) 
 :::
 
 Irreducible space는 항상 connected이므로, 위의 예시들은 connected space의 예시이기도 하다. 다음 예시는 connected가 아닌 scheme과, connected이지만 irreducible이 아닌 scheme들의 예시를 위한 것으로, affine plane $\mathbb{A}^2_\mathbb{K}$의 특정한 *closed subscheme*들이 주어져 있다. 

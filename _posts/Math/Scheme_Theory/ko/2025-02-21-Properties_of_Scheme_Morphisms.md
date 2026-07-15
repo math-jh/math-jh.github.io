@@ -10,9 +10,11 @@ sidebar:
 
 date: 2025-02-21
 weight: 9
+published: false
+drift_needed: true
 ---
 
-앞선 글에서 우리는 scheme morphism을 살펴보는 몇 가지 관점을 살펴보았다. 이번 글에서 우리는 본격적으로 scheme morphism이 갖는 성질들을 정의한다. 우선 이들이 공유하는 다음 성질을 정의한다.
+앞선 글에서 우리는 scheme morphism을 이해하는 몇 가지 관점을 살펴보았다. 이번 글에서 우리는 본격적으로 scheme morphism이 갖는 성질들을 정의한다. 우선 이들이 공유하는 다음 성질을 정의한다.
 
 ::: 정의 1
 Scheme morphism의 성질 $P$가 *local on target*이라는 것은 다음 두 조건이 성립하는 것이다. 
@@ -68,7 +70,7 @@ Locally noetherian scheme은 항상 quasi-separated이다.
 ::: 증명
 Locally noetherian scheme $X$의 임의의 두 affine open subset $V_1=\Spec B_1, V_2=\Spec B_2$가 주어졌다 하고 $V_1\cap V_2$가 quasi-compact임을 보여야 한다. 
 
-우선 $X$가 locally noetherian이므로, $X$를 noetherian ring들의 스펙트럼 $\Spec A_i$로 덮을 수 있다. 이제 각각의 $i$에 대하여, [§스킴의 위상구조, ⁋보조정리 11](/ko/math/scheme_theory/topology_of_schemes#lem11)에 의하여 $U_i\cap V_1$을 noetherian ring들의 스펙트럼 $\Spec (A_i)_g$들로 덮을 수 있다. 이들을 모두 모으면 $V_1$을 noetherian ring들의 스펙트럼들로 덮을 수 있으며, [§스펙트럼, ⁋보조정리 12](/ko/math/scheme_theory/spectrums#lem12)에 의해 $V_1=\Spec B_1$은 유한히 많은 noetherian ring들의 스펙트럼으로 덮인다. 따라서 [§스킴의 위상구조, ⁋보조정리 13](/ko/math/scheme_theory/topology_of_schemes#lem13)에 의해 $B_1$은 noetherian ring이고 따라서 $V_1=\Spec B_1$은 noetherian이다. 다시  [\[위상수학\] §차원, ⁋명제 12](/ko/math/topology/dimension#prop12)와 [\[위상수학\] §차원, ⁋명제 13](/ko/math/topology/dimension#prop13)의 첫째 결과로부터 noetherian인 위상공간의 임의의 부분공간은 quasi-compact이므로, 특히 $V_1\cap V_2$ 또한 quasi-compact이다. 
+우선 $X$가 locally noetherian이므로, $X$를 noetherian ring들의 스펙트럼 $U_i=\Spec A_i$들로 덮을 수 있다. 이제 각각의 $i$에 대하여, [§스킴의 위상구조, ⁋보조정리 11](/ko/math/scheme_theory/topology_of_schemes#lem11)에 의하여 $U_i\cap V_1$을 noetherian ring들의 스펙트럼 $\Spec (A_i)_g$들로 덮을 수 있다. 이들을 모두 모으면 $V_1$을 noetherian ring들의 스펙트럼들로 덮을 수 있으며, [§스펙트럼, ⁋보조정리 12](/ko/math/scheme_theory/spectrums#lem12)에 의해 $V_1=\Spec B_1$은 유한히 많은 noetherian ring들의 스펙트럼으로 덮인다. 따라서 [§스킴의 위상구조, ⁋보조정리 13](/ko/math/scheme_theory/topology_of_schemes#lem13)에 의해 $B_1$은 noetherian ring이고 따라서 $V_1=\Spec B_1$은 noetherian이다. 다시  [\[위상수학\] §차원, ⁋명제 12](/ko/math/topology/dimension#prop12)와 [\[위상수학\] §차원, ⁋명제 13](/ko/math/topology/dimension#prop13)의 첫째 결과로부터 noetherian인 위상공간의 임의의 부분공간은 quasi-compact이므로, 특히 $V_1\cap V_2$ 또한 quasi-compact이다. 
 :::
 
 그럼 quasi-compactness와 quasi-separatedness는 [정의 1](#def1)의 성질을 만족할 뿐만 아니라, 다음 명제에서 확인할 수 있듯이 *affine-local on target*이다. ([§스킴의 위상구조, ⁋정의 9](/ko/math/scheme_theory/topology_of_schemes#def9))
