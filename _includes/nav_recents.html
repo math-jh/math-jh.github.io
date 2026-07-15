@@ -1,0 +1,39 @@
+{%- comment -%}
+  최근 글·댓글 블록. 왼쪽 사이드바(nav_list) 하단과 카테고리별 글 목록
+  페이지(/xx/categories/)의 우측 사이드바가 공유한다.
+
+  <li class="nav__recents-section"> 구조라 <ul class="nav__items"> 안에
+  넣어야 스타일이 맞는다. 언어는 include.lang 으로 받는다.
+{%- endcomment -%}
+{% assign _lang = include.lang | default: site.locale %}
+{% assign _lang_full = "/" | append: _lang | append: "/" %}
+{% assign _recent_posts = site.posts | where_exp: "post", "post.permalink contains _lang_full" | sort: "date" | reverse %}
+{% assign _comments = site.data.recent_comments[_lang] | default: empty %}
+
+<li class="nav__recents-section nav__recents-section--posts">
+  <a href="{{ '/' | append: _lang | append: '/recent/' | relative_url }}" class="nav__section-link">
+    <span class="nav__sub-title"><span class="material-icons md-12" style="vertical-align:-.2em">article</span> {{ site.data.ui-text[_lang].recent_posts | default: "Recent posts" }}</span>
+  </a>
+  <ul>
+    {% assign _shown = 0 %}
+    {% for _post in _recent_posts %}
+      {% if _shown >= 5 %}{% break %}{% endif %}
+      {% if _post.categories contains "Misc / LLM Workshop" %}{% continue %}{% endif %}
+      <li><a href="{{ _post.url | relative_url }}">{{ _post.title | markdownify | strip_html | truncate: 60 }}</a></li>
+      {% assign _shown = _shown | plus: 1 %}
+    {% endfor %}
+  </ul>
+</li>
+
+<li class="nav__recents-section nav__recents-section--comments">
+  <span class="nav__sub-title nav__sub-title--no-link"><span class="material-icons md-12" style="vertical-align:-.2em">comment</span> {{ site.data.ui-text[_lang].recent_comments | default: "Recent comments" }}</span>
+  <ul>
+    {% if _comments.size > 0 %}
+      {% for _c in _comments limit: 5 %}
+        <li><a href="{{ _c.permalink | relative_url }}#{{ _c.anchor | default: 'comments' }}">{{ _c.title | truncate: 50 }}{% if _c.author %} <span class="nav__recents-meta">— {{ _c.author }}</span>{% endif %}</a></li>
+      {% endfor %}
+    {% else %}
+      <li><span class="nav__recents-empty">—</span></li>
+    {% endif %}
+  </ul>
+</li>

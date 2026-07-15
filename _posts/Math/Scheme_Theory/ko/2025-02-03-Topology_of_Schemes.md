@@ -83,6 +83,8 @@ $$Z(\x\y)=\Spec \frac{\mathbb{K}[\x,\y]}{(\x\y)}$$
 이 있으며, 이 scheme의 irreducible component는 $\Spec\mathbb{K}[\x,\y]/(\x)$와 $\Spec \mathbb{K}[\x,\y]/(\y)$이다. 
 
 ![counterexamples](/assets/images/Math/Scheme_Theory/Topology_of_Schemes-1.svg){:style="width:21.87em" class="invert" .align-center}
+
+이들은 generic point의 관점에서도 설명할 수 있다. 앞서 우리는 함수 $f$가 정의하는 generic point는 $f$가 정의하는 ideal 그 자체라고 하였으며, 따라서, 예를 들어 $y$축을 나타내는 아이디얼 $(\x)$가 바로 $y$축의 generic point이며, 비슷하게 $(\y)$는 $x$축을 나타내는 generic point이다. 문제는 위에서 살펴본 $Z(\x\y)$를 나타내는 아이디얼이 없다는 것으로, 두 축을 합집합하여 얻어지는 대상에 해당하는 아이디얼은 이들 두 아이디얼의 교집합에 포함되어야 할테지만 이 두 아이디얼의 교집합은 $(0)$ 뿐이며, 이는 전체 ring $\mathbb{K}[\x,\y]/(\x\y)$의 prime ideal이 <em-ko>아니다</em-ko>, 즉, $\mathbb{K}[\x,\y]/(\x\y)$는 integral domain이 아니며, 이는 $\x\y=0$임에도 $\x,\y\neq 0$이기 때문이다. 이 때 zero-divisor의 역할을 해 주는 $\x,\y$들은 각각 서로 다른 component에서 $0$이 되는 함수들로, 더 복잡한 scheme의 경우에서도 약간의 계산은 추가되지만 그 정신은 같은 원리로 나타나게 된다. 
 :::
 
 한편, noetherian scheme의 예시는 다음 명제에 의해 얻어진다.
