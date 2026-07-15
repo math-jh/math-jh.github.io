@@ -10,6 +10,8 @@ sidebar:
 
 date: 2025-01-27
 weight: 2
+published: false
+drift_needed: true
 
 ---
 
@@ -154,7 +156,7 @@ $$\mathfrak{p}\not\in Z(f)\iff (f)\not\subseteq \mathfrak{p} \iff f\not\in \math
 Principal open set들의 모임은 $\Spec A$의 base를 이룬다. ([\[위상수학\] §위상공간의 기저, ⁋정의 1](/ko/math/topology/topological_bases#def1))
 :::
 ::: 증명
-임의의 열린집합 $\Spec A \setminus Z(S)$에 대하여, [보조정리 6](#lem6)의 둘째 결과을 활용하면 다음의 계산
+임의의 열린집합 $\Spec A \setminus Z(S)$에 대하여, [보조정리 6](#lem6)의 둘째 결과를 활용하면 다음의 계산
 
 $$\Spec A\setminus Z(S)=\Spec A\setminus Z\left(\sum_{f\in S} (f)\right)=\Spec A\setminus\left(\bigcap_{f\in S}Z(f)\right)=\bigcup_{f\in S} (\Spec A\setminus Z(f))=\bigcup_{f\in S} D(f)$$
 

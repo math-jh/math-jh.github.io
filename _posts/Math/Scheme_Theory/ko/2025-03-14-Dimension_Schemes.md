@@ -10,6 +10,8 @@ sidebar:
 
 date: 2025-03-14
 weight: 12
+published: false
+drift_needed: true
 
 ---
 
@@ -81,7 +83,7 @@ $$A_n\supsetneq A_{n-1}\supsetneq\cdots\supsetneq A_0=\cl_X(Y)$$
 그럼 ring $A$의 prime ideal $\mathfrak{p}$의 codimension은 ([\[가환대수학\] §차원, ⁋정의 2](/ko/math/commutative_algebra/Krull_dimension#def2)) $\Spec A$에서 점 $\mathfrak{p}$의 codimension과 같은 것을 확인할 수 있다. 
 
 ::: 명제 7
-$X$의 irreducible closed subset $Y$와 $Y$의 generic point $y$에 대하여, $\codim Y=\dim \mathcal{O}_{X, y}$이 성립한다. 
+$X$의 irreducible closed subset $Y$와 $Y$의 generic point $y$에 대하여, $\codim_X Y=\dim \mathcal{O}_{X,y}$이 성립한다.
 :::
 ::: 증명
 $Y$가 generic point $y$를 가지므로, 정의에 의해 $\codim_XY$와 $\codim_X\{y\}$가 같다. 이제 $y$를 포함하는 임의의 affine open subset $U\cong\Spec A$를 택하고, 이 isomorphism에 의해 $y\in U$가 $\mathfrak{p}_y\in \Spec A$에 대응된다 하자. 그럼  [\[위상수학\] §차원, ⁋명제 14](/ko/math/topology/dimension#prop14)로부터 우리는 $U$와 만나는 $X$의 irreducible closed subset들과 $U$의 irreducible closed subset들 사이의 일대일 대응이 존재한다는 것을 안다. 즉, $\codim_X\{y\}=\codim_U \mathfrak{p}_y$이다. 이제 [§스펙트럼, ⁋명제 16](/ko/math/scheme_theory/spectrums#prop16)으로부터 원하는 결과를 얻는다. 
@@ -139,7 +141,7 @@ $$\x_1=z_1+y_m^{r_1},\quad \ldots\quad,\quad \x_{m-1}=z_{m-1}+y_m^{r_{m-1}},\qua
 
 $$\alpha_{d_1d_2\cdots d_m}y_m^{r_1d_1+\cdots+r_{m-1}d_{m-1}+d_m}$$
 
-과 $z_k$를 포함하는 그 외의 항들이 될 것이다. 이제 $r_1,\ldots, r_{m-1}$을 충분히 크게 잡으면, 이러한 형태의 항이 최고차항이 되도록 할 수 있고, 따라서 위의 등식 ($\ast\ast$)은 $y_m$이 $z_1,\ldots, z_{m-1}$에 대해 intgrally dependent임을 보여준다. 한편 $z_1,\ldots, z_{m-1}$로 생성되는 $A$의 $\mathbb{K}$-subalgebra $A'$, 즉 ($\ast\ast$)를 $y_m$의 일변수 다항식으로 보았을 때 그 계수들이 존재하는 $A$의 $\mathbb{K}$-subalgebra $A'$에 대해서는 귀납적 가정에 의해 원하는 조건을 만족하는 $x_1,\ldots, x_n\in A$들이 존재한다. 이제 $A$는 위의 논증에 의해 finite $A'$-module이고, $A'$는 귀납적 가정에 의해 finite $\mathbb{K}[x_1,\ldots, x_n]$-module이므로 원하는 결과를 얻는다.
+과 $z_k$를 포함하는 그 외의 항들이 될 것이다. 이제 $r_1,\ldots, r_{m-1}$을 충분히 크게 잡으면, 이러한 형태의 항이 최고차항이 되도록 할 수 있고, 따라서 위의 등식 ($\ast\ast$)은 $y_m$이 $z_1,\ldots, z_{m-1}$에 대해 integrally dependent임을 보여준다. 한편 $z_1,\ldots, z_{m-1}$로 생성되는 $A$의 $\mathbb{K}$-subalgebra $A'$, 즉 ($\ast\ast$)를 $y_m$의 일변수 다항식으로 보았을 때 그 계수들이 존재하는 $A$의 $\mathbb{K}$-subalgebra $A'$에 대해서는 귀납적 가정에 의해 원하는 조건을 만족하는 $x_1,\ldots, x_n\in A$들이 존재한다. 이제 $A$는 위의 논증에 의해 finite $A'$-module이고, $A'$는 귀납적 가정에 의해 finite $\mathbb{K}[x_1,\ldots, x_n]$-module이므로 원하는 결과를 얻는다.
 :::
 
 기하적으로 $A=\mathbb{K}[y_1,\ldots, y_m]/\mathfrak{p}$라 두는 것은 $\Spec A$가 affine space $\mathbb{A}^m_\mathbb{K}$의 integral closed subscheme이라는 것과 같으므로, 위의 정리의 결과로 얻어지는 finite ring homomorphism $\mathbb{K}[x_1,\ldots, x_n] \rightarrow \mathbb{K}[y_1,\ldots, y_m]/\mathfrak{p}$는 기하적으로는 finite scheme morphism $\Spec A \rightarrow \Spec \mathbb{K}[x_1,\ldots, x_n]$을 찾는 것과 같다. 이제 finite extension $\mathbb{K}[x_1,\ldots, x_n] \rightarrow A$은 integral extension이므로 [명제 5](#prop5)에 의하여 $\dim A=\dim \mathbb{K}[x_1,\ldots, x_n]$이므로, [\[가환대수학\] §매개계, ⁋따름정리 11](/ko/math/commutative_algebra/system_of_parameters#cor11)에 의하여 다음 결과를 얻는다.
@@ -159,7 +161,7 @@ $$\alpha_{d_1d_2\cdots d_m}y_m^{r_1d_1+\cdots+r_{m-1}d_{m-1}+d_m}$$
 앞서 우리는 임의의 affine integral $\mathbb{K}$-scheme $X=\Spec A$에 대하여, $A$의 non-unit $f$를 통해 정의된 closed subscheme $Z(f)$는 $A$보다 하나 적은 차원을 갖는다는 것을 살펴보았다. 이는 분명 유용한 결과이지만, 다음과 같이 더 일반적인 경우에도 그 결과를 살펴볼 수 있다.
 
 ::: 명제 11
-Locally noetherian scheme $X$와 $X$ 위의 함수 $f$에 대항, $Z(f)$의 irreducible component는 codimension $0$이거나 codimension $1$이다. 
+Locally noetherian scheme $X$와 $X$ 위의 함수 $f$에 대하여, $Z(f)$의 irreducible component는 codimension $0$이거나 codimension $1$이다. 
 :::
 ::: 증명
 [\[가환대수학\] §차원, ⁋정리 6](/ko/math/commutative_algebra/Krull_dimension#thm6)

@@ -39,7 +39,7 @@ $$S_{(\x_i)} \rightarrow (S_\bullet/\mathfrak{a})_{(\bar\x_i)};\qquad \frac{f}{\
 
 이 유도하는 affine scheme들 사이의 morphism이다. $\pi$가 surjective이므로 이 ring homomorphism도 surjective이고, 그 kernel은 localization의 exactness에 의하여
 
-$$\mathfrak{a}_{(\x_i)}=\left\{\frac{a}{\x_i^d}\;\middle\vert\;\text{$a\in\mathfrak{a}$ homogeneous of degree $d$}\right\}$$
+$$\mathfrak{a}_{(\x_i)}=\left\{\frac{a}{\x_i^d}\middle\vert\text{$a\in\mathfrak{a}$ homogeneous of degree $d$}\right\}$$
 
 이다. 즉 $\iota$는 각 chart 위에서 $\Spec\bigl(S_{(\x_i)}/\mathfrak{a}_{(\x_i)}\bigr) \rightarrow \Spec S_{(\x_i)}$ 꼴의 closed embedding이고, 이들이 $D_+(\x_i\x_j)$들 위에서 호환되는 것은 위의 식이 $\x_i$의 선택과 무관한 방식으로 정의되었기 때문이다. 따라서 $\iota$는 scheme morphism이며, sheaf morphism $\iota^\sharp:\mathcal{O}_{\mathbb{P}^n} \rightarrow \iota_\ast\mathcal{O}_{\Proj(S_\bullet/\mathfrak{a})}$가 cover $(D_+(\x_i))$ 위에서 surjective이므로 stalk들 위에서도 surjective이다. 즉 $\iota$는 closed embedding이다. ([§닫힌 부분스킴, ⁋정의 2](/ko/math/scheme_theory/closed_subschemes#def2))
 :::
@@ -62,7 +62,7 @@ $\mathbb{P}^n$의 임의의 closed subscheme $Z$에 대하여, $Z=V_+(\mathfrak{
 ::: 증명
 각각의 $i$에 대하여 $Z\cap D_+(\x_i)$는 affine scheme $D_+(\x_i)\cong\Spec S_{(\x_i)}$의 closed subscheme이므로, [§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3) 이후의 논의에 의하여 유일한 ideal $\mathfrak{b}_i\subseteq S_{(\x_i)}$에 대응된다. 이제 homogeneous element들의 집합
 
-$$T=\left\{f\in S_\bullet\;\middle\vert\;\text{$f$ homogeneous,}\quad \frac{f}{\x_i^{\deg f}}\in \mathfrak{b}_i\text{ for all }i\right\}$$
+$$T=\left\{f\in S_\bullet\middle\vert\text{$f$ homogeneous,}\quad \frac{f}{\x_i^{\deg f}}\in \mathfrak{b}_i\text{ for all }i\right\}$$
 
 을 생각하고, $\mathfrak{a}$를 $T$로 생성되는 ideal이라 하자. $T$가 homogeneous element들로 이루어져 있으므로 $\mathfrak{a}$는 homogeneous ideal이다. 우리의 주장은 모든 $i$에 대해 $\mathfrak{a}_{(\x_i)}=\mathfrak{b}_i$가 성립한다는 것이다.
 
@@ -76,7 +76,7 @@ $$\mathcal{I}_{Z/\mathbb{P}^n}(D_+(\x_i\x_j))=(\mathfrak{b}_i)_{\x_j/\x_i}=(\mat
 
 이다. 여기서 양변은 모두 $S_{(\x_i\x_j)}$의 ideal이다.
 
-이제 $g\in \mathfrak{b}_i$의 $S_{(\x_i\x_j)}$에서의 image는 $(\mathfrak{b}_j)_{\x_i/\x_j}$에 속한다. 한편 $h=f/\x_j^d\in S_{(\x_j)}$에 대하여 $S_{(\x_i\x_j)}$ 안에서 $h=(\x_i/\x_j)^d\,g$이므로 $h$의 image도 $(\mathfrak{b}_j)_{\x_i/\x_j}$에 속한다. 즉 적당한 $m_j\geq 0$이 존재하여
+이제 $g\in \mathfrak{b}_i$의 $S_{(\x_i\x_j)}$에서의 image는 $(\mathfrak{b}_j)_{\x_i/\x_j}$에 속한다. 한편 $h=f/\x_j^d\in S_{(\x_j)}$에 대하여 $S_{(\x_i\x_j)}$ 안에서 $h=(\x_i/\x_j)^d g$이므로 $h$의 image도 $(\mathfrak{b}_j)_{\x_i/\x_j}$에 속한다. 즉 적당한 $m_j\geq 0$이 존재하여
 
 $$\left(\frac{\x_i}{\x_j}\right)^{m_j}h=\frac{\x_i^{m_j}f}{\x_j^{m_j+d}}\in \mathfrak{b}_j$$
 
