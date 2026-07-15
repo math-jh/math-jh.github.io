@@ -41,7 +41,7 @@ $$\cl(\{\mathfrak{m}\})=ZI(\{\mathfrak{m}\})=ZIZ(\mathfrak{m})=Z(\mathfrak{m})=\
 
 논리 전개의 편의상 $f$가 prime element여서, $f$가 생성하는 ideal $\mathfrak{p}_f=(f)$가 prime ideal이라 하자. 그럼 $\mathfrak{p}_f$는 우선 정의에 의해 $\mathbb{A}^n$의 (closed일 필요는 없는) 점이며, 바로 이 점이 $f$가 정의하는 closed subscheme의 generic point이다. 이 점은 $Z(f)$의 대부분의 정보를 담고 있는데, 가령 $Z(f)$에 포함된 (classical한) 점들을 얻기 위해서는 $\mathfrak{p}_f$에 closure를 취하여 $Z(f)$를 얻은 후 maximal ideal들만 택하면 되고, 대수적으로는 $\mathfrak{p}_f$를 포함하는 maximal ideal들을 모두 가져오면 된다. 
 
-이 논증은 일반적인 $A$의 ideal $\mathfrak{a}$에 대해서도 확장된다. 즉, $Z(\mathfrak{a})$의 irreducible component들은 $\mathfrak{a}$를 포함하는 minimal prime ideal들에 일대일로 대응한다. ([§스펙트럼, ⁋따름정리 17](/ko/math/scheme_theory/spectrums#cor17)를 $A/\mathfrak{a}$에 적용) 이 때 각각의 minimal prime ideal들이 해당 component의 generic point에 대응되며 따라서 일반적인 경우도 component별로 위에서의 직관을 그대로 가져온 것이라 생각할 수 있다. 
+이 논증은 일반적인 $A$의 ideal $\mathfrak{a}$에 대해서도 확장된다. 즉, $Z(\mathfrak{a})$의 irreducible component들은 $\mathfrak{a}$를 포함하는 minimal prime ideal들에 일대일로 대응한다. ([\[가환대수학\] §으뜸분해, ⁋정리 3](/ko/math/commutative_algebra/primary_decomposition#thm3)) 이 때 각각의 minimal prime ideal들이 해당 component의 generic point에 대응되며 따라서 일반적인 경우도 component별로 위에서의 직관을 그대로 가져온 것이라 생각할 수 있다. 
 
 ## 스킴의 위상적 성질들
 
