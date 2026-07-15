@@ -120,7 +120,9 @@ $$Z(\sqrt{\mathfrak{a}_k})=Z(\sqrt{\mathfrak{a}_{k+1}})=\cdots$$
 
 ## 국소성
 
-지금까지 우리는 scheme을 위상공간으로 바라보았다. 그러나 scheme이 갖는 본질적인 정보는 구조층 $\mathcal{O}_X$에 들어있으며, scheme의 대부분 성질은 affine 조각 $\Spec A$의 ring $A=\mathcal{O}_X(\Spec A)$에서 검사하는 것으로 충분하다. 더 나아가 ring $A$의 localization $A_f$와 $A_\mathfrak{p}$는 각각 principal open set $D(f)$의 section과 점 $\mathfrak{p}$에서의 stalk에 대응하므로, 이들은 단순한 대수적 조작이 아니라 scheme의 국소적인 기하를 읽어내는 도구이다. 이 절에서는 '성질이 국소적으로 결정된다'는 직관을 정확히 잡기 위하여 *local property*의 개념을 정의하며 이번 글을 마친다. 이 개념은 다음 글에서 다룰 대수적인 성질을 scheme 전체로 확장하는 토대가 된다.
+Scheme은 정의상 affine scheme들을 붙여서 얻어지는 대상이므로, 그 성질을 탐구하기 위해 선택하는 전략 중 하나는 어떠한 성질들을 local하게 탐구하는 것이다. 실제로 위에서 다룬 많은 예시가 affine scheme이었듯, 일반적인 scheme의 성질도 affine 조각을 이어붙여 다루는 것이 이 전략의 핵심이다. 뿐만 아니라, 이 접근방식의 장점은 우리의 affine scheme에 대한 이해가 위상적인 영역에만 국한되지는 <em-ko>않는다</em-ko>는 점에 있다. 즉, 이번 글에서 도입한 위상적인 데이터 뿐만 아니라, affine scheme $\Spec A$는 $A$가 ring으로서 가지는 대수적인 성질도 가지고 있으며, 이 국소성은 이러한 대수적인 성질들도 global하게 이어붙이는 데에 도움을 줄 것이다. 
+
+이를 위해 우선 ring의 성질이 local하다는 것이 어떤 의미인지 살펴보자.
 
 ::: 정의 8
 Ring의 성질 $Q$가 *local*이라는 것은 다음의 두 조건이 성립하는 것이다.
@@ -129,16 +131,16 @@ Ring의 성질 $Q$가 *local*이라는 것은 다음의 두 조건이 성립하�
 2. 임의의 ring $A$와, $f_1,\ldots, f_n\in A$가 $A=(f_1,\ldots, f_n)$을 만족한다 하자. 그럼 만일 모든 $A_{f_i}$가 $Q$를 만족한다면 $A$도 $Q$를 만족한다. 
 :::
 
-이를 affine scheme의 언어로 바꾸어보자. Ring의 성질 $Q$에 대하여, affine scheme $X=\Spec A$의 global section ring $\mathcal{O}_X(X)=A$가 $Q$를 만족할 때 $X$가 성질 $P$를 갖는다고 하자. 그럼 $D(f)\cong\Spec A_f$이고, 또 $A=(f_1,\ldots, f_r)$이면
+이를 affine scheme의 언어로 바꾸어보자. Ring의 성질 $P_\alg$에 대하여, affine scheme $X=\Spec A$의 global section ring $\mathcal{O}_X(X)=A$가 $P_\alg$를 만족할 때 $X$가 성질 $P_\geo$를 갖는다고 하자. 그럼 $D(f)\cong\Spec A_f$이고, 또 $A=(f_1,\ldots, f_r)$이면
 
 $$\Spec A=\Spec A\setminus Z(f_1,\ldots, f_r)=\Spec A\setminus\bigcap_{i=1}^r Z(f_i)=\bigcup_{i=1}^r D(f_i)$$
 
 으로부터 $D(f_i)$들이 $\Spec A$를 덮는다는 것을 안다. 이를 사용하여 [정의 8](#def8)의 두 조건은 다음과 같이 번역된다.
 
-1. $\Spec A$가 $P$를 만족한다면, 임의의 principal open set $D(f)$ 또한 $P$를 만족한다.
-2. $\Spec A$를 덮는 open covering $D(f_1),\ldots, D(f_r)$가 각각 $P$를 만족한다면, $\Spec A$도 $P$를 만족한다. 
+1. $\Spec A$가 $P_\geo$를 만족한다면, 임의의 principal open set $D(f)$ 또한 $P_\geo$를 만족한다.
+2. $\Spec A$를 덮는 open covering $D(f_1),\ldots, D(f_r)$가 각각 $P_\geo$를 만족한다면, $\Spec A$도 $P_\geo$를 만족한다. 
 
-한편 $\Spec A$의 일반적인 open set은 principal open set들의 합집합으로 나타낼 수 있고 ([§스펙트럼, ⁋보조정리 11](/ko/math/scheme_theory/spectrums#lem11)), 따라서 $\Spec A$가 $P$를 만족하면 $\Spec A$의 임의의 *affine* open subset 또한 $P$를 만족한다. 이처럼 principal open set들로 검사하여 결정되는 성질을 *affine-local property*라 부르며, 이를 임의의 scheme의 affine subscheme들에 대한 성질로 일반화한 것이 다음 정의이다. 
+한편 $\Spec A$의 일반적인 open set은 principal open set들의 합집합으로 나타낼 수 있고 ([§스펙트럼, ⁋보조정리 11](/ko/math/scheme_theory/spectrums#lem11)), 따라서 $\Spec A$가 $P_\geo$를 만족하면 $\Spec A$의 임의의 *affine* open subset 또한 $P_\geo$를 만족한다. 이처럼 principal open set들로 검사하여 결정되는 성질을 *affine-local property*라 부르며, 이를 임의의 scheme의 affine subscheme들에 대한 성질로 일반화한 것이 다음 정의이다. 
 
 ::: 정의 9
 Scheme $X$의 적당한 affine subscheme들에 대해 정의된 성질 $P$가 *affine-local property*라는 것은 다음 두 조건이 성립하는 것이다. 
