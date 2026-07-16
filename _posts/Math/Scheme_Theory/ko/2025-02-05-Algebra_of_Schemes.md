@@ -152,7 +152,7 @@ Scheme $X$가 *normal<sub>정규스킴</sub>*인 것은 임의의 $x\in X$에 �
 한편, 우리는 unique factorization domain은 항상 normal domain인 것을 안다. ([\[가환대수학\] §정수적 확장, ⁋명제 9](/ko/math/commutative_algebra/integral_extension#prop9)) 이로부터 다음을 정의한다.
 
 ::: 정의 7
-Scheme $X$가 *factorial*인 것은 임의의 $x\in X$에 대하여 $\mathcal{O}_{X,x}$가 unique factorization domain인 것이다.
+Scheme $X$가 *factorial<sub>인수분해스킴</sub>*인 것은 임의의 $x\in X$에 대하여 $\mathcal{O}_{X,x}$가 unique factorization domain인 것이다.
 :::
 
 따라서 임의의 factorial scheme은 normal scheme이다. 또, unique factorization domain의 localization은 unique factorization domain이므로 unique factorization domain $A$의 spectrum $\Spec A$는 factorial이다. 
@@ -161,7 +161,9 @@ Scheme $X$가 *factorial*인 것은 임의의 $x\in X$에 대하여 $\mathcal{O}
 
 우리는 [§스펙트럼, ⁋따름정리 17](/ko/math/scheme_theory/spectrums#cor17)에 의해, scheme $X=\Spec A$의 irreducible component와 ring $A$의 minimal prime ideal 사이의 일대일대응이 존재하는 것을 안다. 이는 위의 [명제 5](#prop5)에서 중요하게 사용되었다.
 
-한편 대수적으로 minimal prime ideal은 항상 associated prime ideal이 된다. 이는 ring $A$를 자기 자신 위의 module로 보면 $\ann A=\{0\}$이므로 [\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)를 적용하면 확인할 수 있다. 따라서 우리는 (locally noetherian) scheme의 associated point를 다음과 같이 정의한다.
+한편 대수적으로 minimal prime ideal은 항상 associated prime ideal이 된다. 이는 ring $A$를 자기 자신 위의 module로 보면 $\ann A=\{0\}$이므로 [\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)를 적용하면 확인할 수 있다.
+
+그러나 associated prime ideal은 minimal prime보다 더 많은 것을 담고 있다. [\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 둘째 결과에 의하면 $A$의 associated prime들의 합집합은 정확히 $0$과 $A$의 zero-divisor들의 모임과 같다. 가령 [§스킴의 위상구조, ⁋예시 6](/ko/math/scheme_theory/topology_of_schemes#ex6)에서 본 $Z(\x\y)$의 경우, zero-divisor $\x,\y$는 각각 서로 다른 irreducible component에서 $0$이 되는 함수였으며, 그 zero-divisor 관계는 두 component의 generic point인 minimal prime $(\x),(\y)$만으로 이미 완전히 설명된다. 그러나 뒤의 [예시 11](#ex11)에서 보듯 이것이 항상 그런 것은 아니며, minimal prime, 다시 말해 irreducible component의 generic point만으로는 놓치는 zero-divisor의 위치까지도 associated point는 전부 포착한다. 
 
 ::: 정의 8
 Locally noetherian scheme $X$의 한 점 $x$와 $x$의 affine open neighborhood $U\cong \Spec A$에 대하여, $x$가 $X$의 *associated point<sub>동반점</sub>*이라는 것은 $x$에 대응되는 prime ideal $\mathfrak{p}_x\subset A$가 $A$의 associated prime ideal인 것이다. 
@@ -173,13 +175,13 @@ Locally noetherian scheme $X$의 한 점 $x$와 $x$의 affine open neighborhood 
 
 으로 바꾸어 쓸 수 있기 때문이다. 
 
-이제 [\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 첫째 조건은 만일 $X$가 quasicompact locally noetherian scheme일 경우, 즉 $X$가 noetherian scheme일 경우 associated point들의 유한성 또한 보장해준다. 
-
-또, 이 조건에 의하여, 임의의 minimal prime ideal은 associated prime ideal이므로 이 개념은 $\Spec A$에서의 generic point의 개념을 일반화한다. [정의 8](#def8)에 의하여 우리는 우리의 관심사를 noetherian ring의 spectrum $\Spec A$로 한정할 수 있다. 
+이제 [\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 첫째 조건은 만일 $X$가 quasicompact locally noetherian scheme일 경우, 즉 $X$가 noetherian scheme일 경우 associated point들의 유한성 또한 보장해준다. 이제 [정의 8](#def8)이 앞서 본 것처럼 $U$의 선택과 무관하게 stalk만으로 재서술되므로, 우리는 우리의 관심사를 noetherian ring의 spectrum $\Spec A$로 한정할 수 있다. 
 
 ::: 정의 9
 Noetherian ring의 스펙트럼 $\Spec A$의 associated point들 중, $\Spec A$의 irreducible component들의 generic point에 해당하지 않는 것들을 *embedded point*라 부른다. 
 :::
+
+Irreducible component의 generic point에 해당하는 associated point는 각 component마다 대표적으로 존재하는 zero-divisor 관계를 담당하는 반면, embedded point는 이미 다른 (더 큰) irreducible component에 속해 있는 점이면서도 그 자리에서 $A$가 국소적으로 추가적인 nilpotent 방향의 정보를 갖는다는 것을 기록한다. 즉 embedded point 근처에서 scheme은 그 component만으로 결정되는 reduced 구조보다 실제로 더 많은 정보를 담고 있으며, 이는 다음 예시에서 구체적으로 확인할 수 있다.
 
 한편, 정의에 의해 다음이 성립한다.
 
@@ -205,7 +207,9 @@ $$\supp(g)=Z(\ann(g))$$
 
 $$\supp(f)=Z(\ann(f))=Z(\mathfrak{p})$$
 
-이고, $\mathfrak{p}$가 $\ann(f)=\mathfrak{p}$의 minimal prime인 것은 자명하므로 $\mathfrak{p}$는 $\supp f$의 generic point이다. 이 논증은 위의 관찰을 바탕으로 반대로도 작동한다. 
+이고, $\mathfrak{p}$가 $\ann(f)=\mathfrak{p}$의 minimal prime인 것은 자명하므로 $\mathfrak{p}$는 $\supp f$의 generic point이다.
+
+거꾸로 $\mathfrak{p}$가 적당한 $g\in A$에 대하여 $\supp(g)$의 generic point라 하자. 즉 $\mathfrak{p}$가 $\ann(g)$를 포함하는 minimal prime ideal이라 하자. 사상 $A \rightarrow Ag$, $a\mapsto ag$의 kernel이 정확히 $\ann(g)$이므로 $Ag\cong A/\ann(g)$이고, 특히 $\ann(A/\ann(g))=\ann(g)$이다. 이제 [\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 첫째 결과를 $A$-module $A/\ann(g)$에 적용하면 $\mathfrak{p}\in \Ass(A/\ann(g))=\Ass(Ag)$를 얻는다. 그런데 $Ag$는 $A$의 submodule이므로 [\[가환대수학\] §동반소아이디얼, ⁋보조정리 5](/ko/math/commutative_algebra/associated_primes#lem5)의 첫 번째 포함관계에 의하여 $\Ass(Ag)\subseteq \Ass(A)$이고, 따라서 $\mathfrak{p}\in \Ass(A)$, 즉 $\mathfrak{p}$는 $\Spec A$의 associated point이다.
 :::
 
 위의 증명에서 사용한 식
@@ -226,9 +230,11 @@ $$(\x_2^2,\x_1\x_2)=(\x_2)\cap(\x_1,\x_2)^2$$
 가 보여주듯 두 개의 associated prime $(\x_2)$와 $(\x_1,\x_2)$를 가진다. 전자는 $\x_1$-축의 generic point로 $X$의 유일한 irreducible component를 결정하고, 후자는 이 component의 generic point가 아니므로 embedded point가 되며 원점에 해당한다. 
 :::
 
+이 예시는 [§스킴의 위상구조, ⁋예시 6](/ko/math/scheme_theory/topology_of_schemes#ex6)의 $Z(\x\y)$와 대조적이다. $X$는 irreducible component를 $\x_1$-축 하나만 가지므로, $A$의 zero-divisor 관계 $\x_1\x_2=0$ ($\x_1,\x_2\neq 0$)은 서로 다른 component에서 각각 $0$이 되는 함수들의 곱으로는 설명할 수 없다. 실제로 $\x_2$는 nilpotent이므로 ($\x_2^2=0$) reduced ring $A/\mathfrak{N}(A)\cong \mathbb{K}[\x_1]$에서는 이미 $0$이 되어 사라지며, 그 zero-divisor로서의 정보는 오직 embedded point, 즉 원점에서의 associated prime $(\x_1,\x_2)$에만 남아있다. 이것이 바로 irreducible component의 generic point만으로는 놓치고, associated point 전체를 보아야만 포착할 수 있는 zero-divisor의 위치이다.
+
 ## 유리함수
 
-이제 우리는 스킴 위에서 정의된 유리함수를 정의한다. 우선 [\[가환대수학\] §동반소아이디얼, ⁋따름정리 4](/ko/math/commutative_algebra/associated_primes#cor4)의 둘쨰 결과에 의하여 다음의 함수
+이제 우리는 스킴 위에서 정의된 유리함수를 정의한다. 우선 [\[가환대수학\] §동반소아이디얼, ⁋따름정리 4](/ko/math/commutative_algebra/associated_primes#cor4)의 둘째 결과에 의하여 다음의 함수
 
 $$A \rightarrow \prod_\text{\scriptsize $\mathfrak{p}$ associated prime} A_\mathfrak{p}$$
 
@@ -244,6 +250,10 @@ Locally noetherian scheme $X$와, $X$의 associated point들을 모두 포함하
 
 따라서, 정의에 의해 $X$ 위에 정의된 rational function은 (1) $X$의 모든 associated point들을 포함하는 *정의역* $U$와, (2) 그 위의 함수 $f\in \Gamma(U, \mathcal{O}_X)$의 데이터로 이루어지며, 이러한 pair $(U, f)$와 $(U',f')$는 만일 $U\cap U'$에서 $f$와 $f'$가 같은 함수를 정의하면 같은 함수가 된다. 
 
+이러한 정의역의 조건은 다음과 같이 이해할 수 있다. $X$가 integral scheme이라면, 유리함수는 그저 공집합이 아닌 열린집합 위에서 정의된 regular function이었다. $X$가 irreducible이므로 임의의 두 그러한 열린집합은 항상 만나고, 결국 이는 generic point에서의 stalk, 즉 $\Frac(A)$의 원소를 정의하는 것과 같았다. $X$가 integral이 아니라면 이 역할을 해 줄 단일한 generic point가 없으므로, 그 대신 위의 ($\ast$)의 injectivity가 보장하는 성질, 즉 이 점들에서의 stalk 값만으로 $\Gamma(U,\mathcal{O}_X)$의 원소가 완전히 결정된다는 성질을 만족하는 점들의 모임이 필요하며 associated point가 그 역할을 한다. 
+
+이 때 $U$가 associated point 중 irreducible component의 generic point 뿐만 아니라 embedded point까지 전부 포함해야 하는 이유는, 그렇지 않으면 nilpotent 방향의 정보를 잃어버리기 때문이다. 가령 [예시 11](#ex11)의 $X=\Spec \mathbb{K}[\x_1,\x_2]/(\x_2^2,\x_1\x_2)$를 생각하면, embedded point는 원점 $(\x_1,\x_2)$이고 나머지 associated point는 $\x_1$-축의 generic point $(\x_2)$ 뿐이다. 만일 $U$가 원점을 포함하지 않아도 된다고 완화하여 $U=D(\x_1)$을 허용한다면, $\x_1$을 뒤집는 순간 $\x_2=\x_1^{-1}(\x_1\x_2)=0$이 되어 $\Gamma(U,\mathcal{O}_X)\cong \mathbb{K}[\x_1]_{\x_1}$, 즉 nilpotent $\x_2$가 완전히 사라진 reduced 구조만 남는다. 반면 $U$가 원점을 포함하도록 강제하면 $\x_2$는 (nilpotent이지만) $0$이 아닌 함수로 남아, $X$가 원점에서 실제로 갖는 두꺼움이 유리함수의 정의에도 반영된다. 
+
 ::: 예시 13
 Affine scheme $X=\Spec \mathbb{K}[\x_1,\x_2]/(\x_2-\x_1^2)$을 생각하자. 그럼 $X$는 유일한 associated prime $(0)$을 가지며, $X$의 임의의 열린집합은 이 점을 포함하므로 $X$의 rational function은 공집합이 아닌 임의의 열린집합 $U$와 그 위에서의 함수 $f\in\Gamma(U, \mathcal{O}_X)$로 이루어진다. 
 
@@ -254,7 +264,7 @@ $$\left(\frac{\mathbb{K}[\x_1,\x_2]}{(\x_2-\x_1^2)}\right)_{\x_1}\cong\frac{\mat
 에 의하여, 열린집합 $\Spec A_{\x_1}$ 위에서 정의된 $1/\x_1$과 같은 함수들은 $X$ 위에서의 rational function이 된다. 이를 통해 분모에 $\x_2-\x_1^2$ 인자를 갖고 있지 않은 모든 유리식은 $X$ 위의 (적절한 열린집합에서의) 유리함수가 된다는 것을 안다. 
 :::
 
-Locally noetherian scheme $X$ 위에 정의된 rational function들의 모임은 *total quotient ring* $K(X)$를 정의한다. 만일, 위와 같이 $X$가 integral scheme이라 하자. 그럼 특히 $X$는 irreducible이므로 유일한 generic point $x$를 갖는다. 이 점은 임의의 affine open subset $U\cong\Spec A$에 대하여, integral domain $A$의 유일한 minimal prime ideal $(0)$에 대응되어야 한다. 이 점에서의 localization은 $A$의 nonzero element들을 모두 분모로 추가해 준 것, 즉 $\Frac(A)$와 같다. 
+Locally noetherian scheme $X$ 위에 정의된 rational function들의 모임은 *total quotient ring* $K(X)$를 정의한다. 만일, 위와 같이 $X$가 integral scheme이라 하자. 그럼 특히 $X$는 irreducible이므로 유일한 generic point $x$를 갖는다. 이 점은 임의의 affine open subset $U\cong\Spec A$에 대하여, integral domain $A$의 유일한 minimal prime ideal $(0)$에 대응되어야 한다. 이 점에서의 localization은 $A$의 nonzero element들을 모두 분모로 추가해 준 것, 즉 $\Frac(A)$와 같다. 따라서 $K(X)\cong \mathcal{O}_{X,x}\cong \Frac(A)$이며, 이는 $X$가 하나의 affine open $\Spec A$로 이루어진 경우 이미 알고 있던 $A$의 fraction field가 일반적인 integral scheme에서도 그대로 유리함수체의 역할을 한다는 것을 보여준다. 
 
 
 ---
