@@ -181,7 +181,7 @@ Locally noetherian scheme $X$의 한 점 $x$와 $x$의 affine open neighborhood 
 Noetherian ring의 스펙트럼 $\Spec A$의 associated point들 중, $\Spec A$의 irreducible component들의 generic point에 해당하지 않는 것들을 *embedded point*라 부른다. 
 :::
 
-Irreducible component의 generic point에 해당하는 associated point는 각 component마다 대표적으로 존재하는 zero-divisor 관계를 담당하는 반면, embedded point는 이미 다른 (더 큰) irreducible component에 속해 있는 점이면서도 그 자리에서 $A$가 국소적으로 추가적인 nilpotent 방향의 정보를 갖는다는 것을 기록한다. 즉 embedded point 근처에서 scheme은 그 component만으로 결정되는 reduced 구조보다 실제로 더 많은 정보를 담고 있으며, 이는 다음 예시에서 구체적으로 확인할 수 있다.
+즉, [정의 8](#def8)을 도입하기 전에 언급한, irreducible component의 generic point만으로는 놓치는 zero-divisor의 위치에 해당하는 점들이 바로 embedded point이며, 이는 [예시 11](#ex11)에서 구체적으로 확인할 수 있다. 직관적으로 embedded point는 이미 다른 (더 큰) irreducible component에 속해 있는 점이면서도 그 자리에서 $A$가 국소적으로 추가적인 nilpotent 방향의 정보를 갖는다는 것을 기록하는 점으로, 그 근처에서 scheme은 그 component만으로 결정되는 reduced 구조보다 실제로 더 많은 정보를 담고 있다.
 
 한편, 정의에 의해 다음이 성립한다.
 
@@ -216,21 +216,31 @@ $$\supp(f)=Z(\ann(f))=Z(\mathfrak{p})$$
 
 $$\supp(f)=Z(\ann(f))$$
 
-를 살펴보면, 만일 $A$가 integral domain이었다면 $\ann(f)$는 오직 $f=0$일 때만 $A$ 전체이고, 그렇지 않은 경우에는 $0$이 된다. 즉, 이 경우 $\supp(f)$는 $f$가 $0$인 경우만 공집합이고, 나머지 경우에는 $\Spec A$ 전체이며, 우리는 [명제 4](#prop4)에서 $\Spec A$가 irreducible임을 알고 있으므로 $\Spec A$의 유일한 associated point는 generic point $(0)$ 뿐임을 안다. 
+를 살펴보면, associated point $\mathfrak{p}=\ann(f)$는 $f$와 곱해 $0$이 되는 원소들의 모임, 즉 $f$가 관여하는 zero-divisor 관계의 위치를 정확히 기록한다는 것을 알 수 있다. 만일 $A$가 integral domain이었다면 애초에 이러한 zero-divisor 관계가 존재하지 않으므로 $\ann(f)$는 오직 $f=0$일 때만 $A$ 전체이고, 그렇지 않은 경우에는 $0$이 된다. 즉, 이 경우 $\supp(f)$는 $f$가 $0$인 경우만 공집합이고, 나머지 경우에는 $\Spec A$ 전체이며, 우리는 [명제 4](#prop4)에서 $\Spec A$가 irreducible임을 알고 있으므로 $\Spec A$의 유일한 associated point는 generic point $(0)$ 뿐임을 안다. 
 
-더 일반적으로, $A$가 integral domain이 아니라면 $\ann(f)$가 $0$도, $A$도 아닌 경우가 존재하므로 embedded point가 존재할 가능성이 있다. 
+따라서 embedded point의 예시를 보기 위해서는 $A$가 integral domain이 아니고, 따라서 $\ann(f)$가 $0$도, $A$도 아닌 경우를 살펴보아야 한다. 
 
 ::: 예시 11
-Affine scheme $X=\Spec \mathbb{K}[\x_1,\x_2]/(\x_2^2, \x_1\x_2)$를 생각하자. 그럼 [§스펙트럼, ⁋명제 9](/ko/math/scheme_theory/spectrums#prop9)에 의하여 집합으로서 $X=Z(\x_2^2,\x_1\x_2)$이며, $\sqrt{(\x_2^2,\x_1\x_2)}=(\x_2)$이므로 이는 $Z(\x_2)$, 즉 $\x_1$-축($\Spec\mathbb{K}[\x_1]$)이다. 
+Affine scheme $X=\Spec \mathbb{K}[\x_1,\x_2]/(\x_2^2, \x_1\x_2)$를 생각하자. 그럼 [§스펙트럼, ⁋명제 9](/ko/math/scheme_theory/spectrums#prop9)에 의하여 집합으로서 $X=Z(\x_2^2,\x_1\x_2)$이며, $\sqrt{(\x_2^2,\x_1\x_2)}=(\x_2)$이므로 이는 $Z(\x_2)$, 즉 $\x_1$-축 $\Spec\mathbb{K}[\x_1]$이다. 
 
-그럼에도 불구하고 ring $A=\mathbb{K}[\x_1,\x_2]/(\x_2^2,\x_1\x_2)$는 primary 분해
+이제 [명제 10](#prop10)에 따라 associated point들을 $\ann(f)$의 꼴로 직접 찾아보자. Ring $A=\mathbb{K}[\x_1,\x_2]/(\x_2^2,\x_1\x_2)$의 임의의 원소는 
 
-$$(\x_2^2,\x_1\x_2)=(\x_2)\cap(\x_1,\x_2)^2$$
+$$p(\x_1)+c\x_2,\qquad p\in \mathbb{K}[\x_1],\quad c\in \mathbb{K}$$ 
 
-가 보여주듯 두 개의 associated prime $(\x_2)$와 $(\x_1,\x_2)$를 가진다. 전자는 $\x_1$-축의 generic point로 $X$의 유일한 irreducible component를 결정하고, 후자는 이 component의 generic point가 아니므로 embedded point가 되며 원점에 해당한다. 
+꼴로 유일하게 쓸 수 있으며, 이 때 $\x_1\x_2=0$이므로 
+
+$$\x_1\cdot(p(\x_1)+c\x_2)=p(\x_1)\x_1$$
+
+이다. 즉, $\ann(\x_1)=(\x_2)$이며 이는 $X$의 유일한 irreducible component의 generic point이다. 
+
+반면 $\x_2^2=0$과 $\x_1\x_2=0$으로부터 
+
+$$\x_2\cdot(p(\x_1)+c\x_2)=p(0)\x_2$$
+
+이므로 $\ann(\x_2)=(\x_1,\x_2)$이다. 이는 $\ann(\x_1)=(\x_2)$를 진부분집합으로 포함하는 ideal로, 기하적으로는 원점에 해당한다. 이는 위의 예시와 달리 $X$의 irreducible component의 generic point로 나타나지 않는 점, 즉 embedded point이다. 
+
+[§스킴의 위상구조, ⁋예시 6](/ko/math/scheme_theory/topology_of_schemes#ex6)의 $Z(\x\y)$와 달리, 이 zero-divisor 관계는 두 irreducible component의 곱에서 나오는 것이 아님을 주목하자. 구체적으로, $\x_2\in \ann(\x_1)$ 쪽은 이미 generic point $(\x_2)$에서 보이는 데이터이지만, $\x_1\in \ann(\x_2)$ 쪽은 $\supp(\x_2)=Z(\ann(\x_2))=\{(\x_1,\x_2)\}$이 보여주듯, $\x_2$가 원점을 제외한 모든 곳에서 사라진다는 사실이므로, 오직 embedded point에서만 associated prime으로 포착된다. 
 :::
-
-이 예시는 [§스킴의 위상구조, ⁋예시 6](/ko/math/scheme_theory/topology_of_schemes#ex6)의 $Z(\x\y)$와 대조적이다. $X$는 irreducible component를 $\x_1$-축 하나만 가지므로, $A$의 zero-divisor 관계 $\x_1\x_2=0$ ($\x_1,\x_2\neq 0$)은 서로 다른 component에서 각각 $0$이 되는 함수들의 곱으로는 설명할 수 없다. 실제로 $\x_2$는 nilpotent이므로 ($\x_2^2=0$) reduced ring $A/\mathfrak{N}(A)\cong \mathbb{K}[\x_1]$에서는 이미 $0$이 되어 사라지며, 그 zero-divisor로서의 정보는 오직 embedded point, 즉 원점에서의 associated prime $(\x_1,\x_2)$에만 남아있다. 이것이 바로 irreducible component의 generic point만으로는 놓치고, associated point 전체를 보아야만 포착할 수 있는 zero-divisor의 위치이다.
 
 ## 유리함수
 
@@ -248,11 +258,19 @@ $$\Gamma(U, \mathcal{O}_X) \rightarrow \prod_\text{\scriptsize $x$ associated in
 Locally noetherian scheme $X$와, $X$의 associated point들을 모두 포함하는 열린집합 $U$에 대하여, $\Gamma(U, \mathcal{O}_X)$의 ($\ast$)에 의한 image를 $X$ 위에 정의된 *rational function<sub>유리함수</sub>*라 부른다. 
 :::
 
-따라서, 정의에 의해 $X$ 위에 정의된 rational function은 (1) $X$의 모든 associated point들을 포함하는 *정의역* $U$와, (2) 그 위의 함수 $f\in \Gamma(U, \mathcal{O}_X)$의 데이터로 이루어지며, 이러한 pair $(U, f)$와 $(U',f')$는 만일 $U\cap U'$에서 $f$와 $f'$가 같은 함수를 정의하면 같은 함수가 된다. 
+따라서, 정의에 의해 $X$ 위에 정의된 rational function은 (1) $X$의 모든 associated point들을 포함하는 *정의역* $U$와, (2) 그 위의 함수 $f\in \Gamma(U, \mathcal{O}_X)$의 데이터로 이루어지며, 이러한 pair $(U, f)$와 $(U',f')$는 만일 $U\cap U'$에서 $f$와 $f'$가 같은 함수를 정의하면 같은 함수가 된다. 이러한 pair와 동치관계의 구조는 [\[대수다양체\] §유리사상, ⁋정의 1](/ko/math/algebraic_varieties/rational_maps#def1)에서의 variety 위의 rational function 정의와 정확히 같은 꼴이다. 유일한 차이는 이제 정의역 $U$가 associated point들을 모두 포함해야 한다는 조건이며, associated point들은 classical algebraic geometry에서는 보이지 않던 점들이므로 이는 그리 놀랄 일은 아니다. 
 
-이러한 정의역의 조건은 다음과 같이 이해할 수 있다. $X$가 integral scheme이라면, 유리함수는 그저 공집합이 아닌 열린집합 위에서 정의된 regular function이었다. $X$가 irreducible이므로 임의의 두 그러한 열린집합은 항상 만나고, 결국 이는 generic point에서의 stalk, 즉 $\Frac(A)$의 원소를 정의하는 것과 같았다. $X$가 integral이 아니라면 이 역할을 해 줄 단일한 generic point가 없으므로, 그 대신 위의 ($\ast$)의 injectivity가 보장하는 성질, 즉 이 점들에서의 stalk 값만으로 $\Gamma(U,\mathcal{O}_X)$의 원소가 완전히 결정된다는 성질을 만족하는 점들의 모임이 필요하며 associated point가 그 역할을 한다. 
+그럼 이 조건이 어디서 왔는지를 살펴보는 것이 [정의 12](#def12)를 이해하기 위해 필수적이다. 우선 [명제 10](#prop10)에 의해, $X=\Spec A$의 임의의 associated point $\mathfrak{p}$에 대하여
 
-이 때 $U$가 associated point 중 irreducible component의 generic point 뿐만 아니라 embedded point까지 전부 포함해야 하는 이유는, 그렇지 않으면 nilpotent 방향의 정보를 잃어버리기 때문이다. 가령 [예시 11](#ex11)의 $X=\Spec \mathbb{K}[\x_1,\x_2]/(\x_2^2,\x_1\x_2)$를 생각하면, embedded point는 원점 $(\x_1,\x_2)$이고 나머지 associated point는 $\x_1$-축의 generic point $(\x_2)$ 뿐이다. 만일 $U$가 원점을 포함하지 않아도 된다고 완화하여 $U=D(\x_1)$을 허용한다면, $\x_1$을 뒤집는 순간 $\x_2=\x_1^{-1}(\x_1\x_2)=0$이 되어 $\Gamma(U,\mathcal{O}_X)\cong \mathbb{K}[\x_1]_{\x_1}$, 즉 nilpotent $\x_2$가 완전히 사라진 reduced 구조만 남는다. 반면 $U$가 원점을 포함하도록 강제하면 $\x_2$는 (nilpotent이지만) $0$이 아닌 함수로 남아, $X$가 원점에서 실제로 갖는 두꺼움이 유리함수의 정의에도 반영된다. 
+$$\mathfrak{p}=\ann(f),\qquad \supp(f)=Z(\mathfrak{p})$$
+
+이도록 하는 nonzero function $f\in \Gamma(X, \mathcal{O}_X)$가 존재하고, 이는 [정의 12](#def12)의 조건을 만족하므로 pair $(X, f)$가 ($\ast$)를 따라 어떠한 nonzero rational function을 정의한다. 
+
+이제 이 associated point $\mathfrak{p}$를 놓치는 열린집합 $U$를 생각하자. 그럼 $Z(\mathfrak{p})$는 $\mathfrak{p}$를 generic point로 갖는 irreducible closed subset이므로 ([§스펙트럼, ⁋명제 16](/ko/math/scheme_theory/spectrums#prop16)), 우리는 반드시 $U\cap Z(\mathfrak{p})=\emptyset$이어야 함을 안다. 즉, 이러한 열린집합 $U$에 포함된 모든 점들, 특히 $U$에 포함된 associated point들 위에서 $f$의 germ은 $0$이 되어야 한다. 문제는 이러한 열린집합 $U$를 유리함수의 정의역으로 허용할 경우, 위의 ($\ast$)의 injectivity에 의해 $f$는 $0$과 구별할 수 없게 되어버린다. 
+
+가장 단순한 예시로 generic point의 경우를 보면, $\mathfrak{p}$가 어떤 irreducible component $C$의 generic point일 때는 $Z(\mathfrak{p})=C$이므로, 만일 $f$가 $\mathfrak{p}$에서 정의되지 않는다면, 즉 직관적으로 이 점에서 pole을 갖는다면, 위 논증은 $C$ 전체에서 $f\vert_U=0$임을 뜻한다. 마찬가지로 $\mathfrak{p}$가 embedded point일 때는 이 $Z(\mathfrak{p})$가 component 전체가 아니라 작은 닫힌집합으로 바뀔 뿐, 이러한 손실이 여전히 생기게 된다. 
+
+가령 [§스킴의 위상구조, ⁋예시 6](/ko/math/scheme_theory/topology_of_schemes#ex6)의 $Z(\x\y)=\Spec \mathbb{K}[\x,\y]/(\x\y)$가 바로 이런 상황을 보여준다. 이 scheme의 두 irreducible component는 $y$축 $Z(\x)$와 $x$축 $Z(\y)$이며, 그 generic point는 각각 $(\x)$와 $(\y)$이다. $\ann(\y)=(\x)$이므로 $\y$는 [명제 10](#prop10)에서 말하는 $\mathfrak{p}=(\x)$에 대한 witness이고, $\supp(\y)=Z(\x)$, 즉 $y$축 전체이다. 이제 $U=D(\x)$처럼 $y$축의 generic point $(\x)$를 뺀 열린집합을 생각하면, $\x\y=0$으로부터 $\y=\x^{-1}(\x\y)=0$ in $A_\x$이므로 $\y\vert_U=0$이다. 즉 $U$를 정의역으로 삼는 순간 $y$축의 정보를 실어나르는 함수 $\y$는 $0$인 rational function과 구별되지 않게 되며, 이는 $U$가 $y$축이라는 component 하나를 통째로 놓치고 있다는 사실을 정확히 반영한다. 
 
 ::: 예시 13
 Affine scheme $X=\Spec \mathbb{K}[\x_1,\x_2]/(\x_2-\x_1^2)$을 생각하자. 그럼 $X$는 유일한 associated prime $(0)$을 가지며, $X$의 임의의 열린집합은 이 점을 포함하므로 $X$의 rational function은 공집합이 아닌 임의의 열린집합 $U$와 그 위에서의 함수 $f\in\Gamma(U, \mathcal{O}_X)$로 이루어진다. 
@@ -264,7 +282,7 @@ $$\left(\frac{\mathbb{K}[\x_1,\x_2]}{(\x_2-\x_1^2)}\right)_{\x_1}\cong\frac{\mat
 에 의하여, 열린집합 $\Spec A_{\x_1}$ 위에서 정의된 $1/\x_1$과 같은 함수들은 $X$ 위에서의 rational function이 된다. 이를 통해 분모에 $\x_2-\x_1^2$ 인자를 갖고 있지 않은 모든 유리식은 $X$ 위의 (적절한 열린집합에서의) 유리함수가 된다는 것을 안다. 
 :::
 
-Locally noetherian scheme $X$ 위에 정의된 rational function들의 모임은 *total quotient ring* $K(X)$를 정의한다. 만일, 위와 같이 $X$가 integral scheme이라 하자. 그럼 특히 $X$는 irreducible이므로 유일한 generic point $x$를 갖는다. 이 점은 임의의 affine open subset $U\cong\Spec A$에 대하여, integral domain $A$의 유일한 minimal prime ideal $(0)$에 대응되어야 한다. 이 점에서의 localization은 $A$의 nonzero element들을 모두 분모로 추가해 준 것, 즉 $\Frac(A)$와 같다. 따라서 $K(X)\cong \mathcal{O}_{X,x}\cong \Frac(A)$이며, 이는 $X$가 하나의 affine open $\Spec A$로 이루어진 경우 이미 알고 있던 $A$의 fraction field가 일반적인 integral scheme에서도 그대로 유리함수체의 역할을 한다는 것을 보여준다. 
+Locally noetherian scheme $X$ 위에 정의된 rational function들의 모임은 *total quotient ring* $K(X)$를 정의한다. 만일 $X$가 integral scheme이라 하자. 그럼 특히 $X$는 irreducible이므로 유일한 generic point $x$를 갖는다. 이 점은 임의의 affine open subset $U\cong\Spec A$에 대하여, integral domain $A$의 유일한 minimal prime ideal $(0)$에 대응되어야 한다. 이 점에서의 localization은 $A$의 nonzero element들을 모두 분모로 추가해 준 것, 즉 $\Frac(A)$와 같다. 따라서 $K(X)\cong \mathcal{O}_{X,x}\cong \Frac(A)$이며, 이는 $X$가 하나의 affine open $\Spec A$로 이루어진 경우 이미 알고 있던 $A$의 fraction field가 일반적인 integral scheme에서도 그대로 유리함수체의 역할을 한다는 것을 보여준다. 
 
 
 ---
