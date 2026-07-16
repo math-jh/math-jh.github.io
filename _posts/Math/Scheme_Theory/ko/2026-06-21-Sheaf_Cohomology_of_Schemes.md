@@ -12,6 +12,7 @@ date: 2026-06-21
 weight: 19
 
 published: false
+drift_needed: true
 ---
 
 우리는 [\[대수다양체\] §층 코호몰로지](/ko/math/algebraic_varieties/sheaf_cohomology)에서 quasi-projective variety 위의 quasi-coherent sheaf에 대한 층 코호몰로지를 유도 함자로 정의하고, Čech 코호몰로지와의 비교 및 Leray 정리를 통해 이를 계산하는 방법을 살펴보았다. 그곳의 논증은 사실상 quasi-projective라는 가정을 거의 사용하지 않으며, separated 조건과 affine 위의 소멸 정리만으로 작동한다. 이제 우리는 [§준연접층](/ko/math/scheme_theory/quasicoherent_sheaves)에서 임의의 scheme 위로 끌어올린 준연접층의 언어를 갖추었으므로, 층 코호몰로지 또한 임의의 scheme 위로 옮겨 다시 정립할 수 있다. 이 글에서 우리는 그 정의를 scheme 수준에서 다시 적고, **Serre의 아핀 소멸 정리**가 affine scheme 위에서 준연접층의 higher cohomology를 죽인다는 것을 증명하며, 이를 토대로 사영공간 위의 line bundle $\mathcal{O}(d)$의 코호몰로지를 재계산한다. 마지막으로 Noetherian projective scheme 위에서 연접층의 코호몰로지가 유한차원이라는 것과, 충분히 twist하면 higher cohomology가 소멸한다는 Serre vanishing을 다룬다.
@@ -42,7 +43,7 @@ $$0 \rightarrow H^0(X, \mathcal{F}') \rightarrow H^0(X, \mathcal{F}) \rightarrow
 이 존재한다.
 :::
 ::: 증명
-$\Gamma(X, -)$는 left exact functor이고 $\Sh(X)$는 enough injective를 가지므로, right derived functor가 정의하는 $\delta$-functor의 long exact sequence가 그대로 성립한다. ([\[호몰로지 대수학\] §유도함자, ⁋명제 8](/ko/math/homological_algebra/derived_functors#prop8))
+$\Gamma(X, -)$는 left exact functor이고 $\Sh(X)$는 enough injective를 가지므로, right derived functor가 정의하는 $\delta$-functor의 long exact sequence가 그대로 성립한다. (이는 [\[호몰로지 대수학\] §유도함자, ⁋명제 8](/ko/math/homological_algebra/derived_functors#prop8)의 쌍대 명제에 의한다.)
 :::
 
 [\[대수다양체\] §층 코호몰로지](/ko/math/algebraic_varieties/sheaf_cohomology)에서 도입한 Čech 코호몰로지의 정의 또한 그대로 옮겨진다. Scheme $X$의 open cover $\mathcal{U}=\{U_i\}_{i\in I}$와 sheaf $\mathcal{F}$에 대하여, Čech complex $\check C^\bullet(\mathcal{U}, \mathcal{F})$와 그 코호몰로지 $\check H^p(\mathcal{U}, \mathcal{F})$는 ([\[대수다양체\] §층 코호몰로지, ⁋정의 3](/ko/math/algebraic_varieties/sheaf_cohomology#def3), [\[대수다양체\] §층 코호몰로지, ⁋정의 4](/ko/math/algebraic_varieties/sheaf_cohomology#def4)) 위상공간 수준의 정의이므로 scheme 위에서도 곧바로 의미를 가진다. 우리의 목표는 좋은 덮개에 대하여 Čech 코호몰로지가 [정의 1](#def1)의 유도 함자 코호몰로지와 일치함을 보이는 것이며, 그 핵심에는 affine scheme 위의 소멸 정리가 있다.
