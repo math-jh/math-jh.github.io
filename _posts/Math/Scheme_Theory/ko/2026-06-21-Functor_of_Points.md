@@ -181,13 +181,13 @@ $$\mathbb{G}_m(T)\cong \Gamma(T, \mathcal{O}_T)^\times$$
 $\mathbb{Z}[\x, \x^{-1}]=\mathbb{Z}[\x]_\x$이므로, ring homomorphism $\mathbb{Z}[\x, \x^{-1}] \rightarrow \Gamma(T, \mathcal{O}_T)$은 $\x$의 image $a$가 가역인 것들과 일대일대응한다. 실제로 localization의 universal property에 의하여 $\mathbb{Z}[\x]_\x$에서 나가는 ring homomorphism은 $\x$의 image를 가역원으로 보내는 $\mathbb{Z}[\x] \rightarrow \Gamma(T, \mathcal{O}_T)$들과 정확히 대응하고, [명제 7](#prop7)에서 본 것처럼 이는 가역원 $a\in \Gamma(T, \mathcal{O}_T)^\times$를 하나 고르는 것이다. 
 :::
 
-이제 affine이 아닌 scheme의 대표적인 예로 사영공간 $\mathbb{P}^n$의 점함자를 살펴보자. 고전적으로 $\mathbb{P}^n$의 점은 동차좌표 $[x_0:\cdots:x_n]$, 즉 영이 아닌 $(n+1)$-tuple을 전체 scaling으로 동일시한 것이다. 이미 [§스킴 사이의 사상, ⁋예시 5](/ko/math/scheme_theory/morphism_of_schemes#ex5)에서 우리는 ring $A$ 위의 scheme $X$와 함수 $f_0,\ldots, f_n\in \Gamma(X, \mathcal{O}_X)$이 적절한 조건을 만족할 때 morphism $X \rightarrow \mathbb{P}^n_A$이 얻어지는 것을 보았다. 함자적 관점은 이 구성을 정확한 표현으로 만든다. 우선 직선다발을 다루어야 하므로, 다음을 약속한다. 
+이제 affine이 아닌 scheme의 대표적인 예로 사영공간 $\mathbb{P}^n$의 점함자를 살펴보자. 고전적으로 $\mathbb{P}^n$의 점은 동차좌표 $[x_0:\cdots:x_n]$, 즉 영이 아닌 $(n+1)$-tuple을 전체 scaling으로 동일시한 것이다. 이미 [§스킴 사이의 사상, ⁋예시 5](/ko/math/scheme_theory/morphism_of_schemes#ex5)에서 우리는 ring $A$ 위의 scheme $X$와 함수 $f_0,\ldots, f_n\in \Gamma(X, \mathcal{O}_X)$이 적절한 조건을 만족할 때 morphism $X \rightarrow \mathbb{P}^n_A$이 얻어지는 것을 보았다. 함자적 관점은 이 구성을 정확한 표현으로 만든다. 우선 line bundle을 다루어야 하므로, 다음을 약속한다. 
 
 ::: 정의 10
 Scheme $T$ 위의 *line bundle<sub>직선다발</sub>* $\mathcal{L}$은 rank $1$의 locally free $\mathcal{O}_T$-module이다. Line bundle $\mathcal{L}$의 절단 $s_0,\ldots, s_n\in \Gamma(T, \mathcal{L})$이 $\mathcal{L}$을 *globally generate<sub>전역생성</sub>*한다는 것은, 각각의 점 $t\in T$에서 stalk $\mathcal{L}_t$이 germ $(s_0)_t,\ldots, (s_n)_t$로 $\mathcal{O}_{T,t}$-module로서 생성되는 것이다. 두 데이터 $(\mathcal{L}, s_0,\ldots, s_n)$과 $(\mathcal{L}', s_0',\ldots, s_n')$이 *isomorphic*하다는 것은, $\mathcal{O}_T$-module isomorphism $\psi:\mathcal{L} \rightarrow \mathcal{L}'$이 존재하여 각각의 $i$에 대하여 $\psi(s_i)=s_i'$인 것이다. 
 :::
 
-직선다발과 그 생성절단의 isomorphism 개념을 위와 같이 약속하면, $\mathbb{P}^n$의 점함자는 다음과 같이 깔끔하게 기술된다. 
+line bundle과 그 생성절단의 isomorphism 개념을 위와 같이 약속하면, $\mathbb{P}^n$의 점함자는 다음과 같이 깔끔하게 기술된다. 
 
 ::: 정리 11
 $\mathbb{Z}$ 위의 projective space $\mathbb{P}^n=\Proj \mathbb{Z}[\x_0,\ldots, \x_n]$에 대하여, $\mathbb{P}^n(T)$는 $T$ 위의 line bundle $\mathcal{L}$과 이를 globally generate하는 절단 $s_0,\ldots, s_n\in \Gamma(T, \mathcal{L})$의 데이터 $(\mathcal{L}, s_0,\ldots, s_n)$들의 isomorphism class와 자연스럽게 일대일대응한다. 
