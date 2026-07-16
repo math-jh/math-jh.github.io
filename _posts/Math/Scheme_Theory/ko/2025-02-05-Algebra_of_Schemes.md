@@ -270,7 +270,11 @@ $$\mathfrak{p}=\ann(f),\qquad \supp(f)=Z(\mathfrak{p})$$
 
 가장 단순한 예시로 generic point의 경우를 보면, $\mathfrak{p}$가 어떤 irreducible component $C$의 generic point일 때는 $Z(\mathfrak{p})=C$이므로, 만일 $f$가 $\mathfrak{p}$에서 정의되지 않는다면, 즉 직관적으로 이 점에서 pole을 갖는다면, 위 논증은 $C$ 전체에서 $f\vert_U=0$임을 뜻한다. 마찬가지로 $\mathfrak{p}$가 embedded point일 때는 이 $Z(\mathfrak{p})$가 component 전체가 아니라 작은 닫힌집합으로 바뀔 뿐, 이러한 손실이 여전히 생기게 된다. 
 
-가령 [§스킴의 위상구조, ⁋예시 6](/ko/math/scheme_theory/topology_of_schemes#ex6)의 $Z(\x\y)=\Spec \mathbb{K}[\x,\y]/(\x\y)$가 바로 이런 상황을 보여준다. 이 scheme의 두 irreducible component는 $y$축 $Z(\x)$와 $x$축 $Z(\y)$이며, 그 generic point는 각각 $(\x)$와 $(\y)$이다. $\ann(\y)=(\x)$이므로 $\y$는 [명제 10](#prop10)에서 말하는 $\mathfrak{p}=(\x)$에 대한 witness이고, $\supp(\y)=Z(\x)$, 즉 $y$축 전체이다. 이제 $U=D(\x)$처럼 $y$축의 generic point $(\x)$를 뺀 열린집합을 생각하면, $\x\y=0$으로부터 $\y=\x^{-1}(\x\y)=0$ in $A_\x$이므로 $\y\vert_U=0$이다. 즉 $U$를 정의역으로 삼는 순간 $y$축의 정보를 실어나르는 함수 $\y$는 $0$인 rational function과 구별되지 않게 되며, 이는 $U$가 $y$축이라는 component 하나를 통째로 놓치고 있다는 사실을 정확히 반영한다. 
+가령 [§스킴의 위상구조, ⁋예시 6](/ko/math/scheme_theory/topology_of_schemes#ex6)의 $Z(\x\y)=\Spec \mathbb{K}[\x,\y]/(\x\y)$를 보자. 이 scheme은 두 irreducible component, $y$축 $Z(\x)$와 $x$축 $Z(\y)$을 가지며 그 generic point는 각각 $(\x)$와 $(\y)$이다. 또, $\ann(\y)=(\x)$이므로 [명제 10](#prop10)의 결과로 얻어지는 함수 $f$가 바로 $\y$가 되며, 실제로 $\supp(\y)=Z(\x)$가 되어 이는 $y$축 전체를 보여준다. 이제 $U=D(\x)$와 같이, 이 generic point $(\x)$를 뺀 열린집합을 생각하면, $\x\y=0$으로부터 
+
+$$\y=\x^{-1}(\x\y)=0\qquad\text{in $A_\x$}$$
+
+이므로 $\y\vert_U=0$이다. 즉 $U$를 정의역으로 삼는 순간 $y$축의 정보를 실어나르는 함수 $\y$는 $0$인 rational function과 구별되지 않게 되며, 이는 $U$가 $y$축이라는 component 하나를 통째로 놓치고 있다는 사실을 정확히 반영한다. 
 
 ::: 예시 13
 Affine scheme $X=\Spec \mathbb{K}[\x_1,\x_2]/(\x_2-\x_1^2)$을 생각하자. 그럼 $X$는 유일한 associated prime $(0)$을 가지며, $X$의 임의의 열린집합은 이 점을 포함하므로 $X$의 rational function은 공집합이 아닌 임의의 열린집합 $U$와 그 위에서의 함수 $f\in\Gamma(U, \mathcal{O}_X)$로 이루어진다. 
