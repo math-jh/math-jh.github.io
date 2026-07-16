@@ -12,6 +12,7 @@ date: 2026-06-21
 weight: 23
 
 published: false
+drift_needed: true
 ---
 
 대수기하학에서 어떤 대상이 국소적으로 주어졌을 때 이를 전역적으로 붙여 하나의 대상으로 만드는 일은 흔하다. 가장 익숙한 예는 열린덮개를 따라 sheaf의 section을 붙이는 것이다. 그런데 열린덮개는 본질적으로 단사적인 국소화에 불과하여, 실제로 다루고 싶은 많은 상황을 포착하지 못한다. 예를 들어 field extension $\mathbb{K}\subseteq L$을 따라 $L$ 위에서 정의된 대상을 $\mathbb{K}$ 위로 내려보내는 일이나, 어떤 covering space 위의 데이터를 밑공간 위로 모으는 일은 열린덮개의 언어로는 표현되지 않는다. Grothendieck은 이러한 상황을 통일적으로 다루기 위해, 열린포함사상보다 훨씬 넓은 *충실평탄 사상<sub>faithfully flat morphism</sub>*을 일종의 덮개로 받아들이는 관점을 도입하였다. 핵심은 충실평탄 사상이 정확성을 정확히 반영한다는 대수적 사실이며, 이로부터 밑환 위의 가군을 그보다 큰 환 위의 가군과 적절한 접합 조건으로 완전히 복원할 수 있다는 *하강<sub>descent</sub>* 정리가 따라온다. 이번 글에서는 먼저 가군 수준에서 이 정리를 확립하고, 이어 그 sheaf적·기하학적 형태인 fpqc 위상 위의 하강으로 끌어올린다.
@@ -119,7 +120,7 @@ $$p_1^\ast N=M\otimes_A B\otimes_A B=p_2^\ast N$$
 
 으로 동일한 $B\otimes_A B$-가군이며, $\varphi_N=\id$로 두면 descent datum이 된다. 이를 $M$에 딸린 *canonical descent datum*이라 부른다. Cocycle 조건은 세 사상이 모두 항등이므로 자명하게 성립한다. 더 일반적으로 $A$-가군 준동형사상 $M \rightarrow M'$은 base change하여 canonical descent datum 사이의 morphism을 주므로, 대응 $M\mapsto (M\otimes_A B, \id)$은 functor
 
-$$\Mod(A) \rightarrow \operatorname{Desc}(B/A)$$
+$$\rMod{A} \rightarrow \operatorname{Desc}(B/A)$$
 
 를 정의한다.
 :::
@@ -133,7 +134,7 @@ $$\Mod(A) \rightarrow \operatorname{Desc}(B/A)$$
 ::: 정리 6 (충실평탄 하강)
 $\varphi: A \rightarrow B$가 충실평탄이면, [예시 5](#ex5)의 functor
 
-$$\Mod(A) \rightarrow \operatorname{Desc}(B/A);\qquad M\mapsto (M\otimes_A B, \id)$$
+$$\rMod{A} \rightarrow \operatorname{Desc}(B/A);\qquad M\mapsto (M\otimes_A B, \id)$$
 
 은 categorical equivalence이다. 그 역함자는 descent datum $(N, \varphi_N)$에 대하여
 
