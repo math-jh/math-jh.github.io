@@ -277,13 +277,17 @@ $$\y=\x^{-1}(\x\y)=0\qquad\text{in $A_\x$}$$
 이므로 $\y\vert_U=0$이다. 즉 $U$를 정의역으로 삼는 순간 $y$축의 정보를 실어나르는 함수 $\y$는 $0$인 rational function과 구별되지 않게 되며, 이는 $U$가 $y$축이라는 component 하나를 통째로 놓치고 있다는 사실을 정확히 반영한다. 
 
 ::: 예시 13
-Affine scheme $X=\Spec \mathbb{K}[\x_1,\x_2]/(\x_2-\x_1^2)$을 생각하자. 그럼 $X$는 유일한 associated prime $(0)$을 가지며, $X$의 임의의 열린집합은 이 점을 포함하므로 $X$의 rational function은 공집합이 아닌 임의의 열린집합 $U$와 그 위에서의 함수 $f\in\Gamma(U, \mathcal{O}_X)$로 이루어진다. 
+[예시 11](#ex11)의 $X=\Spec A$, $A=\mathbb{K}[\x_1,\x_2]/(\x_2^2,\x_1\x_2)$ 위의 rational function이 구체적으로 어떤 꼴인지 살펴보자. [\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 둘째 결과에 의하여 $A$의 zero-divisor 전체는 associated prime들의 합집합 
 
-한편, 우리는 affine scheme $X=\Spec A$의 principal open subset $\Spec A_f$들이 위상의 basis를 이루며, 이 위에서의 함수는 $A_f$로 주어지는 것을 안다. 가령 이 예시에서 $f$를 $\x_1$(의 $A$에서의 image)로 택했다고 하면, isomorphism
+$$(\x_2)\cup(\x_1,\x_2)=(\x_1,\x_2)$$
 
-$$\left(\frac{\mathbb{K}[\x_1,\x_2]}{(\x_2-\x_1^2)}\right)_{\x_1}\cong\frac{\mathbb{K}[\x_1,\x_2]_{\x_1}}{(\x_2-\x_1^2)_{\x_1}}$$
+과 같으므로, non-zerodivisor는 정확히 원점에서 사라지지 않는 원소, 즉 $q(0)\ne0$를 만족하는 $q$에 대하여 $s=q(\x_1)+c'\x_2$의 꼴이다. 이러한 $s$는 두 associated prime $(\x_2),(\x_1,\x_2)$ 어디에도 속하지 않으므로 $D(s)$는 $X$의 두 associated point를 모두 포함하는, 즉 [정의 12](#def12)의 조건을 만족하는 유효한 정의역이 된다. 따라서 이런 $s$를 분모로 갖는 함수들이 $X$의 rational function을 이루며, 이들이 이루는 total quotient ring $K(X)$는 [예시 11](#ex11)에서 본 원소의 표기를 그대로 쓰면
 
-에 의하여, 열린집합 $\Spec A_{\x_1}$ 위에서 정의된 $1/\x_1$과 같은 함수들은 $X$ 위에서의 rational function이 된다. 이를 통해 분모에 $\x_2-\x_1^2$ 인자를 갖고 있지 않은 모든 유리식은 $X$ 위의 (적절한 열린집합에서의) 유리함수가 된다는 것을 안다. 
+$$K(X)=\left\{\frac{p(\x_1)+c\x_2}{q(\x_1)+c'\x_2} : q(0)\ne0\right\}$$
+
+의 꼴이 된다. 이는 고전적인 경우 fraction field가 분모가 $0$이 아닌 유리식들의 모임이었던 것과 나란한 모습이되, 분모가 (generic point뿐 아니라) 원점에서까지 사라지지 않아야 한다는 조건으로 바뀐 것이다. 
+
+그런데 이렇게 얻어진 $K(X)$는 고전적인 함수체와 결정적으로 다르다. 함수체는 언제나 field, 특히 reduced ring이었던 반면, $K(X)$는 nonzero nilpotent을 담기 때문이다. 실제로 $\x_2\in A\subseteq K(X)$는 $\x_2^2=0$인 nilpotent이면서도 $K(X)$에서 nonzero인데, 이는 정확히 embedded point 때문이다. [예시 11](#ex11)에서 보았듯 $\supp(\x_2)=\{(\x_1,\x_2)\}$는 embedded point 하나뿐이라 $\x_2$는 그 점에서만 nonzero이며, 만일 [정의 12](#def12)가 이 embedded point를 정의역에 담을 것을 요구하지 않았다면 $\x_2$는 정의역 전체에서 $0$이 되어 $K(X)$에서 사라졌을 것이다. 즉 $K(X)$가 함수체를 넘어 nilpotent까지 보게 되는 것은, $X$가 원점에서 갖는 nilpotent 방향의 두꺼움을 embedded point가 포착하고 [정의 12](#def12)가 그 점을 정의역에 붙잡아 두기 때문이다. 
 :::
 
 Locally noetherian scheme $X$ 위에 정의된 rational function들의 모임은 *total quotient ring* $K(X)$를 정의한다. 만일 $X$가 integral scheme이라 하자. 그럼 특히 $X$는 irreducible이므로 유일한 generic point $x$를 갖는다. 이 점은 임의의 affine open subset $U\cong\Spec A$에 대하여, integral domain $A$의 유일한 minimal prime ideal $(0)$에 대응되어야 한다. 이 점에서의 localization은 $A$의 nonzero element들을 모두 분모로 추가해 준 것, 즉 $\Frac(A)$와 같다. 따라서 $K(X)\cong \mathcal{O}_{X,x}\cong \Frac(A)$이며, 이는 $X$가 하나의 affine open $\Spec A$로 이루어진 경우 이미 알고 있던 $A$의 fraction field가 일반적인 integral scheme에서도 그대로 유리함수체의 역할을 한다는 것을 보여준다. 
