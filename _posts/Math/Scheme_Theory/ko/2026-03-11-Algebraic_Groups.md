@@ -173,7 +173,7 @@ $$A_\rchi = \{f \in A \mid t \cdot f = \rchi(t) f \text{ for all } t \in T\}$$
 :::
 
 ::: 증명
-Torus action $T \times X \to X$가 주어지면, coordinate ring $A$ 위에 action $t \cdot f = f(t)$로 정의할 수 있다. 이 action은 linear하고, 각 coordinate ring의 원소 $f$는 eigenvalue를 가진 eigenvector로 분해될 수 있다. 이 eigenvalue들은 torus의 character들과 일치하므로, $A$는 weight space들의 직합으로 분해된다.
+Torus action $\mu:T\times X \to X$가 주어지면, 그 pullback로 coordinate ring $A$ 위에 $T$의 action이 $(t \cdot f)(x)=f(t^{-1} \cdot x)$로 유도된다. 이는 $A$를 $\mathbb{C}$-vector space로 볼 때 $T$의 rational representation을 이룬다. 이제 $T\cong(\mathbb{G}_m)^n$이므로 각 coordinate $t_i$에 대응하는 연산자는 서로 commute하는 linear automorphism이다. $\mathbb{G}_m$의 유한차원 rational representation은 항상 character $t_i\mapsto t_i^k$들의 직합으로 대각화되므로 각 $t_i$는 diagonalizable이고, 임의의 유한차원 $T$-stable 부분공간 위에서 이들은 동시대각화된다. 따라서 $A$는 common eigenspace들의 직합으로 분해되며, 각 common eigenspace는 정확히 어떤 character $\rchi\in X^\ast(T)$에 대하여 $t \cdot f=\rchi(t)f$를 만족하는 $f$들의 공간 $A_\rchi$이다. 이로부터 원하는 분해 $A=\bigoplus_\rchi A_\rchi$를 얻는다.
 :::
 
 ## Quotient Varieties
@@ -201,7 +201,7 @@ $$A^G = \{a \in A \mid \rho(a) = a \otimes 1\}$$
 Invariant ring의 원소들은 group action에 의해 변하지 않는 대칭성을 포착한다. Coordinate ring $A$의 원소를 $\Spec A$ 위의 함수로 본다면, 기하적으로 $A^G$의 원소들은 각각의 orbit 위에서 상수함수가 된다. 따라서 이들을 가지고 만든 공간 $\Spec(A^G)$는 orbit space $X/G$의 좋은 근사로 생각할 수 있게 된다. 그러나 문제는 $A^G$가 대수적으로 잘 행동하지 않을 수도 있다는 것이다. 
 
 ::: 정의 15
-Affine algebraic group $G$가 *reductive*라는 것은 $G$의 모든 유한차원 representation이 completely reducible인 것이다. 즉, 임의의 representation $V$가 irreducible representation들의 direct sum으로 분해되는 것이다.
+Affine algebraic group $G$가 *reductive*라는 것은 $G$의 모든 유한차원 representation이 completely reducible인 것이다. 즉, 임의의 representation $V$가 irreducible representation들의 direct sum으로 분해되는 것이다. (엄밀히는 이 성질을 *linearly reductive*라 부르며, 표수 $0$ — 이 글의 $\mathbb{C}$처럼 — 에서는 unipotent radical이 자명하다는 기하적 정의의 reductive와 동치이다. 이 글은 표수 $0$ 위에서만 다루므로 두 개념을 구분하지 않는다.)
 :::
 
 만일 $G$가 reductive group이라면 Hilbert basis theorem과 Nagata theorem을 통해 invariant ring $A^G$가 항상 finitely generated라는 것을 보일 수 있으며, 따라서 $\Spec(A^G)$가 well-defined affine variety가 된다.
