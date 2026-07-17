@@ -23,12 +23,29 @@ drift_needed: true
 가장 첫 번째 관점은 꽤나 자연스러운 것이다. Scheme은 본질적으로 affine scheme들을 붙여서 만드는 것이고, categorical equivalence $\AffSch\cong\cRing^\op$에 의하여 affine scheme 사이의 morphism은 본질적으로 ring homomorphism이다. 따라서 scheme morphism 또한 affine scheme들 사이의 morphism을 붙여서 만드는 것으로 이해할 수 있어야 할 것이다. 즉 다음 명제를 기대하는 것이 합당하다.
 
 ::: 명제 1
-Scheme morphism $\varphi: X \rightarrow Y$가 주어졌다 하자. 그럼 $X$의 affine open subset $U\cong\Spec A$와 $Y$의 affine open subset $V\cong\Spec B$가 $\varphi(U)\subseteq V$를 만족한다면, $\varphi\vert_U: U \rightarrow V$는 affine scheme들 사이의 morphism이다. 
+Scheme morphism $\varphi: X \rightarrow Y$가 주어졌다 하자. 그럼 $X$의 affine open subset $U\cong\Spec A$와 $Y$의 affine open subset $V\cong\Spec B$가 $\varphi(U)\subseteq V$를 만족한다면, $\varphi\vert_U: U \rightarrow V$는 affine scheme들 사이의 morphism, 즉 ring homomorphism $B \rightarrow A$이다. 
 
-거꾸로 $X,Y$의 두 affine open covering $\{U_i\}$와 $\{V_j\}$가 주어졌다 하고, affine scheme들 사이의 morphism $\varphi_{ij}: U_i \rightarrow V_j$가 주어졌다 하자. 만일 이들이 각각의 교집합 위에서 gluing condition을 만족하여 잘 정의된다면 $\varphi_{ij}$들은 scheme morphism $\varphi: X \rightarrow Y$를 만든다. 
+거꾸로 $X$의 affine open covering $\{U_i\}$가 주어졌다 하고, 각각의 $i$마다 $Y$의 affine open subset $V_i$와 affine scheme들 사이의 morphism $\varphi_i: U_i \rightarrow V_i$가 주어졌다 하자. 만일 이들이 임의의 $i,k$에 대하여 gluing condition
+
+$$\varphi_i\vert_{U_i\cap U_k}=\varphi_k\vert_{U_i\cap U_k}\qquad\text{as morphisms $U_i\cap U_k \rightarrow Y$}$$
+
+을 만족한다면, $\varphi_i$들은 유일한 scheme morphism $\varphi: X \rightarrow Y$로 붙는다. 
+:::
+::: 증명
+첫 주장의 경우, 임의의 열린집합 $W\subseteq V$에 대하여 $\varphi^\sharp(W)$에 restriction map을 합성하여 얻어지는 함수
+
+$$\mathcal{O}_Y(W) \rightarrow \mathcal{O}_X(\varphi^{-1}(W)) \rightarrow \mathcal{O}_X(\varphi^{-1}(W)\cap U)$$
+
+들이 sheaf morphism $\mathcal{O}_Y\vert_V \rightarrow (\varphi\vert_U)_\ast(\mathcal{O}_X\vert_U)$를 정의한다. 이것이 임의의 $x\in U$의 stalk 위에 유도하는 함수는 germ만으로 결정되므로 원래의 $\varphi$가 유도하는 $\mathcal{O}_{Y,\varphi(x)} \rightarrow \mathcal{O}_{X,x}$와 같고, 따라서 local homomorphism이다. 즉 $\varphi\vert_U$는 $\LRS$의 morphism이며, $U$와 $V$가 affine scheme이므로 [§아핀스킴, ⁋명제 11](/ko/math/scheme_theory/affine_schemes#prop11)에 의하여 이는 유일한 ring homomorphism $B \rightarrow A$로부터 유도된 것이다. 
+
+둘째 주장의 경우, gluing condition에 의하여 연속함수 $\varphi_i: U_i \rightarrow V_i\hookrightarrow Y$들이 서로의 겹침 위에서 일치하므로, [\[위상수학\] §준층, ⁋보조정리 1](/ko/math/topology/presheaves#lem1)에 의하여 이들은 연속함수 $\varphi: X \rightarrow Y$로 붙는다. 또 열린집합 $W\subseteq Y$와 $s\in \mathcal{O}_Y(W)$가 주어질 때마다 얻어지는 section들
+
+$$s_i:=\varphi_i^\sharp(W)(s)\in \mathcal{O}_X(\varphi^{-1}(W)\cap U_i)$$
+
+역시 같은 이유로 서로의 겹침 위에서 일치하고, $\{\varphi^{-1}(W)\cap U_i\}$가 $\varphi^{-1}(W)$의 open covering이므로 [\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1)의 두 조건에 의하여 이들을 붙인 $s'\in \mathcal{O}_X(\varphi^{-1}(W))$가 유일하게 존재한다. 이제 $\varphi^\sharp(W): s\mapsto s'$으로 정의하면 restriction map과의 호환성은 각각의 $U_i$ 위에서 확인하면 충분하고, $\varphi^\sharp$가 $x\in U_i$의 stalk 위에 유도하는 함수는 $\varphi_i^\sharp$가 유도하는 것과 같으므로 local homomorphism이다. 따라서 $\varphi$는 scheme morphism이며, $\varphi\vert_{U_i}=\varphi_i$라는 조건이 $\varphi$를 완전히 결정하므로 이러한 $\varphi$는 유일하다. 
 :::
 
-한쪽 방향은 [§아핀스킴, ⁋명제 11](/ko/math/scheme_theory/affine_schemes#prop11)에 의해 $\AffSch$이 $\LRS$의 full subcategory라는 주장의 새로운 버전일 뿐이며, 그 역을 위한 gluing 또한 자명한 방식으로 얻어진다. 
+첫 주장은 [§아핀스킴, ⁋명제 11](/ko/math/scheme_theory/affine_schemes#prop11)의 $\AffSch$가 $\LRS$의 full subcategory라는 사실을 scheme morphism의 국소적인 모습에 그대로 적용한 것에 지나지 않는다. 다만 둘째 주장의 gluing condition은 환 준동형사상들 사이의 조건으로 적히지 않는다는 데 주의해야 한다. $V_i\neq V_k$인 경우 $\varphi_i$와 $\varphi_k$를 하나의 affine scheme 안에서 비교할 수 없어 이들을 $Y$ 안에서 비교해야 하고, 또 $U_i\cap U_k$는 일반적으로 affine scheme이 아니기 때문이다. 즉 scheme morphism을 붙이기 위해 주어지는 데이터는 환 준동형사상들이지만, 이들이 붙는지를 판정하는 조건은 그렇지 않다. 
 
 ::: 예시 2
 Affine scheme들 사이의 morphism이 아닌 scheme morphism의 예시로, [§사영스킴, §§사영공간](/ko/math/scheme_theory/projective_schemes#사영공간)에서 motivation을 위해 처음 등장했던 map
