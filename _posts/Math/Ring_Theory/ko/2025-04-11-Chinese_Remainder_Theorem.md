@@ -15,13 +15,13 @@ weight: 3
 
 중국인의 나머지정리는 정수론의 고전 결과로, 이 결과의 본질은 ring isomorphism $\mathbb{Z}/mn\mathbb{Z}\cong \mathbb{Z}/m\mathbb{Z}\times \mathbb{Z}/n\mathbb{Z}$에 있다. ([\[정수론\] §중국인의 나머지 정리, ⁋정리 1](/ko/math/number_theory/chinese_remainder_theorem#thm1)) 각 정수가 $\bmod m$에서의 나머지와 $\bmod n$에서의 나머지의 순서쌍으로 완벽히 복원된다는 뜻이며, "법별로 따로 풀어 합치는" 분해가 환의 직접곱 분해로 드러나는 것이다 ([\[정수론\] §중국인의 나머지 정리, ⁋참고 4](/ko/math/number_theory/chinese_remainder_theorem#rmk4)).
 
-이를 임의의 환 $A$의 ideal로 일반화하는 것이 이 글의 목표이다. 여기서 "서로소"에 해당하는 ideal의 조건은 *comaximal*이다. 두 ideal $\mathfrak{a},\mathfrak{b}$가 $\mathfrak{a}+\mathfrak{b}=A$를 만족할 때 comaximal이라 부르는데, 이는 $1=u+v$ ($u\in\mathfrak{a}, v\in\mathfrak{b}$)꼴의 표현이 존재한다는 뜻이며 정수의 $1=\gcd(m,n)$·Bézout 표현과 정확히 대응한다. 일반화된 정리는 쌍별 comaximal인 ideal들 $\mathfrak{a}_i$에 대하여 환 동형
+이를 임의의 환 $A$의 ideal로 일반화하는 것이 이 글의 목표이다. 여기서 "서로소"에 해당하는 ideal의 조건은 *comaximal*이다. 두 ideal $\mathfrak{a},\mathfrak{b}$가 $\mathfrak{a}+\mathfrak{b}=A$를 만족할 때 comaximal이라 부르는데, 이는 $1=u+v$ ($u\in\mathfrak{a}, v\in\mathfrak{b}$)꼴의 표현이 존재한다는 뜻이며 정수의 $1=\gcd(m,n)$·Bézout 표현과 정확히 대응한다. 일반화된 정리는 쌍별 comaximal인 ideal들 $\mathfrak{a}_i$에 대하여 ring isomorphism
 
 $$A/\Big(\bigcap_i \mathfrak{a}_i\Big)\cong \prod_i A/\mathfrak{a}_i$$
 
 가 성립한다는 형태이고, $A$가 가환환이라면 뒤에 보일 교차-곱 등식 $\bigcap_i\mathfrak{a}_i=\mathfrak{a}_1\cdots\mathfrak{a}_n$에 의해 $A/\mathfrak{a}_1\cdots\mathfrak{a}_n\cong\prod_i A/\mathfrak{a}_i$로도 쓸 수 있다.
 
-이 마지막 등식 $\bigcap\mathfrak{a}_i=\prod\mathfrak{a}_i$는 comaximal 조건이 있어야만, 그리고 가환이어야만 성립하는 미묘한 사실이다. 정리 본증명에 앞서 ideal의 곱을 정의하고 이 등식부터 확보하자.
+이 등식은 comaximal 조건과 가환성이 모두 있어야만 성립하는 미묘한 사실이다. 다음 절에서 ideal의 곱을 정의하며 이를 먼저 확보한다.
 
 ## Ideal의 곱
 
@@ -120,7 +120,7 @@ $$\mathfrak{b}_1\cap\cdots\cap \mathfrak{b}_n=(\mathfrak{b}_1\cap\cdots\cap \mat
 
 ## 중국인의 나머지 정리
 
-Ring $A$와, $A$의 two-sided ideal들 $\mathfrak{a}_i$가 주어졌다 하자. 그럼 각 몫환으로의 projection들 $\pi_i:A \rightarrow A/\mathfrak{a}_i$이 존재하며, 이들로부터 ring homomorphism $\pi:A \rightarrow\prod A/\mathfrak{a}_i$가 정의된다. 이 사상이 언제 동형이 되는지가 중국인의 나머지정리의 핵심이다.
+Ring $A$와, $A$의 two-sided ideal들 $\mathfrak{a}_i$가 주어졌다 하자. 그럼 각 몫환으로의 projection들 $\pi_i:A \rightarrow A/\mathfrak{a}_i$이 존재하며, 이들로부터 ring homomorphism $\pi:A \rightarrow\prod A/\mathfrak{a}_i$가 정의된다. 이 사상이 언제 isomorphism이 되는지가 중국인의 나머지정리의 핵심이다.
 
 ::: 명제 5
 Ring $A$와, $A$의 two-sided ideal들 $\mathfrak{a}_1,\ldots, \mathfrak{a}_n$이 주어졌다 하자. 만일 $i\neq j$에 대하여 $\mathfrak{a}_i+\mathfrak{a}_j=A$가 항상 성립한다면 위에서 정의한 $\pi:A \rightarrow \prod_1^n A/\mathfrak{a}_i$는 surjective이고, 이 map의 kernel은 $\bigcap \mathfrak{a}_i$와 같다.
@@ -147,7 +147,7 @@ $$A/\mathfrak{a}_1\cdots \mathfrak{a}_n\cong\prod_{i=1}^n A/\mathfrak{a}_i$$
 
 원래의 정수 버전은 $A=\mathbb{Z}$인 특수한 경우이다. 쌍마다 서로소인 $n_1,\ldots, n_r$에 대해 $\mathfrak{a}_i=n_i \mathbb{Z}$라 하고 $n=n_1\cdots n_r$이라 두면, 서로소 조건이 곧 comaximal 조건 $\mathfrak{a}_i+\mathfrak{a}_j=\mathbb{Z}$이 되므로 위 명제는 isomorphism $\mathbb{Z}/n \mathbb{Z}\cong\prod \mathbb{Z}/n_i \mathbb{Z}$을 준다. 다시 말해 임의의 나머지들의 순서쌍 $(a_i \bmod n_i)_i$에 대하여 이를 동시에 실현하는 정수가 법 $n$에서 유일하게 존재한다는 것이고, 이것이 고전적인 중국인의 나머지정리이다.
 
-명제 5의 동형 $A\cong\prod A/\mathfrak{a}_i$는 환 $A$가 더 작은 환들의 곱으로 쪼개진다는 강한 사실이다. 이러한 곱분해는 환의 *center에 놓인 idempotent*들로 깔끔하게 기술되며, 이는 다음 동치 명제의 내용이다. (idempotent를 본격적으로 다루는 것은 다음 글의 주제이므로 여기서는 짧게 언급만 한다.)
+명제 5의 isomorphism $A\cong\prod A/\mathfrak{a}_i$는 환 $A$가 더 작은 환들의 곱으로 쪼개진다는 강한 사실이다. 이러한 곱분해는 환의 *center에 놓인 idempotent*들로 깔끔하게 기술되며, 이는 다음 동치 명제의 내용이다. (idempotent를 본격적으로 다루는 것은 다음 글의 주제이므로 여기서는 짧게 언급만 한다.)
 
 ::: 명제 6
 Ring $A$와 그 center $C(A)$, 그리고 two-sided ideal들 $\mathfrak{a}_1,\ldots, \mathfrak{a}_n$이 주어졌다 하자. 다음이 모두 동치이다.
@@ -159,11 +159,11 @@ Ring $A$와 그 center $C(A)$, 그리고 two-sided ideal들 $\mathfrak{a}_1,\ldo
 ::: 증명
 세 조건이 (1)$\Leftrightarrow$(2)$\Rightarrow$(3)$\Rightarrow$(1)의 순환으로 동치임을 보인다.
 
-(1)$\Leftrightarrow$(2): [명제 5](#prop5)에 의해 $\pi$가 전사인 것은 쌍별 comaximal 조건과 동치이고, 항상 $\ker\pi=\bigcap\mathfrak{a}_i$이므로, $\pi$가 동형인 것은 (2)와 동치이다.
+(1)$\Leftrightarrow$(2): [명제 5](#prop5)에 의해 $\pi$가 전사인 것은 쌍별 comaximal 조건과 동치이고, 항상 $\ker\pi=\bigcap\mathfrak{a}_i$이므로, $\pi$가 isomorphism인 것은 (2)와 동치이다.
 
-(2)$\Rightarrow$(3): (2)에 의해 $\pi$는 동형이다. $\prod A/\mathfrak{a}_i$에서 $i$번째 성분만 $1+\mathfrak{a}_i$이고 나머지는 모두 $0$인 원소를 $\bar{e}_i$라 하자. 그럼 $\sum\bar{e}_i=\bar{1}$, $\bar{e}_i^2=\bar{e}_i$, $\bar{e}_i\bar{e}_j=0$이 성립하며, 각 성분이 몫환의 항등원 또는 $0$이므로 $\bar{e}_i$는 $\prod A/\mathfrak{a}_i$의 center에 속한다. $e_i:=\pi^{-1}(\bar{e}_i)$라 두면, $\pi$가 동형인 덕분에 $e_i\in C(A)$이며 $e_i$들은 위 idempotent·직교 관계를 그대로 계승한다. 또한 $\bar{e}_i$의 $i$번째 성분이 $1$이므로 $1-e_i$는 $\pi_i$ 아래 $0$으로 가고, 따라서 $1-e_i\in\ker\pi_i=\mathfrak{a}_i$이다. 그래서 $A(1-e_i)\subseteq \mathfrak{a}_i$이다. 역으로 $a\in\mathfrak{a}_i$라 하면 $a=ae_i+a(1-e_i)$인데, $ae_i$의 모든 성분이 $0$이 되어($i$번째는 $\pi_i(a)\pi_i(e_i)=0\cdot 1=0$, 나머지 성분에서 $\bar{e}_i$는 $0$) $ae_i\in\bigcap\mathfrak{a}_i=0$이므로 $a=a(1-e_i)\in A(1-e_i)$이다. 즉 $\mathfrak{a}_i=A(1-e_i)$이다.
+(2)$\Rightarrow$(3): (2)에 의해 $\pi$는 isomorphism이다. $\prod A/\mathfrak{a}_i$에서 $i$번째 성분만 $1+\mathfrak{a}_i$이고 나머지는 모두 $0$인 원소를 $\bar{e}_i$라 하자. 그럼 $\sum\bar{e}_i=\bar{1}$, $\bar{e}_i^2=\bar{e}_i$, $\bar{e}_i\bar{e}_j=0$이 성립하며, 각 성분이 몫환의 항등원 또는 $0$이므로 $\bar{e}_i$는 $\prod A/\mathfrak{a}_i$의 center에 속한다. $e_i:=\pi^{-1}(\bar{e}_i)$라 두면, $\pi$가 isomorphism인 덕분에 $e_i\in C(A)$이며 $e_i$들은 위 idempotent·직교 관계를 그대로 계승한다. 또한 $\bar{e}_i$의 $i$번째 성분이 $1$이므로 $1-e_i$는 $\pi_i$ 아래 $0$으로 가고, 따라서 $1-e_i\in\ker\pi_i=\mathfrak{a}_i$이다. 그래서 $A(1-e_i)\subseteq \mathfrak{a}_i$이다. 역으로 $a\in\mathfrak{a}_i$라 하면 $a=ae_i+a(1-e_i)$인데, $ae_i$의 모든 성분이 $0$이 되어($i$번째는 $\pi_i(a)\pi_i(e_i)=0\cdot 1=0$, 나머지 성분에서 $\bar{e}_i$는 $0$) $ae_i\in\bigcap\mathfrak{a}_i=0$이므로 $a=a(1-e_i)\in A(1-e_i)$이다. 즉 $\mathfrak{a}_i=A(1-e_i)$이다.
 
-(3)$\Rightarrow$(1): $e_i\in C(A)$이고 이들이 직교 idempotent이며 $\sum e_i=1$을 이루므로 $A=\bigoplus_i Ae_i$이다. 사상 $A\to Ae_i$, $a\mapsto ae_i$는 전사이고 그 kernel은 $A(1-e_i)=\mathfrak{a}_i$이므로 $A/\mathfrak{a}_i\cong Ae_i$이다. 이를 합치면 $\prod A/\mathfrak{a}_i\cong\prod Ae_i\cong A$이며, 이 합성이 원래 사상 $\pi$와 일치하므로 $\pi$는 동형이다.
+(3)$\Rightarrow$(1): $e_i\in C(A)$이고 이들이 직교 idempotent이며 $\sum e_i=1$을 이루므로 $A=\bigoplus_i Ae_i$이다. 사상 $A\to Ae_i$, $a\mapsto ae_i$는 전사이고 그 kernel은 $A(1-e_i)=\mathfrak{a}_i$이므로 $A/\mathfrak{a}_i\cong Ae_i$이다. 이를 합치면 $\prod A/\mathfrak{a}_i\cong\prod Ae_i\cong A$이며, 이 합성이 원래 사상 $\pi$와 일치하므로 $\pi$는 isomorphism이다.
 :::
 
 $A$가 가환환이면 [명제 4](#prop4)에 의하여 $\bigcap\mathfrak{a}_i=\mathfrak{a}_1\cdots\mathfrak{a}_n$이므로, 조건 2의 $\bigcap\mathfrak{a}_i=0$은 $\mathfrak{a}_1\cdots\mathfrak{a}_n=0$으로 바꾸어 써도 같다. 
