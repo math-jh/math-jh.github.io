@@ -30,6 +30,7 @@ dark_skin                 : "custom-dark"
 ```
 {: data-filename="_config.yml"}
 그리고 `assets/css/` 디렉터리로 들어가, 다음과 같이 `main_dark.scss`를 추가한다.
+{% raw %}
 ```scss
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
@@ -42,6 +43,7 @@ dark_skin                 : "custom-dark"
 
 ```
 {: data-filename="assets/css/main_dark.scss"}
+{% endraw %}
 그 후 `_includes/head.html`로 들어가서, 위에서 지정한 `dark_theme`이 참이라면 방금 만든 `main_dark.scss`를 로드하도록 한다.
 {% raw %}
 ```html

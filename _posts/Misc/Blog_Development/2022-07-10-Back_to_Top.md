@@ -50,6 +50,7 @@ weight: 9
 ## 읽은 퍼센트 표시하기
 
 나는 여기에 더해, 맨 위로 버튼 밑에 읽은 정도를 나타내는 퍼센트 표시가 있기를 바랐다. 다만 카테고리들을 모아둔 페이지 등등에서는 퍼센트가 표시될 필요가 없다고 판단하였다. 이를 위해, 위에서 얻은 코드를 다음과 같이 수정했다.
+{% raw %}
 ```html
 <aside class="sidebar__top">
     <div style="text-align: center; width: 50px">
@@ -61,6 +62,7 @@ weight: 9
 </aside>
 ```
 {: data-filename="_layouts/default.html"}
+{% endraw %}
 이후 Javascript를 통해 스크롤이 일어날 때마다 얼마나 읽었는지를 계산하고, 이 값을 바탕으로 `<span>` 안에 있는 숫자를 바꿔준다. 이 스크립트는 `_includes/scripts.html`에 저장하였다.
 ```html
 <script language="javascript">
