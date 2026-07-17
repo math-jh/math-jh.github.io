@@ -1,0 +1,149 @@
+/* ==========================================================================
+   찾아보기(용어 색인) — 책 색인(back-of-book index) 조판.
+   표 대신 한 줄 엔트리 + hanging indent, 단일 컬럼. 데이터는 _data/terms.yml,
+   조판은 페이지 Liquid. 섹션 머리는 정리 라벨 행과 같은 문법(글자 + 헤어라인).
+   ========================================================================== */
+
+.term-index {
+  // 상단 고정 바: A–Z 점프 + 필터 입력
+  &__bar {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    display: flex;
+    align-items: baseline;
+    gap: 1em;
+    padding: 0.45em 0;
+    background: $background-color;
+    border-bottom: 1px solid $border-color;
+  }
+
+  &__letters {
+    flex: 1;
+    font-family: $sans-serif;
+    font-size: 0.85em;
+    letter-spacing: 0.02em;
+
+    a {
+      padding: 0 0.18em;
+      color: $muted-text-color;
+      text-decoration: none;
+
+      &:hover {
+        color: $text-color;
+      }
+    }
+  }
+
+  &__filter {
+    width: 11em;
+    padding: 0.1em 0.4em;
+    font-family: $sans-serif;
+    font-size: 0.85em;
+    color: $text-color;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid $border-color; // 헤어라인 입력칸
+    border-radius: 0;
+
+    &:focus {
+      outline: 0;
+      border-bottom-color: $muted-text-color;
+    }
+  }
+
+  // 절 머리: 큰 글자 + 오른쪽으로 뻗는 헤어라인
+  &__letter {
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
+    margin: 1.5em 0 0.3em;
+    padding-bottom: 0;
+    border-bottom: 0; // 테마 h2 밑줄 대신 ::after 헤어라인
+
+    &::after {
+      content: "";
+      flex: 1;
+      border-top: 1px solid $border-color;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  // 엔트리 한 줄: 넘치면 hanging indent 로 이어짐
+  &__entry {
+    margin: 0;
+    padding: 0.1em 0 0.1em 1.6em;
+    text-indent: -1.6em;
+    line-height: 1.6;
+  }
+
+  &__term {
+    font-weight: 700;
+  }
+
+  &__alt {
+    color: $muted-text-color;
+  }
+
+  &__defs {
+    margin-left: 0.55em;
+    font-size: 0.92em;
+
+    a {
+      color: $muted-text-color;
+      text-decoration: none;
+      border-bottom: 1px dotted $border-color;
+
+      &:hover {
+        color: $link-color;
+        border-bottom-color: $link-color;
+      }
+    }
+  }
+
+  // 참고 문서: 정의와 같은 톤, "참고:" 마커로만 구분
+  &__refs {
+    @extend .term-index__defs;
+
+    &::before {
+      content: "참고: ";
+      color: $muted-text-color;
+      font-size: 0.9em;
+    }
+  }
+
+  // 참고 용어(see also): → 화살표, 이탤릭
+  &__see {
+    margin-left: 0.55em;
+    font-size: 0.9em;
+    font-style: italic;
+    color: $muted-text-color;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        color: $text-color;
+      }
+    }
+  }
+
+  // 필터로 걸러진 상태
+  &__entry[hidden],
+  &__section[hidden] {
+    display: none;
+  }
+
+  // 필터 결과 없음 안내
+  &__empty {
+    margin: 2em 0;
+    color: $muted-text-color;
+    font-family: $sans-serif;
+  }
+}
