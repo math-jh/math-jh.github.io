@@ -277,11 +277,13 @@ $$\y=\x^{-1}(\x\y)=0\qquad\text{in $A_\x$}$$
 이므로 $\y\vert_U=0$이다. 즉 $U$를 정의역으로 삼는 순간 $y$축의 정보를 실어나르는 함수 $\y$는 $0$인 rational function과 구별되지 않게 되며, 이는 $U$가 $y$축이라는 component 하나를 통째로 놓치고 있다는 사실을 정확히 반영한다. 
 
 ::: 예시 13
-[예시 11](#ex11)의 $X=\Spec A$, $A=\mathbb{K}[\x_1,\x_2]/(\x_2^2,\x_1\x_2)$ 위의 rational function이 구체적으로 어떤 꼴인지 살펴보자. [\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 둘째 결과에 의하여 $A$의 zero-divisor 전체는 associated prime들의 합집합 
+[예시 11](#ex11)의 $X=\Spec \mathbb{K}[\x_1,\x_2]/(\x_2^2,\x_1\x_2)$ 위의 rational function이 구체적으로 어떤 꼴인지 살펴보자. [\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 둘째 결과에 의하여 $A=\mathbb{K}[\x_1,\x_2]/(\x_2^2,\x_1\x_2)$의 zero-divisor 전체는 associated prime들의 합집합 
 
 $$(\x_2)\cup(\x_1,\x_2)=(\x_1,\x_2)$$
 
-과 같으므로, non-zerodivisor는 정확히 원점에서 사라지지 않는 원소, 즉 $q(0)\ne0$를 만족하는 $q$에 대하여 $s=q(\x_1)+c'\x_2$의 꼴이다. 이러한 $s$는 두 associated prime $(\x_2),(\x_1,\x_2)$ 어디에도 속하지 않으므로 $D(s)$는 $X$의 두 associated point를 모두 포함하는, 즉 [정의 12](#def12)의 조건을 만족하는 유효한 정의역이 된다. 따라서 이런 $s$를 분모로 갖는 함수들이 $X$의 rational function을 이루며, 이들이 이루는 total quotient ring $K(X)$는 [예시 11](#ex11)에서 본 원소의 표기를 그대로 쓰면
+과 같으므로, non-zerodivisor는 정확히 원점에서 사라지지 않는 원소, 즉 $q(0)\ne0$를 만족하는 $q$에 대하여 $s=q(\x_1)+c'\x_2$의 꼴이다. 이러한 $s$는 두 associated prime $(\x_2),(\x_1,\x_2)$ 어디에도 속하지 않으므로 $D(s)$는 $X$의 두 associated point를 모두 포함하여 [정의 12](#def12)의 조건을 만족하는 유효한 정의역이 되며, [§아핀스킴, ⁋보조정리 6](/ko/math/scheme_theory/affine_schemes#lem6)에 의하여 그 위의 함수들은 $A_s$로 주어진다. 
+
+우리 주장은 이 정의역 $D(s)$에서 정의된 유리함수들만 보아도 이들이 $X$ 전체의 유리함수들이 된다는 것이다. 이는 임의의 정의역 $U$에 대하여 $X\setminus U=Z(I)$라 하면, $U$가 원점을 포함하기 위해서는 $I\not\subseteq(\x_1,\x_2)$ $I$의 원소 중 $(\x_1,\x_2)$에 속하지 않는 것, 즉 non-zerodivisor $s\in I$가 존재한다. 이 때 $s\in I$로부터 $D(s)\subseteq U$이고 $X$의 associated point는 모두 $D(s)$ 안에 있으므로, $U$ 위의 함수를 $D(s)$로 제한하여도 associated point에서의 germ은, 따라서 그것이 ($\ast$)를 따라 정의하는 rational function은 변하지 않는다. 즉 정의역은 언제나 $D(s)$ 꼴로 줄일 수 있으며, 이로부터 $X$의 rational function 전체가 이루는 total quotient ring $K(X)$는 [예시 11](#ex11)에서 본 원소의 표기를 그대로 쓰면
 
 $$K(X)=\left\{\frac{p(\x_1)+c\x_2}{q(\x_1)+c'\x_2} : q(0)\ne0\right\}$$
 
