@@ -53,7 +53,7 @@ $\gcd(m, n) = 1$이면 $\varphi(mn) = \varphi(m)\varphi(n)$이다.
 :::
 
 ::: 증명
-[\[환론\] §중국인의 나머지정리, ⁋명제 5](/ko/math/ring_theory/chinese_remainder_theorem#prop5)에 의해 환 동형 $\mathbb{Z}/mn\mathbb{Z} \cong \mathbb{Z}/m\mathbb{Z} \times \mathbb{Z}/n\mathbb{Z}$가 성립한다. 동형은 역원을 갖는 원소를 역원을 갖는 원소로 보내므로, $\mathbb{Z}/mn\mathbb{Z}$에서 가역인 원소는 양쪽 성분이 모두 가역인 쌍에 정확히 대응한다. 가역원의 개수를 세면 $\varphi(mn) = \varphi(m)\varphi(n)$이다.
+[\[환론\] §중국인의 나머지정리, ⁋명제 6](/ko/math/ring_theory/chinese_remainder_theorem#prop6)에 의해 환 동형 $\mathbb{Z}/mn\mathbb{Z} \cong \mathbb{Z}/m\mathbb{Z} \times \mathbb{Z}/n\mathbb{Z}$가 성립한다. 동형은 역원을 갖는 원소를 역원을 갖는 원소로 보내므로, $\mathbb{Z}/mn\mathbb{Z}$에서 가역인 원소는 양쪽 성분이 모두 가역인 쌍에 정확히 대응한다. 가역원의 개수를 세면 $\varphi(mn) = \varphi(m)\varphi(n)$이다.
 :::
 
 소수 거듭제곱에서의 값은 직접 센다: $1$부터 $p^k$까지 중 $p$와 서로소가 *아닌* 수는 $p$의 배수 $p, 2p, \ldots, p^{k-1}p$의 $p^{k-1}$개이므로
