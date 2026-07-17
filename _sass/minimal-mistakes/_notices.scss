@@ -231,27 +231,32 @@ $thm-pad-x: 0.9em;
   @include notice($danger-color);
 }
 
-/* Math notice settings */
+/* Math notice settings.
+   박스 class 목록은 여기 사본이 아니라 주입이다: fenced_theorem_blocks.rb →
+   site.data.theorem_kinds → main*.scss 의 Liquid 가 $thm-boxes / $thm-collapsibles
+   로 심는다. 이 파일은 class→색 선택($thm-colors)만 갖고, 목록의 class 에 색이
+   없으면 아래 가드가 빌드를 세운다 — 종류를 추가하면 조용히 어긋나는 대신
+   여기서 색을 정하라고 멈춘다. (.details 는 generic collapsible:
+   <details class="details"><summary>…</summary>) */
 
-.definition {
-  @include notice-labelrow($definition-color);
-}
+$thm-colors: (
+  definition: $definition-color,
+  proposition: $proposition-color,
+  example: $example-color,
+  remark: $remark-color,
+  misc: $misc-color,
+  proof: $proof-color,
+  proof--alone: $proof-color,
+  details: $details-color,
+);
 
-.proposition {
-  @include notice-labelrow($proposition-color);
-}
-
-.proof {
-  @include notice-labelrow($proof-color);
-}
-
-.proof--alone {
-  @include notice-labelrow($proof-color);
-}
-
-/* Generic collapsible: <details class="details"><summary>…</summary> */
-.details {
-  @include notice-labelrow($details-color);
+@each $c in join($thm-boxes, $thm-collapsibles) {
+  @if not map-has-key($thm-colors, $c) {
+    @error "정리 박스 class '#{$c}' 의 색이 $thm-colors 에 없다 — fenced_theorem_blocks.rb 에 종류를 추가했다면 _notices.scss 에서 색을 정할 것";
+  }
+  .#{$c} {
+    @include notice-labelrow(map-get($thm-colors, $c));
+  }
 }
 
 /* Themed disclosure caret for proof / details summaries (replaces the native
@@ -277,28 +282,14 @@ details[open] > summary::before {
   transform: rotate(90deg);
 }
 
-.example {
-  @include notice-labelrow($example-color);
-}
-
-.remark {
-  @include notice-labelrow($remark-color);
-}
-
-.misc {
-  @include notice-labelrow($misc-color);
-}
-
 /* 증명을 앞 박스에 붙인다 — 단, 박스 *바로* 뒤일 때만. 형제 마진은 상쇄되어
    max(양수)+min(음수) 이므로 1.9em-1.4em = 0.5em (admonition 시절 1em-0.5em 과 같은
    붙임 간격). 이 음수 마진을 .proof 전체에 걸면 박스가 아닌 일반 문단 뒤에 오는 증명
    까지 끌어올려 문단과 겹쳐 보인다 (문단 margin-bottom 이 1.4em 보다 작다). */
-.definition + .proof,
-.proposition + .proof,
-.example + .proof,
-.remark + .proof,
-.misc + .proof {
-  margin-top: -1.4em !important;
+@each $c in $thm-boxes {
+  .#{$c} + .proof {
+    margin-top: -1.4em !important;
+  }
 }
 
 /* (예전엔 증명이 바로 뒤따르는 박스의 하단 마감선을 지웠지만, A안에서는 모든 박스가
@@ -308,12 +299,12 @@ details[open] > summary::before {
    마감선엔 색을 두지 않는다 — 박스 그라디언트 tint 를 끄고, summary 에만 연한 색을
    깐다. padding-bottom 은 남긴다(접힘 애니메이션의 목표 높이 계산용). [open] 은
    네이티브 속성이라 JS 없이도 맞고, Proof_animate.js 는 접힘 *끝*에 [open] 을 뗀다. */
-details.proof:not([open]),
-details.proof--alone:not([open]),
-details.details:not([open]) {
-  background: none;   // 접힘: 헤어라인 아래 tint 없음(박스 그라디언트 끔)
-  border-bottom: 0;   // 하단 마감선 없음
-  // 색은 라벨 칩(.thm-tag)에만 남는다 — mixin 이 이미 깔았으므로 여기선 손대지 않는다.
+@each $c in $thm-collapsibles {
+  details.#{$c}:not([open]) {
+    background: none;   // 접힘: 헤어라인 아래 tint 없음(박스 그라디언트 끔)
+    border-bottom: 0;   // 하단 마감선 없음
+    // 색은 라벨 칩(.thm-tag)에만 남는다 — mixin 이 이미 깔았으므로 여기선 손대지 않는다.
+  }
 }
 
 .spoiler {
@@ -321,11 +312,11 @@ details.details:not([open]) {
 }
 
 /* ==========================================================================
-   박스 class 목록(definition/proposition/example/remark/misc + proof/proof--alone/
-   details)의 단일 출처는 _plugins/fenced_theorem_blocks.rb 의 EXPLICIT_CLASSES ·
-   COLLAPSIBLE_CLASSES 다. Ruby 소비처는 그 상수를, JS 는 window.THEOREM_KINDS 를
-   쓴다. SCSS 는 그 데이터를 읽을 수 없어 여기만 손으로 맞춘 사본이다 —
-   박스 종류를 추가하면 이 파일도 같이 고칠 것.
+   박스 class 목록의 단일 출처는 _plugins/fenced_theorem_blocks.rb 의
+   EXPLICIT_CLASSES · COLLAPSIBLE_CLASSES 다. Ruby 소비처는 그 상수를, JS 는
+   window.THEOREM_KINDS 를, 이 파일은 main*.scss frontmatter 의 Liquid 가 주입한
+   $thm-boxes / $thm-collapsibles 를 쓴다 — 사본 없음. 종류를 추가하면 위
+   $thm-colors 가드가 색을 정하라며 빌드를 세운다.
    ========================================================================== */
 
 /* ==========================================================================
@@ -394,11 +385,9 @@ $qed-size: 0.65em;
   vertical-align: -0.03em;
 }
 
-.definition  .thm-n, .definition  .thm-name { color: $definition-color; }
-.proposition .thm-n, .proposition .thm-name { color: $proposition-color; }
-.example     .thm-n, .example     .thm-name { color: $example-color; }
-.remark      .thm-n, .remark      .thm-name { color: $remark-color; }
-.misc        .thm-n, .misc        .thm-name { color: $misc-color; }
+@each $c in $thm-boxes {
+  .#{$c} .thm-n, .#{$c} .thm-name { color: map-get($thm-colors, $c); }
+}
 
 /* 증명: summary 라벨도 다른 라벨처럼 proof 색 볼드 sans.
    theme 기본값 summary{font-style:italic} 때문에 sans 에서 faux slant 가 생기므로

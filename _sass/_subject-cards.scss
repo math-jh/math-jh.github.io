@@ -139,7 +139,7 @@
    with a colour diamond to the LEFT + a colour underline bar, and clean
    title/date/excerpt rows.
    All scoped to .taxonomy__* so other archive pages are untouched.
-   Colour comes from _data/hues.yml via inline --cat-hue/--cat-sat/--cat-l.
+   Colour comes from _data/categories.yml (subjects.*.hue/sat/l) via inline --cat-hue/--cat-sat/--cat-l.
 
    마름모는 정사각형을 45° 회전해 만든다. transform 은 레이아웃 박스를 바꾸지 않으므로
    간격은 그대로지만, 대각선이 변 × √2 라 좌우 꼭짓점이 각각 0.207 × 변 만큼 삐져나온다.
@@ -240,7 +240,7 @@ $cat-color: hsl(var(--cat-hue, 220), var(--cat-sat, 26%), calc(var(--cat-l, 50) 
    Home subject-card grid (_includes/subject-grid.html) — mockup cards:
    gradient tile in the subject hue + number + EN name + KO name + Read more.
    Grouped by big category with a section header (name · count · filling line).
-   Colour from --hue/--sat/--lit (set inline from _data/hues.yml).
+   Colour from --hue/--sat/--lit (set inline from _data/categories.yml subjects.*).
    ========================================================================== */
 .subj-grid {
   max-width: 1080px;

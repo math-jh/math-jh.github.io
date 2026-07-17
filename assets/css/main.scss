@@ -5,6 +5,12 @@ search: false
 
 @charset "utf-8";
 
+// 정리 박스 class 목록 — 단일 출처(fenced_theorem_blocks.rb → site.data.theorem_kinds)를
+// 이 파일의 Liquid 가 SCSS 리스트로 주입한다. _notices.scss 가 이걸로 셀렉터를 파생하므로
+// SCSS 쪽에 목록 사본이 없다. (플러그인이 빠지면 빈 값이 돼 Sass 문법 오류로 빌드가 선다.)
+$thm-boxes: {{ site.data.theorem_kinds.boxes | join: ", " }};
+$thm-collapsibles: {{ site.data.theorem_kinds.collapsibles | join: ", " }};
+
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 @import "recents-sidebar"; // custom: recent posts / comments in the right sidebar

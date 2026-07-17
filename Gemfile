@@ -9,12 +9,15 @@ gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw]
 #  - kramdown-parser-gfm: redundant — jekyll already depends on it transitively.
 #  - nokogiri, faraday-retry: explicit-only, nothing depends on them (the latter
 #    was only relevant to the octokit/jekyll-gist chain, removed with the theme gem).
+# Removed (2026-07-17 cleanup):
+#  - jekyll-seo-tag: {% seo %} never invoked — head.html uses the custom
+#    _includes/seo.html (og/twitter/JSON-LD + ko↔en hreflang, which the gem lacks).
+#  - jekyll-paginate: paginate: was commented out in _config.yml, so paginator
+#    was always nil (home.html layout + paginator.html include removed with it).
 
 group :jekyll_plugins do
   gem "jekyll-last-modified-at"
   gem "jekyll-feed"
-  gem "jekyll-seo-tag"
   gem "jekyll-sitemap"
-  gem "jekyll-paginate"
   gem "jekyll-include-cache"
 end
