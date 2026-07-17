@@ -20,32 +20,35 @@ permalink: /ko/misc/index_sample
 
   {%- for pair in site.data.terms %}
   <section class="term-index__section" id="idx-{{ pair[0] }}">
-    <h2 class="term-index__letter">{{ pair[0] }}</h2>
+    <h2 class="term-index__letter"><span>{{ pair[0] }}</span></h2>
     <ul class="term-index__list">
       {%- for t in pair[1] %}
-      <li class="term-index__entry" id="{{ t.id }}" data-search="{{ t.en | remove: '$' | downcase }} {{ t.ko | remove: '$' }}">
-        {%- if t.primary == "ko" -%}
-        <b class="term-index__term">{{ t.ko }}</b><span class="term-index__alt"> · {{ t.en }}</span>
-        {%- else -%}
-        <b class="term-index__term">{{ t.en }}</b><span class="term-index__alt"> · {{ t.ko }}</span>
-        {%- endif -%}
-        {%- if t.defs %}
+      <li class="term-index__entry{% unless t.defs or t.refs %} term-index__entry--bare{% endunless %}" id="{{ t.id }}" data-search="{{ t.en | remove: '$' | downcase }} {{ t.ko | remove: '$' }}">
+        <span class="term-index__t">
+          {%- if t.primary == "ko" -%}
+          <span class="term-index__alt">{{ t.en }} · </span><b class="term-index__term">{{ t.ko }}</b>
+          {%- else -%}
+          <b class="term-index__term">{{ t.en }}</b><span class="term-index__alt"> · {{ t.ko }}</span>
+          {%- endif -%}
+        </span><span class="term-index__lead"></span>
+        {%- if t.defs -%}
         <span class="term-index__defs">
           {%- for d in t.defs -%}
           <a href="{{ d.url }}">{{ d.label }}</a>{% unless forloop.last %} · {% endunless %}
           {%- endfor -%}
         </span>
         {%- endif -%}
-        {%- if t.refs %}
+        {%- if t.refs -%}
         <span class="term-index__refs">
           {%- for d in t.refs -%}
           <a href="{{ d.url }}">{{ d.label }}</a>{% unless forloop.last %} · {% endunless %}
           {%- endfor -%}
         </span>
         {%- endif -%}
-        {%- if t.see %}
-        <span class="term-index__see">→
-          {%- for s in t.see %} <a href="#{{ s.id }}">{{ s.label }}</a>{% unless forloop.last %},{% endunless %}
+        {%- if t.see -%}
+        <span class="term-index__see">
+          {%- for s in t.see -%}
+          <a href="#{{ s.id }}">{% if s.lang == "ko" %}<em-ko>{{ s.label }}</em-ko>{% else %}<i>{{ s.label }}</i>{% endif %}</a>{% unless forloop.last %}, {% endunless %}
           {%- endfor -%}
         </span>
         {%- endif -%}
