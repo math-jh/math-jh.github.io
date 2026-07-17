@@ -241,5 +241,6 @@ Finally, we define the following.
 
 ::: Definition 17
 A scheme morphism $\varphi: X \rightarrow Y$ is said to be *locally of finite presentation* if whenever any affine open subset $V\cong \Spec B$ of $Y$ is given, there exists a covering $\varphi^{-1}(V)=\bigcup \Spec A_i$ such that all $B \rightarrow A_i$ are finitely presented. If a scheme morphism $\varphi:X \rightarrow Y$ is quasi-compact, quasi-separated, and locally of finite presentation, then $\varphi$ is called a *morphism of finite presentation*.
+:::
 
 In most cases, we think of all schemes being locally Noetherian, and in this case by [\[Commutative Algebra\] §Basic Notions, ⁋Proposition 9](/en/math/commutative_algebra/basic_notions#prop9) this notion is nothing new.
