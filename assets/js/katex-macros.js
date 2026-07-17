@@ -1,6 +1,10 @@
 // KaTeX macro definitions for math-jh.github.io
 // Loaded via scripts.html before renderMathInElement invocation.
 // Exposed on window for the inline auto-render initializer.
+//
+// 의도된 이중 유지: 여기가 본문 수식 매크로의 정본이고, 다이어그램 LaTeX 쪽
+// assets/diagrams/.preamble/Operators.sty 가 겹치는 어휘를 같은 이름·같은 렌더로
+// 재정의한다 (JS↔LaTeX 라 파생 불가). 겹치는 매크로를 고치면 저쪽도 맞출 것.
 
 window.KATEX_MACROS = {
     "‘":"'",

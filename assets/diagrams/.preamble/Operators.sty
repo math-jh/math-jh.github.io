@@ -1,4 +1,10 @@
 %% Define mathematical commands
+%%
+%% 의도된 이중 유지: 본문 수식 매크로의 정본은 assets/js/katex-macros.js
+%% (window.KATEX_MACROS)이고, 이 파일은 다이어그램 LaTeX 컴파일용으로 그중
+%% 필요한 어휘를 같은 이름·같은 렌더로 다시 정의한다 (JS↔LaTeX 라 파생 불가).
+%% 이름이 겹치는 매크로를 여기서 고치면 katex-macros.js 와 렌더가 같은지 확인할 것
+%% (2026-07-17: \Alg 인자, \lMod/\rMod prescript/subscript, \CRing→\cRing 동기화).
 
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
 \ProvidesPackage{Operators}[2023/05/17 Custom]
@@ -131,12 +137,12 @@
 %% Categories
 
 \newcommand{\Ab}{\mathbf{Ab}}
-\newcommand{\Alg}{\mathbf{Alg}}
+\newcommand{\Alg}[1]{\mathbf{Alg}_{#1}}
 
 \newcommand{\CAT}{\mathbf{CAT}}
 \newcommand{\Cat}{\mathbf{Cat}}
 \newcommand{\Ch}{\mathbf{Ch}}
-\newcommand{\CRing}{\mathbf{CRing}}
+\newcommand{\cRing}{\mathbf{cRing}}
 
 \newcommand{\Field}{\mathbf{Field}}
 \newcommand{\FVect}{\mathbf{FVect}}
@@ -145,7 +151,7 @@
 
 \newcommand{\LieAlg}{\mathbf{LieAlg}}
 \newcommand{\LieGrp}{\mathbf{LieGrp}}
-\newcommand{\lMod}[1]{#1\text{-}\mathbf{Mod}}
+\newcommand{\lMod}[1]{{}_{#1}\mathbf{Mod}}
 \newcommand{\lmod}[1]{#1\text{-}\mathbf{mod}}
 \newcommand{\lSet}[1]{#1\text{-}\mathbf{Set}}
 
@@ -157,7 +163,7 @@
 
 \newcommand{\Ring}{\mathbf{Ring}}
 \newcommand{\Rng}{\mathbf{Rng}}
-\newcommand{\rMod}[1]{\mathbf{Mod}\text{-}#1}
+\newcommand{\rMod}[1]{\mathbf{Mod}_{#1}}
 \newcommand{\rmod}[1]{\mathbf{mod}\text{-}#1}
 \newcommand{\rSet}[1]{\mathbf{Set}\text{-}#1}
 

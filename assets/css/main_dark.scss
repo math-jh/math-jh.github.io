@@ -4,6 +4,10 @@
 
 @charset "utf-8";
 
+// 정리 박스 class 목록 주입 — main.scss 와 동일 (단일 출처: fenced_theorem_blocks.rb)
+$thm-boxes: {{ site.data.theorem_kinds.boxes | join: ", " }};
+$thm-collapsibles: {{ site.data.theorem_kinds.collapsibles | join: ", " }};
+
 @import "minimal-mistakes/skins/{{ site.dark_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 @import "recents-sidebar"; // custom: recent posts / comments in the right sidebar

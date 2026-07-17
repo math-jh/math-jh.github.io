@@ -11,5 +11,11 @@ script calls them. Moved here 2026-06-17 during a codebase cleanup.
 - `remove_description.py` — one-time image-description cleanup.
 - `update_set_posts.py` — one-time batch update of Set-Theory posts.
 
+Moved here 2026-07-17 (dead-device sweep):
+
+- `triage_overrides.py` + `anchor-*.json` + `anchor-review.md` — one-time anchor
+  triage snapshot from the 2026-05-28 link-normalizer work (see the
+  Link_Normalizer workshop post). Frozen since; nothing calls them.
+
 Live tooling stays under `scripts/` (translation, comments, audit, diagrams/build.sh,
 index-monitor, dev, favicons, generate-thumbnails.js, reindex-pagefind.sh).
