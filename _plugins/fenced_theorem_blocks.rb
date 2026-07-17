@@ -229,8 +229,18 @@ module FencedTheoremBlocks
     lines = []
     lines << %(<div class="#{block[:cls]}" markdown="1">)
     lines << ""
-    lines << %(<ins id="#{block[:id]}">**#{block[:label]}**</ins> #{first})
-    body.drop(1).each { |l| lines << l }
+    if first =~ /\A\s*(?:[-*+][ \t]|\d+\.[ \t]|>)/
+      # 첫 줄이 리스트·인용처럼 문단에 이어붙을 수 없는 블록이면 라벨과
+      # 분리한다. kramdown 은 문단을 리스트로 중단하지 못해서, 이어붙이면
+      # 마커가 라벨 문단에 흡수되고 항목의 4칸 들여쓰기 연속 줄들이
+      # 최상위 코드블록으로 전락한다 (Series.md 예시 2, 2026-07-18).
+      lines << %(<ins id="#{block[:id]}">**#{block[:label]}**</ins>)
+      lines << ""
+      body.each { |l| lines << l }
+    else
+      lines << %(<ins id="#{block[:id]}">**#{block[:label]}**</ins> #{first})
+      body.drop(1).each { |l| lines << l }
+    end
     lines << ""
     lines << "</div>"
     lines
