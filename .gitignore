@@ -2,6 +2,7 @@
 # 로컬 전용 경로(초안·도구·자격증명 등)는 커밋되지 않는 .git/info/exclude 에 둔다.
 
 .DS_Store
+._*
 
 # Jekyll 빌드 산출물·캐시
 _site/

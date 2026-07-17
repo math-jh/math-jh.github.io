@@ -1,8 +1,11 @@
-# 빈 카테고리의 과목홈(subject home)을 빌드에서 제외하고, 실제로 살아남은 과목홈
-# 목록을 `site.data["subject_pages"]` 로 노출한다.
+# 과목홈(subject home)을 관리한다: Math 과목홈은 물리 파일 없이 여기서 **생성**하고
+# (제목 = subjects 표시명, 소개문 = subjects 의 excerpt_ko/excerpt_en), 빈 카테고리의 과목홈은
+# 빌드에서 제외하며, 실제로 살아남은 과목홈 목록을 `site.data["subject_pages"]` 로
+# 노출한다. 예전엔 _pages/{ko,en}/Math-*.md 52개가 제목·소개문을 각자 들고 있었다
+# (제목은 표시명의 사본 — categories.yml 을 고치면 조용히 어긋나는 구조였다).
+# Misc 과목홈은 cards 류 커스텀 frontmatter 가 있어 물리 파일로 남긴다.
 #
-# 과목홈은 `_pages/{ko,en}/Math-*.md` 처럼 layout: archive_custom 을 쓰고, permalink
-# 의 첫 구간 뒤가 카테고리 슬러그다:
+# 과목홈은 layout: archive_custom 을 쓰고, permalink 의 첫 구간 뒤가 카테고리 슬러그다:
 #
 #   "Math / Category Theory"       →  /ko/category_theory/
 #   "Math / Gromov-Witten Theory"  →  /ko/gromov-witten_theory/
@@ -51,7 +54,7 @@ module HideEmptySubjectPages
     LANGS.find { |lang| url.start_with?("/#{lang}/") }
   end
 
-  # _data/categories.yml 의 subjects (카테고리명 → { ko, section, hue, sat, l })
+  # _data/categories.yml 의 subjects (카테고리명 → { ko, section, hue, sat, l, excerpt_ko, excerpt_en })
   def subjects(site)
     table = site.data["categories"]
     return {} unless table.is_a?(Hash)
@@ -102,6 +105,25 @@ module HideEmptySubjectPages
     url.split("/").reject(&:empty?)[1]
   end
 
+  # (카테고리, 언어) → 가장 최근 글 날짜. 생성 과목홈의 last_modified_at 으로 심는다.
+  # 생성 페이지는 소스 파일이 없어서, jekyll-last-modified-at 이 :post_init 에 심는
+  # Determinator 를 그대로 두면 sitemap 이 평가할 때 파일 stat 으로 ENOENT 가 나며
+  # 빌드가 통째로 죽는다 (실제 사고, 2026-07-18). 평범한 Time 이 들어 있으면 gem 도
+  # last_modified_git.rb 도 손대지 않는다.
+  def latest_post_times(site)
+    latest = {}
+    site.posts.docs.each do |doc|
+      lang = lang_of(doc.url)
+      next if lang.nil?
+
+      Array(doc.data["categories"]).each do |cat|
+        key = [cat, lang]
+        latest[key] = doc.date if latest[key].nil? || doc.date > latest[key]
+      end
+    end
+    latest
+  end
+
   # 카테고리 → 그 과목이 속한 섹션명 (언어별).
   def eyebrow_index(sections)
     index = {}
@@ -135,6 +157,42 @@ Jekyll::Hooks.register :site, :post_read do |site|
 
   by_slug = HideEmptySubjectPages.slug_index(site)
   counts = HideEmptySubjectPages.post_counts(site)
+
+  # Math 과목홈 생성 — 그 언어 글이 있는 카테고리만. 같은 URL 의 물리 페이지가
+  # 있으면 그쪽이 이긴다 (생성 안 함).
+  latest = HideEmptySubjectPages.latest_post_times(site)
+  page_urls = site.pages.map(&:url)
+  HideEmptySubjectPages.subjects(site).each do |category, info|
+    next unless category.start_with?("Math / ")
+
+    slug = HideEmptySubjectPages.slug_for(category)
+    HideEmptySubjectPages::LANGS.each do |lang|
+      next if counts[[category, lang]].zero?
+
+      url = "/#{lang}/#{slug}/"
+      next if page_urls.include?(url)
+
+      intro = info["excerpt_#{lang}"]
+      if intro.nil?
+        Jekyll.logger.warn "SubjectPages:",
+                           "'#{category}' 에 excerpt_#{lang} 가 categories.yml subjects 에 없습니다" \
+                           " — 빈 excerpt 로 생성"
+      end
+      page = Jekyll::PageWithoutAFile.new(site, site.source, File.join(lang, slug), "index.html")
+      page.data.merge!(
+        "layout"     => HideEmptySubjectPages::LAYOUT,
+        "title"      => lang == "ko" ? info["ko"] : category.split(" / ").last,
+        "permalink"  => url,
+        "header"     => { "overlay_color" => "transparent" },
+        "excerpt"    => intro,
+        "regenerate" => true,
+        "last_modified_at" => latest[[category, lang]]
+      )
+      page.content = ""
+      site.pages << page
+    end
+  end
+
   skipped = []
 
   site.pages.reject! do |page|

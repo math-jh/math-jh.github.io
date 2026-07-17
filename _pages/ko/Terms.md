@@ -1,9 +1,8 @@
 ---
-title: "찾아보기 (조판 샘플)"
+title: "찾아보기"
 layout: archive_custom
 regenerate: true
-sitemap: false
-permalink: /ko/misc/index_sample
+permalink: /ko/terms
 ---
 
 블로그에서 사용한 용어들을 정리해둔 페이지입니다. 굵은 쪽이 본문에서 주로 쓰는 표기입니다.
@@ -12,13 +11,19 @@ permalink: /ko/misc/index_sample
   <div class="term-index__bar">
     <nav class="term-index__letters" aria-label="알파벳 바로가기">
       {%- for pair in site.data.terms -%}
+      {%- if pair[1] and pair[1] != empty -%}
       <a href="#idx-{{ pair[0] }}">{{ pair[0] }}</a>
+      {%- endif -%}
       {%- endfor -%}
     </nav>
-    <input class="term-index__filter" type="search" placeholder="필터 (영문·한글)" aria-label="용어 필터">
+    <label class="term-index__search">
+      <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><circle cx="7" cy="7" r="4.2" fill="none" stroke="currentColor" stroke-width="1.4"/><line x1="10.2" y1="10.2" x2="14" y2="14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+      <input class="term-index__filter" type="search" placeholder="용어 검색 (한글/영어)" aria-label="용어 검색">
+    </label>
   </div>
 
   {%- for pair in site.data.terms %}
+  {%- if pair[1] and pair[1] != empty %}
   <section class="term-index__section" id="idx-{{ pair[0] }}">
     <h2 class="term-index__letter"><span>{{ pair[0] }}</span></h2>
     <ul class="term-index__list">
@@ -28,7 +33,7 @@ permalink: /ko/misc/index_sample
           {%- if t.primary == "ko" -%}
           <span class="term-index__alt">{{ t.en }} · </span><b class="term-index__term">{{ t.ko }}</b>
           {%- else -%}
-          <b class="term-index__term">{{ t.en }}</b><span class="term-index__alt"> · {{ t.ko }}</span>
+          <b class="term-index__term">{{ t.en }}</b>{% if t.ko and t.ko != "" %}<span class="term-index__alt"> · {{ t.ko }}</span>{% endif %}
           {%- endif -%}
         </span><span class="term-index__lead"></span>
         {%- if t.defs -%}
@@ -56,6 +61,7 @@ permalink: /ko/misc/index_sample
       {%- endfor %}
     </ul>
   </section>
+  {%- endif %}
   {%- endfor %}
 
   <p class="term-index__empty" hidden>일치하는 용어가 없습니다.</p>
@@ -68,6 +74,13 @@ permalink: /ko/misc/index_sample
   var entries  = [].slice.call(document.querySelectorAll('.term-index__entry'));
   var sections = [].slice.call(document.querySelectorAll('.term-index__section'));
   var empty    = document.querySelector('.term-index__empty');
+  var bar      = document.querySelector('.term-index__bar');
+  var letters  = {};
+  [].slice.call(document.querySelectorAll('.term-index__letters a')).forEach(function (a) {
+    letters[a.getAttribute('href').slice(1)] = a;
+  });
+
+  // 필터: 표제어(영문·한글) 부분일치. 절이 통째로 비면 그 글자도 흐려진다.
   input.addEventListener('input', function () {
     var q = input.value.trim().toLowerCase();
     var any = false;
@@ -78,8 +91,35 @@ permalink: /ko/misc/index_sample
     });
     sections.forEach(function (sec) {
       sec.hidden = !!q && !sec.querySelector('.term-index__entry:not([hidden])');
+      var a = letters[sec.id];
+      if (a) a.classList.toggle('is-dim', sec.hidden);
     });
     empty.hidden = any;
+    spy();
   });
+
+  // 스크롤 스파이: sticky 바 바로 아래에 걸린 절의 글자를 진하게
+  var active = null;
+  function spy() {
+    var line = bar.getBoundingClientRect().bottom + 10;
+    var cur = null;
+    for (var i = 0; i < sections.length; i++) {
+      if (sections[i].hidden) continue;
+      if (sections[i].getBoundingClientRect().top <= line) cur = sections[i];
+      else break;
+    }
+    var id = cur ? cur.id : null;
+    if (id === active) return;
+    if (active && letters[active]) letters[active].classList.remove('is-active');
+    if (id && letters[id]) letters[id].classList.add('is-active');
+    active = id;
+  }
+  var ticking = false;
+  window.addEventListener('scroll', function () {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function () { ticking = false; spy(); });
+  }, { passive: true });
+  spy();
 })();
 </script>

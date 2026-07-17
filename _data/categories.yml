@@ -1,15 +1,21 @@
-# 카테고리 마스터 파일 — 목록·순서·섹션·표시명·색을 여기 한 곳에서 관리한다.
+# 카테고리 마스터 파일 — 목록·순서·섹션·표시명·색·과목홈 소개문을 여기 한 곳에서 관리한다.
+# Math 과목홈 페이지는 물리 파일 없이 hide_empty_subject_pages.rb 가 여기서 생성한다.
 #
 # sections : 홈 그리드와 사이드바의 큰 묶음. 키는 슬러그.
 #            ko/en   언어별 표시명
-#            family  의존성 그래프의 굵은 묶음(필터 칩). foundations/algebra/
-#                    analysis/geometry/misc 중 하나 — Graph_page.js 의 FAMILIES 와 맞출 것.
-#                    family 가 misc 인 노드는 그래프에서 채도 0(회색)으로 그려진다.
+#            family  의존성 그래프의 굵은 묶음(필터 칩). 아래 families 표의 키 중 하나
+#                    또는 misc. family 가 misc(표에 없는 값 포함)인 노드는 그래프에서
+#                    채도 0(회색)으로 그려진다.
 # subjects : 카테고리. 키는 글의 `categories:` 문자열과 정확히 같아야 한다.
 #            ko      한국어 표시명 (영어 아카이브는 " / " 앞을 떼어 쓴다)
 #            section 위 sections 의 키
 #            hue/sat/l  그 과목의 색 — hero 그라디언트·/categories 마름모와 밑줄·
 #                       홈 타일·의존성 그래프 노드가 모두 이 값을 쓴다.
+#            excerpt_ko/excerpt_en  과목홈 소개문 — hide_empty_subject_pages.rb 가
+#                       과목홈을 생성할 때 excerpt 로 심는다 (제목은 표시명에서 파생).
+#                       excerpt_en 은 영문 글 발행 전까지 비워 둬도 된다 (경고만 뜬다).
+#                       처음엔 별도 intros: 표에 있었는데, subjects 와 같은 키를 한 벌
+#                       더 드는 셈이라 2026-07-18 subjects 안으로 합쳤다.
 #
 # **subjects 의 키 순서가 곧 표시 순서**다 (YAML 매핑은 삽입 순서를 보존한다).
 # 섹션의 순서·구성도 여기서 파생한다 — _plugins/hide_empty_subject_pages.rb 가
@@ -17,7 +23,7 @@
 # 에 한 벌 더 있었고, 그게 어긋나 정수론·해석학 카드가 홈에서 통째로 빠져 있었다.
 #
 # 쓰이는 곳: /ko/categories/·/en/categories/ · 홈 과목 카드 · category-* 사이드바 ·
-#            과목홈 hero·eyebrow · 홈 타일 번호(scripts/generate-thumbnails.js) ·
+#            과목홈 생성(제목·소개문)과 hero·eyebrow · 홈 타일 번호(scripts/generate-thumbnails.js) ·
 #            의존성 그래프 노드 색(_plugins/graph_data.rb)
 #
 # 빈 카테고리: 글이 하나도 없는 카테고리는 그냥 여기 남겨 둬도 된다. 카테고리 목록
@@ -52,47 +58,360 @@ sections:
 
 subjects:
   # --- 교양수학 ---
-  "Math / Calculus":                { ko: "미적분학", section: liberal_arts, hue: 256, sat: "24%", l: 50 }
-  "Math / Linear Algebra":          { ko: "선형대수학", section: liberal_arts, hue: 252, sat: "24%", l: 44 }
+  "Math / Calculus":
+    ko: 미적분학
+    section: liberal_arts
+    hue: 256
+    sat: "24%"
+    l: 50
+    excerpt_ko: >-
+      미적분학은 함수의 변화율과 누적, 즉 미분과 적분을 다루는 분야이다. 극한에서 출발해 도함수와 적분, 급수를 통해 변화를 정량적으로 분석한다.
+    excerpt_en: >-
+      Calculus studies the rates of change and accumulation of functions, namely
+      differentiation and integration. Starting from limits, it analyzes change
+      quantitatively through derivatives, integrals, and series.
+  "Math / Linear Algebra":
+    ko: 선형대수학
+    section: liberal_arts
+    hue: 252
+    sat: "24%"
+    l: 44
+    excerpt_ko: >-
+      선형대수학은 벡터공간과 선형사상을 공부하는 분야이다. 기저와 차원에서 시작해 행렬 표현·고유공간 분해·쌍대공간으로 이어지며, 이후 거의 모든 수학에서
+      쓰이는 기본 언어를 다진다.
+    excerpt_en: >-
+      Linear algebra studies vector spaces and the linear maps between them. Starting from
+      bases and dimension, it builds through matrix representations, eigenspace
+      decomposition, and dual spaces into a language used across nearly all of mathematics.
   # --- 수학기초론 ---
-  "Math / Set Theory":              { ko: "집합론", section: foundations, hue: 260, sat: "24%", l: 50 }
-  "Math / Category Theory":         { ko: "범주론", section: foundations, hue: 264, sat: "24%", l: 56 }
+  "Math / Set Theory":
+    ko: 집합론
+    section: foundations
+    hue: 260
+    sat: "24%"
+    l: 50
+    excerpt_ko: >-
+      집합론은 집합과 그 위의 연산, 그리고 무한을 다루는 수학의 토대이다. 관계와 함수, 순서수와 기수, 선택공리를 거치며 이후 모든 분야가 딛고 설 근간이
+      된다.
+    excerpt_en: >-
+      Set theory is the foundation of mathematics, concerned with sets, their operations,
+      and the infinite. Through relations and functions, ordinals and cardinals, and the
+      axiom of choice, it supplies the language every later field rests on.
+  "Math / Category Theory":
+    ko: 범주론
+    section: foundations
+    hue: 264
+    sat: "24%"
+    l: 56
+    excerpt_ko: >-
+      범주론은 대상과 사상, 그리고 그 사이의 보편성질을 통해 수학적 구조를 추상적으로 다루는 분야이다. 함자와 자연변환, 극한과 수반을 통해 서로 다른 분야를
+      하나의 언어로 통합한다.
+    excerpt_en: >-
+      Category theory treats mathematical structures abstractly through objects, morphisms,
+      and the universal properties between them. Functors, natural transformations, limits,
+      and adjunctions let it connect disparate fields in a single language.
   # --- 대수학 ---
-  "Math / Algebraic Structures":    { ko: "대수적 구조", section: algebra, hue: 210, sat: "24%", l: 38 }
-  "Math / Group Theory":            { ko: "군론", section: algebra, hue: 213, sat: "24%", l: 42 }
-  "Math / Ring Theory":             { ko: "환론", section: algebra, hue: 216, sat: "24%", l: 46 }
-  "Math / Multilinear Algebra":     { ko: "다중선형대수학", section: algebra, hue: 219, sat: "24%", l: 50 }
-  "Math / Field Theory":            { ko: "체론", section: algebra, hue: 222, sat: "24%", l: 54 }
-  "Math / Homological Algebra":     { ko: "호몰로지 대수학", section: algebra, hue: 225, sat: "24%", l: 44 }
-  "Math / Commutative Algebra":     { ko: "가환대수학", section: algebra, hue: 228, sat: "24%", l: 48 }
-  "Math / Representation Theory":   { ko: "표현론", section: algebra, hue: 231, sat: "24%", l: 52 }
+  "Math / Algebraic Structures":
+    ko: 대수적 구조
+    section: algebra
+    hue: 210
+    sat: "24%"
+    l: 38
+    excerpt_ko: >-
+      대수적 구조는 군·환·가군과 같이 연산이 주어진 집합들을 통합적으로 공부하는 분야이다. 준동형사상과 몫구조를 중심으로, 대부분의 대수구조들이 공유하는
+      기초를 세운다.
+    excerpt_en: >-
+      Algebraic structures studies sets equipped with operations, such as groups, rings, and
+      modules, in a unified way. Centered on homomorphisms and quotient structures, it lays
+      the groundwork shared by every later algebraic field.
+  "Math / Group Theory":
+    ko: 군론
+    section: algebra
+    hue: 213
+    sat: "24%"
+    l: 42
+    excerpt_ko: >-
+      군론은 대칭을 대수적으로 포착하는 군과 그 작용을 공부하는 분야이다. 부분군과 정규부분군, 군의 작용과 실로우 정리를 거쳐 유한군의 분류 문제를 살펴본다.
+    excerpt_en: >-
+      Group theory studies groups, which capture symmetry algebraically, together with their
+      actions. Through subgroups and normal subgroups, group actions and the Sylow theorems,
+      it moves toward classifying structure.
+  "Math / Ring Theory":
+    ko: 환론
+    section: algebra
+    hue: 216
+    sat: "24%"
+    l: 46
+    excerpt_ko: >-
+      환론은 덧셈과 곱셈이 함께 주어진 환과 그 아이디얼을 공부하는 분야이다. 정역과 체로의 확장, 인수분해와 가군을 통해 가환대수와 대수기하의 토대가 된다.
+    excerpt_en: >-
+      Ring theory studies rings, which carry both addition and multiplication, along with
+      their ideals. Through domains and fields, factorization, and modules, it becomes the
+      foundation of commutative algebra and algebraic geometry.
+  "Math / Multilinear Algebra":
+    ko: 다중선형대수학
+    section: algebra
+    hue: 219
+    sat: "24%"
+    l: 50
+    excerpt_ko: >-
+      다중선형대수학은 여러 벡터에 대해 선형인 사상, 즉 텐서를 공부하는 분야로, 이를 위해 우리는 일반적인 환 위에서의 선형대수 이론을 전개하고, 텐서곱과
+      외대수·대칭대수를 통해 미분기하와 표현론의 도구를 마련한다.
+    excerpt_en: >-
+      Multilinear algebra studies maps that are linear in several vectors at once, that is,
+      tensors. Through tensor products and the exterior and symmetric algebras, it supplies
+      the tools of differential geometry and representation theory.
+  "Math / Field Theory":
+    ko: 체론
+    section: algebra
+    hue: 222
+    sat: "24%"
+    l: 54
+    excerpt_ko: >-
+      체론은 사칙연산이 자유로운 체와 그 확장을 공부하는 분야이다. 갈루아 이론을 통해 다항식의 가해성과 작도 문제를 대칭의 언어로 풀어낸다.
+    excerpt_en: >-
+      Field theory studies fields, where all four operations are freely available, and their
+      extensions. Through Galois theory it recasts the solvability of polynomials and
+      classical construction problems in the language of symmetry.
+  "Math / Homological Algebra":
+    ko: 호몰로지 대수학
+    section: algebra
+    hue: 225
+    sat: "24%"
+    l: 44
+    excerpt_ko: >-
+      호몰로지 대수학은 사슬복합체와 그 호몰로지를 통해 대수적 구조의 성질을 측정하는 분야이다. 완전열과 유도함자, Ext와 Tor를 통해 위상·기하·대수를
+      잇는다.
+    excerpt_en: >-
+      Homological algebra measures the properties of algebraic structures through chain
+      complexes and their homology. Via exact sequences, derived functors, and Ext and Tor,
+      it links topology, geometry, and algebra.
+  "Math / Commutative Algebra":
+    ko: 가환대수학
+    section: algebra
+    hue: 228
+    sat: "24%"
+    l: 48
+    excerpt_ko: >-
+      가환대수학은 가환환과 그 위의 가군을 공부하는 분야이다. 국소화와 준소분해, 차원 이론을 통해 대수기하학의 국소적 토대를 제공한다.
+    excerpt_en: >-
+      Commutative algebra studies commutative rings and the modules over them. Through
+      localization, primary decomposition, and dimension theory, it provides the local
+      foundation of algebraic geometry.
+  "Math / Representation Theory":
+    ko: 표현론
+    section: algebra
+    hue: 231
+    sat: "24%"
+    l: 52
+    excerpt_ko: >-
+      표현론은 군과 대수의 원소를 선형변환으로 실현하여 그 구조를 공부하는 분야이다. 기약표현과 지표, 가중치를 통해 대칭을 선형대수의 언어로 분석한다.
+    excerpt_en: >-
+      Representation theory studies the structure of groups and algebras by realizing their
+      elements as linear transformations. Through irreducible representations, characters,
+      and weights, it analyzes symmetry in the language of linear algebra.
   # --- 정수론 --- (섹션은 따로 두되 hue 는 대수학 계열을 빌린다: 성격이 대수 쪽)
-  "Math / Number Theory":           { ko: "정수론", section: number_theory, hue: 213, sat: "24%", l: 40 }
+  "Math / Number Theory":
+    ko: 정수론
+    section: number_theory
+    hue: 213
+    sat: "24%"
+    l: 40
+    excerpt_ko: >-
+      정수론은 정수, 특히 소수의 성질을 공부하는 분야이다. 합동과 이차잉여, 산술함수를 통해 정수에 숨은 규칙을 탐구한다.
   # --- 해석학 ---
-  "Math / Analysis":                { ko: "해석학", section: analysis, hue: 188, sat: "24%", l: 48 }
-  "Math / Complex Analysis":        { ko: "복소해석학", section: analysis, hue: 192, sat: "24%", l: 42 }
+  "Math / Analysis":
+    ko: 해석학
+    section: analysis
+    hue: 188
+    sat: "24%"
+    l: 48
+    excerpt_ko: >-
+      해석학은 극한과 연속, 미분과 적분을 엄밀하게 다루는 분야이다. 실수의 완비성에서 출발해 수열과 함수의 수렴, 거리공간을 통해 미적분의 토대를 세운다.
+  "Math / Complex Analysis":
+    ko: 복소해석학
+    section: analysis
+    hue: 192
+    sat: "24%"
+    l: 42
+    excerpt_ko: >-
+      복소해석학은 복소평면 위에서 미분가능한 함수를 다루는 분야이다. 정칙성이라는 한 조건에서 Cauchy 적분공식과 해석적 연속, 등각사상과 Riemann
+      사상정리에 이르는 강한 결과들이 따라 나온다.
   # --- 위상수학 ---
-  "Math / Topology":                { ko: "위상수학", section: topology, hue: 8, sat: "28%", l: 46 }
-  "Math / Algebraic Topology":      { ko: "대수적 위상수학", section: topology, hue: 12, sat: "28%", l: 50 }
+  "Math / Topology":
+    ko: 위상수학
+    section: topology
+    hue: 8
+    sat: "28%"
+    l: 46
+    excerpt_ko: >-
+      위상수학은 연속성과 근방의 개념만으로 공간의 성질을 공부하는 분야이다. 연결성·컴팩트성·분리공리를 통해 해석학과 기하학의 토대를 마련한다.
+    excerpt_en: >-
+      Topology studies the properties of spaces using only the notions of continuity and
+      neighborhood. Through connectedness, compactness, and the separation axioms, it lays
+      the foundation for analysis and geometry.
+  "Math / Algebraic Topology":
+    ko: 대수적 위상수학
+    section: topology
+    hue: 12
+    sat: "28%"
+    l: 50
+    excerpt_ko: >-
+      대수적 위상수학은 공간에 군·환 같은 대수적 불변량을 대응시켜 그 모양을 구별하는 분야이다. 호모토피와 호몰로지·코호몰로지를 통해 위상적 정보를 대수로
+      번역한다.
+    excerpt_en: >-
+      Algebraic topology distinguishes the shape of spaces by assigning algebraic invariants
+      such as groups and rings. Through homotopy, homology, and cohomology, it translates
+      topological information into algebra.
   # --- 미분기하학 ---
-  "Math / Manifolds":               { ko: "미분다양체", section: differential_geometry, hue: 16, sat: "28%", l: 44 }
-  "Math / Lie Theory":              { ko: "리 이론", section: differential_geometry, hue: 20, sat: "28%", l: 48 }
-  "Math / Riemannian Geometry":     { ko: "리만기하학", section: differential_geometry, hue: 24, sat: "28%", l: 52 }
-  "Math / Complex Geometry":        { ko: "복소기하학", section: differential_geometry, hue: 26, sat: "28%", l: 48 }
+  "Math / Manifolds":
+    ko: 미분다양체
+    section: differential_geometry
+    hue: 16
+    sat: "28%"
+    l: 44
+    excerpt_ko: >-
+      미분다양체는 국소적으로 유클리드 공간처럼 보이는 공간 위에서 미적분을 전개하는 분야이다. 접공간과 벡터장, 미분형식을 통해 기하와 물리의 무대를 세운다.
+    excerpt_en: >-
+      The theory of differentiable manifolds develops calculus on spaces that locally look
+      like Euclidean space. Through tangent spaces, vector fields, and differential forms,
+      it sets the stage for geometry and physics.
+  "Math / Lie Theory":
+    ko: 리 이론
+    section: differential_geometry
+    hue: 20
+    sat: "28%"
+    l: 48
+    excerpt_ko: >-
+      리 이론은 연속적 대칭을 담는 리 군과, 그 무한소 구조인 리 대수를 공부하는 분야이다. 지수사상과 근계·가중치를 통해 기하와 표현론을 잇는다.
+    excerpt_en: >-
+      Lie theory studies Lie groups, which carry continuous symmetry, and their
+      infinitesimal counterparts, Lie algebras. Through the exponential map, root systems,
+      and weights, it connects geometry and representation theory.
+  "Math / Riemannian Geometry":
+    ko: 리만기하학
+    section: differential_geometry
+    hue: 24
+    sat: "28%"
+    l: 52
+    excerpt_ko: >-
+      리만기하학은 다양체에 길이와 각을 재는 리만계량을 부여하고 그 곡률을 공부하는 분야이다. 측지선과 곡률 텐서를 통해 휘어진 공간의 기하를 다룬다.
+    excerpt_en: >-
+      Riemannian geometry equips manifolds with a metric measuring length and angle, and
+      studies their curvature. Through geodesics and the curvature tensor, it handles the
+      geometry of curved spaces.
+  "Math / Complex Geometry":
+    ko: 복소기하학
+    section: differential_geometry
+    hue: 26
+    sat: "28%"
+    l: 48
+    excerpt_ko: >-
+      복소기하학은 복소구조를 얹은 다양체를 다루는 분야이다. 거의 복소구조와 Dolbeault 코호몰로지에서 출발해, Kähler 조건이 위상과 Hodge
+      이론을 통해 어떻게 복소기하와 맞물리는지를 살핀다.
   # --- 대수기하학 ---
   # 여섯 과목을 hue 28..38 (step 2), l 36..56 (step 4) 로 등간격 배치한다.
   # 이웃 섹션이 복소기하학 26 과 거울대칭 40 이라 쓸 수 있는 구간이 (26, 40) 이다.
-  "Math / Algebraic Varieties":     { ko: "대수다양체", section: algebraic_geometry, hue: 28, sat: "28%", l: 36 }
-  "Math / Scheme Theory":           { ko: "스킴", section: algebraic_geometry, hue: 30, sat: "28%", l: 40 }
-  "Math / Toric Geometry":          { ko: "토릭 기하학", section: algebraic_geometry, hue: 32, sat: "28%", l: 44 }
-  "Math / Sheaf Theory":            { ko: "층론", section: algebraic_geometry, hue: 34, sat: "28%", l: 48 }
-  "Math / Stacks":                  { ko: "스택", section: algebraic_geometry, hue: 36, sat: "28%", l: 52 }
-  "Math / Derived Algebraic Geometry": { ko: "유도대수기하학", section: algebraic_geometry, hue: 38, sat: "28%", l: 56 }
+  "Math / Algebraic Varieties":
+    ko: 대수다양체
+    section: algebraic_geometry
+    hue: 28
+    sat: "28%"
+    l: 36
+    excerpt_ko: >-
+      대수다양체는 다항식의 영점으로 정의되는 기하적 대상을 공부하는 분야이다. 사영다양체와 차원·매끄러움, 인자를 통해 대수와 기하를 잇는 다리가 된다.
+    excerpt_en: >-
+      The theory of algebraic varieties studies geometric objects defined as the zero sets
+      of polynomials. Through projective varieties, dimension, smoothness, and divisors, it
+      connects algebra and geometry.
+  "Math / Scheme Theory":
+    ko: 스킴
+    section: algebraic_geometry
+    hue: 30
+    sat: "28%"
+    l: 40
+    excerpt_ko: >-
+      스킴 이론은 가환환을 기하적 공간으로 바라보는 그로텐디크의 언어이다. 스펙트럼과 구조층, 사상을 통해 대수적 다양체를 현대적 언어로 다시 번역한다.
+    excerpt_en: >-
+      Scheme theory is Grothendieck's language for viewing commutative rings as geometric
+      spaces. Through spectra, structure sheaves, and morphisms, it rebuilds algebraic
+      geometry on a modern foundation.
+  "Math / Toric Geometry":
+    ko: 토릭 기하학
+    section: algebraic_geometry
+    hue: 32
+    sat: "28%"
+    l: 44
+    excerpt_ko: >-
+      토릭기하학은 부채(fan)와 같은 조합적 자료로 기술되는 토릭다양체를 공부하는 분야이다. 격자와 콘의 조합론을 통해 대수기하의 풍부하고, 계산가능한 예시를
+      제공한다.
+    excerpt_en: >-
+      Toric geometry studies toric varieties, which are described by combinatorial data such
+      as fans. Through the combinatorics of lattices and cones, it provides a rich supply of
+      examples in algebraic geometry.
+  "Math / Sheaf Theory":
+    ko: 층론
+    section: algebraic_geometry
+    hue: 34
+    sat: "28%"
+    l: 48
+    excerpt_ko: >-
+      층론은 공간 위의 국소적 자료를 이어붙이는 언어를 유도범주의 층위로 끌어올린다. 여섯 함자의 형식과 Verdier 쌍대성을 세우고, perverse
+      sheaf를 통해 특이공간의 위상을 다룬다.
+  "Math / Stacks":
+    ko: 스택
+    section: algebraic_geometry
+    hue: 36
+    sat: "28%"
+    l: 52
+    excerpt_ko: >-
+      스택은 moduli 문제가 자기동형사상 때문에 스킴으로 표현되지 않는 상황을 다루기 위한 대상이다. Grothendieck 위상과 올범주에서 출발해 대수적
+      스택을 세우고, moduli 공간을 그 위에서 서술한다.
+  "Math / Derived Algebraic Geometry":
+    ko: 유도대수기하학
+    section: algebraic_geometry
+    hue: 38
+    sat: "28%"
+    l: 56
+    excerpt_ko: >-
+      유도대수기하학은 가환환을 animated ring으로 바꿔 교차의 비횡단성과 변형이론을 구조 안에 담는다. 유도스킴 위에서 접복합체와 shifted
+      symplectic 구조를 다루며, 가상류의 기하적 출처를 설명한다.
   # --- 거울대칭 ---
-  "Math / Symplectic Geometry":     { ko: "사교기하학", section: mirror_symmetry, hue: 44, sat: "28%", l: 50 }
-  "Math / Gromov-Witten Theory":    { ko: "그로모프-위튼 이론", section: mirror_symmetry, hue: 48, sat: "28%", l: 44 }
-  "Math / Mirror Symmetry":         { ko: "거울대칭", section: mirror_symmetry, hue: 40, sat: "28%", l: 46 }
-  # --- 기타 ---
+  "Math / Symplectic Geometry":
+    ko: 사교기하학
+    section: mirror_symmetry
+    hue: 44
+    sat: "28%"
+    l: 50
+    excerpt_ko: >-
+      사교기하학은 사교형식이 주어진 다양체 위에서 고전역학의 위상공간을 기하적으로 공부하는 분야이다. 이는 거울대칭의 한쪽 면을 이루는 토대이다.
+    excerpt_en: >-
+      Symplectic geometry studies the phase spaces of classical mechanics geometrically, on
+      manifolds equipped with a symplectic form. Through Hamiltonian flows and moment maps,
+      it connects dynamics and geometry.
+  "Math / Gromov-Witten Theory":
+    ko: 그로모프-위튼 이론
+    section: mirror_symmetry
+    hue: 48
+    sat: "28%"
+    l: 44
+    excerpt_ko: >-
+      그로모프-위튼 이론은 대상 공간 안의 안정사상 moduli 위에서 virtual fundamental class를 잡아 곡선의 개수를 세는 분야이다.
+      Perfect obstruction theory와 log 기하를 통해 열거기하의 불변량을 엄밀하게 정의한다.
+  "Math / Mirror Symmetry":
+    ko: 거울대칭
+    section: mirror_symmetry
+    hue: 40
+    sat: "28%"
+    l: 46
+    excerpt_ko: >-
+      거울대칭은 한 칼라비-야우 다양체의 심플렉틱 기하가 다른 다양체의 복소기하와 대응한다는 현상을 공부하는 분야이다. 끈 이론에서 출발해 enumerative
+      geometry와 complex geometry를 잇는다.
+    excerpt_en: >-
+      Mirror symmetry studies the phenomenon that the symplectic geometry of one Calabi-Yau
+      manifold corresponds to the complex geometry of another. Arising from string theory,
+      it links enumerative geometry and homological algebra.
+  # --- 기타 --- (과목홈이 물리 파일이라 excerpt 는 여기 안 둔다)
   "Misc / Blog Development":        { ko: "블로그 개발", section: misc, hue: 0, sat: "0%", l: 44 }
   "Misc / Peripherals":             { ko: "주변기기", section: misc, hue: 0, sat: "0%", l: 56 }
   "Misc / LLM Workshop":            { ko: "LLM 작업실", section: misc, hue: 0, sat: "0%", l: 50 }

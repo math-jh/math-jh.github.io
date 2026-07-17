@@ -2,111 +2,134 @@
    찾아보기(용어 색인) — 책 색인(back-of-book index) 조판.
    고전 색인 배치: 표제어 왼쪽, 로케이터(정의·참고)는 오른쪽 정렬, 사이를 점
    리더가 잇는다. 참고 용어(see)는 cf. 마커의 세리프 이탤릭으로 로케이터 묶음
-   끝에 인라인으로 붙고, 한글 라벨만 em-ko 로 세운다. 표제어는 항상 영문 선행(정렬 키가
-   왼쪽 가장자리에 오도록), 주 표기는 볼드가 표시. 데이터는 _data/terms.yml,
-   조판은 페이지 Liquid. 섹션 머리는 정리 라벨 행과 같은 문법(세리프 글자 +
-   헤어라인).
+   끝에 인라인으로 붙고, 한글 라벨만 em-ko 로 세운다. 표제어는 항상 영문 선행
+   (정렬 키가 왼쪽 가장자리에 오도록), 주 표기는 볼드가 표시.
+   절 머리는 큰 세리프 이탤릭 대문자(Merriweather Italic): 넓은 화면에선 본문
+   컬럼 안의 왼쪽 글자 열에 앉고 엔트리가 그만큼 들여써지며, 좁은 화면에선
+   오른쪽으로 뻗는 헤어라인을 단다.
+   상단 바(A–Z 점프 + 용어 검색)는 sticky. 아래 괘선은 고전 이중선(double rule),
+   현재 스크롤 위치의 글자는 진하게(스크롤 스파이·필터 dim 은 페이지 쪽 JS).
+   데이터는 _data/terms.yml, 조판은 페이지 Liquid.
    ========================================================================== */
 
 .term-index {
-  // 상단 고정 바: A–Z 점프 + 필터 입력
+  // 상단 고정 바: A–Z 점프 + 용어 검색
   &__bar {
     position: sticky;
     top: 0;
     z-index: 5;
     display: flex;
-    align-items: baseline;
-    gap: 1em;
-    padding: 0.45em 0;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4em 1.2em;
+    padding: 0.55em 0 0.5em;
     background: $background-color;
-    border-bottom: 1px solid $border-color;
+    border-bottom: 3px double $border-color;
   }
 
   &__letters {
     flex: 1;
-    font-family: $sans-serif;
-    font-size: 0.85em;
-    letter-spacing: 0.02em;
+    font-family: $serif;
+    font-size: 0.95em;
+    line-height: 1.7;
 
     a {
-      padding: 0 0.18em;
+      display: inline-block;
+      padding: 0 0.28em;
+      border-bottom: 2px solid transparent; // is-active 표시 자리 (레이아웃 흔들림 방지)
       color: $muted-text-color;
       text-decoration: none;
 
       &:hover {
         color: $text-color;
       }
+
+      // 지금 화면에 보이는 절의 글자 (JS 스크롤 스파이) — 브래스 악센트
+      &.is-active {
+        border-bottom-color: currentColor;
+        color: $highlight-color;
+        font-weight: 700;
+      }
+
+      // 필터로 절이 통째로 걸러진 글자
+      &.is-dim {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  // 용어 검색: 직각 헤어라인 상자 + 돋보기
+  &__search {
+    display: flex;
+    flex: none;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.3em 0.65em;
+    border: 1px solid $border-color;
+    color: $muted-text-color; // 돋보기가 currentColor 로 받는다
+
+    &:focus-within {
+      border-color: $muted-text-color;
+    }
+
+    svg {
+      flex: none;
     }
   }
 
   &__filter {
-    width: 11em;
-    padding: 0.1em 0.4em;
+    width: 12em;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
     font-family: $sans-serif;
     font-size: 0.85em;
     color: $text-color;
     background: transparent;
-    border: 0;
-    border-bottom: 1px solid $border-color; // 헤어라인 입력칸
-    border-radius: 0;
 
     &:focus {
       outline: 0;
-      border-bottom-color: $muted-text-color;
+    }
+
+    &::placeholder {
+      color: $muted-text-color;
+      opacity: 0.85;
     }
   }
 
-  // A–Z 점프 시 절 머리가 sticky 바에 가리지 않게
+  // A–Z 점프 시 절 머리가 sticky 바에 가리지 않게 (바가 두 줄로 접히는 좁은
+  // 화면은 바가 더 높다)
   &__section {
-    scroll-margin-top: 3em;
+    scroll-margin-top: 5em;
+
+    @include breakpoint($large) {
+      scroll-margin-top: 3.4em;
+    }
   }
 
-  // 절 머리 — 기본(좁은 화면): 세리프 큰 글자 + 오른쪽으로 뻗는 헤어라인.
-  // 여백 글자는 왼쪽 여백이 있어야 하므로 $large 미만에선 이 폴백을 쓴다.
+  // 절 머리 — 기본(좁은 화면): 이탤릭 세리프 글자 + 오른쪽으로 뻗는 헤어라인
   &__letter {
     display: flex;
     align-items: center;
     gap: 0.6em;
     margin: 1.5em 0 0.3em;
     padding-bottom: 0;
-    border-bottom: 0; // 테마 h2 밑줄 대신 ::after 헤어라인
-    font-family: $serif;
-    font-size: 1.45em;
-    font-weight: 700;
+    border-bottom: 0; // 테마 h2 밑줄 무효화
+    font-size: 1em;   // 크기는 span 에서
 
     &::after {
       content: "";
       flex: 1;
       border-top: 1px solid $border-color;
     }
-  }
 
-  // 넓은 화면: 글자가 왼쪽 여백에 매달리고, 절은 상단 헤어라인으로 구분 —
-  // 본문 컬럼이 곧게 유지된다 (여백 글자).
-  @include breakpoint($large) {
-    &__section {
-      margin-top: 1.3em;
-      padding-top: 0.55em;
-      border-top: 1px solid $border-color;
-    }
-
-    &__letter {
-      display: block;
-      position: relative;
-      height: 0;
-      margin: 1.6em 0 0.1em;
-
-      &::after {
-        display: none;
-      }
-
-      span {
-        position: absolute;
-        right: 100%;
-        top: -0.15em;
-        margin-right: 0.75em;
-        color: $muted-text-color;
-      }
+    span {
+      font-family: $serif;
+      font-style: italic; // 라틴 대문자 = Merriweather Italic
+      font-weight: 400;
+      font-size: 1.6em;
+      line-height: 1;
+      color: $highlight-color; // 브래스 악센트 (스파이 강조와 같은 계열)
     }
   }
 
@@ -114,6 +137,38 @@
     margin: 0;
     padding: 0;
     list-style: none;
+  }
+
+  // 넓은 화면: 글자가 본문 컬럼 안의 왼쪽 글자 열에 앉고, 엔트리 목록이
+  // 그만큼 들여써진다. 절 구분은 상단 헤어라인.
+  // (base 의 margin: 0 이 여기 margin-left 를 덮지 않도록 base 가 먼저 온다.)
+  @include breakpoint($large) {
+    &__section {
+      position: relative;
+      margin-top: 1.2em;
+      padding-top: 0.55em;
+      border-top: 1px solid $border-color;
+    }
+
+    &__letter {
+      display: block;
+      position: absolute;
+      top: 0.75em;
+      left: 0;
+      margin: 0;
+
+      &::after {
+        display: none;
+      }
+
+      span {
+        font-size: 2.5em;
+      }
+    }
+
+    &__list {
+      margin-left: 3.8em; // 글자 열 폭 (W 이탤릭 2.5em 이 넉넉히 든다)
+    }
   }
 
   // 엔트리: 표제어 왼쪽 · 로케이터 오른쪽, 점 리더가 잇는다
