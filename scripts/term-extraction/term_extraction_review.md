@@ -1,7 +1,7 @@
 # Term-extraction review
 
 Items below were flagged as **ambiguous** (no `<sub>` partner).
-Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordingly.
+Decide whether each one is a definition and add it to `_data/terms.yml` (then run `terms_lint.py` to verify).
 
 
 
@@ -5022,4 +5022,14 @@ Decide whether each one is a definition and edit `_pages/ko/Index_ko.md` accordi
 | `Orthogonal group, Unitary group` | multi-word English emphasis — possibly a definition |
 | `GIT quotient` | multi-word English emphasis — possibly a definition |
 | `semistable` | looks like emphasis (no <sub> partner) |
+
+## ZFC 공리계
+- post: `_posts/Math/Set_Theory/ko/2021-08-07-ZFC_Axioms.md`
+- permalink: `/ko/math/set_theory/zfc_axioms`
+- scanned: 2026-07-17T19:41:40+00:00
+
+| term | agent recommendation |
+| --- | --- |
+| `schema` | looks like emphasis (no <sub> partner) |
+| `멱집합` | looks like emphasis (no <sub> partner) |
 

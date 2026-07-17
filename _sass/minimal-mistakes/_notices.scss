@@ -461,7 +461,16 @@ details.proof--alone[open] > summary::after {
   background: $proof-color;
   transform: translateX(0) rotate(45deg); /* 접힘 = 마름모 (translateX 0 → 오른쪽 꼭짓점이 박스 끝) */
   transition: top 0.3s ease, transform 0.3s ease; /* Proof_animate.js DUR 과 동기 */
-  pointer-events: none;
+  /* summary 의 자식이므로 클릭이 summary 로 버블 → 펼친 상태에서 QED 클릭 = 접기.
+     (예전 pointer-events: none 은 이 경로를 막고 있었다.) */
+  cursor: pointer;
+
+  /* 0.65em 표식은 히트 타깃으로 너무 작다 — 보이지 않는 클릭 영역 확장 */
+  &::after {
+    content: "";
+    position: absolute;
+    inset: -0.45em;
+  }
 }
 
 details.proof.qed-open .qed-mark,

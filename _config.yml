@@ -70,7 +70,7 @@ algolia:
   search_only_api_key    :  # YOUR_SEARCH_ONLY_API_KEY
   powered_by             : false # true (default), false
   files_to_exclude       : 
-    - _pages/ko/Index_ko.md
+    - _pages/ko/Terms.md
 google:
   search_engine_id       : # YOUR_SEARCH_ENGINE_ID
   instant_search         : # false (default), true
@@ -162,6 +162,8 @@ include:
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
+  - "._*" # macOS AppleDouble 잔재 — SMB 복사 때 생기며, 바이너리를 md 로 읽다 빌드가 죽는다
+  - "**/._*"
   - vendor
   - .asset-cache
   - .bundle

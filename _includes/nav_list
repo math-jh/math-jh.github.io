@@ -110,7 +110,7 @@
             <li><a href="{{ '/en/about' | relative_url }}">About This Site</a></li>
           {% else %}
             <li><a href="{{ '/ko/about' | relative_url }}">블로그 소개</a></li>
-            <li><a href="{{ '/ko/misc/index_ko' | relative_url }}">찾아보기</a></li>
+            <li><a href="{{ '/ko/terms' | relative_url }}">찾아보기</a></li>
           {% endif %}
         </ul>
       </li>

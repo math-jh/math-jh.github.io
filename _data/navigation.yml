@@ -89,7 +89,7 @@ mirror_symmetry-ko:
       - title: "블로그 소개"
         url: ko/about
       - title: "찾아보기"
-        url: ko/misc/index_ko
+        url: ko/terms
 
 mirror_symmetry-ko-research:
   - title: <a href="/ko/mirror_symmetry/" class="sidebar_title">거울대칭 (연구판)</a>
@@ -169,7 +169,7 @@ mirror_symmetry-ko-research:
       - title: "블로그 소개"
         url: ko/about
       - title: "찾아보기"
-        url: ko/misc/index_ko
+        url: ko/terms
 
 ########## 메인화면 사이드바 ##########
 

@@ -29,7 +29,9 @@
      - `scripts/reading-bot/state.json`, `scripts/reading-bot/run.log`
      - `scripts/blogdev-bot/state.json`, `scripts/blogdev-bot/run.log`
      - `scripts/__pycache__/`, `**/__pycache__/`
-     - `_pages/ko/Index_ko.md` (매시간 자동 갱신되는 인덱스)
+     - `_pages/ko/Index_ko.md` (옛 자동 갱신 인덱스. 2026-07-18 /ko/terms 로
+       이전하며 삭제됐지만, 과거 커밋 범위에 워커 churn 이 남아 있어 계속 제외)
+     - `_data/terms.yml` (term-extraction 워커가 자동 갱신하는 찾아보기 데이터)
      - `_data/recent_comments.yml` (자동 갱신)
      - `sitemap-*.xml`, `robots.txt`, `link_validation_report.json`
      - `assets/js/katex-macros.js` (사용자가 글 쓸 때 직접 늘리는 매크로,
