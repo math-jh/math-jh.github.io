@@ -1,7 +1,11 @@
 /* ==========================================================================
    찾아보기(용어 색인) — 책 색인(back-of-book index) 조판.
-   표 대신 한 줄 엔트리 + hanging indent, 단일 컬럼. 데이터는 _data/terms.yml,
-   조판은 페이지 Liquid. 섹션 머리는 정리 라벨 행과 같은 문법(글자 + 헤어라인).
+   고전 색인 배치: 표제어 왼쪽, 로케이터(정의·참고)는 오른쪽 정렬, 사이를 점
+   리더가 잇는다. 참고 용어(see)는 cf. 마커의 세리프 이탤릭으로 로케이터 묶음
+   끝에 인라인으로 붙고, 한글 라벨만 em-ko 로 세운다. 표제어는 항상 영문 선행(정렬 키가
+   왼쪽 가장자리에 오도록), 주 표기는 볼드가 표시. 데이터는 _data/terms.yml,
+   조판은 페이지 Liquid. 섹션 머리는 정리 라벨 행과 같은 문법(세리프 글자 +
+   헤어라인).
    ========================================================================== */
 
 .term-index {
@@ -52,7 +56,13 @@
     }
   }
 
-  // 절 머리: 큰 글자 + 오른쪽으로 뻗는 헤어라인
+  // A–Z 점프 시 절 머리가 sticky 바에 가리지 않게
+  &__section {
+    scroll-margin-top: 3em;
+  }
+
+  // 절 머리 — 기본(좁은 화면): 세리프 큰 글자 + 오른쪽으로 뻗는 헤어라인.
+  // 여백 글자는 왼쪽 여백이 있어야 하므로 $large 미만에선 이 폴백을 쓴다.
   &__letter {
     display: flex;
     align-items: center;
@@ -60,11 +70,43 @@
     margin: 1.5em 0 0.3em;
     padding-bottom: 0;
     border-bottom: 0; // 테마 h2 밑줄 대신 ::after 헤어라인
+    font-family: $serif;
+    font-size: 1.45em;
+    font-weight: 700;
 
     &::after {
       content: "";
       flex: 1;
       border-top: 1px solid $border-color;
+    }
+  }
+
+  // 넓은 화면: 글자가 왼쪽 여백에 매달리고, 절은 상단 헤어라인으로 구분 —
+  // 본문 컬럼이 곧게 유지된다 (여백 글자).
+  @include breakpoint($large) {
+    &__section {
+      margin-top: 1.3em;
+      padding-top: 0.55em;
+      border-top: 1px solid $border-color;
+    }
+
+    &__letter {
+      display: block;
+      position: relative;
+      height: 0;
+      margin: 1.6em 0 0.1em;
+
+      &::after {
+        display: none;
+      }
+
+      span {
+        position: absolute;
+        right: 100%;
+        top: -0.15em;
+        margin-right: 0.75em;
+        color: $muted-text-color;
+      }
     }
   }
 
@@ -74,12 +116,20 @@
     list-style: none;
   }
 
-  // 엔트리 한 줄: 넘치면 hanging indent 로 이어짐
+  // 엔트리: 표제어 왼쪽 · 로케이터 오른쪽, 점 리더가 잇는다
   &__entry {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
     margin: 0;
-    padding: 0.1em 0 0.1em 1.6em;
-    text-indent: -1.6em;
+    padding: 0.14em 0;
     line-height: 1.6;
+  }
+
+  // 표제어 묶음: 두 줄로 감기면 hanging indent
+  &__t {
+    padding-left: 1.6em;
+    text-indent: -1.6em;
   }
 
   &__term {
@@ -90,18 +140,33 @@
     color: $muted-text-color;
   }
 
+  // 점 리더 — 로케이터 없는(bare) 항목엔 없음
+  &__lead {
+    flex: 1 1 2.2em;
+    min-width: 2.2em;
+    margin: 0 0.55em;
+    border-bottom: 1px dotted mix($muted-text-color, $border-color, 55%);
+    transform: translateY(-0.28em);
+  }
+
+  &__entry--bare {
+    justify-content: flex-start;
+  }
+
+  &__entry--bare &__lead {
+    display: none;
+  }
+
   &__defs {
-    margin-left: 0.55em;
     font-size: 0.92em;
+    text-align: right;
 
     a {
       color: $muted-text-color;
       text-decoration: none;
-      border-bottom: 1px dotted $border-color;
 
       &:hover {
         color: $link-color;
-        border-bottom-color: $link-color;
       }
     }
   }
@@ -117,11 +182,12 @@
     }
   }
 
-  // 참고 용어(see also): → 화살표, 이탤릭
+  // 참고 용어(see also): cf. 마커, 세리프 이탤릭 — 로케이터 묶음 끝에 인라인.
+  // 제 줄(flex-basis:100%)로 떼면 see 있는 항목만 두 줄이 돼 리듬이 들쭉날쭉해진다.
   &__see {
     margin-left: 0.55em;
     font-size: 0.9em;
-    font-style: italic;
+    font-style: italic; // 본문 세리프 상속 — 라틴은 Merriweather 이탤릭
     color: $muted-text-color;
 
     a {
@@ -131,8 +197,18 @@
       &:hover {
         color: $text-color;
       }
+
+      // 한글 라벨(em-ko)은 이탤릭 상속을 끊고 세운다
+      em-ko {
+        font-style: normal;
+      }
+    }
+
+    &::before {
+      content: "cf. ";
     }
   }
+
 
   // 필터로 걸러진 상태
   &__entry[hidden],
