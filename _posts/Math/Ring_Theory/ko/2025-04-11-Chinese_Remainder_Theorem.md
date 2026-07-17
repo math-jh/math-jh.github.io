@@ -11,6 +11,8 @@ sidebar:
 date: 2025-04-11
 weight: 3
 
+drift_needed: true
+
 ---
 
 중국인의 나머지정리는 정수론의 고전 결과로, 이 결과의 본질은 ring isomorphism 
