@@ -10,7 +10,6 @@ sidebar:
 
 date: 2025-02-05
 weight: 7
-published: false
 drift_needed: true
 ---
 
@@ -266,9 +265,9 @@ $$\mathfrak{p}=\ann(f),\qquad \supp(f)=Z(\mathfrak{p})$$
 
 이도록 하는 nonzero function $f\in \Gamma(X, \mathcal{O}_X)$가 존재하고, 이는 [정의 12](#def12)의 조건을 만족하므로 pair $(X, f)$가 ($\ast$)를 따라 어떠한 nonzero rational function을 정의한다. 
 
-이제 이 associated point $\mathfrak{p}$를 놓치는 열린집합 $U$를 생각하자. 그럼 $Z(\mathfrak{p})$는 $\mathfrak{p}$를 generic point로 갖는 irreducible closed subset이므로 ([§스펙트럼, ⁋명제 16](/ko/math/scheme_theory/spectrums#prop16)), 우리는 반드시 $U\cap Z(\mathfrak{p})=\emptyset$이어야 함을 안다. 즉, 이러한 열린집합 $U$에 포함된 모든 점들, 특히 $U$에 포함된 associated point들 위에서 $f$의 germ은 $0$이 되어야 한다. 문제는 이러한 열린집합 $U$를 유리함수의 정의역으로 허용할 경우, 위의 ($\ast$)의 injectivity에 의해 $f$는 $0$과 구별할 수 없게 되어버린다. 
+이제 이 associated point $\mathfrak{p}$를 놓치는 열린집합 $U$를 생각하자. 그럼 $Z(\mathfrak{p})$는 $\mathfrak{p}$를 generic point로 갖는 irreducible closed subset이므로 ([§스펙트럼, ⁋명제 16](/ko/math/scheme_theory/spectrums#prop16)), $Z(\mathfrak{p})$의 공집합이 아닌 열린부분집합은 항상 $\mathfrak{p}$를 포함하고, 따라서 우리는 반드시 $U\cap Z(\mathfrak{p})=\emptyset$이어야 함을 안다. 즉, 이러한 열린집합 $U$에 포함된 모든 점들, 특히 $U$에 포함된 associated point들 위에서 $f$의 germ은 $0$이 되어야 한다. 문제는 이러한 열린집합 $U$를 유리함수의 정의역으로 허용할 경우, 위의 ($\ast$)의 injectivity에 의해 $f$는 $0$과 구별할 수 없게 되어버린다. 
 
-가장 단순한 예시로 generic point의 경우를 보면, $\mathfrak{p}$가 어떤 irreducible component $C$의 generic point일 때는 $Z(\mathfrak{p})=C$이므로, 만일 $f$가 $\mathfrak{p}$에서 정의되지 않는다면, 즉 직관적으로 이 점에서 pole을 갖는다면, 위 논증은 $C$ 전체에서 $f\vert_U=0$임을 뜻한다. 마찬가지로 $\mathfrak{p}$가 embedded point일 때는 이 $Z(\mathfrak{p})$가 component 전체가 아니라 작은 닫힌집합으로 바뀔 뿐, 이러한 손실이 여전히 생기게 된다. 
+가장 단순한 예시로 generic point의 경우를 보면, $\mathfrak{p}$가 어떤 irreducible component $C$의 generic point일 때는 $Z(\mathfrak{p})=C$이므로, 만일 $f$가 $\mathfrak{p}$에서 정의되지 않는다면, 즉 직관적으로 이 점에서 pole을 갖는다면, 위 논증은 $U$가 $C$를 통째로 놓치게 되어 $f\vert_U=0$이 됨을 뜻한다. 마찬가지로 $\mathfrak{p}$가 embedded point일 때는 이 $Z(\mathfrak{p})$가 component 전체가 아니라 작은 닫힌집합으로 바뀔 뿐, 이러한 손실이 여전히 생기게 된다. 
 
 가령 [§스킴의 위상구조, ⁋예시 6](/ko/math/scheme_theory/topology_of_schemes#ex6)의 $Z(\x\y)=\Spec \mathbb{K}[\x,\y]/(\x\y)$를 보자. 이 scheme은 두 irreducible component, $y$축 $Z(\x)$와 $x$축 $Z(\y)$을 가지며 그 generic point는 각각 $(\x)$와 $(\y)$이다. 또, $\ann(\y)=(\x)$이므로 [명제 10](#prop10)의 결과로 얻어지는 함수 $f$가 바로 $\y$가 되며, 실제로 $\supp(\y)=Z(\x)$가 되어 이는 $y$축 전체를 보여준다. 이제 $U=D(\x)$와 같이, 이 generic point $(\x)$를 뺀 열린집합을 생각하면, $\x\y=0$으로부터 
 
@@ -283,16 +282,18 @@ $$(\x_2)\cup(\x_1,\x_2)=(\x_1,\x_2)$$
 
 과 같으므로, non-zerodivisor는 정확히 원점에서 사라지지 않는 원소, 즉 $q(0)\ne0$를 만족하는 $q$에 대하여 $s=q(\x_1)+c'\x_2$의 꼴이다. 이러한 $s$는 두 associated prime $(\x_2),(\x_1,\x_2)$ 어디에도 속하지 않으므로 $D(s)$는 $X$의 두 associated point를 모두 포함하여 [정의 12](#def12)의 조건을 만족하는 유효한 정의역이 되며, [§아핀스킴, ⁋보조정리 6](/ko/math/scheme_theory/affine_schemes#lem6)에 의하여 그 위의 함수들은 $A_s$로 주어진다. 
 
-우리 주장은 이 정의역 $D(s)$에서 정의된 유리함수들만 보아도 이들이 $X$ 전체의 유리함수들이 된다는 것이다. 이는 임의의 정의역 $U$에 대하여 $X\setminus U=Z(I)$라 하면, $U$가 원점을 포함하기 위해서는 $I\not\subseteq(\x_1,\x_2)$ $I$의 원소 중 $(\x_1,\x_2)$에 속하지 않는 것, 즉 non-zerodivisor $s\in I$가 존재한다. 이 때 $s\in I$로부터 $D(s)\subseteq U$이고 $X$의 associated point는 모두 $D(s)$ 안에 있으므로, $U$ 위의 함수를 $D(s)$로 제한하여도 associated point에서의 germ은, 따라서 그것이 ($\ast$)를 따라 정의하는 rational function은 변하지 않는다. 즉 정의역은 언제나 $D(s)$ 꼴로 줄일 수 있으며, 이로부터 $X$의 rational function 전체가 이루는 total quotient ring $K(X)$는 [예시 11](#ex11)에서 본 원소의 표기를 그대로 쓰면
+우리 주장은 이 정의역 $D(s)$에서 정의된 유리함수들만 보아도 이들이 $X$ 전체의 유리함수들이 된다는 것이다. 이를 위해 임의의 정의역 $U$가 주어졌다 하고, $X\setminus U=Z(I)$라 하자. 그럼 $U$가 associated point를 포함해야 하므로, 이를 위해서는 $I$의 원소 중 원점에서 $0$이 되지 않는 함수, 즉 ideal $(\x_1,\x_2)$에 포함되지 않는 원소가 존재해야 한다. 이러한 원소가 정확히 위에서 살펴본 non-zerodivisor $s$이며, $s\in I$로부터 $D(s)\subseteq U$를 얻는다. 즉 임의의 정의역은 언제나 이러한 $D(s)$를 그 안에 포함하며, 이를 통해 $U$ 위에 정의된 함수를 $D(s)$로 제한할 수 있으며, $D(s)$는 모든 associated point를 이미 포함하고 있으므로 ($\ast$)의 injectivity에 의해 이 제한은 $U$ 위에서 서로 다른 함수를 $D(s)$에서도 다른 것으로 유지한다. 뿐만 아니라 같은 이유에서 $U$에 대한 ($\ast$)는 이 제한과 $D(s)$에 대한 ($\ast$)의 합성으로 분해되므로, $U$ 위의 함수를 $D(s)$로 제한하여도 그 image, 즉 그것이 정의하는 rational function은 변하지 않는다. 
 
-$$K(X)=\left\{\frac{p(\x_1)+c\x_2}{q(\x_1)+c'\x_2} : q(0)\ne0\right\}$$
+이상에서 $X$의 rational function 전체가 이루는 total quotient ring $K(X)$는, [예시 11](#ex11)에서 본 원소의 표기를 그대로 쓰면
+
+$$K(X)=\left\{\frac{p(\x_1)+c\x_2}{q(\x_1)+c'\x_2} : q(0)\neq0\right\}$$
 
 의 꼴이 된다. 이는 고전적인 경우 fraction field가 분모가 $0$이 아닌 유리식들의 모임이었던 것과 나란한 모습이되, 분모가 (generic point뿐 아니라) 원점에서까지 사라지지 않아야 한다는 조건으로 바뀐 것이다. 
 
-그런데 이렇게 얻어진 $K(X)$는 고전적인 함수체와 결정적으로 다르다. 함수체는 언제나 field, 특히 reduced ring이었던 반면, $K(X)$는 nonzero nilpotent을 담기 때문이다. 실제로 $\x_2\in A\subseteq K(X)$는 $\x_2^2=0$인 nilpotent이면서도 $K(X)$에서 nonzero인데, 이는 정확히 embedded point 때문이다. [예시 11](#ex11)에서 보았듯 $\supp(\x_2)=\{(\x_1,\x_2)\}$는 embedded point 하나뿐이라 $\x_2$는 그 점에서만 nonzero이며, 만일 [정의 12](#def12)가 이 embedded point를 정의역에 담을 것을 요구하지 않았다면 $\x_2$는 정의역 전체에서 $0$이 되어 $K(X)$에서 사라졌을 것이다. 즉 $K(X)$가 함수체를 넘어 nilpotent까지 보게 되는 것은, $X$가 원점에서 갖는 nilpotent 방향의 두꺼움을 embedded point가 포착하고 [정의 12](#def12)가 그 점을 정의역에 붙잡아 두기 때문이다. 
+이것이 고전적인 function field와 다른 점은, 위의 $K(X)$는 nonzero nilpotent을 담는다는 것이며 이것이 정확히 embedded point 때문이다. 구체적으로, $\x_2$는 $\x_2^2=0$을 만족하는 nilpotent element이면서도 $K(X)$에서 nonzero function이 된다. 만일 [정의 12](#def12)가 이 embedded point를 정의역에 담을 것을 요구하지 않았다면 원점을 뺀 $D(\x_1)$ 또한 정의역으로 허용되었을 것이고, [예시 11](#ex11)에서 보았듯 그 위에서 $\x_2$는 이미 $0$이므로 $\x_2$는 $K(X)$에서 사라졌을 것이며 따라서 $X$의 nilpotent 방향의 thickening이 $K(X)$에서 감지되지 않았을 것이다. 
 :::
 
-Locally noetherian scheme $X$ 위에 정의된 rational function들의 모임은 *total quotient ring* $K(X)$를 정의한다. 만일 $X$가 integral scheme이라 하자. 그럼 특히 $X$는 irreducible이므로 유일한 generic point $x$를 갖는다. 이 점은 임의의 affine open subset $U\cong\Spec A$에 대하여, integral domain $A$의 유일한 minimal prime ideal $(0)$에 대응되어야 한다. 이 점에서의 localization은 $A$의 nonzero element들을 모두 분모로 추가해 준 것, 즉 $\Frac(A)$와 같다. 따라서 $K(X)\cong \mathcal{O}_{X,x}\cong \Frac(A)$이며, 이는 $X$가 하나의 affine open $\Spec A$로 이루어진 경우 이미 알고 있던 $A$의 fraction field가 일반적인 integral scheme에서도 그대로 유리함수체의 역할을 한다는 것을 보여준다. 
+더 일반적으로, locally noetherian scheme $X$ 위에 정의된 rational function들의 모임은 위의 construction과 마찬가지 방식으로 *total quotient ring* $K(X)$를 정의한다. 만일 $X$가 integral scheme이라면 $X$는 특히 irreducible이므로 유일한 generic point $x$를 가지며, 이 점은 임의의 affine open subset $U\cong\Spec A$에 대하여 integral domain $A$의 유일한 minimal prime ideal $(0)$에 대응되어야 한다. 그럼 이 점에서의 localization은 $A$의 nonzero element들을 모두 분모로 추가해 준 것, 즉 $\Frac(A)$와 같으므로 $K(X)\cong \mathcal{O}_{X,x}\cong \Frac(A)$이며, 이는 $X$가 하나의 affine open $\Spec A$로 이루어진 경우 이미 알고 있던 $A$의 fraction field가 일반적인 integral scheme에서도 그대로 유리함수체의 역할을 한다는 것을 보여준다. 
 
 
 ---
