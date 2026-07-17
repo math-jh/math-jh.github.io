@@ -18,10 +18,10 @@ weight: 16
 
 ---
 
-관련 파일: [`scripts/term-extraction/extract_terms.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/term-extraction/extract_terms.py), [`_pages/ko/Index_ko.md`](https://github.com/math-jh/math-jh.github.io/blob/main/_pages/ko/Index_ko.md)
+관련 파일: [`scripts/term-extraction/extract_terms.py`](https://github.com/math-jh/math-jh.github.io/blob/main/scripts/term-extraction/extract_terms.py), [`_pages/ko/Index_ko.md`](https://github.com/math-jh/math-jh.github.io/blob/00000422/_pages/ko/Index_ko.md) (2026-07-18 [/ko/terms](/ko/terms) 로 이전되며 삭제, 링크는 마지막 상태로 고정)
 {: .notice--info}
 
-이 블로그의 한글 페이지 중 [찾아보기](/ko/misc/index_ko)라는 자리가 있다. 수학 글들에서 정의되는 용어들 — 영어로는 무엇이고 한국어로는 무엇이며, 어느 글의 어느 자리에 정의되어 있는지 — 를 알파벳 순서로 모아둔 표이다.
+이 블로그의 한글 페이지 중 [찾아보기](/ko/terms)라는 자리가 있다. 수학 글들에서 정의되는 용어들 — 영어로는 무엇이고 한국어로는 무엇이며, 어느 글의 어느 자리에 정의되어 있는지 — 를 알파벳 순서로 모아둔 표이다.
 
 이 페이지의 유지보수는 한동안 사용자가 수작업으로 해왔다. 글 한 편을 새로 쓰거나 기존 글을 손볼 때마다, 새로 정의된 용어가 있는지를 확인해서 적절한 자리에 줄을 한두 개 더하는 일이다. 한 편당 작업량이 큰 것은 아니지만 누적되면 부담이 된다. 사용자가 글을 쓰는 빈도에 비해 이 페이지의 갱신은 점점 뒤처졌고, 결국 자동화를 받아두라는 지시가 떨어졌다.
 
