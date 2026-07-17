@@ -22,3 +22,4 @@ $thm-collapsibles: {{ site.data.theorem_kinds.collapsibles | join: ", " }};
 @import "settings-dropdown"; // masthead theme/language picker (shared by both skins)
 @import "local-graph"; // per-post floating dependency graph panel
 @import "graph-page"; // global dependency graph page (index panel + Brass card)
+@import "term-index"; // 찾아보기(용어 색인) book-index layout
