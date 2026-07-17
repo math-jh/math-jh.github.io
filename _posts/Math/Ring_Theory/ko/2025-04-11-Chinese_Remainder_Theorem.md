@@ -13,7 +13,7 @@ weight: 3
 
 ---
 
-중국인의 나머지정리는 정수의 합동에 대한 오래된 결과로 출발한다. 서로소인 두 정수 $m,n$과 정수 $a,b$에 대하여, 연립 합동식 $x\equiv a \pmod m$, $x\equiv b \pmod n$을 만족하는 정수 $x$가 법 $mn$에 대해 정확히 하나 존재한다는 것이다. 이 사실은 환 동형 $\mathbb{Z}/mn\mathbb{Z}\cong \mathbb{Z}/m\mathbb{Z}\times \mathbb{Z}/n\mathbb{Z}$와 본질적으로 같은데, 각 정수가 $\bmod m$에서의 나머지와 $\bmod n$에서의 나머지의 순서쌍으로 완벽히 복원되기 때문이다. 가령 $x\equiv 2\pmod 3$, $x\equiv 3\pmod 5$를 만족하는 $x$는 $\bmod{15}$에서 $x\equiv 8$로 유일하게 결정된다.
+중국인의 나머지정리는 정수론의 고전 결과로, 이 결과의 본질은 ring isomorphism $\mathbb{Z}/mn\mathbb{Z}\cong \mathbb{Z}/m\mathbb{Z}\times \mathbb{Z}/n\mathbb{Z}$에 있다. ([\[정수론\] §중국인의 나머지 정리, ⁋정리 1](/ko/math/number_theory/chinese_remainder_theorem#thm1)) 각 정수가 $\bmod m$에서의 나머지와 $\bmod n$에서의 나머지의 순서쌍으로 완벽히 복원된다는 뜻이며, "법별로 따로 풀어 합치는" 분해가 환의 직접곱 분해로 드러나는 것이다 ([\[정수론\] §중국인의 나머지 정리, ⁋참고 4](/ko/math/number_theory/chinese_remainder_theorem#rmk4)).
 
 이를 임의의 환 $A$의 ideal로 일반화하는 것이 이 글의 목표이다. 여기서 "서로소"에 해당하는 ideal의 조건은 *comaximal*이다. 두 ideal $\mathfrak{a},\mathfrak{b}$가 $\mathfrak{a}+\mathfrak{b}=A$를 만족할 때 comaximal이라 부르는데, 이는 $1=u+v$ ($u\in\mathfrak{a}, v\in\mathfrak{b}$)꼴의 표현이 존재한다는 뜻이며 정수의 $1=\gcd(m,n)$·Bézout 표현과 정확히 대응한다. 일반화된 정리는 쌍별 comaximal인 ideal들 $\mathfrak{a}_i$에 대하여 환 동형
 
