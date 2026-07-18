@@ -14,11 +14,11 @@ translated_at: 2026-07-14T07:00:03+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-07-14T07:00:03+00:00
 ---
-One of the things we promised when introducing schemes was the fiber product, which is the product in $\Sch/S$; to define it we had to define $S$-schemes (and scheme morphisms). Now that we are prepared, we define the fiber product.
+One of the things we promised when introducing schemes was the fiber product, which is the product in $\Sch_{/S}$; to define it we had to define $S$-schemes (and scheme morphisms). Now that we are prepared, we define the fiber product.
 
 ## Definition and Existence of Fiber Products
 
-In [§Morphisms of Schemes, ⁋Definition 3](/en/math/scheme_theory/morphism_of_schemes#def3) we agreed to call a scheme morphism $X \rightarrow S$ an *$S$-scheme*. In this post we define the product in the category $\Sch/S$.
+In [§Morphisms of Schemes, ⁋Definition 3](/en/math/scheme_theory/morphism_of_schemes#def3) we agreed to call a scheme morphism $X \rightarrow S$ an *$S$-scheme*. In this post we define the product in the category $\Sch_{/S}$.
 
 ::: Definition 1
 We write the fiber product of two scheme morphisms $\varphi_X:X \rightarrow S$, $\varphi_Y:Y \rightarrow S$ as $X\times_SY$. ([\[Category Theory\] §Limits, ⁋Example 8](/en/math/category_theory/limits#ex8))
