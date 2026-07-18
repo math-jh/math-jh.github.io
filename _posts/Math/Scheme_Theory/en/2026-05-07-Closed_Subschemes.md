@@ -10,8 +10,9 @@ sidebar:
 
 date: 2025-02-18
 weight: 10
-translated_at: 2026-07-18T13:31:39+00:00
+translated_at: 2026-07-18T22:30:03+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-18T22:30:03+00:00
 ---
 In [§Schemes, ⁋Lemma 2](/en/math/scheme_theory/schemes#lem2) we saw that for an affine scheme $\Spec A$, any element $f$ defines an open affine subscheme $D(f)\cong \Spec A_f$, and in particular, to compare the two structure sheaves we applied [[Topology] §Sheaves, ⁋Lemma 11](/en/math/topology/sheaves#lem11) to
 
@@ -35,26 +36,26 @@ and from
 
 $$(\Spec\pi)^\sharp: \mathcal{O}_{\Spec A} \rightarrow (\Spec\pi)_\ast \mathcal{O}_{\Spec A/\mathfrak{a}}$$
 
-we can construct a morphism of sheaves defined on $Z(\mathfrak{a}))$
+we can construct a morphism of sheaves on $Z(\mathfrak{a})$
 
 $$\iota^{-1} \mathcal{O}_{\Spec A} \rightarrow (\Spec\pi\vert^{Z(\mathfrak{a})})_\ast \mathcal{O}_{\Spec A/\mathfrak{a}}$$
 
 but we have not even defined a scheme structure on $Z(\mathfrak{a})$, and therefore we do not know the relationship between $\iota^{-1}\mathcal{O}_{\Spec A}$ and $\mathcal{O}_{Z(\mathfrak{a})}$, nor is there any guarantee that this is an isomorphism. In fact, it is far more likely not to be an isomorphism, because while $\iota^{-1}\mathcal{O}_{\Spec A}$ is defined using only the topological data of the closed set $Z(\mathfrak{a})$ from the structure sheaf of $\Spec A$, $(\Spec\pi)_\ast\mathcal{O}_{\Spec A/\mathfrak{a}}$ also carries algebraic information about the ring $A/\mathfrak{a}$.
 
 ::: Example 1
-For example, fix a field $\mathbb{K}$ and consider the affine $1$-line $\mathbb{A}_\mathbb{K}^1=\Spec \mathbb{K}[\x]$. Then the following canonical surjections exist:
+For example, fix a field $\mathbb{K}$ and consider the affine line $\mathbb{A}_\mathbb{K}^1=\Spec \mathbb{K}[\x]$. Then there are canonical surjections
 
 $$\pi_1:\mathbb{K}[\x] \rightarrow \mathbb{K}[\x]/(\x)\cong \mathbb{K},\qquad \pi_2:\mathbb{K}[\x] \rightarrow \mathbb{K}[\x]/(\x^2)$$
 
 and concretely, $\pi_1$ and $\pi_2$ are defined by $\x\mapsto 0+(\x)$ and $\x\mapsto \x+(\x^2)$ respectively.
 
-Since $\mathbb{K}[\x]/(\x)\cong \mathbb{K}$, the spectrum $\Spec \mathbb{K}[\x]/(\x)$ has only one point $(0)$. Likewise $\Spec \mathbb{K}[\x]/(\x^2)$ also has only one point. This is because there is a one-to-one correspondence between prime ideals of $\mathbb{K}[\x]/(\x^2)$ and prime ideals of $\mathbb{K}[\x]$ containing $\x^2$, and since $\mathbb{K}[\x]$ is a principal ideal domain, if we write a prime ideal of $\mathbb{K}[\x]$ as $(p(\x))$, then for this ideal to contain $\x^2$ the polynomial $p(\x)$ must divide $\x^2$, so necessarily $p(\x)=\x$.
+Since $\mathbb{K}[\x]/(\x)\cong \mathbb{K}$, the spectrum $\Spec \mathbb{K}[\x]/(\x)$ has only one point, $(0)$. Likewise $\Spec \mathbb{K}[\x]/(\x^2)$ also has only one point. This is because there is a one-to-one correspondence between prime ideals of $\mathbb{K}[\x]/(\x^2)$ and prime ideals of $\mathbb{K}[\x]$ containing $\x^2$, and since $\mathbb{K}[\x]$ is a principal ideal domain, if we write a prime ideal of $\mathbb{K}[\x]$ as $(p(\x))$, then for this ideal to contain $\x^2$ the polynomial $p(\x)$ must divide $\x^2$, so necessarily $p(\x)=\x$.
 
 Therefore, considering the scheme morphisms defined by these
 
 $$\Spec\pi_1:\Spec \mathbb{K}[\x]/(\x) \rightarrow \Spec \mathbb{K}[\x],\qquad \Spec\pi_2:\Spec \mathbb{K}[\x]/(\x^2) \rightarrow \Spec \mathbb{K}[\x]$$
 
-as continuous functions, $\Spec\pi_1$ sends the unique point $(0)$ of $\Spec \mathbb{K}[\x]/(\x)$ to the point $(\x)$ of $\Spec \mathbb{K}[\x]$, and $\Spec\pi_2$ sends the unique point $(\x)$ of $\Spec \mathbb{K}[\x]/(\x^2)$ to the point $(\x)$ of $\Spec \mathbb{K}[\x]$. That is, as continuous functions they define the same function, but of course $\Spec \mathbb{K}[\x]/(\x)$ and $\Spec \mathbb{K}[\x]/(\x^2)$ are not isomorphic as schemes.
+as continuous functions, $\Spec\pi_1$ sends the unique point $(0)$ of $\Spec \mathbb{K}[\x]/(\x)$ to the point $(\x)$ of $\Spec \mathbb{K}[\x]$, and $\Spec\pi_2$ sends the unique point $(\x)$ of $\Spec \mathbb{K}[\x]/(\x^2)$ to the point $(\x)$ of $\Spec \mathbb{K}[\x]$. That is, as continuous functions they define the same map, but of course $\Spec \mathbb{K}[\x]/(\x)$ and $\Spec \mathbb{K}[\x]/(\x^2)$ are not isomorphic as schemes.
 :::
 
 Naturally, the structure sheaf we desire is of the form $(\Spec\pi)_\ast \mathcal{O}_{\Spec A/\mathfrak{a}}$ which contains algebraic information, and we shall examine at the end of this post how this relates to $\iota^{-1}\mathcal{O}_{\Spec A}$.
