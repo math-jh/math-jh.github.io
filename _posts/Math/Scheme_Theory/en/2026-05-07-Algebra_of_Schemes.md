@@ -10,10 +10,11 @@ sidebar:
 
 date: 2025-02-05
 weight: 7
-translated_at: 2026-07-18T13:02:22+00:00
+translated_at: 2026-07-18T18:00:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-18T18:00:02+00:00
 ---
-A scheme is a geometric object that is simultaneously algebraic, so to understand it well we must consider not only the topological structure of schemes discussed in previous posts, but also the algebraic structure at the same time. In the previous post we briefly examined how this philosophy is reflected. In this post we develop this philosophy further.
+A scheme is simultaneously a geometric and an algebraic object; to understand it well we must consider not only the topological structure of schemes examined in earlier posts, but also the algebraic structure at the same time. We briefly surveyed how this philosophy is reflected in the previous post. In this post we develop that philosophy further.
 
 ## Reduced and Integral Schemes
 
@@ -24,7 +25,7 @@ A scheme $X$ is called a *reduced scheme* if for every open set $U$, the ring $\
 Then the following holds.
 
 ::: Lemma 2
-A scheme $X$ is a reduced scheme if and only if for every $x\in X$, the stalk $\mathcal{O}_{X, x}$ is a reduced ring.
+A scheme $X$ is reduced if and only if for every $x\in X$, the stalk $\mathcal{O}_{X, x}$ is a reduced ring.
 :::
 ::: Proof
 First, for any point $x\in X$ of a reduced scheme $X$, consider an affine open subscheme $U=\Spec A$ containing $x$. If the prime ideal corresponding to $x$ in $\Spec A$ is $\mathfrak{p}$, then
@@ -40,16 +41,16 @@ $$\mathcal{O}_X(U)\hookrightarrow\prod_{x\in U} \mathcal{O}_{X,x}$$
 we can verify that $\mathcal{O}_X(U)$ is reduced.
 :::
 
-From this we know that reducedness is a stalk-local property. ([§Topology of Schemes, ⁋Proposition 16](/en/math/scheme_theory/topology_of_schemes#prop16)) Also, if a ring $A$ is reduced then its localization is easily shown to be reduced, so we can show that the spectrum of a reduced ring is reduced.
+From this we know that reducedness is a stalk-local property. ([§Topology of Schemes, ⁋Proposition 16](/en/math/scheme_theory/topology_of_schemes#prop16)) Moreover, if a ring $A$ is reduced then its localization is easily shown to be reduced, so the spectrum of a reduced ring is reduced.
 
-Similarly, the spectrum of an integral domain is an integral scheme. This is not difficult to show directly, but in [Proposition 4](#prop4) we prove that a scheme $X$ is integral if and only if $X$ is an irreducible, reduced scheme. Then for the spectrum $\Spec A$ of an integral domain $A$:
+Similarly, the spectrum of an integral domain is an integral scheme. This is not difficult to show directly, but in [Proposition 4](#prop4) we prove that a scheme $X$ is integral if and only if $X$ is an irreducible reduced scheme. Then for the spectrum $\Spec A$ of an integral domain $A$:
 
-1. Since $A$ is a reduced ring, it is a reduced scheme, and
-2. Since $A$ has the unique minimal prime ideal $\{0\}$, it is irreducible.
+1. Since $A$ is a reduced ring, $\Spec A$ is a reduced scheme, and
+2. Since $A$ has the unique minimal prime ideal $\{0\}$, $\Spec A$ is irreducible.
 
-That is, accepting this, we can see that the spectrum of an integral domain is an integral scheme.
+Thus, granting this, we see that the spectrum of an integral domain is an integral scheme.
 
-For the proof of [Proposition 4](#prop4), it is useful to express irreducibility in the following algebraic language.
+For the proof of [Proposition 4](#prop4), it is useful to translate irreducibility into the following algebraic language.
 
 ::: Lemma 3
 An affine scheme $\Spec A$ is irreducible if and only if the nilradical $\mathfrak{N}(A)$ is a prime ideal.
@@ -70,31 +71,31 @@ Now we obtain the following.
 $X$ is integral if and only if $X$ is reduced and irreducible.
 :::
 ::: Proof
-First, suppose $X$ is integral. Since any integral domain is always reduced, $X$ is a reduced scheme. If $X$ were not an irreducible scheme, there would exist two disjoint nonempty open sets $U_1,U_2\neq\emptyset$. Then for the open set $U_1\cup U_2$,
+First, suppose $X$ is integral. Since any integral domain is reduced, $X$ is a reduced scheme. If $X$ were not irreducible, there would exist two disjoint nonempty open sets $U_1,U_2\neq\emptyset$. Then for the open set $U_1\cup U_2$,
 
 $$\mathcal{O}_X(U_1\cup U_2)=\mathcal{O}_X(U_1)\times \mathcal{O}_X(U_2)$$
 
 and the right-hand side is not an integral domain, which contradicts the assumption that $X$ is integral.
 
-Conversely, suppose we are given an irreducible reduced scheme $X$, and let us show that $X$ is an integral scheme. That is, given any open set $U$ of $X$, we must show that $\mathcal{O}_X(U)$ is an integral domain. First, we show the following claim.
+Conversely, suppose we are given an irreducible reduced scheme $X$, and let us show that $X$ is integral. That is, given any open set $U$ of $X$, we must show that $\mathcal{O}_X(U)$ is an integral domain. First, we prove the following claim.
 
 > **Claim.** For any affine open subset $\Spec A\cong V\subseteq X$, the ring $\mathcal{O}_X(V)\cong A$ is always an integral domain.  
 > **Proof.** From the assumption that $X$ is reduced, we know that $A$ must be a reduced ring. On the other hand, since $X$ is an irreducible closed subset of itself, $V$ is also irreducible and ([\[Topology\] §Dimension, ⁋Proposition 14](/en/math/topology/dimension#prop14)) therefore by [Lemma 3](#lem3), $\mathfrak{N}(A)=0$ is a prime ideal, so $A$ is an integral domain.
 
-Now we show that for any open set $U$ of $X$, $\mathcal{O}_X(U)$ is an integral domain. For this, suppose two elements $f,g\in \mathcal{O}_X(U)$ satisfy $fg=0$. Then for the two open sets of $U$
+Now we show that for any open set $U$ of $X$, $\mathcal{O}_X(U)$ is an integral domain. To this end, suppose two elements $f,g\in \mathcal{O}_X(U)$ satisfy $fg=0$. Then for the two open sets of $U$
 
 $$D_U(f)=\{x\in U\mid f_x\not\in \mathfrak{m}_x\},\qquad D_U(g)=\{x\in U\mid g_x\not\in \mathfrak{m}_x\}$$
 
-and their complements $Z_U(f), Z_U(g)$, we have $U=Z_U(f)\cup Z_U(g)$. Now since $X$ is irreducible, by [\[Topology\] §Dimension, ⁋Proposition 14](/en/math/topology/dimension#prop14) we know that its open set $U$ is likewise irreducible, and therefore either $Z_U(f)=U$ or $Z_U(g)=U$. Without loss of generality, suppose $Z_U(f)=U$. Then for any open affine subset $V$ of $U$, if we define
+and their complements $Z_U(f), Z_U(g)$, we have $U=Z_U(f)\cup Z_U(g)$. Now since $X$ is irreducible, by [\[Topology\] §Dimension, ⁋Proposition 14](/en/math/topology/dimension#prop14) we know that its open subset $U$ is likewise irreducible, and therefore either $Z_U(f)=U$ or $Z_U(g)=U$. Without loss of generality, suppose $Z_U(f)=U$. Then for any open affine subset $V$ of $U$, if we define
 
 $$D_V(f)=\{x\in V\mid f_x\not\in \mathfrak{m}_x\}$$
 
-in $V$, we have $D_V(f)=D_U(f)\cap V$, and for this to be empty, $f\vert_V$ must be a nilpotent element of $\mathcal{O}_X(V)$. But $\mathcal{O}_X(V)$ is an integral domain by the claim above, so from this we know that $f\vert_V=0$, and since this holds for any open affine subset $V$ of $U$, we must have $f=0$.
+in $V$, we have $D_V(f)=D_U(f)\cap V$, and for this to be empty, $f\vert_V$ must be a nilpotent element of $\mathcal{O}_X(V)$. But $\mathcal{O}_X(V)$ is an integral domain by the claim above, so we know that $f\vert_V=0$, and since this holds for any open affine subset $V$ of $U$, we must have $f=0$.
 :::
 
 Looking at [§Topology of Schemes, ⁋Example 6](/en/math/scheme_theory/topology_of_schemes#ex6), we know that the irreducibility of an arbitrary scheme $X$ cannot be determined by looking at stalks alone. For example, $Z(\x(\x-1))$ splits into two components, so points in each component know nothing about points in the other component. Therefore integrality also cannot be determined by looking at stalks alone.
 
-However, if $X$ were a *connected* scheme, the irreducible components would necessarily meet at some point, and by looking at the stalk at this point we might be able to determine irreducibility. The following proposition makes this idea rigorous.
+However, if $X$ were a *connected* scheme, the irreducible components would necessarily meet at some point, and by looking at the stalk at that point we might be able to determine irreducibility. The following proposition makes this idea rigorous.
 
 ::: Proposition 5
 A Noetherian scheme $X$ is integral if and only if $X$ is nonempty and connected, and each stalk $\mathcal{O}_{X,x}$ is an integral domain.
@@ -102,7 +103,7 @@ A Noetherian scheme $X$ is integral if and only if $X$ is nonempty and connected
 ::: Proof
 First, if $X$ is integral then $X$ is irreducible, hence connected, and since the localization of an integral domain is an integral domain, one direction is trivial.
 
-For the converse, that the scheme $X$ is reduced is trivial because any integral domain is reduced and reducedness is a stalk-local property. Therefore, if we show that $X$ is irreducible using the given conditions, the rest follows from [Proposition 4](#prop4).
+For the converse, that $X$ is reduced is trivial because any integral domain is reduced and reducedness is a stalk-local property. Therefore, if we show that $X$ is irreducible using the given conditions, the rest follows from [Proposition 4](#prop4).
 
 First, since $X$ is a Noetherian scheme, there exist suitable Noetherian rings $A_1,\ldots, A_r$ such that $X=\bigcup \Spec A_i$. Also, $X$ is Noetherian as a topological space, and therefore by [\[Topology\] §Dimension, ⁋Proposition 13](/en/math/topology/dimension#prop13), $X$ has finitely many irreducible components. Now, if
 
@@ -143,9 +144,9 @@ A scheme $X$ is called *normal* if for every $x\in X$, the stalk $\mathcal{O}_{X
 
 In general, the localization of a normal domain is always a normal domain. ([\[Commutative Algebra\] §Integral Extensions, ⁋Proposition 12](/en/math/commutative_algebra/integral_extension#prop12)) From this we know that the spectrum $\Spec A$ of a normal domain $A$ is a normal scheme.
 
-Any integral domain is always reduced, and since reducedness can be checked on stalks by [Lemma 2](#lem2), any normal scheme is reduced. On the other hand, since being an integral scheme is not a stalk-local property, a normal scheme is not in general an integral scheme. However, if $X$ is a connected, nonempty Noetherian scheme, then by [Proposition 5](#prop5) we know that normality implies integrality.
+Any integral domain is reduced, and since reducedness can be checked on stalks by [Lemma 2](#lem2), any normal scheme is reduced. On the other hand, since being an integral scheme is not a stalk-local property, a normal scheme is not in general an integral scheme. However, if $X$ is a connected, nonempty Noetherian scheme, then by [Proposition 5](#prop5) we know that normality implies integrality.
 
-On the other hand, we know that a unique factorization domain is always a normal domain. ([\[Commutative Algebra\] §Integral Extensions, ⁋Proposition 9](/en/math/commutative_algebra/integral_extension#prop9)) From this we define the following.
+Moreover, we know that a unique factorization domain is always a normal domain. ([\[Commutative Algebra\] §Integral Extensions, ⁋Proposition 9](/en/math/commutative_algebra/integral_extension#prop9)) From this we define the following.
 
 ::: Definition 7
 A scheme $X$ is called *factorial* if for every $x\in X$, the stalk $\mathcal{O}_{X,x}$ is a unique factorization domain.
@@ -159,7 +160,7 @@ By [§Spectrums, ⁋Corollary 17](/en/math/scheme_theory/spectrums#cor17), we kn
 
 On the other hand, algebraically, a minimal prime ideal is always an associated prime ideal. This can be verified by applying [\[Commutative Algebra\] §Associated Primes, ⁋Theorem 7](/en/math/commutative_algebra/associated_primes#thm7) to the ring $A$ viewed as a module over itself, since $\ann A=\{0\}$.
 
-However, associated prime ideals contain more information than minimal primes. By the second result of [\[Commutative Algebra\] §Associated Primes, ⁋Theorem 7](/en/math/commutative_algebra/associated_primes#thm7), the union of the associated primes of $A$ is exactly the set of zero-divisors of $A$ together with $0$. For example, in the case of $Z(\x\y)$ seen in [§Topology of Schemes, ⁋Example 6](/en/math/scheme_theory/topology_of_schemes#ex6), the zero-divisors $\x,\y$ were functions that vanish to $0$ on different irreducible components respectively, and this zero-divisor relation is already completely explained by the minimal primes $(\x),(\y)$, which are the generic points of the two components. However, as we will see in [Example 11](#ex11) below, this is not always the case; associated points capture even the locations of zero-divisors that are missed by minimal primes, that is, by the generic points of irreducible components alone.
+However, associated prime ideals contain more information than minimal primes. By the second result of [\[Commutative Algebra\] §Associated Primes, ⁋Theorem 7](/en/math/commutative_algebra/associated_primes#thm7), the union of the associated primes of $A$ is exactly the set of zero-divisors of $A$ together with $0$. For example, in the case of $Z(\x\y)$ seen in [§Topology of Schemes, ⁋Example 6](/en/math/scheme_theory/topology_of_schemes#ex6), the zero-divisors $\x,\y$ were functions that vanish to $0$ on different irreducible components respectively, and this zero-divisor relation is already completely explained by the minimal primes $(\x),(\y)$, which are the generic points of the two components. However, as we will see in [Example 11](#ex11) below, this is not always the case; associated points capture even the locations of zero-divisors that are missed by minimal primes alone, that is, by the generic points of irreducible components.
 
 ::: Definition 8
 For a point $x$ of a locally Noetherian scheme $X$ and an affine open neighborhood $U\cong \Spec A$ of $x$, we say that $x$ is an *associated point* of $X$ if the prime ideal $\mathfrak{p}_x\subset A$ corresponding to $x$ is an associated prime ideal of $A$.
@@ -238,7 +239,7 @@ Unlike $Z(\x\y)$ in [§Topology of Schemes, ⁋Example 6](/en/math/scheme_theory
 
 ## Rational Functions
 
-Now we define rational functions defined on a scheme. First, by the second result of [\[Commutative Algebra\] §Associated Primes, ⁋Corollary 4](/en/math/commutative_algebra/associated_primes#cor4), the map
+Now we define rational functions on a scheme. First, by the second result of [\[Commutative Algebra\] §Associated Primes, ⁋Corollary 4](/en/math/commutative_algebra/associated_primes#cor4), the map
 
 $$A \rightarrow \prod_\text{\scriptsize $\mathfrak{p}$ associated prime} A_\mathfrak{p}$$
 
