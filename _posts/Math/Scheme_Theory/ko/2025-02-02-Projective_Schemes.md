@@ -10,7 +10,6 @@ sidebar:
 
 date: 2025-02-02
 weight: 5
-drift_needed: true
 ---
 
 [§스킴, ⁋예시 10](/ko/math/scheme_theory/schemes#ex10)에서 우리는 두 개의 affine line $\mathbb{A}^1=\Spec \mathbb{K}[\x]$을 적당한 방식으로 붙여 projective space $\mathbb{P}^1$을 만들었다. 이번에는 이를 일반화하여 projective scheme을 정의한다. 
