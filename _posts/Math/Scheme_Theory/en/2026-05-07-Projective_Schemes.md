@@ -10,8 +10,9 @@ sidebar:
 
 date: 2025-02-02
 weight: 5
-translated_at: 2026-07-18T11:30:38+00:00
+translated_at: 2026-07-18T16:30:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-18T16:30:02+00:00
 ---
 In [§Schemes, ⁋Example 10](/en/math/scheme_theory/schemes#ex10), we glued two affine lines $\mathbb{A}^1=\Spec \mathbb{K}[\x]$ in a suitable way to construct the projective space $\mathbb{P}^1$. This time, we generalize this to define projective schemes.
 
