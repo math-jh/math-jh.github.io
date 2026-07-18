@@ -10,7 +10,6 @@ sidebar:
 
 date: 2025-02-21
 weight: 9
-drift_needed: true
 ---
 
 앞선 글에서 우리는 scheme morphism을 이해하는 몇 가지 관점을 살펴보았다. 이번 글에서 우리는 본격적으로 scheme morphism이 갖는 성질들을 정의한다. 우선 이들이 공유하는 다음 성질을 정의한다.
