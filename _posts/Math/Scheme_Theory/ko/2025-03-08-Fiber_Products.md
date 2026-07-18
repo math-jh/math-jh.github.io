@@ -14,11 +14,11 @@ published: false
 drift_needed: true
 ---
 
-우리가 scheme을 도입하며 약속한 것들 중 하나는 fiber product였으며, 이는 $\Sch/S$ 위에서의 곱이므로 이를 위해서는 $S$-scheme들 (그리고 scheme morphism들)을 정의했어야 했다. 이제 우리는 준비를 마치고 fiber product를 정의한다. 
+우리가 scheme을 도입하며 약속한 것들 중 하나는 fiber product였으며, 이는 $\Sch_{/S}$ 위에서의 곱이므로 이를 위해서는 $S$-scheme들 (그리고 scheme morphism들)을 정의했어야 했다. 이제 우리는 준비를 마치고 fiber product를 정의한다. 
 
 ## 올곱의 정의와 존재성
 
-우리는 [§스킴 사이의 사상, ⁋정의 3](/ko/math/scheme_theory/morphism_of_schemes#def3)에서 scheme morphism $X \rightarrow S$를 *$S$-scheme*이라 부르기로 하였다. 이번 글에서 우리는 category $\Sch/S$에서의 product를 정의할 것이다. 
+우리는 [§스킴 사이의 사상, ⁋정의 3](/ko/math/scheme_theory/morphism_of_schemes#def3)에서 scheme morphism $X \rightarrow S$를 *$S$-scheme*이라 부르기로 하였다. 이번 글에서 우리는 category $\Sch_{/S}$에서의 product를 정의할 것이다. 
 
 ::: 정의 1
 두 scheme morphism $\varphi_X:X \rightarrow S$, $\varphi_Y:Y \rightarrow S$의 fiber product를 $X\times_SY$로 적는다. ([\[범주론\] §극한, ⁋예시 8](/ko/math/category_theory/limits#ex8))

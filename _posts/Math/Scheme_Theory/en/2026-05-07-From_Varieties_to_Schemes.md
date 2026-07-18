@@ -72,9 +72,9 @@ In the world of schemes, we replace this base $\Spec\mathbb{K}$ by an arbitrary 
 
 On the other hand, this perspective also dovetails with [\[Category Theory\] §Representable Functors, ⁋Theorem 3](/en/math/category_theory/representable_functors#thm3): if we view a scheme $X$ not as a set of points but as its *functor of points* $h_X$, understanding a scheme as the functor
 
-$$h_X:(\Sch/S)^{\op}\to\Set,\qquad h_X(T)=\Hom_S(T,X)$$
+$$h_X:(\Sch_{/S})^{\op}\to\Set,\qquad h_X(T)=\Hom_S(T,X)$$
 
-that receives morphisms from all other schemes, this theorem shows that $h_X$ completely determines the scheme $X$ without loss, and from this perspective a scheme can also be understood as a contravariant functor defined on the category $\Sch/S$ of $S$-schemes.
+that receives morphisms from all other schemes, this theorem shows that $h_X$ completely determines the scheme $X$ without loss, and from this perspective a scheme can also be understood as a contravariant functor defined on the category $\Sch_{/S}$ of $S$-schemes.
 
 A $\mathbb{K}$-rational point on a classical variety $V$ was understood simply as the set of coordinates $(a_1,\dotsc,a_n)$ taking values in $\mathbb{K}$. In the language of schemes, this corresponds to a morphism $\Spec \mathbb{K}\rightarrow V$. The functor of points extends this perspective by defining a $T$-valued point of $V$ as a morphism from an arbitrary scheme $T$.
 

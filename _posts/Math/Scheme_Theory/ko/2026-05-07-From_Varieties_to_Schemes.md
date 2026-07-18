@@ -70,9 +70,9 @@ Scheme의 세계에서는 이 기저 $\Spec\mathbb{K}$를 임의의 scheme $S$�
 
 한편 이 관점은 [\[범주론\] §표현가능한 함자, ⁋정리 3](/ko/math/category_theory/representable_functors#thm3)와도 맞아떨어지는데, scheme $X$를 점들의 집합 대신, *functor of points* $h_X$로 보아, scheme을 다른 모든 scheme으로부터 morphism을 받는 functor
 
-$$h_X:(\Sch/S)^{\op}\to\Set,\qquad h_X(T)=\Hom_S(T,X)$$
+$$h_X:(\Sch_{/S})^{\op}\to\Set,\qquad h_X(T)=\Hom_S(T,X)$$
 
-로 파악하면, 이 정리는 $h_X$가 scheme $X$를 손실 없이 완전히 결정한다는 것을 보여주며, 이러한 관점에서 scheme을 $S$-scheme들의 category $\Sch/S$ 위에서 정의된 contravariant functor로 이해할 수도 있다. 
+로 파악하면, 이 정리는 $h_X$가 scheme $X$를 손실 없이 완전히 결정한다는 것을 보여주며, 이러한 관점에서 scheme을 $S$-scheme들의 category $\Sch_{/S}$ 위에서 정의된 contravariant functor로 이해할 수도 있다. 
 
 Classical variety $V$ 위의 $\mathbb{K}$-rational point는 단순히 $\mathbb{K}$-값을 갖는 좌표 $(a_1,\dotsc,a_n)$의 집합으로 이해되었다. 이는 scheme의 언어로는 morphism $\Spec \mathbb{K}\rightarrow V$에 해당한다. Functor of points는 이 관점을 확장하여, $V$의 $T$-valued point를 임의의 scheme $T$로부터의 morphism으로 정의한다.
 
