@@ -1,6 +1,6 @@
 ---
-title: "Topological Structure of Schemes"
-description: "We define closed points, generic points, and specialization in the topological structure of schemes, and examine how points of an affine scheme relate to ideals and express topological properties."
+title: "The Topological Structure of Schemes"
+description: "We define closed points, generic points, and specialization in the topological structure of schemes. We also examine how the points of an affine scheme relate to ideals and what topological properties they exhibit."
 excerpt: "Generic points, Zariski topology, and irreducible components"
 
 categories: [Math / Scheme Theory]
@@ -10,91 +10,89 @@ sidebar:
 
 date: 2025-02-03
 weight: 6
-translated_at: 2026-06-02T07:30:01+00:00
+translated_at: 2026-07-18T12:30:02+00:00
 translation_source: kimi-cli
-last_polished_at: 2026-06-02T07:30:01+00:00
 ---
 ## Generic Points
 
-We now examine the topological structure carried by a scheme. As we saw in [§Spectra](/en/math/scheme_theory/spectrums), a scheme $X$ is endowed with a topology quite different from the spaces one usually encounters. One of its most peculiar features is that a singleton need not be closed.
+We now examine the topological structure of a scheme. One of the most peculiar features is that a singleton set may fail to be closed.
 
 ::: Definition 1
 A point $x$ of a topological space $X$ is called a *closed point* if $\{x\}$ is a closed subset of $X$.
 :::
 
-Thus, a space $X$ is a $T_1$-space if and only if every point of $X$ is closed. ([\[Topology\] §Hausdorff Spaces, ⁋Definition 3](/en/math/topology/Hausdorff_spaces#def3)) In particular, we have already seen that the spectrum of an integral domain which is not a field has no closed points.
+Thus, a space $X$ is a $T_1$-space if and only if every point of $X$ is a closed point. ([\[Topology\] §Hausdorff Spaces, ⁋Definition 3](/en/math/topology/Hausdorff_spaces#def3)) As we saw in [§Schemes, ⁋Example 7](/en/math/scheme_theory/schemes#ex7), classical algebraic geometry only considered maximal ideals; for such a maximal ideal $\mathfrak{m}$, we have $Z(\mathfrak{m})=\{\mathfrak{m}\}$, and therefore applying [§Spectra, ⁋Proposition 14](/en/math/scheme_theory/spectrums#prop14) and [\[Set Theory\] §Filters and Ideals, Galois Correspondence, ⁋Proposition 7](/en/math/set_theory/filter_and_ideal#prop7) yields
 
-On the other hand, every affine scheme necessarily has a closed point.[^1] Indeed, choosing a maximal ideal $\mathfrak{m}$ of a ring $A$, we have $Z(\mathfrak{m})=\{\mathfrak{m}\}$, and applying [§Spectra, ⁋Proposition 14](/en/math/scheme_theory/spectrums#prop14) and [\[Set Theory\] §Filters, Ideals, and Galois Connections, ⁋Proposition 7](/en/math/set_theory/filter_and_ideal#prop7) yields
+$$\cl(\{\mathfrak{m}\})=ZI(\{\mathfrak{m}\})=ZIZ(\mathfrak{m})=Z(\mathfrak{m})=\{\mathfrak{m}\}$$
 
-$\cl(\{\mathfrak{m}\})=ZI(\{\mathfrak{m}\})=ZIZ(\mathfrak{m})=Z(\mathfrak{m})=\{\mathfrak{m}\}$.
+so every point became a closed point. However, if we consider the spectrum of an integral domain that is not a field, this domain has a maximal ideal $\mathfrak{m}\neq 0$ while $0$ is a prime ideal by definition of an integral domain; hence such a scheme possesses points that are not closed points.
 
-Similarly, if an affine scheme $\Spec A$ has a closed point $\mathfrak{p}$, then from $I(\{\mathfrak{p}\})=\mathfrak{p}$ and [§Spectra, ⁋Proposition 14](/en/math/scheme_theory/spectrums#prop14) we obtain
-
-$Z(\mathfrak{p})=ZI(\{\mathfrak{p}\})=\cl(\{\mathfrak{p}\})=\{\mathfrak{p}\}$,
-
-so $\mathfrak{p}$ must be a maximal ideal.
-
-By definition, if a point $\mathfrak{p}$ of $\Spec A$ is not closed, there exists a point $\mathfrak{q}\neq \mathfrak{p}$ of $\Spec A$ with $\mathfrak{q}\in \cl(\{\mathfrak{p}\})$.
+Our first goal is to gain an intuitive understanding of these points.
 
 ::: Definition 2
-Let $x,y$ be two points of a topological space $X$ with $x\in\cl(\{y\})$. Then we call $x$ a *specialization* of $y$, and $y$ a *generalization* of $x$. If for a closed subset $C$ of a topological space $X$ we have $C=\cl(\{x\})$, then we call $x$ a *generic point* of $C$.
+Let two points $x,y$ of a topological space $X$ satisfy $x\in\cl(\{y\})$. Then we call $x$ a *specialization* of $y$, and $y$ a *generalization* of $x$. If for a closed subset $C$ of a topological space $X$, the equality $C=\cl(\{x\})$ holds, then we call $x$ a *generic point* of $C$.
 :::
 
-Then by definition, if $x$ is a generic point of $C$, every open subset $U$ contains $x$. Hence a generic point can be regarded as a point lying arbitrarily close to every point of $C$.
+Then by definition, if $x$ is a generic point of $C$, for any point $y\in C$ and any open neighborhood $U$ of $y$, $U$ always contains $x$. Thus, a generic point can be thought of as a point close to every point of $C$.
 
-In particular, when $X$ is an affine scheme $\Spec A$, we have already verified that any irreducible closed subset of $\Spec A$ is of the form $Z(\mathfrak{p})$ for some prime ideal $\mathfrak{p}$ of $A$. Then $\mathfrak{p}\in Z(\mathfrak{p})$ trivially, and since $\mathfrak{p}$ is obviously (uniquely) minimal among the prime ideals belonging to $Z(\mathfrak{p})$, it is the (unique) generic point of $Z(\mathfrak{p})$.
+We can explain this more geometrically as follows. Consider $\mathbb{A}^n=\Spec\mathbb{K}[\x_1,\ldots, \x_n]$. In classical algebraic geometry, we know that the zero locus $Z(f)$ of a suitable function $f$ forms a subscheme of $\mathbb{A}^n_\text{classical}$.
 
-To make this more geometric, let $A=\mathbb{K}[\x_1,\x_2]/(\x_2-\x_1^2)$. Then in [§Spectra, ⁋Proposition 9](/en/math/scheme_theory/spectrums#prop9) we showed that $\Spec A$ is a closed subset of $\mathbb{A}_\mathbb{K}^2=\Spec \mathbb{K}[\x_1,\x_2]$. We now see that the prime ideal $(\x_2-\x_1^2)\in \Spec \mathbb{K}[\x_1,\x_2]$ is the generic point of $\Spec A\cong Z(\x_2-\x_1^2)$. That is, the generic point can be interpreted as representing the curve $\x_2-\x_1^2$ itself.
+For convenience of the logical development, suppose $f$ is a prime element, so that the ideal $\mathfrak{p}_f=(f)$ generated by $f$ is a prime ideal. Then $\mathfrak{p}_f$ is, by definition, a point of $\mathbb{A}^n$ (not necessarily closed), and this very point is the generic point of the closed subscheme defined by $f$. This point contains most of the information about $Z(f)$: for instance, to obtain the (classical) points contained in $Z(f)$, we take the closure of $\mathfrak{p}_f$ to get $Z(f)$ and then select only the maximal ideals; algebraically, we take all maximal ideals containing $\mathfrak{p}_f$.
+
+This argument extends to a general ideal $\mathfrak{a}$ of $A$ as well. That is, the irreducible components of $Z(\mathfrak{a})$ correspond bijectively to the minimal prime ideals containing $\mathfrak{a}$. ([\[Commutative Algebra\] §Primary Decomposition, ⁋Theorem 3](/en/math/commutative_algebra/primary_decomposition#thm3)) Each minimal prime ideal corresponds to the generic point of its component, so in the general case too, we can carry over the above intuition component by component.
 
 ## Topological Properties of Schemes
 
-A scheme, if we ignore its structure sheaf, is simply a topological space, and therefore may possess properties of topological spaces.
+Meanwhile, a scheme is, by definition, obtained by gluing affine schemes together, so if we ignore the structure sheaf, it is just a topological space and thus possesses properties of topological spaces.
 
 ::: Definition 3
-Let $(X,\mathcal{O}_X)$ be a scheme. If $X$ is quasi-compact (resp. irreducible, connected) as a topological space, we call $X$ a quasi-compact (resp. irreducible, connected) scheme.
+Let a scheme $(X,\mathcal{O}_X)$ be given. If $X$ is quasi-compact (resp. irreducible, connected) as a topological space, then we call $X$ a quasi-compact (resp. irreducible, connected) scheme.
 :::
 
-The corresponding definitions in topology can be found in [\[Topology\] §Compact Spaces, ⁋Definition 1](/en/math/topology/compact_spaces#def1), [\[Topology\] §Dimension, ⁋Definition 6](/en/math/topology/dimension#def6), and [\[Topology\] §Connected Spaces, ⁋Definition 1](/en/math/topology/connected_spaces#def1), respectively.[^2] The following are examples and counterexamples illustrating this definition.
+The corresponding topological definitions can be found in [\[Topology\] §Compact Spaces, ⁋Definition 1](/en/math/topology/compact_spaces#def1), [\[Topology\] §Dimension, ⁋Definition 6](/en/math/topology/dimension#def6), and [\[Topology\] §Connected Spaces, ⁋Definition 1](/en/math/topology/connected_spaces#def1), respectively.[^1] The following are examples and counterexamples for this definition.
 
 ::: Example 4
-By [§Spectra, ⁋Lemma 12](/en/math/scheme_theory/spectrums#lem12), we know that every affine scheme is quasi-compact. As an example of a scheme that is not quasi-compact, one may of course take a disjoint union of infinitely many schemes.
+By [§Spectra, ⁋Lemma 12](/en/math/scheme_theory/spectrums#lem12), we know that any affine scheme is quasi-compact. An example of a scheme that is not quasi-compact is, of course, the disjoint union of infinitely many schemes.
 :::
 
 For irreducibility, consider the following examples.
 
 ::: Example 5
-For any integral domain $A$, the space $\Spec A$ is always irreducible. Indeed, considering the generic point $\{0\}$, any closed subset containing $\{0\}$ must be $\Spec A$ itself, so it is impossible to write $\Spec A$ as a union of two proper closed subsets. Thus, setting $A=\mathbb{K}[\x_0,\ldots, \x_n]$, we see that affine $n$-space $\mathbb{A}_\mathbb{K}^n$ is irreducible. Then projective space $\mathbb{P}^n_\mathbb{K}$ has irreducible open subsets $D_+(\x_i)$, so by [\[Topology\] §Dimension, ⁋Proposition 8](/en/math/topology/dimension#prop8), $\mathbb{P}^n_\mathbb{K}$ is also irreducible.
+For any integral domain $A$, $\Spec A$ is always irreducible. Considering the generic point $\{0\}$, any closed set containing $\{0\}$ must be $\Spec A$ itself, so it is impossible to represent $\Spec A$ as the union of two proper closed subsets. Thus, setting $A=\mathbb{K}[\x_0,\ldots, \x_n]$, we know that affine $n$-space $\mathbb{A}_\mathbb{K}^n$ is irreducible. Then projective space $\mathbb{P}^n_\mathbb{K}$ has irreducible open subsets $D_+(\x_i)$, so by [\[Topology\] §Dimension, ⁋Proposition 8](/en/math/topology/dimension#prop8), $\mathbb{P}^n_\mathbb{K}$ is also irreducible.
 
-Conversely, any irreducible closed subset $Z$ of a scheme $X$ always has a generic point $I(Z)$. ([§Spectra, ⁋Proposition 16](/en/math/scheme_theory/spectrums#prop16))
+Conversely, any irreducible closed set $Z$ of an affine scheme $\Spec A$ always has a generic point $I(Z)$. ([§Spectra, ⁋Proposition 16](/en/math/scheme_theory/spectrums#prop16))
 :::
 
-Since an irreducible space is always connected, the above examples also furnish examples of connected spaces. The following example provides schemes that are not connected, and schemes that are connected but not irreducible, realized as certain *closed subschemes* of the affine plane $\mathbb{A}^2_\mathbb{K}$.
+Since an irreducible space is always connected, the above examples are also examples of connected spaces. The following example provides instances of schemes that are not connected and schemes that are connected but not irreducible, given as certain *closed subschemes* of the affine plane $\mathbb{A}^2_\mathbb{K}$.
 
-We have not yet defined closed subschemes, but at least in [§Spectra, ⁋Proposition 9](/en/math/scheme_theory/spectrums#prop9) we already saw that for an affine scheme $\Spec A$ and any ideal $\mathfrak{a}$ of $A$, the canonical morphism $A \rightarrow A/\mathfrak{a}$ makes $\Spec A/\mathfrak{a}$ and $Z(\mathfrak{a})\subseteq \Spec A$ homeomorphic as topological spaces. Since connectedness and irreducibility are both topological properties, the topological properties of $\Spec A/\mathfrak{a}$ can be checked by examining the topological structure of the closed subset $Z(\mathfrak{a})$ of $\Spec A$. When we call these closed subschemes, the only missing ingredient is the relationship between the structure sheaf of $\Spec A/\mathfrak{a}$ and the structure sheaf of $\Spec A$ (restricted to $Z(\mathfrak{a})$), which we will revisit in [§Closed Subschemes](/en/math/scheme_theory/closed_subschemes).
+We have not yet defined closed subschemes, but at least from [§Spectra, ⁋Proposition 9](/en/math/scheme_theory/spectrums#prop9), we have already seen that for an affine scheme $\Spec A$ and any ideal $\mathfrak{a}$ of $A$, the canonical morphism $A \rightarrow A/\mathfrak{a}$ makes $\Spec A/\mathfrak{a}$ and $Z(\mathfrak{a})\subseteq \Spec A$ homeomorphic as topological spaces. Since connectedness and irreducibility are both topological properties, the topological properties of $\Spec A/\mathfrak{a}$ can be checked by examining the topological structure of the closed subset $Z(\mathfrak{a})$ of $\Spec A$. When we call these closed subschemes, the only thing missing is the relationship between the structure sheaf of $\Spec A/\mathfrak{a}$ and the structure sheaf of $\Spec A$ (restricted to $Z(\mathfrak{a})$), which we will revisit in [§Closed Subschemes](/en/math/scheme_theory/closed_subschemes).
 
 ::: Example 6
 First, an example of a scheme that is not connected is the closed subscheme of $\mathbb{A}^2_\mathbb{K}$
 
-$\Spec \frac{\mathbb{K}[\x,\y]}{(\x(\x-1))}$.
+$$\Spec \frac{\mathbb{K}[\x,\y]}{(\x(\x-1))}$$
 
-That this is not connected follows from the observation that it can be written as a disjoint union of the two subschemes $\Spec \mathbb{K}[\x,\y]/(\x)$ and $\Spec \mathbb{K}[\x,\y]/(\x-1)$.
+To see that this is not connected, it suffices to verify that it can be written as the disjoint union of two subschemes $\Spec \mathbb{K}[\x,\y]/(\x)$ and $\Spec \mathbb{K}[\x,\y]/(\x-1)$.
 
 On the other hand, an example of a scheme that is connected but not irreducible is
 
-$Z(\x\y)=\Spec \frac{\mathbb{K}[\x,\y]}{(\x\y)}$,
+$$Z(\x\y)=\Spec \frac{\mathbb{K}[\x,\y]}{(\x\y)}$$
 
 and the irreducible components of this scheme are $\Spec\mathbb{K}[\x,\y]/(\x)$ and $\Spec \mathbb{K}[\x,\y]/(\y)$.
 
 ![counterexamples](/assets/images/Math/Scheme_Theory/Topology_of_Schemes-1.svg){:style="width:21.87em" class="invert" .align-center}
+
+These can also be explained from the perspective of generic points. Earlier, we said that the generic point defined by a function $f$ is the ideal generated by $f$ itself; thus, for example, the ideal $(\x)$ representing the $y$-axis is precisely the generic point of the $y$-axis, and similarly $(\y)$ is the generic point of the $x$-axis. The problem is that there is no ideal representing $Z(\x\y)$ examined above: the ideal corresponding to the object obtained by taking the union of the two axes would have to be contained in the intersection of these two ideals, but the intersection of these two ideals is only $(0)$, which is <em-ko>not</em-ko> a prime ideal of the entire ring $\mathbb{K}[\x,\y]/(\x\y)$; that is, $\mathbb{K}[\x,\y]/(\x\y)$ is not an integral domain, since $\x\y=0$ but $\x,\y\neq 0$. At this point, the $\x,\y$ that serve as zero-divisors are functions that become zero on different components respectively, and in more complicated schemes, although slightly more calculation is needed, the same principle appears.
+
 :::
 
-Meanwhile, examples of noetherian schemes are provided by the following proposition.
+We defined the notion of a noetherian topological space in [\[Topology\] §Dimension, ⁋Definition 11](/en/math/topology/dimension#def11). When translating this into the language of schemes, a little care is needed; first, for affine schemes, the following proposition holds.
 
 ::: Proposition 7
-For a noetherian ring $A$, the space $\Spec A$ is always a noetherian topological space.
+For a noetherian ring $A$, $\Spec A$ is always a noetherian topological space.
 :::
 ::: Proof
-Given a descending chain of closed subsets of $\Spec A$
+Given a chain of closed subsets of $\Spec A$
 
 $$Z(\mathfrak{a}_1)\supseteq Z(\mathfrak{a}_2)\supseteq\cdots$$
 
@@ -102,132 +100,134 @@ we obtain a chain of ideals of $A$
 
 $$IZ(\mathfrak{a}_1)\subseteq IZ(\mathfrak{a}_2)\subseteq\cdots$$
 
-which equals
+which is the same as
 
-$\sqrt{\mathfrak{a}_1}\subseteq \sqrt{\mathfrak{a}_2}\subseteq\cdots$.
+$$\sqrt{\mathfrak{a}_1}\subseteq \sqrt{\mathfrak{a}_2}\subseteq\cdots$$
 
-Since $A$ is assumed noetherian, there exists $k$ such that
+Now from the assumption that $A$ is a noetherian ring, there exists a suitable $k$ such that
 
 $$\sqrt{\mathfrak{a}_k}=\sqrt{\mathfrak{a}_{k+1}}=\cdots$$
 
-holds, and hence
+holds, and therefore
 
-$Z(\sqrt{\mathfrak{a}_k})=Z(\sqrt{\mathfrak{a}_{k+1}})=\cdots$.
+$$Z(\sqrt{\mathfrak{a}_k})=Z(\sqrt{\mathfrak{a}_{k+1}})=\cdots$$
 
-Now [§Spectra, ⁋Proposition 5](/en/math/scheme_theory/spectrums#prop5) gives the desired result.
+From [§Spectra, ⁋Proposition 5](/en/math/scheme_theory/spectrums#prop5) we obtain the desired result.
 :::
 
-However, the converse does not hold in general.
+However, the converse does not hold in general. That is, given an affine scheme, even if this scheme is noetherian as a topological space, the ring defining it may not be noetherian.
 
 ## Locality
 
-In the next post we will examine the algebraic properties of schemes. The topological properties examined here and the algebraic properties to be examined next are, of course, closely related, and considering them together deepens our understanding of schemes. We conclude this post by introducing definitions that let us examine this interplay more closely. In particular, in what follows we can endow the localizations $A_f$ and $A_\mathfrak{p}$ of a ring $A$ with geometric intuition.
+By definition, a scheme is an object obtained by gluing affine schemes together, so one of the strategies chosen to investigate its properties is to examine certain properties locally. Indeed, as many of the examples above were affine schemes, the key to this strategy is dealing with general scheme properties by gluing affine pieces. Moreover, the advantage of this approach is that our understanding of affine schemes is <em-ko>not</em-ko> limited to the topological realm. That is, in addition to the topological data introduced in this post, the affine scheme $\Spec A$ also carries algebraic properties of $A$ as a ring, and this locality will help us glue such algebraic properties globally as well.
+
+In this situation, one concept that behaves interestingly is the noetherian property, because the condition of being noetherian is defined separately in topology and in algebra, and this is the source of the ambiguity pointed out before introducing [Proposition 7](#prop7).
+
+In this post, we define the notion of a local property, apply it to the noetherian property, and conclude. First, let us examine what it means for a property of rings to be local.
 
 ::: Definition 8
-A property $Q$ of rings is called *local* if the following two conditions hold.
+A property $P_\alg$ of rings is called *local* if the following two conditions hold.
 
-1. For any ring $A$ and any $f\in A$, if $A$ satisfies $Q$, then $A_f$ also satisfies $Q$.
-2. Let $A$ be any ring and let $f_1,\ldots, f_n\in A$ satisfy $A=(f_1,\ldots, f_n)$. If all $A_{f_i}$ satisfy $Q$, then $A$ also satisfies $Q$.
+1. For any ring $A$ and $f\in A$, if $A$ satisfies $P_\alg$, then $A_f$ also satisfies $P_\alg$.
+2. Let $A$ be any ring and $f_1,\ldots, f_n\in A$ satisfy $A=(f_1,\ldots, f_n)$. If all $A_{f_i}$ satisfy $P_\alg$, then $A$ also satisfies $P_\alg$.
 :::
 
-Let us rephrase this in the language of affine schemes. If a ring $A$ satisfies a local property $Q$,
+Let us rephrase this in the language of affine schemes. For a property $P_\alg$ of rings, suppose an affine scheme $X=\Spec A$ has property $P_\geo$ when its global section ring $\mathcal{O}_X(X)=A$ satisfies $P_\alg$. Then $D(f)\cong\Spec A_f$, and if $A=(f_1,\ldots, f_r)$, from
 
-$$D(f)\cong \Spec A_f$$
+$$\Spec A=\Spec A\setminus Z(f_1,\ldots, f_r)=\Spec A\setminus\bigcap_{i=1}^r Z(f_i)=\bigcup_{i=1}^r D(f_i)$$
 
-so the global sections $\mathcal{O}_{\Spec A}(D(f))$ of the principal open set $D(f)$ of $\Spec A$ also satisfy $P$. Conversely, if $A$ is generated by $f_1,\ldots, f_r$, then from the identity
+we know that the $D(f_i)$ cover $\Spec A$. Using this, the two conditions of [Definition 8](#def8) translate as follows.
 
-$$A=A\setminus \emptyset=A\setminus Z(1)=A\setminus Z\left(\sum_{i=1}^r Z(f_i)\right)=A\setminus\bigcap_{i=1}^r Z(f_i)=\bigcup_{i=1}^rA\setminus Z(f_i)=\bigcup_{i=1}^r D(f_i)$$
+1. If $\Spec A$ satisfies $P_\geo$, then any principal open set $D(f)$ also satisfies $P_\geo$.
+2. If an open covering $D(f_1),\ldots, D(f_r)$ of $\Spec A$ each satisfies $P_\geo$, then $\Spec A$ also satisfies $P_\geo$.
 
-we see that the $D(f_i)$ cover $\Spec A$. For convenience, if the ring $\mathcal{O}_X(X)$ of global sections of an affine scheme $X$ has property $Q$, let us say that $X$ has property $P$. Then the two conditions of [Definition 8](#def8) translate as follows.
-
-1. If $\Spec A$ satisfies $P$, then every principal open set $D(f)$ also satisfies $P$.
-2. If an open covering $D(f_1),\ldots, D(f_r)$ of $\Spec A$ satisfies $P$, then $\Spec A$ also satisfies $P$.
-
-On the other hand, a general open set $U$ of $\Spec A$ can be written as a union of principal open sets ([§Spectra, ⁋Lemma 11](/en/math/scheme_theory/spectrums#lem11)), and therefore if $\Spec A$ satisfies $P$, we know that every *affine* open subset $U$ of $\Spec A$ satisfies $P$. From this perspective, a property $P$ of schemes satisfying the above two conditions is also called an *affine-local property*.
+Meanwhile, a general open set of $\Spec A$ can be represented as a union of principal open sets ([§Spectra, ⁋Lemma 11](/en/math/scheme_theory/spectrums#lem11)), so if $\Spec A$ satisfies $P_\geo$, then any *affine* open subset of $\Spec A$ also satisfies $P_\geo$. A property determined by checking principal open sets in this way is called an *affine-local property*, and its generalization to arbitrary affine subschemes of a scheme is the following definition.
 
 ::: Definition 9
-A property $P$ defined for suitable affine subschemes of a scheme $X$ is called an *affine-local property* if the following two conditions hold.
+A property $P$ defined on suitable affine subschemes of a scheme $X$ is called an *affine-local property* if the following two conditions hold.
 
-1. If $\Spec A\subseteq X$ satisfies $P$, then for any $f\in A$, the subscheme $\Spec A_f\subseteq X$ also satisfies $P$.
+1. If $\Spec A\subseteq X$ satisfies $P$, then for any $f\in A$, $\Spec A_f\subseteq X$ also satisfies $P$.
 2. If $A=(f_1,\ldots, f_r)$ and all $\Spec A_{f_i}\subseteq X$ satisfy $P$, then $\Spec A \subseteq X$ also satisfies $P$.
 :::
 
-On the other hand, since we already saw in [§Schemes, ⁋Example 8](/en/math/scheme_theory/schemes#ex8) that an open subscheme of an affine scheme need not be affine, even if $P$ is a local property of rings, a property $P$ defined in this manner is not a local property in the true sense. To remedy this, we make the following definition.
+On the other hand, since we have already seen in [§Schemes, ⁋Example 8](/en/math/scheme_theory/schemes#ex8) that an open subscheme of an affine scheme may not be affine, even if $P$ is a local property of rings, a property $P$ defined in this way is not truly local in the genuine sense. To examine a truly local property, we define as follows.
 
 ::: Definition 10
-For an affine-local property $P$ of schemes, a scheme $(X, \mathcal{O}_X)$ is called *locally $P$* if for every $x\in X$ there exists an open affine neighborhood $U$ of $x$ such that the affine open subscheme $U$ of $X$ satisfies $P$.
+For an affine-local property $P$ of schemes, a scheme $(X, \mathcal{O}_X)$ is called *locally $P$* if for every $x\in X$ there exists a suitable open affine neighborhood $U$ such that the affine open subscheme $U$ of $X$ satisfies $P$.
 :::
 
-Then in [Lemma 12](#lem12) we show that if a scheme $X$ is locally $P$, then every open subscheme of $X$ is locally $P$. First, we prove the following lemma.
+Then in [Lemma 12](#lem12), we show that if a scheme $X$ is locally $P$, then any open subscheme of $X$ is locally $P$. First, let us prove the following lemma.
 
 ::: Lemma 11 (Nike)
-Let $X$ be a scheme and let $U,V$ be affine open subsets. Then for any $x\in U\cap V$, there exists $W$ with $x\in W\subseteq U\cap V$ such that $W$ is a principal open subset in both $U$ and $V$.
+Let a scheme $X$ and arbitrary affine open subsets $U,V$ be given. Then for any $x\in U\cap V$, there exists a suitable $x\in W\subseteq U\cap V$ such that $W$ is a principal open subset in both $U$ and $V$.
 :::
 ::: Proof
-For notation, write $U=\Spec A$ and $V=\Spec B$, and suppose $x$ corresponds to prime ideals $\mathfrak{p}\subset A$ and $\mathfrak{q}\subset B$, respectively. First, viewing $U\cap V$ as an open subset of $U$ and applying [§Spectra, ⁋Lemma 11](/en/math/scheme_theory/spectrums#lem11), we can choose a principal open set $D(f)$ of $U$ such that
+For notation, let $U=\Spec A$, $V=\Spec B$, and suppose $x$ corresponds to prime ideals $\mathfrak{p}\subset A$, $\mathfrak{q}\subset B$ in each of these. Then first, viewing $U\cap V$ as an open subset of $U$ and applying [§Spectra, ⁋Lemma 11](/en/math/scheme_theory/spectrums#lem11), we can choose a principal open set $D(f)$ of $U$ such that
 
-$\mathfrak{p}\in D(f)\subseteq U\cap V$.
+$$\mathfrak{p}\in D(f)\subseteq U\cap V$$
 
-Here, since $D(f)\cong \Spec A_f$, the inclusion $D(f)\hookrightarrow V$ is obtained from the ring homomorphism $i:B \rightarrow A_f$.
+At this point, since $D(f)\cong \Spec A_f$, the inclusion $D(f)\hookrightarrow V$ is obtained from a ring homomorphism $i:B \rightarrow A_f$.
 
-Now viewing $D(f)\cong\Spec A_f$ as an open subset of $V$, there again exists a principal open set $D(g)$ of $V$ such that
+On the other hand, now viewing $D(f)\cong\Spec A_f$ as an open subset of $V$, there again exists a principal open set $D(g)$ of $V$ such that
 
-$\mathfrak{q}\in D(g)\subseteq D(f)\cap V$.
+$$\mathfrak{q}\in D(g)\subseteq D(f)\cap V$$
 
-It remains to verify that the open subscheme $D(g)$ of $\Spec B$ and the open subscheme $D(i(g))$ of $\Spec A$ coincide.
+We now need to verify that the open subscheme $D(g)$ of $\Spec B$ and the open subscheme $D(i(g))$ of $\Spec A$ are equal.
 :::
 
 ::: Lemma 12
 For a scheme $X$ and an affine-local property $P$ of schemes, the following are all equivalent.
 
 1. $X$ is locally $P$.
-2. Every affine open subset $U\subseteq X$ satisfies $P$ as an open subscheme of $X$.
-3. There exists an affine open covering $\{U_i\}$ of $X$ such that every open subscheme $U_i$ of $X$ satisfies $P$.
-4. There exists an open covering $\{U_i\}$ of $X$ such that each open subscheme $(U_i, \mathcal{O}_X\vert_{U_i})$ is locally $P$.
+2. For any affine open subset $U\subseteq X$, the open subscheme $U$ of $X$ satisfies $P$.
+3. There exists a suitable affine open covering $\{U_i\}$ of $X$ such that all open subschemes $U_i$ of $X$ satisfy $P$.
+4. There exists a suitable open covering $\{U_i\}$ of $X$ such that each open subscheme $(U_i, \mathcal{O}_X\vert_{U_i})$ is locally $P$.
 
-In particular, if $X$ is locally $P$, then every open subscheme of $X$ is locally $P$.
+In particular, if $X$ is locally $P$, then any open subscheme of $X$ is locally $P$.
 :::
 ::: Proof
-If the first condition holds, then for each $x$ there exists an open affine neighborhood $U_x$. Thus $\{U_x\}_{x\in X}$ is an affine open covering of $X$ as required in the third condition. Conversely, given an affine open covering $\{U_i\}$ as in the third condition, for any point $x$ of $X$ we can choose $U_i$ with $x\in U_i$, and this $U_i$ is an open affine neighborhood of $x$ as required in [Definition 9](#def9). Hence the first and third conditions are equivalent. It is obvious that the second condition implies the first.
+If the first condition holds, then for each $x$ there exists an open affine neighborhood $U_x$. Thus $\{U_x\}_{x\in X}$ becomes the affine open covering of $X$ required by the third condition. Conversely, given an affine open covering $\{U_i\}$ provided by the third condition, for any point $x$ of $X$ we can choose a $U_i$ satisfying $x\in U_i$, and the $U_i$ thus obtained becomes the open affine neighborhood of $x$ required by [Definition 9](#def9). Therefore the first and third conditions are equivalent. Also, the second condition trivially implies the first condition.
 
-Now assume the third condition and prove the second. Let $\{U_i=\Spec A_i\}$ be an affine open covering of $X$ satisfying the third condition. For any affine open subset $V=\Spec A$ of $X$, since each $V\cap U_i$ is also an open subset of $V$, by [Lemma 11](#lem11) we can find
+Now assume the third condition holds and show that the second condition holds. Let an affine open covering $\{U_i=\Spec A_i\}$ of $X$ satisfying the third condition be given. Then for any affine open subset $V=\Spec A$ of $X$, since each $V\cap U_i$ is also an open subset of $V$, from [Lemma 11](#lem11) we can find $f_j\in A_i$ satisfying
 
 $$V=\bigcup_{i\in I} V\cap U_i=\bigcup_{i\in I} \bigcup_{j\in J_i} \Spec (A_i)_{f_j}$$
 
-and, knowing that each $\Spec (A_i)_{f_j}$ can be taken as a suitable localization $\Spec A_{g_j}$ of $\Spec A$, by using [§Spectra, ⁋Lemma 12](/en/math/scheme_theory/spectrums#lem12) we may assume that the $g_j$ are finite in number. Now from the discussion before [Definition 9](#def9) and the assumption that $P$ is local, we know that each $\Spec (A_i)_{f_j}=\Spec A_{g_j}$ satisfies $P$, and hence that $\Spec A$ satisfies $P$.
+and we know that each $\Spec (A_i)_{f_j}$ can be taken as a suitable localization $\Spec A_{g_j}$ of $\Spec A$, and using [§Spectra, ⁋Lemma 12](/en/math/scheme_theory/spectrums#lem12) we can assume the $g_j$ are given finitely. Now from the discussion before [Definition 9](#def9), from the assumption that $P$ is local, we know that each $\Spec (A_i)_{f_j}=\Spec A_{g_j}$ satisfies $P$, and from this we know that $\Spec A$ satisfies $P$.
 
-Thus the first three conditions are all equivalent.
+From the above, we know that the first through third conditions are all equivalent.
 
-Now suppose $X$ is locally $P$, and let $U$ be any open subscheme of $X$. For any $x\in U$, by [§Spectra, ⁋Lemma 11](/en/math/scheme_theory/spectrums#lem11) we can find an affine open subset $D(f)$ of $X$ with $x\in D(f)\subseteq U$, and by the second condition we know that $D(f)$ is an affine scheme satisfying $P$. Therefore the scheme $U$ is also locally $P$, yielding the final claim. Finally, the equivalence of the fourth condition with the rest follows from this claim by simply dropping the affine hypothesis in the second and third conditions.
+Now let $X$ be locally $P$, and let $U$ be any open subscheme of $X$. Then for any $x\in U$, from [§Spectra, ⁋Lemma 11](/en/math/scheme_theory/spectrums#lem11) we can take an affine open subset $D(f)$ of $X$ satisfying $x\in D(f)\subseteq U$, and now from the second condition we know that $D(f)$ is an affine scheme satisfying $P$. Therefore the scheme $U$ is also locally $P$, obtaining the final claim. Finally, the equivalence of the fourth condition with the remaining conditions is obtained by using this claim and removing only the affine assumption from the second and third conditions.
 :::
 
-Meanwhile, we showed in [Proposition 7](#prop7) that for a noetherian ring $A$, the space $\Spec A$ is noetherian. Let us now define what it means for an arbitrary scheme $X$ to be noetherian.
+Meanwhile, we saw in [Proposition 7](#prop7) that for a noetherian ring $A$, $\Spec A$ is a noetherian space. Now let us define what it means for an arbitrary scheme $X$ to be noetherian.
 
 ::: Lemma 13
-The property of a ring $A$ being noetherian is a local property, and therefore defines an affine-local property $P$.
+A ring $A$ being noetherian is a local property, and thus defines an affine-local property $P$.
 :::
 ::: Proof
-We must verify the two conditions of [Definition 8](#def8).
+We must prove the two conditions of [Definition 8](#def8).
 
-The first condition follows from [\[Commutative Algebra\] §Localization, ⁋Corollary 9](/en/math/commutative_algebra/localization#cor9), or alternatively from the first part of [\[Topology\] §Dimension, ⁋Proposition 13](/en/math/topology/dimension#prop13).
+The first condition follows from [\[Commutative Algebra\] §Localization, ⁋Corollary 9](/en/math/commutative_algebra/localization#cor9), or alternatively, it suffices to use the first result of [\[Topology\] §Dimension, ⁋Proposition 13](/en/math/topology/dimension#prop13).
 
-For the second condition, suppose $A=(f_1,\ldots, f_r)$. We know that the $D(f_i)$ form an open covering of $\Spec A$, and therefore since $\mathcal{O}_{\Spec A}$ satisfies the first condition of [\[Topology\] §Sheaves, ⁋Definition 1](/en/math/topology/sheaves#def1) we obtain the inclusion
+For the second condition, assume $A=(f_1,\ldots, f_r)$ and each $A_{f_i}$ is noetherian; then we need to show that any ideal $\mathfrak{a}$ of $A$ is finitely generated. Since each $A_{f_i}$ is noetherian, the ideal $\mathfrak{a}A_{f_i}$ is finitely generated, and clearing denominators of the generators, there exist elements $a_{i1},\ldots, a_{in_i}$ of $\mathfrak{a}$ whose images generate $\mathfrak{a}A_{f_i}$. Now let $\mathfrak{b}\subseteq \mathfrak{a}$ be the ideal generated by all these finitely many elements; then by construction, for all $i$ we have $\mathfrak{b}A_{f_i}=\mathfrak{a}A_{f_i}$.
 
-$A \cong \mathcal{O}_{\Spec A}(\Spec A) \hookrightarrow \prod_{i=1}^r \mathcal{O}_{\Spec A}(D(f_i))\cong\prod_{i=1}^r A_{f_i}$.
+We now show that $\mathfrak{a}=\mathfrak{b}$. Since localization is exact, $M=\mathfrak{a}/\mathfrak{b}$ satisfies $M_{f_i}=0$ for all $i$. Taking any $m\in M$, for each $i$ there exists $n$ such that $f_i^{n}m=0$, and since there are finitely many $i$, we can take a single sufficiently large $n$ common to all. Meanwhile, since $D(f_i)=D(f_i^n)$, the $D(f_i^n)$ also cover $\Spec A$, so the $f_1^n,\ldots, f_r^n$ generate the unit ideal and there exist $g_i\in A$ such that $1=\sum_{i=1}^r g_if_i^n$. Then
 
-Now if all the $A_{f_i}$ are noetherian, then their (finite) product $\prod A_{f_i}$ is also noetherian, and since $A$ is a subring of a noetherian ring, it is noetherian by [\[Commutative Algebra\] §Basic Notions, ⁋Theorem 3](/en/math/commutative_algebra/basic_notions#thm3).
+$$m=\sum_{i=1}^r g_if_i^nm=0$$
+
+so $M=0$, that is, $\mathfrak{a}=\mathfrak{b}$ is finitely generated.
 :::
 
 ::: Definition 14
 A scheme $X$ is called a *locally noetherian scheme* if there exists an affine open covering $\{U_i=\Spec A_i\}$ of $X$ such that all $A_i$ are noetherian. If $X$ is a quasi-compact locally noetherian scheme, we call it a *noetherian scheme*.
 :::
 
-Then if $A$ is noetherian, it is obvious from the definition and [§Spectra, ⁋Lemma 12](/en/math/scheme_theory/spectrums#lem12) that $\Spec A$ is a noetherian scheme. Also, just as in [Proposition 7](#prop7), any noetherian scheme is noetherian as a topological space. However, as pointed out after [Proposition 7](#prop7), one should be careful that even if a scheme $X$ is noetherian as a topological space, the above condition need not hold.
+Then if $A$ is noetherian, that $\Spec A$ is a noetherian scheme is obvious from the definition and [§Spectra, ⁋Lemma 12](/en/math/scheme_theory/spectrums#lem12). Also, as in [Proposition 7](#prop7), any noetherian scheme is noetherian as a topological space. However, as pointed out after [Proposition 7](#prop7), we must be careful that even if a scheme $X$ is noetherian as a topological space, the above condition need not hold.
 
-Finally, we define a notion of locality somewhat different from [Definition 9](#def9), namely the notion of *stalk-local*.
+Finally, we define a notion of locality slightly different from [Definition 9](#def9), namely the notion of *stalk-local*.
 
 ::: Definition 15
-A property $P$ of a scheme $X$ is called *stalk-local* if for each $x\in X$, the ring $\mathcal{O}_{X,x}$ satisfies a property $Q$ of rings.
+A property $P$ of a scheme $X$ is called *stalk-local* if for each $x\in X$, the ring $\mathcal{O}_{X,x}$ satisfies a ring property $Q$.
 :::
 
 Then the following holds.
@@ -236,32 +236,33 @@ Then the following holds.
 For a stalk-local property $P$ of a scheme $X$, the following are all equivalent.
 
 1. $X$ satisfies $P$.
-2. Every open subscheme of $X$ satisfies $P$.
-3. Every affine open subscheme of $X$ satisfies $P$.
-4. One can choose an affine open cover $\{U_i\}$ of $X$ such that each open subscheme $U_i$ satisfies $P$.
-5. One can choose an open cover $\{U_i\}$ of $X$ such that each open subscheme $U_i$ satisfies $P$.
+2. Any open subscheme of $X$ satisfies $P$.
+3. Any affine open subscheme of $X$ satisfies $P$.
+4. We can choose an affine open cover $\{U_i\}$ of $X$ such that each open subscheme $U_i$ satisfies $P$.
+5. We can choose an open cover $\{U_i\}$ of $X$ such that each open subscheme $U_i$ satisfies $P$.
 :::
 ::: Proof
-First, $2\implies 3\implies 4\implies 5$ is obvious, so it suffices to show $5\implies 1$ and $1\implies 2$, and these follow from the isomorphism
+First, $2\implies 3\implies 4\implies 5$ is trivial, so it suffices to show $5\implies 1$ and $1\implies 2$, and these are obvious from the following isomorphism
 
-$\mathcal{O}_{X,x}= \varinjlim_{V\ni x} \mathcal{O}_X(V)\cong \varinjlim_{U\supseteq V\ni x}\mathcal{O}_X(V)=\mathcal{O}_{U, x}$.
+$$\mathcal{O}_{X,x}= \varinjlim_{V\ni x} \mathcal{O}_X(V)\cong \varinjlim_{V\ni x, V\subseteq U}\mathcal{O}_X(V)=\mathcal{O}_{U, x}$$
+
 :::
 
-In particular, any stalk-local property is also an affine-local property. However, this is a proposition requiring some care, because for instance if a stalk-local property on $X$ is given by
+In particular, any stalk-local property is also an affine-local property. However, this is a proposition requiring some caution, because when a stalk-local property on $X$ is given by
 
 $$\text{$X$ is $P$}\iff \text{$\mathcal{O}_{X,x}$ satisfies $Q$}$$
 
-then it is <em-ko>not</em-ko> that $\mathcal{O}_X(U)$ satisfies $Q$ for an arbitrary affine open subset $U$, but rather that $\mathcal{O}_{U,x}$ satisfies property $Q$ for any affine open subset $U$ and any element $x\in U$, and therefore the affine open subscheme $U$ satisfies property $P$.
+it is <em-ko>not</em-ko> that $\mathcal{O}_X(U)$ satisfies $Q$ for any affine open subset $U$, but rather that for any affine open subset $U$ and element $x\in U$, $\mathcal{O}_{U,x}$ satisfies property $Q$ and thus the affine open subscheme $U$ satisfies property $P$.
 
-For example, consider the affine scheme
+For example, consider the following affine scheme
 
-$X=\Spec A=\Spec\left(\prod_{i=1}^\infty \mathbb{Z}/2\mathbb{Z}\right)$.
+$$X=\Spec A=\Spec\left(\prod_{i=1}^\infty \mathbb{Z}/2\mathbb{Z}\right)$$
 
-Any element $x$ of $A$ satisfies $x^2=x$, and therefore so does any element of an arbitrary localization $A_\mathfrak{p}$. From $x(1-x)=0$ in $A_{\mathfrak{p}}$, we know that either $x\in \mathfrak{p}A_\mathfrak{p}$ or $1-x\in \mathfrak{p}A_\mathfrak{p}$, and we know that an element not belonging to $\mathfrak{p}A_\mathfrak{p}$ is a unit. ([\[Commutative Algebra\] §Localization, ⁋Proposition 2](/en/math/commutative_algebra/localization#prop2)) Therefore $x=0$ or $x=1$, so the chain of ideals of $A_\mathfrak{p}$ is simply $(0)\subseteq (1)=A_\mathfrak{p}$. Hence each $A_\mathfrak{p}$ is noetherian, but considering
+Any element $x$ of $A$ satisfies $x^2=x$, and thus any element of an arbitrary localization $A_\mathfrak{p}$ also does. Now from $x(1-x)=0$ holding in $A_{\mathfrak{p}}$, we know that either $x\in \mathfrak{p}A_\mathfrak{p}$ or $1-x\in \mathfrak{p}A_\mathfrak{p}$, and we know that elements not in $\mathfrak{p}A_\mathfrak{p}$ are units. ([\[Commutative Algebra\] §Localization, ⁋Proposition 2](/en/math/commutative_algebra/localization#prop2)) Therefore $x=0$ or $x=1$, so the chain of ideals of $A_\mathfrak{p}$ is only $(0)\subseteq (1)=A_\mathfrak{p}$. From this, each $A_\mathfrak{p}$ is noetherian, but considering
 
-$$A\times \{0\}\times\{0\}\times\cdots\subseteq A\times A\times\{0\}\subseteq\cdots$$
+$$\mathbb{Z}/2\mathbb{Z}\times \{0\}\times\{0\}\times\cdots\subseteq \mathbb{Z}/2\mathbb{Z}\times \mathbb{Z}/2\mathbb{Z}\times\{0\}\subseteq\cdots$$
 
-we see that $A$ is not noetherian.
+we can see that $A$ is not noetherian.
 
 ---
 **References**
@@ -271,5 +272,4 @@ we see that $A$ is not noetherian.
 
 ---
 
-[^1]: However, there exist schemes having no closed points.
-[^2]: After [§Spectra, ⁋Lemma 11](/en/math/scheme_theory/spectrums#lem11) we agreed to call a compact topological space (which may not be Hausdorff) *quasi-compact*.
+[^1]: After [§Spectra, ⁋Lemma 11](/en/math/scheme_theory/spectrums#lem11), we decided to call a compact topological space (which may not be Hausdorff) *quasi-compact*.
