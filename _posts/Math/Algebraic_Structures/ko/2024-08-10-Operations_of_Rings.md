@@ -48,23 +48,33 @@ $$\phi(\alpha\beta)=\phi(\alpha)\phi(\beta)=\psi(\alpha)\psi(\beta)=\psi(\alpha\
 Category $\Ring$은 complete이다. 
 :::
 
+한편, $\Rng$에서 유용한 개념 중 하나로 direct sum이 있다. Ring들의 family $(A_i)_{i\in I}$를 생각하자. Direct product $\prod_{i\in I}A_i$의 원소 가운데 유한 개의 성분을 제외하고는 모두 $0$인 것, 즉 finitely supported인 family들의 모임은 덧셈과 곱셈에 닫혀 있어 $\prod A_i$의 subring을 이룬다. (두 finitely supported family의 합과 곱은 여전히 finitely supported이다.) 이를 다음과 같이 부른다.
+
+::: 정의 3
+Ring들의 family $(A_i)_{i\in I}$에 대하여, direct product $\prod_{i\in I}A_i$의 원소 중 finitely supported인 것들의 모임을 ring들의 *direct sum<sub>직합</sub>*이라 부르고 $\bigoplus_{i\in I} A_i$로 적는다.
+:::
+
+이는 [\[대수적 구조\] §가환군, ⁋정의 2](/ko/math/algebraic_structures/abelian_groups#def2)에서 abelian group에 대해 정의한 direct sum과 정확히 같은 정신이다. 다만 index 집합 $I$가 무한일 때 direct sum $\bigoplus A_i$는 항등원 $(1)_{i\in I}$을 포함하지 않으므로 (unital) ring이 아니며, 이로 인해 이 개념은 주로 $\Rng$에서 사용하게 된다. 반대로 $I$가 유한집합일 때는 그 정의에 의해 direct sum이 direct product와 정확하게 일치한다.
+
+Abelian group의 경우 direct sum이 coproduct가 되지만 ([\[대수적 구조\] §가환군, ⁋정리 1](/ko/math/algebraic_structures/abelian_groups#thm1)), (non-commutative) ring에서는 direct sum이 coproduct가 되지 않는다. 이는 noncommutative group에서 direct sum이 coproduct가 되지 않는 것과 같은 상황이며, 따라서 ring들의 coproduct는 따로 정의해야 한다.
+
 ## 환들의 쌍대곱
 
-한편 ring들의 coproduct를 정의하기 위해서는 약간의 노력이 필요하다. 이는 본질적으로 ring의 곱셈 연산이 commutative하지 않기 때문으로, $\Grp$에서 쌍대곱을 정의할 때도 비슷한 문제가 있었다. 이를 극복하기 위해 우리는 [§자유곱](/ko/math/algebraic_structures/free_products)에서 꽤나 귀찮은 방식으로 free product를 정의했어야 했다. Ring에서도 마찬가지 방식으로 coproduct를 정의할 수 있지만, 앞으로의 논의에 이것이 쓰일 일은 없으므로 다음과 같이 명제로 남겨두기만 한다. 
+한편 ring들의 coproduct를 정의하기 위해서는 약간의 노력이 필요하다. 이는 본질적으로 위에서 지적한 것과 같이 ring의 곱셈 연산이 commutative하지 않기 때문으로, $\Grp$에서 쌍대곱을 정의할 때도 비슷한 문제가 있었다. 이를 극복하기 위해 우리는 [§자유곱](/ko/math/algebraic_structures/free_products)에서 꽤나 귀찮은 방식으로 free product를 정의했어야 했다. Ring에서도 마찬가지 방식으로 coproduct를 정의할 수 있지만, 앞으로의 논의에 이것이 쓰일 일은 없으므로 다음과 같이 명제로 남겨두기만 한다. 
 
-::: 명제 3
+::: 명제 4
 임의의 ring들의 family $(A_i)_{i\in I}$에 대하여, 이들의 coproduct가 존재한다. 
 :::
 
 한편 임의의 두 ring homomorphism $\phi,\psi:A \rightarrow B$이 주어졌다 하자. $B$의 ideal $\mathfrak{b}$를 $\phi(\alpha)-\psi(\alpha)$들로 생성되는 two-sided ideal이라 하면 $B/\mathfrak{b}$가 잘 정의된다. 그럼 [§군 동형사상, ⁋명제 8](/ko/math/algebraic_structures/isomorphism_theorems#prop8)과 동일한 증명을 통해 다음이 성립한다.
 
-::: 명제 4
+::: 명제 5
 위와 같은 상황에서, $\CoEq(\phi,\psi)=B/\mathfrak{b}$는 $f,g$의 coequalizer를 정의한다.
 :::
 
 따라서 다음이 성립한다. 
 
-::: 정리 5
+::: 정리 6
 Category $\Ring$은 bicomplete category이다.
 :::
 
@@ -84,7 +94,7 @@ $$(A\otimes B)\otimes(A\otimes B)\cong (A\otimes A)\otimes (B\otimes B)\overset{
 
 을 정의한다.
 
-::: 정의 6
+::: 정의 7
 임의의 ring $A,B$에 대하여, 위와 같이 정의된 ring $A\otimes B$를 이들의 *tensor product*라 부른다. 
 :::
 
