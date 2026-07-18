@@ -10,16 +10,17 @@ sidebar:
 
 date: 2025-04-11
 weight: 3
-translated_at: 2026-07-18T21:31:16+00:00
+translated_at: 2026-07-18T22:00:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-18T22:00:02+00:00
 ---
-The Chinese remainder theorem is a classical result in number theory, and the essence of this result is the ring isomorphism
+The Chinese remainder theorem is a classical result in number theory. Its essence is the ring isomorphism
 
 $$\mathbb{Z}/mn\mathbb{Z}\cong \mathbb{Z}/m\mathbb{Z}\times \mathbb{Z}/n\mathbb{Z},\qquad \text{$m,n$ coprime}$$
 
 ([\[Number Theory\] §Chinese Remainder Theorem, ⁋Theorem 1](/en/math/number_theory/chinese_remainder_theorem#thm1)). In other words, the remainder of an integer upon division by $mn$ is completely determined by its remainders modulo $m$ and modulo $n$, and the goal of this post is to extend this to an arbitrary ring $A$.
 
-Briefly, this generalization first replaces $m\mathbb{Z}$ and $n\mathbb{Z}$ by ideals of the ring $A$, and understands $mn\mathbb{Z}$ as the intersection of these two ideals. However, this generalization does not work for arbitrary ideals, and a condition corresponding to $m,n$ being coprime is also necessary. The corresponding condition on ideals is *comaximal*, and then the generalized theorem in ring theory takes the form that for pairwise comaximal ideals $\mathfrak{a}_i$ we have the ring isomorphism
+Briefly, this generalization first replaces $m\mathbb{Z}$ and $n\mathbb{Z}$ by ideals of $A$, and interprets $mn\mathbb{Z}$ as the intersection of these two ideals. However, the generalization does not work for arbitrary ideals; a condition corresponding to the coprimality of $m$ and $n$ is also necessary. The corresponding condition on ideals is *comaximality*, and the generalized theorem in ring theory then states that for pairwise comaximal ideals $\mathfrak{a}_i$ we have the ring isomorphism
 
 $$A\Big/\Big(\bigcap_i \mathfrak{a}_i\Big)\cong \prod_i A/\mathfrak{a}_i$$
 
@@ -52,7 +53,7 @@ Let three two-sided ideals $\mathfrak{a},\mathfrak{b},\mathfrak{c}$ be given. Th
 
 $$\left(\sum_{i=1}^{n_1} x_i^{(1)}y_i^{(1)}\right)z_1+\cdots+\left(\sum_{i=1}^{n_k}x_i^{(k)}y_i^{(k)}\right)z_k$$
 
-and using the distributive law to expand everything and then grouping the rightmost two factors, we see that this element belongs to $\mathfrak{a}(\mathfrak{b}\mathfrak{c})$. The reverse inclusion is proved in the same way, so the multiplication is associative. Also, for any two-sided ideal $\mathfrak{a}$ it is obvious that $A \mathfrak{a}=\mathfrak{a}A=\mathfrak{a}$.
+and expanding everything using the distributive law and then grouping the rightmost two factors, we see that this element belongs to $\mathfrak{a}(\mathfrak{b}\mathfrak{c})$. The reverse inclusion is proved in the same way, so multiplication is associative. Also, for any two-sided ideal $\mathfrak{a}$ it is obvious that $A \mathfrak{a}=\mathfrak{a}A=\mathfrak{a}$.
 
 Finally, for arbitrary $b_1+c_1,\ldots, b_n+c_n\in \mathfrak{b}+\mathfrak{c}$,
 
@@ -81,7 +82,7 @@ $$1=u+v,\qquad\text{$u\in\mathfrak{a}$, $v\in\mathfrak{b}$}$$
 
 which corresponds exactly to the Bézout identity $mu+nv=1$ for two coprime integers $m,n$ in number theory ([\[Number Theory\] §Euclidean Algorithm and Bézout's Identity, ⁋Theorem 3](/en/math/number_theory/euclidean_algorithm#thm3)). Thus in $\mathbb{Z}$, the ideals $m\mathbb{Z},n\mathbb{Z}$ of coprime integers $m,n$ are comaximal.
 
-On the other hand, the equality $\mathfrak{a}\mathfrak{b}=\mathfrak{a}\cap\mathfrak{b}$ which generally fails does hold when the two ideals are comaximal. The result needed to show this is as follows.
+On the other hand, the equality $\mathfrak{a}\mathfrak{b}=\mathfrak{a}\cap\mathfrak{b}$, which generally fails, does hold when the two ideals are comaximal. The result needed to show this is as follows.
 
 ::: Proposition 4
 Let two-sided ideals $\mathfrak{a},\mathfrak{b}_1,\ldots, \mathfrak{b}_n$ of $A$ be given, and assume that $A=\mathfrak{a}+\mathfrak{b}_i$ holds for all $i$. Then
@@ -203,7 +204,7 @@ $$\bigoplus_{i=1}^n A/\mathfrak{a}_i\cong \prod_{i=1}^n A/\mathfrak{a}_i\cong\pr
 and since this composition coincides with the original $\pi$, we conclude that $\pi$ is an isomorphism.
 :::
 
-Additionally, if $A$ is commutative then by [Proposition 5](#prop5) we have $\bigcap\mathfrak{a}_i=\mathfrak{a}_1\cdots\mathfrak{a}_n$, so the condition $\bigcap\mathfrak{a}_i=0$ in the second condition can be rewritten as $\mathfrak{a}_1\cdots\mathfrak{a}_n=0$ equivalently.
+Additionally, if $A$ is commutative then by [Proposition 5](#prop5) we have $\bigcap\mathfrak{a}_i=\mathfrak{a}_1\cdots\mathfrak{a}_n$, so the condition $\bigcap\mathfrak{a}_i=0$ in the second condition can be rewritten equivalently as $\mathfrak{a}_1\cdots\mathfrak{a}_n=0$.
 
 ## The Non-commutative Case
 
