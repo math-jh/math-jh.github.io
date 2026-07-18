@@ -10,10 +10,11 @@ sidebar:
 
 date: 2025-02-21
 weight: 9
-translated_at: 2026-07-18T14:30:58+00:00
+translated_at: 2026-07-18T23:30:03+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-18T23:30:03+00:00
 ---
-In the previous post, we examined several perspectives for understanding scheme morphisms. In this post, we begin in earnest to define the properties that scheme morphisms can have. First, we define the following property that these share.
+In the previous post, we examined several perspectives for understanding scheme morphisms. In this post, we begin in earnest to define the properties that scheme morphisms can have. First, we define the following property shared by all of them.
 
 ::: Definition 1
 A property $P$ of scheme morphisms is said to be *local on target* if the following two conditions hold.
@@ -25,7 +26,7 @@ Schemes are built from affine schemes. If a property $P$ of scheme morphisms is 
 
 $$\Hom_\Sch(X, \Spec B)\cong \Hom_\cRing(B, \Gamma(X, \mathcal{O}_X))$$
 
-we can define the property of a scheme morphism $X \rightarrow \Spec B$ through the property of a ring homomorphism $B \rightarrow \Gamma(X, \mathcal{O}_X)$.
+we can define the property of a scheme morphism $X \rightarrow \Spec B$ through the property of the corresponding ring homomorphism $B \rightarrow \Gamma(X, \mathcal{O}_X)$.
 
 ## Quasi-Compact and Quasi-Separated Morphisms
 
