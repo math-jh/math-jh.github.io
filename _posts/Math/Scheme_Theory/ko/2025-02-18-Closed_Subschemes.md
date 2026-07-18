@@ -10,7 +10,6 @@ sidebar:
 
 date: 2025-02-18
 weight: 10
-published: false
 drift_needed: true
 ---
 
@@ -89,7 +88,7 @@ $X$로의 두 closed embedding $\iota: Z \rightarrow X$와 $\iota': Z' \rightarr
 Scheme morphism $\varphi: X \rightarrow Y$에 대하여 다음 두 조건이 동치이다.
 
 1. $\varphi$가 closed embedding이다.
-2. $\varphi$가 affine morphism이고, $Y$의 임의의 affine open subset $V\cong \Spec B$가 주어질 떄마다, 그 preimage $\varphi^{-1}(V)\cong \Spec A$에 대하여 $B \rightarrow A$가 surjective이다. 
+2. $\varphi$가 affine morphism이고, $Y$의 임의의 affine open subset $V\cong \Spec B$가 주어질 때마다, 그 preimage $\varphi^{-1}(V)\cong \Spec A$에 대하여 $B \rightarrow A$가 surjective이다. 
 :::
 ::: 증명
 우선 둘째 조건을 가정하고 $\varphi$가 closed embedding임을 보이자. $Y$를 affine open subset들 $\{V_i=\Spec B_i\}$로 덮으면, 가정에 의하여 $\varphi^{-1}(V_i)\cong \Spec A_i$이며 이에 대응하는 $\beta_i: B_i \rightarrow A_i$가 surjective이다. 그럼 first isomorphism theorem에 의하여 $\mathfrak{b}_i=\ker\beta_i$라 둘 때 $A_i\cong B_i/\mathfrak{b}_i$이고, 따라서 $\varphi$를 $\varphi^{-1}(V_i)$로 제한한 것은 canonical projection $\pi: B_i \rightarrow B_i/\mathfrak{b}_i$가 정의하는 $\Spec\pi$이다.
@@ -198,7 +197,7 @@ $$X\overset{\varphi\vert^Z}{\longrightarrow}Z\overset{\iota}{\longrightarrow} Y$
 
 ## 스킴 사상의 상
 
-이제 우리는 스킴 사상의 상을 정의한다. 당연히 임의의 scheme morphism $\varphi: X \rightarrow Y$가 주어졌을 떄, 우리는 그 image $\im\varphi$ 또한 스킴 구조가 주어지기를 바랄 것이다. 그러나 위상공간 $Y$의 부분집합으로서 $\im\varphi$는 열린집합도, 닫힌집합도 아닐 수 있으므로 $Y$의 structure sheaf를 이용하여 $\im\varphi$에 structure sheaf를 정의하는 것은 요원해보인다. 
+이제 우리는 스킴 사상의 상을 정의한다. 당연히 임의의 scheme morphism $\varphi: X \rightarrow Y$가 주어졌을 때, 우리는 그 image $\im\varphi$ 또한 스킴 구조가 주어지기를 바랄 것이다. 그러나 위상공간 $Y$의 부분집합으로서 $\im\varphi$는 열린집합도, 닫힌집합도 아닐 수 있으므로 $Y$의 structure sheaf를 이용하여 $\im\varphi$에 structure sheaf를 정의하는 것은 요원해보인다. 
 
 이에 대한 해결책은 $\varphi$의 image를 포함하는 closed subscheme 중 가장 작은 것을 $\varphi$의 *scheme-theoretic image*로 정의하는 것이다. 이를 위해서는 우선 $X$의 closed subscheme이 다른 closed subscheme보다 작다는 것이 무엇인지를 살펴보아야 한다.
 
@@ -239,11 +238,11 @@ $$\mathcal{I}_{Z/Y} \rightarrow \mathcal{O}_Y \rightarrow \varphi_\ast \mathcal{
 ::: 예시 11
 [예시 1](#ex1)에서 살펴본 closed embedding의 예시 $\Spec\pi: \Spec \mathbb{K}[\x]/(\x^2) \rightarrow \Spec \mathbb{K}[\x]$를 약간 변형한 예시를 살펴보자. 이 예시에서는 구별을 위해 $\mathbb{K}[\x]/(\x^2)$를 $\mathbb{K}[\epsilon]/(\epsilon^2)$으로 적는다. 
 
-우리는 [\[대수적 구조\] §대수, ⁋명제 8](/ko/math/algebraic_structures/algebras#prop8)에 의하여 $\mathbb{K}$-algebra homomorphism $\phi:\mathbb{K}[\x_1,\ldots, \x_n] \rightarrow \mathbb{K}[\epsilon]/(\epsilon^2)$는 $\x_i$의 값에 의해 완전히 결정된다는 것을 안다. 따라서 $\phi(\x_i)=a_i+b_i\epsilon$이라 하자. 만일 $0$이 아닌 $b_i$가 존재한다면 $\phi$가 surjective임을 보일 수 있고, 따라서 $\Spec\phi$는 closed embedding이며 $\Spec\phi$의 scheme-theoretic image는 $\Spec\phi$가 정의하는 closed subscheme 자기 자신이다. 구체적으로 이를 써 보면 $\Spec\phi$는 $\mathbb{K}[\epsilon]/(\epsilon^2)$의 유일한 prime ideal $(\epsilon)$을 $\Spec \mathbb{K}[\x_1,\ldots, \x_n]$의 prime ideal
+우리는 [\[대수적 구조\] §대수, ⁋명제 8](/ko/math/algebraic_structures/algebras#prop8)에 의하여 $\mathbb{K}$-algebra homomorphism $\phi:\mathbb{K}[\x_1,\ldots, \x_n] \rightarrow \mathbb{K}[\epsilon]/(\epsilon^2)$는 $\x_i$의 값에 의해 완전히 결정된다는 것을 안다. 따라서 $\phi(\x_i)=a_i+b_i\epsilon$이라 하자. 만일 $0$이 아닌 $b_i$가 존재한다면 $\phi$가 surjective임을 보일 수 있고, 따라서 $\Spec\phi$는 closed embedding이며 $\Spec\phi$의 scheme-theoretic image는 $\Spec\phi$가 정의하는 closed subscheme 자기 자신이다. 구체적으로 이를 써 보면 $\Spec\phi$는 $\mathbb{K}[\epsilon]/(\epsilon^2)$의 유일한 prime ideal $(\epsilon)$을 $\Spec \mathbb{K}[\x_1,\ldots, \x_n]$의 maximal ideal
 
-$$(\Spec\phi)(\epsilon)=\phi^{-1}(\epsilon)=\left(\frac{\x_1}{b_1}-\frac{a_1}{b_1},\ldots, \frac{\x_n}{b_n}-\frac{a_n}{b_n}\right)=(\x_1-a_1,\ldots, \x_n-a_n)$$
+$$(\Spec\phi)((\epsilon))=\phi^{-1}((\epsilon))=(\x_1-a_1,\ldots, \x_n-a_n)$$
 
-로 보낸다. 즉 연속함수로서 $\Spec\phi$는 한점공간 $\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$을 $\mathbb{A}^n$의 한 점 $(a_1,\ldots, a_n)$으로 보낸다.
+로 보낸다. 실제로 $\phi(\x_i-a_i)=b_i\epsilon\in(\epsilon)$이므로 $(\x_1-a_1,\ldots, \x_n-a_n)\subseteq\phi^{-1}((\epsilon))$이며, 좌변이 maximal ideal이고 우변이 proper ideal이므로 이 포함관계는 등식이 된다. 즉 연속함수로서 $\Spec\phi$는 한점공간 $\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$을 $\mathbb{A}^n$의 한 점 $(a_1,\ldots, a_n)$으로 보낸다.
 
 기하적으로 $\Spec\phi$는 $\mathbb{A}^n$의 한 점 $(a_1,\ldots, a_n)$에서의 tangent vector $(b_1,\ldots, b_n)$에 대응된다. 이는 $\mathbb{A}^n$의 임의의 함수 $f\in \mathbb{K}[\x_1,\ldots, \x_n]$의 점 $(a_1,\ldots, a_n)$에서 벡터 $(b_1,\ldots, b_n)$의 방향으로의 방향미분이 정확히 $\phi(f)$로 주어진다는 것으로부터 확인할 수 있다. 더 일반적으로 $\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$ 대신 $\Spec \mathbb{K}[\epsilon]/(\epsilon^k)$를 생각하면 우리는 $k-1$차 미분계수까지 볼 수 있게 된다. 
 :::
@@ -291,7 +290,7 @@ $$X=\coprod_{k\geq 0} \Spec \mathbb{K}[\epsilon]/(\epsilon^k)$$
 그러나 scheme morphism $\varphi:X \rightarrow Y$의 scheme-theoretic image는 $0$이 아니다. 이를 위해 structure sheaf들 사이의 morphism $\varphi^\sharp:\mathcal{O}_Y \rightarrow \varphi_\ast \mathcal{O}_X$를 관찰하자. 그럼 $\mathcal{O}_Y$의 원소 $f$가 $\varphi^\sharp(f)=0$을 만족하기 위해서는 임의의 $k$에 대하여 $f$의 $k$차 근사식이 $0$이 되어야 하므로, 반드시 $f=0$이어야 한다. 즉, $\mathcal{I}_{Z/Y}$는 $0$이 되어야 하고 이로부터 $\varphi$의 scheme-theoretic image는 자기 자신임을 안다.
 :::
 
-## 닫힌집합 위에 정의된 기약스킴구조
+## 닫힌집합 위에 정의된 축소스킴구조
 
 이 글의 서두에서 우리는 affine scheme $\Spec A$의 임의의 닫힌집합 $Z(\mathfrak{a})$ 위에 두 개의 structure sheaf $(\Spec\pi)_\ast \mathcal{O}_{\Spec A/\mathfrak{a}}$ 그리고 $\iota^{-1} \mathcal{O}_{\Spec A}$를 정의할 수 있었다. 이 중 $(\Spec\pi)_\ast \mathcal{O}_{\Spec A/ \mathfrak{a}}$를 우리는 $Z(\mathfrak{a})$ 위에 정의된 올바른 스킴 구조로 생각하기로 하였다. 이제 우리는 $\iota^{-1} \mathcal{O}_{\Spec A}$에 대해 살펴본다.
 
