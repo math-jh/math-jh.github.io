@@ -10,8 +10,9 @@ sidebar:
 
 date: 2025-01-27
 weight: 3
-translated_at: 2026-07-16T06:30:44+00:00
+translated_at: 2026-07-18T15:30:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-18T15:30:02+00:00
 ---
 Among the most basic examples of a sheaf on a topological space is the collection of continuous functions defined on it, and the sheaf $\mathcal{O}_{\Spec A}$ we are about to define is similar: the only difference is that we think of *regular functions* instead of continuous ones.
 
