@@ -10,7 +10,8 @@ sidebar:
 
 date: 2025-04-11
 weight: 3
-
+published: false
+drift_needed: true
 
 ---
 
@@ -22,20 +23,18 @@ $$\mathbb{Z}/mn\mathbb{Z}\cong \mathbb{Z}/m\mathbb{Z}\times \mathbb{Z}/n\mathbb{
 
 간략하게 이야기해서, 이 일반화는 우선 $m\mathbb{Z}$와 $\mathbb{n}Z$를 ring $A$의 ideal로 일반화하고, $mn\mathbb{Z}$를 이 두 ideal의 교집합으로 이해하여 얻어진다. 다만 이 일반화가 임의의 ideal에 대해 되는 것은 아니며, 위 $m,n$이 서로소라는 조건에 해당하는 조건 또한 필요하다. 
 
-이를 임의의 환 $A$의 ideal로 일반화하는 것이 이 글의 목표이다. 여기서 "서로소"에 해당하는 ideal의 조건은 *comaximal*이다. 두 ideal $\mathfrak{a},\mathfrak{b}$가 $\mathfrak{a}+\mathfrak{b}=A$를 만족할 때 comaximal이라 부르는데, 이는 $1=u+v$ ($u\in\mathfrak{a}, v\in\mathfrak{b}$)꼴의 표현이 존재한다는 뜻이며 정수의 $1=\gcd(m,n)$·Bézout 표현과 정확히 대응한다. 일반화된 정리는 쌍별 comaximal인 ideal들 $\mathfrak{a}_i$에 대하여 ring isomorphism
+이를 임의의 환 $A$의 ideal로 일반화하는 것이 이 글의 목표이다. 여기서 "서로소"에 해당하는 ideal의 조건은 *comaximal*로, 그럼 ring theory에서 일반화된 정리는 쌍별로 comaximal인 ideal들 $\mathfrak{a}_i$에 대하여 ring isomorphism
 
 $$A/\Big(\bigcap_i \mathfrak{a}_i\Big)\cong \prod_i A/\mathfrak{a}_i$$
 
-가 성립한다는 형태이고, $A$가 가환환이라면 뒤에 보일 교차-곱 등식 $\bigcap_i\mathfrak{a}_i=\mathfrak{a}_1\cdots\mathfrak{a}_n$에 의해 $A/\mathfrak{a}_1\cdots\mathfrak{a}_n\cong\prod_i A/\mathfrak{a}_i$로도 쓸 수 있다.
-
-이 등식은 comaximal 조건과 가환성이 모두 있어야만 성립하는 미묘한 사실이다. 다음 절에서 ideal의 곱을 정의하며 이를 먼저 확보한다.
+가 성립한다는 형태이고, $A$가 가환환이라면 뒤에 보일 등식 $\bigcap_i\mathfrak{a}_i=\mathfrak{a}_1\cdots\mathfrak{a}_n$에 의해 $A/\mathfrak{a}_1\cdots\mathfrak{a}_n\cong\prod_i A/\mathfrak{a}_i$로도 쓸 수 있다.
 
 ## Ideal의 곱
 
 ::: 정의 1
 Ring $A$의 두 two-sided ideal $\mathfrak{a},\mathfrak{b}$에 대하여, 이들의 *곱<sub>product</sub>* $\mathfrak{a}\mathfrak{b}$는 다음 집합
 
-$$\mathfrak{a}\mathfrak{b}=\{x_1y_1+x_2y_2+\cdots+x_ny_n: x_i\in \mathfrak{a}, y_i\in \mathfrak{b}, n\geq 1\}$$
+$$\mathfrak{a}\mathfrak{b}=\{x_1y_1+x_2y_2+\cdots+x_ny_n\mid x_i\in \mathfrak{a}, y_i\in \mathfrak{b}, n\geq 1\}$$
 
 을 의미한다. 
 :::

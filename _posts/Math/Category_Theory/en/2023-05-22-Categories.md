@@ -186,7 +186,7 @@ Let two categories $\mathcal{A},\mathcal{B}$ be given. Their *product category* 
 ::: Example 13
 Let a category $\mathcal{A}$ be given, and fix $A\in\obj(\mathcal{A})$.
 
-- The *slice category over $A$* $A_{/\mathcal{A}}$ of $\mathcal{A}$ is given by the following data.
+- The *slice category over $A$* $\mathcal{A}_{/A}$ of $\mathcal{A}$ is given by the following data.
   - The objects of $\mathcal{A}_{/A}$ are morphisms $f:A_1\rightarrow A$ in $\mathcal{A}$.
   - For any $(A_1\overset{f_1}{\longrightarrow}A)\in\obj(\mathcal{A}_{/A})$ and $(A_2\overset{f_2}{\longrightarrow}A)\in\obj(\mathcal{A}_{/A})$, a morphism from $f_1$ to $f_2$ is a morphism $g:A_1\rightarrow A_2$ such that $f_1=g\circ f_2$ holds.
 - The *slice category under $A$* ${}_{A/}\mathcal{A}$ of $\mathcal{A}$ is given by the following data.

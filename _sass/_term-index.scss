@@ -97,14 +97,12 @@
     }
   }
 
-  // A–Z 점프 시 절 머리가 sticky 바에 가리지 않게 (바가 두 줄로 접히는 좁은
-  // 화면은 바가 더 높다)
-  &__section {
-    scroll-margin-top: 5em;
-
-    @include breakpoint($large) {
-      scroll-margin-top: 3.4em;
-    }
+  // A–Z 점프(절)·cf. 점프(엔트리) 모두 sticky 바에 가리지 않게 착지점을 내린다.
+  // 바 높이는 폭·글꼴·줄접힘에 따라 변하므로 페이지 JS 가 실측해 --term-bar-h 로
+  // 넣는다. 여기 값은 JS 이전·무JS 폴백(좁은 화면은 바가 두 줄로 접혀 더 높다).
+  &__section,
+  &__entry {
+    scroll-margin-top: var(--term-bar-h, 5em);
   }
 
   // 절 머리 — 기본(좁은 화면): 이탤릭 세리프 글자 + 오른쪽으로 뻗는 헤어라인

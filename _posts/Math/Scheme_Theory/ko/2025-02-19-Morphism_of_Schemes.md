@@ -23,26 +23,30 @@ drift_needed: true
 가장 첫 번째 관점은 꽤나 자연스러운 것이다. Scheme은 본질적으로 affine scheme들을 붙여서 만드는 것이고, categorical equivalence $\AffSch\cong\cRing^\op$에 의하여 affine scheme 사이의 morphism은 본질적으로 ring homomorphism이다. 따라서 scheme morphism 또한 affine scheme들 사이의 morphism을 붙여서 만드는 것으로 이해할 수 있어야 할 것이다. 즉 다음 명제를 기대하는 것이 합당하다.
 
 ::: 명제 1
-Scheme morphism $\varphi: X \rightarrow Y$가 주어졌다 하자. 그럼 $X$의 affine open subset $U\cong\Spec A$와 $Y$의 affine open subset $V\cong\Spec B$가 $\varphi(U)\subseteq V$를 만족한다면, $\varphi$의 정의역을 $U$로, 공역을 $V$로 제한하여 얻어지는 $(\varphi\vert_U)\vert^V: U \rightarrow V$는 affine scheme들 사이의 morphism, 즉 ring homomorphism $B \rightarrow A$이다. 
+Scheme morphism $\varphi: X \rightarrow Y$가 주어졌다 하자. 그럼 $X$의 affine open subset $U\cong\Spec A$와 $Y$의 affine open subset $V\cong\Spec B$가 $\varphi(U)\subseteq V$를 만족한다면, $\varphi$의 정의역을 $U$로 제한하고 공역을 $V$로 보아 얻어지는 
+
+$$(\varphi\vert_U)\vert^V: U \rightarrow V$$
+
+는 affine scheme들 사이의 morphism, 즉 ring homomorphism $B \rightarrow A$이다. 
 
 거꾸로 $X$의 affine open covering $\{U_i\}$가 주어졌다 하고, 각각의 $i$마다 $Y$의 affine open subset $V_i$와 affine scheme들 사이의 morphism $\varphi_i: U_i \rightarrow V_i$가 주어졌다 하자. 만일 이들이 임의의 $i,k$에 대하여 gluing condition
 
-$$\varphi_i\vert_{U_i\cap U_k}=\varphi_k\vert_{U_i\cap U_k}\qquad\text{as morphisms $U_i\cap U_k \rightarrow Y$}$$
+$$\varphi_i\vert_{U_i\cap U_k}=\varphi_k\vert_{U_i\cap U_k}\qquad\text{(as morphisms $U_i\cap U_k \rightarrow Y$)}$$
 
 을 만족한다면, $\varphi_i$들은 유일한 scheme morphism $\varphi: X \rightarrow Y$로 붙는다. 
 :::
 ::: 증명
-첫 주장의 경우, 임의의 열린집합 $W\subseteq V$에 대하여 $\varphi^\sharp(W)$에 restriction map을 합성하여 얻어지는 함수
+첫 주장의 경우, 임의의 열린집합 $W\subseteq V$에 대하여 $\varphi^\sharp(W):\mathcal{O}_Y(W)\rightarrow\varphi_\ast \mathcal{O}_X(W)$에, $U$로의 restriction map을 합성하여 얻어지는 함수
 
-$$\mathcal{O}_Y(W) \rightarrow \mathcal{O}_X(\varphi^{-1}(W)) \rightarrow \mathcal{O}_X(\varphi^{-1}(W)\cap U)$$
+$$\mathcal{O}_Y(W) \rightarrow \varphi_\ast \mathcal{O}_X(W)=\mathcal{O}_X(\varphi^{-1}(W)) \rightarrow \mathcal{O}_X(\varphi^{-1}(W)\cap U)$$
 
-들이 sheaf morphism $\mathcal{O}_Y\vert_V \rightarrow ((\varphi\vert_U)\vert^V)_\ast(\mathcal{O}_X\vert_U)$를 정의한다. 이것이 임의의 $x\in U$의 stalk 위에 유도하는 함수는 germ만으로 결정되므로 원래의 $\varphi$가 유도하는 $\mathcal{O}_{Y,\varphi(x)} \rightarrow \mathcal{O}_{X,x}$와 같고, 따라서 local homomorphism이다. 즉 $(\varphi\vert_U)\vert^V$는 $\LRS$의 morphism이며, $U$와 $V$가 affine scheme이므로 [§아핀스킴, ⁋명제 11](/ko/math/scheme_theory/affine_schemes#prop11)에 의하여 이는 유일한 ring homomorphism $B \rightarrow A$로부터 유도된 것이다. 
+들이 우리가 봐야 할 sheaf morphism $\mathcal{O}_Y\vert_V \rightarrow ((\varphi\vert_U)\vert^V)_\ast(\mathcal{O}_X\vert_U)$를 정의한다. 이것이 임의의 $x\in U$의 stalk 위에 유도하는 함수는 germ만으로 결정되므로 원래의 $\varphi$가 유도하는 $\mathcal{O}_{Y,\varphi(x)} \rightarrow \mathcal{O}_{X,x}$와 같고, 따라서 local homomorphism이다. 즉 $(\varphi\vert_U)\vert^V$는 $\LRS$의 morphism이며, $U$와 $V$가 affine scheme이므로 [§아핀스킴, ⁋명제 11](/ko/math/scheme_theory/affine_schemes#prop11)에 의하여 이는 유일한 ring homomorphism $B \rightarrow A$로부터 유도된 것이다. 
 
-둘째 주장의 경우, gluing condition에 의하여 연속함수 $\varphi_i: U_i \rightarrow V_i\hookrightarrow Y$들이 서로의 겹침 위에서 일치하므로, [\[위상수학\] §준층, ⁋보조정리 1](/ko/math/topology/presheaves#lem1)에 의하여 이들은 연속함수 $\varphi: X \rightarrow Y$로 붙는다. 또 열린집합 $W\subseteq Y$와 $s\in \mathcal{O}_Y(W)$가 주어질 때마다 얻어지는 section들
+둘째 주장의 경우, gluing condition에 의하여 연속함수 $\varphi_i: U_i \rightarrow V_i\hookrightarrow Y$들이 서로의 겹침 위에서 일치하므로, [\[위상수학\] §준층, ⁋보조정리 1](/ko/math/topology/presheaves#lem1)에 의하여 이들은 연속함수 $\varphi: X \rightarrow Y$로 붙는다. 이제 우리는 sheaf morphism $\varphi^\sharp$을 정의해야 한다. 열린집합 $W\subseteq Y$와 $s\in \mathcal{O}_Y(W)$가 주어질 때마다 얻어지는 section들
 
 $$s_i:=\varphi_i^\sharp(W)(s)\in \mathcal{O}_X(\varphi^{-1}(W)\cap U_i)$$
 
-역시 같은 이유로 서로의 겹침 위에서 일치하고, $\{\varphi^{-1}(W)\cap U_i\}$가 $\varphi^{-1}(W)$의 open covering이므로 [\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1)의 두 조건에 의하여 이들을 붙인 $s'\in \mathcal{O}_X(\varphi^{-1}(W))$가 유일하게 존재한다. 이제 $\varphi^\sharp(W): s\mapsto s'$으로 정의하면 restriction map과의 호환성은 각각의 $U_i$ 위에서 확인하면 충분하고, $\varphi^\sharp$가 $x\in U_i$의 stalk 위에 유도하는 함수는 $\varphi_i^\sharp$가 유도하는 것과 같으므로 local homomorphism이다. 따라서 $\varphi$는 scheme morphism이며, $(\varphi\vert_{U_i})\vert^{V_i}=\varphi_i$라는 조건이 $\varphi$를 완전히 결정하므로 이러한 $\varphi$는 유일하다. 
+을 생각하자. 그럼 이들 역시 같은 이유로 서로의 겹침 위에서 일치하고, $\{\varphi^{-1}(W)\cap U_i\}$가 $\varphi^{-1}(W)$의 open covering이므로 [\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1)의 두 조건에 의하여 이들을 붙인 $s'\in \mathcal{O}_X(\varphi^{-1}(W))$가 유일하게 존재한다. 이제 $\varphi^\sharp(W): s\mapsto s'$으로 정의하면 restriction map과의 호환성은 각각의 $U_i$ 위에서 확인하면 충분하고, $\varphi^\sharp$가 $x\in U_i$의 stalk 위에 유도하는 함수는 $\varphi_i^\sharp$가 유도하는 것과 같으므로 local homomorphism이다. 따라서 $\varphi$는 scheme morphism이며, $(\varphi\vert_{U_i})\vert^{V_i}=\varphi_i$라는 조건이 $\varphi$를 완전히 결정하므로 이러한 $\varphi$는 유일하다. 
 :::
 
 첫 주장은 [§아핀스킴, ⁋명제 11](/ko/math/scheme_theory/affine_schemes#prop11)의 $\AffSch$가 $\LRS$의 full subcategory라는 사실을 scheme morphism의 국소적인 모습에 그대로 적용한 것에 지나지 않는다. 다만 둘째 주장의 gluing condition은 환 준동형사상들 사이의 조건으로 적히지 않는다는 데 주의해야 한다. $V_i\neq V_k$인 경우 $\varphi_i$와 $\varphi_k$를 하나의 affine scheme 안에서 비교할 수 없어 이들을 $Y$ 안에서 비교해야 하고, 또 $U_i\cap U_k$는 일반적으로 affine scheme이 아니기 때문이다. 즉 scheme morphism을 붙이기 위해 주어지는 데이터는 환 준동형사상들이지만, 이들이 붙는지를 판정하는 조건은 그렇지 않다. 
@@ -52,7 +56,11 @@ Affine scheme들 사이의 morphism이 아닌 scheme morphism의 예시로, [§�
 
 $$\varphi:\mathbb{A}_\mathbb{K}^{n+1}\setminus \{0\} \rightarrow \mathbb{P}^n_\mathbb{K}$$
 
-이 있다. 이 식은 전통적으로 projective space를 만들 때 사용하는 식이었으나, [§사영스킴, ⁋예시 12](/ko/math/scheme_theory/projective_schemes#ex12)에서 전통적인 projective space를 대수기하의 언어로 옮길 때는 등장하지 않았었다. 이 morphism은 물론 식 $(x_0,\ldots, x_n)\mapsto [x_0:\cdots:x_n]$을 만족하지만, $\mathbb{A}^{n+1}_\mathbb{K}$의 점들이 이러한 꼴만 있는 것은 아니고, 또 이 식은 structure sheaf에 대한 정보를 하나도 담고 있지 않으므로 scheme morphism이라 칭하기는 부적절할 것이다.
+이 있다. 이 식은 전통적으로 projective space를 만들 때 사용하는 식이었으나, [§사영스킴, ⁋예시 12](/ko/math/scheme_theory/projective_schemes#ex12)에서 전통적인 projective space를 스킴의 언어로 옮길 때는 등장하지 않았었다. 이 morphism은 물론 식 
+
+$$(x_0,\ldots, x_n)\mapsto [x_0:\cdots:x_n]$$
+
+을 만족하지만, $\mathbb{A}^{n+1}_\mathbb{K}$의 점들이 이러한 꼴만 있는 것은 아니고, 또 이 식은 structure sheaf에 대한 정보를 하나도 담고 있지 않으므로 scheme morphism이라 칭하기는 부적절할 것이다.
 
 이제 scheme morphism으로서 $\varphi$를 정의하기 위해 $\mathbb{P}^n_{\mathbb{K}}$의 affine open subscheme 
 
@@ -88,12 +96,10 @@ $$(x_0,\ldots, x_n)\rightarrow [x_0:\cdots:x_n]$$
 우선 우리는 다음을 정의한다. 
 
 ::: 정의 3
-임의의 scheme $S$에 대하여, slice category $\Sch/S$ over $S$를 *$S$-scheme*들의 category라 부른다. ([\[범주론\] §범주, ⁋예시 13](/ko/math/category_theory/categories#ex13)) 
+임의의 scheme $S$에 대하여, slice category $\Sch_{/S}$ over $S$를 *$S$-scheme*들의 category라 부른다. ([\[범주론\] §범주, ⁋예시 13](/ko/math/category_theory/categories#ex13)) 
 :::
 
-즉 $S$-scheme은 $S$로의 scheme morphism $X \rightarrow S$를 부르는 다른 이름이며, 이를 *structure morphism*이라 부르기도 한다. 
-
-이는 다음 예시를 살펴보면 조금 더 직관적이다.
+즉 $S$-scheme은 $S$로의 scheme morphism $X \rightarrow S$를 부르는 다른 이름이며, 이를 *structure morphism*이라 부르기도 한다. 이는 다음 예시를 살펴보면 조금 더 직관적이다.
 
 ::: 예시 4
 Affine $n$-space $\mathbb{A}^n_\mathbb{K}=\Spec \mathbb{K}[\x_1,\ldots, \x_n]$을 생각하자. 그럼 $\mathbb{K}[\x_1,\ldots, \x_n]$은 $\mathbb{K}$-algebra이며, 이는 structure morphism
@@ -128,7 +134,7 @@ $$\mathbb{P}^n_A=\Proj A[\x_0,\ldots, \x_n]$$
 
 을 생각하고, 이 공간의 open covering $D_+(\x_i)$를 생각하자. 이제 $i,j$ 쌍이 주어질 때마다, 함수 $\varphi_{ij}: U_{ij} \rightarrow D_+(\x_i)$를 ring homomorphism
 
-$$A[\x_{0/i},\ldots, \x_{n/i}]\rightarrow \Gamma(U_{ij});\qquad \x_{k/i}\mapsto \frac{f_k\vert_{U_{ij}}}{f_i\vert_{U_{ij}}}$$
+$$A[\x_0,\ldots, \x_n]_{(\x_i)}\rightarrow \Gamma(U_{ij});\qquad \x_{k/i}\mapsto \frac{f_k\vert_{U_{ij}}}{f_i\vert_{U_{ij}}}$$
 
 을 통해 정의하자. 그럼 정의에 의해 이 morphism이 [명제 1](#prop1)의 gluing condition을 만족하는 것이 자명하고, 따라서 이들이 scheme morphism
 
@@ -152,15 +158,15 @@ Scheme morphism $f: X \rightarrow Y$를 $Y$의 *$X$-point*라 부른다.
 마찬가지로 $X$가 affine scheme인 경우를 살펴보는 것이 직관적으로 도움이 된다. 
 
 ::: 예시 7
-Algebraically closed field $\mathbb{K}$와 그 위에 정의된 affine $n$-space $Y=\mathbb{A}^n_\mathbb{K}=\Spec \mathbb{K}[\x_1,\ldots, \x_n]$과 $X=\Spec \mathbb{K}$를 생각하자. 그럼 scheme morphism $X \rightarrow Y$는 affine scheme 사이의 morphism 
+Algebraically closed field $\mathbb{K}$와 그 위에 정의된 affine $n$-space $Y=\mathbb{A}^n_\mathbb{K}=\Spec \mathbb{K}[\x_1,\ldots, \x_n]$를 생각하자. $Y$는 [예시 4](#ex4)에서 본 대로 $\Spec\mathbb{K}$-scheme이다. [정의 6](#def6)에 따르면 $Y$의 $\mathbb{K}$-point는 임의의 scheme morphism $\Spec\mathbb{K}\rightarrow Y$이지만, $Y$가 $\Spec\mathbb{K}$-scheme이므로 그 가운데서도 structure morphism $Y\rightarrow\Spec\mathbb{K}$의 section, 즉 $\Spec\mathbb{K}$ 위에서의 morphism $X=\Spec\mathbb{K}\rightarrow Y$에 관심을 둔다. 이는 affine scheme 사이의 $\mathbb{K}$-morphism
 
 $$\Spec \mathbb{K} \rightarrow \Spec \mathbb{K}[\x_1,\ldots, \x_n]$$
 
-이므로, ring homomorphism
+이므로 $\mathbb{K}$-algebra homomorphism
 
 $$\phi:\mathbb{K}[\x_1,\ldots, \x_n] \rightarrow \mathbb{K}$$
 
-에 대응된다. 그럼 이 ring homomorphism은 반드시 surjective이다. $\phi$가 $\mathbb{K}$-algebra homomorphism이므로 상수항들 위에서 항등사상, 곧 임의의 $x\in \mathbb{K}$에 대하여 $\phi(x)=x$이기 때문이다. 따라서 first isomorphism theorem에 의하여
+에 대응되며, 이 $\phi$는 상수항들 위에서 항등사상, 곧 임의의 $c\in \mathbb{K}$에 대하여 $\phi(c)=c$이므로 특히 surjective이다. 따라서 first isomorphism theorem에 의하여
 
 $$\mathbb{K}[\x_1,\ldots, \x_n]/\ker\phi\cong \mathbb{K}$$
 
@@ -199,14 +205,14 @@ Functor $\Hom_\Sch(-,X): \Sch^\op \rightarrow \Set$을 *functor of points of $X$
 
 ## 스킴의 족
 
-마지막 관점은 아직 엄밀하게 정의하기에는 우리가 가진 언어가 부족하므로, 기하학적인 직관만 설명하기로 한다. 우리는 scheme morphism $f:X \rightarrow S$를 *family parametrized by $S$* 혹은 간단히 $S$-family라 부른다. 따라서 정의에 의하여 $\Sch/S$는 $S$로 parametrize된 family들의 category로 생각할 수 있다. 
+마지막 관점은 아직 엄밀하게 정의하기에는 우리가 가진 언어가 부족하므로, 기하학적인 직관만 설명하기로 한다. 우리는 scheme morphism $f:X \rightarrow S$를 *family parametrized by $S$* 혹은 간단히 $S$-family라 부른다. 따라서 정의에 의하여 $\Sch_{/S}$는 $S$로 parametrize된 family들의 category로 생각할 수 있다. 
 
 기하학적인 직관을 위해서는 기본적으로 다음과 같은 (scheme이 아닌) 상황을 생각하면 된다.
 
 ::: 예시 10
 좌표공간 $\mathbb{R}^3$에서 정의된 구 $S:x^2+y^2+z^2=1$과, $x$축으로의 projection $\pi: S \rightarrow \mathbb{R}_x$를 생각하자. 그럼 임의의 $x_0\in \mathbb{R}_x$에 대하여, 
 
-$$\pi^{-1}(x_0)=\{(x_0,y,z)\in \mathbb{R}^3: y^2+z^2=1-x_0^2\}$$
+$$\pi^{-1}(x_0)=\{(x_0,y,z)\in \mathbb{R}^3\mid y^2+z^2=1-x_0^2\}$$
 
 이다. 이를 기하학적으로 표현하면, 각각의 $x_0\in \mathbb{R}_x$마다 원 $y^2+z^2=1-x_0^2$가 대응된 상황으로 볼 수 있으며, 따라서 $\pi$를 <em-ko>$x$축으로 parametrize된 원들의 family</em-ko>로 생각할 수 있다. 
 :::

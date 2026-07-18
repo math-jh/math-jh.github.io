@@ -1,0 +1,42 @@
+---
+layout: null
+permalink: /assets/data/terms.json
+sitemap: false
+regenerate: true
+---
+{%- comment -%}
+  찾아보기 오버레이(Terms_overlay.js)가 읽는 경량 색인.
+
+  색인 페이지 /ko/terms 는 853항목·450KB 라 팝업에 통째로 싣기엔 무겁고, 게다가
+  innerHTML 로 심으면 그 안의 <script> 가 실행되지 않아 검색·스크롤 스파이가
+  죽는다(최근 글 오버레이와 다른 점). 그래서 표제어와 로케이터만 여기로 뽑는다.
+
+  레코드: i=id, e=영문, k=한글, p=주표기("ko" 일 때만), d=[[라벨, url], …]
+  d 는 defs + refs 를 합친다(오버레이에선 둘 다 "어디에 나오는가"로 같다).
+  표제어·라벨은 수식($, \mathfrak{a})을 담을 수 있으므로 반드시 jsonify 로
+  이스케이프한다. JSON 은 토큰 사이 공백을 허용하므로 줄바꿈은 그대로 둔다.
+{%- endcomment -%}
+{%- assign sep = "" -%}
+[
+{%- for pair in site.data.terms -%}
+{%- if pair[1] and pair[1] != empty -%}
+{%- for t in pair[1] -%}
+{{ sep }}{"i":{{ t.id | jsonify }},"e":{{ t.en | jsonify }},"k":{{ t.ko | default: "" | jsonify }}
+{%- if t.primary == "ko" -%},"p":"ko"{%- endif -%}
+{%- assign locs = t.defs | default: empty -%}
+{%- if t.refs -%}{%- assign locs = locs | concat: t.refs -%}{%- endif -%}
+{%- if locs != empty -%}
+,"d":[
+{%- assign dsep = "" -%}
+{%- for d in locs -%}
+{{ dsep }}[{{ d.label | jsonify }},{{ d.url | jsonify }}]
+{%- assign dsep = "," -%}
+{%- endfor -%}
+]
+{%- endif -%}
+}
+{%- assign sep = "," -%}
+{%- endfor -%}
+{%- endif -%}
+{%- endfor -%}
+]
