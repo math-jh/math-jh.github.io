@@ -10,7 +10,6 @@ sidebar:
 
 date: 2025-02-21
 weight: 9
-published: false
 drift_needed: true
 ---
 
@@ -70,7 +69,7 @@ Locally noetherian scheme은 항상 quasi-separated이다.
 ::: 증명
 Locally noetherian scheme $X$의 임의의 두 affine open subset $V_1=\Spec B_1, V_2=\Spec B_2$가 주어졌다 하고 $V_1\cap V_2$가 quasi-compact임을 보여야 한다. 
 
-우선 $X$가 locally noetherian이므로, $X$를 noetherian ring들의 스펙트럼 $U_i=\Spec A_i$들로 덮을 수 있다. 이제 각각의 $i$에 대하여, [§스킴의 위상구조, ⁋보조정리 11](/ko/math/scheme_theory/topology_of_schemes#lem11)에 의하여 $U_i\cap V_1$을 noetherian ring들의 스펙트럼 $\Spec (A_i)_g$들로 덮을 수 있다. 이들을 모두 모으면 $V_1$을 noetherian ring들의 스펙트럼들로 덮을 수 있으며, [§스펙트럼, ⁋보조정리 12](/ko/math/scheme_theory/spectrums#lem12)에 의해 $V_1=\Spec B_1$은 유한히 많은 noetherian ring들의 스펙트럼으로 덮인다. 따라서 [§스킴의 위상구조, ⁋보조정리 13](/ko/math/scheme_theory/topology_of_schemes#lem13)에 의해 $B_1$은 noetherian ring이고 따라서 $V_1=\Spec B_1$은 noetherian이다. 다시  [\[위상수학\] §차원, ⁋명제 12](/ko/math/topology/dimension#prop12)와 [\[위상수학\] §차원, ⁋명제 13](/ko/math/topology/dimension#prop13)의 첫째 결과로부터 noetherian인 위상공간의 임의의 부분공간은 quasi-compact이므로, 특히 $V_1\cap V_2$ 또한 quasi-compact이다. 
+우선 $X$가 locally noetherian이므로, $X$를 noetherian ring들의 스펙트럼 $U_i=\Spec A_i$들로 덮을 수 있다. 이제 각각의 $i$에 대하여, [§스킴의 위상구조, ⁋보조정리 11](/ko/math/scheme_theory/topology_of_schemes#lem11)에 의하여 $U_i\cap V_1$을 noetherian ring들의 스펙트럼 $\Spec (A_i)_g$들로 덮을 수 있다. 이들을 모두 모으면 $V_1$을 noetherian ring들의 스펙트럼들로 덮을 수 있으며, [§스펙트럼, ⁋보조정리 12](/ko/math/scheme_theory/spectrums#lem12)에 의해 $V_1=\Spec B_1$은 유한히 많은 noetherian ring들의 스펙트럼으로 덮인다. 따라서 [§스킴의 위상구조, ⁋보조정리 13](/ko/math/scheme_theory/topology_of_schemes#lem13)에 의해 $B_1$은 noetherian ring이고 따라서 $V_1=\Spec B_1$은 noetherian이다. 다시  [\[위상수학\] §차원, ⁋명제 12](/ko/math/topology/dimension#prop12)와 [\[위상수학\] §차원, ⁋명제 13](/ko/math/topology/dimension#prop13)의 첫째 결과로부터 noetherian인 위상공간의 임의의 부분공간은 quasi-compact이므로, 특히 $V_1\cap V_2$ 또한 quasi-compact이다. 같은 논리로 $X$의 임의의 affine open은 noetherian이며, quasi-compact open은 유한 개의 affine open의 합집합이므로 역시 noetherian이다. noetherian 위상공간의 부분공간은 quasi-compact이므로 임의의 두 quasi-compact open의 교집합 또한 quasi-compact이고, 따라서 [정의 5](#def5)에 의하여 $X$는 quasi-separated이다. 
 :::
 
 그럼 quasi-compactness와 quasi-separatedness는 [정의 1](#def1)의 성질을 만족할 뿐만 아니라, 다음 명제에서 확인할 수 있듯이 *affine-local on target*이다. ([§스킴의 위상구조, ⁋정의 9](/ko/math/scheme_theory/topology_of_schemes#def9))
@@ -107,7 +106,7 @@ $$(\varphi\vert_U)^\sharp(V): \mathcal{O}_V(V) \rightarrow \mathcal{O}_U(U)$$
 Scheme morphism $\varphi: X \rightarrow Y$가 *affine*이라는 것은 $Y$의 임의의 affine open subset $V$에 대하여 $\varphi^{-1}(V)$가 $X$의 affine open subset인 것이다. 
 :::
 
-그럼 affine morphism의 합성이 affine인 것은 자명하다. 뿐만 아니라 이 성질은 [정의 1](#def1)의 성질 또한 만족하는데, 이에 대한 증명은 다소 길어지는 감이 있어 생략한다. 
+그럼 affine morphism의 합성이 affine인 것은 자명하다. 뿐만 아니라 이 성질은 [정의 1](#def1)의 성질 또한 만족하며, 그 증명은 다음 명제에서 한다. 
 
 ::: 명제 9
 Scheme morphism $\varphi:X \rightarrow Y$에 대하여, 만일 $Y$의 affine open covering $\{V_j\}$가 존재하여 각각의 $\varphi^{-1}(V_j)$가 affine라면, $\varphi$는 affine이다. 
@@ -188,7 +187,7 @@ $$(\varphi\vert_{U})^\sharp(V): \mathcal{O}_V(V) \rightarrow \mathcal{O}_U(U)$$
 Scheme morphism $\varphi:X \rightarrow Y$가 *morphism of finite type<sub>유한형사상</sub>*이라는 것은 $\varphi$가 quasi-compact morphism locally of finite type인 것이다. 
 :::
 
-정의로부터 morphism of locally finite type은 affine-local on target임이 명확하다. 또, quasi-compact morphism은 [명제 7](#prop7)로부터 affine-local on target이므로 finite type morphism 또한 affine-local on target이다. 
+정의로부터 morphism locally of finite type은 affine-local on target임이 명확하다. 또, quasi-compact morphism은 [명제 7](#prop7)로부터 affine-local on target이므로 finite type morphism 또한 affine-local on target이다. 
 
 그럼 [\[가환대수학\] §정수적 확장, ⁋보조정리 4](/ko/math/commutative_algebra/integral_extension#lem4)에 의해 다음이 성립한다.
 

@@ -1,6 +1,6 @@
 ---
 title: "중국인의 나머지정리"
-description: "정수의 합동 문제에서 출발해 comaximal ideal 조건으로 일반화한 중국인의 나머지정리를 증명한다. 가환환에서 쌍별 comaximal ideal의 교차가 곱과 같아진다는 사실을 핵심 도구로 쓰며, 곱분해와 중심 idempotent 분해의 대응까지 다룬다."
+description: "정수의 합동 문제에서 출발해 comaximal ideal 조건으로 일반화한 중국인의 나머지정리를 증명한다. 가환환에서 pairwise comaximal ideal의 교차가 곱과 같아진다는 사실을 핵심 도구로 쓰며, 곱분해와 중심 idempotent 분해의 대응까지 다룬다."
 excerpt: "Comaximal ideal에 대한 중국인의 나머지정리와 중심 idempotent 분해"
 
 categories: [Math / Ring Theory]
@@ -23,7 +23,7 @@ $$\mathbb{Z}/mn\mathbb{Z}\cong \mathbb{Z}/m\mathbb{Z}\times \mathbb{Z}/n\mathbb{
 
 간략하게 이야기해서, 이 일반화는 우선 $m\mathbb{Z}$와 $\mathbb{n}Z$를 ring $A$의 ideal로 일반화하고, $mn\mathbb{Z}$를 이 두 ideal의 교집합으로 이해하여 얻어진다. 다만 이 일반화가 임의의 ideal에 대해 되는 것은 아니며, 위 $m,n$이 서로소라는 조건에 해당하는 조건 또한 필요하다. 
 
-이를 임의의 환 $A$의 ideal로 일반화하는 것이 이 글의 목표이다. 여기서 "서로소"에 해당하는 ideal의 조건은 *comaximal*로, 그럼 ring theory에서 일반화된 정리는 쌍별로 comaximal인 ideal들 $\mathfrak{a}_i$에 대하여 ring isomorphism
+이를 임의의 환 $A$의 ideal로 일반화하는 것이 이 글의 목표이다. 여기서 "서로소"에 해당하는 ideal의 조건은 *comaximal*로, 그럼 ring theory에서 일반화된 정리는 pairwise comaximal ideal들 $\mathfrak{a}_i$에 대하여 ring isomorphism
 
 $$A/\Big(\bigcap_i \mathfrak{a}_i\Big)\cong \prod_i A/\mathfrak{a}_i$$
 
@@ -46,7 +46,7 @@ $$x(x_1y_1+\cdots+x_ny_n)=xx_1y_1+\cdots xx_ny_n$$
 이고 $xx_i\in \mathfrak{a}$이므로 $x(x_1y_1+\cdots+x_ny_n)\in \mathfrak{a}\mathfrak{b}$이다. $x$를 오른쪽에 곱해도 비슷한 논증이 성립하므로, $\mathfrak{a}\mathfrak{b}$는 $A$의 two-sided ideal인 것을 확인할 수 있다.
 
 ::: 명제 2
-위와 같이 정의된 곱셈에 대하여, $A$의 two-sided ideal들의 모임은 항등원을 $A$로 하는 monoid 구조를 가진다. 뿐만 아니라, 분배법칙
+위와 같이 정의된 곱셈에 대하여, $A$의 two-sided ideal들의 모임은 항등원을 $A$로 하는 monoid 구조를 가진다 ([\[대수적 구조\] §반군, 모노이드, 군, ⁋정의 3](/ko/math/algebraic_structures/groups#def3)). 뿐만 아니라, 분배법칙
 
 $$\mathfrak{a}(\mathfrak{b}+\mathfrak{c})=\mathfrak{a}\mathfrak{b}+\mathfrak{a}\mathfrak{c},\quad (\mathfrak{a}+\mathfrak{b})\mathfrak{c}=\mathfrak{a}\mathfrak{c}+\mathfrak{b}\mathfrak{c}$$
 
@@ -76,11 +76,13 @@ $$\mathfrak{a}\mathfrak{b}\subset \mathfrak{a}A\subset \mathfrak{a},\quad \mathf
 
 이 모두 성립하므로 $\mathfrak{a}\mathfrak{b}\subset \mathfrak{a}\cap \mathfrak{b}$이 성립한다. 일반적으로 등호가 성립할 필요는 없다.
 
-::: 정의 3 (Comaximal ideals)
-Ring $A$의 두 two-sided ideal $\mathfrak{a},\mathfrak{b}$가 $\mathfrak{a}+\mathfrak{b}=A$를 만족할 때 *comaximal*이라 부른다. 이는 항등원 $1$이 $1=u+v$ ($u\in\mathfrak{a}, v\in\mathfrak{b}$) 꼴로 표현된다는 뜻이며, 정수론에서 서로소인 두 정수 $m,n$에 대하여 Bézout 항등식 $mu+nv=1$이 존재하는 것과 정확히 대응한다. 서로소인 $m,n$의 ideal $m\mathbb{Z},n\mathbb{Z}$가 $\mathbb{Z}$에서 comaximal인 것이 그 예이다. 여러 ideal $\mathfrak{a}_1,\ldots,\mathfrak{a}_n$이 *쌍별 comaximal*이라 함은 모든 $i\ne j$에 대하여 $\mathfrak{a}_i+\mathfrak{a}_j=A$임을 뜻한다.
+::: 정의 3
+Ring $A$의 두 two-sided ideal $\mathfrak{a},\mathfrak{b}$가 $\mathfrak{a}+\mathfrak{b}=A$를 만족할 때 *comaximal<sub>공최대</sub>*이라 부른다. 여러 ideal $\mathfrak{a}_1,\ldots,\mathfrak{a}_n$이 *pairwise comaximal*이라 함은 모든 $i\ne j$에 대하여 $\mathfrak{a}_i+\mathfrak{a}_j=A$임을 뜻한다.
 :::
 
-그러나 두 ideal이 comaximal일 때는 놀랍게도 등호가 성립하며, 이를 보이기 위해 먼저 다음 보조 결과를 보인다.
+조건 $\mathfrak{a}+\mathfrak{b}=A$는 항등원 $1$이 $1=u+v$ ($u\in\mathfrak{a}, v\in\mathfrak{b}$) 꼴로 표현된다는 뜻이며, 정수론에서 서로소인 두 정수 $m,n$에 대하여 Bézout 항등식 $mu+nv=1$이 존재하는 것과 정확히 대응한다 ([\[정수론\] §유클리드 호제법과 Bézout 항등식, ⁋정리 3](/ko/math/number_theory/euclidean_algorithm#thm3)). 서로소인 $m,n$의 ideal $m\mathbb{Z},n\mathbb{Z}$가 $\mathbb{Z}$에서 comaximal인 것이 그 예이다.
+
+일반적으로는 성립하지 않던 등식 $\mathfrak{a}\mathfrak{b}=\mathfrak{a}\cap\mathfrak{b}$가 두 ideal이 comaximal일 때는 놀랍게도 성립하며, 이를 보이기 위해 먼저 다음 보조 결과를 보인다.
 
 ::: 명제 4
 $A$의 two-sided ideal들 $\mathfrak{a},\mathfrak{b}_1,\ldots, \mathfrak{b}_n$이 주어졌다 하고, $A=\mathfrak{a}+\mathfrak{b}_i$가 모든 $i$에 대해 성립한다 가정하자. 그럼
@@ -102,7 +104,7 @@ $$1=a'+b_2=a'+1b_2=a'+(a+b_1)b_2=(a+a'b_2)+b_1b_2\in \mathfrak{a}+\mathfrak{b}_1
 이제 가환환에서 쓸 핵심 도구를 얻는다.
 
 ::: 명제 5
-가환환 $A$의 ideal들 $\mathfrak{b}_1,\ldots, \mathfrak{b}_n$이 쌍별로 comaximal, 즉 $i\neq j$에 대하여 $\mathfrak{b}_i+\mathfrak{b}_j=A$를 만족한다 하자. 그럼
+가환환 $A$의 ideal들 $\mathfrak{b}_1,\ldots, \mathfrak{b}_n$이 pairwise comaximal, 즉 $i\neq j$에 대하여 $\mathfrak{b}_i+\mathfrak{b}_j=A$를 만족한다 하자. 그럼
 
 $$\mathfrak{b}_1\cap \cdots\cap \mathfrak{b}_n=\mathfrak{b}_1\cdots \mathfrak{b}_n$$
 
@@ -117,7 +119,7 @@ $$x=x\cdot 1=x(u+v)=xu+xv\in \mathfrak{b}_2 \mathfrak{b}_1+\mathfrak{b}_1 \mathf
 
 이다. 따라서 $\mathfrak{b}_1\cap\mathfrak{b}_2=\mathfrak{b}_1\mathfrak{b}_2$이다.
 
-이제 $n>2$라 하자. [명제 4](#prop4)을 $\mathfrak{a}=\mathfrak{b}_n$과 $\mathfrak{b}_1,\ldots,\mathfrak{b}_{n-1}$에 적용하면 (이들이 쌍별 comaximal임은 자명하다) 
+이제 $n>2$라 하자. [명제 4](#prop4)을 $\mathfrak{a}=\mathfrak{b}_n$과 $\mathfrak{b}_1,\ldots,\mathfrak{b}_{n-1}$에 적용하면 (이들이 pairwise comaximal임은 자명하다) 
 
 $$A=\mathfrak{b}_n+(\mathfrak{b}_1\cap\cdots\cap \mathfrak{b}_{n-1})$$
 
@@ -127,8 +129,6 @@ $$\mathfrak{b}_1\cap\cdots\cap \mathfrak{b}_n=(\mathfrak{b}_1\cap\cdots\cap \mat
 
 을 얻는다.
 :::
-
-(참고로 $A$가 가환이 아닐 때는 교차가 $\mathfrak{b}_1\cdots\mathfrak{b}_n$ 한 항이 아니라 모든 순서의 곱을 더한 대칭합 $\sum_{\sigma\in S_n}\mathfrak{b}_{\sigma(1)}\cdots\mathfrak{b}_{\sigma(n)}$과 같아지며, 가환일 때 비로소 이것이 단일한 곱으로 수렴한다. 이 글의 본론인 가환 경우에서는 위 등식으로 충분하다.)
 
 ## 중국인의 나머지 정리
 
@@ -140,7 +140,7 @@ Ring $A$와, $A$의 two-sided ideal들 $\mathfrak{a}_1,\ldots, \mathfrak{a}_n$�
 ::: 증명
 명백히 $\ker\pi=\bigcap_i \mathfrak{a}_i$이므로 전사성만 보이면 충분하다. 임의의 목표값 $(x_1+\mathfrak{a}_1,\ldots,x_n+\mathfrak{a}_n)\in\prod A/\mathfrak{a}_i$에 대하여 이를 $\pi$의 image에서 실현하는 원소를 직접 만들어보자.
 
-각 $i$마다 $i$번째 자리만 $1$이고 다른 자리는 $0$인 역할을 할 원소 $e_i\in A$, 즉 $e_i\equiv 1\pmod{\mathfrak{a}_i}$이고 $e_i\equiv 0\pmod{\mathfrak{a}_j}$ ($j\ne i$)를 만족하는 것을 찾으면 $x=\sum_i x_i e_i$가 모든 자리의 목표값을 한꺼번에 맞춘다. 쌍별 comaximal 조건에서 이러한 $e_i$를 명시적으로 구성하자. 고정된 $i$에 대하여 각 $j\ne i$마다 $\mathfrak{a}_i+\mathfrak{a}_j=A$이므로 $1=u_{ij}+v_{ij}$ ($u_{ij}\in\mathfrak{a}_i,\ v_{ij}\in\mathfrak{a}_j$)인 원소를 택할 수 있고, 
+각 $i$마다 $i$번째 자리만 $1$이고 다른 자리는 $0$인 역할을 할 원소 $e_i\in A$, 즉 $e_i\equiv 1\pmod{\mathfrak{a}_i}$이고 $e_i\equiv 0\pmod{\mathfrak{a}_j}$ ($j\ne i$)를 만족하는 것을 찾으면 $x=\sum_i x_i e_i$가 모든 자리의 목표값을 한꺼번에 맞춘다. pairwise comaximal 조건에서 이러한 $e_i$를 명시적으로 구성하자. 고정된 $i$에 대하여 각 $j\ne i$마다 $\mathfrak{a}_i+\mathfrak{a}_j=A$이므로 $1=u_{ij}+v_{ij}$ ($u_{ij}\in\mathfrak{a}_i,\ v_{ij}\in\mathfrak{a}_j$)인 원소를 택할 수 있고, 
 
 $$e_i=\prod_{j\ne i}v_{ij}$$
 
@@ -171,7 +171,7 @@ Ring $A$와 그 center $C(A)$, 그리고 two-sided ideal들 $\mathfrak{a}_1,\ldo
 ::: 증명
 세 조건이 (1)$\Leftrightarrow$(2)$\Rightarrow$(3)$\Rightarrow$(1)의 순환으로 동치임을 보인다.
 
-(1)$\Leftrightarrow$(2): [명제 6](#prop6)에 의해 $\pi$가 전사인 것은 쌍별 comaximal 조건과 동치이고, 항상 $\ker\pi=\bigcap\mathfrak{a}_i$이므로, $\pi$가 isomorphism인 것은 (2)와 동치이다.
+(1)$\Leftrightarrow$(2): [명제 6](#prop6)에 의해 $\pi$가 전사인 것은 pairwise comaximal 조건과 동치이고, 항상 $\ker\pi=\bigcap\mathfrak{a}_i$이므로, $\pi$가 isomorphism인 것은 (2)와 동치이다.
 
 (2)$\Rightarrow$(3): (2)에 의해 $\pi$는 isomorphism이다. $\prod A/\mathfrak{a}_i$에서 $i$번째 성분만 $1+\mathfrak{a}_i$이고 나머지는 모두 $0$인 원소를 $\bar{e}_i$라 하자. 그럼 $\sum\bar{e}_i=\bar{1}$, $\bar{e}_i^2=\bar{e}_i$, $\bar{e}_i\bar{e}_j=0$이 성립하며, 각 성분이 몫환의 항등원 또는 $0$이므로 $\bar{e}_i$는 $\prod A/\mathfrak{a}_i$의 center에 속한다. $e_i:=\pi^{-1}(\bar{e}_i)$라 두면, $\pi$가 isomorphism인 덕분에 $e_i\in C(A)$이며 $e_i$들은 위 idempotent·직교 관계를 그대로 계승한다. 또한 $\bar{e}_i$의 $i$번째 성분이 $1$이므로 $1-e_i$는 $\pi_i$ 아래 $0$으로 가고, 따라서 $1-e_i\in\ker\pi_i=\mathfrak{a}_i$이다. 그래서 $A(1-e_i)\subseteq \mathfrak{a}_i$이다. 역으로 $a\in\mathfrak{a}_i$라 하면 $a=ae_i+a(1-e_i)$인데, $ae_i$의 모든 성분이 $0$이 되어($i$번째는 $\pi_i(a)\pi_i(e_i)=0\cdot 1=0$, 나머지 성분에서 $\bar{e}_i$는 $0$) $ae_i\in\bigcap\mathfrak{a}_i=0$이므로 $a=a(1-e_i)\in A(1-e_i)$이다. 즉 $\mathfrak{a}_i=A(1-e_i)$이다.
 
@@ -179,3 +179,40 @@ Ring $A$와 그 center $C(A)$, 그리고 two-sided ideal들 $\mathfrak{a}_1,\ldo
 :::
 
 $A$가 가환환이면 [명제 5](#prop5)에 의하여 $\bigcap\mathfrak{a}_i=\mathfrak{a}_1\cdots\mathfrak{a}_n$이므로, 조건 2의 $\bigcap\mathfrak{a}_i=0$은 $\mathfrak{a}_1\cdots\mathfrak{a}_n=0$으로 바꾸어 써도 같다. 
+
+## 비가환 경우
+
+[명제 5](#prop5)에서 가환이라는 가정은 교집합 $\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_n$이 단일한 곱 $\mathfrak{b}_1\cdots\mathfrak{b}_n$으로 떨어지는 것을 보장하기 위해 쓰였다. 가환을 가정하지 않으면 여러 순서의 곱이 서로 다른 ideal이 될 수 있어, 교집합은 그 모든 순서의 곱을 더한 대칭합으로 나타난다. 즉 [명제 5](#prop5)의 비가환 일반화는 다음과 같다.
+
+::: 명제 8
+Ring $A$의 two-sided ideal들 $\mathfrak{b}_1,\ldots, \mathfrak{b}_n$이 pairwise comaximal이라 하자. 그럼
+
+$$\mathfrak{b}_1\cap \cdots\cap \mathfrak{b}_n=\sum_{\sigma\in S_n} \mathfrak{b}_{\sigma(1)}\cdots \mathfrak{b}_{\sigma(n)}$$
+
+이 성립한다. 특히 $A$가 가환환이면 모든 순서의 곱이 같아지므로 [명제 5](#prop5)를 회복한다.
+:::
+::: 증명
+[명제 5](#prop5)와 마찬가지로 귀납법으로 증명한다. 항상 $\sum_{\sigma\in S_n}\mathfrak{b}_{\sigma(1)}\cdots\mathfrak{b}_{\sigma(n)}\subseteq\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_n$이므로 역포함만 보이면 된다.
+
+우선 $n=2$라 하자. pairwise comaximal 조건에서 $1=b_1+b_2$ ($b_i\in\mathfrak{b}_i$)인 원소를 택하면, 임의의 $x\in\mathfrak{b}_1\cap\mathfrak{b}_2$에 대하여
+
+$$x=x\cdot 1=x(b_1+b_2)=xb_1+xb_2\in \mathfrak{b}_1\mathfrak{b}_2+\mathfrak{b}_2\mathfrak{b}_1$$
+
+이다.
+
+이제 $n>2$라 하자. [명제 4](#prop4)를 $\mathfrak{a}=\mathfrak{b}_n$, $(\mathfrak{b}_1,\ldots,\mathfrak{b}_{n-1})$에 적용하면 $A=\mathfrak{b}_n+(\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_{n-1})$이므로, 두 ideal $\mathfrak{b}_n$과 $\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_{n-1}$은 comaximal이다. 여기에 $n=2$의 결과를 적용하면
+
+$$\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_n=(\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_{n-1})\mathfrak{b}_n+\mathfrak{b}_n(\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_{n-1})$$
+
+이다. 귀납가정 $\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_{n-1}=\sum_{\sigma\in S_{n-1}}\mathfrak{b}_{\sigma(1)}\cdots\mathfrak{b}_{\sigma(n-1)}$을 대입하면 우변은
+
+$$\left(\sum_{\sigma\in S_{n-1}}\mathfrak{b}_{\sigma(1)}\cdots\mathfrak{b}_{\sigma(n-1)}\right)\mathfrak{b}_n+\mathfrak{b}_n\left(\sum_{\sigma\in S_{n-1}}\mathfrak{b}_{\sigma(1)}\cdots\mathfrak{b}_{\sigma(n-1)}\right)$$
+
+이며, 우변의 각 항이 $\sum_{\sigma\in S_n}\mathfrak{b}_{\sigma(1)}\cdots\mathfrak{b}_{\sigma(n)}$에 포함되므로 원하는 역포함을 얻는다.
+:::
+
+[명제 6](#prop6)의 kernel $\bigcap_i\mathfrak{a}_i$에 [명제 8](#prop8)을 적용하면, 비가환 환에서의 중국인의 나머지정리 역시
+
+$$\frac{A}{\sum_{\sigma\in S_n}\mathfrak{a}_{\sigma(1)}\cdots\mathfrak{a}_{\sigma(n)}}\cong \prod_{i=1}^n A/\mathfrak{a}_i$$
+
+의 형태로 성립한다. 가환환이어야만 이 kernel이 단일한 곱 $\mathfrak{a}_1\cdots\mathfrak{a}_n$으로 떨어져 본문의 서술이 단순해짐을 다시 확인할 수 있다.
