@@ -20,6 +20,7 @@ $thm-collapsibles: {{ site.data.theorem_kinds.collapsibles | join: ", " }};
 @import "local-graph"; // per-post floating dependency graph panel
 @import "graph-page"; // global dependency graph page (index panel + Brass card)
 @import "term-index"; // 찾아보기(용어 색인) book-index layout
+@import "terms-overlay"; // 찾아보기 검색 팝업 (색인 페이지의 경량판)
 
 img.invert {
   // invert(1)로 명암(검정↔흰색)을 뒤집되, hue-rotate(180deg)로 색상은 제자리에 돌려

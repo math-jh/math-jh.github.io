@@ -1,0 +1,193 @@
+/* ==========================================================================
+   찾아보기 미니 오버레이 — 검색창 + 결과 몇 줄만 띄우는 팝업 (Terms_overlay.js).
+   바깥 껍데기(배경·패널·닫기)는 최근 글/검색 오버레이와 같은 꼴로 맞추고,
+   안쪽은 색인 페이지의 조판 어법을 따른다: 표제어 왼쪽·로케이터 오른쪽,
+   직각 헤어라인, 브래스 악센트. 전체 색인은 /ko/terms 가 계속 담당한다.
+   ========================================================================== */
+
+.terms-content {
+  display: none;
+
+  &.is--visible {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 4em 1em 2em;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+
+  &__inner-wrap {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 620px;
+    max-height: calc(100vh - 6em);
+    margin: 0 auto;
+    padding: 1.4rem 1.6rem 1rem;
+    background: $background-color;
+    color: $text-color;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+    animation: pf-pop-in 0.18s ease-out both; // keyframe from _search-overlay
+    overflow-wrap: break-word;
+  }
+
+  &__close {
+    position: absolute;
+    top: 0.7rem;
+    right: 0.9rem;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    line-height: 1;
+    cursor: pointer;
+    color: $muted-text-color;
+    transition: color 0.15s ease;
+
+    .material-icons { font-size: 1.5rem; vertical-align: middle; }
+    &:hover { color: $masthead-link-color-hover; } // gold accent
+  }
+
+  &__title {
+    margin: 0 2rem 0.6em 0; // 닫기 버튼 자리
+    font-size: 1.3em;
+  }
+
+  // 검색창 — 색인 페이지의 것과 같은 어법(헤어라인 상자 + 돋보기)
+  &__search {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    flex: none;
+    padding: 0.45em 0.7em;
+    border: 1px solid $border-color;
+    color: $muted-text-color; // 돋보기가 currentColor 로 받는다
+
+    &:focus-within {
+      border-color: $muted-text-color;
+    }
+
+    svg { flex: none; }
+  }
+
+  &__input {
+    width: 100%;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    font-family: $sans-serif;
+    font-size: 0.95em;
+    color: $text-color;
+    background: transparent;
+
+    &:focus { outline: 0; }
+
+    &::placeholder {
+      color: $muted-text-color;
+      opacity: 0.85;
+    }
+  }
+
+  // 결과 목록 — 스크롤은 여기서만 (패널 높이는 고정).
+  // 스크롤바는 트랙 없이 브래스 막대만. overscroll-behavior 로 목록 끝에서
+  // 뒤 페이지로 스크롤이 새는 것을 막는다.
+  &__list {
+    flex: 1 1 auto;
+    min-height: 3em;
+    margin: 0.9em 0 0;
+    padding: 0;
+    list-style: none;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;                            // Firefox
+    scrollbar-color: $highlight-color transparent;    // 막대 / 트랙
+
+    &::-webkit-scrollbar {
+      width: 7px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent; // 트랙 없음
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $highlight-color;
+      border-radius: 0; // 직각
+    }
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0 0.8em;
+    margin: 0;
+    padding: 0.3em 0.35em;
+    line-height: 1.5;
+    border-bottom: 1px solid mix($background-color, $border-color, 45%);
+
+    &:last-child { border-bottom: 0; }
+
+    // 키보드 선택 (↑/↓)
+    &.is--sel {
+      background: mix($background-color, $highlight-color, 88%);
+      box-shadow: inset 2px 0 0 $highlight-color;
+    }
+  }
+
+  &__head {
+    color: $text-color;
+    text-decoration: none;
+
+    &:hover { color: $link-color; }
+  }
+
+  &__alt {
+    color: $muted-text-color;
+  }
+
+  &__locs {
+    font-size: 0.88em;
+    text-align: right;
+
+    a {
+      color: $muted-text-color;
+      text-decoration: none;
+
+      &:hover { color: $link-color; }
+    }
+  }
+
+  &__hint {
+    margin: 0;
+    padding: 0.6em 0.35em;
+    color: $muted-text-color;
+    font-family: $sans-serif;
+    font-size: 0.9em;
+  }
+
+  &__foot {
+    flex: none;
+    margin: 0.7em 0 0;
+    padding-top: 0.6em;
+    border-top: 1px solid $border-color;
+    font-size: 0.88em;
+    text-align: right;
+
+    a {
+      color: $muted-text-color;
+      text-decoration: none;
+
+      &:hover { color: $highlight-color; }
+    }
+  }
+}

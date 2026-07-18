@@ -124,6 +124,22 @@
       </div>
     </div>
 
+    <!-- 찾아보기 미니 오버레이: /assets/data/terms.json 을 읽어 검색 결과만
+         띄운다 (Terms_overlay.js). 색인 페이지 /ko/terms 는 그대로 남아 무JS·
+         딥링크(/ko/terms#eigenvector)를 담당한다. EN 페이지엔 트리거가 없다. -->
+    <div class="terms-content" id="terms-overlay" aria-hidden="true">
+      <div class="terms-content__inner-wrap">
+        <button class="terms-content__close" type="button" aria-label="Close"><i class="material-icons">close</i></button>
+        <h2 class="terms-content__title">찾아보기</h2>
+        <label class="terms-content__search">
+          <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="4.2" fill="none" stroke="currentColor" stroke-width="1.4"/><line x1="10.2" y1="10.2" x2="14" y2="14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          <input id="terms-overlay-input" class="terms-content__input" type="search" placeholder="용어 검색 (한글/영어)" aria-label="용어 검색" autocomplete="off">
+        </label>
+        <ul class="terms-content__list" id="terms-overlay-list"></ul>
+        <p class="terms-content__foot"><a href="/ko/terms">전체 색인 보기 →</a></p>
+      </div>
+    </div>
+
     <div id="footer" class="page__footer">
       <aside class="sidebar__top">
         <div style="text-align: center; width: 50px">

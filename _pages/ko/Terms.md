@@ -3,6 +3,7 @@ title: "찾아보기"
 layout: archive_custom
 regenerate: true
 permalink: /ko/terms
+close_button: false
 ---
 
 블로그에서 사용한 용어들을 정리해둔 페이지입니다. 굵은 쪽이 본문에서 주로 쓰는 표기입니다.
@@ -97,6 +98,16 @@ permalink: /ko/terms
     empty.hidden = any;
     spy();
   });
+
+  // 앵커 착지점: sticky 바에 가리지 않도록 실측 높이를 --term-bar-h 로 넘긴다
+  // (SCSS 의 scroll-margin-top 이 이 변수를 읽는다). 바는 폭에 따라 두 줄로
+  // 접히고 글꼴 로드 뒤에도 높이가 변하므로 ResizeObserver 로 따라간다.
+  function syncBarHeight() {
+    document.documentElement.style.setProperty('--term-bar-h', (bar.offsetHeight + 8) + 'px');
+  }
+  syncBarHeight();
+  if (window.ResizeObserver) new ResizeObserver(syncBarHeight).observe(bar);
+  else window.addEventListener('resize', syncBarHeight, { passive: true });
 
   // 스크롤 스파이: sticky 바 바로 아래에 걸린 절의 글자를 진하게
   var active = null;

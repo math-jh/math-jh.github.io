@@ -20,7 +20,11 @@ classes: wide
   
   <div class="archive_personal" style="margin-top: 20px">
     {% unless page.header.overlay_color or page.header.overlay_image %}
-      <div><h1 id="page-title" class="page__title">{{ page.title }}<span style="float: right"><a class="material-icons" href="javascript:history.back()">close</a></span></h1></div>
+      {%- comment -%}
+        우상단 X 는 history.back() 로 되돌아가는 닫기 링크. 머무는 목적지 페이지
+        (찾아보기 등)는 frontmatter 에 close_button: false 로 끈다.
+      {%- endcomment -%}
+      <div><h1 id="page-title" class="page__title">{{ page.title }}{% if page.close_button != false %}<span style="float: right"><a class="material-icons" href="javascript:history.back()">close</a></span>{% endif %}</h1></div>
     {% endunless %}
     {{ content }}
 
