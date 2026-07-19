@@ -219,8 +219,8 @@ def render_entry(eid: str, en: str, ko: str, primary: str | None,
     lines = [f"- id: {eid}",
              f"  en: {yaml_quote(en)}",
              f"  ko: {yaml_quote(ko)}"]
-    if primary == "ko":
-        lines.append("  primary: ko")
+    if primary in ("ko", "en"):
+        lines.append(f"  primary: {primary}")
     lines += ["  defs:",
               f"  - label: '{label.replace(chr(39), chr(39) * 2)}'",
               f"    url: {url}"]
@@ -254,7 +254,7 @@ class Issue:
         return (self.code, self.msg)
 
 
-ENTRY_KEYS = {"id", "en", "ko", "primary", "defs", "refs", "see"}
+ENTRY_KEYS = {"id", "en", "ko", "primary", "note", "defs", "refs", "see"}
 REF_KEYS = {"label", "url"}
 SEE_KEYS = {"label", "id", "lang"}
 
@@ -286,8 +286,10 @@ def semantic_checks(data: dict, pmap: dict[str, dict],
             unknown = set(t) - ENTRY_KEYS
             if unknown:
                 issues.append(Issue(W, "SCHEMA", f"{tid}: 모르는 키 {sorted(unknown)}"))
-            if t.get("primary") not in (None, "ko"):
-                issues.append(Issue(E, "PRIMARY", f"{tid}: primary={t['primary']!r} (ko 또는 생략만)"))
+            # 생략 = 미판정(표시상 en), en = prose 영어 확정(2026-07-19 스윕 룰링,
+            # md_lint 훅·deprecated_terms_lint 가 이 ko 형을 prose 금지로 본다), ko = 한국어 확정
+            if t.get("primary") not in (None, "ko", "en"):
+                issues.append(Issue(E, "PRIMARY", f"{tid}: primary={t['primary']!r} (ko/en/생략만)"))
             all_ids[tid] += 1
             en_keys[dedup_key(t.get("en", ""))] += 1
             id_keys.setdefault(dedup_key(tid), []).append(tid)

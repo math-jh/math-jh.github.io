@@ -1,0 +1,25 @@
+_posts/Math/Algebraic_Topology/ko/2026-07-01-Fibrations.md:103: 조사 판정불가: 호모토피+적
+_posts/Math/Algebraic_Varieties/ko/2026-05-07-Noether_Formula.md:16: 복합어(앞): …기교차수
+_posts/Math/Analysis/ko/2026-06-02-Uniform_Convergence.md:137: 복합어(앞): …달리 미분
+_posts/Math/Complex_Analysis/ko/2026-06-21-Riemann_Mapping_Theorem.md:17: 복합어(앞): …각동형류
+_posts/Math/Complex_Geometry/ko/2026-06-22-Kahler_Manifolds.md:19: 조사 판정불가: 복소다양체+론의
+_posts/Math/Complex_Geometry/ko/2026-06-22-Kahler_Manifolds.md:19: 조사 판정불가: 사교다양체+임과
+_posts/Math/Complex_Geometry/ko/2026-06-22-Kahler_Manifolds.md:134: 조사 판정불가: 외미분+값
+_posts/Math/Complex_Geometry/ko/2026-06-22-Kodaira_Embedding_Theorem.md:214: 조사 판정불가: 복소다양체+론의
+_posts/Math/Complex_Geometry/ko/2026-06-22-Kodaira_Embedding_Theorem.md:276: 조사 판정불가: 다양체+족
+_posts/Math/Derived_Algebraic_Geometry/ko/2026-07-01-Derived_Schemes.md:295: 복합어(앞): …기교차수
+_posts/Math/Derived_Algebraic_Geometry/ko/2026-07-01-Shifted_Symplectic_Structures.md:152: 조사 판정불가: 정규화+되어
+_posts/Math/Gromov_Witten_Theory/ko/2026-07-10-Log_Stable_Maps.md:113: 조사 판정불가: 쌍대 격자+점
+_posts/Math/Gromov_Witten_Theory/ko/2026-07-10-Perfect_Obstruction_Theory.md:168: 복합어(앞): …리동치류
+_posts/Math/Lie_Theory/ko/2025-01-07-Kazhdan_Lusztig_Polynomial.md:48: 복합어(앞): …재정규화
+_posts/Math/Lie_Theory/ko/2025-01-07-Kazhdan_Lusztig_Polynomial.md:101: 조사 판정불가: 정규화+되어
+_posts/Math/Lie_Theory/ko/2026-06-20-Universal_Enveloping_Algebra.md:62: 조사 판정불가: 대칭대수+나
+_posts/Math/Lie_Theory/ko/2026-06-21-Compact_Real_Form.md:192: 조사 판정불가: 정규화+된
+_posts/Math/Scheme_Theory/ko/2025-03-08-Complete_Intersections.md:110: 조사 판정불가: 동차다항식+만으로는
+_posts/Math/Scheme_Theory/ko/2026-06-21-Sheaf_of_Differentials.md:18: 조사 판정불가: 대수다양체+나
+_posts/Math/Sheaf_Theory/ko/2026-07-01-Verdier_Duality.md:174: 조사 판정불가: 다양체+라면
+_posts/Math/Sheaf_Theory/ko/2026-07-01-Verdier_Duality.md:191: 조사 판정불가: 다양체+였다면
+_posts/Math/Stacks/ko/2026-07-01-Fibered_Categories_and_Stacks.md:38: 조사 판정불가: 호모토피+류를
+_posts/Math/Toric_Geometry/ko/2026-03-09-Cox_Construction_and_GIT_Quotient.md:58: 조사 판정불가: 유한생성+성은
+_posts/Math/Toric_Geometry/ko/2026-07-01-Atiyah_Bott_Localization.md:77: 조사 판정불가: 국소화+된
+_posts/Math/Toric_Geometry/ko/2026-07-01-Atiyah_Bott_Localization.md:128: 복합어(앞): …진부분군
