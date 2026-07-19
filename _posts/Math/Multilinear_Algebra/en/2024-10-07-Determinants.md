@@ -94,7 +94,7 @@ so it suffices to apply the preceding lemma.
 ::: Corollary 6
 Suppose a free $A$-module $M$ has a finite basis $(e_i)_{1\leq i\leq n}$. Then for any $u\in\End_\rMod{A}(M)$ and $\alpha,\beta\in A$ we obtain the formula
 
-$\det(\alpha\cdot\id_M+\beta u)=\sum_{k\geq 0}\tr\left({\bigwedge}^k(u)\right)\alpha^{n-k}\beta^k.$
+$$\det(\alpha\cdot\id_M+\beta u)=\sum_{k\geq 0}\tr\left({\bigwedge}^k(u)\right)\alpha^{n-k}\beta^k.$$
 :::
 ::: Proof
 The left-hand side arises from expressing the wedge product

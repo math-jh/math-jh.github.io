@@ -101,7 +101,7 @@ $$Y=\id_B(Y)=f(s(Y))\subseteq f(f^{-1}(Y))$$
 
 4. $f''$가 전사함수이므로, 어떠한 $c\in C$에 대하여 $f''(a)=c$인 $a\in A$가 존재한다. 따라서 $f'(f(a))=c$이므로, $f(a)=b\in B$가 $f'(b)=c$를 만족한다. 또 임의의 $c\in C$에 대하여  
 
-     $(f'\circ(f\circ s''))(c)=(f''\circ s'')(c)=\id_C(c)=c.$  
+     $$(f'\circ(f\circ s''))(c)=(f''\circ s'')(c)=\id_C(c)=c.$$
 :::
 
 ::: 명제 4

@@ -27,7 +27,7 @@ $$x \equiv a \pmod m, \qquad x \equiv b \pmod n$$
 :::
 
 ::: 증명
-*존재성.* $\gcd(m, n) = 1$이므로 [§유클리드 호제법과 Bézout 항등식, ⁋정리 3](/ko/math/number_theory/euclidean_algorithm#thm3)으로 $mu + nv = 1$인 정수 $u, v$가 있다. $x_0 = a\,nv + b\,mu$로 두면, $nv = 1 - mu \equiv 1 \pmod m$이므로 $x_0 \equiv a\cdot 1 + 0 = a \pmod m$이고, 대칭적으로 $mu \equiv 1 \pmod n$이므로 $x_0 \equiv b \pmod n$이다. 따라서 $x_0$이 해이다.
+*존재성.* $\gcd(m, n) = 1$이므로 [§유클리드 호제법과 Bézout 항등식, ⁋정리 3](/ko/math/number_theory/euclidean_algorithm#thm3)으로 $mu + nv = 1$인 정수 $u, v$가 있다. $x_0 = a\,nv + b\,mu$로 두면, $nv = 1 - mu \equiv 1 \pmod m$이므로 $x_0 \equiv a\cdot 1 + 0 = a \pmod m$이고, symmetric으로 $mu \equiv 1 \pmod n$이므로 $x_0 \equiv b \pmod n$이다. 따라서 $x_0$이 해이다.
 
 *유일성.* $x_0, x_1$이 모두 해이면 $x_0 - x_1$이 $m$과 $n$ 모두로 나누어떨어진다. $\gcd(m, n) = 1$이므로 $mn \mid (x_0 - x_1)$이고 (서로소인 두 수로 나누어떨어지면 그 곱으로도 나누어떨어진다 — 산술의 기본정리 또는 Euclid 보조정리로 얻는다), 따라서 $x_0 \equiv x_1 \pmod{mn}$이다.
 :::
@@ -48,14 +48,14 @@ $m_1, m_2, \ldots, m_r$이 쌍마다 서로소이면, 임의의 $a_1, \ldots, a_
 $r$에 대한 귀납법으로 보인다. $r = 1$은 자명하다. 앞의 $r-1$개를 합쳐 법 $m_1\cdots m_{r-1}$에 대한 하나의 합동식으로 만들면, 이 법은 $m_r$과 서로소이므로 ($m_r$이 각 $m_i$와 서로소이면 그 곱과도 서로소) 정리 1을 적용하여 법 $M$에 대한 유일한 해를 얻는다.
 :::
 
-따름정리 3은 구조적으로 환의 직접곱 분해로 읽힌다.
+따름정리 3은 구조적으로 ring의 direct product 분해로 읽힌다.
 
 ::: 참고 4
-$m_1, \ldots, m_r$이 쌍마다 서로소이고 $M = \prod m_i$이면, 잉여류를 각 법의 나머지로 보내는 사상
+$m_1, \ldots, m_r$이 쌍마다 서로소이고 $M = \prod m_i$이면, coset을 각 법의 나머지로 보내는 사상
 
 $$\mathbb{Z}/M\mathbb{Z} \;\xrightarrow{\;\sim\;}\; \mathbb{Z}/m_1\mathbb{Z} \times \cdots \times \mathbb{Z}/m_r\mathbb{Z}, \qquad [x] \mapsto ([x]_{m_1}, \ldots, [x]_{m_r})$$
 
-는 환의 동형이다. 따름정리 3은 이 사상이 전단사임을 말하며, 사칙연산과의 호환은 합동의 연산 성질에서 따른다 ([§합동식, ⁋명제 3](/ko/math/number_theory/congruences#prop3)).
+는 ring의 동형이다. 따름정리 3은 이 사상이 전단사임을 말하며, 사칙연산과의 호환은 합동의 연산 성질에서 따른다 ([§합동식, ⁋명제 3](/ko/math/number_theory/congruences#prop3)).
 :::
 
 이 분해는 법 $M$에 대한 계산을 서로소인 소수 거듭제곱 법들로 쪼개어 처리하게 해 준다. 그 직접적 귀결로 오일러 $\varphi$ 함수의 곱셈성이 따른다.

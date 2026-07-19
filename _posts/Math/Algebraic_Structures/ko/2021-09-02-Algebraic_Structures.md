@@ -158,7 +158,7 @@ $$x\equiv x'\implies x\star a\equiv x'\star a$$
 
 물론 위의 식에서 $\equiv$는 항상 관계 $R$에 대한 것을 뜻한다.
 
-$R$이 동치관계라면 집합으로써 *몫집합* $A/R$이 잘 정의된다는 것은 이미 집합론에서 살펴본 적이 있다. ([\[집합론\] §동치관계, ⁋정의 4](/ko/math/set_theory/equivalence_relations#def4)) 집합 $A/R$ 위의 연산 $\tiny\char"2606$을 정의하기 위한 가장 자연스러운 시도는
+$R$이 동치관계라면 집합으로써 *quotient set* $A/R$이 잘 정의된다는 것은 이미 집합론에서 살펴본 적이 있다. ([\[집합론\] §동치관계, ⁋정의 4](/ko/math/set_theory/equivalence_relations#def4)) 집합 $A/R$ 위의 연산 $\tiny\char"2606$을 정의하기 위한 가장 자연스러운 시도는
 
 $$[x]\mathbin{\tiny\char"2606}[y]=[x\star y]$$
 
@@ -175,10 +175,10 @@ $$x'\star y\equiv x\star y\mod R$$
 이를 정리하여 다음의 정의를 얻는다.
 
 ::: 정의 10
-마그마 $(A,\star)$ 위에 $\star$와 compatible한 동치관계 $R$이 주어졌다 하자. 위와 같이 얻어지는 마그마 $(A/R,\mathbin{\tiny\char"2606})$을 *몫마그마<sub>quotient magma</sub>*라 부른다.
+마그마 $(A,\star)$ 위에 $\star$와 compatible한 동치관계 $R$이 주어졌다 하자. 위와 같이 얻어지는 마그마 $(A/R,\mathbin{\tiny\char"2606})$을 *quotient magma<sub>몫마그마</sub>*라 부른다.
 :::
 
-만일 $\star$가 결합법칙 혹은 교환법칙을 만족하면 $\mathbin{\tiny\char"2606}$ 또한 그러하다는 것을 쉽게 확인할 수 있다. 위의 construction에서는 구별을 위해 $\star$와 $\mathbin{\tiny\char"2606}$를 다르게 표기하였으나, 이들은 문맥상 쉽게 구별할 수 있으므로 몫마그마에서의 연산 또한 $\star$와 같이 적는 것이 보통이다.
+만일 $\star$가 결합법칙 혹은 교환법칙을 만족하면 $\mathbin{\tiny\char"2606}$ 또한 그러하다는 것을 쉽게 확인할 수 있다. 위의 construction에서는 구별을 위해 $\star$와 $\mathbin{\tiny\char"2606}$를 다르게 표기하였으나, 이들은 문맥상 쉽게 구별할 수 있으므로 quotient magma에서의 연산 또한 $\star$와 같이 적는 것이 보통이다.
 
 ---
 

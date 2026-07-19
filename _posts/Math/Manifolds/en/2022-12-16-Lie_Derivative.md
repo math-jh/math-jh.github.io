@@ -31,7 +31,7 @@ Now suppose a vector field $X$ on $M$ is given, and consider the problem of find
 ::: Definition 1
 Fix a manifold $M$ and a vector field $X$ defined on it, and suppose a function $f:M\rightarrow\mathbb{R}$ is given. Then the *Lie derivative* $\mathcal{L}_Xf$ of $f$ is the function defined by the formula
 
-$(\mathcal{L}_Xf)(p)=\lim_{t\rightarrow 0}\frac{f(\phi^t(p))-f(\phi^0(p))}{t}=\lim_{t\rightarrow 0}\frac{f(\phi^t(p))-f(p)}{t}$
+$$(\mathcal{L}_Xf)(p)=\lim_{t\rightarrow 0}\frac{f(\phi^t(p))-f(\phi^0(p))}{t}=\lim_{t\rightarrow 0}\frac{f(\phi^t(p))-f(p)}{t}$$
 :::
 
 Of course, by the preceding argument this is nothing other than the directional derivative $X_pf$. However, the flow $\phi^t$ used here furnishes not merely a way to differentiate functions, but a way to differentiate every other object defined on $M$.
@@ -45,7 +45,7 @@ Nevertheless, differentiation is still possible in our setting. Recalling [§Vec
 ::: Definition 2
 Fix a manifold $M$ and a vector field $X$ defined on it, and suppose another vector field $Y:M\rightarrow TM$ is given. Then the *Lie derivative* $\mathcal{L}_XY$ of $Y$ is the vector field defined by the formula
 
-$(\mathcal{L}_XY)_p=\lim_{t\rightarrow 0}\frac{(d\phi^{-t})_{\phi^t(p)}(Y_{\phi^t(p)})-Y_p}{t}$
+$$(\mathcal{L}_XY)_p=\lim_{t\rightarrow 0}\frac{(d\phi^{-t})_{\phi^t(p)}(Y_{\phi^t(p)})-Y_p}{t}$$
 :::
 
 ## Lie Derivative of Differential Forms
@@ -55,7 +55,7 @@ Naturally, we can continue defining derivatives in this manner. For example, the
 ::: Definition 3
 Fix a manifold $M$ and a vector field $X$ defined on it, and suppose a differential form $\omega\in\Omega^\ast(M)$ is given. Then the *Lie derivative* $\mathcal{L}_X\omega$ of $\omega$ is the differential form defined by the formula
 
-$(\mathcal{L}_X\omega)_p=\frac{d}{dt}\bigg\vert_{t=0}(\phi^t)^\ast\omega_{\phi^t(p)}=\lim_{t\rightarrow 0}\frac{(\phi^t)^\ast\omega_{\phi^t(p)}-\omega_p}{t}$
+$$(\mathcal{L}_X\omega)_p=\frac{d}{dt}\bigg\vert_{t=0}(\phi^t)^\ast\omega_{\phi^t(p)}=\lim_{t\rightarrow 0}\frac{(\phi^t)^\ast\omega_{\phi^t(p)}-\omega_p}{t}$$
 :::
 
 Moreover, it is not difficult to extend this definition to arbitrary tensor fields. Since we will not need this immediately, we omit it.
@@ -93,7 +93,7 @@ In other words, the two terms $(Xf)(Yg)$ and $(Xg)(Yf)$ are precisely what preve
 ::: Definition 5
 For $X,Y\in\mathfrak{X}(M)$, the element $[X,Y]\in\mathfrak{X}(M)$ is defined by the formula
 
-$[X,Y]f=X(Yf)-Y(Xf)$
+$$[X,Y]f=X(Yf)-Y(Xf)$$
 :::
 
 Of course, for this definition to make sense we must verify that the right-hand side actually yields an element of $\mathfrak{X}(M)$, but this can be done by interchanging the roles of $X$ and $Y$ in formula (2) above to obtain $(YX)(fg)$, and then subtracting. Since this definition was designed from the outset to cancel the two problematic terms, the Leibniz rule will hold automatically.
@@ -123,7 +123,7 @@ As we can see by applying the fact that $X$ is $C^\infty$ (from [§Vector Fields
 ::: Proposition 7
 Let $F:M\rightarrow N$ be a $C^\infty$ map, and let $X\in\mathfrak{X}(M)$ and $Y\in\mathfrak{X}(N)$. Then $X$ and $Y$ are $F$-related if and only if for every $f$,
 
-$X(f\circ F)=(Yf)\circ F$
+$$X(f\circ F)=(Yf)\circ F$$
 :::
 ::: Proof
 For any point $p\in M$,

@@ -190,7 +190,7 @@ $$\gamma_k(x)=\underbrace{x\otimes\cdots\otimes x}_\text{\scriptsize $k$ times}$
     이 성립한다. 
 :::
 
-일반적인 텐서대수에서와 마찬가지로, 우리의 관심이 되는 것은 특별히 $M$이 free $A$-module일 때이다. 우선 다음의 보조정리를 보이자. 
+일반적인 tensor algebra에서와 마찬가지로, 우리의 관심이 되는 것은 특별히 $M$이 free $A$-module일 때이다. 우선 다음의 보조정리를 보이자. 
 
 ::: 보조정리 6
 Finite group $H$와 left $AH$-module $N$에 대하여, $N$의 $H$-invariant $A$-basis $B$가 주어졌다 하고, 이 action에 대한 quotient set $\Omega=B/H$를 생각하자. 그럼 다음이 성립한다. 

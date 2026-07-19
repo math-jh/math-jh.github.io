@@ -173,7 +173,7 @@ The following then holds.
 ::: Proposition 6 (Projection formula)
 For a continuous map $f:X \rightarrow Y$, and for $\alpha\in H^p(X)$, $\beta\in H^q(Y)$, and $\sigma\in H_{p+q}(X)$, we have
 
-$f_\ast(f^\ast\beta\frown\sigma)=\beta\frown f_\ast\sigma$
+$$f_\ast(f^\ast\beta\frown\sigma)=\beta\frown f_\ast\sigma$$
 :::
 
 --- 

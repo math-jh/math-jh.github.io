@@ -120,7 +120,7 @@ $$\begin{aligned}x_1\phantom{+2x_2+4x_3}-21x_4&=-4\\\phantom{x_1+}x_2\phantom{+2
 
 From this, we can see that the general solution to the above system of equations is
 
-$x_1=-4+21x_4,\quad x_2=1-2x_4,\quad x_3=1-5x_4$
+$$x_1=-4+21x_4,\quad x_2=1-2x_4,\quad x_3=1-5x_4$$
 :::
 
 The method of solving a system of equations through the process described so far is called *Gaussian elimination* or *Gaussian-Jordan elimination*.
@@ -210,7 +210,7 @@ $$\begin{pmatrix}1&0&0&-21&-4\\0&1&0&2&1\\0&0&1&5&1\end{pmatrix}$$
 
 Restoring the system of equations from this augmented matrix, we know that this is exactly what we obtained in [Example 2](#ex2):
 
-$\begin{aligned}x_1\phantom{+2x_2+4x_3}-21x_4&=-4\\\phantom{x_1+}x_2\phantom{+2x_3}+\phantom{1}2x_4&=1\\\phantom{x_1+2x_2+}x_3+\phantom{1}5x_4&=1\end{aligned}$
+$$\begin{aligned}x_1\phantom{+2x_2+4x_3}-21x_4&=-4\\\phantom{x_1+}x_2\phantom{+2x_3}+\phantom{1}2x_4&=1\\\phantom{x_1+2x_2+}x_3+\phantom{1}5x_4&=1\end{aligned}$$
 :::
 
 The example just examined is essentially no different from the calculation of [Example 2](#ex2) (even in terms of convenience). A meaningful difference is obtained when finding the inverse matrix by using the augmented matrix. For this, consider the case where the matrix $A$ defining the system of equations (3) is an $n\times n$ invertible matrix. First, the following lemma is obvious.
@@ -246,7 +246,7 @@ $$\begin{pmatrix}1&0&0&1&-2/3&-4\\0&1&0&0&1/3&0\\0&0&1&0&0&1\end{pmatrix}$$
 
 That is, the inverse of the given matrix $A$ is
 
-$A^{-1}=\begin{pmatrix}1&-2/3&-4\\0&1/3&0\\0&0&1\end{pmatrix}$
+$$A^{-1}=\begin{pmatrix}1&-2/3&-4\\0&1/3&0\\0&0&1\end{pmatrix}$$
 :::
 
 ## LU Decomposition

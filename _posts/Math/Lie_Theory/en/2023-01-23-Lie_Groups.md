@@ -49,7 +49,7 @@ $$T^n=(S^1)^n$$
 
 is a Lie group. For example, $T^2$ behaves like a vector space with one point serving as the identity and the great circles passing through that point in the equatorial direction and in the perpendicular direction as *axes*; this arises from the isomorphism
 
-$\mathbb{R}/\mathbb{Z}\rightarrow S^1;\quad t\mapsto e^{2\pi i t}$
+$$\mathbb{R}/\mathbb{Z}\rightarrow S^1;\quad t\mapsto e^{2\pi i t}$$
 :::
 
 A slightly more complicated and widely used example than the two above is the following.
@@ -87,7 +87,7 @@ $$L_g:G\rightarrow G;\qquad x\mapsto gx$$
 
 Similarly, the right translation $R_g$ is defined by
 
-$R_g:G\rightarrow G;\qquad x\mapsto xg$
+$$R_g:G\rightarrow G;\qquad x\mapsto xg$$
 :::
 
 These are not Lie group homomorphisms, but they are smooth maps by definition, and their inverses are given by $L_{g^{-1}}$ and $R_{g^{-1}}$ respectively, so they are diffeomorphisms.

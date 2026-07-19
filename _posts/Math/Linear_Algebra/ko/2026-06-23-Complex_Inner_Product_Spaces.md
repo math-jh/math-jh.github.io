@@ -112,7 +112,7 @@ $$v=\sum_{i=1}^n\langle x_i,v\rangle x_i$$
 
 $$V=U\oplus U^\perp,\qquad\dim U^\perp=\dim V-\dim U$$
 
-이 성립한다. 나아가 natural projection $p:V\rightarrow V/U$을 ([§몫공간, ⁋정의 3](/ko/math/linear_algebra/quotient_space#def3)) $U^\perp$로 제한한 $p\vert_{U^\perp}:U^\perp\rightarrow V/U$은 isomorphism이며, 따라서 $U^\perp$은 몫공간 $V/U$을 표준적으로 실현한다.
+이 성립한다. 나아가 natural projection $p:V\rightarrow V/U$을 ([§몫공간, ⁋정의 3](/ko/math/linear_algebra/quotient_space#def3)) $U^\perp$로 제한한 $p\vert_{U^\perp}:U^\perp\rightarrow V/U$은 isomorphism이며, 따라서 $U^\perp$은 quotient space $V/U$을 표준적으로 실현한다.
 :::
 ::: 증명
 위에서 $V$의 orthonormal basis $\{x_1,\ldots,x_n\}$을 $U$의 것 $\{x_1,\ldots,x_k\}$로부터 확장했으므로, 나머지 $\{x_{k+1},\ldots,x_n\}$은 $U$와 직교하여 $U^\perp$을 span한다. 따라서 $V=U\oplus U^\perp$이고 $\dim U^\perp=\dim V-\dim U$이다. 그럼 $\ker p=U$이므로 $p\vert_{U^\perp}$의 kernel은 $U^\perp\cap U=\{0\}$이라 단사이고, $V=U+U^\perp$이라 전사이므로 isomorphism이다.
@@ -155,7 +155,7 @@ $$U^\ast U=UU^\ast=I$$
 
 $$\langle Lv,Lw\rangle=\langle v,L^\ast Lw\rangle=\langle v,w\rangle$$
 
-이 되어 내적을 보존한다. 두 orthonormal basis 사이의 기저변환행렬이 항상 unitary matrix가 된다는 것도 실수의 경우와 똑같은 계산으로 확인되며, 다만 conjugate-symmetry 때문에 한쪽 기저변환행렬이 다른 쪽의 켤레전치가 된다. 이 unitary matrix와 켤레전치 adjoint가 self-adjoint operator를 일반화한 normal operator의 스펙트럼 정리를 전개하는 토대가 된다.
+이 되어 내적을 보존한다. 두 orthonormal basis 사이의 change of basis matrix가 항상 unitary matrix가 된다는 것도 실수의 경우와 똑같은 계산으로 확인되며, 다만 conjugate-symmetry 때문에 한쪽 change of basis matrix가 다른 쪽의 켤레전치가 된다. 이 unitary matrix와 켤레전치 adjoint가 self-adjoint operator를 일반화한 normal operator의 spectrum 정리를 전개하는 토대가 된다.
 
 ## QR 분해
 

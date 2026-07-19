@@ -105,7 +105,7 @@ $$\varphi(n) = \prod_i p_i^{e_i - 1}(p_i - 1) = n\prod_{p \mid n}\Bigl(1 - \frac
 
 $$(f \ast g)(n) = \sum_{d \mid n} f(d)\,g\!\left(\frac{n}{d}\right) = \sum_{d' \mid n} f\!\left(\frac{n}{d'}\right)g(d') = (g \ast f)(n).$$
 
-결합성은 양변을 약수 셋에 걸친 대칭적 삼중합으로 펼치면 드러난다:
+결합성은 양변을 약수 셋에 걸친 symmetric 삼중합으로 펼치면 드러난다:
 
 $$\begin{aligned}
 \bigl((f \ast g)\ast h\bigr)(n) &= \sum_{d \mid n}\Bigl(\sum_{e \mid d} f(e)\,g\!\left(\tfrac{d}{e}\right)\Bigr) h\!\left(\frac{n}{d}\right) \\

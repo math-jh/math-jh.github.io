@@ -1,6 +1,6 @@
 ---
 title: "등각사상과 Möbius 변환"
-description: "정칙이고 도함수가 0이 아닌 사상이 각과 방향을 보존하는 등각사상임을 밝히고, 확장복소평면의 자기동형군을 이루는 Möbius 변환을 다룬다. 원-직선의 보존, 교차비의 불변성, 세 점을 세 점으로 보내는 유일성을 증명하고, 단위원판의 자기동형사상을 Schwarz 보조정리로 분류한 뒤 Cayley 변환으로 상반평면과 잇는다."
+description: "복소정칙이고 도함수가 0이 아닌 사상이 각과 방향을 보존하는 등각사상임을 밝히고, 확장복소평면의 자기동형군을 이루는 Möbius 변환을 다룬다. 원-직선의 보존, 교차비의 불변성, 세 점을 세 점으로 보내는 유일성을 증명하고, 단위원판의 자기동형사상을 Schwarz 보조정리로 분류한 뒤 Cayley 변환으로 상반평면과 잇는다."
 excerpt: "등각사상, Möbius 변환, PSL(2,ℂ), 교차비, 원-직선 보존, 단위원판 자기동형, Schwarz–Pick, Cayley 변환"
 
 categories: [Math / Complex Analysis]
@@ -14,55 +14,55 @@ weight: 11
 published: false
 ---
 
-정칙함수의 미분이 한 점에서 평면을 회전·확대하는 닮음변환이라는 사실은 ([§정칙함수, ⁋정리 5](/ko/math/complex_analysis/holomorphic_functions#thm5)) 이미 정칙성의 대수적 핵심으로 드러난 바 있다. 회전·확대는 길이의 비를 바꿀 수는 있어도 두 방향이 이루는 각은 건드리지 못하므로, 도함수가 $0$이 아닌 정칙함수는 곡선들이 만나는 각을 크기와 방향까지 보존한다. 이렇게 각을 보존하는 사상을 등각사상이라 하며, 복소해석학을 평면기하의 변환이론으로 읽는 관점이 여기서 시작된다. 이 글에서는 먼저 정칙성과 등각성이 본질적으로 같은 조건임을 밝히고, 가장 단순하면서도 가장 풍부한 등각사상의 모임인 Möbius 변환을 다룬다. Möbius 변환은 확장복소평면 ([§복소수와 복소평면, ⁋정의 13](/ko/math/complex_analysis/complex_numbers#def13)) 전체의 정칙 자기동형사상을 이루며, 원과 직선을 원과 직선으로 보내고 교차비라는 양을 불변으로 남긴다. 끝으로 이를 단위원판과 상반평면의 자기동형사상을 분류하는 데 적용한다.
+holomorphic function의 미분이 한 점에서 평면을 회전·확대하는 닮음변환이라는 사실은 ([§복소정칙함수, ⁋정리 5](/ko/math/complex_analysis/holomorphic_functions#thm5)) 이미 holomorphicity의 대수적 핵심으로 드러난 바 있다. 회전·확대는 길이의 비를 바꿀 수는 있어도 두 방향이 이루는 각은 건드리지 못하므로, 도함수가 $0$이 아닌 holomorphic function은 곡선들이 만나는 각을 크기와 방향까지 보존한다. 이렇게 각을 보존하는 사상을 등각사상이라 하며, 복소해석학을 평면기하의 변환이론으로 읽는 관점이 여기서 시작된다. 이 글에서는 먼저 holomorphicity와 등각성이 본질적으로 같은 조건임을 밝히고, 가장 단순하면서도 가장 풍부한 등각사상의 모임인 Möbius 변환을 다룬다. Möbius 변환은 확장복소평면 ([§복소수와 복소평면, ⁋정의 13](/ko/math/complex_analysis/complex_numbers#def13)) 전체의 holomorphic automorphism을 이루며, 원과 직선을 원과 직선으로 보내고 교차비라는 양을 불변으로 남긴다. 끝으로 이를 단위원판과 상반평면의 automorphism을 분류하는 데 적용한다.
 
 ## 등각성
 
-곡선이 한 점에서 이루는 각이라는 개념부터 정확히 한다. 점 $z_0$을 지나는 매끄러운 곡선 $\gamma(t)$ ($\gamma(t_0) = z_0$, $\gamma'(t_0) \neq 0$) 의 그 점에서의 접벡터는 복소수 $\gamma'(t_0)$이고, 그 편각 $\arg \gamma'(t_0)$이 곡선이 그 점에서 향하는 방향을 준다. 두 곡선 $\gamma_1, \gamma_2$이 $z_0$에서 이루는 각은 두 접벡터의 편각의 차 $\arg \gamma_2'(t_0) - \arg \gamma_1'(t_0)$로 정의되며, 부호까지 포함한 이 차가 방향이 매겨진 각이다.
+곡선이 한 점에서 이루는 각이라는 개념부터 정확히 한다. 점 $z_0$을 지나는 smooth 곡선 $\gamma(t)$ ($\gamma(t_0) = z_0$, $\gamma'(t_0) \neq 0$) 의 그 점에서의 tangent vector는 복소수 $\gamma'(t_0)$이고, 그 편각 $\arg \gamma'(t_0)$이 곡선이 그 점에서 향하는 방향을 준다. 두 곡선 $\gamma_1, \gamma_2$이 $z_0$에서 이루는 각은 두 tangent vector의 편각의 차 $\arg \gamma_2'(t_0) - \arg \gamma_1'(t_0)$로 정의되며, 부호까지 포함한 이 차가 방향이 매겨진 각이다.
 
 ::: 정의 1
-열린집합 $\Omega \subseteq \mathbb{C}$ 위의 사상 $f : \Omega \to \mathbb{C}$가 점 $z_0$에서 *conformal<sub>등각</sub>*하다는 것은, $z_0$을 지나는 임의의 두 매끄러운 곡선이 $z_0$에서 이루는 (방향이 매겨진) 각이 그 상곡선들이 $f(z_0)$에서 이루는 각과 같은 것을 뜻한다. $f$가 $\Omega$의 모든 점에서 등각하면 $f$를 $\Omega$ 위의 *등각사상<sub>conformal map</sub>*이라 한다.
+열린집합 $\Omega \subseteq \mathbb{C}$ 위의 사상 $f : \Omega \to \mathbb{C}$가 점 $z_0$에서 *conformal<sub>등각</sub>*하다는 것은, $z_0$을 지나는 임의의 두 smooth 곡선이 $z_0$에서 이루는 (방향이 매겨진) 각이 그 상곡선들이 $f(z_0)$에서 이루는 각과 같은 것을 뜻한다. $f$가 $\Omega$의 모든 점에서 등각하면 $f$를 $\Omega$ 위의 *등각사상<sub>conformal map</sub>*이라 한다.
 :::
 
-등각성은 각의 크기뿐 아니라 회전의 방향까지 보존할 것을 요구한다는 점이 핵심이다. 가령 켤레사상 $z \mapsto \bar z$는 모든 각의 크기를 보존하지만 방향을 뒤집으므로 (반사이므로) 위의 정의에서는 등각으로 치지 않는다. 이 방향성의 요구가 정칙성과 정확히 맞물리며, 다음 명제가 그 동치를 정식으로 적는다.
+등각성은 각의 크기뿐 아니라 회전의 방향까지 보존할 것을 요구한다는 점이 핵심이다. 가령 켤레사상 $z \mapsto \bar z$는 모든 각의 크기를 보존하지만 방향을 뒤집으므로 (반사이므로) 위의 정의에서는 등각으로 치지 않는다. 이 방향성의 요구가 holomorphicity와 정확히 맞물리며, 다음 명제가 그 동치를 정식으로 적는다.
 
 ::: 명제 2
 $\Omega \subseteq \mathbb{C}$가 열려 있고 $f : \Omega \to \mathbb{C}$가 $z_0$에서 복소미분가능하다고 하자. 그러면 $f$가 $z_0$에서 등각인 것은 $f'(z_0) \neq 0$인 것과 동치이다.
 :::
 
 ::: 증명
-먼저 $f'(z_0) \neq 0$이라 하자. $z_0$을 지나는 매끄러운 곡선 $\gamma(t)$ ($\gamma(t_0) = z_0$, $\gamma'(t_0) \neq 0$) 에 대하여 상곡선 $(f \circ \gamma)(t) = f(\gamma(t))$의 접벡터는 연쇄법칙 ([§정칙함수, ⁋명제 3](/ko/math/complex_analysis/holomorphic_functions#prop3)) 에 의해
+먼저 $f'(z_0) \neq 0$이라 하자. $z_0$을 지나는 smooth 곡선 $\gamma(t)$ ($\gamma(t_0) = z_0$, $\gamma'(t_0) \neq 0$) 에 대하여 상곡선 $(f \circ \gamma)(t) = f(\gamma(t))$의 tangent vector는 연쇄법칙 ([§복소정칙함수, ⁋명제 3](/ko/math/complex_analysis/holomorphic_functions#prop3)) 에 의해
 
 $$(f \circ \gamma)'(t_0) = f'(z_0)\,\gamma'(t_0)$$
 
-이다. $f'(z_0) \neq 0$이고 $\gamma'(t_0) \neq 0$이므로 이 접벡터도 $0$이 아니고, 그 편각은
+이다. $f'(z_0) \neq 0$이고 $\gamma'(t_0) \neq 0$이므로 이 tangent vector도 $0$이 아니고, 그 편각은
 
 $$\arg (f \circ \gamma)'(t_0) = \arg f'(z_0) + \arg \gamma'(t_0) \pmod{2\pi}$$
 
-이다 ([§복소수와 복소평면, ⁋명제 6](/ko/math/complex_analysis/complex_numbers#prop6)). 곧 상곡선의 접벡터의 편각은 원곡선의 접벡터의 편각에 일정한 양 $\arg f'(z_0)$을 더한 것이다. 두 곡선 $\gamma_1, \gamma_2$에 대해 이 덧셈이 똑같이 일어나므로, 편각의 차
+이다 ([§복소수와 복소평면, ⁋명제 6](/ko/math/complex_analysis/complex_numbers#prop6)). 곧 상곡선의 tangent vector의 편각은 원곡선의 tangent vector의 편각에 일정한 양 $\arg f'(z_0)$을 더한 것이다. 두 곡선 $\gamma_1, \gamma_2$에 대해 이 덧셈이 똑같이 일어나므로, 편각의 차
 
 $$\arg (f \circ \gamma_2)'(t_0) - \arg (f \circ \gamma_1)'(t_0) = \arg \gamma_2'(t_0) - \arg \gamma_1'(t_0)$$
 
 이 보존된다. 따라서 $f$는 $z_0$에서 방향이 매겨진 각을 보존하여 등각이다.
 
-역으로 $f'(z_0) = 0$이라 하자. 그러면 위의 접벡터 공식에서 모든 매끄러운 곡선에 대해 $(f \circ \gamma)'(t_0) = f'(z_0)\gamma'(t_0) = 0$이 되어, 상곡선의 일차 접벡터가 소멸한다. 이때 상곡선이 $f(z_0)$에서 향하는 방향은 일차항이 아니라 처음으로 살아남는 고차항으로 결정되는데, 가령 $f(z) = z^m$ ($m \geq 2$) 을 $z_0 = 0$에서 보면 $\arg f(z) = m \arg z$이므로 원점에서 만나는 두 방향이 이루는 각이 $f$에 의해 $m$배로 늘어난다. 따라서 각이 보존되지 않아 $f$는 $z_0$에서 등각이 아니다.
+역으로 $f'(z_0) = 0$이라 하자. 그러면 위의 tangent vector 공식에서 모든 smooth 곡선에 대해 $(f \circ \gamma)'(t_0) = f'(z_0)\gamma'(t_0) = 0$이 되어, 상곡선의 일차 tangent vector가 소멸한다. 이때 상곡선이 $f(z_0)$에서 향하는 방향은 일차항이 아니라 처음으로 살아남는 고차항으로 결정되는데, 가령 $f(z) = z^m$ ($m \geq 2$) 을 $z_0 = 0$에서 보면 $\arg f(z) = m \arg z$이므로 원점에서 만나는 두 방향이 이루는 각이 $f$에 의해 $m$배로 늘어난다. 따라서 각이 보존되지 않아 $f$는 $z_0$에서 등각이 아니다.
 :::
 
-명제 2는 등각성이라는 기하적 성질이 "정칙이고 도함수가 $0$이 아니다"라는 해석적 조건과 완전히 같음을 말한다. 도함수가 소멸하는 점, 곧 $f'(z_0) = 0$인 점은 *임계점<sub>critical point</sub>*이라 부르며, 그 점에서는 위수에 따라 각이 정수배로 확대되어 등각성이 깨진다. 영역 전체에서 도함수가 결코 $0$이 되지 않는 정칙함수는 따라서 각 점에서 무한소적으로 닮음변환처럼 행동하며, 작은 도형을 형태를 유지한 채 회전·확대해 옮긴다. 정칙인 전단사사상은 항상 이런 등각사상이 되는데, 이는 단엽 정칙함수의 도함수가 어디서도 $0$이 아니라는 사실의 귀결이다.
+명제 2는 등각성이라는 기하적 성질이 "holomorphic이고 도함수가 $0$이 아니다"라는 해석적 조건과 완전히 같음을 말한다. 도함수가 소멸하는 점, 곧 $f'(z_0) = 0$인 점은 *임계점<sub>critical point</sub>*이라 부르며, 그 점에서는 위수에 따라 각이 정수배로 확대되어 등각성이 깨진다. 영역 전체에서 도함수가 결코 $0$이 되지 않는 holomorphic function은 따라서 각 점에서 무한소적으로 닮음변환처럼 행동하며, 작은 도형을 형태를 유지한 채 회전·확대해 옮긴다. holomorphic인 전단사사상은 항상 이런 등각사상이 되는데, 이는 단엽 holomorphic function의 도함수가 어디서도 $0$이 아니라는 사실의 귀결이다.
 
 ::: 명제 3
-$\Omega \subseteq \mathbb{C}$가 열려 있고 $f : \Omega \to \mathbb{C}$가 정칙인 단사사상이라 하자. 그러면 $\Omega$의 모든 점에서 $f'(z) \neq 0$이고, 따라서 $f$는 $\Omega$ 위의 등각사상이다.
+$\Omega \subseteq \mathbb{C}$가 열려 있고 $f : \Omega \to \mathbb{C}$가 holomorphic인 단사사상이라 하자. 그러면 $\Omega$의 모든 점에서 $f'(z) \neq 0$이고, 따라서 $f$는 $\Omega$ 위의 등각사상이다.
 :::
 
 ::: 증명
-어떤 $z_0 \in \Omega$에서 $f'(z_0) = 0$이라 가정하고 모순을 이끈다. $w_0 = f(z_0)$이라 두면 함수 $g(z) = f(z) - w_0$은 $z_0$에서 영점을 가지는데, $g'(z_0) = f'(z_0) = 0$이므로 그 영점의 위수 $m$은 $m \geq 2$이다 ([§영점과 일치정리, ⁋명제 2](/ko/math/complex_analysis/zeros_and_identity_theorem#prop2)의 인수분해에서 첫 비영 계수가 $m \geq 2$차이므로). 한편 비상수 정칙함수가 위수 $m$인 영점 근방에서 국소적으로 $m$겹 덮개처럼 행동한다는 사실에 의하면, $w_0$에 충분히 가까운 $0$이 아닌 모든 값 $w$에 대해 방정식 $g(z) = w - w_0$, 곧 $f(z) = w$이 $z_0$의 작은 구멍낸 근방 안에서 서로 다른 $m$개의 해를 가진다. $m \geq 2$이므로 이는 $z_0$ 근방에서 $f$가 같은 값을 두 번 이상 취함을 뜻하여 $f$의 단사성에 어긋난다. 따라서 모든 점에서 $f'(z) \neq 0$이고, 명제 2에 의해 $f$는 등각사상이다.
+어떤 $z_0 \in \Omega$에서 $f'(z_0) = 0$이라 가정하고 모순을 이끈다. $w_0 = f(z_0)$이라 두면 함수 $g(z) = f(z) - w_0$은 $z_0$에서 영점을 가지는데, $g'(z_0) = f'(z_0) = 0$이므로 그 영점의 위수 $m$은 $m \geq 2$이다 ([§영점과 일치정리, ⁋명제 2](/ko/math/complex_analysis/zeros_and_identity_theorem#prop2)의 인수분해에서 첫 비영 계수가 $m \geq 2$차이므로). 한편 비상수 holomorphic function이 위수 $m$인 영점 근방에서 국소적으로 $m$겹 covering처럼 행동한다는 사실에 의하면, $w_0$에 충분히 가까운 $0$이 아닌 모든 값 $w$에 대해 방정식 $g(z) = w - w_0$, 곧 $f(z) = w$이 $z_0$의 작은 구멍낸 근방 안에서 서로 다른 $m$개의 해를 가진다. $m \geq 2$이므로 이는 $z_0$ 근방에서 $f$가 같은 값을 두 번 이상 취함을 뜻하여 $f$의 단사성에 어긋난다. 따라서 모든 점에서 $f'(z) \neq 0$이고, 명제 2에 의해 $f$는 등각사상이다.
 :::
 
-명제 3은 위수 $m$인 영점 근방에서 정칙함수가 $m$겹으로 값을 취한다는 국소적 사상정리를 이용한다. 이 사실 자체는 영점의 위수와 편각원리에서 따라 나오며, 비상수 정칙함수가 열린사상이라는 명제와 같은 뿌리를 가진다. 명제 3이 말하는 바는, 정칙인 전단사사상이 곧 등각동형사상이라는 것이다. 두 영역 사이의 정칙 전단사사상의 존재 여부를 묻는 등각동치 문제가 복소해석학의 한 중심 주제가 되는 까닭이 여기에 있다. 이제 그러한 사상의 가장 기본적인 공급원을 살핀다.
+명제 3은 위수 $m$인 영점 근방에서 holomorphic function이 $m$겹으로 값을 취한다는 국소적 사상정리를 이용한다. 이 사실 자체는 영점의 위수와 편각원리에서 따라 나오며, 비상수 holomorphic function이 open mapping이라는 명제와 같은 뿌리를 가진다. 명제 3이 말하는 바는, holomorphic인 전단사사상이 곧 conformal isomorphism이라는 것이다. 두 영역 사이의 holomorphic 전단사사상의 존재 여부를 묻는 등각동치 문제가 복소해석학의 한 중심 주제가 되는 까닭이 여기에 있다. 이제 그러한 사상의 가장 기본적인 공급원을 살핀다.
 
 ## Möbius 변환
 
-가장 단순한 등각사상은 일차식의 비로 적히는 사상이다. 이들은 평면 전체가 아니라 확장복소평면 $\widehat{\mathbb{C}}$ ([§복소수와 복소평면, ⁋정의 13](/ko/math/complex_analysis/complex_numbers#def13)) 의 자기동형사상으로 보아야 그 구조가 온전히 드러난다.
+가장 단순한 등각사상은 일차식의 비로 적히는 사상이다. 이들은 평면 전체가 아니라 확장복소평면 $\widehat{\mathbb{C}}$ ([§복소수와 복소평면, ⁋정의 13](/ko/math/complex_analysis/complex_numbers#def13)) 의 automorphism으로 보아야 그 구조가 온전히 드러난다.
 
 ::: 정의 4
 복소수 $a, b, c, d$가 $ad - bc \neq 0$을 만족할 때, 사상
@@ -76,14 +76,14 @@ $$T(z) = \frac{az + b}{cz + d}$$
 
 $$T'(z) = \frac{a(cz + d) - c(az + b)}{(cz + d)^2} = \frac{ad - bc}{(cz + d)^2}$$
 
-이므로, $ad - bc \neq 0$인 한 $T'$는 분모가 정의되는 모든 점에서 $0$이 아니다. 따라서 Möbius 변환은 그 정칙영역에서 명제 2에 의해 등각사상이다. $\infty$를 포함한 거동까지 합쳐 보면 Möbius 변환은 $\widehat{\mathbb{C}}$ 전체의 자기동형사상이 되며, 이들이 군을 이룸을 행렬과의 대응으로 가장 깔끔하게 본다.
+이므로, $ad - bc \neq 0$인 한 $T'$는 분모가 정의되는 모든 점에서 $0$이 아니다. 따라서 Möbius 변환은 그 holomorphic한 영역에서 명제 2에 의해 등각사상이다. $\infty$를 포함한 거동까지 합쳐 보면 Möbius 변환은 $\widehat{\mathbb{C}}$ 전체의 automorphism이 되며, 이들이 군을 이룸을 행렬과의 대응으로 가장 깔끔하게 본다.
 
 ::: 명제 5
-Möbius 변환 전체의 모임은 사상의 합성에 대하여 군을 이룬다. 행렬 $\begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \mathrm{GL}(2, \mathbb{C})$에 Möbius 변환 $z \mapsto (az+b)/(cz+d)$를 대응시키는 사상은 군의 준동형사상이며, 그 핵은 $0$이 아닌 스칼라배의 항등행렬들 $\{\lambda I : \lambda \in \mathbb{C}^\times\}$이다. 따라서 Möbius 변환군은
+Möbius 변환 전체의 모임은 사상의 합성에 대하여 군을 이룬다. 행렬 $\begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \mathrm{GL}(2, \mathbb{C})$에 Möbius 변환 $z \mapsto (az+b)/(cz+d)$를 대응시키는 사상은 군의 homomorphism이며, 그 핵은 $0$이 아닌 스칼라배의 항등행렬들 $\{\lambda I : \lambda \in \mathbb{C}^\times\}$이다. 따라서 Möbius 변환군은
 
 $$\mathrm{PGL}(2, \mathbb{C}) = \mathrm{GL}(2, \mathbb{C}) / \{\lambda I\} \cong \mathrm{PSL}(2, \mathbb{C})$$
 
-와 동형이다.
+와 isomorphic하다.
 :::
 
 ::: 증명
@@ -97,10 +97,10 @@ $$AA' = \begin{pmatrix} aa' + bc' & ab' + bd' \\ ca' + dc' & cb' + dd' \end{pmat
 
 의 성분이다. 따라서 $T_A \circ T_{A'} = T_{AA'}$이고, 이는 행렬곱이 사상합성과 어울림을 뜻한다 (이 계산은 $\infty$를 포함한 점들에서도 극한으로 정합적이다). 특히 합성이 다시 Möbius 변환이고, $\det(AA') = \det A \det A' \neq 0$으로 비퇴화 조건이 보존된다. 항등행렬 $I$는 항등사상 $T_I(z) = z$를 주고, $A$의 역행렬 $A^{-1}$이 $T_A$의 역사상을 주므로 ($T_A \circ T_{A^{-1}} = T_I$) Möbius 변환 전체가 군을 이룬다.
 
-대응 $A \mapsto T_A$이 준동형사상임은 위에서 보았다. 그 핵을 구한다. $T_A(z) = z$이 모든 $z$에서 성립하려면 $az + b = z(cz + d)$, 곧 $cz^2 + (d - a)z - b = 0$이 모든 $z$에서 성립해야 하므로 $c = 0$, $b = 0$, $a = d$이다. 곧 $A = aI$ ($a \neq 0$) 꼴이다. 역으로 그러한 $A$는 항등사상을 준다. 따라서 핵은 $\{\lambda I : \lambda \in \mathbb{C}^\times\}$이고, 준동형정리에 의해 Möbius 변환군은 $\mathrm{GL}(2, \mathbb{C})/\{\lambda I\} = \mathrm{PGL}(2, \mathbb{C})$와 동형이다. 한편 임의의 $A \in \mathrm{GL}(2, \mathbb{C})$는 $\mu^2 = \det A$인 $\mu$로 나누어 $A/\mu \in \mathrm{SL}(2, \mathbb{C})$로 만들 수 있고 이것이 같은 Möbius 변환을 주므로, $\mathrm{PGL}(2, \mathbb{C})$는 $\mathrm{SL}(2, \mathbb{C})$을 그 중심 $\{\pm I\}$로 나눈 $\mathrm{PSL}(2, \mathbb{C})$와 동형이다.
+대응 $A \mapsto T_A$이 homomorphism임은 위에서 보았다. 그 핵을 구한다. $T_A(z) = z$이 모든 $z$에서 성립하려면 $az + b = z(cz + d)$, 곧 $cz^2 + (d - a)z - b = 0$이 모든 $z$에서 성립해야 하므로 $c = 0$, $b = 0$, $a = d$이다. 곧 $A = aI$ ($a \neq 0$) 꼴이다. 역으로 그러한 $A$는 항등사상을 준다. 따라서 핵은 $\{\lambda I : \lambda \in \mathbb{C}^\times\}$이고, 준동형정리에 의해 Möbius 변환군은 $\mathrm{GL}(2, \mathbb{C})/\{\lambda I\} = \mathrm{PGL}(2, \mathbb{C})$와 isomorphic하다. 한편 임의의 $A \in \mathrm{GL}(2, \mathbb{C})$는 $\mu^2 = \det A$인 $\mu$로 나누어 $A/\mu \in \mathrm{SL}(2, \mathbb{C})$로 만들 수 있고 이것이 같은 Möbius 변환을 주므로, $\mathrm{PGL}(2, \mathbb{C})$는 $\mathrm{SL}(2, \mathbb{C})$을 그 중심 $\{\pm I\}$로 나눈 $\mathrm{PSL}(2, \mathbb{C})$와 isomorphic하다.
 :::
 
-명제 5는 Möbius 변환의 합성이 행렬곱으로 번역됨을 말하며, 이로써 일차분수변환의 대수가 $2 \times 2$ 가역행렬의 대수로 환원된다. 행렬과 그 스칼라배가 같은 변환을 주므로, 변환을 행렬로 다룰 때는 언제든 $\det A = 1$이 되도록 정규화할 수 있다. 군 $\mathrm{PSL}(2, \mathbb{C})$이 정확히 $\widehat{\mathbb{C}}$의 모든 정칙 자기동형사상을 이룬다는 사실까지 알려져 있는데, 그 증명은 무한대에서의 거동 분석을 요구하므로 여기서는 Möbius 변환이 자기동형사상임을 확인하는 데 그친다. Möbius 변환의 구조를 더 들여다보기 위해, 임의의 변환이 몇 가지 기본 변환의 합성으로 쪼개짐을 본다.
+명제 5는 Möbius 변환의 합성이 행렬곱으로 번역됨을 말하며, 이로써 일차분수변환의 대수가 $2 \times 2$ 가역행렬의 대수로 환원된다. 행렬과 그 스칼라배가 같은 변환을 주므로, 변환을 행렬로 다룰 때는 언제든 $\det A = 1$이 되도록 normalize할 수 있다. 군 $\mathrm{PSL}(2, \mathbb{C})$이 정확히 $\widehat{\mathbb{C}}$의 모든 holomorphic automorphism을 이룬다는 사실까지 알려져 있는데, 그 증명은 무한대에서의 거동 분석을 요구하므로 여기서는 Möbius 변환이 automorphism임을 확인하는 데 그친다. Möbius 변환의 구조를 더 들여다보기 위해, 임의의 변환이 몇 가지 기본 변환의 합성으로 쪼개짐을 본다.
 
 ::: 명제 6
 임의의 Möbius 변환은 평행이동 $z \mapsto z + \beta$, 확대·회전 $z \mapsto \alpha z$ ($\alpha \neq 0$), 반전 $z \mapsto 1/z$의 합성으로 표현된다.
@@ -187,7 +187,7 @@ $\widehat{\mathbb{C}}$의 서로 다른 세 점 $z_1, z_2, z_3$과 서로 다른
 
 $$S(z) = (z, z_2; z_1, z_3) = \frac{(z - z_1)(z_2 - z_3)}{(z - z_3)(z_2 - z_1)}$$
 
-는 $z$에 대한 일차분수변환이고, $z_2 - z_3, z_2 - z_1$이 $0$이 아닌 상수이므로 비퇴화이다. 대입하면 $S(z_1) = 0$, $S(z_2) = 1$, $S(z_3) = \infty$이다 ($z_3$에서 분모가 $0$이 된다). 마찬가지로 $w_1, w_2, w_3$을 $0, 1, \infty$로 보내는 $S'(w) = (w, w_2; w_1, w_3)$을 잡으면, 합성 $T = S'^{-1} \circ S$이 Möbius 변환이고 $T(z_i) = S'^{-1}(S(z_i)) = S'^{-1}(\{0, 1, \infty\}\text{의 해당 점}) = w_i$이다.
+는 $z$에 대한 일차분수변환이고, $z_2 - z_3, z_2 - z_1$이 $0$이 아닌 상수이므로 nondegenerate하다. 대입하면 $S(z_1) = 0$, $S(z_2) = 1$, $S(z_3) = \infty$이다 ($z_3$에서 분모가 $0$이 된다). 마찬가지로 $w_1, w_2, w_3$을 $0, 1, \infty$로 보내는 $S'(w) = (w, w_2; w_1, w_3)$을 잡으면, 합성 $T = S'^{-1} \circ S$이 Möbius 변환이고 $T(z_i) = S'^{-1}(S(z_i)) = S'^{-1}(\{0, 1, \infty\}\text{의 해당 점}) = w_i$이다.
 
 유일성을 본다. $T, \widetilde T$가 모두 세 점을 같은 상으로 보낸다고 하면, $U = \widetilde T^{-1} \circ T$은 Möbius 변환이고 $z_1, z_2, z_3$을 모두 고정한다. Möbius 변환이 서로 다른 세 고정점을 가지면 항등사상임을 보이면 된다. $U(z) = (az + b)/(cz + d)$가 점 $z_0$을 고정하면 $az_0 + b = z_0(cz_0 + d)$, 곧 $cz_0^2 + (d - a)z_0 - b = 0$이다. 이 이차방정식 (만일 $c \neq 0$) 은 많아야 두 해를 가지므로, 유한한 고정점이 셋 이상이려면 $c = 0$이어야 한다. 그러면 식은 $(d - a)z_0 = b$라는 일차식이 되어, $d \neq a$이면 고정점이 하나뿐이고 ($\infty$ 포함 둘), $b \neq 0$이고 $d = a$이면 유한 고정점이 없다. 서로 다른 유한 고정점이 셋 (또는 둘 이상이면서 $\infty$도 고정) 이려면 $c = 0$, $d = a$, $b = 0$이어야 하고, 이는 $U(z) = z$, 곧 항등사상이다. 따라서 $\widetilde T^{-1} \circ T = \mathrm{id}$이고 $T = \widetilde T$이다.
 :::
@@ -196,7 +196,7 @@ $$S(z) = (z, z_2; z_1, z_3) = \frac{(z - z_1)(z_2 - z_3)}{(z - z_3)(z_2 - z_1)}$
 
 ## 단위원판의 자기동형사상
 
-Möbius 변환 가운데 단위원판 $\mathbb{D} = \{z : \lvert z\rvert < 1\}$을 자기 자신으로 보내는 것들을 가려내면, 단위원판의 정칙 자기동형사상 전체가 드러난다. 한 점 $a \in \mathbb{D}$를 원점으로 옮기는 특정한 Möbius 변환에서 출발한다.
+Möbius 변환 가운데 단위원판 $\mathbb{D} = \{z : \lvert z\rvert < 1\}$을 자기 자신으로 보내는 것들을 가려내면, 단위원판의 holomorphic automorphism 전체가 드러난다. 한 점 $a \in \mathbb{D}$를 원점으로 옮기는 특정한 Möbius 변환에서 출발한다.
 
 ::: 명제 11
 $a \in \mathbb{D}$에 대하여 사상
@@ -213,7 +213,7 @@ $$\lvert 1 - \bar a z\rvert = \lvert \bar z\rvert\,\lvert 1 - \bar a z\rvert = \
 
 이다 (둘째 등호에서 $\lvert \bar z\rvert = \lvert z\rvert = 1$을 썼다). 따라서 $\lvert z\rvert = 1$이면 $\lvert \varphi_a(z)\rvert = \lvert z - a\rvert / \lvert 1 - \bar a z\rvert = 1$이므로, $\varphi_a$은 단위원을 단위원으로 보낸다.
 
-이제 $\varphi_a$이 $\mathbb{D}$를 $\mathbb{D}$로 보냄을 본다. $\varphi_a$은 단위원에서 분모 $1 - \bar a z$가 $0$이 되지 않으므로 ($\lvert z\rvert \leq 1$, $\lvert a\rvert < 1$이면 $\lvert \bar a z\rvert < 1$) 닫힌 원판 $\overline{\mathbb{D}}$에서 연속이고 내부에서 정칙이다. 경계 $\lvert z\rvert = 1$에서 $\lvert \varphi_a\rvert = 1$임을 방금 보였고, 내부의 한 점 $z = a$에서 $\varphi_a(a) = 0$이라 $\lvert \varphi_a(a)\rvert = 0 < 1$이다. 따라서 연속인 $\lvert \varphi_a\rvert$이 경계에서 $1$, 내부 한 점에서 $1$ 미만이므로, 최대절댓값 원리 ([§영점과 일치정리, ⁋따름정리 6](/ko/math/complex_analysis/zeros_and_identity_theorem#cor6)) 에 의해 $\mathbb{D}$ 전체에서 $\lvert \varphi_a(z)\rvert < 1$이다 (내부에서 $1$에 이르면 상수가 되어야 하나 $\varphi_a$은 비상수이다). 곧 $\varphi_a(\mathbb{D}) \subseteq \mathbb{D}$이다.
+이제 $\varphi_a$이 $\mathbb{D}$를 $\mathbb{D}$로 보냄을 본다. $\varphi_a$은 단위원에서 분모 $1 - \bar a z$가 $0$이 되지 않으므로 ($\lvert z\rvert \leq 1$, $\lvert a\rvert < 1$이면 $\lvert \bar a z\rvert < 1$) 닫힌 원판 $\overline{\mathbb{D}}$에서 연속이고 내부에서 holomorphic이다. 경계 $\lvert z\rvert = 1$에서 $\lvert \varphi_a\rvert = 1$임을 방금 보였고, 내부의 한 점 $z = a$에서 $\varphi_a(a) = 0$이라 $\lvert \varphi_a(a)\rvert = 0 < 1$이다. 따라서 연속인 $\lvert \varphi_a\rvert$이 경계에서 $1$, 내부 한 점에서 $1$ 미만이므로, 최대절댓값 원리 ([§영점과 일치정리, ⁋따름정리 6](/ko/math/complex_analysis/zeros_and_identity_theorem#cor6)) 에 의해 $\mathbb{D}$ 전체에서 $\lvert \varphi_a(z)\rvert < 1$이다 (내부에서 $1$에 이르면 상수가 되어야 하나 $\varphi_a$은 비상수이다). 곧 $\varphi_a(\mathbb{D}) \subseteq \mathbb{D}$이다.
 
 끝으로 역사상을 계산한다. $\varphi_{-a}(z) = (z + a)/(1 + \bar a z)$인데, 직접 합성하면
 
@@ -222,34 +222,34 @@ $$\varphi_{-a}(\varphi_a(z)) = \frac{\frac{z - a}{1 - \bar a z} + a}{1 + \bar a 
 이다. 따라서 $\varphi_{-a} = \varphi_a^{-1}$이고, 특히 $\varphi_a$은 $\mathbb{D}$ 위의 전단사이다 (그 역도 같은 논법으로 $\mathbb{D}$를 $\mathbb{D}$로 보낸다). $\varphi_a(0) = (0 - a)/(1 - 0) = -a$임은 대입으로 즉시 나온다.
 :::
 
-사상 $\varphi_a$은 단위원판의 자기동형사상을 다룰 때 가장 기본이 되는 벽돌이다. 그것은 임의로 주어진 내부의 한 점 $a$를 중심 $0$으로 끌어오면서 단위원판 구조를 보존하므로, 원점을 특별한 위치로 옮겨 문제를 단순화하는 데 쓰인다. 여기에 회전을 합성하면 단위원판의 모든 정칙 자기동형사상이 나온다는 것이 다음 정리이며, 그 증명은 원점을 고정하는 자기동형사상이 회전뿐이라는 Schwarz 보조정리의 귀결 ([§영점과 일치정리, ⁋예시 8](/ko/math/complex_analysis/zeros_and_identity_theorem#ex8)) 을 핵심으로 쓴다.
+사상 $\varphi_a$은 단위원판의 automorphism을 다룰 때 가장 기본이 되는 벽돌이다. 그것은 임의로 주어진 내부의 한 점 $a$를 중심 $0$으로 끌어오면서 단위원판 구조를 보존하므로, 원점을 특별한 위치로 옮겨 문제를 단순화하는 데 쓰인다. 여기에 회전을 합성하면 단위원판의 모든 holomorphic automorphism이 나온다는 것이 다음 정리이며, 그 증명은 원점을 고정하는 automorphism이 회전뿐이라는 Schwarz 보조정리의 귀결 ([§영점과 일치정리, ⁋예시 8](/ko/math/complex_analysis/zeros_and_identity_theorem#ex8)) 을 핵심으로 쓴다.
 
-::: 정리 12 (단위원판의 자기동형사상)
-$f : \mathbb{D} \to \mathbb{D}$가 정칙 전단사이고 그 역사상도 정칙이라 하자. 그러면 어떤 $a \in \mathbb{D}$와 실수 $\theta$가 있어
+::: 정리 12 (단위원판의 automorphism)
+$f : \mathbb{D} \to \mathbb{D}$가 holomorphic 전단사이고 그 역사상도 holomorphic이라 하자. 그러면 어떤 $a \in \mathbb{D}$와 실수 $\theta$가 있어
 
 $$f(z) = e^{i\theta}\,\frac{z - a}{1 - \bar a z} = e^{i\theta}\,\varphi_a(z)$$
 
-이다. 역으로 이 꼴의 모든 사상은 $\mathbb{D}$의 정칙 자기동형사상이다.
+이다. 역으로 이 꼴의 모든 사상은 $\mathbb{D}$의 holomorphic automorphism이다.
 :::
 
 ::: 증명
-$f$가 $\mathbb{D}$의 정칙 자기동형사상이라 하자. $a = f^{-1}(0) \in \mathbb{D}$이라 두고 $g = f \circ \varphi_a^{-1} = f \circ \varphi_{-a}$를 생각한다. 명제 11에 의해 $\varphi_{-a}$이 $\mathbb{D}$의 자기동형사상이므로 $g$도 $\mathbb{D}$의 정칙 자기동형사상이고, $\varphi_{-a}(0) = a$이므로
+$f$가 $\mathbb{D}$의 holomorphic automorphism이라 하자. $a = f^{-1}(0) \in \mathbb{D}$이라 두고 $g = f \circ \varphi_a^{-1} = f \circ \varphi_{-a}$를 생각한다. 명제 11에 의해 $\varphi_{-a}$이 $\mathbb{D}$의 automorphism이므로 $g$도 $\mathbb{D}$의 holomorphic automorphism이고, $\varphi_{-a}(0) = a$이므로
 
 $$g(0) = f(\varphi_{-a}(0)) = f(a) = 0$$
 
-이다. 곧 $g$는 원점을 고정하는 $\mathbb{D}$의 정칙 자기동형사상이다. 원점을 고정하는 단위원판의 자기동형사상이 회전뿐이므로 ([§영점과 일치정리, ⁋예시 8](/ko/math/complex_analysis/zeros_and_identity_theorem#ex8)), 어떤 실수 $\theta$에 대해 $g(z) = e^{i\theta} z$이다. 따라서
+이다. 곧 $g$는 원점을 고정하는 $\mathbb{D}$의 holomorphic automorphism이다. 원점을 고정하는 단위원판의 automorphism이 회전뿐이므로 ([§영점과 일치정리, ⁋예시 8](/ko/math/complex_analysis/zeros_and_identity_theorem#ex8)), 어떤 실수 $\theta$에 대해 $g(z) = e^{i\theta} z$이다. 따라서
 
 $$f = g \circ \varphi_a, \qquad f(z) = e^{i\theta}\,\varphi_a(z) = e^{i\theta}\,\frac{z - a}{1 - \bar a z}$$
 
 이다.
 
-역으로 $f(z) = e^{i\theta}\varphi_a(z)$ 꼴이면, $\varphi_a$이 $\mathbb{D}$의 자기동형사상이고 ([명제 11](#prop11)) 회전 $z \mapsto e^{i\theta}z$도 그러하므로, 그 합성인 $f$도 $\mathbb{D}$의 정칙 자기동형사상이다.
+역으로 $f(z) = e^{i\theta}\varphi_a(z)$ 꼴이면, $\varphi_a$이 $\mathbb{D}$의 automorphism이고 ([명제 11](#prop11)) 회전 $z \mapsto e^{i\theta}z$도 그러하므로, 그 합성인 $f$도 $\mathbb{D}$의 holomorphic automorphism이다.
 :::
 
-정리 12는 단위원판의 정칙 자기동형사상 전체가 두 매개변수, 곧 $a \in \mathbb{D}$와 회전각 $\theta$로 매개됨을 말한다. 이 자기동형사상들은 모두 Möbius 변환이므로 단위원판의 자기동형군은 $\mathrm{PSL}(2, \mathbb{C})$의 한 부분군이며, 그 안에서 단위원을 보존하는 변환들로 이루어진다. 같은 분류는 단위원판 위의 정칙사상이 자연스러운 거리를 늘리지 않는다는 정량적 결과로 이어지는데, 이것이 Schwarz–Pick 정리이다.
+정리 12는 단위원판의 holomorphic automorphism 전체가 두 매개변수, 곧 $a \in \mathbb{D}$와 회전각 $\theta$로 매개됨을 말한다. 이 automorphism들은 모두 Möbius 변환이므로 단위원판의 automorphism group은 $\mathrm{PSL}(2, \mathbb{C})$의 한 subgroup이며, 그 안에서 단위원을 보존하는 변환들로 이루어진다. 같은 분류는 단위원판 위의 holomorphic 사상이 자연스러운 거리를 늘리지 않는다는 정량적 결과로 이어지는데, 이것이 Schwarz–Pick 정리이다.
 
 ::: 정리 13 (Schwarz–Pick)
-$f : \mathbb{D} \to \mathbb{D}$가 정칙이라 하자. 그러면 모든 $z, w \in \mathbb{D}$에 대하여
+$f : \mathbb{D} \to \mathbb{D}$가 holomorphic이라 하자. 그러면 모든 $z, w \in \mathbb{D}$에 대하여
 
 $$\left\lvert \frac{f(z) - f(w)}{1 - \overline{f(w)}\,f(z)} \right\rvert \leq \left\lvert \frac{z - w}{1 - \bar w z} \right\rvert$$
 
@@ -257,7 +257,7 @@ $$\left\lvert \frac{f(z) - f(w)}{1 - \overline{f(w)}\,f(z)} \right\rvert \leq \l
 
 $$\frac{\lvert f'(z)\rvert}{1 - \lvert f(z)\rvert^2} \leq \frac{1}{1 - \lvert z\rvert^2}$$
 
-이다. 어느 한 부등식에서 한 점이라도 등호가 성립하면 $f$는 $\mathbb{D}$의 자기동형사상이고 두 부등식이 모든 점에서 등호가 된다.
+이다. 어느 한 부등식에서 한 점이라도 등호가 성립하면 $f$는 $\mathbb{D}$의 automorphism이고 두 부등식이 모든 점에서 등호가 된다.
 :::
 
 ::: 증명
@@ -265,11 +265,11 @@ $w \in \mathbb{D}$를 고정하고 보조사상
 
 $$F = \varphi_{f(w)} \circ f \circ \varphi_{-w} = \varphi_{f(w)} \circ f \circ \varphi_w^{-1}$$
 
-을 생각한다. 명제 11에 의해 $\varphi_{-w}$과 $\varphi_{f(w)}$이 $\mathbb{D}$를 $\mathbb{D}$로 보내고 $f$도 그러하므로 $F : \mathbb{D} \to \mathbb{D}$은 정칙이다. 또 $\varphi_{-w}(0) = w$이므로
+을 생각한다. 명제 11에 의해 $\varphi_{-w}$과 $\varphi_{f(w)}$이 $\mathbb{D}$를 $\mathbb{D}$로 보내고 $f$도 그러하므로 $F : \mathbb{D} \to \mathbb{D}$은 holomorphic이다. 또 $\varphi_{-w}(0) = w$이므로
 
 $$F(0) = \varphi_{f(w)}(f(\varphi_{-w}(0))) = \varphi_{f(w)}(f(w)) = 0$$
 
-이다 ($\varphi_{f(w)}$이 $f(w)$를 $0$으로 보내므로). 곧 $F$는 원점을 고정하는 $\mathbb{D} \to \mathbb{D}$ 정칙사상이라, Schwarz 보조정리 ([§영점과 일치정리, ⁋정리 7](/ko/math/complex_analysis/zeros_and_identity_theorem#thm7)) 에 의해 모든 $\zeta \in \mathbb{D}$에서 $\lvert F(\zeta)\rvert \leq \lvert \zeta\rvert$이고 $\lvert F'(0)\rvert \leq 1$이다.
+이다 ($\varphi_{f(w)}$이 $f(w)$를 $0$으로 보내므로). 곧 $F$는 원점을 고정하는 $\mathbb{D} \to \mathbb{D}$ holomorphic 사상이라, Schwarz 보조정리 ([§영점과 일치정리, ⁋정리 7](/ko/math/complex_analysis/zeros_and_identity_theorem#thm7)) 에 의해 모든 $\zeta \in \mathbb{D}$에서 $\lvert F(\zeta)\rvert \leq \lvert \zeta\rvert$이고 $\lvert F'(0)\rvert \leq 1$이다.
 
 이제 $\zeta = \varphi_w(z)$를 대입한다. 정의상 $\zeta = (z - w)/(1 - \bar w z)$이고, $\varphi_{-w} = \varphi_w^{-1}$이므로 $\varphi_{-w}(\zeta) = z$, 따라서
 
@@ -285,14 +285,14 @@ $$\frac{\lvert f'(w)\rvert}{1 - \lvert f(w)\rvert^2} \leq \frac{1}{1 - \lvert w\
 
 이다. $w \in \mathbb{D}$이 임의였으므로 둘째 부등식이 모든 점에서 성립한다.
 
-등호의 경우를 본다. 첫 부등식이 어떤 $z_0 \neq w$에서 등호이면 $\lvert F(\zeta_0)\rvert = \lvert \zeta_0\rvert$ ($\zeta_0 = \varphi_w(z_0) \neq 0$) 이고, 둘째 부등식이 어떤 점에서 등호이면 그 점에 대응하는 $w$에서 $\lvert F'(0)\rvert = 1$이다. 어느 경우든 Schwarz 보조정리의 등호조건 ([§영점과 일치정리, ⁋정리 7](/ko/math/complex_analysis/zeros_and_identity_theorem#thm7)) 에 의해 어떤 $\lambda$ ($\lvert \lambda\rvert = 1$) 가 있어 $F(\zeta) = \lambda \zeta$이다. 그러면 $F$가 $\mathbb{D}$의 자기동형사상이고, $f = \varphi_{f(w)}^{-1} \circ F \circ \varphi_w$도 자기동형사상들의 합성이라 자기동형사상이다. 이때 위의 두 부등식은 $\lvert F(\zeta)\rvert = \lvert \zeta\rvert$, $\lvert F'(0)\rvert = 1$로부터 모든 점에서 등호가 된다.
+등호의 경우를 본다. 첫 부등식이 어떤 $z_0 \neq w$에서 등호이면 $\lvert F(\zeta_0)\rvert = \lvert \zeta_0\rvert$ ($\zeta_0 = \varphi_w(z_0) \neq 0$) 이고, 둘째 부등식이 어떤 점에서 등호이면 그 점에 대응하는 $w$에서 $\lvert F'(0)\rvert = 1$이다. 어느 경우든 Schwarz 보조정리의 등호조건 ([§영점과 일치정리, ⁋정리 7](/ko/math/complex_analysis/zeros_and_identity_theorem#thm7)) 에 의해 어떤 $\lambda$ ($\lvert \lambda\rvert = 1$) 가 있어 $F(\zeta) = \lambda \zeta$이다. 그러면 $F$가 $\mathbb{D}$의 automorphism이고, $f = \varphi_{f(w)}^{-1} \circ F \circ \varphi_w$도 automorphism들의 합성이라 automorphism이다. 이때 위의 두 부등식은 $\lvert F(\zeta)\rvert = \lvert \zeta\rvert$, $\lvert F'(0)\rvert = 1$로부터 모든 점에서 등호가 된다.
 :::
 
 Schwarz–Pick 정리는 Schwarz 보조정리를 원점이라는 특정 점에 매이지 않게 풀어낸 형태이다. 좌변의 양
 
 $$\rho(z, w) = \left\lvert \frac{z - w}{1 - \bar w z} \right\rvert$$
 
-은 단위원판 위의 두 점 사이의 *유사쌍곡거리<sub>pseudo-hyperbolic distance</sub>*라 불리며, 정리 13의 첫 부등식은 임의의 정칙사상 $f : \mathbb{D} \to \mathbb{D}$이 이 거리를 늘리지 않음을 뜻한다. 미분형은 같은 사실을 무한소 수준에서 적은 것으로, 단위원판에 $ds = \lvert dz\rvert/(1 - \lvert z\rvert^2)$ 꼴의 거리 (쌍곡거리) 를 줄 때 정칙사상이 그 거리를 늘리지 않으며, 자기동형사상일 때만 정확히 보존한다는 진술이다. 등호가 자기동형사상에서만 성립한다는 사실은 단위원판의 자기동형군이 이 쌍곡거리의 등거리변환군과 정확히 일치함을 시사한다.
+은 단위원판 위의 두 점 사이의 *유사쌍곡거리<sub>pseudo-hyperbolic distance</sub>*라 불리며, 정리 13의 첫 부등식은 임의의 holomorphic 사상 $f : \mathbb{D} \to \mathbb{D}$이 이 거리를 늘리지 않음을 뜻한다. 미분형은 같은 사실을 무한소 수준에서 적은 것으로, 단위원판에 $ds = \lvert dz\rvert/(1 - \lvert z\rvert^2)$ 꼴의 거리 (쌍곡거리) 를 줄 때 holomorphic 사상이 그 거리를 늘리지 않으며, automorphism일 때만 정확히 보존한다는 진술이다. 등호가 automorphism에서만 성립한다는 사실은 단위원판의 automorphism group이 이 쌍곡거리의 등거리변환군과 정확히 일치함을 시사한다.
 
 ## 상반평면과 Cayley 변환
 
@@ -303,11 +303,11 @@ Möbius 변환
 
 $$C(z) = \frac{z - i}{z + i}$$
 
-은 상반평면 $\mathbb{H}$를 단위원판 $\mathbb{D}$로 보내는 등각동형사상이며, 그 역사상은
+은 상반평면 $\mathbb{H}$를 단위원판 $\mathbb{D}$로 보내는 conformal isomorphism이며, 그 역사상은
 
 $$C^{-1}(w) = i\,\frac{1 + w}{1 - w}$$
 
-이다. 곧 $C$는 $\mathbb{H}$와 $\mathbb{D}$ 사이의 정칙 전단사이다.
+이다. 곧 $C$는 $\mathbb{H}$와 $\mathbb{D}$ 사이의 holomorphic 전단사이다.
 :::
 
 ::: 증명
@@ -321,14 +321,14 @@ $$\lvert z + i\rvert^2 - \lvert z - i\rvert^2 = (x^2 + (y+1)^2) - (x^2 + (y-1)^2
 
 $$z = \frac{-i(1 + w)}{w - 1} = \frac{i(1 + w)}{1 - w} = i\,\frac{1 + w}{1 - w}$$
 
-이다. 이것이 $C^{-1}$이며 다시 Möbius 변환이다. $C$가 $\mathbb{H}$를 $\mathbb{D}$ 안으로 보내고 $C^{-1}$이 그 역을 주므로 ($C^{-1}(C(z)) = z$), $C$는 $\mathbb{H}$와 $\mathbb{D}$ 사이의 전단사이고, $C^{-1}(\mathbb{D}) \subseteq \mathbb{H}$임도 같은 거리 논법으로 ($\lvert w\rvert < 1$이 $\Img C^{-1}(w) > 0$과 동치임을 확인하여) 따라 나온다. Möbius 변환은 정칙이므로 ([명제 2 다음의 관찰](#prop2)) $C$는 $\mathbb{H}$와 $\mathbb{D}$ 사이의 등각동형사상이다.
+이다. 이것이 $C^{-1}$이며 다시 Möbius 변환이다. $C$가 $\mathbb{H}$를 $\mathbb{D}$ 안으로 보내고 $C^{-1}$이 그 역을 주므로 ($C^{-1}(C(z)) = z$), $C$는 $\mathbb{H}$와 $\mathbb{D}$ 사이의 전단사이고, $C^{-1}(\mathbb{D}) \subseteq \mathbb{H}$임도 같은 거리 논법으로 ($\lvert w\rvert < 1$이 $\Img C^{-1}(w) > 0$과 동치임을 확인하여) 따라 나온다. Möbius 변환은 holomorphic이므로 ([명제 2 다음의 관찰](#prop2)) $C$는 $\mathbb{H}$와 $\mathbb{D}$ 사이의 conformal isomorphism이다.
 :::
 
-Cayley 변환은 상반평면 위의 문제를 단위원판 위의 문제로, 또는 그 역으로 옮기는 사전 역할을 한다. 가령 정리 12의 단위원판 자기동형사상 분류를 $C$로 옮기면, 상반평면의 정칙 자기동형사상이 정확히 실계수 Möbius 변환
+Cayley 변환은 상반평면 위의 문제를 단위원판 위의 문제로, 또는 그 역으로 옮기는 사전 역할을 한다. 가령 정리 12의 단위원판 automorphism 분류를 $C$로 옮기면, 상반평면의 holomorphic automorphism이 정확히 실계수 Möbius 변환
 
 $$z \mapsto \frac{\alpha z + \beta}{\gamma z + \delta}, \qquad \alpha, \beta, \gamma, \delta \in \mathbb{R},\ \alpha\delta - \beta\gamma > 0$$
 
-들, 곧 $\mathrm{PSL}(2, \mathbb{R})$의 원소들임을 얻는다. 단위원이 실축에 대응하고 단위원판의 쌍곡거리가 상반평면의 쌍곡거리로 옮겨지므로, 두 영역은 등각기하의 관점에서 완전히 같은 대상의 두 모형이 된다. 상반평면 모형은 경계가 직선 (실축) 이라 계산이 간편할 때가 많고, 단위원판 모형은 자기동형사상 $\varphi_a$의 대칭성이 드러나 분류에 유리하여, 문제에 따라 Cayley 변환으로 오가며 둘을 함께 쓴다.
+들, 곧 $\mathrm{PSL}(2, \mathbb{R})$의 원소들임을 얻는다. 단위원이 실축에 대응하고 단위원판의 쌍곡거리가 상반평면의 쌍곡거리로 옮겨지므로, 두 영역은 등각기하의 관점에서 완전히 같은 대상의 두 모형이 된다. 상반평면 모형은 경계가 직선 (실축) 이라 계산이 간편할 때가 많고, 단위원판 모형은 automorphism $\varphi_a$의 대칭성이 드러나 분류에 유리하여, 문제에 따라 Cayley 변환으로 오가며 둘을 함께 쓴다.
 
 ---
 

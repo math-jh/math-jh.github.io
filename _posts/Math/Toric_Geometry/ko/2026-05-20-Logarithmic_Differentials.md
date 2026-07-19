@@ -19,15 +19,15 @@ published: false
 
 이번 글에서 우리는 toric variety $X_\Sigma$ 위에서 $\Omega^1_{X_\Sigma}$ 자체보다는 *boundary $D$를 따라 logarithmic pole을 허용한* 변형 $\Omega^1_{X_\Sigma}(\log D)$를 다룬다. 이는 일반적인 toric variety에서 $\Omega^1_{X_\Sigma}$ 자체는 fan으로부터 깨끗한 묘사를 갖지 않는 반면, $\Omega^1_{X_\Sigma}(\log D)$는 character lattice $M$의 원소들로 완전히 trivialize된다는 놀라운 사실 때문이며, 이 trivialization으로부터 canonical class의 fan-theoretic 공식과 anticanonical hypersurface 위의 표준 volume form이 함께 얻어진다.
 
-## Algebraic torus 위의 불변 미분형식
+## Algebraic torus 위의 invariant differential form
 
 먼저 toric variety $X_\Sigma$가 open dense subset으로 포함하는 algebraic torus $T_N = N \otimes_\mathbb{Z} \mathbb{C}^\ast$ 위에서 자연스럽게 등장하는 differential form들을 살펴본다. ([§아핀 토릭 다양체, ⁋명제 11](/ko/math/toric_geometry/affine_toric_varieties#prop11)) $T_N \cong (\mathbb{C}^\ast)^n$이므로 ($n = \rank N$), $N$의 임의의 $\mathbb{Z}$-기저 $e_1, \ldots, e_n$을 잡으면 coordinate $\x_i \in \mathbb{C}^\ast$들이 $T_N$의 좌표가 된다.
 
-$T_N$ 위에서는 $\x_i \neq 0$이므로 $d\x_i/\x_i$가 well-defined holomorphic 1-form이다. 이는 affine 좌표 $d\x_i$와 달리 torus 작용에 대해 invariant라는 결정적인 성질을 가진다. 구체적으로 $t \in T_N$의 작용 $\x_i \mapsto t_i \x_i$ 하에서
+$T_N$ 위에서는 $\x_i \neq 0$이므로 $d\x_i/\x_i$가 well-defined holomorphic 1-form이다. 이는 affine 좌표 $d\x_i$와 달리 torus action에 대해 invariant라는 결정적인 성질을 가진다. 구체적으로 $t \in T_N$의 action $\x_i \mapsto t_i \x_i$ 하에서
 
 $$t^\ast \!\left(\frac{d\x_i}{\x_i}\right) = \frac{d(t_i \x_i)}{t_i \x_i} = \frac{t_i \, d\x_i}{t_i \x_i} = \frac{d\x_i}{\x_i}$$
 
-이므로, 형식적으로 $d\log \x_i$로 적을 수 있는 이 1-form은 *multiplicative* 좌표계 $T_N$에 가장 자연스럽게 적응한 미분형식이다.
+이므로, 형식적으로 $d\log \x_i$로 적을 수 있는 이 1-form은 *multiplicative* 좌표계 $T_N$에 가장 자연스럽게 적응한 differential form이다.
 
 이를 lattice의 언어로 일반화하기 위해, 각 character $\rchi^m: T_N \to \mathbb{C}^\ast$ ($m \in M$)에 대해 logarithmic differential
 
@@ -54,7 +54,7 @@ $$\Psi: M_\mathbb{C} = M \otimes_\mathbb{Z} \mathbb{C} \longrightarrow \Omega^1(
 이 정의된다. 우리의 첫 결과는 이 map이 정확히 $T_N$-invariant 1-form의 공간 위로 isomorphism이라는 것이다.
 
 ::: 명제 2
-$\Psi$는 $T_N$-invariant global 1-form의 공간 $\Omega^1(T_N)^{T_N}$ 위로의 $\mathbb{C}$-vector space isomorphism
+$\Psi$는 $T_N$-invariant global 1-form의 공간 $\Omega^1(T_N)^{T_N}$ 위로의 $\mathbb{C}$-벡터공간 isomorphism
 
 $$\Psi: M_\mathbb{C} \xrightarrow{\ \sim\ } \Omega^1(T_N)^{T_N}$$
 
@@ -172,7 +172,7 @@ $X_\Sigma = \mathbb{P}^n$의 경우 fan은 $N = \mathbb{Z}^n$의 standard 기저
 
 $$\Omega^1_{\mathbb{P}^n}(\log D) \cong \mathcal{O}_{\mathbb{P}^n}^{\oplus n};\qquad \text{기저: } \frac{d\x_1}{\x_1}, \ldots, \frac{d\x_n}{\x_n}$$
 
-이 된다. 한편 $e_0$에 대응하는 ray의 $d\log$인 $d\log(\rchi^{-e_1^\ast - \cdots - e_n^\ast}) = -\sum_i d\x_i / \x_i$가 위의 $n$개 기저의 음의 합으로 자동적으로 표현되는 것은 fan의 ray가 $M$의 rank를 초과해도 $M$ 자체가 결국 모든 logarithmic form들을 매개하는 것의 한 단면이다.
+이 된다. 한편 $e_0$에 대응하는 ray의 $d\log$인 $d\log(\rchi^{-e_1^\ast - \cdots - e_n^\ast}) = -\sum_i d\x_i / \x_i$가 위의 $n$개 기저의 음의 합으로 자동적으로 표현되는 것은 fan의 ray가 $M$의 rank를 초과해도 $M$ 자체가 결국 모든 logarithmic form들을 매개하는 것의 한 section이다.
 :::
 
 ::: 예시 11

@@ -83,7 +83,7 @@ Forgetful functor $U:\lMod{A} \rightarrow\Set$과 위에서 정의한 free funct
 
 ## 가군의 텐서곱
 
-한편 우리는 $A$-module들의 텐서곱 또한 정의할 수 있다. 우선 다음 정의부터 시작한다. 
+한편 우리는 $A$-module들의 tensor product 또한 정의할 수 있다. 우선 다음 정의부터 시작한다. 
 
 ::: 정의 4
 Ring $A$와 right $A$-module $M$, left $A$-module $N$이 주어졌다 하자. 그럼 임의의 abelian group $L$에 대하여, 함수 $f:M\times N \rightarrow L$이 *$A$-balanced*라는 것은 $f$가 abelian group들 사이의 함수로서 bilinear이고, 추가로 다음 식

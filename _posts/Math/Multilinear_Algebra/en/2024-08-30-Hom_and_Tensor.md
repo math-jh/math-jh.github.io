@@ -89,7 +89,7 @@ In particular, if $L=A$, we obtain the following corollary.
 ::: Corollary 4
 Let two arbitrary $A$-modules $M,N$ be given. If either $M$ or $N$ is a finitely generated projective $A$-module, then there is an isomorphism
 
-$M^\ast \otimes_AN\cong \Hom_{\rMod{A}}(M,N)$
+$$M^\ast \otimes_AN\cong \Hom_{\rMod{A}}(M,N)$$
 :::
 
 Also, setting $N=\Hom_{\rMod{A}}(M', L')$, we obtain the following corollary.
@@ -141,5 +141,5 @@ Moreover, one can check that $\tr$ is an $A$-linear map, and furthermore the fol
 ::: Proposition 7
 For any two finitely generated projective $A$-modules $M,N$ and $A$-linear maps $u:M \rightarrow N$, $v:N \rightarrow M$ between them,
 
-$\tr(u\circ v)=\tr(v\circ u)$
+$$\tr(u\circ v)=\tr(v\circ u)$$
 :::

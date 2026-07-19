@@ -41,7 +41,7 @@ By definition, the coset $v+W$ consists of all vectors whose difference from $v$
 ::: Lemma 2
 For a $\mathbb{K}$-vector space $V$ and its subspace $W\leq V$, and for any two vectors $v,v'\in V$, the following equivalence holds:
 
-$v+W=v'+W\iff v-v'\in W$
+$$v+W=v'+W\iff v-v'\in W$$
 :::
 ::: Proof
 First, if $v-v'\in W$, then for any representative $v+w\in v+W$ we have $v+w=v'+\bigl((v-v')+w\bigr)\in v'+W$, and the converse holds in the same way, so $v+W=v'+W$.

@@ -108,7 +108,7 @@ Therefore, from [§Basic Notions, ⁋Proposition 11](/en/math/commutative_algebr
 ::: Lemma 5
 Let $\mathbb{K}$ be a field. Then $\mathfrak{m}_a=(\x_1-a_1,\ldots, \x_n-a_n)$ is a maximal ideal of $\mathbb{K}[\x_1,\ldots, \x_n]$. Furthermore, if $\mathbb{K}$ is algebraically closed, there is a one-to-one correspondence between maximal ideals of $\mathbb{K}[\x_1,\ldots,\x_n]/(f_1,\ldots, f_r)$ and solutions $(x_1,\ldots, x_n)$ of the system
 
-$f_1(x_1,\ldots, x_n)=\cdots=f_r(x_1,\ldots, x_n)=0$
+$$f_1(x_1,\ldots, x_n)=\cdots=f_r(x_1,\ldots, x_n)=0$$
 :::
 
 A slightly more traditional version of the Nullstellensatz also follows from this. To state it, consider the function $Z$ that sends an ideal $\mathfrak{a}$ of $\mathbb{K}[\x_1,\ldots, \x_n]$ to the subset $Z(\mathfrak{a})$ of $\mathbb{K}^n$

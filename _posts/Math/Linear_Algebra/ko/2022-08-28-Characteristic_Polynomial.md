@@ -67,13 +67,13 @@ $$\det(\x I-A)=\det(\x I-PBP^{-1})=\det(P(\x I-B)P^{-1})=\det P\det(\x I-B)\det 
 임의의 linear map $L:V\rightarrow V$에 대하여, $L$의 특성다항식을 <phrase>행렬 $[L]_\mathcal{B}^\mathcal{B}$의 특성다항식</phrase>으로 정의한 것이 잘 정의된다.
 :::
 ::: 증명
-즉, $V$의 basis $\mathcal{B}$ 대신 $\mathcal{C}$를 택하여도 $L$의 특성다항식에는 변화가 없다는 것을 보여야 한다. 앞선 논증에 의하여, 이는 [§기저변환, ⁋명제 5](/ko/math/multilinear_algebra/change_of_basis#prop5) 이후의 식으로부터 두 행렬표현 $[L]_\mathcal{B}^\mathcal{B}$와 $[L]_\mathcal{C}^\mathcal{C}$가 서로 닮은 행렬이라는 것을 관찰하는 것으로 충분하다.
+즉, $V$의 basis $\mathcal{B}$ 대신 $\mathcal{C}$를 택하여도 $L$의 특성다항식에는 변화가 없다는 것을 보여야 한다. 앞선 논증에 의하여, 이는 [§기저변환, ⁋명제 5](/ko/math/multilinear_algebra/change_of_basis#prop5) 이후의 식으로부터 두 행렬표현 $[L]_\mathcal{B}^\mathcal{B}$와 $[L]_\mathcal{C}^\mathcal{C}$가 서로 similar라는 것을 관찰하는 것으로 충분하다.
 :::
 
 편의상 앞으로의 논의는 모두 행렬에 대한 것으로 통일하지만, 위의 따름정리를 통해 우리는 똑같은 내용을 임의의 linear map $L$에 대하여도 증명할 수 있다.
 
 ::: 따름정리 5
-서로 닮은 행렬의 trace와 행렬식은 같다. 
+서로 similar의 trace와 행렬식은 같다. 
 :::
 ::: 증명
 앞선 논증으로부터 $A$와 $B$는 같은 특성다항식을 갖는다는 것을 알고, [명제 2](#prop2)로부터 행렬의 trace와 행렬식은 특성다항식으로부터 결정된다. 

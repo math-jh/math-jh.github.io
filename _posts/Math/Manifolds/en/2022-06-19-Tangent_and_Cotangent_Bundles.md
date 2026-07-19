@@ -137,7 +137,7 @@ The proof of the following theorem can be found in Theorem 3.6 of **[MS]**.
 ::: Theorem 6
 Let an arbitrary smooth functor $F:(\mathbf{FVect}_\text{iso})^n\rightarrow \mathbf{FVect}_\text{iso}$ and $n$ vector bundles $E_i\rightarrow B$ with a common base space $B$ be given. Then there exists a vector bundle $E\rightarrow B$ whose fiber at each $b\in B$ is given by
 
-$E_b=F((E_1)_b,\ldots,(E_n)_b)$
+$$E_b=F((E_1)_b,\ldots,(E_n)_b)$$
 :::
 
 We denote the vector bundle $E$ obtained by the above process simply as $F(E_1,\ldots, E_n)$.

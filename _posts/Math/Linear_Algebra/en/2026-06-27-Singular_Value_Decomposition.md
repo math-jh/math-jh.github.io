@@ -86,7 +86,7 @@ In [§Least Squares Method, ⁋Definition 7](/en/math/linear_algebra/least_squar
 ::: Definition 5
 Let a singular value decomposition $A=U\Sigma V^t$ of a matrix $A\in\Mat_{m\times n}(\mathbb{R})$ be given. For the positive singular values $\sigma_i$ of $\Sigma$, let $\Sigma^+$ be the $n\times m$ diagonal matrix whose $(i,i)$-entry is $1/\sigma_i$ and whose remaining entries are $0$. Then we define the *Moore–Penrose pseudoinverse* of $A$ as
 
-$A^+=V\Sigma^+U^t$
+$$A^+=V\Sigma^+U^t$$
 :::
 
 For this to make sense, we must verify that the definition does not depend on the choice of singular value decomposition. This follows from the next proposition.
@@ -94,7 +94,7 @@ For this to make sense, we must verify that the definition does not depend on th
 ::: Proposition 6
 The matrix $A^+$ of [Definition 5](#def5) satisfies all four conditions
 
-$AA^+A=A,\quad A^+AA^+=A^+,\quad (AA^+)^t=AA^+,\quad (A^+A)^t=A^+A$
+$$AA^+A=A,\quad A^+AA^+=A^+,\quad (AA^+)^t=AA^+,\quad (A^+A)^t=A^+A$$
 :::
 ::: Proof
 $\Sigma\Sigma^+$ is the $m\times m$ diagonal matrix whose $(i,i)$-entry is $1$ for $1\leq i\leq r$ and $0$ otherwise, and $\Sigma^+\Sigma$ is the $n\times n$ diagonal matrix defined in the same way. Both are symmetric, and one can verify directly entrywise that $\Sigma\Sigma^+\Sigma=\Sigma$ and $\Sigma^+\Sigma\Sigma^+=\Sigma^+$. Now using $A=U\Sigma V^t$, $A^+=V\Sigma^+U^t$, and $U^tU=I$, $V^tV=I$, we have

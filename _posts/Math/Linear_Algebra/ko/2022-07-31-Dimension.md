@@ -201,7 +201,7 @@ $$(\beta_1-\alpha_1')y_1+\cdots+(\beta_k-\alpha_k')y_k+\beta_{k+1}y_{k+1}+\cdots
 
 이 되므로, $\mathcal{B}_1$의 일차독립성에 의해 계수들이 모두 0이고, 특히 $\beta_{k+1}=\cdots=\beta_m=0$이다. 마찬가지로 둘째 등식에서 $\gamma_{k+1}=\cdots=\gamma_n=0$이고, 그럼 (2)에서 남는 식은 $\alpha_1x_1+\cdots+\alpha_kx_k=0$뿐인데 $x_1,\ldots,x_k$는 $W_1\cap W_2$의 basis이므로 다시 일차독립성에 의해 이들도 모두 0이다. 즉, $\mathcal{B}_1\cup\mathcal{B}_2$는 $W_1+W_2$를 span하는 일차독립인 부분집합이고 따라서 $W_1+W_2$의 basis이다. 이제
 
-$\dim(W_1+W_2)=\lvert\mathcal{B}_1\cup\mathcal{B}_2\rvert=\lvert\mathcal{B}_1\rvert+\lvert\mathcal{B}_2\rvert-\lvert\mathcal{B}_0\rvert=\dim W_1+\dim W_2-\dim(W_1\cap W_2).$
+$$\dim(W_1+W_2)=\lvert\mathcal{B}_1\cup\mathcal{B}_2\rvert=\lvert\mathcal{B}_1\rvert+\lvert\mathcal{B}_2\rvert-\lvert\mathcal{B}_0\rvert=\dim W_1+\dim W_2-\dim(W_1\cap W_2).$$
 :::
 
 

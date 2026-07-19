@@ -86,7 +86,7 @@ For any three subgroups $H, H', H''$ of a group $G$ the following hold.
 ::: Definition 3
 For a group $G$, we define the *lower central series* $(C_n(G))_{n \geq 1}$ of $G$ by the formula
 
-$C_1(G) = G, \qquad C_{n+1}(G) = [G, C_n(G)]$
+$$C_1(G) = G, \qquad C_{n+1}(G) = [G, C_n(G)]$$
 :::
 
 Then the following holds.
@@ -172,7 +172,7 @@ We now define another kind of series.
 ::: Definition 9
 The *derived series* of a group $G$ is the series of subgroups of $G$ given by the formula
 
-$D_0(G) = G, \qquad D_{n+1}(G) = [D_n(G), D_n(G)]$
+$$D_0(G) = G, \qquad D_{n+1}(G) = [D_n(G), D_n(G)]$$
 :::
 
 Then, just as for nilpotent groups, the following proposition holds.

@@ -127,7 +127,7 @@ $$\int_c^b f(x) \mathop{dx} = \int_{1/(b-c)}^\infty \frac{f(c + 1/u)}{u^2} \math
 이 판정들이 실제로 쓰이려면 비교할 표준 함수가 있어야 하는데, 그 역할은 거의 항상 거듭제곱함수나 지수함수 $e^{-x}$가 맡는다. 그중 거듭제곱함수의 적분은 수렴과 발산을 가르는 (거의) sharp한 경계를 보여 준다.
 
 ::: 예시 5 (p-적분)
-거듭제곱의 이상적분은 무한구간과 특이점에서 정확히 반대의 경계를 보인다. 무한구간 $\int_1^{\infty} x^{-p} \mathop{dx}$는 $p > 1$에서 수렴하고 $p \leq 1$에서 발산하는 반면, 특이점을 포함하는 $\int_0^1 x^{-p} \mathop{dx}$는 거꾸로 $p < 1$에서 수렴하고 $p \geq 1$에서 발산한다. 이 계산은 둘 다 같은 원시함수에서 나오는데, $p \neq 1$이면
+거듭제곱의 이상적분은 무한구간과 singular point에서 정확히 반대의 경계를 보인다. 무한구간 $\int_1^{\infty} x^{-p} \mathop{dx}$는 $p > 1$에서 수렴하고 $p \leq 1$에서 발산하는 반면, singular point를 포함하는 $\int_0^1 x^{-p} \mathop{dx}$는 거꾸로 $p < 1$에서 수렴하고 $p \geq 1$에서 발산한다. 이 계산은 둘 다 같은 원시함수에서 나오는데, $p \neq 1$이면
 
 $$\int_1^t x^{-p} \mathop{dx} = \frac{t^{1-p} - 1}{1 - p}, \qquad \int_t^1 x^{-p} \mathop{dx} = \frac{1 - t^{1-p}}{1 - p}$$
 
@@ -135,7 +135,7 @@ $$\int_1^t x^{-p} \mathop{dx} = \frac{t^{1-p} - 1}{1 - p}, \qquad \int_t^1 x^{-p
 
 $$\int_1^\infty x^{-p} \mathop{dx} = \frac{1}{p - 1} \quad (p > 1), \qquad \int_0^1 x^{-p} \mathop{dx} = \frac{1}{1 - p} \quad (p < 1)$$
 
-이다. 직관적으로 이는 무한구간에서는 큰 $p$가 빨리 감소해 수렴을 돕지만, 특이점 근처에서는 큰 $p$가 더 빨리 증가해 발산이 일어나는 것으로 볼 수 있으며, 이는 $1/x$와 $1/x^2$를 그린 다음의 그림에서 명확하게 눈으로 볼 수 있다. 
+이다. 직관적으로 이는 무한구간에서는 큰 $p$가 빨리 감소해 수렴을 돕지만, singular point 근처에서는 큰 $p$가 더 빨리 증가해 발산이 일어나는 것으로 볼 수 있으며, 이는 $1/x$와 $1/x^2$를 그린 다음의 그림에서 명확하게 눈으로 볼 수 있다. 
 
 ![1/x와 1/x²의 그래프](/assets/images/Math/Calculus/Improper_Integrals-1.svg){:style="width:12.69em" class="invert" .align-center}
 :::

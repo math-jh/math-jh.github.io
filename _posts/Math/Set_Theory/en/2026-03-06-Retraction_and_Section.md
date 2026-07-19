@@ -102,7 +102,7 @@ Let $f:A\rightarrow B$ and $f':B\rightarrow C$ be functions, and set $f''=f'\cir
 
 4. Since $f''$ is surjective, for any $c\in C$ there exists $a\in A$ with $f''(a)=c$. Thus $f'(f(a))=c$, so taking $b=f(a)\in B$ gives $f'(b)=c$. Moreover, for any $c\in C$,
 
-     $(f'\circ(f\circ s''))(c)=(f''\circ s'')(c)=\id_C(c)=c.$  
+     $$(f'\circ(f\circ s''))(c)=(f''\circ s'')(c)=\id_C(c)=c.$$
 :::
 
 ::: Proposition 4

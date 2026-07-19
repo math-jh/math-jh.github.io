@@ -41,7 +41,7 @@ $a_n \to L$이라 하자. 임의의 $\varepsilon > 0$에 대해 $N$을 잡아 $n
 :::
 
 ::: 명제 3
-Cauchy 수열은 유계이다.
+Cauchy 수열은 bounded이다.
 :::
 
 ::: 증명
@@ -55,7 +55,7 @@ $\varepsilon = 1$에 대응하는 $N$을 잡으면, $n \geq N$에서 $\lvert a_n
 :::
 
 ::: 증명
-수렴 $\Rightarrow$ Cauchy는 [명제 2](#prop2)이다. 역을 보이자. $(a_n)$이 Cauchy이면 [명제 3](#prop3)에 의해 유계이고, [§부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4)에 의해 수렴하는 부분수열 $a_{n_k} \to L$이 존재한다. 이제 전체 수열이 같은 $L$로 수렴함을 보인다. 임의의 $\varepsilon > 0$에 대해, Cauchy 조건으로 $m, n \geq N$이면 $\lvert a_m - a_n\rvert < \varepsilon/2$이게 $N$을 잡고, 부분수열의 수렴으로 $n_k \geq N$이면서 $\lvert a_{n_k} - L\rvert < \varepsilon/2$인 $k$를 잡는다. 그러면 모든 $n \geq N$에 대해
+수렴 $\Rightarrow$ Cauchy는 [명제 2](#prop2)이다. 역을 보이자. $(a_n)$이 Cauchy이면 [명제 3](#prop3)에 의해 bounded이고, [§부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4)에 의해 수렴하는 부분수열 $a_{n_k} \to L$이 존재한다. 이제 전체 수열이 같은 $L$로 수렴함을 보인다. 임의의 $\varepsilon > 0$에 대해, Cauchy 조건으로 $m, n \geq N$이면 $\lvert a_m - a_n\rvert < \varepsilon/2$이게 $N$을 잡고, 부분수열의 수렴으로 $n_k \geq N$이면서 $\lvert a_{n_k} - L\rvert < \varepsilon/2$인 $k$를 잡는다. 그러면 모든 $n \geq N$에 대해
 
 $$\lvert a_n - L\rvert \leq \lvert a_n - a_{n_k}\rvert + \lvert a_{n_k} - L\rvert < \varepsilon$$
 

@@ -1,7 +1,7 @@
 ---
 title: "열린집합과 닫힌집합"
-description: "거리공간에서 열린집합과 닫힌집합을 정의하고, 열린집합이 위상의 공리를 만족함을 보인다. 닫힌집합을 수렴하는 점열의 극한으로 특징짓고, 폐포의 개념을 도입하여 위상수학과의 연결을 명확히 한다."
-excerpt: "열린집합과 위상, 닫힌집합의 점열 특징화, 폐포"
+description: "거리공간에서 열린집합과 닫힌집합을 정의하고, 열린집합이 위상의 공리를 만족함을 보인다. 닫힌집합을 수렴하는 점열의 극한으로 특징짓고, closure의 개념을 도입하여 위상수학과의 연결을 명확히 한다."
+excerpt: "열린집합과 위상, 닫힌집합의 점열 특징화, closure"
 
 categories: [Math / Analysis]
 permalink: /ko/math/analysis/open_and_closed_sets
@@ -56,7 +56,7 @@ $F$가 닫혀 있다고 하자. $x_n \in F$, $x_n \to x$인데 $x \notin F$라�
 거꾸로 $F$가 점열 극한에 대해 닫혀 있다고 하자. $X \setminus F$가 열려 있지 않다면, 어떤 $x \in X\setminus F$에 대해 모든 $r$에서 $B(x, r)$가 $F$의 점을 포함한다. $r = 1/n$으로 잡아 $x_n \in F \cap B(x, 1/n)$을 택하면 $x_n \to x$이고 가정에 의해 $x \in F$가 되어 $x \in X\setminus F$에 모순이다.
 :::
 
-집합 $A$를 포함하는 가장 작은 닫힌집합을 $A$의 *폐포<sub>closure</sub>* $\overline{A}$라 한다. [명제 4](#prop4)에 의해 $\overline{A}$는 정확히 $A$의 점열로 도달할 수 있는 모든 점, 즉 $A$의 극한점들을 $A$에 더한 것이다. 이러한 내부·폐포·경계의 위상적 개념들은 [\[위상수학\] §집합의 내부, 폐포, 경계](/ko/math/topology/other_concepts)에서 일반 위상공간에 대해 다루어진다.
+집합 $A$를 포함하는 가장 작은 닫힌집합을 $A$의 *폐포<sub>closure</sub>* $\overline{A}$라 한다. [명제 4](#prop4)에 의해 $\overline{A}$는 정확히 $A$의 점열로 도달할 수 있는 모든 점, 즉 $A$의 limit point들을 $A$에 더한 것이다. 이러한 내부·폐포·경계의 위상적 개념들은 [\[위상수학\] §집합의 내부, 폐포, 경계](/ko/math/topology/other_concepts)에서 일반 위상공간에 대해 다루어진다.
 
 여집합을 취하면 [명제 2](#prop2)가 닫힌집합에 대한 쌍대 명제로 그대로 옮겨진다. 드모르간 법칙에 의해 합집합과 교집합의 역할이 뒤바뀌므로, 닫힌집합의 모임은 임의의 교집합과 유한 합집합에 대해 닫혀 있다. 이를 정리하면 다음과 같다.
 
@@ -94,26 +94,26 @@ $$\mathbb{R} \setminus \{0\} = (-\infty, 0) \cup (0, \infty)$$
 임의의 거리공간 $X$에서 $\varnothing$과 $X$는 [명제 2](#prop2)와 [명제 5](#prop5)에 의해 둘 다 열려 있고 닫혀 있다. 이렇게 열리면서 닫힌 집합을 *열린닫힌집합<sub>clopen set</sub>*이라 한다. 연결되지 않은 공간에서는 자명하지 않은 열린닫힌집합이 나타난다. 부분공간 $X = (0, 1) \cup (2, 3) \subseteq \mathbb{R}$에서 조각 $(0, 1)$은 $X$의 열린집합이면서, 그 여집합 $(2, 3)$도 열려 있어 동시에 닫힌집합이다. 한 공간에서 자명하지 않은 열린닫힌집합이 존재하는지 여부가 연결성의 척도가 된다.
 :::
 
-폐포는 점열의 극한을 모두 더해 집합을 닫는 연산이다. 정의로 직접 계산하기보다 [명제 4](#prop4)의 [§함수의 극한과 연속, ⁋명제 2](/ko/math/analysis/limits_and_continuity#prop2)를 쓰면 폐포를 손쉽게 결정할 수 있다. 가령 $\overline{(a, b)} = [a, b]$인데 끝점 $a, b$가 각각 $a + 1/n$, $b - 1/n$의 극한으로 도달되기 때문이고, $\overline{\mathbb{Q}} = \mathbb{R}$인데 [§실수의 완비성, ⁋정리 5](/ko/math/analysis/completeness_of_reals#thm5)에 의해 임의의 실수가 유리수열의 극한이기 때문이다.
+Closure는 점열의 극한을 모두 더해 집합을 닫는 연산이다. 정의로 직접 계산하기보다 [명제 4](#prop4)의 [§함수의 극한과 연속, ⁋명제 2](/ko/math/analysis/limits_and_continuity#prop2)를 쓰면 closure를 손쉽게 결정할 수 있다. 가령 $\overline{(a, b)} = [a, b]$인데 끝점 $a, b$가 각각 $a + 1/n$, $b - 1/n$의 극한으로 도달되기 때문이고, $\overline{\mathbb{Q}} = \mathbb{R}$인데 [§실수의 완비성, ⁋정리 5](/ko/math/analysis/completeness_of_reals#thm5)에 의해 임의의 실수가 유리수열의 극한이기 때문이다.
 
-폐포가 점열의 극한을 더하는 연산임을 가장 또렷이 보여 주는 것은 집합 $\{1/n : n \in \mathbb{N}\}$이다. 이 집합 자체는 닫혀 있지 않다. 점열
+Closure가 점열의 극한을 더하는 연산임을 가장 또렷이 보여 주는 것은 집합 $\{1/n : n \in \mathbb{N}\}$이다. 이 집합 자체는 닫혀 있지 않다. 점열
 
 $$x_n = \frac1n \longrightarrow 0$$
 
-의 극한 $0$이 집합 밖에 있어 [명제 4](#prop4)의 판정에 걸리기 때문이다. 이 한 점을 더한 $\{1/n : n \in \mathbb{N}\} \cup \{0\}$은 더 이상 빠져나갈 극한이 없어 닫히며, 그것이 곧 폐포이다.
+의 극한 $0$이 집합 밖에 있어 [명제 4](#prop4)의 판정에 걸리기 때문이다. 이 한 점을 더한 $\{1/n : n \in \mathbb{N}\} \cup \{0\}$은 더 이상 빠져나갈 극한이 없어 닫히며, 그것이 곧 closure이다.
 
-폐포는 닫힘 연산으로서 깔끔한 대수적 성질을 가진다. 특히 합집합과는 잘 어울리지만 교집합과는 그렇지 않다.
+Closure는 닫힘 연산으로서 깔끔한 대수적 성질을 가진다. 특히 합집합과는 잘 어울리지만 교집합과는 그렇지 않다.
 
 ::: 명제 7
 $A, B \subseteq X$에 대하여 $\overline{A \cup B} = \overline{A} \cup \overline{B}$이다. 그러나 일반적으로 $\overline{A \cap B} \subseteq \overline{A} \cap \overline{B}$만 성립하며 등호는 성립하지 않을 수 있다.
 :::
 
 ::: 증명
-$A \subseteq A \cup B$이고 폐포는 포함을 보존하므로 $\overline{A} \subseteq \overline{A \cup B}$, 마찬가지로 $\overline{B} \subseteq \overline{A \cup B}$이며, 따라서
+$A \subseteq A \cup B$이고 closure는 포함을 보존하므로 $\overline{A} \subseteq \overline{A \cup B}$, 마찬가지로 $\overline{B} \subseteq \overline{A \cup B}$이며, 따라서
 
 $$\overline{A} \cup \overline{B} \subseteq \overline{A \cup B}$$
 
-이다. 역포함을 위해 $\overline{A} \cup \overline{B}$가 닫힌집합임을 보면 충분하다 ([명제 5](#prop5)의 (3), 두 닫힌집합의 합집합). $A \cup B \subseteq \overline{A} \cup \overline{B}$이고 우변이 $A \cup B$를 포함하는 닫힌집합이므로, 폐포가 그러한 가장 작은 닫힌집합이라는 정의에서 $\overline{A \cup B} \subseteq \overline{A} \cup \overline{B}$를 얻는다. 교집합의 경우 $A \cap B \subseteq A$에서 $\overline{A \cap B} \subseteq \overline{A}$, 같은 식으로 $\overline{A \cap B} \subseteq \overline{B}$이므로 $\overline{A \cap B} \subseteq \overline{A} \cap \overline{B}$이다. 등호가 깨지는 예로 $A = (0, 1)$, $B = (1, 2)$를 들면 $A \cap B = \varnothing$이라 $\overline{A \cap B} = \varnothing$이지만, $\overline{A} \cap \overline{B} = [0, 1] \cap [1, 2] = \{1\}$이다.
+이다. 역포함을 위해 $\overline{A} \cup \overline{B}$가 닫힌집합임을 보면 충분하다 ([명제 5](#prop5)의 (3), 두 닫힌집합의 합집합). $A \cup B \subseteq \overline{A} \cup \overline{B}$이고 우변이 $A \cup B$를 포함하는 닫힌집합이므로, closure가 그러한 가장 작은 닫힌집합이라는 정의에서 $\overline{A \cup B} \subseteq \overline{A} \cup \overline{B}$를 얻는다. 교집합의 경우 $A \cap B \subseteq A$에서 $\overline{A \cap B} \subseteq \overline{A}$, 같은 식으로 $\overline{A \cap B} \subseteq \overline{B}$이므로 $\overline{A \cap B} \subseteq \overline{A} \cap \overline{B}$이다. 등호가 깨지는 예로 $A = (0, 1)$, $B = (1, 2)$를 들면 $A \cap B = \varnothing$이라 $\overline{A \cap B} = \varnothing$이지만, $\overline{A} \cap \overline{B} = [0, 1] \cap [1, 2] = \{1\}$이다.
 :::
 
 마지막으로 폐포·내부·경계가 점의 위치를 어떻게 분류하는지 한 예에서 종합한다. 집합 $A$의 *내부<sub>interior</sub>* $A^\circ$는 $A$에 포함되는 가장 큰 열린집합이고, *경계<sub>boundary</sub>* $\partial A$는 $\overline{A} \setminus A^\circ$로 정의된다.
@@ -123,7 +123,7 @@ $\mathbb{R}^2$에서 닫힌 단위원판 $A = \{ (x, y) : x^2 + y^2 \leq 1 \}$�
 
 $$A^\circ = \{ (x, y) : x^2 + y^2 < 1 \}, \qquad \overline{A} = A, \qquad \partial A = \{ (x, y) : x^2 + y^2 = 1 \}$$
 
-이다. 내부는 열린 원판이다: 경계원 위의 점 $p$에서는 아무리 작은 공도 원 밖으로 새어나가 $A$에 담기지 못하므로 $p \notin A^\circ$이지만, $\lVert p\rVert < 1$인 점에서는 $r = 1 - \lVert p\rVert > 0$짜리 공이 $A$에 들어간다. $A$가 이미 닫혀 있으므로 폐포는 자기 자신이고, 경계는 정의에 따라 단위원이 된다. 같은 집합을 부분공간 $X = A$ 자체에서 보면 사정이 달라진다. $X$ 안에서는 $A$ 전체가 $X$이므로 열린닫힌집합이고 $A^\circ = A$, $\partial A = \varnothing$이 된다. 열림·닫힘·경계는 모두 그 집합이 놓인 주위 공간에 상대적인 개념임을 보여 준다.
+이다. 내부는 열린 원판이다: 경계원 위의 점 $p$에서는 아무리 작은 공도 원 밖으로 새어나가 $A$에 담기지 못하므로 $p \notin A^\circ$이지만, $\lVert p\rVert < 1$인 점에서는 $r = 1 - \lVert p\rVert > 0$짜리 공이 $A$에 들어간다. $A$가 이미 닫혀 있으므로 closure는 자기 자신이고, 경계는 정의에 따라 단위원이 된다. 같은 집합을 부분공간 $X = A$ 자체에서 보면 사정이 달라진다. $X$ 안에서는 $A$ 전체가 $X$이므로 열린닫힌집합이고 $A^\circ = A$, $\partial A = \varnothing$이 된다. 열림·닫힘·경계는 모두 그 집합이 놓인 주위 공간에 상대적인 개념임을 보여 준다.
 :::
 
 열림과 닫힘이 거리 자체가 아니라 거리가 유도하는 열린집합들의 모임에만 의존한다는 점은, 거리를 바꾸어 보면 분명해진다. 같은 바탕집합 위에 서로 다른 거리를 주더라도 두 거리가 같은 열린집합들을 낳으면 (이를 *동치인 거리<sub>equivalent metrics</sub>*라 한다) 열린·닫힌집합의 개념은 완전히 일치한다.

@@ -32,7 +32,7 @@ $$\ell(D) - \ell(K_C - D) = \deg D + 1 - g$$
 ::: 정의 1
 Smooth surface $S$ 위의 두 divisor $C, D$의 *intersection number<sub>교차수</sub>* $C \cdot D$를 다음과 같이 정의한다.
 
-$C \cdot D = \rchi(\mathcal{O}_S(C + D)) - \rchi(\mathcal{O}_S(C)) - \rchi(\mathcal{O}_S(D)) + \rchi(\mathcal{O}_S)$
+$$C \cdot D = \rchi(\mathcal{O}_S(C + D)) - \rchi(\mathcal{O}_S(C)) - \rchi(\mathcal{O}_S(D)) + \rchi(\mathcal{O}_S)$$
 :::
 
 이들의 기하학적 의미를 살펴보기 위해, $C$와 $D$가 각각 global section $s \in H^0(\mathcal{O}(C))$, $t \in H^0(\mathcal{O}(D))$로 정의되는 effective divisor라 하자. 그럼 이들의 common zero locus는 $C \cap D$이며, 다음 exact sequence가 성립한다.

@@ -17,7 +17,7 @@ weight: 2
 이 카테고리의 모든 글들에서 ring은 commutative ring (with unity)를 의미한다. 
 :::
 
-이번 글에서 우리는 대수기하학의 가장 기본적인 대상인 스펙트럼을 정의한다. 스펙트럼은 적당한 structure sheaf가 주어져 있는 위상공간으로, 우리는 우선 이번 글에서 이를 집합으로서 정의하고, 그 위에 위상을 정의할 것이다. 그 후, 다음 글에서는 $\Spec A$ 위에 structure sheaf를 정의하게 된다. 
+이번 글에서 우리는 대수기하학의 가장 기본적인 대상인 spectrum을 정의한다. spectrum은 적당한 structure sheaf가 주어져 있는 위상공간으로, 우리는 우선 이번 글에서 이를 집합으로서 정의하고, 그 위에 위상을 정의할 것이다. 그 후, 다음 글에서는 $\Spec A$ 위에 structure sheaf를 정의하게 된다. 
 
 ## 집합으로서의 $\Spec A$
 

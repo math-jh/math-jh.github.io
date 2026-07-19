@@ -49,7 +49,7 @@ We can do for order relations something analogous to [§Equivalence Relations, �
 ::: Proposition 5
 A binary relation $(R,A,A)$ is an order relation if and only if the following two conditions hold.
 
-$R\circ R=R,\qquad R\cap R^{-1}=\Delta_A$
+$$R\circ R=R,\qquad R\cap R^{-1}=\Delta_A$$
 :::
 ::: Proof
 That the first condition is equivalent to transitivity was already shown in the proof of [§Equivalence Relations, ⁋Proposition 3](/en/math/set_theory/equivalence_relations#prop3). That the second condition combines reflexivity and antisymmetry can also be easily seen.

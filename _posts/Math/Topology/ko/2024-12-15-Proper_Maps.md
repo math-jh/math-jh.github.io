@@ -119,7 +119,7 @@ $$\Delta=\{(x,x)\mid x\in X\}$$
 첫 번째 조건이 성립한다면 임의의 $y\in Y$에 대하여, $f\vert_{f^{-1}(y)}$가 universally closed임을 알고, 앞선 보조정리로부터 $f^{-1}(y)$가 compact라는 것을 안다. 반대방향은 universally closed map들의 곱이 universally closed라는 것을 사용하면 증명할 수 있다.
 :::
 
-따라서, compact space의 정의를 $f:X \rightarrow \{\ast\}$가 universally closed이라는 것으로 했어도 되었을 것이다. 특히 다음이 성립한다. 
+따라서, compact space의 정의를 $f:X \rightarrow \{\ast\}$가 universally closed라는 것으로 했어도 되었을 것이다. 특히 다음이 성립한다. 
 
 ::: 따름정리 7
 연속함수 $f:X \rightarrow Y$가 universally closed라면, 임의의 compact subset $C\subseteq Y$에 대하여 $f^{-1}(C)$ 또한 compact이다.

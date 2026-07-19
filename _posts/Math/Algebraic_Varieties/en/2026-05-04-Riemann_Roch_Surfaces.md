@@ -33,7 +33,7 @@ Our starting point is a definition that may appear somewhat abstract, using the 
 ::: Definition 1
 We define the *intersection number* $C \cdot D$ of two divisors $C, D$ on a smooth surface $S$ as follows.
 
-$C \cdot D = \rchi(\mathcal{O}_S(C + D)) - \rchi(\mathcal{O}_S(C)) - \rchi(\mathcal{O}_S(D)) + \rchi(\mathcal{O}_S)$
+$$C \cdot D = \rchi(\mathcal{O}_S(C + D)) - \rchi(\mathcal{O}_S(C)) - \rchi(\mathcal{O}_S(D)) + \rchi(\mathcal{O}_S)$$
 :::
 
 To examine the geometric meaning of this, suppose $C$ and $D$ are effective divisors defined by global sections $s \in H^0(\mathcal{O}(C))$ and $t \in H^0(\mathcal{O}(D))$, respectively. Then their common zero locus is $C \cap D$, and the following exact sequence holds.

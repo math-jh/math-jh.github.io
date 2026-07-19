@@ -86,7 +86,7 @@ $$f\bigl((a,b)(c,d)\bigr)=ac+bd\neq (a+b)(c+d)=f(a,b)f(c,d)$$
 
 ## 대수의 텐서곱
 
-Commutative $A$-algebra들의 category에서 올바른 coproduct의 개념을 주는 것은 텐서곱이다. 기본적으로 이는 $A$-module $E\otimes_AE'$ ([§가군의 직접곱과 직합, 텐서곱, ⁋정리 6](/ko/math/algebraic_structures/operations_of_modules#thm6)) 위에 곱셈을 적당히 정의하여 얻어지는 $A$-algebra로, 우리가 원하는 곱셈은 다음의 식
+Commutative $A$-algebra들의 category에서 올바른 coproduct의 개념을 주는 것은 tensor product이다. 기본적으로 이는 $A$-module $E\otimes_AE'$ ([§가군의 직접곱과 직합, 텐서곱, ⁋정리 6](/ko/math/algebraic_structures/operations_of_modules#thm6)) 위에 곱셈을 적당히 정의하여 얻어지는 $A$-algebra로, 우리가 원하는 곱셈은 다음의 식
 
 $$(x\otimes x')(y\otimes y')=xy\otimes x'y'\tag{1}$$
 
@@ -117,7 +117,7 @@ $$\mu(s,t)=\tilde{m}(t)(s)$$
 두 $A$-algebra $E,E'$에 대하여, [명제 6](#prop6)의 곱셈이 주어진 $A$-algebra $E\otimes_AE'$을 $E$와 $E'$의 *tensor product<sub>텐서곱</sub>*이라 부른다.
 :::
 
-직접곱에서와 마찬가지로, 텐서곱은 두 대수의 성질을 그대로 물려받는다. 가령 $E,E'$이 모두 associative라면 생성원들 위에서
+direct product에서와 마찬가지로, tensor product는 두 대수의 성질을 그대로 물려받는다. 가령 $E,E'$이 모두 associative라면 생성원들 위에서
 
 $$\bigl((x\otimes x')(y\otimes y')\bigr)(z\otimes z')=(xy)z\otimes (x'y')z'=x(yz)\otimes x'(y'z')=(x\otimes x')\bigl((y\otimes y')(z\otimes z')\bigr)$$
 
@@ -149,11 +149,11 @@ $$w'(x\otimes x')=w'\bigl((x\otimes 1_{E'})(1_E\otimes x')\bigr)=w'(\iota(x))w'(
 즉, $E\otimes_AE'$은 commutative $A$-algebra들의 category에서 $E$와 $E'$의 coproduct이다.
 
 ::: 예시 9
-Polynomial algebra들의 텐서곱은 변수들을 합친 polynomial algebra이다. 즉
+Polynomial algebra들의 tensor product는 변수들을 합친 polynomial algebra이다. 즉
 
 $$A[\x]\otimes_AA[\y]\cong A[\x,\y]$$
 
-이 성립한다. 이는 [§대수, ⁋명제 8](/ko/math/algebraic_structures/algebras#prop8)에서 살펴본 functor $A[-]:\Set \rightarrow \cAlg{A}$가 left adjoint라는 사실로부터 나온다. Left adjoint는 colimit을 보존하므로, 한 점 집합들의 (집합에서의) coproduct $\{\x\}\sqcup\{\y\}=\{\x,\y\}$를 $\cAlg{A}$에서의 coproduct로 보내고, [정리 8](#thm8)에 의하여 이는 정확히 텐서곱이기 때문이다. 물론 두 isomorphism $\x\otimes 1\mapsto \x$, $1\otimes \y\mapsto \y$를 직접 확인할 수도 있다.
+이 성립한다. 이는 [§대수, ⁋명제 8](/ko/math/algebraic_structures/algebras#prop8)에서 살펴본 functor $A[-]:\Set \rightarrow \cAlg{A}$가 left adjoint라는 사실로부터 나온다. Left adjoint는 colimit을 보존하므로, 한 점 집합들의 (집합에서의) coproduct $\{\x\}\sqcup\{\y\}=\{\x,\y\}$를 $\cAlg{A}$에서의 coproduct로 보내고, [정리 8](#thm8)에 의하여 이는 정확히 tensor product이기 때문이다. 물론 두 isomorphism $\x\otimes 1\mapsto \x$, $1\otimes \y\mapsto \y$를 직접 확인할 수도 있다.
 :::
 
 ---

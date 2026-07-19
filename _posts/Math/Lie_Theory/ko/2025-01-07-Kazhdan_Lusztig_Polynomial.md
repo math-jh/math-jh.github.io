@@ -13,7 +13,7 @@ weight: 8
 published: false
 ---
 
-Schubert variety $X_w \subseteq G/B$는 일반적으로 특이점을 갖는 사영다양체이며, 그 특이점의 양상은 단순한 차원 정보만으로는 포착되지 않는다. 1979년 Kazhdan과 Lusztig는 [§Bruhat decomposition](/ko/math/lie_theory/bruhat_decomposition)의 조합적 구조 위에 정의되는 일군의 정수계수 다항식을 도입하여, $X_w$의 local intersection cohomology의 점별 차원이 이 다항식들로 완전히 인코딩됨을 보였다. 이 *Kazhdan-Lusztig polynomial*은 한편으로는 Hecke algebra의 한 특별한 basis로부터 순수히 조합적으로 정의되며, 다른 한편으로는 Schubert variety의 특이점과 infinite-dimensional Lie algebra의 표현론에 대한 직접적인 cohomological 정보를 담는다. 본 글에서는 이 다항식의 정의와 기본 성질을 정리하고, Schubert variety와의 관계를 statement 수준에서 정리한다.
+Schubert variety $X_w \subseteq G/B$는 일반적으로 singular point를 갖는 projective variety이며, 그 singular point의 양상은 단순한 차원 정보만으로는 포착되지 않는다. 1979년 Kazhdan과 Lusztig는 [§Bruhat decomposition](/ko/math/lie_theory/bruhat_decomposition)의 조합적 구조 위에 정의되는 일군의 정수계수 다항식을 도입하여, $X_w$의 local intersection cohomology의 점별 차원이 이 다항식들로 완전히 인코딩됨을 보였다. 이 *Kazhdan-Lusztig polynomial*은 한편으로는 Hecke algebra의 한 특별한 basis로부터 순수히 조합적으로 정의되며, 다른 한편으로는 Schubert variety의 singular point와 infinite-dimensional Lie algebra의 표현론에 대한 직접적인 cohomological 정보를 담는다. 본 글에서는 이 다항식의 정의와 기본 성질을 정리하고, Schubert variety와의 관계를 statement 수준에서 정리한다.
 
 ## Coxeter group과 Bruhat order 복습
 
@@ -92,7 +92,7 @@ $$\begin{aligned}
 
 **기저.** $w = e$인 경우 $C_e = T_e = 1$로 두면 $\overline{C_e} = 1 = C_e$이고, $P_{e, e} = 1$로 모든 조건이 자명하게 만족된다.
 
-**귀납 단계.** $\ell(w) \ge 1$이라 하고, $\ell(w') < \ell(w)$인 모든 $w'$에 대해 $C_{w'}$와 $P_{v, w'}$가 유일하게 결정되었다고 가정하자. $s \in S$를 $sw < w$가 성립하도록 (즉 $\ell(sw) = \ell(w) - 1$가 되도록) 선택한다. 그럼 정리 4 조건 2의 형태로 정규화한 generator
+**귀납 단계.** $\ell(w) \ge 1$이라 하고, $\ell(w') < \ell(w)$인 모든 $w'$에 대해 $C_{w'}$와 $P_{v, w'}$가 유일하게 결정되었다고 가정하자. $s \in S$를 $sw < w$가 성립하도록 (즉 $\ell(sw) = \ell(w) - 1$가 되도록) 선택한다. 그럼 정리 4 조건 2의 형태로 normalize한 generator
 
 $$C_s := q^{-1/2}(T_s - q) = q^{-1/2} T_s - q^{1/2}$$
 
@@ -114,7 +114,7 @@ $$C_w = C_s \cdot C_{sw} - \sum_{\substack{z < w \\ sz < z}} \mu(z, sw)\, C_z$$
 위 증명에서 등장한 정수 $\mu(v, w)$는 *KL $\mu$-coefficient*라 불리며, KL polynomial의 leading-degree 계수로서 그 자체가 풍부한 조합적 정보를 담는다. 또한 $P_{w, w} = 1$ 외에도 $v \le w$에 대해 $P_{v, w}(0) = 1$이 성립한다는 사실은 정의로부터 어렵지 않게 따라온다.
 
 ::: 참고 5
-정리 4의 정규화는 Kazhdan–Lusztig 1979 원논문의 convention을 따른 것이다. 일부 문헌, 특히 Soergel을 비롯한 현대 categorification 문헌에서는 $C_w$ 대신 $\underline{H}_w$ 또는 $b_w$로 표기하고, generator 정규화에 따라 KL polynomial의 변수가 $v = q^{1/2}$ 또는 $v^2 = q$로 등장하기도 한다. 두 convention 사이의 변환은 단순한 변수 치환이므로 본질적 내용은 동일하다.
+정리 4의 normalization은 Kazhdan–Lusztig 1979 원논문의 convention을 따른 것이다. 일부 문헌, 특히 Soergel을 비롯한 현대 categorification 문헌에서는 $C_w$ 대신 $\underline{H}_w$ 또는 $b_w$로 표기하고, generator normalization에 따라 KL polynomial의 변수가 $v = q^{1/2}$ 또는 $v^2 = q$로 등장하기도 한다. 두 convention 사이의 변환은 단순한 변수 치환이므로 본질적 내용은 동일하다.
 :::
 
 ## R-polynomial과 inversion formula
@@ -156,16 +156,16 @@ $$q^{-\ell(w)/2} \sum_{v \le w} P_{v, w}(q)\, T_v = \overline{q^{-\ell(w)/2} \su
 
 ## Schubert variety의 intersection cohomology
 
-지금까지 정의한 KL polynomial은 순수히 조합적인 대상이지만, 본 글의 motivation에서 언급한 대로 이는 Schubert variety의 특이점에 대한 깊은 기하학적 정보를 담고 있다. 본 절에서는 그 핵심 statement만을 정리한다.
+지금까지 정의한 KL polynomial은 순수히 조합적인 대상이지만, 본 글의 motivation에서 언급한 대로 이는 Schubert variety의 singular point에 대한 깊은 기하학적 정보를 담고 있다. 본 절에서는 그 핵심 statement만을 정리한다.
 
-$G$를 complex reductive algebraic group, $B$를 그 Borel subgroup, $W$를 Weyl group이라 하고, [§Bruhat decomposition, ⁋정의 16](/ko/math/lie_theory/bruhat_decomposition#def16)에서와 같이 Schubert variety $X_w = \overline{BwB/B} \subseteq G/B$를 생각한다. $X_w$ 위의 *intersection cohomology sheaf* $\operatorname{IC}_{X_w}$는 $X_w$가 매끄러운 경우에는 상수층 (constant sheaf) 의 shift와 일치하지만, 특이점이 있는 경우에는 이를 적절히 보정하여 Poincaré duality를 회복시키는 derived category $D^b_c(X_w)$의 perverse sheaf로 정의된다.
+$G$를 complex reductive algebraic group, $B$를 그 Borel subgroup, $W$를 Weyl group이라 하고, [§Bruhat decomposition, ⁋정의 16](/ko/math/lie_theory/bruhat_decomposition#def16)에서와 같이 Schubert variety $X_w = \overline{BwB/B} \subseteq G/B$를 생각한다. $X_w$ 위의 *intersection cohomology sheaf* $\operatorname{IC}_{X_w}$는 $X_w$가 smooth한 경우에는 constant sheaf (constant sheaf) 의 shift와 일치하지만, singular point가 있는 경우에는 이를 적절히 보정하여 Poincaré duality를 회복시키는 derived category $D^b_c(X_w)$의 perverse sheaf로 정의된다.
 
 ::: 정리 8 (Kazhdan–Lusztig conjecture, 기하학적 형태)
 Schubert variety $X_w \subseteq G/B$와 그 안의 점 $v B/B \in X_v^\circ \subseteq X_w$ ($v \le w$)에 대하여, intersection cohomology sheaf의 stalk cohomology의 Poincaré 다항식은 KL polynomial로 주어진다.
 
 $$\sum_{i \ge 0} \dim \mathcal{H}^i(\operatorname{IC}_{X_w})_{vB/B} \cdot q^{i/2} = P_{v, w}(q)$$
 
-특히 $P_{v, w}(q) = 1$인 것은 점 $vB/B$에서 $X_w$가 매끄러운 것과 동치이다.
+특히 $P_{v, w}(q) = 1$인 것은 점 $vB/B$에서 $X_w$가 smooth한 것과 동치이다.
 :::
 
 ::: 증명
@@ -175,7 +175,7 @@ $$\sum_{i \ge 0} \dim \mathcal{H}^i(\operatorname{IC}_{X_w})_{vB/B} \cdot q^{i/2
 이로부터 다음 매끄러움 판정 기준이 즉시 따른다.
 
 ::: 따름정리 9
-Schubert variety $X_w$가 매끄러운 것은 모든 $v \le w$에 대해 $P_{v, w}(q) = 1$인 것과 동치이다.
+Schubert variety $X_w$가 smooth한 것은 모든 $v \le w$에 대해 $P_{v, w}(q) = 1$인 것과 동치이다.
 :::
 ::: 증명
 $X_w$의 매끄러움은 모든 점 $vB/B \in X_w$에서 매끄러움을 의미하므로, 이는 모든 $v \le w$에 대해 $\mathcal{H}^i(\operatorname{IC}_{X_w})_{vB/B}$가 $i = 0$에서만 1차원이고 다른 차수에서는 $0$임을 뜻한다. 정리 [정리 8](#thm8)에 의해 이는 $P_{v, w}(q) = 1$과 동치이다.
@@ -196,7 +196,7 @@ $W = S_4$, 즉 $A_3$ type Weyl group을 생각하자. 이 경우에도 거의 �
 
 $$P_{e, w}(q) = 1 + q$$
 
-가 성립한다. 정리 [정리 8](#thm8)에 의해 이는 $X_w = X_{3412}$가 identity coset $eB/B$에서 특이점을 갖는다는 것을 의미하며, 그 stalk intersection cohomology가 0차와 2차에서 각각 1차원임을 알려준다. 한편 동일한 $S_4$ 안에서 $w = s_1 s_3 s_2 s_1 s_3$ ($w = 4231$, $\ell(w) = 5$) 와 $v = e$에 대해서도 비자명한 KL polynomial $P_{e, 4231}(q) = 1 + q$가 등장하며, 이 두 경우 ($3412$와 $4231$) 가 type $A_3$에서 매끄러움이 깨지는 유일한 reduced situation이다. 이는 앞서 언급한 Lakshmibai–Sandhya의 pattern $3412, 4231$ avoidance 정리의 가장 작은 사례이다.
+가 성립한다. 정리 [정리 8](#thm8)에 의해 이는 $X_w = X_{3412}$가 identity coset $eB/B$에서 singular point를 갖는다는 것을 의미하며, 그 stalk intersection cohomology가 0차와 2차에서 각각 1차원임을 알려준다. 한편 동일한 $S_4$ 안에서 $w = s_1 s_3 s_2 s_1 s_3$ ($w = 4231$, $\ell(w) = 5$) 와 $v = e$에 대해서도 비자명한 KL polynomial $P_{e, 4231}(q) = 1 + q$가 등장하며, 이 두 경우 ($3412$와 $4231$) 가 type $A_3$에서 매끄러움이 깨지는 유일한 reduced situation이다. 이는 앞서 언급한 Lakshmibai–Sandhya의 pattern $3412, 4231$ avoidance 정리의 가장 작은 사례이다.
 :::
 
 위의 예시 [예시 11](#ex11)에서 처음으로 등장한 다항식 $1 + q$는 매우 단순한 형태이지만, 일반적인 Weyl group에서는 KL polynomial이 매우 복잡한 형태를 가질 수 있다. 사실 KL polynomial의 계수가 항상 비음 (non-negative) 이라는 추측 (KL positivity conjecture) 은 [정리 8](#thm8)의 기하학적 해석에서 곧장 따라오지만, 일반 Coxeter group, 특히 finite type을 벗어난 경우에는 매우 어려운 문제이며 Elias–Williamson의 Soergel bimodule 이론을 통해 비로소 일반적으로 증명되었다.

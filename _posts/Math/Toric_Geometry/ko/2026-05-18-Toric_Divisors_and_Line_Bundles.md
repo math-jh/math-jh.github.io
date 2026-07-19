@@ -62,7 +62,7 @@ $$(t \cdot \rchi^m)(x) = \rchi^m(t x) = \rchi^m(t) \cdot \rchi^m(x)$$
 ::: 명제 3
 Character $\rchi^m$에 대응하는 principal divisor는 다음과 같이 주어진다.
 
-$\divisor(\rchi^m) = \sum_{\rho \in \Sigma(1)} \langle m, v_\rho \rangle D_\rho.$
+$$\divisor(\rchi^m) = \sum_{\rho \in \Sigma(1)} \langle m, v_\rho \rangle D_\rho.$$
 :::
 
 ::: 증명
@@ -140,7 +140,7 @@ Toric variety의 경우, 이 sheaf의 global section은 character $\rchi^m$들�
 ::: 명제 7
 Torus-invariant Weil divisor $D = \sum_{\rho \in \Sigma(1)} a_\rho D_\rho$에 대해, sheaf $\mathcal{O}_{X_\Sigma}(D)$의 global section space는 다음과 같이 주어진다:
 
-$H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D)) = \bigoplus_{\substack{m \in M \\ \langle m, v_\rho \rangle \ge -a_\rho \text{ for all } \rho}} \mathbb{C} \cdot \rchi^m.$
+$$H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D)) = \bigoplus_{\substack{m \in M \\ \langle m, v_\rho \rangle \ge -a_\rho \text{ for all } \rho}} \mathbb{C} \cdot \rchi^m.$$
 :::
 
 ::: 증명

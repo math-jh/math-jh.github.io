@@ -29,11 +29,11 @@ $$a \equiv b \pmod{n}$$
 [§나눗셈과 최대공약수, ⁋정리 3](/ko/math/number_theory/divisibility#thm3)에 의해 $a \equiv b \pmod n$인 것은 $a$와 $b$를 $n$으로 나눈 나머지가 같은 것과 동치이다. 즉 합동은 "나머지가 같음"을 그대로 옮긴 것이다.
 
 ::: 명제 2
-법 $n$에 대한 합동은 정수 위의 동치관계이다. 즉 반사적($a \equiv a$), 대칭적($a\equiv b \Rightarrow b \equiv a$), 추이적($a \equiv b,\ b\equiv c \Rightarrow a \equiv c$)이다.
+법 $n$에 대한 합동은 정수 위의 동치관계이다. 즉 반사적($a \equiv a$), symmetric($a\equiv b \Rightarrow b \equiv a$), transitive($a \equiv b,\ b\equiv c \Rightarrow a \equiv c$)이다.
 :::
 
 ::: 증명
-$n \mid 0 = a - a$이므로 반사적이다. $n \mid (a-b)$이면 $n \mid (b - a)$이므로 대칭적이다. $n \mid (a-b)$이고 $n \mid (b-c)$이면 [§나눗셈과 최대공약수, ⁋명제 2](/ko/math/number_theory/divisibility#prop2)의 선형결합 성질에 의해 $n \mid (a - c)$이므로 추이적이다.
+$n \mid 0 = a - a$이므로 reflexive하다. $n \mid (a-b)$이면 $n \mid (b - a)$이므로 symmetric하다. $n \mid (a-b)$이고 $n \mid (b-c)$이면 [§나눗셈과 최대공약수, ⁋명제 2](/ko/math/number_theory/divisibility#prop2)의 선형결합 성질에 의해 $n \mid (a - c)$이므로 transitive하다.
 :::
 
 ## 합동의 연산
@@ -64,21 +64,21 @@ $$2^1 \equiv 2,\quad 2^2 \equiv 4,\quad 2^3 \equiv 3,\quad 2^4 \equiv 1 \pmod 5$
 
 같은 방식으로 다항식 값의 합동도 한꺼번에 다룰 수 있다. 명제 3은 정수계수 다항식 $P$에 대해 $a \equiv b \pmod n$이면 $P(a) \equiv P(b) \pmod n$임을 함의하는데, 이는 덧셈·곱셈·거듭제곱이 모두 합동을 보존하기 때문이다. 이 관찰은 자릿수에 관한 여러 검산법을 한꺼번에 설명해 준다. $10 \equiv 1 \pmod 9$로부터 임의의 자연수가 그 자리 숫자의 합과 법 $9$에서 합동임이 곧바로 따라 나온다.
 
-## 잉여류와 ℤ/nℤ
+## residue class와 ℤ/nℤ
 
-명제 2에 의해 합동은 정수를 동치류로 나눈다.
+명제 2에 의해 합동은 정수를 equivalence class로 나눈다.
 
 ::: 정의 5
-정수 $a$의 법 $n$에 대한 *잉여류<sub>residue class</sub>*는 $a$와 합동인 모든 정수의 집합 $[a] = \{a + kn \mid k \in \mathbb{Z}\}$이다. 서로 다른 잉여류는 정확히 $[0], [1], \ldots, [n-1]$의 $n$개이며, 이들의 집합을 $\mathbb{Z}/n\mathbb{Z}$로 적는다.
+정수 $a$의 법 $n$에 대한 *residue class<sub>잉여류</sub>*는 $a$와 합동인 모든 정수의 집합 $[a] = \{a + kn \mid k \in \mathbb{Z}\}$이다. 서로 다른 residue class는 정확히 $[0], [1], \ldots, [n-1]$의 $n$개이며, 이들의 집합을 $\mathbb{Z}/n\mathbb{Z}$로 적는다.
 :::
 
-잉여류는 정수 전체를 $n$개의 줄로 나눈 것으로 볼 수 있다. 정수 $a$를 $n$으로 나눈 나머지를 $r$이라 하면 $a \equiv r \pmod n$이므로 $[a] = [r]$이고, $0 \le r \le n-1$인 $r$이 유일하게 결정되므로 $[0], [1], \ldots, [n-1]$은 서로 다르고 모든 잉여류를 빠짐없이 준다. 한 잉여류에서 아무 정수나 골라 그 류를 대표시킬 수 있는데, 이렇게 고른 수를 그 잉여류의 *대표원<sub>representative</sub>*이라 한다. 예컨대 법 $5$에서 $[2] = [7] = [-3] = [12]$이며, 이 중 어느 것을 써도 같은 류를 가리킨다.
+residue class는 정수 전체를 $n$개의 줄로 나눈 것으로 볼 수 있다. 정수 $a$를 $n$으로 나눈 나머지를 $r$이라 하면 $a \equiv r \pmod n$이므로 $[a] = [r]$이고, $0 \le r \le n-1$인 $r$이 유일하게 결정되므로 $[0], [1], \ldots, [n-1]$은 서로 다르고 모든 residue class를 빠짐없이 준다. 한 residue class에서 아무 정수나 골라 그 류를 대표시킬 수 있는데, 이렇게 고른 수를 그 residue class의 *대표원<sub>representative</sub>*이라 한다. 예컨대 법 $5$에서 $[2] = [7] = [-3] = [12]$이며, 이 중 어느 것을 써도 같은 류를 가리킨다.
 
-명제 3은 잉여류 위에 $[a] + [b] = [a + b]$, $[a][b] = [ab]$로 덧셈과 곱셈이 잘 정의됨을 뜻한다. 여기서 "잘 정의됨"이란 결과가 대표원의 선택에 의존하지 않음을 말한다. 만약 $[a] = [a']$이고 $[b] = [b']$이면 $a \equiv a'$, $b \equiv b' \pmod n$이고, 명제 3에 의해
+명제 3은 residue class 위에 $[a] + [b] = [a + b]$, $[a][b] = [ab]$로 덧셈과 곱셈이 잘 정의됨을 뜻한다. 여기서 "잘 정의됨"이란 결과가 대표원의 선택에 의존하지 않음을 말한다. 만약 $[a] = [a']$이고 $[b] = [b']$이면 $a \equiv a'$, $b \equiv b' \pmod n$이고, 명제 3에 의해
 
 $$a + b \equiv a' + b', \qquad ab \equiv a'b' \pmod n$$
 
-이므로 $[a+b] = [a'+b']$, $[ab] = [a'b']$가 되어 어느 대표원을 골라 계산해도 같은 잉여류를 얻는다. 이 호환성이 없었다면 잉여류 위의 연산을 정의할 수 없었을 것이다. 결국 $\mathbb{Z}/n\mathbb{Z}$는 $n$개의 원소를 갖는 *환<sub>ring</sub>*을 이룬다.
+이므로 $[a+b] = [a'+b']$, $[ab] = [a'b']$가 되어 어느 대표원을 골라 계산해도 같은 residue class를 얻는다. 이 호환성이 없었다면 residue class 위의 연산을 정의할 수 없었을 것이다. 결국 $\mathbb{Z}/n\mathbb{Z}$는 $n$개의 원소를 갖는 *ring<sub>환</sub>*을 이룬다.
 
 가장 작은 경우인 $n = 2$에서는 $\mathbb{Z}/2\mathbb{Z} = \{[0], [1]\}$이 짝수와 홀수의 산술을 그대로 옮긴 것으로, $[1] + [1] = [0]$은 "홀수 더하기 홀수는 짝수"라는 사실에 다름 아니다. $n = 12$의 경우 $\mathbb{Z}/12\mathbb{Z}$는 시계의 시각이 이루는 산술과 같아, $9$시의 $5$시간 뒤가 $2$시인 것은 $9 + 5 = 14 \equiv 2 \pmod{12}$로 표현된다.
 
@@ -115,10 +115,10 @@ $$ax = 1 - ny \equiv 1 \pmod n$$
 이 되어 $x$가 $a$의 곱셈 역원이다. 거꾸로 $ax \equiv 1 \pmod n$인 $x$가 존재하면 어떤 정수 $y$에 대해 $ax - 1 = ny$, 곧 $ax - ny = 1$이다. $d = \gcd(a, n)$이라 하면 $d \mid a$이고 $d \mid n$이므로 좌변을 나누어 $d \mid 1$이고 ([§나눗셈과 최대공약수, ⁋명제 2](/ko/math/number_theory/divisibility#prop2)), 따라서 $d = 1$, 즉 $\gcd(a, n) = 1$이다.
 :::
 
-따라서 $\mathbb{Z}/n\mathbb{Z}$에서 곱셈 역원을 갖는 원소는 정확히 $n$과 서로소인 잉여류들이다. $n = p$가 소수이면 $1, \ldots, p-1$이 모두 $p$와 서로소이므로 $0$이 아닌 모든 원소가 역원을 가지며, 이때 $\mathbb{Z}/p\mathbb{Z}$는 체를 이룬다. 역원이 존재할 때 그것은 법 $n$에 대해 유일하다.
+따라서 $\mathbb{Z}/n\mathbb{Z}$에서 곱셈 역원을 갖는 원소는 정확히 $n$과 서로소인 residue class들이다. $n = p$가 소수이면 $1, \ldots, p-1$이 모두 $p$와 서로소이므로 $0$이 아닌 모든 원소가 역원을 가지며, 이때 $\mathbb{Z}/p\mathbb{Z}$는 체를 이룬다. 역원이 존재할 때 그것은 법 $n$에 대해 유일하다.
 
 ::: 명제 8 (역원의 유일성)
-$\gcd(a, n) = 1$이면 $ax \equiv 1 \pmod n$을 만족하는 잉여류 $[x]$는 유일하다.
+$\gcd(a, n) = 1$이면 $ax \equiv 1 \pmod n$을 만족하는 residue class $[x]$는 유일하다.
 :::
 
 ::: 증명
@@ -129,7 +129,7 @@ $$ax \equiv ax' \pmod n$$
 이고, $\gcd(a, n) = 1$이므로 [명제 6](#prop6)으로 $a$를 소거하여 $x \equiv x' \pmod n$, 곧 $[x] = [x']$을 얻는다.
 :::
 
-이 유일한 잉여류를 $a$의 *법 $n$에서의 역원*이라 하고 $a^{-1} \pmod n$으로 적는다. 역원을 실제로 구하는 일은 Bézout 계수 $x$를 찾는 일, 곧 확장 유클리드 호제법을 돌리는 일과 같다.
+이 유일한 residue class를 $a$의 *법 $n$에서의 역원*이라 하고 $a^{-1} \pmod n$으로 적는다. 역원을 실제로 구하는 일은 Bézout 계수 $x$를 찾는 일, 곧 확장 유클리드 호제법을 돌리는 일과 같다.
 
 ## 예시와 계산
 

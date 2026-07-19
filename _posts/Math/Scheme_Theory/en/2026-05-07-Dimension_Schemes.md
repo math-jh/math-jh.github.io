@@ -74,7 +74,7 @@ In particular, for any integral domain $A$ and its normalization $\tilde{A}$, th
 ::: Definition 6
 For an irreducible subset $Y$ of a topological space $X$, the *codimension* of $Y$ in $X$, denoted $\codim_XY$, is defined as the supremum of the lengths of strictly descending chains of irreducible closed subsets of $X$
 
-$A_n\supsetneq A_{n-1}\supsetneq\cdots\supsetneq A_0=\cl_X(Y)$
+$$A_n\supsetneq A_{n-1}\supsetneq\cdots\supsetneq A_0=\cl_X(Y)$$
 :::
 
 Then one can verify that the codimension of a prime ideal $\mathfrak{p}$ of a ring $A$ ([[Commutative Algebra] §Dimension, ⁋Definition 2](/en/math/commutative_algebra/Krull_dimension#def2)) equals the codimension of the point $\mathfrak{p}$ in $\Spec A$.

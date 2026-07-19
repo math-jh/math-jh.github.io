@@ -61,15 +61,15 @@ U \cap V \cap E_\alpha &\subseteq U \cap V \cap E = \varnothing.
 [명제 3](#prop3)은 연결성을 점에 붙여 전파시키는 도구이다. 한 점 $x$를 포함하는 모든 연결집합의 합집합은, [명제 3](#prop3)에 의해 다시 연결이며 그러한 연결집합 가운데 가장 큰 것이 된다. 이를 그 점의 성분이라 부른다.
 
 ::: 정의 4
-거리공간 $X$의 점 $x$에 대하여, $x$를 포함하는 $X$의 모든 연결 부분집합의 합집합을 $x$의 *연결성분<sub>connected component</sub>*이라 한다.
+거리공간 $X$의 점 $x$에 대하여, $x$를 포함하는 $X$의 모든 연결 부분집합의 합집합을 $x$의 *connected component<sub>연결성분</sub>*라 한다.
 :::
 
-연결성분은 [명제 3](#prop3)에 의해 그 자체로 연결이며, $x$를 포함하는 연결집합 중 극대인 것이다. 서로 다른 두 점의 연결성분은 같거나 서로소이므로, 연결성분들은 $X$를 분할한다. 가령 $\mathbb{Q}$의 각 점의 연결성분은 그 점 하나뿐인 집합이며 (이런 공간을 완전부정연결<sub>totally disconnected</sub>이라 한다), $\mathbb{R} \setminus \{0\}$의 연결성분은 두 반직선 $(-\infty, 0)$과 $(0, \infty)$이다.
+connected component는 [명제 3](#prop3)에 의해 그 자체로 연결이며, $x$를 포함하는 연결집합 중 극대인 것이다. 서로 다른 두 점의 connected component는 같거나 서로소이므로, connected component들은 $X$를 분할한다. 가령 $\mathbb{Q}$의 각 점의 connected component는 그 점 하나뿐인 집합이며 (이런 공간을 완전부정연결<sub>totally disconnected</sub>이라 한다), $\mathbb{R} \setminus \{0\}$의 connected component는 두 반직선 $(-\infty, 0)$과 $(0, \infty)$이다.
 
 
 ## 연결성의 보존과 중간값 정리
 
-컴팩트성과 마찬가지로 연결성도 연속함수가 보존하는 위상적 성질이다 ([§연속함수의 성질](/ko/math/analysis/continuous_functions)에서 컴팩트성의 보존을 보았다). 핵심 착상은, 상에서의 분할이 있다면 역상을 취해 정의역에서의 분할을 만들 수 있다는 점이다. 역상이 열린집합을 열린집합으로 되돌린다는 사실 — 곧 연속성의 위상적 특징화 — 이 그대로 동력이 된다.
+컴팩트성과 마찬가지로 연결성도 연속함수가 보존하는 위상적 성질이다 ([§연속함수의 성질](/ko/math/analysis/continuous_functions)에서 컴팩트성의 보존을 보았다). 핵심 착상은, 상에서의 분할이 있다면 preimage를 취해 정의역에서의 분할을 만들 수 있다는 점이다. preimage가 열린집합을 열린집합으로 되돌린다는 사실 — 곧 연속성의 위상적 특징화 — 이 그대로 동력이 된다.
 
 ::: 정리 5
 $f : X \to Y$가 연속이고 $E \subseteq X$가 연결이면, 상 $f(E)$도 연결이다.

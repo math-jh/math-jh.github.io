@@ -219,7 +219,7 @@ That is, $u(A)$ is an algebraic extension and hence is contained in $\mathbb{L}'
 
 On the other hand, by [§Algebraic Closures, ⁋Proposition 11](/en/math/field_theory/algebraically_closed_extensions#prop11) $\mathbb{L}'$ is isomorphic to a suitable subextension of $\Omega$, and therefore
 
-$h(\mathbb{L})=h(\mathbb{L}')\leq h(\Omega)$
+$$h(\mathbb{L})=h(\mathbb{L}')\leq h(\Omega)$$
 :::
 
 Hence, if $\mathbb{L}$ is algebraically closed we can interchange the roles of $\mathbb{L}$ and $\Omega$, so equality must hold; consequently [Definition 10](#def10) is well defined. The following are basic properties of this notion.

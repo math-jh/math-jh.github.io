@@ -21,7 +21,7 @@ published: false
 극한을 직접 다루는 대신, 위와 아래에서 죄어 오는 두 합을 쓴다.
 
 ::: 정의 1
-유계함수 $f : [a,b] \to \mathbb{R}$와 분할 $P : a = x_0 < \cdots < x_n = b$에 대하여, 각 부분구간에서 $m_i = \inf_{[x_{i-1}, x_i]} f$, $M_i = \sup_{[x_{i-1}, x_i]} f$로 두고
+bounded function $f : [a,b] \to \mathbb{R}$와 분할 $P : a = x_0 < \cdots < x_n = b$에 대하여, 각 부분구간에서 $m_i = \inf_{[x_{i-1}, x_i]} f$, $M_i = \sup_{[x_{i-1}, x_i]} f$로 두고
 
 $$L(P, f) = \sum_{i=1}^n m_i \Delta x_i, \qquad U(P, f) = \sum_{i=1}^n M_i \Delta x_i$$
 
@@ -41,11 +41,11 @@ m' (c - x_{i-1}) + m'' (x_i - c) &\geq m_i (c - x_{i-1}) + m_i (x_i - c) \\
 &= m_i (x_i - x_{i-1}) = m_i \Delta x_i
 \end{aligned}$$
 
-이어서 $L(P', f) \geq L(P, f)$, 대칭적으로 $U(P', f) \leq U(P, f)$이다. 따라서 임의의 두 분할 $P, Q$에 대해 공통세분 $P \cup Q$를 잡으면
+이어서 $L(P', f) \geq L(P, f)$, symmetric으로 $U(P', f) \leq U(P, f)$이다. 따라서 임의의 두 분할 $P, Q$에 대해 공통세분 $P \cup Q$를 잡으면
 
 $$L(P, f) \leq L(P \cup Q, f) \leq U(P \cup Q, f) \leq U(Q, f)$$
 
-이므로, 모든 하합이 모든 상합의 하계가 된다. 그러므로 *하적분* $\underline{\int} f = \sup_P L(P, f)$과 *상적분* $\overline{\int} f = \inf_P U(P, f)$이 존재하고 $\underline{\int} f \leq \overline{\int} f$이다.
+이므로, 모든 하합이 모든 상합의 lower bound가 된다. 그러므로 *하적분* $\underline{\int} f = \sup_P L(P, f)$과 *상적분* $\overline{\int} f = \inf_P U(P, f)$이 존재하고 $\underline{\int} f \leq \overline{\int} f$이다.
 
 ::: 정의 2
 $\underline{\int} f = \overline{\int} f$일 때 $f$가 $[a,b]$에서 *Riemann 적분가능*하다고 하고, 그 공통값을 $\int_a^b f$로 적는다.
@@ -56,7 +56,7 @@ $\underline{\int} f = \overline{\int} f$일 때 $f$가 $[a,b]$에서 *Riemann �
 상합과 하합의 차를 임의로 작게 만들 수 있는지가 적분가능성을 결정한다.
 
 ::: 정리 3 (Riemann 판정법)
-유계함수 $f$가 적분가능한 것은, 임의의 $\varepsilon > 0$에 대하여 $U(P, f) - L(P, f) < \varepsilon$인 분할 $P$가 존재하는 것과 동치이다.
+bounded function $f$가 적분가능한 것은, 임의의 $\varepsilon > 0$에 대하여 $U(P, f) - L(P, f) < \varepsilon$인 분할 $P$가 존재하는 것과 동치이다.
 :::
 
 ::: 증명
@@ -100,7 +100,7 @@ $$L(P, f) = \sum_i 0\cdot\Delta x_i = 0, \qquad U(P, f) = \sum_i 1\cdot\Delta x_
 ## 적분가능성의 충분조건
 
 ::: 명제 6
-$[a,b]$에서 단조인 (증가 또는 감소) 유계함수는 Riemann 적분가능하다.
+$[a,b]$에서 단조인 (증가 또는 감소) bounded function은 Riemann 적분가능하다.
 :::
 
 ::: 증명
@@ -117,7 +117,7 @@ U(P_n, f) - L(P_n, f) &= \sum_{i=1}^n \bigl(f(x_i) - f(x_{i-1})\bigr) \frac{b-a}
 
 단조함수는 점프 불연속을 가질 수 있으며, 그 불연속점은 가산개까지 허용된다. 예컨대 $[0,1]$ 위에서 각 $1/k$에서 높이 $2^{-k}$만큼 뛰는 계단형 증가함수는 무한히 많은 불연속점을 가지지만 [명제 6](#prop6)에 의해 적분가능하다. 이는 연속성이 적분가능성의 *필요* 조건은 아님을 분명히 보여 준다.
 
-같은 결론이 단조성 없이도, 불연속점이 유한개이기만 하면 성립한다. 각 불연속점을 폭 $\varepsilon$의 작은 구간으로 에워싸 거기서 일어나는 진동을 너비로 가두고, 나머지 컴팩트한 부분에서는 [정리 4](#thm4)의 균등연속 논법을 적용하면 상합과 하합의 차를 임의로 작게 만들 수 있기 때문이다. 따라서 *유한개의 점을 제외하고 연속인 유계함수는 적분가능하다*. 특히 한 점에서의 함숫값 변경은 적분값을 바꾸지 못하는데, 그 점을 폭 $\varepsilon$의 구간으로 가두면 상합과 하합의 차가 진동의 크기와 $\varepsilon$의 곱으로 억제되어 $\varepsilon \to 0$에서 사라지기 때문이다. 이렇게 다르부 틀은 연속함수를 넘어선 넓은 부류의 적분가능성을 통일적으로 다룬다.
+같은 결론이 단조성 없이도, 불연속점이 유한개이기만 하면 성립한다. 각 불연속점을 폭 $\varepsilon$의 작은 구간으로 에워싸 거기서 일어나는 진동을 너비로 가두고, 나머지 컴팩트한 부분에서는 [정리 4](#thm4)의 균등연속 논법을 적용하면 상합과 하합의 차를 임의로 작게 만들 수 있기 때문이다. 따라서 *유한개의 점을 제외하고 연속인 bounded function은 적분가능하다*. 특히 한 점에서의 함숫값 변경은 적분값을 바꾸지 못하는데, 그 점을 폭 $\varepsilon$의 구간으로 가두면 상합과 하합의 차가 진동의 크기와 $\varepsilon$의 곱으로 억제되어 $\varepsilon \to 0$에서 사라지기 때문이다. 이렇게 다르부 틀은 연속함수를 넘어선 넓은 부류의 적분가능성을 통일적으로 다룬다.
 
 ## 적분의 기본 성질
 

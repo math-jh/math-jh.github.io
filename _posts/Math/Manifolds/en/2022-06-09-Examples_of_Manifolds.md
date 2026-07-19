@@ -161,7 +161,7 @@ Finally, let us look at a slightly more general example.
 ::: Example 9
 Let $(M,\mathcal{A}_M)$ and $(N,\mathcal{A}_N)$ be manifolds of dimensions $m$ and $n$, respectively. Then their *product manifold* is the manifold obtained by giving $M\times N$ the product topology and defining the differentiable structure by
 
-$\mathcal{A}=\{(U_\alpha\times V_\beta,\varphi_\alpha\times\psi_\beta)\mid (U_\alpha,\varphi_\alpha)\in\mathcal{A}_M,(V_\beta,\psi_\beta)\in\mathcal{A}_N\}$
+$$\mathcal{A}=\{(U_\alpha\times V_\beta,\varphi_\alpha\times\psi_\beta)\mid (U_\alpha,\varphi_\alpha)\in\mathcal{A}_M,(V_\beta,\psi_\beta)\in\mathcal{A}_N\}$$
 :::
 
 

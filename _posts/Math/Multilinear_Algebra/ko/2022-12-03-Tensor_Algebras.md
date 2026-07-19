@@ -13,7 +13,7 @@ weight: 10
 
 ---
 
-이제 우리는 행렬식을 정의할 것인데, 이를 위해 우선 텐서대수와 대칭대수, 외대수를 정의한다. 이 과정에서 $A$는 항상 commutative ring인 것으로 생각한다. 그럼 특히 $A$는 IBN property를 갖는다. ([§기저, ⁋명제 6](/ko/math/multilinear_algebra/basis_of_free_modules#prop6))
+이제 우리는 행렬식을 정의할 것인데, 이를 위해 우선 tensor algebra와 대칭대수, 외대수를 정의한다. 이 과정에서 $A$는 항상 commutative ring인 것으로 생각한다. 그럼 특히 $A$는 IBN property를 갖는다. ([§기저, ⁋명제 6](/ko/math/multilinear_algebra/basis_of_free_modules#prop6))
 
 ## 텐서대수의 정의
 
@@ -259,4 +259,4 @@ $\bigwedge_{B}(B\otimes_AM)\rightarrow B\otimes_A\bigwedge_A(M)$은 isomorphism�
 
 ---
 
-[^1]: Category $$\Ring$$에서의 coproduct는 free product와 비슷한 식으로 정의되었던 것을 기억하자. ([§환의 곱, 쌍대곱, 텐서곱, ⁋명제 3](/ko/math/algebraic_structures/operations_of_rings#prop3)) 반면, 같은 글에서 우리는 category $$\cRing$$의 coproduct는 tensor product $$\otimes$$로 주어진다는 것 또한 확인하였다.
+[^1]: Category $$\Ring$$에서의 coproduct는 free product와 비슷한 식으로 정의되었던 것을 기억하자. ([§환의 곱, 쌍대곱, 텐서곱, ⁋명제 4](/ko/math/algebraic_structures/operations_of_rings#prop4)) 반면, 같은 글에서 우리는 category $$\cRing$$의 coproduct는 tensor product $$\otimes$$로 주어진다는 것 또한 확인하였다.

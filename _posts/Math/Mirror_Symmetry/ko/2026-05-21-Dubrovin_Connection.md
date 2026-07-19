@@ -144,7 +144,7 @@ $$\Phi: H_A \xrightarrow{\sim} H_B$$
 
 가 존재하여, $\Phi$가 Dubrovin connection과 Gauss-Manin connection을 호환시킨다.
 
-$\Phi \circ \nabla^z = \nabla^{GM} \circ \Phi$
+$$\Phi \circ \nabla^z = \nabla^{GM} \circ \Phi$$
 :::
 
 다소 주의할 것은, 이 주장은 엄밀하게는 증명된 사실이 아니라 하나의 철학이라는 것이다. 이는 여러 mirror pair들에 대해 별도로 증명되어 왔으며, 가령 Givental이 증명한 Calabi-Yau hypersurface in toric variety의 경우가 역사적으로 가장 처음 증명되었으며, 이후 이것이 toric Fano variety로 확장되었고 그 후 Coates-Corti-Iritani-Tseng에 의해 toric stack에 대해서도 확장되었다. 약간 다른 방향의 일반화로는 toric variety 대신 homogeneous space, 특히 partial flag variety $G/P$로 가는 길이 있다. 이 방향에서는 물리적으로 Eguchi-Hori-Xiong에 의해 우선 Grassmannian과 flag variety에 대한 LG superpotential이 구성되었으며, Rietsch에 의해 이것이 Lie-theoretic하게 연구되었고, 이에 대한 탐구가 이 카테고리의 주요한 목적 중 하나이다. 

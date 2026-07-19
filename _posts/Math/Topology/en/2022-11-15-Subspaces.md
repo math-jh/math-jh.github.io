@@ -78,7 +78,7 @@ Using these lemmas, we can restrict the concepts we have examined so far to subs
 ::: Proposition 4
 Let $X$ be a topological space and let $A\subseteq B\subseteq X$ be subsets. Then the closure of $A$ in $B$, denoted $\cl_BA$, is equal to
 
-$\cl_BA=B\cap\cl_XA$
+$$\cl_BA=B\cap\cl_XA$$
 :::
 ::: Proof
 For any $x\in B$, a neighborhood of $x$ in $B$ is always of the form $V\cap B$ for some suitable neighborhood $V$ of $x$ in $X$. Now using $V\cap A=(V\cap B)\cap A$ and [§Interior, Closure, and Boundary, ⁋Proposition 6](/en/math/topology/other_concepts#prop6), we obtain the desired result.

@@ -116,7 +116,7 @@ $$A_{i_0}=\bigcup_{i\in \{i_0\}}A_i\subset\bigcup_{j\in J_{k_0}} A_j=\bigcup_{k\
 ::: 명제 6
  $(A_i)_{i\in I}$가 집합 $A$의 부분집합의 family고 $(R,A,B)$가 이항관계라 하자. 그럼
 
-$R\left(\bigcup_{i\in I} A_i\right)=\bigcup_{i\in I}R(A_i),\quad R\left(\bigcap_{i\in I} A_i\right)\subset\bigcap_{i\in I}R(A_i)$
+$$R\left(\bigcup_{i\in I} A_i\right)=\bigcup_{i\in I}R(A_i),\quad R\left(\bigcap_{i\in I} A_i\right)\subset\bigcap_{i\in I}R(A_i)$$
 :::
 ::: 증명
 우선 첫 번째 식을 보이자. 만일 $y\in R\left(\bigcup_{i\in I}A_i\right)$라면, 적당한 $x\in \bigcup_{i\in I}A_i$가 존재하여 $(x,y)\in R$이다. 이제 $x\in A_j$라 하면 $y\in R(A_j)$이므로 $y\in\bigcup_{i\in I}R\left(A_i\right)$가 성립한다. 반대로 만일 $y\in \bigcup_{i\in I}R\left(A_i\right)$라면 어떤 $j$에 대하여 $y\in R\left(A_j\right)$이므로, 적당한 $x\in A_j$가 존재하여 $(x,y)\in R$이다. 따라서 $y\in R\left(\bigcup_{i\in I} A_i\right)$가 성립한다.

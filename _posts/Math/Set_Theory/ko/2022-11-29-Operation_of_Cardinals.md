@@ -37,7 +37,7 @@ $$\sum_{i\in I}\mathfrak{a}_{i}=\sum_{l\in L}\sum_{i\in J_l}\mathfrak{a}_i,\quad
 이다.
 :::
 ::: 증명
-[§집합의 합, ⁋명제 7](/ko/math/set_theory/sum_of_sets#prop7)에 의하여 우리는 cardinal들의 합을 mutually disjoint family의 합집합으로 취급할 수 있다. 이제, 첫 번째 식들은 각각 [§합집합과 교집합, ⁋명제 4](/ko/math/set_theory/union_and_intersection#prop4), [§집합의 곱, ⁋명제 5](/ko/math/set_theory/product_of_sets#prop5)의 결과들이며, 두 번째 식들은 [§합집합과 교집합, ⁋명제 5](/ko/math/set_theory/union_and_intersection#prop5)와 [§곱집합의 성질, ⁋명제 3](/ko/math/set_theory/property_of_products#prop3)의 결과들이다.
+[§집합의 합, ⁋명제 7](/ko/math/set_theory/sum_of_sets#prop7)에 의하여 우리는 cardinal들의 합을 pairwise disjoint family의 합집합으로 취급할 수 있다. 이제, 첫 번째 식들은 각각 [§합집합과 교집합, ⁋명제 4](/ko/math/set_theory/union_and_intersection#prop4), [§집합의 곱, ⁋명제 5](/ko/math/set_theory/product_of_sets#prop5)의 결과들이며, 두 번째 식들은 [§합집합과 교집합, ⁋명제 5](/ko/math/set_theory/union_and_intersection#prop5)와 [§곱집합의 성질, ⁋명제 3](/ko/math/set_theory/property_of_products#prop3)의 결과들이다.
 :::
 
 ::: 명제 3

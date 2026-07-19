@@ -21,7 +21,7 @@ We now examine in greater detail the complete linear system $H^0(X, \mathcal{L})
 ::: Definition 1
 For a divisor $D$ on a smooth projective curve $C$, we define the *Riemann–Roch dimension* as
 
-$\ell(D) = \dim H^0(C, \mathcal{O}_C(D)).$
+$$\ell(D) = \dim H^0(C, \mathcal{O}_C(D)).$$
 :::
 
 In general, we regard $\mathcal{O}_X(D)$ as the sheaf of rational functions that may have poles of order at most $1$ along $D$; from this perspective, $H^0(C, \mathcal{O}_C(D))$ can be viewed as a space of functions defined on $X$.
@@ -234,7 +234,7 @@ holds.
 ::: Proof
 By the adjunction formula ([§Canonical Bundle, ⁋Proposition 9](/en/math/algebraic_varieties/canonical_bundle#prop9)), $K_C = (K_{\mathbb{P}^2} + C)\vert_C = (d-3)H\vert_C$. Therefore $\deg K_C = d(d-3)$, and substituting this into $\deg K_C = 2g - 2$ yields
 
-$d(d-3) = 2g - 2 \implies g = \frac{d(d-3) + 2}{2} = \frac{(d-1)(d-2)}{2}.$
+$$d(d-3) = 2g - 2 \implies g = \frac{d(d-3) + 2}{2} = \frac{(d-1)(d-2)}{2}.$$
 :::
 
 This formula directly computes the geometric properties of plane curves. For example, a smooth plane cubic has genus 1, so it coincides with the elliptic curve treated in [Example 5](#ex5). On the other hand, for $d = 1, 2$ we have $g = 0$, reflecting that lines and conics are both birationally equivalent to $\mathbb{P}^1$ ([§Rational Maps, ⁋Proposition 10](/en/math/algebraic_varieties/rational_maps#prop10)).

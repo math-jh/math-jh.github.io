@@ -14,7 +14,7 @@ weight: 14
 published: false
 ---
 
-어떤 소수가 두 제곱수의 합 $p = x^2 + y^2$으로 쓰이는가? 이 정수론의 고전적 물음은 정수환을 $x^2 + y^2 = (x+yi)(x-yi)$로 인수분해되는 더 큰 환으로 확장할 때 가장 자연스럽게 풀린다.
+어떤 소수가 두 제곱수의 합 $p = x^2 + y^2$으로 쓰이는가? 이 정수론의 고전적 물음은 정수환을 $x^2 + y^2 = (x+yi)(x-yi)$로 인수분해되는 더 큰 ring으로 확장할 때 가장 자연스럽게 풀린다.
 
 ## 가우스 정수와 노름
 
@@ -35,7 +35,7 @@ $N(\alpha) = \alpha\overline{\alpha}$ ($\overline{\alpha}$는 켤레) 이므로 
 $\mathbb{Z}$에서와 마찬가지로 노름을 "크기"로 삼아 나눗셈 정리가 성립한다.
 
 ::: 정리 3
-$\mathbb{Z}[i]$는 유클리드 정역이다. 즉 임의의 $\alpha, \beta \in \mathbb{Z}[i]$ ($\beta \neq 0$) 에 대하여 $\alpha = \beta\kappa + \rho$이면서 $N(\rho) < N(\beta)$인 $\kappa, \rho$가 존재한다. 따라서 $\mathbb{Z}[i]$에서는 소인수분해가 단원을 무시하면 유일하다.
+$\mathbb{Z}[i]$는 Euclidean domain이다. 즉 임의의 $\alpha, \beta \in \mathbb{Z}[i]$ ($\beta \neq 0$) 에 대하여 $\alpha = \beta\kappa + \rho$이면서 $N(\rho) < N(\beta)$인 $\kappa, \rho$가 존재한다. 따라서 $\mathbb{Z}[i]$에서는 소인수분해가 단원을 무시하면 유일하다.
 :::
 
 ::: 증명
@@ -160,4 +160,4 @@ $$(2+i)(3-2i) = 6 - 4i + 3i + 2 = 8 - i, \qquad N = 8^2 + 1^2 = 65$$
 이다. 따라서 $65 = 4^2 + 7^2 = 1^2 + 8^2$로 두 가지 표현을 얻으며, 이는 $2^{2-1} = 2$라는 셈과 일치한다.
 :::
 
-가우스 정수는 정수환을 확장하여 산술 문제를 푸는 대수적 정수론의 첫걸음이다. 같은 방식으로 $\mathbb{Z}[\omega]$ ($\omega = e^{2\pi i/3}$, 아이젠슈타인 정수) 는 $x^2 + xy + y^2$ 꼴과 $p \equiv 1 \pmod 3$의 표현을 다루고, 더 일반의 이차체 $\mathbb{Q}(\sqrt{d})$의 정수환에서는 유일인수분해가 깨지기도 하여 아이디얼이 등장한다. 또 다른 확장 방향으로, 무리수를 정수의 비의 극한으로 다루어 $\sqrt{d}$ 꼴의 무리수와 이차 방정식의 정수해에 접근하는 [§연분수](/ko/math/number_theory/continued_fractions)와 [§펠 방정식](/ko/math/number_theory/pell_equation)이 있다.
+가우스 정수는 정수환을 확장하여 산술 문제를 푸는 대수적 정수론의 첫걸음이다. 같은 방식으로 $\mathbb{Z}[\omega]$ ($\omega = e^{2\pi i/3}$, 아이젠슈타인 정수) 는 $x^2 + xy + y^2$ 꼴과 $p \equiv 1 \pmod 3$의 표현을 다루고, 더 일반의 이차체 $\mathbb{Q}(\sqrt{d})$의 정수환에서는 유일인수분해가 깨지기도 하여 ideal이 등장한다. 또 다른 확장 방향으로, 무리수를 정수의 비의 극한으로 다루어 $\sqrt{d}$ 꼴의 무리수와 이차 방정식의 정수해에 접근하는 [§연분수](/ko/math/number_theory/continued_fractions)와 [§펠 방정식](/ko/math/number_theory/pell_equation)이 있다.

@@ -47,7 +47,7 @@ Meanwhile, since $\langle v,v\rangle$ is a non-negative real number by the third
 ::: Definition 2
 On a complex inner product space $V$, the *norm* $\lVert-\rVert:V\rightarrow\mathbb{R}$ is defined by
 
-$\lVert v\rVert=\sqrt{\langle v,v\rangle}.$
+$$\lVert v\rVert=\sqrt{\langle v,v\rangle}.$$
 :::
 
 However, unlike the real case, the inner product itself takes complex values, so conjugates appear when verifying the properties of the norm. First, for any $v,w\in V$, the sum of $\langle v,w\rangle$ and $\langle w,v\rangle=\overline{\langle v,w\rangle}$ is twice the real part, i.e., $\langle v,w\rangle+\langle w,v\rangle=2\Real\langle v,w\rangle$. Using this, we obtain
@@ -162,7 +162,7 @@ Combining the Gram–Schmidt process with unitary matrices yields a standard dec
 ::: Proposition 7 (QR decomposition)
 Any invertible matrix $A\in\Mat_n(\mathbb{C})$ is uniquely decomposed as a product of a unitary matrix $Q$ and an upper triangular matrix $R$ whose diagonal entries are all positive real numbers:
 
-$A=QR$
+$$A=QR$$
 :::
 ::: Proof
 Since $A$ is invertible, its columns $a_1,\ldots,a_n$ form a basis of $\mathbb{C}^n$. Applying the Gram–Schmidt process for the standard Hermitian inner product, we obtain an orthogonal basis $\hat a_1,\ldots,\hat a_n$, and normalize by setting $q_k=\hat a_k/\lVert\hat a_k\rVert$. Solving the Gram–Schmidt formula for $a_k$ gives

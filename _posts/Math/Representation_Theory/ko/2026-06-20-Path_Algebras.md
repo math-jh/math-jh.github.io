@@ -125,7 +125,7 @@ $$E_{kj}E_{ji}=E_{ki},\qquad E_{kl}E_{ji}=0\ (l\neq j)$$
 과 정확히 같은 규칙을 따르고, trivial path $e_i$는 대각성분 $E_{ii}$에 대응하기 때문이다.
 :::
 
-위 예시에서 path algebra가 행렬대수의 부분대수로 실현되는 것은 path algebra를 곱셈규칙이 path의 잇기로 주어지는 행렬과 같다고 보는 관점을 잘 보여 준다. 다음 예시는 oriented cycle을 가지는 가장 단순한 경우이다.
+위 예시에서 path algebra가 행렬대수의 subalgebra로 실현되는 것은 path algebra를 곱셈규칙이 path의 잇기로 주어지는 행렬과 같다고 보는 관점을 잘 보여 준다. 다음 예시는 oriented cycle을 가지는 가장 단순한 경우이다.
 
 ::: 예시 7
 *one-loop quiver*를 vertex 하나 $Q_0=\{1\}$과 loop $\alpha:1\rightarrow 1$ 하나로 정의한다. 이 quiver의 path는 trivial path $e_1$과, $\alpha$를 $m\geq 1$번 이어붙인 $\alpha^m$들이다. 모든 path가 $1$에서 $1$로 가므로 임의의 두 path는 항상 이어붙일 수 있고, 그 곱은
@@ -192,11 +192,11 @@ $$V_\alpha\oplus W_\alpha:V_i\oplus W_i\rightarrow V_j\oplus W_j$$
 를 배정하여 얻는 representation이다.
 :::
 
-Subrepresentation에서 부분공간들이 arrow를 따라 닫혀 있어야 한다는 조건은 morphism의 commutativity 조건을 부분공간에 제한한 것이며, 이 조건 덕분에 제한된 선형사상 $V_\alpha\vert_{W_i}:W_i\rightarrow W_j$가 잘 정의된다. Direct sum의 경우 포함사상 $V\hookrightarrow V\oplus W$와 사영사상 $V\oplus W\twoheadrightarrow V$가 모두 $\Rep(Q)$의 morphism이 되며, 이는 module의 direct sum이 가지는 보편적 성질 ([\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 1](/ko/math/algebraic_structures/operations_of_modules#thm1)) 의 representation 판본이다. 이러한 평행성은 우연이 아니며, 다음 절에서 보일 category 동치로 완전히 설명된다.
+Subrepresentation에서 부분공간들이 arrow를 따라 닫혀 있어야 한다는 조건은 morphism의 commutativity 조건을 부분공간에 제한한 것이며, 이 조건 덕분에 제한된 선형사상 $V_\alpha\vert_{W_i}:W_i\rightarrow W_j$가 잘 정의된다. Direct sum의 경우 포함사상 $V\hookrightarrow V\oplus W$와 projection map $V\oplus W\twoheadrightarrow V$가 모두 $\Rep(Q)$의 morphism이 되며, 이는 module의 direct sum이 가지는 보편적 성질 ([\[대수적 구조\] §가군의 직접곱과 직합, 텐서곱, ⁋정리 1](/ko/math/algebraic_structures/operations_of_modules#thm1)) 의 representation 판본이다. 이러한 평행성은 우연이 아니며, 다음 절에서 보일 category 동치로 완전히 설명된다.
 
 ## $\Rep(Q)$와 $kQ$-module의 동치
 
-이 글의 주된 정리는 quiver의 representation이 path algebra 위의 module과 본질적으로 같은 자료라는 것이다. 직관적으로, representation $V$가 주어지면 각 vertex의 공간들을 모두 모은 $M=\bigoplus_i V_i$ 위에 path들이 작용하게 만들 수 있다. Trivial path $e_i$는 $M$을 $i$번째 성분 $V_i$로 사영하는 사상으로, arrow $\alpha:i\rightarrow j$는 $V_\alpha$를 통해 $V_i$를 $V_j$로 보내는 사상으로 작용시키는 것이다. 거꾸로 $kQ$-module $M$이 주어지면 idempotent $e_i$가 잘라내는 부분공간 $e_iM$을 vertex $i$ 위의 공간으로, arrow의 작용을 그 사이의 선형사상으로 회복할 수 있다.
+이 글의 주된 정리는 quiver의 representation이 path algebra 위의 module과 본질적으로 같은 자료라는 것이다. 직관적으로, representation $V$가 주어지면 각 vertex의 공간들을 모두 모은 $M=\bigoplus_i V_i$ 위에 path들이 작용하게 만들 수 있다. Trivial path $e_i$는 $M$을 $i$번째 성분 $V_i$로 projection하는 사상으로, arrow $\alpha:i\rightarrow j$는 $V_\alpha$를 통해 $V_i$를 $V_j$로 보내는 사상으로 작용시키는 것이다. 거꾸로 $kQ$-module $M$이 주어지면 idempotent $e_i$가 잘라내는 부분공간 $e_iM$을 vertex $i$ 위의 공간으로, arrow의 action을 그 사이의 선형사상으로 회복할 수 있다.
 
 ::: 정리 12
 Quiver $Q$와 field $k$에 대하여, 위에서 서술한 대응은 category 동치
@@ -208,15 +208,15 @@ $$\Rep(Q)\cong \lMod{kQ}$$
 ::: 증명
 두 방향의 functor를 구성하고 이들이 서로 역임을 보인다.
 
-**Representation에서 module으로.** Representation $V=(V_i,V_\alpha)$가 주어졌다 하자. $k$-벡터공간
+**Representation에서 module로.** Representation $V=(V_i,V_\alpha)$가 주어졌다 하자. $k$-벡터공간
 
 $$M=\bigoplus_{i\in Q_0}V_i$$
 
-위에 $kQ$-action을 정의한다. 곱셈을 basis인 path들 위에서 정의하면 충분하다. Trivial path $e_i$는 $M$에서 $V_i$로의 사영을 $M$ 안으로 다시 넣은 사상으로 작용시키고, arrow $\alpha:i\rightarrow j$는 먼저 $V_i$ 성분으로 사영한 뒤 $V_\alpha$를 적용하여 $V_j$ 성분에 넣는 사상으로 작용시킨다. 길이 $\geq 1$인 path $p=\alpha_\ell\cdots\alpha_1$은 합성
+위에 $kQ$-action을 정의한다. 곱셈을 basis인 path들 위에서 정의하면 충분하다. Trivial path $e_i$는 $M$에서 $V_i$로의 projection을 $M$ 안으로 다시 넣은 사상으로 작용시키고, arrow $\alpha:i\rightarrow j$는 먼저 $V_i$ 성분으로 projection한 뒤 $V_\alpha$를 적용하여 $V_j$ 성분에 넣는 사상으로 작용시킨다. 길이 $\geq 1$인 path $p=\alpha_\ell\cdots\alpha_1$은 합성
 
 $$V_{\alpha_\ell}\circ\cdots\circ V_{\alpha_1}$$
 
-(을 적절한 성분에 넣은 것) 으로 작용시킨다. 이 작용이 $kQ$-module 구조를 줌을 확인하자. 우선 $\sum_i e_i$는 각 성분 $V_i$를 그대로 두므로 $M$ 위에서 항등사상으로 작용한다. 또 두 path $p,q$에 대하여, $s(p)\neq t(q)$이면 $q$의 작용의 image는 $V_{t(q)}$ 성분에 놓이는데 $p$의 작용은 $V_{s(p)}$ 성분에서만 비자명하므로 합성이 $0$이고, 이는 $kQ$에서 $p\cdot q=0$인 것과 일치한다. $s(p)=t(q)$이면 $p$의 작용과 $q$의 작용의 합성은 path $pq$를 따라 선형사상들을 차례로 합성한 것이며, 이는 $pq$의 작용과 같다. 따라서 작용은 곱셈을 보존하고 $M$은 left $kQ$-module이다. 이 대응을 $M=F(V)$로 적는다. Morphism $f:V\rightarrow W$에 대해서는 $F(f)=\bigoplus_i f_i:\bigoplus_i V_i\rightarrow\bigoplus_i W_i$로 정의한다. 이것이 $kQ$-linear임은, $e_i$의 작용과 $F(f)$의 교환은 $f$가 성분을 보존한다는 사실로부터, arrow $\alpha$의 작용과의 교환은 정확히 [정의 10](#def10)의 조건 $f_j\circ V_\alpha=W_\alpha\circ f_i$로부터 따라온다.
+(을 적절한 성분에 넣은 것) 으로 작용시킨다. 이 action이 $kQ$-module 구조를 줌을 확인하자. 우선 $\sum_i e_i$는 각 성분 $V_i$를 그대로 두므로 $M$ 위에서 항등사상으로 작용한다. 또 두 path $p,q$에 대하여, $s(p)\neq t(q)$이면 $q$의 action의 image는 $V_{t(q)}$ 성분에 놓이는데 $p$의 action은 $V_{s(p)}$ 성분에서만 비자명하므로 합성이 $0$이고, 이는 $kQ$에서 $p\cdot q=0$인 것과 일치한다. $s(p)=t(q)$이면 $p$의 action과 $q$의 action의 합성은 path $pq$를 따라 선형사상들을 차례로 합성한 것이며, 이는 $pq$의 action과 같다. 따라서 action은 곱셈을 보존하고 $M$은 left $kQ$-module이다. 이 대응을 $M=F(V)$로 적는다. Morphism $f:V\rightarrow W$에 대해서는 $F(f)=\bigoplus_i f_i:\bigoplus_i V_i\rightarrow\bigoplus_i W_i$로 정의한다. 이것이 $kQ$-linear임은, $e_i$의 action과 $F(f)$의 교환은 $f$가 성분을 보존한다는 사실로부터, arrow $\alpha$의 action과의 교환은 정확히 [정의 10](#def10)의 조건 $f_j\circ V_\alpha=W_\alpha\circ f_i$로부터 따라온다.
 
 **Module에서 representation으로.** Left $kQ$-module $M$이 주어졌다 하자. 각 vertex $i$에 대하여
 
@@ -230,14 +230,14 @@ $$\alpha m=\alpha e_i m=e_j\alpha e_i m=e_j(\alpha m)\in e_jM=V_j$$
 
 $$M=1\cdot M=\sum_{i\in Q_0}e_iM=\bigoplus_{i\in Q_0}V_i$$
 
-이다. 직합인 것은 $e_ie_j=\delta_{ij}e_i$에 의하여 각 $e_iM$이 서로 만나지 않기 때문이다. 이 대응을 $V=G(M)$으로 적는다. Module homomorphism $\varphi:M\rightarrow N$에 대해서는 $G(\varphi)_i=\varphi\vert_{e_iM}:e_iM\rightarrow e_iN$으로 정의한다. $\varphi$가 $e_i$와 교환하므로 $\varphi(e_iM)\subseteq e_iN$이어서 제한이 잘 정의되고, $\alpha$와의 교환으로부터 [정의 10](#def10)의 commutativity 조건이 성립하여 $G(\varphi)$는 morphism이다.
+이다. Direct sum인 것은 $e_ie_j=\delta_{ij}e_i$에 의하여 각 $e_iM$이 서로 만나지 않기 때문이다. 이 대응을 $V=G(M)$으로 적는다. Module homomorphism $\varphi:M\rightarrow N$에 대해서는 $G(\varphi)_i=\varphi\vert_{e_iM}:e_iM\rightarrow e_iN$으로 정의한다. $\varphi$가 $e_i$와 교환하므로 $\varphi(e_iM)\subseteq e_iN$이어서 제한이 잘 정의되고, $\alpha$와의 교환으로부터 [정의 10](#def10)의 commutativity 조건이 성립하여 $G(\varphi)$는 morphism이다.
 
-**두 functor가 서로 역.** Representation $V$에서 출발하여 $G(F(V))$를 계산하면, $F(V)=\bigoplus_i V_i$ 위에서 $e_i$의 작용이 $V_i$ 성분으로의 사영이므로 $e_i\bigl(\bigoplus_j V_j\bigr)=V_i$이고, arrow $\alpha$의 작용은 정의에 의하여 $V_\alpha$이다. 따라서 $G(F(V))=V$이며, 이 동일시는 morphism에 대해서도 자연스럽다. 거꾸로 module $M$에서 출발하면, $G(M)$의 vertex 공간은 $e_iM$이고 그 direct sum은 위에서 본 것처럼 $M$ 자신이며, 이 동일시 아래에서 path $p$의 작용은 $G(M)$ 위에서 정의한 arrow별 작용의 합성과 일치한다. 따라서 $F(G(M))=M$이다. 두 동일시가 natural isomorphism을 이루므로 $F,G$는 서로 quasi-inverse인 functor이고, $\Rep(Q)\cong\lMod{kQ}$이다.
+**두 functor가 서로 역.** Representation $V$에서 출발하여 $G(F(V))$를 계산하면, $F(V)=\bigoplus_i V_i$ 위에서 $e_i$의 action이 $V_i$ 성분으로의 projection이므로 $e_i\bigl(\bigoplus_j V_j\bigr)=V_i$이고, arrow $\alpha$의 action은 정의에 의하여 $V_\alpha$이다. 따라서 $G(F(V))=V$이며, 이 동일시는 morphism에 대해서도 자연스럽다. 거꾸로 module $M$에서 출발하면, $G(M)$의 vertex 공간은 $e_iM$이고 그 direct sum은 위에서 본 것처럼 $M$ 자신이며, 이 동일시 아래에서 path $p$의 action은 $G(M)$ 위에서 정의한 arrow별 action의 합성과 일치한다. 따라서 $F(G(M))=M$이다. 두 동일시가 natural isomorphism을 이루므로 $F,G$는 서로 quasi-inverse인 functor이고, $\Rep(Q)\cong\lMod{kQ}$이다.
 
 마지막으로 차원에 관한 주장을 보자. $V$가 유한차원이면 $\dim_k F(V)=\sum_i\dim_k V_i<\infty$이고, 거꾸로 $M$이 $k$ 위에서 유한차원이면 각 $V_i=e_iM$이 $M$의 부분공간으로서 유한차원이다. 따라서 동치는 유한차원 대상들 사이로 제한된다.
 :::
 
-정리 12의 동치 아래에서 [정의 11](#def11)의 representation 구성들은 정확히 module의 대응하는 구성으로 번역된다. Subrepresentation은 $kQ$-submodule에 대응하는데, 부분공간들이 arrow를 따라 닫혀 있다는 조건이 바로 $\bigoplus_i W_i$가 $kQ$의 작용에 대하여 닫혀 있다는 조건이기 때문이다. 마찬가지로 representation의 direct sum은 module의 direct sum에 대응한다. 따라서 representation에 대한 모든 분해 이론을 module의 언어로, 또는 그 반대로 옮길 수 있으며, 우리는 다음 글들에서 이 자유로운 번역을 전제로 한다.
+정리 12의 동치 아래에서 [정의 11](#def11)의 representation 구성들은 정확히 module의 대응하는 구성으로 번역된다. Subrepresentation은 $kQ$-submodule에 대응하는데, 부분공간들이 arrow를 따라 닫혀 있다는 조건이 바로 $\bigoplus_i W_i$가 $kQ$의 action에 대하여 닫혀 있다는 조건이기 때문이다. 마찬가지로 representation의 direct sum은 module의 direct sum에 대응한다. 따라서 representation에 대한 모든 분해 이론을 module의 언어로, 또는 그 반대로 옮길 수 있으며, 우리는 다음 글들에서 이 자유로운 번역을 전제로 한다.
 
 이 동치는 또한 representation을 다룰 때 굳이 path algebra 전체를 명시하지 않고 quiver의 자료만으로 작업해도 좋다는 것을 정당화한다. 가령 선형 $A_2$ quiver의 representation은 선형사상 $V_\alpha:V_1\rightarrow V_2$ 하나이고, 이를 분류하는 것은 곧 선형사상을 isomorphism 차이를 무시하고 분류하는 문제, 곧 rank에 의한 분류이다. 
 ---

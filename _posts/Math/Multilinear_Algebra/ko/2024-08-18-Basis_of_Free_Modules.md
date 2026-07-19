@@ -35,21 +35,21 @@ $$F(X)=\bigoplus_{x\in X} A$$
 Free family가 아닌 family를 *related family*라 부른다.
 :::
 
-Free family는 벡터공간에서의 일차독립의 개념을 일반화한 것이다. 즉, $A$가 field이고, $M$이 $A$ 위에 정의된 벡터공간이었다면 $M$의 원소들의 family $(x_i)_{i\in I}$가 free family라는 것은 $x_i$들이 일차독립인 것과 동치이다. ([\[선형대수학\] §벡터공간의 기저, ⁋정의 5](/ko/math/linear_algebra/basis#def5)) 이러한 관점에서 related family의 원소들은 서로 *linearly dependent<sub>일차종속</sub>*이라 부른다. 
+Free family는 벡터공간에서의 일차독립의 개념을 일반화한 것이다. 즉, $A$가 field이고, $M$이 $A$ 위에 정의된 벡터공간이었다면 $M$의 원소들의 family $(x_i)_{i\in I}$가 free family라는 것은 $x_i$들이 일차독립인 것과 동치이다. ([\[선형대수학\] §벡터공간의 기저, ⁋정의 5](/ko/math/linear_algebra/basis#def5)) 이러한 관점에서 related family의 원소들은 서로 *linearly dependent<sub>일차종속</sub>*라 부른다. 
 
-한편, 임의의 $A$-module $M$은 항상 생성집합을 갖는다. 이는 적어도 $M$의 원소들을 전부 모아두면 이것이 $M$을 생성하기 때문이다.  이로부터 다음을 얻는다.
+한편, 임의의 $A$-module $M$은 항상 spanning set을 갖는다. 이는 적어도 $M$의 원소들을 전부 모아두면 이것이 $M$을 생성하기 때문이다.  이로부터 다음을 얻는다.
 
 ::: 명제 2
 임의의 $A$-module $M$은 적당한 free $A$-module의 quotient와 isomorphic하다.
 :::
 ::: 증명
-임의의 $A$-module $M$에 대하여, $M$의 생성집합을 $X$라 하자. 그럼 $F(X)$와 $M$ 사이의 surjective $A$-linear map $\varepsilon:F(X) \rightarrow M$이 존재한다. 이 때, $F(X)$의 kernel은 $A$-module이므로, $M\cong F(X)/\ker\varepsilon$이다. 
+임의의 $A$-module $M$에 대하여, $M$의 spanning set을 $X$라 하자. 그럼 $F(X)$와 $M$ 사이의 surjective $A$-linear map $\varepsilon:F(X) \rightarrow M$이 존재한다. 이 때, $F(X)$의 kernel은 $A$-module이므로, $M\cong F(X)/\ker\varepsilon$이다. 
 :::
 
 $M$이 finitely generated $A$-module인 것은 이러한 family를 유한하게 택할 수 있는 것과 동치이며, 이 경우 위의 증명에서의 free $A$-module도 유한한 basis를 갖도록 택할 수 있다. 더 특수한 경우로 다음을 정의한다.
 
 ::: 정의 3
-$A$-module $M$이 *monogenous<sub>단일생성</sub>*이라는 것은 $M$이 $A$-module로서 하나의 원소 $x$에 의해 생성되는 것이다.
+$A$-module $M$이 *monogenous<sub>단일생성</sub>*라는 것은 $M$이 $A$-module로서 하나의 원소 $x$에 의해 생성되는 것이다.
 :::
 
 주의할 점은 $x$가 free element일 필요가 없다는 것이다. 즉, 어떠한 $\alpha\neq 0$이 존재하여 $\alpha x=0$이 될 수도 있으며, 이것이 [\[선형대수학\]]()에서 다루던 것과 다른 점이다. 
@@ -87,7 +87,7 @@ $$\card I\leq \card(X\times\mathbb{N})=\card X\cdot\aleph_0\leq \card X$$
 이를 통해 [명제 4](#prop4)을 각각의 $N_i$가 monogeneous이고 free element인 경우로 한정하면, 임의의 free $A$-module $M$가 무한한 basis를 갖는다면 $A$의 모든 basis는 같은 cardinality를 갖는다는 것을 안다. 그러나 유한한 basis를 갖는 경우 이것이 항상 성립하는 것은 아니다.
 
 ::: 정의 5
-임의의 ring $A$에 대하여, $A^m\cong A^n$인 것과 $m=n$인 것이 항상 동치일 경우, $A$가 *invariant basis number property<sub>불변 기저수 성질</sub>*을 만족한다고 한다. 
+임의의 ring $A$에 대하여, $A^m\cong A^n$인 것과 $m=n$인 것이 항상 동치일 경우, $A$가 *invariant basis number property<sub>불변 기저수 성질</sub>*를 만족한다고 한다. 
 :::
 
 예를들어, $A=0$은 이 성질을 만족하지 않는다. 임의의 $m,n$에 대해 $0^m\cong 0^n$이기 때문이다. 
@@ -112,7 +112,7 @@ $$\phi^\ast M\cong\phi^\ast\left(\bigoplus_{i\in I} Ax_i\right)\cong \bigoplus_{
 [\[선형대수학\] §무한차원 벡터공간<sup>†</sup>, ⁋정리 4](/ko/math/linear_algebra/infinite_dimensional_vector_space#thm4)에서 우리는 $\mathbb{K}$가 commutative라는 성질을 사용하지 않았으므로, 위의 명제는 더 일반적으로 $\mathbb{K}$를 division ring $D$로 바꾸어도 성립한다. 한편 임의의 commutative ring은 $A \rightarrow \Frac A$가 존재하므로 항상 IBN property를 갖는다.
 
 ::: 정의 7
-Ring $A$가 IBN을 만족한다 하자. 그럼 임의의 free $A$-module $M$에 대하여, $M$의 basis의 크기를 $M$의 *rank<sub>랭크</sub>*라 한다. 
+Ring $A$가 IBN을 만족한다 하자. 그럼 임의의 free $A$-module $M$에 대하여, $M$의 basis의 크기를 $M$의 *rank<sub>랭크</sub>*이라 한다. 
 :::
 
 편의상 $M$의 basis $(x_i)_{i\in I}$가 주어졌을 때, 이를 통해 얻어지는 free module $F(I)$를 $A^{\oplus I}$와 같이 나타내고, 특별히 $I$가 유한집합이면 $A^m$과 같이 나타내기도 한다. 이 표기법들은 $A$가 IBN property를 갖는다는 보장이 없을 때 사용할 경우 표기법 상의 문제가 있지만, 약간의 표기법의 남용을 통해 이를 눈감기로 한다. 
@@ -121,7 +121,7 @@ Basis의 중요한 성질 중 하나는 basis의 원소에서의 함수값들이
 
 ## 대수의 기저
 
-이제 우리는 대수의 기저에 대해 살펴보자. [선형대수학](/ko/linear_algebra) 카테고리에서 우리의 주된 관심사는 $A$-module이기는 하지만, 고정된 $A$-module의 endomorphism algebra를 살펴볼 때는 $A$-algebra를 생각하게 된다. 
+이제 우리는 대수의 기저에 대해 살펴보자. [선형대수학](/ko/linear_algebra) category에서 우리의 주된 관심사는 $A$-module이기는 하지만, 고정된 $A$-module의 endomorphism algebra를 살펴볼 때는 $A$-algebra를 생각하게 된다. 
 
 앞서 $A$-algebra를 이야기할 때에는 항상 $A$가 commutative인 것을 가정했었다는 것을 기억하자.
 

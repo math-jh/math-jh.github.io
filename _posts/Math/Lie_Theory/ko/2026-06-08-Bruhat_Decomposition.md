@@ -87,7 +87,7 @@ $$\ell(w)=\lvert\{(i,j)\mid i<j,\ w(i)>w(j)\}\rvert=\operatorname{inv}(w)$$
 ::: 정리 5 (Bruhat decomposition)
 Connected reductive algebraic group $G$, Borel subgroup $B$, maximal torus $T\subset B$, 그리고 Weyl group $W=N_G(T)/T$에 대하여, 다음의 disjoint union이 성립한다.
 
-$G=\bigsqcup_{w\in W}BwB$
+$$G=\bigsqcup_{w\in W}BwB$$
 :::
 
 이 decomposition을 바라보는 가장 단순하고 직관적인 방법은 $G$ 위에 정의된 $B\times B$-action
@@ -168,7 +168,7 @@ $$G=\bigsqcup_{w\in W}B^-wB^-$$
 
 더 일반적으로, 서로 opposite인 두 Borel subgroup $B^+$, $B^-$에 대하여 다음의 *mixed* 분해가 성립한다.
 
-$G=\bigsqcup_{w\in W}B^+wB^-$
+$$G=\bigsqcup_{w\in W}B^+wB^-$$
 :::
 ::: 증명
 $B^-=w_0Bw_0^{-1}$이고 $w_0=w_0^{-1}$이므로, 정리 5의 양변을 $w_0$로 conjugate하면
@@ -216,7 +216,7 @@ $G=\GL_n(\mathbb{C})$에서는 이 분해가 block 행렬로 곧장 드러난다
 ::: 정의 11
 Parabolic subgroup $W_I\subseteq W$에 대하여, *minimal length coset representatives*의 모임 $W^I$는 다음과 같이 정의된다.
 
-$W^I=\{w\in W\mid\ell(ws_i)>\ell(w)\text{ for all }\alpha_i\in I\}$
+$$W^I=\{w\in W\mid\ell(ws_i)>\ell(w)\text{ for all }\alpha_i\in I\}$$
 :::
 
 조건 $\ell(ws_i)>\ell(w)$는 $w$를 오른쪽에서 $W_I$의 생성원으로 곱해도 더 이상 길이를 줄일 수 없다는 뜻이며, 따라서 $W^I$는 각 left coset $wW_I$ 안에서 길이가 최소인 원소들을 모은 것이다. 앞서 Weyl group element의 length가 Bruhat cell의 차원을 주듯, 이들은 곧 partial flag variety를 분해했을 때 각 cell의 차원이 될 것이다. 이를 위해서는 다음의 다리가 필요하다. 
@@ -237,7 +237,7 @@ $$G=\bigsqcup_{w\in W^I}BwP$$
 
 따라서 partial flag variety $G/P$는 affine cell들로 분해된다.
 
-$G/P=\bigsqcup_{w\in W^I}BwP/P,\qquad BwP/P\cong\mathbb{A}^{\ell(w)}$
+$$G/P=\bigsqcup_{w\in W^I}BwP/P,\qquad BwP/P\cong\mathbb{A}^{\ell(w)}$$
 :::
 ::: 증명
 정리 5의 $G=\bigsqcup_{w\in W}BwB$와 $P=\bigsqcup_{v\in W_I}BvB$로부터 $G=\bigcup_{w\in W}BwP$이고, 명제 12의 분해 $w=w^Iw_I$에 의해 $BwP=Bw^IP$이므로 $G=\bigcup_{w\in W^I}BwP$이다. Disjointness를 보기 위해 $w_1,w_2\in W^I$에 대해 $Bw_1P=Bw_2P$라 하자. 그럼 $w_1\in Bw_2P$이고, $P=\bigsqcup_{v\in W_I}BvB$이므로 $Bw_2P=\bigsqcup_{v\in W_I}Bw_2vB$이다. (여기서 $w_2\in W^I$와 $v\in W_I$에 대해 $\ell(w_2v)=\ell(w_2)+\ell(v)$이므로 $Bw_2BvB=Bw_2vB$가 단일 cell로 합쳐진다.) 따라서 어떤 $v\in W_I$에 대해 $w_1\in Bw_2vB$가 되어, 정리 5의 disjointness로부터 $w_1=w_2v$이다. 즉 $w_1$과 $w_2$는 같은 coset $w_2W_I$에 속하고, 각 coset에 minimal length 원소가 유일하므로 $w_1=w_2$이다. 마지막으로 $w\in W^I$이면 $\ell(w)=\ell(w^I)$가 cell 차원을 주어 명제 6과 같은 논증으로 $BwP/P\cong\mathbb{A}^{\ell(w)}$를 얻는다.

@@ -21,7 +21,7 @@ The following definition shows what the intersection of two varieties $V,W$ near
 ::: Definition 1
 For two varieties $V, W$ in affine space $\mathbb{A}^n$ at a point $p$, we define their *intersection multiplicity* $i_p(V, W)$ by the formula
 
-$i_p(V, W) = \dim_{\mathbb{K}} \mathcal{O}_{\mathbb{A}^n, p} / (I(V) + I(W)).$
+$$i_p(V, W) = \dim_{\mathbb{K}} \mathcal{O}_{\mathbb{A}^n, p} / (I(V) + I(W)).$$
 :::
 
 By definition, near $p$ the varieties $V$ and $W$ are represented as the common zero sets of the elements of $I(V)$ and $I(W)$ respectively. Then for $p$ to lie in both subvarieties it must be a common zero of all elements of both $I(V)$ and $I(W)$, which leads us to consider the ideal sum $I(V)+I(W)$. In general, if $V,W$ are too small compared with the ambient space they typically do not meet, so the above formula is not well defined. That is, we use the formula only when $\dim V+\dim W=n$. In general, the expected dimension of the intersection of two arbitrary subvarieties meeting each other is $\dim V + \dim W -n$, and for this to be a point we must have $\dim V+\dim W=n$.
@@ -147,7 +147,7 @@ $$\CH^\ast(\mathbb{P}^1 \times \mathbb{P}^1) \cong \mathbb{Z}[H_1, H_2] / (H_1^2
 
 where $H_1 = [\mathbb{P}^1 \times \{p\}]$, $H_2 = [\{p\} \times \mathbb{P}^1]$. For a curve $C$ of bidegree $(a, b)$ we have $[C] = aH_1 + bH_2$, and thus the intersection product of two curves $C = aH_1 + bH_2$, $C' = a'H_1 + b'H_2$ is computed as
 
-$C \cdot C' = (aH_1 + bH_2)(a'H_1 + b'H_2) = ab' H_1 H_2 + a'b H_1 H_2 = (ab' + a'b) H_1 H_2.$
+$$C \cdot C' = (aH_1 + bH_2)(a'H_1 + b'H_2) = ab' H_1 H_2 + a'b H_1 H_2 = (ab' + a'b) H_1 H_2.$$
 :::
 
 ::: Example 13

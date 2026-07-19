@@ -48,7 +48,7 @@ Ordered set은 $\leq$라는 관계가 추가적으로 정의된 집합이므로,
 ::: 명제 5
 이항관계 $(R,A,A)$가 order relation인 것은 다음의 두 조건과 동치이다.
 
-$R\circ R=R,\qquad R\cap R^{-1}=\Delta_A$
+$$R\circ R=R,\qquad R\cap R^{-1}=\Delta_A$$
 :::
 ::: 증명
 첫 번째 조건이 transitivity와 동등한 것은 [§동치관계, ⁋명제 3](/ko/math/set_theory/equivalence_relations#prop3)의 증명에서 이미 살펴보았다. 두 번째 조건은 reflexive와 antisymmetry를 섞어둔 것이라는 것도 쉽게 보일 수 있다.

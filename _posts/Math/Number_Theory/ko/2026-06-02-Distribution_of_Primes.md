@@ -138,11 +138,11 @@ $$\ln \zeta(s) = \sum_{p} \ln \frac{1}{1 - p^{-s}} = -\sum_{p} \ln\bigl(1 - p^{-
 
 $$\ln \zeta(s) = \sum_{p} \sum_{k=1}^{\infty} \frac{1}{k\,p^{ks}} = \sum_{p} \frac{1}{p^s} + \sum_{p} \sum_{k=2}^{\infty} \frac{1}{k\,p^{ks}}$$
 
-가 된다. 우변의 둘째 이중합은 $s \geq 1$에서 유계인데, 실제로
+가 된다. 우변의 둘째 이중합은 $s \geq 1$에서 bounded인데, 실제로
 
 $$\sum_{p} \sum_{k=2}^{\infty} \frac{1}{k\,p^{ks}} \leq \sum_{p} \sum_{k=2}^{\infty} \frac{1}{p^{k}} = \sum_{p} \frac{1}{p(p-1)} \leq \sum_{n=2}^{\infty} \frac{1}{n(n-1)} = 1$$
 
-로 추정된다. 한편 $s \to 1^+$일 때 $\zeta(s) \to \infty$이므로 $\ln \zeta(s) \to \infty$이다. 따라서 위 등식에서 유계인 둘째 합을 빼면, $\sum_p p^{-s}$이 $s \to 1^+$에서 무계로 커져야 한다. 만약 $\sum_p 1/p$이 수렴한다면 $\sum_p p^{-s} \leq \sum_p 1/p$이 모든 $s > 1$에서 유계가 되어 모순이다. 그러므로 $\sum_p 1/p$은 발산한다.
+로 추정된다. 한편 $s \to 1^+$일 때 $\zeta(s) \to \infty$이므로 $\ln \zeta(s) \to \infty$이다. 따라서 위 등식에서 bounded인 둘째 합을 빼면, $\sum_p p^{-s}$이 $s \to 1^+$에서 무계로 커져야 한다. 만약 $\sum_p 1/p$이 수렴한다면 $\sum_p p^{-s} \leq \sum_p 1/p$이 모든 $s > 1$에서 bounded가 되어 모순이다. 그러므로 $\sum_p 1/p$은 발산한다.
 :::
 
 이 발산은 극히 더디다. 메르텐스의 정리에 따르면 $x$ 이하의 소수에 대한 부분합은

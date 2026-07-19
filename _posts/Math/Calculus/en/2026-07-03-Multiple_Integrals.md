@@ -31,7 +31,7 @@ $$\int_R f \mathop{dV}$$
 
 When it is necessary to exhibit the variables, we also write
 
-$\int\cdots\int_R f(x_1,\ldots,x_n) \mathop{dx_1}\cdots \mathop{dx_n}$
+$$\int\cdots\int_R f(x_1,\ldots,x_n) \mathop{dx_1}\cdots \mathop{dx_n}$$
 :::
 
 Depending on the dimension, this integral computes different quantities. For $n=1$ it is the familiar definite integral, namely the area under a curve. For $n=2$ and $f\geq 0$, the quantity computed is the volume of the solid whose base is the region $R$ and whose top is the surface $z=f(x,y)$; this case is specially called the *double integral*. The $dV$ above is notation with $n$-dimensional volume in mind, but since two-dimensional volume, i.e. area, is already familiar, it is customary to write
@@ -85,7 +85,7 @@ $$\int_0^1 \int_x^1 e^{y^2} \mathop{dy} \mathop{dx}$$
 
 cannot be solved from the inside because the antiderivative of $e^{y^2}$ is not elementary. However, the region of integration is $\{0 \leq x \leq y \leq 1\}$, so changing the order brings the outer variable into the limits and creates a new factor $y$:
 
-$\int_0^1 \int_0^y e^{y^2} \mathop{dx} \mathop{dy} = \int_0^1 y e^{y^2} \mathop{dy} = \frac{1}{2}(e - 1)$
+$$\int_0^1 \int_0^y e^{y^2} \mathop{dx} \mathop{dy} = \int_0^1 y e^{y^2} \mathop{dy} = \frac{1}{2}(e - 1)$$
 :::
 
 ## Change of Variables
@@ -99,7 +99,7 @@ $$\int_D f(\mathbf{x}) \mathop{dV} = \int_{D'} f(\mathbf{T}(\mathbf{u})) \lvert 
 
 Here $J_{\mathbf{T}}$ is the *Jacobi matrix* collecting the partial derivatives of $\mathbf{T}$
 
-$J_{\mathbf{T}}=\begin{pmatrix} \partial x_1/\partial u_1 & \cdots & \partial x_1/\partial u_n \\ \vdots & \ddots & \vdots \\ \partial x_n/\partial u_1 & \cdots & \partial x_n/\partial u_n\end{pmatrix}$
+$$J_{\mathbf{T}}=\begin{pmatrix} \partial x_1/\partial u_1 & \cdots & \partial x_1/\partial u_n \\ \vdots & \ddots & \vdots \\ \partial x_n/\partial u_1 & \cdots & \partial x_n/\partial u_n\end{pmatrix}$$
 :::
 Again, since we have agreed to treat linear algebra as a black box, we defer the proof to analysis. In any case, what matters is the intuition: the Jacobian determinant $\lvert\det J_{\mathbf{T}}\rvert$ is the local scaling factor by which $\mathbf{T}$ expands volume. That is, a small box in $\mathbf{u}$-space is carried by $\mathbf{T}$ to a small parallelepiped in $\mathbf{x}$-space whose volume is the original box's volume multiplied by $\lvert\det J_{\mathbf{T}}\rvert$, so the volume element transforms as $\mathop{dV} = \lvert\det J_{\mathbf{T}}(\mathbf{u})\rvert \mathop{dV}'$. For $n=2$ the parallelepiped becomes a parallelogram, and the area formed by the two edge vectors $\mathbf{T}_u \Delta u$ and $\mathbf{T}_v \Delta v$ (where $\mathbf{T}_u, \mathbf{T}_v$ are the partial derivative vectors of $\mathbf{T}$) is exactly $\lvert\det J_{\mathbf{T}}\rvert \Delta u \Delta v$. Substituting this expression into the Riemann sum and taking the limit yields [Theorem 4](#thm4), and the absolute value is present because volume is always positive.
 

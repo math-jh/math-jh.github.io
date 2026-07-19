@@ -90,7 +90,7 @@ Then the following definition is also the same as for Lie groups.
 ::: Definition 7
 The *character* $\chi_\rho: G \to \mathbb{C}$ of a representation $\rho: G \to \GL(V)$ is defined by
 
-$\chi_\rho(g) = \tr(\rho(g))$
+$$\chi_\rho(g) = \tr(\rho(g))$$
 :::
 
 Moreover, as the following proposition shows, representations of algebraic groups simultaneously carry both algebraic and geometric natures.
@@ -112,7 +112,7 @@ Among algebraic groups, one of the objects we encounter most frequently is a tor
 ::: Definition 9
 An *algebraic torus* is an algebraic group isomorphic to a finite direct sum of copies of $\mathbb{G}_m = \mathbb{C}^\ast$. That is, there exists $n \ge 1$ such that
 
-$T \cong (\mathbb{C}^\ast)^n$
+$$T \cong (\mathbb{C}^\ast)^n$$
 :::
 
 In the theory of Lie groups, we saw that a torus decomposes into one-dimensional representations and that the information about each of these is encoded in its characters. Let us carry out the same program here.
@@ -162,7 +162,7 @@ $$A = \bigoplus_{\rchi \in X^\ast(T)} A_\rchi$$
 
 Here $X^\ast(T)$ is the character group of the torus, and each weight space $A_\rchi$ is defined by
 
-$A_\rchi = \{f \in A \mid t \cdot f = \rchi(t) f \text{ for all } t \in T\}$
+$$A_\rchi = \{f \in A \mid t \cdot f = \rchi(t) f \text{ for all } t \in T\}$$
 :::
 
 ::: Proof
@@ -215,7 +215,7 @@ The content regarding the finite generation of $A^G$ mentioned after [Definition
 ::: Definition 17
 When a reductive group $G$ acts on an affine variety $X = \Spec(A)$, the *GIT quotient* $X /\!/ G$ is defined by
 
-$X /\!/ G = \Spec(A^G)$
+$$X /\!/ G = \Spec(A^G)$$
 :::
 
 As discussed above, the GIT quotient $X /\!/ G$ is geometrically a good approximation to the orbit space $X/G$; this means that the GIT quotient satisfies the universal property expected of a quotient.

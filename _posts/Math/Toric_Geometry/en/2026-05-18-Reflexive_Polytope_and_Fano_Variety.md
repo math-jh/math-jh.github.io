@@ -113,7 +113,7 @@ Moreover, the correspondence between a reflexive polytope $\Delta$ and the Goren
 ::: Proposition 5
 For a reflexive polytope $\Delta \subset M_{\mathbb{R}}$ and the corresponding toric variety $X_\Delta$, we have the following $\mathbb{C}$-vector space isomorphism:
 
-$H^0\bigl(X_\Delta, \mathcal{O}_{X_\Delta}(-K_{X_\Delta})\bigr) \cong \bigoplus_{u \in \Delta \cap M} \mathbb{C} \cdot \chi^u.$
+$$H^0\bigl(X_\Delta, \mathcal{O}_{X_\Delta}(-K_{X_\Delta})\bigr) \cong \bigoplus_{u \in \Delta \cap M} \mathbb{C} \cdot \chi^u.$$
 :::
 
 ::: Proof
@@ -163,7 +163,7 @@ A smooth divisor $V \subset X$ in the anticanonical linear system $\lvert -K_X \
 ::: Proof
 We use the adjunction formula $K_V = (K_X + V)\vert_V$ from [\[Algebraic Varieties\] §Canonical Bundle](/en/math/algebraic_varieties/canonical_bundle). Since $V \in \lvert -K_X \rvert$, we have $V \sim -K_X$, and therefore
 
-$K_V = (K_X + V)\vert_V = (K_X - K_X)\vert_V = 0.$
+$$K_V = (K_X + V)\vert_V = (K_X - K_X)\vert_V = 0.$$
 :::
 
 As mentioned above, the relationship between $X_\Delta$ and $X_{\Delta^\circ}$ is not of an easily visible kind, and it is impossible to explain it rigorously in the remainder of this post. The two are related through mirror symmetry, which is, in a word, the conjecture that two (usually non-isomorphic) Calabi-Yau varieties are *paired* through a certain symmetry of Hodge data.

@@ -260,7 +260,7 @@ $$\B\GL(n;\mathbb{C})\simeq \B\Umat(n)=\Gr(n,\mathbb{C}^\infty).$$
 
 Repeating the same entire story for the real Stiefel manifold $V_n(\mathbb{R}^\infty)$ of all orthonormal $n$-frames in $\mathbb{R}^\infty$, $\Omat(n)$, and Gram–Schmidt orthogonalization gives
 
-$\B\GL(n;\mathbb{R})\simeq \B\Omat(n)=\Gr(n,\mathbb{R}^\infty).$
+$$\B\GL(n;\mathbb{R})\simeq \B\Omat(n)=\Gr(n,\mathbb{R}^\infty).$$
 :::
 
 ## Cohomology of Classifying Spaces

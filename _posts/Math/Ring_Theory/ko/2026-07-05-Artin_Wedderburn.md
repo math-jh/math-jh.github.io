@@ -190,7 +190,7 @@ $R\cong\prod_{i=1}^k\Mat_{n_i}(D_i)$가 semisimple ring이라 하자. 그럼 sim
 :::
 
 ::: 참고 13
-정의 1은 left module 구조로 주어졌지만, right module로 정의해도 같은 환들을 얻는다. Right $R$-module은 left $R^{\mathrm{op}}$-module과 같으므로, $R$이 right semisimple이라는 것은 $R^{\mathrm{op}}$가 semisimple ring이라는 것이다. 그런데 $R$이 semisimple ring이면 [정리 11](#thm11)의 분해에 [보조정리 9](#lem9)를 적용하여 $R^{\mathrm{op}}\cong\prod_i\Mat_{n_i}(D_i^{\mathrm{op}})$ 또한 행렬환들의 곱이 되므로 semisimple ring이고, 역도 대칭적으로 성립한다. 따라서 semisimple ring의 개념은 좌우의 선택과 무관하다.
+정의 1은 left module 구조로 주어졌지만, right module로 정의해도 같은 환들을 얻는다. Right $R$-module은 left $R^{\mathrm{op}}$-module과 같으므로, $R$이 right semisimple이라는 것은 $R^{\mathrm{op}}$가 semisimple ring이라는 것이다. 그런데 $R$이 semisimple ring이면 [정리 11](#thm11)의 분해에 [보조정리 9](#lem9)를 적용하여 $R^{\mathrm{op}}\cong\prod_i\Mat_{n_i}(D_i^{\mathrm{op}})$ 또한 행렬환들의 곱이 되므로 semisimple ring이고, 역도 symmetric으로 성립한다. 따라서 semisimple ring의 개념은 좌우의 선택과 무관하다.
 :::
 
 ::: 참고 14

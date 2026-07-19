@@ -111,7 +111,7 @@ For this definition to be well-defined, that is, for $\check{C}^\bullet(\mathcal
 ::: Definition 4
 We define the *Čech cohomology* $\check{H}^p(\mathcal{U}, \mathcal{F})$ determined by the above data as the cohomology of the Čech complex
 
-$\check{H}^p(\mathcal{U}, \mathcal{F}) = H^p(\check{C}^\bullet(\mathcal{U}, \mathcal{F}))$
+$$\check{H}^p(\mathcal{U}, \mathcal{F}) = H^p(\check{C}^\bullet(\mathcal{U}, \mathcal{F}))$$
 :::
 
 We previously said that Čech cohomology is a tool that measures the failure of gluing; this is encoded in the coboundary map. Let us verify the intuitive meaning of the coboundary map in low dimensions $p = 0, 1$.
@@ -145,7 +145,7 @@ So far we have defined Čech cohomology $\check{H}^p(\mathcal{U}, \mathcal{F})$ 
 ::: Definition 7
 We define the *Čech cohomology* of $X$ as the direct limit over all open covers
 
-$\check{H}^p(X, \mathcal{F}) = \varinjlim_{\mathcal{U}} \check{H}^p(\mathcal{U}, \mathcal{F})$
+$$\check{H}^p(X, \mathcal{F}) = \varinjlim_{\mathcal{U}} \check{H}^p(\mathcal{U}, \mathcal{F})$$
 :::
 
 To put the above argument more simply, the meaning is that we take finer and finer open covers and combine all the additional cohomology data that appears, defining this as $\check{H}(X, \mathcal{F})$.
@@ -222,7 +222,7 @@ $$U_{i_0 \cdots i_p}=U_{i_0}\cap \cdots\cap U_{i_p}$$
 
 then there is an isomorphism
 
-$\check{H}^p(\mathcal{U}, \mathcal{F}) \to H^p(X, \mathcal{F})$
+$$\check{H}^p(\mathcal{U}, \mathcal{F}) \to H^p(X, \mathcal{F})$$
 :::
 
 ::: Proof
@@ -248,7 +248,7 @@ $$E_2^{p,q}=\begin{cases}H^q(X, \mathcal{F})&\text{$p=0$}\\0&\text{otherwise}\en
 
 and $E_2^{p,q}=E_\infty^{p,q}$. Since the two spectral sequences converge to the same $H^\bullet(\Tot(K))$, we conclude that
 
-$\check{H}^n(\mathcal{U}, \mathcal{F}) \cong H^n(X, \mathcal{F})$
+$$\check{H}^n(\mathcal{U}, \mathcal{F}) \cong H^n(X, \mathcal{F})$$
 :::
 
 Then the only obstacle to our intuition is how demanding this acyclicity condition is, but fortunately it is a more lenient condition than one might think.
@@ -380,7 +380,7 @@ $$\Gamma(X, f)\colon \Gamma(X, \mathcal{A}^\bullet) \to \Gamma(X, \mathcal{I}^\b
 
 is a quasi-isomorphism. From this we obtain
 
-$H^q(\Gamma(X, \mathcal{A}^\bullet)) \cong H^q(\Gamma(X, \mathcal{I}^\bullet)) = H^q(X, \mathcal{F})$
+$$H^q(\Gamma(X, \mathcal{A}^\bullet)) \cong H^q(\Gamma(X, \mathcal{I}^\bullet)) = H^q(X, \mathcal{F})$$
 :::
 
 [Proposition 17](#prop17) together with [Proposition 16](#prop16) guarantees that the Godement resolution is actually sufficient for computing sheaf cohomology. That is, the cohomology of the complex $\Gamma(X, \mathcal{G}^\bullet(\mathcal{F}))$ obtained by taking global sections of the flasque resolution $\mathcal{G}^\bullet(\mathcal{F})$ coincides with $H^\bullet(X, \mathcal{F})$.
@@ -467,7 +467,7 @@ and thus we obtain the following.
 ::: Proposition 19 (Leray Spectral Sequence)
 For a continuous map $f : X \to Y$ and a sheaf $\mathcal{F}$, there exists a spectral sequence with the following $E_2$ page.
 
-$E_2^{p,q} = H^p(Y, R^q f_\ast \mathcal{F}) \Rightarrow H^{p+q}(X, \mathcal{F}).$
+$$E_2^{p,q} = H^p(Y, R^q f_\ast \mathcal{F}) \Rightarrow H^{p+q}(X, \mathcal{F}).$$
 :::
 
 Geometrically, this is most transparent when $f:X\rightarrow Y$ is a fibration; in this case, what this spectral sequence means is that to compute the cohomology on $X$, we first compute the cohomology on $Y$, then remember the cohomology on the fiber at each point as the higher sheaf $R^q f_\ast \mathcal{F}$, and finally compose these over $Y$.
@@ -477,7 +477,7 @@ Now in the lowest dimensions of the Leray spectral sequence, we can obtain the f
 ::: Corollary 20 (Five-Term Exact Sequence)
 For a continuous map $f : X \to Y$ and a sheaf $\mathcal{F}$, from the Leray spectral sequence we obtain the exact sequence
 
-$0 \to H^1(Y, f_\ast \mathcal{F}) \to H^1(X, \mathcal{F}) \to H^0(Y, R^1 f_\ast \mathcal{F}) \overset{d_2}{\to} H^2(Y, f_\ast \mathcal{F}) \to H^2(X, \mathcal{F})$
+$$0 \to H^1(Y, f_\ast \mathcal{F}) \to H^1(X, \mathcal{F}) \to H^0(Y, R^1 f_\ast \mathcal{F}) \overset{d_2}{\to} H^2(Y, f_\ast \mathcal{F}) \to H^2(X, \mathcal{F})$$
 :::
 
 ::: Proof

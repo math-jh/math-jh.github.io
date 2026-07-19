@@ -69,7 +69,7 @@ This contradicts the positive-definiteness of the inner product.
 ::: Proposition 5
 In a Dynkin diagram, the total number of edges incident to any single vertex does not exceed $4$. That is, for any simple root $\alpha$,
 
-$\sum_{\beta\in\Delta,\beta\neq\alpha}\lvert\langle\alpha,\beta\rangle\rvert\leq 4.$
+$$\sum_{\beta\in\Delta,\beta\neq\alpha}\lvert\langle\alpha,\beta\rangle\rvert\leq 4.$$
 :::
 ::: Proof
 Let $H_\alpha$ be the hyperplane orthogonal to the simple root $\alpha$, and let $\beta_1,\ldots,\beta_m$ be the simple roots adjacent to $\alpha$. Each $\beta_i$ makes a distinct angle with $H_\alpha$.

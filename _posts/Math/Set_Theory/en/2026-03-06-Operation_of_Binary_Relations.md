@@ -116,7 +116,7 @@ Now let $x\in X\cap\pr_1R$. Then since $x\in\pr_1R$, there exists some $y$ such 
 ::: Proposition 8
 Let $R_1$, $R_2$ be binary relations. Then the following two formulas hold:
 
-$\pr_1(R_2\circ R_1)=R_1^{-1}(\pr_1R_2),\quad \pr_2(R_2\circ R_1)=R_2(\pr_2R_1).$
+$$\pr_1(R_2\circ R_1)=R_1^{-1}(\pr_1R_2),\quad \pr_2(R_2\circ R_1)=R_2(\pr_2R_1).$$
 :::
 ::: Proof
 This is immediate from the following chain of equivalences:

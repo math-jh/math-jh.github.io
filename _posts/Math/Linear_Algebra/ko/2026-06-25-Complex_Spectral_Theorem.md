@@ -41,7 +41,7 @@ $$LL^\ast=L^\ast L$$
 
 ## Schur 분해
 
-복소내적공간 위에서는 임의의 linear operator라도 orthonormal basis에 대해 upper triangular matrix와 닮아있음을 보일 수 있다. 이것이 Schur decomposition이며, normal operator의 경우 이 upper triangular matrix가 자동으로 대각이 되어 복소 스펙트럼 정리를 되돌려준다.
+복소내적공간 위에서는 임의의 linear operator라도 orthonormal basis에 대해 upper triangular matrix와 닮아있음을 보일 수 있다. 이것이 Schur decomposition이며, normal operator의 경우 이 upper triangular matrix가 자동으로 대각이 되어 복소 spectrum 정리를 되돌려준다.
 
 ::: 정리 3 (Schur)
 복소내적공간 $V$ 위의 임의의 linear operator $L:V\rightarrow V$에 대하여, $L$의 행렬표현이 upper triangular matrix가 되도록 하는 $V$의 orthonormal basis가 존재한다. 행렬의 언어로는, 임의의 $A\in\Mat_n(\mathbb{C})$에 대하여 적당한 unitary matrix $U$와 upper triangular matrix $T$가 존재하여 $A=UTU^\ast$이다.
@@ -76,17 +76,17 @@ $$\lVert Te_1\rVert^2=\langle Te_1,Te_1\rangle=\langle e_1,T^\ast Te_1\rangle=\l
 이고, 따라서 $\lvert T_{11}\rvert^2=\sum_{j}\lvert T_{1j}\rvert^2$이므로 $j>1$에 대해 $T_{1j}=0$이다. 즉 첫째 행은 대각성분을 제외하면 모두 $0$이다. 그럼 $T$의 둘째 행 이하는 첫째 행·열을 떼어 낸 $(n-1)\times(n-1)$ upper triangular normal matrix를 이루므로, 귀납적으로 그것도 대각이 되어 $T$ 전체가 대각이다. 따라서 $A=UTU^\ast$은 unitary diagonalization이다.
 :::
 
-Schur 분해는 [§조르당 표준형](/ko/math/linear_algebra/Jordan_canonical_form)과 좋은 대조를 이룬다. 조르당 표준형은 일반적으로 unitary가 아닌 기저변환을 써서 행렬을 표준적인 block 형태로 만드는 반면, Schur 분해는 기저변환을 unitary로 제한하는 대신 표준형을 포기하고 upper triangular 형태에 만족한다. 후자는 orthonormality가 보존되어 수치적으로 안정적이라는 장점이 있어 응용에서 자주 쓰인다.
+Schur 분해는 [§조르당 표준형](/ko/math/linear_algebra/Jordan_canonical_form)과 좋은 대조를 이룬다. Jordan canonical form은 일반적으로 unitary가 아닌 기저변환을 써서 행렬을 표준적인 block 형태로 만드는 반면, Schur 분해는 기저변환을 unitary로 제한하는 대신 표준형을 포기하고 upper triangular 형태에 만족한다. 후자는 orthonormality가 보존되어 수치적으로 안정적이라는 장점이 있어 응용에서 자주 쓰인다.
 
 ## 복소 스펙트럼 정리
 
-Normal matrix의 unitary diagonalization은 [정리 3](#thm3)의 직접적 결과이다. 더 정밀하게, 복소수 버전의 스펙트럼 정리는 normal operator가 정확히 orthonormal basis로 대각화되는 operator임을 보인다.
+Normal matrix의 unitary diagonalization은 [정리 3](#thm3)의 직접적 결과이다. 더 정밀하게, 복소수 버전의 spectrum 정리는 normal operator가 정확히 orthonormal basis로 대각화되는 operator임을 보인다.
 
-::: 정리 5 (복소 스펙트럼 정리)
+::: 정리 5 (복소 spectrum 정리)
 복소내적공간 $V$ 위의 linear operator $L:V\rightarrow V$가 normal operator인 것은, $L$의 고유벡터들로 이루어진 $V$의 orthonormal basis가 존재하는 것과 동치이다.
 :::
 ::: 증명
-우선 $L$이 normal이라면 [따름정리 4](#cor4)에 의하여 $L$은 orthonormal basis로 대각화된다는 것이 자명하므로, 핵심은 반대방향이다. $L$의 고유벡터들로 이루어진 orthonormal basis $\{v_1,\ldots,v_n\}$이 존재하여 $Lv_i=\lambda_i v_i$라 하자. 그럼 [§복소내적공간, ⁋명제 5](/ko/math/linear_algebra/complex_inner_product_spaces#prop5)에 의해, 이 기저에 대한 $L^\ast$의 행렬표현은 $\diag(\bar\lambda_1,\ldots,\bar\lambda_n)$이다. 이제 두 diagonal matrix은 가환이므로 $LL^\ast=L^\ast L$이고, 따라서 $L$은 normal operator이다.
+우선 $L$이 normal이라면 [따름정리 4](#cor4)에 의하여 $L$은 orthonormal basis로 대각화된다는 것이 자명하므로, 핵심은 반대방향이다. $L$의 고유벡터들로 이루어진 orthonormal basis $\{v_1,\ldots,v_n\}$이 존재하여 $Lv_i=\lambda_i v_i$라 하자. 그럼 [§복소내적공간, ⁋명제 5](/ko/math/linear_algebra/complex_inner_product_spaces#prop5)에 의해, 이 기저에 대한 $L^\ast$의 행렬표현은 $\diag(\bar\lambda_1,\ldots,\bar\lambda_n)$이다. 이제 두 diagonal matrix는 가환이므로 $LL^\ast=L^\ast L$이고, 따라서 $L$은 normal operator이다.
 :::
 
 행렬의 언어로 옮기면, 이 정리는 (증명에서 보았듯) normal matrix의 unitary diagonalization에 대한 이야기이다.
@@ -124,7 +124,7 @@ $$\lVert v\rVert^2=\langle Lv,Lv\rangle=\langle\lambda v,\lambda v\rangle=\bar\l
 이고, $\lVert v\rVert^2>0$이므로 $\lvert\lambda\rvert^2=1$, 즉 $\lvert\lambda\rvert=1$이다.
 :::
 
-복소 스펙트럼 정리는 실수판인 [§스펙트럼 정리, ⁋정리 5](/ko/math/linear_algebra/spectral_theorem#thm5)를 특수한 경우로 포함한다. 즉, 실수symmetric matrix $A$는 성분이 실수이므로 복소행렬로 보면 $A^\ast=\bar A^t=A^t=A$가 되어 복소수 상에서도 self-adjoint이고, 따라서 [명제 7](#prop7)에 의하여 그 고윳값은 모두 실수이기 때문이다.  
+복소 spectrum 정리는 실수판인 [§스펙트럼 정리, ⁋정리 5](/ko/math/linear_algebra/spectral_theorem#thm5)를 특수한 경우로 포함한다. 즉, 실수symmetric matrix $A$는 성분이 실수이므로 복소행렬로 보면 $A^\ast=\bar A^t=A^t=A$가 되어 복소수 상에서도 self-adjoint이고, 따라서 [명제 7](#prop7)에 의하여 그 고윳값은 모두 실수이기 때문이다.  
 
 ---
 

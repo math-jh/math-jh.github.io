@@ -106,7 +106,7 @@ Looking carefully at the proof of this theorem, we obtain not only the dimension
 ::: Definition 3
 Let a manifold $M$ and $p\in M$ be given. For a coordinate system $(U,\varphi)$ containing $p$ and the component functions $x^i$ of $\varphi$, the *directional derivative* in the $x^i$ direction is the tangent vector defined by the formula
 
-$\left(\frac{\partial}{\partial x^i}\bigg\vert_p\right)f=\frac{\partial(f\circ \varphi^{-1})}{\partial r^i}\bigg\vert_{\varphi(p)}$
+$$\left(\frac{\partial}{\partial x^i}\bigg\vert_p\right)f=\frac{\partial(f\circ \varphi^{-1})}{\partial r^i}\bigg\vert_{\varphi(p)}$$
 :::
 
 Of course all tangent vectors can be thought of as directional derivatives, but what is special about these vectors $\partial/\partial x^i$ is that they are *exactly* the derivatives in the directions parallel to the coordinate axes determined by the coordinate system. 

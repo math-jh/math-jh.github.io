@@ -88,7 +88,7 @@ $S_n$의 임의의 permutation은 transposition들의 곱으로 나타낼 수 �
 ::: 증명
 [명제 4](#prop4)에 의하여 임의의 cycle이 transposition들의 곱으로 나타난다는 것만 증명하면 충분하다. 
 
-$(k_1\;k_2\;\cdots\;k_r)=(k_{r-1}\;k_r)(k_{r-2}\;k_r)\cdots(k_2\;k_r)(k_1\;k_r).$
+$$(k_1\;k_2\;\cdots\;k_r)=(k_{r-1}\;k_r)(k_{r-2}\;k_r)\cdots(k_2\;k_r)(k_1\;k_r).$$
 :::
 
 한편, $S_n$의 모든 원소를 나타내기 위해서는 단 두 개의 원소면 충분하다. 

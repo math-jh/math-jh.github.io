@@ -121,7 +121,7 @@ $$g(t)=\frac{f(t)}{f(t)+f(1-t)}$$
 
 Then $g$ is likewise always non-negative, its value is always less than or equal to $1$, and in particular it is identically $1$ when $t\geq 1$ and identically $0$ when $t\leq 0$. Therefore it suffices to define $\psi$ by the formula
 
-$\psi(t)=g(t+2)g(2-t)$
+$$\psi(t)=g(t+2)g(2-t)$$
 :::
 
 Using the above $C^\infty$ Urysohn lemma in place of the general Urysohn lemma, we can construct a smooth partition of unity on a differentiable manifold.

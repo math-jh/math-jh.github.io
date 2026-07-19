@@ -361,10 +361,10 @@ The tautological bundle $\mathcal{O}_{\mathbb{P}^n}(-1)$ on $\mathbb{P}^n$ defin
 We define the following two vector bundles on the Grassmannian $\Gr(k, n)$.
 
 1. *Tautological bundle* $S$: The rank $k$ vector bundle that assigns to each point $[V] \in \Gr(k, n)$ (where $V \subseteq \mathbb{A}^n$ is a $k$-dimensional subspace) the subspace $V$ itself as the fiber.
-   $S = \{([V], v) \in \Gr(k, n) \times \mathbb{A}^n \mid v \in V\}$
+   $$S = \{([V], v) \in \Gr(k, n) \times \mathbb{A}^n \mid v \in V\}$$
 
 2. *Quotient bundle* $Q$: The rank $n-k$ vector bundle that assigns to each point $[V]$ the quotient space $\mathbb{A}^n / V$ as the fiber.
-   $Q = \{([V], [w]) \in \Gr(k, n) \times (\mathbb{A}^n / S) \mid [w] \in \mathbb{A}^n / V\}$
+   $$Q = \{([V], [w]) \in \Gr(k, n) \times (\mathbb{A}^n / S) \mid [w] \in \mathbb{A}^n / V\}$$
 :::
 
 There is a natural short exact sequence between these.

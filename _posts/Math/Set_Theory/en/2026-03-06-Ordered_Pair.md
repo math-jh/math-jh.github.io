@@ -110,7 +110,7 @@ of the preceding set $\bigcup z$. This set is the singleton $\{x\}$. If we simil
 ::: Definition 7
 For the two sets $\{x\}$, $\{y\}$ obtained by the above process, we call the unique element $x$ of $\{x\}$ the *first component* of $z=(x,y)$, and the unique element $y$ of $\{y\}$ the *second component* of $z=(x,y)$, and denote them respectively by
 
-$x=\pr_1 z,\qquad y=\pr_2 z$
+$$x=\pr_1 z,\qquad y=\pr_2 z$$
 :::
 
 Here $\pr$ is short for **pr**ojection. Meanwhile, we can define the product $A\times B$ of two sets $A$, $B$ as follows.

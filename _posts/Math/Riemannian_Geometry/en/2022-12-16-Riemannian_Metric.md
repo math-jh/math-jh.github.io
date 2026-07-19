@@ -77,7 +77,7 @@ A Riemannian metric finally allows us to do geometry on a manifold: measuring di
 ::: Definition 2
 Let $(M,g)$ be a Riemannian manifold and let $\gamma:[a,b]\rightarrow M$ be a curve defined on it. Then the *length* $\length(\gamma)$ of $\gamma$ is defined by
 
-$\length(\gamma)=\int_a^b\lVert\dot{\gamma}(t)\rVert_g\mathop{dt}$
+$$\length(\gamma)=\int_a^b\lVert\dot{\gamma}(t)\rVert_g\mathop{dt}$$
 :::
 
 The length of a curve defined in this way is independent of the parametrization. Moreover, via the above definition we can make $M$ into a metric space by setting

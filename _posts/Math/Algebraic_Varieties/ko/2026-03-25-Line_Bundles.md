@@ -138,7 +138,7 @@ $\Pic(X)$는 abelian group이다.
 :::
 
 ::: 증명
-[명제 6](#prop6)에 의해 tensor product은 line bundle들의 이항연산이며, [명제 8](#prop8)에 의해 $\mathcal{O}_X$가 항등원이고 $\mathcal{L}^\vee$가 $\mathcal{L}$의 역원이다. Tensor product의 교환법칙 $\mathcal{L} \otimes \mathcal{M} \cong \mathcal{M} \otimes \mathcal{L}$과 결합법칙 $(\mathcal{L} \otimes \mathcal{M}) \otimes \mathcal{N} \cong \mathcal{L} \otimes (\mathcal{M} \otimes \mathcal{N})$은 transition functions의 수준에서 $g_{ij}h_{ij} = h_{ij}g_{ij}$ 및 $(g_{ij}h_{ij})k_{ij} = g_{ij}(h_{ij}k_{ij})$로부터 직접 얻어진다.
+[명제 6](#prop6)에 의해 tensor product는 line bundle들의 이항연산이며, [명제 8](#prop8)에 의해 $\mathcal{O}_X$가 항등원이고 $\mathcal{L}^\vee$가 $\mathcal{L}$의 역원이다. Tensor product의 교환법칙 $\mathcal{L} \otimes \mathcal{M} \cong \mathcal{M} \otimes \mathcal{L}$과 결합법칙 $(\mathcal{L} \otimes \mathcal{M}) \otimes \mathcal{N} \cong \mathcal{L} \otimes (\mathcal{M} \otimes \mathcal{N})$은 transition functions의 수준에서 $g_{ij}h_{ij} = h_{ij}g_{ij}$ 및 $(g_{ij}h_{ij})k_{ij} = g_{ij}(h_{ij}k_{ij})$로부터 직접 얻어진다.
 :::
 
 앞선 글에서와 마찬가지로, 우리의 toy example은 $\mathbb{A}^n$과 $\mathbb{P}^n$이다. 
@@ -363,10 +363,10 @@ Line bundle의 정의와 비교하면, 유일한 차이는 fiber가 $\mathbb{A}^
 Grassmannian $\Gr(k, n)$ 위에 다음 두 vector bundle을 정의한다.
 
 1. *Tautological bundle* $S$: 각 점 $[V] \in \Gr(k, n)$ (여기서 $V \subseteq \mathbb{A}^n$는 $k$차원 부분공간)에 그 부분공간 $V$ 자체를 fiber로 대응시키는 rank $k$ vector bundle.
-   $S = \{([V], v) \in \Gr(k, n) \times \mathbb{A}^n \mid v \in V\}$
+   $$S = \{([V], v) \in \Gr(k, n) \times \mathbb{A}^n \mid v \in V\}$$
 
-2. *Quotient bundle* $Q$: 각 점 $[V]$에 몫공간 $\mathbb{A}^n / V$를 fiber로 대응시키는 rank $n-k$ vector bundle.
-   $Q = \{([V], [w]) \in \Gr(k, n) \times (\mathbb{A}^n / S) \mid [w] \in \mathbb{A}^n / V\}$
+2. *Quotient bundle* $Q$: 각 점 $[V]$에 quotient space $\mathbb{A}^n / V$를 fiber로 대응시키는 rank $n-k$ vector bundle.
+   $$Q = \{([V], [w]) \in \Gr(k, n) \times (\mathbb{A}^n / S) \mid [w] \in \mathbb{A}^n / V\}$$
 :::
 
 이들 사이에는 자연스러운 short exact sequence가 존재한다.

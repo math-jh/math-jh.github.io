@@ -15,7 +15,7 @@ published: false
 
 ---
 
-우리는 이제 드디어 갈루아 이론의 기본정리를 증명할 수 있다. 
+우리는 이제 드디어 Galois 이론의 기본정리를 증명할 수 있다. 
 
 ::: 정리 1
 Field $\mathbb{K}$의 Galois extension $\mathbb{L}/\mathbb{K}$와 그 Galois group $\Gamma=\Gal(\mathbb{L}/\mathbb{K})$을 생각하자. $\mathscr{K}$를 $\mathbb{L}$의 subextension들의 모임이라 하고, $\mathscr{G}$를 $\Gamma$의 closed subgroup들의 모임이라 하면 $\mathscr{K}$와 $\mathscr{G}$ 사이의 두 함수
@@ -58,7 +58,7 @@ $$\sum_{j=1}^{m+1}\sigma_i(x_j)\,c_j=0,\qquad i=1,\ldots,m$$
 
 을 $\mathbb{N}$ 위에서 미지수 $c_1,\ldots,c_{m+1}$에 대해 생각하자. 이 system은 방정식이 $m$개, 미지수가 $m+1$개이므로 자명하지 않은 해를 갖는다. 만일 그렇지 않다면 $(c_j)\mapsto \bigl(\sum_j \sigma_i(x_j)c_j\bigr)_i$로 정의되는 linear map $\mathbb{N}^{m+1} \rightarrow \mathbb{N}^m$이 injective이고, 그럼 $\mathbb{N}^{m+1}$의 standard basis의 image는 $\mathbb{N}^m$의 일차독립인 $m+1$개의 원소들이 된다. 이를 포함하는 $\mathbb{N}^m$의 basis가 존재하므로 ([\[선형대수학\] §벡터공간의 차원, ⁋명제 5](/ko/math/linear_algebra/dimension#prop5)) $\mathbb{N}^m$은 크기 $m+1$ 이상의 basis를 갖게 되고, 이는 [\[선형대수학\] §벡터공간의 차원, ⁋정리 1](/ko/math/linear_algebra/dimension#thm1)에 모순이기 때문이다.
 
-이제 자명하지 않은 해들 가운데 $0$이 아닌 성분의 개수가 가장 적은 해 $(c_1,\ldots,c_{m+1})$을 택하고, index를 재배열하여 $c_1,\ldots,c_r\neq 0$이고 $c_{r+1}=\cdots=c_{m+1}=0$이라 하자. 해 전체에 $c_r^{-1}$을 곱하여 $c_r=1$로 정규화할 수 있다. 우선 $r\geq 2$인데, $r=1$이라면 $\sigma_1=\id_\mathbb{N}$에 해당하는 방정식이 $x_1c_1=0$이 되어 $c_1=0$이 되기 때문이다.
+이제 자명하지 않은 해들 가운데 $0$이 아닌 성분의 개수가 가장 적은 해 $(c_1,\ldots,c_{m+1})$을 택하고, index를 재배열하여 $c_1,\ldots,c_r\neq 0$이고 $c_{r+1}=\cdots=c_{m+1}=0$이라 하자. 해 전체에 $c_r^{-1}$을 곱하여 $c_r=1$로 normalize할 수 있다. 우선 $r\geq 2$인데, $r=1$이라면 $\sigma_1=\id_\mathbb{N}$에 해당하는 방정식이 $x_1c_1=0$이 되어 $c_1=0$이 되기 때문이다.
 
 임의의 $\tau\in H$를 각 방정식에 적용하면
 
@@ -97,7 +97,7 @@ $$\card H\leq \card \Gal(\mathbb{N}/\mathbb{M})=[\mathbb{N}:\mathbb{M}]\leq \car
 특히 $\sigma\vert_\mathbb{N}\in \Gal(\mathbb{N}/\mathbb{M})=\rho(G)$이므로, $\tau\vert_\mathbb{N}=\sigma\vert_\mathbb{N}$이도록 하는 $\tau\in G$가 존재한다. 그럼 $\mathbb{M}_0\subseteq \mathbb{N}$이므로 $\tau\in U_{\mathbb{M}_0}(\sigma)$이고, 즉 $\sigma$의 임의의 기본근방이 $G$와 만난다. 따라서 $G$는 $G'$에서 dense하고, $G$가 closed라는 가정으로부터 $G=G'$이다. 
 :::
 
-특별히 $\mathbb{L}/\mathbb{K}$가 finite degree Galois extension이라면 [§갈루아 군의 성질들, ⁋예시 1](/ko/math/field_theory/properties_of_galois_extensions#ex1)에서 살펴본 것과 같이 $\Gal(\mathbb{L}/\mathbb{K})$는 discrete space이고, 따라서 임의의 subgroup이 closed이다. 즉 이 경우 [정리 1](#thm1)은 subextension들과 subgroup들 사이의 대응이라는 고전적인 갈루아 이론의 기본정리가 된다. 또, [정리 1](#thm1)의 증명 과정에서 finite degree Galois extension $\mathbb{N}/\mathbb{M}$에 대하여 $\card\Gal(\mathbb{N}/\mathbb{M})=[\mathbb{N}:\mathbb{M}]$이 성립한다는 사실도 함께 얻었다.
+특별히 $\mathbb{L}/\mathbb{K}$가 finite degree Galois extension이라면 [§갈루아 군의 성질들, ⁋예시 1](/ko/math/field_theory/properties_of_galois_extensions#ex1)에서 살펴본 것과 같이 $\Gal(\mathbb{L}/\mathbb{K})$는 discrete space이고, 따라서 임의의 subgroup이 closed이다. 즉 이 경우 [정리 1](#thm1)은 subextension들과 subgroup들 사이의 대응이라는 고전적인 Galois 이론의 기본정리가 된다. 또, [정리 1](#thm1)의 증명 과정에서 finite degree Galois extension $\mathbb{N}/\mathbb{M}$에 대하여 $\card\Gal(\mathbb{N}/\mathbb{M})=[\mathbb{N}:\mathbb{M}]$이 성립한다는 사실도 함께 얻었다.
 
 기본정리의 두 번째 부분은 이 대응 하에서 normal subgroup이 무엇에 대응되는지를 알려준다.
 
@@ -123,7 +123,7 @@ $$\sigma H\sigma^{-1}=g\bigl(\sigma(\mathbb{M})\bigr)=g(\mathbb{M})=H$$
 
 이므로 $H$는 normal subgroup이다. 여기서 $\sigma H\sigma^{-1}$이 closed인 것은 conjugation이 topological group의 homeomorphism이기 때문이다.
 
-마지막으로 isomorphism을 확인하자. $\mathbb{M}/\mathbb{K}$가 Galois일 때, 위에서 정의한 restriction은 group homomorphism $\rho:\Gal(\mathbb{L}/\mathbb{K}) \rightarrow \Gal(\mathbb{M}/\mathbb{K})$이고, 그 kernel은 $\mathbb{M}$을 고정하는 원소들의 모임, 즉 $\Gal(\mathbb{L}/\mathbb{M})=g(k(H))=H$이다. 한편 $\rho$가 surjective인 것은 [§갈루아 확장, ⁋명제 13](/ko/math/field_theory/galois_extension#prop13)과 같다. 임의의 $\tau\in\Gal(\mathbb{M}/\mathbb{K})$는 [§갈루아 확장, ⁋명제 1](/ko/math/field_theory/galois_extension#prop1)에 의해 $\overline{\mathbb{K}}$의 $\mathbb{K}$-automorphism으로 확장되고, $\mathbb{L}/\mathbb{K}$가 quasi-Galois이므로 이 확장을 $\mathbb{L}$로 제한하면 $\tau$를 확장하는 $\Gal(\mathbb{L}/\mathbb{K})$의 원소를 얻기 때문이다. 따라서 first isomorphism theorem에 의해 $\Gal(\mathbb{L}/\mathbb{K})/H\cong\Gal(\mathbb{M}/\mathbb{K})$이다.
+마지막으로 isomorphism을 확인하자. $\mathbb{M}/\mathbb{K}$가 Galois일 때, 위에서 정의한 restriction은 group homomorphism $\rho:\Gal(\mathbb{L}/\mathbb{K}) \rightarrow \Gal(\mathbb{M}/\mathbb{K})$이고, 그 kernel은 $\mathbb{M}$을 고정하는 원소들의 모임, 즉 $\Gal(\mathbb{L}/\mathbb{M})=g(k(H))=H$이다. 한편 $\rho$가 surjective인 것은 [§갈루아 확장, ⁋명제 13](/ko/math/field_theory/galois_extension#prop13)과 같다. 임의의 $\tau\in\Gal(\mathbb{M}/\mathbb{K})$는 [§갈루아 확장, ⁋명제 1](/ko/math/field_theory/galois_extension#prop1)에 의해 $\overline{\mathbb{K}}$의 $\mathbb{K}$-automorphism으로 확장되고, $\mathbb{L}/\mathbb{K}$가 quasi-Galois이므로 이 extension을 $\mathbb{L}$로 제한하면 $\tau$를 확장하는 $\Gal(\mathbb{L}/\mathbb{K})$의 원소를 얻기 때문이다. 따라서 first isomorphism theorem에 의해 $\Gal(\mathbb{L}/\mathbb{K})/H\cong\Gal(\mathbb{M}/\mathbb{K})$이다.
 :::
 
 ---

@@ -117,7 +117,7 @@ On the other hand, for any smooth variety $X$ of dimension $n$ and its cotangent
 ::: Definition 5
 We define the *canonical line bundle* $\omega_X$ of a smooth variety $X$ of dimension $n$ as the top exterior power of the cotangent bundle
 
-$\omega_X = \bigwedge\nolimits^{\!n} \Omega_X^1$
+$$\omega_X = \bigwedge\nolimits^{\!n} \Omega_X^1$$
 :::
 
 We call a global section $s\in \Gamma(X, \omega_X)$ of the canonical bundle $\omega_X$ a *regular $n$-form* on $X$. These are the $n$-forms of the form $fd\x_1 \wedge \cdots \wedge d\x_n$ for a regular function $f$, when we take a trivializing open set $U$ of $\omega_X$ and identify it with the cotangent bundle on affine space as in [Example 4](#ex4). 
@@ -145,7 +145,7 @@ exists, and taking the dual of this yields the following.
 ::: Proposition 7 (Euler Exact Sequence)
 There exists an exact sequence of vector bundles on $\mathbb{P}^n$
 
-$0 \rightarrow \Omega_{\mathbb{P}^n}^1 \rightarrow \mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)} \rightarrow \mathcal{O}_{\mathbb{P}^n} \rightarrow 0$
+$$0 \rightarrow \Omega_{\mathbb{P}^n}^1 \rightarrow \mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)} \rightarrow \mathcal{O}_{\mathbb{P}^n} \rightarrow 0$$
 :::
 
 To compute the canonical bundle of $\mathbb{P}^n$ now, we must take the top exterior power of this exact sequence. More generally, suppose the following short exact sequence
@@ -207,7 +207,7 @@ which corresponds to the dual of the above short exact sequence. Here the first 
 ::: Proposition 9
 (Adjunction Formula) For a smooth divisor $D$ of a smooth variety $X$,
 
-$\omega_D \cong (\omega_X \otimes \mathcal{O}_X(D))\vert_D$
+$$\omega_D \cong (\omega_X \otimes \mathcal{O}_X(D))\vert_D$$
 :::
 
 From this, the claim for the canonical divisor also follows immediately. In any case, the content of this proposition is that if we twist the canonical bundle $\omega_X$ of the ambient variety $X$ by the normal bundle $\mathcal{O}_X(D)$ and then restrict to $D$, we obtain the canonical bundle $\omega_D$ of the subvariety $D$. In simpler terms, differential forms on $D$ are obtained by adding information about the normal direction to the differential forms of the ambient space. 
@@ -227,7 +227,7 @@ $$g=\frac{(d-1)(d-2)}{2}$$
 
 ([Degree-genus formula](https://en.wikipedia.org/wiki/Genus%E2%80%93degree_formula)) From this we can verify that
 
-$\deg K_C=d(d-3)=(d-1)(d-2)-2=2g-2$
+$$\deg K_C=d(d-3)=(d-1)(d-2)-2=2g-2$$
 :::
 
 The degree-genus formula is in fact a special case of the Riemann-Roch theorem that we will examine later, and in that post we will derive both the result $\deg K_C=2g-2$ of the above calculation and the degree-genus formula.
@@ -282,7 +282,7 @@ $$\Hom(\mathcal{O}(-1),\mathcal{Q})\cong T_{\mathbb{P}(V)/B}$$
 
 and from this we obtain the *relative* Euler sequence
 
-$0\rightarrow \mathcal{O}\rightarrow \pi^\ast V\otimes \mathcal{O}(1)\rightarrow T_{\mathbb{P}(V)/B}\rightarrow 0$
+$$0\rightarrow \mathcal{O}\rightarrow \pi^\ast V\otimes \mathcal{O}(1)\rightarrow T_{\mathbb{P}(V)/B}\rightarrow 0$$
 :::
 
 Therefore, returning to our situation, we obtain the following exact sequence

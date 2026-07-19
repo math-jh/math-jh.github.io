@@ -27,7 +27,7 @@ $M_{\mathbb{R}}$의 $d$차원 *lattice polytope* $\Delta$가 다음 두 조건�
 
 $$\Delta^\circ = \{ v \in N_{\mathbb{R}} \mid \langle u, v \rangle \ge -1 \text{ for all } u \in \Delta \}$$
 
-이 다시 lattice polytope가 된다. 즉 $\Delta^\circ$의 모든 꼭짓점이 lattice $N$에 속한다.
+이 다시 lattice polytope이 된다. 즉 $\Delta^\circ$의 모든 꼭짓점이 lattice $N$에 속한다.
 :::
 
 두 번째 조건은 뜻하는 바가 꽤나 투명하지만, 첫째 조건은 다소 쓸모없는 것처럼 느껴질 수 있다. 직관적으로, 만일 $\Delta$가 원점을 포함하지 않는다면 $\Delta$ 내부의 어떤 벡터의 <em-ko>반대방향</em-ko> 벡터가 존재하지 않으므로 이 벡터와 pairing했을 때 양이 되는 방향의 dual vector를 하나 잡은 후 이를 계속 늘리면 $\Delta^\circ$을 정의하는 조건이 unbounded하게 정의된다. 때문에 우리는 위와 같은 두 조건을 필수로 요구하게 된다. 
@@ -111,7 +111,7 @@ $$\Delta = \{ u \in M_{\mathbb{R}} \mid \langle u, v_\rho \rangle \ge -1 \text{ 
 ::: 명제 5
 Reflexive polytope $\Delta \subset M_{\mathbb{R}}$와 대응하는 toric variety $X_\Delta$에 대해, 다음의 $\mathbb{C}$-vector space isomorphism이 성립한다.
 
-$H^0\bigl(X_\Delta, \mathcal{O}_{X_\Delta}(-K_{X_\Delta})\bigr) \cong \bigoplus_{u \in \Delta \cap M} \mathbb{C} \cdot \chi^u.$
+$$H^0\bigl(X_\Delta, \mathcal{O}_{X_\Delta}(-K_{X_\Delta})\bigr) \cong \bigoplus_{u \in \Delta \cap M} \mathbb{C} \cdot \chi^u.$$
 :::
 
 ::: 증명
@@ -123,23 +123,23 @@ $$P_D = \{ u \in M_{\mathbb{R}} \mid \langle u, v_\rho \rangle \ge -a_\rho \text
 
 $$P_{-K} = \{ u \in M_{\mathbb{R}} \mid \langle u, v_\rho \rangle \ge -1 \text{ for all } \rho \in \Sigma_\Delta(1) \}$$
 
-이다. 그런데 $\Sigma_\Delta$가 $\Delta$의 normal fan이므로, 위의 부등식들이 정의하는 polytope는 정확히 $\Delta$와 일치한다. 따라서 $P_{-K} = \Delta$이고, 원하는 동형이 성립한다.
+이다. 그런데 $\Sigma_\Delta$가 $\Delta$의 normal fan이므로, 위의 부등식들이 정의하는 polytope은 정확히 $\Delta$와 일치한다. 따라서 $P_{-K} = \Delta$이고, 원하는 동형이 성립한다.
 :::
 
 이 결과는 reflexive polytope의 lattice point 개수가 Gorenstein Fano variety의 anticanonical line bundle의 해들의 차원, 즉 *anticanonical degree*를 결정함을 의미한다. 특히 $\Delta \cap M$의 원소 개수는 $h^0(X_\Delta, \mathcal{O}(-K_{X_\Delta}))$와 같다.
 
-역시 가장 기본적인 reflexive polytope의 예시는 projective space $\mathbb{P}^n$에 대응하는 simplex이다. [§토릭 다양체의 정의, ⁋예시 10](/ko/math/toric_geometry/toric_varieties#ex10)에서 standard simplex $\Delta_n$의 normal fan이 $\mathbb{P}^n$의 표준 fan임을 보았다. 그러나 $\Delta_n$의 꼭짓점 중 하나가 원점이므로 $0 \notin \operatorname{int}(\Delta_n)$이다. 따라서 $\Delta_n$ 자체는 reflexive polytope가 아니다. 대신, 이 polytope의 각 변을 적절히 늘려 원점을 내부로 옮긴 (닮음인) polytope를 생각할 수 있다.
+역시 가장 기본적인 reflexive polytope의 예시는 projective space $\mathbb{P}^n$에 대응하는 simplex이다. [§토릭 다양체의 정의, ⁋예시 10](/ko/math/toric_geometry/toric_varieties#ex10)에서 standard simplex $\Delta_n$의 normal fan이 $\mathbb{P}^n$의 표준 fan임을 보았다. 그러나 $\Delta_n$의 꼭짓점 중 하나가 원점이므로 $0 \notin \operatorname{int}(\Delta_n)$이다. 따라서 $\Delta_n$ 자체는 reflexive polytope이 아니다. 대신, 이 polytope의 각 변을 적절히 늘려 원점을 내부로 옮긴 (닮음인) polytope을 생각할 수 있다.
 
 ::: 예시 6
 Lattice $M = \mathbb{Z}^n$에서 다음의 polytope
 
 $$\Delta = \{ (x_1, \ldots, x_n) \in \mathbb{R}^n \mid x_i \ge -1 \;\text{for all}\; i,\; x_1 + x_2 + \cdots + x_n \le 1 \}$$
 
-을 정의하자. 이 polytope는 standard simplex를 원점 방향으로 확장한 형태이며, 그 꼭짓점은 $(-1, -1, \ldots, -1)$과 $(n, -1, \ldots, -1), \ldots, (-1, \ldots, -1, n)$이다. 각 facet은 방정식 $x_i = -1$ 또는 $x_1 + \cdots + x_n = 1$으로 주어지며, 이들에 대응하는 primitive inner normal vector는 각각 $e_i \in N$과 $-(e_1 + \cdots + e_n) \in N$이다. 따라서 $\Delta$의 dual polytope는
+을 정의하자. 이 polytope은 standard simplex를 원점 방향으로 확장한 형태이며, 그 꼭짓점은 $(-1, -1, \ldots, -1)$과 $(n, -1, \ldots, -1), \ldots, (-1, \ldots, -1, n)$이다. 각 facet은 방정식 $x_i = -1$ 또는 $x_1 + \cdots + x_n = 1$으로 주어지며, 이들에 대응하는 primitive inner normal vector는 각각 $e_i \in N$과 $-(e_1 + \cdots + e_n) \in N$이다. 따라서 $\Delta$의 dual polytope은
 
 $$\Delta^\circ = \operatorname{conv}\{ e_1, e_2, \ldots, e_n, -(e_1 + e_2 + \cdots + e_n) \}$$
 
-가 되어 다시 lattice polytope가 된다. 즉 $\Delta$는 reflexive polytope이다. 한편 $\Delta$의 normal fan은 [§토릭 다양체의 정의, ⁋예시 10](/ko/math/toric_geometry/toric_varieties#ex10)에서 확인한 $\mathbb{P}^n$의 표준 fan과 일치하므로 $X_\Delta \cong \mathbb{P}^n$이 성립한다.
+가 되어 다시 lattice polytope이 된다. 즉 $\Delta$는 reflexive polytope이다. 한편 $\Delta$의 normal fan은 [§토릭 다양체의 정의, ⁋예시 10](/ko/math/toric_geometry/toric_varieties#ex10)에서 확인한 $\mathbb{P}^n$의 표준 fan과 일치하므로 $X_\Delta \cong \mathbb{P}^n$이 성립한다.
 
 이 예시에서 우리는 $\Delta$의 크기를 키웠으므로 이제 $\Delta$는 꼭짓점 외에도 boundary와 내부 위에 여러 lattice point들을 가질 수 있다. 예를 들어 $n=2$일 때 $\Delta = \operatorname{conv}\{(-1,-1), (2,-1), (-1,2)\}$의 lattice points는
 
@@ -177,7 +177,7 @@ $$K_V = (K_X + V)\vert_V = (K_X - K_X)\vert_V = 0$$
     
     $$K_{\tilde V} = \pi^\ast K_V + \sum_i a_i E_i$$
     
-    를 만족한다는 것이 알려져 있다. 여기서 $E_i$는 $\pi$의 exceptional divisor이며, $a_i \in \mathbb{Q}$는 *discrepancy*라 부르는 유리수이다. 이 식은 $\pi^\ast K_V$가 $\tilde V$ 위 differential form의 vanishing/pole 구조를 정확히 잡아내지 못하는 부분을 $a_i E_i$로 보정한 것으로, $a_i$의 부호와 크기가 $V$의 특이점 종류를 분류해주는 표준적인 invariant가 된다.
+    를 만족한다는 것이 알려져 있다. 여기서 $E_i$는 $\pi$의 exceptional divisor이며, $a_i \in \mathbb{Q}$는 *discrepancy*라 부르는 유리수이다. 이 식은 $\pi^\ast K_V$가 $\tilde V$ 위 differential form의 vanishing/pole 구조를 정확히 잡아내지 못하는 부분을 $a_i E_i$로 보정한 것으로, $a_i$의 부호와 크기가 $V$의 singular point 종류를 분류해주는 표준적인 invariant가 된다.
     
     이제 $V$가 adjunction에 의해 $K_V \sim 0$를 만족한다 하더라도, 임의의 resolution에서
     
@@ -199,9 +199,9 @@ $$K_{\tilde{X}} = \pi^\ast K_X$$
 
 Toric setting에서 crepant resolution은 매우 명시적인 격자 데이터로 번역된다. 일반적인 toric resolution이 fan의 refinement (즉 동일 support 위의 더 세밀한 fan)로 주어진다는 사실은 이미 [§토릭 다양체의 정의, ⁋명제 11](/ko/math/toric_geometry/toric_varieties#prop11) 이후의 논의에서 살펴보았다. 그렇다면 이 resolution이 언제 crepant인지가 진정한 의문일텐데, 역시 이 또한 fan의 조합론적 성질로 나타낼 수 있다. 구체적으로, birational morphism $\pi: X_{\Sigma'} \to X_\Delta$가 crepant일 필요충분조건은 새로 추가된 ray $v$들이 모두 $\Delta^\circ$의 *경계* 위에 놓인 lattice point라는 것이다. 
 
-직관적으로 이는 [명제 3](#prop3)의 증명에서 본 anticanonical piecewise linear function $\psi_{-K}$가 새 ray $v$에 대해서도 여전히 $\psi_{-K}(v) = -1$를 만족해야 한다는 것으로 생각할 수 있다. 이는 $v$가 cone $\sigma$ (vertex $u_\sigma$)의 내부에 들어오면 $\psi_{-K}(v) = \langle u_\sigma, v\rangle = -1$은 정확히 $v$가 $\Delta^\circ$의 facet $F_{u_\sigma}$ 위에 있다는 것과 동치이기 때문이다. 가령, $\mathbb{P}^2/(\mathbb{Z}/3)$의 fan에서 인접 두 ray 사이의 lattice point $(1,0), (0,1), (-1,-1)$를 새 ray로 추가하면 세 $\mathbb{Z}/3$ 특이점이 동시에 해소되며, 결과는 smooth $\mathbb{P}^2$의 fan이 된다.
+직관적으로 이는 [명제 3](#prop3)의 증명에서 본 anticanonical piecewise linear function $\psi_{-K}$가 새 ray $v$에 대해서도 여전히 $\psi_{-K}(v) = -1$를 만족해야 한다는 것으로 생각할 수 있다. 이는 $v$가 cone $\sigma$ (vertex $u_\sigma$)의 내부에 들어오면 $\psi_{-K}(v) = \langle u_\sigma, v\rangle = -1$은 정확히 $v$가 $\Delta^\circ$의 facet $F_{u_\sigma}$ 위에 있다는 것과 동치이기 때문이다. 가령, $\mathbb{P}^2/(\mathbb{Z}/3)$의 fan에서 인접 두 ray 사이의 lattice point $(1,0), (0,1), (-1,-1)$를 새 ray로 추가하면 세 $\mathbb{Z}/3$ singular point가 동시에 해소되며, 결과는 smooth $\mathbb{P}^2$의 fan이 된다.
 
-다만 crepant resolution이 항상 존재하지는 않는다. Toric Gorenstein variety의 경우, $n \le 3$에서는 항상 crepant resolution이 존재한다는 것이 알려져 있지만 $n \ge 4$에서는 일반적으로 모든 특이점을 동시에 해소할 수 없다. 이제 남는 quotient 특이점의 cohomology 기여를 흡수하기 위해 도입된 것이 아래 mirror 진술에 등장하는 *stringy* Hodge number이며, 이 보정 덕분에 mirror symmetry가 singular한 잔여 부분과 무관하게 reflexive 데이터의 함수로 깔끔히 표현된다. 
+다만 crepant resolution이 항상 존재하지는 않는다. Toric Gorenstein variety의 경우, $n \le 3$에서는 항상 crepant resolution이 존재한다는 것이 알려져 있지만 $n \ge 4$에서는 일반적으로 모든 singular point를 동시에 해소할 수 없다. 이제 남는 quotient singular point의 cohomology 기여를 흡수하기 위해 도입된 것이 아래 mirror 진술에 등장하는 *stringy* Hodge number이며, 이 보정 덕분에 mirror symmetry가 singular한 잔여 부분과 무관하게 reflexive 데이터의 함수로 깔끔히 표현된다. 
 
 Batyrev의 핵심 통찰은 두 Calabi-Yau family $V, V^\circ$가 서로 *mirror dual*을 이룬다는 것이다. 보다 구체적으로, reflexive pair $(\Delta, \Delta^\circ)$로부터 만들어지는 두 family
 

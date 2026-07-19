@@ -71,7 +71,7 @@ $$\pr_1R=A,\qquad R=R^{-1},\qquad R\circ R=R$$
 
 ![Quotient_set](/assets/images/Math/Set_Theory/Equivalence_Relations-1.png){:style="width:600px" class="invert" .align-center}
 
-<cap>집합 $A$ (왼쪽), 그 위에 정의된 동치관계 $R$ (가운데), 몫집합 $A/R$ (오른쪽). $A/R$의 각 원소는 중간 그림의 equivalence class $[x]_R$이다.</cap>
+<cap>집합 $A$ (왼쪽), 그 위에 정의된 동치관계 $R$ (가운데), quotient set $A/R$ (오른쪽). $A/R$의 각 원소는 중간 그림의 equivalence class $[x]_R$이다.</cap>
 
 ::: 예시 5
 집합 $A$ 위에서 <phrase>$x=y$</phrase>는 동치관계가 됨을 이미 살펴보았다. 이 관계에서 $x$의 equivalence class는 집합 $\{x\}$이다. 한편 동일한 예시에서 <phrase>$x\in A$이고 $y\in A$</phrase> 또한 동치관계였는데, 이 경우 $x$의 equivalence class는 $A$ 전체가 된다. 
@@ -94,7 +94,7 @@ $$R(y)\subseteq R(R(x))=(R\circ R)(x)=R(x)$$
 반대로 만일 $[x]_R=[y]_R$이라면, $x\in [x]_R=[y]_R$로부터 $y\sim_{\tiny R} x$를 얻고 따라서 보조정리가 성립한다.
 :::
 
-위의 함수 $p$를 canonical projection이라 부른다. 그럼 $A$의 부분집합 $[x]_R\subseteq A$는 몫집합의 원소 $[x]_R\in A/R$의 함수 $p$에 대한 preimage이므로 equivalence class들은 서로소임을 안다. 즉 동치관계 $(R,A,A)$는 $A$의 분할을 유도한다.
+위의 함수 $p$를 canonical projection이라 부른다. 그럼 $A$의 부분집합 $[x]_R\subseteq A$는 quotient set의 원소 $[x]_R\in A/R$의 함수 $p$에 대한 preimage이므로 equivalence class들은 서로소임을 안다. 즉 동치관계 $(R,A,A)$는 $A$의 분할을 유도한다.
 
 다음 명제는 그 역 또한 성립한다는 것을 보여준다.
 

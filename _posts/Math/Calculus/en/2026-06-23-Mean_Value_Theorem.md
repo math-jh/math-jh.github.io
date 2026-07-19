@@ -45,7 +45,7 @@ Since $f$ is continuous on $[a,b]$, by [§Continuous Functions, ⁋Theorem 4](/e
 ::: Theorem 4 (Mean Value Theorem)
 If $f$ is continuous on $[a,b]$ and differentiable on $(a,b)$, then there exists $c \in (a,b)$ satisfying
 
-$f'(c) = \frac{f(b) - f(a)}{b - a}.$
+$$f'(c) = \frac{f(b) - f(a)}{b - a}.$$
 :::
 
 ::: Proof
@@ -109,7 +109,7 @@ $$f'(x) = 1 - \frac{1}{1+x} = \frac{x}{1+x} > 0 \qquad (x > 0).$$
 
 By [Proposition 7](#prop7), $f$ is strictly increasing on $[0, \infty)$, so for $x > 0$ we have $f(x) > f(0) = 0$, i.e. $x > \ln(1+x)$. Similarly, applying the same argument to $g(x) = \ln(1+x) - x/(1+x)$ gives $g(0) = 0$ and $g'(x) = x/(1+x)^2 > 0$, so $x/(1+x) < \ln(1+x)$ as well. Combining these,
 
-$\frac{x}{1+x} < \ln(1+x) < x \qquad (x > 0).$
+$$\frac{x}{1+x} < \ln(1+x) < x \qquad (x > 0).$$
 :::
 
 Meanwhile, by shifting perspective slightly on the equality $f(b) - f(a) = f'(c)(b-a)$ from [Theorem 4](#thm4), we obtain a more quantitative result: the minimum and maximum of $f'(x)$ on $[a,b]$ control the difference of function values.
@@ -247,7 +247,7 @@ $$\lim_{x\to a} f'(x)/g'(x) = L$$
 
 exists, then
 
-$\lim_{x \to a} \frac{f(x)}{g(x)} = L.$
+$$\lim_{x \to a} \frac{f(x)}{g(x)} = L.$$
 :::
 
 ::: Proof

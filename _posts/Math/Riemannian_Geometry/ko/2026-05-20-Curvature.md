@@ -14,7 +14,7 @@ published: false
 
 ---
 
-[§레비-치비타 접속, §§평행 운반 8](/ko/math/riemannian_geometry/Levi-Civita_connection#def8)에서 우리는 Riemannian manifold $(M, g)$ 위에서 곡선 $\gamma$를 따라 vector를 *상수처럼* 옮기는 parallel transport $P_\gamma$를 정의했다. 그러나 일반적으로 같은 두 점 $p, q$ 사이를 잇는 두 곡선 $\gamma_1, \gamma_2$에 대해 $P_{\gamma_1} \ne P_{\gamma_2}$일 수 있다. 즉 어떤 길을 따라 vector를 옮기느냐에 따라 도착한 vector가 달라진다. 이 *path-dependence*를 점별 정보로 측정하는 텐서가 *Riemann 곡률 텐서*이다.
+[§레비-치비타 접속, §§평행 운반 8](/ko/math/riemannian_geometry/Levi-Civita_connection#def8)에서 우리는 Riemannian manifold $(M, g)$ 위에서 곡선 $\gamma$를 따라 벡터를 *상수처럼* 옮기는 parallel transport $P_\gamma$를 정의했다. 그러나 일반적으로 같은 두 점 $p, q$ 사이를 잇는 두 곡선 $\gamma_1, \gamma_2$에 대해 $P_{\gamma_1} \ne P_{\gamma_2}$일 수 있다. 즉 어떤 길을 따라 벡터를 옮기느냐에 따라 도착한 벡터가 달라진다. 이 *path-dependence*를 점별 정보로 측정하는 텐서가 *Riemann 곡률 텐서*이다.
 
 ## 평행 운반의 path-dependence
 
@@ -27,13 +27,13 @@ published: false
 2. 북극에서 90° 자오선을 따라 적도 위의 점 $p_1 = (0, 1, 0)$으로 내려오는 곡선 $\gamma_2$.
 3. 적도를 따라 $p_1$에서 $p_0$로 돌아오는 곡선 $\gamma_3$.
 
-출발점 $p_0$에서 적도 방향의 단위 vector $v = (0, 1, 0) \in T_{p_0} S^2$을 잡고 이를 $\gamma$를 따라 평행 운반하자.
+출발점 $p_0$에서 적도 방향의 단위 벡터 $v = (0, 1, 0) \in T_{p_0} S^2$을 잡고 이를 $\gamma$를 따라 평행 운반하자.
 
-- $\gamma_1$ (0° 자오선, 측지선): $v$는 매 순간 곡선 $\gamma_1$에 *수직*이므로 평행 운반 동안 적도 방향을 유지하며, 북극에서는 90° 자오선 방향의 vector $(0, 1, 0)$이 된다.
-- $\gamma_2$ (90° 자오선, 측지선): 위에서 도착한 vector는 $\gamma_2$에 *수직*이므로 평행 운반 동안 그 수직 방향을 유지하며, $p_1$에서는 $(-1, 0, 0)$이 된다.
-- $\gamma_3$ (적도, 측지선): 위에서 도착한 vector는 $\gamma_3$의 방향과 *평행*이며 (음의 방향), 평행 운반 동안 그 평행성을 유지하므로 $p_0$로 돌아왔을 때 여전히 $(-1, 0, 0)$이다.
+- $\gamma_1$ (0° 자오선, 측지선): $v$는 매 순간 곡선 $\gamma_1$에 *수직*이므로 평행 운반 동안 적도 방향을 유지하며, 북극에서는 90° 자오선 방향의 벡터 $(0, 1, 0)$이 된다.
+- $\gamma_2$ (90° 자오선, 측지선): 위에서 도착한 벡터는 $\gamma_2$에 *수직*이므로 평행 운반 동안 그 수직 방향을 유지하며, $p_1$에서는 $(-1, 0, 0)$이 된다.
+- $\gamma_3$ (적도, 측지선): 위에서 도착한 벡터는 $\gamma_3$의 방향과 *평행*이며 (음의 방향), 평행 운반 동안 그 평행성을 유지하므로 $p_0$로 돌아왔을 때 여전히 $(-1, 0, 0)$이다.
 
-결국 닫힌 곡선 $\gamma_1 \cdot \gamma_2 \cdot \gamma_3$를 따라 한 바퀴 평행 운반한 결과 초기 vector $(0, 1, 0)$은 $(-1, 0, 0)$으로, 즉 *90° 회전된* vector로 돌아온다. 
+결국 닫힌 곡선 $\gamma_1 \cdot \gamma_2 \cdot \gamma_3$를 따라 한 바퀴 평행 운반한 결과 초기 벡터 $(0, 1, 0)$은 $(-1, 0, 0)$으로, 즉 *90° 회전된* 벡터로 돌아온다. 
 
 이를 다른 식으로 해석하면, $p_0$에서 $p_1$로 가는 *두 가지 path* — $\gamma_1 \cdot \gamma_2$로 가는 길과 $\gamma_3$ (의 역)으로 가는 길 — 의 parallel transport가 일치하지 않는다는 것이다. 
 :::
@@ -42,7 +42,7 @@ published: false
 
 ## 리만 곡률 텐서
 
-위 예시에서처럼 작은 *닫힌 곡선* (loop)를 따라 평행 운반했을 때 vector가 얼마나 회전하는지를 *무한소* 수준에서 측정하는 자료가 곡률 텐서이다. 이를 형식적으로 정의하면 다음과 같다.
+위 예시에서처럼 작은 *닫힌 곡선* (loop)를 따라 평행 운반했을 때 벡터가 얼마나 회전하는지를 *무한소* 수준에서 측정하는 자료가 곡률 텐서이다. 이를 형식적으로 정의하면 다음과 같다.
 
 ::: 정의 2
 Manifold $M$ 위의 tangent bundle $TM$ 위의 connection $\nabla$가 주어졌다 하자. $\nabla$의 *Riemann 곡률 텐서<sub>Riemann curvature tensor</sub>* $R$은 다음의 식
@@ -84,7 +84,7 @@ $$R(X, Y)(fZ) = f \cdot R(X, Y) Z$$
 [예시 1](#ex1)의 직관에 맞춰, 곡률 텐서를 작은 loop 위의 평행 운반 holonomy의 *무한소 generator*로 해석할 수 있다. 정확한 진술은 다음과 같다.
 
 ::: 명제 4
-점 $p \in M$과 두 vector $X_p, Y_p \in T_p M$에 대해, $\epsilon \to 0$의 극한에서 다음이 성립한다. $X_p, Y_p$가 펼치는 (적절한 좌표계에서의) 면적 $\epsilon^2$의 작은 평행사변형 loop $\partial D_\epsilon$를 따른 parallel transport $P_{\partial D_\epsilon} : T_p M \to T_p M$는 임의의 $Z_p \in T_p M$에 대해
+점 $p \in M$과 두 벡터 $X_p, Y_p \in T_p M$에 대해, $\epsilon \to 0$의 극한에서 다음이 성립한다. $X_p, Y_p$가 펼치는 (적절한 좌표계에서의) 면적 $\epsilon^2$의 작은 평행사변형 loop $\partial D_\epsilon$를 따른 parallel transport $P_{\partial D_\epsilon} : T_p M \to T_p M$는 임의의 $Z_p \in T_p M$에 대해
 
 $$P_{\partial D_\epsilon}(Z_p) = Z_p - \epsilon^2 R(X_p, Y_p) Z_p + O(\epsilon^3)$$
 
@@ -120,7 +120,7 @@ $(M, g)$의 Levi-Civita 접속의 곡률 텐서 $R$은 다음 대칭성들을 �
 Connection $\nabla$의 곡률 텐서가 $R \equiv 0$일 때 $\nabla$를 *flat<sub>평탄</sub>* connection이라 부른다.
 :::
 
-[명제 4](#prop4)의 직접적 결과로, flat connection 하에서는 모든 단순 연결 (simply connected) 영역 안에서 parallel transport가 *path-independent*가 된다. 즉 임의의 두 점 $p, q$와 그 사이의 두 곡선 $\gamma_1, \gamma_2$가 homotopic이면 $P_{\gamma_1} = P_{\gamma_2}$이다. 이는 모든 $T_p M$이 canonical하게 한 fixed vector space와 동일시되도록 하며, 적절한 좌표계 $(t^1, \ldots, t^n)$에서 $\nabla$가 단순 partial derivative로 환원되는 *flat coordinate*가 (국소적으로) 존재한다는 결과로 이어진다.
+[명제 4](#prop4)의 직접적 결과로, flat connection 하에서는 모든 단순 연결 (simply connected) 영역 안에서 parallel transport가 *path-independent*가 된다. 즉 임의의 두 점 $p, q$와 그 사이의 두 곡선 $\gamma_1, \gamma_2$가 homotopic이면 $P_{\gamma_1} = P_{\gamma_2}$이다. 이는 모든 $T_p M$이 canonical하게 한 fixed 벡터공간과 동일시되도록 하며, 적절한 좌표계 $(t^1, \ldots, t^n)$에서 $\nabla$가 단순 partial derivative로 환원되는 *flat coordinate*가 (국소적으로) 존재한다는 결과로 이어진다.
 
 ---
 

@@ -18,7 +18,7 @@ published: false
 
 ## Antipode를 보존하는 사상
 
-구 $S^n\subseteq\mathbb{R}^{n+1}$ 위에는 각 점 $x$를 그 대척점 $-x$로 보내는 대합 $x\mapsto-x$이 놓여 있다. 이 대합과 잘 맞물리는 연속함수, 곧 $-x$를 언제나 상의 대척점으로 보내는 함수는 대합의 대칭성을 그대로 물려받아 대단히 강하게 제약된다. Borsuk–Ulam 정리는 이러한 제약의 원형으로서, 겉보기에 순전히 위상적인 진술이면서도 측도를 동시에 이등분하는 초평면의 존재나 구의 덮개 구조와 같은 구체적인 귀결을 낳는다. 앞선 글에서 우리는 구면 자기사상에 정수 하나를 붙이는 차수 이론을 마련하였으므로 ([§사상의 차수와 Brouwer·Lefschetz 고정점 정리, ⁋정의 2](/ko/math/algebraic_topology/degree_and_fixed_point_theorems#def2)), 이제 antipode를 보존하는 사상의 차수가 강한 산술적 제약을 받는다는 사실을 지렛대로 삼아 이 정리와 그 여러 동치형을 증명한다.
+구 $S^n\subseteq\mathbb{R}^{n+1}$ 위에는 각 점 $x$를 그 대척점 $-x$로 보내는 대합 $x\mapsto-x$이 놓여 있다. 이 대합과 잘 맞물리는 연속함수, 곧 $-x$를 언제나 상의 대척점으로 보내는 함수는 대합의 대칭성을 그대로 물려받아 대단히 강하게 제약된다. Borsuk–Ulam 정리는 이러한 제약의 원형으로서, 겉보기에 순전히 위상적인 진술이면서도 측도를 동시에 이등분하는 초평면의 존재나 구의 covering 구조와 같은 구체적인 귀결을 낳는다. 앞선 글에서 우리는 구면 자기사상에 정수 하나를 붙이는 차수 이론을 마련하였으므로 ([§사상의 차수와 Brouwer·Lefschetz 고정점 정리, ⁋정의 2](/ko/math/algebraic_topology/degree_and_fixed_point_theorems#def2)), 이제 antipode를 보존하는 사상의 차수가 강한 산술적 제약을 받는다는 사실을 지렛대로 삼아 이 정리와 그 여러 동치형을 증명한다.
 
 ::: 정의 1
 연속함수 $f:S^n\rightarrow\mathbb{R}^m$ 또는 $f:S^n\rightarrow S^m$이 모든 $x\in S^n$에 대하여
@@ -103,17 +103,17 @@ F(\theta+1)&=F\bigl((\theta+\frac12)+\frac12\bigr)=F(\theta+\frac12)+\frac12+q\\
 $n\geq 1$에 대하여, 임의의 antipodal 연속 자기사상 $f:S^n\rightarrow S^n$의 차수 $\deg f$는 홀수이다.
 :::
 ::: 증명
-$n$에 대한 귀납법을 사용한다. 기저 단계 $n=1$은 [보조정리 4](#lem4)에서 이미 확립하였다. 이제 $n\geq 2$라 하고, 한 차원 낮은 구에서 antipodal 자기사상의 차수가 홀수라는 것을 가정한다. 일반 단계의 증명은 antipode에 의한 몫공간, 곧 실사영공간 $\RP^n=S^n/(x\sim-x)$을 매개로 진행되며, 여기에서는 그 골격만 제시하고 세부는 [Hat]의 §2.B와 [Mat]에 넘긴다.
+$n$에 대한 귀납법을 사용한다. 기저 단계 $n=1$은 [보조정리 4](#lem4)에서 이미 확립하였다. 이제 $n\geq 2$라 하고, 한 차원 낮은 구에서 antipodal 자기사상의 차수가 홀수라는 것을 가정한다. 일반 단계의 증명은 antipode에 의한 quotient space, 곧 실사영공간 $\RP^n=S^n/(x\sim-x)$을 매개로 진행되며, 여기에서는 그 골격만 제시하고 세부는 [Hat]의 §2.B와 [Mat]에 넘긴다.
 
-첫째, $f$가 antipodal이면 $f(-x)=-f(x)$이므로 이중피복 $p:S^n\rightarrow\RP^n$의 몫 위에 유도된 연속함수 $\bar f:\RP^n\rightarrow\RP^n$이 $p\circ f=\bar f\circ p$를 만족하며 잘 정의된다.
+첫째, $f$가 antipodal이면 $f(-x)=-f(x)$이므로 이중피복 $p:S^n\rightarrow\RP^n$의 quotient 위에 유도된 연속함수 $\bar f:\RP^n\rightarrow\RP^n$이 $p\circ f=\bar f\circ p$를 만족하며 잘 정의된다.
 
-둘째, $n\geq 2$일 때 $\pi_1(\RP^n)\cong\mathbb{Z}/2$이다. 이 fundamental group의 생성원은 $S^n$에서 한 점 $x$와 그 대척점 $-x$를 잇는 경로가 $p$ 아래에서 이루는 loop로 실현된다. $f$는 antipodal이므로 이 경로를 $f(x)$와 $-f(x)$를 잇는 경로로 보내고, 그 상은 다시 $\RP^n$의 자명하지 않은 loop로 사영된다. 따라서 $\bar f$가 유도하는 $\pi_1(\RP^n)\rightarrow\pi_1(\RP^n)$은 항등, 곧 $\mathbb{Z}/2$ 위의 유일한 자기동형이다. ([§피복공간, ⁋보조정리 6](/ko/math/algebraic_topology/covering_spaces#lem6)의 lifting을 사용한다.)
+둘째, $n\geq 2$일 때 $\pi_1(\RP^n)\cong\mathbb{Z}/2$이다. 이 fundamental group의 생성원은 $S^n$에서 한 점 $x$와 그 대척점 $-x$를 잇는 경로가 $p$ 아래에서 이루는 loop로 실현된다. $f$는 antipodal이므로 이 경로를 $f(x)$와 $-f(x)$를 잇는 경로로 보내고, 그 상은 다시 $\RP^n$의 자명하지 않은 loop로 projection된다. 따라서 $\bar f$가 유도하는 $\pi_1(\RP^n)\rightarrow\pi_1(\RP^n)$은 항등, 곧 $\mathbb{Z}/2$ 위의 유일한 automorphism이다. ([§피복공간, ⁋보조정리 6](/ko/math/algebraic_topology/covering_spaces#lem6)의 lifting을 사용한다.)
 
-셋째, 계수를 $\mathbb{Z}/2$로 잡은 호몰로지에서 이 정보를 최고차까지 밀어올린다. 여기서 "장거리 완전열"이란 이중피복 $p:S^n\rightarrow\RP^n$에 결부된 Gysin(전달) 완전열
+셋째, 계수를 $\mathbb{Z}/2$로 잡은 homology에서 이 정보를 최고차까지 밀어올린다. 여기서 "장거리 exact sequence"란 이중피복 $p:S^n\rightarrow\RP^n$에 결부된 Gysin(전달) exact sequence
 
 $$\cdots\rightarrow H_i(S^n;\mathbb{Z}/2)\xrightarrow{p_\ast}H_i(\RP^n;\mathbb{Z}/2)\xrightarrow{\cap w}H_{i-1}(\RP^n;\mathbb{Z}/2)\rightarrow H_{i-1}(S^n;\mathbb{Z}/2)\rightarrow\cdots$$
 
-을 말하며, $w\in H^1(\RP^n;\mathbb{Z}/2)$은 이 이중피복을 분류하는 유일한 비자명 원소이다. $H_i(S^n;\mathbb{Z}/2)$은 $i=0,n$에서만 $\mathbb{Z}/2$이고 그 사이에서는 $0$이므로, $2\leq i\leq n-1$인 중간 차수에서 완전열은 $\cap w:H_i(\RP^n;\mathbb{Z}/2)\xrightarrow{\sim}H_{i-1}(\RP^n;\mathbb{Z}/2)$가 isomorphism임을 준다. $\bar f$는 $p\circ f=\bar f\circ p$를 만족하므로 이 완전열의 자연스러운 사다리를 유도하고, $H^1(\RP^n;\mathbb{Z}/2)\cong\mathbb{Z}/2$이라 $\bar f^\ast w=w$이어서 그 사다리는 $\cap w$와 가환한다. 둘째 단계에서 $\bar f_\ast$가 $H_1(\RP^n;\mathbb{Z}/2)$ 위에서 isomorphism임을 이미 알고 있으므로, 이 $\cap w$-isomorphism들을 따라 차수를 하나씩 올리면 $\bar f_\ast$가 모든 $0\leq i\leq n$에서 $H_i(\RP^n;\mathbb{Z}/2)$ 위의 isomorphism임이 귀납적으로 따라 나온다. 끝으로 완전열의 전달사상이 주는 자연스러운 isomorphism $H_n(\RP^n;\mathbb{Z}/2)\cong H_n(S^n;\mathbb{Z}/2)$과 사다리의 가환성을 결합하면, 최고차에서 $\bar f_\ast$가 isomorphism이라는 사실은 $f$가 $H_n(S^n;\mathbb{Z}/2)\cong\mathbb{Z}/2$ 위에서 항등으로 작용함, 곧 $\deg f\equiv 1\pmod 2$임과 동치이다. 그러므로 $\deg f$는 홀수이다.
+을 말하며, $w\in H^1(\RP^n;\mathbb{Z}/2)$은 이 이중피복을 분류하는 유일한 비자명 원소이다. $H_i(S^n;\mathbb{Z}/2)$은 $i=0,n$에서만 $\mathbb{Z}/2$이고 그 사이에서는 $0$이므로, $2\leq i\leq n-1$인 중간 차수에서 exact sequence는 $\cap w:H_i(\RP^n;\mathbb{Z}/2)\xrightarrow{\sim}H_{i-1}(\RP^n;\mathbb{Z}/2)$가 isomorphism임을 준다. $\bar f$는 $p\circ f=\bar f\circ p$를 만족하므로 이 exact sequence의 자연스러운 사다리를 유도하고, $H^1(\RP^n;\mathbb{Z}/2)\cong\mathbb{Z}/2$이라 $\bar f^\ast w=w$이어서 그 사다리는 $\cap w$와 가환한다. 둘째 단계에서 $\bar f_\ast$가 $H_1(\RP^n;\mathbb{Z}/2)$ 위에서 isomorphism임을 이미 알고 있으므로, 이 $\cap w$-isomorphism들을 따라 차수를 하나씩 올리면 $\bar f_\ast$가 모든 $0\leq i\leq n$에서 $H_i(\RP^n;\mathbb{Z}/2)$ 위의 isomorphism임이 귀납적으로 따라 나온다. 끝으로 exact sequence의 전달사상이 주는 자연스러운 isomorphism $H_n(\RP^n;\mathbb{Z}/2)\cong H_n(S^n;\mathbb{Z}/2)$과 사다리의 가환성을 결합하면, 최고차에서 $\bar f_\ast$가 isomorphism이라는 사실은 $f$가 $H_n(S^n;\mathbb{Z}/2)\cong\mathbb{Z}/2$ 위에서 항등으로 작용함, 곧 $\deg f\equiv 1\pmod 2$임과 동치이다. 그러므로 $\deg f$는 홀수이다.
 :::
 
 정리 5는 antipodal 자기사상이 차수 $0$을 가질 수 없음을 함축하므로, 그러한 사상은 결코 상수사상과 homotopic하지 않다. 이 결론은 앞선 글에서 얻은 antipodal 사상 $a(x)=-x$의 차수 계산과도 정확히 부합한다. [§사상의 차수와 Brouwer·Lefschetz 고정점 정리, ⁋따름정리 5](/ko/math/algebraic_topology/degree_and_fixed_point_theorems#cor5)에 의하여 $\deg a=(-1)^{n+1}$이므로 $n$의 홀짝과 무관하게 $\deg a=\pm 1$은 늘 홀수이며, 이는 antipodal 사상이 antipodal map의 원형이라는 사실과 잘 어울린다. 이제 이 차수의 홀짝성으로부터 antipodal map $S^n\rightarrow S^{n-1}$의 비존재를 이끌어낸다.
@@ -174,9 +174,9 @@ $$\mu_i(H_u)=\mu_i(H_{-u})=\frac12\mu_i(\mathbb{R}^n)$$
 
 증명에서 antipodal 대칭은 두 반공간을 맞바꾸는 것으로 나타났으며, Borsuk–Ulam 정리가 제공하는 대척쌍 $u,-u$의 일치가 곧 두 반공간이 각 측도를 정확히 반씩 담는다는 이등분 조건이 되었다. 차원의 대응도 자연스럽다. $\mathbb{R}^n$의 affine 초평면은 방향과 위치를 합쳐 $n$개의 자유도를 가지며, 이는 $S^n$을 매개변수 공간으로 삼아 $n$개의 이등분 조건을 동시에 맞추기에 꼭 맞는 크기이다.
 
-## Lusternik–Schnirelmann 덮개 정리
+## Lusternik–Schnirelmann covering 정리
 
-두 번째 귀결은 구를 닫힌집합들로 덮을 때 나타나는 조합적 제약이다. Antipode를 피하는 닫힌 덮개가 얼마나 많은 조각을 필요로 하는가라는 물음에 Borsuk–Ulam 정리가 정확한 하한을 준다.
+두 번째 귀결은 구를 닫힌집합들로 덮을 때 나타나는 조합적 제약이다. Antipode를 피하는 닫힌 covering이 얼마나 많은 조각을 필요로 하는가라는 물음에 Borsuk–Ulam 정리가 정확한 하한을 준다.
 
 ::: 정리 9 (Lusternik–Schnirelmann–Borsuk)
 $S^n$이 $n+1$개의 닫힌집합 $A_1,\ldots,A_{n+1}$의 합집합으로 덮인다고 하자. 그러면 어떤 $A_j$은 대척쌍을 포함한다. 곧 $x,-x\in A_j$인 점 $x\in S^n$이 존재하는 $j$가 있다.
@@ -193,10 +193,10 @@ $$f:S^n\rightarrow\mathbb{R}^n;\qquad f(x)=\bigl(\operatorname{dist}(x,A_1),\ldo
 반대로 모든 $1\leq i\leq n$에서 $\operatorname{dist}(x,A_i)>0$이라면, $x$와 $-x$ 둘 다 $A_1,\ldots,A_n$ 가운데 어느 것에도 속하지 않는다. 그런데 $A_1,\ldots,A_{n+1}$이 $S^n$을 덮으므로 $x\in A_{n+1}$이고 $-x\in A_{n+1}$이어야 한다. 따라서 이 경우에는 $A_{n+1}$이 대척쌍을 포함한다.
 :::
 
-정리 9의 조각 개수 $n+1$은 더 줄일 수 없다는 의미에서 최적이다. 조각을 하나 더 허용하면 antipode를 완전히 피하는 닫힌 덮개가 실제로 존재하기 때문이다.
+정리 9의 조각 개수 $n+1$은 더 줄일 수 없다는 의미에서 최적이다. 조각을 하나 더 허용하면 antipode를 완전히 피하는 닫힌 covering이 실제로 존재하기 때문이다.
 
 ::: 예시 10
-$S^n$은 대척쌍을 하나도 포함하지 않는 $n+2$개의 닫힌집합으로 덮인다. 원점을 내부에 품는 $(n+1)$-simplex $\Delta\subseteq\mathbb{R}^{n+1}$을 택하자. 예컨대 원점 중심의 정규 simplex를 잡으면 된다. 그 경계 $\partial\Delta$은 $n+2$개의 facet $F_0,\ldots,F_{n+1}$로 이루어지고, 원점이 내부에 있으므로 방사 사영
+$S^n$은 대척쌍을 하나도 포함하지 않는 $n+2$개의 닫힌집합으로 덮인다. 원점을 내부에 품는 $(n+1)$-simplex $\Delta\subseteq\mathbb{R}^{n+1}$을 택하자. 예컨대 원점 중심의 정규 simplex를 잡으면 된다. 그 경계 $\partial\Delta$은 $n+2$개의 facet $F_0,\ldots,F_{n+1}$로 이루어지고, 원점이 내부에 있으므로 방사 projection
 
 $$\pi:\partial\Delta\rightarrow S^n;\qquad\pi(y)=\frac{y}{\lvert y\rvert}$$
 
@@ -205,18 +205,18 @@ $$\pi:\partial\Delta\rightarrow S^n;\qquad\pi(y)=\frac{y}{\lvert y\rvert}$$
 이제 각 $C_j$이 대척쌍을 포함하지 않음을 보인다. 원점이 $\Delta$의 내부에 있으므로 각 facet $F_j$은 원점을 지나지 않는 affine 초평면 $\{y\mid\langle a_j,y\rangle=1\}$에 놓이며, $\Delta$의 내부는 $\langle a_j,\cdot\rangle<1$ 쪽에 있다. 만일 $v$와 $-v$이 둘 다 $C_j$에 속한다면, 어떤 양수 $s,t>0$에 대하여 $sv,-tv\in F_j$이므로 $\langle a_j,sv\rangle=1$과 $\langle a_j,-tv\rangle=1$이 성립한다. 앞의 식은 $\langle a_j,v\rangle=1/s>0$을, 뒤의 식은 $\langle a_j,v\rangle=-1/t<0$을 주어 서로 모순이다. 그러므로 어떤 $C_j$도 대척쌍을 담지 않으며, $n+2$개의 조각으로는 antipode를 완전히 피할 수 있다. 이로써 [정리 9](#thm9)의 $n+1$이 최적임이 확인된다.
 :::
 
-## 구의 매장 불가능성
+## 구의 embedding 불가능성
 
-마지막으로, Borsuk–Ulam 정리는 구가 한 차원 낮아 보이는 유클리드 공간에 들어갈 수 없다는 사실을 즉시 준다. 매장이 있다면 그것은 특히 단사인 연속함수를 낳는데, Borsuk–Ulam 정리는 그러한 단사성을 대척쌍에서 곧바로 무너뜨린다.
+마지막으로, Borsuk–Ulam 정리는 구가 한 차원 낮아 보이는 유클리드 공간에 들어갈 수 없다는 사실을 즉시 준다. embedding이 있다면 그것은 특히 단사인 연속함수를 낳는데, Borsuk–Ulam 정리는 그러한 단사성을 대척쌍에서 곧바로 무너뜨린다.
 
 ::: 따름정리 11
-$n\geq 1$에 대하여, $S^n$은 $\mathbb{R}^n$에 위상적으로 매장되지 않는다. 곧 상 위로의 homeomorphism이 되는 연속 단사함수 $e:S^n\rightarrow\mathbb{R}^n$은 존재하지 않는다.
+$n\geq 1$에 대하여, $S^n$은 $\mathbb{R}^n$에 위상적으로 embedding되지 않는다. 곧 상 위로의 homeomorphism이 되는 연속 단사함수 $e:S^n\rightarrow\mathbb{R}^n$은 존재하지 않는다.
 :::
 ::: 증명
-그러한 매장 $e:S^n\rightarrow\mathbb{R}^n$이 존재한다고 하자. 특히 $e$은 연속함수이므로 [정리 2](#thm2)의 (1)에 의하여 $e(x)=e(-x)$인 점 $x\in S^n$이 존재한다. $n\geq 1$에서 $x\neq-x$이므로 이는 $e$의 단사성에 모순이다. 따라서 그러한 매장은 존재하지 않는다.
+그러한 embedding $e:S^n\rightarrow\mathbb{R}^n$이 존재한다고 하자. 특히 $e$은 연속함수이므로 [정리 2](#thm2)의 (1)에 의하여 $e(x)=e(-x)$인 점 $x\in S^n$이 존재한다. $n\geq 1$에서 $x\neq-x$이므로 이는 $e$의 단사성에 모순이다. 따라서 그러한 embedding은 존재하지 않는다.
 :::
 
-같은 논증은 매장뿐 아니라 임의의 단사 연속함수 $S^n\rightarrow\mathbb{R}^n$의 비존재를 말해준다. 콤팩트 공간 $S^n$에서 Hausdorff 공간으로 가는 단사 연속함수는 자동으로 상 위로의 homeomorphism이 되므로 매장과 단사 연속함수는 이 맥락에서 사실상 같은 것이다. 결국 $S^n$의 대척 대합이 강제하는 $f(x)=f(-x)$이라는 한 점의 일치가, 구를 낮은 차원에 평탄하게 눕히려는 어떠한 시도도 좌절시키는 셈이다.
+같은 논증은 embedding뿐 아니라 임의의 단사 연속함수 $S^n\rightarrow\mathbb{R}^n$의 비존재를 말해준다. 콤팩트 공간 $S^n$에서 Hausdorff 공간으로 가는 단사 연속함수는 자동으로 상 위로의 homeomorphism이 되므로 embedding과 단사 연속함수는 이 맥락에서 사실상 같은 것이다. 결국 $S^n$의 대척 대합이 강제하는 $f(x)=f(-x)$이라는 한 점의 일치가, 구를 낮은 차원에 평탄하게 눕히려는 어떠한 시도도 좌절시키는 셈이다.
 
 ---
 

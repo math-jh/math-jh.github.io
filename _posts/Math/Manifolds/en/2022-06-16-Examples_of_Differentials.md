@@ -82,7 +82,7 @@ Refining this slightly, we see that for a given $C^\infty$ function $F:M\rightar
 ::: Proposition 3
 Let $M,N$ be two manifolds and $F:M\rightarrow N$ a $C^\infty$ function. For any $v\in T_pM$, any $C^\infty$ curve $\gamma:(a,b)\rightarrow M$ satisfying $\gamma(0)=p$ and $\gamma'(0)=v$ also satisfies
 
-$dF_p(v)=(F\circ\gamma)'(0).$
+$$dF_p(v)=(F\circ\gamma)'(0).$$
 :::
 
 ## Tangent Spaces of Vector Spaces
@@ -189,7 +189,7 @@ In the above situation, $\xi^i\vert_p=dx^i\vert_p$. In other words, the dual bas
 ::: Proof
 It suffices to show that the $dx^i$ satisfy equation (1). By definition,
 
-$dx^i\vert_p\left(\frac{\partial}{\partial x^j}\bigg\vert_p\right)=\frac{\partial}{\partial x^j}\bigg\vert_p x^i=\delta_{ij}.$
+$$dx^i\vert_p\left(\frac{\partial}{\partial x^j}\bigg\vert_p\right)=\frac{\partial}{\partial x^j}\bigg\vert_p x^i=\delta_{ij}.$$
 :::
 
 This proof becomes more transparent if we recall [§Cotangent Space, ⁋Lemma 1](/en/math/manifolds/cotangent_space#lem1), proved when we first introduced the tangent space. That is, passing from the first equality to the second is by definition of the differential $dx^i\vert_p$, but simultaneously it is the process of naturally identifying the double dual of the finite-dimensional $\mathbb{R}$-vector space $\mathfrak{m}_p/\mathfrak{m}^2_p$ with itself via

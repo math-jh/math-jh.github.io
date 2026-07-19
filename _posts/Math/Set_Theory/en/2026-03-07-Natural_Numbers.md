@@ -160,7 +160,7 @@ The set $\mathbb{N}\times\mathbb{N}$ is equipotent to $\mathbb{N}$.
 ::: Proof
 This follows from the following sequence:
 
-$(1,1),\;\; (1,2),(2,1),\;\; (1,3),(2,2),(3,1),\;\; \cdots$
+$$(1,1),\;\; (1,2),(2,1),\;\; (1,3),(2,2),(3,1),\;\; \cdots$$
 :::
 
 ::: Proof (Proposition 12)

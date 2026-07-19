@@ -27,7 +27,7 @@ Here, $t$ is simply a dummy variable introduced to avoid confusion with $x$, whi
 ::: Theorem 1 (Fundamental Theorem of Calculus)
 If $f$ is continuous on $[a,b]$ and we define $F(x) = \int_a^x f(t)\mathop{dt}$, then $F$ is differentiable on $[a,b]$ and for every $x$,
 
-$F'(x) = f(x)$
+$$F'(x) = f(x)$$
 :::
 
 ::: Proof
@@ -71,13 +71,13 @@ Meanwhile, combining [Theorem 1](#thm1) with the fact that a function with zero 
 ::: Theorem 4
 If $f$ is continuous on $[a,b]$ and $G$ is any primitive of $f$, then
 
-$\int_a^b f(x)\mathop{dx} = G(b) - G(a)$
+$$\int_a^b f(x)\mathop{dx} = G(b) - G(a)$$
 :::
 
 ::: Proof
 Let $F(x) = \int_a^x f$; then by [Theorem 1](#thm1), $F$ is also a primitive of $f$. Two primitives differ only by a constant ([§Mean Value Theorem, ⁋Corollary 5](/en/math/calculus/mean_value_theorem#cor5)), so there exists a constant $C$ such that $F = G + C$. Since $F(a) = \int_a^a f = 0$, we have $C = -G(a)$, and therefore
 
-$\int_a^b f = F(b) = G(b) + C = G(b) - G(a)$
+$$\int_a^b f = F(b) = G(b) + C = G(b) - G(a)$$
 :::
 
 The difference $G(b) - G(a)$ is commonly written as $\bigl[G(x)\bigr]_a^b$. Thanks to this theorem, the computation of a definite integral is reduced to the problem of finding a primitive rather than taking the limit of Riemann sums. For example, $\int_0^1 x^2\mathop{dx} = \bigl[x^3/3\bigr]_0^1 = 1/3$ agrees with the value obtained laboriously via Riemann sums in [§Integration](/en/math/calculus/integration), but here it is obtained by an entirely different calculation: substituting the endpoints into the primitive.
@@ -87,7 +87,7 @@ In particular, [Theorem 1](#thm1) combines with [§Differentiation Rules, ⁋The
 ::: Proposition 5 (Leibniz rule)
 If $f$ is continuous and $g, h$ are differentiable, then
 
-$\frac{d}{dx}\int_{h(x)}^{g(x)} f(t)\mathop{dt} = f(g(x))g'(x) - f(h(x))h'(x)$
+$$\frac{d}{dx}\int_{h(x)}^{g(x)} f(t)\mathop{dt} = f(g(x))g'(x) - f(h(x))h'(x)$$
 :::
 
 ::: Proof
@@ -152,5 +152,5 @@ $$\arctan x = \sum_{n=0}^\infty \frac{(-1)^n}{2n+1} x^{2n+1}$$
 
 and
 
-$\ln(1+x) = \sum_{n=1}^\infty \frac{(-1)^{n-1}}{n} x^n$
+$$\ln(1+x) = \sum_{n=1}^\infty \frac{(-1)^{n-1}}{n} x^n$$
 :::

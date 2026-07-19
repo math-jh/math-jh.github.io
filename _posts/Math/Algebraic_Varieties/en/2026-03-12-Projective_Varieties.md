@@ -51,7 +51,7 @@ Thus the zero set of a homogeneous polynomial is well-defined in projective spac
 ::: Definition 2
 A polynomial $F \in \mathbb{K}[\x_0, \ldots, \x_n]$ is *homogeneous of degree $d$* if for all $\lambda \in \mathbb{K}$,
 
-$F(\lambda \x_0, \ldots, \lambda \x_n) = \lambda^d F(\x_0, \ldots, \x_n).$
+$$F(\lambda \x_0, \ldots, \lambda \x_n) = \lambda^d F(\x_0, \ldots, \x_n).$$
 :::
 
 Although the definition is written in a complicated way, it essentially says that when the polynomial is expressed as a sum of monomials, every monomial has degree $d$. We can then make the following definition.
@@ -93,7 +93,7 @@ As in the affine case, this shows that there exists a topological structure on p
 ::: Definition 6
 The *homogeneous ideal* $I(X)$ of a subset $X \subseteq \mathbb{P}^n$ is defined by
 
-$I(X) = \{F \in \mathbb{K}[\x_0, \ldots, \x_n] \mid F \text{ is homogeneous and } F(x) = 0 \text{ for all } x \in X\}.$
+$$I(X) = \{F \in \mathbb{K}[\x_0, \ldots, \x_n] \mid F \text{ is homogeneous and } F(x) = 0 \text{ for all } x \in X\}.$$
 :::
 
 ::: Theorem 7
@@ -112,7 +112,7 @@ Projective space $\mathbb{P}^n$ can be covered by $n+1$ copies of affine space. 
 ::: Definition 8
 For $i = 0, 1, \ldots, n$, the *$i$-th standard open set* $U_i$ is defined by
 
-$U_i = \{[x_0 : \cdots : x_n] \in \mathbb{P}^n \mid x_i \ne 0\}.$
+$$U_i = \{[x_0 : \cdots : x_n] \in \mathbb{P}^n \mid x_i \ne 0\}.$$
 :::
 
 Give each $U_i$ the subspace topology inherited from $\mathbb{P}^n$. Then the following holds.
@@ -243,7 +243,7 @@ $$[x:y]\mapsto [x^2: xy:y^2]$$
 
 is a morphism between projective spaces. As another example, the *Segre embedding* from $\mathbb{P}^1\times \mathbb{P}^1$ to $\mathbb{P}^3$ is the morphism given by
 
-$([x:y], [u:v])\mapsto [xu: xv: yu: yv]$
+$$([x:y], [u:v])\mapsto [xu: xv: yu: yv]$$
 :::
 
 ::: Example 17

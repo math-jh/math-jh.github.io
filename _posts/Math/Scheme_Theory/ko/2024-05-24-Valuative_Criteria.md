@@ -58,7 +58,7 @@ $$\kappa((0))=\Frac(A), \qquad \kappa(\mathfrak{m})=A_\mathfrak{m}/\mathfrak{m}A
 
 이 예시가 뜻하는 바를 짚어 두자. $Z((0))=\Spec A$이므로 $(0)$의 closure는 $\Spec A$ 전체이고, 곧 $(0)$은 generic point이며 유일한 closed point $\mathfrak{m}$은 $(0)$의 specialization이다. 여기에서 closed point를 빼낸 것이 자명하지 않은 유일한 열린집합 $D(\mathfrak{m})=\{(0)\}$이고 그 위의 함수들이 $K=\Frac(A)$였으므로, canonical morphism $\Spec K \rightarrow \Spec A$는 정확히 이 "점 하나를 빼는" 포함사상이다. 기하적으로는 $\Spec A$를 곡선의 한 점에서의 germ으로, $\Spec K$를 그 germ에서 점 하나를 빼낸 것으로 생각하면 된다.
 
-그럼 morphism $\Spec K \rightarrow X$는 $X$ 안으로 들어가는, 점이 빠진 곡선의 germ이고, 이를 $\Spec A \rightarrow X$로 확장하는 것은 빠져 있던 그 점을 $X$ 안에서 되찾아 곡선을 이어 붙이는 것, 곧 곡선의 극한을 찾는 것이 된다. 이 확장이 많아야 하나 존재한다는 것이 separatedness이고 정확히 하나 존재한다는 것이 properness이며, 이것이 앞으로 볼 두 판정법의 내용이다. Hausdorff 공간에서 극한이 유일하고 compact 공간에서 극한이 항상 존재하는 것에 정확히 대응하는 구도이다.
+그럼 morphism $\Spec K \rightarrow X$는 $X$ 안으로 들어가는, 점이 빠진 곡선의 germ이고, 이를 $\Spec A \rightarrow X$로 확장하는 것은 빠져 있던 그 점을 $X$ 안에서 되찾아 곡선을 이어 붙이는 것, 곧 곡선의 극한을 찾는 것이 된다. 이 extension이 많아야 하나 존재한다는 것이 separatedness이고 정확히 하나 존재한다는 것이 properness이며, 이것이 앞으로 볼 두 판정법의 내용이다. Hausdorff 공간에서 극한이 유일하고 compact 공간에서 극한이 항상 존재하는 것에 정확히 대응하는 구도이다.
 
 ## 분리사상
 
@@ -190,7 +190,7 @@ Residue field들을 살펴보자. $\pi\circ \tilde{u}=j$가 $(0)$에서 유도�
 
 $$\mathcal{O}:=\mathcal{O}_{Z,z}\subseteq \kappa(\xi)=K,\qquad \Frac(\mathcal{O})=K$$
 
-임을 안다. 또 $\pi\vert_Z$가 유도하는 사상 $A=\mathcal{O}_{\Spec A,\mathfrak{m}_A} \rightarrow \mathcal{O}_{Z,z}$는 local homomorphism이며, generic point에서 이것이 유도하는 $K \rightarrow \kappa(\xi)=K$가 항등사상이므로 이 사상은 $K$의 부분환 사이의 포함사상이다. 곧 $\mathcal{O}$는 $A$를 dominate하는 $K$의 local subring이고, 위의 극대성에 의하여 $\mathcal{O}_{Z,z}=A$이다.
+임을 안다. 또 $\pi\vert_Z$가 유도하는 사상 $A=\mathcal{O}_{\Spec A,\mathfrak{m}_A} \rightarrow \mathcal{O}_{Z,z}$는 local homomorphism이며, generic point에서 이것이 유도하는 $K \rightarrow \kappa(\xi)=K$가 항등사상이므로 이 사상은 $K$의 subring 사이의 포함사상이다. 곧 $\mathcal{O}$는 $A$를 dominate하는 $K$의 local subring이고, 위의 극대성에 의하여 $\mathcal{O}_{Z,z}=A$이다.
 
 그럼 canonical morphism $\Spec A=\Spec\mathcal{O}_{Z,z} \rightarrow Z \hookrightarrow X_A$를 얻고, 이것과 $\pi$의 합성은 ring 수준에서 $A$의 항등사상에 대응하므로 $\pi$의 section이다. 이 section을 $\Spec K$로 제한한 것은 $\xi$를 상으로 갖고 residue field 위에서 $\kappa(\xi)=K$의 항등사상을 유도하므로 $\tilde{u}$와 같다. 따라서 이 section을 $X$로 project하면 $g\circ j=u$이고 $f\circ g=v$인 $g:\Spec A \rightarrow X$를 얻는다.
 

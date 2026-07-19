@@ -26,7 +26,7 @@ $$\mathcal{I}(z) = \int_\gamma e^{W(x)/z}\,\omega$$
 우선 critical point와 그 non-degeneracy 개념을 정확히 하자.
 
 ::: 정의 1
-Smooth manifold ([\[미분다양체\] §미분다양체, ⁋정의 1](/ko/math/manifolds/smooth_manifolds#def1)) $M$과 smooth function $f:M\to\mathbb{R}$이 주어졌다 하자. 점 $p\in M$이 $f$의 *critical point<sub>임계점</sub>*라는 것은 differential ([\[미분다양체\] §미분사상, ⁋정의 7](/ko/math/manifolds/differentials#def7)) $df_p:T_pM\to\mathbb{R}$이 영사상인 것을 뜻한다. 여기서 $T_pM$은 $p$에서의 tangent space이다 ([\[미분다양체\] §접공간, ⁋정의 3](/ko/math/manifolds/tangent_space#def3)).
+Smooth manifold ([\[미분다양체\] §미분다양체, ⁋정의 1](/ko/math/manifolds/smooth_manifolds#def1)) $M$과 smooth function $f:M\to\mathbb{R}$이 주어졌다 하자. 점 $p\in M$이 $f$의 *critical point<sub>임계점</sub>*라는 것은 differential ([\[미분다양체\] §미분사상, ⁋정의 7](/ko/math/manifolds/differentials#def7)) $df_p:T_pM\to\mathbb{R}$이 zero map인 것을 뜻한다. 여기서 $T_pM$은 $p$에서의 tangent space이다 ([\[미분다양체\] §접공간, ⁋정의 3](/ko/math/manifolds/tangent_space#def3)).
 :::
 
 좌표 $(x_1,\ldots,x_n)$을 점 $p$ 근방에 잡으면 위 조건은 $\partial f/\partial x_i(p)=0$이 모든 $i$에 대해 성립한다는 것과 동치이다. 임계점에서는 일차 정보가 사라지므로, 함수의 국소적 형상은 이차 정보, 즉 Hessian이 결정한다.
@@ -90,13 +90,13 @@ $$f_i(x) = \sum_{j=1}^n x_j h_{ij}(x)$$
 
 $$f(x) = \sum_{i,j} x_i x_j h_{ij}(x)$$
 
-이다. $h_{ij}$를 $\tfrac12(h_{ij}+h_{ji})$로 대체해도 합은 변하지 않으므로 $h_{ij}$가 대칭이라 가정해도 좋다. 한편 양변을 두 번 미분하여 원점에서 평가하면 $h_{ij}(0)=\tfrac12 (\partial^2 f/\partial x_i\partial x_j)(0)$이므로, $H(x)=[h_{ij}(x)]$는 원점에서 비퇴화이고 대칭인 행렬 값 smooth function이다.
+이다. $h_{ij}$를 $\tfrac12(h_{ij}+h_{ji})$로 대체해도 합은 변하지 않으므로 $h_{ij}$가 대칭이라 가정해도 좋다. 한편 양변을 두 번 미분하여 원점에서 평가하면 $h_{ij}(0)=\tfrac12 (\partial^2 f/\partial x_i\partial x_j)(0)$이므로, $H(x)=[h_{ij}(x)]$는 원점에서 nondegenerate하고 대칭인 행렬 값 smooth function이다.
 
 이제 비퇴화 대칭행렬은 *국소적으로* 표준형으로 정렬할 수 있다는 사실을 사용한다. 구체적으로, 원점 근방의 대칭행렬 $H(x)$에 대하여 smooth하게 정해지는 가역행렬 $Q(x)$가 존재하여
 
 $$Q(x)^\top H(x) Q(x) = \operatorname{diag}(-1,\ldots,-1,+1,\ldots,+1)$$
 
-으로 만들 수 있다. 이는 다음과 같이 귀납적으로 구성한다. $H(0)$이 비퇴화이므로 어떤 $h_{ii}(0)\neq 0$이 존재하며, 좌표 재배열을 통해 $h_{11}(0)\neq 0$이라 가정한다. 새 변수
+으로 만들 수 있다. 이는 다음과 같이 귀납적으로 구성한다. $H(0)$이 nondegenerate하므로 어떤 $h_{ii}(0)\neq 0$이 존재하며, 좌표 재배열을 통해 $h_{11}(0)\neq 0$이라 가정한다. 새 변수
 
 $$y_1(x) = \sqrt{\lvert h_{11}(x)\rvert}\left(x_1 + \sum_{j\ge 2}\frac{h_{1j}(x)}{h_{11}(x)}x_j\right)$$
 
@@ -104,7 +104,7 @@ $$y_1(x) = \sqrt{\lvert h_{11}(x)\rvert}\left(x_1 + \sum_{j\ge 2}\frac{h_{1j}(x)
 
 $$f(x) = \pm y_1(x)^2 + \sum_{i,j\ge 2} x_i x_j h_{ij}'(x)$$
 
-가 성립한다. 여기서 부호 $\pm$은 $h_{11}(0)$의 부호와 일치하며, $h_{ij}'$는 새로운 대칭 행렬 값 함수로서 원점에서 여전히 비퇴화이다. 변수 $(y_1,x_2,\ldots,x_n)$이 원점 근방에서 좌표를 이룬다는 것은 Jacobian 계산으로 확인된다. 이제 $(x_2,\ldots,x_n)$에 대한 귀납을 적용하여 모든 변수를 순차적으로 표준화하면
+가 성립한다. 여기서 부호 $\pm$은 $h_{11}(0)$의 부호와 일치하며, $h_{ij}'$는 새로운 대칭 행렬 값 함수로서 원점에서 여전히 nondegenerate하다. 변수 $(y_1,x_2,\ldots,x_n)$이 원점 근방에서 좌표를 이룬다는 것은 Jacobian 계산으로 확인된다. 이제 $(x_2,\ldots,x_n)$에 대한 귀납을 적용하여 모든 변수를 순차적으로 표준화하면
 
 $$f = \sum_{i=1}^n \epsilon_i y_i^2,\qquad \epsilon_i\in\{-1,+1\}$$
 
@@ -120,13 +120,13 @@ $f$의 non-degenerate critical point는 고립되어 있다. 특히 compact mani
 :::
 
 ::: 증명
-[정리 6](#thm6)의 표준형 $f(y)=f(p)-y_1^2-\cdots-y_{\lambda_p}^2+y_{\lambda_p+1}^2+\cdots+y_n^2$에서 $df(y)=(-2y_1,\ldots,-2y_{\lambda_p},2y_{\lambda_p+1},\ldots,2y_n)$이므로, $y=0$ 외에는 critical point가 존재하지 않는다. 즉 $p$의 적당한 근방에는 $p$ 외의 critical point가 없으므로 $p$는 고립된 critical point이다. $M$이 compact이면 임계점 집합이 closed이며 고립점들로 구성되므로 유한집합이다.
+[정리 6](#thm6)의 표준형 $f(y)=f(p)-y_1^2-\cdots-y_{\lambda_p}^2+y_{\lambda_p+1}^2+\cdots+y_n^2$에서 $df(y)=(-2y_1,\ldots,-2y_{\lambda_p},2y_{\lambda_p+1},\ldots,2y_n)$이므로, $y=0$ 외에는 critical point가 존재하지 않는다. 즉 $p$의 적당한 근방에는 $p$ 외의 critical point가 없으므로 $p$는 고립된 critical point이다. $M$이 compact이면 임계점 집합이 closed이며 isolated point들로 구성되므로 유한집합이다.
 :::
 
 두 가지 표준적인 예시를 살펴본다.
 
 ::: 예시 8
-평면 $\mathbb{R}^2$ 위의 함수 $f(x,y)=x^2-y^2$을 생각하자. $df=(2x,-2y)$이므로 유일한 critical point는 원점이며, 그 Hessian은 $\operatorname{diag}(2,-2)$이므로 비퇴화이고 Morse index는 $1$, signature는 $0$이다. 즉 원점은 *안장점<sub>saddle point</sub>*이며, 이미 $f$ 자체가 [정리 6](#thm6)의 표준형으로 주어진 형태이다.
+평면 $\mathbb{R}^2$ 위의 함수 $f(x,y)=x^2-y^2$을 생각하자. $df=(2x,-2y)$이므로 유일한 critical point는 원점이며, 그 Hessian은 $\operatorname{diag}(2,-2)$이므로 nondegenerate하고 Morse index는 $1$, signature는 $0$이다. 즉 원점은 *안장점<sub>saddle point</sub>*이며, 이미 $f$ 자체가 [정리 6](#thm6)의 표준형으로 주어진 형태이다.
 :::
 
 ::: 예시 9
@@ -172,7 +172,7 @@ $$\phi(y) = \phi(p) - y_1^2 - \cdots - y_{\lambda_p}^2 + y_{\lambda_p+1}^2 + \cd
 
 $$I(\hbar) = e^{i\phi(p)/\hbar}\int_{\mathbb{R}^n} e^{iQ(y)/(2\hbar)}\,\tilde a(y)\,dy$$
 
-로 환원된다 (확장은 0으로). 이제 문제는 *Gaussian 형태의 진동적분*
+로 환원된다 (extension은 0으로). 이제 문제는 *Gaussian 형태의 진동적분*
 
 $$J(\hbar) = \int_{\mathbb{R}^n} e^{i\sum_i \epsilon_i y_i^2/\hbar}\,\tilde a(y)\,dy$$
 
@@ -224,7 +224,7 @@ $M=\mathbb{R}^2$ 위의 $\phi(x,y)=xy$를 생각하자. $d\phi=(y,x)$이므로 �
 
 $$\operatorname{Hess}_0(\phi) = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$$
 
-이며 eigenvalue가 $\pm 1$이므로 비퇴화이고 $\sigma_0=0$, $\lvert\det\operatorname{Hess}_0(\phi)\rvert=1$이다. 따라서 [정리 10](#thm10)에 의해
+이며 eigenvalue가 $\pm 1$이므로 nondegenerate하고 $\sigma_0=0$, $\lvert\det\operatorname{Hess}_0(\phi)\rvert=1$이다. 따라서 [정리 10](#thm10)에 의해
 
 $$\int_{\mathbb{R}^2} e^{ixy/\hbar}\,a(x,y)\,dx\,dy = 2\pi\hbar\,a(0,0) + O(\hbar^2)$$
 
@@ -241,7 +241,7 @@ $X$가 complex manifold이고 $W:X\to\mathbb{C}$가 holomorphic function이라 �
 
 $$\int_\Gamma e^{W(x)/\hbar}\,\omega$$
 
-를 정의하고 싶지만, $\operatorname{Re}(W)$가 $X$ 위에서 위로 유계가 아니므로 임의의 cycle $\Gamma$에 대해 적분이 수렴할 보장이 없다. 이를 해결하기 위해 적분 경로를 $\operatorname{Re}(W/\hbar)\to-\infty$인 영역으로 빨려들어가는 경로로 잡아야 한다. 이를 위해 다음 함수에 주목한다. $h:X\to\mathbb{R}$을
+를 정의하고 싶지만, $\operatorname{Re}(W)$가 $X$ 위에서 bounded above가 아니므로 임의의 cycle $\Gamma$에 대해 적분이 수렴할 보장이 없다. 이를 해결하기 위해 적분 경로를 $\operatorname{Re}(W/\hbar)\to-\infty$인 영역으로 빨려들어가는 경로로 잡아야 한다. 이를 위해 다음 함수에 주목한다. $h:X\to\mathbb{R}$을
 
 $$h(x) = -\operatorname{Re}(W(x)/\hbar)$$
 

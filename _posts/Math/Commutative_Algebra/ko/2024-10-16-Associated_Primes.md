@@ -146,7 +146,7 @@ $$\Ass M \Ass M_{n-1}\cup \{ \mathfrak{p}_{n-1}\}\subseteq \Ass M_{n-2}\cup \{\m
 
 를 반복하면 첫 번째 결과의 유한성을 얻는다. 
 
-첫 번째 결과의 나머지 부분은 세 번째 결과를 증명하여 얻어진다. 그 전에 두 번째 결과의 경우, 만일 $a\in A$가 어떤 $x\in M$의 annihilator ideal에 속한다면, 이 annihilator ideal를 포함하는 maximal한 annihilator ideal을 생각할 수 있고 이것이 $\Ass M$에 속하므로 자명하다. 세 번째 결과의 경우는 표기법에 유의하며 [§국소화의 성질들, ⁋명제 5](/ko/math/commutative_algebra/properties_of_localization#prop5)를 사용하면 된다. 
+첫 번째 결과의 나머지 부분은 세 번째 결과를 증명하여 얻어진다. 그 전에 두 번째 결과의 경우, 만일 $a\in A$가 어떤 $x\in M$의 annihilator ideal에 속한다면, 이 annihilator ideal을 포함하는 maximal한 annihilator ideal을 생각할 수 있고 이것이 $\Ass M$에 속하므로 자명하다. 세 번째 결과의 경우는 표기법에 유의하며 [§국소화의 성질들, ⁋명제 5](/ko/math/commutative_algebra/properties_of_localization#prop5)를 사용하면 된다. 
 
 세 번째 결과를 가정하면 남은 부분도 자명하다. 만일 $\mathfrak{p}$가 $\ann M$을 포함하는 prime ideal들 중 minimal한 것이라면, 세 번째 결과를 이용하면 localization $A_\mathfrak{p}$에서의 maximal ideal $\mathfrak{p}$를 생각할 수 있는데, $\ann M$을 포함하는 유일한 prime ideal이 $\mathfrak{p}$ 뿐이므로 반드시 $\mathfrak{p}\in \Ass M$이어야 한다.
 :::

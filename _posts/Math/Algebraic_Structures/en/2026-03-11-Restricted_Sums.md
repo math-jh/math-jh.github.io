@@ -39,7 +39,7 @@ Let a family of groups $(G_i)$ be given, and fix subgroups $H_i$ of the $G_i$. T
 
 In the special case where $H_i=\{e\}$ for all $i$, it is called the *weak direct product* of the $G_i$, and is simply denoted
 
-${\prod_{i\in I}}^w G_i.$
+$${\prod_{i\in I}}^w G_i.$$
 :::
 
 The notation $\prod^H$ is not particularly good, but fortunately we are only interested in the weak direct product, so we will never use this notation again.

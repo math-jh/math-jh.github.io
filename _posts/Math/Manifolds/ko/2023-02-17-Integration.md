@@ -14,9 +14,9 @@ published: false
 
 ---
 
-이제 우리는 적분을 정의한다. 미적분학에서의 적분은 유클리드 공간의 영역 위에서 정의되었지만, 이를 manifold로 가져오려 하면 곧바로 문제가 생긴다. Manifold 위의 함수는 좌표를 통해서만 유클리드 공간의 함수로 볼 수 있는데, 좌표를 바꾸면 변수변환 공식에 의해 적분값이 Jacobian만큼 달라지기 때문이다. 이 문제는 함수 대신 미분형식을 적분의 대상으로 삼으면 해결되는데, $m$차원 manifold 위의 $m$-form은 좌표변환에 대해 정확히 Jacobian의 행렬식만큼 변하기 때문이다. 다만 변수변환 공식에는 행렬식의 절댓값이 등장하므로, 부호를 일관되게 통제하기 위해 [§향](/ko/math/manifolds/orientation)에서 살펴본 orientation이 필요하다.
+이제 우리는 적분을 정의한다. 미적분학에서의 적분은 유클리드 공간의 영역 위에서 정의되었지만, 이를 manifold로 가져오려 하면 곧바로 문제가 생긴다. Manifold 위의 함수는 좌표를 통해서만 유클리드 공간의 함수로 볼 수 있는데, 좌표를 바꾸면 변수변환 공식에 의해 적분값이 Jacobian만큼 달라지기 때문이다. 이 문제는 함수 대신 differential form을 적분의 대상으로 삼으면 해결되는데, $m$차원 manifold 위의 $m$-form은 좌표변환에 대해 정확히 Jacobian의 행렬식만큼 변하기 때문이다. 다만 변수변환 공식에는 행렬식의 절댓값이 등장하므로, 부호를 일관되게 통제하기 위해 [§향](/ko/math/manifolds/orientation)에서 살펴본 orientation이 필요하다.
 
-## 유클리드 공간에서의 미분형식의 적분
+## 유클리드 공간에서의 differential form의 적분
 
 우선 다음을 정의한다.
 
@@ -54,7 +54,7 @@ $$\int_Uf\,dr^1\cdots dr^m=\int_V(f\circ\varphi)\,\lvert\det D\varphi\rvert\,dr^
 이 성립한다. 여기서 $D\varphi$는 $\varphi$의 Jacobian matrix이다.
 :::
 
-이를 미분형식의 언어로 다시 적으면 다음과 같다.
+이를 differential form의 언어로 다시 적으면 다음과 같다.
 
 ::: 따름정리 4
 위와 같은 상황에서, $\det D\varphi$가 $V$ 전체에서 $0$보다 크다면, 임의의 compactly supported $m$-form $\omega$ on $U$에 대하여
@@ -75,7 +75,7 @@ $$\int_V\varphi^\ast\omega=\int_V(f\circ\varphi)\det(D\varphi)\,dr^1\cdots dr^m=
 이다. 두 번째 등식에서 $\det D\varphi>0$ 가정을 사용하였다.
 :::
 
-즉, 미분형식의 적분은 Jacobian의 행렬식이 항상 양수인 좌표변환에 대해서는 불변이다. [§향, ⁋명제 2](/ko/math/manifolds/orientation#prop2)의 둘째 조건이 정확히 이러한 좌표계들의 모임의 존재를 보장하므로, 우리는 orientable manifold 위에서 적분을 정의할 수 있다.
+즉, differential form의 적분은 Jacobian의 행렬식이 항상 양수인 좌표변환에 대해서는 불변이다. [§향, ⁋명제 2](/ko/math/manifolds/orientation#prop2)의 둘째 조건이 정확히 이러한 좌표계들의 모임의 존재를 보장하므로, 우리는 orientable manifold 위에서 적분을 정의할 수 있다.
 
 ## 다양체 위에서의 적분
 

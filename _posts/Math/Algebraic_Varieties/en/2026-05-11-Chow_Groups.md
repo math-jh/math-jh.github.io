@@ -61,7 +61,7 @@ The proof of this is almost a repetition of [§Divisors, ⁋Proposition 8](/en/m
 ::: Definition 5
 The $k$-th *Chow group* $\CH_k(X)$ is defined as the group of $k$-cycles modulo rational equivalence:
 
-$\CH_k(X) = Z_k(X) / \sim_{\text{rat}}$
+$$\CH_k(X) = Z_k(X) / \sim_{\text{rat}}$$
 :::
 
 The codimension $k$ Chow group is defined by $\CH^k(X) = \CH_{n-k}(X)$, and is mainly used in situations where the cohomology convention is needed, as mentioned above.
@@ -169,7 +169,7 @@ For a smooth variety $X$, $\CH^\ast(X) = \bigoplus_k \CH^k(X)$ forms a graded ri
 This ring structure also matches the cohomology ring structure we already knew, just as in [Proposition 12](#prop12).
 
 ::: Example 14 ($\mathbb{P}^n$)
-$\CH^\ast(\mathbb{P}^n) \cong \mathbb{Z}[H] / (H^{n+1})$
+$$\CH^\ast(\mathbb{P}^n) \cong \mathbb{Z}[H] / (H^{n+1})$$
 
 Here $H$ is the hyperplane class. $H^k$ represents a $k$-codimensional linear subspace.
 :::

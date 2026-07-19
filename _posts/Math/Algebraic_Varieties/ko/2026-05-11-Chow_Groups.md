@@ -169,7 +169,7 @@ Smooth variety $X$에 대해 $\CH^\ast(X) = \bigoplus_k \CH^k(X)$는 intersectio
 이 ring 구조는 [명제 12](#prop12)와 마찬가지로 기존에 알고있던 cohomology ring 구조와도 맞아떨어진다. 
 
 ::: 예시 14 ($\mathbb{P}^n$)
-$\CH^\ast(\mathbb{P}^n) \cong \mathbb{Z}[H] / (H^{n+1})$
+$$\CH^\ast(\mathbb{P}^n) \cong \mathbb{Z}[H] / (H^{n+1})$$
 
 여기서 $H$는 hyperplane class이다. $H^k$는 $k$-codimensional linear subspace를 나타낸다.
 :::

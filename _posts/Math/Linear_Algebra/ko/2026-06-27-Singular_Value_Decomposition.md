@@ -80,10 +80,10 @@ $A=U\Sigma V^t$에서 $U,V$은 가역이므로 $\rank A=\rank\Sigma$이다. $\Si
 
 ## 일반적인 유사역행렬
 
-[§최소제곱법, ⁋정의 7](/ko/math/linear_algebra/least_squares_method#def7)에서 우리는 $A$가 full column rank이거나 full row rank일 때 유사역행렬을 정의하였고, 일반적인 경우의 정의는 특이값 분해를 이용한다고 예고하였다. 이제 그 정의를 제시한다. 
+[§최소제곱법, ⁋정의 7](/ko/math/linear_algebra/least_squares_method#def7)에서 우리는 $A$가 full column rank이거나 full row rank일 때 pseudoinverse를 정의하였고, 일반적인 경우의 정의는 특이값 분해를 이용한다고 예고하였다. 이제 그 정의를 제시한다. 
 
 ::: 정의 5
-행렬 $A\in\Mat_{m\times n}(\mathbb{R})$의 특이값 분해 $A=U\Sigma V^t$가 주어졌다 하자. $\Sigma$의 양의 특이값 $\sigma_i$들에 대하여, $(i,i)$ 성분이 $1/\sigma_i$이고 나머지가 $0$인 $n\times m$ diagonal matrix를 $\Sigma^+$이라 하자. 그럼 $A$의 *유사역행렬<sub>Moore-Penrose pseudoinverse</sub>*을 
+행렬 $A\in\Mat_{m\times n}(\mathbb{R})$의 특이값 분해 $A=U\Sigma V^t$가 주어졌다 하자. $\Sigma$의 양의 특이값 $\sigma_i$들에 대하여, $(i,i)$ 성분이 $1/\sigma_i$이고 나머지가 $0$인 $n\times m$ diagonal matrix를 $\Sigma^+$이라 하자. 그럼 $A$의 *Moore-Penrose pseudoinverse<sub>유사역행렬</sub>*를 
 
 $$A^+=V\Sigma^+U^t$$
 

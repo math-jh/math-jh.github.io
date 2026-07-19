@@ -107,7 +107,7 @@ $$\Rep_\mathbb{C}(G)\cong \lMod{\mathbb{C}[G]}$$
 
 즉 우리가  $G$-module이라 부르던 것은, 엄밀히 말하자면 $\mathbb{C}[G]$-module 구조에서 $G\hookrightarrow \mathbb{C}[G]$가 주어졌을 때의 action만 본 것이라 생각할 수도 있다. 
 
-실제로 위에서 논의한 대부분의 것들이 이 categorical equivalence로 설명될 수 있다. 가령 임의의 $G$-representation $V$에 대하여, $V$의 subrepresentation은 $V$의 $G$-submodule (정확히는 $\mathbb{C}[G]$-submodule)이다. 또, [정의 3](#def3)의 tensor product도 납득할만한데, 일반적으로 coproduct $\Delta:A\rightarrow A\otimes A$가 주어진 $\mathbb{K}$-algebra $A$와 두 $A$-module $M,N$에 대하여 이들의 텐서곱을 정의하기 위해서는 $\Delta$를 활용하여 
+실제로 위에서 논의한 대부분의 것들이 이 categorical equivalence로 설명될 수 있다. 가령 임의의 $G$-representation $V$에 대하여, $V$의 subrepresentation은 $V$의 $G$-submodule (정확히는 $\mathbb{C}[G]$-submodule)이다. 또, [정의 3](#def3)의 tensor product도 납득할만한데, 일반적으로 coproduct $\Delta:A\rightarrow A\otimes A$가 주어진 $\mathbb{K}$-algebra $A$와 두 $A$-module $M,N$에 대하여 이들의 tensor product를 정의하기 위해서는 $\Delta$를 활용하여 
 
 $$A\otimes (M\otimes N)\rightarrow (A\otimes A)\otimes (M\otimes N)\rightarrow (A\otimes M)\otimes (A\otimes N)\rightarrow M\otimes N$$
 
@@ -212,7 +212,7 @@ $$d=\bigoplus_{W\in\Irr(G, \mathbb{C})} d_W:\bigoplus_{W\in \Irr(G, \mathbb{C})}
 
 $$\Hom_G(W, V)=\Hom_G\left(W, \bigoplus V_j\right)\cong \bigoplus \Hom_G(W, V_j) $$
 
-을 얻는다. [보조정리 8](#lem8)에 의해 각 항은 $V_j\cong W$일 때 $1$차원이고 그렇지 않으면 $0$이므로, $V_j\cong W$인 각 $j$마다 isomorphism $u_j:W\rightarrow V_j$를 하나씩 고르면 이들이 $\Hom_G(W,V)$의 기저를 이룬다. 그럼 $d_W$는 각 $\mathbb{C}u_j\otimes_\mathbb{C}W$를 $u_j$를 통해 $V_j$ 위로 보내는 isomorphism들의 직합이므로 $\bigoplus_{V_j\cong W}V_j$ 위로의 isomorphism이고, 모든 isomorphism class에 대하여 직합을 취하면 $\bigoplus_jV_j=V$ 전체를 얻으므로 $d$는 isomorphism이다.
+을 얻는다. [보조정리 8](#lem8)에 의해 각 항은 $V_j\cong W$일 때 $1$차원이고 그렇지 않으면 $0$이므로, $V_j\cong W$인 각 $j$마다 isomorphism $u_j:W\rightarrow V_j$를 하나씩 고르면 이들이 $\Hom_G(W,V)$의 기저를 이룬다. 그럼 $d_W$는 각 $\mathbb{C}u_j\otimes_\mathbb{C}W$를 $u_j$를 통해 $V_j$ 위로 보내는 isomorphism들의 direct sum이므로 $\bigoplus_{V_j\cong W}V_j$ 위로의 isomorphism이고, 모든 isomorphism class에 대하여 direct sum을 취하면 $\bigoplus_jV_j=V$ 전체를 얻으므로 $d$는 isomorphism이다.
 :::
 
 복잡하게 써 두기는 했지만, 위의 $d$는 각각의 irreducible $G$-module $W$(의 isomorphism class)들이 $V$ 안에 얼마나 들어있는지를 세는 것이며, 따라서 다음 정의가 자연스럽다. 

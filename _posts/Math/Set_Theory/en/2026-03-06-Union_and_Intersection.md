@@ -117,7 +117,7 @@ We may also consider the image of a union or intersection as follows.
 ::: Proposition 6
  Let $(A_i)_{i\in I}$ be a family of subsets of a set $A$, and let $(R,A,B)$ be a binary relation. Then
 
-$R\left(\bigcup_{i\in I} A_i\right)=\bigcup_{i\in I}R(A_i),\quad R\left(\bigcap_{i\in I} A_i\right)\subset\bigcap_{i\in I}R(A_i)$
+$$R\left(\bigcup_{i\in I} A_i\right)=\bigcup_{i\in I}R(A_i),\quad R\left(\bigcap_{i\in I} A_i\right)\subset\bigcap_{i\in I}R(A_i)$$
 :::
 ::: Proof
 Let us first prove the first equality. If $y\in R\left(\bigcup_{i\in I}A_i\right)$, then there exists suitable $x\in \bigcup_{i\in I}A_i$ such that $(x,y)\in R$. Now if $x\in A_j$, then $y\in R(A_j)$, so $y\in\bigcup_{i\in I}R\left(A_i\right)$ holds. Conversely, if $y\in \bigcup_{i\in I}R\left(A_i\right)$, then for some $j$ we have $y\in R\left(A_j\right)$, so there exists suitable $x\in A_j$ such that $(x,y)\in R$. Therefore $y\in R\left(\bigcup_{i\in I} A_i\right)$ holds.

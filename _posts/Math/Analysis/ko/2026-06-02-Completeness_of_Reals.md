@@ -22,30 +22,30 @@ published: false
 
 실수 $\mathbb{R}$은 사칙연산과 대소관계를 갖춘 *순서체<sub>ordered field</sub>*이다. 즉 $\mathbb{R}$은 체이면서 전순서 $\leq$를 가지고 ([\[집합론\] §순서관계의 정의](/ko/math/set_theory/order_relations)), 그 순서가 연산과 다음과 같이 호환된다: $a \leq b$이면 $a + c \leq b + c$이고, $a \leq b$이고 $0 \leq c$이면 $ac \leq bc$이다. 유리수 $\mathbb{Q}$ 역시 순서체이므로, 이 성질만으로는 $\mathbb{R}$과 $\mathbb{Q}$가 구별되지 않는다. 둘을 가르는 것이 바로 다음에 도입할 완비성이다.
 
-먼저 순서로부터 정해지는 상계와 상한의 개념을 정리한다 ([\[집합론\] §순서집합의 원소들](/ko/math/set_theory/elements_in_ordered_set)).
+먼저 순서로부터 정해지는 upper bound와 상한의 개념을 정리한다 ([\[집합론\] §순서집합의 원소들](/ko/math/set_theory/elements_in_ordered_set)).
 
 ::: 정의 1
-$S \subseteq \mathbb{R}$가 공집합이 아니라 하자. 실수 $M$이 $S$의 *상계<sub>upper bound</sub>*라는 것은 모든 $s \in S$에 대해 $s \leq M$인 것이고, 상계가 하나라도 존재하면 $S$를 *위로 유계<sub>bounded above</sub>*라 한다. $S$의 상계 중 가장 작은 것이 존재하면 그것을 $S$의 *상한<sub>supremum</sub>*이라 하고 $\sup S$로 적는다. 대칭적으로 *하계*, *아래로 유계*, *하한* $\inf S$를 정의한다.
+$S \subseteq \mathbb{R}$가 공집합이 아니라 하자. 실수 $M$이 $S$의 *upper bound<sub>상계</sub>*라는 것은 모든 $s \in S$에 대해 $s \leq M$인 것이고, upper bound가 하나라도 존재하면 $S$를 *bounded above<sub>위로 유계</sub>*라 한다. $S$의 upper bound 중 가장 작은 것이 존재하면 그것을 $S$의 *상한<sub>supremum</sub>*이라 하고 $\sup S$로 적는다. symmetric하게 *lower bound<sub>하계</sub>*, *bounded below*, *하한* $\inf S$를 정의한다.
 :::
 
-상한 $\alpha = \sup S$는 두 조건으로 특징지어진다: (i) $\alpha$는 상계이다 (모든 $s \in S$에 대해 $s \leq \alpha$); (ii) $\alpha$는 가장 작은 상계이다 — 즉 임의의 $\varepsilon > 0$에 대해 $\alpha - \varepsilon$은 더 이상 상계가 아니므로 $s > \alpha - \varepsilon$인 $s \in S$가 존재한다. 조건 (ii)의 이 형태는 앞으로 거듭 쓰인다.
+상한 $\alpha = \sup S$는 두 조건으로 특징지어진다: (i) $\alpha$는 upper bound이다 (모든 $s \in S$에 대해 $s \leq \alpha$); (ii) $\alpha$는 가장 작은 upper bound이다 — 즉 임의의 $\varepsilon > 0$에 대해 $\alpha - \varepsilon$은 더 이상 upper bound가 아니므로 $s > \alpha - \varepsilon$인 $s \in S$가 존재한다. 조건 (ii)의 이 형태는 앞으로 거듭 쓰인다.
 
 ## 완비성 공리
 
 ::: 정의 2 (완비성 공리)
-순서체 $\mathbb{R}$은 *완비<sub>complete</sub>*하다. 즉 위로 유계인 공집합이 아닌 모든 부분집합 $S \subseteq \mathbb{R}$은 상한 $\sup S \in \mathbb{R}$를 갖는다. 이를 *상한 성질<sub>least upper bound property</sub>*이라 부른다.
+순서체 $\mathbb{R}$은 *완비<sub>complete</sub>*하다. 즉 bounded above인 공집합이 아닌 모든 부분집합 $S \subseteq \mathbb{R}$은 상한 $\sup S \in \mathbb{R}$를 갖는다. 이를 *상한 성질<sub>least upper bound property</sub>*이라 부른다.
 :::
 
-이것이 실수를 정의하는 마지막 공리이며, $\mathbb{Q}$에서는 성립하지 않는다. 예를 들어 $S = \{x \in \mathbb{Q} \mid x^2 < 2\}$는 $\mathbb{Q}$ 안에서 위로 유계이지만, 그 상한은 $\sqrt{2}$여야 하는데 이것이 유리수가 아니므로 $\mathbb{Q}$ 안에는 상한이 없다. 완비성은 바로 이런 "빈틈"이 $\mathbb{R}$에는 없음을 단언한다.
+이것이 실수를 정의하는 마지막 공리이며, $\mathbb{Q}$에서는 성립하지 않는다. 예를 들어 $S = \{x \in \mathbb{Q} \mid x^2 < 2\}$는 $\mathbb{Q}$ 안에서 bounded above이지만, 그 상한은 $\sqrt{2}$여야 하는데 이것이 유리수가 아니므로 $\mathbb{Q}$ 안에는 상한이 없다. 완비성은 바로 이런 "빈틈"이 $\mathbb{R}$에는 없음을 단언한다.
 
 하한에 대한 대응 명제는 공리로 따로 둘 필요가 없다.
 
 ::: 명제 3
-아래로 유계인 공집합이 아닌 모든 $S \subseteq \mathbb{R}$은 하한 $\inf S$를 갖는다.
+bounded below인 공집합이 아닌 모든 $S \subseteq \mathbb{R}$은 하한 $\inf S$를 갖는다.
 :::
 
 ::: 증명
-$-S = \{-s \mid s \in S\}$를 생각하자. $S$가 하계 $m$을 가지면 $-m$은 $-S$의 상계이므로 $-S$는 위로 유계이고, [정의 2](#def2)에 의해 $\alpha = \sup(-S)$가 존재한다. 그러면 $-\alpha = \inf S$임이 정의로부터 직접 확인된다.
+$-S = \{-s \mid s \in S\}$를 생각하자. $S$가 lower bound $m$을 가지면 $-m$은 $-S$의 upper bound이므로 $-S$는 bounded above이고, [정의 2](#def2)에 의해 $\alpha = \sup(-S)$가 존재한다. 그러면 $-\alpha = \inf S$임이 정의로부터 직접 확인된다.
 :::
 
 ## 아르키메데스 성질과 조밀성
@@ -57,7 +57,7 @@ $-S = \{-s \mid s \in S\}$를 생각하자. $S$가 하계 $m$을 가지면 $-m$�
 :::
 
 ::: 증명
-자연수 집합 $\mathbb{N}$이 위로 유계라 가정하고 모순을 이끌자. 그러면 완비성에 의해 $\alpha = \sup \mathbb{N}$가 존재한다. $\alpha$가 가장 작은 상계이므로 $\alpha - 1$은 상계가 아니고, 따라서 $n > \alpha - 1$인 자연수 $n$이 있다. 그러면 $n + 1 > \alpha$인데 $n + 1$도 자연수이므로 $\alpha$가 상계라는 데 모순이다. 따라서 $\mathbb{N}$은 위로 유계가 아니고, 임의의 $x$에 대해 $n > x$인 $n$이 존재한다.
+자연수 집합 $\mathbb{N}$이 bounded above라 가정하고 모순을 이끌자. 그러면 완비성에 의해 $\alpha = \sup \mathbb{N}$가 존재한다. $\alpha$가 가장 작은 upper bound이므로 $\alpha - 1$은 upper bound가 아니고, 따라서 $n > \alpha - 1$인 자연수 $n$이 있다. 그러면 $n + 1 > \alpha$인데 $n + 1$도 자연수이므로 $\alpha$가 upper bound라는 데 모순이다. 따라서 $\mathbb{N}$은 bounded above가 아니고, 임의의 $x$에 대해 $n > x$인 $n$이 존재한다.
 :::
 
 아르키메데스 성질의 동치 형태로, 임의의 $\varepsilon > 0$에 대해 $1/n < \varepsilon$인 자연수 $n$이 존재한다 ($n > 1/\varepsilon$을 잡으면 된다). 이로부터 유리수가 실수 안에 촘촘히 들어차 있음을 얻는다.
@@ -74,14 +74,14 @@ $b - a > 0$이므로 [정리 4](#thm4)에 의해 $1/n < b - a$, 즉 $nb - na > 1
 
 ## 상한의 계산과 활용
 
-상한 성질은 추상적인 존재 단언으로 그치지 않고, 구체적인 집합의 상한을 정의 (i), (ii) 의 두 조건으로 직접 확인하는 데 쓰인다. 어떤 후보 값 $\alpha$가 $\sup S$임을 보이려면, $\alpha$가 상계임을 보이고 (모든 $s \in S$에 대해 $s \leq \alpha$), 임의의 $\varepsilon > 0$에 대해 $s > \alpha - \varepsilon$인 $s \in S$를 찾으면 된다. 이 두 조건은 상한이 집합의 원소가 아닐 수 있다는 점을 곧바로 드러낸다. 가령 $S = [0, 1)$은 $1$을 상계로 가지고, $0 < \varepsilon < 1$이면 $1 - \varepsilon/2 \in S$가 $1 - \varepsilon$을 넘으므로 $1$보다 작은 수는 상계가 될 수 없어 $\sup S = 1$이지만 $1 \notin S$이다. 같은 일이 수열로 주어진 $S = \{1 - 1/n \mid n \in \mathbb{N}\}$에서도 일어나는데, [정리 4](#thm4) 로 $1/n < \varepsilon$인 $n$을 잡으면 $1 - 1/n > 1 - \varepsilon$이 되어 $\sup S = 1$이지만 어느 항도 $1$에 도달하지 못한다.
+상한 성질은 추상적인 존재 단언으로 그치지 않고, 구체적인 집합의 상한을 정의 (i), (ii) 의 두 조건으로 직접 확인하는 데 쓰인다. 어떤 후보 값 $\alpha$가 $\sup S$임을 보이려면, $\alpha$가 upper bound임을 보이고 (모든 $s \in S$에 대해 $s \leq \alpha$), 임의의 $\varepsilon > 0$에 대해 $s > \alpha - \varepsilon$인 $s \in S$를 찾으면 된다. 이 두 조건은 상한이 집합의 원소가 아닐 수 있다는 점을 곧바로 드러낸다. 가령 $S = [0, 1)$은 $1$을 upper bound로 가지고, $0 < \varepsilon < 1$이면 $1 - \varepsilon/2 \in S$가 $1 - \varepsilon$을 넘으므로 $1$보다 작은 수는 upper bound가 될 수 없어 $\sup S = 1$이지만 $1 \notin S$이다. 같은 일이 수열로 주어진 $S = \{1 - 1/n \mid n \in \mathbb{N}\}$에서도 일어나는데, [정리 4](#thm4) 로 $1/n < \varepsilon$인 $n$을 잡으면 $1 - 1/n > 1 - \varepsilon$이 되어 $\sup S = 1$이지만 어느 항도 $1$에 도달하지 못한다.
 
 상한이 집합의 원소일 때 그것을 *최댓값<sub>maximum</sub>*이라 부른다. 위 두 집합처럼 $\sup S$가 항상 $S$의 원소인 것은 아니며, $\sup S \in S$인 경우에만 $\max S$가 존재한다. 예컨대 $[0,1)$을 닫힌 구간 $[0,1]$로 바꾸면 $\sup [0,1] = 1 \in [0,1]$이 되어 최댓값이 생기고, $\{1 - 1/n\}$에서는 상한 $1$이 빠져 $\max S$가 없는 반면 $\inf S = 0$은 $n = 1$ 항으로 집합에 속해 $\min S = 0$이 존재한다.
 
 상한 연산은 집합의 평행이동·스칼라배와 잘 호환된다. 이 단순한 규칙들은 이후 극한 계산에서 거듭 쓰이므로 명제로 정리해 둔다.
 
 ::: 명제 6 (상한의 평행이동과 양의 스칼라배)
-위로 유계인 공집합이 아닌 $S \subseteq \mathbb{R}$와 실수 $c$, $\lambda > 0$에 대하여, $c + S = \{c + s \mid s \in S\}$와 $\lambda S = \{\lambda s \mid s \in S\}$ 역시 위로 유계이고
+bounded above인 공집합이 아닌 $S \subseteq \mathbb{R}$와 실수 $c$, $\lambda > 0$에 대하여, $c + S = \{c + s \mid s \in S\}$와 $\lambda S = \{\lambda s \mid s \in S\}$ 역시 bounded above이고
 
 $$\sup(c + S) = c + \sup S, \qquad \sup(\lambda S) = \lambda \sup S$$
 
@@ -89,24 +89,24 @@ $$\sup(c + S) = c + \sup S, \qquad \sup(\lambda S) = \lambda \sup S$$
 :::
 
 ::: 증명
-$\alpha = \sup S$로 두자. 평행이동의 경우, 모든 $s \in S$에 대해 $s \leq \alpha$이므로 $c + s \leq c + \alpha$이고, 따라서 $c + \alpha$는 $c + S$의 상계이다. 또 임의의 $\varepsilon > 0$에 대해 $s > \alpha - \varepsilon$인 $s \in S$가 있으므로
+$\alpha = \sup S$로 두자. 평행이동의 경우, 모든 $s \in S$에 대해 $s \leq \alpha$이므로 $c + s \leq c + \alpha$이고, 따라서 $c + \alpha$는 $c + S$의 upper bound이다. 또 임의의 $\varepsilon > 0$에 대해 $s > \alpha - \varepsilon$인 $s \in S$가 있으므로
 
 $$\begin{aligned}
 c + s &> c + \alpha - \varepsilon
 \end{aligned}$$
 
-이고 $c + s \in c + S$이다. 따라서 $c + \alpha - \varepsilon$은 상계가 아니어서 $c + \alpha$가 가장 작은 상계, 곧 $\sup(c + S) = c + \alpha$이다.
+이고 $c + s \in c + S$이다. 따라서 $c + \alpha - \varepsilon$은 upper bound가 아니어서 $c + \alpha$가 가장 작은 upper bound, 곧 $\sup(c + S) = c + \alpha$이다.
 
-스칼라배의 경우도 같다. $\lambda > 0$이므로 $s \leq \alpha$에서 $\lambda s \leq \lambda \alpha$를 얻어 $\lambda \alpha$가 $\lambda S$의 상계이고, 임의의 $\varepsilon > 0$에 대해 $s > \alpha - \frac{\varepsilon}{\lambda}$인 $s$를 잡으면
+스칼라배의 경우도 같다. $\lambda > 0$이므로 $s \leq \alpha$에서 $\lambda s \leq \lambda \alpha$를 얻어 $\lambda \alpha$가 $\lambda S$의 upper bound이고, 임의의 $\varepsilon > 0$에 대해 $s > \alpha - \frac{\varepsilon}{\lambda}$인 $s$를 잡으면
 
 $$\begin{aligned}
 \lambda s &> \lambda\left(\alpha - \frac{\varepsilon}{\lambda}\right) = \lambda\alpha - \varepsilon
 \end{aligned}$$
 
-이므로 $\lambda\alpha - \varepsilon$ 또한 상계가 아니다. 따라서 $\sup(\lambda S) = \lambda\alpha$이다.
+이므로 $\lambda\alpha - \varepsilon$ 또한 upper bound가 아니다. 따라서 $\sup(\lambda S) = \lambda\alpha$이다.
 :::
 
-위 명제에서 $\lambda > 0$이라는 가정은 본질적이다. $\lambda = -1$이면 부등호의 방향이 뒤집혀 상계가 하계로 바뀌고, 실제로 [명제 3](#prop3)의 증명에서 본 대로 $\sup(-S) = -\inf S$가 된다. 일반적으로 음수배는 상한과 하한을 맞바꾼다.
+위 명제에서 $\lambda > 0$이라는 가정은 본질적이다. $\lambda = -1$이면 부등호의 방향이 뒤집혀 upper bound가 lower bound로 바뀌고, 실제로 [명제 3](#prop3)의 증명에서 본 대로 $\sup(-S) = -\inf S$가 된다. 일반적으로 음수배는 상한과 하한을 맞바꾼다.
 
 ## 중첩구간정리
 
@@ -123,11 +123,11 @@ $$\begin{aligned}
 a_1 \leq a_2 \leq a_3 \leq \cdots, \qquad \cdots \leq b_3 \leq b_2 \leq b_1.
 \end{aligned}$$
 
-게다가 임의의 $m, n$에 대해 $a_m \leq b_n$이다. 실제로 $k = \max(m, n)$으로 두면 $a_m \leq a_k \leq b_k \leq b_n$이기 때문이다. 따라서 집합 $A = \{a_n \mid n \in \mathbb{N}\}$은 위로 유계이고 (예컨대 $b_1$이 상계), 완비성에 의해
+게다가 임의의 $m, n$에 대해 $a_m \leq b_n$이다. 실제로 $k = \max(m, n)$으로 두면 $a_m \leq a_k \leq b_k \leq b_n$이기 때문이다. 따라서 집합 $A = \{a_n \mid n \in \mathbb{N}\}$은 bounded above이고 (예컨대 $b_1$이 upper bound), 완비성에 의해
 
 $$\alpha = \sup A$$
 
-가 존재한다. $\alpha$가 $A$의 상계이므로 모든 $n$에 대해 $a_n \leq \alpha$이고, 한편 모든 $b_n$이 $A$의 상계이므로 가장 작은 상계인 $\alpha$는 $\alpha \leq b_n$을 만족한다. 두 부등식을 합치면
+가 존재한다. $\alpha$가 $A$의 upper bound이므로 모든 $n$에 대해 $a_n \leq \alpha$이고, 한편 모든 $b_n$이 $A$의 upper bound이므로 가장 작은 upper bound인 $\alpha$는 $\alpha \leq b_n$을 만족한다. 두 부등식을 합치면
 
 $$a_n \leq \alpha \leq b_n \quad (\forall n), \qquad \text{즉} \quad \alpha \in \bigcap_{n=1}^\infty I_n$$
 
@@ -153,7 +153,7 @@ $$I_n = \left[  0.d_1\cdots d_n,\ \ 0.d_1\cdots d_n + 10^{-n}  \right]$$
 :::
 
 ::: 증명
-$S = \{x > 0 \mid x^2 < c\}$로 두자. $S$는 공집합이 아니고 (작은 $x$에 대해 $x^2 < c$), $1 + c$가 상계이므로 (만약 $x > 1 + c$이면 $x^2 > x > c$) 위로 유계이다. 완비성에 의해 $\alpha = \sup S > 0$이 존재한다. 우리는 $\alpha^2 = c$임을 두 부등식을 배제하여 보인다.
+$S = \{x > 0 \mid x^2 < c\}$로 두자. $S$는 공집합이 아니고 (작은 $x$에 대해 $x^2 < c$), $1 + c$가 upper bound이므로 (만약 $x > 1 + c$이면 $x^2 > x > c$) bounded above이다. 완비성에 의해 $\alpha = \sup S > 0$이 존재한다. 우리는 $\alpha^2 = c$임을 두 부등식을 배제하여 보인다.
 
 먼저 $\alpha^2 < c$라 가정하자. 작은 $h \in (0, 1)$에 대해
 
@@ -162,7 +162,7 @@ $$\begin{aligned}
 &\leq \alpha^2 + 2\alpha h + h = \alpha^2 + (2\alpha + 1)h
 \end{aligned}$$
 
-이고, $c - \alpha^2 > 0$이므로 $h < (c - \alpha^2)/(2\alpha + 1)$이면서 $h < 1$인 $h$를 잡으면 $(\alpha + h)^2 < c$가 되어 $\alpha + h \in S$이다. 이는 $\alpha$가 상계라는 데 모순이다.
+이고, $c - \alpha^2 > 0$이므로 $h < (c - \alpha^2)/(2\alpha + 1)$이면서 $h < 1$인 $h$를 잡으면 $(\alpha + h)^2 < c$가 되어 $\alpha + h \in S$이다. 이는 $\alpha$가 upper bound라는 데 모순이다.
 
 다음으로 $\alpha^2 > c$라 가정하자. $k = (\alpha^2 - c)/(2\alpha) > 0$로 두면 $0 < k < \alpha$이고
 
@@ -171,7 +171,7 @@ $$\begin{aligned}
 &> \alpha^2 - 2\alpha k = \alpha^2 - (\alpha^2 - c) = c
 \end{aligned}$$
 
-이다. 그러면 임의의 $x \geq \alpha - k$인 양수는 $x^2 \geq (\alpha - k)^2 > c$이어서 $S$에 속하지 않으므로, $\alpha - k$가 $S$의 상계가 된다. 이는 $\alpha$가 가장 작은 상계라는 데 모순이다.
+이다. 그러면 임의의 $x \geq \alpha - k$인 양수는 $x^2 \geq (\alpha - k)^2 > c$이어서 $S$에 속하지 않으므로, $\alpha - k$가 $S$의 upper bound가 된다. 이는 $\alpha$가 가장 작은 upper bound라는 데 모순이다.
 
 두 부등식이 모두 모순이므로 $\alpha^2 = c$이다. 유일성은 $0 < \alpha < \beta$이면 $\alpha^2 < \beta^2$이라는 단조성에서 즉시 따른다.
 :::

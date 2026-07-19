@@ -130,7 +130,7 @@ Now using the Jordan canonical form, we can determine the exact form of the mini
 ::: Theorem 8
 Assume $\mathbb{K}$ is algebraically closed. Let $\lambda_1,\ldots,\lambda_r$ be the distinct eigenvalues of an $n\times n$ matrix $A$. Then
 
-$m_A(\x)=\prod_{i=1}^r(\x-\lambda_i)^{e_{\lambda_i}}$
+$$m_A(\x)=\prod_{i=1}^r(\x-\lambda_i)^{e_{\lambda_i}}$$
 :::
 ::: Proof
 Fix $\lambda=\lambda_i$ and let $e_\lambda$ be the nilpotency index of $N_\lambda=(A-\lambda I)\vert_{G_\lambda(A)}$. Expanding an arbitrary monic polynomial $p$ about $\lambda$ as
@@ -153,7 +153,7 @@ In particular, the minimal polynomial gives a concise criterion for diagonalizab
 ::: Corollary 9
 Assume $\mathbb{K}$ is algebraically closed. An $n\times n$ matrix $A$ is diagonalizable if and only if $m_A$ is a product of distinct linear factors, i.e.,
 
-$m_A(\x)=\prod_{i=1}^r(\x-\lambda_i)$
+$$m_A(\x)=\prod_{i=1}^r(\x-\lambda_i)$$
 :::
 ::: Proof
 $A$ is diagonalizable if and only if for every eigenvalue $\lambda$ we have $\ker(A-\lambda I)^2=\ker(A-\lambda I)$, i.e., $G_\lambda(A)=\ker(A-\lambda I)$. ([§Eigenspace Decomposition, ⁋Proposition 12](/en/math/linear_algebra/eigenspace_decomposition#prop12)) This is equivalent to $N_\lambda=0$, i.e., $e_\lambda=1$, for every $\lambda$. By [Theorem 8](#thm8), this is equivalent to $m_A$ being a product of distinct linear factors.

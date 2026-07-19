@@ -14,53 +14,53 @@ weight: 9
 published: false
 ---
 
-[§리만 곡률, ⁋정의 2](/ko/math/riemannian_geometry/curvature#def2)에서 우리는 Riemannian manifold $(M, g)$의 곡률 텐서 $R$을 정의했고, [§지수사상, ⁋정리 9](/ko/math/riemannian_geometry/exponential_map#thm9)에 이르기까지 한 점 근방의 측지선이 exponential map을 통해 접공간 위로 선형화됨을 보았다. 곡률은 정의상 한 점에서의 무한소 자료이지만, 그것의 부호를 manifold 전체에서 통제하면 manifold의 *전역* 위상과 거리에 강한 제약이 걸린다. 이 글에서 다루는 두 정리가 그 전형이다. Ricci curvature가 양의 하한을 가지면 manifold는 콤팩트이고 fundamental group이 유한해지며 (Bonnet–Myers), sectional curvature가 어디서도 양이 아니면 단순연결 완비 manifold는 통째로 유클리드 공간과 미분동형이 된다 (Cartan–Hadamard). 두 정리 모두 곡률이 측지선 다발의 퍼짐을 어떻게 지배하는지를 측정하는 도구, 즉 Jacobi field와 에너지의 제2변분에서 나온다.
+[§리만 곡률, ⁋정의 2](/ko/math/riemannian_geometry/curvature#def2)에서 우리는 Riemannian manifold $(M, g)$의 곡률 텐서 $R$을 정의했고, [§지수사상, ⁋정리 9](/ko/math/riemannian_geometry/exponential_map#thm9)에 이르기까지 한 점 근방의 측지선이 exponential map을 통해 tangent space 위로 선형화됨을 보았다. 곡률은 정의상 한 점에서의 무한소 자료이지만, 그것의 부호를 manifold 전체에서 통제하면 manifold의 *전역* 위상과 거리에 강한 제약이 걸린다. 이 글에서 다루는 두 정리가 그 전형이다. Ricci curvature가 양의 하한을 가지면 manifold는 콤팩트이고 fundamental group이 유한해지며 (Bonnet–Myers), sectional curvature가 어디서도 양이 아니면 단순연결 완비 manifold는 통째로 유클리드 공간과 diffeomorphism이 된다 (Cartan–Hadamard). 두 정리 모두 곡률이 측지선 다발의 퍼짐을 어떻게 지배하는지를 측정하는 도구, 즉 Jacobi field와 에너지의 제2변분에서 나온다.
 
 ## 단면곡률과 Ricci curvature
 
 곡률 텐서 $R$은 $(1, 3)$-tensor로서 정보가 많지만, 비교 정리에서 부호를 통제하는 대상은 그로부터 얻는 두 개의 스칼라·이차형식 형태의 곡률이다. 먼저 한 평면에 대응하는 단면곡률을 정의한다.
 
 ::: 정의 1
-Riemannian manifold $(M, g)$의 점 $p$와 $T_p M$의 일차독립인 두 vector $u, v$에 대해, 이들이 펼치는 평면 $\Pi = \span\{u, v\}$의 *sectional curvature<sub>단면곡률</sub>*를
+Riemannian manifold $(M, g)$의 점 $p$와 $T_p M$의 일차독립인 두 벡터 $u, v$에 대해, 이들이 펼치는 평면 $\Pi = \span\{u, v\}$의 *sectional curvature<sub>단면곡률</sub>*를
 
 $$K(u, v) = \frac{\langle R(u, v) v,\, u\rangle}{\langle u, u\rangle \langle v, v\rangle - \langle u, v\rangle^2}$$
 
 로 정의한다.
 :::
 
-분모는 $u, v$가 펼치는 평행사변형의 넓이의 제곱으로, $u, v$가 일차독립일 때 양수이다. [§리만 곡률, ⁋명제 5](/ko/math/riemannian_geometry/curvature#prop5)의 대칭성을 사용하면 $K(u, v)$가 평면 $\Pi$에만 의존하고 그 안의 기저 $\{u, v\}$의 선택과 무관함을 확인할 수 있으므로, $K$를 $2$-평면들의 함수 $K(\Pi)$로 보아도 된다. 특히 $u, v$가 정규직교이면 분모가 $1$이 되어 $K(u, v) = \langle R(u, v) v, u\rangle$이다. $2$차원 manifold에서는 평면이 접공간 자신 하나뿐이므로 $K$가 점마다 하나의 수가 되며, 이것이 고전적인 Gauss curvature와 일치한다.
+분모는 $u, v$가 펼치는 평행사변형의 넓이의 제곱으로, $u, v$가 일차독립일 때 양수이다. [§리만 곡률, ⁋명제 5](/ko/math/riemannian_geometry/curvature#prop5)의 대칭성을 사용하면 $K(u, v)$가 평면 $\Pi$에만 의존하고 그 안의 기저 $\{u, v\}$의 선택과 무관함을 확인할 수 있으므로, $K$를 $2$-평면들의 함수 $K(\Pi)$로 보아도 된다. 특히 $u, v$가 정규직교이면 분모가 $1$이 되어 $K(u, v) = \langle R(u, v) v, u\rangle$이다. $2$차원 manifold에서는 평면이 tangent space 자신 하나뿐이므로 $K$가 점마다 하나의 수가 되며, 이것이 고전적인 Gauss curvature와 일치한다.
 
 Ricci curvature는 단면곡률을 한 방향에 대해 평균낸 것으로, Bonnet–Myers에서 가정으로 쓰이는 곡률이다.
 
 ::: 정의 2
-Riemannian manifold $(M, g)$의 점 $p$와 단위 vector $v \in T_p M$에 대해, *Ricci curvature<sub>리치 곡률</sub>* $\operatorname{Ric}(v, v)$를
+Riemannian manifold $(M, g)$의 점 $p$와 단위 벡터 $v \in T_p M$에 대해, *Ricci curvature<sub>리치 곡률</sub>* $\operatorname{Ric}(v, v)$를
 
 $$\operatorname{Ric}(v, v) = \sum_{i=1}^{n-1} \langle R(e_i, v) v,\, e_i\rangle$$
 
-로 정의한다. 여기서 $(e_1, \ldots, e_{n-1}, v)$는 $T_p M$의 정규직교기저이다.
+로 정의한다. 여기서 $(e_1, \ldots, e_{n-1}, v)$는 $T_p M$의 orthonormal basis이다.
 :::
 
-이 합은 정규직교기저의 선택과 무관하며, $v$에 수직인 $e_i$들이 펼치는 평면들의 단면곡률의 합 $\sum_{i=1}^{n-1} K(e_i, v)$과 같다. 일반의 vector에 대해서는 $\operatorname{Ric}$을 쌍선형·대칭으로 확장하여 $(0, 2)$-tensor로 본다. $\operatorname{Ric}(v, v) \ge (n-1)k$라는 조건은 $v$에 수직인 $n-1$개 방향의 단면곡률 평균이 $k$ 이상이라는 뜻으로, 단면곡률을 점별로 모두 통제하는 것보다 약한 가정이다. 이 약한 가정만으로 전역 결과를 얻는 것이 Bonnet–Myers 정리의 강점이다.
+이 합은 orthonormal basis의 선택과 무관하며, $v$에 수직인 $e_i$들이 펼치는 평면들의 단면곡률의 합 $\sum_{i=1}^{n-1} K(e_i, v)$과 같다. 일반의 벡터에 대해서는 $\operatorname{Ric}$을 쌍선형·대칭으로 확장하여 $(0, 2)$-tensor로 본다. $\operatorname{Ric}(v, v) \ge (n-1)k$라는 조건은 $v$에 수직인 $n-1$개 방향의 단면곡률 평균이 $k$ 이상이라는 뜻으로, 단면곡률을 점별로 모두 통제하는 것보다 약한 가정이다. 이 약한 가정만으로 전역 결과를 얻는 것이 Bonnet–Myers 정리의 강점이다.
 
 ## Jacobi field
 
 비교 정리의 핵심 장치는 한 측지선을 다른 측지선들로 흔드는 변분의 변분장이다. [§측지선, ⁋정리 3](/ko/math/riemannian_geometry/geodesics#thm3)에서 곡선의 변분을 도입했는데, 변분의 각 곡선이 다시 측지선이 되도록 제한하면 변분장이 만족하는 이계 방정식을 곡률로 표현할 수 있다.
 
 ::: 정의 3
-측지선 $\gamma : I \to M$을 따른 vector field $J$가 *Jacobi equation<sub>야코비 방정식</sub>*
+측지선 $\gamma : I \to M$을 따른 벡터장 $J$가 *Jacobi equation<sub>야코비 방정식</sub>*
 
 $$D_t^2 J + R(J, \dot\gamma)\dot\gamma = 0$$
 
 을 모든 $t \in I$에서 만족할 때, $J$를 $\gamma$를 따른 *Jacobi field<sub>야코비 장</sub>*라 부른다. 여기서 $D_t$는 $\gamma$를 따른 covariant derivative이다.
 :::
 
-Jacobi equation은 $\gamma$를 따른 vector field에 대한 선형 이계 상미분방정식이다. Local frame을 잡아 성분으로 풀어 쓰면 $J$의 성분에 대한 선형 이계 시스템이 되며, 그 계수는 $\gamma$를 따른 곡률 $R(\cdot, \dot\gamma)\dot\gamma$로 주어진다. 다음 명제는 이 방정식이 측지선의 변분에서 자연히 등장함을 보이고, 동시에 해의 존재와 유일성을 정리한다.
+Jacobi equation은 $\gamma$를 따른 벡터장에 대한 선형 이계 상미분방정식이다. Local frame을 잡아 성분으로 풀어 쓰면 $J$의 성분에 대한 선형 이계 시스템이 되며, 그 계수는 $\gamma$를 따른 곡률 $R(\cdot, \dot\gamma)\dot\gamma$로 주어진다. 다음 명제는 이 방정식이 측지선의 변분에서 자연히 등장함을 보이고, 동시에 해의 존재와 유일성을 정리한다.
 
 ::: 명제 4
 측지선 $\gamma : [a, b] \to M$에 대해 다음이 성립한다.
 
 1. 변분 $\Gamma : (-\varepsilon, \varepsilon) \times [a, b] \to M$의 각 곡선 $t \mapsto \Gamma(s, t)$가 측지선이면, 그 변분장 $J(t) = \partial_s \Gamma\vert_{s=0}(t)$는 $\gamma$를 따른 Jacobi field이다.
-2. 임의의 $t_0 \in [a, b]$와 두 vector $u, w \in T_{\gamma(t_0)} M$에 대해, $J(t_0) = u$, $D_t J(t_0) = w$를 만족하는 Jacobi field $J$가 $[a, b]$ 위에서 유일하게 존재한다. 따라서 $\gamma$를 따른 Jacobi field들은 $2n$차원 vector space를 이룬다.
+2. 임의의 $t_0 \in [a, b]$와 두 벡터 $u, w \in T_{\gamma(t_0)} M$에 대해, $J(t_0) = u$, $D_t J(t_0) = w$를 만족하는 Jacobi field $J$가 $[a, b]$ 위에서 유일하게 존재한다. 따라서 $\gamma$를 따른 Jacobi field들은 $2n$차원 벡터공간을 이룬다.
 :::
 
 ::: 증명
@@ -103,10 +103,10 @@ $J(t_0) = 0$인 Jacobi field는 정확히 $\gamma(t_0)$에서 출발하는 측�
 
 측지선이 길이 또는 에너지를 *최소화*하는지를 판정하려면 [§측지선, ⁋정리 3](/ko/math/riemannian_geometry/geodesics#thm3)의 제1변분만으로는 부족하고, 임계점에서의 이차 거동, 즉 제2변분을 보아야 한다. 그 이차형식이 index form이다. 먼저 그것을 정의한다.
 
-측지선 $\gamma : [a, b] \to M$에 대해, $\gamma$를 따른 vector field 중 양 끝에서 소멸하고 ($V(a) = V(b) = 0$) 조각마다 매끄러운 것들의 공간을 생각하자. 그 위에서 다음 대칭 쌍선형형식을 정의한다.
+측지선 $\gamma : [a, b] \to M$에 대해, $\gamma$를 따른 벡터장 중 양 끝에서 소멸하고 ($V(a) = V(b) = 0$) 조각마다 smooth 것들의 공간을 생각하자. 그 위에서 다음 대칭 bilinear form을 정의한다.
 
 ::: 정의 6
-측지선 $\gamma : [a, b] \to M$과 양 끝에서 소멸하는 $\gamma$를 따른 vector field $V, W$에 대해, *index form<sub>지표형식</sub>* $I(V, W)$를
+측지선 $\gamma : [a, b] \to M$과 양 끝에서 소멸하는 $\gamma$를 따른 벡터장 $V, W$에 대해, *index form<sub>지표형식</sub>* $I(V, W)$를
 
 $$I(V, W) = \int_a^b \Bigl( \langle D_t V,\, D_t W\rangle - \langle R(V, \dot\gamma)\dot\gamma,\, W\rangle \Bigr) \mathop{dt}$$
 
@@ -149,7 +149,7 @@ $$\left.\frac{d^2}{ds^2}\right\vert_{s=0} E(\gamma_s) = \int_a^b \Bigl( \lVert D
 
 [명제 7](#prop7)에 따라, 측지선 $\gamma$가 에너지를 (따라서 충분히 가까운 곡선들 사이에서 길이를) 국소적으로 최소화하려면 모든 고정변분장 $V$에 대해 $I(V, V) \ge 0$이어야 한다. 거꾸로 어떤 $V$에서 $I(V, V) < 0$이면 그 방향으로 흔들어 더 짧은 곡선을 얻을 수 있으므로 $\gamma$는 최소화 곡선이 아니다. Index form의 부호를 곡률의 부호로 통제하는 것이 두 비교 정리의 공통 전략이다.
 
-Index form의 부분적분 형태도 자주 쓰인다. 양 끝에서 소멸하는 매끄러운 $V, W$에 대해 $\langle D_t V, D_t W\rangle$를 부분적분하면
+Index form의 부분적분 형태도 자주 쓰인다. 양 끝에서 소멸하는 smooth $V, W$에 대해 $\langle D_t V, D_t W\rangle$를 부분적분하면
 
 $$I(V, W) = -\int_a^b \langle D_t^2 V + R(V, \dot\gamma)\dot\gamma,\, W\rangle \mathop{dt}$$
 
@@ -160,7 +160,7 @@ $$I(V, W) = -\int_a^b \langle D_t^2 V + R(V, \dot\gamma)\dot\gamma,\, W\rangle \
 이제 첫 비교 정리를 증명한다. Ricci curvature가 양의 하한을 가지면 측지선을 일정 길이 이상 늘릴 수 없다는 것이 핵심이다. 길이가 그 한계를 넘으면 index form이 음의 값을 가져 측지선이 최소화 곡선이기를 멈추기 때문이다.
 
 ::: 정리 8 (Bonnet–Myers)
-$(M, g)$가 $n$차원 complete Riemannian manifold이고, 어떤 상수 $k > 0$에 대해 모든 단위 vector $v$에서
+$(M, g)$가 $n$차원 complete Riemannian manifold이고, 어떤 상수 $k > 0$에 대해 모든 단위 벡터 $v$에서
 
 $$\operatorname{Ric}(v, v) \ge (n-1)k$$
 
@@ -170,7 +170,7 @@ $$\operatorname{Ric}(v, v) \ge (n-1)k$$
 ::: 증명
 두 점 $p, q \in M$를 잡고 $L := d(p, q)$라 하자. $M$이 complete이므로 Hopf-Rinow 정리에 의해 $p$에서 $q$로 가는, 호의 길이로 매개화된 최소화 측지선 $\gamma : [0, L] \to M$이 존재한다 ($\lVert \dot\gamma\rVert \equiv 1$). $L > \pi/\sqrt{k}$라 가정하고 모순을 이끈다.
 
-$\gamma$를 따라 $\dot\gamma$에 수직인 parallel orthonormal frame $(E_1, \ldots, E_{n-1}, E_n = \dot\gamma)$을 잡는다 ([§리만 곡률, ⁋정의 2](/ko/math/riemannian_geometry/curvature#def2) 이전에 쓴 parallel transport로 $T_p M$의 정규직교기저를 운반한 것이며, 측지선의 속도가 평행이라 직교성과 정규성이 보존된다). 각 $i = 1, \ldots, n-1$에 대해 양 끝에서 소멸하는 vector field
+$\gamma$를 따라 $\dot\gamma$에 수직인 parallel orthonormal frame $(E_1, \ldots, E_{n-1}, E_n = \dot\gamma)$을 잡는다 ([§리만 곡률, ⁋정의 2](/ko/math/riemannian_geometry/curvature#def2) 이전에 쓴 parallel transport로 $T_p M$의 orthonormal basis를 운반한 것이며, 측지선의 속도가 평행이라 직교성과 정규성이 보존된다). 각 $i = 1, \ldots, n-1$에 대해 양 끝에서 소멸하는 벡터장
 
 $$V_i(t) := \sin\!\Bigl(\frac{\pi t}{L}\Bigr)\, E_i(t)$$
 
@@ -188,7 +188,7 @@ $$(n-1)\,\frac{L}{2}\Bigl( \frac{\pi^2}{L^2} - k \Bigr)$$
 
 이다. 가정 $L > \pi/\sqrt{k}$는 $\pi^2/L^2 < k$를 뜻하므로 이 값은 음수이고, 따라서 적어도 하나의 $i$에서 $I(V_i, V_i) < 0$이다. [명제 7](#prop7)에 의해 변분장 $V_i$를 갖는 고정변분을 따라 흔들면 에너지가 (따라서 길이가) $\gamma$보다 작은 곡선이 존재하므로, $\gamma$는 $p$와 $q$ 사이의 최소화 곡선이 아니다. 이는 $\gamma$가 최소화 측지선이라는 데 모순이다. 따라서 $L \le \pi/\sqrt{k}$이다.
 
-$p, q$가 임의였으므로 $\operatorname{diam}(M) \le \pi/\sqrt{k} < \infty$이다. Complete이고 거리유계인 manifold는 Hopf-Rinow 정리에 의해 닫힌 거리유계 집합이 콤팩트이므로 $M = \bar B(p, \pi/\sqrt{k})$ 자신이 콤팩트하다.
+$p, q$가 임의였으므로 $\operatorname{diam}(M) \le \pi/\sqrt{k} < \infty$이다. Complete이고 metrically bounded인 manifold는 Hopf-Rinow 정리에 의해 닫힌 metrically bounded 집합이 콤팩트이므로 $M = \bar B(p, \pi/\sqrt{k})$ 자신이 콤팩트하다.
 :::
 
 Bonnet–Myers 정리에서 직경의 상한 $\pi/\sqrt{k}$는 sharp이다. 반지름 $1/\sqrt{k}$의 둥근 구면 $S^n$은 모든 단면곡률이 $k$이므로 $\operatorname{Ric} = (n-1)k$를 등호로 만족하고, 그 직경이 정확히 $\pi/\sqrt{k}$이다. 콤팩트성으로부터 fundamental group에 대한 다음 결과가 곧바로 따라온다.
@@ -198,16 +198,16 @@ Bonnet–Myers 정리에서 직경의 상한 $\pi/\sqrt{k}$는 sharp이다. 반�
 :::
 
 ::: 증명
-$M$의 universal cover $\pi : \tilde M \to M$를 생각하자. $\tilde M$에 $g$를 끌어올린 metric $\tilde g = \pi^\ast g$를 주면 $\pi$는 국소등거리사상이고, 따라서 $(\tilde M, \tilde g)$의 곡률은 $(M, g)$의 곡률을 국소적으로 그대로 가지므로 $\tilde M$도 같은 Ricci 하한 $\operatorname{Ric} \ge (n-1)k$를 만족한다. 또한 콤팩트 manifold $M$은 complete이고, 그 universal cover $\tilde M$ 역시 끌어올린 metric에 대해 complete이다 (덮개사상을 따라 측지선이 들어올려지므로). 그럼 [정리 8](#thm8)을 $(\tilde M, \tilde g)$에 적용하여 $\tilde M$도 콤팩트하다.
+$M$의 universal cover $\pi : \tilde M \to M$를 생각하자. $\tilde M$에 $g$를 끌어올린 metric $\tilde g = \pi^\ast g$를 주면 $\pi$는 국소등거리사상이고, 따라서 $(\tilde M, \tilde g)$의 곡률은 $(M, g)$의 곡률을 국소적으로 그대로 가지므로 $\tilde M$도 같은 Ricci 하한 $\operatorname{Ric} \ge (n-1)k$를 만족한다. 또한 콤팩트 manifold $M$은 complete이고, 그 universal cover $\tilde M$ 역시 끌어올린 metric에 대해 complete이다 (covering map을 따라 측지선이 들어올려지므로). 그럼 [정리 8](#thm8)을 $(\tilde M, \tilde g)$에 적용하여 $\tilde M$도 콤팩트하다.
 
-한편 $\pi : \tilde M \to M$의 각 fiber $\pi^{-1}(p)$는 deck transformation group과 전단사이고, universal cover의 경우 이 group이 $\pi_1(M)$과 동형이다. $\tilde M$이 콤팩트하고 $\pi$가 덮개사상이므로 fiber $\pi^{-1}(p)$는 이산이며 콤팩트집합 $\tilde M$ 안에서 닫힌 이산집합, 즉 유한집합이다. 따라서 $\pi_1(M) \cong \pi^{-1}(p)$는 유한군이다.
+한편 $\pi : \tilde M \to M$의 각 fiber $\pi^{-1}(p)$는 deck transformation group과 전단사이고, universal cover의 경우 이 group이 $\pi_1(M)$과 isomorphic이다. $\tilde M$이 콤팩트하고 $\pi$가 covering map이므로 fiber $\pi^{-1}(p)$는 이산이며 콤팩트집합 $\tilde M$ 안에서 닫힌 이산집합, 즉 유한집합이다. 따라서 $\pi_1(M) \cong \pi^{-1}(p)$는 유한군이다.
 :::
 
 [따름정리 9](#cor9)는 양의 Ricci curvature가 위상에 거는 제약을 잘 보여준다. 예컨대 $\mathbb{R}^n$이나 평탄 토러스 $T^n$, 또는 무한 fundamental group을 가진 어떤 manifold도 양의 하한을 갖는 Ricci curvature를 허용할 수 없다. 특히 $\pi_1$이 무한인 콤팩트 manifold는 양의 Ricci metric을 가질 수 없다.
 
 ## Cartan–Hadamard 정리
 
-반대쪽 부호, 즉 단면곡률이 어디서도 양이 아닌 경우를 다룬다. 이때는 Jacobi field가 발산만 할 뿐 다시 소멸하지 못하므로 conjugate point가 없고, 그 결과 exponential map이 어디서도 임계점을 갖지 않아 전역 미분동형이 된다. 먼저 conjugate point의 부재를 보인다.
+반대쪽 부호, 즉 단면곡률이 어디서도 양이 아닌 경우를 다룬다. 이때는 Jacobi field가 발산만 할 뿐 다시 소멸하지 못하므로 conjugate point가 없고, 그 결과 exponential map이 어디서도 임계점을 갖지 않아 전역 diffeomorphic이 된다. 먼저 conjugate point의 부재를 보인다.
 
 ::: 보조정리 10
 $(M, g)$의 모든 단면곡률이 $K \le 0$이라 하자. 그럼 임의의 측지선 $\gamma$ 위에는 conjugate point가 없다. 동치로, $p \in M$의 임의의 점에서 $\exp_p$는 정의역의 모든 점에서 비특이 (미분이 가역) 이다.
@@ -235,24 +235,24 @@ $$f''(t) = 2\lVert D_t J\rVert^2 - 2\langle R(J, \dot\gamma)\dot\gamma, J\rangle
 Conjugate point가 없다는 것은 [정의 5](#def5) 다음 문단에서 본 동치성에 의해 $(d\exp_p)_{tv}$가 모든 $tv$에서 가역, 즉 $\exp_p$가 정의역 전체에서 비특이임과 같다.
 :::
 
-이제 단면곡률이 비양인 완비 단순연결 manifold의 전역 구조를 결정한다. $\exp_p$가 비특이일 뿐 아니라 전역 미분동형임을 보이는 것이 관건이며, 단순연결성이 그 도약을 가능하게 한다.
+이제 단면곡률이 비양인 완비 단순연결 manifold의 전역 구조를 결정한다. $\exp_p$가 비특이일 뿐 아니라 전역 diffeomorphic임을 보이는 것이 관건이며, 단순연결성이 그 도약을 가능하게 한다.
 
 ::: 정리 11 (Cartan–Hadamard)
 $(M, g)$가 $n$차원 complete, 단순연결 Riemannian manifold이고 모든 단면곡률이 $K \le 0$이라 하자. 그럼 임의의 점 $p \in M$에서 exponential map
 
 $$\exp_p : T_p M \to M$$
 
-은 미분동형이다. 특히 $M$은 $\mathbb{R}^n$과 미분동형이고, $M$의 임의의 두 점은 유일한 측지선으로 이어지며 그 측지선이 최단 곡선이다.
+은 diffeomorphic이다. 특히 $M$은 $\mathbb{R}^n$과 diffeomorphic이고, $M$의 임의의 두 점은 유일한 측지선으로 이어지며 그 측지선이 최단 곡선이다.
 :::
 
 ::: 증명
-$M$이 complete이므로 Hopf-Rinow 정리에 의해 모든 측지선이 $\mathbb{R}$ 전체로 연장되어 $\exp_p$가 $T_p M$ 전체에서 정의된다. [보조정리 10](#lem10)에 의해 $\exp_p$는 모든 점에서 비특이이므로 국소 미분동형이다.
+$M$이 complete이므로 Hopf-Rinow 정리에 의해 모든 측지선이 $\mathbb{R}$ 전체로 연장되어 $\exp_p$가 $T_p M$ 전체에서 정의된다. [보조정리 10](#lem10)에 의해 $\exp_p$는 모든 점에서 비특이이므로 국소 diffeomorphic이다.
 
-핵심은 $\exp_p$를 통해 $T_p M$ 위로 끌어올린 metric $\tilde g := \exp_p^\ast g$가 complete임을 보이는 것이다. $\exp_p$가 국소 미분동형이므로 $\tilde g$는 $T_p M$ 위의 매끄러운 Riemannian metric이고, $\exp_p : (T_p M, \tilde g) \to (M, g)$는 국소등거리사상이다. $(T_p M, \tilde g)$에서 원점을 지나는 직선 $t \mapsto tv$는 $\exp_p$ 아래에서 측지선 $\gamma_v(t) = \exp_p(tv)$로 보내지므로 ([§지수사상, ⁋보조정리 2](/ko/math/riemannian_geometry/exponential_map#lem2)) 이 직선들은 $\tilde g$의 측지선이며, 이들이 원점에서 모든 방향으로 모든 시간에 정의되므로 $(T_p M, \tilde g)$는 원점에서 geodesically complete이다. Hopf-Rinow 정리는 한 점에서의 geodesic completeness로부터 전체의 completeness를 주므로 $(T_p M, \tilde g)$는 complete이다.
+핵심은 $\exp_p$를 통해 $T_p M$ 위로 끌어올린 metric $\tilde g := \exp_p^\ast g$가 complete임을 보이는 것이다. $\exp_p$가 국소 diffeomorphic이므로 $\tilde g$는 $T_p M$ 위의 smooth Riemannian metric이고, $\exp_p : (T_p M, \tilde g) \to (M, g)$는 국소등거리사상이다. $(T_p M, \tilde g)$에서 원점을 지나는 직선 $t \mapsto tv$는 $\exp_p$ 아래에서 측지선 $\gamma_v(t) = \exp_p(tv)$로 보내지므로 ([§지수사상, ⁋보조정리 2](/ko/math/riemannian_geometry/exponential_map#lem2)) 이 직선들은 $\tilde g$의 측지선이며, 이들이 원점에서 모든 방향으로 모든 시간에 정의되므로 $(T_p M, \tilde g)$는 원점에서 geodesically complete이다. Hopf-Rinow 정리는 한 점에서의 geodesic completeness로부터 전체의 completeness를 주므로 $(T_p M, \tilde g)$는 complete이다.
 
-이제 국소등거리사상이자 국소 미분동형인 $\exp_p$가 출발공간이 complete이고 도착공간이 연결일 때 덮개사상임을 쓴다 (완비 manifold 사이의 국소등거리 surjection은 덮개사상이라는 사실의 적용이며, surjectivity는 Hopf-Rinow에서 $\exp_p$의 상이 닫혀 있고 열려 있어 연결인 $M$ 전체가 되는 데서 나온다). 따라서 $\exp_p : T_p M \to M$은 덮개사상이다. $T_p M \cong \mathbb{R}^n$은 단순연결이므로 universal cover이고, $M$이 단순연결이라는 가정에서 덮개사상 $\exp_p$는 한 겹, 즉 미분동형이다.
+이제 국소등거리사상이자 국소 diffeomorphic인 $\exp_p$가 출발공간이 complete이고 도착공간이 연결일 때 covering map임을 쓴다 (완비 manifold 사이의 국소등거리 surjection은 covering map이라는 사실의 적용이며, surjectivity는 Hopf-Rinow에서 $\exp_p$의 상이 닫혀 있고 열려 있어 연결인 $M$ 전체가 되는 데서 나온다). 따라서 $\exp_p : T_p M \to M$은 covering map이다. $T_p M \cong \mathbb{R}^n$은 단순연결이므로 universal cover이고, $M$이 단순연결이라는 가정에서 covering map $\exp_p$는 한 겹, 즉 diffeomorphic이다.
 
-$\exp_p$가 전단사이므로 임의의 $q \in M$에 대해 $q = \exp_p(v)$인 $v$가 유일하게 존재하고, 그 측지선 $\gamma_v$가 $p$와 $q$를 잇는 유일한 측지선이다. [§지수사상, ⁋정리 9](/ko/math/riemannian_geometry/exponential_map#thm9)가 함의하듯 $\exp_p$가 미분동형인 영역에서 방사 측지선은 길이를 최소화하므로, 이 유일한 측지선이 $p$와 $q$ 사이의 최단 곡선이다.
+$\exp_p$가 전단사이므로 임의의 $q \in M$에 대해 $q = \exp_p(v)$인 $v$가 유일하게 존재하고, 그 측지선 $\gamma_v$가 $p$와 $q$를 잇는 유일한 측지선이다. [§지수사상, ⁋정리 9](/ko/math/riemannian_geometry/exponential_map#thm9)가 함의하듯 $\exp_p$가 diffeomorphic인 영역에서 방사 측지선은 길이를 최소화하므로, 이 유일한 측지선이 $p$와 $q$ 사이의 최단 곡선이다.
 :::
 
 [정리 11](#thm11)은 단면곡률이 비양인 단순연결 완비 manifold가 위상적으로 가장 단순한 manifold, 즉 $\mathbb{R}^n$임을 말한다. 이런 manifold를 *Cartan–Hadamard manifold*라 부르며, 유클리드 공간 $\mathbb{R}^n$ ($K \equiv 0$)과 hyperbolic space $\mathbb{H}^n$ ($K \equiv -1$)이 대표적인 예이다. 두 정리를 나란히 놓으면 곡률의 부호가 전역 위상에 미치는 영향이 선명하다. Ricci curvature의 양의 하한은 manifold를 콤팩트하게 닫아 fundamental group을 유한하게 만들고, 단면곡률의 비양성은 단순연결인 경우 manifold를 콤팩트성과 정반대인 $\mathbb{R}^n$으로 완전히 펼친다. 단면곡률의 부호가 [명제 4](#prop4) 뒤에서 본 Jacobi field의 수렴·발산 양상을 통해 측지선 다발의 거동을 지배하고, 그 거동이 다시 전역 구조로 번역되는 것이다.

@@ -48,7 +48,7 @@ Thus, $\Der_A(E, -)$ is a functor from $\lMod{E}$ to itself.
 ::: Lemma 2
 The functor $\Der_A(E, -)$ is representable. That is, there exists an $E$-module $\Omega_{E/A}$ such that there is a natural isomorphism between the two functors from $\lMod{E}$ to itself:
 
-$\Der_A(E,-)\cong\Hom_E(\Omega_{E/A},-)$
+$$\Der_A(E,-)\cong\Hom_E(\Omega_{E/A},-)$$
 :::
 
 The representing object $\Omega_{E/A}$ is defined as follows.

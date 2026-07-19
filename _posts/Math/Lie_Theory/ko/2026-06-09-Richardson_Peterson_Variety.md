@@ -268,7 +268,7 @@ $$\mathcal{Y}_B=\mathcal{Y}\cap B^-B/B$$
 ::: 정리 11 (Peterson)
 $G$의 Langlands dual $G^\vee$의 Peterson variety에서, 각 standard parabolic subgroup $P\supseteq B$에 대응하는 stratum $\mathcal{Y}^\vee_P$의 coordinate ring은 partial flag variety $G/P$의 small quantum cohomology ring과 동형이다.
 
-$\mathbb{C}[\mathcal{Y}^\vee_P]\cong QH^\ast(G/P)$
+$$\mathbb{C}[\mathcal{Y}^\vee_P]\cong QH^\ast(G/P)$$
 :::
 
 이 정리는 Peterson의 1997년 MIT lecture에서 소개된 것으로, 별도의 출판본은 없지만 [강의노트](https://math.soimeme.org/~arunram/Resources/PetersonGmodBcourse1997.pdf) 등에서 그 증명을 찾아볼 수 있다. 다만 우리가 주로 살펴보던 Grassmannian의 경우, $\GL_n$은 Langlands self-dual이므로 $G\cong G^\vee$가 되어 이 duality가 잘 보이지는 않는다. 
@@ -289,7 +289,7 @@ $\mathbb{C}[\mathcal{Y}^\vee_P]\cong QH^\ast(G/P)$
 
 ![$$q=q_0$$에서의 fiber에 대응하는 commutative square. 점 $$y$$의 character $$\rchi_y$$를 $$\mathbb{C}[q]$$로 제한하면 $$q_0$$에서의 evaluation $$\operatorname{ev}_{q_0}$$가 되어, $$y$$가 $$q_0$$ 위에 놓여 있음을 뜻한다.](/assets/images/Math/Lie_Theory/Richardson_Peterson_Variety-3.svg){:style="width:14em" class="invert" .align-center}
 
-과 정확하게 같다. 대수적으로 이는 다음의 텐서곱
+과 정확하게 같다. 대수적으로 이는 다음의 tensor product
 
 $$QH^\ast(G/P)\otimes_{\mathbb{C}[q]}\mathbb{C}[q]/(q-q_0)\cong QH^\ast(G/P)/(q-q_0)$$
 

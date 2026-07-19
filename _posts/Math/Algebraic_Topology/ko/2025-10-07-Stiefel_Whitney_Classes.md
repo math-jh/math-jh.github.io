@@ -101,9 +101,9 @@ $$\Delta: B\rightarrow B\times B$$
 
 ## 체흐 코호몰로지
 
-이쯤에서 우리는 또 다른 코호몰로지 이론을 정립한다. 이는 [§푸앵카레 쌍대성, ⁋정의 15](/ko/math/algebraic_topology/Poincare_duality#def15)의 sheaf cohomology와 마찬가지로 위상공간 위에 정의되는 sheaf에 대한 cohomology이며, étale space construction을 통하여 stalk이 벡터공간인 sheaf와 vector bundle을 같은 것으로 생각할 수 있으므로 우리 이야기에서 중요한 역할을 한다. 
+이쯤에서 우리는 또 다른 cohomology 이론을 정립한다. 이는 [§푸앵카레 쌍대성, ⁋정의 15](/ko/math/algebraic_topology/Poincare_duality#def15)의 sheaf cohomology와 마찬가지로 위상공간 위에 정의되는 sheaf에 대한 cohomology이며, étale space construction을 통하여 stalk이 벡터공간인 sheaf와 vector bundle을 같은 것으로 생각할 수 있으므로 우리 이야기에서 중요한 역할을 한다. 
 
-Sheaf cohomology는 sheaf의 global section의 존재에 대한 obstruction을 cohomology가 담고 있다는 것을 보여줬다. 지금 살펴볼 체흐 코호몰로지도 그 결과는 비슷하지만, 이에 대한 답을 local section들을 이어붙여 global section을 만드는 과정에서 살펴본다는 점에서 차이가 있다. 어쨌든, manifold를 포함하는 좋은 경우에 체흐 코호몰로지는 sheaf cohomology와 같은 결과를 주고, 따라서 constant sheaf의 체흐 코호몰로지는 우리가 원래 알던 cohomology를 복원한다.
+Sheaf cohomology는 sheaf의 global section의 존재에 대한 obstruction을 cohomology가 담고 있다는 것을 보여줬다. 지금 살펴볼 Čech cohomology도 그 결과는 비슷하지만, 이에 대한 답을 local section들을 이어붙여 global section을 만드는 과정에서 살펴본다는 점에서 차이가 있다. 어쨌든, manifold를 포함하는 좋은 경우에 Čech cohomology는 sheaf cohomology와 같은 결과를 주고, 따라서 constant sheaf의 Čech cohomology는 우리가 원래 알던 cohomology를 복원한다.
 
 위상공간 $X$와 그 위에 정의된 sheaf $\mathcal{F}$, 그리고 $X$의 open cover $\mathcal{U}=\{U_i\}_{i\in I}$를 생각하자. 각각의 $p\geq 0$에 대하여, *Čech $p$-cochain*들의 group은 다음의 식
 

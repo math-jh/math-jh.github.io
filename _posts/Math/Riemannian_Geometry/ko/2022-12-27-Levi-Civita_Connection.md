@@ -17,10 +17,10 @@ published: false
 
 ## 리만 계량과의 호환성
 
-(Pseudo-)Riemannian manifold $(M, g)$의 tangent bundle 위의 connection $\nabla$가 주어졌을 때, $\nabla$와 $g$를 호환되도록 만드는 가장 자연스러운 조건은 두 vector field의 pairing이 한 vector field에 의해 미분될 때 다음의 라이프니츠 법칙을 만족하는 것이다.
+(Pseudo-)Riemannian manifold $(M, g)$의 tangent bundle 위의 connection $\nabla$가 주어졌을 때, $\nabla$와 $g$를 호환되도록 만드는 가장 자연스러운 조건은 두 벡터장의 pairing이 한 벡터장에 의해 미분될 때 다음의 라이프니츠 법칙을 만족하는 것이다.
 
 ::: 정의 1
-(Pseudo-)Riemannian manifold $(M, g)$ 위의 tangent bundle $TM$ 위의 connection $\nabla$가 $g$와 *compatible<sub>호환된다</sub>*는 것은 임의의 vector field $X, Y, Z \in \mathfrak{X}(M)$에 대해 다음의 식
+(Pseudo-)Riemannian manifold $(M, g)$ 위의 tangent bundle $TM$ 위의 connection $\nabla$가 $g$와 *compatible<sub>호환된다</sub>*은 것은 임의의 벡터장 $X, Y, Z \in \mathfrak{X}(M)$에 대해 다음의 식
 
 $$X\langle Y, Z\rangle = \langle \nabla_X Y, Z\rangle + \langle Y, \nabla_X Z\rangle$$
 
@@ -34,15 +34,15 @@ $$X\langle Y, Z\rangle = \langle \nabla_X Y, Z\rangle + \langle Y, \nabla_X Z\ra
 
 1. $\nabla$는 $g$와 compatible이다. 즉 [정의 1](#def1)의 식이 성립한다.
 2. $\nabla g = 0$이다. 즉 $g$를 $(0, 2)$-tensor field로 보았을 때 그 covariant derivative가 항등적으로 $0$이다.
-3. 임의의 곡선 $\gamma : I \to M$과 그 위의 parallel vector field $V, W$에 대해 함수 $t \mapsto \langle V(t), W(t)\rangle$이 상수이다.
+3. 임의의 곡선 $\gamma : I \to M$과 그 위의 parallel 벡터장 $V, W$에 대해 함수 $t \mapsto \langle V(t), W(t)\rangle$이 상수이다.
 :::
 
 ::: 증명
 (1) ⟺ (2): $(\nabla_X g)(Y, Z) = X(g(Y, Z)) - g(\nabla_X Y, Z) - g(Y, \nabla_X Z)$이므로, 정의 1의 식은 $\nabla_X g = 0$이 모든 $X$에 대해 성립한다는 것과 동치이다.
 
-(1) ⟹ (3): [정의 8](#def8)에서 parallel vector field $V$는 $\nabla_{\dot\gamma} V = 0$을 만족하는 것으로 정의될 것이다. 곡선 $\gamma$를 따라 $f(t) := \langle V(t), W(t)\rangle$이라 하면 $\dot{f}(t) = \dot\gamma\langle V, W\rangle = \langle \nabla_{\dot\gamma} V, W\rangle + \langle V, \nabla_{\dot\gamma} W\rangle = 0$.
+(1) ⟹ (3): [정의 8](#def8)에서 parallel 벡터장 $V$는 $\nabla_{\dot\gamma} V = 0$을 만족하는 것으로 정의될 것이다. 곡선 $\gamma$를 따라 $f(t) := \langle V(t), W(t)\rangle$이라 하면 $\dot{f}(t) = \dot\gamma\langle V, W\rangle = \langle \nabla_{\dot\gamma} V, W\rangle + \langle V, \nabla_{\dot\gamma} W\rangle = 0$.
 
-(3) ⟹ (1): 점 $p \in M$에서 임의의 vector $X_p, Y_p, Z_p$를 잡고, $Y, Z$를 $X_p$ 방향의 적당한 곡선을 따라 parallel transport해 vector field로 확장하면 그 곡선 위에서 $\langle Y, Z\rangle$이 상수이므로 양변의 미분으로부터 (1)의 식을 얻는다.
+(3) ⟹ (1): 점 $p \in M$에서 임의의 벡터 $X_p, Y_p, Z_p$를 잡고, $Y, Z$를 $X_p$ 방향의 적당한 곡선을 따라 parallel transport해 벡터장으로 확장하면 그 곡선 위에서 $\langle Y, Z\rangle$이 상수이므로 양변의 미분으로부터 (1)의 식을 얻는다.
 :::
 
 ## 비틀림
@@ -57,9 +57,9 @@ $$T(X, Y) := \nabla_X Y - \nabla_Y X - [X, Y]$$
 로 정의된 $\mathfrak{X}(M) \times \mathfrak{X}(M) \to \mathfrak{X}(M)$ 함수이다. 만일 $T \equiv 0$이면 $\nabla$를 *torsion-free<sub>비틀림 없는</sub>* connection이라 부른다.
 :::
 
-직접 계산으로부터 $T$는 $X, Y$ 둘 다에 대해 $C^\infty$-bilinear이며, antisymmetric 즉 $T(X, Y) = -T(Y, X)$이다. 따라서 $T$는 $(1, 2)$-tensor field로, 정의에 등장하는 vector field들의 *국소적인* 정보가 아닌 점별 정보만으로 결정되는 자료가 된다.
+직접 계산으로부터 $T$는 $X, Y$ 둘 다에 대해 $C^\infty$-bilinear이며, antisymmetric 즉 $T(X, Y) = -T(Y, X)$이다. 따라서 $T$는 $(1, 2)$-tensor field로, 정의에 등장하는 벡터장들의 *국소적인* 정보가 아닌 점별 정보만으로 결정되는 자료가 된다.
 
-기하학적으로 $T = 0$ 조건은 connection coefficient $\Gamma_{ij}^k$가 $i, j$ 두 인덱스에 대해 대칭이라는 것과 동치이다. 실제로 local coordinate $(x^i)$에서 $E_i = \partial/\partial x^i$를 잡으면 $[E_i, E_j] = 0$이므로
+기하학적으로 $T = 0$ 조건은 connection coefficient $\Gamma_{ij}^k$가 $i, j$ 두 index에 대해 대칭이라는 것과 동치이다. 실제로 local coordinate $(x^i)$에서 $E_i = \partial/\partial x^i$를 잡으면 $[E_i, E_j] = 0$이므로
 
 $$T(E_i, E_j) = \nabla_{E_i} E_j - \nabla_{E_j} E_i = (\Gamma_{ij}^k - \Gamma_{ji}^k) E_k$$
 
@@ -74,7 +74,7 @@ Pseudo-Riemannian manifold $(M, g)$ 위에 metric과 compatible하고 torsion-fr
 :::
 
 ::: 증명
-먼저 유일성을 보이기 위해, 그러한 $\nabla$가 존재한다 가정하고 임의의 vector field $X, Y, Z$에 대해 metric-compatibility를 세 번 적용하면
+먼저 유일성을 보이기 위해, 그러한 $\nabla$가 존재한다 가정하고 임의의 벡터장 $X, Y, Z$에 대해 metric-compatibility를 세 번 적용하면
 
 $$\begin{aligned}
 X\langle Y, Z\rangle &= \langle \nabla_X Y, Z\rangle + \langle Y, \nabla_X Z\rangle \\
@@ -88,7 +88,7 @@ $$2 \langle \nabla_X Y, Z\rangle = X\langle Y, Z\rangle + Y\langle Z, X\rangle -
 
 을 얻는다. 우변은 $X, Y$에만 의존하지 않고 $Z$에 대해서는 $C^\infty$-linear이므로 $\nabla_X Y$가 좌변에 의해 유일하게 결정된다 — 이는 $\nabla$의 유일성을 보장한다.
 
-존재성을 위해서는 식 ($\ast$)의 우변을 $Z$에 대한 covector로 보고 metric duality로 vector field $\nabla_X Y$를 정의하면 된다. 이렇게 정의된 $\nabla$가 connection의 조건과 metric compatibility, torsion-freeness를 모두 만족한다는 것은 단순한 계산으로 확인된다.
+존재성을 위해서는 식 ($\ast$)의 우변을 $Z$에 대한 covector로 보고 metric duality로 벡터장 $\nabla_X Y$를 정의하면 된다. 이렇게 정의된 $\nabla$가 connection의 조건과 metric compatibility, torsion-freeness를 모두 만족한다는 것은 단순한 계산으로 확인된다.
 :::
 
 위 정리의 증명 과정에서 등장한 식 ($\ast$)을 다시 명제로 정리해 두자.
@@ -117,7 +117,7 @@ $$\Gamma_{ij}^k = \frac{1}{2} \sum_{l=1}^n g^{kl} \left(\frac{\partial g_{jl}}{\
 로 주어진다. 이를 *Christoffel 기호<sub>Christoffel symbols</sub>*라 부른다.
 :::
 
-Christoffel 기호는 인덱스 $i, j$에 대해 대칭이며 ($\Gamma_{ij}^k = \Gamma_{ji}^k$), 이는 [정의 3](#def3) 직후의 관찰과 일치하는 결과이다.
+Christoffel 기호는 index $i, j$에 대해 대칭이며 ($\Gamma_{ij}^k = \Gamma_{ji}^k$), 이는 [정의 3](#def3) 직후의 관찰과 일치하는 결과이다.
 
 ::: 예시 7
 유클리드 공간 $\mathbb{R}^n$에 standard metric $g_{ij} = \delta_{ij}$를 주면 모든 $\Gamma_{ij}^k = 0$이며, Levi-Civita 접속은 표준적인 component별 미분
@@ -129,14 +129,14 @@ $$\nabla_X Y = \sum_{k=1}^n X(Y^k) \frac{\partial}{\partial x^k}$$
 
 ## 평행 운반
 
-Connection이 있는 임의의 vector bundle 위에서는 곡선을 따라 vector를 *상수처럼* 옮기는 자료 — *parallel transport* — 가 정의된다.
+Connection이 있는 임의의 vector bundle 위에서는 곡선을 따라 벡터를 *상수처럼* 옮기는 자료 — *parallel transport* — 가 정의된다.
 
 ::: 정의 8
-Manifold $M$ 위의 tangent bundle $TM$ 위의 connection $\nabla$와 smooth 곡선 $\gamma : I \to M$이 주어졌다 하자. $\gamma$ 위의 vector field $V : I \to TM$ (즉 $V(t) \in T_{\gamma(t)} M$인 smooth 함수)이 다음의 식
+Manifold $M$ 위의 tangent bundle $TM$ 위의 connection $\nabla$와 smooth 곡선 $\gamma : I \to M$이 주어졌다 하자. $\gamma$ 위의 벡터장 $V : I \to TM$ (즉 $V(t) \in T_{\gamma(t)} M$인 smooth 함수)이 다음의 식
 
 $$\nabla_{\dot\gamma(t)} V = 0$$
 
-을 모든 $t \in I$에서 만족할 때, $V$를 $\gamma$ 위의 *parallel<sub>평행</sub>* vector field라 부른다. 주어진 초기값 $V(t_0) = v_0 \in T_{\gamma(t_0)} M$에 대해 위 조건을 만족하는 유일한 parallel vector field가 존재하며 (다음 명제), 이를 통해 정의된 선형 isomorphism
+을 모든 $t \in I$에서 만족할 때, $V$를 $\gamma$ 위의 *parallel<sub>평행</sub>* 벡터장이라 부른다. 주어진 초기값 $V(t_0) = v_0 \in T_{\gamma(t_0)} M$에 대해 위 조건을 만족하는 유일한 parallel 벡터장이 존재하며 (다음 명제), 이를 통해 정의된 선형 isomorphism
 
 $$P_\gamma^{t_0, t_1} : T_{\gamma(t_0)} M \to T_{\gamma(t_1)} M, \qquad v_0 \mapsto V(t_1)$$
 
@@ -144,7 +144,7 @@ $$P_\gamma^{t_0, t_1} : T_{\gamma(t_0)} M \to T_{\gamma(t_1)} M, \qquad v_0 \map
 :::
 
 ::: 명제 9
-[정의 8](#def8)의 parallel transport는 well-defined이다. 즉 임의의 초기값 $v_0 \in T_{\gamma(t_0)} M$에 대해 [정의 8](#def8)의 식과 초기값 조건을 동시에 만족하는 parallel vector field $V$가 유일하게 존재한다.
+[정의 8](#def8)의 parallel transport는 well-defined이다. 즉 임의의 초기값 $v_0 \in T_{\gamma(t_0)} M$에 대해 [정의 8](#def8)의 식과 초기값 조건을 동시에 만족하는 parallel 벡터장 $V$가 유일하게 존재한다.
 :::
 
 ::: 증명
@@ -166,7 +166,7 @@ $$\langle P_\gamma^{t_0, t_1}(v), P_\gamma^{t_0, t_1}(w)\rangle = \langle v, w\r
 :::
 
 ::: 증명
-$V, W$를 $\gamma$ 위의 parallel vector field로 잡고 $f(t) := \langle V(t), W(t)\rangle$을 보면 [명제 2](#prop2)의 (3)에서 $f$는 상수이다.
+$V, W$를 $\gamma$ 위의 parallel 벡터장으로 잡고 $f(t) := \langle V(t), W(t)\rangle$을 보면 [명제 2](#prop2)의 (3)에서 $f$는 상수이다.
 :::
 
 Parallel transport는 임의의 곡선 $\gamma$에 대해 정의되지만, 일반적으로 두 끝점 $p = \gamma(t_0), q = \gamma(t_1)$ 사이에 여러 곡선이 존재하는 경우 곡선마다 다른 isomorphism $P_\gamma^{t_0, t_1}$이 얻어진다. 이 *path-dependence*가 어떻게 측정되는지를 다루는 자료가 [§리만 곡률](/ko/math/riemannian_geometry/curvature)에서 정의되는 *Riemann 곡률 텐서*이다.

@@ -107,7 +107,7 @@ An ideal satisfying the above equivalent conditions is called a *homogeneous ide
 ::: Proposition 7
 For a homogeneous ideal $\mathfrak{a}$, the quotient $A/\mathfrak{a}$ is a graded ring and its decomposition is given by
 
-$A/\mathfrak{a}=\bigoplus_{i\in I}A_i/(\mathfrak{a}\cap A_i).$
+$$A/\mathfrak{a}=\bigoplus_{i\in I}A_i/(\mathfrak{a}\cap A_i).$$
 :::
 
 The proof of this is obvious and hence omitted.

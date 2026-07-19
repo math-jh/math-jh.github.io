@@ -26,7 +26,7 @@ A *spectral sequence* is a collection of the following data.
 
 For each $r$, the bigraded complex $(E_r^{p,q}, d_r)$ is called the *$r$-th page*. These two pieces of data are related by the formula
 
-$E_{r+1}^{p,q}\cong \frac{\ker(d_r^{p,q}: E_r^{p,q}\rightarrow E_r^{p+r,q-r+1})}{\im(d_r^{p-r,q+r-1}: E_r^{p-r, q+r-1}\rightarrow E_r^{p,q})}$
+$$E_{r+1}^{p,q}\cong \frac{\ker(d_r^{p,q}: E_r^{p,q}\rightarrow E_r^{p+r,q-r+1})}{\im(d_r^{p-r,q+r-1}: E_r^{p-r, q+r-1}\rightarrow E_r^{p,q})}$$
 :::
 
 If we visualize the elements of the $E_r$ page as points $(p,q)$ in the plane, then $d_r^{p,q}$ goes from $(p,q)$ to $(p+r, q-r+1)$, and these arrows form a cochain complex. In particular, from this viewpoint $E_{r+1}^{p,q}$ can be regarded as the cohomology at the point $(p,q)$ of the cochain complex passing through $(p,q)$.
@@ -60,7 +60,7 @@ The most important fact about a filtration is that when a filtered complex $A^\b
 ::: Definition 3
 Let $(A^\bullet, F)$ be a filtered complex. The image at the cohomology level of the inclusion $F^pA^\bullet\rightarrow A^\bullet$ is defined by
 
-$F^p H^n = \operatorname{im}\bigl(H^n(F^p A^\bullet) \to H^n(A^\bullet)\bigr)$
+$$F^p H^n = \operatorname{im}\bigl(H^n(F^p A^\bullet) \to H^n(A^\bullet)\bigr)$$
 :::
 
 This filtration consists of the cohomology classes induced by cocycles contained in $F^p A^\bullet$. As $p$ increases, $F^p A^\bullet$ becomes smaller, so $F^p H^n$ also becomes smaller.

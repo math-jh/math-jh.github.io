@@ -72,7 +72,7 @@ $$S_z^M=\{x \in \check{X} \mid \Real(W(x)/z) <-M\}$$
 
 이 식으로부터 $z$의 역할도 어느정도 보이는데, $z\rightarrow 0$인 경우 $e^{W_q/z}$는 $W_q$의 phase에 따라 급격히 진동하며, 따라서 적분의 dominant한 contribution은 stationary phase, 즉 $p$ 근처에서만 나타나게 된다. 우리는 mirror symmetry statement가 B-side에서는 $W_q$의 critical point에 대한 것임을 알고 있으므로 $z$의 역할은 명확하다. 
 
-다만 주의할 것은 $z$가 실제로는 real parameter가 아니라 complex parameter라는 것이다. 실제로 만일 $z$의 argument가 변한다면 $W_q$ 또한 해당 방향에 맞춰서 정렬되어야 real part가 될 것이므로 위의 $\Gamma_p$의 정의가 살짝 달라질 것이다. 이렇게 $z$를 변경할 때는 Lefschetz thimble이 정의하는 basis 자체가 달라지게 되며, 이는 (해당 글에서 명시적으로 언급하지는 않았지만) A-side의 Dubrovin connection에 대해서도 마찬가지이다. 즉, $\nabla^z$들 또한 $z$가 달라질 때에는 그 값이 달라질 것이지만, 우리가 주목하지 않았던 것일 뿐이며 이를 $\mathbb{C}^\ast$에서 살펴보면 더 풍부한 구조가 드러난다. 요컨대 $z \to 0^+$의 stationary phase asymptote를 보는 것은 이 구조의 한 단면일 뿐으로, 우리는 이들이 담고 있는 데이터를 $\mathbb{C}^\ast$ 전체로 유지할 것이다. 
+다만 주의할 것은 $z$가 실제로는 real parameter가 아니라 complex parameter라는 것이다. 실제로 만일 $z$의 argument가 변한다면 $W_q$ 또한 해당 방향에 맞춰서 정렬되어야 real part가 될 것이므로 위의 $\Gamma_p$의 정의가 살짝 달라질 것이다. 이렇게 $z$를 변경할 때는 Lefschetz thimble이 정의하는 basis 자체가 달라지게 되며, 이는 (해당 글에서 명시적으로 언급하지는 않았지만) A-side의 Dubrovin connection에 대해서도 마찬가지이다. 즉, $\nabla^z$들 또한 $z$가 달라질 때에는 그 값이 달라질 것이지만, 우리가 주목하지 않았던 것일 뿐이며 이를 $\mathbb{C}^\ast$에서 살펴보면 더 풍부한 구조가 드러난다. 요컨대 $z \to 0^+$의 stationary phase asymptote를 보는 것은 이 구조의 한 section일 뿐으로, 우리는 이들이 담고 있는 데이터를 $\mathbb{C}^\ast$ 전체로 유지할 것이다. 
 
 지금까지의 논의를 정리하면 다음과 같다.
 

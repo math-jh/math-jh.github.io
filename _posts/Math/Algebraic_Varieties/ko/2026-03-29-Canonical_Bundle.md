@@ -34,7 +34,7 @@ weight: 11
 
 $$\S_A(M^\vee)\otimes_A\kappa(x)=\S_{\kappa(x)} (M^\vee\otimes_A\kappa(x))=\S_{\kappa(x)}(M_x^\vee)$$
 
-을 얻으며, 여기서 우변의 $M_x = M \otimes_A \kappa(x)$이며, 여기서 등장하는 텐서곱들은 위에서 설명한 것과 마찬가지로 대강 모든 대상들을 $\mathbb{K}$-vector space (정확히는 $\kappa(x)$-vector space)로 보는 것이라 생각하면 된다. 
+을 얻으며, 여기서 우변의 $M_x = M \otimes_A \kappa(x)$이며, 여기서 등장하는 tensor product들은 위에서 설명한 것과 마찬가지로 대강 모든 대상들을 $\mathbb{K}$-vector space (정확히는 $\kappa(x)$-vector space)로 보는 것이라 생각하면 된다. 
 
 이제 $\S_{\kappa(x)}(M_x^\vee)$는 $\kappa(x)$를 계수로 갖고, $M_x^\vee$의 각 원소들을 1차식으로 갖는 polynomial algebra이며, 그렇다면 $V(M)_x$의 fiber는 이들 $M_x^\vee$의 원소들을 coordinate function으로 갖는 점들이고, 따라서 이들 점들은 $M_x$의 double dual이라 생각할 수 있다. 이제 만일 $M$이 finitely generated $A$-module이라면, canonical isomorphism $M_x\cong M_x^{\vee\vee}$이 존재하므로 이로부터 각각의 fiber $V(M)_x$을 $\kappa(x)$-vector space $M_x$로 이해할 수 있다. 
 

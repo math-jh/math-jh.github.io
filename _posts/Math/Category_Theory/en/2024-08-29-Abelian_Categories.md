@@ -38,7 +38,7 @@ For any additive category $\mathcal{A}$ and any two objects $A,B\in\obj(\mathcal
 ::: Proof
 There exists a unique morphism $0_{0B}$ from the zero object $0$ to $B$. Hence $0_{0B}+0_{0B}=0_{0B}$ holds. The proposition is now immediate from the equation
 
-$0_{AB}+0_{AB}=0_{0B}\circ0_{A0}+0_{0B}\circ0_{A0}=(0_{0B}+0_{0B})\circ 0_{A0}=0_{0B}\circ 0_{A0}=0_{AB}$
+$$0_{AB}+0_{AB}=0_{0B}\circ0_{A0}+0_{0B}\circ0_{A0}=(0_{0B}+0_{0B})\circ 0_{A0}=0_{0B}\circ 0_{A0}=0_{AB}$$
 :::
 
 ## Abelian category
@@ -117,7 +117,7 @@ $$\cdots 0 \rightarrow 0 \rightarrow A \rightarrow B \rightarrow C \rightarrow 0
 
 is called a *short exact sequence*, and is abbreviated as
 
-$0 \rightarrow A \rightarrow B \rightarrow C \rightarrow 0$
+$$0 \rightarrow A \rightarrow B \rightarrow C \rightarrow 0$$
 :::
 
 Suppose an additive functor $F:\mathcal{A}\rightarrow \mathcal{B}$ is given. Then for any chain complex $A_\bullet$ defined in $\mathcal{A}$, the data

@@ -72,7 +72,7 @@ For any open set $U$ in $X\times Y$, $\pr_X(U)$ and $\pr_Y(U)$ are open in $X$ a
 ::: Proof
 This is obvious from the above argument and the following formulas:
 
-$\pr_X(U)=\bigcup_{y\in Y} U(y),\qquad \pr_Y(U)=\bigcup_{x\in X} U(x)$
+$$\pr_X(U)=\bigcup_{y\in Y} U(y),\qquad \pr_Y(U)=\bigcup_{x\in X} U(x)$$
 :::
 
 However, since an arbitrary union of closed sets need not be closed, the claim obtained by replacing $A$ with a closed set in the above proposition does not hold. On the other hand, by [Corollary 4](#cor4), we also obtain the following proposition.
@@ -94,7 +94,7 @@ Now we examine the relationship between product sets and interior and closure. F
 ::: Proposition 7
 Let a product space $X=\prod_{i\in I} X_i$ and arbitrary subsets $A_i$ of $X_i$ be given. Then the following formula holds:
 
-$\prod_{i\in I} \cl A_i=\cl\left(\prod_{i\in I} A_i\right)$
+$$\prod_{i\in I} \cl A_i=\cl\left(\prod_{i\in I} A_i\right)$$
 :::
 ::: Proof
 First, $\prod_{i\in I}\cl A_i$ is a closed set. This follows from the formula
@@ -113,7 +113,7 @@ However, the above proposition does not always hold for interior; it only holds 
 ::: Proposition 8
 Let a product space $\prod_{i\in I} X_i$ with finite index set $I$ and arbitrary subsets $A_i$ of $X_i$ be given. Then the following formula holds:
 
-$\prod_{i\in I} \interior A_i=\interior\left(\prod_{i\in I} A_i\right)$
+$$\prod_{i\in I} \interior A_i=\interior\left(\prod_{i\in I} A_i\right)$$
 :::
 ::: Proof
 Since $I$ is finite, $\prod_{i\in I}\interior A_i$ is an open set belonging to the base for the product topology discussed above, and is contained in $\prod A_i$. Therefore, by the maximality of interior,

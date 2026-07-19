@@ -13,9 +13,9 @@ weight: 6
 
 ---
 
-코호몰로지는, 그 이름에서 알 수 있듯, 호몰로지의 dual에 해당하는 개념이라 할 수 있다. 그러나 단순히 공간 $X$의 $k$번째 코호몰로지 $H^k(X)$가 $k$번째 호몰로지 $H_k(X)$의 dual이었다면 이를 별도로 생각할 필요가 없을 것이다.
+cohomology는, 그 이름에서 알 수 있듯, homology의 dual에 해당하는 개념이라 할 수 있다. 그러나 단순히 공간 $X$의 $k$번째 cohomology $H^k(X)$가 $k$번째 homology $H_k(X)$의 dual이었다면 이를 별도로 생각할 필요가 없을 것이다.
 
-실제로 코호몰로지는 호몰로지보다 더 정교한 불변량을 주는데, 가령 코호몰로지 위에는 자연스러운 곱셈 구조가 정의되며, 같은 호몰로지를 갖는 공간이라 하더라도 이 곱셈구조가 다르다면 homtopic하지 않다. 이번 글에서는 코호몰로지의 정의와 기본적인 성질들에 대해 살펴본다. 
+실제로 cohomology는 homology보다 더 정교한 불변량을 주는데, 가령 cohomology 위에는 자연스러운 곱셈 구조가 정의되며, 같은 homology를 갖는 공간이라 하더라도 이 곱셈구조가 다르다면 homtopic하지 않다. 이번 글에서는 cohomology의 정의와 기본적인 성질들에 대해 살펴본다. 
 
 ## 호몰로지의 보편계수정리
 
@@ -23,11 +23,11 @@ weight: 6
 
 $$C_\bullet(X;A):=C_\bullet(X)\otimes_\mathbb{Z}A,\qquad C_\bullet^\Delta(X;A):=C_\bullet^\Delta(X)\otimes_\mathbb{Z}A$$
 
-을 얻어내고, 그럼 이들의 homology group들로 호몰로지들 
+을 얻어내고, 그럼 이들의 homology group들로 homology들 
 
 $$H_k(X;A),\qquad H_k^\Delta(X;A)$$
 
-을 정의할 수 있다는 것을 살펴보았다. 이를 실질적으로 계산하기 위해서는 가령 $H_k(X;A)$ 혹은 $H_k^\Delta(X;A)$가 $H_k(X;A)\otimes_\mathbb{Z}A$ 혹은 $H_k^\Delta(X;A)\otimes_\mathbb{Z}A$와 같은 식으로 나오는지를 추가적으로 살펴보아야 할 것인데, 일반적으로 텐서곱은 right-exact이지만 left-exact는 아니므로 이는 과도한 기대일 것이며, 우리는 텐서를 취함으로써 손실되는 정보를 추가로 측정해주어야 할 것이다. 
+을 정의할 수 있다는 것을 살펴보았다. 이를 실질적으로 계산하기 위해서는 가령 $H_k(X;A)$ 혹은 $H_k^\Delta(X;A)$가 $H_k(X;A)\otimes_\mathbb{Z}A$ 혹은 $H_k^\Delta(X;A)\otimes_\mathbb{Z}A$와 같은 식으로 나오는지를 추가적으로 살펴보아야 할 것인데, 일반적으로 tensor product는 right-exact이지만 left-exact는 아니므로 이는 과도한 기대일 것이며, 우리는 텐서를 취함으로써 손실되는 정보를 추가로 측정해주어야 할 것이다. 
 
 이를 위해, free abelian group들로 이루어진 chain complex $C_\bullet$을 생각하고, $\Ch_{\geq 0}(\Ab)$에서의 short exact sequence
 
@@ -67,7 +67,7 @@ $$0 \rightarrow H_k(C)\otimes_\mathbb{Z}A\rightarrow H_k(C;A)\rightarrow \Tor_1^
 
 을 얻는다. 
 
-한편 (1)은 splitting short exact sequence이므로, 우리는 retraction $r_k:C_k \rightarrow Z_k$을 하나 택할 수 있다. ([\[다중선형대수학\] §완전열, ⁋명제 10](/ko/math/multilinear_algebra/exact_sequences#prop10)) 그럼 이러한 선택 하에서, $(p_k\circ r_k)\otimes \id_A$는 호몰로지에서의 함수 $H_k(C;A)\rightarrow H_k(C)\otimes_\mathbb{Z} A$를 유도하며 이것이 위의 $H_k(C)\otimes_\mathbb{Z}A\rightarrow H_k(C;A)$의 retraction임을 안다. 즉 다음을 얻는다.
+한편 (1)은 splitting short exact sequence이므로, 우리는 retraction $r_k:C_k \rightarrow Z_k$을 하나 택할 수 있다. ([\[다중선형대수학\] §완전열, ⁋명제 10](/ko/math/multilinear_algebra/exact_sequences#prop10)) 그럼 이러한 선택 하에서, $(p_k\circ r_k)\otimes \id_A$는 homology에서의 함수 $H_k(C;A)\rightarrow H_k(C)\otimes_\mathbb{Z} A$를 유도하며 이것이 위의 $H_k(C)\otimes_\mathbb{Z}A\rightarrow H_k(C;A)$의 retraction임을 안다. 즉 다음을 얻는다.
 
 ::: 명제 1 (Universal coefficient theorem for homology)
 임의의 위상공간 $X$와 abelian group $A$에 대하여, 다음의 short exact sequence
@@ -84,7 +84,7 @@ $$H_k(X;A)\cong \left(H_k(X)\otimes_\mathbb{Z}A\right)\oplus \Tor_1^\mathbb{Z}(H
 
 ## 코호몰로지의 정의와 보편계수정리
 
-[§호몰로지의 계산, ⁋정의 6](/ko/math/algebraic_topology/computation_of_homology#def6)과 마찬가지로 우리는 코호몰로지의 Eilenberg-Steenrod axiom을 정의하고, 이를 만족하는 contravariant functor와 connecting morphism들을 cohomology라 부를 수 있을 것이다. 이를 명시적으로 적으면 다음과 같다.
+[§호몰로지의 계산, ⁋정의 6](/ko/math/algebraic_topology/computation_of_homology#def6)과 마찬가지로 우리는 cohomology의 Eilenberg-Steenrod axiom을 정의하고, 이를 만족하는 contravariant functor와 connecting morphism들을 cohomology라 부를 수 있을 것이다. 이를 명시적으로 적으면 다음과 같다.
 
 ::: 정의 2 (Eilenberg-Steenrod axioms)
 위상공간들의 pair들의 category에서 abelian group들의 category로의 contravariant functor들 $H^k$과, 이들 사이의 natural transformation
@@ -116,11 +116,11 @@ $$(C^\vee)^\bullet(X;A):\qquad\cdots \leftarrow \Hom_\mathbb{Z}(C_{k+1}(X), A)\l
 
 $$\qquad \cdots\leftarrow\Hom_A(C_{k+1}(X;A),A)\leftarrow \Hom_A(C_k(X;A),A)\leftarrow \Hom_A(C_{k-1}(X;A),A)\leftarrow\cdots$$
 
-으로 생각할 수 있으므로, chain complex $C_\bullet(X;A)$의 dual에 해당하는 것이라 생각할 수 있다. 그럼 이 chain complex $(C^\vee)^\bullet(X;A)$의 $k$번째 호몰로지를 
+으로 생각할 수 있으므로, chain complex $C_\bullet(X;A)$의 dual에 해당하는 것이라 생각할 수 있다. 그럼 이 chain complex $(C^\vee)^\bullet(X;A)$의 $k$번째 homology를 
 
 $$H^k(X;A):=H_k(C^\vee)$$
 
-로 적고, 이를 $X$의 *$k$번째 코호몰로지*라 부른다. 여기서 $H$와 $C^\vee$에 위첨자를 이용하여 index를 표기해주는 이유는 homology와 반대로, long exact sequence가 index가 커지는 방향으로 만들어지기 때문이며, 앞으로는 혼동의 여지가 없다면 $(C^\vee)^\bullet(X)$를 $C^\bullet(X;A)$라 쓰기로 하자.
+로 적고, 이를 $X$의 *$k$번째 cohomology*라 부른다. 여기서 $H$와 $C^\vee$에 위첨자를 이용하여 index를 표기해주는 이유는 homology와 반대로, long exact sequence가 index가 커지는 방향으로 만들어지기 때문이며, 앞으로는 혼동의 여지가 없다면 $(C^\vee)^\bullet(X)$를 $C^\bullet(X;A)$라 쓰기로 하자.
 
 그럼 이렇게 정의한 $H^k(X;A)$와 $H_k(X)$ 사이에 어떠한 관계가 있는지를 살펴보아야 한다. 이 글의 서두에서 밝힌 것과 같이, 단순히 $H^k(X;A)\cong H_k(X)^\ast$가 성립하는 것은 아니다. 그러나 위의 [명제 1](#prop1)의 증명과 유사한 방식으로 우리는 다음의 명제를 얻어낼 수 있다.
 
@@ -140,11 +140,11 @@ $$H^k(X;A)\cong \Hom_\mathbb{Z}(H_k(X),A)\oplus \Ext^1_\mathbb{Z}(H_{k-1}(X),A)$
 
 ## 드람 코호몰로지
 
-위상공간 $X$에 chain complex $C_\bullet(X)$를 대응시키는 것은 $X$의 부분공간들에 대한 정보를 대수적으로 옮기는 것이라 할 수 있다. 코호몰로지를 정의할 때 우리는 $C_\bullet(X)$에 $\Hom_\mathbb{Z}(-,A)$를 취한 후 이 cochain complex의 호몰로지를 정의하며, 이 때 
+위상공간 $X$에 chain complex $C_\bullet(X)$를 대응시키는 것은 $X$의 부분공간들에 대한 정보를 대수적으로 옮기는 것이라 할 수 있다. cohomology를 정의할 때 우리는 $C_\bullet(X)$에 $\Hom_\mathbb{Z}(-,A)$를 취한 후 이 cochain complex의 homology를 정의하며, 이 때 
 
 $$C^k(X;A)=\Hom_\mathbb{Z}(C_k(X), A)$$
 
-의 임의의 원소는 $C_k(X)$의 원소들 (즉 $k$-chain들)마다 $A$의 원소를 대응시키는 함수로 생각할 수 있다. 즉 코호몰로지는 본질적으로 공간 위에 정의된 함수들을 보는 것이라 할 수 있다.
+의 임의의 원소는 $C_k(X)$의 원소들 (즉 $k$-chain들)마다 $A$의 원소를 대응시키는 함수로 생각할 수 있다. 즉 cohomology는 본질적으로 공간 위에 정의된 함수들을 보는 것이라 할 수 있다.
 
 더 구체적으로, 임의의 $c\in C_k(X)$와 $\varphi\in C^k(X;A)$에 대하여 우리는 다음의 canonical pairing
 
@@ -226,11 +226,11 @@ $$H^k(X;\mathbb{R})\cong \Hom_\mathbb{Z}(H_k(X),\mathbb{R})$$
 
 을 준다. 
 
-그럼 이러한 종류의 호몰로지와 코호몰로지를 살펴보는 것이 또 다른 관심사가 될 것이다. 이를 위해 $H_k(X;A)$와 $H^k(X;A)$를 정의할 때 사용했던 chain complex를 다시 떠올려보면, 우리는 두 chain complex
+그럼 이러한 종류의 homology와 cohomology를 살펴보는 것이 또 다른 관심사가 될 것이다. 이를 위해 $H_k(X;A)$와 $H^k(X;A)$를 정의할 때 사용했던 chain complex를 다시 떠올려보면, 우리는 두 chain complex
 
 $$C_\bullet(X;A):=C_\bullet(X)\otimes_\mathbb{Z}A,\qquad C_\bullet^\Delta(X;A):=C_\bullet^\Delta(X)\otimes_\mathbb{Z}A$$
 
-들은, 만일 $A$가 ring이었다면, $A$-module들의 chain complex이고, 앞서 정의한 $C^\bullet(X;A)$ 또한 그러하다는 것을 안다.따라서 이들에 호몰로지 혹은 코호몰로지를 취하면 그 결과 또한 $A$-module이 될 것이다.
+들은, 만일 $A$가 ring이었다면, $A$-module들의 chain complex이고, 앞서 정의한 $C^\bullet(X;A)$ 또한 그러하다는 것을 안다.따라서 이들에 homology 혹은 cohomology를 취하면 그 결과 또한 $A$-module이 될 것이다.
 
 한편, 우리는 만일 $A$가 principal ideal domain이라면 임의의 free $A$-module의 submodule은 다시 free $A$-module임을 알고 있다. [명제 1](#prop1)의 증명을 다시 살펴보면, $\mathbb{Z}$가 principal ideal domain이므로 free $\mathbb{Z}$-module (즉 free abelian group)의 submodule이 다시 free $\mathbb{Z}$-module이 된다는 사실을 활용한 것이며, 이를 바탕으로 앞선 두 명제를 다음과 같이 일반화할 수 있다.
 
@@ -260,7 +260,7 @@ $$H_k(\Hom_A(C,M))\cong \Hom_A(H_k(C),M)\oplus \Ext^1_A(H_{k-1}(C),M)$$
 
 ## 메이어-피토리스 열
 
-한편 [정의 2](#def2)의 공리들 중 excision axiom은 우리가 작은 공간들의 코호몰로지로부터 큰 공간의 코호몰로지를 계산할 수 있게 해 준다. 다음 명제는 [\[대수적 위상수학\] §호몰로지의 계산, ⁋명제 7](/ko/math/algebraic_topology/computation_of_homology#prop7)의 코호몰로지 버전이며, 그 증명은 [\[대수적 위상수학\] §호몰로지의 계산, ⁋정의 6](/ko/math/algebraic_topology/computation_of_homology#def6)로부터 [\[대수적 위상수학\] §호몰로지의 계산, ⁋명제 7](/ko/math/algebraic_topology/computation_of_homology#prop7)를 얻어낸 과정을, [정의 2](#def2)에서 시작하여 반복하면 된다.
+한편 [정의 2](#def2)의 공리들 중 excision axiom은 우리가 작은 공간들의 cohomology로부터 큰 공간의 cohomology를 계산할 수 있게 해 준다. 다음 명제는 [\[대수적 위상수학\] §호몰로지의 계산, ⁋명제 7](/ko/math/algebraic_topology/computation_of_homology#prop7)의 cohomology 버전이며, 그 증명은 [\[대수적 위상수학\] §호몰로지의 계산, ⁋정의 6](/ko/math/algebraic_topology/computation_of_homology#def6)로부터 [\[대수적 위상수학\] §호몰로지의 계산, ⁋명제 7](/ko/math/algebraic_topology/computation_of_homology#prop7)를 얻어낸 과정을, [정의 2](#def2)에서 시작하여 반복하면 된다.
 
 ::: 명제 6 (Mayer-Vietoris sequence)
 위상공간 $X$가 두 열린집합들의 합집합 $X=U\cup V$로 나타난다 하고, 이 위에 정의된 cohomology theory $H$를 생각하자. 그럼 long exact sequence
@@ -276,7 +276,7 @@ $$i:U\rightarrow X,\quad j:V\rightarrow X,\quad k:U\cap V\rightarrow U,\quad l:U
 
 ## 사슬복합체의 텐서곱
 
-Mayer-Vietoris sequence를 사용하면 큰 공간의 작은 부분공간들의 호몰로지 혹은 코호몰로지로부터 큰 공간의 호몰로지, 코호몰로지를 계산할 수 있다. 한편 우리는 두 공간 $X,Y$를 곱하여 더 큰 공간 $X\times Y$를 만들 수도 있는데, 퀴네트 공식은 이러한 곱공간의 호몰로지와 코호몰로지를 계산하는 데에 도움을 준다. 이를 위해서는 우선 두 chain complex $C_\bullet$, $D_\bullet$이 주어졌을 때 이들의 텐서곱을 정의해야 한다.
+Mayer-Vietoris sequence를 사용하면 큰 공간의 작은 부분공간들의 homology 혹은 cohomology로부터 큰 공간의 homology, cohomology를 계산할 수 있다. 한편 우리는 두 공간 $X,Y$를 곱하여 더 큰 공간 $X\times Y$를 만들 수도 있는데, 퀴네트 공식은 이러한 곱공간의 homology와 cohomology를 계산하는 데에 도움을 준다. 이를 위해서는 우선 두 chain complex $C_\bullet$, $D_\bullet$이 주어졌을 때 이들의 tensor product를 정의해야 한다.
 
 ::: 정의 7
 Ring $A$와 $A$-module들의 chain complex $C_\bullet,D_\bullet$이 주어졌다 하자. 그럼 이들의 *tensor product* $(C\otimes D)_\bullet$은 각각의 $k$에 대하여
@@ -334,7 +334,7 @@ $$0 \rightarrow B_\bullet(C)\rightarrow Z_\bullet(C)\rightarrow H_\bullet(C)\rig
 
 $$0 \rightarrow \Tor_1^A(H(C), H(D))_\bullet\rightarrow (B(C)\otimes H(D))_\bullet\rightarrow (Z(C) \otimes H(D))_\bullet \rightarrow (H(C)\otimes H(D))_\bullet \rightarrow 0$$
 
-를 생각하자. 여기서 첫 항의 $0$은 $Z_\bullet(C)$이 free module들인 것으로부터 얻어진 것이다. 한편, free module은 flat이므로, free module과의 tensor product를 취하는 것은 호몰로지를 취하는 것과 commute하고 따라서 위의 sequence에서
+를 생각하자. 여기서 첫 항의 $0$은 $Z_\bullet(C)$이 free module들인 것으로부터 얻어진 것이다. 한편, free module은 flat이므로, free module과의 tensor product를 취하는 것은 homology를 취하는 것과 commute하고 따라서 위의 sequence에서
 
 $$(B(C)\otimes H(D))_\bullet\cong H_\bullet(B(C)\otimes D)\qquad (Z(C)\otimes H(D))_\bullet \cong H_\bullet(Z(C)\otimes D)$$
 
@@ -351,7 +351,7 @@ $$0 \rightarrow Z_\bullet(C)\rightarrow C_\bullet \rightarrow B_{\bullet-1}(C) \
 
 ## 아일렌베르크-질버 정리와 퀴네트 공식
 
-[보조정리 8](#lem8)의 결과를 염두에 두면, 우리가 해야 할 일은 명확하다. 두 위상공간 $X,Y$와 이에 해당하는 chain complex $C_\bullet(X),C_\bullet(Y)$가 주어졌을 때, product space $X\times Y$의 호몰로지 $H_\bullet(X\times Y)$와, 두 chain complex $H_\bullet(X)$, $H_\bullet(Y)$의 tensor product $(H(X)\otimes H(Y))_\bullet$의 관계를 살펴보는 것이다. 다음 정리는 이를 두 대수적인 대상들이 동일한 것이라는 것을 보여준다.
+[보조정리 8](#lem8)의 결과를 염두에 두면, 우리가 해야 할 일은 명확하다. 두 위상공간 $X,Y$와 이에 해당하는 chain complex $C_\bullet(X),C_\bullet(Y)$가 주어졌을 때, product space $X\times Y$의 homology $H_\bullet(X\times Y)$와, 두 chain complex $H_\bullet(X)$, $H_\bullet(Y)$의 tensor product $(H(X)\otimes H(Y))_\bullet$의 관계를 살펴보는 것이다. 다음 정리는 이를 두 대수적인 대상들이 동일한 것이라는 것을 보여준다.
 
 ::: 정리 9 (Eilenberg-Zilber)
 두 위상공간 $X,Y$와 이들로부터 얻어지는 chain complex $C_\bullet(X),C_\bullet(Y)$, 그리고 $C_\bullet(X\times Y)$에 대하여, 두 chain complex $(C(X)\otimes C(Y))_\bullet$과 $C_\bullet(X\times Y)$ 사이의 chain homotopy equivalence가 존재하며, 따라서 
@@ -397,7 +397,7 @@ $$H_k(X\times Y;A)\cong \left( \bigoplus_{p+q=k}H_p(X;A)\otimes_AH_q(Y;A)\right)
 이 존재한다.
 :::
 
-물론, 이 결과와 [정리 5](#thm5)를 사용하면 코호몰로지 버전의 퀴네트 공식을 얻을 수 있다.
+물론, 이 결과와 [정리 5](#thm5)를 사용하면 cohomology 버전의 퀴네트 공식을 얻을 수 있다.
 
 --- 
 

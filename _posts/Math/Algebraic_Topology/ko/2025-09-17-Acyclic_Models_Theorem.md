@@ -18,7 +18,7 @@ weight: 7
 
 ## Category with models
 
-호몰로지 이론을 전개할 때 우리는 보통 $n$-simplex들을 사용하게 되며, 이들은 우리가 $\Top$의 임의의 원소들을 살펴보는데 도움이 된다. 이를 다음과 같이 정의로 삼을 수 있다. 
+homology 이론을 전개할 때 우리는 보통 $n$-simplex들을 사용하게 되며, 이들은 우리가 $\Top$의 임의의 원소들을 살펴보는데 도움이 된다. 이를 다음과 같이 정의로 삼을 수 있다. 
 
 ::: 정의 1
 *Category with models*는 category $\mathcal{A}$와, $\mathcal{A}$의 object들의 모임 $\mathcal{M}$으로 이루어진 pair $(\mathcal{A},\mathcal{M})$을 뜻한다. 이 때, $\mathcal{M}$에 속하는 object들을 우리는 *model*들이라 부른다.
@@ -39,7 +39,7 @@ Category with models $(\mathcal{A},\mathcal{M})$이 주어졌다 하고, covaria
 
 예를 들어, standard $n$-simplex들 $\Delta^n$들의 모임 $\mathcal{M}$을 model들로 갖는 category with models $(\Top, \mathcal{M})$을 생각하자. 그럼 각각의 $X\in \Top$마다 singular $n$-simplex들의 chain complex $C_\bullet(X)$을 대응시키는 functor $C_\bullet:\Top \rightarrow \Ab$는 acyclic on $\mathcal{M}$인 동시에 free on $\mathcal{M}$이다.
 
-- $C_\bullet$이 acyclic on $\mathcal{M}$이라는 것은, 각 모델 $\Delta^n$이 convex set이라 한 점으로 수축가능하고, 그 직선 수축이 유도하는 cone 연산자가 $C_\bullet(\Delta^n)$을 $i>0$에서 직접 수축시키기 때문으로, 이는 [§호몰로지, ⁋명제 11](/ko/math/algebraic_topology/homology#prop11)의 일반화라 생각할 수 있다. 여기에서 functor $F_\bullet$이 $\mathcal{M}$ 위에서 acyclic하다는 조건은 $F_\bullet(X)$의 $0$번째 호몰로지가 $0$일 것을 <em-ko>요구하지는 않는다</em-ko>는 것에 주의하자. 
+- $C_\bullet$이 acyclic on $\mathcal{M}$이라는 것은, 각 모델 $\Delta^n$이 convex set이라 한 점으로 수축가능하고, 그 직선 수축이 유도하는 cone 연산자가 $C_\bullet(\Delta^n)$을 $i>0$에서 직접 수축시키기 때문으로, 이는 [§호몰로지, ⁋명제 11](/ko/math/algebraic_topology/homology#prop11)의 일반화라 생각할 수 있다. 여기에서 functor $F_\bullet$이 $\mathcal{M}$ 위에서 acyclic하다는 조건은 $F_\bullet(X)$의 $0$번째 homology가 $0$일 것을 <em-ko>요구하지는 않는다</em-ko>는 것에 주의하자. 
 - $C_\bullet$이 free on $\mathcal{M}$이라는 것은 정확히 각각의 $C_n(X)$들이 $\Delta^n \rightarrow X$로 생성되는 free abelian group이므로, 즉 $C_n(X)=\mathbb{Z}\Hom_\Top(\Delta^n,X)$이므로 자명하다. 
 
 
@@ -64,7 +64,7 @@ $$f_\bullet(-):F_\bullet(-) \rightarrow G_\bullet(-)$$
 가 존재하여 $H_0(f)=f_0$이도록 할 수 있으며, 이러한 natural transformation $f$는 natural chain homotopy에 대하여 유일하게 존재한다. 
 :::
 
-즉, 호몰로지 레벨에서 정의된 $f(X)_0: H_0(F(X))\rightarrow H_0(G(X))$에서부터 시작하여, chain map $f_\bullet(X):F_\bullet(X)\rightarrow G_\bullet(X)$를 만들어야 한다. 이를 위해 우선 $f_\bullet(X)$의 $0$번째 성분 $f_0(X)$를 정의하자. 이는, $F_0(X)$이 free이므로, 각각의 $u:M\rightarrow X$이 어디로 옮겨지는지를 정의하는 것과 같다. 한편 다음의 commutative diagram
+즉, homology 레벨에서 정의된 $f(X)_0: H_0(F(X))\rightarrow H_0(G(X))$에서부터 시작하여, chain map $f_\bullet(X):F_\bullet(X)\rightarrow G_\bullet(X)$를 만들어야 한다. 이를 위해 우선 $f_\bullet(X)$의 $0$번째 성분 $f_0(X)$를 정의하자. 이는, $F_0(X)$이 free이므로, 각각의 $u:M\rightarrow X$이 어디로 옮겨지는지를 정의하는 것과 같다. 한편 다음의 commutative diagram
 
 ![lifting](/assets/images/Math/Algebraic_Topology/Acyclic_Models_Theorem-1.svg){:style="width:13.49em" class="invert" .align-center}
 

@@ -14,7 +14,7 @@ weight: 10
 
 ---
 
-이제 우리는 몫집합 위에 위상을 정의하는 방법을 살펴본다. ([\[집합론\] §동치관계, ⁋정의 4](/ko/math/set_theory/equivalence_relations#def4))
+이제 우리는 quotient set 위에 위상을 정의하는 방법을 살펴본다. ([\[집합론\] §동치관계, ⁋정의 4](/ko/math/set_theory/equivalence_relations#def4))
 
 ## Locally closed subspace
 
@@ -46,7 +46,7 @@ $$A\subseteq U\cap\cl A\subseteq U\cap C=A$$
 ## 몫공간
 
 ::: 정의 3
-위상공간 $X$가 주어졌다 하고, 집합 $X$ 위에 동치관계 $R$이 주어졌다 하자. 그럼 $R$에 의한 $X$의 *몫공간<sub>quotient space</sub>*은 canonical projection $p:X\rightarrow X/R$에 의해 정의되는 final topology가 주어진 공간 $X/R$을 의미한다.
+위상공간 $X$가 주어졌다 하고, 집합 $X$ 위에 동치관계 $R$이 주어졌다 하자. 그럼 $R$에 의한 $X$의 *quotient space<sub>몫공간</sub>*은 canonical projection $p:X\rightarrow X/R$에 의해 정의되는 final topology가 주어진 공간 $X/R$을 의미한다.
 :::
 
 [§Initial topology와 final topology, ⁋명제 5](/ko/math/topology/initial_and_final_topology#prop5)에 의하여 $X/R$에서의 열린집합은 정확하게 $p^{-1}(U)$가 $X$에서 열린집합이도록 하는 집합을 의미한다.[^1] [\[집합론\] §동치관계의 예시들, ⁋정의 5](/ko/math/set_theory/examples_of_equivalence#def5)의 언어로 이를 풀어쓰면, $X/R$ 위의 열린집합들은 $R$에 대해 *saturated*인 $X$의 열린집합에 일대일로 대응된다는 것을 확인할 수 있다. 
@@ -54,7 +54,7 @@ $$A\subseteq U\cap\cl A\subseteq U\cap C=A$$
 한편 [§Initial topology와 final topology, ⁋명제 6](/ko/math/topology/initial_and_final_topology#prop6)에 의하여 다음이 성립한다.
 
 ::: 명제 4
-위상공간 $X$와 몫공간 $X/R$, 그리고 canonical projection $p:X\rightarrow X/R$이 주어졌다 하자. 임의의 위상공간 $Y$에 대하여, 함수 $f:X/R\rightarrow Y$가 연속인 것은 $f\circ p$가 $X$에서 $Y$로의 연속함수인 것과 동치이다.
+위상공간 $X$와 quotient space $X/R$, 그리고 canonical projection $p:X\rightarrow X/R$이 주어졌다 하자. 임의의 위상공간 $Y$에 대하여, 함수 $f:X/R\rightarrow Y$가 연속인 것은 $f\circ p$가 $X$에서 $Y$로의 연속함수인 것과 동치이다.
 :::
 
 ::: 명제 5

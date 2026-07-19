@@ -197,7 +197,7 @@ Variety $X$가 *smooth* (또는 *nonsingular*)라는 것은 모든 점이 smooth
 
 Singular point에서는 tangent space가 너무 커서 다양체의 국소적 구조를 정확히 반영하지 못한다. 이 경우 *tangent cone*이 더 정확한 정보를 제공한다. 직관적으로, tangent space가 너무 큰 것은 Jacobian의 rank가 너무 작은 것이고, 이는, 예를 들어, 주어진 함수의 일차근사만으로는 아무런 정보가 없기 때문에 일어난다. 따라서 만일 주어진 함수의 더 높은 차수의 근사를 생각한다면 상황이 달라질 수도 있을 것이다. 
 
-이를 위해, 임의의 다항식 $f\in \mathbb{K}[\x_1,\ldots, \x_n]$에 대하여 $f$의 *initial term* $\initial(f)$을 $f$의 homogeneous component 중 가장 작은 차수를 갖는 것으로 정의한다. 그럼 임의의 ideal $\mathfrak{a}$에 대하여, $\mathfrak{a}$의 *initial ideal* $\initial(\mathfrak{a})$를 $\initial(f)$들로 생성되는 homogeneous ideal으로 정의한다. 
+이를 위해, 임의의 다항식 $f\in \mathbb{K}[\x_1,\ldots, \x_n]$에 대하여 $f$의 *initial term* $\initial(f)$을 $f$의 homogeneous component 중 가장 작은 차수를 갖는 것으로 정의한다. 그럼 임의의 ideal $\mathfrak{a}$에 대하여, $\mathfrak{a}$의 *initial ideal* $\initial(\mathfrak{a})$를 $\initial(f)$들로 생성되는 homogeneous ideal로 정의한다. 
 
 ::: 정의 13
 임의의 affine variety $X\subseteq \mathbb{A}^n$에 대하여, $\initial(I(X))$이 정의하는 algebraic variety를 $X$의 원점에서의 *tangent cone*이라 정의한다.

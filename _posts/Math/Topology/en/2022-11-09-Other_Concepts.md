@@ -36,7 +36,7 @@ Then there exists a unique topology $\mathcal{T}$ whose open sets are the comple
 ::: Proof
 This is immediate from the following De Morgan laws ([\[Set Theory\] §Unions and Intersections, ⁋Proposition 8](/en/math/set_theory/union_and_intersection#prop8))
 
-$\left(\bigcap A_i\right)^c=\bigcup A_i^c,\quad\left(\bigcup A_i\right)^c=\bigcap A_i^c$
+$$\left(\bigcap A_i\right)^c=\bigcup A_i^c,\quad\left(\bigcup A_i\right)^c=\bigcap A_i^c$$
 :::
 
 We can refine the third condition of the preceding proposition further.
@@ -95,7 +95,7 @@ Conversely, suppose there exists some neighborhood of $x$ disjoint from $A$. The
 ::: Corollary 7
 Let a topological space $X$ be given. For an open set $A$ and any set $B$, the following inclusion holds:
 
-$A\cap\cl(B)\subseteq\cl(A\cap B)$
+$$A\cap\cl(B)\subseteq\cl(A\cap B)$$
 :::
 ::: Proof
 Let $x\in A\cap\cl(B)$. Since $A$ is an open neighborhood of $x$, for any neighborhood $V$ of $x$, the intersection $V\cap A$ is also a neighborhood of $x$. Therefore, from $x\in\cl(B)$ and [Proposition 6](#prop6), we know that $(V\cap A)\cap B\neq\emptyset$. But this can be interpreted as saying that the intersection of $A\cap B$ with $V$ is nonempty, and since $V$ is an arbitrary neighborhood of $x$, [Proposition 6](#prop6) again gives $x\in\cl(A\cap B)$.
@@ -112,7 +112,7 @@ Then by definition, $\cl(A)$ is the union of $A$ and its limit points. If $x\in\
 ::: Definition 9
 For any subset $A$ of a topological space $X$, the *boundary* of $A$ is the set $\partial A$ defined by the formula
 
-$\partial A=\cl A\setminus\interior A$
+$$\partial A=\cl A\setminus\interior A$$
 :::
 
 Hence $\partial A$ is a closed set.

@@ -14,15 +14,15 @@ weight: 9
 published: false
 ---
 
-[§페르마 소정리](/ko/math/number_theory/fermat_little_theorem)는 법이 소수일 때 $a^{p-1} \equiv 1$임을 말했다. 그 증명의 핵심은 $0$이 아닌 잉여류가 $p-1$개라는 것과 그들이 곱셈에 대해 닫혀 있다는 점이었다. 법이 합성수이면 곱셈 역원을 갖는 잉여류만이 이런 성질을 가지므로, 그 개수를 세는 함수가 필요하다.
+[§페르마 소정리](/ko/math/number_theory/fermat_little_theorem)는 법이 소수일 때 $a^{p-1} \equiv 1$임을 말했다. 그 증명의 핵심은 $0$이 아닌 coset이 $p-1$개라는 것과 그들이 곱셈에 대해 닫혀 있다는 점이었다. 법이 합성수이면 곱셈 역원을 갖는 coset만이 이런 성질을 가지므로, 그 개수를 세는 함수가 필요하다.
 
 ## 오일러 phi 함수
 
 ::: 정의 1
-양의 정수 $n$에 대하여, $1 \leq a \leq n$이면서 $\gcd(a, n) = 1$인 정수 $a$의 개수를 *오일러 phi 함수<sub>Euler's totient</sub>* $\varphi(n)$이라 한다. $n$과 서로소인 잉여류들의 대표 모임 $\{a_1, \ldots, a_{\varphi(n)}\}$을 법 $n$의 *기약잉여계<sub>reduced residue system</sub>*라 한다.
+양의 정수 $n$에 대하여, $1 \leq a \leq n$이면서 $\gcd(a, n) = 1$인 정수 $a$의 개수를 *오일러 phi 함수<sub>Euler's totient</sub>* $\varphi(n)$이라 한다. $n$과 서로소인 coset들의 대표 모임 $\{a_1, \ldots, a_{\varphi(n)}\}$을 법 $n$의 *기약잉여계<sub>reduced residue system</sub>*라 한다.
 :::
 
-곱셈 역원을 갖는 잉여류가 정확히 $n$과 서로소인 것들이므로 ([§합동식, ⁋명제 7](/ko/math/number_theory/congruences#prop7)), $\varphi(n)$은 $\mathbb{Z}/n\mathbb{Z}$에서 역원을 갖는 원소의 개수이다. 예컨대 $\varphi(1) = 1$, $\varphi(p) = p - 1$ ($p$ 소수), $\varphi(12) = 4$ ($1, 5, 7, 11$) 이다.
+곱셈 역원을 갖는 coset이 정확히 $n$과 서로소인 것들이므로 ([§합동식, ⁋명제 7](/ko/math/number_theory/congruences#prop7)), $\varphi(n)$은 $\mathbb{Z}/n\mathbb{Z}$에서 역원을 갖는 원소의 개수이다. 예컨대 $\varphi(1) = 1$, $\varphi(p) = p - 1$ ($p$ 소수), $\varphi(12) = 4$ ($1, 5, 7, 11$) 이다.
 
 ## 오일러 정리
 
@@ -53,7 +53,7 @@ $\gcd(m, n) = 1$이면 $\varphi(mn) = \varphi(m)\varphi(n)$이다.
 :::
 
 ::: 증명
-[\[환론\] §중국인의 나머지정리, ⁋명제 6](/ko/math/ring_theory/chinese_remainder_theorem#prop6)에 의해 환 동형 $\mathbb{Z}/mn\mathbb{Z} \cong \mathbb{Z}/m\mathbb{Z} \times \mathbb{Z}/n\mathbb{Z}$가 성립한다. 동형은 역원을 갖는 원소를 역원을 갖는 원소로 보내므로, $\mathbb{Z}/mn\mathbb{Z}$에서 가역인 원소는 양쪽 성분이 모두 가역인 쌍에 정확히 대응한다. 가역원의 개수를 세면 $\varphi(mn) = \varphi(m)\varphi(n)$이다.
+[\[환론\] §중국인의 나머지정리, ⁋명제 6](/ko/math/ring_theory/chinese_remainder_theorem#prop6)에 의해 ring 동형 $\mathbb{Z}/mn\mathbb{Z} \cong \mathbb{Z}/m\mathbb{Z} \times \mathbb{Z}/n\mathbb{Z}$가 성립한다. 동형은 역원을 갖는 원소를 역원을 갖는 원소로 보내므로, $\mathbb{Z}/mn\mathbb{Z}$에서 가역인 원소는 양쪽 성분이 모두 가역인 쌍에 정확히 대응한다. 가역원의 개수를 세면 $\varphi(mn) = \varphi(m)\varphi(n)$이다.
 :::
 
 소수 거듭제곱에서의 값은 직접 센다: $1$부터 $p^k$까지 중 $p$와 서로소가 *아닌* 수는 $p$의 배수 $p, 2p, \ldots, p^{k-1}p$의 $p^{k-1}$개이므로

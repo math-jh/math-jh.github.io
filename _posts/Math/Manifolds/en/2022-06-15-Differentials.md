@@ -118,7 +118,7 @@ Summarizing the discussion so far, we obtain the following.
 ::: Definition 7
 Let $F:M\rightarrow N$ be a $C^\infty$ function between two manifolds. For any $p\in M$, the *differential* of $F$ at the point $p$, $dF_p:T_pM\rightarrow T_{F(p)}N$, is the linear map defined for any $v\in T_pM$ and any $g\in \mathcal{C}^\infty_{N,F(p)}$ by
 
-$(dF_p(v))g=v(g\circ F)$
+$$(dF_p(v))g=v(g\circ F)$$
 :::
 
 Several consequences are immediate from the definition. First, for $\id_M:M\rightarrow M$, the differential $d(\id_M)_p$ is always the identity map $\id_{T_pM}$ on $T_pM$. This is clear from the formula in [Definition 7](#def7). Also, for three manifolds $M,N,P$, if $F:M\rightarrow N$ and $G:N\rightarrow P$ are $C^\infty$, then the formula

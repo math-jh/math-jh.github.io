@@ -18,7 +18,7 @@ published: false
 
 $$\int_a^bf'(t)\,dt=f(b)-f(a)$$
 
-를 manifold의 언어로 일반화하는 것이다. 좌변은 "도함수를 영역 위에서 적분한 것"이고 우변은 "원래 함수를 영역의 경계에서 (부호를 붙여) 읽은 것"이므로, [§적분](/ko/math/manifolds/integration)과 [§경계가 있는 다양체](/ko/math/manifolds/manifolds_with_boundary)의 언어로는 다음과 같이 일반화되어야 할 것이다. 도함수의 역할은 외미분 $d$가, 영역의 역할은 oriented manifold with boundary가, 부호의 역할은 induced orientation이 맡는다.
+를 manifold의 언어로 일반화하는 것이다. 좌변은 "도함수를 영역 위에서 적분한 것"이고 우변은 "원래 함수를 영역의 경계에서 (부호를 붙여) 읽은 것"이므로, [§적분](/ko/math/manifolds/integration)과 [§경계가 있는 다양체](/ko/math/manifolds/manifolds_with_boundary)의 언어로는 다음과 같이 일반화되어야 할 것이다. 도함수의 역할은 exterior derivative $d$가, 영역의 역할은 oriented manifold with boundary가, 부호의 역할은 induced orientation이 맡는다.
 
 ## 경계가 있는 다양체 위에서의 적분
 
@@ -60,7 +60,7 @@ $$\sum_id(\phi_i\,\omega)=\sum_i\bigl(d\phi_i\wedge\omega+\phi_i\,d\omega\bigr)=
 
 $$\eta=\sum_{i=1}^mf_i\;dr^1\wedge\cdots\wedge\widehat{dr^i}\wedge\cdots\wedge dr^m$$
 
-여기서 $\widehat{dr^i}$는 해당 항을 생략한다는 뜻이고, $f_i$들은 compactly supported인 $C^\infty$ 함수들로 $V$ 바깥에서 $0$으로 확장한다. 외미분을 계산하면 $dr^j\wedge dr^1\wedge\cdots\wedge\widehat{dr^i}\wedge\cdots\wedge dr^m$은 $j=i$가 아니면 $0$이고 $j=i$일 때 $(-1)^{i-1}dr^1\wedge\cdots\wedge dr^m$이므로
+여기서 $\widehat{dr^i}$는 해당 항을 생략한다는 뜻이고, $f_i$들은 compactly supported인 $C^\infty$ 함수들로 $V$ 바깥에서 $0$으로 확장한다. exterior derivative를 계산하면 $dr^j\wedge dr^1\wedge\cdots\wedge\widehat{dr^i}\wedge\cdots\wedge dr^m$은 $j=i$가 아니면 $0$이고 $j=i$일 때 $(-1)^{i-1}dr^1\wedge\cdots\wedge dr^m$이므로
 
 $$d\eta=\sum_{i=1}^m(-1)^{i-1}\frac{\partial f_i}{\partial r^i}\;dr^1\wedge\cdots\wedge dr^m$$
 
@@ -100,7 +100,7 @@ $$\int_Mdf=\epsilon\int_{x(U)}d\bigl((x^{-1})^\ast f\bigr)$$
 
 $$\int_0^\infty g'(t)\,dt=-g(0)=-f(p)$$
 
-이다. 여기서 $p=x^{-1}(0)\in\partial M$이다. 즉 $\int_Mdf=-\epsilon f(p)$이다. 한편 chart $x$에 대하여 inward vector는 $\partial/\partial x$이므로 outward vector $-\partial/\partial x$가 positively oriented인 것은 $\epsilon=-1$인 것과 동치이고, 따라서 [§경계가 있는 다양체, ⁋정의 9](/ko/math/manifolds/manifolds_with_boundary#def9)에 의해 $p$의 부호는 $\epsilon(p)=-\epsilon$이다. 그럼
+이다. 여기서 $p=x^{-1}(0)\in\partial M$이다. 즉 $\int_Mdf=-\epsilon f(p)$이다. 한편 chart $x$에 대하여 inward 벡터는 $\partial/\partial x$이므로 outward 벡터 $-\partial/\partial x$가 positively oriented인 것은 $\epsilon=-1$인 것과 동치이고, 따라서 [§경계가 있는 다양체, ⁋정의 9](/ko/math/manifolds/manifolds_with_boundary#def9)에 의해 $p$의 부호는 $\epsilon(p)=-\epsilon$이다. 그럼
 
 $$\int_{\partial M}\iota^\ast\omega=\epsilon(p)f(p)=-\epsilon f(p)=\int_Mdf$$
 
@@ -113,11 +113,11 @@ $$\int_{\partial M}\iota^\ast\omega=\epsilon(p)f(p)=-\epsilon f(p)=\int_Mdf$$
 경계가 없는 oriented manifold $M$ 위의 compactly supported $(m-1)$-form $\omega$에 대하여 $\int_Md\omega=0$이다. 특히 $M$이 compact라면, $M$ 위의 임의의 exact $m$-form의 적분은 $0$이다.
 :::
 ::: 증명
-[정리 1](#thm1)에서 $\partial M=\emptyset$인 경우이다. $M$이 compact라면 임의의 미분형식이 compactly supported이므로 둘째 주장이 따라나온다.
+[정리 1](#thm1)에서 $\partial M=\emptyset$인 경우이다. $M$이 compact라면 임의의 differential form이 compactly supported이므로 둘째 주장이 따라나온다.
 :::
 
 ::: 예시 3
-$M=[0,1]$에 표준적인 orientation, 즉 $\interior M=(0,1)$에 $\mathbb{R}$의 표준 orientation을 주자. [§경계가 있는 다양체, ⁋예시 5](/ko/math/manifolds/manifolds_with_boundary#ex5)에서 살펴본 것과 같이 $\partial M=\{0,1\}$이고, 점 $1$에서는 outward vector $\partial/\partial t$가 positively oriented이므로 $\epsilon(1)=+1$, 점 $0$에서는 outward vector가 $-\partial/\partial t$이므로 $\epsilon(0)=-1$이다. 따라서 임의의 $C^\infty$ 함수 $f$에 대하여 [정리 1](#thm1)은
+$M=[0,1]$에 표준적인 orientation, 즉 $\interior M=(0,1)$에 $\mathbb{R}$의 표준 orientation을 주자. [§경계가 있는 다양체, ⁋예시 5](/ko/math/manifolds/manifolds_with_boundary#ex5)에서 살펴본 것과 같이 $\partial M=\{0,1\}$이고, 점 $1$에서는 outward 벡터 $\partial/\partial t$가 positively oriented이므로 $\epsilon(1)=+1$, 점 $0$에서는 outward 벡터가 $-\partial/\partial t$이므로 $\epsilon(0)=-1$이다. 따라서 임의의 $C^\infty$ 함수 $f$에 대하여 [정리 1](#thm1)은
 
 $$\int_{[0,1]}df=f(1)-f(0)$$
 
@@ -125,7 +125,7 @@ $$\int_{[0,1]}df=f(1)-f(0)$$
 :::
 
 ::: 참고 4
-미적분학에서 다루는 Green 정리, divergence 정리, 고전적인 Stokes 정리는 모두 [정리 1](#thm1)의 특수한 경우이다. 가령 $\mathbb{R}^2$의 (경계가 매끄러운) 영역 $D$와 $1$-form $\omega=P\,dx+Q\,dy$에 대하여 $d\omega=(\partial Q/\partial x-\partial P/\partial y)\,dx\wedge dy$이므로 [정리 1](#thm1)은 Green 정리가 된다. 이들 고전적 정리들에서 등장하는 "반시계 방향"이나 "바깥쪽 법선" 같은 조건들이 정확히 induced orientation의 내용이다.
+미적분학에서 다루는 Green 정리, divergence 정리, 고전적인 Stokes 정리는 모두 [정리 1](#thm1)의 특수한 경우이다. 가령 $\mathbb{R}^2$의 (경계가 smooth한) 영역 $D$와 $1$-form $\omega=P\,dx+Q\,dy$에 대하여 $d\omega=(\partial Q/\partial x-\partial P/\partial y)\,dx\wedge dy$이므로 [정리 1](#thm1)은 Green 정리가 된다. 이들 고전적 정리들에서 등장하는 "반시계 방향"이나 "바깥쪽 법선" 같은 조건들이 정확히 induced orientation의 내용이다.
 :::
 
 ---

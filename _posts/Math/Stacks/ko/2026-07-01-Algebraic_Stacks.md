@@ -18,7 +18,7 @@ published: false
 
 Site $(\Sch, \mathrm{fppf})$ 위의 stack은 충실평탄 하강을 groupoid 값 함자로 끌어올린 대상이다. ([§Fibered category와 stack, ⁋정의 13](/ko/math/stacks/fibered_categories_and_stacks#def13)) 그러나 이 정의에는 기하가 전혀 들어 있지 않다. Stack은 순수하게 범주론적·위상적 조건만으로 정의되었고, 그 결과 어떤 stack은 scheme이나 algebraic space처럼 점·차원·매끄러움을 논할 수 있는 기하학적 대상인 반면, 다른 stack은 그러한 구조를 전혀 갖지 못한다. 이 글의 목표는 "기하학적인" stack을 가려내는 것이다. 즉 우리는 모든 stack 가운데 scheme으로 국소적으로 근사되며 그 위에서 morphism의 차원·평탄성·매끄러움 따위를 정의할 수 있는 부류를 분리하고자 한다.
 
-이를 위한 두 조건은 다음과 같다. 첫째, stack $\mathcal{X}$의 *대각선* $\Delta:\mathcal{X} \rightarrow \mathcal{X}\times_S \mathcal{X}$이 표현가능해야 한다. 이는 두 대상을 잇는 isomorphism들이 이루는 $\operatorname{\underline{Isom}}$이 scheme(보다 정확히는 algebraic space)이라는 것과 동치이며, 따라서 두 점을 비교하는 일이 통상적인 기하의 범위 안에서 이루어짐을 보장한다. 둘째, scheme으로부터의 매끄러운 전사 $U \rightarrow \mathcal{X}$, 곧 *atlas*가 존재해야 한다. Atlas는 위상공간이 좌표근방으로 덮이듯 stack을 scheme으로 덮으며, stack 위의 기하학적 성질을 atlas 위에서 검사할 수 있게 한다. 이 두 조건을 만족하는 stack이 *대수적 stack*이며, atlas를 étale하게 잡을 수 있는 경우가 *Deligne–Mumford stack*이다.
+이를 위한 두 조건은 다음과 같다. 첫째, stack $\mathcal{X}$의 *대각선* $\Delta:\mathcal{X} \rightarrow \mathcal{X}\times_S \mathcal{X}$이 표현가능해야 한다. 이는 두 대상을 잇는 isomorphism들이 이루는 $\operatorname{\underline{Isom}}$이 scheme(보다 정확히는 algebraic space)이라는 것과 동치이며, 따라서 두 점을 비교하는 일이 통상적인 기하의 범위 안에서 이루어짐을 보장한다. 둘째, scheme으로부터의 smooth 전사 $U \rightarrow \mathcal{X}$, 곧 *atlas*가 존재해야 한다. Atlas는 위상공간이 좌표근방으로 덮이듯 stack을 scheme으로 덮으며, stack 위의 기하학적 성질을 atlas 위에서 검사할 수 있게 한다. 이 두 조건을 만족하는 stack이 *대수적 stack*이며, atlas를 étale하게 잡을 수 있는 경우가 *Deligne–Mumford stack*이다.
 
 이 글에서는 먼저 stack 사이의 2-fiber product와 표현가능 사상을 정의하고, 대각선의 역할을 설명한 뒤, 대수적 stack과 Deligne–Mumford stack을 정의한다. 이어 algebraic group $G$의 작용으로부터 quotient stack $[X/G]$과 분류 stack $\mathbf{B}G=[\ast/G]$을 구성하고, 이들이 실제로 대수적 stack임을 atlas $X \rightarrow [X/G]$과 그 groupoid presentation $X\times G\rightrightarrows X$을 통해 증명한다. 마지막으로 $\mathbf{B}\mathbb{G}_m$, $\mathbf{B}(\mathbb{Z}/n)$, $[\mathbb{A}^1/\mathbb{G}_m]$, 그리고 타원곡선의 moduli $\mathcal{M}_{1,1}$을 예로 다룬다.
 
@@ -34,7 +34,7 @@ $$\alpha: f(x)\xrightarrow{\ \sim\ }g(y)$$
 이 $\mathcal{Z}(T)$의 isomorphism인 것이다. $(x, y, \alpha)$에서 $(x', y', \alpha')$로의 사상은 사상쌍 $(u: x \rightarrow x', v: y \rightarrow y')$으로서 $\mathcal{Z}(T)$에서 $\alpha'\circ f(u)=g(v)\circ \alpha$을 만족하는 것이다. 사영 $(x, y, \alpha)\mapsto T$이 이를 CFG로 만든다.
 :::
 
-세 사영함자 $\operatorname{pr}_\mathcal{X}:(x, y, \alpha)\mapsto x$과 $\operatorname{pr}_\mathcal{Y}:(x, y, \alpha)\mapsto y$, 그리고 $\alpha$ 자신이 주는 자연동형 $f\circ \operatorname{pr}_\mathcal{X}\cong g\circ \operatorname{pr}_\mathcal{Y}$이 함께 2-fiber product의 자료를 이룬다. 여기에서 사각형의 가환성이 등호가 아니라 2-isomorphism $\alpha$으로 채워진다는 점이 핵심이다. 이 자료는 다음의 2-범주적 보편성을 가진다. 임의의 CFG $\mathcal{T}$과 사상 $a:\mathcal{T} \rightarrow \mathcal{X}$, $b:\mathcal{T} \rightarrow \mathcal{Y}$, 그리고 2-isomorphism $\beta: f\circ a\cong g\circ b$이 주어지면, 사상 $h:\mathcal{T} \rightarrow \mathcal{X}\times_\mathcal{Z}\mathcal{Y}$이 본질적으로 유일하게 존재하여 $\operatorname{pr}_\mathcal{X}\circ h\cong a$, $\operatorname{pr}_\mathcal{Y}\circ h\cong b$이고 이 동형들이 $\beta$와 $\alpha$를 정합적으로 잇는다.
+세 사영함자 $\operatorname{pr}_\mathcal{X}:(x, y, \alpha)\mapsto x$과 $\operatorname{pr}_\mathcal{Y}:(x, y, \alpha)\mapsto y$, 그리고 $\alpha$ 자신이 주는 natural isomorphism $f\circ \operatorname{pr}_\mathcal{X}\cong g\circ \operatorname{pr}_\mathcal{Y}$이 함께 2-fiber product의 자료를 이룬다. 여기에서 사각형의 가환성이 등호가 아니라 2-isomorphism $\alpha$으로 채워진다는 점이 핵심이다. 이 자료는 다음의 2-범주적 보편성을 가진다. 임의의 CFG $\mathcal{T}$과 사상 $a:\mathcal{T} \rightarrow \mathcal{X}$, $b:\mathcal{T} \rightarrow \mathcal{Y}$, 그리고 2-isomorphism $\beta: f\circ a\cong g\circ b$이 주어지면, 사상 $h:\mathcal{T} \rightarrow \mathcal{X}\times_\mathcal{Z}\mathcal{Y}$이 본질적으로 유일하게 존재하여 $\operatorname{pr}_\mathcal{X}\circ h\cong a$, $\operatorname{pr}_\mathcal{Y}\circ h\cong b$이고 이 동형들이 $\beta$와 $\alpha$를 정합적으로 잇는다.
 
 ::: 명제 2
 $\mathcal{X}, \mathcal{Y}, \mathcal{Z}$이 site $(\mathcal{C}, \tau)$ 위의 stack이면 [정의 1](#def1)의 $\mathcal{X}\times_\mathcal{Z}\mathcal{Y}$도 stack이며, 위의 2-보편성을 만족한다.
@@ -77,7 +77,7 @@ Site $(\Sch, \mathrm{\acute{e}t})$ ([§Grothendieck 위상과 site, ⁋예시 8]
 ::: 명제 5
 $\mathcal{X}$이 base scheme $S$ 위의 stack이라 하자. 다음이 성립한다.
 
-1. 임의의 scheme $T$과 $(x, y)\in \mathcal{X}(T)\times \mathcal{X}(T)$, 곧 사상 $(x, y): T \rightarrow \mathcal{X}\times_S \mathcal{X}$에 대하여, 대각선 $\Delta:\mathcal{X} \rightarrow \mathcal{X}\times_S \mathcal{X}$을 따른 base change에 자연동형
+1. 임의의 scheme $T$과 $(x, y)\in \mathcal{X}(T)\times \mathcal{X}(T)$, 곧 사상 $(x, y): T \rightarrow \mathcal{X}\times_S \mathcal{X}$에 대하여, 대각선 $\Delta:\mathcal{X} \rightarrow \mathcal{X}\times_S \mathcal{X}$을 따른 base change에 natural isomorphism
 
 $$\mathcal{X}\times_{\mathcal{X}\times_S \mathcal{X}}T\cong \operatorname{\underline{Isom}}_T(x, y)$$
 
@@ -99,18 +99,18 @@ $$T\times_\mathcal{X}T'\cong(T\times_S T')\times_{\mathcal{X}\times_S \mathcal{X
 
 ## 대수적 stack과 Deligne–Mumford stack
 
-이제 기하학적 stack을 정의한다. 두 조건은 [명제 5](#prop5)에서 분석한 대각선의 표현가능성과, scheme으로부터의 매끄러운 전사 atlas의 존재이다.
+이제 기하학적 stack을 정의한다. 두 조건은 [명제 5](#prop5)에서 분석한 대각선의 표현가능성과, scheme으로부터의 smooth 전사 atlas의 존재이다.
 
 ::: 정의 6
 Site $(\Sch, \mathrm{fppf})$ 위의 stack $\mathcal{X}$ (base scheme $S$ 위)이 *대수적 stack* 또는 *Artin stack<sub>아틴 stack</sub>*이라는 것은 다음 두 조건을 만족하는 것이다.
 
 1. (표현가능 대각선) 대각선 $\Delta:\mathcal{X} \rightarrow \mathcal{X}\times_S \mathcal{X}$이 algebraic space에 의해 표현가능하다.
-2. (매끄러운 atlas) scheme $U$과 표현가능 smooth 전사 사상 $\pi: U \rightarrow \mathcal{X}$이 존재한다. 이 $\pi$을 $\mathcal{X}$의 *atlas<sub>아틀라스</sub>* (또는 *presentation*)라 부른다.
+2. (smooth atlas) scheme $U$과 표현가능 smooth 전사 사상 $\pi: U \rightarrow \mathcal{X}$이 존재한다. 이 $\pi$을 $\mathcal{X}$의 *atlas<sub>아틀라스</sub>* (또는 *presentation*)라 부른다.
 
 나아가 $\mathcal{X}$이 *Deligne–Mumford stack* (이하 *DM stack*)이라는 것은, 조건 2의 atlas $\pi: U \rightarrow \mathcal{X}$을 smooth 대신 *étale* 전사로 잡을 수 있는 것이다. ([\[스킴\] §매끄러운 사상과 étale 사상, ⁋정의 6](/ko/math/scheme_theory/smooth_and_etale_morphisms#def6))
 :::
 
-조건 1에 의해 atlas 사상 $\pi$은 자동으로 표현가능하므로 ([명제 5](#prop5)) 그 매끄러움·전사성이 [정의 3](#def3)의 의미로 잘 정의된다. Atlas는 scheme이 좌표근방으로 덮이는 것의 stack 판본으로, $\mathcal{X}$ 위의 기하학적 성질을 $U$ 위에서 검사하게 한다. 가령 $\mathcal{X}$의 차원은 $\dim \mathcal{X}=\dim U-d$ ($d$은 $\pi$의 상대차원)로 정의되며, 이는 atlas의 선택에 의존하지 않는다. Smooth 사상이 평탄하고 매끄러운 fiber를 가지므로 매끄러운 atlas는 stack을 "두꺼운" scheme으로 덮는 셈이고, 이때 fiber의 양의 차원이 곧 각 점에 붙은 stabilizer의 차원으로 나타난다.
+조건 1에 의해 atlas 사상 $\pi$은 자동으로 표현가능하므로 ([명제 5](#prop5)) 그 매끄러움·전사성이 [정의 3](#def3)의 의미로 잘 정의된다. Atlas는 scheme이 좌표근방으로 덮이는 것의 stack 판본으로, $\mathcal{X}$ 위의 기하학적 성질을 $U$ 위에서 검사하게 한다. 가령 $\mathcal{X}$의 차원은 $\dim \mathcal{X}=\dim U-d$ ($d$은 $\pi$의 상대차원)로 정의되며, 이는 atlas의 선택에 의존하지 않는다. Smooth 사상이 평탄하고 smooth fiber를 가지므로 smooth atlas는 stack을 "두꺼운" scheme으로 덮는 셈이고, 이때 fiber의 양의 차원이 곧 각 점에 붙은 stabilizer의 차원으로 나타난다.
 
 DM stack과 Artin stack의 차이는 정확히 이 stabilizer가 양의 차원을 가질 수 있는지에 있다. Étale atlas는 상대차원 $0$의 atlas이므로, DM stack에서는 각 점의 automorphism group이 유한하고 무한소 변형을 갖지 않는다. 이 직관을 정밀하게 다듬은 것이 다음의 동치들이다.
 
@@ -121,10 +121,10 @@ DM stack과 Artin stack의 차이는 정확히 이 stabilizer가 양의 차원�
 2. 대각선 $\Delta:\mathcal{X} \rightarrow \mathcal{X}\times_S \mathcal{X}$이 unramified하다. ([\[스킴\] §매끄러운 사상과 étale 사상, ⁋정의 1](/ko/math/scheme_theory/smooth_and_etale_morphisms#def1))
 3. 모든 geometric point의 stabilizer group scheme $\operatorname{\underline{Aut}}$이 유한이고 unramified(곧 étale)하다.
 
-특히 base가 characteristic $0$의 field이면, 모든 finite type group scheme이 매끄럽다는 사실(Cartier 정리)에 의해 조건 3은 *stabilizer가 유한*인 것으로 단순화된다. Characteristic $p$에서는 stabilizer가 유한해도 무한소 자기동형(가령 $\mu_p$ 같은 비환원 group scheme)을 가질 수 있어 DM이 아닌 Artin stack이 생긴다. 즉 DM stack은 "유한하고 환원적인 automorphism만을 가지는" 대수적 stack이다.
+특히 base가 characteristic $0$의 field이면, 모든 finite type group scheme이 매끄럽다는 사실(Cartier 정리)에 의해 조건 3은 *stabilizer가 유한*인 것으로 단순화된다. Characteristic $p$에서는 stabilizer가 유한해도 무한소 automorphism(가령 $\mu_p$ 같은 비환원 group scheme)을 가질 수 있어 DM이 아닌 Artin stack이 생긴다. 즉 DM stack은 "유한하고 환원적인 automorphism만을 가지는" 대수적 stack이다.
 :::
 
-문헌에 따라 정의의 형태가 조금씩 다르다. 원래 Deligne–Mumford의 정의는 unramified 대각선을 출발점으로 삼고 ([rmk7](#rmk7)의 조건 2), Artin은 매끄러운 atlas를 채택하였다. [정의 6](#def6)은 atlas의 존재를 일차 정의로 두고 대각선 조건을 동치로 다루는 [Stacks]·[Ols]의 통상적 서술을 따른 것이다. 또한 대각선이 표현가능하면서 *quasi-compact·분리*임을 추가로 요구하는 저자도 많으나, 이는 대상의 좋은 성질을 보장하기 위한 기술적 가정이므로 여기에서는 표현가능성만을 정의에 포함한다.
+문헌에 따라 정의의 형태가 조금씩 다르다. 원래 Deligne–Mumford의 정의는 unramified 대각선을 출발점으로 삼고 ([rmk7](#rmk7)의 조건 2), Artin은 smooth atlas를 채택하였다. [정의 6](#def6)은 atlas의 존재를 일차 정의로 두고 대각선 조건을 동치로 다루는 [Stacks]·[Ols]의 통상적 서술을 따른 것이다. 또한 대각선이 표현가능하면서 *quasi-compact·분리*임을 추가로 요구하는 저자도 많으나, 이는 대상의 좋은 성질을 보장하기 위한 기술적 가정이므로 여기에서는 표현가능성만을 정의에 포함한다.
 
 ## Quotient stack의 구성
 
@@ -141,7 +141,7 @@ DM stack과 Artin stack의 차이는 정확히 이 stabilizer가 양의 차원�
 이다. $(P, \varphi)$에서 $(P', \varphi')$로의 사상은 $G$-torsor의 사상 $\psi: P \rightarrow P'$으로서 $\varphi'\circ \psi=\varphi$인 것이다 (이러한 $\psi$은 자동으로 isomorphism이다). Base change에 의한 pullback이 cartesian 사상을 주어 사영 $(P, \varphi)\mapsto T$이 이를 CFG로 만든다. $X=S$에 $G$이 자명하게 작용하는 경우 $[S/G]=\mathbf{B}G$이며, 이를 *classifying stack*이라 부른다.
 :::
 
-$[X/G]$의 한 점 $(P, \varphi)$은 "$T$ 위에서 $G$만큼 비틀린 채 $X$로 사상하는 자료"이다. Torsor $P$이 자명한 경우, 곧 $P=G\times_S T$(좌평행이동 작용)인 경우 equivariant 사상 $\varphi: G\times_S T \rightarrow X$은 $\varphi(g, t)=g\cdot \varphi(e, t)$으로 단위절단에서의 값 $a:=\varphi(e, -): T \rightarrow X$에 의해 완전히 결정된다. 즉 자명한 torsor 위의 자료는 단순히 $X$의 한 점 $a\in X(T)$과 같다. 이 관찰이 atlas의 출발점이다. 한편 $\mathbf{B}G$은 $X=S$이라 equivariant 사상이 유일하므로 $\mathbf{B}G(T)$은 정확히 $T$ 위의 $G$-torsor들의 groupoid이고, 그 자기동형은 $G(T)$이다. $\mathbf{B}G$이 고전적으로 위상공간의 분류공간 $BG$이 맡던 역할, 곧 $G$-bundle을 분류하는 보편 대상의 역할을 대수기하에서 수행한다.
+$[X/G]$의 한 점 $(P, \varphi)$은 "$T$ 위에서 $G$만큼 비틀린 채 $X$로 사상하는 자료"이다. Torsor $P$이 자명한 경우, 곧 $P=G\times_S T$(좌평행이동 작용)인 경우 equivariant 사상 $\varphi: G\times_S T \rightarrow X$은 $\varphi(g, t)=g\cdot \varphi(e, t)$으로 단위절단에서의 값 $a:=\varphi(e, -): T \rightarrow X$에 의해 완전히 결정된다. 즉 자명한 torsor 위의 자료는 단순히 $X$의 한 점 $a\in X(T)$과 같다. 이 관찰이 atlas의 출발점이다. 한편 $\mathbf{B}G$은 $X=S$이라 equivariant 사상이 유일하므로 $\mathbf{B}G(T)$은 정확히 $T$ 위의 $G$-torsor들의 groupoid이고, 그 automorphism은 $G(T)$이다. $\mathbf{B}G$이 고전적으로 위상공간의 분류공간 $BG$이 맡던 역할, 곧 $G$-bundle을 분류하는 보편 대상의 역할을 대수기하에서 수행한다.
 
 [§Fibered category와 stack, ⁋정리 19](/ko/math/stacks/fibered_categories_and_stacks#thm19)에서 $\mathbf{B}\mathbb{G}_m$이 stack임을 line bundle 하강으로 보았듯, $[X/G]$이 stack임은 torsor와 equivariant 사상이 모두 fppf 덮개를 따라 하강한다는 사실에서 따른다. Torsor는 fppf-국소적으로 자명하고 그 하강 자료가 effective하며, equivariant 사상은 $X$로의 사상이므로 표현가능 sheaf의 절단으로서 하강한다. 우리는 이 stack 성질을 전제하고 ([명제 2](#prop2)과 같은 성분별 하강 논증이 그대로 적용된다) 곧바로 대수성으로 나아간다. 먼저 atlas를 구성한다.
 
@@ -166,7 +166,7 @@ $$X\times_{[X/G]}X\cong G\times_S X$$
 이 있으며, 두 사영 $\operatorname{pr}_1, \operatorname{pr}_2: X\times_{[X/G]}X \rightarrow X$은 이 동형 아래 각각 작용 $\sigma:(g, x)\mapsto g\cdot x$과 사영 $(g, x)\mapsto x$에 대응한다. 따라서 $[X/G]$은 groupoid presentation $G\times_S X\rightrightarrows X$을 가진다.
 :::
 ::: 증명
-[정의 1](#def1)에 의해 $(X\times_{[X/G]}X)(T)$의 대상은 삼중쌍 $(a, b, \psi)$로서 $a, b\in X(T)$이고 $\psi:\pi(a)\xrightarrow{\sim}\pi(b)$은 $[X/G](T)$의 isomorphism이다. $\pi(a)=(G_T, \varphi_a)$, $\pi(b)=(G_T, \varphi_b)$ ($G_T=G\times_S T$)이므로 $\psi$은 자명 torsor $G_T$의 자기동형으로서 $\varphi_b\circ \psi=\varphi_a$을 만족하는 것이다. 좌평행이동 torsor $G_T$의 좌-equivariant 자기동형은 정확히 우평행이동 $\psi_g: h\mapsto hg$ ($g\in G(T)$)이며, 이로써 $\psi\leftrightarrow g\in G(T)$의 대응을 얻는다. ([§Fibered category와 stack, ⁋정의 18](/ko/math/stacks/fibered_categories_and_stacks#def18)) 조건 $\varphi_b\circ \psi_g=\varphi_a$은 모든 $(h, t)$에 대하여
+[정의 1](#def1)에 의해 $(X\times_{[X/G]}X)(T)$의 대상은 삼중쌍 $(a, b, \psi)$로서 $a, b\in X(T)$이고 $\psi:\pi(a)\xrightarrow{\sim}\pi(b)$은 $[X/G](T)$의 isomorphism이다. $\pi(a)=(G_T, \varphi_a)$, $\pi(b)=(G_T, \varphi_b)$ ($G_T=G\times_S T$)이므로 $\psi$은 자명 torsor $G_T$의 automorphism으로서 $\varphi_b\circ \psi=\varphi_a$을 만족하는 것이다. 좌평행이동 torsor $G_T$의 좌-equivariant automorphism은 정확히 우평행이동 $\psi_g: h\mapsto hg$ ($g\in G(T)$)이며, 이로써 $\psi\leftrightarrow g\in G(T)$의 대응을 얻는다. ([§Fibered category와 stack, ⁋정의 18](/ko/math/stacks/fibered_categories_and_stacks#def18)) 조건 $\varphi_b\circ \psi_g=\varphi_a$은 모든 $(h, t)$에 대하여
 
 $$\varphi_b(hg, t)=hg\cdot b(t)\overset{!}{=}h\cdot a(t)=\varphi_a(h, t)$$
 
@@ -194,14 +194,14 @@ $$\operatorname{\underline{Isom}}_T((G_T, \varphi_a), (G_T, \varphi_{a'}))(T')=\
 
 이 된다. 이는 사상 $(g\mapsto(g\cdot a', a')): G_T \rightarrow X\times_S X$과 $X$의 대각선 $X \rightarrow X\times_S X$의 fiber product이다. Scheme의 대각선은 항상 immersion이므로 (따라서 표현가능) 그 base change인 위 sheaf는 $G_T$의 locally closed 부분scheme으로 표현가능하다. fppf 덮개 위에서 표현가능한 algebraic space는 하강하여 표현가능하므로, $G$의 affine·분리 가정 없이도 $\operatorname{\underline{Isom}}$이 algebraic space로 표현가능하고, [명제 5](#prop5)에 의해 대각선이 표현가능하다. 나아가 $X$이 $S$ 위에서 분리하면 $X$의 대각선이 닫힌 immersion이라 위 fiber가 $G_T$의 닫힌 부분scheme이 되고, $G$이 분리하므로 $\operatorname{\underline{Isom}} \rightarrow T$은 닫힌 immersion에 이어 분리 사상 $G_T \rightarrow T$을 합성한 분리 사상이 된다. 하강으로 $[X/G]$의 대각선이 분리 사상으로 표현가능하다. 다만 $G_T \rightarrow T$이 일반적으로 proper가 아니어서 이 대각선은 닫힌 immersion이 되지는 않으며 (가령 아래 $\mathbf{B}\mathbb{G}_m$에서 $\operatorname{\underline{Isom}}$은 비proper인 $\mathbb{G}_{m,T}$이다), $[X/G]$의 분리성은 대각선의 properness, 곧 작용사상 $G\times_S X \rightarrow X\times_S X$, $(g, x)\mapsto(g\cdot x, x)$의 properness와 동치이다.
 
-**매끄러운 atlas.** $\pi: X \rightarrow [X/G]$은 표현가능하다 (대각선 표현가능성과 [명제 5](#prop5)). 그 매끄러움·전사성을 보이려면 임의의 $T \rightarrow [X/G]$에 대한 base change $X\times_{[X/G]}T \rightarrow T$이 smooth 전사임을 보여야 한다. $T$의 점은 torsor $(P, \varphi)$이고, $P$이 fppf 덮개 $\{T_i \rightarrow T\}$ 위에서 자명해지므로, 그 덮개 위에서 $T_i \rightarrow [X/G]$은 $\pi$을 거쳐 인수분해되어 $X\times_{[X/G]}T_i\cong X\times_{[X/G]}X\times_X T_i\cong(G\times_S X)\times_X T_i$이 된다 ([명제 10](#prop10)을 사용). 우변에서 $(G\times_S X) \rightarrow X$은 사영, 곧 $G \rightarrow S$의 base change이므로 smooth 전사이고 ($G$이 $S$ 위에서 smooth하고 단위절단으로 전사하므로), 따라서 $X\times_{[X/G]}T_i \rightarrow T_i$이 smooth 전사이다. Smooth성과 전사성이 target에 대해 fppf-국소적이므로 ([\[스킴\] §충실평탄 하강, ⁋명제 7](/ko/math/scheme_theory/faithfully_flat_descent#prop7)) $X\times_{[X/G]}T \rightarrow T$이 smooth 전사이다. 그러므로 $\pi$은 표현가능 smooth 전사, 곧 atlas이다. 이로써 [정의 6](#def6)의 두 조건이 모두 성립하여 $[X/G]$은 대수적 stack이다.
+**smooth atlas.** $\pi: X \rightarrow [X/G]$은 표현가능하다 (대각선 표현가능성과 [명제 5](#prop5)). 그 매끄러움·전사성을 보이려면 임의의 $T \rightarrow [X/G]$에 대한 base change $X\times_{[X/G]}T \rightarrow T$이 smooth 전사임을 보여야 한다. $T$의 점은 torsor $(P, \varphi)$이고, $P$이 fppf 덮개 $\{T_i \rightarrow T\}$ 위에서 자명해지므로, 그 덮개 위에서 $T_i \rightarrow [X/G]$은 $\pi$을 거쳐 인수분해되어 $X\times_{[X/G]}T_i\cong X\times_{[X/G]}X\times_X T_i\cong(G\times_S X)\times_X T_i$이 된다 ([명제 10](#prop10)을 사용). 우변에서 $(G\times_S X) \rightarrow X$은 사영, 곧 $G \rightarrow S$의 base change이므로 smooth 전사이고 ($G$이 $S$ 위에서 smooth하고 단위절단으로 전사하므로), 따라서 $X\times_{[X/G]}T_i \rightarrow T_i$이 smooth 전사이다. Smooth성과 전사성이 target에 대해 fppf-국소적이므로 ([\[스킴\] §충실평탄 하강, ⁋명제 7](/ko/math/scheme_theory/faithfully_flat_descent#prop7)) $X\times_{[X/G]}T \rightarrow T$이 smooth 전사이다. 그러므로 $\pi$은 표현가능 smooth 전사, 곧 atlas이다. 이로써 [정의 6](#def6)의 두 조건이 모두 성립하여 $[X/G]$은 대수적 stack이다.
 
 **DM 판정.** Stabilizer가 유한·étale하면 [참고 7](#rmk7)의 조건 3이 성립하여 $[X/G]$이 DM stack이다. 직접적으로는, 위 atlas의 상대차원이 $\dim G$이고, stabilizer가 étale(상대차원 $0$)이면 작용 groupoid에서 étale slice를 잡아 étale atlas를 구성할 수 있다. $G$이 유한 étale하면 $\pi$ 자체가 이미 상대차원 $0$의 étale 사상이므로 $X \rightarrow [X/G]$이 곧 étale atlas이다. ([\[스킴\] §매끄러운 사상과 étale 사상, ⁋정의 6](/ko/math/scheme_theory/smooth_and_etale_morphisms#def6)) 일반의 경우 자세한 논증은 [LMB]를 참조하라.
 :::
 
 [정리 11](#thm11)은 algebraic group의 작용이 자동으로 대수적 stack을 낳음을 보장한다. 대각선의 표현가능성은 isomorphism 조건이 $G$ 안에서 부분scheme으로 잘려 나옴에서, atlas의 매끄러움은 $\pi$의 base change가 사영 $G\times_S X \rightarrow X$이라는 점에서 따라온다. 이 두 사실은 모두 [명제 10](#prop10)의 groupoid presentation으로 환원된다.
 
-순진한 몫과의 관계는 작용의 자유로움에 달려 있다. 만약 $G$이 $X$에 자유롭게(stabilizer가 자명하게) 작용하면 [명제 10](#prop10)의 $\operatorname{\underline{Isom}}$이 한원소가 되어 $[X/G]$의 대각선이 monomorphism이고, 이때 $[X/G]$은 fiber에 automorphism이 없는 stack, 곧 algebraic space가 되어 $G\times_S X\rightrightarrows X$의 (fppf) 몫인 *coarse quotient* $X/G$과 일치한다. 작용이 자유롭지 않으면 각 점에 stabilizer가 남아 $[X/G]$은 진정한 stack이 되며, 이때에도 점의 동형류를 뭉갠 coarse moduli space $\lvert[X/G]\rvert$ (존재할 경우)로 가는 자연스러운 사상 $[X/G] \rightarrow X/G$이 있으나 이는 stabilizer 정보를 잃는다. 다음 절의 $[\mathbb{A}^1/\mathbb{G}_m]$이 이 손실을 선명히 보여준다.
+순진한 몫과의 관계는 작용의 자유로움에 달려 있다. 만약 $G$이 $X$에 자유롭게(stabilizer가 자명하게) 작용하면 [명제 10](#prop10)의 $\operatorname{\underline{Isom}}$이 한원소가 되어 $[X/G]$의 대각선이 monomorphism이고, 이때 $[X/G]$은 fiber에 automorphism이 없는 stack, 곧 algebraic space가 되어 $G\times_S X\rightrightarrows X$의 (fppf) 몫인 *coarse quotient* $X/G$과 일치한다. 작용이 자유롭지 않으면 각 점에 stabilizer가 남아 $[X/G]$은 진정한 stack이 되며, 이때에도 점의 isomorphism class를 뭉갠 coarse moduli space $\lvert[X/G]\rvert$ (존재할 경우)로 가는 자연스러운 사상 $[X/G] \rightarrow X/G$이 있으나 이는 stabilizer 정보를 잃는다. 다음 절의 $[\mathbb{A}^1/\mathbb{G}_m]$이 이 손실을 선명히 보여준다.
 
 ## 예시
 
@@ -232,14 +232,14 @@ Quotient stack $[\mathbb{A}^1/\mathbb{G}_m]$은 이 두 궤도의 서로 다른 
 마지막으로 stack 이론의 본래 동기였던 moduli 문제로 돌아간다. 타원곡선의 moduli는 quotient 꼴로 실현되는 DM stack의 대표적인 예이다.
 
 ::: 예시 14 (타원곡선의 moduli $\mathcal{M}_{1, 1}$)
-Base에 따라, $T$ 위의 *타원곡선*(절단을 가진 종수 $1$의 매끄러운 사영곡선)들의 $T$-족과 그 isomorphism이 이루는 CFG를 $\mathcal{M}_{1, 1}$로 적는다. 이는 stack이며, characteristic $0$(또는 $2, 3$을 뒤집은 base) 위에서 Weierstrass 방정식 $y^2=x^3+ax+b$의 계수 $(a, b)$ ($\Delta=-16(4a^3+27b^2)\neq 0$)에 좌표변환군이 작용하는 quotient
+Base에 따라, $T$ 위의 *타원곡선*(절단을 가진 종수 $1$의 smooth 사영곡선)들의 $T$-족과 그 isomorphism이 이루는 CFG를 $\mathcal{M}_{1, 1}$로 적는다. 이는 stack이며, characteristic $0$(또는 $2, 3$을 뒤집은 base) 위에서 Weierstrass 방정식 $y^2=x^3+ax+b$의 계수 $(a, b)$ ($\Delta=-16(4a^3+27b^2)\neq 0$)에 좌표변환군이 작용하는 quotient
 
 $$\mathcal{M}_{1, 1}\cong \bigl[\{(a, b):\Delta\neq 0\}\big/\mathbb{G}_m\bigr]$$
 
-으로 실현된다. 여기에서 $\mathbb{G}_m$은 $\lambda\cdot(a, b)=(\lambda^4 a, \lambda^6 b)$으로 작용하며 (Weierstrass 다항식에서 $a, b$에 각각 weight $4, 6$을 부여), 이 작용은 유한 stabilizer를 가진다. 일반적인 점의 stabilizer는 $\{\pm 1\}=\mathbb{Z}/2$ ($(x, y)\mapsto(x, -y)$, 곧 $[-1]$ 자기동형)이고, $j=0$과 $j=1728$의 특수 타원곡선에서 각각 $\mathbb{Z}/6$, $\mathbb{Z}/4$으로 도약한다. Stabilizer가 모두 유한하므로 [정리 11](#thm11)에 의해 $\mathcal{M}_{1, 1}$은 DM stack이며, 그 coarse moduli space는 $j$-불변량이 주는 affine line $\mathbb{A}^1_j$이다. Stack $\mathcal{M}_{1, 1}$이 coarse 공간 $\mathbb{A}^1_j$과 다른 까닭은 정확히 모든 타원곡선이 적어도 $\mathbb{Z}/2$의 자기동형을 가져, 점마다 비자명한 stabilizer가 붙기 때문이다. 이 stack의 정밀한 구성과 그 자기동형 구조는 다음 글에서 다룬다.
+으로 실현된다. 여기에서 $\mathbb{G}_m$은 $\lambda\cdot(a, b)=(\lambda^4 a, \lambda^6 b)$으로 작용하며 (Weierstrass 다항식에서 $a, b$에 각각 weight $4, 6$을 부여), 이 작용은 유한 stabilizer를 가진다. 일반적인 점의 stabilizer는 $\{\pm 1\}=\mathbb{Z}/2$ ($(x, y)\mapsto(x, -y)$, 곧 $[-1]$ automorphism)이고, $j=0$과 $j=1728$의 특수 타원곡선에서 각각 $\mathbb{Z}/6$, $\mathbb{Z}/4$으로 도약한다. Stabilizer가 모두 유한하므로 [정리 11](#thm11)에 의해 $\mathcal{M}_{1, 1}$은 DM stack이며, 그 coarse moduli space는 $j$-불변량이 주는 affine line $\mathbb{A}^1_j$이다. Stack $\mathcal{M}_{1, 1}$이 coarse 공간 $\mathbb{A}^1_j$과 다른 까닭은 정확히 모든 타원곡선이 적어도 $\mathbb{Z}/2$의 automorphism을 가져, 점마다 비자명한 stabilizer가 붙기 때문이다. 이 stack의 정밀한 구성과 그 automorphism 구조는 다음 글에서 다룬다.
 :::
 
-[예시 14](#ex14)는 moduli 문제가 왜 stack을 요구하는지를 다시 확인한다. 타원곡선은 모두 $[-1]$ 자기동형을 가지므로 그 동형류의 집합 $\mathbb{A}^1_j$만으로는 보편 족을 가질 수 없고 ([§Fibered category와 stack, ⁋예시 2](/ko/math/stacks/fibered_categories_and_stacks#ex2)에서 line bundle이 $\Pic$만으로 분류되지 않던 것과 같은 이유), automorphism을 기억하는 DM stack $\mathcal{M}_{1, 1}$에 이르러 비로소 보편 타원곡선이 존재한다. Quotient stack과 대수적 stack의 언어가 이러한 moduli를 다루는 정확한 틀을 제공한다.
+[예시 14](#ex14)는 moduli 문제가 왜 stack을 요구하는지를 다시 확인한다. 타원곡선은 모두 $[-1]$ automorphism을 가지므로 그 isomorphism class의 집합 $\mathbb{A}^1_j$만으로는 보편 족을 가질 수 없고 ([§Fibered category와 stack, ⁋예시 2](/ko/math/stacks/fibered_categories_and_stacks#ex2)에서 line bundle이 $\Pic$만으로 분류되지 않던 것과 같은 이유), automorphism을 기억하는 DM stack $\mathcal{M}_{1, 1}$에 이르러 비로소 보편 타원곡선이 존재한다. Quotient stack과 대수적 stack의 언어가 이러한 moduli를 다루는 정확한 틀을 제공한다.
 
 ---
 

@@ -113,7 +113,7 @@ $$\begin{aligned}(v+w)(\mathbf{fg})&=v(\mathbf{fg})+w(\mathbf{fg})=\mathbf{f}(p)
 임의의 tangent vector $v$에 대하여 $v(\mathbf{1})=0$이다.
 :::
 ::: 증명
-$v(\mathbf{1})=v(\mathbf{1}\cdot\mathbf{1})=\mathbf{1}(p)v(\mathbf{1})+\mathbf{1}(p)v(\mathbf{1})=v(\mathbf{1})+v(\mathbf{1})=2v(\mathbf{1}).$
+$$v(\mathbf{1})=v(\mathbf{1}\cdot\mathbf{1})=\mathbf{1}(p)v(\mathbf{1})+\mathbf{1}(p)v(\mathbf{1})=v(\mathbf{1})+v(\mathbf{1})=2v(\mathbf{1}).$$
 :::
 
 그러나 아직 $T_pM$이 어떤 공간인지는 잘 알지 못한다. 특히 $T_pM$의 차원을 아직 모른다. 이는 다음 글에서 살펴본다.
