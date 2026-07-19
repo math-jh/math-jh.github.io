@@ -156,7 +156,7 @@ $$e_i=\prod_{j\ne i}v_{ij}$$
 
 라 하자. 그럼 우선 각각의 $j\neq i$에 대하여, $e_i$는 $v_{ij}\in \mathfrak{a}_j$와 다른 원소들의 곱이므로 $e_i\in \mathfrak{a}_j$임이 자명하다. Index $i$에 대해서는, 
 
-$v_{ij}=1-u_{ij}\equiv 1\pmod{\mathfrak{a}_i}$
+$$v_{ij}=1-u_{ij}\equiv 1\pmod{\mathfrak{a}_i}$$
 
 이므로 $e_i\equiv 1\pmod{\mathfrak{a}_i}$이 성립한다. 이로부터 원하는 결과를 얻는다. 
 :::
@@ -195,7 +195,7 @@ $$a=a\cdot 1=a\sum_i e_i=\sum_i ae_i$$
 
 이고, 만일 $x\in Ae_i\cap\sum_{j\neq i}Ae_j$라면 $x$는 $ae_i$꼴인 동시에 $\sum_{j\neq i} a_j e_j$ 꼴이며, 이를 만족할 수 있는 $x$는 $0$뿐이므로 이것이 direct sum을 준다는 것에서 얻어진다. 이제 $e_i\in C(A)$이므로 각 $Ae_i$는 항등원 $e_i$를 갖는 ring이며, 사상 
 
-$A\to Ae_i;\qquad a\mapsto ae_i$
+$$A\to Ae_i;\qquad a\mapsto ae_i$$
 
 는 전사이고 그 kernel은 $A(1-e_i)=\mathfrak{a}_i$이므로 $A/\mathfrak{a}_i\cong Ae_i$이다. 이를 합치면, [\[대수적 구조\] §환의 곱, 쌍대곱, 텐서곱, ⁋정의 3](/ko/math/algebraic_structures/operations_of_rings#def3)에서 정의한 direct sum이 유한 지표에서는 direct product와 같으므로 
 

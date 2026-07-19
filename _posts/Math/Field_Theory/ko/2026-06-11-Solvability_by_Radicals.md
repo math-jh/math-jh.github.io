@@ -15,7 +15,7 @@ published: false
 
 ---
 
-[§제곱근확대체](/ko/math/field_theory/radical_extensions)의 서두에서 우리는 다항식의 근들을 서로 바꾸는 작용으로 group을 만들고, 이 group을 통해 extension들을 분류하겠다는 갈루아 이론의 철학을 언급했었다. [§갈루아 이론의 기본정리](/ko/math/field_theory/fundamental_theorem_of_galois_theory)로 이 철학이 완성되었으므로, 이제 우리는 갈루아 이론의 역사적인 출발점이었던 질문에 답할 수 있다. 어떤 다항식의 근을 사칙연산과 거듭제곱근만으로 표현할 수 있는가?
+[§제곱근확대체](/ko/math/field_theory/radical_extensions)의 서두에서 우리는 다항식의 근들을 서로 바꾸는 action으로 group을 만들고, 이 group을 통해 extension들을 분류하겠다는 Galois 이론의 철학을 언급했었다. [§갈루아 이론의 기본정리](/ko/math/field_theory/fundamental_theorem_of_galois_theory)로 이 철학이 완성되었으므로, 이제 우리는 Galois 이론의 역사적인 출발점이었던 질문에 답할 수 있다. 어떤 다항식의 근을 사칙연산과 거듭제곱근만으로 표현할 수 있는가?
 
 ::: remark 참고 {#rmk}
 이번 글에서 모든 field는 characteristic $0$을 갖는다. 그럼 characteristic exponent가 $1$이므로 Frobenius endomorphism이 identity가 되어 모든 field가 perfect이고, 따라서 [§분리가능확대체, ⁋명제 9](/ko/math/field_theory/separable_extensions#prop9)에 의하여 모든 algebraic extension이 separable이다. 특히 임의의 quasi-Galois extension이 Galois extension이다. Characteristic $p$에서의 가해성 이론은 separability와 관련된 추가적인 논의를 필요로 하므로 여기서는 다루지 않는다.
@@ -130,7 +130,7 @@ $$G=H_0\supseteq H_1\supseteq\cdots\supseteq H_r=\{e\}$$
 를 갖는다. 즉 각각의 $H_{i+1}$은 $H_i$의 normal subgroup이고 $H_i/H_{i+1}$은 cyclic group이다.
 :::
 ::: 증명
-우선 유한한 abelian group $A$가 이러한 series를 갖는 것을 $\card A$에 대한 귀납법으로 보이자. $A$가 trivial이면 자명하다. 그렇지 않다면 $e$가 아닌 원소 $a\in A$를 택하고 quotient $A/\langle a\rangle$을 생각하면, 귀납가정에 의해 $A/\langle a\rangle$은 cyclic quotient들을 갖는 series를 갖고, 몫군의 subgroup correspondence로 이를 $A$의 series로 끌어올린 후 마지막에 $\langle a\rangle\supseteq\{e\}$를 붙이면 된다. $A$가 abelian이므로 모든 subgroup이 normal이고, 끌어올린 series의 quotient들은 원래 series의 quotient들과 isomorphic하다.
+우선 유한한 abelian group $A$가 이러한 series를 갖는 것을 $\card A$에 대한 귀납법으로 보이자. $A$가 trivial이면 자명하다. 그렇지 않다면 $e$가 아닌 원소 $a\in A$를 택하고 quotient $A/\langle a\rangle$을 생각하면, 귀납가정에 의해 $A/\langle a\rangle$은 cyclic quotient들을 갖는 series를 갖고, quotient group의 subgroup correspondence로 이를 $A$의 series로 끌어올린 후 마지막에 $\langle a\rangle\supseteq\{e\}$를 붙이면 된다. $A$가 abelian이므로 모든 subgroup이 normal이고, 끌어올린 series의 quotient들은 원래 series의 quotient들과 isomorphic하다.
 
 이제 일반적인 solvable group $G$에 대하여, derived series
 
@@ -139,7 +139,7 @@ $$G=D_1(G)\supseteq D_2(G)\supseteq\cdots\supseteq D_{n+1}(G)=\{e\}$$
 를 생각하면 각 quotient $D_k(G)/D_{k+1}(G)$는 abelian이다. 각각의 단계를 위에서 살펴본 abelian group의 series로 refine하자. 즉 $D_k(G)/D_{k+1}(G)$의 cyclic quotient들을 갖는 series를 correspondence로 끌어올려 $D_k(G)$와 $D_{k+1}(G)$ 사이의 중간 subgroup들로 바꾸면, 이들 중간 subgroup들은 abelian quotient $D_k(G)/D_{k+1}(G)$의 subgroup들에 대응되므로 각각이 바로 앞의 것의 normal subgroup이고, 연이은 quotient들이 cyclic이다. 이렇게 모든 단계를 refine하면 원하는 series를 얻는다.
 :::
 
-이제 갈루아의 정리를 증명할 준비가 되었다.
+이제 Galois의 정리를 증명할 준비가 되었다.
 
 ::: 정리 10 (Galois)
 Characteristic $0$의 field $\mathbb{K}$와 다항식 $f\in\mathbb{K}[\x]$, 그리고 $f$의 splitting field $\mathbb{L}_f$에 대하여, 다음이 동치이다.

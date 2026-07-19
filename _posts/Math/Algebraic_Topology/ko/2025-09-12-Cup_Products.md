@@ -13,7 +13,7 @@ weight: 8
 
 ---
 
-앞서 cohomology를 도입하며 우리는 cohomology의 가장 큰 장점 중 하나가 이 위에 자연스럽게 정의된 곱셈구조라 하였다. 그렇다면 이 구조가 왜 호몰로지에서는 보이지 않았는지 또한 합리적인 의문일 것인데, 이번 글에서 이 곱셈구조를 정의하면, 본질적으로 cohomology가 contravariant functor이기 때문이라는 것이 드러난다.
+앞서 cohomology를 도입하며 우리는 cohomology의 가장 큰 장점 중 하나가 이 위에 자연스럽게 정의된 곱셈구조라 하였다. 그렇다면 이 구조가 왜 homology에서는 보이지 않았는지 또한 합리적인 의문일 것인데, 이번 글에서 이 곱셈구조를 정의하면, 본질적으로 cohomology가 contravariant functor이기 때문이라는 것이 드러난다.
 
 ## 코호몰로지의 외적
 

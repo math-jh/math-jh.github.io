@@ -125,7 +125,7 @@ $$\widehat{U}=\{[(x_n)]\in \widehat{G}:\text{for any $(y_n)\in [(x_n)]$, $y_n\in
 
 ## 완비화의 기본적인 성질들
 
-이제 완비화의 기본적인 성질들에 대해 살펴보자. 앞서 살펴본 [정의 3](#def3)에 의하여 $\widehat{A}$의 임의의 원소는 $A$의 $\mathfrak{a}$-adic topology에서의 Cauchy sequence로 생각할 수 있다. 그럼 $b_j\in \mathfrak{a}^j$를 만족하는 $b_j$들에 대하여,
+이제 completion의 기본적인 성질들에 대해 살펴보자. 앞서 살펴본 [정의 3](#def3)에 의하여 $\widehat{A}$의 임의의 원소는 $A$의 $\mathfrak{a}$-adic topology에서의 Cauchy sequence로 생각할 수 있다. 그럼 $b_j\in \mathfrak{a}^j$를 만족하는 $b_j$들에 대하여,
 
 $$a_i=\sum_{j=1}^i b_j\tag{3}$$
 

@@ -213,7 +213,7 @@ $$0 \rightarrow \mathbb{Z}\rightarrow \mathbb{Z}\rightarrow \mathbb{Z}/n\mathbb{
 
 $$0 \to A \xrightarrow{\cdot n} A \to 0$$
 
-를 얻는다. 이 때, 첫 번째 함수는 $a \mapsto na$이며, 따라서 첫 번째 호몰로지는
+를 얻는다. 이 때, 첫 번째 함수는 $a \mapsto na$이며, 따라서 첫 번째 homology는
 
 $$\Ext^1_\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, A) \cong \coker(\cdot n ) = A/nA$$
 

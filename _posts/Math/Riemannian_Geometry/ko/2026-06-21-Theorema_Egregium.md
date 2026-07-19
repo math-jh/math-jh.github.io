@@ -65,7 +65,7 @@ $$K = \det S = \det([S]) = \det(\mathrm{I}^{-1} \mathrm{II}) = \frac{\det \mathr
 Gauss 곡률이 내재적임을 보이는 열쇠는 [§제2기본형식, ⁋정리 6](/ko/math/riemannian_geometry/second_fundamental_form#thm6)이다. 그 식은 곡면의 내재적 곡률 텐서 $R$과 주변 곡률 $\bar R$, 그리고 제2기본형식의 이차식을 잇는다. 주변 공간이 평탄한 $\mathbb{R}^3$이면 $\bar R = 0$이므로 제2기본형식의 이차식이 통째로 내재적 곡률 $R$로 표현되고, 그로부터 $\det \mathrm{II}$가 내재적 자료가 된다.
 
 ::: 정리 3 (Theorema Egregium)
-곡면 $M \subseteq \mathbb{R}^3$의 Gauss 곡률 $K$는 점 $p$에서 정규직교기저 $\{e_1, e_2\}$를 잡을 때
+곡면 $M \subseteq \mathbb{R}^3$의 Gauss 곡률 $K$는 점 $p$에서 orthonormal basis $\{e_1, e_2\}$를 잡을 때
 
 $$K = \langle R(e_1, e_2) e_2, e_1\rangle$$
 
@@ -85,7 +85,7 @@ $$\langle R(e_1, e_2) e_2, e_1\rangle = \langle \mathrm{II}(e_1, e_1), \mathrm{I
 
 $$\langle \mathrm{II}(e_1, e_1), \mathrm{II}(e_2, e_2)\rangle - \lvert \mathrm{II}(e_1, e_2)\rvert^2 = h_{11} h_{22} - h_{12}^2 = \det[h_{ij}]$$
 
-이다. 정규직교기저 $\{e_1, e_2\}$에서 $[h_{ij}] = [\langle S(e_i), e_j\rangle]$는 $S$의 행렬 그 자체이므로 $\det[h_{ij}] = \det S = K$이다 ([정의 1](#def1)). 따라서
+이다. orthonormal basis $\{e_1, e_2\}$에서 $[h_{ij}] = [\langle S(e_i), e_j\rangle]$는 $S$의 행렬 그 자체이므로 $\det[h_{ij}] = \det S = K$이다 ([정의 1](#def1)). 따라서
 
 $$\langle R(e_1, e_2) e_2, e_1\rangle = K$$
 
@@ -110,14 +110,14 @@ $$K = -\frac{1}{2\sqrt{EG}}\left( \partial_u \frac{G_u}{\sqrt{EG}} + \partial_v 
 
 ## 등거리 불변성과 따름정리
 
-Theorema Egregium의 본래 의미는 Gauss 곡률이 *국소 등거리변형*에 불변이라는 것이다. 두 곡면 사이의 미분동형사상이 제1기본형식을 보존할 때 이를 *국소 등거리<sub>local isometry</sub>*라 부르는데, [정리 3](#thm3)에 의해 곡률 텐서는 제1기본형식만으로 결정되므로 국소 등거리는 Gauss 곡률을 점별로 보존한다.
+Theorema Egregium의 본래 의미는 Gauss 곡률이 *국소 등거리변형*에 불변이라는 것이다. 두 곡면 사이의 diffeomorphism이 제1기본형식을 보존할 때 이를 *국소 등거리<sub>local isometry</sub>*라 부르는데, [정리 3](#thm3)에 의해 곡률 텐서는 제1기본형식만으로 결정되므로 국소 등거리는 Gauss 곡률을 점별로 보존한다.
 
 ::: 따름정리 5
 $\varphi : M \to M'$이 곡면 사이의 국소 등거리이면, 즉 $\varphi^\ast g' = g$이면, 모든 점 $p \in M$에서 $K_M(p) = K_{M'}(\varphi(p))$이다.
 :::
 
 ::: 증명
-$\varphi$가 제1기본형식을 보존하므로 그 Levi-Civita 접속과 곡률 텐서도 보존한다. 구체적으로 $\varphi^\ast g' = g$이면 리만 기하학의 기본 정리의 유일성에 의해 $\varphi$는 두 곡면의 Levi-Civita 접속을 대응시키고, 따라서 [§리만 곡률, ⁋정의 2](/ko/math/riemannian_geometry/curvature#def2)의 곡률 텐서도 대응시켜 $\varphi_\ast(R_p(X, Y)Z) = R'_{\varphi(p)}(\varphi_\ast X, \varphi_\ast Y)\varphi_\ast Z$를 만족한다. $\varphi_\ast$가 내적을 보존하므로 정규직교기저 $\{e_1, e_2\} \subseteq T_p M$은 정규직교기저 $\{\varphi_\ast e_1, \varphi_\ast e_2\} \subseteq T_{\varphi(p)} M'$로 옮겨지고, [정리 3](#thm3)에 의해
+$\varphi$가 제1기본형식을 보존하므로 그 Levi-Civita 접속과 곡률 텐서도 보존한다. 구체적으로 $\varphi^\ast g' = g$이면 리만 기하학의 기본 정리의 유일성에 의해 $\varphi$는 두 곡면의 Levi-Civita 접속을 대응시키고, 따라서 [§리만 곡률, ⁋정의 2](/ko/math/riemannian_geometry/curvature#def2)의 곡률 텐서도 대응시켜 $\varphi_\ast(R_p(X, Y)Z) = R'_{\varphi(p)}(\varphi_\ast X, \varphi_\ast Y)\varphi_\ast Z$를 만족한다. $\varphi_\ast$가 내적을 보존하므로 orthonormal basis $\{e_1, e_2\} \subseteq T_p M$은 orthonormal basis $\{\varphi_\ast e_1, \varphi_\ast e_2\} \subseteq T_{\varphi(p)} M'$로 옮겨지고, [정리 3](#thm3)에 의해
 
 $$K_M(p) = \langle R(e_1, e_2) e_2, e_1\rangle = \langle R'(\varphi_\ast e_1, \varphi_\ast e_2)\varphi_\ast e_2, \varphi_\ast e_1\rangle = K_{M'}(\varphi(p))$$
 

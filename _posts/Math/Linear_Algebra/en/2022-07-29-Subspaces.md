@@ -72,7 +72,7 @@ Vectors of the form (1) in the above proposition are generally given the followi
 ::: Definition 4
 For a $\mathbb{K}$-vector space $V$ and its elements $v_1,\ldots, v_n$, a *linear combination* of these elements is a vector of the form
 
-$\alpha_1v_1+\cdots+\alpha_nv_n$
+$$\alpha_1v_1+\cdots+\alpha_nv_n$$
 :::
 
 More generally, when infinitely many elements $(v_i)_{i\in I}$ of $V$ are given, their linear combination is defined as

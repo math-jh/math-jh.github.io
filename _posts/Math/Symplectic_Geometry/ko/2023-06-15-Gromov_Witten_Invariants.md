@@ -49,7 +49,7 @@ $a_i = 0$이면 [정의 1](#def1)의 primary GW invariant로 환원된다. $\psi
 Genus $0$의 primary GW invariant들은 *Kontsevich-Manin axiom*이라 불리는 일련의 정합성 조건을 만족한다. 여기서는 가장 사용 빈도가 높은 세 low-level axiom을 정리한다.
 
 ::: 명제 3 (String equation)
-$\langle 1, \tau_{a_1}(\alpha_1), \ldots, \tau_{a_n}(\alpha_n) \rangle_{0, n+1, \beta}^X = \sum_{i=1}^n \langle \tau_{a_1}(\alpha_1), \ldots, \tau_{a_i - 1}(\alpha_i), \ldots, \tau_{a_n}(\alpha_n) \rangle_{0, n, \beta}^X$
+$$\langle 1, \tau_{a_1}(\alpha_1), \ldots, \tau_{a_n}(\alpha_n) \rangle_{0, n+1, \beta}^X = \sum_{i=1}^n \langle \tau_{a_1}(\alpha_1), \ldots, \tau_{a_i - 1}(\alpha_i), \ldots, \tau_{a_n}(\alpha_n) \rangle_{0, n, \beta}^X$$
 :::
 
 ::: 증명
@@ -71,7 +71,7 @@ $\beta = 0$이고 $n \geq 2$인 경우 우변의 첫 항은 $0$이다.
 Divisor equation은 $H^2$의 marked point가 본질적으로 intersection number $D \cdot \beta$만큼 invariant를 곱한다는 statement이다. 이로 인해 $H^2$ 방향의 deformation은 *Novikov variable* $q$로 흡수된다.
 
 ::: 명제 5 (Dilaton equation)
-$\langle \tau_1(1), \tau_{a_1}(\alpha_1), \ldots, \tau_{a_n}(\alpha_n) \rangle_{0, n+1, \beta}^X = (2g - 2 + n)\, \langle \tau_{a_1}(\alpha_1), \ldots, \tau_{a_n}(\alpha_n) \rangle_{0, n, \beta}^X$
+$$\langle \tau_1(1), \tau_{a_1}(\alpha_1), \ldots, \tau_{a_n}(\alpha_n) \rangle_{0, n+1, \beta}^X = (2g - 2 + n)\, \langle \tau_{a_1}(\alpha_1), \ldots, \tau_{a_n}(\alpha_n) \rangle_{0, n, \beta}^X$$
 :::
 
 ::: 증명
@@ -119,13 +119,13 @@ Quantum cohomology ring $(H^\ast(X), \circ_t)$은 $t \in H^\ast(X)$ 위에 매�
 ::: 예시 8 ($X = \mathbb{P}^n$)
 $\mathbb{P}^n$의 cohomology basis는 $\{ 1, H, H^2, \ldots, H^n \}$이고 effective curve class는 $d H^\vee$ ($d \geq 0$)로 매개된다. $\overline{\mathcal{M}}_{0, n}(\mathbb{P}^n, d)$의 expected dimension은 $d(n+1) + n - 3 + n_{\text{marked}}$이다.
 
-가장 기본적인 GW invariant는 *line counting*이다. $d = 1$일 때, $\mathbb{P}^n$ 안의 직선 중 두 일반점을 지나는 것은 유일하다. 이는
+가장 기본적인 GW invariant는 *line counting*이다. $d = 1$일 때, $\mathbb{P}^n$ 안의 직선 중 두 generic point를 지나는 것은 유일하다. 이는
 
 $$\langle H^n, H^n \rangle_{0, 2, 1}^{\mathbb{P}^n} = 1$$
 
 으로 표현된다 (두 점이 직선상에 있을 조건은 codimension $n$이므로 정확히 expected dim과 맞아 떨어진다).
 
-$\mathbb{P}^2$에서 5개의 일반점을 지나는 conic ($d = 2$)의 개수는 고전적으로 $1$이며, 이를 GW invariant로 표현하면
+$\mathbb{P}^2$에서 5개의 generic point를 지나는 conic ($d = 2$)의 개수는 고전적으로 $1$이며, 이를 GW invariant로 표현하면
 
 $$\langle H^2, H^2, H^2, H^2, H^2 \rangle_{0, 5, 2}^{\mathbb{P}^2} = 1$$
 

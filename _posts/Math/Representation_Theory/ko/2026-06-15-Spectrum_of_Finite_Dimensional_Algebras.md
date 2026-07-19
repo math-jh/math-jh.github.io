@@ -31,7 +31,7 @@ $$M_a(x)=ax$$
 으로 정의한다. 이 때 $a\mapsto M_a$로 주어지는 표현 $A\rightarrow \End_k(A)$를 $A$의 *정규표현<sub>regular representation</sub>*이라 부른다.
 :::
 
-여기서 $\End_k(A)$는 $A$를 단순히 유한차원 $k$-벡터공간으로 보았을 때의 $k$-선형 자기준동형사상들이 이루는 대수이다. 정규표현이 실제로 표현, 곧 unital algebra homomorphism이라는 것을 먼저 확인하자.
+여기서 $\End_k(A)$는 $A$를 단순히 유한차원 $k$-벡터공간으로 보았을 때의 $k$-선형 endomorphism들이 이루는 대수이다. 정규표현이 실제로 표현, 곧 unital algebra homomorphism이라는 것을 먼저 확인하자.
 
 ::: 명제 2
 대응 $a\mapsto M_a$는 injective unital $k$-algebra homomorphism $A\hookrightarrow \End_k(A)$이다.
@@ -52,11 +52,11 @@ $$a=a\cdot 1=M_a(1)=0$$
 이므로 $a=0$이다. 따라서 $\ker(a\mapsto M_a)=0$이고 대응은 injective이다.
 :::
 
-명제 2에 의하여 우리는 $A$를 $\End_k(A)$의 부분대수와 동일시할 수 있으며, 추상적인 원소 $a$에 대한 질문을 구체적인 연산자 $M_a$에 대한 질문으로 번역할 수 있다. 만일 $A$가 commutative이라면 임의의 $a,b\in A$에 대하여 $ab=ba$이므로 $M_aM_b=M_{ab}=M_{ba}=M_bM_a$이고, 따라서 연산자족 $\{M_a\}_{a\in A}$는 서로 commute하는 연산자들의 모임이다. 이러한 가환 연산자족은 선형대수학에서 잘 알려진 대로 좋은 동시분해를 가지며, 이 분해를 대수적으로 해석하는 것이 이 글의 목표이다.
+명제 2에 의하여 우리는 $A$를 $\End_k(A)$의 subalgebra와 동일시할 수 있으며, 추상적인 원소 $a$에 대한 질문을 구체적인 연산자 $M_a$에 대한 질문으로 번역할 수 있다. 만일 $A$가 commutative이라면 임의의 $a,b\in A$에 대하여 $ab=ba$이므로 $M_aM_b=M_{ab}=M_{ba}=M_bM_a$이고, 따라서 연산자족 $\{M_a\}_{a\in A}$는 서로 commute하는 연산자들의 모임이다. 이러한 가환 연산자족은 선형대수학에서 잘 알려진 대로 좋은 동시분해를 가지며, 이 분해를 대수적으로 해석하는 것이 이 글의 목표이다.
 
 ## Character와 maximal ideal
 
-연산자 $M_a$의 고유값을 추적하는 가장 작은 표현은 $1$차원 표현, 곧 대수에서 ground field로 가는 준동형사상이다.
+연산자 $M_a$의 고유값을 추적하는 가장 작은 표현은 $1$차원 표현, 곧 대수에서 ground field로 가는 homomorphism이다.
 
 ::: 정의 3
 유한차원 unital $k$-algebra $A$의 *character* $\chi$는 unital $k$-algebra homomorphism $\chi:A\rightarrow k$이다. 즉 $\chi$는 $k$-선형이며 모든 $a,b\in A$에 대해 $\chi(ab)=\chi(a)\chi(b)$, 그리고 $\chi(1)=1$을 만족한다.
@@ -130,7 +130,7 @@ $$A=\bigoplus_{\lambda} A_\lambda$$
 ::: 증명
 **분해의 존재.** $\{M_a\}_{a\in A}$는 [명제 2](#prop2)의 논의에 의하여 서로 commute하는 연산자족이다. $k$가 algebraically closed이므로 이 족은 동시 삼각화 가능하다. 동시 삼각화 basis를 택하여 각 $M_a$를 상삼각행렬로 보면, 그 대각성분들이 $M_a$의 고유값이다. 같은 대각위치 $i$에 대응하는 고유값을 $a$에 대한 함수로 모으면 함수 $\lambda_i:A\rightarrow k$를 얻는다. 서로 다른 $\lambda_i$들을 $\lambda^{(1)},\ldots,\lambda^{(r)}$이라 하자.
 
-각 $\lambda^{(s)}$에 대하여 $A_{\lambda^{(s)}}$가 $A$의 부분공간임은 정의로부터 명백하다. 또한 단일 연산자에 대한 일반화고유공간 분해를 가환족에 적용하면 (각 $M_a$가 다른 모든 $M_b$와 commute하므로 서로의 일반화고유공간을 보존한다), 벡터공간 $A$는 동시 일반화고유공간들의 직합
+각 $\lambda^{(s)}$에 대하여 $A_{\lambda^{(s)}}$가 $A$의 부분공간임은 정의로부터 명백하다. 또한 단일 연산자에 대한 일반화고유공간 분해를 가환족에 적용하면 (각 $M_a$가 다른 모든 $M_b$와 commute하므로 서로의 일반화고유공간을 보존한다), 벡터공간 $A$는 동시 일반화고유공간들의 direct sum
 
 $$A=\bigoplus_{s=1}^r A_{\lambda^{(s)}}$$
 
@@ -168,7 +168,7 @@ $$M_{ab}\vert_{A_\lambda}=\lambda(ab)\id+(\text{nilpotent})=\lambda(a)\lambda(b)
 
 ## 구조분해와 reduced 대수
 
-정리 8의 직합 분해는 단순한 벡터공간 분해가 아니라 대수의 분해이기도 하다. 이를 정리하기 위해 직합 분해에 따르는 idempotent들을 도입한다.
+정리 8의 direct sum 분해는 단순한 벡터공간 분해가 아니라 대수의 분해이기도 하다. 이를 정리하기 위해 direct sum 분해에 따르는 idempotent들을 도입한다.
 
 ::: 따름정리 9
 [정리 8](#thm8)의 가정 하에서, 각 character $\chi$에 대응하는 부분공간 $A_\chi$는 $A$의 ideal이며, 적당한 원소들 $e_\chi\in A_\chi$가 존재하여
@@ -188,7 +188,7 @@ $$\dim A=\sum_\chi \dim A_\chi$$
 ::: 증명
 각 $A_\chi$가 ideal임을 보이자. $x\in A_\chi$이고 $b\in A$라 하자. $M_b$는 다른 모든 $M_a$와 commute하므로 $A_\chi$를 보존한다. 즉 $bx=M_b(x)\in A_\chi$이며, 따라서 $A_\chi$는 ideal이다.
 
-[정리 8](#thm8)의 직합 분해 $A=\bigoplus_\chi A_\chi$에서 $1\in A$를 성분별로 분해하여 $1=\sum_\chi e_\chi$라 쓰자. 여기서 $e_\chi\in A_\chi$이다. 임의의 $x\in A_{\chi'}$에 대하여 $x=1\cdot x=\sum_\chi e_\chi x$인데, $A_\chi$가 ideal이므로 $e_\chi x\in A_\chi\cap A_{\chi'}$이고, 직합이므로 $\chi\neq\chi'$이면 $A_\chi\cap A_{\chi'}=0$이다. 따라서 $e_\chi x=0$ ($\chi\neq\chi'$) 이고 $e_{\chi'}x=x$이다. 특히 $x=e_{\chi'}$로 두면 $e_{\chi'}e_{\chi'}=e_{\chi'}$, $x=e_\chi$ ($\chi\neq \chi'$) 로 두면 $e_{\chi'}e_\chi=0$을 얻으므로 $e_\chi e_{\chi'}=\delta_{\chi\chi'}e_\chi$이다. 또 위 계산은 $e_{\chi'}$이 $A_{\chi'}$ 위에서 항등원처럼 작용함을 보이므로 $A_{\chi'}=e_{\chi'}A$이고, 각 $A_\chi$는 항등원 $e_\chi$를 갖는 unital algebra이다. 사상
+[정리 8](#thm8)의 direct sum 분해 $A=\bigoplus_\chi A_\chi$에서 $1\in A$를 성분별로 분해하여 $1=\sum_\chi e_\chi$라 쓰자. 여기서 $e_\chi\in A_\chi$이다. 임의의 $x\in A_{\chi'}$에 대하여 $x=1\cdot x=\sum_\chi e_\chi x$인데, $A_\chi$가 ideal이므로 $e_\chi x\in A_\chi\cap A_{\chi'}$이고, direct sum이므로 $\chi\neq\chi'$이면 $A_\chi\cap A_{\chi'}=0$이다. 따라서 $e_\chi x=0$ ($\chi\neq\chi'$) 이고 $e_{\chi'}x=x$이다. 특히 $x=e_{\chi'}$로 두면 $e_{\chi'}e_{\chi'}=e_{\chi'}$, $x=e_\chi$ ($\chi\neq \chi'$) 로 두면 $e_{\chi'}e_\chi=0$을 얻으므로 $e_\chi e_{\chi'}=\delta_{\chi\chi'}e_\chi$이다. 또 위 계산은 $e_{\chi'}$이 $A_{\chi'}$ 위에서 항등원처럼 작용함을 보이므로 $A_{\chi'}=e_{\chi'}A$이고, 각 $A_\chi$는 항등원 $e_\chi$를 갖는 unital algebra이다. 사상
 
 $$A\longrightarrow \prod_\chi A_\chi;\qquad x\longmapsto (e_\chi x)_\chi$$
 
@@ -196,7 +196,7 @@ $$A\longrightarrow \prod_\chi A_\chi;\qquad x\longmapsto (e_\chi x)_\chi$$
 
 각 $A_\chi$가 local임을 보이자. 블록 $A_\chi$ 위에서 [정리 8](#thm8)의 증명에 의해 $M_a\vert_{A_\chi}=\chi(a)\id+N_a$이고 $N_a$는 nilpotent이다. 특히 $a\in A_\chi$에 대하여 $\chi(a)$가 $0$이면 $M_a\vert_{A_\chi}=N_a$이 nilpotent이고, $a=M_a\vert_{A_\chi}(e_\chi)$이므로 $a$ 자신이 nilpotent이다. 따라서 $\mathfrak{n}_\chi=\{x\in A_\chi\mid \chi(x)=0\}$의 모든 원소는 nilpotent이다. 반대로 $\chi(a)\neq 0$이면 $M_a\vert_{A_\chi}=\chi(a)\id+N_a=\chi(a)(\id+\chi(a)^{-1}N_a)$이고 괄호 안의 연산자는 nilpotent를 더한 항등원이므로 가역이다. 즉 $a$는 $A_\chi$에서 unit이다. 결국 $A_\chi$의 nonunit들은 정확히 $\mathfrak{n}_\chi$를 이루므로 $\mathfrak{n}_\chi$가 유일한 maximal ideal이고 $A_\chi$는 local이다.
 
-마지막으로 직합 분해로부터 $\dim A=\sum_\chi \dim A_\chi$이고, 각 $A_\chi\neq 0$이므로 $\dim A_\chi\geq 1$이다. 따라서 character의 개수는 $\sum_\chi 1\leq \sum_\chi \dim A_\chi=\dim A$ 이하이다.
+마지막으로 direct sum 분해로부터 $\dim A=\sum_\chi \dim A_\chi$이고, 각 $A_\chi\neq 0$이므로 $\dim A_\chi\geq 1$이다. 따라서 character의 개수는 $\sum_\chi 1\leq \sum_\chi \dim A_\chi=\dim A$ 이하이다.
 :::
 
 따름정리 9는 정리 8의 분해가 곧 대수의 구조분해 $A\cong\prod_\chi A_\chi$임을 보여 준다. 각 블록 $A_\chi$는 하나의 character를 갖는 local algebra로, character의 "위치"와 그 위에 얹힌 nilpotent 정보 $\mathfrak{n}_\chi$로 이루어진다. 분해가 $1$차원 블록들로, 곧 nilpotent 부분 없이 깔끔하게 떨어지는 경우를 따로 정의한다.
@@ -233,7 +233,7 @@ $k$가 algebraically closed이고 $A$가 유한차원 commutative $k$-algebra이
 
 ## Spectrum
 
-지금까지의 사전을 기하학적인 언어로 다시 쓰면, character들은 대수의 "점"을 이루고 대수는 그 점들 위의 함수환처럼 행동한다.
+지금까지의 사전을 기하학적인 언어로 다시 쓰면, character들은 대수의 "점"을 이루고 대수는 그 점들 위의 function ring처럼 행동한다.
 
 ::: 정의 12
 유한차원 commutative $k$-algebra $A$에 대하여, $A$의 character들의 집합을 $A$의 *maximal spectrum* $\MaxSpec A$라 부른다.
@@ -256,11 +256,11 @@ kernel을 계산하자. $\ev(a)=0$인 것은 모든 character $\chi$에 대하�
 그러므로 $\ev$이 injective인 것은 $A$에 nonzero nilpotent가 없는 것, 곧 $A$가 reduced인 것과 동치이다. 마지막으로 $A$가 reduced이면 [명제 11](#prop11)에 의하여 character의 개수가 $\dim A$와 같으므로 $\dim k^{\MaxSpec A}=\dim A$이고, injective인 $\ev$은 차원 비교에 의하여 isomorphism이다.
 :::
 
-명제 13은 reduced인 유한차원 가환대수가 정확히 그 유한한 점집합 $\MaxSpec A$ 위의 $k$-값 함수환임을 말해 준다. 이는 가환 Banach algebra에 대한 Gelfand 표현의 유한차원 대수적 판본으로, character를 점으로, 대수의 원소를 점 위의 함수로 보는 관점을 정당화한다. Nilpotent가 존재하는 일반적인 경우에는 $\ev$이 nilradical만큼의 정보를 잃으며, 그 손실분이 각 점 위의 nilpotent 두께 $\mathfrak{n}_\chi$로 나타난다.
+명제 13은 reduced인 유한차원 가환대수가 정확히 그 유한한 점집합 $\MaxSpec A$ 위의 $k$-값 function ring임을 말해 준다. 이는 가환 Banach algebra에 대한 Gelfand 표현의 유한차원 대수적 판본으로, character를 점으로, 대수의 원소를 점 위의 함수로 보는 관점을 정당화한다. Nilpotent가 존재하는 일반적인 경우에는 $\ev$이 nilradical만큼의 정보를 잃으며, 그 손실분이 각 점 위의 nilpotent 두께 $\mathfrak{n}_\chi$로 나타난다.
 
 ## 예시
 
-지금까지의 이론을 가장 단순하고 핵심적인 예시인 한 변수 다항식의 몫대수에서 확인하자. 이 예시는 단일 연산자의 고유값 이론이 이 사전의 특수한 경우임을 직접 보여 준다.
+지금까지의 이론을 가장 단순하고 핵심적인 예시인 한 변수 다항식의 quotient algebra에서 확인하자. 이 예시는 단일 연산자의 고유값 이론이 이 사전의 특수한 경우임을 직접 보여 준다.
 
 ::: 예시 14
 $k$가 algebraically closed이고 $p(\x)\in k[\x]$가 차수 $n$의 monic polynomial이라 하자. $A=k[\x]/(p(\x))$은 차원 $n$의 commutative $k$-algebra이다. $k$가 algebraically closed이므로
@@ -308,9 +308,9 @@ $$\mathbb{C}[\mathbb{Z}/n]\cong\mathbb{C}^n$$
 
 ## 비가환 방향과 응용
 
-지금까지 우리는 commutativity를 본질적으로 사용하여, 정규표현의 모든 블록이 하나의 character로 색인되는 동시 일반화고유공간으로 떨어진다는 것을 보았다. Commutativity를 떼면 그림은 더 풍부해진다. Semisimple algebra의 일반론에 따르면, algebraically closed field 위의 유한차원 semisimple algebra는 matrix algebra들의 곱 $\prod_i\Mat_{n_i}(k)$으로 분해된다. 우리가 다룬 commutative reduced인 경우는 모든 $n_i=1$인, 곧 모든 블록이 $1\times 1$인 가장 단순한 구석에 해당한다. 한편 $\operatorname{char}k\nmid\lvert G\rvert$인 경우 Maschke의 정리에 의해 group algebra $k[G]$가 semisimple이 되고 ([§유한군의 표현론, ⁋따름정리 7](/ko/math/representation_theory/representations_of_finite_groups#cor7)), 이로부터 유한군의 표현론이 회복된다. $G$가 abelian이면 $k[G]$가 commutative이므로 모든 기약표현이 $1$차원이고, 이는 [예시 16](#ex16)에서 본 것처럼 우리의 commutative 이론으로 완전히 설명된다.
+지금까지 우리는 commutativity를 본질적으로 사용하여, 정규표현의 모든 블록이 하나의 character로 색인되는 동시 일반화고유공간으로 떨어진다는 것을 보았다. Commutativity를 떼면 그림은 더 풍부해진다. Semisimple algebra의 일반론에 따르면, algebraically closed field 위의 유한차원 semisimple algebra는 matrix algebra들의 곱 $\prod_i\Mat_{n_i}(k)$으로 분해된다. 우리가 다룬 commutative reduced인 경우는 모든 $n_i=1$인, 곧 모든 블록이 $1\times 1$인 가장 단순한 구석에 해당한다. 한편 $\operatorname{char}k\nmid\lvert G\rvert$인 경우 Maschke의 정리에 의해 group algebra $k[G]$가 semisimple이 되고 ([§유한군의 표현론, ⁋따름정리 7](/ko/math/representation_theory/representations_of_finite_groups#cor7)), 이로부터 유한군의 표현론이 회복된다. $G$가 abelian이면 $k[G]$가 commutative이므로 모든 irreducible representation이 $1$차원이고, 이는 [예시 16](#ex16)에서 본 것처럼 우리의 commutative 이론으로 완전히 설명된다.
 
-이 사전은 표현론 바깥에서도 같은 모습으로 나타난다. 예컨대 적당히 국소화한 유한차원 가환 양자 코호몰로지 환의 maximal spectrum은 유한개의 점으로 이루어지며, 그 점들은 양자 곱셈 연산자들의 동시 고유값에 해당한다. 이는 정규표현의 동시 일반화고유공간 분해라는 우리의 이야기가 그대로 적용되는 한 사례이다.
+이 사전은 표현론 바깥에서도 같은 모습으로 나타난다. 예컨대 적당히 localize한 유한차원 가환 양자 cohomology ring의 maximal spectrum은 유한개의 점으로 이루어지며, 그 점들은 양자 곱셈 연산자들의 동시 고유값에 해당한다. 이는 정규표현의 동시 일반화고유공간 분해라는 우리의 이야기가 그대로 적용되는 한 사례이다.
 
 ---
 

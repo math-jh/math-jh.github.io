@@ -27,7 +27,7 @@ First, recall the definition of the ideal quotient for an arbitrary ring $A$ and
 ::: Definition 1
 For a ring $A$ and two ideals $\mathfrak{a}, \mathfrak{b}$ of $A$, we define the *ideal quotient* by the formula
 
-$(\mathfrak{a}:\mathfrak{b})=\{a\in A\mid a \mathfrak{b}\subseteq \mathfrak{a}\}.$
+$$(\mathfrak{a}:\mathfrak{b})=\{a\in A\mid a \mathfrak{b}\subseteq \mathfrak{a}\}.$$
 :::
 
 Then $(\mathfrak{a}:\mathfrak{b})$ is trivially closed under addition, and for any $x\in A$ and $a\in (\mathfrak{a}:\mathfrak{b})$,
@@ -86,7 +86,7 @@ $$S^{-1}A\cong (S^{-1}A)_0[T, T^{-1}]$$
 
 holds. Here $T$ is a formal variable of degree $1$, and the right-hand side $(S^{-1}A)_0[T, T^{-1}]$ is defined by
 
-$(S^{-1}A)_0[T_1, T_2]/(T_1T_2-1).$
+$$(S^{-1}A)_0[T_1, T_2]/(T_1T_2-1).$$
 :::
 ::: Proof
 Defining the function $\{T_1,T_2\} \rightarrow S^{-1}A$ by $T_1\mapsto f, T_2\mapsto f^{-1}$, by [[Algebraic Structures] §Algebras, ⁋Proposition 8](/en/math/algebraic_structures/algebras#prop8) we obtain an $(S^{-1}A)_0$-algebra homomorphism
@@ -159,7 +159,7 @@ If $S$ is a homogeneous multiplicative set containing at least one element of de
 ::: Proof
 This is essentially the same proof as [Proposition 4](#prop4): choose an element $f$ of degree $1$ belonging to $S$ and define the homomorphism $(S^{-1}A)_0[T_1,T_2] \rightarrow S^{-1}A$ in the same way as in the proof of [Proposition 4](#prop4). Then that the kernel of this homomorphism is $(T_1T_2-1)$ can be shown by the same proof, and that this homomorphism is surjective can be easily shown by using the fact that an arbitrary element $a/s$ of $S^{-1}A$ of degree $d$ can be written in the form
 
-$\frac{a}{s}=\frac{af^d}{s}\frac{1}{f^d}.$
+$$\frac{a}{s}=\frac{af^d}{s}\frac{1}{f^d}.$$
 :::
 
 In particular, fix a homogeneous prime ideal $\mathfrak{p}$ and assume $A_1\not\subset \mathfrak{p}$. Let $S$ be the multiplicative subset consisting of homogeneous elements not belonging to $\mathfrak{p}$; then there exists at least one nonzero $f\in A_1$ such that $f\in S$, so by the above proposition we obtain
@@ -184,7 +184,7 @@ $$A \overset{a\mapsto a/1}{\longrightarrow} S^{-1}A \overset{f\mapsto T}{\longri
 
 and
 
-$A\overset{a\mapsto a+\mathfrak{a}}{\longrightarrow}A/\mathfrak{a}\overset{a+\mathfrak{a}\mapsto\frac{a+\mathfrak{a}}{1}}{\longrightarrow}(A/\mathfrak{a})_\mathfrak{q}.$
+$$A\overset{a\mapsto a+\mathfrak{a}}{\longrightarrow}A/\mathfrak{a}\overset{a+\mathfrak{a}\mapsto\frac{a+\mathfrak{a}}{1}}{\longrightarrow}(A/\mathfrak{a})_\mathfrak{q}.$$
 :::
 
 ---

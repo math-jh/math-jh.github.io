@@ -254,4 +254,4 @@ The map $\bigwedge_{B}(B\otimes_AM)\rightarrow B\otimes_A\bigwedge_A(M)$ is an i
 
 ---
 
-[^1]: Recall that the coproduct in the category $$\Ring$$ was defined in a manner similar to the free product. ([§Products, Coproducts, and Tensor Products of Rings, ⁋Proposition 3](/en/math/algebraic_structures/operations_of_rings#prop3)) On the other hand, in the same post we also verified that the coproduct in the category $$\cRing$$ is given by the tensor product $$\otimes$$.
+[^1]: Recall that the coproduct in the category $$\Ring$$ was defined in a manner similar to the free product. ([§Products, Coproducts, and Tensor Products of Rings, ⁋Proposition 4](/en/math/algebraic_structures/operations_of_rings#prop4)) On the other hand, in the same post we also verified that the coproduct in the category $$\cRing$$ is given by the tensor product $$\otimes$$.

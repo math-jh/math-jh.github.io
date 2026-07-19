@@ -41,7 +41,7 @@ $$Q = (Q_{ji}) \in \Mat_{r \times N}(\mathbb{Z})$$
 
 consisting of the coefficients of the integral relations among the above rays
 
-$\sum_{i=1}^N Q_{ji}\, v_i = 0,\qquad j = 1, \ldots, r.$
+$$\sum_{i=1}^N Q_{ji}\, v_i = 0,\qquad j = 1, \ldots, r.$$
 :::
 
 Although the charge matrix is simply the matrix collecting the coefficients of the ray relations, if one writes $X_\Sigma$ as the GIT quotient via the Cox construction
@@ -91,7 +91,7 @@ For a smooth projective toric Fano variety $X_\Sigma$ and additional data $q=(q_
  
 2. The *superpotential* on $\check{X}$ is defined as the sum of local coordinates
     
-    $W_q : \check{X} \to \mathbb{C}, \qquad W_q(\x_1, \ldots, \x_N) = \x_1 + \x_2 + \cdots + \x_N.$
+    $$W_q : \check{X} \to \mathbb{C}, \qquad W_q(\x_1, \ldots, \x_N) = \x_1 + \x_2 + \cdots + \x_N.$$
 :::
 
 Here $q = (q_1, \ldots, q_r) \in (\mathbb{C}^\ast)^r$ is the variable carrying the complex structure of the mirror LG model. The complex structure of the mirror domain $\check{X}$ itself is always the same affine torus $(\mathbb{C}^\ast)^n$, but the superpotential $W_q$ placed on it is determined by $q$. In other words, for each value of $q$ a unique LG model $(\check{X}, W_q)$ is determined, and it is more accurate to say that the whole family $\{(\check{X}, W_q)\}_q$ appears as the mirror of $X_\Sigma$. At this point, the complex structure $q$ appears as the Novikov parameter $q$ in the A-model.

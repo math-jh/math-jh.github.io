@@ -116,7 +116,7 @@ $$a_1+b_3+(a_2+b_2+c+c')=a_3+b_1+(a_2+b_2+c+c')$$
 $$a_1+b_1'+c_1=a_1'+b_1+c_1,\qquad a_2+b_2'+c_2=a_2'+b_2+c_2$$
 
 가 성립한다. 이제, 두 식을 더하면
-$(a_1+a_2)+(b_1'+b_2')+(c_1+c_2)=(a_1'+a_2')+(b_1+b_2)+(c_1+c_2)$
+$$(a_1+a_2)+(b_1'+b_2')+(c_1+c_2)=(a_1'+a_2')+(b_1+b_2)+(c_1+c_2)$$
 
 이 성립하므로, 정의에 의해 $(a_1+a_2, b_1+b_2)\equiv(a_1'+a_2', b_1'+b_2')\pmod{R}$이 성립하고, 따라서 $R$은 $S\times S$의 연산과 compatible하다. 
 :::
@@ -149,7 +149,7 @@ $$[(a,b)]+[(b,a)]=[(a+b,a+b)]$$
 그럼 $K(S)$는 우리가 찾던 abelian group이 된다. 즉, $K(S)$는 위의 universal mapping problem을 만족한다.
 
 ::: 명제 5
-Commutative semigroup $(S, +)$에 대하여, 위와 같이 만들어진 가환군 $K(S)$와, 자연스러운 semigroup homomorphism $\eta_S:S\rightarrow K(S)$는 universal property를 만족한다.
+Commutative semigroup $(S, +)$에 대하여, 위와 같이 만들어진 abelian group $K(S)$와, 자연스러운 semigroup homomorphism $\eta_S:S\rightarrow K(S)$는 universal property를 만족한다.
 :::
 ::: 증명
 우선 $S$에서 $K(S)$로의 *자연스러운 semigroup homomorphism*이 무엇인지부터 생각해보자. 우리는 $K(S)$에서 $(a,b)$를 $a-b$로 취급하고 있으므로, $a$가 $K(S)$에서는 $(a+b)-b$, 즉 $[(a+b, b)]$인 것을 알 수 있다. 따라서 $\eta_S$을 $a\mapsto[(a+a, a)]$으로 정의하자. 물론 아무 $b$나 택해서 $a\mapsto[(a+b,b)]$으로 정의해도 같은 값이 나온다.

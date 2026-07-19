@@ -14,7 +14,7 @@ date: 2026-06-28
 weight: 18
 ---
 
-Jordan canonical form을 통해 우리는 임의의 linear operator를 generalized eigenspace 위에서 Jordan block들로 분해하였다. 이러한 구조는 다항식과 linear operator 사이의 관계를 살펴보는 데에도 유용하게 쓰인다. 이번 글에서는 행렬에 다항식을 대입하는 연산을 정의하고, 이를 통해 케일리-해밀턴 정리와 최소다항식을 다룬다. 
+Jordan canonical form을 통해 우리는 임의의 linear operator를 generalized eigenspace 위에서 Jordan block들로 분해하였다. 이러한 구조는 다항식과 linear operator 사이의 관계를 살펴보는 데에도 유용하게 쓰인다. 이번 글에서는 행렬에 다항식을 대입하는 연산을 정의하고, 이를 통해 케일리-해밀턴 정리와 minimal polynomial을 다룬다. 
 
 ## 행렬에서의 다항식
 
@@ -92,13 +92,13 @@ $$p_A(A)v=\left(\prod_{\mu\neq\lambda}(A-\mu I)^{d_\mu}\right)(A-\lambda I)^{d_\
 케일리-해밀턴 정리는 $p(A)=0$을 만족하는 영이 아닌 다항식 $p$가 항상 존재함을 보여준다. 그러한 다항식 중 가장 간단한 것에 이름을 붙이자.
 
 ::: 정의 5
-$n\times n$ 행렬 $A$에 대하여, $p(A)=0$을 만족하는 monic polynomial 가운데 차수가 가장 작은 것을 $A$의 *최소다항식<sub>minimal polynomial</sub>*이라 부르고 $m_A$로 적는다.
+$n\times n$ 행렬 $A$에 대하여, $p(A)=0$을 만족하는 monic polynomial 가운데 차수가 가장 작은 것을 $A$의 *minimal polynomial<sub>최소다항식</sub>*이라 부르고 $m_A$로 적는다.
 :::
 
-[정리 4](#thm4)에 의하여 $p_A(A)=0$이고, $p_A$를 최고차항의 계수로 나누면 monic polynomial을 얻으므로 위 정의에서 차수가 가장 작은 monic polynomial은 반드시 존재한다. 다음 명제는 이 최소다항식이 유일하며, $A$를 소멸시키는 모든 다항식을 나눈다는 것을 보여준다. 
+[정리 4](#thm4)에 의하여 $p_A(A)=0$이고, $p_A$를 최고차항의 계수로 나누면 monic polynomial을 얻으므로 위 정의에서 차수가 가장 작은 monic polynomial은 반드시 존재한다. 다음 명제는 이 minimal polynomial이 유일하며, $A$를 소멸시키는 모든 다항식을 나눈다는 것을 보여준다. 
 
 ::: 명제 6
-$n\times n$ 행렬 $A$에 대하여, 다항식 $p$가 $p(A)=0$을 만족하면 $m_A\mid p$이다. 특히 $A$의 최소다항식은 유일하며, $m_A\mid p_A$가 성립한다. 
+$n\times n$ 행렬 $A$에 대하여, 다항식 $p$가 $p(A)=0$을 만족하면 $m_A\mid p$이다. 특히 $A$의 minimal polynomial은 유일하며, $m_A\mid p_A$가 성립한다. 
 :::
 ::: 증명
 다항식의 나눗셈 정리에 의하여, $p=qm_A+r$이고 $r=0$이거나 $\deg r<\deg m_A$이도록 하는 다항식 $q,r$이 존재한다. [명제 2](#prop2)에 의하여 
@@ -107,10 +107,10 @@ $$r(A)=p(A)-q(A)m_A(A)=0-q(A)\cdot 0=0$$
 
 이다. 만일 $r\neq 0$이라면, $r$을 최고차항의 계수로 나누어 $m_A$보다 차수가 작으면서 $A$를 소멸시키는 monic polynomial을 얻게 되어 $m_A$의 최소성에 모순이다. 따라서 $r=0$이고 $m_A\mid p$이다. 
 
-유일성을 보이기 위해 $m_A'$ 또한 최소다항식의 조건을 만족한다 하자. 그럼 위 논증에 의해 $m_A\mid m_A'$이고 $m_A'\mid m_A$이며, 둘 다 같은 차수의 monic polynomial이므로 $m_A=m_A'$이다. 마지막으로 [정리 4](#thm4)에서 $p_A(A)=0$이므로 $m_A\mid p_A$이다.
+유일성을 보이기 위해 $m_A'$ 또한 minimal polynomial의 조건을 만족한다 하자. 그럼 위 논증에 의해 $m_A\mid m_A'$이고 $m_A'\mid m_A$이며, 둘 다 같은 차수의 monic polynomial이므로 $m_A=m_A'$이다. 마지막으로 [정리 4](#thm4)에서 $p_A(A)=0$이므로 $m_A\mid p_A$이다.
 :::
 
-최소다항식의 근은 특성다항식의 근과 정확히 일치한다. 즉, 차수는 더 작을 수 있지만, 차수가 빠지는 방식은 중복된 eigenvalue에서 중복도를 낮추는 방식으로만 일어나며, 따라서 이 과정에서 어떤 eigenvalue도 빠뜨리지 않는다. 
+minimal polynomial의 근은 특성다항식의 근과 정확히 일치한다. 즉, 차수는 더 작을 수 있지만, 차수가 빠지는 방식은 중복된 eigenvalue에서 중복도를 낮추는 방식으로만 일어나며, 따라서 이 과정에서 어떤 eigenvalue도 빠뜨리지 않는다. 
 
 ::: 명제 7
 $n\times n$ 행렬 $A$에 대하여, $m_A$의 근들의 집합은 $A$의 eigenvalue들의 집합과 같다. 
@@ -123,7 +123,7 @@ $$0=m_A(A)v=m_A(\lambda)v$$
 이고 $v\neq 0$이므로 $m_A(\lambda)=0$이다. 즉 모든 eigenvalue는 $m_A$의 근이다. 거꾸로 $\lambda$가 $m_A$의 근이라 하면 [명제 6](#prop6)의 $m_A\mid p_A$로부터 $\lambda$는 $p_A$의 근, 즉 $A$의 eigenvalue이다.
 :::
 
-이제 조르당 표준형을 이용하면 최소다항식의 정확한 형태를 결정할 수 있다. 다음 정리에서 $e_\lambda$는 generalized eigenspace $G_\lambda(A)$ 위에서의 nilpotent operator $(A-\lambda I)\vert_{G_\lambda(A)}$의 nilpotency index, 즉 $\lambda$에 해당하는 가장 큰 Jordan block의 크기이다.
+이제 Jordan canonical form을 이용하면 minimal polynomial의 정확한 형태를 결정할 수 있다. 다음 정리에서 $e_\lambda$는 generalized eigenspace $G_\lambda(A)$ 위에서의 nilpotent operator $(A-\lambda I)\vert_{G_\lambda(A)}$의 nilpotency index, 즉 $\lambda$에 해당하는 가장 큰 Jordan block의 크기이다.
 
 ::: 정리 8
 $\mathbb{K}$가 algebraically closed라 하자. $n\times n$ 행렬 $A$의 서로 다른 eigenvalue들을 $\lambda_1,\ldots,\lambda_r$이라 하면, 다음의 식
@@ -150,7 +150,7 @@ $$p(A)\vert_{G_\lambda(A)}=0\iff (\x-\lambda)^{e_\lambda}\mid p$$
 이제 [§조르당 표준형, ⁋정리 6](/ko/math/linear_algebra/Jordan_canonical_form#thm6)의 분해 $V=\bigoplus_i G_{\lambda_i}(A)$로부터, $p(A)=0$인 것은 모든 $i$에 대하여 $p(A)\vert_{G_{\lambda_i}(A)}=0$인 것과 동치이고, 이는 다시 모든 $i$에 대하여 $(\x-\lambda_i)^{e_{\lambda_i}}\mid p$인 것, 즉 $\prod_i(\x-\lambda_i)^{e_{\lambda_i}}\mid p$인 것과 동치이다. 이러한 monic polynomial 가운데 차수가 가장 작은 것은 $\prod_i(\x-\lambda_i)^{e_{\lambda_i}}$ 자신이므로, 이것이 곧 $m_A$이다.
 :::
 
-특히 최소다항식은 대각화가능성을 간결하게 판정해준다. 
+특히 minimal polynomial은 대각화가능성을 간결하게 판정해준다. 
 
 ::: 따름정리 9
 $\mathbb{K}$가 algebraically closed라 하자. $n\times n$ 행렬 $A$가 diagonalizable인 것은 $m_A$가 서로 다른 일차식들의 곱, 즉
@@ -172,7 +172,7 @@ $$A=\begin{pmatrix}1&1&1\\0&1&1\\0&0&1\end{pmatrix}$$
 
 $$B=\begin{pmatrix}0&1\\1&0\end{pmatrix}$$
 
-의 특성다항식은 $\x^2-1=(\x-1)(\x+1)$이고, $B^2=I$이므로 $(B-I)(B+I)=B^2-I=0$이다. 따라서 $m_B(\x)=(\x-1)(\x+1)$인데, 이는 서로 다른 두 일차식의 곱이므로 [따름정리 9](#cor9)에 의해 $B$는 diagonalizable이다. 즉, 대각화가능성을 가르는 것은 특성다항식이 아니라 최소다항식에 중복인수가 남는지의 여부이며, $A$의 경우 $m_A=(\x-1)^3$에 중복인수가 남아 대각화에 실패한다. 
+의 특성다항식은 $\x^2-1=(\x-1)(\x+1)$이고, $B^2=I$이므로 $(B-I)(B+I)=B^2-I=0$이다. 따라서 $m_B(\x)=(\x-1)(\x+1)$인데, 이는 서로 다른 두 일차식의 곱이므로 [따름정리 9](#cor9)에 의해 $B$는 diagonalizable이다. 즉, 대각화가능성을 가르는 것은 특성다항식이 아니라 minimal polynomial에 중복인수가 남는지의 여부이며, $A$의 경우 $m_A=(\x-1)^3$에 중복인수가 남아 대각화에 실패한다. 
 :::
 
 ## 조르당-슈발레 분해

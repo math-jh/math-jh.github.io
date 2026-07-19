@@ -21,7 +21,7 @@ In this post, we fix an ideal $\mathfrak{a}$ of a ring $A$ and define two graded
 ::: Definition 1
 The *associated graded ring* of $A$ with respect to $\mathfrak{a}$ is defined as
 
-$\gr_\mathfrak{a}A= A/\mathfrak{a}\oplus \mathfrak{a}/\mathfrak{a}^2\oplus\cdots$
+$$\gr_\mathfrak{a}A= A/\mathfrak{a}\oplus \mathfrak{a}/\mathfrak{a}^2\oplus\cdots$$
 :::
 
 In the above definition, the multiplication in $\gr_\mathfrak{a}A$ is defined as follows: given arbitrary $a\in \mathfrak{a}^k/\mathfrak{a}^{k+1}$ and $b\in \mathfrak{a}^l/\mathfrak{a}^{l+1}$, their product $ab$ is obtained by first computing the product $\tilde{a}\tilde{b}$ of representatives $\tilde{a}\in \mathfrak{a}^k$ and $\tilde{b}\in \mathfrak{a}^l$, then restricting the result to $\mathfrak{a}^{k+l}/\mathfrak{a}^{k+l+1}$.
@@ -52,7 +52,7 @@ $$\mathcal{J}:\quad M=M_0\supseteq M_1\supseteq\cdots$$
 
 we define the *associated graded module* of $M$ with respect to $\mathcal{J}$ as
 
-$\gr_\mathcal{J}M=M/M_1\oplus M_1/M_2\oplus\cdots$
+$$\gr_\mathcal{J}M=M/M_1\oplus M_1/M_2\oplus\cdots$$
 :::
 
 In the above definition, $\gr_\mathcal{J}M$ carries a $\gr_\mathfrak{a}A$-module structure: for arbitrary $a\in \mathfrak{a}^k/\mathfrak{a}^{k+1}$ and $x\in M_l/M_{l+1}$, we choose representatives $\tilde{a}\in \mathfrak{a}^k$ and $\tilde{x}\in M_l$, then restrict $\tilde{a}\tilde{x}$ to $M_{k+l}/M_{k+l+1}$; a calculation similar to [Lemma 2](#lem2) shows that this is well-defined. In the special case where $M=A$ and the $M_i$ are ideals of $A$, $\gr_\mathcal{J}A$ also has a ring structure, just as in [Definition 1](#def1), and this too is called the associated graded ring with respect to the filtration $\mathcal{J}$.
@@ -75,7 +75,7 @@ of $\gr_\mathcal{J}M$ suffices to generate all of $\gr_\mathcal{J}M$. The desire
 ::: Definition 5
 For a ring $A$ and an ideal $\mathfrak{a}$, the *blowup algebra* of $\mathfrak{a}$ in $A$ is the following graded $A$-algebra:
 
-$\Bl_\mathfrak{a}A=A\oplus \mathfrak{a}\oplus \mathfrak{a}^2\oplus\cdots\cong A[t \mathfrak{a}]\subseteq A[t]$
+$$\Bl_\mathfrak{a}A=A\oplus \mathfrak{a}\oplus \mathfrak{a}^2\oplus\cdots\cong A[t \mathfrak{a}]\subseteq A[t]$$
 :::
 
 Then $\Bl_\mathfrak{a}A/\mathfrak{a}\Bl_\mathfrak{a}A=\gr_\mathfrak{a}A$ is obvious. More generally, for any $A$-module $M$ and $\mathfrak{a}$-filtration $\mathcal{J}: M_0\supseteq M_1\supseteq\cdots$, one can also easily verify that $\Bl_\mathcal{J}M =M\oplus M_1\oplus\cdots$ defined by the formula above becomes a graded $\Bl_\mathfrak{a}A$-module. We now have the following.

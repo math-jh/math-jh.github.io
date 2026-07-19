@@ -96,7 +96,7 @@ $$f(\lambda x_0,\ldots, \lambda x_n)=\lambda^{\deg f} f(x_0,\ldots, x_n),\qquad 
 
 이 성립하기 때문이다. 
 
-즉, $\mathbb{P}^n$을 스펙트럼과 비슷한 방식으로 설명하기 위해서는 $\mathbb{A}^{n+1}$을 단순한 ring $\mathbb{K}[\x_0,\ldots, \x_n]$의 spectrum으로 볼 것이 아니라, 여기에 degree에 대한 정보를 추가하여 이를 *graded* ring으로 보고, 임의의 원소들의 zero locus가 아닌 *homogeneous*한 원소들의 zero locus를 보아야 한다. 그럼 [\[대수적 구조\] §등급환, ⁋명제 6](/ko/math/algebraic_structures/graded_rings#prop6)를 생각하면 우리의 관심사 또한 *homogeneous* ideal들이 되어야 할 것이다. 
+즉, $\mathbb{P}^n$을 spectrum과 비슷한 방식으로 설명하기 위해서는 $\mathbb{A}^{n+1}$을 단순한 ring $\mathbb{K}[\x_0,\ldots, \x_n]$의 spectrum으로 볼 것이 아니라, 여기에 degree에 대한 정보를 추가하여 이를 *graded* ring으로 보고, 임의의 원소들의 zero locus가 아닌 *homogeneous*한 원소들의 zero locus를 보아야 한다. 그럼 [\[대수적 구조\] §등급환, ⁋명제 6](/ko/math/algebraic_structures/graded_rings#prop6)를 생각하면 우리의 관심사 또한 *homogeneous* ideal들이 되어야 할 것이다. 
 
 이번 글의 남은 부분에서 우리는 graded ring에 $\Proj$를 취하여 projective scheme을 얻어내는 과정을 따라간다. 이를 위해 몇몇 표기를 고정한다. 
 
@@ -147,7 +147,7 @@ Graded ring $A_\bullet$에 대하여 다음이 성립한다.
 4. 임의의 homogeneous ideal $\mathfrak{a}$에 대하여, $Z_+(\mathfrak{a})=Z_+(\mathfrak{a}\cap A_+)$이다. 
 :::
 
-물론 위의 보조정리에서 등장하는 $\mathfrak{a}\mathfrak{b}$나 $\sqrt{\mathfrak{a}}$, $\sum \mathfrak{a}_i$들은 homogeneous임이 자명하다. 그럼 첫째 결과부터 셋째 결과까지는 이미 스펙트럼에서 관찰한 결과들이며, 오직 넷째 결과만이 새롭다. 
+물론 위의 보조정리에서 등장하는 $\mathfrak{a}\mathfrak{b}$나 $\sqrt{\mathfrak{a}}$, $\sum \mathfrak{a}_i$들은 homogeneous임이 자명하다. 그럼 첫째 결과부터 셋째 결과까지는 이미 spectrum에서 관찰한 결과들이며, 오직 넷째 결과만이 새롭다. 
 
 ::: 증명 (보조정리 3)
 1. $\mathfrak{a}$ 혹은 $\mathfrak{b}$를 포함하는 homogeneous prime ideal $\mathfrak{p}$는 그보다 작은 homogeneous ideal $\mathfrak{a}\mathfrak{b}$ 또한 포함하는 것이 자명하므로, 반대방향 포함관계만 보이면 충분하다. $\mathfrak{p}\supset \mathfrak{a}\mathfrak{b}$라 가정하자. 만일 $\mathfrak{p}\not\supseteq \mathfrak{b}$라 하면, $b\not\in \mathfrak{p}$인 $\mathfrak{b}$의 원소 $b$를 찾을 수 있다. 그럼 $\mathfrak{b}$가 homogeneous이므로, 이를 homogeneous element들의 합으로 분해하여
@@ -202,7 +202,7 @@ $$D_+(\mathfrak{a})=\bigcup_{i\in I} D_+(f_i)$$
 이다. 
 :::
 
-한편, 우리는 ring $A$의 스펙트럼 $\Spec A$에서, 임의의 원소 $f\in A$를 택하면 $D(f)$는 (scheme으로서) $\Spec A_f$와 isomorphic한 것을 살펴보았다. 비슷한 결과가 $D_+(f)$에 대해서도 성립한다.
+한편, 우리는 ring $A$의 spectrum $\Spec A$에서, 임의의 원소 $f\in A$를 택하면 $D(f)$는 (scheme으로서) $\Spec A_f$와 isomorphic한 것을 살펴보았다. 비슷한 결과가 $D_+(f)$에 대해서도 성립한다.
 
 ::: 보조정리 8
 Graded ring $A_\bullet$과 임의의 homogeneous element $f\in A_\bullet$에 대하여, 함수 $D_+(f) \rightarrow \Spec A_{(f)}$를 다음의 식

@@ -236,7 +236,7 @@ $\mathbb{K}$-algebra $E$의 algebraic element $x\in E$에 대하여, $x$의 degr
 Degree $n$ $\mathbb{K}$-extension $\mathbb{L}$은 반드시 algebraic extension이며, $\mathbb{L}$의 임의의 원소의 degree는 $n$의 약수이다. 
 :::
 ::: 증명
-$[\mathbb{L}:\mathbb{K}]=[\mathbb{L}:\mathbb{K}(x)][\mathbb{K}(x):\mathbb{K}].$
+$$[\mathbb{L}:\mathbb{K}]=[\mathbb{L}:\mathbb{K}(x)][\mathbb{K}(x):\mathbb{K}].$$
 :::
 
 이를 귀납적으로 확장하면 다음을 얻는다. 

@@ -61,7 +61,7 @@ In this formula, the newly introduced $H$ denotes the *Hamiltonian*, and for our
 ::: Proposition 1
 A path $z(t)=(x(t),y(t))$ ($t_0\leq t\leq t_1$) in phase space is an extremum of $\mathcal{A}_H$ among paths satisfying the boundary conditions $x(t_0)=x_0$, $x(t_1)=x_1$ if and only if $z$ satisfies the following *Hamilton's equations*
 
-$\dot{x}=\frac{\partial H_t}{\partial y},\quad \dot{y}=-\frac{\partial H_t}{\partial x}$
+$$\dot{x}=\frac{\partial H_t}{\partial y},\quad \dot{y}=-\frac{\partial H_t}{\partial x}$$
 :::
 ::: Proof
 To prove this, suppose a 1-parameter family of paths $(z_s)=(x_s,y_s)$ satisfying the boundary conditions $x_s(t_0)=x_0$, $x_s(t_1)=x_1$ is given, and let $z_0=z$. Then

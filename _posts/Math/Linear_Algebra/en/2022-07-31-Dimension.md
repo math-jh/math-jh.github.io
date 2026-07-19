@@ -204,7 +204,7 @@ $$(\beta_1-\alpha_1')y_1+\cdots+(\beta_k-\alpha_k')y_k+\beta_{k+1}y_{k+1}+\cdots
 
 so by the linear independence of $\mathcal{B}_1$ all coefficients are zero, and in particular $\beta_{k+1}=\cdots=\beta_m=0$. Similarly, from the second equality $\gamma_{k+1}=\cdots=\gamma_n=0$, and then the remaining equation from (2) is simply $\alpha_1x_1+\cdots+\alpha_kx_k=0$; but since $x_1,\ldots,x_k$ form a basis of $W_1\cap W_2$, by linear independence again these are all zero. Thus $\mathcal{B}_1\cup\mathcal{B}_2$ is a linearly independent subset spanning $W_1+W_2$, and therefore a basis of $W_1+W_2$. Hence
 
-$\dim(W_1+W_2)=\lvert\mathcal{B}_1\cup\mathcal{B}_2\rvert=\lvert\mathcal{B}_1\rvert+\lvert\mathcal{B}_2\rvert-\lvert\mathcal{B}_0\rvert=\dim W_1+\dim W_2-\dim(W_1\cap W_2).$
+$$\dim(W_1+W_2)=\lvert\mathcal{B}_1\cup\mathcal{B}_2\rvert=\lvert\mathcal{B}_1\rvert+\lvert\mathcal{B}_2\rvert-\lvert\mathcal{B}_0\rvert=\dim W_1+\dim W_2-\dim(W_1\cap W_2).$$
 :::
 
 

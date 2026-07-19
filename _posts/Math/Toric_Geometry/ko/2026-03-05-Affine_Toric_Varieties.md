@@ -156,7 +156,7 @@ $$\begin{vmatrix} 0 & 2 \\ 1 & -1 \end{vmatrix} = -2$$
 
 $$\mathbb{C}[S_\sigma] \cong \mathbb{C}[x, y, z]/(xz - y^2)$$
 
-이 되어, $U_\sigma$는 원점에 $A_1$ 특이점을 갖는 affine toric variety가 된다. 일반적으로 행렬식이 $\pm d$이면 $U_\sigma$는 원점에 $\mathbb{Z}/d$ quotient singularity를 갖는다.
+이 되어, $U_\sigma$는 원점에 $A_1$ singular point를 갖는 affine toric variety가 된다. 일반적으로 행렬식이 $\pm d$이면 $U_\sigma$는 원점에 $\mathbb{Z}/d$ quotient singularity를 갖는다.
 
 ## 토러스 작용
 
@@ -349,7 +349,7 @@ Affine toric variety $U_\sigma$에 대해 다음이 성립한다:
 :::
 
 ::: 증명
-1. Normality의 경우, Gordan's lemma에 의해 $S_\sigma = \sigma^\vee \cap M$은 finitely generated semigroup이다. 더욱이 $S_\sigma$는 *saturated*이다: 즉 $k \cdot u \in S_\sigma$인 $k \in \mathbb{Z}_{>0}$와 $u \in M$에 대해 $u \in S_\sigma$이다. 이는 $\langle u, v \rangle \ge 0$가 $\sigma$ 위에서 성립함을 의미한다. Affine semigroup algebra가 normal domain이 되는 것은 그 semigroup이 saturated인 것과 동치이므로, $\mathbb{C}[S_\sigma]$는 normal domain이고 그 스펙트럼인 $U_\sigma$는 normal이다.
+1. Normality의 경우, Gordan's lemma에 의해 $S_\sigma = \sigma^\vee \cap M$은 finitely generated semigroup이다. 더욱이 $S_\sigma$는 *saturated*이다: 즉 $k \cdot u \in S_\sigma$인 $k \in \mathbb{Z}_{>0}$와 $u \in M$에 대해 $u \in S_\sigma$이다. 이는 $\langle u, v \rangle \ge 0$가 $\sigma$ 위에서 성립함을 의미한다. Affine semigroup algebra가 normal domain이 되는 것은 그 semigroup이 saturated인 것과 동치이므로, $\mathbb{C}[S_\sigma]$는 normal domain이고 그 spectrum인 $U_\sigma$는 normal이다.
 2. Irreducibility의 경우, $S_\sigma$는 torsion-free abelian group $M$의 부분 semigroup이므로, $\mathbb{C}[S_\sigma]$에는 zero divisor가 존재하지 않는다. 따라서 $\mathbb{C}[S_\sigma]$는 integral domain이고 $U_\sigma = \Spec(\mathbb{C}[S_\sigma])$는 irreducible이다.
 3. $\mathbb{C}[S_\sigma] \subseteq \mathbb{C}[M]$이므로 fraction field는 $\mathbb{C}(M)$에 포함된다. 한편 $\sigma$가 strongly convex이므로 $\sigma^\vee$는 $M_{\mathbb{R}}$에서 full-dimensional cone이며, 따라서 $\sigma^\vee$ 내부에 lattice point $u_0 \in M$이 존재한다. 임의의 $m \in M$에 대해 충분히 큰 $N$을 잡으면 $Nu_0$과 $Nu_0 + m$이 모두 $S_\sigma$에 속하므로 $m = (Nu_0 + m) - Nu_0$로 $S_\sigma$가 group으로서 $M$ 전체를 생성하고, $\mathbb{C}[S_\sigma]$의 fraction field는 정확히 $\mathbb{C}(M)$과 일치한다. $M \cong \mathbb{Z}^n$이므로 $\mathbb{C}(M)$의 transcendence degree는 $n$이고, 이로부터 $\dim U_\sigma = n$이 성립한다.
 :::

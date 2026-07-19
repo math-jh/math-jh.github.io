@@ -15,7 +15,7 @@ weight: 7
 published: false
 ---
 
-[\[대수다양체\] §교차곱, ⁋정의 7](/ko/math/algebraic_varieties/intersection_product#def7)에서 우리는 smooth variety $X$의 Chow group들 $\CH^\ast(X) = \bigoplus_k \CH^k(X)$이 intersection product에 의해 graded ring을 이룸을 보았고, 이를 Chow ring이라 불렀다. 일반적인 variety에서 Chow ring을 명시적으로 계산하는 일은 대단히 어렵지만, toric variety의 경우 모든 것이 fan $\Sigma$의 조합론으로 환원된다. 이번 글의 목표는 smooth complete toric variety $X_\Sigma$에 대해 그 Chow ring을 fan의 데이터로 완전히 기술하고, torus-invariant divisor들의 교차수를 cone과 polytope으로부터 직접 읽어내는 방법을 정리하는 것이다.
+[\[대수다양체\] §교차곱, ⁋정의 7](/ko/math/algebraic_varieties/intersection_product#def7)에서 우리는 smooth variety $X$의 Chow group들 $\CH^\ast(X) = \bigoplus_k \CH^k(X)$이 intersection product에 의해 graded ring을 이룸을 보았고, 이를 Chow ring이라 불렀다. 일반적인 variety에서 Chow ring을 명시적으로 계산하는 일은 대단히 어렵지만, toric variety의 경우 모든 것이 fan $\Sigma$의 조합론으로 환원된다. 이번 글의 목표는 smooth complete toric variety $X_\Sigma$에 대해 그 Chow ring을 fan의 데이터로 완전히 기술하고, torus-invariant divisor들의 intersection number를 cone과 polytope으로부터 직접 읽어내는 방법을 정리하는 것이다.
 
 이하에서 $N \cong \mathbb{Z}^n$은 rank $n$의 lattice, $M = \Hom_\mathbb{Z}(N, \mathbb{Z})$는 그 dual lattice이며, $\Sigma$는 $N_\mathbb{R}$ 위의 fan으로 그것이 정의하는 toric variety $X_\Sigma$가 smooth complete라고 가정한다. $\Sigma(d)$로 $\Sigma$의 $d$차원 cone들의 모임을, $\Sigma(1)$로 ray들의 모임을 적으며, 각 $\rho \in \Sigma(1)$에 대해 $v_\rho \in N$은 그 primitive generator이다. $X_\Sigma$가 smooth이므로 ([§토릭 다양체의 정의, ⁋명제 11](/ko/math/toric_geometry/toric_varieties#prop11)) 모든 cone $\sigma \in \Sigma$의 generator들은 lattice $N$의 $\mathbb{Z}$-basis의 일부를 이룬다 ([§아핀 토릭 다양체, ⁋정의 8](/ko/math/toric_geometry/affine_toric_varieties#def8)).
 
@@ -24,7 +24,7 @@ published: false
 [§토릭 다양체의 정의, ⁋명제 5](/ko/math/toric_geometry/toric_varieties#prop5) 직후에 보았듯, $X_\Sigma$의 $T_N$-action에 의한 orbit들은 fan의 cone들과 일대일 대응한다. 구체적으로 $d$차원 cone $\sigma \in \Sigma(d)$에 대응하는 orbit $O(\sigma)$는 차원 $n - d$의 torus $(\mathbb{C}^\ast)^{n-d}$와 isomorphic하다. Chow ring을 다루기 위해서는 이 orbit이 아니라 그 Zariski closure가 필요하다.
 
 ::: 정의 1
-Cone $\sigma \in \Sigma$에 대해, orbit $O(\sigma)$의 Zariski closure를 *orbit closure<sub>궤도 폐포</sub>* $V(\sigma)$라 적는다. 즉
+Cone $\sigma \in \Sigma$에 대해, orbit $O(\sigma)$의 Zariski closure를 *orbit closure<sub>궤도 closure</sub>* $V(\sigma)$라 적는다. 즉
 
 $$V(\sigma) = \overline{O(\sigma)} \subseteq X_\Sigma$$
 
@@ -35,7 +35,7 @@ $O(\sigma)$의 차원이 $n - d$이므로 $V(\sigma)$는 codimension $d$의 irre
 
 반대편 극단으로, $X_\Sigma$가 complete이고 $\sigma$가 maximal cone, 즉 $\dim \sigma = n$이면 $O(\sigma)$는 $0$차원 orbit, 즉 $T_N$의 fixed point이며 $V(\sigma)$는 그 한 점이다. 이는 $\CH^n(X_\Sigma)$의 class를 준다.
 
-Orbit closure $V(\sigma)$ 자체도 toric variety의 구조를 갖는다. 더 정확히는, $\sigma$를 포함하는 cone들이 quotient lattice $N(\sigma) = N / (N \cap \mathbb{R}\sigma)$ 안에서 *star* $\operatorname{Star}(\sigma)$라 불리는 fan을 이루고, $V(\sigma)$는 이 fan이 정의하는 toric variety와 동형이다. 이 사실은 orbit closure 사이의 교차를 다시 더 작은 toric variety 위의 문제로 환원해 주며, 아래 교차수 계산의 바탕이 된다.
+Orbit closure $V(\sigma)$ 자체도 toric variety의 구조를 갖는다. 더 정확히는, $\sigma$를 포함하는 cone들이 quotient lattice $N(\sigma) = N / (N \cap \mathbb{R}\sigma)$ 안에서 *star* $\operatorname{Star}(\sigma)$라 불리는 fan을 이루고, $V(\sigma)$는 이 fan이 정의하는 toric variety와 isomorphic이다. 이 사실은 orbit closure 사이의 교차를 다시 더 작은 toric variety 위의 문제로 환원해 주며, 아래 intersection number 계산의 바탕이 된다.
 
 ## Linear relation과 Stanley-Reisner relation
 
@@ -69,9 +69,9 @@ $$\sum_{\rho \in \Sigma(1)} \langle m, v_\rho \rangle [D_\rho] = 0$$
 :::
 
 ::: 증명
-(1) 먼저 $k = 2$인 경우를 보고 귀납적으로 일반화한다. 두 ray $\rho_1, \rho_2$가 $2$차원 cone $\tau = \rho_1 + \rho_2 \in \Sigma$를 이룬다고 하자. $X_\Sigma$가 smooth이므로 $v_{\rho_1}, v_{\rho_2}$는 $N$의 $\mathbb{Z}$-basis의 일부를 이루며, 두 divisor $D_{\rho_1}, D_{\rho_2}$는 affine chart $U_\tau \cong \mathbb{C}^n$ 위에서 서로 다른 두 좌표 hyperplane으로 나타난다. 이 두 hyperplane은 transverse하게 만나므로 그 교차는 정확히 codimension $2$의 부분다양체 $V(\tau)$이고, 교차 중복도는 $1$이다 ([\[대수다양체\] §교차곱, ⁋명제 4](/ko/math/algebraic_varieties/intersection_product#prop4)). 따라서 $[D_{\rho_1}] \cdot [D_{\rho_2}] = [V(\tau)]$이다.
+(1) 먼저 $k = 2$인 경우를 보고 귀납적으로 일반화한다. 두 ray $\rho_1, \rho_2$가 $2$차원 cone $\tau = \rho_1 + \rho_2 \in \Sigma$를 이룬다고 하자. $X_\Sigma$가 smooth이므로 $v_{\rho_1}, v_{\rho_2}$는 $N$의 $\mathbb{Z}$-basis의 일부를 이루며, 두 divisor $D_{\rho_1}, D_{\rho_2}$는 affine chart $U_\tau \cong \mathbb{C}^n$ 위에서 서로 다른 두 좌표 hyperplane으로 나타난다. 이 두 hyperplane은 transverse하게 만나므로 그 교차는 정확히 codimension $2$의 부분다양체 $V(\tau)$이고, intersection multiplicity는 $1$이다 ([\[대수다양체\] §교차곱, ⁋명제 4](/ko/math/algebraic_varieties/intersection_product#prop4)). 따라서 $[D_{\rho_1}] \cdot [D_{\rho_2}] = [V(\tau)]$이다.
 
-이제 $\sigma = \rho_1 + \cdots + \rho_k$가 smooth cone이라 하자. Affine chart $U_\sigma \cong \mathbb{C}^n$ 위에서 $v_{\rho_1}, \ldots, v_{\rho_k}$는 $N$의 basis $v_{\rho_1}, \ldots, v_{\rho_n}$로 확장되며, 각 $D_{\rho_i}$는 이에 dual인 좌표 $\rchi^{v_{\rho_i}^\ast}$의 zero locus, 즉 한 좌표 hyperplane으로 나타난다. 서로 다른 $k$개의 좌표 hyperplane들은 transverse하게 만나 codimension $k$의 좌표 부분공간 $V(\sigma)$를 이루고, 그 교차 중복도는 모두 $1$이다. Chow ring의 결합성과 ([\[대수다양체\] §교차곱, ⁋명제 6](/ko/math/algebraic_varieties/intersection_product#prop6)) 위 $k=2$ 계산을 반복 적용하면
+이제 $\sigma = \rho_1 + \cdots + \rho_k$가 smooth cone이라 하자. Affine chart $U_\sigma \cong \mathbb{C}^n$ 위에서 $v_{\rho_1}, \ldots, v_{\rho_k}$는 $N$의 basis $v_{\rho_1}, \ldots, v_{\rho_n}$로 확장되며, 각 $D_{\rho_i}$는 이에 dual인 좌표 $\rchi^{v_{\rho_i}^\ast}$의 zero locus, 즉 한 좌표 hyperplane으로 나타난다. 서로 다른 $k$개의 좌표 hyperplane들은 transverse하게 만나 codimension $k$의 좌표 부분공간 $V(\sigma)$를 이루고, 그 intersection multiplicity는 모두 $1$이다. Chow ring의 결합성과 ([\[대수다양체\] §교차곱, ⁋명제 6](/ko/math/algebraic_varieties/intersection_product#prop6)) 위 $k=2$ 계산을 반복 적용하면
 
 $$[D_{\rho_1}] \cdots [D_{\rho_k}] = [V(\sigma)]$$
 
@@ -137,12 +137,12 @@ $\varphi$가 $\mathcal{I}_{SR}$과 $\mathcal{J}_{\mathrm{lin}}$을 모두 $0$으
 
 ## 교차수와 polytope
 
-Chow ring을 알면 $0$차원 class까지 곱을 내려보내 *교차수*를 얻을 수 있다. $X_\Sigma$가 complete이므로 $\CH^n(X_\Sigma) \cong \mathbb{Z}$이며, 한 점의 class $[\mathrm{pt}]$가 generator이다. Codimension의 합이 $n$인 divisor들의 곱은 $\CH^n(X_\Sigma)$의 원소, 즉 정수배의 점이 되고, 그 정수를 교차수라 부른다. Smooth case에서 이 교차수는 maximal cone의 조합론으로 직접 읽힌다.
+Chow ring을 알면 $0$차원 class까지 곱을 내려보내 *intersection number*를 얻을 수 있다. $X_\Sigma$가 complete이므로 $\CH^n(X_\Sigma) \cong \mathbb{Z}$이며, 한 점의 class $[\mathrm{pt}]$가 generator이다. Codimension의 합이 $n$인 divisor들의 곱은 $\CH^n(X_\Sigma)$의 원소, 즉 정수배의 점이 되고, 그 정수를 intersection number라 부른다. Smooth case에서 이 intersection number는 maximal cone의 조합론으로 직접 읽힌다.
 
 ::: 명제 7
-$X_\Sigma$가 smooth complete toric variety이고 $\rho_1, \ldots, \rho_n \in \Sigma(1)$이 서로 다른 ray라 하자. 그러면 교차수 $D_{\rho_1} \cdots D_{\rho_n} \in \CH^n(X_\Sigma) \cong \mathbb{Z}$는 다음과 같다.
+$X_\Sigma$가 smooth complete toric variety이고 $\rho_1, \ldots, \rho_n \in \Sigma(1)$이 서로 다른 ray라 하자. 그러면 intersection number $D_{\rho_1} \cdots D_{\rho_n} \in \CH^n(X_\Sigma) \cong \mathbb{Z}$는 다음과 같다.
 
-$D_{\rho_1} \cdots D_{\rho_n} = \begin{cases} 1 & \text{if } \rho_1 + \cdots + \rho_n \in \Sigma(n), \\ 0 & \text{otherwise.} \end{cases}$
+$$D_{\rho_1} \cdots D_{\rho_n} = \begin{cases} 1 & \text{if } \rho_1 + \cdots + \rho_n \in \Sigma(n), \\ 0 & \text{otherwise.} \end{cases}$$
 :::
 
 ::: 증명
@@ -150,12 +150,12 @@ $D_{\rho_1} \cdots D_{\rho_n} = \begin{cases} 1 & \text{if } \rho_1 + \cdots + \
 
 $$D_{\rho_1} \cdots D_{\rho_n} = [V(\sigma)]$$
 
-이다. $\sigma$가 maximal cone이고 $X_\Sigma$가 complete이므로 $V(\sigma)$는 $T_N$의 fixed point 하나, 즉 한 점이다. 따라서 $[V(\sigma)] = [\mathrm{pt}]$이고 교차수는 $1$이다. (Smoothness에 의해 $\mult(\sigma) = 1$이므로 참고 3의 일반 공식에서도 같은 값을 얻는다.)
+이다. $\sigma$가 maximal cone이고 $X_\Sigma$가 complete이므로 $V(\sigma)$는 $T_N$의 fixed point 하나, 즉 한 점이다. 따라서 $[V(\sigma)] = [\mathrm{pt}]$이고 intersection number는 $1$이다. (Smoothness에 의해 $\mult(\sigma) = 1$이므로 참고 3의 일반 공식에서도 같은 값을 얻는다.)
 :::
 
-명제 7은 smooth complete toric variety의 모든 top-degree 교차수를 maximal cone의 목록으로부터 즉시 읽게 해 준다. 같은 ray가 중복되어 나타나는 self-intersection $D_{\rho_1}^{a_1} \cdots D_{\rho_s}^{a_s}$ ($\sum a_i = n$)의 경우에는 명제 7만으로는 부족하고 linear relation을 사용하여 중복된 ray를 다른 ray들로 바꿔 써야 한다. 아래 예시들에서 이 계산을 구체적으로 수행한다.
+명제 7은 smooth complete toric variety의 모든 top-degree intersection number를 maximal cone의 목록으로부터 즉시 읽게 해 준다. 같은 ray가 중복되어 나타나는 self-intersection $D_{\rho_1}^{a_1} \cdots D_{\rho_s}^{a_s}$ ($\sum a_i = n$)의 경우에는 명제 7만으로는 부족하고 linear relation을 사용하여 중복된 ray를 다른 ray들로 바꿔 써야 한다. 아래 예시들에서 이 계산을 구체적으로 수행한다.
 
-한편 $D_\rho$들이 nef인 ample divisor를 이룰 때에는 교차수가 대응 polytope의 부피로 해석된다. [§토러스 인자와 선다발, ⁋명제 9](/ko/math/toric_geometry/toric_divisors#prop9)에서 보았듯 ample torus-invariant divisor $D = \sum_\rho a_\rho D_\rho$는 strictly convex piecewise linear function $\psi_D$를 통해 lattice polytope
+한편 $D_\rho$들이 nef인 ample divisor를 이룰 때에는 intersection number가 대응 polytope의 부피로 해석된다. [§토러스 인자와 선다발, ⁋명제 9](/ko/math/toric_geometry/toric_divisors#prop9)에서 보았듯 ample torus-invariant divisor $D = \sum_\rho a_\rho D_\rho$는 strictly convex piecewise linear function $\psi_D$를 통해 lattice polytope
 
 $$P_D = \{m \in M_\mathbb{R} \mid \langle m, v_\rho \rangle \ge -a_\rho \text{ for all } \rho \in \Sigma(1)\}$$
 
@@ -166,7 +166,7 @@ $X_\Sigma$가 $n$차원 smooth complete toric variety이고 $D$가 ample torus-i
 
 $$D^n = n!\, \vol(P_D)$$
 
-이 성립한다. 여기서 $\vol(P_D)$는 lattice $M$에 대한 Euclidean volume, 즉 unit lattice cube의 부피를 $1$로 정규화한 부피이다.
+이 성립한다. 여기서 $\vol(P_D)$는 lattice $M$에 대한 Euclidean volume, 즉 unit lattice cube의 부피를 $1$로 normalize한 부피이다.
 :::
 
 ::: 증명
@@ -204,7 +204,7 @@ $$\CH^\ast(\mathbb{P}^n) \cong \mathbb{Z}[\x_0, \ldots, \x_n] / (\x_0 \cdots \x_
 
 $$\CH^\ast(\mathbb{P}^n) \cong \mathbb{Z}[H] / (H^{n+1})$$
 
-을 회복한다. 이는 [\[대수다양체\] §교차곱, ⁋예시 10](/ko/math/algebraic_varieties/intersection_product#ex10)의 결과와 정확히 일치한다. 교차수의 관점에서, 명제 7에 의해 서로 다른 $n$개의 $D_i$의 곱은 그들이 maximal cone을 이루므로 항상 $1$이고, 가령 $D_1 \cdots D_n = [\mathrm{pt}]$이다. 한편 $H^n = D_0^n$은 linear relation으로 $D_0 = D_1 = \cdots$이 되므로 $D_0^n = D_1 D_2 \cdots D_n = 1$로 계산되어 같은 답을 준다.
+을 회복한다. 이는 [\[대수다양체\] §교차곱, ⁋예시 10](/ko/math/algebraic_varieties/intersection_product#ex10)의 결과와 정확히 일치한다. intersection number의 관점에서, 명제 7에 의해 서로 다른 $n$개의 $D_i$의 곱은 그들이 maximal cone을 이루므로 항상 $1$이고, 가령 $D_1 \cdots D_n = [\mathrm{pt}]$이다. 한편 $H^n = D_0^n$은 linear relation으로 $D_0 = D_1 = \cdots$이 되므로 $D_0^n = D_1 D_2 \cdots D_n = 1$로 계산되어 같은 답을 준다.
 :::
 
 ## 사영선의 곱
@@ -228,13 +228,13 @@ $$\mathcal{I}_{SR} = (\x_1 \x_3,\ \x_2 \x_4)$$
 
 $$\CH^\ast(\mathbb{P}^1 \times \mathbb{P}^1) \cong \mathbb{Z}[H_1, H_2] / (H_1^2,\ H_2^2)$$
 
-을 얻는다. 이는 [\[대수다양체\] §교차곱, ⁋예시 12](/ko/math/algebraic_varieties/intersection_product#ex12)의 결과와 일치한다. 교차수를 직접 확인하면, $\rho_1, \rho_2$는 maximal cone $\sigma_{12}$를 이루므로 명제 7에 의해 $D_1 D_2 = H_1 H_2 = 1 = [\mathrm{pt}]$이고, $\rho_1, \rho_3$은 cone을 이루지 않으므로 $D_1 D_3 = H_1^2 = 0$이다. 따라서 두 곡선 $C = aH_1 + bH_2$, $C' = a'H_1 + b'H_2$의 교차수는
+을 얻는다. 이는 [\[대수다양체\] §교차곱, ⁋예시 12](/ko/math/algebraic_varieties/intersection_product#ex12)의 결과와 일치한다. intersection number를 직접 확인하면, $\rho_1, \rho_2$는 maximal cone $\sigma_{12}$를 이루므로 명제 7에 의해 $D_1 D_2 = H_1 H_2 = 1 = [\mathrm{pt}]$이고, $\rho_1, \rho_3$은 cone을 이루지 않으므로 $D_1 D_3 = H_1^2 = 0$이다. 따라서 두 곡선 $C = aH_1 + bH_2$, $C' = a'H_1 + b'H_2$의 intersection number는
 
 $$C \cdot C' = (aH_1 + bH_2)(a'H_1 + b'H_2) = (ab' + a'b)\, H_1 H_2 = ab' + a'b$$
 
 이다.
 
-이를 polytope 부피로도 확인할 수 있다. Ample divisor $D = H_1 + H_2$에 대응하는 polytope $P_D$는 정사각형 $[0,1] \times [0,1]$로 그 정규화 부피가 $1$이며, 명제 8에 의해 $D^2 = 2!\cdot 1 = 2$이다. 한편 Chow ring에서 $D^2 = (H_1 + H_2)^2 = H_1^2 + 2 H_1 H_2 + H_2^2 = 2 H_1 H_2 = 2$로 같은 값을 얻는다.
+이를 polytope 부피로도 확인할 수 있다. Ample divisor $D = H_1 + H_2$에 대응하는 polytope $P_D$는 정사각형 $[0,1] \times [0,1]$로 그 normalization 부피가 $1$이며, 명제 8에 의해 $D^2 = 2!\cdot 1 = 2$이다. 한편 Chow ring에서 $D^2 = (H_1 + H_2)^2 = H_1^2 + 2 H_1 H_2 + H_2^2 = 2 H_1 H_2 = 2$로 같은 값을 얻는다.
 :::
 
 ## 토릭 blow-up
@@ -272,7 +272,7 @@ $$\x_0 \x_3 = H E = 0, \qquad \x_1 \x_2 = (H - E)^2 = 0$$
 
 $$\CH^\ast(\Bl_p \mathbb{P}^2) \cong \mathbb{Z}[H, E] / (HE,\ H^2 + E^2)$$
 
-이며, 교차수의 관점에서
+이며, intersection number의 관점에서
 
 $$H^2 = 1, \qquad H \cdot E = 0, \qquad E^2 = -1$$
 

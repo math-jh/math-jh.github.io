@@ -15,7 +15,7 @@ published: false
 
 ---
 
-[§사교다양체, ⁋참고 8](/ko/math/symplectic_geometry/symplectic_manifold#rmk8)에서 우리는 임의의 symplectic manifold $(M,\omega)$가 각 점 근방에서 표준 모델 $(\mathbb{R}^{2n},\omega_0)$과 symplectomorphic하다는 *Darboux 정리*를 예고하였다. 이는 symplectic 기하가 리만 기하와 근본적으로 다른 지점이다. 리만 기하에서는 곡률이라는 국소 불변량이 존재하여, 두 리만 다양체가 국소적으로 isometric하려면 곡률 텐서가 일치해야 한다. 반면 symplectic 기하에는 이러한 국소 불변량이 전혀 없다. 모든 symplectic manifold는 같은 차원이라면 국소적으로 완전히 동일하게 생겼으며, symplectic 기하의 모든 비자명한 내용은 대역적인 차원에서 비로소 나타난다.
+[§사교다양체, ⁋참고 8](/ko/math/symplectic_geometry/symplectic_manifold#rmk8)에서 우리는 임의의 symplectic manifold $(M,\omega)$가 각 점 근방에서 표준 모델 $(\mathbb{R}^{2n},\omega_0)$과 symplectomorphic하다는 *Darboux 정리*를 예고하였다. 이는 symplectic 기하가 리만 기하와 근본적으로 다른 지점이다. 리만 기하에서는 곡률이라는 국소 불변량이 존재하여, 두 리만 manifold가 국소적으로 isometric하려면 곡률 텐서가 일치해야 한다. 반면 symplectic 기하에는 이러한 국소 불변량이 전혀 없다. 모든 symplectic manifold는 같은 차원이라면 국소적으로 완전히 동일하게 생겼으며, symplectic 기하의 모든 비자명한 내용은 대역적인 차원에서 비로소 나타난다.
 
 이 사실을 증명하는 현대적인 방법은 J. Moser가 1965년에 도입한 *Moser의 방법<sub>Moser's method</sub>*, 혹은 *Moser의 trick*이다. 그 핵심은 두 symplectic form을 직선으로 잇는 경로 $\omega_t$를 만든 뒤, 이 경로를 따라 form을 옮겨 주는 시간의존 벡터장을 nondegeneracy를 이용해 풀어내는 것이다. 이 방법은 Darboux 정리뿐 아니라 그 대역적 일반화인 Moser 안정성 정리까지 한꺼번에 준다. 우리는 먼저 증명에 필요한 Poincaré lemma의 정밀한 형태를 정리한 후, Moser의 방법을 전개하여 Darboux 정리를 증명하고, 끝으로 Moser 안정성 정리를 서술한다.
 

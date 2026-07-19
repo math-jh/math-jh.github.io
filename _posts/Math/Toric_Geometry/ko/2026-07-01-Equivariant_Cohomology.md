@@ -24,7 +24,7 @@ published: false
 
 ## Borel 구성
 
-우리는 $EG$를 곱하여 작용을 free하게 만든 뒤 quotient를 취하는 위 아이디어를 정의로 옮긴다. [\[대수적 위상수학\] §분류공간, ⁋정의 6](/ko/math/algebraic_topology/classifying_spaces#def6)에서 구성한 universal bundle $EG\rightarrow BG$와 분류공간 $BG$를 다시 쓰면, $EG$는 contractible하며 $G$는 그 위에 right action으로 free하게 작용한다. 한편 $X$ 위의 $G$-작용은 왼쪽 작용으로 둔다.
+우리는 $EG$를 곱하여 작용을 free하게 만든 뒤 quotient를 취하는 위 아이디어를 정의로 옮긴다. [\[대수적 위상수학\] §분류공간, ⁋정의 6](/ko/math/algebraic_topology/classifying_spaces#def6)에서 구성한 universal bundle $EG\rightarrow BG$와 분류공간 $BG$를 다시 쓰면, $EG$는 contractible하며 $G$는 그 위에 right action으로 free하게 작용한다. 한편 $X$ 위의 $G$-작용은 left action으로 둔다.
 
 ::: 정의 1
 Topological group $G$와 left $G$-space $X$에 대하여, 곱공간 $EG\times X$ 위에 $G$-작용을
@@ -98,7 +98,7 @@ $$H_G^\bullet(X)=H^\bullet(X_G)\xrightarrow[\cong]{q^\ast}H^\bullet(X/G)$$
 가 성립한다.
 :::
 
-이 명제는 equivariant cohomology가 free 작용에 대해서는 새로운 정보를 주지 않음을 보여 준다. 곧 $H_G^\bullet$의 쓸모는 작용이 free가 아닐 때, 가령 fixed point가 있을 때 드러난다. 이 경우 orbit space $X/G$는 특이하지만 $X_G$는 항상 매끄러운 fiber bundle의 total space로서 잘 행동하므로, $H_G^\bullet(X)$이 $H^\bullet(X/G)$를 대신하는 올바른 불변량이 된다.
+이 명제는 equivariant cohomology가 free 작용에 대해서는 새로운 정보를 주지 않음을 보여 준다. 곧 $H_G^\bullet$의 쓸모는 작용이 free가 아닐 때, 가령 fixed point가 있을 때 드러난다. 이 경우 orbit space $X/G$는 특이하지만 $X_G$는 항상 smooth fiber bundle의 total space로서 잘 행동하므로, $H_G^\bullet(X)$이 $H^\bullet(X/G)$를 대신하는 올바른 불변량이 된다.
 
 ## Torus 작용과 character lattice
 
@@ -222,7 +222,7 @@ $$\mathbb{Z}[t_0,\ldots,t_n][h]\Big/\prod_{i}(h-t_i)\xrightarrow{t_i\mapsto 0}\m
 위 두 계산의 공통된 특징은 $H_T^\bullet(X)$이 $H_T^\bullet(\mathrm{pt})$ 위의 free 가군이고, $t_i=0$을 대입하면 정확히 $H^\bullet(X)$가 회복된다는 점이었다. 이 성질은 모든 작용에서 성립하지는 않으나, 성립할 때는 equivariant cohomology와 ordinary cohomology의 관계가 가장 단순해진다.
 
 ::: 정의 8
-Torus $T$가 작용하는 공간 $X$ (cohomology가 각 차수에서 유한생성)가 *equivariantly formal<sub>동변 형식적</sub>*이라는 것은 $H_T^\bullet(X)$이 $H_T^\bullet(\mathrm{pt})$ 위의 free 가군이고, augmentation $H_T^\bullet(\mathrm{pt})\rightarrow\mathbb{Z}$ (양의 차수를 $0$으로 보내는 사상) 에 대하여 자연스러운 사상
+Torus $T$가 작용하는 공간 $X$ (cohomology가 각 차수에서 finitely generated)가 *equivariantly formal<sub>동변 형식적</sub>*이라는 것은 $H_T^\bullet(X)$이 $H_T^\bullet(\mathrm{pt})$ 위의 free 가군이고, augmentation $H_T^\bullet(\mathrm{pt})\rightarrow\mathbb{Z}$ (양의 차수를 $0$으로 보내는 사상) 에 대하여 자연스러운 사상
 
 $$H_T^\bullet(X)\otimes_{H_T^\bullet(\mathrm{pt})}\mathbb{Z}\xrightarrow{\cong}H^\bullet(X)$$
 
@@ -233,14 +233,14 @@ $$H_T^\bullet(X)\otimes_{H_T^\bullet(\mathrm{pt})}\mathbb{Z}\xrightarrow{\cong}H
 
 $$E_2^{p,q}=H^p\big(BT;H^q(X)\big)\Longrightarrow H_T^{p+q}(X)$$
 
-를 생각하면, equivariant formality는 이 spectral sequence가 $E_2$ 면에서 collapse하는 것과 동치이다. 이 경우 $H_T^\bullet(X)$은 $H^\bullet(BT)$-가군으로서 $H^\bullet(X)\otimes_{\mathbb{Z}}H^\bullet(BT)$와 동형이 된다. Cohomology가 짝수 차수에만 있는 공간 (가령 cell이 모두 짝수 차원인 CW complex로, $\mathbb{P}^n$이나 일반적인 매끄러운 projective toric variety가 이에 속한다) 은 차수의 parity 때문에 미분이 모두 사라져 항상 equivariantly formal이다. 이 freeness가 fixed point로의 restriction을 거의 단사로 만들어, 다음 글에서 다룰 localization 정리를 통한 계산을 가능하게 한다.
+를 생각하면, equivariant formality는 이 spectral sequence가 $E_2$ 면에서 collapse하는 것과 동치이다. 이 경우 $H_T^\bullet(X)$은 $H^\bullet(BT)$-가군으로서 $H^\bullet(X)\otimes_{\mathbb{Z}}H^\bullet(BT)$와 동형이 된다. Cohomology가 짝수 차수에만 있는 공간 (가령 cell이 모두 짝수 차원인 CW complex로, $\mathbb{P}^n$이나 일반적인 smooth projective toric variety가 이에 속한다) 은 차수의 parity 때문에 미분이 모두 사라져 항상 equivariantly formal이다. 이 freeness가 fixed point로의 restriction을 거의 단사로 만들어, 다음 글에서 다룰 localization 정리를 통한 계산을 가능하게 한다.
 
 ::: 참고 9
-$X$가 매끄러운 다양체이고 $G$가 compact Lie group으로 매끄럽게 작용할 때는, 위의 위상적 Borel 구성과 같은 $H_G^\bullet(X;\mathbb{R})$을 미분형식으로 계산하는 모델이 존재한다. Cartan 모델에서는 equivariant 미분형식의 복합체
+$X$가 smooth variety이고 $G$가 compact Lie group으로 매끄럽게 작용할 때는, 위의 위상적 Borel 구성과 같은 $H_G^\bullet(X;\mathbb{R})$을 differential form으로 계산하는 모델이 존재한다. Cartan 모델에서는 equivariant differential form의 복합체
 
 $$\Omega_G^\bullet(X)=\big(\mathrm{Sym}(\mathfrak{g}^\ast)\otimes\Omega^\bullet(X)\big)^G$$
 
-와 그 위의 equivariant 미분 $d_G$을 사용하며, Weil 모델은 $EG$ 위의 connection과 그 curvature를 명시적으로 도입한다. 이들은 Lie algebra $\mathfrak{g}$와 connection 데이터를 필요로 하므로 매끄러운 범주에 한정된다. 우리는 임의의 topological group과 임의의 paracompact space에 적용되는 위상적 Borel 모델만을 사용한다. 두 모델의 동치성과 de Rham 판본의 자세한 전개는 [AB]와 [GS]를 따른다.
+와 그 위의 equivariant 미분 $d_G$을 사용하며, Weil 모델은 $EG$ 위의 connection과 그 curvature를 명시적으로 도입한다. 이들은 Lie algebra $\mathfrak{g}$와 connection 데이터를 필요로 하므로 smooth 범주에 한정된다. 우리는 임의의 topological group과 임의의 paracompact space에 적용되는 위상적 Borel 모델만을 사용한다. 두 모델의 동치성과 de Rham 판본의 자세한 전개는 [AB]와 [GS]를 따른다.
 :::
 
 ---

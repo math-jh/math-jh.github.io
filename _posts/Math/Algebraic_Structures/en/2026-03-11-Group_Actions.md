@@ -236,7 +236,7 @@ We now return to group actions on general sets. First, we make the following def
 ::: Definition 13
 Let a group $G$ act on a set $E$. The *orbit* of an element $x\in E$ is the set
 
-$G\cdot x=\{g\cdot x\mid g\in G\}$
+$$G\cdot x=\{g\cdot x\mid g\in G\}$$
 :::
 
 Then the relation on $E$ defined by

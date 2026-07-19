@@ -25,7 +25,7 @@ weight: 6
 
 $$\cl(\{\mathfrak{m}\})=ZI(\{\mathfrak{m}\})=ZIZ(\mathfrak{m})=Z(\mathfrak{m})=\{\mathfrak{m}\}$$
 
-이 되어, 모든 점이 closed point가 되었다. 그러나 field가 아닌 integral domain의 스펙트럼을 생각하면 이는 maximal ideal $\mathfrak{m}\neq 0$을 가지는 동시에 integral domain의 정의에 의하여 $0$이 prime ideal이 되므로, 이러한 scheme은 closed point가 아닌 점을 갖는다. 
+이 되어, 모든 점이 closed point가 되었다. 그러나 field가 아닌 integral domain의 spectrum을 생각하면 이는 maximal ideal $\mathfrak{m}\neq 0$을 가지는 동시에 integral domain의 정의에 의하여 $0$이 prime ideal이 되므로, 이러한 scheme은 closed point가 아닌 점을 갖는다. 
 
 우리의 첫째 목표는 이러한 점을 직관적으로 이해하는 것이다. 
 

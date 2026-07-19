@@ -15,7 +15,7 @@ published: false
 
 ---
 
-[§측지선, ⁋정리 7](/ko/math/riemannian_geometry/geodesics#thm7)에서 우리는 Riemannian manifold $(M, g)$의 각 점 $p$와 vector $v \in T_p M$마다 초기조건 $\gamma(0) = p$, $\dot\gamma(0) = v$를 만족하는 측지선이 국소적으로 유일하게 존재함을 보았다. 이 측지선을 $\gamma_v$로 적기로 하자. 같은 글의 [§측지선, ⁋참고 10](/ko/math/riemannian_geometry/geodesics#rmk10)에서 예고했듯, 대응 $v \mapsto \gamma_v(1)$은 한 점의 접공간 위로 측지선의 자료를 모아 manifold의 국소 구조를 선형화하는 도구가 된다. 이 글에서는 이 대응, 즉 *exponential map*을 정식으로 도입하고, 그것이 매끄러운 국소 미분동형임을 보인 뒤, 이로부터 얻는 normal coordinate와 Gauss lemma를 다룬다.
+[§측지선, ⁋정리 7](/ko/math/riemannian_geometry/geodesics#thm7)에서 우리는 Riemannian manifold $(M, g)$의 각 점 $p$와 vector $v \in T_p M$마다 초기조건 $\gamma(0) = p$, $\dot\gamma(0) = v$를 만족하는 측지선이 국소적으로 유일하게 존재함을 보았다. 이 측지선을 $\gamma_v$로 적기로 하자. 같은 글의 [§측지선, ⁋참고 10](/ko/math/riemannian_geometry/geodesics#rmk10)에서 예고했듯, 대응 $v \mapsto \gamma_v(1)$은 한 점의 tangent space 위로 측지선의 자료를 모아 manifold의 국소 구조를 선형화하는 도구가 된다. 이 글에서는 이 대응, 즉 *exponential map*을 정식으로 도입하고, 그것이 smooth 국소 diffeomorphism임을 보인 뒤, 이로부터 얻는 normal coordinate와 Gauss lemma를 다룬다.
 
 ## Exponential map의 정의
 
@@ -53,23 +53,23 @@ $$D_t \dot\sigma(t) = D_t\bigl(s\, \dot\gamma_v(st)\bigr) = s^2\, (D_t \dot\gamm
 이다. $\gamma_v$가 측지선이므로 $D_t \dot\gamma_v \equiv 0$이고, 따라서 $D_t \dot\sigma \equiv 0$이 되어 $\sigma$도 측지선이다. 또한 $\sigma(0) = \gamma_v(0) = p$이고 $\dot\sigma(0) = s\, \dot\gamma_v(0) = sv$이므로, $\sigma$는 초기조건 $\sigma(0) = p$, $\dot\sigma(0) = sv$를 만족하는 측지선이다. [§측지선, ⁋정리 7](/ko/math/riemannian_geometry/geodesics#thm7)의 유일성에 의해 $\sigma = \gamma_{sv}$이고, 따라서 $\gamma_{sv}(t) = \gamma_v(st)$이다. 여기에 $t = 1$을 대입하면 $\exp_p(sv) = \gamma_{sv}(1) = \gamma_v(s)$를 얻는다.
 :::
 
-[보조정리 2](#lem2)는 한 vector $v$를 따르는 반직선 $s \mapsto sv$가 exponential map 아래에서 측지선 $s \mapsto \gamma_v(s)$로 보내짐을 말해 준다. 즉 exponential map은 $T_p M$의 원점을 지나는 직선들을 $p$를 지나는 측지선들로 옮기며, 이것이 exponential map이 $p$ 근방의 기하를 그 접공간 위로 끌어올리는 방식이다.
+[보조정리 2](#lem2)는 한 vector $v$를 따르는 반직선 $s \mapsto sv$가 exponential map 아래에서 측지선 $s \mapsto \gamma_v(s)$로 보내짐을 말해 준다. 즉 exponential map은 $T_p M$의 원점을 지나는 직선들을 $p$를 지나는 측지선들로 옮기며, 이것이 exponential map이 $p$ 근방의 기하를 그 tangent space 위로 끌어올리는 방식이다.
 
 ## 매끄러움과 0에서의 미분
 
-Exponential map이 $0$의 근방에서 정의되고 매끄럽다는 사실은 상미분방정식 해의 초기조건에 대한 매끄러운 의존성에서 나온다. [§측지선, ⁋정리 7](/ko/math/riemannian_geometry/geodesics#thm7)의 증명에서 측지선 방정식은 $TM$ 위의 일계 상미분방정식 시스템으로 환원되었으며, 그 우변이 $(\gamma, w)$에 매끄럽게 의존하므로, 상미분방정식의 표준적 정리에 의해 그 흐름은 시간과 초기조건 모두에 매끄럽게 의존한다. 이를 exponential map에 적용한다.
+Exponential map이 $0$의 근방에서 정의되고 매끄럽다는 사실은 상미분방정식 해의 초기조건에 대한 smooth 의존성에서 나온다. [§측지선, ⁋정리 7](/ko/math/riemannian_geometry/geodesics#thm7)의 증명에서 측지선 방정식은 $TM$ 위의 일계 상미분방정식 시스템으로 환원되었으며, 그 우변이 $(\gamma, w)$에 매끄럽게 의존하므로, 상미분방정식의 표준적 정리에 의해 그 흐름은 시간과 초기조건 모두에 매끄럽게 의존한다. 이를 exponential map에 적용한다.
 
 ::: 명제 3
 Riemannian manifold $(M, g)$의 점 $p$에 대해, $0 \in T_p M$의 적당한 열린근방 $V \subseteq \mathcal{E}_p$가 존재하여 $\exp_p : V \to M$이 매끄럽다. 더욱이 $V$를 $0$에 대해 *star-shaped*인 것으로, 즉 $v \in V$이면 모든 $0 \le s \le 1$에 대해 $sv \in V$이도록 택할 수 있다.
 :::
 
 ::: 증명
-측지선 방정식의 흐름을 생각하자. [§측지선, ⁋정리 7](/ko/math/riemannian_geometry/geodesics#thm7)의 증명에서 보았듯, $(p, v) \in TM$을 초기조건 $\gamma(0) = p$, $\dot\gamma(0) = v$로 하는 측지선 $\gamma_{(p, v)}(t)$는 $TM$ 위의 일계 상미분방정식 시스템의 해이며, 그 우변은 매끄럽다. 상미분방정식 흐름의 초기조건과 시간에 대한 매끄러운 의존성에 의해, 점 $(p, 0) \in TM$의 적당한 열린근방 $\mathcal{O} \subseteq TM$과 $\varepsilon > 0$이 존재하여, $(q, w) \in \mathcal{O}$이면 측지선 $\gamma_{(q, w)}(t)$가 $t \in (-\varepsilon, \varepsilon)$에서 정의되고 $(t, q, w)$에 매끄럽게 의존한다.
+측지선 방정식의 흐름을 생각하자. [§측지선, ⁋정리 7](/ko/math/riemannian_geometry/geodesics#thm7)의 증명에서 보았듯, $(p, v) \in TM$을 초기조건 $\gamma(0) = p$, $\dot\gamma(0) = v$로 하는 측지선 $\gamma_{(p, v)}(t)$는 $TM$ 위의 일계 상미분방정식 시스템의 해이며, 그 우변은 매끄럽다. 상미분방정식 흐름의 초기조건과 시간에 대한 smooth 의존성에 의해, 점 $(p, 0) \in TM$의 적당한 열린근방 $\mathcal{O} \subseteq TM$과 $\varepsilon > 0$이 존재하여, $(q, w) \in \mathcal{O}$이면 측지선 $\gamma_{(q, w)}(t)$가 $t \in (-\varepsilon, \varepsilon)$에서 정의되고 $(t, q, w)$에 매끄럽게 의존한다.
 
 이제 $\delta > 0$을 충분히 작게 잡아 집합 $W := \{w \in T_p M \mid \lVert w \rVert_g < \delta\}$이 $\mathcal{O} \cap T_p M$에 포함되고 $\delta < \varepsilon$이도록 하자. 그럼 각 $w \in W$에 대해 $\gamma_w$는 $(-\varepsilon, \varepsilon) \supseteq [0, 1]$ 위에서 정의되므로 $W \subseteq \mathcal{E}_p$이고, $\exp_p(w) = \gamma_w(1)$은 $\gamma_{(p, w)}(1)$이 $w$에 매끄럽게 의존하는 데서 $W$ 위에서 매끄럽다. 마지막으로 $W$는 $\lVert \cdot \rVert_g$에 대한 원점 중심의 열린 공이므로 $0$에 대해 star-shaped이다. 따라서 $V := W$로 두면 된다.
 :::
 
-[보조정리 2](#lem2)는 $V$가 star-shaped이어야 하는 이유를 설명한다. $v \in V$가 $\exp_p(v) = \gamma_v(1)$이 정의되도록 한다면, 같은 측지선의 자취 위의 점 $\gamma_v(s) = \exp_p(sv)$ ($0 \le s \le 1$)도 정의되어야 자연스러우며, 이는 정확히 $sv \in V$를 요구하는 조건이다. 이제 exponential map의 핵심 성질, 즉 $0$에서의 미분을 계산한다. 여기서 우리는 vector space $T_p M$의 한 점 $0$에서의 접공간 $T_0(T_p M)$을 vector space 자신 $T_p M$과 표준적으로 동일시한다. 구체적으로, $v \in T_p M$을 곡선 $t \mapsto tv$의 $t = 0$에서의 속도벡터로 보는 동일시이다.
+[보조정리 2](#lem2)는 $V$가 star-shaped이어야 하는 이유를 설명한다. $v \in V$가 $\exp_p(v) = \gamma_v(1)$이 정의되도록 한다면, 같은 측지선의 자취 위의 점 $\gamma_v(s) = \exp_p(sv)$ ($0 \le s \le 1$)도 정의되어야 자연스러우며, 이는 정확히 $sv \in V$를 요구하는 조건이다. 이제 exponential map의 핵심 성질, 즉 $0$에서의 미분을 계산한다. 여기서 우리는 vector space $T_p M$의 한 점 $0$에서의 tangent space $T_0(T_p M)$을 vector space 자신 $T_p M$과 표준적으로 동일시한다. 구체적으로, $v \in T_p M$을 곡선 $t \mapsto tv$의 $t = 0$에서의 속도벡터로 보는 동일시이다.
 
 ::: 명제 4
 위의 표준적 동일시 $T_0(T_p M) \cong T_p M$ 아래에서, exponential map $\exp_p$의 $0$에서의 미분은 항등사상이다. 즉
@@ -89,20 +89,20 @@ $$(d\exp_p)_0(v) = \left.\frac{d}{dt}\right\vert_{t = 0} \exp_p(tv) = \left.\fra
 
 ## Normal neighborhood와 normal coordinate
 
-[명제 4](#prop4)에서 $(d\exp_p)_0$이 가역이므로, manifold 사이의 매끄러운 함수에 대한 역함수 정리를 적용할 수 있다. 이로부터 exponential map이 $p$ 근방에 좌표계를 부여한다.
+[명제 4](#prop4)에서 $(d\exp_p)_0$이 가역이므로, manifold 사이의 smooth 함수에 대한 역함수 정리를 적용할 수 있다. 이로부터 exponential map이 $p$ 근방에 좌표계를 부여한다.
 
 ::: 정의 5
-Riemannian manifold $(M, g)$의 점 $p$에 대해, $0$의 star-shaped 열린근방 $V \subseteq T_p M$이 존재하여 $\exp_p\vert_V : V \to \exp_p(V)$가 미분동형이 될 때, 상 $U := \exp_p(V)$를 $p$의 *normal neighborhood<sub>정규근방</sub>*라 부른다.
+Riemannian manifold $(M, g)$의 점 $p$에 대해, $0$의 star-shaped 열린근방 $V \subseteq T_p M$이 존재하여 $\exp_p\vert_V : V \to \exp_p(V)$가 diffeomorphism이 될 때, 상 $U := \exp_p(V)$를 $p$의 *normal neighborhood<sub>정규근방</sub>*라 부른다.
 :::
 
 ::: 증명
-[명제 3](#prop3)에 의해 $\exp_p$는 $0$의 star-shaped 열린근방 위에서 매끄러우며, [명제 4](#prop4)에 의해 $(d\exp_p)_0 = \id_{T_p M}$은 isomorphism이다. 따라서 manifold 사이의 매끄러운 함수에 대한 [\[미분다양체\] §부분다양체와 역함수 정리, ⁋따름정리 5](/ko/math/manifolds/submanifolds#cor5)에 의해, $0$의 적당한 열린근방 $V_0$ 위에서 $\exp_p$가 $V_0$와 $\exp_p(V_0)$ 사이의 미분동형을 정의한다. $V_0$ 안에 $0$ 중심의 star-shaped 열린 공 $V$를 잡으면 ([명제 3](#prop3)의 증명처럼 $\lVert \cdot \rVert_g$에 대한 충분히 작은 공) $\exp_p\vert_V$도 미분동형이며, $U = \exp_p(V)$는 normal neighborhood이다.
+[명제 3](#prop3)에 의해 $\exp_p$는 $0$의 star-shaped 열린근방 위에서 매끄러우며, [명제 4](#prop4)에 의해 $(d\exp_p)_0 = \id_{T_p M}$은 isomorphism이다. 따라서 manifold 사이의 smooth 함수에 대한 [\[미분다양체\] §부분다양체와 역함수 정리, ⁋따름정리 5](/ko/math/manifolds/submanifolds#cor5)에 의해, $0$의 적당한 열린근방 $V_0$ 위에서 $\exp_p$가 $V_0$와 $\exp_p(V_0)$ 사이의 diffeomorphism을 정의한다. $V_0$ 안에 $0$ 중심의 star-shaped 열린 공 $V$를 잡으면 ([명제 3](#prop3)의 증명처럼 $\lVert \cdot \rVert_g$에 대한 충분히 작은 공) $\exp_p\vert_V$도 diffeomorphism이며, $U = \exp_p(V)$는 normal neighborhood이다.
 :::
 
-Normal neighborhood 위에서 exponential map의 역사상은 $T_p M$ 위로의 매끄러운 좌표를 준다. 여기에 접공간의 정규직교기저를 통한 선형동형을 합성하면 manifold 위의 구체적인 좌표계를 얻는다.
+Normal neighborhood 위에서 exponential map의 역사상은 $T_p M$ 위로의 smooth 좌표를 준다. 여기에 tangent space의 orthonormal basis를 통한 선형동형을 합성하면 manifold 위의 구체적인 좌표계를 얻는다.
 
 ::: 정의 6
-$p$의 normal neighborhood $U = \exp_p(V)$와 $T_p M$의 $g_p$에 대한 정규직교기저 $(E_1, \ldots, E_n)$이 주어졌다 하자. 이 기저가 정하는 선형동형 $E : \mathbb{R}^n \to T_p M$, $E(x^1, \ldots, x^n) = \sum_i x^i E_i$에 대해, 합성
+$p$의 normal neighborhood $U = \exp_p(V)$와 $T_p M$의 $g_p$에 대한 orthonormal basis $(E_1, \ldots, E_n)$이 주어졌다 하자. 이 기저가 정하는 선형동형 $E : \mathbb{R}^n \to T_p M$, $E(x^1, \ldots, x^n) = \sum_i x^i E_i$에 대해, 합성
 
 $$\varphi := E^{-1} \circ (\exp_p\vert_V)^{-1} : U \to \mathbb{R}^n$$
 
@@ -122,7 +122,7 @@ $p$를 중심으로 하는 normal coordinate $(x^i)$에서 다음이 성립한�
 ::: 증명
 (1) $v = \sum_i v^i E_i \in V$에 대해 [보조정리 2](#lem2)에 의해 $\exp_p(tv) = \gamma_v(t)$이고, $tv = \sum_i (t v^i) E_i$의 normal coordinate는 정의상 $(t v^1, \ldots, t v^n)$이다. 따라서 $\varphi(\gamma_v(t)) = (t v^1, \ldots, t v^n)$이 되어, $\gamma_v$는 좌표상에서 원점을 지나는 직선이다.
 
-(2) Normal coordinate의 좌표기저 vector $\partial_i\vert_p$는 $\varphi$의 미분 $d\varphi_p$의 역, 즉 $(d\varphi_p)^{-1}(e_i)$이다. 한편 $\varphi = E^{-1} \circ (\exp_p\vert_V)^{-1}$이고 [명제 4](#prop4)에서 $(d\exp_p)_0 = \id$이므로, $p$에서의 미분은 $d\varphi_p = E^{-1} \circ (d\exp_p)_0^{-1} = E^{-1}$이며, 따라서 $\partial_i\vert_p = E(e_i) = E_i$이다. $(E_i)$가 $g_p$에 대한 정규직교기저이므로
+(2) Normal coordinate의 좌표기저 vector $\partial_i\vert_p$는 $\varphi$의 미분 $d\varphi_p$의 역, 즉 $(d\varphi_p)^{-1}(e_i)$이다. 한편 $\varphi = E^{-1} \circ (\exp_p\vert_V)^{-1}$이고 [명제 4](#prop4)에서 $(d\exp_p)_0 = \id$이므로, $p$에서의 미분은 $d\varphi_p = E^{-1} \circ (d\exp_p)_0^{-1} = E^{-1}$이며, 따라서 $\partial_i\vert_p = E(e_i) = E_i$이다. $(E_i)$가 $g_p$에 대한 orthonormal basis이므로
 
 $$g_{ij}(p) = g_p(\partial_i\vert_p, \partial_j\vert_p) = g_p(E_i, E_j) = \delta_{ij}$$
 
@@ -198,11 +198,11 @@ $$\langle D_t J, \dot\gamma_v \rangle = \langle D_s \partial_t \Gamma, \partial_
 [보조정리 8](#lem8)으로부터 Gauss lemma가 곧바로 따라 나온다.
 
 ::: 정리 9 (Gauss lemma)
-Normal neighborhood $U = \exp_p(V)$ 안에서, $p$를 지나는 방사 측지선은 자신이 만나는 측지구면과 직교한다. 즉 $v \in V \setminus \{0\}$이고 $q = \exp_p(v)$이며 $r = \lVert v \rVert_g$이면, $q$에서 측지선 $\gamma_v$의 속도벡터 $\dot\gamma_v(1)$는 측지구면 $\exp_p(S_r)$의 $q$에서의 접공간에 수직이다.
+Normal neighborhood $U = \exp_p(V)$ 안에서, $p$를 지나는 방사 측지선은 자신이 만나는 측지구면과 직교한다. 즉 $v \in V \setminus \{0\}$이고 $q = \exp_p(v)$이며 $r = \lVert v \rVert_g$이면, $q$에서 측지선 $\gamma_v$의 속도벡터 $\dot\gamma_v(1)$는 측지구면 $\exp_p(S_r)$의 $q$에서의 tangent space에 수직이다.
 :::
 
 ::: 증명
-측지구면 $\exp_p(S_r)$의 $q = \exp_p(v)$에서의 접공간은, $S_r = \{u \in V \mid \lVert u \rVert = r\}$이 $v$에서 가지는 접공간을 $(d\exp_p)_v$로 보낸 것이다. $S_r$의 $v$에서의 접공간은 $v$에 수직인 vector들 $\{w \in T_p M \mid \langle v, w \rangle_p = 0\}$로 이루어지므로, $\exp_p(S_r)$의 $q$에서의 접벡터는 $\langle v, w \rangle_p = 0$인 $w$에 대한 $(d\exp_p)_v(w)$ 꼴이다.
+측지구면 $\exp_p(S_r)$의 $q = \exp_p(v)$에서의 tangent space는, $S_r = \{u \in V \mid \lVert u \rVert = r\}$이 $v$에서 가지는 tangent space를 $(d\exp_p)_v$로 보낸 것이다. $S_r$의 $v$에서의 tangent space는 $v$에 수직인 vector들 $\{w \in T_p M \mid \langle v, w \rangle_p = 0\}$로 이루어지므로, $\exp_p(S_r)$의 $q$에서의 접벡터는 $\langle v, w \rangle_p = 0$인 $w$에 대한 $(d\exp_p)_v(w)$ 꼴이다.
 
 한편 [보조정리 8](#lem8)의 증명에서 $\dot\gamma_v(1) = (d\exp_p)_v(v)$임을 보였다. 따라서 임의의 그러한 접벡터 $(d\exp_p)_v(w)$에 대해, [보조정리 8](#lem8)에 의해
 
@@ -222,7 +222,7 @@ Gauss lemma는 normal neighborhood 안에서 exponential map이 방사방향으�
 
 $$\exp_p(v) = \gamma_v(1) = p + v$$
 
-이다. 즉 $T_p \mathbb{R}^n \cong \mathbb{R}^n$을 표준적으로 $\mathbb{R}^n$과 동일시하면 exponential map은 평행이동 $v \mapsto p + v$이다. 이는 전체 위에서 미분동형이므로 $\mathbb{R}^n$ 전체가 임의의 $p$의 normal neighborhood이며, [명제 4](#prop4)의 $(d\exp_p)_0 = \id$도 평행이동의 미분이 항등사상이라는 사실로 직접 확인된다. 이 경우 normal coordinate는 ($p$를 원점으로 옮긴) 표준 데카르트 좌표이고, 모든 점에서 $g_{ij} = \delta_{ij}$, $\Gamma_{ij}^k = 0$이다.
+이다. 즉 $T_p \mathbb{R}^n \cong \mathbb{R}^n$을 표준적으로 $\mathbb{R}^n$과 동일시하면 exponential map은 평행이동 $v \mapsto p + v$이다. 이는 전체 위에서 diffeomorphism이므로 $\mathbb{R}^n$ 전체가 임의의 $p$의 normal neighborhood이며, [명제 4](#prop4)의 $(d\exp_p)_0 = \id$도 평행이동의 미분이 항등사상이라는 사실로 직접 확인된다. 이 경우 normal coordinate는 ($p$를 원점으로 옮긴) 표준 데카르트 좌표이고, 모든 점에서 $g_{ij} = \delta_{ij}$, $\Gamma_{ij}^k = 0$이다.
 :::
 
 ::: 예시 11
@@ -238,10 +238,10 @@ $$\gamma_v(t) = (\cos rt)\, p + \frac{\sin rt}{r}\, v$$
 
 $$\exp_p(v) = \gamma_v(1) = (\cos r)\, p + \frac{\sin r}{r}\, v, \qquad r = \lVert v \rVert$$
 
-이다. 기하적으로 $\exp_p$는 접평면 $T_p S^2$의 vector $v$를, $v$ 방향의 대원을 따라 호의 길이 $r = \lVert v \rVert$만큼 나아간 점으로 보내는 *방사사상*이다. 이 사상은 $r < \pi$인 영역, 즉 열린 공 $\{v \mid \lVert v \rVert < \pi\}$ 위에서 미분동형이며, 그 상은 $p$의 대척점 $-p$를 제외한 $S^2 \setminus \{-p\}$로서 $p$의 normal neighborhood이다. 반지름 $r$의 측지구면 $\exp_p(S_r)$은 $p$로부터 측지거리 $r$만큼 떨어진 위도원이며, [정리 9](#thm9)가 말하듯 $p$에서 나오는 대원들(경도선)이 이 위도원들과 직교한다. $r = \pi$에서 $\exp_p$가 구면 $S_\pi$ 전체를 한 점 $-p$로 보내 미분동형이 깨지는 것은, normal neighborhood가 일반적으로 $T_p M$ 전체로 확장되지 않는 전형적인 예이다.
+이다. 기하적으로 $\exp_p$는 접평면 $T_p S^2$의 vector $v$를, $v$ 방향의 대원을 따라 호의 길이 $r = \lVert v \rVert$만큼 나아간 점으로 보내는 *방사사상*이다. 이 사상은 $r < \pi$인 영역, 즉 열린 공 $\{v \mid \lVert v \rVert < \pi\}$ 위에서 diffeomorphism이며, 그 상은 $p$의 대척점 $-p$를 제외한 $S^2 \setminus \{-p\}$로서 $p$의 normal neighborhood이다. 반지름 $r$의 측지구면 $\exp_p(S_r)$은 $p$로부터 측지거리 $r$만큼 떨어진 위도원이며, [정리 9](#thm9)가 말하듯 $p$에서 나오는 대원들(경도선)이 이 위도원들과 직교한다. $r = \pi$에서 $\exp_p$가 구면 $S_\pi$ 전체를 한 점 $-p$로 보내 diffeomorphism이 깨지는 것은, normal neighborhood가 일반적으로 $T_p M$ 전체로 확장되지 않는 전형적인 예이다.
 :::
 
-[예시 11](#ex11)에서 보듯 $S^2$의 exponential map은 한 점의 접평면에서 측지거리를 따라 구면을 펴는 사상이며, 이는 지도제작에서 한 점을 중심으로 한 *방위투영*의 기하적 모형이기도 하다. 일반의 Riemannian manifold에서도 exponential map은 같은 방식으로 접공간의 평탄한 기하를 측지선을 따라 manifold 위로 옮기며, 이로써 우리는 한 점 근방의 곡률 정보를 접공간 위의 좌표로 환원해 분석할 수 있다.
+[예시 11](#ex11)에서 보듯 $S^2$의 exponential map은 한 점의 접평면에서 측지거리를 따라 구면을 펴는 사상이며, 이는 지도제작에서 한 점을 중심으로 한 *방위투영*의 기하적 모형이기도 하다. 일반의 Riemannian manifold에서도 exponential map은 같은 방식으로 tangent space의 평탄한 기하를 측지선을 따라 manifold 위로 옮기며, 이로써 우리는 한 점 근방의 곡률 정보를 tangent space 위의 좌표로 환원해 분석할 수 있다.
 
 ---
 

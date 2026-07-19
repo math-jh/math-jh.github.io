@@ -13,7 +13,7 @@ weight: 5
 
 ---
 
-이번 글에서 우리는 $\Hom$과 텐서곱에 대해 조금 더 자세히 살펴보자. 
+이번 글에서 우리는 $\Hom$과 tensor product에 대해 조금 더 자세히 살펴보자. 
 
 ## Hom functor
 

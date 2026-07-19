@@ -59,7 +59,7 @@ For a ring $A$, an $A$-module $M$, and a multiplicative subset $S$ of $A$, the *
     We write the equivalence class of $(x,s)$ as $x/s$.
 2. The $A$-module structure on $S^{-1}M$ is defined by
   
-  $\frac{x}{s}+\frac{x'}{s'}=\frac{s'x+sx'}{ss'},\qquad a\cdot \frac{x}{s}=\frac{ax}{s}.$
+  $$\frac{x}{s}+\frac{x'}{s'}=\frac{s'x+sx'}{ss'},\qquad a\cdot \frac{x}{s}=\frac{ax}{s}.$$
 :::
 
 We should verify that the operations defined in (2) actually yield an $A$-module structure, but this is not difficult. Instead we add a few observations. First, for any $t\in S$ and $x/s\in S^{-1}M$, we have
@@ -170,7 +170,7 @@ $$\mathfrak{b}_0^c\subseteq \mathfrak{b}_1^c\subseteq\cdots$$
 
 which is an ascending chain of ideals in the Noetherian ring $A$, so there exists $N$ such that for all $n>N$ we have $\mathfrak{b}_n^c=\mathfrak{b}_{n+1}^c$. Now for such $n$,
 
-$\mathfrak{b}_n=\mathfrak{b}_n^{ce}=\mathfrak{b}_{n+1}^{ce}=\mathfrak{b}_{n+1}$
+$$\mathfrak{b}_n=\mathfrak{b}_n^{ce}=\mathfrak{b}_{n+1}^{ce}=\mathfrak{b}_{n+1}$$
 :::
 
 Meanwhile, from [Proposition 8](#prop8), for any prime ideal $\mathfrak{p}$ of $A$ it is immediate that $\mathfrak{p}^e=\mathfrak{p}A_\mathfrak{p}$ is the unique *maximal* ideal of $A_\mathfrak{p}$. That is, $A_\mathfrak{p}$ is a local ring, and its quotient field $A_\mathfrak{p}/\mathfrak{p}A_\mathfrak{p}$ is well-defined.

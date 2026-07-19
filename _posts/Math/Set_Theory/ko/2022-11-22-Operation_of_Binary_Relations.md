@@ -117,7 +117,7 @@ $$(R_2\circ R_1)(A)=R_2(R_1(A))$$
 ::: 명제 8
 $R_1$, $R_2$가 이항관계라 하자. 그럼 다음의 두 식이 성립한다.
 
-$\pr_1(R_2\circ R_1)=R_1^{-1}(\pr_1R_2),\quad \pr_2(R_2\circ R_1)=R_2(\pr_2R_1).$
+$$\pr_1(R_2\circ R_1)=R_1^{-1}(\pr_1R_2),\quad \pr_2(R_2\circ R_1)=R_2(\pr_2R_1).$$
 :::
 ::: 증명
 다음 implication들의 chain

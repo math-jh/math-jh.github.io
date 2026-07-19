@@ -89,7 +89,7 @@ Any permutation of $S_n$ can be written as a product of transpositions.
 ::: Proof
 By [Proposition 4](#prop4) it suffices to prove that an arbitrary cycle can be written as a product of transpositions.
 
-$(k_1\;k_2\;\cdots\;k_r)=(k_{r-1}\;k_r)(k_{r-2}\;k_r)\cdots(k_2\;k_r)(k_1\;k_r).$
+$$(k_1\;k_2\;\cdots\;k_r)=(k_{r-1}\;k_r)(k_{r-2}\;k_r)\cdots(k_2\;k_r)(k_1\;k_r).$$
 :::
 
 Meanwhile, to represent all elements of $S_n$, just two elements suffice.

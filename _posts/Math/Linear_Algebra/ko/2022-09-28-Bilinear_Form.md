@@ -16,7 +16,7 @@ weight: 116
 
 ---
 
-앞선 글에서 우리는 벡터공간 $V$의 쌍대공간 $V^\ast$를 정의하고, 만일 $V$가 유한차원이라면 $V^\ast$의 쌍대공간인 $V^{\ast\ast}$와 $V$가 isomorphic하다는 것을 살펴봤다. 이 과정에서 핵심적으로 쓰인 사실은 non-degenerate pairing $\langle -,-\rangle:V\times W \rightarrow \mathbb{K}$가 $V$에서 $W^\ast$, 그리고 $W$에서 $V^\ast$로의 단사인 linear map을 정의한다는 것이었다. 우리는 이 사실을 canonical pairing
+앞선 글에서 우리는 벡터공간 $V$의 dual space $V^\ast$를 정의하고, 만일 $V$가 유한차원이라면 $V^\ast$의 dual space인 $V^{\ast\ast}$와 $V$가 isomorphic하다는 것을 살펴봤다. 이 과정에서 핵심적으로 쓰인 사실은 non-degenerate pairing $\langle -,-\rangle:V\times W \rightarrow \mathbb{K}$가 $V$에서 $W^\ast$, 그리고 $W$에서 $V^\ast$로의 단사인 linear map을 정의한다는 것이었다. 우리는 이 사실을 canonical pairing
 
 $$\langle -,-\rangle:V\times V^\ast\rightarrow \mathbb{K};\quad (v,f)\mapsto f(v)$$
 
@@ -160,7 +160,7 @@ $$\dim(W^\perp)^\perp=\dim V-\dim W^\perp=\dim W$$
 
 $$\dim(W+W^\perp)=\dim W+\dim W^\perp-\dim(W\cap W^\perp)=\dim V-\dim(W\cap W^\perp)$$
 
-이다. 따라서 $W$의 radical $W\cap W^\perp$이 $\{0\}$인 것은 $W+W^\perp=V$인 것과 동치이고, 이 때 차원 계산에 의해 합은 자동으로 직합이 되어 $V=W\oplus W^\perp$이다. 한편 둘째 주장에 의해 $W\cap W^\perp=W^\perp\cap(W^\perp)^\perp$은 $W^\perp$의 radical이기도 하므로, $W$가 non-degenerate인 것과 $W^\perp$가 non-degenerate인 것이 동치이다.
+이다. 따라서 $W$의 radical $W\cap W^\perp$이 $\{0\}$인 것은 $W+W^\perp=V$인 것과 동치이고, 이 때 차원 계산에 의해 합은 자동으로 direct sum이 되어 $V=W\oplus W^\perp$이다. 한편 둘째 주장에 의해 $W\cap W^\perp=W^\perp\cap(W^\perp)^\perp$은 $W^\perp$의 radical이기도 하므로, $W$가 non-degenerate인 것과 $W^\perp$가 non-degenerate인 것이 동치이다.
 :::
 
 위의 조건을 만족하는 non-degenerate 부분공간에 대해서는 이렇게 정의된 orthogonal complement가 quotient space와 canonical하게 isomorphic하다. 
@@ -176,7 +176,7 @@ $$p\vert_{W^\perp}:W^\perp\rightarrow V/W$$
 $W$가 non-degenerate이므로 [명제 8](#prop8)에 의하여 $V=W\oplus W^\perp$이다. Natural projection은 $\ker p=W$를 만족하므로 $p\vert_{W^\perp}$의 kernel은 $W^\perp\cap W=\{0\}$이라 단사이고, $V=W+W^\perp$이므로 임의의 $v=w+w'$ ($w\in W$, $w'\in W^\perp$)에 대하여 $p(w')=w'+W=v+W$이라 전사이다. 따라서 $p\vert_{W^\perp}$은 isomorphism이다.
 :::
 
-곧 직합 $V=W\oplus W^\perp$에서 $W$를 접어 없애면 $W^\perp$이 정확히 그 몫 $V/W$을 실현하게 된다. 일반적으로 몫공간 $V/W$은 $\langle-,-\rangle$ 없이도 정의되는 표준적인 대상인 반면, 이를 $V$ 안에서 실현한 대상인 $W^\perp$은 form에 의존하게 되며 [명제 8](#prop8)의 non-degeneracy 없이는 이러한 표현이 불가능하다. 가령 $W$가 isotropic이면 $W\cap W^\perp\neq\{0\}$이라 $p\vert_{W^\perp}$이 단사가 되지 못한다.
+곧 direct sum $V=W\oplus W^\perp$에서 $W$를 접어 없애면 $W^\perp$이 정확히 그 몫 $V/W$을 실현하게 된다. 일반적으로 quotient space $V/W$는 $\langle-,-\rangle$ 없이도 정의되는 표준적인 대상인 반면, 이를 $V$ 안에서 실현한 대상인 $W^\perp$은 form에 의존하게 되며 [명제 8](#prop8)의 non-degeneracy 없이는 이러한 표현이 불가능하다. 가령 $W$가 isotropic이면 $W\cap W^\perp\neq\{0\}$이라 $p\vert_{W^\perp}$이 단사가 되지 못한다.
 
 ## 네 개의 기본공간들
 

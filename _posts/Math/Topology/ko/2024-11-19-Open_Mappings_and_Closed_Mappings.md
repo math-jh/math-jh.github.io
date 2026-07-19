@@ -89,7 +89,7 @@ $$X \overset{p}{\longrightarrow} X/R \overset{h}{\longrightarrow} f(X)\overset{i
 
 ## 열린사상의 성질들
 
-이제 우리는 열린사상과 닫힌사상 각각이 갖는 성질들을 살펴본다. 우선 열린사상의 경우부터 시작한다. 
+이제 우리는 open mapping과 closed mapping 각각이 갖는 성질들을 살펴본다. 우선 open mapping의 경우부터 시작한다. 
 
 ::: 명제 6
 :::

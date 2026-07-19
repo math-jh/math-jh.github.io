@@ -43,7 +43,7 @@ $a_n \to L$이고 $a_n \to L'$이며 $L \neq L'$이라 하자. $\varepsilon = \l
 :::
 
 ::: 명제 3
-수렴하는 수열은 유계이다. 즉 어떤 $M$에 대해 모든 $n$에서 $\lvert a_n\rvert \leq M$이다.
+수렴하는 수열은 bounded이다. 즉 어떤 $M$에 대해 모든 $n$에서 $\lvert a_n\rvert \leq M$이다.
 :::
 
 ::: 증명
@@ -53,11 +53,11 @@ $a_n \to L$이면 $\varepsilon = 1$에 대해 $n \geq N$에서 $\lvert a_n\rvert
 ::: 정리 4 (극한의 대수)
 $a_n \to A$, $b_n \to B$이면 다음이 성립한다.
 
-$a_n + b_n \to A + B, \qquad a_n b_n \to AB, \qquad \frac{a_n}{b_n} \to \frac{A}{B}\ (B \neq 0).$
+$$a_n + b_n \to A + B, \qquad a_n b_n \to AB, \qquad \frac{a_n}{b_n} \to \frac{A}{B}\ (B \neq 0).$$
 :::
 
 ::: 증명
-합만 보인다. 임의의 $\varepsilon > 0$에 대해, $n$이 충분히 크면 $\lvert a_n - A\rvert < \varepsilon/2$이고 $\lvert b_n - B\rvert < \varepsilon/2$이다. 삼각부등식으로 $\lvert (a_n + b_n) - (A+B)\rvert \leq \lvert a_n - A\rvert + \lvert b_n - B\rvert < \varepsilon$이다. 곱은 $a_n b_n - AB = a_n(b_n - B) + (a_n - A)B$로 가르고 [명제 3](#prop3)의 유계성을 쓰며, 몫은 $1/b_n \to 1/B$를 먼저 보이면 된다.
+합만 보인다. 임의의 $\varepsilon > 0$에 대해, $n$이 충분히 크면 $\lvert a_n - A\rvert < \varepsilon/2$이고 $\lvert b_n - B\rvert < \varepsilon/2$이다. 삼각부등식으로 $\lvert (a_n + b_n) - (A+B)\rvert \leq \lvert a_n - A\rvert + \lvert b_n - B\rvert < \varepsilon$이다. 곱은 $a_n b_n - AB = a_n(b_n - B) + (a_n - A)B$로 가르고 [명제 3](#prop3)의 boundedness를 쓰며, quotient는 $1/b_n \to 1/B$를 먼저 보이면 된다.
 :::
 
 다음은 모르는 수열을 아는 두 수열 사이에 가두어 극한을 결정하는 자주 쓰이는 도구이다.
@@ -79,14 +79,14 @@ $a_n + b_n \to A + B, \qquad a_n b_n \to AB, \qquad \frac{a_n}{b_n} \to \frac{A}
 :::
 
 ::: 정리 7 (단조수렴정리)
-위로 유계인 증가수열은 수렴하며, 그 극한은 $\sup\{a_n \mid n \in \mathbb{N}\}$이다. 대칭적으로 아래로 유계인 감소수열은 하한으로 수렴한다.
+bounded above인 증가수열은 수렴하며, 그 극한은 $\sup\{a_n \mid n \in \mathbb{N}\}$이다. symmetric하게 bounded below인 감소수열은 하한으로 수렴한다.
 :::
 
 ::: 증명
-$(a_n)$이 증가하고 위로 유계라 하자. 집합 $\{a_n\}$이 위로 유계이고 공집합이 아니므로, [§실수의 완비성, ⁋정의 2](/ko/math/analysis/completeness_of_reals#def2)에 의해 $L = \sup\{a_n\}$이 존재한다. 임의의 $\varepsilon > 0$에 대해 $L - \varepsilon$은 상계가 아니므로 $a_N > L - \varepsilon$인 $N$이 있고, $(a_n)$이 증가하므로 $n \geq N$이면 $L - \varepsilon < a_N \leq a_n \leq L < L + \varepsilon$이다. 따라서 $\lvert a_n - L\rvert < \varepsilon$이고 $a_n \to L$이다.
+$(a_n)$이 증가하고 bounded above라 하자. 집합 $\{a_n\}$이 bounded above이고 공집합이 아니므로, [§실수의 완비성, ⁋정의 2](/ko/math/analysis/completeness_of_reals#def2)에 의해 $L = \sup\{a_n\}$이 존재한다. 임의의 $\varepsilon > 0$에 대해 $L - \varepsilon$은 upper bound가 아니므로 $a_N > L - \varepsilon$인 $N$이 있고, $(a_n)$이 증가하므로 $n \geq N$이면 $L - \varepsilon < a_N \leq a_n \leq L < L + \varepsilon$이다. 따라서 $\lvert a_n - L\rvert < \varepsilon$이고 $a_n \to L$이다.
 :::
 
-단조수렴정리는 명시적 극한값을 모를 때에도 수렴을 보증한다. 예컨대 $a_1 = 2$, $a_{n+1} = (a_n + 2/a_n)/2$로 정의된 수열은 아래로 유계인 감소수열임을 보일 수 있어 수렴하며, 그 극한 $L$은 $L = (L + 2/L)/2$를 풀어 $\sqrt{2}$임이 따른다.
+단조수렴정리는 명시적 극한값을 모를 때에도 수렴을 보증한다. 예컨대 $a_1 = 2$, $a_{n+1} = (a_n + 2/a_n)/2$로 정의된 수열은 bounded below인 감소수열임을 보일 수 있어 수렴하며, 그 극한 $L$은 $L = (L + 2/L)/2$를 풀어 $\sqrt{2}$임이 따른다.
 
 ## 거듭제곱과 근호의 극한
 
@@ -100,7 +100,7 @@ $$\lvert r^n\rvert = \frac{1}{(1+h)^n} \leq \frac{1}{1 + nh} < \frac{1}{nh}$$
 이다. 임의의 $\varepsilon > 0$에 대해 $1/(Nh) < \varepsilon$, 곧 $N > 1/(h\varepsilon)$인 $N$을 택하면 $n \geq N$에서 $\lvert r^n - 0\rvert < \varepsilon$이다. 한편 $\lvert r\rvert > 1$이면 같은 부등식이 $\lvert r^n\rvert \geq 1 + n(\lvert r\rvert - 1) \to \infty$를 주어 $(r^n)$은 발산한다.
 :::
 
-다음은 밑과 지수가 함께 움직이는 $\sqrt[n]{n}$으로, 직관만으로는 극한을 가늠하기 어렵지만 이항정리가 주는 상계를 조임정리로 눌러 $1$이 나온다.
+다음은 밑과 지수가 함께 움직이는 $\sqrt[n]{n}$으로, 직관만으로는 극한을 가늠하기 어렵지만 이항정리가 주는 upper bound를 조임정리로 눌러 $1$이 나온다.
 
 ::: 예시 9 (조임정리의 활용)
 $\sqrt[n]{n} \to 1$임을 보인다. $n \geq 1$에서 $\sqrt[n]{n} \geq 1$이므로 $\sqrt[n]{n} = 1 + h_n$ ($h_n \geq 0$)로 두면, 이항정리로
@@ -118,16 +118,16 @@ $$n = (1 + h_n)^n \geq \binom{n}{2} h_n^2 = \frac{n(n-1)}{2} h_n^2$$
 수열 $(a_n)$이 *양의 무한대로 발산<sub>diverges to infinity</sub>*한다는 것은, 임의의 $M > 0$에 대하여 자연수 $N$이 존재하여 모든 $n \geq N$에서 $a_n > M$이 성립하는 것이며, 이때 $\lim_{n\to\infty} a_n = \infty$로 적는다. $(-a_n)$이 양의 무한대로 발산하면 $(a_n)$이 *음의 무한대로 발산*한다고 하고 $\lim_{n\to\infty} a_n = -\infty$로 적는다.
 :::
 
-무한대로의 발산은 [명제 3](#prop3)과 짝을 이룬다. [명제 3](#prop3)에 의해 유계가 아닌 수열은 수렴할 수 없으므로, 무한대로 발산하는 수열은 반드시 발산하지만, 그 역은 거짓이다. 예컨대 $a_n = (-1)^n n$은 유계가 아니지만 양·음 어느 무한대로도 가지 않는다. 한편 유계이면서도 발산하는 가장 단순한 예는 다음이다.
+무한대로의 발산은 [명제 3](#prop3)과 짝을 이룬다. [명제 3](#prop3)에 의해 bounded가 아닌 수열은 수렴할 수 없으므로, 무한대로 발산하는 수열은 반드시 발산하지만, 그 역은 거짓이다. 예컨대 $a_n = (-1)^n n$은 bounded가 아니지만 양·음 어느 무한대로도 가지 않는다. 한편 bounded이면서도 발산하는 가장 단순한 예는 다음이다.
 
 ::: 예시 11 (진동하는 수열)
-$a_n = (-1)^n$은 유계($\lvert a_n\rvert = 1$)이지만 발산한다. 만약 $a_n \to L$이라면 $\varepsilon = 1$에 대해 충분히 큰 $n$에서 $\lvert a_n - L\rvert < 1$이어야 한다. 그런데 인접한 두 항 $a_n = 1$, $a_{n+1} = -1$ (또는 그 반대)에 대해 삼각부등식으로
+$a_n = (-1)^n$은 bounded($\lvert a_n\rvert = 1$)이지만 발산한다. 만약 $a_n \to L$이라면 $\varepsilon = 1$에 대해 충분히 큰 $n$에서 $\lvert a_n - L\rvert < 1$이어야 한다. 그런데 인접한 두 항 $a_n = 1$, $a_{n+1} = -1$ (또는 그 반대)에 대해 삼각부등식으로
 
 $$2 = \lvert a_n - a_{n+1}\rvert \leq \lvert a_n - L\rvert + \lvert L - a_{n+1}\rvert < 1 + 1 = 2$$
 
 가 되어 $2 < 2$라는 모순이 나온다. 따라서 어떤 $L$도 극한이 될 수 없다.
 :::
 
-이 예시는 유계성이 수렴의 필요조건이지 충분조건이 아님을 보여 준다. 유계수열에서 수렴을 끌어내려면 단조성 같은 추가 구조가 필요하다.
+이 예시는 boundedness가 수렴의 필요조건이지 충분조건이 아님을 보여 준다. bounded sequence에서 수렴을 끌어내려면 단조성 같은 추가 구조가 필요하다.
 
 이 정리는 [\[미적분학\] §수열의 극한](/ko/math/calculus/sequences)에서 계산적으로 다룬 극한들의 존재를 비로소 정당화한다.

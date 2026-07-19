@@ -53,7 +53,7 @@ $$(\mathcal{L}_XY)_p=\lim_{t\rightarrow 0}\frac{(d\phi^{-t})_{\phi^t(p)}(Y_{\phi
 
 ## 미분형식의 리 미분
 
-물론 이와 같은 방식으로 계속 정의해나갈 수 있다. 예를 들어 다음은 미분형식을 벡터장 $X$에 대해 미분하는 방법이다.
+물론 이와 같은 방식으로 계속 정의해나갈 수 있다. 예를 들어 다음은 differential form을 벡터장 $X$에 대해 미분하는 방법이다.
 
 ::: 정의 3
 Manifold $M$과 그 위에 정의된 벡터장 $X$를 고정하고, differential form $\omega\in\Omega^\ast(M)$이 주어졌다 하자. 그럼 $\omega$의 *Lie derivative* $\mathcal{L}_X\omega$는 다음의 식

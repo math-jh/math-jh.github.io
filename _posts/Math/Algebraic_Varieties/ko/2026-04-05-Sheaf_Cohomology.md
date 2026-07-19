@@ -480,7 +480,7 @@ $$E_2^{n,0}=H^n(\Gamma(X, \mathcal{G}^\bullet(\mathcal{F}))=H^n(X, \mathcal{F})$
 ::: 명제 19 (Leray Spectral Sequence)
 연속함수 $f : X \to Y$와 sheaf $\mathcal{F}$에 대하여, 다음의 $E_2$ page를 가지는 spectral sequence가 존재한다.
 
-$E_2^{p,q} = H^p(Y, R^q f_\ast \mathcal{F}) \Rightarrow H^{p+q}(X, \mathcal{F}).$
+$$E_2^{p,q} = H^p(Y, R^q f_\ast \mathcal{F}) \Rightarrow H^{p+q}(X, \mathcal{F}).$$
 :::
 
 기하학적으로 이는 $f:X\rightarrow Y$가 fibration일 때 그 의미가 가장 명확한데, 이 경우 이 spectral sequence가 뜻하는 바는 $X$ 위의 cohomology를 계산하기 위해서는 $Y$ 위에서의 cohomology를 먼저 계산한 후, 각 점의 fiber 위에서의 cohomology를 higher sheaf $R^q f_\ast \mathcal{F}$로 기억한 뒤, 이들을 $Y$ 위에서 합성하면 된다는 것이다.

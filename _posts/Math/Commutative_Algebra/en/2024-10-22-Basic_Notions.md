@@ -23,7 +23,7 @@ In this category we examine a commutative ring $A$ and a module $M$ defined over
 ::: Definition 1
 For any $A$-module $M$, we define the *annihilator* $\ann(M)$ of $M$ by the formula
 
-$\ann(M)=\{a\in A\mid aM=0\}$
+$$\ann(M)=\{a\in A\mid aM=0\}$$
 :::
 
 On the other hand, for two ideals $\mathfrak{a},\mathfrak{b}$ of a ring $A$ we define the *ideal quotient* $(\mathfrak{a}:\mathfrak{b})$ by the formula
@@ -145,7 +145,7 @@ there may be infinitely many relations among the $x_i$. Since these relations ar
 ::: Definition 7
 An $A$-module $M$ is called *finitely presented* if there exist suitable $m,n$ such that the following exact sequence exists:
 
-$A^{\oplus m} \rightarrow A^{\oplus n} \rightarrow M \rightarrow 0$
+$$A^{\oplus m} \rightarrow A^{\oplus n} \rightarrow M \rightarrow 0$$
 :::
 
 In general a finitely presented module is finitely generated, but the converse does not hold. However, for any noetherian ring $A$ the two notions coincide. This is because if $M$ is a finitely generated $A$-module, then we obtain the exact sequence

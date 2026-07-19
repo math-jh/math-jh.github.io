@@ -1,6 +1,6 @@
 ---
 title: "코탄젠트 복합체"
-description: "켈러 미분의 conormal sequence를 왼쪽으로 연장하는 naive cotangent complex를 정의하고, 그 호몰로지가 표현의 선택과 무관함을 살펴본다."
+description: "켈러 미분의 conormal sequence를 왼쪽으로 연장하는 naive cotangent complex를 정의하고, 그 homology가 표현의 선택과 무관함을 살펴본다."
 excerpt: "Kähler 미분의 cotangent complex로의 확장"
 
 categories: [Math / Multilinear Algebra]
@@ -24,7 +24,7 @@ $$\mathfrak{I}/\mathfrak{I}^2\overset{\overline{d}}{\longrightarrow}\Omega_{E/A}
 
 ## Naive cotangent complex
 
-핵심 아이디어는 $E$를 가장 다루기 쉬운 algebra, 즉 polynomial algebra의 quotient로 표현하는 것이다. $E$의 생성집합 $(t_s)_{s\in S}$를 아무거나 택하면 (가령 $E$ 전체), [\[대수적 구조\] §대수, ⁋명제 8](/ko/math/algebraic_structures/algebras#prop8)의 adjunction에 의하여 $\x_s\mapsto t_s$로 정의되는 surjective $A$-algebra homomorphism
+핵심 아이디어는 $E$를 가장 다루기 쉬운 algebra, 즉 polynomial algebra의 quotient로 표현하는 것이다. $E$의 spanning set $(t_s)_{s\in S}$를 아무거나 택하면 (가령 $E$ 전체), [\[대수적 구조\] §대수, ⁋명제 8](/ko/math/algebraic_structures/algebras#prop8)의 adjunction에 의하여 $\x_s\mapsto t_s$로 정의되는 surjective $A$-algebra homomorphism
 
 $$p: R=A[\x_s]_{s\in S}\longrightarrow E$$
 
@@ -108,7 +108,7 @@ $$\overline{d}'\bigl(h(d\x_s\otimes1)\bigr)=d\bigl(\varphi(\x_s)-\psi(\x_s)\bigr
 
 $$h\bigl(\overline{d}(\overline{f})\bigr)=\sum_sp\left(\frac{\partial f}{\partial\x_s}\right)\cdot\overline{\varphi(\x_s)-\psi(\x_s)}=\overline{\sum_s\varphi\left(\frac{\partial f}{\partial\x_s}\right)\bigl(\varphi(\x_s)-\psi(\x_s)\bigr)}$$
 
-이다. 마지막 등식은 $\mathfrak{I}'/\mathfrak{I}'^2$ 위에서 $E=R'/\mathfrak{I}'$의 작용이 $p'$를 통해 주어지고 $p'\circ\varphi=p$이기 때문이다. 그럼 [보조정리 3](#lem3)에 의하여 이는 $\overline{\varphi(f)-\psi(f)}=\bigl(\operatorname{NL}(\varphi)-\operatorname{NL}(\psi)\bigr)(\overline{f})$와 같다. 따라서 $h$는 chain homotopy이고, chain homotopic한 morphism들이 같은 homology morphism을 유도하는 것은 [\[호몰로지 대수학\] §호몰로지](/ko/math/homological_algebra/homology)에서 살펴보았다.
+이다. 마지막 등식은 $\mathfrak{I}'/\mathfrak{I}'^2$ 위에서 $E=R'/\mathfrak{I}'$의 action이 $p'$를 통해 주어지고 $p'\circ\varphi=p$이기 때문이다. 그럼 [보조정리 3](#lem3)에 의하여 이는 $\overline{\varphi(f)-\psi(f)}=\bigl(\operatorname{NL}(\varphi)-\operatorname{NL}(\psi)\bigr)(\overline{f})$와 같다. 따라서 $h$는 chain homotopy이고, chain homotopic한 morphism들이 같은 homology morphism을 유도하는 것은 [\[호몰로지 대수학\] §호몰로지](/ko/math/homological_algebra/homology)에서 살펴보았다.
 :::
 
 ::: 정리 5
@@ -123,7 +123,7 @@ $$H_i\bigl(\operatorname{NL}(p)\bigr)\cong H_i\bigl(\operatorname{NL}(p')\bigr),
 
 $$\operatorname{NL}(\varphi')\circ\operatorname{NL}(\varphi)=\operatorname{NL}(\varphi'\circ\varphi)\simeq\operatorname{NL}(\id_R)=\id_{\operatorname{NL}(p)}$$
 
-이고, 대칭적으로 $\operatorname{NL}(\varphi)\circ\operatorname{NL}(\varphi')\simeq\id_{\operatorname{NL}(p')}$이다. 즉 $\operatorname{NL}(\varphi)$는 homotopy equivalence이고, homology에 isomorphism을 유도한다. 이 isomorphism이 canonical한 것은, $\varphi$의 다른 선택이 [명제 4](#prop4)에 의해 같은 homology morphism을 유도하기 때문이다.
+이고, symmetrically $\operatorname{NL}(\varphi)\circ\operatorname{NL}(\varphi')\simeq\id_{\operatorname{NL}(p')}$이다. 즉 $\operatorname{NL}(\varphi)$는 homotopy equivalence이고, homology에 isomorphism을 유도한다. 이 isomorphism이 canonical한 것은, $\varphi$의 다른 선택이 [명제 4](#prop4)에 의해 같은 homology morphism을 유도하기 때문이다.
 :::
 
 따라서 우리는 presentation의 선택을 잊고, homotopy equivalence를 무시한다는 단서 하에 $\operatorname{NL}_{E/A}$라 적을 수 있다. 그 homology
@@ -145,7 +145,7 @@ $$H_0(\operatorname{NL}_{E/A})=\Omega_{E/A}\cong E/(\overline{Df}),\qquad H_1(\o
 :::
 
 ::: 참고 7
-Naive cotangent complex는 이름 그대로 더 정교한 대상의 그림자이다. Quillen과 André는 polynomial algebra에 의한 한 번의 presentation 대신 simplicial resolution을 사용하여, 모든 degree에서 homology를 갖는 *cotangent complex* $L_{E/A}$를 정의하였다. 이 complex의 degree $0,1$ 부분이 정확히 위에서 정의한 $\operatorname{NL}_{E/A}$이다. 이러한 호모토피 이론적인 구성은 이 카테고리의 범위를 벗어나므로, 여기서는 두 항짜리 절단인 $\operatorname{NL}_{E/A}$로 만족하기로 한다.
+Naive cotangent complex는 이름 그대로 더 정교한 대상의 그림자이다. Quillen과 André는 polynomial algebra에 의한 한 번의 presentation 대신 simplicial resolution을 사용하여, 모든 degree에서 homology를 갖는 *cotangent complex* $L_{E/A}$를 정의하였다. 이 complex의 degree $0,1$ 부분이 정확히 위에서 정의한 $\operatorname{NL}_{E/A}$이다. 이러한 homotopy 이론적인 구성은 이 category의 범위를 벗어나므로, 여기서는 두 항짜리 절단인 $\operatorname{NL}_{E/A}$로 만족하기로 한다.
 :::
 
 ---

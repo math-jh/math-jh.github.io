@@ -98,7 +98,7 @@ Then $\mathcal{F}\vert_U$ is a presheaf. ([§Subspaces, ⁋Lemma 2](/en/math/top
 ::: Example 8 (Pushforward)
 Fix a continuous function $f:X \rightarrow Y$, and let $\mathcal{F}$ be a presheaf on $X$. The *pushforward* $f_\ast \mathcal{F}$ of $\mathcal{F}$ along $f$ is defined by
 
-$f_\ast \mathcal{F}(U)=\mathcal{F}(f^{-1}(U))$
+$$f_\ast \mathcal{F}(U)=\mathcal{F}(f^{-1}(U))$$
 :::
 
 ## Stalks
@@ -154,13 +154,13 @@ The following examples should have appeared under [Examples of presheaves](#exam
 ::: Example 12 (Sheaf Hom)
 Fix two presheaves $\mathcal{F}, \mathcal{G}$ and define, for any $U$,
 
-$\mathcal{Hom}(\mathcal{F},\mathcal{G})(U)=\Hom_{\PSh(U)}(\mathcal{F}\vert_U, \mathcal{G}\vert_U)$
+$$\mathcal{Hom}(\mathcal{F},\mathcal{G})(U)=\Hom_{\PSh(U)}(\mathcal{F}\vert_U, \mathcal{G}\vert_U)$$
 :::
 
 ::: Example 13 (Product)
 For a family of presheaves $(\mathcal{F}_i:\Open(X) \rightarrow \Set)_{i\in I}$ on a topological space $X$, their product $\prod_{i\in I} \mathcal{F}_i$ can be defined by
 
-$\left(\prod_{i\in I} \mathcal{F}_i\right)(U)=\prod_{i\in I} \mathcal{F}_i(U)$
+$$\left(\prod_{i\in I} \mathcal{F}_i\right)(U)=\prod_{i\in I} \mathcal{F}_i(U)$$
 :::
 
 Using definitions as above, structures defined in a category $\mathcal{A}$—for example products, coproducts, limits, colimits, monoidal products, etc.—can be transferred to $\PSh(X; \mathcal{A})$. In particular, $\PSh(X; \Ab)$ inherits the monoidal structure $(\Ab,\otimes, \mathbb{Z})$, and the monoidal objects here are $\PSh(X; \Ring)$. In the same vein, the following example can be understood.

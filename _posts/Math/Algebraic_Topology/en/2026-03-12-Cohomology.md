@@ -73,7 +73,7 @@ $$0 \rightarrow H_k(X)\otimes_\mathbb{Z}A\rightarrow H_k(X;A)\rightarrow \Tor_1^
 
 Moreover, this sequence splits (non-canonically), and thus yields a (non-canonical) isomorphism
 
-$H_k(X;A)\cong \left(H_k(X)\otimes_\mathbb{Z}A\right)\oplus \Tor_1^\mathbb{Z}(H_{k-1}(X), A)$
+$$H_k(X;A)\cong \left(H_k(X)\otimes_\mathbb{Z}A\right)\oplus \Tor_1^\mathbb{Z}(H_{k-1}(X), A)$$
 :::
 
 
@@ -94,7 +94,7 @@ the *Eilenberg-Steenrod axioms* are the following.
 - (Additivity) If $X=\coprod X_\alpha$, then $H^k(X)\cong\bigoplus H^k(X_\alpha)$.
 - (Exactness) For each pair $(X,A)$ and the two inclusions $(A,\emptyset) \hookrightarrow (X,\emptyset)$ and $(X,\emptyset)\hookrightarrow (X,A)$, we have the long exact sequence
     
-    $\cdots \rightarrow H^k(X,A)\rightarrow H^k(X) \rightarrow H^k(A) \rightarrow H^{k+1}(X,A)\rightarrow \cdots$
+    $$\cdots \rightarrow H^k(X,A)\rightarrow H^k(X) \rightarrow H^k(A) \rightarrow H^{k+1}(X,A)\rightarrow \cdots$$
 :::
 
 To establish the existence of a cohomology theory satisfying these axioms, we proceed as in [§Homology](/en/math/algebraic_topology/homology) and consider the chain complex of singular simplices of a topological space $X$
@@ -124,7 +124,7 @@ $$0\rightarrow\Ext_\mathbb{Z}^1(H_{k-1}(X), A)\rightarrow H^k(X;A)\rightarrow \H
 
 Moreover, this sequence splits (non-canonically), and thus yields a (non-canonical) isomorphism
 
-$H^k(X;A)\cong \Hom_\mathbb{Z}(H_k(X),A)\oplus \Ext^1_\mathbb{Z}(H_{k-1}(X),A)$
+$$H^k(X;A)\cong \Hom_\mathbb{Z}(H_k(X),A)\oplus \Ext^1_\mathbb{Z}(H_{k-1}(X),A)$$
 :::
 
 Roughly speaking, this can be viewed as translating [Proposition 1](#prop1) via [[Algebraic Structures] §Abelian Groups, ⁋Theorem 15](/en/math/algebraic_structures/abelian_groups#thm15).
@@ -228,7 +228,7 @@ $$0 \rightarrow H_k(C)\otimes_AM\rightarrow H_k(C\otimes_AM)\rightarrow \Tor_1^A
 
 Moreover, this sequence splits (non-canonically), and thus yields a (non-canonical) isomorphism
 
-$H_k(C\otimes_AM)\cong \left(H_k(C)\otimes_AM\right)\oplus \Tor_1^A(H_{k-1}(C), M)$
+$$H_k(C\otimes_AM)\cong \left(H_k(C)\otimes_AM\right)\oplus \Tor_1^A(H_{k-1}(C), M)$$
 :::
 
 ::: Theorem 5 (Universal coefficient theorem for cohomology, general version)
@@ -238,7 +238,7 @@ $$0\rightarrow\Ext_A^1(H_{k-1}(C), M)\rightarrow H_k(\Hom_A(C,M))\rightarrow \Ho
 
 Moreover, this sequence splits (non-canonically), and thus yields a (non-canonical) isomorphism
 
-$H_k(\Hom_A(C,M))\cong \Hom_A(H_k(C),M)\oplus \Ext^1_A(H_{k-1}(C),M)$
+$$H_k(\Hom_A(C,M))\cong \Hom_A(H_k(C),M)\oplus \Ext^1_A(H_{k-1}(C),M)$$
 :::
 
 ## The Mayer-Vietoris Sequence
@@ -252,7 +252,7 @@ $$\cdots \to H^{n}(X) \xrightarrow{(i^\ast, j^\ast)} H^{n}(U) \oplus H^{n}(V) \x
 
 where $i^\ast, j^\ast, k^\ast, l^\ast$ are the maps induced by the inclusions
 
-$i:U\rightarrow X,\quad j:V\rightarrow X,\quad k:U\cap V\rightarrow U,\quad l:U\cap V \rightarrow V$
+$$i:U\rightarrow X,\quad j:V\rightarrow X,\quad k:U\cap V\rightarrow U,\quad l:U\cap V \rightarrow V$$
 :::
 
 ## Tensor Product of Chain Complexes
@@ -282,7 +282,7 @@ $$0 \rightarrow \bigoplus_{p+q=k}H_p(C)\otimes_AH_q(D)\rightarrow H_k(C\otimes D
 
 Moreover, this short exact sequence splits (non-canonically), and thus there is an isomorphism
 
-$H_k(C\otimes D)\cong \left( \bigoplus_{p+q=k}H_p(C)\otimes_AH_q(D)\right)\oplus \left(\bigoplus_{p+q=k-1}\Tor_1^A(H_p(C),H_q(D)) \right)$
+$$H_k(C\otimes D)\cong \left( \bigoplus_{p+q=k}H_p(C)\otimes_AH_q(D)\right)\oplus \left(\bigoplus_{p+q=k-1}\Tor_1^A(H_p(C),H_q(D)) \right)$$
 :::
 ::: Proof
 First, consider the short exact sequence
@@ -369,7 +369,7 @@ $$0 \rightarrow \bigoplus_{p+q=k}H_p(X;A)\otimes_AH_q(Y;A)\rightarrow H_k(X\time
 
 Moreover, this short exact sequence splits (non-canonically), and thus there is an isomorphism
 
-$H_k(X\times Y;A)\cong \left( \bigoplus_{p+q=k}H_p(X;A)\otimes_AH_q(Y;A)\right)\oplus \left(\bigoplus_{p+q=k-1}\Tor_1^A(H_p(X;A),H_q(Y;A)) \right)$
+$$H_k(X\times Y;A)\cong \left( \bigoplus_{p+q=k}H_p(X;A)\otimes_AH_q(Y;A)\right)\oplus \left(\bigoplus_{p+q=k-1}\Tor_1^A(H_p(X;A),H_q(Y;A)) \right)$$
 :::
 
 Of course, using this result together with [Theorem 5](#thm5), one can obtain the cohomology version of the Künneth formula.

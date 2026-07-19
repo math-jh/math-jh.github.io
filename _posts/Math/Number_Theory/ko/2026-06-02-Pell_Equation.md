@@ -24,7 +24,7 @@ published: false
 방정식 $x^2 - Dy^2 = 1$을 *펠 방정식<sub>Pell's equation</sub>*이라 한다. $x = \pm 1, y = 0$인 해를 *자명한 해*라 한다.
 :::
 
-수 $\alpha = x + y\sqrt{D}$ ($x, y \in \mathbb{Z}$) 들이 이루는 환 $\mathbb{Z}[\sqrt D]$에서 *노름*을 $N(\alpha) = (x + y\sqrt D)(x - y\sqrt D) = x^2 - Dy^2$으로 정의하면, 펠 방정식의 해는 정확히 $N(\alpha) = 1$인 원소이다. 노름은 곱셈적이므로 — $N(\alpha\beta) = N(\alpha)N(\beta)$ — 해들의 곱도 다시 해이다. 이것이 해의 구조를 지배한다.
+수 $\alpha = x + y\sqrt{D}$ ($x, y \in \mathbb{Z}$) 들이 이루는 ring $\mathbb{Z}[\sqrt D]$에서 *노름*을 $N(\alpha) = (x + y\sqrt D)(x - y\sqrt D) = x^2 - Dy^2$으로 정의하면, 펠 방정식의 해는 정확히 $N(\alpha) = 1$인 원소이다. 노름은 곱셈적이므로 — $N(\alpha\beta) = N(\alpha)N(\beta)$ — 해들의 곱도 다시 해이다. 이것이 해의 구조를 지배한다.
 
 ## 기본해의 존재
 
@@ -35,7 +35,7 @@ published: false
 :::
 
 ::: 증명
-[§연분수, ⁋정리 3](/ko/math/number_theory/continued_fractions#thm3)에 의해 $\left\lvert \sqrt D - \dfrac{p}{q}\right\rvert < \dfrac{1}{q^2}$인 유리수가 무한히 많다. 이런 $p, q$에 대해 $\lvert p^2 - Dq^2\rvert = \lvert p - q\sqrt D\rvert\,\lvert p + q\sqrt D\rvert < \dfrac1q\cdot(2q\sqrt D + 1)$이 유계이므로, $p^2 - Dq^2$이 같은 값 $k$를 갖는 해가 무한히 많다. 그중 $p, q$가 법 $\lvert k\rvert$에 대해 같은 잉여류인 두 해 $\alpha_1, \alpha_2$를 고르면, 비 $\alpha_1/\alpha_2$가 노름 $1$인 자명하지 않은 정수해 $\mathbb{Z}[\sqrt D]$의 원소를 준다. 실제로 $\sqrt D$의 순환연분수의 한 주기에서 나오는 점근분수가 기본해를 직접 산출한다.
+[§연분수, ⁋정리 3](/ko/math/number_theory/continued_fractions#thm3)에 의해 $\left\lvert \sqrt D - \dfrac{p}{q}\right\rvert < \dfrac{1}{q^2}$인 유리수가 무한히 많다. 이런 $p, q$에 대해 $\lvert p^2 - Dq^2\rvert = \lvert p - q\sqrt D\rvert\,\lvert p + q\sqrt D\rvert < \dfrac1q\cdot(2q\sqrt D + 1)$이 bounded이므로, $p^2 - Dq^2$이 같은 값 $k$를 갖는 해가 무한히 많다. 그중 $p, q$가 법 $\lvert k\rvert$에 대해 같은 coset인 두 해 $\alpha_1, \alpha_2$를 고르면, 비 $\alpha_1/\alpha_2$가 노름 $1$인 자명하지 않은 정수해 $\mathbb{Z}[\sqrt D]$의 원소를 준다. 실제로 $\sqrt D$의 순환연분수의 한 주기에서 나오는 점근분수가 기본해를 직접 산출한다.
 :::
 
 자명하지 않은 양의 해 중 $x + y\sqrt D$가 가장 작은 것을 *기본해<sub>fundamental solution</sub>* $\varepsilon_1 = x_1 + y_1\sqrt D$라 한다.

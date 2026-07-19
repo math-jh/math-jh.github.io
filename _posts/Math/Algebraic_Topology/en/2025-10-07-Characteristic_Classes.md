@@ -271,7 +271,7 @@ $$c(E\oplus E')=c(E)\smile c(E')$$
 
 holds. That is, for all $k$,
 
-$c_k(E\oplus E')=\sum_{i+j=k}c_i(E)\smile c_j(E')$
+$$c_k(E\oplus E')=\sum_{i+j=k}c_i(E)\smile c_j(E')$$
 :::
 
 ::: Proof
@@ -379,7 +379,7 @@ $$c(T\CP^n)=c\bigl(T\CP^n\oplus\Hom(\gamma,\gamma)\bigr)=c(\bar{\gamma})^{n+1}=(
 
 and expanding this, since $H^\bullet(\CP^n)=\mathbb{Z}[\x]/(\x^{n+1})$, we know
 
-$c(T\CP^n)=(n+1)\x^n+\cdots +1$
+$$c(T\CP^n)=(n+1)\x^n+\cdots +1$$
 :::
 
 ## Pontryagin Classes
@@ -389,7 +389,7 @@ For real vector bundles as well, $\mathbb{Z}$-coefficient invariants can be obta
 ::: Definition 12
 The *Pontryagin class* $p_i(E)\in H^{4i}(B;\mathbb{Z})$ of a real vector bundle $E\rightarrow B$ is defined from the Chern class of the complexification $E\otimes_{\mathbb{R}}\mathbb{C}$ by
 
-$p_i(E)=(-1)^i c_{2i}(E\otimes_{\mathbb{R}}\mathbb{C})$
+$$p_i(E)=(-1)^i c_{2i}(E\otimes_{\mathbb{R}}\mathbb{C})$$
 :::
 
 The complexification $E\otimes_{\mathbb{R}}\mathbb{C}$ is isomorphic to its conjugate $\overline{E\otimes\mathbb{C}}$ via $v\otimes z\mapsto v\otimes\bar{z}$. Then by [Proposition 10](#prop10), $c_{2i+1}(E\otimes\mathbb{C})=-c_{2i+1}(E\otimes\mathbb{C})$, that is, all odd Chern classes become $2$-torsion ($2c_{2i+1}=0$) and essentially carry no meaningful information. For this reason we define the $i$-th class using only the even-position (signed) Chern classes, and since Chern classes live in cohomology of degree twice their index, Pontryagin classes end up in $H^{4i}(B;\mathbb{Z})$. Intuitively this is bringing what the Stiefel-Whitney class did over $\mathbb{Z}/2$ to $\mathbb{Z}$-coefficients (without passing to complex vector bundles), or bringing what the Chern class did for complex vector bundles down to real vector bundles.

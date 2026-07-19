@@ -11,7 +11,7 @@ weight: 24
 published: false
 ---
 
-Riemann-Roch 정리는 algebraic geometry의 핵심 정리 중 하나로, 주어진 다양체 위의 sheaf의 cohomology에 대한 정보를 그 다양체의 기하학적 불변량으로 계산하는 공식을 제공한다. Curve에서의 classical Riemann-Roch 정리는 divisor의 degree와 curve의 genus만을 사용하여 Euler characteristic을 계산하며, surface로의 일반화에서는 intersection number가 추가적으로 등장한다. Hirzebruch는 이러한 저차원의 결과들을 통일적인 공식으로 일반화하여, 임의의 차원을 갖는 smooth projective variety 위의 coherent sheaf에 대한 Riemann-Roch 공식을 얻었다. 본 글에서는 이 **Hirzebruch-Riemann-Roch (HRR)** 정리를 서술하고, 저차원으로의 환원, 증명의 개요, 그리고 구체적인 계산 예시를 다룬다.
+Riemann-Roch 정리는 algebraic geometry의 핵심 정리 중 하나로, 주어진 variety 위의 sheaf의 cohomology에 대한 정보를 그 variety의 기하학적 불변량으로 계산하는 공식을 제공한다. Curve에서의 classical Riemann-Roch 정리는 divisor의 degree와 curve의 genus만을 사용하여 Euler characteristic을 계산하며, surface로의 일반화에서는 intersection number가 추가적으로 등장한다. Hirzebruch는 이러한 저차원의 결과들을 통일적인 공식으로 일반화하여, 임의의 차원을 갖는 smooth projective variety 위의 coherent sheaf에 대한 Riemann-Roch 공식을 얻었다. 본 글에서는 이 **Hirzebruch-Riemann-Roch (HRR)** 정리를 서술하고, 저차원으로의 환원, 증명의 개요, 그리고 구체적인 계산 예시를 다룬다.
 
 ::: 정의 1
 Smooth projective variety $X$ 위의 coherent sheaf $\mathcal{F}$에 대하여, 그 **Euler characteristic** $\chi(X,\mathcal{F})$를
@@ -109,7 +109,7 @@ $$\chi(S,\mathcal{O}_S(D))=\frac{1}{2}D\cdot(D-K_S)+\chi(\mathcal{O}_S)$$
 
 ## Grothendieck-Riemann-Roch 정리
 
-Hirzebruch의 정리는 하나의 다양체 위에서의 Euler characteristic을 계산하는 공식이었다. Grothendieck는 이를 두 다양체 사이의 proper morphism에 대한 상대적 형태로 일반화하였다.
+Hirzebruch의 정리는 하나의 variety 위에서의 Euler characteristic을 계산하는 공식이었다. Grothendieck는 이를 두 variety 사이의 proper morphism에 대한 상대적 형태로 일반화하였다.
 
 ::: 정리 5 (Grothendieck-Riemann-Roch)
 Smooth projective variety들 사이의 proper morphism $f:X\rightarrow Y$와 $X$ 위의 coherent sheaf $\mathcal{F}$에 대하여 다음이 성립한다.
@@ -147,7 +147,7 @@ $$f_\ast\circ\tau_X=\tau_Y\circ f_!$$
 
 Grothendieck는 임의의 projective morphism을 두 가지 기본적인 경우로 분해할 수 있음을 보였다. 첫째는 projective bundle의 projection $\pi:\mathbb{P}(E)\rightarrow Y$이고, 둘째는 closed immersion $j:X\hookrightarrow Y$이다. Projective bundle의 경우에는 projective bundle formula를 사용하여 비교적 직접적으로 GRR을 검증할 수 있다.
 
-Closed immersion의 경우가 핵심적인 어려움을 내포하는데, 이를 극복하는 기법이 바로 **deformation to the normal cone**이다. $j:X\hookrightarrow Y$를 closed immersion이라 하자. 그러면 $Y\times\mathbb{P}^1$을 $X\times\{0\}$에 대해 blow-up하여 얻어지는 다양체 $M$을 고려한다. 이 때 $M$은 $\mathbb{P}^1$ 위의 flat family를 이루며, $t\neq 0$인 fiber $M_t$는 $Y$와 isomorphic하고, $t=0$인 fiber $M_0$는 exceptional divisor $\mathbb{P}(N_{X/Y}\oplus\mathcal{O}_X)$와 blow-up $\widetilde{Y}$의 합으로 나타난다.
+Closed immersion의 경우가 핵심적인 어려움을 내포하는데, 이를 극복하는 기법이 바로 **deformation to the normal cone**이다. $j:X\hookrightarrow Y$를 closed immersion이라 하자. 그러면 $Y\times\mathbb{P}^1$을 $X\times\{0\}$에 대해 blow-up하여 얻어지는 variety $M$을 고려한다. 이 때 $M$은 $\mathbb{P}^1$ 위의 flat family를 이루며, $t\neq 0$인 fiber $M_t$는 $Y$와 isomorphic하고, $t=0$인 fiber $M_0$는 exceptional divisor $\mathbb{P}(N_{X/Y}\oplus\mathcal{O}_X)$와 blow-up $\widetilde{Y}$의 합으로 나타난다.
 
 Deformation to the normal cone의 핵심은 다음과 같다. $X$를 $Y$에 embedded시킨 상황에서의 GRR 등식을, $X$를 자신의 normal bundle $N_{X/Y}$에 zero section으로 embedded시킨 훨씬 단순한 상황으로 **변형**할 수 있다는 것이다. Normal bundle에 대한 zero section embedding의 경우에는 Koszul complex를 사용한 명시적인 계산이 가능하며, 이로부터 closed immersion에 대한 GRR 등식을 유도한다. 이 과정에서 Chow ring에서의 **self-intersection formula**와 **excess intersection formula**가 본질적으로 사용된다.
 

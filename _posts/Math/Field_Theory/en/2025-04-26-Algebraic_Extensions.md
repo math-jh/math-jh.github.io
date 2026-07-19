@@ -237,7 +237,7 @@ Then it is not difficult to see that an extension $\mathbb{L}/\mathbb{K}$ being 
 A degree $n$ $\mathbb{K}$-extension $\mathbb{L}$ is necessarily an algebraic extension, and the degree of any element of $\mathbb{L}$ is a divisor of $n$.
 :::
 ::: Proof
-$[\mathbb{L}:\mathbb{K}]=[\mathbb{L}:\mathbb{K}(x)][\mathbb{K}(x):\mathbb{K}].$
+$$[\mathbb{L}:\mathbb{K}]=[\mathbb{L}:\mathbb{K}(x)][\mathbb{K}(x):\mathbb{K}].$$
 :::
 
 Extending this inductively, we obtain the following.

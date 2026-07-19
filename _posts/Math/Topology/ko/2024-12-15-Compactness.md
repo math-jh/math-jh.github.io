@@ -86,7 +86,7 @@ $K$는 compact Hausdorff space이므로 regular space이다. ([§옹골공간, �
 각 점이 $\mathbb{R}^n$의 열린집합과 homeomorphic한 열린근방을 갖는 Hausdorff 공간은 LCH space이다. 뒤에서 정의할 위상다양체가 바로 이러한 공간이다. 실제로 그러한 공간 $M$의 각 점 $x$에 대하여 $\mathbb{R}^n$의 열린집합과 homeomorphic한 열린근방 $U$를 잡으면, 그 homeomorphism 아래에서 $x$에 대응하는 점이 $\mathbb{R}^n$에서 compact neighborhood를 가지므로 ($\mathbb{R}^n$이 LCH이기 때문이다) 이를 $U$로 되끌어 오면 $x$의 compact neighborhood를 얻는다.
 :::
 
-Locally compact이라는 조건은 얼핏 매우 약해 보이지만 결코 자동으로 주어지는 것은 아니다. 다음은 국소적 옹골공간이 아닌 대표적인 예이다.
+Locally compact이라는 조건은 얼핏 매우 약해 보이지만 결코 자동으로 주어지는 것은 아니다. 다음은 locally compact space가 아닌 대표적인 예이다.
 
 ::: 예시 6
 유리수 공간 $\mathbb{Q}$는 $\mathbb{R}$의 부분공간으로서 어떤 점에서도 locally compact가 아니다. 대칭성에 의해 $0$에서 그렇지 않음을 보이면 충분하다. 결론에 반하여 $0$의 compact neighborhood $K\subseteq\mathbb{Q}$가 존재한다 하자. 그럼 $K$는 $0$을 품는 열린집합을 포함하므로 어떤 $\delta>0$에 대하여 $\mathbb{Q}\cap(-\delta,\delta)\subseteq K$이고, $0<r<\delta$를 하나 고정하면 $\mathbb{Q}\cap[-r,r]\subseteq K$이다.
@@ -128,7 +128,7 @@ $X$는 $X$의 열린집합이므로 [정의 8](#def8)의 첫째 종류로서 $X^
 $\{\infty\}=X^+\setminus X$는 열린집합 $X$의 여집합이므로 닫힌집합이다. $X$가 조밀하다는 것은 $\infty\in\cl(X)$인 것, 곧 $\infty$의 임의의 열린근방이 $X$와 만나는 것과 같다. $\infty$를 품는 열린집합은 반드시 둘째 종류 $X^+\setminus C$이며, 이것이 $X$와 만나는 것은 $X\setminus C\neq\emptyset$, 곧 $C\neq X$인 것과 같다. 따라서 $X$가 조밀하지 않을 필요충분조건은 어떤 compact인 닫힌집합 $C$에 대해 $C=X$인 것, 곧 $X$ 자신이 compact인 것이다.
 :::
 
-$X$가 compact인 경우에는 $X$ 자체가 compact이며 닫힌집합이므로 $\{\infty\}=X^+\setminus X$가 열린집합이 되어 $\infty$가 고립점이 된다. 이 경우 $X^+$는 $X$에 고립된 한 점을 덧붙인 것에 지나지 않아 흥미롭지 않다. 일점 옹골화가 본래 의도한 역할을 하는 것은 $X$가 compact가 아닐 때이며, 이때 $\infty$는 $X$ 바깥으로 달아나는 모든 방향의 극한점 노릇을 한다.
+$X$가 compact인 경우에는 $X$ 자체가 compact이며 닫힌집합이므로 $\{\infty\}=X^+\setminus X$가 열린집합이 되어 $\infty$가 isolated point가 된다. 이 경우 $X^+$는 $X$에 고립된 한 점을 덧붙인 것에 지나지 않아 흥미롭지 않다. 일점 옹골화가 본래 의도한 역할을 하는 것은 $X$가 compact가 아닐 때이며, 이때 $\infty$는 $X$ 바깥으로 달아나는 모든 방향의 극한점 노릇을 한다.
 
 ::: 정리 10
 임의의 위상공간 $X$에 대하여 $X^+$는 compact이다.
@@ -196,7 +196,7 @@ Discrete space의 일점 옹골화는 수렴하는 점열이라는 매우 구체
 
 $$f:\mathbb{N}^+\to\mathbb{R},\qquad f(n)=\frac1n\quad(n\in\mathbb{N}),\qquad f(\infty)=0$$
 
-을 생각하면, $f$는 $\mathbb{N}^+$과 $\{0\}\cup\{1/n\mid n\geq 1\}$ 사이의 전단사이다. 각 $n\in\mathbb{N}$은 $\mathbb{N}^+$에서 고립점이고 그 상 $1/n$도 $\{0\}\cup\{1/n\}$에서 고립점이며, $\infty$의 cofinite 근방이 $0$의 근방으로 옮겨지므로 $f$는 연속이다. 정의역이 compact이고 공역이 Hausdorff이므로 [§옹골공간, ⁋명제 9](/ko/math/topology/compact_spaces#prop9)에 의하여 $f$는 homeomorphism이다. 즉 $\mathbb{N}^+$은 하나의 극한점을 지닌 수렴하는 점열과 위상동형이다.
+을 생각하면, $f$는 $\mathbb{N}^+$과 $\{0\}\cup\{1/n\mid n\geq 1\}$ 사이의 전단사이다. 각 $n\in\mathbb{N}$은 $\mathbb{N}^+$에서 isolated point이고 그 상 $1/n$도 $\{0\}\cup\{1/n\}$에서 isolated point이며, $\infty$의 cofinite 근방이 $0$의 근방으로 옮겨지므로 $f$는 연속이다. 정의역이 compact이고 공역이 Hausdorff이므로 [§옹골공간, ⁋명제 9](/ko/math/topology/compact_spaces#prop9)에 의하여 $f$는 homeomorphism이다. 즉 $\mathbb{N}^+$은 하나의 극한점을 지닌 수렴하는 점열과 위상동형이다.
 :::
 
 ## 완전정칙성
@@ -442,7 +442,7 @@ Hausdorff와 second countability를 요구하는 까닭은 다음 정리에서 �
 Hausdorff이고 locally Euclidean인 위상공간 $M$에 대하여, $M$이 second countable인 것은 $M$이 paracompact이고 가산 개의 connected component를 갖는 것과 동치이다. ([§연결공간, ⁋정의 7](/ko/math/topology/connected_spaces#def7))
 :::
 ::: 증명
-핵심 착상만 밝히고 세부는 **[Lee]**를 따른다. Locally Euclidean 조건에서 각 점은 $\mathbb{R}^m$의 열린집합과 위상동형인 근방을 가지므로 그 공간은 각 점에서 국소적 옹골공간처럼 행동한다. Second countable이면 [예시 20](#ex20)의 소진 논증을 일반화하여 $M$을 가산 개의 relatively compact 열린집합으로 덮을 수 있고, 이로부터 [명제 19](#prop19)의 유한성 논증과 같은 방식으로 국소유한 세분을 얻어 $M$이 paracompact임과 component가 가산임을 얻는다. 거꾸로 paracompact이고 component가 가산이면 각 component가 Lindelöf가 되어 가산 기저를 가지므로 $M$은 second countable이다.
+핵심 착상만 밝히고 세부는 **[Lee]**를 따른다. Locally Euclidean 조건에서 각 점은 $\mathbb{R}^m$의 열린집합과 위상동형인 근방을 가지므로 그 공간은 각 점에서 locally compact space처럼 행동한다. Second countable이면 [예시 20](#ex20)의 소진 논증을 일반화하여 $M$을 가산 개의 relatively compact 열린집합으로 덮을 수 있고, 이로부터 [명제 19](#prop19)의 유한성 논증과 같은 방식으로 국소유한 세분을 얻어 $M$이 paracompact임과 component가 가산임을 얻는다. 거꾸로 paracompact이고 component가 가산이면 각 component가 Lindelöf가 되어 가산 기저를 가지므로 $M$은 second countable이다.
 :::
 
 이 정리의 직접적인 귀결로 임의의 위상다양체 $M$은 paracompact Hausdorff space이며, 따라서 [정리 27](#thm27)에 의하여 $M$의 임의의 좌표 덮개에 종속된 단위분할이 존재한다. 이 사실 덕분에 각 좌표조각에서 Euclidean space의 언어로 정의한 대상을 다양체 전체로 이어 붙이는 일이 가능해지며, 이것이 단위분할이 다양체론과 다발 이론에서 필수적인 도구로 쓰이는 이유이다.

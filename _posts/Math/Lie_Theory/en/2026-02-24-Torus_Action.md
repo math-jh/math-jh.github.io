@@ -27,7 +27,7 @@ However, as in [\[Representation Theory\] §Representation Theory of Finite Grou
 ::: Definition 1
 For a Lie group $G$, a *representation* of $G$ consists of a finite-dimensional vector space $V$ together with a smooth map
 
-$\rho:G\rightarrow \Aut(V)$
+$$\rho:G\rightarrow \Aut(V)$$
 :::
 
 If we regard $G$ as a Lie group equipped with the discrete topology and the trivial smooth structure, then this definition can be viewed as a generalization of [\[Representation Theory\] §Representation Theory of Finite Groups, ⁋Definition 1](/en/math/representation_theory/representations_of_finite_groups#def1). Similarly, all definitions in [\[Representation Theory\] §Representation Theory of Finite Groups, §§Basic Concepts of Representation Theory](/en/math/representation_theory/representations_of_finite_groups#basic-concepts-of-representation-theory) can be carried over to Lie groups.

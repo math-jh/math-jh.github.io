@@ -14,7 +14,7 @@ published: false
 
 ---
 
-지금까지 우리는 derived functor의 일반론을 만들고 ([§유도함자](/ko/math/homological_algebra/derived_functors)), 그 대표적인 예시로 $\Ext$와 $\Tor$를 살펴보았다 ([§Ext와 Tor](/ko/math/homological_algebra/ext_and_tor)). 이번 글에서는 이 기계를 group에 적용한다. Group $G$가 abelian group에 작용하는 상황은 수학 전반에서 등장하는데, 이 때 가장 기본적인 조작인 "$G$-invariant들을 취하는 것"은 exact functor가 아니다. 군 코호몰로지는 정확히 이 functor의 derived functor이다.
+지금까지 우리는 derived functor의 일반론을 만들고 ([§유도함자](/ko/math/homological_algebra/derived_functors)), 그 대표적인 예시로 $\Ext$와 $\Tor$를 살펴보았다 ([§Ext와 Tor](/ko/math/homological_algebra/ext_and_tor)). 이번 글에서는 이 기계를 group에 적용한다. Group $G$가 abelian group에 작용하는 상황은 수학 전반에서 등장하는데, 이 때 가장 기본적인 조작인 "$G$-invariant들을 취하는 것"은 exact functor가 아니다. 군 cohomology는 정확히 이 functor의 derived functor이다.
 
 ## G-가군
 
@@ -28,7 +28,7 @@ $$M^G=\left\{m\in M\mid \text{$g\cdot m=m$ for all $g\in G$}\right\}$$
 으로 정의된다.
 :::
 
-$G$-module 구조를 푸는 것은 어렵지 않다. Abelian group $M$ 위의 $\mathbb{Z}G$-module 구조는 $G$의 각 원소가 $M$에 어떻게 작용하는지로 결정되고, 각각의 $g\in G$의 작용은 $M$의 automorphism이며 ($g^{-1}$의 작용이 역함수), 작용이 곱셈과 호환되어야 하므로 이는 정확히 group homomorphism $G \rightarrow \Aut(M)$을 주는 것과 같다. 특히 임의의 abelian group은 모든 $g\in G$가 identity로 작용하는 *trivial $G$-module* 구조를 갖는다. 앞으로 $\mathbb{Z}$는 항상 trivial $G$-module로 생각하며, ring homomorphism
+$G$-module 구조를 푸는 것은 어렵지 않다. Abelian group $M$ 위의 $\mathbb{Z}G$-module 구조는 $G$의 각 원소가 $M$에 어떻게 작용하는지로 결정되고, 각각의 $g\in G$의 action은 $M$의 automorphism이며 ($g^{-1}$의 action이 역함수), action이 곱셈과 호환되어야 하므로 이는 정확히 group homomorphism $G \rightarrow \Aut(M)$을 주는 것과 같다. 특히 임의의 abelian group은 모든 $g\in G$가 identity로 작용하는 *trivial $G$-module* 구조를 갖는다. 앞으로 $\mathbb{Z}$는 항상 trivial $G$-module로 생각하며, ring homomorphism
 
 $$\varepsilon:\mathbb{Z}G \rightarrow \mathbb{Z};\qquad \sum_{g\in G}a_g\,g\mapsto\sum_{g\in G}a_g$$
 
@@ -56,18 +56,18 @@ $$\varphi_m(x\cdot n)=\varepsilon(x)nm=\sum_ga_g(nm)=x\cdot(nm)=x\cdot\varphi_m(
 즉 invariant들을 취하는 functor $M\mapsto M^G$는 $\Hom_{\lMod{\mathbb{Z}G}}(\mathbb{Z},-)$와 같은 functor이고, 특히 left exact이다. 따라서 다음의 정의가 자연스럽다.
 
 ::: 정의 3
-Group $G$와 $G$-module $M$에 대하여, $G$의 $M$에서의 계수를 갖는 *군 코호몰로지<sub>group cohomology</sub>*는 다음의 식
+Group $G$와 $G$-module $M$에 대하여, $G$의 $M$에서의 계수를 갖는 *군 cohomology<sub>group cohomology</sub>*는 다음의 식
 
 $$H^n(G;M)=\Ext^n_{\mathbb{Z}G}(\mathbb{Z},M)$$
 
 으로 정의된다. ([§Ext와 Tor, ⁋정의 1](/ko/math/homological_algebra/ext_and_tor#def1))
 :::
 
-정의와 [명제 2](#prop2)에 의하여 $H^0(G;M)=M^G$이고, $G$-module들의 short exact sequence는 군 코호몰로지의 long exact sequence를 유도한다.
+정의와 [명제 2](#prop2)에 의하여 $H^0(G;M)=M^G$이고, $G$-module들의 short exact sequence는 군 cohomology의 long exact sequence를 유도한다.
 
 ## 표준 분해
 
-[§Ext와 Tor, ⁋명제 3](/ko/math/homological_algebra/ext_and_tor#prop3)에 의하여 $\Ext^n_{\mathbb{Z}G}(\mathbb{Z},M)$은 $\mathbb{Z}$의 projective resolution을 하나 고정하여 계산할 수 있다. 군 코호몰로지가 쓸모있는 이유는 모든 group에 대해 일괄적으로 작동하는 표준적인 resolution이 있기 때문이다.
+[§Ext와 Tor, ⁋명제 3](/ko/math/homological_algebra/ext_and_tor#prop3)에 의하여 $\Ext^n_{\mathbb{Z}G}(\mathbb{Z},M)$은 $\mathbb{Z}$의 projective resolution을 하나 고정하여 계산할 수 있다. 군 cohomology가 쓸모있는 이유는 모든 group에 대해 일괄적으로 작동하는 표준적인 resolution이 있기 때문이다.
 
 각각의 $n\geq0$에 대하여, $B_n$을 기호들 $[g_1\mid g_2\mid\cdots\mid g_n]$ ($g_i\in G$)을 basis로 갖는 free $\mathbb{Z}G$-module이라 하자. $n=0$일 때는 빈 기호 $[\ ]$ 하나가 basis이므로 $B_0=\mathbb{Z}G$이다. 이제 $\mathbb{Z}G$-linear map $d_n:B_n \rightarrow B_{n-1}$을 basis 위에서 다음의 식
 
@@ -148,7 +148,7 @@ $$\varphi(gh)=g\cdot\varphi(h)+\varphi(g)$$
 $H^1(G;M)$은 crossed homomorphism들의 group을 principal crossed homomorphism들의 subgroup으로 나눈 quotient와 isomorphic하다. 특히 $G$가 $M$에 trivial하게 작용한다면 $H^1(G;M)\cong\Hom_{\Grp}(G,M)$이다.
 :::
 ::: 증명
-위에서 계산한 cocycle 조건이 정확히 crossed homomorphism의 조건이고, $1$-coboundary $dm$이 정확히 principal crossed homomorphism이므로 첫 주장은 정의 그대로이다. 작용이 trivial하다면 crossed homomorphism의 조건은 $\varphi(gh)=\varphi(h)+\varphi(g)$, 즉 group homomorphism의 조건이 되고, principal crossed homomorphism은 $0$ 뿐이다.
+위에서 계산한 cocycle 조건이 정확히 crossed homomorphism의 조건이고, $1$-coboundary $dm$이 정확히 principal crossed homomorphism이므로 첫 주장은 정의 그대로이다. action이 trivial하다면 crossed homomorphism의 조건은 $\varphi(gh)=\varphi(h)+\varphi(g)$, 즉 group homomorphism의 조건이 되고, principal crossed homomorphism은 $0$ 뿐이다.
 :::
 
 ## 순환군의 코호몰로지
@@ -179,7 +179,7 @@ $$x=\sum_{i=0}^{n-1}a_i(\sigma^i-1)=(\sigma-1)\sum_{i=1}^{n-1}a_i(\sigma^{i-1}+\
 ::: 따름정리 8
 Order $n$의 cyclic group $G=\langle\sigma\rangle$과 $G$-module $M$에 대하여, $N_M:M \rightarrow M$을 $m\mapsto\sum_{i=0}^{n-1}\sigma^i\cdot m$이라 하면 다음이 성립한다.
 
-$H^0(G;M)=M^G,\qquad H^{2k-1}(G;M)\cong\frac{\ker N_M}{(\sigma-1)M},\qquad H^{2k}(G;M)\cong\frac{M^G}{N_M(M)}\qquad(k\geq1)$
+$$H^0(G;M)=M^G,\qquad H^{2k-1}(G;M)\cong\frac{\ker N_M}{(\sigma-1)M},\qquad H^{2k}(G;M)\cong\frac{M^G}{N_M(M)}\qquad(k\geq1)$$
 :::
 ::: 증명
 [명제 7](#prop7)의 resolution에 $\Hom_{\lMod{\mathbb{Z}G}}(-,M)$을 적용하자. $\Hom_{\lMod{\mathbb{Z}G}}(\mathbb{Z}G,M)\cong M$ ($\varphi\mapsto\varphi(1)$)이고, 이 identification 하에서 $\sigma-1$과 $N$을 곱하는 map들은 각각 $m\mapsto(\sigma-1)\cdot m$과 $N_M$이 된다. 즉 cochain complex는
@@ -189,10 +189,10 @@ $$0\longrightarrow M\overset{\sigma-1}{\longrightarrow}M\overset{N_M}{\longright
 이고, [§Ext와 Tor, ⁋명제 3](/ko/math/homological_algebra/ext_and_tor#prop3)에 의해 이것의 cohomology가 $H^n(G;M)$이다. $\ker(\sigma-1)=M^G$이므로 주장의 식들을 얻는다.
 :::
 
-즉 유한 cyclic group의 코호몰로지는 주기 $2$를 갖는다. 특히 $H^1$은 "norm이 $0$인 원소들"을 "자명한 이유로 norm이 $0$인 원소들"로 나눈 것으로, 이 quotient가 사라지는지를 묻는 것이 고전적인 Hilbert의 정리 90의 내용이다.
+즉 유한 cyclic group의 cohomology는 주기 $2$를 갖는다. 특히 $H^1$은 "norm이 $0$인 원소들"을 "자명한 이유로 norm이 $0$인 원소들"로 나눈 것으로, 이 quotient가 사라지는지를 묻는 것이 고전적인 Hilbert의 정리 90의 내용이다.
 
 ::: 참고 9
-군 코호몰로지의 낮은 차수들은 모두 고전적인 대수학의 문제들과 연결된다. $H^1$이 crossed homomorphism을 분류하는 것을 [명제 6](#prop6)에서 보았고, $H^2(G;M)$은 abelian kernel $M$을 갖는 $G$의 extension들을 분류한다는 것이 알려져 있다. ([\[군론\] §군의 확장](/ko/math/group_theory/extensions)) 또, Galois extension $\mathbb{L}/\mathbb{K}$에 대하여 $\Gal(\mathbb{L}/\mathbb{K})$가 $\mathbb{L}^\times$에 작용하는 상황의 코호몰로지를 *Galois cohomology*라 부르며, 이 경우 $H^1$이 자명하다는 것이 Hilbert의 정리 90이다. 이들 각각은 별도의 글에서 다루기로 한다.
+군 cohomology의 낮은 차수들은 모두 고전적인 대수학의 문제들과 연결된다. $H^1$이 crossed homomorphism을 분류하는 것을 [명제 6](#prop6)에서 보았고, $H^2(G;M)$은 abelian kernel $M$을 갖는 $G$의 extension들을 분류한다는 것이 알려져 있다. ([\[군론\] §군의 확장](/ko/math/group_theory/extensions)) 또, Galois extension $\mathbb{L}/\mathbb{K}$에 대하여 $\Gal(\mathbb{L}/\mathbb{K})$가 $\mathbb{L}^\times$에 작용하는 상황의 cohomology를 *Galois cohomology*라 부르며, 이 경우 $H^1$이 자명하다는 것이 Hilbert의 정리 90이다. 이들 각각은 별도의 글에서 다루기로 한다.
 :::
 
 ---

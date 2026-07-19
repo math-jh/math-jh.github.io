@@ -64,7 +64,7 @@ by the convention of [§Affine Toric Varieties, ⁋Proposition 10](/en/math/tori
 ::: Proposition 3
 The principal divisor corresponding to the character $\rchi^m$ is given by
 
-$\divisor(\rchi^m) = \sum_{\rho \in \Sigma(1)} \langle m, v_\rho \rangle D_\rho.$
+$$\divisor(\rchi^m) = \sum_{\rho \in \Sigma(1)} \langle m, v_\rho \rangle D_\rho.$$
 :::
 
 ::: Proof
@@ -142,7 +142,7 @@ In the case of a toric variety, the global sections of this sheaf have an explic
 ::: Proposition 7
 For a torus-invariant Weil divisor $D = \sum_{\rho \in \Sigma(1)} a_\rho D_\rho$, the space of global sections of the sheaf $\mathcal{O}_{X_\Sigma}(D)$ is given by:
 
-$H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D)) = \bigoplus_{\substack{m \in M \\ \langle m, v_\rho \rangle \ge -a_\rho \text{ for all } \rho}} \mathbb{C} \cdot \rchi^m.$
+$$H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D)) = \bigoplus_{\substack{m \in M \\ \langle m, v_\rho \rangle \ge -a_\rho \text{ for all } \rho}} \mathbb{C} \cdot \rchi^m.$$
 :::
 
 ::: Proof

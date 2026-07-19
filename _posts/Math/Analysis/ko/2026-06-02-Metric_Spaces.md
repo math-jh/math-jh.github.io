@@ -40,7 +40,7 @@ published: false
 거리만 있으면 수렴과 Cauchy 조건을 [§수열의 수렴](/ko/math/analysis/convergence_of_sequences)·[§Cauchy 수열과 완비성](/ko/math/analysis/cauchy_sequences)에서와 똑같은 형태로 정의할 수 있다. $\lvert a_n - L\rvert$을 $d(a_n, L)$로 바꾸기만 하면 된다.
 
 ::: 정의 3
-거리공간 $(X, d)$의 점열 $(x_n)$이 $x \in X$로 *수렴*한다는 것은 $d(x_n, x) \to 0$인 것이다. $(x_n)$이 *Cauchy*라는 것은 임의의 $\varepsilon > 0$에 대해 $N$이 있어 $m, n \geq N$이면 $d(x_m, x_n) < \varepsilon$인 것이다. 중심 $x$, 반지름 $r > 0$의 *열린공<sub>open ball</sub>*은 $B(x, r) = \{y \in X \mid d(x, y) < r\}$이다.
+거리공간 $(X, d)$의 점열 $(x_n)$이 $x \in X$로 *수렴*한다는 것은 $d(x_n, x) \to 0$인 것이다. $(x_n)$이 *Cauchy*라는 것은 임의의 $\varepsilon > 0$에 대해 $N$이 있어 $m, n \geq N$이면 $d(x_m, x_n) < \varepsilon$인 것이다. center $x$, 반지름 $r > 0$의 *열린공<sub>open ball</sub>*은 $B(x, r) = \{y \in X \mid d(x, y) < r\}$이다.
 :::
 
 실수에서와 마찬가지로 수렴하는 점열은 Cauchy이지만, 그 역은 공간에 따라 성립하지 않을 수 있다.

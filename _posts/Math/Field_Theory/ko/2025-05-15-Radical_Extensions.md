@@ -15,13 +15,13 @@ published: false
 
 ---
 
-우리가 살펴볼 갈루아 이론의 큰 테마를 아주 간단한 예시에서 살펴보자. 가령 $\mathbb{Q}$의 degree $4$ extension $\mathbb{Q}(\sqrt{2}, \sqrt{3})$을 생각하면, $\mathbb{Q}$로부터 새로 추가되는 원소들인 $\sqrt{2}$와 $\sqrt{3}$은 각각 유리수계수의 minimal polynomial들
+우리가 살펴볼 Galois 이론의 큰 테마를 아주 간단한 예시에서 살펴보자. 가령 $\mathbb{Q}$의 degree $4$ extension $\mathbb{Q}(\sqrt{2}, \sqrt{3})$을 생각하면, $\mathbb{Q}$로부터 새로 추가되는 원소들인 $\sqrt{2}$와 $\sqrt{3}$은 각각 유리수계수의 minimal polynomial들
 
 $$\x^2-2,\qquad \x^2-3$$
 
-으로부터 나오는 것이다. 그런데 이 두 다항식을 각각 살펴보면, 이들은 각각 두 개의 근 $\pm \sqrt{2}$, $\pm\sqrt{3}$을 가지는 다항식이며 이를 $\mathbb{Q}$에서는 대수적인 방식으로 구별할 방법이 없다. 따라서 이들 근을 서로 바꾸는 action (혹은 $\mathbb{Q}(\sqrt{2},\sqrt{3})$의 $\mathbb{Q}$-automorphism)을 생각하면, 즉 permutation group $S_2\times S_2$를 생각하면 이것은 $S_4$의 subgroup이다. 
+으로부터 나오는 것이다. 그런데 이 두 다항식을 각각 살펴보면, 이들은 각각 두 개의 근 $\pm \sqrt{2}$, $\pm\sqrt{3}$을 가지는 다항식이며 이를 $\mathbb{Q}$에서는 algebraic한 방식으로 구별할 방법이 없다. 따라서 이들 근을 서로 바꾸는 action (혹은 $\mathbb{Q}(\sqrt{2},\sqrt{3})$의 $\mathbb{Q}$-automorphism)을 생각하면, 즉 permutation group $S_2\times S_2$를 생각하면 이것은 $S_4$의 subgroup이다. 
 
-이와 같은 방식으로 우리는 다항식이 주어질 때마다 적절한 Galois group을 정의해줄 수 있고, 이들을 보는 것이 $\mathbb{Q}$의 extension들을 분류해줄 수 있다는 것이 갈루아 이론의 철학이다. 
+이와 같은 방식으로 우리는 다항식이 주어질 때마다 적절한 Galois group을 정의해줄 수 있고, 이들을 보는 것이 $\mathbb{Q}$의 extension들을 분류해줄 수 있다는 것이 Galois 이론의 철학이다. 
 
 그러나 이러한 철학을 바탕으로 생각했을 때, 가령 minimal polynomial이 중근을 갖는다면 permutation action을 정의하기가 상당히 껄끄러워질 것이다. 이는 $\mathbb{Q}$에서는 기우이지만, 어떠한 경우에는 이러한 일이 실제로 일어날 수도 있다. 
 
@@ -140,7 +140,7 @@ Field extension $\mathbb{L}/\mathbb{K}$가 $\mathbb{K}$의 perfect closure일 �
 Field $\mathbb{K}$의 두 perfect closure $\mathbb{L}_1$, $\mathbb{L}_2$, 즉 perfect field이면서 $\mathbb{K}$의 $p$-radical extension인 두 field가 주어졌다 하자. 그럼 유일한 $\mathbb{K}$-isomorphism $\mathbb{L}_1 \rightarrow \mathbb{L}_2$가 존재한다.
 :::
 ::: 증명
-Inclusion $\mathbb{K}\hookrightarrow \mathbb{L}_2$에 [명제 6](#prop6)을 적용하면 $\mathbb{K}$-homomorphism $v:\mathbb{L}_1 \rightarrow \mathbb{L}_2$가 유일하게 존재하고, 대칭적으로 $\mathbb{K}$-homomorphism $w:\mathbb{L}_2 \rightarrow \mathbb{L}_1$도 유일하게 존재한다. 그럼 합성 $w\circ v:\mathbb{L}_1 \rightarrow \mathbb{L}_1$은 inclusion $\mathbb{K}\hookrightarrow\mathbb{L}_1$을 확장하는 homomorphism인데, $\id_{\mathbb{L}_1}$ 또한 그러하므로 다시 [명제 6](#prop6)의 유일성에 의하여 $w\circ v=\id_{\mathbb{L}_1}$이다. 같은 이유로 $v\circ w=\id_{\mathbb{L}_2}$이므로 $v$는 isomorphism이고, 그 유일성은 이미 살펴보았다.
+Inclusion $\mathbb{K}\hookrightarrow \mathbb{L}_2$에 [명제 6](#prop6)을 적용하면 $\mathbb{K}$-homomorphism $v:\mathbb{L}_1 \rightarrow \mathbb{L}_2$가 유일하게 존재하고, symmetric하게 $\mathbb{K}$-homomorphism $w:\mathbb{L}_2 \rightarrow \mathbb{L}_1$도 유일하게 존재한다. 그럼 합성 $w\circ v:\mathbb{L}_1 \rightarrow \mathbb{L}_1$은 inclusion $\mathbb{K}\hookrightarrow\mathbb{L}_1$을 확장하는 homomorphism인데, $\id_{\mathbb{L}_1}$ 또한 그러하므로 다시 [명제 6](#prop6)의 유일성에 의하여 $w\circ v=\id_{\mathbb{L}_1}$이다. 같은 이유로 $v\circ w=\id_{\mathbb{L}_2}$이므로 $v$는 isomorphism이고, 그 유일성은 이미 살펴보았다.
 :::
 
 이 글을 서두에서 언급한 반례를 소개하며 마치기로 한다. 

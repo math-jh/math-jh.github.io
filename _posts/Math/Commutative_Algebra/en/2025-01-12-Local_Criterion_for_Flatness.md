@@ -125,7 +125,7 @@ $$\Tor_i^A(A/(a), M)=\begin{cases} M/aM&\text{if $i=0$}\\ 0&\text{otherwise}\end
 
 so (2) is a free resolution of $M/aM$. Therefore, computing $\Tor_i^{A/(a)}(N, M/aM)$ using (2), we obtain the desired result from the isomorphism
 
-$N\otimes_{A/(a)} F_i/aF_i=N\otimes_{A/(a)} ((A/(a))\otimes_A F_i)\cong N\otimes_A F_i.$
+$$N\otimes_{A/(a)} F_i/aF_i=N\otimes_{A/(a)} ((A/(a))\otimes_A F_i)\cong N\otimes_A F_i.$$
 :::
 
 Using this we can prove the following.
@@ -150,7 +150,7 @@ $$A[\mathfrak{a}t]=\bigoplus_{n=0}^\infty \mathfrak{a}^n t^n\subseteq A[t].$$
 
 In the same setting, the *extended Rees algebra* is defined by
 
-$A[\mathfrak{a}t, t^{-1}]=\bigoplus_{n=-\infty}^\infty \mathfrak{a}^nt^n\subseteq A[t, t^{-1}].$
+$$A[\mathfrak{a}t, t^{-1}]=\bigoplus_{n=-\infty}^\infty \mathfrak{a}^nt^n\subseteq A[t, t^{-1}].$$
 :::
 
 Then the following corollary is almost obvious.

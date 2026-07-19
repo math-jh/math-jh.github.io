@@ -94,7 +94,7 @@ Now let us examine the open sets of the Zariski topology.
 ::: Definition 5
 For a polynomial $f \in \mathbb{K}[\x_1, \ldots, \x_n]$, the *principal open set* $D(f)$ is defined by
 
-$D(f) = \{x\in \mathbb{A}^n \mid f(x) \ne 0\} = \mathbb{A}^n \setminus Z(f)$
+$$D(f) = \{x\in \mathbb{A}^n \mid f(x) \ne 0\} = \mathbb{A}^n \setminus Z(f)$$
 :::
 
 The next proposition shows that principal open sets form a basis for an affine variety. ([\[Topology\] §Bases of a Topological Space, ⁋Definition 1](/en/math/topology/topological_bases#def1))
@@ -102,7 +102,7 @@ The next proposition shows that principal open sets form a basis for an affine v
 ::: Proposition 6
 For any open set $U$ of an affine variety $X \subseteq \mathbb{A}^n$, there exists a family of principal open sets $D(f_i)$ such that
 
-$U = \bigcup_i (D(f_i) \cap X)$
+$$U = \bigcup_i (D(f_i) \cap X)$$
 :::
 
 ::: Proof
@@ -160,7 +160,7 @@ The operator $Z$ examined in [Proposition 4](#prop4) sends algebraic objects—n
 ::: Definition 8
 For any subset $X \subseteq \mathbb{A}^n$, we define the subset $I(X)$ of $\mathbb{K}[\x_1,\ldots, \x_n]$ by
 
-$I(X) = \{f \in \mathbb{K}[\x_1, \ldots, \x_n] \mid f(a) = 0 \text{ for all } a \in X\}$
+$$I(X) = \{f \in \mathbb{K}[\x_1, \ldots, \x_n] \mid f(a) = 0 \text{ for all } a \in X\}$$
 :::
 
 It is obvious that for any subset $X$, the set $I(X)$ is an ideal of $\mathbb{K}[\x_1,\ldots, \x_n]$. Moreover, the following hold.
@@ -263,7 +263,7 @@ Now we define morphisms between affine varieties. Since affine varieties are geo
 ::: Definition 15
 A function $\varphi:X \rightarrow Y$ between two affine varieties $X \subseteq \mathbb{A}^n$ and $Y \subseteq \mathbb{A}^m$ is called a *morphism* (or *regular map*) between them if there exist polynomials $f_1, \ldots, f_m \in \mathbb{K}[\x_1, \ldots, \x_n]$ such that
 
-$\varphi(a_1, \ldots, a_n) = (f_1(a), \ldots, f_m(a))$
+$$\varphi(a_1, \ldots, a_n) = (f_1(a), \ldots, f_m(a))$$
 :::
 
 For example, we showed in [Example 3](#ex3) that the twisted cubic corresponds to $\mathbb{A}^1$ via $t\mapsto (t,t^2,t^3)$, and the above definition shows that this is a morphism between affine varieties.
@@ -273,7 +273,7 @@ Intuitively, since elements of $\mathbb{K}[X]$ are functions defined on $X$, if 
 ::: Proposition 16
 A morphism $\varphi: X \to Y$ induces a coordinate ring homomorphism $\varphi^\ast: \mathbb{K}[Y] \to \mathbb{K}[X]$. Specifically, for $\bar{g} \in \mathbb{K}[Y]$,
 
-$\varphi^\ast(\bar{g}) = \overline{g \circ \varphi}$
+$$\varphi^\ast(\bar{g}) = \overline{g \circ \varphi}$$
 :::
 ::: Proof
 First we must show that $\varphi^\ast$ is well defined. If $g, h \in \mathbb{K}[\y_1, \ldots, \y_m]$ define the same function on $Y$, then $g - h \in I(Y)$. Since $\varphi(X) \subseteq Y$, for all $a \in X$ we have

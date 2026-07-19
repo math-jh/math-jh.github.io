@@ -64,7 +64,7 @@ In the case of a parameter ideal $\mathfrak{a}$ of an $A$-module $M$, we know fr
 ::: Lemma 4
 For a Noetherian ring $A$, a finitely generated $A$-module $M$, and an ideal $\mathfrak{a}$ of $A$, the following equality holds:
 
-$\sqrt{\ann(M/\mathfrak{a}M)}=\sqrt{\mathfrak{a}+\ann(M)}$
+$$\sqrt{\ann(M/\mathfrak{a}M)}=\sqrt{\mathfrak{a}+\ann(M)}$$
 :::
 ::: Proof
 By [§Properties of Localization, ⁋Corollary 8](/en/math/commutative_algebra/properties_of_localization#cor8), it suffices to show that the set of prime ideals containing $\ann(M/\mathfrak{a}M)$ is exactly the same as the set of prime ideals containing $\mathfrak{a}+\ann(M)$.

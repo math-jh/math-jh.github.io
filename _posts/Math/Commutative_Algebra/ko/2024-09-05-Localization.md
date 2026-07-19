@@ -58,7 +58,7 @@ Ring $A$와 $A$-module $M$, 그리고 $A$의 multiplicative subset $S$에 대하
     을 정의하여 얻어지는 quotient set이다. 이 때 $(x,s)$의 representative를 $x/s$로 표기한다.
 2. $S^{-1}M$의 $A$-module 구조는 다음과 같이 정의된다.
   
-  $\frac{x}{s}+\frac{x'}{s'}=\frac{s'x+sx'}{ss'},\qquad a\cdot \frac{x}{s}=\frac{ax}{s}.$
+  $$\frac{x}{s}+\frac{x'}{s'}=\frac{s'x+sx'}{ss'},\qquad a\cdot \frac{x}{s}=\frac{ax}{s}.$$
 :::
 
 2번 조건에서 정의한 연산들이 실제로 $A$-module 구조를 준다는 것을 확인해야 하지만 이는 어렵지 않다. 대신 몇 가지 관찰을 추가한다. 우선 임의의 $t\in S$와 $x/s\in S^{-1}M$에 대하여, 

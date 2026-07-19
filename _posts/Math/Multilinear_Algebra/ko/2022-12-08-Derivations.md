@@ -15,7 +15,7 @@ weight: 120
 
 ## 미분의 정의
 
-우리는 이제 미분의 개념을 도입한다. 더 정확히 말하자면 우리가 생각할 것은 미분형식의 개념으로, 이를 다루기 위해서는 graded algebra가 필요하다. 앞으로 graded algebra의 구조를 주는 abelian group을 $\Delta$로 표기하기로 한다. 
+우리는 이제 미분의 개념을 도입한다. 더 정확히 말하자면 우리가 생각할 것은 differential form의 개념으로, 이를 다루기 위해서는 graded algebra가 필요하다. 앞으로 graded algebra의 구조를 주는 abelian group을 $\Delta$로 표기하기로 한다. 
 
 ::: 정의 1
 Abelian group $(\Delta, +, 0)$에 대하여, 함수 $\varepsilon : \Delta \times \Delta \to \{ \pm 1 \}$가 다음의 세 조건을 만족한다 하자. 

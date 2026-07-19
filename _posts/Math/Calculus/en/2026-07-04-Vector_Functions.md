@@ -134,7 +134,7 @@ and showing that as the partition is refined this converges to a Riemann sum for
 ::: Definition 5
 The *arc length* of a $C^1$ curve $\mathbf{r}\colon [a, b] \to \mathbb{R}^n$ is
 
-$L = \int_a^b \lVert \mathbf{r}'(t)\rVert \mathop{dt}$
+$$L = \int_a^b \lVert \mathbf{r}'(t)\rVert \mathop{dt}$$
 :::
 
 The integrand $\lVert \mathbf{r}'(t)\rVert$ is continuous so it is integrable ([§Integration, ⁋Theorem 10](/en/math/calculus/integration#thm10)). We now call the arc length measured from the starting point
@@ -180,7 +180,7 @@ $$\kappa = \frac{\lVert \mathbf{r}' \times \mathbf{r}''\rVert}{\lVert \mathbf{r}
 
 and in particular the curvature of a plane curve $y = f(x)$ is
 
-$\kappa = \frac{\lvert f''\rvert}{(1 + f'^2)^{3/2}}$
+$$\kappa = \frac{\lvert f''\rvert}{(1 + f'^2)^{3/2}}$$
 :::
 
 ::: Proof

@@ -75,7 +75,7 @@ We now state differentiation rules that apply to general forms. In [§Derivative
 ::: Proposition 3 (Product Rule)
 If $f, g$ are differentiable at $a$, then $fg$ is also differentiable at $a$ and
 
-$(fg)'(a) = f'(a) g(a) + f(a) g'(a)$
+$$(fg)'(a) = f'(a) g(a) + f(a) g'(a)$$
 :::
 
 ::: Proof
@@ -91,7 +91,7 @@ The most widely used rule is the differentiation of composite functions.
 ::: Theorem 4 (Chain Rule)
 If $f$ is differentiable at $a$ and $g$ is differentiable at $b = f(a)$, then the composition $g \circ f$ is also differentiable at $a$ and
 
-$(g \circ f)'(a) = g'(f(a)) f'(a)$
+$$(g \circ f)'(a) = g'(f(a)) f'(a)$$
 :::
 
 ::: Proof
@@ -111,13 +111,13 @@ The quotient rule now follows as a corollary of the product rule and the chain r
 ::: Corollary 5 (Quotient Rule)
 If $f, g$ are differentiable at $a$ and $g(a) \neq 0$, then $f/g$ is also differentiable at $a$ and
 
-$\left(\frac{f}{g}\right)'(a) = \frac{f'(a) g(a) - f(a) g'(a)}{g(a)^2}$
+$$\left(\frac{f}{g}\right)'(a) = \frac{f'(a) g(a) - f(a) g'(a)}{g(a)^2}$$
 :::
 
 ::: Proof
 Defining the function $h(t)=1/t$, we have $1/g =h \circ g$, and by the derivative of integer powers $h'(t)=-1/t^2$, so by [Theorem 4](#thm4) we have $(1/g)'(a) = -g(a)^{-2}g'(a)$. Applying the product rule to $f/g = f\cdot(1/g)$ now gives
 
-$\left(\frac{f}{g}\right)'(a) = \frac{f'(a)}{g(a)} - \frac{f(a)g'(a)}{g(a)^2} = \frac{f'(a)g(a) - f(a)g'(a)}{g(a)^2}$
+$$\left(\frac{f}{g}\right)'(a) = \frac{f'(a)}{g(a)} - \frac{f(a)g'(a)}{g(a)^2} = \frac{f'(a)g(a) - f(a)g'(a)}{g(a)^2}$$
 :::
 
 For example, from $\tan x = \sin x/\cos x$ we have $(\tan x)' = (\cos^2 x + \sin^2 x)/\cos^2 x = \sec^2 x$, and similarly $(\cot x)' = -\csc^2 x$.
@@ -127,7 +127,7 @@ Finally, if a function is monotone then the derivative of its inverse function i
 ::: Proposition 6 (Derivative of the Inverse Function)
 Let $f$ be a continuous monotone function on an interval having inverse function $f^{-1}$, and suppose $f$ is differentiable at $a$ with $f'(a) \neq 0$. Then $f^{-1}$ is differentiable at $b = f(a)$ and
 
-$(f^{-1})'(b) = \frac{1}{f'(a)} = \frac{1}{f'(f^{-1}(b))}$
+$$(f^{-1})'(b) = \frac{1}{f'(a)} = \frac{1}{f'(f^{-1}(b))}$$
 :::
 
 ::: Proof
@@ -187,5 +187,5 @@ so we obtain $y' = -x/y$, and thus we can find the slope of the tangent line at 
 
 For functions with a variable in the exponent, it is convenient to use *logarithmic differentiation*, taking the logarithm of both sides and then differentiating. For example, for $y = x^x$ ($x > 0$), differentiating both sides of $\ln y = x\ln x$ and using $(\ln y)' = y'/y$ and the product rule gives
 
-$\frac{y'}{y} = \ln x + 1 \quad\Longrightarrow\quad y' = x^x(\ln x + 1)$
+$$\frac{y'}{y} = \ln x + 1 \quad\Longrightarrow\quad y' = x^x(\ln x + 1)$$
 :::

@@ -106,7 +106,7 @@ $$\mathfrak{g}^{\perp}=\left\{x\in\mathfrak{g}\mid \kappa(x,y)=0\text{ for all }
 Cartan의 판정법의 증명은 단 한 번, endomorphism을 반단순 부분과 nilpotent 부분으로 쪼개는 분해에 의존한다. 우리는 이를 선형대수의 사실로서 상기한다.
 
 ::: 명제 5 (Jordan–Chevalley)
-$V$가 대수적으로 닫힌 체 $k$ 위의 유한차원 벡터공간이고 $x\in\End(V)$라 하자. 그럼 다음을 만족하는 $x_s,x_n\in\End(V)$가 유일하게 존재한다.
+$V$가 algebraically closed field $k$ 위의 유한차원 벡터공간이고 $x\in\End(V)$라 하자. 그럼 다음을 만족하는 $x_s,x_n\in\End(V)$가 유일하게 존재한다.
 
 1. $x=x_s+x_n$이고 $x_s$는 diagonalizable, $x_n$은 nilpotent이며 $x_s x_n=x_n x_s$이다.
 2. $x_s$와 $x_n$은 각각 $x$의 상수항 없는 다항식으로 표현된다.
@@ -121,7 +121,7 @@ $x$의 특성다항식을 $\prod_i (T-\lambda_i)^{m_i}$ ($\lambda_i$는 서로 �
 
 ## Cartan의 가해성 판정
 
-Cartan의 가해성 판정법은 $\gl(V)$의 부분대수가 가해인지를 trace의 소멸이라는 검사 가능한 조건으로 환원한다. 그 핵심은 어떤 endomorphism이 nilpotent임을 trace 조건만으로 판정하는 다음 보조정리이며, 이것이 증명에서 Jordan–Chevalley 분해를 쓰는 유일한 지점이다.
+Cartan의 가해성 판정법은 $\gl(V)$의 subalgebra가 가해인지를 trace의 소멸이라는 검사 가능한 조건으로 환원한다. 그 핵심은 어떤 endomorphism이 nilpotent임을 trace 조건만으로 판정하는 다음 보조정리이며, 이것이 증명에서 Jordan–Chevalley 분해를 쓰는 유일한 지점이다.
 
 ::: 보조정리 6
 $V$가 유한차원 $k$-벡터공간이고 $A\subseteq B$가 $\gl(V)$의 두 부분공간이라 하자.
@@ -131,7 +131,7 @@ $$M=\left\{x\in\gl(V)\mid [x,B]\subseteq A\right\}$$
 으로 둘 때, 어떤 $x\in M$이 모든 $y\in M$에 대하여 $\tr(xy)=0$을 만족하면 $x$는 nilpotent endomorphism이다.
 :::
 ::: 증명
-$x=s+n$을 $x$의 Jordan–Chevalley 분해라 하고 ([명제 5](#prop5)), $s$가 어떤 기저에서 대각성분 $\lambda_1,\ldots,\lambda_m$의 대각행렬이라 하자. $x$가 nilpotent임을 보이는 것은 모든 $\lambda_i=0$임을 보이는 것과 같다. 고윳값들이 생성하는 $\mathbb{Q}$-벡터공간 $E=\span_{\mathbb{Q}}\{\lambda_1,\ldots,\lambda_m\}$을 생각하고, $E=0$임을 보이기 위해 임의의 $\mathbb{Q}$-선형범함수 $f:E\rightarrow\mathbb{Q}$가 항등적으로 $0$임을 보인다.
+$x=s+n$을 $x$의 Jordan–Chevalley 분해라 하고 ([명제 5](#prop5)), $s$가 어떤 기저에서 대각성분 $\lambda_1,\ldots,\lambda_m$의 대각행렬이라 하자. $x$가 nilpotent임을 보이는 것은 모든 $\lambda_i=0$임을 보이는 것과 같다. 고윳값들이 생성하는 $\mathbb{Q}$-벡터공간 $E=\span_{\mathbb{Q}}\{\lambda_1,\ldots,\lambda_m\}$을 생각하고, $E=0$임을 보이기 위해 임의의 $\mathbb{Q}$-linear functional $f:E\rightarrow\mathbb{Q}$가 항등적으로 $0$임을 보인다.
 
 $f$가 주어지면, 같은 기저에서 대각성분이 $f(\lambda_1),\ldots,f(\lambda_m)$인 대각행렬 $y$를 정의한다. $s$의 고유공간 분해에 맞춰 $\ad s$는 행렬단위 $e_{ij}$ 위에서 $(\lambda_i-\lambda_j)$로, $\ad y$는 $(f(\lambda_i)-f(\lambda_j))$로 작용한다. $f$가 $\mathbb{Q}$-선형이므로 $\lambda_i-\lambda_j\mapsto f(\lambda_i)-f(\lambda_j)$를 보내는 다항식 $r\in k[T]$로 (Lagrange 보간을 써서, 상수항 없이) $\ad y=r(\ad s)$가 되도록 할 수 있다. 한편 $\ad s$는 $\ad x$의 반단순 부분이므로 $\ad x$의 상수항 없는 다항식이며, 따라서 $\ad y$도 $\ad x$의 상수항 없는 다항식이다. $x\in M$, 곧 $\ad x(B)\subseteq A$이므로 $\ad x(A)\subseteq\ad x(B)\subseteq A$이고 $\ad y$가 $\ad x$의 다항식이라는 점에서 $\ad y(B)\subseteq A$, 곧 $y\in M$이다.
 
@@ -145,7 +145,7 @@ $$0=\tr(xy)=\sum_{i=1}^{m}\lambda_i f(\lambda_i)$$
 이 보조정리를 $A=[\mathfrak{g},\mathfrak{g}]$, $B=\mathfrak{g}$로 적용할 채비를 한 뒤 Cartan의 판정법을 서술한다. 가해성의 충분조건 방향은 Lie의 정리로부터 derived algebra의 원소가 strictly 상삼각화된다는 사실과 결합된다 ([§가해 Lie algebra와 nilpotent Lie algebra, ⁋따름정리 21](/ko/math/lie_theory/solvable_nilpotent_lie_algebras#cor21)).
 
 ::: 정리 7 (Cartan의 가해성 판정법)
-$V$가 $0$이 아닌 유한차원 $k$-벡터공간이고 $\mathfrak{g}\subseteq\gl(V)$가 부분대수라 하자. 그럼 $\mathfrak{g}$가 solvable인 것과, 모든 $x\in[\mathfrak{g},\mathfrak{g}]$와 $y\in\mathfrak{g}$에 대하여
+$V$가 $0$이 아닌 유한차원 $k$-벡터공간이고 $\mathfrak{g}\subseteq\gl(V)$가 subalgebra라 하자. 그럼 $\mathfrak{g}$가 solvable인 것과, 모든 $x\in[\mathfrak{g},\mathfrak{g}]$와 $y\in\mathfrak{g}$에 대하여
 
 $$\tr(xy)=0$$
 
@@ -177,7 +177,7 @@ $$\kappa(\mathfrak{g},[\mathfrak{g},\mathfrak{g}])=0,$$
 곧 모든 $x\in\mathfrak{g}$, $y\in[\mathfrak{g},\mathfrak{g}]$에 대하여 $\kappa(x,y)=0$인 것이 동치이다.
 :::
 ::: 증명
-$\ad:\mathfrak{g}\rightarrow\gl(\mathfrak{g})$를 생각하면 $\ker(\ad)=Z(\mathfrak{g})$이므로 ([§가해 Lie algebra와 nilpotent Lie algebra, ⁋명제 7](/ko/math/lie_theory/solvable_nilpotent_lie_algebras#prop7)) $\ad\mathfrak{g}\cong\mathfrak{g}/Z(\mathfrak{g})$이고, 상 $\ad\mathfrak{g}\subseteq\gl(\mathfrak{g})$는 부분대수이다.
+$\ad:\mathfrak{g}\rightarrow\gl(\mathfrak{g})$를 생각하면 $\ker(\ad)=Z(\mathfrak{g})$이므로 ([§가해 Lie algebra와 nilpotent Lie algebra, ⁋명제 7](/ko/math/lie_theory/solvable_nilpotent_lie_algebras#prop7)) $\ad\mathfrak{g}\cong\mathfrak{g}/Z(\mathfrak{g})$이고, 상 $\ad\mathfrak{g}\subseteq\gl(\mathfrak{g})$는 subalgebra이다.
 
 먼저 $\mathfrak{g}$가 solvable이라 하자. 그 몫인 $\ad\mathfrak{g}$도 solvable이고 ([§가해 Lie algebra와 nilpotent Lie algebra, ⁋명제 14](/ko/math/lie_theory/solvable_nilpotent_lie_algebras#prop14)), [정리 7](#thm7)에 의해 모든 $\ad x\in[\ad\mathfrak{g},\ad\mathfrak{g}]$와 $\ad y\in\ad\mathfrak{g}$에 대하여 $\tr(\ad x\,\ad y)=0$이다. $[\ad\mathfrak{g},\ad\mathfrak{g}]=\ad[\mathfrak{g},\mathfrak{g}]$이므로, 이는 모든 $x\in[\mathfrak{g},\mathfrak{g}]$, $y\in\mathfrak{g}$에 대하여 $\kappa(x,y)=\tr(\ad x\,\ad y)=0$임을 뜻한다. $\kappa$가 symmetric이므로 곧 $\kappa(\mathfrak{g},[\mathfrak{g},\mathfrak{g}])=0$이다.
 

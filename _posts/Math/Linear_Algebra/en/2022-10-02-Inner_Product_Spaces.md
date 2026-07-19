@@ -221,7 +221,7 @@ holds.
 ::: Proof
 This is simply another expression of the formula
 
-$[v]_\mathcal{B}=[\id]^{\mathcal{B}'}_{\mathcal{B}}[v]_{\mathcal{B}'}$
+$$[v]_\mathcal{B}=[\id]^{\mathcal{B}'}_{\mathcal{B}}[v]_{\mathcal{B}'}$$
 :::
 
 The following *projection theorem* tells us that the vector $\proj_Uv$ defined in this way is the element of $U$ closest to $v$.

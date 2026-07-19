@@ -107,7 +107,7 @@ Two *finite-dimensional* $\mathbb{K}$-vector spaces $V,W$ with a non-degenerate 
 ::: Proof
 This is immediate from the two inequalities
 
-$\dim V\leq\dim W^\ast=\dim W,\qquad \dim W\leq\dim V^\ast=\dim V.$
+$$\dim V\leq\dim W^\ast=\dim W,\qquad \dim W\leq\dim V^\ast=\dim V.$$
 :::
 
 In this sense, a non-degenerate pairing between two finite-dimensional vector spaces is sometimes called a *perfect pairing*. Applying this corollary to the canonical pairing of [Example 3](#ex3) with $W=V^\ast$, we obtain an isomorphism from $V$ to $V^{\ast\ast}$. Explicitly, this function is the *evaluation map*

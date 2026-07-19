@@ -56,7 +56,7 @@ $$\bar s=\overline{\bar z^tAz}=z^t\bar A\bar z=z^tA\bar z=(z^tA\bar z)^t=\bar z^
 이므로, $s$는 실수이다. 그런데 $\sum_i\lvert z_i\rvert^2$은 $z\neq 0$이므로 양의 실수이고, 따라서 $s=\lambda\sum_i\lvert z_i\rvert^2$이 실수이려면 $\lambda$ 또한 실수여야 한다.
 :::
 
-이 명제의 증명을 위해 $\mathbb{C}$로 다항식을 옮겨야만 하는 것은 필연적이며, 실제로 다음 글에서 우리는 복소수 버전의 스펙트럼 정리를 증명하게 될 것이다. 특히 이로부터 self-adjoint operator가 항상 고윳값을 (따라서 고유벡터를) 가짐을 안다. 
+이 명제의 증명을 위해 $\mathbb{C}$로 다항식을 옮겨야만 하는 것은 필연적이며, 실제로 다음 글에서 우리는 복소수 버전의 spectrum 정리를 증명하게 될 것이다. 특히 이로부터 self-adjoint operator가 항상 고윳값을 (따라서 고유벡터를) 가짐을 안다. 
 
 ::: 따름정리 3
 $0$이 아닌 $\mathbb{R}$-내적공간 $V$ 위의 self-adjoint operator $L:V\rightarrow V$는 항상 고유벡터를 가진다. 
@@ -93,7 +93,7 @@ $U=\span v_1$이라 하면 $L(U)\subseteq U$이므로 [보조정리 4](#lem4)에
 이 벡터들은 모두 $L$의 고유벡터이기도 하며, $v_1\in U$이고 $v_2,\ldots, v_n\in U^\perp$이므로 $v_1$은 나머지와 직교한다. 따라서 $\{v_1,v_2,\ldots, v_n\}$은 $L$의 고유벡터들로 이루어진 $V$의 orthonormal basis이다. 
 :::
 
-행렬의 언어로 옮기면 스펙트럼 정리는 실수 대칭행렬의 직교대각화를 의미한다. 
+행렬의 언어로 옮기면 spectrum 정리는 실수 대칭행렬의 직교대각화를 의미한다. 
 
 ::: 따름정리 6
 임의의 실수 대칭행렬 $A$에 대하여, 적당한 orthogonal matrix $Q$와 실수 대각행렬 $D$가 존재하여 
@@ -110,7 +110,7 @@ $$AQ=(Av_1\mid\cdots\mid Av_n)=(\lambda_1v_1\mid\cdots\mid\lambda_nv_n)=QD$$
 이고, 여기서 $D=\diag(\lambda_1,\ldots,\lambda_n)$이다. 양변에 오른쪽에서 $Q^t=Q^{-1}$을 곱하면 $A=QDQ^t$를 얻는다. 
 :::
 
-스펙트럼 정리는 또한 서로 다른 고윳값에 해당하는 고유공간들이 자동으로 직교함을 보여준다. 
+spectrum 정리는 또한 서로 다른 고윳값에 해당하는 고유공간들이 자동으로 직교함을 보여준다. 
 
 ::: 따름정리 7
 $\mathbb{R}$-내적공간 $V$ 위의 self-adjoint operator $L$의 서로 다른 두 고윳값 $\lambda\neq\mu$와 이에 해당하는 고유벡터 $v,w$에 대하여, $\langle v,w\rangle=0$이다. 따라서 $V$는 고유공간들의 직교하는 direct sum으로 분해된다. 

@@ -28,7 +28,7 @@ $$\mathrm{ch}\,L(\lambda)=\frac{\sum_{w\in W}(-1)^{\ell(w)}e^{w(\lambda+\rho)}}{
 
 $$P=\{\lambda\in\mathfrak{h}^\ast\mid\lambda(h_i)\in\mathbb{Z}\ \text{ for all simple roots }\alpha_i\}$$
 
-은 $\mathfrak{h}^\ast$ 안의 격자를 이룬다. 유한차원 표현의 모든 weight는 각 $\sl_{2,\alpha_i}$-방향에서 정수 고윳값을 가지므로 ([§최고 무게 가군, ⁋정리 12](/ko/math/lie_theory/highest_weight_modules#thm12)의 증명) $P$ 안에 놓이고, 따라서 $P$가 형식 지표의 자연스러운 무대가 된다. 이 격자 위에 군환을 얹는다.
+은 $\mathfrak{h}^\ast$ 안의 격자를 이룬다. 유한차원 표현의 모든 weight는 각 $\sl_{2,\alpha_i}$-방향에서 정수 고윳값을 가지므로 ([§최고 무게 가군, ⁋정리 12](/ko/math/lie_theory/highest_weight_modules#thm12)의 증명) $P$ 안에 놓이고, 따라서 $P$가 형식 지표의 자연스러운 무대가 된다. 이 격자 위에 group ring을 얹는다.
 
 ::: 정의 1
 weight lattice $P$의 *group ring<sub>군환</sub>* $\mathbb{Z}[P]$는 형식기호 $\{e^\mu\mid\mu\in P\}$를 $\mathbb{Z}$-기저로 갖는 자유가군이며, 곱셈을
@@ -38,7 +38,7 @@ $$e^\mu\cdot e^\nu=e^{\mu+\nu},\qquad e^0=1$$
 로 정한 가환환이다. 곧 $\mathbb{Z}[P]$의 일반적인 원소는 유한합 $\sum_\mu c_\mu e^\mu$ ($c_\mu\in\mathbb{Z}$, 유한 개를 빼고 $c_\mu=0$)이다.
 :::
 
-기호 $e^\mu$는 단지 격자 원소 $\mu$를 곱셈군의 원소로 옮긴 형식적 지수일 뿐이며, $\mathbb{Z}[P]$는 추상적으로 Laurent 다항식환 $\mathbb{Z}[x_1^{\pm 1},\ldots,x_l^{\pm 1}]$과 동형이다. 여기에서 $x_i=e^{\varpi_i}$는 격자 $P$의 기저, 곧 fundamental weight들에 대응한다. Weyl group $W$는 $\mathfrak{h}^\ast$ 위에 작용하고 $P$를 보존하므로 $w\cdot e^\mu=e^{w\mu}$로 $\mathbb{Z}[P]$ 위에 환 자기동형으로 작용한다. 이 $W$-작용이 지표 공식의 분자와 분모를 떠받치는 대칭이다.
+기호 $e^\mu$는 단지 격자 원소 $\mu$를 곱셈군의 원소로 옮긴 형식적 지수일 뿐이며, $\mathbb{Z}[P]$는 추상적으로 Laurent 다항식환 $\mathbb{Z}[x_1^{\pm 1},\ldots,x_l^{\pm 1}]$과 동형이다. 여기에서 $x_i=e^{\varpi_i}$는 격자 $P$의 기저, 곧 fundamental weight들에 대응한다. Weyl group $W$는 $\mathfrak{h}^\ast$ 위에 작용하고 $P$를 보존하므로 $w\cdot e^\mu=e^{w\mu}$로 $\mathbb{Z}[P]$ 위에 환 automorphism으로 작용한다. 이 $W$-작용이 지표 공식의 분자와 분모를 떠받치는 대칭이다.
 
 ::: 정의 2
 유한차원 표현 $V$의 weight 분해 $V=\bigoplus_{\mu}V_\mu$에 대하여, $V$의 *formal character<sub>형식 지표</sub>*는 $\mathbb{Z}[P]$의 원소
@@ -48,7 +48,7 @@ $$\mathrm{ch}\,V=\sum_{\mu\in P}(\dim V_\mu)\,e^\mu$$
 이다. 곧 각 weight space의 차원을 그 weight의 형식기호에 계수로 단 것이다.
 :::
 
-형식 지표는 $V$의 weight들과 그 중복도를 빠짐없이 기록하므로, $\mathrm{ch}\,V$를 안다는 것은 $V$의 weight 구조 전부를 안다는 것과 같다. 두 표현의 직합과 텐서곱에 대하여 형식 지표는 환 연산과 정확히 맞물린다. Weight space의 차원이 직합에서 더해지고 텐서곱에서 곱해지므로
+형식 지표는 $V$의 weight들과 그 중복도를 빠짐없이 기록하므로, $\mathrm{ch}\,V$를 안다는 것은 $V$의 weight 구조 전부를 안다는 것과 같다. 두 표현의 직합과 tensor product에 대하여 형식 지표는 환 연산과 정확히 맞물린다. Weight space의 차원이 직합에서 더해지고 tensor product에서 곱해지므로
 
 $$\mathrm{ch}(V\oplus W)=\mathrm{ch}\,V+\mathrm{ch}\,W,\qquad\mathrm{ch}(V\otimes W)=\mathrm{ch}\,V\cdot\mathrm{ch}\,W$$
 
@@ -61,10 +61,10 @@ $$\varepsilon(\mathrm{ch}\,V)=\sum_\mu\dim V_\mu=\dim V$$
 무한차원 표현에서는 weight 집합이 아래로만 유계여서 $\mathrm{ch}\,V$가 무한합이 되므로 $\mathbb{Z}[P]$에 머무르지 못한다. Verma module의 지표를 다루기 위해 약간 더 넓은 환이 필요하다.
 
 ::: 정의 3
-$\mathbb{Z}[P]$의 *완비화<sub>completion</sub>* $\widehat{\mathbb{Z}[P]}$는 유한 개의 weight $\lambda_1,\ldots,\lambda_r$이 존재하여 그 support가 $\bigcup_i(\lambda_i-Q^+)$ 안에 들어가는 형식합 $\sum_\mu c_\mu e^\mu$들의 집합이다. 여기에서 $Q^+=\sum_{\alpha\in\Phi^+}\mathbb{Z}_{\geq 0}\,\alpha$는 positive root들의 음이 아닌 정수 결합으로 이루어진 cone이다.
+$\mathbb{Z}[P]$의 *completion<sub>완비화</sub>* $\widehat{\mathbb{Z}[P]}$는 유한 개의 weight $\lambda_1,\ldots,\lambda_r$이 존재하여 그 support가 $\bigcup_i(\lambda_i-Q^+)$ 안에 들어가는 형식합 $\sum_\mu c_\mu e^\mu$들의 집합이다. 여기에서 $Q^+=\sum_{\alpha\in\Phi^+}\mathbb{Z}_{\geq 0}\,\alpha$는 positive root들의 음이 아닌 정수 결합으로 이루어진 cone이다.
 :::
 
-이 support 조건 아래에서는 곱셈 $\bigl(\sum_\mu c_\mu e^\mu\bigr)\bigl(\sum_\nu d_\nu e^\nu\bigr)=\sum_\xi\bigl(\sum_{\mu+\nu=\xi}c_\mu d_\nu\bigr)e^\xi$의 각 계수가 유한합으로 잘 정의되므로 $\widehat{\mathbb{Z}[P]}$는 가환환이 되고 $\mathbb{Z}[P]$를 부분환으로 포함한다. Weight가 highest weight $\mu$에서 positive root들을 빼서만 얻어지는 highest weight 가군의 형식 지표는 정확히 이 환 안에서 닫힌 형태를 갖는다.
+이 support 조건 아래에서는 곱셈 $\bigl(\sum_\mu c_\mu e^\mu\bigr)\bigl(\sum_\nu d_\nu e^\nu\bigr)=\sum_\xi\bigl(\sum_{\mu+\nu=\xi}c_\mu d_\nu\bigr)e^\xi$의 각 계수가 유한합으로 잘 정의되므로 $\widehat{\mathbb{Z}[P]}$는 가환환이 되고 $\mathbb{Z}[P]$를 subring으로 포함한다. Weight가 highest weight $\mu$에서 positive root들을 빼서만 얻어지는 highest weight 가군의 형식 지표는 정확히 이 환 안에서 닫힌 형태를 갖는다.
 
 ## Verma module의 형식 지표
 
@@ -101,7 +101,7 @@ $$\prod_{\alpha\in\Phi^+}\frac{1}{1-e^{-\alpha}}=\prod_{\alpha\in\Phi^+}\Bigl(\s
 
 이 공식은 분모가 highest weight $\mu$에 의존하지 않는다는 점에서 본질적이다. 모든 Verma module이 같은 분모 $\prod_{\alpha>0}(1-e^{-\alpha})$를 공유하고 분자만이 $e^\mu$로 바뀌므로, 여러 Verma module 지표의 정수계수 결합은 그 공통 분모를 그대로 둔 채 분자 $e^\mu$들의 결합으로 계산된다. 이것이 다음 절에서 $\mathrm{ch}\,L(\lambda)$를 Verma 지표들의 교대합으로 풀 때 결정적으로 쓰인다.
 
-분모를 대칭적으로 정리하기 위해 Weyl vector를 도입한다. 이는 $\sl_2$에서 highest weight를 절반씩 옮기던 $\rho$-이동의 일반화이다.
+분모를 symmetric으로 정리하기 위해 Weyl vector를 도입한다. 이는 $\sl_2$에서 highest weight를 절반씩 옮기던 $\rho$-이동의 일반화이다.
 
 ::: 정의 6
 Positive root들의 합의 절반
@@ -242,7 +242,7 @@ $$\mathrm{ch}\,L(m\varpi)=\frac{x^{m+1}-x^{-(m+1)}}{x-x^{-1}}=x^m+x^{m-2}+\cdots
 $\sl_2$에서는 분자의 등비급수가 그대로 weight 사슬을 내어주므로 지표 공식이 곧 $\sl_2$ 분류의 재서술이 된다. 다음으로 $\sl_3$에서는 positive root가 셋이고 Weyl group이 $S_3$이어서 중복도가 비로소 자명하지 않게 된다.
 
 ::: 예시 12
-$\mathfrak{g}=\sl_3$에서 simple root는 $\alpha_1,\alpha_2$이고 positive root는 $\alpha_1,\alpha_2,\alpha_1+\alpha_2$의 셋이다. Weyl group은 $W\cong S_3$으로 $\lvert W\rvert=6$이며, $\rho=\alpha_1+\alpha_2$ (곧 두 fundamental weight의 합 $\varpi_1+\varpi_2$)이다. 내적을 $\langle\alpha_i,\alpha_i\rangle=2$, $\langle\alpha_1,\alpha_2\rangle=-1$로 정규화한다.
+$\mathfrak{g}=\sl_3$에서 simple root는 $\alpha_1,\alpha_2$이고 positive root는 $\alpha_1,\alpha_2,\alpha_1+\alpha_2$의 셋이다. Weyl group은 $W\cong S_3$으로 $\lvert W\rvert=6$이며, $\rho=\alpha_1+\alpha_2$ (곧 두 fundamental weight의 합 $\varpi_1+\varpi_2$)이다. 내적을 $\langle\alpha_i,\alpha_i\rangle=2$, $\langle\alpha_1,\alpha_2\rangle=-1$로 normalize한다.
 
 adjoint 표현은 highest weight $\theta=\alpha_1+\alpha_2$ (최고 root)를 갖는 $L(\theta)$이다. 차원을 계산하면 $\theta+\rho=2(\alpha_1+\alpha_2)$이고
 

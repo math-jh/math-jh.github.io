@@ -54,7 +54,7 @@ $$X\vee Y=X\cup Y,\qquad X\wedge Y=X\cap Y$$
 
 hold. In $\mathcal{P}(A)$, the two operations $\vee$ and $\wedge$ additionally satisfy the distributive laws
 
-$X\vee(Y\wedge Z)=(X\vee Y)\wedge(X\vee Z),\qquad X\wedge(Y\vee Z)=(X\wedge Y)\vee(X\wedge Z).$
+$$X\vee(Y\wedge Z)=(X\vee Y)\wedge(X\vee Z),\qquad X\wedge(Y\vee Z)=(X\wedge Y)\vee(X\wedge Z).$$
 :::
 
 ::: Definition 4

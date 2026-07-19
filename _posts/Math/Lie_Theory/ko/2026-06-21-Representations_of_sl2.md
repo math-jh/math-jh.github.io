@@ -14,7 +14,7 @@ weight: 7.1
 published: false
 ---
 
-Semisimple Lie algebra의 표현론 전체에서 $\sl_2$는 가장 작으면서도 가장 근본적인 경우이다. 임의의 semisimple Lie algebra의 각 root $\alpha$는 그 안에 $\sl_2$와 isomorphic한 subalgebra $\sl_{2,\alpha}$를 낳고 ([§근계, ⁋명제 12](/ko/math/lie_theory/root_systems#prop12) 이후의 논의), 일반적인 highest weight 이론의 integrality와 Weyl group 대칭성은 모두 이 $\sl_2$들에 대한 표현론을 root별로 적용하여 얻어진다. 이 글에서 우리는 $\sl_2=\sl(2;\mathbb{C})$의 유한차원 표현을 완전히 분류한다. 각 정수 $n\geq 0$마다 차원 $n+1$의 기약 표현 $V(n)$이 동형을 무시하고 유일하게 존재함을 보이고, 임의의 유한차원 표현이 $h$의 작용으로 weight 분해되어 완전가약<sub>completely reducible</sub>임을 Casimir element를 통해 증명한 뒤, 두 기약 표현의 텐서곱을 분해하는 Clebsch–Gordan 공식을 유도한다.
+Semisimple Lie algebra의 표현론 전체에서 $\sl_2$는 가장 작으면서도 가장 근본적인 경우이다. 임의의 semisimple Lie algebra의 각 root $\alpha$는 그 안에 $\sl_2$와 isomorphic한 subalgebra $\sl_{2,\alpha}$를 낳고 ([§근계, ⁋명제 12](/ko/math/lie_theory/root_systems#prop12) 이후의 논의), 일반적인 highest weight 이론의 integrality와 Weyl group 대칭성은 모두 이 $\sl_2$들에 대한 표현론을 root별로 적용하여 얻어진다. 이 글에서 우리는 $\sl_2=\sl(2;\mathbb{C})$의 유한차원 표현을 완전히 분류한다. 각 정수 $n\geq 0$마다 차원 $n+1$의 기약 표현 $V(n)$이 동형을 무시하고 유일하게 존재함을 보이고, 임의의 유한차원 표현이 $h$의 작용으로 weight 분해되어 완전가약<sub>completely reducible</sub>임을 Casimir element를 통해 증명한 뒤, 두 기약 표현의 tensor product를 분해하는 Clebsch–Gordan 공식을 유도한다.
 
 이 글 전체에서 기반 체는 $\mathbb{C}$이며, $\sl_2$의 representation이란 Lie algebra 준동형 $\sl_2\rightarrow\gl(V)$, 곧 유한차원 $\mathbb{C}$-벡터공간 $V$ 위의 $\sl_2$-가군 구조를 뜻한다. $x\in\sl_2$와 $v\in V$에 대하여 그 작용을 $x\cdot v$로 적는다.
 
@@ -66,7 +66,7 @@ $\sl_2$-representation $V$의 벡터 $v\neq 0$이 weight $\mu$의 *highest weigh
 
 $$h\cdot v=\mu v,\qquad e\cdot v=0$$
 
-이 성립하는 것이다. 이 때 $\mu$를 *highest weight<sub>최고무게</sub>*이라 부른다.
+이 성립하는 것이다. 이 때 $\mu$를 *highest weight<sub>최고무게</sub>*라 부른다.
 :::
 
 임의의 유한차원 $V\neq 0$에는 highest weight vector가 존재한다. $h$는 복소공간 위의 연산자이므로 고윳값 $\lambda$와 고유벡터 $w\in V_\lambda$를 적어도 하나 가지며, [명제 2](#prop2)에 의해 $w,\,e\cdot w,\,e^2\cdot w,\dots$은 서로 다른 weight $\lambda,\lambda+2,\lambda+4,\dots$의 weight space에 속한다. 서로 다른 고윳값의 고유벡터는 일차독립이고 $V$가 유한차원이므로 이 열은 유한 번 안에 $0$이 되어야 하며, $e^k\cdot w\neq 0$이지만 $e^{k+1}\cdot w=0$인 $k$를 잡으면 $e^k\cdot w$가 highest weight vector이다.
@@ -146,30 +146,30 @@ $$C\cdot v_0=ef\cdot v_0+fe\cdot v_0+\tfrac{1}{2}h^2\cdot v_0=(fe+h)\cdot v_0+0+
 
 이므로, $C$는 $V(n)$ 위에서 스칼라 $\tfrac{1}{2}n(n+2)$로 작용한다. 여기에서 $ef\cdot v_0=(fe+[e,f])\cdot v_0=(fe+h)\cdot v_0$이고 $fe\cdot v_0=0$, $h\cdot v_0=nv_0$을 사용하였다. 이 스칼라는 $n\geq 0$에 대해 서로 다른 값을 가지므로 $C$의 고윳값은 표현을 구별한다.
 
-완전가약성 증명의 핵심은 표현이 짧은 완전열로 쪼개질 때, 그 완전열이 항상 분리됨을 보이는 것이다. 다음 보조정리가 그 출발점이다.
+완전가약성 증명의 핵심은 표현이 short exact sequence로 쪼개질 때, 그 exact sequence가 항상 분리됨을 보이는 것이다. 다음 보조정리가 그 출발점이다.
 
 ::: 보조정리 8
-$0\to W\to V\to\mathbb{C}\to 0$이 $\sl_2$-representation들의 짧은 완전열이고, 여기에서 $\mathbb{C}=V(0)$은 자명한 표현이라 하자. 그럼 이 완전열은 분리된다. 곧 $V\cong W\oplus\mathbb{C}$인 $\sl_2$-불변 분해가 존재한다.
+$0\to W\to V\to\mathbb{C}\to 0$이 $\sl_2$-representation들의 short exact sequence이고, 여기에서 $\mathbb{C}=V(0)$은 자명한 표현이라 하자. 그럼 이 exact sequence는 분리된다. 곧 $V\cong W\oplus\mathbb{C}$인 $\sl_2$-불변 분해가 존재한다.
 :::
 ::: 증명
 $\dim W$에 대한 귀납법으로 보인다. $W$가 $0$이 아닌 진부분 subrepresentation $W'$을 가지면, 몫 $V/W'$은 $0\to W/W'\to V/W'\to\mathbb{C}\to 0$을 이루고 $\dim(W/W')<\dim W$이므로 귀납 가정에 의해 분리되어, $V/W'$ 안에 $\mathbb{C}$로 사상되는 $1$차원 subrepresentation $\widetilde U/W'$이 있다. 이제 $0\to W'\to\widetilde U\to\mathbb{C}\to 0$은 $\dim W'<\dim W$이므로 다시 귀납 가정으로 분리되어, $\widetilde U$ 안에 $\mathbb{C}$로 사상되는 $1$차원 subrepresentation $L$이 있다. $L$은 $V\to\mathbb{C}$로 동형으로 사상되므로 $V=W\oplus L$이다.
 
-따라서 $W$가 기약인 경우만 보이면 된다. $W=V(0)$이 자명한 표현이면 $V$는 $2$차원이고 $\sl_2$가 $V$ 위에서 nilpotent하게만 작용하므로 ($h,e,f$의 모든 commutator가 자명한 $1$차원 몫과 부분 위에서 $0$이 되어 작용 전체가 strictly upper-triangular), $[e,f]=h$의 trace를 비교하면 $h$의 작용이 $0$이고 작용이 분리되어 $V\cong W\oplus\mathbb{C}$이다. $W=V(n)$이 $n\geq 1$인 기약인 경우, $V$ 위의 Casimir operator $C$를 생각한다. $C$는 자명한 표현 $\mathbb{C}=V(0)$ 위에서 $\tfrac{1}{2}\cdot0\cdot2=0$으로, $W=V(n)$ 위에서 $\tfrac{1}{2}n(n+2)\neq 0$으로 작용한다. $C$가 $\sl_2$의 작용과 가환이므로 $\ker C$는 $V$의 subrepresentation이다. 완전열에서 $V/W\cong\mathbb{C}$ 위에서 $C$가 $0$이므로 $C(V)\subseteq W$이고, $W$ 위에서 $C$가 가역 스칼라이므로 $C\colon V\to W$는 전사이며 $\ker C$는 $1$차원이다. $\ker C\cap W=0$이므로 $V=W\oplus\ker C$가 $\sl_2$-불변 분해이다.
+따라서 $W$가 기약인 경우만 보이면 된다. $W=V(0)$이 자명한 표현이면 $V$는 $2$차원이고 $\sl_2$가 $V$ 위에서 nilpotent하게만 작용하므로 ($h,e,f$의 모든 commutator가 자명한 $1$차원 몫과 부분 위에서 $0$이 되어 작용 전체가 strictly upper-triangular), $[e,f]=h$의 trace를 비교하면 $h$의 작용이 $0$이고 작용이 분리되어 $V\cong W\oplus\mathbb{C}$이다. $W=V(n)$이 $n\geq 1$인 기약인 경우, $V$ 위의 Casimir operator $C$를 생각한다. $C$는 자명한 표현 $\mathbb{C}=V(0)$ 위에서 $\tfrac{1}{2}\cdot0\cdot2=0$으로, $W=V(n)$ 위에서 $\tfrac{1}{2}n(n+2)\neq 0$으로 작용한다. $C$가 $\sl_2$의 작용과 가환이므로 $\ker C$는 $V$의 subrepresentation이다. exact sequence에서 $V/W\cong\mathbb{C}$ 위에서 $C$가 $0$이므로 $C(V)\subseteq W$이고, $W$ 위에서 $C$가 가역 스칼라이므로 $C\colon V\to W$는 전사이며 $\ker C$는 $1$차원이다. $\ker C\cap W=0$이므로 $V=W\oplus\ker C$가 $\sl_2$-불변 분해이다.
 :::
 
-이제 일반적인 짧은 완전열로 넘어간다. 보조정리 8의 자명한 몫이라는 제약을 $\Hom$ 공간을 도입하여 제거한다.
+이제 일반적인 short exact sequence로 넘어간다. 보조정리 8의 자명한 몫이라는 제약을 $\Hom$ 공간을 도입하여 제거한다.
 
 ::: 정리 9 (Weyl 완전가약성)
 모든 유한차원 $\sl_2$-representation은 기약 표현들의 직합이다. 특히 임의의 유한차원 $\sl_2$-representation 위에서 $h$는 대각화 가능하고 정수 고윳값만 가지며, $V=\bigoplus_\lambda V_\lambda$로 weight 분해된다.
 :::
 ::: 증명
-먼저 임의의 짧은 완전열 $0\to W\to V\xrightarrow{\pi}U\to 0$이 분리됨을 보인다. $\Hom_{\mathbb{C}}(U,V)$ 위에 $\sl_2$-작용을 $(x\cdot\varphi)(u)=x\cdot\varphi(u)-\varphi(x\cdot u)$로 주면, $\sl_2$-equivariant한 사상 $U\to V$들의 공간은 정확히 이 작용의 불변 부분공간 $\Hom_{\mathbb{C}}(U,V)^{\sl_2}$이다.
+먼저 임의의 short exact sequence $0\to W\to V\xrightarrow{\pi}U\to 0$이 분리됨을 보인다. $\Hom_{\mathbb{C}}(U,V)$ 위에 $\sl_2$-작용을 $(x\cdot\varphi)(u)=x\cdot\varphi(u)-\varphi(x\cdot u)$로 주면, $\sl_2$-equivariant한 사상 $U\to V$들의 공간은 정확히 이 작용의 불변 부분공간 $\Hom_{\mathbb{C}}(U,V)^{\sl_2}$이다.
 
-$\sl_2$-equivariant한 사상 $s\colon U\to V$로 $\pi\circ s=\id_U$인 것을 찾으면 $V=W\oplus s(U)$가 되어 완전열이 분리된다. 이를 위해 부분공간
+$\sl_2$-equivariant한 사상 $s\colon U\to V$로 $\pi\circ s=\id_U$인 것을 찾으면 $V=W\oplus s(U)$가 되어 exact sequence가 분리된다. 이를 위해 부분공간
 
 $$A=\{\varphi\in\Hom_{\mathbb{C}}(U,V)\mid \pi\circ\varphi=\lambda\cdot\id_U\ \text{for some}\ \lambda\in\mathbb{C}\},\qquad B=\{\varphi\mid \pi\circ\varphi=0\}$$
 
-을 생각하면, $\pi$가 전사이므로 $B\subseteq A$는 부분공간이고 $\varphi\mapsto\lambda$가 $\sl_2$-equivariant한 짧은 완전열 $0\to B\to A\to\mathbb{C}\to 0$을 준다. ($\sl_2$가 $A,B$를 보존함은 작용의 정의에서 확인된다. $\pi$가 $\sl_2$-equivariant이므로 $\pi\circ(x\cdot\varphi)=x\cdot(\pi\circ\varphi)-(\pi\circ\varphi)\circ x_U$이고, $\pi\circ\varphi=\lambda\id_U$이면 이는 $\lambda(x_U-x_U)=0$이 되어 $x\cdot\varphi\in B$이다.) [보조정리 8](#lem8)에 의해 이 완전열은 분리되어, $A$ 안에 $\varphi\mapsto\lambda$로 $1$로 사상되는 $\sl_2$-불변 원소 $\varphi_0$, 곧 $\pi\circ\varphi_0=\id_U$인 $\sl_2$-equivariant $\varphi_0$이 존재한다. 이것이 우리가 찾던 splitting이다.
+을 생각하면, $\pi$가 전사이므로 $B\subseteq A$는 부분공간이고 $\varphi\mapsto\lambda$가 $\sl_2$-equivariant한 short exact sequence $0\to B\to A\to\mathbb{C}\to 0$을 준다. ($\sl_2$가 $A,B$를 보존함은 작용의 정의에서 확인된다. $\pi$가 $\sl_2$-equivariant이므로 $\pi\circ(x\cdot\varphi)=x\cdot(\pi\circ\varphi)-(\pi\circ\varphi)\circ x_U$이고, $\pi\circ\varphi=\lambda\id_U$이면 이는 $\lambda(x_U-x_U)=0$이 되어 $x\cdot\varphi\in B$이다.) [보조정리 8](#lem8)에 의해 이 exact sequence는 분리되어, $A$ 안에 $\varphi\mapsto\lambda$로 $1$로 사상되는 $\sl_2$-불변 원소 $\varphi_0$, 곧 $\pi\circ\varphi_0=\id_U$인 $\sl_2$-equivariant $\varphi_0$이 존재한다. 이것이 우리가 찾던 splitting이다.
 
 완전가약성은 $\dim V$에 대한 귀납법으로 따라온다. $V$가 기약이면 끝이고, 그렇지 않으면 $0$이 아닌 진부분 subrepresentation $W$를 잡아 $0\to W\to V\to V/W\to 0$을 분리하면 $V\cong W\oplus V/W$이며, 두 인자는 차원이 더 작으므로 귀납 가정으로 기약 표현들의 직합이다. 따라서 $V$도 그러하다. 마지막으로 각 기약 인자 $V(n)$ 위에서 $h$가 정수 고윳값 $n,n-2,\dots,-n$으로 대각화되므로, 그 직합인 $V$ 위에서도 $h$가 정수 고윳값으로 대각화되어 $V=\bigoplus_\lambda V_\lambda$이다.
 :::
@@ -178,7 +178,7 @@ $$A=\{\varphi\in\Hom_{\mathbb{C}}(U,V)\mid \pi\circ\varphi=\lambda\cdot\id_U\ \t
 
 ## Clebsch–Gordan 분해
 
-완전가약성에 의해 두 기약 표현의 텐서곱 $V(m)\otimes V(n)$도 기약 표현들의 직합으로 분해된다. 텐서곱 위의 $\sl_2$-작용은 Lie algebra의 표준적인 작용, 곧 $x\cdot(u\otimes w)=(x\cdot u)\otimes w+u\otimes(x\cdot w)$로 주어진다. 이 작용에서 $h$의 고윳값은 두 인자의 weight의 합이므로, 텐서곱의 weight들과 그 multiplicity를 먼저 세는 것으로 분해를 결정할 수 있다.
+완전가약성에 의해 두 기약 표현의 tensor product $V(m)\otimes V(n)$도 기약 표현들의 직합으로 분해된다. tensor product 위의 $\sl_2$-작용은 Lie algebra의 표준적인 작용, 곧 $x\cdot(u\otimes w)=(x\cdot u)\otimes w+u\otimes(x\cdot w)$로 주어진다. 이 작용에서 $h$의 고윳값은 두 인자의 weight의 합이므로, tensor product의 weight들과 그 multiplicity를 먼저 세는 것으로 분해를 결정할 수 있다.
 
 ::: 정리 10 (Clebsch–Gordan)
 정수 $m,n\geq 0$에 대하여 $\sl_2$-representation의 동형
@@ -190,7 +190,7 @@ $$V(m)\otimes V(n)\cong\bigoplus_{k=0}^{\min(m,n)}V(m+n-2k)$$
 ::: 증명
 [정리 9](#thm9)에 의해 좌변은 기약 표현들의 직합 $\bigoplus_{r}V(r)^{\oplus c_r}$로 분해되며, 분해를 결정하기 위해서는 각 multiplicity $c_r$를 정하면 된다. 이를 weight의 개수를 세어 얻는다.
 
-$V(m)$의 weight은 $m,m-2,\dots,-m$이고 $V(n)$의 weight은 $n,n-2,\dots,-n$이며 모두 multiplicity $1$이다. 텐서곱 위에서 $h$의 작용이 $h\otimes\id+\id\otimes h$이므로, weight space의 기저 $\{v_i\otimes w_j\}$에 대하여 $v_i\otimes w_j$의 weight은 두 인자의 weight의 합이다. 따라서 $V(m)\otimes V(n)$의 weight $\lambda$의 multiplicity $d_\lambda$는 $a\in\{m,m-2,\dots,-m\}$과 $b\in\{n,n-2,\dots,-n\}$ 중 $a+b=\lambda$인 쌍 $(a,b)$의 개수와 같다.
+$V(m)$의 weight은 $m,m-2,\dots,-m$이고 $V(n)$의 weight은 $n,n-2,\dots,-n$이며 모두 multiplicity $1$이다. tensor product 위에서 $h$의 작용이 $h\otimes\id+\id\otimes h$이므로, weight space의 기저 $\{v_i\otimes w_j\}$에 대하여 $v_i\otimes w_j$의 weight은 두 인자의 weight의 합이다. 따라서 $V(m)\otimes V(n)$의 weight $\lambda$의 multiplicity $d_\lambda$는 $a\in\{m,m-2,\dots,-m\}$과 $b\in\{n,n-2,\dots,-n\}$ 중 $a+b=\lambda$인 쌍 $(a,b)$의 개수와 같다.
 
 이제 $m\geq n$이라 두어도 일반성을 잃지 않는다. 가능한 weight들은 $m+n$부터 $-(m+n)$까지 $2$씩 줄어드는 값들이며, multiplicity $d_\lambda$는 $\lambda=m+n$에서 $1$로 시작하여 $\lambda$가 $2$씩 줄어들 때마다 $1$씩 늘다가, $\lambda=m-n$에서 최댓값 $n+1$에 이른 뒤 $\lvert\lambda\rvert\leq m-n$인 구간에서 $n+1$로 일정하고, 다시 $\lambda<-(m-n)$에서 $1$씩 줄어 $\lambda=-(m+n)$에서 $1$이 된다. 곧 $d_\lambda$는 $\lambda$에 대해 우함수이며 정점이 평평한 사다리꼴 모양이다.
 
@@ -203,7 +203,7 @@ $$V(m)\otimes V(n)\cong\bigoplus_{r\in\{m-n,m-n+2,\dots,m+n\}}V(r)=\bigoplus_{k=
 
 가장 단순한 경우인 $V(1)\otimes V(1)$을 보면, $\min(1,1)=1$이므로 분해는 $V(2)\oplus V(0)$이다. 이는 $\mathbb{C}^2\otimes\mathbb{C}^2$가 대칭부분 $\Sym^2\mathbb{C}^2\cong V(2)$와 반대칭부분 $\textstyle\bigwedge^2\mathbb{C}^2\cong V(0)$으로 갈라지는 친숙한 사실과 일치한다. 더 일반적으로 $\Sym^n\mathbb{C}^2\cong V(n)$이 성립하며, 따라서 standard representation $V(1)=\mathbb{C}^2$의 대칭곱들이 모든 기약 표현을 실현한다.
 
-이로써 $\sl_2$의 유한차원 표현론은 완결된다. 각 차원마다 유일한 기약 표현이 존재하고, 모든 표현이 이들의 직합이며, 텐서곱은 Clebsch–Gordan 공식으로 분해된다. 일반적인 semisimple Lie algebra의 highest weight 이론은 Cartan subalgebra에 대한 weight 분해, dominant integral weight에 의한 기약 표현의 분류, Casimir element를 통한 완전가약성이라는 동일한 세 축 위에 세워지며, 그 각 축은 root별 $\sl_{2,\alpha}$의 표현론을 국소모형으로 삼는다.
+이로써 $\sl_2$의 유한차원 표현론은 완결된다. 각 차원마다 유일한 기약 표현이 존재하고, 모든 표현이 이들의 직합이며, tensor product는 Clebsch–Gordan 공식으로 분해된다. 일반적인 semisimple Lie algebra의 highest weight 이론은 Cartan subalgebra에 대한 weight 분해, dominant integral weight에 의한 기약 표현의 분류, Casimir element를 통한 완전가약성이라는 동일한 세 축 위에 세워지며, 그 각 축은 root별 $\sl_{2,\alpha}$의 표현론을 국소모형으로 삼는다.
 
 ---
 

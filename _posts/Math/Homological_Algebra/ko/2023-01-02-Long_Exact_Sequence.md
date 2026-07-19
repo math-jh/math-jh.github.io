@@ -34,7 +34,7 @@ $$0\rightarrow A_n\rightarrow B_n\rightarrow C_n\rightarrow 0$$
 
 $$0\rightarrow A_\bullet\rightarrow B_\bullet\rightarrow C_\bullet\rightarrow 0$$
 
-가 주어졌다 하자. 그럼 호몰로지들 사이의 *long exact sequence*
+가 주어졌다 하자. 그럼 homology들 사이의 *long exact sequence*
 
 $$\cdots\rightarrow H_n(A)\rightarrow H_n(B)\rightarrow H_n(C)\rightarrow H_{n-1}(A)\rightarrow \cdots$$
 
@@ -117,7 +117,7 @@ $$\partial'[h_n(c)]=[f_{n-1}(a)]=H_{n-1}(f)(\partial[c])$$
 
 이는 곧, 각각의 $f_n$들이 모두 isomorphism인 chain map $(f_n)_{n\in\mathbb{Z}}$이 존재한다는 것과 동치이다.
 
-한편 호몰로지 대수학에서 우리가 사용할 수 있는 도구는 호몰로지 뿐이므로, 다음과 같이 동형사상의 개념을 약화시킬 수 있다.
+한편 homology 대수학에서 우리가 사용할 수 있는 도구는 homology 뿐이므로, 다음과 같이 isomorphism의 개념을 약화시킬 수 있다.
 
 ::: 정의 4
 두 chain complex $C_\bullet$, $D_\bullet$이 *quasi-isomorphic<sub>유사동형</sub>*하다는 것은 모든 $n$에 대하여 $H_n(C)\cong H_n(D)$인 것이다. 만일 어떤 chain map $f:C\rightarrow D$과 모든 $n$에 대해 $H_n(f)$가 isomorphism이 된다면, $f$를 *quasi-isomorphism<sub>유사동형사상</sub>*이라 부른다.[^1]
@@ -131,7 +131,7 @@ $$\cdots\rightarrow 0\rightarrow 0\rightarrow 0\rightarrow\cdots$$
 
 ## 사슬 호모토피
 
-한편, 두 개의 chain complex의 동치관계를 위와 같이 quasi-isomorphism으로 약화시킨다면, 마찬가지 논리로 두 chain map이 각각의 호몰로지에서 같은 함수를 정의한다면 이들 또한 같은 것으로 취급하는 것이 조금 더 타당할 것이다. 이를 위해 다음을 정의한다.
+한편, 두 개의 chain complex의 동치관계를 위와 같이 quasi-isomorphism으로 약화시킨다면, 마찬가지 논리로 두 chain map이 각각의 homology에서 같은 함수를 정의한다면 이들 또한 같은 것으로 취급하는 것이 조금 더 타당할 것이다. 이를 위해 다음을 정의한다.
 
 ::: 정의 5
 두 chain complex $C,D$와 chain map $f,g:C\rightarrow D$가 주어졌다 하자. 그럼 $f$와 $g$ 사이의 *chain homotopy<sub>사슬 호모토피</sub>*은 다음 diagram

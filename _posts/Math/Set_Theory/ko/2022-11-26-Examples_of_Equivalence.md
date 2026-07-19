@@ -72,7 +72,7 @@ $R$이 $A$ 위에서의 동치관계이고 $X$가 $A$의 부분집합이라 하�
 
 ![saturated_set](/assets/images/Math/Set_Theory/Examples_of_Equivalence-1.png){:style="width:600px" class="invert" .align-center}
 
-<cap>주어진 몫집합 (위쪽) 에서의 saturated subset (왼쪽)과 saturated가 아닌 부분집합 (오른쪽)</cap>
+<cap>주어진 quotient set (위쪽) 에서의 saturated subset (왼쪽)과 saturated가 아닌 부분집합 (오른쪽)</cap>
 
 위의 정의에 따르면, 어떤 집합 $X$가 $R$-saturated이기 위해서는 <phrase>$x\in X$라면 $R(x)\subseteq X$</phrase>가 반드시 성립해야 한다. 따라서 $R$-saturated인 부분집합 $X$는 어떠한 부분집합 $B\subseteq A$에 대하여 $\bigcup_{x\in B}R(x)$로 나타낼 수 있는 집합이다. 이로부터 다음의 두 결과를 쉽게 확인할 수 있다.
 

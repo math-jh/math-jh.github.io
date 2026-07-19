@@ -38,7 +38,7 @@ As always, to endow a set with a variety structure it suffices to construct an a
 ::: Definition 3
 For each set of $k$ indices $I = \{i_1 < \cdots < i_k\}$, define the open set $U_I$ by
 
-$U_I = \{W \in \Gr(k, V) \mid \text{projection } W \to \operatorname{span}(e_{i_1}, \ldots, e_{i_k}) \text{ is an isomorphism}\}$
+$$U_I = \{W \in \Gr(k, V) \mid \text{projection } W \to \operatorname{span}(e_{i_1}, \ldots, e_{i_k}) \text{ is an isomorphism}\}$$
 :::
 
 Fix a basis $e_1,\ldots, e_n$ of $V$, and let $w_1,\ldots, w_k$ be vectors spanning $W$. Then $W$ is the row space of the $k\times n$ matrix
@@ -126,7 +126,7 @@ with $\dim F_i = i$ for each $i$.
 ::: Example 11
 Given the standard basis $e_1, \ldots, e_n$ on $V = \mathbb{K}^n$, the *standard flag* is defined by
 
-$F_i = \operatorname{span}(e_1, \ldots, e_i)$
+$$F_i = \operatorname{span}(e_1, \ldots, e_i)$$
 :::
 
 Now, given a $k$-dimensional subspace $W \in \Gr(k, V)$, we can track step by step how $W$ meets the flag $F_\bullet$. Consider the sequence
@@ -148,7 +148,7 @@ Partitions can be visualized geometrically as *Young diagrams*: a first row with
 ::: Definition 13
 Given a flag $F_\bullet$ and a partition $\lambda = (\lambda_1, \ldots, \lambda_k)$, the *Schubert variety* $\Omega_\lambda(F_\bullet)$ is the set of $W \in \Gr(k, V)$ satisfying
 
-$\dim(W \cap F_{n - k + i - \lambda_i}) \geq i \quad\text{for all } 1 \leq i \leq k$
+$$\dim(W \cap F_{n - k + i - \lambda_i}) \geq i \quad\text{for all } 1 \leq i \leq k$$
 :::
 
 This condition means that the dimensions of the intersections of $W$ with the flag follow a specific pattern: $W$ must meet $F_{n-k+i-\lambda_i}$ in dimension at least $i$. The partition condition $\lambda_1 \leq n - k$ guarantees that $n - k + 1 - \lambda_1 \geq 1$ in the first inequality $\dim(W \cap F_{n - k + 1 - \lambda_1}) \geq 1$.

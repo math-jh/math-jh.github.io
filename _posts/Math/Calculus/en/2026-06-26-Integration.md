@@ -49,7 +49,7 @@ Meanwhile, in [§Differentiation Rules](/en/math/calculus/differentiation_rules)
 ::: Proposition 3 (Linearity of the Indefinite Integral)
 If $f$ and $g$ have antiderivatives and $a, b$ are constants, then
 
-$\int \bigl(a f(x) + b g(x)\bigr)\mathop{dx} = a\int f(x)\mathop{dx} + b\int g(x)\mathop{dx}.$
+$$\int \bigl(a f(x) + b g(x)\bigr)\mathop{dx} = a\int f(x)\mathop{dx} + b\int g(x)\mathop{dx}.$$
 :::
 
 ::: Proof
@@ -79,7 +79,7 @@ In particular, the two especially useful techniques of substitution and integrat
 ::: Theorem 4 (Integration by Substitution)
 If $g$ is differentiable and $f$ is continuous, then
 
-$\int f(g(x)) g'(x) \mathop{dx} = \int f(u) \mathop{du} \quad (u = g(x)).$
+$$\int f(g(x)) g'(x) \mathop{dx} = \int f(u) \mathop{du} \quad (u = g(x)).$$
 :::
 
 ::: Proof
@@ -101,7 +101,7 @@ $$\int \frac{x}{x^2+1} \mathop{dx} = \ln(x^2+1) + C.$$
 ::: Theorem 5 (Integration by Parts)
 If $u, v$ are differentiable and their derivatives are continuous, then
 
-$\int u v' \mathop{dx} = uv - \int u' v \mathop{dx}.$
+$$\int u v' \mathop{dx} = uv - \int u' v \mathop{dx}.$$
 :::
 
 ::: Proof
@@ -117,7 +117,7 @@ $$I = e^x\sin x - \int e^x\sin x \mathop{dx} = e^x\sin x - \Bigl(-e^x\cos x + \i
 
 so $2I = e^x(\sin x + \cos x)$, hence
 
-$I = \frac{e^x(\sin x + \cos x)}{2} + C.$
+$$I = \frac{e^x(\sin x + \cos x)}{2} + C.$$
 :::
 
 Rational functions whose denominator factors can be decomposed into partial fractions, and then each piece integrates to a logarithm or an arctangent. For instance,
@@ -157,7 +157,7 @@ $$I_1 = (x-1)e^x, \quad I_2 = (x^2 - 2x + 2)e^x,$$
 
 lowering the degree at each step. In the same way one obtains the recurrence
 
-$\int \sin^n x \mathop{dx} = -\frac{1}{n} \sin^{n-1}x\cos x + \frac{n-1}{n}\int \sin^{n-2}x \mathop{dx}.$
+$$\int \sin^n x \mathop{dx} = -\frac{1}{n} \sin^{n-1}x\cos x + \frac{n-1}{n}\int \sin^{n-2}x \mathop{dx}.$$
 :::
 
 Even with these techniques, some integrals cannot be expressed in terms of elementary functions; examples include $\int e^{-x^2} \mathop{dx}$ and $\int (\sin x)/x \mathop{dx}$. Such functions are nevertheless well defined as definite integrals, and they themselves define new functions, as we shall see from the Fundamental Theorem of Calculus.
@@ -235,7 +235,7 @@ Applying the first inequality to continuous functions, one can show that the int
 ::: Proposition 12 (Mean Value Theorem for Integrals)
 If $f$ is continuous on $[a,b]$, then there exists $c \in [a,b]$ such that
 
-$\int_a^b f(x)\mathop{dx} = f(c)(b-a).$
+$$\int_a^b f(x)\mathop{dx} = f(c)(b-a).$$
 :::
 
 ::: Proof
@@ -273,7 +273,7 @@ Because the mean value theorem converts an integral into a function value at a s
 ::: Proposition 14 (Weighted Mean Value Theorem)
 If $f$ is continuous on $[a,b]$ and $\mu$ is integrable on $[a,b]$ with $\mu \geq 0$, then there exists $c \in [a,b]$ such that
 
-$\int_a^b f(x)\mu(x)\mathop{dx} = f(c)\int_a^b \mu(x)\mathop{dx}.$
+$$\int_a^b f(x)\mu(x)\mathop{dx} = f(c)\int_a^b \mu(x)\mathop{dx}.$$
 :::
 
 ::: Proof

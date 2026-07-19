@@ -163,7 +163,7 @@ $$K/K^2 \overset{\bar{d}}{\longrightarrow}\Omega_{E/A}\otimes_EE' \rightarrow\Om
 
 $$\delta(x'y')=\pi(d_{E/A}(xy)\otimes 1)=\pi((x\,d_{E/A}y+y\,d_{E/A}x)\otimes 1)=x'\,\delta(y')+y'\,\delta(x')$$
 
-이므로 $A$-derivation이다. 여기서 마지막 등식은 $\Omega_{E/A}\otimes_EE'$ 위에서 $E$의 작용이 $\varphi$를 통한 $E'$의 작용과 일치한다는 것에 따른 것이다. 그럼 [보조정리 2](#lem2)의 universal property에 의하여 $\psi\circ d_{E'/A}=\delta$를 만족하는 유일한 $E'$-linear map $\psi:\Omega_{E'/A} \rightarrow C'$가 존재한다. 두 합성 $\psi\circ\psi'$와 $\psi'\circ\psi$는 각각 생성원들 위에서
+이므로 $A$-derivation이다. 여기서 마지막 등식은 $\Omega_{E/A}\otimes_EE'$ 위에서 $E$의 action이 $\varphi$를 통한 $E'$의 action과 일치한다는 것에 따른 것이다. 그럼 [보조정리 2](#lem2)의 universal property에 의하여 $\psi\circ d_{E'/A}=\delta$를 만족하는 유일한 $E'$-linear map $\psi:\Omega_{E'/A} \rightarrow C'$가 존재한다. 두 합성 $\psi\circ\psi'$와 $\psi'\circ\psi$는 각각 생성원들 위에서
 
 $$\pi(d_{E/A}x\otimes 1)\overset{\psi'}{\longmapsto}d_{E'/A}\varphi(x)\overset{\psi}{\longmapsto}\pi(d_{E/A}x\otimes 1),\qquad d_{E'/A}x'\overset{\psi}{\longmapsto}\pi(d_{E/A}x\otimes 1)\overset{\psi'}{\longmapsto}d_{E'/A}x'$$
 

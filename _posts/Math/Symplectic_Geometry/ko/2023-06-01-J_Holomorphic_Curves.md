@@ -14,7 +14,7 @@ weight: 5
 published: false
 ---
 
-[§사교다양체](/ko/math/symplectic_geometry/symplectic_manifold)에서 우리는 symplectic form $\omega$로 부여된 manifold $(M, \omega)$의 기본 성질을 살펴 보았다. 1985년 M. Gromov는 *almost complex structure* $J$를 도입하여, 두 종류의 기하학—complex 측면과 symplectic 측면—을 한 다양체 위에서 *맞물려* 다룰 수 있는 framework을 제시하였다. 그 결과 등장하는 *J-holomorphic curve*는 Gromov-Witten 이론과 Floer 이론의 근간이 되는 객체이다.
+[§사교다양체](/ko/math/symplectic_geometry/symplectic_manifold)에서 우리는 symplectic form $\omega$로 부여된 manifold $(M, \omega)$의 기본 성질을 살펴 보았다. 1985년 M. Gromov는 *almost complex structure* $J$를 도입하여, 두 종류의 기하학—complex 측면과 symplectic 측면—을 한 manifold 위에서 *맞물려* 다룰 수 있는 framework을 제시하였다. 그 결과 등장하는 *J-holomorphic curve*는 Gromov-Witten 이론과 Floer 이론의 근간이 되는 객체이다.
 
 본 글에서는 compatible almost complex structure의 정의로부터 출발하여, J-holomorphic curve의 정의와 그 기본 성질 (energy identity, removable singularity), 그리고 Gromov compactness theorem의 statement까지 개괄한다.
 
@@ -92,7 +92,7 @@ $$E(u) = \int_\Sigma u^\ast \omega = \omega \cdot u_\ast [\Sigma]$$
 :::
 
 ::: 증명
-Compatibility $\omega(Jv, Jw) = \omega(v, w)$를 사용하면 임의의 vector $v \in T_p \Sigma$에 대해
+Compatibility $\omega(Jv, Jw) = \omega(v, w)$를 사용하면 임의의 벡터 $v \in T_p \Sigma$에 대해
 
 $$\lvert du(v) \rvert^2_J = \omega(du(v), J du(v)) = \omega(du(v), du(jv))$$
 

@@ -15,7 +15,7 @@ weight: 4
 
 ## 사영분해와 단사분해
 
-우리는 [\[다중선형대수학\] §사영가군, 단사가군, 평탄가군, ⁋정의 3](/ko/math/multilinear_algebra/various_modules#def3)에서 사영가군과 단사가군을 정의하였다. 이를 diagram의 언어로 바꾸어 쓰면 일반적인 abelian category에서 projective object와 injective object의 개념을 얻는다.
+우리는 [\[다중선형대수학\] §사영가군, 단사가군, 평탄가군, ⁋정의 3](/ko/math/multilinear_algebra/various_modules#def3)에서 projective module과 injective module을 정의하였다. 이를 diagram의 언어로 바꾸어 쓰면 일반적인 abelian category에서 projective object와 injective object의 개념을 얻는다.
 
 ::: 정의 1
 Abelian category $\mathcal{A}$를 고정하자.
@@ -108,7 +108,7 @@ $$I(A)=\prod_{f\in\Hom_\Ab(A, \mathbb{Q}/\mathbb{Z})} \mathbb{Q}/\mathbb{Z}$$
 
 ## 분해의 유일성
 
-한편, 사영분해와 단사분해의 유일성은 다음의 더 강력한 정리로부터 얻어진다. 
+한편, projective resolution과 단사분해의 유일성은 다음의 더 강력한 정리로부터 얻어진다. 
 
 ::: 정리 6
 Projective resolution $P_\bullet \rightarrow M$과 임의의 $u:M \rightarrow N$이 주어졌다 하자. 그럼 임의의 left resolution $Q_\bullet \rightarrow N$가 주어질 때마다 다음의 diagram

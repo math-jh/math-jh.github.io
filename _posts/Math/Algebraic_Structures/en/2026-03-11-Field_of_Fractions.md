@@ -88,7 +88,7 @@ Now, taking the hint from the uniqueness proof, we define the additive structure
 
 From the above we know that $A_S$ has a commutative ring structure. Finally, that $\epsilon$ is a ring homomorphism is sufficient to show that $\epsilon$ preserves addition, and this follows from
 
-$\epsilon(\alpha+\beta)=(\alpha+\beta)/1=\alpha/1+\beta/1=\epsilon(\alpha)+\epsilon(\beta)$
+$$\epsilon(\alpha+\beta)=(\alpha+\beta)/1=\alpha/1+\beta/1=\epsilon(\alpha)+\epsilon(\beta)$$
 :::
 
 ::: Definition 2

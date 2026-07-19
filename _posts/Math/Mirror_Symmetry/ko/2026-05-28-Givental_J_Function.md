@@ -142,7 +142,7 @@ $$\partial_{t^a}\bigl((t_{(2)})^2/2\bigr) = \partial_{t^a}\!\left(\frac{1}{2}\su
 ::: 정의 3
 $X$의 (small) *Givental $J$-function<sub>Givental J-함수</sub>* $J_X: (\mathbb{C}^\ast)^r \times \mathbb{C}^\ast \to H^\ast(X)$는 다음으로 정의된다.
 
-$J_X(q, z) := e^{t_{(2)}/z}\left( 1 + \sum_{\substack{\beta \in H_2(X, \mathbb{Z})_{\mathrm{eff}} \\ \beta \neq 0}} \sum_{a=0}^s q^\beta \left\langle \frac{T_a}{z(z - \psi)} \right\rangle_{0, 1, \beta} T^a \right)$
+$$J_X(q, z) := e^{t_{(2)}/z}\left( 1 + \sum_{\substack{\beta \in H_2(X, \mathbb{Z})_{\mathrm{eff}} \\ \beta \neq 0}} \sum_{a=0}^s q^\beta \left\langle \frac{T_a}{z(z - \psi)} \right\rangle_{0, 1, \beta} T^a \right)$$
 :::
 
 여기서 $H_2(X, \mathbb{Z})_{\mathrm{eff}}$는 effective curve class들의 집합 ([\[사교기하학\] §양자 코호몰로지, §§Novikov ring](/ko/math/symplectic_geometry/quantum_cohomology#novikov-ring)에서 정의)으로, $\beta$가 이 위를 달리며 각 $\beta \neq 0$이 차수 $q^\beta$의 instanton 보정에 기여한다.
@@ -230,7 +230,7 @@ $$J_X(q, z) = \sum_a J^a(q, z) T^a,\qquad J^a(q, z) \;\propto\; \mathcal{I}^a_{\
 가 up to normalization으로 성립한다. 여기서 우변은 [§가우스-마닌 접속, ⁋명제 7](/ko/math/mirror_symmetry/gauss-manin_connection#prop7)에서 도입한 period matrix $\mathcal{I}^a_p$의 $p = \Gamma_0$ 열이다. 
 :::
 
-위의 [주장 5](#conj5)는 mirror symmetry의 가장 강한 표현 중 하나로, A-side의 descendant Gromov-Witten invariant 전체가 B-side에서 period integral으로 복원된다는 것이다. 그럼 특히 classical한 버전의 ring-level mirror symmetry $QH^\ast(X) \cong \Jac(W_q)$은 $z\rightarrow 0$일 때의 leading order로 복원된다. 구체적으로 $z \to 0$ stationary phase asymptotic은 ([§가우스-마닌 접속, ⁋명제 3](/ko/math/mirror_symmetry/gauss-manin_connection#prop3)) $W_q$의 critical point들에 의한 합으로 풀어지며, 그 leading order의 critical value들 $\{W_q(p)\}$가 quantum cohomology의 canonical coordinate들을 복원한다.
+위의 [주장 5](#conj5)는 mirror symmetry의 가장 강한 표현 중 하나로, A-side의 descendant Gromov-Witten invariant 전체가 B-side에서 period integral로 복원된다는 것이다. 그럼 특히 classical한 버전의 ring-level mirror symmetry $QH^\ast(X) \cong \Jac(W_q)$은 $z\rightarrow 0$일 때의 leading order로 복원된다. 구체적으로 $z \to 0$ stationary phase asymptotic은 ([§가우스-마닌 접속, ⁋명제 3](/ko/math/mirror_symmetry/gauss-manin_connection#prop3)) $W_q$의 critical point들에 의한 합으로 풀어지며, 그 leading order의 critical value들 $\{W_q(p)\}$가 quantum cohomology의 canonical coordinate들을 복원한다.
 
 이 주장은 단순히 [§두브로빈 접속, ⁋주장 4](/ko/math/mirror_symmetry/dubrovin_connection#conj4)를 반복한 것이 아니다. 이를 보이기 위해 우리는 우선 $J$-function이 만족하는 QDE와 ([명제 4](#prop4)) period matrix가 만족하는 Gauss-Manin system이 ([§가우스-마닌 접속, ⁋명제 7](/ko/math/mirror_symmetry/gauss-manin_connection#prop7)) 동일한 $D$-module을 정의함을 보여야 하며, 이것이 [§두브로빈 접속, ⁋주장 4](/ko/math/mirror_symmetry/dubrovin_connection#conj4)의 내용이다. 그 후에 우리는 $J$-function, 즉 행렬 $S$의 첫 열이 [§두브로빈 접속, ⁋주장 4](/ko/math/mirror_symmetry/dubrovin_connection#conj4)의 isomorphism 아래 thimble period들의 임의의 선형결합이 아니라 하필 distinguished thimble $\Gamma_0$ 위의 oscillating integral 하나로 옮겨짐을 확인해야 한다. 이를 위해서는 추가적인 양 변의 *integral structure*가 일치한다는 주장이 필요하며, A-side에서는 $K$-theory와 $\hat{\Gamma}$-class가 정의하는 lattice, 그리고 B-side에서는 Lefschetz thimble들이 생성하는 lattice들이 이 역할을 한다. 
 
@@ -243,7 +243,7 @@ Toric Fano variety의 경우 B-side의 oscillating integral이 명시적인 *hyp
 ::: 정의 5 (Givental의 $I$-function)
 $X$를 smooth projective toric Fano variety, $D_1, \ldots, D_m$을 toric divisor, $\beta \in H_2(X, \mathbb{Z})$를 effective curve class라 하자. $X$의 *$I$-function*은 다음으로 정의된다.
 
-$I_X(q, z) := e^{t_{(2)}/z} \sum_{\beta \in H_2(X, \mathbb{Z})_{\mathrm{eff}}} q^\beta \prod_{i=1}^m \frac{\prod_{k=-\infty}^{0} (D_i + kz)}{\prod_{k=-\infty}^{D_i \cdot \beta}(D_i + kz)}$
+$$I_X(q, z) := e^{t_{(2)}/z} \sum_{\beta \in H_2(X, \mathbb{Z})_{\mathrm{eff}}} q^\beta \prod_{i=1}^m \frac{\prod_{k=-\infty}^{0} (D_i + kz)}{\prod_{k=-\infty}^{D_i \cdot \beta}(D_i + kz)}$$
 :::
 
 여기서 형식상 등장하는 $-\infty$로의 무한곱은 분자와 분모에서 정확히 상쇄되어 실제로는 $D_i \cdot \beta$의 부호에 따라 유한곱 (혹은 그 역수)으로 환원되는 잘 정의된 식이다. 이 곱을 결정하는 데이터는 toric divisor $D_i$와 그 intersection number $D_i \cdot \beta$뿐이며, 이 둘이 담고 있는 정보는 $X$의 [§거울대칭 개요, ⁋정의 1](/ko/math/mirror_symmetry/overview#def1)에서 도입한 *charge matrix* $Q = (Q_{ji}) \in \Mat_{r \times m}(\mathbb{Z})$가 담은 정보와 같다. 

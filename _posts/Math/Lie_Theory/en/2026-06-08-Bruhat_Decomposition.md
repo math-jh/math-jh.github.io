@@ -88,7 +88,7 @@ Now we use the results reviewed above to consider the Bruhat decomposition. The 
 ::: Theorem 5 (Bruhat decomposition)
 For a connected reductive algebraic group $G$, Borel subgroup $B$, maximal torus $T\subset B$, and Weyl group $W=N_G(T)/T$, the following disjoint union holds:
 
-$G=\bigsqcup_{w\in W}BwB$
+$$G=\bigsqcup_{w\in W}BwB$$
 :::
 
 The simplest and most intuitive way to view this decomposition is to consider the $B\times B$-action on $G$ defined by
@@ -126,7 +126,7 @@ $$U_w\times B\longrightarrow BwB,\qquad (u,b)\longmapsto uwb$$
 
 is an isomorphism of varieties. Hence the Bruhat cell is $BwB\cong\mathbb{A}^{\ell(w)}\times B$, and projecting to the flag variety we have
 
-$X_w^\circ:=BwB/B\cong\mathbb{A}^{\ell(w)}\subseteq G/B$
+$$X_w^\circ:=BwB/B\cong\mathbb{A}^{\ell(w)}\subseteq G/B$$
 :::
 ::: Proof
 $B=U\rtimes T$ and $U$ decomposes into a product of root subgroups. Writing $U$ as the product of $U_w$ and $U_w'=U\cap wUw^{-1}$, we have $U=U_wU_w'$ and $U_w\cap U_w'=\{e\}$. Since $U_w'$ consists of roots sent to positive roots by $w^{-1}$, we have $w^{-1}U_w'w\subseteq U$, and therefore
@@ -167,7 +167,7 @@ $$G=\bigsqcup_{w\in W}B^-wB^-$$
 
 More generally, for two opposite Borel subgroups $B^+$, $B^-$ the following *mixed* decomposition holds:
 
-$G=\bigsqcup_{w\in W}B^+wB^-$
+$$G=\bigsqcup_{w\in W}B^+wB^-$$
 :::
 ::: Proof
 Since $B^-=w_0Bw_0^{-1}$ and $w_0=w_0^{-1}$, conjugating both sides of Theorem 5 by $w_0$ gives
@@ -215,7 +215,7 @@ In $G=\GL_n(\mathbb{C})$ this decomposition is immediately visible as block matr
 ::: Definition 11
 For a parabolic subgroup $W_I\subseteq W$, the set of *minimal length coset representatives* $W^I$ is defined as follows:
 
-$W^I=\{w\in W\mid\ell(ws_i)>\ell(w)\text{ for all }\alpha_i\in I\}$
+$$W^I=\{w\in W\mid\ell(ws_i)>\ell(w)\text{ for all }\alpha_i\in I\}$$
 :::
 
 The condition $\ell(ws_i)>\ell(w)$ means that multiplying $w$ on the right by generators of $W_I$ can no longer reduce the length, so $W^I$ collects the elements of minimal length in each left coset $wW_I$. Just as the length of a Weyl group element gives the dimension of a Bruhat cell, these will become the dimensions of the cells when we decompose the partial flag variety. To see this we need the following bridge.
@@ -236,7 +236,7 @@ $$G=\bigsqcup_{w\in W^I}BwP$$
 
 Hence the partial flag variety $G/P$ decomposes into affine cells:
 
-$G/P=\bigsqcup_{w\in W^I}BwP/P,\qquad BwP/P\cong\mathbb{A}^{\ell(w)}$
+$$G/P=\bigsqcup_{w\in W^I}BwP/P,\qquad BwP/P\cong\mathbb{A}^{\ell(w)}$$
 :::
 ::: Proof
 From Theorem 5 we have $G=\bigsqcup_{w\in W}BwB$ and $P=\bigsqcup_{v\in W_I}BvB$, so $G=\bigcup_{w\in W}BwP$, and by the decomposition $w=w^Iw_I$ of Proposition 12 we have $BwP=Bw^IP$, hence $G=\bigcup_{w\in W^I}BwP$. To show disjointness, suppose for $w_1,w_2\in W^I$ that $Bw_1P=Bw_2P$. Then $w_1\in Bw_2P$, and since $P=\bigsqcup_{v\in W_I}BvB$ we have $Bw_2P=\bigsqcup_{v\in W_I}Bw_2vB$. (Here for $w_2\in W^I$ and $v\in W_I$, since $\ell(w_2v)=\ell(w_2)+\ell(v)$, we have $Bw_2BvB=Bw_2vB$ merging into a single cell.) Thus for some $v\in W_I$ we have $w_1\in Bw_2vB$, and by the disjointness of Theorem 5, $w_1=w_2v$. That is, $w_1$ and $w_2$ belong to the same coset $w_2W_I$, and since each coset has a unique minimal length element, $w_1=w_2$. Finally, for $w\in W^I$ we have $\ell(w)=\ell(w^I)$ giving the cell dimension, and by the same argument as in Proposition 6 we obtain $BwP/P\cong\mathbb{A}^{\ell(w)}$.
@@ -336,7 +336,7 @@ $$X_x\subseteq X_w\iff x\leq w\text{ in Bruhat order}$$
 
 In particular
 
-$X_w=\bigsqcup_{\substack{x\leq w\\ x\in W^P}}X_x^\circ$
+$$X_w=\bigsqcup_{\substack{x\leq w\\ x\in W^P}}X_x^\circ$$
 :::
 ::: Proof
 Since $X_w=\overline{BwP/P}$ and $B$ is a connected solvable group, the closure of a $B$-orbit is a union of $B$-orbits of lower dimension. That $\overline{BwB/B}=\bigsqcup_{v\leq w}BvB/B$ holds in the complete flag variety $G/B$ follows from the cell closures recalled above, and projecting down via $G/B\rightarrow G/P$, the differences inside a $W_P$-coset collapse, so for $x,w\in W^P$ we have $X_x^\circ\subseteq X_w$ exactly when $x\leq w$.

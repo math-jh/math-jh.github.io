@@ -152,14 +152,14 @@ $$\prod_{j\in I} A_j,\qquad A_j=\begin{cases}A_i&i=j\\\{x_j\}&\text{otherwise}\e
 
 ## 하우스도르프 공간의 몫공간
 
-일반적으로 Hausdorff space $X$의 몫공간 $X/R$이 Hausdorff space인 것은 아니다. 뿐만 아니라 $X/R$이 Hausdorff일 필요충분조건 또한 쉽게 알아볼 수 있는데, $X/R$에서의 열린집합은 $R$-saturated인 $X$의 열린집합에 일대일로 대응되므로 $X/R$이 Hausdorff이기 위해서는 서로 다른 equivalence에 속하는 $x,y\in X$에 대해, 이들을 분리하는 $R$-saturated open set이 존재하는 것과 동치이다. 특히 다음이 성립한다.
+일반적으로 Hausdorff space $X$의 quotient space $X/R$이 Hausdorff space인 것은 아니다. 뿐만 아니라 $X/R$이 Hausdorff일 필요충분조건 또한 쉽게 알아볼 수 있는데, $X/R$에서의 열린집합은 $R$-saturated인 $X$의 열린집합에 일대일로 대응되므로 $X/R$이 Hausdorff이기 위해서는 서로 다른 equivalence에 속하는 $x,y\in X$에 대해, 이들을 분리하는 $R$-saturated open set이 존재하는 것과 동치이다. 특히 다음이 성립한다.
 
 ::: 명제 9
 연속함수 $f:X \rightarrow Y$에 대하여, 만일 $Y$가 Hausdorff라면 다음 동치관계
 
 $$x\sim y\iff f(x)=f(y)$$
 
-에 대하여, 몫공간 $X/{\sim}$은 Hausdorff이다.
+에 대하여, quotient space $X/{\sim}$은 Hausdorff이다.
 :::
 
 

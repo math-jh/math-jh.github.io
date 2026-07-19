@@ -59,7 +59,7 @@ $$(X\setminus Z, A\setminus Z)\hookrightarrow (X,A)$$
 
 induces an isomorphism
 
-$H_k(X\setminus Z, A\setminus Z)\rightarrow H_k(X,A).$
+$$H_k(X\setminus Z, A\setminus Z)\rightarrow H_k(X,A).$$
 :::
 
 However, despite the theorem being intuitively obvious, its proof involves some technical details, so we omit it here.
@@ -135,7 +135,7 @@ we can rewrite the right-hand side of the above isomorphism (2) as $\widetilde{H
 ::: Proposition 4
 For a good pair $(X,A)$, the quotient map $X \rightarrow X/A$ induces the following isomorphism for all $k$:
 
-$H_k(X,A)\cong \widetilde{H}_k(X/A)$
+$$H_k(X,A)\cong \widetilde{H}_k(X/A)$$
 :::
 
 ## Simplicial Homology and Singular Homology

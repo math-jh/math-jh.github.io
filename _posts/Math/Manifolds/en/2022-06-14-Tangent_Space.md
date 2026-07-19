@@ -54,7 +54,7 @@ In fact, for scalar multiplication defined on $\mathcal{C}^\infty_p$, since this
 ::: Proposition 2
 The ring $\mathcal{C}^\infty_p$ is a local ring, and its maximal ideal is given by
 
-$\mathfrak{m}_p=\{\mathbf{f}\in \mathcal{C}^\infty_p\mid \mathbf{f}(p)=0\}$
+$$\mathfrak{m}_p=\{\mathbf{f}\in \mathcal{C}^\infty_p\mid \mathbf{f}(p)=0\}$$
 :::
 ::: Proof
 First, the condition $\mathbf{f}(p)=0$ is well defined. This is because all functions belonging to $\mathbf{f}$ must have the same value at $p$. It is not difficult to see that $\mathfrak{m}_p$ is indeed an ideal.
@@ -112,7 +112,7 @@ Moreover, for any tangent vector $v$ and the constant function $\mathbf{c}$ havi
 For any tangent vector $v$, we have $v(\mathbf{1})=0$.
 :::
 ::: Proof
-$v(\mathbf{1})=v(\mathbf{1}\cdot\mathbf{1})=\mathbf{1}(p)v(\mathbf{1})+\mathbf{1}(p)v(\mathbf{1})=v(\mathbf{1})+v(\mathbf{1})=2v(\mathbf{1}).$
+$$v(\mathbf{1})=v(\mathbf{1}\cdot\mathbf{1})=\mathbf{1}(p)v(\mathbf{1})+\mathbf{1}(p)v(\mathbf{1})=v(\mathbf{1})+v(\mathbf{1})=2v(\mathbf{1}).$$
 :::
 
 However, we still do not know what kind of space $T_pM$ is. In particular, we do not yet know the dimension of $T_pM$. We will examine this in the next post.

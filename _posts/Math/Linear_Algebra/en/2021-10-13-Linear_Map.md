@@ -119,7 +119,7 @@ $$\alpha w=\alpha L(v)=L(\alpha v)\in\im L$$
 
 and
 
-$w_1+w_2=L(v_1)+L(v_2)=L(v_1+v_2)\in \im L$
+$$w_1+w_2=L(v_1)+L(v_2)=L(v_1+v_2)\in \im L$$
 :::
 
 We can now determine whether $L$ is injective or surjective by means of $\ker L$ and $\im L$.

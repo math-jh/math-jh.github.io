@@ -138,7 +138,7 @@ The antiderivative of the quantum part is solved $\beta$-by-$\beta$ using the re
 ::: Definition 3
 The (small) *Givental $J$-function* $J_X: (\mathbb{C}^\ast)^r \times \mathbb{C}^\ast \to H^\ast(X)$ of $X$ is defined by
 
-$J_X(q, z) := e^{t_{(2)}/z}\left( 1 + \sum_{\substack{\beta \in H_2(X, \mathbb{Z})_{\mathrm{eff}} \\ \beta \neq 0}} \sum_{a=0}^s q^\beta \left\langle \frac{T_a}{z(z - \psi)} \right\rangle_{0, 1, \beta} T^a \right)$
+$$J_X(q, z) := e^{t_{(2)}/z}\left( 1 + \sum_{\substack{\beta \in H_2(X, \mathbb{Z})_{\mathrm{eff}} \\ \beta \neq 0}} \sum_{a=0}^s q^\beta \left\langle \frac{T_a}{z(z - \psi)} \right\rangle_{0, 1, \beta} T^a \right)$$
 :::
 
 Here $H_2(X, \mathbb{Z})_{\mathrm{eff}}$ is the set of effective curve classes (defined in [\[Symplectic Geometry\] §Quantum Cohomology, §§Novikov Ring](/en/math/symplectic_geometry/quantum_cohomology#novikov-ring)), and as $\beta$ ranges over this set, each $\beta \neq 0$ contributes to the instanton correction of order $q^\beta$.
@@ -237,7 +237,7 @@ In the case of toric Fano varieties, the B-side oscillating integral is computed
 ::: Definition 5 (Givental's $I$-function)
 Let $X$ be a smooth projective toric Fano variety, $D_1, \ldots, D_m$ the toric divisors, and $\beta \in H_2(X, \mathbb{Z})$ an effective curve class. The *$I$-function* of $X$ is defined by
 
-$I_X(q, z) := e^{t_{(2)}/z} \sum_{\beta \in H_2(X, \mathbb{Z})_{\mathrm{eff}}} q^\beta \prod_{i=1}^m \frac{\prod_{k=-\infty}^{0} (D_i + kz)}{\prod_{k=-\infty}^{D_i \cdot \beta}(D_i + kz)}$
+$$I_X(q, z) := e^{t_{(2)}/z} \sum_{\beta \in H_2(X, \mathbb{Z})_{\mathrm{eff}}} q^\beta \prod_{i=1}^m \frac{\prod_{k=-\infty}^{0} (D_i + kz)}{\prod_{k=-\infty}^{D_i \cdot \beta}(D_i + kz)}$$
 :::
 
 Here the formally appearing infinite product to $-\infty$ precisely cancels between numerator and denominator, so it is actually a well-defined expression reducing to a finite product (or its inverse) depending on the sign of $D_i \cdot \beta$. The data determining this product is only the toric divisor $D_i$ and its intersection number $D_i \cdot \beta$, and the information contained in these two is the same as the information contained in the *charge matrix* $Q = (Q_{ji}) \in \Mat_{r \times m}(\mathbb{Z})$ introduced in [§Mirror Symmetry Overview, ⁋Definition 1](/en/math/mirror_symmetry/overview#def1).

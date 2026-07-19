@@ -214,13 +214,13 @@ $$z_n = a_n + b_n i$$가 $$\mathbb{C}$$에서 Cauchy라 하자. 좌표별 부등
 이는 $$\mathbb{R}^2$$가 완비라는 사실 ([\[해석학\] §거리공간](/ko/math/analysis/metric_spaces)에서 좌표별 논증으로 언급된 것) 의 한 표현이기도 하다. 완비성은 멱급수의 수렴, 적분의 존재, 부동점 논증 등 복소해석학의 거의 모든 존재 정리가 의지하는 토대이다. 컴팩트성 또한 같은 동일시를 통해 그대로 따라 나온다.
 
 ::: 정리 11 (ℂ의 Bolzano–Weierstrass / Heine–Borel)
-$$\mathbb{C}$$의 부분집합 $$K$$가 점렬컴팩트인 것은 $$K$$가 닫혀 있고 유계인 것과 동치이다. 특히 $$\mathbb{C}$$의 임의의 유계 점열은 수렴하는 부분수열을 가진다.
+$$\mathbb{C}$$의 부분집합 $$K$$가 점렬컴팩트인 것은 $$K$$가 닫혀 있고 bounded인 것과 동치이다. 특히 $$\mathbb{C}$$의 임의의 bounded 점열은 수렴하는 부분수열을 가진다.
 :::
 
 ::: 증명
-명제 9에 의해 $$(\mathbb{C}, d)$$는 거리공간으로서 $$(\mathbb{R}^2, d_{\text{euc}})$$와 동일하며, 닫힘·유계·점렬컴팩트는 모두 거리만으로 정의되는 개념이므로 두 공간에서 일치한다. 따라서 $$\mathbb{R}^2$$에 대한 [\[해석학\] §컴팩트성, ⁋정리 2](/ko/math/analysis/compactness#thm2)를 그대로 옮기면 결론을 얻는다.
+명제 9에 의해 $$(\mathbb{C}, d)$$는 거리공간으로서 $$(\mathbb{R}^2, d_{\text{euc}})$$와 동일하며, 닫힘·boundedness·점렬컴팩트는 모두 거리만으로 정의되는 개념이므로 두 공간에서 일치한다. 따라서 $$\mathbb{R}^2$$에 대한 [\[해석학\] §컴팩트성, ⁋정리 2](/ko/math/analysis/compactness#thm2)를 그대로 옮기면 결론을 얻는다.
 
-뒷부분은 다음과 같이도 직접 볼 수 있다. $$(z_n)$$이 유계, 곧 모든 $$n$$에서 $$\lvert z_n\rvert \leq M$$이라 하자. $$z_n = a_n + b_n i$$로 적으면 $$\lvert a_n\rvert, \lvert b_n\rvert \leq \lvert z_n\rvert \leq M$$이므로 두 실수열이 유계이다. 먼저 $$(a_n)$$에 [\[해석학\] §부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4)를 적용하여 $$a_{n_k} \to a$$인 부분수열을 뽑고, 그 부분수열 위에서 $$(b_{n_k})$$가 여전히 유계이므로 다시 Bolzano–Weierstrass를 적용하여 $$b_{n_{k_j}} \to b$$인 부분수열을 뽑는다. 이 부분수열 위에서 두 좌표가 동시에 수렴하므로 명제 9에 의해 $$z_{n_{k_j}} \to a + bi$$이다.
+뒷부분은 다음과 같이도 직접 볼 수 있다. $$(z_n)$$이 bounded, 곧 모든 $$n$$에서 $$\lvert z_n\rvert \leq M$$이라 하자. $$z_n = a_n + b_n i$$로 적으면 $$\lvert a_n\rvert, \lvert b_n\rvert \leq \lvert z_n\rvert \leq M$$이므로 두 실수열이 bounded이다. 먼저 $$(a_n)$$에 [\[해석학\] §부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4)를 적용하여 $$a_{n_k} \to a$$인 부분수열을 뽑고, 그 부분수열 위에서 $$(b_{n_k})$$가 여전히 bounded이므로 다시 Bolzano–Weierstrass를 적용하여 $$b_{n_{k_j}} \to b$$인 부분수열을 뽑는다. 이 부분수열 위에서 두 좌표가 동시에 수렴하므로 명제 9에 의해 $$z_{n_{k_j}} \to a + bi$$이다.
 :::
 
 따라서 닫힌 원판 $$\overline{B}(z_0, R) = \{z \in \mathbb{C} \mid \lvert z - z_0\rvert \leq R\}$$이나 원 $$\{z \mid \lvert z\rvert = 1\}$$ 같은 집합은 컴팩트이고, 반면 열린 원판이나 $$\mathbb{C}$$ 전체는 컴팩트가 아니다. 이 컴팩트성은 곧 연속함수가 컴팩트집합 위에서 최댓값을 가진다는 결과로 이어져, 최대절댓값원리나 Liouville 정리 같은 복소해석학의 정리들이 서는 발판이 된다.
@@ -230,7 +230,7 @@ $$\mathbb{C}$$의 부분집합 $$K$$가 점렬컴팩트인 것은 $$K$$가 닫�
 
 $$\lvert z^n - 0\rvert = \lvert z\rvert^n \to 0$$
 
-이어서 $$z^n \to 0$$이다 ([\[해석학\] §수열의 수렴, ⁋예시 8](/ko/math/analysis/convergence_of_sequences#ex8)에서 본 실수열 $$\lvert z\rvert^n$$의 수렴). 반대로 $$\lvert z\rvert > 1$$이면 $$\lvert z^n\rvert \to \infty$$이므로 $$(z^n)$$은 유계가 아니어서 수렴하지 않는다. $$\lvert z\rvert = 1$$인 경계의 경우는 더 섬세하다. $$z = 1$$이면 $$z^n = 1$$로 일정하지만, 가령 $$z = i$$이면 $$z^n$$이 $$i, -1, -i, 1$$을 주기적으로 순환하여 ($$\lvert z^n\rvert = 1$$로 유계이지만) 수렴하지 않는다. 후자는 정리 11이 보장하는 수렴 부분수열의 존재를 명시적으로 보여 주는 예이기도 하다. 점열 $$(i^n)$$은 네 개의 상수 부분수열로 쪼개지며, 각각은 $$i, -1, -i, 1$$로 수렴한다.
+이어서 $$z^n \to 0$$이다 ([\[해석학\] §수열의 수렴, ⁋예시 8](/ko/math/analysis/convergence_of_sequences#ex8)에서 본 실수열 $$\lvert z\rvert^n$$의 수렴). 반대로 $$\lvert z\rvert > 1$$이면 $$\lvert z^n\rvert \to \infty$$이므로 $$(z^n)$$은 bounded가 아니어서 수렴하지 않는다. $$\lvert z\rvert = 1$$인 경계의 경우는 더 섬세하다. $$z = 1$$이면 $$z^n = 1$$로 일정하지만, 가령 $$z = i$$이면 $$z^n$$이 $$i, -1, -i, 1$$을 주기적으로 순환하여 ($$\lvert z^n\rvert = 1$$로 bounded이지만) 수렴하지 않는다. 후자는 정리 11이 보장하는 수렴 부분수열의 존재를 명시적으로 보여 주는 예이기도 하다. 점열 $$(i^n)$$은 네 개의 상수 부분수열로 쪼개지며, 각각은 $$i, -1, -i, 1$$로 수렴한다.
 :::
 
 ## 확장복소평면과 Riemann 구면
@@ -264,22 +264,22 @@ $$\chi(z, w) = \frac{2\,\lvert z - w\rvert}{\sqrt{1 + \lvert z\rvert^2}\,\sqrt{1
 :::
 
 ::: 증명
-$$z \in \mathbb{C}$$를 고정하고 $$z_n \to z$$ (표준거리) 라 하자. 그러면 $$(z_n)$$은 유계이므로 어떤 $$M$$에 대해 $$\lvert z_n\rvert \leq M$$이고,
+$$z \in \mathbb{C}$$를 고정하고 $$z_n \to z$$ (표준거리) 라 하자. 그러면 $$(z_n)$$은 bounded이므로 어떤 $$M$$에 대해 $$\lvert z_n\rvert \leq M$$이고,
 
 $$\chi(z_n, z) = \frac{2\,\lvert z_n - z\rvert}{\sqrt{1 + \lvert z_n\rvert^2}\,\sqrt{1 + \lvert z\rvert^2}} \leq \frac{2\,\lvert z_n - z\rvert}{\sqrt{1 + \lvert z\rvert^2}} \to 0$$
 
-이다. 분모는 $$\sqrt{1 + \lvert z\rvert^2} \geq 1$$로 아래로 유계이고 분자가 $$0$$으로 가기 때문이다. 역으로 $$\chi(z_n, z) \to 0$$이라 하자. 분모는 모든 $$n$$에서
+이다. 분모는 $$\sqrt{1 + \lvert z\rvert^2} \geq 1$$로 bounded below이고 분자가 $$0$$으로 가기 때문이다. 역으로 $$\chi(z_n, z) \to 0$$이라 하자. 분모는 모든 $$n$$에서
 
 $$\sqrt{1 + \lvert z_n\rvert^2}\,\sqrt{1 + \lvert z\rvert^2}$$
 
-인데, 만일 $$(z_n)$$이 유계가 아니라면 어떤 부분수열에서 $$\lvert z_n\rvert \to \infty$$이고, 그때 $$\chi(z_n, z) \to \chi(\infty, z) = 2/\sqrt{1 + \lvert z\rvert^2} > 0$$이 되어 $$\chi(z_n, z) \to 0$$에 모순이다. 따라서 $$(z_n)$$은 유계이고 $$\lvert z_n\rvert \leq M$$이라 두면
+인데, 만일 $$(z_n)$$이 bounded가 아니라면 어떤 부분수열에서 $$\lvert z_n\rvert \to \infty$$이고, 그때 $$\chi(z_n, z) \to \chi(\infty, z) = 2/\sqrt{1 + \lvert z\rvert^2} > 0$$이 되어 $$\chi(z_n, z) \to 0$$에 모순이다. 따라서 $$(z_n)$$은 bounded이고 $$\lvert z_n\rvert \leq M$$이라 두면
 
 $$\lvert z_n - z\rvert = \frac{\sqrt{1 + \lvert z_n\rvert^2}\,\sqrt{1 + \lvert z\rvert^2}}{2}\,\chi(z_n, z) \leq \frac{\sqrt{1 + M^2}\,\sqrt{1 + \lvert z\rvert^2}}{2}\,\chi(z_n, z) \to 0$$
 
 이다. 따라서 두 거리는 $$\mathbb{C}$$ 위에서 같은 수렴을 정의하며, 같은 위상을 준다.
 :::
 
-명제 15는 $$\widehat{\mathbb{C}}$$가 $$\mathbb{C}$$를 위상적으로 변형 없이 품으면서 무한대에 한 점을 더해 컴팩트하게 만든 공간임을 말한다. 실제로 $$\widehat{\mathbb{C}}$$는 구면 $$S^2$$와 등거리동형이고 $$S^2$$는 $$\mathbb{R}^3$$의 닫힌 유계집합이므로, Heine–Borel 정리에 의해 $$(\widehat{\mathbb{C}}, \chi)$$는 컴팩트한 거리공간이다. 컴팩트하지 않은 $$\mathbb{C}$$에 점 하나를 더해 컴팩트한 공간을 얻는 이 구성은 위상수학의 *한 점 컴팩트화<sub>one-point compactification</sub>*의 가장 중요한 예이며, 무한대에서의 함수의 거동을 유한한 점에서의 거동과 동등하게 다룰 수 있게 해 준다. 유리형함수를 $$\widehat{\mathbb{C}}$$ 사이의 사상으로 보는 관점이 여기서 출발한다.
+명제 15는 $$\widehat{\mathbb{C}}$$가 $$\mathbb{C}$$를 위상적으로 변형 없이 품으면서 무한대에 한 점을 더해 컴팩트하게 만든 공간임을 말한다. 실제로 $$\widehat{\mathbb{C}}$$는 구면 $$S^2$$와 등거리동형이고 $$S^2$$는 $$\mathbb{R}^3$$의 닫힌 bounded set이므로, Heine–Borel 정리에 의해 $$(\widehat{\mathbb{C}}, \chi)$$는 컴팩트한 거리공간이다. 컴팩트하지 않은 $$\mathbb{C}$$에 점 하나를 더해 컴팩트한 공간을 얻는 이 구성은 위상수학의 *한 점 컴팩트화<sub>one-point compactification</sub>*의 가장 중요한 예이며, 무한대에서의 함수의 거동을 유한한 점에서의 거동과 동등하게 다룰 수 있게 해 준다. 유리형함수를 $$\widehat{\mathbb{C}}$$ 사이의 사상으로 보는 관점이 여기서 출발한다.
 
 ---
 

@@ -17,7 +17,7 @@ drift_needed: true
 
 ## 대수적 군
 
-우리는 수학적 대상이 다른 대상에 작용하는 많은 예시들을 알고 있다. 대수적으로 가장 중요한 예시는 벡터공간 위에 작용하는 군일 것이며, 기하적으로는 Lie group action이 있다. 대수기하학은 대수적인 대상들에 기하학적인 의미를 부여하므로, 대수적 군의 작용은 이들 두 관점을 잘 통합하는 형태로 나타난다. 이번 글에서 우리는 편의상 $\mathbb{k}=\mathbb{C}$로 통일한다. 
+우리는 수학적 대상이 다른 대상에 작용하는 많은 예시들을 알고 있다. 대수적으로 가장 중요한 예시는 벡터공간 위에 작용하는 군일 것이며, 기하적으로는 Lie group action이 있다. 대수기하학은 algebraic한 대상들에 기하학적인 의미를 부여하므로, algebraic group의 action은 이들 두 관점을 잘 통합하는 형태로 나타난다. 이번 글에서 우리는 편의상 $\mathbb{k}=\mathbb{C}$로 통일한다. 
 
 우선 다음 정의는 자명하다. 
 
@@ -44,7 +44,7 @@ Algebraic group 중에서 특히 중요한 역할을 하는 것은 당연히 *af
 Algebraic group $G$가 *affine algebraic group*라는 것은 $G$가 affine variety인 것이다. 
 :::
 
-## 대수적 군의 작용
+## 대수적 군의 action
 
 이제 algebraic group이 algebraic variety 위에 작용하는 방식을 정의한다.
 
@@ -96,7 +96,7 @@ $$\chi_\rho(g) = \tr(\rho(g))$$
 으로 정의된다.
 :::
 
-뿐만 아니라, 다음 명제에서 볼 수 있듯 algebraic group의 representation 또한 대수적인 본질과 기하적인 본질을 동시에 가지고 있다. 
+뿐만 아니라, 다음 명제에서 볼 수 있듯 algebraic group의 representation 또한 algebraic한 본질과 기하적인 본질을 동시에 가지고 있다. 
 
 ::: 명제 8
 Affine algebraic group $G = \Spec(A)$의 representation $\rho: G \to \GL(V)$는 $V$ 위의 comodule structure $V \to V \otimes_\mathbb{C} A$와 일대일 대응한다.
@@ -173,12 +173,12 @@ $$A_\rchi = \{f \in A \mid t \cdot f = \rchi(t) f \text{ for all } t \in T\}$$
 :::
 
 ::: 증명
-Torus action $\mu:T\times X \to X$가 주어지면, 그 pullback로 coordinate ring $A$ 위에 $T$의 action이 $(t \cdot f)(x)=f(t^{-1} \cdot x)$로 유도된다. 이는 $A$를 $\mathbb{C}$-vector space로 볼 때 $T$의 rational representation을 이룬다. 이제 $T\cong(\mathbb{G}_m)^n$이므로 각 coordinate $t_i$에 대응하는 연산자는 서로 commute하는 linear automorphism이다. $\mathbb{G}_m$의 유한차원 rational representation은 항상 character $t_i\mapsto t_i^k$들의 직합으로 대각화되므로 각 $t_i$는 diagonalizable이고, 임의의 유한차원 $T$-stable 부분공간 위에서 이들은 동시대각화된다. 따라서 $A$는 common eigenspace들의 직합으로 분해되며, 각 common eigenspace는 정확히 어떤 character $\rchi\in X^\ast(T)$에 대하여 $t \cdot f=\rchi(t)f$를 만족하는 $f$들의 공간 $A_\rchi$이다. 이로부터 원하는 분해 $A=\bigoplus_\rchi A_\rchi$를 얻는다.
+Torus action $\mu:T\times X \to X$가 주어지면, 그 pullback로 coordinate ring $A$ 위에 $T$의 action이 $(t \cdot f)(x)=f(t^{-1} \cdot x)$로 유도된다. 이는 $A$를 $\mathbb{C}$-벡터 space로 볼 때 $T$의 rational representation을 이룬다. 이제 $T\cong(\mathbb{G}_m)^n$이므로 각 coordinate $t_i$에 대응하는 연산자는 서로 commute하는 linear automorphism이다. $\mathbb{G}_m$의 유한차원 rational representation은 항상 character $t_i\mapsto t_i^k$들의 direct sum으로 대각화되므로 각 $t_i$는 diagonalizable이고, 임의의 유한차원 $T$-stable 부분공간 위에서 이들은 동시대각화된다. 따라서 $A$는 common eigenspace들의 direct sum으로 분해되며, 각 common eigenspace는 정확히 어떤 character $\rchi\in X^\ast(T)$에 대하여 $t \cdot f=\rchi(t)f$를 만족하는 $f$들의 공간 $A_\rchi$이다. 이로부터 원하는 분해 $A=\bigoplus_\rchi A_\rchi$를 얻는다.
 :::
 
 ## Quotient Varieties
 
-Action이 주어진 algebraic variety에서 우리는 종종 *quotient variety*를 구성하고자 한다. 그러나 이러한 대상이 잘 정의되는 것은 주로 대수적인 세팅에서 뿐이며, 가장 간단한 기하적인 대상인 위상공간에서도 이것이 잘 정의되지는 않았다. 이는 algebraic variety의 세상에서도 마찬가지이다. 
+Action이 주어진 algebraic variety에서 우리는 종종 *quotient variety*를 구성하고자 한다. 그러나 이러한 대상이 잘 정의되는 것은 주로 algebraic한 세팅에서 뿐이며, 가장 간단한 기하적인 대상인 위상공간에서도 이것이 잘 정의되지는 않았다. 이는 algebraic variety의 세상에서도 마찬가지이다. 
 
 ::: 정의 13
 Algebraic group $G$가 algebraic variety $X$ 위에 작용할 때, 다음을 정의한다. 

@@ -18,7 +18,7 @@ published: false
 
 [\[가환대수학\] §조르단-횔더 정리, ⁋정의 1](/ko/math/commutative_algebra/Jordan-Holder_theorem#def1)에서 우리는 simple module을 살펴보았다. Simple module은 $0$이 아니면서 자명한 submodule만을 갖는 module로, composition series를 통해 일반적인 module을 쌓아 올리는 구성 블록의 역할을 한다. 그러나 composition series가 주는 쌓임은 일반적으로 서로 얽혀 있어서, 주어진 module을 simple module들의 직합으로 되돌릴 수는 없다. 이 글에서는 그러한 얽힘이 전혀 없는 module, 곧 simple module들의 직합으로 분해되는 semisimple module을 다룬다. 이들의 세 가지 동치 특징을 증명하고, 같은 isomorphism class의 인자들을 모은 isotypic 분해가 canonical하다는 것과, 유한 직합 분해가 본질적으로 유일하다는 것을 보인다. 이 이론은 이후 semisimple ring의 구조 정리로 이어진다.
 
-이 글에서 환 $R$은 항등원을 갖는, 가환이라 가정하지 않는 환이며, module은 언제나 left module이다.
+이 글에서 ring $R$은 항등원을 갖는, commutative이라 가정하지 않는 ring이며, module은 언제나 left module이다.
 
 ## Semisimple module의 정의
 
@@ -33,7 +33,7 @@ $$M=\bigoplus_{i\in I}S_i$$
 Index 집합 $I$가 공집합인 경우도 허용하므로 $0$은 semisimple module이다. 또 정의에서 직합은 internal direct sum, 즉 $M$의 submodule들의 합이 직합을 이루는 것을 말한다.
 
 ::: 예시 2
-1. Division ring $D$를 자기 자신 위의 left module로 보면, $D$의 submodule은 left ideal이고, nonzero left ideal $I$는 $0\neq x\in I$에 대해 $1=x^{-1}x\in I$이므로 $I=D$이다. 즉 $D$는 simple $D$-module이다. 일반적으로 $D$ 위의 vector space $V$는 기저 $B$를 갖고 (field의 경우와 동일한 Zorn 논증), $V=\bigoplus_{b\in B}Db$는 simple submodule들의 직합이므로 $V$는 semisimple이다.
+1. Division ring $D$를 자기 자신 위의 left module로 보면, $D$의 submodule은 left ideal이고, nonzero left ideal $I$는 $0\neq x\in I$에 대해 $1=x^{-1}x\in I$이므로 $I=D$이다. 즉 $D$는 simple $D$-module이다. 일반적으로 $D$ 위의 벡터 space $V$는 기저 $B$를 갖고 (field의 경우와 동일한 Zorn 논증), $V=\bigoplus_{b\in B}Db$는 simple submodule들의 direct sum이므로 $V$는 semisimple이다.
 2. $\mathbb{Z}$-module $\mathbb{Z}/6\mathbb{Z}\cong\mathbb{Z}/2\mathbb{Z}\oplus\mathbb{Z}/3\mathbb{Z}$은 semisimple이다. 각 인자는 소수 개의 원소를 갖는 abelian group이므로 proper nonzero subgroup을 가질 수 없어 simple이다.
 3. 반면 $\mathbb{Z}$ 자신은 semisimple이 아니다. $\mathbb{Z}$의 두 nonzero submodule $m\mathbb{Z}$, $n\mathbb{Z}$은 언제나 $mn\neq 0$을 공유하므로 $\mathbb{Z}$는 simple submodule을 하나도 갖지 않는다. $\mathbb{Z}/4\mathbb{Z}$ 또한 semisimple이 아닌데, 유일한 proper nonzero submodule $2\mathbb{Z}/4\mathbb{Z}$가 직합의 인자가 될 수 없기 때문이다.
 :::
@@ -48,9 +48,9 @@ $$M=N\oplus\bigoplus_{j\in J}S_j$$
 이다.
 :::
 ::: 증명
-합 $N+\sum_{j\in J}S_j$가 직합이 되도록 하는 부분집합 $J\subseteq I$들의 모임을 $\mathcal{J}$라 하자. 공집합이 속하므로 $\mathcal{J}$는 비어 있지 않다. $\mathcal{J}$의 chain이 주어지면 그 합집합에서의 직합 조건은 언제나 유한개의 원소만 관여하므로, 합집합 또한 $\mathcal{J}$에 속한다. 따라서 Zorn 보조정리에 의해 $\mathcal{J}$는 maximal element $J$를 갖는다. $M'=N\oplus\bigoplus_{j\in J}S_j$로 두자.
+합 $N+\sum_{j\in J}S_j$가 direct sum이 되도록 하는 부분집합 $J\subseteq I$들의 모임을 $\mathcal{J}$라 하자. 공집합이 속하므로 $\mathcal{J}$는 비어 있지 않다. $\mathcal{J}$의 chain이 주어지면 그 합집합에서의 직합 조건은 언제나 유한개의 원소만 관여하므로, 합집합 또한 $\mathcal{J}$에 속한다. 따라서 Zorn 보조정리에 의해 $\mathcal{J}$는 maximal element $J$를 갖는다. $M'=N\oplus\bigoplus_{j\in J}S_j$로 두자.
 
-이제 임의의 $i\in I$에 대하여 $S_i\subseteq M'$임을 주장한다. 만일 $S_i\not\subseteq M'$이라면 $S_i\cap M'$은 $S_i$의 proper submodule이고, $S_i$가 simple이므로 $S_i\cap M'=0$이다. 그럼 합 $N+\sum_{j\in J}S_j+S_i$가 다시 직합이 되어 $J\cup\{i\}\in\mathcal{J}$이고, 이는 $J$의 최대성에 모순이다. 따라서 모든 $S_i$가 $M'$에 포함되고, $M=N+\sum_{i\in I}S_i\subseteq M'$이므로 $M=M'$이다.
+이제 임의의 $i\in I$에 대하여 $S_i\subseteq M'$임을 주장한다. 만일 $S_i\not\subseteq M'$이라면 $S_i\cap M'$은 $S_i$의 proper submodule이고, $S_i$가 simple이므로 $S_i\cap M'=0$이다. 그럼 합 $N+\sum_{j\in J}S_j+S_i$가 다시 direct sum이 되어 $J\cup\{i\}\in\mathcal{J}$이고, 이는 $J$의 최대성에 모순이다. 따라서 모든 $S_i$가 $M'$에 포함되고, $M=N+\sum_{i\in I}S_i\subseteq M'$이므로 $M=M'$이다.
 :::
 
 이 보조정리로부터 semisimple module의 세 가지 동치 특징이 한꺼번에 얻어진다.
@@ -59,7 +59,7 @@ $$M=N\oplus\bigoplus_{j\in J}S_j$$
 $R$-module $M$에 대하여 다음이 모두 동치이다.
 
 1. $M$은 simple submodule들의 합이다.
-2. $M$은 semisimple이다. 즉 simple submodule들의 직합이다.
+2. $M$은 semisimple이다. 즉 simple submodule들의 direct sum이다.
 3. $M$의 모든 submodule은 direct summand이다.
 :::
 ::: 증명
@@ -85,7 +85,7 @@ Submodule $N$의 경우, [보조정리 3](#lem3)에 의해 $M=N\oplus\bigoplus_{
 
 ## Isotypic 분해
 
-[예시 2](#ex2)의 vector space에서 보듯 semisimple module의 직합 분해는 기저의 선택만큼이나 유일하지 않다. 그러나 서로 isomorphic한 인자들을 한데 모으면 분해는 canonical해진다. 이를 정확히 하기 위해 먼저 simple submodule들의 합 안에 어떤 simple submodule들이 살 수 있는지를 확인한다.
+[예시 2](#ex2)의 벡터 space에서 보듯 semisimple module의 direct sum 분해는 기저의 선택만큼이나 유일하지 않다. 그러나 서로 isomorphic한 인자들을 한데 모으면 분해는 canonical해진다. 이를 정확히 하기 위해 먼저 simple submodule들의 합 안에 어떤 simple submodule들이 살 수 있는지를 확인한다.
 
 ::: 보조정리 6
 $M=\sum_{i\in I}S_i$가 simple submodule들의 합이라 하자. 그럼 $M$의 임의의 simple submodule $U$는 적당한 $i\in I$에 대하여 $S_i$와 isomorphic하다.
@@ -116,7 +116,7 @@ Semisimple module $M$, $N$에 대하여 다음이 성립한다.
 
 ## 분해의 유일성
 
-Semisimple 분해에서 인자들 자체는 유일하지 않지만, 각 isomorphism class가 등장하는 횟수는 유일하다. 유한 직합의 경우 이는 다음과 같이 정확해진다.
+Semisimple 분해에서 인자들 자체는 유일하지 않지만, 각 isomorphism class가 등장하는 횟수는 유일하다. 유한 direct sum의 경우 이는 다음과 같이 정확해진다.
 
 ::: 명제 9
 Simple module들 $S_1,\ldots,S_n$과 $T_1,\ldots,T_m$에 대하여 $\bigoplus_{a=1}^nS_a\cong\bigoplus_{b=1}^mT_b$라면 $n=m$이고, 적당한 permutation $\sigma$에 대하여 모든 $a$에서 $S_a\cong T_{\sigma(a)}$이다.
@@ -133,7 +133,7 @@ $$T_2\oplus\cdots\oplus T_m\cong\Big(\bigoplus_bT_b\Big)/N\cong\Big(\bigoplus_aS
 이고, 가운데 isomorphism은 $\varphi(S_1)=N$이므로 $\varphi$가 유도하는 것이다. Induction 가정에 의해 $n-1=m-1$이고 나머지 인자들이 대응되므로, $S_1\cong T_1$과 합쳐 증명이 끝난다.
 :::
 
-즉 유한개의 simple module의 직합은 그 인자들의 isomorphism class와 중복도를 (순서를 무시하면) 완전히 결정한다. [명제 8](#prop8)의 isotypic 분해와 함께 쓰면, 유한개의 simple의 직합인 semisimple module은 각 class $[S]$의 중복도 자료만으로 분류된다. 이 유일성은 semisimple ring의 구조 정리에서 행렬 크기와 division ring의 유일성을 담당하게 된다.
+즉 유한개의 simple module의 direct sum은 그 인자들의 isomorphism class와 중복도를 (순서를 무시하면) 완전히 결정한다. [명제 8](#prop8)의 isotypic 분해와 함께 쓰면, 유한개의 simple의 직합인 semisimple module은 각 class $[S]$의 중복도 자료만으로 분류된다. 이 유일성은 semisimple ring의 구조 정리에서 행렬 크기와 division ring의 유일성을 담당하게 된다.
 
 ---
 

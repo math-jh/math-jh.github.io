@@ -226,7 +226,7 @@ $$\Hom_{D(\mathcal{B})}(L F(A^\bullet), B^\bullet) \cong \Hom_{D(\mathcal{A})}(A
 이 성립한다.
 :::
 ::: 증명
-$A^\bullet$의 $K$-projective resolution $P_\bullet$과 $B^\bullet$의 $K$-injective resolution $I^\bullet$을 선택하자. $P_\bullet$은 $K$-projective이므로 $\Hom_{D(\mathcal{B})}(F(P_\bullet), I^\bullet)$의 계산에서 $F(P_\bullet)$을 resolution로 대체할 수 있다. 원래의 adjunction $F \dashv G$에 의해, complex 수준에서
+$A^\bullet$의 $K$-projective resolution $P_\bullet$과 $B^\bullet$의 $K$-injective resolution $I^\bullet$을 선택하자. $P_\bullet$은 $K$-projective이므로 $\Hom_{D(\mathcal{B})}(F(P_\bullet), I^\bullet)$의 계산에서 $F(P_\bullet)$을 resolution으로 대체할 수 있다. 원래의 adjunction $F \dashv G$에 의해, complex 수준에서
 
 $$\Hom_{\Ch(\mathcal{B})}(F(P_\bullet), I^\bullet) \cong \Hom_{\Ch(\mathcal{A})}(P_\bullet, G(I^\bullet))$$
 

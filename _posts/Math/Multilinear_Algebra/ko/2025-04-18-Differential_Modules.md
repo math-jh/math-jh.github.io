@@ -155,7 +155,7 @@ $$\Hom_{(E, E)}(\mathfrak{I}, M) \rightarrow \Der_A(E, M)$$
 
 을 얻는다. 즉 $(E,E)$-bimodule $\mathfrak{I}$는 $E$에서 $M$으로 가는 $A$-derivation들의 representation이라 생각할 수 있다.
 
-만일 여기에 더하여, $E$가 *commutative* $A$-algebra라면 우리는 $E$에서 $M$으로의 derivation들의 representation를 $\lMod{E}$에서 찾을 수 있다. 
+만일 여기에 더하여, $E$가 *commutative* $A$-algebra라면 우리는 $E$에서 $M$으로의 derivation들의 representation을 $\lMod{E}$에서 찾을 수 있다. 
 
 우선 $E\otimes_AE$를 보자. 앞서의 논증에서 $E\otimes_AE$ 위에 정의된 $(E,E)$-bimodule structure는 다음의 식
 

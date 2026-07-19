@@ -133,7 +133,7 @@ For later use, we define the Euler characteristic.
 ::: Definition 2
 For a variety $X$ and a coherent sheaf $\mathcal{F}$ defined on it, we define the *Euler characteristic* of $\mathcal{F}$ by the formula
 
-$\rchi(X, \mathcal{F}) = \sum_{i=0}^{n} (-1)^i \dim H^i(X, \mathcal{F})$
+$$\rchi(X, \mathcal{F}) = \sum_{i=0}^{n} (-1)^i \dim H^i(X, \mathcal{F})$$
 :::
 
 In particular, when $X=\mathbb{P}^n$ and $\mathcal{F}=\mathcal{O}(d)$, since in any case the intermediate cohomologies all vanish and only the cohomologies at both ends matter, we can easily prove the following corollary.
@@ -141,7 +141,7 @@ In particular, when $X=\mathbb{P}^n$ and $\mathcal{F}=\mathcal{O}(d)$, since in 
 ::: Corollary 3
 The Euler characteristic of $\mathcal{O}(d)$ on $\mathbb{P}^n$ is given by the formula
 
-$\rchi(\mathbb{P}^n, \mathcal{O}(d)) = \binom{n+d}{n}$
+$$\rchi(\mathbb{P}^n, \mathcal{O}(d)) = \binom{n+d}{n}$$
 :::
 
 ::: Proof

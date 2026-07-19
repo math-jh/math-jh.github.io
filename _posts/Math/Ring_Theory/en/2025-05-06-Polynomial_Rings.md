@@ -114,7 +114,7 @@ We now examine univariate polynomials in somewhat more detail.
 ::: Proposition 5
 Let a polynomial $u(\x)$ of degree $m$ and a polynomial $v(\x)$ of degree $n$ in $A[\x]$ be given, and let the leading coefficient of $v$ be $b_n$. Setting $k=\sup(m-n+1,0)$, there exist $q,r\in A[\x]$ satisfying the formula
 
-$b_n^k u=qv+r,\qquad \deg r < n$
+$$b_n^k u=qv+r,\qquad \deg r < n$$
 :::
 
 ::: Proof
@@ -138,7 +138,7 @@ $$b_n^{k-1}u_1(\x)=q_1(\x)v(\x)+r(\x),\qquad \deg(r) < n$$
 
 holds. Substituting this back into the previous formula, we obtain
 
-$b_n^k u(\x)=(b_n^{k-1}a_m\x^{m-n}+q_1(\x))v(\x)+r(\x)$
+$$b_n^k u(\x)=(b_n^{k-1}a_m\x^{m-n}+q_1(\x))v(\x)+r(\x)$$
 :::
 
 The coefficient $b_n^k$ appearing here arises when we raise the degree one by one from $v$ to match the leading term with $u$, and if $b_n$ is invertible, we can verify that the $q$ and $r$ satisfying the above formula are uniquely determined. In particular, if every nonzero element of $A$ is invertible, that is, if $A=\mathbb{K}$, then in the above situation we can uniquely determine $q,r$ satisfying
@@ -196,7 +196,7 @@ Furthermore, if $A$ is an integral domain, we can show the following inductively
 ::: Proposition 9
 Fix an integral domain $A$. Let a nonzero element $u$ of $A[\x]$ have roots $a_1,\ldots, a_r$, and let their multiplicities be $p_1,\ldots, p_r$ respectively. Then there exists $v\in A[\x]$ such that
 
-$u(\x)=(\x-a_1)^{p_1}\cdots(\x-a_r)^{p_r}v(\x),\qquad v(a_1),\ldots, v(a_r)\neq0$
+$$u(\x)=(\x-a_1)^{p_1}\cdots(\x-a_r)^{p_r}v(\x),\qquad v(a_1),\ldots, v(a_r)\neq0$$
 :::
 ::: Proof
 We proceed by induction on $r$. The case $p=1$ is trivial, so suppose $r$ roots $a_1,\ldots, a_r$ of $u$ are given, and apply the inductive hypothesis to the first $r-1$ roots to write

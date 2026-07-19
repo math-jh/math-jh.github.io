@@ -159,7 +159,7 @@ $$v_j=\frac{1}{j!}F^j v_0$$
 
 으로 정의하면 다음이 성립한다.
 
-$H\cdot v_j=(\mu-2j)v_j,\quad F\cdot v_j=(j+1)v_{j+1},\quad E\cdot v_j=(\mu-j+1)v_{j-1}.$
+$$H\cdot v_j=(\mu-2j)v_j,\quad F\cdot v_j=(j+1)v_{j+1},\quad E\cdot v_j=(\mu-j+1)v_{j-1}.$$
 :::
 ::: 증명
 처음 두 식은 자명하므로, $E$에 대한 식만 보이면 충분하다. 귀납법으로 진행한다. $j=0$인 경우는 자명하며, 만일 주어진 식이 $j$에 대해 성립한다면
@@ -416,7 +416,7 @@ Root system $\Phi$의 각 root $\alpha$에 대하여 reflection $s_\alpha$는 $\
 ::: 정의 17
 Root system $\Phi$의 *Weyl group*은 reflection들 $s_\alpha$ ($\alpha\in\Phi$)로 생성되는 $\Aut(\Phi)$의 부분군이다.
 
-$W(\Phi)=\langle s_\alpha\mid \alpha\in\Phi\rangle$
+$$W(\Phi)=\langle s_\alpha\mid \alpha\in\Phi\rangle$$
 :::
 
 Weyl group은 유한군이다. 실제로 $W$는 $\Phi$가 속한 Euclidean space의 orthogonal group의 부분군이고, $\Phi$가 유한집합이므로 $W$ 역시 유한하다. 또한 [명제 12](#prop12)에서 확인한 것과 같이 reflection $s_\alpha$가 $\alpha$에 수직인 초평면에 대한 대칭이동이므로, $W$는 Coxeter group의 구조를 갖는다.

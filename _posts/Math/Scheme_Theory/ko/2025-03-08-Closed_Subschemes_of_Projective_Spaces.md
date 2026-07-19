@@ -31,7 +31,7 @@ $$\iota:\Proj (S_\bullet/\mathfrak{a}) \rightarrow \Proj S_\bullet=\mathbb{P}^n$
 을 유도하며, 그 image는 $Z_+(\mathfrak{a})$이다.
 :::
 ::: 증명
-[\[대수적 구조\] §등급환](/ko/math/algebraic_structures/graded_rings)에서 살펴본 것과 같이 $S_\bullet/\mathfrak{a}$는 graded ring이고, 몫환의 ideal correspondence는 homogeneous ideal들을 homogeneous ideal들로 대응시킨다. 특히 $\mathfrak{q}\mapsto \pi^{-1}(\mathfrak{q})$는 $\Proj(S_\bullet/\mathfrak{a})$의 점들, 즉 $(S_\bullet/\mathfrak{a})_+$를 포함하지 않는 homogeneous prime ideal들을, $\mathfrak{a}$를 포함하고 $S_+$를 포함하지 않는 $S_\bullet$의 homogeneous prime ideal들로 보내는 bijection이며, 후자는 정확히 $Z_+(\mathfrak{a})$이다. ([§사영스킴, ⁋정의 2](/ko/math/scheme_theory/projective_schemes#def2)) 또, 이 대응 하에서 $Z_+(\bar{\mathfrak{b}})$ 꼴의 닫힌집합은 $Z_+(\pi^{-1}(\bar{\mathfrak{b}}))\cap Z_+(\mathfrak{a})$와 대응되므로 $\iota$는 그 image $Z_+(\mathfrak{a})$로의 homeomorphism이다.
+[\[대수적 구조\] §등급환](/ko/math/algebraic_structures/graded_rings)에서 살펴본 것과 같이 $S_\bullet/\mathfrak{a}$는 graded ring이고, quotient ring의 ideal correspondence는 homogeneous ideal들을 homogeneous ideal들로 대응시킨다. 특히 $\mathfrak{q}\mapsto \pi^{-1}(\mathfrak{q})$는 $\Proj(S_\bullet/\mathfrak{a})$의 점들, 즉 $(S_\bullet/\mathfrak{a})_+$를 포함하지 않는 homogeneous prime ideal들을, $\mathfrak{a}$를 포함하고 $S_+$를 포함하지 않는 $S_\bullet$의 homogeneous prime ideal들로 보내는 bijection이며, 후자는 정확히 $Z_+(\mathfrak{a})$이다. ([§사영스킴, ⁋정의 2](/ko/math/scheme_theory/projective_schemes#def2)) 또, 이 대응 하에서 $Z_+(\bar{\mathfrak{b}})$ 꼴의 닫힌집합은 $Z_+(\pi^{-1}(\bar{\mathfrak{b}}))\cap Z_+(\mathfrak{a})$와 대응되므로 $\iota$는 그 image $Z_+(\mathfrak{a})$로의 homeomorphism이다.
 
 이제 scheme morphism의 구조와 sheaf morphism의 surjectivity를 표준적인 affine cover 위에서 확인하자. 각각의 $i$에 대하여 $\bar{\x}_i=\pi(\x_i)$라 하면, 위의 대응에 의해 $\iota^{-1}(D_+(\x_i))=D_+(\bar{\x}_i)$이다. [§사영스킴, ⁋보조정리 8](/ko/math/scheme_theory/projective_schemes#lem8)의 identification $D_+(\x_i)\cong\Spec S_{(\x_i)}$, $D_+(\bar\x_i)\cong \Spec (S_\bullet/\mathfrak{a})_{(\bar\x_i)}$ 하에서, $\iota$의 제한은 ring homomorphism
 
@@ -49,7 +49,7 @@ $$\mathfrak{a}_{(\x_i)}=\left\{\frac{a}{\x_i^d}\middle\vert\text{$a\in\mathfrak{
 ::: 예시 2
 하나의 homogeneous polynomial $f$가 생성하는 ideal $(f)$에 대하여 $V_+(f)=\Proj\bigl(\mathbb{K}[\x_0,\ldots,\x_n]/(f)\bigr)$를 degree $\deg f$의 *hypersurface*라 부른다. 가령 $\mathbb{P}^2$에서 $V_+(\x_0\x_2-\x_1^2)$은 conic이다.
 
-한편 $\mathbb{P}^2$의 두 closed subscheme $V_+(\x_0)$과 $V_+(\x_0^2)$을 비교하면, 이들의 underlying space는 $Z_+(\x_0)=Z_+(\x_0^2)$으로 동일하지만 scheme 구조는 다르다. 실제로 chart $D_+(\x_2)\cong\Spec\mathbb{K}[\x_0/\x_2,\x_1/\x_2]$ 위에서 전자는 ideal $(\x_0/\x_2)$로, 후자는 $(\x_0^2/\x_2^2)$로 주어지며 후자의 좌표환은 nilpotent element를 갖는다. 이는 [§닫힌 부분스킴, ⁋예시 1](/ko/math/scheme_theory/closed_subschemes#ex1)에서 살펴본 double point의 projective 버전이다.
+한편 $\mathbb{P}^2$의 두 closed subscheme $V_+(\x_0)$과 $V_+(\x_0^2)$을 비교하면, 이들의 underlying space는 $Z_+(\x_0)=Z_+(\x_0^2)$으로 동일하지만 scheme 구조는 다르다. 실제로 chart $D_+(\x_2)\cong\Spec\mathbb{K}[\x_0/\x_2,\x_1/\x_2]$ 위에서 전자는 ideal $(\x_0/\x_2)$로, 후자는 $(\x_0^2/\x_2^2)$로 주어지며 후자의 coordinate ring은 nilpotent element를 갖는다. 이는 [§닫힌 부분스킴, ⁋예시 1](/ko/math/scheme_theory/closed_subschemes#ex1)에서 살펴본 double point의 projective 버전이다.
 :::
 
 ## 모든 닫힌 부분스킴은 동차 아이디얼로부터 얻어진다
@@ -70,7 +70,7 @@ $$T=\left\{f\in S_\bullet\middle\vert\text{$f$ homogeneous,}\quad \frac{f}{\x_i^
 
 거꾸로 $g=f/\x_i^d\in \mathfrak{b}_i$가 주어졌다 하자. 여기서 $f$는 degree $d$의 homogeneous polynomial이다. 충분히 큰 $N$에 대하여 $\x_i^Nf\in T$임을 보이면, $g=(\x_i^Nf)/\x_i^{N+d}\in\mathfrak{a}_{(\x_i)}$가 되어 증명이 끝난다. 이를 위해 각각의 $j$에 대하여 $(\x_i^Nf)/\x_j^{N+d}\in \mathfrak{b}_j$이도록 하는 $N$을 찾자. $j=i$인 경우는 임의의 $N$에 대해 성립하므로 $j\neq i$라 하자.
 
-핵심은 $\mathfrak{b}_i$와 $\mathfrak{b}_j$가 교집합 $D_+(\x_i\x_j)$ 위에서 호환된다는 것이다. $Z$의 ideal sheaf $\mathcal{I}_{Z/\mathbb{P}^n}=\ker\iota^\sharp$를 생각하면 ([§닫힌 부분스킴, ⁋정의 5](/ko/math/scheme_theory/closed_subschemes#def5)), kernel은 단면들 위에서 계산되므로 $\mathcal{I}_{Z/\mathbb{P}^n}(D_+(\x_i))=\mathfrak{b}_i$이다. 한편 [§사영스킴, ⁋보조정리 9](/ko/math/scheme_theory/projective_schemes#lem9)에 의하여 $D_+(\x_i\x_j)$는 $\Spec S_{(\x_i)}$의 principal open subset $D(\x_j/\x_i)$이고, affine scheme 위에서 structure sheaf와 $\iota_\ast\mathcal{O}_Z$의 단면들은 모두 localization으로 주어지므로, localization의 exactness에 의해
+핵심은 $\mathfrak{b}_i$와 $\mathfrak{b}_j$가 교집합 $D_+(\x_i\x_j)$ 위에서 호환된다는 것이다. $Z$의 ideal sheaf $\mathcal{I}_{Z/\mathbb{P}^n}=\ker\iota^\sharp$를 생각하면 ([§닫힌 부분스킴, ⁋정의 5](/ko/math/scheme_theory/closed_subschemes#def5)), kernel은 section들 위에서 계산되므로 $\mathcal{I}_{Z/\mathbb{P}^n}(D_+(\x_i))=\mathfrak{b}_i$이다. 한편 [§사영스킴, ⁋보조정리 9](/ko/math/scheme_theory/projective_schemes#lem9)에 의하여 $D_+(\x_i\x_j)$는 $\Spec S_{(\x_i)}$의 principal open subset $D(\x_j/\x_i)$이고, affine scheme 위에서 structure sheaf와 $\iota_\ast\mathcal{O}_Z$의 section들은 모두 localization으로 주어지므로, localization의 exactness에 의해
 
 $$\mathcal{I}_{Z/\mathbb{P}^n}(D_+(\x_i\x_j))=(\mathfrak{b}_i)_{\x_j/\x_i}=(\mathfrak{b}_j)_{\x_i/\x_j}$$
 

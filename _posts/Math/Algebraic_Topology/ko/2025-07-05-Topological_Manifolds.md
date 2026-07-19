@@ -14,7 +14,7 @@ weight: 1
 
 ---
 
-우리는 이 카테고리에서 기하학을 공부할 때 필수적이라 할 수 있는 호몰로지, 코호몰로지 등을 다룬다. 이들 개념은 일반적인 위상공간 위에 정의되지만, 이들이 잘 행동하기 위해서는 공간이 추가적인 성질들을 가져야하며, 이러한 조건들이 모두 만족되는 공간이 바로 아래에서 정의할 topological manifold이다. 이번 글에서 우리는 topological manifold의 성질과 예시들을 살펴볼 것이며, 이 다음 글에서는 호몰로지가 무엇인지 대략적인 예시를 통해 살펴볼 것이다. 이들 두 글은 이 카테고리의 큰 방향을 보여주는 것으로, 본격적인 내용은 셋째 글부터 시작한다. 
+우리는 이 카테고리에서 기하학을 공부할 때 필수적이라 할 수 있는 homology, cohomology 등을 다룬다. 이들 개념은 일반적인 위상공간 위에 정의되지만, 이들이 잘 행동하기 위해서는 공간이 추가적인 성질들을 가져야하며, 이러한 조건들이 모두 만족되는 공간이 바로 아래에서 정의할 topological manifold이다. 이번 글에서 우리는 topological manifold의 성질과 예시들을 살펴볼 것이며, 이 다음 글에서는 homology가 무엇인지 대략적인 예시를 통해 살펴볼 것이다. 이들 두 글은 이 카테고리의 큰 방향을 보여주는 것으로, 본격적인 내용은 셋째 글부터 시작한다. 
 
 ## 위상다양체의 정의
 
@@ -81,4 +81,4 @@ Quotient map $X \rightarrow X/R$에 대하여, $X$가 second-countable이고 $X/
 $X/R$이 locally Euclidean이므로 $X/R$을 Euclidean neighborhood들 $(U_i)_{i\in I}$로 덮을 수 있으며 이들의 premimage들의 모임 $(\pi^{-1}(U_i))_{i\in I}$들이 $X$를 덮는다. 이제 임의의 second-countable space는 Lindelöf이므로 ([§옹골성과 필터의 수렴, ⁋명제 12](/ko/math/topology/filter_convergence#prop12)) 적당한 countable subset $J\subset I$이 존재하여 $(\pi^{-1}(U_i)_{i\in J}$가 $X$의 countable open cover이며, 따라서 이들에 해당하는 $(U_i)_{i\in J}$들이 $X/R$의 countable cover가 된다. 그런데 이들 각각은 Euclidean neighborhood이므로 다시 countable base를 가지며, 이러한 것들이 countable하게 있으므로 이들을 모두 모은 것이 $X/R$의 countable base가 된다.
 :::
 
-이 카테고리의 흐름으로만 본다면 우리의 관심은 위상다양체로 한정지어도 충분할 것이나, 특히 코호몰로지의 곱셈 구조를 다룰 때는 미분다양체에서의 적분의 개념을 떠올리는 것이 더 편하다. 
+이 카테고리의 흐름으로만 본다면 우리의 관심은 위상다양체로 한정지어도 충분할 것이나, 특히 cohomology의 곱셈 구조를 다룰 때는 미분다양체에서의 적분의 개념을 떠올리는 것이 더 편하다. 

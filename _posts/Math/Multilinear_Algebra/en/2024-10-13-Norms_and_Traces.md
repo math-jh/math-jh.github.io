@@ -25,7 +25,7 @@ $$\alpha_M: x\mapsto \alpha x$$
 
 We call the trace, determinant, and characteristic polynomial of $\alpha_M$ the *trace*, *norm*, and *characteristic polynomial* of $\alpha$, respectively, and denote them by
 
-$\tr_{M/A}(\alpha)=\tr(\alpha_M),\qquad N_{M/A}(\alpha)=\det(\alpha_M),\qquad \chi_{M/A,\alpha}(\x)=\chi_{\alpha_M}(\x)$
+$$\tr_{M/A}(\alpha)=\tr(\alpha_M),\qquad N_{M/A}(\alpha)=\det(\alpha_M),\qquad \chi_{M/A,\alpha}(\x)=\chi_{\alpha_M}(\x)$$
 :::
 
 From the properties of trace and determinant we obtain

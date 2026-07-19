@@ -23,7 +23,7 @@ For any homomorphism $f:G\rightarrow G'$, $\ker f$ is a normal subgroup of $G$.
 ::: Proof
 For any $g\in G$ and $x\in \ker f$,
 
-$f(gxg^{-1})=f(g)f(x)f(g^{-1})=f(g)e'f(g)^{-1}=f(g)f(g)^{-1}=e'.$
+$$f(gxg^{-1})=f(g)f(x)f(g^{-1})=f(g)e'f(g)^{-1}=f(g)f(g)^{-1}=e'.$$
 :::
 
 Now consider the equivalence relation defined by $\ker f$

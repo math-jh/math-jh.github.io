@@ -223,7 +223,7 @@ Since this multiplication $\circ$ is associative, writing this out in structure 
 ::: Proposition 7 (Witten–Dijkgraaf–Verlinde–Verlinde)
 The potential $F$ of [Proposition 6](#prop6) satisfies the following equation for all $\alpha, \beta, \gamma, \delta$:
 
-$\sum_{e, f} \frac{\partial^3 F}{\partial t^\alpha \partial t^\beta \partial t^e} \eta^{ef} \frac{\partial^3 F}{\partial t^f \partial t^\gamma \partial t^\delta} = \sum_{e, f} \frac{\partial^3 F}{\partial t^\alpha \partial t^\gamma \partial t^e} \eta^{ef} \frac{\partial^3 F}{\partial t^f \partial t^\beta \partial t^\delta}.$
+$$\sum_{e, f} \frac{\partial^3 F}{\partial t^\alpha \partial t^\beta \partial t^e} \eta^{ef} \frac{\partial^3 F}{\partial t^f \partial t^\gamma \partial t^\delta} = \sum_{e, f} \frac{\partial^3 F}{\partial t^\alpha \partial t^\gamma \partial t^e} \eta^{ef} \frac{\partial^3 F}{\partial t^f \partial t^\beta \partial t^\delta}.$$
 :::
 
 ::: Proof

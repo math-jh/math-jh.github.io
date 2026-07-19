@@ -25,7 +25,7 @@ Given a vector bundle $E\rightarrow M$ over a manifold $M$, a *connection* $\nab
 2. (Linearity) $\nabla_XY$ is $\mathbb{R}$-linear in the second argument.
 3. For any $f\in C^\infty(M)$, $\nabla$ satisfies the Leibniz rule
     
-    $\nabla_X(fY)=f\nabla_XY+(Xf)Y$
+    $$\nabla_X(fY)=f\nabla_XY+(Xf)Y$$
 :::
 
 Here, $\nabla_XY$ is also called the *covariant derivative* of $Y$ in the direction of $X$. The following proposition shows that to compute $(\nabla_XY)_p$, it suffices to know $X$ and $Y$ in a neighborhood of $p$.
@@ -112,7 +112,7 @@ First, one can show that $\nabla^\ast\alpha$ defined by the expression on the ri
 
 That $\nabla^\ast$ actually satisfies the conditions for a connection is obvious except for the Leibniz rule. In fact, the Leibniz rule also follows immediately from
 
-$\begin{aligned}(\nabla_X^\ast f\alpha)_pY&=X(f\cdot\alpha(Y))-(f\alpha)_p(\nabla_XY)_p\\&=(Xf)(\alpha(Y))+f(p)\bigl(X(\alpha(Y))-\alpha_p(\nabla_XY)_p\bigr)\\&=\bigl((Xf)\alpha+f\nabla_X\alpha\bigr)Y\end{aligned}$
+$$\begin{aligned}(\nabla_X^\ast f\alpha)_pY&=X(f\cdot\alpha(Y))-(f\alpha)_p(\nabla_XY)_p\\&=(Xf)(\alpha(Y))+f(p)\bigl(X(\alpha(Y))-\alpha_p(\nabla_XY)_p\bigr)\\&=\bigl((Xf)\alpha+f\nabla_X\alpha\bigr)Y\end{aligned}$$
 :::
 
 By a slight abuse of notation, we write the $\nabla^\ast$ defined above also as $\nabla$.

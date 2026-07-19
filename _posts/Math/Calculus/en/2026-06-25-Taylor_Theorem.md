@@ -45,7 +45,7 @@ This graph shows the first few Taylor expansions of the sine function, and from 
 ::: Theorem 2 (Taylor's Theorem, Lagrange Remainder)
 If $f$ is $(n+1)$-times differentiable on an interval containing $a$ and $x$, then for some $c$ between $a$ and $x$,
 
-$f(x) = \sum_{k=0}^{n} \frac{f^{(k)}(a)}{k!}(x-a)^k + R_n(x), \qquad R_n(x) = \frac{f^{(n+1)}(c)}{(n+1)!}(x - a)^{n+1}$
+$$f(x) = \sum_{k=0}^{n} \frac{f^{(k)}(a)}{k!}(x-a)^k + R_n(x), \qquad R_n(x) = \frac{f^{(n+1)}(c)}{(n+1)!}(x - a)^{n+1}$$
 :::
 
 ::: Proof
@@ -97,7 +97,7 @@ Similarly, for the trigonometric functions we already know, the following holds.
 ::: Example 4 (Trigonometric Functions)
 Since the derivatives of $\sin x$ are periodic: $\cos x, -\sin x, -\cos x, \sin x$, the values $f^{(k)}(0)$ repeat $0, 1, 0, -1$. Since all derivatives are bounded by $\lvert f^{(n+1)}\rvert \leq 1$, we can show by the same argument as in [Example 3](#ex3) that the remainder goes to $0$, and therefore for every $x$,
 
-$\sin x = \sum_{k=0}^\infty \frac{(-1)^k x^{2k+1}}{(2k+1)!}, \qquad \cos x = \sum_{k=0}^\infty \frac{(-1)^k x^{2k}}{(2k)!}$
+$$\sin x = \sum_{k=0}^\infty \frac{(-1)^k x^{2k+1}}{(2k+1)!}, \qquad \cos x = \sum_{k=0}^\infty \frac{(-1)^k x^{2k}}{(2k)!}$$
 :::
 
 The next is an example where the radius of convergence is not infinite.
@@ -117,7 +117,7 @@ $$(1+x)^\alpha = \sum_{k=0}^\infty \binom{\alpha}{k} x^k, \qquad \binom{\alpha}{
 
 As another example, $\alpha = 1/2$ gives
 
-$\sqrt{1+x} = 1 + \frac{x}{2} - \frac{x^2}{8} + \cdots$
+$$\sqrt{1+x} = 1 + \frac{x}{2} - \frac{x^2}{8} + \cdots$$
 :::
 
 The examples above show in particular that when the derivatives are bounded, the Taylor series of a function equals the function itself. Formally stated, this is as follows.

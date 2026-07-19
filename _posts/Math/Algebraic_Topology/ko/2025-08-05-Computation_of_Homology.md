@@ -14,7 +14,7 @@ weight: 5
 
 ---
 
-우리는 이제 호몰로지를 실질적으로 계산할 수 있는 도구들을 살펴본다. 임의의 공간에 대해 이 공간의 호몰로지를 정의로부터 직접 계산하는 것은 거의 불가능한 일이므로, 우리는 큰 공간들을 작은 공간으로 쪼개고 이들의 호몰로지들로부터 큰 공간의 호몰로지를 계산하는 도구를 개발해야 한다. 가장 직관적인 상황은 [§피복공간, ⁋정리 13](/ko/math/algebraic_topology/covering_spaces#thm13)의 상황일 것이며, 이 경우 우리는 functor $\pi_1:\Top \rightarrow \Grp$이 colimit을 보존하는 것을 살펴보았다. 그런데 abelianization functor $\ab:\Grp \rightarrow \Ab$는 forgetful functor $U:\Ab \rightarrow \Grp$의 left adjoint functor이고 ([\[대수적 구조\] §가환군, ⁋명제 7](/ko/math/algebraic_structures/abelian_groups#prop7)), left adjoint functor는 colimit을 보존하며 ([\[범주론\] §수반함자, ⁋정리 9](/ko/math/category_theory/adjoints#thm9)) first homology functor $H_1:\Top \rightarrow \Ab$는 이들의 합성이다. 실제로 loop $\gamma$를 singular $1$-simplex로 보내는 사상 $\pi_1(X)\rightarrow H_1(X)$는 well-defined이며(같은 homotopy class의 loop가 같은 homology class를 주고, homotopy가 $2$-simplex들의 합으로 그 차이를 경계로 준다), 그 kernel이 정확히 commutator subgroup $[\pi_1(X),\pi_1(X)]$이므로 $H_1(X)\cong\pi_1(X)^\ab$를 얻는다. 따라서 $H_1$ 또한 colimit을 보존해야 한다. 특별히 [§피복공간, ⁋따름정리 14](/ko/math/algebraic_topology/covering_spaces#cor14)와 같이 위상공간 $X$가 두 connected open subset $U,V$의 합집합으로 나타난다 하자. 그럼 category $\Ab$에서, 두 abelian group의 pushout은 이들의 direct sum의 coequalizer로 주어지므로 다음의 isomorphism 
+우리는 이제 homology를 실질적으로 계산할 수 있는 도구들을 살펴본다. 임의의 공간에 대해 이 공간의 homology를 정의로부터 직접 계산하는 것은 거의 불가능한 일이므로, 우리는 큰 공간들을 작은 공간으로 쪼개고 이들의 homology들로부터 큰 공간의 homology를 계산하는 도구를 개발해야 한다. 가장 직관적인 상황은 [§피복공간, ⁋정리 13](/ko/math/algebraic_topology/covering_spaces#thm13)의 상황일 것이며, 이 경우 우리는 functor $\pi_1:\Top \rightarrow \Grp$이 colimit을 보존하는 것을 살펴보았다. 그런데 abelianization functor $\ab:\Grp \rightarrow \Ab$는 forgetful functor $U:\Ab \rightarrow \Grp$의 left adjoint functor이고 ([\[대수적 구조\] §가환군, ⁋명제 7](/ko/math/algebraic_structures/abelian_groups#prop7)), left adjoint functor는 colimit을 보존하며 ([\[범주론\] §수반함자, ⁋정리 9](/ko/math/category_theory/adjoints#thm9)) first homology functor $H_1:\Top \rightarrow \Ab$는 이들의 합성이다. 실제로 loop $\gamma$를 singular $1$-simplex로 보내는 사상 $\pi_1(X)\rightarrow H_1(X)$는 well-defined이며(같은 homotopy class의 loop가 같은 homology class를 주고, homotopy가 $2$-simplex들의 합으로 그 차이를 경계로 준다), 그 kernel이 정확히 commutator subgroup $[\pi_1(X),\pi_1(X)]$이므로 $H_1(X)\cong\pi_1(X)^\ab$를 얻는다. 따라서 $H_1$ 또한 colimit을 보존해야 한다. 특별히 [§피복공간, ⁋따름정리 14](/ko/math/algebraic_topology/covering_spaces#cor14)와 같이 위상공간 $X$가 두 connected open subset $U,V$의 합집합으로 나타난다 하자. 그럼 category $\Ab$에서, 두 abelian group의 pushout은 이들의 direct sum의 coequalizer로 주어지므로 다음의 isomorphism 
 
 $$H_1(X)=H_1(U\cup V)\cong \frac{H_1(U)\oplus H_1(V)}{\left\langle (f(x),-g(x))\mid x\in H_1(U\cap V)\right\rangle}\tag{1}$$
 
@@ -22,7 +22,7 @@ $$H_1(X)=H_1(U\cup V)\cong \frac{H_1(U)\oplus H_1(V)}{\left\langle (f(x),-g(x))\
 
 ## Relative homology
 
-이를 위해서는 우선 호몰로지를 일반화할 필요가 있다. 공간 $X$와 임의의 부분공간 $A$에 대하여, $k$번째 relative chain group $C_k(X,A)$를 다음의 quotient
+이를 위해서는 우선 homology를 일반화할 필요가 있다. 공간 $X$와 임의의 부분공간 $A$에 대하여, $k$번째 relative chain group $C_k(X,A)$를 다음의 quotient
 
 $$C_k(X,A):=C_k(X)/C_k(A)$$
 
@@ -33,7 +33,7 @@ $$\cdots \longrightarrow C_k(X,A)\overset{\partial}{\longrightarrow} C_{k-1}(X,A
 를 만들 수 있다. 
 
 ::: 정의 1
-위의 chain complex의 $k$번째 호몰로지 $H_k(X,A)$를 *relative homology*라 부른다. 
+위의 chain complex의 $k$번째 homology $H_k(X,A)$를 *relative homology*라 부른다. 
 :::
 
 이제 category $\Ch_{\geq 0}(\Ab)$에서의 short exact sequence
@@ -48,11 +48,11 @@ $$\cdots \rightarrow H_k(A) \rightarrow H_k(X) \rightarrow H_k(X,A)\rightarrow H
 
 ![relative_homology](/assets/images/Math/Algebraic_Topology/Computation_of_Homology-1.svg){:style="width:12.65em" class="invert" .align-center}
 
-이 commute한다는 것으로부터 chain map $C_\bullet(X,A) \rightarrow C_\bullet(Y,B)$ 또한 유도된다. 즉, 이러한 조건을 만족하는 $f:(X,A) \rightarrow (Y,B)$는 homology에서의 map $H_k(f):H_k(X,A) \rightarrow H_k(Y,B)$ 또한 유도한다. 그럼 [§호모토피, ⁋명제 6](/ko/math/algebraic_topology/homotopy#prop6)을 $X$와 $A$ 각각에 적용하고 [\[호몰로지 대수학\] §Diagram chasing, ⁋따름정리 2 (The five lemma)](/ko/math/homological_algebra/diagram_chasing#cor2)를 사용하면 이 조건을 만족하는 homotopic한 연속함수들 $f,g$가 호몰로지에서 같은 함수를 유도하는 것을 안다. 
+이 commute한다는 것으로부터 chain map $C_\bullet(X,A) \rightarrow C_\bullet(Y,B)$ 또한 유도된다. 즉, 이러한 조건을 만족하는 $f:(X,A) \rightarrow (Y,B)$는 homology에서의 map $H_k(f):H_k(X,A) \rightarrow H_k(Y,B)$ 또한 유도한다. 그럼 [§호모토피, ⁋명제 6](/ko/math/algebraic_topology/homotopy#prop6)을 $X$와 $A$ 각각에 적용하고 [\[호몰로지 대수학\] §Diagram chasing, ⁋따름정리 2 (The five lemma)](/ko/math/homological_algebra/diagram_chasing#cor2)를 사용하면 이 조건을 만족하는 homotopic한 연속함수들 $f,g$가 homology에서 같은 함수를 유도하는 것을 안다. 
 
 ## Excision theorem
 
-직관적으로 $(X,A)$에 대한 realtive homology $H_\bullet(X,A)$는 inclusion $C_\bullet(A)\hookrightarrow C_\bullet(X)$의 cokernel에 해당하는 chain complex $C_\bullet(X,A)$의 호몰로지이다. 직관적으로 이 과정에서 $C_\bullet(A)$에 대한 정보는 quotient를 취하며 사라지게 되므로, $A$ 안에 들어있는 부분집합을 전체에서 뺀다고 해서 relative homology가 변하지 않을 것이라는 것은 직관적으로는 그럴듯해보인다. 이는 다음의 약한 조건 하에서는 참이다. 
+직관적으로 $(X,A)$에 대한 realtive homology $H_\bullet(X,A)$는 inclusion $C_\bullet(A)\hookrightarrow C_\bullet(X)$의 cokernel에 해당하는 chain complex $C_\bullet(X,A)$의 homology이다. 직관적으로 이 과정에서 $C_\bullet(A)$에 대한 정보는 quotient를 취하며 사라지게 되므로, $A$ 안에 들어있는 부분집합을 전체에서 뺀다고 해서 relative homology가 변하지 않을 것이라는 것은 직관적으로는 그럴듯해보인다. 이는 다음의 약한 조건 하에서는 참이다. 
 
 ::: 정리 2 (Excision theorem)
 공간 $X$의 부분공간 $A$와, $A$의 부분공간 $Z$가 $\cl Z\subseteq \interior A$를 만족한다고 하자. 그럼 inclusion
@@ -201,7 +201,7 @@ $$H_k(\Delta^k, \partial\Delta^{k})\cong H_{k-1}(\Delta^{k-1}, \partial\Delta^{k
 
 ## 메이어-피토리스 열
 
-분량상 증명을 적지는 않았지만, [정리 2](#thm2)의 excision theorem은 호몰로지 이론을 다룰 때 요긴하게 쓰인다. 가령 [정리 5](#thm5)의 증명에서 우리는 $k-1$ 미만의 simplex들을 무시할 때 excision theorem을 사용하였고, 이를 통해 귀납법을 사용할 수 있었으며 그 때의 base step은 one-point space의 homology였다. 이 과정이 본질적으로 homology가 만족해야 할 모든 성질들을 가지고 있는 것으로 볼 수 있으며, 이를 공리화하면 다음과 같다. 
+분량상 증명을 적지는 않았지만, [정리 2](#thm2)의 excision theorem은 homology 이론을 다룰 때 요긴하게 쓰인다. 가령 [정리 5](#thm5)의 증명에서 우리는 $k-1$ 미만의 simplex들을 무시할 때 excision theorem을 사용하였고, 이를 통해 귀납법을 사용할 수 있었으며 그 때의 base step은 one-point space의 homology였다. 이 과정이 본질적으로 homology가 만족해야 할 모든 성질들을 가지고 있는 것으로 볼 수 있으며, 이를 공리화하면 다음과 같다. 
 
 ::: 정의 6 (Eilenberg-Steenrod axioms)
 위상공간들의 pair들의 category에서 abelian group들의 category로의 functor들 $H_k$과, 이들 사이의 natural transformation
@@ -221,7 +221,7 @@ $$\partial:H_k(X,A)\rightarrow H_{k-1}(A,\emptyset):=H_{k-1}(A)$$
     에 들어간다. 
 :::
 
-그럼 Eilenberg와 Steenrod의 결과는 이러한 방식으로 정의된 homology theory들은, 만일 *coefficient group* $H_0(\ast)$가 고정된다면 이들은 모두 naturally isomorphic하다는 것을 보여준다. 예를 들어 우리는 앞서 simplicial homology와 singular homology가 $\Delta$-complex 위에서는 일치한다는 것을 증명하였으며, 그 증명을 하나하나 분리해보면 본질적으로 우리가 사용한 것은 위의 [정의 6](#def6)의 공리들임을 확인할 수 있다. 호몰로지의 실용적인 계산을 위해서는 *CW complex* 위에 정의된 *cellular homology*를 도입하는 것이 좋은데, 마찬가지로 이 homology 또한 위의 공리들을 만족하고 따라서 이 또한 simplicial homology, singular homology와 같은 계산을 준다. 
+그럼 Eilenberg와 Steenrod의 결과는 이러한 방식으로 정의된 homology theory들은, 만일 *coefficient group* $H_0(\ast)$가 고정된다면 이들은 모두 naturally isomorphic하다는 것을 보여준다. 예를 들어 우리는 앞서 simplicial homology와 singular homology가 $\Delta$-complex 위에서는 일치한다는 것을 증명하였으며, 그 증명을 하나하나 분리해보면 본질적으로 우리가 사용한 것은 위의 [정의 6](#def6)의 공리들임을 확인할 수 있다. homology의 실용적인 계산을 위해서는 *CW complex* 위에 정의된 *cellular homology*를 도입하는 것이 좋은데, 마찬가지로 이 homology 또한 위의 공리들을 만족하고 따라서 이 또한 simplicial homology, singular homology와 같은 계산을 준다. 
 
 한편 이들 homology theory들은 모두 coefficient group이 $\mathbb{Z}$로 고정되어 있는 상태인데, 이를 임의의 abelian group $A$로 바꾸어도 [정의 6](#def6)의 모든 공리는 변함없이 성립한다. 실제로 singular homology 혹은 simplicial homology를 정의할 때, chain group들
 
@@ -231,9 +231,9 @@ $$C^\Delta_\bullet(X),\qquad C_\bullet(X)$$
 
 $$C^\Delta_\bullet(X;A):=C^\Delta_\bullet(X)\otimes_\mathbb{Z}A,\qquad C_\bullet(X;A):=C_\bullet(X)\otimes_\mathbb{Z}A$$
 
-로 잡았더라면 이러한 종류의 호몰로지를 얻었을 것이다. 
+로 잡았더라면 이러한 종류의 homology를 얻었을 것이다. 
 
-호몰로지의 대부분의 성질들은 [정의 6](#def6)의 공리들로부터 나온다. 예를 들어, 이 글의 목표인 식 (1)의 일반화를 이로브터 유도할 수 있다. 위상공간 $X$가 두 열린집합들의 합집합 $X=U\cup V$로 나타난다 하자. 그럼 다음의 inclusion
+homology의 대부분의 성질들은 [정의 6](#def6)의 공리들로부터 나온다. 예를 들어, 이 글의 목표인 식 (1)의 일반화를 이로브터 유도할 수 있다. 위상공간 $X$가 두 열린집합들의 합집합 $X=U\cup V$로 나타난다 하자. 그럼 다음의 inclusion
 
 ![inclusions](/assets/images/Math/Algebraic_Topology/Computation_of_Homology-7.svg){:style="width:7.54em" class="invert" .align-center}
 

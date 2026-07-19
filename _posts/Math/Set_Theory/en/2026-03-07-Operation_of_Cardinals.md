@@ -33,10 +33,10 @@ $$\sum_{k\in K}\mathfrak{a}_{f(k)}=\sum_{i\in I}\mathfrak{a}_i,\quad \prod_{k\in
 
 Also, if $(J_l)_{l\in L}$ is a partition of $I$, then
 
-$\sum_{i\in I}\mathfrak{a}_{i}=\sum_{l\in L}\sum_{i\in J_l}\mathfrak{a}_i,\quad \prod_{i\in I}\mathfrak{a}_{i}=\prod_{l\in L}\prod_{i\in J_l}\mathfrak{a}_i$
+$$\sum_{i\in I}\mathfrak{a}_{i}=\sum_{l\in L}\sum_{i\in J_l}\mathfrak{a}_i,\quad \prod_{i\in I}\mathfrak{a}_{i}=\prod_{l\in L}\prod_{i\in J_l}\mathfrak{a}_i$$
 :::
 ::: Proof
-By [§Sum of Sets, ⁋Proposition 7](/en/math/set_theory/sum_of_sets#prop7), we may regard the sum of cardinals as the union of a mutually disjoint family. The first equations are consequences of [§Union and Intersection, ⁋Proposition 4](/en/math/set_theory/union_and_intersection#prop4) and [§Product of Sets, ⁋Proposition 5](/en/math/set_theory/product_of_sets#prop5), respectively, and the second equations follow from [§Union and Intersection, ⁋Proposition 5](/en/math/set_theory/union_and_intersection#prop5) and [§Properties of Products, ⁋Proposition 3](/en/math/set_theory/property_of_products#prop3).
+By [§Sum of Sets, ⁋Proposition 7](/en/math/set_theory/sum_of_sets#prop7), we may regard the sum of cardinals as the union of a pairwise disjoint family. The first equations are consequences of [§Union and Intersection, ⁋Proposition 4](/en/math/set_theory/union_and_intersection#prop4) and [§Product of Sets, ⁋Proposition 5](/en/math/set_theory/product_of_sets#prop5), respectively, and the second equations follow from [§Union and Intersection, ⁋Proposition 5](/en/math/set_theory/union_and_intersection#prop5) and [§Properties of Products, ⁋Proposition 3](/en/math/set_theory/property_of_products#prop3).
 :::
 
 ::: Proposition 3
@@ -87,7 +87,7 @@ If $\mathfrak{a}$ and $\mathfrak{b}$ are cardinals satisfying $\mathfrak{a}+\mat
 ::: Proof
 Let $X$ be a set with cardinal $\mathfrak{a}+\mathbf{1}=\mathfrak{b}+\mathbf{1}$. Then there exist subsets of $X$ with cardinals $\mathfrak{a}$ and $\mathfrak{b}$ such that $X\setminus A$ and $X\setminus B$ are singletons. Let $X\setminus A=\{a\}$ and $X\setminus B=\{b\}$. We define a bijection from $A$ to $B$ by
 
-$f(x)=\begin{cases}a&\text{if }x=b\\ x&\text{otherwise}\end{cases}$
+$$f(x)=\begin{cases}a&\text{if }x=b\\ x&\text{otherwise}\end{cases}$$
 :::
 
 We can even define exponentiation for cardinals. We use the set of functions $B^A$.

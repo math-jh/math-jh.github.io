@@ -15,7 +15,7 @@ weight: 9
 
 ---
 
-이번 글에서 우리는 대수적 위상수학의 아름다운 정리인 푸앵카레 쌍대성에 대해 다룬다. 이전 글에서 언급한 것과 같이, 푸앵카레 쌍대성은 호몰로지와 코호몰로지 사이의 쌍대성을 보여준다. 우리가 이미 살펴본 [§코호몰로지, ⁋정리 5](/ko/math/algebraic_topology/cohomology#thm5)의 경우, $C^\bullet(X;A)$를 $C_\bullet(X;A)$의 dual로서 정의했을 때 어느정도 예상 가능한 결과였지만 푸앵카레 쌍대성은 보다 더 기하학적인 의미를 가지고 있다. 
+이번 글에서 우리는 대수적 위상수학의 아름다운 정리인 푸앵카레 쌍대성에 대해 다룬다. 이전 글에서 언급한 것과 같이, 푸앵카레 쌍대성은 homology와 cohomology 사이의 쌍대성을 보여준다. 우리가 이미 살펴본 [§코호몰로지, ⁋정리 5](/ko/math/algebraic_topology/cohomology#thm5)의 경우, $C^\bullet(X;A)$를 $C_\bullet(X;A)$의 dual로서 정의했을 때 어느정도 예상 가능한 결과였지만 푸앵카레 쌍대성은 보다 더 기하학적인 의미를 가지고 있다. 
 
 ## 방향층
 
@@ -117,7 +117,7 @@ $$\omega_M^\pre(U)=\prod_{x\in U}\Iso_\mathbb{Z}(H_m(M,M\setminus\{x\}), \underl
 3. $\pi_1(M)$의 monodromy action이 $\Spe(\omega_M)$에서 trivial하게 act한다.
 :::
 
-그런데 우리는 이미 호몰로지와 코호몰로지를 다룰 때 $\mathbb{Z}$-module뿐 아니라, 일반적인 $A$-module로 확장했으므로 위의 논증 또한 일반적인 $A$-module에 대해 확장할 수 있다. 이를 위해 우선 [\[대수적 위상수학\] §코호몰로지, ⁋명제 1](/ko/math/algebraic_topology/cohomology#prop1)의 relative homology 버전을 생각하면, 다음의 (non-canonical) isomorphism
+그런데 우리는 이미 homology와 cohomology를 다룰 때 $\mathbb{Z}$-module뿐 아니라, 일반적인 $A$-module로 확장했으므로 위의 논증 또한 일반적인 $A$-module에 대해 확장할 수 있다. 이를 위해 우선 [\[대수적 위상수학\] §코호몰로지, ⁋명제 1](/ko/math/algebraic_topology/cohomology#prop1)의 relative homology 버전을 생각하면, 다음의 (non-canonical) isomorphism
 
 $$H_k(M, M\setminus\{x\};A)\cong H_k(M,M\setminus\{x\})\otimes_\mathbb{Z}A\oplus\Tor_1^\mathbb{Z}(H_{k-1}(M, M\setminus\{x\}), A)$$
 
@@ -243,7 +243,7 @@ $$-\frown [M]: H^p(M;A)\rightarrow H_{m-p}(M;A)$$
 이에 대한 증명 또한 [보조정리 8](#lem8)의 증명과 마찬가지로 Mayer-Vietoris sequence를 이용한 귀납법으로 진행한다. 그러나 다소 다른 점은, [보조정리 8](#lem8)은 명제의 주장이 compact subset $C$에 대한 주장이어서 compactness를 적극적으로 사용할 수 있었지만, 이번에는 명제가 $M$ 자체에 대한 주장이기 때문에, 가령 $M$의 chart $U$가 주어졌다고 하면 이는 compact가 아니므로 단순한 귀납법으로 접근할 수는 없다. 이에 우리는 다음을 정의한다. 
 
 ::: 정의 12
-Cochain $\varphi\in C^p(M;A)$이 *compactly supported*라는 것은 적당한 compact set $K\subseteq M$이 존재하여 $\varphi(\sigma)=0$가 $M\setminus K$에 들어가는 모든 simplex에 대해 성립하는 것을 말한다. Compactly supported cochain들의 cochain complex의 $i$번째 호몰로지를 $p$번째 *compactly supported cohomology*라 부르고 $H_c^p(M;A)$로 적는다. 
+Cochain $\varphi\in C^p(M;A)$이 *compactly supported*라는 것은 적당한 compact set $K\subseteq M$이 존재하여 $\varphi(\sigma)=0$가 $M\setminus K$에 들어가는 모든 simplex에 대해 성립하는 것을 말한다. Compactly supported cochain들의 cochain complex의 $i$번째 homology를 $p$번째 *compactly supported cohomology*라 부르고 $H_c^p(M;A)$로 적는다. 
 :::
 
 그럼 다음의 식
@@ -369,7 +369,7 @@ $$C(\widetilde{M})\otimes_{\mathbb{Z}[\pi_1(X)]} A$$
 
 를 구성하여 얻어지는 chain complex를 생각하여도 이것이 위의 homology group과 같은 homology group을 주는 것을 안다. 
 
-이는 어떻게 보면 다소 과한 일반화라 할 수도 있는데, non-orientable 버전의 푸앵카레 쌍대성을 기술하기 위해 우리는 어차피 local coefficient system $\mathscr{L}$을 constant sheaf $\underline{A}$로 둘 것이기 때문이다. 그러나 이러한 일반화를 통해 우리는 코호몰로지 부분도 일반화가 가능하고, 이 일반화가 푸앵카레 쌍대성을 조금 더 투명하게 보여준다. 
+이는 어떻게 보면 다소 과한 일반화라 할 수도 있는데, non-orientable 버전의 푸앵카레 쌍대성을 기술하기 위해 우리는 어차피 local coefficient system $\mathscr{L}$을 constant sheaf $\underline{A}$로 둘 것이기 때문이다. 그러나 이러한 일반화를 통해 우리는 cohomology 부분도 일반화가 가능하고, 이 일반화가 푸앵카레 쌍대성을 조금 더 투명하게 보여준다. 
 
 임의의 위상공간 $X$와 그 위에 정의된 sheaf $\mathscr{F}$에 대하여, global section functor 
 
@@ -400,7 +400,7 @@ $$0 \rightarrow \mathscr{F}\rightarrow \mathscr{G}_0 \rightarrow \mathscr{G}_1\r
 
 $$0 \rightarrow \mathscr{F}(X)\rightarrow \mathscr{G}_0(X)\rightarrow \mathscr{G}_1(X)\rightarrow \cdots$$
 
-의 $k$번째 호몰로지를 
+의 $k$번째 homology를 
 
 $$H^k(X; \mathscr{F})$$
 

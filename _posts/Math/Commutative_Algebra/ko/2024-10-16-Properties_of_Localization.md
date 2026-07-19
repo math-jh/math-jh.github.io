@@ -42,7 +42,7 @@ $$\frac{1}{s}\otimes x=\frac{1}{s'}\otimes x'$$
 
 $$S^{-1}\otimes_A u: S^{-1}\otimes_AM \rightarrow S^{-1}\otimes_AM'$$
 
-의 양 변을 localization과 동일시하여 정의하면 되기 때문이다. 일반적으로 텐서곱은 right exact이지만, 이 경우에는 exact functor가 된다.
+의 양 변을 localization과 동일시하여 정의하면 되기 때문이다. 일반적으로 tensor product는 right exact이지만, 이 경우에는 exact functor가 된다.
 
 ::: 명제 2
 $S^{-1}A$는 flat $A$-module이다. ([\[다중선형대수학\] §사영가군, 단사가군, 평탄가군, ⁋정의 7](/ko/math/multilinear_algebra/various_modules#def7))

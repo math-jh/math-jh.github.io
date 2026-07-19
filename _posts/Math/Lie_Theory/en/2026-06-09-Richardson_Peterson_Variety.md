@@ -144,7 +144,7 @@ Now let us add the dependence on $H$ to the closed subvariety we were considerin
 ::: Definition 6
 For $X\in\mathfrak{g}$ and an $\ad(\mathfrak{b})$-stable subspace $H\subseteq\mathfrak{g}$ containing $\mathfrak{b}$ (i.e. $[\mathfrak{b},H]\subseteq H$), the *Hessenberg variety* is the closed subvariety of $G/B$ defined by
 
-$\mathcal{B}(X,H)=\{\,gB\in G/B\;\mid\;\Ad(g^{-1})X\in H\,\}.$
+$$\mathcal{B}(X,H)=\{\,gB\in G/B\;\mid\;\Ad(g^{-1})X\in H\,\}.$$
 :::
 
 As we saw above, $X$ influences the size of the variety through its centralizer, and the same holds for the subspace $H$. Two extreme situations: when $H=\mathfrak{g}$, the condition $\Ad(g^{-1})X\in\mathfrak{g}$ holds trivially and the Hessenberg variety is all of $G/B$. At the opposite extreme $H=\mathfrak{b}$, the condition $\Ad(g^{-1})X\in\mathfrak{b}$ says that the Borel subalgebra $\Ad(g)\mathfrak{b}$ contains $X$, and if $X$ is nilpotent we call this the *Springer fiber* of $X$.
@@ -266,7 +266,7 @@ This decomposition has meaning beyond simply replacing $B$ by $B^-$: it carries 
 ::: Theorem 11 (Peterson)
 In the Peterson variety of the Langlands dual $G^\vee$ of $G$, the coordinate ring of the stratum $\mathcal{Y}^\vee_P$ corresponding to each standard parabolic subgroup $P\supseteq B$ is isomorphic to the small quantum cohomology ring of the partial flag variety $G/P$.
 
-$\mathbb{C}[\mathcal{Y}^\vee_P]\cong QH^\ast(G/P)$
+$$\mathbb{C}[\mathcal{Y}^\vee_P]\cong QH^\ast(G/P)$$
 :::
 
 This theorem was introduced in Peterson's 1997 MIT lecture; there is no separate publication, but the proof can be found in [lecture notes](https://math.soimeme.org/~arunram/Resources/PetersonGmodBcourse1997.pdf) and elsewhere. However, in the case of the Grassmannian that we have mainly been looking at, $\GL_n$ is Langlands self-dual so $G\cong G^\vee$ and this duality is not very visible.

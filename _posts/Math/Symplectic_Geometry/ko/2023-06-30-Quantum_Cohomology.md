@@ -16,11 +16,11 @@ published: false
 
 [§Gromov-Witten 불변량](/ko/math/symplectic_geometry/gromov_witten)에서 우리는 compact symplectic manifold $X$와 effective class $\beta \in H_2(X, \mathbb{Z})$에 대해 genus-$0$, $n$-point GW invariant $\langle \alpha_1, \ldots, \alpha_n \rangle_{0, n, \beta}^X$를 정의하였다. 그 결과로 얻어진 [§Gromov-Witten 불변량, ⁋명제 6](/ko/math/symplectic_geometry/gromov_witten#prop6)의 WDVV equation은 본질적으로 *어떤 곱셈의 결합법칙*을 진술하는 것이라 하였다. 본 글에서는 그 곱셈을 명시적으로 구성한다. 
 
-3-point GW invariant $\langle T_a, T_b, T_c \rangle_{0, 3, \beta}^X$를 구조상수로 삼아 $H^\ast(X)$ 위에 새 곱셈을 정의하면, $\beta = 0$ 항은 고전적 cup product와 일치하고 $\beta \neq 0$ 항은 $X$ 위의 rational curve의 기여를 더한다. 이렇게 얻어진 곱셈을 *quantum product*라 부르며, 그에 의한 $H^\ast(X)$의 새로운 ring 구조가 *quantum cohomology*이다. 본 글의 목표는 quantum product의 명시적 정의, 그것이 잘 정의된 graded commutative associative ring을 이룬다는 사실의 정리, 그리고 $\mathbb{P}^n$에서의 구체적 ring 구조 계산이다.
+3-point GW invariant $\langle T_a, T_b, T_c \rangle_{0, 3, \beta}^X$를 structure constant로 삼아 $H^\ast(X)$ 위에 새 곱셈을 정의하면, $\beta = 0$ 항은 고전적 cup product와 일치하고 $\beta \neq 0$ 항은 $X$ 위의 rational curve의 기여를 더한다. 이렇게 얻어진 곱셈을 *quantum product*라 부르며, 그에 의한 $H^\ast(X)$의 새로운 ring 구조가 *quantum cohomology*이다. 본 글의 목표는 quantum product의 명시적 정의, 그것이 잘 정의된 graded commutative associative ring을 이룬다는 사실의 정리, 그리고 $\mathbb{P}^n$에서의 구체적 ring 구조 계산이다.
 
 ## Novikov ring
 
-Quantum product의 구조상수에 등장하는 $\beta$의 합은 $\beta$가 effective인 모든 class에 대한 무한합이다. 이를 형식적으로 정합하게 다루기 위해 우리는 *Novikov ring*이라 불리는 계수환을 도입한다. 
+Quantum product의 structure constant에 등장하는 $\beta$의 합은 $\beta$가 effective인 모든 class에 대한 무한합이다. 이를 형식적으로 정합하게 다루기 위해 우리는 *Novikov ring*이라 불리는 coefficient ring을 도입한다. 
 
 $X$를 closed symplectic manifold라 하고, symplectic form을 $\omega$로 표기한다. $H_2(X, \mathbb{Z})$의 부분집합
 
@@ -71,7 +71,7 @@ $$\eta_{ab} := \int_X T_a \cup T_b,\qquad (\eta^{ab}) := (\eta_{ab})^{-1}$$
 
 $$T_a \ast_q T_b := \sum_{\beta \in H_2(X, \mathbb{Z})_{\mathrm{eff}}} \sum_c \langle T_a, T_b, T_c \rangle_{0, 3, \beta}^X\, \eta^{cd}\, T_d\, q^\beta$$
 
-로 정의된다 (반복되는 인덱스 $c, d$는 합한다). 양변을 $\Lambda$-linear extension하여 $\ast_q$를 $H^\ast(X, \mathbb{C}) \otimes_\mathbb{C} \Lambda$ 위의 $\Lambda$-bilinear product로 확장한다.
+로 정의된다 (반복되는 index $c, d$는 합한다). 양변을 $\Lambda$-linear extension하여 $\ast_q$를 $H^\ast(X, \mathbb{C}) \otimes_\mathbb{C} \Lambda$ 위의 $\Lambda$-bilinear product로 확장한다.
 :::
 
 위 공식의 우변에서 $\langle T_a, T_b, T_c \rangle_{0, 3, \beta}^X$는 3-point GW invariant이고, $\eta^{cd} T_d$는 Poincaré dual을 통한 cohomology class의 raise이다. 즉 $\sum_c \langle T_a, T_b, T_c \rangle\, T^c$로 다시 쓸 수 있다. $\beta = 0$ 항만 추출하면
@@ -152,7 +152,7 @@ $$QH^\ast(X) := \left( H^\ast(X, \mathbb{C}) \otimes_\mathbb{C} \Lambda,\ \ast_q
 를 $X$의 *small quantum cohomology ring<sub>작은 양자 코호몰로지 환</sub>*이라 부른다.
 :::
 
-$q \to 0$의 극한은 모든 $\beta \neq 0$ 항을 제거하는 것이며, 이 극한에서 $\ast_q$는 classical cup product로 환원된다. 즉 $QH^\ast(X) / (q) \cong H^\ast(X, \mathbb{C})$가 ring 동형이다. 이런 의미에서 quantum cohomology는 classical cohomology의 *Novikov 방향의 deformation*이다.
+$q \to 0$의 극한은 모든 $\beta \neq 0$ 항을 제거하는 것이며, 이 극한에서 $\ast_q$는 classical cup product로 환원된다. 즉 $QH^\ast(X) / (q) \cong H^\ast(X, \mathbb{C})$가 ring isomorphic하다. 이런 의미에서 quantum cohomology는 classical cohomology의 *Novikov 방향의 deformation*이다.
 
 ## 사영공간의 양자 코호몰로지
 
@@ -171,7 +171,7 @@ $$H \ast_q H = \sum_{d \geq 0} \langle H, H, T_c \rangle_{0, 3, d}^{\mathbb{P}^1
 
 $d = 0$ 항은 $\langle H, H, T_c \rangle_{0, 3, 0} = \int_{\mathbb{P}^1} H \cup H \cup T_c = 0$ (왜냐하면 $H^2 = 0$ in $\mathbb{P}^1$).
 
-$d = 1$ 항은 virtual dimension 공식에 의해 $\mathrm{vdim}_\mathbb{C}\, \overline{\mathcal{M}}_{0, 3}(\mathbb{P}^1, 1) = 2 + (1 - 3) + 3 = 3$. 인자들의 degree 합 $\deg H + \deg H + \deg T_c = 4 + \deg T_c$가 $2 \cdot 3 = 6$이어야 하므로 $\deg T_c = 2$, 즉 $T_c = H$. 이 GW invariant는 $\mathbb{P}^1$ 안의 degree $1$ curve (즉 $\mathbb{P}^1$ 자체)가 세 일반점을 지나도록 잡는 수로, 단 하나 ($\mathrm{PGL}_2$의 작용에 의해 quotient하면 점)이다. 따라서
+$d = 1$ 항은 virtual dimension 공식에 의해 $\mathrm{vdim}_\mathbb{C}\, \overline{\mathcal{M}}_{0, 3}(\mathbb{P}^1, 1) = 2 + (1 - 3) + 3 = 3$. 인자들의 degree 합 $\deg H + \deg H + \deg T_c = 4 + \deg T_c$가 $2 \cdot 3 = 6$이어야 하므로 $\deg T_c = 2$, 즉 $T_c = H$. 이 GW invariant는 $\mathbb{P}^1$ 안의 degree $1$ curve (즉 $\mathbb{P}^1$ 자체)가 세 generic point를 지나도록 잡는 수로, 단 하나 ($\mathrm{PGL}_2$의 action에 의해 quotient하면 점)이다. 따라서
 
 $$\langle H, H, H \rangle_{0, 3, 1}^{\mathbb{P}^1} = 1.$$
 
@@ -197,7 +197,7 @@ $$H \ast_q H = (\text{classical part}) = H^2$$
 
 $$\langle H, H^2, H^2 \rangle_{0, 3, 1}^{\mathbb{P}^2}$$
 
-이며 (dimension 조건: $2 + 4 + 4 = 10 = 2 \cdot 5 = 2 \mathrm{vdim}_\mathbb{C}$, 여기서 $\mathrm{vdim}_\mathbb{C}\, \overline{\mathcal{M}}_{0, 3}(\mathbb{P}^2, 1) = 3 + (2 - 3) + 3 = 5$이므로 $\deg H + \deg H^2 + \deg H^2 = 10$임을 만족), 기하학적으로 $\mathbb{P}^2$ 안의 직선 중 한 일반점과 두 일반점을 지나는 것의 수이다. 두 점을 지나는 직선은 유일하므로
+이며 (dimension 조건: $2 + 4 + 4 = 10 = 2 \cdot 5 = 2 \mathrm{vdim}_\mathbb{C}$, 여기서 $\mathrm{vdim}_\mathbb{C}\, \overline{\mathcal{M}}_{0, 3}(\mathbb{P}^2, 1) = 3 + (2 - 3) + 3 = 5$이므로 $\deg H + \deg H^2 + \deg H^2 = 10$임을 만족), 기하학적으로 $\mathbb{P}^2$ 안의 직선 중 한 generic point와 두 generic point를 지나는 것의 수이다. 두 점을 지나는 직선은 유일하므로
 
 $$\langle H, H^2, H^2 \rangle_{0, 3, 1}^{\mathbb{P}^2} = 1.$$
 
@@ -209,15 +209,15 @@ $d \geq 2$ 항은 dimension 조건에 의해 모두 $0$.
 
 따라서 $\mathbb{P}^2$에서 $H \ast_q H \ast_q H = H \ast_q H^2 = q \cdot 1$이고, ring 구조는
 
-$QH^\ast(\mathbb{P}^2) \cong \mathbb{C}[H, q] / (H^3 - q).$
+$$QH^\ast(\mathbb{P}^2) \cong \mathbb{C}[H, q] / (H^3 - q).$$
 :::
 
 $\mathbb{P}^2$의 경우 $H \ast_q H = H^2$는 classical 관계와 같지만 $H^3$가 quantum correction을 받는다. 일반적으로 $\mathbb{P}^n$에서 정확히 *top degree*에서만 quantum correction이 발생함을 다음 명제가 보여준다.
 
-::: 명제 10 ($\mathbb{P}^n$의 양자 코호몰로지)
+::: 명제 10 ($\mathbb{P}^n$의 양자 cohomology)
 $n \geq 1$에 대해
 
-$QH^\ast(\mathbb{P}^n) \cong \mathbb{C}[H, q] / (H^{n+1} - q),\qquad \deg H = 2,\ \deg q = 2(n+1).$
+$$QH^\ast(\mathbb{P}^n) \cong \mathbb{C}[H, q] / (H^{n+1} - q),\qquad \deg H = 2,\ \deg q = 2(n+1).$$
 :::
 ::: 증명
 $c_1(T \mathbb{P}^n) = (n+1) H$이므로 $\deg q = 2(n+1)$이고, [정의 4](#def4)의 합
@@ -236,7 +236,7 @@ $k = n$, $d = 1$ 기여는
 
 $$\langle H, H^n, H^n \rangle_{0, 3, 1}^{\mathbb{P}^n} = 1$$
 
-(degree $1$ curve, 즉 $\mathbb{P}^n$ 안의 직선이 한 hyperplane과의 교점 한 점, 그리고 두 일반점을 지나는 조건의 수). Poincaré dual에 의해 이 항은 $1 \cdot q$를 준다. 따라서
+(degree $1$ curve, 즉 $\mathbb{P}^n$ 안의 직선이 한 hyperplane과의 교점 한 점, 그리고 두 generic point를 지나는 조건의 수). Poincaré dual에 의해 이 항은 $1 \cdot q$를 준다. 따라서
 
 $$H \ast_q H^n = q \cdot 1.$$
 
@@ -251,7 +251,7 @@ $\mathbb{P}^n$의 경우 $X$가 Fano이므로 ([§Stable maps의 moduli space, �
 
 ## 큰 양자 코호몰로지와 고전 극한
 
-위에서 정의한 small quantum product는 cohomology의 *고정된* 기저 위에서의 곱셈이고, 그 deformation은 오직 Novikov 변수 $q$를 통해서만 일어났다. 이제 이를 cohomology class 자체를 추가 deformation 매개변수로 삼아 확장해보자. Cohomology class $t = \sum_a t^a T_a$를 GW invariant에 추가로 삽입하되, 우선 그 $H^2$ 성분 $t_2 = \sum_{a:\, \deg T_a = 2} t^a T_a$만 켜자. [§Gromov-Witten 불변량, ⁋명제 4](/ko/math/symplectic_geometry/gromov_witten#prop4)에 의하여 $H^2$ class 하나를 추가로 삽입하면 GW invariant가 교차수 $\langle t_2, \beta\rangle = \int_\beta t_2$만큼 곱해질 뿐이므로 (primary 삽입에는 $\psi$-보정이 없다), $t_2$를 $k$번 삽입하여 합하면
+위에서 정의한 small quantum product는 cohomology의 *고정된* 기저 위에서의 곱셈이고, 그 deformation은 오직 Novikov 변수 $q$를 통해서만 일어났다. 이제 이를 cohomology class 자체를 추가 deformation 매개변수로 삼아 확장해보자. Cohomology class $t = \sum_a t^a T_a$를 GW invariant에 추가로 삽입하되, 우선 그 $H^2$ 성분 $t_2 = \sum_{a:\, \deg T_a = 2} t^a T_a$만 켜자. [§Gromov-Witten 불변량, ⁋명제 4](/ko/math/symplectic_geometry/gromov_witten#prop4)에 의하여 $H^2$ class 하나를 추가로 삽입하면 GW invariant가 intersection number $\langle t_2, \beta\rangle = \int_\beta t_2$만큼 곱해질 뿐이므로 (primary 삽입에는 $\psi$-보정이 없다), $t_2$를 $k$번 삽입하여 합하면
 
 $$\sum_{k \ge 0} \frac{1}{k!}\, \langle T_a, T_b, T_c, \underbrace{t_2, \ldots, t_2}_{k} \rangle_{0, k+3, \beta}^X\, q^\beta = e^{\langle t_2, \beta\rangle}\, q^\beta\, \langle T_a, T_b, T_c \rangle_{0, 3, \beta}^X$$
 

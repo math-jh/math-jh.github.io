@@ -82,7 +82,7 @@ In other words, $\mathbb{C}[S_\sigma]$ is the $\mathbb{C}$-algebra having $\{\rc
 ::: Definition 5
 For a strongly convex rational polyhedral cone $\sigma \subseteq N_{\mathbb{R}}$, we define the *affine toric variety* $U_\sigma$ it determines by
 
-$U_\sigma = \Spec(\mathbb{C}[S_\sigma]).$
+$$U_\sigma = \Spec(\mathbb{C}[S_\sigma]).$$
 :::
 
 ::: Example 6
@@ -123,7 +123,7 @@ In particular, for a two-dimensional cone in $N = \mathbb{Z}^2$ it suffices to c
 ::: Proposition 9
 The affine toric variety $U_\sigma$ is a smooth algebraic variety if and only if $\sigma$ is a smooth cone. More specifically, if $\sigma$ is smooth and $k = \dim \sigma$, then
 
-$U_\sigma \cong \mathbb{C}^k \times (\mathbb{C}^\ast)^{n-k}.$
+$$U_\sigma \cong \mathbb{C}^k \times (\mathbb{C}^\ast)^{n-k}.$$
 :::
 
 ::: Proof
@@ -275,7 +275,7 @@ $$\tau = \sigma \cap u^{\perp}.$$
 
 Moreover, for such $u$ we have
 
-$\tau^\vee = \sigma^\vee + \mathbb{R}_{\ge 0}(-u).$
+$$\tau^\vee = \sigma^\vee + \mathbb{R}_{\ge 0}(-u).$$
 :::
 
 This yields the following proposition.
@@ -283,7 +283,7 @@ This yields the following proposition.
 ::: Proposition 13
 For a face $\tau$ of a cone $\sigma$, the variety $U_\tau$ is a principal open subset of $U_\sigma$. ([\[Algebraic Varieties\] §Affine Varieties, ⁋Definition 5](/en/math/algebraic_varieties/affine_varieties#def5)) Specifically, choosing $u \in S_\sigma$ with $\tau = \sigma \cap u^{\perp}$, we have
 
-$U_\tau = \{ x \in U_\sigma \mid \rchi^u(x) \neq 0 \}.$
+$$U_\tau = \{ x \in U_\sigma \mid \rchi^u(x) \neq 0 \}.$$
 :::
 
 ::: Proof
@@ -297,7 +297,7 @@ $$\mathbb{C}[S_\tau] = \mathbb{C}[S_\sigma + \mathbb{Z}_{\ge 0}(-u)] = \mathbb{C
 
 Here $\rchi^u \in \mathbb{C}[S_\sigma]$ and $\rchi^{-u}$ is the inverse of $\rchi^u$. Therefore
 
-$U_\tau = \Spec(\mathbb{C}[S_\tau]) = \Spec(\mathbb{C}[S_\sigma]_{\rchi^u}) = (U_\sigma)_{\rchi^u} = \{ x \in U_\sigma \mid \rchi^u(x) \neq 0 \}.$
+$$U_\tau = \Spec(\mathbb{C}[S_\tau]) = \Spec(\mathbb{C}[S_\sigma]_{\rchi^u}) = (U_\sigma)_{\rchi^u} = \{ x \in U_\sigma \mid \rchi^u(x) \neq 0 \}.$$
 :::
 
 For instance, in the two-dimensional cone $\sigma$ of [Example 7](#ex7), the faces $\tau_1=\mathbb{R}_{\geq 0}e_1$ and $\tau_2=\mathbb{R}_{\geq 0}e_2$ are themselves one-dimensional cones, and their faces are the origin. In this structure, each of $U_{\tau_1}$ and $U_{\tau_2}$ is a principal open subset inside the whole $U_\sigma$, and according to this face structure $U_\sigma$ acquires a stratification reminiscent of a CW complex.

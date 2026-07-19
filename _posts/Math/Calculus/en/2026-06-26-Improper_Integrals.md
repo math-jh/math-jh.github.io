@@ -39,7 +39,7 @@ $$\int_{-\infty}^c f(x) \mathop{dx} + \int_c^{\infty} f(x) \mathop{dx}$$
 
 concisely by the expression
 
-$\int_{-\infty}^{\infty} f(x) \mathop{dx}$
+$$\int_{-\infty}^{\infty} f(x) \mathop{dx}$$
 :::
 
 In the above definition, the two improper integrals
@@ -73,7 +73,7 @@ $$\int_c^b f(x) \mathop{dx} = \lim_{t \to c^+}\int_t^b f(x) \mathop{dx}$$
 
 If $f$ becomes infinite at a point $c$ inside $[a,b]$, we define this singular integral by
 
-$\int_a^b f(x)\mathop{dx}=\lim_{t\rightarrow c^-}\int_a^t f(x)\mathop{dx}+\lim_{s\rightarrow c^+} \int_s^b f(x)\mathop{dx}$
+$$\int_a^b f(x)\mathop{dx}=\lim_{t\rightarrow c^-}\int_a^t f(x)\mathop{dx}+\lim_{s\rightarrow c^+} \int_s^b f(x)\mathop{dx}$$
 :::
 
 Again, when $c$ lies inside the interval, the same subtlety as in [Definition 1](#def1) remains. For instance,

@@ -61,7 +61,7 @@ In particular, choosing $P, Q$ so that the integrand of the double integral beco
 ::: Corollary 2
 The area of $D$ is given by the boundary integral
 
-$\area(D) = \oint_C x\mathop{dy} = -\oint_C y\mathop{dx} = \frac{1}{2}\oint_C (x\mathop{dy} - y\mathop{dx}).$
+$$\area(D) = \oint_C x\mathop{dy} = -\oint_C y\mathop{dx} = \frac{1}{2}\oint_C (x\mathop{dy} - y\mathop{dx}).$$
 :::
 
 ::: Proof
@@ -99,7 +99,7 @@ $$\oint_C \mathbf{F}\cdot \mathbf{n}\mathop{ds} = \oint_C P\mathop{dy} - Q\matho
 
 and applying [Theorem 1](#thm1) to $(P, Q) \mapsto (-Q, P)$ shows this equals
 
-$\iint_D (P_x + Q_y)\mathop{dA} = \iint_D \divergence F\mathop{dA}.$
+$$\iint_D (P_x + Q_y)\mathop{dA} = \iint_D \divergence F\mathop{dA}.$$
 :::
 
 The first equality is exactly Green's theorem itself, and only the second equality is new, but its intuitive meaning is clear. Namely, if we integrate the function $\mathbf{F}$ along the boundary in the direction <em-ko>나가는</em-ko>, this is precisely captured by the divergence. On the other hand, we already saw in [§Line Integrals, ⁋Example 6](/en/math/calculus/line_integrals#ex6) that if a region has a hole, the field may fail to be conservative even when the curl vanishes; this can be written rigorously as follows.

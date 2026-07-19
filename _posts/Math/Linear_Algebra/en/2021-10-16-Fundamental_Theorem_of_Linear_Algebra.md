@@ -59,7 +59,7 @@ More precisely, the maps $L\mapsto [L]^{\mathcal{E}_n}_{\mathcal{E}_m}$ and $A\m
 Since the set on the left is precisely $\Hom(\mathbb{K}^n, \mathbb{K}^m)$, we can ask whether this correspondence is a bijective linear map, that is, an isomorphism. The answer is yes, and together with [Theorem 3](#thm3) below, we call this result the fundamental theorem of linear algebra.
 
 ::: Theorem 2
-$\Hom(\mathbb{K}^n,\mathbb{K}^m)\cong\Mat_{m\times n}(\mathbb{K})$
+$$\Hom(\mathbb{K}^n,\mathbb{K}^m)\cong\Mat_{m\times n}(\mathbb{K})$$
 :::
 ::: Proof
 We need to show that the given map $L\mapsto[L]^{\mathcal{E}_n}_{\mathcal{E}_m}$ is linear.
@@ -192,7 +192,7 @@ To summarize [Theorem 4](#thm4) in one sentence: a linear map from an $n$-dimens
 ::: Definition 7
 For any finite-dimensional $\mathbb{K}$-vector space $V$ and two bases $\mathcal{B},\mathcal{B}'$ of $V$, the *change-of-basis matrix* from $\mathcal{B}$ to $\mathcal{B}'$ is
 
-$[\id_V]_{\mathcal{B}'}^\mathcal{B}$
+$$[\id_V]_{\mathcal{B}'}^\mathcal{B}$$
 :::
 
 That this matrix must be square is obvious from the fact that the dimension of a vector space is well-defined. Also, from the equation

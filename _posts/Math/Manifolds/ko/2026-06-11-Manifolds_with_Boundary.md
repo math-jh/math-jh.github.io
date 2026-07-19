@@ -15,7 +15,7 @@ published: false
 
 ---
 
-[§적분](/ko/math/manifolds/integration)에서 우리는 oriented manifold 위에서 미분형식을 적분하는 방법을 살펴보았다. 미적분학의 기본정리를 이 언어로 일반화하기 위해서는 "영역과 그 경계"를 다룰 수 있어야 하는데, 지금까지의 manifold는 모든 점이 유클리드 공간의 열린집합과 닮아 있어 경계라 부를 만한 점이 없다. 이번 글에서는 모델 공간을 유클리드 공간에서 반공간으로 바꾸어 이 문제를 해결한다.
+[§적분](/ko/math/manifolds/integration)에서 우리는 oriented manifold 위에서 differential form을 적분하는 방법을 살펴보았다. 미적분학의 기본정리를 이 언어로 일반화하기 위해서는 "영역과 그 경계"를 다룰 수 있어야 하는데, 지금까지의 manifold는 모든 점이 유클리드 공간의 열린집합과 닮아 있어 경계라 부를 만한 점이 없다. 이번 글에서는 모델 공간을 유클리드 공간에서 반공간으로 바꾸어 이 문제를 해결한다.
 
 ## 반공간과 매끄러운 함수
 
@@ -44,7 +44,7 @@ $$\frac{\partial f}{\partial x^m}(p)=\lim_{t\to0^+}\frac{f(p+te_m)-f(p)}{t}$$
 ## 경계가 있는 다양체
 
 ::: 정의 2
-Second countable Hausdorff space $M$이 *$m$차원의 경계가 있는 다양체<sub>manifold with boundary</sub>*라는 것은 다음의 조건을 만족하는 chart들의 모임 $(U_\alpha,\varphi_\alpha)$이 존재하는 것이다.
+Second countable Hausdorff space $M$이 *$m$차원의 경계가 있는 manifold<sub>manifold with boundary</sub>*라는 것은 다음의 조건을 만족하는 chart들의 모임 $(U_\alpha,\varphi_\alpha)$이 존재하는 것이다.
 
 1. $U_\alpha$들은 $M$의 open covering이고, 각각의 $\varphi_\alpha$는 $U_\alpha$에서 $\mathbb{H}^m$의 열린집합으로의 homeomorphism이다.
 2. 임의의 $\alpha,\beta$에 대하여, transition $\varphi_\beta\circ\varphi_\alpha^{-1}:\varphi_\alpha(U_\alpha\cap U_\beta) \rightarrow \varphi_\beta(U_\alpha\cap U_\beta)$는 [정의 1](#def1)의 의미에서 $C^\infty$이다.
@@ -69,10 +69,10 @@ $$\tilde{\sigma}\circ\tilde{\tau}=\sigma\circ\tau=\id_W$$
 가 성립하고, $W$는 $\mathbb{R}^m$의 열린집합이므로 chain rule에 의하여 $D\tilde\sigma(\tau(\varphi(p)))\circ D\tilde\tau(\varphi(p))=\id$이다. 특히 $D\tilde\tau(\varphi(p))$는 invertible이고, [§부분다양체와 역함수 정리, ⁋정리 4](/ko/math/manifolds/submanifolds#thm4)에 의하여 $\tilde\tau$는 $\varphi(p)$의 적당한 열린근방을 $\psi(p)=\tau(\varphi(p))$를 포함하는 $\mathbb{R}^m$의 *열린집합*으로 보낸다. 이 열린집합은 $\tau$의 image, 즉 $\mathbb{H}^m$의 부분집합에 포함되므로, $\psi(p)$는 $\mathbb{H}^m$ 안에서 $\mathbb{R}^m$-열린근방을 갖는다. 그런데 $\partial\mathbb{H}^m$의 점의 임의의 $\mathbb{R}^m$-열린근방은 $x^m<0$인 점을 포함하므로, $\psi(p)\not\in\partial\mathbb{H}^m$이다.
 :::
 
-따라서 $M$은 서로소인 두 집합 $\interior M$과 $\partial M$으로 나뉜다. 이들 각각은 다시 다양체가 된다.
+따라서 $M$은 서로소인 두 집합 $\interior M$과 $\partial M$으로 나뉜다. 이들 각각은 다시 manifold가 된다.
 
 ::: 명제 4
-$m$차원의 경계가 있는 다양체 $M$에 대하여 다음이 성립한다.
+$m$차원의 경계가 있는 manifold $M$에 대하여 다음이 성립한다.
 
 1. $\interior M$은 $M$의 열린집합이고, ($\partial$ 없는) $m$차원 manifold이다.
 2. $\partial M$은 $M$의 닫힌집합이고, chart들 $(U_\alpha\cap\partial M, (\varphi_\alpha^1,\ldots,\varphi_\alpha^{m-1})\vert_{\partial M})$에 대하여 ($\partial$ 없는) $(m-1)$차원 manifold이다.
@@ -84,18 +84,18 @@ $m$차원의 경계가 있는 다양체 $M$에 대하여 다음이 성립한다.
 :::
 
 ::: 예시 5
-반공간 $\mathbb{H}^m$ 자신은 identity chart 하나로 이루어진 atlas에 대해 경계가 있는 다양체이고, 그 경계는 정의에 의해 $\partial\mathbb{H}^m\cong\mathbb{R}^{m-1}$이다. 비슷하게 닫힌구간 $[0,1]$은 두 chart $t\mapsto t$ (on $[0,1)$), $t\mapsto 1-t$ (on $(0,1]$)에 대해 $1$차원의 경계가 있는 다양체이고 $\partial[0,1]=\{0,1\}$이다.
+반공간 $\mathbb{H}^m$ 자신은 identity chart 하나로 이루어진 atlas에 대해 경계가 있는 manifold이고, 그 경계는 정의에 의해 $\partial\mathbb{H}^m\cong\mathbb{R}^{m-1}$이다. 비슷하게 닫힌구간 $[0,1]$은 두 chart $t\mapsto t$ (on $[0,1)$), $t\mapsto 1-t$ (on $(0,1]$)에 대해 $1$차원의 경계가 있는 manifold이고 $\partial[0,1]=\{0,1\}$이다.
 
 조금 더 의미있는 예시로 닫힌 공 $\overline{B}^m=\{x\in\mathbb{R}^m\mid \lvert x\rvert\leq 1\}$을 생각하자. 내부는 열린 공이므로 chart 하나로 충분하다. 경계 근방의 점들에 대해서는, $S^{m-1}$의 chart $(V,\theta)$마다 함수
 
 $$x\mapsto \bigl(\theta(x/\lvert x\rvert),\,1-\lvert x\rvert\bigr)$$
 
-를 생각하면 이것이 $\{x\neq 0\mid x/\lvert x\rvert\in V\}\cap\overline{B}^m$에서 $\mathbb{H}^m$의 열린집합으로 가는 chart가 되고, transition들이 $C^\infty$임을 확인할 수 있다. 따라서 $\overline{B}^m$은 경계가 있는 다양체이고 $\partial\overline{B}^m=S^{m-1}$이다.
+를 생각하면 이것이 $\{x\neq 0\mid x/\lvert x\rvert\in V\}\cap\overline{B}^m$에서 $\mathbb{H}^m$의 열린집합으로 가는 chart가 되고, transition들이 $C^\infty$임을 확인할 수 있다. 따라서 $\overline{B}^m$은 경계가 있는 manifold이고 $\partial\overline{B}^m=S^{m-1}$이다.
 :::
 
 ## 접공간과 바깥 방향
 
-경계가 있는 다양체 $M$의 점 $p$에서의 tangent space $T_pM$은 [§접공간](/ko/math/manifolds/tangent_space)에서와 동일하게 정의한다. 여기서 함수의 germ은 [정의 1](#def1)의 의미에서 $C^\infty$인 함수들의 germ이다. 주의할 점은 $p\in\partial M$이더라도 $T_pM$은 여전히 $m$차원이라는 것이다. 이는 [§접공간](/ko/math/manifolds/tangent_space)에서의 논증이 그대로 적용되기 때문인데, 핵심이 되는 Taylor 전개 논증은 정의역이 convex하기만 하면 성립하고, $\varphi(p)$ 근방에서 $\mathbb{H}^m$과 열린 공의 교집합은 convex하기 때문이다. 특히 $p\in\partial M$에서도 chart $(U,x)$는 basis $(\partial/\partial x^1\vert_p,\ldots,\partial/\partial x^m\vert_p)$를 준다.
+경계가 있는 manifold $M$의 점 $p$에서의 tangent space $T_pM$은 [§접공간](/ko/math/manifolds/tangent_space)에서와 동일하게 정의한다. 여기서 함수의 germ은 [정의 1](#def1)의 의미에서 $C^\infty$인 함수들의 germ이다. 주의할 점은 $p\in\partial M$이더라도 $T_pM$은 여전히 $m$차원이라는 것이다. 이는 [§접공간](/ko/math/manifolds/tangent_space)에서의 논증이 그대로 적용되기 때문인데, 핵심이 되는 Taylor 전개 논증은 정의역이 convex하기만 하면 성립하고, $\varphi(p)$ 근방에서 $\mathbb{H}^m$과 열린 공의 교집합은 convex하기 때문이다. 특히 $p\in\partial M$에서도 chart $(U,x)$는 basis $(\partial/\partial x^1\vert_p,\ldots,\partial/\partial x^m\vert_p)$를 준다.
 
 ::: 정의 6
 경계점 $p\in\partial M$에서의 tangent vector $v=\sum_{i=1}^ma^i\,\partial/\partial x^i\vert_p$가 *outward<sub>바깥 방향</sub>*라는 것은 $a^m<0$인 것이고, *inward<sub>안쪽 방향</sub>*라는 것은 $a^m>0$인 것이다.

@@ -99,7 +99,7 @@ does not always hold. However, the converse is not always true either.
 ::: Definition 6
 Let two groups $N,H$ and a group homomorphism $\tau:H \rightarrow \Aut(N)$ be given. Then the *semi-direct product* $N\rtimes_\tau H$ of $N$ and $H$ with respect to $\tau$ is the group given by the set $N\times H$ with the following operation:
 
-$(x_1,y_1)(x_2,y_2)=(x_1\tau(y_1)(x_1), y_1y_2)$
+$$(x_1,y_1)(x_2,y_2)=(x_1\tau(y_1)(x_1), y_1y_2)$$
 :::
 
 Then one can show that $N\rtimes_\tau H$ has a group structure under the above operation; in this case the identity element of $N\rtimes_\tau H$ is $(e_N, e_H)$ and the inverse of $(x,y)$ is $\tau(y^{-1})(x^{-1}), y^{-1})$. Moreover, the following holds.

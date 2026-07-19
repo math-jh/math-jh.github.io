@@ -123,7 +123,7 @@ $\Hom(-,-)$은 smooth functor이다. 임의의 두 isomorphism $f:V\rightarrow V
 
 $$(g+tw_i^j)\circ u\circ f^{-1}=g\circ u\circ f^{-1}+tw_i^j\circ u\circ f^{-1}$$
 
-가 모든 $u$에 대해 성립하므로 이 대응의 $w_i^j$-방향미분은 $u\mapsto w_i^j\circ u\circ f^{-1}$가 되어 연속이다. 뿐만 아니라 이 논증은 $g$ 자리에 어떠한 linear map를 집어넣어도 성립하므로, 이로부터 $g\mapsto\Hom(f,g)$의 임의의 고차 방향미분이 항상 연속이라는 것을 안다. 즉, $g\mapsto\Hom(f,g)$는 $C^\infty$이다. 이 대응이 $f$에도 smooth하게 의존한다는 것은 $g$보다는 번거롭지만, $f$가 isomorphism이라는 것으로부터 $t$를 충분히 작게 택하여 $f+tw_i^j$가 invertible하도록 할 수 있고, 이후 위의 논증을 반복하면 된다.
+가 모든 $u$에 대해 성립하므로 이 대응의 $w_i^j$-방향미분은 $u\mapsto w_i^j\circ u\circ f^{-1}$가 되어 연속이다. 뿐만 아니라 이 논증은 $g$ 자리에 어떠한 linear map을 집어넣어도 성립하므로, 이로부터 $g\mapsto\Hom(f,g)$의 임의의 고차 방향미분이 항상 연속이라는 것을 안다. 즉, $g\mapsto\Hom(f,g)$는 $C^\infty$이다. 이 대응이 $f$에도 smooth하게 의존한다는 것은 $g$보다는 번거롭지만, $f$가 isomorphism이라는 것으로부터 $t$를 충분히 작게 택하여 $f+tw_i^j$가 invertible하도록 할 수 있고, 이후 위의 논증을 반복하면 된다.
 
 다음은 모두 smooth functor의 예시들이다.
 

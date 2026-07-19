@@ -142,7 +142,7 @@ Similarly, in the next post we will show that the Jacobi rings $\Jac(W_q)$ defin
 ::: misc Conjecture 4 (Mirror theorem, $D$-module form) {#conj4}
 For a mirror pair $(X, \check{X})$, there exists a *mirror isomorphism* between the A-model state space $H_A$ and the B-model state space $H_B$ introduced above, such that $\Phi$ is compatible with the Dubrovin connection and the Gauss-Manin connection:
 
-$\Phi \circ \nabla^z = \nabla^{GM} \circ \Phi$
+$$\Phi \circ \nabla^z = \nabla^{GM} \circ \Phi$$
 :::
 
 It is worth noting carefully that this conjecture is not, strictly speaking, a proven fact, but rather a guiding philosophy. It has been proved separately for various mirror pairs. For example, the case of Calabi-Yau hypersurfaces in toric varieties, proved by Givental, was historically the first; this was later extended to toric Fano varieties, and then further to toric stacks by Coates-Corti-Iritani-Tseng. A generalization in a slightly different direction replaces toric varieties by homogeneous spaces, in particular by partial flag varieties $G/P$. In this direction, the LG superpotentials for Grassmannians and flag varieties were first constructed physically by Eguchi-Hori-Xiong, and studied Lie-theoretically by Rietsch; exploring this is one of the main aims of this series.

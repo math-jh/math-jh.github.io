@@ -257,7 +257,7 @@ The Laplace expansion expresses the determinant of $A$ as a formula in terms of 
 ::: Theorem 12
 For any matrix $A\in\Mat_n(\mathbb{K})$ and any $1\leq i\leq n$, the following formula holds:
 
-$\det A=\sum_{j=1}^n(-1)^{i+j}A_{ij}\det (A^{(i,j)})$
+$$\det A=\sum_{j=1}^n(-1)^{i+j}A_{ij}\det (A^{(i,j)})$$
 :::
 ::: Proof
 First fix $i,j$. Let $B_j$ be the matrix obtained from $A$ by replacing all entries in the $i$-th row with 0, except leaving the $j$-th entry unchanged. Then, swap rows $i-1$ times to bring the $i$-th row to the first row, and swap columns $j-1$ times to bring the $j$-th column to the first column, and call the resulting matrix $B_j'$. Then
@@ -270,7 +270,7 @@ $$\det B_j=(-1)^{i+j-2}\det B_j'=(-1)^{i+j-2}A_{ij}\det A^{(i,j)}=(-1)^{i+j}A_{i
 
 On the other hand, using multilinearity in the $i$-th column, the sum of the determinants of the $B_j$ equals the determinant of $A$, so we obtain the desired formula
 
-$\det A=\sum_{j=1}^n\det B_j=\sum_{j=1}^n (-1)^{i+j}A_{ij}\det A^{(i,j)}$
+$$\det A=\sum_{j=1}^n\det B_j=\sum_{j=1}^n (-1)^{i+j}A_{ij}\det A^{(i,j)}$$
 :::
 
 ---

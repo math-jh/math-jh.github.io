@@ -1,6 +1,6 @@
 ---
 title: "유수정리"
-description: "고립특이점에서의 Laurent 계수 a_{-1}을 유수로 정의하고, 닫힌 경로 안에 유한개의 고립특이점만 갖는 정칙함수의 적분이 유수와 회전수의 합으로 결정된다는 유수정리를 Laurent 전개와 Cauchy 정리로 증명한다. 단순극과 고차극에서의 유수 계산법을 확립하고, 실수 위의 무한적분, 삼각함수 적분, 무한급수의 합 계산에 응용한다."
+description: "고립특이점에서의 Laurent 계수 a_{-1}을 유수로 정의하고, 닫힌 경로 안에 유한개의 고립특이점만 갖는 복소정칙함수의 적분이 유수와 회전수의 합으로 결정된다는 유수정리를 Laurent 전개와 Cauchy 정리로 증명한다. 단순극과 고차극에서의 유수 계산법을 확립하고, 실수 위의 무한적분, 삼각함수 적분, 무한급수의 합 계산에 응용한다."
 excerpt: "residue, 유수정리, 단순극과 고차극의 유수, 반원 contour, Jordan 보조정리, 삼각함수 적분, π cot πz 무한급수 합"
 
 categories: [Math / Complex Analysis]
@@ -14,14 +14,14 @@ weight: 9
 published: false
 ---
 
-Cauchy 정리는 정칙함수의 닫힌 경로 적분이 소멸함을 알려 주었지만 ([§Cauchy 정리, ⁋따름정리 8](/ko/math/complex_analysis/cauchy_theorem#cor8)), 정작 계산에서 흥미로운 적분은 피적분함수가 경로 안에서 특이점을 가져 적분이 $0$이 아닌 경우이다. 가령 $\oint dz/z = 2\pi i$는 원점이라는 단 하나의 특이점 때문에 소멸하지 않으며, 그 값 $2\pi i$은 Laurent 전개 $1/z$의 음의 일차 계수가 $1$이라는 사실에서 정확히 나온다. 일반적으로 고립특이점 근방에서 함수는 Laurent 급수로 전개되고 ([§고립특이점과 Laurent 급수, ⁋정리 2](/ko/math/complex_analysis/isolated_singularities#thm2)), 그 음의 일차 계수 $a_{-1}$만이 작은 원을 따른 적분에 살아남는다. 이 계수를 유수라 부르며, 유수정리는 닫힌 경로 적분이 경로 안에 든 특이점들의 유수를 회전수로 가중하여 합한 것임을 말한다. 이로써 적분 계산은 국소적인 유수 계산으로 환원되고, 그 위력은 복소적분 자체를 넘어 실수 위의 정적분과 무한급수의 합을 닫힌 형태로 구하는 데까지 미친다. 이 글은 유수를 정의하고 유수정리를 확립한 뒤, 극에서의 유수 계산법과 세 갈래의 표준적 응용을 다룬다.
+Cauchy 정리는 holomorphic function의 닫힌 경로 적분이 소멸함을 알려 주었지만 ([§Cauchy 정리, ⁋따름정리 8](/ko/math/complex_analysis/cauchy_theorem#cor8)), 정작 계산에서 흥미로운 적분은 피적분함수가 경로 안에서 singular point를 가져 적분이 $0$이 아닌 경우이다. 가령 $\oint dz/z = 2\pi i$는 원점이라는 단 하나의 singular point 때문에 소멸하지 않으며, 그 값 $2\pi i$은 Laurent 전개 $1/z$의 음의 일차 계수가 $1$이라는 사실에서 정확히 나온다. 일반적으로 isolated singularity 근방에서 함수는 Laurent 급수로 전개되고 ([§고립특이점과 Laurent 급수, ⁋정리 2](/ko/math/complex_analysis/isolated_singularities#thm2)), 그 음의 일차 계수 $a_{-1}$만이 작은 원을 따른 적분에 살아남는다. 이 계수를 유수라 부르며, 유수정리는 닫힌 경로 적분이 경로 안에 든 singular point들의 유수를 회전수로 가중하여 합한 것임을 말한다. 이로써 적분 계산은 국소적인 유수 계산으로 환원되고, 그 위력은 복소적분 자체를 넘어 실수 위의 정적분과 무한급수의 합을 닫힌 형태로 구하는 데까지 미친다. 이 글은 유수를 정의하고 유수정리를 확립한 뒤, 극에서의 유수 계산법과 세 갈래의 표준적 응용을 다룬다.
 
 ## 유수와 유수정리
 
-고립특이점 $z_0$ 근방에서 정칙인 함수 $f$는 구멍 뚫린 원판 $0 < \lvert z - z_0\rvert < R$에서 Laurent 전개 $f(z) = \sum_{n=-\infty}^{\infty} a_n (z - z_0)^n$을 가진다. 이 전개의 계수 가운데 음의 일차 계수 $a_{-1}$이 특별한 지위를 가지는데, 작은 원을 따라 항별로 적분하면 정수 멱 $(z - z_0)^n$의 적분이 $n = -1$일 때만 $2\pi i$이고 나머지는 모두 $0$이기 때문이다. 따라서 $a_{-1}$만이 적분에 흔적을 남긴다.
+isolated singularity $z_0$ 근방에서 holomorphic인 함수 $f$는 구멍 뚫린 원판 $0 < \lvert z - z_0\rvert < R$에서 Laurent 전개 $f(z) = \sum_{n=-\infty}^{\infty} a_n (z - z_0)^n$을 가진다. 이 전개의 계수 가운데 음의 일차 계수 $a_{-1}$이 특별한 지위를 가지는데, 작은 원을 따라 항별로 적분하면 정수 멱 $(z - z_0)^n$의 적분이 $n = -1$일 때만 $2\pi i$이고 나머지는 모두 $0$이기 때문이다. 따라서 $a_{-1}$만이 적분에 흔적을 남긴다.
 
 ::: 정의 1 (유수)
-$f$가 $z_0$에서 고립특이점을 가지고 $0 < \lvert z - z_0\rvert < R$에서의 Laurent 전개가 $f(z) = \sum_{n=-\infty}^{\infty} a_n (z - z_0)^n$이라 하자. 이때 음의 일차 계수 $a_{-1}$을 $f$의 $z_0$에서의 *residue<sub>유수</sub>*라 하고
+$f$가 $z_0$에서 isolated singularity를 가지고 $0 < \lvert z - z_0\rvert < R$에서의 Laurent 전개가 $f(z) = \sum_{n=-\infty}^{\infty} a_n (z - z_0)^n$이라 하자. 이때 음의 일차 계수 $a_{-1}$을 $f$의 $z_0$에서의 *residue<sub>유수</sub>*라 하고
 
 $$\operatorname{Res}_{z = z_0} f = a_{-1}$$
 
@@ -32,10 +32,10 @@ $$\operatorname{Res}_{z = z_0} f = a_{-1}$$
 
 $$\operatorname{Res}_{z = z_0} f = a_{-1} = \frac{1}{2\pi i}\oint_{\lvert z - z_0\rvert = \rho} f(z)\,dz$$
 
-이 되어, 유수가 작은 원을 따른 적분과 직결됨을 곧장 본다. 곧 한 특이점을 반시계방향으로 한 번 감는 작은 원에서의 적분은 정확히 그 점에서의 유수에 $2\pi i$을 곱한 것이다. 유수정리는 이 국소적 관찰을 임의의 닫힌 경로로 끌어올린다. 경로 안에 여러 특이점이 있으면 각 특이점을 작은 원으로 도려내고, 그 사이의 영역에서 정칙성과 Cauchy 정리를 써서 큰 경로의 적분을 작은 원들의 적분 합으로 분해한다.
+이 되어, 유수가 작은 원을 따른 적분과 직결됨을 곧장 본다. 곧 한 singular point를 반시계방향으로 한 번 감는 작은 원에서의 적분은 정확히 그 점에서의 유수에 $2\pi i$을 곱한 것이다. 유수정리는 이 국소적 관찰을 임의의 닫힌 경로로 끌어올린다. 경로 안에 여러 singular point가 있으면 각 singular point를 작은 원으로 도려내고, 그 사이의 영역에서 holomorphicity와 Cauchy 정리를 써서 큰 경로의 적분을 작은 원들의 적분 합으로 분해한다.
 
 ::: 정리 2 (유수정리)
-$\Omega \subseteq \mathbb{C}$가 단순연결 영역이고, $z_1, \dots, z_k$이 $\Omega$ 안의 서로 다른 유한개의 점이라 하자. $f$가 $\Omega \setminus \{z_1, \dots, z_k\}$에서 정칙이고 각 $z_j$에서 고립특이점을 가진다고 하자. 그러면 자취가 $\Omega \setminus \{z_1, \dots, z_k\}$에 들어 있는 임의의 닫힌 piecewise $C^1$ 곡선 $\gamma$에 대하여
+$\Omega \subseteq \mathbb{C}$가 단순연결 영역이고, $z_1, \dots, z_k$이 $\Omega$ 안의 서로 다른 유한개의 점이라 하자. $f$가 $\Omega \setminus \{z_1, \dots, z_k\}$에서 holomorphic이고 각 $z_j$에서 isolated singularity를 가진다고 하자. 그러면 자취가 $\Omega \setminus \{z_1, \dots, z_k\}$에 들어 있는 임의의 닫힌 piecewise $C^1$ 곡선 $\gamma$에 대하여
 
 $$\oint_\gamma f(z)\,dz = 2\pi i \sum_{j=1}^{k} n(\gamma, z_j)\operatorname{Res}_{z = z_j} f$$
 
@@ -43,17 +43,17 @@ $$\oint_\gamma f(z)\,dz = 2\pi i \sum_{j=1}^{k} n(\gamma, z_j)\operatorname{Res}
 :::
 
 ::: 증명
-각 특이점 $z_j$에서의 Laurent 전개의 주부를 떼어 내어 적분을 분해한다. $z_j$의 구멍 뚫린 근방에서 $f$의 Laurent 전개의 주부를
+각 singular point $z_j$에서의 Laurent 전개의 주부를 떼어 내어 적분을 분해한다. $z_j$의 구멍 뚫린 근방에서 $f$의 Laurent 전개의 주부를
 
 $$P_j(z) = \sum_{n=1}^{\infty} a_{-n}^{(j)}(z - z_j)^{-n}$$
 
-이라 하자. 여기서 $a_{-n}^{(j)}$은 $z_j$에서의 Laurent 계수이다. 주부 $P_j$은 변수치환 $\zeta = (z - z_j)^{-1}$로 보면 $\zeta$의 멱급수이므로 $z \neq z_j$인 모든 점, 곧 $\mathbb{C} \setminus \{z_j\}$에서 수렴하여 정칙함수를 정의한다 ([§고립특이점과 Laurent 급수, ⁋정리 2](/ko/math/complex_analysis/isolated_singularities#thm2) 뒤의 주부 수렴역).
+이라 하자. 여기서 $a_{-n}^{(j)}$은 $z_j$에서의 Laurent 계수이다. 주부 $P_j$은 변수치환 $\zeta = (z - z_j)^{-1}$로 보면 $\zeta$의 멱급수이므로 $z \neq z_j$인 모든 점, 곧 $\mathbb{C} \setminus \{z_j\}$에서 수렴하여 holomorphic function을 정의한다 ([§고립특이점과 Laurent 급수, ⁋정리 2](/ko/math/complex_analysis/isolated_singularities#thm2) 뒤의 주부 수렴역).
 
 이제 함수
 
 $$g(z) = f(z) - \sum_{j=1}^{k} P_j(z)$$
 
-을 생각한다. 각 $z_j$ 근방에서 $f$의 주부는 정확히 $P_j$이고 다른 $P_\ell$ ($\ell \neq j$) 은 $z_j$에서 정칙이므로, $g$의 $z_j$에서의 Laurent 전개에는 주부가 남지 않는다. 따라서 $g$는 각 $z_j$에서 가제거 특이점을 가지며 ([§고립특이점과 Laurent 급수, ⁋정의 4](/ko/math/complex_analysis/isolated_singularities#def4)), 그 점들을 메우면 $g$가 $\Omega$ 전체에서 정칙함수로 확장된다. $\Omega$가 단순연결이므로 Cauchy 정리 ([§Cauchy 정리, ⁋따름정리 8](/ko/math/complex_analysis/cauchy_theorem#cor8)) 에 의해
+을 생각한다. 각 $z_j$ 근방에서 $f$의 주부는 정확히 $P_j$이고 다른 $P_\ell$ ($\ell \neq j$) 은 $z_j$에서 holomorphic이므로, $g$의 $z_j$에서의 Laurent 전개에는 주부가 남지 않는다. 따라서 $g$는 각 $z_j$에서 가제거 singular point를 가지며 ([§고립특이점과 Laurent 급수, ⁋정의 4](/ko/math/complex_analysis/isolated_singularities#def4)), 그 점들을 메우면 $g$가 $\Omega$ 전체에서 holomorphic function으로 확장된다. $\Omega$가 단순연결이므로 Cauchy 정리 ([§Cauchy 정리, ⁋따름정리 8](/ko/math/complex_analysis/cauchy_theorem#cor8)) 에 의해
 
 $$\oint_\gamma g(z)\,dz = 0, \qquad \text{곧}\qquad \oint_\gamma f(z)\,dz = \sum_{j=1}^{k}\oint_\gamma P_j(z)\,dz$$
 
@@ -70,7 +70,7 @@ $$\oint_\gamma (z - z_j)^{-1}\,dz = 2\pi i\, n(\gamma, z_j)$$
 이므로 $\oint_\gamma P_j\,dz = a_{-1}^{(j)} \cdot 2\pi i\, n(\gamma, z_j) = 2\pi i\, n(\gamma, z_j)\operatorname{Res}_{z=z_j} f$이다. 이를 $j$에 대해 더하면 주장하는 등식을 얻는다.
 :::
 
-유수정리는 닫힌 경로 적분이라는 전역적 양을, 경로가 감는 특이점들에서의 국소적 양인 유수로 완전히 분해한다. 회전수 인자 $n(\gamma, z_j)$은 경로가 각 특이점을 몇 번 감는지를 세므로, 경로 밖의 특이점은 $n(\gamma, z_j) = 0$이 되어 적분에 기여하지 않는다. 실제 응용에서는 거의 항상 $\gamma$이 각 특이점을 반시계방향으로 정확히 한 번 감는 단순 닫힌 곡선이며, 이때 안쪽 특이점에서는 $n(\gamma, z_j) = 1$, 바깥 특이점에서는 $0$이 되어 공식이
+유수정리는 닫힌 경로 적분이라는 전역적 양을, 경로가 감는 singular point들에서의 국소적 양인 유수로 완전히 분해한다. 회전수 인자 $n(\gamma, z_j)$은 경로가 각 singular point를 몇 번 감는지를 세므로, 경로 밖의 singular point는 $n(\gamma, z_j) = 0$이 되어 적분에 기여하지 않는다. 실제 응용에서는 거의 항상 $\gamma$이 각 singular point를 반시계방향으로 정확히 한 번 감는 단순 닫힌 곡선이며, 이때 안쪽 singular point에서는 $n(\gamma, z_j) = 1$, 바깥 singular point에서는 $0$이 되어 공식이
 
 $$\oint_\gamma f(z)\,dz = 2\pi i \sum_{z_j \text{ 안쪽}} \operatorname{Res}_{z = z_j} f$$
 
@@ -89,7 +89,7 @@ $$\operatorname{Res}_{z = z_0} f = \frac{1}{(m-1)!}\lim_{z \to z_0}\frac{d^{m-1}
 
 $$\operatorname{Res}_{z = z_0} f = \lim_{z \to z_0}(z - z_0)f(z)$$
 
-이고, $f = g/h$이며 $g, h$가 $z_0$에서 정칙이고 $g(z_0) \neq 0$, $h(z_0) = 0$, $h'(z_0) \neq 0$이면
+이고, $f = g/h$이며 $g, h$가 $z_0$에서 holomorphic이고 $g(z_0) \neq 0$, $h(z_0) = 0$, $h'(z_0) \neq 0$이면
 
 $$\operatorname{Res}_{z = z_0} \frac{g}{h} = \frac{g(z_0)}{h'(z_0)}$$
 
@@ -101,11 +101,11 @@ $z_0$이 위수 $m$인 극이면 Laurent 전개가 $f(z) = \sum_{n=-m}^{\infty} 
 
 $$(z - z_0)^m f(z) = \sum_{n=-m}^{\infty} a_n (z - z_0)^{n+m} = \sum_{k=0}^{\infty} a_{k-m}(z - z_0)^k$$
 
-이 되어, 이는 $z_0$에서 정칙한 멱급수이다. 이 멱급수의 $k$차 계수는 $a_{k-m}$이고, 우리가 원하는 유수 $a_{-1}$은 $k - m = -1$, 곧 $k = m - 1$인 항의 계수이다. 정칙함수의 Taylor 계수는 미분으로 추출되므로 ([§멱급수와 해석성, ⁋정리 1](/ko/math/complex_analysis/power_series_and_analyticity#thm1)),
+이 되어, 이는 $z_0$에서 holomorphic한 멱급수이다. 이 멱급수의 $k$차 계수는 $a_{k-m}$이고, 우리가 원하는 유수 $a_{-1}$은 $k - m = -1$, 곧 $k = m - 1$인 항의 계수이다. Holomorphic function의 Taylor 계수는 미분으로 추출되므로 ([§멱급수와 해석성, ⁋정리 1](/ko/math/complex_analysis/power_series_and_analyticity#thm1)),
 
 $$a_{-1} = a_{(m-1)-m} = \frac{1}{(m-1)!}\frac{d^{m-1}}{dz^{m-1}}\Bigl[(z - z_0)^m f(z)\Bigr]\bigg\rvert_{z = z_0} = \frac{1}{(m-1)!}\lim_{z \to z_0}\frac{d^{m-1}}{dz^{m-1}}\Bigl[(z - z_0)^m f(z)\Bigr]$$
 
-이다. 미분한 멱급수가 $z_0$에서 정칙이므로 극한과 대입이 일치한다.
+이다. 미분한 멱급수가 $z_0$에서 holomorphic이므로 극한과 대입이 일치한다.
 
 단순극은 $m = 1$인 경우로 $(m-1)! = 1$이고 미분 차수가 $0$이므로 $\operatorname{Res} = \lim_{z\to z_0}(z - z_0)f(z)$이다. 끝으로 $f = g/h$ 꼴에서 $h(z_0) = 0$, $h'(z_0) \neq 0$이면 $h$가 $z_0$에서 단순영점을 가지므로 $g(z_0) \neq 0$과 더불어 $f$가 $z_0$에서 단순극을 가진다 ([§고립특이점과 Laurent 급수, ⁋명제 6](/ko/math/complex_analysis/isolated_singularities#prop6)). 단순극 공식에 대입하면
 
@@ -215,7 +215,7 @@ $$\int_0^{2\pi} R(\cos\theta, \sin\theta)\,d\theta = \oint_{\lvert z\rvert = 1} 
 :::
 
 ::: 증명
-$\theta$가 $0$부터 $2\pi$까지 증가하면 $z = e^{i\theta}$이 단위원을 반시계방향으로 정확히 한 번 돈다. Euler 공식 ([§정칙함수, ⁋정의 10](/ko/math/complex_analysis/holomorphic_functions#def10)) 에서 $e^{i\theta} = \cos\theta + i\sin\theta$이고 $e^{-i\theta} = \cos\theta - i\sin\theta$이므로, 두 식을 더하고 빼면 $\cos\theta = \tfrac12(e^{i\theta} + e^{-i\theta}) = \tfrac12(z + z^{-1})$, $\sin\theta = \tfrac{1}{2i}(e^{i\theta} - e^{-i\theta}) = \tfrac{1}{2i}(z - z^{-1})$이다. 또 $dz = ie^{i\theta}\,d\theta = iz\,d\theta$이므로 $d\theta = dz/(iz)$이다.
+$\theta$가 $0$부터 $2\pi$까지 증가하면 $z = e^{i\theta}$이 단위원을 반시계방향으로 정확히 한 번 돈다. Euler 공식 ([§복소정칙함수, ⁋정의 10](/ko/math/complex_analysis/holomorphic_functions#def10)) 에서 $e^{i\theta} = \cos\theta + i\sin\theta$이고 $e^{-i\theta} = \cos\theta - i\sin\theta$이므로, 두 식을 더하고 빼면 $\cos\theta = \tfrac12(e^{i\theta} + e^{-i\theta}) = \tfrac12(z + z^{-1})$, $\sin\theta = \tfrac{1}{2i}(e^{i\theta} - e^{-i\theta}) = \tfrac{1}{2i}(z - z^{-1})$이다. 또 $dz = ie^{i\theta}\,d\theta = iz\,d\theta$이므로 $d\theta = dz/(iz)$이다.
 
 이 치환을 적분에 대입하면 실수 적분이 단위원 $\lvert z\rvert = 1$을 따른 복소적분으로 바뀌고, 피적분함수 $F(z) = R(\cdots)/(iz)$은 $z$의 유리함수이다. 가정에서 $R$의 분모가 $[0, 2\pi]$의 $\theta$에 대해 사라지지 않으므로 $F$은 단위원 위 ($\lvert z\rvert = 1$) 에 극을 갖지 않고, 따라서 유한 개의 극이 단위원판 안팎에 흩어져 있다. 단위원이 안쪽 극을 각각 한 번 감으므로 유수정리 (정리 2) 에 의해 적분이 $2\pi i$ 곱하기 단위원판 안 극들의 유수 합이다.
 :::
@@ -255,7 +255,7 @@ $$\sum_{n = -\infty}^{\infty} f(n) = -\sum_{j}\operatorname{Res}_{z = z_j}\Bigl[
 
 $$\operatorname{Res}_{z = n}\pi\cot\pi z = \operatorname{Res}_{z = n}\frac{\pi\cos\pi z}{\sin\pi z} = \frac{\pi\cos\pi n}{\pi\cos\pi n} = 1$$
 
-이다. 따라서 $g_f(z) = \pi\cot(\pi z)f(z)$은 각 정수 $n$ (단, $f$의 극이 아닌) 에서 단순극을 가지며, 그 유수는 $f(n)$이 정칙이므로
+이다. 따라서 $g_f(z) = \pi\cot(\pi z)f(z)$은 각 정수 $n$ (단, $f$의 극이 아닌) 에서 단순극을 가지며, 그 유수는 $f(n)$이 holomorphic이므로
 
 $$\operatorname{Res}_{z = n} g_f = f(n)\operatorname{Res}_{z = n}\pi\cot\pi z = f(n)$$
 

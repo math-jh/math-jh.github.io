@@ -289,7 +289,7 @@ $$\length(G)=\length(G/N)+\length(N)$$
 
 ## 대칭군의 가해성
 
-가해성의 가장 고전적인 응용은 대칭군이 언제부터 가해가 아닌지를 가르는 것이며, 그 분기점은 $A_5$의 단순성에 있다 ([§대칭군, ⁋예시 13](/ko/math/group_theory/symmetric_groups#ex13)).
+가해성의 가장 고전적인 응용은 symmetric group이 언제부터 가해가 아닌지를 가르는 것이며, 그 분기점은 $A_5$의 단순성에 있다 ([§대칭군, ⁋예시 13](/ko/math/group_theory/symmetric_groups#ex13)).
 
 ::: 명제 18
 $A_5$는 가해군이 아니다.
@@ -300,10 +300,10 @@ $A_5$는 가해군이 아니다.
 이제 [정의 9](#def9)의 derived series를 본다. 교환자부분군 $D_1(A_5)=[A_5,A_5]$는 언제나 normal subgroup이며, $A_5$가 non-abelian이므로 $D_1(A_5)\neq\{e\}$이다. $A_5$가 simple이므로 $D_1(A_5)=A_5$일 수밖에 없고, 따라서 귀납적으로 모든 $n$에 대하여 $D_n(A_5)=A_5\neq\{e\}$이다. 어떤 $n$에서도 $D_{n+1}(A_5)=\{e\}$가 성립할 수 없으므로, [정의 11](#def11)에 의해 $A_5$는 가해군이 아니다.
 :::
 
-가해성이 subgroup으로 유전된다는 사실과 결합하면, 대칭군의 가해성에 대한 결론이 곧바로 따라온다.
+가해성이 subgroup으로 유전된다는 사실과 결합하면, symmetric group의 가해성에 대한 결론이 곧바로 따라온다.
 
 ::: 따름정리 19
-$n\geq 5$이면 대칭군 $S_n$은 가해군이 아니다.
+$n\geq 5$이면 symmetric group $S_n$은 가해군이 아니다.
 :::
 ::: 증명
 먼저 가해군의 subgroup이 다시 가해임을 본다. Subgroup $H\subseteq G$의 포함사상 $\iota:H\hookrightarrow G$에 [명제 10](#prop10)을 적용하면 $D_n(H)\subseteq D_n(G)$이므로, $G$가 가해여서 어떤 $n$에 $D_n(G)=\{e\}$이면 $D_n(H)=\{e\}$가 되어 $H$도 가해이다.

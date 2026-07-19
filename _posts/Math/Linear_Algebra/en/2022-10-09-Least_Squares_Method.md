@@ -45,7 +45,7 @@ This process can be summarized as follows.
 ::: Proposition 1
 For an arbitrary matrix $A\in\Mat_{m\times n}(\mathbb{R})$ and $y\in\mathbb{R}^m$, a vector $x\in\mathbb{R}^n$ minimizes the value of the real number $\lVert Au-y\rVert$ if and only if the following equation holds:
 
-$A^tAx=A^ty$
+$$A^tAx=A^ty$$
 :::
 
 The example discussed in the introduction can be solved in the following way.
@@ -148,7 +148,7 @@ Now let us consider the case where we can construct this minimum-norm solution e
 ::: Proposition 6
 If a matrix $A\in\Mat_{m\times n}(\mathbb{R})$ satisfies $\rank A=m$, then $AA^t\in\Mat_m(\mathbb{R})$ is invertible, and for any $y\in\mathbb{R}^m$ the minimum-norm solution of the equation $Ax=y$ is given by
 
-$x=A^t(AA^t)^{-1}y$
+$$x=A^t(AA^t)^{-1}y$$
 :::
 ::: Proof
 First we show that $AA^t$ is invertible. Since $AA^t$ is an $m\times m$ square matrix, it suffices to show that $AA^tz=0$ has only the solution $z=0$. If $AA^tz=0$, then

@@ -101,7 +101,7 @@ Meanwhile, since the derivative is ultimately the limit of the average rate of c
 ::: Proposition 4
 If $f$ and $g$ are differentiable at $a$ and $c$ is a constant, then $f + g$ and $cf$ are also differentiable at $a$, and
 
-$(f+g)'(a) = f'(a) + g'(a), \qquad (cf)'(a) = c f'(a).$
+$$(f+g)'(a) = f'(a) + g'(a), \qquad (cf)'(a) = c f'(a).$$
 :::
 
 ::: Proof

@@ -74,7 +74,7 @@ $$(A-I)^3=\begin{pmatrix}0&0&0\\0&0&0\\0&0&0\end{pmatrix}$$
 
 so
 
-$\ker (A-I)^3=\span \{(1,0,0), (0,1,0), (0,0,1)\}$
+$$\ker (A-I)^3=\span \{(1,0,0), (0,1,0), (0,0,1)\}$$
 :::
 
 Though calling it intuition is perhaps a bit grandiose, we can at least verify that the observation mentioned above works well in this example. Now let us introduce the following definition for the main story.
@@ -275,7 +275,7 @@ Anyway, after going through this process, we know that an arbitrary nilpotent op
 ::: Definition 11
 The *Jordan block* of size $k$, $J_k(\lambda)$, is defined as the following $k\times k$ matrix
 
-$J_k(\lambda)=\begin{pmatrix}\lambda&1&0&\cdots&0\\0&\lambda&1&\cdots&0\\\vdots&\vdots&\ddots&\ddots&\vdots\\0&0&\cdots&\lambda&1\\0&0&\cdots&0&\lambda\end{pmatrix}$
+$$J_k(\lambda)=\begin{pmatrix}\lambda&1&0&\cdots&0\\0&\lambda&1&\cdots&0\\\vdots&\vdots&\ddots&\ddots&\vdots\\0&0&\cdots&\lambda&1\\0&0&\cdots&0&\lambda\end{pmatrix}$$
 :::
 
 Then combining [Theorem 6](#thm6) and [Theorem 9](#thm9), we obtain the following theorem.
@@ -331,7 +331,7 @@ The Jordan canonical form depends on the assumption that $\mathbb{K}$ is algebra
 ::: Definition 14
 For a monic polynomial $p(\x)=\x^d+c_{d-1}\x^{d-1}+\cdots+c_1\x+c_0$, its *companion matrix* $C(p)$ is defined as the following $d\times d$ matrix
 
-$C(p)=\begin{pmatrix}0&0&\cdots&0&-c_0\\1&0&\cdots&0&-c_1\\0&1&\cdots&0&-c_2\\\vdots&\vdots&\ddots&\vdots&\vdots\\0&0&\cdots&1&-c_{d-1}\end{pmatrix}$
+$$C(p)=\begin{pmatrix}0&0&\cdots&0&-c_0\\1&0&\cdots&0&-c_1\\0&1&\cdots&0&-c_2\\\vdots&\vdots&\ddots&\vdots&\vdots\\0&0&\cdots&1&-c_{d-1}\end{pmatrix}$$
 :::
 
 An operator $T:V\rightarrow V$ is called *cyclic* if there exists suitable $v\in V$ such that $\{v,Tv,\ldots,T^{d-1}v\}$ ($d=\dim V$) is a basis of $V$; such a $v$ is called a cyclic vector.

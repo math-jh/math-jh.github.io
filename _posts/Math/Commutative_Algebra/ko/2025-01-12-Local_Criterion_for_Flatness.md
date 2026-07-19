@@ -118,7 +118,7 @@ $$\cdots \rightarrow N\otimes_A F_2 \rightarrow N\otimes_AF_1 \rightarrow N\otim
 
 $$\cdots \rightarrow F_2/aF_2 \rightarrow F_1/aF_1 \rightarrow F_0/aF_0 \rightarrow M/aM \rightarrow 0\tag{2}$$
 
-를 생각하자. 그럼 이 complex의 호몰로지는
+를 생각하자. 그럼 이 complex의 homology는
 
 $$\Tor_i^A(A/(a), M)=\begin{cases} M/aM&\text{if $i=0$}\\ 0&\text{otherwise}\end{cases}$$
 

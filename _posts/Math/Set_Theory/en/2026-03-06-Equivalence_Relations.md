@@ -39,7 +39,7 @@ This can be summarized as follows.
 ::: Proposition 3
 A binary relation $(R,A,A)$ is an equivalence relation if and only if the following three conditions hold:
 
-$\pr_1R=A,\qquad R=R^{-1},\qquad R\circ R=R$
+$$\pr_1R=A,\qquad R=R^{-1},\qquad R\circ R=R$$
 :::
 ::: Proof
 First, assume that $R$ is an equivalence relation.  
