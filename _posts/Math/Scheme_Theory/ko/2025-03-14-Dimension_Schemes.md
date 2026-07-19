@@ -41,10 +41,29 @@ $$Y_0\subsetneq Y_1\subsetneq\cdots\subsetneq Y_r$$
 한편 우리는 [§스킴 사상의 성질들, ⁋명제 14](/ko/math/scheme_theory/properties_of_scheme_morphisms#prop14)에서 finite morphism은 integral morphism of finite type인 것을 살펴보았으며, [§올곱, ⁋명제 14](/ko/math/scheme_theory/fiber_products#prop14)에서 임의의 finite morphism은 quasi-finite인 것을 살펴보았다. 일반적으로 integral morphism이지만 finite type은 아닌 morphism이 존재하며, 따라서 아직까지는 integral morphism의 fiber에 대한 이야기를 할 수가 없다.
 
 ::: 예시 3
-예를 들어 $\mathbb{Q}$의 algebraic closure $\overline{\mathbb{Q}}$를 생각하자. $\overline{\mathbb{Q}}$의 임의의 원소는 $\mathbb{Q}$ 위에서 algebraic하므로 integral이고, 따라서 $\mathbb{Q} \rightarrow \overline{\mathbb{Q}}$는 integral extension이며 이로부터 scheme morphism $\Spec \overline{\mathbb{Q}} \rightarrow \Spec \mathbb{Q}$도 integral morphism이다.
+예를 들어 $\mathbb{Q}$의 algebraic closure $\overline{\mathbb{Q}}$를 생각하자. $\overline{\mathbb{Q}}$의 임의의 원소는 $\mathbb{Q}$ 위에서 algebraic하므로 integral이고, 따라서 $\mathbb{Q} \rightarrow \overline{\mathbb{Q}}$는 integral extension이며 이로부터 scheme morphism $\varphi:\Spec \overline{\mathbb{Q}} \rightarrow \Spec \mathbb{Q}$도 integral morphism이다.
 
-한편 [§올곱, ⁋명제 15](/ko/math/scheme_theory/fiber_products#prop15)에 의하여 integral morphism은 base change에 의해 보존되므로, 이를 $\Spec \overline{\mathbb{Q}} \rightarrow \Spec \mathbb{Q}$를 통해 base change를 한 $\Spec \overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}} \rightarrow \Spec \overline{\mathbb{Q}}$도 integral이다. 그러나 $\overline{\mathbb{Q}}\otimes \overline{\mathbb{Q}}$의 prime ideal은 $\Gal(\overline{\mathbb{Q}}/\mathbb{Q})$와 일대일로 대응되므로 $\Spec\overline{\mathbb{Q}}\otimes \overline{\mathbb{Q}}$은 무한집합이고, 따라서 $\Spec \overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}} \rightarrow \Spec \overline{\mathbb{Q}}$는 quasi-finite morphism이 아니므로 finite morphism도 아니다. 
+이제 $\varphi$를 $\Spec\overline{\mathbb{Q}}\rightarrow\Spec\mathbb{Q}$로 base change하면, 다음의 pullback diagram
+
+![pullback](/assets/images/Math/Scheme_Theory/Dimension_Schemes-1.svg){:style="width:13.60em" class="invert" .align-center}
+
+을 얻으며, 이 때 좌측 수직방향의 map
+
+$$\Spec(\overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}})\rightarrow \Spec \overline{\mathbb{Q}}$$
+
+또한 [§올곱, ⁋명제 15](/ko/math/scheme_theory/fiber_products#prop15)에 의하여 integral이다. 
+
+이 map을 살펴보기 위해, 구체적으로 ring homomorphism $\overline{\mathbb{Q}}\rightarrow \overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}}$를 살펴보자. 
+
+
+이 source의 점들을 살펴보자. 각 $\sigma\in\Gal(\overline{\mathbb{Q}}/\mathbb{Q})$에 대하여 surjective ring homomorphism
+
+$$\overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}}\rightarrow\overline{\mathbb{Q}},\qquad a\otimes b\mapsto a\sigma(b)$$
+
+의 kernel $\mathfrak{p}_\sigma$는 maximal ideal이므로 $\Spec(\overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}})$의 한 점을 정의한다. $\sigma\neq\tau$이면 $\sigma(b)\neq\tau(b)$인 $b\in\overline{\mathbb{Q}}$를 택할 때 $1\otimes b-\sigma(b)\otimes 1\in\mathfrak{p}_\sigma$이지만 $\mathfrak{p}_\tau$에는 속하지 않으므로 $\mathfrak{p}_\sigma\neq\mathfrak{p}_\tau$이다. 따라서 $\Spec(\overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}})$은 적어도 $\Gal(\overline{\mathbb{Q}}/\mathbb{Q})$만큼의, 곧 무한히 많은 점을 가지며, $\Spec(\overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}})\rightarrow\Spec\overline{\mathbb{Q}}$는 quasi-finite morphism이 아니므로 finite morphism도 아니다.
 :::
+
+기하적으로, $\Spec\overline{\mathbb{Q}}\to\Spec\mathbb{Q}$는 한 점에서 한 점으로 가는 사상이지만, 위 pullback에서 보듯 base change의 source인 $\Spec(\overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}})$는 각 $\sigma\in\Gal(\overline{\mathbb{Q}}/\mathbb{Q})$마다 점 $\mathfrak{p}_\sigma$를 갖는다. 각 $\sigma$는 두 $\overline{\mathbb{Q}}$가 $\mathbb{Q}$ 위에서 어떻게 연관되는지를 나타내며, 곧 한 점이 자기 자신과 $\mathbb{Q}$ 위에서 fiber product를 취하면 그 점에 숨어 있던 $\mathbb{Q}$ 위의 대칭인 Galois group이 각각의 점으로 드러나는 셈이다. 친숙한 유한 판으로 $\Spec\mathbb{C}\to\Spec\mathbb{R}$을 $\mathbb{C}$로 base change하면 $\mathbb{C}\otimes_\mathbb{R}\mathbb{C}\cong\mathbb{C}\times\mathbb{C}$에서 두 점이 나오는 것($\lvert\Gal(\mathbb{C}/\mathbb{R})\rvert=2$)을 생각할 수 있고, $\overline{\mathbb{Q}}/\mathbb{Q}$는 그 무한 버전이다.
 
 그러나 다음이 성립한다.
 
