@@ -1,0 +1,22 @@
+_posts/Math/Analysis/ko/2026-06-02-Uniform_Convergence.md|리 미분
+_posts/Math/Complex_Analysis/ko/2026-06-21-Riemann_Mapping_Theorem.md|동형류
+_posts/Math/Complex_Geometry/ko/2026-06-22-Kahler_Manifolds.md|복소다양체
+_posts/Math/Complex_Geometry/ko/2026-06-22-Kahler_Manifolds.md|사교다양체
+_posts/Math/Complex_Geometry/ko/2026-06-22-Kahler_Manifolds.md|외미분
+_posts/Math/Complex_Geometry/ko/2026-06-22-Kodaira_Embedding_Theorem.md|다양체
+_posts/Math/Complex_Geometry/ko/2026-06-22-Kodaira_Embedding_Theorem.md|복소다양체
+_posts/Math/Complex_Geometry/ko/2026-06-22-Kodaira_Embedding_Theorem.md|영공간의 차원
+_posts/Math/Derived_Algebraic_Geometry/ko/2026-07-01-Derived_Schemes.md|교차수
+_posts/Math/Derived_Algebraic_Geometry/ko/2026-07-01-Shifted_Symplectic_Structures.md|정규화
+_posts/Math/Gromov_Witten_Theory/ko/2026-07-10-Log_Stable_Maps.md|쌍대 격자
+_posts/Math/Gromov_Witten_Theory/ko/2026-07-10-Perfect_Obstruction_Theory.md|동치류
+_posts/Math/Lie_Theory/ko/2025-01-07-Kazhdan_Lusztig_Polynomial.md|정규화
+_posts/Math/Lie_Theory/ko/2026-06-20-Universal_Enveloping_Algebra.md|대칭대수
+_posts/Math/Lie_Theory/ko/2026-06-21-Compact_Real_Form.md|정규화
+_posts/Math/Scheme_Theory/ko/2025-03-08-Complete_Intersections.md|동차다항식
+_posts/Math/Scheme_Theory/ko/2026-06-21-Sheaf_of_Differentials.md|대수다양체
+_posts/Math/Sheaf_Theory/ko/2026-07-01-Verdier_Duality.md|다양체
+_posts/Math/Stacks/ko/2026-07-01-Fibered_Categories_and_Stacks.md|호모토피
+_posts/Math/Toric_Geometry/ko/2026-03-09-Cox_Construction_and_GIT_Quotient.md|유한생성
+_posts/Math/Toric_Geometry/ko/2026-07-01-Atiyah_Bott_Localization.md|국소화
+_posts/Math/Toric_Geometry/ko/2026-07-01-Atiyah_Bott_Localization.md|부분군
