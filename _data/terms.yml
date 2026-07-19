@@ -1816,6 +1816,13 @@ D:
   defs:
   - label: '[미분다양체] §미분형식'
     url: /ko/math/manifolds/differential_forms
+- id: dihedral_group
+  en: dihedral group
+  ko: 이면군
+  primary: en
+  defs:
+  - label: '[대수적 구조] §반군, 모노이드, 군'
+    url: /ko/math/algebraic_structures/groups
 - id: dimension
   en: dimension
   ko: 차원
@@ -2422,6 +2429,8 @@ F:
   defs:
   - label: '[다중선형대수학] §완전열'
     url: /ko/math/multilinear_algebra/exact_sequences
+  - label: '[대수적 구조] §반군, 모노이드, 군'
+    url: /ko/math/algebraic_structures/groups
   see:
   - label: Finitely presented
     id: finitely_presented
@@ -2661,6 +2670,8 @@ G:
     url: /ko/math/algebraic_structures/modules
   - label: '[다중선형대수학] §기저'
     url: /ko/math/multilinear_algebra/basis_of_free_modules
+  - label: '[대수적 구조] §반군, 모노이드, 군'
+    url: /ko/math/algebraic_structures/groups
 - id: generating_set
   en: generating set
   ko: 생성집합
@@ -2668,6 +2679,13 @@ G:
   defs:
   - label: '[다중선형대수학] §완전열'
     url: /ko/math/multilinear_algebra/exact_sequences
+- id: generator
+  en: generator
+  ko: 생성원
+  primary: en
+  defs:
+  - label: '[대수적 구조] §반군, 모노이드, 군'
+    url: /ko/math/algebraic_structures/groups
 - id: generic_point
   en: generic point
   ko: 일반점
@@ -4646,6 +4664,13 @@ O:
   defs:
   - label: '[대수적 구조] §군의 작용'
     url: /ko/math/algebraic_structures/group_actions
+- id: order
+  en: order
+  ko: 위수
+  primary: en
+  defs:
+  - label: '[대수적 구조] §반군, 모노이드, 군'
+    url: /ko/math/algebraic_structures/groups
 - id: order_isomorphism
   en: order isomorphism
   ko: 순서동형사상
@@ -4920,6 +4945,13 @@ P:
   see:
   - label: Order relation
     id: order_relation
+- id: presentation
+  en: presentation
+  ko: 표시
+  primary: en
+  defs:
+  - label: '[대수적 구조] §반군, 모노이드, 군'
+    url: /ko/math/algebraic_structures/groups
 - id: presheaf
   en: presheaf
   ko: 준층
@@ -5502,6 +5534,8 @@ R:
   defs:
   - label: '[집합론] §이항관계'
     url: /ko/math/set_theory/binary_relation
+  - label: '[대수적 구조] §반군, 모노이드, 군'
+    url: /ko/math/algebraic_structures/groups
 - id: relative_tangent_bundle
   en: relative tangent bundle
   ko: 상대접다발
