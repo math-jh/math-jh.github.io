@@ -188,6 +188,7 @@
       var triggers = document.querySelectorAll('a[href$="/ko/terms"], a[href$="/ko/terms/"]');
       for (var i = 0; i < triggers.length; i++) {
         if (triggers[i].closest('#terms-overlay')) continue; // 오버레이 안의 링크는 그대로
+        if (triggers[i].hasAttribute('data-no-overlay')) continue; // 실제 페이지로 보내는 링크 (About 본문 등)
         triggers[i].addEventListener('click', function (e) { e.preventDefault(); open(); });
       }
     }
