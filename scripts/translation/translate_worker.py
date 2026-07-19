@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """
-translate_worker.py — single-shot Kimi ko→en translation worker.
+translate_worker.py — single-shot ko→en translation worker (GLM via claudeglm).
 
-Designed for half-hourly cron. Picks ONE Korean blog post that needs translation
-(missing en/ counterpart, or en/ exists but ko/ is newer = drift), sends it
-to Kimi via the local `kimi` CLI (OAuth-authenticated), writes en/ counterpart.
+Designed for half-hourly cron (:15/:45). Picks ONE Korean blog post that needs
+translation (missing en/ counterpart, or drift_needed), sends it to GLM through
+the `claudeglm -p` headless CLI (Anthropic-compatible endpoint, glm-5.2), writes
+the en/ counterpart. 2026-07-20 engine swap: Kimi CLI → claudeglm; the old
+`kimi` path is kept behind TRANSLATOR_BACKEND="kimi" for rollback.
 
 Usage:
     python3 translate_worker.py            # run one translation, exit
@@ -52,6 +54,9 @@ LOCK_PATH   = Path("/tmp/translate-worker.lock")
 # Kimi CLI
 # ---------------------------------------------------------------------------
 
+# 번역 엔진 백엔드: "glm"(기본, claudeglm -p 헤드리스) 또는 "kimi"(구 경로, 롤백용).
+TRANSLATOR_BACKEND    = os.environ.get("TRANSLATOR_BACKEND", "glm")
+GLM_BIN               = str(Path.home() / ".local/bin/claudeglm")
 KIMI_BIN              = shutil.which("kimi") or str(Path.home() / ".local/bin/kimi")
 # No-tools agent + empty MCP for the single-shot verify/audit call (see call_kimi).
 VERIFY_AGENT_FILE     = str(SCRIPT_DIR / "verify-agent.yaml")
@@ -59,13 +64,9 @@ VERIFY_MCP_FILE       = str(SCRIPT_DIR / "verify-mcp.json")
 KIMI_TIMEOUT_SEC      = 1500                 # 25min — large posts (>30KB) often need >15min
 MAX_TRANSLATE_ATTEMPTS = 3                   # re-translate on LOSSY verify verdict, up to N tries
 
-# Claude verify session. The semantic verify runs through a long-lived
-# interactive `claude --model haiku` tmux session ("translation-verify"), NOT
-# `claude -p`: on this machine `claude -p` bills the pay-as-you-go API credit
-# (the rate-limit safety net) before the subscription, while an interactive
-# session bills the subscription. The worker writes the prompt to a file, asks
-# the session (verify_session.sh) to process it, and polls for the `.done`
-# sentinel the session creates after writing its verdict.
+# Claude verify. 2026-07-20부터 `claude -p --model haiku` 직접 호출 (구독
+# 과금 확인됨). 옛 tmux 상주 세션 경로(verify_session.sh, .done 폴링)는
+# 과금 정책 롤백 대비로 파일과 상수를 남겨 둔다 — call_claude_verify 참고.
 CLAUDE_VERIFY_SCRIPT       = str(SCRIPT_DIR / "verify_session.sh")
 CLAUDE_VERIFY_DIR          = Path("/tmp/translation-verify")
 CLAUDE_VERIFY_SEND_TIMEOUT = 120             # cold launch (spawn + wait_ready) headroom
@@ -1031,12 +1032,18 @@ def call_kimi(prompt: str, *, thinking: bool = False,
     is NOT a safe substitute — the model spends step 1 on the tool call, so any
     low cap truncates before the verdict and exits non-zero on big posts.
     """
-    args = [KIMI_BIN, "--quiet", "--print", "--final-message-only",
-            "--thinking" if thinking else "--no-thinking"]
-    if agent_file is not None:
-        args += ["--agent-file", agent_file]
-    if mcp_config_file is not None:
-        args += ["--mcp-config-file", mcp_config_file]
+    if TRANSLATOR_BACKEND == "glm":
+        # claudeglm -p: 헤드리스 단발. 도구는 안 준다 (allowedTools 미지정 =
+        # 전부 거부) — 위의 Kimi agentic-loop 폭주와 같은 사고를 원천 차단.
+        # thinking/agent_file/mcp_config_file 은 kimi 전용이라 무시된다.
+        args = [GLM_BIN, "-p", "--output-format", "text"]
+    else:
+        args = [KIMI_BIN, "--quiet", "--print", "--final-message-only",
+                "--thinking" if thinking else "--no-thinking"]
+        if agent_file is not None:
+            args += ["--agent-file", agent_file]
+        if mcp_config_file is not None:
+            args += ["--mcp-config-file", mcp_config_file]
     proc = subprocess.run(
         args,
         input=prompt,
@@ -1047,12 +1054,13 @@ def call_kimi(prompt: str, *, thinking: bool = False,
     )
     if proc.returncode != 0:
         raise RuntimeError(
-            f"kimi CLI exited {proc.returncode}: "
+            f"{Path(args[0]).name} CLI exited {proc.returncode}: "
             f"stderr={proc.stderr.strip()[:500]!r}"
         )
     out = proc.stdout
     if not out.strip():
-        raise RuntimeError(f"kimi returned empty output; stderr={proc.stderr.strip()[:500]!r}")
+        raise RuntimeError(f"{Path(args[0]).name} returned empty output; "
+                           f"stderr={proc.stderr.strip()[:500]!r}")
     # Defensive: strip code fences if Kimi wrapped output
     out = _FENCE_RE.sub("", out).strip() + "\n"
     # Defensive: Kimi occasionally outputs `---title: ...` with no newline
@@ -1334,65 +1342,35 @@ KO-TYPOS:
 
 
 def call_claude_verify(prompt: str) -> str:
-    """Run one verify task through the subscription-billed `translation-verify`
-    claude session and return its verdict text.
+    """Run one verify task via `claude -p --model haiku` and return the verdict.
 
-    Writes `prompt` (plus file-output directives) to an input file, asks the
-    session via verify_session.sh to process it, then polls for the `.done`
-    sentinel the session creates after writing its verdict to `<token>.txt`.
-    Raises subprocess.TimeoutExpired if `.done` never appears, RuntimeError on
-    an empty verdict. `claude -p` is deliberately avoided — it bills the
-    pay-as-you-go API safety net, not the subscription (see constants above).
+    2026-07-20: `claude -p` 가 구독 과금으로 바뀌어 (사용자 확인) tmux 상주
+    세션 우회가 불필요해졌다. 구 경로(verify_session.sh + .done 폴링)는
+    파일로 보존 — 과금 정책이 되돌아오면 그대로 복원할 것.
+    Raises RuntimeError on nonzero exit or empty verdict.
     """
-    global _verify_session_used
-    _verify_session_used = True
-    in_dir, out_dir = CLAUDE_VERIFY_DIR / "in", CLAUDE_VERIFY_DIR / "out"
-    in_dir.mkdir(parents=True, exist_ok=True)
-    out_dir.mkdir(parents=True, exist_ok=True)
-
-    token    = hashlib.sha1(f"{time.time()}:{len(prompt)}".encode()).hexdigest()[:16]
-    in_md    = in_dir / f"{token}.md"
-    out_txt  = out_dir / f"{token}.txt"
-    out_done = out_dir / f"{token}.done"
-
     full = prompt + (
         "\n\n---\n"
-        "Write ONLY the verdict block (the lines beginning `VERDICT:` and "
-        "`FINDINGS:` — no preamble, no explanation, no code fence) to this exact "
-        f"file:\n  {out_txt}\n"
-        "After that file is written, create an empty marker file:\n"
-        f"  {out_done}\n"
-        "Do not read or write any other file.\n"
+        "Output ONLY the verdict block (the lines beginning `VERDICT:` and "
+        "`FINDINGS:` — no preamble, no explanation, no code fence). "
+        "Do not use any tools.\n"
     )
-    in_md.write_text(full, encoding="utf-8")
-
-    try:
-        proc = subprocess.run(
-            ["bash", CLAUDE_VERIFY_SCRIPT, str(in_md)],
-            capture_output=True, text=True, timeout=CLAUDE_VERIFY_SEND_TIMEOUT,
+    claude_bin = shutil.which("claude") or str(Path.home() / ".local/bin/claude")
+    proc = subprocess.run(
+        [claude_bin, "-p", "--model", "haiku", "--output-format", "text"],
+        input=full, capture_output=True, text=True,
+        timeout=CLAUDE_VERIFY_DONE_TIMEOUT,
+        cwd=str(BLOG_ROOT),
+    )
+    if proc.returncode != 0:
+        raise RuntimeError(
+            f"claude -p verify exited {proc.returncode}: "
+            f"{proc.stderr.strip()[:300]!r}"
         )
-        if proc.returncode != 0:
-            raise RuntimeError(
-                f"verify_session.sh exited {proc.returncode}: "
-                f"{proc.stderr.strip()[:300]!r}"
-            )
-        waited = 0.0
-        while waited < CLAUDE_VERIFY_DONE_TIMEOUT:
-            if out_done.exists():
-                out = out_txt.read_text(encoding="utf-8") if out_txt.exists() else ""
-                out = _FENCE_RE.sub("", out).strip()
-                if not out:
-                    raise RuntimeError("verify session produced empty verdict")
-                return out
-            time.sleep(3)
-            waited += 3
-        raise subprocess.TimeoutExpired(CLAUDE_VERIFY_SCRIPT, CLAUDE_VERIFY_DONE_TIMEOUT)
-    finally:
-        for p in (in_md, out_txt, out_done):
-            try:
-                p.unlink()
-            except FileNotFoundError:
-                pass
+    out = _FENCE_RE.sub("", proc.stdout).strip()
+    if not out:
+        raise RuntimeError("claude -p verify produced empty verdict")
+    return out
 
 
 def verify_math_mismatch(
