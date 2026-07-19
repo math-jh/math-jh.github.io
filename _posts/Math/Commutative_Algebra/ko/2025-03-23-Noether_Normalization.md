@@ -78,5 +78,22 @@ $$\mathfrak{a}_i\cap B_e\supseteq (\x_{e+1},\ldots, \x_d)$$
 [정리 1](#thm1)은 다음의 결과를 준다.
 
 ::: 정리 3
-Ring $A$가 integral domain이고, finitely generated $\mathbb{K}$-algebra라 하자. 그럼 $\dim A=\trdeg_\mathbb{K}\Frac(A)$이다. 
+Ring $A$가 integral domain이고, finitely generated $\mathbb{K}$-algebra라 하자. 그럼 $\dim A=\trdeg_\mathbb{K}\Frac(A)$이다.
+:::
+
+[정리 3](#thm3)은 quotient를 취한 상황으로 자연스럽게 일반화되어, 다음의 *차원 공식<sub>dimension formula</sub>*을 준다.
+
+::: 정리 4
+Finitely generated $\mathbb{K}$-algebra domain $A$와 그 prime ideal $\mathfrak{p}$에 대하여 다음이 성립한다.
+
+$$\dim A/\mathfrak{p}+\operatorname{ht}\mathfrak{p}=\dim A$$
+:::
+::: 증명
+부등식 $\dim A/\mathfrak{p}+\operatorname{ht}\mathfrak{p}\leq\dim A$는 임의의 ring에 대하여 성립하므로 ([§차원, ⁋정의 2](/ko/math/commutative_algebra/Krull_dimension#def2)), 반대 부등식만 보이면 된다. $n=\dim A$, $d=\dim A/\mathfrak{p}=\dim\mathfrak{p}$라 두자. [정리 1](#thm1)을 $A$의 ideal $\mathfrak{a}_1=\mathfrak{p}$ 하나로 이루어진 chain에 적용하면, $A$의 subring $B\cong\mathbb{K}[\x_1,\ldots, \x_n]$이 존재하여 $A$가 finitely generated $B$-module이고 $\mathfrak{p}\cap B=(\x_{d+1},\ldots, \x_n)$을 만족한다. 그럼 $B\hookrightarrow A$가 integral extension이므로 [\[가환대수학\] §정수적 확장과 아이디얼, ⁋명제 1](/ko/math/commutative_algebra/lying_over_and_going_up#prop1)과 [따름정리 4](/ko/math/commutative_algebra/lying_over_and_going_up#cor4)에 의하여 $\operatorname{ht}_A\mathfrak{p}=\operatorname{ht}_B(\mathfrak{p}\cap B)$이다.
+
+이제 polynomial ring $B=\mathbb{K}[\x_1,\ldots, \x_n]$에서 ideal $(\x_{d+1},\ldots, \x_n)$의 height를 계산하자. chain
+
+$$(0)\subset(\x_n)\subset(\x_{n-1},\x_n)\subset\cdots\subset(\x_{d+1},\ldots, \x_n)$$
+
+은 이 ideal의 height가 적어도 $n-d$임을 보여주며, 몫환 $B/(\x_{d+1},\ldots, \x_n)\cong\mathbb{K}[\x_1,\ldots, \x_d]$가 $d$차원이므로 ([§매개계, ⁋따름정리 11](/ko/math/commutative_algebra/system_of_parameters#cor11)) 부등식 $\dim+\operatorname{ht}\leq n$으로 height는 기껏해야 $n-d$이다. 따라서 $\operatorname{ht}_B(\x_{d+1},\ldots, \x_n)=n-d$이며, 결국 $\operatorname{ht}\mathfrak{p}=n-d=\dim A-\dim A/\mathfrak{p}$이다.
 :::
