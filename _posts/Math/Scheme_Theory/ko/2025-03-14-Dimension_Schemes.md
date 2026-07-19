@@ -25,16 +25,23 @@ Scheme $X$의 *dimension<sub>차원</sub>*은 위상공간 $X$의 Krull dimensio
 
 그럼 [§스펙트럼, ⁋명제 16](/ko/math/scheme_theory/spectrums#prop16)의 Galois correspondence로부터 우리는 $\Spec A$의 scheme으로서의 차원과 $A$의 ring으로서의 차원이 같다는 것을 안다. ([\[가환대수학\] §차원, ⁋정의 1](/ko/math/commutative_algebra/Krull_dimension#def1)) 뿐만 아니라, 정의에 의하여 $\Spec A$와 $\Spec A/\mathfrak{N}(A)$가 homeomorphic하다는 것을 보일 수 있으므로 $\dim A=\dim A/\mathfrak{N}(A)$가 성립한다. 즉 reducedness는 차원에 영향을 주지 않는다. 
 
-한편 [\[위상수학\] §차원, ⁋명제 13](/ko/math/topology/dimension#prop13)와 마찬가지 이유로 다음이 성립한다. 
+한편 [\[위상수학\] §차원, ⁋명제 14](/ko/math/topology/dimension#prop14)와 마찬가지 이유로 다음이 성립한다. 
 
 ::: 명제 2
 임의의 scheme $X$에 대하여, $\dim X=n$인 것은 $X$의 affine open covering $(U_i)$가 존재하여, 모든 $U_i$에 대하여 $\dim U_i\leq n$이고, 적어도 하나의 $i$에 대해서는 등호가 성립하는 것과 동치이다. 
+:::
+::: 증명
+$X$의 임의의 irreducible closed subset들의 chain
+
+$$Y_0\subsetneq Y_1\subsetneq\cdots\subsetneq Y_r$$
+
+에서 가장 작은 항 $Y_0$의 generic point $\eta_0$는 $X$의 점이므로 covering $(U_i)$에 의해 어떤 $U_i$에 속한다. 그러면 chain의 모든 항이 $U_i$와 만나므로, [\[위상수학\] §차원, ⁋명제 14](/ko/math/topology/dimension#prop14)의 inclusion-preserving bijection을 생각하면 $U_i$ 안의 같은 길이의 chain으로 대응된다. 거꾸로 $U_i$의 임의의 chain은 $X$ 안에서 closure를 취해 올려지므로 $\dim X\geq\dim U_i$이고, 따라서 $\dim X=\sup_i\dim U_i$이며 이는 명제의 조건과 동치이다.
 :::
 
 한편 우리는 [§스킴 사상의 성질들, ⁋명제 14](/ko/math/scheme_theory/properties_of_scheme_morphisms#prop14)에서 finite morphism은 integral morphism of finite type인 것을 살펴보았으며, [§올곱, ⁋명제 14](/ko/math/scheme_theory/fiber_products#prop14)에서 임의의 finite morphism은 quasi-finite인 것을 살펴보았다. 일반적으로 integral morphism이지만 finite type은 아닌 morphism이 존재하며, 따라서 아직까지는 integral morphism의 fiber에 대한 이야기를 할 수가 없다.
 
 ::: 예시 3
-예를 들어 $\mathbb{Q}$의 algebraic closure $\overline{\mathbb{Q}}$를 생각하자. 그럼 $\mathbb{Q} \rightarrow \overline{\mathbb{Q}}$는 integral이므로 scheme morphism $\Spec \overline{\mathbb{Q}} \rightarrow \Spec \mathbb{Q}$는 integral이다. 
+예를 들어 $\mathbb{Q}$의 algebraic closure $\overline{\mathbb{Q}}$를 생각하자. $\overline{\mathbb{Q}}$의 임의의 원소는 $\mathbb{Q}$ 위에서 algebraic하므로 integral이고, 따라서 $\mathbb{Q} \rightarrow \overline{\mathbb{Q}}$는 integral extension이며 이로부터 scheme morphism $\Spec \overline{\mathbb{Q}} \rightarrow \Spec \mathbb{Q}$도 integral morphism이다.
 
 한편 [§올곱, ⁋명제 15](/ko/math/scheme_theory/fiber_products#prop15)에 의하여 integral morphism은 base change에 의해 보존되므로, 이를 $\Spec \overline{\mathbb{Q}} \rightarrow \Spec \mathbb{Q}$를 통해 base change를 한 $\Spec \overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}} \rightarrow \Spec \overline{\mathbb{Q}}$도 integral이다. 그러나 $\overline{\mathbb{Q}}\otimes \overline{\mathbb{Q}}$의 prime ideal은 $\Gal(\overline{\mathbb{Q}}/\mathbb{Q})$와 일대일로 대응되므로 $\Spec\overline{\mathbb{Q}}\otimes \overline{\mathbb{Q}}$은 무한집합이고, 따라서 $\Spec \overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}} \rightarrow \Spec \overline{\mathbb{Q}}$는 quasi-finite morphism이 아니므로 finite morphism도 아니다. 
 :::
@@ -45,11 +52,11 @@ Scheme $X$의 *dimension<sub>차원</sub>*은 위상공간 $X$의 Krull dimensio
 Integral morphism $\varphi: X \rightarrow Y$의 임의의 fiber는 항상 $0$차원이다. 
 :::
 ::: 증명
-정의에 의해 $Y$의 한 점 $y$에서의 fiber는 inclusion map $\Spec \kappa(y) \rightarrow Y$에 의한 $\varphi$의 base change
+정의에 의해 $Y$의 한 점 $y$에서의 fiber는 [§스킴, ⁋정의 5](/ko/math/scheme_theory/schemes#def5)의 residue field $\kappa(y)$에 대한 inclusion map $\Spec \kappa(y) \rightarrow Y$에 의한 $\varphi$의 base change
 
 $$\varphi^{-1}(y)=X\times_Y\Spec \kappa(y)$$
 
-으로 주어지며, integral morphism은 base change에 의해 보존되므로 
+으로 주어지며, integral morphism은 base change에 의해 보존되므로 ([§올곱, ⁋명제 15](/ko/math/scheme_theory/fiber_products#prop15))
 
 $$\varphi^{-1}(y)=X\times_Y\Spec \kappa(y) \rightarrow \Spec \kappa(y)$$
 
@@ -60,7 +67,9 @@ $$\mathfrak{q}_1\subsetneq \mathfrak{q}_2$$
 이 존재할 수 없음을 보여야 한다. 이는 [\[가환대수학\] §정수적 확장과 아이디얼, ⁋따름정리 4](/ko/math/commutative_algebra/lying_over_and_going_up#cor4)의 결과이다. 
 :::
 
-위의 명제의 증명에서 사용한 [\[가환대수학\] §정수적 확장과 아이디얼, ⁋따름정리 4](/ko/math/commutative_algebra/lying_over_and_going_up#cor4)는 임의의 integral extension $A\hookrightarrow B$에 대해서도 성립하므로, 더 일반적으로 다음이 성립한다.
+기하적으로, 이 명제는 integral morphism의 각 올이 양의 차원을 갖지 않는다는 것, 즉 올 안에서 curve나 surface가 펼쳐지지 않음을 말해준다. 올은 [예시 3](#ex3)에서 보듯 무한히 많은 점을 가질 수도 있지만 이들은 모두 이산적이어서 올 방향으로의 연속적인 확장이 없으며, 이로부터 integral morphism은 기하적으로 올 방향으로 퍼지지 않는 사상이라는 직관을 얻는다.
+
+위의 명제의 증명에서 사용한 [\[가환대수학\] §정수적 확장과 아이디얼, ⁋따름정리 4](/ko/math/commutative_algebra/lying_over_and_going_up#cor4)는 임의의 integral extension $A\hookrightarrow B$에 대해서도 성립한다. 이에 의해 $B$의 prime ideal chain을 $A$로 contraction하면 여전히 strict하므로 $\dim B\leq\dim A$이고, 거꾸로 [\[가환대수학\] §정수적 확장과 아이디얼, ⁋명제 1](/ko/math/commutative_algebra/lying_over_and_going_up#prop1)의 lying over와 going up에 의해 $A$의 prime ideal chain은 $B$로 올려지므로 $\dim A\leq\dim B$이다. 따라서 더 일반적으로 다음이 성립한다.
 
 ::: 명제 5
 임의의 integral extension $\phi:A \rightarrow B$에 대하여 
@@ -70,7 +79,7 @@ $$\dim\Spec A=\dim\Spec B$$
 가 항상 성립한다. 
 :::
 
-특히 임의의 integral domain $A$와 $A$의 normalization $\tilde{A}$에 대하여, $\Spec \tilde{A}$와 $\Spec A$의 차원은 항상 같다. 이는 더 일반적으로 scheme의 normalization에 대해서도 성립하지만, scheme의 normalization은 이후 별도의 글에서 다룬다.
+특히 임의의 integral domain $A$와 [\[가환대수학\] §정수적 확장, ⁋정의 3](/ko/math/commutative_algebra/integral_extension#def3)에서 정의한 $A$의 normalization $\tilde{A}$에 대하여, extension $A\hookrightarrow\tilde{A}$가 integral이므로 [명제 5](#prop5)에 의하여 $\dim\Spec\tilde{A}=\dim\Spec A$이다. 여기서 normalization은 $A$를 그 field of fractions $\Frac(A)$ 안에서 integrally closed가 되도록 확장한 것이다. 직관적으로는 같은 field of fractions를 유지하면서 singular point를 펴주는 역할을 하는데, 예를 들어 cusp $\mathbb{K}[t^2,t^3]\cong\mathbb{K}[\x,\y]/(\y^2-\x^3)$의 normalization은 $\mathbb{K}[t]$가 되어 singular point가 사라진다. 이는 더 일반적으로 scheme의 normalization에 대해서도 성립하지만, scheme의 normalization은 이후 별도의 글에서 다룬다.
 
 ::: 정의 6
 위상공간 $X$의 irreducible subset $Y$에 대하여, $Y$의 $X$에서의 *codimension<sub>여차원</sub>* $\codim_XY$를 $X$의 irreducible closed subset들의 strictly descending chain 
@@ -150,15 +159,18 @@ $$\alpha_{d_1d_2\cdots d_m}y_m^{r_1d_1+\cdots+r_{m-1}d_{m-1}+d_m}$$
 임의의 field $\mathbb{K}$와, finitely generated $\mathbb{K}$-algebra $A$가 주어졌다 하자. 만일 $A$가 integral domain이라면, $\dim\Spec A=\trdeg_\mathbb{K} \Frac(A)$이 성립한다. 
 :::
 
-위의 주장들에서 가장 중요하게 쓰인 결과는 당연히 [\[가환대수학\] §정수적 확장과 아이디얼](/ko/math/commutative_algebra/lying_over_and_going_up)의 결과들이다. 이와 짝을 이루는 고전적 결과로, normal domain 위에서의 정수적 확장에 대해 성립하는 *going-down 정리*가 있다 (**[AM]**). 이를 사용하면 다음을 얻는다. 
+위의 주장들에서 가장 중요하게 쓰인 결과는 당연히 [\[가환대수학\] §정수적 확장과 아이디얼](/ko/math/commutative_algebra/lying_over_and_going_up)의 결과들이다. 한편 차원 공식 [\[가환대수학\] §뇌터 정규화, ⁋정리 4](/ko/math/commutative_algebra/noether_normalization#thm4)를 사용하면 다음을 얻는다.
 
 ::: 명제 10
-임의의 field $\mathbb{K}$와, finitely generated $\mathbb{K}$-algebra $A$가 주어졌다 하자. 만일 $A$가 integral domain이고, $f\in A$가 non-unit이라면 $\dim A/(f)=\dim A-1$이 성립한다.  
+임의의 field $\mathbb{K}$와, finitely generated $\mathbb{K}$-algebra $A$가 주어졌다 하자. 만일 $A$가 integral domain이고, $f\in A$가 nonzero non-unit이라면 $\dim A/(f)=\dim A-1$이 성립한다.
+:::
+::: 증명
+$(f)$를 포함하는 $A$의 minimal prime $\mathfrak{p}$를 택하자. [\[가환대수학\] §차원, ⁋정리 6](/ko/math/commutative_algebra/Krull_dimension#thm6)에 의하여 $\operatorname{ht}\mathfrak{p}\leq 1$이고, $A$가 domain이고 $f\neq 0$이므로 $(0)\subsetneq\mathfrak{p}$에서 $\operatorname{ht}\mathfrak{p}\geq 1$이다. 따라서 $\operatorname{ht}\mathfrak{p}=1$이며, 차원 공식 [\[가환대수학\] §뇌터 정규화, ⁋정리 4](/ko/math/commutative_algebra/noether_normalization#thm4)에 의하여 $\dim A/\mathfrak{p}=\dim A-1$이다. 이제 $\dim A/(f)$는 $(f)$의 minimal prime $\mathfrak{p}$들에 대한 $\dim A/\mathfrak{p}$의 최댓값으로 주어지는데, 위에서 모든 minimal prime이 height $1$이므로 이 값들은 모두 $\dim A-1$이고, 따라서 $\dim A/(f)=\dim A-1$이다.
 :::
 
 ## Principal ideal theorem
 
-앞서 우리는 임의의 affine integral $\mathbb{K}$-scheme $X=\Spec A$에 대하여, $A$의 non-unit $f$를 통해 정의된 closed subscheme $Z(f)$는 $A$보다 하나 적은 차원을 갖는다는 것을 살펴보았다. 이는 분명 유용한 결과이지만, 다음과 같이 더 일반적인 경우에도 그 결과를 살펴볼 수 있다.
+앞서 우리는 임의의 affine integral $\mathbb{K}$-scheme $X=\Spec A$에 대하여, $A$의 nonzero non-unit $f$를 통해 정의된 closed subscheme $Z(f)$는 $A$보다 하나 적은 차원을 갖는다는 것을 살펴보았다. 이는 분명 유용한 결과이지만, 다음과 같이 더 일반적인 경우에도 그 결과를 살펴볼 수 있다.
 
 ::: 명제 11
 Locally noetherian scheme $X$와 $X$ 위의 함수 $f$에 대하여, $Z(f)$의 irreducible component는 codimension $0$이거나 codimension $1$이다. 

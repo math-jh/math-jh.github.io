@@ -10,6 +10,7 @@ sidebar:
 
 date: 2024-10-20
 weight: 9
+drift_needed: true
 
 toc: false
 
@@ -69,7 +70,34 @@ Integral domain $A$가 주어졌다 하고, integral extension $A \rightarrow B$
 Integral extension $A\hookrightarrow B$에 대하여, 만일 $B$의 두 prime ideal $\mathfrak{q}_1\neq \mathfrak{q}_2$이 $A\cap \mathfrak{q}_1=A\cap \mathfrak{q}_2=\mathfrak{p}$를 만족한다면 $\mathfrak{q}_1\not\subset \mathfrak{q}_2$이고 $\mathfrak{q}_2\not\subset \mathfrak{q}_1$이다.
 :::
 ::: 증명
-결론에 반하여 $\mathfrak{q}_1\subseteq \mathfrak{q}_2$라 가정하고 $A\cap \mathfrak{q}_1=A\cap \mathfrak{q}_2=\mathfrak{p}$라 하자. 그럼 $A$에서는 $\mathfrak{p}$로, $B$에서는 $\mathfrak{q}_1$으로 quotient를 취하여, 주어진 상황을 integral domain $B$와 $\mathfrak{q}_1=0$, 그리고 $\mathfrak{q}_2\cap A=0$이 성립하도록 바꿔줄 수 있다. 그런데 $B$의 원소들에 대해 성립하는 integral equation들은 $\mathfrak{p}$로 quotient를 취하여도 그대로 integral equation이 되며, 특히 $\Frac(B)$가 $\Frac(A)$의 algebraic extension이 된다. 따라서 [보조정리 2](#lem2)에 의하여 원하는 결과를 얻는다. 
+결론에 반하여 $\mathfrak{q}_1\subseteq \mathfrak{q}_2$라 가정하고 $A\cap \mathfrak{q}_1=A\cap \mathfrak{q}_2=\mathfrak{p}$라 하자. 그럼 $A$에서는 $\mathfrak{p}$로, $B$에서는 $\mathfrak{q}_1$으로 quotient를 취하여, 주어진 상황을 integral domain $B$와 $\mathfrak{q}_1=0$, 그리고 $\mathfrak{q}_2\cap A=0$이 성립하도록 바꿔줄 수 있다. 그런데 $B$의 원소들에 대해 성립하는 integral equation들은 $\mathfrak{p}$로 quotient를 취하여도 그대로 integral equation이 되며, 특히 $\Frac(B)$가 $\Frac(A)$의 algebraic extension이 된다. 따라서 [보조정리 2](#lem2)에 의하여 원하는 결과를 얻는다.
+:::
+
+[명제 1](#prop1)과 [따름정리 4](#cor4)가 prime ideal chain을 위로 올리는 방향이라면, 반대 방향의 *going-down*은 일반적인 integral extension에서는 성립하지 않는다. 다만 base가 integrally closed일 때 성립하며, 그 증명은 다음 보조정리에 기반한다.
+
+::: 보조정리 5
+Integral extension $A\hookrightarrow B$에서 $A$가 integrally closed domain이고 $B$도 domain이라 하자. 임의의 $b\in B$의 $K=\Frac(A)$ 위 minimal polynomial을 $f_b\in K[\x]$라 하자.
+
+1. $f_b$의 모든 계수는 $A$에 속한다.
+2. $b\in\mathfrak{p}B$를 만족하는 $A$의 prime ideal $\mathfrak{p}$가 주어지면, $f_b$의 최고차항 계수가 아닌 계수들은 모두 $\mathfrak{p}$에 속한다.
+:::
+::: 증명
+$b$가 integral이므로 $b$를 근으로 갖는 monic 다항식 $g\in A[\x]$가 존재한다. $K[\x]$에서 $f_b\mid g$이며, $f_b$의 근들은 모두 $g$의 근이어서 $A$ 위에서 integral이다. 따라서 이 근들의 대칭식인 $f_b$의 계수들도 $A$ 위에서 integral이고, $A$가 integrally closed이므로 $A$에 속한다.
+
+이제 $b\in\mathfrak{p}B$라 하자. $b=\sum_i p_i b_i$ ($p_i\in\mathfrak{p}, b_i\in B$)라 적고, $b_i$들이 생성하는 $B$의 $A$-subalgebra를 $B'$라 하면 $B'$은 finitely generated $A$-module이다. $b\in\mathfrak{p}B'$이므로 [\[가환대수학\] §정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8)에 의하여 $b$를 근으로 갖고 최고차항이 아닌 계수들이 모두 $\mathfrak{p}$에 속하는 monic 다항식 $g\in A[\x]$를 얻는다. 앞서 보인 바에 의해 $h=g/f_b\in A[\x]$이고, $g=f_b h$를 $\mathfrak{p}$로 나누면 $(A/\mathfrak{p})[\x]$에서 $\x^{\deg g}=\overline{f_b}\overline{h}$가 된다. $A/\mathfrak{p}$가 domain이므로 $\overline{f_b}$는 $\x$의 거듭제곱이어야 하며, 이는 $f_b$의 최고차항 계수가 아닌 계수들이 $\mathfrak{p}$에 속함을 뜻한다.
+:::
+
+::: 정리 6 (Going down)
+Integral extension $A\hookrightarrow B$에서 $A$가 integrally closed domain이고 $B$가 domain이라 하자. $A$의 prime ideal $\mathfrak{p}_1\subseteq\mathfrak{p}_2$와 $\mathfrak{q}_2\cap A=\mathfrak{p}_2$를 만족하는 $B$의 prime ideal $\mathfrak{q}_2$가 주어졌다 하자. 그럼 $\mathfrak{q}_1\subseteq\mathfrak{q}_2$이고 $\mathfrak{q}_1\cap A=\mathfrak{p}_1$인 $B$의 prime ideal $\mathfrak{q}_1$이 존재한다.
+:::
+::: 증명
+$B$가 domain이므로 $B\hookrightarrow B_{\mathfrak{q}_2}$이고, 이와 $A\hookrightarrow B$를 합성하여 ring extension $A\hookrightarrow B_{\mathfrak{q}_2}$를 얻는다. [명제 1](#prop1)의 증명에서 쓰인 것과 같은 논증으로, $\mathfrak{p}_1 B_{\mathfrak{q}_2}\cap A\subseteq\mathfrak{p}_1$을 보이면 $\mathfrak{p}_1$ 위에 lying over하는 $B_{\mathfrak{q}_2}$의 prime ideal이 존재한다. 이는 $B$의 $\mathfrak{q}_2$에 포함된 prime ideal $\mathfrak{q}_1$에 해당하므로 원하는 결과를 얻는다.
+
+$a\in\mathfrak{p}_1 B_{\mathfrak{q}_2}\cap A$라 하자. $a=p/s$ ($p\in\mathfrak{p}_1 B$, $s\in B\setminus\mathfrak{q}_2$)로 쓰고 $a\neq 0$이라 가정하자. [보조정리 5](#lem5)에 의해 $p$의 minimal polynomial $f=\x^n+c_{n-1}\x^{n-1}+\cdots+c_0$는 모든 $c_i\in\mathfrak{p}_1$을 만족한다. 한편 $a\in A\subseteq K$이고 $p=as$이므로, $f$에 치환 $\x\mapsto a\x$을 하고 정규화한 다항식
+
+$$\frac{1}{a^n}f(a\x)=\x^n+\frac{c_{n-1}}{a}\x^{n-1}+\cdots+\frac{c_0}{a^n}$$
+
+은 $K$ 위에서 기약이며 $s$를 근으로 갖는다. 즉 이것이 $s$의 minimal polynomial이고, [보조정리 5](#lem5)에 의해 계수들이 $A$에 속한다. 이를 $\x^n+c'_{n-1}\x^{n-1}+\cdots+c'_0$이라 쓰면 $c'_{n-i}a^i=c_{n-i}\in\mathfrak{p}_1$이다. 만일 $a\notin\mathfrak{p}_1$이라면 $\mathfrak{p}_1$이 prime이므로 모든 $c'_{n-i}\in\mathfrak{p}_1$이고, 따라서 $s^n=-c'_{n-1}s^{n-1}-\cdots-c'_0\in\mathfrak{p}_1 B\subseteq\mathfrak{q}_2$가 되어 $\mathfrak{q}_2$가 prime이라는 사실과 모순이다. 그러므로 $a\in\mathfrak{p}_1$이다.
 :::
 
 ---
