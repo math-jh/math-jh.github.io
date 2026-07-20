@@ -43,7 +43,9 @@ $$b=1\cdot b=(a^{-1}a)b=a^{-1}(ab)=a^{-1}\cdot 0=0$$
 이다. 따라서 $a\neq 0$이면 $b=0$이고, 이는 $ab=0$에서 $a=0$ 또는 $b=0$임을 뜻한다. 따라서 $D$에는 nonzero zero divisor가 없다. $D$가 field이면 추가로 commutative하고 $0\neq 1$이므로 integral domain이다 ([\[대수적 구조\] §분수체, ⁋정의 5](/ko/math/algebraic_structures/field_of_fractions#def5)).
 :::
 
-이는 사실 [§가역원과 영인자, ⁋명제 4](/ko/math/ring_theory/units_and_zero_divisors#prop4)로부터도 바로 얻어지는 것으로, division ring에서는 모든 nonzero 원소가 unit이므로 nonzero zero divisor가 존재할 여지가 없다. 그러나 이 역은 일반적으로 사실이 아니며, 가령 $\mathbb{Z}$ 또한 그러하다. 이 또한 [\[환론\] §가역원과 영인자, ⁋명제 4](/ko/math/ring_theory/units_and_zero_divisors#prop4) 직후에 이미 살펴본 것으로, 만일 $A$가 commutative임을 가정하면 
+이는 사실 [§가역원과 영인자, ⁋명제 4](/ko/math/ring_theory/units_and_zero_divisors#prop4)로부터도 바로 얻어지는 것으로, division ring에서는 모든 nonzero 원소가 unit이므로 nonzero zero divisor가 존재할 여지가 없다. 그러나 이 역은 일반적으로 사실이 아니며, 가령 $\mathbb{Z}$ 또한 그러하다는 것을 위의 명제 직후에서 이미 살펴보았다. 
+
+뿐만 아니라, 해당 글에서 우리는 이미 위 [명제 2](#prop2)의 부분적인 역, 즉 *finite* ring에 대해서는 integral domain이 항상 field가 된다는 것을 살펴보았다. ([§가역원과 영인자, ⁋따름정리 6](/ko/math/ring_theory/units_and_zero_divisors#cor6)) 이 따름정리의 증명에는 ring의 commutativity가 본질적으로 사용되지 <em-ko>않는데</em-ko>, 그럼에도 불구하고 해당 따름정리에서 commutativity를 가정한 이유는 commutativity를 뺐을 때 다루게 되는 finite non-commutative zero-divisor-free ring이 존재하지 않기 때문이다. 이는 우리가 [정리 8](#thm8)에서 살펴볼 정리에 의한 것으로, 임의의 finite division ring은 강제로 commutativity까지 만족하게 된다. 따라서 division ring 중 실제로 우리가 이 글에서 관심을 가지는 것들, 즉 non-commutative division ring을 보기 위해서는 필연적으로 무한한 division ring을 살펴보아야 한다. 
 
 ## 사원수
 
@@ -87,7 +89,17 @@ $$N(q)=q\bar q$$
 
 $$N(q)=q\bar q=a^2+b^2+c^2+d^2\in\mathbb{R}$$
 
-이 된다는 것을 확인할 수 있다. 특히 $N(q)=0$인 것은 $a=b=c=d=0$, 즉 $q=0$인 것과 동치이다.
+이 된다는 것을 확인할 수 있다. 특히 $N(q)=0$인 것은 $a=b=c=d=0$, 즉 $q=0$인 것과 동치이다. 
+
+Norm의 또 다른 성질 중 하나는 이것이 곱셈을 보존한다는 것이다. 실제로, conjugate가 $\overline{q_1q_2}=\bar q_2\bar q_1$을 만족하는 것은 쉽게 확인할 수 있고, 이를 이용하면
+
+$$N(q_1q_2)=q_1q_2\overline{q_1q_2}=q_1q_2\bar q_2\bar q_1=q_1N(q_2)\bar q_1=N(q_2)q_1\bar q_1=N(q_1)N(q_2)$$
+
+이 성립한다.  이 multiplicity를 좌표로 풀어쓰면
+
+$$(a_1^2+b_1^2+c_1^2+d_1^2)(a_2^2+b_2^2+c_2^2+d_2^2)=(\cdots)^2+(\cdots)^2+(\cdots)^2+(\cdots)^2$$
+
+이 되며, 이는 두 개의 네 제곱수 합의 곱이 다시 네 제곱수의 합이라는 Euler의 [four-square identity](https://en.wikipedia.org/wiki/Euler%27s_four-square_identity)이다. 어쨌든 우리에게 중요한 것은 이를 사용하여 $\mathbb{H}$가 division ring이라는 사실을 증명할 수 있다는 것이다. 
 
 ::: 명제 5
 Quaternion algebra $\mathbb{H}$는 noncommutative division ring이다.
@@ -103,18 +115,8 @@ $$q\cdot\bigl(N(q)^{-1}\bar q\bigr)=N(q)^{-1}(q\bar q)=N(q)^{-1}N(q)=1$$
 
 $$\bigl(N(q)^{-1}\bar q\bigr)\cdot q=N(q)^{-1}(\bar q q)=N(q)^{-1}N(q)=1$$
 
-이다. 따라서 $q^{-1}=N(q)^{-1}\bar q$가 $q$의 양쪽 역원이다. 즉 $\mathbb{H}$의 모든 nonzero 원소가 unit이므로 $\mathbb{H}$는 division ring이며, commutative하지 않다.
+가 되는 것을 확인할 수 있다. 즉, $q^{-1}=N(q)^{-1}\bar q$가 $q$의 양쪽 역원이며 이로부터 원하는 주장을 얻는다. 
 :::
-
-증명에서 norm이 실수이고 곱셈적이라는 점이 본질적이었다. 실제로 conjugate가 $\overline{q_1q_2}=\bar q_2\bar q_1$을 만족함을 확인하면
-
-$$N(q_1q_2)=q_1q_2\overline{q_1q_2}=q_1q_2\bar q_2\bar q_1=q_1N(q_2)\bar q_1=N(q_2)q_1\bar q_1=N(q_1)N(q_2)$$
-
-가 성립하는데, 여기서 $N(q_2)$가 center의 원소라는 사실을 썼다. 이 곱셈성
-
-$$(a_1^2+b_1^2+c_1^2+d_1^2)(a_2^2+b_2^2+c_2^2+d_2^2)=(\cdots)^2+(\cdots)^2+(\cdots)^2+(\cdots)^2$$
-
-은 두 개의 네 제곱수 합의 곱이 다시 네 제곱수의 합이라는 Euler의 four-square identity이며, quaternion 곱셈은 이 항등식의 대수적 출처이다. $\mathbb{H}$는 실수체 위의 대표적인 noncommutative division algebra이며, 무한히 많은 nonzero 원소를 가지므로 다음 절의 Wedderburn 정리가 보장하는 유한성의 제약을 받지 않는다.
 
 ## Wedderburn의 소정리
 

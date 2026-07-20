@@ -107,10 +107,38 @@ $$\dim\Spec A=\dim\Spec B$$
 가 항상 성립한다. 
 :::
 
-특히 임의의 integral domain $A$와 그 normalization $\tilde{A}$에 대하여, extension $A\hookrightarrow\tilde{A}$가 integral이므로 [명제 5](#prop5)에 의하여 $\dim\Spec\tilde{A}=\dim\Spec A$이다. 여기서 normalization $\tilde{A}$는 $A$를 그 field of fractions $\Frac(A)$ 안에서 integrally closed가 되도록 확장한 것, 곧 $\Frac(A)$의 원소 가운데 $A$ 위에서 integral인 것들을 모두 $A$에 붙여 얻는 확장이다. ([\[가환대수학\] §정수적 확장, ⁋정의 3](/ko/math/commutative_algebra/integral_extension#def3))
+특히 임의의 integral domain $A$와 그 normalization $\tilde{A}$에 대하여, extension $A\hookrightarrow\tilde{A}$가 integral이므로 [명제 5](#prop5)에 의하여 $\dim\Spec\tilde{A}=\dim\Spec A$이다. 여기서 normalization $\tilde{A}$는 $A$를 그 field of fractions $\Frac(A)$ 안에서 integrally closed가 되도록 확장한 것, 곧 $\Frac(A)$의 원소 가운데 $A$ 위에서 integral인 것들을 모두 $A$에 붙여 얻는 확장이다. ([\[가환대수학\] §정수적 확장, ⁋정의 3](/ko/math/commutative_algebra/integral_extension#def3)) 정의에 의해 $A\subseteq\tilde{A}\subseteq\Frac(A)$이므로 $\Frac(\tilde{A})=\Frac(A)$, 즉 normalization은 $A$의 function field를 보존한다.
 
 ::: 예시 6
-기하적으로 normalization은 같은 function field를 유지하면서 singular point를 펴주는 역할을 한다. 대표적인 예로 cusp $A=\mathbb{K}[\x,\y]/(\y^2-\x^3)\cong\mathbb{K}[t^2,t^3]$를 보자. $\Frac(A)$ 안에서는 $t=\y/\x$가 성립하므로 $\Frac(A)=\mathbb{K}(t)$이며, 원소 $t\in\Frac(A)$는 $t^2=\x\in A$를 만족하므로 $A$ 위에서 integral이다. 따라서 $t$를 붙여 얻은 확장 $A[t]=\mathbb{K}[t^2,t^3,t]=\mathbb{K}[t]$가 곧 normalization $\tilde{A}$이고 ($\mathbb{K}[t]$는 UFD이므로 integrally closed), 대응하는 기하 사상 $\Spec\mathbb{K}[t]\to\Spec A$, $t\mapsto(t^2,t^3)$은 affine line $\mathbb{A}^1$을 cusp 위로 감싸 원점의 singular point를 펴준다. 두 scheme 모두 1차원 곡선이며, 차원이 보존되는 것은 normalization이 integral 확장이라는 사실 그 자체이다.
+위의 논의에서 우리는 normalization이 function field를 보존한다는 것을 살펴보았다. 기하적으로 이는 normalization으로 얻어지는 두 공간이 birational하다는 것이다. ([\[대수다양체\] §유리사상, ⁋명제 10](/ko/math/algebraic_varieties/rational_maps#prop10)) 즉, normalization은 무시할만큼 작은 특정한 loci 바깥에서는 원래의 공간과 같다. 
+
+Normalization은 여기에 더해 이 특정한 locus가 정확히 singular point들이 되도록 한다. 대표적인 예로 [\[대수다양체\] §접공간과 매끄러움, ⁋예시 7](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#ex7)의 cusp
+
+$$A=\mathbb{K}[\x,\y]/(\y^2-\x^3)\cong\mathbb{K}[t^2,t^3]$$
+
+를 보자. $A$의 field of fraction을 보기 위해 $t=\y/\x$임을 사용하면 $\Frac(A)=\mathbb{K}(t)$임을 확인할 수 있고, 이 때 원소 $t\in\Frac(A)$는 $t^2=\x\in A$를 만족하므로 $A$ 위에서 integral이다. 따라서 $t$를 붙여 얻은 extension 
+
+$$A[t]=\mathbb{K}[t^2,t^3,t]=\mathbb{K}[t]$$
+
+가 $A$의 integral extension이고, $\mathbb{K}[t]$는 UFD이므로 [\[가환대수학\] §정수적 확장, ⁋명제 9](/ko/math/commutative_algebra/integral_extension#prop9)에 의하여 integrally closed이므로 이것이 곧 normalization $\tilde{A}$이다. 
+
+이제 기하적으로 이것이 무슨 의미인지 살펴보자. 우리는 우선 위의 integral extension $A\rightarrow A[t]$가 주는 공간들 사이의 map 
+
+$$\Spec A[t]\rightarrow \Spec A$$
+
+을 살펴보아야 한다. 우선 곡선 $\Spec A$의 singular point, 즉 원점 $\mathfrak m=(t^2,t^3)\in\Spec A$을 보면 이 점에서의 위의 map의 fiber는
+
+$$\Spec(\mathbb{K}[t]\otimes_A A/\mathfrak m)=\Spec(\mathbb{K}[t]/(t^2,t^3))=\Spec(\mathbb{K}[t]/(t^2))$$
+
+로 주어진다. 즉, fiber 자체는 한 점이 되지만 그 위에 주어진 scheme 구조는 non-reduced이다. 
+
+원점에서 cusp의 local ring $A_{\mathfrak m}=\mathbb{K}[t^2,t^3]_{(t^2,t^3)}$는 maximal ideal $(t^2,t^3)$이 두 원소로 생성되어야 하여 singular한데, 이는 [\[대수다양체\] §접공간과 매끄러움, ⁋예시 7](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#ex7)에서 본 것처럼 tangent space $T_0=\mathbb{K}^2$가 너무 크기 때문이다. 반면 normalization의 원점에서 local ring $\mathbb{K}[t]_{(t)}$는 maximal ideal이 단일 원소 $t$로 생성되어 tangent space가 1차원, 곧 매끈하다. 즉 normalization이 singular한 국소 구조를 매끈한 것으로 바꾸어 주는 것이 cusp를 펴주는 일이다.
+
+반면 원점을 뺀 열린집합 $D(\x)$에서는 $\x=t^2$를 가역시키면 $t=t^3\cdot(t^2)^{-1}$가 들어와
+
+$$A[\x^{-1}]=\mathbb{K}[t,t^{-1}]=\tilde{A}[\x^{-1}]$$
+
+이 되어 두 scheme은 원점을 뺀 매끈한 부분에서 완전히 같다. 즉 기하 사상 $\Spec\mathbb{K}[t]\to\Spec A$, $t\mapsto(t^2,t^3)$은 affine line $\mathbb{A}^1$을 cusp 위로 감싸 정확히 원점의 singular point만 펴주며, 두 scheme 모두 1차원 곡선이라 차원이 보존되는 것은 normalization이 integral 확장이라는 사실 그 자체이다.
 :::
 
 임의의 scheme에 대해서도 normalization을 같은 방식으로 정의할 수 있지만, 이는 이후 별도의 글에서 다룬다.
