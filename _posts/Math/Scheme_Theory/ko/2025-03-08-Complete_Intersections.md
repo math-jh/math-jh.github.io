@@ -62,7 +62,7 @@ $$Z(s_1,\ldots, s_k)=Z(s_1)\cap \cdots\cap Z(s_k)$$
 Locally noetherian scheme $X$ 위의 effective Cartier divisor $\iota:Z\hookrightarrow X$에 대하여, $Z$의 모든 irreducible component는 $X$에서 codimension $1$을 갖는다.
 :::
 ::: 증명
-codimension은 국소적으로 계산되므로, [정의 2](#def2)의 affine open cover $\{U_i=\Spec A_i\}$ 가운데 하나를 택하여 $Z\cap U_i=Z(s_i)$이고 $s_i\in A_i$가 non-zerodivisor인 경우만 보면 충분하다. $Z$의 irreducible component $W$가 $U_i$와 만난다면 $W\cap U_i$는 $Z(s_i)$의 irreducible component이다. [§차원, ⁋명제 11](/ko/math/scheme_theory/dimension#prop11)에 의하여 $Z(s_i)$의 component는 $U_i$에서 codimension $0$이거나 $1$인데, codimension $0$인 component는 $U_i$ 자신의 irreducible component, 즉 $A_i$의 minimal prime ideal $\mathfrak{p}$에 대응된다. 만일 $W\cap U_i$가 그러한 component라면 $s_i$가 그 위에서 소멸하므로 $s_i\in \mathfrak{p}$이다. 그런데 noetherian ring에서 non-zerodivisor는 어떠한 minimal prime ideal에도 속하지 않으므로 ([\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)) 이는 $s_i$가 non-zerodivisor라는 가정에 모순이다. 따라서 $W\cap U_i$의 codimension은 $1$이고, [§차원, ⁋명제 7](/ko/math/scheme_theory/dimension#prop7)에 의하여 $W$의 $X$에서의 codimension 또한 $1$이다.
+codimension은 국소적으로 계산되므로, [정의 2](#def2)의 affine open cover $\{U_i=\Spec A_i\}$ 가운데 하나를 택하여 $Z\cap U_i=Z(s_i)$이고 $s_i\in A_i$가 non-zerodivisor인 경우만 보면 충분하다. $Z$의 irreducible component $W$가 $U_i$와 만난다면 $W\cap U_i$는 $Z(s_i)$의 irreducible component이다. [§차원, ⁋명제 12](/ko/math/scheme_theory/dimension#prop12)에 의하여 $Z(s_i)$의 component는 $U_i$에서 codimension $0$이거나 $1$인데, codimension $0$인 component는 $U_i$ 자신의 irreducible component, 즉 $A_i$의 minimal prime ideal $\mathfrak{p}$에 대응된다. 만일 $W\cap U_i$가 그러한 component라면 $s_i$가 그 위에서 소멸하므로 $s_i\in \mathfrak{p}$이다. 그런데 noetherian ring에서 non-zerodivisor는 어떠한 minimal prime ideal에도 속하지 않으므로 ([\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)) 이는 $s_i$가 non-zerodivisor라는 가정에 모순이다. 따라서 $W\cap U_i$의 codimension은 $1$이고, [§차원, ⁋명제 8](/ko/math/scheme_theory/dimension#prop8)에 의하여 $W$의 $X$에서의 codimension 또한 $1$이다.
 :::
 
 이제 이를 여러 번 잘라낸 일반적인 경우를 정의한다. 핵심은 자르는 section들이 단순한 non-zerodivisor를 넘어 *regular sequence*를 이루어야 한다는 것이다.
@@ -81,13 +81,13 @@ Codimension $k$의 완전교차 $\iota:Z\hookrightarrow X$의 모든 irreducible
 
 $$\dim A_\mathfrak{p}/(s_1,\ldots, s_k)=\dim\bigl(A/(s_1,\ldots, s_k)\bigr)_\mathfrak{p}=0$$
 
-이다. 한편 [§차원, ⁋명제 7](/ko/math/scheme_theory/dimension#prop7)에 의하여 $\codim_X W=\dim A_\mathfrak{p}$이므로, $\dim A_\mathfrak{p}=k$임을 보이면 된다. 
+이다. 한편 [§차원, ⁋명제 8](/ko/math/scheme_theory/dimension#prop8)에 의하여 $\codim_X W=\dim A_\mathfrak{p}$이므로, $\dim A_\mathfrak{p}=k$임을 보이면 된다. 
 
 이를 위해 다음 사실을 보인다.
 
 > Noetherian local ring $(R,\mathfrak{m})$의 non-zerodivisor $s\in\mathfrak{m}$에 대하여 $\dim R/(s)=\dim R-1$이다.
 
-[§차원, ⁋명제 11](/ko/math/scheme_theory/dimension#prop11)을 $\Spec R$에 적용하면 $V(s)$의 모든 component는 codimension $0$ 또는 $1$이고, $s$가 non-zerodivisor이므로 ([\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)) $s$는 어떠한 minimal prime에도 속하지 않아 codimension $0$인 component는 없다. 따라서 $V(s)$의 모든 component는 codimension $1$이고, $\dim R/(s)=\dim R-1$이다. 
+[§차원, ⁋명제 12](/ko/math/scheme_theory/dimension#prop12)을 $\Spec R$에 적용하면 $V(s)$의 모든 component는 codimension $0$ 또는 $1$이고, $s$가 non-zerodivisor이므로 ([\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)) $s$는 어떠한 minimal prime에도 속하지 않아 codimension $0$인 component는 없다. 따라서 $V(s)$의 모든 component는 codimension $1$이고, $\dim R/(s)=\dim R-1$이다. 
 
 이제 $(s_1,\ldots, s_k)$가 $A$-regular sequence이므로 localization $A_\mathfrak{p}$에서도 regular sequence이며 (localization은 non-zerodivisor를 보존한다), 각 $s_{i+1}$은 $A_\mathfrak{p}/(s_1,\ldots, s_i)$의 non-zerodivisor이다. 위 사실을 $i=0,1,\ldots, k-1$에 차례로 적용하면 
 

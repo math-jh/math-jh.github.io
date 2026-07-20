@@ -91,7 +91,7 @@ Submodule $N$의 경우, [보조정리 3](#lem3)에 의해 $M=N\oplus\bigoplus_{
 $M=\sum_{i\in I}S_i$가 simple submodule들의 합이라 하자. 그럼 $M$의 임의의 simple submodule $U$는 적당한 $i\in I$에 대하여 $S_i$와 isomorphic하다.
 :::
 ::: 증명
-[보조정리 3](#lem3)을 $N=U$에 적용하면 $M=U\oplus\bigoplus_{j\in J}S_j$인 $J$가 존재한다. $p:M\rightarrow U$를 이 분해에 대한 projection이라 하자. $U=p(M)=\sum_{i\in I}p(S_i)$이고 $U\neq 0$이므로 $p(S_i)\neq 0$인 $i$가 존재한다. 그럼 $p$의 제한 $S_i\rightarrow U$는 simple module 사이의 nonzero homomorphism이므로 [§Division ring, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10)에 의해 isomorphism이다.
+[보조정리 3](#lem3)을 $N=U$에 적용하면 $M=U\oplus\bigoplus_{j\in J}S_j$인 $J$가 존재한다. $p:M\rightarrow U$를 이 분해에 대한 projection이라 하자. $U=p(M)=\sum_{i\in I}p(S_i)$이고 $U\neq 0$이므로 $p(S_i)\neq 0$인 $i$가 존재한다. 그럼 $p$의 제한 $S_i\rightarrow U$는 simple module 사이의 nonzero homomorphism이므로 [§나눗셈환, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10)에 의해 isomorphism이다.
 :::
 
 ::: 정의 7
@@ -124,7 +124,7 @@ Simple module들 $S_1,\ldots,S_n$과 $T_1,\ldots,T_m$에 대하여 $\bigoplus_{a
 ::: 증명
 $n$에 대한 induction으로 보인다. $n=0$이면 좌변이 $0$이므로 우변도 $0$이고 $m=0$이다.
 
-$n\geq 1$이라 하고 $\varphi:\bigoplus_aS_a\rightarrow\bigoplus_bT_b$를 isomorphism이라 하자. $\varphi(S_1)\neq 0$이므로 projection $\pi_b:\bigoplus T_b\rightarrow T_b$ 중 $\pi_b\vert_{\varphi(S_1)}\neq 0$인 $b$가 존재하고, 재배열하여 $b=1$이라 하자. $N=\varphi(S_1)$으로 두면 $N\cong S_1$은 simple이고, $\pi_1\vert_N:N\rightarrow T_1$은 simple module 사이의 nonzero homomorphism이므로 [§Division ring, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10)에 의해 isomorphism이다. 특히 $S_1\cong T_1$이다.
+$n\geq 1$이라 하고 $\varphi:\bigoplus_aS_a\rightarrow\bigoplus_bT_b$를 isomorphism이라 하자. $\varphi(S_1)\neq 0$이므로 projection $\pi_b:\bigoplus T_b\rightarrow T_b$ 중 $\pi_b\vert_{\varphi(S_1)}\neq 0$인 $b$가 존재하고, 재배열하여 $b=1$이라 하자. $N=\varphi(S_1)$으로 두면 $N\cong S_1$은 simple이고, $\pi_1\vert_N:N\rightarrow T_1$은 simple module 사이의 nonzero homomorphism이므로 [§나눗셈환, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10)에 의해 isomorphism이다. 특히 $S_1\cong T_1$이다.
 
 이제 $\bigoplus_bT_b=N\oplus(T_2\oplus\cdots\oplus T_m)$임을 주장한다. $N\cap(T_2\oplus\cdots\oplus T_m)=N\cap\ker\pi_1=\ker(\pi_1\vert_N)=0$이다. 또 임의의 $t\in\bigoplus T_b$에 대하여 $x=(\pi_1\vert_N)^{-1}(\pi_1(t))\in N$으로 두면 $t-x\in\ker\pi_1=T_2\oplus\cdots\oplus T_m$이므로 합이 전체가 된다. 따라서
 

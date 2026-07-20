@@ -16,7 +16,7 @@ published: false
 
 ---
 
-[§Semisimple module](/ko/math/ring_theory/semisimple_modules)에서 우리는 simple module들의 직합으로 분해되는 module을 다루었다. 이 글에서는 그 개념을 환 자신에 적용한다. 환 $R$을 자기 자신 위의 left module로 보아 semisimple이 되는 환이 semisimple ring인데, 이는 그 위의 모든 module이 semisimple인 환과 정확히 일치하며, module 이론이 완전히 분해되는 환이라 할 수 있다. 이 글의 목표는 이러한 환의 완전한 분류인 Artin-Wedderburn 정리이다. Semisimple ring은 division ring 위의 행렬환 유한개의 곱과 정확히 같으며, 이 분해는 본질적으로 유일하다. [§Division ring, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10)가 여기 등장하는 division ring의 출처이고, [§Idempotent과 곱분해, ⁋정리 5](/ko/math/ring_theory/idempotents#thm5)의 central idempotent 기계가 곱분해를 담당한다.
+[§Semisimple module](/ko/math/ring_theory/semisimple_modules)에서 우리는 simple module들의 직합으로 분해되는 module을 다루었다. 이 글에서는 그 개념을 환 자신에 적용한다. 환 $R$을 자기 자신 위의 left module로 보아 semisimple이 되는 환이 semisimple ring인데, 이는 그 위의 모든 module이 semisimple인 환과 정확히 일치하며, module 이론이 완전히 분해되는 환이라 할 수 있다. 이 글의 목표는 이러한 환의 완전한 분류인 Artin-Wedderburn 정리이다. Semisimple ring은 division ring 위의 행렬환 유한개의 곱과 정확히 같으며, 이 분해는 본질적으로 유일하다. [§나눗셈환, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10)가 여기 등장하는 division ring의 출처이고, [§Idempotent과 곱분해, ⁋정리 5](/ko/math/ring_theory/idempotents#thm5)의 central idempotent 기계가 곱분해를 담당한다.
 
 이 글에서도 환은 항등원을 갖는, 가환이라 가정하지 않는 환이며, module은 언제나 left module이다.
 
@@ -106,7 +106,7 @@ $$\End_R(M)\cong\prod_{i=1}^k\Mat_{n_i}\big(\End_R(S_i)\big)$$
 이다.
 :::
 ::: 증명
-직합 인자들에 대한 inclusion과 projection을 각각 $\iota_{i,a}$, $\pi_{i,a}$로 적자 ($1\leq a\leq n_i$). Endomorphism $\varphi$의 성분 $\pi_{i,a}\circ\varphi\circ\iota_{j,b}$는 $S_j$에서 $S_i$로 가는 homomorphism인데, $i\neq j$이면 [§Division ring, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10)에 의해 nonzero일 경우 isomorphism이 되어 가정에 모순이므로 $0$이다. 따라서 $\varphi$는 각 $i$마다 행렬 $\varphi^{(i)}=(\pi_{i,a}\circ\varphi\circ\iota_{i,b})_{a,b}\in\Mat_{n_i}(\End_R(S_i))$들의 자료와 같다.
+직합 인자들에 대한 inclusion과 projection을 각각 $\iota_{i,a}$, $\pi_{i,a}$로 적자 ($1\leq a\leq n_i$). Endomorphism $\varphi$의 성분 $\pi_{i,a}\circ\varphi\circ\iota_{j,b}$는 $S_j$에서 $S_i$로 가는 homomorphism인데, $i\neq j$이면 [§나눗셈환, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10)에 의해 nonzero일 경우 isomorphism이 되어 가정에 모순이므로 $0$이다. 따라서 $\varphi$는 각 $i$마다 행렬 $\varphi^{(i)}=(\pi_{i,a}\circ\varphi\circ\iota_{i,b})_{a,b}\in\Mat_{n_i}(\End_R(S_i))$들의 자료와 같다.
 
 이 대응이 ring isomorphism임을 확인하자. 합에 대해서는 자명하고, $\sum_{j,b}\iota_{j,b}\circ\pi_{j,b}=\id_M$이므로
 
@@ -163,7 +163,7 @@ $$R\cong\Mat_{n_1}(D_1)\times\cdots\times\Mat_{n_k}(D_k)$$
 ::: 증명
 $2\implies 1$은 [명제 5](#prop5)에 의해 각 인자가 semisimple ring이므로 [명제 10](#prop10)의 2에서 바로 얻어진다.
 
-$1\implies 2$를 보자. [명제 3](#prop3)에 의해 $R$은 유한개의 simple left ideal의 직합이고, isomorphism class별로 인자들을 모으면 서로 isomorphic하지 않은 simple module들 $S_1,\ldots,S_k$와 자연수 $n_i\geq 1$에 대하여 left module로서 $R\cong\bigoplus_iS_i^{n_i}$이다. $\Delta_i=\End_R(S_i)$로 두면 이는 [§Division ring, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10)에 의해 division ring이고, [보조정리 7](#lem7)과 [보조정리 8](#lem8)에 의해
+$1\implies 2$를 보자. [명제 3](#prop3)에 의해 $R$은 유한개의 simple left ideal의 직합이고, isomorphism class별로 인자들을 모으면 서로 isomorphic하지 않은 simple module들 $S_1,\ldots,S_k$와 자연수 $n_i\geq 1$에 대하여 left module로서 $R\cong\bigoplus_iS_i^{n_i}$이다. $\Delta_i=\End_R(S_i)$로 두면 이는 [§나눗셈환, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10)에 의해 division ring이고, [보조정리 7](#lem7)과 [보조정리 8](#lem8)에 의해
 
 $$R^{\mathrm{op}}\cong\End_R(R)\cong\prod_{i=1}^k\Mat_{n_i}(\Delta_i)$$
 
@@ -186,7 +186,7 @@ $$E_i\cong\End_R(W_i)^{\mathrm{op}}\cong\End_R(S_i)^{\mathrm{op}}=\Delta_i^{\mat
 $R\cong\prod_{i=1}^k\Mat_{n_i}(D_i)$가 semisimple ring이라 하자. 그럼 simple left $R$-module은 isomorphism을 무시하면 정확히 $V_1,\ldots,V_k$ ($V_i=D_i^{n_i}$)뿐이고, 임의의 left $R$-module은 이들의 복사본들의 직합이다.
 :::
 ::: 증명
-[명제 2](#prop2)에 의해 모든 module이 semisimple이므로 simple들의 직합이고, [명제 5](#prop5)와 [명제 10](#prop10)에 의해 각 $V_i$는 simple이다. 거꾸로 $M$이 simple이면 $0\neq x\in M$에 대해 $M=Rx$이므로 전사 $R\rightarrow M$이 존재하고, left module 분해 $R\cong\bigoplus_iV_i^{n_i}$의 어떤 인자 $V_i$ 위에서 이 전사가 nonzero가 된다. 그럼 simple module 사이의 nonzero homomorphism $V_i\rightarrow M$이 존재하므로 [§Division ring, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10)에 의해 $M\cong V_i$이다.
+[명제 2](#prop2)에 의해 모든 module이 semisimple이므로 simple들의 직합이고, [명제 5](#prop5)와 [명제 10](#prop10)에 의해 각 $V_i$는 simple이다. 거꾸로 $M$이 simple이면 $0\neq x\in M$에 대해 $M=Rx$이므로 전사 $R\rightarrow M$이 존재하고, left module 분해 $R\cong\bigoplus_iV_i^{n_i}$의 어떤 인자 $V_i$ 위에서 이 전사가 nonzero가 된다. 그럼 simple module 사이의 nonzero homomorphism $V_i\rightarrow M$이 존재하므로 [§나눗셈환, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10)에 의해 $M\cong V_i$이다.
 :::
 
 ::: 참고 13

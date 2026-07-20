@@ -193,7 +193,7 @@ $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r \Mat_{n_i}(\mathbb{C})\tag{1}$$
 3. $G$-map들의 모임 $\Hom_G(V,W)$은 $\mathbb{C}$이거나 $0$이다. 
 :::
 ::: 증명
-1. $G$-map은 $\mathbb{C}[G]$-module homomorphism이고 irreducible $G$-module은 simple $\mathbb{C}[G]$-module이므로, 이는 [\[환론\] §Division ring, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10)의 특수한 경우이다. 
+1. $G$-map은 $\mathbb{C}[G]$-module homomorphism이고 irreducible $G$-module은 simple $\mathbb{C}[G]$-module이므로, 이는 [\[환론\] §나눗셈환, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10)의 특수한 경우이다. 
 2. 주어진 $f$는 $G$-linear map이기 이전에 $\mathbb{C}$-linear map이므로, $f$의 eigenvalue $\lambda$가 존재한다. 이 eigenvalue의 eigenspace를 $V_\lambda$라 하면, 임의의 $w\in V_\lambda$와 $g\in G$에 대하여 $f(g\cdot w)=g\cdot f(w)=\lambda(g\cdot w)$이므로 $V_\lambda$는 $V$의 nonzero $G$-submodule이다. $V$가 irreducible이므로 $V_\lambda=V$이고, 곧 $f=\lambda\id_V$이다. 
 3. $V\not\cong W$라면 1에 의하여 $\Hom_G(V,W)=0$이다. $V\cong W$라면 $\Hom_G(V,W)\cong\End_G(V)$이고, 임의의 nonzero $f\in\End_G(V)$가 2에 의해 $\lambda\id_V$의 꼴이므로 $\End_G(V)=\mathbb{C}\id_V\cong\mathbb{C}$이다. 
 :::
