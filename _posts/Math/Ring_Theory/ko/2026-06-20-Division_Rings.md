@@ -1,5 +1,5 @@
 ---
-title: "Division ring"
+title: "나눗셈환"
 description: "Division ring을 모든 nonzero 원소가 unit인 환으로 정의하고 그 안에 zero divisor가 없음을 보인다. Quaternion ℍ가 noncommutative division ring임을 직접 확인하고, 모든 유한 division ring이 field라는 Wedderburn의 little theorem을 class equation과 cyclotomic polynomial로 증명한다. Schur의 보조정리를 통해 simple module의 endomorphism ring으로 division ring이 등장함을 본다."
 excerpt: "Division ring과 quaternion, Wedderburn의 little theorem, 그리고 Schur의 보조정리"
 
@@ -20,7 +20,7 @@ published: false
 
 별도의 언급이 없는 한 ring은 항등원 $1\neq 0$을 갖는 것으로 하며, division ring은 commutative임을 가정하지 <em-ko>않는다.</em-ko>
 
-## Division ring과 zero divisor
+## 나눗셈환과 영인자
 
 Division ring의 정의는 이미 주어졌으나, 이번 글의 시작을 위해 다시 state한다. ([\[대수적 구조\] §분수체, ⁋정의 3](/ko/math/algebraic_structures/field_of_fractions#def3)) 
 
@@ -45,12 +45,12 @@ $$b=1\cdot b=(a^{-1}a)b=a^{-1}(ab)=a^{-1}\cdot 0=0$$
 
 이는 사실 [§가역원과 영인자, ⁋명제 4](/ko/math/ring_theory/units_and_zero_divisors#prop4)로부터도 바로 얻어지는 것으로, division ring에서는 모든 nonzero 원소가 unit이므로 nonzero zero divisor가 존재할 여지가 없다. 그러나 이 역은 일반적으로 사실이 아니며, 가령 $\mathbb{Z}$ 또한 그러하다. 이 또한 [\[환론\] §가역원과 영인자, ⁋명제 4](/ko/math/ring_theory/units_and_zero_divisors#prop4) 직후에 이미 살펴본 것으로, 만일 $A$가 commutative임을 가정하면 
 
-## Quaternions
+## 사원수
 
-지금까지 등장한 division ring은 모두 commutative, 즉 field였다. commutative하지 않은 division ring이 실제로 존재함을 보이기 위해, 우리는 Hamilton의 *quaternion*을 구성한다. 이는 실수체 $\mathbb{R}$ 위의 $4$차원 vector space에 곱셈을 부여한 것이다.
+Non-commutative division ring의 고전적인 예시는 Hamilton이 정의한 *quaternion*들의 공간이다. 이는 실수체 $\mathbb{R}$ 위의 $4$차원 vector space에 곱셈을 부여한 것이다.
 
 ::: 정의 3
-*quaternion algebra<sub>사원수 대수</sub>* $\mathbb{H}$는 기저 $1,i,j,k$를 갖는 $\mathbb{R}$ 위의 $4$차원 vector space로서, 그 원소는
+*Quaternion algebra<sub>사원수 대수</sub>* $\mathbb{H}$는 기저 $1,i,j,k$를 갖는 $\mathbb{R}$ 위의 $4$차원 vector space로서, 그 원소는
 
 $$q=a+bi+cj+dk\qquad(a,b,c,d\in\mathbb{R})$$
 
@@ -58,18 +58,18 @@ $$q=a+bi+cj+dk\qquad(a,b,c,d\in\mathbb{R})$$
 
 $$i^2=j^2=k^2=-1,\qquad ij=k,\quad jk=i,\quad ki=j,\qquad ji=-k,\quad kj=-i,\quad ik=-j$$
 
-를 $\mathbb{R}$-쌍선형으로 확장하여 정의한 것이다.
+를 $\mathbb{R}$-bilinear하게 확장하여 정의한 것이다.
 :::
 
-이 대수는 복소행렬 subring으로도 실현된다. $q=a+bi+cj+dk$에 대해 $z=a+bi$, $w=c+di$로 두면
+이 대수는 $2$차원 complex matrix들의 공간 $\Mat_2(\mathbb{C})$의 어떠한 subring으로도 실현된다. 구체적으로, 주어진 quaternion $q=a+bi+cj+dk$에 대해 $z=a+bi$, $w=c+di$로 두면
 
 $$q\longmapsto\begin{pmatrix}z&-\bar w\\ w&\bar z\end{pmatrix}$$
 
-는 $\mathbb{H}$를 $\Mat_2(\mathbb{C})$의 subring으로 본는 isomorphism을 주며, 이 관점에서 행렬식은 $\lvert z\rvert^2+\lvert w\rvert^2=a^2+b^2+c^2+d^2$가 된다.
+는 $\mathbb{H}$를 $\Mat_2(\mathbb{C})$의 subring으로 본는 isomorphism을 주며, 실제로 이 표현에서 [정의 3](#def3)의 관계식이 모두 만족되는 것을 확인할 수 있다. 이 원소의 행렬식 
 
-위의 관계식들은 $ij=k$, $jk=i$, $ki=j$와 $i^2=j^2=k^2=-1$만으로 결정된다. 가령 $ji$는 $i^2=j^2=k^2=ijk=-1$로부터도 유도되는데, $ijk=-1$의 양변 왼쪽에 $i$를, 오른쪽에 $k$를 곱하는 식의 계산으로 $ji=-k$ 등을 얻는다. 이 곱셈이 결합적임은 기저원소들에 대해 $(xy)z=x(yz)$를 확인하면 충분하며, 이는 위 관계식을 이용한 유한한 경우 점검으로 이루어진다. 곱셈이 commutative하지 않음은 $ij=k\neq -k=ji$에서 즉시 드러난다.
+$$\lvert z\rvert^2+\lvert w\rvert^2=a^2+b^2+c^2+d^2$$
 
-Quaternion이 division ring임을 보이는 핵심 도구는 conjugate와 norm이다.
+이 곧 quaternion의 norm을 정의한다. 
 
 ::: 정의 4
 Quaternion $q=a+bi+cj+dk$에 대하여, 그 *conjugate<sub>켤레</sub>*를
@@ -83,19 +83,19 @@ $$N(q)=q\bar q$$
 로 정의한다.
 :::
 
-직접 계산하면 norm이 실수임을 알 수 있다. $q=a+bi+cj+dk$에 대해 $\bar q$를 곱하면, 관계식 $i^2=j^2=k^2=-1$과 $ij=-ji$ 등에 의해 $i,j,k$ 항의 계수가 모두 상쇄되어
+임의의 quaternion $q=a+bi+cj+dk$에 대해, conjugate $\bar q$를 곱하면 실제로 [정의 3](#def3)의 관계식들에 의해 $i,j,k$ 항의 계수가 모두 상쇄되어
 
 $$N(q)=q\bar q=a^2+b^2+c^2+d^2\in\mathbb{R}$$
 
-이 된다. 같은 계산으로 $\bar q q=a^2+b^2+c^2+d^2$이므로 $q\bar q=\bar q q=N(q)$이고, $N(q)$는 $\mathbb{H}$의 center에 속하는 실수이다. 특히 $N(q)=0$인 것은 $a=b=c=d=0$, 즉 $q=0$인 것과 동치이다.
+이 된다는 것을 확인할 수 있다. 특히 $N(q)=0$인 것은 $a=b=c=d=0$, 즉 $q=0$인 것과 동치이다.
 
 ::: 명제 5
 Quaternion algebra $\mathbb{H}$는 noncommutative division ring이다.
 :::
 ::: 증명
-$\mathbb{H}$가 $1\neq 0$인 결합적 ring임은 정의에서 확인하였고, commutative하지 않음은 $ij=k\neq -k=ji$에서 보았다. 남은 것은 임의의 nonzero $q\in\mathbb{H}$가 곱셈에 대한 양쪽 역원을 가짐을 보이는 것이다.
+$\mathbb{H}$가 $1\neq 0$인 ring임은 정의에서 확인하였고, commutative하지 않음은 $ij=k\neq -k=ji$에서 자명하다. 남은 것은 임의의 nonzero $q\in\mathbb{H}$가 곱셈에 대한 양쪽 역원을 가짐을 보이는 것이다.
 
-$q=a+bi+cj+dk\neq 0$이라 하면 $N(q)=a^2+b^2+c^2+d^2$은 양의 실수이다. 실수 $N(q)$는 $\mathbb{H}$의 center에 속하므로 $\mathbb{R}\setminus\{0\}$ 안에서 역수 $N(q)^{-1}$을 갖고, 이를 $\mathbb{H}$의 원소로 볼 수 있다. 이제
+$q=a+bi+cj+dk\neq 0$이라 하면, 우리는 위에서 $N(q)=a^2+b^2+c^2+d^2$이 양의 실수임을 보았다. 그럼 이는 $\mathbb{H}$의 원소로 볼 수 있으며, 뿐만 아니라 $\mathbb{H}$의 모든 원소와 commute한다. 이는 $N(q)$의 역수 $N(q)^{-1}$ 또한 마찬가지이며, 따라서
 
 $$q\cdot\bigl(N(q)^{-1}\bar q\bigr)=N(q)^{-1}(q\bar q)=N(q)^{-1}N(q)=1$$
 
@@ -116,7 +116,7 @@ $$(a_1^2+b_1^2+c_1^2+d_1^2)(a_2^2+b_2^2+c_2^2+d_2^2)=(\cdots)^2+(\cdots)^2+(\cdo
 
 은 두 개의 네 제곱수 합의 곱이 다시 네 제곱수의 합이라는 Euler의 four-square identity이며, quaternion 곱셈은 이 항등식의 대수적 출처이다. $\mathbb{H}$는 실수체 위의 대표적인 noncommutative division algebra이며, 무한히 많은 nonzero 원소를 가지므로 다음 절의 Wedderburn 정리가 보장하는 유한성의 제약을 받지 않는다.
 
-## Wedderburn의 little theorem
+## Wedderburn의 소정리
 
 $\mathbb{H}$는 무한 division ring이었다. 유한한 경우에는 사정이 근본적으로 달라져서, commutative하지 않은 division ring은 아예 존재하지 않는다. 이것이 Wedderburn의 little theorem이다. 증명은 division ring의 center가 field임을 관찰한 뒤, 그 위의 vector space 구조를 통해 multiplicative group의 class equation을 세우고, cyclotomic polynomial의 정수론적 성질로 모순을 끌어내는 방식으로 진행된다.
 
@@ -211,7 +211,7 @@ $A$가 finite ring이고 $0$ 이외의 zero divisor가 없다고 하자. 임의�
 
 여기서는 commutativity를 가정하지 않고 출발하여 division ring임을 먼저 얻은 뒤 Wedderburn 정리로 commutativity를 결론지었다. commutativity를 처음부터 가정하면 [정리 8](#thm8) 없이도 곱셈사상의 단사성만으로 field임을 얻으며, 이것이 "유한 integral domain은 field"라는 앞선 결과였다 ([§가역원과 영인자, ⁋따름정리 6](/ko/math/ring_theory/units_and_zero_divisors#cor6)). Wedderburn 정리의 힘은 commutativity 가정 없이 zero divisor의 부재만으로 같은 결론에 이른다는 데에 있다.
 
-## Simple module의 endomorphism ring
+## 단순 가군의 자기사상환
 
 Division ring이 자연스럽게 등장하는 또 하나의 맥락은 module 이론이다. ring $R$ 위의 *simple module*은 nonzero이며 $0$과 자기 자신 외의 submodule을 갖지 않는 left $R$-module이다 ([\[가환대수학\] §조르단-횔더 정리, ⁋정의 1](/ko/math/commutative_algebra/Jordan-Holder_theorem#def1)). Simple module 사이의 homomorphism은 매우 제한되어 있으며, 이를 기술하는 것이 Schur의 보조정리이다.
 

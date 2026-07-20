@@ -74,7 +74,7 @@ $$\frac{\mathbb{C}[\x]}{((\x-i)(\x+i)}\cong\frac{\mathbb{C}[\x]}{(\x-i)}\times\f
 
 가 된다. 위의 예시에서 살펴본 Galois group의 언어로 생각하면 이는 위 분해의 두 factor $\mathbb{C}[\x]/(\x-i)$와 $\mathbb{C}[\x]/(\x+i)$가 곧 $\mathbb{R}$을 고정하는 $\mathbb{C}\rightarrow \mathbb{C}$의 automorphism, 즉 $\Gal(\mathbb{C}/\mathbb{R})$의 두 원소에 해당하기 때문에 나타나는 것이며 같은 일이 [예시 3](#ex3)의 $\mathbb{Q}\rightarrow \overline{\mathbb{Q}}$에서도 나타난다. 유일한 차이는 $\Gal(\overline{\mathbb{Q}}/\mathbb{Q})$는 무한하므로 fiber가 두 개가 아닌 무한개가 된다는 것이다. 
 
-그러나 다음이 성립한다.
+그럼에도 이 예시는 integral morphism의 fiber에 대한 어떠한 종류의 finiteness를 암시하는데, 가령 $\Gal(\overline{\mathbb{Q}}/\mathbb{Q})$는 profinite group이므로 ([\[체론\] §갈루아 군의 성질들, ⁋명제 5](/ko/math/field_theory/properties_of_galois_extensions#prop5)) $0$차원이 된다. 이는 임의의 integral morphism에 대해서도 성립하는 사실이다. 
 
 ::: 명제 4
 Integral morphism $\varphi: X \rightarrow Y$의 임의의 fiber는 항상 $0$차원이다. 
@@ -95,7 +95,7 @@ $$\mathfrak{q}_1\subsetneq \mathfrak{q}_2$$
 이 존재할 수 없음을 보여야 한다. 이는 [\[가환대수학\] §정수적 확장과 아이디얼, ⁋따름정리 4](/ko/math/commutative_algebra/lying_over_and_going_up#cor4)의 결과이다. 
 :::
 
-기하적으로, 이 명제는 integral morphism의 각 올이 양의 차원을 갖지 않는다는 것, 즉 올 안에서 curve나 surface가 펼쳐지지 않음을 말해준다. 올은 [예시 3](#ex3)에서 보듯 무한히 많은 점을 가질 수도 있지만 이들은 모두 이산적이어서 올 방향으로의 연속적인 확장이 없으며, 이로부터 integral morphism은 기하적으로 올 방향으로 퍼지지 않는 사상이라는 직관을 얻는다.
+기하적으로, 이 명제는 integral morphism의 각 fiber가 양의 차원을 갖지 않는다는 것을 보여준다. 
 
 위의 명제의 증명에서 사용한 [\[가환대수학\] §정수적 확장과 아이디얼, ⁋따름정리 4](/ko/math/commutative_algebra/lying_over_and_going_up#cor4)는 임의의 integral extension $A\hookrightarrow B$에 대해서도 성립한다. 이에 의해 $B$의 prime ideal chain을 $A$로 contraction하면 여전히 strict하므로 $\dim B\leq\dim A$이고, 거꾸로 [\[가환대수학\] §정수적 확장과 아이디얼, ⁋명제 1](/ko/math/commutative_algebra/lying_over_and_going_up#prop1)의 lying over와 going up에 의해 $A$의 prime ideal chain은 $B$로 올려지므로 $\dim A\leq\dim B$이다. 따라서 더 일반적으로 다음이 성립한다.
 
@@ -107,9 +107,15 @@ $$\dim\Spec A=\dim\Spec B$$
 가 항상 성립한다. 
 :::
 
-특히 임의의 integral domain $A$와 [\[가환대수학\] §정수적 확장, ⁋정의 3](/ko/math/commutative_algebra/integral_extension#def3)에서 정의한 $A$의 normalization $\tilde{A}$에 대하여, extension $A\hookrightarrow\tilde{A}$가 integral이므로 [명제 5](#prop5)에 의하여 $\dim\Spec\tilde{A}=\dim\Spec A$이다. 여기서 normalization은 $A$를 그 field of fractions $\Frac(A)$ 안에서 integrally closed가 되도록 확장한 것이다. 직관적으로는 같은 field of fractions를 유지하면서 singular point를 펴주는 역할을 하는데, 예를 들어 cusp $\mathbb{K}[t^2,t^3]\cong\mathbb{K}[\x,\y]/(\y^2-\x^3)$의 normalization은 $\mathbb{K}[t]$가 되어 singular point가 사라진다. 이는 더 일반적으로 scheme의 normalization에 대해서도 성립하지만, scheme의 normalization은 이후 별도의 글에서 다룬다.
+특히 임의의 integral domain $A$와 그 normalization $\tilde{A}$에 대하여, extension $A\hookrightarrow\tilde{A}$가 integral이므로 [명제 5](#prop5)에 의하여 $\dim\Spec\tilde{A}=\dim\Spec A$이다. 여기서 normalization $\tilde{A}$는 $A$를 그 field of fractions $\Frac(A)$ 안에서 integrally closed가 되도록 확장한 것, 곧 $\Frac(A)$의 원소 가운데 $A$ 위에서 integral인 것들을 모두 $A$에 붙여 얻는 확장이다. ([\[가환대수학\] §정수적 확장, ⁋정의 3](/ko/math/commutative_algebra/integral_extension#def3))
 
-::: 정의 6
+::: 예시 6
+기하적으로 normalization은 같은 function field를 유지하면서 singular point를 펴주는 역할을 한다. 대표적인 예로 cusp $A=\mathbb{K}[\x,\y]/(\y^2-\x^3)\cong\mathbb{K}[t^2,t^3]$를 보자. $\Frac(A)$ 안에서는 $t=\y/\x$가 성립하므로 $\Frac(A)=\mathbb{K}(t)$이며, 원소 $t\in\Frac(A)$는 $t^2=\x\in A$를 만족하므로 $A$ 위에서 integral이다. 따라서 $t$를 붙여 얻은 확장 $A[t]=\mathbb{K}[t^2,t^3,t]=\mathbb{K}[t]$가 곧 normalization $\tilde{A}$이고 ($\mathbb{K}[t]$는 UFD이므로 integrally closed), 대응하는 기하 사상 $\Spec\mathbb{K}[t]\to\Spec A$, $t\mapsto(t^2,t^3)$은 affine line $\mathbb{A}^1$을 cusp 위로 감싸 원점의 singular point를 펴준다. 두 scheme 모두 1차원 곡선이며, 차원이 보존되는 것은 normalization이 integral 확장이라는 사실 그 자체이다.
+:::
+
+임의의 scheme에 대해서도 normalization을 같은 방식으로 정의할 수 있지만, 이는 이후 별도의 글에서 다룬다.
+
+::: 정의 7
 위상공간 $X$의 irreducible subset $Y$에 대하여, $Y$의 $X$에서의 *codimension<sub>여차원</sub>* $\codim_XY$를 $X$의 irreducible closed subset들의 strictly descending chain 
 
 $$A_n\supsetneq A_{n-1}\supsetneq\cdots\supsetneq A_0=\cl_X(Y)$$
@@ -119,7 +125,7 @@ $$A_n\supsetneq A_{n-1}\supsetneq\cdots\supsetneq A_0=\cl_X(Y)$$
 
 그럼 ring $A$의 prime ideal $\mathfrak{p}$의 codimension은 ([\[가환대수학\] §차원, ⁋정의 2](/ko/math/commutative_algebra/Krull_dimension#def2)) $\Spec A$에서 점 $\mathfrak{p}$의 codimension과 같은 것을 확인할 수 있다. 
 
-::: 명제 7
+::: 명제 8
 $X$의 irreducible closed subset $Y$와 $Y$의 generic point $y$에 대하여, $\codim_X Y=\dim \mathcal{O}_{X,y}$이 성립한다.
 :::
 ::: 증명
@@ -140,7 +146,7 @@ $$\dim Y+\codim_XY\leq \dim X$$
 
 이제 우리는 중요한 다음 결과를 보인다.
 
-::: 정리 8 (Noether normalization lemma)
+::: 정리 9 (Noether normalization lemma)
 임의의 field $\mathbb{K}$와, finitely generated $\mathbb{K}$-algebra $A$가 주어졌다 하자. 만일 $A$가 integral domain이고 
 
 $$\trdeg_\mathbb{K}\Frac(A)=n$$
@@ -183,13 +189,13 @@ $$\alpha_{d_1d_2\cdots d_m}y_m^{r_1d_1+\cdots+r_{m-1}d_{m-1}+d_m}$$
 
 기하적으로 $A=\mathbb{K}[y_1,\ldots, y_m]/\mathfrak{p}$라 두는 것은 $\Spec A$가 affine space $\mathbb{A}^m_\mathbb{K}$의 integral closed subscheme이라는 것과 같으므로, 위의 정리의 결과로 얻어지는 finite ring homomorphism $\mathbb{K}[x_1,\ldots, x_n] \rightarrow \mathbb{K}[y_1,\ldots, y_m]/\mathfrak{p}$는 기하적으로는 finite scheme morphism $\Spec A \rightarrow \Spec \mathbb{K}[x_1,\ldots, x_n]$을 찾는 것과 같다. 이제 finite extension $\mathbb{K}[x_1,\ldots, x_n] \rightarrow A$은 integral extension이므로 [명제 5](#prop5)에 의하여 $\dim A=\dim \mathbb{K}[x_1,\ldots, x_n]$이므로, [\[가환대수학\] §매개계, ⁋따름정리 11](/ko/math/commutative_algebra/system_of_parameters#cor11)에 의하여 다음 결과를 얻는다.
 
-::: 명제 9
+::: 명제 10
 임의의 field $\mathbb{K}$와, finitely generated $\mathbb{K}$-algebra $A$가 주어졌다 하자. 만일 $A$가 integral domain이라면, $\dim\Spec A=\trdeg_\mathbb{K} \Frac(A)$이 성립한다. 
 :::
 
 위의 주장들에서 가장 중요하게 쓰인 결과는 당연히 [\[가환대수학\] §정수적 확장과 아이디얼](/ko/math/commutative_algebra/lying_over_and_going_up)의 결과들이다. 한편 차원 공식 [\[가환대수학\] §뇌터 정규화, ⁋정리 4](/ko/math/commutative_algebra/noether_normalization#thm4)를 사용하면 다음을 얻는다.
 
-::: 명제 10
+::: 명제 11
 임의의 field $\mathbb{K}$와, finitely generated $\mathbb{K}$-algebra $A$가 주어졌다 하자. 만일 $A$가 integral domain이고, $f\in A$가 nonzero non-unit이라면 $\dim A/(f)=\dim A-1$이 성립한다.
 :::
 ::: 증명
@@ -200,8 +206,8 @@ $(f)$를 포함하는 $A$의 minimal prime $\mathfrak{p}$를 택하자. [\[가�
 
 앞서 우리는 임의의 affine integral $\mathbb{K}$-scheme $X=\Spec A$에 대하여, $A$의 nonzero non-unit $f$를 통해 정의된 closed subscheme $Z(f)$는 $A$보다 하나 적은 차원을 갖는다는 것을 살펴보았다. 이는 분명 유용한 결과이지만, 다음과 같이 더 일반적인 경우에도 그 결과를 살펴볼 수 있다.
 
-::: 명제 11
-Locally noetherian scheme $X$와 $X$ 위의 함수 $f$에 대하여, $Z(f)$의 irreducible component는 codimension $0$이거나 codimension $1$이다. 
+::: 명제 12
+Locally noetherian scheme $X$와 $X$ 위의 함수 $f$에 대하여, $Z(f)$의 irreducible component는 codimension $0$이거나 codimension $1$이다.
 :::
 ::: 증명
 [\[가환대수학\] §차원, ⁋정리 6](/ko/math/commutative_algebra/Krull_dimension#thm6)
