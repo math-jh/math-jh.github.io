@@ -45,17 +45,13 @@ $$b=1\cdot b=(a^{-1}a)b=a^{-1}(ab)=a^{-1}\cdot 0=0$$
 
 이는 사실 [§가역원과 영인자, ⁋명제 4](/ko/math/ring_theory/units_and_zero_divisors#prop4)로부터도 바로 얻어지는 것으로, division ring에서는 모든 nonzero 원소가 unit이므로 nonzero zero divisor가 존재할 여지가 없다. 그러나 이 역은 일반적으로 사실이 아니며, 가령 $\mathbb{Z}$ 또한 그러하다는 것을 위의 명제 직후에서 이미 살펴보았다. 
 
-뿐만 아니라, 해당 글에서 우리는 이미 위 [명제 2](#prop2)의 부분적인 역, 즉 *finite* ring에 대해서는 integral domain이 항상 field가 된다는 것을 살펴보았다. ([§가역원과 영인자, ⁋따름정리 6](/ko/math/ring_theory/units_and_zero_divisors#cor6)) 이 따름정리의 증명에는 ring의 commutativity가 본질적으로 사용되지 <em-ko>않는데</em-ko>, 그럼에도 불구하고 해당 따름정리에서 commutativity를 가정한 이유는 commutativity를 뺐을 때 다루게 되는 finite non-commutative zero-divisor-free ring이 존재하지 않기 때문이다. 다시 말해 임의의 finite division ring은 강제로 commutative가 되는데, 이 사실은 위 따름정리의 곱셈사상 논증으로는 잡히지 않는 깊은 정리이다. 이제 이를 증명한다.
+뿐만 아니라, 해당 글에서 우리는 이미 위 [명제 2](#prop2)의 부분적인 역, 즉 *finite* ring에 대해서는 integral domain이 항상 field가 된다는 것을 살펴보았다. ([§가역원과 영인자, ⁋따름정리 6](/ko/math/ring_theory/units_and_zero_divisors#cor6)) 이 따름정리의 증명에는 ring의 commutativity가 본질적으로 사용되지 <em-ko>않는데</em-ko>, 그럼에도 불구하고 해당 따름정리에서 commutativity를 가정한 이유는 commutativity를 뺐을 때 다루게 되는 finite non-commutative zero-divisor-free ring이 존재하지 않기 때문이다. 
 
 ## Wedderburn의 소정리
 
-앞서 [명제 2](#prop2) 직후에 언급한 것과 같이, 유한한 ring의 경우 commutative하지 않은 division ring은 아예 존재하지 않는다. 이에 대한 증명은 division ring의 center가 field임을 관찰한 뒤, 그 위의 vector space 구조를 통해 multiplicative group의 class equation을 세우고, cyclotomic polynomial의 정수론적 성질로 모순을 끌어내는 방식으로 진행된다.
+앞서 [명제 2](#prop2) 직후에 언급한 것과 같이, finite, non-commutative division ring은 아예 존재하지 않는다. 이에 대한 증명을 위해서는 약간의 준비가 필요하다. 
 
-먼저 center에 관한 두 관찰을 정리한다. Division ring $D$의 *center*를
-
-$$Z=Z(D)=\{z\in D: zx=xz\text{ for all }x\in D\}$$
-
-로 정의하면, $Z$는 $D$의 commutative subring이다. 나아가 $z\in Z$가 nonzero이면 $D$ 안에서 역원 $z^{-1}$을 갖는데, 임의의 $x$에 대해 $z^{-1}x=z^{-1}x zz^{-1}=z^{-1}zxz^{-1}=xz^{-1}$이므로 $z^{-1}\in Z$이다. 즉 $Z$의 모든 nonzero 원소가 $Z$ 안에서 역원을 가지므로, $Z$는 field이다. $D$가 유한하면 $Z$도 유한 field이고, 그 원소의 개수를 $q$라 하면 $q\geq 2$이다.
+먼저 [\[대수적 구조\] §환의 정의, ⁋정의 8](/ko/math/algebraic_structures/rings#def8)에서 정의한 center에 관한 두 관찰을 정리한다. Division ring $D$의 center $Z=Z(D)$는 $D$의 commutative subring인데, 나아가 $z\in Z$가 nonzero이면 $D$ 안에서 역원 $z^{-1}$을 갖고 임의의 $x$에 대해 $z^{-1}x=z^{-1}x zz^{-1}=z^{-1}zxz^{-1}=xz^{-1}$이므로 $z^{-1}\in Z$이다. 즉 $Z$의 모든 nonzero 원소가 $Z$ 안에서 역원을 가지므로, $Z$는 field이다. $D$가 유한하면 $Z$도 유한 field이고, 그 원소의 개수를 $q$라 하면 $q\geq 2$이다.
 
 이제 $D$를 $Z$ 위의 vector space로 본다. $Z$가 $q$개의 원소를 갖는 유한 field이고 $D$가 그 위의 $n$차원 vector space이면 $\lvert D\rvert=q^n$이다. 더 일반적으로, $D$의 임의의 부분 division ring $D'$이 $Z$를 포함하면 $D'$ 또한 $Z$ 위의 vector space이므로 그 원소 개수는 $q^d$ 꼴이며, $D$가 $D'$ 위의 vector space이기도 하므로 $q^n=(q^d)^m$에서 $d\mid n$이다. 이 정수론적 제약이 증명의 출발점이다.
 

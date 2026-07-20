@@ -120,25 +120,28 @@ $$A=\mathbb{K}[\x,\y]/(\y^2-\x^3)\cong\mathbb{K}[t^2,t^3]$$
 
 $$A[t]=\mathbb{K}[t^2,t^3,t]=\mathbb{K}[t]$$
 
-가 $A$의 integral extension이고, $\mathbb{K}[t]$는 UFD이므로 [\[가환대수학\] §정수적 확장, ⁋명제 9](/ko/math/commutative_algebra/integral_extension#prop9)에 의하여 integrally closed이므로 이것이 곧 normalization $\tilde{A}$이다. 
+가 $A$의 integral extension이고, $A[t]$는 UFD이므로 [\[가환대수학\] §정수적 확장, ⁋명제 9](/ko/math/commutative_algebra/integral_extension#prop9)에 의하여 integrally closed이므로 이것이 곧 normalization $\tilde{A}$이다. 
 
 이제 기하적으로 이것이 무슨 의미인지 살펴보자. 우리는 우선 위의 integral extension $A\rightarrow A[t]$가 주는 공간들 사이의 map 
 
 $$\Spec A[t]\rightarrow \Spec A$$
 
-을 살펴보아야 한다. 우선 곡선 $\Spec A$의 singular point, 즉 원점 $\mathfrak m=(t^2,t^3)\in\Spec A$을 보면 이 점에서의 위의 map의 fiber는
+을 살펴보아야 한다. 우선 곡선 $\Spec A$의 singular point인 원점 $\mathfrak m=(t^2,t^3)\in\Spec A$을 보면, 이 점에서의 위의 map의 fiber는 다음의 pullback diagram
 
-$$\Spec(\mathbb{K}[t]\otimes_A A/\mathfrak m)=\Spec(\mathbb{K}[t]/(t^2,t^3))=\Spec(\mathbb{K}[t]/(t^2))$$
+![cusp-fiber](/assets/images/Math/Scheme_Theory/Dimension_Schemes-2.svg){:style="width:17.35em" class="invert" .align-center}
 
-로 주어진다. 즉, fiber 자체는 한 점이 되지만 그 위에 주어진 scheme 구조는 non-reduced이다. 
+즉 다음의 map
 
-이 fiber의 밑점은 $\Spec\mathbb{K}[t]$의 점 $(t)$이며, 이것이 $\mathfrak m$ 위에 놓인 유일한 점이다 ($(t)\cap A=(t^2,t^3)=\mathfrak m$). 이제 local ring을 비교하자. 원점에서 cusp의 local ring $A_{\mathfrak m}=\mathbb{K}[t^2,t^3]_{(t^2,t^3)}$는 maximal ideal $(t^2,t^3)$이 두 원소로 생성되어야 하여 singular한데, 이는 [\[대수다양체\] §접공간과 매끄러움, ⁋예시 7](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#ex7)에서 본 것처럼 tangent space $T_0=\mathbb{K}^2$가 너무 크기 때문이다. 반면 그 위의 점 $(t)$에서 $\Spec\mathbb{K}[t]$의 local ring $\mathbb{K}[t]_{(t)}$는 maximal ideal이 단일 원소 $t$로 생성되어 tangent space가 1차원, 곧 매끈하다. 즉 normalization이 singular한 local ring $A_{\mathfrak m}$을 매끈한 local ring $\mathbb{K}[t]_{(t)}$로 바꾸어 주는 것이 cusp를 펴주는 일이다.
+$$\Spec(A[t]\otimes_A A/\mathfrak m)=\Spec(A[t]/(t^2,t^3))=\Spec(A[t]/(t^2))$$
 
-반면 원점을 뺀 열린집합 $D(\x)$에서는 $\x=t^2$를 가역시키면 $t=t^3\cdot(t^2)^{-1}$가 들어와
+로 주어진다. 즉, fiber 자체는 한 점이 되지만 그 위에 주어진 scheme 구조는 non-reduced이며, 반면 $\Spec A$의 원점 $\Spec A/\mathfrak{m}$은 field의 spectrum으로서 reduced인 한 점이므로 위의 fiber는 이 점과 같아질 수 없다. 반면 원점을 뺀 열린집합 $D(\x)$에서는 $\x=t^2$가 invertible해지므로, $t=t^3\cdot(t^2)^{-1}$가 들어와
 
-$$A[\x^{-1}]=\mathbb{K}[t,t^{-1}]=\tilde{A}[\x^{-1}]$$
+$$A[\x^{-1}]=\tilde{A}[\x^{-1}]$$
 
-이 되어 두 scheme은 원점을 뺀 매끈한 부분에서 완전히 같다. 즉 기하 사상 $\Spec\mathbb{K}[t]\to\Spec A$, $t\mapsto(t^2,t^3)$은 affine line $\mathbb{A}^1$을 cusp 위로 감싸 정확히 원점의 singular point만 펴주며, 두 scheme 모두 1차원 곡선이라 차원이 보존되는 것은 normalization이 integral 확장이라는 사실 그 자체이다.
+이 되어 두 scheme은 원점을 뺀 부분에서 완전히 같다. 
+
+원점에서 일어나는 일을 조금 더 대수적으로 살펴보기 위해 local ring을 보자. 우선 $\Spec A$의 원점 $\mathfrak{m}$의 preimage는 
+$\Spec(A[t]/(t^2))$라는 것을 보았다. 이를 이해하기 위해 $\mathfrak m=(t^2,t^3)$를 $A[t]$로 확장하면 $A[t]$에서 $t^3=t\cdot t^2$이므로 $\mathfrak m A[t]=(t^2)$이 되고, 그 radical $\sqrt{(t^2)}=(t)$가 $\mathfrak m$ 위에 놓인 $A[t]$의 유일한 prime임을 안다. 또한 $\mathfrak m A[t]=(t^2)$가 radical이 아니라는 것이 fiber $A[t]/(t^2)$에 nilpotent $\bar t\neq 0$을 남겨 non-reduced로 만드는 이유이다. 이제 원점에서 cusp의 local ring $A_{\mathfrak m}=\mathbb{K}[t^2,t^3]_{(t^2,t^3)}$는 maximal ideal $(t^2,t^3)$이 두 원소로 생성되어야 하여 singular한데, 이는 [\[대수다양체\] §접공간과 매끄러움, ⁋예시 7](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#ex7)에서 본 $T_0=\mathbb{K}^2$가 너무 크기 때문이다. 반면 그 위 점 $(t)$에서 normalization의 local ring $A[t]_{(t)}$는 maximal ideal이 단일 원소 $t$로 생성되어 매끈하다. 즉 normalization이 singular한 local ring $A_{\mathfrak m}$을 매끈한 local ring $A[t]_{(t)}$로 바꾸어 cusp를 펴주는 것이다.
 :::
 
 임의의 scheme에 대해서도 normalization을 같은 방식으로 정의할 수 있지만, 이는 이후 별도의 글에서 다룬다.
