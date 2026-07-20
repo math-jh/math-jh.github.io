@@ -253,6 +253,13 @@ A:
     url: /ko/math/linear_algebra/dual_space
   - label: '[가환대수학] §기본 개념들'
     url: /ko/math/commutative_algebra/basic_notions
+- id: antipodal_map
+  en: antipodal map
+  ko: 대척사상
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §Borsuk–Ulam 정리'
+    url: /ko/math/algebraic_topology/borsuk_ulam_theorem
 - id: antisymmetric
   en: antisymmetric
   ko: 반대칭적
@@ -860,6 +867,13 @@ C:
     url: /ko/math/linear_algebra/characteristic_polynomial
   - label: '[다중선형대수학] §행렬식'
     url: /ko/math/multilinear_algebra/determinants
+- id: chern_class
+  en: Chern class
+  ko: 천 특성류
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §벡터다발의 특성류'
+    url: /ko/math/algebraic_topology/characteristic_classes
 - id: choice_function
   en: choice function
   ko: 선택함수
@@ -1934,6 +1948,13 @@ D:
   defs:
   - label: '[집합론] §집합의 합'
     url: /ko/math/set_theory/sum_of_sets
+- id: disk_bundle
+  en: disk bundle
+  ko: 원판다발
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §벡터다발의 특성류'
+    url: /ko/math/algebraic_topology/characteristic_classes
 - id: distributive_law
   en: distributive law
   ko: 분배법칙
@@ -2208,6 +2229,13 @@ E:
   defs:
   - label: '[대수다양체] §사영공간의 코호몰로지'
     url: /ko/math/algebraic_varieties/cohomology_of_projective_spaces
+- id: euler_class
+  en: Euler class
+  ko: 오일러 특성류
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §벡터다발의 특성류'
+    url: /ko/math/algebraic_topology/characteristic_classes
 - id: evaluation_map
   en: evaluation map
   ko: 값매김사상
@@ -4587,6 +4615,13 @@ O:
   defs:
   - label: '[범주론] §범주'
     url: /ko/math/category_theory/categories
+- id: odd_map
+  en: odd map
+  ko: 기함수형 사상
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §Borsuk–Ulam 정리'
+    url: /ko/math/algebraic_topology/borsuk_ulam_theorem
 - id: odd_permutation
   en: odd permutation
   ko: 홀치환
@@ -4727,6 +4762,13 @@ O:
   defs:
   - label: '[대수적 위상수학] §푸앵카레 쌍대성'
     url: /ko/math/algebraic_topology/Poincare_duality
+- id: orientation
+  en: orientation
+  ko: 방향
+  primary: ko
+  defs:
+  - label: '[대수적 위상수학] §벡터다발의 특성류'
+    url: /ko/math/algebraic_topology/characteristic_classes
 - id: orientation_double_cover
   en: orientation double cover
   ko: 방향 이중덮개
@@ -4918,6 +4960,13 @@ P:
     url: /ko/math/algebraic_varieties/affine_varieties
   - label: '[스킴] §스펙트럼'
     url: /ko/math/scheme_theory/spectrums
+- id: pontryagin_class
+  en: Pontryagin class
+  ko: 폰트랴긴 특성류
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §벡터다발의 특성류'
+    url: /ko/math/algebraic_topology/characteristic_classes
 - id: power_set
   en: power set
   ko: 멱집합
@@ -6196,6 +6245,13 @@ S:
     url: /ko/math/linear_algebra/characteristic_polynomial
   - label: '[스킴] §스펙트럼'
     url: /ko/math/scheme_theory/spectrums
+- id: sphere_bundle
+  en: sphere bundle
+  ko: 구면다발
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §벡터다발의 특성류'
+    url: /ko/math/algebraic_topology/characteristic_classes
 - id: split
   en: split
   ko: 분해
@@ -6238,6 +6294,8 @@ S:
   defs:
   - label: '[대수적 위상수학] §벡터다발의 특성류'
     url: /ko/math/algebraic_topology/characteristic_classes
+  - label: '[대수적 위상수학] §슈티펠-휘트니 특성류'
+    url: /ko/math/algebraic_topology/stiefel_whitney_classes
 - id: strict_ordering
   en: strict ordering
   ko: 강한 순서관계
