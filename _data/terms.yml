@@ -1851,6 +1851,8 @@ D:
   defs:
   - label: '[대수적 구조] §군의 직접곱'
     url: /ko/math/algebraic_structures/direct_products
+  - label: '[대수적 구조] §대수의 직접곱, 직합, 텐서곱'
+    url: /ko/math/algebraic_structures/operations_of_algebras
   see:
   - label: Direct sum
     id: direct_sum
@@ -1865,6 +1867,8 @@ D:
     url: /ko/math/algebraic_structures/abelian_groups
   - label: '[대수적 구조] §환의 곱, 쌍대곱, 텐서곱'
     url: /ko/math/algebraic_structures/operations_of_rings
+  - label: '[대수적 구조] §대수의 직접곱, 직합, 텐서곱'
+    url: /ko/math/algebraic_structures/operations_of_algebras
   see:
   - label: Direct product
     id: direct_product
@@ -6693,6 +6697,8 @@ T:
     url: /ko/math/multilinear_algebra/tensor_algebras
   - label: '[대수적 구조] §가환군'
     url: /ko/math/algebraic_structures/abelian_groups
+  - label: '[대수적 구조] §대수의 직접곱, 직합, 텐서곱'
+    url: /ko/math/algebraic_structures/operations_of_algebras
 - id: terminal_object
   en: terminal object
   ko: 끝 대상

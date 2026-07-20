@@ -53,17 +53,14 @@ $$\Spec(\overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}})\rightarrow
 
 또한 [§올곱, ⁋명제 15](/ko/math/scheme_theory/fiber_products#prop15)에 의하여 integral이다. 
 
-이 map을 살펴보기 위해, 구체적으로 ring homomorphism $\overline{\mathbb{Q}}\rightarrow \overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}}$를 살펴보자. 위의 map의 section을 보는 것은 이 함수의 retraction을 보는 것과 같으며 이는 
-
-
-이 source의 점들을 살펴보자. 각 $\sigma\in\Gal(\overline{\mathbb{Q}}/\mathbb{Q})$에 대하여 surjective ring homomorphism
+이 map을 살펴보기 위해, 구체적으로 ring homomorphism $\overline{\mathbb{Q}}\rightarrow \overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}}$를 살펴보자. 위의 scheme 사이의 map의 section을 보는 것은 이 함수의 retraction을 보는 것과 같으며 이는 다음의 surjective ring homomorphism
 
 $$\overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}}\rightarrow\overline{\mathbb{Q}},\qquad a\otimes b\mapsto a\sigma(b)$$
 
-의 kernel $\mathfrak{p}_\sigma$는 maximal ideal이므로 $\Spec(\overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}})$의 한 점을 정의한다. $\sigma\neq\tau$이면 $\sigma(b)\neq\tau(b)$인 $b\in\overline{\mathbb{Q}}$를 택할 때 $1\otimes b-\sigma(b)\otimes 1\in\mathfrak{p}_\sigma$이지만 $\mathfrak{p}_\tau$에는 속하지 않으므로 $\mathfrak{p}_\sigma\neq\mathfrak{p}_\tau$이다. 따라서 $\Spec(\overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}})$은 적어도 $\Gal(\overline{\mathbb{Q}}/\mathbb{Q})$만큼의, 곧 무한히 많은 점을 가지며, $\Spec(\overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}})\rightarrow\Spec\overline{\mathbb{Q}}$는 quasi-finite morphism이 아니므로 finite morphism도 아니다.
+으로부터 온다. 구체적으로, 이 ring homomorphism의 kernel $\mathfrak{p}_\sigma$는 maximal ideal이므로 $\Spec(\overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}})$의 한 점을 정의하며, $\sigma\neq\tau$이면 $\sigma(b)\neq\tau(b)$인 $b\in\overline{\mathbb{Q}}$를 택할 때 $1\otimes b-\sigma(b)\otimes 1\in\mathfrak{p}_\sigma$이지만 $\mathfrak{p}_\tau$에는 속하지 않으므로 $\mathfrak{p}_\sigma\neq\mathfrak{p}_\tau$이다. 따라서 $\Spec(\overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}})$은 적어도 $\Gal(\overline{\mathbb{Q}}/\mathbb{Q})$만큼의, 곧 무한히 많은 점을 가지며, $\Spec(\overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}})\rightarrow\Spec\overline{\mathbb{Q}}$는 quasi-finite morphism이 아니므로 finite morphism도 아니다.
 :::
 
-기하적으로, $\Spec\overline{\mathbb{Q}}\to\Spec\mathbb{Q}$는 한 점에서 한 점으로 가는 사상이지만, 위 pullback에서 보듯 base change의 source인 $\Spec(\overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}})$는 각 $\sigma\in\Gal(\overline{\mathbb{Q}}/\mathbb{Q})$마다 점 $\mathfrak{p}_\sigma$를 갖는다. 각 $\sigma$는 두 $\overline{\mathbb{Q}}$가 $\mathbb{Q}$ 위에서 어떻게 연관되는지를 나타내며, 곧 한 점이 자기 자신과 $\mathbb{Q}$ 위에서 fiber product를 취하면 그 점에 숨어 있던 $\mathbb{Q}$ 위의 대칭인 Galois group이 각각의 점으로 드러나는 셈이다. 친숙한 유한 판으로 $\Spec\mathbb{C}\to\Spec\mathbb{R}$을 $\mathbb{C}$로 base change하면 $\mathbb{C}\otimes_\mathbb{R}\mathbb{C}\cong\mathbb{C}\times\mathbb{C}$에서 두 점이 나오는 것($\lvert\Gal(\mathbb{C}/\mathbb{R})\rvert=2$)을 생각할 수 있고, $\overline{\mathbb{Q}}/\mathbb{Q}$는 그 무한 버전이다.
+기하적으로 이는, algebraically closed가 아닌 field 위의 점이 algebraic closure로 base change되면서 Galois conjugate마다 갈라지는 친숙한 현상이다. 가장 작은 예로 $\Spec\mathbb{C}=\Spec\mathbb{R}[\x]/(\x^2+1)\to\Spec\mathbb{R}$를 보면, $\x^2+1$이 $\mathbb{R}$ 위에서 기약이라 $\Spec\mathbb{C}$는 한 점이지만 $\mathbb{C}$로 base change하면 $\x^2+1=(\x-i)(\x+i)$로 갈라져 $\mathbb{C}\otimes_\mathbb{R}\mathbb{C}\cong\mathbb{C}\times\mathbb{C}$의 두 점이 나온다($\lvert\Gal(\mathbb{C}/\mathbb{R})\rvert=2$). $\mathbb{C}/\mathbb{R}$이 유한 확장이라 이처럼 점이 유한 개로 떨어지는 것과 달리, $\overline{\mathbb{Q}}/\mathbb{Q}$는 무한 확장이라 Galois group 자체가 무한하며, 그래서 한 점이 유한 개가 아닌 무한히 많은 점으로 갈라진다. 이것이 바로 위에서 $\Spec\overline{\mathbb{Q}}\to\Spec\mathbb{Q}$가 quasi-finite morphism이 될 수 없는 핵심 이유이다.
 
 그러나 다음이 성립한다.
 
