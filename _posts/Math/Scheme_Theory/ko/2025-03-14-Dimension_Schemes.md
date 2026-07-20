@@ -68,9 +68,11 @@ $$\Spec(\mathbb{C}\otimes_\mathbb{R} \mathbb{C}) \rightarrow \Spec \mathbb{C}$$
 
 $$\mathbb{C}\otimes_\mathbb{R} \mathbb{C}\cong \mathbb{C}\otimes_\mathbb{R} \frac{\mathbb{R}[\x]}{(\x^2+1)}\cong \frac{\mathbb{C}[\x]}{(\x^2+1)}$$
 
-이며, $\x^2+1$은 $\mathbb{C}$에서는 두 일차식의 곱 $\x^2+1=(\x-i)(\x+i)$로 인수분해되며, $(\x-i)$와 $(\x+i)$는 comaximal이므로 [\[환론\] §중국인의 나머지정리, ⁋명제 6](/ko/math/ring_theory/chinese_remainder_theorem#prop6)에 의하여 $\mathbb{C}[\x]/((\x-i)(\x+i))\cong\mathbb{C}[\x]/(\x-i)\times\mathbb{C}[\x]/(\x+i)\cong\mathbb{C}\times\mathbb{C}$가 된다.
+이며, $\x^2+1$은 $\mathbb{C}$에서는 두 일차식의 곱 $\x^2+1=(\x-i)(\x+i)$로 인수분해되며, $(\x-i)$와 $(\x+i)$는 comaximal이므로 [\[환론\] §중국인의 나머지정리, ⁋명제 6](/ko/math/ring_theory/chinese_remainder_theorem#prop6)에 의하여 
 
-그러나 의 이 점은 $\x^2+1$의 두 근 $i,-i$가 Galois group $\Gal(\mathbb{C}/\mathbb{R})$에 의해 뒤바뀌어 하나로 묶여 있는 것이고, $\mathbb{C}$로 base change하여 얻은 $\Spec(\mathbb{C}\otimes_\mathbb{R}\mathbb{C})$를 보면되면서 $\mathbb{C}\otimes_\mathbb{R}\mathbb{C}\cong\mathbb{C}\times\mathbb{C}$가 되어 두 점으로 갈라진다. 이 두 점은 $\Gal(\mathbb{C}/\mathbb{R})$의 두 원소에 각각 대응하며 ($\lvert\Gal(\mathbb{C}/\mathbb{R})\rvert=2$), $\overline{\mathbb{Q}}/\mathbb{Q}$도 같은 현상이지만 Galois group이 무한하므로 한 점이 무한히 많은 점으로 갈라진다. 이것이 위에서 $\Spec(\overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}})\to\Spec\overline{\mathbb{Q}}$가 quasi-finite morphism이 될 수 없는 핵심 이유이다.
+$$\frac{\mathbb{C}[\x]}{((\x-i)(\x+i)}\cong\frac{\mathbb{C}[\x]}{(\x-i)}\times\frac{\mathbb{C}[\x]}{(\x+i)}\cong\mathbb{C}\times\mathbb{C}$$
+
+가 된다. 위의 예시에서 살펴본 Galois group의 언어로 생각하면 이는 위 분해의 두 factor $\mathbb{C}[\x]/(\x-i)$와 $\mathbb{C}[\x]/(\x+i)$가 곧 $\mathbb{R}$을 고정하는 $\mathbb{C}\rightarrow \mathbb{C}$의 automorphism, 즉 $\Gal(\mathbb{C}/\mathbb{R})$의 두 원소에 해당하기 때문에 나타나는 것이며 같은 일이 [예시 3](#ex3)의 $\mathbb{Q}\rightarrow \overline{\mathbb{Q}}$에서도 나타난다. 유일한 차이는 $\Gal(\overline{\mathbb{Q}}/\mathbb{Q})$는 무한하므로 fiber가 두 개가 아닌 무한개가 된다는 것이다. 
 
 그러나 다음이 성립한다.
 

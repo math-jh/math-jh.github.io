@@ -309,6 +309,13 @@ A:
   see:
   - label: Descending chain condition
     id: descending_chain_condition
+- id: associated_bundle
+  en: associated bundle
+  ko: 수반다발
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §분류공간'
+    url: /ko/math/algebraic_topology/classifying_spaces
 - id: associated_point
   en: associated point
   ko: 동반점
@@ -515,6 +522,8 @@ B:
   defs:
   - label: '[미분다양체] §접다발과 여접다발'
     url: /ko/math/manifolds/tangent_and_cotangent_bundles
+  - label: '[대수적 위상수학] §호모토피의 계산'
+    url: /ko/math/algebraic_topology/fibrations
 - id: basis
   en: basis
   ko: 기저 (선형대수학)
@@ -916,6 +925,13 @@ C:
   defs:
   - label: '[가환대수학] §인자'
     url: /ko/math/commutative_algebra/divisors
+- id: classifying_space
+  en: classifying space
+  ko: 분류공간
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §분류공간'
+    url: /ko/math/algebraic_topology/classifying_spaces
 - id: closed
   en: closed
   ko: 닫힌
@@ -1384,6 +1400,13 @@ C:
   defs:
   - label: '[위상수학] §연결공간'
     url: /ko/math/topology/connected_spaces
+- id: connecting_homomorphism
+  en: connecting homomorphism
+  ko: 연결 준동형
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §호모토피의 계산'
+    url: /ko/math/algebraic_topology/fibrations
 - id: connection
   en: connection
   ko: 접속
@@ -1663,6 +1686,8 @@ D:
     url: /ko/math/linear_algebra/subspaces
   - label: '[체론] §대수적 확장'
     url: /ko/math/field_theory/algebraic_extensions
+  - label: '[대수적 위상수학] §사상의 차수와 Brouwer·Lefschetz 고정점 정리'
+    url: /ko/math/algebraic_topology/degree_and_fixed_point_theorems
 - id: delta_functor
   en: delta functor
   ko: 델타 함자
@@ -2363,6 +2388,8 @@ F:
   defs:
   - label: '[스킴] §올곱'
     url: /ko/math/scheme_theory/fiber_products
+  - label: '[대수적 위상수학] §호모토피의 계산'
+    url: /ko/math/algebraic_topology/fibrations
 - id: fiber_bundle
   en: fiber bundle
   ko: 올다발
@@ -2370,6 +2397,13 @@ F:
   defs:
   - label: '[대수적 위상수학] §벡터다발의 특성류'
     url: /ko/math/algebraic_topology/characteristic_classes
+- id: fibration
+  en: fibration
+  ko: 올림
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §호모토피의 계산'
+    url: /ko/math/algebraic_topology/fibrations
 - id: field
   en: field
   ko: 체
@@ -3044,6 +3078,13 @@ H:
   defs:
   - label: '[대수적 위상수학] §호모토피'
     url: /ko/math/algebraic_topology/homotopy
+- id: homotopy_lifting_property
+  en: homotopy lifting property
+  ko: 호모토피 올림 성질
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §호모토피의 계산'
+    url: /ko/math/algebraic_topology/fibrations
 - id: hopf_monoid
   en: Hopf monoid
   ko: 호프 모노이드
@@ -3561,6 +3602,8 @@ I:
     url: /ko/math/linear_algebra/isomorphic_vector_spaces
   - label: '[대수적 구조] §대수적 구조'
     url: /ko/math/algebraic_structures/algebraic_structures
+  - label: '[대수다양체] §아핀다양체'
+    url: /ko/math/algebraic_varieties/affine_varieties
 - id: isomorphism_class
   en: isomorphism class
   ko: 동형류
@@ -3755,6 +3798,13 @@ L:
   defs:
   - label: '[집합론] §순서집합의 원소들'
     url: /ko/math/set_theory/elements_in_ordered_set
+- id: lefschetz_number
+  en: Lefschetz number
+  ko: 레프셰츠 수
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §사상의 차수와 Brouwer·Lefschetz 고정점 정리'
+    url: /ko/math/algebraic_topology/degree_and_fixed_point_theorems
 - id: left_a_-module
   en: left $A$-module
   ko: 왼쪽 $A$-가군
@@ -4389,6 +4439,13 @@ N:
   defs:
   - label: '[호몰로지 대수학] §호몰로지'
     url: /ko/math/homological_algebra/homology
+- id: n_-th_homotopy_group
+  en: $n$-th homotopy group
+  ko: $n$번째 호모토피 군
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §호모토피의 계산'
+    url: /ko/math/algebraic_topology/fibrations
 - id: natural_isomorphism
   en: natural isomorphism
   ko: 자연동형변환
@@ -5065,6 +5122,13 @@ P:
     url: /ko/math/commutative_algebra/divisors
   - label: '[대수다양체] §인자'
     url: /ko/math/algebraic_varieties/divisors
+- id: principal_g_-bundle
+  en: principal $g$-bundle
+  ko: 주다발
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §분류공간'
+    url: /ko/math/algebraic_topology/classifying_spaces
 - id: principal_ideal
   en: principal ideal
   ko: 주아이디얼
@@ -5154,6 +5218,13 @@ P:
   defs:
   - label: '[복소기하학] §복소다양체'
     url: /ko/math/complex_geometry/complex_manifolds
+- id: projective_bundle
+  en: projective bundle
+  ko: 사영다발
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §사영다발과 Leray–Hirsch 정리'
+    url: /ko/math/algebraic_topology/projective_bundles
 - id: projective_limit
   en: projective limit
   ko: 사영극한
@@ -5591,6 +5662,13 @@ R:
     url: /ko/math/set_theory/binary_relation
   - label: '[대수적 구조] §반군, 모노이드, 군'
     url: /ko/math/algebraic_structures/groups
+- id: relative_homotopy_group
+  en: relative homotopy group
+  ko: 상대 호모토피 군
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §호모토피의 계산'
+    url: /ko/math/algebraic_topology/fibrations
 - id: relative_tangent_bundle
   en: relative tangent bundle
   ko: 상대접다발
@@ -6831,6 +6909,8 @@ T:
   defs:
   - label: '[미분다양체] §접다발과 여접다발'
     url: /ko/math/manifolds/tangent_and_cotangent_bundles
+  - label: '[대수적 위상수학] §호모토피의 계산'
+    url: /ko/math/algebraic_topology/fibrations
 - id: totally_ordered_set
   en: totally ordered set
   ko: 전순서집합
