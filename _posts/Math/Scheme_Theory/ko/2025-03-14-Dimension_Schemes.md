@@ -132,7 +132,7 @@ $$\Spec(\mathbb{K}[t]\otimes_A A/\mathfrak m)=\Spec(\mathbb{K}[t]/(t^2,t^3))=\Sp
 
 로 주어진다. 즉, fiber 자체는 한 점이 되지만 그 위에 주어진 scheme 구조는 non-reduced이다. 
 
-원점에서 cusp의 local ring $A_{\mathfrak m}=\mathbb{K}[t^2,t^3]_{(t^2,t^3)}$는 maximal ideal $(t^2,t^3)$이 두 원소로 생성되어야 하여 singular한데, 이는 [\[대수다양체\] §접공간과 매끄러움, ⁋예시 7](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#ex7)에서 본 것처럼 tangent space $T_0=\mathbb{K}^2$가 너무 크기 때문이다. 반면 normalization의 원점에서 local ring $\mathbb{K}[t]_{(t)}$는 maximal ideal이 단일 원소 $t$로 생성되어 tangent space가 1차원, 곧 매끈하다. 즉 normalization이 singular한 국소 구조를 매끈한 것으로 바꾸어 주는 것이 cusp를 펴주는 일이다.
+이 fiber의 밑점은 $\Spec\mathbb{K}[t]$의 점 $(t)$이며, 이것이 $\mathfrak m$ 위에 놓인 유일한 점이다 ($(t)\cap A=(t^2,t^3)=\mathfrak m$). 이제 local ring을 비교하자. 원점에서 cusp의 local ring $A_{\mathfrak m}=\mathbb{K}[t^2,t^3]_{(t^2,t^3)}$는 maximal ideal $(t^2,t^3)$이 두 원소로 생성되어야 하여 singular한데, 이는 [\[대수다양체\] §접공간과 매끄러움, ⁋예시 7](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#ex7)에서 본 것처럼 tangent space $T_0=\mathbb{K}^2$가 너무 크기 때문이다. 반면 그 위의 점 $(t)$에서 $\Spec\mathbb{K}[t]$의 local ring $\mathbb{K}[t]_{(t)}$는 maximal ideal이 단일 원소 $t$로 생성되어 tangent space가 1차원, 곧 매끈하다. 즉 normalization이 singular한 local ring $A_{\mathfrak m}$을 매끈한 local ring $\mathbb{K}[t]_{(t)}$로 바꾸어 주는 것이 cusp를 펴주는 일이다.
 
 반면 원점을 뺀 열린집합 $D(\x)$에서는 $\x=t^2$를 가역시키면 $t=t^3\cdot(t^2)^{-1}$가 들어와
 
