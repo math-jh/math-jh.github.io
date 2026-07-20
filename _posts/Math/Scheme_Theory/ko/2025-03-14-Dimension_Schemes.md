@@ -60,7 +60,17 @@ $$\overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}}\rightarrow\overli
 으로부터 온다. 구체적으로, 이 ring homomorphism의 kernel $\mathfrak{p}_\sigma$는 maximal ideal이므로 $\Spec(\overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}})$의 한 점을 정의하며, $\sigma\neq\tau$이면 $\sigma(b)\neq\tau(b)$인 $b\in\overline{\mathbb{Q}}$를 택할 때 $1\otimes b-\sigma(b)\otimes 1\in\mathfrak{p}_\sigma$이지만 $\mathfrak{p}_\tau$에는 속하지 않으므로 $\mathfrak{p}_\sigma\neq\mathfrak{p}_\tau$이다. 따라서 $\Spec(\overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}})$은 적어도 $\Gal(\overline{\mathbb{Q}}/\mathbb{Q})$만큼의, 곧 무한히 많은 점을 가지며, $\Spec(\overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}})\rightarrow\Spec\overline{\mathbb{Q}}$는 quasi-finite morphism이 아니므로 finite morphism도 아니다.
 :::
 
-기하적으로 이는, algebraically closed가 아닌 field 위의 점이 algebraic closure로 base change되면서 Galois conjugate마다 갈라지는 친숙한 현상이다. 가장 작은 예로 $\Spec\mathbb{C}=\Spec\mathbb{R}[\x]/(\x^2+1)\to\Spec\mathbb{R}$를 보면, $\x^2+1$이 $\mathbb{R}$ 위에서 기약이라 $\Spec\mathbb{C}$는 한 점이지만 $\mathbb{C}$로 base change하면 $\x^2+1=(\x-i)(\x+i)$로 갈라져 $\mathbb{C}\otimes_\mathbb{R}\mathbb{C}\cong\mathbb{C}\times\mathbb{C}$의 두 점이 나온다($\lvert\Gal(\mathbb{C}/\mathbb{R})\rvert=2$). $\mathbb{C}/\mathbb{R}$이 유한 확장이라 이처럼 점이 유한 개로 떨어지는 것과 달리, $\overline{\mathbb{Q}}/\mathbb{Q}$는 무한 확장이라 Galois group 자체가 무한하며, 그래서 한 점이 유한 개가 아닌 무한히 많은 점으로 갈라진다. 이것이 바로 위에서 $\Spec\overline{\mathbb{Q}}\to\Spec\mathbb{Q}$가 quasi-finite morphism이 될 수 없는 핵심 이유이다.
+혹은 더 간단한 예로 $\Spec \mathbb{C}\rightarrow \Spec \mathbb{R}$을 보자. 여기서 $\mathbb{R}$와 $\mathbb{C}$가 모두 field이므로 $\Spec\mathbb{C}$와 $\Spec\mathbb{R}$는 각각 한 점이며, 따라서 이 map 자체는 한 점에서 한 점으로 가는 trivial한 map이다. 그러나 이를 $\Spec \mathbb{C}\rightarrow \Spec \mathbb{R}$로 pullback하여 위의 예시와 비슷한 함수
+
+$$\Spec(\mathbb{C}\otimes_\mathbb{R} \mathbb{C}) \rightarrow \Spec \mathbb{C}$$
+
+를 만들면 $\mathbb{C}\otimes_\mathbb{R}\mathbb{C}$는 더 이상 field가 아니다. 실제로 $\Spec\mathbb{C}=\Spec\mathbb{R}[\x]/(\x^2+1)$이므로, 
+
+$$\mathbb{C}\otimes_\mathbb{R} \mathbb{C}\cong \mathbb{C}\otimes_\mathbb{R} \frac{\mathbb{R}[\x]}{(\x^2+1)}\cong \frac{\mathbb{C}[\x]}{(\x^2+1)}$$
+
+이며, $\x^2+1$은 $\mathbb{C}$에서는 두 일차식의 곱 $\x^2+1=(\x-i)(\x+i)$로 인수분해되며, $(\x-i)$와 $(\x+i)$는 comaximal이므로 [\[환론\] §중국인의 나머지정리, ⁋명제 6](/ko/math/ring_theory/chinese_remainder_theorem#prop6)에 의하여 $\mathbb{C}[\x]/((\x-i)(\x+i))\cong\mathbb{C}[\x]/(\x-i)\times\mathbb{C}[\x]/(\x+i)\cong\mathbb{C}\times\mathbb{C}$가 된다.
+
+그러나 의 이 점은 $\x^2+1$의 두 근 $i,-i$가 Galois group $\Gal(\mathbb{C}/\mathbb{R})$에 의해 뒤바뀌어 하나로 묶여 있는 것이고, $\mathbb{C}$로 base change하여 얻은 $\Spec(\mathbb{C}\otimes_\mathbb{R}\mathbb{C})$를 보면되면서 $\mathbb{C}\otimes_\mathbb{R}\mathbb{C}\cong\mathbb{C}\times\mathbb{C}$가 되어 두 점으로 갈라진다. 이 두 점은 $\Gal(\mathbb{C}/\mathbb{R})$의 두 원소에 각각 대응하며 ($\lvert\Gal(\mathbb{C}/\mathbb{R})\rvert=2$), $\overline{\mathbb{Q}}/\mathbb{Q}$도 같은 현상이지만 Galois group이 무한하므로 한 점이 무한히 많은 점으로 갈라진다. 이것이 위에서 $\Spec(\overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}})\to\Spec\overline{\mathbb{Q}}$가 quasi-finite morphism이 될 수 없는 핵심 이유이다.
 
 그러나 다음이 성립한다.
 
