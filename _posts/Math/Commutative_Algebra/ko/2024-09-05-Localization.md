@@ -31,7 +31,7 @@ Ring $A$에 대하여, 다음이 동치이다.
 3. $A$의 모든 non-unit을 모아둔 것이 ideal을 이룬다.
 :::
 ::: 증명
-우선 1번을 가정하고, $A$의 임의의 non-unit $a\in A$가 주어졌다 하자. 그럼 $(a)$는 $A$의 ideal이므로 [\[대수적 구조\] §환의 정의, ⁋정리 9](/ko/math/algebraic_structures/rings#thm9)에 의하여 어떠한 maximal ideal에 포함된다. 그런데 $A$는 유일한 maximal ideal $\mathfrak{m}$을 가지므로, $(a)\subseteq \mathfrak{m}$일 수밖에 없고, 따라서 $a\in \mathfrak{m}$이다.
+우선 1번을 가정하고, $A$의 임의의 non-unit $a\in A$가 주어졌다 하자. 그럼 $(a)$는 $A$의 ideal이므로 [\[대수적 구조\] §환의 정의, ⁋정리 10](/ko/math/algebraic_structures/rings#thm10)에 의하여 어떠한 maximal ideal에 포함된다. 그런데 $A$는 유일한 maximal ideal $\mathfrak{m}$을 가지므로, $(a)\subseteq \mathfrak{m}$일 수밖에 없고, 따라서 $a\in \mathfrak{m}$이다.
 
 이제 2번을 가정하고 3번을 보이자. 이를 위해서는 $A$의 non-unit들을 모아둔 것이 덧셈에 대해 닫혀있음만 보이면 충분하다. 우선 $\mathfrak{m}\neq A$인 것으로부터 $\mathfrak{m}$은 $A$의 unit을 포함하지 않음을 안다. 이로부터 $A$의 non-unit을 모두 모아두면 반드시 이것이 $\mathfrak{m}$과 같아야 함을 안다. 
 

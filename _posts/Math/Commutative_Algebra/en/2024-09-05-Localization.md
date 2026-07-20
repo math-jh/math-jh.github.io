@@ -32,7 +32,7 @@ For a ring $A$, the following are equivalent.
 3. The set of all non-units of $A$ forms an ideal.
 :::
 ::: Proof
-First assume (1), and let $a\in A$ be an arbitrary non-unit. Then $(a)$ is an ideal of $A$, so by [[Algebraic Structures] §Definition of Rings, ⁋Theorem 9](/en/math/algebraic_structures/rings#thm9) it is contained in some maximal ideal. But since $A$ has a unique maximal ideal $\mathfrak{m}$, we must have $(a)\subseteq \mathfrak{m}$, and hence $a\in \mathfrak{m}$.
+First assume (1), and let $a\in A$ be an arbitrary non-unit. Then $(a)$ is an ideal of $A$, so by [[Algebraic Structures] §Definition of Rings, ⁋Theorem 10](/en/math/algebraic_structures/rings#thm10) it is contained in some maximal ideal. But since $A$ has a unique maximal ideal $\mathfrak{m}$, we must have $(a)\subseteq \mathfrak{m}$, and hence $a\in \mathfrak{m}$.
 
 Now assume (2) and show (3). For this, it suffices to show that the set of non-units of $A$ is closed under addition. First, from $\mathfrak{m}\neq A$ we know that $\mathfrak{m}$ contains no unit of $A$. From this we see that the set of all non-units of $A$ must equal $\mathfrak{m}$.
 

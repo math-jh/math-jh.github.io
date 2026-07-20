@@ -226,7 +226,7 @@ $$\mathfrak{N}=\bigcap_\text{\scriptsize$\mathfrak{p}$: prime} \mathfrak{p}$$
 이 성립한다. 
 :::
 ::: 증명
-만일 $x\not\in \mathfrak{N}$이라면, 적당한 $\mathfrak{p}$에 대해 $x\not\in \mathfrak{p}$임을 보이면 충분하다. 우선 multiplicative subset $S=\{1,x,x^2,\ldots\}$으로 만들어진 ring of fractions $A_x=S^{-1}A$를 생각하자. 그럼 $A_x$의 곱셈에 대한 항등원 $x/x$이 반드시 $0/1$과 다르다는 것을 확인할 수 있고, 특히 $A_x\neq 0$이다. 이제 [§환의 정의, ⁋정리 9](/ko/math/algebraic_structures/rings#thm9)로부터 $A_x$의 maximal ideal $\mathfrak{m}$이 반드시 존재하고, 모든 maximal ideal은 prime ideal이므로 $A_x$는 prime ideal을 갖는다. 이제 [명제 9](#prop9)를 $\epsilon:A \rightarrow A_x$에 적용하면 $\epsilon^{-1}(\mathfrak{p})$는 $A$의 prime ideal이며, 만일 $x\in\epsilon^{-1}(\mathfrak{p})$라면 $x/1\in \mathfrak{p}$이고 $x/1$은 $A_x$에서 invertible이므로 $\mathfrak{p}=A_x$가 되어 모순이다. 
+만일 $x\not\in \mathfrak{N}$이라면, 적당한 $\mathfrak{p}$에 대해 $x\not\in \mathfrak{p}$임을 보이면 충분하다. 우선 multiplicative subset $S=\{1,x,x^2,\ldots\}$으로 만들어진 ring of fractions $A_x=S^{-1}A$를 생각하자. 그럼 $A_x$의 곱셈에 대한 항등원 $x/x$이 반드시 $0/1$과 다르다는 것을 확인할 수 있고, 특히 $A_x\neq 0$이다. 이제 [§환의 정의, ⁋정리 10](/ko/math/algebraic_structures/rings#thm10)로부터 $A_x$의 maximal ideal $\mathfrak{m}$이 반드시 존재하고, 모든 maximal ideal은 prime ideal이므로 $A_x$는 prime ideal을 갖는다. 이제 [명제 9](#prop9)를 $\epsilon:A \rightarrow A_x$에 적용하면 $\epsilon^{-1}(\mathfrak{p})$는 $A$의 prime ideal이며, 만일 $x\in\epsilon^{-1}(\mathfrak{p})$라면 $x/1\in \mathfrak{p}$이고 $x/1$은 $A_x$에서 invertible이므로 $\mathfrak{p}=A_x$가 되어 모순이다. 
 :::
 
 

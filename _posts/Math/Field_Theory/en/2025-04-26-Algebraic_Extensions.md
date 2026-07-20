@@ -115,7 +115,7 @@ Let two $\mathbb{K}$-extensions $\mathbb{L}_1, \mathbb{L}_2$ be given.
 2. Conversely, let $\mathfrak{p}$ be a prime ideal of $\mathbb{L}_1\otimes_\mathbb{K}\mathbb{L}_2$, and let $\mathbb{M}=\Frac((\mathbb{L}_1\otimes_\mathbb{K}\mathbb{L}_2)/\mathfrak{p})$ be the field of fractions of the integral domain $(\mathbb{L}_1\otimes_\mathbb{K}\mathbb{L}_2)/\mathfrak{p}$. Then for each $x_1\in \mathbb{L}_1$ and $x_2\in \mathbb{L}_2$, defining $u_1(x_1)$ to be the image of $x_1\otimes 1$ in $\mathbb{M}$ and $u_2(x_2)$ to be the image of $1\otimes x_2$ in $\mathbb{M}$, we see that these satisfy the required conditions.
 :::
 
-Moreover, it is also obvious that the composite field obtained from the second result is uniquely determined up to isomorphism. Meanwhile, for any two $\mathbb{K}$-extensions $\mathbb{L}_1, \mathbb{L}_2$, since $\mathbb{L}_1\otimes_\mathbb{K} \mathbb{L}_2$ always has a prime ideal ([§Definition of a Ring, ⁋Theorem 9 (Krull)](/en/math/algebraic_structures/rings#thm9)), we can verify that any two $\mathbb{K}$-extensions have a composite field.
+Moreover, it is also obvious that the composite field obtained from the second result is uniquely determined up to isomorphism. Meanwhile, for any two $\mathbb{K}$-extensions $\mathbb{L}_1, \mathbb{L}_2$, since $\mathbb{L}_1\otimes_\mathbb{K} \mathbb{L}_2$ always has a prime ideal ([§Definition of a Ring, ⁋Theorem 10 (Krull)](/en/math/algebraic_structures/rings#thm10)), we can verify that any two $\mathbb{K}$-extensions have a composite field.
 
 ## Algebraic Extensions
 

@@ -114,7 +114,7 @@ $$K(M \cup N) = K(M)(N) = K(N)(M)$$
 2. 거꾸로 $\mathfrak{p}$가 $\mathbb{L}_1\otimes_\mathbb{K}\mathbb{L}_2$의 prime ideal이라 하고, integral domain $(\mathbb{L}_1\otimes\mathbb{K}\mathbb{L}_2)/\mathfrak{p}$의 field of fraction을 $\mathbb{M}=\Frac((\mathbb{L}_1\otimes_\mathbb{K}\mathbb{L}_2)/\mathfrak{p})$라 하자. 그럼 각각의 $x_1\in \mathbb{L}_1$과 $x_2\in \mathbb{L}_2$에 대하여, $u_1(x_1)$을 $x_1\otimes 1$의 $\mathbb{M}$에서의 image, $u_2(x_2)$를 $1\otimes x_2$의 $\mathbb{M}$에서의 image로 정의하면 이들이 원하는 조건을 만족함을 알 수 있다. 
 :::
 
-뿐만 아니라, 두 번째 결과에 의해 얻어지는 composite field가 isomorphism에 대하여 유일하게 결정된다는 것 또한 자명하다. 한편, 임의의 두 $\mathbb{K}$-extension $\mathbb{L}_1, \mathbb{L}_2$에 대하여, $\mathbb{L}_1\otimes_\mathbb{K} \mathbb{L}_2$는 항상 prime ideal을 가지므로 ([\[대수적 구조\] §환의 정의, ⁋정리 9](/ko/math/algebraic_structures/rings#thm9)) 임의의 두 $\mathbb{K}$-extension은 composite field를 갖는다는 것을 확인할 수 있다. 
+뿐만 아니라, 두 번째 결과에 의해 얻어지는 composite field가 isomorphism에 대하여 유일하게 결정된다는 것 또한 자명하다. 한편, 임의의 두 $\mathbb{K}$-extension $\mathbb{L}_1, \mathbb{L}_2$에 대하여, $\mathbb{L}_1\otimes_\mathbb{K} \mathbb{L}_2$는 항상 prime ideal을 가지므로 ([\[대수적 구조\] §환의 정의, ⁋정리 10](/ko/math/algebraic_structures/rings#thm10)) 임의의 두 $\mathbb{K}$-extension은 composite field를 갖는다는 것을 확인할 수 있다. 
 
 ## 대수적 확장
 
