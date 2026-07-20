@@ -53,7 +53,7 @@ $$\Spec(\overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}})\rightarrow
 
 또한 [§올곱, ⁋명제 15](/ko/math/scheme_theory/fiber_products#prop15)에 의하여 integral이다. 
 
-이 map을 살펴보기 위해, 구체적으로 ring homomorphism $\overline{\mathbb{Q}}\rightarrow \overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}}$를 살펴보자. 
+이 map을 살펴보기 위해, 구체적으로 ring homomorphism $\overline{\mathbb{Q}}\rightarrow \overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}}$를 살펴보자. 위의 map의 section을 보는 것은 이 함수의 retraction을 보는 것과 같으며 이는 
 
 
 이 source의 점들을 살펴보자. 각 $\sigma\in\Gal(\overline{\mathbb{Q}}/\mathbb{Q})$에 대하여 surjective ring homomorphism
