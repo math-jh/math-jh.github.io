@@ -1863,6 +1863,8 @@ D:
     url: /ko/math/linear_algebra/eigenspace_decomposition
   - label: '[대수적 구조] §가환군'
     url: /ko/math/algebraic_structures/abelian_groups
+  - label: '[대수적 구조] §환의 곱, 쌍대곱, 텐서곱'
+    url: /ko/math/algebraic_structures/operations_of_rings
   see:
   - label: Direct product
     id: direct_product
