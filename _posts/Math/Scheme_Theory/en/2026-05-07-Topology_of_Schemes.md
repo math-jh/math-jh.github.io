@@ -31,7 +31,7 @@ so every point is a closed point. However, if we consider the spectrum of an int
 Our first goal is to gain an intuitive understanding of these points.
 
 ::: Definition 2
-Let two points $x,y$ of a topological space $X$ satisfy $x\in\cl(\{y\})$. Then we call $x$ a *specialization* of $y$, and $y$ a *generalization* of $x$. If for a closed subset $C$ of $X$, the equality $C=\cl(\{x\})$ holds, then we call $x$ a *generic point* of $C$.
+Let two points $x,y$ of a topological space $X$ satisfy $x\in\cl(\{y\})$. Then we call $x$ a *specialization* of $y$, and $y$ a *generization* of $x$. If for a closed subset $C$ of $X$, the equality $C=\cl(\{x\})$ holds, then we call $x$ a *generic point* of $C$.
 :::
 
 Then by definition, if $x$ is a generic point of $C$, then for any point $y\in C$ and any open neighborhood $U$ of $y$, the set $U$ always contains $x$. Thus a generic point can be thought of as a point close to every point of $C$.

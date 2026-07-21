@@ -912,6 +912,8 @@ B:
   primary: en
   note: 'Calculus 카테고리 글에서는 한글 ''유계'' 유지'
   defs:
+  - label: '[미적분학] §수열의 극한'
+    url: /ko/math/calculus/sequences
   - label: '[집합론] §순서집합의 원소들'
     url: /ko/math/set_theory/elements_in_ordered_set
   - label: '[해석학] §컴팩트성'
@@ -1153,6 +1155,13 @@ C:
   defs:
   - label: '[해석학] §거리공간'
     url: /ko/math/analysis/metric_spaces
+- id: cauchy_product
+  en: cauchy product
+  ko: 코시 곱
+  primary: ko
+  defs:
+  - label: '[미적분학] §멱급수'
+    url: /ko/math/calculus/power_series
 - id: cauchy-riemann_equation
   en: Cauchy-Riemann equation
   ko: 코시-리만 방정식
@@ -2065,6 +2074,8 @@ C:
     url: /ko/math/topology/Hausdorff_spaces
   - label: '[위상수학] §옹골성과 필터의 수렴'
     url: /ko/math/topology/filter_convergence
+  - label: '[미적분학] §무한급수'
+    url: /ko/math/calculus/series
 - id: converges
   en: converges
   ko: 수렴
@@ -2529,10 +2540,10 @@ D:
   ko: 미분가능
   primary: ko
   defs:
-  - label: '[해석학] §다변수 미분'
-    url: /ko/math/analysis/multivariable_differentiation
   - label: '[미적분학] §미분과 도함수'
     url: /ko/math/calculus/derivatives
+  - label: '[해석학] §다변수 미분'
+    url: /ko/math/analysis/multivariable_differentiation
 - id: differentiable_manifold
   en: differentiable manifold
   ko: 미분다양체
@@ -2758,6 +2769,13 @@ D:
     url: /ko/math/set_theory/property_of_products
   - label: '[대수적 구조] §환의 정의'
     url: /ko/math/algebraic_structures/rings
+- id: diverge
+  en: diverge
+  ko: 발산
+  primary: ko
+  defs:
+  - label: '[미적분학] §무한급수'
+    url: /ko/math/calculus/series
 - id: diverges
   en: diverges
   ko: 발산
@@ -2803,6 +2821,13 @@ D:
     url: /ko/math/set_theory/functions
   - label: '[범주론] §범주'
     url: /ko/math/category_theory/categories
+- id: domain_of_convergence
+  en: domain of convergence
+  ko: 수렴역
+  primary: en
+  defs:
+  - label: '[미적분학] §멱급수'
+    url: /ko/math/calculus/power_series
 - id: double_complex
   en: double complex
   ko: 이중사슬복합체
@@ -3750,13 +3775,6 @@ G:
   defs:
   - label: '[선형대수학] §행렬'
     url: /ko/math/linear_algebra/matrices
-- id: generalization
-  en: generalization
-  ko: 일반화
-  primary: ko
-  defs:
-  - label: '[스킴] §스킴의 위상구조'
-    url: /ko/math/scheme_theory/topology_of_schemes
 - id: generalized_eigenspace
   en: generalized eigenspace
   ko: 일반화 고유공간
@@ -3808,6 +3826,17 @@ G:
   see:
   - label: Closed point
     id: closed_point
+- id: generization
+  en: generization
+  ko: 일반화
+  primary: en
+  note: 'specialization의 역인 위상적 뜻만 해당. 개념·정리를 넓힌다는 산문 어휘 ''일반화''는 한국어 유지'
+  defs:
+  - label: '[스킴] §스킴의 위상구조'
+    url: /ko/math/scheme_theory/topology_of_schemes
+  see:
+  - label: Specialization
+    id: specialization
 - id: genus_g_n_-point_degree_beta_gromov-witten_invariant
   en: Genus $g$, $n$-point, degree $\beta$ Gromov-Witten invariant
   ko: 그로모프-위튼 불변량
@@ -4405,6 +4434,13 @@ I:
   see:
   - label: Perfect field
     id: perfect_field
+- id: implicit_differentiation
+  en: implicit differentiation
+  ko: 음함수 미분법
+  primary: ko
+  defs:
+  - label: '[미적분학] §미분법'
+    url: /ko/math/calculus/differentiation_rules
 - id: increasing
   en: increasing
   ko: 증가
@@ -5406,12 +5442,12 @@ L:
   primary: en
   note: 'category-theoretic limit 문맥만 영어. 해석학의 수열/함수 극한은 한글 ''극한'' 유지'
   defs:
+  - label: '[미적분학] §함수의 극한'
+    url: /ko/math/calculus/functions_and_limits
   - label: '[범주론] §극한'
     url: /ko/math/category_theory/limits
   - label: '[해석학] §수열의 수렴'
     url: /ko/math/analysis/convergence_of_sequences
-  - label: '[미적분학] §함수의 극한'
-    url: /ko/math/calculus/functions_and_limits
 - id: limit_ordinal
   en: limit ordinal
   ko: 극한서수
@@ -5736,6 +5772,13 @@ L:
   defs:
   - label: '[그로모프-위튼 이론] §Log structure와 log smooth curve'
     url: /ko/math/gromov-witten_theory/log_structures
+- id: logarithmic_differentiation
+  en: logarithmic differentiation
+  ko: 로그 미분법
+  primary: ko
+  defs:
+  - label: '[미적분학] §미분법'
+    url: /ko/math/calculus/differentiation_rules
 - id: long_exact_sequence
   en: long exact sequence
   ko: 긴 완전열
@@ -6193,10 +6236,10 @@ N:
   ko: 근방
   primary: ko
   defs:
-  - label: '[위상수학] §열린집합'
-    url: /ko/math/topology/open_sets
   - label: '[미적분학] §함수의 극한'
     url: /ko/math/calculus/functions_and_limits
+  - label: '[위상수학] §열린집합'
+    url: /ko/math/topology/open_sets
 - id: neighborhood_filter
   en: neighborhood filter
   ko: 근방필터
@@ -7008,6 +7051,13 @@ P:
   defs:
   - label: '[리 이론] §근계'
     url: /ko/math/lie_theory/root_systems
+- id: power_series
+  en: power series
+  ko: 멱급수
+  primary: ko
+  defs:
+  - label: '[미적분학] §멱급수'
+    url: /ko/math/calculus/power_series
 - id: power_set
   en: power set
   ko: 멱집합
@@ -7560,6 +7610,13 @@ R:
   defs:
   - label: '[가환대수학] §영점정리'
     url: /ko/math/commutative_algebra/nullstellensatz
+- id: radius_of_convergence
+  en: radius of convergence
+  ko: 수렴반경
+  primary: ko
+  defs:
+  - label: '[미적분학] §멱급수'
+    url: /ko/math/calculus/power_series
 - id: rank
   en: rank
   ko: 랭크
@@ -8652,10 +8709,10 @@ S:
   ko: 매끄러운
   primary: en
   defs:
-  - label: '[토릭 기하학] §아핀 토릭 다양체'
-    url: /ko/math/toric_geometry/affine_toric_varieties
   - label: '[미적분학] §미분과 도함수'
     url: /ko/math/calculus/derivatives
+  - label: '[토릭 기하학] §아핀 토릭 다양체'
+    url: /ko/math/toric_geometry/affine_toric_varieties
 - id: smooth_differentiable_manifold
   en: smooth differentiable manifold
   ko: 매끄러운 미분다양체

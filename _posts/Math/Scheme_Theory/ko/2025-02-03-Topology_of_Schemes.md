@@ -30,7 +30,7 @@ $$\cl(\{\mathfrak{m}\})=ZI(\{\mathfrak{m}\})=ZIZ(\mathfrak{m})=Z(\mathfrak{m})=\
 우리의 첫째 목표는 이러한 점을 직관적으로 이해하는 것이다. 
 
 ::: 정의 2
-위상공간 $X$의 두 점 $x,y$가 $x\in\cl(\{y\})$를 만족한다 하자. 그럼 $x$를 $y$의 *specialization<sub>특수화</sub>*이라 하고, $y$는 $x$의 *generalization<sub>일반화</sub>*이라 한다. 만일 위상공간 $X$의 닫힌집합 $C$에 대하여, $C=\cl(\{x\})$가 성립한다면 $x$를 $C$의 *generic point<sub>일반점</sub>*라 부른다. 
+위상공간 $X$의 두 점 $x,y$가 $x\in\cl(\{y\})$를 만족한다 하자. 그럼 $x$를 $y$의 *specialization<sub>특수화</sub>*이라 하고, $y$는 $x$의 *generization<sub>일반화</sub>*이라 한다. 만일 위상공간 $X$의 닫힌집합 $C$에 대하여, $C=\cl(\{x\})$가 성립한다면 $x$를 $C$의 *generic point<sub>일반점</sub>*라 부른다. 
 :::
 
 그럼 정의에 의하여, $x$가 $C$의 generic point라면 임의의 점 $y\in C$와 그 열린근방 $U$에 대하여 $U$는 항상 $x$를 포함한다. 따라서 generic point는 $C$의 모든 점에 가까운 점으로 생각할 수 있다.

@@ -16,8 +16,6 @@ drift_needed: true
 
 우리는 scheme morphism $f: X \rightarrow S$를 $S$로 parametrize된 family로 읽기로 하였으며 ([§스킴 사이의 사상, ⁋예시 10](/ko/math/scheme_theory/morphism_of_schemes#ex10)), 이 family의 $s\in S$에서의 member를 fiber $X_s=X\times_S\Spec \kappa(s)$로 정의하였다. ([§올곱, ⁋정의 12](/ko/math/scheme_theory/fiber_products#def12)) 그러나 이 family가 얼마나 좋게 행동할지는 현재로서 우리가 확인할 수 없는 정보이다. 
 
-
-
 가장 자명한 family는 상수 family이다. $\mathbb{K}$-scheme $C$와 base $S$에 대하여 $C \rightarrow \Spec \mathbb{K}$를 $S \rightarrow \Spec \mathbb{K}$를 따라 pullback하면 $C\times_\mathbb{K} S \rightarrow S$를 얻고, 이 family의 fiber는 모든 $s$에서 $C_{\kappa(s)}$이다. 즉 이미 있는 scheme을 pullback하는 것만으로는 상수 family 이상을 만들어낼 수 없으며, 비자명한 family는 만들어지는 것이 아니라 방정식으로 주어진다. 예를 들어
 
 $$\Spec \mathbb{K}[t, \x, \y]/(\y^2 - \x^3 - t) \longrightarrow \mathbb{A}^1_\mathbb{K}=\Spec \mathbb{K}[t]$$
@@ -36,10 +34,10 @@ $$\Spec \mathbb{K}[t,\x]/(t\x) \longrightarrow \mathbb{A}^1_\mathbb{K}$$
 
 ## 평탄 사상의 정의
 
-Flat module의 개념을 scheme으로 옮긴다. Morphism $f: X \rightarrow Y$가 flat하다는 것은 대역적으로 말해 $X$의 구조층이 $Y$의 구조층 위에서 flat한 가군 구조를 가진다는 의미이다.
+Flat module의 개념을 scheme으로 옮긴다. Morphism $f: X \rightarrow Y$가 flat하다는 것은 대역적으로 말해 $X$의 structure sheaf가 $Y$의 structure sheaf 위에서 flat한 가군 구조를 가진다는 의미이다.
 
 ::: 정의 1
-Morphism $f: X \rightarrow Y$가 *flat<sub>평탄</sub>*이라는 것은 임의의 $x \in X$에 대하여 local ring $\mathcal{O}_{X,x}$가 $\mathcal{O}_{Y,f(x)}$-가군으로서 flat한 것이다. 추가로 $f$가 대응하는 위상공간의 사상이 surjective이면 *faithfully flat<sub>충실히 평탄</sub>*이라 부른다.
+Morphism $f: X \rightarrow Y$가 *flat<sub>평탄</sub>*이라는 것은 임의의 $x \in X$에 대하여 local ring $\mathcal{O}_{X,x}$가 $\mathcal{O}_{Y,f(x)}$-가군으로서 flat한 것이다. 추가로 $f$가 대응하는 위상공간의 사상이 전사이면 *faithfully flat<sub>충실평탄</sub>*이라 부른다.
 :::
 
 flatness는 각 점에서의 국소적인 조건으로 정의되었지만, affine에서는 이를 대역적인 조건으로 바꿔 쓸 수 있다. 이 때문에 flatness의 검사는 거의 언제나 가환대수학의 flat module 검사로 환원된다.
@@ -116,7 +114,9 @@ $A$가 PID이고 $B$가 $A$-대수라 하자. 그럼 $\Spec B \rightarrow \Spec 
 [보조정리 2](#lem2)에 의하여 이는 $B$가 $A$-flat인 것과 동치이다. $A$가 PID이므로 특히 integral domain이고, 따라서 $A$의 $0$이 아닌 원소는 모두 $A$에서 zerodivisor가 아니다. 이제 [\[가환대수학\] §평탄성, ⁋따름정리 3](/ko/math/commutative_algebra/flatness#cor3)을 $M=B$에 적용하면 된다.
 :::
 
-즉 $\mathbb{K}[t]$ 위의 family가 flat인 것은 그 coordinate ring이 $\mathbb{K}[t]$-가군으로서 torsion을 갖지 않는 것과 같다. Torsion 원소란 base의 함수 하나에 의해 죽는 원소이며, 기하학적으로는 fiber 하나에 갇힌 성분이 그러한 원소를 낳는다. 이를 정확히 적으면 다음과 같다.
+즉 $\mathbb{K}[t]$ 위의 family가 flat인 것은 그 coordinate ring이 $\mathbb{K}[t]$-가군으로서 torsion을 갖지 않는 것과 같다. Torsion 원소란 base의 함수 하나에 의해 죽는 원소이며, 기하학적으로는 fiber 하나에 갇힌 성분이 그러한 원소를 낳는다.
+
+이를 정확히 적기 위해 용어를 하나 마련해둔다. Morphism $g: Z \rightarrow Y$가 *dominant*라는 것은 그 상이 $Y$에서 조밀한 것, 곧 $\overline{g(Z)}=Y$인 것이다. Variety 사이의 rational map에 대하여 같은 조건을 이미 다룬 바 있다. ([\[대수다양체\] §유리사상, ⁋정의 8](/ko/math/algebraic_varieties/rational_maps#def8)) 아래에서 $X$의 irreducible component $Z$가 base를 dominate한다는 것은, $Z$에 reduced closed subscheme 구조를 준 뒤 포함사상과 $f$를 합성한 것이 dominant라는 뜻이다.
 
 ::: 따름정리 7
 Noetherian $\mathbb{K}[t]$-대수 $B$에 대하여 $X=\Spec B$가 reduced라 하자. 그럼 $X \rightarrow \mathbb{A}^1_\mathbb{K}$가 flat인 것과, $X$의 모든 irreducible component가 $\mathbb{A}^1_\mathbb{K}$를 dominate하는 것은 서로 동치이다.
@@ -173,7 +173,7 @@ Fiber를 보면, $t=a\neq 0$ 위에서는 $\mathbb{P}^2$의 원뿔곡선 $\x\z=a
 Noetherian integral domain $A$와 finite type $A$-대수 $B$, 그리고 finitely generated $B$-가군 $M$이 주어졌다 하자. 그럼 $0$이 아닌 $a\in A$가 존재하여 $M_a$가 자유 $A_a$-가군이 된다.
 :::
 ::: 증명
-$B$는 Noetherian integral domain $A$ 위의 finite type 대수이므로 Hilbert 기저정리에 의하여 Noetherian ring이다.
+$B$는 Noetherian integral domain $A$ 위의 finite type 대수이므로 [\[가환대수학\] §기본 개념들, ⁋정리 12](/ko/math/commutative_algebra/basic_notions#thm12)에 의하여 Noetherian ring이다.
 
 **Dévissage.** [\[가환대수학\] §동반소아이디얼, ⁋보조정리 6](/ko/math/commutative_algebra/associated_primes#lem6)을 $B$와 $M$에 적용하면 filtration
 
@@ -214,7 +214,7 @@ $d=0$인 경우에는 $C=A_{a_0}$이므로 위의 dévissage가 주는 quotient�
 Filtration에 등장하는 유한개의 $\mathfrak{p}$들에 대한 $a_\mathfrak{p}$와 $a_0$의 곱을 $a$로 두면 $B_a=(B_{a_0})_a$는 자유 $A_a$-가군이다.
 :::
 
-::: 명제 11 (제네릭 평탄성)
+::: 명제 11 (Generic flatness)
 Noetherian integral scheme $Y$와 finite type morphism $f: X \rightarrow Y$가 주어졌다 하자. 그럼 $Y$의 조밀한 열린집합 $U$가 존재하여 $f\rvert_{f^{-1}(U)}: f^{-1}(U) \rightarrow U$가 flat이다.
 :::
 ::: 증명
@@ -232,18 +232,18 @@ $$\Spec (B_i)_a \longrightarrow \Spec A_a=D(a)$$
 두 번째 준비물은 상의 모양에 대한 것이다. 일반적인 사상의 상은 열린집합도 닫힌집합도 아니지만, finite type 사상의 상은 언제나 다음의 의미에서 좋은 집합이다.
 
 ::: 정의 12
-위상공간 $T$의 부분집합이 *locally closed<sub>국소 닫힌</sub>*라는 것은 그것이 열린집합과 닫힌집합의 교집합으로 쓰일 수 있는 것이다. 또, $T$의 부분집합이 *constructible<sub>구성가능</sub>*이라는 것은 그것이 유한개의 locally closed subset들의 합집합으로 쓰일 수 있는 것이다.
+위상공간 $T$의 부분집합이 *constructible<sub>구성가능</sub>*이라는 것은 그것이 유한개의 locally closed subset들의 합집합으로 쓰일 수 있는 것이다. ([\[위상수학\] §몫공간, ⁋정의 1](/ko/math/topology/quotient_spaces#def1))
 :::
 
-Constructible subset들의 모임은 유한합집합, 유한교집합, 여집합에 대하여 닫혀 있다. 유한합집합은 정의에 의하여 자명하고, 두 locally closed subset의 교집합 $(U_1\cap Z_1)\cap (U_2\cap Z_2)=(U_1\cap U_2)\cap (Z_1\cap Z_2)$이 다시 locally closed이므로 교집합에 대한 닫힘은 분배법칙으로부터 나오며, locally closed subset $U\cap Z$의 여집합은 $(T\setminus U)\cup (T\setminus Z)$로 두 locally closed subset의 합집합이므로 여집합에 대해서도 닫혀 있다.
+Locally closed subset은 열린집합과 닫힌집합의 교집합 $U\cap Z$로 쓸 수 있으므로 ([\[위상수학\] §몫공간, ⁋명제 2](/ko/math/topology/quotient_spaces#prop2)), constructible subset들의 모임은 유한합집합, 유한교집합, 여집합에 대하여 닫혀 있다. 유한합집합은 정의에 의하여 자명하고, 두 locally closed subset의 교집합 $(U_1\cap Z_1)\cap (U_2\cap Z_2)=(U_1\cap U_2)\cap (Z_1\cap Z_2)$이 다시 locally closed이므로 교집합에 대한 닫힘은 분배법칙으로부터 나오며, locally closed subset $U\cap Z$의 여집합은 $(T\setminus U)\cup (T\setminus Z)$로 두 locally closed subset의 합집합이므로 여집합에 대해서도 닫혀 있다.
 
 ::: 정리 13 (Chevalley)
 Noetherian scheme $Y$와 finite type morphism $f: X \rightarrow Y$에 대하여, $f(X)$는 $Y$의 constructible subset이다.
 :::
 ::: 증명
-$Y$의 닫힌 부분집합 $Z$에 대하여, "$Z$ 위의 임의의 finite type morphism의 상은 $Z$의 constructible subset이다"라는 명제를 $P(Z)$라 하자. $Y$가 Noetherian이므로 닫힌 부분집합들의 모임은 descending chain condition을 만족하고, 따라서 Noetherian 귀납법을 쓸 수 있다. 즉 $Y$의 모든 진부분 닫힌집합 $Z\subsetneq Y$에 대하여 $P(Z)$가 성립한다고 가정하고 $P(Y)$를 보이면 된다. 또 $Z$의 constructible subset은 $Y$의 constructible subset이므로 ($Z$가 닫힌집합이기 때문이다) 결론을 $Y$ 안에서 읽어도 좋다.
+**Affine으로의 환원.** $Y$가 Noetherian이므로 유한개의 affine open $V_j$로 덮이고, $f$가 finite type이므로 각 $f^{-1}(V_j)$ 또한 유한개의 affine open으로 덮인다. 따라서 $f(X)$는 유한개의 $\Spec B \rightarrow \Spec A$ 꼴 사상의 상들의 합집합이다. 열린집합 $V_j$의 constructible subset은 $Y$의 constructible subset이고 constructible subset들의 유한합집합은 constructible이므로, 처음부터 $Y=\Spec A$, $X=\Spec B$이고 $B$가 finite type $A$-대수인 경우만 보이면 충분하다.
 
-**Affine으로의 환원.** $f$가 finite type이므로 $Y$를 유한개의 affine open $V_j$로 덮고 각 $f^{-1}(V_j)$를 유한개의 affine open으로 덮으면, $f(X)$는 유한개의 $\Spec B \rightarrow \Spec A$ 꼴 사상의 상들의 합집합이다. 열린집합 $V_j$의 constructible subset은 $Y$의 constructible subset이고 constructible subset들의 유한합집합은 constructible이므로, $Y=\Spec A$, $X=\Spec B$이고 $B$가 finite type $A$-대수인 경우만 보이면 충분하다.
+**Noetherian 귀납법.** 이제 $Y=\Spec A$의 닫힌 부분집합 $Z$에 대하여, "$Z$ 위의 임의의 finite type morphism의 상은 $Z$의 constructible subset이다"라는 명제를 $P(Z)$라 하자. $A$가 Noetherian이므로 $Y$의 닫힌 부분집합들의 모임은 descending chain condition을 만족하고, 따라서 Noetherian 귀납법을 쓸 수 있다. 즉 $Y$의 모든 진부분 닫힌집합 $Z\subsetneq Y$에 대하여 $P(Z)$가 성립한다고 가정하고 $P(Y)$를 보이면 된다. 또 $Z$의 constructible subset은 $Z$가 닫힌집합이므로 $Y$의 constructible subset이기도 하여, 결론을 $Y$ 안에서 읽어도 좋다.
 
 **Reduced로의 환원.** $\mathfrak{N}=\mathfrak{N}(A)$를 $A$의 nilradical이라 하면 $\mathfrak{N}B$는 $B$의 nilpotent ideal이므로 $\Spec B/\mathfrak{N}B$와 $\Spec B$는 같은 위상공간이고, $\Spec A/\mathfrak{N}$과 $\Spec A$도 그러하다. 따라서 $A$를 $A/\mathfrak{N}$으로, $B$를 $B/\mathfrak{N}B$로 바꾸어도 $f(X)$는 바뀌지 않으므로 $A$가 reduced라 가정해도 좋다.
 
@@ -318,7 +318,7 @@ $$B\otimes_A\kappa(\mathfrak{p})$$
 Flat morphism $f: X \rightarrow Y$와 점 $x \in X$가 주어졌다 하고, $y=f(x)$의 generization $y'$, 즉 $y \in \overline{\{y'\}}$인 점 $y'$가 주어졌다 하자. 그럼 $x$의 generization $x'$가 존재하여 $f(x')=y'$이다.
 :::
 ::: 증명
-$x$의 affine open neighborhood $U=\Spec B$와 $f(U)$를 포함하는 affine open $V=\Spec A$를 택하면, $y'$이 $y$의 generization이므로 $y'\in V$이다. 따라서 $X=\Spec B$, $Y=\Spec A$이고 $x=\mathfrak{q}$, $y=\mathfrak{p}=\varphi^{-1}(\mathfrak{q})$, $y'=\mathfrak{p}'\subseteq \mathfrak{p}$인 경우만 보이면 충분하다.
+$y$의 affine open neighborhood $V=\Spec A$를 택하고, 그 다음 $f^{-1}(V)$ 안에서 $x$의 affine open neighborhood $U=\Spec B$를 택하자. $y'$이 $y$의 generization이므로 $y'\in V$이다. 따라서 $X=\Spec B$, $Y=\Spec A$이고 $x=\mathfrak{q}$, $y=\mathfrak{p}=\varphi^{-1}(\mathfrak{q})$, $y'=\mathfrak{p}'\subseteq \mathfrak{p}$인 경우만 보이면 충분하다.
 
 [보조정리 2](#lem2)에 의하여 $A_\mathfrak{p} \rightarrow B_\mathfrak{q}$는 flat한 국소사상이므로, [보조정리 15](#lem15)에 의하여 $\Spec B_\mathfrak{q} \rightarrow \Spec A_\mathfrak{p}$는 전사이다. 특히 $\mathfrak{p}'A_\mathfrak{p}\in \Spec A_\mathfrak{p}$ 위에 놓인 $\Spec B_\mathfrak{q}$의 점이 존재하며, 이를 $B$의 prime ideal로 되돌리면 $\mathfrak{q}'\subseteq \mathfrak{q}$이면서 $\varphi^{-1}(\mathfrak{q}')=\mathfrak{p}'$인 $\mathfrak{q}'$를 얻는다. $\mathfrak{q}'\subseteq \mathfrak{q}$는 곧 $x\in \overline{\{x'\}}$을 뜻하므로 $x'=\mathfrak{q}'$가 원하는 점이다.
 :::
@@ -378,17 +378,7 @@ $$\Tor_1^{\mathcal{O}_{Y,y}}(\kappa(y), \mathcal{O}_{X,x})=0$$
 $Y$가 locally Noetherian이므로 $A=\mathcal{O}_{Y,y}$는 Noetherian local ring이고, $f$가 locally of finite type이므로 $X$ 또한 locally Noetherian이어서 $E=\mathcal{O}_{X,x}$도 Noetherian local ring이다. $f$가 유도하는 $A \rightarrow E$는 국소사상이므로 $\mathfrak{m}_yE\subseteq \mathfrak{m}_x$를 만족한다. 이제 $M=E$로 두면 $M$은 finitely generated $E$-가군이므로 [\[가환대수학\] §평탄성과 국소화, ⁋정리 1](/ko/math/commutative_algebra/local_criterion_for_flatness#thm1)의 가정이 모두 충족되며, 그 결론이 정확히 주장하는 동치이다.
 :::
 
-flat한 점들의 집합이 $X$의 열린집합을 이룬다는 사실 또한 성립한다. 즉 $f$가 locally of finite presentation이면 평탄 영역은 열린집합이며, 이는 [명제 11](#prop11)을 $X$ 쪽에서 본 형태에 해당한다. 그러나 그 증명은 Fitting ideal에 대한 별도의 이론을 필요로 하므로 여기에서는 다루지 않고 **[EGA]** IV.11.1.1과 [\[Stacks\] Tag 00RC](https://stacks.math.columbia.edu/tag/00RC)를 인용하는 데에 그친다.
-
-또한 smooth한 사상은 그 정의에 flatness를 직접 조건으로 포함하므로 언제나 flat이다. ([§매끄러운 사상과 étale 사상](/ko/math/scheme_theory/smooth_and_etale_morphisms))
-
-::: 예시 20
-양수 특성 $p > 0$인 체 $\mathbb{K}$ 위의 scheme $X$에 대하여, *Frobenius 사상<sub>프로베니우스 사상</sub>*
-
-$$F: X \longrightarrow X$$
-
-은 구조층 위에서 $p$제곱사상 $a \mapsto a^p$을 유도한다. Kunz의 정리에 의하면 $X$가 regular인 것과 $F$가 flat인 것은 서로 동치이다. 따라서 $X$가 singular point를 가지면 Frobenius 사상은 flat이 아니며, 예를 들어 $X = \Spec \mathbb{K}[\x, \y]/(\x\y)$의 node에서 $F$는 flat하지 않다. 이는 지금까지 본 판정법들과는 성격이 다른데, 여기에서는 flatness가 family의 성질이 아니라 $X$ 자체의 regularity를 재고 있다.
-:::
+Flat한 점들의 집합이 $X$의 열린집합을 이룬다는 사실 또한 성립한다. 곧 $f$가 locally of finite presentation이면 $\mathcal{O}_{X,x}$가 $\mathcal{O}_{Y,f(x)}$-flat인 $x$들의 모임은 $X$에서 열려 있다. ([\[Stacks\] Tag 00RC](https://stacks.math.columbia.edu/tag/00RC)) [명제 11](#prop11)이 base에서 좋은 열린집합을 하나 찾아준 것이라면 이쪽은 $X$ 위에서의 열림을 주장하는 것이며, 그 증명에 필요한 도구는 우리가 갖춘 것과 다르므로 논증의 얼개만 적어두고 인용에 그친다. 먼저 Noetherian 근사로 $A$와 $B$가 $\mathbb{Z}$ 위의 finite type인 경우로 환원하고, $B$를 다항식환으로 바꾸어 모든 fiber ring이 유한한 global dimension을 갖도록 만든다. 그럼 문제의 가군이 유한 자유가군들의 유한 복합체 $F_\bullet$로 분해되어, flatness는 $F_\bullet$이 각 fiber 위에서 exact인지의 문제가 된다. 마지막 단계는 Buchsbaum과 Eisenbud의 exactness 판정법으로, 각 사상 $\varphi_i$의 rank와 그 행렬의 $r_i\times r_i$ minor들이 생성하는 ideal $I(\varphi_i)$의 depth 조건으로 exactness를 읽어내는 것이다. 이 $I(\varphi_i)$는 $\coker \varphi_i$의 Fitting ideal이며, minor라는 명시적인 $B$의 원소들로 주어지므로 그것이 정의하는 집합이 열려 있음을 직접 확인할 수 있다.
 
 ---
 
@@ -399,5 +389,3 @@ $$F: X \longrightarrow X$$
 **[Stacks]** The Stacks Project Authors, *Stacks Project*, https://stacks.math.columbia.edu.
 
 **[EGA]** A. Grothendieck, *Éléments de géométrie algébrique*, IHES, 1960–1967.
-
-**[Mats]** H. Matsumura, *Commutative ring theory*, Cambridge University Press, 1986.
