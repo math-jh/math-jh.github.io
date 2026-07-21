@@ -48,7 +48,7 @@ $$A[\epsilon]=A[t]/(t^2),\qquad \epsilon=\overline{t},\quad \epsilon^2=0$$
 
 ## 평탄 변형과 일차 변형
 
-변형에서 결정적인 조건은 *평탄성<sub>flatness</sub>*이다. 평탄성이 없으면 base 위의 점마다 fiber의 크기가 멋대로 변할 수 있어 "연속적인 가족"이라는 직관이 무너진다. 평탄성은 fiber가 base를 따라 일정한 방식으로 변한다는 것을 보장한다.
+변형에서 결정적인 조건은 *flatness<sub>flatness</sub>*이다. flatness가 없으면 base 위의 점마다 fiber의 크기가 멋대로 변할 수 있어 "연속적인 가족"이라는 직관이 무너진다. flatness는 fiber가 base를 따라 일정한 방식으로 변한다는 것을 보장한다.
 
 ::: 정의 3
 $A$-algebra $B$와 square-zero extension $0\rightarrow M\rightarrow A'\rightarrow A\rightarrow0$이 주어졌다 하자. $B$의 $A'$ 위로의 *변형<sub>deformation</sub>*이란, $A'$ 위에서 flat한 $A'$-algebra $B'$과 $A'$-algebra isomorphism $B'\otimes_{A'}A\cong B$의 짝을 뜻한다. 두 변형 $B', B''$이 *isomorphic*이라는 것은 $A$ 위로 환원했을 때 $B$ 위의 항등사상을 유도하는 $A'$-algebra isomorphism $B'\cong B''$이 존재하는 것이다.
@@ -56,7 +56,7 @@ $A$-algebra $B$와 square-zero extension $0\rightarrow M\rightarrow A'\rightarro
 특히 $A=k$이고 $A'=k[\epsilon]$인 경우의 변형을 $B$의 *first-order deformation<sub>일차 변형</sub>*이라 부른다.
 :::
 
-직관적으로 first-order deformation은 $B$를 정의하는 방정식들의 계수를 $\epsilon$의 일차까지 흔든 것이다. $B=P/I$를 polynomial ring $P=k[\x_1,\ldots,\x_n]$의 quotient로 쓰고 $I=(f_1,\ldots,f_m)$이라 하면, 각 $f_j$를 $F_j=f_j+\epsilon g_j$로 흔들어 $B'=P[\epsilon]/(F_1,\ldots,F_m)$을 얻는 것이 후보가 된다. 그러나 임의의 $g_j$가 모두 평탄한 변형을 주지는 않는다. 평탄성이라는 제약이 어떤 $g_j$가 허용되는지를 정확히 결정하며, 이것이 변형이론의 출발점이다.
+직관적으로 first-order deformation은 $B$를 정의하는 방정식들의 계수를 $\epsilon$의 일차까지 흔든 것이다. $B=P/I$를 polynomial ring $P=k[\x_1,\ldots,\x_n]$의 quotient로 쓰고 $I=(f_1,\ldots,f_m)$이라 하면, 각 $f_j$를 $F_j=f_j+\epsilon g_j$로 흔들어 $B'=P[\epsilon]/(F_1,\ldots,F_m)$을 얻는 것이 후보가 된다. 그러나 임의의 $g_j$가 모두 flat한 변형을 주지는 않는다. flatness라는 제약이 어떤 $g_j$가 허용되는지를 정확히 결정하며, 이것이 변형이론의 출발점이다.
 
 ::: 명제 4
 $B=P/I$, $P=k[\x_1,\ldots,\x_n]$, $I=(f_1,\ldots,f_m)$이라 하고, $g_1,\ldots,g_m\in P$에 대하여 $F_j=f_j+\epsilon g_j$, $B'=P[\epsilon]/(F_1,\ldots,F_m)$이라 하자. 그럼 $B'$이 $k[\epsilon]$ 위에서 flat한 것은, $(f_1,\ldots,f_m)$의 모든 syzygy $(a_1,\ldots,a_m)$, 곧 $\sum_ja_jf_j=0$인 $(a_j)\in P^m$에 대하여
@@ -85,11 +85,11 @@ $$\sum_jA_jF_j=\sum_ja_jf_j+\epsilon\Bigl(\sum_ja_jg_j-\sum_jc_jf_j\Bigr)=0$$
 이므로 syzygy $(a_j)$가 $(F_j)$의 syzygy로 들어올려진다.
 :::
 
-이 명제는 평탄한 first-order deformation을 매우 구체적으로 기술한다. 곧 평탄성은 정확히 "원래 방정식들 사이의 모든 관계가 흔들린 방정식들 사이의 관계로 살아남는다"는 조건이며, 이것이 [\[스킴\] §매끄러운 사상과 étale 사상, ⁋정리 11](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm11)에서 본 무한소 lifting의 대수적 핵심이다. 한 가지 관찰을 덧붙이면, $\sum_ja_jf_j=0$인 syzygy에 대하여 조건 $\sum_ja_jg_j\in I$는 $B$ 위에서 $\sum_j\overline{a_j}\overline{g_j}=0$으로 적힌다. 따라서 대응 $\overline{f_j}\mapsto\overline{g_j}$는 $B$-module homomorphism
+이 명제는 flat한 first-order deformation을 매우 구체적으로 기술한다. 곧 flatness는 정확히 "원래 방정식들 사이의 모든 관계가 흔들린 방정식들 사이의 관계로 살아남는다"는 조건이며, 이것이 [\[스킴\] §매끄러운 사상과 étale 사상, ⁋정리 11](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm11)에서 본 무한소 lifting의 대수적 핵심이다. 한 가지 관찰을 덧붙이면, $\sum_ja_jf_j=0$인 syzygy에 대하여 조건 $\sum_ja_jg_j\in I$는 $B$ 위에서 $\sum_j\overline{a_j}\overline{g_j}=0$으로 적힌다. 따라서 대응 $\overline{f_j}\mapsto\overline{g_j}$는 $B$-module homomorphism
 
 $$\varphi:I/I^2\longrightarrow B$$
 
-를 well-defined하게 정의한다. 거꾸로 임의의 $\varphi\in\Hom_B(I/I^2,B)$은 $g_j\in P$를 $\varphi(\overline{f_j})=\overline{g_j}$이도록 택하여 평탄한 first-order deformation을 준다. 즉 평탄한 first-order deformation의 집합은 $\Hom_B(I/I^2,B)$와 자연스럽게 대응한다.
+를 well-defined하게 정의한다. 거꾸로 임의의 $\varphi\in\Hom_B(I/I^2,B)$은 $g_j\in P$를 $\varphi(\overline{f_j})=\overline{g_j}$이도록 택하여 flat한 first-order deformation을 준다. 즉 flat한 first-order deformation의 집합은 $\Hom_B(I/I^2,B)$와 자연스럽게 대응한다.
 
 남은 일은 이 중 어떤 것들이 isomorphic인지, 곧 자명한 변형을 걸러내는 것이다. 변형 $B'=B[\epsilon]$ (즉 모든 $g_j=0$)에 isomorphic인 변형을 *trivial*하다 부른다. 좌표변환 $\x_i\mapsto\x_i+\epsilon\theta(\x_i)$ ($\theta\in\Hom_k(P,B)$를 derivation으로 확장)에 의한 $P[\epsilon]$의 automorphism은 $f_j$를 $f_j+\epsilon\sum_i\theta(\x_i)(\partial f_j/\partial\x_i)=f_j+\epsilon\theta(f_j)$로 옮기므로, trivial한 변형들은 정확히 $\varphi$가 derivation에서 오는 경우, 곧 합성
 
@@ -135,7 +135,7 @@ $T^0, T^1$은 두 항짜리 복합체 $\operatorname{NL}_{B/k}$만으로 올바�
 Finitely generated $k$-algebra $B$에 대하여, isomorphism class로 본 $B$의 first-order deformation들의 집합은 $T^1(B/k,B)$과 자연스럽게 일대일 대응한다. 이 대응 아래에서 trivial deformation은 $0\in T^1$에 대응하며, 임의의 변형 $B'$의 무한소 automorphism군은 $T^0(B/k,B)=\Der_k(B,B)$과 동형이다.
 :::
 ::: 증명
-[명제 4](#prop4) 직후의 논의에서 평탄한 first-order deformation들은 $\Hom_B(I/I^2,B)$과 대응하고, trivial한 것들은 정확히 $\overline{d}^\ast(\Der_k(P,B))$의 image에 대응함을 보았다. 따라서 isomorphism class의 집합은
+[명제 4](#prop4) 직후의 논의에서 flat한 first-order deformation들은 $\Hom_B(I/I^2,B)$과 대응하고, trivial한 것들은 정확히 $\overline{d}^\ast(\Der_k(P,B))$의 image에 대응함을 보았다. 따라서 isomorphism class의 집합은
 
 $$\Hom_B(I/I^2,B)\big/\im\overline{d}^\ast=\coker\overline{d}^\ast=T^1(B/k,B)$$
 
@@ -165,7 +165,7 @@ $$\operatorname{ob}(\xi)\in T^2(B/k,B)$$
 가 자연스럽게 정의되며, $\xi$가 연장 가능한 것은 $\operatorname{ob}(\xi)=0$인 것과 동치이다. 더 일반적으로, square-zero extension $0\rightarrow M\rightarrow A'\rightarrow A\rightarrow0$과 $A$ 위의 변형 $B_A$에 대하여, $B_A$를 $A'$ 위로 연장하는 것에 대한 장애는 $T^2(B/A,B\otimes_AM)$의 한 원소이고, 연장이 존재할 때 그 isomorphism class들은 $T^1(B/A,B\otimes_AM)$ 위의 torsor를 이룬다.
 :::
 ::: 증명
-$\xi$를 [명제 4](#prop4)와 같이 $F_j=f_j+tg_j$로 실현하자. 평탄성에 의하여 각 생성 syzygy $(a_j^{(r)})$에 대하여 $\sum_ja_j^{(r)}g_j=\sum_jc_j^{(r)}f_j$이도록 하는 $c_j^{(r)}\in P$가 존재한다. 이제 $k[t]/(t^3)$ 위로 연장하려면 $F_j^{(2)}=f_j+tg_j+t^2h_j$를 택하여 syzygy가 이차까지 들어올려지도록 해야 한다. [명제 4](#prop4)의 증명에서처럼 일차 syzygy lift $R_j^{(r)}=a_j^{(r)}-tc_j^{(r)}$를 잡으면
+$\xi$를 [명제 4](#prop4)와 같이 $F_j=f_j+tg_j$로 실현하자. flatness에 의하여 각 생성 syzygy $(a_j^{(r)})$에 대하여 $\sum_ja_j^{(r)}g_j=\sum_jc_j^{(r)}f_j$이도록 하는 $c_j^{(r)}\in P$가 존재한다. 이제 $k[t]/(t^3)$ 위로 연장하려면 $F_j^{(2)}=f_j+tg_j+t^2h_j$를 택하여 syzygy가 이차까지 들어올려지도록 해야 한다. [명제 4](#prop4)의 증명에서처럼 일차 syzygy lift $R_j^{(r)}=a_j^{(r)}-tc_j^{(r)}$를 잡으면
 
 $$\sum_jR_j^{(r)}F_j=-t^2\sum_jc_j^{(r)}g_j$$
 
@@ -173,7 +173,7 @@ $$\sum_jR_j^{(r)}F_j=-t^2\sum_jc_j^{(r)}g_j$$
 
 $$\sum_jc_j^{(r)}g_j\equiv\sum_ja_j^{(r)}h_j\pmod I$$
 
-이다. 곧 각 syzygy $r$마다 $\overline{\sum_jc_j^{(r)}g_j}\in B$가 정해지고, 이 데이터가 Koszul syzygy 위에서 자동으로 소멸하므로 ([명제 4](#prop4)에서 $g_j$가 만족하는 평탄성 조건에 의한다) $\Hom_B(L_2,B)$의 한 cocycle을 이루며, 그 cohomology class가 $\operatorname{ob}(\xi)\in T^2(B/k,B)$이다. $\operatorname{ob}(\xi)=0$이라는 것은 위 합동식을 푸는 $h_j$가 존재한다는 것, 곧 이차 연장이 존재한다는 것과 정확히 같다. Torsor 구조는 두 연장의 차이가 [정리 7](#thm7)에서와 같이 $T^1$의 원소를 줌으로부터 따른다. 더 두꺼운 base와 일반적인 $M$에 대한 진술은 ([Ill], [Har], [Ser])에 있다.
+이다. 곧 각 syzygy $r$마다 $\overline{\sum_jc_j^{(r)}g_j}\in B$가 정해지고, 이 데이터가 Koszul syzygy 위에서 자동으로 소멸하므로 ([명제 4](#prop4)에서 $g_j$가 만족하는 flatness 조건에 의한다) $\Hom_B(L_2,B)$의 한 cocycle을 이루며, 그 cohomology class가 $\operatorname{ob}(\xi)\in T^2(B/k,B)$이다. $\operatorname{ob}(\xi)=0$이라는 것은 위 합동식을 푸는 $h_j$가 존재한다는 것, 곧 이차 연장이 존재한다는 것과 정확히 같다. Torsor 구조는 두 연장의 차이가 [정리 7](#thm7)에서와 같이 $T^1$의 원소를 줌으로부터 따른다. 더 두꺼운 base와 일반적인 $M$에 대한 진술은 ([Ill], [Har], [Ser])에 있다.
 :::
 
 장애의 정체는 이렇게 명료하다. 일차 변형은 syzygy를 일차까지 들어올린 뒤 남는 이차 잔여항 $-t^2\sum c_jg_j$를 만들고, 이 잔여항을 $h_j$의 선택으로 흡수할 수 있는지가 연장 가능성이며, 흡수의 실패를 $T^2$가 잰다. 여기서 잔여항이 syzygy의 데이터로 표현되고, 그것이 Koszul 관계를 넘어서는 부분에서만 의미를 가지므로 $L_2=\operatorname{Syz}/\operatorname{Kos}$가 등장한 것이다. 이 장애를 반복적으로 소거하며 더 높은 차수로 변형을 쌓아 올리면, 그 limit으로 complete local ring 위의 formal deformation을 얻는다 ([Ser]).
@@ -218,7 +218,7 @@ $$T^1(B/k,B)=\coker\overline{d}^\ast=B/(\x,\y)=k[\x,\y]/(\x\y,\x,\y)\cong k$$
 
 $$\x\y=t$$
 
-라는 $k[t]$ 위의 평탄 family로 연장된다. $t\neq0$인 fiber는 두 직선이 떨어진 smooth conic이므로, node는 이 family를 따라 *smoothing*된다. 변형이론이 "singular point를 매끄럽게 펼 수 있는가"라는 질문에 $\dim T^1=1$, $T^2=0$이라는 답으로 응답한 것이다.
+라는 $k[t]$ 위의 flat family로 연장된다. $t\neq0$인 fiber는 두 직선이 떨어진 smooth conic이므로, node는 이 family를 따라 *smoothing*된다. 변형이론이 "singular point를 매끄럽게 펼 수 있는가"라는 질문에 $\dim T^1=1$, $T^2=0$이라는 답으로 응답한 것이다.
 :::
 
 ::: 예시 12 (세 좌표축)

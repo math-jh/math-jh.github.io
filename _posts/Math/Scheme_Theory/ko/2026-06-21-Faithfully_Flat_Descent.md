@@ -15,42 +15,42 @@ published: false
 drift_needed: true
 ---
 
-대수기하학에서 어떤 대상이 국소적으로 주어졌을 때 이를 전역적으로 붙여 하나의 대상으로 만드는 일은 흔하다. 가장 익숙한 예는 open cover를 따라 sheaf의 section을 붙이는 것이다. 그런데 open cover는 본질적으로 단사적인 localization에 불과하여, 실제로 다루고 싶은 많은 상황을 포착하지 못한다. 예를 들어 field extension $\mathbb{K}\subseteq L$을 따라 $L$ 위에서 정의된 대상을 $\mathbb{K}$ 위로 내려보내는 일이나, 어떤 covering space 위의 데이터를 밑공간 위로 모으는 일은 open cover의 언어로는 표현되지 않는다. Grothendieck은 이러한 상황을 통일적으로 다루기 위해, 열린포함사상보다 훨씬 넓은 *충실평탄 사상<sub>faithfully flat morphism</sub>*을 일종의 covering으로 받아들이는 관점을 도입하였다. 핵심은 충실평탄 사상이 정확성을 정확히 반영한다는 대수적 사실이며, 이로부터 base ring 위의 가군을 그보다 큰 ring 위의 가군과 적절한 접합 조건으로 완전히 복원할 수 있다는 *하강<sub>descent</sub>* 정리가 따라온다. 이번 글에서는 먼저 가군 수준에서 이 정리를 확립하고, 이어 그 sheaf적·기하학적 형태인 fpqc 위상 위의 하강으로 끌어올린다.
+대수기하학에서 어떤 대상이 국소적으로 주어졌을 때 이를 전역적으로 붙여 하나의 대상으로 만드는 일은 흔하다. 가장 익숙한 예는 open cover를 따라 sheaf의 section을 붙이는 것이다. 그런데 open cover는 본질적으로 단사적인 localization에 불과하여, 실제로 다루고 싶은 많은 상황을 포착하지 못한다. 예를 들어 field extension $\mathbb{K}\subseteq L$을 따라 $L$ 위에서 정의된 대상을 $\mathbb{K}$ 위로 내려보내는 일이나, 어떤 covering space 위의 데이터를 밑공간 위로 모으는 일은 open cover의 언어로는 표현되지 않는다. Grothendieck은 이러한 상황을 통일적으로 다루기 위해, 열린포함사상보다 훨씬 넓은 *faithfully flat morphism<sub>faithfully flat morphism</sub>*을 일종의 covering으로 받아들이는 관점을 도입하였다. 핵심은 faithfully flat morphism이 정확성을 정확히 반영한다는 대수적 사실이며, 이로부터 base ring 위의 가군을 그보다 큰 ring 위의 가군과 적절한 접합 조건으로 완전히 복원할 수 있다는 *하강<sub>descent</sub>* 정리가 따라온다. 이번 글에서는 먼저 가군 수준에서 이 정리를 확립하고, 이어 그 sheaf적·기하학적 형태인 fpqc 위상 위의 하강으로 끌어올린다.
 
 ## 충실평탄 사상
 
-충실평탄성은 평탄성에 전사성을 더한 조건이다. 가군 수준에서 ring homomorphism $\varphi: A \rightarrow B$가 충실평탄이라 함은 $B$가 평탄 $A$-가군이면서 ([\[가환대수학\] §평탄성, ⁋명제 1](/ko/math/commutative_algebra/flatness#prop1)) 다음 명제가 보여주듯 정확성을 단순히 보존할 뿐 아니라 반영하는 것이다. 사상 수준에서는 이를 [§평탄사상, ⁋정의 1](/ko/math/scheme_theory/flat_morphisms#def1)에서 평탄이면서 surjective인 morphism으로 정의하였다.
+faithful flatness는 flatness에 전사성을 더한 조건이다. 가군 수준에서 ring homomorphism $\varphi: A \rightarrow B$가 faithfully flat이라 함은 $B$가 flat $A$-가군이면서 ([\[가환대수학\] §평탄성, ⁋명제 1](/ko/math/commutative_algebra/flatness#prop1)) 다음 명제가 보여주듯 정확성을 단순히 보존할 뿐 아니라 반영하는 것이다. 사상 수준에서는 이를 [§평탄사상, ⁋정의 1](/ko/math/scheme_theory/flat_morphisms#def1)에서 flat이면서 surjective인 morphism으로 정의하였다.
 
 ::: 정의 1
-Ring homomorphism $\varphi: A \rightarrow B$가 *faithfully flat<sub>충실평탄</sub>*하다는 것은, $B$가 평탄 $A$-가군이고, 동시에 임의의 $A$-가군 $M$에 대하여 $M\otimes_A B=0$이면 $M=0$인 것이다.
+Ring homomorphism $\varphi: A \rightarrow B$가 *faithfully flat<sub>충실평탄</sub>*하다는 것은, $B$가 flat $A$-가군이고, 동시에 임의의 $A$-가군 $M$에 대하여 $M\otimes_A B=0$이면 $M=0$인 것이다.
 :::
 
 위 정의의 둘째 조건이 "충실"이라는 이름의 출처이다. 즉 $-\otimes_A B$가 $0$이 아닌 가군을 $0$으로 보내지 않는다는 것이다. 이 조건은 여러 동치 형태를 가진다.
 
 ::: 명제 2
-평탄 ring homomorphism $\varphi: A \rightarrow B$에 대하여 다음이 동치이다.
+Flat ring homomorphism $\varphi: A \rightarrow B$에 대하여 다음이 동치이다.
 
-1. $\varphi$는 충실평탄이다.
+1. $\varphi$는 faithfully flat이다.
 2. $A$-가군의 sequence $M' \rightarrow M \rightarrow M''$이 정확한 것은, $B$-가군의 sequence $M'\otimes_A B \rightarrow M\otimes_A B \rightarrow M''\otimes_A B$가 정확한 것과 동치이다.
 3. $\varphi$가 유도하는 사상 $\Spec B \rightarrow \Spec A$는 surjective이다.
 :::
 ::: 증명
-(1) $\Rightarrow$ (2). $B$가 평탄이므로 정확한 sequence는 $-\otimes_A B$ 후에도 정확하다. 역을 보이기 위해 $M' \xrightarrow{f} M \xrightarrow{g} M''$이 $-\otimes_A B$ 후 정확하다 하자. $H=\ker g/\im f$라 두면, $B$가 평탄이므로 homology가 tensor와 commute하여 $H\otimes_A B=\ker(g\otimes 1)/\im(f\otimes 1)=0$이다. 충실성에 의해 $H=0$이고 따라서 원래 sequence가 정확하다.
+(1) $\Rightarrow$ (2). $B$가 flat이므로 정확한 sequence는 $-\otimes_A B$ 후에도 정확하다. 역을 보이기 위해 $M' \xrightarrow{f} M \xrightarrow{g} M''$이 $-\otimes_A B$ 후 정확하다 하자. $H=\ker g/\im f$라 두면, $B$가 flat이므로 homology가 tensor와 commute하여 $H\otimes_A B=\ker(g\otimes 1)/\im(f\otimes 1)=0$이다. 충실성에 의해 $H=0$이고 따라서 원래 sequence가 정확하다.
 
-(2) $\Rightarrow$ (1). $M\otimes_A B=0$이라 하면, sequence $0 \rightarrow M \rightarrow 0$이 $-\otimes_A B$ 후 정확하므로 (2)에 의해 $0 \rightarrow M \rightarrow 0$이 정확하여 $M=0$이다. 따라서 $\varphi$는 충실평탄이다.
+(2) $\Rightarrow$ (1). $M\otimes_A B=0$이라 하면, sequence $0 \rightarrow M \rightarrow 0$이 $-\otimes_A B$ 후 정확하므로 (2)에 의해 $0 \rightarrow M \rightarrow 0$이 정확하여 $M=0$이다. 따라서 $\varphi$는 faithfully flat이다.
 
 (1) $\Rightarrow$ (3). 임의의 $\mathfrak{p}\in \Spec A$에 대하여 잔여체 $\kappa(\mathfrak{p})=A_\mathfrak{p}/\mathfrak{p}A_\mathfrak{p}$를 생각하면, $\mathfrak{p}$가 $\varphi$의 상에 속하는 것은 fiber $\Spec(B\otimes_A \kappa(\mathfrak{p}))$가 비어있지 않은 것, 즉 $B\otimes_A \kappa(\mathfrak{p})\neq 0$인 것과 동치이다. ([§올곱, ⁋예시 9](/ko/math/scheme_theory/fiber_products#ex9)) 그런데 $\kappa(\mathfrak{p})\neq 0$이므로 충실성에 의해 $\kappa(\mathfrak{p})\otimes_A B\neq 0$이고, 따라서 $\mathfrak{p}$는 상에 속한다.
 
-(3) $\Rightarrow$ (1). $M\neq 0$인 $A$-가군을 잡고 $0\neq x\in M$을 택하면, $Ax\cong A/\mathfrak{a}$ ($\mathfrak{a}=\operatorname{Ann}(x)$)인 submodule이 있다. $\mathfrak{a}\subseteq \mathfrak{m}$인 maximal ideal $\mathfrak{m}$을 잡으면, (3)에 의해 $\mathfrak{m}$은 $\varphi$의 상에 속하므로 $\kappa(\mathfrak{m})\otimes_A B\neq 0$이다. 전사 $A/\mathfrak{a}\twoheadrightarrow A/\mathfrak{m}=\kappa(\mathfrak{m})$에 $-\otimes_A B$를 적용하면 (tensor product는 우완전) 전사 $(A/\mathfrak{a})\otimes_A B\twoheadrightarrow \kappa(\mathfrak{m})\otimes_A B$를 얻는데, 우변이 $0$이 아니므로 $(A/\mathfrak{a})\otimes_A B\neq 0$이다. 다시 $A/\mathfrak{a}=Ax\hookrightarrow M$에 평탄성을 적용하면 $(A/\mathfrak{a})\otimes_A B\hookrightarrow M\otimes_A B$이므로 $M\otimes_A B\neq 0$이다.
+(3) $\Rightarrow$ (1). $M\neq 0$인 $A$-가군을 잡고 $0\neq x\in M$을 택하면, $Ax\cong A/\mathfrak{a}$ ($\mathfrak{a}=\operatorname{Ann}(x)$)인 submodule이 있다. $\mathfrak{a}\subseteq \mathfrak{m}$인 maximal ideal $\mathfrak{m}$을 잡으면, (3)에 의해 $\mathfrak{m}$은 $\varphi$의 상에 속하므로 $\kappa(\mathfrak{m})\otimes_A B\neq 0$이다. 전사 $A/\mathfrak{a}\twoheadrightarrow A/\mathfrak{m}=\kappa(\mathfrak{m})$에 $-\otimes_A B$를 적용하면 (tensor product는 우완전) 전사 $(A/\mathfrak{a})\otimes_A B\twoheadrightarrow \kappa(\mathfrak{m})\otimes_A B$를 얻는데, 우변이 $0$이 아니므로 $(A/\mathfrak{a})\otimes_A B\neq 0$이다. 다시 $A/\mathfrak{a}=Ax\hookrightarrow M$에 flatness를 적용하면 $(A/\mathfrak{a})\otimes_A B\hookrightarrow M\otimes_A B$이므로 $M\otimes_A B\neq 0$이다.
 :::
 
-[명제 2](#prop2)의 둘째 조건이 하강 이론 전체를 떠받치는 사실이다. 정확성을 base change로 검사할 수 있다는 것은, $B$ 위에서 성립하는 정확성에 관한 진술이 $A$ 위로 그대로 내려온다는 것을 뜻한다. 특별히 $M' \rightarrow M$이 단사 또는 전사인 것도 $-\otimes_A B$ 후의 단사·전사로 판정된다. 셋째 조건은 이 대수적 성질이 정확히 사상 $\Spec B \rightarrow \Spec A$의 전사성에 대응함을 보여주며, 따라서 충실평탄 ring homomorphism은 [§평탄사상, ⁋정의 1](/ko/math/scheme_theory/flat_morphisms#def1)의 affine 충실평탄 사상에 다름 아니다.
+[명제 2](#prop2)의 둘째 조건이 하강 이론 전체를 떠받치는 사실이다. 정확성을 base change로 검사할 수 있다는 것은, $B$ 위에서 성립하는 정확성에 관한 진술이 $A$ 위로 그대로 내려온다는 것을 뜻한다. 특별히 $M' \rightarrow M$이 단사 또는 전사인 것도 $-\otimes_A B$ 후의 단사·전사로 판정된다. 셋째 조건은 이 대수적 성질이 정확히 사상 $\Spec B \rightarrow \Spec A$의 전사성에 대응함을 보여주며, 따라서 faithfully flat ring homomorphism은 [§평탄사상, ⁋정의 1](/ko/math/scheme_theory/flat_morphisms#def1)의 affine faithfully flat morphism에 다름 아니다.
 
-가장 중요한 예시는 $A$의 원소들 $f_1,\ldots, f_n$이 $A$ 전체를 생성할 때 ($\sum f_i A=A$) 얻어지는 $A \rightarrow \prod_i A_{f_i}$이다. 각 $A_{f_i}$가 평탄이므로 그 곱도 평탄이고, $\Spec \prod A_{f_i}=\coprod D(f_i)$가 $\Spec A$를 덮으므로 surjective이다. 즉 한 affine scheme의 principal open cover는 충실평탄 사상의 한 경우이며, 이 점에서 충실평탄 하강은 open cover를 따른 sheaf의 접합을 포함하는 일반화이다. 더 나아가 field extension $\mathbb{K}\subseteq L$은 항상 충실평탄인데, $L$이 $\mathbb{K}$ 위의 벡터 space로서 free이고 $L\neq 0$이기 때문이다.
+가장 중요한 예시는 $A$의 원소들 $f_1,\ldots, f_n$이 $A$ 전체를 생성할 때 ($\sum f_i A=A$) 얻어지는 $A \rightarrow \prod_i A_{f_i}$이다. 각 $A_{f_i}$가 flat이므로 그 곱도 flat이고, $\Spec \prod A_{f_i}=\coprod D(f_i)$가 $\Spec A$를 덮으므로 surjective이다. 즉 한 affine scheme의 principal open cover는 faithfully flat morphism의 한 경우이며, 이 점에서 faithfully flat descent는 open cover를 따른 sheaf의 접합을 포함하는 일반화이다. 더 나아가 field extension $\mathbb{K}\subseteq L$은 항상 faithfully flat인데, $L$이 $\mathbb{K}$ 위의 벡터 space로서 free이고 $L\neq 0$이기 때문이다.
 
 ## Amitsur 복합체의 정확성
 
-하강의 출발점은 충실평탄 사상이 그 자신의 "이중 covering"과 맺는 관계이다. Ring homomorphism $\varphi: A \rightarrow B$가 주어지면 두 사상
+하강의 출발점은 faithfully flat morphism이 그 자신의 "이중 covering"과 맺는 관계이다. Ring homomorphism $\varphi: A \rightarrow B$가 주어지면 두 사상
 
 $$d^0, d^1: B \rightrightarrows B\otimes_A B,\qquad d^0(b)=b\otimes 1,\quad d^1(b)=1\otimes b$$
 
@@ -58,10 +58,10 @@ $$d^0, d^1: B \rightrightarrows B\otimes_A B,\qquad d^0(b)=b\otimes 1,\quad d^1(
 
 $$0 \rightarrow A \xrightarrow{\varphi} B \xrightarrow{d} B\otimes_A B$$
 
-를 얻는다. 이를 *Amitsur 복합체<sub>Amitsur complex</sub>*의 처음 두 마디라 부른다. 다음 보조정리가 충실평탄 하강의 핵심이다.
+를 얻는다. 이를 *Amitsur 복합체<sub>Amitsur complex</sub>*의 처음 두 마디라 부른다. 다음 보조정리가 faithfully flat descent의 핵심이다.
 
 ::: 보조정리 3
-$\varphi: A \rightarrow B$가 충실평탄이면, 위의 sequence
+$\varphi: A \rightarrow B$가 faithfully flat이면, 위의 sequence
 
 $$0 \rightarrow A \xrightarrow{\varphi} B \xrightarrow{d^1-d^0} B\otimes_A B$$
 
@@ -125,14 +125,14 @@ $$\rMod{A} \rightarrow \operatorname{Desc}(B/A)$$
 를 정의한다.
 :::
 
-[예시 5](#ex5)의 functor가 무엇을 잃거나 더하는지가 다음 절의 주제이다. Descent 정리는 이 functor가 충실평탄 $\varphi$에 대하여 범주의 동치임을 주장한다. 즉 모든 descent datum이 본질적으로 canonical한 것이며, 따라서 $B\otimes_A B$ 위의 호환 데이터를 갖춘 $B$-가군은 언제나 어떤 $A$-가군으로부터 유일하게 내려온다는 것이다.
+[예시 5](#ex5)의 functor가 무엇을 잃거나 더하는지가 다음 절의 주제이다. Descent 정리는 이 functor가 faithfully flat $\varphi$에 대하여 범주의 동치임을 주장한다. 즉 모든 descent datum이 본질적으로 canonical한 것이며, 따라서 $B\otimes_A B$ 위의 호환 데이터를 갖춘 $B$-가군은 언제나 어떤 $A$-가군으로부터 유일하게 내려온다는 것이다.
 
 ## 가군의 하강
 
 이제 주요 정리를 진술하고 증명한다. 한 방향은 descent datum으로부터 $A$-가군을 복원하는 것으로, [보조정리 3](#lem3)이 알려준 "$A$는 $B$ 안의 호환 원소들"이라는 원리를 가군 위에서 실현한다.
 
 ::: 정리 6 (충실평탄 하강)
-$\varphi: A \rightarrow B$가 충실평탄이면, [예시 5](#ex5)의 functor
+$\varphi: A \rightarrow B$가 faithfully flat이면, [예시 5](#ex5)의 functor
 
 $$\rMod{A} \rightarrow \operatorname{Desc}(B/A);\qquad M\mapsto (M\otimes_A B, \id)$$
 
@@ -145,45 +145,45 @@ $$M=\{n\in N\mid \varphi_N(n\otimes 1)=1\otimes n\}$$
 ::: 증명
 두 functor가 서로 quasi-inverse임을 보인다. inverse functor를 $(N, \varphi_N)\mapsto N^{\varphi}$로 적자. 여기에서 $N^\varphi=\{n\in N\mid \varphi_N(n\otimes 1)=1\otimes n\}$이며, 이는 $N\otimes_A B \rightrightarrows B\otimes_A N$의 두 사상 $n\mapsto \varphi_N(n\otimes 1)$과 $n\mapsto 1\otimes n$의 equalizer이므로 $A$-submodule이다.
 
-먼저 canonical descent datum $(M\otimes_A B, \id)$에서 출발하면, $N=M\otimes_A B$ 위에서 $\varphi_N=\id$이므로 $N^\varphi$는 $\{x\in M\otimes_A B\mid x\otimes 1=1\otimes x\}$이다. [보조정리 3](#lem3)에 $-\otimes_A M$의 정확성 대신 $M$을 계수로 한 형태를 적용하면, 즉 sequence $0 \rightarrow M \rightarrow M\otimes_A B \rightarrow M\otimes_A B\otimes_A B$가 정확하므로 (이는 [보조정리 3](#lem3)의 정확한 sequence에 평탄한 $-\otimes_A M$ 대신 충실평탄 $B$로의 base change 논증을 그대로 반복하여 얻는다) $N^\varphi=M$이고, 따라서 한 합성은 항등과 natural isomorphism이다.
+먼저 canonical descent datum $(M\otimes_A B, \id)$에서 출발하면, $N=M\otimes_A B$ 위에서 $\varphi_N=\id$이므로 $N^\varphi$는 $\{x\in M\otimes_A B\mid x\otimes 1=1\otimes x\}$이다. [보조정리 3](#lem3)에 $-\otimes_A M$의 정확성 대신 $M$을 계수로 한 형태를 적용하면, 즉 sequence $0 \rightarrow M \rightarrow M\otimes_A B \rightarrow M\otimes_A B\otimes_A B$가 정확하므로 (이는 [보조정리 3](#lem3)의 정확한 sequence에 flat한 $-\otimes_A M$ 대신 faithfully flat $B$로의 base change 논증을 그대로 반복하여 얻는다) $N^\varphi=M$이고, 따라서 한 합성은 항등과 natural isomorphism이다.
 
 반대 방향이 본질적인 부분이다. Descent datum $(N, \varphi_N)$에서 출발하여 $M=N^\varphi$라 두고, 자연스러운 $B$-가군 사상
 
 $$\theta: M\otimes_A B \rightarrow N;\qquad m\otimes b\mapsto bm$$
 
-이 동형임을 보여야 하며, 또 그 위에서 descent datum이 보존됨을 확인해야 한다. $\theta$가 동형임을 보이는 것은 충실평탄 $\varphi$ 덕분에 $-\otimes_A B$ 후에 확인하면 충분하다. ([명제 2](#prop2)) Base change $\theta\otimes_A B: M\otimes_A B\otimes_A B \rightarrow N\otimes_A B=p_1^\ast N$를 계산하기 위해, $\varphi_N$을 이용하여 $N\otimes_A B=p_1^\ast N\cong p_2^\ast N=B\otimes_A N$로 옮긴다.
+이 동형임을 보여야 하며, 또 그 위에서 descent datum이 보존됨을 확인해야 한다. $\theta$가 동형임을 보이는 것은 faithfully flat $\varphi$ 덕분에 $-\otimes_A B$ 후에 확인하면 충분하다. ([명제 2](#prop2)) Base change $\theta\otimes_A B: M\otimes_A B\otimes_A B \rightarrow N\otimes_A B=p_1^\ast N$를 계산하기 위해, $\varphi_N$을 이용하여 $N\otimes_A B=p_1^\ast N\cong p_2^\ast N=B\otimes_A N$로 옮긴다.
 
 핵심은 다음의 관찰이다. $\varphi_N$의 cocycle 조건은 $M=N^\varphi$의 정의와 결합하여, $p_1^\ast N$ 위에서 "$\varphi_N$으로 평행이동된 좌표"를 잡으면 $N\otimes_A B$가 $M\otimes_A B\otimes_A B$와 동일시됨을 함의한다. 구체적으로, $B\otimes_A B$를 base ring으로 보고 $\psi=\varphi_N$로 두면, cocycle 조건 $p_{13}^\ast \psi=p_{23}^\ast \psi\circ p_{12}^\ast \psi$는 정확히 $(N\otimes_A B, p_1^\ast \psi)$가 다시 $B\otimes_A B$에 대한 descent datum을 이루고 그 invariant 부분이 $N$ 자신이 되도록 한다. 따라서 base change된 $\theta\otimes_A B$는 [보조정리 3](#lem3)이 보장하는 동형
 
 $$N^\varphi\otimes_A B\xrightarrow{\ \sim\ }\{x\in N\otimes_A B\mid p_1^\ast\varphi_N(x)=p_2^\ast \text{ 자명배치}\}\cong N$$
 
-으로 귀착되어 전단사이다. 따라서 $\theta$가 base change 후 동형이고, 충실평탄성에 의해 $\theta$ 자신이 동형이다.
+으로 귀착되어 전단사이다. 따라서 $\theta$가 base change 후 동형이고, faithful flatness에 의해 $\theta$ 자신이 동형이다.
 
 마지막으로 이 $\theta$가 canonical descent datum $\id_{M\otimes_A B}$을 주어진 $\varphi_N$으로 옮기는 것은, $\theta$의 정의가 $\varphi_N$의 좌표를 그대로 사용했다는 사실로부터 따라온다. 두 functor의 합성이 양쪽 모두 항등과 natural isomorphism이므로 동치이다.
 :::
 
-[정리 6](#thm6)은 충실평탄 사상을 따라 가군이 완전히 하강함을 말한다. $B$ 위의 가군 $N$에 $B\otimes_A B$ 위의 cocycle 동형 하나를 더하면, 그것은 유일한 $A$-가군 $M$의 base change이다. 이 정리의 직접적인 결과로, 가군의 여러 성질들이 충실평탄 base change에 대해 내려온다. 가령 $M\otimes_A B$가 finitely generated $B$-가군이면 $M$도 finitely generated이고, $M\otimes_A B$가 finitely presented이면 $M$도 finitely presented이며, $M\otimes_A B$가 평탄 또는 projective이면 $M$ 역시 그러하다. 이들은 모두 해당 성질이 정확열로 표현되고 [명제 2](#prop2)가 그 정확성을 $A$ 위로 반영하기 때문이다.
+[정리 6](#thm6)은 faithfully flat morphism을 따라 가군이 완전히 하강함을 말한다. $B$ 위의 가군 $N$에 $B\otimes_A B$ 위의 cocycle 동형 하나를 더하면, 그것은 유일한 $A$-가군 $M$의 base change이다. 이 정리의 직접적인 결과로, 가군의 여러 성질들이 faithfully flat base change에 대해 내려온다. 가령 $M\otimes_A B$가 finitely generated $B$-가군이면 $M$도 finitely generated이고, $M\otimes_A B$가 finitely presented이면 $M$도 finitely presented이며, $M\otimes_A B$가 flat 또는 projective이면 $M$ 역시 그러하다. 이들은 모두 해당 성질이 정확열로 표현되고 [명제 2](#prop2)가 그 정확성을 $A$ 위로 반영하기 때문이다.
 
 ::: 명제 7
-$\varphi: A \rightarrow B$가 충실평탄이고 $M$이 $A$-가군이라 하자. 그럼 $M$이 finitely generated(각각 finitely presented, 평탄, locally free of finite rank)인 것은 $M\otimes_A B$가 $B$-가군으로서 finitely generated(각각 finitely presented, 평탄, locally free of finite rank)인 것과 동치이다.
+$\varphi: A \rightarrow B$가 faithfully flat이고 $M$이 $A$-가군이라 하자. 그럼 $M$이 finitely generated(각각 finitely presented, flat, locally free of finite rank)인 것은 $M\otimes_A B$가 $B$-가군으로서 finitely generated(각각 finitely presented, flat, locally free of finite rank)인 것과 동치이다.
 :::
 ::: 증명
 각 성질은 한쪽 방향이 base change에 대한 보존이므로 자명하고, 내려오는 방향만 본다. finitely generated의 경우, $M\otimes_A B$가 $y_1,\ldots, y_n$으로 생성된다 하면 각 $y_i$는 유한히 많은 $m_{ij}\otimes b_{ij}$의 합이므로, 그 $m_{ij}$들이 생성하는 finitely generated submodule $M_0\subseteq M$에 대해 $M_0\otimes_A B \rightarrow M\otimes_A B$가 전사이다. 그럼 $(M/M_0)\otimes_A B=0$이고 충실성에 의해 $M/M_0=0$이므로 $M=M_0$은 finitely generated이다.
 
-Finitely presented의 경우, $M$이 finitely generated임은 위에서 얻었으므로 $A^n \twoheadrightarrow M$의 kernel $K$가 finitely generated임을 보이면 된다. $0 \rightarrow K \rightarrow A^n \rightarrow M \rightarrow 0$을 base change하면 ($B$가 평탄) $0 \rightarrow K\otimes_A B \rightarrow B^n \rightarrow M\otimes_A B \rightarrow 0$이 정확하고, $M\otimes_A B$가 finitely presented이므로 $K\otimes_A B$는 finitely generated이다. ([\[가환대수학\] §평탄성, ⁋따름정리 6](/ko/math/commutative_algebra/flatness#cor6) 이후의 finitely presented 논의) 따라서 위 finitely generated 판정을 $K$에 적용하면 $K$도 finitely generated이고 $M$은 finitely presented이다.
+Finitely presented의 경우, $M$이 finitely generated임은 위에서 얻었으므로 $A^n \twoheadrightarrow M$의 kernel $K$가 finitely generated임을 보이면 된다. $0 \rightarrow K \rightarrow A^n \rightarrow M \rightarrow 0$을 base change하면 ($B$가 flat) $0 \rightarrow K\otimes_A B \rightarrow B^n \rightarrow M\otimes_A B \rightarrow 0$이 정확하고, $M\otimes_A B$가 finitely presented이므로 $K\otimes_A B$는 finitely generated이다. ([\[가환대수학\] §평탄성, ⁋따름정리 6](/ko/math/commutative_algebra/flatness#cor6) 이후의 finitely presented 논의) 따라서 위 finitely generated 판정을 $K$에 적용하면 $K$도 finitely generated이고 $M$은 finitely presented이다.
 
-평탄의 경우, $M$이 평탄임을 보이려면 임의의 단사 $A$-가군 사상 $M' \hookrightarrow M''$에 대해 $M'\otimes_A M \rightarrow M''\otimes_A M$이 단사임을 보이면 된다. 이를 $-\otimes_A B$하면 ([명제 2](#prop2)로 단사성을 검사) $M'\otimes_A M\otimes_A B \rightarrow M''\otimes_A M\otimes_A B$인데, 이는 $M\otimes_A B$가 평탄 $B$-가군이고 $M'\otimes_A B \rightarrow M''\otimes_A B$가 단사이므로 ($B$ 평탄) 단사이다. 따라서 원래 사상도 단사이고 $M$은 평탄이다. Locally free of finite rank는 finitely presented이면서 평탄인 것과 동치이므로 ([\[가환대수학\] §평탄성, ⁋따름정리 6](/ko/math/commutative_algebra/flatness#cor6)) 앞의 두 경우로부터 따라온다.
+flat의 경우, $M$이 flat임을 보이려면 임의의 단사 $A$-가군 사상 $M' \hookrightarrow M''$에 대해 $M'\otimes_A M \rightarrow M''\otimes_A M$이 단사임을 보이면 된다. 이를 $-\otimes_A B$하면 ([명제 2](#prop2)로 단사성을 검사) $M'\otimes_A M\otimes_A B \rightarrow M''\otimes_A M\otimes_A B$인데, 이는 $M\otimes_A B$가 flat $B$-가군이고 $M'\otimes_A B \rightarrow M''\otimes_A B$가 단사이므로 ($B$ flat) 단사이다. 따라서 원래 사상도 단사이고 $M$은 flat이다. Locally free of finite rank는 finitely presented이면서 flat인 것과 동치이므로 ([\[가환대수학\] §평탄성, ⁋따름정리 6](/ko/math/commutative_algebra/flatness#cor6)) 앞의 두 경우로부터 따라온다.
 :::
 
 ## Fpqc 위상과 quasi-coherent sheaf의 하강
 
-지금까지의 affine 위의 결과를 일반적인 scheme 위로 옮기려면, 충실평탄 사상을 적절한 Grothendieck 위상의 covering으로 받아들여야 한다. 그 위상이 fpqc 위상이다. 이름은 *fidèlement plat quasi-compact*, 즉 충실평탄이며 quasi-compact라는 뜻이다.
+지금까지의 affine 위의 결과를 일반적인 scheme 위로 옮기려면, faithfully flat morphism을 적절한 Grothendieck 위상의 covering으로 받아들여야 한다. 그 위상이 fpqc 위상이다. 이름은 *fidèlement plat quasi-compact*, 즉 faithfully flat이며 quasi-compact라는 뜻이다.
 
 ::: 정의 8
-Scheme $X$ 위의 morphism들의 모임 $\{f_i: U_i \rightarrow X\}_{i\in I}$이 *fpqc cover<sub>fpqc 덮개</sub>*라는 것은, 각 $f_i$가 평탄이고, 합 $\coprod_i U_i \rightarrow X$가 surjective이며, 각 affine open $V\subseteq X$가 유한히 많은 $U_i$의 affine open들 $W_{ij}$의 상으로 덮이는 quasi-compact 조건을 만족하는 것이다. 이러한 covering들이 정의하는 $\Sch$ 위의 Grothendieck 위상을 *fpqc 위상*이라 부른다.
+Scheme $X$ 위의 morphism들의 모임 $\{f_i: U_i \rightarrow X\}_{i\in I}$이 *fpqc cover<sub>fpqc 덮개</sub>*라는 것은, 각 $f_i$가 flat이고, 합 $\coprod_i U_i \rightarrow X$가 surjective이며, 각 affine open $V\subseteq X$가 유한히 많은 $U_i$의 affine open들 $W_{ij}$의 상으로 덮이는 quasi-compact 조건을 만족하는 것이다. 이러한 covering들이 정의하는 $\Sch$ 위의 Grothendieck 위상을 *fpqc 위상*이라 부른다.
 :::
 
-Fpqc 위상에서 한 affine scheme $\Spec A$를 덮는 가장 단순한 covering은 충실평탄 ring homomorphism $A \rightarrow B$ 하나로 이루어진 $\{\Spec B \rightarrow \Spec A\}$이다. 이 경우 [정리 6](#thm6)이 곧바로 sheaf 조건의 형태로 다시 쓰인다. 우리는 quasi-coherent sheaf가 이 위상에 대한 sheaf임을 주장한다. ([§준연접층, ⁋정의 8](/ko/math/scheme_theory/quasicoherent_sheaves#def8))
+Fpqc 위상에서 한 affine scheme $\Spec A$를 덮는 가장 단순한 covering은 faithfully flat ring homomorphism $A \rightarrow B$ 하나로 이루어진 $\{\Spec B \rightarrow \Spec A\}$이다. 이 경우 [정리 6](#thm6)이 곧바로 sheaf 조건의 형태로 다시 쓰인다. 우리는 quasi-coherent sheaf가 이 위상에 대한 sheaf임을 주장한다. ([§준연접층, ⁋정의 8](/ko/math/scheme_theory/quasicoherent_sheaves#def8))
 
 ::: 정리 9
 임의의 scheme $X$와 $X$ 위의 quasi-coherent sheaf $\mathcal{F}$에 대하여, presheaf
@@ -197,7 +197,7 @@ $$\Gamma(T, f^\ast\mathcal{F}) \rightarrow \prod_i \Gamma(T_i, f_i^\ast\mathcal{
 는 정확하다.
 :::
 ::: 증명
-문제가 국소적이고 quasi-compact 조건 덕분에 유한 covering으로 환원되므로, $T=\Spec A$가 affine이고 covering이 단일 충실평탄 사상 $\{\Spec B \rightarrow \Spec A\}$인 경우만 보이면 충분하다. 이 때 $\mathcal{F}=\widetilde M$인 $A$-가군 $M$이 있고 ([§준연접층, ⁋정리 9](/ko/math/scheme_theory/quasicoherent_sheaves#thm9)), pullback이 base change로 주어지므로 ([§준연접층, ⁋명제 18](/ko/math/scheme_theory/quasicoherent_sheaves#prop18)) 위 sequence는
+문제가 국소적이고 quasi-compact 조건 덕분에 유한 covering으로 환원되므로, $T=\Spec A$가 affine이고 covering이 단일 faithfully flat morphism $\{\Spec B \rightarrow \Spec A\}$인 경우만 보이면 충분하다. 이 때 $\mathcal{F}=\widetilde M$인 $A$-가군 $M$이 있고 ([§준연접층, ⁋정리 9](/ko/math/scheme_theory/quasicoherent_sheaves#thm9)), pullback이 base change로 주어지므로 ([§준연접층, ⁋명제 18](/ko/math/scheme_theory/quasicoherent_sheaves#prop18)) 위 sequence는
 
 $$M \rightarrow M\otimes_A B \rightrightarrows M\otimes_A B\otimes_A B$$
 
@@ -208,15 +208,15 @@ $$0 \rightarrow M \rightarrow M\otimes_A B \rightarrow M\otimes_A B\otimes_A B$$
 의 정확성, 즉 [정리 6](#thm6)의 증명에서 사용한 사실에 다름 아니다. 두 사상 $d^0, d^1$의 equalizer가 $M$임이 곧 위 sheaf 조건이므로 결론을 얻는다.
 :::
 
-[정리 9](#thm9)는 quasi-coherent sheaf의 global section을 충실평탄 covering 위에서 계산할 수 있게 해준다. covering 위의 section이 두 겹 겹침에서 일치하면 그것은 밑공간 위의 section에서 유일하게 온다는 것이다. 이로부터 quasi-coherent sheaf 자체의 하강, 즉 정의 4의 sheaf 버전이 따라온다.
+[정리 9](#thm9)는 quasi-coherent sheaf의 global section을 faithfully flat covering 위에서 계산할 수 있게 해준다. covering 위의 section이 두 겹 겹침에서 일치하면 그것은 밑공간 위의 section에서 유일하게 온다는 것이다. 이로부터 quasi-coherent sheaf 자체의 하강, 즉 정의 4의 sheaf 버전이 따라온다.
 
 ::: 정리 10
 $\{f_i: U_i \rightarrow X\}$가 fpqc cover라 하자. 그럼 $X$ 위의 quasi-coherent sheaf를 주는 것은, 각 $U_i$ 위의 quasi-coherent sheaf $\mathcal{F}_i$들과, $U_i\times_X U_j$ 위에서 cocycle 조건을 만족하는 isomorphism $\varphi_{ij}: \operatorname{pr}_2^\ast \mathcal{F}_j\cong \operatorname{pr}_1^\ast \mathcal{F}_i$들의 데이터를 주는 것과 동치이다. 즉 quasi-coherent sheaf는 fpqc 위상에 대하여 *effective descent*를 가진다.
 :::
 ::: 증명
-문제가 국소적이므로 $X=\Spec A$이고 covering이 단일 충실평탄 사상 $\Spec B \rightarrow \Spec A$인 경우로 환원된다. 이 때 $U_i\times_X U_j$는 $\Spec(B\otimes_A B)$이고, 주어진 데이터는 정확히 $B$-가군 $N=\Gamma(\Spec B, \mathcal{F}_1)$과 $B\otimes_A B$-가군 동형 $\varphi_N$의 cocycle 쌍, 즉 [정의 4](#def4)의 descent datum이다. [§준연접층, ⁋정리 9](/ko/math/scheme_theory/quasicoherent_sheaves#thm9)의 quasi-coherent sheaf와 가군의 대응과 pullback의 base change 해석 ([§준연접층, ⁋명제 18](/ko/math/scheme_theory/quasicoherent_sheaves#prop18)) 아래에서, 이 데이터는 $\operatorname{Desc}(B/A)$의 대상에 정확히 대응한다. 따라서 [정리 6](#thm6)에 의해 이는 유일한 $A$-가군 $M$, 즉 유일한 quasi-coherent sheaf $\widetilde M$으로부터 오며, 그 사상까지 동치이다.
+문제가 국소적이므로 $X=\Spec A$이고 covering이 단일 faithfully flat morphism $\Spec B \rightarrow \Spec A$인 경우로 환원된다. 이 때 $U_i\times_X U_j$는 $\Spec(B\otimes_A B)$이고, 주어진 데이터는 정확히 $B$-가군 $N=\Gamma(\Spec B, \mathcal{F}_1)$과 $B\otimes_A B$-가군 동형 $\varphi_N$의 cocycle 쌍, 즉 [정의 4](#def4)의 descent datum이다. [§준연접층, ⁋정리 9](/ko/math/scheme_theory/quasicoherent_sheaves#thm9)의 quasi-coherent sheaf와 가군의 대응과 pullback의 base change 해석 ([§준연접층, ⁋명제 18](/ko/math/scheme_theory/quasicoherent_sheaves#prop18)) 아래에서, 이 데이터는 $\operatorname{Desc}(B/A)$의 대상에 정확히 대응한다. 따라서 [정리 6](#thm6)에 의해 이는 유일한 $A$-가군 $M$, 즉 유일한 quasi-coherent sheaf $\widetilde M$으로부터 오며, 그 사상까지 동치이다.
 
-일반적인 fpqc cover의 경우, quasi-compact 조건으로 유한 부분덮개를 잡고 그 disjoint union을 단일 affine 충실평탄 사상으로 만들어 위 affine 경우를 적용한 뒤, 결과들을 $X$의 affine open들 위에서 접합한다. 접합의 정합성은 [정리 9](#thm9)의 sheaf 성질이 보장한다.
+일반적인 fpqc cover의 경우, quasi-compact 조건으로 유한 부분덮개를 잡고 그 disjoint union을 단일 affine faithfully flat morphism으로 만들어 위 affine 경우를 적용한 뒤, 결과들을 $X$의 affine open들 위에서 접합한다. 접합의 정합성은 [정리 9](#thm9)의 sheaf 성질이 보장한다.
 :::
 
 [정리 10](#thm10)의 "effective"라는 표현은 descent datum이 단지 형식적으로 존재하는 데 그치지 않고 실제로 어떤 전역 대상을 산출함을 강조한다. 일반적인 Grothendieck 위상에서는 sheaf 조건만으로 충분하지 않고 데이터가 실제 대상을 이루는지가 별개의 문제인데, quasi-coherent sheaf의 경우 [정리 6](#thm6)이 그 실효성까지 보장하는 것이다.
@@ -237,17 +237,17 @@ Affine morphism $V_i \rightarrow U_i$은 $U_i$ 위의 준연접 $\mathcal{O}_{U_
 성질들의 하강 또한 같은 원리로 정리된다. Scheme morphism $f: X \rightarrow Y$의 여러 성질은 fpqc-local on the base이다. 즉 어떤 fpqc cover $\{Y_i \rightarrow Y\}$를 잡아 각 base change $f_i: X\times_Y Y_i \rightarrow Y_i$가 그 성질을 가지면, $f$ 자신도 그 성질을 가진다.
 
 ::: 명제 12
-$\{Y_i \rightarrow Y\}$를 fpqc cover라 하고 $f: X \rightarrow Y$를 scheme morphism이라 하자. 그럼 $f$가 다음 성질들 가운데 하나를 가지는 것은, 각 base change $f_i: X\times_Y Y_i \rightarrow Y_i$가 그 성질을 가지는 것과 동치이다: 평탄, 충실평탄, 그리고 affine, locally of finite type, locally of finite presentation, 그리고 surjective.
+$\{Y_i \rightarrow Y\}$를 fpqc cover라 하고 $f: X \rightarrow Y$를 scheme morphism이라 하자. 그럼 $f$가 다음 성질들 가운데 하나를 가지는 것은, 각 base change $f_i: X\times_Y Y_i \rightarrow Y_i$가 그 성질을 가지는 것과 동치이다: flat, faithfully flat, 그리고 affine, locally of finite type, locally of finite presentation, 그리고 surjective.
 :::
 ::: 증명
-각 성질이 base change에 대해 보존됨은 표준적이므로 (평탄성의 경우 [§평탄사상, ⁋명제 3](/ko/math/scheme_theory/flat_morphisms#prop3)), fpqc cover 위에서 성립하면 원래 사상에서도 성립함만 보이면 된다. 문제가 $Y$ 위에서 국소적이고 quasi-compact 조건으로 유한 covering으로 환원되므로, $Y=\Spec A$, covering이 단일 충실평탄 $\Spec A' \rightarrow \Spec A$인 경우만 본다.
+각 성질이 base change에 대해 보존됨은 표준적이므로 (flatness의 경우 [§평탄사상, ⁋명제 3](/ko/math/scheme_theory/flat_morphisms#prop3)), fpqc cover 위에서 성립하면 원래 사상에서도 성립함만 보이면 된다. 문제가 $Y$ 위에서 국소적이고 quasi-compact 조건으로 유한 covering으로 환원되므로, $Y=\Spec A$, covering이 단일 faithfully flat $\Spec A' \rightarrow \Spec A$인 경우만 본다.
 
-평탄성의 경우, 이는 affine 위에서 $X$를 덮는 각 $\Spec B \rightarrow \Spec A$에 대한 $B$의 $A$-평탄성으로 판정된다. $B\otimes_A A'$가 $A'$-평탄이라 가정하면, $A \rightarrow A'$가 충실평탄이므로 임의의 단사 $A$-가군 사상 $M' \hookrightarrow M''$에 대하여 $(M'\otimes_A B \rightarrow M''\otimes_A B)\otimes_A A'$이 단사이고 ($B\otimes_A A'$ 평탄), [명제 2](#prop2)로 단사성을 $A$ 위로 반영하면 $M'\otimes_A B \rightarrow M''\otimes_A B$가 단사이므로 $B$는 $A$-평탄이다. 충실평탄성은 평탄성에 surjective를 더한 것이고, surjective는 $\coprod (X\times_Y Y_i) \rightarrow \coprod Y_i \rightarrow Y$의 합성이 전사임과 $\coprod Y_i \rightarrow Y$가 전사임으로부터 $X \rightarrow Y$의 전사가 따라오므로 성립한다.
+flatness의 경우, 이는 affine 위에서 $X$를 덮는 각 $\Spec B \rightarrow \Spec A$에 대한 $B$의 $A$-flatness로 판정된다. $B\otimes_A A'$가 $A'$-flat이라 가정하면, $A \rightarrow A'$가 faithfully flat이므로 임의의 단사 $A$-가군 사상 $M' \hookrightarrow M''$에 대하여 $(M'\otimes_A B \rightarrow M''\otimes_A B)\otimes_A A'$이 단사이고 ($B\otimes_A A'$ flat), [명제 2](#prop2)로 단사성을 $A$ 위로 반영하면 $M'\otimes_A B \rightarrow M''\otimes_A B$가 단사이므로 $B$는 $A$-flat이다. faithful flatness는 flatness에 surjective를 더한 것이고, surjective는 $\coprod (X\times_Y Y_i) \rightarrow \coprod Y_i \rightarrow Y$의 합성이 전사임과 $\coprod Y_i \rightarrow Y$가 전사임으로부터 $X \rightarrow Y$의 전사가 따라오므로 성립한다.
 
 Affine의 경우, $X\times_A A'=\Spec C'$가 affine이라 하자. 그럼 $\mathcal{O}_X$의 pushforward가 준연접 대수층임을 [정리 10](#thm10)으로 $A'$에서 $A$로 하강시켜 얻으며, [정리 11](#thm11)의 논증으로 $X=\operatorname{\mathbf{Spec}}$ of 어떤 준연접 $A$-대수, 즉 affine임을 안다. Locally of finite type과 locally of finite presentation은 affine 위에서 각각 $B$가 $A$ 위에서 finitely generated 대수, finitely presented 대수인 조건이며, [명제 7](#prop7)의 finitely generated·finitely presented 하강을 대수 생성원과 관계식에 적용하여 $A'$에서 $A$로 내려온다.
 :::
 
-[명제 12](#prop12)는 충실평탄 하강이 단지 가군이나 sheaf의 수준에 머물지 않고 사상의 기하학적 성질 전반을 지배함을 보여준다. 실용적으로 이는 어떤 성질을 검증할 때 base를 충실평탄하게 확장하여 더 다루기 쉬운 상황으로 옮긴 뒤, 거기에서 성질을 확인하고 다시 내려보내는 전략을 정당화한다. 가령 base change 후 $Y$가 algebraically closed field 위로 가거나 strictly Henselian local ring 위로 가는 경우처럼, 충실평탄 covering을 통해 문제를 표준적인 형태로 환원하는 것은 scheme 이론 전반에서 반복되는 기법이다.
+[명제 12](#prop12)는 faithfully flat descent가 단지 가군이나 sheaf의 수준에 머물지 않고 사상의 기하학적 성질 전반을 지배함을 보여준다. 실용적으로 이는 어떤 성질을 검증할 때 base를 faithfully flat하게 확장하여 더 다루기 쉬운 상황으로 옮긴 뒤, 거기에서 성질을 확인하고 다시 내려보내는 전략을 정당화한다. 가령 base change 후 $Y$가 algebraically closed field 위로 가거나 strictly Henselian local ring 위로 가는 경우처럼, faithfully flat covering을 통해 문제를 표준적인 형태로 환원하는 것은 scheme 이론 전반에서 반복되는 기법이다.
 
 ---
 

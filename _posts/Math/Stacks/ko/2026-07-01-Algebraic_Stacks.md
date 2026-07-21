@@ -16,7 +16,7 @@ published: false
 
 ---
 
-Site $(\Sch, \mathrm{fppf})$ 위의 stack은 충실평탄 하강을 groupoid 값 함자로 끌어올린 대상이다. ([§Fibered category와 stack, ⁋정의 13](/ko/math/stacks/fibered_categories_and_stacks#def13)) 그러나 이 정의에는 기하가 전혀 들어 있지 않다. Stack은 순수하게 범주론적·위상적 조건만으로 정의되었고, 그 결과 어떤 stack은 scheme이나 algebraic space처럼 점·차원·매끄러움을 논할 수 있는 기하학적 대상인 반면, 다른 stack은 그러한 구조를 전혀 갖지 못한다. 이 글의 목표는 "기하학적인" stack을 가려내는 것이다. 즉 우리는 모든 stack 가운데 scheme으로 국소적으로 근사되며 그 위에서 morphism의 차원·평탄성·매끄러움 따위를 정의할 수 있는 부류를 분리하고자 한다.
+Site $(\Sch, \mathrm{fppf})$ 위의 stack은 faithfully flat descent를 groupoid 값 함자로 끌어올린 대상이다. ([§Fibered category와 stack, ⁋정의 13](/ko/math/stacks/fibered_categories_and_stacks#def13)) 그러나 이 정의에는 기하가 전혀 들어 있지 않다. Stack은 순수하게 범주론적·위상적 조건만으로 정의되었고, 그 결과 어떤 stack은 scheme이나 algebraic space처럼 점·차원·매끄러움을 논할 수 있는 기하학적 대상인 반면, 다른 stack은 그러한 구조를 전혀 갖지 못한다. 이 글의 목표는 "기하학적인" stack을 가려내는 것이다. 즉 우리는 모든 stack 가운데 scheme으로 국소적으로 근사되며 그 위에서 morphism의 차원·flatness·매끄러움 따위를 정의할 수 있는 부류를 분리하고자 한다.
 
 이를 위한 두 조건은 다음과 같다. 첫째, stack $\mathcal{X}$의 *대각선* $\Delta:\mathcal{X} \rightarrow \mathcal{X}\times_S \mathcal{X}$이 표현가능해야 한다. 이는 두 대상을 잇는 isomorphism들이 이루는 $\operatorname{\underline{Isom}}$이 scheme(보다 정확히는 algebraic space)이라는 것과 동치이며, 따라서 두 점을 비교하는 일이 통상적인 기하의 범위 안에서 이루어짐을 보장한다. 둘째, scheme으로부터의 smooth 전사 $U \rightarrow \mathcal{X}$, 곧 *atlas*가 존재해야 한다. Atlas는 위상공간이 좌표근방으로 덮이듯 stack을 scheme으로 덮으며, stack 위의 기하학적 성질을 atlas 위에서 검사할 수 있게 한다. 이 두 조건을 만족하는 stack이 *대수적 stack*이며, atlas를 étale하게 잡을 수 있는 경우가 *Deligne–Mumford stack*이다.
 
@@ -57,7 +57,7 @@ Stack을 기하학적으로 만드는 첫 단계는 그 사상 가운데 "scheme
 Stack의 사상 $f:\mathcal{X} \rightarrow \mathcal{Y}$이 *표현가능<sub>representable</sub>*하다는 것은, 임의의 scheme $T$과 사상 $T \rightarrow \mathcal{Y}$ (즉 $y\in \mathcal{Y}(T)$)에 대하여 fiber product $\mathcal{X}\times_\mathcal{Y}T$이 algebraic space인 것이다 ([정의 4](#def4)). Scheme(또는 algebraic space)의 사상에 대한 성질 $P$가 base change에 대하여 안정적이고 target에 대하여 fppf-국소적일 때, 표현가능 사상 $f$이 *성질 $P$을 가진다*는 것은 모든 그러한 base change $\mathcal{X}\times_\mathcal{Y}T \rightarrow T$이 algebraic space의 사상으로서 $P$을 만족하는 것이다.
 :::
 
-이 정의는 $f$의 기하학적 성질(매끄러움, étale, 평탄, 전사, 분리, 유한 등)을 전부 algebraic space의 사상에 대한 통상적 성질로 환원한다. 가령 표현가능 사상 $f$이 *smooth surjective*라는 것은 모든 base change $\mathcal{X}\times_\mathcal{Y}T \rightarrow T$이 smooth하고 전사인 것이다. ([\[스킴\] §매끄러운 사상과 étale 사상, ⁋정의 3](/ko/math/scheme_theory/smooth_and_etale_morphisms#def3)) Target에 대한 fppf-국소성 덕분에, 뒤에서 보듯 이러한 성질은 단 하나의 좋은 base change(atlas를 따른 것)에서 검사해도 충분하다.
+이 정의는 $f$의 기하학적 성질(매끄러움, étale, flat, 전사, 분리, 유한 등)을 전부 algebraic space의 사상에 대한 통상적 성질로 환원한다. 가령 표현가능 사상 $f$이 *smooth surjective*라는 것은 모든 base change $\mathcal{X}\times_\mathcal{Y}T \rightarrow T$이 smooth하고 전사인 것이다. ([\[스킴\] §매끄러운 사상과 étale 사상, ⁋정의 3](/ko/math/scheme_theory/smooth_and_etale_morphisms#def3)) Target에 대한 fppf-국소성 덕분에, 뒤에서 보듯 이러한 성질은 단 하나의 좋은 base change(atlas를 따른 것)에서 검사해도 충분하다.
 
 표현가능성의 target이 되는 algebraic space는 scheme보다 약간 넓은 부류로, scheme을 étale 동치관계로 나눈 몫이다. Scheme의 fppf 몫이 항상 scheme이 되지는 않지만 étale 동치관계에 의한 몫은 algebraic space의 범위 안에 머무르며, 이 부류는 scheme과 거의 같은 기하를 누리면서 하강에 대해 닫혀 있다.
 
@@ -110,7 +110,7 @@ Site $(\Sch, \mathrm{fppf})$ 위의 stack $\mathcal{X}$ (base scheme $S$ 위)이
 나아가 $\mathcal{X}$이 *Deligne–Mumford stack<sub>들리뉴-멈퍼드 스택</sub>* (이하 *DM stack*)이라는 것은, 조건 2의 atlas $\pi: U \rightarrow \mathcal{X}$을 smooth 대신 *étale* 전사로 잡을 수 있는 것이다. ([\[스킴\] §매끄러운 사상과 étale 사상, ⁋정의 6](/ko/math/scheme_theory/smooth_and_etale_morphisms#def6))
 :::
 
-조건 1에 의해 atlas 사상 $\pi$은 자동으로 표현가능하므로 ([명제 5](#prop5)) 그 매끄러움·전사성이 [정의 3](#def3)의 의미로 잘 정의된다. Atlas는 scheme이 좌표근방으로 덮이는 것의 stack 판본으로, $\mathcal{X}$ 위의 기하학적 성질을 $U$ 위에서 검사하게 한다. 가령 $\mathcal{X}$의 차원은 $\dim \mathcal{X}=\dim U-d$ ($d$은 $\pi$의 상대차원)로 정의되며, 이는 atlas의 선택에 의존하지 않는다. Smooth 사상이 평탄하고 smooth fiber를 가지므로 smooth atlas는 stack을 "두꺼운" scheme으로 덮는 셈이고, 이때 fiber의 양의 차원이 곧 각 점에 붙은 stabilizer의 차원으로 나타난다.
+조건 1에 의해 atlas 사상 $\pi$은 자동으로 표현가능하므로 ([명제 5](#prop5)) 그 매끄러움·전사성이 [정의 3](#def3)의 의미로 잘 정의된다. Atlas는 scheme이 좌표근방으로 덮이는 것의 stack 판본으로, $\mathcal{X}$ 위의 기하학적 성질을 $U$ 위에서 검사하게 한다. 가령 $\mathcal{X}$의 차원은 $\dim \mathcal{X}=\dim U-d$ ($d$은 $\pi$의 상대차원)로 정의되며, 이는 atlas의 선택에 의존하지 않는다. Smooth 사상이 flat하고 smooth fiber를 가지므로 smooth atlas는 stack을 "두꺼운" scheme으로 덮는 셈이고, 이때 fiber의 양의 차원이 곧 각 점에 붙은 stabilizer의 차원으로 나타난다.
 
 DM stack과 Artin stack의 차이는 정확히 이 stabilizer가 양의 차원을 가질 수 있는지에 있다. Étale atlas는 상대차원 $0$의 atlas이므로, DM stack에서는 각 점의 automorphism group이 유한하고 무한소 변형을 갖지 않는다. 이 직관을 정밀하게 다듬은 것이 다음의 동치들이다.
 
@@ -130,7 +130,7 @@ DM stack과 Artin stack의 차이는 정확히 이 stabilizer가 양의 차원�
 
 대수적 stack의 가장 풍부한 원천은 algebraic group의 작용이다. Group $G$이 scheme $X$에 작용할 때, 순진한 몫 $X/G$은 흔히 scheme으로 존재하지 않거나 작용의 stabilizer 정보를 잃는다. 이를 stack 차원에서 올바르게 다루는 것이 quotient stack $[X/G]$이며, 그 점은 $X$로 가는 equivariant 사상으로 *비틀린* torsor들이다. 이는 분류 stack $\mathbf{B}G$을 $X$-값 자료로 확장한 것이다 ([§Fibered category와 stack, ⁋정의 18](/ko/math/stacks/fibered_categories_and_stacks#def18)).
 
-이하에서 $G$은 base scheme $S$ 위의 평탄·분리 group scheme이고 ([\[스킴\] §점함자, ⁋정의 14](/ko/math/scheme_theory/functor_of_points#def14)), $X$은 $S$-scheme으로서 $G$의 좌작용 $\sigma: G\times_S X \rightarrow X$을 받는다 하자. Torsor는 [§Fibered category와 stack, ⁋정의 18](/ko/math/stacks/fibered_categories_and_stacks#def18)의 좌작용 convention을 따른다.
+이하에서 $G$은 base scheme $S$ 위의 flat·분리 group scheme이고 ([\[스킴\] §점함자, ⁋정의 14](/ko/math/scheme_theory/functor_of_points#def14)), $X$은 $S$-scheme으로서 $G$의 좌작용 $\sigma: G\times_S X \rightarrow X$을 받는다 하자. Torsor는 [§Fibered category와 stack, ⁋정의 18](/ko/math/stacks/fibered_categories_and_stacks#def18)의 좌작용 convention을 따른다.
 
 ::: 정의 8
 위의 자료에 대하여 *quotient stack<sub>몫 스택</sub>* $[X/G]$은 다음 CFG이다. $T\in \Sch/S$ 위의 대상은 쌍 $(P, \varphi)$로서
@@ -177,12 +177,12 @@ $$\varphi_b(hg, t)=hg\cdot b(t)\overset{!}{=}h\cdot a(t)=\varphi_a(h, t)$$
 
 ![atlas의 base change](/assets/images/Math/Stacks/Algebraic_Stacks-1.svg){:style="width:10.32em" class="invert" .align-center}
 
-[명제 10](#prop10)은 $[X/G]$을 작용 groupoid의 stack 몫으로 다시 보여준다. Scheme의 groupoid $G\times_S X\rightrightarrows X$ (source는 사영, target은 작용)은 작용의 "올"을 부호화하며, $[X/G]$은 이 groupoid를 stack 차원에서 나눈 것이다. 일반적으로 source·target이 smooth(각각 평탄)한 groupoid object $R\rightrightarrows U$로부터 대수적 stack $[U/R]$을 얻는데, quotient stack은 $R=G\times_S X$, $U=X$인 특수한 경우이다. 이제 이 presentation으로부터 $[X/G]$의 대수성을 끌어낸다.
+[명제 10](#prop10)은 $[X/G]$을 작용 groupoid의 stack 몫으로 다시 보여준다. Scheme의 groupoid $G\times_S X\rightrightarrows X$ (source는 사영, target은 작용)은 작용의 "올"을 부호화하며, $[X/G]$은 이 groupoid를 stack 차원에서 나눈 것이다. 일반적으로 source·target이 smooth(각각 flat)한 groupoid object $R\rightrightarrows U$로부터 대수적 stack $[U/R]$을 얻는데, quotient stack은 $R=G\times_S X$, $U=X$인 특수한 경우이다. 이제 이 presentation으로부터 $[X/G]$의 대수성을 끌어낸다.
 
 ## Quotient stack의 대수성
 
 ::: 정리 11
-$G$이 base scheme $S$ 위의 평탄·분리·smooth group scheme이고 $X$이 $S$-scheme에 $G$의 작용을 받는다 하자. 그럼 quotient stack $[X/G]$은 대수적 stack이며, [명제 9](#prop9)의 $\pi: X \rightarrow [X/G]$이 atlas이다. 나아가 다음이 성립한다.
+$G$이 base scheme $S$ 위의 flat·분리·smooth group scheme이고 $X$이 $S$-scheme에 $G$의 작용을 받는다 하자. 그럼 quotient stack $[X/G]$은 대수적 stack이며, [명제 9](#prop9)의 $\pi: X \rightarrow [X/G]$이 atlas이다. 나아가 다음이 성립한다.
 
 1. $X$이 $S$ 위에서 분리하면 $[X/G]$의 대각선이 분리 사상으로 표현가능하다. 나아가 $[X/G]$이 분리하는 것은 작용사상 $G\times_S X \rightarrow X\times_S X$, $(g, x)\mapsto(g\cdot x, x)$이 proper인 것과 동치이다.
 2. 모든 geometric point의 stabilizer가 유한·étale하면 (가령 $G$이 유한 étale하거나, characteristic $0$에서 작용이 유한 stabilizer를 가지면) $[X/G]$은 DM stack이다.

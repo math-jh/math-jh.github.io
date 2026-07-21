@@ -16,7 +16,7 @@ published: false
 
 ---
 
-위상공간 위의 sheaf는 국소적인 자료를 open cover를 따라 붙여 대역적인 자료를 얻는 장치이며, 그 정의의 핵심은 open cover에 대한 정합성 조건이다. ([\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1)) 대수기하학에서 이 틀을 그대로 옮기려 하면 곧 한계에 부딪힌다. Scheme이 가지는 Zariski 위상은 열린집합이 너무 적어서, 가령 sheaf cohomology가 기대만큼 풍부하지 않거나 충실평탄 사상을 따른 하강을 포착하지 못한다. ([\[스킴\] §충실평탄 하강, ⁋정의 8](/ko/math/scheme_theory/faithfully_flat_descent#def8)) Grothendieck은 이 문제를 "열린집합"이나 "점"이라는 위상적 개념을 버리고, 오직 "covering"라는 관계만을 범주의 사상으로 추상화함으로써 해결하였다. 한 범주의 각 대상에 그것을 덮는 사상들의 모임을 지정하고, 이 모임이 위상공간의 open cover가 만족하던 형식적 성질들을 만족하도록 요구하는 것이다. 그 결과로 얻어지는 구조가 Grothendieck 위상이며, 위상을 갖춘 범주를 site라 부른다. 이 글에서는 site의 정의와 그 위의 sheaf 이론, 그리고 sheafification을 확립한 뒤, étale·fppf·fpqc 위상과 같은 대수기하학의 핵심 예시들을 다룬다. 마지막으로 fpqc 위상이 subcanonical임을, 즉 representable presheaf가 모두 sheaf임을 확인하는데, 이는 scheme과 그 일반화인 stack을 site 위의 sheaf로 바라보는 관점의 출발점이 된다.
+위상공간 위의 sheaf는 국소적인 자료를 open cover를 따라 붙여 대역적인 자료를 얻는 장치이며, 그 정의의 핵심은 open cover에 대한 정합성 조건이다. ([\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1)) 대수기하학에서 이 틀을 그대로 옮기려 하면 곧 한계에 부딪힌다. Scheme이 가지는 Zariski 위상은 열린집합이 너무 적어서, 가령 sheaf cohomology가 기대만큼 풍부하지 않거나 faithfully flat morphism을 따른 하강을 포착하지 못한다. ([\[스킴\] §충실평탄 하강, ⁋정의 8](/ko/math/scheme_theory/faithfully_flat_descent#def8)) Grothendieck은 이 문제를 "열린집합"이나 "점"이라는 위상적 개념을 버리고, 오직 "covering"라는 관계만을 범주의 사상으로 추상화함으로써 해결하였다. 한 범주의 각 대상에 그것을 덮는 사상들의 모임을 지정하고, 이 모임이 위상공간의 open cover가 만족하던 형식적 성질들을 만족하도록 요구하는 것이다. 그 결과로 얻어지는 구조가 Grothendieck 위상이며, 위상을 갖춘 범주를 site라 부른다. 이 글에서는 site의 정의와 그 위의 sheaf 이론, 그리고 sheafification을 확립한 뒤, étale·fppf·fpqc 위상과 같은 대수기하학의 핵심 예시들을 다룬다. 마지막으로 fpqc 위상이 subcanonical임을, 즉 representable presheaf가 모두 sheaf임을 확인하는데, 이는 scheme과 그 일반화인 stack을 site 위의 sheaf로 바라보는 관점의 출발점이 된다.
 
 ## Sieve와 covering sieve
 
@@ -107,13 +107,13 @@ Scheme $X$에 대하여 두 가지 site가 있다. *작은 Zariski site* $X_{\Za
 Scheme $X$의 *작은 étale site* $X_{\et}$는 대상이 étale 사상 $U \rightarrow X$이고, 사상이 그 위의 $X$-사상이며 (étale 사상 사이의 $X$-사상은 자동으로 étale이다), covering family가 jointly surjective한 étale 사상족 $\{U_i \rightarrow U\}$인 site이다. ([\[스킴\] §매끄러운 사상과 étale 사상, ⁋정의 6](/ko/math/scheme_theory/smooth_and_etale_morphisms#def6)) 더 일반적으로 *큰 étale site*는 $\Sch/X$ 위에서 jointly surjective한 étale 사상족을 covering family로 삼는다. 두 경우 모두 base change 조건은 étale 사상이 base change에 대해 닫혀 있음으로부터, transitivity는 étale 사상의 합성이 étale임으로부터 따른다.
 :::
 
-[예시 8](#ex8)의 covering에서 사상 $U_i \rightarrow U$은 더 이상 단사가 아니며, fiber가 여러 점을 가질 수 있다. 가령 분리 가능한 체확대 $\Spec L \rightarrow \Spec K$나 곱셈군의 $n$제곱 사상은 étale covering의 전형적인 예이다. 이렇게 단사가 아닌 covering을 허용하기에 étale site의 sheaf 조건은 두 겹 겹침 $U_i\times_U U_j$가 $U_i$의 대각선에 그치지 않는 비자명한 자료를 담게 되고, 이것이 étale cohomology가 Zariski cohomology보다 풍부한 근본 이유이다. étale보다 더 넓은 평탄 사상을 covering으로 삼으면 fppf와 fpqc 위상을 얻는다.
+[예시 8](#ex8)의 covering에서 사상 $U_i \rightarrow U$은 더 이상 단사가 아니며, fiber가 여러 점을 가질 수 있다. 가령 분리 가능한 체확대 $\Spec L \rightarrow \Spec K$나 곱셈군의 $n$제곱 사상은 étale covering의 전형적인 예이다. 이렇게 단사가 아닌 covering을 허용하기에 étale site의 sheaf 조건은 두 겹 겹침 $U_i\times_U U_j$가 $U_i$의 대각선에 그치지 않는 비자명한 자료를 담게 되고, 이것이 étale cohomology가 Zariski cohomology보다 풍부한 근본 이유이다. étale보다 더 넓은 flat morphism을 covering으로 삼으면 fppf와 fpqc 위상을 얻는다.
 
 ::: 예시 9 (fppf와 fpqc site)
-밑범주를 $\Sch$ (또는 $\Sch/S$)로 둔다. 사상족 $\{f_i: U_i \rightarrow U\}$이 *fppf covering family*라는 것은 각 $f_i$가 평탄이고 locally of finite presentation이며 합 $\coprod U_i \rightarrow U$가 전사인 것이다 (이름은 *fidèlement plat de présentation finie*에서 온다). 더 넓게, $\{f_i: U_i \rightarrow U\}$이 *fpqc covering family*라는 것은 각 $f_i$가 평탄이고, $\coprod U_i \rightarrow U$가 전사이며, $U$의 각 affine open이 유한히 많은 $U_i$의 affine open들의 상으로 덮이는 quasi-compact 조건을 만족하는 것이다. ([\[스킴\] §충실평탄 하강, ⁋정의 8](/ko/math/scheme_theory/faithfully_flat_descent#def8)) 두 경우 모두 평탄성과 전사성이 base change·합성에 대해 보존되므로 pretopology를 이루며, fppf covering은 항상 fpqc covering이다.
+밑범주를 $\Sch$ (또는 $\Sch/S$)로 둔다. 사상족 $\{f_i: U_i \rightarrow U\}$이 *fppf covering family*라는 것은 각 $f_i$가 flat이고 locally of finite presentation이며 합 $\coprod U_i \rightarrow U$가 전사인 것이다 (이름은 *fidèlement plat de présentation finie*에서 온다). 더 넓게, $\{f_i: U_i \rightarrow U\}$이 *fpqc covering family*라는 것은 각 $f_i$가 flat이고, $\coprod U_i \rightarrow U$가 전사이며, $U$의 각 affine open이 유한히 많은 $U_i$의 affine open들의 상으로 덮이는 quasi-compact 조건을 만족하는 것이다. ([\[스킴\] §충실평탄 하강, ⁋정의 8](/ko/math/scheme_theory/faithfully_flat_descent#def8)) 두 경우 모두 flatness와 전사성이 base change·합성에 대해 보존되므로 pretopology를 이루며, fppf covering은 항상 fpqc covering이다.
 :::
 
-이로써 Zariski $\subseteq$ étale $\subseteq$ fppf $\subseteq$ fpqc의 순서로 점점 더 많은 covering을 허용하는 위상들의 위계를 얻는다. 위상이 미세해질수록(더 많은 covering을 가질수록) sheaf 조건은 강해지고 sheaf의 수는 줄어드는 대신, 하강과 cohomology가 풍부해진다. 특히 fpqc 위상은 한 affine scheme $\Spec A$를 단일한 충실평탄 사상 $\Spec B \rightarrow \Spec A$로 덮는 것을 허용하며, 이것이 충실평탄 하강이 fpqc sheaf 조건으로 번역되는 지점이다.
+이로써 Zariski $\subseteq$ étale $\subseteq$ fppf $\subseteq$ fpqc의 순서로 점점 더 많은 covering을 허용하는 위상들의 위계를 얻는다. 위상이 미세해질수록(더 많은 covering을 가질수록) sheaf 조건은 강해지고 sheaf의 수는 줄어드는 대신, 하강과 cohomology가 풍부해진다. 특히 fpqc 위상은 한 affine scheme $\Spec A$를 단일한 faithfully flat morphism $\Spec B \rightarrow \Spec A$로 덮는 것을 허용하며, 이것이 faithfully flat descent가 fpqc sheaf 조건으로 번역되는 지점이다.
 
 ## Site 위의 presheaf와 sheaf
 
@@ -155,7 +155,7 @@ $$F(\operatorname{pr}_1)(s_i)=x_{f_i\circ \operatorname{pr}_1}=x_{f_j\circ \oper
 따라서 amalgamation $x\in F(U)$의 존재·유일성은 정확히 $e$가 equalizer로의 전단사임과 같다. Sheaf 조건은 amalgamation의 존재와 유일성이므로 $e$가 equalizer 위로의 전단사, 즉 위 도식이 equalizer인 것과 동치이고, separated 조건은 유일성뿐이므로 $e$가 단사인 것과 동치이다.
 :::
 
-[명제 11](#prop11)은 site 위의 sheaf 조건이 위상공간 위의 그것과 형식적으로 동일함을 보여준다. ([\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1)) 다만 두 겹 겹침이 교집합 $U_i\cap U_j$ 대신 fiber product $U_i\times_U U_j$로 바뀐다. 위상공간에서는 covering의 사상이 모두 단사여서 $U_i\times_U U_i=U_i$이지만, étale이나 fpqc covering에서는 $U_i\times_U U_i$이 $U_i$보다 클 수 있고, 바로 이 차이가 비단사 covering 위의 하강을 가능하게 한다. 특히 단일 사상으로 이루어진 fpqc covering $\{\Spec B \rightarrow \Spec A\}$에 대해서는 이 equalizer가 충실평탄 하강의 Amitsur 정확열로 환원되는데, 이는 아래에서 다시 다룬다.
+[명제 11](#prop11)은 site 위의 sheaf 조건이 위상공간 위의 그것과 형식적으로 동일함을 보여준다. ([\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1)) 다만 두 겹 겹침이 교집합 $U_i\cap U_j$ 대신 fiber product $U_i\times_U U_j$로 바뀐다. 위상공간에서는 covering의 사상이 모두 단사여서 $U_i\times_U U_i=U_i$이지만, étale이나 fpqc covering에서는 $U_i\times_U U_i$이 $U_i$보다 클 수 있고, 바로 이 차이가 비단사 covering 위의 하강을 가능하게 한다. 특히 단일 사상으로 이루어진 fpqc covering $\{\Spec B \rightarrow \Spec A\}$에 대해서는 이 equalizer가 faithfully flat descent의 Amitsur 정확열로 환원되는데, 이는 아래에서 다시 다룬다.
 
 이제 presheaf가 sheaf가 아닌 전형적인 예를 보고, 이를 통해 sheafification의 필요를 동기화한다.
 
@@ -222,13 +222,13 @@ Subcanonical 조건은 [명제 11](#prop11)을 통해 구체적으로 진술된�
 
 $$\Hom(U, X) \rightarrow \prod_i \Hom(U_i, X)\rightrightarrows \prod_{i, j}\Hom(U_i\times_U U_j, X)$$
 
-이 equalizer라는 것이다. 이는 사상의 하강 조건에 다름 아니다. Zariski나 étale 위상에서 이것이 성립함은 morphism이 covering 위에서 국소적으로 정해진다는 익숙한 사실이지만, fpqc처럼 거친 covering에 대해서는 결코 자명하지 않으며, 그 성립은 충실평탄 하강의 한 형태이다.
+이 equalizer라는 것이다. 이는 사상의 하강 조건에 다름 아니다. Zariski나 étale 위상에서 이것이 성립함은 morphism이 covering 위에서 국소적으로 정해진다는 익숙한 사실이지만, fpqc처럼 거친 covering에 대해서는 결코 자명하지 않으며, 그 성립은 faithfully flat descent의 한 형태이다.
 
 ::: 정리 17
 $\Sch$ (또는 $\Sch/S$) 위의 fpqc 위상은 subcanonical이다. 즉 임의의 scheme $X$에 대하여 functor of points $h_X=\Hom_{\Sch}(-, X)$은 fpqc sheaf이다. 따라서 Zariski·étale·fppf 위상에서도 모든 representable presheaf는 sheaf이다.
 :::
 ::: 증명
-[명제 11](#prop11)에 의하여, fpqc covering $\{U_i \rightarrow U\}$에 대한 equalizer 조건을 확인하면 된다. Quasi-compact 조건으로 유한 subcovering의 disjoint union을 취하면 문제는 $U=\Spec A$가 affine이고 covering이 단일 충실평탄 사상 $\{\Spec B \rightarrow \Spec A\}$인 경우로 환원된다. 이 때 $\Spec B\times_{\Spec A}\Spec B=\Spec(B\otimes_A B)$이므로, 보여야 할 것은
+[명제 11](#prop11)에 의하여, fpqc covering $\{U_i \rightarrow U\}$에 대한 equalizer 조건을 확인하면 된다. Quasi-compact 조건으로 유한 subcovering의 disjoint union을 취하면 문제는 $U=\Spec A$가 affine이고 covering이 단일 faithfully flat morphism $\{\Spec B \rightarrow \Spec A\}$인 경우로 환원된다. 이 때 $\Spec B\times_{\Spec A}\Spec B=\Spec(B\otimes_A B)$이므로, 보여야 할 것은
 
 $$\Hom(\Spec A, X) \rightarrow \Hom(\Spec B, X)\rightrightarrows \Hom(\Spec(B\otimes_A B), X)$$
 
@@ -238,16 +238,16 @@ $$\Hom(\Spec A, X) \rightarrow \Hom(\Spec B, X)\rightrightarrows \Hom(\Spec(B\ot
 
 $$\Hom_{\Ring}(R, A) \rightarrow \Hom_{\Ring}(R, B)\rightrightarrows \Hom_{\Ring}(R, B\otimes_A B)$$
 
-이다. 충실평탄성으로 sequence $0 \rightarrow A \rightarrow B \rightrightarrows B\otimes_A B$이 정확하므로 ([\[스킴\] §충실평탄 하강, ⁋보조정리 3](/ko/math/scheme_theory/faithfully_flat_descent#lem3)), 즉 $A$가 $d^0, d^1: B \rightrightarrows B\otimes_A B$의 equalizer이므로, $\Hom_{\Ring}(R, -)$을 적용하면 $\varphi: R \rightarrow B$가 $d^0\circ \varphi=d^1\circ \varphi$를 만족하는 것과 $\varphi$가 유일하게 $R \rightarrow A$를 거쳐 인수분해되는 것이 동치임을 얻는다. 이것이 곧 위 equalizer이다. 이는 구조층 $\mathcal{O}$이 fpqc sheaf임을 보이는 [\[스킴\] §충실평탄 하강, ⁋정리 9](/ko/math/scheme_theory/faithfully_flat_descent#thm9)과 평행한 논증으로, $\Hom_{\Ring}(R, -)$이 같은 Amitsur equalizer를 보존한다는 데에서 따른다.
+이다. faithful flatness로 sequence $0 \rightarrow A \rightarrow B \rightrightarrows B\otimes_A B$이 정확하므로 ([\[스킴\] §충실평탄 하강, ⁋보조정리 3](/ko/math/scheme_theory/faithfully_flat_descent#lem3)), 즉 $A$가 $d^0, d^1: B \rightrightarrows B\otimes_A B$의 equalizer이므로, $\Hom_{\Ring}(R, -)$을 적용하면 $\varphi: R \rightarrow B$가 $d^0\circ \varphi=d^1\circ \varphi$를 만족하는 것과 $\varphi$가 유일하게 $R \rightarrow A$를 거쳐 인수분해되는 것이 동치임을 얻는다. 이것이 곧 위 equalizer이다. 이는 구조층 $\mathcal{O}$이 fpqc sheaf임을 보이는 [\[스킴\] §충실평탄 하강, ⁋정리 9](/ko/math/scheme_theory/faithfully_flat_descent#thm9)과 평행한 논증으로, $\Hom_{\Ring}(R, -)$이 같은 Amitsur equalizer를 보존한다는 데에서 따른다.
 
-일반적인 $X$에 대해서는 다음과 같이 붙인다. 두 사상 $g_1, g_2:\Spec B \rightarrow X$이 $\Spec(B\otimes_A B)$ 위에서 일치한다 하자. 위 affine 경우를 $X$의 affine open들에 적용하면 우선 두 사상이 위상공간 사이의 연속함수로서 일치하고, 이어 각 affine open 위에서 구조층에 대한 위 equalizer로부터 $g_1=g_2$임과, 정합적으로 주어진 사상이 $\Spec A \rightarrow X$로 유일하게 내려옴을 얻는다. 여기에서 사상의 상이 충실평탄 base change에 대해 잘 행동함과 quasi-compact 조건이 유한 affine covering으로의 환원을 가능하게 함을 사용한다. 따라서 $h_X$은 fpqc sheaf이다. Fpqc보다 거친 위상의 covering은 fpqc covering이므로 이들에 대해서도 sheaf 조건이 따라온다.
+일반적인 $X$에 대해서는 다음과 같이 붙인다. 두 사상 $g_1, g_2:\Spec B \rightarrow X$이 $\Spec(B\otimes_A B)$ 위에서 일치한다 하자. 위 affine 경우를 $X$의 affine open들에 적용하면 우선 두 사상이 위상공간 사이의 연속함수로서 일치하고, 이어 각 affine open 위에서 구조층에 대한 위 equalizer로부터 $g_1=g_2$임과, 정합적으로 주어진 사상이 $\Spec A \rightarrow X$로 유일하게 내려옴을 얻는다. 여기에서 사상의 상이 faithfully flat base change에 대해 잘 행동함과 quasi-compact 조건이 유한 affine covering으로의 환원을 가능하게 함을 사용한다. 따라서 $h_X$은 fpqc sheaf이다. Fpqc보다 거친 위상의 covering은 fpqc covering이므로 이들에 대해서도 sheaf 조건이 따라온다.
 :::
 
 [정리 17](#thm17)이 stack 이론으로 가는 길을 연다. Scheme $X$를 그 functor of points $h_X:\Sch^\op \rightarrow \Set$과 동일시하면 ([\[스킴\] §점함자, ⁋정리 3](/ko/math/scheme_theory/functor_of_points#thm3)), scheme은 fpqc site $\Sch$ 위의 sheaf 가운데 특별한 것, 즉 적절한 표현가능성 조건을 만족하는 sheaf로 자리매김한다. functorially 정의된 moduli 문제 $F:\Sch^\op \rightarrow \Set$이 scheme을 표현하는지를 묻는 일은, 먼저 $F$가 fpqc sheaf인지를 확인하고 ([\[스킴\] §충실평탄 하강, ⁋정리 9](/ko/math/scheme_theory/faithfully_flat_descent#thm9)의 하강 논증과 같은 방식으로) 이어 그것이 국소적으로 표현가능한지를 보는 두 단계로 나뉜다. Stack은 이 그림에서 sheaf의 값을 집합 대신 groupoid로 확장하여, 점들이 비자명한 automorphism을 가지는 moduli 문제까지 포착하는 일반화이다. 그 정의와 전개는 이후의 글로 미룬다.
 
 ## $\mathbb{G}_a$의 sheaf 성질
 
-추상론을 마무리하며, 가장 기본적인 group scheme인 additive group $\mathbb{G}_a$의 functor of points이 fpqc sheaf임을 직접 확인한다. 이는 [정리 17](#thm17)의 특수한 경우이지만, 충실평탄 하강의 Amitsur 정확열이 sheaf 조건으로 번역되는 과정을 명시적으로 보여준다.
+추상론을 마무리하며, 가장 기본적인 group scheme인 additive group $\mathbb{G}_a$의 functor of points이 fpqc sheaf임을 직접 확인한다. 이는 [정리 17](#thm17)의 특수한 경우이지만, faithfully flat descent의 Amitsur 정확열이 sheaf 조건으로 번역되는 과정을 명시적으로 보여준다.
 
 ::: 예시 18 ($\mathbb{G}_a$는 fpqc sheaf)
 $\mathbb{G}_a=\Spec \mathbb{Z}[\x]=\mathbb{A}^1$의 functor of points은 각 scheme $T$에 대역 절단의 가법군
@@ -262,10 +262,10 @@ fpqc 위상에 대해서는 [정리 17](#thm17)에 의해 $\mathbb{G}_a=h_{\math
 
 $$A \rightarrow B \rightrightarrows B\otimes_A B$$
 
-이며, 두 사상은 $b\mapsto b\otimes 1$과 $b\mapsto 1\otimes b$이다. 충실평탄성으로 sequence $0 \rightarrow A \rightarrow B \xrightarrow{d^1-d^0} B\otimes_A B$가 정확하므로 ([\[스킴\] §충실평탄 하강, ⁋보조정리 3](/ko/math/scheme_theory/faithfully_flat_descent#lem3)), 두 사상이 일치하는 원소 $\{b\in B\mid b\otimes 1=1\otimes b\}$은 정확히 $A$의 상이다. 즉 $A$가 위 두 사상의 equalizer이고, 이것이 곧 $\mathbb{G}_a(\Spec A)=A$가 covering 위의 정합 자료로부터 복원된다는 sheaf 조건이다.
+이며, 두 사상은 $b\mapsto b\otimes 1$과 $b\mapsto 1\otimes b$이다. faithful flatness로 sequence $0 \rightarrow A \rightarrow B \xrightarrow{d^1-d^0} B\otimes_A B$가 정확하므로 ([\[스킴\] §충실평탄 하강, ⁋보조정리 3](/ko/math/scheme_theory/faithfully_flat_descent#lem3)), 두 사상이 일치하는 원소 $\{b\in B\mid b\otimes 1=1\otimes b\}$은 정확히 $A$의 상이다. 즉 $A$가 위 두 사상의 equalizer이고, 이것이 곧 $\mathbb{G}_a(\Spec A)=A$가 covering 위의 정합 자료로부터 복원된다는 sheaf 조건이다.
 :::
 
-[예시 18](#ex18)의 fpqc 경우가 비자명한 까닭은, fpqc covering이 단사가 아닌 데다 위상적으로도 거칠기 때문이다. 가령 체확대 $\Spec L \rightarrow \Spec K$는 fpqc covering인데, 이 위에서 $\mathbb{G}_a$의 절단은 $L$의 원소이고 두 겹 겹침은 $\Spec(L\otimes_K L)$이다. $L\otimes_K L$에서 $\ell\otimes 1=1\otimes \ell$을 만족하는 원소가 정확히 $K$의 상이라는 사실, 즉 $K=\{\ell\in L\mid \ell\otimes 1=1\otimes \ell\}$이 sheaf 조건의 실질이며, 이는 $L/K$의 충실평탄성이 보장하는 비자명한 정보이다. 반면 같은 자료를 Zariski 위상에서는 $\Spec K$가 한 점이라 covering이 자명해져 아무것도 말해주지 않는다. 이처럼 같은 functor라도 위상이 미세해질수록 더 강한 정합성을 요구받으며, $\mathbb{G}_a$를 비롯한 representable presheaf가 그 강한 조건을 모두 통과한다는 것이 [정리 17](#thm17)의 내용이다.
+[예시 18](#ex18)의 fpqc 경우가 비자명한 까닭은, fpqc covering이 단사가 아닌 데다 위상적으로도 거칠기 때문이다. 가령 체확대 $\Spec L \rightarrow \Spec K$는 fpqc covering인데, 이 위에서 $\mathbb{G}_a$의 절단은 $L$의 원소이고 두 겹 겹침은 $\Spec(L\otimes_K L)$이다. $L\otimes_K L$에서 $\ell\otimes 1=1\otimes \ell$을 만족하는 원소가 정확히 $K$의 상이라는 사실, 즉 $K=\{\ell\in L\mid \ell\otimes 1=1\otimes \ell\}$이 sheaf 조건의 실질이며, 이는 $L/K$의 faithful flatness가 보장하는 비자명한 정보이다. 반면 같은 자료를 Zariski 위상에서는 $\Spec K$가 한 점이라 covering이 자명해져 아무것도 말해주지 않는다. 이처럼 같은 functor라도 위상이 미세해질수록 더 강한 정합성을 요구받으며, $\mathbb{G}_a$를 비롯한 representable presheaf가 그 강한 조건을 모두 통과한다는 것이 [정리 17](#thm17)의 내용이다.
 
 ---
 

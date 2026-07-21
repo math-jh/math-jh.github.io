@@ -15,7 +15,7 @@ published: false
 drift_needed: true
 ---
 
-미분기하에서 submersion과 covering map은 smooth morphism 가운데 각각 fiber가 양의 차원을 가지는 경우와 이산적인 경우에 해당한다. 대수기하에서 이 두 개념의 유사물이 *smooth* 사상과 *étale* 사상이며, 둘을 함께 묶는 약한 조건이 *unramified* 사상이다. 이들은 모두 fiber가 base 위에서 균일하게 regular임을 요구하므로, 평탄성과 ([§평탄사상, ⁋정의 1](/ko/math/scheme_theory/flat_morphisms#def1)) cotangent sheaf의 ([§Kähler 미분과 여접층, ⁋정의 3](/ko/math/scheme_theory/sheaf_of_differentials#def3)) 국소자유성을 조합하여 정의된다. 이 글에서는 먼저 unramified 사상을 cotangent sheaf의 소멸로 정의하고 대각선 사상을 통한 특징을 제시한 뒤, smooth 사상을 flat이면서 기하적 올이 regular인 사상으로 정의하고 그 Jacobian 판정을 본다. 이어서 étale 사상을 두 개념의 교집합으로 도입하고 standard étale 모형과 예시를 살펴본 다음, 세 개념을 통일적으로 다루는 square-zero 확대에 대한 무한소 lifting 판정으로 마무리한다.
+미분기하에서 submersion과 covering map은 smooth morphism 가운데 각각 fiber가 양의 차원을 가지는 경우와 이산적인 경우에 해당한다. 대수기하에서 이 두 개념의 유사물이 *smooth* 사상과 *étale* 사상이며, 둘을 함께 묶는 약한 조건이 *unramified* 사상이다. 이들은 모두 fiber가 base 위에서 균일하게 regular임을 요구하므로, flatness와 ([§평탄사상, ⁋정의 1](/ko/math/scheme_theory/flat_morphisms#def1)) cotangent sheaf의 ([§Kähler 미분과 여접층, ⁋정의 3](/ko/math/scheme_theory/sheaf_of_differentials#def3)) 국소자유성을 조합하여 정의된다. 이 글에서는 먼저 unramified 사상을 cotangent sheaf의 소멸로 정의하고 대각선 사상을 통한 특징을 제시한 뒤, smooth 사상을 flat이면서 기하적 올이 regular인 사상으로 정의하고 그 Jacobian 판정을 본다. 이어서 étale 사상을 두 개념의 교집합으로 도입하고 standard étale 모형과 예시를 살펴본 다음, 세 개념을 통일적으로 다루는 square-zero 확대에 대한 무한소 lifting 판정으로 마무리한다.
 
 우리는 이 글 전체에서 사상이 *locally of finite presentation*임을 기본 가정으로 둔다. Locally Noetherian base 위에서는 이것이 locally of finite type과 일치하므로, 독자는 Noetherian 맥락에서 후자로 읽어도 무방하다.
 
@@ -68,7 +68,7 @@ Locally of finite presentation인 scheme 사상 $f:X \rightarrow S$가 *smooth<s
    는 regular scheme이다. 즉 그 모든 local ring이 regular local ring이다.
 :::
 
-이 정의에서 두 조건은 서로 다른 방향을 통제한다. 평탄성은 fiber들이 base를 따라 차원 도약 없이 연속적으로 변함을 보장하고 ([§평탄사상, ⁋명제 17](/ko/math/scheme_theory/flat_morphisms#prop17)), geometric fiber의 regularity는 각 fiber 자체가 singular point를 가지지 않음을 보장한다. residue field가 완전하지 않을 때 fiber $X_s$가 regular이더라도 base change 후 singular point가 생길 수 있으므로, algebraic closure 위의 geometric fiber에서 regularity를 요구하는 것이 본질적이다.
+이 정의에서 두 조건은 서로 다른 방향을 통제한다. flatness는 fiber들이 base를 따라 차원 도약 없이 연속적으로 변함을 보장하고 ([§평탄사상, ⁋명제 17](/ko/math/scheme_theory/flat_morphisms#prop17)), geometric fiber의 regularity는 각 fiber 자체가 singular point를 가지지 않음을 보장한다. residue field가 완전하지 않을 때 fiber $X_s$가 regular이더라도 base change 후 singular point가 생길 수 있으므로, algebraic closure 위의 geometric fiber에서 regularity를 요구하는 것이 본질적이다.
 
 Smooth 사상은 cotangent sheaf의 국소자유성으로 동치적으로 특징지어진다. 이것이 미분기하의 submersion과의 직접적 연결을 준다.
 
@@ -89,7 +89,7 @@ $$\dim_{\kappa(\bar x)}\bigl(\Omega_{X_{\bar s}/k}\otimes \kappa(\bar x)\bigr)=\
 
 이다. 이는 정확히 regular local ring의 cotangent space $\mathfrak{m}/\mathfrak{m}^2$이 차원만큼의 dimension을 가진다는 사실이다. ([\[가환대수학\] §정칙국소환](/ko/math/commutative_algebra/regular_local_rings)의 regular local ring은 그 정의상 $\mathfrak{m}$이 $\dim$개의 원소로 생성되며, 이는 $\dim\mathfrak{m}/\mathfrak{m}^2=\dim$과 동치이다.) Cotangent sheaf는 base change와 commute하므로 $\Omega_{X_{\bar s}/k}=\Omega_{X/S}\otimes_S k$이고, 따라서 $\Omega_{X/S}\otimes \kappa(\bar x)$의 차원이 fiber 차원과 같다.
 
-이제 평탄성과 결합한다. $f$가 flat이고 fiber 위에서 $\Omega$의 fiber 차원이 일정하므로, 유한표시 가군에 대한 국소자유성 판정에 의하여 $\Omega_{X/S}$는 $\mathfrak{p}$ 근방에서 그 차원만큼의 rank를 가지는 locally free sheaf이다. 구체적으로 $\Omega_{B/A}$는 finitely presented $B$-가군이고, $f$가 flat이고 모든 fiber에서 $\dim_{\kappa(x)}\Omega_{B/A}\otimes\kappa(x)$가 일정하므로 $\Omega_{B/A}$는 projective module, 곧 국소자유이다 (유한표시·평탄 가군의 fiber rank가 국소상수이면 국소자유, Stacks 00NX). 그 rank가 fiber 차원과 같음은 위 계산에서 따른다.
+이제 flatness와 결합한다. $f$가 flat이고 fiber 위에서 $\Omega$의 fiber 차원이 일정하므로, 유한표시 가군에 대한 국소자유성 판정에 의하여 $\Omega_{X/S}$는 $\mathfrak{p}$ 근방에서 그 차원만큼의 rank를 가지는 locally free sheaf이다. 구체적으로 $\Omega_{B/A}$는 finitely presented $B$-가군이고, $f$가 flat이고 모든 fiber에서 $\dim_{\kappa(x)}\Omega_{B/A}\otimes\kappa(x)$가 일정하므로 $\Omega_{B/A}$는 projective module, 곧 국소자유이다 (유한표시·flat module의 fiber rank가 국소상수이면 국소자유, Stacks 00NX). 그 rank가 fiber 차원과 같음은 위 계산에서 따른다.
 
 역으로 두 번째 조건을 가정하자. $\Omega_{X/S}$가 국소자유이고 그 rank가 fiber 차원과 같으면, 각 geometric fiber $X_{\bar s}$ 위에서 $\Omega_{X_{\bar s}/k}$도 국소자유이며 그 rank가 fiber의 차원과 일치한다. 이는 $X_{\bar s}$의 모든 점에서 Zariski tangent space 차원이 국소차원과 같다는 것이고, $X_{\bar s}$가 finite type over a field이므로 그 점은 regular이다. (algebraically closed field 위에서 tangent space 차원과 국소차원이 일치하면 그 local ring은 regular이다.) 따라서 geometric fiber가 regular이고, 가정에 의해 $f$가 flat이므로 $f$는 smooth하다.
 :::
