@@ -1926,6 +1926,13 @@ C:
   defs:
   - label: '[범주론] §모노이드 대상'
     url: /ko/math/category_theory/monoid_objects
+- id: concave
+  en: concave
+  ko: 오목
+  primary: en
+  defs:
+  - label: '[미적분학] §평균값 정리'
+    url: /ko/math/calculus/mean_value_theorem
 - id: conditionally_convergent
   en: conditionally convergent
   ko: 조건수렴
@@ -2085,6 +2092,13 @@ C:
   defs:
   - label: '[해석학] §수열의 수렴'
     url: /ko/math/analysis/convergence_of_sequences
+- id: convex
+  en: convex
+  ko: 볼록
+  primary: en
+  defs:
+  - label: '[미적분학] §평균값 정리'
+    url: /ko/math/calculus/mean_value_theorem
 - id: coordinate_form
   en: coordinate form
   ko: 좌표 형식
@@ -2221,6 +2235,13 @@ C:
   defs:
   - label: '[토릭 기하학] §파노 다양체'
     url: /ko/math/toric_geometry/reflexive_polytope_fano
+- id: critical_point
+  en: critical point
+  ko: 임계점
+  primary: en
+  defs:
+  - label: '[미적분학] §평균값 정리'
+    url: /ko/math/calculus/mean_value_theorem
 - id: cup_product
   en: cup product
   ko: 합곱
@@ -3117,6 +3138,13 @@ E:
   defs:
   - label: '[해석학] §열린집합과 닫힌집합'
     url: /ko/math/analysis/open_and_closed_sets
+- id: error_function
+  en: error function
+  ko: 오차함수
+  primary: ko
+  defs:
+  - label: '[미적분학] §미적분의 기본정리'
+    url: /ko/math/calculus/fundamental_theorem_of_calculus
 - id: escape_of_mass
   en: escape of mass
   ko: 질량의 탈출
@@ -4443,6 +4471,13 @@ I:
   defs:
   - label: '[미적분학] §미분법'
     url: /ko/math/calculus/differentiation_rules
+- id: improper_integral
+  en: improper integral
+  ko: 이상적분
+  primary: ko
+  defs:
+  - label: '[미적분학] §이상적분'
+    url: /ko/math/calculus/improper_integrals
 - id: increasing
   en: increasing
   ko: 증가
@@ -4508,6 +4543,13 @@ I:
   defs:
   - label: '[해석학] §무한급수'
     url: /ko/math/analysis/series
+- id: inflection_point
+  en: inflection point
+  ko: 변곡점
+  primary: ko
+  defs:
+  - label: '[미적분학] §평균값 정리'
+    url: /ko/math/calculus/mean_value_theorem
 - id: inhomogeneous_coordinates
   en: inhomogeneous coordinates
   ko: 비동차좌표
@@ -5614,6 +5656,13 @@ L:
   defs:
   - label: '[대수적 위상수학] §푸앵카레 쌍대성'
     url: /ko/math/algebraic_topology/Poincare_duality
+- id: local_extremum
+  en: local extremum
+  ko: 극값
+  primary: ko
+  defs:
+  - label: '[미적분학] §평균값 정리'
+    url: /ko/math/calculus/mean_value_theorem
 - id: local_homology_group
   en: local homology group
   ko: 국소 호몰로지 군
@@ -5621,6 +5670,20 @@ L:
   defs:
   - label: '[대수적 위상수학] §푸앵카레 쌍대성'
     url: /ko/math/algebraic_topology/Poincare_duality
+- id: local_maximum
+  en: local maximum
+  ko: 극댓값
+  primary: ko
+  defs:
+  - label: '[미적분학] §평균값 정리'
+    url: /ko/math/calculus/mean_value_theorem
+- id: local_minimum
+  en: local minimum
+  ko: 극솟값
+  primary: ko
+  defs:
+  - label: '[미적분학] §평균값 정리'
+    url: /ko/math/calculus/mean_value_theorem
 - id: local_orientation
   en: local orientation
   ko: 국소 방향
@@ -5831,6 +5894,13 @@ L:
   - label: '[선형대수학] §행렬식의 존재성과 유일성'
     url: /ko/math/linear_algebra/existence_and_uniqueness_of_determinant
 M:
+- id: maclaurin_polynomial
+  en: maclaurin polynomial
+  ko: 매클로린 다항식
+  primary: ko
+  defs:
+  - label: '[미적분학] §테일러 정리'
+    url: /ko/math/calculus/taylor_theorem
 - id: magma
   en: magma
   ko: 마그마
@@ -9436,6 +9506,13 @@ T:
   defs:
   - label: '[대수다양체] §선다발과 벡터다발'
     url: /ko/math/algebraic_varieties/line_bundles
+- id: taylor_polynomial
+  en: taylor polynomial
+  ko: $n$차 테일러 다항식
+  primary: ko
+  defs:
+  - label: '[미적분학] §테일러 정리'
+    url: /ko/math/calculus/taylor_theorem
 - id: telescoping_series
   en: telescoping series
   ko: 망원급수
