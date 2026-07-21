@@ -567,6 +567,7 @@ A:
 - id: automorphism
   en: automorphism
   ko: 자기동형사상
+  ko_short: [자기동형]
   primary: en
   defs:
   - label: '[대수적 구조] §군의 작용'
@@ -1920,6 +1921,7 @@ C:
 - id: comultiplication
   en: comultiplication
   ko: 쌍대곱셈
+  ko_short: [쌍대곱]
   primary: en
   defs:
   - label: '[범주론] §모노이드 대상'
@@ -2070,12 +2072,12 @@ C:
   ko: 수렴
   primary: ko
   defs:
+  - label: '[미적분학] §무한급수'
+    url: /ko/math/calculus/series
   - label: '[위상수학] §하우스도르프 공간'
     url: /ko/math/topology/Hausdorff_spaces
   - label: '[위상수학] §옹골성과 필터의 수렴'
     url: /ko/math/topology/filter_convergence
-  - label: '[미적분학] §무한급수'
-    url: /ko/math/calculus/series
 - id: converges
   en: converges
   ko: 수렴
@@ -6192,6 +6194,7 @@ N:
 - id: natural_isomorphism
   en: natural isomorphism
   ko: 자연동형변환
+  ko_short: [자연동형]
   primary: en
   defs:
   - label: '[범주론] §자연변환'

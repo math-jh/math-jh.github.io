@@ -302,7 +302,10 @@ class Issue:
         return (self.code, self.msg)
 
 
-ENTRY_KEYS = {"id", "en", "ko", "primary", "note", "defs", "refs", "see"}
+# ko_short: 표제어가 부분열로 커버하지 못하는 단축 파생형 목록 (예: 자기동형사상
+# 의 "자기동형"). md_lint 가 폐용어 감시에 파생해 쓴다 (이중 SoT 감사 [10]-별칭,
+# 2026-07-22 — 예전엔 md_lint._DEPR_EXTRA 수동 목록).
+ENTRY_KEYS = {"id", "en", "ko", "ko_short", "primary", "note", "defs", "refs", "see"}
 REF_KEYS = {"label", "url"}
 SEE_KEYS = {"label", "id", "lang"}
 

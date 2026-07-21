@@ -21,18 +21,19 @@ import re
 import sys
 from pathlib import Path
 
-# Longest-first so 보조정리 wins over 정리, 참고문헌 wins over 참고.
-LABEL_MAP = [
-    ("보조정리", "Lemma"),
-    ("따름정리", "Corollary"),
-    ("참고문헌", "References"),
-    ("정의",     "Definition"),
-    ("명제",     "Proposition"),
-    ("정리",     "Theorem"),
-    ("예시",     "Example"),
-    ("참고",     "Remark"),
-    ("증명",     "Proof"),
-]
+import yaml
+
+# 라벨 어휘의 단일 출처 = _data/theorem_vocab.yml (이중 SoT 감사 [4], 2026-07-22).
+# kinds(번호형 ko→en) + extra_labels(참고문헌·증명 등 박스 밖 어휘)에서 파생한다.
+# Longest-first so 보조정리 wins over 정리, 참고문헌 wins over 참고 —
+# sorted 는 stable 이라 동률(2글자) 안에서는 정본 파일의 순서가 보존된다.
+_VOCAB = yaml.safe_load(
+    (Path(__file__).resolve().parents[2] / "_data" / "theorem_vocab.yml")
+    .read_text(encoding="utf-8"))
+LABEL_MAP = sorted(
+    [(k["ko"], k["en"]) for k in _VOCAB["kinds"]]
+    + list(_VOCAB["extra_labels"].items()),
+    key=lambda kv: -len(kv[0]))
 ENG = dict(LABEL_MAP)
 _LABELS_RE = "|".join(re.escape(k) for k, _ in LABEL_MAP)
 

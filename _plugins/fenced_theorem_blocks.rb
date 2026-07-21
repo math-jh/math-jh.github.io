@@ -55,24 +55,20 @@
 # - 프로덕션 게이트 없음: 로컬 serve 를 포함한 모든 env 에서 돌아야 소스의 `:::` 가
 #   렌더된다.
 
+require "yaml"
+
 module FencedTheoremBlocks
+  # 박스 어휘의 단일 출처는 _data/theorem_vocab.yml (이중 SoT 감사 [4],
+  # 2026-07-22 — 예전엔 아래 표들이 여기 리터럴로 살았다). require 시점에
+  # 로드해 상수를 구성한다 — 파일이 없으면 여기서 시끄럽게 죽는 게 맞다.
+  VOCAB = YAML.load_file(File.expand_path("../_data/theorem_vocab.yml", __dir__)).freeze
+
   # 라벨 종류(첫 토큰) → [div class, id 접두사]. 한글·영어 매핑표.
-  KIND_MAP = {
-    "정의"     => %w[definition def],
-    "명제"     => %w[proposition prop],
-    "정리"     => %w[proposition thm],
-    "보조정리" => %w[proposition lem],
-    "따름정리" => %w[proposition cor],
-    "예시"     => %w[example ex],
-    "참고"     => %w[remark rmk],
-    "Definition"  => %w[definition def],
-    "Proposition" => %w[proposition prop],
-    "Theorem"     => %w[proposition thm],
-    "Lemma"       => %w[proposition lem],
-    "Corollary"   => %w[proposition cor],
-    "Example"     => %w[example ex],
-    "Remark"      => %w[remark rmk],
-  }.freeze
+  # 키 순서는 옛 리터럴(한글 7 → 영어 7)을 보존한다 — site.data 로 나가는
+  # 파생 뷰의 JSON 키 순서가 곧 렌더 바이트라서, 순서가 바뀌면 전 페이지가
+  # 무의미하게 diff 난다.
+  KIND_MAP = (VOCAB["kinds"].map { |k| [k["ko"], [k["class"], k["prefix"]]] } +
+              VOCAB["kinds"].map { |k| [k["en"], [k["class"], k["prefix"]]] }).to_h.freeze
 
   # 유도형 라벨 매칭용 종류 alternation (긴 것 우선 — 방어적, \A 앵커라 사실상 무관).
   KIND_ALT = KIND_MAP.keys.sort_by { |k| -k.length }.map { |k| Regexp.escape(k) }.join("|")
@@ -80,10 +76,10 @@ module FencedTheoremBlocks
 
   # 명시형(비유도 라벨·커스텀 id 전용, 전 class):  <class> <라벨 verbatim> {#id}
   # class 는 소문자 div class 이므로 유도형 종류 키워드(정의/…/Definition/…)와 겹치지 않는다.
-  EXPLICIT_CLASSES = %w[definition proposition example remark misc].freeze
+  EXPLICIT_CLASSES = VOCAB["explicit_classes"].freeze
   # 접기 박스(<details>). 라벨 번호가 없어 KIND_MAP 에는 없지만, 박스 어휘를 쓰는
   # 소비처(Xref_preview.js 의 셀렉터, _notices.scss)는 이것도 알아야 한다.
-  COLLAPSIBLE_CLASSES = %w[proof proof--alone details].freeze
+  COLLAPSIBLE_CLASSES = VOCAB["collapsible_classes"].freeze
   EXPLICIT_ALT     = EXPLICIT_CLASSES.map { |c| Regexp.escape(c) }.join("|")
   EXPLICIT_RE      = /\A(#{EXPLICIT_ALT})[ \t]+(.+?)[ \t]*\{#([^}]+)\}[ \t]*\z/
 

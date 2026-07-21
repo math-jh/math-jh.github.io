@@ -36,6 +36,8 @@ import shutil
 import subprocess
 import sys
 import time
+
+import yaml
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Optional, Tuple
@@ -811,12 +813,13 @@ _KO_PATH_RE    = re.compile(r"/ko/[A-Za-z0-9_\-/]+")
 # Fence-/raw-aware: a `:::` or `<ins>` inside ``` code fences or {% raw %} blocks
 # is ignored, exactly as the plugin ignores it.
 
-_KIND_PREFIX = {
-    "정의": "def", "명제": "prop", "정리": "thm", "보조정리": "lem",
-    "따름정리": "cor", "예시": "ex", "참고": "rmk",
-    "Definition": "def", "Proposition": "prop", "Theorem": "thm",
-    "Lemma": "lem", "Corollary": "cor", "Example": "ex", "Remark": "rmk",
-}
+# 박스 어휘의 단일 출처 = _data/theorem_vocab.yml (이중 SoT 감사 [4], 2026-07-22).
+# 플러그인 KIND_MAP 과 같은 파일에서 파생하므로 새 종류를 더해도 여기는 무변경.
+_VOCAB = yaml.safe_load(
+    (BLOG_ROOT / "_data" / "theorem_vocab.yml").read_text(encoding="utf-8"))
+
+_KIND_PREFIX = {k["ko"]: k["prefix"] for k in _VOCAB["kinds"]} \
+             | {k["en"]: k["prefix"] for k in _VOCAB["kinds"]}
 _KIND_ALT = "|".join(re.escape(k) for k in sorted(_KIND_PREFIX, key=lambda s: -len(s)))
 _DERIVED_LABEL_RE = re.compile(r"^(" + _KIND_ALT + r")[ \t]+(\d+)")
 _MISC_LABEL_RE    = re.compile(r"^misc[ \t]+(.+?)[ \t]*\{#([^}]+)\}[ \t]*$")
@@ -1716,16 +1719,11 @@ def lint_latex(text: str) -> list:
 # 21 posts whose EN had silently gone stale after the KO was edited (Compactness:
 # KO 49 boxes vs EN 13; a 2669-char proof in Resolutions absent from EN).
 
-_KIND_CANON = {
-    "정의": "Definition", "명제": "Proposition", "정리": "Theorem",
-    "보조정리": "Lemma", "따름정리": "Corollary", "예시": "Example",
-    "참고": "Remark", "증명": "Proof",
-    # Labels outside the plugin's derivation table, written with the explicit
-    # form (`::: misc 주장 4 {#conj4}`). They still have to canonicalize, or the
-    # counts diverge for a perfectly good translation.
-    "주장": "Conjecture", "주의": "Remark",
-}
-_EXPLICIT_CLASSES = {"definition", "proposition", "example", "remark", "misc"}
+# 단일 출처 _data/theorem_vocab.yml 파생 (감사 [4]). extra_canon 이 명시형
+# 전용 어휘(주장→Conjecture 등)를 담는다 — 정준화가 빠지면 멀쩡한 번역의
+# 박스 대조가 어긋난다.
+_KIND_CANON = {k["ko"]: k["en"] for k in _VOCAB["kinds"]} | _VOCAB["extra_canon"]
+_EXPLICIT_CLASSES = set(_VOCAB["explicit_classes"])
 
 
 def _canon_kind(label: str) -> str:

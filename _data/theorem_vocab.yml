@@ -1,0 +1,45 @@
+# 정리 박스 어휘의 단일 출처 (이중 SoT 감사 [4], 2026-07-22).
+#
+# 예전엔 같은 어휘가 다섯 곳에 하드코딩돼 있었다:
+#   _plugins/fenced_theorem_blocks.rb  KIND_MAP·EXPLICIT_CLASSES·COLLAPSIBLE_CLASSES
+#   scripts/translation/translate_worker.py  _KIND_PREFIX·_KIND_CANON·_EXPLICIT_CLASSES
+#   scripts/translation/label_normalize.py   LABEL_MAP
+# 이제 전부 이 파일에서 파생한다. 소비 경로:
+#   Ruby   — 플러그인이 require 시점에 YAML 로드 → KIND_MAP 등 상수 구성
+#   JS/CSS — 플러그인 훅이 파생 뷰를 site.data.theorem_kinds 로 내보냄 (기존 그대로.
+#            파일명이 theorem_kinds 가 아닌 이유: Jekyll 이 _data 파일을 같은 키로
+#            자동 로드해 훅의 파생 뷰와 충돌하기 때문)
+#   Python — translate_worker·label_normalize 가 yaml 로 직접 로드
+#
+# 새 박스 종류를 더할 때: kinds 에 한 항목이면 플러그인·JS·CSS·번역 워커·라벨
+# 치환이 전부 따라온다. 단 _notices.scss 의 색 사본만은 손으로 (그 파일 주석 참고).
+
+# 번호형 박스: `::: 정의 3 (이름)` / `::: Definition 3 (name)`.
+# class = 렌더되는 div class, prefix = 앵커 id 접두 (def3, thm2, ...).
+kinds:
+  - { ko: 정의,     en: Definition,  class: definition,  prefix: def }
+  - { ko: 명제,     en: Proposition, class: proposition, prefix: prop }
+  - { ko: 정리,     en: Theorem,     class: proposition, prefix: thm }
+  - { ko: 보조정리, en: Lemma,       class: proposition, prefix: lem }
+  - { ko: 따름정리, en: Corollary,   class: proposition, prefix: cor }
+  - { ko: 예시,     en: Example,     class: example,     prefix: ex }
+  - { ko: 참고,     en: Remark,      class: remark,      prefix: rmk }
+
+# 명시형 `::: <class> <라벨> {#id}` 가 허용하는 div class.
+explicit_classes: [definition, proposition, example, remark, misc]
+
+# 접기 박스(<details>) class — 라벨 번호가 없어 kinds 에는 없다.
+collapsible_classes: [proof, proof--alone, details]
+
+# 명시형 라벨 선두 토큰의 KO→EN 정준화 (구조 대조용) — kinds 밖 어휘.
+# `::: misc 주장 4 {#conj4}` 의 "주장" 이 EN "Conjecture 4" 와 같은 종류로
+# 세어져야 KO/EN 박스 대조가 어긋나지 않는다.
+extra_canon:
+  증명: Proof
+  주장: Conjecture
+  주의: Remark
+
+# 번역 표시 라벨 치환 전용 — 박스 어휘 밖 섹션 제목 포함.
+extra_labels:
+  참고문헌: References
+  증명: Proof
