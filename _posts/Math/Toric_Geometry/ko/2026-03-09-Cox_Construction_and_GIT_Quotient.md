@@ -51,7 +51,7 @@ Reductive group $G$가 affine variety $X = \Spec A$ 위에 작용한다고 하�
 
 $$\varphi : X \longrightarrow X /\!/ G := \Spec(A^G)$$
 
-는 categorical quotient이다 ([\[스킴\] §대수적 군, ⁋정의 17](/ko/math/scheme_theory/algebraic_groups#def17)). 더욱이 두 점 $x, x' \in X$가 $\varphi$에 의해 같은 상을 가질 필요충분조건은 두 궤도 closure $\overline{G\cdot x}$와 $\overline{G\cdot x'}$가 교차하는 것이다.
+는 categorical quotient이다 ([\[스킴\] §대수적 군, ⁋정의 17](/ko/math/scheme_theory/algebraic_groups#def17)). 더욱이 두 점 $x, x' \in X$가 $\varphi$에 의해 같은 상을 가질 필요충분조건은 두 orbit closure $\overline{G\cdot x}$와 $\overline{G\cdot x'}$가 교차하는 것이다.
 :::
 
 ::: 증명
@@ -63,10 +63,10 @@ $$A = A^G \oplus A_0.$$
 
 이제 $\varphi$의 categorical quotient 성질을 본다. $G$-invariant morphism $f: X \rightarrow Z = \Spec B$가 주어지면 이에 대응하는 ring homomorphism $f^\sharp: B \rightarrow A$의 상은 $G$-invariant element로 이루어지므로 $A^G$에 포함된다. 따라서 $f^\sharp$는 $B \rightarrow A^G$를 거쳐 분해되고, 이는 $f$가 $\varphi$를 통해 유일하게 분해됨을 뜻한다. 일반적인 $Z$에 대해서는 affine cover로 환원하면 동일한 결론이 따른다.
 
-두 점이 같은 상을 가질 조건을 보인다. 두 궤도 closure가 교차하면 그 교집합 위에서 모든 $G$-invariant 함수는 두 점에서 같은 값을 가지므로, 임의의 $f \in A^G$에 대해 $f(x) = f(x')$이다. 역으로 $\overline{G \cdot x} \cap \overline{G \cdot x'} = \emptyset$이라 가정하자. 두 닫힌 $G$-불변 부분집합이 disjoint이므로 그 ideal들 $I_x, I_{x'} \subseteq A$에 대해 $I_x + I_{x'} = A$이다. Reductivity로부터 $I_x^G + I_{x'}^G = A^G$가 성립하며, 이로부터 $f(x) = 0$, $f(x') = 1$인 $f \in A^G$가 존재한다. 따라서 $\varphi(x) \ne \varphi(x')$이다.
+두 점이 같은 상을 가질 조건을 보인다. 두 orbit closure가 교차하면 그 교집합 위에서 모든 $G$-invariant 함수는 두 점에서 같은 값을 가지므로, 임의의 $f \in A^G$에 대해 $f(x) = f(x')$이다. 역으로 $\overline{G \cdot x} \cap \overline{G \cdot x'} = \emptyset$이라 가정하자. 두 닫힌 $G$-불변 부분집합이 disjoint이므로 그 ideal들 $I_x, I_{x'} \subseteq A$에 대해 $I_x + I_{x'} = A$이다. Reductivity로부터 $I_x^G + I_{x'}^G = A^G$가 성립하며, 이로부터 $f(x) = 0$, $f(x') = 1$인 $f \in A^G$가 존재한다. 따라서 $\varphi(x) \ne \varphi(x')$이다.
 :::
 
-위 명제의 두 번째 부분이 categorical quotient와 geometric quotient의 차이를 정량화한다. 즉 $X/\!/G$의 한 점은 $X$의 *$G$-궤도들의 equivalence class*에 대응하되, 그 동치관계는 *궤도 closure가 사슬로 연결됨*이다. 모든 궤도가 이미 닫혀 있다면 이 equivalence class는 곧 궤도 자체이고 이 경우 categorical quotient는 geometric quotient가 된다.
+위 명제의 두 번째 부분이 categorical quotient와 geometric quotient의 차이를 정량화한다. 즉 $X/\!/G$의 한 점은 $X$의 *$G$-궤도들의 equivalence class*에 대응하되, 그 동치관계는 *orbit closure가 사슬로 연결됨*이다. 모든 궤도가 이미 닫혀 있다면 이 equivalence class는 곧 궤도 자체이고 이 경우 categorical quotient는 geometric quotient가 된다.
 
 ::: 참고 4
 명제의 finite generation 부분은 $G$가 reductive라는 가정을 본질적으로 사용한다. Nagata는 unipotent group의 action에 대해 invariant ring이 finitely generated가 아닐 수 있음을 보여 Hilbert의 14번째 문제의 반례를 제시하였다. 본 글에서 $G$를 reductive로 제한하는 것은 단순한 편의가 아니라 GIT가 성립하기 위한 핵심 가정이다.

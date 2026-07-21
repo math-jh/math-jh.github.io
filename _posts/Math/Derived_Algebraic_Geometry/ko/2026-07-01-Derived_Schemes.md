@@ -25,7 +25,7 @@ published: false
 고전적 affine scheme은 가환환 $A$에 반변적으로 대응하는 $\Spec A$였고, 그 본질은 점functor $h_{\Spec A}=\Hom(-,A)$가 test scheme 위에서 어떻게 보이는가에 있었다. ([\[스킴\] §점함자, ⁋정의 1](/ko/math/scheme_theory/functor_of_points#def1)) Derived 세계에서 우리는 이 그림을 그대로 옮기되, 가환환을 animated 가환환으로, 집합값 functor를 space값 functor로 바꾼다.
 
 ::: 정의 1
-Animated 가환환 $R\in \operatorname{Ani}$에 대하여, 그 *affine derived scheme<sub>아핀 derived scheme</sub>* $\Spec R$은 $\operatorname{Ani}^\op$의 대상으로서의 $R$이며, 그 *점functor*는
+Animated 가환환 $R\in \operatorname{Ani}$에 대하여, 그 *affine derived scheme* $\Spec R$은 $\operatorname{Ani}^\op$의 대상으로서의 $R$이며, 그 *점functor*는
 
 $$h_{\Spec R}=\operatorname{Map}_{\operatorname{Ani}}(R,-):\operatorname{Ani}\longrightarrow \mathcal{S}$$
 
@@ -92,7 +92,7 @@ $$\pi_n\bigl(k\otimes_{k[\x]}^{\mathbb{L}}k\bigr)=\Tor_n^{k[\x]}(k,k)=\begin{cas
 Scheme을 점functor로 바라보면 그것은 $\Sch^\op\rightarrow \Set$의 표현가능 functor였고, stack은 그 집합값을 groupoid값으로 넓히고 하강 조건을 부과하여 얻어졌다. Derived 세계에서 우리는 이 두 단계를 동시에 유도화한다. 밑범주를 animated ring으로, 값을 space로 바꾸고, 하강을 $\infty$-범주적 하강, 곧 hyperdescent로 요구하는 것이다.
 
 ::: 정의 6
-*derived prestack*이란 $\infty$-functor $F:\operatorname{Ani}\rightarrow \mathcal{S}$이다. Derived prestack $F$이 *derived stack<sub>유도 stack</sub>*이라는 것은, animated ring $R$의 임의의 étale covering $\{R\rightarrow R_i\}$과 그 Čech nerve $R_\bullet$에 대하여 자연스러운 사상
+*derived prestack*이란 $\infty$-functor $F:\operatorname{Ani}\rightarrow \mathcal{S}$이다. Derived prestack $F$이 *derived stack<sub>유도 스택</sub>*이라는 것은, animated ring $R$의 임의의 étale covering $\{R\rightarrow R_i\}$과 그 Čech nerve $R_\bullet$에 대하여 자연스러운 사상
 
 $$F(R)\overset{\sim}{\longrightarrow}\lim_{[n]\in \Delta}F(R_n)$$
 
@@ -111,7 +111,7 @@ Yoneda embedding $X\mapsto \operatorname{Map}_{\mathrm{dSch}}(-,X)\vert_{\mathrm
 Derived stack 가운데 기하를 논할 수 있는 부류는 고전적 경우와 마찬가지로 atlas로 가려낸다. 다만 atlas의 source가 derived scheme이고, 차원·매끄러움은 유도 판본으로 읽는다.
 
 ::: 정의 8
-Derived stack $\mathcal{X}$이 *geometric* (또는 *derived Artin stack<sub>유도 Artin stack</sub>*)이라는 것은, 그 대각선이 표현가능하고, derived scheme $U$으로부터의 smooth 전사 사상 $u:U\rightarrow \mathcal{X}$, 곧 *atlas*가 존재하는 것을 뜻한다. Atlas를 étale 전사로 잡을 수 있으면 $\mathcal{X}$을 *derived Deligne–Mumford stack*이라 부른다.
+Derived stack $\mathcal{X}$이 *geometric* (또는 *derived Artin stack<sub>유도 아틴 스택</sub>*)이라는 것은, 그 대각선이 표현가능하고, derived scheme $U$으로부터의 smooth 전사 사상 $u:U\rightarrow \mathcal{X}$, 곧 *atlas*가 존재하는 것을 뜻한다. Atlas를 étale 전사로 잡을 수 있으면 $\mathcal{X}$을 *derived Deligne–Mumford stack*이라 부른다.
 :::
 
 이는 고전적 대수적 stack의 정의를 derived scheme을 국소 모형으로 삼아 옮긴 것이다. ([\[Stacks\] §대수적 stack과 quotient stack, ⁋정의 6](/ko/math/stacks/algebraic_stacks#def6)) 여기서 사상 $u:U\rightarrow \mathcal{X}$의 smooth·étale 성질은 뒤에서 여접 복합체로 특징짓는데, 곧 상대 여접 복합체 $L_u$이 degree $0$에 집중된 국소자유 층인 경우가 smooth이다. Atlas가 있으면 $\mathcal{X}$의 truncation $t_0(\mathcal{X})$은 atlas의 truncation $t_0(U)$을 atlas로 갖는 고전적 대수적 stack이 되어, geometric derived stack이 고전적 대수적 stack 위에 얹힌 유도 두께임이 다시 확인된다. 가장 기본적인 예는 고전적 stack 자체가 discrete derived stack으로 들어앉는 경우이다.

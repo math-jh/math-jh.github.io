@@ -45,7 +45,7 @@ $$h'\left( \sum_{\bar{h}\in H/G}\bar{h}x\right)=\sum_{\bar{h}\in H/G}(h'\bar{h})
 
 $$\tr_{H/G}(x)=\sum_{\bar{h}\in H/G} \bar{h}x$$
 
-으로 정의하고, 이를 *relative trace<sub>상대 trace</sub>*라 부른다. 
+으로 정의하고, 이를 *relative trace*라 부른다. 
 :::
 
 그럼 다음이 성립한다. 

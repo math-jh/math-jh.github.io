@@ -167,7 +167,7 @@ Source의 경우는 $k$가 sink일 때의 논증을 완전히 쌍대화하여, $
 여러 vertex에서 차례로 sink reflection을 적용하되, 매 단계에서 해당 vertex가 그 순간의 quiver에서 sink가 되도록 순서를 잡으면, 결국 모든 arrow가 한 바퀴 뒤집혀 원래 quiver로 돌아온다. 이러한 순서를 admissible이라 부른다.
 
 ::: 정의 9
-Oriented cycle이 없는 quiver $Q$의 vertex들을 모두 한 번씩 나열한 순서 $(k_1,k_2,\ldots,k_n)$이 *admissible sink sequence<sub>허용 sink 나열</sub>*라는 것은, $k_1$이 $Q$의 sink이고, 각 $2\leq r\leq n$에 대하여 $k_r$가 $\sigma_{k_{r-1}}\cdots\sigma_{k_1}Q$의 sink인 것이다. 이러한 나열에 대하여 *Coxeter functor<sub>콕세터 함자</sub>*를
+Oriented cycle이 없는 quiver $Q$의 vertex들을 모두 한 번씩 나열한 순서 $(k_1,k_2,\ldots,k_n)$이 *admissible sink sequence<sub>허용 싱크 나열</sub>*라는 것은, $k_1$이 $Q$의 sink이고, 각 $2\leq r\leq n$에 대하여 $k_r$가 $\sigma_{k_{r-1}}\cdots\sigma_{k_1}Q$의 sink인 것이다. 이러한 나열에 대하여 *Coxeter functor<sub>콕세터 함자</sub>*를
 
 $$C^+=S_{k_n}^+\cdots S_{k_2}^+ S_{k_1}^+:\Rep(Q)\longrightarrow\Rep(Q)$$
 

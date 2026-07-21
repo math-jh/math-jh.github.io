@@ -147,7 +147,7 @@ $$\partial_{q_i}\!\left(e^{W_q/z}\,\omega\right) = \frac{\partial_{q_i} W_q}{z}\
 [§두브로빈 접속, ⁋정의 1](/ko/math/mirror_symmetry/dubrovin_connection#def1)의 A-model Dubrovin connection $\nabla^z$와 직접 비교 가능하도록, Gauss-Manin connection을 $z$만큼 rescaling한 *B-model connection*을 정의한다.
 
 ::: 정의 6 (B-model connection)
-$\mathcal{H}$ 위에 *B-model connection<sub>B-model 접속</sub>* $\nabla^z_B$을
+$\mathcal{H}$ 위에 *B-model connection<sub>B-모델 접속</sub>* $\nabla^z_B$을
 
 $$\nabla^z_B := z\nabla^{GM}$$
 

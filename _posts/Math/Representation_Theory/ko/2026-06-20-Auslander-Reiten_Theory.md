@@ -59,7 +59,7 @@ short exact sequence
 
 $$0\longrightarrow A\xrightarrow{\ f\ }B\xrightarrow{\ g\ }C\longrightarrow 0$$
 
-이 *almost split sequence<sub>거의 분할 수열</sub>* 또는 *Auslander–Reiten sequence<sub>Auslander–Reiten 수열</sub>*라는 것은, 이 열이 split하지 않으며, $f$가 left almost split이고 $g$가 right almost split인 것이다.
+이 *almost split sequence<sub>거의 분할 수열</sub>* 또는 *Auslander–Reiten sequence<sub>아우스란더-라이텐 수열</sub>*라는 것은, 이 열이 split하지 않으며, $f$가 left almost split이고 $g$가 right almost split인 것이다.
 :::
 
 이 정의의 비대칭적 모양에도 불구하고 두 조건은 서로를 강하게 제약한다. $g$가 right almost split이고 $C$로의 split epimorphism이 아니라는 것은, $C$로 가는 모든 사상 가운데 split epi로 들어오지 못하는 것들이 전부 $B$를 경유함을 뜻한다. 특히 항등사상 $\id_C:C\rightarrow C$는 retraction이지만, $C$가 indecomposable일 때 $C$의 proper submodule이나 다른 indecomposable로부터 들어오는 비자명한 사상은 모두 $g$를 통과한다. Almost split sequence에서 $A$와 $C$가 자동으로 indecomposable이 됨을 다음에서 확인한다.
@@ -116,7 +116,7 @@ functor $(-)^{\ast}=\Hom_A(-,A)$는 left $A$-module을 right $A$-module로 보�
 
 $$\D M=\Hom_k(M,k)$$
 
-로 정의한다. $M$이 left $A$-module이면 $\D M$ 위에 $(\xi\cdot a)(m)=\xi(am)$ ($\xi\in\D M$, $a\in A$, $m\in M$) 으로 right $A$-action을 주어 $\D M$을 right $A$-module로 만들고, symmetric으로 right module을 left module로 옮긴다. 유한차원 벡터공간 위에서 evaluation 사상 $M\rightarrow\D\D M$이 isomorphism이므로 $\D$는 left와 right module category 사이의 contravariant equivalence이다. 이를 이용하여 non-projective indecomposable left $A$-module $C$의 *Auslander–Reiten translate<sub>AR 변환</sub>*를
+로 정의한다. $M$이 left $A$-module이면 $\D M$ 위에 $(\xi\cdot a)(m)=\xi(am)$ ($\xi\in\D M$, $a\in A$, $m\in M$) 으로 right $A$-action을 주어 $\D M$을 right $A$-module로 만들고, symmetric으로 right module을 left module로 옮긴다. 유한차원 벡터공간 위에서 evaluation 사상 $M\rightarrow\D\D M$이 isomorphism이므로 $\D$는 left와 right module category 사이의 contravariant equivalence이다. 이를 이용하여 non-projective indecomposable left $A$-module $C$의 *Auslander–Reiten translate<sub>아우스란더-라이텐 변환</sub>*를
 
 $$\tau C=\D\Tr C$$
 

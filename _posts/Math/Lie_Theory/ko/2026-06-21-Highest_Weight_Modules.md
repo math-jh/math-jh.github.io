@@ -35,7 +35,7 @@ $$\mathfrak{n}^+=\bigoplus_{\alpha\in\Phi^+}\mathfrak{g}_\alpha,\qquad\mathfrak{
 
 $$\mathfrak{b}=\mathfrak{h}\oplus\mathfrak{n}^+$$
 
-을 $\mathfrak{g}$의 *Borel subalgebra<sub>보렐 subalgebra</sub>*라 부른다.
+을 $\mathfrak{g}$의 *Borel subalgebra<sub>보렐 부분대수</sub>*라 부른다.
 :::
 
 $[\mathfrak{g}_\alpha,\mathfrak{g}_\beta]\subseteq\mathfrak{g}_{\alpha+\beta}$이고 ([§근계, ⁋명제 6](/ko/math/lie_theory/root_systems#prop6)) 두 positive root의 합은 다시 positive root이거나 root가 아니므로, $\mathfrak{n}^+$는 $\mathfrak{g}$의 부분 Lie algebra이며 같은 이유로 $\mathfrak{n}^-$도 그러하다. 또한 $[\mathfrak{h},\mathfrak{g}_\alpha]\subseteq\mathfrak{g}_\alpha$이므로 $\mathfrak{h}$가 $\mathfrak{n}^+$를 normalize하여 $\mathfrak{b}=\mathfrak{h}\oplus\mathfrak{n}^+$ 역시 부분 Lie algebra이고, $\mathfrak{n}^+$는 $\mathfrak{b}$의 ideal이다. 벡터공간으로서
@@ -159,7 +159,7 @@ $W$가 submodule이므로 $\mathfrak{h}$-action에 대해 닫혀 있고, [명제
 
 $$L(\lambda)=M(\lambda)/M^{\mathrm{rad}}(\lambda)$$
 
-을 highest weight $\lambda$의 *irreducible highest weight module<sub>irreducible 최고무게 가군</sub>*이라 부른다.
+을 highest weight $\lambda$의 *irreducible highest weight module<sub>기약 최고무게 가군</sub>*이라 부른다.
 :::
 
 $L(\lambda)$는 유일한 maximal submodule에 대한 quotient이므로 $0$이 아닌 proper submodule을 갖지 않아 irreducible이며, $v_\lambda^+$의 상 $\bar v_\lambda$가 highest weight $\lambda$의 highest weight vector로서 $L(\lambda)$를 생성한다. 다음 명제는 $L(\lambda)$가 highest weight $\lambda$를 갖는 유일한 irreducible 가군임을 보여, weight $\lambda$가 irreducible 가군을 동형을 무시하고 완전히 결정함을 확립한다.

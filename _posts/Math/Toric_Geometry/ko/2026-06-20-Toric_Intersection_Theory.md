@@ -24,7 +24,7 @@ published: false
 [§토릭 다양체의 정의, ⁋명제 5](/ko/math/toric_geometry/toric_varieties#prop5) 직후에 보았듯, $X_\Sigma$의 $T_N$-action에 의한 orbit들은 fan의 cone들과 일대일 대응한다. 구체적으로 $d$차원 cone $\sigma \in \Sigma(d)$에 대응하는 orbit $O(\sigma)$는 차원 $n - d$의 torus $(\mathbb{C}^\ast)^{n-d}$와 isomorphic하다. Chow ring을 다루기 위해서는 이 orbit이 아니라 그 Zariski closure가 필요하다.
 
 ::: 정의 1
-Cone $\sigma \in \Sigma$에 대해, orbit $O(\sigma)$의 Zariski closure를 *orbit closure<sub>궤도 closure</sub>* $V(\sigma)$라 적는다. 즉
+Cone $\sigma \in \Sigma$에 대해, orbit $O(\sigma)$의 Zariski closure를 *orbit closure* $V(\sigma)$라 적는다. 즉
 
 $$V(\sigma) = \overline{O(\sigma)} \subseteq X_\Sigma$$
 

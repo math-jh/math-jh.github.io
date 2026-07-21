@@ -102,7 +102,7 @@ $$T\times_\mathcal{X}T'\cong(T\times_S T')\times_{\mathcal{X}\times_S \mathcal{X
 이제 기하학적 stack을 정의한다. 두 조건은 [명제 5](#prop5)에서 분석한 대각선의 표현가능성과, scheme으로부터의 smooth 전사 atlas의 존재이다.
 
 ::: 정의 6
-Site $(\Sch, \mathrm{fppf})$ 위의 stack $\mathcal{X}$ (base scheme $S$ 위)이 *대수적 stack* 또는 *Artin stack<sub>아틴 stack</sub>*이라는 것은 다음 두 조건을 만족하는 것이다.
+Site $(\Sch, \mathrm{fppf})$ 위의 stack $\mathcal{X}$ (base scheme $S$ 위)이 *대수적 stack* 또는 *Artin stack<sub>아틴 스택</sub>*이라는 것은 다음 두 조건을 만족하는 것이다.
 
 1. (표현가능 대각선) 대각선 $\Delta:\mathcal{X} \rightarrow \mathcal{X}\times_S \mathcal{X}$이 algebraic space에 의해 표현가능하다.
 2. (smooth atlas) scheme $U$과 표현가능 smooth 전사 사상 $\pi: U \rightarrow \mathcal{X}$이 존재한다. 이 $\pi$을 $\mathcal{X}$의 *atlas<sub>아틀라스</sub>* (또는 *presentation*)라 부른다.
@@ -133,7 +133,7 @@ DM stack과 Artin stack의 차이는 정확히 이 stabilizer가 양의 차원�
 이하에서 $G$은 base scheme $S$ 위의 평탄·분리 group scheme이고 ([\[스킴\] §점함자, ⁋정의 14](/ko/math/scheme_theory/functor_of_points#def14)), $X$은 $S$-scheme으로서 $G$의 좌작용 $\sigma: G\times_S X \rightarrow X$을 받는다 하자. Torsor는 [§Fibered category와 stack, ⁋정의 18](/ko/math/stacks/fibered_categories_and_stacks#def18)의 좌작용 convention을 따른다.
 
 ::: 정의 8
-위의 자료에 대하여 *quotient stack<sub>몫 stack</sub>* $[X/G]$은 다음 CFG이다. $T\in \Sch/S$ 위의 대상은 쌍 $(P, \varphi)$로서
+위의 자료에 대하여 *quotient stack<sub>몫 스택</sub>* $[X/G]$은 다음 CFG이다. $T\in \Sch/S$ 위의 대상은 쌍 $(P, \varphi)$로서
 
 1. $P \rightarrow T$은 $G$-torsor(principal $G$-bundle)이고,
 2. $\varphi: P \rightarrow X$은 $G$-equivariant 사상, 곧 $\varphi(g\cdot p)=g\cdot \varphi(p)$을 만족하는 사상

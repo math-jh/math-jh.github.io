@@ -140,7 +140,7 @@ $$\partial_{t^a}\bigl((t_{(2)})^2/2\bigr) = \partial_{t^a}\!\left(\frac{1}{2}\su
 로 직접 확인된다. Quantum 부분의 antiderivative는 $q^\beta = e^{t_{(2)}\cdot \beta}$로부터 오는 관계 $q_a\partial_{q_a} q^\beta = (T_a \cdot \beta) q^\beta$을 이용해 $\beta$별로 풀어내면, 각 $\beta$에 대해 $q^\beta$ 인자와 *primary* GW invariant ($\psi$-class 삽입 없는 descendant invariant) $\langle T_a, T^c\rangle_{0, 2, \beta}$로 결정되는 $H^\ast(X)$-valued correction으로 정리되며, 따라서 $s_2$는 classical $(t_{(2)})^2/2$와 이 quantum correction의 합이 된다. 더 높은 $z^{-k}$ ($k \geq 2$) 차수에서는 같은 recursion을 따라 $\tau_{k-1}(T_a)$ 형태의 *gravitational descendant*가 차례로 누적되며, $J$-function은 결국 이렇게 강제되는 fundamental solution을 한 줄로 명시적으로 적은 것이다.
 
 ::: 정의 3
-$X$의 (small) *Givental $J$-function<sub>Givental J-함수</sub>* $J_X: (\mathbb{C}^\ast)^r \times \mathbb{C}^\ast \rightarrow H^\ast(X)$는 다음으로 정의된다.
+$X$의 (small) *Givental $J$-function<sub>기벤탈 J-함수</sub>* $J_X: (\mathbb{C}^\ast)^r \times \mathbb{C}^\ast \rightarrow H^\ast(X)$는 다음으로 정의된다.
 
 $$J_X(q, z) := e^{t_{(2)}/z}\left( 1 + \sum_{\substack{\beta \in H_2(X, \mathbb{Z})_{\mathrm{eff}} \\ \beta \neq 0}} \sum_{a=0}^s q^\beta \left\langle \frac{T_a}{z(z - \psi)} \right\rangle_{0, 1, \beta} T^a \right)$$
 :::
@@ -345,7 +345,7 @@ $$z\partial_{t^a} s = T_a \star_t s\qquad (a = 0, 1, \ldots, \dim_\mathbb{C} H^\
 이며, 이것이 small case의 ($\ast$)를 $H^\ast$ 전체 방향으로 확장한 *big QDE*이다. 
 
 ::: 정의 9 (Big $J$-function)
-$X$의 *big Givental $J$-function<sub>큰 Givental $J$-함수</sub>* $J_X^{\mathrm{big}}: H^\ast(X) \times \mathbb{C}^\ast \rightarrow H^\ast(X)$는 다음으로 정의된다.
+$X$의 *big Givental $J$-function<sub>큰 기벤탈 $J$-함수</sub>* $J_X^{\mathrm{big}}: H^\ast(X) \times \mathbb{C}^\ast \rightarrow H^\ast(X)$는 다음으로 정의된다.
 
 $$J_X^{\mathrm{big}}(t, z) := e^{t_{(2)}/z}\left( 1 + \sum_{\substack{\beta \in H_2(X, \mathbb{Z})_{\mathrm{eff}}, n \geq 0 \\ (\beta, n) \neq (0, 0)}} \sum_{a=0}^s \frac{q^\beta}{n!} \left\langle \frac{T_a}{z - \psi}, t, \ldots, t \right\rangle_{0, n+1, \beta} T^a \right)$$
 

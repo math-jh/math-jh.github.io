@@ -320,7 +320,7 @@ $$
 L^{n-k} : H^k(X, \mathbb{C}) \xrightarrow{\ \cong\ } H^{2n-k}(X, \mathbb{C})
 $$
 
-은 동형이다. 더 나아가 $k$번째 *primitive cohomology<sub>원시 cohomology</sub>*를 $P^k = \ker(L^{n-k+1} : H^k \rightarrow H^{2n-k+2})$로 두면, *Lefschetz 분해<sub>Lefschetz decomposition</sub>*
+은 동형이다. 더 나아가 $k$번째 *primitive cohomology*를 $P^k = \ker(L^{n-k+1} : H^k \rightarrow H^{2n-k+2})$로 두면, *Lefschetz 분해<sub>Lefschetz decomposition</sub>*
 
 $$
 H^k(X, \mathbb{C}) = \bigoplus_{j \geq 0} L^j\, P^{k-2j}
