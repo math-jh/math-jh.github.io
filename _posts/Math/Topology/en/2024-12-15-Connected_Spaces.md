@@ -10,8 +10,9 @@ sidebar:
 
 date: 2024-12-15
 weight: 18
-translated_at: 2026-07-21T06:15:02+00:00
+translated_at: 2026-07-21T07:45:01+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-21T07:45:01+00:00
 ---
 Now we examine one of the most important concepts in topology: connectedness.
 
@@ -19,7 +20,7 @@ Now we examine one of the most important concepts in topology: connectedness.
 A topological space $X$ is called a *connected space* if $X$ cannot be written as the union of two disjoint nonempty open sets. More generally, a subset $A$ of $X$ is connected if $A$ with the subspace topology is connected.
 :::
 
-In other words, a topological space $X$ is disconnected if there exist two disjoint nonempty open sets $U,V$ such that $X=U\cup V$. In this case $U$ and $V$ are complements of each other, so they are both open and closed simultaneously; hence we know that replacing "open" with "closed" in the above condition yields the same notion. On the other hand, for a subset $A\subseteq X$, unpacking the definition of the subspace topology, $A$ being disconnected means that there exist two open sets $U,V$ in $X$ such that
+In other words, a topological space $X$ is disconnected when there exist two disjoint nonempty open sets $U,V$ with $X=U\cup V$. In this case $U$ and $V$ are complements of each other, so they are simultaneously open and closed; hence replacing "open" with "closed" in the above condition yields the same notion. On the other hand, for a subset $A\subseteq X$, unpacking the definition of the subspace topology, $A$ being disconnected means that there exist two open sets $U,V$ in $X$ such that
 
 $$A=(U\cap A)\cup (V\cap A),\qquad U\cap V\cap A=\emptyset$$
 
@@ -36,7 +37,7 @@ $$\cl_B(A)=B\cap \cl_X(A)=B$$
 so $A$ is a dense subset of $B$. ([§Subspaces, ⁋Proposition 5](/en/math/topology/subspaces#prop5)) Now suppose, toward a contradiction, that there exist two disjoint open sets $U,V$ in $B$ with $U\cup V=B$. Then since $A$ is dense in $B$, both $U\cap A$ and $V\cap A$ are nonempty and $U\cap V\cap A=\emptyset$. This contradicts the assumption that $A$ is connected.
 :::
 
-Also, the following proposition is intuitively plausible.
+The following proposition is also intuitively plausible.
 
 ::: Proposition 3
 For a family $(A_i)$ of connected sets, if $A_i\cap A_j\neq\emptyset$ holds for every $i,j$, then $A=\bigcup A_i$ is also connected.
@@ -65,11 +66,11 @@ Suppose, toward a contradiction, that $f(A)$ is not connected, and choose open s
 
 $$f(A)=(V_1\cap f(A))\cup (V_2\cap f(A)), \qquad V_1\cap V_2\cap f(A)=\emptyset.$$
 
-Then $f^{-1}(V_1),f^{-1}(V_2)$ are open sets in $X$, and
+Then $f^{-1}(V_1),f^{-1}(V_2)$ are open in $X$, and
 
 $$A=(A\cap f^{-1}(V_1))\cup (A\cap f^{-1}(V_2)),\qquad f^{-1}(V_1)\cap f^{-1}(V_2)\cap A=\emptyset.$$
 
-From the assumption that $A$ is connected, we conclude that either $V_1\cap f(A)=\emptyset$ or $V_2\cap f(A)=\emptyset$.
+Since $A$ is connected, we conclude that either $V_1\cap f(A)=\emptyset$ or $V_2\cap f(A)=\emptyset$.
 :::
 
 From this we obtain the following corollary.
@@ -110,7 +111,7 @@ By definition, if $X$ is connected then $X$ has a unique connected component. Mo
 
 $$X=\bigcup_{i\in I} U_i.$$
 
-Moreover, by [Proposition 2](#prop2) each $U_i$ must be a closed set. If $I$ is finite, then the $U_i$ are all simultaneously open and closed. Of course this does not apply when there are infinitely many connected components, but any clopen set in an arbitrary topological space must be a union of connected components. For if some connected component $C$ met a clopen set $A$ and also met its complement, then $C\cap A$ and $C\setminus A$ would be two open sets partitioning $C$.
+Moreover, by [Proposition 2](#prop2) each $U_i$ must be closed. If $I$ is finite, then the $U_i$ are all simultaneously open and closed. Of course this does not apply when there are infinitely many connected components, but any clopen set in an arbitrary topological space must be a union of connected components. For if some connected component $C$ met a clopen set $A$ and also met its complement, then $C\cap A$ and $C\setminus A$ would be two open sets partitioning $C$.
 
 Furthermore, the following holds.
 
