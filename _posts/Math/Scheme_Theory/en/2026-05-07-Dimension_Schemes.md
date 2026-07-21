@@ -10,8 +10,9 @@ sidebar:
 
 date: 2025-03-14
 weight: 12
-translated_at: 2026-07-21T21:45:02+00:00
+translated_at: 2026-07-21T22:45:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-21T22:45:02+00:00
 ---
 ## Dimension of Schemes
 
@@ -21,81 +22,81 @@ Now we define the dimension of a scheme.
 The *dimension* of a scheme $X$ is defined as the Krull dimension of the topological space $X$. ([[Topology] §Dimension, ⁋Definition 10](/en/math/topology/dimension#def10))
 :::
 
-Then from the Galois correspondence of [[Spectrums] ⁋Proposition 16](/en/math/scheme_theory/spectrums#prop16), we know that the dimension of $\Spec A$ as a scheme equals the dimension of $A$ as a ring. ([[Commutative Algebra] §Dimension, ⁋Definition 1](/en/math/commutative_algebra/Krull_dimension#def1)) Moreover, by definition one can show that $\Spec A$ and $\Spec A/\mathfrak{N}(A)$ are homeomorphic, so $\dim A=\dim A/\mathfrak{N}(A)$ holds. That is, reducedness does not affect dimension.
+Then from the Galois correspondence of [[Spectrums] ⁋Proposition 16](/en/math/scheme_theory/spectrums#prop16), we know that the dimension of $\Spec A$ as a scheme equals the dimension of $A$ as a ring. ([[Commutative Algebra] §Dimension, ⁋Definition 1](/en/math/commutative_algebra/Krull_dimension#def1)) Moreover, by definition one can show that $\Spec A$ and $\Spec A/\mathfrak{N}(A)$ are homeomorphic, so $\dim A=\dim A/\mathfrak{N}(A)$. That is, reducedness does not affect dimension.
 
-On the other hand, for the same reason as [[Topology] §Dimension, ⁋Proposition 14](/en/math/topology/dimension#prop14), the following holds.
+On the other hand, by the same reasoning as [[Topology] §Dimension, ⁋Proposition 14](/en/math/topology/dimension#prop14), the following holds.
 
 ::: Proposition 2
-For any scheme $X$, $\dim X=n$ is equivalent to the existence of an affine open covering $(U_i)$ of $X$ such that $\dim U_i\leq n$ for all $U_i$, and equality holds for at least one $i$.
+For any scheme $X$, the condition $\dim X=n$ is equivalent to the existence of an affine open covering $(U_i)$ of $X$ such that $\dim U_i\leq n$ for all $i$, with equality for at least one $i$.
 :::
 ::: Proof
 Given any chain of irreducible closed subsets of $X$
 
 $$Y_0\subsetneq Y_1\subsetneq\cdots\subsetneq Y_r$$
 
-the generic point $y_0$ of the smallest term $Y_0$ is a point of $X$, so it belongs to some $U_i$ by the covering $(U_i)$. Then every term of the chain meets $U_i$, so considering the inclusion-preserving bijection of [[Topology] §Dimension, ⁋Proposition 14](/en/math/topology/dimension#prop14), it corresponds to a chain of the same length inside $U_i$. Conversely, any chain in $U_i$ lifts to $X$ by taking closure, so $\dim X\geq\dim U_i$, and therefore $\dim X=\sup_i\dim U_i$, which is equivalent to the condition of the proposition.
+the generic point $y_0$ of the smallest term $Y_0$ is a point of $X$, so it belongs to some $U_i$ in the covering $(U_i)$. Then every term of the chain meets $U_i$, so by the inclusion-preserving bijection of [[Topology] §Dimension, ⁋Proposition 14](/en/math/topology/dimension#prop14), it corresponds to a chain of the same length inside $U_i$. Conversely, any chain in $U_i$ lifts to $X$ by taking closures, so $\dim X\geq\dim U_i$, and therefore $\dim X=\sup_i\dim U_i$, which is equivalent to the condition in the proposition.
 :::
 
-On the other hand, we saw in [[Properties of Scheme Morphisms] ⁋Proposition 14](/en/math/scheme_theory/properties_of_scheme_morphisms#prop14) that a finite morphism is an integral morphism of finite type, and in [[Fiber Products] ⁋Proposition 14](/en/math/scheme_theory/fiber_products#prop14) that any finite morphism is quasi-finite. In general, there exist morphisms that are integral but not of finite type, so until now we have not been able to say anything about the fibers of integral morphisms.
+On the other hand, we saw in [[Properties of Scheme Morphisms] ⁋Proposition 14](/en/math/scheme_theory/properties_of_scheme_morphisms#prop14) that a finite morphism is an integral morphism of finite type, and in [[Fiber Products] ⁋Proposition 14](/en/math/scheme_theory/fiber_products#prop14) that any finite morphism is quasi-finite. In general, there exist morphisms that are integral but not of finite type, so we have not yet been able to say anything about the fibers of integral morphisms.
 
 ::: Example 3
-For example, consider an algebraic closure $\overline{\mathbb{Q}}$ of $\mathbb{Q}$. Any element of $\overline{\mathbb{Q}}$ is algebraic over $\mathbb{Q}$, hence integral, and therefore $\mathbb{Q} \rightarrow \overline{\mathbb{Q}}$ is an integral extension, from which the scheme morphism $\varphi:\Spec \overline{\mathbb{Q}} \rightarrow \Spec \mathbb{Q}$ is also an integral morphism.
+For example, consider an algebraic closure $\overline{\mathbb{Q}}$ of $\mathbb{Q}$. Every element of $\overline{\mathbb{Q}}$ is algebraic over $\mathbb{Q}$, hence integral, and therefore $\mathbb{Q} \rightarrow \overline{\mathbb{Q}}$ is an integral extension; consequently the scheme morphism $\varphi:\Spec \overline{\mathbb{Q}} \rightarrow \Spec \mathbb{Q}$ is also an integral morphism.
 
-Now if we base change $\varphi$ along $\Spec\overline{\mathbb{Q}}\rightarrow\Spec\mathbb{Q}$, we obtain the following pullback diagram
+Now base change $\varphi$ along $\Spec\overline{\mathbb{Q}}\rightarrow\Spec\mathbb{Q}$ to obtain the following pullback diagram
 
 ![pullback](/assets/images/Math/Scheme_Theory/Dimension_Schemes-1.svg){:style="width:13.60em" class="invert" .align-center}
 
-and at this time the left vertical map
+The left-hand vertical map
 
 $$\Spec(\overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}})\rightarrow \Spec \overline{\mathbb{Q}}$$
 
 is also integral by [[Fiber Products] ⁋Proposition 15](/en/math/scheme_theory/fiber_products#prop15).
 
-To examine this map, let us look concretely at the ring homomorphism $\overline{\mathbb{Q}}\rightarrow \overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}}$. Looking at a section of the above map between schemes is the same as looking at a retraction of this map, which comes from the following surjective ring homomorphism
+To examine this map, let us look concretely at the ring homomorphism $\overline{\mathbb{Q}}\rightarrow \overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}}$. Finding a section of the above map of schemes is the same as finding a retraction of this homomorphism, which arises from the following surjective ring homomorphism
 
 $$\overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}}\rightarrow\overline{\mathbb{Q}},\qquad a\otimes b\mapsto a\sigma(b)$$
 
-Concretely, the kernel $\mathfrak{p}_\sigma$ of this ring homomorphism is a maximal ideal, so it defines a point of $\Spec(\overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}})$, and if $\sigma\neq\tau$ then choosing $b\in\overline{\mathbb{Q}}$ with $\sigma(b)\neq\tau(b)$, we have $1\otimes b-\sigma(b)\otimes 1\in\mathfrak{p}_\sigma$ but it does not belong to $\mathfrak{p}_\tau$, so $\mathfrak{p}_\sigma\neq\mathfrak{p}_\tau$. Therefore $\Spec(\overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}})$ has at least as many points as $\Gal(\overline{\mathbb{Q}}/\mathbb{Q})$, that is, infinitely many points, and $\Spec(\overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}})\rightarrow\Spec\overline{\mathbb{Q}}$ is not a quasi-finite morphism, hence not a finite morphism.
+Specifically, the kernel $\mathfrak{p}_\sigma$ of this ring homomorphism is a maximal ideal, hence defines a point of $\Spec(\overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}})$, and if $\sigma\neq\tau$ then choosing $b\in\overline{\mathbb{Q}}$ with $\sigma(b)\neq\tau(b)$, we have $1\otimes b-\sigma(b)\otimes 1\in\mathfrak{p}_\sigma$ but this element does not belong to $\mathfrak{p}_\tau$, so $\mathfrak{p}_\sigma\neq\mathfrak{p}_\tau$. Therefore $\Spec(\overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}})$ has at least as many points as $\Gal(\overline{\mathbb{Q}}/\mathbb{Q})$, that is, infinitely many, and $\Spec(\overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}})\rightarrow\Spec\overline{\mathbb{Q}}$ is not a quasi-finite morphism, hence not a finite morphism.
 :::
 
-Or consider the simpler example $\Spec \mathbb{C}\rightarrow \Spec \mathbb{R}$. Since $\mathbb{R}$ and $\mathbb{C}$ are both fields, $\Spec\mathbb{C}$ and $\Spec\mathbb{R}$ each consist of a single point, so this map itself is a trivial map from one point to one point. However, if we pull this back along $\Spec \mathbb{C}\rightarrow \Spec \mathbb{R}$ to make a similar map as in the example above
+Or consider the simpler example $\Spec \mathbb{C}\rightarrow \Spec \mathbb{R}$. Since $\mathbb{R}$ and $\mathbb{C}$ are both fields, $\Spec\mathbb{C}$ and $\Spec\mathbb{R}$ each consist of a single point, so this map itself is trivially a map from one point to one point. However, pulling it back along $\Spec \mathbb{C}\rightarrow \Spec \mathbb{R}$ yields a map analogous to the one above,
 
 $$\Spec(\mathbb{C}\otimes_\mathbb{R} \mathbb{C}) \rightarrow \Spec \mathbb{C}$$
 
-then $\mathbb{C}\otimes_\mathbb{R}\mathbb{C}$ is no longer a field. Indeed, since $\Spec\mathbb{C}=\Spec\mathbb{R}[\x]/(\x^2+1)$,
+and $\mathbb{C}\otimes_\mathbb{R}\mathbb{C}$ is no longer a field. Indeed, since $\Spec\mathbb{C}=\Spec\mathbb{R}[\x]/(\x^2+1)$,
 
 $$\mathbb{C}\otimes_\mathbb{R} \mathbb{C}\cong \mathbb{C}\otimes_\mathbb{R} \frac{\mathbb{R}[\x]}{(\x^2+1)}\cong \frac{\mathbb{C}[\x]}{(\x^2+1)}$$
 
-and $\x^2+1$ factors in $\mathbb{C}$ as a product of two linear factors $\x^2+1=(\x-i)(\x+i)$, and since $(\x-i)$ and $(\x+i)$ are comaximal, by [[Ring Theory] §Chinese Remainder Theorem, ⁋Proposition 6](/en/math/ring_theory/chinese_remainder_theorem#prop6)
+and $\x^2+1$ factors over $\mathbb{C}$ as a product of two linear factors $\x^2+1=(\x-i)(\x+i)$; since $(\x-i)$ and $(\x+i)$ are comaximal, by [[Ring Theory] §Chinese Remainder Theorem, ⁋Proposition 6](/en/math/ring_theory/chinese_remainder_theorem#prop6)
 
 $$\frac{\mathbb{C}[\x]}{((\x-i)(\x+i))}\cong\frac{\mathbb{C}[\x]}{(\x-i)}\times\frac{\mathbb{C}[\x]}{(\x+i)}\cong\mathbb{C}\times\mathbb{C}$$
 
-Thinking in the language of Galois groups from the example above, this appears because the two factors $\mathbb{C}[\x]/(\x-i)$ and $\mathbb{C}[\x]/(\x+i)$ of this decomposition correspond precisely to the automorphisms $\mathbb{C}\rightarrow \mathbb{C}$ fixing $\mathbb{R}$, that is, the two elements of $\Gal(\mathbb{C}/\mathbb{R})$, and the same thing happens in [Example 3](#ex3) for $\mathbb{Q}\rightarrow \overline{\mathbb{Q}}$. The only difference is that $\Gal(\overline{\mathbb{Q}}/\mathbb{Q})$ is infinite, so the fiber has infinitely many points rather than two.
+Thinking in the language of Galois groups as in the example above, this decomposition arises because the two factors $\mathbb{C}[\x]/(\x-i)$ and $\mathbb{C}[\x]/(\x+i)$ correspond precisely to the automorphisms $\mathbb{C}\rightarrow \mathbb{C}$ fixing $\mathbb{R}$, that is, the two elements of $\Gal(\mathbb{C}/\mathbb{R})$, and the same phenomenon occurs in [Example 3](#ex3) for $\mathbb{Q}\rightarrow \overline{\mathbb{Q}}$. The only difference is that $\Gal(\overline{\mathbb{Q}}/\mathbb{Q})$ is infinite, so the fiber has infinitely many points rather than two.
 
-Nevertheless, this example suggests some kind of finiteness for the fibers of an integral morphism; for instance, $\Gal(\overline{\mathbb{Q}}/\mathbb{Q})$ is a profinite group, so ([[Field Theory] §Properties of Galois Groups, ⁋Proposition 5](/en/math/field_theory/properties_of_galois_extensions#prop5)) it becomes $0$-dimensional. This is a fact that holds for any integral morphism.
+Nevertheless, this example suggests some kind of finiteness for the fibers of an integral morphism; for instance, $\Gal(\overline{\mathbb{Q}}/\mathbb{Q})$ is a profinite group, hence ([[Field Theory] §Properties of Galois Groups, ⁋Proposition 5](/en/math/field_theory/properties_of_galois_extensions#prop5)) $0$-dimensional. This is a fact that holds for any integral morphism.
 
 ::: Proposition 4
-Any fiber of an integral morphism $\varphi: X \rightarrow Y$ is always $0$-dimensional.
+Every fiber of an integral morphism $\varphi: X \rightarrow Y$ is $0$-dimensional.
 :::
 ::: Proof
-By definition, the fiber at a point $y$ of $Y$ is given by the base change of $\varphi$ along the inclusion map $\Spec \kappa(y) \rightarrow Y$ for the residue field $\kappa(y)$ from [[Schemes] ⁋Definition 5](/en/math/scheme_theory/schemes#def5)
+By definition, the fiber over a point $y\in Y$ is given by the base change of $\varphi$ along the inclusion map $\Spec \kappa(y) \rightarrow Y$ for the residue field $\kappa(y)$ from [[Schemes] ⁋Definition 5](/en/math/scheme_theory/schemes#def5):
 
 $$\varphi^{-1}(y)=X\times_Y\Spec \kappa(y)$$
 
-and since integral morphisms are preserved under base change ([[Fiber Products] ⁋Proposition 15](/en/math/scheme_theory/fiber_products#prop15))
+Since integral morphisms are preserved under base change ([[Fiber Products] ⁋Proposition 15](/en/math/scheme_theory/fiber_products#prop15)),
 
 $$\varphi^{-1}(y)=X\times_Y\Spec \kappa(y) \rightarrow \Spec \kappa(y)$$
 
-is an integral morphism, and since an integral morphism is an affine morphism by its definition, it suffices to show $\dim \Spec B=\dim B=0$ for an integral morphism $\Spec B \rightarrow \Spec \kappa(y)$. That is, we must show that for any integral extension $\kappa(y) \rightarrow B$, there cannot exist a chain of prime ideals of $B$
+is an integral morphism, and since an integral morphism is affine by definition, it suffices to show that $\dim \Spec B=\dim B=0$ for an integral morphism $\Spec B \rightarrow \Spec \kappa(y)$. That is, we must show that for any integral extension $\kappa(y) \rightarrow B$, there cannot exist a chain of prime ideals of $B$
 
 $$\mathfrak{q}_1\subsetneq \mathfrak{q}_2$$
 
-This is the result of [[Commutative Algebra] §Integral Extensions and Ideals, ⁋Corollary 4](/en/math/commutative_algebra/lying_over_and_going_up#cor4).
+This follows from [[Commutative Algebra] §Integral Extensions and Ideals, ⁋Corollary 4](/en/math/commutative_algebra/lying_over_and_going_up#cor4).
 :::
 
-Geometrically, this proposition shows that each fiber of an integral morphism does not have positive dimension.
+Geometrically, this proposition shows that no fiber of an integral morphism has positive dimension.
 
-The [[Commutative Algebra] §Integral Extensions and Ideals, ⁋Corollary 4](/en/math/commutative_algebra/lying_over_and_going_up#cor4) used in the proof of the above proposition also holds for any integral extension $A\hookrightarrow B$. By this, contracting a chain of prime ideals of $B$ to $A$ remains strict, so $\dim B\leq\dim A$, and conversely by lying over and going up of [[Commutative Algebra] §Integral Extensions and Ideals, ⁋Proposition 1](/en/math/commutative_algebra/lying_over_and_going_up#prop1), a chain of prime ideals of $A$ lifts to $B$, so $\dim A\leq\dim B$. Therefore more generally the following holds.
+The [[Commutative Algebra] §Integral Extensions and Ideals, ⁋Corollary 4](/en/math/commutative_algebra/lying_over_and_going_up#cor4) used in the proof above also holds for any integral extension $A\hookrightarrow B$. By this, contracting a chain of prime ideals of $B$ to $A$ remains strict, so $\dim B\leq\dim A$; conversely, by lying over and going up in [[Commutative Algebra] §Integral Extensions and Ideals, ⁋Proposition 1](/en/math/commutative_algebra/lying_over_and_going_up#prop1), a chain of prime ideals of $A$ lifts to $B$, so $\dim A\leq\dim B$. Therefore, more generally, the following holds.
 
 ::: Proposition 5
 For any integral extension $\phi:A \rightarrow B$,
@@ -105,40 +106,40 @@ $$\dim\Spec A=\dim\Spec B$$
 always holds.
 :::
 
-In particular, for any integral domain $A$ and its normalization $\tilde{A}$, since the extension $A\hookrightarrow\tilde{A}$ is integral, by [Proposition 5](#prop5) we have $\dim\Spec\tilde{A}=\dim\Spec A$. Here the normalization $\tilde{A}$ is the extension obtained by enlarging $A$ until it becomes integrally closed in its field of fractions $\Frac(A)$, that is, by adjoining to $A$ all elements of $\Frac(A)$ that are integral over $A$. ([[Commutative Algebra] §Integral Extension, ⁋Definition 3](/en/math/commutative_algebra/integral_extension#def3)) By definition $A\subseteq\tilde{A}\subseteq\Frac(A)$, so $\Frac(\tilde{A})=\Frac(A)$, that is, normalization preserves the function field of $A$.
+In particular, for any integral domain $A$ and its normalization $\tilde{A}$, since the extension $A\hookrightarrow\tilde{A}$ is integral, [Proposition 5](#prop5) gives $\dim\Spec\tilde{A}=\dim\Spec A$. Here the normalization $\tilde{A}$ is the extension obtained by enlarging $A$ until it becomes integrally closed in its field of fractions $\Frac(A)$, that is, by adjoining to $A$ all elements of $\Frac(A)$ that are integral over $A$. ([[Commutative Algebra] §Integral Extension, ⁋Definition 3](/en/math/commutative_algebra/integral_extension#def3)) By definition $A\subseteq\tilde{A}\subseteq\Frac(A)$, so $\Frac(\tilde{A})=\Frac(A)$; that is, normalization preserves the function field of $A$.
 
 ::: Example 6
-In the above discussion we saw that normalization preserves the function field. Geometrically, when $A$ is the coordinate ring of an affine variety over $\mathbb{K}$, this means that the two spaces obtained by normalization are birational. ([[Algebraic Varieties] §Rational Maps, ⁋Proposition 10](/en/math/algebraic_varieties/rational_maps#prop10)) That is, normalization agrees with the original space outside a certain locus that is small enough to be negligible.
+In the discussion above we saw that normalization preserves the function field. Geometrically, when $A$ is the coordinate ring of an affine variety over $\mathbb{K}$, this means that the space obtained by normalization is birational to the original. ([[Algebraic Varieties] §Rational Maps, ⁋Proposition 10](/en/math/algebraic_varieties/rational_maps#prop10)) That is, normalization agrees with the original space outside a certain locus small enough to be negligible.
 
-Moreover, normalization makes this particular locus precisely the singular points. As a representative example, consider the cusp from [[Algebraic Varieties] §Tangent Spaces and Smoothness, ⁋Example 7](/en/math/algebraic_varieties/tangent_spaces_and_smoothness#ex7)
+Moreover, normalization makes this locus precisely the singular points. As a representative example, consider the cusp from [[Algebraic Varieties] §Tangent Spaces and Smoothness, ⁋Example 7](/en/math/algebraic_varieties/tangent_spaces_and_smoothness#ex7):
 
 $$A=\mathbb{K}[\x,\y]/(\y^2-\x^3)\cong\mathbb{K}[t^2,t^3]$$
 
-To see the field of fractions of $A$, using $t=\y/\x$ we can check that $\Frac(A)=\mathbb{K}(t)$, and at this time the element $t\in\Frac(A)$ satisfies $t^2=\x\in A$, so it is integral over $A$. Therefore the extension obtained by adjoining $t$
+To see the field of fractions of $A$, we use $t=\y/\x$ to check that $\Frac(A)=\mathbb{K}(t)$; then the element $t\in\Frac(A)$ satisfies $t^2=\x\in A$, so it is integral over $A$. Hence the extension obtained by adjoining $t$,
 
 $$A[t]=\mathbb{K}[t^2,t^3,t]=\mathbb{K}[t]$$
 
-is an integral extension of $A$, and since $A[t]$ is a UFD, it is integrally closed by [[Commutative Algebra] §Integral Extension, ⁋Proposition 9](/en/math/commutative_algebra/integral_extension#prop9), so this is precisely the normalization $\tilde{A}$.
+is an integral extension of $A$, and since $A[t]$ is a UFD, it is integrally closed by [[Commutative Algebra] §Integral Extension, ⁋Proposition 9](/en/math/commutative_algebra/integral_extension#prop9); thus this is precisely the normalization $\tilde{A}$.
 
-Now let us see geometrically what this means. We must first look at the map between spaces given by the above integral extension $A\rightarrow A[t]$
+Now let us see geometrically what this means. We first examine the map between spaces induced by the integral extension $A\rightarrow A[t]$:
 
 $$\Spec A[t]\rightarrow \Spec A$$
 
-First, looking at the origin $\mathfrak{m}=(t^2,t^3)\in\Spec A$, which is the singular point of the curve $\Spec A$, the fiber of the above map at this point is given by the following pullback diagram
+Consider the origin $\mathfrak{m}=(t^2,t^3)\in\Spec A$, which is the singular point of the curve $\Spec A$. The fiber of the above map over this point is given by the following pullback diagram
 
 ![cusp-fiber](/assets/images/Math/Scheme_Theory/Dimension_Schemes-2.svg){:style="width:17.35em" class="invert" .align-center}
 
-that is, by the following map
+that is, by the map
 
 $$\Spec(A[t]\otimes_A A/\mathfrak{m})=\Spec(A[t]/(t^2,t^3))=\Spec(A[t]/(t^2))$$
 
-That is, the fiber itself becomes a single point, but the scheme structure given on it is non-reduced, whereas the origin $\Spec A/\mathfrak{m}$ of $\Spec A$ is a reduced single point as the spectrum of a field, so the above fiber cannot be the same as this point. On the other hand, on the open subset $D(\x)$ with the origin removed, $\x=t^2$ becomes invertible, so $t=t^3\cdot(t^2)^{-1}$ comes in and
+Thus the fiber itself is a single point, but the scheme structure on it is non-reduced, whereas the origin $\Spec A/\mathfrak{m}$ of $\Spec A$ is a reduced single point, being the spectrum of a field; hence the above fiber cannot coincide with this point. On the other hand, on the open subset $D(\x)$ with the origin removed, $\x=t^2$ becomes invertible, so $t=t^3\cdot(t^2)^{-1}$ enters and
 
 $$A[\x^{-1}]=\tilde{A}[\x^{-1}]$$
 
 so the two schemes agree completely away from the origin.
 
-To examine what happens at the origin a bit more algebraically, let us look at the local ring. First, the preimage of the origin $\mathfrak{m}$ of $\Spec A$ is, by its definition, the prime ideals of $A[t]$ containing $\mathfrak{m}$, and the prime ideals containing $\mathfrak{m}A[t]=(t^2)$ are the radical $(t)$ of this ideal. Then the local ring of $A[t]$ at the origin $(t)$ is
+To examine what happens at the origin more algebraically, let us look at the local rings. First, the preimage of the origin $\mathfrak{m}$ of $\Spec A$ is, by definition, the prime ideals of $A[t]$ containing $\mathfrak{m}$; the prime ideals containing $\mathfrak{m}A[t]=(t^2)$ are exactly those containing the radical $(t)$. Then the local ring of $A[t]$ at the origin $(t)$ is
 
 $$A[t]_{(t)}=\mathbb{K}[t]_{(t)}$$
 
@@ -146,10 +147,10 @@ whereas the local ring at the origin of the original curve $\Spec A$ is
 
 $$A_{\mathfrak{m}}=\mathbb{K}[t^2,t^3]_{(t^2, t^3)}$$
 
-Comparing these reveals algebraically what normalization does at the origin. Although $A_{\mathfrak{m}}$ is a $1$-dimensional local ring, its maximal ideal cannot be generated by a single element and requires two elements $t^2$ and $t^3$, so it is not a regular local ring. ([[Commutative Algebra] §Dimension, ⁋Definition 12](/en/math/commutative_algebra/Krull_dimension#def12)) Indeed $\mathfrak{m}/\mathfrak{m}^2$ is a $2$-dimensional vector space generated by the images of $t^2$ and $t^3$, which is the same phenomenon as the tangent space at the origin of the cusp being computed as $2$-dimensional, larger than the dimension of the curve, in [[Algebraic Varieties] §Tangent Spaces and Smoothness, ⁋Example 7](/en/math/algebraic_varieties/tangent_spaces_and_smoothness#ex7). On the other hand, the local ring $A[t]_{(t)}=\mathbb{K}[t]_{(t)}$ of the normalization is a regular local ring whose maximal ideal is generated by the single element $t$. That is, normalization replaces the singular local ring $A_{\mathfrak{m}}$ by the regular local ring $A[t]_{(t)}$, thereby smoothing out the cusp.
+Comparing these reveals algebraically what normalization does at the origin. Although $A_{\mathfrak{m}}$ is a $1$-dimensional local ring, its maximal ideal cannot be generated by a single element and requires the two elements $t^2$ and $t^3$, so it is not a regular local ring. ([[Commutative Algebra] §Dimension, ⁋Definition 12](/en/math/commutative_algebra/Krull_dimension#def12)) Indeed $\mathfrak{m}/\mathfrak{m}^2$ is a $2$-dimensional vector space generated by the images of $t^2$ and $t^3$, which is the same phenomenon as the tangent space at the origin of the cusp being computed as $2$-dimensional, larger than the dimension of the curve, in [[Algebraic Varieties] §Tangent Spaces and Smoothness, ⁋Example 7](/en/math/algebraic_varieties/tangent_spaces_and_smoothness#ex7). On the other hand, the local ring $A[t]_{(t)}=\mathbb{K}[t]_{(t)}$ of the normalization is a regular local ring whose maximal ideal is generated by the single element $t$. That is, normalization replaces the singular local ring $A_{\mathfrak{m}}$ by the regular local ring $A[t]_{(t)}$, thereby resolving the cusp.
 :::
 
-For any integral scheme $X$, normalization can be defined in the same way. Cover $X$ by affine opens $\Spec A_i$. Since $X$ is integral, it has a unique generic point $x$, and this point corresponds in each $\Spec A_i$ to the minimal prime $(0)$ of the domain $A_i$, so its stalk becomes $\Frac(A_i)$. Since the stalk $\mathcal{O}_{X,x}$ is the same no matter which affine open we compute it in, all $\Frac(A_i)$ agree in a common function field $K(X)$ ([[Algebra of Schemes] §§Rational Functions](/en/math/scheme_theory/algebra_of_schemes#유리함수)), and we can take the normalization $\tilde{A}_i$ of $A_i$ inside $K(X)$ on each piece. At this time, since normalization commutes with localization ([[Commutative Algebra] §Integral Extension, ⁋Proposition 12](/en/math/commutative_algebra/integral_extension#prop12)), the restrictions of each $\Spec\tilde{A}_i$ to the overlaps $\Spec A_i\cap\Spec A_j$ agree with each other, and therefore they glue together into a single scheme $\tilde{X}$ defining the normalization morphism $\tilde{X}\rightarrow X$. This morphism is an integral morphism since $A_i\hookrightarrow\tilde{A}_i$ is an integral extension affine-locally, and by [Proposition 5](#prop5) we have $\dim\Spec\tilde{A}_i=\dim\Spec A_i$ on each piece, so from [Proposition 2](#prop2) we obtain $\dim\tilde{X}=\dim X$.
+For any integral scheme $X$, normalization can be defined in the same way. Cover $X$ by affine opens $\Spec A_i$. Since $X$ is integral, it has a unique generic point $x$, and this point corresponds in each $\Spec A_i$ to the minimal prime $(0)$ of the domain $A_i$, so its stalk is $\Frac(A_i)$. Since the stalk $\mathcal{O}_{X,x}$ is the same no matter which affine open we compute it in, all $\Frac(A_i)$ agree in a common function field $K(X)$ ([[Algebra of Schemes] §§Rational Functions](/en/math/scheme_theory/algebra_of_schemes#유리함수)), and we can take the normalization $\tilde{A}_i$ of $A_i$ inside $K(X)$ on each piece. Since normalization commutes with localization ([[Commutative Algebra] §Integral Extension, ⁋Proposition 12](/en/math/commutative_algebra/integral_extension#prop12)), the restrictions of each $\Spec\tilde{A}_i$ to the overlaps $\Spec A_i\cap\Spec A_j$ agree, and therefore they glue together into a single scheme $\tilde{X}$ defining the normalization morphism $\tilde{X}\rightarrow X$. This morphism is integral since $A_i\hookrightarrow\tilde{A}_i$ is an integral extension affine-locally, and by [Proposition 5](#prop5) we have $\dim\Spec\tilde{A}_i=\dim\Spec A_i$ on each piece, so from [Proposition 2](#prop2) we obtain $\dim\tilde{X}=\dim X$.
 
 Now we define codimension.
 
@@ -172,7 +173,7 @@ More generally, in [[Commutative Algebra] §Dimension, ⁋Definition 2](/en/math
 
 $$\dim \mathfrak{a}+\codim \mathfrak{a}\leq \dim A$$
 
-and using [[Topology] §Dimension, ⁋Proposition 14](/en/math/topology/dimension#prop14) instead of [[Commutative Algebra] §Localization, ⁋Proposition 8](/en/math/commutative_algebra/localization#prop8) used there, one can check that for a scheme $X$ and an irreducible closed subset $Y$ of $X$, the following inequality
+and using [[Topology] §Dimension, ⁋Proposition 14](/en/math/topology/dimension#prop14) in place of [[Commutative Algebra] §Localization, ⁋Proposition 8](/en/math/commutative_algebra/localization#prop8) used there, one can check that for a scheme $X$ and an irreducible closed subset $Y$ of $X$, the inequality
 
 $$\dim Y+\codim_XY\leq \dim X$$
 
@@ -194,7 +195,7 @@ From the assumption that $A$ is a finitely generated $\mathbb{K}$-algebra, we ca
 
 $$A=\mathbb{K}[y_1,\ldots, y_m]/\mathfrak{p}$$
 
-Then the images of these $y_1,\ldots, y_m$ in $\Frac(A)$ generate $\Frac(A)$ as a field extension of $\mathbb{K}$, so we must have $m\geq n$.
+Then the images of $y_1,\ldots, y_m$ in $\Frac(A)$ generate $\Frac(A)$ as a field extension of $\mathbb{K}$, so we must have $m\geq n$.
 
 Now if $m=n$, the $y_i$ are exactly the desired elements, so there is nothing more to prove. Assume $m>n$ for the induction, and suppose the theorem holds for any $k$ with $n\leq k< m$. Then from the assumption $m>n$, the elements $y_1,\ldots, y_m$ are algebraically dependent. That is, there exists an $m$-variable polynomial with coefficients in $\mathbb{K}$
 
@@ -212,30 +213,30 @@ Then by definition
 
 $$f(z_1+y_m^{r_1},\ldots, z_{m-1}+y_m^{r_{m-1}}, y_m)=0\tag{$\ast\ast$}$$
 
-holds. Now substituting
+holds. Substituting
 
 $$\x_1=z_1+y_m^{r_1},\quad \ldots\quad,\quad \x_{m-1}=z_{m-1}+y_m^{r_{m-1}},\quad \x_m=y_m$$
 
-into each monomial $\alpha_{d_1d_2\cdots d_m}\x_1^{d_1}\cdots\x_m^{d_m}$ comprising $f$ in ($\ast$) and expanding, the result will be a power of $y_m$ with constant coefficient
+into each monomial $\alpha_{d_1d_2\cdots d_m}\x_1^{d_1}\cdots\x_m^{d_m}$ comprising $f$ in ($\ast$) and expanding, the result is a power of $y_m$ with constant coefficient
 
 $$\alpha_{d_1d_2\cdots d_m}y_m^{r_1d_1+\cdots+r_{m-1}d_{m-1}+d_m}$$
 
-and other terms involving $z_k$. Now choosing an integer $r$ larger than the maximum of the exponents $d_j$ that actually appear in $f$ and setting $r_i=r^i$, the exponents
+together with other terms involving the $z_k$. Now choose an integer $r$ larger than the maximum of the exponents $d_j$ actually appearing in $f$ and set $r_i=r^i$; then the exponents
 
 $$r_1d_1+\cdots+r_{m-1}d_{m-1}+d_m=d_m+d_1r+\cdots+d_{m-1}r^{m-1}$$
 
-take distinct values for different monomials of $f$ by the uniqueness of base-$r$ expansion, so exactly one such term remains as the leading term. Its coefficient is a nonzero element of $\mathbb{K}$, so we can divide both sides by it, and therefore the above equality ($\ast\ast$) shows that $y_m$ is integrally dependent on $z_1,\ldots, z_{m-1}$.
+take distinct values for different monomials of $f$ by the uniqueness of base-$r$ expansion, so exactly one such term survives as the leading term. Its coefficient is a nonzero element of $\mathbb{K}$, so we may divide both sides by it, and therefore the equality ($\ast\ast$) shows that $y_m$ is integrally dependent on $z_1,\ldots, z_{m-1}$.
 
-On the other hand, let $A'$ be the $\mathbb{K}$-subalgebra of $A$ generated by $z_1,\ldots, z_{m-1}$, that is, the $\mathbb{K}$-subalgebra $A'$ of $A$ where the coefficients exist when viewing ($\ast\ast$) as a polynomial in $y_m$. By the above argument $A$ is a finite $A'$-module, and therefore $\Frac(A)$ is an algebraic extension of $\Frac(A')$, so $\trdeg_\mathbb{K}\Frac(A')=n$. Then $A'$ is an integral domain generated by $m-1$ elements, so by the induction hypothesis there exist $x_1,\ldots, x_n\in A'$ satisfying the desired condition, and since $A'$ is a finite $\mathbb{K}[x_1,\ldots, x_n]$-module, $A$ is also a finite $\mathbb{K}[x_1,\ldots, x_n]$-module.
+On the other hand, let $A'$ be the $\mathbb{K}$-subalgebra of $A$ generated by $z_1,\ldots, z_{m-1}$, that is, the $\mathbb{K}$-subalgebra of $A$ containing the coefficients when ($\ast\ast$) is viewed as a polynomial in $y_m$. By the above argument $A$ is a finite $A'$-module, and therefore $\Frac(A)$ is an algebraic extension of $\Frac(A')$, so $\trdeg_\mathbb{K}\Frac(A')=n$. Then $A'$ is an integral domain generated by $m-1$ elements, so by the induction hypothesis there exist $x_1,\ldots, x_n\in A'$ satisfying the desired condition, and since $A'$ is a finite $\mathbb{K}[x_1,\ldots, x_n]$-module, $A$ is also a finite $\mathbb{K}[x_1,\ldots, x_n]$-module.
 :::
 
-Geometrically, setting $A=\mathbb{K}[y_1,\ldots, y_m]/\mathfrak{p}$ means that $\Spec A$ is an integral closed subscheme of affine space $\mathbb{A}^m_\mathbb{K}$, so the finite ring homomorphism $\mathbb{K}[x_1,\ldots, x_n] \rightarrow \mathbb{K}[y_1,\ldots, y_m]/\mathfrak{p}$ obtained as a result of the above theorem corresponds geometrically to finding a finite scheme morphism $\Spec A \rightarrow \Spec \mathbb{K}[x_1,\ldots, x_n]$. Now since the finite extension $\mathbb{K}[x_1,\ldots, x_n] \rightarrow A$ is an integral extension, by [Proposition 5](#prop5) we have $\dim A=\dim \mathbb{K}[x_1,\ldots, x_n]$, so by [[Commutative Algebra] §System of Parameters, ⁋Corollary 11](/en/math/commutative_algebra/system_of_parameters#cor11) we obtain the following result.
+Geometrically, setting $A=\mathbb{K}[y_1,\ldots, y_m]/\mathfrak{p}$ means that $\Spec A$ is an integral closed subscheme of affine space $\mathbb{A}^m_\mathbb{K}$, so the finite ring homomorphism $\mathbb{K}[x_1,\ldots, x_n] \rightarrow \mathbb{K}[y_1,\ldots, y_m]/\mathfrak{p}$ obtained from the above theorem corresponds geometrically to finding a finite scheme morphism $\Spec A \rightarrow \Spec \mathbb{K}[x_1,\ldots, x_n]$. Since the finite extension $\mathbb{K}[x_1,\ldots, x_n] \rightarrow A$ is an integral extension, by [Proposition 5](#prop5) we have $\dim A=\dim \mathbb{K}[x_1,\ldots, x_n]$, so by [[Commutative Algebra] §System of Parameters, ⁋Corollary 11](/en/math/commutative_algebra/system_of_parameters#cor11) we obtain the following result.
 
 ::: Proposition 10
 Let $\mathbb{K}$ be an arbitrary field and $A$ a finitely generated $\mathbb{K}$-algebra. If $A$ is an integral domain, then $\dim\Spec A=\trdeg_\mathbb{K} \Frac(A)$ holds.
 :::
 
-The most importantly used results in the above claims are of course those of [[Commutative Algebra] §Integral Extensions and Ideals](/en/math/commutative_algebra/lying_over_and_going_up). On the other hand, using the dimension formula [[Commutative Algebra] §Noether Normalization, ⁋Theorem 4](/en/math/commutative_algebra/noether_normalization#thm4), we obtain the following.
+The results most crucially used above are of course those of [[Commutative Algebra] §Integral Extensions and Ideals](/en/math/commutative_algebra/lying_over_and_going_up). On the other hand, using the dimension formula [[Commutative Algebra] §Noether Normalization, ⁋Theorem 4](/en/math/commutative_algebra/noether_normalization#thm4), we obtain the following.
 
 ::: Proposition 11
 Let $\mathbb{K}$ be an arbitrary field and $A$ a finitely generated $\mathbb{K}$-algebra. If $A$ is an integral domain and $f\in A$ is a nonzero non-unit, then $\dim A/(f)=\dim A-1$ holds.
@@ -246,13 +247,13 @@ Choose a minimal prime $\mathfrak{p}$ of $A$ containing $(f)$. By [[Commutative 
 
 ## Principal Ideal Theorem
 
-Earlier we saw that for a finite type affine integral $\mathbb{K}$-scheme $X=\Spec A$, the closed subscheme $Z(f)$ defined by a nonzero non-unit $f$ of $A$ has dimension one less than $X$. This is clearly a useful result, but we can examine its consequences in more general cases as follows.
+Earlier we saw that for a finite type affine integral $\mathbb{K}$-scheme $X=\Spec A$, the closed subscheme $Z(f)$ defined by a nonzero non-unit $f\in A$ has dimension one less than $X$. This is clearly a useful result, but we can also examine its consequences in more general cases as follows.
 
 ::: Proposition 12
 For a locally noetherian scheme $X$ and a function $f$ on $X$, every irreducible component of $Z(f)$ has codimension $0$ or $1$.
 :::
 ::: Proof
-Let $W$ be an irreducible component of $Z(f)$ and $w$ the generic point of $W$. Now choose an affine open subset $U\cong\Spec A$ containing $w$; since $X$ is locally noetherian we can take $A$ to be a noetherian ring, and suppose that under this isomorphism $w$ corresponds to $\mathfrak{p}\in\Spec A$. By the correspondence of [[Topology] §Dimension, ⁋Proposition 14](/en/math/topology/dimension#prop14), $W\cap U$ is an irreducible component of $Z(f\vert_U)$, so $\mathfrak{p}$ is a minimal prime ideal containing the principal ideal generated by $f\vert_U\in A$. Therefore by [[Commutative Algebra] §Dimension, ⁋Theorem 6](/en/math/commutative_algebra/Krull_dimension#thm6) we have $\codim\mathfrak{p}\leq 1$.
+Let $W$ be an irreducible component of $Z(f)$ and $w$ the generic point of $W$. Choose an affine open subset $U\cong\Spec A$ containing $w$; since $X$ is locally noetherian we may take $A$ to be a noetherian ring, and suppose that under this isomorphism $w$ corresponds to $\mathfrak{p}\in\Spec A$. By the correspondence of [[Topology] §Dimension, ⁋Proposition 14](/en/math/topology/dimension#prop14), $W\cap U$ is an irreducible component of $Z(f\vert_U)$, so $\mathfrak{p}$ is a minimal prime ideal containing the principal ideal generated by $f\vert_U\in A$. Therefore by [[Commutative Algebra] §Dimension, ⁋Theorem 6](/en/math/commutative_algebra/Krull_dimension#thm6) we have $\codim\mathfrak{p}\leq 1$.
 
 On the other hand, since the stalk depends only on an open neighborhood of $w$, we have $\mathcal{O}_{U,w}=\mathcal{O}_{X,w}$, and since $W$ and $W\cap U$ are irreducible closed subsets of $X$ and $U$ respectively both having $w$ as generic point, applying [Proposition 8](#prop8) twice gives
 
