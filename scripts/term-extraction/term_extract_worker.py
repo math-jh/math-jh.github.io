@@ -72,7 +72,12 @@ REVIEW_PATH = SCRIPT_DIR / "term_extraction_review.md"
 BACKUP_PATH = SCRIPT_DIR / "terms.yml.bak-extract"
 
 LLM_BIN = os.environ.get("TERM_EXTRACT_LLM",
-                         str(Path.home() / ".local/bin/claudeglm"))
+                         str(Path.home() / ".local/bin/claude"))
+# term_extract 는 결정적 JSON 추출이라 haiku 로 충분하고 20x 헤드룸에서 사실상
+# 공짜다 (GLM 구독 은퇴 대비). 단 `claude -p` 는 세션 기본 모델(현재 opus)을
+# 쓰므로 --model 을 명시하지 않으면 opus 로 과금된다 — TERM_EXTRACT_MODEL 로
+# 강제한다. GLM 롤백: TERM_EXTRACT_LLM=claudeglm TERM_EXTRACT_MODEL= (빈 값).
+LLM_MODEL = os.environ.get("TERM_EXTRACT_MODEL", "haiku")
 LLM_TIMEOUT = 600
 STALE_SEC = 14 * 24 * 3600
 QUARANTINE_FAILS = 3
@@ -174,8 +179,11 @@ def select_post(state: dict) -> tuple[str | None, str]:
 # ---------------------------------------------------------------------------
 
 def call_llm(prompt: str) -> str:
+    args = [LLM_BIN, "-p", "--output-format", "text"]
+    if LLM_MODEL:
+        args += ["--model", LLM_MODEL]
     proc = subprocess.run(
-        [LLM_BIN, "-p", "--output-format", "text"],
+        args,
         input=prompt, capture_output=True, text=True,
         timeout=LLM_TIMEOUT, cwd="/tmp",
     )

@@ -140,7 +140,17 @@ $$A[\x^{-1}]=\tilde{A}[\x^{-1}]$$
 
 이 되어 두 scheme은 원점을 뺀 부분에서 완전히 같다. 
 
-원점에서 일어나는 일을 조금 더 대수적으로 살펴보기 위해 local ring을 보자. 우선 $\Spec A$의 원점 $\mathfrak{m}$의 preimage는 
+원점에서 일어나는 일을 조금 더 대수적으로 살펴보기 위해 local ring을 보자. 우선 $\Spec A$의 원점 $\mathfrak{m}$의 preimage는 그 정의에 의해 $\mathfrak{m}$을 포함하는 $A[t]$의 prime ideal이며, $\mathfrak{m}A[t]=(t^2)$을 포함하는 prime ideal은 이 ideal의 radical $(t)$이다. 그럼 $A[t]$의 원점 $(t)$에서의 local ring은
+
+$$A[t]=\mathbb{K}[t]_{(t)}$
+
+인 반면, 원래의 curve $\Spec A$의 원점에서의 local ring은
+
+$$A_{\mathfrak{m}}=\mathbb{K}[t^2,t^3]_{(t^2, t^3)}$$
+
+
+
+
 $\Spec(A[t]/(t^2))$라는 것을 보았다. 이를 이해하기 위해 $\mathfrak m=(t^2,t^3)$를 $A[t]$로 확장하면 $A[t]$에서 $t^3=t\cdot t^2$이므로 $\mathfrak m A[t]=(t^2)$이 되고, 그 radical $\sqrt{(t^2)}=(t)$가 $\mathfrak m$ 위에 놓인 $A[t]$의 유일한 prime임을 안다. 또한 $\mathfrak m A[t]=(t^2)$가 radical이 아니라는 것이 fiber $A[t]/(t^2)$에 nilpotent $\bar t\neq 0$을 남겨 non-reduced로 만드는 이유이다. 이제 원점에서 cusp의 local ring $A_{\mathfrak m}=\mathbb{K}[t^2,t^3]_{(t^2,t^3)}$는 maximal ideal $(t^2,t^3)$이 두 원소로 생성되어야 하여 singular한데, 이는 [\[대수다양체\] §접공간과 매끄러움, ⁋예시 7](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#ex7)에서 본 $T_0=\mathbb{K}^2$가 너무 크기 때문이다. 반면 그 위 점 $(t)$에서 normalization의 local ring $A[t]_{(t)}$는 maximal ideal이 단일 원소 $t$로 생성되어 매끈하다. 즉 normalization이 singular한 local ring $A_{\mathfrak m}$을 매끈한 local ring $A[t]_{(t)}$로 바꾸어 cusp를 펴주는 것이다.
 :::
 
