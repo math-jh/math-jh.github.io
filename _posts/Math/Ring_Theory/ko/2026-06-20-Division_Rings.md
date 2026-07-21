@@ -43,19 +43,15 @@ $$b=1\cdot b=(a^{-1}a)b=a^{-1}(ab)=a^{-1}\cdot 0=0$$
 이다. 따라서 $a\neq 0$이면 $b=0$이고, 이는 $ab=0$에서 $a=0$ 또는 $b=0$임을 뜻한다. 따라서 $D$에는 nonzero zero divisor가 없다. $D$가 field이면 추가로 commutative하고 $0\neq 1$이므로 integral domain이다 ([\[대수적 구조\] §분수체, ⁋정의 5](/ko/math/algebraic_structures/field_of_fractions#def5)).
 :::
 
-이는 사실 [§가역원과 영인자, ⁋명제 4](/ko/math/ring_theory/units_and_zero_divisors#prop4)로부터도 바로 얻어지는 것으로, division ring에서는 모든 nonzero 원소가 unit이므로 nonzero zero divisor가 존재할 여지가 없다. 그러나 이 역은 일반적으로 사실이 아니며, 가령 $\mathbb{Z}$ 또한 그러하다는 것을 위의 명제 직후에서 이미 살펴보았다. 
+## Wedderburn의 소정리
+
+위의 [명제 2](#prop2)는 사실 [§가역원과 영인자, ⁋명제 4](/ko/math/ring_theory/units_and_zero_divisors#prop4)로부터도 바로 얻어지는 것으로, division ring에서는 모든 nonzero 원소가 unit이므로 nonzero zero divisor가 존재할 여지가 없다. 그러나 이 역은 일반적으로 사실이 아니며, 가령 $\mathbb{Z}$ 또한 그러하다는 것을 위의 명제 직후에서 이미 살펴보았다. 
 
 뿐만 아니라, 해당 글에서 우리는 이미 위 [명제 2](#prop2)의 부분적인 역, 즉 *finite* ring에 대해서는 integral domain이 항상 field가 된다는 것을 살펴보았다. ([§가역원과 영인자, ⁋따름정리 6](/ko/math/ring_theory/units_and_zero_divisors#cor6)) 이 따름정리의 증명에는 ring의 commutativity가 본질적으로 사용되지 <em-ko>않는데</em-ko>, 그럼에도 불구하고 해당 따름정리에서 commutativity를 가정한 이유는 commutativity를 뺐을 때 다루게 되는 finite non-commutative zero-divisor-free ring이 존재하지 않기 때문이다. 
 
-## Wedderburn의 소정리
+Division ring $D$의 center $Z=Z(D)$는 $D$의 commutative subring이며 ([\[대수적 구조\] §환의 정의, ⁋정의 8](/ko/math/algebraic_structures/rings#def8)), 나아가 field이다. $z\in Z$가 nonzero이면 $D$ 안에서 역원 $z^{-1}$을 갖고, 임의의 $x\in D$에 대하여 $z^{-1}x=z^{-1}xzz^{-1}=z^{-1}zxz^{-1}=xz^{-1}$이므로 $z^{-1}\in Z$이기 때문이다. 따라서 $D$가 유한하면 $Z$는 유한 field이고, 그 원소의 개수를 $q$라 하면 $q\geq 2$이다.
 
-앞서 [명제 2](#prop2) 직후에 언급한 것과 같이, finite, non-commutative division ring은 아예 존재하지 않는다. 이에 대한 증명을 위해서는 약간의 준비가 필요하다. 
-
-먼저 [\[대수적 구조\] §환의 정의, ⁋정의 8](/ko/math/algebraic_structures/rings#def8)에서 정의한 center에 관한 두 관찰을 정리한다. Division ring $D$의 center $Z=Z(D)$는 $D$의 commutative subring인데, 나아가 $z\in Z$가 nonzero이면 $D$ 안에서 역원 $z^{-1}$을 갖고 임의의 $x$에 대해 $z^{-1}x=z^{-1}x zz^{-1}=z^{-1}zxz^{-1}=xz^{-1}$이므로 $z^{-1}\in Z$이다. 즉 $Z$의 모든 nonzero 원소가 $Z$ 안에서 역원을 가지므로, $Z$는 field이다. $D$가 유한하면 $Z$도 유한 field이고, 그 원소의 개수를 $q$라 하면 $q\geq 2$이다.
-
-이제 $D$를 $Z$ 위의 vector space로 본다. $Z$가 $q$개의 원소를 갖는 유한 field이고 $D$가 그 위의 $n$차원 vector space이면 $\lvert D\rvert=q^n$이다. 더 일반적으로, $D$의 임의의 부분 division ring $D'$이 $Z$를 포함하면 $D'$ 또한 $Z$ 위의 vector space이므로 그 원소 개수는 $q^d$ 꼴이며, $D$가 $D'$ 위의 vector space이기도 하므로 $q^n=(q^d)^m$에서 $d\mid n$이다. 이 정수론적 제약이 증명의 출발점이다.
-
-증명에는 cyclotomic polynomial이 필요하다.
+이제 $D$를 $Z$ 위의 vector space로 보면 $n=\dim_Z D$에 대하여 $\lvert D\rvert=q^n$이다. 더 일반적으로 $Z$를 포함하는 $D$의 부분 division ring $D'$ 또한 $Z$ 위의 vector space이므로 그 원소 개수는 $q^d$ 꼴이고, $D$가 $D'$ 위의 $m$차원 vector space이면 $q^n=(q^d)^m$에서 $d\mid n$을 얻는다. 이 정수론적 제약과 맞물려 증명에 쓰이는 것이 cyclotomic polynomial이다.
 
 ::: 정의 3
 양의 정수 $n$에 대하여 *$n$번째 cyclotomic polynomial<sub>원분다항식</sub>* $\Phi_n(\x)$를
