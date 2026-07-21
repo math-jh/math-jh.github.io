@@ -284,9 +284,9 @@ $$Z_j=\overline{F\cap Z_j}=\bigcup_{i=1}^n \overline{U_i\cap C_i\cap Z_j}$$
 
 $$U_i\cap Z_j\subseteq U_i\cap C_i\subseteq F$$
 
-이다. 한편 $U_i\cap Z_j$는 $Z_j$의 열린 부분집합이며 그 closure가 $Z_j$이므로 공집합이 아니다. $Z_j$는 $Y$의 irreducible closed subset이므로 generic point $\eta_j$를 가지며, $Z_j$의 공집합이 아닌 열린 부분집합은 언제나 $\eta_j$를 포함하므로 $\eta_j\in F$이다.
+이다. 한편 $U_i\cap Z_j$는 $Z_j$의 열린 부분집합이며 그 closure가 $Z_j$이므로 공집합이 아니다. $Z_j$는 $Y$의 irreducible closed subset이므로 generic point $z_j$를 가지며, $Z_j$의 공집합이 아닌 열린 부분집합은 언제나 $z_j$를 포함하므로 $z_j\in F$이다.
 
-$F$가 specialization에 대하여 닫혀 있으므로 $Z_j=\overline{\{\eta_j\}}\subseteq F$이고, 이것이 모든 $j$에 대하여 성립하므로 $Z=\bigcup_j Z_j\subseteq F$이다. $F\subseteq Z$는 자명하므로 $F=Z$는 닫힌집합이다.
+$F$가 specialization에 대하여 닫혀 있으므로 $Z_j=\overline{\{z_j\}}\subseteq F$이고, 이것이 모든 $j$에 대하여 성립하므로 $Z=\bigcup_j Z_j\subseteq F$이다. $F\subseteq Z$는 자명하므로 $F=Z$는 닫힌집합이다.
 :::
 
 ## 평탄 사상의 기하학적 성질
@@ -321,7 +321,7 @@ $x$의 affine open neighborhood $U=\Spec B$와 $f(U)$를 포함하는 affine ope
 [보조정리 2](#lem2)에 의하여 $A_\mathfrak{p} \rightarrow B_\mathfrak{q}$는 평탄한 국소사상이므로, [보조정리 15](#lem15)에 의하여 $\Spec B_\mathfrak{q} \rightarrow \Spec A_\mathfrak{p}$는 전사이다. 특히 $\mathfrak{p}'A_\mathfrak{p}\in \Spec A_\mathfrak{p}$ 위에 놓인 $\Spec B_\mathfrak{q}$의 점이 존재하며, 이를 $B$의 prime ideal로 되돌리면 $\mathfrak{q}'\subseteq \mathfrak{q}$이면서 $\varphi^{-1}(\mathfrak{q}')=\mathfrak{p}'$인 $\mathfrak{q}'$를 얻는다. $\mathfrak{q}'\subseteq \mathfrak{q}$는 곧 $x\in \overline{\{x'\}}$을 뜻하므로 $x'=\mathfrak{q}'$가 원하는 점이다.
 :::
 
-즉 평탄 사상은 base에서의 generization을 언제나 위로 들어올린다. 특히 $Y$가 irreducible이고 그 generic point가 $\eta$라면 $X$의 임의의 점은 generic fiber $X_\eta$의 어떤 점의 specialization이며, 따라서 $X$의 어떤 성분도 fiber 하나에 갇혀 있을 수 없다. [따름정리 7](#cor7)에서 곡선 위의 family에 대하여 관찰한 것이 일반적으로도 성립하는 것이다.
+즉 평탄 사상은 base에서의 generization을 언제나 위로 들어올린다. 특히 $Y$가 irreducible이고 그 generic point가 $y$라면 $X$의 임의의 점은 generic fiber $X_y$의 어떤 점의 specialization이며, 따라서 $X$의 어떤 성분도 fiber 하나에 갇혀 있을 수 없다. [따름정리 7](#cor7)에서 곡선 위의 family에 대하여 관찰한 것이 일반적으로도 성립하는 것이다.
 
 Going-down의 첫 번째 대가는 차원에 대한 정확한 등식이다. 평탄 사상에서 $X$의 국소차원은 base의 국소차원과 fiber의 국소차원으로 정확히 분해된다.
 

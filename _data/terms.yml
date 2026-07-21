@@ -1775,12 +1775,12 @@ C:
     url: /ko/math/set_theory/directed_set
   - label: '[해석학] §실수의 완비성'
     url: /ko/math/analysis/completeness_of_reals
+  - label: '[해석학] §거리공간'
+    url: /ko/math/analysis/metric_spaces
   - label: '[미분다양체] §벡터장'
     url: /ko/math/manifolds/vector_fields
   - label: '[토릭 기하학] §토릭 다양체의 정의'
     url: /ko/math/toric_geometry/toric_varieties
-  - label: '[해석학] §거리공간'
-    url: /ko/math/analysis/metric_spaces
 - id: complete_category
   en: complete category
   ko: 완비범주
@@ -2215,6 +2215,13 @@ C:
   defs:
   - label: '[대수적 위상수학] §합곱'
     url: /ko/math/algebraic_topology/cup_products
+- id: cusp
+  en: cusp
+  ko: 첨점
+  primary: en
+  defs:
+  - label: '[미적분학] §미분과 도함수'
+    url: /ko/math/calculus/derivatives
 - id: cycle
   en: cycle
   ko: 사이클
@@ -2350,6 +2357,20 @@ D:
   defs:
   - label: '[다중선형대수학] §미분'
     url: /ko/math/multilinear_algebra/derivations
+- id: derivative
+  en: derivative
+  ko: 미분계수
+  primary: en
+  defs:
+  - label: '[미적분학] §미분과 도함수'
+    url: /ko/math/calculus/derivatives
+- id: derivative_function
+  en: derivative function
+  ko: 도함수
+  primary: ko
+  defs:
+  - label: '[미적분학] §미분과 도함수'
+    url: /ko/math/calculus/derivatives
 - id: derived_category
   en: derived category
   ko: 유도카테고리
@@ -2503,6 +2524,8 @@ D:
   defs:
   - label: '[해석학] §다변수 미분'
     url: /ko/math/analysis/multivariable_differentiation
+  - label: '[미적분학] §미분과 도함수'
+    url: /ko/math/calculus/derivatives
 - id: differentiable_manifold
   en: differentiable manifold
   ko: 미분다양체
@@ -4398,6 +4421,7 @@ I:
   en: inductive
   ko: 귀납적
   primary: en
+  note: 'ordered set이 inductive하다(Zorn 보조정리)는 의미일 때만 영어. 수학적 귀납법 문맥의 ''귀납적 가정'', ''귀납적으로'' 등은 한글 유지'
   defs:
   - label: '[집합론] §선택공리'
     url: /ko/math/set_theory/axiom_of_choice
@@ -5208,6 +5232,13 @@ L:
   defs:
   - label: '[범주론] §아벨 카테고리'
     url: /ko/math/category_theory/abelian_categories
+- id: left-hand_derivative
+  en: left-hand derivative
+  ko: 좌미분계수
+  primary: ko
+  defs:
+  - label: '[미적분학] §미분과 도함수'
+    url: /ko/math/calculus/derivatives
 - id: left_ideal
   en: left ideal
   ko: 왼쪽 아이디얼
@@ -7600,10 +7631,10 @@ R:
   ko: 세분화
   primary: en
   defs:
-  - label: '[대수다양체] §층 코호몰로지'
-    url: /ko/math/algebraic_varieties/sheaf_cohomology
   - label: '[해석학] §Riemann 적분'
     url: /ko/math/analysis/riemann_integral
+  - label: '[대수다양체] §층 코호몰로지'
+    url: /ko/math/algebraic_varieties/sheaf_cohomology
 - id: reflexive
   en: reflexive
   ko: 반사적
@@ -7921,6 +7952,13 @@ R:
   defs:
   - label: '[범주론] §아벨 카테고리'
     url: /ko/math/category_theory/abelian_categories
+- id: right-hand_derivative
+  en: right-hand derivative
+  ko: 우미분계수
+  primary: ko
+  defs:
+  - label: '[미적분학] §미분과 도함수'
+    url: /ko/math/calculus/derivatives
 - id: right_ideal
   en: right ideal
   ko: 오른쪽 아이디얼
@@ -8561,6 +8599,8 @@ S:
   defs:
   - label: '[토릭 기하학] §아핀 토릭 다양체'
     url: /ko/math/toric_geometry/affine_toric_varieties
+  - label: '[미적분학] §미분과 도함수'
+    url: /ko/math/calculus/derivatives
 - id: smooth_differentiable_manifold
   en: smooth differentiable manifold
   ko: 매끄러운 미분다양체
@@ -9886,6 +9926,13 @@ V:
   defs:
   - label: '[층론] §Verdier 쌍대성'
     url: /ko/math/sheaf_theory/verdier_duality
+- id: vertical_tangent
+  en: vertical tangent
+  ko: 수직접선
+  primary: ko
+  defs:
+  - label: '[미적분학] §미분과 도함수'
+    url: /ko/math/calculus/derivatives
 W:
 - id: weak_direct_product
   en: weak direct product
