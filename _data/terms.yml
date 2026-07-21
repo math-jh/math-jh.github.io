@@ -101,6 +101,13 @@ A:
   defs:
   - label: '[대수적 구조] §가환군'
     url: /ko/math/algebraic_structures/abelian_groups
+- id: absolutely_convergent
+  en: absolutely convergent
+  ko: 절대수렴
+  primary: ko
+  defs:
+  - label: '[해석학] §무한급수'
+    url: /ko/math/analysis/series
 - id: action
   en: action
   ko: 작용
@@ -1908,6 +1915,13 @@ C:
   defs:
   - label: '[범주론] §모노이드 대상'
     url: /ko/math/category_theory/monoid_objects
+- id: conditionally_convergent
+  en: conditionally convergent
+  ko: 조건수렴
+  primary: ko
+  defs:
+  - label: '[해석학] §무한급수'
+    url: /ko/math/analysis/series
 - id: conformal_isomorphism
   en: conformal isomorphism
   ko: 등각동형사상
@@ -2625,6 +2639,13 @@ D:
   defs:
   - label: '[미분다양체] §여접공간'
     url: /ko/math/manifolds/cotangent_space
+- id: dirichlet_function
+  en: Dirichlet function
+  ko: 디리클레 함수
+  primary: ko
+  defs:
+  - label: '[해석학] §함수열과 점별수렴'
+    url: /ko/math/analysis/sequences_of_functions
 - id: disconnected
   en: disconnected
   ko: 연결되지 않았다
@@ -3039,6 +3060,13 @@ E:
   defs:
   - label: '[해석학] §열린집합과 닫힌집합'
     url: /ko/math/analysis/open_and_closed_sets
+- id: escape_of_mass
+  en: escape of mass
+  ko: 질량의 탈출
+  primary: ko
+  defs:
+  - label: '[해석학] §함수열과 점별수렴'
+    url: /ko/math/analysis/sequences_of_functions
 - id: essentially_surjective
   en: essentially surjective
   ko: 본질적 전사 함자
@@ -4390,6 +4418,13 @@ I:
   defs:
   - label: '[집합론] §자연수와 무한집합'
     url: /ko/math/set_theory/natural_numbers
+- id: infinite_series
+  en: infinite series
+  ko: 무한급수
+  primary: ko
+  defs:
+  - label: '[해석학] §무한급수'
+    url: /ko/math/analysis/series
 - id: inhomogeneous_coordinates
   en: inhomogeneous coordinates
   ko: 비동차좌표
@@ -5666,6 +5701,13 @@ L:
   defs:
   - label: '[집합론] §필터와 아이디얼, 갈루아 대응'
     url: /ko/math/set_theory/filter_and_ideal
+- id: lower_sum
+  en: lower sum
+  ko: 하합
+  primary: ko
+  defs:
+  - label: '[해석학] §Riemann 적분'
+    url: /ko/math/analysis/riemann_integral
 - id: lower_triangular_matrix
   en: lower triangular matrix
   ko: 하삼각행렬
@@ -6677,6 +6719,13 @@ P:
   defs:
   - label: '[집합론] §곱집합의 성질'
     url: /ko/math/set_theory/property_of_products
+- id: partial_sum
+  en: partial sum
+  ko: 부분합
+  primary: ko
+  defs:
+  - label: '[해석학] §무한급수'
+    url: /ko/math/analysis/series
 - id: partition
   en: partition
   ko: 분할
@@ -6845,6 +6894,13 @@ P:
     url: /ko/math/algebraic_varieties/affine_varieties
   - label: '[스킴] §스펙트럼'
     url: /ko/math/scheme_theory/spectrums
+- id: pointwise_convergence
+  en: pointwise convergence
+  ko: 점별수렴
+  primary: ko
+  defs:
+  - label: '[해석학] §함수열과 점별수렴'
+    url: /ko/math/analysis/sequences_of_functions
 - id: polynomial_algebra
   en: polynomial algebra
   ko: 다항식 대수
@@ -7546,6 +7602,8 @@ R:
   defs:
   - label: '[대수다양체] §층 코호몰로지'
     url: /ko/math/algebraic_varieties/sheaf_cohomology
+  - label: '[해석학] §Riemann 적분'
+    url: /ko/math/analysis/riemann_integral
 - id: reflexive
   en: reflexive
   ko: 반사적
@@ -9223,6 +9281,13 @@ T:
   defs:
   - label: '[대수다양체] §선다발과 벡터다발'
     url: /ko/math/algebraic_varieties/line_bundles
+- id: telescoping_series
+  en: telescoping series
+  ko: 망원급수
+  primary: ko
+  defs:
+  - label: '[해석학] §무한급수'
+    url: /ko/math/analysis/series
 - id: multilinear_algebra
   en: tensor algebra
   ko: 텐서대수
@@ -9553,6 +9618,13 @@ U:
   defs:
   - label: '[집합론] §동치관계의 예시들'
     url: /ko/math/set_theory/examples_of_equivalence
+- id: uniform_convergence
+  en: uniform convergence
+  ko: 균등수렴
+  primary: ko
+  defs:
+  - label: '[해석학] §균등수렴'
+    url: /ko/math/analysis/uniform_convergence
 - id: uniformizer
   en: uniformizer
   ko: 균등화원
@@ -9567,6 +9639,20 @@ U:
   defs:
   - label: '[가환대수학] §인자'
     url: /ko/math/commutative_algebra/divisors
+- id: uniformly_bounded
+  en: uniformly bounded
+  ko: 균등유계
+  primary: en
+  defs:
+  - label: '[해석학] §함수열과 점별수렴'
+    url: /ko/math/analysis/sequences_of_functions
+- id: uniformly_cauchy
+  en: uniformly cauchy
+  ko: 균등 Cauchy
+  primary: ko
+  defs:
+  - label: '[해석학] §균등수렴'
+    url: /ko/math/analysis/uniform_convergence
 - id: uniformly_continuous
   en: uniformly continuous
   ko: 균등연속
@@ -9693,6 +9779,13 @@ U:
   see:
   - label: Lower set
     id: lower_set
+- id: upper_sum
+  en: upper sum
+  ko: 상합
+  primary: ko
+  defs:
+  - label: '[해석학] §Riemann 적분'
+    url: /ko/math/analysis/riemann_integral
 - id: upper_triangular_matrix
   en: upper triangular matrix
   ko: 상삼각행렬
