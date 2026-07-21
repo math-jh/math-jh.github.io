@@ -13,6 +13,9 @@ categories.yml ko 표시명)과 대조한다. 차이: 저쪽은 in-memory 재작
   E LABEL     라벨이 '[categories.yml ko] §현재 글 제목' 이 아님   [--fix 가능]
   E EMPTY_GROUP 빈 그룹 (조판이 깨진다)                          [--fix 가능]
   E ORDER     그룹 내 정렬 위반 (nat_key·id 순 = 조판 순서)       [--fix 가능]
+  E DEFS_ORDER defs 가 논리 순서가 아님 (categories.yml 순서→weight; 2026-07-21
+              추가 — add_def 는 등록순 append 라 논리 순서 보장이 없었음. 모든
+              def 대상이 해석 가능할 때만 검사·정렬)              [--fix 가능]
   E URL       def/ref url 이 어떤 글의 permalink 도 아님 (깨진 링크)
   E DUP_ID/DUP_TERM 중복 (Čech/čech 같은 정규화 중복 포함)
   E SEE       see 가 없는 항목 id 를 가리킴
@@ -40,9 +43,10 @@ import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from terms_common import (  # noqa: E402
-    TERMS_PATH, Issue, category_ko_maps, chunk_field, chunk_id, insert_sorted,
-    join_file, letter_of, nat_key, permalink_map, semantic_checks, split_file,
-    url_slug, yaml_quote,
+    BLOG_ROOT, CATEGORIES_PATH, TERMS_PATH, Issue, _frontmatter,
+    category_ko_maps, chunk_field, chunk_id, insert_sorted, join_file,
+    letter_of, nat_key, permalink_map, semantic_checks, split_file, url_slug,
+    yaml_quote,
 )
 
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -133,6 +137,106 @@ def fix_order(text: str) -> tuple[str, int]:
     return join_file(header, groups), n
 
 
+_CAT_IDX: dict[str, int] | None = None
+_WEIGHT_CACHE: dict[str, tuple | None] = {}
+
+
+def _cat_idx() -> dict[str, int]:
+    """카테고리 url 슬러그 → categories.yml subjects 순서 index (= 논리 순서)."""
+    global _CAT_IDX
+    if _CAT_IDX is None:
+        cats = yaml.safe_load(CATEGORIES_PATH.read_text(encoding="utf-8"))
+        _CAT_IDX = {}
+        for i, name in enumerate((cats.get("subjects") or {})):
+            slug = name.split(" / ")[-1].lower().replace(" ", "_")
+            _CAT_IDX[slug] = i
+    return _CAT_IDX
+
+
+def _def_key(item: str, pmap: dict) -> tuple | None:
+    """def 항목의 논리 순서 키 (cat_idx, weight). 해석 불가면 None."""
+    m = re.search(r"^\s*url: (\S+)$", item, re.M)
+    if not m:
+        return None
+    pl = m.group(1).split("#")[0].rstrip("/")
+    if pl in _WEIGHT_CACHE:
+        return _WEIGHT_CACHE[pl]
+    key = None
+    info = pmap.get(pl)
+    ms = re.match(r"/ko/math/([^/]+)/", pl)
+    if info and ms and ms.group(1) in _cat_idx():
+        try:
+            fm = _frontmatter((BLOG_ROOT / info["path"]).read_text(encoding="utf-8"))
+            key = (_cat_idx()[ms.group(1)], int(fm.get("weight")))
+        except (OSError, TypeError, ValueError):
+            key = None
+    _WEIGHT_CACHE[pl] = key
+    return key
+
+
+def _defs_block(chunk: str) -> tuple[int, int, list[str]] | None:
+    """(defs 시작줄, 끝줄 exclusive, item 문자열 목록). defs 없으면 None."""
+    lines = chunk.split("\n")
+    try:
+        s = next(i for i, ln in enumerate(lines) if ln.rstrip() == "  defs:")
+    except StopIteration:
+        return None
+    j = s + 1
+    while j < len(lines) and (lines[j].startswith("  - ")
+                              or lines[j].startswith("    ")):
+        j += 1
+    items, cur = [], []
+    for ln in lines[s + 1:j]:
+        if ln.startswith("  - ") and cur:
+            items.append("\n".join(cur))
+            cur = []
+        cur.append(ln)
+    if cur:
+        items.append("\n".join(cur))
+    return s, j, items
+
+
+def _defs_reorder(chunk: str, pmap: dict) -> str | None:
+    """defs 를 논리 순서로 재정렬한 청크. 재정렬 불필요·불가면 None.
+
+    def 대상 중 하나라도 (카테고리·weight) 해석이 안 되면 판단 불가로 두고
+    건드리지 않는다 — 깨진 url 은 URL 검사가 따로 보고한다."""
+    blk = _defs_block(chunk)
+    if blk is None or len(blk[2]) < 2:
+        return None
+    s, j, items = blk
+    keys = [_def_key(it, pmap) for it in items]
+    if any(k is None for k in keys):
+        return None
+    order = sorted(range(len(items)), key=lambda i: (keys[i], i))
+    if order == list(range(len(items))):
+        return None
+    lines = chunk.split("\n")
+    new_items = [items[i] for i in order]
+    return "\n".join(lines[:s + 1] + new_items + lines[j:])
+
+
+def check_defs_order(text: str, pmap: dict) -> list[Issue]:
+    _, groups = split_file(text)
+    return [Issue("E", "DEFS_ORDER",
+                  f"{chunk_id(c)}: defs 가 논리 순서(카테고리→weight)가 아님",
+                  fixable=True)
+            for chunks in groups.values() for c in chunks
+            if _defs_reorder(c, pmap) is not None]
+
+
+def fix_defs_order(text: str, pmap: dict) -> tuple[str, int]:
+    header, groups = split_file(text)
+    n = 0
+    for letter, chunks in groups.items():
+        for i, c in enumerate(chunks):
+            c2 = _defs_reorder(c, pmap)
+            if c2 is not None:
+                chunks[i] = c2
+                n += 1
+    return join_file(header, groups), n
+
+
 def fix_groups(text: str) -> tuple[str, int]:
     """오분류 청크를 제 그룹으로 이동, 빈 그룹 제거."""
     header, groups = split_file(text)
@@ -167,13 +271,15 @@ def run(path: Path, fix: bool, notify: bool) -> int:
 
     pmap = permalink_map()
     ko_by_slug, _ = category_ko_maps()
-    issues = semantic_checks(data, pmap, ko_by_slug) + check_order(text)
+    issues = (semantic_checks(data, pmap, ko_by_slug) + check_order(text)
+              + check_defs_order(text, pmap))
 
     if fix and any(i.fixable for i in issues):
         BACKUP_PATH.write_text(text, encoding="utf-8")
         new, n_lbl = fix_labels(text, pmap, ko_by_slug)
         new, n_grp = fix_groups(new)  # 빈 그룹 제거 포함
         new, n_ord = fix_order(new)
+        new, n_def = fix_defs_order(new, pmap)
         if new != text:
             # 수정본이 자기 검사를 통과해야만 쓴다: 파싱되고, 항목이 사라지지
             # 않았고, 고칠 수 있는 에러가 실제로 줄었을 것.
@@ -191,8 +297,9 @@ def run(path: Path, fix: bool, notify: bool) -> int:
             tmp.write_text(new, encoding="utf-8")
             tmp.replace(path)
             log(f"자동 수정: 라벨 {n_lbl}건, 그룹 이동 {n_grp}건, "
-                f"정렬 {n_ord}그룹 (백업: {BACKUP_PATH.name})")
-            issues = semantic_checks(nd, pmap, ko_by_slug) + check_order(new)
+                f"정렬 {n_ord}그룹, defs 재정렬 {n_def}건 (백업: {BACKUP_PATH.name})")
+            issues = (semantic_checks(nd, pmap, ko_by_slug) + check_order(new)
+                      + check_defs_order(new, pmap))
 
     errors = [i for i in issues if i.level == "E"]
     warns = [i for i in issues if i.level == "W"]

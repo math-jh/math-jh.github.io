@@ -32,6 +32,11 @@ BLOG_ROOT = Path("/home/junhyeok/math-jh.github.io")
 TERMS_PATH = BLOG_ROOT / "_data" / "terms.yml"
 CATEGORIES_PATH = BLOG_ROOT / "_data" / "categories.yml"
 
+# 교양수학 카테고리 (url 슬러그). 2026-07-21 룰링: 이들 카테고리의 정의는
+# 커리큘럼상 선행이지만 '정식 거처'가 아니므로, 어떤 용어의 defs가 전부
+# 교양수학뿐이면 이후 전공 글의 정의를 뉘앙스 판정 없이 defs에 추가한다.
+GEN_ED_CATS = {"calculus", "linear_algebra"}
+
 # ---------------------------------------------------------------------------
 # 정규화 (글자 분류·정렬·중복 키)
 # ---------------------------------------------------------------------------

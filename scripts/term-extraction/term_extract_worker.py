@@ -54,16 +54,17 @@ BLOG_ROOT = SCRIPT_DIR.parents[1]
 sys.path.insert(0, str(SCRIPT_DIR))
 
 from terms_common import (  # noqa: E402
-    TERMS_PATH, category_ko_maps, chunk_field, chunk_id, dedup_key,
-    insert_sorted, join_file, letter_of, permalink_map, semantic_checks,
-    slugify_id, split_file, url_slug, yaml_quote,
+    GEN_ED_CATS, TERMS_PATH, category_ko_maps, chunk_field, chunk_id,
+    dedup_key, insert_sorted, join_file, letter_of, permalink_map,
+    semantic_checks, slugify_id, split_file, url_slug, yaml_quote,
 )
 from extract_terms import (  # noqa: E402
     classify_definitions, add_def_to_chunk, parse_frontmatter,
     strip_frontmatter,
 )
-from terms_lint import send_telegram  # noqa: E402
+from terms_lint import send_telegram, _defs_block  # noqa: E402
 from usage_dominance import count_term, dominance  # noqa: E402
+import gloss_stage  # noqa: E402
 import yaml  # noqa: E402
 
 STATE_PATH = SCRIPT_DIR / "term_extract_worker_state.json"
@@ -238,6 +239,28 @@ def entry_index(groups: dict[str, list[str]]) -> dict[str, tuple[str, int]]:
     return idx
 
 
+def _defs_cats(chunk: str) -> set[str]:
+    """entry 청크의 defs 대상 카테고리 슬러그 집합 (refs/see는 제외)."""
+    blk = _defs_block(chunk)
+    if not blk:
+        return set()
+    cats = set()
+    for it in blk[2]:
+        m = re.search(r"^\s*url: /ko/math/([^/#\s]+)", it, re.M)
+        if m:
+            cats.add(m.group(1))
+    return cats
+
+
+def _gen_ed_promotion(chunk: str, my_cat: str | None) -> bool:
+    """교양수학 예외 (2026-07-21 룰링): 기존 defs가 전부 교양(calculus/
+    linear_algebra)이고 현재 글이 전공 글이면, 이 글의 정의는 '정식 거처'로서
+    뉘앙스 판정 없이 defs에 추가한다."""
+    dcats = _defs_cats(chunk)
+    return bool(dcats) and dcats <= GEN_ED_CATS \
+        and my_cat is not None and my_cat not in GEN_ED_CATS
+
+
 def decide_primary(en: str, ko: str, marker_primary: str | None) -> str:
     n_en, n_ko, verdict = dominance(en, ko)
     if verdict in ("en", "ko"):
@@ -318,6 +341,30 @@ MAJOR_PROMPT = """수학 블로그 찾아보기 색인 관리 작업이다. 도�
 --- 글 ---
 """
 
+GLOSS_PICK_PROMPT = """수학 블로그 찾아보기 색인 관리 작업이다. 도구를 쓰지 말고 JSON 만 출력하라.
+
+정의 문맥과 KMS 수학용어집의 한글 후보 목록이 주어진다. 이 문맥에 맞는 후보의
+번호(0부터)를 고르라. KMS 는 전 분야 용어집이라 다른 분야의 동음이의어 번역이
+섞여 있을 수 있다. 어느 후보도 이 문맥의 수학적 의미와 맞지 않으면 "NONE".
+**후보에 없는 번역을 만들지 말 것** — 출력은 번호 선택 또는 "NONE" 만 유효하다.
+
+출력: [{"pick": <번호>|"NONE"}] 만.
+
+"""
+
+GLOSS_GATE_PROMPT = """수학 블로그 찾아보기 색인 관리 작업이다. 도구를 쓰지 말고 JSON 만 출력하라.
+
+정의 문맥, 영어 용어, KMS 수학용어집에서 exact match 로 얻은 한국어 병기 후보가
+주어진다. 이 병기가 **이 문맥의 수학적 의미**와 일치하는지 판정하라. KMS 는 전
+분야 용어집이라 교차 분야 동음이의어가 섞인다 — 예: reducible 의 KMS 표제
+'약분가능'은 분수(fraction) 문맥의 뜻이고, 환론·표현론 문맥의 reducible 은
+'가약'이다. 이런 분야 불일치가 보이면 "no", 확신이 서지 않으면 "unsure",
+문맥과 일치할 때만 "yes".
+
+출력: [{"verdict": "yes"|"no"|"unsure"}] 만.
+
+"""
+
 PICKDEF_PROMPT = """수학 블로그 찾아보기 색인 관리 작업이다. 도구를 쓰지 말고 JSON 만 출력하라.
 
 아래 각 용어에 대해, 그 용어가 실제 등장하는 글 후보 목록이 주어진다.
@@ -374,12 +421,118 @@ def process_post(rel: str, kind: str, dry: bool) -> list[str]:
     for d in new_markers[MAX_NEW_TERMS_PER_POST:]:
         review.append(f"{rel}: 상한 초과 신규 후보 {d['english']!r} — 보류")
 
+    # --- 1.5 병기 상시 단계 (2026-07-21 배선; 일회성 소급은 gloss_backfill) ---
+    # 정의 박스의 무병기 영어 이탤릭 중 **색인에 없는 신규 용어만** 병기한다.
+    # 색인에 있는 용어의 무병기 이탤릭은 의도적 재사용(사용자 룰링 확정) —
+    # 절대 건드리지 않는다. 병기는 KMS exact 후보 안에서만 (임의 번역 금지).
+    if os.environ.get("GLOSS_STAGE", "1") != "0":
+        _skips = gloss_stage.skip_terms()
+        _pend = gloss_stage.pending()
+        _my_cat = url_slug(permalink)
+        # (occ, gloss, 기존 entry (lt,pos)|None) — None이면 신규 등록
+        gloss_todo: list[tuple[dict, str, tuple | None]] = []
+        for occ in gloss_stage.detect_unglossed(text):
+            gterm = occ["term"]
+            gk = dedup_key(gterm)
+            if not gk or gterm.lower() in _skips or gterm.lower() in _pend:
+                continue
+            if gk in idx:
+                # 색인 기존 용어의 무병기 이탤릭 = 의도적 재사용 → 불간섭.
+                # 예외(교양 룰링): defs가 전부 교양수학이고 이 글이 전공 글이면
+                # 정식 거처 — entry의 확립된 ko로 병기하고 defs에 추가한다.
+                _lt, _pos = idx[gk]
+                _chunk = groups[_lt][_pos]
+                _eko = (chunk_field(_chunk, "ko") or "").strip()
+                if _gen_ed_promotion(_chunk, _my_cat) and _eko:
+                    gloss_todo.append((occ, _eko, (_lt, _pos)))
+                continue
+            verdict, val = gloss_stage.decide(gterm)
+            if verdict == "auto":
+                # KMS exact 단일 매치도 교차 분야 동음이의어일 수 있다
+                # (2026-07-21 룰링: backfill 8/45 오병기, 예: 환론 문맥의
+                # reducible 에 분수 뜻 '약분가능'). haiku 게이트가 yes 일
+                # 때만 자동 적용, no/unsure/호출 실패는 전부 리뷰로 회부
+                # (fail-to-review).
+                ctx = text[occ["box_start"]:occ["box_end"]][:400]
+                try:
+                    g = llm_json(
+                        GLOSS_GATE_PROMPT
+                        + f"용어: {gterm}\n병기 후보: {val}"
+                        + f"\n\n--- 정의 문맥 ---\n{ctx}")
+                    gv = g[0].get("verdict") \
+                        if g and isinstance(g[0], dict) else None
+                except Exception as e:  # noqa: BLE001 — fail-to-review
+                    gv = f"호출 실패 {str(e)[:100]}"
+                if gv != "yes":
+                    verdict, val = "review", \
+                        f"게이트 {gv}: KMS 단일 후보 {val!r} 자동 적용 보류"
+            elif verdict == "pick":
+                ctx = text[occ["box_start"]:occ["box_end"]][:400]
+                try:
+                    picks = llm_json(
+                        GLOSS_PICK_PROMPT
+                        + f"용어: {gterm}\n후보: {val}\n\n--- 정의 문맥 ---\n{ctx}")
+                    sel = picks[0].get("pick") \
+                        if picks and isinstance(picks[0], dict) else None
+                except Exception as e:  # noqa: BLE001 — fail-to-review
+                    sel = f"호출 실패 {str(e)[:100]}"
+                if isinstance(sel, int) and 0 <= sel < len(val):
+                    verdict, val = "auto", val[sel]
+                elif isinstance(sel, str) and sel.strip().upper() == "NONE":
+                    verdict, val = "review", \
+                        f"KMS 복수 후보 {val} — 어느 것도 문맥 불일치(NONE)"
+                else:
+                    verdict, val = "review", \
+                        f"KMS 복수 후보 {val} — 선택 보류 ({sel!r})"
+            if verdict == "auto":
+                gloss_todo.append((occ, val, None))
+            else:
+                review.append(f"{rel}: 병기 필요 {gterm!r} — {val}")
+                gloss_stage.mark_pending(gterm, str(val))
+        if gloss_todo:
+            cur = text
+            for occ, gloss, entry_at in gloss_todo:
+                # 앞선 적용으로 span이 밀리므로 용어별 재탐지 후 적용
+                fresh = {o["term"].lower(): o
+                         for o in gloss_stage.detect_unglossed(cur)}
+                o = fresh.get(occ["term"].lower())
+                nt = gloss_stage.apply_gloss(cur, o, gloss) if o else None
+                if nt is None:
+                    review.append(f"{rel}: 병기 적용 실패 {occ['term']!r} — 보류")
+                    continue
+                cur = nt
+                gurl = permalink + (f"#{occ['anchor']}" if occ.get("anchor") else "")
+                if entry_at is not None:
+                    # 교양 예외 경로: 기존 entry에 정식 거처 def 추가
+                    def_adds.append((entry_at[0], entry_at[1], gurl))
+                    changes.append(
+                        f"병기+defs(정식 거처) {occ['term']!r}<{gloss}> ← {gurl}")
+                    continue
+                glt = letter_of(occ["term"])
+                if glt:
+                    prim = decide_primary(occ["term"], gloss, "en")
+                    adds.append((glt, build_entry(
+                        occ["term"], gloss, prim, label, gurl, [])))
+                changes.append(f"병기+신규 {occ['term']!r}<{gloss}> ← {gurl}")
+            if cur != text and not dry:
+                _p = BLOG_ROOT / rel
+                _tmp = _p.with_suffix(".md.tmp")
+                _tmp.write_text(cur, encoding="utf-8")
+                _tmp.replace(_p)
+                text, body = cur, strip_frontmatter(cur)
+
     # --- 2. 아는 용어의 재정의 → 뉘앙스 판정 (LLM) ---
     pend = []
+    my_cat = url_slug(permalink)
     for d, (lt, pos) in known_markers:
         chunk = groups[lt][pos]
         if re.search(rf"^    url: {re.escape(permalink)}(?:#|$)", chunk, re.M):
             continue  # 이 글이 이미 defs 에 있음
+        if _gen_ed_promotion(chunk, my_cat):
+            url = permalink + (f"#{d['anchor']}" if d.get("anchor") else "")
+            def_adds.append((lt, pos, url))
+            changes.append(f"defs 추가(정식 거처) {d['english']!r} ← {url}")
+            continue
         pend.append((d, lt, pos))
     if pend:
         items = []

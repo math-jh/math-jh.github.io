@@ -638,6 +638,7 @@ Conversion rules for the body:
 3. Bilingual italic terms:
    - `*english<sub>한국어</sub>*` → `*english*` (drop Korean gloss).
    - `*한국어<sub>english</sub>*` → `*English*` (use English gloss as primary).
+   - `<em-ko>...</em-ko>` (Korean-emphasis tag) → plain `*...*` emphasis around the translated text. The tag must not appear in EN output.
 
 4. Theorem-box fenced blocks (`:::`): keep every `:::` fence line exactly where it is, with the same count and order — both the labeled opener and the bare `:::` closer. On the opener, translate ONLY the label text:
    - Derived box `::: 정리 2 (Thom isomorphism)` → `::: Theorem 2 (Thom isomorphism)`: translate the kind word (정의→Definition, 명제→Proposition, 정리→Theorem, 보조정리→Lemma, 따름정리→Corollary, 예시→Example, 참고→Remark), keep the number N unchanged, translate the parenthesized name.
@@ -1133,6 +1134,9 @@ def translate(
     # ---- Step 3: body post-processing ----
     en_body, _n_fixed = label_fix(en_body)
     en_body = re.sub(r"<sub>[^<]*?</sub>", "", en_body)
+    # <em-ko>(및 오타 <em_ko>)는 KO 전용 한국어 강조 태그 — EN에는 plain 강조로
+    # 치환한다 (2026-07-21 룰링; md_lint가 en/ 신설을 경고).
+    en_body = re.sub(r"<em[-_]ko>(.*?)</em[-_]ko>", r"*\1*", en_body, flags=re.DOTALL)
     # Mechanical /ko/ → /en/ for any cross-refs the LLM forgot to convert.
     # Blanket substring replacement; the math blog body never has legitimate
     # `/ko/` in prose or code, so we don't need a guarded regex.
@@ -1563,6 +1567,8 @@ def translate_drift_incremental(
             en_chunk = call_kimi(prompt)
             en_chunk, _ = label_fix(en_chunk)
             en_chunk = re.sub(r"<sub>[^<]*?</sub>", "", en_chunk)
+            en_chunk = re.sub(r"<em[-_]ko>(.*?)</em[-_]ko>", r"*\1*",
+                              en_chunk, flags=re.DOTALL)
             en_chunk = en_chunk.replace("/ko/", "/en/")
             out_chunks.append(en_chunk.rstrip())
             in_chars  += len(prompt)
