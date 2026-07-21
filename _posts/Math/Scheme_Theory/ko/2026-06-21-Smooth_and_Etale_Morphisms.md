@@ -68,7 +68,7 @@ Locally of finite presentation인 scheme 사상 $f:X \rightarrow S$가 *smooth<s
    는 regular scheme이다. 즉 그 모든 local ring이 regular local ring이다.
 :::
 
-이 정의에서 두 조건은 서로 다른 방향을 통제한다. flatness는 fiber들이 base를 따라 차원 도약 없이 연속적으로 변함을 보장하고 ([§평탄사상, ⁋명제 17](/ko/math/scheme_theory/flat_morphisms#prop17)), geometric fiber의 regularity는 각 fiber 자체가 singular point를 가지지 않음을 보장한다. residue field가 완전하지 않을 때 fiber $X_s$가 regular이더라도 base change 후 singular point가 생길 수 있으므로, algebraic closure 위의 geometric fiber에서 regularity를 요구하는 것이 본질적이다.
+이 정의에서 두 조건은 서로 다른 방향을 통제한다. flatness는 fiber들이 base를 따라 차원 도약 없이 연속적으로 변함을 보장하고 ([§평탄사상, ⁋명제 16](/ko/math/scheme_theory/flat_morphisms#prop16)), geometric fiber의 regularity는 각 fiber 자체가 singular point를 가지지 않음을 보장한다. residue field가 완전하지 않을 때 fiber $X_s$가 regular이더라도 base change 후 singular point가 생길 수 있으므로, algebraic closure 위의 geometric fiber에서 regularity를 요구하는 것이 본질적이다.
 
 Smooth 사상은 cotangent sheaf의 국소자유성으로 동치적으로 특징지어진다. 이것이 미분기하의 submersion과의 직접적 연결을 준다.
 
