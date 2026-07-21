@@ -876,6 +876,13 @@ C:
     url: /ko/math/linear_algebra/characteristic_polynomial
   - label: '[다중선형대수학] §행렬식'
     url: /ko/math/multilinear_algebra/determinants
+- id: chern_character
+  en: Chern character
+  ko: 천 지표
+  primary: en
+  defs:
+  - label: '[대수다양체] §천 특성류'
+    url: /ko/math/algebraic_varieties/chern_classes
 - id: chern_class
   en: Chern class
   ko: 천 특성류
@@ -883,6 +890,13 @@ C:
   defs:
   - label: '[대수적 위상수학] §벡터다발의 특성류'
     url: /ko/math/algebraic_topology/characteristic_classes
+- id: chern_root
+  en: Chern root
+  ko: 천 근
+  primary: en
+  defs:
+  - label: '[대수다양체] §천 특성류'
+    url: /ko/math/algebraic_varieties/chern_classes
 - id: choice_function
   en: choice function
   ko: 선택함수

@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-translate_worker.py — single-shot ko→en translation worker (GLM via claudeglm).
+translate_worker.py — single-shot ko→en translation worker (Kimi CLI).
 
 Designed for half-hourly cron (:15/:45). Picks ONE Korean blog post that needs
-translation (missing en/ counterpart, or drift_needed), sends it to GLM through
-the `claudeglm -p` headless CLI (Anthropic-compatible endpoint, glm-5.2), writes
-the en/ counterpart. 2026-07-20 engine swap: Kimi CLI → claudeglm; the old
-`kimi` path is kept behind TRANSLATOR_BACKEND="kimi" for rollback.
+translation (missing en/ counterpart, or drift_needed), sends it to Kimi through
+the native `kimi` CLI, writes the en/ counterpart. 2026-07-21: GLM 해지로 Kimi
+기본 복귀 (7-20의 Kimi→GLM 스왑을 하루 만에 되돌림). The dead `glm` path is
+kept behind TRANSLATOR_BACKEND="glm" for reference only — claudeglm is retired.
 
 Usage:
     python3 translate_worker.py            # run one translation, exit
@@ -54,8 +54,9 @@ LOCK_PATH   = Path("/tmp/translate-worker.lock")
 # Kimi CLI
 # ---------------------------------------------------------------------------
 
-# 번역 엔진 백엔드: "glm"(기본, claudeglm -p 헤드리스) 또는 "kimi"(구 경로, 롤백용).
-TRANSLATOR_BACKEND    = os.environ.get("TRANSLATOR_BACKEND", "glm")
+# 번역 엔진 백엔드: "kimi"(기본, native kimi CLI) 또는 "glm"(사장된 경로 — GLM
+# 해지됨, 참고용으로만 잔존. claudeglm 바이너리는 제거되어 실행 불가).
+TRANSLATOR_BACKEND    = os.environ.get("TRANSLATOR_BACKEND", "kimi")
 GLM_BIN               = str(Path.home() / ".local/bin/claudeglm")
 KIMI_BIN              = shutil.which("kimi") or str(Path.home() / ".local/bin/kimi")
 # No-tools agent + empty MCP for the single-shot verify/audit call (see call_kimi).
