@@ -10,8 +10,9 @@ sidebar:
 
 date: 2025-03-08
 weight: 11
-translated_at: 2026-07-21T21:17:12+00:00
+translated_at: 2026-07-21T22:15:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-21T22:15:02+00:00
 ---
 One of the things we promised when introducing schemes was the fiber product, which is the product in $\Sch_{/S}$; to discuss this we had to define $S$-schemes (and scheme morphisms). Now that the preparations are complete, we define the fiber product.
 
@@ -48,7 +49,7 @@ $$\Spec A\times_{\Spec C}\Spec B\cong\Spec (A\otimes_C B).$$
 Via $\AffSch\cong\cRing^\op$ we convert $\Spec A \rightarrow \Spec C$, $\Spec B \rightarrow \Spec C$ into $C \rightarrow A$, $C \rightarrow B$, and compare the universal property of [\[Algebraic Structures\] §Products, Coproducts, and Tensor Products of Algebras, ⁋Theorem 8](/en/math/algebraic_structures/operations_of_algebras#thm8) with the universal property of the fiber product.
 :::
 
-Now, to prove the existence of fiber products for general schemes, it suffices to show that we can glue together the affine results examined in [Lemma 2](#lem2). 
+Now, to prove the existence of fiber products for general schemes, it suffices to show that we can glue together the affine results examined in [Lemma 2](#lem2).
 
 First, when an open subscheme $U$ of $Z$ is given, writing it in the form $\iota:U \rightarrow Z$ using the inclusion morphism, the following lemma is almost a tautology.
 
