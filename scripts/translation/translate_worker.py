@@ -247,10 +247,19 @@ def clear_drift_flag(ko_path: Path) -> None:
 AUTOPUSH_LOCK = Path("/tmp/blog-autopush.lock")
 COMMIT_LOCK_WAIT_SEC = 120
 
+# 번역은 LLM 산출물이므로 author=Marvin, 커밋 행위자는 Claude (2026-07-22 정체성
+# 체계, 히스토리 리라이트와 동일 구도). marvin@math-jh.com 은 의도적으로 GitHub
+# 미등록 주소 — 나중에 machine account 를 만들어 인증하면 소급 연결된다.
+_GIT_IDENTITY = {
+    "GIT_AUTHOR_NAME": "Marvin", "GIT_AUTHOR_EMAIL": "marvin@math-jh.com",
+    "GIT_COMMITTER_NAME": "Claude", "GIT_COMMITTER_EMAIL": "noreply@anthropic.com",
+}
+
 
 def _git(*args: str) -> Tuple[int, str, str]:
     p = subprocess.run(["git", *args], cwd=str(BLOG_ROOT),
-                       capture_output=True, text=True)
+                       capture_output=True, text=True,
+                       env={**os.environ, **_GIT_IDENTITY})
     return p.returncode, p.stdout, p.stderr
 
 

@@ -49,7 +49,11 @@ $$b=1\cdot b=(a^{-1}a)b=a^{-1}(ab)=a^{-1}\cdot 0=0$$
 
 뿐만 아니라, 해당 글에서 우리는 이미 위 [명제 2](#prop2)의 부분적인 역, 즉 *finite* ring에 대해서는 integral domain이 항상 field가 된다는 것을 살펴보았다. ([§가역원과 영인자, ⁋따름정리 6](/ko/math/ring_theory/units_and_zero_divisors#cor6)) 이 따름정리의 증명에는 ring의 commutativity가 본질적으로 사용되지 <em-ko>않는데</em-ko>, 그럼에도 불구하고 해당 따름정리에서 commutativity를 가정한 이유는 commutativity를 뺐을 때 다루게 되는 finite non-commutative zero-divisor-free ring이 존재하지 않기 때문이다. 
 
-Division ring $D$의 center $Z=Z(D)$는 $D$의 commutative subring이며 ([\[대수적 구조\] §환의 정의, ⁋정의 8](/ko/math/algebraic_structures/rings#def8)), 나아가 field이다. $z\in Z$가 nonzero이면 $D$ 안에서 역원 $z^{-1}$을 갖고, 임의의 $x\in D$에 대하여 $z^{-1}x=z^{-1}xzz^{-1}=z^{-1}zxz^{-1}=xz^{-1}$이므로 $z^{-1}\in Z$이기 때문이다. 따라서 $D$가 유한하면 $Z$는 유한 field이고, 그 원소의 개수를 $q$라 하면 $q\geq 2$이다.
+이 현상을 살펴보기 위해 우리는 우선 division ring $D$의 center $Z=Z(D)$에 대한 성질을 정리한다. 이는 $D$의 commutative subring이며 ([\[대수적 구조\] §환의 정의, ⁋정의 8](/ko/math/algebraic_structures/rings#def8)), 나아가 field이다. 이는 임의의 nonzero $z\in Z$가 $D$ 안에서 역원 $z^{-1}$을 갖고, 임의의 $x\in D$에 대하여 
+
+$$z^{-1}x=z^{-1}xzz^{-1}=z^{-1}zxz^{-1}=xz^{-1}$$
+
+이므로 $z^{-1}\in Z$이기 때문이다. 따라서 $D$가 유한하면 $Z$는 유한 field이고, 그 원소의 개수를 $q$라 하면 $q\geq 2$이다.
 
 이제 $D$를 $Z$ 위의 vector space로 보면 $n=\dim_Z D$에 대하여 $\lvert D\rvert=q^n$이다. 더 일반적으로 $Z$를 포함하는 $D$의 부분 division ring $D'$ 또한 $Z$ 위의 vector space이므로 그 원소 개수는 $q^d$ 꼴이고, $D$가 $D'$ 위의 $m$차원 vector space이면 $q^n=(q^d)^m$에서 $d\mid n$을 얻는다. 이 정수론적 제약과 맞물려 증명에 쓰이는 것이 cyclotomic polynomial이다.
 
@@ -65,7 +69,7 @@ Cyclotomic polynomial의 기본 성질로 우리는 두 가지를 사용한다. 
 
 $$\x^n-1=\prod_{d\mid n}\Phi_d(\x)$$
 
-이 성립하고, 귀납적으로 각 $\Phi_d(\x)$가 정수 계수를 가짐을 안다 (monic 다항식의 나눗셈에서 계수가 정수로 유지된다). 둘째, $d\mid n$이고 $d<n$이면
+이 성립하고, $n$의 진약수 $d$에 대한 $\Phi_d$들의 곱이 monic이므로 [§다항식환, ⁋명제 5](/ko/math/ring_theory/polynomial_rings#prop5)의 나눗셈을 $\mathbb{Z}[\x]$ 안에서 수행하여 귀납적으로 각 $\Phi_d(\x)$가 정수 계수를 가짐을 안다. 둘째, $d\mid n$이고 $d<n$이면
 
 $$\x^n-1=(\x^d-1)\cdot\prod_{\substack{e\mid n\\ e\nmid d}}\Phi_e(\x)$$
 

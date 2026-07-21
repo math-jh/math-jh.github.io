@@ -14,7 +14,9 @@ published: false
 drift_needed: true
 ---
 
-우리는 scheme morphism $f: X \rightarrow S$를 $S$로 parametrize된 family로 읽기로 하였으며 ([§스킴 사이의 사상, ⁋예시 10](/ko/math/scheme_theory/morphism_of_schemes#ex10)), 이 family의 $s\in S$에서의 멤버를 fiber $X_s=X\times_S\Spec \kappa(s)$로 정의하였다. ([§올곱, ⁋정의 12](/ko/math/scheme_theory/fiber_products#def12)) 이제 그 역을 물어야 한다. Morphism이기만 하면 언제나 좋은 family인가?
+우리는 scheme morphism $f: X \rightarrow S$를 $S$로 parametrize된 family로 읽기로 하였으며 ([§스킴 사이의 사상, ⁋예시 10](/ko/math/scheme_theory/morphism_of_schemes#ex10)), 이 family의 $s\in S$에서의 member를 fiber $X_s=X\times_S\Spec \kappa(s)$로 정의하였다. ([§올곱, ⁋정의 12](/ko/math/scheme_theory/fiber_products#def12)) 그러나 이 family가 얼마나 좋게 행동할지는 현재로서 우리가 확인할 수 없는 정보이다. 
+
+
 
 가장 자명한 family는 상수 family이다. $\mathbb{K}$-scheme $C$와 base $S$에 대하여 $C \rightarrow \Spec \mathbb{K}$를 $S \rightarrow \Spec \mathbb{K}$를 따라 pullback하면 $C\times_\mathbb{K} S \rightarrow S$를 얻고, 이 family의 fiber는 모든 $s$에서 $C_{\kappa(s)}$이다. 즉 이미 있는 scheme을 pullback하는 것만으로는 상수 family 이상을 만들어낼 수 없으며, 비자명한 family는 만들어지는 것이 아니라 방정식으로 주어진다. 예를 들어
 

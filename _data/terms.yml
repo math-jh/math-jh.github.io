@@ -2322,6 +2322,13 @@ D:
     url: /ko/math/field_theory/algebraic_extensions
   - label: '[대수적 위상수학] §사상의 차수와 Brouwer·Lefschetz 고정점 정리'
     url: /ko/math/algebraic_topology/degree_and_fixed_point_theorems
+- id: deleted_neighborhood
+  en: deleted neighborhood
+  ko: 삭제된 근방
+  primary: ko
+  defs:
+  - label: '[미적분학] §함수의 극한'
+    url: /ko/math/calculus/functions_and_limits
 - id: deligne_mumford_stack
   en: Deligne–Mumford stack
   ko: 들리뉴-멈퍼드 스택
@@ -3090,6 +3097,13 @@ E:
   defs:
   - label: '[해석학] §함수열과 점별수렴'
     url: /ko/math/analysis/sequences_of_functions
+- id: essential
+  en: essential
+  ko: 본질적 불연속
+  primary: en
+  defs:
+  - label: '[미적분학] §연속함수'
+    url: /ko/math/calculus/continuity
 - id: essentially_surjective
   en: essentially surjective
   ko: 본질적 전사 함자
@@ -4267,6 +4281,13 @@ H:
   defs:
   - label: '[거울대칭] §거울대칭 개요'
     url: /ko/math/mirror_symmetry/overview
+- id: horizontal_asymptote
+  en: horizontal asymptote
+  ko: 수평점근선
+  primary: ko
+  defs:
+  - label: '[미적분학] §함수의 극한'
+    url: /ko/math/calculus/functions_and_limits
 - id: hurewicz_fibration
   en: Hurewicz fibration
   ko: 후레비치 올뭉치
@@ -4986,6 +5007,15 @@ J:
   defs:
   - label: '[다중선형대수학] §행렬'
     url: /ko/math/multilinear_algebra/matrices
+- id: jump
+  en: jump
+  ko: 도약
+  primary: en
+  defs:
+  - label: '[미적분학] §함수의 극한'
+    url: /ko/math/calculus/functions_and_limits
+  - label: '[미적분학] §연속함수'
+    url: /ko/math/calculus/continuity
 K:
 - id: k_-simplex
   en: $k$-simplex
@@ -5268,6 +5298,13 @@ L:
   see:
   - label: Right inverse
     id: right_inverse
+- id: left_limit
+  en: left limit
+  ko: 왼쪽 극한
+  primary: ko
+  defs:
+  - label: '[미적분학] §함수의 극한'
+    url: /ko/math/calculus/functions_and_limits
 - id: left_resolution
   en: left resolution
   ko: 왼쪽 분해
@@ -5373,6 +5410,8 @@ L:
     url: /ko/math/category_theory/limits
   - label: '[해석학] §수열의 수렴'
     url: /ko/math/analysis/convergence_of_sequences
+  - label: '[미적분학] §함수의 극한'
+    url: /ko/math/calculus/functions_and_limits
 - id: limit_ordinal
   en: limit ordinal
   ko: 극한서수
@@ -6156,6 +6195,8 @@ N:
   defs:
   - label: '[위상수학] §열린집합'
     url: /ko/math/topology/open_sets
+  - label: '[미적분학] §함수의 극한'
+    url: /ko/math/calculus/functions_and_limits
 - id: neighborhood_filter
   en: neighborhood filter
   ko: 근방필터
@@ -7761,6 +7802,13 @@ R:
   defs:
   - label: '[환론] §정역'
     url: /ko/math/ring_theory/integral_domains
+- id: removable
+  en: removable
+  ko: 제거가능 불연속
+  primary: en
+  defs:
+  - label: '[미적분학] §연속함수'
+    url: /ko/math/calculus/continuity
 - id: representable_functor
   en: representable functor
   ko: 표현 가능한 함자
@@ -7981,6 +8029,13 @@ R:
   see:
   - label: Left inverse
     id: left_inverse
+- id: right_limit
+  en: right limit
+  ko: 오른쪽 극한
+  primary: ko
+  defs:
+  - label: '[미적분학] §함수의 극한'
+    url: /ko/math/calculus/functions_and_limits
 - id: right_resolution
   en: right resolution
   ko: 오른쪽 분해
@@ -9926,6 +9981,13 @@ V:
   defs:
   - label: '[층론] §Verdier 쌍대성'
     url: /ko/math/sheaf_theory/verdier_duality
+- id: vertical_asymptote
+  en: vertical asymptote
+  ko: 수직점근선
+  primary: ko
+  defs:
+  - label: '[미적분학] §함수의 극한'
+    url: /ko/math/calculus/functions_and_limits
 - id: vertical_tangent
   en: vertical tangent
   ko: 수직접선
