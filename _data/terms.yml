@@ -4519,6 +4519,13 @@ I:
   defs:
   - label: '[미분다양체] §Distribution'
     url: /ko/math/manifolds/distribution
+- id: integral_with_variable_upper_limit
+  en: integral with variable upper limit
+  ko: 가변상한 적분
+  primary: ko
+  defs:
+  - label: '[해석학] §미적분의 기본정리'
+    url: /ko/math/analysis/fundamental_theorem_of_calculus
 - id: interior
   en: interior
   ko: 내부
