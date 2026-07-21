@@ -32,7 +32,7 @@ For the canonical line bundle $\omega_X$ on projective space $X=\mathbb{P}^n$, t
 $H^n(X, \omega_X)\cong \mathbb{K}$.
 :::
 
-In general this is understood as the isomorphism explicitly taking $\x_0^{-1}\cdots\x_n^{-1}$ as a basis, but it is determined only up to scalar multiplication. Choosing such a normalization is the same as concretely choosing a *trace map* $\tr:H^n(\mathbb{P}^n, \omega_{\mathbb{P}^n}) \to \mathbb{K}$.
+In general this is understood as the isomorphism explicitly taking $\x_0^{-1}\cdots\x_n^{-1}$ as a basis, but it is determined only up to scalar multiplication. Choosing such a normalization is the same as concretely choosing a *trace map* $\tr:H^n(\mathbb{P}^n, \omega_{\mathbb{P}^n}) \rightarrow \mathbb{K}$.
 
 To obtain the duality pairing we now need to define the cup product. For convenience let us work at the level of Čech cohomology. For any topological space $X$, an open cover $\mathcal{U}$ of $X$, and sheaves $\mathcal{F}$, $\mathcal{G}$ defined on $X$, we define the cup product of two Čech cochains $\alpha \in \check{C}^i(\mathcal{U}, \mathcal{F})$, $\beta \in \check{C}^j(\mathcal{U}, \mathcal{G})$ by the formula
 
@@ -40,7 +40,7 @@ $$(\alpha \smile \beta)_{i_0, \ldots, i_{i+j}} = \alpha_{i_0,\ldots,i_i}\big\ver
 
 We can explicitly compute that this descends to the cohomology level, and from this the function
 
-$$\smile:\check{H}^i(\mathcal{U}, \mathcal{F}) \times \check{H}^j(\mathcal{U}, \mathcal{G}) \to \check{H}^{i+j}(\mathcal{U}, \mathcal{F} \otimes \mathcal{G})$$
+$$\smile:\check{H}^i(\mathcal{U}, \mathcal{F}) \times \check{H}^j(\mathcal{U}, \mathcal{G}) \rightarrow \check{H}^{i+j}(\mathcal{U}, \mathcal{F} \otimes \mathcal{G})$$
 
 is defined. At the sheaf cohomology level we can also define this by taking injective resolutions $\mathcal{I}^\bullet$, $\mathcal{J}^\bullet$ of $\mathcal{F}$ and $\mathcal{G}$ respectively, and using the fact that their tensor product complex (that is, the total complex of the double complex whose components are $\mathcal{I}^p\otimes \mathcal{J}^q$) defines a resolution of $\mathcal{F}\otimes \mathcal{G}$.
 
@@ -59,7 +59,7 @@ From the discussion so far we obtain the following.
 ::: Proposition 2 (Serre duality pairing, projective case)
 For a locally free sheaf $\mathcal{E}$ on $\mathbb{P}^n$, the bilinear form
 
-$$H^k(\mathbb{P}^n, \mathcal{E}) \times H^{n-k}(\mathbb{P}^n, \omega_{\mathbb{P}^n} \otimes \mathcal{E}^\vee) \to \mathbb{K};\quad (\alpha, \beta) \mapsto \tr(\alpha \smile \beta)$$
+$$H^k(\mathbb{P}^n, \mathcal{E}) \times H^{n-k}(\mathbb{P}^n, \omega_{\mathbb{P}^n} \otimes \mathcal{E}^\vee) \rightarrow \mathbb{K};\quad (\alpha, \beta) \mapsto \tr(\alpha \smile \beta)$$
 
 is a perfect pairing.
 :::
@@ -68,7 +68,7 @@ More explicitly, Serre duality generally means the following isomorphism obtaine
 
 $$H^k(\mathbb{P}^n, \mathcal{E})\cong H^{n-k}(\mathbb{P}^n, \omega_{\mathbb{P}^n}\otimes\mathcal{E}^\vee)^\ast$$
 
-More generally, by the Noether normalization theorem for any $n$-dimensional smooth projective variety $X$ there exists a finite surjective morphism $f: X \to \mathbb{P}^n$. Then we can pull back Serre duality proved on $\mathbb{P}^n$ to $X$ via this finite morphism $f$, and in this setting Serre duality means the isomorphism
+More generally, by the Noether normalization theorem for any $n$-dimensional smooth projective variety $X$ there exists a finite surjective morphism $f: X \rightarrow \mathbb{P}^n$. Then we can pull back Serre duality proved on $\mathbb{P}^n$ to $X$ via this finite morphism $f$, and in this setting Serre duality means the isomorphism
 
 $$H^i(X, \mathcal{E}) \cong H^{n-i}(X, \omega_X \otimes \mathcal{E}^\vee)^\ast$$
 
@@ -115,7 +115,7 @@ That an affine variety $X$ is defined over $\mathbb{K}$ means that its coordinat
 Relative Serre duality generalizes this setting by replacing the target $\mathbb{A}^1_\mathbb{K}$ with another variety. First, for arbitrary varieties $X,Y$, let us define that a morphism $f:X\rightarrow Y$ is a *smooth projective morphism* if the fiber $f^{-1}(y)$ over each $y\in Y$ is a smooth projective variety. Then in this case, since $f^{-1}(y)$ is a smooth projective variety, the canonical line bundle $\omega_{X_y}$ will exist, and the *relative dualizing sheaf* $\omega_{X/Y}$ on $X$ is defined by consistently collecting these. That is, $\omega_{X/Y}$ is a sheaf satisfying $\omega_{X/Y}\vert_{X_y}\cong\omega_{X_y}$ for each $y$. Then the generalization in this case is as follows.
 
 ::: Proposition 4 (Relative Serre duality)
-For a smooth projective morphism $f \colon X \to Y$, let $n = \dim X - \dim Y$. Then
+For a smooth projective morphism $f \colon X \rightarrow Y$, let $n = \dim X - \dim Y$. Then
 
 $$R^n f_\ast \omega_{X/Y} \cong \mathcal{O}_Y$$
 
@@ -143,7 +143,7 @@ Here the *exceptional inverse image* $f^!$ is the functor defined as the right a
 As mentioned earlier, Grothendieck duality is a result containing relative Serre duality. To see this, consider the case of a smooth morphism $f:X\rightarrow Y$; then $f^! \mathcal{O}_Y \cong \omega_{X/Y}[n]$ holds, and from this we can see that $\omega_{X/Y}$ being in the correct dimension is exactly $f^!\mathcal{O}_Y$.
 
 ::: Proposition 5 (Grothendieck Duality)
-For a proper morphism $f \colon X \to Y$ and a coherent sheaf $\mathcal{F}$ on $X$, the following isomorphism holds in the derived category:
+For a proper morphism $f \colon X \rightarrow Y$ and a coherent sheaf $\mathcal{F}$ on $X$, the following isomorphism holds in the derived category:
 
 $$R f_\ast R\mathcal{H}om_{\mathcal{O}_X}(\mathcal{F}, f^! \mathcal{G}) \cong R\mathcal{H}om_{\mathcal{O}_Y}(R f_\ast \mathcal{F}, \mathcal{G})$$
 

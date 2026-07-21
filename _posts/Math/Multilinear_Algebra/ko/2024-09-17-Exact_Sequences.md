@@ -135,7 +135,7 @@ $$i_1-i_2:N_1\oplus N_2 \rightarrow N_1+N_2;\qquad (x_1,x_2)\mapsto x_1-x_2$$
 한편, 우리는 다음과 같이 정의한다.
 
 ::: 정의 8
-임의의 $A$-module $M$과 $M$의 두 submodule $N_1, N_2$에 대하여, 만일 $M$이 $N_1$과 $N_2$의 direct sum이라면 $N_1,N_2$를 서로에 대한 *supplementary submodule<sub>보조부분가군</sub>*이라 부른다. 만일 $M$의 submodule $N$이 supplementary submodule을 갖는다면 $N$을 $M$의 *direct summand*라 부른다. 
+임의의 $A$-module $M$과 $M$의 두 submodule $N_1, N_2$에 대하여, 만일 $M$이 $N_1$과 $N_2$의 direct sum이라면 $N_1,N_2$를 서로에 대한 *supplementary submodule<sub>보조부분가군</sub>*이라 부른다. 만일 $M$의 submodule $N$이 supplementary submodule을 갖는다면 $N$을 $M$의 *direct summand<sub>직합인자</sub>*라 부른다. 
 :::
 
 즉, 이와 같은 상황에서 $N_1+N_2=M$이고 $N_1\cap N_2=0$이다. 그럼 이를 이용하여 canonical morphism $M \rightarrow M/N_1$의 정의역을 $N_2$로 제한한 것이 isomorphism이고, 비슷하게 $M \rightarrow M/N_2$의 정의역을 $N_1$으로 제한한 것이 isomorphism임을 확인할 수 있다. 

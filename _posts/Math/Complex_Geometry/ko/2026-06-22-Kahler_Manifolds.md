@@ -23,13 +23,13 @@ complex manifold는 tangent space 수준에서 곱셈 $i$를 흉내내는 거의
 complex manifold $X$ 위의 Riemannian metric 가운데 복소구조와 어울리는 것을 골라낸다. 양립의 기준은 $J$가 각 tangent space에서 등거리변환이 되는 것이다.
 
 ::: 정의 1
-complex manifold $(X, J)$ 위의 Riemannian metric $g$가 *Hermitian metric<sub>Hermitian 계량</sub>*이라는 것은, 모든 점에서 모든 접벡터 $X, Y$에 대하여
+complex manifold $(X, J)$ 위의 Riemannian metric $g$가 *Hermitian metric<sub>에르미트 계량</sub>*이라는 것은, 모든 점에서 모든 접벡터 $X, Y$에 대하여
 
 $$
 g(JX, JY) = g(X, Y)
 $$
 
-가 성립하는 것이다. 곧 $J$가 각 tangent space에서 $g$-등거리변환인 것이다. 이러한 $g$를 갖춘 $(X, J, g)$를 *Hermitian manifold<sub>Hermitian 다양체</sub>*라 한다.
+가 성립하는 것이다. 곧 $J$가 각 tangent space에서 $g$-등거리변환인 것이다. 이러한 $g$를 갖춘 $(X, J, g)$를 *Hermitian manifold<sub>에르미트 다양체</sub>*라 한다.
 :::
 
 조건 $g(JX, JY) = g(X, Y)$를 *$J$-invariance<sub>$J$-불변성</sub>* 라 부른다. 임의의 Riemannian metric $g_0$가 주어지면 $g(X, Y) = \frac{1}{2}\big( g_0(X, Y) + g_0(JX, JY) \big)$로 평균을 취해 언제나 Hermitian 계량을 만들 수 있으므로, 모든 complex manifold는 Hermitian 계량을 가진다. Hermitian 조건은 $g$에 대한 제약일 뿐 추가 적분가능성을 요구하지 않으며, 그 자체로는 Kähler 조건보다 약하다.
@@ -43,7 +43,7 @@ $$
 \omega(X, Y) = g(JX, Y)
 $$
 
-로 정의한다. 또 복소값 bilinear form $h = g - i\omega$를 $(X, J, g)$의 *Hermitian form<sub>Hermitian 형식</sub>*이라 한다.
+로 정의한다. 또 복소값 bilinear form $h = g - i\omega$를 $(X, J, g)$의 *Hermitian form<sub>에르미트 형식</sub>*이라 한다.
 :::
 
 기본형식이 반대칭임은 $J$-불변성에서 나온다. $\omega(Y, X) = g(JY, X) = g(J(JY), JX) = g(-Y, JX) = -g(JX, Y) = -\omega(X, Y)$이므로 $\omega$는 반대칭 $2$-형식, 곧 미분 $2$-형식이다. 더 나아가 $\omega$는 $J$-불변이다. $\omega(JX, JY) = g(J^2 X, JY) = g(-X, JY) = -g(JY, X) = -\omega(Y,X) = \omega(X,Y)$이기 때문이다. $J$-불변 $2$-형식은 $(1,1)$-형식이 되며 ([§거의 복소구조, ⁋정의 6](/ko/math/complex_geometry/almost_complex_structures#def6)의 차수분해에서 $J$-불변성이 $(2,0)$·$(0,2)$-성분의 소멸을 강제한다), 따라서 $\omega$는 실 $(1,1)$-형식이다. 한편 $h = g - i\omega$는 $T^{1,0}X$ 위에서 Hermitian 내적의 역할을 한다. 곧 $h(X, Y) = g(X,Y) - i\, g(JX, Y)$로서 첫 변수에 $\mathbb{C}$-선형, 둘째에 반선형인 양의 Hermitian 형식이 되며, 이 점이 "Hermitian"이라는 이름의 근거이다.
@@ -67,16 +67,16 @@ $$
 Hermitian 조건만으로는 복소구조와 계량이 일차적으로만 맞물린다. 둘이 이차까지, 곧 미분 수준에서 완전히 양립하려면 기본형식이 닫혀야 한다. 이것이 Kähler 조건이다.
 
 ::: 정의 3
-Hermitian manifold $(X, J, g)$가 *Kähler manifold<sub>Kähler 다양체</sub>*라는 것은 그 기본형식 $\omega$가 닫힌형식인 것, 곧
+Hermitian manifold $(X, J, g)$가 *Kähler manifold<sub>켈러 다양체</sub>*라는 것은 그 기본형식 $\omega$가 닫힌형식인 것, 곧
 
 $$
 d\omega = 0
 $$
 
-인 것이다. 이때 $g$를 *Kähler metric<sub>Kähler 계량</sub>*, $\omega$를 *Kähler form<sub>Kähler 형식</sub>*이라 한다.
+인 것이다. 이때 $g$를 *Kähler metric<sub>켈러 계량</sub>*, $\omega$를 *Kähler form<sub>켈러 형식</sub>*이라 한다.
 :::
 
-조건 $d\omega = 0$은 $\omega$가 de Rham cohomology class $[\omega] \in H^2(X, \mathbb{R})$를 정의하게 하며, 이 류를 $X$의 *Kähler class<sub>Kähler 류</sub>*라 한다. 모든 complex manifold가 Hermitian 계량을 갖는 것과 달리, Kähler 계량의 존재는 진정한 제약이다. 아래에서 보듯 콤팩트 Kähler manifold는 짝수 차수의 cohomology가 모두 비자명해야 하므로, 이 조건을 어기는 콤팩트 complex manifold는 Kähler 계량을 전혀 가질 수 없다.
+조건 $d\omega = 0$은 $\omega$가 de Rham cohomology class $[\omega] \in H^2(X, \mathbb{R})$를 정의하게 하며, 이 류를 $X$의 *Kähler class<sub>켈러 류</sub>*라 한다. 모든 complex manifold가 Hermitian 계량을 갖는 것과 달리, Kähler 계량의 존재는 진정한 제약이다. 아래에서 보듯 콤팩트 Kähler manifold는 짝수 차수의 cohomology가 모두 비자명해야 하므로, 이 조건을 어기는 콤팩트 complex manifold는 Kähler 계량을 전혀 가질 수 없다.
 
 좌표에서 Kähler 조건은 계량 성분의 미분에 대한 깔끔한 대칭으로 번역된다. 기본형식 $\omega = \frac{i}{2}\sum g_{j\bar{k}}\, dz_j \wedge d\bar{z}_k$에 exterior derivative를 적용하면 [§Dolbeault 코호몰로지, ⁋명제 2](/ko/math/complex_geometry/dolbeault_cohomology#prop2)의 $d = \partial + \bar\partial$에 의해 $d\omega$는 $(2,1)$-성분 $\partial\omega$와 $(1,2)$-성분 $\bar\partial\omega$로 갈라진다. $\omega$가 실형식이므로 $\partial\omega = 0$과 $\bar\partial\omega = 0$은 켤레로 동치이고, 따라서 $d\omega = 0$은 $\partial\omega = 0$ 하나와 동치이다. 이를 좌표로 풀면 다음 명제가 된다.
 
@@ -134,7 +134,7 @@ $$
 (2) ⟺ (1)을 본다. Levi-Civita 접속은 계량과 호환되고 비틀림이 없다. $g$가 Hermitian이므로 $\omega(X, Y) = g(JX, Y)$이고, $\nabla g = 0$이므로 $\nabla\omega$와 $\nabla J$는 $\nabla\omega(X; Y, Z) = g((\nabla_X J)Y, Z)$로 직접 이어진다. 따라서 $\nabla J = 0$은 $\nabla\omega = 0$과 동치이고, $\nabla\omega = 0$이면 특히 $\omega$의 반대칭화인 $d\omega$가 소멸한다 ($d\omega(X,Y,Z) = \sum_{\text{cyc}} (\nabla_X\omega)(Y,Z)$, 비틀림이 없으므로). 곧 (2) ⟹ (1)이다. 역의 함의 (1) ⟹ (2)가 Kähler 기하의 핵심이며, 다음과 같이 본다. $\nabla\omega$는 $g$, $J$, $d\omega$, 그리고 $N_J$ (Nijenhuis 텐서)로 대수적으로 표현되는데, $X$가 complex manifold라 [§거의 복소구조, ⁋정리 12](/ko/math/complex_geometry/almost_complex_structures#thm12)에 의해 $N_J = 0$이고 가정에서 $d\omega = 0$이므로 $\nabla\omega = 0$이 따라온다. 정밀하게는, 비틀림 없는 Levi-Civita 접속에 대하여 $2\, g\big((\nabla_X J)Y, Z\big)$가 기본형식의 외미분값 $d\omega(X, Y, Z)$·$d\omega(X, JY, JZ)$와 Nijenhuis 항 $g\big(N_J(Y, Z), JX\big)$의 일차결합으로 표현된다 (각 항의 계수는 $\omega$와 $N_J$의 부호 규약에 따라 정해진다). $X$가 complex manifold라 $N_J = 0$이고 가정에서 $d\omega = 0$이므로 이 결합의 모든 항이 소멸하여 $(\nabla_X J)Y = 0$, 곧 $\nabla J = 0$을 얻는다.
 :::
 
-이 네 동치조건은 Kähler manifold를 보는 네 가지 시점을 준다. 조건 (1)은 사교적, (2)는 리만적, (3)은 국소 해석적, (4)는 복소 해석적 시점이다. 특히 (3)은 Kähler manifold가 각 점에서 평탄한 $\mathbb{C}^n$과 이차까지 구별되지 않음을 뜻하며, 이 "이차 osculation"이 Kähler 항등식과 같은 강력한 국소 공식들이 성립하는 근거이다. 조건 (2)는 holonomy 군이 $U(n)$ 안에 들어감을 뜻하여, Kähler manifold를 holonomy 관점에서 특징짓는다. 조건 (4)의 국소 퍼텐셜 $\varphi$를 *Kähler potential<sub>Kähler 퍼텐셜</sub>* 이라 부르며, 다음 절의 Fubini–Study 계량 구성에서 핵심 도구가 된다.
+이 네 동치조건은 Kähler manifold를 보는 네 가지 시점을 준다. 조건 (1)은 사교적, (2)는 리만적, (3)은 국소 해석적, (4)는 복소 해석적 시점이다. 특히 (3)은 Kähler manifold가 각 점에서 평탄한 $\mathbb{C}^n$과 이차까지 구별되지 않음을 뜻하며, 이 "이차 osculation"이 Kähler 항등식과 같은 강력한 국소 공식들이 성립하는 근거이다. 조건 (2)는 holonomy 군이 $U(n)$ 안에 들어감을 뜻하여, Kähler manifold를 holonomy 관점에서 특징짓는다. 조건 (4)의 국소 퍼텐셜 $\varphi$를 *Kähler potential<sub>켈러 퍼텐셜</sub>* 이라 부르며, 다음 절의 Fubini–Study 계량 구성에서 핵심 도구가 된다.
 
 ## 예시
 

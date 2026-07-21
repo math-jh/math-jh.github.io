@@ -61,7 +61,7 @@ $$(x,y)(x',y')=(xx', xy+\varepsilon(\delta, \deg x)xy')$$
 그럼 다음 명제 또한 단순한 계산의 결과이다. 
 
 ::: 명제 3
-Graded $K$-linear map $f: A \to E$ of degree $\delta$가 $\varepsilon$-derivation이 되기 위한 필요충분조건은, 함수 $x \mapsto (x, f(x))$가 $A$에서 $A \oplus E[\delta]$로의 graded $K$-algebra homomorphism이 되는 것이다.
+Graded $K$-linear map $f: A \rightarrow E$ of degree $\delta$가 $\varepsilon$-derivation이 되기 위한 필요충분조건은, 함수 $x \mapsto (x, f(x))$가 $A$에서 $A \oplus E[\delta]$로의 graded $K$-algebra homomorphism이 되는 것이다.
 :::
 
 한편, 역시 다음 절을 위해 앞에서 정의한 graded $A$-algebra $E\oplus M[\delta]$가 언제 associative, unital인지를 살펴볼 필요가 있다. 
@@ -96,7 +96,7 @@ $$(b, t)(b', t') = (bb', bt' + b't)$$
 
 으로 곱셈을 정의하여 이를 associative $\mathbb{Z}$-algebra로 생각하자. 그럼 canonical injection $t\mapsto (0,t)$에 의하여 $E$를 $\mathbb{Z}$-algebra $B\oplus E$의 two-sided ideal과 동일시할 수 있으며 이 때 $E^2=0$이다. 
 
-한편, $h_0: B \to B \oplus E$를 $h_0(a) = (a, d_0(a))$로 정의하면, 이는 [명제 3](#prop3)에 의해 (unital) ring homomorphism이며 이를 통해 $B \oplus E$는 $A$-algebra가 된다. 이제 $B\oplus E$ 위에 이러한 $A$-module 구조를 준 후 $h_1(x) = (x, d_1(x))$로 정의된 함수 $h_1: M \rightarrow B\oplus E$를 생각하자. 그럼 주어진 조건에 의하여 다음의 식
+한편, $h_0: B \rightarrow B \oplus E$를 $h_0(a) = (a, d_0(a))$로 정의하면, 이는 [명제 3](#prop3)에 의해 (unital) ring homomorphism이며 이를 통해 $B \oplus E$는 $A$-algebra가 된다. 이제 $B\oplus E$ 위에 이러한 $A$-module 구조를 준 후 $h_1(x) = (x, d_1(x))$로 정의된 함수 $h_1: M \rightarrow B\oplus E$를 생각하자. 그럼 주어진 조건에 의하여 다음의 식
 
 $$h_1(ax) = h_0(a) h_1(x)$$
 
@@ -133,10 +133,10 @@ $$\sum_i x_i\otimes y_i=\sum_i \left(x_i(1\otimes y_i)-(x_iy_i)\otimes 1\right)=
 ::: 명제 7
 [보조정리 6](#lem6)에서 얻어진 $\delta_E$는 다음의 universal property을 만족한다. 
 
-> 모든 $(E,E)$-bimodule $M$과 모든 $A$-derivation $d: E \to M$에 대하여, 유일한 $(E,E)$-bimodule homomorphism $f: \mathfrak{I} \to M$가 존재하여 $d=f\circ\delta_E$이도록 할 수 있다. 
+> 모든 $(E,E)$-bimodule $M$과 모든 $A$-derivation $d: E \rightarrow M$에 대하여, 유일한 $(E,E)$-bimodule homomorphism $f: \mathfrak{I} \rightarrow M$가 존재하여 $d=f\circ\delta_E$이도록 할 수 있다. 
 :::
 ::: 증명
-우선 [명제 1](#prop1)에 의하여 모든 $(E, E)$-bimodule homomorphism $f: \mathfrak{I} \to M$에 대해 $f \circ \delta_E$는 $E$에서 $M$으로 가는 $A$-derivation이라는 것을 안다.
+우선 [명제 1](#prop1)에 의하여 모든 $(E, E)$-bimodule homomorphism $f: \mathfrak{I} \rightarrow M$에 대해 $f \circ \delta_E$는 $E$에서 $M$으로 가는 $A$-derivation이라는 것을 안다.
 
 한편, 유일성의 경우 $\delta_E$의 정의로부터
 
@@ -146,7 +146,7 @@ $$f(x \otimes 1 - 1 \otimes x) = dx$$
 
 $$f\left( \sum_i x_i \otimes y_i \right) = \sum_i x_i  f(1 \otimes y_i - y_i \otimes 1) = - \sum_i x_i  dy_i$$
 
-이 반드시 성립해야 하는 것을 안다. 따라서 존재성을 보이기 위해서는 이것이 $(E,E)$-bimodule homomorphism인 것을 보여야 한다. 이를 위해서는 우선 mapping $(x, y) \mapsto -x \cdot dy$는 $E$에서 $M$으로 가는 $A$-bilinear mapping이므로, 이로부터 $A$-bilinear map $g: E \otimes E \to M$을 $g(x \otimes y) = -x \cdot dy$이 정의되는 것을 안다. 그럼 이를 $\mathfrak{I}$로 제한한 것이 $f$와 같고, 이제 이 $g$의 restriction이 $f$이고 이것이 $E$-bimodule 구조를 보존하는 것만 보이면 충분하고, 이는 단순한 계산이다. 
+이 반드시 성립해야 하는 것을 안다. 따라서 존재성을 보이기 위해서는 이것이 $(E,E)$-bimodule homomorphism인 것을 보여야 한다. 이를 위해서는 우선 mapping $(x, y) \mapsto -x \cdot dy$는 $E$에서 $M$으로 가는 $A$-bilinear mapping이므로, 이로부터 $A$-bilinear map $g: E \otimes E \rightarrow M$을 $g(x \otimes y) = -x \cdot dy$이 정의되는 것을 안다. 그럼 이를 $\mathfrak{I}$로 제한한 것이 $f$와 같고, 이제 이 $g$의 restriction이 $f$이고 이것이 $E$-bimodule 구조를 보존하는 것만 보이면 충분하고, 이는 단순한 계산이다. 
 :::
 
 위의 명제에 의하여 우리는 canonical $A$-module isomorphism 
@@ -295,7 +295,7 @@ $$\Der_{A'}(E', N) \rightarrow \Der_A(E, N);\qquad D\mapsto D\circ u$$
 이다. 
 
 ::: 명제 12
-$E' = E \otimes_AA'$라고 하고, $\eta : A \to E'$, $u : E \to E'$를 canonical morphism들이라 하면, $A'$-linear map
+$E' = E \otimes_AA'$라고 하고, $\eta : A \rightarrow E'$, $u : E \rightarrow E'$를 canonical morphism들이라 하면, $A'$-linear map
 
 $$\Omega_0(u) : \Omega_{E/A}\otimes_EE'\rightarrow\Omega_{E'/A'}$$
 

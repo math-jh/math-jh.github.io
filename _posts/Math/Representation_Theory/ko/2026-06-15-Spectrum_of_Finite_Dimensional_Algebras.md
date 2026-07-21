@@ -80,7 +80,7 @@ $$A/\ker\chi\cong \im\chi=k$$
 :::
 
 ::: 참고 5
-여기에서 정의한 character는 [§유한군의 표현론](/ko/math/representation_theory/representations_of_finite_groups)과 [§표현의 지표](/ko/math/representation_theory/character_theory)에서 다룬 *지표*<sub>character</sub>와 이름은 같으나 일반적으로는 서로 다른 개념이다. 후자는 표현 $\rho:G\rightarrow \Aut(V)$에 대하여 각 $g$를 $\tr\rho(g)$로 보내는 함수 $\rchi_\rho:G\rightarrow k$, 곧 trace character이다 ([§표현의 지표, ⁋정의 1](/ko/math/representation_theory/character_theory#def1)). 이는 일반적으로 곱셈을 보존하지 않으므로 algebra homomorphism이 아니다. 두 개념이 일치하는 것은 표현이 $1$차원일 때이다. $1$차원 표현 $\rho:G\rightarrow k^\times$에 대하여 $\tr\rho(g)=\rho(g)$이고, 이를 group algebra 위로 선형확장한 $\mathbb{C}[G]\rightarrow k$는 곱셈을 보존하므로, 정의 3의 의미에서 $\mathbb{C}[G]$의 character가 된다. 실제로 $A=\mathbb{C}[G]$의 character $\mathbb{C}[G]\rightarrow \mathbb{C}$들은 정확히 $G$의 $1$차원 표현들과 일대일로 대응되는데, 이는 [\[대수적 구조\] §대수, ⁋명제 6](/ko/math/algebraic_structures/algebras#prop6)의 universal property로부터 algebra homomorphism $\mathbb{C}[G]\rightarrow \mathbb{C}$들이 group homomorphism $G\rightarrow \mathbb{C}^\times$들과 대응되기 때문이다.
+여기에서 정의한 character는 [§유한군의 표현론](/ko/math/representation_theory/representations_of_finite_groups)과 [§표현의 지표](/ko/math/representation_theory/character_theory)에서 다룬 *지표<sub>character</sub>*와 이름은 같으나 일반적으로는 서로 다른 개념이다. 후자는 표현 $\rho:G\rightarrow \Aut(V)$에 대하여 각 $g$를 $\tr\rho(g)$로 보내는 함수 $\rchi_\rho:G\rightarrow k$, 곧 trace character이다 ([§표현의 지표, ⁋정의 1](/ko/math/representation_theory/character_theory#def1)). 이는 일반적으로 곱셈을 보존하지 않으므로 algebra homomorphism이 아니다. 두 개념이 일치하는 것은 표현이 $1$차원일 때이다. $1$차원 표현 $\rho:G\rightarrow k^\times$에 대하여 $\tr\rho(g)=\rho(g)$이고, 이를 group algebra 위로 선형확장한 $\mathbb{C}[G]\rightarrow k$는 곱셈을 보존하므로, 정의 3의 의미에서 $\mathbb{C}[G]$의 character가 된다. 실제로 $A=\mathbb{C}[G]$의 character $\mathbb{C}[G]\rightarrow \mathbb{C}$들은 정확히 $G$의 $1$차원 표현들과 일대일로 대응되는데, 이는 [\[대수적 구조\] §대수, ⁋명제 6](/ko/math/algebraic_structures/algebras#prop6)의 universal property로부터 algebra homomorphism $\mathbb{C}[G]\rightarrow \mathbb{C}$들이 group homomorphism $G\rightarrow \mathbb{C}^\times$들과 대응되기 때문이다.
 :::
 
 명제 4가 보여 주듯, character는 항상 maximal ideal을 낳는다. 그 역, 곧 모든 maximal ideal이 character로부터 온다는 것은 $k$가 algebraically closed일 때 성립하며, 이는 character와 maximal ideal을 동일시할 수 있게 해 준다.
@@ -236,7 +236,7 @@ $k$가 algebraically closed이고 $A$가 유한차원 commutative $k$-algebra이
 지금까지의 사전을 기하학적인 언어로 다시 쓰면, character들은 대수의 "점"을 이루고 대수는 그 점들 위의 function ring처럼 행동한다.
 
 ::: 정의 12
-유한차원 commutative $k$-algebra $A$에 대하여, $A$의 character들의 집합을 $A$의 *maximal spectrum* $\MaxSpec A$라 부른다.
+유한차원 commutative $k$-algebra $A$에 대하여, $A$의 character들의 집합을 $A$의 *maximal spectrum<sub>극대 스펙트럼</sub>* $\MaxSpec A$라 부른다.
 :::
 
 $k$가 algebraically closed일 때, [명제 6](#prop6)에 의하여 $\MaxSpec A$는 $A$의 maximal ideal들의 집합과 동일시되며, [따름정리 9](#cor9)에 의하여 유한집합이다. 각 점 $\chi\in\MaxSpec A$에는 $\dim A_\chi$라는 양의 정수가 따라붙는데, 이를 점 $\chi$의 *multiplicity*라 부른다. 그럼 $\dim A=\sum_\chi\dim A_\chi$는 점들의 multiplicity를 모두 합한 것이다. 각 원소 $a\in A$는 character에서의 값들을 통해 $\MaxSpec A$ 위의 함수로 볼 수 있으며, 이를 정식화하면 다음을 얻는다.

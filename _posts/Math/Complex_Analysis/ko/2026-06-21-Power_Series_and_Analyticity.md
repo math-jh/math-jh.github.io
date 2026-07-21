@@ -106,11 +106,11 @@ $$\sum_{n=1}^{\infty} n\,a_n (z - z_0)^{n-1}, \qquad \sum_{n=0}^{\infty} \frac{a
 :::
 
 ::: 증명
-먼저 수렴반지름이 보존됨을 본다. $\lim_{n\to\infty} n^{1/n} = 1$이므로 Cauchy–Hadamard 공식 ([\[해석학\] §멱급수와 해석함수, ⁋정리 1](/ko/math/analysis/power_series#thm1)) 에서
+먼저 수렴반지름이 보존됨을 본다. $\lim_{n\rightarrow\infty} n^{1/n} = 1$이므로 Cauchy–Hadamard 공식 ([\[해석학\] §멱급수와 해석함수, ⁋정리 1](/ko/math/analysis/power_series#thm1)) 에서
 
-$$\limsup_{n\to\infty}\lvert n\,a_n\rvert^{1/n} = \left(\lim_{n\to\infty} n^{1/n}\right)\limsup_{n\to\infty}\lvert a_n\rvert^{1/n} = \limsup_{n\to\infty}\lvert a_n\rvert^{1/n}$$
+$$\limsup_{n\rightarrow\infty}\lvert n\,a_n\rvert^{1/n} = \left(\lim_{n\rightarrow\infty} n^{1/n}\right)\limsup_{n\rightarrow\infty}\lvert a_n\rvert^{1/n} = \limsup_{n\rightarrow\infty}\lvert a_n\rvert^{1/n}$$
 
-이고, 같은 식이 계수 $a_n/(n+1)$에 대해서도 $\lim_{n\to\infty}(n+1)^{1/n} = 1$로 성립한다. 따라서 세 급수의 수렴반지름이 모두 같은 $\rho$이다.
+이고, 같은 식이 계수 $a_n/(n+1)$에 대해서도 $\lim_{n\rightarrow\infty}(n+1)^{1/n} = 1$로 성립한다. 따라서 세 급수의 수렴반지름이 모두 같은 $\rho$이다.
 
 항별 미분이 $f'$을 준다는 것은 멱급수의 holomorphicity와 항별미분 정리의 내용 그대로이다 ([§복소정칙함수, ⁋정리 9](/ko/math/complex_analysis/holomorphic_functions#thm9)). 항별 적분에 대해서는 $G(z) = \sum_{n=0}^{\infty} \frac{a_n}{n+1}(z - z_0)^{n+1}$이 위에서 보인 대로 $D(z_0, \rho)$에서 수렴하므로 같은 항별미분 정리에 의해 holomorphic이고, 그 도함수는 항별로
 

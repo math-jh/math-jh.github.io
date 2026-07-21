@@ -159,7 +159,7 @@ Ring $A$에 대하여, $A$-대수 $B$가
 
 $$B=\bigl(A[t]/(f)\bigr)_g$$
 
-의 꼴이고 monic 다항식 $f\in A[t]$와 $g\in A[t]/(f)$에 대하여 도함수 $f'$의 image가 $B$에서 가역일 때, $\Spec B \rightarrow \Spec A$를 *standard étale* 사상이라 부른다.
+의 꼴이고 monic 다항식 $f\in A[t]$와 $g\in A[t]/(f)$에 대하여 도함수 $f'$의 image가 $B$에서 가역일 때, $\Spec B \rightarrow \Spec A$를 *standard étale<sub>표준 에탈</sub>* 사상이라 부른다.
 :::
 
 여기서 $A[t]/(f)$는 monic $f$로 인하여 $A$ 위에서 자유 가군, 따라서 flat하고, localization $(\cdot)_g$ 역시 flat하므로 $B$는 $A$ 위에서 flat하다. 한편 conormal exact sequence에서 $\Omega_{(A[t]/(f))/A}\cong (A[t]/(f))/(f')$이고 $f'$를 가역으로 만드는 localization에서 이 가군이 소멸하므로 $\Omega_{B/A}=0$이다. 따라서 standard étale 사상은 실제로 étale하며, 핵심 조건인 $f'$의 가역성은 정확히 $f=0$이 중근을 가지지 않는다는 분리가능성의 대수적 표현이다. Étale 사상은 국소적으로 항상 이 standard 형태를 가진다는 구조 정리가 성립하지만, 그 증명은 본 글의 범위를 넘는다.

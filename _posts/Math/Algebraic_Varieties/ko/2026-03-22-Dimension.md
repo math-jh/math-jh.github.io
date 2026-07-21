@@ -131,7 +131,7 @@ $$X \supsetneq Y = Y_0 \supsetneq Y_1 \supsetneq \cdots \supsetneq Y_n$$
 이는 [명제 6](#prop6)의 일반화라 생각할 수 있다. 이제 regular map과 차원의 관계에 대해 살펴보자. 
 
 ::: 명제 10
-두 variety $X, Y$와 regular map $\varphi: X \to Y$에 대해 다음이 성립한다.
+두 variety $X, Y$와 regular map $\varphi: X \rightarrow Y$에 대해 다음이 성립한다.
 
 1. $\dim \varphi(X) \le \dim X$가 성립한다.
 2. 만약 $\varphi$가 dominant라면 $\dim Y \le \dim X$이 성립한다.  ([§유리사상, ⁋정의 8](/ko/math/algebraic_varieties/rational_maps#def8))
@@ -153,13 +153,13 @@ $$X \supsetneq Y = Y_0 \supsetneq Y_1 \supsetneq \cdots \supsetneq Y_n$$
 첫째 결과는 일반적으로 기하적인 함수가 차원을 높일 수 없다는 우리의 직관을 뒷받침한다. 둘째 결과는 대략적으로 $\varphi$가 (up to birational equivalence) surjective라면 target의 차원이 domain의 차원보다 높을 수 없다는 것을 보여준다.
 
 ::: 정의 11
-Irreducible 다양체 $X, Y$ 사이의 regular map $\varphi: X \to Y$가 *finite*라는 것은, 모든 affine open $U \subseteq Y$에 대하여 $\varphi^{-1}(U)$가 affine이고, $\mathbb{K}[\varphi^{-1}(U)]$가 $\mathbb{K}[U]$ 위의 finitely generated module인 것을 의미한다.
+Irreducible 다양체 $X, Y$ 사이의 regular map $\varphi: X \rightarrow Y$가 *finite*라는 것은, 모든 affine open $U \subseteq Y$에 대하여 $\varphi^{-1}(U)$가 affine이고, $\mathbb{K}[\varphi^{-1}(U)]$가 $\mathbb{K}[U]$ 위의 finitely generated module인 것을 의미한다.
 :::
 
 Finite morphism은 finite fiber를 갖는다는 것을 보일 수 있다. 그럼 다음이 자명하다. 
 
 ::: 명제 12
-두 variety들 $X, Y$와 finite map $\varphi: X \to Y$에 대해 $\dim X = \dim Y$이다.
+두 variety들 $X, Y$와 finite map $\varphi: X \rightarrow Y$에 대해 $\dim X = \dim Y$이다.
 :::
 
 ::: 증명

@@ -62,11 +62,11 @@ $\Omega \subseteq \mathbb{C}$가 연결 열린집합이고 $f, g$가 $\Omega$에
 
 $$S = \{z \in \Omega : f(z) = g(z)\}$$
 
-이 $\Omega$ 안에 집적점을 가지면, 곧 어떤 점 $z_\ast \in \Omega$과 $S$의 서로 다른 점들의 수열 $z_k \to z_\ast$이 존재하면, $\Omega$ 전체에서 $f = g$이다.
+이 $\Omega$ 안에 집적점을 가지면, 곧 어떤 점 $z_\ast \in \Omega$과 $S$의 서로 다른 점들의 수열 $z_k \rightarrow z_\ast$이 존재하면, $\Omega$ 전체에서 $f = g$이다.
 :::
 
 ::: 증명
-$h = f - g$로 두면 $h$는 $\Omega$에서 holomorphic이고 ([§복소정칙함수, ⁋명제 3](/ko/math/complex_analysis/holomorphic_functions#prop3)) $S = Z(h) = \{z : h(z) = 0\}$이다. $S$가 $\Omega$ 안에 집적점 $z_\ast$을 가진다고 가정한다. $h$가 연속이고 $z_k \to z_\ast$, $h(z_k) = 0$이므로 $h(z_\ast) = \lim_k h(z_k) = 0$이다. 또 $z_k$들이 서로 다르므로 $z_\ast$의 임의의 근방에 $z_\ast$ 아닌 영점 $z_k$이 무한히 들어 있어, $z_\ast$은 $Z(h)$의 isolated point가 아니다. 명제 2에 의해 그렇다면 $h$가 $z_\ast$의 어떤 근방에서 항등적으로 $0$이어야 한다.
+$h = f - g$로 두면 $h$는 $\Omega$에서 holomorphic이고 ([§복소정칙함수, ⁋명제 3](/ko/math/complex_analysis/holomorphic_functions#prop3)) $S = Z(h) = \{z : h(z) = 0\}$이다. $S$가 $\Omega$ 안에 집적점 $z_\ast$을 가진다고 가정한다. $h$가 연속이고 $z_k \rightarrow z_\ast$, $h(z_k) = 0$이므로 $h(z_\ast) = \lim_k h(z_k) = 0$이다. 또 $z_k$들이 서로 다르므로 $z_\ast$의 임의의 근방에 $z_\ast$ 아닌 영점 $z_k$이 무한히 들어 있어, $z_\ast$은 $Z(h)$의 isolated point가 아니다. 명제 2에 의해 그렇다면 $h$가 $z_\ast$의 어떤 근방에서 항등적으로 $0$이어야 한다.
 
 이제 이 국소적 소멸을 $\Omega$ 전체로 확장한다.
 
@@ -74,7 +74,7 @@ $$A = \{z \in \Omega : h \text{가 } z \text{의 어떤 근방에서 항등적�
 
 이라 두자. 방금 본 대로 $z_\ast \in A$이므로 $A \neq \varnothing$이다. 정의상 $A$는 열려 있다. $A$가 $\Omega$에서 닫혀 있음을 보이면, $\Omega$가 연결이고 $A$가 공집합 아닌 열린·닫힌 부분집합이므로 $A = \Omega$이 된다.
 
-$A$가 닫혀 있음을 보이기 위해 $\Omega$ 안의 점 $w$가 $A$의 closure에 속한다고, 곧 $A$의 점들의 수열 $w_j \to w$이 있다고 하자. 각 $w_j$의 근방에서 $h \equiv 0$이므로 특히 $h(w_j) = 0$이고, $h$의 연속성에서 $h(w) = 0$이다. 더구나 $w_j \to w$이고 $w_j$들은 ($j$가 클 때) $w$ 아닌 $h$의 영점이므로 $w$ 역시 $Z(h)$의 isolated point가 아니다. 다시 명제 2에 의해 $h$가 $w$의 어떤 근방에서 항등적으로 $0$이고, 따라서 $w \in A$이다. 이로써 $A$가 $\Omega$에서 닫혀 있다.
+$A$가 닫혀 있음을 보이기 위해 $\Omega$ 안의 점 $w$가 $A$의 closure에 속한다고, 곧 $A$의 점들의 수열 $w_j \rightarrow w$이 있다고 하자. 각 $w_j$의 근방에서 $h \equiv 0$이므로 특히 $h(w_j) = 0$이고, $h$의 연속성에서 $h(w) = 0$이다. 더구나 $w_j \rightarrow w$이고 $w_j$들은 ($j$가 클 때) $w$ 아닌 $h$의 영점이므로 $w$ 역시 $Z(h)$의 isolated point가 아니다. 다시 명제 2에 의해 $h$가 $w$의 어떤 근방에서 항등적으로 $0$이고, 따라서 $w \in A$이다. 이로써 $A$가 $\Omega$에서 닫혀 있다.
 
 연결성에 의해 $A = \Omega$이므로 $h$가 $\Omega$ 전체에서 항등적으로 $0$이고, 곧 $\Omega$에서 $f = g$이다.
 :::
@@ -146,7 +146,7 @@ $\overline{\Omega}$이 bounded이고 닫혀 있으므로 콤팩트이고, $\lver
 최대절댓값 원리의 가장 깔끔한 응용 가운데 하나가 Schwarz 보조정리이다. 단위원판을 자기 자신으로 보내며 원점을 고정하는 holomorphic function은 원점 근처에서 그리 빠르게 자라지 못하도록 강하게 제약된다. 이 제약은 $f(z)/z$에 최대절댓값 원리를 적용하여 얻으며, 등호가 성립하는 극단의 경우가 회전뿐임까지 정확히 가려낸다. 단위원판을 $\mathbb{D} = \{z \in \mathbb{C} : \lvert z\rvert < 1\}$로 적는다.
 
 ::: 정리 7 (Schwarz 보조정리)
-$f : \mathbb{D} \to \mathbb{D}$가 holomorphic이고 $f(0) = 0$이라 하자. 그러면 다음이 성립한다.
+$f : \mathbb{D} \rightarrow \mathbb{D}$가 holomorphic이고 $f(0) = 0$이라 하자. 그러면 다음이 성립한다.
 
 1. 모든 $z \in \mathbb{D}$에 대해 $\lvert f(z)\rvert \leq \lvert z\rvert$이고, $\lvert f'(0)\rvert \leq 1$이다.
 2. 만일 어떤 $z_0 \neq 0$에서 $\lvert f(z_0)\rvert = \lvert z_0\rvert$이거나 $\lvert f'(0)\rvert = 1$이면, 어떤 상수 $\lambda$ ($\lvert\lambda\rvert = 1$) 가 있어 모든 $z \in \mathbb{D}$에서 $f(z) = \lambda z$이다. 곧 $f$는 회전이다.
@@ -159,7 +159,7 @@ $f(0) = 0$이므로 $f$는 원점에서 위수 $\geq 1$인 영점을 가지고, 
 
 $$\lvert g(z)\rvert = \frac{\lvert f(z)\rvert}{\lvert z\rvert} < \frac{1}{r}$$
 
-이고, $g$가 $\overline{D(0,r)}$에서 holomorphic이므로 최댓값이 경계에서 달성되어 ([따름정리 6](#cor6)) $\overline{D(0, r)}$ 안의 모든 $z$에서 $\lvert g(z)\rvert \leq 1/r$이다. 여기서 $r \to 1^-$로 보내면, $\mathbb{D}$의 각 고정된 $z$에 대해 $\lvert g(z)\rvert \leq 1/r$이 $r < 1$이 $\lvert z\rvert$보다 큰 한 성립하므로
+이고, $g$가 $\overline{D(0,r)}$에서 holomorphic이므로 최댓값이 경계에서 달성되어 ([따름정리 6](#cor6)) $\overline{D(0, r)}$ 안의 모든 $z$에서 $\lvert g(z)\rvert \leq 1/r$이다. 여기서 $r \rightarrow 1^-$로 보내면, $\mathbb{D}$의 각 고정된 $z$에 대해 $\lvert g(z)\rvert \leq 1/r$이 $r < 1$이 $\lvert z\rvert$보다 큰 한 성립하므로
 
 $$\lvert g(z)\rvert \leq 1, \qquad z \in \mathbb{D}$$
 
@@ -171,7 +171,7 @@ $$\lvert g(z)\rvert \leq 1, \qquad z \in \mathbb{D}$$
 Schwarz 보조정리는 원점을 고정하는 단위원판의 자기사상이 원점 근방에서 항등사상보다 더 빠르게 자랄 수 없음을 말한다. $\lvert f(z)\rvert \leq \lvert z\rvert$은 각 점에서 함수값이 원점에 더 가까워짐을, $\lvert f'(0)\rvert \leq 1$은 원점에서의 확대율이 $1$을 넘지 못함을 뜻한다. 등호의 경우가 회전 $f(z) = \lambda z$뿐이라는 두 번째 진술은 이 부등식이 비상수 자기사상에 대해서는 결코 포화되지 않는 엄격한 부등식임을 말해 준다. 이 보조정리는 단위원판의 holomorphic automorphism을 분류하는 출발점이 되며, 그로부터 단위원판 위의 자연스러운 거리인 쌍곡거리가 holomorphic 사상에 의해 늘어나지 않는다는 사실로 이어진다.
 
 ::: 예시 8 (원점을 고정하는 automorphism)
-$f : \mathbb{D} \to \mathbb{D}$가 holomorphic인 전단사이고 그 역함수도 holomorphic이며 $f(0) = 0$이라 하자. 곧 $f$는 원점을 고정하는 단위원판의 holomorphic automorphism이다. 이러한 $f$가 회전뿐임을 Schwarz 보조정리로 보인다. $f$와 그 역함수 $f^{-1}$ 모두 $\mathbb{D}$를 $\mathbb{D}$로 보내고 원점을 고정하므로, 정리 7의 (1)을 양쪽에 적용하면
+$f : \mathbb{D} \rightarrow \mathbb{D}$가 holomorphic인 전단사이고 그 역함수도 holomorphic이며 $f(0) = 0$이라 하자. 곧 $f$는 원점을 고정하는 단위원판의 holomorphic automorphism이다. 이러한 $f$가 회전뿐임을 Schwarz 보조정리로 보인다. $f$와 그 역함수 $f^{-1}$ 모두 $\mathbb{D}$를 $\mathbb{D}$로 보내고 원점을 고정하므로, 정리 7의 (1)을 양쪽에 적용하면
 
 $$\lvert f'(0)\rvert \leq 1, \qquad \lvert (f^{-1})'(0)\rvert \leq 1$$
 

@@ -25,7 +25,7 @@ published: false
 거리공간 위의 사상이 두 점 사이의 거리를 일정 비율 이상으로 줄인다면, 그 사상을 반복 적용할 때 점들이 한곳으로 모일 것이라는 직관은 자연스럽다. 이 직관을 정확히 다듬은 것이 축약사상의 개념이다.
 
 ::: 정의 1
-거리공간 $(X, d)$의 사상 $T : X \to X$가 *축약사상<sub>contraction</sub>*이라는 것은, 어떤 상수 $0 \leq \lambda < 1$에 대하여 모든 $x, y$에서 $d(T x, T y) \leq \lambda  d(x, y)$인 것이다.
+거리공간 $(X, d)$의 사상 $T : X \rightarrow X$가 *축약사상<sub>contraction</sub>*이라는 것은, 어떤 상수 $0 \leq \lambda < 1$에 대하여 모든 $x, y$에서 $d(T x, T y) \leq \lambda  d(x, y)$인 것이다.
 :::
 
 상수 $\lambda$를 *축약상수<sub>contraction constant</sub>*라 부른다. 부등식이 모든 점에서 같은 $\lambda$로 성립해야 한다는 점, 그리고 $\lambda$가 $1$보다 *진성으로* 작아야 한다는 점이 핵심이다. 만약 $\lambda = 1$만 보장된다면, 즉 $d(Tx, Ty) \leq d(x, y)$인 경우에는 $T$를 *비확장사상<sub>nonexpansive map</sub>*이라 부르며, 이때는 고정점이 존재하지 않거나 유일하지 않을 수 있다. 예컨대 실직선 위의 평행이동 $Tx = x + 1$은 거리를 정확히 보존하지만 고정점이 없다.
@@ -49,11 +49,11 @@ d(x_m, x_n) &\leq \sum_{k=n}^{m-1} d(x_{k+1}, x_k) \leq \sum_{k=n}^{m-1}\lambda^
 &\leq d(x_1, x_0)\sum_{k=n}^{\infty}\lambda^k = \frac{\lambda^n}{1 - \lambda} d(x_1, x_0)
 \end{aligned}$$
 
-이다. 우변은 $n \to \infty$일 때 ($0 \leq \lambda < 1$이므로) $0$으로 가고, 이는 $m, n$에 관해 균등하게 작아지므로 $(x_n)$은 Cauchy 수열이다. 공간이 완비이므로 ([§거리공간, ⁋정의 4](/ko/math/analysis/metric_spaces#def4)) 극한 $x_n \to x^\ast$이 존재한다.
+이다. 우변은 $n \rightarrow \infty$일 때 ($0 \leq \lambda < 1$이므로) $0$으로 가고, 이는 $m, n$에 관해 균등하게 작아지므로 $(x_n)$은 Cauchy 수열이다. 공간이 완비이므로 ([§거리공간, ⁋정의 4](/ko/math/analysis/metric_spaces#def4)) 극한 $x_n \rightarrow x^\ast$이 존재한다.
 
 이 극한이 고정점임을 보인다. 축약사상은 $d(Tx, Ty) \leq \lambda  d(x, y)$에서 곧바로 연속이므로
 
-$$x^\ast = \lim_{n\to\infty} x_{n+1} = \lim_{n\to\infty} T x_n = T\Bigl(\lim_{n\to\infty} x_n\Bigr) = T x^\ast$$
+$$x^\ast = \lim_{n\rightarrow\infty} x_{n+1} = \lim_{n\rightarrow\infty} T x_n = T\Bigl(\lim_{n\rightarrow\infty} x_n\Bigr) = T x^\ast$$
 
 이다. 마지막으로 유일성을 본다. $x^\ast, y^\ast$가 둘 다 고정점이면
 
@@ -62,7 +62,7 @@ $$d(x^\ast, y^\ast) = d(Tx^\ast, Ty^\ast) \leq \lambda  d(x^\ast, y^\ast)$$
 이고, $\lambda < 1$이므로 $(1 - \lambda) d(x^\ast, y^\ast) \leq 0$이 되어 $d(x^\ast, y^\ast) = 0$, 곧 $x^\ast = y^\ast$이다.
 :::
 
-위 증명은 고정점의 존재와 유일성뿐 아니라 *수렴 속도*에 대한 정량적 정보까지 준다. 부등식 $d(x_m, x_n) \leq \lambda^n/(1-\lambda) \cdot d(x_1, x_0)$에서 $m \to \infty$로 보내면
+위 증명은 고정점의 존재와 유일성뿐 아니라 *수렴 속도*에 대한 정량적 정보까지 준다. 부등식 $d(x_m, x_n) \leq \lambda^n/(1-\lambda) \cdot d(x_1, x_0)$에서 $m \rightarrow \infty$로 보내면
 
 $$d(x_n, x^\ast) \leq \frac{\lambda^n}{1 - \lambda} d(x_1, x_0)$$
 
@@ -130,7 +130,7 @@ $$\lVert Ty_1 - Ty_2\rVert_\infty \leq L h \lVert y_1 - y_2\rVert_\infty$$
 ::: 예시 5 (유일성의 실패)
 $y' = \sqrt{\lvert y\rvert}$, $y(0) = 0$을 생각하자. 여기서 $f(t, y) = \sqrt{\lvert y\rvert}$는 연속이지만 $y = 0$ 근방에서
 
-$$\frac{\lvert f(t, y) - f(t, 0)\rvert}{\lvert y - 0\rvert} = \frac{\sqrt{\lvert y\rvert}}{\lvert y\rvert} = \frac{1}{\sqrt{\lvert y\rvert}} \to \infty \qquad (y \to 0)$$
+$$\frac{\lvert f(t, y) - f(t, 0)\rvert}{\lvert y - 0\rvert} = \frac{\sqrt{\lvert y\rvert}}{\lvert y\rvert} = \frac{1}{\sqrt{\lvert y\rvert}} \rightarrow \infty \qquad (y \rightarrow 0)$$
 
 이므로 립시츠 조건을 만족하지 않는다. 이때 항등적으로 $0$인 함수 $y \equiv 0$이 해이지만, 동시에
 
@@ -173,7 +173,7 @@ $$\int \frac{dy}{y^2} = \int dt  \Longrightarrow  -\frac{1}{y} = t + C$$
 
 $$y(t) = \frac{1}{1 - t}$$
 
-이다. 이 해는 $t \to 1^-$에서 $+\infty$로 발산하므로 구간 $[0, 1)$ 너머로 연장되지 않는다. $\partial f / \partial y = 2y$가 $y$와 함께 무한히 커져 전역 립시츠 조건이 깨지는 것이 폭발의 원인이며, [정리 4](#thm4)의 국소성이 본질적임을 보여 준다.
+이다. 이 해는 $t \rightarrow 1^-$에서 $+\infty$로 발산하므로 구간 $[0, 1)$ 너머로 연장되지 않는다. $\partial f / \partial y = 2y$가 $y$와 함께 무한히 커져 전역 립시츠 조건이 깨지는 것이 폭발의 원인이며, [정리 4](#thm4)의 국소성이 본질적임을 보여 준다.
 :::
 
 마지막으로 피카르 정리가 직접 주는 정량적 귀결 하나를 정리해 둔다. 증명의 오차 평가를 그대로 옮긴 것이다.

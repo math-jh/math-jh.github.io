@@ -271,7 +271,7 @@ For example, we showed in [Example 3](#ex3) that the twisted cubic corresponds t
 Intuitively, since elements of $\mathbb{K}[X]$ are functions defined on $X$, if a morphism $X\rightarrow Y$ is given, we can pull back regular functions on $Y$ to $X$ by composition with this morphism. This is one direction, from geometric maps to algebraic maps. More important is the reverse direction: the fact that when a coordinate ring homomorphism $\mathbb{K}[Y]\rightarrow \mathbb{K}[X]$ is given, we can recover a geometric morphism $X\rightarrow Y$ from it.
 
 ::: Proposition 16
-A morphism $\varphi: X \to Y$ induces a coordinate ring homomorphism $\varphi^\ast: \mathbb{K}[Y] \to \mathbb{K}[X]$. Specifically, for $\bar{g} \in \mathbb{K}[Y]$,
+A morphism $\varphi: X \rightarrow Y$ induces a coordinate ring homomorphism $\varphi^\ast: \mathbb{K}[Y] \rightarrow \mathbb{K}[X]$. Specifically, for $\bar{g} \in \mathbb{K}[Y]$,
 
 $$\varphi^\ast(\bar{g}) = \overline{g \circ \varphi}$$
 :::
@@ -285,12 +285,12 @@ Thus $g \circ \varphi - h \circ \varphi \in I(X)$, and therefore $\overline{g \c
 That $\varphi^\ast$ is a ring homomorphism is now obvious.
 :::
 
-Thus, a morphism $\varphi: X \to Y$ induces a coordinate ring homomorphism $\varphi^\ast: \mathbb{K}[Y] \to \mathbb{K}[X]$. This means that $X\mapsto \mathbb{K}[X]$ is a contravariant functor from the category of affine varieties to $\Ring$. ([\[Category Theory\] §Functors, ⁋Definition 5](/en/math/category_theory/functors#def5))
+Thus, a morphism $\varphi: X \rightarrow Y$ induces a coordinate ring homomorphism $\varphi^\ast: \mathbb{K}[Y] \rightarrow \mathbb{K}[X]$. This means that $X\mapsto \mathbb{K}[X]$ is a contravariant functor from the category of affine varieties to $\Ring$. ([\[Category Theory\] §Functors, ⁋Definition 5](/en/math/category_theory/functors#def5))
 
 Once the notion of a morphism is defined, the notion of an isomorphism naturally arises.
 
 ::: Definition 17
-A morphism $\varphi: X \to Y$ is called an *isomorphism* if there exists an inverse map $\psi: Y \to X$ such that $\psi$ is also a morphism.
+A morphism $\varphi: X \rightarrow Y$ is called an *isomorphism* if there exists an inverse map $\psi: Y \rightarrow X$ such that $\psi$ is also a morphism.
 :::
 
 For example, the morphism $t\mapsto (t, t^2, t^3)$ from $\mathbb{A}^1$ to the twisted cubic $C$ is an isomorphism. This is because $(x,y,z)\mapsto x$ defines its inverse.
@@ -298,21 +298,21 @@ For example, the morphism $t\mapsto (t, t^2, t^3)$ from $\mathbb{A}^1$ to the tw
 As we saw above, $X\mapsto \mathbb{K}[X]$ defines a contravariant functor from the category of affine varieties to $\Ring$, so it is obvious that isomorphic affine varieties have isomorphic coordinate rings. The next proposition shows that the converse also holds.
 
 ::: Proposition 18
-A morphism $\varphi: X \to Y$ is an isomorphism if and only if $\varphi^\ast: \mathbb{K}[Y] \to \mathbb{K}[X]$ is a ring isomorphism.
+A morphism $\varphi: X \rightarrow Y$ is an isomorphism if and only if $\varphi^\ast: \mathbb{K}[Y] \rightarrow \mathbb{K}[X]$ is a ring isomorphism.
 :::
 
-In [Proposition 16](#prop16) we saw that a morphism $\varphi: X \to Y$ induces a coordinate ring homomorphism $\varphi^\ast: \mathbb{K}[Y] \to \mathbb{K}[X]$. Intuitively, $\varphi^\ast$ corresponds a function $g$ on $Y$ to the function $g \circ \varphi$ on $X$; this is the operation of pulling back geometric information from $Y$ to $X$. Therefore, if $\varphi^\ast$ is an isomorphism, the functions on the two coordinate rings correspond perfectly to one another, so it is natural to expect that the structures of $X$ and $Y$ are essentially the same geometrically. The following proof makes this intuition rigorous.
+In [Proposition 16](#prop16) we saw that a morphism $\varphi: X \rightarrow Y$ induces a coordinate ring homomorphism $\varphi^\ast: \mathbb{K}[Y] \rightarrow \mathbb{K}[X]$. Intuitively, $\varphi^\ast$ corresponds a function $g$ on $Y$ to the function $g \circ \varphi$ on $X$; this is the operation of pulling back geometric information from $Y$ to $X$. Therefore, if $\varphi^\ast$ is an isomorphism, the functions on the two coordinate rings correspond perfectly to one another, so it is natural to expect that the structures of $X$ and $Y$ are essentially the same geometrically. The following proof makes this intuition rigorous.
 
 ::: Proof (Proposition 18)
-It suffices to show the reverse direction. Suppose $\varphi^\ast$ is an isomorphism. Then $\psi^\ast = (\varphi^\ast)^{-1}: \mathbb{K}[X] \to \mathbb{K}[Y]$ exists.
+It suffices to show the reverse direction. Suppose $\varphi^\ast$ is an isomorphism. Then $\psi^\ast = (\varphi^\ast)^{-1}: \mathbb{K}[X] \rightarrow \mathbb{K}[Y]$ exists.
 
-Now let us define a morphism $\theta: Y \to X$ from $\psi^\ast$.
+Now let us define a morphism $\theta: Y \rightarrow X$ from $\psi^\ast$.
 
 For each element $\bar{\x}_i$ of
 
 $$\mathbb{K}[X] = \mathbb{K}[\x_1, \ldots, \x_n]/I(X)$$
 
-we can consider $\psi^\ast(\bar{\x}_i) \in \mathbb{K}[Y]$. Write this as $\bar{g}_i$, and choose any representatives $g_i$. Then we can define $\theta: Y \to \mathbb{A}^n$ by $\theta(y) = (g_1(y), \ldots, g_n(y))$, and by the definition of $\mathbb{K}[Y]$ this does not depend on the choice of representatives $g_i$. Since $\psi^\ast$ is well defined, $\theta(Y) \subseteq X$, and therefore $\theta: Y \to X$ is a morphism. The remainder is a straightforward calculation.
+we can consider $\psi^\ast(\bar{\x}_i) \in \mathbb{K}[Y]$. Write this as $\bar{g}_i$, and choose any representatives $g_i$. Then we can define $\theta: Y \rightarrow \mathbb{A}^n$ by $\theta(y) = (g_1(y), \ldots, g_n(y))$, and by the definition of $\mathbb{K}[Y]$ this does not depend on the choice of representatives $g_i$. Since $\psi^\ast$ is well defined, $\theta(Y) \subseteq X$, and therefore $\theta: Y \rightarrow X$ is a morphism. The remainder is a straightforward calculation.
 :::
 
 ---

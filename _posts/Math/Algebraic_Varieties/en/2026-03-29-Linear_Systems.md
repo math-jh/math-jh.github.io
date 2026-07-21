@@ -90,7 +90,7 @@ force $a_{12}=0$, $a_{01}=0$, $5a_{11}=-a_{22}$, $a_{00}=a_{11}$, so the actual 
 
 Of course, [Definition 2](#def2) applies equally to any variety, whether $X$ is a projective space or a quasi-projective variety. However, the reason we took such pains to calculate [Example 3](#ex3) above is that for any quasi-projective variety $X\subseteq \mathbb{P}^n$, if $D$ comes from some $\mathcal{O}_{\mathbb{P}^n}(d)$, we can use the language of homogeneous polynomials directly. That is, in this case the restriction map
 
-$$\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(d)) \to \Gamma(X, \mathcal{O}_{\mathbb{P}^n}(d)\vert_X)$$
+$$\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(d)) \rightarrow \Gamma(X, \mathcal{O}_{\mathbb{P}^n}(d)\vert_X)$$
 
 sends a homogeneous polynomial $F \in \mathbb{K}[\x_0, \ldots, \x_n]_d$ to a section on $X$, and its kernel is the degree $d$ homogeneous part $I(X)_d$ of $I(X)$. Therefore,
 
@@ -134,7 +134,7 @@ $L$ is called *basepoint-free* if $\operatorname{Bs}(L) = \emptyset$. That is, f
 
 The key property of a basepoint-free linear system is as follows. If $L=\mathbb{P}(V)$ is basepoint-free, then a basis $F_0,\ldots,F_r$ of $V$ satisfies $\bigcap Z(F_i)\cap X=\emptyset$, so using this we can define the following regular map
 
-$$\varphi_L:X\to\mathbb{P}^r,\quad p\mapsto[F_0(p):\cdots:F_r(p)]$$
+$$\varphi_L:X\rightarrow\mathbb{P}^r,\quad p\mapsto[F_0(p):\cdots:F_r(p)]$$
 
 Our initial interest in linear systems was to find effective divisors linearly equivalent to a given divisor $D$; the following proposition gives a direct answer to this.
 
@@ -163,7 +163,7 @@ The above example intuitively shows the origin of the name "basepoint," but sinc
 ::: Example 8
 On $\mathbb{P}^1$ for $d \ge 1$, the map defined by the complete linear system $\lvert \mathcal{O}_{\mathbb{P}^1}(d) \rvert$ is
 
-$$\nu_d: \mathbb{P}^1 \to \mathbb{P}^d, \quad [s : t] \mapsto [s^d : s^{d-1}t : \cdots : t^d]$$
+$$\nu_d: \mathbb{P}^1 \rightarrow \mathbb{P}^d, \quad [s : t] \mapsto [s^d : s^{d-1}t : \cdots : t^d]$$
 
 This shows that the Veronese embedding examined in [§Projective Varieties, ⁋Example 16](/en/math/algebraic_varieties/projective_varieties#ex16) can be recovered in the language of complete linear systems.
 
@@ -187,7 +187,7 @@ For example, in our language, to say that $\mathbb{P}^1\times \mathbb{P}^1$ is a
 However, even on an abstract variety we can define line bundles, linear systems, and so on. Then in particular, using [Proposition 6](#prop6) we can define an appropriate map to projective space. The importance of the following definition should be understood in this context.
 
 ::: Definition 9
-A line bundle $\mathcal{L}$ (or the corresponding linear system $\lvert \mathcal{L} \rvert$) is called *very ample* if the regular map $\varphi_{\mathcal{L}}: X \to \mathbb{P}(\Gamma(X, \mathcal{L}))$ defined by the complete linear system $\lvert \mathcal{L} \rvert = \mathbb{P}(\Gamma(X, \mathcal{L}))$ is a closed embedding.
+A line bundle $\mathcal{L}$ (or the corresponding linear system $\lvert \mathcal{L} \rvert$) is called *very ample* if the regular map $\varphi_{\mathcal{L}}: X \rightarrow \mathbb{P}(\Gamma(X, \mathcal{L}))$ defined by the complete linear system $\lvert \mathcal{L} \rvert = \mathbb{P}(\Gamma(X, \mathcal{L}))$ is a closed embedding.
 :::
 
 For this to be well-defined, $\varphi_L$ must not depend on the choice of basis, and indeed it is easy to check that this is the case.

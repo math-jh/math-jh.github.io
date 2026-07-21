@@ -18,7 +18,7 @@ weight: 2
 ## 유클리드 정역
 
 ::: 정의 1
-Integral domain $A$를 고정하자. 함수 $N : A \to \mathbb{Z}_{\geq 0}$가 조건 $N(0) = 0$를 만족하면, 이를 $A$ 위의 *norm<sub>노름</sub>*이라고 한다. 만약 $N(a) > 0$이 모든 $a \neq 0$에 대해 성립하면, 이 norm을 *positive norm*이라 한다. 
+Integral domain $A$를 고정하자. 함수 $N : A \rightarrow \mathbb{Z}_{\geq 0}$가 조건 $N(0) = 0$를 만족하면, 이를 $A$ 위의 *norm<sub>노름</sub>*이라고 한다. 만약 $N(a) > 0$이 모든 $a \neq 0$에 대해 성립하면, 이 norm을 *positive norm<sub>양의 노름</sub>*이라 한다. 
 :::
 
 Norm의 조건은 매우 약한 것으로, 가령 동일한 integral domain이 주어졌을 때 이 위에 norm을 정의하는 방법은 매우 많다. 
@@ -155,7 +155,7 @@ Principal Ideal Domain $A$의 모든 $0$이 아닌 prime ideal은 maximal ideal�
 ::: 정의 11
 $A$를 integral domain이라 하자. 
 
-1. Nonzero, non-unit $r\in A$를 고정하자. 만일 $r = ab$를 만족하는 어떤 $a,b$가 주어질 때마다 $a$ 혹은 $b$ 중 적어도 하나가 반드시 unit이라면 $r$을 *irreducible<sub>기약</sub>*이라고 한다. 그렇지 않으면 $r$은 *reducible*이라 부른다.
+1. Nonzero, non-unit $r\in A$를 고정하자. 만일 $r = ab$를 만족하는 어떤 $a,b$가 주어질 때마다 $a$ 혹은 $b$ 중 적어도 하나가 반드시 unit이라면 $r$을 *irreducible<sub>기약</sub>*이라고 한다. 그렇지 않으면 $r$은 *reducible<sub>가약</sub>*이라 부른다.
 2. Nonzero, non-unit $p \in A$를 고정하자. 만일 $p \mid ab$를 만족하는 어떤 $a,b$가 주어질 때마다 항상 $p \mid a$ 또는 $p \mid b$를 만족하면 $p$를 *prime*이라고 한다. 
 3. 두 원소 $a,b$에 대하여, 만일 $A$의 적당한 unit $u$가 존재하여 $a=ub$라면 이들이 *associate in $A$*이라 부른다. 
 :::

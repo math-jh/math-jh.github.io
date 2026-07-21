@@ -34,7 +34,7 @@ $$A_iM_j\subseteq M_{i+j}$$
 이를 통해 $I$-graded left $A$-module들의 category $\bgr_I\lMod{A}$를 정의할 수 있다. 더 일반적으로 다음을 정의한다. 
 
 ::: 정의 3
- 두 $I$-graded left $A$-module $M,M'$에 대하여, $A$-linear map $u:M \rightarrow M'$이 *graded homomorphism of degree $i$*이라는 것은 $u(M_j)\subseteq M_{i+j}'$이 항상 성립하는 것이다.
+ 두 $I$-graded left $A$-module $M,M'$에 대하여, $A$-linear map $u:M \rightarrow M'$이 *graded homomorphism of degree $i$<sub>차수 $i$의 등급 준동형</sub>*이라는 것은 $u(M_j)\subseteq M_{i+j}'$이 항상 성립하는 것이다.
 :::
 
 그럼 [정의 2](#def2)의 graded homomorphism들은 모두 graded homomorphism of degree $0$에 불과하다. 만일 $I$의 모든 원소들이 cancellable이라면, 우리는 *graded homomorphism of degree $-i$*를 다음 조건

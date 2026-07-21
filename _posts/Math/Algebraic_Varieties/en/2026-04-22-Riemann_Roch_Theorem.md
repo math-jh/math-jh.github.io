@@ -102,7 +102,7 @@ $$\rchi(\mathcal{O}_C(D)) = h^0(C, \mathcal{O}_C(D)) - h^1(C, \mathcal{O}_C(D)) 
 
 On the other hand, for an effective divisor $D$ there is a short exact sequence
 
-$$0 \to \mathcal{O}_C \to \mathcal{O}_C(D) \to \mathcal{O}_D \to 0,$$
+$$0 \rightarrow \mathcal{O}_C \rightarrow \mathcal{O}_C(D) \rightarrow \mathcal{O}_D \rightarrow 0,$$
 
 and then by additivity of the Euler characteristic, $\rchi(\mathcal{O}_C(D)) = \rchi(\mathcal{O}_C) + \rchi(\mathcal{O}_D)$.
 
@@ -139,7 +139,7 @@ considered simultaneously for all $p_i$. Then the dimension of the target of the
 
 In general, for this inequality to become an equality the linear map must be surjective, but this does not always hold. To see this, consider the long exact sequence obtained from the short exact sequence examined in the proof of [Proposition 3](#prop3):
 
-$$0\longrightarrow H^0(C,\mathcal{O}_C)\overset{i^\ast}{\longrightarrow} H^0(C,\mathcal{O}_C(D)) \overset{p^\ast}{\longrightarrow} H^0(C,\mathcal{O}_D) \overset{\delta}{\longrightarrow} H^1(C,\mathcal{O}_C)\overset{i^\ast}{\longrightarrow} H^1(C,\mathcal{O}_C(D))\to 0.$$
+$$0\longrightarrow H^0(C,\mathcal{O}_C)\overset{i^\ast}{\longrightarrow} H^0(C,\mathcal{O}_C(D)) \overset{p^\ast}{\longrightarrow} H^0(C,\mathcal{O}_D) \overset{\delta}{\longrightarrow} H^1(C,\mathcal{O}_C)\overset{i^\ast}{\longrightarrow} H^1(C,\mathcal{O}_C(D))\rightarrow 0.$$
 
 Here $C$ is a curve and $D=\sum n_i p_i$, so $\mathcal{O}_D$ is a skyscraper sheaf of degree $D$ with support $\lvert D\rvert$, whence $H^0(C, \mathcal{O}_C)=\bigoplus_i \mathbb{K}^{n_i}$. Moreover, the linear map ($4$) examined above actually coincides with $p^\ast$ in this long exact sequence, and from this the cokernel of $p^\ast$ can be computed via the following chain of isomorphisms:
 
@@ -210,7 +210,7 @@ is well defined. Then a hyperplane in $\mathbb{P}^1$, that is, the preimage of a
 
 Now let us apply Riemann–Roch to multiples $D=d\cdot p$ of a single point $p$ and examine how $\ell(D)$ varies with $d$. For small $d$, where $\ell(K_C-D)$ is still active, special phenomena appear, but as $d$ grows, $\ell(D)$ stabilizes linearly.
 
-1. For $d=1$, if $\ell(p)\ge 2$ then a degree 1 map $C\to\mathbb{P}^1$ would exist, implying $C\cong\mathbb{P}^1$, which contradicts $g=2$; hence $\ell(p)=1$. By Riemann–Roch, $\ell(K_C-p)=1$.
+1. For $d=1$, if $\ell(p)\ge 2$ then a degree 1 map $C\rightarrow\mathbb{P}^1$ would exist, implying $C\cong\mathbb{P}^1$, which contradicts $g=2$; hence $\ell(p)=1$. By Riemann–Roch, $\ell(K_C-p)=1$.
 2. For $d=2$, if $2p\sim K_C$ then $\ell(2p)=2$. In this case $p$ is called a *Weierstrass point*; this condition corresponds exactly to the situation where the preimage of some point under the canonical map $\varphi_{K_C}$ is ramified at $p$. For a generic point $2p\not\sim K_C$, so $\ell(2p)=1$.
 3. For $d\ge 3$, we have $\deg(K_C-D)=2-d<0$, so $\ell(K_C-D)=0$, and therefore $\ell(D)=d-1$.
 :::

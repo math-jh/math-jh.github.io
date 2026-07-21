@@ -14,14 +14,14 @@ translated_at: 2026-07-05T22:00:03+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-07-05T22:00:03+00:00
 ---
-What we ultimately want to study is the calculus of general functions $\mathbb{R}^m\to\mathbb{R}^n$. We have prepared for this by first raising the dimension of the codomain in [§Curves and Vector Functions](/en/math/calculus/vector_functions), and then raising the dimension of the domain from [§Multivariable Functions and Partial Derivatives](/en/math/calculus/partial_derivatives) onward. Now we combine both directions and begin the general case in which both the domain and codomain are multidimensional. In particular, the most natural object of interest is the case where the dimensions of the domain and codomain are equal, namely $\mathbb{R}^n\to\mathbb{R}^n$; such a function takes an $n$-dimensional vector and returns an $n$-dimensional vector.
+What we ultimately want to study is the calculus of general functions $\mathbb{R}^m\rightarrow\mathbb{R}^n$. We have prepared for this by first raising the dimension of the codomain in [§Curves and Vector Functions](/en/math/calculus/vector_functions), and then raising the dimension of the domain from [§Multivariable Functions and Partial Derivatives](/en/math/calculus/partial_derivatives) onward. Now we combine both directions and begin the general case in which both the domain and codomain are multidimensional. In particular, the most natural object of interest is the case where the dimensions of the domain and codomain are equal, namely $\mathbb{R}^n\rightarrow\mathbb{R}^n$; such a function takes an $n$-dimensional vector and returns an $n$-dimensional vector.
 
 ## Vector Fields
 
 However, because the cross product—one of the powerful operations at our disposal—is defined only in three dimensions, we will for the most part work in three dimensions, and in its subspace of two dimensions. Nevertheless, the following definitions make sense in arbitrary dimensions.
 
 ::: Definition 1
-A function $\mathbf{F}\colon D \to \mathbb{R}^n$ that assigns to each point $\mathbf{x}$ in a domain $D \subseteq \mathbb{R}^n$ a vector $\mathbf{F}(\mathbf{x}) \in \mathbb{R}^n$ is called a *vector field*. In the plane we write $\mathbf{F}(x,y) = (P(x,y), Q(x,y))$, and in space $\mathbf{F}(x,y,z) = (P, Q, R)$; if each component $P, Q, R$ is $C^1$, then $\mathbf{F}$ is called a $C^1$ vector field.
+A function $\mathbf{F}\colon D \rightarrow \mathbb{R}^n$ that assigns to each point $\mathbf{x}$ in a domain $D \subseteq \mathbb{R}^n$ a vector $\mathbf{F}(\mathbf{x}) \in \mathbb{R}^n$ is called a *vector field*. In the plane we write $\mathbf{F}(x,y) = (P(x,y), Q(x,y))$, and in space $\mathbf{F}(x,y,z) = (P, Q, R)$; if each component $P, Q, R$ is $C^1$, then $\mathbf{F}$ is called a $C^1$ vector field.
 :::
 
 A vector field is most intuitively understood as a picture with an arrow emanating from each point. For instance, the flow velocity of a fluid at each point constitutes a vector field. We already know one such object. ([§Multivariable Functions and Partial Derivatives, ⁋Definition 2](/en/math/calculus/partial_derivatives#def2))

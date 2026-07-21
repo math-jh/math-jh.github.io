@@ -120,7 +120,7 @@ $$\tau: M^\ast\otimes_A M \rightarrow A$$
 을 만족한다. 이제 만일 $M$이 finitely generated projective $A$-module이라면 [따름정리 4](#cor4)에 의하여 좌변을 $\End_\rMod{A}(M)=\Hom_\rMod{A}(M,M)$과 identify할 수 있고, 따라서 $\End_\rMod{A}(M)$에서 $A$로 가는 유일한 $A$-linear map이 정의된다.
 
 ::: 정의 6
-위와 같이 정의된 map을 *trace map*이라 하고, $\tr$로 표기한다.
+위와 같이 정의된 map을 *trace map<sub>대각합 사상</sub>*이라 하고, $\tr$로 표기한다.
 :::
 
 임의의 $u\in\End_\rMod{A}(M)$이 주어졌다 가정하자. $\End_\rMod{A}(M)$과 $M^\ast\otimes_AM$을 identify하고 나면 유한히 많은 $\xi_i\in M^\ast, x_i\in M$을 택하여 이를 다음의 합

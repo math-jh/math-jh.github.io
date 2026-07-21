@@ -121,14 +121,14 @@ $$\kappa(X) = \min\{k \in \mathbb{Z}_{\geq 0} : P_m(X) = O(m^k)\}$$
 
 이다. 동등하게,
 
-$$\kappa(X) = \limsup_{m \to \infty} \frac{\log P_m(X)}{\log m}$$
+$$\kappa(X) = \limsup_{m \rightarrow \infty} \frac{\log P_m(X)}{\log m}$$
 
 으로도 쓸 수 있다.
 :::
 
 우리는 위의 계산으로부터, surface의 경우 $\kappa \in \{-\infty, 0, 1, 2\}$인 것을 안다. [Enriques–Kodaira classification](https://en.wikipedia.org/wiki/Enriques-Kodaira_classification)은 surface를 크게는 Kodaira dimension에 의해 분류하고, 여기에 $\kappa=0$과 $\kappa=-\infty$인 경우는 geometric genus $p_g$와 irregularity $q$를 사용하여 추가적인 세부 분류를 해 준다. 
 
-우리는 [§선형계, ⁋정의 9](/ko/math/algebraic_varieties/linear_systems#def9)에서 line bundle $\mathcal{L}$이 very ample이라는 것은 complete linear system $\lvert \mathcal{L} \rvert$가 정의하는 사상 $\varphi_{\mathcal{L}}: X \to \mathbb{P}(\Gamma(X, \mathcal{L}))$이 closed embedding인 것으로 정의하였다. 당시에는 sheaf cohomology의 언어가 없었으나, 지금은 sheaf cohomology를 도입하였으므로 이를 조금 더 잘 사용할 수 있다. 
+우리는 [§선형계, ⁋정의 9](/ko/math/algebraic_varieties/linear_systems#def9)에서 line bundle $\mathcal{L}$이 very ample이라는 것은 complete linear system $\lvert \mathcal{L} \rvert$가 정의하는 사상 $\varphi_{\mathcal{L}}: X \rightarrow \mathbb{P}(\Gamma(X, \mathcal{L}))$이 closed embedding인 것으로 정의하였다. 당시에는 sheaf cohomology의 언어가 없었으나, 지금은 sheaf cohomology를 도입하였으므로 이를 조금 더 잘 사용할 수 있다. 
 
 우선 very ample line bundle $\mathcal{L}$이 주어졌다 하고, 이로부터 정의되는 closed embedding $\varphi_\mathcal{L}: X\rightarrow \mathbb{P}^N$을 생각하자. 그럼 $\varphi$가 embedding인 것으로부터 $\varphi_\mathcal{L}(p)\neq \varphi_\mathcal{L}(q)$가 성립하는 것을 알고, 뿐만 아니라 $\varphi_\mathcal{L}$이 closed embedding이므로 $d\varphi_\mathcal{L}$이 injective이고, 따라서 cotangent space에서의 dual map $\mathfrak{m}_{\varphi_{\mathcal{L}}(p)}/\mathfrak{m}_{\varphi_{\mathcal{L}}(p)}^2 \longrightarrow \mathfrak{m}_p/\mathfrak{m}_p^2$은 surjective이다. 이로부터 다음의 두 결과가 성립함을 안다. 
 

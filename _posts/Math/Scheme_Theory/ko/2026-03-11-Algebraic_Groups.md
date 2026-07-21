@@ -25,7 +25,7 @@ drift_needed: true
 *Algebraic group<sub>대수적 군</sub>* $G$는 다음 조건들을 만족하는 algebraic variety이다:
 
 1. $G$는 group 구조를 갖는다.
-2. Multiplication $m: G \times G \to G$와 inverse $i: G \to G$가 모두 morphism of varieties이다.
+2. Multiplication $m: G \times G \rightarrow G$와 inverse $i: G \rightarrow G$가 모두 morphism of varieties이다.
 :::
 
 Lie group에서와 마찬가지로, 가장 중요한 예시들은 보통 matrix group들이다. 
@@ -41,7 +41,7 @@ Lie group에서와 마찬가지로, 가장 중요한 예시들은 보통 matrix 
 Algebraic group 중에서 특히 중요한 역할을 하는 것은 당연히 *affine algebraic group*이다.
 
 ::: 정의 3
-Algebraic group $G$가 *affine algebraic group*라는 것은 $G$가 affine variety인 것이다. 
+Algebraic group $G$가 *affine algebraic group<sub>아핀 대수적 군</sub>*라는 것은 $G$가 affine variety인 것이다. 
 :::
 
 ## 대수적 군의 action
@@ -51,7 +51,7 @@ Algebraic group $G$가 *affine algebraic group*라는 것은 $G$가 affine varie
 ::: 정의 4
 Algebraic group $G$의 algebraic variety $X$ 위로의 *action<sub>작용</sub>*이란 morphism
 
-$$\alpha: G \times X \to X$$
+$$\alpha: G \times X \rightarrow X$$
 
 으로서, 다음 조건들을 만족하는 것이다:
 
@@ -59,12 +59,12 @@ $$\alpha: G \times X \to X$$
 2. $\alpha(g, \alpha(h, x)) = \alpha(gh, x)$ for all $g, h \in G$, $x \in X$ (결합법칙)
 :::
 
-원칙적으로 algebraic group action은 affine algebraic group이 affine variety 위에 작용하는 방식만 살펴본 후 이들을 잘 붙이는 것이다. 이 경우를 더 잘 살펴보기 위해 affine algebraic group $G = \Spec(A)$가 affine variety $X = \Spec(B)$ 위에 작용하는 경우를 생각하자. $\Spec$이 contravariant functor이므로, action $G \times X \to X$는 coordinate ring 위의 구조로 번역된다. 구체적으로, 이는 다음의 데이터를 제공한다.
+원칙적으로 algebraic group action은 affine algebraic group이 affine variety 위에 작용하는 방식만 살펴본 후 이들을 잘 붙이는 것이다. 이 경우를 더 잘 살펴보기 위해 affine algebraic group $G = \Spec(A)$가 affine variety $X = \Spec(B)$ 위에 작용하는 경우를 생각하자. $\Spec$이 contravariant functor이므로, action $G \times X \rightarrow X$는 coordinate ring 위의 구조로 번역된다. 구체적으로, 이는 다음의 데이터를 제공한다.
 
 ::: 정의 5
 Affine algebraic group $G = \Spec(A)$와 affine variety $X = \Spec(B)$에 대하여, $G$의 $X$ 위로의 action에 대응하는 *comodule structure*란 algebra homomorphism
 
-$$\rho: B \to B \otimes_\mathbb{C} A$$
+$$\rho: B \rightarrow B \otimes_\mathbb{C} A$$
 
 으로서, 다음 조건들을 만족하는 것이다:
 
@@ -72,7 +72,7 @@ $$\rho: B \to B \otimes_\mathbb{C} A$$
 2. (Counit) $(\id_B \otimes \epsilon) \circ \rho = \id_B$
 :::
 
-여기서 $\Delta: A \to A \otimes A$는 $G$의 곱셈으로부터 유도되는 comultiplication이고, $\epsilon: A \to \mathbb{C}$는 항등원으로부터 유도되는 counit이다.
+여기서 $\Delta: A \rightarrow A \otimes A$는 $G$의 곱셈으로부터 유도되는 comultiplication이고, $\epsilon: A \rightarrow \mathbb{C}$는 항등원으로부터 유도되는 counit이다.
 
 ## 대수적 군의 표현
 
@@ -81,15 +81,15 @@ Lie group과 마찬가지로, algebraic group도 표현론을 통해 더 잘 이
 ::: 정의 6
 Algebraic group $G$의 *representation<sub>표현</sub>*이란 유한차원 벡터공간 $V$와 group homomorphism
 
-$$\rho: G \to \GL(V)$$
+$$\rho: G \rightarrow \GL(V)$$
 
-으로서, $G \times V \to V$가 morphism인 것이다.
+으로서, $G \times V \rightarrow V$가 morphism인 것이다.
 :::
 
 그럼 다음 정의 또한 Lie group에서와 동일한 것이다. 
 
 ::: 정의 7
-표현 $\rho: G \to \GL(V)$의 *character<sub>지표</sub>* $\chi_\rho: G \to \mathbb{C}$는
+표현 $\rho: G \rightarrow \GL(V)$의 *character<sub>지표</sub>* $\chi_\rho: G \rightarrow \mathbb{C}$는
 
 $$\chi_\rho(g) = \tr(\rho(g))$$
 
@@ -99,13 +99,13 @@ $$\chi_\rho(g) = \tr(\rho(g))$$
 뿐만 아니라, 다음 명제에서 볼 수 있듯 algebraic group의 representation 또한 algebraic한 본질과 기하적인 본질을 동시에 가지고 있다. 
 
 ::: 명제 8
-Affine algebraic group $G = \Spec(A)$의 representation $\rho: G \to \GL(V)$는 $V$ 위의 comodule structure $V \to V \otimes_\mathbb{C} A$와 일대일 대응한다.
+Affine algebraic group $G = \Spec(A)$의 representation $\rho: G \rightarrow \GL(V)$는 $V$ 위의 comodule structure $V \rightarrow V \otimes_\mathbb{C} A$와 일대일 대응한다.
 :::
 
 ::: 증명
-Representation $\rho: G \to \GL(V)$가 주어지면, 이는 $G \times V \to V$를 유도하고, $\Spec$의 contravariance에 의해 $V^\ast \to V^\ast \otimes A$를 얻는다. 
+Representation $\rho: G \rightarrow \GL(V)$가 주어지면, 이는 $G \times V \rightarrow V$를 유도하고, $\Spec$의 contravariance에 의해 $V^\ast \rightarrow V^\ast \otimes A$를 얻는다. 
 
-반대로 comodule structure $V \to V \otimes A$가 주어지면, 각 $g \in G$에 대해 evaluation map $\operatorname{ev}_g: A \to \mathbb{C}$을 통해 $V \to V \otimes \mathbb{C} \cong V$를 얻고, 이것이 representation을 정의한다.
+반대로 comodule structure $V \rightarrow V \otimes A$가 주어지면, 각 $g \in G$에 대해 evaluation map $\operatorname{ev}_g: A \rightarrow \mathbb{C}$을 통해 $V \rightarrow V \otimes \mathbb{C} \cong V$를 얻고, 이것이 representation을 정의한다.
 :::
 
 ## Algebraic torus와 weight decomposition
@@ -123,7 +123,7 @@ $$T \cong (\mathbb{C}^\ast)^n$$
 우리는 Lie group에서, torus가 1차원 representation들로 분해되며 이들 각각에 대한 정보는 character에 담겨있는 것을 살펴보았다. 마찬가지의 일을 여기에서도 진행하자. 
 
 ::: 정의 10
-Torus $T = (\mathbb{C}^\ast)^n$의 *character* $\rchi: T \to \mathbb{C}^\ast$는 다음과 같이 정의된다. 각 coordinate $t_i \in \mathbb{C}^\ast$에 대해
+Torus $T = (\mathbb{C}^\ast)^n$의 *character* $\rchi: T \rightarrow \mathbb{C}^\ast$는 다음과 같이 정의된다. 각 coordinate $t_i \in \mathbb{C}^\ast$에 대해
 
 $$\rchi(t_1, \ldots, t_n) = t_1^{a_1} \cdots t_n^{a_n}$$
 
@@ -140,7 +140,7 @@ $$a + b = (a_1 + b_1, \ldots, a_n + b_n)$$
 
 에 대응된다. Character들의 집합 $X^\ast(T) = \{\rchi^a \mid a \in \mathbb{Z}^n\}$은 이 곱셈에 대해 abelian group을 이루며, 이를 torus $T$의 *character group*이라 부른다. 
 
-어렵지 않게 $\rchi: T \to \mathbb{C}^\ast$가 group homomorphism임을 보일 수 있다.
+어렵지 않게 $\rchi: T \rightarrow \mathbb{C}^\ast$가 group homomorphism임을 보일 수 있다.
 
 ::: 명제 11
 Torus $T = (\mathbb{C}^\ast)^n$의 coordinate ring은 character들의 polynomial ring $\mathbb{C}[\rchi_1^{\pm 1}, \ldots, \rchi_n^{\pm 1}]$과 isomorphic하다. 여기서 $\rchi_i(t_1, \ldots, t_n) = t_i$는 $i$번째 coordinate에 대한 character이다.
@@ -153,7 +153,7 @@ Torus $T = (\mathbb{C}^\ast)^n$은 $n$개의 $\mathbb{C}^\ast$의 direct product
 
 $$\mathbb{C}[x_1, x_1^{-1}] \otimes \cdots \otimes \mathbb{C}[x_n, x_n^{-1}] \cong \mathbb{C}[x_1, x_1^{-1}, \ldots, x_n, x_n^{-1}]$$
 
-이다. 각 $x_i$는 $i$번째 coordinate function $\rchi_i: T \to \mathbb{C}^\ast$에 해당하며, $\rchi_i(t_1, \ldots, t_n) = t_i$로 정의된다. 이는 정확히 torus의 character이고, 그 inverse $\rchi_i^{-1}$도 마찬가지로 character이다.
+이다. 각 $x_i$는 $i$번째 coordinate function $\rchi_i: T \rightarrow \mathbb{C}^\ast$에 해당하며, $\rchi_i(t_1, \ldots, t_n) = t_i$로 정의된다. 이는 정확히 torus의 character이고, 그 inverse $\rchi_i^{-1}$도 마찬가지로 character이다.
 
 따라서 $T$의 coordinate ring은 모든 character들로 생성되는 polynomial ring과 일치한다.
 :::
@@ -173,7 +173,7 @@ $$A_\rchi = \{f \in A \mid t \cdot f = \rchi(t) f \text{ for all } t \in T\}$$
 :::
 
 ::: 증명
-Torus action $\mu:T\times X \to X$가 주어지면, 그 pullback로 coordinate ring $A$ 위에 $T$의 action이 $(t \cdot f)(x)=f(t^{-1} \cdot x)$로 유도된다. 이는 $A$를 $\mathbb{C}$-벡터 space로 볼 때 $T$의 rational representation을 이룬다. 이제 $T\cong(\mathbb{G}_m)^n$이므로 각 coordinate $t_i$에 대응하는 연산자는 서로 commute하는 linear automorphism이다. $\mathbb{G}_m$의 유한차원 rational representation은 항상 character $t_i\mapsto t_i^k$들의 direct sum으로 대각화되므로 각 $t_i$는 diagonalizable이고, 임의의 유한차원 $T$-stable 부분공간 위에서 이들은 동시대각화된다. 따라서 $A$는 common eigenspace들의 direct sum으로 분해되며, 각 common eigenspace는 정확히 어떤 character $\rchi\in X^\ast(T)$에 대하여 $t \cdot f=\rchi(t)f$를 만족하는 $f$들의 공간 $A_\rchi$이다. 이로부터 원하는 분해 $A=\bigoplus_\rchi A_\rchi$를 얻는다.
+Torus action $\mu:T\times X \rightarrow X$가 주어지면, 그 pullback로 coordinate ring $A$ 위에 $T$의 action이 $(t \cdot f)(x)=f(t^{-1} \cdot x)$로 유도된다. 이는 $A$를 $\mathbb{C}$-벡터 space로 볼 때 $T$의 rational representation을 이룬다. 이제 $T\cong(\mathbb{G}_m)^n$이므로 각 coordinate $t_i$에 대응하는 연산자는 서로 commute하는 linear automorphism이다. $\mathbb{G}_m$의 유한차원 rational representation은 항상 character $t_i\mapsto t_i^k$들의 direct sum으로 대각화되므로 각 $t_i$는 diagonalizable이고, 임의의 유한차원 $T$-stable 부분공간 위에서 이들은 동시대각화된다. 따라서 $A$는 common eigenspace들의 direct sum으로 분해되며, 각 common eigenspace는 정확히 어떤 character $\rchi\in X^\ast(T)$에 대하여 $t \cdot f=\rchi(t)f$를 만족하는 $f$들의 공간 $A_\rchi$이다. 이로부터 원하는 분해 $A=\bigoplus_\rchi A_\rchi$를 얻는다.
 :::
 
 ## Quotient Varieties
@@ -185,13 +185,13 @@ Algebraic group $G$가 algebraic variety $X$ 위에 작용할 때, 다음을 정
 
 - *Orbit*: $G \cdot x = \{g \cdot x \mid g \in G\} \subseteq X$
 - *Stabilizer*: $G_x = \{g \in G \mid g \cdot x = x\} \le G$
-- *Fixed point set*: $X^G = \{x \in X \mid g \cdot x = x \text{ for all } g \in G\}$
+- *Fixed point set<sub>고정점 집합</sub>*: $X^G = \{x \in X \mid g \cdot x = x \text{ for all } g \in G\}$
 :::
 
 Quotient를 구성하기 위해서는 $G$-invariant function들을 살펴보아야 한다.
 
 ::: 정의 14
-Affine algebraic group $G$가 affine variety $X = \Spec(A)$ 위에 작용할 때, 이에 대응하는 comodule structure $\rho: A \to A \otimes_\mathbb{C} \mathbb{C}[G]$에 대하여, *invariant ring* $A^G$는
+Affine algebraic group $G$가 affine variety $X = \Spec(A)$ 위에 작용할 때, 이에 대응하는 comodule structure $\rho: A \rightarrow A \otimes_\mathbb{C} \mathbb{C}[G]$에 대하여, *invariant ring* $A^G$는
 
 $$A^G = \{a \in A \mid \rho(a) = a \otimes 1\}$$
 
@@ -220,7 +220,7 @@ Affine algebraic group $G$가 *reductive*라는 것은 $G$의 모든 유한차�
 [정의 15](#def15) 이후에 언급한 $A^G$의 finite generation에 대한 내용은 보통 Geometric Invariant Theory (GIT)에서 다루던 것으로, 이를 통해 우리는 reductive group action에 대한 quotient를 정의할 수 있다. 
 
 ::: 정의 17
-Reductive group $G$가 affine variety $X = \Spec(A)$ 위에 action할 때, *GIT quotient* $X /\!/ G$는
+Reductive group $G$가 affine variety $X = \Spec(A)$ 위에 action할 때, *GIT quotient<sub>GIT 몫</sub>* $X /\!/ G$는
 
 $$X /\!/ G = \Spec(A^G)$$
 
@@ -238,7 +238,7 @@ $$t \cdot [x:y] = [tx:y]$$
 이 경우 $\mathbb{C}_d[x,y]$ 전체를 보존하는 $G$-invariant subspace는 $y^d$뿐이며, $A_d^G = \mathbb{C} \cdot y^d$로 well-defined이다. 그러나 일반적인 projective variety의 action에서는 action이 $\mathbb{P}^n$ 전체로 확장되지 않으면, grading과 action이 서로 compatible하지 않아 $A_d^G$가 잘 정의되지 않는다.
 
 ::: 정의 18
-Reductive group $G$의 projective variety $X$ 위로의 action에 대한 *linearization*이란, 다음을 만족하는 $G$의 $\mathbb{P}^n$ 위로의 action의 extension이다:
+Reductive group $G$의 projective variety $X$ 위로의 action에 대한 *linearization<sub>선형화</sub>*이란, 다음을 만족하는 $G$의 $\mathbb{P}^n$ 위로의 action의 extension이다:
 
 1. $X \subseteq \mathbb{P}^n$은 $G$-invariant
 2. $\mathbb{P}^n$ 위의 $G$-action이 linear (즉, $\GL(n+1, \mathbb{C})$로 lift됨)
@@ -255,7 +255,7 @@ Linearization이 주어지면, 우리는 *stable*과 *semistable* point들을 �
 ::: 정의 19
 Linearization이 주어진 $G$-action on $X \subseteq \mathbb{P}^n$에 대하여:
 
-- 점 $x \in X$가 *semistable*이라는 것은 어떤 non-constant $G$-invariant homogeneous polynomial $f$가 존재하여 $f(x) \ne 0$인 것이다.
+- 점 $x \in X$가 *semistable<sub>반안정</sub>*이라는 것은 어떤 non-constant $G$-invariant homogeneous polynomial $f$가 존재하여 $f(x) \ne 0$인 것이다.
 - 점 $x \in X$가 *stable*이라는 것은 다음 조건들을 만족하는 것이다:
   1. $x$는 semistable
   2. $G_x$는 유한군

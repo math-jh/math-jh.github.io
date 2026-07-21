@@ -76,7 +76,7 @@ $$e=f(x)^{-1}f(y)^{-1}f(x)f(y)=f(x^{-1}y^{-1}xy)$$
 특히, 임의의 group homomorphism $f:G\rightarrow H$가 주어졌다 하자. 그럼 합성 $G\rightarrow H\rightarrow H/[H,H]$에 의해 group $G$로부터 abelian group $H/[H,H]$로의 group homomorphism을 얻고, [명제 5](#prop5)에 의하여 이는 $G/[G,G]$에서 $H/[H,H]$로의 group homomorphism을 유도한다. 
 
 ::: 정의 6
-임의의 group $G$에 대하여, quotient group $G/[G,G]$를 $G$의 *abelianization*이라 부르고 $G^\ab$으로 표기한다.
+임의의 group $G$에 대하여, quotient group $G/[G,G]$를 $G$의 *abelianization<sub>아벨화</sub>*이라 부르고 $G^\ab$으로 표기한다.
 :::
 
 그럼 앞선 논증은 이것이 functor $\ab:\Grp\rightarrow\Ab$를 정의한다는 것을 보여준다. 뿐만 아니라 다음이 성립한다.
@@ -219,7 +219,7 @@ $$\Hom_\Ab(G\otimes H, A)\cong\Hom_\Ab(G,\Hom_\Ab(H, A))\cong\Hom_\Ab(H,\Hom_\Ab
 Abelian group들의 family $(G_i)$에 대하여, direct sum $\bigoplus G_i$가 잘 정의된다. 다음 정의는 다른 대수적인 구조들에서 특히 유용하게 사용된다.
 
 ::: 정의 16
-Commutative monoid $I$에 대하여, $I$로 index가 주어진 abelian group들의 family $(G_i)_{i\in I}$를 생각하자. 이를 *graded abelian group*이라 부른다.
+Commutative monoid $I$에 대하여, $I$로 index가 주어진 abelian group들의 family $(G_i)_{i\in I}$를 생각하자. 이를 *graded abelian group<sub>등급 가환군</sub>*이라 부른다.
 :::
 
 현재로서는 commutative monoid $I$에 대하여, $I$를 집합으로 생각하여 direct sum을 취한 것과 위에서 정의한 graded abelian group 사이에 차이가 없으므로 현재로서는 이 정의는 기존에 있던 개념에 새로운 이름을 붙인 것에 불과하다. 이를 정의하는 이유는 나중에 abelian group 위에 새로운 연산을 정의했을 때 이 연산과 $I$의 덧셈 사이의 관계를 부여하기 위한 것이다.

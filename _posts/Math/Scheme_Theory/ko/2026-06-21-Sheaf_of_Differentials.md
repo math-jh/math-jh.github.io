@@ -64,7 +64,7 @@ $$\Omega_{B_g/A}\cong (\Omega_{B/A})_g$$
 이고, 따라서 [§준연접층, ⁋명제 5](/ko/math/scheme_theory/quasicoherent_sheaves#prop5)에 의하여 $\widetilde{\Omega_{B/A}}\vert_{D(g)}\cong \widetilde{\Omega_{B_g/A}}$가 성립한다. 이렇듯 국소 모형들이 제한에 대해 일관되므로, 이들을 붙여 $X$ 전체 위의 quasi-coherent sheaf를 얻는다. 좌표에 의존하지 않는 정의는 대각선 사상을 통한 것이다.
 
 ::: 정의 3
-Scheme 사상 $f:X \rightarrow S$에 대하여, [§값매김환, ⁋정의 3](/ko/math/scheme_theory/valuative_criteria#def3)의 대각선 사상 $\Delta:X \rightarrow X\times_SX$을 생각하자. $\Delta$의 image의 ideal sheaf를 $\mathcal{I}$라 할 때, $X$ 위의 *cotangent sheaf<sub>여접층</sub>* 혹은 *sheaf of relative differentials* $\Omega_{X/S}$를 conormal sheaf
+Scheme 사상 $f:X \rightarrow S$에 대하여, [§값매김환, ⁋정의 3](/ko/math/scheme_theory/valuative_criteria#def3)의 대각선 사상 $\Delta:X \rightarrow X\times_SX$을 생각하자. $\Delta$의 image의 ideal sheaf를 $\mathcal{I}$라 할 때, $X$ 위의 *cotangent sheaf<sub>여접층</sub>* 혹은 *sheaf of relative differentials<sub>상대 미분층</sub>* $\Omega_{X/S}$를 conormal sheaf
 
 $$\Omega_{X/S}=\Delta^\ast\bigl(\mathcal{I}/\mathcal{I}^2\bigr)$$
 

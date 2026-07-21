@@ -225,7 +225,7 @@ $$s\vert_{D(f_\alpha)}=s'\vert_{D(f_\alpha)}=s_\alpha$$
 :::
 
 ::: 정의 7
-[보조정리 6](#lem6)에 의해 정의되는 $\Spec A$ 위의 sheaf를 $\mathcal{O}_{\Spec A}$로 쓰고, 이를 *structure sheaf*라 부른다. 
+[보조정리 6](#lem6)에 의해 정의되는 $\Spec A$ 위의 sheaf를 $\mathcal{O}_{\Spec A}$로 쓰고, 이를 *structure sheaf<sub>구조층</sub>*라 부른다. 
 :::
 
 그럼 $(\Spec A,\mathcal{O}_{\Spec A})$는 locally ringed space 이다. 
@@ -350,7 +350,7 @@ $$\mathcal{O}_{\Spec A}(A)=\mathcal{O}_{\Spec A}(D(1))\cong A$$
 임을 안다. 만일 locally ringed space $(X, \mathcal{O}_X)$가 affine scheme이었다면, 마찬가지 방식으로 $\mathcal{O}_X(X)$를 살펴보아 $(X, \mathcal{O}_X)$가 어떠한 ring의 spectrum과 isomorphic한지 알 수 있다. 즉, affine scheme $(X, \mathcal{O}_X)$에 대하여 $A=\mathcal{O}_X(X)$라 하면 $(X, \mathcal{O}_X)\cong (\Spec A, \mathcal{O}_{\Spec A})$가 성립한다. 더 일반적으로 다음을 정의한다.
 
 ::: 정의 12
-임의의 locally ringed space $(X, \mathcal{O}_X)$에 대하여, *global section functor* $\Gamma:\LRS \rightarrow \cRing^\op$를 $X\mapsto \Gamma(X, \mathcal{O}_X)=\mathcal{O}_X(X)$로 정의한다.[^1] 
+임의의 locally ringed space $(X, \mathcal{O}_X)$에 대하여, *global section functor<sub>전역 단면 함자</sub>* $\Gamma:\LRS \rightarrow \cRing^\op$를 $X\mapsto \Gamma(X, \mathcal{O}_X)=\mathcal{O}_X(X)$로 정의한다.[^1] 
 :::
 
 [명제 11](#prop11)의 증명에서 주목할 만한 사실은 $(X, \mathcal{O}_X)$가 affine scheme이라는 가정은 필요가 없다는 사실이다. 즉, $(X, \mathcal{O}_X)\cong(\Spec B, \mathcal{O}_{\Spec B})$라는 가정을 버리고 [명제 11](#prop11)의 diagram 대신 다음의 diagram

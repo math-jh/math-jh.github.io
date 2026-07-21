@@ -59,7 +59,7 @@ The toric variety $X_\Sigma$ is a normal, separated algebraic variety.
 :::
 
 ::: Proof
-The normality of $X_\Sigma$ follows because each affine chart $U_\tau$ is normal by [§Affine Toric Varieties, ⁋Proposition 15](/en/math/toric_geometry/affine_toric_varieties#prop15), and this property is preserved under gluing. To show separatedness, it suffices to verify that the image of the diagonal morphism $\Delta: X_\Sigma \to X_\Sigma \times X_\Sigma$ is closed. On each affine chart this holds by the second condition of a fan, which guarantees that the intersection of two cones is a face.
+The normality of $X_\Sigma$ follows because each affine chart $U_\tau$ is normal by [§Affine Toric Varieties, ⁋Proposition 15](/en/math/toric_geometry/affine_toric_varieties#prop15), and this property is preserved under gluing. To show separatedness, it suffices to verify that the image of the diagonal morphism $\Delta: X_\Sigma \rightarrow X_\Sigma \times X_\Sigma$ is closed. On each affine chart this holds by the second condition of a fan, which guarantees that the intersection of two cones is a face.
 :::
 
 One important property that the toric variety $X_\Sigma$ inherits from the affine toric varieties is that it contains the algebraic torus $T_N$ as an open dense subset ([§Affine Toric Varieties, ⁋Proposition 11](/en/math/toric_geometry/affine_toric_varieties#prop11)). Indeed, the affine chart $U_{\{0\}}$ corresponding to the 0-dimensional cone $\{0\} \in \Sigma$ is isomorphic to $T_N$, and every other $U_\tau$ contains it as an open subset. Hence $T_N \subset X_\Sigma$ defines an open dense embedding.
@@ -119,7 +119,7 @@ The toric variety $X_\Sigma$ is a projective variety if and only if $\Sigma$ is 
 ::: Proof
 ($\Rightarrow$) If $X_\Sigma$ is projective, then there exists a very ample line bundle $\mathcal{L}$ on it, and by the correspondence above this is expressed as a $T_N$-invariant Cartier divisor $D$. As we saw earlier, the resulting $P_D$ is a lattice polytope, and since $\mathcal{L}$ is ample (in particular very ample), the corresponding piecewise linear function $\psi_D$ is strictly convex by [§Torus-Invariant Divisors and Line Bundles, ⁋Proposition 9](/en/math/toric_geometry/toric_divisors#prop9). From this we obtain that the normal fan of $P_D$ coincides with $\Sigma$.
 
-($\Leftarrow$) Suppose $\Sigma = \Sigma_P$. From the data of the polytope $P$—namely, for each ray $\rho$ the value $a_\rho = -\min_{u \in P}\langle u, v_\rho\rangle$—we obtain the $T_N$-invariant divisor $D_P = \sum_\rho a_\rho D_\rho$. Here the fact that each vertex of $P$ is a lattice point exactly satisfies the preceding compatibility condition, making $D_P$ Cartier, and for sufficiently large $k > 0$, the multiple $kD_P$ becomes very ample. Then the Zariski closure of the image of the monomial map $\phi_{kP}: T_N \to \mathbb{P}^s$ defined by the lattice points of $kP$ is isomorphic to $X_\Sigma$ (see [Proposition 9](#prop9)), so $X_\Sigma$ is projective.
+($\Leftarrow$) Suppose $\Sigma = \Sigma_P$. From the data of the polytope $P$—namely, for each ray $\rho$ the value $a_\rho = -\min_{u \in P}\langle u, v_\rho\rangle$—we obtain the $T_N$-invariant divisor $D_P = \sum_\rho a_\rho D_\rho$. Here the fact that each vertex of $P$ is a lattice point exactly satisfies the preceding compatibility condition, making $D_P$ Cartier, and for sufficiently large $k > 0$, the multiple $kD_P$ becomes very ample. Then the Zariski closure of the image of the monomial map $\phi_{kP}: T_N \rightarrow \mathbb{P}^s$ defined by the lattice points of $kP$ is isomorphic to $X_\Sigma$ (see [Proposition 9](#prop9)), so $X_\Sigma$ is projective.
 :::
 
 A toric variety $X_\Sigma = X_{\Sigma_P}$ satisfying this equivalence condition is called a *projective toric variety*, and when emphasizing the polytope $P$ it is also written $X_P$. This result is a representative example showing that the geometric properties of a toric variety are completely described by the combinatorial properties of its fan.
@@ -130,7 +130,7 @@ Consider the lattice points of $P \subset M_\mathbb{R}$, i.e., $P \cap M = \{m_0
 
 $$\phi_P: T_N \longrightarrow \mathbb{P}^s, \qquad t \longmapsto [\rchi^{m_0}(t) : \rchi^{m_1}(t) : \cdots : \rchi^{m_s}(t)]$$
 
-Here $\rchi^m: T_N \to \mathbb{C}^\ast$ is the character corresponding to $m \in M$.
+Here $\rchi^m: T_N \rightarrow \mathbb{C}^\ast$ is the character corresponding to $m \in M$.
 
 ::: Proposition 9
 The Zariski closure of the image of $\phi_P$ defined above is isomorphic to $X_P$. That is, $X_P \cong \overline{\phi_P(T_N)}$.
@@ -174,14 +174,14 @@ Or more simply, it suffices to check that all *maximal* cones of $\Sigma$ are sm
 
 A *resolution of singularities* for such singular toric varieties is also achieved in an explicit, combinatorial manner via refinement of the fan. First, a fan $\Sigma'$ is called a *refinement* of $\Sigma$ if the two fans have the same support and every cone of $\Sigma'$ is contained in some cone of $\Sigma$. In this case there is a natural toric morphism
 
-$$\pi: X_{\Sigma'} \to X_\Sigma$$
+$$\pi: X_{\Sigma'} \rightarrow X_\Sigma$$
 
 which is a proper birational map, and if $\Sigma'$ consists entirely of smooth cones, then $\pi$ becomes a *toric resolution of singularities*. Such a refinement always exists for any fan, and the key points of its construction are as follows.
 
 1. A non-simplicial cone can be made simplicial by *star subdivision*. One can think of this as appropriately dividing the cone at an interior lattice point.
 2. For a simplicial cone $\sigma$ whose determinant is not $\pm 1$, adding a suitable lattice point as a new ray and splitting it into smaller cones reduces the determinant of each piece, and after finitely many iterations all become smooth cones.
 
-In the above example of $\mathbb{P}^2/(\mathbb{Z}/3)$, adding the lattice points $e_1, e_2, -e_1-e_2$ located inside each of the three maximal cones as new rays causes the determinants of all maximal cones to become $\pm 1$, and the result is exactly the standard fan of $\mathbb{P}^2$. That is, $\mathbb{P}^2 \to \mathbb{P}^2/(\mathbb{Z}/3)$ is the (minimal) toric resolution of this quotient.
+In the above example of $\mathbb{P}^2/(\mathbb{Z}/3)$, adding the lattice points $e_1, e_2, -e_1-e_2$ located inside each of the three maximal cones as new rays causes the determinants of all maximal cones to become $\pm 1$, and the result is exactly the standard fan of $\mathbb{P}^2$. That is, $\mathbb{P}^2 \rightarrow \mathbb{P}^2/(\mathbb{Z}/3)$ is the (minimal) toric resolution of this quotient.
 
 ---
 

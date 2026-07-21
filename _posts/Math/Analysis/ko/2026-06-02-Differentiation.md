@@ -20,7 +20,7 @@ published: false
 ## Carathéodory 미분
 
 ::: 명제 1
-구간 $I$에서 정의된 $f$가 $a \in I$에서 미분가능한 것은, $a$에서 연속인 함수 $\varphi : I \to \mathbb{R}$가 존재하여 모든 $x \in I$에 대해
+구간 $I$에서 정의된 $f$가 $a \in I$에서 미분가능한 것은, $a$에서 연속인 함수 $\varphi : I \rightarrow \mathbb{R}$가 존재하여 모든 $x \in I$에 대해
 
 $$f(x) - f(a) = \varphi(x) (x - a)$$
 
@@ -28,7 +28,7 @@ $$f(x) - f(a) = \varphi(x) (x - a)$$
 :::
 
 ::: 증명
-$f$가 $a$에서 미분가능하면 $x \neq a$에서 $\varphi(x) = (f(x)-f(a))/(x-a)$, $\varphi(a) = f'(a)$로 두면 미분가능성의 정의가 곧 $\varphi$의 $a$에서의 연속이다. 거꾸로 그런 연속 $\varphi$가 있으면 $x \neq a$에서 $(f(x)-f(a))/(x-a) = \varphi(x) \to \varphi(a)$이므로 $f'(a) = \varphi(a)$가 존재한다.
+$f$가 $a$에서 미분가능하면 $x \neq a$에서 $\varphi(x) = (f(x)-f(a))/(x-a)$, $\varphi(a) = f'(a)$로 두면 미분가능성의 정의가 곧 $\varphi$의 $a$에서의 연속이다. 거꾸로 그런 연속 $\varphi$가 있으면 $x \neq a$에서 $(f(x)-f(a))/(x-a) = \varphi(x) \rightarrow \varphi(a)$이므로 $f'(a) = \varphi(a)$가 존재한다.
 :::
 
 이 형태는 분모 $x - a$를 곱셈으로 옮겨 두어, 미분의 기본 정리들을 극한 조작 없이 함수의 연속성만으로 끌어낸다.
@@ -40,7 +40,7 @@ $f$가 $a$에서 미분가능하면 $a$에서 연속이다.
 :::
 
 ::: 증명
-[명제 1](#prop1)의 $\varphi$를 쓰면 $f(x) = f(a) + \varphi(x)(x-a)$이다. 우변은 $a$에서 연속인 함수들의 곱과 합이므로 ([§함수의 극한과 연속](/ko/math/analysis/limits_and_continuity)), $x \to a$일 때 $f(x) \to f(a) + \varphi(a)\cdot 0 = f(a)$이다.
+[명제 1](#prop1)의 $\varphi$를 쓰면 $f(x) = f(a) + \varphi(x)(x-a)$이다. 우변은 $a$에서 연속인 함수들의 곱과 합이므로 ([§함수의 극한과 연속](/ko/math/analysis/limits_and_continuity)), $x \rightarrow a$일 때 $f(x) \rightarrow f(a) + \varphi(a)\cdot 0 = f(a)$이다.
 :::
 
 ## 연쇄법칙

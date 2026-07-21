@@ -32,7 +32,7 @@ Lie algebra $\mathfrak{g}$ 위에 다음의 식
 
 $$K(X,Y)=\tr(\ad(X)\ad(Y))$$
 
-으로 정의된 symmetric bilinear form을 *Killing form*이라 부른다. 
+으로 정의된 symmetric bilinear form을 *Killing form<sub>킬링 형식</sub>*이라 부른다. 
 :::
 
 Killing form이 symmetric이고, $\mathbb{C}$-bilinear인 것은 정의에 의해 자명하다. 심지어 이 Killing form은 별도의 조작을 거치지 않아도 이미 $G$에 의한 adjoint action에 대해 invariant하기도 하다. 즉 다음 식
@@ -46,7 +46,7 @@ $$0=\frac{d}{dt}\bigg\vert_{t=0}K(\Ad_{\exp(tZ)}X, \Ad_{\exp(tZ)},Y)=K([Z,X],Y)+
 을 얻는다. 남아있는 것은 이것이 non-degenerate인 조건이다. 
 
 ::: 정의 2
-Lie algebra $\mathfrak{g}$이 *simple<sub>단순</sub>*이라는 것은 $\mathfrak{g}$가 non-abelian Lie algebra이고 $\mathfrak{g}$의 ideal이 $0$과 자기자신 뿐인 것이다. Simple Lie algebra들의 direct sum으로 쓸 수 있는 Lie algebra를 *semisimple*이라 부른다. 
+Lie algebra $\mathfrak{g}$이 *simple<sub>단순</sub>*이라는 것은 $\mathfrak{g}$가 non-abelian Lie algebra이고 $\mathfrak{g}$의 ideal이 $0$과 자기자신 뿐인 것이다. Simple Lie algebra들의 direct sum으로 쓸 수 있는 Lie algebra를 *semisimple<sub>반단순</sub>*이라 부른다. 
 :::
 
 그럼 다음이 성립한다. 
@@ -82,7 +82,7 @@ Semisimple Lie algebra $\mathfrak{g}$와 $\mathfrak{g}$의 Cartan subalgebra $\m
 
 $$\Phi=\left\{\alpha\in \mathfrak{h}^\ast\setminus\{0\}\mid \mathfrak{g}_\alpha\neq 0\right\}$$
 
-의 원소들을 $\mathfrak{g}$의 *root*라 부른다. 이 때 
+의 원소들을 $\mathfrak{g}$의 *root<sub>근</sub>*라 부른다. 이 때 
 
 $$\mathfrak{g}_\alpha=\left\{X\in \mathfrak{g}\mid [H,X]=\alpha(H)X\text{ for all $H\in \mathfrak{h}$}\right\}$$
 
@@ -194,7 +194,7 @@ $$H\cdot v_j=(m-2j)v_j,\quad F\cdot v_j=(j+1)v_{j+1},\quad E\cdot v_j=(m-j+1)v_{
 위의 $\sl_2$-representation의 예시는 앞으로 해나갈 이야기에 큰 역할을 한다. 우선 다음을 정의하자. 
 
 ::: 정의 9
-유한차원 벡터공간 $V$와 그 위에 정의된 inner product $( -,-)$을 고정하자. $V$의 non-zero vector들의 유한한 집합 $\Phi$가 *root system*이라는 것은 다음의 조건들이 만족되는 것이다. 
+유한차원 벡터공간 $V$와 그 위에 정의된 inner product $( -,-)$을 고정하자. $V$의 non-zero vector들의 유한한 집합 $\Phi$가 *root system<sub>근계</sub>*이라는 것은 다음의 조건들이 만족되는 것이다. 
 
 1. $\Phi$의 원소들이 $V$를 span한다. 
 2. 만일 $\alpha\in \Phi$이고 $c\in \mathbb{R}$이라면 $c\alpha\in \Phi$이기 위해서는 $c=\pm 1$이어야 한다. 
@@ -368,7 +368,7 @@ $$e_i-e_k=(e_i-e_j)+(e_j-e_k)$$
 이 성립하며 이로부터 $\Phi(A_n)$을 묘사하기 위해서는 $e_i-e_{i+1}$ 꼴의 원소들만 필요함을 안다. 이와 비슷한 방식으로 우리는 다음을 정의한다. 
 
 ::: 정의 15
-Root system $\Phi$에 대하여, 우리는 $\Phi$의 부분집합 $\Phi^+$가 *positive root*들의 부분집합이라는 것은 각각의 root $\alpha\in \Phi$에 대하여, $\alpha$와 $-\alpha$ 중 정확하게 하나만이 $\Phi$에 속하며, 임의의 두 $\alpha,\beta\in \Phi^+$가 주어질 때마다 $\alpha+\beta\in \Phi^+$ 또한 성립하는 것이다. Simple root들의 모임 $\Phi^+$을 고정하였을 때, $\Phi^+$의 원소 $\alpha$가 *simple root*라는 것은 $\alpha$를 $\Phi^+$의 두 원소들의 합으로 나타낼 수 없는 것이다. 
+Root system $\Phi$에 대하여, 우리는 $\Phi$의 부분집합 $\Phi^+$가 *positive root<sub>양의 근</sub>*들의 부분집합이라는 것은 각각의 root $\alpha\in \Phi$에 대하여, $\alpha$와 $-\alpha$ 중 정확하게 하나만이 $\Phi$에 속하며, 임의의 두 $\alpha,\beta\in \Phi^+$가 주어질 때마다 $\alpha+\beta\in \Phi^+$ 또한 성립하는 것이다. Simple root들의 모임 $\Phi^+$을 고정하였을 때, $\Phi^+$의 원소 $\alpha$가 *simple root<sub>단순근</sub>*라는 것은 $\alpha$를 $\Phi^+$의 두 원소들의 합으로 나타낼 수 없는 것이다. 
 :::
 
 따라서 simple root들 사이의 정수값들 
@@ -384,7 +384,7 @@ $$\langle\alpha_i,\alpha_j\rangle=2\frac{(\alpha_i,\alpha_j)}{(\alpha_j,\alpha_j
 
 $$A=(a_{ij})_{1\leq i,j\leq l},\qquad a_{ij}=\langle \alpha_i,\alpha_j\rangle$$
 
-을 *Cartan matrix*라 부른다. 
+을 *Cartan matrix<sub>카르탕 행렬</sub>*라 부른다. 
 :::
 
 Root system의 정의에 의하여 각각의 성분 $a_{ij}$는 정수이다. 또 각각의 $i$에 대하여 $a_{ii}=2$인 것 또한 자명하다. 

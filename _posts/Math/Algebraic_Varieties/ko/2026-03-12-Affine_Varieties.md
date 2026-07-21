@@ -92,7 +92,7 @@ $$f_1g_1+\cdots+ f_kg_k,\qquad f_i\in \mathfrak{a}, g_i\in \mathfrak{b}$$
 이제 우리는 Zariski topology의 열린집합들을 살펴보자.
 
 ::: 정의 5
-다항식 $f \in \mathbb{K}[\x_1, \ldots, \x_n]$에 대하여, *principal open set* $D(f)$를
+다항식 $f \in \mathbb{K}[\x_1, \ldots, \x_n]$에 대하여, *principal open set<sub>주열린집합</sub>* $D(f)$를
 
 $$D(f) = \{x\in \mathbb{A}^n \mid f(x) \ne 0\} = \mathbb{A}^n \setminus Z(f)$$
 
@@ -281,7 +281,7 @@ $$\varphi(a_1, \ldots, a_n) = (f_1(a), \ldots, f_m(a))$$
 직관적으로 $\mathbb{K}[X]$들은 $X$ 위에 정의된 함수이므로, 만일 morphism $X\rightarrow Y$가 주어졌다면 이 morphism과의 합성을 통해 $Y$의 regular function들을 $X$로 옮겨올 수 있을 것이다. 이는 기하학적 사상에서 대수적 사상으로 가는 한 방향이다. 더 중요한 것은 그 역방향, 즉 coordinate ring homomorphism $\mathbb{K}[Y]\rightarrow \mathbb{K}[X]$가 주어졌을 때 이를 기하학적 morphism $X\rightarrow Y$로 복원할 수 있다는 사실이다.
 
 ::: 명제 16
-Morphism $\varphi: X \to Y$는 coordinate ring homomorphism $\varphi^\ast: \mathbb{K}[Y] \to \mathbb{K}[X]$를 유도한다. 구체적으로, $\bar{g} \in \mathbb{K}[Y]$에 대하여
+Morphism $\varphi: X \rightarrow Y$는 coordinate ring homomorphism $\varphi^\ast: \mathbb{K}[Y] \rightarrow \mathbb{K}[X]$를 유도한다. 구체적으로, $\bar{g} \in \mathbb{K}[Y]$에 대하여
 
 $$\varphi^\ast(\bar{g}) = \overline{g \circ \varphi}$$
 
@@ -297,12 +297,12 @@ $$(g \circ \varphi)(a) - (h \circ \varphi)(a) = (g - h)(\varphi(a)) = 0$$
 이제 $\varphi^\ast$가 ring homomorphism임은 자명하다.
 :::
 
-즉, morphism $\varphi: X \to Y$는 coordinate ring homomorphism $\varphi^\ast: \mathbb{K}[Y] \to \mathbb{K}[X]$를 유도한다. 이는 $X\mapsto \mathbb{K}[X]$가 affine variety들의 category에서 $\Ring$으로의 contravariant functor임을 의미한다. ([\[범주론\] §함자, ⁋정의 5](/ko/math/category_theory/functors#def5))
+즉, morphism $\varphi: X \rightarrow Y$는 coordinate ring homomorphism $\varphi^\ast: \mathbb{K}[Y] \rightarrow \mathbb{K}[X]$를 유도한다. 이는 $X\mapsto \mathbb{K}[X]$가 affine variety들의 category에서 $\Ring$으로의 contravariant functor임을 의미한다. ([\[범주론\] §함자, ⁋정의 5](/ko/math/category_theory/functors#def5))
 
 한편 morphism의 개념을 정의했다면, 당연히 isomorphism의 개념이 존재한다.
 
 ::: 정의 17
-Morphism $\varphi: X \to Y$가 *isomorphism<sub>동형사상</sub>*이라는 것은 역함수 $\psi: Y \to X$가 존재하여 $\psi$도 morphism인 것이다.
+Morphism $\varphi: X \rightarrow Y$가 *isomorphism<sub>동형사상</sub>*이라는 것은 역함수 $\psi: Y \rightarrow X$가 존재하여 $\psi$도 morphism인 것이다.
 :::
 
 예를 들어, $\mathbb{A}^1$에서 twisted cubic $C$로의 morphism $t\mapsto (t, t^2, t^3)$은 isomorphism이다. 이는 $(x,y,z)\mapsto x$가 inverse를 정의하기 때문이다.
@@ -310,19 +310,19 @@ Morphism $\varphi: X \to Y$가 *isomorphism<sub>동형사상</sub>*이라는 것
 위에서 살펴봤듯, $X\mapsto \mathbb{K}[X]$는 affine variety들의 category에서 $\Ring$으로의 contravariant functor를 정의하므로, isomorphic한 affine variety들은 isomorphic한 coordinate ring을 갖는 것이 자명하다. 다음 명제는 그 역도 성립함을 보여준다.
 
 ::: 명제 18
-Morphism $\varphi: X \to Y$가 isomorphism일 필요충분조건은 $\varphi^\ast: \mathbb{K}[Y] \to \mathbb{K}[X]$가 ring isomorphism인 것이다.
+Morphism $\varphi: X \rightarrow Y$가 isomorphism일 필요충분조건은 $\varphi^\ast: \mathbb{K}[Y] \rightarrow \mathbb{K}[X]$가 ring isomorphism인 것이다.
 :::
 
-[명제 16](#prop16)에서 우리는 morphism $\varphi: X \to Y$가 coordinate ring homomorphism $\varphi^\ast: \mathbb{K}[Y] \to \mathbb{K}[X]$를 유도함을 보았다. 직관적으로, $\varphi^\ast$는 $Y$ 위의 함수 $g$를 $X$ 위의 함수 $g \circ \varphi$로 대응시키는데, 이는 $Y$의 기하학적 정보를 $X$로 pullback하는 연산이다. 따라서 $\varphi^\ast$가 isomorphism이라면, 양쪽 coordinate ring의 함수들이 서로 완벽하게 대응하므로, 기하학적으로도 $X$와 $Y$의 구조가 본질적으로 같을 것이라는 기대가 자연스럽다. 다음 증명은 이 직관을 엄밀하게 구현한다.
+[명제 16](#prop16)에서 우리는 morphism $\varphi: X \rightarrow Y$가 coordinate ring homomorphism $\varphi^\ast: \mathbb{K}[Y] \rightarrow \mathbb{K}[X]$를 유도함을 보았다. 직관적으로, $\varphi^\ast$는 $Y$ 위의 함수 $g$를 $X$ 위의 함수 $g \circ \varphi$로 대응시키는데, 이는 $Y$의 기하학적 정보를 $X$로 pullback하는 연산이다. 따라서 $\varphi^\ast$가 isomorphism이라면, 양쪽 coordinate ring의 함수들이 서로 완벽하게 대응하므로, 기하학적으로도 $X$와 $Y$의 구조가 본질적으로 같을 것이라는 기대가 자연스럽다. 다음 증명은 이 직관을 엄밀하게 구현한다.
 
 ::: 증명 (명제 18)
-반대방향만 보이면 충분하다. $\varphi^\ast$가 isomorphism이라 하자. 그럼 $\psi^\ast = (\varphi^\ast)^{-1}: \mathbb{K}[X] \to \mathbb{K}[Y]$가 존재한다.
+반대방향만 보이면 충분하다. $\varphi^\ast$가 isomorphism이라 하자. 그럼 $\psi^\ast = (\varphi^\ast)^{-1}: \mathbb{K}[X] \rightarrow \mathbb{K}[Y]$가 존재한다.
 
-이제 $\psi^\ast$로부터 morphism $\theta: Y \to X$를 정의하자.
+이제 $\psi^\ast$로부터 morphism $\theta: Y \rightarrow X$를 정의하자.
 
 $$\mathbb{K}[X] = \mathbb{K}[\x_1, \ldots, \x_n]/I(X)$$
 
-의 각 원소 $\bar{\x}_i$에 대하여, $\psi^\ast(\bar{\x}_i) \in \mathbb{K}[Y]$를 생각할 수 있다. 이를 $\bar{g}_i$라 적고, 이들의 어떠한 representative들 $g_i$들을 생각하자. 그럼 $\theta: Y \to \mathbb{A}^n$을 $\theta(y) = (g_1(y), \ldots, g_n(y))$으로 정의할 수 있으며, $\mathbb{K}[Y]$의 정의에 의해 이는 representative $g_i$의 선택에 의존하지 않는다. 이제 $\psi^\ast$가 well-defined이므로 $\theta(Y) \subseteq X$이고, 따라서 $\theta: Y \to X$는 morphism이다. 나머지 부분은 단순 계산이다.
+의 각 원소 $\bar{\x}_i$에 대하여, $\psi^\ast(\bar{\x}_i) \in \mathbb{K}[Y]$를 생각할 수 있다. 이를 $\bar{g}_i$라 적고, 이들의 어떠한 representative들 $g_i$들을 생각하자. 그럼 $\theta: Y \rightarrow \mathbb{A}^n$을 $\theta(y) = (g_1(y), \ldots, g_n(y))$으로 정의할 수 있으며, $\mathbb{K}[Y]$의 정의에 의해 이는 representative $g_i$의 선택에 의존하지 않는다. 이제 $\psi^\ast$가 well-defined이므로 $\theta(Y) \subseteq X$이고, 따라서 $\theta: Y \rightarrow X$는 morphism이다. 나머지 부분은 단순 계산이다.
 :::
 
 ---

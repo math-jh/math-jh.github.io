@@ -26,7 +26,7 @@ $$v-(v-w)=w=0$$
 
 the difference of $v$ and $v-w$ becomes $0$ even though they are not equal.
 
-This reveals two things. First, defining $V/W$ by simply setting all elements of $W$ to $0$ and leaving the rest unchanged is inadequate. Second, and more importantly, the simple computation above actually hints at how to construct $V/W$: if the difference of two vectors $v,v'$ lies in $W$, then we must treat them as <em-ko>the same</em-ko> element inside $V/W$.
+This reveals two things. First, defining $V/W$ by simply setting all elements of $W$ to $0$ and leaving the rest unchanged is inadequate. Second, and more importantly, the simple computation above actually hints at how to construct $V/W$: if the difference of two vectors $v,v'$ lies in $W$, then we must treat them as *the same* element inside $V/W$.
 
 ::: Definition 1
 Let a $\mathbb{K}$-vector space $V$ and its subspace $W\leq V$ be given. For any $v\in V$, the set

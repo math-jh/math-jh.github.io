@@ -12,7 +12,7 @@ date: 2026-07-04
 weight: 13
 ---
 
-지금까지 우리가 다룬 함수는 실수를 실수로 보내는 $f:\mathbb{R}\to\mathbb{R}$ 뿐으로, 냉정하게 말하면 극한의 개념이 $\epsilon$-$\delta$를 사용하여 엄밀하게 정의되었다는 것 외에는 고등학교에서 배운 내용과 큰 차이가 없었다. 우리는 이제 이를 일반화하여 실제로 새로운 내용을 살펴본다. 일반화의 방향은 차원을 늘리는 것으로, 여기에는 정의역의 차원을 올리는 방향과 공역의 차원을 올리는 방향이 있다. 이 글에서는 후자, 곧 한 실수를 여러 실수로 보내는 함수 $\mathbf{r}:\mathbb{R}\to\mathbb{R}^n$을 먼저 다룬다. 이는 매개변수 하나로 공간 속의 곡선을 그리는 벡터값 함수로, 시간에 따라 움직이는 점의 자취로 볼 수 있어 미분이 속도와 가속도라는 물리적 의미를 얻고 적분이 곡선의 길이를 잰다.
+지금까지 우리가 다룬 함수는 실수를 실수로 보내는 $f:\mathbb{R}\rightarrow\mathbb{R}$ 뿐으로, 냉정하게 말하면 극한의 개념이 $\epsilon$-$\delta$를 사용하여 엄밀하게 정의되었다는 것 외에는 고등학교에서 배운 내용과 큰 차이가 없었다. 우리는 이제 이를 일반화하여 실제로 새로운 내용을 살펴본다. 일반화의 방향은 차원을 늘리는 것으로, 여기에는 정의역의 차원을 올리는 방향과 공역의 차원을 올리는 방향이 있다. 이 글에서는 후자, 곧 한 실수를 여러 실수로 보내는 함수 $\mathbf{r}:\mathbb{R}\rightarrow\mathbb{R}^n$을 먼저 다룬다. 이는 매개변수 하나로 공간 속의 곡선을 그리는 벡터값 함수로, 시간에 따라 움직이는 점의 자취로 볼 수 있어 미분이 속도와 가속도라는 물리적 의미를 얻고 적분이 곡선의 길이를 잰다.
 
 ## 벡터공간
 
@@ -55,7 +55,7 @@ $$\mathbf{v}\times \mathbf{w}=(v_2w_3-v_3w_2,\ v_3w_1-v_1w_3,\ v_1w_2-v_2w_1)$$
 그럼 우선 다음을 정의할 수 있다. 
 
 ::: 정의 1
-구간 $I \subseteq \mathbb{R}$의 각 $t$에 점 $\mathbf{r}(t) = (x_1(t), \ldots, x_n(t)) \in \mathbb{R}^n$을 대응시키는 함수 $\mathbf{r}\colon I \to \mathbb{R}^n$을 *벡터값 함수<sub>vector-valued function</sub>* 또는 *매개곡선<sub>parametrized curve</sub>*이라 하고, 각 $x_i$를 그 *성분함수*라 한다.
+구간 $I \subseteq \mathbb{R}$의 각 $t$에 점 $\mathbf{r}(t) = (x_1(t), \ldots, x_n(t)) \in \mathbb{R}^n$을 대응시키는 함수 $\mathbf{r}\colon I \rightarrow \mathbb{R}^n$을 *벡터값 함수<sub>vector-valued function</sub>* 또는 *매개곡선<sub>parametrized curve</sub>*이라 하고, 각 $x_i$를 그 *성분함수*라 한다.
 :::
 
 직관적으로 이는 $t$가 변함에 따라 벡터공간의 다른 점이 대응되는 규칙으로, 시간에 따라 움직이는 점의 자취를 표현한 것으로 생각할 수 있다. 
@@ -72,11 +72,11 @@ $$\lvert\mathbf{a}\cdot\mathbf{b}\rvert\leq\lVert\mathbf{a}\rVert\lVert\mathbf{b
 
 $$\lvert x_i(t)-v_i\rvert=\lvert(\mathbf{r}(t)-\mathbf{v})\cdot\mathbf{e}_i\rvert\leq\lVert\mathbf{r}(t)-\mathbf{v}\rVert$$
 
-이므로 만일 $\mathbf{r}(t)\to\mathbf{v}$이면 각 성분도 $x_i(t)\to v_i$로 수렴한다. 반대로 모든 성분이 수렴하면 
+이므로 만일 $\mathbf{r}(t)\rightarrow\mathbf{v}$이면 각 성분도 $x_i(t)\rightarrow v_i$로 수렴한다. 반대로 모든 성분이 수렴하면 
 
-$$\lVert\mathbf{r}(t)-\mathbf{v}\rVert^2=\sum_i(x_i(t)-v_i)^2\to 0$$
+$$\lVert\mathbf{r}(t)-\mathbf{v}\rVert^2=\sum_i(x_i(t)-v_i)^2\rightarrow 0$$
 
-이므로 $\mathbf{r}(t)\to\mathbf{v}$이다. 즉, 벡터함수의 수렴은 각 성분함수의 수렴과 같은 것이며, 특히 벡터함수의 연속과 미분이 모두 성분별로 잘 정의된다. 
+이므로 $\mathbf{r}(t)\rightarrow\mathbf{v}$이다. 즉, 벡터함수의 수렴은 각 성분함수의 수렴과 같은 것이며, 특히 벡터함수의 연속과 미분이 모두 성분별로 잘 정의된다. 
 
 ::: 명제 2
 $\mathbf{r}(t) = (x_1(t), \ldots, x_n(t))$의 각 성분함수가 $t$에서 미분가능하면 $\mathbf{r}$도 $t$에서 미분가능하고 $\mathbf{r}'(t) = (x_1'(t), \ldots, x_n'(t))$이다.
@@ -89,7 +89,7 @@ $\mathbf{r}(t) = (x_1(t), \ldots, x_n(t))$의 각 성분함수가 $t$에서 미�
 또, 비슷한 논증으로 스칼라함수의 곱미분과 같은 규칙이 벡터의 곱셈들로 옮겨진다.
 
 ::: 명제 3 (미분 법칙)
-$\mathbf{u}, \mathbf{v}\colon I \to \mathbb{R}^n$이 미분가능하고 $f\colon I \to \mathbb{R}$가 미분가능하며 $\varphi\colon J \to I$가 미분가능한 실함수이면
+$\mathbf{u}, \mathbf{v}\colon I \rightarrow \mathbb{R}^n$이 미분가능하고 $f\colon I \rightarrow \mathbb{R}$가 미분가능하며 $\varphi\colon J \rightarrow I$가 미분가능한 실함수이면
 
 $$(f \mathbf{u})' = f' \mathbf{u} + f \mathbf{u}', \qquad (\mathbf{u} \cdot \mathbf{v})' = \mathbf{u}' \cdot \mathbf{v} + \mathbf{u} \cdot \mathbf{v}', \qquad (\mathbf{u} \circ \varphi)'(t) = \varphi'(t) \mathbf{u}'(\varphi(t))$$
 
@@ -132,7 +132,7 @@ $$\sum_k \lVert \mathbf{r}(t_k) - \mathbf{r}(t_{k-1})\rVert$$
 을 만들고 분할을 잘게 하여 이것이 $\lVert \mathbf{r}'(t)\rVert$의 리만 합으로 수렴한다는 것을 보이는 것으로, 이 과정을 압축하면 다음의 정의를 얻는다. 
 
 ::: 정의 5
-일급곡선 $\mathbf{r}\colon [a, b] \to \mathbb{R}^n$의 *arc length<sub>호의 길이</sub>*는
+일급곡선 $\mathbf{r}\colon [a, b] \rightarrow \mathbb{R}^n$의 *arc length<sub>호의 길이</sub>*는
 
 $$L = \int_a^b \lVert \mathbf{r}'(t)\rVert \mathop{dt}$$
 

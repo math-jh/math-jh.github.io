@@ -176,7 +176,7 @@ $$1=[\mathbb{K}(a):\mathbb{K}]_s\nleq [\mathbb{K}(a):\mathbb{K}]=p^e$$
 이 조건을 만족하는 $f$를 *separable polynomial*이라 부른다. 그럼 [명제 9](#prop9)를 다시 한 번 적어보면, $\mathbb{K}$가 perfect인 것과 $\mathbb{K}[\x]$의 모든 irreducible polynomial이 separable인 것이 동치임을 안다. 이를 $f$를 통해 추가되는 원소에 초점을 맞추면 다음과 같이 정의할 수 있다. 
 
 ::: 정의 11
-Field extension $\mathbb{L}/\mathbb{K}$에 대하여, algebraic element $x\in \mathbb{L}$이 *separable element*라는 것은 $\mathbb{K}(x)/\mathbb{K}$이 separable extension인 것이다. 
+Field extension $\mathbb{L}/\mathbb{K}$에 대하여, algebraic element $x\in \mathbb{L}$이 *separable element<sub>분리가능 원소</sub>*라는 것은 $\mathbb{K}(x)/\mathbb{K}$이 separable extension인 것이다. 
 :::
 
 정의에 의해, $x$의 minimal polynomial을 $f$라 한다면, $f$가 separable이어야 하고 이 때 $x$는 $f$의 simple root가 된다. 이들 개념은 (당연히) 모두 같은 것을 의미한다. 즉, extension $\mathbb{L}/\mathbb{K}$와 원소 $x\in\mathbb{L}$, 그리고 $x$의 minimal polynomial $f$에 대하여 다음이 모두 동치이다.

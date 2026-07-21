@@ -39,7 +39,7 @@ $$\iota\vert^{U_i}: \iota^{-1}(U_i) \rightarrow U_i$$
 그럼 만일 $\iota: Z\hookrightarrow X$가 locally principal이라면, 정의의 $U_i$들 각각을 affine open set들로 덮고 $s_i$들을 이들로 제한시키면 $\{U_i\}$들이 affine open covering이라 가정하여도 된다. 
 
 ::: 정의 2
-Closed embedding $\iota: Z \hookrightarrow X$가 *effective Cartier divisor*라는 것은 $X$의 affine open cover $\{U_i=\Spec A_i\}$가 존재하여, 각각의 closed embedding들
+Closed embedding $\iota: Z \hookrightarrow X$가 *effective Cartier divisor<sub>유효 카르티에 인자</sub>*라는 것은 $X$의 affine open cover $\{U_i=\Spec A_i\}$가 존재하여, 각각의 closed embedding들
 
 $$\iota\vert^{U_i}:\iota^{-1}(U_i) \rightarrow U_i$$
 

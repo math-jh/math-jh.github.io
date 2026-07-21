@@ -71,8 +71,8 @@ covering space에 대한 우리의 논의에서 가장 핵심적인 성질은 pa
 ::: 정의 4
 연속함수 $p:E\rightarrow B$에 대하여 다음과 같이 정의한다.
 
-1. $p$가 *Hurewicz fibration*이라는 것은 $p$가 모든 위상공간 $X$에 대하여 HLP를 갖는 것이다.
-2. $p$가 *Serre fibration*이라는 것은 $p$가 모든 $n\geq 0$에 대한 cube $I^n$에 대하여 HLP를 갖는 것이다.
+1. $p$가 *Hurewicz fibration<sub>후레비치 올뭉치</sub>*이라는 것은 $p$가 모든 위상공간 $X$에 대하여 HLP를 갖는 것이다.
+2. $p$가 *Serre fibration<sub>세르 올뭉치</sub>*이라는 것은 $p$가 모든 $n\geq 0$에 대한 cube $I^n$에 대하여 HLP를 갖는 것이다.
 
 이 때 $E$를 *total space<sub>전공간</sub>*, $B$를 *base space<sub>밑공간</sub>*라 부르며, base point $b_0\in B$을 고정했을 때 그 preimage $F=p^{-1}(b_0)$을 $b_0$ 위의 *fiber<sub>올</sub>*라 부른다. 문맥에 따라 $p$ 자체 또는 자료 $F\rightarrow E\rightarrow B$를 *fibration<sub>올림</sub>*이라 부른다.
 :::

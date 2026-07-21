@@ -21,7 +21,7 @@ weight: 7
 homology 이론을 전개할 때 우리는 보통 $n$-simplex들을 사용하게 되며, 이들은 우리가 $\Top$의 임의의 원소들을 살펴보는데 도움이 된다. 이를 다음과 같이 정의로 삼을 수 있다. 
 
 ::: 정의 1
-*Category with models*는 category $\mathcal{A}$와, $\mathcal{A}$의 object들의 모임 $\mathcal{M}$으로 이루어진 pair $(\mathcal{A},\mathcal{M})$을 뜻한다. 이 때, $\mathcal{M}$에 속하는 object들을 우리는 *model*들이라 부른다.
+*Category with models<sub>모델을 갖는 범주</sub>*는 category $\mathcal{A}$와, $\mathcal{A}$의 object들의 모임 $\mathcal{M}$으로 이루어진 pair $(\mathcal{A},\mathcal{M})$을 뜻한다. 이 때, $\mathcal{M}$에 속하는 object들을 우리는 *model<sub>모델</sub>*들이라 부른다.
 :::
 
 이 정의는 그 자체만으로는 별 영양가는 없다. 이제 우리는 다음을 정의한다. 
@@ -29,8 +29,8 @@ homology 이론을 전개할 때 우리는 보통 $n$-simplex들을 사용하게
 ::: 정의 2
 Category with models $(\mathcal{A},\mathcal{M})$이 주어졌다 하고, covariant functor $F_\bullet:\mathcal{A}\rightarrow \Ch_{\geq0}(\lMod{A})$가 주어졌다 하자. 
 
-1. Functor $F_\bullet$가 *acyclic on $\mathcal{M}$*이라는 것은 각각의 $M\in\mathcal{M}$에 대하여, $H_i(F(M))=0$이 모든 $i>0$에 대하여 성립하는 것이다. 
-2. Functor $F_\bullet$가 *free on $\mathcal{M}$*이라는 것은 각각의 $n$에 대하여, 다음의 natural isomorphism
+1. Functor $F_\bullet$가 *acyclic on $\mathcal{M}$<sub>$\mathcal{M}$ 위에서 비순환</sub>*이라는 것은 각각의 $M\in\mathcal{M}$에 대하여, $H_i(F(M))=0$이 모든 $i>0$에 대하여 성립하는 것이다. 
+2. Functor $F_\bullet$가 *free on $\mathcal{M}$<sub>$\mathcal{M}$ 위에서 자유</sub>*이라는 것은 각각의 $n$에 대하여, 다음의 natural isomorphism
     
     $$F_n(-)\cong \bigoplus_{M\in \mathcal{M}}\mathbb{Z}\Hom_\mathcal{A}(M,-)$$
 

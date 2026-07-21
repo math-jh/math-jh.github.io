@@ -34,7 +34,7 @@ $$X\langle Y, Z\rangle = \langle \nabla_X Y, Z\rangle + \langle Y, \nabla_X Z\ra
 
 1. $\nabla$는 $g$와 compatible이다. 즉 [정의 1](#def1)의 식이 성립한다.
 2. $\nabla g = 0$이다. 즉 $g$를 $(0, 2)$-tensor field로 보았을 때 그 covariant derivative가 항등적으로 $0$이다.
-3. 임의의 곡선 $\gamma : I \to M$과 그 위의 parallel 벡터장 $V, W$에 대해 함수 $t \mapsto \langle V(t), W(t)\rangle$이 상수이다.
+3. 임의의 곡선 $\gamma : I \rightarrow M$과 그 위의 parallel 벡터장 $V, W$에 대해 함수 $t \mapsto \langle V(t), W(t)\rangle$이 상수이다.
 :::
 
 ::: 증명
@@ -54,7 +54,7 @@ Manifold $M$ 위의 tangent bundle $TM$ 위의 connection $\nabla$의 *torsion<s
 
 $$T(X, Y) := \nabla_X Y - \nabla_Y X - [X, Y]$$
 
-로 정의된 $\mathfrak{X}(M) \times \mathfrak{X}(M) \to \mathfrak{X}(M)$ 함수이다. 만일 $T \equiv 0$이면 $\nabla$를 *torsion-free<sub>비틀림 없는</sub>* connection이라 부른다.
+로 정의된 $\mathfrak{X}(M) \times \mathfrak{X}(M) \rightarrow \mathfrak{X}(M)$ 함수이다. 만일 $T \equiv 0$이면 $\nabla$를 *torsion-free<sub>비틀림 없는</sub>* connection이라 부른다.
 :::
 
 직접 계산으로부터 $T$는 $X, Y$ 둘 다에 대해 $C^\infty$-bilinear이며, antisymmetric 즉 $T(X, Y) = -T(Y, X)$이다. 따라서 $T$는 $(1, 2)$-tensor field로, 정의에 등장하는 벡터장들의 *국소적인* 정보가 아닌 점별 정보만으로 결정되는 자료가 된다.
@@ -132,13 +132,13 @@ $$\nabla_X Y = \sum_{k=1}^n X(Y^k) \frac{\partial}{\partial x^k}$$
 Connection이 있는 임의의 vector bundle 위에서는 곡선을 따라 벡터를 *상수처럼* 옮기는 자료 — *parallel transport* — 가 정의된다.
 
 ::: 정의 8
-Manifold $M$ 위의 tangent bundle $TM$ 위의 connection $\nabla$와 smooth 곡선 $\gamma : I \to M$이 주어졌다 하자. $\gamma$ 위의 벡터장 $V : I \to TM$ (즉 $V(t) \in T_{\gamma(t)} M$인 smooth 함수)이 다음의 식
+Manifold $M$ 위의 tangent bundle $TM$ 위의 connection $\nabla$와 smooth 곡선 $\gamma : I \rightarrow M$이 주어졌다 하자. $\gamma$ 위의 벡터장 $V : I \rightarrow TM$ (즉 $V(t) \in T_{\gamma(t)} M$인 smooth 함수)이 다음의 식
 
 $$\nabla_{\dot\gamma(t)} V = 0$$
 
 을 모든 $t \in I$에서 만족할 때, $V$를 $\gamma$ 위의 *parallel<sub>평행</sub>* 벡터장이라 부른다. 주어진 초기값 $V(t_0) = v_0 \in T_{\gamma(t_0)} M$에 대해 위 조건을 만족하는 유일한 parallel 벡터장이 존재하며 (다음 명제), 이를 통해 정의된 선형 isomorphism
 
-$$P_\gamma^{t_0, t_1} : T_{\gamma(t_0)} M \to T_{\gamma(t_1)} M, \qquad v_0 \mapsto V(t_1)$$
+$$P_\gamma^{t_0, t_1} : T_{\gamma(t_0)} M \rightarrow T_{\gamma(t_1)} M, \qquad v_0 \mapsto V(t_1)$$
 
 을 $\gamma$를 따른 *parallel transport<sub>평행 운반</sub>*라 부른다.
 :::
@@ -158,7 +158,7 @@ $$\dot V^k(t) + \sum_{i, j} \Gamma_{ij}^k(\gamma(t))\, \dot\gamma^i(t)\, V^j(t) 
 Metric-compatible 접속이라는 추가 가정이 들어가면, 더 강한 성질이 따른다.
 
 ::: 명제 10
-$(M, g)$의 Levi-Civita 접속 $\nabla$에 대해, parallel transport $P_\gamma^{t_0, t_1} : T_{\gamma(t_0)} M \to T_{\gamma(t_1)} M$은 *isometry*이다. 즉 임의의 $v, w \in T_{\gamma(t_0)} M$에 대해
+$(M, g)$의 Levi-Civita 접속 $\nabla$에 대해, parallel transport $P_\gamma^{t_0, t_1} : T_{\gamma(t_0)} M \rightarrow T_{\gamma(t_1)} M$은 *isometry*이다. 즉 임의의 $v, w \in T_{\gamma(t_0)} M$에 대해
 
 $$\langle P_\gamma^{t_0, t_1}(v), P_\gamma^{t_0, t_1}(w)\rangle = \langle v, w\rangle$$
 

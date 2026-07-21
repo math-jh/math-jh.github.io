@@ -18,7 +18,7 @@ published: false
 
 [§다변수 미분](/ko/math/analysis/multivariable_differentiation)에서 미분을 선형사상 $Df(a)$로 보았다. 선형사상이 가역이면 그것이 근사하는 함수도 국소적으로 가역이리라 기대할 수 있다. 이 직관을 엄밀하게 만든 것이 역함수 정리이며, 다변수 미적분의 가장 깊은 정리 중 하나이다.
 
-한 변수 함수에서는 이 직관이 매우 투명하다. $f : \mathbb{R} \to \mathbb{R}$이 $C^1$이고 $f'(a) \neq 0$이면, 연속성에 의해 $a$의 어떤 근방에서 $f'$이 부호를 유지하므로 $f$가 그 근방에서 순증가 또는 순감소하고, 따라서 일대일이며 역함수를 가진다. 역함수의 미분은
+한 변수 함수에서는 이 직관이 매우 투명하다. $f : \mathbb{R} \rightarrow \mathbb{R}$이 $C^1$이고 $f'(a) \neq 0$이면, 연속성에 의해 $a$의 어떤 근방에서 $f'$이 부호를 유지하므로 $f$가 그 근방에서 순증가 또는 순감소하고, 따라서 일대일이며 역함수를 가진다. 역함수의 미분은
 
 $$(f^{-1})'(f(a)) = \frac{1}{f'(a)}$$
 
@@ -27,7 +27,7 @@ $$(f^{-1})'(f(a)) = \frac{1}{f'(a)}$$
 ## 역함수 정리
 
 ::: 정리 1 (역함수 정리)
-$f : \mathbb{R}^n \to \mathbb{R}^n$이 점 $a$ 근방에서 $C^1$이고 $Df(a)$가 가역이면, $a$의 어떤 근방에서 $f$는 그 상 위로의 일대일 대응이며, 그 역함수 $f^{-1}$도 $C^1$이고
+$f : \mathbb{R}^n \rightarrow \mathbb{R}^n$이 점 $a$ 근방에서 $C^1$이고 $Df(a)$가 가역이면, $a$의 어떤 근방에서 $f$는 그 상 위로의 일대일 대응이며, 그 역함수 $f^{-1}$도 $C^1$이고
 
 $$D f^{-1}(f(a)) = \bigl(Df(a)\bigr)^{-1}$$
 
@@ -66,11 +66,11 @@ $$\lVert T_y(x_1) - T_y(x_2)\rVert \leq \frac12 \lVert x_1 - x_2\rVert$$
 역함수 정리의 직접적 귀결로, 방정식 $F(x, y) = 0$이 언제 $y$를 $x$의 함수로 국소적으로 푸는지를 알 수 있다.
 
 ::: 정리 2 (음함수 정리)
-$F : \mathbb{R}^n \times \mathbb{R}^m \to \mathbb{R}^m$이 $C^1$이고 $F(a, b) = 0$이며, $y$에 대한 편미분 행렬 $D_y F(a,b)$가 가역이면, $a$의 근방에서 정의된 $C^1$ 함수 $g$가 유일하게 존재하여 $g(a) = b$이고 그 근방에서 $F(x, g(x)) = 0$이다.
+$F : \mathbb{R}^n \times \mathbb{R}^m \rightarrow \mathbb{R}^m$이 $C^1$이고 $F(a, b) = 0$이며, $y$에 대한 편미분 행렬 $D_y F(a,b)$가 가역이면, $a$의 근방에서 정의된 $C^1$ 함수 $g$가 유일하게 존재하여 $g(a) = b$이고 그 근방에서 $F(x, g(x)) = 0$이다.
 :::
 
 ::: 증명
-사상 $\Phi : \mathbb{R}^n \times \mathbb{R}^m \to \mathbb{R}^n \times \mathbb{R}^m$을 $\Phi(x, y) = (x, F(x, y))$로 정의한다. 이 사상의 미분은 블록 형태로
+사상 $\Phi : \mathbb{R}^n \times \mathbb{R}^m \rightarrow \mathbb{R}^n \times \mathbb{R}^m$을 $\Phi(x, y) = (x, F(x, y))$로 정의한다. 이 사상의 미분은 블록 형태로
 
 $$D\Phi(a,b) = \begin{pmatrix} I_n & 0 \\ D_x F(a,b) & D_y F(a,b) \end{pmatrix}$$
 
@@ -98,7 +98,7 @@ $$Dg(x) = -\bigl(D_y F(x, g(x))\bigr)^{-1} D_x F(x, g(x))$$
 ::: 예시 3 (가설이 깨져도 가역인 경우)
 한 변수 함수 $f(x) = x^3$은 $f'(0) = 0$이어서 $0$에서 역함수 정리의 가설이 성립하지 않는다. 그럼에도 $f$는 $\mathbb{R}$ 전체에서 순증가하므로 전역적으로 가역이며, 역함수는 $f^{-1}(y) = y^{1/3}$이다. 다만 이 역함수는 $y = 0$에서 미분가능하지 않은데,
 
-$$(f^{-1})'(y) = \frac{1}{3} y^{-2/3} \xrightarrow{ y\to 0 } \infty$$
+$$(f^{-1})'(y) = \frac{1}{3} y^{-2/3} \xrightarrow{ y\rightarrow 0 } \infty$$
 
 이기 때문이다. 즉 가설이 깨지면 가역성 자체는 살아남을 수 있어도 역함수의 매끄러움은 잃을 수 있고, 역함수 정리가 보장하는 "$C^1$ 역함수"라는 결론은 그만큼 강한 것이다.
 :::

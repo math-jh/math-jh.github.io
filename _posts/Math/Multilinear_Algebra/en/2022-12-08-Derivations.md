@@ -19,7 +19,7 @@ last_polished_at: 2026-06-26T22:30:02+00:00
 We now introduce the notion of a derivation. More precisely, we shall be concerned with the concept of differential forms, and to handle this we need a graded algebra. Henceforth, we write $\Delta$ for the abelian group that provides the graded algebra structure.
 
 ::: Definition 1
-Let a function $\varepsilon : \Delta \times \Delta \to \{ \pm 1 \}$ satisfy the following three conditions for an abelian group $(\Delta, +, 0)$.
+Let a function $\varepsilon : \Delta \times \Delta \rightarrow \{ \pm 1 \}$ satisfy the following three conditions for an abelian group $(\Delta, +, 0)$.
 
 - $$\varepsilon(\alpha + \alpha', \beta) = \varepsilon(\alpha, \beta)\varepsilon(\alpha', \beta)$$  
 - $$\varepsilon(\alpha, \beta + \beta') = \varepsilon(\alpha, \beta)\varepsilon(\alpha, \beta')$$  
@@ -38,18 +38,18 @@ A commutation factor will appear as the sign that arises when we interchange the
 
 Now consider a commutative ring $A$, $\Delta$-graded $A$-modules $E$, $E'$, $E''$, $F$, $F'$, $F''$, and $A$-bilinear maps
 
-$$\mu: E \times E' \to E'', \qquad \lambda_1: F \times E' \to F', \qquad \lambda_2: E \times F' \to F''$$
+$$\mu: E \times E' \rightarrow E'', \qquad \lambda_1: F \times E' \rightarrow F', \qquad \lambda_2: E \times F' \rightarrow F''$$
 
 together with the induced $A$-linear maps
 
-$$E \otimes_A E' \to E'', \qquad F \otimes_A E' \to F'', \qquad E \otimes_A F' \to F''$$
+$$E \otimes_A E' \rightarrow E'', \qquad F \otimes_A E' \rightarrow F'', \qquad E \otimes_A F' \rightarrow F''$$
 
 Assume that all three of these $A$-linear maps are degree $0$ graded homomorphisms. They correspond to multiplication operations, and for instance we will simply write the image of $x\otimes x'$ in $E''$ as $xx'$. Since the element $x\otimes x'$ in $E\otimes_A E'$ lies in degree $\degree(x)+\degree(x')$, it follows from the above assumptions that $xx'$ lies in the degree $\degree(x)+\degree(x')$ component of $E''$.
 
 We now make the following definition.
 
 ::: Definition 2
-In addition to the above situation, suppose a commutation factor $\varepsilon: \Delta \times \Delta \to \{ \pm 1 \}$ is given. Then a degree $\delta$ *$(A, \varepsilon)$-derivation* from $(E, E', E'')$ to $(F, F', F'')$, or simply an *$\varepsilon$-derivation*, is a triple of degree $\delta$ graded $A$-module homomorphisms $d: E \rightarrow F$, $d': E' \rightarrow F'$, $d'': E'' \rightarrow F''$ satisfying the condition
+In addition to the above situation, suppose a commutation factor $\varepsilon: \Delta \times \Delta \rightarrow \{ \pm 1 \}$ is given. Then a degree $\delta$ *$(A, \varepsilon)$-derivation* from $(E, E', E'')$ to $(F, F', F'')$, or simply an *$\varepsilon$-derivation*, is a triple of degree $\delta$ graded $A$-module homomorphisms $d: E \rightarrow F$, $d': E' \rightarrow F'$, $d'': E'' \rightarrow F''$ satisfying the condition
 
 $$d''(xx') = (dx)x' + \varepsilon(\delta, \deg(x))x(d'x')$$
 
@@ -61,9 +61,9 @@ To avoid confusion in the above definition, it is worth noting where each term b
 1. $E=F$, $E'=F'$, $E''=F''$, and the three bilinear maps $\mu, \lambda_1, \lambda_2$ are all the same.
 2. $E=E'=E''$, $F=F'=F''$, so that $\mu:E\otimes_A E \rightarrow E$ makes $E$ a *graded* algebra, and
 
-    $$\lambda_1: F \otimes_A E \to F, \qquad \lambda_2: E \otimes_A F \to F$$
+    $$\lambda_1: F \otimes_A E \rightarrow F, \qquad \lambda_2: E \otimes_A F \rightarrow F$$
 
-    In this case, a <em-ko>single</em-ko> $d:E \rightarrow F$ satisfying the formula
+    In this case, a *single* $d:E \rightarrow F$ satisfying the formula
 
     $$d(xy)=(dx)y+\varepsilon(\delta, \deg(x))x(dy)$$
 
@@ -185,7 +185,7 @@ holds.
 We now examine the second of the two special cases discussed after [Definition 2](#def2). That is, let a $\Delta$-graded $A$-algebra $E$ and a graded $A$-module $F$ be given, together with two multiplications $E\otimes_AF \rightarrow F$ and $F\otimes_AE \rightarrow F$.
 
 ::: Proposition 6
-For an $\varepsilon$-derivation $d:E \to F$ of degree $\delta$, the kernel $\ker(d)$ is a graded subalgebra of $E$, and if $E$ has a unit then $1 \in \ker(d)$.
+For an $\varepsilon$-derivation $d:E \rightarrow F$ of degree $\delta$, the kernel $\ker(d)$ is a graded subalgebra of $E$, and if $E$ has a unit then $1 \in \ker(d)$.
 :::
 ::: Proof
 That $\ker(d)$ is an $A$-submodule of $E$ is obvious, so we only need to show that $\ker(d)$ is closed under multiplication. For arbitrary homogeneous $x, y \in \ker(d)$,
@@ -204,7 +204,7 @@ and we obtain $d(1) = 0$.
 Therefore, if $d_1,d_2$ are degree $\delta$ $\varepsilon$-derivations from $E$ to $F$ and they agree on the generators of $E$ as an algebra over $A$, then $d_1=d_2$. On the other hand, the following holds for inverses.
 
 ::: Proposition 7
-Let $E$ be a unital $\Delta$-graded $A$-algebra, and let $d:E \to F$ be an $\varepsilon$-derivation of degree $\delta$. If $x$ is an invertible homogeneous element of $E$, then for its inverse $x^{-1}$ the formula
+Let $E$ be a unital $\Delta$-graded $A$-algebra, and let $d:E \rightarrow F$ be an $\varepsilon$-derivation of degree $\delta$. If $x$ is an invertible homogeneous element of $E$, then for its inverse $x^{-1}$ the formula
 
 $$d(x^{-1}) = -\varepsilon_{\delta, \deg(x)} x^{-1}(d(x))x^{-1}
 = -\varepsilon_{\delta, \deg(x)} (d(x)) x^{-2}$$
@@ -263,7 +263,7 @@ In the next proposition, for notational convenience, for any degree $\delta$ $\v
 $$Z_\varepsilon=\{a\in A\mid \text{$xa_d=\varepsilon(\deg(a),\deg(x))a_dx$ for all homogeneous component $a_d$ of $a$ and for all homogeneous $x\in E$.}\}$$
 
 ::: Proposition 9
-Let $A$ be a unital graded associative $A$-algebra and let $E$ be a graded $(A, A)$-bimodule. Let $d: A \to E$ be an $\varepsilon$-derivation of degree $\delta$, and let $a$ be a homogeneous element of $Z_\varepsilon$ of degree $\alpha$. Then the morphism
+Let $A$ be a unital graded associative $A$-algebra and let $E$ be a graded $(A, A)$-bimodule. Let $d: A \rightarrow E$ be an $\varepsilon$-derivation of degree $\delta$, and let $a$ be a homogeneous element of $Z_\varepsilon$ of degree $\alpha$. Then the morphism
 
 $$x \mapsto a (d x)$$
 

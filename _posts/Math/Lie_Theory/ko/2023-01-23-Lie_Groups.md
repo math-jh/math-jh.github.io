@@ -82,7 +82,7 @@ Lie group $G$와 그 closed subgroup $H \subseteq G$에 대하여, $H$는 자연
 위에서 언급한 것과 같이, Lie group의 개념 자체는 꽤나 단순한 것이다. 그렇다면 Lie group이 가지는 흥미로운 성질들은 이들이 어떻게 상호작용하는지에 대한 것이다. 가장 단순한 결과 중 하나는 Lie group의 경우, 자기 자신으로의 nontrivial한 diffeomorphism을 찾는 것이 쉽다는 것이다. 
 
 ::: 정의 6
-Lie group $G$와, $G$의 임의의 원소 $g\in G$에 대하여, $g$에 의한 *left translation* $L_g$는
+Lie group $G$와, $G$의 임의의 원소 $g\in G$에 대하여, $g$에 의한 *left translation<sub>좌평행이동</sub>* $L_g$는
 
 $$L_g:G\rightarrow G;\qquad x\mapsto gx$$
 
@@ -98,7 +98,7 @@ $$R_g:G\rightarrow G;\qquad x\mapsto xg$$
 우리는 Lie group과 그 위에 정의된 벡터장을 다룰 때 이러한 left translation들에 의해 보존되는 벡터장들에만 관심이 있다. 즉 다음을 정의한다.
 
 ::: 정의 7
-Lie group $G$ 위에 정의된 벡터장 $X$에 대하여, $X$가 *left invariant*라는 것은 $X$가 자기 자신과 $L_g$-related인 것이다.
+Lie group $G$ 위에 정의된 벡터장 $X$에 대하여, $X$가 *left invariant<sub>좌불변</sub>*라는 것은 $X$가 자기 자신과 $L_g$-related인 것이다.
 :::
 
 즉, 다음의 식
@@ -230,7 +230,7 @@ $$\det(\exp tX)=\exp(\tr(tX))=\exp(t\cdot\tr X)$$
 다음은 앞서 살펴본 left-invariant vector field의 일반화이다. 
 
 ::: 정의 13
-Lie group $G$ 위에 정의된 form $\omega$가 *left invariant*라는 것은 임의의 $g\in G$에 대하여 $(dL_g)\omega=\omega$가 성립하는 것이다. $G$ 위에 정의된 left invariant $k$-form들의 모임은 $\Omega_\text{l.inv}^k(G)$로 적고, $G$ 위에 정의된 모든 left invariant form들의 모임은 $\Omega_\text{l.inv}^\ast(G)$으로 적는다.
+Lie group $G$ 위에 정의된 form $\omega$가 *left invariant<sub>좌불변</sub>*라는 것은 임의의 $g\in G$에 대하여 $(dL_g)\omega=\omega$가 성립하는 것이다. $G$ 위에 정의된 left invariant $k$-form들의 모임은 $\Omega_\text{l.inv}^k(G)$로 적고, $G$ 위에 정의된 모든 left invariant form들의 모임은 $\Omega_\text{l.inv}^\ast(G)$으로 적는다.
 :::
 
 특별히 $\Omega_\text{l.inv}^1(G)$의 원소들은 *Maurer-Cartan form*이라 부른다.

@@ -51,7 +51,7 @@ $$x = (\xi_1, \xi_2, \ldots, \xi_n) \in \mathbb{R}^n$$
 
 $$\lVert x_m \rVert > m$$
 
-인 점 $x_m \in K$을 고를 수 있고, 이 점열의 임의의 부분수열도 노름이 무한대로 발산하므로 수렴할 수 없다. 따라서 $K$는 점렬컴팩트가 아니다. 다음으로 $K$가 닫혀 있지 않다 하자. [§열린집합과 닫힌집합, ⁋명제 4](/ko/math/analysis/open_and_closed_sets#prop4)에 의해 $K$의 점열 $x_m \to x$이면서 $x \notin K$인 경우가 존재한다. 이때 $(x_m)$의 모든 부분수열은 같은 극한 $x$로 수렴하는데 ([§부분수열과 Bolzano–Weierstrass 정리, ⁋명제 2](/ko/math/analysis/bolzano_weierstrass#prop2)) $x \notin K$이므로, $K$ 안의 점으로 수렴하는 부분수열이 하나도 없다. 따라서 $K$는 점렬컴팩트가 아니다. 두 경우를 종합하면, $K$가 점렬컴팩트이면 $K$는 닫혀 있고 bounded이다.
+인 점 $x_m \in K$을 고를 수 있고, 이 점열의 임의의 부분수열도 노름이 무한대로 발산하므로 수렴할 수 없다. 따라서 $K$는 점렬컴팩트가 아니다. 다음으로 $K$가 닫혀 있지 않다 하자. [§열린집합과 닫힌집합, ⁋명제 4](/ko/math/analysis/open_and_closed_sets#prop4)에 의해 $K$의 점열 $x_m \rightarrow x$이면서 $x \notin K$인 경우가 존재한다. 이때 $(x_m)$의 모든 부분수열은 같은 극한 $x$로 수렴하는데 ([§부분수열과 Bolzano–Weierstrass 정리, ⁋명제 2](/ko/math/analysis/bolzano_weierstrass#prop2)) $x \notin K$이므로, $K$ 안의 점으로 수렴하는 부분수열이 하나도 없다. 따라서 $K$는 점렬컴팩트가 아니다. 두 경우를 종합하면, $K$가 점렬컴팩트이면 $K$는 닫혀 있고 bounded이다.
 :::
 
 따라서 닫힌구간 $[a, b]$, 닫힌 공, 닫힌 직육면체 등은 모두 점렬컴팩트이다. 반면 개구간 $(0, 1)$은 닫혀 있지 않아, $\mathbb{R}$ 전체는 bounded가 아니어서 점렬컴팩트가 아니다.
@@ -119,7 +119,7 @@ $K$가 점렬컴팩트이고 $F \subseteq K$가 ($K$에서) 닫힌집합이면, 
 ::: 증명
 $F$의 점열 $(x_m)$을 잡자. 이는 $K$의 점열이기도 하므로, $K$의 점렬컴팩트성에 의해 어떤 부분수열이
 
-$$x_{m_k} \to x \in K$$
+$$x_{m_k} \rightarrow x \in K$$
 
 로 수렴한다. 그런데 $(x_{m_k})$는 $F$의 점들로 이루어진 수렴하는 점열이고 $F$가 닫혀 있으므로, 그 극한 $x$는 다시 $F$에 속한다 ([§열린집합과 닫힌집합, ⁋명제 4](/ko/math/analysis/open_and_closed_sets#prop4)). 따라서 $F$의 임의의 점열이 $F$ 안의 점으로 수렴하는 부분수열을 가지므로, $F$는 점렬컴팩트이다.
 :::
@@ -127,7 +127,7 @@ $$x_{m_k} \to x \in K$$
 수렴하는 점열 자체도 그 극한과 함께라면 점렬컴팩트집합을 이룬다. 이는 [예시 5](#ex5)를 일반화한 것으로, 컴팩트성이 "유한집합에 한 점을 더한 것처럼 행동하는" 작은 무한집합까지 포착함을 보여 준다.
 
 ::: 명제 8
-$\mathbb{R}^n$에서 $x_m \to x$이면, 집합
+$\mathbb{R}^n$에서 $x_m \rightarrow x$이면, 집합
 
 $$C = \{x\} \cup \{x_m : m \in \mathbb{N}\}$$
 
@@ -135,7 +135,7 @@ $$C = \{x\} \cup \{x_m : m \in \mathbb{N}\}$$
 :::
 
 ::: 증명
-하이네–보렐 정리에 따라 $C$가 닫혀 있고 bounded임을 보이면 충분하다. 수렴하는 수열은 bounded이고 ([§수열의 수렴, ⁋명제 3](/ko/math/analysis/convergence_of_sequences#prop3)) 거기에 limit point 하나를 더해도 bounded이므로, $C$는 bounded이다. 닫혀 있음을 보이기 위해 $C$의 점열 $y_k \to y$를 잡자. 두 경우로 나눈다.
+하이네–보렐 정리에 따라 $C$가 닫혀 있고 bounded임을 보이면 충분하다. 수렴하는 수열은 bounded이고 ([§수열의 수렴, ⁋명제 3](/ko/math/analysis/convergence_of_sequences#prop3)) 거기에 limit point 하나를 더해도 bounded이므로, $C$는 bounded이다. 닫혀 있음을 보이기 위해 $C$의 점열 $y_k \rightarrow y$를 잡자. 두 경우로 나눈다.
 
 $$\text{(i) 어떤 값 } a \in C \text{가 무한히 자주 나타나는 경우}, \qquad \text{(ii) 그렇지 않은 경우}.$$
 
@@ -151,9 +151,9 @@ $$d(p, K) = \inf_{y \in K} \lVert p - y \rVert$$
 
 는 실제로 $K$의 어떤 점에서 달성된다. 즉 $\lVert p - y_0 \rVert = d(p, K)$인 $y_0 \in K$가 존재한다. 실제로 하한의 정의에 의해
 
-$$\lVert p - y_m \rVert \to d(p, K) \qquad (y_m \in K)$$
+$$\lVert p - y_m \rVert \rightarrow d(p, K) \qquad (y_m \in K)$$
 
-인 점열 $(y_m)$을 잡을 수 있고, $K$가 점렬컴팩트이므로 $y_{m_k} \to y_0 \in K$인 부분수열을 뽑는다. 노름이 연속이므로
+인 점열 $(y_m)$을 잡을 수 있고, $K$가 점렬컴팩트이므로 $y_{m_k} \rightarrow y_0 \in K$인 부분수열을 뽑는다. 노름이 연속이므로
 
 $$\lVert p - y_0 \rVert = \lim_k \lVert p - y_{m_k} \rVert = d(p, K)$$
 

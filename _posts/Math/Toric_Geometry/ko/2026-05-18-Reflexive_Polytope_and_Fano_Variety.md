@@ -17,13 +17,13 @@ weight: 4
 
 ## 반사 다면체
 
-우선 lattice $M$과 그 dual lattice $N = \Hom(M, \mathbb{Z})$를 고정하고, $\langle -, - \rangle : M_{\mathbb{R}} \times N_{\mathbb{R}} \to \mathbb{R}$를 자연스러운 dual pairing이라 하자. 그럼 이 pairing을 통해 주어진 polytope을 반대쪽 dual lattice로 옮길 수 있다. 그 정의에 의해 *reflexive polytope*은 그 결과 또한 lattice polytope으로 떨어지는 것이다. 
+우선 lattice $M$과 그 dual lattice $N = \Hom(M, \mathbb{Z})$를 고정하고, $\langle -, - \rangle : M_{\mathbb{R}} \times N_{\mathbb{R}} \rightarrow \mathbb{R}$를 자연스러운 dual pairing이라 하자. 그럼 이 pairing을 통해 주어진 polytope을 반대쪽 dual lattice로 옮길 수 있다. 그 정의에 의해 *reflexive polytope*은 그 결과 또한 lattice polytope으로 떨어지는 것이다. 
 
 ::: 정의 1
-$M_{\mathbb{R}}$의 $d$차원 *lattice polytope* $\Delta$가 다음 두 조건을 만족할 때, 이를 *reflexive polytope<sub>반사 다면체</sub>*라 부른다:
+$M_{\mathbb{R}}$의 $d$차원 *lattice polytope<sub>격자 다면체</sub>* $\Delta$가 다음 두 조건을 만족할 때, 이를 *reflexive polytope<sub>반사 다면체</sub>*라 부른다:
 
 1. 원점 $0$이 $\Delta$의 내부에 포함된다.
-2. $\Delta$의 *dual polytope*<sub>쌍대 다면체</sub>
+2. $\Delta$의 *dual polytope<sub>쌍대 다면체</sub>*
 
 $$\Delta^\circ = \{ v \in N_{\mathbb{R}} \mid \langle u, v \rangle \ge -1 \text{ for all } u \in \Delta \}$$
 
@@ -173,7 +173,7 @@ $$K_V = (K_X + V)\vert_V = (K_X - K_X)\vert_V = 0$$
 그러나 일반적으로 reflexive polytope $\Delta$로부터 만들어진 $X_\Delta$는 singular하며, 이로 인해 두 가지 미묘한 문제가 생긴다.
 
 1. Codimension $1$인 $V$가 $X_\Delta$의 singular locus와 만나는 경우, $V$ 자신이 그 점에서 singular하게 된다. 우리 예시인 $\mathbb{P}^2/(\mathbb{Z}/3)$에서는 singular locus가 isolated된 세 점이므로 generic cubic curve $V$는 이를 피해 smooth하게 잡아줄 수 있지만, 차원이 커질수록 singular locus가 양의 차원이 되어 $V$가 반드시 이를 가로지르는 현상이 나타난다. 따라서 [명제 7](#prop7)의 결론을 *singular* $V$에 그대로 적용할 수 없다.
-2. 따라서, singular한 $V$로부터 진정한 smooth Calabi-Yau를 얻으려면 적절한 resolution $\pi: \widetilde{V} \to V$가 필요한데, 일반적인 resolution은 canonical class를 보존하지 않는다. 구체적으로, normal Gorenstein variety $V$의 임의의 resolution은 다음의 *discrepancy formula*
+2. 따라서, singular한 $V$로부터 진정한 smooth Calabi-Yau를 얻으려면 적절한 resolution $\pi: \widetilde{V} \rightarrow V$가 필요한데, 일반적인 resolution은 canonical class를 보존하지 않는다. 구체적으로, normal Gorenstein variety $V$의 임의의 resolution은 다음의 *discrepancy formula*
     
     $$K_{\tilde V} = \pi^\ast K_V + \sum_i a_i E_i$$
     
@@ -188,7 +188,7 @@ $$K_V = (K_X + V)\vert_V = (K_X - K_X)\vert_V = 0$$
 따라서 Calabi-Yau 성질을 *보존하는* 유일한 종류의 resolution은 모든 $a_i = 0$인 것이며, 이러한 resolution을 다음과 같이 정의한다.
 
 ::: 정의 8
-Normal Gorenstein variety $X$의 resolution of singularities $\pi: \tilde{X} \to X$ — 즉, $\tilde{X}$가 smooth이고 $\pi$가 proper birational morphism — 가
+Normal Gorenstein variety $X$의 resolution of singularities $\pi: \tilde{X} \rightarrow X$ — 즉, $\tilde{X}$가 smooth이고 $\pi$가 proper birational morphism — 가
 
 $$K_{\tilde{X}} = \pi^\ast K_X$$
 
@@ -197,7 +197,7 @@ $$K_{\tilde{X}} = \pi^\ast K_X$$
 
 즉 crepant resolution은 dis-crepancy가 없는 resolution이다. 그럼 이 조건이 정확히 [명제 7](#prop7)의 결론을 singular setting까지 끌고 가는 데 필요한 조건이라는 것을 즉시 확인할 수 있고, 이로부터 $\widetilde{V}$가 진정한 (smooth) Calabi-Yau가 된다.
 
-Toric setting에서 crepant resolution은 매우 명시적인 격자 데이터로 번역된다. 일반적인 toric resolution이 fan의 refinement (즉 동일 support 위의 더 세밀한 fan)로 주어진다는 사실은 이미 [§토릭 다양체의 정의, ⁋명제 11](/ko/math/toric_geometry/toric_varieties#prop11) 이후의 논의에서 살펴보았다. 그렇다면 이 resolution이 언제 crepant인지가 진정한 의문일텐데, 역시 이 또한 fan의 조합론적 성질로 나타낼 수 있다. 구체적으로, birational morphism $\pi: X_{\Sigma'} \to X_\Delta$가 crepant일 필요충분조건은 새로 추가된 ray $v$들이 모두 $\Delta^\circ$의 *경계* 위에 놓인 lattice point라는 것이다. 
+Toric setting에서 crepant resolution은 매우 명시적인 격자 데이터로 번역된다. 일반적인 toric resolution이 fan의 refinement (즉 동일 support 위의 더 세밀한 fan)로 주어진다는 사실은 이미 [§토릭 다양체의 정의, ⁋명제 11](/ko/math/toric_geometry/toric_varieties#prop11) 이후의 논의에서 살펴보았다. 그렇다면 이 resolution이 언제 crepant인지가 진정한 의문일텐데, 역시 이 또한 fan의 조합론적 성질로 나타낼 수 있다. 구체적으로, birational morphism $\pi: X_{\Sigma'} \rightarrow X_\Delta$가 crepant일 필요충분조건은 새로 추가된 ray $v$들이 모두 $\Delta^\circ$의 *경계* 위에 놓인 lattice point라는 것이다. 
 
 직관적으로 이는 [명제 3](#prop3)의 증명에서 본 anticanonical piecewise linear function $\psi_{-K}$가 새 ray $v$에 대해서도 여전히 $\psi_{-K}(v) = -1$를 만족해야 한다는 것으로 생각할 수 있다. 이는 $v$가 cone $\sigma$ (vertex $u_\sigma$)의 내부에 들어오면 $\psi_{-K}(v) = \langle u_\sigma, v\rangle = -1$은 정확히 $v$가 $\Delta^\circ$의 facet $F_{u_\sigma}$ 위에 있다는 것과 동치이기 때문이다. 가령, $\mathbb{P}^2/(\mathbb{Z}/3)$의 fan에서 인접 두 ray 사이의 lattice point $(1,0), (0,1), (-1,-1)$를 새 ray로 추가하면 세 $\mathbb{Z}/3$ singular point가 동시에 해소되며, 결과는 smooth $\mathbb{P}^2$의 fan이 된다.
 

@@ -73,7 +73,7 @@ $$(y,f)\cdot g=(y\cdot g,\ g^{-1}\cdot f)$$
 and write its orbit space as $P\times_G F=(P\times F)/G$. Then the map $P\times_G F\rightarrow X$ induced by $(y,f)\mapsto p(y)$ is a fiber bundle with fiber $F$, and we call this the *associated bundle* of $P$.
 :::
 
-Intuitively, this attaches the fiber $F$ along the <em-ko>twisted</em-ko> structure of the principal $G$-bundle; for example, applying this to the trivial $G$-bundle $X\times G$ and fiber $F$ yields the trivial fiber bundle $X\times F$, and similarly, applying it to a slightly twisted (that is, non-trivial) principal $G$-bundle $P$ and fiber $F$ gives a fiber bundle with fiber $F$ that inherits the twisting data from $P$.
+Intuitively, this attaches the fiber $F$ along the *twisted* structure of the principal $G$-bundle; for example, applying this to the trivial $G$-bundle $X\times G$ and fiber $F$ yields the trivial fiber bundle $X\times F$, and similarly, applying it to a slightly twisted (that is, non-trivial) principal $G$-bundle $P$ and fiber $F$ gives a fiber bundle with fiber $F$ that inherits the twisting data from $P$.
 
 The most transparent example is a vector bundle, so let us follow the definition step by step here. The topological group $G=\GL(k;, \mathbb{R})$ acts on the left on the dimension $k$ real vector space $F=V$. Also, for convenience, suppose the trivial $G$-bundle $P=X\times G$ is given. Then the $G$-action defined on the product space $P\times F=(X\times G)\times V$ is
 

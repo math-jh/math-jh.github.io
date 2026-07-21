@@ -171,7 +171,7 @@ $$\frac{A}{\bigcap_{i=1}^n\mathfrak{a}_i}\cong\prod_{i=1}^n A/\mathfrak{a}_i$$
 
 $$\bar e_i=(0,\ldots, 0,\underset{i}{1},0,\ldots, 0)$$
 
-들이다. 이들이 $\prod A/\mathfrak{a}_i$의 central한 orthogonal idempotent의 complete set임은 성분별로 확인된다. $\pi$가 동형이므로 $e_i:=\pi^{-1}(\bar e_i)$는 $A$의 central한 orthogonal idempotent의 complete set을 이루고, [정리 5](#thm5)의 대응에 따라 분해 $A\cong\prod Ae_i$를 준다. 이 때 $Ae_i\cong A/\mathfrak{a}_i$이며, 실제로 $\mathfrak{a}_i=\ker(A\to A/\mathfrak{a}_i)$는 $\pi$ 아래에서 $i$번째 성분이 $0$인 부분, 즉 $A(1-e_i)$에 대응한다. 이는 앞선 글의 [§중국인의 나머지정리, ⁋명제 7](/ko/math/ring_theory/chinese_remainder_theorem#prop7)에서 $\mathfrak{a}_i=A(1-e_i)$로 기술된 idempotent들이 바로 위의 $e_i$임을 말해 준다.
+들이다. 이들이 $\prod A/\mathfrak{a}_i$의 central한 orthogonal idempotent의 complete set임은 성분별로 확인된다. $\pi$가 동형이므로 $e_i:=\pi^{-1}(\bar e_i)$는 $A$의 central한 orthogonal idempotent의 complete set을 이루고, [정리 5](#thm5)의 대응에 따라 분해 $A\cong\prod Ae_i$를 준다. 이 때 $Ae_i\cong A/\mathfrak{a}_i$이며, 실제로 $\mathfrak{a}_i=\ker(A\rightarrow A/\mathfrak{a}_i)$는 $\pi$ 아래에서 $i$번째 성분이 $0$인 부분, 즉 $A(1-e_i)$에 대응한다. 이는 앞선 글의 [§중국인의 나머지정리, ⁋명제 7](/ko/math/ring_theory/chinese_remainder_theorem#prop7)에서 $\mathfrak{a}_i=A(1-e_i)$로 기술된 idempotent들이 바로 위의 $e_i$임을 말해 준다.
 
 요약하면, pairwise comaximal이고 $\bigcap\mathfrak{a}_i=0$인 ideal들이 주어지는 것은 $A$가 곱으로 분해되는 것과 같고, 이는 다시 $A$가 central한 orthogonal idempotent의 complete set을 갖는 것과 같다. 중국인의 나머지정리는 이 세 관점을 하나로 묶는 다리이다.
 

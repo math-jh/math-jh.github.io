@@ -1,6 +1,6 @@
 ---
 title: "Determinants"
-description: "We define the determinant over a free commutative group and prove its basic properties. We cover the multiplicative formula, invertibility, and the relationship with the invertibility of linear maps on finite-dimensional free commutative groups."
+description: "We define the determinant over a free abelian group and prove its basic properties. We cover the multiplicative formula, invertibility, and the relationship with the invertibility of linear maps on finite-dimensional free abelian groups."
 excerpt: "The determinant of an endomorphism of a free module and its basic properties"
 
 categories: [Math / Multilinear Algebra]

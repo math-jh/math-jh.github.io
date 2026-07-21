@@ -121,7 +121,7 @@ $$f(\x_1,\ldots, \x_n)=g\left(\sum_{j=1}^n b_{1j}\x_j, \dots, \sum_{j=1}^n b_{nj
 ## 에탈대수
 
 ::: 정의 5
-$\mathbb{K}$-algebra $A$가 *diagonalizable*이라는 것은 적절한 $n\geq 0$이 존재하여, $\mathbb{K}$-algebra isomorphism $A\cong \mathbb{K}^n$이 존재하는 것이다. 만일 적당한 $n\geq 0$에 대하여 $\mathbb{L}$-algebra isomorphism $A_{(\mathbb{L})}\cong \mathbb{L}^n$가 존재하도록 하는 extension $\mathbb{L}/\mathbb{K}$가 존재한다면, 이 extension이 $A$를 *diagonalize*한다고 말한다. 만일 $A$를 diagonalize하는 적절한 extension $\mathbb{L}/\mathbb{K}$가 존재한다면 $A$를 *étale algebra*라 부른다. 
+$\mathbb{K}$-algebra $A$가 *diagonalizable*이라는 것은 적절한 $n\geq 0$이 존재하여, $\mathbb{K}$-algebra isomorphism $A\cong \mathbb{K}^n$이 존재하는 것이다. 만일 적당한 $n\geq 0$에 대하여 $\mathbb{L}$-algebra isomorphism $A_{(\mathbb{L})}\cong \mathbb{L}^n$가 존재하도록 하는 extension $\mathbb{L}/\mathbb{K}$가 존재한다면, 이 extension이 $A$를 *diagonalize<sub>대각화</sub>*한다고 말한다. 만일 $A$를 diagonalize하는 적절한 extension $\mathbb{L}/\mathbb{K}$가 존재한다면 $A$를 *étale algebra*라 부른다. 
 :::
 
 Diagonalizable algebra는 그 extension degree $[A:\mathbb{K}]$가 잘 정의된다는 점에서 유용하다. 이 글의 서두에서 밝힌 첫 번째 핵심 아이디어를 사용하면 étale algebra는 이와 동일한 정도로 유용하다고 할 수 있다. 

@@ -51,9 +51,9 @@ $F \subseteq X$가 닫힌집합인 것은, $F$의 점들로 이루어진 수렴�
 :::
 
 ::: 증명
-$F$가 닫혀 있다고 하자. $x_n \in F$, $x_n \to x$인데 $x \notin F$라면 $x$는 열린집합 $X \setminus F$의 점이므로 $B(x, r) \subseteq X\setminus F$인 $r$가 있다. 그러나 $x_n \to x$이므로 큰 $n$에서 $x_n \in B(x, r)$, 즉 $x_n \notin F$가 되어 모순이다. 따라서 $x \in F$이다.
+$F$가 닫혀 있다고 하자. $x_n \in F$, $x_n \rightarrow x$인데 $x \notin F$라면 $x$는 열린집합 $X \setminus F$의 점이므로 $B(x, r) \subseteq X\setminus F$인 $r$가 있다. 그러나 $x_n \rightarrow x$이므로 큰 $n$에서 $x_n \in B(x, r)$, 즉 $x_n \notin F$가 되어 모순이다. 따라서 $x \in F$이다.
 
-거꾸로 $F$가 점열 극한에 대해 닫혀 있다고 하자. $X \setminus F$가 열려 있지 않다면, 어떤 $x \in X\setminus F$에 대해 모든 $r$에서 $B(x, r)$가 $F$의 점을 포함한다. $r = 1/n$으로 잡아 $x_n \in F \cap B(x, 1/n)$을 택하면 $x_n \to x$이고 가정에 의해 $x \in F$가 되어 $x \in X\setminus F$에 모순이다.
+거꾸로 $F$가 점열 극한에 대해 닫혀 있다고 하자. $X \setminus F$가 열려 있지 않다면, 어떤 $x \in X\setminus F$에 대해 모든 $r$에서 $B(x, r)$가 $F$의 점을 포함한다. $r = 1/n$으로 잡아 $x_n \in F \cap B(x, 1/n)$을 택하면 $x_n \rightarrow x$이고 가정에 의해 $x \in F$가 되어 $x \in X\setminus F$에 모순이다.
 :::
 
 집합 $A$를 포함하는 가장 작은 닫힌집합을 $A$의 *폐포<sub>closure</sub>* $\overline{A}$라 한다. [명제 4](#prop4)에 의해 $\overline{A}$는 정확히 $A$의 점열로 도달할 수 있는 모든 점, 즉 $A$의 limit point들을 $A$에 더한 것이다. 이러한 내부·폐포·경계의 위상적 개념들은 [\[위상수학\] §집합의 내부, 폐포, 경계](/ko/math/topology/other_concepts)에서 일반 위상공간에 대해 다루어진다.

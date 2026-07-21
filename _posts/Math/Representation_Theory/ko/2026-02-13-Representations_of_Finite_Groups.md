@@ -59,8 +59,8 @@ $G$-representation $V, W$에 대하여, 다음의 $G$-action을 통해 새로운
 1. Direct sum $V\oplus W$; $G$-action $g\cdot(v,w)=(g\cdot v,g\cdot w)$
 2. Tensor product $V\otimes W$; $G$-action $g\cdot(v\otimes w)=(g\cdot v)\otimes (g\cdot w)$, 그리고 이로부터 얻어지는 exterior power $\bigwedge^k V$, symmetric power $\operatorname{Sym}^k V$와 그 위의 $G$-action들
 3. $\Hom_\mathbb{C}(V,W)$; $G$-action $(g\cdot f)(v)=g\cdot f(g^{-1}\cdot v)$
-4. 3번에서 $W=\mathbb{C}$로 두어 얻어지는 *dual representation* $V^\ast$
-5. 스칼라곱을 conjugate으로 바꾸어 얻어지는 *conjugate representation* $\overline{V}$ (동일한 $G$-action)
+4. 3번에서 $W=\mathbb{C}$로 두어 얻어지는 *dual representation<sub>쌍대 표현</sub>* $V^\ast$
+5. 스칼라곱을 conjugate으로 바꾸어 얻어지는 *conjugate representation<sub>켤레표현</sub>* $\overline{V}$ (동일한 $G$-action)
 :::
 
 ## Category $\lMod{\mathbb{C}[G]}$
@@ -136,7 +136,7 @@ $G$-representation $V$ 위의 Hermitian inner product $\langle-,-\rangle$이 *$G
 
 $$\langle g\cdot u,g\cdot v\rangle=\langle u,v\rangle$$
 
-이 성립하는 것이다. $G$-invariant inner product를 갖는 representation을 *unitary representation*이라 부른다.
+이 성립하는 것이다. $G$-invariant inner product를 갖는 representation을 *unitary representation<sub>유니타리표현</sub>*이라 부른다.
 :::
 
 만일 이러한 $G$-invariant inner product가 주어졌다면, 임의의 $g\in G$에 대하여 $\rho(g)\in \Aut(V)$는 unitary operator이다. 이를 관찰하기 위해 $G$-invariant inner product $\langle -,-\rangle$가 주어졌다 하고, 임의의 $g\in G$에 대해

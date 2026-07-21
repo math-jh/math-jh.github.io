@@ -37,7 +37,7 @@ $$C \cdot D = \rchi(\mathcal{O}_S(C + D)) - \rchi(\mathcal{O}_S(C)) - \rchi(\mat
 
 이들의 기하학적 의미를 살펴보기 위해, $C$와 $D$가 각각 global section $s \in H^0(\mathcal{O}(C))$, $t \in H^0(\mathcal{O}(D))$로 정의되는 effective divisor라 하자. 그럼 이들의 common zero locus는 $C \cap D$이며, 다음 exact sequence가 성립한다.
 
-$$0 \to \mathcal{O} \xrightarrow{(t,-s)} \mathcal{O}(C) \oplus \mathcal{O}(D) \xrightarrow{(s,t)} \mathcal{O}(C+D) \to \mathcal{O}_{C \cap D} \to 0$$
+$$0 \rightarrow \mathcal{O} \xrightarrow{(t,-s)} \mathcal{O}(C) \oplus \mathcal{O}(D) \xrightarrow{(s,t)} \mathcal{O}(C+D) \rightarrow \mathcal{O}_{C \cap D} \rightarrow 0$$
 
 여기서 첫 번째 화살표는 $h \mapsto (ht, -hs)$, 두 번째 화살표는 $(f, g) \mapsto fs + gt$이고, 마지막 화살표는 $\mathcal{O}(C+D)$에서 $C \cap D$ 위로의 자연스러운 restriction map이다. 그럼 Euler characteristic의 additivity에 의하여
 
@@ -108,7 +108,7 @@ $$\rchi(\mathcal{O}_S(D)) = \frac{1}{2} D \cdot (D - K_S) + \rchi(\mathcal{O}_S)
 ::: 증명
 우선 $D$가 smooth irreducible effective divisor인 경우를 보자. 다음의 short exact sequence
 
-$$0 \to \mathcal{O}_S \to \mathcal{O}_S(D) \to \mathcal{O}_D(D) \to 0$$
+$$0 \rightarrow \mathcal{O}_S \rightarrow \mathcal{O}_S(D) \rightarrow \mathcal{O}_D(D) \rightarrow 0$$
 
 로부터 Euler characteristic의 additivity에 의해
 
@@ -162,7 +162,7 @@ $$\rchi(\mathcal{O}_{\mathbb{P}^2}(d)) = \frac{1}{2}dH \cdot (dH + 3H) + 1 = \fr
 :::
 
 ::: 예시 6 (Blow-up of $\mathbb{P}^2$)
-이제 우리는 $\mathbb{P}^2$의 한 점 $p$에서의 blow-up $\pi: \widetilde{\mathbb{P}}^2 \to \mathbb{P}^2$을 생각한다. [§표준선다발, ⁋명제 12](/ko/math/algebraic_varieties/canonical_bundle#prop12)에 의해, canonical bundle은 다음의 식
+이제 우리는 $\mathbb{P}^2$의 한 점 $p$에서의 blow-up $\pi: \widetilde{\mathbb{P}}^2 \rightarrow \mathbb{P}^2$을 생각한다. [§표준선다발, ⁋명제 12](/ko/math/algebraic_varieties/canonical_bundle#prop12)에 의해, canonical bundle은 다음의 식
 
 $$K_{\widetilde{\mathbb{P}}^2} = \pi^\ast K_{\mathbb{P}^2} + E = -3H + E$$
 
@@ -220,7 +220,7 @@ $$\rchi(\mathcal{O}(D)) = 1 + \frac{1}{2}(2ab + 2a + 2b) = (a+1)(b+1)$$
 
 $$\Num(S) = \Div(S) / \{\text{numerical equivalence}\}$$
 
-라고 하며, real vector space $\Num(S) \otimes \mathbb{R}$ 위에 intersection product가 유도하는 quadratic form을 *intersection form*이라 부른다. 
+라고 하며, real vector space $\Num(S) \otimes \mathbb{R}$ 위에 intersection product가 유도하는 quadratic form을 *intersection form<sub>교차 형식</sub>*이라 부른다. 
 :::
 
 위의 동치관계는 별다른 것이 아니고, divisor들의 intersection product를 생각할 때 같은 값을 주는 원소들은 같은 것으로 보는 equivalence class에 불과하다. 일반적으로 numerical equivalence는 linear equivalence보다 약한 관계이므로, numerically equivalent한 두 divisor는 서로 linearly equivalent하지 않을 수도 있다. 

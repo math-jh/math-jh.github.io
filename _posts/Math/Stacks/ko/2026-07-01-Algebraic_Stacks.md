@@ -107,7 +107,7 @@ Site $(\Sch, \mathrm{fppf})$ 위의 stack $\mathcal{X}$ (base scheme $S$ 위)이
 1. (표현가능 대각선) 대각선 $\Delta:\mathcal{X} \rightarrow \mathcal{X}\times_S \mathcal{X}$이 algebraic space에 의해 표현가능하다.
 2. (smooth atlas) scheme $U$과 표현가능 smooth 전사 사상 $\pi: U \rightarrow \mathcal{X}$이 존재한다. 이 $\pi$을 $\mathcal{X}$의 *atlas<sub>아틀라스</sub>* (또는 *presentation*)라 부른다.
 
-나아가 $\mathcal{X}$이 *Deligne–Mumford stack* (이하 *DM stack*)이라는 것은, 조건 2의 atlas $\pi: U \rightarrow \mathcal{X}$을 smooth 대신 *étale* 전사로 잡을 수 있는 것이다. ([\[스킴\] §매끄러운 사상과 étale 사상, ⁋정의 6](/ko/math/scheme_theory/smooth_and_etale_morphisms#def6))
+나아가 $\mathcal{X}$이 *Deligne–Mumford stack<sub>들리뉴-멈퍼드 스택</sub>* (이하 *DM stack*)이라는 것은, 조건 2의 atlas $\pi: U \rightarrow \mathcal{X}$을 smooth 대신 *étale* 전사로 잡을 수 있는 것이다. ([\[스킴\] §매끄러운 사상과 étale 사상, ⁋정의 6](/ko/math/scheme_theory/smooth_and_etale_morphisms#def6))
 :::
 
 조건 1에 의해 atlas 사상 $\pi$은 자동으로 표현가능하므로 ([명제 5](#prop5)) 그 매끄러움·전사성이 [정의 3](#def3)의 의미로 잘 정의된다. Atlas는 scheme이 좌표근방으로 덮이는 것의 stack 판본으로, $\mathcal{X}$ 위의 기하학적 성질을 $U$ 위에서 검사하게 한다. 가령 $\mathcal{X}$의 차원은 $\dim \mathcal{X}=\dim U-d$ ($d$은 $\pi$의 상대차원)로 정의되며, 이는 atlas의 선택에 의존하지 않는다. Smooth 사상이 평탄하고 smooth fiber를 가지므로 smooth atlas는 stack을 "두꺼운" scheme으로 덮는 셈이고, 이때 fiber의 양의 차원이 곧 각 점에 붙은 stabilizer의 차원으로 나타난다.

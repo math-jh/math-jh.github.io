@@ -14,7 +14,7 @@ translated_at: 2026-07-13T22:00:03+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-07-13T22:00:03+00:00
 ---
-In the previous post, we dealt with functions that raise the dimension of the codomain, sending one real number to several real numbers—that is, parameterized curves $\mathbf{r}:\mathbb{R}\to\mathbb{R}^n$. Now we go the other way, raising the dimension of the domain, and deal with multivariable functions $f:\mathbb{R}^m\to\mathbb{R}$ that send several real numbers to one real number. Differentiation still retains its essence as a linear approximation near a point, but because the domain becomes a vector space, there are infinitely many directions from which one can approach, so direction becomes important, and the linear approximation is given not by a single number but by a linear map. Since vector spaces, inner products, and norms were covered in [§Curves and Vector Functions](/en/math/calculus/vector_functions), in this post we briefly review linear maps, matrices, and determinants—the core tools of multivariable differentiation—and then treat partial derivatives and the gradient, differentiability, the multivariable chain rule, and extrema.
+In the previous post, we dealt with functions that raise the dimension of the codomain, sending one real number to several real numbers—that is, parameterized curves $\mathbf{r}:\mathbb{R}\rightarrow\mathbb{R}^n$. Now we go the other way, raising the dimension of the domain, and deal with multivariable functions $f:\mathbb{R}^m\rightarrow\mathbb{R}$ that send several real numbers to one real number. Differentiation still retains its essence as a linear approximation near a point, but because the domain becomes a vector space, there are infinitely many directions from which one can approach, so direction becomes important, and the linear approximation is given not by a single number but by a linear map. Since vector spaces, inner products, and norms were covered in [§Curves and Vector Functions](/en/math/calculus/vector_functions), in this post we briefly review linear maps, matrices, and determinants—the core tools of multivariable differentiation—and then treat partial derivatives and the gradient, differentiability, the multivariable chain rule, and extrema.
 
 ## Linear Maps and Matrices
 
@@ -41,11 +41,11 @@ $$\det\begin{pmatrix} a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \\ a_
 Before defining the derivative, we need to review limits and continuity of multivariable functions. For single-variable functions, it was sufficient to look at the limit from two directions: the left and right of a point $a$. However, when the domain becomes $\mathbb{R}^m$, there are infinitely many paths approaching a point $\mathbf{a}$, so some care is needed.
 
 ::: Definition 1
-A multivariable function $f: \mathbb{R}^m \to \mathbb{R}$ has *limit* $L$ at a point $\mathbf{a}$ if for every $\varepsilon > 0$ there exists a $\delta > 0$ such that
+A multivariable function $f: \mathbb{R}^m \rightarrow \mathbb{R}$ has *limit* $L$ at a point $\mathbf{a}$ if for every $\varepsilon > 0$ there exists a $\delta > 0$ such that
 
 $$0 < \lVert \mathbf{x} - \mathbf{a}\rVert < \delta \quad\Rightarrow\quad \lvert f(\mathbf{x}) - L\rvert < \varepsilon$$
 
-holds for all $\mathbf{x}$ satisfying $0 < \lVert \mathbf{x} - \mathbf{a}\rVert < \delta$. We write this as $\lim_{\mathbf{x}\to\mathbf{a}} f(\mathbf{x}) = L$, and in particular when $\lim_{\mathbf{x}\to\mathbf{a}} f(\mathbf{x}) = f(\mathbf{a})$ we say $f$ is *continuous* at $\mathbf{a}$.
+holds for all $\mathbf{x}$ satisfying $0 < \lVert \mathbf{x} - \mathbf{a}\rVert < \delta$. We write this as $\lim_{\mathbf{x}\rightarrow\mathbf{a}} f(\mathbf{x}) = L$, and in particular when $\lim_{\mathbf{x}\rightarrow\mathbf{a}} f(\mathbf{x}) = f(\mathbf{a})$ we say $f$ is *continuous* at $\mathbf{a}$.
 :::
 
 The form of this definition is essentially the same as for single-variable functions; the only difference is that the one-dimensional distance $\lvert x - a\rvert$ is replaced by the $m$-dimensional distance $\lVert\mathbf{x} - \mathbf{a}\rVert$. However, for example, to verify that the limit of a given function is $L$, it is **not enough** to check that the following limit
@@ -67,7 +67,7 @@ The simplest rate of change is the one when moving along only one coordinate axi
 ::: Definition 2
 The *partial derivative* of a multivariable function $f(x_1, \ldots, x_n)$ at a point $\mathbf{a}$ with respect to the variable $x_i$ is the derivative with respect to $x_i$ alone while holding the remaining variables fixed. That is, it is given by
 
-$$\frac{\partial f}{\partial x_i}(  \mathbf{a}) = \lim_{h\to 0}\frac{f(\mathbf{a} + h \mathbf{e}_i) - f(\mathbf{a})}{h}$$
+$$\frac{\partial f}{\partial x_i}(  \mathbf{a}) = \lim_{h\rightarrow 0}\frac{f(\mathbf{a} + h \mathbf{e}_i) - f(\mathbf{a})}{h}$$
 
 where $\mathbf{e}_i$ is the standard basis vector whose $i$th component is $1$ and whose remaining components are $0$. The vector collecting all partial derivatives
 
@@ -115,7 +115,7 @@ this expression means that the function value $f(a+h)$ near the point $a$ is lin
 ::: Definition 3
 A multivariable function $f$ is *differentiable* at a point $\mathbf{a}$ if there exists a vector $\mathbf{n}$ such that
 
-$$\lim_{\mathbf{h} \to 0}\frac{f(\mathbf{a} + \mathbf{h}) - f(\mathbf{a}) - \mathbf{n}\cdot \mathbf{h}}{\lVert \mathbf{h}\rVert} = 0$$
+$$\lim_{\mathbf{h} \rightarrow 0}\frac{f(\mathbf{a} + \mathbf{h}) - f(\mathbf{a}) - \mathbf{n}\cdot \mathbf{h}}{\lVert \mathbf{h}\rVert} = 0$$
 
 holds.
 :::
@@ -129,7 +129,7 @@ If $f$ is differentiable at a point $\mathbf{a}$, then the vector $\mathbf{n}$ i
 ::: Proof
 Setting $\mathbf{h} = t \mathbf{e}_i$ in the limit of [Definition 3](#def3), we have $\lVert \mathbf{h}\rVert = \lvert t\rvert$, so
 
-$$\lim_{t \to 0}\frac{f(\mathbf{a} + t \mathbf{e}_i) - f(\mathbf{a}) - \mathbf{n}\cdot (t \mathbf{e}_i)}{\lvert t\rvert} = 0.$$
+$$\lim_{t \rightarrow 0}\frac{f(\mathbf{a} + t \mathbf{e}_i) - f(\mathbf{a}) - \mathbf{n}\cdot (t \mathbf{e}_i)}{\lvert t\rvert} = 0.$$
 
 We have $\mathbf{n}\cdot (t \mathbf{e}_i) = t n_i$. When $t>0$, $\lvert t\rvert = t$, so rearranging the numerator of the limit by $t$ gives $\frac{f(\mathbf{a} + t \mathbf{e}_i) - f(\mathbf{a})}{t} - n_i$, which by the definition of the partial derivative converges to $\frac{\partial f}{\partial x_i}(\mathbf{a}) - n_i$. The same logic for $t<0$ gives the same conclusion, so for the limit to be $0$ we must have $n_i = \frac{\partial f}{\partial x_i}(\mathbf{a})$. Collecting this for all $i$ gives $\mathbf{n} = \nabla f(\mathbf{a})$.
 :::
@@ -152,7 +152,7 @@ and subtracting $\nabla f(a,b)\cdot(h,k) = f_x(a,b)h + f_y(a,b)k$ gives
 
 $$f(a+h,b+k) - f(a,b) - \nabla f(a,b)\cdot(h,k) = \bigl(f_x(a+\theta_1 h, b+k) - f_x(a,b)\bigr)h + \bigl(f_y(a, b+\theta_2 k) - f_y(a,b)\bigr)k.$$
 
-Since $f_x, f_y$ are continuous at $(a,b)$, both brackets go to $0$ as $(h,k)\to(0,0)$, and because $\lvert h\rvert, \lvert k\rvert \le \lVert(h,k)\rVert$, the limit in [Definition 3](#def3) holds. Thus $f$ is differentiable at $(a,b)$ and its gradient is $\nabla f(a,b)$.
+Since $f_x, f_y$ are continuous at $(a,b)$, both brackets go to $0$ as $(h,k)\rightarrow(0,0)$, and because $\lvert h\rvert, \lvert k\rvert \le \lVert(h,k)\rVert$, the limit in [Definition 3](#def3) holds. Thus $f$ is differentiable at $(a,b)$ and its gradient is $\nabla f(a,b)$.
 :::
 
 ## Chain Rule and Mixed Partial Derivatives
@@ -168,11 +168,11 @@ $$\frac{d}{dt} f(\mathbf{x}(t)) = \nabla f(\mathbf{x}(t)) \cdot \mathbf{x}'(t) =
 
 :::
 ::: Proof
-Applying [Definition 3](#def3) at the point $\mathbf{x}(t)$ with increment $\Delta\mathbf{x}=\mathbf{x}(t+\Delta t)-\mathbf{x}(t)$, as $\Delta t\to 0$ we have
+Applying [Definition 3](#def3) at the point $\mathbf{x}(t)$ with increment $\Delta\mathbf{x}=\mathbf{x}(t+\Delta t)-\mathbf{x}(t)$, as $\Delta t\rightarrow 0$ we have
 
-$$\frac{f(\mathbf{x}(t+\Delta t))-f(\mathbf{x}(t))-\nabla f(\mathbf{x}(t))\cdot\Delta\mathbf{x}}{\lVert\Delta\mathbf{x}\rVert}\to 0.$$
+$$\frac{f(\mathbf{x}(t+\Delta t))-f(\mathbf{x}(t))-\nabla f(\mathbf{x}(t))\cdot\Delta\mathbf{x}}{\lVert\Delta\mathbf{x}\rVert}\rightarrow 0.$$
 
-Dividing both sides by $\Delta t$, the right-hand side splits into a linear term $\nabla f(\mathbf{x}(t))\cdot\frac{\Delta\mathbf{x}}{\Delta t}$ and a remainder term, which is the quantity that went to $0$ above multiplied by $\lVert\Delta\mathbf{x}\rVert/\Delta t$. By differentiability of the curve, $\Delta\mathbf{x}/\Delta t\to\mathbf{x}'(t)$, so $\lVert\Delta\mathbf{x}\rVert/\lvert\Delta t\rvert$ is bounded, and therefore the remainder term also vanishes as $\Delta t\to 0$, yielding the formula.
+Dividing both sides by $\Delta t$, the right-hand side splits into a linear term $\nabla f(\mathbf{x}(t))\cdot\frac{\Delta\mathbf{x}}{\Delta t}$ and a remainder term, which is the quantity that went to $0$ above multiplied by $\lVert\Delta\mathbf{x}\rVert/\Delta t$. By differentiability of the curve, $\Delta\mathbf{x}/\Delta t\rightarrow\mathbf{x}'(t)$, so $\lVert\Delta\mathbf{x}\rVert/\lvert\Delta t\rvert$ is bounded, and therefore the remainder term also vanishes as $\Delta t\rightarrow 0$, yielding the formula.
 :::
 
 [Theorem 6](#thm6) says that partial derivatives chain together like a chain when one variable depends on several variables, and it is mainly used in coordinate changes. For example, if in $z = f(x,y)$ we change to polar coordinates $x = r\cos\theta$, $y = r\sin\theta$, then $\partial z/\partial r = f_x\cos\theta + f_y\sin\theta$ follows immediately.
@@ -195,7 +195,7 @@ Symmetrically, setting $\psi(y) = f(a+h, y) - f(a, y)$ and swapping the roles of
 
 $$\Delta = \frac{\partial^2 f}{\partial x \partial y}(a+\theta_3 h, b+\theta_4 k) hk.$$
 
-Dividing both expressions by $hk$ and taking the limit as $(h,k)\to(0,0)$, since the two mixed partial derivatives are continuous at $(a,b)$, the right-hand sides converge to $\frac{\partial^2 f}{\partial y\partial x}(a,b)$ and $\frac{\partial^2 f}{\partial x\partial y}(a,b)$ respectively, so they are equal.
+Dividing both expressions by $hk$ and taking the limit as $(h,k)\rightarrow(0,0)$, since the two mixed partial derivatives are continuous at $(a,b)$, the right-hand sides converge to $\frac{\partial^2 f}{\partial y\partial x}(a,b)$ and $\frac{\partial^2 f}{\partial x\partial y}(a,b)$ respectively, so they are equal.
 :::
 
 ## Directional Derivatives and the Gradient

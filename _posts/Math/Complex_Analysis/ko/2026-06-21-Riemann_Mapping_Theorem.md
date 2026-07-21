@@ -113,7 +113,7 @@ $$g(z) = f(z) - c$$
 정리의 진술부터 정확히 한다. $\mathbb{C}$ 전체는 단위원판과 등각동형일 수 없는데, $\mathbb{C}$ 위의 bounded 전해석함수가 상수뿐이라는 Liouville 정리가 단위원판으로 가는 비상수 사상의 존재를 막기 때문이다. 따라서 영역이 $\mathbb{C}$의 진부분집합이라는 조건이 필수적이며, 단순연결성과 함께 이 둘이 정확히 충분조건이 됨이 정리의 내용이다. 사상의 유일성을 위해 한 점에서의 normalization을 덧붙인다.
 
 ::: 정리 6 (Riemann 사상정리)
-$\Omega \subsetneq \mathbb{C}$가 공집합이 아닌 단순연결 열린집합이라 하자. 그러면 임의로 고정한 점 $z_0 \in \Omega$에 대하여, $\Omega$를 단위원판 $\mathbb{D} = \{z : \lvert z\rvert < 1\}$ 위로 보내는 holomorphic 전단사사상 $f : \Omega \to \mathbb{D}$이 존재하며, 그 가운데
+$\Omega \subsetneq \mathbb{C}$가 공집합이 아닌 단순연결 열린집합이라 하자. 그러면 임의로 고정한 점 $z_0 \in \Omega$에 대하여, $\Omega$를 단위원판 $\mathbb{D} = \{z : \lvert z\rvert < 1\}$ 위로 보내는 holomorphic 전단사사상 $f : \Omega \rightarrow \mathbb{D}$이 존재하며, 그 가운데
 
 $$f(z_0) = 0, \qquad f'(z_0) > 0$$
 
@@ -123,7 +123,7 @@ $$f(z_0) = 0, \qquad f'(z_0) > 0$$
 증명은 존재성과 유일성으로 나뉜다. 유일성은 단위원판의 automorphism 분류에서 곧장 따라 나오므로 이를 먼저 처리하고, 존재성은 다음 절들에서 변분적 구성으로 확립한다.
 
 ::: 증명
-$f, g : \Omega \to \mathbb{D}$이 모두 normalization 조건을 만족하는 holomorphic 전단사사상이라 하자. 합성 $h = g \circ f^{-1} : \mathbb{D} \to \mathbb{D}$은 holomorphic 전단사사상이고 그 역사상도 holomorphic이므로 ([§편각원리와 Rouché 정리, ⁋따름정리 9](/ko/math/complex_analysis/argument_principle#cor9)), $\mathbb{D}$의 holomorphic automorphism이다. 또 $f(z_0) = g(z_0) = 0$이므로 $h(0) = g(f^{-1}(0)) = g(z_0) = 0$이라 $h$은 원점을 고정한다. 원점을 고정하는 단위원판의 automorphism은 회전뿐이므로 ([§영점과 일치정리, ⁋예시 8](/ko/math/complex_analysis/zeros_and_identity_theorem#ex8)), 어떤 실수 $\theta$에 대해 $h(w) = e^{i\theta}w$이다.
+$f, g : \Omega \rightarrow \mathbb{D}$이 모두 normalization 조건을 만족하는 holomorphic 전단사사상이라 하자. 합성 $h = g \circ f^{-1} : \mathbb{D} \rightarrow \mathbb{D}$은 holomorphic 전단사사상이고 그 역사상도 holomorphic이므로 ([§편각원리와 Rouché 정리, ⁋따름정리 9](/ko/math/complex_analysis/argument_principle#cor9)), $\mathbb{D}$의 holomorphic automorphism이다. 또 $f(z_0) = g(z_0) = 0$이므로 $h(0) = g(f^{-1}(0)) = g(z_0) = 0$이라 $h$은 원점을 고정한다. 원점을 고정하는 단위원판의 automorphism은 회전뿐이므로 ([§영점과 일치정리, ⁋예시 8](/ko/math/complex_analysis/zeros_and_identity_theorem#ex8)), 어떤 실수 $\theta$에 대해 $h(w) = e^{i\theta}w$이다.
 
 이제 normalization의 둘째 조건을 쓴다. $g = h \circ f$이므로 연쇄법칙으로 $g'(z_0) = h'(f(z_0))\,f'(z_0) = h'(0)\,f'(z_0) = e^{i\theta}f'(z_0)$이다. 가정에서 $f'(z_0) > 0$과 $g'(z_0) > 0$이 모두 양의 실수이므로, $e^{i\theta} = g'(z_0)/f'(z_0)$도 양의 실수이고 절댓값이 $1$이라 $e^{i\theta} = 1$이다. 따라서 $h = \mathrm{id}$이고 $g = f$이다.
 :::
@@ -134,7 +134,7 @@ $f, g : \Omega \to \mathbb{D}$이 모두 normalization 조건을 만족하는 ho
 
 존재성 증명의 무대는 다음 함수족이다. $z_0 \in \Omega$을 고정한 채, $\Omega$를 단위원판 안으로 단사로 보내며 $z_0$을 원점으로 옮기는 holomorphic 사상 전체를 모은다.
 
-$$\mathcal{F} = \{\, f : \Omega \to \mathbb{D} \mid f \text{ 정칙},\ f \text{ 단사},\ f(z_0) = 0 \,\}.$$
+$$\mathcal{F} = \{\, f : \Omega \rightarrow \mathbb{D} \mid f \text{ 정칙},\ f \text{ 단사},\ f(z_0) = 0 \,\}.$$
 
 이 족 안에서 $\lvert f'(z_0)\rvert$을 최대화하는 원소를 찾고, 그것이 전사임을 보이는 것이 전략이다. 변분이 의미를 가지려면 우선 $\mathcal{F}$이 비어 있지 않아야 하는데, 여기서 단순연결성이 결정적으로 쓰인다. $\Omega$이 $\mathbb{C}$의 진부분집합이라 어떤 점 $a \notin \Omega$이 있고, $\Omega$이 단순연결이라 $z - a$의 holomorphic 제곱근을 $\Omega$ 위에서 뽑을 수 있다. 이 제곱근이 $\mathcal{F}$의 원소를 만드는 씨앗이다.
 
@@ -143,7 +143,7 @@ $\Omega \subsetneq \mathbb{C}$가 공집합이 아닌 단순연결 열린집합�
 :::
 
 ::: 증명
-$\Omega \neq \mathbb{C}$이므로 $a \notin \Omega$인 점 $a$을 택한다. 그러면 $z - a$은 $\Omega$에서 영점을 갖지 않는 holomorphic function이다. $\Omega$이 단순연결이므로 이 함수의 holomorphic 제곱근이 존재한다. 곧 어떤 holomorphic function $\varphi : \Omega \to \mathbb{C}$이 있어
+$\Omega \neq \mathbb{C}$이므로 $a \notin \Omega$인 점 $a$을 택한다. 그러면 $z - a$은 $\Omega$에서 영점을 갖지 않는 holomorphic function이다. $\Omega$이 단순연결이므로 이 함수의 holomorphic 제곱근이 존재한다. 곧 어떤 holomorphic function $\varphi : \Omega \rightarrow \mathbb{C}$이 있어
 
 $$\varphi(z)^2 = z - a \qquad (z \in \Omega)$$
 
@@ -159,11 +159,11 @@ $$\lvert \varphi(z) + w_0\rvert \geq r$$
 
 $$\psi(z) = \frac{r}{2\,(\varphi(z) + w_0)}$$
 
-을 보면, 분모의 절댓값이 $r$ 이상이므로 $\lvert \psi(z)\rvert \leq r/(2r) = 1/2 < 1$이라 $\psi : \Omega \to \mathbb{D}$이다. 또 $\psi$은 단사인 $\varphi$에 Möbius 변환 ([§등각사상과 Möbius 변환, ⁋정의 4](/ko/math/complex_analysis/conformal_maps#def4)) 을 합성한 것이라 단사이고 holomorphic이다.
+을 보면, 분모의 절댓값이 $r$ 이상이므로 $\lvert \psi(z)\rvert \leq r/(2r) = 1/2 < 1$이라 $\psi : \Omega \rightarrow \mathbb{D}$이다. 또 $\psi$은 단사인 $\varphi$에 Möbius 변환 ([§등각사상과 Möbius 변환, ⁋정의 4](/ko/math/complex_analysis/conformal_maps#def4)) 을 합성한 것이라 단사이고 holomorphic이다.
 
 끝으로 $z_0$을 원점으로 옮기도록 보정한다. $b = \psi(z_0) \in \mathbb{D}$이라 두고, 단위원판의 automorphism $\varphi_b(w) = (w - b)/(1 - \bar b w)$ ([§등각사상과 Möbius 변환, ⁋명제 11](/ko/math/complex_analysis/conformal_maps#prop11)) 을 합성하여
 
-$$f = \varphi_b \circ \psi : \Omega \to \mathbb{D}$$
+$$f = \varphi_b \circ \psi : \Omega \rightarrow \mathbb{D}$$
 
 을 정의하면, $f$은 holomorphic이고 단사이며 ($\varphi_b$이 $\mathbb{D}$의 automorphism이므로) $f(z_0) = \varphi_b(b) = 0$이다. 따라서 $f \in \mathcal{F}$이고 $\mathcal{F} \neq \varnothing$이다.
 :::
@@ -189,19 +189,19 @@ $$M = \sup_{f \in \mathcal{F}} \lvert f'(z_0)\rvert$$
 
 $$\lvert f'(z_0)\rvert = \left\lvert\frac{1}{2\pi i}\oint_{\lvert z - z_0\rvert = \rho}\frac{f(z)}{(z - z_0)^2}\,dz\right\rvert \leq \frac{1}{2\pi}\cdot\frac{1}{\rho^2}\cdot 2\pi\rho = \frac{1}{\rho}$$
 
-이라 $M \leq 1/\rho < \infty$이다. 상한의 정의에서 $\lvert f_n'(z_0)\rvert \to M$인 함수열 $(f_n) \subseteq \mathcal{F}$을 택한다. $\mathcal{F}$의 모든 함수가 절댓값 $1$로 bounded라 국소유계하므로 Montel 정리 (정리 3) 에 의해 $\mathcal{F}$은 정규족이고, $(f_n)$의 부분열이 $\Omega$의 콤팩트 부분집합 위에서 어떤 holomorphic function $f^\ast$로 균등수렴한다. 이 부분열을 다시 $(f_n)$이라 적는다.
+이라 $M \leq 1/\rho < \infty$이다. 상한의 정의에서 $\lvert f_n'(z_0)\rvert \rightarrow M$인 함수열 $(f_n) \subseteq \mathcal{F}$을 택한다. $\mathcal{F}$의 모든 함수가 절댓값 $1$로 bounded라 국소유계하므로 Montel 정리 (정리 3) 에 의해 $\mathcal{F}$은 정규족이고, $(f_n)$의 부분열이 $\Omega$의 콤팩트 부분집합 위에서 어떤 holomorphic function $f^\ast$로 균등수렴한다. 이 부분열을 다시 $(f_n)$이라 적는다.
 
-$f^\ast$이 $\mathcal{F}$에 속함을 확인한다. 국소균등수렴에서 도함수도 국소균등수렴하므로 $f^\ast{}'(z_0) = \lim_n f_n'(z_0)$이고 $\lvert f^\ast{}'(z_0)\rvert = M > 0$이라 $f^\ast$은 비상수이다. 각 $f_n$이 단사이므로 따름정리 5에 의해 그 극한 $f^\ast$은 단사이거나 상수인데, 방금 비상수임을 보았으니 단사이다. 또 각 $f_n$이 $\mathbb{D}$로 가므로 $\lvert f^\ast\rvert \leq 1$이고, $f^\ast$이 비상수 holomorphic 사상이라 open mapping이므로 ([§편각원리와 Rouché 정리, ⁋정리 8](/ko/math/complex_analysis/argument_principle#thm8)) 그 상이 열려 있어 경계 $\lvert w\rvert = 1$에 닿을 수 없다. 따라서 $\lvert f^\ast\rvert < 1$, 곧 $f^\ast : \Omega \to \mathbb{D}$이다. 끝으로 $f^\ast(z_0) = \lim_n f_n(z_0) = 0$이다. 그러므로 $f^\ast \in \mathcal{F}$이고 $\lvert f^\ast{}'(z_0)\rvert = M$이라 상한이 달성된다.
+$f^\ast$이 $\mathcal{F}$에 속함을 확인한다. 국소균등수렴에서 도함수도 국소균등수렴하므로 $f^\ast{}'(z_0) = \lim_n f_n'(z_0)$이고 $\lvert f^\ast{}'(z_0)\rvert = M > 0$이라 $f^\ast$은 비상수이다. 각 $f_n$이 단사이므로 따름정리 5에 의해 그 극한 $f^\ast$은 단사이거나 상수인데, 방금 비상수임을 보았으니 단사이다. 또 각 $f_n$이 $\mathbb{D}$로 가므로 $\lvert f^\ast\rvert \leq 1$이고, $f^\ast$이 비상수 holomorphic 사상이라 open mapping이므로 ([§편각원리와 Rouché 정리, ⁋정리 8](/ko/math/complex_analysis/argument_principle#thm8)) 그 상이 열려 있어 경계 $\lvert w\rvert = 1$에 닿을 수 없다. 따라서 $\lvert f^\ast\rvert < 1$, 곧 $f^\ast : \Omega \rightarrow \mathbb{D}$이다. 끝으로 $f^\ast(z_0) = \lim_n f_n(z_0) = 0$이다. 그러므로 $f^\ast \in \mathcal{F}$이고 $\lvert f^\ast{}'(z_0)\rvert = M$이라 상한이 달성된다.
 
 이제 $f^\ast$이 전사임을 보인다. 전사가 아니라고 가정하여, 어떤 $\alpha \in \mathbb{D}$이 $f^\ast$의 상에 들지 않는다고 하자. 곧 모든 $z \in \Omega$에서 $f^\ast(z) \neq \alpha$이다. 이때 $\lvert f^\ast{}'(z_0)\rvert$을 더 크게 만드는 $\mathcal{F}$의 원소를 짜내어 극값성에 모순을 일으킨다. 단위원판의 automorphism $\varphi_\alpha(w) = (w - \alpha)/(1 - \bar\alpha w)$ ([§등각사상과 Möbius 변환, ⁋명제 11](/ko/math/complex_analysis/conformal_maps#prop11)) 을 합성한 함수
 
 $$F(z) = \varphi_\alpha(f^\ast(z)) = \frac{f^\ast(z) - \alpha}{1 - \bar\alpha f^\ast(z)}$$
 
-을 본다. $F : \Omega \to \mathbb{D}$은 holomorphic 단사이고, $f^\ast$이 $\alpha$을 취하지 않으므로 $F$은 $\Omega$에서 영점을 갖지 않는다. $\Omega$이 단순연결이고 $F$가 영점을 갖지 않으므로, 단순연결 영역 위 영점 없는 holomorphic function이 holomorphic 제곱근을 가진다는 사실에 의해 영점 없는 $F$의 holomorphic 제곱근
+을 본다. $F : \Omega \rightarrow \mathbb{D}$은 holomorphic 단사이고, $f^\ast$이 $\alpha$을 취하지 않으므로 $F$은 $\Omega$에서 영점을 갖지 않는다. $\Omega$이 단순연결이고 $F$가 영점을 갖지 않으므로, 단순연결 영역 위 영점 없는 holomorphic function이 holomorphic 제곱근을 가진다는 사실에 의해 영점 없는 $F$의 holomorphic 제곱근
 
 $$G(z), \qquad G(z)^2 = F(z)$$
 
-이 존재한다. $\lvert F\rvert < 1$이므로 $\lvert G\rvert < 1$이라 $G : \Omega \to \mathbb{D}$이고, 제곱이 단사인 $F$이므로 $G$도 단사이다 ($G(z_1) = G(z_2)$이면 제곱하여 $F(z_1) = F(z_2)$, 곧 $z_1 = z_2$).
+이 존재한다. $\lvert F\rvert < 1$이므로 $\lvert G\rvert < 1$이라 $G : \Omega \rightarrow \mathbb{D}$이고, 제곱이 단사인 $F$이므로 $G$도 단사이다 ($G(z_1) = G(z_2)$이면 제곱하여 $F(z_1) = F(z_2)$, 곧 $z_1 = z_2$).
 
 이제 $z_0$을 원점으로 옮기도록 보정한다. $\beta = G(z_0) \in \mathbb{D}$이라 두고 $h = \varphi_\beta \circ G$, 곧
 
@@ -211,7 +211,7 @@ $$h(z) = \frac{G(z) - \beta}{1 - \bar\beta G(z)}$$
 
 $$f^\ast = \varphi_\alpha^{-1} \circ s \circ \varphi_\beta^{-1} \circ h =: \Phi \circ h, \qquad \Phi = \varphi_\alpha^{-1} \circ s \circ \varphi_\beta^{-1}$$
 
-이 성립한다 (실제로 $\varphi_\beta^{-1}(h) = G$, $s(G) = G^2 = F$, $\varphi_\alpha^{-1}(F) = f^\ast$). 여기서 $\Phi : \mathbb{D} \to \mathbb{D}$은 holomorphic이고 $\Phi(0) = \varphi_\alpha^{-1}(s(\varphi_\beta^{-1}(0))) = \varphi_\alpha^{-1}(s(\beta))$인데, $s(\beta) = \beta^2 = G(z_0)^2 = F(z_0) = \varphi_\alpha(f^\ast(z_0)) = \varphi_\alpha(0)$이므로 $\Phi(0) = \varphi_\alpha^{-1}(\varphi_\alpha(0)) = 0$이다. 곧 $\Phi$은 원점을 고정하는 $\mathbb{D} \to \mathbb{D}$ holomorphic 사상이다.
+이 성립한다 (실제로 $\varphi_\beta^{-1}(h) = G$, $s(G) = G^2 = F$, $\varphi_\alpha^{-1}(F) = f^\ast$). 여기서 $\Phi : \mathbb{D} \rightarrow \mathbb{D}$은 holomorphic이고 $\Phi(0) = \varphi_\alpha^{-1}(s(\varphi_\beta^{-1}(0))) = \varphi_\alpha^{-1}(s(\beta))$인데, $s(\beta) = \beta^2 = G(z_0)^2 = F(z_0) = \varphi_\alpha(f^\ast(z_0)) = \varphi_\alpha(0)$이므로 $\Phi(0) = \varphi_\alpha^{-1}(\varphi_\alpha(0)) = 0$이다. 곧 $\Phi$은 원점을 고정하는 $\mathbb{D} \rightarrow \mathbb{D}$ holomorphic 사상이다.
 
 $\Phi$은 automorphism이 아니다. automorphism들의 합성 사이에 제곱사상 $s(w) = w^2$이 끼어 있는데, $s$은 $\mathbb{D}$ 위에서 단사가 아니라 ($\pm w$이 같은 값을 주므로) automorphism이 될 수 없고, 따라서 그 합성 $\Phi$도 단사가 아니어서 automorphism이 아니다. 그러므로 Schwarz 보조정리 ([§영점과 일치정리, ⁋정리 7](/ko/math/complex_analysis/zeros_and_identity_theorem#thm7)) 의 등호조건에서, 원점을 고정하지만 회전이 아닌 holomorphic 사상은 도함수의 절댓값이 엄격히 $1$ 미만이다. 곧
 
@@ -224,13 +224,13 @@ $$M = \lvert f^\ast{}'(z_0)\rvert = \lvert \Phi'(0)\rvert\,\lvert h'(z_0)\rvert 
 이다. 그런데 $h \in \mathcal{F}$이므로 $\lvert h'(z_0)\rvert \leq M$이어야 하는데 이는 $M < \lvert h'(z_0)\rvert \leq M$이라는 모순이다. 따라서 $f^\ast$은 전사이다.
 :::
 
-정리 8의 전사성 논증이 증명 전체의 정수이다. 극값사상이 한 점 $\alpha$을 놓쳤다고 가정하면, 그 빈자리를 제곱근으로 메워 도함수를 더 키운 새 사상을 만들 수 있는데, 이는 $\lvert f'(z_0)\rvert$이 이미 최대였다는 데 모순이다. 도함수를 키우는 메커니즘은 제곱사상 $w \mapsto w^2$이 단위원판을 자기 자신으로 두 겹 덮으면서 원점 근처를 늘인다는 사실이며, Schwarz 보조정리가 그 늘림을 정량적으로 $\lvert \Phi'(0)\rvert < 1$로 포착한다. 곧 전사성은 빈틈을 허용하지 않는 극값성의 직접적 귀결이고, 이로써 $f^\ast : \Omega \to \mathbb{D}$은 holomorphic 전단사사상이다.
+정리 8의 전사성 논증이 증명 전체의 정수이다. 극값사상이 한 점 $\alpha$을 놓쳤다고 가정하면, 그 빈자리를 제곱근으로 메워 도함수를 더 키운 새 사상을 만들 수 있는데, 이는 $\lvert f'(z_0)\rvert$이 이미 최대였다는 데 모순이다. 도함수를 키우는 메커니즘은 제곱사상 $w \mapsto w^2$이 단위원판을 자기 자신으로 두 겹 덮으면서 원점 근처를 늘인다는 사실이며, Schwarz 보조정리가 그 늘림을 정량적으로 $\lvert \Phi'(0)\rvert < 1$로 포착한다. 곧 전사성은 빈틈을 허용하지 않는 극값성의 직접적 귀결이고, 이로써 $f^\ast : \Omega \rightarrow \mathbb{D}$은 holomorphic 전단사사상이다.
 
 이제 정리 6의 존재성이 마무리된다. 정리 8의 극값사상 $f^\ast$은 $\Omega$를 $\mathbb{D}$ 위로 보내는 holomorphic 전단사사상이고 $f^\ast(z_0) = 0$을 만족한다. 도함수 조건만 맞추면 되는데, $f^\ast{}'(z_0) = \lvert f^\ast{}'(z_0)\rvert e^{i\vartheta}$ ($\vartheta = \arg f^\ast{}'(z_0)$) 으로 적고 회전 $e^{-i\vartheta}$을 합성한 $f = e^{-i\vartheta}f^\ast$을 보면, 이 역시 $\mathbb{D}$로 가는 holomorphic 전단사사상이고 $f(z_0) = 0$이며
 
 $$f'(z_0) = e^{-i\vartheta}f^\ast{}'(z_0) = e^{-i\vartheta}\lvert f^\ast{}'(z_0)\rvert e^{i\vartheta} = \lvert f^\ast{}'(z_0)\rvert = M > 0$$
 
-이라 $f'(z_0) > 0$이다. 따라서 normalization 조건을 만족하는 holomorphic 전단사사상 $f : \Omega \to \mathbb{D}$이 존재하고, 이미 보인 유일성과 합쳐 정리 6이 증명된다. $\Omega$이 $\mathbb{D}$와 등각동형이라는 결론은 holomorphic 전단사사상 $f$이 등각사상이라는 사실 ([§등각사상과 Möbius 변환, ⁋명제 3](/ko/math/complex_analysis/conformal_maps#prop3)) 에서 곧장 따라 나온다.
+이라 $f'(z_0) > 0$이다. 따라서 normalization 조건을 만족하는 holomorphic 전단사사상 $f : \Omega \rightarrow \mathbb{D}$이 존재하고, 이미 보인 유일성과 합쳐 정리 6이 증명된다. $\Omega$이 $\mathbb{D}$와 등각동형이라는 결론은 holomorphic 전단사사상 $f$이 등각사상이라는 사실 ([§등각사상과 Möbius 변환, ⁋명제 3](/ko/math/complex_analysis/conformal_maps#prop3)) 에서 곧장 따라 나온다.
 
 ::: 참고 9 (경계 거동)
 Riemann 사상정리는 conformal isomorphism의 존재만을 단언할 뿐, 그 사상이 영역의 경계까지 연속적으로 확장되는지는 말하지 않는다. 경계가 충분히 좋은 경우, 가령 $\partial\Omega$이 Jordan 곡선이면 사상이 closure $\overline{\Omega}$에서 $\overline{\mathbb{D}}$로의 위상동형으로 확장된다는 것이 Carathéodory의 정리이지만, 일반적인 단순연결 영역에서는 경계가 프랙탈처럼 거칠어 그러한 extension이 성립하지 않을 수 있다. 본문의 변분적 증명은 내부에서의 등각동형만을 다루므로 경계 거동과는 무관하게 작동한다.

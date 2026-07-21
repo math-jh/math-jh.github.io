@@ -100,7 +100,7 @@ The property proved above shows that the objects of the functor $H^\bullet(-;A)$
 ::: Proposition 3
 For any topological spaces $X,Y$ and any commutative ring $A$,
 
-$$\times: H^\ast(X;A)\otimes_A H^\ast(Y;A) \to H^\ast(X\times Y;A)$$
+$$\times: H^\ast(X;A)\otimes_A H^\ast(Y;A) \rightarrow H^\ast(X\times Y;A)$$
 
 is a graded $A$-algebra homomorphism.
 :::

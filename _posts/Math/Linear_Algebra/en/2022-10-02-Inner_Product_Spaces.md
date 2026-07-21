@@ -36,7 +36,7 @@ $$\langle v,v\rangle=\sum_{i=1}^n v_i^2\geq 0$$
 
 and equality holds only when $v=0$.
 
-On the other hand, once an inner product is defined on an $\mathbb{R}$-vector space, one of the best consequences is that the <em-ko>size</em-ko> of a vector is well-defined.
+On the other hand, once an inner product is defined on an $\mathbb{R}$-vector space, one of the best consequences is that the *size* of a vector is well-defined.
 
 ::: Definition 2
 A *norm* on an $\mathbb{R}$-vector space $V$ is a function $\lVert -\rVert:V\rightarrow\mathbb{R}$ satisfying the following conditions.

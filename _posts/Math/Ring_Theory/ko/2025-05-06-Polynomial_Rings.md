@@ -355,7 +355,7 @@ UFD $A$에 대하여, $A[\x]$의 $0$이 아닌 원소를 $u(\x)$라 하고, $u(\
 이제 우리는 다항식환의 변형인 유리수환과 멱급수환을 정의한다. 앞서 [명제 4](#prop4)에서 우리는 임의의 field $\mathbb{K}$에 대하여, $\mathbb{K}[\x_i]_{i\in I}$는 integral domain이라는 것을 증명하였다. 따라서 $\mathbb{K}[\x_i]_{i\in I}$의 field of fraction이 잘 정의된다.
 
 ::: 정의 17
-Field $\mathbb{K}$ 위에 정의된 polynomial ring $\mathbb{K}[\x_i]_{i\in I}$의 field of fraction을 *field of rational functions*라 부르고 $\mathbb{K}(\x_i)_{i\in I}$으로 적는다. 
+Field $\mathbb{K}$ 위에 정의된 polynomial ring $\mathbb{K}[\x_i]_{i\in I}$의 field of fraction을 *field of rational functions<sub>유리함수체</sub>*라 부르고 $\mathbb{K}(\x_i)_{i\in I}$으로 적는다. 
 :::
 
 앞서 polynomial ring은 multidegree를 이용해 $\mathbb{N}$-graded ring으로 생각할 수 있다는 것을 살펴보았다. 비슷한 방식으로 $\mathbb{K}(\x_i)_{i\in I}$ 위에도 degree를 정의하자. 자연스러운 선택은 $\mathbb{K}(\x_i)_{i\in I}$의 임의의 원소 $u/v$에 대하여

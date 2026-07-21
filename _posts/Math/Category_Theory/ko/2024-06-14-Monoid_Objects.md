@@ -22,7 +22,7 @@ weight: 7
 ::: 정의 1
 Monoidal category $(\mathcal{A},\otimes, I)$에서의 *monoid object<sub>모노이드 대상</sub>*이란 다음의 데이터 
 - 대상 $M$,
-- *multiplication* $\mu:M\otimes M \rightarrow M$,
+- *multiplication<sub>곱셈</sub>* $\mu:M\otimes M \rightarrow M$,
 - *unit* $\eta:I \rightarrow M$
 으로 주어진다. 이들은 다음 조건을 만족한다. 
 
@@ -136,7 +136,7 @@ Monoidal category $(\mathcal{A},\otimes,I)$가 주어졌다 하자. $\mathcal{A}
 이를 풀어 써 보자면, comonoid가 담고 있는 정보는 *comultiplication<sub>쌍대곱</sub>* $\Delta: G \rightarrow G\otimes G$와 *counit<sub>쌍대단위원</sub>* $\epsilon:G \rightarrow I$으로 이루어지며, 이들은 [정의 1](#def1)의 두 조건의 dual 버전을 만족한다. 
 
 ::: 정의 6
-Symmetric monoidal category $(\mathcal{A},\otimes,I)$가 주어졌다 하자. 그럼 $(M,\mu,\eta,\Delta,\epsilon)$이 *bimonoid*라는 것은 다음과 같은 뜻이다.
+Symmetric monoidal category $(\mathcal{A},\otimes,I)$가 주어졌다 하자. 그럼 $(M,\mu,\eta,\Delta,\epsilon)$이 *bimonoid<sub>쌍모노이드</sub>*라는 것은 다음과 같은 뜻이다.
 
 - $(M,\mu,\eta)$이 monoid이다.
 - $(M,\Delta,\epsilon)$이 comonoid이다.

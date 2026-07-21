@@ -37,7 +37,7 @@ $$\partial\mathbb{H}^m=\left\{x\in \mathbb{H}^m\mid x^m=0\right\},\qquad \interi
 
 즉 국소적으로 열린집합 위의 $C^\infty$ 함수로 확장되는 함수를 $C^\infty$라 부르는 것이다. $A$가 열린집합이라면 이는 기존의 정의와 일치한다. 한편 $A=\mathbb{H}^m$의 열린집합이고 $p\in\partial\mathbb{H}^m$인 경우, $f$의 편미분 $\partial f/\partial x^i(p)$들은 확장 $\tilde{f}$의 선택과 무관하게 잘 정의되는데, 이는 $p$ 근방에서 $W\cap A$가 $p$로 수렴하는 점렬들을 모든 방향에 대해 충분히 담고 있어 $\tilde f$의 일계도함수들이 $W\cap A$ 위의 값들로 결정되기 때문이다. 실제로 $i<m$ 방향의 편미분은 $\partial\mathbb{H}^m$ 방향의 차분몫의 극한으로, $i=m$ 방향의 편미분은 한쪽 극한
 
-$$\frac{\partial f}{\partial x^m}(p)=\lim_{t\to0^+}\frac{f(p+te_m)-f(p)}{t}$$
+$$\frac{\partial f}{\partial x^m}(p)=\lim_{t\rightarrow0^+}\frac{f(p+te_m)-f(p)}{t}$$
 
 으로 계산된다. 고계도함수들도 마찬가지이다.
 
@@ -113,7 +113,7 @@ $$\frac{\partial y^m}{\partial x^j}(x(p))=0\quad(j<m),\qquad \frac{\partial y^m}
 ::: 증명
 함수 $y^m\circ x^{-1}$은 $\mathbb{H}^m$의 열린집합 위에서 음이 아닌 값을 가지며, [명제 3](#prop3)에 의하여 정확히 $\partial\mathbb{H}^m$ 위에서 $0$이 된다. $j<m$에 대하여 $x(p)+te_j$는 $t$가 충분히 작을 때 $\partial\mathbb{H}^m$에 머무르므로, 이 방향의 편미분은 항등적으로 $0$인 함수의 미분이 되어 $0$이다. 한편 $x^m$ 방향으로는
 
-$$\frac{\partial y^m}{\partial x^m}(x(p))=\lim_{t\to0^+}\frac{(y^m\circ x^{-1})(x(p)+te_m)-0}{t}\geq0$$
+$$\frac{\partial y^m}{\partial x^m}(x(p))=\lim_{t\rightarrow0^+}\frac{(y^m\circ x^{-1})(x(p)+te_m)-0}{t}\geq0$$
 
 이다. 그런데 [명제 3](#prop3)의 증명에서 살펴본 것과 같이 $D\tau(x(p))$는 invertible이므로, 마지막 행이 $(0,\ldots,0,\partial y^m/\partial x^m)$인 행렬의 행렬식
 

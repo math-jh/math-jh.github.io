@@ -37,7 +37,7 @@ $$\lvert a_m - a_n\rvert < \varepsilon$$
 :::
 
 ::: 증명
-$a_n \to L$이라 하자. 임의의 $\varepsilon > 0$에 대해 $N$을 잡아 $n \geq N$이면 $\lvert a_n - L\rvert < \varepsilon/2$이게 한다. 그러면 $m, n \geq N$일 때 삼각부등식으로 $\lvert a_m - a_n\rvert \leq \lvert a_m - L\rvert + \lvert L - a_n\rvert < \varepsilon$이다.
+$a_n \rightarrow L$이라 하자. 임의의 $\varepsilon > 0$에 대해 $N$을 잡아 $n \geq N$이면 $\lvert a_n - L\rvert < \varepsilon/2$이게 한다. 그러면 $m, n \geq N$일 때 삼각부등식으로 $\lvert a_m - a_n\rvert \leq \lvert a_m - L\rvert + \lvert L - a_n\rvert < \varepsilon$이다.
 :::
 
 ::: 명제 3
@@ -55,11 +55,11 @@ $\varepsilon = 1$에 대응하는 $N$을 잡으면, $n \geq N$에서 $\lvert a_n
 :::
 
 ::: 증명
-수렴 $\Rightarrow$ Cauchy는 [명제 2](#prop2)이다. 역을 보이자. $(a_n)$이 Cauchy이면 [명제 3](#prop3)에 의해 bounded이고, [§부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4)에 의해 수렴하는 부분수열 $a_{n_k} \to L$이 존재한다. 이제 전체 수열이 같은 $L$로 수렴함을 보인다. 임의의 $\varepsilon > 0$에 대해, Cauchy 조건으로 $m, n \geq N$이면 $\lvert a_m - a_n\rvert < \varepsilon/2$이게 $N$을 잡고, 부분수열의 수렴으로 $n_k \geq N$이면서 $\lvert a_{n_k} - L\rvert < \varepsilon/2$인 $k$를 잡는다. 그러면 모든 $n \geq N$에 대해
+수렴 $\Rightarrow$ Cauchy는 [명제 2](#prop2)이다. 역을 보이자. $(a_n)$이 Cauchy이면 [명제 3](#prop3)에 의해 bounded이고, [§부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4)에 의해 수렴하는 부분수열 $a_{n_k} \rightarrow L$이 존재한다. 이제 전체 수열이 같은 $L$로 수렴함을 보인다. 임의의 $\varepsilon > 0$에 대해, Cauchy 조건으로 $m, n \geq N$이면 $\lvert a_m - a_n\rvert < \varepsilon/2$이게 $N$을 잡고, 부분수열의 수렴으로 $n_k \geq N$이면서 $\lvert a_{n_k} - L\rvert < \varepsilon/2$인 $k$를 잡는다. 그러면 모든 $n \geq N$에 대해
 
 $$\lvert a_n - L\rvert \leq \lvert a_n - a_{n_k}\rvert + \lvert a_{n_k} - L\rvert < \varepsilon$$
 
-이므로 $a_n \to L$이다.
+이므로 $a_n \rightarrow L$이다.
 :::
 
 ## 완비성의 동치 형태
@@ -74,7 +74,7 @@ $$\lvert a_n - L\rvert \leq \lvert a_n - a_{n_k}\rvert + \lvert a_{n_k} - L\rver
 
 $$\lvert a_m - a_n\rvert \leq 10^{-(N-1)}$$
 
-이 성립한다. 따라서 임의의 $\varepsilon > 0$에 대해 $10^{-(N-1)} < \varepsilon$이 되도록 $N$을 크게 잡으면 Cauchy 조건이 충족된다. [정의 1](#def1)의 검증이 극한 $\sqrt 2$를 한 번도 언급하지 않았다는 점이 핵심이다. 같은 부등식이 $\mathbb{R}$ 안에서는 $a_n \to \sqrt 2$를 보장하지만, $\mathbb{Q}$ 안에서는 갈 곳이 없다.
+이 성립한다. 따라서 임의의 $\varepsilon > 0$에 대해 $10^{-(N-1)} < \varepsilon$이 되도록 $N$을 크게 잡으면 Cauchy 조건이 충족된다. [정의 1](#def1)의 검증이 극한 $\sqrt 2$를 한 번도 언급하지 않았다는 점이 핵심이다. 같은 부등식이 $\mathbb{R}$ 안에서는 $a_n \rightarrow \sqrt 2$를 보장하지만, $\mathbb{Q}$ 안에서는 갈 곳이 없다.
 
 ## 예시와 계산
 
@@ -103,7 +103,7 @@ $$\begin{aligned}
 &\leq C \sum_{k=n}^{\infty} r^k = \frac{C r^n}{1 - r}
 \end{aligned}$$
 
-이다. $r < 1$이므로 $r^n \to 0$이고, 따라서 임의의 $\varepsilon > 0$에 대해 $C r^N/(1-r) < \varepsilon$이 되도록 $N$을 잡으면 모든 $m, n \geq N$에서 $\lvert a_m - a_n\rvert < \varepsilon$이다. 즉 $(a_n)$은 Cauchy이고 [정리 4](#thm4)에 의해 수렴한다.
+이다. $r < 1$이므로 $r^n \rightarrow 0$이고, 따라서 임의의 $\varepsilon > 0$에 대해 $C r^N/(1-r) < \varepsilon$이 되도록 $N$을 잡으면 모든 $m, n \geq N$에서 $\lvert a_m - a_n\rvert < \varepsilon$이다. 즉 $(a_n)$은 Cauchy이고 [정리 4](#thm4)에 의해 수렴한다.
 :::
 
 [예시 7](#ex7)의 가정은 인접한 두 항의 거리만 통제하는데도 수열 전체의 수렴을 보장한다. 다만 인접 항의 거리가 $0$으로 가는 것만으로는 충분하지 않음에 주의해야 한다.
@@ -111,11 +111,11 @@ $$\begin{aligned}
 ::: 예시 8 (인접 거리가 0으로 가도 Cauchy가 아닌 예)
 $a_n = \sqrt{n}$이라 하면
 
-$$\lvert a_{n+1} - a_n\rvert = \sqrt{n+1} - \sqrt{n} = \frac{1}{\sqrt{n+1} + \sqrt{n}} \to 0$$
+$$\lvert a_{n+1} - a_n\rvert = \sqrt{n+1} - \sqrt{n} = \frac{1}{\sqrt{n+1} + \sqrt{n}} \rightarrow 0$$
 
 이므로 인접한 두 항의 거리는 $0$으로 간다. 그러나 $m = 4N$, $n = N$을 택하면
 
-$$\lvert a_{4N} - a_N\rvert = 2\sqrt{N} - \sqrt{N} = \sqrt{N} \to \infty$$
+$$\lvert a_{4N} - a_N\rvert = 2\sqrt{N} - \sqrt{N} = \sqrt{N} \rightarrow \infty$$
 
 이므로, $\varepsilon = 1$에 대해서조차 Cauchy 조건이 깨진다. 따라서 $(\sqrt n)$은 Cauchy가 아니며, 실제로 $\infty$로 발산한다. Cauchy 조건은 "임의로 멀리 떨어진 두 첨자"를 함께 통제해야 하며, 인접 항만의 거리로 환원되지 않는다.
 :::
@@ -147,7 +147,7 @@ $$\begin{aligned}
 &\leq \lvert a_2 - a_1\rvert \cdot \frac{c^{n-1}}{1 - c}
 \end{aligned}$$
 
-을 얻는다. $0 \leq c < 1$이므로 $c^{n-1} \to 0$이고, 우변은 $n \to \infty$에서 $0$으로 수렴한다. 따라서 임의의 $\varepsilon > 0$에 대해 $N$을 충분히 크게 잡으면 모든 $m, n \geq N$에서 $\lvert a_m - a_n\rvert < \varepsilon$이 되어 $(a_n)$은 Cauchy이고, [정리 4](#thm4)에 의해 수렴한다.
+을 얻는다. $0 \leq c < 1$이므로 $c^{n-1} \rightarrow 0$이고, 우변은 $n \rightarrow \infty$에서 $0$으로 수렴한다. 따라서 임의의 $\varepsilon > 0$에 대해 $N$을 충분히 크게 잡으면 모든 $m, n \geq N$에서 $\lvert a_m - a_n\rvert < \varepsilon$이 되어 $(a_n)$은 Cauchy이고, [정리 4](#thm4)에 의해 수렴한다.
 :::
 
 수축 조건은 그 자체로 극한값을 알려 주지 않지만, 수열이 어딘가로 모인다는 사실만큼은 보장한다. 이것이 Cauchy 판정법이 빛을 발하는 지점이다.

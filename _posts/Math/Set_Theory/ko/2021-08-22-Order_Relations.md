@@ -102,7 +102,7 @@ $$\begin{aligned}  (x\mathrel{S}y)\wedge(y\mathrel{S}z)&\iff((x\leq_{\tiny R}y)\
 주어진 order relation $\leq$에 대하여, $<$을 <phrase>$x\leq y$이고 $x\neq y$</phrase>로 정의된 관계라 하자. 이 때 $<$는 antisymmetry를 만족하지 않으므로 order relation이 될 수는 없고, 또 reflexive하지도 않으므로 preorder 또한 될 수 없다. 대신 다음을 정의하자.
 
 ::: 정의 9
-관계 $R$이 *asymmetric<sub>비대칭적</sub>*이라는 것은 $x\mathrel{R}y$이면 $y\not \mathrel{R}x$인 것이다. Asymmetric, transitive relation을 *strict order*라 부른다.
+관계 $R$이 *asymmetric<sub>비대칭적</sub>*이라는 것은 $x\mathrel{R}y$이면 $y\not \mathrel{R}x$인 것이다. Asymmetric, transitive relation을 *strict order<sub>순순서</sub>*라 부른다.
 :::
 
 Strict order를 표현하기 위해서 우리는 $<_{\tiny S}$를 사용한다. 그럼 다음이 성립한다.

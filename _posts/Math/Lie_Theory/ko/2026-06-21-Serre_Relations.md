@@ -53,7 +53,7 @@ $$(\ad e_i)^{\,1-a_{ji}}e_j=0\quad(i\neq j),\qquad (\ad f_i)^{\,1-a_{ji}}f_j=0\q
 
 $$\mathfrak{g}(A)=\mathfrak{F}/\mathfrak{R}$$
 
-를 Cartan matrix $A$에 딸린 *Chevalley–Serre presentation*으로 표시되는 Lie algebra라 부르고, 위 관계식들을 *Serre 관계식<sub>Serre relations</sub>*이라 부른다. 마지막 두 줄의 관계식, 곧 $i\neq j$에 대한 $(\ad e_i)^{1-a_{ji}}e_j=0$과 $(\ad f_i)^{1-a_{ji}}f_j=0$을 특별히 *Serre relation*이라 한정해 부르기도 한다.
+를 Cartan matrix $A$에 딸린 *Chevalley–Serre presentation<sub>슈발레-세르 표시</sub>*으로 표시되는 Lie algebra라 부르고, 위 관계식들을 *Serre 관계식<sub>Serre relations</sub>*이라 부른다. 마지막 두 줄의 관계식, 곧 $i\neq j$에 대한 $(\ad e_i)^{1-a_{ji}}e_j=0$과 $(\ad f_i)^{1-a_{ji}}f_j=0$을 특별히 *Serre relation<sub>세르 관계식</sub>*이라 한정해 부르기도 한다.
 :::
 
 여기에서 $\delta_{ij}$는 Kronecker delta이고, $(\ad x)^m y$는 $\ad x$를 $y$에 $m$번 반복 적용한 것 $[x,[x,\cdots[x,y]\cdots]]$를 뜻한다. 관계식의 의미를 하나씩 풀어 보면, $[h_i,h_j]=0$은 $h_i$들이 abelian 부분, 곧 Cartan subalgebra의 역할을 할 부분을 생성함을 강제하고, $[h_i,e_j]=a_{ji}e_j$와 $[h_i,f_j]=-a_{ji}f_j$는 $e_j,f_j$가 각각 weight $\alpha_j$, $-\alpha_j$의 root vector처럼 행동하게 하며, $[e_i,f_j]=\delta_{ij}h_i$는 같은 첨자의 $e_i,f_i,h_i$가 $\sl_2$의 표준 관계식 $[e,f]=h$를 만족하고 첨자가 다르면 $e_i,f_j$가 commute함을 말한다. 처음 세 줄까지만 부과한 Lie algebra는 일반적으로 무한차원이며, 이를 유한하게 잘라내는 것이 마지막 두 줄의 Serre relation이다.

@@ -95,7 +95,7 @@ formed from elements of the set $X\cup\{e\}$ satisfying the following three cond
 
 Given an arbitrary word, the way to reduce it is simple. Check whether adjacent elements belong to the same group; if they do, combine them into a single element by the operation in that group. If an identity element in some group appears during this process (or from the outset), simply erase that element.
 
-Then the operation on $\prod^\ast G_i$ is the same <em-ko>concatenation</em-ko> operation as when defining a free group, and it is not difficult to verify that this set carries a group structure. Moreover, a situation like [Example 1](#ex1) no longer occurs, because even if two groups $G_1, G_2$ are abelian, their free product $G_1\ast G_2$ is no longer an abelian group.
+Then the operation on $\prod^\ast G_i$ is the same *concatenation* operation as when defining a free group, and it is not difficult to verify that this set carries a group structure. Moreover, a situation like [Example 1](#ex1) no longer occurs, because even if two groups $G_1, G_2$ are abelian, their free product $G_1\ast G_2$ is no longer an abelian group.
 
 ::: Example 4
 Consider the same situation as [Example 1](#ex1). For notational convenience, let $G_1=\langle a\rangle\cong\mathbb{Z}$ and $G_2=\langle b\rangle\cong\mathbb{Z}$. Then the elements of $G_1\ast G_2$ are the collection of elements of the form

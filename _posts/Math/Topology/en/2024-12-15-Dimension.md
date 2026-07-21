@@ -94,7 +94,7 @@ $$X=\bigcup_{i\in I} U_i$$
 and $U_i\cap U_j\neq \emptyset$ holds for all $i,j$. Then $X$ is irreducible.
 :::
 ::: Proof
-Let $V, W$ be arbitrary open sets; we show that $V\cap W\neq\emptyset$. Then by the given assumption there first exist $i,j$ satisfying $U_i\cap V\neq\emptyset$ and $U_j\cap W\neq\emptyset$. Now by the third result of [Proposition 7](#prop7) and [§Subspaces, ⁋Proposition 4](/en/math/topology/subspaces#prop4), $U_i$ is also irreducible, so the two nonempty subsets $U_i\cap V$ and $U_i\cap U_j$ of $U_i$ must have a nonempty intersection. That is,
+Let $V, W$ be arbitrary open sets; we show that $V\cap W\neq\emptyset$. Then by the given assumption there first exist $i,j$ satisfying $U_i\cap V\neq\emptyset$ and $U_j\cap W\neq\emptyset$. Now by the third result of [Proposition 7](#prop7) and [§Subspaces, ⁋Proposition 5](/en/math/topology/subspaces#prop5), $U_i$ is also irreducible, so the two nonempty subsets $U_i\cap V$ and $U_i\cap U_j$ of $U_i$ must have a nonempty intersection. That is,
 
 $$(U_i\cap V)\cap (U_i\cap U_j)=U_i\cap U_j\cap V\neq\emptyset$$
 

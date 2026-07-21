@@ -76,7 +76,7 @@ $$Q = \begin{pmatrix} 1 & 1 & 0 & 0 \\ 0 & 0 & 1 & 1 \end{pmatrix}$$
 Mirror symmetry의 관점에서 charge matrix는 $B$-model의 데이터를 담고 있다. 다소 주의할 것은 현재 우리가 다루고 있는 상황은 도입부에서 설명한 Calabi-Yau manifold보다 일반적인 상황이라는 사실이다. 일반적으로 smooth projective toric variety $X_\Sigma$는 Calabi-Yau가 아니라 Fano variety로 주어지며, 이 경우 $X_\Sigma$의 mirror dual은 Calabi-Yau가 아니라 *Landau-Ginzburg model*로 표현된다. 
 
 ::: 정의 3
-*Landau-Ginzburg model<sub>란다우-긴즈부르크 모델</sub>*은 complex manifold $\check{X}$와 그 위에 정의된 holomorphic function $W : \check{X} \to \mathbb{C}$의 쌍 $(\check{X}, W)$로 주어진다. 이 때, $W$를 *superpotential*이라 부른다.
+*Landau-Ginzburg model<sub>란다우-긴즈부르크 모델</sub>*은 complex manifold $\check{X}$와 그 위에 정의된 holomorphic function $W : \check{X} \rightarrow \mathbb{C}$의 쌍 $(\check{X}, W)$로 주어진다. 이 때, $W$를 *superpotential*이라 부른다.
 :::
 
 이번 글의 목적은 mirror symmetry의 개념들을 본격적으로 정의하기 전에 가벼운 계산을 통해 이 현상을 살펴보는 것이다. 따라서 우리는 양쪽의 데이터를 정확하게 설명하는 대신, 간략한 아이디어와 직관으로 이를 대체한다. 우선 $B$-model 측면에서, charge matrix는 *Jacobi ring* $\Jac(W_q)$를 정의하며 이는 앞서 언급한 oscillating integral의 classical limit으로 볼 수 있다. 주어진 Landau-Ginzburg model $(\check{X}, W)$에 대하여, 이것의 Jacobi ring은 그 정의에 의해
@@ -86,7 +86,7 @@ $$\Jac(W) = \frac{\mathcal{O}(\check{X})}{(\partial_1 W, \ldots, \partial_n W)}$
 으로 주어진다. 여기서 $\x_1, \ldots, \x_n$들은 $\check{X}$의 local coordinate이며 $\partial_i$들은 이에 대한 partial derivative들이다. 기하학적으로 $\Jac(W)$는 $W$의 *critical scheme* $\Crit(W) = \{dW = 0\} \subset \check{X}$의 coordinate ring이다. 그럼 [정의 4](#def4)의 Hori-Vafa mirror의 Jacobi ring이 원래의 A-side model의 데이터를 복원한다는 것이 mirror symmetry statement이다. 
 
 ::: 정의 4
-Smooth projective toric Fano variety $X_\Sigma$와 추가적인 데이터 $q=(q_1,\ldots, q_r)\in \mathbb{C}^r$에 대하여, 이것이 정의하는 *Hori-Vafa mirror*는 다음의 Landau-Ginzburg model을 의미한다.
+Smooth projective toric Fano variety $X_\Sigma$와 추가적인 데이터 $q=(q_1,\ldots, q_r)\in \mathbb{C}^r$에 대하여, 이것이 정의하는 *Hori-Vafa mirror<sub>호리-바파 거울</sub>*는 다음의 Landau-Ginzburg model을 의미한다.
 
 1. *Mirror domain* $\check{X}$는 algebraic torus $(\mathbb{C}^\ast)^m$의 submanifold로, charge matrix $Q$가 부여하는 $r$개의 restriction
     
@@ -95,7 +95,7 @@ Smooth projective toric Fano variety $X_\Sigma$와 추가적인 데이터 $q=(q_
     을 만족하는 점들로 정의된다. 
 2. $\check{X}$ 위의 *superpotential*은 local coordinate들의 합
     
-    $$W_q : \check{X} \to \mathbb{C}, \qquad W_q(\x_1, \ldots, \x_m) = \x_1 + \x_2 + \cdots + \x_m$$
+    $$W_q : \check{X} \rightarrow \mathbb{C}, \qquad W_q(\x_1, \ldots, \x_m) = \x_1 + \x_2 + \cdots + \x_m$$
     
     으로 정의된다.
 :::

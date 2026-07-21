@@ -18,7 +18,7 @@ weight: 15
 ## 리만-로흐 정리
 
 ::: 정의 1
-Smooth projective curve $C$ 위의 divisor $D$에 대해 *Riemann–Roch dimension*을
+Smooth projective curve $C$ 위의 divisor $D$에 대해 *Riemann–Roch dimension<sub>리만-로흐 차원</sub>*을
 
 $$\ell(D) = \dim H^0(C, \mathcal{O}_C(D))$$
 
@@ -103,7 +103,7 @@ $$\rchi(\mathcal{O}_C(D)) = h^0(C, \mathcal{O}_C(D)) - h^1(C, \mathcal{O}_C(D)) 
 
 이다. 한편, effective divisor $D$에 대해 short exact sequence 
 
-$$0 \to \mathcal{O}_C \to \mathcal{O}_C(D) \to \mathcal{O}_D \to 0$$
+$$0 \rightarrow \mathcal{O}_C \rightarrow \mathcal{O}_C(D) \rightarrow \mathcal{O}_D \rightarrow 0$$
 
 이 존재하며, 그럼 Euler characteristic의 additivity에 의해 $\rchi(\mathcal{O}_C(D)) = \rchi(\mathcal{O}_C) + \rchi(\mathcal{O}_D)$이다. 
 
@@ -144,7 +144,7 @@ $$0\longrightarrow \mathcal{O}_C\overset{i}{\longrightarrow} \mathcal{O}_C(D)\ov
 
 으로부터 얻어지는 long exact sequence
 
-$$0\longrightarrow H^0(C,\mathcal{O}_C)\overset{i^\ast}{\longrightarrow} H^0(C,\mathcal{O}_C(D)) \overset{p^\ast}{\longrightarrow} H^0(C,\mathcal{O}_D) \overset{\delta}{\longrightarrow} H^1(C,\mathcal{O}_C)\overset{i^\ast}{\longrightarrow} H^1(C,\mathcal{O}_C(D))\to 0$$
+$$0\longrightarrow H^0(C,\mathcal{O}_C)\overset{i^\ast}{\longrightarrow} H^0(C,\mathcal{O}_C(D)) \overset{p^\ast}{\longrightarrow} H^0(C,\mathcal{O}_D) \overset{\delta}{\longrightarrow} H^1(C,\mathcal{O}_C)\overset{i^\ast}{\longrightarrow} H^1(C,\mathcal{O}_C(D))\rightarrow 0$$
 
 를 생각하자. 여기서 $C$는 curve이고 $D=\sum n_i p_i$이므로, $\mathcal{O}_D$는 support $\lvert D\rvert$를 갖는 degree $D$의 skyscraper sheaf이며 이로부터 $H^0(C, \mathcal{O}_C)=\bigoplus_i \mathbb{K}^{n_i}$임을 안다. 뿐만 아니라 위에서 살펴본 linear map ($4$)이 실제로 이 long exact sequence에서의 $p^\ast$와 맞아떨어진다는 것을 알고 이로부터 $p^\ast$의 cokernel은 다음 isomorphism들의 chain
 
@@ -215,7 +215,7 @@ $$\varphi_{K_C}:C\rightarrow \mathbb{P}^1$$
 
 이제 한 점 $p$의 배수 $D=d\cdot p$에 Riemann-Roch를 적용하여 $\ell(D)$가 $d$에 따라 어떻게 변하는지 살펴 보자. 작은 $d$, 즉 $\ell(K_C-D)$가 살아있는 곳에서는 특수한 현상이 나타나지만, $d$가 커지면 $\ell(D)$는 선형적으로 안정화된다.
 
-1. $d=1$의 경우, $\ell(p)\ge 2$라면 degree 1 사상 $C\to\mathbb{P}^1$이 존재하여 $C\cong\mathbb{P}^1$이 되지만 $g=2$와 모순이므로 $\ell(p)=1$이다. Riemann-Roch에 의해 $\ell(K_C-p)=1$이다.
+1. $d=1$의 경우, $\ell(p)\ge 2$라면 degree 1 사상 $C\rightarrow\mathbb{P}^1$이 존재하여 $C\cong\mathbb{P}^1$이 되지만 $g=2$와 모순이므로 $\ell(p)=1$이다. Riemann-Roch에 의해 $\ell(K_C-p)=1$이다.
 2. $d=2$의 경우, 만약 $2p\sim K_C$이면 $\ell(2p)=2$이다. 이 경우 $p$를 *Weierstrass point*라 부르는데, 이 조건은 정확히 위의 canonical map $\varphi_{K_C}$에 대한 어떤 점의 preimage가 $p$로 겹쳐있는 상황에 해당한다. 일반적인 점에서는 $2p\not\sim K_C$이므로 $\ell(2p)=1$이다.
 3. $d\ge 3$이면 $\deg(K_C-D)=2-d<0$이므로 $\ell(K_C-D)=0$이고, 따라서 $\ell(D)=d-1$이다.
 :::

@@ -61,7 +61,7 @@ $$\mu(a,\mu(b,c))=\mu(a,b\cdot c)=a\cdot(b\cdot c)$$
     
     $$\alpha_{A,B,C}:A\otimes(B\otimes C)\rightarrow (A\otimes B)\otimes C$$
 
-    이 존재한다. 이를 *associator*라 부른다.
+    이 존재한다. 이를 *associator<sub>결합자</sub>*라 부른다.
 2. $\mathcal{A}$에서 $\mathcal{A}$로의 세 functor $I\otimes-$, $-\otimes I$, $\id_\mathcal{A}$들 간의 natural isomorphism들
 
     $$\lambda_A:I\otimes A\rightarrow A,\qquad \rho_A:A\otimes I\rightarrow A$$
@@ -74,7 +74,7 @@ $$\mu(a,\mu(b,c))=\mu(a,b\cdot c)=a\cdot(b\cdot c)$$
 - (Unitor)
   ![unitor_diagram](/assets/images/Math/Category_Theory/Monoidal_Categories-4.svg){:style="width:21.81em" class="invert" .align-center}
 
-만일 monoidal category $(\mathcal{A},\otimes,I)$에 추가적으로 $\otimes$의 symmetric 조건이 추가되면 이를 *symmetric monoidal category<sub>대칭 모노이드 범주</sub>*라 부른다. 이는 natural isomorphism (*symmetor*) $\gamma_{AB}:A\otimes B \rightarrow B\otimes A$과, 다음의 추가적인 coherence condition들
+만일 monoidal category $(\mathcal{A},\otimes,I)$에 추가적으로 $\otimes$의 symmetric 조건이 추가되면 이를 *symmetric monoidal category<sub>대칭 모노이드 범주</sub>*라 부른다. 이는 natural isomorphism (*symmetor<sub>대칭자</sub>*) $\gamma_{AB}:A\otimes B \rightarrow B\otimes A$과, 다음의 추가적인 coherence condition들
 
 - (Associativity coherence)
   ![associativity_coherence](/assets/images/Math/Category_Theory/Monoidal_Categories-5.svg){:style="width:26.70em" class="invert" .align-center}
@@ -105,7 +105,7 @@ Associator와 unitor들의 coherence condition은 Mac Lane의 coherence theorem�
 [예시 2](#ex2)의 앞의 두 예시는 일반화가 가능하다. 우선 다음을 정의하자.
 
 ::: 정의 3
-Category $\mathcal{A}$의 대상들의 유한한 family가 항상 categorical product를 갖는다면, 이 category를 *cartesian category*라 부른다. 
+Category $\mathcal{A}$의 대상들의 유한한 family가 항상 categorical product를 갖는다면, 이 category를 *cartesian category<sub>데카르트 범주</sub>*라 부른다. 
 :::
 
 그럼 앞선 예시에서, $\Set$과 $\Grp$은 cartesian category가 된다. 마찬가지로 $\Top$이나 $\Man^\infty$ 등도 모두 cartesian category이다.

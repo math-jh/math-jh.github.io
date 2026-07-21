@@ -195,7 +195,7 @@ $$a=a\cdot 1=a\sum_i e_i=\sum_i ae_i$$
 
 and if $x\in Ae_i\cap\sum_{j\neq i}Ae_j$ then $x$ is of the form $ae_i$ and simultaneously of the form $\sum_{j\neq i} a_j e_j$, and the only $x$ satisfying this is $0$, so this gives a direct sum. Now since $e_i\in C(A)$, each $Ae_i$ is a ring with identity $e_i$, and the map
 
-$$A\to Ae_i;\qquad a\mapsto ae_i$$
+$$A\rightarrow Ae_i;\qquad a\mapsto ae_i$$
 
 is surjective with kernel $A(1-e_i)=\mathfrak{a}_i$, so $A/\mathfrak{a}_i\cong Ae_i$. Combining these, since the direct sum defined in [\[Algebraic Structures\] §Products, Coproducts, and Tensor Products of Rings, ⁋Definition 3](/en/math/algebraic_structures/operations_of_rings#def3) coincides with the direct product for finite indices,
 

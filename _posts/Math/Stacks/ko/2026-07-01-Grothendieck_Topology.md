@@ -25,7 +25,7 @@ published: false
 이하에서 $\mathcal{C}$는 고정된 범주이고, $U$는 그 대상이다.
 
 ::: 정의 1
-대상 $U\in \mathcal{C}$ 위의 *sieve<sub>체</sub>*란, 공역이 $U$인 사상들의 모임 $S$로서 합성에 대해 닫혀 있는 것이다. 즉 $(f: V \rightarrow U)\in S$이고 $g: W \rightarrow V$가 임의의 사상이면 $(f\circ g: W \rightarrow U)\in S$이다. 사상 $g: V \rightarrow U$와 $U$ 위의 sieve $S$에 대하여, $V$ 위의 *pullback sieve*를
+대상 $U\in \mathcal{C}$ 위의 *sieve<sub>체</sub>*란, 공역이 $U$인 사상들의 모임 $S$로서 합성에 대해 닫혀 있는 것이다. 즉 $(f: V \rightarrow U)\in S$이고 $g: W \rightarrow V$가 임의의 사상이면 $(f\circ g: W \rightarrow U)\in S$이다. 사상 $g: V \rightarrow U$와 $U$ 위의 sieve $S$에 대하여, $V$ 위의 *pullback sieve<sub>당김 체</sub>*를
 
 $$g^\ast S=\{h: W \rightarrow V\mid g\circ h\in S\}$$
 
@@ -57,7 +57,7 @@ $$\langle f_i\rangle=\{f: V \rightarrow U\mid f=f_i\circ g\text{ for some }i\in 
 대수기하학의 예시들에서 covering은 거의 항상 $\{U_i \rightarrow U\}$ 꼴의 사상족으로 주어지며, stability 조건은 이 족을 base change하는 것, 즉 fiber product를 취하는 것으로 표현된다. ([\[범주론\] §극한, ⁋예시 8](/ko/math/category_theory/limits#ex8)) 따라서 fiber product가 존재하는 범주에서는 sieve를 거치지 않고 covering family만으로 위상을 기술할 수 있다.
 
 ::: 정의 3
-Fiber product를 가지는 범주 $\mathcal{C}$ 위의 *Grothendieck pretopology*란, 각 대상 $U$에 공역이 $U$인 사상족 $\{f_i: U_i \rightarrow U\}_{i\in I}$들의 모임을 대응시키는 것으로서, 그 원소를 *covering family<sub>덮개족</sub>*라 부르며 다음 세 조건을 만족하는 것이다.
+Fiber product를 가지는 범주 $\mathcal{C}$ 위의 *Grothendieck pretopology<sub>그로텐디크 준위상</sub>*란, 각 대상 $U$에 공역이 $U$인 사상족 $\{f_i: U_i \rightarrow U\}_{i\in I}$들의 모임을 대응시키는 것으로서, 그 원소를 *covering family<sub>덮개족</sub>*라 부르며 다음 세 조건을 만족하는 것이다.
 
 1. (Isomorphism) $f: V \rightarrow U$가 isomorphism이면 한원소 족 $\{f: V \rightarrow U\}$은 covering family이다.
 2. (Base change) $\{f_i: U_i \rightarrow U\}$가 covering family이고 $g: V \rightarrow U$가 임의의 사상이면, projection $\{\operatorname{pr}_2: U_i\times_U V \rightarrow V\}$ 또한 covering family이다.
@@ -174,7 +174,7 @@ Presheaf $F:\mathcal{C}^\op \rightarrow \Set$와 대상 $U$에 대하여, $U$ �
 
 $$F^+(U)=\varinjlim_{S\in J(U)}\operatorname{Match}(S, F)$$
 
-을 $F$의 *plus construction*이라 부른다. $U\mapsto F^+(U)$은 presheaf를 이루며, maximal sieve 위의 matching family가 $F(U)$의 원소와 같으므로 자연스러운 사상 $F \rightarrow F^+$이 있다.
+을 $F$의 *plus construction<sub>plus 구성</sub>*이라 부른다. $U\mapsto F^+(U)$은 presheaf를 이루며, maximal sieve 위의 matching family가 $F(U)$의 원소와 같으므로 자연스러운 사상 $F \rightarrow F^+$이 있다.
 :::
 
 직관적으로 $F^+(U)$의 원소는 "어떤 covering 위에서 정합적으로 주어진 국소 자료"를, 더 미세한 covering으로 옮겨도 같아지는 것들끼리 동일시한 것이다. 두 matching family가 공통의 세분 위에서 일치하면 같은 원소로 본다는 것이 colimit의 의미이며, 이로써 amalgamation의 유일성 결손(separated 실패)이 교정된다. Pretopology의 언어로는 $F^+(U)$이 covering $\{U_i \rightarrow U\}$들에 걸친 Čech 영차 cohomology

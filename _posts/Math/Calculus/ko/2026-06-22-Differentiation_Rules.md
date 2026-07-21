@@ -49,13 +49,13 @@ $$(e^x)' = \sum_{n=1}^\infty n \frac{x^{n-1}}{n!} = \sum_{n=1}^\infty \frac{x^{n
 
 이므로, 지수함수는 미분에 대해 불변이다. 이는, 고등학교에서는 다음의 극한
 
-$$\lim_{h\to 0}(e^h-1)/h = 1$$
+$$\lim_{h\rightarrow 0}(e^h-1)/h = 1$$
 
 로부터 얻어지는 결과였다.
 
 삼각함수 또한 머지않아 멱급수의 형태로 쓸 것이지만, 우선은 고등학교때와 마찬가지로 두 극한
 
-$$\lim_{h \to 0} \frac{\sin h}{h} = 1, \qquad \lim_{h \to 0} \frac{1 - \cos h}{h} = 0$$
+$$\lim_{h \rightarrow 0} \frac{\sin h}{h} = 1, \qquad \lim_{h \rightarrow 0} \frac{1 - \cos h}{h} = 0$$
 
 을 사용하여 얻어내기로 한다. 
 
@@ -68,7 +68,7 @@ $$\lim_{h \to 0} \frac{\sin h}{h} = 1, \qquad \lim_{h \to 0} \frac{1 - \cos h}{h
 
 $$\frac{\sin(x+h) - \sin x}{h} = \sin x \cdot \frac{\cos h - 1}{h} + \cos x \cdot \frac{\sin h}{h}$$
 
-이고, $h \to 0$일 때 위 두 극한에 의해 $\sin x \cdot 0 + \cos x \cdot 1 = \cos x$로 수렴한다. $\cos x$의 도함수도 같은 방법으로 얻는다.
+이고, $h \rightarrow 0$일 때 위 두 극한에 의해 $\sin x \cdot 0 + \cos x \cdot 1 = \cos x$로 수렴한다. $\cos x$의 도함수도 같은 방법으로 얻는다.
 :::
 
 ## 여러가지 미분법
@@ -88,7 +88,7 @@ $$(fg)'(a) = f'(a) g(a) + f(a) g'(a)$$
 
 $$\frac{f(a+h)g(a+h) - f(a)g(a)}{h} = \frac{f(a+h)-f(a)}{h} g(a+h) + f(a) \frac{g(a+h)-g(a)}{h}$$
 
-이다. $h \to 0$일 때 첫 항의 평균변화율은 $f'(a)$로, $g(a+h)$는 $g$의 연속성으로 ([§미분과 도함수, ⁋명제 2](/ko/math/calculus/derivatives#prop2)) $g(a)$로, 둘째 항의 평균변화율은 $g'(a)$로 수렴하므로, [§함수의 극한, ⁋명제 5](/ko/math/calculus/functions_and_limits#prop5)에 의해 합은 $f'(a)g(a) + f(a)g'(a)$로 수렴한다.
+이다. $h \rightarrow 0$일 때 첫 항의 평균변화율은 $f'(a)$로, $g(a+h)$는 $g$의 연속성으로 ([§미분과 도함수, ⁋명제 2](/ko/math/calculus/derivatives#prop2)) $g(a)$로, 둘째 항의 평균변화율은 $g'(a)$로 수렴하므로, [§함수의 극한, ⁋명제 5](/ko/math/calculus/functions_and_limits#prop5)에 의해 합은 $f'(a)g(a) + f(a)g'(a)$로 수렴한다.
 :::
 
 가장 널리 쓰이는 규칙은 합성함수의 미분이다.
@@ -110,7 +110,7 @@ $$\varphi(y) = \begin{cases} \frac{g(y) - g(b)}{y - b}, & y \neq b,\\[1mm] g'(b)
 
 $$\frac{g(f(a+h)) - g(f(a))}{h} = \varphi(f(a+h)) \frac{f(a+h) - f(a)}{h}$$
 
-이고, $h \to 0$일 때 $f$의 연속성으로 $\varphi(f(a+h)) \to \varphi(b) = g'(b)$이며 둘째 인자는 $f'(a)$로 수렴하므로, 극한은 $g'(f(a))f'(a)$이다.
+이고, $h \rightarrow 0$일 때 $f$의 연속성으로 $\varphi(f(a+h)) \rightarrow \varphi(b) = g'(b)$이며 둘째 인자는 $f'(a)$로 수렴하므로, 극한은 $g'(f(a))f'(a)$이다.
 :::
 
 이제 몫의 미분법은 곱의 미분법과 연쇄법칙의 따름정리로 따라온다.
@@ -160,7 +160,7 @@ $$(\arcsin y)' = \frac{1}{\sqrt{1 - y^2}} \qquad (\lvert y\rvert < 1)$$
 
 $$f(x) = \begin{cases} x^2 \sin(1/x) & (x \neq 0) \\ 0 & (x = 0) \end{cases}$$
 
-는 모든 점에서 미분가능하다. $x \neq 0$에서는 곱의 미분법과 연쇄법칙으로 $f'(x) = 2x\sin(1/x) - \cos(1/x)$이고, $0$에서는 평균변화율이 $x\sin(1/x) \to 0$이므로 $f'(0) = 0$이다. 그런데 $x \to 0$일 때 $2x\sin(1/x) \to 0$이지만 $\cos(1/x)$는 $[-1, 1]$ 사이를 무한히 진동하여 극한을 갖지 않으므로, $f'$은 $0$에서 불연속이다. 즉 $f$는 어디서나 미분가능하지만 도함수가 연속이 아니어서 ([§미분과 도함수, ⁋정의 5](/ko/math/calculus/derivatives#def5)의) $C^1$급이 아니다.
+는 모든 점에서 미분가능하다. $x \neq 0$에서는 곱의 미분법과 연쇄법칙으로 $f'(x) = 2x\sin(1/x) - \cos(1/x)$이고, $0$에서는 평균변화율이 $x\sin(1/x) \rightarrow 0$이므로 $f'(0) = 0$이다. 그런데 $x \rightarrow 0$일 때 $2x\sin(1/x) \rightarrow 0$이지만 $\cos(1/x)$는 $[-1, 1]$ 사이를 무한히 진동하여 극한을 갖지 않으므로, $f'$은 $0$에서 불연속이다. 즉 $f$는 어디서나 미분가능하지만 도함수가 연속이 아니어서 ([§미분과 도함수, ⁋정의 5](/ko/math/calculus/derivatives#def5)의) $C^1$급이 아니다.
 :::
 
 그럼에도 도함수가 아무 모양으로나 불연속일 수는 없다. 도함수는 연속이 아니더라도 임의의 중간값을 반드시 취하므로(*Darboux 정리*) 점프 불연속을 가질 수 없으며, [예시 7](#ex7)에서 나타난 불연속도 점프가 아니라 진동에 의한 것이다.

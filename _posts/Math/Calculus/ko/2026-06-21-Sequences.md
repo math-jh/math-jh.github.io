@@ -13,7 +13,7 @@ weight: 3
 
 ---
 
-우리는 본격적으로 미적분학을 시작하기 전에 우선 수열의 극한을 정의한다. 여기서 *수열<sub>sequence</sub>* $(a_n)$이란 자연수에 실수를 대응시키는 함수, 즉 $a : \mathbb{N} \to \mathbb{R}$을 그 값들 $a_1, a_2, a_3, \ldots$의 나열로 본 것이다. [§함수의 극한](/ko/math/calculus/functions_and_limits)에서 우리는 이미 $x \to \infty$일 때 함수가 어떻게 행동하는지를 다루었는데, 수열의 극한은 그 이산적 버전, 즉 변수가 자연수만 취하는 경우에서 $n \to \infty$로만 가는 경우로 생각할 수 있다. 
+우리는 본격적으로 미적분학을 시작하기 전에 우선 수열의 극한을 정의한다. 여기서 *수열<sub>sequence</sub>* $(a_n)$이란 자연수에 실수를 대응시키는 함수, 즉 $a : \mathbb{N} \rightarrow \mathbb{R}$을 그 값들 $a_1, a_2, a_3, \ldots$의 나열로 본 것이다. [§함수의 극한](/ko/math/calculus/functions_and_limits)에서 우리는 이미 $x \rightarrow \infty$일 때 함수가 어떻게 행동하는지를 다루었는데, 수열의 극한은 그 이산적 버전, 즉 변수가 자연수만 취하는 경우에서 $n \rightarrow \infty$로만 가는 경우로 생각할 수 있다. 
 
 ## 수열의 수렴
 
@@ -22,17 +22,17 @@ weight: 3
 
 $$n > N \implies \lvert a_n - L \rvert < \varepsilon$$
 
-이 성립할 때, $L$을 $n \to \infty$일 때 $a_n$의 *극한<sub>limit</sub>*이라 하고 $\lim_{n\to\infty} a_n = L$로 적는다.
+이 성립할 때, $L$을 $n \rightarrow \infty$일 때 $a_n$의 *극한<sub>limit</sub>*이라 하고 $\lim_{n\rightarrow\infty} a_n = L$로 적는다.
 :::
 
-이 정의는 [§함수의 극한, ⁋정의 14](/ko/math/calculus/functions_and_limits#def14)를 거의 그대로 가져온 것으로, 수열은 변수가 자연수뿐이고 한 방향($+\infty$)으로만 가므로 극한을 정의하는 방법도 사실상 이것뿐이다. 가령 $a_n = 1/n \to 0$은 임의의 $\varepsilon > 0$에 대해 $N > 1/\varepsilon$인 $N$을 택하면 $n > N$에서 $1/n < 1/N < \varepsilon$이 되는 것으로 확인된다. 약간의 변종은 수열이 무한대로 발산하는 것으로, 이는 [§함수의 극한, ⁋정의 13](/ko/math/calculus/functions_and_limits#def13)에서 임의의 $M$에 대해 $n > N \implies a_n > M$인 $N$이 존재하는 것으로 옮겨 적으면 되며, 가령 $b_n = n$이 그러하다. 그러나 수렴하지도 무한대로 발산하지도 않는 수열 또한 존재한다 ([예시 11](#ex11)).
+이 정의는 [§함수의 극한, ⁋정의 14](/ko/math/calculus/functions_and_limits#def14)를 거의 그대로 가져온 것으로, 수열은 변수가 자연수뿐이고 한 방향($+\infty$)으로만 가므로 극한을 정의하는 방법도 사실상 이것뿐이다. 가령 $a_n = 1/n \rightarrow 0$은 임의의 $\varepsilon > 0$에 대해 $N > 1/\varepsilon$인 $N$을 택하면 $n > N$에서 $1/n < 1/N < \varepsilon$이 되는 것으로 확인된다. 약간의 변종은 수열이 무한대로 발산하는 것으로, 이는 [§함수의 극한, ⁋정의 13](/ko/math/calculus/functions_and_limits#def13)에서 임의의 $M$에 대해 $n > N \implies a_n > M$인 $N$이 존재하는 것으로 옮겨 적으면 되며, 가령 $b_n = n$이 그러하다. 그러나 수렴하지도 무한대로 발산하지도 않는 수열 또한 존재한다 ([예시 11](#ex11)).
 
 수렴하는 수열의 기본 성질들은 대개 함수의 극한에서의 증명을 그대로 옮겨 얻어진다. 가령 다음 명제는 [§함수의 극한, ⁋명제 5](/ko/math/calculus/functions_and_limits#prop5)의 증명과 동일한 방식으로 진행하면 충분하다. 
 
 ::: 명제 2 (수열의 극한법칙)
 두 수열 $a_n$, $b_n$이 수렴하고, 그 수렴값을
 
-$$\lim_{n\to\infty} a_n = L, \qquad \lim_{n\to\infty} b_n = M$$
+$$\lim_{n\rightarrow\infty} a_n = L, \qquad \lim_{n\rightarrow\infty} b_n = M$$
 
 이라 하자. 그러면
 
@@ -53,23 +53,23 @@ $$\lim_{n\to\infty} a_n = L, \qquad \lim_{n\to\infty} b_n = M$$
 :::
 
 ::: 증명
-$a_n \to L$이면 $\varepsilon = 1$에 대응하는 $N$을 잡았을 때 $n \geq N$에서 $\lvert a_n\rvert \leq \lvert L\rvert + 1$이다. 나머지 유한개 항을 포함하여 $M = \max\{\lvert a_1\rvert, \ldots, \lvert a_{N-1}\rvert, \lvert L\rvert + 1\}$로 두면 모든 $n$에서 $\lvert a_n\rvert \leq M$이다.
+$a_n \rightarrow L$이면 $\varepsilon = 1$에 대응하는 $N$을 잡았을 때 $n \geq N$에서 $\lvert a_n\rvert \leq \lvert L\rvert + 1$이다. 나머지 유한개 항을 포함하여 $M = \max\{\lvert a_1\rvert, \ldots, \lvert a_{N-1}\rvert, \lvert L\rvert + 1\}$로 두면 모든 $n$에서 $\lvert a_n\rvert \leq M$이다.
 :::
 
 같은 베껴오기로, 다음은 [§함수의 극한, ⁋명제 8](/ko/math/calculus/functions_and_limits#prop8)의 수열 버전이다.
 
 ::: 명제 4 (조임정리)
-충분히 큰 모든 $n$에서 $a_n \leq c_n \leq b_n$이고 $a_n \to L$, $b_n \to L$이면 $c_n \to L$이다.
+충분히 큰 모든 $n$에서 $a_n \leq c_n \leq b_n$이고 $a_n \rightarrow L$, $b_n \rightarrow L$이면 $c_n \rightarrow L$이다.
 :::
 
 그럼 다음의 간단하지만 유용한 결과를 얻을 수 있다.
 
 ::: 명제 5 (조임정리)
-실수열 $a_n$이 모든 $n$에 대해 $a_n > 0$을 만족하고, 인접항의 비로 이루어진 수열이 $a_{n+1}/a_n$이 $1$보다 작은 값 $L$로 수렴하면 $a_n \to 0$이다.
+실수열 $a_n$이 모든 $n$에 대해 $a_n > 0$을 만족하고, 인접항의 비로 이루어진 수열이 $a_{n+1}/a_n$이 $1$보다 작은 값 $L$로 수렴하면 $a_n \rightarrow 0$이다.
 :::
 
 ::: 증명
-$L < r < 1$인 $r$를 고르면, 충분히 큰 $n \geq N$에서 $a_{n+1}/a_n < r$이므로 $a_{N+k} < r^k a_N$이다. $0 < r < 1$이라 $r^k \to 0$이고, 조임정리로 $a_n \to 0$이다.
+$L < r < 1$인 $r$를 고르면, 충분히 큰 $n \geq N$에서 $a_{n+1}/a_n < r$이므로 $a_{N+k} < r^k a_N$이다. $0 < r < 1$이라 $r^k \rightarrow 0$이고, 조임정리로 $a_n \rightarrow 0$이다.
 :::
 
 이와 비슷하게, 실제 계산에서 많이 쓰이는 결과들을 다음 예시로 모아둔다. 
@@ -77,32 +77,32 @@ $L < r < 1$인 $r$를 고르면, 충분히 큰 $n \geq N$에서 $a_{n+1}/a_n < r
 ::: 예시 6
 다음은 수열의 극한의 기본 예시들이다.
 
-1. $p > 0$에 대해 $1/n^p \to 0$이 성립한다. 이는 $n \geq 1$에서 $n^p \geq n$이므로 $0 < 1/n^p \leq 1/n \to 0$이고, 따라서 [명제 4](#prop4)를 적용하면 된다. 
+1. $p > 0$에 대해 $1/n^p \rightarrow 0$이 성립한다. 이는 $n \geq 1$에서 $n^p \geq n$이므로 $0 < 1/n^p \leq 1/n \rightarrow 0$이고, 따라서 [명제 4](#prop4)를 적용하면 된다. 
 2. 더 일반적으로, 같은 차수를 갖는 다항식의 비는 최고차항의 비에 의해 결정된다.
 
    $$\frac{a_k n^k + \cdots}{b_k n^k + \cdots}$$
 
-   의 분자·분모를 $n^k$으로 나누면 분자·분모 모두 유한개의 $1/n^j$ 항과 상수항으로 이루어진다. 그럼 이 때 $1/n^j \to 0$이므로 분자와 분모는 각각 최고차항의 계수로 수렴하는 것을 알 수 있다. 만일 분모가 분자보다 큰 차수를 갖는다면 [명제 4](#prop4)와 앞선 1번에 의하여 이 비율이 $0$으로 수렴함을 알 수 있고, 비슷하게 분자가 분모보다 큰 차수를 갖는다면 이 비율이 발산함을 알 수 있다. 
-3. $\lvert r\rvert < 1$이면 $r^n \to 0$이다. 이를 확인하기 위해, 적당한 $h>0$에 대해 $\lvert r\rvert = 1/(1+h)$이라 하자. 그럼 이항정리를 사용하면 $(1+h)^n \geq 1 + nh$이고, 따라서
+   의 분자·분모를 $n^k$으로 나누면 분자·분모 모두 유한개의 $1/n^j$ 항과 상수항으로 이루어진다. 그럼 이 때 $1/n^j \rightarrow 0$이므로 분자와 분모는 각각 최고차항의 계수로 수렴하는 것을 알 수 있다. 만일 분모가 분자보다 큰 차수를 갖는다면 [명제 4](#prop4)와 앞선 1번에 의하여 이 비율이 $0$으로 수렴함을 알 수 있고, 비슷하게 분자가 분모보다 큰 차수를 갖는다면 이 비율이 발산함을 알 수 있다. 
+3. $\lvert r\rvert < 1$이면 $r^n \rightarrow 0$이다. 이를 확인하기 위해, 적당한 $h>0$에 대해 $\lvert r\rvert = 1/(1+h)$이라 하자. 그럼 이항정리를 사용하면 $(1+h)^n \geq 1 + nh$이고, 따라서
     
-    $$\lvert r\rvert^n = \frac{1}{(1+h)^n} \leq \frac{1}{1+nh} \to 0$$
+    $$\lvert r\rvert^n = \frac{1}{(1+h)^n} \leq \frac{1}{1+nh} \rightarrow 0$$
     
     이다. 여기서 마지막의 수렴은 위 2번의 결과를 사용하였다. 만일 $r=1$인 경우 이 수열은 항상 $1$이므로 $1$로 수렴하는 것이 자명하며, 만일 $\lvert r\rvert > 1$이면 비슷하게 $r=1+h$라 했을 때
 
     $$\lvert r\rvert^n =(1+h)^n \geq 1+nh$$
 
     이므로 어떠한 $M$을 잡아오더라도 $n$을 충분히 키우기만 하면 $\lvert r\rvert^n$을 $M$보다 커지게 할 수 있고, 따라서 $\lvert r\rvert^n$은 발산한다. 
-4. $n^{1/n} \to 1$이다. 이를 확인하기 위해 $n^{1/n} = 1 + h_n$ ( $h_n \geq 0$)으로 두면 이항정리로
+4. $n^{1/n} \rightarrow 1$이다. 이를 확인하기 위해 $n^{1/n} = 1 + h_n$ ( $h_n \geq 0$)으로 두면 이항정리로
 
    $$n = (1+h_n)^n \geq \binom{n}{2}h_n^2 = \frac{n(n-1)}{2}h_n^2$$
 
-   이므로 $h_n^2 \leq 2/(n-1) \to 0$, 즉 $h_n \to 0$이기 때문이다.
-5. $r > 1$, $p > 0$에 대해 $n^p/r^n \to 0$이 성립한다. 이는 [명제 5](#prop5)에 의하여, 인접한 항의 비가
+   이므로 $h_n^2 \leq 2/(n-1) \rightarrow 0$, 즉 $h_n \rightarrow 0$이기 때문이다.
+5. $r > 1$, $p > 0$에 대해 $n^p/r^n \rightarrow 0$이 성립한다. 이는 [명제 5](#prop5)에 의하여, 인접한 항의 비가
     
-    $$\frac{(n+1)^p}{r^{n+1}}\cdot\frac{r^n}{n^p} = \frac{1}{r}\left(1+\frac{1}{n}\right)^p \to \frac{1}{r} < 1$$
+    $$\frac{(n+1)^p}{r^{n+1}}\cdot\frac{r^n}{n^p} = \frac{1}{r}\left(1+\frac{1}{n}\right)^p \rightarrow \frac{1}{r} < 1$$
 
     이므로 바로 얻어진다. 
-6. 비슷하게, $r > 1$, $p > 0$에 대해 수열 $r^n/n!$의 인접한 항의 비는 $r/(n+1) \to 0 < 1$이므로 같은 이유로 $0$이다.
+6. 비슷하게, $r > 1$, $p > 0$에 대해 수열 $r^n/n!$의 인접한 항의 비는 $r/(n+1) \rightarrow 0 < 1$이므로 같은 이유로 $0$이다.
 :::
 
 ## 단조수렴정리
@@ -162,11 +162,11 @@ $$a_n \leq \sum_{k=0}^{n}\frac{1}{k!} \leq 1 + \sum_{k=1}^{\infty}\frac{1}{2^{k-
 
 $$\lvert a_{n_k} - L\rvert < \varepsilon$$
 
-이다. 즉 $a_{n_k} \to L$이다. 
+이다. 즉 $a_{n_k} \rightarrow L$이다. 
 :::
 
 이 명제는 어떤 수열이 수렴함을 보일 때보다, 수렴하지 <em-ko>않음</em-ko>을 보일 때 쓸모가 크다. 그 대우에 의해, 서로 다른 두 극한을 갖는 부분수열이 존재하면 원래 수열 $(a_n)$은 수렴하지 않기 때문이다.
 
 ::: 예시 11 (발산하는 수열)
-수열 $a_n = (-1)^n$을 보자. 짝수번째 부분수열 $a_{2k} = 1 \to 1$과 홀수번째 부분수열 $a_{2k-1} = -1 \to -1$이 서로 다른 극한을 가지므로, [명제 10](#prop10)에 의해 $(a_n)$은 발산한다.
+수열 $a_n = (-1)^n$을 보자. 짝수번째 부분수열 $a_{2k} = 1 \rightarrow 1$과 홀수번째 부분수열 $a_{2k-1} = -1 \rightarrow -1$이 서로 다른 극한을 가지므로, [명제 10](#prop10)에 의해 $(a_n)$은 발산한다.
 :::

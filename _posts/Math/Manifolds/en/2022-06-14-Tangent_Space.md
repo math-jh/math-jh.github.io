@@ -26,7 +26,7 @@ Instead, in the situation above we can observe that tangent vectors give rise to
 
 $$\lim_{t\rightarrow 0}\frac{f(p+tv)-f(p)}{t}$$
 
-Our idea is to define this operator, the <em-ko>directional derivative</em-ko>, as the tangent vector.
+Our idea is to define this operator, the *directional derivative*, as the tangent vector.
 
 ## Sheaf of Differentiable Functions
 
@@ -70,7 +70,7 @@ where the *evaluation map* $\ev_p:\mathcal{C}^\infty_p\rightarrow\mathbb{R}$ is 
 
 Summarizing the preceding content without the language of sheaves is as follows.
 
-We have decided to define a tangent vector at $p$ as a <em-ko>directional derivative at the point $p$</em-ko>. This directional derivative is of course well defined for any function differentiable on all of $M$, but differentiability is essentially a local property, so in fact the directional derivative of a function defined only on a suitable open neighborhood $U$ of $p$ can also be defined.[^1]
+We have decided to define a tangent vector at $p$ as a *directional derivative at the point $p$*. This directional derivative is of course well defined for any function differentiable on all of $M$, but differentiability is essentially a local property, so in fact the directional derivative of a function defined only on a suitable open neighborhood $U$ of $p$ can also be defined.[^1]
 
 Moreover, if two functions $f,g$ agree on some open neighborhood $U$ of $p$, then their derivatives at $p$ also coincide, so when dealing with directional derivatives they may be treated as identical. Thus the objects of our interest are no longer functions but equivalence classes of functions, which explicitly is as follows.
 

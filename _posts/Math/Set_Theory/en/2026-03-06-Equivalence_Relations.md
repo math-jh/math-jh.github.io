@@ -75,7 +75,7 @@ By definition, $R(x)$ is the set of elements that are regarded as equivalent to 
 ::: Example 5
 We have already seen that <phrase>$x=y$</phrase> is an equivalence relation on a set $A$. In this relation, the equivalence class of $x$ is the set $\{x\}$. In the same example, <phrase>$x\in A$ and $y\in A$</phrase> was also an equivalence relation, and in this case the equivalence class of $x$ becomes the whole set $A$.
 
-In the preceding [Example 2](#ex2) we said that $\Delta_A$ is the <em-ko>smallest</em-ko> and $A\times A$ is the <em-ko>largest</em-ko>; however, rather than comparing them by set inclusion, it is more common to say that $\Delta_A$ is the *finest* equivalence relation and $A\times A$ is the *coarsest* equivalence relation from the above point of view. ([§Sum of Sets, ⁋Definition 1](/en/math/set_theory/sum_of_sets#def1))
+In the preceding [Example 2](#ex2) we said that $\Delta_A$ is the *smallest* and $A\times A$ is the *largest*; however, rather than comparing them by set inclusion, it is more common to say that $\Delta_A$ is the *finest* equivalence relation and $A\times A$ is the *coarsest* equivalence relation from the above point of view. ([§Sum of Sets, ⁋Definition 1](/en/math/set_theory/sum_of_sets#def1))
 :::
 
 ::: Lemma 6

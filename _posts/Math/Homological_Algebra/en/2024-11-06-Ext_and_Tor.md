@@ -80,7 +80,7 @@ For two $A$-modules $M \in \lMod{A}$, $N \in \lMod{A}$, and their projective res
 
 $$H^n(\Hom_\lMod{A}(M, I^\bullet)) \cong H^n(\Hom_\lMod{A}(P_\bullet, N))$$
 
-Here $P_\bullet \to M$ is a projective resolution of $M$, and $N \to I^\bullet$ is an injective resolution of $N$.
+Here $P_\bullet \rightarrow M$ is a projective resolution of $M$, and $N \rightarrow I^\bullet$ is an injective resolution of $N$.
 :::
 
 ::: Proof
@@ -142,7 +142,7 @@ $$\cdots \longrightarrow \Hom_\lMod{A}(M, I^{n-1}) \overset{\delta_{n-1}}{\longr
 
 we see that $H^n(F^{n-1}\Tot(K)^\bullet)$ is the cokernel of the connecting homomorphism $\delta_{n-1}$. Here $H^n(F^n\Tot(K)^\bullet)$ was already found in the case $p=n$, and the connecting homomorphism $\delta_{n-1}$ again comes from $\Hom_\lMod{A}(M, I^{n-1})\rightarrow \Hom_\lMod{A}(M, I^{n})$, so we obtain
 
-$$H^n(F^{n-1}\Tot(K)^\bullet)=\frac{\ker(\Hom_\lMod{A}(M, I^n) \to \Hom_\lMod{A}(M, I^{n+1}))}{\im(\Hom_\lMod{A}(M, I^{n-1}) \to \Hom_\lMod{A}(M, I^n))}$$
+$$H^n(F^{n-1}\Tot(K)^\bullet)=\frac{\ker(\Hom_\lMod{A}(M, I^n) \rightarrow \Hom_\lMod{A}(M, I^{n+1}))}{\im(\Hom_\lMod{A}(M, I^{n-1}) \rightarrow \Hom_\lMod{A}(M, I^n))}$$
 
 Now for $p< n-1$, using the isomorphism ($\ast\ast$) we see that every case is isomorphic to the case $p=n-1$, and in particular
 
@@ -212,7 +212,7 @@ $$0 \rightarrow \mathbb{Z}\rightarrow \mathbb{Z}\rightarrow \mathbb{Z}/n\mathbb{
 
 and apply $\Hom_\mathbb{Z}(-,A)$. Then $\Hom_\mathbb{Z}(\mathbb{Z},A)$ is determined by the image of $1$, so $\Hom_\mathbb{Z}(\mathbb{Z}, A)\cong A$, and from this we obtain the complex
 
-$$0 \to A \xrightarrow{\cdot n} A \to 0$$
+$$0 \rightarrow A \xrightarrow{\cdot n} A \rightarrow 0$$
 
 Here the first map is $a \mapsto na$, and therefore the first cohomology is
 
@@ -221,24 +221,24 @@ $$\Ext^1_\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, A) \cong \coker(\cdot n ) = A/nA$$
 That $\Hom_\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, A)=A[n]$ is a simple computation.
 :::
 
-More generally, $\Ext^1(M,N)$ is connected to equivalence classes of short exact sequences of the form $0 \to N \to E \to M \to 0$, i.e. extensions of $M$ by $N$, which can be seen through Yoneda Ext. ([Wikipedia](https://en.wikipedia.org/wiki/Ext_functor)) Although less intuitive than [Proposition 5](#prop5), [Proposition 6](#prop6) can also be said to show the origin of the name $\Ext$ in this sense.
+More generally, $\Ext^1(M,N)$ is connected to equivalence classes of short exact sequences of the form $0 \rightarrow N \rightarrow E \rightarrow M \rightarrow 0$, i.e. extensions of $M$ by $N$, which can be seen through Yoneda Ext. ([Wikipedia](https://en.wikipedia.org/wiki/Ext_functor)) Although less intuitive than [Proposition 5](#prop5), [Proposition 6](#prop6) can also be said to show the origin of the name $\Ext$ in this sense.
 
 Finally we define the following.
 
 ::: Definition 7
-Let a commutative ring $A$, a free $A$-module $F$ of rank $n$, and an $A$-linear map $\varphi : F \to A$ be given. Then the *Koszul complex* $K(\varphi)_\bullet$ is the exterior algebra $K=\bigwedge F$ equipped with a chain complex structure as follows:
+Let a commutative ring $A$, a free $A$-module $F$ of rank $n$, and an $A$-linear map $\varphi : F \rightarrow A$ be given. Then the *Koszul complex* $K(\varphi)_\bullet$ is the exterior algebra $K=\bigwedge F$ equipped with a chain complex structure as follows:
 
 1. For each $i$, $K_i = \bigwedge\nolimits^i F$.
-2. For each $i$, $d_i: K_i \to K_{i-1}$ is a graded derivation of degree $-1$ uniquely determined by the formula $d(f) = \varphi(f)$ and the Leibniz rule
+2. For each $i$, $d_i: K_i \rightarrow K_{i-1}$ is a graded derivation of degree $-1$ uniquely determined by the formula $d(f) = \varphi(f)$ and the Leibniz rule
 
     $d(\xi \wedge \eta) = d(\xi) \wedge \eta + (-1)^{\degree(\xi)} \, \xi \wedge d(\eta)$.
 :::
 
-Defining the augmentation map $\epsilon: K_0=A\to A/\im\varphi$ as the canonical projection, we can regard $K(\varphi)_\bullet$ as a resolution of $A/\im\varphi$. For convenience, fix a basis $e_1, \ldots, e_n$ of $F$ and set $\x_i = \varphi(e_i)$; then $\im\varphi = (\x_1, \ldots, \x_n)$, so we also write this as $K_\bullet(\x_1, \ldots, \x_n)$.
+Defining the augmentation map $\epsilon: K_0=A\rightarrow A/\im\varphi$ as the canonical projection, we can regard $K(\varphi)_\bullet$ as a resolution of $A/\im\varphi$. For convenience, fix a basis $e_1, \ldots, e_n$ of $F$ and set $\x_i = \varphi(e_i)$; then $\im\varphi = (\x_1, \ldots, \x_n)$, so we also write this as $K_\bullet(\x_1, \ldots, \x_n)$.
 
 If $\x_1, \ldots, \x_n$ is a regular sequence in $A$, then the Koszul complex becomes a *free resolution* of $A/(\x_1, \ldots, \x_n)$. ([\[Commutative Algebra\] §Regular Local Rings, ⁋Definition 2](/en/math/commutative_algebra/regular_local_rings#def2)) That is,
 
-$$0 \to K_n \to \cdots \to K_1 \xrightarrow{d_1} A \xrightarrow{\epsilon} A/(\x_1, \ldots, \x_n) \to 0$$
+$$0 \rightarrow K_n \rightarrow \cdots \rightarrow K_1 \xrightarrow{d_1} A \xrightarrow{\epsilon} A/(\x_1, \ldots, \x_n) \rightarrow 0$$
 
 is exact.
 
@@ -258,7 +258,7 @@ If $(\alpha, \beta) \in \ker d_i$, then $d'_{i-1}(\beta) = 0$, so by the inducti
 
 This applies especially well to the case where $A=\mathbb{K}[\x_1,\ldots, \x_n]$ is a polynomial algebra over a field $\mathbb{K}$ and $(\x_1,\ldots, \x_n)$ is a regular sequence. In this case $F=\bigoplus_1^nAe_i$ and the augmentation map is given by $e_i\mapsto \x_i$. By the discussion above the Koszul complex becomes a free resolution of $\mathbb{K}$, and since each $K_i$ is a free $A$-module, applying $-\otimes_A\mathbb{K}$ yields the complex
 
-$$0 \to \bigwedge\nolimits^n \mathbb{K}^n \to \cdots \to \bigwedge\nolimits^1 \mathbb{K}^n \to \bigwedge\nolimits^0 \mathbb{K}^n \to 0$$
+$$0 \rightarrow \bigwedge\nolimits^n \mathbb{K}^n \rightarrow \cdots \rightarrow \bigwedge\nolimits^1 \mathbb{K}^n \rightarrow \bigwedge\nolimits^0 \mathbb{K}^n \rightarrow 0$$
 
 which is a resolution of $A/(\x_1,\ldots, \x_n)\cong \mathbb{K}$. On the other hand, since $d_i$ is induced from $\varphi$, applying $-\otimes_A \mathbb{K}$ sends all $\x_j$-coefficients to $0$, so $d_i \otimes 1 = 0$. Therefore we obtain
 

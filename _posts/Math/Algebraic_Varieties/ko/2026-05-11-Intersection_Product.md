@@ -93,7 +93,7 @@ $$Z \cdot W \in \CH^{k+l}(X)$$
 그럼 다음 정의는 앞선 글에서부터 예견되었던 것이다. 
 
 ::: 정의 7
-Intersection product에 의해 $\CH^\ast(X) = \bigoplus_k \CH^k(X)$는 *graded ring*이 된다. 이를 *Chow ring*이라 부른다.
+Intersection product에 의해 $\CH^\ast(X) = \bigoplus_k \CH^k(X)$는 *graded ring*이 된다. 이를 *Chow ring<sub>저우 환</sub>*이라 부른다.
 :::
 
 ## Moving Lemma
@@ -119,11 +119,11 @@ Moving lemma는 두 class가 주어졌을 때, 이를 perturb하여 intersection
 핵심적인 관찰은 다음과 같다. 우선 [§접공간과 매끄러움, ⁋정의 13](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#def13)에서 tangent cone을 정의했던 것을 기억하자. 이는 singular point에서의 국소적 구조를 이해하는 도구였으며, 이를 일반화하여 우리는 closed embedding $i: Y \hookrightarrow X$에 대해 $Y$의 $X$ 안에서의 *normal cone* $C_{Y/X}$를 정의할 수 있다. 만일 $X$가 $Y$를 따라 smooth하다면 normal cone은 normal bundle $N_{Y/X}$가 되지만, 일반적으로는 cone 구조를 가진다.
 
 ::: 명제 9 (Deformation to Normal Cone)
-Closed embedding $i: Y \hookrightarrow X$에 대해, $\mathbb{A}^1$을 매개변수로 하는 family $M \to \mathbb{A}^1$을 구성할 수 있다. 구체적으로, $t \neq 0$에서의 fiber $M_t$는 $X$ 자신이며, $t = 0$에서의 fiber $M_0$는 normal cone $C_{Y/X}$이다. 이 family의 존재는 intersection product의 well-definedness를 이 family에 대한 pushforward/pullback의 호환성으로 환원시킨다.
+Closed embedding $i: Y \hookrightarrow X$에 대해, $\mathbb{A}^1$을 매개변수로 하는 family $M \rightarrow \mathbb{A}^1$을 구성할 수 있다. 구체적으로, $t \neq 0$에서의 fiber $M_t$는 $X$ 자신이며, $t = 0$에서의 fiber $M_0$는 normal cone $C_{Y/X}$이다. 이 family의 존재는 intersection product의 well-definedness를 이 family에 대한 pushforward/pullback의 호환성으로 환원시킨다.
 :::
 
 ::: 증명
-구성은 blow-up을 사용한다. 먼저 $X \times \mathbb{A}^1$ 안에서 $Y \times \{0\}$를 따라 blow-up하여 $\widetilde{M} = \Bl_{Y \times \{0\}}(X \times \mathbb{A}^1)$을 얻고, 그 후 $X \times \{0\}$의 proper transform을 제거하여 $M = \widetilde{M} \setminus \widetilde{X \times \{0\}}$로 정의한다. 이 blow-up의 exceptional divisor는 $\mathbb{P}(C_{Y/X} \oplus \mathcal{O}_Y)$이며, proper transform을 제거하면 $t=0$ fiber에서 정확히 normal cone $C_{Y/X}$가 남는다. $t \neq 0$에서는 blow-up이 isomorphism이므로 fiber가 $X$ 그대로이다. 따라서 $M \to \mathbb{A}^1$은 $t=1$에서의 $X$를 $t=0$에서의 $C_{Y/X}$로 연결하는 deformation을 제공한다. Chow group에서 $M$ 위의 specialization map $\sigma: \CH^\ast(X) \to \CH^\ast(C_{Y/X})$을 정의할 수 있고, normal cone이 vector bundle 구조를 가질 때 (즉 regular embedding의 경우) Thom isomorphism에 의해 $\CH^\ast(C_{Y/X}) \cong \CH^\ast(Y)$가 되어 intersection product의 well-definedness가 확립된다.
+구성은 blow-up을 사용한다. 먼저 $X \times \mathbb{A}^1$ 안에서 $Y \times \{0\}$를 따라 blow-up하여 $\widetilde{M} = \Bl_{Y \times \{0\}}(X \times \mathbb{A}^1)$을 얻고, 그 후 $X \times \{0\}$의 proper transform을 제거하여 $M = \widetilde{M} \setminus \widetilde{X \times \{0\}}$로 정의한다. 이 blow-up의 exceptional divisor는 $\mathbb{P}(C_{Y/X} \oplus \mathcal{O}_Y)$이며, proper transform을 제거하면 $t=0$ fiber에서 정확히 normal cone $C_{Y/X}$가 남는다. $t \neq 0$에서는 blow-up이 isomorphism이므로 fiber가 $X$ 그대로이다. 따라서 $M \rightarrow \mathbb{A}^1$은 $t=1$에서의 $X$를 $t=0$에서의 $C_{Y/X}$로 연결하는 deformation을 제공한다. Chow group에서 $M$ 위의 specialization map $\sigma: \CH^\ast(X) \rightarrow \CH^\ast(C_{Y/X})$을 정의할 수 있고, normal cone이 vector bundle 구조를 가질 때 (즉 regular embedding의 경우) Thom isomorphism에 의해 $\CH^\ast(C_{Y/X}) \cong \CH^\ast(Y)$가 되어 intersection product의 well-definedness가 확립된다.
 :::
 
 이 방법의 아이디어는 $X$를 연속적으로 변형하여 $Y$의 normal cone으로 수축시키는 것이다. 기하적으로, $t=1$에서는 원래 공간 $X$를 보고, $t$가 $0$으로 갈수록 $X$가 $Y$를 따라 점점 더 "펴지면서" 결국 $t=0$에서는 $Y$를 따라 벌어진 normal cone이 된다. [§유리사상, ⁋예시 12](/ko/math/algebraic_varieties/rational_maps#ex12)의 blow-up이 한 점을 $\mathbb{P}^1$로 펼쳐 놓는 변형이었다면, deformation to normal cone은 이를 더 일반적인 embedding에 대해 수행하는 것이다.
@@ -160,7 +160,7 @@ $$C \cdot C' = (aH_1 + bH_2)(a'H_1 + b'H_2) = ab' H_1 H_2 + a'b H_1 H_2 = (ab' +
 :::
 
 ::: 예시 13
-Segre embedding $\sigma: \mathbb{P}^1 \times \mathbb{P}^1 \to \mathbb{P}^3$를 생각하자. ([§사영다양체, ⁋예시 16](/ko/math/algebraic_varieties/projective_varieties#ex16)) 이 embedding의 image는 quadric surface $Q = V(\x\y - \z\w)$이다. [§선다발과 벡터다발, ⁋명제 20](/ko/math/algebraic_varieties/line_bundles#prop20)에 의해 pullback $\sigma^\ast \mathcal{O}_{\mathbb{P}^3}(1)$은 $\mathbb{P}^1 \times \mathbb{P}^1$ 위의 line bundle이며, 실제로 $\sigma^\ast \mathcal{O}_{\mathbb{P}^3}(1) \cong \mathcal{O}_{\mathbb{P}^1 \times \mathbb{P}^1}(1,1)$이다. 이는 Chow ring 수준에서도 확인할 수 있는데, $\mathbb{P}^3$에서 hyperplane class $H_{\mathbb{P}^3}$를 pullback하면 $H_1 + H_2$를 얻고, 이는 bidegree $(1,1)$에 해당한다.
+Segre embedding $\sigma: \mathbb{P}^1 \times \mathbb{P}^1 \rightarrow \mathbb{P}^3$를 생각하자. ([§사영다양체, ⁋예시 16](/ko/math/algebraic_varieties/projective_varieties#ex16)) 이 embedding의 image는 quadric surface $Q = V(\x\y - \z\w)$이다. [§선다발과 벡터다발, ⁋명제 20](/ko/math/algebraic_varieties/line_bundles#prop20)에 의해 pullback $\sigma^\ast \mathcal{O}_{\mathbb{P}^3}(1)$은 $\mathbb{P}^1 \times \mathbb{P}^1$ 위의 line bundle이며, 실제로 $\sigma^\ast \mathcal{O}_{\mathbb{P}^3}(1) \cong \mathcal{O}_{\mathbb{P}^1 \times \mathbb{P}^1}(1,1)$이다. 이는 Chow ring 수준에서도 확인할 수 있는데, $\mathbb{P}^3$에서 hyperplane class $H_{\mathbb{P}^3}$를 pullback하면 $H_1 + H_2$를 얻고, 이는 bidegree $(1,1)$에 해당한다.
 
 이를 통해 $\mathbb{P}^3$에서의 교차 계산을 $\mathbb{P}^1 \times \mathbb{P}^1$으로 옮겨 수행할 수 있다. 가령 $\mathbb{P}^3$에서 두 hyperplane $H, H'$ 각각과 quadric surface $Q$의 교차, 즉 $(H \cap Q)$와 $(H' \cap Q)$의 교차는 $\mathbb{P}^1 \times \mathbb{P}^1$에서 $(H_1 + H_2)^2 = 2H_1 H_2$로 계산된다. 즉, 두 hyperplane과 quadric surface의 교차는 $2$개의 점으로, 이는 $Q \cong \mathbb{P}^1 \times \mathbb{P}^1$에서 두 개의 bidegree $(1,1)$ curve가 만나는 것과 같다.
 :::
@@ -170,7 +170,7 @@ Segre embedding $\sigma: \mathbb{P}^1 \times \mathbb{P}^1 \to \mathbb{P}^3$를 �
 마지막으로 유용한 다음의 공식을 소개하며 이 글을 마친다.
 
 ::: 명제 14 (Projection Formula)
-Proper morphism $f: X \to Y$와 $\alpha \in \CH^\ast(X)$, $\beta \in \CH^\ast(Y)$에 대해 
+Proper morphism $f: X \rightarrow Y$와 $\alpha \in \CH^\ast(X)$, $\beta \in \CH^\ast(Y)$에 대해 
 
 $$f_\ast(\alpha \cdot f^\ast \beta) = f_\ast(\alpha) \cdot \beta$$
 

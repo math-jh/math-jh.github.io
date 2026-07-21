@@ -26,17 +26,17 @@ Line bundles, and more generally vector bundles, which we will define later in t
 ::: Definition 1
 A *line bundle* $\mathcal{L}$ on a variety $X$ consists of the following data.
 
-1. A projection $\pi: \mathcal{L} \to X$.
+1. A projection $\pi: \mathcal{L} \rightarrow X$.
 2. An open cover $\{U_i\}$ of $X$ and, for each $i$, a *local trivialization* $\phi_i: \pi^{-1}(U_i) \overset{\sim}{\longrightarrow} U_i \times \mathbb{A}^1$. These define
 
-    $$\phi_j \circ \phi_i^{-1}: (U_i \cap U_j) \times \mathbb{A}^1 \to (U_i \cap U_j) \times \mathbb{A}^1$$
+    $$\phi_j \circ \phi_i^{-1}: (U_i \cap U_j) \times \mathbb{A}^1 \rightarrow (U_i \cap U_j) \times \mathbb{A}^1$$
 
     which has the form $(p, t) \mapsto (p, g_{ij}(p)t)$ for suitable *transition functions* $g_{ij} \in \mathcal{O}_X(U_i \cap U_j)^\ast$.
 :::
 
-A *morphism* $\varphi \colon \mathcal{L} \to \mathcal{M}$ between two line bundles $\mathcal{L}, \mathcal{M} \to X$ defines a $\mathbb{K}$-linear map $\varphi_p \colon \mathcal{L}_p \to \mathcal{M}_p$ between fibers at each point $p \in X$, and can be expressed over a suitable open cover $\{U_k\}$ as an $\mathcal{O}_X(U_k)$-module homomorphism
+A *morphism* $\varphi \colon \mathcal{L} \rightarrow \mathcal{M}$ between two line bundles $\mathcal{L}, \mathcal{M} \rightarrow X$ defines a $\mathbb{K}$-linear map $\varphi_p \colon \mathcal{L}_p \rightarrow \mathcal{M}_p$ between fibers at each point $p \in X$, and can be expressed over a suitable open cover $\{U_k\}$ as an $\mathcal{O}_X(U_k)$-module homomorphism
 
-$$\varphi_k \colon \mathcal{O}_{U_k} \to \mathcal{O}_{U_k}$$
+$$\varphi_k \colon \mathcal{O}_{U_k} \rightarrow \mathcal{O}_{U_k}$$
 
 such that
 
@@ -62,11 +62,11 @@ Thus the second condition in [Definition 1](#def1) means that the line bundle $\
 
 [Proposition 2](#prop2) is a common gluing condition, and by it a line bundle can be thought of as a kind of sheaf. ([\[Topology\] §Sheaves, ⁋Definition 1](/en/math/topology/sheaves#def1)) Concretely, given a line bundle $\mathcal{L}$, we define its sheaf of sections by
 
-$$U\mapsto \mathcal{O}_X(\mathcal{L})(U)=\{s: U \to \mathcal{L} \mid \pi \circ s = \id_U\}$$
+$$U\mapsto \mathcal{O}_X(\mathcal{L})(U)=\{s: U \rightarrow \mathcal{L} \mid \pi \circ s = \id_U\}$$
 
 That is, $\mathcal{O}_X(\mathcal{L})$ is the sheaf of sections of the surjection $\pi$. ([\[Topology\] §Sheaves, ⁋Example 9](/en/math/topology/sheaves#ex9))
 
-Then by the local trivialization $\phi_i: \pi^{-1}(U_i) \to U_i \times \mathbb{A}^1$ we have $\mathcal{O}_X(\mathcal{L})\vert_{U_i} \cong \mathcal{O}_{U_i}$. Through this, on each $U_i$ we can locally think of these sections as ordinary $\mathbb{K}$-valued functions.
+Then by the local trivialization $\phi_i: \pi^{-1}(U_i) \rightarrow U_i \times \mathbb{A}^1$ we have $\mathcal{O}_X(\mathcal{L})\vert_{U_i} \cong \mathcal{O}_{U_i}$. Through this, on each $U_i$ we can locally think of these sections as ordinary $\mathbb{K}$-valued functions.
 
 This means the following.
 
@@ -161,7 +161,7 @@ From this, we know that the section space has the form
 
 $$\mathcal{O}(d)(U_i) = \x_i^d \cdot \mathcal{O}(U_i) = \x_i^d\mathbb{K}[\x_0/\x_i, \ldots, \widehat{\x_i/\x_i}, \ldots, \x_n/\x_i]$$
 
-Now comparing the two trivializations on $U_i \cap U_j$, we can derive the transition function. That is, the transition function $\phi_i \circ \phi_j^{-1}\colon \mathcal{O}_{U_j}\vert_{U_i \cap U_j} \to \mathcal{O}_{U_i}\vert_{U_i \cap U_j}$ is
+Now comparing the two trivializations on $U_i \cap U_j$, we can derive the transition function. That is, the transition function $\phi_i \circ \phi_j^{-1}\colon \mathcal{O}_{U_j}\vert_{U_i \cap U_j} \rightarrow \mathcal{O}_{U_i}\vert_{U_i \cap U_j}$ is
 
 $$\phi_i \circ \phi_j^{-1}(f) = (\x_i/\x_j)^d \cdot f$$
 
@@ -199,7 +199,7 @@ The tautological bundle $\mathcal{O}_{\mathbb{P}^n}(-1)$ is the dual of $\mathca
 :::
 
 ::: Proof
-Let us construct a local trivialization of $\mathcal{O}_{\mathbb{P}^n}(-1)$ on the standard open cover $U_i = \{x \mid x_i \ne 0\}$. For any $(x, v) \in \mathcal{O}_{\mathbb{P}^n}(-1)$, we can write $v = \lambda x$ ($\lambda \in \mathbb{K}$), so defining $\phi_i(x, v) = (x, v_i)$ gives $\phi_i: \pi^{-1}(U_i) \to U_i \times \mathbb{A}^1$. The inverse is $\phi_i^{-1}(x, t) = (x, (t/x_i)\, x)$. The transition function on $U_i \cap U_j$ is obtained from $\phi_j \circ \phi_i^{-1}(x, t) = (x, t x_j / x_i)$ as $g_{ij}(x) = x_j/x_i$. This is the inverse of the transition function $x_i/x_j$ of $\mathcal{O}_{\mathbb{P}^n}(1)$.
+Let us construct a local trivialization of $\mathcal{O}_{\mathbb{P}^n}(-1)$ on the standard open cover $U_i = \{x \mid x_i \ne 0\}$. For any $(x, v) \in \mathcal{O}_{\mathbb{P}^n}(-1)$, we can write $v = \lambda x$ ($\lambda \in \mathbb{K}$), so defining $\phi_i(x, v) = (x, v_i)$ gives $\phi_i: \pi^{-1}(U_i) \rightarrow U_i \times \mathbb{A}^1$. The inverse is $\phi_i^{-1}(x, t) = (x, (t/x_i)\, x)$. The transition function on $U_i \cap U_j$ is obtained from $\phi_j \circ \phi_i^{-1}(x, t) = (x, t x_j / x_i)$ as $g_{ij}(x) = x_j/x_i$. This is the inverse of the transition function $x_i/x_j$ of $\mathcal{O}_{\mathbb{P}^n}(1)$.
 :::
 
 In particular, examining $\mathcal{O}(-1)$ on $\mathbb{P}^1$ makes the meaning of the intuitive <em>twist</em> explained above much clearer. The process of making $\mathbb{P}^1$ from $\mathbb{A}^2\setminus \{0\}$ can be thought of as first mapping $\mathbb{A}^2\setminus\{0\}$ to the unit circle via radial projection, and then identifying antipodal points of the unit circle; during this process, vectors in opposite directions are identified, which causes the fibers to twist. One way to see this twist is to look at sections of the line bundle $\mathcal{L}$.
@@ -292,10 +292,10 @@ img
 
 ## Pullback of Line Bundles
 
-When a morphism $\varphi: X \to Y$ is given, the operation of "pulling back" a line bundle on $Y$ to $X$ is defined naturally. For example, if we pull back a hypersurface on $Y$ to $X$ via $\varphi$, the corresponding line bundle should also be pulled back. This pullback operation induces a group homomorphism between Picard groups, and in the case of an embedding, it can be understood as restricting line bundles on the ambient space to the subvariety.
+When a morphism $\varphi: X \rightarrow Y$ is given, the operation of "pulling back" a line bundle on $Y$ to $X$ is defined naturally. For example, if we pull back a hypersurface on $Y$ to $X$ via $\varphi$, the corresponding line bundle should also be pulled back. This pullback operation induces a group homomorphism between Picard groups, and in the case of an embedding, it can be understood as restricting line bundles on the ambient space to the subvariety.
 
 ::: Proposition 20
-For a morphism $\varphi: X \to Y$ and a line bundle $\mathcal{L}$ on $Y$, the *pullback* $\varphi^\ast \mathcal{L}$ is a line bundle on $X$. Its transition functions are $\{g_{ij} \circ \varphi\}$, where $\{g_{ij}\}$ are the transition functions of $\mathcal{L}$.
+For a morphism $\varphi: X \rightarrow Y$ and a line bundle $\mathcal{L}$ on $Y$, the *pullback* $\varphi^\ast \mathcal{L}$ is a line bundle on $X$. Its transition functions are $\{g_{ij} \circ \varphi\}$, where $\{g_{ij}\}$ are the transition functions of $\mathcal{L}$.
 :::
 
 ::: Proof
@@ -311,7 +311,7 @@ Therefore $\{g_{ij} \circ \varphi\}$ satisfies the cocycle condition.
 :::
 
 ::: Proposition 21
-Pullback induces a group homomorphism $\varphi^\ast: \operatorname{Pic}(Y) \to \operatorname{Pic}(X)$.
+Pullback induces a group homomorphism $\varphi^\ast: \operatorname{Pic}(Y) \rightarrow \operatorname{Pic}(X)$.
 :::
 
 ::: Proof
@@ -331,10 +331,10 @@ So far we have examined line bundles, whose fibers are one-dimensional vector sp
 ::: Definition 23
 A *rank r vector bundle* $\mathcal{E}$ on a variety $X$ consists of the following data.
 
-1. A projection $\pi: \mathcal{E} \to X$.
+1. A projection $\pi: \mathcal{E} \rightarrow X$.
 2. An open cover $\{U_i\}$ of $X$ and, for each $i$, a *local trivialization* $\phi_i: \pi^{-1}(U_i) \overset{\sim}{\longrightarrow} U_i \times \mathbb{A}^r$. These define
 
-    $$\phi_j \circ \phi_i^{-1}: (U_i \cap U_j) \times \mathbb{A}^r \to (U_i \cap U_j) \times \mathbb{A}^r$$
+    $$\phi_j \circ \phi_i^{-1}: (U_i \cap U_j) \times \mathbb{A}^r \rightarrow (U_i \cap U_j) \times \mathbb{A}^r$$
 
     which has the form $(p, v) \mapsto (p, g_{ij}(p)v)$ for suitable *transition functions* $g_{ij} \in \operatorname{GL}_r(\mathcal{O}_X(U_i \cap U_j))$.
 :::
@@ -369,7 +369,7 @@ We define the following two vector bundles on the Grassmannian $\Gr(k, n)$.
 
 There is a natural short exact sequence between these.
 
-$$0 \to S \to \mathcal{O}_{\Gr(k,n)}^{\oplus n} \to Q \to 0$$
+$$0 \rightarrow S \rightarrow \mathcal{O}_{\Gr(k,n)}^{\oplus n} \rightarrow Q \rightarrow 0$$
 
 Here the middle term is $\Gr(k, n) \times \mathbb{A}^n$, the trivial bundle of rank $n$. The first map is the inclusion of each point $([V], v) \in S$ into $([V], v) \in \mathcal{O}^{\oplus n}$, and the second map is the quotient map sending $([V], w) \in \mathcal{O}^{\oplus n}$ to $([V], [w]) \in Q$.
 

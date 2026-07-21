@@ -56,7 +56,7 @@ $$(k+1)! + 2,\ (k+1)! + 3,\ \ldots,\ (k+1)! + (k+1)$$
 소수의 밀도에 관한 두 이정표를 증명 없이 적는다.
 
 - *베르트랑 가설*: 모든 $n \geq 1$에 대해 $n < p \leq 2n$인 소수 $p$가 존재한다 (체비쇼프가 증명).
-- *소수 정리<sub>prime number theorem</sub>*: $x \to \infty$일 때 $\pi(x) \sim \dfrac{x}{\ln x}$, 즉 $\dfrac{\pi(x)\ln x}{x} \to 1$이다 (아다마르와 드 라 발레푸생이 1896년에 독립적으로 증명).
+- *소수 정리<sub>prime number theorem</sub>*: $x \rightarrow \infty$일 때 $\pi(x) \sim \dfrac{x}{\ln x}$, 즉 $\dfrac{\pi(x)\ln x}{x} \rightarrow 1$이다 (아다마르와 드 라 발레푸생이 1896년에 독립적으로 증명).
 :::
 
 소수 정리는 복소해석학적 도구 — 특히 리만 제타 함수 $\zeta(s) = \sum_{n\geq 1} n^{-s}$의 영점 분포 — 를 통해 증명되며, 이는 정수론과 해석학이 만나는 *해석적 정수론*의 출발점이다. 한편 오일러는 더 기초적인 사실로 소수의 역수의 합 $\sum_p \tfrac1p$이 발산함을 보였는데, 이는 소수가 (제곱수처럼) 너무 성기지는 않음을 정량적으로 말해 주며 유클리드 정리의 강화로 볼 수 있다.
@@ -120,10 +120,10 @@ $$\frac{1}{1 - p^{-s}} = \sum_{k=0}^{\infty} \frac{1}{p^{ks}} = 1 + \frac{1}{p^s
 
 $$\prod_{i=1}^{m} \frac{1}{1 - p_i^{-s}} = \sum_{k_1, \ldots, k_m \geq 0} \frac{1}{\bigl(p_1^{k_1} \cdots p_m^{k_m}\bigr)^s} = \sum_{n \in S_m} \frac{1}{n^s}$$
 
-이 된다. 여기서 $S_m$은 $p_1, \ldots, p_m$만을 소인수로 갖는 자연수의 모임이며, 산술의 기본정리에 의해 각 그러한 $n$은 정확히 한 번씩 나타난다. $m \to \infty$로 보내면 $S_m$은 모든 자연수를 포괄하고, 좌변은 무한곱으로, 우변은 $\sum_{n\geq 1} n^{-s}$로 수렴한다. 절대수렴 덕분에 항의 재배열이 정당하므로 등식이 성립한다.
+이 된다. 여기서 $S_m$은 $p_1, \ldots, p_m$만을 소인수로 갖는 자연수의 모임이며, 산술의 기본정리에 의해 각 그러한 $n$은 정확히 한 번씩 나타난다. $m \rightarrow \infty$로 보내면 $S_m$은 모든 자연수를 포괄하고, 좌변은 무한곱으로, 우변은 $\sum_{n\geq 1} n^{-s}$로 수렴한다. 절대수렴 덕분에 항의 재배열이 정당하므로 등식이 성립한다.
 :::
 
-이 곱 표현 자체가 소수의 무한성에 대한 또 다른 증명을 준다. 만약 소수가 유한개뿐이라면 우변은 유한곱이라 $s \to 1^+$에서 유한한 값으로 머무는 반면, 좌변은 $s \to 1^+$일 때 조화급수 $\sum 1/n$로 발산하기 때문이다. 더 나아가, 곱에 로그를 취하면 소수의 역수의 합이 발산한다는 오일러의 정량적 결과를 얻는다.
+이 곱 표현 자체가 소수의 무한성에 대한 또 다른 증명을 준다. 만약 소수가 유한개뿐이라면 우변은 유한곱이라 $s \rightarrow 1^+$에서 유한한 값으로 머무는 반면, 좌변은 $s \rightarrow 1^+$일 때 조화급수 $\sum 1/n$로 발산하기 때문이다. 더 나아가, 곱에 로그를 취하면 소수의 역수의 합이 발산한다는 오일러의 정량적 결과를 얻는다.
 
 ::: 명제 7 (오일러)
 소수의 역수의 합 $\displaystyle\sum_{p} \frac{1}{p}$은 발산한다.
@@ -142,12 +142,12 @@ $$\ln \zeta(s) = \sum_{p} \sum_{k=1}^{\infty} \frac{1}{k\,p^{ks}} = \sum_{p} \fr
 
 $$\sum_{p} \sum_{k=2}^{\infty} \frac{1}{k\,p^{ks}} \leq \sum_{p} \sum_{k=2}^{\infty} \frac{1}{p^{k}} = \sum_{p} \frac{1}{p(p-1)} \leq \sum_{n=2}^{\infty} \frac{1}{n(n-1)} = 1$$
 
-로 추정된다. 한편 $s \to 1^+$일 때 $\zeta(s) \to \infty$이므로 $\ln \zeta(s) \to \infty$이다. 따라서 위 등식에서 bounded인 둘째 합을 빼면, $\sum_p p^{-s}$이 $s \to 1^+$에서 무계로 커져야 한다. 만약 $\sum_p 1/p$이 수렴한다면 $\sum_p p^{-s} \leq \sum_p 1/p$이 모든 $s > 1$에서 bounded가 되어 모순이다. 그러므로 $\sum_p 1/p$은 발산한다.
+로 추정된다. 한편 $s \rightarrow 1^+$일 때 $\zeta(s) \rightarrow \infty$이므로 $\ln \zeta(s) \rightarrow \infty$이다. 따라서 위 등식에서 bounded인 둘째 합을 빼면, $\sum_p p^{-s}$이 $s \rightarrow 1^+$에서 무계로 커져야 한다. 만약 $\sum_p 1/p$이 수렴한다면 $\sum_p p^{-s} \leq \sum_p 1/p$이 모든 $s > 1$에서 bounded가 되어 모순이다. 그러므로 $\sum_p 1/p$은 발산한다.
 :::
 
 이 발산은 극히 더디다. 메르텐스의 정리에 따르면 $x$ 이하의 소수에 대한 부분합은
 
-$$\sum_{p \leq x} \frac{1}{p} = \ln \ln x + M + o(1) \qquad (x \to \infty)$$
+$$\sum_{p \leq x} \frac{1}{p} = \ln \ln x + M + o(1) \qquad (x \rightarrow \infty)$$
 
 으로, *메르텐스 상수<sub>Mertens constant</sub>* $M \approx 0.2615$를 가진다. 발산의 속도가 $\ln \ln x$라는 것은, 비교를 위해 $\sum 1/n^2$이 수렴하고 $\sum 1/n$이 $\ln x$의 속도로 발산함을 떠올리면, 소수가 제곱수보다는 훨씬 빽빽하되 모든 자연수보다는 성김을 정량적으로 말해 준다.
 

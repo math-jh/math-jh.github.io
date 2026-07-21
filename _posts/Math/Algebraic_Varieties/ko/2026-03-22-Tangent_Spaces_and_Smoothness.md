@@ -33,7 +33,7 @@ $$\mathfrak{m}_x=\{f\in \mathbb{K}[X]\mid f(x)=0\}$$
 으로 정의하고, $\mathbb{K}[X]$의 이 maximal ideal에서의 localization $\mathbb{K}[X]_{\mathfrak{m}_x}=\mathcal{O}_{X,x}$을 생각할 수 있다. ([\[가환대수학\] §국소화, ⁋정의 4](/ko/math/commutative_algebra/localization#def4)) 기하적으로는 [§아핀다양체, ⁋정의 14](/ko/math/algebraic_varieties/affine_varieties#def14)를 생각하면 이들은 점 $x$에서의 regular function들의 germ으로 정의할 수 있다.
 
 ::: 정의 1
-Variety $X$의 점 $x$에서의 *Zariski tangent space<sub>Zariski 접공간</sub>* $T_x X$를
+Variety $X$의 점 $x$에서의 *Zariski tangent space<sub>자리스키 접공간</sub>* $T_x X$를
 
 $$T_x X = (\mathfrak{m}_x / \mathfrak{m}_x^2)^\ast$$
 
@@ -84,7 +84,7 @@ $$J_x = \left(\frac{\partial f_i}{\partial \x_j}(x)\right)_{1 \le i \le k, 1 \le
 이다.
 :::
 ::: 증명
-각 $(df_i)_x: \mathbb{K}^n \to \mathbb{K}$는 linear functional이다. [명제 2](#prop2)에서 $T_x X$는 이들의 kernel들의 교집합이므로 $\mathbb{K}^n$의 부분공간이다. Jacobian matrix $J_x$의 행들은 이 linear functional들의 좌표표현이므로,
+각 $(df_i)_x: \mathbb{K}^n \rightarrow \mathbb{K}$는 linear functional이다. [명제 2](#prop2)에서 $T_x X$는 이들의 kernel들의 교집합이므로 $\mathbb{K}^n$의 부분공간이다. Jacobian matrix $J_x$의 행들은 이 linear functional들의 좌표표현이므로,
 
 $$T_x X = \ker(J_x) = \{v \in \mathbb{K}^n \mid J_x v = 0\}$$
 
@@ -112,7 +112,7 @@ $$\dim T_x X = \dim_{\mathbb{K}}(\mathfrak{m}_x/\mathfrak{m}_x^2) \ge \dim \math
 우리의 직관을 키우기 위해서는 언제 부등식이 성립하는지를 살펴보는 것이 좋다. 이러한 점을 우리는 singular point라 부른다.
 
 ::: 정의 5
-점 $x \in X$가 *smooth point<sub>매끄러운 점</sub>* (또는 *nonsingular point*)라는 것은 $\dim T_x X = \dim X$인 것이다. 그렇지 않으면 (즉, $\dim T_x X > \dim X$이면) *singular point<sub>특이점</sub>*이라 부른다.
+점 $x \in X$가 *smooth point<sub>매끄러운 점</sub>* (또는 *nonsingular point<sub>비특이점</sub>*)라는 것은 $\dim T_x X = \dim X$인 것이다. 그렇지 않으면 (즉, $\dim T_x X > \dim X$이면) *singular point<sub>특이점</sub>*이라 부른다.
 :::
 
 ::: 예시 6 (Smooth points)
@@ -186,7 +186,7 @@ $$\dim_{\mathbb{K}}(\mathfrak{m}_\eta/\mathfrak{m}_\eta^2) \ge \dim \mathcal{O}_
 그럼 다음을 정의한다.
 
 ::: 정의 11
-Variety $X$가 *smooth* (또는 *nonsingular*)라는 것은 모든 점이 smooth point인 것이다. 즉, $X_\sm = X$이다. 그렇지 않으면 (즉, singular point가 존재하면) *singular*라 부른다.
+Variety $X$가 *smooth* (또는 *nonsingular<sub>비특이</sub>*)라는 것은 모든 점이 smooth point인 것이다. 즉, $X_\sm = X$이다. 그렇지 않으면 (즉, singular point가 존재하면) *singular*라 부른다.
 :::
 
 ::: 예시 12
@@ -200,7 +200,7 @@ Singular point에서는 tangent space가 너무 커서 다양체의 국소적 �
 이를 위해, 임의의 다항식 $f\in \mathbb{K}[\x_1,\ldots, \x_n]$에 대하여 $f$의 *initial term* $\initial(f)$을 $f$의 homogeneous component 중 가장 작은 차수를 갖는 것으로 정의한다. 그럼 임의의 ideal $\mathfrak{a}$에 대하여, $\mathfrak{a}$의 *initial ideal* $\initial(\mathfrak{a})$를 $\initial(f)$들로 생성되는 homogeneous ideal로 정의한다. 
 
 ::: 정의 13
-임의의 affine variety $X\subseteq \mathbb{A}^n$에 대하여, $\initial(I(X))$이 정의하는 algebraic variety를 $X$의 원점에서의 *tangent cone*이라 정의한다.
+임의의 affine variety $X\subseteq \mathbb{A}^n$에 대하여, $\initial(I(X))$이 정의하는 algebraic variety를 $X$의 원점에서의 *tangent cone<sub>접뿔</sub>*이라 정의한다.
 :::
 
 더 일반적으로, $f$를 $\x_i-x_i$들에 대한 다항식으로 쓰고 비슷한 정의를 하면 임의의 점에서의 tangent cone을 정의할 수 있다. 이것이 cone이라 불리는 이유는, [§사영다양체, ⁋정의 12](/ko/math/algebraic_varieties/projective_varieties#def12)와 마찬가지로 homogeneous ideal의 zero set이기 때문이다.

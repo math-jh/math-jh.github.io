@@ -8,7 +8,7 @@ permalink: /en/math/category_theory/abelian_categories
 sidebar: 
     nav: "category_theory-en"
 
-date: 2022-12-21
+date: 2024-08-29
 weight: 9
 translated_at: 2026-05-30T15:30:04+00:00
 translation_source: kimi-cli

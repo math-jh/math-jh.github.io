@@ -42,7 +42,7 @@ $$\rho:G\rightarrow \Aut(V)$$
 선형대수에서 가장 중요한 도구 중 하나는 대각화이다. 따라서 우리는 주어진 Lie group action $\rho:G \rightarrow \Aut(V)$에 대하여, $V$의 basis를 적당히 택하여 $\rho(g)$의 행렬표현을 대각행렬로 만드는 데에 관심이 있다. 만일 $G$가 유한군이었다면, 각각의 $g$에 대해 이러한 basis를 찾아줄 수 있었겠지만 현재는 $G$가 무한하므로 이러한 일을 하기 힘들다. 따라서 우리는 simultaneously diagonalizable인 원소들에 자연스럽게 관심을 갖게 된다. 그런데 [\[선형대수학\] §고유공간분해, ⁋명제 10](/ko/math/linear_algebra/eigenspace_decomposition#prop10)은 두 diagonalizable matrix가 simultaneously diagonalizable일 필요충분조건은 이들이 commute하는 것임을 알고 있으므로, 다음 정의를 내리는 것이 합당하다. 
 
 ::: 정의 2
-Compact, connected Lie group $G$에 대하여, $G$의 subgroup $T$가 *maximal torus*라는 것은 $T$가 torus이고, 포함관계에 대하여 maximal인 것이다. 
+Compact, connected Lie group $G$에 대하여, $G$의 subgroup $T$가 *maximal torus<sub>극대 원환면</sub>*라는 것은 $T$가 torus이고, 포함관계에 대하여 maximal인 것이다. 
 :::
 
 Lie algebra $\mathfrak{g}$의 임의의 원소 $X$를 택한 후, 이 방향으로의 exponential map이 그리는 one-parameter subgroup의 closure가 torus가 된다. 따라서 maximal torus의 존재성은 [\[집합론\] §선택공리, ⁋정리 4](/ko/math/set_theory/axiom_of_choice#thm4)에 의해 자명하다. 
@@ -128,11 +128,11 @@ Torus $T$와 complex $T$-module $V$가 주어졌다 하자. Irreducible characte
 
 $$V_\lambda=\left\{v\in V\mid t\cdot v=\rchi_\lambda(t)v\text{ for all $t\in T$}\right\}$$
 
-이 nontrivial인 것이다. 이 때, $V_\lambda$를 $\lambda$의 *weight space*라 하며, decomposition
+이 nontrivial인 것이다. 이 때, $V_\lambda$를 $\lambda$의 *weight space<sub>무게 공간</sub>*라 하며, decomposition
 
 $$V=\bigoplus_\lambda V_\lambda$$
 
-을 $V$의 *weight decomposition*이라 부른다. 
+을 $V$의 *weight decomposition<sub>무게 분해</sub>*이라 부른다. 
 :::
 
 ## 극대 원환면
@@ -402,7 +402,7 @@ $$\begin{pmatrix}0&1\\-1&0\end{pmatrix}\begin{pmatrix}e^{i\theta}&0\\0&e^{-i\the
 마지막으로 우리는 다음 글에서 다룰 root system의 motivation을 맛볼 수 있는 정의를 살펴본다. [보조정리 7](#lem7)에서, 우리가 $T$의 generator $t$에서의 $q$에 대한 preimage를 계산하고 그 개수가 $\lvert W\rvert$개임을 확인하였다. 이제 $T$위에 $W$가 작용한다는 것을 알게되었으므로 이 조건을 다음과 같이 쓸 수 있다.
 
 ::: 정의 12
-Maximal torus $T$의 원소 $t$가 *regular*라는 것은 $wtw^{-1}=t$를 만족하는 $w\in W$가 오직 $w=e$뿐인 것이다. 반대로, $wtw^{-1}=t$인 $w\neq e$가 존재하면 $t$를 *singular*라 한다.
+Maximal torus $T$의 원소 $t$가 *regular*라는 것은 $wtw^{-1}=t$를 만족하는 $w\in W$가 오직 $w=e$뿐인 것이다. 반대로, $wtw^{-1}=t$인 $w\neq e$가 존재하면 $t$를 *singular<sub>특이</sub>*라 한다.
 :::
 
 즉, regular element는 Weyl group action의 stabilizer가 자명한 원소이고, singular element는 비자명한 stabilizer를 갖는 원소이다. 일반적으로 $q$의 mapping degree를 계산하기 위해서는 $q$의 regular value에서의 값을 계산해야 하는데, orbit-stabilizer theorem을 생각하면 preimage가 이와 같이 $\lvert W\rvert$개의 image를 가지기 위해서는 반드시 stabilizer가 trivial해야한다는 것을 안다. 이로부터 이러한 원소를 regular element라 부르는 것이 자연스럽다.

@@ -26,17 +26,17 @@ Line bundle, 더 나아가 이 글의 뒷부분에서 정의할 vector bundle은
 ::: 정의 1
 Variety $X$ 위의 *line bundle* $\mathcal{L}$은 다음과 같은 데이터로 구성된다.
 
-1. Projection $\pi: \mathcal{L} \to X$.
+1. Projection $\pi: \mathcal{L} \rightarrow X$.
 2. $X$의 open cover $\{U_i\}$와 각 $i$에 대한 *local trivialization* $\phi_i: \pi^{-1}(U_i) \overset{\sim}{\longrightarrow} U_i \times \mathbb{A}^1$. 이들이 정의하는
     
-    $$\phi_j \circ \phi_i^{-1}: (U_i \cap U_j) \times \mathbb{A}^1 \to (U_i \cap U_j) \times \mathbb{A}^1$$
+    $$\phi_j \circ \phi_i^{-1}: (U_i \cap U_j) \times \mathbb{A}^1 \rightarrow (U_i \cap U_j) \times \mathbb{A}^1$$
 
     는 적당한 *transition function* $g_{ij} \in \mathcal{O}_X(U_i \cap U_j)^\ast$에 대하여 $(p, t) \mapsto (p, g_{ij}(p)t)$의 꼴이다.
 :::
 
-두 line bundle $\mathcal{L}, \mathcal{M} \to X$ 사이의 *morphism* $\varphi \colon \mathcal{L} \to \mathcal{M}$은 각 점 $p \in X$에서 fiber 사이의 $\mathbb{K}$-linear map $\varphi_p \colon \mathcal{L}_p \to \mathcal{M}_p$를 정의하며, 적당한 open cover $\{U_k\}$ 위에서 $\mathcal{O}_X(U_k)$-module homomorphism
+두 line bundle $\mathcal{L}, \mathcal{M} \rightarrow X$ 사이의 *morphism* $\varphi \colon \mathcal{L} \rightarrow \mathcal{M}$은 각 점 $p \in X$에서 fiber 사이의 $\mathbb{K}$-linear map $\varphi_p \colon \mathcal{L}_p \rightarrow \mathcal{M}_p$를 정의하며, 적당한 open cover $\{U_k\}$ 위에서 $\mathcal{O}_X(U_k)$-module homomorphism
 
-$$\varphi_k \colon \mathcal{O}_{U_k} \to \mathcal{O}_{U_k}$$
+$$\varphi_k \colon \mathcal{O}_{U_k} \rightarrow \mathcal{O}_{U_k}$$
 
 으로 표현될 수 있고, 이들 사이에
 
@@ -62,11 +62,11 @@ Transition functions $\{g_{ij}\}$는 다음의 *cocycle condition*을 만족한�
 
 [명제 2](#prop2)는 흔한 gluing condition으로, 이 조건에 의해 line bundle은 일종의 sheaf로 생각할 수 있다. ([\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1)) 구체적으로, 우리는 line bundle $\mathcal{L}$이 주어졌을 때, 이 line bundle의 section sheaf를
 
-$$U\mapsto \mathcal{O}_X(\mathcal{L})(U)=\{s: U \to \mathcal{L} \mid \pi \circ s = \id_U\}$$
+$$U\mapsto \mathcal{O}_X(\mathcal{L})(U)=\{s: U \rightarrow \mathcal{L} \mid \pi \circ s = \id_U\}$$
 
 으로 정의한다. 즉 $\mathcal{O}_X(\mathcal{L})$은 surjection $\pi$의 section들의 sheaf이다. ([\[위상수학\] §층, ⁋예시 9](/ko/math/topology/sheaves#ex9))
 
-그럼 Local trivialization $\phi_i: \pi^{-1}(U_i) \to U_i \times \mathbb{A}^1$에 의해 $\mathcal{O}_X(\mathcal{L})\vert_{U_i} \cong \mathcal{O}_{U_i}$이다. 이를 통해 우리는 $U_i$ 위에서는 국소적으로 이 section들을 일상적인 $\mathbb{K}$-valued 함수처럼 생각할 수 있다. 
+그럼 Local trivialization $\phi_i: \pi^{-1}(U_i) \rightarrow U_i \times \mathbb{A}^1$에 의해 $\mathcal{O}_X(\mathcal{L})\vert_{U_i} \cong \mathcal{O}_{U_i}$이다. 이를 통해 우리는 $U_i$ 위에서는 국소적으로 이 section들을 일상적인 $\mathbb{K}$-valued 함수처럼 생각할 수 있다. 
 
 이는 다음을 의미한다. 
 
@@ -161,7 +161,7 @@ $$\phi_i\colon \mathcal{O}(d)\vert_{U_i} \xrightarrow{\sim} \mathcal{O}_{U_i}, \
 
 $$\mathcal{O}(d)(U_i) = \x_i^d \cdot \mathcal{O}(U_i) = \x_i^d\mathbb{K}[\x_0/\x_i, \ldots, \widehat{\x_i/\x_i}, \ldots, \x_n/\x_i]$$
 
-임을 안다. 이제 $U_i \cap U_j$에서 두 trivialization을 비교하면 transition function을 도출할 수 있다. 즉, transition function $\phi_i \circ \phi_j^{-1}\colon \mathcal{O}_{U_j}\vert_{U_i \cap U_j} \to \mathcal{O}_{U_i}\vert_{U_i \cap U_j}$는
+임을 안다. 이제 $U_i \cap U_j$에서 두 trivialization을 비교하면 transition function을 도출할 수 있다. 즉, transition function $\phi_i \circ \phi_j^{-1}\colon \mathcal{O}_{U_j}\vert_{U_i \cap U_j} \rightarrow \mathcal{O}_{U_i}\vert_{U_i \cap U_j}$는
 
 $$\phi_i \circ \phi_j^{-1}(f) = (\x_i/\x_j)^d \cdot f$$
 
@@ -191,7 +191,7 @@ $\mathbb{P}^n$의 각 점 $x = [x_0 : \cdots : x_n]$은 $\mathbb{A}^{n+1}$의 �
 
 $$\mathcal{O}_{\mathbb{P}^n}(-1) = \{(x, v) \in \mathbb{P}^n \times \mathbb{A}^{n+1} \mid v \in \ell_x\}$$
 
-을 생각하자. 그럼 $\mathcal{O}_{\mathbb{P}^n}(-1)$에서 $\mathbb{P}^n$으로의 projection map $\pi=\pr_1$이 정의하는 line bundle을 $\mathbb{P}^n$ 위의 *tautological line bundle*이라 부른다.
+을 생각하자. 그럼 $\mathcal{O}_{\mathbb{P}^n}(-1)$에서 $\mathbb{P}^n$으로의 projection map $\pi=\pr_1$이 정의하는 line bundle을 $\mathbb{P}^n$ 위의 *tautological line bundle<sub>보편 선다발</sub>*이라 부른다.
 :::
 
 즉, 이 정의에서 각 fiber $\mathcal{O}_{\mathbb{P}^n}(-1)_x$는 점 $x$가 나타내는 직선 그 자체이다. 그 표기가 알려주듯, 다음이 성립한다. 구별을 위해 다음 명제에서만은 $\mathcal{O}_{\mathbb{P}^n}(-1)$은 [예시 12](#ex12)가 아니라 [정의 13](#def13)의 bundle인 것으로 생각하자. 
@@ -201,7 +201,7 @@ Tautological bundle $\mathcal{O}_{\mathbb{P}^n}(-1)$은 위 [예시 12](#ex12)�
 :::
 
 ::: 증명
-Standard open cover $U_i = \{x \mid x_i \ne 0\}$ 위에서 $\mathcal{O}_{\mathbb{P}^n}(-1)$의 local trivialization을 구성하자. 임의의 $(x, v) \in \mathcal{O}_{\mathbb{P}^n}(-1)$에 대해 $v = \lambda x$ ($\lambda \in \mathbb{K}$)로 쓸 수 있으므로, $\phi_i(x, v) = (x, v_i)$로 정의하면 $\phi_i: \pi^{-1}(U_i) \to U_i \times \mathbb{A}^1$이 된다. 역사상은 $\phi_i^{-1}(x, t) = (x, (t/x_i)\, x)$이다. $U_i \cap U_j$에서의 transition function은 $\phi_j \circ \phi_i^{-1}(x, t) = (x, t x_j / x_i)$에서 $g_{ij}(x) = x_j/x_i$를 얻는다. 이는 $\mathcal{O}_{\mathbb{P}^n}(1)$의 transition function $x_i/x_j$의 inverse이다.
+Standard open cover $U_i = \{x \mid x_i \ne 0\}$ 위에서 $\mathcal{O}_{\mathbb{P}^n}(-1)$의 local trivialization을 구성하자. 임의의 $(x, v) \in \mathcal{O}_{\mathbb{P}^n}(-1)$에 대해 $v = \lambda x$ ($\lambda \in \mathbb{K}$)로 쓸 수 있으므로, $\phi_i(x, v) = (x, v_i)$로 정의하면 $\phi_i: \pi^{-1}(U_i) \rightarrow U_i \times \mathbb{A}^1$이 된다. 역사상은 $\phi_i^{-1}(x, t) = (x, (t/x_i)\, x)$이다. $U_i \cap U_j$에서의 transition function은 $\phi_j \circ \phi_i^{-1}(x, t) = (x, t x_j / x_i)$에서 $g_{ij}(x) = x_j/x_i$를 얻는다. 이는 $\mathcal{O}_{\mathbb{P}^n}(1)$의 transition function $x_i/x_j$의 inverse이다.
 :::
 
 특히 $\mathbb{P}^1$의 경우에서 $\mathcal{O}(-1)$을 살펴보면 위에서 직관적으로 설명한 <em-ko>꼬임</em-ko>의 의미가 훨씬 명확하다. $\mathbb{A}^2\setminus \{0\}$에서 $\mathbb{P}^1$을 만드는 과정은 우선, $\mathbb{A}^2\setminus\{0\}$을 radial projection을 통해 단위원으로 만든 후, 단위원의 antipodal point들을 identify하는 것으로 생각할 수 있는데, 이 과정에서 반대방향의 두 벡터가 identify되는 일, 즉 fiber가 꼬이는 일이 발생하기 때문이다. 이러한 꼬임을 보는 방법 중 하나는 line bundle $\mathcal{L}$의 section을 보는 것이다. 
@@ -294,10 +294,10 @@ img
 
 ## Pullback of Line Bundles
 
-Morphism $\varphi: X \to Y$가 주어졌을 때, $Y$ 위의 line bundle을 $X$ 위로 "당기는" 연산은 자연스럽게 정의된다. 예를 들어, $Y$ 위의 hypersurface를 $\varphi$에 의해 $X$ 위로 당기면, 이에 대응하는 line bundle도 함께 당겨져야 한다. 이 pullback 연산은 Picard group 사이의 group homomorphism을 유도하며, embedding의 경우 ambient space의 line bundle을 부분다양체로 제한하는 것으로 이해할 수 있다.
+Morphism $\varphi: X \rightarrow Y$가 주어졌을 때, $Y$ 위의 line bundle을 $X$ 위로 "당기는" 연산은 자연스럽게 정의된다. 예를 들어, $Y$ 위의 hypersurface를 $\varphi$에 의해 $X$ 위로 당기면, 이에 대응하는 line bundle도 함께 당겨져야 한다. 이 pullback 연산은 Picard group 사이의 group homomorphism을 유도하며, embedding의 경우 ambient space의 line bundle을 부분다양체로 제한하는 것으로 이해할 수 있다.
 
 ::: 명제 20
-Morphism $\varphi: X \to Y$와 $Y$ 위의 line bundle $\mathcal{L}$에 대하여, *pullback* $\varphi^\ast \mathcal{L}$은 $X$ 위의 line bundle이다. 그 transition functions은 $\{g_{ij} \circ \varphi\}$이다. 여기서 $\{g_{ij}\}$는 $\mathcal{L}$의 transition functions이다.
+Morphism $\varphi: X \rightarrow Y$와 $Y$ 위의 line bundle $\mathcal{L}$에 대하여, *pullback* $\varphi^\ast \mathcal{L}$은 $X$ 위의 line bundle이다. 그 transition functions은 $\{g_{ij} \circ \varphi\}$이다. 여기서 $\{g_{ij}\}$는 $\mathcal{L}$의 transition functions이다.
 :::
 
 ::: 증명
@@ -313,7 +313,7 @@ Cocycle 조건 세 가지를 모두 확인한다.
 :::
 
 ::: 명제 21
-Pullback은 group homomorphism $\varphi^\ast: \operatorname{Pic}(Y) \to \operatorname{Pic}(X)$를 유도한다.
+Pullback은 group homomorphism $\varphi^\ast: \operatorname{Pic}(Y) \rightarrow \operatorname{Pic}(X)$를 유도한다.
 :::
 
 ::: 증명
@@ -331,12 +331,12 @@ Embedding $i: C \hookrightarrow \mathbb{P}^n$에 대해, $i^\ast \mathcal{O}_{\m
 지금까지 우리는 1차원 벡터공간을 fiber로 갖는 line bundle을 살펴보았다. 이 개념을 일반화하여 각 fiber가 고차원 벡터공간인 *vector bundle*을 정의할 수 있다. Vector bundle은 다양체의 접공간, 법공간 등 기하학적으로 자연스럽게 등장하는 구조를 포착하며, 미분기하학에서의 접다발, 벡터장 등의 개념의 대수기하학적 아날로그이다. Line bundle은 rank 1 vector bundle의 특수한 경우이며, vector bundle 이론의 관점에서 line bundle의 성질들을 더욱 명확하게 이해할 수 있다.
 
 ::: 정의 23
-다양체 $X$ 위의 *rank r vector bundle* $\mathcal{E}$는 다음과 같은 데이터로 구성된다.
+다양체 $X$ 위의 *rank r vector bundle<sub>랭크 $r$ 벡터다발</sub>* $\mathcal{E}$는 다음과 같은 데이터로 구성된다.
 
-1. Projection $\pi: \mathcal{E} \to X$.
+1. Projection $\pi: \mathcal{E} \rightarrow X$.
 2. $X$의 open cover $\{U_i\}$와 각 $i$에 대한 *local trivialization* $\phi_i: \pi^{-1}(U_i) \overset{\sim}{\longrightarrow} U_i \times \mathbb{A}^r$. 이들이 정의하는
 
-    $$\phi_j \circ \phi_i^{-1}: (U_i \cap U_j) \times \mathbb{A}^r \to (U_i \cap U_j) \times \mathbb{A}^r$$
+    $$\phi_j \circ \phi_i^{-1}: (U_i \cap U_j) \times \mathbb{A}^r \rightarrow (U_i \cap U_j) \times \mathbb{A}^r$$
 
     는 적당한 *transition function* $g_{ij} \in \operatorname{GL}_r(\mathcal{O}_X(U_i \cap U_j))$에 대하여 $(p, v) \mapsto (p, g_{ij}(p)v)$의 꼴이다.
 :::
@@ -362,16 +362,16 @@ Line bundle의 정의와 비교하면, 유일한 차이는 fiber가 $\mathbb{A}^
 ::: 정의 25
 Grassmannian $\Gr(k, n)$ 위에 다음 두 vector bundle을 정의한다.
 
-1. *Tautological bundle* $S$: 각 점 $[V] \in \Gr(k, n)$ (여기서 $V \subseteq \mathbb{A}^n$는 $k$차원 부분공간)에 그 부분공간 $V$ 자체를 fiber로 대응시키는 rank $k$ vector bundle.
+1. *Tautological bundle<sub>보편 선다발</sub>* $S$: 각 점 $[V] \in \Gr(k, n)$ (여기서 $V \subseteq \mathbb{A}^n$는 $k$차원 부분공간)에 그 부분공간 $V$ 자체를 fiber로 대응시키는 rank $k$ vector bundle.
    $$S = \{([V], v) \in \Gr(k, n) \times \mathbb{A}^n \mid v \in V\}$$
 
-2. *Quotient bundle* $Q$: 각 점 $[V]$에 quotient space $\mathbb{A}^n / V$를 fiber로 대응시키는 rank $n-k$ vector bundle.
+2. *Quotient bundle<sub>몫다발</sub>* $Q$: 각 점 $[V]$에 quotient space $\mathbb{A}^n / V$를 fiber로 대응시키는 rank $n-k$ vector bundle.
    $$Q = \{([V], [w]) \in \Gr(k, n) \times (\mathbb{A}^n / S) \mid [w] \in \mathbb{A}^n / V\}$$
 :::
 
 이들 사이에는 자연스러운 short exact sequence가 존재한다.
 
-$$0 \to S \to \mathcal{O}_{\Gr(k,n)}^{\oplus n} \to Q \to 0$$
+$$0 \rightarrow S \rightarrow \mathcal{O}_{\Gr(k,n)}^{\oplus n} \rightarrow Q \rightarrow 0$$
 
 여기서 가운데 항은 $\Gr(k, n) \times \mathbb{A}^n$으로, trivial bundle of rank $n$이다. 첫 번째 사상은 각 점 $([V], v) \in S$를 $([V], v) \in \mathcal{O}^{\oplus n}$으로 포함시키는 것이고, 두 번째 사상은 $([V], w) \in \mathcal{O}^{\oplus n}$을 $([V], [w]) \in Q$로 보내는 quotient map이다.
 

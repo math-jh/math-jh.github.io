@@ -78,7 +78,7 @@ $T_x X$ is a $\mathbb{K}$-vector space, and its dimension is $n - \operatorname{
 $$J_x = \left(\frac{\partial f_i}{\partial \x_j}(x)\right)_{1 \le i \le k, 1 \le j \le n}$$
 :::
 ::: Proof
-Each $(df_i)_x: \mathbb{K}^n \to \mathbb{K}$ is a linear functional. By [Proposition 2](#prop2), $T_x X$ is the intersection of their kernels, hence a subspace of $\mathbb{K}^n$. The rows of the Jacobian matrix $J_x$ are the coordinate representations of these linear functionals, so
+Each $(df_i)_x: \mathbb{K}^n \rightarrow \mathbb{K}$ is a linear functional. By [Proposition 2](#prop2), $T_x X$ is the intersection of their kernels, hence a subspace of $\mathbb{K}^n$. The rows of the Jacobian matrix $J_x$ are the coordinate representations of these linear functionals, so
 
 $$T_x X = \ker(J_x) = \{v \in \mathbb{K}^n \mid J_x v = 0\}$$
 

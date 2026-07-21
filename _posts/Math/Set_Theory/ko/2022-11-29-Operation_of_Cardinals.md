@@ -18,7 +18,7 @@ weight: 25
 이제 약속한 대로 cardinal들 간의 연산을 정의하자.
 
 ::: 정의 1
-$(\mathfrak{a}_i)_{i\in I}$가 cardinal들의 family라 하자. 집합 $\mathfrak{a}_i$들의 곱 (resp. 합)의 cardinal을 이들의 *cardinal product*(resp. *cardinal sum*)이라 부르고 $\prod_{i\in I}\mathfrak{a}_i$ (resp. $\sum_{i\in I}\mathfrak{a}_i$)로 적는다.
+$(\mathfrak{a}_i)_{i\in I}$가 cardinal들의 family라 하자. 집합 $\mathfrak{a}_i$들의 곱 (resp. 합)의 cardinal을 이들의 *cardinal product<sub>기수 곱</sub>*(resp. *cardinal sum<sub>기수 합</sub>*)이라 부르고 $\prod_{i\in I}\mathfrak{a}_i$ (resp. $\sum_{i\in I}\mathfrak{a}_i$)로 적는다.
 :::
 
 우리가 처음 집합의 합을 정의할 때, 굳이 분리합집합이라는 직관적인 이름을 놔두고 합이라는 용어를 쓴 이유가 여기에 있다.

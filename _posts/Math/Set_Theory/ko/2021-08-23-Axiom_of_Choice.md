@@ -65,7 +65,7 @@ $\mathcal{S}=\mathcal{P}(A)\setminus\{A\}$라 하자. 또, 함수 $p:\mathcal{S}
 이제 가장 범용적으로 쓰이는 선택공리의 동치인 Zorn's lemma를 소개할 차례다. 우선 다음을 정의하자.
 
 ::: 정의 3
-Ordered set $A$가 *inductive*하다는 것은 임의의 totally ordered subset이 upper bound를 갖는 것이다.
+Ordered set $A$가 *inductive<sub>귀납적</sub>*하다는 것은 임의의 totally ordered subset이 upper bound를 갖는 것이다.
 :::
 
 Inductive set은 저자에 따라 전혀 다른 개념을 뜻하기도 하므로 주의가 필요하다. Totally ordered subset은 *chain*이라 부르기도 한다. 

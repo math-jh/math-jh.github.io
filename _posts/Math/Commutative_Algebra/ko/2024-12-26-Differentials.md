@@ -60,7 +60,7 @@ $A$-algebra $E$에 대하여, $E$의 $A$에 대한 *Kähler differential module<
 
 $$\text{$d(xy)=x\,dy+y\,dx$ for all $x,y\in E$},\qquad \text{$d(ax+by)=a\,dx+b\,dy$ for all $x,y\in E$ and $a,b\in A$}$$
 
-을 주어 만들어지는 $E$-module이며, 이를 $\Omega_{E/A}$로 표기한다. 이 때, $f\mapsto df$로 정의되는 $A$-linear derivation $d:E \rightarrow \Omega_{E/A}$를 *universal $A$-derivation*이라 적는다. 
+을 주어 만들어지는 $E$-module이며, 이를 $\Omega_{E/A}$로 표기한다. 이 때, $f\mapsto df$로 정의되는 $A$-linear derivation $d:E \rightarrow \Omega_{E/A}$를 *universal $A$-derivation<sub>보편 $A$-미분</sub>*이라 적는다. 
 :::
 
 그럼 $\Omega_{E/A}$가 [보조정리 2](#lem2)의 universal property를 만족하는 것을 쉽게 확인할 수 있다.  뿐만 아니라, $\Omega_{E/A}$를 $A$-algebra $A \rightarrow E$를 받아 $\Omega_{E/A}$를 내놓는 functor처럼 생각하면, 다음과 같은 종류의 functoriality 또한 성립한다.

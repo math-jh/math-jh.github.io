@@ -16,7 +16,7 @@ published: false
 
 [\[사교기하학\] §운동량 사상, ⁋정리 10](/ko/math/symplectic_geometry/moment_map#thm10)은 compact connected symplectic manifold 위의 torus action이 Hamiltonian일 때 그 운동량 사상의 상이 볼록 다면체가 됨을 말한다. 작용하는 torus의 차원이 variety의 절반, 즉 가능한 가장 큰 차원에 이르는 극단적인 경우에 이 대응은 완벽해진다. 이때 variety는 운동량 다면체에 의해 그 사교 구조와 action까지 통째로 복원되며, 거꾸로 다면체가 만족해야 할 조합론적 조건도 정확히 결정된다. 이것이 1988년 Delzant가 증명한 정리이며, symplectic 기하의 한 부류 전체를 순전히 볼록 다면체의 데이터로 번역한다.
 
-이 글에서 우리는 먼저 그 대응에 참여하는 variety와 다면체를 각각 *symplectic toric manifold*와 *Delzant 다면체*로 정의하고, Delzant 정리를 서술한다. 정리의 핵심은 임의의 Delzant 다면체로부터 실제로 symplectic toric manifold를 만들어 내는 구성에 있다. 이 구성은 다면체의 $d$개 facet이 결정하는 short exact sequence $0\to N\to\mathbb{T}^d\to\mathbb{T}^n\to0$의 부분 torus $N$을 $\mathbb{C}^d$의 표준 Hamiltonian action에 제한하고, 이를 [\[사교기하학\] §사교 축약, ⁋정리 2](/ko/math/symplectic_geometry/symplectic_reduction#thm2)의 사교 축약으로 나누어 variety를 얻는 것이다. 끝으로 같은 다면체가 [§토릭 다양체의 정의](/ko/math/toric_geometry/toric_varieties)에서 다룬 대수기하의 projective toric variety도 결정한다는 점을 정리하고, $\mathbb{CP}^n$과 $\mathbb{CP}^1\times\mathbb{CP}^1$, Hirzebruch 곡면을 예시로 든다.
+이 글에서 우리는 먼저 그 대응에 참여하는 variety와 다면체를 각각 *symplectic toric manifold*와 *Delzant 다면체*로 정의하고, Delzant 정리를 서술한다. 정리의 핵심은 임의의 Delzant 다면체로부터 실제로 symplectic toric manifold를 만들어 내는 구성에 있다. 이 구성은 다면체의 $d$개 facet이 결정하는 short exact sequence $0\rightarrow N\rightarrow\mathbb{T}^d\rightarrow\mathbb{T}^n\rightarrow0$의 부분 torus $N$을 $\mathbb{C}^d$의 표준 Hamiltonian action에 제한하고, 이를 [\[사교기하학\] §사교 축약, ⁋정리 2](/ko/math/symplectic_geometry/symplectic_reduction#thm2)의 사교 축약으로 나누어 variety를 얻는 것이다. 끝으로 같은 다면체가 [§토릭 다양체의 정의](/ko/math/toric_geometry/toric_varieties)에서 다룬 대수기하의 projective toric variety도 결정한다는 점을 정리하고, $\mathbb{CP}^n$과 $\mathbb{CP}^1\times\mathbb{CP}^1$, Hirzebruch 곡면을 예시로 든다.
 
 ## Symplectic toric manifold와 Delzant 다면체
 
@@ -34,7 +34,7 @@ torus의 차원 $n$이 정확히 $\tfrac12\dim M$이라는 점이 결정적이�
 $\mathbb{R}^n$의 convex polytope $\Delta$가 *Delzant 다면체<sub>Delzant polytope</sub>*라는 것은 다음 세 조건을 만족하는 것이다.
 
 1. (*simple*) 각 꼭짓점에서 정확히 $n$개의 facet이 만난다 (동치로, $n$개의 모서리가 만난다).
-2. (*rational*) 각 꼭짓점에서 만나는 모서리들의 방향을 $\mathbb{Z}^n$의 원소인 primitive 벡터 $v_1,\ldots,v_n\in\mathbb{Z}^n$으로 택할 수 있다.
+2. (*rational<sub>유리</sub>*) 각 꼭짓점에서 만나는 모서리들의 방향을 $\mathbb{Z}^n$의 원소인 primitive 벡터 $v_1,\ldots,v_n\in\mathbb{Z}^n$으로 택할 수 있다.
 3. (*smooth*, 또는 *unimodular*) 각 꼭짓점에서 위 $v_1,\ldots,v_n$을 $\mathbb{Z}^n$의 $\mathbb{Z}$-basis가 되도록 택할 수 있다.
 :::
 

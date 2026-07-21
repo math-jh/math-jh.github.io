@@ -187,7 +187,7 @@ Let the function $f(x) = x e^{-x}$ be given on $\mathbb{R}$. Its first and secon
 
 $$f'(x) = (1 - x)e^{-x}, \qquad f''(x) = (x - 2)e^{-x}.$$
 
-Since $e^{-x} > 0$, the sign of $f'$ is determined by $1 - x$ and the sign of $f''$ by $x - 2$. Thus by [Proposition 7](#prop7) the function is strictly increasing for $x < 1$ and strictly decreasing for $x > 1$. Moreover, by [Proposition 12](#prop12), the sign change of $f'$ at $x = 1$ gives a local maximum with value $f(1) = e^{-1}$. Finally, since $\lim_{x\to\infty} x e^{-x} = 0$ and $\lim_{x\to -\infty} x e^{-x} = -\infty$, the graph descends from negative infinity on the left, reaches its highest point $e^{-1}$ at $x = 1$, and then asymptotically approaches the $x$-axis.
+Since $e^{-x} > 0$, the sign of $f'$ is determined by $1 - x$ and the sign of $f''$ by $x - 2$. Thus by [Proposition 7](#prop7) the function is strictly increasing for $x < 1$ and strictly decreasing for $x > 1$. Moreover, by [Proposition 12](#prop12), the sign change of $f'$ at $x = 1$ gives a local maximum with value $f(1) = e^{-1}$. Finally, since $\lim_{x\rightarrow\infty} x e^{-x} = 0$ and $\lim_{x\rightarrow -\infty} x e^{-x} = -\infty$, the graph descends from negative infinity on the left, reaches its highest point $e^{-1}$ at $x = 1$, and then asymptotically approaches the $x$-axis.
 :::
 
 ## Tests for Extrema and Convexity
@@ -225,7 +225,7 @@ If $f'(c) = 0$ and $f''(c) < 0$ then $f$ has a local maximum at $c$; if $f''(c) 
 ::: Proof
 Suppose $f''(c) < 0$. Since $f'(c) = 0$,
 
-$$f''(c) = \lim_{x\to c}\frac{f'(x) - f'(c)}{x - c} = \lim_{x\to c}\frac{f'(x)}{x - c} < 0,$$
+$$f''(c) = \lim_{x\rightarrow c}\frac{f'(x) - f'(c)}{x - c} = \lim_{x\rightarrow c}\frac{f'(x)}{x - c} < 0,$$
 
 so near $c$ we have $f'(x)/(x - c) < 0$. That is, to the left of $c$ ($x < c$) we have $f'(x) > 0$ and to the right $f'(x) < 0$, so by [Proposition 12](#prop12), $c$ is a local maximum.
 :::
@@ -239,15 +239,15 @@ Cauchy's mean value theorem converts $0/0$ indeterminate limits into a ratio of 
 ::: Theorem 18 (L'Hôpital's Rule)
 Let $f, g$ be differentiable near $a$ with $g' \neq 0$, and suppose
 
-$$\lim_{x\to a} f(x) = \lim_{x\to a} g(x) = 0.$$
+$$\lim_{x\rightarrow a} f(x) = \lim_{x\rightarrow a} g(x) = 0.$$
 
 If the limit
 
-$$\lim_{x\to a} f'(x)/g'(x) = L$$
+$$\lim_{x\rightarrow a} f'(x)/g'(x) = L$$
 
 exists, then
 
-$$\lim_{x \to a} \frac{f(x)}{g(x)} = L.$$
+$$\lim_{x \rightarrow a} \frac{f(x)}{g(x)} = L.$$
 :::
 
 ::: Proof
@@ -255,23 +255,23 @@ Define (or redefine) $f(a) = g(a) = 0$ so that both functions are continuous at 
 
 $$\frac{f(x)}{g(x)} = \frac{f(x) - f(a)}{g(x) - g(a)} = \frac{f'(\xi_x)}{g'(\xi_x)}$$
 
-for some $\xi_x$ between $a$ and $x$. As $x \to a$ we also have $\xi_x \to a$, so the right-hand side converges to $L$.
+for some $\xi_x$ between $a$ and $x$. As $x \rightarrow a$ we also have $\xi_x \rightarrow a$, so the right-hand side converges to $L$.
 :::
 
 For example,
 
-$$\lim_{x\to 0} (\sin x)/x$$
+$$\lim_{x\rightarrow 0} (\sin x)/x$$
 
-is of the form $0/0$, and the ratio of derivatives is $\cos x / 1 \to 1$, so the value is $1$. L'Hôpital's rule can be applied repeatedly if the ratio after one application is again indeterminate. The theorem above only treated the $0/0$ form at a finite point, but the same Cauchy mean value argument extends to cases involving infinity.
+is of the form $0/0$, and the ratio of derivatives is $\cos x / 1 \rightarrow 1$, so the value is $1$. L'Hôpital's rule can be applied repeatedly if the ratio after one application is again indeterminate. The theorem above only treated the $0/0$ form at a finite point, but the same Cauchy mean value argument extends to cases involving infinity.
 
 ::: Remark 19
 L'Hôpital's rule also holds in the following variants.
 
-1. One-sided limits $x \to a^+$, $x \to a^-$: the proof works unchanged if we send $x$ to $a$ from only one side.
-2. The $0/0$ form as $x \to \infty$: substitute $t = 1/x$; then $F(t) = f(1/t)$, $G(t) = g(1/t)$ become a $0/0$ form as $t \to 0^+$, and by the chain rule $F'(t)/G'(t) = f'(1/t)/g'(1/t)$, so case 1 reduces it.
-3. The $\infty/\infty$ form where numerator and denominator both diverge as $x \to a$ requires a small additional argument. Fix $x_0$; then for $x$ between $a$ and $x_0$, by [Theorem 6](#thm6) there exists $\xi$ between $x$ and $x_0$ such that
+1. One-sided limits $x \rightarrow a^+$, $x \rightarrow a^-$: the proof works unchanged if we send $x$ to $a$ from only one side.
+2. The $0/0$ form as $x \rightarrow \infty$: substitute $t = 1/x$; then $F(t) = f(1/t)$, $G(t) = g(1/t)$ become a $0/0$ form as $t \rightarrow 0^+$, and by the chain rule $F'(t)/G'(t) = f'(1/t)/g'(1/t)$, so case 1 reduces it.
+3. The $\infty/\infty$ form where numerator and denominator both diverge as $x \rightarrow a$ requires a small additional argument. Fix $x_0$; then for $x$ between $a$ and $x_0$, by [Theorem 6](#thm6) there exists $\xi$ between $x$ and $x_0$ such that
     
     $$\frac{f(x)-f(x_0)}{g(x)-g(x_0)}=\frac{f'(\xi)}{g'(\xi)}.$$
     
-    Choosing $x_0$ close to $a$ forces $\xi$ close to $a$ as well, so under the hypothesis of [Theorem 18](#thm18) the right-hand side converges to $L$ as $\xi \to a$. Hence by taking $x_0$ sufficiently close to $a$, the left-hand ratio can be made arbitrarily close to $L$. Finally, since $f(x), g(x)\to\infty$ as $x\to a$, the fixed terms $f(x_0), g(x_0)$ become negligible, so this ratio has the same limit as $f(x)/g(x)$, and therefore $\lim_{x\to a} f(x)/g(x)=L$.
+    Choosing $x_0$ close to $a$ forces $\xi$ close to $a$ as well, so under the hypothesis of [Theorem 18](#thm18) the right-hand side converges to $L$ as $\xi \rightarrow a$. Hence by taking $x_0$ sufficiently close to $a$, the left-hand ratio can be made arbitrarily close to $L$. Finally, since $f(x), g(x)\rightarrow\infty$ as $x\rightarrow a$, the fixed terms $f(x_0), g(x_0)$ become negligible, so this ratio has the same limit as $f(x)/g(x)$, and therefore $\lim_{x\rightarrow a} f(x)/g(x)=L$.
 :::

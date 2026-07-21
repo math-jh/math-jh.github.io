@@ -21,7 +21,7 @@ Now we define the surface integral by adding one more variable to the line integ
 ::: Definition 1
 A $C^1$ map defined on a planar region $D$
 
-$\mathbf{r}\colon D \to \mathbb{R}^3$, $\mathbf{r}(u, v) = (x(u,v), y(u,v), z(u,v))$
+$\mathbf{r}\colon D \rightarrow \mathbb{R}^3$, $\mathbf{r}(u, v) = (x(u,v), y(u,v), z(u,v))$
 
 is called a *parametrized surface*.
 :::
@@ -38,7 +38,7 @@ is the normal vector of the surface. We call a surface with $\mathbf{N} \neq 0$ 
 If we partition the surface into small rectangles in the parameter domain, each piece is approximated by a small parallelogram on the tangent plane—specifically, the parallelogram spanned by $\mathbf{r}_u\Delta u$ and $\mathbf{r}_v\Delta v$. Since its area is $\lvert \mathbf{r}_u \times \mathbf{r}_v\rvert\Delta u\Delta v$, taking the limit of the sum gives the surface area.
 
 ::: Definition 2
-The *surface area* of a regular parametrized surface $\mathbf{r}\colon D \to \mathbb{R}^3$ is
+The *surface area* of a regular parametrized surface $\mathbf{r}\colon D \rightarrow \mathbb{R}^3$ is
 
 $$\iint_D \lvert \mathbf{r}_u \times \mathbf{r}_v\rvert \mathop{du}\mathop{dv}$$
 

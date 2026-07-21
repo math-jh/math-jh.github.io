@@ -25,9 +25,9 @@ published: false
 Homotopy 이론적 정련의 출발점은 대상을 하나의 고정된 집합이나 모듈이 아니라, 첨자 위에서 정합적으로 붙은 대상들의 열, 곧 *simplicial* 대상으로 보는 것이다. 그 첨자를 지배하는 것이 다음의 조합적 범주이다.
 
 ::: 정의 1
-*단체 첨자 범주<sub>simplicial index category</sub>* $\Delta$는 대상이 각 정수 $n\geq0$에 대한 유한 ordered set $[n]=\{0<1<\cdots<n\}$이고, 사상이 순서를 보존하는 함수인 범주이다. 범주 $\mathcal{C}$에서의 *simplicial object*란 functor $X:\Delta^{\op}\rightarrow\mathcal{C}$를 뜻하며, $X_n=X([n])$이라 적는다. $\mathcal{C}=\Set$일 때 이를 *simplicial set*, $\mathcal{C}$가 $A$-module들의 범주일 때 *simplicial module*이라 부른다.
+*단체 첨자 범주<sub>simplicial index category</sub>* $\Delta$는 대상이 각 정수 $n\geq0$에 대한 유한 ordered set $[n]=\{0<1<\cdots<n\}$이고, 사상이 순서를 보존하는 함수인 범주이다. 범주 $\mathcal{C}$에서의 *simplicial object<sub>단체 대상</sub>*란 functor $X:\Delta^{\op}\rightarrow\mathcal{C}$를 뜻하며, $X_n=X([n])$이라 적는다. $\mathcal{C}=\Set$일 때 이를 *simplicial set<sub>단체 집합</sub>*, $\mathcal{C}$가 $A$-module들의 범주일 때 *simplicial module<sub>단체 가군</sub>*이라 부른다.
 
-$\Delta$의 사상은 $i$번째 원소를 건너뛰는 단사 *coface* $\delta^i:[n-1]\rightarrow[n]$과 $i$번째 원소를 겹치는 전사 *codegeneracy* $\sigma^i:[n+1]\rightarrow[n]$으로 생성되므로, simplicial object $X$는 그 상 $X_n$들과 함께 *face map* $d_i=X(\delta^i):X_n\rightarrow X_{n-1}$과 *degeneracy map* $s_i=X(\sigma^i):X_n\rightarrow X_{n+1}$ ($0\leq i\leq n$)으로 완전히 결정되며, 이들은 *simplicial identity*, 곧 face 사이의 $d_id_j=d_{j-1}d_i$ ($i<j$), face와 degeneracy 사이의 $d_is_j=s_{j-1}d_i$ ($i<j$)와 $d_js_j=d_{j+1}s_j=\id$와 $d_is_j=s_jd_{i-1}$ ($i>j+1$), 그리고 degeneracy 사이의 $s_is_j=s_{j+1}s_i$ ($i\leq j$)를 만족한다.
+$\Delta$의 사상은 $i$번째 원소를 건너뛰는 단사 *coface<sub>여면</sub>* $\delta^i:[n-1]\rightarrow[n]$과 $i$번째 원소를 겹치는 전사 *codegeneracy<sub>여퇴화</sub>* $\sigma^i:[n+1]\rightarrow[n]$으로 생성되므로, simplicial object $X$는 그 상 $X_n$들과 함께 *face map<sub>면 사상</sub>* $d_i=X(\delta^i):X_n\rightarrow X_{n-1}$과 *degeneracy map<sub>퇴화 사상</sub>* $s_i=X(\sigma^i):X_n\rightarrow X_{n+1}$ ($0\leq i\leq n$)으로 완전히 결정되며, 이들은 *simplicial identity<sub>단체 항등식</sub>*, 곧 face 사이의 $d_id_j=d_{j-1}d_i$ ($i<j$), face와 degeneracy 사이의 $d_is_j=s_{j-1}d_i$ ($i<j$)와 $d_js_j=d_{j+1}s_j=\id$와 $d_is_j=s_jd_{i-1}$ ($i>j+1$), 그리고 degeneracy 사이의 $s_is_j=s_{j+1}s_i$ ($i\leq j$)를 만족한다.
 :::
 
 직관적으로 $X_n$은 "$n$-단체들의 모임"이고, face map은 한 단체의 $i$번째 면을 취하며, degeneracy map은 낮은 차원의 단체를 퇴화한 높은 차원 단체로 밀어 넣는다. Ring이나 module 같은 대수적 대상 $\mathcal{C}$에서의 simplicial object는 이렇게 조합적으로 얽힌 대상들의 열로서, 하나의 대상만으로는 볼 수 없는 higher homotopy 정보를 실어 나른다. Simplicial module의 경우 이 정보는 놀랍도록 깔끔한 대수적 형태로 번역되는데, 그 다리가 normalization 사슬 복합체이다.
@@ -66,7 +66,7 @@ Dold–Kan 대응은 이 글의 전략 전체를 떠받친다. Simplicial module
 ::: 정의 4
 $k$ 위의 finitely generated polynomial ring들이 이루는 범주를 $\operatorname{Poly}_k$라 하자. *animated commutative ring<sub>애니메이트 가환환</sub>*들의 $\infty$-범주 $\operatorname{Ani}(\mathrm{CRing}_k)$은 $\operatorname{Poly}_k$의 *sifted colimit completion*, 곧 sifted colimit에 대해 닫혀 있으면서 $\operatorname{Poly}_k$를 compact projective 생성원으로 갖는 가장 작은 $\infty$-범주로 정의된다. 동치로, 이는 simplicial commutative $k$-algebra들에 약한 동치의 역을 형식적으로 붙여 얻는 $\infty$-범주이다.
 
-$\operatorname{Poly}_k$에서의 대상, 곧 $k[\x_1,\ldots,\x_n]$을 *free animated ring*이라 부른다. 일반적으로 집합 $S$에 대한 free animated ring은 $S$가 첨자하는 변수들의 polynomial ring $k[\x_s]_{s\in S}$이며, 이는 밑범주로의 forgetful functor의 왼쪽 수반이 주는 자유 대상이다 ([\[범주론\] §수반함자](/ko/math/category_theory/adjoints)).
+$\operatorname{Poly}_k$에서의 대상, 곧 $k[\x_1,\ldots,\x_n]$을 *free animated ring<sub>자유 애니메이트 환</sub>*이라 부른다. 일반적으로 집합 $S$에 대한 free animated ring은 $S$가 첨자하는 변수들의 polynomial ring $k[\x_s]_{s\in S}$이며, 이는 밑범주로의 forgetful functor의 왼쪽 수반이 주는 자유 대상이다 ([\[범주론\] §수반함자](/ko/math/category_theory/adjoints)).
 :::
 
 이 정의의 요체는 "polynomial ring은 이미 완벽하므로 손대지 않고, 나머지 ring은 polynomial ring들의 정합적 limit으로 재구성한다"는 *비아벨 유도 함자<sub>nonabelian derived functor</sub>*의 철학이다. 한 ordinary ring $B$를 이 $\infty$-범주 안에서 보려면, $B$를 free animated ring들의 simplicial diagram $P_\bullet$의 homotopy colimit으로 실현한다. Sifted colimit을 요구하는 이유는 정확히 이것인데, 유한곱과 정합적인 colimit인 sifted colimit만이 대수 구조 (곱셈)를 limit 뒤에도 보존하기 때문이다 ([\[범주론\] §극한, ⁋정의 2](/ko/math/category_theory/limits#def2)의 colimit 개념). 실용적으로는 Dold–Kan 대응을 통해, animated $k$-algebra를 "각 항이 polynomial ring인 simplicial commutative ring $P_\bullet$"으로 다루어도 무방하다.

@@ -39,10 +39,10 @@ Since $f$ is continuous on $[x, x+h]$, by [§Continuous Functions, ⁋Theorem 4]
 
 $$m_h \leq \frac{F(x+h) - F(x)}{h} \leq M_h$$
 
-holds. Now as $h \to 0$, the interval $[x, x+h]$ shrinks to the single point $x$, and by the continuity of $f$ we have $m_h, M_h \to f(x)$; thus by [§Limits of Functions, ⁋Proposition 8](/en/math/calculus/functions_and_limits#prop8) the average rate of change converges to $f(x)$. The case $h < 0$ can be handled in a similar manner to complete the proof.
+holds. Now as $h \rightarrow 0$, the interval $[x, x+h]$ shrinks to the single point $x$, and by the continuity of $f$ we have $m_h, M_h \rightarrow f(x)$; thus by [§Limits of Functions, ⁋Proposition 8](/en/math/calculus/functions_and_limits#prop8) the average rate of change converges to $f(x)$. The case $h < 0$ can be handled in a similar manner to complete the proof.
 :::
 
-This theorem is a rigorous expression of the intuition that <em-ko>the rate at which area accumulates is precisely the height</em-ko>. That is, the rate at which the function $F(x)$ defined by integration increases at a point, $F'(x)$, is exactly the value of the integrand at that point, $f(x)$.
+This theorem is a rigorous expression of the intuition that *the rate at which area accumulates is precisely the height*. That is, the rate at which the function $F(x)$ defined by integration increases at a point, $F'(x)$, is exactly the value of the integrand at that point, $f(x)$.
 
 ::: Corollary 2
 Every function continuous on $[a,b]$ has a primitive. Specifically, $F(x) = \int_a^x f(t)\mathop{dt}$ is one such primitive.
@@ -50,7 +50,7 @@ Every function continuous on $[a,b]$ has a primitive. Specifically, $F(x) = \int
 
 The $F(x)$ defined above fixes the constant of integration $C$ to a single value; concretely, one may think of it as choosing the constant of integration so that $F(a)=0$.
 
-On the other hand, this corollary is a different story from the claim that the integral of an arbitrary function can be expressed in terms of elementary functions: it only says that $\int_a^x f(t)\mathop{dt}$ defined by the above formula is <em-ko>in itself</em-ko> a primitive of $f$. Consider the following example.
+On the other hand, this corollary is a different story from the claim that the integral of an arbitrary function can be expressed in terms of elementary functions: it only says that $\int_a^x f(t)\mathop{dt}$ defined by the above formula is *in itself* a primitive of $f$. Consider the following example.
 
 ::: Example 3 (Derivatives of special functions)
 The *error function* is defined by

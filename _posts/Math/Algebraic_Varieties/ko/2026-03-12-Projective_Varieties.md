@@ -128,11 +128,11 @@ $$U_i = \{[x_0 : \cdots : x_n] \in \mathbb{P}^n \mid x_i \ne 0\}$$
 :::
 
 ::: 증명
-표기의 편의를 위해 $i=0$인 경우를 증명한다. $U_0$의 경우, map $\varphi_0: U_0 \to \mathbb{A}^n$을
+표기의 편의를 위해 $i=0$인 경우를 증명한다. $U_0$의 경우, map $\varphi_0: U_0 \rightarrow \mathbb{A}^n$을
 
 $$\varphi_0([x_0 : x_1 : \cdots : x_n]) = \left(\frac{x_1}{x_0}, \ldots, \frac{x_n}{x_0}\right)$$
 
-으로 정의하자. 역함수 $\psi_0: \mathbb{A}^n \to U_0$는
+으로 정의하자. 역함수 $\psi_0: \mathbb{A}^n \rightarrow U_0$는
 
 $$\psi_0(a_1, \ldots, a_n) = [1 : a_1 : \cdots : a_n]$$
 
@@ -229,7 +229,7 @@ Projective variety $X \subseteq \mathbb{P}^n$의 affine cone $C(X)$은 다음 �
 마지막으로 우리는 projective variety들의 morphism을 정의한다. 앞서 우리는 projective algebraic set을 정의할 때 다항식들의 zero set이 projective space의 집합을 잘 정의하지 않는 것을 확인하였는데, 비슷한 일이 morphism을 정의할 때도 일어나며 그 해결책은 이번에도 homogeneous polynomial이다. 
 
 ::: 정의 15
-함수 $\varphi: X \to Y$가 projective variety $X \subseteq \mathbb{P}^n$과 $Y \subseteq \mathbb{P}^m$ 사이의 *morphism<sub>사상</sub>*이라는 것은, 각각의 점 $x$마다 적당한 homogeneous polynomials $F_0, \ldots, F_m$ of the same degree가 존재하여
+함수 $\varphi: X \rightarrow Y$가 projective variety $X \subseteq \mathbb{P}^n$과 $Y \subseteq \mathbb{P}^m$ 사이의 *morphism<sub>사상</sub>*이라는 것은, 각각의 점 $x$마다 적당한 homogeneous polynomials $F_0, \ldots, F_m$ of the same degree가 존재하여
 
 $$\varphi(x) = [F_0(x) : \cdots : F_m(x)]$$
 

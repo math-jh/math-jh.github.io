@@ -26,11 +26,11 @@ Variety $X$ 위에 정의된 Weil divisor $D=\sum n_i D_i$가 *effective*라는 
 그렇다면 우리의 목적은 divisor $D$의 divisor class 안에서 어떠한 effective divisor가 존재하는지 살펴보는 것이다. 이를 위해 divisor $D$가 정의하는 line bundle $\mathcal{L}=\mathcal{O}_X(D)$를 생각하자. ([§선다발과 벡터다발, ⁋정의 17](/ko/math/algebraic_varieties/line_bundles#def17)) 우리는 $\mathcal{L}$의 각각의 nonzero global section $s\in \Gamma(X, \mathcal{L})$는 pole이 없으므로 effective divisor $\divisor(s)$를 정의하며, 이는 원래의 $D$와 trivialization만큼만 차이나는 것을 확인할 수 있으므로 $D$와 linearly equivalent하다. 즉 $D$와 linearly equivalent한 effective divisor를 찾기 위해선 $\mathcal{O}_X(D)$의 nonzero global section을 보면 된다. 다만 주의할 사항은 $\divisor(s)$는 $s$ 자체가 아니라 $s$의 nonzero multiple에 의존한다는 것으로, 이때문에 우리가 관심을 가져야할 대상은 $\Gamma(X, \mathcal{L})$ 자체가 아니라 그 projectivization이다. 
 
 ::: 정의 2
-Variety $X$ 위의 line bundle $\mathcal{L}$에 대하여, $\mathcal{L}$의 *complete linear system*은 $\mathcal{L}$의 global section space $\Gamma(X, \mathcal{L})$의 projectivization
+Variety $X$ 위의 line bundle $\mathcal{L}$에 대하여, $\mathcal{L}$의 *complete linear system<sub>완비 선형계</sub>*은 $\mathcal{L}$의 global section space $\Gamma(X, \mathcal{L})$의 projectivization
 
 $$\lvert \mathcal{L} \rvert = \mathbb{P}(\Gamma(X, \mathcal{L}))$$
 
-이다. $\mathcal{L}$에 대한 *linear system*은 $\lvert \mathcal{L} \rvert$의 nonempty projective subspace이다. 즉, 부분벡터공간 $V \subseteq \Gamma(X, \mathcal{L})$에 대해 $\mathbb{P}(V) \subseteq \lvert \mathcal{L} \rvert$의 꼴이다.
+이다. $\mathcal{L}$에 대한 *linear system<sub>선형계</sub>*은 $\lvert \mathcal{L} \rvert$의 nonempty projective subspace이다. 즉, 부분벡터공간 $V \subseteq \Gamma(X, \mathcal{L})$에 대해 $\mathbb{P}(V) \subseteq \lvert \mathcal{L} \rvert$의 꼴이다.
 :::
 
 ## Projective space의 linear system
@@ -89,7 +89,7 @@ $$0=F(1,-i,0)=a_{00}-a_{11}-ia_{01}$$
 
 물론 [정의 2](#def2)는 $X$가 projective space이든 quasi-projective variety이든 임의의 variety에 동일하게 적용된다. 그러나 우리가 위의 [예시 3](#ex3)을 이렇게 공들여 계산한 이유는, 임의의 quasi-projective variety $X\subseteq \mathbb{P}^n$에 대해서도 $D$가 어떠한 $\mathcal{O}_{\mathbb{P}^n}(d)$에서 온다면 homogeneous polynomial의 언어를 그대로 사용할 수 있기 때문이다. 즉 이 경우 restriction map
 
-$$\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(d)) \to \Gamma(X, \mathcal{O}_{\mathbb{P}^n}(d)\vert_X)$$
+$$\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(d)) \rightarrow \Gamma(X, \mathcal{O}_{\mathbb{P}^n}(d)\vert_X)$$
 
 은 homogeneous polynomial $F \in \mathbb{K}[\x_0, \ldots, \x_n]_d$를 $X$ 위의 section으로 보내며, 그 kernel은 $I(X)$의 차수 $d$인 homogeneous part $I(X)_d$이다. 따라서
 
@@ -120,7 +120,7 @@ $$\mathbb{P}^2\rightarrow \mathbb{P}^1;\qquad [\x_0,\x_1,\x_2]\mapsto [\x_0^2+\x
 이를 엄밀하게 기술하기 위해, Weil divisor $D = \sum n_i D_i$의 *support*를 $\operatorname{Supp}(D) = \bigcup_{n_i \neq 0} D_i$로 정의한다. 즉, support는 divisor에서 계수가 $0$이 아닌 prime divisor들의 합집합이다. 이를 이용하면 다음이 잘 정의된다.
 
 ::: 정의 4
-Linear system $L \subseteq \lvert \mathcal{L} \rvert$의 *base locus* $\operatorname{Bs}(L)$는 $L$의 모든 원소가 공유하는 closed subset이다. 구체적으로, $L = \mathbb{P}(V)$에서 $V \subseteq \Gamma(X, \mathcal{L})$일 때,
+Linear system $L \subseteq \lvert \mathcal{L} \rvert$의 *base locus<sub>기저점 자취</sub>* $\operatorname{Bs}(L)$는 $L$의 모든 원소가 공유하는 closed subset이다. 구체적으로, $L = \mathbb{P}(V)$에서 $V \subseteq \Gamma(X, \mathcal{L})$일 때,
 
 $$\operatorname{Bs}(L) = \bigcap_{s \in V \setminus \{0\}} \operatorname{Supp}(\divisor(s))$$
 
@@ -130,12 +130,12 @@ $$\operatorname{Bs}(L) = \bigcap_{s \in V \setminus \{0\}} \operatorname{Supp}(\
 특히 $\mathbb{P}^n$의 hypersurface 계산에서는 $V \subseteq \mathbb{K}[\x_0, \ldots, \x_n]_d$에 대해 $\operatorname{Bs}(L) = \bigcap_{[F] \in L} Z(F)$와 동일하다. 그럼 우리가 하고 싶었던 정의는 다음의 정의이다. 
 
 ::: 정의 5
-$L$이 *basepoint-free*라는 것은 $\operatorname{Bs}(L) = \emptyset$인 것이다. 즉, 임의의 점 $p \in X$에서 $p$를 지나지 않는 $L$의 원소가 항상 존재한다.
+$L$이 *basepoint-free<sub>기저점 없음</sub>*라는 것은 $\operatorname{Bs}(L) = \emptyset$인 것이다. 즉, 임의의 점 $p \in X$에서 $p$를 지나지 않는 $L$의 원소가 항상 존재한다.
 :::
 
 Basepoint-free linear system의 핵심적인 성질은 다음과 같다. $L=\mathbb{P}(V)$가 basepoint-free이면 $V$의 기저 $F_0,\ldots,F_r$는 $\bigcap Z(F_i)\cap X=\emptyset$을 만족하므로, 이를 사용하면 다음의 regular map
 
-$$\varphi_L:X\to\mathbb{P}^r,\quad p\mapsto[F_0(p):\cdots:F_r(p)]$$
+$$\varphi_L:X\rightarrow\mathbb{P}^r,\quad p\mapsto[F_0(p):\cdots:F_r(p)]$$
 
 을 정의된다. 우리가 처음 linear system에 관심을 가진 것은 주어진 divisor $D$에 대해 $D$와 linearly equivalent한 effective divisor를 찾기 위해서였는데, 다음 명제는 이에 대한 직접적인 대답을 준다.
 
@@ -164,7 +164,7 @@ $$\lvert \mathcal{O}_{\mathbb{P}^2}(1)\rvert=\mathbb{P}(\mathbb{K}[\x_0,\x_1,\x_
 ::: 예시 8
 $\mathbb{P}^1$에서 $d \ge 1$일 때, $\lvert \mathcal{O}_{\mathbb{P}^1}(d) \rvert$의 complete linear system이 정의하는 map은
 
-$$\nu_d: \mathbb{P}^1 \to \mathbb{P}^d, \quad [s : t] \mapsto [s^d : s^{d-1}t : \cdots : t^d]$$
+$$\nu_d: \mathbb{P}^1 \rightarrow \mathbb{P}^d, \quad [s : t] \mapsto [s^d : s^{d-1}t : \cdots : t^d]$$
 
 이다. 이는 [§사영다양체, ⁋예시 16](/ko/math/algebraic_varieties/projective_varieties#ex16)에서 살펴본 Veronese embedding을 complete linear system의 언어로 복원할 수 있다는 것을 보여준다. 
 
@@ -188,7 +188,7 @@ $$\nu_d^{-1}(H_1) = \{[s:t] \in \mathbb{P}^1 \mid s^d - t^d = 0\}$$
 그러나 추상적인 variety에서도 line bundle과 linear system 등등을 모두 정의할 수 있다. 그럼 특히 [명제 6](#prop6)을 사용하면 projective space로의 적절한 함수를 정의할 수 있게 된다. 다음 정의의 중요성은 이러한 맥락에서 이해해야 한다.
 
 ::: 정의 9
-Line bundle $\mathcal{L}$ (또는 대응하는 linear system $\lvert \mathcal{L} \rvert$)이 *very ample*이라는 것은, complete linear system $\lvert \mathcal{L} \rvert = \mathbb{P}(\Gamma(X, \mathcal{L}))$이 정의하는 regular map $\varphi_{\mathcal{L}}: X \to \mathbb{P}(\Gamma(X, \mathcal{L}))$이 closed embedding인 것이다.
+Line bundle $\mathcal{L}$ (또는 대응하는 linear system $\lvert \mathcal{L} \rvert$)이 *very ample*이라는 것은, complete linear system $\lvert \mathcal{L} \rvert = \mathbb{P}(\Gamma(X, \mathcal{L}))$이 정의하는 regular map $\varphi_{\mathcal{L}}: X \rightarrow \mathbb{P}(\Gamma(X, \mathcal{L}))$이 closed embedding인 것이다.
 :::
 
 이것이 잘 정의되려면 $\varphi_L$이 basis의 선택에 의존하지 않아야 하며, 실제로 그러하다는 것을 쉽게 확인할 수 있다. 
@@ -200,7 +200,7 @@ Very ample의 정의에서 핵심은 사상이 단순한 morphism이 아니라 *
 이 예시는 너무 간단한 예시이기는 하지만, 만일 $\mathbb{P}^n$보다 복잡한 어떤 공간이 있고, 이 공간의 복잡성이 특정한 line bundle의 꼬임만으로는 (올바른 방향임에도) 해소가 안 된다면, 우리는 이것이 해소될 때까지 더욱 더 꼬임을 추가해줄 수 있을 것이다. 이러한 상상으로부터 다음을 정의한다.
 
 ::: 정의 10
-$\mathcal{L}$이 *ample*이라는 것은 어떤 $m > 0$에 대해 $\mathcal{L}^{\otimes m}$이 very ample인 것이다.
+$\mathcal{L}$이 *ample<sub>풍부한</sub>*이라는 것은 어떤 $m > 0$에 대해 $\mathcal{L}^{\otimes m}$이 very ample인 것이다.
 :::
 
 이 정의의 유용성을 보려면 ample이지만 very ample은 아닌 line bundle을 갖는 공간을 생각해야겠지만, 아직은 그러한 공간을 소개하기에는 다소 이르다. 하지만 머지 않아 그러한 공간을 다루게 되면 ampleness가 본격적으로 그 쓸모를 증명하게 된다. 

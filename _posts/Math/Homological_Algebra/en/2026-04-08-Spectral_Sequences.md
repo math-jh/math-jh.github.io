@@ -60,7 +60,7 @@ The most important fact about a filtration is that when a filtered complex $A^\b
 ::: Definition 3
 Let $(A^\bullet, F)$ be a filtered complex. The image at the cohomology level of the inclusion $F^pA^\bullet\rightarrow A^\bullet$ is defined by
 
-$$F^p H^n = \operatorname{im}\bigl(H^n(F^p A^\bullet) \to H^n(A^\bullet)\bigr)$$
+$$F^p H^n = \operatorname{im}\bigl(H^n(F^p A^\bullet) \rightarrow H^n(A^\bullet)\bigr)$$
 :::
 
 This filtration consists of the cohomology classes induced by cocycles contained in $F^p A^\bullet$. As $p$ increases, $F^p A^\bullet$ becomes smaller, so $F^p H^n$ also becomes smaller.
@@ -137,11 +137,11 @@ holds, and $E_{r+1}^{p,q} \cong H(E_r, d_r)$.
 Moreover, the spectral sequence defined in this way also enjoys a form of functoriality.
 
 ::: Proposition 8
-Let $f : (A^\bullet, F) \to (B^\bullet, G)$ be a chain map between filtered complexes. That is, for each $p$,
+Let $f : (A^\bullet, F) \rightarrow (B^\bullet, G)$ be a chain map between filtered complexes. That is, for each $p$,
 
 $$f(F^p A^\bullet) \subset G^p B^\bullet$$
 
-holds. Then $f$ induces a well-defined map $f_r : E_r(A) \to E_r(B)$ for each $r$.
+holds. Then $f$ induces a well-defined map $f_r : E_r(A) \rightarrow E_r(B)$ for each $r$.
 :::
 ::: Proof
 Since $f$ is a chain map, it sends cocycles to cocycles and boundaries to boundaries. Also, since $f(F^p) \subset G^p$, we have $f(Z_r^{p,q}(A)) \subset Z_r^{p,q}(B)$ and $f(B_r^{p,q}(A)) \subset B_r^{p,q}(B)$. Therefore $f$ induces a well-defined map on each $E_r$.

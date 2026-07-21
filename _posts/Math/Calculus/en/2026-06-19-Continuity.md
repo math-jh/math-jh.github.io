@@ -23,7 +23,7 @@ Intuitively, a continuous function is one that is "connected without breaks," bu
 ::: Definition 1
 A function $f$ is said to be *continuous* at a point $a$ in its domain if
 
-$$\lim_{x \to a} f(x) = f(a)$$
+$$\lim_{x \rightarrow a} f(x) = f(a)$$
 
 holds. If $f$ is continuous at every point of its domain, we call $f$ a *continuous function*.
 :::
@@ -37,7 +37,7 @@ holds. Here the condition $0 < \lvert x-a\rvert$ excluding $x = a$ has disappear
 Unpacking this definition, we see that three things must all be satisfied for continuity to hold.
 
 1. $f(a)$ is defined. 
-2. The limit $\lim_{x\to a} f(x)$ exists.
+2. The limit $\lim_{x\rightarrow a} f(x)$ exists.
 3. The two values above are equal.
 
 The type of discontinuity depends on which of these conditions fails; we will return to this after examining some basic properties of continuous functions.
@@ -95,9 +95,9 @@ The proofs of these two theorems essentially require the *completeness* of the r
 Finally, it is convenient to classify the ways in which continuity can fail, as this helps describe the behavior of functions.
 
 ::: Definition 6 (Classification of Discontinuities)
-When a function $f$ is discontinuous at a point $a$, we divide the situation into three cases according to the behavior of the two one-sided limits $\lim_{x\to a^\pm} f(x)$.
+When a function $f$ is discontinuous at a point $a$, we divide the situation into three cases according to the behavior of the two one-sided limits $\lim_{x\rightarrow a^\pm} f(x)$.
 
-1. *Removable discontinuity*: the limit $\lim_{x\to a} f(x)$ exists but is different from $f(a)$, or $f(a)$ is undefined. Redefining (or defining) $f(a)$ to be the limit value restores continuity. Example: $(x^2-1)/(x-1)$ at $a=1$.
+1. *Removable discontinuity*: the limit $\lim_{x\rightarrow a} f(x)$ exists but is different from $f(a)$, or $f(a)$ is undefined. Redefining (or defining) $f(a)$ to be the limit value restores continuity. Example: $(x^2-1)/(x-1)$ at $a=1$.
 2. *Jump discontinuity*: both one-sided limits exist but are different. Example: $\lvert x\rvert/x$ at $a=0$.
 3. *Essential discontinuity*: at least one of the one-sided limits does not exist (oscillates or diverges). Example: $\sin(1/x)$ at $a=0$.
 :::
@@ -107,7 +107,7 @@ When a function $f$ is discontinuous at a point $a$, we divide the situation int
 An important application of the Intermediate Value Theorem is the continuity of inverse functions. A function is said to be *strictly increasing* (or strictly decreasing) on an interval if $x_1 < x_2$ always implies $f(x_1) < f(x_2)$ (or $>$); such functions are collectively called *strictly monotone*. A strictly monotone function is obviously injective, so it has an inverse on its image.
 
 ::: Proposition 7
-If $f$ is continuous and strictly monotone on an interval $I$, then its image $J = f(I)$ is also an interval, and the inverse function $f^{-1} : J \to I$ is likewise a continuous strictly monotone function.
+If $f$ is continuous and strictly monotone on an interval $I$, then its image $J = f(I)$ is also an interval, and the inverse function $f^{-1} : J \rightarrow I$ is likewise a continuous strictly monotone function.
 :::
 
 ::: Proof

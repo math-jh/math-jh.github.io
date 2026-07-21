@@ -52,14 +52,14 @@ Irreducible morphism들을 한 module $C$ 둘레에서 한꺼번에 포착하기
 ::: 정의 3
 $A$-module 사상에 대하여 다음을 정의한다.
 
-1. 사상 $g:B\rightarrow C$가 *right almost split*이라는 것은 $g$가 retraction이 아니며, retraction이 아닌 임의의 사상 $h:X\rightarrow C$가 $g$를 통하여 인수분해되는 것이다. 곧 $h=g h'$인 $h':X\rightarrow B$가 존재한다.
-2. 사상 $f:A\rightarrow B$가 *left almost split*이라는 것은 $f$가 section이 아니며, section이 아닌 임의의 사상 $h:A\rightarrow Y$가 $f$를 통하여 인수분해되는 것이다. 곧 $h=h' f$인 $h':B\rightarrow Y$가 존재한다.
+1. 사상 $g:B\rightarrow C$가 *right almost split<sub>오른쪽 거의 분할</sub>*이라는 것은 $g$가 retraction이 아니며, retraction이 아닌 임의의 사상 $h:X\rightarrow C$가 $g$를 통하여 인수분해되는 것이다. 곧 $h=g h'$인 $h':X\rightarrow B$가 존재한다.
+2. 사상 $f:A\rightarrow B$가 *left almost split<sub>왼쪽 거의 분할</sub>*이라는 것은 $f$가 section이 아니며, section이 아닌 임의의 사상 $h:A\rightarrow Y$가 $f$를 통하여 인수분해되는 것이다. 곧 $h=h' f$인 $h':B\rightarrow Y$가 존재한다.
 
 short exact sequence
 
 $$0\longrightarrow A\xrightarrow{\ f\ }B\xrightarrow{\ g\ }C\longrightarrow 0$$
 
-이 *almost split sequence*<sub>거의 분할 수열</sub> 또는 *Auslander–Reiten sequence*라는 것은, 이 열이 split하지 않으며, $f$가 left almost split이고 $g$가 right almost split인 것이다.
+이 *almost split sequence<sub>거의 분할 수열</sub>* 또는 *Auslander–Reiten sequence<sub>Auslander–Reiten 수열</sub>*라는 것은, 이 열이 split하지 않으며, $f$가 left almost split이고 $g$가 right almost split인 것이다.
 :::
 
 이 정의의 비대칭적 모양에도 불구하고 두 조건은 서로를 강하게 제약한다. $g$가 right almost split이고 $C$로의 split epimorphism이 아니라는 것은, $C$로 가는 모든 사상 가운데 split epi로 들어오지 못하는 것들이 전부 $B$를 경유함을 뜻한다. 특히 항등사상 $\id_C:C\rightarrow C$는 retraction이지만, $C$가 indecomposable일 때 $C$의 proper submodule이나 다른 indecomposable로부터 들어오는 비자명한 사상은 모두 $g$를 통과한다. Almost split sequence에서 $A$와 $C$가 자동으로 indecomposable이 됨을 다음에서 확인한다.
@@ -94,7 +94,7 @@ $$\theta^{-1}=\id_B+(f\rho)+(f\rho)^2+\cdots+(f\rho)^n$$
 이제 non-projective indecomposable $C$로부터 almost split sequence의 시작점이 될 module을 구성한다. 두 단계를 거치는데, 먼저 right module 쪽으로 옮기는 *transpose* $\Tr$를, 다음으로 다시 left module로 되돌리는 *duality* $\D$를 적용한다. Transpose는 $C$의 minimal projective presentation을 dualize하여 얻는다. 여기서 $C$의 *projective cover*는 전사 $P_0\twoheadrightarrow C$ 가운데 $P_0$의 차원이 최소인 것이며, 유한차원 대수 위에서 항상 존재한다.
 
 ::: 정의 5
-유한차원 left $A$-module $C$의 *minimal projective presentation*<sub>최소 사영 표시</sub>은 exact sequence
+유한차원 left $A$-module $C$의 *minimal projective presentation<sub>최소 사영 표시</sub>*은 exact sequence
 
 $$P_1\xrightarrow{\ p_1\ }P_0\xrightarrow{\ p_0\ }C\longrightarrow 0$$
 
@@ -102,7 +102,7 @@ $$P_1\xrightarrow{\ p_1\ }P_0\xrightarrow{\ p_0\ }C\longrightarrow 0$$
 
 $$P_0^{\ast}\xrightarrow{\ p_1^{\ast}\ }P_1^{\ast}\longrightarrow \Tr C\longrightarrow 0$$
 
-을 얻으며, $C$의 *transpose*<sub>전치</sub>를
+을 얻으며, $C$의 *transpose<sub>전치</sub>*를
 
 $$\Tr C=\coker\bigl(p_1^{\ast}:P_0^{\ast}\rightarrow P_1^{\ast}\bigr)$$
 
@@ -112,11 +112,11 @@ $$\Tr C=\coker\bigl(p_1^{\ast}:P_0^{\ast}\rightarrow P_1^{\ast}\bigr)$$
 functor $(-)^{\ast}=\Hom_A(-,A)$는 left $A$-module을 right $A$-module로 보내며, projective module $P$에 대하여 $P^{\ast}$ 또한 projective right module이다. Minimal projective presentation은 projective cover의 유일성에 의하여 isomorphism을 무시하면 유일하게 결정되므로, $\Tr C$ 또한 그러하다. 다만 $\Tr$는 projective summand에 둔감하다. $C$가 projective이면 $P_1=0$으로 둘 수 있어 $\Tr C=0$이 되며, 일반적으로 $\Tr$는 projective을 제외한 부분에서만 잘 정의된 대응을 준다. 다음으로 $k$ 위의 duality를 도입하여 right module을 다시 left module로 되돌린다.
 
 ::: 정의 6
-유한차원 대수 $A$ 위의 module $M$에 대하여, $k$ 위의 *duality*를
+유한차원 대수 $A$ 위의 module $M$에 대하여, $k$ 위의 *duality<sub>쌍대성</sub>*를
 
 $$\D M=\Hom_k(M,k)$$
 
-로 정의한다. $M$이 left $A$-module이면 $\D M$ 위에 $(\xi\cdot a)(m)=\xi(am)$ ($\xi\in\D M$, $a\in A$, $m\in M$) 으로 right $A$-action을 주어 $\D M$을 right $A$-module로 만들고, symmetric으로 right module을 left module로 옮긴다. 유한차원 벡터공간 위에서 evaluation 사상 $M\rightarrow\D\D M$이 isomorphism이므로 $\D$는 left와 right module category 사이의 contravariant equivalence이다. 이를 이용하여 non-projective indecomposable left $A$-module $C$의 *Auslander–Reiten translate*<sub>AR 변환</sub>를
+로 정의한다. $M$이 left $A$-module이면 $\D M$ 위에 $(\xi\cdot a)(m)=\xi(am)$ ($\xi\in\D M$, $a\in A$, $m\in M$) 으로 right $A$-action을 주어 $\D M$을 right $A$-module로 만들고, symmetric으로 right module을 left module로 옮긴다. 유한차원 벡터공간 위에서 evaluation 사상 $M\rightarrow\D\D M$이 isomorphism이므로 $\D$는 left와 right module category 사이의 contravariant equivalence이다. 이를 이용하여 non-projective indecomposable left $A$-module $C$의 *Auslander–Reiten translate<sub>AR 변환</sub>*를
 
 $$\tau C=\D\Tr C$$
 

@@ -29,7 +29,7 @@ $$
 콤팩트 지향 Riemannian manifold $(M, g)$ 위에서 형식들에 점별 내적과 전역 $L^2$-내적을 부여하는 데서 출발한다. 차원을 $m = \dim_{\mathbb{R}} M$이라 하자. 계량 $g$는 각 점에서 cotangent space $T_x^\ast M$에 내적을 주고, 이를 exterior algebra $\Lambda^k T_x^\ast M$로 끌어올리면 $k$-형식들에 점별 내적 $\langle \cdot, \cdot \rangle_x$가 생긴다. 지향성은 표준 부피형식 $\mathrm{vol}_g$를 정해 주며, 이 둘을 결합하면 차수를 바꾸는 선형 동형이 따라온다.
 
 ::: 정의 1
-콤팩트 지향 Riemannian manifold $(M, g)$의 차원을 $m$이라 하자. *Hodge star operator<sub>Hodge 별작용소</sub>* $\ast : \Lambda^k T^\ast M \to \Lambda^{m-k} T^\ast M$를, 모든 $k$-형식 $\alpha, \beta$에 대하여
+콤팩트 지향 Riemannian manifold $(M, g)$의 차원을 $m$이라 하자. *Hodge star operator<sub>호지 별작용소</sub>* $\ast : \Lambda^k T^\ast M \rightarrow \Lambda^{m-k} T^\ast M$를, 모든 $k$-형식 $\alpha, \beta$에 대하여
 
 $$
 \alpha \wedge \ast\beta = \langle \alpha, \beta \rangle\, \mathrm{vol}_g
@@ -38,7 +38,7 @@ $$
 가 성립하도록 정의되는 유일한 선형사상이라 한다.
 :::
 
-이 식이 $\ast\beta$를 유일하게 결정함은 wedge 곱 $\Lambda^k \times \Lambda^{m-k} \to \Lambda^m$이 non-degenerate bilinear form이기 때문이다. 곧 좌변 $\alpha \wedge \ast\beta$가 모든 $\alpha$에 대해 우변과 같아야 한다는 조건이 $\ast\beta \in \Lambda^{m-k}$를 한 점씩 결정한다. 정규직교 기저 $e_1, \ldots, e_m$에서는 $\ast(e_{i_1} \wedge \cdots \wedge e_{i_k}) = \pm\, e_{j_1} \wedge \cdots \wedge e_{j_{m-k}}$로, 보각 index의 곱에 지향이 정하는 부호를 붙인 것이다. Hodge star는 두 번 적용하면 부호만 남겨 항등작용소에 가까워진다. 곧 $k$-형식 위에서 $\ast\ast = (-1)^{k(m-k)}$이다.
+이 식이 $\ast\beta$를 유일하게 결정함은 wedge 곱 $\Lambda^k \times \Lambda^{m-k} \rightarrow \Lambda^m$이 non-degenerate bilinear form이기 때문이다. 곧 좌변 $\alpha \wedge \ast\beta$가 모든 $\alpha$에 대해 우변과 같아야 한다는 조건이 $\ast\beta \in \Lambda^{m-k}$를 한 점씩 결정한다. 정규직교 기저 $e_1, \ldots, e_m$에서는 $\ast(e_{i_1} \wedge \cdots \wedge e_{i_k}) = \pm\, e_{j_1} \wedge \cdots \wedge e_{j_{m-k}}$로, 보각 index의 곱에 지향이 정하는 부호를 붙인 것이다. Hodge star는 두 번 적용하면 부호만 남겨 항등작용소에 가까워진다. 곧 $k$-형식 위에서 $\ast\ast = (-1)^{k(m-k)}$이다.
 
 전역 내적은 이 점별 내적을 콤팩트성으로 적분하여 얻는다.
 
@@ -55,7 +55,7 @@ $$
 둘째 등식은 [정의 1](#def1)에서 즉시 따라오며, $\langle \cdot, \cdot \rangle$이 각 점에서 양의 정부호이고 $M$이 콤팩트라 적분이 유한하므로 $(\cdot, \cdot)$은 양의 정부호 내적이 된다. 복소값 형식에 대해서는 둘째 변수에 복소켤레를 넣어 $(\alpha, \beta) = \int_M \alpha \wedge \ast\bar\beta$로 두면 Hermitian 내적이 된다. 이 $L^2$-내적이 있어야 exterior derivative $d$의 수반작용소를 말할 수 있다.
 
 ::: 정의 3
-콤팩트 지향 Riemannian manifold $M$ 위에서 exterior derivative $d : \Omega^k(M) \to \Omega^{k+1}(M)$의 *형식 수반작용소<sub>formal adjoint</sub>* $d^\ast : \Omega^{k+1}(M) \to \Omega^k(M)$를, 모든 $\alpha \in \Omega^k$, $\beta \in \Omega^{k+1}$에 대하여
+콤팩트 지향 Riemannian manifold $M$ 위에서 exterior derivative $d : \Omega^k(M) \rightarrow \Omega^{k+1}(M)$의 *형식 수반작용소<sub>formal adjoint</sub>* $d^\ast : \Omega^{k+1}(M) \rightarrow \Omega^k(M)$를, 모든 $\alpha \in \Omega^k$, $\beta \in \Omega^{k+1}$에 대하여
 
 $$
 (d\alpha, \beta) = (\alpha, d^\ast\beta)
@@ -71,7 +71,7 @@ $$
 Riemannian metric과 수반작용소가 갖추어지면, 각 미분작용소에 그 자신과 수반작용소를 결합한 이차 작용소를 붙일 수 있다. 이것이 형식 위의 Laplace 작용소이며, 그 kernel이 조화형식이다.
 
 ::: 정의 4
-콤팩트 지향 Riemannian manifold $M$ 위에서 *Hodge–de Rham Laplacian<sub>Hodge–de Rham Laplace 작용소</sub>* $\Delta_d : \Omega^k(M) \to \Omega^k(M)$를
+콤팩트 지향 Riemannian manifold $M$ 위에서 *Hodge–de Rham Laplacian<sub>호지-드람 라플라스 작용소</sub>* $\Delta_d : \Omega^k(M) \rightarrow \Omega^k(M)$를
 
 $$
 \Delta_d = d d^\ast + d^\ast d
@@ -208,7 +208,7 @@ $$
 H^{p,q}(X) = \{ [\alpha] \in H^{p+q}_{\mathrm{dR}}(X, \mathbb{C}) \mid \alpha \in \mathcal{H}^{p,q}_{\bar\partial}(X) \}
 $$
 
-로, 곧 $(p,q)$-차수의 조화형식이 대표하는 de Rham cohomology class들의 공간으로 정의한다. 그 복소차원 $h^{p,q}(X) = \dim_{\mathbb{C}} H^{p,q}(X)$를 *Hodge number<sub>Hodge 수</sub>*라 한다.
+로, 곧 $(p,q)$-차수의 조화형식이 대표하는 de Rham cohomology class들의 공간으로 정의한다. 그 복소차원 $h^{p,q}(X) = \dim_{\mathbb{C}} H^{p,q}(X)$를 *Hodge number<sub>호지 수</sub>*라 한다.
 :::
 
 [정리 7](#thm7)에 의해 $\mathcal{H}^{p,q}_{\bar\partial}(X) \subseteq \mathcal{H}^{p+q}_d(X)$이므로, 각 $(p,q)$-조화형식은 닫힌형식이고 de Rham 류를 잘 정의한다. 또 콤팩트 Hermitian manifold에서 Dolbeault cohomology가 $\bar\partial$-조화형식으로 실현되므로 ([정리 6](#thm6)의 $\bar\partial$-판본), $H^{p,q}(X)$는 $H^{p,q}_{\bar\partial}(X)$와 자연히 isomorphic이다. 곧 $H^{p,q}(X) \cong H^{p,q}_{\bar\partial}(X) \cong H^q(X, \Omega^p)$로, 마지막 동형은 [§Dolbeault 코호몰로지, ⁋정리 9](/ko/math/complex_geometry/dolbeault_cohomology#thm9)에서 온다. 이 동일시가 Hodge 수가 [§Dolbeault 코호몰로지, ⁋정의 4](/ko/math/complex_geometry/dolbeault_cohomology#def4)의 Hodge 수와 일치함을 보장한다.
@@ -302,13 +302,13 @@ $\mathbb{CP}^n$의 Hodge 다이아몬드가 대각선($p = q$)에만 무게가 �
 Kähler 형식 $\omega$는 cohomology에 한 가지 추가 구조를 더 새긴다. Kähler 류 $[\omega] \in H^2(X, \mathbb{R})$와의 cup 곱이 cohomology에 작용하는 연산자가 되며, 이것이 Hodge 분해와 어울려 강력한 대칭을 낳는다.
 
 ::: 정의 12
-콤팩트 Kähler manifold $X$ ($n = \dim_{\mathbb{C}} X$)의 *Lefschetz operator<sub>Lefschetz 연산자</sub>* $L : H^k(X, \mathbb{C}) \to H^{k+2}(X, \mathbb{C})$를 Kähler 류와의 곱
+콤팩트 Kähler manifold $X$ ($n = \dim_{\mathbb{C}} X$)의 *Lefschetz operator<sub>렙셰츠 연산자</sub>* $L : H^k(X, \mathbb{C}) \rightarrow H^{k+2}(X, \mathbb{C})$를 Kähler 류와의 곱
 
 $$
 L([\alpha]) = [\omega \wedge \alpha] = [\omega] \cup [\alpha]
 $$
 
-로 정의한다. 그 $L^2$-수반작용소 $\Lambda : H^k(X, \mathbb{C}) \to H^{k-2}(X, \mathbb{C})$를 *contraction operator<sub>축약 연산자</sub>*라 한다.
+로 정의한다. 그 $L^2$-수반작용소 $\Lambda : H^k(X, \mathbb{C}) \rightarrow H^{k-2}(X, \mathbb{C})$를 *contraction operator<sub>축약 연산자</sub>*라 한다.
 :::
 
 연산자 $L$이 cohomology에서 잘 정의됨은 $\omega$가 닫힌형식이라 닫힌형식을 닫힌형식으로, 완전형식을 완전형식으로 보내기 때문이다. $L$은 차수를 $2$씩 올리며, $\omega$가 실 $(1,1)$-형식이므로 $H^{p,q}$를 $H^{p+1, q+1}$로 보내 Hodge 분해와 어울린다. 형식 수준에서 $L$과 $\Lambda = L^\ast$는 [§Kähler 다양체, ⁋정리 12](/ko/math/complex_geometry/kahler_manifolds#thm12)에 나온 바로 그 작용소들이며, cohomology로 내려와 다음 정리를 만족한다.
@@ -320,7 +320,7 @@ $$
 L^{n-k} : H^k(X, \mathbb{C}) \xrightarrow{\ \cong\ } H^{2n-k}(X, \mathbb{C})
 $$
 
-은 동형이다. 더 나아가 $k$번째 *primitive cohomology<sub>원시 cohomology</sub>*를 $P^k = \ker(L^{n-k+1} : H^k \to H^{2n-k+2})$로 두면, *Lefschetz 분해<sub>Lefschetz decomposition</sub>*
+은 동형이다. 더 나아가 $k$번째 *primitive cohomology<sub>원시 cohomology</sub>*를 $P^k = \ker(L^{n-k+1} : H^k \rightarrow H^{2n-k+2})$로 두면, *Lefschetz 분해<sub>Lefschetz decomposition</sub>*
 
 $$
 H^k(X, \mathbb{C}) = \bigoplus_{j \geq 0} L^j\, P^{k-2j}
@@ -329,7 +329,7 @@ $$
 이 성립한다.
 :::
 
-이 정리는 Hodge 정리와 같은 타원작용소 이론의 산물로, $L$, $\Lambda$, 그리고 차수를 세는 작용소 $H = [L, \Lambda]$가 콤팩트 Kähler manifold의 조화형식 공간 위에서 $\mathfrak{sl}_2$의 표현을 이룬다는 사실에서 따라온다. 그 표현론적 구조가 $L^{n-k}$의 동형성과 primitive 분해를 동시에 강제한다. 우리는 이 정리를 증명 없이 인용하며, 그 형식 수준의 핵심 입력인 Kähler 항등식은 [§Kähler 다양체, ⁋정리 12](/ko/math/complex_geometry/kahler_manifolds#thm12)에서 이미 확보하였다. Hard Lefschetz 정리의 한 가지 즉각적 귀결은 Betti 수의 단봉성, 곧 $b_0 \leq b_2 \leq \cdots \leq b_{2\lfloor n/2 \rfloor}$이며 ($L^{n-k}$가 단사라 $b_k \leq b_{2n-k}$이고 Poincaré 쌍대로 $b_k = b_{2n-k}$, 또 $L$이 $k \leq n-1$에서 단사라 $b_k \leq b_{k+2}$), 이는 콤팩트 Kähler manifold의 Hodge 다이아몬드가 중앙으로 갈수록 넓어지는 형태임을 뜻한다. $\mathbb{CP}^n$의 Hodge 다이아몬드에서 $L : H^{2p} \to H^{2p+2}$이 $0 \leq p \leq n-1$에서 동형이라는 것이 그 가장 단순한 예이며 ([예시 11](#ex11)), 거기서 모든 짝수 cohomology가 $[\omega^p]$로 생성됨이 바로 $L^p[\,1\,] = [\omega^p]$의 비소멸로 설명된다.
+이 정리는 Hodge 정리와 같은 타원작용소 이론의 산물로, $L$, $\Lambda$, 그리고 차수를 세는 작용소 $H = [L, \Lambda]$가 콤팩트 Kähler manifold의 조화형식 공간 위에서 $\mathfrak{sl}_2$의 표현을 이룬다는 사실에서 따라온다. 그 표현론적 구조가 $L^{n-k}$의 동형성과 primitive 분해를 동시에 강제한다. 우리는 이 정리를 증명 없이 인용하며, 그 형식 수준의 핵심 입력인 Kähler 항등식은 [§Kähler 다양체, ⁋정리 12](/ko/math/complex_geometry/kahler_manifolds#thm12)에서 이미 확보하였다. Hard Lefschetz 정리의 한 가지 즉각적 귀결은 Betti 수의 단봉성, 곧 $b_0 \leq b_2 \leq \cdots \leq b_{2\lfloor n/2 \rfloor}$이며 ($L^{n-k}$가 단사라 $b_k \leq b_{2n-k}$이고 Poincaré 쌍대로 $b_k = b_{2n-k}$, 또 $L$이 $k \leq n-1$에서 단사라 $b_k \leq b_{k+2}$), 이는 콤팩트 Kähler manifold의 Hodge 다이아몬드가 중앙으로 갈수록 넓어지는 형태임을 뜻한다. $\mathbb{CP}^n$의 Hodge 다이아몬드에서 $L : H^{2p} \rightarrow H^{2p+2}$이 $0 \leq p \leq n-1$에서 동형이라는 것이 그 가장 단순한 예이며 ([예시 11](#ex11)), 거기서 모든 짝수 cohomology가 $[\omega^p]$로 생성됨이 바로 $L^p[\,1\,] = [\omega^p]$의 비소멸로 설명된다.
 
 ---
 

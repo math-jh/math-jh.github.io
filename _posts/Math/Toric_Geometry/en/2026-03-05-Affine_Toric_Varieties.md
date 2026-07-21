@@ -26,7 +26,7 @@ An abelian group $N$ isomorphic to $\mathbb{Z}^n$ is called a *lattice*. The *du
 
 $$M = \Hom(N, \mathbb{Z}).$$
 
-The natural evaluation pairing $M\times N \to \mathbb{Z}$, $(m, v) \mapsto m(v)$ is then called the *dual pairing*.
+The natural evaluation pairing $M\times N \rightarrow \mathbb{Z}$, $(m, v) \mapsto m(v)$ is then called the *dual pairing*.
 :::
 
 For convenience we introduce the two notations
@@ -182,7 +182,7 @@ With this notation addition of two elements is given by
 
 $$t + t' = e_1 \otimes (z_1 z_1') + \cdots + e_n \otimes (z_n z_n') = (z_1 z_1', \ldots, z_n z_n'),$$
 
-so $T_N$ is naturally identified with the multiplicative group $(\mathbb{C}^\ast)^n$. Now for an element $m \in M = \Hom(N, \mathbb{Z})$ we define a group homomorphism $\rchi^m : T_N \to \mathbb{C}^\ast$ by the formula
+so $T_N$ is naturally identified with the multiplicative group $(\mathbb{C}^\ast)^n$. Now for an element $m \in M = \Hom(N, \mathbb{Z})$ we define a group homomorphism $\rchi^m : T_N \rightarrow \mathbb{C}^\ast$ by the formula
 
 $$\rchi^m(t) := z^{m(v)}, \qquad t = v \otimes z \in T_N, \; m(v) \in \mathbb{Z}.$$
 
@@ -204,7 +204,7 @@ $$\rchi^m(t) = z_1^{m_1} \cdots z_n^{m_n}.$$
 
 Thus the *character group* $\Hom(T_N, \mathbb{C}^\ast)$ is isomorphic to the dual lattice $M$.
 
-Building on this understanding of the torus, we now define a $T_N$-action on $U_\sigma = \Spec(\mathbb{C}[S_\sigma])$. Since $\Spec$ is a contravariant functor, a geometric action $T_N \times U_\sigma \to U_\sigma$ is encoded by a comodule structure on the coordinate ring $\mathbb{C}[S_\sigma]$; how this contravariance manifests at the level of points will be checked directly in [Example 14](#ex14).
+Building on this understanding of the torus, we now define a $T_N$-action on $U_\sigma = \Spec(\mathbb{C}[S_\sigma])$. Since $\Spec$ is a contravariant functor, a geometric action $T_N \times U_\sigma \rightarrow U_\sigma$ is encoded by a comodule structure on the coordinate ring $\mathbb{C}[S_\sigma]$; how this contravariance manifests at the level of points will be checked directly in [Example 14](#ex14).
 
 Specifically, define the $\mathbb{C}$-algebra homomorphism $\rho$ on the coordinate ring $\mathbb{C}[S_\sigma]$ by
 
@@ -212,7 +212,7 @@ $$\rho : \mathbb{C}[S_\sigma] \longrightarrow \mathbb{C}[S_\sigma] \otimes_{\mat
 
 Here $\mathbb{C}[M] = \mathbb{C}[\rchi^m \mid m \in M]$ is the coordinate ring of $T_N$, and $\rchi^u \in \mathbb{C}[S_\sigma]$ is the eigenvector of weight $u$. That $\rho$ is a well-defined algebra homomorphism can be verified directly from bilinearity.
 
-Strictly speaking, $\mathbb{C}[S_\sigma] \otimes \mathbb{C}[M]$ corresponds geometrically, after taking $\Spec$, to the map $U_\sigma \times T_N \to U_\sigma$, so this is the comorphism of a right action of $T_N$. However, because $T_N$ is abelian we may treat right and left actions as the same, and we shall regard it as a left action $T_N \times U_\sigma \to U_\sigma$. Then for each $t \in T_N$, the action of $t$ on $\mathbb{C}[S_\sigma]$ is given by the composition
+Strictly speaking, $\mathbb{C}[S_\sigma] \otimes \mathbb{C}[M]$ corresponds geometrically, after taking $\Spec$, to the map $U_\sigma \times T_N \rightarrow U_\sigma$, so this is the comorphism of a right action of $T_N$. However, because $T_N$ is abelian we may treat right and left actions as the same, and we shall regard it as a left action $T_N \times U_\sigma \rightarrow U_\sigma$. Then for each $t \in T_N$, the action of $t$ on $\mathbb{C}[S_\sigma]$ is given by the composition
 
 $$\mathbb{C}[S_\sigma] \xrightarrow{\rho} \mathbb{C}[S_\sigma] \otimes_{\mathbb{C}} \mathbb{C}[M] \xrightarrow{\id \otimes \ev_t} \mathbb{C}[S_\sigma] \otimes_{\mathbb{C}} \mathbb{C} \cong \mathbb{C}[S_\sigma].$$
 
@@ -231,10 +231,10 @@ Then this $\rho$ defines a $T_N$-action on $U_\sigma$, and for each $t \in T_N$ 
 
 $$t \cdot \rchi^u = \rchi^u(t) \rchi^u.$$
 
-Here $\rchi^u : T_N \to \mathbb{C}^\ast$ is the character corresponding to $u \in M$, and $\rchi^u(t) \in \mathbb{C}^\ast$ is its value.
+Here $\rchi^u : T_N \rightarrow \mathbb{C}^\ast$ is the character corresponding to $u \in M$, and $\rchi^u(t) \in \mathbb{C}^\ast$ is its value.
 :::
 
-A word of caution is in order: the symbol $\rchi^u$ has been used in two different senses in the discussion above. First, by definition it is a group homomorphism $T_N \to \mathbb{C}^\ast$; but when regarded as an element of the vector space $\mathbb{C}[S_\sigma]$, we think of it as the eigenvector of weight $u$. The formula
+A word of caution is in order: the symbol $\rchi^u$ has been used in two different senses in the discussion above. First, by definition it is a group homomorphism $T_N \rightarrow \mathbb{C}^\ast$; but when regarded as an element of the vector space $\mathbb{C}[S_\sigma]$, we think of it as the eigenvector of weight $u$. The formula
 
 $$t\cdot \rchi^u=\rchi^u(t)\rchi^u$$
 

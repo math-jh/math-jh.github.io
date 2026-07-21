@@ -206,11 +206,11 @@ $$\int_0^1 x\mathop{dx}$$
 
 의 리만 합은
 
-$$\sum_{i=1}^n \frac{i}{n}\cdot\frac1n = \frac{1}{n^2}\cdot\frac{n(n+1)}{2} = \frac{n+1}{2n} \to \frac12$$
+$$\sum_{i=1}^n \frac{i}{n}\cdot\frac1n = \frac{1}{n^2}\cdot\frac{n(n+1)}{2} = \frac{n+1}{2n} \rightarrow \frac12$$
 
 이고, 같은 방식으로
 
-$$\int_0^1 x^2\mathop{dx} = \lim_{n\to\infty}\sum_{i=1}^n \frac{i^2}{n^3} = \lim_{n\to\infty}\frac{n(n+1)(2n+1)}{6n^3} = \frac13$$
+$$\int_0^1 x^2\mathop{dx} = \lim_{n\rightarrow\infty}\sum_{i=1}^n \frac{i^2}{n^3} = \lim_{n\rightarrow\infty}\frac{n(n+1)(2n+1)}{6n^3} = \frac13$$
 
 이다. 특히 첫째 결과의 경우 삼각형의 넓이공식으로부터 자명하게 검산 또한 가능하다. 
 

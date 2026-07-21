@@ -117,7 +117,7 @@ the right-hand side becomes
 
 $$\left(\sum_{j\geq 1} a_{j,j}(T_1^jT_2^j-1)\right)+\sum_{d>0}\left(\sum_{j\geq 1}a_{j+d,j}T_1^d(T_1^jT_2^j-1)\right)+\sum_{d>0}\left(\sum_{j\geq 1}a_{j,j+d}T_2^d(T_1^jT_2^j-1)\right).$$
 
-Since each $T_1^jT_2^j-1$ is contained in $(T_1T_2-1)$, the kernel of the above expression is <em-ko>exactly</em-ko> the ideal $(T_1T_2-1)$ in $(S^{-1}A)_0[T_1,T_2]$. On the other hand, since this homomorphism is surjective by definition, we obtain the desired result.
+Since each $T_1^jT_2^j-1$ is contained in $(T_1T_2-1)$, the kernel of the above expression is *exactly* the ideal $(T_1T_2-1)$ in $(S^{-1}A)_0[T_1,T_2]$. On the other hand, since this homomorphism is surjective by definition, we obtain the desired result.
 :::
 
 ## Homogeneous Localization

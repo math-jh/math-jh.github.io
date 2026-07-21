@@ -214,7 +214,7 @@ $B=U\rtimes T$이고 $W_I\subseteq W$이므로 $P_I$는 $B$와 $W_I$의 대표�
 $G=\GL_n(\mathbb{C})$에서는 이 분해가 block 행렬로 곧장 드러난다. $I$에서 빠진 simple root $\alpha_k$마다 $k$와 $k+1$ 사이가 끊겨 $\{1,\ldots,n\}$이 토막으로 나뉘고, $P_I$는 그 토막들을 대각 block으로 갖는 block upper triangular matrix들의 모임이다. 이 때 대각 block들이 reductive Levi $L_I\cong\GL_{k_1}\times\cdots\times\GL_{k_r}$를, 대각 위쪽 block들이 unipotent radical $U_I$를 이룬다. 이제 parabolic subgroup $P=P_I$에 대한 $G/P$의 cell decomposition을 얻으려면 Weyl group $W$를 $W_I$로 quotient해야 한다. 이 때 각 coset을 대표하는 표준적인 방법은 minimal length 원소를 고르는 것이다.
 
 ::: 정의 11
-Parabolic subgroup $W_I\subseteq W$에 대하여, *minimal length coset representatives*의 모임 $W^I$는 다음과 같이 정의된다.
+Parabolic subgroup $W_I\subseteq W$에 대하여, *minimal length coset representatives<sub>최소 길이 잉여류 대표원</sub>*의 모임 $W^I$는 다음과 같이 정의된다.
 
 $$W^I=\{w\in W\mid\ell(ws_i)>\ell(w)\text{ for all }\alpha_i\in I\}$$
 :::
@@ -315,7 +315,7 @@ $$\begin{pmatrix}\ast&1&0&0\\\ast&0&1&0\end{pmatrix},\quad\begin{pmatrix}\ast&1&
 이제 partial flag variety $X=G/P$ 위의 cell들과 그 closure를 이름 붙여 정리하자. $B$와 그 opposite Borel $B^-$를 고정하면 두 방향의 cell 구조를 동시에 얻는다.
 
 ::: 정의 16
-$w\in W^P$에 대하여, *Schubert cell* $X_w^\circ$와 *opposite Schubert cell* $X^w_\circ$를 각각
+$w\in W^P$에 대하여, *Schubert cell<sub>슈베르트 셀</sub>* $X_w^\circ$와 *opposite Schubert cell<sub>반대 슈베르트 셀</sub>* $X^w_\circ$를 각각
 
 $$X_w^\circ=BwP/P\subseteq G/P,\qquad X^w_\circ=B^-wP/P\subseteq G/P$$
 
@@ -323,7 +323,7 @@ $$X_w^\circ=BwP/P\subseteq G/P,\qquad X^w_\circ=B^-wP/P\subseteq G/P$$
 
 $$X_w=\overline{X_w^\circ},\qquad X^w=\overline{X^w_\circ}$$
 
-를 각각 *Schubert variety*와 *opposite Schubert variety*라 한다.
+를 각각 *Schubert variety*와 *opposite Schubert variety<sub>반대 슈베르트 다양체</sub>*라 한다.
 :::
 
 정의에 의해 $X_w^\circ\cong\mathbb{A}^{\ell(w)}$이고 $X^w_\circ\cong\mathbb{A}^{\dim(G/P)-\ell(w)}$이다. 특히 $X_{w_0^P}^\circ$ ($w_0^P$는 $W^P$의 longest element)는 $\ell(w_0^P)=\dim(G/P)$인 open dense cell이고, $X_e^\circ=\{eP\}$는 $B$-fixed point이다. 대칭적으로 opposite 쪽에서는 $X^e_\circ=B^-P/P$가 open dense cell, $X^{w_0^P}_\circ=\{w_0^PP\}$가 $B^-$-fixed point가 된다. 즉 두 cell 구조는 서로 차원을 뒤집은 형태로 맞물린다.

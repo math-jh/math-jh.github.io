@@ -67,7 +67,7 @@ $$\eta_{ab} := \int_X T_a \cup T_b,\qquad (\eta^{ab}) := (\eta_{ab})^{-1}$$
 로 놓는다. Dual basis는 $T^a := \sum_b \eta^{ab} T_b$로 정의되며, $\int_X T_a \cup T^b = \delta_a^b$를 만족한다.
 
 ::: 정의 4
-*Small quantum product* $\ast_q : H^\ast(X, \mathbb{C}) \otimes_\mathbb{C} H^\ast(X, \mathbb{C}) \to H^\ast(X, \mathbb{C}) \otimes_\mathbb{C} \Lambda$는
+*Small quantum product* $\ast_q : H^\ast(X, \mathbb{C}) \otimes_\mathbb{C} H^\ast(X, \mathbb{C}) \rightarrow H^\ast(X, \mathbb{C}) \otimes_\mathbb{C} \Lambda$는
 
 $$T_a \ast_q T_b := \sum_{\beta \in H_2(X, \mathbb{Z})_{\mathrm{eff}}} \sum_c \langle T_a, T_b, T_c \rangle_{0, 3, \beta}^X\, \eta^{cd}\, T_d\, q^\beta$$
 
@@ -125,7 +125,7 @@ $X$를 closed symplectic manifold라 하자. Small quantum product $\ast_q$는 �
 
 $$\langle 1, T_a, T_b \rangle_{0, 3, 0}^X = \int_X 1 \cup T_a \cup T_b = \eta_{ab}$$
 
-이고, $\beta \neq 0$인 경우 $\overline{\mathcal{M}}_{0, 3}(X, \beta) \to \overline{\mathcal{M}}_{0, 2}(X, \beta)$의 forgetful map의 fiber dimension 계산을 거치면 $\langle 1, T_a, T_b \rangle_{0, 3, \beta}^X = 0$ ($\beta \neq 0$). 따라서
+이고, $\beta \neq 0$인 경우 $\overline{\mathcal{M}}_{0, 3}(X, \beta) \rightarrow \overline{\mathcal{M}}_{0, 2}(X, \beta)$의 forgetful map의 fiber dimension 계산을 거치면 $\langle 1, T_a, T_b \rangle_{0, 3, \beta}^X = 0$ ($\beta \neq 0$). 따라서
 
 $$1 \ast_q T_a = \sum_\beta \langle 1, T_a, T_c \rangle_{0, 3, \beta}^X\, \eta^{cd} T_d\, q^\beta = \sum_c \eta_{ac}\, T^c = T_a.$$
 
@@ -152,7 +152,7 @@ $$QH^\ast(X) := \left( H^\ast(X, \mathbb{C}) \otimes_\mathbb{C} \Lambda,\ \ast_q
 를 $X$의 *small quantum cohomology ring<sub>작은 양자 코호몰로지 환</sub>*이라 부른다.
 :::
 
-$q \to 0$의 극한은 모든 $\beta \neq 0$ 항을 제거하는 것이며, 이 극한에서 $\ast_q$는 classical cup product로 환원된다. 즉 $QH^\ast(X) / (q) \cong H^\ast(X, \mathbb{C})$가 ring isomorphic하다. 이런 의미에서 quantum cohomology는 classical cohomology의 *Novikov 방향의 deformation*이다.
+$q \rightarrow 0$의 극한은 모든 $\beta \neq 0$ 항을 제거하는 것이며, 이 극한에서 $\ast_q$는 classical cup product로 환원된다. 즉 $QH^\ast(X) / (q) \cong H^\ast(X, \mathbb{C})$가 ring isomorphic하다. 이런 의미에서 quantum cohomology는 classical cohomology의 *Novikov 방향의 deformation*이다.
 
 ## 사영공간의 양자 코호몰로지
 
@@ -258,7 +258,7 @@ $$\sum_{k \ge 0} \frac{1}{k!}\, \langle T_a, T_b, T_c, \underbrace{t_2, \ldots, 
 가 된다. 즉 $H^2$ 방향을 켜는 효과는 Novikov 변수를 $q^\beta \mapsto e^{\langle t_2, \beta\rangle} q^\beta$로 reparametrize하는 것에 지나지 않으며, $H^2$ 방향의 deformation은 이미 small quantum product의 $q$ 안에 들어 있다 (이런 의미에서 $q_a = e^{t^a}$로 두기도 한다). 따라서 정말로 새로운 deformation은 차수가 $2$가 아닌 방향 ($\deg T_a \neq 2$)에서 나오는데, 이 방향들은 divisor equation으로 지수함수로 접히지 않아 $t$에 대한 멱급수로 남는다. 이렇게 cohomology class 자체를 deformation 매개변수로 삼아 모든 방향을 켠 가장 일반적인 곱셈이 *big quantum product*이다.
 
 ::: 정의 12
-$t = \sum_a t^a T_a \in H^\ast(X, \mathbb{C})$를 형식적 변수, *Gromov-Witten potential*을
+$t = \sum_a t^a T_a \in H^\ast(X, \mathbb{C})$를 형식적 변수, *Gromov-Witten potential<sub>그로모프-위튼 퍼텐셜</sub>*을
 
 $$F(t) := \sum_{n \geq 3,\, \beta} \frac{1}{n!} \langle \underbrace{t, \ldots, t}_{n \text{ copies}} \rangle_{0, n, \beta}^X\, q^\beta$$
 
@@ -269,7 +269,7 @@ $$T_a \circ_t T_b := \sum_{c, d}\, \partial_a \partial_b \partial_c F(t)\, \eta^
 로 정의되며, [정리 6](#thm6)과 동일한 논증으로 graded commutative associative ring을 이룬다.
 :::
 
-Big quantum product에서 $t \to 0$의 극한은 small quantum product의 specialization과 일치한다. 즉 $T_a \circ_0 T_b = T_a \ast_q T_b$. 더욱이 small quantum product와 마찬가지로 $q \to 0$의 극한은 classical cup product $T_a \cup T_b$을 회복한다. 이로써 quantum cohomology는 cohomology class 방향 ($t$)과 Novikov variable 방향 ($q$)의 두 deformation을 동시에 갖는 구조임이 드러난다.
+Big quantum product에서 $t \rightarrow 0$의 극한은 small quantum product의 specialization과 일치한다. 즉 $T_a \circ_0 T_b = T_a \ast_q T_b$. 더욱이 small quantum product와 마찬가지로 $q \rightarrow 0$의 극한은 classical cup product $T_a \cup T_b$을 회복한다. 이로써 quantum cohomology는 cohomology class 방향 ($t$)과 Novikov variable 방향 ($q$)의 두 deformation을 동시에 갖는 구조임이 드러난다.
 
 [정리 6](#thm6)의 ring 공리는 small과 big 양쪽에 모두 적용되며, 두 deformation 방향 모두에서 결합법칙과 super-commutativity가 보존된다. 이러한 다중 deformation 구조의 정합성은 GW invariant의 [§Gromov-Witten 불변량, ⁋명제 3](/ko/math/symplectic_geometry/gromov_witten#prop3), [⁋명제 4](/ko/math/symplectic_geometry/gromov_witten#prop4), [⁋명제 5](/ko/math/symplectic_geometry/gromov_witten#prop5)의 통합적 귀결이라 할 수 있다.
 

@@ -122,11 +122,11 @@ Each $U_i$ is homeomorphic (in the subspace topology) to affine space $\mathbb{A
 :::
 
 ::: Proof
-For notational convenience we prove the case $i=0$. Define the map $\varphi_0: U_0 \to \mathbb{A}^n$ by
+For notational convenience we prove the case $i=0$. Define the map $\varphi_0: U_0 \rightarrow \mathbb{A}^n$ by
 
 $$\varphi_0([x_0 : x_1 : \cdots : x_n]) = \left(\frac{x_1}{x_0}, \ldots, \frac{x_n}{x_0}\right).$$
 
-The inverse map $\psi_0: \mathbb{A}^n \to U_0$ is
+The inverse map $\psi_0: \mathbb{A}^n \rightarrow U_0$ is
 
 $$\psi_0(a_1, \ldots, a_n) = [1 : a_1 : \cdots : a_n].$$
 
@@ -223,7 +223,7 @@ Through this proposition, we can indirectly study the properties of $X$ by inves
 Finally, we define morphisms of projective varieties. Earlier, when we defined projective algebraic sets, we saw that the zero set of a polynomial does not generally define a well-defined set on projective space; a similar issue arises when defining morphisms, and the solution is again homogeneous polynomials.
 
 ::: Definition 15
-A function $\varphi: X \to Y$ is a *morphism* between projective varieties $X \subseteq \mathbb{P}^n$ and $Y \subseteq \mathbb{P}^m$ if for each point $x$ there exist suitable homogeneous polynomials $F_0, \ldots, F_m$ of the same degree such that
+A function $\varphi: X \rightarrow Y$ is a *morphism* between projective varieties $X \subseteq \mathbb{P}^n$ and $Y \subseteq \mathbb{P}^m$ if for each point $x$ there exist suitable homogeneous polynomials $F_0, \ldots, F_m$ of the same degree such that
 
 $$\varphi(x) = [F_0(x) : \cdots : F_m(x)]$$
 

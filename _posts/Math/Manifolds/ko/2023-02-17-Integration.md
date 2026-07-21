@@ -21,7 +21,7 @@ published: false
 우선 다음을 정의한다.
 
 ::: 정의 1
-Manifold $M$ 위에 정의된 differential form $\omega$에 대하여, $\omega$의 *support<sub>받침</sub>*는 다음의 집합
+Manifold $M$ 위에 정의된 differential form $\omega$에 대하여, $\omega$의 *support<sub>지지</sub>*는 다음의 집합
 
 $$\supp\omega=\cl\left\{p\in M\mid \omega(p)\neq 0\right\}$$
 

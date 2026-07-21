@@ -50,11 +50,11 @@ $$(e^x)' = \sum_{n=1}^\infty n \frac{x^{n-1}}{n!} = \sum_{n=1}^\infty \frac{x^{n
 
 so the exponential function is invariant under differentiation. In high school, this result was obtained from the limit
 
-$$\lim_{h\to 0}(e^h-1)/h = 1$$
+$$\lim_{h\rightarrow 0}(e^h-1)/h = 1$$
 
 We will also soon write trigonometric functions as power series, but for now we derive them as in high school using the two limits
 
-$$\lim_{h \to 0} \frac{\sin h}{h} = 1, \qquad \lim_{h \to 0} \frac{1 - \cos h}{h} = 0$$
+$$\lim_{h \rightarrow 0} \frac{\sin h}{h} = 1, \qquad \lim_{h \rightarrow 0} \frac{1 - \cos h}{h} = 0$$
 
 ::: Proposition 2 (Derivatives of Trigonometric Functions)
 At every point $(\sin x)' = \cos x$ and $(\cos x)' = -\sin x$.
@@ -65,7 +65,7 @@ Using the addition formula $\sin(x+h) = \sin x\cos h + \cos x \sin h$, split the
 
 $$\frac{\sin(x+h) - \sin x}{h} = \sin x \cdot \frac{\cos h - 1}{h} + \cos x \cdot \frac{\sin h}{h}$$
 
-and as $h \to 0$, by the two limits above this converges to $\sin x \cdot 0 + \cos x \cdot 1 = \cos x$. The derivative of $\cos x$ is obtained in the same way.
+and as $h \rightarrow 0$, by the two limits above this converges to $\sin x \cdot 0 + \cos x \cdot 1 = \cos x$. The derivative of $\cos x$ is obtained in the same way.
 :::
 
 ## Various Differentiation Rules
@@ -83,7 +83,7 @@ Adding and subtracting the same term in the difference quotient gives
 
 $$\frac{f(a+h)g(a+h) - f(a)g(a)}{h} = \frac{f(a+h)-f(a)}{h} g(a+h) + f(a) \frac{g(a+h)-g(a)}{h}$$
 
-As $h \to 0$, the difference quotient in the first term converges to $f'(a)$, $g(a+h)$ converges to $g(a)$ by continuity of $g$ ([§Derivatives, ⁋Proposition 2](/en/math/calculus/derivatives#prop2)), and the difference quotient in the second term converges to $g'(a)$, so by [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5) the sum converges to $f'(a)g(a) + f(a)g'(a)$.
+As $h \rightarrow 0$, the difference quotient in the first term converges to $f'(a)$, $g(a+h)$ converges to $g(a)$ by continuity of $g$ ([§Derivatives, ⁋Proposition 2](/en/math/calculus/derivatives#prop2)), and the difference quotient in the second term converges to $g'(a)$, so by [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5) the sum converges to $f'(a)g(a) + f(a)g'(a)$.
 :::
 
 The most widely used rule is the differentiation of composite functions.
@@ -103,7 +103,7 @@ By the definition of differentiability, $\varphi$ is continuous at $b$, and for 
 
 $$\frac{g(f(a+h)) - g(f(a))}{h} = \varphi(f(a+h)) \frac{f(a+h) - f(a)}{h}$$
 
-and as $h \to 0$, by continuity of $f$ we have $\varphi(f(a+h)) \to \varphi(b) = g'(b)$, while the second factor converges to $f'(a)$, so the limit is $g'(f(a))f'(a)$.
+and as $h \rightarrow 0$, by continuity of $f$ we have $\varphi(f(a+h)) \rightarrow \varphi(b) = g'(b)$, while the second factor converges to $f'(a)$, so the limit is $g'(f(a))f'(a)$.
 :::
 
 The quotient rule now follows as a corollary of the product rule and the chain rule.
@@ -147,7 +147,7 @@ The function
 
 $$f(x) = \begin{cases} x^2 \sin(1/x) & (x \neq 0) \\ 0 & (x = 0) \end{cases}$$
 
-is differentiable at every point. For $x \neq 0$, by the product rule and the chain rule $f'(x) = 2x\sin(1/x) - \cos(1/x)$, and at $0$ the difference quotient is $x\sin(1/x) \to 0$ so $f'(0) = 0$. However, as $x \to 0$ we have $2x\sin(1/x) \to 0$ but $\cos(1/x)$ oscillates infinitely within $[-1, 1]$ and has no limit, so $f'$ is discontinuous at $0$. That is, $f$ is differentiable everywhere but its derivative is not continuous, so it is not $C^1$ (in the sense of [§Derivatives, ⁋Definition 5](/en/math/calculus/derivatives#def5)).
+is differentiable at every point. For $x \neq 0$, by the product rule and the chain rule $f'(x) = 2x\sin(1/x) - \cos(1/x)$, and at $0$ the difference quotient is $x\sin(1/x) \rightarrow 0$ so $f'(0) = 0$. However, as $x \rightarrow 0$ we have $2x\sin(1/x) \rightarrow 0$ but $\cos(1/x)$ oscillates infinitely within $[-1, 1]$ and has no limit, so $f'$ is discontinuous at $0$. That is, $f$ is differentiable everywhere but its derivative is not continuous, so it is not $C^1$ (in the sense of [§Derivatives, ⁋Definition 5](/en/math/calculus/derivatives#def5)).
 :::
 
 Nevertheless, derivatives cannot be discontinuous in just any manner. Even if a derivative is not continuous, it must necessarily assume every intermediate value (*Darboux's theorem*), so it cannot have jump discontinuities, and the discontinuity appearing in [Example 7](#ex7) is not a jump but one caused by oscillation.

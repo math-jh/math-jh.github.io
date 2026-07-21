@@ -15,7 +15,7 @@ weight: 8
 
 ## Gluing lemma
 
-앞서 살펴본 [§부분공간, ⁋명제 7](/ko/math/topology/subspaces#prop7)는 연속함수 $f:X \rightarrow Y$가 주어졌다 할 때, 이를 [§부분공간, ⁋명제 5](/ko/math/topology/subspaces#prop5)의 두 조건 중 하나를 만족하는 부분집합들의 family로 제한한 것이 연속임을 말해준다. 특히 이 조건은 다음 두 조건
+앞서 살펴본 [§부분공간, ⁋명제 8](/ko/math/topology/subspaces#prop8)은 연속함수 $f:X \rightarrow Y$가 주어졌다 할 때, 이를 [§부분공간, ⁋명제 6](/ko/math/topology/subspaces#prop6)의 두 조건 중 하나를 만족하는 부분집합들의 family로 제한한 것이 연속임을 말해준다. 특히 이 조건은 다음 두 조건
 
 1. $(A_i)$가 $X$의 open covering이거나,
 2. $(A_i)$가 $X$의 locally finite closed covering인 경우
@@ -23,14 +23,14 @@ weight: 8
 두 경우가 해당한다. 거꾸로 이러한 조건을 만족하는 $(A_i)$와 그 위에서 정의된 연속함수들 $f_i$들이 주어졌을 때, 이들이 $X=\bigcup A_i$ 위에서의 연속함수를 지정하는지의 여부를 생각할 수 있다. 
 
 ::: 보조정리 1
-집합 $X$와 [§부분공간, ⁋명제 5](/ko/math/topology/subspaces#prop5)의 두 조건 중 하나를 만족하는 부분집합들의 family $(A_i)$가 주어졌다 하자. 만일 연속함수들의 family $(f_i: A_i \rightarrow Y)$가 다음 조건
+집합 $X$와 [§부분공간, ⁋명제 6](/ko/math/topology/subspaces#prop6)의 두 조건 중 하나를 만족하는 부분집합들의 family $(A_i)$가 주어졌다 하자. 만일 연속함수들의 family $(f_i: A_i \rightarrow Y)$가 다음 조건
 
 $$f_i\vert_{A_i\cap A_j}=f_j\vert_{A_i\cap A_j}\qquad\text{for all $i,j$}$$
 
 을 만족한다면, 이들을 확장하여 생기는 함수 $f:X \rightarrow Y$는 연속함수이다. 
 :::
 ::: 증명
-우선 함수 $f$는 [\[집합론\] §집합의 합, ⁋명제 2](/ko/math/set_theory/sum_of_sets#prop2)에 의해 얻어진다. 이 함수가 연속이라는 것은 [§부분공간, ⁋명제 7](/ko/math/topology/subspaces#prop7)에서 얻어진다.
+우선 함수 $f$는 [\[집합론\] §집합의 합, ⁋명제 2](/ko/math/set_theory/sum_of_sets#prop2)에 의해 얻어진다. 이 함수가 연속이라는 것은 [§부분공간, ⁋명제 8](/ko/math/topology/subspaces#prop8)에서 얻어진다.
 :::
 
 ## 연속함수들의 준층
@@ -62,7 +62,7 @@ Category $\Open(X)$를 ordered set $(\mathcal{T}, \subseteq)$를 category로 본
 위상공간 $X$ 위에서 정의된 presheaf $\mathcal{F}$가 주어졌다 하자. 
 
 - 임의의 열린집합 $U\subseteq X$에 대하여, $\mathcal{F}(U)$의 원소들을 $U$에서의 *section*이라 부른다. 특별히 $\mathcal{F}(X)$의 원소들은 *global section*이라 부른다.
-- 열린집합 $U\subseteq V$에 대하여, $\rho_{VU}:\mathcal{F}(V) \rightarrow \mathcal{F}(U)$를 $V$에서 $U$로의 *restriction map*이라 부른다. 
+- 열린집합 $U\subseteq V$에 대하여, $\rho_{VU}:\mathcal{F}(V) \rightarrow \mathcal{F}(U)$를 $V$에서 $U$로의 *restriction map<sub>제한 사상</sub>*이라 부른다. 
 - 특별히 열린집합들 $U\subseteq V$와 $s\in \mathcal{F}(V)$에 대하여, $\rho_{VU}(s)\in \mathcal{F}(U)$를 간단히 $s\vert_U$로 표기한다.
 :::
 
@@ -179,7 +179,7 @@ $$\left(\prod_{i\in I} \mathcal{F}_i\right)(U)=\prod_{i\in I} \mathcal{F}_i(U)$$
 지금까지 우리는 presheaf가 어떤 카테고리에서 값을 갖는지를 무시해왔는데, 이제 우리는 특별히 카테고리 $\Ab$에서 값을 갖는 presheaf들을 살펴본다. 
 
 ::: 정의 15
-위상공간 $X$에 대하여, contravariant functor $\Open(X)\rightarrow\Ab$을 *abelian presheaf*라 부른다.
+위상공간 $X$에 대하여, contravariant functor $\Open(X)\rightarrow\Ab$을 *abelian presheaf<sub>아벨 준층</sub>*라 부른다.
 :::
 
 ::: 정의 16

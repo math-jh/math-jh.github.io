@@ -12,14 +12,14 @@ date: 2026-07-06
 weight: 16
 ---
 
-우리가 궁극적으로 다루고 싶은 것은 일반적인 함수 $\mathbb{R}^m\to\mathbb{R}^n$의 미적분학이다. 우리는 우선 [§곡선과 벡터함수](/ko/math/calculus/vector_functions)에서는 공역의 차원을, [§다변수함수와 편미분](/ko/math/calculus/partial_derivatives) 이후에서는 정의역의 차원을 올려 이를 준비했다. 이제 두 방향을 하나로 합쳐 정의역과 공역이 모두 여러 차원인 일반적인 경우를 시작한다. 특히 우리가 관심있는 경우는 정의역과 공역의 차원이 같은 $\mathbb{R}^n\to\mathbb{R}^n$이 가장 자연스러운 대상으로, 그럼 이 함수는 $n$차원 벡터를 받아 $n$차원 벡터를 내놓는 함수이다. 
+우리가 궁극적으로 다루고 싶은 것은 일반적인 함수 $\mathbb{R}^m\rightarrow\mathbb{R}^n$의 미적분학이다. 우리는 우선 [§곡선과 벡터함수](/ko/math/calculus/vector_functions)에서는 공역의 차원을, [§다변수함수와 편미분](/ko/math/calculus/partial_derivatives) 이후에서는 정의역의 차원을 올려 이를 준비했다. 이제 두 방향을 하나로 합쳐 정의역과 공역이 모두 여러 차원인 일반적인 경우를 시작한다. 특히 우리가 관심있는 경우는 정의역과 공역의 차원이 같은 $\mathbb{R}^n\rightarrow\mathbb{R}^n$이 가장 자연스러운 대상으로, 그럼 이 함수는 $n$차원 벡터를 받아 $n$차원 벡터를 내놓는 함수이다. 
 
 ## 벡터장
 
 다만, 실질적으로는 우리가 사용할 수 있는 강력한 연산 중 하나인 외적이 $3$차원에서만 정의되므로, 우리는 대부분 $3$차원, 그리고 그 부분공간인 $2$차원에서 논의를 펼치게 된다. 어쨌든 다음의 정의들은 일반적인 차원에서도 말이 되는 것들이다. 
 
 ::: 정의 1
-영역 $D \subseteq \mathbb{R}^n$의 각 점 $\mathbf{x}$에 벡터 $\mathbf{F}(\mathbf{x}) \in \mathbb{R}^n$을 대응시키는 함수 $\mathbf{F}\colon D \to \mathbb{R}^n$을 *벡터장<sub>vector field</sub>*이라 한다. 평면에서는 $\mathbf{F}(x,y) = (P(x,y), Q(x,y))$, 공간에서는 $\mathbf{F}(x,y,z) = (P, Q, R)$로 적고, 각 성분 $P, Q, R$가 $C^1$이면 $\mathbf{F}$를 $C^1$ 벡터장이라 한다.
+영역 $D \subseteq \mathbb{R}^n$의 각 점 $\mathbf{x}$에 벡터 $\mathbf{F}(\mathbf{x}) \in \mathbb{R}^n$을 대응시키는 함수 $\mathbf{F}\colon D \rightarrow \mathbb{R}^n$을 *벡터장<sub>vector field</sub>*이라 한다. 평면에서는 $\mathbf{F}(x,y) = (P(x,y), Q(x,y))$, 공간에서는 $\mathbf{F}(x,y,z) = (P, Q, R)$로 적고, 각 성분 $P, Q, R$가 $C^1$이면 $\mathbf{F}$를 $C^1$ 벡터장이라 한다.
 :::
 
 벡터장은 각 점에 그 점에서 출발하는 화살표를 꽂은 그림으로 이해하는 것이 가장 직관적이다. 가령, 유체의 흐름이라면 각 점에서의 유속을 표현한 것은 벡터장을 이룬다. 우리는 이미 이런 대상을 하나 알고 있다. ([§다변수함수와 편미분, ⁋정의 2](/ko/math/calculus/partial_derivatives#def2))

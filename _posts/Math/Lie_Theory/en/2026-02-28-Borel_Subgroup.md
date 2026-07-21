@@ -221,7 +221,7 @@ $$G/T\hookrightarrow G_\mathbb{C}/B=(G\cdot A\cdot N)/(T\cdot A\cdot N)\cong G/(
 
 The first inclusion is induced by $$G\hookrightarrow G_\mathbb{C}$$; since the composition is the identity map on $$G/T$$, this inclusion is a homotopy equivalence.
 
-More precisely, because $$A\cdot N\cong\mathbb{R}^n$$ is contractible (being Euclidean space), the projection $$G_\mathbb{C}/B\to G/T$$ induces a deformation retraction.
+More precisely, because $$A\cdot N\cong\mathbb{R}^n$$ is contractible (being Euclidean space), the projection $$G_\mathbb{C}/B\rightarrow G/T$$ induces a deformation retraction.
 :::
 
 This result means that $$G/T$$, from the compact Lie group viewpoint, and the flag variety $$G_\mathbb{C}/B$$, from the complex Lie group viewpoint, are essentially the same object. In particular, one may study the topological properties of $$G/T$$—its cohomology, homotopy groups, and so on—by exploiting the algebro-geometric properties of the flag variety.

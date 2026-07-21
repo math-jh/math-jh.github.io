@@ -16,7 +16,7 @@ last_polished_at: 2026-06-03T06:30:02+00:00
 ---
 ## Gluing lemma
 
-As we saw in [§Subspaces, ⁋Proposition 7](/en/math/topology/subspaces#prop7), given a continuous function $f:X \rightarrow Y$, restricting it to a family of subsets satisfying one of the two conditions in [§Subspaces, ⁋Proposition 5](/en/math/topology/subspaces#prop5) yields a continuous map. Specifically, these conditions correspond to the following two cases:
+As we saw in [§Subspaces, ⁋Proposition 8](/en/math/topology/subspaces#prop8), given a continuous function $f:X \rightarrow Y$, restricting it to a family of subsets satisfying one of the two conditions in [§Subspaces, ⁋Proposition 6](/en/math/topology/subspaces#prop6) yields a continuous map. Specifically, these conditions correspond to the following two cases:
 
 1. $(A_i)$ is an open covering of $X$, or
 2. $(A_i)$ is a locally finite closed covering of $X$.
@@ -24,14 +24,14 @@ As we saw in [§Subspaces, ⁋Proposition 7](/en/math/topology/subspaces#prop7),
 Conversely, given such a family $(A_i)$ and continuous functions $f_i$ defined on them, we may ask whether they determine a continuous function on $X=\bigcup A_i$.
 
 ::: Lemma 1
-Let $X$ be a set and $(A_i)$ a family of subsets satisfying one of the two conditions in [§Subspaces, ⁋Proposition 5](/en/math/topology/subspaces#prop5). If a family of continuous functions $(f_i: A_i \rightarrow Y)$ satisfies
+Let $X$ be a set and $(A_i)$ a family of subsets satisfying one of the two conditions in [§Subspaces, ⁋Proposition 6](/en/math/topology/subspaces#prop6). If a family of continuous functions $(f_i: A_i \rightarrow Y)$ satisfies
 
 $$f_i\vert_{A_i\cap A_j}=f_j\vert_{A_i\cap A_j}\qquad\text{for all $i,j$}$$
 
 then the function $f:X \rightarrow Y$ obtained by gluing them together is continuous.
 :::
 ::: Proof
-First, the function $f$ is obtained from [\[Set Theory\] §Sum of Sets, ⁋Proposition 2](/en/math/set_theory/sum_of_sets#prop2). Its continuity follows from [§Subspaces, ⁋Proposition 7](/en/math/topology/subspaces#prop7).
+First, the function $f$ is obtained from [\[Set Theory\] §Sum of Sets, ⁋Proposition 2](/en/math/set_theory/sum_of_sets#prop2). Its continuity follows from [§Subspaces, ⁋Proposition 8](/en/math/topology/subspaces#prop8).
 :::
 
 ## Presheaves of continuous functions

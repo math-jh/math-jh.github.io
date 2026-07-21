@@ -29,7 +29,7 @@ Abelian category $\mathcal{A}$를 고정하자.
     ![Projective_object-2](/assets/images/Math/Homological_Algebra/Resolutions-2.svg){:style="width:9.44em" class="invert" .align-center}
 
     을 commute하게 하는 $P \rightarrow B$가 적어도 하나 존재하는 것이다.  
-    만일 $\mathcal{A}$의 임의의 대상 $A$마다 적당한 projective object $P$가 존재하여 $P \rightarrow A \rightarrow 0$이 exact이도록 할 수 있다면, $\mathcal{A}$가 *enough projective*를 갖는다 말한다. 
+    만일 $\mathcal{A}$의 임의의 대상 $A$마다 적당한 projective object $P$가 존재하여 $P \rightarrow A \rightarrow 0$이 exact이도록 할 수 있다면, $\mathcal{A}$가 *enough projective<sub>충분한 사영 대상</sub>*를 갖는다 말한다. 
 1. $\mathcal{A}$의 대상 $I$가 *injective object<sub>단사 대상</sub>*라는 것은 다음의 diagram
     
     ![Injective_object-1](/assets/images/Math/Homological_Algebra/Resolutions-3.svg){:style="width:9.40em" class="invert" .align-center}
@@ -39,7 +39,7 @@ Abelian category $\mathcal{A}$를 고정하자.
     ![Injective_object-2](/assets/images/Math/Homological_Algebra/Resolutions-4.svg){:style="width:9.40em" class="invert" .align-center}
 
     을 commute하게 하는 $B \rightarrow I$가 적어도 하나 존재하는 것이다.  
-    만일 $\mathcal{A}$의 임의의 대상 $A$마다 적당한 injective object $I$가 존재하여 $0 \rightarrow A \rightarrow I$이 exact이도록 할 수 있다면, $\mathcal{A}$가 *enough injective*를 갖는다 말한다. 
+    만일 $\mathcal{A}$의 임의의 대상 $A$마다 적당한 injective object $I$가 존재하여 $0 \rightarrow A \rightarrow I$이 exact이도록 할 수 있다면, $\mathcal{A}$가 *enough injective<sub>충분한 단사 대상</sub>*를 갖는다 말한다. 
 :::
 
 또, 다음을 정의한다.
@@ -51,7 +51,7 @@ Abelian category $\mathcal{A}$의 대상 $M$에 대하여, 다음을 정의한�
     
     $$\cdots \longrightarrow P_2 \longrightarrow P_1 \longrightarrow P_0 \overset{\epsilon}{\longrightarrow} M \longrightarrow 0$$
 
-    가 exact이도록 하는 chain complex $P_\bullet$과 *augmentation map* $\epsilon: P_0 \rightarrow M$이다. 만일 각 $P_i$들이 모두 projective object들이라면 이를 *projective resolution<sub>사영분해</sub>*라 부른다.
+    가 exact이도록 하는 chain complex $P_\bullet$과 *augmentation map<sub>첨가 사상</sub>* $\epsilon: P_0 \rightarrow M$이다. 만일 각 $P_i$들이 모두 projective object들이라면 이를 *projective resolution<sub>사영분해</sub>*라 부른다.
 2. $M$의 *right resolution<sub>오른쪽 분해</sub>*은 다음의 chain complex
     
     $$0 \longrightarrow M \overset{\eta}{\longrightarrow} I^0 \longrightarrow I^1 \longrightarrow I^2 \longrightarrow \cdots$$

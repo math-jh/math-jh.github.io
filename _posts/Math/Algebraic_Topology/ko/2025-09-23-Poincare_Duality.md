@@ -56,7 +56,7 @@ $$H_m(M,M\setminus\{x\};\mathbb{Z})\cong H_m(U,U\setminus\{x\};\mathbb{Z})\cong 
 이고, $\mathbb{R}^m\setminus\{0\}$은 $S^{m-1}$으로 deformation retract하므로 relative homology long exact sequence에 의하여 위의 식의 우변은 $\mathbb{Z}$와 isomorphic한 것을 알 수 있으며, 이 sheaf는 locally constant sheaf인 것 또한 확인할 수 있다. 즉, 임의의 $x\in M$이 주어질 때마다 적당한 열린근방 $U$가 존재하여 $\or_M\vert_U$가 constant sheaf이도록 할 수 있다. ([\[위상수학\] §층, ⁋예시 9](/ko/math/topology/sheaves#ex9))
 
 ::: 정의 2
-Relative homology group $H_m(M, M\setminus \{x\};\mathbb{Z})$을 $M$의 $x$에서의 *local homology group*이라 부른다. 
+Relative homology group $H_m(M, M\setminus \{x\};\mathbb{Z})$을 $M$의 $x$에서의 *local homology group<sub>국소 호몰로지 군</sub>*이라 부른다. 
 :::
 
 ## 상수층과 피복공간, 방향생성자층
@@ -243,7 +243,7 @@ $$-\frown [M]: H^p(M;A)\rightarrow H_{m-p}(M;A)$$
 이에 대한 증명 또한 [보조정리 8](#lem8)의 증명과 마찬가지로 Mayer-Vietoris sequence를 이용한 귀납법으로 진행한다. 그러나 다소 다른 점은, [보조정리 8](#lem8)은 명제의 주장이 compact subset $C$에 대한 주장이어서 compactness를 적극적으로 사용할 수 있었지만, 이번에는 명제가 $M$ 자체에 대한 주장이기 때문에, 가령 $M$의 chart $U$가 주어졌다고 하면 이는 compact가 아니므로 단순한 귀납법으로 접근할 수는 없다. 이에 우리는 다음을 정의한다. 
 
 ::: 정의 12
-Cochain $\varphi\in C^p(M;A)$이 *compactly supported*라는 것은 적당한 compact set $K\subseteq M$이 존재하여 $\varphi(\sigma)=0$가 $M\setminus K$에 들어가는 모든 simplex에 대해 성립하는 것을 말한다. Compactly supported cochain들의 cochain complex의 $i$번째 homology를 $p$번째 *compactly supported cohomology*라 부르고 $H_c^p(M;A)$로 적는다. 
+Cochain $\varphi\in C^p(M;A)$이 *compactly supported<sub>콤팩트 지지</sub>*라는 것은 적당한 compact set $K\subseteq M$이 존재하여 $\varphi(\sigma)=0$가 $M\setminus K$에 들어가는 모든 simplex에 대해 성립하는 것을 말한다. Compactly supported cochain들의 cochain complex의 $i$번째 homology를 $p$번째 *compactly supported cohomology*라 부르고 $H_c^p(M;A)$로 적는다. 
 :::
 
 그럼 다음의 식
@@ -348,7 +348,7 @@ $M$이 $A$-orientable이 아닐 경우 [정리 11](#thm11)이 성립하지 않�
 이제 이 꼬임을 쌍대성에서 함께 고려하기 위해 우리는 *homology with local coefficient*을 정의한다. 
 
 ::: 정의 14
-$M$ 위에 정의된 locally constant sheaf $\mathscr{L}$을 *local coefficient system*이라 부른다. 
+$M$ 위에 정의된 locally constant sheaf $\mathscr{L}$을 *local coefficient system<sub>국소 계수 체계</sub>*이라 부른다. 
 :::
 
 Local system $\mathscr{L}$의 stalk을 $L$이라 하자. 그럼 [§피복공간, ⁋정리 11](/ko/math/algebraic_topology/covering_spaces#thm11)에 의하여, 우리는 임의의 path $\alpha:[0,1]\rightarrow M$이 주어질 때마다 stalk들 사이의 isomorphism $\mathscr{L}_{\alpha(0)}\rightarrow \mathscr{L}_{\alpha(1)}$이 존재하는 것을 안다. 이는 별다른 것이 아니라 covering space $\Spe(\mathscr{L})\rightarrow M$에서 path $\alpha$를 lift하여 얻어지는 isomorphism이다. 즉, 우리는 다음의 functor

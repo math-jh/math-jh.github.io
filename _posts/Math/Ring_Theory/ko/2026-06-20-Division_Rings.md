@@ -25,7 +25,7 @@ published: false
 Division ring의 정의는 이미 주어졌으나, 이번 글의 시작을 위해 다시 state한다. ([\[대수적 구조\] §분수체, ⁋정의 3](/ko/math/algebraic_structures/field_of_fractions#def3)) 
 
 ::: 정의 1
-Ring $D\neq 0$이 *division ring<sub>나눗셈환</sub>* 혹은 *skew field*라는 것은 $D$의 모든 nonzero 원소가 곱셈에 대한 양쪽 역원을 갖는 것이다. Commutative division ring을 *field<sub>체</sub>*라 부른다.
+Ring $D\neq 0$이 *division ring<sub>나눗셈환</sub>* 혹은 *skew field<sub>비가환체</sub>*라는 것은 $D$의 모든 nonzero 원소가 곱셈에 대한 양쪽 역원을 갖는 것이다. Commutative division ring을 *field<sub>체</sub>*라 부른다.
 :::
 
 우리는 [§가역원과 영인자, ⁋정의 1](/ko/math/ring_theory/units_and_zero_divisors#def1)에서 unit group $D^\times$가 곱셈에 대한 group임을 이미 확인하였으며, division ring에서는 정의에 의해 $D^\times=D\setminus\{0\}$이므로 이것이 곱셈에 대한 group이 된다. 이 group을 $D$의 *multiplicative group*이라 부른다. 
@@ -133,7 +133,7 @@ $$q^n-1=(q-1)+\sum_{x}\frac{q^n-1}{q^{d(x)}-1}\tag{$\ast$}$$
 $0\neq 1$인 finite ring $A$가 nonzero zero divisor를 갖지 않으면 $A$는 field이다.
 :::
 ::: 증명
-$A$가 finite ring이고 $0$ 이외의 zero divisor가 없다고 하자. 임의의 nonzero $a\in A$에 대해 left multiplication 사상 $\lambda_a:A\to A$, $\lambda_a(x)=ax$를 생각하면, $ax=ay$일 때 $a(x-y)=0$이고 $a$가 zero divisor가 아니므로 $x=y$, 즉 $\lambda_a$가 단사이다. $A$가 유한집합이므로 $\lambda_a$는 전사이고, $av=1$인 $v$가 존재한다. 같은 논법을 right multiplication에 적용하면 $wa=1$인 $w$가 존재하며, $w=w(av)=(wa)v=v$이므로 $v$는 $a$의 양쪽 역원이다. 따라서 모든 nonzero 원소가 unit이고 $A$는 division ring이다. 유한 division ring은 [정리 5](#thm5)에 의해 field이다.
+$A$가 finite ring이고 $0$ 이외의 zero divisor가 없다고 하자. 임의의 nonzero $a\in A$에 대해 left multiplication 사상 $\lambda_a:A\rightarrow A$, $\lambda_a(x)=ax$를 생각하면, $ax=ay$일 때 $a(x-y)=0$이고 $a$가 zero divisor가 아니므로 $x=y$, 즉 $\lambda_a$가 단사이다. $A$가 유한집합이므로 $\lambda_a$는 전사이고, $av=1$인 $v$가 존재한다. 같은 논법을 right multiplication에 적용하면 $wa=1$인 $w$가 존재하며, $w=w(av)=(wa)v=v$이므로 $v$는 $a$의 양쪽 역원이다. 따라서 모든 nonzero 원소가 unit이고 $A$는 division ring이다. 유한 division ring은 [정리 5](#thm5)에 의해 field이다.
 :::
 
 여기서는 commutativity를 가정하지 않고 출발하여 division ring임을 먼저 얻은 뒤 Wedderburn 정리로 commutativity를 결론지었다. commutativity를 처음부터 가정하면 [정리 5](#thm5) 없이도 곱셈사상의 단사성만으로 field임을 얻으며, 이것이 "유한 integral domain은 field"라는 앞선 결과였다 ([§가역원과 영인자, ⁋따름정리 6](/ko/math/ring_theory/units_and_zero_divisors#cor6)). Wedderburn 정리의 힘은 commutativity 가정 없이 zero divisor의 부재만으로 같은 결론에 이른다는 데에 있다.
@@ -218,11 +218,11 @@ Division ring이 자연스럽게 등장하는 또 하나의 맥락은 module 이
 ::: 보조정리 10 (Schur)
 ring $R$ 위의 simple module $M,N$에 대하여 다음이 성립한다.
 
-1. 임의의 $R$-module homomorphism $f:M\to N$은 zero map이거나 isomorphism이다.
+1. 임의의 $R$-module homomorphism $f:M\rightarrow N$은 zero map이거나 isomorphism이다.
 2. 특히 simple module $M$의 endomorphism ring $\End_R(M)$은 division ring이다.
 :::
 ::: 증명
-$f:M\to N$을 nonzero $R$-module homomorphism이라 하자. $\ker f$는 $M$의 submodule이고 $f\neq 0$이므로 $\ker f\neq M$이다. $M$이 simple이므로 $\ker f=0$, 즉 $f$는 단사이다. 또 $\im f$는 $N$의 nonzero submodule이고 $N$이 simple이므로 $\im f=N$, 즉 $f$는 전사이다. 따라서 $f$는 isomorphism이다. 이로써 1이 성립한다.
+$f:M\rightarrow N$을 nonzero $R$-module homomorphism이라 하자. $\ker f$는 $M$의 submodule이고 $f\neq 0$이므로 $\ker f\neq M$이다. $M$이 simple이므로 $\ker f=0$, 즉 $f$는 단사이다. 또 $\im f$는 $N$의 nonzero submodule이고 $N$이 simple이므로 $\im f=N$, 즉 $f$는 전사이다. 따라서 $f$는 isomorphism이다. 이로써 1이 성립한다.
 
 이제 $M=N$인 경우를 보면, $\End_R(M)$은 사상의 합성을 곱셈으로, 항등사상 $\id_M$을 항등원으로 하는 ring이다. $M$이 nonzero이므로 $\id_M\neq 0$, 즉 이 ring은 $0$이 아니다. 1에 의해 nonzero $f\in\End_R(M)$은 isomorphism이고, 그 역사상 $f^{-1}$ 또한 $R$-module homomorphism이므로 $\End_R(M)$의 원소이다. $f\circ f^{-1}=f^{-1}\circ f=\id_M$이므로 $f$는 unit이다. 따라서 모든 nonzero 원소가 unit이고, $\End_R(M)$은 division ring이다.
 :::

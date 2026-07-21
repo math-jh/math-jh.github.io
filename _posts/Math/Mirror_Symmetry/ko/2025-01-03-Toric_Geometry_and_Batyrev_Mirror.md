@@ -27,7 +27,7 @@ Reflexive polytope $\Delta \subset M_{\mathbb{R}}$에 대하여, $\Delta$의 lat
 
 $$f_\Delta(\x) = \sum_{i=0}^{s} c_i \x^{m_i} \in \mathbb{C}[M]$$
 
-여기서 $c_i \in \mathbb{C}$는 일반적인 계수이고, $\x^{m_i}$는 character $\chi^{m_i} : T_N \to \mathbb{C}^\ast$에 해당하는 monomial이다. $f_\Delta = 0$으로 정의되는 $T_N$의 부분다양체를 *ambient* $X_\Delta$ 안으로 취한 closure를 $Y_\Delta$라 하면, 일반적인 $c_i$에 대해 $Y_\Delta$는 ($n-1$이 충분히 작거나 crepant resolution 후) *Calabi-Yau variety<sub>칼라비-야우 다양체</sub>*가 된다.
+여기서 $c_i \in \mathbb{C}$는 일반적인 계수이고, $\x^{m_i}$는 character $\chi^{m_i} : T_N \rightarrow \mathbb{C}^\ast$에 해당하는 monomial이다. $f_\Delta = 0$으로 정의되는 $T_N$의 부분다양체를 *ambient* $X_\Delta$ 안으로 취한 closure를 $Y_\Delta$라 하면, 일반적인 $c_i$에 대해 $Y_\Delta$는 ($n-1$이 충분히 작거나 crepant resolution 후) *Calabi-Yau variety<sub>칼라비-야우 다양체</sub>*가 된다.
 :::
 
 Batyrev의 핵심 관찰은 다음과 같다. $\Delta$가 reflexive이면 $\Delta^\circ$ 또한 reflexive이므로, 동일한 construction을 $\Delta^\circ$에 대해 반복하여 mirror Calabi-Yau $Y$를 얻는다. 즉 $\Delta^\circ$의 lattice points로부터 toric variety $X_\Delta$ 위의 anticanonical section을 정의하고, 그 zero locus를 취한다.

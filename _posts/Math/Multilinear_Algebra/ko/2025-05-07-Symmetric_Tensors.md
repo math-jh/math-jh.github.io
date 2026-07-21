@@ -45,7 +45,7 @@ $$h'\left( \sum_{\bar{h}\in H/G}\bar{h}x\right)=\sum_{\bar{h}\in H/G}(h'\bar{h})
 
 $$\tr_{H/G}(x)=\sum_{\bar{h}\in H/G} \bar{h}x$$
 
-으로 정의하고, 이를 *relative trace*라 부른다. 
+으로 정의하고, 이를 *relative trace<sub>상대 trace</sub>*라 부른다. 
 :::
 
 그럼 다음이 성립한다. 
@@ -71,7 +71,7 @@ $$\sigma(x_1\otimes x_2\otimes \cdots \otimes x_n)=x_{\sigma^{-1}(1)}\otimes \cd
 
 $$\sigma z=z\qquad\text{for all $\sigma\in S_n$}$$
 
-을 만족하는 $z\in \T^nM$들을 $n$th *symmetric tensor<sub>대칭텐서</sub>*라 부르고, 이들의 모임 $\Sym^n(M)$을 $n$-th *symmetric power*라 부른다. 이들의 (graded) direct sum을
+을 만족하는 $z\in \T^nM$들을 $n$th *symmetric tensor<sub>대칭텐서</sub>*라 부르고, 이들의 모임 $\Sym^n(M)$을 $n$-th *symmetric power<sub>대칭 거듭제곱</sub>*라 부른다. 이들의 (graded) direct sum을
 
 $$\Sym(M)=\bigoplus_{d=0}^\infty \Sym^d(M)$$
 
@@ -84,7 +84,7 @@ $\Sym(M)$은 앞서 정의했던 symmetric algebra $\S(M)$과는 구별해야 �
 
 $$x=x_1\otimes x_2\otimes \cdots \otimes x_p,\qquad y=y_1\otimes y_2\otimes \cdots \otimes y_q$$
 
-를 가져왔을 떄, 이들의 텐서로서의 곱
+를 가져왔을 때, 이들의 텐서로서의 곱
 
 $$x\otimes y=x_1\otimes x_2\otimes \cdots \otimes x_p\otimes y_1\otimes y_2\otimes \cdots \otimes y_q$$
 

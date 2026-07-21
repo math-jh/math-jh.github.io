@@ -56,10 +56,10 @@ $\mathbb{P}^n$의 function field $\mathbb{K}(\mathbb{P}^n)$을 생각하면, [�
 이제 regular function으로부터 regular map을 어떻게 정의했는지를 생각하면, rational function으로부터 rational map을 어떻게 정의해야 하는지는 자명하다. 
 
 ::: 정의 5
-두 variety $X, Y$ 사이의 *rational map<sub>유리사상</sub>*은 $X$의 공집합이 아닌 열린집합 $U$와 그 위에서 정의된 regular map $\varphi: U \to Y$의 pair $(U,\varphi)$를 말한다. 
+두 variety $X, Y$ 사이의 *rational map<sub>유리사상</sub>*은 $X$의 공집합이 아닌 열린집합 $U$와 그 위에서 정의된 regular map $\varphi: U \rightarrow Y$의 pair $(U,\varphi)$를 말한다. 
 :::
 
-앞서와 마찬가지로 두 rational map $\varphi: U \to Y$와 $\psi: V \to Y$는 $U \cap V$에서 일치할 때 같은 것으로 본다. Rational map은 보통 $\varphi: X \dashrightarrow Y$로 표기하며, 점선은 <em-ko>모든 점에서 정의되지 않을 수 있음</em-ko>을 나타낸다. 정의되지 않는 점들을 *base points*라 부른다. 
+앞서와 마찬가지로 두 rational map $\varphi: U \rightarrow Y$와 $\psi: V \rightarrow Y$는 $U \cap V$에서 일치할 때 같은 것으로 본다. Rational map은 보통 $\varphi: X \dashrightarrow Y$로 표기하며, 점선은 <em-ko>모든 점에서 정의되지 않을 수 있음</em-ko>을 나타낸다. 정의되지 않는 점들을 *base points*라 부른다. 
 
 한편 rational map $\varphi:U\rightarrow Y$에 대하여, 우리는 $(U,\varphi)$와 equivalent한 rational function들을 생각할 수 있다. 그럼 이들 rational function들의 domain을 모두 합집합하면 우리는 $\varphi$가 정의될 수 있는 <em-ko>가장 큰</em-ko> 열린집합을 얻는다. 
 
@@ -88,7 +88,7 @@ Rational map $\varphi: X \dashrightarrow Y$가 *dominant*라는 것은 $\varphi$
 :::
 
 ::: 정의 9
-Rational map $\varphi: X \dashrightarrow Y$가 *birational map*이라는 것은 또다른 rational map $\psi: Y \dashrightarrow X$가 존재하여 $\psi \circ \varphi = \operatorname{id}_X$와 $\varphi \circ \psi = \operatorname{id}_Y$가 (정의되는 곳에서) 성립하는 것이다. 두 variety $X, Y$가 *birationally equivalent*라는 것은 둘 사이에 birational map이 존재하는 것이다.
+Rational map $\varphi: X \dashrightarrow Y$가 *birational map<sub>쌍유리 사상</sub>*이라는 것은 또다른 rational map $\psi: Y \dashrightarrow X$가 존재하여 $\psi \circ \varphi = \operatorname{id}_X$와 $\varphi \circ \psi = \operatorname{id}_Y$가 (정의되는 곳에서) 성립하는 것이다. 두 variety $X, Y$가 *birationally equivalent<sub>쌍유리 동치</sub>*라는 것은 둘 사이에 birational map이 존재하는 것이다.
 :::
 
 Birationally equivalent한 두 variety들은 "대부분의 점에서" isomorphic하다. 구체적으로, 다음 명제에서 보듯 두 variety의 isomorphic한 열린집합들이 존재한다. 이는 birational equivalence가 isomorphism보다 약하지만 여전히 강력한 관계임을 보여준다.
@@ -117,7 +117,7 @@ $\mathbb{P}^1 \times \mathbb{P}^1$과, $\mathbb{P}^3$에서의 quadric surface $
 
 이제 quadric surface $Q = V(\x\y - \z\w) \subset \mathbb{P}^3$를 생각하자. 마찬가지로 [명제 3](#prop3)에 의해 affine patch $\{\w \ne 0\}$에서 계산하면 충분하다. 이 patch에서 $\x' = \x/\w$, $\y' = \y/\w$, $\z' = \z/\w$로 두면, 방정식 $\x\y - \z\w = 0$은 $\x'\y' - \z' = 0$이 된다. 따라서 $\z' = \x'\y'$이고, 이 patch의 coordinate ring은 $\mathbb{K}[\x', \y', \z']/(\x'\y' - \z') \cong \mathbb{K}[\x', \y']$이다. [명제 2](#prop2)에 의해 $\mathbb{K}(Q) = \operatorname{Frac}(\mathbb{K}[\x', \y']) = \mathbb{K}(\x', \y') \cong \mathbb{K}(\t_1, \t_2)$이다.
 
-따라서 $\mathbb{K}(\mathbb{P}^1 \times \mathbb{P}^1) \cong \mathbb{K}(Q) \cong \mathbb{K}(\t_1, \t_2)$이므로, [명제 10](#prop10)에 의해 두 다양체는 birationally equivalent하다. 실은, [§사영다양체, ⁋예시 16](/ko/math/algebraic_varieties/projective_varieties#ex16)에서 다루는 Segre embedding $\mathbb{P}^1 \times \mathbb{P}^1 \to \mathbb{P}^3$, $([x : y], [u : v]) \mapsto [xu : xv : yu : yv]$의 image가 정확히 $V(\x\y - \z\w)$이다. 즉, 이 경우 birational equivalence는 실제로 isomorphism을 이룬다. 이 예시는 birational equivalence가 isomorphism보다 약하지만, isomorphism을 포함함을 보여준다.
+따라서 $\mathbb{K}(\mathbb{P}^1 \times \mathbb{P}^1) \cong \mathbb{K}(Q) \cong \mathbb{K}(\t_1, \t_2)$이므로, [명제 10](#prop10)에 의해 두 다양체는 birationally equivalent하다. 실은, [§사영다양체, ⁋예시 16](/ko/math/algebraic_varieties/projective_varieties#ex16)에서 다루는 Segre embedding $\mathbb{P}^1 \times \mathbb{P}^1 \rightarrow \mathbb{P}^3$, $([x : y], [u : v]) \mapsto [xu : xv : yu : yv]$의 image가 정확히 $V(\x\y - \z\w)$이다. 즉, 이 경우 birational equivalence는 실제로 isomorphism을 이룬다. 이 예시는 birational equivalence가 isomorphism보다 약하지만, isomorphism을 포함함을 보여준다.
 :::
 
 ## Blow-up
@@ -139,7 +139,7 @@ $$\Bl_{(0,0)} \mathbb{A}^2 = \{((x, y), [u : v]) \in \mathbb{A}^2 \times \mathbb
 ![Blowup](/assets/images/Math/Algebraic_Varieties/Rational_Maps-1.png){:style="width:32em" class="invert" .align-center}
 <cap markdown="1">[Har1] p.29. Fig. 3.</cap>
 
-구체적으로, projection $\pi_1: \operatorname{Bl}_{(0,0)} \mathbb{A}^2 \to \mathbb{A}^2$를 $\pi((x, y), [u : v]) = (x, y)$로 정의하면, 원점이 아닌 모든 점의 preimage는 한 점이며, 원점의 preimage는 $\mathbb{P}^1$이다. 이를 *exceptional divisor*라 부른다.
+구체적으로, projection $\pi_1: \operatorname{Bl}_{(0,0)} \mathbb{A}^2 \rightarrow \mathbb{A}^2$를 $\pi((x, y), [u : v]) = (x, y)$로 정의하면, 원점이 아닌 모든 점의 preimage는 한 점이며, 원점의 preimage는 $\mathbb{P}^1$이다. 이를 *exceptional divisor*라 부른다.
 
 이로부터 원점을 제외한 평면의 나머지 부분에서는 두 variety $\mathbb{A}^2$와 $\Bl_{(0,0)}\mathbb{A}^2$가 isomorphic하므로 $\pi$는 birational map이다. 
 

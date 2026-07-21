@@ -20,7 +20,7 @@ weight: 7
 
 1. $F$가 *immersion<sub>몰입</sub>*이라는 것은 모든 $p\in N$에 대하여 $dF_p$가 단사인 것이고, 비슷하게 $F$가 *submersion<sub>침몰</sub>*이라는 것은 모든 $p\in N$에 대하여 $dF_p$가 전사인 것이다.
 2. 만일 $F$가 immersion인 동시에 단사함수이기도 하다면, $F$를 $M$의 *submanifold<sub>부분다양체</sub>*라 한다.
-3. 만일 $F$가 $M$의 submanifold일 뿐만 아니라, subspace topology가 주어진 $F(N)\subseteq M$과 $N$ 사이의 homeomorphism을 정의하기도 하다면 $F$를 *embedding<sub>매장</sub>*, 혹은 2번의 정의와 맞추어 *embedded submanifold*라 부른다.
+3. 만일 $F$가 $M$의 submanifold일 뿐만 아니라, subspace topology가 주어진 $F(N)\subseteq M$과 $N$ 사이의 homeomorphism을 정의하기도 하다면 $F$를 *embedding<sub>매장</sub>*, 혹은 2번의 정의와 맞추어 *embedded submanifold<sub>매장된 부분다양체</sub>*라 부른다.
 :::
 
 3번의 embedded submanifold와 더 명확하게 구별하기 위해 2번을 *immersed submanifold*라 부르기도 한다. 우리는 위의 정의 그대로, 수식어 없는 submanifold를 immersed manifold의 뜻으로 사용하고, embedded submanifold는 축약하지 않고 그대로 사용한다.

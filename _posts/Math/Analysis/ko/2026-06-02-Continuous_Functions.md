@@ -23,11 +23,11 @@ published: false
 ## 컴팩트성의 보존
 
 ::: 정리 1
-$f : X \to Y$가 연속이고 $K \subseteq X$가 점렬컴팩트이면, 상 $f(K)$도 점렬컴팩트이다.
+$f : X \rightarrow Y$가 연속이고 $K \subseteq X$가 점렬컴팩트이면, 상 $f(K)$도 점렬컴팩트이다.
 :::
 
 ::: 증명
-$f(K)$의 점열 $(y_n)$을 택하면 $y_n = f(x_n)$인 $x_n \in K$이 있다. $K$가 점렬컴팩트이므로 $x_{n_k} \to x \in K$인 부분수열이 있고, $f$의 연속성과 [§함수의 극한과 연속, ⁋명제 2](/ko/math/analysis/limits_and_continuity#prop2)에 의해
+$f(K)$의 점열 $(y_n)$을 택하면 $y_n = f(x_n)$인 $x_n \in K$이 있다. $K$가 점렬컴팩트이므로 $x_{n_k} \rightarrow x \in K$인 부분수열이 있고, $f$의 연속성과 [§함수의 극한과 연속, ⁋명제 2](/ko/math/analysis/limits_and_continuity#prop2)에 의해
 
 $$y_{n_k} = f(x_{n_k}) \longrightarrow f(x) \in f(K)$$
 
@@ -41,7 +41,7 @@ $$y_{n_k} = f(x_{n_k}) \longrightarrow f(x) \in f(K)$$
 실숫값 연속함수에 [정리 1](#thm1)을 적용하면 최댓값과 최솟값의 존재가 곧바로 따른다. 핵심 관찰은 $\mathbb{R}$의 점렬컴팩트 부분집합이 자신의 상한과 하한을 원소로 포함한다는 것이다. 닫혀 있고 bounded인 집합은 상·하한이 존재하며, 닫힘 때문에 그 극한값이 집합 안에 들어오기 때문이다. 따라서 $f$의 상 $f(K)$가 점렬컴팩트라는 [정리 1](#thm1)의 결론만으로 최댓값·최솟값이 실현된다.
 
 ::: 따름정리 2 (최대·최소 정리)
-$K$가 점렬컴팩트이고 $f : K \to \mathbb{R}$가 연속이면, $f$는 $K$에서 최댓값과 최솟값을 가진다. 특히 닫힌구간 $[a,b]$에서 연속인 함수는 최댓값과 최솟값을 가진다.
+$K$가 점렬컴팩트이고 $f : K \rightarrow \mathbb{R}$가 연속이면, $f$는 $K$에서 최댓값과 최솟값을 가진다. 특히 닫힌구간 $[a,b]$에서 연속인 함수는 최댓값과 최솟값을 가진다.
 :::
 
 ::: 증명
@@ -53,7 +53,7 @@ $$M = \sup f(K)$$
 
 $$M - \frac1n < y_n \leq M, \qquad y_n \in f(K)$$
 
-인 $y_n$을 고를 수 있고, 따라서 $y_n \to M$이다. $f(K)$가 닫혀 있으므로 그 극한 $M$도 $f(K)$의 원소이다. 즉 $M = f(x_{\max})$인 $x_{\max} \in K$가 있어 $M$이 최댓값이다. 하한 $m = \inf f(K)$에 대해서도 같은 논증을 적용하면 $m = f(x_{\min})$인 $x_{\min} \in K$가 있어 최솟값이 실현된다. 마지막 주장은 닫힌구간 $[a,b]$가 닫혀 있고 bounded여서 점렬컴팩트이므로 곧바로 따른다.
+인 $y_n$을 고를 수 있고, 따라서 $y_n \rightarrow M$이다. $f(K)$가 닫혀 있으므로 그 극한 $M$도 $f(K)$의 원소이다. 즉 $M = f(x_{\max})$인 $x_{\max} \in K$가 있어 $M$이 최댓값이다. 하한 $m = \inf f(K)$에 대해서도 같은 논증을 적용하면 $m = f(x_{\min})$인 $x_{\min} \in K$가 있어 최솟값이 실현된다. 마지막 주장은 닫힌구간 $[a,b]$가 닫혀 있고 bounded여서 점렬컴팩트이므로 곧바로 따른다.
 :::
 
 이로써 최대·최소 정리에서 받아들였던 최대·최소 정리가 완비성에 기초하여 증명되었고, 그것에 의존하던 평균값 정리](/ko/math/calculus/mean_value_theorem)의 롤의 정리도 정당화된다.
@@ -63,7 +63,7 @@ $$M - \frac1n < y_n \leq M, \qquad y_n \in f(K)$$
 보통의 연속에서는 주어진 $\varepsilon$에 대해 고르는 $\delta$가 점 $a$마다 달라질 수 있다. 함수가 가파른 곳에서는 작은 $\delta$가, 완만한 곳에서는 큰 $\delta$가 필요하기 때문이다. 만일 어떤 곳에서는 $\delta$가 한없이 작아져야 한다면, 모든 점에 공통으로 통하는 양의 $\delta$를 잡을 수 없다. 균등연속은 바로 그런 공통의 $\delta$를 잡을 수 있다는 한층 강한 조건이며, 컴팩트성은 정의역이 "유한히 통제"되도록 만들어 이 강화를 가능하게 한다.
 
 ::: 정의 3
-$f : X \to Y$가 *균등연속<sub>uniformly continuous</sub>*이라는 것은, 임의의 $\varepsilon > 0$에 대하여 $\delta > 0$이 존재하여 ($x$에 무관하게) 모든 $x, x'$에 대해 $d_X(x, x') < \delta$이면 $d_Y(f(x), f(x')) < \varepsilon$인 것이다.
+$f : X \rightarrow Y$가 *균등연속<sub>uniformly continuous</sub>*이라는 것은, 임의의 $\varepsilon > 0$에 대하여 $\delta > 0$이 존재하여 ($x$에 무관하게) 모든 $x, x'$에 대해 $d_X(x, x') < \delta$이면 $d_Y(f(x), f(x')) < \varepsilon$인 것이다.
 :::
 
 정의 1의 연속과의 차이는 한정사의 순서에 있다. 점별 연속은 $\varepsilon$과 점 $a$를 먼저 받은 뒤 $\delta$를 고르는 반면, 균등연속은 $\varepsilon$만 받고 모든 점에 동시에 통하는 $\delta$를 고른다. 기호로 적으면, 점별 연속이
@@ -85,7 +85,7 @@ $f$가 $K$에서 연속이지만 균등연속이 아니라 하자. 그러면 어
 
 $$d_X(x_n, x_n') < \frac1n \quad\text{이면서}\quad d_Y\bigl(f(x_n), f(x_n')\bigr) \geq \varepsilon$$
 
-인 두 점열 $(x_n), (x_n')$이 있다. $K$가 점렬컴팩트이므로 $x_{n_k} \to x \in K$인 부분수열이 있고, 짝지어진 점 $x_{n_k}'$도
+인 두 점열 $(x_n), (x_n')$이 있다. $K$가 점렬컴팩트이므로 $x_{n_k} \rightarrow x \in K$인 부분수열이 있고, 짝지어진 점 $x_{n_k}'$도
 
 $$d_X(x_{n_k}', x) \leq d_X(x_{n_k}', x_{n_k}) + d_X(x_{n_k}, x) < \frac{1}{n_k} + d_X(x_{n_k}, x) \longrightarrow 0$$
 
@@ -111,7 +111,7 @@ d_Y\bigl(f(x_{n_k}), f(x_{n_k}')\bigr)
 
 $$\sup_{x \in (0,1)} x = 1, \qquad \inf_{x \in (0,1)} x = 0$$
 
-이 모두 함숫값으로 도달되지 않아 최댓값도 최솟값도 없다. 닫혀 있으나 bounded가 아닌 정의역에서도 마찬가지로, $g : \mathbb{R} \to \mathbb{R}$, $g(x) = x$는 최댓값이 없다.
+이 모두 함숫값으로 도달되지 않아 최댓값도 최솟값도 없다. 닫혀 있으나 bounded가 아닌 정의역에서도 마찬가지로, $g : \mathbb{R} \rightarrow \mathbb{R}$, $g(x) = x$는 최댓값이 없다.
 
 함수가 연속이 아니어도 결론이 깨진다. 컴팩트한 정의역 $[0, 1]$ 위에서
 
@@ -123,7 +123,7 @@ $$h(x) = \begin{cases} x, & 0 \leq x < 1, \\ 0, & x = 1 \end{cases}$$
 다음으로 정의역이 컴팩트가 아닐 때 연속이지만 균등연속이 아닌 함수가 어떻게 나타나는지를 본다.
 
 ::: 예시 6 (연속이지만 균등연속이 아닌 함수)
-$f : (0, 1] \to \mathbb{R}$, $f(x) = 1/x$를 보자. 점 $x_n = 1/n$과 $x_n' = 1/(n+1)$을 택하면
+$f : (0, 1] \rightarrow \mathbb{R}$, $f(x) = 1/x$를 보자. 점 $x_n = 1/n$과 $x_n' = 1/(n+1)$을 택하면
 
 $$\lvert x_n - x_n' \rvert = \frac1n - \frac{1}{n+1} = \frac{1}{n(n+1)} \longrightarrow 0$$
 
@@ -133,7 +133,7 @@ $$\lvert f(x_n) - f(x_n') \rvert = \lvert n - (n+1) \rvert = 1$$
 
 이 항상 $1$이다. 따라서 $\varepsilon = 1$에 대해서는 어떤 $\delta > 0$도 통하지 않아 $f$는 균등연속이 아니다. 원점 근처에서 함수가 한없이 가팔라져 공통의 $\delta$를 허용하지 않기 때문이다. 정의역 $(0, 1]$이 닫혀 있지 않아 — 따라서 컴팩트가 아니어서 — [정리 4](#thm4)의 가정이 충족되지 않는 것과 정확히 맞물린다.
 
-같은 현상은 $g : \mathbb{R} \to \mathbb{R}$, $g(x) = x^2$에서도 나타난다. $x_n = n + 1/n$, $x_n' = n$이면 $\lvert x_n - x_n'\rvert = 1/n \to 0$이지만
+같은 현상은 $g : \mathbb{R} \rightarrow \mathbb{R}$, $g(x) = x^2$에서도 나타난다. $x_n = n + 1/n$, $x_n' = n$이면 $\lvert x_n - x_n'\rvert = 1/n \rightarrow 0$이지만
 
 $$\lvert g(x_n) - g(x_n') \rvert = \Bigl(n + \frac1n\Bigr)^2 - n^2 = 2 + \frac{1}{n^2} > 2$$
 
@@ -147,7 +147,7 @@ $$\lvert x^2 - x'^2 \rvert = \lvert x + x' \rvert \cdot \lvert x - x' \rvert \le
 이어서, $\delta = \varepsilon/(2R)$로 두면 $\lvert x - x'\rvert < \delta$가 모든 점에 공통으로 $\lvert x^2 - x'^2\rvert < \varepsilon$을 강제한다. 인수 $\lvert x + x'\rvert$가 컴팩트 정의역에서 $2R$로 bounded라는 점이 결정적이다. 이 부등식 $\lvert f(x) - f(x')\rvert \leq 2R \lvert x - x'\rvert$은 함숫값의 변화가 변수의 변화에 상수배로 묶이는 형태로, 균등연속을 자동으로 함의하는 유용한 충분조건을 이룬다.
 
 ::: 정의 7
-$f : X \to Y$가 *립시츠<sub>Lipschitz</sub> 연속*이라는 것은, 어떤 상수 $L \geq 0$이 존재하여 모든 $x, x' \in X$에 대해
+$f : X \rightarrow Y$가 *립시츠<sub>Lipschitz</sub> 연속*이라는 것은, 어떤 상수 $L \geq 0$이 존재하여 모든 $x, x' \in X$에 대해
 
 $$d_Y\bigl(f(x), f(x')\bigr) \leq L \cdot d_X(x, x')$$
 

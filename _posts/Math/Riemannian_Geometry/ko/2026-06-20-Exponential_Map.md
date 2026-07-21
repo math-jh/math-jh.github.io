@@ -26,7 +26,7 @@ Riemannian manifold $(M, g)$의 점 $p \in M$에 대해, 집합
 
 $$\mathcal{E}_p = \{v \in T_p M \mid \gamma_v \text{ is defined on an interval containing } [0, 1]\}$$
 
-위에서 정의되는 *exponential map<sub>지수사상</sub>* $\exp_p : \mathcal{E}_p \to M$을
+위에서 정의되는 *exponential map<sub>지수사상</sub>* $\exp_p : \mathcal{E}_p \rightarrow M$을
 
 $$\exp_p(v) = \gamma_v(1)$$
 
@@ -60,7 +60,7 @@ $$D_t \dot\sigma(t) = D_t\bigl(s\, \dot\gamma_v(st)\bigr) = s^2\, (D_t \dot\gamm
 Exponential map이 $0$의 근방에서 정의되고 매끄럽다는 사실은 상미분방정식 해의 초기조건에 대한 smooth 의존성에서 나온다. [§측지선, ⁋정리 7](/ko/math/riemannian_geometry/geodesics#thm7)의 증명에서 측지선 방정식은 $TM$ 위의 일계 상미분방정식 시스템으로 환원되었으며, 그 우변이 $(\gamma, w)$에 매끄럽게 의존하므로, 상미분방정식의 표준적 정리에 의해 그 흐름은 시간과 초기조건 모두에 매끄럽게 의존한다. 이를 exponential map에 적용한다.
 
 ::: 명제 3
-Riemannian manifold $(M, g)$의 점 $p$에 대해, $0 \in T_p M$의 적당한 열린근방 $V \subseteq \mathcal{E}_p$가 존재하여 $\exp_p : V \to M$이 매끄럽다. 더욱이 $V$를 $0$에 대해 *star-shaped*인 것으로, 즉 $v \in V$이면 모든 $0 \le s \le 1$에 대해 $sv \in V$이도록 택할 수 있다.
+Riemannian manifold $(M, g)$의 점 $p$에 대해, $0 \in T_p M$의 적당한 열린근방 $V \subseteq \mathcal{E}_p$가 존재하여 $\exp_p : V \rightarrow M$이 매끄럽다. 더욱이 $V$를 $0$에 대해 *star-shaped*인 것으로, 즉 $v \in V$이면 모든 $0 \le s \le 1$에 대해 $sv \in V$이도록 택할 수 있다.
 :::
 
 ::: 증명
@@ -92,7 +92,7 @@ $$(d\exp_p)_0(v) = \left.\frac{d}{dt}\right\vert_{t = 0} \exp_p(tv) = \left.\fra
 [명제 4](#prop4)에서 $(d\exp_p)_0$이 가역이므로, manifold 사이의 smooth 함수에 대한 역함수 정리를 적용할 수 있다. 이로부터 exponential map이 $p$ 근방에 좌표계를 부여한다.
 
 ::: 정의 5
-Riemannian manifold $(M, g)$의 점 $p$에 대해, $0$의 star-shaped 열린근방 $V \subseteq T_p M$이 존재하여 $\exp_p\vert_V : V \to \exp_p(V)$가 diffeomorphism이 될 때, 상 $U := \exp_p(V)$를 $p$의 *normal neighborhood<sub>정규근방</sub>*라 부른다.
+Riemannian manifold $(M, g)$의 점 $p$에 대해, $0$의 star-shaped 열린근방 $V \subseteq T_p M$이 존재하여 $\exp_p\vert_V : V \rightarrow \exp_p(V)$가 diffeomorphism이 될 때, 상 $U := \exp_p(V)$를 $p$의 *normal neighborhood<sub>정규근방</sub>*라 부른다.
 :::
 
 ::: 증명
@@ -102,9 +102,9 @@ Riemannian manifold $(M, g)$의 점 $p$에 대해, $0$의 star-shaped 열린근�
 Normal neighborhood 위에서 exponential map의 역사상은 $T_p M$ 위로의 smooth 좌표를 준다. 여기에 tangent space의 orthonormal basis를 통한 선형동형을 합성하면 manifold 위의 구체적인 좌표계를 얻는다.
 
 ::: 정의 6
-$p$의 normal neighborhood $U = \exp_p(V)$와 $T_p M$의 $g_p$에 대한 orthonormal basis $(E_1, \ldots, E_n)$이 주어졌다 하자. 이 기저가 정하는 선형동형 $E : \mathbb{R}^n \to T_p M$, $E(x^1, \ldots, x^n) = \sum_i x^i E_i$에 대해, 합성
+$p$의 normal neighborhood $U = \exp_p(V)$와 $T_p M$의 $g_p$에 대한 orthonormal basis $(E_1, \ldots, E_n)$이 주어졌다 하자. 이 기저가 정하는 선형동형 $E : \mathbb{R}^n \rightarrow T_p M$, $E(x^1, \ldots, x^n) = \sum_i x^i E_i$에 대해, 합성
 
-$$\varphi := E^{-1} \circ (\exp_p\vert_V)^{-1} : U \to \mathbb{R}^n$$
+$$\varphi := E^{-1} \circ (\exp_p\vert_V)^{-1} : U \rightarrow \mathbb{R}^n$$
 
 을 $p$를 중심으로 하는 *normal coordinate<sub>정규좌표</sub>*라 부른다.
 :::

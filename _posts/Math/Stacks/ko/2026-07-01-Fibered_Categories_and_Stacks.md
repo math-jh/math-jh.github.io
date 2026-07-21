@@ -141,7 +141,7 @@ CFG에서 pseudofunctor로 가는 방향은 [명제 7](#prop7)이다. Cleavage�
 이하에서 $(\mathcal{C}, \tau)$은 site이고, 위상은 covering family $\{U_i \rightarrow U\}$로 주어지는 pretopology로 기술한다. ([§Grothendieck 위상과 site, ⁋정의 3](/ko/math/stacks/grothendieck_topology#def3)) CFG $p:\mathcal{F} \rightarrow \mathcal{C}$의 cleavage를 하나 고정하여 pullback $f^\ast$과 제한 $x\vert_V=f^\ast x$ (단, $f: V \rightarrow U$)을 사용한다.
 
 ::: 정의 11
-CFG $p:\mathcal{F} \rightarrow \mathcal{C}$과 대상 $U\in \mathcal{C}$, 그리고 두 대상 $x, y\in \mathcal{F}(U)$이 주어졌다 하자. $U$ 위의 *Isom presheaf*
+CFG $p:\mathcal{F} \rightarrow \mathcal{C}$과 대상 $U\in \mathcal{C}$, 그리고 두 대상 $x, y\in \mathcal{F}(U)$이 주어졌다 하자. $U$ 위의 *Isom presheaf<sub>Isom 준층</sub>*
 
 $$\operatorname{\underline{Isom}}_U(x, y):(\mathcal{C}/U)^\op \rightarrow \Set;\qquad (f: V \rightarrow U)\mapsto \Hom_{\mathcal{F}(V)}(f^\ast x, f^\ast y)$$
 
@@ -229,7 +229,7 @@ Site $(\mathcal{C}, \tau)$ 위의 sheaf of group $G$에 대하여, 대상 $T\in 
 1. (국소 비공) 사상 $P \rightarrow \ast$ (종대상으로의 사상)이 sheaf의 epimorphism이다. 즉 어떤 덮개 $\{T_i \rightarrow T\}$이 있어 각 $P(T_i)\neq \varnothing$이다.
 2. (단순추이성) 사상 $G\vert_T\times P \rightarrow P\times P$, $(g, p)\mapsto(g\cdot p, p)$이 sheaf의 isomorphism이다.
 
-두 $G$-torsor 사이의 사상은 $G$-동변 sheaf 사상이며 (이는 자동으로 isomorphism이다), $T$ 위의 $G$-torsor들은 groupoid $\mathbf{B}G(T)$을 이룬다. 대응 $T\mapsto \mathbf{B}G(T)$이 정의하는 CFG를 *classifying stack* $\mathbf{B}G$로 적는다.
+두 $G$-torsor 사이의 사상은 $G$-동변 sheaf 사상이며 (이는 자동으로 isomorphism이다), $T$ 위의 $G$-torsor들은 groupoid $\mathbf{B}G(T)$을 이룬다. 대응 $T\mapsto \mathbf{B}G(T)$이 정의하는 CFG를 *classifying stack<sub>분류 스택</sub>* $\mathbf{B}G$로 적는다.
 :::
 
 두 조건은 $P$이 국소적으로 $G$ 자신과 같음, 곧 어떤 덮개 위에서 $P\vert_{T_i}\cong G\vert_{T_i}$ ($G$의 좌평행이동 작용)임과 동치이다. 실제로 조건 1로 각 $T_i$ 위에 절단 $s_i\in P(T_i)$을 잡으면, 조건 2가 $g\mapsto g\cdot s_i$이 동형 $G\vert_{T_i}\xrightarrow{\sim}P\vert_{T_i}$임을 준다. 두 절단의 비교는 $T_{ij}$ 위의 $G$-값 transition 자료 $g_{ij}\in G(T_{ij})$을 낳고, 이것이 cocycle을 이룬다. $\mathbf{B}G$의 한 점의 automorphism group은 $\Aut(P)\cong G(T)$이므로 ($P$이 자명한 경우), $\mathbf{B}G$은 자명한 대상 하나에 group $G$이 automorphism으로 붙은 stack, 곧 $\mathbf{B}G(T)$의 isomorphism class는 $H^1(T, G)$으로 분류된다. 가장 중요한 경우가 $G=\mathbb{G}_m$이며, 이것이 [예시 2](#ex2)에서 예고한 line bundle의 분류이다.

@@ -31,9 +31,9 @@ $$\nabla_X Y = (\bar\nabla_X Y)^\top$$
 :::
 
 ::: 증명
-함수 $\nabla' : \mathfrak{X}(M) \times \mathfrak{X}(M) \to \mathfrak{X}(M)$을 $\nabla'_X Y := (\bar\nabla_X Y)^\top$로 정의하자. 먼저 이것이 well-defined임을, 즉 extension에 무관함을 보인다. [§접속, ⁋명제 2](/ko/math/riemannian_geometry/connection#prop2)에 의해 $(\bar\nabla_X Y)_p$는 $X_p \in T_p M \subseteq T_p \bar M$과 $p$ 근방에서의 $Y$의 값에만 의존하는데, $Y$를 $M$ 위에서만 알아도 $X_p \in T_p M$ 방향의 미분은 $M$ 위에서의 $Y$의 값만으로 결정된다. 따라서 $(\bar\nabla_X Y)_p$는 extension에 무관하며 그 접성분도 그러하다.
+함수 $\nabla' : \mathfrak{X}(M) \times \mathfrak{X}(M) \rightarrow \mathfrak{X}(M)$을 $\nabla'_X Y := (\bar\nabla_X Y)^\top$로 정의하자. 먼저 이것이 well-defined임을, 즉 extension에 무관함을 보인다. [§접속, ⁋명제 2](/ko/math/riemannian_geometry/connection#prop2)에 의해 $(\bar\nabla_X Y)_p$는 $X_p \in T_p M \subseteq T_p \bar M$과 $p$ 근방에서의 $Y$의 값에만 의존하는데, $Y$를 $M$ 위에서만 알아도 $X_p \in T_p M$ 방향의 미분은 $M$ 위에서의 $Y$의 값만으로 결정된다. 따라서 $(\bar\nabla_X Y)_p$는 extension에 무관하며 그 접성분도 그러하다.
 
-이제 $\nabla'$이 $g$의 Levi-Civita 접속임을 [§레비-치비타 접속, ⁋정리 4](/ko/math/riemannian_geometry/Levi-Civita_connection#thm4)의 유일성을 이용해 보인다. 먼저 $\nabla'$이 $TM$ 위의 connection임을 확인하자. 접성분을 취하는 사상 $(\cdot)^\top : T\bar M\vert_M \to TM$은 fiber별 선형사상이므로, $\bar\nabla$이 첫 인수에 대해 $C^\infty(M)$-linear, 둘째 인수에 대해 $\mathbb{R}$-linear이고 라이프니츠 법칙 $\bar\nabla_X(fY) = f \bar\nabla_X Y + (Xf) Y$를 만족하는 데서, $\nabla'$도 같은 성질을 물려받는다. 라이프니츠 법칙의 경우 $(\bar\nabla_X(fY))^\top = (f\bar\nabla_X Y + (Xf)Y)^\top = f(\bar\nabla_X Y)^\top + (Xf) Y^\top = f \nabla'_X Y + (Xf) Y$인데, 마지막에서 $Y$가 $M$에 접하므로 $Y^\top = Y$임을 썼다. 따라서 $\nabla'$은 connection이다.
+이제 $\nabla'$이 $g$의 Levi-Civita 접속임을 [§레비-치비타 접속, ⁋정리 4](/ko/math/riemannian_geometry/Levi-Civita_connection#thm4)의 유일성을 이용해 보인다. 먼저 $\nabla'$이 $TM$ 위의 connection임을 확인하자. 접성분을 취하는 사상 $(\cdot)^\top : T\bar M\vert_M \rightarrow TM$은 fiber별 선형사상이므로, $\bar\nabla$이 첫 인수에 대해 $C^\infty(M)$-linear, 둘째 인수에 대해 $\mathbb{R}$-linear이고 라이프니츠 법칙 $\bar\nabla_X(fY) = f \bar\nabla_X Y + (Xf) Y$를 만족하는 데서, $\nabla'$도 같은 성질을 물려받는다. 라이프니츠 법칙의 경우 $(\bar\nabla_X(fY))^\top = (f\bar\nabla_X Y + (Xf)Y)^\top = f(\bar\nabla_X Y)^\top + (Xf) Y^\top = f \nabla'_X Y + (Xf) Y$인데, 마지막에서 $Y$가 $M$에 접하므로 $Y^\top = Y$임을 썼다. 따라서 $\nabla'$은 connection이다.
 
 다음으로 $\nabla'$이 $g$와 compatible이다. $\bar\nabla$이 $\bar g$와 compatible이므로 $M$에 접하는 $X, Y, Z$에 대해
 
@@ -85,14 +85,14 @@ $$\mathrm{II}(X, fY) = \bar\nabla_X(fY) - \nabla_X(fY) = \bigl(f\bar\nabla_X Y +
 가 되어 $(Xf) Y$항이 상쇄된다. 따라서 둘째 인수에 대해서도 $C^\infty(M)$-linear이다. 두 인수 모두에 $C^\infty(M)$-linear이므로 텐서성 판정 (각 인수의 점별 의존성)에 의해 $\mathrm{II}(X, Y)_p$는 $X_p, Y_p$에만 의존하며, $\mathrm{II}$는 $NM$-값 대칭 $(0, 2)$-tensor이다.
 :::
 
-[명제 3](#prop3)에서 $\mathrm{II}$가 텐서임이 중요하다. 정의에는 $X, Y$를 $\bar M$ 위로 확장하는 절차가 들어 있지만, 결과는 extension과 무관하게 $T_p M$의 두 벡터 $X_p, Y_p$에만 의존한다. 이로써 우리는 $\mathrm{II}_p : T_p M \times T_p M \to N_p M$을 각 점에서의 대칭 쌍선형사상으로 다룰 수 있다.
+[명제 3](#prop3)에서 $\mathrm{II}$가 텐서임이 중요하다. 정의에는 $X, Y$를 $\bar M$ 위로 확장하는 절차가 들어 있지만, 결과는 extension과 무관하게 $T_p M$의 두 벡터 $X_p, Y_p$에만 의존한다. 이로써 우리는 $\mathrm{II}_p : T_p M \times T_p M \rightarrow N_p M$을 각 점에서의 대칭 쌍선형사상으로 다룰 수 있다.
 
 ## Weingarten 사상
 
 제2기본형식은 normal bundle에 값을 갖는다. 한 법벡터 방향을 고정하여 이를 tangent space 위의 endomorphism으로 바꾸면 다루기가 편해진다. 이를 위해 법선 방향의 미분을 도입한다. $M$ 위의 법벡터장 $N$, 즉 $NM$의 section과 접 벡터장 $X$에 대해 주변 미분 $\bar\nabla_X N$을 계산하면, 이는 다시 접성분과 법성분으로 쪼개진다. 그 접성분이 다음 사상을 준다.
 
 ::: 정의 4
-$M \subseteq \bar M$의 점 $p$에서 법벡터 $\nu \in N_p M$이 주어졌다 하자. $\nu$를 $p$ 근방에서 smooth 법벡터장 $N$으로 확장할 때, 점 $p$에서의 *Weingarten 사상<sub>Weingarten map</sub>* 혹은 *shape operator* $S_\nu : T_p M \to T_p M$은 다음의 식
+$M \subseteq \bar M$의 점 $p$에서 법벡터 $\nu \in N_p M$이 주어졌다 하자. $\nu$를 $p$ 근방에서 smooth 법벡터장 $N$으로 확장할 때, 점 $p$에서의 *Weingarten 사상<sub>Weingarten map</sub>* 혹은 *shape operator<sub>모양연산자</sub>* $S_\nu : T_p M \rightarrow T_p M$은 다음의 식
 
 $$S_\nu(X) := -(\bar\nabla_X N)^\top$$
 
@@ -190,7 +190,7 @@ $\mathrm{II}$가 텐서이고 trace가 기저 선택에 무관하므로 $H$는 w
 제2기본형식은 [§측지선, ⁋예시 9](/ko/math/riemannian_geometry/geodesics#ex9)에서 구면의 대원을 다룰 때 암묵적으로 사용한 "주변 가속도의 접성분"이라는 개념을 정확히 메운다. $M$ 위의 곡선 $\gamma$의 주변 가속도 $\bar D_t \dot\gamma$와 내재적 가속도 $D_t \dot\gamma$ 사이의 간격이 곧 제2기본형식이다.
 
 ::: 명제 9
-embedding된 submanifold $M \subseteq \bar M$ 위의 곡선 $\gamma : I \to M$에 대해, $\gamma$를 $\bar M$의 곡선으로 본 주변 가속도 $\bar D_t \dot\gamma$는
+embedding된 submanifold $M \subseteq \bar M$ 위의 곡선 $\gamma : I \rightarrow M$에 대해, $\gamma$를 $\bar M$의 곡선으로 본 주변 가속도 $\bar D_t \dot\gamma$는
 
 $$\bar D_t \dot\gamma = D_t \dot\gamma + \mathrm{II}(\dot\gamma, \dot\gamma)$$
 

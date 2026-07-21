@@ -137,7 +137,7 @@ $\sl_2$-representation $V$ 위에서, [§보편 포락 대수, ⁋예시 12](/ko
 
 $$C=e\circ f+f\circ e+\tfrac{1}{2}h\circ h:V\rightarrow V$$
 
-을 $V$ 위의 *Casimir operator*라 부른다.
+을 $V$ 위의 *Casimir operator<sub>카시미르 연산자</sub>*라 부른다.
 :::
 
 $\Omega$가 $U(\sl_2)$의 중심에 속하므로 ([§보편 포락 대수, ⁋예시 12](/ko/math/lie_theory/universal_enveloping_algebra#ex12)), $C$는 $h,e,f$의 작용 모두와 가환이다. 곧 $C$는 $\sl_2$-equivariant한 자기준동형이며, Schur의 보조정리의 정신에 따라 기약 표현 위에서는 스칼라로 작용한다. 실제로 $V(n)$의 highest weight vector $v_0$ 위에서 $e\cdot v_0=0$을 사용하면
@@ -149,12 +149,12 @@ $$C\cdot v_0=ef\cdot v_0+fe\cdot v_0+\tfrac{1}{2}h^2\cdot v_0=(fe+h)\cdot v_0+0+
 완전가약성 증명의 핵심은 표현이 short exact sequence로 쪼개질 때, 그 exact sequence가 항상 분리됨을 보이는 것이다. 다음 보조정리가 그 출발점이다.
 
 ::: 보조정리 8
-$0\to W\to V\to\mathbb{C}\to 0$이 $\sl_2$-representation들의 short exact sequence이고, 여기에서 $\mathbb{C}=V(0)$은 자명한 표현이라 하자. 그럼 이 exact sequence는 분리된다. 곧 $V\cong W\oplus\mathbb{C}$인 $\sl_2$-불변 분해가 존재한다.
+$0\rightarrow W\rightarrow V\rightarrow\mathbb{C}\rightarrow 0$이 $\sl_2$-representation들의 short exact sequence이고, 여기에서 $\mathbb{C}=V(0)$은 자명한 표현이라 하자. 그럼 이 exact sequence는 분리된다. 곧 $V\cong W\oplus\mathbb{C}$인 $\sl_2$-불변 분해가 존재한다.
 :::
 ::: 증명
-$\dim W$에 대한 귀납법으로 보인다. $W$가 $0$이 아닌 진부분 subrepresentation $W'$을 가지면, 몫 $V/W'$은 $0\to W/W'\to V/W'\to\mathbb{C}\to 0$을 이루고 $\dim(W/W')<\dim W$이므로 귀납 가정에 의해 분리되어, $V/W'$ 안에 $\mathbb{C}$로 사상되는 $1$차원 subrepresentation $\widetilde U/W'$이 있다. 이제 $0\to W'\to\widetilde U\to\mathbb{C}\to 0$은 $\dim W'<\dim W$이므로 다시 귀납 가정으로 분리되어, $\widetilde U$ 안에 $\mathbb{C}$로 사상되는 $1$차원 subrepresentation $L$이 있다. $L$은 $V\to\mathbb{C}$로 동형으로 사상되므로 $V=W\oplus L$이다.
+$\dim W$에 대한 귀납법으로 보인다. $W$가 $0$이 아닌 진부분 subrepresentation $W'$을 가지면, 몫 $V/W'$은 $0\rightarrow W/W'\rightarrow V/W'\rightarrow\mathbb{C}\rightarrow 0$을 이루고 $\dim(W/W')<\dim W$이므로 귀납 가정에 의해 분리되어, $V/W'$ 안에 $\mathbb{C}$로 사상되는 $1$차원 subrepresentation $\widetilde U/W'$이 있다. 이제 $0\rightarrow W'\rightarrow\widetilde U\rightarrow\mathbb{C}\rightarrow 0$은 $\dim W'<\dim W$이므로 다시 귀납 가정으로 분리되어, $\widetilde U$ 안에 $\mathbb{C}$로 사상되는 $1$차원 subrepresentation $L$이 있다. $L$은 $V\rightarrow\mathbb{C}$로 동형으로 사상되므로 $V=W\oplus L$이다.
 
-따라서 $W$가 기약인 경우만 보이면 된다. $W=V(0)$이 자명한 표현이면 $V$는 $2$차원이고 $\sl_2$가 $V$ 위에서 nilpotent하게만 작용하므로 ($h,e,f$의 모든 commutator가 자명한 $1$차원 몫과 부분 위에서 $0$이 되어 작용 전체가 strictly upper-triangular), $[e,f]=h$의 trace를 비교하면 $h$의 작용이 $0$이고 작용이 분리되어 $V\cong W\oplus\mathbb{C}$이다. $W=V(n)$이 $n\geq 1$인 기약인 경우, $V$ 위의 Casimir operator $C$를 생각한다. $C$는 자명한 표현 $\mathbb{C}=V(0)$ 위에서 $\tfrac{1}{2}\cdot0\cdot2=0$으로, $W=V(n)$ 위에서 $\tfrac{1}{2}n(n+2)\neq 0$으로 작용한다. $C$가 $\sl_2$의 작용과 가환이므로 $\ker C$는 $V$의 subrepresentation이다. exact sequence에서 $V/W\cong\mathbb{C}$ 위에서 $C$가 $0$이므로 $C(V)\subseteq W$이고, $W$ 위에서 $C$가 가역 스칼라이므로 $C\colon V\to W$는 전사이며 $\ker C$는 $1$차원이다. $\ker C\cap W=0$이므로 $V=W\oplus\ker C$가 $\sl_2$-불변 분해이다.
+따라서 $W$가 기약인 경우만 보이면 된다. $W=V(0)$이 자명한 표현이면 $V$는 $2$차원이고 $\sl_2$가 $V$ 위에서 nilpotent하게만 작용하므로 ($h,e,f$의 모든 commutator가 자명한 $1$차원 몫과 부분 위에서 $0$이 되어 작용 전체가 strictly upper-triangular), $[e,f]=h$의 trace를 비교하면 $h$의 작용이 $0$이고 작용이 분리되어 $V\cong W\oplus\mathbb{C}$이다. $W=V(n)$이 $n\geq 1$인 기약인 경우, $V$ 위의 Casimir operator $C$를 생각한다. $C$는 자명한 표현 $\mathbb{C}=V(0)$ 위에서 $\tfrac{1}{2}\cdot0\cdot2=0$으로, $W=V(n)$ 위에서 $\tfrac{1}{2}n(n+2)\neq 0$으로 작용한다. $C$가 $\sl_2$의 작용과 가환이므로 $\ker C$는 $V$의 subrepresentation이다. exact sequence에서 $V/W\cong\mathbb{C}$ 위에서 $C$가 $0$이므로 $C(V)\subseteq W$이고, $W$ 위에서 $C$가 가역 스칼라이므로 $C\colon V\rightarrow W$는 전사이며 $\ker C$는 $1$차원이다. $\ker C\cap W=0$이므로 $V=W\oplus\ker C$가 $\sl_2$-불변 분해이다.
 :::
 
 이제 일반적인 short exact sequence로 넘어간다. 보조정리 8의 자명한 몫이라는 제약을 $\Hom$ 공간을 도입하여 제거한다.
@@ -163,15 +163,15 @@ $\dim W$에 대한 귀납법으로 보인다. $W$가 $0$이 아닌 진부분 sub
 모든 유한차원 $\sl_2$-representation은 기약 표현들의 직합이다. 특히 임의의 유한차원 $\sl_2$-representation 위에서 $h$는 대각화 가능하고 정수 고윳값만 가지며, $V=\bigoplus_\lambda V_\lambda$로 weight 분해된다.
 :::
 ::: 증명
-먼저 임의의 short exact sequence $0\to W\to V\xrightarrow{\pi}U\to 0$이 분리됨을 보인다. $\Hom_{\mathbb{C}}(U,V)$ 위에 $\sl_2$-작용을 $(x\cdot\varphi)(u)=x\cdot\varphi(u)-\varphi(x\cdot u)$로 주면, $\sl_2$-equivariant한 사상 $U\to V$들의 공간은 정확히 이 작용의 불변 부분공간 $\Hom_{\mathbb{C}}(U,V)^{\sl_2}$이다.
+먼저 임의의 short exact sequence $0\rightarrow W\rightarrow V\xrightarrow{\pi}U\rightarrow 0$이 분리됨을 보인다. $\Hom_{\mathbb{C}}(U,V)$ 위에 $\sl_2$-작용을 $(x\cdot\varphi)(u)=x\cdot\varphi(u)-\varphi(x\cdot u)$로 주면, $\sl_2$-equivariant한 사상 $U\rightarrow V$들의 공간은 정확히 이 작용의 불변 부분공간 $\Hom_{\mathbb{C}}(U,V)^{\sl_2}$이다.
 
-$\sl_2$-equivariant한 사상 $s\colon U\to V$로 $\pi\circ s=\id_U$인 것을 찾으면 $V=W\oplus s(U)$가 되어 exact sequence가 분리된다. 이를 위해 부분공간
+$\sl_2$-equivariant한 사상 $s\colon U\rightarrow V$로 $\pi\circ s=\id_U$인 것을 찾으면 $V=W\oplus s(U)$가 되어 exact sequence가 분리된다. 이를 위해 부분공간
 
 $$A=\{\varphi\in\Hom_{\mathbb{C}}(U,V)\mid \pi\circ\varphi=\lambda\cdot\id_U\ \text{for some}\ \lambda\in\mathbb{C}\},\qquad B=\{\varphi\mid \pi\circ\varphi=0\}$$
 
-을 생각하면, $\pi$가 전사이므로 $B\subseteq A$는 부분공간이고 $\varphi\mapsto\lambda$가 $\sl_2$-equivariant한 short exact sequence $0\to B\to A\to\mathbb{C}\to 0$을 준다. ($\sl_2$가 $A,B$를 보존함은 작용의 정의에서 확인된다. $\pi$가 $\sl_2$-equivariant이므로 $\pi\circ(x\cdot\varphi)=x\cdot(\pi\circ\varphi)-(\pi\circ\varphi)\circ x_U$이고, $\pi\circ\varphi=\lambda\id_U$이면 이는 $\lambda(x_U-x_U)=0$이 되어 $x\cdot\varphi\in B$이다.) [보조정리 8](#lem8)에 의해 이 exact sequence는 분리되어, $A$ 안에 $\varphi\mapsto\lambda$로 $1$로 사상되는 $\sl_2$-불변 원소 $\varphi_0$, 곧 $\pi\circ\varphi_0=\id_U$인 $\sl_2$-equivariant $\varphi_0$이 존재한다. 이것이 우리가 찾던 splitting이다.
+을 생각하면, $\pi$가 전사이므로 $B\subseteq A$는 부분공간이고 $\varphi\mapsto\lambda$가 $\sl_2$-equivariant한 short exact sequence $0\rightarrow B\rightarrow A\rightarrow\mathbb{C}\rightarrow 0$을 준다. ($\sl_2$가 $A,B$를 보존함은 작용의 정의에서 확인된다. $\pi$가 $\sl_2$-equivariant이므로 $\pi\circ(x\cdot\varphi)=x\cdot(\pi\circ\varphi)-(\pi\circ\varphi)\circ x_U$이고, $\pi\circ\varphi=\lambda\id_U$이면 이는 $\lambda(x_U-x_U)=0$이 되어 $x\cdot\varphi\in B$이다.) [보조정리 8](#lem8)에 의해 이 exact sequence는 분리되어, $A$ 안에 $\varphi\mapsto\lambda$로 $1$로 사상되는 $\sl_2$-불변 원소 $\varphi_0$, 곧 $\pi\circ\varphi_0=\id_U$인 $\sl_2$-equivariant $\varphi_0$이 존재한다. 이것이 우리가 찾던 splitting이다.
 
-완전가약성은 $\dim V$에 대한 귀납법으로 따라온다. $V$가 기약이면 끝이고, 그렇지 않으면 $0$이 아닌 진부분 subrepresentation $W$를 잡아 $0\to W\to V\to V/W\to 0$을 분리하면 $V\cong W\oplus V/W$이며, 두 인자는 차원이 더 작으므로 귀납 가정으로 기약 표현들의 직합이다. 따라서 $V$도 그러하다. 마지막으로 각 기약 인자 $V(n)$ 위에서 $h$가 정수 고윳값 $n,n-2,\dots,-n$으로 대각화되므로, 그 직합인 $V$ 위에서도 $h$가 정수 고윳값으로 대각화되어 $V=\bigoplus_\lambda V_\lambda$이다.
+완전가약성은 $\dim V$에 대한 귀납법으로 따라온다. $V$가 기약이면 끝이고, 그렇지 않으면 $0$이 아닌 진부분 subrepresentation $W$를 잡아 $0\rightarrow W\rightarrow V\rightarrow V/W\rightarrow 0$을 분리하면 $V\cong W\oplus V/W$이며, 두 인자는 차원이 더 작으므로 귀납 가정으로 기약 표현들의 직합이다. 따라서 $V$도 그러하다. 마지막으로 각 기약 인자 $V(n)$ 위에서 $h$가 정수 고윳값 $n,n-2,\dots,-n$으로 대각화되므로, 그 직합인 $V$ 위에서도 $h$가 정수 고윳값으로 대각화되어 $V=\bigoplus_\lambda V_\lambda$이다.
 :::
 
 [정리 9](#thm9)는 [정의 1](#def1) 이후에 미루어 둔 weight 분해의 일반적 성립을 확립한다. 임의의 유한차원 표현은 weight space들의 직합이고, 각 weight은 정수이며, 표현 전체는 그 안에 나타나는 기약 인자들의 중복도에 의해 결정된다. 어떤 기약 인자가 몇 번 나타나는지는 Casimir operator $C$의 고유공간 분해와 각 weight space의 차원으로부터 읽어낼 수 있다.

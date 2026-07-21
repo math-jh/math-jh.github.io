@@ -20,7 +20,7 @@ weight: 4
 Root system $\Phi$의 구조는 simple root들 사이의 관계로 완전히 결정된다. [§근계, ⁋정의 16](/ko/math/lie_theory/root_systems#def16)에서 정의한 Cartan matrix는 이 관계를 행렬로 표현한 것이지만, 시각화를 통해 root system의 구조를 더 직관적으로 파악할 수 있다.
 
 ::: 정의 1
-Root system $\Phi$와 simple root들의 모임 $\Delta=\{\alpha_1,\ldots,\alpha_l\}$에 대하여, $\Phi$의 *Dynkin diagram*은 다음과 같이 정의되는 그래프이다.
+Root system $\Phi$와 simple root들의 모임 $\Delta=\{\alpha_1,\ldots,\alpha_l\}$에 대하여, $\Phi$의 *Dynkin diagram<sub>딘킨 도표</sub>*은 다음과 같이 정의되는 그래프이다.
 
 1. 각 simple root $\alpha_i$에 대해 하나의 vertex를 둔다.
 2. 두 vertex $\alpha_i$, $\alpha_j$ ($i\neq j$) 사이에 $\lvert\langle\alpha_i,\alpha_j\rangle\rvert$개의 edge를 둔다.
@@ -166,7 +166,7 @@ Borel subalgebra $$\mathfrak{b}$$에 대하여 다음이 성립한다.
 이제 Lie group 관점으로 넘어가자. Complex semisimple Lie group $$G_\mathbb{C}$$에 대하여, Borel subalgebra $$\mathfrak{b}$$에 대응하는 Lie subgroup을 생각할 수 있다.
 
 ::: 정의 11
-Complex semisimple Lie group $$G_\mathbb{C}$$의 *Borel subgroup* $$B$$는 Borel subalgebra $$\mathfrak{b}$$에 대응하는 connected Lie subgroup이다.
+Complex semisimple Lie group $$G_\mathbb{C}$$의 *Borel subgroup<sub>보렐 부분군</sub>* $$B$$는 Borel subalgebra $$\mathfrak{b}$$에 대응하는 connected Lie subgroup이다.
 
 $$\mathfrak{b}=\Lie(B)$$
 :::
@@ -174,7 +174,7 @@ $$\mathfrak{b}=\Lie(B)$$
 Borel subgroup $$B$$는 $$G_\mathbb{C}$$의 maximal connected solvable subgroup이다. 이제 quotient 공간을 정의하자.
 
 ::: 정의 12
-Complex semisimple Lie group $$G_\mathbb{C}$$와 그 Borel subgroup $$B$$에 대하여, *flag variety*는 다음의 homogeneous space이다.
+Complex semisimple Lie group $$G_\mathbb{C}$$와 그 Borel subgroup $$B$$에 대하여, *flag variety<sub>깃발 다양체</sub>*는 다음의 homogeneous space이다.
 
 $$\mathcal{F}=G_\mathbb{C}/B$$
 :::
@@ -198,7 +198,7 @@ $$\GL(n,\mathbb{C})/B\hookrightarrow\mathbb{P}(\wedge^1\mathbb{C}^n)\times\mathb
 이제 compact Lie group $$G$$와 그 complexification $$G_\mathbb{C}$$ 사이의 관계를 살펴보자. 이 연결은 두 관점 — compact group의 $$G/T$$와 complex group의 $$G_\mathbb{C}/B$$ — 사이의 bridge를 제공한다.
 
 ::: 정의 14
-Complex Lie group $$G_\mathbb{C}$$의 *compact form*은 다음 조건을 만족하는 compact Lie group $$G$$이다.
+Complex Lie group $$G_\mathbb{C}$$의 *compact form<sub>콤팩트 형식</sub>*은 다음 조건을 만족하는 compact Lie group $$G$$이다.
 
 1. $$G$$는 $$G_\mathbb{C}$$의 Lie subgroup이다.
 2. $$G$$의 Lie algebra $$\mathfrak{g}_0$$는 $$\mathfrak{g}$$의 real form이다. 즉 $$\mathfrak{g}=\mathfrak{g}_0\otimes_\mathbb{R}\mathbb{C}$$이다.
@@ -228,7 +228,7 @@ $$G/T\hookrightarrow G_\mathbb{C}/B=(G\cdot A\cdot N)/(T\cdot A\cdot N)\cong G/(
 
 첫 번째 inclusion은 $$G\hookrightarrow G_\mathbb{C}$$로부터 유도되며, composition이 $$G/T$$의 identity map이므로 이 inclusion은 homotopy equivalence이다.
 
-더 정확히는 $$A\cdot N\cong\mathbb{R}^n$$ (Euclidean space로 contractible)이므로 $$G_\mathbb{C}/B\to G/T$$는 deformation retraction을 유도한다.
+더 정확히는 $$A\cdot N\cong\mathbb{R}^n$$ (Euclidean space로 contractible)이므로 $$G_\mathbb{C}/B\rightarrow G/T$$는 deformation retraction을 유도한다.
 :::
 
 이 결과는 compact Lie group 관점에서의 $$G/T$$와 complex Lie group 관점에서의 flag variety $$G_\mathbb{C}/B$$가 본질적으로 같은 대상임을 의미한다. 특히 $$G/T$$의 위상적 성질 — cohomology, homotopy group 등 — 을 연구하기 위해 flag variety의 대수기하적 성질을 활용할 수 있다.

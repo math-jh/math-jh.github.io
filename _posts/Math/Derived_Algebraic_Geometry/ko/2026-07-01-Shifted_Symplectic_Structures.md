@@ -73,7 +73,7 @@ $$\mathcal{A}^{p,\mathrm{cl}}(X,n)\longrightarrow\mathcal{A}^p(X,n)$$
 이제 symplectic 구조를 정의한다. 고전적 symplectic 형식의 본질은 비축퇴성, 곧 형식이 tangent space와 cotangent space를 동형으로 잇는다는 데 있었다. 이 선형대수적 조건을 먼저 분리해 두자.
 
 ::: 정의 4
-$k$ 위의 유한차원 vector space $V$에 대하여, *alternating $2$-형식*이란 원소 $\omega\in\wedge^2V^\ast$을 뜻하며, 이는 $\omega(v,v)=0$을 만족하는 bilinear form과 같다. 그 *flat 사상*을
+$k$ 위의 유한차원 vector space $V$에 대하여, *alternating $2$-form<sub>교대 $2$-형식</sub>*이란 원소 $\omega\in\wedge^2V^\ast$을 뜻하며, 이는 $\omega(v,v)=0$을 만족하는 bilinear form과 같다. 그 *flat 사상*을
 
 $$\omega^\flat:V\longrightarrow V^\ast,\qquad \omega^\flat(v)=\omega(v,-)$$
 
@@ -87,7 +87,7 @@ Derived stack $X$ 위의 *$n$-shifted symplectic 구조<sub>$n$-shifted symplect
 
 $$\omega_0^\flat:T_X\longrightarrow L_X[n]$$
 
-이 $\QCoh(X)$에서 동치인 것을 뜻한다. 이 마지막 조건을 $\omega$의 *nondegeneracy*라 부르고, $n$-shifted symplectic 구조를 갖춘 $X$을 $n$-shifted symplectic derived stack이라 한다.
+이 $\QCoh(X)$에서 동치인 것을 뜻한다. 이 마지막 조건을 $\omega$의 *nondegeneracy<sub>비퇴화성</sub>*라 부르고, $n$-shifted symplectic 구조를 갖춘 $X$을 $n$-shifted symplectic derived stack이라 한다.
 :::
 
 밑에 깔린 형식 $\omega_0$은 $\wedge^2T_X\rightarrow\mathcal{O}_X[n]$, 곧 접복합체 위의 반대칭 쌍선형 짝짓기를 주며, 이를 한 변수에 대하여 수반으로 옮긴 것이 $\omega_0^\flat:T_X\rightarrow L_X[n]$이다. 따라서 nondegeneracy는 [정의 4](#def4)의 flat 사상이 동형이라는 조건을 복합체 수준으로, 그리고 shift $[n]$을 허용하여 옮긴 것이다. 여기서 닫힘 자료 전체가 아니라 오직 $\omega_0$만이 nondegeneracy에 관여함에 유의한다. 곧 $n$-shifted symplectic 구조는 "비축퇴 형식"이라는 국소적 조건과 "닫힘"이라는 대역적 정합 자료를 함께 묶은 대상이다. Degree $n$을 바꾸면 서로 다른 기하가 나타나는데, 이를 낮은 degree부터 살펴본다.

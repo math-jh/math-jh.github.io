@@ -21,20 +21,20 @@ published: false
 ## 복소미분가능성과 holomorphicity
 
 ::: 정의 1
-열린집합 $\Omega \subseteq \mathbb{C}$ 위의 함수 $f : \Omega \to \mathbb{C}$와 점 $z_0 \in \Omega$에 대하여, 극한
+열린집합 $\Omega \subseteq \mathbb{C}$ 위의 함수 $f : \Omega \rightarrow \mathbb{C}$와 점 $z_0 \in \Omega$에 대하여, 극한
 
-$$f'(z_0) = \lim_{h \to 0} \frac{f(z_0 + h) - f(z_0)}{h}$$
+$$f'(z_0) = \lim_{h \rightarrow 0} \frac{f(z_0 + h) - f(z_0)}{h}$$
 
 이 존재하면 $f$가 $z_0$에서 *복소미분가능<sub>complex differentiable</sub>*하다고 하고, 그 극한값 $f'(z_0)$을 $z_0$에서의 *도함수<sub>derivative</sub>*라 한다. 여기서 $h$는 $0$이 아닌 복소수이며 $z_0 + h \in \Omega$인 범위에서 $0$으로 보낸다.
 :::
 
-극한 $h \to 0$은 복소평면 위에서의 극한, 곧 $\lvert h\rvert \to 0$이므로 $h$가 $0$에 다가가는 *방향*에 무관하게 같은 값을 주어야 한다는 강한 요구이다. 실수축을 따라 $h \to 0$으로 보내든, 허수축을 따라 보내든, 혹은 나선을 그리며 보내든 차분비가 모두 같은 극한 $f'(z_0)$으로 수렴해야 한다. 실함수의 한쪽·양쪽 미분과 달리 평면에는 다가가는 길이 무수히 많으므로, 이 일치 요구가 곧 아래 Cauchy–Riemann 방정식이라는 구속으로 번역된다.
+극한 $h \rightarrow 0$은 복소평면 위에서의 극한, 곧 $\lvert h\rvert \rightarrow 0$이므로 $h$가 $0$에 다가가는 *방향*에 무관하게 같은 값을 주어야 한다는 강한 요구이다. 실수축을 따라 $h \rightarrow 0$으로 보내든, 허수축을 따라 보내든, 혹은 나선을 그리며 보내든 차분비가 모두 같은 극한 $f'(z_0)$으로 수렴해야 한다. 실함수의 한쪽·양쪽 미분과 달리 평면에는 다가가는 길이 무수히 많으므로, 이 일치 요구가 곧 아래 Cauchy–Riemann 방정식이라는 구속으로 번역된다.
 
 ::: 정의 2
-함수 $f : \Omega \to \mathbb{C}$가 영역 $\Omega$의 *모든* 점에서 복소미분가능하면, $f$를 $\Omega$ 위의 *holomorphic function<sub>복소정칙함수</sub>*이라 한다. $\mathbb{C}$ 전체에서 holomorphic인 함수는 *entire function<sub>전해석함수</sub>*이라 부른다.
+함수 $f : \Omega \rightarrow \mathbb{C}$가 영역 $\Omega$의 *모든* 점에서 복소미분가능하면, $f$를 $\Omega$ 위의 *holomorphic function<sub>복소정칙함수</sub>*이라 한다. $\mathbb{C}$ 전체에서 holomorphic인 함수는 *entire function<sub>전해석함수</sub>*이라 부른다.
 :::
 
-"holomorphic"이라는 말은 한 점이 아니라 열린집합 전체에서의 복소미분가능성을 가리킨다는 점이 핵심이다. 한 점에서만 복소미분가능한 것은 그 점의 임의의 작은 근방으로 확장되지 않을 수 있어 약한 성질이지만, 열린 근방 전체에서 복소미분가능하다는 조건은 앞서 말한 풍부한 구조 전부를 끌어낸다. 도함수가 다시 $\Omega$ 위의 함수 $f' : \Omega \to \mathbb{C}$를 정의하므로, $f'$ 자신이 또 holomorphic인지를 물을 수 있고 실제로 그러한데, 그 깊은 사실은 적분 이론에서 따로 다룬다. 우선 정의로부터 곧바로 따라 나오는 미분 규칙들을 정리한다.
+"holomorphic"이라는 말은 한 점이 아니라 열린집합 전체에서의 복소미분가능성을 가리킨다는 점이 핵심이다. 한 점에서만 복소미분가능한 것은 그 점의 임의의 작은 근방으로 확장되지 않을 수 있어 약한 성질이지만, 열린 근방 전체에서 복소미분가능하다는 조건은 앞서 말한 풍부한 구조 전부를 끌어낸다. 도함수가 다시 $\Omega$ 위의 함수 $f' : \Omega \rightarrow \mathbb{C}$를 정의하므로, $f'$ 자신이 또 holomorphic인지를 물을 수 있고 실제로 그러한데, 그 깊은 사실은 적분 이론에서 따로 다룬다. 우선 정의로부터 곧바로 따라 나오는 미분 규칙들을 정리한다.
 
 ::: 명제 3
 $f, g$가 $z_0$에서 복소미분가능하면 $f + g$, $fg$도 그러하며
@@ -57,9 +57,9 @@ $$\frac{(f+g)(z_0+h) - (f+g)(z_0)}{h} = \frac{f(z_0+h)-f(z_0)}{h} + \frac{g(z_0+
 
 $$\frac{f(z_0+h)g(z_0+h) - f(z_0)g(z_0)}{h} = \frac{f(z_0+h)-f(z_0)}{h}\,g(z_0+h) + f(z_0)\,\frac{g(z_0+h)-g(z_0)}{h}$$
 
-으로 쪼개고, $g$가 $z_0$에서 복소미분가능하면 연속이므로 $h \to 0$일 때 $g(z_0+h) \to g(z_0)$임을 쓰면 우변이 $f'(z_0)g(z_0) + f(z_0)g'(z_0)$으로 수렴한다. quotient의 경우 먼저 $g(z_0)\neq 0$이고 $g$가 연속이므로 $z_0$의 작은 근방에서 $g$가 $0$이 아니어서 $f/g$가 정의되며,
+으로 쪼개고, $g$가 $z_0$에서 복소미분가능하면 연속이므로 $h \rightarrow 0$일 때 $g(z_0+h) \rightarrow g(z_0)$임을 쓰면 우변이 $f'(z_0)g(z_0) + f(z_0)g'(z_0)$으로 수렴한다. quotient의 경우 먼저 $g(z_0)\neq 0$이고 $g$가 연속이므로 $z_0$의 작은 근방에서 $g$가 $0$이 아니어서 $f/g$가 정의되며,
 
-$$\frac{1}{h}\left(\frac{1}{g(z_0+h)} - \frac{1}{g(z_0)}\right) = -\frac{1}{g(z_0+h)g(z_0)}\cdot\frac{g(z_0+h)-g(z_0)}{h} \to -\frac{g'(z_0)}{g(z_0)^2}$$
+$$\frac{1}{h}\left(\frac{1}{g(z_0+h)} - \frac{1}{g(z_0)}\right) = -\frac{1}{g(z_0+h)g(z_0)}\cdot\frac{g(z_0+h)-g(z_0)}{h} \rightarrow -\frac{g'(z_0)}{g(z_0)^2}$$
 
 이므로 $(1/g)'(z_0) = -g'(z_0)/g(z_0)^2$이고, 여기에 곱셈규칙을 적용하면 quotient 공식을 얻는다. 합성에 대하여는 $w_0 = f(z_0)$로 두고 보조함수
 
@@ -69,7 +69,7 @@ $$\psi(w) = \begin{cases} \dfrac{g(w) - g(w_0)}{w - w_0}, & w \neq w_0, \\[1mm] 
 
 $$\frac{g(f(z_0+h)) - g(f(z_0))}{h} = \psi(f(z_0+h))\,\frac{f(z_0+h)-f(z_0)}{h}$$
 
-이고, $f$의 연속성으로 $f(z_0+h) \to w_0$이므로 $\psi(f(z_0+h)) \to \psi(w_0) = g'(w_0)$이며 우변이 $g'(f(z_0))f'(z_0)$으로 수렴한다.
+이고, $f$의 연속성으로 $f(z_0+h) \rightarrow w_0$이므로 $\psi(f(z_0+h)) \rightarrow \psi(w_0) = g'(w_0)$이며 우변이 $g'(f(z_0))f'(z_0)$으로 수렴한다.
 :::
 
 명제 3은 복소미분이 실미분과 동일한 형식 규칙을 따름을 말한다. 상수함수의 도함수가 $0$이고 항등함수 $z \mapsto z$의 도함수가 $1$임은 정의에서 즉시 나오므로, 곱셈규칙을 반복하면 $z^n$ ($n \geq 0$)의 도함수가 $nz^{n-1}$이고, 따라서 모든 다항식 $p(z) = \sum_{k=0}^n a_k z^k$이 전해석함수이며 $p'(z) = \sum_{k=1}^n k a_k z^{k-1}$이다. quotient 공식에 의해 유리함수 $p(z)/q(z)$는 분모가 $0$이 되지 않는 영역에서 holomorphic이다. 반면 다음 예시가 보이듯, 평면 위의 매우 smooth한 실함수조차 복소미분가능하지 않을 수 있다.
@@ -79,15 +79,15 @@ $$\frac{g(f(z_0+h)) - g(f(z_0))}{h} = \psi(f(z_0+h))\,\frac{f(z_0+h)-f(z_0)}{h}$
 
 $$\frac{\overline{z_0 + h} - \overline{z_0}}{h} = \frac{\bar{h}}{h}$$
 
-이다. $h$를 실수축을 따라 $0$으로 보내면 ($h = t \in \mathbb{R}$, $t \to 0$) $\bar{h}/h = t/t = 1$이지만, 허수축을 따라 보내면 ($h = it$, $t \to 0$) $\bar{h}/h = -it/(it) = -1$이다. 두 극한이 다르므로 $\bar{h}/h$는 $h \to 0$일 때 극한을 가지지 않는다. 따라서 $f(z) = \bar{z}$는 어느 점에서도 복소미분가능하지 않으며, 평면의 어디에서도 holomorphic이 아니다. 그럼에도 $\bar{z} = x - iy$는 실수부·허수부가 다항식이라 실함수로서는 매끄럽다. 복소미분가능성이 실미분가능성보다 훨씬 강한 조건임을 단적으로 보여 주는 예이다.
+이다. $h$를 실수축을 따라 $0$으로 보내면 ($h = t \in \mathbb{R}$, $t \rightarrow 0$) $\bar{h}/h = t/t = 1$이지만, 허수축을 따라 보내면 ($h = it$, $t \rightarrow 0$) $\bar{h}/h = -it/(it) = -1$이다. 두 극한이 다르므로 $\bar{h}/h$는 $h \rightarrow 0$일 때 극한을 가지지 않는다. 따라서 $f(z) = \bar{z}$는 어느 점에서도 복소미분가능하지 않으며, 평면의 어디에서도 holomorphic이 아니다. 그럼에도 $\bar{z} = x - iy$는 실수부·허수부가 다항식이라 실함수로서는 매끄럽다. 복소미분가능성이 실미분가능성보다 훨씬 강한 조건임을 단적으로 보여 주는 예이다.
 :::
 
 ## Cauchy–Riemann 방정식
 
-예시 4는 복소미분가능성이 차분비의 방향 독립성을 요구하며, 이것이 실수부와 허수부 사이의 관계로 번역됨을 시사한다. 이 관계를 정확히 적은 것이 Cauchy–Riemann 방정식이다. 함수 $f : \Omega \to \mathbb{C}$를 실수부와 허수부로 갈라 $f(z) = u(x, y) + i\,v(x, y)$ ($z = x + iy$) 로 적으면, $f$는 두 실숫값 함수 $u, v : \Omega \to \mathbb{R}$의 쌍, 곧 평면사상 $(x, y) \mapsto (u, v)$로 볼 수 있다. 이때 $f$의 복소미분가능성은 그 평면사상의 실미분가능성 ([\[해석학\] §다변수 미분, ⁋정의 1](/ko/math/analysis/multivariable_differentiation#def1)) 에 한 쌍의 편미분 등식을 더한 것과 정확히 동치이다.
+예시 4는 복소미분가능성이 차분비의 방향 독립성을 요구하며, 이것이 실수부와 허수부 사이의 관계로 번역됨을 시사한다. 이 관계를 정확히 적은 것이 Cauchy–Riemann 방정식이다. 함수 $f : \Omega \rightarrow \mathbb{C}$를 실수부와 허수부로 갈라 $f(z) = u(x, y) + i\,v(x, y)$ ($z = x + iy$) 로 적으면, $f$는 두 실숫값 함수 $u, v : \Omega \rightarrow \mathbb{R}$의 쌍, 곧 평면사상 $(x, y) \mapsto (u, v)$로 볼 수 있다. 이때 $f$의 복소미분가능성은 그 평면사상의 실미분가능성 ([\[해석학\] §다변수 미분, ⁋정의 1](/ko/math/analysis/multivariable_differentiation#def1)) 에 한 쌍의 편미분 등식을 더한 것과 정확히 동치이다.
 
 ::: 정리 5 (Cauchy–Riemann 방정식)
-$\Omega \subseteq \mathbb{C}$가 열려 있고 $f = u + iv : \Omega \to \mathbb{C}$이며 $z_0 = x_0 + iy_0 \in \Omega$이라 하자. 그러면 $f$가 $z_0$에서 복소미분가능한 것은 $u, v$가 $(x_0, y_0)$에서 ($\mathbb{R}^2$의 함수로서) 실미분가능하고 그곳에서
+$\Omega \subseteq \mathbb{C}$가 열려 있고 $f = u + iv : \Omega \rightarrow \mathbb{C}$이며 $z_0 = x_0 + iy_0 \in \Omega$이라 하자. 그러면 $f$가 $z_0$에서 복소미분가능한 것은 $u, v$가 $(x_0, y_0)$에서 ($\mathbb{R}^2$의 함수로서) 실미분가능하고 그곳에서
 
 $$\frac{\partial u}{\partial x} = \frac{\partial v}{\partial y}, \qquad \frac{\partial u}{\partial y} = -\frac{\partial v}{\partial x}$$
 
@@ -101,9 +101,9 @@ $$f'(z_0) = \frac{\partial u}{\partial x}(x_0, y_0) + i\,\frac{\partial v}{\part
 ::: 증명
 먼저 $f$가 $z_0$에서 복소미분가능하고 $f'(z_0) = a + ib$라 하자. 정의 1의 극한에서
 
-$$f(z_0 + h) - f(z_0) = f'(z_0)\,h + r(h), \qquad \frac{r(h)}{h} \to 0 \;\;(h \to 0)$$
+$$f(z_0 + h) - f(z_0) = f'(z_0)\,h + r(h), \qquad \frac{r(h)}{h} \rightarrow 0 \;\;(h \rightarrow 0)$$
 
-이며, $\lvert r(h)\rvert/\lvert h\rvert = \lvert r(h)/h\rvert \to 0$이므로 $r(h) = o(\lvert h\rvert)$이다. $h = s + it$로 적고 복소수 곱 $f'(z_0)h = (a+ib)(s+it) = (as - bt) + i(bs + at)$을 실허로 나누면
+이며, $\lvert r(h)\rvert/\lvert h\rvert = \lvert r(h)/h\rvert \rightarrow 0$이므로 $r(h) = o(\lvert h\rvert)$이다. $h = s + it$로 적고 복소수 곱 $f'(z_0)h = (a+ib)(s+it) = (as - bt) + i(bs + at)$을 실허로 나누면
 
 $$\begin{aligned}
 u(x_0+s, y_0+t) - u(x_0, y_0) &= as - bt + \Real r(h), \\
@@ -128,7 +128,7 @@ f(z_0 + h) - f(z_0)
 
 $$\frac{f(z_0 + h) - f(z_0)}{h} = (a + ib) + \frac{\rho(h)}{h}$$
 
-인데 $\lvert \rho(h)/h\rvert = \lvert\rho(h)\rvert/\lvert h\rvert \to 0$이므로 차분비가 $a + ib$로 수렴한다. 그러므로 $f$는 $z_0$에서 복소미분가능하고 $f'(z_0) = a + ib = u_x + i v_x$이다.
+인데 $\lvert \rho(h)/h\rvert = \lvert\rho(h)\rvert/\lvert h\rvert \rightarrow 0$이므로 차분비가 $a + ib$로 수렴한다. 그러므로 $f$는 $z_0$에서 복소미분가능하고 $f'(z_0) = a + ib = u_x + i v_x$이다.
 :::
 
 정리 5의 증명이 드러내는 핵심은, 복소미분가능성이 곧 평면사상 $(u, v)$의 미분이 *복소수 곱*의 꼴, 곧 $\left(\begin{smallmatrix} a & -b \\ b & a \end{smallmatrix}\right)$ 행렬이어야 한다는 조건이라는 점이다. 이 형태의 행렬은 정확히 평면의 회전·확대를 합성한 것 ([§복소수와 복소평면, ⁋명제 6](/ko/math/complex_analysis/complex_numbers#prop6)) 이므로, 복소미분가능한 함수의 미분은 한 점에서 평면을 회전·확대하는 *각도를 보존하는* 선형사상이다. 일반적인 실미분은 임의의 $2\times 2$ 행렬을 야코비로 가질 수 있는 데 반해, 복소미분가능성은 그 야코비를 한 복소수로 표현되는 닮음변환으로 제한한다. 이것이 복소미분의 경직성의 근원이며, holomorphic function이 등각사상이 되는 기하적 사실의 대수적 핵심이다.
@@ -136,7 +136,7 @@ $$\frac{f(z_0 + h) - f(z_0)}{h} = (a + ib) + \frac{\rho(h)}{h}$$
 한편 실미분가능성을 직접 확인하기 번거로울 때를 위해, 편미분의 연속성을 가정하면 Cauchy–Riemann 방정식만으로 holomorphicity를 판정할 수 있다. 이는 연속인 편미분이 실미분가능성을 보장한다는 사실 ([\[해석학\] §다변수 미분, ⁋명제 4](/ko/math/analysis/multivariable_differentiation#prop4)) 의 직접적 귀결이다.
 
 ::: 따름정리 6
-$\Omega \subseteq \mathbb{C}$가 열려 있고 $f = u + iv : \Omega \to \mathbb{C}$의 네 편미분 $u_x, u_y, v_x, v_y$이 $\Omega$에서 모두 존재하고 연속이라 하자. 그러면 $f$가 $\Omega$에서 holomorphic인 것은 $\Omega$의 모든 점에서 Cauchy–Riemann 방정식 $u_x = v_y$, $u_y = -v_x$가 성립하는 것과 동치이다.
+$\Omega \subseteq \mathbb{C}$가 열려 있고 $f = u + iv : \Omega \rightarrow \mathbb{C}$의 네 편미분 $u_x, u_y, v_x, v_y$이 $\Omega$에서 모두 존재하고 연속이라 하자. 그러면 $f$가 $\Omega$에서 holomorphic인 것은 $\Omega$의 모든 점에서 Cauchy–Riemann 방정식 $u_x = v_y$, $u_y = -v_x$가 성립하는 것과 동치이다.
 :::
 
 ::: 증명
@@ -198,7 +198,7 @@ $$f'(z) = \sum_{n=1}^{\infty} n\,a_n (z - z_0)^{n-1}$$
 :::
 
 ::: 증명
-평행이동으로 $z_0 = 0$이라 두어도 일반성을 잃지 않는다. 먼저 항별미분 급수 $g(z) = \sum_{n\geq 1} n a_n z^{n-1}$의 수렴반지름을 본다. $\limsup_n \lvert n a_n\rvert^{1/n} = \limsup_n \lvert a_n\rvert^{1/n}$인데 이는 $\sqrt[n]{n} \to 1$이기 때문이며 ([\[해석학\] §수열의 수렴, ⁋예시 9](/ko/math/analysis/convergence_of_sequences#ex9)에서 본 $\sqrt[n]{n} \to 1$), [\[해석학\] §멱급수와 해석함수, ⁋정리 1](/ko/math/analysis/power_series#thm1)에 의해 $g$의 수렴반지름도 $R$이다. 따라서 $g$는 $B(0, R)$에서 잘 정의된다.
+평행이동으로 $z_0 = 0$이라 두어도 일반성을 잃지 않는다. 먼저 항별미분 급수 $g(z) = \sum_{n\geq 1} n a_n z^{n-1}$의 수렴반지름을 본다. $\limsup_n \lvert n a_n\rvert^{1/n} = \limsup_n \lvert a_n\rvert^{1/n}$인데 이는 $\sqrt[n]{n} \rightarrow 1$이기 때문이며 ([\[해석학\] §수열의 수렴, ⁋예시 9](/ko/math/analysis/convergence_of_sequences#ex9)에서 본 $\sqrt[n]{n} \rightarrow 1$), [\[해석학\] §멱급수와 해석함수, ⁋정리 1](/ko/math/analysis/power_series#thm1)에 의해 $g$의 수렴반지름도 $R$이다. 따라서 $g$는 $B(0, R)$에서 잘 정의된다.
 
 이제 $\lvert w\rvert < R$을 고정하고 $\lvert w\rvert < \rho < R$인 $\rho$를 잡는다. $\lvert z - w\rvert$가 작아 $\lvert z\rvert < \rho$인 $z \neq w$에 대하여, 차분비에서 $g(w)$를 빼면
 
@@ -212,7 +212,7 @@ $$\sum_{k=0}^{n-1} \bigl( z^k - w^k \bigr) w^{n-1-k} = (z - w)\sum_{k=1}^{n-1} \
 
 $$\left\lvert \frac{f(z) - f(w)}{z - w} - g(w) \right\rvert \leq \lvert z - w\rvert \sum_{n=2}^{\infty} \lvert a_n\rvert \binom{n}{2}\rho^{n-2}$$
 
-인데, 우변의 급수 $\sum_n \lvert a_n\rvert \binom{n}{2}\rho^{n-2}$는 $\rho < R$에서 수렴한다 (두 번 항별미분한 급수의 절대수렴이며, 위와 같은 수렴반지름 논증을 반복하면 된다). 따라서 그 합을 상수 $C$라 하면 위 부등식의 우변은 $C\lvert z - w\rvert \to 0$이고, $z \to w$일 때 차분비가 $g(w)$로 수렴한다. 이는 $f$가 $w$에서 복소미분가능하고 $f'(w) = g(w)$임을 뜻한다. $w$가 임의였으므로 $f$는 $B(0,R)$에서 holomorphic이고 $f' = g$이다.
+인데, 우변의 급수 $\sum_n \lvert a_n\rvert \binom{n}{2}\rho^{n-2}$는 $\rho < R$에서 수렴한다 (두 번 항별미분한 급수의 절대수렴이며, 위와 같은 수렴반지름 논증을 반복하면 된다). 따라서 그 합을 상수 $C$라 하면 위 부등식의 우변은 $C\lvert z - w\rvert \rightarrow 0$이고, $z \rightarrow w$일 때 차분비가 $g(w)$로 수렴한다. 이는 $f$가 $w$에서 복소미분가능하고 $f'(w) = g(w)$임을 뜻한다. $w$가 임의였으므로 $f$는 $B(0,R)$에서 holomorphic이고 $f' = g$이다.
 :::
 
 정리 9는 멱급수로 정의된 함수가 자동으로 holomorphic임을 보장한다. 이를 표준적인 급수들에 적용하면 복소 지수함수와 삼각함수를 정의하고 그 holomorphicity를 동시에 얻는다.
@@ -225,7 +225,7 @@ $$e^z = \sum_{n=0}^{\infty} \frac{z^n}{n!}, \qquad \cos z = \sum_{n=0}^{\infty} 
 으로 정의한다.
 :::
 
-세 급수는 모두 수렴반지름이 $\infty$이다. 가령 $e^z$의 계수는 $a_n = 1/n!$이고 $\lvert a_n\rvert^{1/n} = (n!)^{-1/n} \to 0$이므로 수렴반지름이 $\infty$이며, 따라서 $e^z$는 전해석함수이다. 같은 이유로 $\cos z$, $\sin z$도 전해석함수이다. 정리 9의 항별미분을 적용하면 익숙한 도함수 공식이 그대로 따라 나온다. 곧
+세 급수는 모두 수렴반지름이 $\infty$이다. 가령 $e^z$의 계수는 $a_n = 1/n!$이고 $\lvert a_n\rvert^{1/n} = (n!)^{-1/n} \rightarrow 0$이므로 수렴반지름이 $\infty$이며, 따라서 $e^z$는 전해석함수이다. 같은 이유로 $\cos z$, $\sin z$도 전해석함수이다. 정리 9의 항별미분을 적용하면 익숙한 도함수 공식이 그대로 따라 나온다. 곧
 
 $$\frac{d}{dz}e^z = \sum_{n=1}^{\infty} \frac{n z^{n-1}}{n!} = \sum_{n=1}^{\infty} \frac{z^{n-1}}{(n-1)!} = e^z$$
 

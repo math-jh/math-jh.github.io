@@ -224,7 +224,7 @@ $$c_n(E)=e(E_{\mathbb{R}})\in H^{2n}(B;\mathbb{Z})$$
 
 $$\pi_0^\ast c_i(E)=c_i(L^\perp)$$
 
-를 만족하는 (유일한) $c_i(E)\in H^{2i}(B)$들을 $E$의 $i$번째 Chern class로 정의한다. 이들을 모두 더한 $c(E)=1+c_1(E)+\cdots+c_n(E)\in H^\bullet(B;\mathbb{Z})$를 *total Chern class*라 한다.
+를 만족하는 (유일한) $c_i(E)\in H^{2i}(B)$들을 $E$의 $i$번째 Chern class로 정의한다. 이들을 모두 더한 $c(E)=1+c_1(E)+\cdots+c_n(E)\in H^\bullet(B;\mathbb{Z})$를 *total Chern class<sub>전체 천 특성류</sub>*라 한다.
 :::
 
 다른 상황에서와 마찬가지로, 그 정의만큼 중요한 것은 이것이 만족하는 다음의 특징들이다. 

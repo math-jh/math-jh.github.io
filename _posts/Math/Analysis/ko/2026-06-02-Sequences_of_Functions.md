@@ -26,7 +26,7 @@ published: false
 
 점별수렴은 함수열의 수렴을 정의역의 각 점에서 따로 일어나는 수열의 수렴으로 환원한다. 따라서 극한함수 $f$는
 
-$$f(x) = \lim_{n\to\infty} f_n(x)$$
+$$f(x) = \lim_{n\rightarrow\infty} f_n(x)$$
 
 라는 식으로 점마다 정의되며, 이 극한이 모든 $x$에서 존재할 때에만 $(f_n)$이 점별수렴한다고 말한다. 극한을 점 단위로만 통제하므로, 한 점에서의 정보가 이웃한 점으로 전혀 전달되지 않는다. 바로 이 국소성이 점별수렴의 약점이다.
 
@@ -34,12 +34,12 @@ $N$이 $x$에 의존한다는 점을 구체적으로 보기 위해 $[0,1)$에서
 
 $$n > \frac{\ln \varepsilon}{\ln x} \qquad (0 < x < 1)$$
 
-이 필요하다. 여기서 $x \to 1^-$이면 $\ln x \to 0^-$이라 우변이 $+\infty$로 발산하므로, 하나의 $N$으로 모든 $x$를 한꺼번에 처리할 방법이 없다. 즉 점별수렴은 성립하지만 $N$을 점에 무관하게 잡을 수는 없다.
+이 필요하다. 여기서 $x \rightarrow 1^-$이면 $\ln x \rightarrow 0^-$이라 우변이 $+\infty$로 발산하므로, 하나의 $N$으로 모든 $x$를 한꺼번에 처리할 방법이 없다. 즉 점별수렴은 성립하지만 $N$을 점에 무관하게 잡을 수는 없다.
 
 ## 점별수렴이 보존하지 못하는 것
 
 ::: 예시 2 (연속성의 상실)
-$[0,1]$에서 $f_n(x) = x^n$을 보자. $0 \leq x < 1$이면 $x^n \to 0$이고 $x = 1$이면 $x^n \to 1$이므로, 극한함수는
+$[0,1]$에서 $f_n(x) = x^n$을 보자. $0 \leq x < 1$이면 $x^n \rightarrow 0$이고 $x = 1$이면 $x^n \rightarrow 1$이므로, 극한함수는
 
 $$f(x) = \begin{cases} 0, & 0 \leq x < 1,\\ 1, & x = 1 \end{cases}$$
 
@@ -49,16 +49,16 @@ $$f(x) = \begin{cases} 0, & 0 \leq x < 1,\\ 1, & x = 1 \end{cases}$$
 이 반례를 한 줄로 요약하면, 연속함수의 점별극한은 일반적으로 연속이 아니라는 것이다. 그 이유는 두 극한의 순서를 바꿀 수 없다는 데 있다. 연속성을 극한의 교환 문제로 풀어 쓰면
 
 $$\begin{aligned}
-\lim_{x\to 1^-} \Bigl(\lim_{n\to\infty} f_n(x)\Bigr) &= \lim_{x\to 1^-} f(x) = \lim_{x\to 1^-} 0 = 0,\\
-\lim_{n\to\infty} \Bigl(\lim_{x\to 1^-} f_n(x)\Bigr) &= \lim_{n\to\infty} \Bigl(\lim_{x\to 1^-} x^n\Bigr) = \lim_{n\to\infty} 1 = 1
+\lim_{x\rightarrow 1^-} \Bigl(\lim_{n\rightarrow\infty} f_n(x)\Bigr) &= \lim_{x\rightarrow 1^-} f(x) = \lim_{x\rightarrow 1^-} 0 = 0,\\
+\lim_{n\rightarrow\infty} \Bigl(\lim_{x\rightarrow 1^-} f_n(x)\Bigr) &= \lim_{n\rightarrow\infty} \Bigl(\lim_{x\rightarrow 1^-} x^n\Bigr) = \lim_{n\rightarrow\infty} 1 = 1
 \end{aligned}$$
 
 이 되어 두 값이 다르다. 극한함수가 연속이려면 좌변과 우변이 같아야 하므로, 두 극한 $\lim_{x}$와 $\lim_{n}$을 자유롭게 맞바꿀 수 있어야 한다. 점별수렴은 이 교환을 보장하지 않으며, 이것이 위 불연속의 본질이다.
 
 ::: 예시 3 (적분의 비교환)
-$[0,1]$에서 $g_n$을 밑변 $[0, 1/n]$, 높이 $n$인 삼각형꼴 함수 (나머지에서 $0$) 로 두면, 각 점에서 $g_n(x) \to 0$이므로 점별극한은 $0$이다. 그러나 모든 $n$에서 $\int_0^1 g_n = 1/2$이므로
+$[0,1]$에서 $g_n$을 밑변 $[0, 1/n]$, 높이 $n$인 삼각형꼴 함수 (나머지에서 $0$) 로 두면, 각 점에서 $g_n(x) \rightarrow 0$이므로 점별극한은 $0$이다. 그러나 모든 $n$에서 $\int_0^1 g_n = 1/2$이므로
 
-$$\lim_{n\to\infty}\int_0^1 g_n = \frac12 \neq 0 = \int_0^1 \lim_{n\to\infty} g_n$$
+$$\lim_{n\rightarrow\infty}\int_0^1 g_n = \frac12 \neq 0 = \int_0^1 \lim_{n\rightarrow\infty} g_n$$
 
 이다. 즉 극한과 적분을 바꿔 쓸 수 없다.
 :::
@@ -72,11 +72,11 @@ $\mathbb{R}$에서
 
 $$f_n(x) = \frac{\sin(nx)}{\sqrt{n}}$$
 
-을 보자. $\lvert f_n(x)\rvert \leq 1/\sqrt{n} \to 0$이므로 $f_n \to 0$이 점별로 (사실 균등하게) 성립하여 극한함수는 $f \equiv 0$이고 $f' \equiv 0$이다. 그러나 항별 도함수는
+을 보자. $\lvert f_n(x)\rvert \leq 1/\sqrt{n} \rightarrow 0$이므로 $f_n \rightarrow 0$이 점별로 (사실 균등하게) 성립하여 극한함수는 $f \equiv 0$이고 $f' \equiv 0$이다. 그러나 항별 도함수는
 
 $$f_n'(x) = \sqrt{n} \cos(nx)$$
 
-이며, 가령 $x = 0$에서 $f_n'(0) = \sqrt{n} \to \infty$로 발산한다. 즉 $f_n \to f$가 점별로(심지어 균등하게) 성립해도 $f_n' \to f'$은 성립하지 않는다.
+이며, 가령 $x = 0$에서 $f_n'(0) = \sqrt{n} \rightarrow \infty$로 발산한다. 즉 $f_n \rightarrow f$가 점별로(심지어 균등하게) 성립해도 $f_n' \rightarrow f'$은 성립하지 않는다.
 :::
 
 이 예시가 특히 시사적인 까닭은, 함수 자체의 수렴이 균등하더라도 도함수의 수렴은 전혀 따라오지 않는다는 데 있다. 함수값을 작게 만드는 인자 $1/\sqrt{n}$이 미분 과정에서 진동의 주파수 $n$과 곱해져 $\sqrt{n}$으로 증폭되기 때문이다. 미분은 함수의 국소적 기울기를 보는 연산이라 작은 진폭의 빠른 진동에 민감하며, 이 때문에 항별 미분을 정당화하려면 함수가 아니라 *도함수열*의 균등수렴을 따로 가정해야 한다.
@@ -93,8 +93,8 @@ $$f_n'(x) = \sqrt{n} \cos(nx)$$
 각 주장은 고정된 점 $x$에서의 수열 극한에 관한 사실로 환원된다. 만약 $(f_n)$이 $f$와 $\tilde f$ 양쪽으로 점별수렴한다면, 각 $x$에서 수열 $(f_n(x))$이 두 수 $f(x)$와 $\tilde f(x)$로 동시에 수렴하므로 수열 [§수열의 수렴, ⁋명제 2](/ko/math/analysis/convergence_of_sequences#prop2)에 의해 $f(x) = \tilde f(x)$이고, 모든 $x$에서 같으니 $f = \tilde f$이다. 선형성과 곱은 각 $x$에서
 
 $$\begin{aligned}
-\lim_{n\to\infty}\bigl(f_n(x) + c g_n(x)\bigr) &= \lim_{n\to\infty} f_n(x) + c\lim_{n\to\infty} g_n(x) = f(x) + c g(x),\\
-\lim_{n\to\infty}\bigl(f_n(x) g_n(x)\bigr) &= \Bigl(\lim_{n\to\infty} f_n(x)\Bigr)\Bigl(\lim_{n\to\infty} g_n(x)\Bigr) = f(x) g(x)
+\lim_{n\rightarrow\infty}\bigl(f_n(x) + c g_n(x)\bigr) &= \lim_{n\rightarrow\infty} f_n(x) + c\lim_{n\rightarrow\infty} g_n(x) = f(x) + c g(x),\\
+\lim_{n\rightarrow\infty}\bigl(f_n(x) g_n(x)\bigr) &= \Bigl(\lim_{n\rightarrow\infty} f_n(x)\Bigr)\Bigl(\lim_{n\rightarrow\infty} g_n(x)\Bigr) = f(x) g(x)
 \end{aligned}$$
 
 가 성립하는 수열 극한의 대수법칙에서 곧바로 나온다.
@@ -115,7 +115,7 @@ $$f_n(x) = \begin{cases} n, & 0 < x \leq 1/n,\\ 1/x, & 1/n < x \leq 1 \end{cases
 
 $$f(x) = \frac{1}{x} \qquad (0 < x \leq 1)$$
 
-이다. 그런데 $f$는 $x \to 0^+$에서 무한대로 발산하여 $(0,1]$에서 bounded가 아니다. 즉 bounded function의 점별극한이 bounded가 아닐 수 있다. 더욱이 각 $f_n$은 $\sup_n \sup_x f_n(x) = \infty$이므로, 함수열이 한 상수로 *uniformly bounded<sub>균등유계</sub>*하지도 않다.
+이다. 그런데 $f$는 $x \rightarrow 0^+$에서 무한대로 발산하여 $(0,1]$에서 bounded가 아니다. 즉 bounded function의 점별극한이 bounded가 아닐 수 있다. 더욱이 각 $f_n$은 $\sup_n \sup_x f_n(x) = \infty$이므로, 함수열이 한 상수로 *uniformly bounded<sub>균등유계</sub>*하지도 않다.
 :::
 
 다음 예시는 디리클레 함수가 연속함수들의 *이중* 점별극한으로 얻어짐을 보여, 점별극한을 반복하면 연속성에서 아주 멀리 떨어진 함수까지 닿을 수 있음을 드러낸다.
@@ -123,13 +123,13 @@ $$f(x) = \frac{1}{x} \qquad (0 < x \leq 1)$$
 ::: 예시 7 (디리클레 함수)
 $\mathbb{R}$에서
 
-$$d(x) = \lim_{m\to\infty}\Bigl(\lim_{n\to\infty} \cos^{2n}(m! \pi x)\Bigr)$$
+$$d(x) = \lim_{m\rightarrow\infty}\Bigl(\lim_{n\rightarrow\infty} \cos^{2n}(m! \pi x)\Bigr)$$
 
-을 생각하자. 안쪽 극한부터 본다. $m! x$가 정수이면 $\cos(m! \pi x) = \pm 1$이라 $\cos^{2n}(m! \pi x) = 1$이고, 정수가 아니면 $\lvert \cos(m! \pi x)\rvert < 1$이라 $\cos^{2n}(m! \pi x) \to 0$이다. 따라서
+을 생각하자. 안쪽 극한부터 본다. $m! x$가 정수이면 $\cos(m! \pi x) = \pm 1$이라 $\cos^{2n}(m! \pi x) = 1$이고, 정수가 아니면 $\lvert \cos(m! \pi x)\rvert < 1$이라 $\cos^{2n}(m! \pi x) \rightarrow 0$이다. 따라서
 
-$$\lim_{n\to\infty} \cos^{2n}(m! \pi x) = \begin{cases} 1, & m! x \in \mathbb{Z},\\ 0, & m! x \notin \mathbb{Z} \end{cases}$$
+$$\lim_{n\rightarrow\infty} \cos^{2n}(m! \pi x) = \begin{cases} 1, & m! x \in \mathbb{Z},\\ 0, & m! x \notin \mathbb{Z} \end{cases}$$
 
-이다. 이제 $m \to \infty$를 본다. $x = p/q$가 유리수이면 $m \geq q$인 모든 $m$에서 $m! x$가 정수가 되어 안쪽 값이 $1$로 안정되므로 바깥 극한도 $1$이고, $x$가 무리수이면 어떤 $m$에서도 $m! x$가 정수가 아니므로 항상 $0$이다. 결국
+이다. 이제 $m \rightarrow \infty$를 본다. $x = p/q$가 유리수이면 $m \geq q$인 모든 $m$에서 $m! x$가 정수가 되어 안쪽 값이 $1$로 안정되므로 바깥 극한도 $1$이고, $x$가 무리수이면 어떤 $m$에서도 $m! x$가 정수가 아니므로 항상 $0$이다. 결국
 
 $$d(x) = \begin{cases} 1, & x \in \mathbb{Q},\\ 0, & x \notin \mathbb{Q} \end{cases}$$
 
@@ -143,14 +143,14 @@ $[0,1]$에서
 
 $$f_n(x) = n x (1 - x^2)^n$$
 
-을 보자. $x = 0$에서 $f_n(0) = 0$이고, $0 < x \leq 1$이면 $0 \leq 1 - x^2 < 1$이라 $(1-x^2)^n \to 0$이 지수적으로 빨라 $n (1-x^2)^n \to 0$이므로, 점별극한은 $f \equiv 0$으로 연속이다. 그러나 각 $f_n$의 최댓값을 보면
+을 보자. $x = 0$에서 $f_n(0) = 0$이고, $0 < x \leq 1$이면 $0 \leq 1 - x^2 < 1$이라 $(1-x^2)^n \rightarrow 0$이 지수적으로 빨라 $n (1-x^2)^n \rightarrow 0$이므로, 점별극한은 $f \equiv 0$으로 연속이다. 그러나 각 $f_n$의 최댓값을 보면
 
 $$\begin{aligned}
 f_n'(x) &= n (1-x^2)^{n-1}\bigl(1 - (2n+1)x^2\bigr) = 0 \implies x_n = \frac{1}{\sqrt{2n+1}},\\
 M_n = f_n(x_n) &= \frac{n}{\sqrt{2n+1}}\Bigl(1 - \frac{1}{2n+1}\Bigr)^n = \frac{n}{\sqrt{2n+1}}\Bigl(\frac{2n}{2n+1}\Bigr)^n
 \end{aligned}$$
 
-이고, $\bigl(2n/(2n+1)\bigr)^n \to e^{-1/2}$이며 $n/\sqrt{2n+1} \sim \sqrt{n}/\sqrt 2 \to \infty$이므로 $M_n \to \infty$이다. 극한함수가 연속임에도 최대 격차가 발산하니, 수렴은 결코 균등하지 않다.
+이고, $\bigl(2n/(2n+1)\bigr)^n \rightarrow e^{-1/2}$이며 $n/\sqrt{2n+1} \sim \sqrt{n}/\sqrt 2 \rightarrow \infty$이므로 $M_n \rightarrow \infty$이다. 극한함수가 연속임에도 최대 격차가 발산하니, 수렴은 결코 균등하지 않다.
 :::
 
 이 예시는 연속함수로의 점별수렴조차 "고른" 수렴과는 거리가 멀 수 있음을 보인다. 봉우리 $x_n = 1/\sqrt{2n+1}$이 원점으로 다가가며 그 높이가 무한히 커지므로, 어떤 고정된 점에서도 결국 $0$으로 가지만 함수열 전체로 보면 줄곧 큰 봉우리를 유지하는 것이다.
@@ -159,11 +159,11 @@ M_n = f_n(x_n) &= \frac{n}{\sqrt{2n+1}}\Bigl(1 - \frac{1}{2n+1}\Bigr)^n = \frac{
 
 $$M_n = \sup_{x} \lvert f_n(x) - f(x)\rvert$$
 
-를 보면, 균등수렴은 바로 $M_n \to 0$과 동치가 된다. 점별수렴만으로는 이 값이 $0$으로 가지 않을 수 있다. [예시 2](#ex2)의 $f_n(x) = x^n$에 대해서는
+를 보면, 균등수렴은 바로 $M_n \rightarrow 0$과 동치가 된다. 점별수렴만으로는 이 값이 $0$으로 가지 않을 수 있다. [예시 2](#ex2)의 $f_n(x) = x^n$에 대해서는
 
 $$M_n = \sup_{0\leq x\leq 1} \lvert x^n - f(x)\rvert = \sup_{0\leq x < 1} x^n = 1$$
 
-이라 ($x \to 1^-$에서 $x^n$이 $1$에 임의로 가까워지므로 상한이 $1$이다) 모든 $n$에서 $M_n = 1$로 $0$에 가지 않는다. [예시 3](#ex3)의 봉우리 함수 $g_n$도 $M_n = \sup_x \lvert g_n(x)\rvert = n \to \infty$이다. 두 경우 모두 $M_n \not\to 0$이며, 이것이 연속성·적분이 깨진 정량적 이유이다. 반면 [예시 4](#ex4)의 $f_n(x) = \sin(nx)/\sqrt{n}$은 $M_n = 1/\sqrt{n} \to 0$이라 함수 자체는 균등수렴하지만, 앞서 보았듯 도함수는 그렇지 못하다.
+이라 ($x \rightarrow 1^-$에서 $x^n$이 $1$에 임의로 가까워지므로 상한이 $1$이다) 모든 $n$에서 $M_n = 1$로 $0$에 가지 않는다. [예시 3](#ex3)의 봉우리 함수 $g_n$도 $M_n = \sup_x \lvert g_n(x)\rvert = n \rightarrow \infty$이다. 두 경우 모두 $M_n \not\rightarrow 0$이며, 이것이 연속성·적분이 깨진 정량적 이유이다. 반면 [예시 4](#ex4)의 $f_n(x) = \sin(nx)/\sqrt{n}$은 $M_n = 1/\sqrt{n} \rightarrow 0$이라 함수 자체는 균등수렴하지만, 앞서 보았듯 도함수는 그렇지 못하다.
 
 ## 균등수렴의 필요
 

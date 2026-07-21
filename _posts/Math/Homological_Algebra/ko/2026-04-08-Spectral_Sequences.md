@@ -47,7 +47,7 @@ Cochain complex $A^\bullet$ 위의 *decreasing filtration<sub>감소 여과</sub
 
 $$\cdots \supset F^{p-1}A^\bullet \supset F^pA^\bullet \supset F^{p+1}A^\bullet \supset \cdots$$
 
-을 만족하는 subcomplex들의 열 $(F^p A^\bullet)_p$이다. 이 때, (decreasing) filtration이 주어진 cochain complex를 *filtered complex*라 부르고, $(A^\bullet, F)$로 표기한다.
+을 만족하는 subcomplex들의 열 $(F^p A^\bullet)_p$이다. 이 때, (decreasing) filtration이 주어진 cochain complex를 *filtered complex<sub>여과 복합체</sub>*라 부르고, $(A^\bullet, F)$로 표기한다.
 :::
 
 특히 $F^p A^\bullet$이 $A^\bullet$의 subcomplex라는 가정으로부터 $F^pA^\bullet$은 $A^\bullet$으로부터 differential을 잘 물려받고 이에 대한 cohomology 또한 잘 정의된다. 어쨌든 직관적으로 $p$가 증가함에 따라 $F^p A^\bullet$은 점점 더 작아지며, 각 단계에서 새로운 정보가 추가되는 것으로 이해할 수 있다. 우리는 위의 [§Ext와 Tor, ⁋명제 3](/ko/math/homological_algebra/ext_and_tor#prop3)의 증명에서 귀납법을 적용하기 위해 $F^{p+1}A^\bullet/F^pA^\bullet$을 생각하여 이를 원래의 double complex $K^{p, \bullet-p}$로 생각하였는데, 일반적인 경우에도 이 정보는 <em-ko>정확히</em-ko> $p$번째 filtration을 담는다는 점에서 중요하다. 이렇게 얻어진 cochain complex
@@ -61,7 +61,7 @@ Filtration에 대한 가장 중요한 것은 filtered complex $A^\bullet$가 주
 ::: 정의 3
 Filtered complex $(A^\bullet, F)$가 주어졌다 하자. 그럼 inclusion $F^pA^\bullet\rightarrow A^\bullet$의 cohomology 레벨에서의 image를
 
-$$F^p H^n = \operatorname{im}\bigl(H^n(F^p A^\bullet) \to H^n(A^\bullet)\bigr)$$
+$$F^p H^n = \operatorname{im}\bigl(H^n(F^p A^\bullet) \rightarrow H^n(A^\bullet)\bigr)$$
 
 로 정의한다.
 :::
@@ -140,11 +140,11 @@ $$d_r \circ d_r = 0$$
 뿐만 아니라, 이렇게 정의된 spectral sequence는 일종의 functoriality 또한 갖는다. 
 
 ::: 명제 8
-$f : (A^\bullet, F) \to (B^\bullet, G)$가 filtered complex 사이의 chain map이라 하자. 즉, 각 $p$에 대해 
+$f : (A^\bullet, F) \rightarrow (B^\bullet, G)$가 filtered complex 사이의 chain map이라 하자. 즉, 각 $p$에 대해 
 
 $$f(F^p A^\bullet) \subset G^p B^\bullet$$
 
-이 성립한다. 그럼 $f$는 각 $r$에 대해 well-defined된 사상 $f_r : E_r(A) \to E_r(B)$를 유도한다.
+이 성립한다. 그럼 $f$는 각 $r$에 대해 well-defined된 사상 $f_r : E_r(A) \rightarrow E_r(B)$를 유도한다.
 :::
 ::: 증명
 $f$가 chain map이므로 cocycle을 cocycle으로, boundary를 boundary로 보낸다. 또한 $f(F^p) \subset G^p$이므로 $f(Z_r^{p,q}(A)) \subset Z_r^{p,q}(B)$이고 $f(B_r^{p,q}(A)) \subset B_r^{p,q}(B)$이다. 따라서 $f$는 각 $r$에 대해 $E_r$ 상에서 well-defined map을 유도한다.

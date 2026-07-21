@@ -49,7 +49,7 @@ Manifold $M$ 위의 tangent bundle $TM$ 위의 connection $\nabla$가 주어졌�
 
 $$R(X, Y) Z := \nabla_X \nabla_Y Z - \nabla_Y \nabla_X Z - \nabla_{[X, Y]} Z$$
 
-으로 정의되는 함수 $R : \mathfrak{X}(M)^{\times 3} \to \mathfrak{X}(M)$이다.
+으로 정의되는 함수 $R : \mathfrak{X}(M)^{\times 3} \rightarrow \mathfrak{X}(M)$이다.
 :::
 
 정의에서 $\nabla_{[X, Y]} Z$항이 왜 등장하는지는 다음 명제가 보여준다.
@@ -84,7 +84,7 @@ $$R(X, Y)(fZ) = f \cdot R(X, Y) Z$$
 [예시 1](#ex1)의 직관에 맞춰, 곡률 텐서를 작은 loop 위의 평행 운반 holonomy의 *무한소 generator*로 해석할 수 있다. 정확한 진술은 다음과 같다.
 
 ::: 명제 4
-점 $p \in M$과 두 벡터 $X_p, Y_p \in T_p M$에 대해, $\epsilon \to 0$의 극한에서 다음이 성립한다. $X_p, Y_p$가 펼치는 (적절한 좌표계에서의) 면적 $\epsilon^2$의 작은 평행사변형 loop $\partial D_\epsilon$를 따른 parallel transport $P_{\partial D_\epsilon} : T_p M \to T_p M$는 임의의 $Z_p \in T_p M$에 대해
+점 $p \in M$과 두 벡터 $X_p, Y_p \in T_p M$에 대해, $\epsilon \rightarrow 0$의 극한에서 다음이 성립한다. $X_p, Y_p$가 펼치는 (적절한 좌표계에서의) 면적 $\epsilon^2$의 작은 평행사변형 loop $\partial D_\epsilon$를 따른 parallel transport $P_{\partial D_\epsilon} : T_p M \rightarrow T_p M$는 임의의 $Z_p \in T_p M$에 대해
 
 $$P_{\partial D_\epsilon}(Z_p) = Z_p - \epsilon^2 R(X_p, Y_p) Z_p + O(\epsilon^3)$$
 

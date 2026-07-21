@@ -24,7 +24,7 @@ $\mathbb{Z}^n$과 isomorphic한 abelian group $N$을 *lattice<sub>격자</sub>*�
 
 $$M = \Hom(N, \mathbb{Z})$$
 
-으로 주어진다. 그럼 이 때 자연스러운 evaluation pairing $M\times N \to \mathbb{Z}$, $(m, v) \mapsto m(v)$를 *dual pairing<sub>쌍대 페어링</sub>*이라 부른다. 
+으로 주어진다. 그럼 이 때 자연스러운 evaluation pairing $M\times N \rightarrow \mathbb{Z}$, $(m, v) \mapsto m(v)$를 *dual pairing<sub>쌍대 페어링</sub>*이라 부른다. 
 :::
 
 논의의 편의를 위해 다음 두 표기
@@ -38,7 +38,7 @@ $N_{\mathbb{R}}$의 부분집합 $\sigma$가 다음 조건을 만족할 때, 이
 
 1. $\sigma$는 원점을 꼭짓점으로 하는 cone이다. 즉 $\lambda v \in \sigma$가 모든 $v \in \sigma$, $\lambda \ge 0$에 대해 성립한다.
 2. $\sigma$는 유한 개의 벡터 $v_1, \ldots, v_s \in N$의 $\mathbb{R}_{\ge 0}$-linear combination으로 생성된다. 즉 $\sigma = \mathbb{R}_{\ge 0} v_1 + \cdots + \mathbb{R}_{\ge 0} v_s$이라 할 수 있다.
-3. $\sigma$는 *strongly convex*이다. 즉 $\sigma \cap (-\sigma) = \{0\}$이 성립한다.
+3. $\sigma$는 *strongly convex<sub>강하게 볼록</sub>*이다. 즉 $\sigma \cap (-\sigma) = \{0\}$이 성립한다.
 :::
 
 여기서 첫 번째 조건만으로는 $\sigma$가 convex일 보장이 없지만, 두 번째 조건의 $\mathbb{R}_{\ge 0}$-linear combination 형태에 의해 $\sigma$가 closed convex cone이 됨이 자동으로 따른다. 또한 세 번째 조건은 $\sigma$가 원점을 지나는 직선을 포함하지 않는다는 것을 의미한다. 한편 각각의 cone $\sigma$에 대하여, 다음을 정의할 수 있다.
@@ -66,7 +66,7 @@ Cone $\sigma$에 대하여, 다음의 semigroup
 
 $$S_\sigma = \sigma^\vee \cap M = \{ u \in M \mid \langle u, v \rangle \ge 0 \text{ for all } v \in \sigma \}$$
 
-을 정의하고, 이를 통해 *semigroup algebra*
+을 정의하고, 이를 통해 *semigroup algebra<sub>반군 대수</sub>*
 
 $$\mathbb{C}[S_\sigma] = \mathbb{C}[\,{\rchi}^u \mid u \in S_\sigma]$$
 
@@ -186,7 +186,7 @@ $$t = e_1 \otimes z_1 + \cdots + e_n \otimes z_n = (z_1, \ldots, z_n), \qquad z_
 
 $$t + t' = e_1 \otimes (z_1 z_1') + \cdots + e_n \otimes (z_n z_n') = (z_1 z_1', \ldots, z_n z_n')$$
 
-으로 주어지므로, $T_N$은 multiplicative group $(\mathbb{C}^\ast)^n$으로 자연스럽게 해석된다. 이제 $M = \Hom(N, \mathbb{Z})$의 원소 $m$에 대해 group homomorphism $\rchi^m : T_N \to \mathbb{C}^\ast$를 다음의 식
+으로 주어지므로, $T_N$은 multiplicative group $(\mathbb{C}^\ast)^n$으로 자연스럽게 해석된다. 이제 $M = \Hom(N, \mathbb{Z})$의 원소 $m$에 대해 group homomorphism $\rchi^m : T_N \rightarrow \mathbb{C}^\ast$를 다음의 식
 
 $$\rchi^m(t) := z^{m(v)}, \qquad t = v \otimes z \in T_N, \; m(v) \in \mathbb{Z}$$
 
@@ -208,7 +208,7 @@ $$\rchi^m(t) = z_1^{m_1} \cdots z_n^{m_n}$$
 
 가 된다. 즉, *character group* $\Hom(T_N, \mathbb{C}^\ast)$는 dual lattice $M$과 isomorphic하다.
 
-이제 위와 같이 torus에 대한 이해를 바탕으로 $U_\sigma = \Spec(\mathbb{C}[S_\sigma])$ 위에 $T_N$-action을 정의한다. $\Spec$이 contravariant functor라는 사실로부터, geometric action $T_N \times U_\sigma \to U_\sigma$는 coordinate ring $\mathbb{C}[S_\sigma]$ 위의 comodule structure로 인코딩되며, 이 contravariance가 점 차원에서 어떻게 발현되는지는 [예시 14](#ex14)에서 직접 확인한다.
+이제 위와 같이 torus에 대한 이해를 바탕으로 $U_\sigma = \Spec(\mathbb{C}[S_\sigma])$ 위에 $T_N$-action을 정의한다. $\Spec$이 contravariant functor라는 사실로부터, geometric action $T_N \times U_\sigma \rightarrow U_\sigma$는 coordinate ring $\mathbb{C}[S_\sigma]$ 위의 comodule structure로 인코딩되며, 이 contravariance가 점 차원에서 어떻게 발현되는지는 [예시 14](#ex14)에서 직접 확인한다.
 
 구체적으로, 다음의 $\mathbb{C}$-algebra homomorphism
 
@@ -216,7 +216,7 @@ $$\rho : \mathbb{C}[S_\sigma] \longrightarrow \mathbb{C}[S_\sigma] \otimes_{\mat
 
 을 정의하자. 여기서 $\mathbb{C}[M] = \mathbb{C}[\rchi^m \mid m \in M]$은 $T_N$의 coordinate ring이며, $\rchi^u \in \mathbb{C}[S_\sigma]$는 weight $u$를 갖는 eigenvector이다. $\rho$가 well-defined algebra homomorphism임은 bilinearity에 의해 직접 확인할 수 있다. 
 
-엄밀히 말하면 $\mathbb{C}[S_\sigma] \otimes \mathbb{C}[M]$은 Spec을 취했을 때 기하학적으로 $U_\sigma \times T_N \to U_\sigma$에 해당하므로, 이는 $T_N$의 right action의 comorphism이다. 그러나 $T_N$이 abelian이므로 right action과 left action을 같게 취급할 수 있고, 우리는 이를 left action $T_N \times U_\sigma \to U_\sigma$로 다룰 것이다. 그럼 이제 각각의 $t\in T_N$에 대하여, $t$는 $\mathbb{C}[S_\sigma]$ 위에 다음의 합성함수
+엄밀히 말하면 $\mathbb{C}[S_\sigma] \otimes \mathbb{C}[M]$은 Spec을 취했을 때 기하학적으로 $U_\sigma \times T_N \rightarrow U_\sigma$에 해당하므로, 이는 $T_N$의 right action의 comorphism이다. 그러나 $T_N$이 abelian이므로 right action과 left action을 같게 취급할 수 있고, 우리는 이를 left action $T_N \times U_\sigma \rightarrow U_\sigma$로 다룰 것이다. 그럼 이제 각각의 $t\in T_N$에 대하여, $t$는 $\mathbb{C}[S_\sigma]$ 위에 다음의 합성함수
 
 $$\mathbb{C}[S_\sigma] \xrightarrow{\rho} \mathbb{C}[S_\sigma] \otimes_{\mathbb{C}} \mathbb{C}[M] \xrightarrow{\id \otimes \ev_t} \mathbb{C}[S_\sigma] \otimes_{\mathbb{C}} \mathbb{C} \cong \mathbb{C}[S_\sigma]$$
 
@@ -235,7 +235,7 @@ $$\rho : \mathbb{C}[S_\sigma] \longrightarrow \mathbb{C}[S_\sigma] \otimes_{\mat
 
 $$t \cdot \rchi^u = \rchi^u(t) \rchi^u.$$
 
-여기서 $\rchi^u : T_N \to \mathbb{C}^\ast$는 $u \in M$에 대응되는 character이며, $\rchi^u(t) \in \mathbb{C}^\ast$는 그 값이다.
+여기서 $\rchi^u : T_N \rightarrow \mathbb{C}^\ast$는 $u \in M$에 대응되는 character이며, $\rchi^u(t) \in \mathbb{C}^\ast$는 그 값이다.
 :::
 
 다소 주의할 것은 지금까지의 논의에서 $\rchi^u$라는 기호가 두 가지 다른 의미로 쓰이고 있다는 것이다. 우선 $\rchi^u$는 그 정의에 의해 $T_N$에서 $\mathbb{C}^\ast$로의 group homomorphism이지만, 벡터공간 $\mathbb{C}[S_\sigma]$의 원소로서 $\rchi^u$를 생각할 때 우리는 이를 weight $u$를 갖는 eigenvector로 생각한다. 위의 식

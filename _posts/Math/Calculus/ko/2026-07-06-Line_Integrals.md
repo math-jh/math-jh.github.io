@@ -18,7 +18,7 @@ weight: 17
 ## 선적분
 
 ::: 정의 1
-$C^1$ 곡선 $\mathbf{r}\colon [a, b] \to \mathbb{R}^n$ 위에서 연속인 스칼라장 $f$의 *선적분<sub>line integral</sub>*은
+$C^1$ 곡선 $\mathbf{r}\colon [a, b] \rightarrow \mathbb{R}^n$ 위에서 연속인 스칼라장 $f$의 *선적분<sub>line integral</sub>*은
 
 $$\int_C f\mathop{ds} = \int_a^b f(\mathbf{r}(t))\lvert \mathbf{r}'(t)\rvert \mathop{dt}$$
 
@@ -30,7 +30,7 @@ $$\int_C f\mathop{ds} = \int_a^b f(\mathbf{r}(t))\lvert \mathbf{r}'(t)\rvert \ma
 이제 이를 벡터함수의 적분으로 올려주기 위해서는 곡선의 방향을 고려하여 다음과 같이 정의해야 한다. 
 
 ::: 정의 2
-$C^1$ 곡선 $\mathbf{r}\colon [a, b] \to \mathbb{R}^n$ 위의 연속 벡터장 $\mathbf{F}$의 *선적분*은
+$C^1$ 곡선 $\mathbf{r}\colon [a, b] \rightarrow \mathbb{R}^n$ 위의 연속 벡터장 $\mathbf{F}$의 *선적분*은
 
 $$\int_C \mathbf{F} \cdot d\mathbf{r} = \int_a^b \mathbf{F}(\mathbf{r}(t)) \cdot \mathbf{r}'(t)\mathop{dt}$$
 
@@ -84,7 +84,7 @@ $(1 \Rightarrow 3)$은 [정리 3](#thm3)이다. $(3 \Leftrightarrow 2)$는 닫�
 
 $$\frac{f(\mathbf{x} + h \mathbf{e}_i) - f(\mathbf{x})}{h}$$
 
-은 $\mathbf{x}$에서 $\mathbf{x} + h \mathbf{e}_i$로 가는 직선 선분 위의 적분을 $h$로 나눈 것이므로, $h \to 0$일 때 $F_i(\mathbf{x})$로 수렴하며, 따라서 $\partial f/\partial x_i = F_i$, 곧 $\nabla f = \mathbf{F}$이다.
+은 $\mathbf{x}$에서 $\mathbf{x} + h \mathbf{e}_i$로 가는 직선 선분 위의 적분을 $h$로 나눈 것이므로, $h \rightarrow 0$일 때 $F_i(\mathbf{x})$로 수렴하며, 따라서 $\partial f/\partial x_i = F_i$, 곧 $\nabla f = \mathbf{F}$이다.
 :::
 
 가령 다음 예시에서 이를 확인해보자.

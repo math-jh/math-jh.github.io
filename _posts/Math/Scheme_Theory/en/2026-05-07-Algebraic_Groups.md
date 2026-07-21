@@ -24,7 +24,7 @@ First, the following definition is obvious.
 An *algebraic group* $G$ is an algebraic variety satisfying the following conditions:
 
 1. $G$ carries a group structure.
-2. Multiplication $m: G \times G \to G$ and inverse $i: G \to G$ are both morphisms of varieties.
+2. Multiplication $m: G \times G \rightarrow G$ and inverse $i: G \rightarrow G$ are both morphisms of varieties.
 :::
 
 As with Lie groups, the most important examples are usually matrix groups.
@@ -50,7 +50,7 @@ We now define how an algebraic group acts on an algebraic variety.
 ::: Definition 4
 An *action* of an algebraic group $G$ on an algebraic variety $X$ is a morphism
 
-$$\alpha: G \times X \to X$$
+$$\alpha: G \times X \rightarrow X$$
 
 satisfying the following conditions:
 
@@ -58,12 +58,12 @@ satisfying the following conditions:
 2. $\alpha(g, \alpha(h, x)) = \alpha(gh, x)$ for all $g, h \in G$, $x \in X$ (associativity)
 :::
 
-In principle, an algebraic group action is built by examining how affine algebraic groups act on affine varieties and then gluing these local pictures together. To look more closely at this case, consider an affine algebraic group $G = \Spec(A)$ acting on an affine variety $X = \Spec(B)$. Since $\Spec$ is a contravariant functor, the action $G \times X \to X$ translates into a structure on the coordinate ring. Specifically, it yields the following data.
+In principle, an algebraic group action is built by examining how affine algebraic groups act on affine varieties and then gluing these local pictures together. To look more closely at this case, consider an affine algebraic group $G = \Spec(A)$ acting on an affine variety $X = \Spec(B)$. Since $\Spec$ is a contravariant functor, the action $G \times X \rightarrow X$ translates into a structure on the coordinate ring. Specifically, it yields the following data.
 
 ::: Definition 5
 For an affine algebraic group $G = \Spec(A)$ and an affine variety $X = \Spec(B)$, a *comodule structure* corresponding to an action of $G$ on $X$ is an algebra homomorphism
 
-$$\rho: B \to B \otimes_\mathbb{C} A$$
+$$\rho: B \rightarrow B \otimes_\mathbb{C} A$$
 
 satisfying the following conditions:
 
@@ -71,7 +71,7 @@ satisfying the following conditions:
 2. (Counit) $(\id_B \otimes \epsilon) \circ \rho = \id_B$
 :::
 
-Here $\Delta: A \to A \otimes A$ is the comultiplication induced from the multiplication on $G$, and $\epsilon: A \to \mathbb{C}$ is the counit induced from the identity element.
+Here $\Delta: A \rightarrow A \otimes A$ is the comultiplication induced from the multiplication on $G$, and $\epsilon: A \rightarrow \mathbb{C}$ is the counit induced from the identity element.
 
 ## Representations of Algebraic Groups
 
@@ -80,15 +80,15 @@ Just as with Lie groups, algebraic groups can be better understood through repre
 ::: Definition 6
 A *representation* of an algebraic group $G$ is a finite-dimensional vector space $V$ together with a group homomorphism
 
-$$\rho: G \to \GL(V)$$
+$$\rho: G \rightarrow \GL(V)$$
 
-such that the induced map $G \times V \to V$ is a morphism.
+such that the induced map $G \times V \rightarrow V$ is a morphism.
 :::
 
 Then the following definition is also the same as for Lie groups.
 
 ::: Definition 7
-The *character* $\chi_\rho: G \to \mathbb{C}$ of a representation $\rho: G \to \GL(V)$ is defined by
+The *character* $\chi_\rho: G \rightarrow \mathbb{C}$ of a representation $\rho: G \rightarrow \GL(V)$ is defined by
 
 $$\chi_\rho(g) = \tr(\rho(g))$$
 :::
@@ -96,13 +96,13 @@ $$\chi_\rho(g) = \tr(\rho(g))$$
 Moreover, as the following proposition shows, representations of algebraic groups simultaneously carry both algebraic and geometric natures.
 
 ::: Proposition 8
-A representation $\rho: G \to \GL(V)$ of an affine algebraic group $G = \Spec(A)$ is in one-to-one correspondence with a comodule structure $V \to V \otimes_\mathbb{C} A$ on $V$.
+A representation $\rho: G \rightarrow \GL(V)$ of an affine algebraic group $G = \Spec(A)$ is in one-to-one correspondence with a comodule structure $V \rightarrow V \otimes_\mathbb{C} A$ on $V$.
 :::
 
 ::: Proof
-Given a representation $\rho: G \to \GL(V)$, this induces a map $G \times V \to V$, and by the contravariance of $\Spec$ we obtain $V^\ast \to V^\ast \otimes A$.
+Given a representation $\rho: G \rightarrow \GL(V)$, this induces a map $G \times V \rightarrow V$, and by the contravariance of $\Spec$ we obtain $V^\ast \rightarrow V^\ast \otimes A$.
 
-Conversely, given a comodule structure $V \to V \otimes A$, for each $g \in G$ we obtain $V \to V \otimes \mathbb{C} \cong V$ via the evaluation map $\operatorname{ev}_g: A \to \mathbb{C}$, and this defines a representation.
+Conversely, given a comodule structure $V \rightarrow V \otimes A$, for each $g \in G$ we obtain $V \rightarrow V \otimes \mathbb{C} \cong V$ via the evaluation map $\operatorname{ev}_g: A \rightarrow \mathbb{C}$, and this defines a representation.
 :::
 
 ## Algebraic Tori and Weight Decomposition
@@ -118,7 +118,7 @@ $$T \cong (\mathbb{C}^\ast)^n$$
 In the theory of Lie groups, we saw that a torus decomposes into one-dimensional representations and that the information about each of these is encoded in its characters. Let us carry out the same program here.
 
 ::: Definition 10
-A *character* $\rchi: T \to \mathbb{C}^\ast$ of a torus $T = (\mathbb{C}^\ast)^n$ is defined as follows. For each coordinate $t_i \in \mathbb{C}^\ast$,
+A *character* $\rchi: T \rightarrow \mathbb{C}^\ast$ of a torus $T = (\mathbb{C}^\ast)^n$ is defined as follows. For each coordinate $t_i \in \mathbb{C}^\ast$,
 
 $$\rchi(t_1, \ldots, t_n) = t_1^{a_1} \cdots t_n^{a_n}$$
 
@@ -135,7 +135,7 @@ $$a + b = (a_1 + b_1, \ldots, a_n + b_n)$$
 
 The set of characters $X^\ast(T) = \{\rchi^a \mid a \in \mathbb{Z}^n\}$ forms an abelian group under this product; it is called the *character group* of the torus $T$.
 
-It is not difficult to show that $\rchi: T \to \mathbb{C}^\ast$ is a group homomorphism.
+It is not difficult to show that $\rchi: T \rightarrow \mathbb{C}^\ast$ is a group homomorphism.
 
 ::: Proposition 11
 The coordinate ring of a torus $T = (\mathbb{C}^\ast)^n$ is isomorphic to the polynomial ring in the characters $\mathbb{C}[\rchi_1^{\pm 1}, \ldots, \rchi_n^{\pm 1}]$. Here $\rchi_i(t_1, \ldots, t_n) = t_i$ is the character corresponding to the $i$-th coordinate.
@@ -148,7 +148,7 @@ Hence the coordinate ring of $T$ is
 
 $$\mathbb{C}[x_1, x_1^{-1}] \otimes \cdots \otimes \mathbb{C}[x_n, x_n^{-1}] \cong \mathbb{C}[x_1, x_1^{-1}, \ldots, x_n, x_n^{-1}]$$
 
-Each $x_i$ corresponds to the $i$-th coordinate function $\rchi_i: T \to \mathbb{C}^\ast$, defined by $\rchi_i(t_1, \ldots, t_n) = t_i$. This is exactly a character of the torus, and its inverse $\rchi_i^{-1}$ is likewise a character.
+Each $x_i$ corresponds to the $i$-th coordinate function $\rchi_i: T \rightarrow \mathbb{C}^\ast$, defined by $\rchi_i(t_1, \ldots, t_n) = t_i$. This is exactly a character of the torus, and its inverse $\rchi_i^{-1}$ is likewise a character.
 
 Therefore the coordinate ring of $T$ coincides with the polynomial ring generated by all the characters.
 :::
@@ -166,7 +166,7 @@ $$A_\rchi = \{f \in A \mid t \cdot f = \rchi(t) f \text{ for all } t \in T\}$$
 :::
 
 ::: Proof
-Given a torus action $T \times X \to X$, we can define an action on the coordinate ring $A$ by $t \cdot f = f(t)$. This action is linear, and each element $f$ of the coordinate ring can be decomposed into eigenvectors with eigenvalues. Since these eigenvalues coincide with the characters of the torus, $A$ decomposes as a direct sum of weight spaces.
+Given a torus action $T \times X \rightarrow X$, we can define an action on the coordinate ring $A$ by $t \cdot f = f(t)$. This action is linear, and each element $f$ of the coordinate ring can be decomposed into eigenvectors with eigenvalues. Since these eigenvalues coincide with the characters of the torus, $A$ decomposes as a direct sum of weight spaces.
 :::
 
 ## Quotient Varieties
@@ -184,7 +184,7 @@ When an algebraic group $G$ acts on an algebraic variety $X$, we define the foll
 To construct a quotient, we must examine $G$-invariant functions.
 
 ::: Definition 14
-When an affine algebraic group $G$ acts on an affine variety $X = \Spec(A)$, the *invariant ring* $A^G$ with respect to the corresponding comodule structure $\rho: A \to A \otimes_\mathbb{C} \mathbb{C}[G]$ is defined by
+When an affine algebraic group $G$ acts on an affine variety $X = \Spec(A)$, the *invariant ring* $A^G$ with respect to the corresponding comodule structure $\rho: A \rightarrow A \otimes_\mathbb{C} \mathbb{C}[G]$ is defined by
 
 $$A^G = \{a \in A \mid \rho(a) = a \otimes 1\}$$
 

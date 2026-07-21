@@ -69,7 +69,7 @@ $$(-R_n(x))\bigl(-(n+1)(x-c)^n\bigr) = \bigl(-(x-a)^{n+1}\bigr)\left(-\frac{f^{(
 이고, 양변의 $(x-c)^n$을 소거하여 정리하면 $R_n(x) = f^{(n+1)}(c)(x-a)^{n+1}/(n+1)!$을 얻는다.
 :::
 
-따라서, 이제 위 정리의 나머지항을 계산하여 $n \to \infty$에서 $R_n(x) \to 0$임을 보이면, 함수가 무한급수와 일치한다는 것을 안다. 이렇게 얻어지는 무한급수를 $f$의 *테일러 급수* (중심이 $0$이면 매클로린 급수) 라 한다.
+따라서, 이제 위 정리의 나머지항을 계산하여 $n \rightarrow \infty$에서 $R_n(x) \rightarrow 0$임을 보이면, 함수가 무한급수와 일치한다는 것을 안다. 이렇게 얻어지는 무한급수를 $f$의 *테일러 급수* (중심이 $0$이면 매클로린 급수) 라 한다.
 
 실제 몇몇 예시에서 이들 계산을 따라가보자.
 
@@ -84,7 +84,7 @@ $$R_n(x) = \frac{e^c x^{n+1}}{(n+1)!}$$
 
 으로 주어지고, 고정된 $x$에서
 
-$$\lvert R_n(x)\rvert \leq \frac{e^{\lvert x\rvert}\lvert x\rvert^{n+1}}{(n+1)!} \to 0 \qquad (n \to \infty)$$
+$$\lvert R_n(x)\rvert \leq \frac{e^{\lvert x\rvert}\lvert x\rvert^{n+1}}{(n+1)!} \rightarrow 0 \qquad (n \rightarrow \infty)$$
 
 이므로 ([§수열의 극한, ⁋예시 6](/ko/math/calculus/sequences#ex6)) 모든 실수 $x$에서
 
@@ -136,7 +136,7 @@ $f$가 $a$를 포함하는 구간 $I$에서 무한히 미분가능하고, 어떤
 
 $$\lvert R_n(x)\rvert = \frac{\lvert f^{(n+1)}(c)\rvert}{(n+1)!}\lvert x-a\rvert^{n+1} \leq \frac{M\lvert x-a\rvert^{n+1}}{(n+1)!}$$
 
-이다. 우변은 고정된 $x$에서 $n \to \infty$일 때 $0$으로 가므로 ([§수열의 극한, ⁋예시 6](/ko/math/calculus/sequences#ex6)의 $r^n/n! \to 0$), $R_n(x) \to 0$이고 부분합이 $f(x)$로 수렴한다.
+이다. 우변은 고정된 $x$에서 $n \rightarrow \infty$일 때 $0$으로 가므로 ([§수열의 극한, ⁋예시 6](/ko/math/calculus/sequences#ex6)의 $r^n/n! \rightarrow 0$), $R_n(x) \rightarrow 0$이고 부분합이 $f(x)$로 수렴한다.
 :::
 
 한편, [정리 2](#thm2)는 본질적으로 수치적인 것으로, 이를 사용하면 근삿값이 얼마나 정확한지를 손으로 평가할 수 있다. 가령 $\sin(0.1)$을 $P_3(x) = x - x^3/6$로 근사하면, 4차 나머지가 $\lvert R_3(0.1)\rvert \leq (0.1)^4/4! \approx 4.2\times 10^{-6}$이라 소수점 다섯째 자리까지 정확하다는 것을 확인할 수 있으며, $e = \sum_k 1/k!$를 처음 $n+1$항에서 끊은 오차는 $\lvert R_n(1)\rvert \leq 3/(n+1)!$ ($e^c < 3$) 임을 알 수 있다. 
@@ -144,9 +144,9 @@ $$\lvert R_n(x)\rvert = \frac{\lvert f^{(n+1)}(c)\rvert}{(n+1)!}\lvert x-a\rvert
 또 다른 예시로, 테일러 전개는 단순히 최고차항 혹은 최저차항만 기억하는 것이 아니므로, $0/0$ 꼴의 극한을 계산할 때 강력하게 사용할 수 있다. 
 
 ::: 예시 7 (극한)
-극한 $\lim_{x\to 0}(e^x - 1 - x)/x^2$를 구하자. [예시 3](#ex3)에서 $e^x = 1 + x + x^2/2 + x^3/6 + \cdots$이므로
+극한 $\lim_{x\rightarrow 0}(e^x - 1 - x)/x^2$를 구하자. [예시 3](#ex3)에서 $e^x = 1 + x + x^2/2 + x^3/6 + \cdots$이므로
 
-$$\frac{e^x - 1 - x}{x^2} = \frac{x^2/2 + x^3/6 + \cdots}{x^2} = \frac12 + \frac{x}{6} + \cdots \to \frac12$$
+$$\frac{e^x - 1 - x}{x^2} = \frac{x^2/2 + x^3/6 + \cdots}{x^2} = \frac12 + \frac{x}{6} + \cdots \rightarrow \frac12$$
 
 이다. 이는 로피탈 정리를 두 번 적용하여도 확인할 수 있는 결과로, 테일러 전개가 고차식의 정보까지 기억하고 있으므로 이를 분모와 분자 양쪽에서 약분해도 여전히 정보가 남아있기 때문이다. 
 :::

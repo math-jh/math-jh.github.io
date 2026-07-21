@@ -23,7 +23,7 @@ weight: 2
 위와 같이 affine toric variety들을 이어붙이기 위해서는 각각의 cone들이 서로 어떻게 만나는지를 제어하는 조합론적인 구조가 필요하다. 이를 위해 우리는 *fan*을 정의한다.
 
 ::: 정의 1
-Lattice $N$에 대해, $N_\mathbb{R}$에 정의된 *fan* $\Sigma$는 다음 조건을 만족하는 strongly convex rational polyhedral cone들의 모임이다:
+Lattice $N$에 대해, $N_\mathbb{R}$에 정의된 *fan<sub>부채</sub>* $\Sigma$는 다음 조건을 만족하는 strongly convex rational polyhedral cone들의 모임이다:
 
 1. $\Sigma$에 속하는 임의의 cone $\tau$의 face도 $\Sigma$에 속한다.
 2. $\Sigma$에 속하는 임의의 두 cone $\tau_1, \tau_2$의 교집합 $\tau_1 \cap \tau_2$는 각각의 face이다.
@@ -58,7 +58,7 @@ Toric variety $X_\Sigma$는 normal, separated algebraic variety이다.
 :::
 
 ::: 증명
-$X_\Sigma$의 normality는 각 affine chart $U_\tau$가 [§아핀 토릭 다양체, ⁋명제 15](/ko/math/toric_geometry/affine_toric_varieties#prop15)에 의해 normal이고, 이 성질이 gluing에 의해 보존되기 때문에 얻어진다. Separatedness를 보이기 위해서는 diagonal morphism $\Delta: X_\Sigma \to X_\Sigma \times X_\Sigma$의 image가 닫힌 집합임을 확인하면 된다. 각 affine chart 위에서 이는 두 cone의 교집합이 face임을 보장하는 fan의 두 번째 조건에 의해 성립한다. 
+$X_\Sigma$의 normality는 각 affine chart $U_\tau$가 [§아핀 토릭 다양체, ⁋명제 15](/ko/math/toric_geometry/affine_toric_varieties#prop15)에 의해 normal이고, 이 성질이 gluing에 의해 보존되기 때문에 얻어진다. Separatedness를 보이기 위해서는 diagonal morphism $\Delta: X_\Sigma \rightarrow X_\Sigma \times X_\Sigma$의 image가 닫힌 집합임을 확인하면 된다. 각 affine chart 위에서 이는 두 cone의 교집합이 face임을 보장하는 fan의 두 번째 조건에 의해 성립한다. 
 :::
 
 Toric variety $X_\Sigma$가 affine toric variety로부터 물려받는 중요한 성질 중 하나는 algebraic torus $T_N$을 열린 조밀한 부분집합으로 포함한다는 것이다. ([§아핀 토릭 다양체, ⁋명제 11](/ko/math/toric_geometry/affine_toric_varieties#prop11)) 실제로, 0차원 cone $\{0\} \in \Sigma$에 대응하는 affine chart $U_{\{0\}}$는 $T_N$과 동형이며, 다른 모든 $U_\tau$는 이를 열린 부분집합으로 포함한다. 따라서 $T_N \subset X_\Sigma$는 open dense embedding을 정의한다.
@@ -120,7 +120,7 @@ Toric variety $X_\Sigma$가 projective variety인 것은 $\Sigma$가 어떤 full
 ::: 증명
 ($\Rightarrow$) $X_\Sigma$가 projective라면 그 위에 very ample line bundle $\mathcal{L}$이 존재하며, 위의 대응에 의해 이는 $T_N$-invariant Cartier divisor $D$로 표현된다. 앞서 본 바, 이로부터 얻어지는 $P_D$는 lattice polytope이며, $\mathcal{L}$이 ample (특히 very ample)이므로 [§토러스 인자와 선다발, ⁋명제 9](/ko/math/toric_geometry/toric_divisors#prop9)에 의해 대응되는 piecewise linear function $\psi_D$는 strictly convex이다. 이로부터 $P_D$의 normal fan이 $\Sigma$와 일치함을 얻는다.
 
-($\Leftarrow$) $\Sigma = \Sigma_P$라 하자. Polytope $P$의 데이터 — 즉 각 ray $\rho$에 대해 $a_\rho = -\min_{u \in P}\langle u, v_\rho\rangle$ — 로부터 $T_N$-invariant divisor $D_P = \sum_\rho a_\rho D_\rho$를 얻는다. 여기서 $P$의 각 vertex가 lattice point라는 사실이 정확히 앞의 compatibility 조건을 충족시켜 $D_P$가 Cartier가 되며, 충분히 큰 $k > 0$에 대해 $kD_P$가 very ample이 된다. 이때 $kP$의 lattice point들로 정의되는 monomial map $\phi_{kP}: T_N \to \mathbb{P}^s$의 image의 Zariski closure가 $X_\Sigma$와 동형이므로 ([명제 9](#prop9) 참고), $X_\Sigma$는 projective이다.
+($\Leftarrow$) $\Sigma = \Sigma_P$라 하자. Polytope $P$의 데이터 — 즉 각 ray $\rho$에 대해 $a_\rho = -\min_{u \in P}\langle u, v_\rho\rangle$ — 로부터 $T_N$-invariant divisor $D_P = \sum_\rho a_\rho D_\rho$를 얻는다. 여기서 $P$의 각 vertex가 lattice point라는 사실이 정확히 앞의 compatibility 조건을 충족시켜 $D_P$가 Cartier가 되며, 충분히 큰 $k > 0$에 대해 $kD_P$가 very ample이 된다. 이때 $kP$의 lattice point들로 정의되는 monomial map $\phi_{kP}: T_N \rightarrow \mathbb{P}^s$의 image의 Zariski closure가 $X_\Sigma$와 동형이므로 ([명제 9](#prop9) 참고), $X_\Sigma$는 projective이다.
 :::
 
 이러한 동치조건을 만족하는 toric variety $X_\Sigma = X_{\Sigma_P}$를 *projective toric variety*라 부르며, polytope $P$를 강조하여 $X_P$로 적기도 한다. 이 결과는 toric variety의 기하학적 성질이 fan의 조합론적 성질로 완전히 기술됨을 보여주는 대표적인 예시이다.
@@ -131,7 +131,7 @@ $P \subset M_\mathbb{R}$의 lattice point들, 즉 $P \cap M = \{m_0, m_1, \ldots
 
 $$\phi_P: T_N \longrightarrow \mathbb{P}^s, \qquad t \longmapsto [\rchi^{m_0}(t) : \rchi^{m_1}(t) : \cdots : \rchi^{m_s}(t)]$$
 
-을 정의할 수 있다. 여기서 $\rchi^m: T_N \to \mathbb{C}^\ast$는 $m \in M$에 대응하는 character이다.
+을 정의할 수 있다. 여기서 $\rchi^m: T_N \rightarrow \mathbb{C}^\ast$는 $m \in M$에 대응하는 character이다.
 
 ::: 명제 9
 위에서 정의한 $\phi_P$의 image의 Zariski closure가 $X_P$와 isomorphic다. 즉, $X_P \cong \overline{\phi_P(T_N)}$가 성립한다.
@@ -177,14 +177,14 @@ Toric variety $X_\Sigma$가 smooth algebraic variety인 것은 fan $\Sigma$의 �
 
 이러한 singular toric variety에 대한 *resolution of singularities* 또한 fan의 refinement로 명시적이고 조합론적인 방식으로 이뤄진다. 우선 fan $\Sigma'$가 $\Sigma$의 *refinement*라는 것은 두 fan의 support가 같고 $\Sigma'$의 모든 cone이 $\Sigma$의 어떤 cone에 포함되는 것이다. 이 경우 자연스러운 toric morphism 
 
-$$\pi: X_{\Sigma'} \to X_\Sigma$$
+$$\pi: X_{\Sigma'} \rightarrow X_\Sigma$$
 
 가 proper birational map으로 정의되며, 만일 $\Sigma'$가 모두 smooth cone으로만 구성된다면 $\pi$는 *toric resolution of singularities*가 된다. 임의의 fan에 대해 이러한 refinement는 항상 존재하며, 그 구성의 핵심은 다음과 같다.
 
 1. Non-simplicial cone은 *star subdivision* 으로 simplicial하게 만들 수 있다. 이는 내부 lattice point에서 적절하게 cone을 나눠주는 것으로 생각하면 된다. 
 2. Simplicial이지만 determinant가 $\pm 1$이 아닌 cone $\sigma$는 적절한 lattice point를 새 ray로 추가하여 더 작은 cone들로 쪼개면 각 부분의 determinant가 줄어들며, 유한 번의 반복으로 모두 smooth cone이 된다.
 
-위 $\mathbb{P}^2/(\mathbb{Z}/3)$의 예에서는, 세 maximal cone 각각의 내부에 위치한 lattice point $e_1, e_2, -e_1-e_2$를 새 ray로 추가하면 모든 maximal cone의 행렬식이 모두 $\pm 1$로 떨어지며 결과는 정확히 $\mathbb{P}^2$의 표준 fan이 된다. 즉 $\mathbb{P}^2 \to \mathbb{P}^2/(\mathbb{Z}/3)$가 이 quotient의 (minimal) toric resolution이다.
+위 $\mathbb{P}^2/(\mathbb{Z}/3)$의 예에서는, 세 maximal cone 각각의 내부에 위치한 lattice point $e_1, e_2, -e_1-e_2$를 새 ray로 추가하면 모든 maximal cone의 행렬식이 모두 $\pm 1$로 떨어지며 결과는 정확히 $\mathbb{P}^2$의 표준 fan이 된다. 즉 $\mathbb{P}^2 \rightarrow \mathbb{P}^2/(\mathbb{Z}/3)$가 이 quotient의 (minimal) toric resolution이다.
 
 ---
 

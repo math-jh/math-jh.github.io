@@ -20,7 +20,7 @@ weight: 2
 ## Symplectic form
 
 ::: 정의 1
-벡터공간 $(V,\omega)$가 *symplectic vector space*라는 것은 $\omega:V\times V\rightarrow \mathbb{R}$이 다음 두 조건을 만족하는 것이다.
+벡터공간 $(V,\omega)$가 *symplectic vector space<sub>사교벡터공간</sub>*라는 것은 $\omega:V\times V\rightarrow \mathbb{R}$이 다음 두 조건을 만족하는 것이다.
 
 - (Skew-symmetry) 임의의 $v,w\in V$에 대하여, $\omega(v,w)=-\omega(w,v)$이다.
 - (Nondegeneracy) $\omega(v,w)=0$이 모든 $w\in V$에 대해 성립하도록 하는 $v$는 오직 $v=0$ 뿐이다.
@@ -85,16 +85,16 @@ $$e_1,\ldots, e_n, f_1,\ldots, f_n$$
 을 *symplectic basis*라 부른다. Symplectic form을 보존하는 linear map을 *(linear) symplectomorphism*이라 부른다면, symplectic basis의 선택에 의하여 임의의 symplectic vector space는 이전 글에서 살펴본 공간 $(\mathbb{R}^{2n},\omega_0)$과 symplectomorphic하다는 것을 확인할 수 있다.
 
 ::: 정의 3
-$(V,\omega)$가 symplectic vector space라 하고, $W\leq V$가 임의의 부분공간이라 하자. 그럼 $W$의 *symplectic complement*는
+$(V,\omega)$가 symplectic vector space라 하고, $W\leq V$가 임의의 부분공간이라 하자. 그럼 $W$의 *symplectic complement<sub>사교 여공간</sub>*는
 
 $$W^\omega=\{v\in V\mid\omega(v,w)=0\text{ for all $w\in W$}\}$$
 
 으로 정의된 공간이다. 
 
-1. 만일 $W\subseteq W^\omega$이 성립한다면, $W$를 *isotropic subspace*라 부른다.
-2. 만일 $W^\omega\subseteq W$이 성립한다면, $W$를 *coisotropic subspace*라 부른다.
-3. 만일 $W\cap W^\omega=\{0\}$이 성립한다면, $W$를 *symplectic subspace*라 부른다.
-4. 만일 $W=W^\omega$이 성립한다면, $W$를 *Lagrangian subspace*라 부른다.
+1. 만일 $W\subseteq W^\omega$이 성립한다면, $W$를 *isotropic subspace<sub>등방 부분공간</sub>*라 부른다.
+2. 만일 $W^\omega\subseteq W$이 성립한다면, $W$를 *coisotropic subspace<sub>여등방 부분공간</sub>*라 부른다.
+3. 만일 $W\cap W^\omega=\{0\}$이 성립한다면, $W$를 *symplectic subspace<sub>사교 부분공간</sub>*라 부른다.
+4. 만일 $W=W^\omega$이 성립한다면, $W$를 *Lagrangian subspace<sub>라그랑지안 부분공간</sub>*라 부른다.
 :::
 
 ::: 보조정리 4

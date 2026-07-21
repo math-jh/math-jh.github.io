@@ -23,7 +23,7 @@ published: false
 complex manifold의 transition function은 $\mathbb{C}^n$의 열린집합 사이의 사상이므로, 먼저 그러한 사상의 holomorphicity를 정의해야 한다.
 
 ::: 정의 1
-열린집합 $U \subseteq \mathbb{C}^n$ 위의 함수 $f : U \to \mathbb{C}$가 *holomorphic<sub>정칙</sub>*하다는 것은, $f$가 $U$에서 연속이고 각 변수에 대하여 따로 holomorphic인 것이다. 곧 임의의 점 $a = (a_1, \ldots, a_n) \in U$와 각 $j$에 대하여, 나머지 좌표를 고정하고 얻는 한 변수 함수
+열린집합 $U \subseteq \mathbb{C}^n$ 위의 함수 $f : U \rightarrow \mathbb{C}$가 *holomorphic<sub>정칙</sub>*하다는 것은, $f$가 $U$에서 연속이고 각 변수에 대하여 따로 holomorphic인 것이다. 곧 임의의 점 $a = (a_1, \ldots, a_n) \in U$와 각 $j$에 대하여, 나머지 좌표를 고정하고 얻는 한 변수 함수
 
 $$
 z_j \longmapsto f(a_1, \ldots, a_{j-1}, z_j, a_{j+1}, \ldots, a_n)
@@ -43,7 +43,7 @@ $$
 $\mathbb{C}^n$ 사이의 사상의 holomorphicity는 성분별로 정의한다.
 
 ::: 정의 2
-열린집합 $U \subseteq \mathbb{C}^n$과 사상 $F = (f_1, \ldots, f_m) : U \to \mathbb{C}^m$에 대하여, $F$가 *holomorphic*하다는 것은 각 성분 $f_k : U \to \mathbb{C}$이 [정의 1](#def1)의 의미로 holomorphic인 것이다. holomorphic 사상 $F : U \to V$가 holomorphic 역사상 $F^{-1} : V \to U$를 갖는 전단사이면 $F$를 *biholomorphism<sub>쌍정칙사상</sub>*이라 한다.
+열린집합 $U \subseteq \mathbb{C}^n$과 사상 $F = (f_1, \ldots, f_m) : U \rightarrow \mathbb{C}^m$에 대하여, $F$가 *holomorphic*하다는 것은 각 성분 $f_k : U \rightarrow \mathbb{C}$이 [정의 1](#def1)의 의미로 holomorphic인 것이다. holomorphic 사상 $F : U \rightarrow V$가 holomorphic 역사상 $F^{-1} : V \rightarrow U$를 갖는 전단사이면 $F$를 *biholomorphism<sub>쌍정칙사상</sub>*이라 한다.
 :::
 
 Biholomorphism은 복소해석적 isomorphism에 해당한다. 두 열린집합이 biholomorphic하게 동치이면 그 위의 holomorphic 함수론은 완전히 같다. complex manifold란 바로 이런 biholomorphic 동치를 풀로 삼아 $\mathbb{C}^n$의 조각들을 이어 붙인 공간이다.
@@ -68,7 +68,7 @@ $$
 이제 holomorphic transition function을 갖는 manifold를 정의한다.
 
 ::: 정의 3
-$M$을 topological manifold라 하자. $M$ 위의 *holomorphic atlas<sub>정칙 좌표계 모임</sub>*는 차트들의 모임 $\{(U_\alpha, \varphi_\alpha)\}$로서, 각 $\varphi_\alpha : U_\alpha \to \varphi_\alpha(U_\alpha) \subseteq \mathbb{C}^n$이 homeomorphism이고 $\bigcup_\alpha U_\alpha = M$이며, $U_\alpha \cap U_\beta \neq \varnothing$일 때마다 *transition map<sub>전이함수</sub>*
+$M$을 topological manifold라 하자. $M$ 위의 *holomorphic atlas<sub>정칙 좌표계 모임</sub>*는 차트들의 모임 $\{(U_\alpha, \varphi_\alpha)\}$로서, 각 $\varphi_\alpha : U_\alpha \rightarrow \varphi_\alpha(U_\alpha) \subseteq \mathbb{C}^n$이 homeomorphism이고 $\bigcup_\alpha U_\alpha = M$이며, $U_\alpha \cap U_\beta \neq \varnothing$일 때마다 *transition map<sub>전이함수</sub>*
 
 $$
 \varphi_\beta \circ \varphi_\alpha^{-1} : \varphi_\alpha(U_\alpha \cap U_\beta) \longrightarrow \varphi_\beta(U_\alpha \cap U_\beta)
@@ -82,13 +82,13 @@ transition function이 holomorphic이면 그 역사상도 holomorphic이므로 (
 complex manifold 사이의 사상에 대한 holomorphicity도 국소 차트로 옮겨 정의한다.
 
 ::: 정의 4
-$M, N$을 complex manifold라 하고 $f : M \to N$을 연속사상이라 하자. $f$가 *holomorphic*하다는 것은, $M$의 임의의 점 $p$에 대하여 $p$를 포함하는 차트 $(U, \varphi)$와 $f(p)$를 포함하는 차트 $(V, \psi)$ ($f(U) \subseteq V$) 를 잡았을 때 국소 표현
+$M, N$을 complex manifold라 하고 $f : M \rightarrow N$을 연속사상이라 하자. $f$가 *holomorphic*하다는 것은, $M$의 임의의 점 $p$에 대하여 $p$를 포함하는 차트 $(U, \varphi)$와 $f(p)$를 포함하는 차트 $(V, \psi)$ ($f(U) \subseteq V$) 를 잡았을 때 국소 표현
 
 $$
 \psi \circ f \circ \varphi^{-1} : \varphi(U) \longrightarrow \psi(V)
 $$
 
-이 [정의 2](#def2)의 의미로 holomorphic인 것이다. 특히 $N = \mathbb{C}$인 경우의 holomorphic 사상을 $M$ 위의 *holomorphic function<sub>정칙함수</sub>*이라 하고, 그 전체를 $\mathcal{O}(M)$으로 적는다. holomorphic 전단사사상 $f : M \to N$으로 역사상도 holomorphic인 것을 *biholomorphism*이라 하며, 그러한 사상이 존재하면 $M, N$은 *biholomorphic*하다 한다.
+이 [정의 2](#def2)의 의미로 holomorphic인 것이다. 특히 $N = \mathbb{C}$인 경우의 holomorphic 사상을 $M$ 위의 *holomorphic function<sub>정칙함수</sub>*이라 하고, 그 전체를 $\mathcal{O}(M)$으로 적는다. holomorphic 전단사사상 $f : M \rightarrow N$으로 역사상도 holomorphic인 것을 *biholomorphism*이라 하며, 그러한 사상이 존재하면 $M, N$은 *biholomorphic<sub>쌍정칙</sub>*하다 한다.
 :::
 
 이 정의는 차트의 선택에 무관하다. 다른 차트를 잡으면 두 국소 표현은 holomorphic인 transition function을 좌우에서 합성한 것만큼 차이가 나고, holomorphic 사상의 합성은 다시 holomorphic이기 때문이다. holomorphic function 전체 $\mathcal{O}(M)$은 점별 덧셈과 곱셈에 대해 $\mathbb{C}$-대수를 이룬다. 미분다양체에서 smooth 함수의 대수 $C^\infty(M)$이 풍부했던 것과 달리, 콤팩트 complex manifold에서는 $\mathcal{O}(M)$이 상수함수밖에 없을 만큼 빈약해진다. 이 사실은 [정리 14](#thm14)에서 증명한다.
@@ -145,7 +145,7 @@ $$
 에 quotient topology를 주면, $T$는 콤팩트 topological manifold이며 복소차원 $n$의 complex manifold 구조를 가진다.
 :::
 
-복소구조는 다음과 같이 얻는다. quotient map $\pi : \mathbb{C}^n \to T$는 국소 homeomorphism이다. 충분히 작은 열린집합 $V \subseteq \mathbb{C}^n$을 잡아 $\pi\vert_V$가 그 상 $U = \pi(V)$ 위로의 위상동형이 되게 하고, $\varphi = (\pi\vert_V)^{-1} : U \to V$를 차트로 삼는다. 이런 차트 둘 $\varphi, \varphi'$의 transition function을 보면, 두 국소 preimage는 같은 $T$의 점을 덮으므로 차이가 항상 $\Lambda$의 한 원소만큼의 평행이동
+복소구조는 다음과 같이 얻는다. quotient map $\pi : \mathbb{C}^n \rightarrow T$는 국소 homeomorphism이다. 충분히 작은 열린집합 $V \subseteq \mathbb{C}^n$을 잡아 $\pi\vert_V$가 그 상 $U = \pi(V)$ 위로의 위상동형이 되게 하고, $\varphi = (\pi\vert_V)^{-1} : U \rightarrow V$를 차트로 삼는다. 이런 차트 둘 $\varphi, \varphi'$의 transition function을 보면, 두 국소 preimage는 같은 $T$의 점을 덮으므로 차이가 항상 $\Lambda$의 한 원소만큼의 평행이동
 
 $$
 z \longmapsto z + \lambda, \qquad \lambda \in \Lambda
@@ -245,7 +245,7 @@ $$
 complex manifold가 smooth manifold와 결정적으로 갈라지는 지점이 holomorphic function의 강성이다. 한 변수 holomorphic function의 최대절대값 원리가 여러 변수, 나아가 manifold 위로 올라가면, 콤팩트성 아래에서 holomorphic function이 상수밖에 없다는 강력한 결론을 낳는다. 먼저 국소판 최대원리를 정리한다.
 
 ::: 명제 12 (여러 변수 최대절대값 원리)
-$U \subseteq \mathbb{C}^n$이 연결 열린집합이고 $f : U \to \mathbb{C}$가 holomorphic이라 하자. $\lvert f \rvert$가 어떤 내부점 $a \in U$에서 국소 최댓값을 가지면, $f$는 $U$에서 상수이다.
+$U \subseteq \mathbb{C}^n$이 연결 열린집합이고 $f : U \rightarrow \mathbb{C}$가 holomorphic이라 하자. $\lvert f \rvert$가 어떤 내부점 $a \in U$에서 국소 최댓값을 가지면, $f$는 $U$에서 상수이다.
 :::
 
 ::: 증명
@@ -281,9 +281,9 @@ $$
 
 를 둔다. $S$는 정의상 열려 있다. $S$가 닫혀 있음과 비어 있지 않음을 보이면, $M$의 연결성으로 $S = M$이 되어 결론이 따른다.
 
-먼저 $S \neq \varnothing$을 보인다. $\lvert f \rvert$가 $p$에서 전역 최댓값을 가지므로, $p$를 포함하는 차트 $(U, \varphi)$를 잡아 $U$를 연결로 택하면, $g = f \circ \varphi^{-1} : \varphi(U) \to \mathbb{C}$는 holomorphic이고 $\lvert g \rvert$가 내부점 $\varphi(p)$에서 (적어도 국소) 최댓값을 가진다. [명제 12](#prop12)에 의해 $g$는 연결 열린집합 $\varphi(U)$에서 상수이므로 $f$는 $U$에서 상수이고, 따라서 $p \in S$이다.
+먼저 $S \neq \varnothing$을 보인다. $\lvert f \rvert$가 $p$에서 전역 최댓값을 가지므로, $p$를 포함하는 차트 $(U, \varphi)$를 잡아 $U$를 연결로 택하면, $g = f \circ \varphi^{-1} : \varphi(U) \rightarrow \mathbb{C}$는 holomorphic이고 $\lvert g \rvert$가 내부점 $\varphi(p)$에서 (적어도 국소) 최댓값을 가진다. [명제 12](#prop12)에 의해 $g$는 연결 열린집합 $\varphi(U)$에서 상수이므로 $f$는 $U$에서 상수이고, 따라서 $p \in S$이다.
 
-다음으로 $S$가 닫혀 있음을 보인다. $q_0 \in M$이 $S$의 limit point라 하자. $q_0$를 포함하는 연결 차트 $(V, \psi)$를 잡으면 $h = f \circ \psi^{-1} : \psi(V) \to \mathbb{C}$는 holomorphic이다. $S$의 한 점 $q_1 \in V \cap S$가 존재하고, $f$는 $q_1$의 근방에서 상수 $c = f(q_1)$이다. 그러면 $h - c$는 $\psi(V)$의 한 열린 부분집합 ($q_1$의 근방의 상) 에서 항등적으로 $0$이다. [명제 12](#prop12)의 증명에서 쓴 해석성 논법에 의해, holomorphic function $h - c$가 연결 열린집합 $\psi(V)$의 어떤 열린 부분집합에서 소멸하면 $\psi(V)$ 전체에서 소멸한다. 따라서 $f \equiv c$가 $V$에서 성립하고, 특히 $q_0$의 근방에서 $f$가 상수이므로 $q_0 \in S$이다.
+다음으로 $S$가 닫혀 있음을 보인다. $q_0 \in M$이 $S$의 limit point라 하자. $q_0$를 포함하는 연결 차트 $(V, \psi)$를 잡으면 $h = f \circ \psi^{-1} : \psi(V) \rightarrow \mathbb{C}$는 holomorphic이다. $S$의 한 점 $q_1 \in V \cap S$가 존재하고, $f$는 $q_1$의 근방에서 상수 $c = f(q_1)$이다. 그러면 $h - c$는 $\psi(V)$의 한 열린 부분집합 ($q_1$의 근방의 상) 에서 항등적으로 $0$이다. [명제 12](#prop12)의 증명에서 쓴 해석성 논법에 의해, holomorphic function $h - c$가 연결 열린집합 $\psi(V)$의 어떤 열린 부분집합에서 소멸하면 $\psi(V)$ 전체에서 소멸한다. 따라서 $f \equiv c$가 $V$에서 성립하고, 특히 $q_0$의 근방에서 $f$가 상수이므로 $q_0 \in S$이다.
 
 이로써 $S$는 비어 있지 않고 열려 있으며 닫혀 있다. $M$이 연결이므로 $S = M$이고, $f$는 $M$ 전체에서 (한 근방마다 상수이며 연결이므로) 상수이다.
 :::
@@ -295,7 +295,7 @@ $M$이 콤팩트 연결 complex manifold이면, $M$ 위의 모든 holomorphic fu
 :::
 
 ::: 증명
-$f \in \mathcal{O}(M)$이라 하자. $f$는 holomorphic이므로 연속이고, 따라서 $\lvert f \rvert : M \to \mathbb{R}$은 연속함수이다. $M$이 콤팩트이므로 연속함수 $\lvert f \rvert$는 $M$의 어떤 점 $p$에서 전역 최댓값을 가진다. $M$이 연결이므로 [명제 13](#prop13)에 의해 $f$는 $M$에서 상수이다. $f$가 임의의 holomorphic function이었으므로 $\mathcal{O}(M)$의 모든 원소는 상수이고, 상수함수는 모두 holomorphic이므로 $\mathcal{O}(M) = \mathbb{C}$이다.
+$f \in \mathcal{O}(M)$이라 하자. $f$는 holomorphic이므로 연속이고, 따라서 $\lvert f \rvert : M \rightarrow \mathbb{R}$은 연속함수이다. $M$이 콤팩트이므로 연속함수 $\lvert f \rvert$는 $M$의 어떤 점 $p$에서 전역 최댓값을 가진다. $M$이 연결이므로 [명제 13](#prop13)에 의해 $f$는 $M$에서 상수이다. $f$가 임의의 holomorphic function이었으므로 $\mathcal{O}(M)$의 모든 원소는 상수이고, 상수함수는 모두 holomorphic이므로 $\mathcal{O}(M) = \mathbb{C}$이다.
 :::
 
 이 정리는 complex manifold와 미분다양체의 차이를 한눈에 보여준다. smooth manifold에서는 partition of unity로 만든 함수들 덕분에 $C^\infty(M)$이 언제나 무한차원으로 풍부하지만, 콤팩트 complex manifold에서는 전역 holomorphic function이 상수밖에 없다. 전역 holomorphic function으로는 점을 구별조차 할 수 없으므로, 콤팩트 complex manifold의 기하를 들여다보려면 함수 대신 더 유연한 대상, 곧 holomorphic 다발의 단면이나 전역 유리형 함수를 동원해야 한다. 충분히 많은 단면을 모아 $\mathbb{CP}^N$으로의 embedding을 줄 수 있는가 하는 물음이 자연스럽게 떠오르며, 이것이 사영성과 대수성을 가르는 기준으로 이어진다. 앞서 본 복소토러스의 비대수성 ([예시 7](#ex7)) 도 정확히 이 단면들의 부족으로 설명된다.

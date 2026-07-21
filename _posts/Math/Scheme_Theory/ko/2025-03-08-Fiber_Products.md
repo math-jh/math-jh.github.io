@@ -213,7 +213,7 @@ Scheme morphism $\varphi: X \rightarrow Y$에 대하여, $Y$의 한 점 $y\in Y$
 
 $$\varphi^{-1}(y)=X\times_Y\Spec \kappa(y)$$
 
-으로 정의한다. 만일 $Y$가 irreducible이라면, $Y$의 generic point에서의 fiber를 *generic fiber*라 부른다. 
+으로 정의한다. 만일 $Y$가 irreducible이라면, $Y$의 generic point에서의 fiber를 *generic fiber<sub>일반 올</sub>*라 부른다. 
 :::
 
 ::: 예시 13

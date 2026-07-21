@@ -23,7 +23,7 @@ weight: 6
 ::: 정의 1
 함수 $f$가 점 $a$에서 *미분가능<sub>differentiable</sub>*하다는 것은 극한
 
-$$f'(a) := \lim_{x \to a} \frac{f(x) - f(a)}{x - a} = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h}$$
+$$f'(a) := \lim_{x \rightarrow a} \frac{f(x) - f(a)}{x - a} = \lim_{h \rightarrow 0} \frac{f(a+h) - f(a)}{h}$$
 
 이 존재하는 것이다. 이 값 $f'(a)$를 $f$의 $a$에서의 *미분계수<sub>derivative</sub>*라 부른다. $f$가 정의역의 모든 점에서 미분가능하면, $a \mapsto f'(a)$로 정의되는 함수 $f'$를 $f$의 *도함수<sub>derivative function</sub>*라 한다.
 :::
@@ -53,9 +53,9 @@ $x \neq a$에서
 
 $$f(x) - f(a) = \frac{f(x)-f(a)}{x-a}\cdot(x-a)$$
 
-이다. $x \to a$일 때 우변의 첫 인자는 $f'(a)$로, 둘째 인자는 $0$으로 수렴하므로, [§함수의 극한, ⁋명제 5](/ko/math/calculus/functions_and_limits#prop5)에 의해 
+이다. $x \rightarrow a$일 때 우변의 첫 인자는 $f'(a)$로, 둘째 인자는 $0$으로 수렴하므로, [§함수의 극한, ⁋명제 5](/ko/math/calculus/functions_and_limits#prop5)에 의해 
 
-$$\lim_{x\to a}\bigl(f(x)-f(a)\bigr) = f'(a)\cdot 0 = 0$$
+$$\lim_{x\rightarrow a}\bigl(f(x)-f(a)\bigr) = f'(a)\cdot 0 = 0$$
 
 이다. 따라서 $f$는 $a$에서 연속이다.
 :::
@@ -68,9 +68,9 @@ $$\lim_{x\to a}\bigl(f(x)-f(a)\bigr) = f'(a)\cdot 0 = 0$$
 
 $$\frac{f(h)-f(0)}{h} = \frac{\lvert h\rvert}{h}=\begin{cases}1&\text{if $h>0$}\\-1&\text{if $h<0$}\end{cases}$$
 
-이므로, 이 함수의 미분계수는 $h \to 0^+$일 때 $1$, $h \to 0^-$일 때 $-1$로, 한쪽 극한이 서로 달라 극한이 존재하지 않는다. 
+이므로, 이 함수의 미분계수는 $h \rightarrow 0^+$일 때 $1$, $h \rightarrow 0^-$일 때 $-1$로, 한쪽 극한이 서로 달라 극한이 존재하지 않는다. 
 
-비슷한 예시로, $f(x) = \sqrt[3]{x}$는 $0$에서 평균변화율이 $h^{-2/3} \to \infty$로 발산하는 *수직접선<sub>vertical tangent</sub>*을 갖는다.
+비슷한 예시로, $f(x) = \sqrt[3]{x}$는 $0$에서 평균변화율이 $h^{-2/3} \rightarrow \infty$로 발산하는 *수직접선<sub>vertical tangent</sub>*을 갖는다.
 
 ![세제곱근함수의 수직접선](/assets/images/Math/Calculus/Derivatives-2.svg){:style="width:12.46em" class="invert" .align-center}
 
@@ -89,7 +89,7 @@ $$f(x) = \begin{cases} x^2 & (x \in \mathbb{Q}) \\ 0 & (x \notin \mathbb{Q}) \en
 
 를 보자. $a \neq 0$에서는 $a$에 수렴하는 유리수열과 무리수열을 따라 함숫값이 각각 $a^2$과 $0$으로 갈라지므로 $f$는 불연속이고, [명제 2](#prop2)의 대우에 의해 미분가능하지 않다. 반면 $0$에서는 $\lvert f(x)\rvert \leq x^2$이라 연속이며, 평균변화율이
 
-$$\left\lvert \frac{f(x) - f(0)}{x - 0} \right\rvert = \frac{\lvert f(x)\rvert}{\lvert x\rvert} \leq \lvert x\rvert \to 0$$
+$$\left\lvert \frac{f(x) - f(0)}{x - 0} \right\rvert = \frac{\lvert f(x)\rvert}{\lvert x\rvert} \leq \lvert x\rvert \rightarrow 0$$
 
 이므로 $f'(0) = 0$이 존재한다. 즉 $f$는 오직 $0$에서만 미분가능하다. 
 :::
@@ -127,7 +127,7 @@ $f$의 도함수 $f'$이 미분가능하면 그 도함수를 *이계도함수* $
 ::: 정의 6
 함수 $f$의 점 $a$에서의 *우미분계수<sub>right-hand derivative</sub>*와 *좌미분계수<sub>left-hand derivative</sub>*를 각각
 
-$$f'_+(a) := \lim_{h \to 0^+} \frac{f(a+h) - f(a)}{h}, \qquad f'_-(a) := \lim_{h \to 0^-} \frac{f(a+h) - f(a)}{h}$$
+$$f'_+(a) := \lim_{h \rightarrow 0^+} \frac{f(a+h) - f(a)}{h}, \qquad f'_-(a) := \lim_{h \rightarrow 0^-} \frac{f(a+h) - f(a)}{h}$$
 
 로 정의한다. 두 한쪽 미분계수가 모두 존재하고 서로 같으면, 그리고 오직 그때에만, $f$는 $a$에서 미분가능하고 그 공통값이 $f'(a)$이다.
 :::

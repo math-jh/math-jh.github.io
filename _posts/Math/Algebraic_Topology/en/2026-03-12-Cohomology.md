@@ -248,7 +248,7 @@ Among the axioms of [Definition 2](#def2), the excision axiom allows us to compu
 ::: Proposition 6 (Mayer-Vietoris sequence)
 Let a topological space $X$ be expressed as the union $X=U\cup V$ of two open sets, and consider a cohomology theory $H$ defined on it. Then there exists a long exact sequence
 
-$$\cdots \to H^{n}(X) \xrightarrow{(i^\ast, j^\ast)} H^{n}(U) \oplus H^{n}(V) \xrightarrow{k^\ast - l^\ast} H^{n}(U \cap V) \xrightarrow{\delta} H^{n+1}(X) \to \cdots$$
+$$\cdots \rightarrow H^{n}(X) \xrightarrow{(i^\ast, j^\ast)} H^{n}(U) \oplus H^{n}(V) \xrightarrow{k^\ast - l^\ast} H^{n}(U \cap V) \xrightarrow{\delta} H^{n+1}(X) \rightarrow \cdots$$
 
 where $i^\ast, j^\ast, k^\ast, l^\ast$ are the maps induced by the inclusions
 

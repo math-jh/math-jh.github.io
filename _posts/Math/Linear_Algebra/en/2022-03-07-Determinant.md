@@ -83,7 +83,7 @@ We have not yet shown that the determinant exists or is unique, so we have used 
 
 ## Area and Volume
 
-The area of a parallelogram is given by the length of its base multiplied by its height. Similarly, the volume of a parallelepiped is given by the area of its base multiplied by its height. It is not difficult to generalize this to higher dimensions as well. For convenience, we also refer to the <em-ko>hypervolume</em-ko> of figures in four or more dimensions simply as volume.
+The area of a parallelogram is given by the length of its base multiplied by its height. Similarly, the volume of a parallelepiped is given by the area of its base multiplied by its height. It is not difficult to generalize this to higher dimensions as well. For convenience, we also refer to the *hypervolume* of figures in four or more dimensions simply as volume.
 
 The above is likewise merely one way of computing the areas of these figures. Giving the correct definition of area and volume is what endows the determinant with geometric meaning.
 
@@ -108,7 +108,7 @@ Therefore, if we specify only how area changes under the deformations in rules 1
 
 ## Geometric Meaning of the Determinant
 
-To lend geometric intuition to the determinant, in this section we take $\mathbb{K}=\mathbb{R}$. Apart from the fact that $D$ may take a negative sign, we may view $D$ as an area function. In this setting, the sign of $D$ represents <em-ko>orientation</em-ko>.
+To lend geometric intuition to the determinant, in this section we take $\mathbb{K}=\mathbb{R}$. Apart from the fact that $D$ may take a negative sign, we may view $D$ as an area function. In this setting, the sign of $D$ represents *orientation*.
 
 First, the initial condition that $D$ must satisfy—namely, <phrase>the area of the unit square is 1</phrase>—is immediate from the definition $D(e_1,\ldots, e_n)=1$.
 

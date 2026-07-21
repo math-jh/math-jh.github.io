@@ -31,7 +31,7 @@ Define the set $\mathcal{S}$ to be the collection of all $x$ satisfying $x\not\i
 Thus, whether $\mathcal{S}$ is an element of itself or not, a contradiction arises in either case. This is called *Russell's paradox*.
 :::
 
-To prevent such paradoxes, sets must be defined by rigorous methods rather than simply as <em-ko>collections of elements</em-ko>. The framework that accomplishes this is axiomatic set theory.
+To prevent such paradoxes, sets must be defined by rigorous methods rather than simply as *collections of elements*. The framework that accomplishes this is axiomatic set theory.
 
 The posts in the [Set Theory](/en/set_theory) category are not intended as an introduction to axiomatic set theory, but as a starting topic for these posts, a brief overview of the ZFC axiom system—the most widely used system—seems a good choice.
 
@@ -43,7 +43,7 @@ If no sets existed at all, then any proposition we write about sets would be tru
 There exists a set with no elements.
 :::
 
-To give this <em-ko>set with no elements</em-ko> the name "empty set," we must first show that this set is unique. The following axiom justifies this.
+To give this *set with no elements* the name "empty set," we must first show that this set is unique. The following axiom justifies this.
 
 ::: misc The Axiom of Extensionality. {#axiom-extensionality}
 For two sets $A,B$, if every element of $A$ is an element of $B$ and every element of $B$ is an element of $A$, then the two sets are equal.
@@ -60,7 +60,7 @@ $$((x\in A)\implies (x\in B)),\qquad ((x\in B)\implies (x\in A))$$
 are true. Therefore, by the axiom of extensionality, $A=B$. 
 :::
 
-Since the axiom of existence tells us that at least one such set exists, both the existence and uniqueness of a <em-ko>set with no elements</em-ko> are guaranteed. We now call this set the *empty set* and denote it by $\emptyset$.
+Since the axiom of existence tells us that at least one such set exists, both the existence and uniqueness of a *set with no elements* are guaranteed. We now call this set the *empty set* and denote it by $\emptyset$.
 
 The following axiom is worth remembering in particular because it prevents [Example 1](#ex1).
 
@@ -94,7 +94,7 @@ In the second case, if $B\in B$ then we obtain a contradiction, so necessarily $
 :::
 
 ::: Example 4
-The above example shows that when a set $A$ is given, there always exists a set $B$ not belonging to $A$. In particular, the <em-ko>set of all sets</em-ko>, that is, a universal set does not exist.  
+The above example shows that when a set $A$ is given, there always exists a set $B$ not belonging to $A$. In particular, the *set of all sets*, that is, a universal set does not exist.  
 :::
 
 By choosing the proposition $P$ appropriately, we can construct various familiar sets from the comprehension schema. That these are unique is obvious from extensionality.

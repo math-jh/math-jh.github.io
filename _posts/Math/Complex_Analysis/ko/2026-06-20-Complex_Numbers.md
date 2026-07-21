@@ -186,7 +186,7 @@ $$d(z, w) = \lvert z - w\rvert$$
 이 $$d$$가 [\[해석학\] §거리공간, ⁋정의 1](/ko/math/analysis/metric_spaces#def1)의 거리공간 공리를 만족함은 명제 4에서 곧바로 나온다. 비음성과 $$d(z,w)=0 \Leftrightarrow z=w$$는 명제 4의 첫째 항이고, 대칭성 $$\lvert z - w\rvert = \lvert w - z\rvert$$는 $$\lvert -u\rvert = \lvert u\rvert$$로부터, 삼각부등식 $$\lvert z - w\rvert \leq \lvert z - v\rvert + \lvert v - w\rvert$$는 $$z - w = (z - v) + (v - w)$$에 명제 4의 삼각부등식을 적용하여 얻는다. 더 나아가 이 거리는 $$\mathbb{R}^2$$의 유클리드 거리와 글자 그대로 일치한다.
 
 ::: 명제 9
-$$z = a + bi$$를 $$(a, b) \in \mathbb{R}^2$$와 동일시하면, $$\mathbb{C}$$의 거리 $$d(z, w) = \lvert z - w\rvert$$는 $$\mathbb{R}^2$$의 유클리드 거리와 같다. 따라서 점열 $$z_n = a_n + b_n i$$가 $$z = a + bi$$로 수렴하는 것은 $$a_n \to a$$이고 $$b_n \to b$$인 것과 동치이다.
+$$z = a + bi$$를 $$(a, b) \in \mathbb{R}^2$$와 동일시하면, $$\mathbb{C}$$의 거리 $$d(z, w) = \lvert z - w\rvert$$는 $$\mathbb{R}^2$$의 유클리드 거리와 같다. 따라서 점열 $$z_n = a_n + b_n i$$가 $$z = a + bi$$로 수렴하는 것은 $$a_n \rightarrow a$$이고 $$b_n \rightarrow b$$인 것과 동치이다.
 :::
 
 ::: 증명
@@ -198,7 +198,7 @@ $$d(z, w) = \lvert z - w\rvert = \sqrt{(a - c)^2 + (b - d)^2}$$
 
 $$\lvert a_n - a\rvert,\ \lvert b_n - b\rvert \;\leq\; \sqrt{(a_n - a)^2 + (b_n - b)^2} \;\leq\; \lvert a_n - a\rvert + \lvert b_n - b\rvert$$
 
-에서 따라 나온다. 가운데 항이 $$d(z_n, z)$$이므로, 이것이 $$0$$으로 가는 것은 양 끝의 두 실수열 $$\lvert a_n - a\rvert$$, $$\lvert b_n - b\rvert$$이 모두 $$0$$으로 가는 것, 곧 $$a_n \to a$$이고 $$b_n \to b$$인 것과 동치이다.
+에서 따라 나온다. 가운데 항이 $$d(z_n, z)$$이므로, 이것이 $$0$$으로 가는 것은 양 끝의 두 실수열 $$\lvert a_n - a\rvert$$, $$\lvert b_n - b\rvert$$이 모두 $$0$$으로 가는 것, 곧 $$a_n \rightarrow a$$이고 $$b_n \rightarrow b$$인 것과 동치이다.
 :::
 
 명제 9는 복소수의 수렴이 실수부와 허수부의 동시 수렴으로 환원됨을 말하며, 이로써 $$\mathbb{C}$$ 위의 해석학을 $$\mathbb{R}^2$$ 위의 해석학으로 번역할 수 있게 된다. 가장 먼저 옮겨 오는 것은 완비성이다.
@@ -208,7 +208,7 @@ $$(\mathbb{C}, d)$$는 완비 거리공간이다. 곧 $$\mathbb{C}$$의 모든 C
 :::
 
 ::: 증명
-$$z_n = a_n + b_n i$$가 $$\mathbb{C}$$에서 Cauchy라 하자. 좌표별 부등식 $$\lvert a_m - a_n\rvert \leq \lvert z_m - z_n\rvert$$과 $$\lvert b_m - b_n\rvert \leq \lvert z_m - z_n\rvert$$에 의해 두 실수열 $$(a_n)$$, $$(b_n)$$도 각각 Cauchy이다. [\[해석학\] §Cauchy 수열과 완비성, ⁋정리 4](/ko/math/analysis/cauchy_sequences#thm4)에 의해 $$a_n \to a$$, $$b_n \to b$$인 실수 $$a, b$$가 존재한다. 그러면 명제 9에 의해 $$z_n \to a + bi \in \mathbb{C}$$이다. 따라서 임의의 Cauchy 점열이 $$\mathbb{C}$$ 안에서 수렴하므로 $$(\mathbb{C}, d)$$는 완비이다.
+$$z_n = a_n + b_n i$$가 $$\mathbb{C}$$에서 Cauchy라 하자. 좌표별 부등식 $$\lvert a_m - a_n\rvert \leq \lvert z_m - z_n\rvert$$과 $$\lvert b_m - b_n\rvert \leq \lvert z_m - z_n\rvert$$에 의해 두 실수열 $$(a_n)$$, $$(b_n)$$도 각각 Cauchy이다. [\[해석학\] §Cauchy 수열과 완비성, ⁋정리 4](/ko/math/analysis/cauchy_sequences#thm4)에 의해 $$a_n \rightarrow a$$, $$b_n \rightarrow b$$인 실수 $$a, b$$가 존재한다. 그러면 명제 9에 의해 $$z_n \rightarrow a + bi \in \mathbb{C}$$이다. 따라서 임의의 Cauchy 점열이 $$\mathbb{C}$$ 안에서 수렴하므로 $$(\mathbb{C}, d)$$는 완비이다.
 :::
 
 이는 $$\mathbb{R}^2$$가 완비라는 사실 ([\[해석학\] §거리공간](/ko/math/analysis/metric_spaces)에서 좌표별 논증으로 언급된 것) 의 한 표현이기도 하다. 완비성은 멱급수의 수렴, 적분의 존재, 부동점 논증 등 복소해석학의 거의 모든 존재 정리가 의지하는 토대이다. 컴팩트성 또한 같은 동일시를 통해 그대로 따라 나온다.
@@ -220,7 +220,7 @@ $$\mathbb{C}$$의 부분집합 $$K$$가 점렬컴팩트인 것은 $$K$$가 닫�
 ::: 증명
 명제 9에 의해 $$(\mathbb{C}, d)$$는 거리공간으로서 $$(\mathbb{R}^2, d_{\text{euc}})$$와 동일하며, 닫힘·boundedness·점렬컴팩트는 모두 거리만으로 정의되는 개념이므로 두 공간에서 일치한다. 따라서 $$\mathbb{R}^2$$에 대한 [\[해석학\] §컴팩트성, ⁋정리 2](/ko/math/analysis/compactness#thm2)를 그대로 옮기면 결론을 얻는다.
 
-뒷부분은 다음과 같이도 직접 볼 수 있다. $$(z_n)$$이 bounded, 곧 모든 $$n$$에서 $$\lvert z_n\rvert \leq M$$이라 하자. $$z_n = a_n + b_n i$$로 적으면 $$\lvert a_n\rvert, \lvert b_n\rvert \leq \lvert z_n\rvert \leq M$$이므로 두 실수열이 bounded이다. 먼저 $$(a_n)$$에 [\[해석학\] §부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4)를 적용하여 $$a_{n_k} \to a$$인 부분수열을 뽑고, 그 부분수열 위에서 $$(b_{n_k})$$가 여전히 bounded이므로 다시 Bolzano–Weierstrass를 적용하여 $$b_{n_{k_j}} \to b$$인 부분수열을 뽑는다. 이 부분수열 위에서 두 좌표가 동시에 수렴하므로 명제 9에 의해 $$z_{n_{k_j}} \to a + bi$$이다.
+뒷부분은 다음과 같이도 직접 볼 수 있다. $$(z_n)$$이 bounded, 곧 모든 $$n$$에서 $$\lvert z_n\rvert \leq M$$이라 하자. $$z_n = a_n + b_n i$$로 적으면 $$\lvert a_n\rvert, \lvert b_n\rvert \leq \lvert z_n\rvert \leq M$$이므로 두 실수열이 bounded이다. 먼저 $$(a_n)$$에 [\[해석학\] §부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4)를 적용하여 $$a_{n_k} \rightarrow a$$인 부분수열을 뽑고, 그 부분수열 위에서 $$(b_{n_k})$$가 여전히 bounded이므로 다시 Bolzano–Weierstrass를 적용하여 $$b_{n_{k_j}} \rightarrow b$$인 부분수열을 뽑는다. 이 부분수열 위에서 두 좌표가 동시에 수렴하므로 명제 9에 의해 $$z_{n_{k_j}} \rightarrow a + bi$$이다.
 :::
 
 따라서 닫힌 원판 $$\overline{B}(z_0, R) = \{z \in \mathbb{C} \mid \lvert z - z_0\rvert \leq R\}$$이나 원 $$\{z \mid \lvert z\rvert = 1\}$$ 같은 집합은 컴팩트이고, 반면 열린 원판이나 $$\mathbb{C}$$ 전체는 컴팩트가 아니다. 이 컴팩트성은 곧 연속함수가 컴팩트집합 위에서 최댓값을 가진다는 결과로 이어져, 최대절댓값원리나 Liouville 정리 같은 복소해석학의 정리들이 서는 발판이 된다.
@@ -228,9 +228,9 @@ $$\mathbb{C}$$의 부분집합 $$K$$가 점렬컴팩트인 것은 $$K$$가 닫�
 ::: 예시 12 (등비점열의 수렴과 발산)
 복소수 $$z$$에 대해 점열 $$(z^n)$$의 거동은 절댓값 $$\lvert z\rvert$$로 완전히 결정된다. 명제 4에 의해 $$\lvert z^n\rvert = \lvert z\rvert^n$$이므로, $$\lvert z\rvert < 1$$이면
 
-$$\lvert z^n - 0\rvert = \lvert z\rvert^n \to 0$$
+$$\lvert z^n - 0\rvert = \lvert z\rvert^n \rightarrow 0$$
 
-이어서 $$z^n \to 0$$이다 ([\[해석학\] §수열의 수렴, ⁋예시 8](/ko/math/analysis/convergence_of_sequences#ex8)에서 본 실수열 $$\lvert z\rvert^n$$의 수렴). 반대로 $$\lvert z\rvert > 1$$이면 $$\lvert z^n\rvert \to \infty$$이므로 $$(z^n)$$은 bounded가 아니어서 수렴하지 않는다. $$\lvert z\rvert = 1$$인 경계의 경우는 더 섬세하다. $$z = 1$$이면 $$z^n = 1$$로 일정하지만, 가령 $$z = i$$이면 $$z^n$$이 $$i, -1, -i, 1$$을 주기적으로 순환하여 ($$\lvert z^n\rvert = 1$$로 bounded이지만) 수렴하지 않는다. 후자는 정리 11이 보장하는 수렴 부분수열의 존재를 명시적으로 보여 주는 예이기도 하다. 점열 $$(i^n)$$은 네 개의 상수 부분수열로 쪼개지며, 각각은 $$i, -1, -i, 1$$로 수렴한다.
+이어서 $$z^n \rightarrow 0$$이다 ([\[해석학\] §수열의 수렴, ⁋예시 8](/ko/math/analysis/convergence_of_sequences#ex8)에서 본 실수열 $$\lvert z\rvert^n$$의 수렴). 반대로 $$\lvert z\rvert > 1$$이면 $$\lvert z^n\rvert \rightarrow \infty$$이므로 $$(z^n)$$은 bounded가 아니어서 수렴하지 않는다. $$\lvert z\rvert = 1$$인 경계의 경우는 더 섬세하다. $$z = 1$$이면 $$z^n = 1$$로 일정하지만, 가령 $$z = i$$이면 $$z^n$$이 $$i, -1, -i, 1$$을 주기적으로 순환하여 ($$\lvert z^n\rvert = 1$$로 bounded이지만) 수렴하지 않는다. 후자는 정리 11이 보장하는 수렴 부분수열의 존재를 명시적으로 보여 주는 예이기도 하다. 점열 $$(i^n)$$은 네 개의 상수 부분수열로 쪼개지며, 각각은 $$i, -1, -i, 1$$로 수렴한다.
 :::
 
 ## 확장복소평면과 Riemann 구면
@@ -245,7 +245,7 @@ $$\widehat{\mathbb{C}}$$를 구면과 동일시하기 위해, 단위구면 $$S^2
 
 $$\sigma(z) = \left( \frac{2x}{\lvert z\rvert^2 + 1},\ \frac{2y}{\lvert z\rvert^2 + 1},\ \frac{\lvert z\rvert^2 - 1}{\lvert z\rvert^2 + 1} \right)$$
 
-이다. 이 대응은 평면 전체를 북극을 뺀 구면 $$S^2 \setminus \{N\}$$ 위로 일대일로 보내며, $$\lvert z\rvert \to \infty$$일 때 $$\sigma(z) \to N$$이므로 $$\infty$$를 북극 $$N$$에 대응시키면 $$\widehat{\mathbb{C}}$$ 전체가 구면 $$S^2$$와 일대일로 대응한다.
+이다. 이 대응은 평면 전체를 북극을 뺀 구면 $$S^2 \setminus \{N\}$$ 위로 일대일로 보내며, $$\lvert z\rvert \rightarrow \infty$$일 때 $$\sigma(z) \rightarrow N$$이므로 $$\infty$$를 북극 $$N$$에 대응시키면 $$\widehat{\mathbb{C}}$$ 전체가 구면 $$S^2$$와 일대일로 대응한다.
 
 구면과의 동일시는 $$\widehat{\mathbb{C}}$$에 자연스러운 거리를 부여한다. 구면 위 두 점 사이의 $$\mathbb{R}^3$$에서의 직선거리(현의 길이)를 평면으로 끌어내린 것이 *현거리<sub>chordal metric</sub>*이다.
 
@@ -260,21 +260,21 @@ $$\chi(z, w) = \frac{2\,\lvert z - w\rvert}{\sqrt{1 + \lvert z\rvert^2}\,\sqrt{1
 이 $$\chi(z, w)$$는 정확히 구면 위의 두 점 $$\sigma(z)$$, $$\sigma(w)$$ 사이의 $$\mathbb{R}^3$$ 직선거리 $$\lVert \sigma(z) - \sigma(w)\rVert$$와 같으며, $$\chi(z, \infty)$$는 $$\sigma(z)$$와 북극 $$N$$ 사이의 직선거리이다. 따라서 $$(\widehat{\mathbb{C}}, \chi)$$는 $$\mathbb{R}^3$$의 부분공간 $$S^2$$를 그 유클리드 거리로 잰 거리공간과 등거리동형이며, 거리공간 공리는 $$S^2 \subseteq \mathbb{R}^3$$의 것을 물려받아 자동으로 성립한다. 두 거리 사이의 관계는 다음 명제로 정리된다.
 
 ::: 명제 15
-현거리 $$\chi$$는 $$\mathbb{C}$$ 위에서 표준거리 $$d(z, w) = \lvert z - w\rvert$$와 같은 위상을 준다. 곧 $$\mathbb{C}$$의 점열 $$(z_n)$$과 $$z \in \mathbb{C}$$에 대해 $$\chi(z_n, z) \to 0$$인 것은 $$\lvert z_n - z\rvert \to 0$$인 것과 동치이다.
+현거리 $$\chi$$는 $$\mathbb{C}$$ 위에서 표준거리 $$d(z, w) = \lvert z - w\rvert$$와 같은 위상을 준다. 곧 $$\mathbb{C}$$의 점열 $$(z_n)$$과 $$z \in \mathbb{C}$$에 대해 $$\chi(z_n, z) \rightarrow 0$$인 것은 $$\lvert z_n - z\rvert \rightarrow 0$$인 것과 동치이다.
 :::
 
 ::: 증명
-$$z \in \mathbb{C}$$를 고정하고 $$z_n \to z$$ (표준거리) 라 하자. 그러면 $$(z_n)$$은 bounded이므로 어떤 $$M$$에 대해 $$\lvert z_n\rvert \leq M$$이고,
+$$z \in \mathbb{C}$$를 고정하고 $$z_n \rightarrow z$$ (표준거리) 라 하자. 그러면 $$(z_n)$$은 bounded이므로 어떤 $$M$$에 대해 $$\lvert z_n\rvert \leq M$$이고,
 
-$$\chi(z_n, z) = \frac{2\,\lvert z_n - z\rvert}{\sqrt{1 + \lvert z_n\rvert^2}\,\sqrt{1 + \lvert z\rvert^2}} \leq \frac{2\,\lvert z_n - z\rvert}{\sqrt{1 + \lvert z\rvert^2}} \to 0$$
+$$\chi(z_n, z) = \frac{2\,\lvert z_n - z\rvert}{\sqrt{1 + \lvert z_n\rvert^2}\,\sqrt{1 + \lvert z\rvert^2}} \leq \frac{2\,\lvert z_n - z\rvert}{\sqrt{1 + \lvert z\rvert^2}} \rightarrow 0$$
 
-이다. 분모는 $$\sqrt{1 + \lvert z\rvert^2} \geq 1$$로 bounded below이고 분자가 $$0$$으로 가기 때문이다. 역으로 $$\chi(z_n, z) \to 0$$이라 하자. 분모는 모든 $$n$$에서
+이다. 분모는 $$\sqrt{1 + \lvert z\rvert^2} \geq 1$$로 bounded below이고 분자가 $$0$$으로 가기 때문이다. 역으로 $$\chi(z_n, z) \rightarrow 0$$이라 하자. 분모는 모든 $$n$$에서
 
 $$\sqrt{1 + \lvert z_n\rvert^2}\,\sqrt{1 + \lvert z\rvert^2}$$
 
-인데, 만일 $$(z_n)$$이 bounded가 아니라면 어떤 부분수열에서 $$\lvert z_n\rvert \to \infty$$이고, 그때 $$\chi(z_n, z) \to \chi(\infty, z) = 2/\sqrt{1 + \lvert z\rvert^2} > 0$$이 되어 $$\chi(z_n, z) \to 0$$에 모순이다. 따라서 $$(z_n)$$은 bounded이고 $$\lvert z_n\rvert \leq M$$이라 두면
+인데, 만일 $$(z_n)$$이 bounded가 아니라면 어떤 부분수열에서 $$\lvert z_n\rvert \rightarrow \infty$$이고, 그때 $$\chi(z_n, z) \rightarrow \chi(\infty, z) = 2/\sqrt{1 + \lvert z\rvert^2} > 0$$이 되어 $$\chi(z_n, z) \rightarrow 0$$에 모순이다. 따라서 $$(z_n)$$은 bounded이고 $$\lvert z_n\rvert \leq M$$이라 두면
 
-$$\lvert z_n - z\rvert = \frac{\sqrt{1 + \lvert z_n\rvert^2}\,\sqrt{1 + \lvert z\rvert^2}}{2}\,\chi(z_n, z) \leq \frac{\sqrt{1 + M^2}\,\sqrt{1 + \lvert z\rvert^2}}{2}\,\chi(z_n, z) \to 0$$
+$$\lvert z_n - z\rvert = \frac{\sqrt{1 + \lvert z_n\rvert^2}\,\sqrt{1 + \lvert z\rvert^2}}{2}\,\chi(z_n, z) \leq \frac{\sqrt{1 + M^2}\,\sqrt{1 + \lvert z\rvert^2}}{2}\,\chi(z_n, z) \rightarrow 0$$
 
 이다. 따라서 두 거리는 $$\mathbb{C}$$ 위에서 같은 수렴을 정의하며, 같은 위상을 준다.
 :::

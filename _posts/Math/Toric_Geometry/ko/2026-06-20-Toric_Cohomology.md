@@ -50,7 +50,7 @@ Torus-invariant Weil divisor $D = \sum_{\rho \in \Sigma(1)} a_\rho D_\rho$와 $m
 
 $$V_{D, m} = \bigcup_{\substack{\sigma \in \Sigma}} \operatorname{conv}\bigl(\{ v_\rho \mid \rho \in \sigma(1),\ \langle m, v_\rho \rangle < -a_\rho \}\bigr)$$
 
-를 $D$와 $m$의 *support set<sub>받침 집합</sub>*이라 부른다. 여기서 $\sigma(1)$은 cone $\sigma$의 ray들의 모임이고 $\operatorname{conv}$는 convex hull이다.
+를 $D$와 $m$의 *support set<sub>지지 집합</sub>*이라 부른다. 여기서 $\sigma(1)$은 cone $\sigma$의 ray들의 모임이고 $\operatorname{conv}$는 convex hull이다.
 :::
 
 직관적으로 $V_{D, m}$은 character $\rchi^m$이 "section이 되기에 부족한" ray들, 즉 $\langle m, v_\rho \rangle < -a_\rho$인 ray $\rho$들의 primitive generator를 모아 각 cone 안에서 convex hull을 취해 이어붙인 도형이다. $m \in P_D$이면 그러한 ray가 하나도 없어 $V_{D, m} = \varnothing$이고, 그 외에는 $\lvert \Sigma \rvert$ 안의 어떤 polytope들의 합집합이 된다. 다음 정리는 이 도형의 위상이 정확히 weight $m$의 cohomology를 결정함을 말한다. 여기서 $\widetilde{H}^j$는 reduced singular cohomology이며, 관례상 빈 집합에 대해

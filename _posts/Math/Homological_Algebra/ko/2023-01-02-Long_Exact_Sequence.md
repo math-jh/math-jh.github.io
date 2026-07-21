@@ -199,7 +199,7 @@ $$(h'_n=v_{n+1}h_nu_n)_{n\in\mathbb{Z}}$$
 [정의 4](#def4)에서, 우리는 isomorphic한 homology를 갖는 chain complex들을 quasi-isomorphic하다 부르고, 이들을 같은 것으로 취급하기로 하였다. Mapping cone은 chain map $f:C_\bullet \rightarrow D_\bullet$이 주어졌을 때 이것이 quasi-isomorphism인지를 판별하는 도구가 된다.
 
 ::: 정의 8
-임의의 chain map $f:C_\bullet\rightarrow D_\bullet$에 대하여, $f$의 *mapping cone* $\cone(f)$는 다음의 chain complex
+임의의 chain map $f:C_\bullet\rightarrow D_\bullet$에 대하여, $f$의 *mapping cone<sub>사상뿔</sub>* $\cone(f)$는 다음의 chain complex
 
 $$\cdots\longrightarrow\underbrace{C_n\oplus D_{n+1}}_{\cone(f)_{n+1}}\overset{d_{n+1}}{\longrightarrow}\underbrace{C_{n-1}\oplus D_n}_{\cone(f)_n}\overset{d_n}{\longrightarrow}\underbrace{C_{n-2}\oplus D_{n-1}}_{\cone(f)_{n-1}}\longrightarrow\cdots$$
 

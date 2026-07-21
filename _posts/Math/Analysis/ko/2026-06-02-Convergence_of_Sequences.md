@@ -27,7 +27,7 @@ published: false
 
 $$\lvert a_n - L\rvert < \varepsilon$$
 
-이 성립하는 것이다. 이때 $L$을 $(a_n)$의 *극한<sub>limit</sub>*이라 하고 $\lim_{n\to\infty} a_n = L$ 또는 $a_n \to L$로 적는다. 수렴하지 않는 수열은 *발산<sub>diverges</sub>*한다고 한다.
+이 성립하는 것이다. 이때 $L$을 $(a_n)$의 *극한<sub>limit</sub>*이라 하고 $\lim_{n\rightarrow\infty} a_n = L$ 또는 $a_n \rightarrow L$로 적는다. 수렴하지 않는 수열은 *발산<sub>diverges</sub>*한다고 한다.
 :::
 
 정의의 핵심은 $N$이 $\varepsilon$에 의존한다는 점이다. $a_n = 1/n$이 $0$으로 수렴하는 것은 [§실수의 완비성, ⁋정리 4](/ko/math/analysis/completeness_of_reals#thm4)로 주어진 $\varepsilon$마다 $1/N < \varepsilon$인 $N$을 잡으면 $n \geq N$에서 $1/n \leq 1/N < \varepsilon$이 되기 때문이다. 이렇게 $\varepsilon$에서 $N$을 명시적으로 구성하는 것이 정의를 직접 다루는 표준적인 방식이다.
@@ -39,7 +39,7 @@ $$\lvert a_n - L\rvert < \varepsilon$$
 :::
 
 ::: 증명
-$a_n \to L$이고 $a_n \to L'$이며 $L \neq L'$이라 하자. $\varepsilon = \lvert L - L'\rvert/2 > 0$으로 두면, 충분히 큰 $n$에 대해 $\lvert a_n - L\rvert < \varepsilon$이면서 $\lvert a_n - L'\rvert < \varepsilon$이다. 삼각부등식에 의해 $\lvert L - L'\rvert \leq \lvert L - a_n\rvert + \lvert a_n - L'\rvert < 2\varepsilon = \lvert L - L'\rvert$이 되어 모순이다.
+$a_n \rightarrow L$이고 $a_n \rightarrow L'$이며 $L \neq L'$이라 하자. $\varepsilon = \lvert L - L'\rvert/2 > 0$으로 두면, 충분히 큰 $n$에 대해 $\lvert a_n - L\rvert < \varepsilon$이면서 $\lvert a_n - L'\rvert < \varepsilon$이다. 삼각부등식에 의해 $\lvert L - L'\rvert \leq \lvert L - a_n\rvert + \lvert a_n - L'\rvert < 2\varepsilon = \lvert L - L'\rvert$이 되어 모순이다.
 :::
 
 ::: 명제 3
@@ -47,23 +47,23 @@ $a_n \to L$이고 $a_n \to L'$이며 $L \neq L'$이라 하자. $\varepsilon = \l
 :::
 
 ::: 증명
-$a_n \to L$이면 $\varepsilon = 1$에 대해 $n \geq N$에서 $\lvert a_n\rvert \leq \lvert L\rvert + 1$이다. 나머지 유한개의 항 $a_1, \ldots, a_{N-1}$과 함께 $M = \max\{\lvert a_1\rvert, \ldots, \lvert a_{N-1}\rvert, \lvert L\rvert + 1\}$로 두면 모든 $n$에서 $\lvert a_n\rvert \leq M$이다.
+$a_n \rightarrow L$이면 $\varepsilon = 1$에 대해 $n \geq N$에서 $\lvert a_n\rvert \leq \lvert L\rvert + 1$이다. 나머지 유한개의 항 $a_1, \ldots, a_{N-1}$과 함께 $M = \max\{\lvert a_1\rvert, \ldots, \lvert a_{N-1}\rvert, \lvert L\rvert + 1\}$로 두면 모든 $n$에서 $\lvert a_n\rvert \leq M$이다.
 :::
 
 ::: 정리 4 (극한의 대수)
-$a_n \to A$, $b_n \to B$이면 다음이 성립한다.
+$a_n \rightarrow A$, $b_n \rightarrow B$이면 다음이 성립한다.
 
-$$a_n + b_n \to A + B, \qquad a_n b_n \to AB, \qquad \frac{a_n}{b_n} \to \frac{A}{B}\ (B \neq 0).$$
+$$a_n + b_n \rightarrow A + B, \qquad a_n b_n \rightarrow AB, \qquad \frac{a_n}{b_n} \rightarrow \frac{A}{B}\ (B \neq 0).$$
 :::
 
 ::: 증명
-합만 보인다. 임의의 $\varepsilon > 0$에 대해, $n$이 충분히 크면 $\lvert a_n - A\rvert < \varepsilon/2$이고 $\lvert b_n - B\rvert < \varepsilon/2$이다. 삼각부등식으로 $\lvert (a_n + b_n) - (A+B)\rvert \leq \lvert a_n - A\rvert + \lvert b_n - B\rvert < \varepsilon$이다. 곱은 $a_n b_n - AB = a_n(b_n - B) + (a_n - A)B$로 가르고 [명제 3](#prop3)의 boundedness를 쓰며, quotient는 $1/b_n \to 1/B$를 먼저 보이면 된다.
+합만 보인다. 임의의 $\varepsilon > 0$에 대해, $n$이 충분히 크면 $\lvert a_n - A\rvert < \varepsilon/2$이고 $\lvert b_n - B\rvert < \varepsilon/2$이다. 삼각부등식으로 $\lvert (a_n + b_n) - (A+B)\rvert \leq \lvert a_n - A\rvert + \lvert b_n - B\rvert < \varepsilon$이다. 곱은 $a_n b_n - AB = a_n(b_n - B) + (a_n - A)B$로 가르고 [명제 3](#prop3)의 boundedness를 쓰며, quotient는 $1/b_n \rightarrow 1/B$를 먼저 보이면 된다.
 :::
 
 다음은 모르는 수열을 아는 두 수열 사이에 가두어 극한을 결정하는 자주 쓰이는 도구이다.
 
 ::: 명제 5 (조임정리)
-충분히 큰 모든 $n$에서 $a_n \leq c_n \leq b_n$이고 $a_n \to L$, $b_n \to L$이면 $c_n \to L$이다.
+충분히 큰 모든 $n$에서 $a_n \leq c_n \leq b_n$이고 $a_n \rightarrow L$, $b_n \rightarrow L$이면 $c_n \rightarrow L$이다.
 :::
 
 ::: 증명
@@ -83,7 +83,7 @@ bounded above인 증가수열은 수렴하며, 그 극한은 $\sup\{a_n \mid n \
 :::
 
 ::: 증명
-$(a_n)$이 증가하고 bounded above라 하자. 집합 $\{a_n\}$이 bounded above이고 공집합이 아니므로, [§실수의 완비성, ⁋정의 2](/ko/math/analysis/completeness_of_reals#def2)에 의해 $L = \sup\{a_n\}$이 존재한다. 임의의 $\varepsilon > 0$에 대해 $L - \varepsilon$은 upper bound가 아니므로 $a_N > L - \varepsilon$인 $N$이 있고, $(a_n)$이 증가하므로 $n \geq N$이면 $L - \varepsilon < a_N \leq a_n \leq L < L + \varepsilon$이다. 따라서 $\lvert a_n - L\rvert < \varepsilon$이고 $a_n \to L$이다.
+$(a_n)$이 증가하고 bounded above라 하자. 집합 $\{a_n\}$이 bounded above이고 공집합이 아니므로, [§실수의 완비성, ⁋정의 2](/ko/math/analysis/completeness_of_reals#def2)에 의해 $L = \sup\{a_n\}$이 존재한다. 임의의 $\varepsilon > 0$에 대해 $L - \varepsilon$은 upper bound가 아니므로 $a_N > L - \varepsilon$인 $N$이 있고, $(a_n)$이 증가하므로 $n \geq N$이면 $L - \varepsilon < a_N \leq a_n \leq L < L + \varepsilon$이다. 따라서 $\lvert a_n - L\rvert < \varepsilon$이고 $a_n \rightarrow L$이다.
 :::
 
 단조수렴정리는 명시적 극한값을 모를 때에도 수렴을 보증한다. 예컨대 $a_1 = 2$, $a_{n+1} = (a_n + 2/a_n)/2$로 정의된 수열은 bounded below인 감소수열임을 보일 수 있어 수렴하며, 그 극한 $L$은 $L = (L + 2/L)/2$를 풀어 $\sqrt{2}$임이 따른다.
@@ -93,21 +93,21 @@ $(a_n)$이 증가하고 bounded above라 하자. 집합 $\{a_n\}$이 bounded abo
 조임정리와 단조수렴정리가 실제로 극한을 끌어내는 두 예를 본다. 둘 다 거듭제곱이나 거듭제곱근이 얽혀 정의를 직접 다루기 까다롭지만, 적절한 부등식으로 가두면 극한이 따라온다. 먼저 기하수열은 베르누이 부등식 하나로 결판이 난다.
 
 ::: 예시 8 (기하수열의 극한)
-$\lvert r\rvert < 1$이면 $r^n \to 0$이다. $r = 0$이면 자명하므로 $0 < \lvert r\rvert < 1$이라 하고 $1/\lvert r\rvert = 1 + h$로 두면 $h > 0$이다. 베르누이 부등식 $(1+h)^n \geq 1 + nh$로부터
+$\lvert r\rvert < 1$이면 $r^n \rightarrow 0$이다. $r = 0$이면 자명하므로 $0 < \lvert r\rvert < 1$이라 하고 $1/\lvert r\rvert = 1 + h$로 두면 $h > 0$이다. 베르누이 부등식 $(1+h)^n \geq 1 + nh$로부터
 
 $$\lvert r^n\rvert = \frac{1}{(1+h)^n} \leq \frac{1}{1 + nh} < \frac{1}{nh}$$
 
-이다. 임의의 $\varepsilon > 0$에 대해 $1/(Nh) < \varepsilon$, 곧 $N > 1/(h\varepsilon)$인 $N$을 택하면 $n \geq N$에서 $\lvert r^n - 0\rvert < \varepsilon$이다. 한편 $\lvert r\rvert > 1$이면 같은 부등식이 $\lvert r^n\rvert \geq 1 + n(\lvert r\rvert - 1) \to \infty$를 주어 $(r^n)$은 발산한다.
+이다. 임의의 $\varepsilon > 0$에 대해 $1/(Nh) < \varepsilon$, 곧 $N > 1/(h\varepsilon)$인 $N$을 택하면 $n \geq N$에서 $\lvert r^n - 0\rvert < \varepsilon$이다. 한편 $\lvert r\rvert > 1$이면 같은 부등식이 $\lvert r^n\rvert \geq 1 + n(\lvert r\rvert - 1) \rightarrow \infty$를 주어 $(r^n)$은 발산한다.
 :::
 
 다음은 밑과 지수가 함께 움직이는 $\sqrt[n]{n}$으로, 직관만으로는 극한을 가늠하기 어렵지만 이항정리가 주는 upper bound를 조임정리로 눌러 $1$이 나온다.
 
 ::: 예시 9 (조임정리의 활용)
-$\sqrt[n]{n} \to 1$임을 보인다. $n \geq 1$에서 $\sqrt[n]{n} \geq 1$이므로 $\sqrt[n]{n} = 1 + h_n$ ($h_n \geq 0$)로 두면, 이항정리로
+$\sqrt[n]{n} \rightarrow 1$임을 보인다. $n \geq 1$에서 $\sqrt[n]{n} \geq 1$이므로 $\sqrt[n]{n} = 1 + h_n$ ($h_n \geq 0$)로 두면, 이항정리로
 
 $$n = (1 + h_n)^n \geq \binom{n}{2} h_n^2 = \frac{n(n-1)}{2} h_n^2$$
 
-이다. $n \geq 2$에서 정리하면 $h_n^2 \leq 2/(n-1)$, 곧 $0 \leq h_n \leq \sqrt{2/(n-1)}$이다. 우변이 $0$으로 가므로 [명제 5](#prop5)에 의해 $h_n \to 0$이고 $\sqrt[n]{n} = 1 + h_n \to 1$이다. 같은 방식으로 $a > 0$에 대해 $\sqrt[n]{a} \to 1$도 따른다.
+이다. $n \geq 2$에서 정리하면 $h_n^2 \leq 2/(n-1)$, 곧 $0 \leq h_n \leq \sqrt{2/(n-1)}$이다. 우변이 $0$으로 가므로 [명제 5](#prop5)에 의해 $h_n \rightarrow 0$이고 $\sqrt[n]{n} = 1 + h_n \rightarrow 1$이다. 같은 방식으로 $a > 0$에 대해 $\sqrt[n]{a} \rightarrow 1$도 따른다.
 :::
 
 ## 발산과 무한대로의 발산
@@ -115,13 +115,13 @@ $$n = (1 + h_n)^n \geq \binom{n}{2} h_n^2 = \frac{n(n-1)}{2} h_n^2$$
 수렴하지 않는 수열을 정밀하게 다루려면 발산의 한 특수한 형태인 무한대로의 발산을 정의해 두는 것이 유용하다. 이는 $\varepsilon$-$N$ 정의에서 "$L$ 근방"을 "임의로 큰 값보다 큼"으로 바꾼 것이다.
 
 ::: 정의 10
-수열 $(a_n)$이 *양의 무한대로 발산<sub>diverges to infinity</sub>*한다는 것은, 임의의 $M > 0$에 대하여 자연수 $N$이 존재하여 모든 $n \geq N$에서 $a_n > M$이 성립하는 것이며, 이때 $\lim_{n\to\infty} a_n = \infty$로 적는다. $(-a_n)$이 양의 무한대로 발산하면 $(a_n)$이 *음의 무한대로 발산*한다고 하고 $\lim_{n\to\infty} a_n = -\infty$로 적는다.
+수열 $(a_n)$이 *양의 무한대로 발산<sub>diverges to infinity</sub>*한다는 것은, 임의의 $M > 0$에 대하여 자연수 $N$이 존재하여 모든 $n \geq N$에서 $a_n > M$이 성립하는 것이며, 이때 $\lim_{n\rightarrow\infty} a_n = \infty$로 적는다. $(-a_n)$이 양의 무한대로 발산하면 $(a_n)$이 *음의 무한대로 발산*한다고 하고 $\lim_{n\rightarrow\infty} a_n = -\infty$로 적는다.
 :::
 
 무한대로의 발산은 [명제 3](#prop3)과 짝을 이룬다. [명제 3](#prop3)에 의해 bounded가 아닌 수열은 수렴할 수 없으므로, 무한대로 발산하는 수열은 반드시 발산하지만, 그 역은 거짓이다. 예컨대 $a_n = (-1)^n n$은 bounded가 아니지만 양·음 어느 무한대로도 가지 않는다. 한편 bounded이면서도 발산하는 가장 단순한 예는 다음이다.
 
 ::: 예시 11 (진동하는 수열)
-$a_n = (-1)^n$은 bounded($\lvert a_n\rvert = 1$)이지만 발산한다. 만약 $a_n \to L$이라면 $\varepsilon = 1$에 대해 충분히 큰 $n$에서 $\lvert a_n - L\rvert < 1$이어야 한다. 그런데 인접한 두 항 $a_n = 1$, $a_{n+1} = -1$ (또는 그 반대)에 대해 삼각부등식으로
+$a_n = (-1)^n$은 bounded($\lvert a_n\rvert = 1$)이지만 발산한다. 만약 $a_n \rightarrow L$이라면 $\varepsilon = 1$에 대해 충분히 큰 $n$에서 $\lvert a_n - L\rvert < 1$이어야 한다. 그런데 인접한 두 항 $a_n = 1$, $a_{n+1} = -1$ (또는 그 반대)에 대해 삼각부등식으로
 
 $$2 = \lvert a_n - a_{n+1}\rvert \leq \lvert a_n - L\rvert + \lvert L - a_{n+1}\rvert < 1 + 1 = 2$$
 

@@ -21,11 +21,11 @@ published: false
 ## Gromov-Witten invariant의 정의
 
 ::: 정의 1
-$X$를 compact symplectic manifold (또는 smooth projective variety), $\beta \in H_2(X, \mathbb{Z})$를 effective class, $\alpha_1, \ldots, \alpha_n \in H^\ast(X, \mathbb{Q})$를 cohomology class라 하자. *Genus $g$, $n$-point, degree $\beta$ Gromov-Witten invariant*
+$X$를 compact symplectic manifold (또는 smooth projective variety), $\beta \in H_2(X, \mathbb{Z})$를 effective class, $\alpha_1, \ldots, \alpha_n \in H^\ast(X, \mathbb{Q})$를 cohomology class라 하자. *Genus $g$, $n$-point, degree $\beta$ Gromov-Witten invariant<sub>그로모프-위튼 불변량</sub>*
 
 $$\langle \alpha_1, \ldots, \alpha_n \rangle_{g, n, \beta}^X := \int_{[\overline{\mathcal{M}}_{g,n}(X,\beta)]^{\mathrm{vir}}} \prod_{i=1}^n \mathrm{ev}_i^\ast \alpha_i$$
 
-으로 정의된다. 여기서 $\mathrm{ev}_i: \overline{\mathcal{M}}_{g, n}(X, \beta) \to X$는 $i$번째 marked point에서의 evaluation map이다.
+으로 정의된다. 여기서 $\mathrm{ev}_i: \overline{\mathcal{M}}_{g, n}(X, \beta) \rightarrow X$는 $i$번째 marked point에서의 evaluation map이다.
 :::
 
 비유한 적분이 되려면 형식적으로 $\sum_i \deg \alpha_i = 2\, \mathrm{vdim}_\mathbb{C}\, \overline{\mathcal{M}}_{g, n}(X, \beta)$를 요구하며 ([§Stable maps의 moduli space, ⁋명제 5](/ko/math/symplectic_geometry/stable_maps#prop5)), 그 외에는 GW invariant가 정의상 $0$이다.
@@ -53,7 +53,7 @@ $$\langle 1, \tau_{a_1}(\alpha_1), \ldots, \tau_{a_n}(\alpha_n) \rangle_{0, n+1,
 :::
 
 ::: 증명
-$1 \in H^0(X)$를 evaluate하는 marked point는 기하학적 제약을 주지 않으므로, $\overline{\mathcal{M}}_{0, n+1}(X, \beta) \to \overline{\mathcal{M}}_{0, n}(X, \beta)$의 forgetful map의 fiber 위에서 적분하면 cotangent line의 *비교 공식* (comparison)에 의해 $\psi$ class가 한 단계 내려간다. 자세한 계산은 [KM]의 string axiom 또는 [HKKPTVVZ Chapter 26]를 참조하라.
+$1 \in H^0(X)$를 evaluate하는 marked point는 기하학적 제약을 주지 않으므로, $\overline{\mathcal{M}}_{0, n+1}(X, \beta) \rightarrow \overline{\mathcal{M}}_{0, n}(X, \beta)$의 forgetful map의 fiber 위에서 적분하면 cotangent line의 *비교 공식* (comparison)에 의해 $\psi$ class가 한 단계 내려간다. 자세한 계산은 [KM]의 string axiom 또는 [HKKPTVVZ Chapter 26]를 참조하라.
 :::
 
 ::: 명제 4 (Divisor equation)
@@ -105,14 +105,14 @@ WDVV equation의 의미는 다음과 같다. $F$의 세 번째 도함수가 정�
 WDVV equation의 가장 중요한 직접적 응용은 *quantum cohomology*의 구성이다.
 
 ::: 정의 7 (Quantum cohomology)
-$X$의 *big quantum product* $\circ_t: H^\ast(X) \otimes H^\ast(X) \to H^\ast(X)$은 다음으로 정의된다.
+$X$의 *big quantum product<sub>큰 양자 곱</sub>* $\circ_t: H^\ast(X) \otimes H^\ast(X) \rightarrow H^\ast(X)$은 다음으로 정의된다.
 
 $$T_a \circ_t T_b := \sum_{c, d}\, \partial_a \partial_b \partial_c F(t)\, \eta^{cd}\, T_d$$
 
-여기서 $F(t)$는 Gromov-Witten potential이고 $\{ T_a \}$는 $H^\ast(X)$의 basis이다. WDVV equation에 의해 $\circ_t$는 associative이며 commutative이다. $t = 0$ 근방의 *Novikov variable* $q = e^{t_{(2)}}$ 방향만 켠 specialization을 *small quantum product* $\star_q$라 부른다.
+여기서 $F(t)$는 Gromov-Witten potential이고 $\{ T_a \}$는 $H^\ast(X)$의 basis이다. WDVV equation에 의해 $\circ_t$는 associative이며 commutative이다. $t = 0$ 근방의 *Novikov variable<sub>노비코프 변수</sub>* $q = e^{t_{(2)}}$ 방향만 켠 specialization을 *small quantum product<sub>작은 양자 곱</sub>* $\star_q$라 부른다.
 :::
 
-Quantum cohomology ring $(H^\ast(X), \circ_t)$은 $t \in H^\ast(X)$ 위에 매개되는 family of commutative, associative algebra를 이룬다. Classical cup product는 $q \to 0$의 극한에서 회복되며, $\star_q$의 비자명한 항들은 $X$ 위의 rational curve의 수를 부호화한다.
+Quantum cohomology ring $(H^\ast(X), \circ_t)$은 $t \in H^\ast(X)$ 위에 매개되는 family of commutative, associative algebra를 이룬다. Classical cup product는 $q \rightarrow 0$의 극한에서 회복되며, $\star_q$의 비자명한 항들은 $X$ 위의 rational curve의 수를 부호화한다.
 
 ## $\mathbb{P}^n$의 GW invariant 예시
 

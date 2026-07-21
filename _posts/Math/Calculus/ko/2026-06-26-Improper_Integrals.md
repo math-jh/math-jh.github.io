@@ -21,11 +21,11 @@ weight: 12
 ::: 정의 1
 $f$가 모든 $t > a$에서 $[a, t]$에서 적분가능할 때, 무한구간 *이상적분<sub>improper integral</sub>*을
 
-$$\int_a^{\infty} f(x) \mathop{dx} = \lim_{t \to \infty}\int_a^t f(x) \mathop{dx}$$
+$$\int_a^{\infty} f(x) \mathop{dx} = \lim_{t \rightarrow \infty}\int_a^t f(x) \mathop{dx}$$
 
 으로 정의하고, 이 극한이 유한한 값으로 존재하면 이상적분이 *수렴*한다고 한다. 마찬가지로, 만일 $f$가 모든 $t<b$에서 $[t,a]$에서 적분가능할 때, 다음의 식
 
-$$\int_{-\infty}^b f(x)\mathop{dx}=\lim_{t \to -\infty}\int_t^b f(x) \mathop{dx}$$
+$$\int_{-\infty}^b f(x)\mathop{dx}=\lim_{t \rightarrow -\infty}\int_t^b f(x) \mathop{dx}$$
 
 이 유한한 값으로 존재하면 이상적분이 수렴한다고 한다. 만일 어떠한 $c$에 대하여 두 이상적분
 
@@ -65,11 +65,11 @@ $$\lim_{t\rightarrow\infty}\int_{-t}^t \sgn(x)\mathop{dx}=0$$
 ::: 정의 2
 $f$가 $c$에서 무한히 커지지만 모든 $t < c$에서 $[a, t]$에서 적분가능할 때, *특이적분*을
 
-$$\int_a^c f(x) \mathop{dx} = \lim_{t \to c^-}\int_a^t f(x) \mathop{dx}$$
+$$\int_a^c f(x) \mathop{dx} = \lim_{t \rightarrow c^-}\int_a^t f(x) \mathop{dx}$$
 
 으로 정의한다. 비슷하게 만일 $f$가 $c$에서 무한히 커지지만 모든 $c<t$에서 $[t, b]$에서 적분가능할 때, 그 특이적분을
 
-$$\int_c^b f(x) \mathop{dx} = \lim_{t \to c^+}\int_t^b f(x) \mathop{dx}$$
+$$\int_c^b f(x) \mathop{dx} = \lim_{t \rightarrow c^+}\int_t^b f(x) \mathop{dx}$$
 
 으로 정의한다. 만일 $[a,b]$ 내부의 점 $c$에서 $f$가 무한히 커지는 경우, 이 특이적분을
 
@@ -101,10 +101,10 @@ $F(t) = \int_a^t f(x) \mathop{dx}$는 $f \geq 0$이므로 $t$에 대해 증가�
 
 $$F(t) \leq \int_a^t g(x) \mathop{dx} \leq \int_a^\infty g(x) \mathop{dx}$$
 
-로 위로 유계이다. 위로 유계인 증가함수는 $t \to \infty$에서 극한을 가지므로 $\int_a^\infty f(x) \mathop{dx}$가 수렴한다. 둘째 주장은 대우이다.
+로 위로 유계이다. 위로 유계인 증가함수는 $t \rightarrow \infty$에서 극한을 가지므로 $\int_a^\infty f(x) \mathop{dx}$가 수렴한다. 둘째 주장은 대우이다.
 :::
 
-직접 부등식 $0 \leq f \leq g$를 세우기 어려울 때는 급수에서처럼 극한비교를 쓴다. 즉, 두 양함수가 $f(x)/g(x) \to c$ ($0 < c < \infty$) 를 만족하면 [§무한급수, ⁋명제 7](/ko/math/calculus/series#prop7)과 같은 논증으로 두 적분이 함께 수렴·발산하므로, 피적분함수가 $x \to \infty$에서 어떤 함수처럼 행동하는지만 알면 판정이 끝난다.
+직접 부등식 $0 \leq f \leq g$를 세우기 어려울 때는 급수에서처럼 극한비교를 쓴다. 즉, 두 양함수가 $f(x)/g(x) \rightarrow c$ ($0 < c < \infty$) 를 만족하면 [§무한급수, ⁋명제 7](/ko/math/calculus/series#prop7)과 같은 논증으로 두 적분이 함께 수렴·발산하므로, 피적분함수가 $x \rightarrow \infty$에서 어떤 함수처럼 행동하는지만 알면 판정이 끝난다.
 
 부호가 바뀌는 피적분함수는 절댓값을 취해 양항으로 환원한다.
 
@@ -118,7 +118,7 @@ $0 \leq f + \lvert f\rvert \leq 2\lvert f\rvert$이므로 [명제 3](#prop3)으�
 
 역은 성립하지 않는다. $\int_0^\infty \frac{\sin x}{x} \mathop{dx} = \frac\pi2$는 수렴하지만 $\int_0^\infty \lvert \sin x/x\rvert \mathop{dx}$는 발산하므로 *조건수렴*이며, 이는 급수의 조건수렴에 대응한다.
 
-위의 두 판정은 무한구간 적분에 대해 서술했지만, 치환을 거치면 끝점에서 발산하는 특이적분에도 그대로 적용된다. $f$가 좌측 끝점 $c$에서 특이한 $\int_c^b f(x) \mathop{dx}$에서 $u = 1/(x - c)$로 두면 $x \to c^+$가 $u \to \infty$에 대응하고, 적분구간의 방향까지 맞추면
+위의 두 판정은 무한구간 적분에 대해 서술했지만, 치환을 거치면 끝점에서 발산하는 특이적분에도 그대로 적용된다. $f$가 좌측 끝점 $c$에서 특이한 $\int_c^b f(x) \mathop{dx}$에서 $u = 1/(x - c)$로 두면 $x \rightarrow c^+$가 $u \rightarrow \infty$에 대응하고, 적분구간의 방향까지 맞추면
 
 $$\int_c^b f(x) \mathop{dx} = \int_{1/(b-c)}^\infty \frac{f(c + 1/u)}{u^2} \mathop{du}$$
 
@@ -131,7 +131,7 @@ $$\int_c^b f(x) \mathop{dx} = \int_{1/(b-c)}^\infty \frac{f(c + 1/u)}{u^2} \math
 
 $$\int_1^t x^{-p} \mathop{dx} = \frac{t^{1-p} - 1}{1 - p}, \qquad \int_t^1 x^{-p} \mathop{dx} = \frac{1 - t^{1-p}}{1 - p}$$
 
-이고, 좌측 이상적분의 경우 $t \to \infty$에서 $p > 1$일 때 $t^{1-p}$가 $0$으로 가고, 우측 특이적분의 경우 $t \to 0^+$에서 $p < 1$일 때 $t^{1-p}$가 $0$으로 수렴해 적분이 유한해진다. 이 때 각각의 수렴값은 
+이고, 좌측 이상적분의 경우 $t \rightarrow \infty$에서 $p > 1$일 때 $t^{1-p}$가 $0$으로 가고, 우측 특이적분의 경우 $t \rightarrow 0^+$에서 $p < 1$일 때 $t^{1-p}$가 $0$으로 수렴해 적분이 유한해진다. 이 때 각각의 수렴값은 
 
 $$\int_1^\infty x^{-p} \mathop{dx} = \frac{1}{p - 1} \quad (p > 1), \qquad \int_0^1 x^{-p} \mathop{dx} = \frac{1}{1 - p} \quad (p < 1)$$
 

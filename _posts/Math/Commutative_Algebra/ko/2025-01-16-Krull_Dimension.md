@@ -170,7 +170,7 @@ $$\dim A/\mathfrak{p}A\leq\dim A-1$$
 Graded ring $R = \bigoplus_{d \ge 0} R_d$에서 차원을 계산할 때 유용한 성질들을 살펴보자. 우선 다음 정리를 기억하자. ([§등급환의 국소화](/ko/math/commutative_algebra/localization_of_graded_rings))
 
 ::: 정의 9
-Graded ring $R$의 ideal $\mathfrak{a}$가 *homogeneous<sub>동차</sub>*라는 것은 $\mathfrak{a}$가 homogeneous element들로 생성되는 것이다. Prime ideal $\mathfrak{p}$가 *homogeneous prime ideal*이라는 것은 $\mathfrak{p}$가 homogeneous ideal이면서 prime인 것이다.
+Graded ring $R$의 ideal $\mathfrak{a}$가 *homogeneous<sub>동차</sub>*라는 것은 $\mathfrak{a}$가 homogeneous element들로 생성되는 것이다. Prime ideal $\mathfrak{p}$가 *homogeneous prime ideal<sub>동차 소아이디얼</sub>*이라는 것은 $\mathfrak{p}$가 homogeneous ideal이면서 prime인 것이다.
 :::
 
 Graded ring에서 핵심적인 관찰은 irrelevant ideal $\mathfrak{m} = \bigoplus_{d > 0} R_d$를 포함하는 prime ideal들이 항상 homogeneous라는 것이다.

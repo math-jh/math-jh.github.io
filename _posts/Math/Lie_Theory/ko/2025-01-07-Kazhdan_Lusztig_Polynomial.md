@@ -30,10 +30,10 @@ $$s_i^2 = e,\qquad (s_i s_j)^{m_{ij}} = e\quad (i\neq j,\; m_{ij} \in \{2, 3, 4,
 Kazhdan–Lusztig polynomial은 $W$ 자체가 아니라 그 *Hecke deformation*인 Hecke algebra 위에서 정의된다. 우리는 매개변수 $q$를 도입하여, group algebra $\mathbb{Z}[W]$의 $q$-deformation을 다음과 같이 정의한다.
 
 ::: 정의 1
-Coxeter system $(W, S)$에 대하여, *Iwahori–Hecke algebra* $H = H_q(W)$는 $\mathcal{A} = \mathbb{Z}[q^{1/2}, q^{-1/2}]$ 위의 associative algebra로서, $s \in S$에 대응하는 generator $T_s$들에 의해 생성되며 다음 관계를 만족한다.
+Coxeter system $(W, S)$에 대하여, *Iwahori–Hecke algebra<sub>이와호리-헤케 대수</sub>* $H = H_q(W)$는 $\mathcal{A} = \mathbb{Z}[q^{1/2}, q^{-1/2}]$ 위의 associative algebra로서, $s \in S$에 대응하는 generator $T_s$들에 의해 생성되며 다음 관계를 만족한다.
 
-1. *Quadratic relation*: $T_s^2 = (q - 1) T_s + q$ for all $s \in S$.
-2. *Braid relation*: $\underbrace{T_s T_t T_s \cdots}_{m_{st} \text{ terms}} = \underbrace{T_t T_s T_t \cdots}_{m_{st} \text{ terms}}$ for $s \neq t \in S$.
+1. *Quadratic relation<sub>이차 관계식</sub>*: $T_s^2 = (q - 1) T_s + q$ for all $s \in S$.
+2. *Braid relation<sub>꼬임 관계식</sub>*: $\underbrace{T_s T_t T_s \cdots}_{m_{st} \text{ terms}} = \underbrace{T_t T_s T_t \cdots}_{m_{st} \text{ terms}}$ for $s \neq t \in S$.
 :::
 
 Braid relation 덕분에 임의의 reduced expression $w = s_{i_1} \cdots s_{i_\ell}$에 대해 $T_w := T_{s_{i_1}} \cdots T_{s_{i_\ell}}$는 reduced expression의 선택에 의존하지 않으므로 well-defined이다. 우리는 이렇게 정의된 $\{T_w\}_{w \in W}$를 *standard basis*라 부르며, 실제로 $H$는 $\mathcal{A}$-module로서 이를 free basis로 갖는다.
@@ -53,7 +53,7 @@ Quadratic relation $T_s^2 = (q-1)T_s + q$는 $q = 1$일 때 $T_s^2 = 1$로 환�
 Kazhdan–Lusztig basis를 단일화하는 핵심 장치는 $H$ 위의 *bar involution*이다.
 
 ::: 정의 3
-*Bar involution* $\overline{\,\cdot\,} : H \to H$는 $\mathbb{Z}$-algebra automorphism으로서, 다음의 식
+*Bar involution* $\overline{\,\cdot\,} : H \rightarrow H$는 $\mathbb{Z}$-algebra automorphism으로서, 다음의 식
 
 $$\overline{q^{1/2}} = q^{-1/2},\qquad \overline{T_s} = T_s^{-1}$$
 
@@ -122,7 +122,7 @@ $$C_w = C_s \cdot C_{sw} - \sum_{\substack{z < w \\ sz < z}} \mu(z, sw)\, C_z$$
 KL polynomial과 짝을 이루는 또 하나의 중요한 다항식 family는 *R-polynomial*이다. 이는 bar involution이 standard basis 위에서 어떻게 작용하는지를 기술한다.
 
 ::: 정의 6
-$v, w \in W$에 대하여, *R-polynomial* $R_{v, w}(q) \in \mathbb{Z}[q]$는 다음의 전개
+$v, w \in W$에 대하여, *R-polynomial<sub>$R$-다항식</sub>* $R_{v, w}(q) \in \mathbb{Z}[q]$는 다음의 전개
 
 $$\overline{T_{w^{-1}}^{-1}} = q^{-\ell(w)} \sum_{v \le w} R_{v, w}(q)\, T_v$$
 

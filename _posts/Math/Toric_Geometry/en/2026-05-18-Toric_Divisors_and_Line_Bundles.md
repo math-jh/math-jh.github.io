@@ -55,7 +55,7 @@ One of our ultimate goals is to compute $\Cl(X_\Sigma)$ explicitly from the comb
 
 By definition this kernel consists of those elements of $\Div_T(X_\Sigma)$ that become $0$ in $\Cl(X_\Sigma)$, i.e. divisors that are *simultaneously torus-invariant and principal*. Thus the problem reduces to asking which rational functions on a toric variety define a torus-invariant principal divisor.
 
-The most natural candidates are the *characters* $\rchi^m$ corresponding to elements $m \in M$ of the lattice. For each $m \in M$, the character $\rchi^m: T_N \to \mathbb{C}^\ast$ can be viewed as a rational function on $X_\Sigma$ because $T_N \subset X_\Sigma$ is open dense ([§Affine Toric Varieties, ⁋Proposition 10](/en/math/toric_geometry/affine_toric_varieties#prop10)). The character $\rchi^m$ itself is not invariant under the action of $T_N$, but for $t \in T_N$ we have
+The most natural candidates are the *characters* $\rchi^m$ corresponding to elements $m \in M$ of the lattice. For each $m \in M$, the character $\rchi^m: T_N \rightarrow \mathbb{C}^\ast$ can be viewed as a rational function on $X_\Sigma$ because $T_N \subset X_\Sigma$ is open dense ([§Affine Toric Varieties, ⁋Proposition 10](/en/math/toric_geometry/affine_toric_varieties#prop10)). The character $\rchi^m$ itself is not invariant under the action of $T_N$, but for $t \in T_N$ we have
 
 $$(t \cdot \rchi^m)(x) = \rchi^m(t x) = \rchi^m(t) \cdot \rchi^m(x)$$
 
@@ -68,7 +68,7 @@ $$\divisor(\rchi^m) = \sum_{\rho \in \Sigma(1)} \langle m, v_\rho \rangle D_\rho
 :::
 
 ::: Proof
-Since $X_\Sigma$ is normal ([§Definition of Toric Varieties, ⁋Proposition 4](/en/math/toric_geometry/toric_varieties#prop4)), the local ring $\mathcal{O}_{X_\Sigma, D_\rho}$ at the generic point of each prime divisor $D_\rho$ is a DVR; write its valuation as $v_{D_\rho}: \mathbb{C}(X_\Sigma)^\ast \to \mathbb{Z}$. By the definition of principal divisor,
+Since $X_\Sigma$ is normal ([§Definition of Toric Varieties, ⁋Proposition 4](/en/math/toric_geometry/toric_varieties#prop4)), the local ring $\mathcal{O}_{X_\Sigma, D_\rho}$ at the generic point of each prime divisor $D_\rho$ is a DVR; write its valuation as $v_{D_\rho}: \mathbb{C}(X_\Sigma)^\ast \rightarrow \mathbb{Z}$. By the definition of principal divisor,
 
 $$\divisor(\rchi^m) = \sum_{\rho \in \Sigma(1)} v_{D_\rho}(\rchi^m) D_\rho$$
 
@@ -77,7 +77,7 @@ so it suffices to show that $v_{D_\rho}(\rchi^m) = \langle m, v_\rho \rangle$ fo
 
 From this we obtain a natural group homomorphism
 
-$$M \to \Div_T(X_\Sigma);\qquad m \mapsto \divisor(\rchi^m).$$
+$$M \rightarrow \Div_T(X_\Sigma);\qquad m \mapsto \divisor(\rchi^m).$$
 
 The image of this homomorphism is the set of principal divisors, and our claim is that this is exactly the kernel of (1).
 
@@ -90,9 +90,9 @@ Here the first arrow is $m \mapsto \divisor(\rchi^m)$, and the second arrow is $
 :::
 
 ::: Proof
-First we show that $M \to \Div_T(X_\Sigma)$ is injective. If $\divisor(\rchi^m) = 0$, then $\langle m, v_\rho \rangle = 0$ for all $\rho \in \Sigma(1)$. Since the fan $\Sigma$ spans $N_\mathbb{R}$ by assumption, the primitive generators $\{v_\rho\}$ span $N_\mathbb{R}$, so $m = 0$.
+First we show that $M \rightarrow \Div_T(X_\Sigma)$ is injective. If $\divisor(\rchi^m) = 0$, then $\langle m, v_\rho \rangle = 0$ for all $\rho \in \Sigma(1)$. Since the fan $\Sigma$ spans $N_\mathbb{R}$ by assumption, the primitive generators $\{v_\rho\}$ span $N_\mathbb{R}$, so $m = 0$.
 
-Next we show that the kernel of $\Div_T(X_\Sigma) \to \Cl(X_\Sigma)$ coincides exactly with the divisors of characters. By definition the kernel is the set of divisors that are principal and simultaneously $T$-invariant. Suppose $D = \divisor(f)$ is $T$-invariant. Since the support of a $T$-invariant divisor lies in the boundary $X_\Sigma \setminus T_N = \bigcup_{\rho \in \Sigma(1)} D_\rho$, restricting $f$ to the open dense subset $T_N$ gives $\divisor(f \rvert_{T_N}) = 0$. Hence $f\rvert_{T_N}$ is a unit in the coordinate ring $\mathbb{C}[M]$ of $T_N$. The units of $\mathbb{C}[M]$ are exactly of the form $c \cdot \rchi^m$ ($c \in \mathbb{C}^\ast$, $m \in M$), so $f\rvert_{T_N} = c \cdot \rchi^m$, and by normality of $X_\Sigma$ we have $f = c \cdot \rchi^m$ on $X_\Sigma$. Therefore $D = \divisor(\rchi^m)$.
+Next we show that the kernel of $\Div_T(X_\Sigma) \rightarrow \Cl(X_\Sigma)$ coincides exactly with the divisors of characters. By definition the kernel is the set of divisors that are principal and simultaneously $T$-invariant. Suppose $D = \divisor(f)$ is $T$-invariant. Since the support of a $T$-invariant divisor lies in the boundary $X_\Sigma \setminus T_N = \bigcup_{\rho \in \Sigma(1)} D_\rho$, restricting $f$ to the open dense subset $T_N$ gives $\divisor(f \rvert_{T_N}) = 0$. Hence $f\rvert_{T_N}$ is a unit in the coordinate ring $\mathbb{C}[M]$ of $T_N$. The units of $\mathbb{C}[M]$ are exactly of the form $c \cdot \rchi^m$ ($c \in \mathbb{C}^\ast$, $m \in M$), so $f\rvert_{T_N} = c \cdot \rchi^m$, and by normality of $X_\Sigma$ we have $f = c \cdot \rchi^m$ on $X_\Sigma$. Therefore $D = \divisor(\rchi^m)$.
 
 Finally we show surjectivity. For any divisor $D \in \Div(X_\Sigma)$, its restriction $D \cap T_N$ to $T_N$ is a divisor on $T_N \cong (\mathbb{C}^\ast)^n$. Since the coordinate ring $\mathbb{C}[M]$ of $T_N$ is a UFD, this is principal, and thus for some $f \in \mathbb{C}(X_\Sigma)^\ast$ the support of $D - \divisor(f)$ can be made to lie in $X_\Sigma \setminus T_N = \bigcup_{\rho \in \Sigma(1)} D_\rho$. The right-hand side is expressed as a sum of torus-invariant divisors, so $[D] = [D - \divisor(f)]$ has a torus-invariant representative.
 :::
@@ -104,7 +104,7 @@ This exact sequence becomes a powerful tool for explicitly computing the class g
 On the other hand, to discuss line bundles via divisors we need to examine Cartier divisors. We studied Weil divisors above, and in the smooth case Weil and Cartier divisors coincide, so this part is already complete to some extent; but for toric varieties there exists a way to describe Cartier divisors even when they are not smooth.
 
 ::: Definition 5
-A function $\psi: \lvert \Sigma \rvert \to \mathbb{R}$ defined on the *support* $\lvert \Sigma \rvert = \bigcup_{\sigma \in \Sigma} \sigma$ of the fan $\Sigma$ is called a *piecewise linear function* if for each cone $\sigma \in \Sigma$, the restriction $\psi\rvert_\sigma$ is of the form $\psi(v) = \langle m_\sigma, v \rangle$ for some $m_\sigma \in M_\mathbb{R}$. A piecewise linear function $\psi$ is called *integral* if each $m_\sigma$ lies in $M$.
+A function $\psi: \lvert \Sigma \rvert \rightarrow \mathbb{R}$ defined on the *support* $\lvert \Sigma \rvert = \bigcup_{\sigma \in \Sigma} \sigma$ of the fan $\Sigma$ is called a *piecewise linear function* if for each cone $\sigma \in \Sigma$, the restriction $\psi\rvert_\sigma$ is of the form $\psi(v) = \langle m_\sigma, v \rangle$ for some $m_\sigma \in M_\mathbb{R}$. A piecewise linear function $\psi$ is called *integral* if each $m_\sigma$ lies in $M$.
 :::
 
 We write $\PL(\Sigma, M_\mathbb{R})$ for the set of piecewise linear functions, and $\PL(\Sigma, M)$ for the set of integral piecewise linear functions. The important point is that a torus-invariant Cartier divisor $D$ determines a $\psi_D \in \PL(\Sigma, M)$.
@@ -112,7 +112,7 @@ We write $\PL(\Sigma, M_\mathbb{R})$ for the set of piecewise linear functions, 
 ::: Proposition 6
 For a torus-invariant Cartier divisor $D = \sum_{\rho \in \Sigma(1)} a_\rho D_\rho$, using $m_\sigma \in M$ determined by $D\rvert_{U_\sigma} = \divisor(\rchi^{-m_\sigma})$ on each maximal cone $\sigma \in \Sigma$, the function defined by
 
-$$\psi_D: \lvert \Sigma \rvert \to \mathbb{R};\qquad \psi_D(v) = \langle m_\sigma, v \rangle \quad \text{for } v \in \sigma$$
+$$\psi_D: \lvert \Sigma \rvert \rightarrow \mathbb{R};\qquad \psi_D(v) = \langle m_\sigma, v \rangle \quad \text{for } v \in \sigma$$
 
 is an element of $\PL(\Sigma, M)$, and in particular takes the value $\psi_D(v_\rho) = -a_\rho$ at the primitive generator $v_\rho$ of each ray $\rho \in \Sigma(1)$.
 :::
@@ -165,12 +165,12 @@ $$\Delta_D = \{m \in M_\mathbb{R} \mid \langle m, v_\rho \rangle \ge -a_\rho \te
 
 Then the set of lattice points inside $\Delta_D$ coincides exactly with the $m$'s appearing as summands.
 
-On the other hand, this is not the first time we encounter a situation where lattice points inside a polyhedron carry geometric meaning: in [§Definition of Toric Varieties, ⁋Proposition 9](/en/math/toric_geometry/toric_varieties#prop9) we constructed a monomial map $\phi_P: T_N \to \mathbb{P}^s$ from the lattice points $P \cap M = \{m_0, \ldots, m_s\}$ of a lattice polytope $P$, and showed that the Zariski closure of its image is isomorphic to $X_P$. From the perspective of [Proposition 7](#prop7) above, these lattice points coincide exactly with the character basis of $H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))$ corresponding to $P = \Delta_D$. That is, the projective embedding determined by lattice points was in fact the standard linear system embedding determined by the global sections of the line bundle $\mathcal{O}_{X_\Sigma}(D)$.
+On the other hand, this is not the first time we encounter a situation where lattice points inside a polyhedron carry geometric meaning: in [§Definition of Toric Varieties, ⁋Proposition 9](/en/math/toric_geometry/toric_varieties#prop9) we constructed a monomial map $\phi_P: T_N \rightarrow \mathbb{P}^s$ from the lattice points $P \cap M = \{m_0, \ldots, m_s\}$ of a lattice polytope $P$, and showed that the Zariski closure of its image is isomorphic to $X_P$. From the perspective of [Proposition 7](#prop7) above, these lattice points coincide exactly with the character basis of $H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))$ corresponding to $P = \Delta_D$. That is, the projective embedding determined by lattice points was in fact the standard linear system embedding determined by the global sections of the line bundle $\mathcal{O}_{X_\Sigma}(D)$.
 
 This perspective naturally leads to the question of how the geometric condition of ampleness translates into combinatorics of the fan for a toric variety. Stating the result first, this is completely described by the convexity of the piecewise linear function.
 
 ::: Definition 8
-A piecewise linear function $\psi: \lvert \Sigma \rvert \to \mathbb{R}$ is *strictly convex* if for any two distinct maximal cones $\sigma_1, \sigma_2 \in \Sigma$ with corresponding $m_{\sigma_1}, m_{\sigma_2} \in M_\mathbb{R}$,
+A piecewise linear function $\psi: \lvert \Sigma \rvert \rightarrow \mathbb{R}$ is *strictly convex* if for any two distinct maximal cones $\sigma_1, \sigma_2 \in \Sigma$ with corresponding $m_{\sigma_1}, m_{\sigma_2} \in M_\mathbb{R}$,
 
 $$\psi(v) = \langle m_{\sigma_1}, v \rangle \text{ for } v \in \sigma_1, \qquad \psi(v) = \langle m_{\sigma_2}, v \rangle \text{ for } v \in \sigma_2$$
 
@@ -215,7 +215,7 @@ For a toric variety $X_\Sigma$, the following hold.
 ::: Proof
 (1) For a general algebraic variety, the group of Cartier divisors $\CaDiv(X)$ is isomorphic to the group of line bundles, and quotienting by principal divisors gives the Picard group. For a toric variety, torus-invariant Cartier divisors alone suffice to represent every linear equivalence class, so $\Pic(X_\Sigma) \cong \CaDiv_T(X_\Sigma) / M$ holds.
 
-(2) The image of $M \to \Div_T(X_\Sigma)$, namely $\divisor(\rchi^m)$, consists of principal divisors and hence is automatically Cartier, so this arrow factors through $M \to \CaDiv_T(X_\Sigma)$. Consequently the left two columns of the commutative diagram share the same $M$, and the quotient $\Pic(X_\Sigma) = \CaDiv_T(X_\Sigma)/M$ naturally sits inside $\Cl(X_\Sigma) = \Div_T(X_\Sigma)/M$ as a subgroup. Injectivity follows from the fact that $\CaDiv_T(X_\Sigma) \hookrightarrow \Div_T(X_\Sigma)$ is injective and both quotients are by the same image of $M$.
+(2) The image of $M \rightarrow \Div_T(X_\Sigma)$, namely $\divisor(\rchi^m)$, consists of principal divisors and hence is automatically Cartier, so this arrow factors through $M \rightarrow \CaDiv_T(X_\Sigma)$. Consequently the left two columns of the commutative diagram share the same $M$, and the quotient $\Pic(X_\Sigma) = \CaDiv_T(X_\Sigma)/M$ naturally sits inside $\Cl(X_\Sigma) = \Div_T(X_\Sigma)/M$ as a subgroup. Injectivity follows from the fact that $\CaDiv_T(X_\Sigma) \hookrightarrow \Div_T(X_\Sigma)$ is injective and both quotients are by the same image of $M$.
 :::
 
 The Picard group of a toric variety can be described explicitly in the language of piecewise linear functions. Quotienting $\PL(\Sigma, M)$ by the globally linear functions, i.e. those given by $\psi(v) = \langle m, v \rangle$ for a single $m \in M$ on the whole space, yields the Picard group. This provides a powerful method for computing combinatorial invariants of a toric variety.

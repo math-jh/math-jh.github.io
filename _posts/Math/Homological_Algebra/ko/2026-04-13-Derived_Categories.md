@@ -22,7 +22,7 @@ weight: 8
 그러나 $\Ch(\mathcal{A})$ 자체는 우리의 관심의 대상은 아니다. 우리는 앞서 설명했듯 $\Ch(\mathcal{A})$에서 quasi-isomorphism을 모두 같은 것으로 봐야 하므로 이에 대한 quotient 또한 생각해야 한다. 또, 그 이전에 chain homotopic한 chain map들은 모두 같은 것이므로 다음과 같은 정의를 내려야 한다. 
 
 ::: 정의 1
-Abelian category $\mathcal{A}$의 *homotopy category* $K(\mathcal{A})$는 $\Ch(\mathcal{A})$에서 chain homotopic인 map들을 동일시하여 얻은 quotient category이다. 즉 chain homotopy relation $\sim$에 대하여
+Abelian category $\mathcal{A}$의 *homotopy category<sub>호모토피 범주</sub>* $K(\mathcal{A})$는 $\Ch(\mathcal{A})$에서 chain homotopic인 map들을 동일시하여 얻은 quotient category이다. 즉 chain homotopy relation $\sim$에 대하여
 
 $$\Hom_{K(\mathcal{A})}(A^\bullet, B^\bullet) = \Hom_{\Ch(\mathcal{A})}(A^\bullet, B^\bullet) /{\sim}$$
 
@@ -82,7 +82,7 @@ Derived category $D(\mathcal{A})$의 subcategory들을 정의한다.
 한편 우리는 다음을 공식적으로 정의한다.
 
 ::: 정의 4
-$D(\mathcal{A})$ 위의 *shift functor* $[n]: D(\mathcal{A}) \rightarrow D(\mathcal{A})$는 complex $A^\bullet$을 $n$칸 이동시키는 것이다. 구체적으로 $(A[n])^i = A^{i+n}$이고, 미분 map은 $(d_{A[n]})^i = (-1)^n d_A^{i+n}$으로 정의한다.
+$D(\mathcal{A})$ 위의 *shift functor<sub>이동 함자</sub>* $[n]: D(\mathcal{A}) \rightarrow D(\mathcal{A})$는 complex $A^\bullet$을 $n$칸 이동시키는 것이다. 구체적으로 $(A[n])^i = A^{i+n}$이고, 미분 map은 $(d_{A[n]})^i = (-1)^n d_A^{i+n}$으로 정의한다.
 :::
 이 때 differential의 sign convention은 [§호몰로지, ⁋정의 5](/ko/math/homological_algebra/homology#def5) 이후에 이미 설명한 바 있다. 그러나 sign이 바뀐 것은 (co)homology에 어떠한 영향도 주지 않으므로 가령 다음의 식
 
@@ -169,7 +169,7 @@ $$R\Hom(A, B) = \Hom(P_\bullet, B)$$
 Derived category $D(\mathcal{A})$는 단순한 category가 아니라 *triangulated category*의 구조를 갖는다. 이 구조는 abelian category에서 short exact sequence가 하던 역할을 derived category에서 대신한다.
 
 ::: 정의 11
-*Triangulated category*는 다음 구조를 갖춘 additive category $(\mathcal{T}, [1], \mathcal{S})$이다.
+*Triangulated category<sub>삼각 분할 범주</sub>*는 다음 구조를 갖춘 additive category $(\mathcal{T}, [1], \mathcal{S})$이다.
 
 1. *Shift functor* $[1] : \mathcal{T} \rightarrow \mathcal{T}$. 여기서 $[0] = \id$이고 $[n+1] = [1] \circ [n]$이다.
 2. *Distinguished triangle*들의 모임 $\mathcal{S}$. 각 distinguished triangle은
@@ -237,9 +237,9 @@ $$\Hom_{\Ch(\mathcal{B})}(F(P_\bullet), I^\bullet) \cong \Hom_{\Ch(\mathcal{A})}
 
 $$\Hom(A \otimes B, C) \cong \Hom(A, \Hom(B, C))$$
 
-에서, complex $X, Y, Z$에 대해 동일한 형태의 isomorphism을 derived category에서도 얻고 싶을 수 있다. 그러나 raw functor $-\otimes B$와 $\Hom(B,-)$는 quasi-isomorphism을 보존하지 않으므로, 이 adjunction은 naive하게 derived category로 내려오지 않는다. 앞서 derived functor를 정의할 때 projective resolution 또는 injective resolution을 취해야만 $K(\mathcal{A}) \to D(\mathcal{A})$로 잘 descend한다는 점을 확인하였는데, 이는 바로 $-\otimes B$가 right exact이고 $\Hom(B,-)$가 left exact이기 때문이다. Quasi-isomorphism에 대한 localization을 거치면 classical adjoint는 자동으로 살아남지 않으므로, 이 exactness의 부족을 보완하는 derived version이 필요하다.
+에서, complex $X, Y, Z$에 대해 동일한 형태의 isomorphism을 derived category에서도 얻고 싶을 수 있다. 그러나 raw functor $-\otimes B$와 $\Hom(B,-)$는 quasi-isomorphism을 보존하지 않으므로, 이 adjunction은 naive하게 derived category로 내려오지 않는다. 앞서 derived functor를 정의할 때 projective resolution 또는 injective resolution을 취해야만 $K(\mathcal{A}) \rightarrow D(\mathcal{A})$로 잘 descend한다는 점을 확인하였는데, 이는 바로 $-\otimes B$가 right exact이고 $\Hom(B,-)$가 left exact이기 때문이다. Quasi-isomorphism에 대한 localization을 거치면 classical adjoint는 자동으로 살아남지 않으므로, 이 exactness의 부족을 보완하는 derived version이 필요하다.
 
-이를 구체적으로 확인하기 위해 $R = \mathbb{Z}$, $M = \mathbb{Z}/n\mathbb{Z}$를 생각하자. $M$은 flat이 아니므로 tensoring이 exact하지 않다. $0 \to \mathbb{Z} \xrightarrow{\times n} \mathbb{Z} \to \mathbb{Z}/n\mathbb{Z} \to 0$에 $-\otimes M$을 적용하면 exactness가 깨지며, 구체적으로 $\Tor_1^\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, \mathbb{Z}/n\mathbb{Z}) \cong \mathbb{Z}/n\mathbb{Z}$이 존재하므로 naive adjunction은 기대하는 대로 작동하지 않는다. ([§Ext와 Tor](/ko/math/homological_algebra/ext_and_tor))
+이를 구체적으로 확인하기 위해 $R = \mathbb{Z}$, $M = \mathbb{Z}/n\mathbb{Z}$를 생각하자. $M$은 flat이 아니므로 tensoring이 exact하지 않다. $0 \rightarrow \mathbb{Z} \xrightarrow{\times n} \mathbb{Z} \rightarrow \mathbb{Z}/n\mathbb{Z} \rightarrow 0$에 $-\otimes M$을 적용하면 exactness가 깨지며, 구체적으로 $\Tor_1^\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, \mathbb{Z}/n\mathbb{Z}) \cong \mathbb{Z}/n\mathbb{Z}$이 존재하므로 naive adjunction은 기대하는 대로 작동하지 않는다. ([§Ext와 Tor](/ko/math/homological_algebra/ext_and_tor))
 
 이 exactness failure를 해결하기 위해 projective resolution을 사용하여 $\otimes^L$와 $R\Hom$을 구성하면, [명제 13](#prop13)에 의해 adjunction이 복원된다. 구체적으로 $A \otimes^L B$는 $A$의 projective resolution에 $-\otimes B$를 적용한 것이며, $R\Hom(B, C)$는 $B$의 projective resolution에 $\Hom(-, C)$를 적용한 것이다. 이를 통해
 

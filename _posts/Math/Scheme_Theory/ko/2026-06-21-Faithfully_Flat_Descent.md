@@ -107,7 +107,7 @@ $$p_{13}^\ast \varphi_N=p_{23}^\ast \varphi_N\circ p_{12}^\ast \varphi_N$$
 을 만족하는 것이다. 두 descent datum $(N, \varphi_N)$과 $(N', \varphi_{N'})$ 사이의 *morphism*은 $B$-가군 homomorphism $g: N \rightarrow N'$으로서 $\varphi_{N'}\circ(g\otimes 1)=(1\otimes g)\circ \varphi_N$을 만족하는 것이다. 이들은 category를 이루며 이를 $\operatorname{Desc}(B/A)$로 적는다.
 :::
 
-여기에서 $p_{ij}^\ast \varphi_N$은 $\varphi_N$을 $p_{ij}$를 따라 $B\otimes_A B\otimes_A B$ 위로 base change한 사상으로, 각각 $N\otimes_A B\otimes_A B$의 세 가지 배치 사이의 동형이다. Cocycle 조건은 세 변 $1\to 2$, $2\to 3$, $1\to 3$ 위에서 이 동형들이 합성에 대해 일관됨을 요구하는 것이며, 그 기하학적 의미는 세 겹 겹침 위에서 접합이 모순 없이 이루어진다는 것이다. 이는 sheaf를 open cover에서 붙일 때 transition function들이 만족해야 하는 cocycle 관계의 직접적인 유비이다.
+여기에서 $p_{ij}^\ast \varphi_N$은 $\varphi_N$을 $p_{ij}$를 따라 $B\otimes_A B\otimes_A B$ 위로 base change한 사상으로, 각각 $N\otimes_A B\otimes_A B$의 세 가지 배치 사이의 동형이다. Cocycle 조건은 세 변 $1\rightarrow 2$, $2\rightarrow 3$, $1\rightarrow 3$ 위에서 이 동형들이 합성에 대해 일관됨을 요구하는 것이며, 그 기하학적 의미는 세 겹 겹침 위에서 접합이 모순 없이 이루어진다는 것이다. 이는 sheaf를 open cover에서 붙일 때 transition function들이 만족해야 하는 cocycle 관계의 직접적인 유비이다.
 
 ![cocycle condition](/assets/images/Math/Scheme_Theory/Faithfully_Flat_Descent-1.svg){:style="width:15.94em" class="invert" .align-center}
 

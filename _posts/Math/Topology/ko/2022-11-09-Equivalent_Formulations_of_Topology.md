@@ -103,7 +103,7 @@ $\mathcal{P}(X)$의 부분집합 $\mathcal{B}$가 다음 두 조건을 만족한
 1. $\mathcal{B}$의 임의의 두 원소의 교집합은 $\mathcal{B}$의 어떠한 원소를 포함한다.
 2. $\mathcal{B}$는 적어도 하나의 원소를 포함하며, $\emptyset\not\in \mathcal{B}$이다.
 
-그럼 $\uparrow \mathcal{B}$는 $X$의 filter를 정의하며, 이 때 $\mathcal{B}$를 $\uparrow \mathcal{B}$의 *filter base*라 부른다. 
+그럼 $\uparrow \mathcal{B}$는 $X$의 filter를 정의하며, 이 때 $\mathcal{B}$를 $\uparrow \mathcal{B}$의 *filter base<sub>필터 기저</sub>*라 부른다. 
 :::
 
 어렵지 않게 다음을 확인할 수 있다.

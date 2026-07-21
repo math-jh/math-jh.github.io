@@ -134,7 +134,7 @@ $$U_m\cdot U_n\subseteq U_{m+n}$$
 핵심적인 관찰은 관계식 $xy-yx=[x,y]$가 여과의 관점에서 commutator의 degree를 떨어뜨린다는 것이다. $x,y\in\mathfrak{g}\subseteq U_1$이면 $xy,yx\in U_2$이지만 그 차 $xy-yx=[x,y]$는 $U_1$에 속한다. 일반적으로 $a\in U_m$, $b\in U_n$에 대하여 $ab-ba\in U_{m+n-1}$이 성립하며, 이는 아래 [보조정리 8](#lem8)에서 정밀하게 다룬다. 이로부터 associated graded는 commutative함이 예상된다.
 
 ::: 정의 7
-표준 여과 $\bigl(U_n\bigr)$에 대한 *associated graded* 대수를
+표준 여과 $\bigl(U_n\bigr)$에 대한 *associated graded<sub>동반 등급</sub>* 대수를
 
 $$\gr U(\mathfrak{g})=\bigoplus_{n\geq 0}U_n/U_{n-1}$$
 

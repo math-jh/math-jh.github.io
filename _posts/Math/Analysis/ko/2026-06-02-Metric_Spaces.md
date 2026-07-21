@@ -19,7 +19,7 @@ published: false
 ## 거리공간의 정의
 
 ::: 정의 1
-집합 $X$와 함수 $d : X \times X \to \mathbb{R}$가 다음을 만족하면 $(X, d)$를 *거리공간<sub>metric space</sub>*, $d$를 *거리<sub>metric</sub>*라 한다. 모든 $x, y, z \in X$에 대하여
+집합 $X$와 함수 $d : X \times X \rightarrow \mathbb{R}$가 다음을 만족하면 $(X, d)$를 *거리공간<sub>metric space</sub>*, $d$를 *거리<sub>metric</sub>*라 한다. 모든 $x, y, z \in X$에 대하여
 
 1. $d(x, y) \geq 0$이고, $d(x, y) = 0$인 것은 $x = y$인 것과 동치이다;
 2. (대칭성) $d(x, y) = d(y, x)$;
@@ -40,7 +40,7 @@ published: false
 거리만 있으면 수렴과 Cauchy 조건을 [§수열의 수렴](/ko/math/analysis/convergence_of_sequences)·[§Cauchy 수열과 완비성](/ko/math/analysis/cauchy_sequences)에서와 똑같은 형태로 정의할 수 있다. $\lvert a_n - L\rvert$을 $d(a_n, L)$로 바꾸기만 하면 된다.
 
 ::: 정의 3
-거리공간 $(X, d)$의 점열 $(x_n)$이 $x \in X$로 *수렴*한다는 것은 $d(x_n, x) \to 0$인 것이다. $(x_n)$이 *Cauchy*라는 것은 임의의 $\varepsilon > 0$에 대해 $N$이 있어 $m, n \geq N$이면 $d(x_m, x_n) < \varepsilon$인 것이다. center $x$, 반지름 $r > 0$의 *열린공<sub>open ball</sub>*은 $B(x, r) = \{y \in X \mid d(x, y) < r\}$이다.
+거리공간 $(X, d)$의 점열 $(x_n)$이 $x \in X$로 *수렴*한다는 것은 $d(x_n, x) \rightarrow 0$인 것이다. $(x_n)$이 *Cauchy<sub>코시</sub>*라는 것은 임의의 $\varepsilon > 0$에 대해 $N$이 있어 $m, n \geq N$이면 $d(x_m, x_n) < \varepsilon$인 것이다. center $x$, 반지름 $r > 0$의 *열린공<sub>open ball</sub>*은 $B(x, r) = \{y \in X \mid d(x, y) < r\}$이다.
 :::
 
 실수에서와 마찬가지로 수렴하는 점열은 Cauchy이지만, 그 역은 공간에 따라 성립하지 않을 수 있다.
@@ -83,9 +83,9 @@ d(y, z) &\leq d(y, x) + d(x, z) = d(x, y) + d(x, z) \\
 
 역삼각부등식의 직접적 귀결은 거리 함수의 연속성이다. 점열 $(x_n)$이 $x$로 수렴하면 [명제 5](#prop5)에 의해 임의의 고정점 $z$에 대해
 
-$$\lvert d(x_n, z) - d(x, z)\rvert \leq d(x_n, x) \to 0$$
+$$\lvert d(x_n, z) - d(x, z)\rvert \leq d(x_n, x) \rightarrow 0$$
 
-이므로 $d(x_n, z) \to d(x, z)$이다. 즉 수렴은 거리값의 수렴으로 그대로 전달된다. 이 관찰은 다음 명제의 유일성 증명에서 곧바로 쓰인다.
+이므로 $d(x_n, z) \rightarrow d(x, z)$이다. 즉 수렴은 거리값의 수렴으로 그대로 전달된다. 이 관찰은 다음 명제의 유일성 증명에서 곧바로 쓰인다.
 
 ::: 명제 6
 거리공간에서 수렴하는 점열의 극한은 유일하다. 또한 수렴하는 점열은 모두 Cauchy이다.
@@ -123,7 +123,7 @@ $$d_\infty(x, y) \leq d_2(x, y) \leq d_1(x, y) \leq n  d_\infty(x, y)$$
 ::: 예시 7 (이산거리에서의 수렴)
 집합 $X$에 이산거리 $d$를 주자. 거리값이 $0$ 또는 $1$뿐이므로, $\varepsilon = 1/2$에 대해 $d(x_n, x) < 1/2$은 곧 $d(x_n, x) = 0$, 즉 $x_n = x$를 뜻한다. 따라서
 
-$$x_n \to x \iff \text{어떤 } N \text{부터 } x_n = x \text{로 일정}$$
+$$x_n \rightarrow x \iff \text{어떤 } N \text{부터 } x_n = x \text{로 일정}$$
 
 이다. 같은 이유로 Cauchy 점열은 결국 한 점으로 일정해지므로 수렴한다 — 이산거리 공간은 언제나 완비이다.
 :::
@@ -133,12 +133,12 @@ $$x_n \to x \iff \text{어떤 } N \text{부터 } x_n = x \text{로 일정}$$
 ::: 예시 8 (개구간의 비완비성)
 표준 거리를 준 개구간 $X = (0, 1)$을 생각하자. 점열 $x_n = 1/n$ ($n \geq 2$)은 $X$ 안에 있고, $\mathbb{R}$의 점 $0$으로 다가가므로
 
-$$d(x_m, x_n) = \left\lvert \frac1m - \frac1n \right\rvert \leq \frac1m + \frac1n \to 0$$
+$$d(x_m, x_n) = \left\lvert \frac1m - \frac1n \right\rvert \leq \frac1m + \frac1n \rightarrow 0$$
 
-이라 Cauchy이다. 그러나 $X$ 안에는 이 점열의 극한이 없다. 만일 $x_n \to L \in (0,1)$이라면 $\mathbb{R}$에서의 극한 유일성 ([명제 6](#prop6)) 에 의해 $L = 0$이어야 하는데 $0 \notin (0,1)$이기 때문이다. 따라서 $(0,1)$은 완비가 아니다. 반면 닫힌구간 $[0,1]$에서는 같은 점열이 $0$으로 수렴하며, 실제로 $[0,1]$은 완비이다 — 닫힌구간은 그 극한들을 모두 품고 있기 때문이다.
+이라 Cauchy이다. 그러나 $X$ 안에는 이 점열의 극한이 없다. 만일 $x_n \rightarrow L \in (0,1)$이라면 $\mathbb{R}$에서의 극한 유일성 ([명제 6](#prop6)) 에 의해 $L = 0$이어야 하는데 $0 \notin (0,1)$이기 때문이다. 따라서 $(0,1)$은 완비가 아니다. 반면 닫힌구간 $[0,1]$에서는 같은 점열이 $0$으로 수렴하며, 실제로 $[0,1]$은 완비이다 — 닫힌구간은 그 극한들을 모두 품고 있기 때문이다.
 :::
 
-연속함수 공간의 sup 거리 ([예시 2](#ex2)) 는 무한차원 거리공간의 대표적 예이며, 그 완비성이 해석학의 여러 존재 정리를 떠받친다. $C[a,b]$에 sup 거리 $d(f, g) = \sup_{x \in [a,b]} \lvert f(x) - g(x)\rvert$를 주면, 이 거리에서 $f_n \to f$라는 것은 $\sup_{x \in [a,b]} \lvert f_n(x) - f(x)\rvert \to 0$, 곧 $(f_n)$이 $f$로 *균등수렴*한다는 것과 정확히 같다. 균등수렴하는 연속함수열의 극한은 다시 연속이므로 $C[a,b]$의 모든 sup-Cauchy 함수열은 어떤 연속함수로 수렴하며, 따라서 $(C[a,b], d)$는 완비 거리공간이다.
+연속함수 공간의 sup 거리 ([예시 2](#ex2)) 는 무한차원 거리공간의 대표적 예이며, 그 완비성이 해석학의 여러 존재 정리를 떠받친다. $C[a,b]$에 sup 거리 $d(f, g) = \sup_{x \in [a,b]} \lvert f(x) - g(x)\rvert$를 주면, 이 거리에서 $f_n \rightarrow f$라는 것은 $\sup_{x \in [a,b]} \lvert f_n(x) - f(x)\rvert \rightarrow 0$, 곧 $(f_n)$이 $f$로 *균등수렴*한다는 것과 정확히 같다. 균등수렴하는 연속함수열의 극한은 다시 연속이므로 $C[a,b]$의 모든 sup-Cauchy 함수열은 어떤 연속함수로 수렴하며, 따라서 $(C[a,b], d)$는 완비 거리공간이다.
 
 ## 응용: 닫힌 부분공간과 고정점
 
@@ -152,7 +152,7 @@ $(X, d)$가 완비이고 $Y \subseteq X$가 닫혀 있으면, $Y$에 $d$를 제�
 $(y_n)$을 $Y$ 안의 Cauchy 점열이라 하자. $Y$에서의 거리는 $X$에서의 거리와 같으므로 $(y_n)$은 $X$에서도 Cauchy이고, $X$의 완비성에 의해 어떤 $x \in X$로 수렴한다.
 
 $$\begin{aligned}
-(y_n) \text{이 } X \text{에서 Cauchy} &\implies y_n \to x \text{ for some } x \in X \\
+(y_n) \text{이 } X \text{에서 Cauchy} &\implies y_n \rightarrow x \text{ for some } x \in X \\
 Y \text{가 닫힘},\ y_n \in Y &\implies x \in Y
 \end{aligned}$$
 

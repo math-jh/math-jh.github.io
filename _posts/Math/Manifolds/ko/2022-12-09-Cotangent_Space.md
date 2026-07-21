@@ -107,7 +107,7 @@ $$a_j=\frac{\partial}{\partial r^j}\bigg\vert_0\sum a_i r^i=0$$
 이 정리의 증명을 잘 살펴보면, 단순히 차원에 대한 정보 뿐만 아니라 $T_pM$의 basis 또한 얻을 수 있다. 우리는 $\mathbf{x}^i+\mathfrak{m}_p^2$들이 $\mathfrak{m}_p/\mathfrak{m}_p^2$의 basis가 된다는 것을 보였는데, tangent space $T_pM$은 $(\mathfrak{m}_p/\mathfrak{m}_p^2)^\ast$와 isomorphic하다는 사실을 잘 알고 있으므로 $T_pM$의 basis를 이들의 dual basis로 잡는 것이 자연스러워 보인다. 즉,
 
 ::: 정의 3
-Manifold $M$과 $p\in M$이 주어졌다 하자. $p$을 포함하는 coordinate system $(U,\varphi)$, 그리고 $\varphi$의 component function들 $x^i$에 대하여, $x^i$ 방향의 *directional derivative*는 다음의 식
+Manifold $M$과 $p\in M$이 주어졌다 하자. $p$을 포함하는 coordinate system $(U,\varphi)$, 그리고 $\varphi$의 component function들 $x^i$에 대하여, $x^i$ 방향의 *directional derivative<sub>방향도함수</sub>*는 다음의 식
 
 $$\left(\frac{\partial}{\partial x^i}\bigg\vert_p\right)f=\frac{\partial(f\circ \varphi^{-1})}{\partial r^i}\bigg\vert_{\varphi(p)}$$
 

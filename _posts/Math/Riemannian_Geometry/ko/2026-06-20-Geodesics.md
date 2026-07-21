@@ -18,10 +18,10 @@ published: false
 
 ## 길이 범함수와 에너지 범함수
 
-곡선 $\gamma : [a, b] \to M$의 길이는 적분 $\length(\gamma) = \int_a^b \lVert \dot\gamma(t)\rVert_g \mathop{dt}$로 주어진다. 이 functional은 피적분함수에 제곱근이 들어 있어 변분을 계산할 때 다루기 번거로우며, 또한 $\dot\gamma(t) = 0$인 점에서 미분가능하지 않다. 더불어 길이는 [§리만 계량, ⁋정의 2](/ko/math/riemannian_geometry/Riemannian_metric#def2) 직후에 언급했듯 reparametrization에 불변이므로 그 임계 곡선이 유일한 parametrization을 결정하지 못한다. 이러한 이유로 우리는 제곱근을 없앤 다음의 functional을 함께 도입한다.
+곡선 $\gamma : [a, b] \rightarrow M$의 길이는 적분 $\length(\gamma) = \int_a^b \lVert \dot\gamma(t)\rVert_g \mathop{dt}$로 주어진다. 이 functional은 피적분함수에 제곱근이 들어 있어 변분을 계산할 때 다루기 번거로우며, 또한 $\dot\gamma(t) = 0$인 점에서 미분가능하지 않다. 더불어 길이는 [§리만 계량, ⁋정의 2](/ko/math/riemannian_geometry/Riemannian_metric#def2) 직후에 언급했듯 reparametrization에 불변이므로 그 임계 곡선이 유일한 parametrization을 결정하지 못한다. 이러한 이유로 우리는 제곱근을 없앤 다음의 functional을 함께 도입한다.
 
 ::: 정의 1
-Riemannian manifold $(M, g)$ 위의 곡선 $\gamma : [a, b] \to M$의 *에너지<sub>energy</sub>* $E(\gamma)$는 다음의 식
+Riemannian manifold $(M, g)$ 위의 곡선 $\gamma : [a, b] \rightarrow M$의 *에너지<sub>energy</sub>* $E(\gamma)$는 다음의 식
 
 $$E(\gamma) = \frac{1}{2} \int_a^b \lVert \dot\gamma(t)\rVert_g^2 \mathop{dt} = \frac{1}{2}\int_a^b \langle \dot\gamma(t), \dot\gamma(t)\rangle_g \mathop{dt}$$
 
@@ -31,7 +31,7 @@ $$E(\gamma) = \frac{1}{2} \int_a^b \lVert \dot\gamma(t)\rVert_g^2 \mathop{dt} = 
 상수 $1/2$은 본질적인 것이 아니라 뒤의 제1변분 공식에서 인수 $2$를 상쇄하기 위한 관례적 선택이다. 길이와 달리 에너지의 피적분함수 $\langle \dot\gamma, \dot\gamma\rangle$는 $\dot\gamma$에 대해 매끄러우며, 또한 reparametrization에 의존한다. 다음 명제는 두 functional이 Cauchy-Schwarz 부등식으로 연결되며, 그 등호가 성립하는 경우가 정확히 *일정한 속력*으로 움직이는 parametrization임을 보여준다.
 
 ::: 명제 2
-곡선 $\gamma : [a, b] \to M$에 대해 다음의 부등식
+곡선 $\gamma : [a, b] \rightarrow M$에 대해 다음의 부등식
 
 $$\length(\gamma)^2 \le 2(b - a)\, E(\gamma)$$
 
@@ -50,7 +50,7 @@ $$\length(\gamma)^2 = \left(\int_a^b \lVert \dot\gamma(t)\rVert_g \mathop{dt}\ri
 
 ## 에너지의 제1변분
 
-에너지의 임계 곡선을 찾기 위해 곡선을 한 매개변수만큼 흔드는 변분을 도입한다. 곡선 $\gamma : [a, b] \to M$의 *변분<sub>variation</sub>*이란 smooth 함수 $\Gamma : (-\varepsilon, \varepsilon) \times [a, b] \to M$으로서 $\Gamma(0, t) = \gamma(t)$를 만족하는 것을 말한다. 각 $s$에 대해 $\gamma_s(t) := \Gamma(s, t)$는 곡선이며, $s = 0$에서의 무한소 변화량
+에너지의 임계 곡선을 찾기 위해 곡선을 한 매개변수만큼 흔드는 변분을 도입한다. 곡선 $\gamma : [a, b] \rightarrow M$의 *변분<sub>variation</sub>*이란 smooth 함수 $\Gamma : (-\varepsilon, \varepsilon) \times [a, b] \rightarrow M$으로서 $\Gamma(0, t) = \gamma(t)$를 만족하는 것을 말한다. 각 $s$에 대해 $\gamma_s(t) := \Gamma(s, t)$는 곡선이며, $s = 0$에서의 무한소 변화량
 
 $$V(t) := \left.\frac{\partial \Gamma}{\partial s}\right\vert_{s = 0}(t) \in T_{\gamma(t)} M$$
 
@@ -63,7 +63,7 @@ $$D_s \partial_t \Gamma = D_t \partial_s \Gamma$$
 가 성립한다. 이는 Levi-Civita 접속이 torsion-free, 즉 [§레비-치비타 접속, ⁋정의 3](/ko/math/riemannian_geometry/Levi-Civita_connection#def3)에서 $\Gamma_{ij}^k = \Gamma_{ji}^k$가 성립하는 데서 비롯한다. 이 사실을 이용해 에너지의 제1변분을 계산한다.
 
 ::: 정리 3 (에너지의 제1변분)
-곡선 $\gamma : [a, b] \to M$의 변분 $\Gamma$와 그 변분장 $V$에 대해, $E(s) := E(\gamma_s)$라 두면 다음의 식
+곡선 $\gamma : [a, b] \rightarrow M$의 변분 $\Gamma$와 그 변분장 $V$에 대해, $E(s) := E(\gamma_s)$라 두면 다음의 식
 
 $$\left.\frac{d}{ds}\right\vert_{s = 0} E(\gamma_s) = \langle V(b), \dot\gamma(b)\rangle - \langle V(a), \dot\gamma(a)\rangle - \int_a^b \langle V(t),\, D_t \dot\gamma(t)\rangle \mathop{dt}$$
 
@@ -105,7 +105,7 @@ $$\left.\frac{d}{ds}\right\vert_{s = 0} E(\gamma_s) = \langle V(b), \dot\gamma(b
 가속도가 소멸하는 곡선을 정식으로 정의한다.
 
 ::: 정의 4
-Riemannian manifold $(M, g)$의 Levi-Civita 접속 $\nabla$에 대해, 곡선 $\gamma : I \to M$이 다음의 식
+Riemannian manifold $(M, g)$의 Levi-Civita 접속 $\nabla$에 대해, 곡선 $\gamma : I \rightarrow M$이 다음의 식
 
 $$\nabla_{\dot\gamma} \dot\gamma = D_t \dot\gamma = 0$$
 
@@ -121,13 +121,13 @@ $$\ddot\gamma^k(t) + \sum_{i, j = 1}^n \Gamma_{ij}^k(\gamma(t))\, \dot\gamma^i(t
 먼저 측지선이 [정리 3](#thm3)이 예고한 대로 정확히 에너지의 임계 곡선임을 확인한다.
 
 ::: 따름정리 5
-곡선 $\gamma : [a, b] \to M$이 측지선인 것과, 끝점을 고정하는 모든 고정변분 $\Gamma$에 대해 $\left.\frac{d}{ds}\right\vert_{s = 0} E(\gamma_s) = 0$이 성립하는 것은 동치이다.
+곡선 $\gamma : [a, b] \rightarrow M$이 측지선인 것과, 끝점을 고정하는 모든 고정변분 $\Gamma$에 대해 $\left.\frac{d}{ds}\right\vert_{s = 0} E(\gamma_s) = 0$이 성립하는 것은 동치이다.
 :::
 
 ::: 증명
 $\gamma$가 측지선이면 $D_t \dot\gamma = 0$이므로 [정리 3](#thm3)의 고정변분 공식 우변의 피적분함수가 항등적으로 $0$이 되어 모든 고정변분에 대해 제1변분이 소멸한다.
 
-역으로 모든 고정변분에 대해 제1변분이 소멸한다 하자. [정리 3](#thm3)에 의해 모든 고정변분장 $V$에 대해 $\int_a^b \langle V, D_t \dot\gamma\rangle \mathop{dt} = 0$이다. $D_t \dot\gamma$가 어떤 점 $t_0 \in (a, b)$에서 $0$이 아니라고 가정하자. $\varphi : [a, b] \to [0, \infty)$를 $\varphi(t_0) > 0$이고 $\varphi(a) = \varphi(b) = 0$이며 $t_0$의 작은 근방 밖에서 $0$인 bump function이라 하면, $V(t) := \varphi(t)\, D_t \dot\gamma(t)$는 $V(a) = V(b) = 0$을 만족하는 곡선 $\gamma$ 위의 vector field이며 어떤 고정변분의 변분장으로 실현된다. 이때
+역으로 모든 고정변분에 대해 제1변분이 소멸한다 하자. [정리 3](#thm3)에 의해 모든 고정변분장 $V$에 대해 $\int_a^b \langle V, D_t \dot\gamma\rangle \mathop{dt} = 0$이다. $D_t \dot\gamma$가 어떤 점 $t_0 \in (a, b)$에서 $0$이 아니라고 가정하자. $\varphi : [a, b] \rightarrow [0, \infty)$를 $\varphi(t_0) > 0$이고 $\varphi(a) = \varphi(b) = 0$이며 $t_0$의 작은 근방 밖에서 $0$인 bump function이라 하면, $V(t) := \varphi(t)\, D_t \dot\gamma(t)$는 $V(a) = V(b) = 0$을 만족하는 곡선 $\gamma$ 위의 vector field이며 어떤 고정변분의 변분장으로 실현된다. 이때
 
 $$\int_a^b \langle V, D_t \dot\gamma\rangle \mathop{dt} = \int_a^b \varphi(t)\, \lVert D_t \dot\gamma(t)\rVert_g^2 \mathop{dt} > 0$$
 
@@ -139,7 +139,7 @@ $$\int_a^b \langle V, D_t \dot\gamma\rangle \mathop{dt} = \int_a^b \varphi(t)\, 
 측지선이 일정한 속력을 갖는다는 사실은 위에서 언급했듯 metric-compatibility의 직접적 귀결이다.
 
 ::: 명제 6
-측지선 $\gamma : I \to M$의 속력 $\lVert \dot\gamma(t)\rVert_g$는 $I$ 위에서 상수이다.
+측지선 $\gamma : I \rightarrow M$의 속력 $\lVert \dot\gamma(t)\rVert_g$는 $I$ 위에서 상수이다.
 :::
 
 ::: 증명
@@ -155,7 +155,7 @@ $$\frac{d}{dt} f(t) = \frac{d}{dt}\langle \dot\gamma, \dot\gamma\rangle = 2\lang
 측지선 방정식이 이계 상미분방정식 시스템이라는 사실로부터, 한 점에서의 위치와 속도를 주면 측지선이 국소적으로 유일하게 결정된다.
 
 ::: 정리 7 (측지선의 국소적 존재성과 유일성)
-Riemannian manifold $(M, g)$의 점 $p \in M$과 vector $v \in T_p M$, 그리고 $t_0 \in \mathbb{R}$이 주어졌다 하자. 그럼 $t_0$의 어떤 열린구간 $I \ni t_0$ 위에서 정의된 측지선 $\gamma : I \to M$으로서 초기조건
+Riemannian manifold $(M, g)$의 점 $p \in M$과 vector $v \in T_p M$, 그리고 $t_0 \in \mathbb{R}$이 주어졌다 하자. 그럼 $t_0$의 어떤 열린구간 $I \ni t_0$ 위에서 정의된 측지선 $\gamma : I \rightarrow M$으로서 초기조건
 
 $$\gamma(t_0) = p, \qquad \dot\gamma(t_0) = v$$
 

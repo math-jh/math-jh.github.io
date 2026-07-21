@@ -88,7 +88,7 @@ Smooth projective surface $S$에 대하여
 
 $$\rchi(\mathcal{O}_S)=1-q+p_g$$
 
-이 성립한다. 여기서 $q=h^1(S,\mathcal{O}_S)$는 **불규칙성**<sub>irregularity</sub>, $p_g=h^0(S,K_S)$는 **기하적 genus**<sub>geometric genus</sub>이다.
+이 성립한다. 여기서 $q=h^1(S,\mathcal{O}_S)$는 *불규칙성<sub>irregularity</sub>*, $p_g=h^0(S,K_S)$는 *기하적 genus<sub>geometric genus</sub>*이다.
 :::
 
 ::: 증명

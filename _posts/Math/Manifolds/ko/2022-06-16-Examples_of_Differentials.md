@@ -173,7 +173,7 @@ $$T_pM\overset{df_p}{\longrightarrow}T_{f(p)}\mathbb{R}\overset{\sim}{\longright
 에 의하여 $df_p$를 $(T_pM)^\ast$의 원소로 볼 수 있다.
 
 ::: 정의 6
-Manifold $M$과 한 점 $p\in M$에 대하여, $\mathbb{R}$-벡터공간 $T_pM$의 dual space $(T_pM)^\ast$를 *cotangent space<sub>여접공간</sub>*라 부르고 간단하게 $T_p^\ast M$으로 적는다. $T_p^\ast M$의 원소들을 *tangent covector* 혹은 간단하게 *covector*라 부른다.
+Manifold $M$과 한 점 $p\in M$에 대하여, $\mathbb{R}$-벡터공간 $T_pM$의 dual space $(T_pM)^\ast$를 *cotangent space<sub>여접공간</sub>*라 부르고 간단하게 $T_p^\ast M$으로 적는다. $T_p^\ast M$의 원소들을 *tangent covector<sub>여접벡터</sub>* 혹은 간단하게 *covector*라 부른다.
 :::
 
 따라서 앞선 논의는 임의의 $C^\infty$ 함수 $f:M\rightarrow\mathbb{R}$이 tangent covector를 하나 지정한다고 요약할 수 있다.

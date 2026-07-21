@@ -196,7 +196,7 @@ $$f_1(x_1,\ldots, x_n)=\cdots=f_r(x_1,\ldots, x_n)=0$$
 이러한 관점을 바탕으로 다음을 정의한다.
 
 ::: 정의 9
-Functor $\Hom_\Sch(-,X): \Sch^\op \rightarrow \Set$을 *functor of points of $X$*라 부른다. 
+Functor $\Hom_\Sch(-,X): \Sch^\op \rightarrow \Set$을 *functor of points of $X$<sub>$X$의 점 함자</sub>*라 부른다. 
 :::
 
 그럼 $\Hom_\Sch(-,X)$는 scheme $S$를 받아서, $X$의 $S$-valued point들의 집합을 내놓는 functor이다. 

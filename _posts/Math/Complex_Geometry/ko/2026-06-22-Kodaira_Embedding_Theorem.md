@@ -23,13 +23,13 @@ published: false
 holomorphic line bundle은 그 자체로 미분기하적 양을 갖지 않으며, 곡률을 말하려면 먼저 fiber에 길이를 재는 계량을 얹어야 한다. complex manifold $X$ 위의 holomorphic line bundle $L$이란 각 점의 fiber가 복소 1차원 벡터공간이고 transition function이 holomorphic인 복소 line bundle이다 ([\[대수다양체\] §선다발과 벡터다발, ⁋정의 1](/ko/math/algebraic_varieties/line_bundles#def1)). 여기에 fiber마다 매끄럽게 변하는 Hermitian 내적을 주는 것이 출발점이다.
 
 ::: 정의 1
-complex manifold $X$ 위의 holomorphic line bundle $L$의 *Hermitian metric<sub>Hermitian 계량</sub>* $h$란, 각 점 $x \in X$의 fiber $L_x$ 위에 Hermitian 내적 $h_x : L_x \times L_x \to \mathbb{C}$를 매끄럽게 주는 것이다. 곧 국소 holomorphic frame $e$ ($L\vert_U$의 영점 없는 holomorphic section) 에 대하여 양의 함수
+complex manifold $X$ 위의 holomorphic line bundle $L$의 *Hermitian metric<sub>에르미트 계량</sub>* $h$란, 각 점 $x \in X$의 fiber $L_x$ 위에 Hermitian 내적 $h_x : L_x \times L_x \rightarrow \mathbb{C}$를 매끄럽게 주는 것이다. 곧 국소 holomorphic frame $e$ ($L\vert_U$의 영점 없는 holomorphic section) 에 대하여 양의 함수
 
 $$
 h(e, e) = e^{-\varphi}, \qquad \varphi \in C^\infty(U, \mathbb{R})
 $$
 
-가 정해지고, 두 section $s = f e$, $t = g e$의 내적이 $h(s, t) = f \bar{g}\, e^{-\varphi}$로 주어지는 것이다. 이러한 $h$를 갖춘 $(L, h)$를 *Hermitian line bundle<sub>Hermitian 선다발</sub>*이라 한다.
+가 정해지고, 두 section $s = f e$, $t = g e$의 내적이 $h(s, t) = f \bar{g}\, e^{-\varphi}$로 주어지는 것이다. 이러한 $h$를 갖춘 $(L, h)$를 *Hermitian line bundle<sub>에르미트 선다발</sub>*이라 한다.
 :::
 
 국소 holomorphic frame $e$를 바꾸면 $e' = u\, e$ ($u$는 영점 없는 holomorphic function) 이고, $h(e', e') = \lvert u \rvert^2 h(e, e)$이므로 퍼텐셜은 $\varphi' = \varphi - \log\lvert u \rvert^2$로 변한다. 따라서 $\varphi$ 자체는 대역적으로 정의되지 않지만, 그 변환이 holomorphic·antiholomorphic 함수의 합 $\log\lvert u\rvert^2 = \log u + \log\bar{u}$만큼이라는 점이 결정적이다. 이 변환항은 $\partial\bar\partial$ 아래에서 소멸하므로, $\partial\bar\partial\varphi$가 frame의 선택과 무관한 대역적 $(1,1)$-형식을 정의하게 된다. 모든 complex manifold 위의 모든 holomorphic line bundle은 partition of unity로 국소 계량을 이어붙여 Hermitian 계량을 가지므로, $h$의 존재 자체는 제약이 아니다. 제약은 그로부터 나오는 곡률의 양정치성에 있다.
@@ -180,7 +180,7 @@ $$
 가 section들이 동시에 소멸하지 않는 점들에서 정의된다. 이 $\Phi_k$가 모든 점에서 잘 정의되고(기저점 없음), 단사이며(점 분리), 도함수가 단사(tangent vector 분리)일 때 $\Phi_k$는 holomorphic embedding이 되고 $L^{\otimes k}$을 *very ample<sub>매우 풍부한</sub>* line bundle이라 부른다.
 
 ::: 정의 8
-콤팩트 complex manifold $X$ 위의 holomorphic line bundle $M$이 *very ample<sub>매우 풍부한</sub>*이라는 것은, 전역 section들의 기저 $s_0, \ldots, s_N \in \Gamma(X, M)$로 정의되는 사상 $\Phi_M : X \to \mathbb{CP}^N$이 holomorphic embedding인 것, 곧 다음 세 조건을 만족하는 것이다.
+콤팩트 complex manifold $X$ 위의 holomorphic line bundle $M$이 *very ample<sub>매우 풍부한</sub>*이라는 것은, 전역 section들의 기저 $s_0, \ldots, s_N \in \Gamma(X, M)$로 정의되는 사상 $\Phi_M : X \rightarrow \mathbb{CP}^N$이 holomorphic embedding인 것, 곧 다음 세 조건을 만족하는 것이다.
 
 1. *기저점 없음<sub>base-point freeness</sub>*: 각 점 $x$에서 어떤 $s_i$가 $s_i(x) \neq 0$이다. 따라서 $\Phi_M$이 $X$ 전체에서 정의된다.
 2. *점 분리<sub>separation of points</sub>*: $x \neq y$이면 어떤 section이 $s(x) = 0$, $s(y) \neq 0$이 되어 $\Phi_M(x) \neq \Phi_M(y)$이다.
@@ -198,7 +198,7 @@ $X$를 콤팩트 complex manifold라 하자. $X$ 위에 양의 line bundle $L$�
 
 정방향이 본질적인 내용이며, 핵심 단계만 제시한다. 목표는 충분히 큰 $k$에서 $L^{\otimes k}$이 [정의 8](#def8)의 세 조건을 만족함을 보이는 것이고, 세 조건 모두 적절한 전역 section의 존재로 환원된 뒤 [정리 7](#thm7)의 소멸로 해결된다.
 
-*점 분리.* 서로 다른 두 점 $x, y \in X$를 분리하려면, $s(x) = 0$이고 $s(y) \neq 0$인 section $s \in \Gamma(X, L^{\otimes k})$를 찾으면 된다. 두 점에서 동시에 소멸하는 section들의 부분공간을 보기 위해, $x, y$를 blow up한 $\pi : \widetilde{X} \to X$를 도입하고 그 예외인자를 $E_x, E_y$라 하자. blow-up의 canonical line bundle 변화 공식 ([\[대수다양체\] §표준선다발, ⁋명제 12](/ko/math/algebraic_varieties/canonical_bundle#prop12)) 에 의해, $\pi^\ast L^{\otimes k} \otimes \mathcal{O}(-E_x - E_y) \otimes K_{\widetilde{X}}^{-1}$이 $k \gg 0$에서 여전히 양이 되도록 할 수 있다. 그러면 [정리 7](#thm7)을 $\widetilde{X}$ 위에서 적용하여 $H^1(\widetilde{X}, \pi^\ast L^{\otimes k} \otimes \mathcal{O}(-E_x - E_y)) = 0$을 얻고, 이 $H^1$의 소멸이 제한사상
+*점 분리.* 서로 다른 두 점 $x, y \in X$를 분리하려면, $s(x) = 0$이고 $s(y) \neq 0$인 section $s \in \Gamma(X, L^{\otimes k})$를 찾으면 된다. 두 점에서 동시에 소멸하는 section들의 부분공간을 보기 위해, $x, y$를 blow up한 $\pi : \widetilde{X} \rightarrow X$를 도입하고 그 예외인자를 $E_x, E_y$라 하자. blow-up의 canonical line bundle 변화 공식 ([\[대수다양체\] §표준선다발, ⁋명제 12](/ko/math/algebraic_varieties/canonical_bundle#prop12)) 에 의해, $\pi^\ast L^{\otimes k} \otimes \mathcal{O}(-E_x - E_y) \otimes K_{\widetilde{X}}^{-1}$이 $k \gg 0$에서 여전히 양이 되도록 할 수 있다. 그러면 [정리 7](#thm7)을 $\widetilde{X}$ 위에서 적용하여 $H^1(\widetilde{X}, \pi^\ast L^{\otimes k} \otimes \mathcal{O}(-E_x - E_y)) = 0$을 얻고, 이 $H^1$의 소멸이 제한사상
 
 $$
 \Gamma(X, L^{\otimes k}) \longrightarrow L^{\otimes k}_x \oplus L^{\otimes k}_y
@@ -206,7 +206,7 @@ $$
 
 의 전사성을 준다. 곧 두 fiber에서의 값을 독립적으로 처방하는 section이 존재하여 $x, y$가 분리된다. 같은 논법에서 한 점 $x$만 처방하면 *기저점 없음*이 따라온다.
 
-*tangent vector 분리.* 한 점 $x$에서 $\Phi_{L^{\otimes k}}$의 미분이 단사이려면, $x$에서 $1$차까지 소멸하는 section(곧 $s(x) = 0$이고 $ds(x) = 0$) 과 $0$차에서만 소멸하는 section($s(x) = 0$, $ds(x) \neq 0$) 을 구별할 수 있어야 한다. 이는 $x$를 blow up하여 예외인자 $E$ 위에서 $\mathcal{O}(-2E)$ 류를 비트는 같은 소멸 논법으로, 제한사상 $\Gamma(X, L^{\otimes k}) \to L^{\otimes k}_x \otimes (\mathcal{O}_X / \mathfrak{m}_x^2)$ ($\mathfrak{m}_x$는 $x$의 maximal ideal) 의 전사성으로 환원되고, 다시 $H^1$의 소멸이 이를 보장한다.
+*tangent vector 분리.* 한 점 $x$에서 $\Phi_{L^{\otimes k}}$의 미분이 단사이려면, $x$에서 $1$차까지 소멸하는 section(곧 $s(x) = 0$이고 $ds(x) = 0$) 과 $0$차에서만 소멸하는 section($s(x) = 0$, $ds(x) \neq 0$) 을 구별할 수 있어야 한다. 이는 $x$를 blow up하여 예외인자 $E$ 위에서 $\mathcal{O}(-2E)$ 류를 비트는 같은 소멸 논법으로, 제한사상 $\Gamma(X, L^{\otimes k}) \rightarrow L^{\otimes k}_x \otimes (\mathcal{O}_X / \mathfrak{m}_x^2)$ ($\mathfrak{m}_x$는 $x$의 maximal ideal) 의 전사성으로 환원되고, 다시 $H^1$의 소멸이 이를 보장한다.
 
 세 조건이 모두 충분히 큰 $k$에서 성립하고, 콤팩트성으로 그 $k$를 $x, y$에 무관하게 한꺼번에 택할 수 있으므로, $L^{\otimes k}$은 very ample이다. 따라서 $\Phi_{L^{\otimes k}} : X \hookrightarrow \mathbb{CP}^N$이 holomorphic embedding이고 $X$는 projective variety이다. 기술적 세부, 특히 blow-up 위에서 양성을 유지하는 $k$의 존재와 $H^1$-소멸에서 전사성으로 가는 정확한 long exact sequence 논증은 인용에 맡긴다.
 :::
@@ -221,20 +221,20 @@ $$
 콤팩트 complex manifold $X$ 위의 Kähler 형식 $\omega$의 Kähler 류 $[\omega] \in H^2(X, \mathbb{R})$가 정수 cohomology의 상에 놓일 때, 곧
 
 $$
-[\omega] \in \Img\big( H^2(X, \mathbb{Z}) \to H^2(X, \mathbb{R}) \big)
+[\omega] \in \Img\big( H^2(X, \mathbb{Z}) \rightarrow H^2(X, \mathbb{R}) \big)
 $$
 
-일 때, $\omega$를 *integral Kähler form<sub>정수 Kähler 형식</sub>*, 그 류를 *integral Kähler class<sub>정수 Kähler 류</sub>*라 한다. 정수 Kähler 류를 적어도 하나 갖는 콤팩트 complex manifold를 *Hodge manifold<sub>Hodge 다양체</sub>*라 한다.
+일 때, $\omega$를 *integral Kähler form<sub>정수 켈러 형식</sub>*, 그 류를 *integral Kähler class<sub>정수 켈러 류</sub>*라 한다. 정수 Kähler 류를 적어도 하나 갖는 콤팩트 complex manifold를 *Hodge manifold<sub>호지 다양체</sub>*라 한다.
 :::
 
-정수 Kähler 류의 조건은 양의 line bundle의 존재와 정확히 같은 내용이다. 제1 Chern 류 사상 $c_1 : \Pic(X) \to H^2(X, \mathbb{Z})$의 상은 정확히 holomorphic line bundle로 실현되는 정수류 전체이며, Kähler 류가 정수류라는 것은 그것이 어떤 line bundle $L$의 $c_1(L)$로 표현된다는 것이다. 그 $L$의 곡률을 Kähler 형식과 맞추면 $L$이 양의 line bundle이 된다. 따라서 정수 Kähler 류의 존재와 양의 line bundle의 존재가 동치이고, 매장정리는 다음 따름정리로 다시 쓰인다.
+정수 Kähler 류의 조건은 양의 line bundle의 존재와 정확히 같은 내용이다. 제1 Chern 류 사상 $c_1 : \Pic(X) \rightarrow H^2(X, \mathbb{Z})$의 상은 정확히 holomorphic line bundle로 실현되는 정수류 전체이며, Kähler 류가 정수류라는 것은 그것이 어떤 line bundle $L$의 $c_1(L)$로 표현된다는 것이다. 그 $L$의 곡률을 Kähler 형식과 맞추면 $L$이 양의 line bundle이 된다. 따라서 정수 Kähler 류의 존재와 양의 line bundle의 존재가 동치이고, 매장정리는 다음 따름정리로 다시 쓰인다.
 
 ::: 따름정리 11 (Kodaira 판정)
 콤팩트 complex manifold $X$가 Hodge manifold이면, 곧 정수 Kähler 류를 가지면, $X$는 projective variety이다. 따라서 콤팩트 complex manifold가 사영적인 것은 그것이 Hodge manifold인 것과 동치이다.
 :::
 
 ::: 증명
-$X$가 정수 Kähler 류 $[\omega] \in H^2(X, \mathbb{Z})$를 갖는다고 하자. 콤팩트 Kähler manifold에서 Hodge 분해 ([§Hodge 이론, ⁋정리 9](/ko/math/complex_geometry/hodge_theory#thm9)) 에 의해 $H^2(X, \mathbb{C}) = H^{2,0} \oplus H^{1,1} \oplus H^{0,2}$이고, Kähler 형식 $\omega$는 실 $(1,1)$-형식이므로 그 류는 $H^{1,1}(X) \cap H^2(X, \mathbb{Z})$에 놓인다. Lefschetz의 $(1,1)$-류 정리에 의해 이러한 정수 $(1,1)$-류는 모두 어떤 holomorphic line bundle $L$의 제1 Chern 류 $c_1(L)$로 실현된다 (지수열 $0 \to \mathbb{Z} \to \mathcal{O}_X \to \mathcal{O}_X^\ast \to 0$의 연결사상 $H^1(X, \mathcal{O}_X^\ast) = \Pic(X) \to H^2(X, \mathbb{Z})$의 상이 정확히 $H^{1,1} \cap H^2(X, \mathbb{Z})$이다). 곧 $c_1(L) = [\omega]$인 $L$이 존재한다.
+$X$가 정수 Kähler 류 $[\omega] \in H^2(X, \mathbb{Z})$를 갖는다고 하자. 콤팩트 Kähler manifold에서 Hodge 분해 ([§Hodge 이론, ⁋정리 9](/ko/math/complex_geometry/hodge_theory#thm9)) 에 의해 $H^2(X, \mathbb{C}) = H^{2,0} \oplus H^{1,1} \oplus H^{0,2}$이고, Kähler 형식 $\omega$는 실 $(1,1)$-형식이므로 그 류는 $H^{1,1}(X) \cap H^2(X, \mathbb{Z})$에 놓인다. Lefschetz의 $(1,1)$-류 정리에 의해 이러한 정수 $(1,1)$-류는 모두 어떤 holomorphic line bundle $L$의 제1 Chern 류 $c_1(L)$로 실현된다 (지수열 $0 \rightarrow \mathbb{Z} \rightarrow \mathcal{O}_X \rightarrow \mathcal{O}_X^\ast \rightarrow 0$의 연결사상 $H^1(X, \mathcal{O}_X^\ast) = \Pic(X) \rightarrow H^2(X, \mathbb{Z})$의 상이 정확히 $H^{1,1} \cap H^2(X, \mathbb{Z})$이다). 곧 $c_1(L) = [\omega]$인 $L$이 존재한다.
 
 이제 $\omega$가 $c_1(L)$을 대표하는 양의 $(1,1)$-형식이므로, [명제 5](#prop5)에 의해 $L$은 양의 line bundle이다. [정리 9](#thm9)를 적용하면 $X$는 projective variety이다. 역으로 projective variety는 $\mathcal{O}(1)$의 제한으로 양의 line bundle을 가지고, 그 Kähler 류 $[\omega_{\mathrm{FS}}\vert_X] = c_1(\mathcal{O}(1)\vert_X)$가 정수류이므로 Hodge manifold이다.
 :::
@@ -262,7 +262,7 @@ Kodaira 판정의 힘은 사영성과 비사영성을 가르는 구체적인 예
 대조적인 예가 복소토러스이다. 모든 복소토러스는 Kähler이지만 ([§Kähler 다양체, ⁋예시 7](/ko/math/complex_geometry/kahler_manifolds#ex7)), 사영적인 것은 그 가운데 일부뿐이다.
 
 ::: 예시 14 (복소토러스와 abelian variety)
-격자 $\Lambda \subseteq \mathbb{C}^n$에 의한 복소토러스 $T = \mathbb{C}^n/\Lambda$를 ([§복소다양체, ⁋예시 7](/ko/math/complex_geometry/complex_manifolds#ex7)) 생각하자. $T$가 사영적이려면 [따름정리 11](#cor11)에 의해 정수 Kähler 류를 가져야 하는데, $T$ 위의 평행이동 불변 Kähler 형식은 $\mathbb{C}^n$ 위의 양의 정부호 Hermitian 형식 $H$로 주어지고, 그 류가 정수류인 것은 $H$의 허수부 $\Img H$가 격자 $\Lambda$ 위에서 정수값을 갖고 $\Lambda \times \Lambda$ 위에서 정수 반대칭형식을 이루는 것과 동치이다. 이 조건이 *Riemann bilinear relations<sub>Riemann 쌍선형 관계</sub>*이다. Riemann 관계를 만족하는 양의 정부호 $H$가 존재할 때, 그리고 오직 그때 $T$는 사영적이며 이러한 $T$를 *abelian variety<sub>아벨 다양체</sub>*라 한다.
+격자 $\Lambda \subseteq \mathbb{C}^n$에 의한 복소토러스 $T = \mathbb{C}^n/\Lambda$를 ([§복소다양체, ⁋예시 7](/ko/math/complex_geometry/complex_manifolds#ex7)) 생각하자. $T$가 사영적이려면 [따름정리 11](#cor11)에 의해 정수 Kähler 류를 가져야 하는데, $T$ 위의 평행이동 불변 Kähler 형식은 $\mathbb{C}^n$ 위의 양의 정부호 Hermitian 형식 $H$로 주어지고, 그 류가 정수류인 것은 $H$의 허수부 $\Img H$가 격자 $\Lambda$ 위에서 정수값을 갖고 $\Lambda \times \Lambda$ 위에서 정수 반대칭형식을 이루는 것과 동치이다. 이 조건이 *Riemann bilinear relations<sub>리만 쌍선형 관계</sub>*이다. Riemann 관계를 만족하는 양의 정부호 $H$가 존재할 때, 그리고 오직 그때 $T$는 사영적이며 이러한 $T$를 *abelian variety<sub>아벨 다양체</sub>*라 한다.
 
 차원 $n = 1$에서는 모든 격자가 Riemann 관계를 만족하므로 모든 복소토러스가 타원곡선으로 사영적이다. 그러나 $n \geq 2$에서는 일반적인 격자 $\Lambda$가 Riemann 관계를 만족하는 $H$를 전혀 허용하지 않는다. 정수 반대칭형식과 양정치 Hermitian 형식을 동시에 맞추는 것은 격자의 주기에 대한 비자명한 산술적 제약이며, 일반적인 $\Lambda$는 이를 어긴다. 따라서 *generic 복소토러스*는 양의 line bundle을 갖지 않아 사영적이지 않다. 이것이 Kähler이면서 사영적이지 않은 콤팩트 complex manifold의 가장 표준적인 예이며, Kodaira 판정이 빈 정리가 아님을 보여 준다.
 :::

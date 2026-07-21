@@ -35,7 +35,7 @@ $$H^n(X, \omega_X)\cong \mathbb{K}$$
 이 존재한다. 
 :::
 
-일반적으로 이는 명시적으로 $\x_0^{-1}\cdots\x_n^{-1}$을 basis로 두는 isomorphism으로 이해되지만, scalar multiplication에 대해서만 유일하게 결정된다. 이렇게 normalization을 택하는 것은 구체적으로 *trace map* $\tr:H^n(\mathbb{P}^n, \omega_{\mathbb{P}^n}) \to \mathbb{K}$을 택하는 것과 같다. 
+일반적으로 이는 명시적으로 $\x_0^{-1}\cdots\x_n^{-1}$을 basis로 두는 isomorphism으로 이해되지만, scalar multiplication에 대해서만 유일하게 결정된다. 이렇게 normalization을 택하는 것은 구체적으로 *trace map* $\tr:H^n(\mathbb{P}^n, \omega_{\mathbb{P}^n}) \rightarrow \mathbb{K}$을 택하는 것과 같다. 
 
 이제 duality pairing을 얻기 위해서는 cup product를 정의해야 한다. 편의상 Čech cohomology 레벨에서 생각하자. 임의의 위상공간 $X$와 $X$의 open cover $\mathcal{U}$, 그리고 $X$ 위에 정의된 sheaf $\mathcal{F}$, $\mathcal{G}$에 대하여, 두 Čech cochain $\alpha \in \check{C}^i(\mathcal{U}, \mathcal{F})$, $\beta \in \check{C}^j(\mathcal{U}, \mathcal{G})$의 cup product를 다음의 식
 
@@ -43,7 +43,7 @@ $$(\alpha \smile \beta)_{i_0, \ldots, i_{i+j}} = \alpha_{i_0,\ldots,i_i}\big\ver
 
 으로 정의한다. 우리는 이것이 cohomology 레벨로 떨어진다는 것을 명시적으로 계산할 수 있으며, 이로부터 다음의 함수
 
-$$\smile:\check{H}^i(\mathcal{U}, \mathcal{F}) \times \check{H}^j(\mathcal{U}, \mathcal{G}) \to \check{H}^{i+j}(\mathcal{U}, \mathcal{F} \otimes \mathcal{G})$$
+$$\smile:\check{H}^i(\mathcal{U}, \mathcal{F}) \times \check{H}^j(\mathcal{U}, \mathcal{G}) \rightarrow \check{H}^{i+j}(\mathcal{U}, \mathcal{F} \otimes \mathcal{G})$$
 
 가 정의된다. Sheaf cohomology 레벨에서도 $\mathcal{F}$와 $\mathcal{G}$의 injective resolution $\mathcal{I}^\bullet$, $\mathcal{J}^\bullet$을 각각 잡은 후, 이들의 tensor product complex (즉 각각의 성분이 $\mathcal{I}^p\otimes \mathcal{J}^q$인 double complex의 total complex)가 $\mathcal{F}\otimes \mathcal{G}$의 resolution을 정의한다는 사실을 이용하면 이를 정의할 수 있다. 
 
@@ -62,7 +62,7 @@ $$H^k(\mathbb{P}^n, \mathcal{E})\times H^{n-k}(\mathbb{P}^n, \omega_{\mathbb{P}^
 ::: 명제 2 (Serre duality pairing, projective case)
 $\mathbb{P}^n$ 위의 locally free sheaf $\mathcal{E}$에 대해 bilinear form
 
-$$H^k(\mathbb{P}^n, \mathcal{E}) \times H^{n-k}(\mathbb{P}^n, \omega_{\mathbb{P}^n} \otimes \mathcal{E}^\vee) \to \mathbb{K};\quad (\alpha, \beta) \mapsto \tr(\alpha \smile \beta)$$
+$$H^k(\mathbb{P}^n, \mathcal{E}) \times H^{n-k}(\mathbb{P}^n, \omega_{\mathbb{P}^n} \otimes \mathcal{E}^\vee) \rightarrow \mathbb{K};\quad (\alpha, \beta) \mapsto \tr(\alpha \smile \beta)$$
 
 은 perfect pairing이다.
 :::
@@ -73,7 +73,7 @@ $$H^k(\mathbb{P}^n, \mathcal{E})\cong H^{n-k}(\mathbb{P}^n, \omega_{\mathbb{P}^n
 
 를 의미한다. 
 
-더 일반적으로, Noether normalization theorem에 의해 임의의 $n$차원 smooth projective variety $X$에 대하여 finite surjective morphism $f: X \to \mathbb{P}^n$이 존재한다. 그럼 우리는 이 finite morphism $f$를 통해 $\mathbb{P}^n$에서 증명한 Serre duality를 $X$로 옮겨올 수 있으며, 이러한 세팅에서 Serre duality는 다음 isomorphism
+더 일반적으로, Noether normalization theorem에 의해 임의의 $n$차원 smooth projective variety $X$에 대하여 finite surjective morphism $f: X \rightarrow \mathbb{P}^n$이 존재한다. 그럼 우리는 이 finite morphism $f$를 통해 $\mathbb{P}^n$에서 증명한 Serre duality를 $X$로 옮겨올 수 있으며, 이러한 세팅에서 Serre duality는 다음 isomorphism
 
 $$H^i(X, \mathcal{E}) \cong H^{n-i}(X, \omega_X \otimes \mathcal{E}^\vee)^\ast$$
 
@@ -122,7 +122,7 @@ Affine variety $X$가 $\mathbb{K}$ 위에서 정의되었다는 것은 그 coord
 Relative Serre duality는 이 세팅을 일반화하는 것으로, target $\mathbb{A}^1_\mathbb{K}$를 또 다른 variety로 바꿔준다. 우선 임의의 variety $X,Y$에 대하여, morphism $f:X\rightarrow Y$가 *smooth projective morphism*이라는 것을 각각의 $y\in Y$ 위에서의 fiber $f^{-1}(y)$가 smooth projective variety가 되는 것으로 정의하자. 그럼 이 경우, $f^{-1}(y)$는 smooth projective variety로서 canonical line bundle $\omega_{X_y}$가 존재할 것이며, 이들을 일관적으로 모은 *relative dualizing sheaf* $\omega_{X/Y}$가 $X$ 위에 정의된다. 즉 $\omega_{X/Y}$는 각각의 $y$에 대하여 $\omega_{X/Y}\vert_{X_y}\cong\omega_{X_y}$을 만족하는 sheaf이다. 그럼 이 때의 일반화는 다음과 같다. 
 
 ::: 명제 4 (Relative Serre duality)
-Smooth projective morphism $f \colon X \to Y$에서 $n = \dim X - \dim Y$라 하자. 그럼
+Smooth projective morphism $f \colon X \rightarrow Y$에서 $n = \dim X - \dim Y$라 하자. 그럼
 
 $$R^n f_\ast \omega_{X/Y} \cong \mathcal{O}_Y$$
 
@@ -150,7 +150,7 @@ $$\operatorname{Hom}_{D(X)}(\mathcal{F}, f^! \mathcal{G}) \cong \operatorname{Ho
 앞서 말했듯 Grothendieck duality는 relative Serre duality를 포함하는 결과이다. 이를 살펴보기 위해 smooth morphism $f:X\rightarrow Y$의 경우를 생각하면, $f^! \mathcal{O}_Y \cong \omega_{X/Y}[n]$이 성립하며, 이로부터 $\omega_{X/Y}$가 올바른 dimension에 들어있는 것이 정확히 $f^!\mathcal{O}_Y$임을 알 수 있다.
 
 ::: 명제 5 (Grothendieck Duality)
-Proper morphism $f \colon X \to Y$와 coherent sheaf $\mathcal{F}$ on $X$에 대해, derived category에서 다음 isomorphism이 성립한다:
+Proper morphism $f \colon X \rightarrow Y$와 coherent sheaf $\mathcal{F}$ on $X$에 대해, derived category에서 다음 isomorphism이 성립한다:
 
 $$R f_\ast R\mathcal{H}om_{\mathcal{O}_X}(\mathcal{F}, f^! \mathcal{G}) \cong R\mathcal{H}om_{\mathcal{O}_Y}(R f_\ast \mathcal{F}, \mathcal{G})$$
 

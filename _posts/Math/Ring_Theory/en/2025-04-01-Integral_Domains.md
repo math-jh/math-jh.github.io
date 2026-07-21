@@ -19,7 +19,7 @@ In the posts in this category, we examine properties of rings in somewhat greate
 ## Euclidean Domains
 
 ::: Definition 1
-Fix an integral domain $A$. If a function $N : A \to \mathbb{Z}_{\geq 0}$ satisfies $N(0) = 0$, we call it a *norm* on $A$. If $N(a) > 0$ for every $a \neq 0$, we call this norm a *positive norm*. 
+Fix an integral domain $A$. If a function $N : A \rightarrow \mathbb{Z}_{\geq 0}$ satisfies $N(0) = 0$, we call it a *norm* on $A$. If $N(a) > 0$ for every $a \neq 0$, we call this norm a *positive norm*. 
 :::
 
 The condition defining a norm is very weak; for instance, given a fixed integral domain, there are many ways to define a norm on it. 

@@ -31,7 +31,7 @@ Positive root들에 대응하는 root space들의 합
 
 $$\mathfrak{n}^+=\bigoplus_{\alpha\in\Phi^+}\mathfrak{g}_\alpha,\qquad\mathfrak{n}^-=\bigoplus_{\alpha\in\Phi^+}\mathfrak{g}_{-\alpha}$$
 
-을 각각 $\mathfrak{g}$의 *positive nilpotent subalgebra*와 *negative nilpotent subalgebra*라 부르고, 
+을 각각 $\mathfrak{g}$의 *positive nilpotent subalgebra<sub>양의 멱영 부분대수</sub>*와 *negative nilpotent subalgebra<sub>음의 멱영 부분대수</sub>*라 부르고, 
 
 $$\mathfrak{b}=\mathfrak{h}\oplus\mathfrak{n}^+$$
 

@@ -54,7 +54,7 @@ gives the same value.
 
 ## Stokes' Theorem
 
-Stokes' theorem is almost the same thing as Green's theorem; in fact, since it is essentially a theorem about the integral over a two-dimensional region bounded by a one-dimensional boundary, it is merely a modification of Green's theorem so that it still works when the region of integration is <em-ko>curved</em-ko> inside three-dimensional space.
+Stokes' theorem is almost the same thing as Green's theorem; in fact, since it is essentially a theorem about the integral over a two-dimensional region bounded by a one-dimensional boundary, it is merely a modification of Green's theorem so that it still works when the region of integration is *curved* inside three-dimensional space.
 
 ::: Theorem 3 (Stokes)
 If $S$ is an oriented piecewise smooth surface with boundary curve $\partial S$ and $\mathbf{F}$ is $C^1$ on an open set containing $S$, then taking $\partial S$ oriented consistently with $S$ (with the surface on the left),

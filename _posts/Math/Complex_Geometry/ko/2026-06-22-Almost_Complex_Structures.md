@@ -23,7 +23,7 @@ complex manifold는 holomorphic transition function을 갖는 좌표계로 정�
 거의 복소구조는 tangent bundle 위에서 곱셈 $i$를 흉내내는 다발 사상이다. 어떤 좌표계도 전제하지 않고, 오직 $J^2 = -\id$이라는 대수적 조건만으로 규정된다.
 
 ::: 정의 1
-smooth manifold $M$ 위의 *almost complex structure<sub>거의 복소구조</sub>*란 실 vector bundle endomorphism $J : TM \to TM$로서, 각 점 $p$에서의 제한 $J_p : T_p M \to T_p M$이 모두
+smooth manifold $M$ 위의 *almost complex structure<sub>거의 복소구조</sub>*란 실 vector bundle endomorphism $J : TM \rightarrow TM$로서, 각 점 $p$에서의 제한 $J_p : T_p M \rightarrow T_p M$이 모두
 
 $$
 J_p^2 = -\id_{T_p M}
@@ -186,13 +186,13 @@ complex manifold의 표준 거의 복소구조 $J$에 대해서는 $T^{1,0} M$�
 적분가능성은 정의상 복소구조의 존재라는 대역적 조건이지만, 놀랍게도 순전히 국소적인 미분 조건으로 판정된다. 그 판정량이 Nijenhuis 텐서이다. (1,0)-벡터장들의 Lie bracket이 다시 (1,0)이 되는가, 곧 분포 $T^{1,0} M$이 *involutive<sub>대합적</sub>* 한가를 재기 위해, 켤레로 닫힌 실 형식의 양으로 옮긴 것이 Nijenhuis 텐서이다.
 
 ::: 정의 9
-거의 complex manifold $(M, J)$의 *Nijenhuis tensor<sub>Nijenhuis 텐서</sub>* $N_J$는 두 벡터장 $X, Y \in \mathfrak{X}(M)$에 대하여
+거의 complex manifold $(M, J)$의 *Nijenhuis tensor<sub>네이엔하위스 텐서</sub>* $N_J$는 두 벡터장 $X, Y \in \mathfrak{X}(M)$에 대하여
 
 $$
 N_J(X, Y) = [X, Y] + J[JX, Y] + J[X, JY] - [JX, JY]
 $$
 
-으로 정의되는 $\mathfrak{X}(M) \times \mathfrak{X}(M) \to \mathfrak{X}(M)$ 사상이다. 여기서 $[-,-]$은 벡터장의 Lie bracket이다 ([\[미분다양체\] §리 미분, ⁋정의 5](/ko/math/manifolds/Lie_derivative#def5)).
+으로 정의되는 $\mathfrak{X}(M) \times \mathfrak{X}(M) \rightarrow \mathfrak{X}(M)$ 사상이다. 여기서 $[-,-]$은 벡터장의 Lie bracket이다 ([\[미분다양체\] §리 미분, ⁋정의 5](/ko/math/manifolds/Lie_derivative#def5)).
 :::
 
 표현식에 Lie bracket이 들어 있어 처음에는 미분연산자처럼 보이지만, 실제로는 함수에 대해 $C^\infty(M)$-쌍선형이어서 각 점에서의 값이 그 점에서의 $X_p, Y_p$에만 의존한다. 곧 $N_J$는 진짜 텐서이다.

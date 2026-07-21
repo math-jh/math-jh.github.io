@@ -141,7 +141,7 @@ $X$가 paracompact이고 $f_0,f_1:X\rightarrow Y$가 homotopic이라 하자. ([�
 [정리 5](#thm5)는 함수 $f$를 $f^\ast P$로 대응시키는 것이 $f$의 homotopy class에만 의존함을 말해 준다. 따라서, 만일 어떤 고정된 principal $G$-bundle 하나를 모든 다른 bundle이 pullback으로 얻을 수 있는 원천으로 삼을 수 있다면, principal $G$-bundle의 분류는 그 원천 공간으로의 homotopy class를 세는 일로 환원될 것이며, 이는 vector bundle에서 $\Gr(k,\mathbb{R}^\infty)$ 위의 universal bundle이 그러한 원천이었던 것을 일반화한다.
 
 ::: 정의 6
-Topological group $G$에 대하여, principal $G$-bundle $p:\E G\rightarrow \B G$가 *universal bundle*이라는 것은 total space $EG$가 contractible인 것, 곧 $\E G$가 한 점과 homotopy equivalent인 것이다. ([§호모토피, ⁋정의 4](/ko/math/algebraic_topology/homotopy#def4)) 이때 base space $\B G$를 $G$의 *classifying space<sub>분류공간</sub>*라 부른다.
+Topological group $G$에 대하여, principal $G$-bundle $p:\E G\rightarrow \B G$가 *universal bundle<sub>보편다발</sub>*이라는 것은 total space $EG$가 contractible인 것, 곧 $\E G$가 한 점과 homotopy equivalent인 것이다. ([§호모토피, ⁋정의 4](/ko/math/algebraic_topology/homotopy#def4)) 이때 base space $\B G$를 $G$의 *classifying space<sub>분류공간</sub>*라 부른다.
 :::
 
 즉, universal $G$-bundle은 contractible space 위의 free $G$-action이며, 그 orbit space $\B G=\E G/G$가 base space이며, 여기로의 projection map이 bundle map이다. $\E G$가 contractible이라는 조건은 [정리 8](#thm8)에서 중요하게 사용될 것이다. 그 전에, 우선 다음이 성립한다. 

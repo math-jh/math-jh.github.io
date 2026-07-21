@@ -21,7 +21,7 @@ weight: 118
 [§내적공간](/ko/math/linear_algebra/inner_product_spaces)에서 우리는 $\mathbb{R}$-벡터공간 위의 내적을 정의하였다. 내적의 핵심 조건은 $\langle v,v\rangle\geq 0$이라는 positive-definiteness이며, 이는 $\mathbb{K}$에 대소관계가 있어야 하므로 일반적인 field에서는 곧바로 옮겨지지 않는다. 특히 $\mathbb{C}$ 위에서 $\langle v,w\rangle=\sum_i v_iw_i$를 그대로 쓰면 $\langle v,v\rangle=\sum_i v_i^2$이 복소수가 되어 부호를 말할 수 없다. 해결책은 한쪽 변수에 켤레복소수를 취하는 것이다. $\sum_i\bar v_iv_i=\sum_i\lvert v_i\rvert^2$은 언제나 음이 아닌 실수이기 때문이다. 이렇게 한 변수에 대해 conjugate-linear가 되도록 수정한 내적을 *Hermitian inner product*이라 부르며, 이 글에서는 이를 갖춘 $\mathbb{C}$-벡터공간 위에서 [§내적공간](/ko/math/linear_algebra/inner_product_spaces)의 이론이 어떻게 옮겨지는지를 살펴본다.
 
 ::: 정의 1
-$\mathbb{C}$-벡터공간 $V$ 위의 함수 $\langle-,-\rangle:V\times V\rightarrow\mathbb{C}$가 *Hermitian inner product<sub>Hermitian 내적</sub>*라는 것은 다음을 만족하는 것이다.
+$\mathbb{C}$-벡터공간 $V$ 위의 함수 $\langle-,-\rangle:V\times V\rightarrow\mathbb{C}$가 *Hermitian inner product<sub>에르미트 내적</sub>*라는 것은 다음을 만족하는 것이다.
 
 1. (Conjugate-symmetry) 임의의 $v,w\in V$에 대하여 $\langle w,v\rangle=\overline{\langle v,w\rangle}$;
 2. (Linearity on second argument) 임의의 $v,w,w'\in V$와 $\alpha\in\mathbb{C}$에 대하여 $\langle v,w+w'\rangle=\langle v,w\rangle+\langle v,w'\rangle$이고 $\langle v,\alpha w\rangle=\alpha\langle v,w\rangle$;
@@ -184,7 +184,7 @@ $$R_{kk}=\lVert\hat a_k\rVert,\qquad R_{ik}=\langle q_i,a_k\rangle\quad(i<k),\qq
 
 이 분해를 *QR 분해<sub>QR decomposition</sub>*라 부르며, 증명이 보여주듯 이는 Gram-Schmidt 과정을 행렬의 언어로 옮겨 적은 것이다. $Q$의 열에는 직교화의 결과가, $R$에는 그 과정에 사용된 계수들이 기록된다. 특히 $A$의 열들이 이미 orthonormal이라면, 즉 $A$가 이미 unitary matrix라면 분해는 $Q=A$, $R=I$로 퇴화한다. 같은 증명이 실수의 경우에도 그대로 작동하여, 임의의 가역행렬 $A\in\Mat_n(\mathbb{R})$는 orthogonal matrix와 ([§내적공간, §§직교행렬](/ko/math/linear_algebra/inner_product_spaces#직교행렬)) 대각성분이 모두 양의 실수인 upper triangular matrix의 곱으로 유일하게 분해되며, 위 증명의 모든 단계가 $A$의 성분들에 대한 사칙연산과 내적, 노름만으로 이루어져 있으므로 두 인자 $Q,R$은 $A$에 연속적으로 의존한다.
 
-한편 Gram-Schmidt 과정 대신 반사를 사용해 같은 분해에 도달할 수도 있다. 벡터 $0\neq v\in\mathbb{C}^n$에 대하여 *Householder reflection<sub>Householder 반사</sub>*
+한편 Gram-Schmidt 과정 대신 반사를 사용해 같은 분해에 도달할 수도 있다. 벡터 $0\neq v\in\mathbb{C}^n$에 대하여 *Householder reflection<sub>하우스홀더 반사</sub>*
 
 $$H_v=I-2\frac{vv^\ast}{v^\ast v}$$
 

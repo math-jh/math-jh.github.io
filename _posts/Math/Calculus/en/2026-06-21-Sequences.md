@@ -14,7 +14,7 @@ translated_at: 2026-06-22T18:30:03+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-06-22T18:30:03+00:00
 ---
-Before we begin calculus proper, we first define the limit of a sequence. Here a *sequence* $(a_n)$ is a function that assigns a real number to each natural number, i.e. $a : \mathbb{N} \to \mathbb{R}$, viewed as the list of its values $a_1, a_2, a_3, \ldots$. In [§Limits of Functions](/en/math/calculus/functions_and_limits) we already studied how a function behaves as $x \to \infty$, and the limit of a sequence can be thought of as the discrete version of this: the case where the variable takes only natural numbers and goes to $n \to \infty$.
+Before we begin calculus proper, we first define the limit of a sequence. Here a *sequence* $(a_n)$ is a function that assigns a real number to each natural number, i.e. $a : \mathbb{N} \rightarrow \mathbb{R}$, viewed as the list of its values $a_1, a_2, a_3, \ldots$. In [§Limits of Functions](/en/math/calculus/functions_and_limits) we already studied how a function behaves as $x \rightarrow \infty$, and the limit of a sequence can be thought of as the discrete version of this: the case where the variable takes only natural numbers and goes to $n \rightarrow \infty$.
 
 ## Convergence of Sequences
 
@@ -23,17 +23,17 @@ For a real sequence $(a_n)_{n=1}^\infty$ and a real number $L$, if for every $\v
 
 $$n > N \implies \lvert a_n - L \rvert < \varepsilon$$
 
-holds, we call $L$ the *limit* of $a_n$ as $n \to \infty$, and write $\lim_{n\to\infty} a_n = L$.
+holds, we call $L$ the *limit* of $a_n$ as $n \rightarrow \infty$, and write $\lim_{n\rightarrow\infty} a_n = L$.
 :::
 
-This definition is taken almost verbatim from [§Limits of Functions, ⁋Definition 14](/en/math/calculus/functions_and_limits#def14), and since a sequence has only natural numbers as its variable and goes in only one direction ($+\infty$), this is essentially the only way to define its limit. For example, $a_n = 1/n \to 0$ is verified by choosing, for arbitrary $\varepsilon > 0$, an $N > 1/\varepsilon$; then for $n > N$ we have $1/n < 1/N < \varepsilon$. A slight variant is when a sequence diverges to infinity, which is obtained by transcribing [§Limits of Functions, ⁋Definition 13](/en/math/calculus/functions_and_limits#def13): for arbitrary $M$, there exists $N$ such that $n > N \implies a_n > M$; for example, $b_n = n$ is such a sequence. However, there also exist sequences that neither converge nor diverge to infinity ([Example 11](#ex11)).
+This definition is taken almost verbatim from [§Limits of Functions, ⁋Definition 14](/en/math/calculus/functions_and_limits#def14), and since a sequence has only natural numbers as its variable and goes in only one direction ($+\infty$), this is essentially the only way to define its limit. For example, $a_n = 1/n \rightarrow 0$ is verified by choosing, for arbitrary $\varepsilon > 0$, an $N > 1/\varepsilon$; then for $n > N$ we have $1/n < 1/N < \varepsilon$. A slight variant is when a sequence diverges to infinity, which is obtained by transcribing [§Limits of Functions, ⁋Definition 13](/en/math/calculus/functions_and_limits#def13): for arbitrary $M$, there exists $N$ such that $n > N \implies a_n > M$; for example, $b_n = n$ is such a sequence. However, there also exist sequences that neither converge nor diverge to infinity ([Example 11](#ex11)).
 
 The basic properties of convergent sequences are mostly obtained by copying the proofs from limits of functions. For example, the following proposition can be proved in exactly the same way as [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5).
 
 ::: Proposition 2 (Limit Laws for Sequences)
 Suppose two sequences $a_n$, $b_n$ converge, with limits
 
-$$\lim_{n\to\infty} a_n = L, \qquad \lim_{n\to\infty} b_n = M$$
+$$\lim_{n\rightarrow\infty} a_n = L, \qquad \lim_{n\rightarrow\infty} b_n = M$$
 
 Then
 
@@ -54,23 +54,23 @@ A convergent sequence is bounded.
 :::
 
 ::: Proof
-If $a_n \to L$, then for $\varepsilon = 1$ there exists $N$ such that for $n \geq N$ we have $\lvert a_n\rvert \leq \lvert L\rvert + 1$. Including the remaining finitely many terms, set $M = \max\{\lvert a_1\rvert, \ldots, \lvert a_{N-1}\rvert, \lvert L\rvert + 1\}$; then $\lvert a_n\rvert \leq M$ for all $n$.
+If $a_n \rightarrow L$, then for $\varepsilon = 1$ there exists $N$ such that for $n \geq N$ we have $\lvert a_n\rvert \leq \lvert L\rvert + 1$. Including the remaining finitely many terms, set $M = \max\{\lvert a_1\rvert, \ldots, \lvert a_{N-1}\rvert, \lvert L\rvert + 1\}$; then $\lvert a_n\rvert \leq M$ for all $n$.
 :::
 
 By the same copying, the following is the sequence version of [§Limits of Functions, ⁋Proposition 8](/en/math/calculus/functions_and_limits#prop8).
 
 ::: Proposition 4 (Squeeze Theorem)
-If for all sufficiently large $n$ we have $a_n \leq c_n \leq b_n$, and $a_n \to L$, $b_n \to L$, then $c_n \to L$.
+If for all sufficiently large $n$ we have $a_n \leq c_n \leq b_n$, and $a_n \rightarrow L$, $b_n \rightarrow L$, then $c_n \rightarrow L$.
 :::
 
 Then we obtain the following simple but useful result.
 
 ::: Proposition 5 (Ratio Test)
-If a real sequence $a_n$ satisfies $a_n > 0$ for all $n$, and the sequence of ratios of consecutive terms $a_{n+1}/a_n$ converges to a value $L$ less than $1$, then $a_n \to 0$.
+If a real sequence $a_n$ satisfies $a_n > 0$ for all $n$, and the sequence of ratios of consecutive terms $a_{n+1}/a_n$ converges to a value $L$ less than $1$, then $a_n \rightarrow 0$.
 :::
 
 ::: Proof
-Choose $r$ with $L < r < 1$; then for sufficiently large $n \geq N$ we have $a_{n+1}/a_n < r$, so $a_{N+k} < r^k a_N$. Since $0 < r < 1$, we have $r^k \to 0$, and by the squeeze theorem $a_n \to 0$.
+Choose $r$ with $L < r < 1$; then for sufficiently large $n \geq N$ we have $a_{n+1}/a_n < r$, so $a_{N+k} < r^k a_N$. Since $0 < r < 1$, we have $r^k \rightarrow 0$, and by the squeeze theorem $a_n \rightarrow 0$.
 :::
 
 Similarly, we collect in the following example several results that are frequently used in actual calculations.
@@ -78,31 +78,31 @@ Similarly, we collect in the following example several results that are frequent
 ::: Example 6
 The following are basic examples of limits of sequences.
 
-1. For $p > 0$, $1/n^p \to 0$ holds. Since $n^p \geq n$ for $n \geq 1$, we have $0 < 1/n^p \leq 1/n \to 0$, and thus [Proposition 4](#prop4) applies.
+1. For $p > 0$, $1/n^p \rightarrow 0$ holds. Since $n^p \geq n$ for $n \geq 1$, we have $0 < 1/n^p \leq 1/n \rightarrow 0$, and thus [Proposition 4](#prop4) applies.
 2. More generally, the ratio of two polynomials of the same degree is determined by the ratio of their leading coefficients.
 
    $$\frac{a_k n^k + \cdots}{b_k n^k + \cdots}$$
 
-   Dividing numerator and denominator by $n^k$, both consist of finitely many terms of the form $1/n^j$ and a constant term. Then since $1/n^j \to 0$, the numerator and denominator converge to their respective leading coefficients. If the denominator has higher degree than the numerator, then by [Proposition 4](#prop4) and the previous item 1, this ratio converges to $0$; similarly, if the numerator has higher degree than the denominator, this ratio diverges.
-3. If $\lvert r\rvert < 1$, then $r^n \to 0$. To verify this, set $\lvert r\rvert = 1/(1+h)$ for suitable $h>0$. Then by the binomial theorem $(1+h)^n \geq 1 + nh$, and therefore
+   Dividing numerator and denominator by $n^k$, both consist of finitely many terms of the form $1/n^j$ and a constant term. Then since $1/n^j \rightarrow 0$, the numerator and denominator converge to their respective leading coefficients. If the denominator has higher degree than the numerator, then by [Proposition 4](#prop4) and the previous item 1, this ratio converges to $0$; similarly, if the numerator has higher degree than the denominator, this ratio diverges.
+3. If $\lvert r\rvert < 1$, then $r^n \rightarrow 0$. To verify this, set $\lvert r\rvert = 1/(1+h)$ for suitable $h>0$. Then by the binomial theorem $(1+h)^n \geq 1 + nh$, and therefore
 
-    $$\lvert r\rvert^n = \frac{1}{(1+h)^n} \leq \frac{1}{1+nh} \to 0$$
+    $$\lvert r\rvert^n = \frac{1}{(1+h)^n} \leq \frac{1}{1+nh} \rightarrow 0$$
 
     The convergence of the last term used the result of item 2 above. If $r=1$, this sequence is identically $1$, so it trivially converges to $1$; if $\lvert r\rvert > 1$, similarly setting $r=1+h$ gives
 
     $$\lvert r\rvert^n =(1+h)^n \geq 1+nh$$
 
     so no matter what $M$ we choose, by making $n$ sufficiently large we can make $\lvert r\rvert^n$ exceed $M$, and thus $\lvert r\rvert^n$ diverges.
-4. $n^{1/n} \to 1$. To verify this, set $n^{1/n} = 1 + h_n$ ($h_n \geq 0$); then by the binomial theorem
+4. $n^{1/n} \rightarrow 1$. To verify this, set $n^{1/n} = 1 + h_n$ ($h_n \geq 0$); then by the binomial theorem
 
    $$n = (1+h_n)^n \geq \binom{n}{2}h_n^2 = \frac{n(n-1)}{2}h_n^2$$
 
-   so $h_n^2 \leq 2/(n-1) \to 0$, i.e. $h_n \to 0$.
-5. For $r > 1$, $p > 0$, $n^p/r^n \to 0$ holds. This follows immediately from [Proposition 5](#prop5), since the ratio of consecutive terms is
+   so $h_n^2 \leq 2/(n-1) \rightarrow 0$, i.e. $h_n \rightarrow 0$.
+5. For $r > 1$, $p > 0$, $n^p/r^n \rightarrow 0$ holds. This follows immediately from [Proposition 5](#prop5), since the ratio of consecutive terms is
 
-    $$\frac{(n+1)^p}{r^{n+1}}\cdot\frac{r^n}{n^p} = \frac{1}{r}\left(1+\frac{1}{n}\right)^p \to \frac{1}{r} < 1$$
+    $$\frac{(n+1)^p}{r^{n+1}}\cdot\frac{r^n}{n^p} = \frac{1}{r}\left(1+\frac{1}{n}\right)^p \rightarrow \frac{1}{r} < 1$$
 
-6. Similarly, for $r > 1$, $p > 0$, the ratio of consecutive terms of the sequence $r^n/n!$ is $r/(n+1) \to 0 < 1$, so by the same reasoning it is $0$.
+6. Similarly, for $r > 1$, $p > 0$, the ratio of consecutive terms of the sequence $r^n/n!$ is $r/(n+1) \rightarrow 0 < 1$, so by the same reasoning it is $0$.
 :::
 
 ## Monotone Convergence Theorem
@@ -151,7 +151,7 @@ Meanwhile, when analyzing whether a sequence converges, it is useful to consider
 Given a sequence $(a_n)$ and a strictly increasing sequence of natural numbers $n_1 < n_2 < n_3 < \cdots$, the new sequence $(a_{n_k})_{k\geq 1}$ is called a *subsequence* of $(a_n)$.
 :::
 
-That is, it is obtained from the sequence $a_n$ by selecting terms while preserving the order of indices, <em-ko>skipping over</em-ko> some terms along the way. It is intuitively obvious that if the original sequence converges to some value, then any subsequence of it also converges to that same value.
+That is, it is obtained from the sequence $a_n$ by selecting terms while preserving the order of indices, *skipping over* some terms along the way. It is intuitively obvious that if the original sequence converges to some value, then any subsequence of it also converges to that same value.
 
 ::: Proposition 10
 If a sequence $a_n$ converges to $L$, then every subsequence $(a_{n_k})$ also converges to $L$.
@@ -162,11 +162,11 @@ For arbitrary $\varepsilon > 0$, pick $N$ such that for $n \geq N$ we have $\lve
 
 $$\lvert a_{n_k} - L\rvert < \varepsilon$$
 
-That is, $a_{n_k} \to L$.
+That is, $a_{n_k} \rightarrow L$.
 :::
 
-This proposition is more useful when showing that a sequence does <em-ko>not</em-ko> converge than when showing that it does. By its contrapositive, if there exist two subsequences with different limits, then the original sequence $(a_n)$ does not converge.
+This proposition is more useful when showing that a sequence does *not* converge than when showing that it does. By its contrapositive, if there exist two subsequences with different limits, then the original sequence $(a_n)$ does not converge.
 
 ::: Example 11 (A divergent sequence)
-Consider the sequence $a_n = (-1)^n$. The even subsequence $a_{2k} = 1 \to 1$ and the odd subsequence $a_{2k-1} = -1 \to -1$ have different limits, so by Proposition 10, $(a_n)$ diverges.
+Consider the sequence $a_n = (-1)^n$. The even subsequence $a_{2k} = 1 \rightarrow 1$ and the odd subsequence $a_{2k-1} = -1 \rightarrow -1$ have different limits, so by Proposition 10, $(a_n)$ diverges.
 :::

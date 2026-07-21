@@ -23,20 +23,20 @@ published: false
 ## 선형사상으로서의 미분
 
 ::: 정의 1
-$f : \mathbb{R}^n \to \mathbb{R}^m$이 점 $a$에서 *미분가능<sub>differentiable</sub>*하다는 것은, 선형사상 $Df(a) : \mathbb{R}^n \to \mathbb{R}^m$이 존재하여
+$f : \mathbb{R}^n \rightarrow \mathbb{R}^m$이 점 $a$에서 *미분가능<sub>differentiable</sub>*하다는 것은, 선형사상 $Df(a) : \mathbb{R}^n \rightarrow \mathbb{R}^m$이 존재하여
 
-$$\lim_{h \to 0}\frac{\lVert f(a + h) - f(a) - Df(a)h\rVert}{\lVert h\rVert} = 0$$
+$$\lim_{h \rightarrow 0}\frac{\lVert f(a + h) - f(a) - Df(a)h\rVert}{\lVert h\rVert} = 0$$
 
 이 성립하는 것이다. 이 $Df(a)$를 $f$의 $a$에서의 *(전)미분*이라 한다.
 :::
 
 미분이 선형사상이라는 점이 한 변수와의 본질적 차이이다. 한 변수에서는 그 선형사상이 수 $f'(a)$를 곱하는 것이었다. [정의 1](#def1)의 조건을 풀어 쓰면, 잔차 $r(h) = f(a+h) - f(a) - Df(a)h$가 $\lVert h\rVert$보다 더 빨리 $0$으로 수렴한다는 뜻이다. 즉
 
-$$f(a + h) = f(a) + Df(a)h + r(h), \qquad \frac{\lVert r(h)\rVert}{\lVert h\rVert} \to 0   (h \to 0)$$
+$$f(a + h) = f(a) + Df(a)h + r(h), \qquad \frac{\lVert r(h)\rVert}{\lVert h\rVert} \rightarrow 0   (h \rightarrow 0)$$
 
-으로, 일차다항식 $h \mapsto f(a) + Df(a)h$가 $f$를 $a$에서 *1차 오차로* 근사한다. 흔히 $r(h) = o(\lVert h\rVert)$로 쓰며, "리틀-오" 표기는 $h \to 0$일 때 $\lVert r(h)\rVert/\lVert h\rVert \to 0$임을 줄인 것이다. 이 근사의 유일성, 즉 두 선형사상이 모두 같은 잔차 조건을 만족하면 서로 같다는 사실은 [명제 2](#prop2)에서 야코비 행렬과 함께 따라 나온다.
+으로, 일차다항식 $h \mapsto f(a) + Df(a)h$가 $f$를 $a$에서 *1차 오차로* 근사한다. 흔히 $r(h) = o(\lVert h\rVert)$로 쓰며, "리틀-오" 표기는 $h \rightarrow 0$일 때 $\lVert r(h)\rVert/\lVert h\rVert \rightarrow 0$임을 줄인 것이다. 이 근사의 유일성, 즉 두 선형사상이 모두 같은 잔차 조건을 만족하면 서로 같다는 사실은 [명제 2](#prop2)에서 야코비 행렬과 함께 따라 나온다.
 
-미분가능하면 연속이라는 가장 기본적인 귀결을 먼저 짚어 둔다. $h \to 0$일 때 $Df(a)h \to 0$ (선형사상은 연속) 이고 $r(h) \to 0$이므로 $f(a+h) \to f(a)$이며, 따라서 $f$는 $a$에서 연속이다. 반면 편미분이 모두 존재해도 함수가 연속조차 아닐 수 있는데, 이는 편미분이 좌표축 방향의 정보만 담는 데 반해 전미분은 모든 방향을 한꺼번에 통제하기 때문이다.
+미분가능하면 연속이라는 가장 기본적인 귀결을 먼저 짚어 둔다. $h \rightarrow 0$일 때 $Df(a)h \rightarrow 0$ (선형사상은 연속) 이고 $r(h) \rightarrow 0$이므로 $f(a+h) \rightarrow f(a)$이며, 따라서 $f$는 $a$에서 연속이다. 반면 편미분이 모두 존재해도 함수가 연속조차 아닐 수 있는데, 이는 편미분이 좌표축 방향의 정보만 담는 데 반해 전미분은 모든 방향을 한꺼번에 통제하기 때문이다.
 
 ::: 명제 2
 $f$가 $a$에서 미분가능하면 모든 편미분이 존재하고, $Df(a)$를 표준기저로 나타낸 행렬은 야코비 행렬
@@ -47,23 +47,23 @@ $$J_f(a) = \left(\frac{\partial f_i}{\partial x_j}(a)\right)_{i,j}$$
 :::
 
 ::: 증명
-[정의 1](#def1)에서 증분 $h$를 좌표축 방향 $h = t e_j$ ($t \in \mathbb{R}$, $t \to 0$) 로 제한하자. 이때 $\lVert h\rVert = \lvert t\rvert$이므로 잔차 조건은
+[정의 1](#def1)에서 증분 $h$를 좌표축 방향 $h = t e_j$ ($t \in \mathbb{R}$, $t \rightarrow 0$) 로 제한하자. 이때 $\lVert h\rVert = \lvert t\rvert$이므로 잔차 조건은
 
 $$\begin{aligned}
-0 &= \lim_{t \to 0} \frac{\lVert f(a + te_j) - f(a) - Df(a)(te_j)\rVert}{\lvert t\rvert} \\
-&= \lim_{t \to 0} \left\lVert \frac{f(a + te_j) - f(a)}{t} - Df(a)e_j \right\rVert
+0 &= \lim_{t \rightarrow 0} \frac{\lVert f(a + te_j) - f(a) - Df(a)(te_j)\rVert}{\lvert t\rvert} \\
+&= \lim_{t \rightarrow 0} \left\lVert \frac{f(a + te_j) - f(a)}{t} - Df(a)e_j \right\rVert
 \end{aligned}$$
 
 이 되어, 차분비가 벡터 $Df(a)e_j$로 수렴한다. 한편 차분비의 $i$번째 성분은 정의상 편미분
 
-$$\lim_{t \to 0} \frac{f_i(a + te_j) - f_i(a)}{t} = \frac{\partial f_i}{\partial x_j}(a)$$
+$$\lim_{t \rightarrow 0} \frac{f_i(a + te_j) - f_i(a)}{t} = \frac{\partial f_i}{\partial x_j}(a)$$
 
 이므로, 극한벡터 $Df(a)e_j$의 $i$번째 성분이 $\partial f_i/\partial x_j(a)$이다. 즉 모든 편미분이 존재하고, $Df(a)$를 표준기저로 나타낸 행렬의 $j$번째 열이 $j$번째 편미분 벡터 $\left(\partial f_i/\partial x_j(a)\right)_i$이다. 이로써 그 행렬이 야코비 행렬 $J_f(a)$임이 확인된다. 마지막으로 $Df(a)$의 모든 열이 $f$에 의해 위와 같이 결정되므로 선형사상 $Df(a)$ 자체가 유일하다.
 :::
 
-야코비 행렬은 미분이라는 선형사상의 *좌표 표현*일 뿐, 미분 그 자체는 좌표와 무관한 사상임을 강조해 둔다. $m = 1$인 실숫값 함수에서는 $J_f(a)$가 한 줄짜리 행렬, 곧 기울기벡터 $\nabla f(a) = \left(\partial f/\partial x_1(a), \dots, \partial f/\partial x_n(a)\right)$의 전치이며, $Df(a)h = \nabla f(a) \cdot h$로 내적이 된다. 반대로 $n = 1$인 곡선 $\gamma : \mathbb{R} \to \mathbb{R}^m$에서는 $J_\gamma(t)$가 한 열짜리, 곧 속도벡터 $\gamma'(t)$이다.
+야코비 행렬은 미분이라는 선형사상의 *좌표 표현*일 뿐, 미분 그 자체는 좌표와 무관한 사상임을 강조해 둔다. $m = 1$인 실숫값 함수에서는 $J_f(a)$가 한 줄짜리 행렬, 곧 기울기벡터 $\nabla f(a) = \left(\partial f/\partial x_1(a), \dots, \partial f/\partial x_n(a)\right)$의 전치이며, $Df(a)h = \nabla f(a) \cdot h$로 내적이 된다. 반대로 $n = 1$인 곡선 $\gamma : \mathbb{R} \rightarrow \mathbb{R}^m$에서는 $J_\gamma(t)$가 한 열짜리, 곧 속도벡터 $\gamma'(t)$이다.
 
-편미분이 모두 존재해도 미분가능성이 따라오지 않는다는 점은 다변수 미분의 미묘함을 단적으로 보여 준다. 가령 $f(x,y) = xy/(x^2 + y^2)$ ($(x,y)\neq(0,0)$, $f(0,0)=0$) 은 원점에서 두 편미분이 모두 $0$으로 존재하지만, 직선 $y=x$를 따라가면 $f(x,x) = 1/2 \not\to 0$이어서 연속조차 아니므로 미분가능하지 않다. 편미분은 좌표축 방향만 보는 데 반해 전미분은 모든 방향을 동시에 통제하기 때문이며, 이 간극을 메우는 충분조건이 아래 [명제 4](#prop4)이다.
+편미분이 모두 존재해도 미분가능성이 따라오지 않는다는 점은 다변수 미분의 미묘함을 단적으로 보여 준다. 가령 $f(x,y) = xy/(x^2 + y^2)$ ($(x,y)\neq(0,0)$, $f(0,0)=0$) 은 원점에서 두 편미분이 모두 $0$으로 존재하지만, 직선 $y=x$를 따라가면 $f(x,x) = 1/2 \not\rightarrow 0$이어서 연속조차 아니므로 미분가능하지 않다. 편미분은 좌표축 방향만 보는 데 반해 전미분은 모든 방향을 동시에 통제하기 때문이며, 이 간극을 메우는 충분조건이 아래 [명제 4](#prop4)이다.
 
 ## 연쇄법칙
 
@@ -94,7 +94,7 @@ $$\begin{aligned}
 
 $$\frac{\lVert s(k)\rVert}{\lVert h\rVert} = \frac{\lVert s(k)\rVert}{\lVert k\rVert}\cdot \frac{\lVert k\rVert}{\lVert h\rVert} \le \frac{\lVert s(k)\rVert}{\lVert k\rVert}\cdot C'$$
 
-인데, $h \to 0$이면 $k \to 0$이므로 $\lVert s(k)\rVert/\lVert k\rVert \to 0$ (단 $k = 0$인 경우 $s(k) = 0$로 처리) 이고, 따라서 우변이 $0$으로 간다. 두 항을 합쳐 $\rho(h) = o(\lVert h\rVert)$이므로 [정의 1](#def1)에 의해 $g\circ f$는 $a$에서 미분가능하고 $D(g\circ f)(a) = BA = Dg(b)\circ Df(a)$이다.
+인데, $h \rightarrow 0$이면 $k \rightarrow 0$이므로 $\lVert s(k)\rVert/\lVert k\rVert \rightarrow 0$ (단 $k = 0$인 경우 $s(k) = 0$로 처리) 이고, 따라서 우변이 $0$으로 간다. 두 항을 합쳐 $\rho(h) = o(\lVert h\rVert)$이므로 [정의 1](#def1)에 의해 $g\circ f$는 $a$에서 미분가능하고 $D(g\circ f)(a) = BA = Dg(b)\circ Df(a)$이다.
 :::
 
 행렬로 옮기면 연쇄법칙은 야코비 행렬의 곱셈이 된다. 성분으로 풀어 쓰면, $g\circ f$의 $i$행 $j$열 성분이
@@ -103,7 +103,7 @@ $$\frac{\partial (g\circ f)_i}{\partial x_j}(a) = \sum_{k} \frac{\partial g_i}{\
 
 라는 익숙한 합 꼴이며, 이는 행렬곱 $J_g(b)J_f(a)$의 $(i,j)$ 성분에 다름 아니다. 선형사상 합성의 행렬이 행렬곱이라는 선형대수의 사실 덕분에, 일변수 연쇄법칙의 한 줄 공식이 다변수에서 행렬곱 한 줄로 그대로 살아남는다.
 
-가장 흔한 특수경우는 곡선을 따른 변화율이다. $g : \mathbb{R}^n \to \mathbb{R}$가 미분가능하고 $\gamma : \mathbb{R} \to \mathbb{R}^n$이 미분가능한 곡선이면, $Dg(\gamma(t))$가 $1 \times n$ 행렬 (기울기) 이고 $D\gamma(t)$가 $n \times 1$ 행렬 (속도) 이므로 합성 $t \mapsto g(\gamma(t))$의 변화율은
+가장 흔한 특수경우는 곡선을 따른 변화율이다. $g : \mathbb{R}^n \rightarrow \mathbb{R}$가 미분가능하고 $\gamma : \mathbb{R} \rightarrow \mathbb{R}^n$이 미분가능한 곡선이면, $Dg(\gamma(t))$가 $1 \times n$ 행렬 (기울기) 이고 $D\gamma(t)$가 $n \times 1$ 행렬 (속도) 이므로 합성 $t \mapsto g(\gamma(t))$의 변화율은
 
 $$\frac{d}{dt} g(\gamma(t)) = Dg(\gamma(t)) \gamma'(t) = \sum_{j=1}^n \frac{\partial g}{\partial x_j}(\gamma(t)) \gamma_j'(t) = \nabla g(\gamma(t)) \cdot \gamma'(t)$$
 
@@ -137,21 +137,21 @@ f(a + h) - f(a) - \sum_{j=1}^n \frac{\partial f}{\partial x_j}(a) h_j
 
 $$\frac{\left\lvert f(a + h) - f(a) - \sum_j \frac{\partial f}{\partial x_j}(a)h_j \right\rvert}{\lVert h\rVert} \le \sum_{j=1}^n \left\lvert \frac{\partial f}{\partial x_j}(\xi_j) - \frac{\partial f}{\partial x_j}(a) \right\rvert$$
 
-이다. 한편 $h \to 0$이면 모든 $\xi_j \to a$이고, 편미분 $\partial f/\partial x_j$가 $a$에서 연속이므로 우변의 각 항이 $0$으로 간다. 따라서 좌변도 $0$으로 가며, 이는 선형사상 $h \mapsto \sum_j (\partial f/\partial x_j)(a) h_j$가 곧 $Df(a)$임을, 즉 $f$가 $a$에서 미분가능함을 뜻한다.
+이다. 한편 $h \rightarrow 0$이면 모든 $\xi_j \rightarrow a$이고, 편미분 $\partial f/\partial x_j$가 $a$에서 연속이므로 우변의 각 항이 $0$으로 간다. 따라서 좌변도 $0$으로 가며, 이는 선형사상 $h \mapsto \sum_j (\partial f/\partial x_j)(a) h_j$가 곧 $Df(a)$임을, 즉 $f$가 $a$에서 미분가능함을 뜻한다.
 :::
 
 [명제 4](#prop4)의 조건은 충분조건일 뿐 필요조건은 아니다. 미분가능하지만 편미분이 불연속인 함수가 존재하므로, "$C^1$"은 미분가능성보다 진정으로 강하다. 그럼에도 실제로 마주치는 거의 모든 함수(다항식, 유리식, 지수·삼각함수의 합성)는 정의역에서 $C^1$이며, 따라서 야코비 행렬을 적는 것만으로 미분가능성이 보장된다. 이 점이 [명제 4](#prop4)를 계산에서 가장 자주 쓰는 판정 도구로 만든다.
 
 ::: 예시 5 (미분가능하나 $C^1$이 아닌 함수)
-$f : \mathbb{R} \to \mathbb{R}$를
+$f : \mathbb{R} \rightarrow \mathbb{R}$를
 
 $$f(x) = \begin{cases} x^2 \sin\frac{1}{x}, & x \neq 0, \\ 0, & x = 0 \end{cases}$$
 
 로 두자. $x \neq 0$에서 곱·연쇄법칙으로 $f'(x) = 2x\sin(1/x) - \cos(1/x)$이고, $x = 0$에서는
 
-$$f'(0) = \lim_{t\to 0}\frac{t^2\sin(1/t)}{t} = \lim_{t\to 0} t\sin\frac1t = 0$$
+$$f'(0) = \lim_{t\rightarrow 0}\frac{t^2\sin(1/t)}{t} = \lim_{t\rightarrow 0} t\sin\frac1t = 0$$
 
-이므로 $f$는 모든 점에서 미분가능하다. 그러나 $x \to 0$일 때 $f'(x)$의 $-\cos(1/x)$ 항이 진동하여 극한이 없으므로 $f'$는 $0$에서 불연속이다. 즉 미분가능성이 도함수의 연속성을 함의하지 않으며, [명제 4](#prop4)의 역이 거짓임을 보인다.
+이므로 $f$는 모든 점에서 미분가능하다. 그러나 $x \rightarrow 0$일 때 $f'(x)$의 $-\cos(1/x)$ 항이 진동하여 극한이 없으므로 $f'$는 $0$에서 불연속이다. 즉 미분가능성이 도함수의 연속성을 함의하지 않으며, [명제 4](#prop4)의 역이 거짓임을 보인다.
 :::
 
 가령 극좌표 변환 $f(r,\theta) = (r\cos\theta, r\sin\theta)$는 성분이 모두 $C^1$이라 미분가능하고, 편미분을 모으면 $J_f(r,\theta) = \begin{pmatrix} \cos\theta & -r\sin\theta \\ \sin\theta & r\cos\theta \end{pmatrix}$이며 그 행렬식은 $\det J_f = r(\cos^2\theta + \sin^2\theta) = r$이다. 극좌표 적분에서 등장하는 면적 배율 $r$가 정확히 미분의 행렬식임을 볼 수 있다.
@@ -161,7 +161,7 @@ $$f'(0) = \lim_{t\to 0}\frac{t^2\sin(1/t)}{t} = \lim_{t\to 0} t\sin\frac1t = 0$$
 일변수에서 평균값 정리는 $f(b) - f(a) = f'(\xi)(b-a)$라는 등식이었다. 다변수 실숫값 함수에서도 같은 형태가 살아남으며, 이것이 [명제 4](#prop4)의 증명에서 본 분해의 일반적 형태이다.
 
 ::: 명제 6 (다변수 평균값 정리)
-$f : \mathbb{R}^n \to \mathbb{R}$이 선분 $[a, a+h] = \{a + th : 0 \le t \le 1\}$ 위의 모든 점에서 미분가능하면, 어떤 $\theta \in (0,1)$가 존재하여
+$f : \mathbb{R}^n \rightarrow \mathbb{R}$이 선분 $[a, a+h] = \{a + th : 0 \le t \le 1\}$ 위의 모든 점에서 미분가능하면, 어떤 $\theta \in (0,1)$가 존재하여
 
 $$f(a + h) - f(a) = \nabla f(a + \theta h)\cdot h$$
 
@@ -169,7 +169,7 @@ $$f(a + h) - f(a) = \nabla f(a + \theta h)\cdot h$$
 :::
 
 ::: 증명
-보조함수 $\varphi : [0,1] \to \mathbb{R}$를 $\varphi(t) = f(a + th)$로 두자. $\gamma(t) = a + th$는 미분가능하고 $\gamma'(t) = h$이므로, 앞서 연쇄법칙의 특수경우로 본 곡선을 따른 변화율 공식 $(d/dt)f(\gamma(t)) = \nabla f(\gamma(t))\cdot\gamma'(t)$에 의해 $\varphi$는 미분가능하고
+보조함수 $\varphi : [0,1] \rightarrow \mathbb{R}$를 $\varphi(t) = f(a + th)$로 두자. $\gamma(t) = a + th$는 미분가능하고 $\gamma'(t) = h$이므로, 앞서 연쇄법칙의 특수경우로 본 곡선을 따른 변화율 공식 $(d/dt)f(\gamma(t)) = \nabla f(\gamma(t))\cdot\gamma'(t)$에 의해 $\varphi$는 미분가능하고
 
 $$\varphi'(t) = \nabla f(a + th)\cdot h$$
 
@@ -183,7 +183,7 @@ $$\varphi(1) - \varphi(0) = \varphi'(\theta)$$
 벡터값 함수($m \ge 2$)에서는 이 등식이 성립하지 않음에 유의한다. 가령 $\gamma(t) = (\cos t, \sin t)$는 $\gamma(2\pi) - \gamma(0) = 0$이지만 $\gamma'(t) = (-\sin t, \cos t)$는 결코 $0$이 아니어서, 좌변을 한 점에서의 미분으로 표현할 수 없다. 대신 노름에 대한 부등식 형태가 살아남는데, 이로부터 다음 따름정리를 얻는다.
 
 ::: 따름정리 7
-볼록 집합 $U$ 위에서 $f : U \to \mathbb{R}$가 미분가능하고 $\nabla f \equiv 0$이면, $f$는 $U$에서 상수이다.
+볼록 집합 $U$ 위에서 $f : U \rightarrow \mathbb{R}$가 미분가능하고 $\nabla f \equiv 0$이면, $f$는 $U$에서 상수이다.
 :::
 
 ::: 증명
@@ -199,7 +199,7 @@ $$f(a + h) - f(a) = \nabla f(a + \theta h)\cdot h = 0 \cdot h = 0$$
 ## 예시와 계산
 
 ::: 예시 8 (선형사상과 이차형식의 미분)
-정의로부터 직접 미분을 계산하는 두 경우를 본다. 먼저 선형사상 $L : \mathbb{R}^n \to \mathbb{R}^m$, 곧 $L(x) = Mx$ ($M$은 상수 행렬) 의 경우
+정의로부터 직접 미분을 계산하는 두 경우를 본다. 먼저 선형사상 $L : \mathbb{R}^n \rightarrow \mathbb{R}^m$, 곧 $L(x) = Mx$ ($M$은 상수 행렬) 의 경우
 
 $$L(a + h) - L(a) = M(a+h) - Ma = Mh$$
 

@@ -35,7 +35,7 @@ $$\omega = d\log \rchi^{m_1} \wedge \cdots \wedge d\log \rchi^{m_N}$$
 을 만드는 구성[^1]의 일반화이다. 한편 이 구성이 작동하는 ambient 데이터 $(Y, D)$ 자체를 추상화하면 다음 정의의 log Calabi-Yau pair가 된다.
 
 ::: 정의 1
-Smooth projective variety $Y$와 reduced SNC divisor ([\[토릭 기하학\] §토릭 다양체 위의 로그 미분형식, ⁋정의 5](/ko/math/toric_geometry/logarithmic_differentials#def5)) $D \subset Y$의 쌍 $(Y, D)$가 $K_Y + D \sim 0$을 만족할 때 이를 *log Calabi-Yau pair*라 부른다. 이 때, 위의 construction을 통해 얻어지는 non-vanihsing volume form $\omega=\Omega\vert_{\check{X}}$을 log CY pair의 *canonical holomorphic volume form*이라 부른다. 
+Smooth projective variety $Y$와 reduced SNC divisor ([\[토릭 기하학\] §토릭 다양체 위의 로그 미분형식, ⁋정의 5](/ko/math/toric_geometry/logarithmic_differentials#def5)) $D \subset Y$의 쌍 $(Y, D)$가 $K_Y + D \sim 0$을 만족할 때 이를 *log Calabi-Yau pair<sub>로그 칼라비-야우 쌍</sub>*라 부른다. 이 때, 위의 construction을 통해 얻어지는 non-vanihsing volume form $\omega=\Omega\vert_{\check{X}}$을 log CY pair의 *canonical holomorphic volume form<sub>표준 정칙 부피 형식</sub>*이라 부른다. 
 :::
 
 기하적으로, 앞선 construction에서 $\mathcal{K}_Y\otimes \mathcal{O}_Y(D)\cong \mathcal{O}_Y$의 nowhere-vanishing global section을 통해 $\omega$를 택하는 것은 trivialization $\Omega^N_Y(\log D)\cong\mathcal{O}_Y$를 택하는 것과 같다. 특히 $\check{X}=(\mathbb{C}^\ast)^N$인 경우 standard affine coordinate들 $\x_i$에 대한 canonical volume form은
@@ -54,7 +54,7 @@ $$\mathcal{I}_\Gamma(q,z)=\int_\Gamma e^{W_q/z}\omega$$
 
 이를 위해 우리는 각각의 점 $p\in \Crit(W_q)$에 대하여 다음의 꼴
 
-$$\Gamma_p := \left\{ x \in \check{X} \,\middle\vert\, \lim_{t \to +\infty} \Real\!\left(\frac{W_q(x(t))}{z}\right) = -\infty,\; x(0) = p \right\}$$
+$$\Gamma_p := \left\{ x \in \check{X} \,\middle\vert\, \lim_{t \rightarrow +\infty} \Real\!\left(\frac{W_q(x(t))}{z}\right) = -\infty,\; x(0) = p \right\}$$
 
 로 나타나는 cycle을 *Lefschetz thimble*이라 부른다. 만일 $W_q$가 Morse type이라면 $\Gamma_p$는 real dimension $N$의 cycle을 이룬다는 것이 알려져 있다 ([\[사교기하학\] §Morse 이론과 stationary phase 근사, ⁋정의 14](/ko/math/symplectic_geometry/morse_stationary_phase#def14)). 한편 [§거울대칭 개요](/ko/math/mirror_symmetry/overview)에서 살펴본 ring 동형 $\Jac(W_q) \cong QH^\ast(X)$로부터 critical point의 개수는 정확히 $\dim_\mathbb{C} H^\ast(X, \mathbb{C})$와 일치한다. 이 critical point에 대응하는 Lefschetz thimble들 $\{\Gamma_p\}_{p \in \Crit(W_q)}$는 *$N$th rapid decay homology*
 
@@ -72,7 +72,7 @@ $$S_z^M=\{x \in \check{X} \mid \Real(W(x)/z) <-M\}$$
 
 이 식으로부터 $z$의 역할도 어느정도 보이는데, $z\rightarrow 0$인 경우 $e^{W_q/z}$는 $W_q$의 phase에 따라 급격히 진동하며, 따라서 적분의 dominant한 contribution은 stationary phase, 즉 $p$ 근처에서만 나타나게 된다. 우리는 mirror symmetry statement가 B-side에서는 $W_q$의 critical point에 대한 것임을 알고 있으므로 $z$의 역할은 명확하다. 
 
-다만 주의할 것은 $z$가 실제로는 real parameter가 아니라 complex parameter라는 것이다. 실제로 만일 $z$의 argument가 변한다면 $W_q$ 또한 해당 방향에 맞춰서 정렬되어야 real part가 될 것이므로 위의 $\Gamma_p$의 정의가 살짝 달라질 것이다. 이렇게 $z$를 변경할 때는 Lefschetz thimble이 정의하는 basis 자체가 달라지게 되며, 이는 (해당 글에서 명시적으로 언급하지는 않았지만) A-side의 Dubrovin connection에 대해서도 마찬가지이다. 즉, $\nabla^z$들 또한 $z$가 달라질 때에는 그 값이 달라질 것이지만, 우리가 주목하지 않았던 것일 뿐이며 이를 $\mathbb{C}^\ast$에서 살펴보면 더 풍부한 구조가 드러난다. 요컨대 $z \to 0^+$의 stationary phase asymptote를 보는 것은 이 구조의 한 section일 뿐으로, 우리는 이들이 담고 있는 데이터를 $\mathbb{C}^\ast$ 전체로 유지할 것이다. 
+다만 주의할 것은 $z$가 실제로는 real parameter가 아니라 complex parameter라는 것이다. 실제로 만일 $z$의 argument가 변한다면 $W_q$ 또한 해당 방향에 맞춰서 정렬되어야 real part가 될 것이므로 위의 $\Gamma_p$의 정의가 살짝 달라질 것이다. 이렇게 $z$를 변경할 때는 Lefschetz thimble이 정의하는 basis 자체가 달라지게 되며, 이는 (해당 글에서 명시적으로 언급하지는 않았지만) A-side의 Dubrovin connection에 대해서도 마찬가지이다. 즉, $\nabla^z$들 또한 $z$가 달라질 때에는 그 값이 달라질 것이지만, 우리가 주목하지 않았던 것일 뿐이며 이를 $\mathbb{C}^\ast$에서 살펴보면 더 풍부한 구조가 드러난다. 요컨대 $z \rightarrow 0^+$의 stationary phase asymptote를 보는 것은 이 구조의 한 section일 뿐으로, 우리는 이들이 담고 있는 데이터를 $\mathbb{C}^\ast$ 전체로 유지할 것이다. 
 
 지금까지의 논의를 정리하면 다음과 같다.
 
@@ -89,14 +89,14 @@ $$\mathcal{I}_{\Gamma_p}(q, z) := \int_{\Gamma_p} e^{W_q / z}\, \omega$$
 위에서 언급했듯, $e^{W_q/z}$는 $W_q$의 phase에 따라 급격히 진동하므로, 적분의 dominant contribution은 phase가 stationary한 점, 즉 critical point 근처에서만 발생한다. 다음 명제는 [\[사교기하학\] §Morse 이론과 stationary phase 근사, ⁋명제 16](/ko/math/symplectic_geometry/morse_stationary_phase#prop16)을 우리 세팅에 맞추어 다시 적어둔 것이다. 
 
 ::: 명제 3 (Stationary phase asymptotic)
-$W_q$의 non-degenerate critical point $p$와 이를 통과하는 Lefschetz thimble $\Gamma_p$에 대해, $z \to 0^+$에서
+$W_q$의 non-degenerate critical point $p$와 이를 통과하는 Lefschetz thimble $\Gamma_p$에 대해, $z \rightarrow 0^+$에서
 
 $$\mathcal{I}_{\Gamma_p}(q, z) \sim (2\pi z)^{N/2} \frac{e^{W_q(p)/z}}{\sqrt{\det\Hess_p(W_q)}} \big(1 + O(z)\big)$$
 
 이 성립한다. 여기서 $N = \dim_\mathbb{C} \check{X}$, $\Hess_p$는 $p$에서의 Hessian이며, $\sqrt{}$의 branch는 $\Gamma_p$의 orientation으로 결정된다.
 :::
 
-증명의 핵심은 $p$ 근방에서 [\[사교기하학\] §Morse 이론과 stationary phase 근사, ⁋정리 6](/ko/math/symplectic_geometry/morse_stationary_phase#thm6)을 사용하여 $W_q$를 quadratic form으로 환원한 뒤 Gaussian 적분을 적용하는 것이다. 어쨌든 우리 상황에서 중요한 것은 $z \to 0^+$일 때 oscillating integral이 *각 critical point의 local data*, 즉 critical value $W_q(p)$와 Hessian determinant로 완전히 결정된다는 사실이다. 특히 mirror symmetry isomorphism $\Jac(W_q) \cong QH^\ast(X_\Sigma)$ 관점에서, critical value들 $\{ W_q(p) \}$는 A-side에서는 quantum cohomology의 *canonical coordinate*로 해석된다.
+증명의 핵심은 $p$ 근방에서 [\[사교기하학\] §Morse 이론과 stationary phase 근사, ⁋정리 6](/ko/math/symplectic_geometry/morse_stationary_phase#thm6)을 사용하여 $W_q$를 quadratic form으로 환원한 뒤 Gaussian 적분을 적용하는 것이다. 어쨌든 우리 상황에서 중요한 것은 $z \rightarrow 0^+$일 때 oscillating integral이 *각 critical point의 local data*, 즉 critical value $W_q(p)$와 Hessian determinant로 완전히 결정된다는 사실이다. 특히 mirror symmetry isomorphism $\Jac(W_q) \cong QH^\ast(X_\Sigma)$ 관점에서, critical value들 $\{ W_q(p) \}$는 A-side에서는 quantum cohomology의 *canonical coordinate*로 해석된다.
 
 ## 가우스-마닌 접속
 
@@ -113,9 +113,9 @@ $$\{\mathcal{H}_{(q, z)}\}_{(q, z) \in B}$$
 이 family는 만일 $W_q$가 Morse type이라면 $B$ 위에 정의된 vector bundle $\mathcal{H}$를 정의한다는 것이 알려져 있다. 특히 이들 각각의 fiber가 잘 붙는다는 것은 앞서 Lefschetz thimble을 택할 때 $(q,z)$에 따라 continuously isotoped될 수 있는 것들을 모았기 때문에 가능하다. 즉, cycle $\Gamma$가 $(q, z)$의 변화에 따라 연속적으로 움직일 때 그와 pairing되는 cohomology class도 함께 "따라가도록" 평행 이동시킬 수 있고, 이 평행 이동을 connection 형태로 정리한 것이 *Gauss-Manin connection*이다.
 
 ::: 정의 4 (Gauss-Manin connection)
-Vector bundle $\mathcal{H} \to (\mathbb{C}^\ast)^r \times \mathbb{C}^\ast$ 위의 *Gauss-Manin connection* $\nabla^{GM}$은 다음 조건으로 유일하게 결정되는 flat connection이다.
+Vector bundle $\mathcal{H} \rightarrow (\mathbb{C}^\ast)^r \times \mathbb{C}^\ast$ 위의 *Gauss-Manin connection<sub>가우스-마닌 접속</sub>* $\nabla^{GM}$은 다음 조건으로 유일하게 결정되는 flat connection이다.
 
-> Section $\mathbf{s}: (q, z) \mapsto [\alpha(q, z)] \in \mathcal{H}_{(q,z)}$가 *$\nabla^{GM}$-flat*이라는 것은, [정의 2](#def2) 직후의 의미로 continuously isotoped된 *임의의* cycle family $\{\Gamma(q, z)\}$에 대해 *period*
+> Section $\mathbf{s}: (q, z) \mapsto [\alpha(q, z)] \in \mathcal{H}_{(q,z)}$가 *$\nabla^{GM}$-flat*이라는 것은, [정의 2](#def2) 직후의 의미로 continuously isotoped된 *임의의* cycle family $\{\Gamma(q, z)\}$에 대해 *period<sub>주기</sub>*
 > 
 > $$\Pi_\Gamma(q, z) := \int_{\Gamma(q, z)} \alpha(q, z)$$
 > 
@@ -147,7 +147,7 @@ $$\partial_{q_i}\!\left(e^{W_q/z}\,\omega\right) = \frac{\partial_{q_i} W_q}{z}\
 [§두브로빈 접속, ⁋정의 1](/ko/math/mirror_symmetry/dubrovin_connection#def1)의 A-model Dubrovin connection $\nabla^z$와 직접 비교 가능하도록, Gauss-Manin connection을 $z$만큼 rescaling한 *B-model connection*을 정의한다.
 
 ::: 정의 6 (B-model connection)
-$\mathcal{H}$ 위에 *B-model connection* $\nabla^z_B$을
+$\mathcal{H}$ 위에 *B-model connection<sub>B-model 접속</sub>* $\nabla^z_B$을
 
 $$\nabla^z_B := z\nabla^{GM}$$
 
@@ -158,7 +158,7 @@ $$\nabla^z_B := z\nabla^{GM}$$
 
 $$\nabla^z_{B, \partial_{q_i}}[e^{W_q/z}\omega] = \partial_{q_i} W_q \cdot [e^{W_q/z}\omega],\qquad \nabla^z_{B, z\partial_z}[e^{W_q/z}\omega] = -W_q \cdot [e^{W_q/z}\omega]$$
 
-가 성립한다. 이 rescaling으로 [명제 5](#prop5)의 $1/z$ 인자가 흡수되므로, $z \to 0$ 극한에서 B-model connection의 connection 1-form은 정확하게 cohomology class에 대한 $\partial_{q_i} W_q$의 곱셈이 된다. 이는 앞서 [§두브로빈 접속, ⁋주장 4](/ko/math/mirror_symmetry/dubrovin_connection#conj4)에서 살펴본 것과 같은 맥락으로, $z\rightarrow 0$인 상황에서 Frobenius manifold $M\times \mathbb{C}^\ast$에서 $z$를 $0$으로 보낼 때 Frobenius algebra의 product 구조를 복원해내는 것과 동일한 상황이다.
+가 성립한다. 이 rescaling으로 [명제 5](#prop5)의 $1/z$ 인자가 흡수되므로, $z \rightarrow 0$ 극한에서 B-model connection의 connection 1-form은 정확하게 cohomology class에 대한 $\partial_{q_i} W_q$의 곱셈이 된다. 이는 앞서 [§두브로빈 접속, ⁋주장 4](/ko/math/mirror_symmetry/dubrovin_connection#conj4)에서 살펴본 것과 같은 맥락으로, $z\rightarrow 0$인 상황에서 Frobenius manifold $M\times \mathbb{C}^\ast$에서 $z$를 $0$으로 보낼 때 Frobenius algebra의 product 구조를 복원해내는 것과 동일한 상황이다.
 
 위의 식은 cohomology class 차원의 statement이므로, 이를 구체적으로 계산하려면 임의의 Lefschetz thimble (즉 rapid decay homology의 basis)와 pair하여 실제 적분을 계산하면 된다. 그 결과는 다음의 
 

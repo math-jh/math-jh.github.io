@@ -198,7 +198,7 @@ $$(a,p)\equiv (b,q)\pmod{R}\iff aqs=bps\text{ for some $s\in S'$}$$
 를 정의하면, 이 관계는 $E\times S'$ 위의 연산과 compatible한 동치관계이고 따라서 $(E\times S')/R$이 monoid가 된다.
 
 ::: 정의 7
-위와 같이 얻어지는 monoid $(E\times S')/R$을 $S$를 분모로 갖는 $E$의 *monoid of fraction*이라 부르고 $E_S$로 표기한다. 이 monoid의 원소 $(a,p)$는 $a/p$로 표기한다. 
+위와 같이 얻어지는 monoid $(E\times S')/R$을 $S$를 분모로 갖는 $E$의 *monoid of fraction<sub>분수 모노이드</sub>*이라 부르고 $E_S$로 표기한다. 이 monoid의 원소 $(a,p)$는 $a/p$로 표기한다. 
 :::
 
 이 때, $E$는 monoid이므로 위의 논의와는 다르게 항등원 $1$을 가진다. 그럼 [명제 5](#prop5)에서의 homomorphism $\eta_S$은 명시적으로, $a\mapsto a/1$로 생각할 수 있다. 

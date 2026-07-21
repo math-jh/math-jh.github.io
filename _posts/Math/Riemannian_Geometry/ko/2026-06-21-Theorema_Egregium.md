@@ -16,7 +16,7 @@ published: false
 
 곡면 $M \subseteq \mathbb{R}^3$의 Gauss 곡률은 본래 외재적인 양으로 정의된다. 각 점에서 곡면이 주변 공간 안에서 법선 방향으로 얼마나 휘는지를 재는 shape operator의 행렬식이 곧 Gauss 곡률이며, 이는 곡면이 $\mathbb{R}^3$ 안에 어떻게 놓여 있는지에 의존하는 듯 보인다. 그런데 Gauss가 1827년에 발견한 *놀라운 정리<sub>Theorema Egregium</sub>*는 이 양이 실제로는 곡면 위의 거리, 즉 제1기본형식만으로 결정되는 *내재적* 불변량이라고 말한다. 따라서 Gauss 곡률은 곡면을 휘거나 구부려도 길이를 보존하는 한 변하지 않는다. 이 글에서는 [§제2기본형식, ⁋정리 6](/ko/math/riemannian_geometry/second_fundamental_form#thm6)에서 일반 submanifold에 대해 증명한 Gauss 방정식을 곡면의 경우에 적용하여 이 사실을 증명한다.
 
-이 글 전체에서 $M \subseteq \mathbb{R}^3$은 매장된 2차원 곡면이고, $g = \iota^\ast \bar g$는 표준 Euclid metric $\bar g$의 제한이며, $\nabla, \bar\nabla$는 각각 $(M, g)$와 $\mathbb{R}^3$의 Levi-Civita 접속이다. $M$의 codimension이 $1$이므로 각 점 $p$에서 단위 법벡터 $\nu$는 부호를 빼면 유일하고, 이에 대응하는 shape operator $S_\nu : T_p M \to T_p M$를 ([§제2기본형식, ⁋정의 4](/ko/math/riemannian_geometry/second_fundamental_form#def4)) 단순히 $S$로 적는다.
+이 글 전체에서 $M \subseteq \mathbb{R}^3$은 매장된 2차원 곡면이고, $g = \iota^\ast \bar g$는 표준 Euclid metric $\bar g$의 제한이며, $\nabla, \bar\nabla$는 각각 $(M, g)$와 $\mathbb{R}^3$의 Levi-Civita 접속이다. $M$의 codimension이 $1$이므로 각 점 $p$에서 단위 법벡터 $\nu$는 부호를 빼면 유일하고, 이에 대응하는 shape operator $S_\nu : T_p M \rightarrow T_p M$를 ([§제2기본형식, ⁋정의 4](/ko/math/riemannian_geometry/second_fundamental_form#def4)) 단순히 $S$로 적는다.
 
 ## 곡면의 Gauss 곡률
 
@@ -113,7 +113,7 @@ $$K = -\frac{1}{2\sqrt{EG}}\left( \partial_u \frac{G_u}{\sqrt{EG}} + \partial_v 
 Theorema Egregium의 본래 의미는 Gauss 곡률이 *국소 등거리변형*에 불변이라는 것이다. 두 곡면 사이의 diffeomorphism이 제1기본형식을 보존할 때 이를 *국소 등거리<sub>local isometry</sub>*라 부르는데, [정리 3](#thm3)에 의해 곡률 텐서는 제1기본형식만으로 결정되므로 국소 등거리는 Gauss 곡률을 점별로 보존한다.
 
 ::: 따름정리 5
-$\varphi : M \to M'$이 곡면 사이의 국소 등거리이면, 즉 $\varphi^\ast g' = g$이면, 모든 점 $p \in M$에서 $K_M(p) = K_{M'}(\varphi(p))$이다.
+$\varphi : M \rightarrow M'$이 곡면 사이의 국소 등거리이면, 즉 $\varphi^\ast g' = g$이면, 모든 점 $p \in M$에서 $K_M(p) = K_{M'}(\varphi(p))$이다.
 :::
 
 ::: 증명

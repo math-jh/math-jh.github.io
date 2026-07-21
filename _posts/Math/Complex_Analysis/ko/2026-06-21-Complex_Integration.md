@@ -21,7 +21,7 @@ holomorphic function의 미분 이론을 ([§복소정칙함수](/ko/math/comple
 적분의 정의역이 될 곡선을 먼저 정비한다. 곡선은 실구간을 평면으로 보내는 연속사상으로 보되, 적분에서 곡선의 *속도* $\gamma'(t)$가 필요하므로 미분가능성을 요구한다. 다만 꺾인 점을 가지는 곡선(가령 사각형의 경계)을 다루기 위해, 유한히 많은 점을 빼고 미분가능한 *조각마다 smooth* 곡선까지 허용한다.
 
 ::: 정의 1
-연속사상 $\gamma : [a, b] \to \mathbb{C}$가 *piecewise $C^1$ 곡선<sub>조각마다 C¹인 곡선</sub>*이라는 것은, 구간의 분할 $a = t_0 < t_1 < \cdots < t_n = b$이 있어 각 부분구간 $[t_{k-1}, t_k]$ 위에서 $\gamma$가 $C^1$급(곧 도함수 $\gamma'$이 존재하고 연속)인 것이다. 점 $\gamma(a)$를 곡선의 *시점<sub>initial point</sub>*, $\gamma(b)$를 *종점<sub>terminal point</sub>*이라 하고, $\gamma(a) = \gamma(b)$이면 $\gamma$를 *닫힌 곡선<sub>closed curve</sub>*이라 한다.
+연속사상 $\gamma : [a, b] \rightarrow \mathbb{C}$가 *piecewise $C^1$ 곡선<sub>조각마다 C¹인 곡선</sub>*이라는 것은, 구간의 분할 $a = t_0 < t_1 < \cdots < t_n = b$이 있어 각 부분구간 $[t_{k-1}, t_k]$ 위에서 $\gamma$가 $C^1$급(곧 도함수 $\gamma'$이 존재하고 연속)인 것이다. 점 $\gamma(a)$를 곡선의 *시점<sub>initial point</sub>*, $\gamma(b)$를 *종점<sub>terminal point</sub>*이라 하고, $\gamma(a) = \gamma(b)$이면 $\gamma$를 *닫힌 곡선<sub>closed curve</sub>*이라 한다.
 :::
 
 여기서 $\gamma$를 실수부와 허수부로 갈라 $\gamma(t) = x(t) + i\,y(t)$로 적으면, 그 도함수는 $\gamma'(t) = x'(t) + i\,y'(t)$로 정의되는 복소숫값 함수이다. 곧 복소숫값 함수의 미분은 실허 두 성분을 각각 미분한 것이며, 각 부분구간 위에서 $x, y$가 $C^1$이라는 뜻이다. 분할의 끝점 $t_k$에서는 좌·우 도함수가 다를 수 있어 $\gamma'$이 불연속일 수 있지만, 그런 점은 유한 개뿐이므로 아래 적분에는 영향을 주지 않는다. 같은 자취를 그리는 곡선이라도 매개변수 $t$를 어떻게 잡느냐에 따라 사상 $\gamma$ 자체는 달라지는데, 적분값이 이 선택에 무관함은 [명제 4](#prop4)에서 확인한다.
@@ -29,7 +29,7 @@ holomorphic function의 미분 이론을 ([§복소정칙함수](/ko/math/comple
 이제 곡선 위에서 함수를 적분한다. 발상은 곡선을 따라 미소 변위 $dz = \gamma'(t)\,dt$를 잡고 $f$ 값을 곱해 더하는 것으로, 형식적으로는 치환 $z = \gamma(t)$를 통해 실변수 적분으로 환원된다.
 
 ::: 정의 2
-$\gamma : [a, b] \to \mathbb{C}$가 piecewise $C^1$ 곡선이고 $f$가 $\gamma$의 자취 $\gamma([a,b])$를 포함하는 열린집합에서 정의된 연속함수일 때, $\gamma$를 따르는 $f$의 *경로적분<sub>contour integral</sub>*을
+$\gamma : [a, b] \rightarrow \mathbb{C}$가 piecewise $C^1$ 곡선이고 $f$가 $\gamma$의 자취 $\gamma([a,b])$를 포함하는 열린집합에서 정의된 연속함수일 때, $\gamma$를 따르는 $f$의 *경로적분<sub>contour integral</sub>*을
 
 $$\int_\gamma f(z)\,dz = \int_a^b f(\gamma(t))\,\gamma'(t)\,dt$$
 
@@ -55,12 +55,12 @@ $$\oint_\gamma z\,dz = \int_0^{2\pi} e^{it}\,(i e^{it})\,dt = i\int_0^{2\pi} e^{
 경로적분은 정의가 실변수 적분으로 환원되므로, 실적분의 성질이 그대로 옮겨 온다. 먼저 피적분함수에 대한 선형성과 곡선의 방향·이어붙이기에 대한 거동을 정리한다.
 
 ::: 명제 4
-$\gamma : [a, b] \to \mathbb{C}$가 piecewise $C^1$ 곡선이고 $f, g$가 $\gamma$의 자취를 포함하는 열린집합에서 연속이라 하자. 그러면 다음이 성립한다.
+$\gamma : [a, b] \rightarrow \mathbb{C}$가 piecewise $C^1$ 곡선이고 $f, g$가 $\gamma$의 자취를 포함하는 열린집합에서 연속이라 하자. 그러면 다음이 성립한다.
 
 1. (선형성) 임의의 복소수 $\alpha, \beta$에 대하여 $\displaystyle\int_\gamma (\alpha f + \beta g)\,dz = \alpha\int_\gamma f\,dz + \beta\int_\gamma g\,dz$이다.
-2. (재매개화 불변) $\varphi : [c, d] \to [a, b]$가 $\varphi(c) = a$, $\varphi(d) = b$인 $C^1$급 증가 전단사이면, $\tilde{\gamma} = \gamma \circ \varphi$에 대하여 $\displaystyle\int_{\tilde\gamma} f\,dz = \int_\gamma f\,dz$이다.
+2. (재매개화 불변) $\varphi : [c, d] \rightarrow [a, b]$가 $\varphi(c) = a$, $\varphi(d) = b$인 $C^1$급 증가 전단사이면, $\tilde{\gamma} = \gamma \circ \varphi$에 대하여 $\displaystyle\int_{\tilde\gamma} f\,dz = \int_\gamma f\,dz$이다.
 3. (역방향) $\gamma$를 거꾸로 지나는 곡선 $(-\gamma)(t) = \gamma(a + b - t)$ ($t \in [a, b]$) 에 대하여 $\displaystyle\int_{-\gamma} f\,dz = -\int_\gamma f\,dz$이다.
-4. (이어붙이기) $\gamma_1 : [a, b] \to \mathbb{C}$의 종점이 $\gamma_2 : [b, c] \to \mathbb{C}$의 시점과 같아 이어붙인 곡선 $\gamma_1 + \gamma_2$을 이룰 때, $\displaystyle\int_{\gamma_1 + \gamma_2} f\,dz = \int_{\gamma_1} f\,dz + \int_{\gamma_2} f\,dz$이다.
+4. (이어붙이기) $\gamma_1 : [a, b] \rightarrow \mathbb{C}$의 종점이 $\gamma_2 : [b, c] \rightarrow \mathbb{C}$의 시점과 같아 이어붙인 곡선 $\gamma_1 + \gamma_2$을 이룰 때, $\displaystyle\int_{\gamma_1 + \gamma_2} f\,dz = \int_{\gamma_1} f\,dz + \int_{\gamma_2} f\,dz$이다.
 :::
 
 ::: 증명
@@ -70,13 +70,13 @@ $\gamma : [a, b] \to \mathbb{C}$가 piecewise $C^1$ 곡선이고 $f, g$가 $\gam
 
 $$\int_{\tilde\gamma} f\,dz = \int_c^d f(\gamma(\varphi(s)))\,\gamma'(\varphi(s))\,\varphi'(s)\,ds$$
 
-이고, $t = \varphi(s)$로 치환하면 $dt = \varphi'(s)\,ds$이고 $\varphi$가 증가하여 적분 구간이 $s : c \to d$에서 $t : a \to b$로 바뀌므로, 우변이 $\int_a^b f(\gamma(t))\gamma'(t)\,dt = \int_\gamma f\,dz$가 된다.
+이고, $t = \varphi(s)$로 치환하면 $dt = \varphi'(s)\,ds$이고 $\varphi$가 증가하여 적분 구간이 $s : c \rightarrow d$에서 $t : a \rightarrow b$로 바뀌므로, 우변이 $\int_a^b f(\gamma(t))\gamma'(t)\,dt = \int_\gamma f\,dz$가 된다.
 
 (3) $(-\gamma)(t) = \gamma(a + b - t)$의 도함수는 연쇄법칙으로 $-\gamma'(a + b - t)$이므로
 
 $$\int_{-\gamma} f\,dz = \int_a^b f(\gamma(a + b - t))\,\bigl(-\gamma'(a + b - t)\bigr)\,dt$$
 
-이다. $u = a + b - t$로 치환하면 $du = -dt$이고 구간이 $t : a \to b$에서 $u : b \to a$로 뒤집히므로
+이다. $u = a + b - t$로 치환하면 $du = -dt$이고 구간이 $t : a \rightarrow b$에서 $u : b \rightarrow a$로 뒤집히므로
 
 $$\int_{-\gamma} f\,dz = \int_b^a f(\gamma(u))\,\bigl(-\gamma'(u)\bigr)\,(-du) = \int_b^a f(\gamma(u))\gamma'(u)\,du = -\int_a^b f(\gamma(u))\gamma'(u)\,du$$
 
@@ -92,7 +92,7 @@ $$\int_{\gamma_1 + \gamma_2} f\,dz = \int_a^c f(\gamma(t))\gamma'(t)\,dt = \int_
 명제 4의 둘째 항은 적분값이 곡선의 자취와 그 진행 방향만으로 결정되고 구체적인 매개변수 선택에는 무관함을 말한다. 단조 증가 재매개화는 같은 자취를 같은 방향으로 다시 훑는 것이므로, 가령 단위원을 $e^{it}$로 한 바퀴 돌든 $e^{2\pi i s^2}$ 류로 속도를 바꿔 돌든 적분값이 같다. 셋째 항의 역방향 부호는 정적분 $\int_a^b = -\int_b^a$의 복소판이며, 넷째 항과 결합하면 닫힌 곡선을 여러 호로 쪼개 따로 적분한 뒤 합산할 수 있게 해 준다. 다음으로 적분의 크기를 곡선의 길이로 가늠하는 부등식을 세우는데, 이를 위해 곡선의 길이를 정의한다.
 
 ::: 정의 5
-piecewise $C^1$ 곡선 $\gamma : [a, b] \to \mathbb{C}$의 *길이<sub>length</sub>*를
+piecewise $C^1$ 곡선 $\gamma : [a, b] \rightarrow \mathbb{C}$의 *길이<sub>length</sub>*를
 
 $$\mathrm{length}(\gamma) = \int_a^b \lvert \gamma'(t)\rvert\,dt$$
 
@@ -102,7 +102,7 @@ $$\mathrm{length}(\gamma) = \int_a^b \lvert \gamma'(t)\rvert\,dt$$
 피적분함수 $\lvert\gamma'(t)\rvert = \sqrt{x'(t)^2 + y'(t)^2}$은 곡선의 순간 속력이므로, 그 적분은 곡선을 따라 이동한 총 거리, 곧 호의 길이이다. 가령 단위원 $\gamma(t) = e^{it}$ ($t \in [0, 2\pi]$) 은 $\lvert\gamma'(t)\rvert = \lvert i e^{it}\rvert = 1$이라 $\mathrm{length}(\gamma) = \int_0^{2\pi} 1\,dt = 2\pi$로, 반지름 $1$인 원의 둘레와 일치한다. 이 길이를 써서 경로적분의 크기를 위로 어림한다.
 
 ::: 명제 6 (ML 부등식)
-$\gamma : [a, b] \to \mathbb{C}$가 piecewise $C^1$ 곡선이고 $f$가 $\gamma$의 자취 위에서 연속이라 하자. 그러면
+$\gamma : [a, b] \rightarrow \mathbb{C}$가 piecewise $C^1$ 곡선이고 $f$가 $\gamma$의 자취 위에서 연속이라 하자. 그러면
 
 $$\left\lvert \int_\gamma f(z)\,dz \right\rvert \leq \Bigl(\sup_{z \in \gamma([a,b])} \lvert f(z)\rvert\Bigr)\,\mathrm{length}(\gamma)$$
 
@@ -110,7 +110,7 @@ $$\left\lvert \int_\gamma f(z)\,dz \right\rvert \leq \Bigl(\sup_{z \in \gamma([a
 :::
 
 ::: 증명
-먼저 임의의 복소숫값 연속함수 $g : [a, b] \to \mathbb{C}$에 대하여 $\bigl\lvert\int_a^b g\,dt\bigr\rvert \leq \int_a^b \lvert g\rvert\,dt$임에 유의한다. 적분값 $I = \int_a^b g\,dt$가 $0$이면 자명하고, $I \neq 0$이면 $I = \lvert I\rvert e^{i\theta}$로 적어 $e^{-i\theta}$를 곱하면
+먼저 임의의 복소숫값 연속함수 $g : [a, b] \rightarrow \mathbb{C}$에 대하여 $\bigl\lvert\int_a^b g\,dt\bigr\rvert \leq \int_a^b \lvert g\rvert\,dt$임에 유의한다. 적분값 $I = \int_a^b g\,dt$가 $0$이면 자명하고, $I \neq 0$이면 $I = \lvert I\rvert e^{i\theta}$로 적어 $e^{-i\theta}$를 곱하면
 
 $$\lvert I\rvert = e^{-i\theta} I = \int_a^b e^{-i\theta} g(t)\,dt = \Real \int_a^b e^{-i\theta} g(t)\,dt = \int_a^b \Real\bigl(e^{-i\theta} g(t)\bigr)\,dt$$
 
@@ -123,7 +123,7 @@ $$\left\lvert \int_\gamma f\,dz \right\rvert = \left\lvert \int_a^b f(\gamma(t))
 이다. 자취 위에서 $\lvert f(\gamma(t))\rvert \leq \sup_{z}\lvert f(z)\rvert =: M$이므로 우변은 $M\int_a^b \lvert\gamma'(t)\rvert\,dt = M\,\mathrm{length}(\gamma)$ 이하이다.
 :::
 
-ML 부등식은 적분의 정확한 값을 모르더라도 그 크기에 상한을 주므로, 곡선을 변형시키며 적분이 $0$으로 가는지를 가늠하는 데 두루 쓰인다. 이름의 $M$은 피적분함수의 최댓값(maximum), $L$은 곡선의 길이(length)를 가리킨다. 가령 반지름 $R$인 원호 위에서 $\lvert f\rvert \leq M_R$이고 $M_R \cdot R \to 0$이면 그 호를 따른 적분이 $0$으로 감을 즉시 알 수 있는데, 이런 어림이 닫힌 곡선 적분의 평가에서 결정적 역할을 한다.
+ML 부등식은 적분의 정확한 값을 모르더라도 그 크기에 상한을 주므로, 곡선을 변형시키며 적분이 $0$으로 가는지를 가늠하는 데 두루 쓰인다. 이름의 $M$은 피적분함수의 최댓값(maximum), $L$은 곡선의 길이(length)를 가리킨다. 가령 반지름 $R$인 원호 위에서 $\lvert f\rvert \leq M_R$이고 $M_R \cdot R \rightarrow 0$이면 그 호를 따른 적분이 $0$으로 감을 즉시 알 수 있는데, 이런 어림이 닫힌 곡선 적분의 평가에서 결정적 역할을 한다.
 
 ## 원시함수와 미적분의 기본정리
 
@@ -136,7 +136,7 @@ ML 부등식은 적분의 정확한 값을 모르더라도 그 크기에 상한�
 원시함수는 실변수의 부정적분에 해당하는 복소판이며, holomorphic function $F$의 도함수 $F'$이 다시 $f$가 되는 관계로 정의된다. 가령 $n \geq 0$인 정수에 대해 $z^n$은 평면 전체에서 원시함수 $z^{n+1}/(n+1)$을 가지고, $e^z$는 자기 자신을 원시함수로 가진다 ([§복소정칙함수, ⁋정의 10](/ko/math/complex_analysis/holomorphic_functions#def10)에서 $(e^z)' = e^z$). 원시함수가 존재할 때, 경로적분은 다음과 같이 끝값의 차로 환원된다.
 
 ::: 정리 8 (경로적분에 대한 미적분의 기본정리)
-$\Omega \subseteq \mathbb{C}$가 열려 있고 $f$가 $\Omega$에서 연속이며 $F$가 $\Omega$ 위의 $f$의 원시함수라 하자. 그러면 시점 $\gamma(a)$, 종점 $\gamma(b)$를 갖고 자취가 $\Omega$에 들어 있는 임의의 piecewise $C^1$ 곡선 $\gamma : [a, b] \to \mathbb{C}$에 대하여
+$\Omega \subseteq \mathbb{C}$가 열려 있고 $f$가 $\Omega$에서 연속이며 $F$가 $\Omega$ 위의 $f$의 원시함수라 하자. 그러면 시점 $\gamma(a)$, 종점 $\gamma(b)$를 갖고 자취가 $\Omega$에 들어 있는 임의의 piecewise $C^1$ 곡선 $\gamma : [a, b] \rightarrow \mathbb{C}$에 대하여
 
 $$\int_\gamma f(z)\,dz = F(\gamma(b)) - F(\gamma(a))$$
 

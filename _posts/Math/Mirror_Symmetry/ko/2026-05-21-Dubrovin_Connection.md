@@ -34,10 +34,10 @@ $$\mathcal{C}_\alpha(\partial_\beta) = \partial_\alpha \circ \partial_\beta = \s
 
 $$\nabla^z_{\partial_\alpha} = \partial_\alpha + \frac{1}{z}\, \mathcal{C}_\alpha$$
 
-를 생각하면, $z \to \infty$에서는 Levi-Civita connection $\nabla$로 수렴하고 $z \to 0$에서는 product $\circ$의 classical limit으로 발산하는 하나의 family로 묶을 수 있으며, 실제로 $z\rightarrow 0$인 계산을 할 때는 이를 rescale하여 $z\nabla^z_{\partial_\alpha} = z\partial_\alpha + \mathcal{C}_\alpha$의 $z \to 0$ leading term으로 빼내면 된다. 어쨌든, 이러한 의미에서 $\nabla^z$는 두 구조를 연결하는 *flat pencil of connections*이며, 물리적으로는 이를 string coupling constant로 해석한다. 
+를 생각하면, $z \rightarrow \infty$에서는 Levi-Civita connection $\nabla$로 수렴하고 $z \rightarrow 0$에서는 product $\circ$의 classical limit으로 발산하는 하나의 family로 묶을 수 있으며, 실제로 $z\rightarrow 0$인 계산을 할 때는 이를 rescale하여 $z\nabla^z_{\partial_\alpha} = z\partial_\alpha + \mathcal{C}_\alpha$의 $z \rightarrow 0$ leading term으로 빼내면 된다. 어쨌든, 이러한 의미에서 $\nabla^z$는 두 구조를 연결하는 *flat pencil of connections*이며, 물리적으로는 이를 string coupling constant로 해석한다. 
 
 ::: 정의 1
-Frobenius manifold $M$과 auxiliary complex parameter $z \in \mathbb{C}^\ast$를 생각하자. 그럼 *Dubrovin connection* $\nabla^z$는 projection
+Frobenius manifold $M$과 auxiliary complex parameter $z \in \mathbb{C}^\ast$를 생각하자. 그럼 *Dubrovin connection<sub>두브로빈 접속</sub>* $\nabla^z$는 projection
 
 $$\pr_1: M\times \mathbb{C}^\ast \rightarrow M$$
 
@@ -49,7 +49,7 @@ $$\nabla^z_{\partial_\alpha} = \partial_\alpha + \frac{1}{z}\, \mathcal{C}_\alph
 
 $$\nabla^z_{\partial_z} = \partial_z - \frac{1}{z^2}E\circ(-) + \frac{1}{z}\mu$$
 
-으로 주어진다. 여기서 $E$는 [§프로베니우스 다양체, ⁋정의 5](/ko/math/mirror_symmetry/frobenius_manifold#def5)의 Euler vector field이고, $\mu$는 *grading operator*로, flat coordinate $t^\alpha$에 대응하는 cohomology class $\sigma^\alpha$의 절반 차수 $d_\alpha = \tfrac{1}{2}\deg\sigma^\alpha$와 conformal dimension $d$로부터 $\mu(\partial_\alpha) = (d_\alpha - d/2)\, \partial_\alpha$로 정의된다.
+으로 주어진다. 여기서 $E$는 [§프로베니우스 다양체, ⁋정의 5](/ko/math/mirror_symmetry/frobenius_manifold#def5)의 Euler vector field이고, $\mu$는 *grading operator<sub>등급 연산자</sub>*로, flat coordinate $t^\alpha$에 대응하는 cohomology class $\sigma^\alpha$의 절반 차수 $d_\alpha = \tfrac{1}{2}\deg\sigma^\alpha$와 conformal dimension $d$로부터 $\mu(\partial_\alpha) = (d_\alpha - d/2)\, \partial_\alpha$로 정의된다.
 :::
 
 앞서 [§프로베니우스 다양체, ⁋정의 5](/ko/math/mirror_symmetry/frobenius_manifold#def5)에서 Frobenius manifold를 정의할 때, 각 점에서의 Frobenius algebra의 grading structure를 담기 위해 $E$를 도입했던 것을 기억하자. 구체적으로, 

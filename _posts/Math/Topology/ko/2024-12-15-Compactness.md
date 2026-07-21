@@ -112,7 +112,7 @@ Hausdorff space의 부분공간은 다시 Hausdorff이므로 국소적 옹골성
 Compact가 아닌 공간을 compact로 만드는 가장 경제적인 방법은 부족한 부분을 단 하나의 점으로 메우는 것이다. 직관적으로는 $\mathbb{R}$의 양끝으로 달아나는 점들을 하나의 무한원점으로 모아 원을 만드는 것과 같다. 우리는 이 옹골화를 임의의 위상공간에 대해 명시적으로 정식화하고, 그것이 compact 공간을 낳음을 보인 뒤, 그 구성이 언제 Hausdorff 공간을 낳는지까지 규명한다.
 
 ::: 정의 8
-위상공간 $X$가 주어졌다 하자. $X$에 속하지 않는 새로운 점 하나를 $\infty$라 적고 집합 $X^+=X\cup\{\infty\}$을 생각한다. $X^+$의 부분집합 가운데 다음 두 종류를 열린집합으로 선언한다. 첫째로 $X$의 열린집합 $U$, 둘째로 $X$에서 compact이며 닫힌 부분집합 $C$에 대한 $X^+\setminus C$이다. 이렇게 얻은 위상공간 $X^+$를 $X$의 *one-point compactification<sub>일점 옹골화</sub>*, 또는 *Alexandroff compactification*이라 부른다.
+위상공간 $X$가 주어졌다 하자. $X$에 속하지 않는 새로운 점 하나를 $\infty$라 적고 집합 $X^+=X\cup\{\infty\}$을 생각한다. $X^+$의 부분집합 가운데 다음 두 종류를 열린집합으로 선언한다. 첫째로 $X$의 열린집합 $U$, 둘째로 $X$에서 compact이며 닫힌 부분집합 $C$에 대한 $X^+\setminus C$이다. 이렇게 얻은 위상공간 $X^+$를 $X$의 *one-point compactification<sub>일점 옹골화</sub>*, 또는 *Alexandroff compactification<sub>알렉산드로프 콤팩트화</sub>*이라 부른다.
 :::
 
 이 선언이 실제로 [§열린집합, ⁋정의 1](/ko/math/topology/open_sets#def1)의 위상 공리를 만족함을 확인해야 한다. 공집합은 $X$의 열린집합이므로 첫째 종류에 속하고, 공집합은 compact이며 닫힌집합이므로 $X^+=X^+\setminus\emptyset$은 둘째 종류에 속한다. 두 열린집합의 교집합에 대해서는 세 경우를 따진다. 첫째 종류 둘의 교집합은 $X$의 열린집합이다. 둘째 종류 둘의 교집합은 $(X^+\setminus C)\cap(X^+\setminus D)=X^+\setminus(C\cup D)$이고 $C\cup D$가 compact인 닫힌집합이므로 다시 둘째 종류이다. 서로 다른 종류의 교집합은 $U\cap(X^+\setminus C)=U\cap(X\setminus C)$이며 $C$가 닫힌집합이므로 $X\setminus C$가 열린집합이 되어 $X$의 열린집합, 곧 첫째 종류이다. 임의의 합집합에 대해서도 마찬가지로, 첫째 종류들의 합집합은 열린집합이고, 둘째 종류들의 합집합 $\bigcup_\alpha(X^+\setminus C_\alpha)=X^+\setminus\bigcap_\alpha C_\alpha$은 $\bigcap_\alpha C_\alpha$가 어떤 $C_\alpha$의 닫힌 부분집합으로서 compact이므로 ([§옹골공간, ⁋보조정리 3](/ko/math/topology/compact_spaces#lem3)) 둘째 종류이며, 두 종류가 섞인 합집합은 $U\cup(X^+\setminus C)=X^+\setminus(C\cap(X\setminus U))$인데 $C\cap(X\setminus U)$가 compact인 닫힌집합이므로 둘째 종류이다.
@@ -153,14 +153,14 @@ $X^+$의 임의의 open covering $(O_i)_{i\in I}$이 주어졌다 하자. $\inft
 [정리 10](#thm10)과 [정리 11](#thm11)를 합치면, $X$가 LCH space일 때 $X^+$는 compact Hausdorff space가 되고 [명제 9](#prop9)에 의해 $X$는 그 안에 열린 부분공간으로 매장된다. 특히 $X$가 compact가 아니라면 이 매장은 조밀하다. 이것이 Alexandroff 정리의 존재 부분, 곧 임의의 LCH space가 어떤 compact Hausdorff space에 조밀한 열린 부분공간으로 매장된다는 사실이다. 남은 것은 이러한 옹골화가 본질적으로 유일하다는 사실이며, 이는 다음의 보편성으로 정식화된다.
 
 ::: 정리 12
-LCH space $X$가 주어졌다 하자. compact Hausdorff space $Y$와 점 $p\in Y$, 그리고 homeomorphism $\varphi:X\to Y\setminus\{p\}$이 주어졌다 하면, 유일한 homeomorphism $h:X^+\to Y$가 존재하여 $X$ 위에서 $h=\varphi$이고 $h(\infty)=p$이다.
+LCH space $X$가 주어졌다 하자. compact Hausdorff space $Y$와 점 $p\in Y$, 그리고 homeomorphism $\varphi:X\rightarrow Y\setminus\{p\}$이 주어졌다 하면, 유일한 homeomorphism $h:X^+\rightarrow Y$가 존재하여 $X$ 위에서 $h=\varphi$이고 $h(\infty)=p$이다.
 :::
 ::: 증명
 $\varphi$를 통해 $X$와 $Y\setminus\{p\}$을 동일시하고, $X$를 $Y$의 부분집합으로 본다. $Y$가 Hausdorff이므로 $\{p\}$는 $Y$의 닫힌집합이고, 따라서 $X=Y\setminus\{p\}$는 $Y$의 열린 부분공간이다. 즉 $X$의 위상은 $Y$로부터 유도된 부분공간 위상과 일치한다.
 
 이제 $Y$의 열린집합이 정확히 $X^+$의 열린집합과 대응함을 보인다. $Y$의 열린집합 $O$가 $p$를 포함하지 않으면 $O\subseteq X$이고 $X$가 $Y$의 열린 부분공간이므로 $O$는 $X$의 열린집합, 곧 [정의 8](#def8)의 첫째 종류이다. 거꾸로 $X$의 열린집합은 $X$가 $Y$에서 열린집합이므로 $Y$의 열린집합이다. 한편 $Y$의 열린집합 $O$가 $p$를 포함하면 $Y\setminus O$는 compact 공간 $Y$의 닫힌집합이므로 compact이고 ([§옹골공간, ⁋보조정리 3](/ko/math/topology/compact_spaces#lem3)), $Y\setminus O\subseteq X$이며 $Y$에서 닫힌집합이므로 $X$에서도 닫힌집합이다. 따라서 $O=X^+\setminus(Y\setminus O)$은 $X$의 compact인 닫힌집합의 여집합, 곧 둘째 종류이다. 거꾸로 $X$의 compact인 닫힌집합 $C$에 대하여 $C$는 $Y$에서도 compact이고 $Y$가 Hausdorff이므로 닫힌집합이어서 ([§옹골공간, ⁋따름정리 5](/ko/math/topology/compact_spaces#cor5)) $Y\setminus C$는 $p$를 품는 $Y$의 열린집합이다.
 
-그러므로 $p$를 $\infty$와 동일시하는 집합 사이의 대응 $h:X^+\to Y$는 열린집합을 열린집합으로, 그 역도 마찬가지로 대응시키는 전단사이며, 따라서 homeomorphism이다. $h$는 $X$ 위에서 $\varphi$와 일치하고 $\infty$를 $p$로 보내야 하므로 유일하다.
+그러므로 $p$를 $\infty$와 동일시하는 집합 사이의 대응 $h:X^+\rightarrow Y$는 열린집합을 열린집합으로, 그 역도 마찬가지로 대응시키는 전단사이며, 따라서 homeomorphism이다. $h$는 $X$ 위에서 $\varphi$와 일치하고 $\infty$를 $p$로 보내야 하므로 유일하다.
 :::
 
 [정리 12](#thm12)은 LCH space $X$에 한 점을 더해 compact Hausdorff space를 만드는 방법이 위상동형을 무시하면 오직 하나뿐임을 말한다. 이것이 Alexandroff 정리의 유일성 부분을 보편성의 언어로 서술한 것이다. 이 유일성 덕분에 우리는 이후 $X^+$를 그 구체적 구성과 무관하게 다룰 수 있고, 실제 계산에서는 임의의 편리한 compact Hausdorff 모델을 골라 $X^+$와 동일시하면 된다.
@@ -178,7 +178,7 @@ $\varphi$를 통해 $X$와 $Y\setminus\{p\}$을 동일시하고, $X$를 $Y$의 �
 ::: 예시 14
 $n$-구면 $S^n=\{x\in\mathbb{R}^{n+1}\mid\lVert x\rVert=1\}$의 북극 $N=(0,\ldots,0,1)$을 생각하자. Stereographic projection
 
-$$\sigma:S^n\setminus\{N\}\to\mathbb{R}^n,\qquad \sigma(x_1,\ldots,x_{n+1})=\frac{1}{1-x_{n+1}}(x_1,\ldots,x_n)$$
+$$\sigma:S^n\setminus\{N\}\rightarrow\mathbb{R}^n,\qquad \sigma(x_1,\ldots,x_{n+1})=\frac{1}{1-x_{n+1}}(x_1,\ldots,x_n)$$
 
 은 $S^n\setminus\{N\}$과 $\mathbb{R}^n$ 사이의 homeomorphism임이 잘 알려져 있다. $S^n$은 $\mathbb{R}^{n+1}$의 닫힌 유계 부분집합이므로 Heine–Borel 정리에 의해 compact이고, 부분공간으로서 Hausdorff이다. 따라서 $S^n$은 compact Hausdorff space이고 $N$이라는 한 점을 제거한 것이 $\mathbb{R}^n$과 homeomorphic하므로, [정리 12](#thm12)에 의하여 유일한 homeomorphism
 
@@ -194,7 +194,7 @@ Discrete space의 일점 옹골화는 수렴하는 점열이라는 매우 구체
 
 이 공간은 실수 안의 익숙한 집합으로 실현된다. 함수
 
-$$f:\mathbb{N}^+\to\mathbb{R},\qquad f(n)=\frac1n\quad(n\in\mathbb{N}),\qquad f(\infty)=0$$
+$$f:\mathbb{N}^+\rightarrow\mathbb{R},\qquad f(n)=\frac1n\quad(n\in\mathbb{N}),\qquad f(\infty)=0$$
 
 을 생각하면, $f$는 $\mathbb{N}^+$과 $\{0\}\cup\{1/n\mid n\geq 1\}$ 사이의 전단사이다. 각 $n\in\mathbb{N}$은 $\mathbb{N}^+$에서 isolated point이고 그 상 $1/n$도 $\{0\}\cup\{1/n\}$에서 isolated point이며, $\infty$의 cofinite 근방이 $0$의 근방으로 옮겨지므로 $f$는 연속이다. 정의역이 compact이고 공역이 Hausdorff이므로 [§옹골공간, ⁋명제 9](/ko/math/topology/compact_spaces#prop9)에 의하여 $f$는 homeomorphism이다. 즉 $\mathbb{N}^+$은 하나의 극한점을 지닌 수렴하는 점열과 위상동형이다.
 :::
@@ -207,9 +207,9 @@ $$f:\mathbb{N}^+\to\mathbb{R},\qquad f(n)=\frac1n\quad(n\in\mathbb{N}),\qquad f(
 임의의 LCH space는 completely regular이다. 따라서 임의의 LCH space는 Tychonoff space이다. ([§하우스도르프 공간, ⁋정의 3](/ko/math/topology/Hausdorff_spaces#def3))
 :::
 ::: 증명
-먼저 임의의 compact Hausdorff space $Y$가 completely regular임을 보인다. 점 $p\in Y$와 이를 포함하지 않는 닫힌집합 $C\subseteq Y$가 주어졌다 하자. $Y$는 Hausdorff이므로 $T_1$이고 따라서 $\{p\}$는 닫힌집합이며, $\{p\}$와 $C$는 서로소인 두 닫힌집합이다. $Y$는 normal이므로 ([§옹골공간, ⁋명제 7](/ko/math/topology/compact_spaces#prop7)) Urysohn 보조정리에 의하여 연속함수 $g:Y\to[0,1]$이 존재하여 $\{p\}$에서 $0$, $C$에서 $1$의 값을 갖는다. ([§Urysohn 보조정리와 Tietze 확장정리, ⁋정리 2](/ko/math/topology/urysohn_and_tietze#thm2)) 이는 곧 $p$와 $C$가 연속함수로 분리가능함을 뜻하므로 $Y$는 completely regular이다.
+먼저 임의의 compact Hausdorff space $Y$가 completely regular임을 보인다. 점 $p\in Y$와 이를 포함하지 않는 닫힌집합 $C\subseteq Y$가 주어졌다 하자. $Y$는 Hausdorff이므로 $T_1$이고 따라서 $\{p\}$는 닫힌집합이며, $\{p\}$와 $C$는 서로소인 두 닫힌집합이다. $Y$는 normal이므로 ([§옹골공간, ⁋명제 7](/ko/math/topology/compact_spaces#prop7)) Urysohn 보조정리에 의하여 연속함수 $g:Y\rightarrow[0,1]$이 존재하여 $\{p\}$에서 $0$, $C$에서 $1$의 값을 갖는다. ([§Urysohn 보조정리와 Tietze 확장정리, ⁋정리 2](/ko/math/topology/urysohn_and_tietze#thm2)) 이는 곧 $p$와 $C$가 연속함수로 분리가능함을 뜻하므로 $Y$는 completely regular이다.
 
-이제 $X$가 LCH라 하자. [정리 10](#thm10)과 [정리 11](#thm11)에 의하여 $X^+$는 compact Hausdorff space이므로 위에서 본 대로 completely regular이다. $X$는 [명제 9](#prop9)에 의해 $X^+$의 부분공간이다. 완전정칙성은 부분공간으로 유전됨을 보이자. $x\in X$와 이를 포함하지 않는 $X$의 닫힌집합 $C$가 주어지면, 부분공간의 닫힌집합의 성질에 의해 $X^+$의 닫힌집합 $C'$이 존재하여 $C=C'\cap X$이다. $x\in X$이고 $x\notin C$이므로 $x\notin C'$이며, $X^+$가 completely regular이므로 연속함수 $g:X^+\to[0,1]$이 존재하여 $g(x)=0$이고 $C'$에서 $1$의 값을 갖는다. $g$를 $X$로 제한한 $g\vert_X$는 연속함수로서 $x$와 $C\subseteq C'$을 분리하므로 $X$는 completely regular이다. 끝으로 $X$는 Hausdorff이므로 $T_0$이고, 따라서 $X$는 Tychonoff space이다.
+이제 $X$가 LCH라 하자. [정리 10](#thm10)과 [정리 11](#thm11)에 의하여 $X^+$는 compact Hausdorff space이므로 위에서 본 대로 completely regular이다. $X$는 [명제 9](#prop9)에 의해 $X^+$의 부분공간이다. 완전정칙성은 부분공간으로 유전됨을 보이자. $x\in X$와 이를 포함하지 않는 $X$의 닫힌집합 $C$가 주어지면, 부분공간의 닫힌집합의 성질에 의해 $X^+$의 닫힌집합 $C'$이 존재하여 $C=C'\cap X$이다. $x\in X$이고 $x\notin C$이므로 $x\notin C'$이며, $X^+$가 completely regular이므로 연속함수 $g:X^+\rightarrow[0,1]$이 존재하여 $g(x)=0$이고 $C'$에서 $1$의 값을 갖는다. $g$를 $X$로 제한한 $g\vert_X$는 연속함수로서 $x$와 $C\subseteq C'$을 분리하므로 $X$는 completely regular이다. 끝으로 $X$는 Hausdorff이므로 $T_0$이고, 따라서 $X$는 Tychonoff space이다.
 :::
 
 [따름정리 16](#cor16)는 LCH space 위에서 서로 다른 점을 가르거나 점과 닫힌집합을 가르는 연속함수를 언제나 얻을 수 있음을 보장한다. 이는 국소적 옹골공간이 해석학적 대상으로서 얼마나 잘 행동하는지를 말해 주는 기본적인 사실이며, 국소적으로 정의된 자료를 연속함수의 도움으로 전역적으로 이어 붙이는 여러 구성의 출발점이 된다.
@@ -235,13 +235,13 @@ Compactness는 임의의 열린 덮개에서 유한한 부분덮개를 뽑아낼
 열린 덮개를 더 잘게 쪼개어 각 조각이 원래 덮개의 어느 한 조각 안에 온전히 들어가도록 만드는 조작을 먼저 이름 붙인다.
 
 ::: 정의 17
-위상공간 $X$의 두 덮개 $(U_i)_{i\in I}$와 $(V_j)_{j\in J}$가 주어졌다 하자. 후자가 전자의 *세분<sub>refinement</sub>*이라는 것은 임의의 $j\in J$에 대하여 $V_j\subseteq U_i$를 만족하는 $i\in I$가 존재하는 것이다. 세분 $(V_j)_{j\in J}$의 모든 원소가 열린집합일 때 이를 *open refinement*라 부른다.
+위상공간 $X$의 두 덮개 $(U_i)_{i\in I}$와 $(V_j)_{j\in J}$가 주어졌다 하자. 후자가 전자의 *세분<sub>refinement</sub>*이라는 것은 임의의 $j\in J$에 대하여 $V_j\subseteq U_i$를 만족하는 $i\in I$가 존재하는 것이다. 세분 $(V_j)_{j\in J}$의 모든 원소가 열린집합일 때 이를 *open refinement<sub>열린 세분</sub>*라 부른다.
 :::
 
 세분은 부분덮개보다 훨씬 유연한 개념이다. 부분덮개가 원래 덮개의 조각들 가운데 일부를 그대로 골라내는 것인 데 반해, 세분은 각 조각을 원래의 어느 한 조각 안에 갇히기만 하면 자유롭게 잘게 나누는 것을 허용한다. 여기에 국소유한성을 결합하면 compactness를 대신할 새로운 유한성 조건을 얻는다. Family $(A_i)_{i\in I}$가 *locally finite*라는 것은 임의의 점이 유한 개의 $A_i$만을 만나는 근방을 갖는 것이었음을 상기한다. ([§집합의 내부, 폐포, 경계, ⁋정의 3](/ko/math/topology/other_concepts#def3))
 
 ::: 정의 18
-위상공간 $X$가 *paracompact*라는 것은 $X$의 임의의 open covering이 locally finite open refinement를 갖는 것이다.
+위상공간 $X$가 *paracompact<sub>파라콤팩트</sub>*라는 것은 $X$의 임의의 open covering이 locally finite open refinement를 갖는 것이다.
 :::
 
 정의는 임의의 열린 덮개에 대하여 그것을 세분하는 국소유한 열린 덮개가 존재할 것을 요구한다. Compactness가 요구하는 것은 임의의 열린 덮개에서 유한 개만 남겨도 여전히 전체를 덮는다는 것인데, 유한 개의 열린집합으로 이루어진 덮개는 그 자체로 국소유한이므로, paracompactness는 compactness가 요구하는 유한성을 각 점 주위에서의 유한성으로 완화한 것이라 읽을 수 있다.
@@ -335,10 +335,10 @@ Paracompact 공간의 가장 풍부한 공급원 가운데 하나는 metric spac
 
 ## 단위분할의 존재
 
-이제 국소적 자료를 대역적으로 이어 붙이는 도구인 단위분할을 정식화한다. 연속함수 $\phi:X\to[0,1]$의 *support<sub>지지</sub>*를 $\supp\phi=\cl(\{x\in X\mid\phi(x)\neq 0\})$으로 정의하며, 이는 $\phi$가 $0$이 아닌 값을 갖는 영역을 담는 가장 작은 닫힌집합이다.
+이제 국소적 자료를 대역적으로 이어 붙이는 도구인 단위분할을 정식화한다. 연속함수 $\phi:X\rightarrow[0,1]$의 *support<sub>지지</sub>*를 $\supp\phi=\cl(\{x\in X\mid\phi(x)\neq 0\})$으로 정의하며, 이는 $\phi$가 $0$이 아닌 값을 갖는 영역을 담는 가장 작은 닫힌집합이다.
 
 ::: 정의 25
-위상공간 $X$ 위의 연속함수들의 family $(\phi_i)_{i\in I}$가 *partition of unity<sub>단위분할</sub>*이라는 것은 각 $\phi_i:X\to[0,1]$이 다음 두 조건을 만족하는 것이다.
+위상공간 $X$ 위의 연속함수들의 family $(\phi_i)_{i\in I}$가 *partition of unity<sub>단위분할</sub>*이라는 것은 각 $\phi_i:X\rightarrow[0,1]$이 다음 두 조건을 만족하는 것이다.
 
 1. Family $(\supp\phi_i)_{i\in I}$는 locally finite이다.
 2. 임의의 $x\in X$에 대하여 $\sum_{i\in I}\phi_i(x)=1$이 성립한다.
@@ -389,17 +389,17 @@ $$\cl(Q_\alpha)\subseteq P_\alpha\subseteq\cl(P_\alpha)\subseteq V_\alpha\subset
 
 를 만족한다.
 
-**(3) Bump 함수.** 각 $\alpha$에 대하여 $\cl(Q_\alpha)$와 $X\setminus P_\alpha$는 서로소인 두 닫힌집합이다. $X$가 normal이므로 Urysohn 보조정리에 의하여 연속함수 $\psi_\alpha:X\to[0,1]$이 존재하여 $\cl(Q_\alpha)$에서 $1$의 값을, $X\setminus P_\alpha$에서 $0$의 값을 갖는다. ([§Urysohn 보조정리와 Tietze 확장정리, ⁋정리 2](/ko/math/topology/urysohn_and_tietze#thm2)) 그럼 $\{x\mid\psi_\alpha(x)\neq 0\}\subseteq P_\alpha$이므로
+**(3) Bump 함수.** 각 $\alpha$에 대하여 $\cl(Q_\alpha)$와 $X\setminus P_\alpha$는 서로소인 두 닫힌집합이다. $X$가 normal이므로 Urysohn 보조정리에 의하여 연속함수 $\psi_\alpha:X\rightarrow[0,1]$이 존재하여 $\cl(Q_\alpha)$에서 $1$의 값을, $X\setminus P_\alpha$에서 $0$의 값을 갖는다. ([§Urysohn 보조정리와 Tietze 확장정리, ⁋정리 2](/ko/math/topology/urysohn_and_tietze#thm2)) 그럼 $\{x\mid\psi_\alpha(x)\neq 0\}\subseteq P_\alpha$이므로
 
 $$\supp\psi_\alpha=\cl(\{x\mid\psi_\alpha(x)\neq 0\})\subseteq\cl(P_\alpha)\subseteq V_\alpha\subseteq U_\alpha$$
 
 이다. 특히 $(\supp\psi_\alpha)_{\alpha\in J}$는 $\supp\psi_\alpha\subseteq V_\alpha$이고 $(V_\alpha)$가 locally finite이므로 locally finite이다.
 
-**(4) 정규화.** Family $(\psi_\alpha)$가 locally finite인 support를 가지므로, 각 점 $x$는 유한 개의 $\psi_\alpha$만이 $0$이 아닌 근방을 가진다. 그 근방 위에서 합 $\psi=\sum_{\alpha\in J}\psi_\alpha$은 유한합이고, 연속함수의 유한합은 연속이므로 $\psi$는 그 근방에서 연속이다. 연속성은 국소적 성질이므로 $\psi:X\to\mathbb{R}$은 연속함수이다. 또한 $(Q_\alpha)$가 $X$를 덮으므로 임의의 $x$는 어떤 $Q_\alpha$에 속하고, 그럼 $x\in\cl(Q_\alpha)$에서 $\psi_\alpha(x)=1$이므로 $\psi(x)\geq 1>0$이다. 따라서
+**(4) 정규화.** Family $(\psi_\alpha)$가 locally finite인 support를 가지므로, 각 점 $x$는 유한 개의 $\psi_\alpha$만이 $0$이 아닌 근방을 가진다. 그 근방 위에서 합 $\psi=\sum_{\alpha\in J}\psi_\alpha$은 유한합이고, 연속함수의 유한합은 연속이므로 $\psi$는 그 근방에서 연속이다. 연속성은 국소적 성질이므로 $\psi:X\rightarrow\mathbb{R}$은 연속함수이다. 또한 $(Q_\alpha)$가 $X$를 덮으므로 임의의 $x$는 어떤 $Q_\alpha$에 속하고, 그럼 $x\in\cl(Q_\alpha)$에서 $\psi_\alpha(x)=1$이므로 $\psi(x)\geq 1>0$이다. 따라서
 
 $$\phi_\alpha=\frac{\psi_\alpha}{\psi}$$
 
-로 정의하면 각 $\phi_\alpha:X\to[0,1]$은 연속함수이다 ($\psi$가 어디에서도 $0$이 아니기 때문이다). $\psi>0$이므로 $\{x\mid\phi_\alpha(x)\neq 0\}=\{x\mid\psi_\alpha(x)\neq 0\}$이고, 따라서 $\supp\phi_\alpha=\supp\psi_\alpha\subseteq U_\alpha$이며 $(\supp\phi_\alpha)$는 locally finite이다. 끝으로 각 $x$에서
+로 정의하면 각 $\phi_\alpha:X\rightarrow[0,1]$은 연속함수이다 ($\psi$가 어디에서도 $0$이 아니기 때문이다). $\psi>0$이므로 $\{x\mid\phi_\alpha(x)\neq 0\}=\{x\mid\psi_\alpha(x)\neq 0\}$이고, 따라서 $\supp\phi_\alpha=\supp\psi_\alpha\subseteq U_\alpha$이며 $(\supp\phi_\alpha)$는 locally finite이다. 끝으로 각 $x$에서
 
 $$\sum_{\alpha\in J}\phi_\alpha(x)=\frac{1}{\psi(x)}\sum_{\alpha\in J}\psi_\alpha(x)=\frac{\psi(x)}{\psi(x)}=1$$
 
@@ -415,7 +415,7 @@ $$\sum_{\alpha\in J}\phi_\alpha(x)=\frac{1}{\psi(x)}\sum_{\alpha\in J}\psi_\alph
 단위분할이 마련되면 국소적으로 정의된 자료를 대역적 대상으로 묶는 표준적인 절차가 열린다. 이 절에서는 그 원리를 연속함수의 경우로 예시한다.
 
 ::: 예시 29
-Paracompact Hausdorff space $X$의 open covering $(U_\alpha)_{\alpha\in J}$이 주어지고, 각 $U_\alpha$ 위에서만 정의된 연속함수 $f_\alpha:U_\alpha\to\mathbb{R}$이 주어졌다 하자. [정리 27](#thm27)에 의하여 $(U_\alpha)$에 종속된 단위분할 $(\phi_\alpha)_{\alpha\in J}$을 택한다. 각 $\alpha$에 대하여 곱 $\phi_\alpha f_\alpha$은 $U_\alpha$ 위에서 연속이며, $\supp\phi_\alpha\subseteq U_\alpha$이 $X$의 닫힌집합이므로 이 곱을 $U_\alpha$ 바깥에서 $0$으로 두어 $X$ 전체에서 연속인 함수로 연장할 수 있다. 이 연장을 다시 $\phi_\alpha f_\alpha$로 적으면, family $(\supp\phi_\alpha)$가 locally finite이므로
+Paracompact Hausdorff space $X$의 open covering $(U_\alpha)_{\alpha\in J}$이 주어지고, 각 $U_\alpha$ 위에서만 정의된 연속함수 $f_\alpha:U_\alpha\rightarrow\mathbb{R}$이 주어졌다 하자. [정리 27](#thm27)에 의하여 $(U_\alpha)$에 종속된 단위분할 $(\phi_\alpha)_{\alpha\in J}$을 택한다. 각 $\alpha$에 대하여 곱 $\phi_\alpha f_\alpha$은 $U_\alpha$ 위에서 연속이며, $\supp\phi_\alpha\subseteq U_\alpha$이 $X$의 닫힌집합이므로 이 곱을 $U_\alpha$ 바깥에서 $0$으로 두어 $X$ 전체에서 연속인 함수로 연장할 수 있다. 이 연장을 다시 $\phi_\alpha f_\alpha$로 적으면, family $(\supp\phi_\alpha)$가 locally finite이므로
 
 $$f=\sum_{\alpha\in J}\phi_\alpha f_\alpha$$
 
@@ -427,13 +427,13 @@ $$f=\sum_{\alpha\in J}\phi_\alpha f_\alpha$$
 ## 위상다양체
 
 ::: 정의 30
-위상공간 $M$이 *locally Euclidean of dimension $m$*이라는 것은 임의의 $x\in M$마다 $x$의 열린근방 $U$가 존재하여 $U$가 $\mathbb{R}^m$의 열린집합과 homeomorphic한 것이다.
+위상공간 $M$이 *locally Euclidean of dimension $m$<sub>$m$차원 국소 유클리드</sub>*이라는 것은 임의의 $x\in M$마다 $x$의 열린근방 $U$가 존재하여 $U$가 $\mathbb{R}^m$의 열린집합과 homeomorphic한 것이다.
 :::
 
 Locally Euclidean 조건은 위상다양체의 국소적 본질이지만 그것만으로는 지나치게 약하여, 여기에 두 가지 대역적 조건을 더한다.
 
 ::: 정의 31
-Second countable이고 Hausdorff이며 locally Euclidean of dimension $m$인 공간을 *topological manifold of dimension $m$*이라 부른다.
+Second countable이고 Hausdorff이며 locally Euclidean of dimension $m$인 공간을 *topological manifold of dimension $m$<sub>$m$차원 위상다양체</sub>*이라 부른다.
 :::
 
 Hausdorff와 second countability를 요구하는 까닭은 다음 정리에서 드러난다. 이 정리는 locally Euclidean 공간에서 second countability가 사실상 paracompactness와 같은 조건임을 말해 주며, 이로써 위상다양체가 앞 절에서 마련한 단위분할의 무대에 정확히 놓임을 확인해 준다.

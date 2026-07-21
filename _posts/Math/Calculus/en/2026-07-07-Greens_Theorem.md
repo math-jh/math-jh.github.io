@@ -41,7 +41,7 @@ For the double integral, integrating the inner integral first by [§Multiple Int
 
 $$\iint_D \frac{\partial P}{\partial y}\mathop{dA} = \int_a^b \bigl(P(x, g_2(x)) - P(x, g_1(x))\bigr)\mathop{dx}.$$
 
-On the other hand, the boundary $C$ consists of two pieces: the lower curve $y = g_1(x)$ traversed with $x\colon a \to b$, and the upper curve $y = g_2(x)$ traversed with $x\colon b \to a$, and on the two vertical sides $x$ is constant so $dx = 0$. Hence
+On the other hand, the boundary $C$ consists of two pieces: the lower curve $y = g_1(x)$ traversed with $x\colon a \rightarrow b$, and the upper curve $y = g_2(x)$ traversed with $x\colon b \rightarrow a$, and on the two vertical sides $x$ is constant so $dx = 0$. Hence
 
 $$\oint_C P\mathop{dx} = \int_a^b P(x, g_1(x))\mathop{dx} + \int_b^a P(x, g_2(x))\mathop{dx} = -\int_a^b \bigl(P(x,g_2) - P(x,g_1)\bigr)\mathop{dx},$$
 
@@ -102,7 +102,7 @@ and applying [Theorem 1](#thm1) to $(P, Q) \mapsto (-Q, P)$ shows this equals
 $$\iint_D (P_x + Q_y)\mathop{dA} = \iint_D \divergence F\mathop{dA}.$$
 :::
 
-The first equality is exactly Green's theorem itself, and only the second equality is new, but its intuitive meaning is clear. Namely, if we integrate the function $\mathbf{F}$ along the boundary in the direction <em-ko>나가는</em-ko>, this is precisely captured by the divergence. On the other hand, we already saw in [§Line Integrals, ⁋Example 6](/en/math/calculus/line_integrals#ex6) that if a region has a hole, the field may fail to be conservative even when the curl vanishes; this can be written rigorously as follows.
+The first equality is exactly Green's theorem itself, and only the second equality is new, but its intuitive meaning is clear. Namely, if we integrate the function $\mathbf{F}$ along the boundary in the *outward* direction, this is precisely captured by the divergence. On the other hand, we already saw in [§Line Integrals, ⁋Example 6](/en/math/calculus/line_integrals#ex6) that if a region has a hole, the field may fail to be conservative even when the curl vanishes; this can be written rigorously as follows.
 
 A region being *simply connected* means that any closed curve inside it can be continuously shrunk to a point without leaving the region; intuitively, one may think of it as a region without holes. For example, a disk is simply connected, but a disk with its center removed is not, because to shrink a circle surrounding the center to a point one must pass through the missing center.
 

@@ -34,10 +34,10 @@ $$\Spec \mathbb{K}[t,\x]/(t\x) \longrightarrow \mathbb{A}^1_\mathbb{K}$$
 
 ## 평탄 사상의 정의
 
-평탄 가군의 개념을 scheme으로 옮긴다. Morphism $f: X \to Y$가 평탄하다는 것은 대역적으로 말해 $X$의 구조층이 $Y$의 구조층 위에서 평탄한 가군 구조를 가진다는 의미이다.
+평탄 가군의 개념을 scheme으로 옮긴다. Morphism $f: X \rightarrow Y$가 평탄하다는 것은 대역적으로 말해 $X$의 구조층이 $Y$의 구조층 위에서 평탄한 가군 구조를 가진다는 의미이다.
 
 ::: 정의 1
-Morphism $f: X \to Y$가 *flat<sub>평탄</sub>*이라는 것은 임의의 $x \in X$에 대하여 local ring $\mathcal{O}_{X,x}$가 $\mathcal{O}_{Y,f(x)}$-가군으로서 평탄한 것이다. 추가로 $f$가 대응하는 위상공간의 사상이 surjective이면 *faithfully flat<sub>충실히 평탄</sub>*이라 부른다.
+Morphism $f: X \rightarrow Y$가 *flat<sub>평탄</sub>*이라는 것은 임의의 $x \in X$에 대하여 local ring $\mathcal{O}_{X,x}$가 $\mathcal{O}_{Y,f(x)}$-가군으로서 평탄한 것이다. 추가로 $f$가 대응하는 위상공간의 사상이 surjective이면 *faithfully flat<sub>충실히 평탄</sub>*이라 부른다.
 :::
 
 평탄성은 각 점에서의 국소적인 조건으로 정의되었지만, affine에서는 이를 대역적인 조건으로 바꿔 쓸 수 있다. 이 때문에 평탄성의 검사는 거의 언제나 가환대수학의 평탄 가군 검사로 환원된다.

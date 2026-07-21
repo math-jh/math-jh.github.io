@@ -131,7 +131,7 @@ is a chain in $X$ of length $n+1$.
 This can be regarded as a generalization of [Proposition 6](#prop6). We now examine the relationship between regular maps and dimension.
 
 ::: Proposition 10
-For two varieties $X, Y$ and a regular map $\varphi: X \to Y$, the following hold.
+For two varieties $X, Y$ and a regular map $\varphi: X \rightarrow Y$, the following hold.
 
 1. $\dim \varphi(X) \le \dim X$.
 2. If $\varphi$ is dominant then $\dim Y \le \dim X$. ([§Rational Maps, ⁋Definition 8](/en/math/algebraic_varieties/rational_maps#def8))
@@ -153,13 +153,13 @@ For two varieties $X, Y$ and a regular map $\varphi: X \to Y$, the following hol
 The first result supports our general intuition that a geometric map cannot increase dimension. The second result roughly shows that if $\varphi$ is (up to birational equivalence) surjective, then the dimension of the target cannot exceed that of the domain.
 
 ::: Definition 11
-A regular map $\varphi: X \to Y$ between irreducible varieties is called *finite* if for every affine open $U \subseteq Y$, the preimage $\varphi^{-1}(U)$ is affine and $\mathbb{K}[\varphi^{-1}(U)]$ is a finitely generated module over $\mathbb{K}[U]$.
+A regular map $\varphi: X \rightarrow Y$ between irreducible varieties is called *finite* if for every affine open $U \subseteq Y$, the preimage $\varphi^{-1}(U)$ is affine and $\mathbb{K}[\varphi^{-1}(U)]$ is a finitely generated module over $\mathbb{K}[U]$.
 :::
 
 One can show that a finite morphism has finite fibers. Then the following is clear.
 
 ::: Proposition 12
-For two varieties $X, Y$ and a finite map $\varphi: X \to Y$, we have $\dim X = \dim Y$.
+For two varieties $X, Y$ and a finite map $\varphi: X \rightarrow Y$, we have $\dim X = \dim Y$.
 :::
 
 ::: Proof

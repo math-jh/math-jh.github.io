@@ -121,13 +121,13 @@ $$\kappa(X) = \min\{k \in \mathbb{Z}_{\geq 0} : P_m(X) = O(m^k)\}$$
 
 Equivalently, it can also be written as
 
-$$\kappa(X) = \limsup_{m \to \infty} \frac{\log P_m(X)}{\log m}$$
+$$\kappa(X) = \limsup_{m \rightarrow \infty} \frac{\log P_m(X)}{\log m}$$
 
 :::
 
 From the computation above, we know that for a surface, $\kappa \in \{-\infty, 0, 1, 2\}$. The [Enriques–Kodaira classification](https://en.wikipedia.org/wiki/Enriques-Kodaira_classification) classifies surfaces broadly by Kodaira dimension, and in the cases $\kappa=0$ and $\kappa=-\infty$, it provides further detailed classification using the geometric genus $p_g$ and the irregularity $q$.
 
-In [§Linear Systems, ⁋Definition 9](/en/math/algebraic_varieties/linear_systems#def9), we defined that a line bundle $\mathcal{L}$ is very ample if the map $\varphi_{\mathcal{L}}: X \to \mathbb{P}(\Gamma(X, \mathcal{L}))$ defined by the complete linear system $\lvert \mathcal{L} \rvert$ is a closed embedding. At the time, we did not have the language of sheaf cohomology, but now that we have introduced it, we can use this a bit more effectively.
+In [§Linear Systems, ⁋Definition 9](/en/math/algebraic_varieties/linear_systems#def9), we defined that a line bundle $\mathcal{L}$ is very ample if the map $\varphi_{\mathcal{L}}: X \rightarrow \mathbb{P}(\Gamma(X, \mathcal{L}))$ defined by the complete linear system $\lvert \mathcal{L} \rvert$ is a closed embedding. At the time, we did not have the language of sheaf cohomology, but now that we have introduced it, we can use this a bit more effectively.
 
 First, suppose a very ample line bundle $\mathcal{L}$ is given, and consider the closed embedding $\varphi_\mathcal{L}: X\rightarrow \mathbb{P}^N$ defined by it. Then from the fact that $\varphi$ is an embedding, we know that $\varphi_\mathcal{L}(p)\neq \varphi_\mathcal{L}(q)$ holds, and moreover, since $\varphi_\mathcal{L}$ is a closed embedding, $d\varphi_\mathcal{L}$ is injective, and thus the dual map on cotangent spaces $\mathfrak{m}_{\varphi_{\mathcal{L}}(p)}/\mathfrak{m}_{\varphi_{\mathcal{L}}(p)}^2 \longrightarrow \mathfrak{m}_p/\mathfrak{m}_p^2$ is surjective. From this, we know that the following two results hold.
 

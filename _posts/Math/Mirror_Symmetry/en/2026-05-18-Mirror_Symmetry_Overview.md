@@ -73,7 +73,7 @@ This encodes the information that the torus acts by the standard scaling action 
 From the viewpoint of mirror symmetry, the charge matrix encodes the data of the $B$-model. One should be somewhat careful that the situation we are currently dealing with is more general than the Calabi-Yau manifold explained in the introduction. In general, a smooth projective toric variety $X_\Sigma$ is given as a Fano variety rather than a Calabi-Yau, and in this case the mirror dual of $X_\Sigma$ is expressed not as a Calabi-Yau but as a *Landau-Ginzburg model*. 
 
 ::: Definition 3
-A *Landau-Ginzburg model* is a pair $(\check{X}, W)$ of a complex manifold $\check{X}$ and a holomorphic function $W : \check{X} \to \mathbb{C}$ defined on it. We call $W$ the *superpotential*.
+A *Landau-Ginzburg model* is a pair $(\check{X}, W)$ of a complex manifold $\check{X}$ and a holomorphic function $W : \check{X} \rightarrow \mathbb{C}$ defined on it. We call $W$ the *superpotential*.
 :::
 
 The purpose of this post is to examine this phenomenon through light calculations before formally defining the concepts of mirror symmetry. Therefore, instead of explaining the data on both sides precisely, we replace this with brief ideas and intuition. First, from the $B$-model side, the charge matrix defines the *Jacobi ring* $\Jac(W_q)$, which can be viewed as the classical limit of the oscillating integral mentioned earlier. For a given Landau-Ginzburg model $(\check{X}, W)$, its Jacobi ring is given by definition as
@@ -91,7 +91,7 @@ For a smooth projective toric Fano variety $X_\Sigma$ and additional data $q=(q_
  
 2. The *superpotential* on $\check{X}$ is defined as the sum of local coordinates
     
-    $$W_q : \check{X} \to \mathbb{C}, \qquad W_q(\x_1, \ldots, \x_N) = \x_1 + \x_2 + \cdots + \x_N.$$
+    $$W_q : \check{X} \rightarrow \mathbb{C}, \qquad W_q(\x_1, \ldots, \x_N) = \x_1 + \x_2 + \cdots + \x_N.$$
 :::
 
 Here $q = (q_1, \ldots, q_r) \in (\mathbb{C}^\ast)^r$ is the variable carrying the complex structure of the mirror LG model. The complex structure of the mirror domain $\check{X}$ itself is always the same affine torus $(\mathbb{C}^\ast)^n$, but the superpotential $W_q$ placed on it is determined by $q$. In other words, for each value of $q$ a unique LG model $(\check{X}, W_q)$ is determined, and it is more accurate to say that the whole family $\{(\check{X}, W_q)\}_q$ appears as the mirror of $X_\Sigma$. At this point, the complex structure $q$ appears as the Novikov parameter $q$ in the A-model.

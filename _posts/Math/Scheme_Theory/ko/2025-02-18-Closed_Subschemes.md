@@ -179,13 +179,13 @@ $$\Spec (A_i)_{f_i}\cong\Spec (A_j)_{f_j}$$
 이제 임의의 scheme $X$와 global section $s\in \Gamma(X, \mathcal{O}_X)$가 주어졌다 하자. 그럼 각각의 affine cover $U\cong\Spec A$에 대하여, $s\vert_U$는 $A$의 ideal $\mathcal{I}(A)=(s\vert_U)$를 정의하며 이렇게 정의된 $\mathcal{I}(A)$들은 [명제 6](#prop6)의 조건을 만족하는 것이 자명하다.
 
 ::: 정의 7
-Scheme $X$와 $X$의 global section $s\in \Gamma(X, \mathcal{O}_X)$에 대하여, 위와 같이 정의된 scheme $Z(s)$를 $s$의 *vanishing scheme*이라 부른다.
+Scheme $X$와 $X$의 global section $s\in \Gamma(X, \mathcal{O}_X)$에 대하여, 위와 같이 정의된 scheme $Z(s)$를 $s$의 *vanishing scheme<sub>영점 스킴</sub>*이라 부른다.
 :::
 
 더 일반적으로, global section들의 집합 $S$에 대하여 $Z(S)$를 어떻게 정의해야 하는지도 자명하며, 따라서 특별히 $X=\Spec A$이고 $S=\mathfrak{a}$가 $A$의 ideal인 경우 $Z(\mathfrak{a})$를 어떻게 정의해야 하는지도 자명하며, 이는 affine scheme $\Spec A/\mathfrak{a}$의 structure sheaf를 $\Spec\pi$를 통해 닫힌집합 $Z(\mathfrak{a})$에 옮겨준 것이다. 앞으로 $Z(\mathfrak{a})$는 항상 이러한 scheme structure가 주어져 있는 것으로 생각한다.
 
 ::: 정의 8
-Scheme morphism $\varphi: X \rightarrow Y$가 *locally closed embedding*이라는 것은 $Y$의 적당한 open subscheme $\iota:Z\hookrightarrow Y$가 존재하여, 다음의 canonical decomposition
+Scheme morphism $\varphi: X \rightarrow Y$가 *locally closed embedding<sub>국소 닫힌 매장</sub>*이라는 것은 $Y$의 적당한 open subscheme $\iota:Z\hookrightarrow Y$가 존재하여, 다음의 canonical decomposition
 
 $$X\overset{\varphi\vert^Z}{\longrightarrow}Z\overset{\iota}{\longrightarrow} Y$$
 

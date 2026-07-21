@@ -19,7 +19,7 @@ last_polished_at: 2026-05-30T16:30:04+00:00
 ::: Definition 1
 For a ring $A$ and an $A$-module $M$, a prime ideal $\mathfrak{p}$ of $A$ is called an *associated prime ideal* of $M$ if $\mathfrak{p}=\ann(x)$ for some $x\in M$. We denote the set of associated primes by $\Ass M$.
 
-However, when $M=\mathfrak{a}$ is an ideal of $A$, by convention the associated prime ideals of $\mathfrak{a}$ mean $\Ass A/\mathfrak{a}$, <em-ko>not</em-ko> $\Ass \mathfrak{a}$.
+However, when $M=\mathfrak{a}$ is an ideal of $A$, by convention the associated prime ideals of $\mathfrak{a}$ mean $\Ass A/\mathfrak{a}$, *not* $\Ass \mathfrak{a}$.
 :::
 
 By definition, $\mathfrak{p}$ being an associated prime of $M$ is equivalent to $A/\mathfrak{p}$ being a submodule of $M$. This follows immediately by defining $A \rightarrow M$ via $1\mapsto x$ and applying the first isomorphism theorem.

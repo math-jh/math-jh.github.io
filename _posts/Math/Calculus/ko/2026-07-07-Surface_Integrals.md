@@ -19,7 +19,7 @@ weight: 19
 ::: 정의 1
 평면 영역 $D$에서 정의된 $C^1$ 사상 
 
-$\mathbf{r}\colon D \to \mathbb{R}^3$, $\mathbf{r}(u, v) = (x(u,v), y(u,v), z(u,v))$
+$\mathbf{r}\colon D \rightarrow \mathbb{R}^3$, $\mathbf{r}(u, v) = (x(u,v), y(u,v), z(u,v))$
 
 를 *매개곡면<sub>parametrized surface</sub>*이라 한다. 
 :::
@@ -36,7 +36,7 @@ $$\mathbf{N} = \mathbf{r}_u \times \mathbf{r}_v$$
 곡면을 매개변수 영역의 작은 직사각형들로 쪼개면, 각 조각은 접평면 위의 작은 평행사변형, 더 구체적으로는 $\mathbf{r}_u\Delta u$와 $\mathbf{r}_v\Delta v$가 만드는 평행사변형으로 근사된다. 이 넓이가 $\lvert \mathbf{r}_u \times \mathbf{r}_v\rvert\Delta u\Delta v$이므로, 이를 모아 극한을 취한 것이 곡면넓이이다.
 
 ::: 정의 2
-정칙 매개곡면 $\mathbf{r}\colon D \to \mathbb{R}^3$의 *곡면넓이<sub>surface area</sub>*는
+정칙 매개곡면 $\mathbf{r}\colon D \rightarrow \mathbb{R}^3$의 *곡면넓이<sub>surface area</sub>*는
 
 $$\iint_D \lvert \mathbf{r}_u \times \mathbf{r}_v\rvert \mathop{du}\mathop{dv}$$
 

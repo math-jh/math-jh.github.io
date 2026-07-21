@@ -35,7 +35,7 @@ $\mathcal{O}_X$-가군층은 stalk 수준에서도 가군 구조를 물려받는
 
 1. *direct sum* $\mathcal{F}\oplus \mathcal{G}$는 열린집합마다 $U\mapsto \mathcal{F}(U)\oplus \mathcal{G}(U)$로 주어지는 $\mathcal{O}_X$-가군층이다.
 2. *tensor product* $\mathcal{F}\otimes_{\mathcal{O}_X}\mathcal{G}$는 presheaf $U\mapsto \mathcal{F}(U)\otimes_{\mathcal{O}_X(U)}\mathcal{G}(U)$의 sheafification이다.
-3. *sheaf Hom* $\sHom_{\mathcal{O}_X}(\mathcal{F}, \mathcal{G})$는 열린집합마다 $U\mapsto \Hom_{\mathcal{O}_X\vert_U}(\mathcal{F}\vert_U, \mathcal{G}\vert_U)$로 주어지는 $\mathcal{O}_X$-가군층이다.
+3. *sheaf Hom<sub>층 $\Hom$</sub>* $\sHom_{\mathcal{O}_X}(\mathcal{F}, \mathcal{G})$는 열린집합마다 $U\mapsto \Hom_{\mathcal{O}_X\vert_U}(\mathcal{F}\vert_U, \mathcal{G}\vert_U)$로 주어지는 $\mathcal{O}_X$-가군층이다.
 :::
 
 위에서 direct sum의 경우는 열린집합마다의 대응이 곧바로 sheaf를 이루지만, tensor product의 경우 presheaf $U\mapsto \mathcal{F}(U)\otimes_{\mathcal{O}_X(U)}\mathcal{G}(U)$가 sheaf 조건을 만족하지 않을 수 있어 sheafification이 필요하다. ([\[위상수학\] §준층, ⁋정의 2](/ko/math/topology/presheaves#def2) 이후 sheafification) 반면 sheaf Hom의 경우는, 두 sheaf 사이의 morphism들이 본래 sheaf 조건을 만족하므로 sheafification 없이 곧바로 sheaf가 된다. Sheaf Hom $\sHom_{\mathcal{O}_X}(\mathcal{F}, \mathcal{G})$의 global section은 $\Hom_{\mathcal{O}_X}(\mathcal{F}, \mathcal{G})$이며, 특히 $\sHom_{\mathcal{O}_X}(\mathcal{O}_X, \mathcal{F})\cong \mathcal{F}$가 성립한다.
@@ -248,7 +248,7 @@ $$Y=\{\mathfrak{p}\mid \mathfrak{p}\supseteq \mathfrak{a}\}=Z(\mathfrak{a})$$
 quasi-coherent sheaf 가운데 국소적으로 free 가군에 대응하는 것들은 vector bundle의 대수기하학적 대응물로서 특히 중요하다.
 
 ::: 정의 15
-Scheme $X$ 위의 $\mathcal{O}_X$-가군층 $\mathcal{E}$가 *locally free sheaf of rank $r$*라는 것은, 각 점 $x\in X$의 열린근방 $U$가 존재하여 $\mathcal{E}\vert_U\cong \mathcal{O}_U^{\oplus r}$인 것이다. Rank $1$인 locally free sheaf를 *invertible sheaf*라 부른다.
+Scheme $X$ 위의 $\mathcal{O}_X$-가군층 $\mathcal{E}$가 *locally free sheaf of rank $r$<sub>랭크 $r$ 국소 자유층</sub>*라는 것은, 각 점 $x\in X$의 열린근방 $U$가 존재하여 $\mathcal{E}\vert_U\cong \mathcal{O}_U^{\oplus r}$인 것이다. Rank $1$인 locally free sheaf를 *invertible sheaf<sub>가역층</sub>*라 부른다.
 :::
 
 Locally free sheaf는 항상 quasi-coherent sheaf이다. 실제로 각 점의 근방을 affine $\Spec A$로 줄이면 $\mathcal{E}\vert_{\Spec A}\cong \mathcal{O}_{\Spec A}^{\oplus r}=\widetilde{A^{\oplus r}}$이므로, 이는 free 가군 $A^{\oplus r}$의 연관층이다. 더욱이 finite rank이면 $A^{\oplus r}$이 finitely presented이므로 locally free sheaf는 coherent sheaf이기도 하다.

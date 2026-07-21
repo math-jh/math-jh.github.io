@@ -16,7 +16,7 @@ last_polished_at: 2026-06-26T12:00:02+00:00
 ---
 The reason we defined the limit and continuity of a function first, and then defined the limit of a sequence and infinite series, is largely twofold. The first reason is that the method of exhaustion used in definite integration requires dealing with infinite series anyway, so we wished to prevent the limit of sequences from interrupting the flow from differentiation to integration. The second reason is precisely to define power series first in this article.
 
-Power series provide another way of writing functions, and by introducing them we can handle functions more easily that could not be treated in high school. For example, when defining the exponential function $2^x$ in high school, we did not rigorously define the function values at irrational numbers; to do so would require the completeness of real numbers used in [§Continuous Functions, ⁋Theorem 5](/en/math/calculus/continuity#thm5) or [§Limits of Sequences, ⁋Proposition 7](/en/math/calculus/sequences#prop7). Moreover, after defining the exponential function, when defining the natural constant in [§Limits of Sequences, ⁋Example 8](/en/math/calculus/sequences#ex8), we had to resort to a somewhat vague method, such as <em-ko>an exponential function that differentiates to itself</em-ko>. On the other hand, if we define the exponential function $e^x$ by a power series, none of this complexity arises, and we can also express cleanly functions that do not have an elementary antiderivative, such as the integral of $e^{-x^2}$.
+Power series provide another way of writing functions, and by introducing them we can handle functions more easily that could not be treated in high school. For example, when defining the exponential function $2^x$ in high school, we did not rigorously define the function values at irrational numbers; to do so would require the completeness of real numbers used in [§Continuous Functions, ⁋Theorem 5](/en/math/calculus/continuity#thm5) or [§Limits of Sequences, ⁋Proposition 7](/en/math/calculus/sequences#prop7). Moreover, after defining the exponential function, when defining the natural constant in [§Limits of Sequences, ⁋Example 8](/en/math/calculus/sequences#ex8), we had to resort to a somewhat vague method, such as *an exponential function that differentiates to itself*. On the other hand, if we define the exponential function $e^x$ by a power series, none of this complexity arises, and we can also express cleanly functions that do not have an elementary antiderivative, such as the integral of $e^{-x^2}$.
 
 ## Power Series and Radius of Convergence
 
@@ -42,11 +42,11 @@ For each power series $\sum c_n x^n$, there exists a *radius of convergence* $R$
 
 The case $R=0$ is interpreted as the given power series converging only at $x=0$ (and thus is not of interest to us), while the opposite extreme $R=\infty$ is interpreted as the given power series converging on the entire real line. Apart from these two cases, the radius of convergence does not determine convergence at $\lvert x\rvert=R$, and in fact all combinations are possible depending on the power series.
 
-Because of its shape, the radius of convergence of a power series is usually computed using the ratio test or [§Infinite Series, ⁋Proposition 8](/en/math/calculus/series#prop8). For instance, applying the ratio test, if $\left\lvert c_{n+1}/c_n\right\rvert \to L$ then the ratio of adjacent terms approaches $L\lvert x\rvert$, so we know that setting $R = 1/L$ works, and more generally,
+Because of its shape, the radius of convergence of a power series is usually computed using the ratio test or [§Infinite Series, ⁋Proposition 8](/en/math/calculus/series#prop8). For instance, applying the ratio test, if $\left\lvert c_{n+1}/c_n\right\rvert \rightarrow L$ then the ratio of adjacent terms approaches $L\lvert x\rvert$, so we know that setting $R = 1/L$ works, and more generally,
 
-$$\frac{1}{R} = \limsup_{n\to\infty} \lvert c_n\rvert^{1/n}$$
+$$\frac{1}{R} = \limsup_{n\rightarrow\infty} \lvert c_n\rvert^{1/n}$$
 
-always holds. For example, applying the ratio test to $\sum_n x^n/n!$, the ratio of adjacent terms is $\lvert x\rvert/(n+1) \to 0$, so $R = \infty$; that is, this power series converges on the entire real line.
+always holds. For example, applying the ratio test to $\sum_n x^n/n!$, the ratio of adjacent terms is $\lvert x\rvert/(n+1) \rightarrow 0$, so $R = \infty$; that is, this power series converges on the entire real line.
 
 ## Expansion of Elementary Functions
 
@@ -69,7 +69,7 @@ First, since each factor $1 - j/n$ in the product is at most $1$, the above sum 
 
 $$\left(1 + \frac1n\right)^n \geq \sum_{k=0}^m \frac{1}{k!}\prod_{j=0}^{k-1}\left(1 - \frac{j}{n}\right)$$
 
-Since the left-hand side is at most $L$, the right-hand side is also at most $L$, and fixing $m$ while sending $n \to \infty$, the right-hand side is a finite sum and each factor satisfies $1 - j/n \to 1$, so by [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5) ([§Limits of Sequences, ⁋Proposition 2](/en/math/calculus/sequences#prop2)) it converges to $s_m$. If all terms of a convergent sequence are at most $L$, then its limit is also at most $L$, so $s_m \leq L$, and sending $m \to \infty$ again gives $s \leq L$. Combining the two inequalities yields $L = s$, that is, the $e$ defined in the two posts is the same number.
+Since the left-hand side is at most $L$, the right-hand side is also at most $L$, and fixing $m$ while sending $n \rightarrow \infty$, the right-hand side is a finite sum and each factor satisfies $1 - j/n \rightarrow 1$, so by [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5) ([§Limits of Sequences, ⁋Proposition 2](/en/math/calculus/sequences#prop2)) it converges to $s_m$. If all terms of a convergent sequence are at most $L$, then its limit is also at most $L$, so $s_m \leq L$, and sending $m \rightarrow \infty$ again gives $s \leq L$. Combining the two inequalities yields $L = s$, that is, the $e$ defined in the two posts is the same number.
 :::
 
 ## Operations on Power Series

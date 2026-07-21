@@ -25,7 +25,7 @@ published: false
 ::: 정의 1
 Genus $g$, $n$개의 marked points를 갖는 *prestable curve* $(C, p_1, \ldots, p_n)$이란
 
-- $C$는 connected complete (algebraic 또는 complex analytic) curve로, *node*만을 singularity로 가진다 (즉, 각 singular point의 local model이 $\{xy = 0\} \subset \mathbb{C}^2$).
+- $C$는 connected complete (algebraic 또는 complex analytic) curve로, *node<sub>노드</sub>*만을 singularity로 가진다 (즉, 각 singular point의 local model이 $\{xy = 0\} \subset \mathbb{C}^2$).
 - $p_1, \ldots, p_n \in C$는 distinct smooth points (즉 node가 아닌 점).
 - $g = h^1(C, \mathcal{O}_C) = p_a(C)$가 arithmetic genus.
 :::
@@ -48,14 +48,14 @@ Deligne-Mumford는 1969년 stable curves의 moduli space $\overline{\mathcal{M}}
 ::: 정의 3
 Symplectic manifold (또는 smooth projective variety) $X$, genus $g \geq 0$, $n \geq 0$, homology class $\beta \in H_2(X, \mathbb{Z})$가 주어졌다고 하자. *Genus $g$, $n$-marked, $\beta$-class stable map*이란
 
-$$(C, p_1, \ldots, p_n, f),\qquad f: C \to X$$
+$$(C, p_1, \ldots, p_n, f),\qquad f: C \rightarrow X$$
 
 으로 다음 조건을 만족한다.
 
 - $(C, p_1, \ldots, p_n)$은 genus $g$의 prestable curve.
 - $f$는 $J$-holomorphic (또는 algebraic하게는 morphism).
 - $f_\ast [C] = \beta \in H_2(X, \mathbb{Z})$.
-- *Stability*: 모든 *contracted* component $C_i$ ($f\vert_{C_i}$가 상수 map)에 대해 $\mathrm{Aut}(C_i, p_{i,\bullet})$이 유한 (즉 prestable curve의 stability 조건을 $C_i$가 만족).
+- *Stability<sub>안정성</sub>*: 모든 *contracted* component $C_i$ ($f\vert_{C_i}$가 상수 map)에 대해 $\mathrm{Aut}(C_i, p_{i,\bullet})$이 유한 (즉 prestable curve의 stability 조건을 $C_i$가 만족).
 
 두 stable map $(C, p_\bullet, f)$와 $(C', p'_\bullet, f')$이 *isomorphic*이라 함은 marked points와 map을 보존하는 isomorphism $\phi: C \xrightarrow{\sim} C'$이 존재함을 말한다.
 :::
@@ -80,9 +80,9 @@ $\overline{\mathcal{M}}_{g, n}(X, \beta)$ 위에는 두 가지 핵심 natural ma
 
 **Evaluation map.** $i$번째 marked point에서의 evaluation
 
-$$\mathrm{ev}_i: \overline{\mathcal{M}}_{g, n}(X, \beta) \to X,\qquad (C, p_\bullet, f) \mapsto f(p_i)$$
+$$\mathrm{ev}_i: \overline{\mathcal{M}}_{g, n}(X, \beta) \rightarrow X,\qquad (C, p_\bullet, f) \mapsto f(p_i)$$
 
-**Forgetful map.** Domain의 marked points를 forget하면 $\overline{\mathcal{M}}_{g, n}(X, \beta) \to \overline{\mathcal{M}}_{g, n}$이며 (stabilization을 거쳐), $X$측 forgetful은 $\overline{\mathcal{M}}_{g, n}(X, \beta) \to \overline{\mathcal{M}}_{g, n-1}(X, \beta)$이다.
+**Forgetful map.** Domain의 marked points를 forget하면 $\overline{\mathcal{M}}_{g, n}(X, \beta) \rightarrow \overline{\mathcal{M}}_{g, n}$이며 (stabilization을 거쳐), $X$측 forgetful은 $\overline{\mathcal{M}}_{g, n}(X, \beta) \rightarrow \overline{\mathcal{M}}_{g, n-1}(X, \beta)$이다.
 
 **Cotangent line bundle (psi class).** $i$번째 marked point에서의 cotangent line의 first Chern class
 

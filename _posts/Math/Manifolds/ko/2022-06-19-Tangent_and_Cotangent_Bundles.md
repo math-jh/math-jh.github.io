@@ -24,7 +24,7 @@ weight: 10
 - 각각의 $b\in B$에 대하여, $E_b=\pi^{-1}(b)$는 $k$차원 벡터공간의 구조를 갖는다.
 - 각각의 $b_0\in B$마다 적당한 열린근방 $U\subseteq B$, 그리고 homeomorphism $h:U\times\mathbb{R}^k \rightarrow\pi^{-1}(U)$가 존재하여, 모든 $b\in U$마다 $x\mapsto h(b,x)$가 isomorphism이도록 할 수 있다.
 
-이 때 $k$를 vector bundle $E\rightarrow B$의 *rank*라 부른다. 셋째 조건의 homomorphism $h$를 *local trivialization*이라 부르며, 만일 $U=B$로 둘 수 있다면 $E$를 *trivial vector bundle*이라 부른다.
+이 때 $k$를 vector bundle $E\rightarrow B$의 *rank*라 부른다. 셋째 조건의 homomorphism $h$를 *local trivialization*이라 부르며, 만일 $U=B$로 둘 수 있다면 $E$를 *trivial vector bundle<sub>자명한 벡터다발</sub>*이라 부른다.
 :::
 
 이와 유사하게 manifold 위에도 vector bundle을 정의할 수 있다. 이를 위해서는 $E$와 $B$를 모두 manifold로, $\pi$를 $C^\infty$인 전사함수로 바꾸고, 셋째 조건을

@@ -51,7 +51,7 @@ $(A,\mathfrak{m})$이 Krull dimension $d$의 local noetherian ring이라 하자.
 3. $\mathfrak{m}$의 어떠한 거듭제곱이 $\mathfrak{a}$에 속한다. 
 4. $\mathfrak{a}$가 $\mathfrak{m}$-primary ideal이다. 
 
-이 조건이 성립한다면, $a_1,\ldots, a_d$들을 $A$의 *system of parameters<sub>매개계</sub>*라 부르고, $\mathfrak{a}$를 *parameter ideal*이라 부른다.
+이 조건이 성립한다면, $a_1,\ldots, a_d$들을 $A$의 *system of parameters<sub>매개계</sub>*라 부르고, $\mathfrak{a}$를 *parameter ideal<sub>매개변수 아이디얼</sub>*이라 부른다.
 
 더 일반적으로, rank $d$의 finitely generated $A$-module $M$에 대하여, $A$-module $M/\mathfrak{a}M$이 유한한 길이를 갖도록 하는 $a_1,\ldots, a_d$들을 $A$의 *system of parameters*라 부르고, $\mathfrak{a}$를 $M$의 *parameter ideal*이라 부른다. 
 :::

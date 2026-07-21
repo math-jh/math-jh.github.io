@@ -83,11 +83,11 @@ $$\oint_\gamma f(z)\,dz = 2\pi i \sum_{z_j \text{ 안쪽}} \operatorname{Res}_{z
 ::: 명제 3 (극에서의 유수)
 $f$가 $z_0$에서 위수 $m$인 극을 가진다고 하자. 그러면
 
-$$\operatorname{Res}_{z = z_0} f = \frac{1}{(m-1)!}\lim_{z \to z_0}\frac{d^{m-1}}{dz^{m-1}}\Bigl[(z - z_0)^m f(z)\Bigr]$$
+$$\operatorname{Res}_{z = z_0} f = \frac{1}{(m-1)!}\lim_{z \rightarrow z_0}\frac{d^{m-1}}{dz^{m-1}}\Bigl[(z - z_0)^m f(z)\Bigr]$$
 
 이다. 특히 단순극 ($m = 1$) 의 경우
 
-$$\operatorname{Res}_{z = z_0} f = \lim_{z \to z_0}(z - z_0)f(z)$$
+$$\operatorname{Res}_{z = z_0} f = \lim_{z \rightarrow z_0}(z - z_0)f(z)$$
 
 이고, $f = g/h$이며 $g, h$가 $z_0$에서 holomorphic이고 $g(z_0) \neq 0$, $h(z_0) = 0$, $h'(z_0) \neq 0$이면
 
@@ -103,13 +103,13 @@ $$(z - z_0)^m f(z) = \sum_{n=-m}^{\infty} a_n (z - z_0)^{n+m} = \sum_{k=0}^{\inf
 
 이 되어, 이는 $z_0$에서 holomorphic한 멱급수이다. 이 멱급수의 $k$차 계수는 $a_{k-m}$이고, 우리가 원하는 유수 $a_{-1}$은 $k - m = -1$, 곧 $k = m - 1$인 항의 계수이다. Holomorphic function의 Taylor 계수는 미분으로 추출되므로 ([§멱급수와 해석성, ⁋정리 1](/ko/math/complex_analysis/power_series_and_analyticity#thm1)),
 
-$$a_{-1} = a_{(m-1)-m} = \frac{1}{(m-1)!}\frac{d^{m-1}}{dz^{m-1}}\Bigl[(z - z_0)^m f(z)\Bigr]\bigg\rvert_{z = z_0} = \frac{1}{(m-1)!}\lim_{z \to z_0}\frac{d^{m-1}}{dz^{m-1}}\Bigl[(z - z_0)^m f(z)\Bigr]$$
+$$a_{-1} = a_{(m-1)-m} = \frac{1}{(m-1)!}\frac{d^{m-1}}{dz^{m-1}}\Bigl[(z - z_0)^m f(z)\Bigr]\bigg\rvert_{z = z_0} = \frac{1}{(m-1)!}\lim_{z \rightarrow z_0}\frac{d^{m-1}}{dz^{m-1}}\Bigl[(z - z_0)^m f(z)\Bigr]$$
 
 이다. 미분한 멱급수가 $z_0$에서 holomorphic이므로 극한과 대입이 일치한다.
 
-단순극은 $m = 1$인 경우로 $(m-1)! = 1$이고 미분 차수가 $0$이므로 $\operatorname{Res} = \lim_{z\to z_0}(z - z_0)f(z)$이다. 끝으로 $f = g/h$ 꼴에서 $h(z_0) = 0$, $h'(z_0) \neq 0$이면 $h$가 $z_0$에서 단순영점을 가지므로 $g(z_0) \neq 0$과 더불어 $f$가 $z_0$에서 단순극을 가진다 ([§고립특이점과 Laurent 급수, ⁋명제 6](/ko/math/complex_analysis/isolated_singularities#prop6)). 단순극 공식에 대입하면
+단순극은 $m = 1$인 경우로 $(m-1)! = 1$이고 미분 차수가 $0$이므로 $\operatorname{Res} = \lim_{z\rightarrow z_0}(z - z_0)f(z)$이다. 끝으로 $f = g/h$ 꼴에서 $h(z_0) = 0$, $h'(z_0) \neq 0$이면 $h$가 $z_0$에서 단순영점을 가지므로 $g(z_0) \neq 0$과 더불어 $f$가 $z_0$에서 단순극을 가진다 ([§고립특이점과 Laurent 급수, ⁋명제 6](/ko/math/complex_analysis/isolated_singularities#prop6)). 단순극 공식에 대입하면
 
-$$\operatorname{Res}_{z = z_0}\frac{g}{h} = \lim_{z \to z_0}(z - z_0)\frac{g(z)}{h(z)} = \lim_{z \to z_0} g(z)\cdot \frac{z - z_0}{h(z) - h(z_0)} = g(z_0)\cdot\frac{1}{h'(z_0)}$$
+$$\operatorname{Res}_{z = z_0}\frac{g}{h} = \lim_{z \rightarrow z_0}(z - z_0)\frac{g(z)}{h(z)} = \lim_{z \rightarrow z_0} g(z)\cdot \frac{z - z_0}{h(z) - h(z_0)} = g(z_0)\cdot\frac{1}{h'(z_0)}$$
 
 인데, 마지막 등식은 $h(z_0) = 0$이라 $h(z) = h(z) - h(z_0)$이고 그 차분비의 극한이 $h'(z_0)$이기 때문이다.
 :::
@@ -119,24 +119,24 @@ $$\operatorname{Res}_{z = z_0}\frac{g}{h} = \lim_{z \to z_0}(z - z_0)\frac{g(z)}
 ::: 예시 4 (단순극과 이차극의 유수)
 먼저 $f(z) = \dfrac{z}{(z - 1)(z + 2)}$의 두 단순극에서의 유수를 구한다. $z = 1$에서는 인수 $(z - 1)$을 곱해
 
-$$\operatorname{Res}_{z = 1} f = \lim_{z \to 1}(z - 1)\frac{z}{(z - 1)(z + 2)} = \lim_{z \to 1}\frac{z}{z + 2} = \frac{1}{3}$$
+$$\operatorname{Res}_{z = 1} f = \lim_{z \rightarrow 1}(z - 1)\frac{z}{(z - 1)(z + 2)} = \lim_{z \rightarrow 1}\frac{z}{z + 2} = \frac{1}{3}$$
 
 이고, $z = -2$에서는
 
-$$\operatorname{Res}_{z = -2} f = \lim_{z \to -2}\frac{z}{z - 1} = \frac{-2}{-3} = \frac{2}{3}$$
+$$\operatorname{Res}_{z = -2} f = \lim_{z \rightarrow -2}\frac{z}{z - 1} = \frac{-2}{-3} = \frac{2}{3}$$
 
 이다.
 
 다음으로 $g(z) = \dfrac{e^z}{(z - 1)^2}$의 $z = 1$에서의 이차극을 본다. 위수 $m = 2$이므로 명제 3에서 $(z - 1)^2 g(z) = e^z$을 한 번 미분하고 극한을 취해
 
-$$\operatorname{Res}_{z = 1} g = \frac{1}{(2 - 1)!}\lim_{z \to 1}\frac{d}{dz}\Bigl[(z - 1)^2 \frac{e^z}{(z - 1)^2}\Bigr] = \lim_{z \to 1}\frac{d}{dz}e^z = e$$
+$$\operatorname{Res}_{z = 1} g = \frac{1}{(2 - 1)!}\lim_{z \rightarrow 1}\frac{d}{dz}\Bigl[(z - 1)^2 \frac{e^z}{(z - 1)^2}\Bigr] = \lim_{z \rightarrow 1}\frac{d}{dz}e^z = e$$
 
-를 얻는다. 만일 일차극에서처럼 $(z-1)g(z)=e^z/(z-1)$의 극한을 취하려 하면 $z\to1$에서 발산하여 유수를 얻지 못한다. 이차극에서는 $(z-1)^2 g(z)=e^z$를 한 번 미분한 뒤 극한을 취해야 올바른 유수 $e$가 나오며, 이 예가 그 미분 단계의 필요성을 보여 준다.
+를 얻는다. 만일 일차극에서처럼 $(z-1)g(z)=e^z/(z-1)$의 극한을 취하려 하면 $z\rightarrow1$에서 발산하여 유수를 얻지 못한다. 이차극에서는 $(z-1)^2 g(z)=e^z$를 한 번 미분한 뒤 극한을 취해야 올바른 유수 $e$가 나오며, 이 예가 그 미분 단계의 필요성을 보여 준다.
 :::
 
 ## 실수 위의 무한적분
 
-유수정리의 첫 응용은 실수 전체에 걸친 정적분 $\int_{-\infty}^{\infty} f(x)\,dx$의 계산이다. 발상은 실축 구간 $[-R, R]$을 상반평면의 반원호로 닫아 닫힌 경로를 만들고, 그 경로의 적분을 유수정리로 계산한 뒤, 반원호 위의 적분이 $R \to \infty$에서 사라짐을 보여 실축 적분만 남기는 것이다. 반원호의 기여가 사라지려면 피적분함수가 큰 $\lvert z\rvert$에서 충분히 빨리 작아져야 하며, 유리함수의 경우 분모의 차수가 분자보다 $2$ 이상 크면 충분하다.
+유수정리의 첫 응용은 실수 전체에 걸친 정적분 $\int_{-\infty}^{\infty} f(x)\,dx$의 계산이다. 발상은 실축 구간 $[-R, R]$을 상반평면의 반원호로 닫아 닫힌 경로를 만들고, 그 경로의 적분을 유수정리로 계산한 뒤, 반원호 위의 적분이 $R \rightarrow \infty$에서 사라짐을 보여 실축 적분만 남기는 것이다. 반원호의 기여가 사라지려면 피적분함수가 큰 $\lvert z\rvert$에서 충분히 빨리 작아져야 하며, 유리함수의 경우 분모의 차수가 분자보다 $2$ 이상 크면 충분하다.
 
 ::: 명제 5 (유리함수의 무한적분)
 $f = P/Q$가 유리함수이고 $P, Q$가 다항식이라 하자. $Q$가 실축 위에서 영점을 갖지 않고 $\deg Q \geq \deg P + 2$이면
@@ -151,19 +151,19 @@ $$\int_{-\infty}^{\infty} f(x)\,dx = 2\pi i \sum_{\Img z_j > 0} \operatorname{Re
 
 $$\int_{-R}^{R} f(x)\,dx + \int_{C_R} f(z)\,dz = 2\pi i \sum_{\Img z_j > 0}\operatorname{Res}_{z = z_j} f$$
 
-이다. 이제 반원호 적분이 $R \to \infty$에서 $0$으로 감을 보인다. $\deg Q \geq \deg P + 2$이므로 충분히 큰 $\lvert z\rvert$에서 어떤 상수 $M$이 있어 $\lvert f(z)\rvert \leq M/\lvert z\rvert^2$이고, 따라서 $C_R$ 위에서 $\lvert f(z)\rvert \leq M/R^2$이다. ML 부등식 ([§복소적분, ⁋명제 6](/ko/math/complex_analysis/complex_integration#prop6)) 으로
+이다. 이제 반원호 적분이 $R \rightarrow \infty$에서 $0$으로 감을 보인다. $\deg Q \geq \deg P + 2$이므로 충분히 큰 $\lvert z\rvert$에서 어떤 상수 $M$이 있어 $\lvert f(z)\rvert \leq M/\lvert z\rvert^2$이고, 따라서 $C_R$ 위에서 $\lvert f(z)\rvert \leq M/R^2$이다. ML 부등식 ([§복소적분, ⁋명제 6](/ko/math/complex_analysis/complex_integration#prop6)) 으로
 
-$$\left\lvert \int_{C_R} f(z)\,dz\right\rvert \leq \frac{M}{R^2}\cdot \pi R = \frac{\pi M}{R} \xrightarrow[R \to \infty]{} 0$$
+$$\left\lvert \int_{C_R} f(z)\,dz\right\rvert \leq \frac{M}{R^2}\cdot \pi R = \frac{\pi M}{R} \xrightarrow[R \rightarrow \infty]{} 0$$
 
-이다. 한편 $\deg Q \geq \deg P + 2$이라 $f$가 실축 위에서 절대적분가능하므로 $\int_{-R}^{R} f\,dx \to \int_{-\infty}^{\infty} f\,dx$이다. $R \to \infty$의 극한을 취하면 주장하는 등식을 얻는다.
+이다. 한편 $\deg Q \geq \deg P + 2$이라 $f$가 실축 위에서 절대적분가능하므로 $\int_{-R}^{R} f\,dx \rightarrow \int_{-\infty}^{\infty} f\,dx$이다. $R \rightarrow \infty$의 극한을 취하면 주장하는 등식을 얻는다.
 :::
 
 명제 5의 증명에서 결정적인 단계는 반원호 위 적분의 소멸이며, 이것이 차수 조건 $\deg Q \geq \deg P + 2$의 존재 이유이다. 차이가 정확히 $1$뿐이면 $\lvert f\rvert \sim 1/R$이라 ML 어림이 $\pi M$이라는 상수로만 유계여서 소멸을 보장하지 못한다. 같은 반원 기법은 분자에 $e^{iax}$ 같은 진동인자가 붙은 경우에도 통하지만, 이때는 $C_R$ 위에서 $\lvert e^{iaz}\rvert = e^{-a\Img z}$이 상반평면에서 감소함을 활용하는 더 섬세한 어림이 필요하며, 이를 정리한 것이 Jordan 보조정리이다.
 
 ::: 보조정리 6 (Jordan)
-$a > 0$이라 하자. $f$가 상반평면의 반원호 $C_R = \{Re^{i\theta} : 0 \leq \theta \leq \pi\}$ 위에서 연속이고, $M(R) = \max_{z \in C_R}\lvert f(z)\rvert \to 0$ ($R \to \infty$) 이면
+$a > 0$이라 하자. $f$가 상반평면의 반원호 $C_R = \{Re^{i\theta} : 0 \leq \theta \leq \pi\}$ 위에서 연속이고, $M(R) = \max_{z \in C_R}\lvert f(z)\rvert \rightarrow 0$ ($R \rightarrow \infty$) 이면
 
-$$\lim_{R \to \infty}\int_{C_R} f(z)\,e^{iaz}\,dz = 0$$
+$$\lim_{R \rightarrow \infty}\int_{C_R} f(z)\,e^{iaz}\,dz = 0$$
 
 이다.
 :::
@@ -179,7 +179,7 @@ $$\int_0^{\pi/2} e^{-aR\sin\theta}\,d\theta \leq \int_0^{\pi/2} e^{-2aR\theta/\p
 
 이다. 이를 합치면
 
-$$\left\lvert \int_{C_R} f(z)e^{iaz}\,dz\right\rvert \leq M(R)\,R\cdot 2\cdot\frac{\pi}{2aR} = \frac{\pi}{a}M(R) \xrightarrow[R \to \infty]{} 0$$
+$$\left\lvert \int_{C_R} f(z)e^{iaz}\,dz\right\rvert \leq M(R)\,R\cdot 2\cdot\frac{\pi}{2aR} = \frac{\pi}{a}M(R) \xrightarrow[R \rightarrow \infty]{} 0$$
 
 이다.
 :::
@@ -191,7 +191,7 @@ $$\left\lvert \int_{C_R} f(z)e^{iaz}\,dz\right\rvert \leq M(R)\,R\cdot 2\cdot\fr
 
 $$\operatorname{Res}_{z = i} f = \frac{e^{iz}}{(z^2 + 1)'}\bigg\rvert_{z = i} = \frac{e^{iz}}{2z}\bigg\rvert_{z = i} = \frac{e^{i\cdot i}}{2i} = \frac{e^{-1}}{2i}$$
 
-이다. 여기서 $g(z) = e^{iz}$, $h(z) = z^2 + 1$, $h'(z) = 2z$로 보아 $g(i)/h'(i)$ 공식을 썼다. 분자 $\lvert e^{iz}\rvert = e^{-\Img z} \leq 1$이 상반평면에서 유계이고 $\lvert 1/(z^2+1)\rvert \to 0$이므로 보조정리 6에 의해 반원호 적분이 소멸하여, 유수정리로
+이다. 여기서 $g(z) = e^{iz}$, $h(z) = z^2 + 1$, $h'(z) = 2z$로 보아 $g(i)/h'(i)$ 공식을 썼다. 분자 $\lvert e^{iz}\rvert = e^{-\Img z} \leq 1$이 상반평면에서 유계이고 $\lvert 1/(z^2+1)\rvert \rightarrow 0$이므로 보조정리 6에 의해 반원호 적분이 소멸하여, 유수정리로
 
 $$\int_{-\infty}^{\infty}\frac{e^{ix}}{x^2 + 1}\,dx = 2\pi i\cdot\frac{e^{-1}}{2i} = \frac{\pi}{e}$$
 
@@ -267,9 +267,9 @@ $$\frac{1}{2\pi i}\oint_{\Gamma_N} \pi\cot(\pi z)f(z)\,dz = \sum_{n = -N}^{N} f(
 
 이다. 왼쪽 적분을 어림한다. 차수 조건에서 큰 $\lvert z\rvert$에 대해 $\lvert f(z)\rvert \leq A/\lvert z\rvert^2$이고 $\Gamma_N$ 위에서 $\lvert z\rvert \geq N + \tfrac12$이므로, $\Gamma_N$의 둘레가 $4(2N + 1)$임과 함께 ML 부등식 ([§복소적분, ⁋명제 6](/ko/math/complex_analysis/complex_integration#prop6)) 으로
 
-$$\left\lvert\oint_{\Gamma_N}\pi\cot(\pi z)f(z)\,dz\right\rvert \leq \pi C\cdot\frac{A}{(N + \frac12)^2}\cdot 4(2N + 1) \xrightarrow[N \to \infty]{} 0$$
+$$\left\lvert\oint_{\Gamma_N}\pi\cot(\pi z)f(z)\,dz\right\rvert \leq \pi C\cdot\frac{A}{(N + \frac12)^2}\cdot 4(2N + 1) \xrightarrow[N \rightarrow \infty]{} 0$$
 
-이다. 따라서 $N \to \infty$에서 왼쪽이 $0$으로 가고, 오른쪽에서 $\sum_{n=-N}^{N} f(n) \to \sum_{n=-\infty}^{\infty} f(n)$ ($f$의 절대수렴성은 차수 조건에서 따름) 이므로
+이다. 따라서 $N \rightarrow \infty$에서 왼쪽이 $0$으로 가고, 오른쪽에서 $\sum_{n=-N}^{N} f(n) \rightarrow \sum_{n=-\infty}^{\infty} f(n)$ ($f$의 절대수렴성은 차수 조건에서 따름) 이므로
 
 $$0 = \sum_{n=-\infty}^{\infty} f(n) + \sum_{j}\operatorname{Res}_{z = z_j}\Bigl[\pi\cot(\pi z)f(z)\Bigr]$$
 
@@ -279,7 +279,7 @@ $$0 = \sum_{n=-\infty}^{\infty} f(n) + \sum_{j}\operatorname{Res}_{z = z_j}\Bigl
 명제 10은 무한급수의 합을 유한개의 유수 계산으로 환원한다. 급수의 항이 한 유리함수 $f$에서 $f(n)$으로 나오기만 하면, $f$의 극이라는 유한집합에서의 유수만 구하면 합이 닫힌 형태로 결정된다. 정사각형 경로를 쓰는 것은 그 위에서 $\cot\pi z$이 균등하게 유계여서 적분이 소멸하기 때문이며, 정수에 걸리지 않도록 변을 반정수 $N + \tfrac12$에 두는 것이 요령이다. 이 공식의 가장 유명한 응용이 Basel 문제이다.
 
 ::: 예시 11 (Basel 문제)
-$\displaystyle\sum_{n=1}^{\infty}\frac{1}{n^2} = \frac{\pi^2}{6}$임을 보인다. $f(z) = 1/z^2$은 차수 조건을 만족하지만 극 $z = 0$이 정수라 명제 10을 곧장 쓸 수 없으므로, 원점을 따로 다룬다. 정사각형 경로 $\Gamma_N$ 안에서 $g(z) = \pi\cot(\pi z)/z^2$의 극은 정수 $z = n$ ($n \neq 0$) 들과 원점이며, 명제 10의 증명과 같은 어림으로 $N \to \infty$에서 $\oint_{\Gamma_N} g\,dz \to 0$이다. 따라서 모든 극에서의 유수 합이 $0$이다.
+$\displaystyle\sum_{n=1}^{\infty}\frac{1}{n^2} = \frac{\pi^2}{6}$임을 보인다. $f(z) = 1/z^2$은 차수 조건을 만족하지만 극 $z = 0$이 정수라 명제 10을 곧장 쓸 수 없으므로, 원점을 따로 다룬다. 정사각형 경로 $\Gamma_N$ 안에서 $g(z) = \pi\cot(\pi z)/z^2$의 극은 정수 $z = n$ ($n \neq 0$) 들과 원점이며, 명제 10의 증명과 같은 어림으로 $N \rightarrow \infty$에서 $\oint_{\Gamma_N} g\,dz \rightarrow 0$이다. 따라서 모든 극에서의 유수 합이 $0$이다.
 
 $n \neq 0$인 정수에서는 $\pi\cot\pi z$이 유수 $1$인 단순극이므로 $\operatorname{Res}_{z = n} g = 1/n^2$이다. 원점에서는 $\pi\cot\pi z$이 단순극, $1/z^2$이 이차극이라 $g$이 $z = 0$에서 삼차극을 가지며, 그 유수는 Laurent 전개로 구한다. $\pi\cot\pi z$의 원점 근방 전개는
 

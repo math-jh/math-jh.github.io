@@ -73,7 +73,7 @@ $$\mathfrak{a}\mathfrak{b}\subset \mathfrak{a}A\subset \mathfrak{a},\quad \mathf
 이 모두 성립하므로 $\mathfrak{a}\mathfrak{b}\subset \mathfrak{a}\cap \mathfrak{b}$이 성립한다. 일반적으로 등호가 성립할 필요는 없다.
 
 ::: 정의 3
-Ring $A$의 두 two-sided ideal $\mathfrak{a},\mathfrak{b}$가 $\mathfrak{a}+\mathfrak{b}=A$를 만족할 때 *comaximal<sub>공최대</sub>*이라 부른다. 여러 ideal $\mathfrak{a}_1,\ldots,\mathfrak{a}_n$이 *pairwise comaximal*이라 함은 모든 $i\ne j$에 대하여 $\mathfrak{a}_i+\mathfrak{a}_j=A$임을 뜻한다.
+Ring $A$의 두 two-sided ideal $\mathfrak{a},\mathfrak{b}$가 $\mathfrak{a}+\mathfrak{b}=A$를 만족할 때 *comaximal<sub>공최대</sub>*이라 부른다. 여러 ideal $\mathfrak{a}_1,\ldots,\mathfrak{a}_n$이 *pairwise comaximal<sub>쌍마다 공최대</sub>*이라 함은 모든 $i\ne j$에 대하여 $\mathfrak{a}_i+\mathfrak{a}_j=A$임을 뜻한다.
 :::
 
 여기서 조건 $\mathfrak{a}+\mathfrak{b}=A$는 항등원 $1$이 
@@ -195,7 +195,7 @@ $$a=a\cdot 1=a\sum_i e_i=\sum_i ae_i$$
 
 이고, 만일 $x\in Ae_i\cap\sum_{j\neq i}Ae_j$라면 $x$는 $ae_i$꼴인 동시에 $\sum_{j\neq i} a_j e_j$ 꼴이며, 이를 만족할 수 있는 $x$는 $0$뿐이므로 이것이 direct sum을 준다는 것에서 얻어진다. 이제 $e_i\in C(A)$이므로 각 $Ae_i$는 항등원 $e_i$를 갖는 ring이며, 사상 
 
-$$A\to Ae_i;\qquad a\mapsto ae_i$$
+$$A\rightarrow Ae_i;\qquad a\mapsto ae_i$$
 
 는 전사이고 그 kernel은 $A(1-e_i)=\mathfrak{a}_i$이므로 $A/\mathfrak{a}_i\cong Ae_i$이다. 이를 합치면, [\[대수적 구조\] §환의 곱, 쌍대곱, 텐서곱, ⁋정의 3](/ko/math/algebraic_structures/operations_of_rings#def3)에서 정의한 direct sum이 유한 지표에서는 direct product와 같으므로 
 

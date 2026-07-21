@@ -43,7 +43,7 @@ $$\widetilde{f}(\mathrm{x})=\begin{cases}f_{\lvert\mathrm{x}\rvert}(\mathrm{x}/\
 남은 글에서 우리는 편의상 path-connected space들만 생각한다. Simply connnected가 아닌 공간의 fundamental group을 계산하기 위해서는 여러 방법이 필요한데, 가장 기초적이고 핵심적인 방법 중 하나는 covering space를 사용하는 것이다. 
 
 ::: 정의 3
-Continuous surjection $p:E \rightarrow B$에 대하여, $B$의 열린집합 $U$가 $p$에 의해 *evenly covered<sub>고르게 덮임</sub>*이라는 것은 $p^{-1}(U)$가 $U$와 homeomorphic한 $E$의 disjoint open set들의 합집합으로 쓰여지는 것이다. 만일 임의의 $x\in B$마다 $p$에 의해 evenly covered인 적당한 open neighborhood $U$가 존재한다면 $p$를 *covering map*이라 부르고, $E$를 *covering space<sub>피복공간</sub>*라 부른다. 
+Continuous surjection $p:E \rightarrow B$에 대하여, $B$의 열린집합 $U$가 $p$에 의해 *evenly covered<sub>고르게 덮임</sub>*이라는 것은 $p^{-1}(U)$가 $U$와 homeomorphic한 $E$의 disjoint open set들의 합집합으로 쓰여지는 것이다. 만일 임의의 $x\in B$마다 $p$에 의해 evenly covered인 적당한 open neighborhood $U$가 존재한다면 $p$를 *covering map<sub>피복 사상</sub>*이라 부르고, $E$를 *covering space<sub>피복공간</sub>*라 부른다. 
 :::
 
 정의는 다소 복잡하지만, 본질적으로는 다음의 그림을 염두에 두면 편하다. 
@@ -76,7 +76,7 @@ $$\Hom_{\Pi_1(E))}(y_0, y_1)\rightarrow \Hom_{\Pi_1(B)}(p(y_0), p(y_1))\tag{$\as
 이 잘 정의된다. 만일 $B$가 path-connected이고 $p(y_0)=p(y_1)$라면, 이는 fundamental group $\pi_1(B)$로의 (groupoid) homomorphism이 될 것이다. 만일 $E$가 $B$의 fundamental group (혹은 groupoid)에 대한 정보를 모두 가지고 있다면 적어도 이 homomorphism이 surjective여야 한다. 
 
 ::: 정의 5
-Continuous map $p:E\rightarrow B$를 고정하자. 그럼 임의의 continuous map $f:X \rightarrow B$에 대하여, $f$의 $p$에 대한 *lifting*이란 식 $p\circ\widetilde{f}=f$를 만족하는 $\widetilde{f}:X\rightarrow E$를 의미한다. 
+Continuous map $p:E\rightarrow B$를 고정하자. 그럼 임의의 continuous map $f:X \rightarrow B$에 대하여, $f$의 $p$에 대한 *lifting<sub>올림</sub>*이란 식 $p\circ\widetilde{f}=f$를 만족하는 $\widetilde{f}:X\rightarrow E$를 의미한다. 
 :::
 
 이러한 정의를 생각하는 이유는 당연히 $X=I$이고 따라서 $f$가 $B$로의 path일 경우, 만일 $f$의 $p$에 대한 lifting이 존재한다면 이것이 homomorphism ($\ast$)에 의한 $f$의 preimage에 속하기 때문이다. 그렇다면 우리의 주장은 만일 $p$가 covering space라면 이러한 lifting이 항상 존재한다는 것이다. 
@@ -140,7 +140,7 @@ $$p:E=\coprod_{x\in B}F(x) \rightarrow B$$
 첫째 조건은 $B$가 locally path-connected라는 것 뿐이다. 둘째 조건은 조금 더 미묘한데, $U$ 안에서 끝점을 공유하는 두 path가 *$B$에서* 같은 path class를 정의하면 된다. 이는 locally simply connected보다 더 약한 조건이다. 
 
 ::: 정의 10
-위상공간 $X$가 *semi-locally simply connected*라는 것은 임의의 $x\in X$마다 적당한 open neighborhood $U$가 존재하여 $U$의 임의의 loop가 $X$에서 contractible이도록 할 수 있는 것이다. 
+위상공간 $X$가 *semi-locally simply connected<sub>반국소 단순연결</sub>*라는 것은 임의의 $x\in X$마다 적당한 open neighborhood $U$가 존재하여 $U$의 임의의 loop가 $X$에서 contractible이도록 할 수 있는 것이다. 
 :::
 
 그럼 위의 논증이 성립하기 위해서는 공간 $B$가 기존에 가정했던 path-connected 조건 외에도 두 조건 locally path-connected, semi-locally simply connected 조건을 만족해야 하는 것을 안다. 이제 위의 논의를 종합하면 다음의 결과를 얻는다. 

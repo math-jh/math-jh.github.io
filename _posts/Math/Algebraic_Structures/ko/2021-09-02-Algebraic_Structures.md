@@ -149,11 +149,11 @@ $$x\star y\equiv x'\star y'\pmod{R}$$
 
 $$x\equiv x'\implies a\star x\equiv a\star x'$$
 
-을 만족한다면, $R$이 $\star$와 *left compatible*하다고 말한다. 비슷하게 만일 
+을 만족한다면, $R$이 $\star$와 *left compatible<sub>왼쪽 호환</sub>*하다고 말한다. 비슷하게 만일 
 
 $$x\equiv x'\implies x\star a\equiv x'\star a$$
 
-가 모든 $a$에 대하여 성립한다면, $R$이 $\star$와 *right compatible*하다고 말한다. Left compatible인 동시에 right compatible인 동치관계를 간단히 *compatible*하다고 한다.
+가 모든 $a$에 대하여 성립한다면, $R$이 $\star$와 *right compatible<sub>오른쪽 호환</sub>*하다고 말한다. Left compatible인 동시에 right compatible인 동치관계를 간단히 *compatible*하다고 한다.
 :::
 
 물론 위의 식에서 $\equiv$는 항상 관계 $R$에 대한 것을 뜻한다.

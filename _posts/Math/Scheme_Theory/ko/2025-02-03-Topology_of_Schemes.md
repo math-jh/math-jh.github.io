@@ -30,7 +30,7 @@ $$\cl(\{\mathfrak{m}\})=ZI(\{\mathfrak{m}\})=ZIZ(\mathfrak{m})=Z(\mathfrak{m})=\
 우리의 첫째 목표는 이러한 점을 직관적으로 이해하는 것이다. 
 
 ::: 정의 2
-위상공간 $X$의 두 점 $x,y$가 $x\in\cl(\{y\})$를 만족한다 하자. 그럼 $x$를 $y$의 *specialization*이라 하고, $y$는 $x$의 *generalization*이라 한다. 만일 위상공간 $X$의 닫힌집합 $C$에 대하여, $C=\cl(\{x\})$가 성립한다면 $x$를 $C$의 *generic point<sub>일반점</sub>*라 부른다. 
+위상공간 $X$의 두 점 $x,y$가 $x\in\cl(\{y\})$를 만족한다 하자. 그럼 $x$를 $y$의 *specialization<sub>특수화</sub>*이라 하고, $y$는 $x$의 *generalization<sub>일반화</sub>*이라 한다. 만일 위상공간 $X$의 닫힌집합 $C$에 대하여, $C=\cl(\{x\})$가 성립한다면 $x$를 $C$의 *generic point<sub>일반점</sub>*라 부른다. 
 :::
 
 그럼 정의에 의하여, $x$가 $C$의 generic point라면 임의의 점 $y\in C$와 그 열린근방 $U$에 대하여 $U$는 항상 $x$를 포함한다. 따라서 generic point는 $C$의 모든 점에 가까운 점으로 생각할 수 있다.
@@ -125,7 +125,7 @@ Scheme은 정의상 affine scheme들을 붙여서 얻어지는 대상이므로, 
 우리는 이번 글에서 local property를 정의하고, 이를 noetherian property에 적용하며 글을 마친다. 우선 ring의 성질이 local하다는 것이 어떤 의미인지 살펴보자.
 
 ::: 정의 8
-Ring의 성질 $P_\alg$가 *local*이라는 것은 다음의 두 조건이 성립하는 것이다.
+Ring의 성질 $P_\alg$가 *local<sub>국소적</sub>*이라는 것은 다음의 두 조건이 성립하는 것이다.
 
 1. 임의의 ring $A$와 $f\in A$에 대하여, 만일 $A$가 $P_\alg$를 만족한다면 $A_f$도 $P_\alg$를 만족한다.
 2. 임의의 ring $A$와, $f_1,\ldots, f_n\in A$가 $A=(f_1,\ldots, f_n)$을 만족한다 하자. 그럼 만일 모든 $A_{f_i}$가 $P_\alg$를 만족한다면 $A$도 $P_\alg$를 만족한다. 
@@ -143,7 +143,7 @@ $$\Spec A=\Spec A\setminus Z(f_1,\ldots, f_r)=\Spec A\setminus\bigcap_{i=1}^r Z(
 한편 $\Spec A$의 일반적인 open set은 principal open set들의 합집합으로 나타낼 수 있고 ([§스펙트럼, ⁋보조정리 11](/ko/math/scheme_theory/spectrums#lem11)), 따라서 $\Spec A$가 $P_\geo$를 만족하면 $\Spec A$의 임의의 *affine* open subset 또한 $P_\geo$를 만족한다. 이처럼 principal open set들로 검사하여 결정되는 성질을 *affine-local property*라 부르며, 이를 임의의 scheme의 affine subscheme들에 대한 성질로 일반화한 것이 다음 정의이다. 
 
 ::: 정의 9
-Scheme $X$의 적당한 affine subscheme들에 대해 정의된 성질 $P$가 *affine-local property*라는 것은 다음 두 조건이 성립하는 것이다. 
+Scheme $X$의 적당한 affine subscheme들에 대해 정의된 성질 $P$가 *affine-local property<sub>아핀-국소 성질</sub>*라는 것은 다음 두 조건이 성립하는 것이다. 
 
 1. 만일 $\Spec A\subseteq X$가 $P$를 만족한다면, 임의의 $f\in A$에 대해 $\Spec A_f\subseteq X$ 또한 $P$를 만족한다.
 2. 만일 $A=(f_1,\ldots, f_r)$이고 $\Spec A_{f_i}\subseteq X$가 모두 $P$를 만족한다면 $\Spec A \subseteq X$ 또한 $P$를 만족한다. 
@@ -226,7 +226,7 @@ Scheme $X$가 *locally noetherian scheme<sub>국소뇌터스킴</sub>*인 것은
 마지막으로 우리는 [정의 9](#def9)와는 조금 다른 국소성의 개념을 정의하는데, *stalk-local*의 개념이 그것이다. 
 
 ::: 정의 15
-Scheme $X$의 성질 $P$가 *stalk-local*이라는 것은 각각의 $x\in X$에 대하여 ring $\mathcal{O}_{X,x}$가 ring의 성질 $Q$를 만족하는 것이다. 
+Scheme $X$의 성질 $P$가 *stalk-local<sub>줄기-국소</sub>*이라는 것은 각각의 $x\in X$에 대하여 ring $\mathcal{O}_{X,x}$가 ring의 성질 $Q$를 만족하는 것이다. 
 :::
 
 그럼 다음이 성립한다.

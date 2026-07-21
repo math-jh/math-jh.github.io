@@ -19,7 +19,7 @@ weight: 11
 ## Associated graded module
 
 ::: 정의 1
-Ring $A$의 $\mathfrak{a}$에 대한 *associated graded ring*을 
+Ring $A$의 $\mathfrak{a}$에 대한 *associated graded ring<sub>동반 등급환</sub>*을 
 
 $$\gr_\mathfrak{a}A= A/\mathfrak{a}\oplus \mathfrak{a}/\mathfrak{a}^2\oplus\cdots$$
 
@@ -52,7 +52,7 @@ $$M=M_0\supseteq M_1\supseteq\cdots$$
 
 $$\mathcal{J}:\quad M=M_0\supseteq M_1\supseteq\cdots$$
 
-에 대하여, $M$의 $\mathcal{J}$에 대한 *associated graded module*을 
+에 대하여, $M$의 $\mathcal{J}$에 대한 *associated graded module<sub>동반 등급가군</sub>*을 
 
 $$\gr_\mathcal{J}M=M/M_1\oplus M_1/M_2\oplus\cdots$$
 

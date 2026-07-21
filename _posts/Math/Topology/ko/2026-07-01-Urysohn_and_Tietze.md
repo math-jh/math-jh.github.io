@@ -20,7 +20,7 @@ published: false
 
 앞선 글에서 우리는 위상공간이 점이나 닫힌집합을 얼마나 잘 분리하는지에 따라 여러 층위의 separation axiom을 도입하였다. ([§하우스도르프 공간, ⁋정의 3](/ko/math/topology/Hausdorff_spaces#def3)) 이들 조건은 그 자체로는 열린집합의 존재를 요구하는 순수하게 위상적인 진술에 지나지 않는다. 그러나 위상공간을 다루는 실제 상황에서 우리가 진정으로 다루고자 하는 대상은 공간 위에서 정의된 연속함수이며, separation axiom의 힘은 이러한 조건이 서로소인 닫힌집합을 실제로 갈라놓는 연속함수를 만들어 낼 때 비로소 드러난다.
 
-이 점을 명확히 하자. [§하우스도르프 공간, ⁋정의 3](/ko/math/topology/Hausdorff_spaces#def3)에서 두 부분집합 $A,B$가 연속함수로 분리가능하다는 것은 연속함수 $f:X\to\mathbb{R}$이 존재하여 $A\subseteq f^{-1}(\{0\})$이고 $B\subseteq f^{-1}(\{1\})$인 것으로 정의하였다. 이는 근방으로 분리가능하다는 조건보다 훨씬 강하다. 근방에 의한 분리는 두 집합을 감싸는 서로소인 열린집합만을 요구하지만, 연속함수에 의한 분리는 두 집합 사이의 모든 중간 단계를 연속적으로 이어 주는 실숫값 척도를 요구하기 때문이다.
+이 점을 명확히 하자. [§하우스도르프 공간, ⁋정의 3](/ko/math/topology/Hausdorff_spaces#def3)에서 두 부분집합 $A,B$가 연속함수로 분리가능하다는 것은 연속함수 $f:X\rightarrow\mathbb{R}$이 존재하여 $A\subseteq f^{-1}(\{0\})$이고 $B\subseteq f^{-1}(\{1\})$인 것으로 정의하였다. 이는 근방으로 분리가능하다는 조건보다 훨씬 강하다. 근방에 의한 분리는 두 집합을 감싸는 서로소인 열린집합만을 요구하지만, 연속함수에 의한 분리는 두 집합 사이의 모든 중간 단계를 연속적으로 이어 주는 실숫값 척도를 요구하기 때문이다.
 
 이 글의 목표는 normal space에서 서로소인 닫힌집합이 언제나 연속함수로 분리가능함을 보이는 것이다. 이것이 Urysohn 보조정리이며, 여기에서 파생되는 Tietze 확장정리와 Urysohn 거리화정리는 일반위상수학에서 연속함수의 존재를 다루는 가장 기본적인 도구가 된다. 우리는 [§하우스도르프 공간, ⁋정의 3](/ko/math/topology/Hausdorff_spaces#def3)의 용어를 따라, 서로소인 두 닫힌집합이 언제나 근방으로 분리가능한 공간을 *normal space<sub>정규공간</sub>*라 부른다. 이 정의에는 $T_1$ 조건이 포함되지 않으므로, normal이라는 조건만으로는 점이 닫혀 있을 필요조차 없다는 점에 유의한다.
 
@@ -46,7 +46,7 @@ $$C\subseteq V\subseteq\cl(V)\subseteq X\setminus W\subseteq U$$
 역으로 임의의 닫힌집합과 그를 포함하는 열린집합 사이에 위와 같은 $V$가 항상 끼어들 수 있는 공간은 normal임을 같은 논증을 되짚어 확인할 수 있다. 즉 [보조정리 1](#lem1)의 조건은 정규성과 동치이다. 우리는 이 보간 성질을 dyadic 유리수로 색인된 사슬을 세우는 데에 반복 적용할 것이다.
 
 ::: 정리 2
-(Urysohn's lemma) Normal space $X$와 서로소인 두 닫힌집합 $A,B\subseteq X$가 주어졌다 하자. 그럼 연속함수 $f:X\to[0,1]$이 존재하여 모든 $a\in A$에 대해 $f(a)=0$이고 모든 $b\in B$에 대해 $f(b)=1$이다.
+(Urysohn's lemma) Normal space $X$와 서로소인 두 닫힌집합 $A,B\subseteq X$가 주어졌다 하자. 그럼 연속함수 $f:X\rightarrow[0,1]$이 존재하여 모든 $a\in A$에 대해 $f(a)=0$이고 모든 $b\in B$에 대해 $f(b)=1$이다.
 :::
 ::: 증명
 구간 $[0,1]$에 속하는 dyadic 유리수들의 집합
@@ -65,7 +65,7 @@ $$\cl(U_p)\subseteq U_r\subseteq\cl(U_r)\subseteq U_q$$
 
 가 성립하도록 한다. 이렇게 하면 $(\ast)$가 유지된 채로 모든 $r\in D$에 대한 $U_r$이 정의된다.
 
-이제 함수 $f:X\to[0,1]$을
+이제 함수 $f:X\rightarrow[0,1]$을
 
 $$f(x)=\inf\{r\in D\mid x\in U_r\}$$
 
@@ -124,23 +124,23 @@ $$x\mapsto\frac{d(x,A)}{d(x,A)+d(x,B)}$$
 Urysohn 보조정리는 두 개의 값 $0$과 $1$을 미리 지정된 두 닫힌집합에서 실현하는 연속함수를 만들어 낸다. Tietze 확장정리는 이를 극한까지 밀어붙인 것으로, 닫힌집합 위에서 미리 주어진 임의의 연속함수를 공간 전체로 연속적으로 확장한다. 그 증명은 Urysohn 함수를 이용해 목표 함수를 단계마다 일정 비율씩 근사하고, 그 오차 항들을 급수로 합하는 데에 있다. 우선 한 단계의 근사를 담당하는 보조정리를 세운다.
 
 ::: 보조정리 5
-Normal space $X$의 닫힌집합 $A$와 연속함수 $g:A\to\mathbb{R}$이 주어졌다 하고, 어떤 $r>0$에 대하여 모든 $a\in A$에서 $\lvert g(a)\rvert\leq r$이라 하자. 그럼 연속함수 $h:X\to\mathbb{R}$이 존재하여 모든 $x\in X$에서 $\lvert h(x)\rvert\leq r/3$이고, 모든 $a\in A$에서 $\lvert g(a)-h(a)\rvert\leq 2r/3$이다.
+Normal space $X$의 닫힌집합 $A$와 연속함수 $g:A\rightarrow\mathbb{R}$이 주어졌다 하고, 어떤 $r>0$에 대하여 모든 $a\in A$에서 $\lvert g(a)\rvert\leq r$이라 하자. 그럼 연속함수 $h:X\rightarrow\mathbb{R}$이 존재하여 모든 $x\in X$에서 $\lvert h(x)\rvert\leq r/3$이고, 모든 $a\in A$에서 $\lvert g(a)-h(a)\rvert\leq 2r/3$이다.
 :::
 ::: 증명
 두 집합
 
 $$B=g^{-1}([-r,-r/3]),\qquad C=g^{-1}([r/3,r])$$
 
-를 생각하자. $g$가 $A$에서 연속이므로 $B,C$는 $A$의 닫힌집합이고, $A$가 $X$의 닫힌집합이므로 $B,C$는 $X$의 닫힌집합이기도 하다. 또한 $B,C$는 서로소이다. [정리 2](#thm2)를 $X$의 서로소인 두 닫힌집합 $B,C$에 적용하고 그 값을 $[-r/3,r/3]$로 재조정하면, 연속함수 $h:X\to[-r/3,r/3]$이 존재하여 $B$에서 $-r/3$의 값을, $C$에서 $r/3$의 값을 갖는다. (두 집합 가운데 하나가 공집합인 경우에도 상수함수를 택하면 되므로 결론은 유지된다.)
+를 생각하자. $g$가 $A$에서 연속이므로 $B,C$는 $A$의 닫힌집합이고, $A$가 $X$의 닫힌집합이므로 $B,C$는 $X$의 닫힌집합이기도 하다. 또한 $B,C$는 서로소이다. [정리 2](#thm2)를 $X$의 서로소인 두 닫힌집합 $B,C$에 적용하고 그 값을 $[-r/3,r/3]$로 재조정하면, 연속함수 $h:X\rightarrow[-r/3,r/3]$이 존재하여 $B$에서 $-r/3$의 값을, $C$에서 $r/3$의 값을 갖는다. (두 집합 가운데 하나가 공집합인 경우에도 상수함수를 택하면 되므로 결론은 유지된다.)
 
 이제 $\lvert h(x)\rvert\leq r/3$은 정의상 성립한다. 오차를 확인하기 위해 $a\in A$를 세 경우로 나눈다. $a\in B$이면 $g(a)\in[-r,-r/3]$이고 $h(a)=-r/3$이므로 $\lvert g(a)-h(a)\rvert\leq 2r/3$이다. $a\in C$이면 symmetric으로 같은 부등식을 얻는다. $a$가 $B$에도 $C$에도 속하지 않으면 $g(a)\in(-r/3,r/3)$이고 $h(a)\in[-r/3,r/3]$이므로 그 차이의 절댓값은 $2r/3$을 넘지 않는다.
 :::
 
 ::: 정리 6
-(Tietze extension theorem) Normal space $X$의 닫힌집합 $A$와 연속함수 $f:A\to[a,b]$가 주어졌다 하자. 그럼 연속함수 $F:X\to[a,b]$이 존재하여 $F\vert_A=f$이다.
+(Tietze extension theorem) Normal space $X$의 닫힌집합 $A$와 연속함수 $f:A\rightarrow[a,b]$가 주어졌다 하자. 그럼 연속함수 $F:X\rightarrow[a,b]$이 존재하여 $F\vert_A=f$이다.
 :::
 ::: 증명
-$[a,b]$와 $[-1,1]$ 사이의 affine한 homeomorphism을 통해 $[a,b]=[-1,1]$인 경우만 다루면 충분하다. [보조정리 5](#lem5)를 $g=f$와 $r=1$에 적용하여 연속함수 $h_1:X\to\mathbb{R}$을 얻는다. 이는 모든 $x$에서 $\lvert h_1(x)\rvert\leq 1/3$이고 모든 $a\in A$에서 $\lvert f(a)-h_1(a)\rvert\leq 2/3$을 만족한다.
+$[a,b]$와 $[-1,1]$ 사이의 affine한 homeomorphism을 통해 $[a,b]=[-1,1]$인 경우만 다루면 충분하다. [보조정리 5](#lem5)를 $g=f$와 $r=1$에 적용하여 연속함수 $h_1:X\rightarrow\mathbb{R}$을 얻는다. 이는 모든 $x$에서 $\lvert h_1(x)\rvert\leq 1/3$이고 모든 $a\in A$에서 $\lvert f(a)-h_1(a)\rvert\leq 2/3$을 만족한다.
 
 이제 $A$ 위에서 $f-h_1$은 $2/3$으로 유계인 연속함수이므로, 여기에 [보조정리 5](#lem5)를 $r=2/3$으로 적용하여 $\lvert h_2(x)\rvert\leq (1/3)(2/3)$이고 $A$ 위에서 $\lvert f-h_1-h_2\rvert\leq(2/3)^2$인 연속함수 $h_2$를 얻는다. 이를 귀납적으로 반복하면 연속함수들의 열 $(h_n)$을 얻어, 모든 $n\geq 1$에 대하여
 
@@ -150,28 +150,28 @@ $$\lvert h_n(x)\rvert\leq\frac{1}{3}\left(\frac{2}{3}\right)^{n-1}\quad(x\in X),
 
 $$\sum_{n=1}^\infty\frac{1}{3}\left(\frac{2}{3}\right)^{n-1}=1$$
 
-로부터, 임의의 $\epsilon>0$에 대해 $N$을 충분히 크게 잡아 모든 $x\in X$에서 $\lvert F(x)-S_N(x)\rvert\leq(2/3)^N<\epsilon/3$이도록 할 수 있다. 여기서 $F(x)=\sum_{n=1}^\infty h_n(x)$은 각 점에서 절대수렴하는 급수의 합으로 잘 정의되며, $\lvert F(x)\rvert\leq 1$이므로 $F:X\to[-1,1]$이다.
+로부터, 임의의 $\epsilon>0$에 대해 $N$을 충분히 크게 잡아 모든 $x\in X$에서 $\lvert F(x)-S_N(x)\rvert\leq(2/3)^N<\epsilon/3$이도록 할 수 있다. 여기서 $F(x)=\sum_{n=1}^\infty h_n(x)$은 각 점에서 절대수렴하는 급수의 합으로 잘 정의되며, $\lvert F(x)\rvert\leq 1$이므로 $F:X\rightarrow[-1,1]$이다.
 
 $F$의 연속성을 보이자. $x_0\in X$와 $\epsilon>0$이 주어졌다 하고 위와 같이 $N$을 택한다. $S_N$은 유한 개의 연속함수의 합이므로 연속이고, 따라서 $x_0$의 근방 $W$가 존재하여 모든 $x\in W$에서 $\lvert S_N(x)-S_N(x_0)\rvert<\epsilon/3$이다. 그럼 $x\in W$에 대하여
 
 $$\lvert F(x)-F(x_0)\rvert\leq\lvert F(x)-S_N(x)\rvert+\lvert S_N(x)-S_N(x_0)\rvert+\lvert S_N(x_0)-F(x_0)\rvert<\epsilon$$
 
-이므로 $F$는 $x_0$에서 연속이다. 끝으로 둘째 부등식에서 $n\to\infty$의 극한을 취하면 모든 $a\in A$에서 $F(a)=f(a)$이므로 $F$는 $f$의 확장이다.
+이므로 $F$는 $x_0$에서 연속이다. 끝으로 둘째 부등식에서 $n\rightarrow\infty$의 극한을 취하면 모든 $a\in A$에서 $F(a)=f(a)$이므로 $F$는 $f$의 확장이다.
 :::
 
 Tietze 확장정리는 목표 구간이 유계인 경우를 다루지만, 이를 발판으로 삼아 실수 전체를 값으로 갖는 함수의 확장 또한 얻을 수 있다.
 
 ::: 따름정리 7
-Normal space $X$의 닫힌집합 $A$와 연속함수 $f:A\to\mathbb{R}$이 주어졌다 하자. 그럼 연속함수 $F:X\to\mathbb{R}$이 존재하여 $F\vert_A=f$이다.
+Normal space $X$의 닫힌집합 $A$와 연속함수 $f:A\rightarrow\mathbb{R}$이 주어졌다 하자. 그럼 연속함수 $F:X\rightarrow\mathbb{R}$이 존재하여 $F\vert_A=f$이다.
 :::
 ::: 증명
-$t\mapsto t/(1+\lvert t\rvert)$은 $\mathbb{R}$과 열린구간 $(-1,1)$ 사이의 homeomorphism이므로, 이를 $f$에 합성하여 얻은 연속함수는 $A\to(-1,1)\subseteq[-1,1]$로 볼 수 있다. [정리 6](#thm6)에 의하여 이를 연속함수 $G:X\to[-1,1]$로 확장한다. 문제는 $G$가 $X$의 일부에서 값 $\pm 1$을 가질 수 있어 곧바로 $(-1,1)$로 돌아갈 수 없다는 데에 있다.
+$t\mapsto t/(1+\lvert t\rvert)$은 $\mathbb{R}$과 열린구간 $(-1,1)$ 사이의 homeomorphism이므로, 이를 $f$에 합성하여 얻은 연속함수는 $A\rightarrow(-1,1)\subseteq[-1,1]$로 볼 수 있다. [정리 6](#thm6)에 의하여 이를 연속함수 $G:X\rightarrow[-1,1]$로 확장한다. 문제는 $G$가 $X$의 일부에서 값 $\pm 1$을 가질 수 있어 곧바로 $(-1,1)$로 돌아갈 수 없다는 데에 있다.
 
 이 값을 밀어내기 위해 닫힌집합
 
 $$D=G^{-1}(\{-1,1\})$$
 
-를 생각하자. $A$ 위에서 $G$는 $(-1,1)$의 값을 가지므로 $D\cap A=\emptyset$이고, $D$와 $A$는 서로소인 두 닫힌집합이다. [정리 2](#thm2)에 의하여 연속함수 $\psi:X\to[0,1]$을 잡아 $D$에서 $0$, $A$에서 $1$의 값을 갖도록 한다. 그럼 곱 $\psi G$는 연속이며, $\lvert G(x)\rvert=1$인 점에서는 $\psi(x)=0$이라 $\psi(x)G(x)=0$이고 그 밖의 점에서는 $\lvert\psi(x)G(x)\rvert\leq\lvert G(x)\rvert<1$이므로, $\psi G$는 $X$ 전체에서 $(-1,1)$의 값을 갖는다. 또한 $A$에서 $\psi=1$이므로 $\psi G$는 $A$에서 $G$와, 따라서 $f$를 $(-1,1)$로 옮긴 함수와 일치한다. 이제 homeomorphism $(-1,1)\to\mathbb{R}$을 다시 합성하면 원하는 확장 $F:X\to\mathbb{R}$을 얻는다.
+를 생각하자. $A$ 위에서 $G$는 $(-1,1)$의 값을 가지므로 $D\cap A=\emptyset$이고, $D$와 $A$는 서로소인 두 닫힌집합이다. [정리 2](#thm2)에 의하여 연속함수 $\psi:X\rightarrow[0,1]$을 잡아 $D$에서 $0$, $A$에서 $1$의 값을 갖도록 한다. 그럼 곱 $\psi G$는 연속이며, $\lvert G(x)\rvert=1$인 점에서는 $\psi(x)=0$이라 $\psi(x)G(x)=0$이고 그 밖의 점에서는 $\lvert\psi(x)G(x)\rvert\leq\lvert G(x)\rvert<1$이므로, $\psi G$는 $X$ 전체에서 $(-1,1)$의 값을 갖는다. 또한 $A$에서 $\psi=1$이므로 $\psi G$는 $A$에서 $G$와, 따라서 $f$를 $(-1,1)$로 옮긴 함수와 일치한다. 이제 homeomorphism $(-1,1)\rightarrow\mathbb{R}$을 다시 합성하면 원하는 확장 $F:X\rightarrow\mathbb{R}$을 얻는다.
 :::
 
 ## Urysohn 거리화정리
@@ -213,7 +213,7 @@ $$\rho((x_n),(y_n))=\sum_{n=1}^\infty\frac{\lvert x_n-y_n\rvert}{2^n}$$
 
 이제 함수
 
-$$F:X\to[0,1]^{\mathbb{N}},\qquad F(x)=(f_1(x),f_2(x),\ldots)$$
+$$F:X\rightarrow[0,1]^{\mathbb{N}},\qquad F(x)=(f_1(x),f_2(x),\ldots)$$
 
 를 정의한다. 각 좌표함수 $f_k$가 연속이므로 $F$는 연속이다. $F$가 단사임은 $X$가 $T_1$인 데에서 따른다. 서로 다른 두 점 $x\neq y$에 대해 $\{y\}$는 닫힌집합이고 $x\notin\{y\}$이므로 위의 분리 성질에서 어떤 $f_k$가 $f_k(x)=1$, $f_k(y)=0$이 되기 때문이다. 끝으로 $F$가 상 위로의 homeomorphism임을 보이려면 $F$가 열린 사상임을, 즉 $X$의 열린집합 $U$에 대해 $F(U)$가 $F(X)$에서 열려 있음을 확인하면 된다. $x\in U$가 주어지면 위의 분리 성질에서 $f_k(x)>0$이고 $X\setminus U$ 위에서 $f_k=0$인 $f_k$가 존재하므로, $k$번째 좌표가 양수인 $[0,1]^{\mathbb{N}}$의 열린집합과 $F(X)$의 교집합은 $F(x)$를 포함하며 $F(U)$ 안에 놓인다. 이로써 $F$는 상 위로의 homeomorphism이 되어 $X$는 metrizable이다.
 

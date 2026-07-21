@@ -29,7 +29,7 @@ $$t^\ast \!\left(\frac{d\x_i}{\x_i}\right) = \frac{d(t_i \x_i)}{t_i \x_i} = \fra
 
 이므로, 형식적으로 $d\log \x_i$로 적을 수 있는 이 1-form은 *multiplicative* 좌표계 $T_N$에 가장 자연스럽게 적응한 differential form이다.
 
-이를 lattice의 언어로 일반화하기 위해, 각 character $\rchi^m: T_N \to \mathbb{C}^\ast$ ($m \in M$)에 대해 logarithmic differential
+이를 lattice의 언어로 일반화하기 위해, 각 character $\rchi^m: T_N \rightarrow \mathbb{C}^\ast$ ($m \in M$)에 대해 logarithmic differential
 
 $$d\log(\rchi^m) := \frac{d\rchi^m}{\rchi^m}$$
 
@@ -101,7 +101,7 @@ $$\frac{d(\x\y)}{\x\y} \wedge \frac{d\y}{\y} = \left(\frac{d\x}{\x} + \frac{d\y}
 지금까지의 form들은 $T_N$ 위에서만 정의되었다. 우리는 이를 toric variety $X_\Sigma$ 전체로 확장하고자 하는데, character $\rchi^m$은 $X_\Sigma$ 위에서 *rational* function일 뿐이므로 ([§토러스 인자와 선다발, ⁋명제 3](/ko/math/toric_geometry/toric_divisors#prop3)) $d\log \rchi^m = d\rchi^m / \rchi^m$ 또한 일반적으로는 boundary $D_\rho$를 따라 pole을 가지는 rational form이 된다. 다행히 character의 logarithmic differential의 pole은 *가장 약한* 종류, 즉 logarithmic pole에 한정되며, 이러한 form 전체를 모은 sheaf가 fan으로부터 깔끔하게 기술된다.
 
 ::: 정의 5
-Smooth variety $X$ 위의 reduced effective divisor $D \subset X$가 *simple normal crossing divisor* (이하 *SNC divisor*)라는 것은, 각 점 $p \in X$ 주위에서 적당한 local coordinate $z_1, \ldots, z_n$을 잡았을 때 $D$의 local equation이 $z_1 \cdots z_k = 0$ ($0 \le k \le n$; $k = 0$인 경우 $D$가 $p$를 지나지 않음)의 형태로 표현되는 것을 말한다. 직관적으로, $D$를 이루는 component들이 각각 smooth이고 좌표평면처럼 transversally 만나는 경우이다.
+Smooth variety $X$ 위의 reduced effective divisor $D \subset X$가 *simple normal crossing divisor<sub>단순 정규교차 인자</sub>* (이하 *SNC divisor*)라는 것은, 각 점 $p \in X$ 주위에서 적당한 local coordinate $z_1, \ldots, z_n$을 잡았을 때 $D$의 local equation이 $z_1 \cdots z_k = 0$ ($0 \le k \le n$; $k = 0$인 경우 $D$가 $p$를 지나지 않음)의 형태로 표현되는 것을 말한다. 직관적으로, $D$를 이루는 component들이 각각 smooth이고 좌표평면처럼 transversally 만나는 경우이다.
 :::
 
 먼저 임의의 smooth variety와 SNC divisor에 대해 logarithmic pole만 허용한 form들의 sheaf를 정의한 뒤 (Saito-Deligne의 표준 정의), 이를 toric variety의 toric boundary에 적용한다.
@@ -155,7 +155,7 @@ $$\Phi: M \otimes_\mathbb{Z} \mathcal{O}_{X_\Sigma} \longrightarrow \Omega^1_{X_
 
 둘째, 비교를 위해 $\Omega^1_{X_\Sigma}$ 자체를 보면 가령 $X_\Sigma = \mathbb{P}^n$의 경우 Euler sequence
 
-$$0 \to \Omega^1_{\mathbb{P}^n} \to \mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)} \to \mathcal{O}_{\mathbb{P}^n} \to 0$$
+$$0 \rightarrow \Omega^1_{\mathbb{P}^n} \rightarrow \mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)} \rightarrow \mathcal{O}_{\mathbb{P}^n} \rightarrow 0$$
 
 으로부터 $\Omega^1_{\mathbb{P}^n}$이 trivial bundle이 아니라는 것을 안다. ([\[대수다양체\] §표준선다발, ⁋명제 7](/ko/math/algebraic_varieties/canonical_bundle#prop7)) 실제로 $\Gamma(\mathbb{P}^n, \Omega^1_{\mathbb{P}^n}) = 0$임이 알려져 있는데도, $\log D$ twist를 가한 $\Omega^1_{\mathbb{P}^n}(\log D)$는 위 명제에 의해 trivial bundle 즉 $\mathcal{O}_{\mathbb{P}^n}^{\oplus n}$이 되어 $n$차원의 global section 공간을 가진다. 이러한 극적인 변화가 정확히 boundary $D = \sum D_\rho$에 "logarithmic" 정보를 허용한 대가이다.
 

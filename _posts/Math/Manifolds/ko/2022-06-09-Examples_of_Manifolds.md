@@ -48,7 +48,7 @@ Manifold $M$이 주어졌다 하자. $M$의 열린집합 $V$에 다음의 두 �
     
     $$\mathcal{A}_V=\{(U_\alpha\cap V,\varphi_\alpha\vert_{U_\alpha\cap V})\mid(U_\alpha,\varphi_\alpha)\in\mathcal{A}\}$$
 
-를 주면, $V$는 $M$과 동일한 차원의 manifold가 된다. 이러한 manifold 구조를 $M$의 *open submanifold*라 부른다. 
+를 주면, $V$는 $M$과 동일한 차원의 manifold가 된다. 이러한 manifold 구조를 $M$의 *open submanifold<sub>열린 부분다양체</sub>*라 부른다. 
 :::
 
 물론 이 정의가 잘 정의되기 위해서는 subspace topology가 locally Euclidean, second countable, Hausdorff 조건을 모두 만족해야 하고, $\mathcal{A}_V$의 원소들이 각각 $C^\infty$-compatible해야 한다. 하지만 Hausdorff, second countability는 모두 subspace topology에 의해 잘 보존되는 성질이며, locally Euclidean 성질 또한 $V$가 열린집합이라는 사실로부터 얻어낼 수 있다. 뿐만 아니라, $\mathcal{A}_V$의 원소들 사이의 transition map은 $C^\infty$ 함수들의 restriction들이므로 이들 또한 $C^\infty$이다.

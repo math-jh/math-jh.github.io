@@ -102,7 +102,7 @@ $$(H^\bullet(X;A), {\smile}, 1)$$
 ::: 명제 3
 임의의 위상공간 $X,Y$와 commutative ring $A$에 대하여, 
 
-$$\times: H^\ast(X;A)\otimes_A H^\ast(Y;A) \to H^\ast(X\times Y;A)$$
+$$\times: H^\ast(X;A)\otimes_A H^\ast(Y;A) \rightarrow H^\ast(X\times Y;A)$$
 
 는 graded $A$-algebra homomorphism이다.
 :::
@@ -169,7 +169,7 @@ $$\beta\frown \sigma=\sum_i(-1)^{\lvert\beta\rvert\lvert\sigma_i\rvert}\beta(\ta
 
 $$\frown:H^p(X;A)\otimes H_{p+q}(X;A) \rightarrow H_q(X;A)$$
 
-를 *cap product*라 부른다. 
+를 *cap product<sub>교적</sub>*라 부른다. 
 :::
 
 즉 $\frown$은 degree $p+q$의 homology chain과 degree $p$의 cohomology chain을 받아서, homology chain의 degree $p$인 부분과 cohomology chain을 Kronecker pairing을 통해 연산한 후, 이 상수를 남아있는 degree $q$의 homology chain에 scalar multiplication을 해 주어 얻어지는 것이다. 이는 다소 작위적인 정의로 보일 수 있으나 [§Acyclic models theorem, ⁋정리 3](/ko/math/algebraic_topology/acyclic_models_theorem#thm3)의 유일성에 의해 유일하게 말이 되는 정의라 할 수 있다. 뿐만 아니라, 이 표현으로부터 이것이 정확하게 interior product에 해당하는 연산임을 안다.

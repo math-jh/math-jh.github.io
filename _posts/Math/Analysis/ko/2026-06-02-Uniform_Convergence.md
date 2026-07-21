@@ -23,7 +23,7 @@ published: false
 
 $$\lvert f_n(x) - f(x)\rvert < \varepsilon$$
 
-이 성립하는 것이다. 상한노름 $\lVert g\rVert_\infty = \sup_x \lvert g(x)\rvert$을 쓰면, 균등수렴은 $\lVert f_n - f\rVert_\infty \to 0$과 같다.
+이 성립하는 것이다. 상한노름 $\lVert g\rVert_\infty = \sup_x \lvert g(x)\rvert$을 쓰면, 균등수렴은 $\lVert f_n - f\rVert_\infty \rightarrow 0$과 같다.
 :::
 
 점별수렴과의 결정적 차이는 $N$이 점에 무관하다는 것이다. $[0,1]$에서 $f_n(x) = x^n$은 $\lVert f_n - f\rVert_\infty = 1$ ($x$를 $1$ 가까이 잡으면 $f_n$이 $1$에 가까우므로) 이어서 균등수렴하지 않으며, 이것이 그 극한이 불연속이었던 이유이다.
@@ -45,7 +45,7 @@ $$\lvert f(x) - f(a)\rvert \leq \lvert f(x) - f_n(x)\rvert + \lvert f_n(x) - f_n
 ::: 정리 3
 연속함수들의 열 $(f_n)$이 $[a,b]$에서 $f$로 균등수렴하면
 
-$$\lim_{n\to\infty}\int_a^b f_n = \int_a^b f = \int_a^b \lim_{n\to\infty} f_n$$
+$$\lim_{n\rightarrow\infty}\int_a^b f_n = \int_a^b f = \int_a^b \lim_{n\rightarrow\infty} f_n$$
 
 이다.
 :::
@@ -53,7 +53,7 @@ $$\lim_{n\to\infty}\int_a^b f_n = \int_a^b f = \int_a^b \lim_{n\to\infty} f_n$$
 ::: 증명
 $f$는 [정리 2](#thm2)로 연속이므로 적분가능하다 ([§Riemann 적분, ⁋정리 4](/ko/math/analysis/riemann_integral#thm4)). 단조성에 의해
 
-$$\left\lvert\int_a^b f_n - \int_a^b f\right\rvert \leq \int_a^b \lvert f_n - f\rvert \leq \lVert f_n - f\rVert_\infty (b - a) \to 0$$
+$$\left\lvert\int_a^b f_n - \int_a^b f\right\rvert \leq \int_a^b \lvert f_n - f\rvert \leq \lVert f_n - f\rVert_\infty (b - a) \rightarrow 0$$
 
 이다.
 :::
@@ -69,7 +69,7 @@ $$\left\lvert\int_a^b f_n - \int_a^b f\right\rvert \leq \int_a^b \lvert f_n - f\
 :::
 
 ::: 증명
-부분합 $s_N = \sum_{n=1}^N f_n$을 생각하자. $M > N$에 대해 $\lVert s_M - s_N\rVert_\infty \leq \sum_{n=N+1}^M M_n$인데, $\sum M_n$이 수렴하므로 우변은 $N \to \infty$에서 $0$으로 간다. 즉 $(s_N)$이 상한노름에 대해 Cauchy이고, 따라서 극한함수로 균등수렴한다 ([§Cauchy 수열과 완비성](/ko/math/analysis/cauchy_sequences)의 완비성 논법을 상한노름 공간에 적용).
+부분합 $s_N = \sum_{n=1}^N f_n$을 생각하자. $M > N$에 대해 $\lVert s_M - s_N\rVert_\infty \leq \sum_{n=N+1}^M M_n$인데, $\sum M_n$이 수렴하므로 우변은 $N \rightarrow \infty$에서 $0$으로 간다. 즉 $(s_N)$이 상한노름에 대해 Cauchy이고, 따라서 극한함수로 균등수렴한다 ([§Cauchy 수열과 완비성](/ko/math/analysis/cauchy_sequences)의 완비성 논법을 상한노름 공간에 적용).
 :::
 
 M-판정의 위력은 극한함수의 정체를 전혀 몰라도, 각 항의 크기를 $x$에 무관한 수 $M_n$으로 위에서 누르기만 하면 균등수렴이 따라 나온다는 데 있다. 이때 $\sum M_n$이 수렴하는지는 [§무한급수](/ko/math/analysis/series)에서 익힌 수치급수 판정법으로 결정되므로, 함수항급수의 균등수렴 문제가 익숙한 수치급수의 수렴 문제로 환원된다. 가령 $\sum \sin(nx)/n^2$은 $\lvert\sin\rvert \leq 1$로 $x$ 의존성을 한 번에 지워 $M_n = 1/n^2$을 얻으므로 $\mathbb{R}$ 전체에서 균등수렴하며, 더 일반적으로 $\sum a_n \sin(nx)$은 $\sum \lvert a_n\rvert < \infty$이면 같은 방식으로 균등수렴한다. 다만 M-판정은 충분조건일 뿐이어서, 이를 통과하지 못한다고 해서 균등수렴이 곧 부정되는 것은 아니다.
@@ -97,7 +97,7 @@ $$\begin{aligned}
 
 이므로 균등 Cauchy이다.
 
-역으로 $(f_n)$이 균등 Cauchy라 하자. 각 고정된 $x$에서 수열 $(f_n(x))$은 (균등 Cauchy 조건의 특수한 경우로) 수치 Cauchy 수열이므로 실수의 완비성에 의해 어떤 값으로 수렴한다 ([§Cauchy 수열과 완비성, ⁋정리 4](/ko/math/analysis/cauchy_sequences#thm4)). 그 극한을 $f(x)$로 두면 점별극한 $f$가 정의된다. 이제 균등 Cauchy 조건에서 $m, n \geq N$이면 모든 $x$에 대해 $\lvert f_m(x) - f_n(x)\rvert < \varepsilon$인데, 여기서 $m \to \infty$로 보내면 $f_m(x) \to f(x)$이므로
+역으로 $(f_n)$이 균등 Cauchy라 하자. 각 고정된 $x$에서 수열 $(f_n(x))$은 (균등 Cauchy 조건의 특수한 경우로) 수치 Cauchy 수열이므로 실수의 완비성에 의해 어떤 값으로 수렴한다 ([§Cauchy 수열과 완비성, ⁋정리 4](/ko/math/analysis/cauchy_sequences#thm4)). 그 극한을 $f(x)$로 두면 점별극한 $f$가 정의된다. 이제 균등 Cauchy 조건에서 $m, n \geq N$이면 모든 $x$에 대해 $\lvert f_m(x) - f_n(x)\rvert < \varepsilon$인데, 여기서 $m \rightarrow \infty$로 보내면 $f_m(x) \rightarrow f(x)$이므로
 
 $$\lvert f(x) - f_n(x)\rvert \leq \varepsilon \qquad (n \geq N,\ \text{모든 } x)$$
 
@@ -113,7 +113,7 @@ $$\lvert f(x) - f_n(x)\rvert \leq \varepsilon \qquad (n \geq N,\ \text{모든 } 
 
 $$\left\lvert \frac{1}{1-x} - \sum_{n=0}^{N} x^n\right\rvert = \left\lvert \frac{x^{N+1}}{1-x}\right\rvert$$
 
-인데, $x \to 1^-$로 보내면 이 값은 임의로 커지므로 $N$을 아무리 크게 잡아도 상한노름이 $0$으로 가지 않는다.
+인데, $x \rightarrow 1^-$로 보내면 이 값은 임의로 커지므로 $N$을 아무리 크게 잡아도 상한노름이 $0$으로 가지 않는다.
 :::
 
 [예시 6](#ex6)은 균등수렴이 정의역에 민감함을 보여 준다. 같은 급수라도 컴팩트한 부분구간으로 제한하면 균등수렴하지만 경계에 다가가는 점들을 포함하면 그렇지 않을 수 있다.
@@ -121,15 +121,15 @@ $$\left\lvert \frac{1}{1-x} - \sum_{n=0}^{N} x^n\right\rvert = \left\lvert \frac
 ::: 예시 7 (균등수렴이라도 미분은 안 됨)
 $\mathbb{R}$에서 $f_n(x) = \sin(nx)/\sqrt{n}$을 보자. 모든 $x$에서
 
-$$\lvert f_n(x)\rvert \leq \frac{1}{\sqrt{n}} \to 0$$
+$$\lvert f_n(x)\rvert \leq \frac{1}{\sqrt{n}} \rightarrow 0$$
 
-이므로 $\lVert f_n - 0\rVert_\infty \leq 1/\sqrt{n} \to 0$, 즉 $f_n$은 $0$으로 균등수렴한다. 그러나 도함수는
+이므로 $\lVert f_n - 0\rVert_\infty \leq 1/\sqrt{n} \rightarrow 0$, 즉 $f_n$은 $0$으로 균등수렴한다. 그러나 도함수는
 
 $$f_n'(x) = \sqrt{n} \cos(nx)$$
 
-이어서 $x = 0$에서 $f_n'(0) = \sqrt{n} \to \infty$이다. 극한함수 $0$의 도함수는 $0$이므로
+이어서 $x = 0$에서 $f_n'(0) = \sqrt{n} \rightarrow \infty$이다. 극한함수 $0$의 도함수는 $0$이므로
 
-$$\lim_{n\to\infty} f_n'(0) \neq \Bigl(\lim_{n\to\infty} f_n\Bigr)'(0)$$
+$$\lim_{n\rightarrow\infty} f_n'(0) \neq \Bigl(\lim_{n\rightarrow\infty} f_n\Bigr)'(0)$$
 
 이다. 이는 함수열의 균등수렴만으로는 극한과 미분의 교환이 보장되지 않으며, 도함수열 $(f_n')$ 자체의 균등수렴이 따로 필요함을 보여 준다.
 :::

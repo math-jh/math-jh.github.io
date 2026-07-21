@@ -118,7 +118,7 @@ $$\Hom_B(\operatorname{NL}_{B/k},M):\quad \Hom_B(\Omega_{P/k}\otimes_PB,M)\overs
 
 $$T^0(B/k,M)=\ker\overline{d}^\ast,\qquad T^1(B/k,M)=\coker\overline{d}^\ast$$
 
-로 정의한다. 더 나아가 $(f_1,\ldots,f_m)$의 syzygy module $\operatorname{Syz}\subseteq P^m$과 그 안의 Koszul syzygy들 $f_ie_j-f_je_i$로 생성되는 부분 $\operatorname{Kos}\subseteq\operatorname{Syz}$를 잡아 $L_2=(\operatorname{Syz}/\operatorname{Kos})\otimes_PB$라 두고, 이를 포함한 3항 복합체를 dual하여 얻는 둘째 cohomology를 $T^2(B/k,M)$로 정의한다. 이들을 $B$의 *Lichtenbaum–Schlessinger functor*라 부른다.
+로 정의한다. 더 나아가 $(f_1,\ldots,f_m)$의 syzygy module $\operatorname{Syz}\subseteq P^m$과 그 안의 Koszul syzygy들 $f_ie_j-f_je_i$로 생성되는 부분 $\operatorname{Kos}\subseteq\operatorname{Syz}$를 잡아 $L_2=(\operatorname{Syz}/\operatorname{Kos})\otimes_PB$라 두고, 이를 포함한 3항 복합체를 dual하여 얻는 둘째 cohomology를 $T^2(B/k,M)$로 정의한다. 이들을 $B$의 *Lichtenbaum–Schlessinger functor<sub>리히텐바움-슐레진저 함자</sub>*라 부른다.
 :::
 
 $T^0$는 곧바로 $\Der_k(B,M)$이다. 실제로 $\ker\overline{d}^\ast$는 conormal 사상과 합성하여 $0$이 되는 derivation $P\rightarrow M$들, 곧 $I$를 죽여 $B=P/I$ 위의 derivation으로 내려오는 것들이며, 이는 $\Der_k(B,M)=\Hom_B(\Omega_{B/k},M)$과 일치한다. $T^1$은 앞 절에서 본 "평탄 변형 modulo trivial"의 정확한 공식이다. $T^2$의 정의에서 $L_2$가 등장하는 이유는, 장애가 syzygy들 사이의 이차 관계, 곧 Koszul 관계를 넘어서는 syzygy들에 의해 통제되기 때문이다. 이 점은 장애를 다룰 때 분명해진다.

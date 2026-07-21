@@ -114,7 +114,7 @@ $$\varphi(q) = [F_0(q) : \cdots : F_m(q)]$$
 지금까지 우리는 variety를 이야기할 때 affine space로의 embedding 혹은 projective space로의 embedding을 가정하였고, 위의 정의 또한 이러한 가정의 연장선상에 있다. 이를 통해 우리는 손에 잡히는 계산을 할 수 있지만, 이 정의가 내재적인 것이라 할 수는 없을 것이다. 다음 명제는 이 정의가 regular function의 관점에서 자연스럽게 해석됨을 보여준다.
 
 ::: 명제 8
-함수 $\varphi: X \to Y$가 morphism인 필요충분조건은 $Y$의 임의의 affine open set $V$와 regular function $f \in \mathcal{O}_Y(V)$에 대해, $f \circ \varphi: \varphi^{-1}(V) \to \mathbb{K}$가 regular function인 것이다.
+함수 $\varphi: X \rightarrow Y$가 morphism인 필요충분조건은 $Y$의 임의의 affine open set $V$와 regular function $f \in \mathcal{O}_Y(V)$에 대해, $f \circ \varphi: \varphi^{-1}(V) \rightarrow \mathbb{K}$가 regular function인 것이다.
 :::
 
 증명의 핵심은 morphism이 국소적으로 homogeneous polynomials로 표현되며, $Y$ 위의 regular function은 (dehomogenization 과정을 생각하면) 같은 degree $d$의 homogeneous polynomial $F,G$에 대하여 $F/G$의 꼴로 쓸 수 있으므로 이들을 합성한 것도 regular function이어야 한다는 것이다. 그럼 이를 활용하여 다음을 보일 수 있다. 
@@ -128,7 +128,7 @@ Affine variety들 사이의 regular map들은 정확하게 이들을 quasi-proje
 ## 정칙사상의 성질들
 
 ::: 명제 10
-Regular map $\varphi: X \to Y$는 연속함수이다.
+Regular map $\varphi: X \rightarrow Y$는 연속함수이다.
 :::
 
 ::: 증명
@@ -148,13 +148,13 @@ Regular map의 합성은 regular map이다. 항등사상은 regular map이다.
 :::
 
 ::: 증명
-$\varphi: X \to Y$, $\psi: Y \to Z$가 regular map이라 하자. $W \subseteq Z$가 열린집합이고 $f \in \mathcal{O}(W)$라면, $\psi$가 regular이므로 $f \circ \psi \in \mathcal{O}(\psi^{-1}(W))$이다. 이제 $\varphi$가 regular이므로 $(f \circ \psi) \circ \varphi \in \mathcal{O}(\varphi^{-1}(\psi^{-1}(W)))$이다. 즉,
+$\varphi: X \rightarrow Y$, $\psi: Y \rightarrow Z$가 regular map이라 하자. $W \subseteq Z$가 열린집합이고 $f \in \mathcal{O}(W)$라면, $\psi$가 regular이므로 $f \circ \psi \in \mathcal{O}(\psi^{-1}(W))$이다. 이제 $\varphi$가 regular이므로 $(f \circ \psi) \circ \varphi \in \mathcal{O}(\varphi^{-1}(\psi^{-1}(W)))$이다. 즉,
 
 $$f \circ (\psi \circ \varphi) \in \mathcal{O}((\psi \circ \varphi)^{-1}(W))$$
 
 이므로 $\psi \circ \varphi$는 regular map이다.
 
-항등사상 $\id_X: X \to X$의 경우, $f \circ \id_X = f$이므로 자명하게 regular map이다.
+항등사상 $\id_X: X \rightarrow X$의 경우, $f \circ \id_X = f$이므로 자명하게 regular map이다.
 :::
 
 따라서 quasi-projective variety들과 regular map들은 category를 이룬다.
@@ -164,13 +164,13 @@ $$f \circ (\psi \circ \varphi) \in \mathcal{O}((\psi \circ \varphi)^{-1}(W))$$
 :::
 
 ::: 증명
-$\varphi: X \to Y$가 regular map이고 $Z \subseteq Y$가 닫힌집합이라 하자. $\psi = \varphi\vert_{\varphi^{-1}(Z)}: \varphi^{-1}(Z) \to Z$를 생각하자. $f$가 $Z$의 열린집합 $V$에서 regular function이라면, $f$는 $Y$의 어떤 열린집합 $V' \supseteq V$로 확장되어 regular function이 된다 (적어도 국소적으로). 구체적으로, $V$를 $Z$의 open affine cover로 교차하여 각 조각에서 regular function을 정의하면, 이들을 정칙적으로 이어붙여 $Y$의 열린근방 $V'$에서의 regular function을 얻을 수 있다. 이는 정칙함수가 본질적으로 유리함수의 국소적 표현이므로, affine chart 위에서의 정의가 Zariski 개방 덮개의 교집합에서도 일관되게 합쳐지기 때문이다. 그럼 $f \circ \psi = (f \circ \varphi)\vert_{\varphi^{-1}(Z)}$이고, $f \circ \varphi$는 $\varphi^{-1}(V')$에서 regular이므로 그 제한도 regular이다.
+$\varphi: X \rightarrow Y$가 regular map이고 $Z \subseteq Y$가 닫힌집합이라 하자. $\psi = \varphi\vert_{\varphi^{-1}(Z)}: \varphi^{-1}(Z) \rightarrow Z$를 생각하자. $f$가 $Z$의 열린집합 $V$에서 regular function이라면, $f$는 $Y$의 어떤 열린집합 $V' \supseteq V$로 확장되어 regular function이 된다 (적어도 국소적으로). 구체적으로, $V$를 $Z$의 open affine cover로 교차하여 각 조각에서 regular function을 정의하면, 이들을 정칙적으로 이어붙여 $Y$의 열린근방 $V'$에서의 regular function을 얻을 수 있다. 이는 정칙함수가 본질적으로 유리함수의 국소적 표현이므로, affine chart 위에서의 정의가 Zariski 개방 덮개의 교집합에서도 일관되게 합쳐지기 때문이다. 그럼 $f \circ \psi = (f \circ \varphi)\vert_{\varphi^{-1}(Z)}$이고, $f \circ \varphi$는 $\varphi^{-1}(V')$에서 regular이므로 그 제한도 regular이다.
 
 열린집합의 경우는 더 간단하다. $U \subseteq Y$가 열린집합이면, $f$가 $V \subseteq U$에서 regular이면 $f \circ \varphi$는 $\varphi^{-1}(V)$에서 regular이다.
 :::
 
 ::: 정의 13
-Morphism $\varphi: X \to Y$가 *isomorphism<sub>동형사상</sub>*이라는 것은 역함수 $\psi: Y \to X$가 존재하여 $\psi$도 morphism인 것이다.
+Morphism $\varphi: X \rightarrow Y$가 *isomorphism<sub>동형사상</sub>*이라는 것은 역함수 $\psi: Y \rightarrow X$가 존재하여 $\psi$도 morphism인 것이다.
 :::
 
 Isomorphism의 개념은 기하학적으로 두 다양체가 같다는 것을 의미한다. 즉, isomorphic한 다양체들은 regular function의 관점에서 구별할 수 없다.

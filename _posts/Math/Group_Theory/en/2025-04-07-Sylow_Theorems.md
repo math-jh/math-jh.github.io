@@ -181,7 +181,7 @@ Choose $g\in G$ satisfying $M=gMg^{-1}$. Then $gPg^{-1}$ is a Sylow $p$-subgroup
 :::
 
 ::: Corollary 10
-Fix a group homomorphism $f: G_1 \to G_2$ between finite groups. For a Sylow $p$-subgroup $P_1$ of $G_1$, there exists a Sylow $p$-subgroup $P_2$ of $G_2$ containing $f(P_1)$.
+Fix a group homomorphism $f: G_1 \rightarrow G_2$ between finite groups. For a Sylow $p$-subgroup $P_1$ of $G_1$, there exists a Sylow $p$-subgroup $P_2$ of $G_2$ containing $f(P_1)$.
 :::
 
 ::: Proof

@@ -43,7 +43,7 @@ $$
 \bar\partial \omega = \sum_{I,J} \sum_{k} \frac{\partial f_{IJ}}{\partial \bar{z}_k}\, d\bar{z}_k \wedge dz_I \wedge d\bar{z}_J
 $$
 
-으로 정의한다. 그러면 $\partial : \Omega^{p,q}(X) \to \Omega^{p+1,q}(X)$이고 $\bar\partial : \Omega^{p,q}(X) \to \Omega^{p,q+1}(X)$이다.
+으로 정의한다. 그러면 $\partial : \Omega^{p,q}(X) \rightarrow \Omega^{p+1,q}(X)$이고 $\bar\partial : \Omega^{p,q}(X) \rightarrow \Omega^{p,q+1}(X)$이다.
 :::
 
 위 정의는 좌표 표현으로 주어졌지만 좌표에 무관하게 잘 정의된다. 이를 보는 가장 깔끔한 방법은 $\partial$와 $\bar\partial$를 exterior derivative $d$의 성분으로 규정하는 것이다. $(p,q)$-형식에 $d$를 작용시키면 그 값은 $(p+1,q)$-형식과 $(p,q+1)$-형식의 합이며, $\partial \omega$와 $\bar\partial \omega$는 각각 그 두 성분이다. $d$가 좌표 무관이고 $(p,q)$-분해가 좌표 무관이므로 ([§거의 복소구조, ⁋명제 7](/ko/math/complex_geometry/almost_complex_structures#prop7)), 두 성분으로 추출한 $\partial$와 $\bar\partial$도 좌표에 무관하다. 다음 명제가 이 관점을 정식화한다.
@@ -120,10 +120,10 @@ $$
 를 *Dolbeault complex<sub>Dolbeault 복합체</sub>*라 한다. 그 $q$번째 cohomology
 
 $$
-H^{p,q}_{\bar\partial}(X) = \frac{\ker\left( \bar\partial : \Omega^{p,q}(X) \to \Omega^{p,q+1}(X) \right)}{\Img\left( \bar\partial : \Omega^{p,q-1}(X) \to \Omega^{p,q}(X) \right)}
+H^{p,q}_{\bar\partial}(X) = \frac{\ker\left( \bar\partial : \Omega^{p,q}(X) \rightarrow \Omega^{p,q+1}(X) \right)}{\Img\left( \bar\partial : \Omega^{p,q-1}(X) \rightarrow \Omega^{p,q}(X) \right)}
 $$
 
-를 $X$의 *Dolbeault cohomology<sub>Dolbeault 코호몰로지</sub>*라 한다. 그 복소차원 $h^{p,q}(X) = \dim_{\mathbb{C}} H^{p,q}_{\bar\partial}(X)$를 *Hodge number<sub>Hodge 수</sub>*라 한다.
+를 $X$의 *Dolbeault cohomology<sub>Dolbeault 코호몰로지</sub>*라 한다. 그 복소차원 $h^{p,q}(X) = \dim_{\mathbb{C}} H^{p,q}_{\bar\partial}(X)$를 *Hodge number<sub>호지 수</sub>*라 한다.
 :::
 
 $\bar\partial\omega = 0$인 형식을 *$\bar\partial$-닫힌<sub>$\bar\partial$-closed</sub>* 형식, $\omega = \bar\partial\eta$ 꼴인 형식을 *$\bar\partial$-완전<sub>$\bar\partial$-exact</sub>* 형식이라 한다. Dolbeault cohomology는 $\bar\partial$-닫힌 형식을 $\bar\partial$-완전 형식으로 나눈 것이며, de Rham cohomology가 $d$에 대해 측정하는 것과 같은 종류의 양을 $\bar\partial$에 대해 측정한다. 분모와 분자가 모두 잘 정의됨은 $\bar\partial^2 = 0$에서 따라온다. 곧 완전형식 $\bar\partial\eta$는 $\bar\partial(\bar\partial\eta) = 0$이므로 항상 닫혀 있어, $\Img \subseteq \ker$이고 몫이 의미를 가진다.
@@ -131,7 +131,7 @@ $\bar\partial\omega = 0$인 형식을 *$\bar\partial$-닫힌<sub>$\bar\partial$-
 $p = 0$인 경우가 가장 기본적이다. $\Omega^{0,0}(X)$는 smooth 복소함수 전체이고, 함수 $f$가 $\bar\partial f = 0$을 만족하는 것은 모든 좌표에서 $\partial f/\partial \bar{z}_k = 0$, 곧 Cauchy–Riemann 방정식이 성립하는 것이므로 $f$가 holomorphic function임과 동치이다. 따라서
 
 $$
-H^{0,0}_{\bar\partial}(X) = \ker\left( \bar\partial : \Omega^{0,0}(X) \to \Omega^{0,1}(X) \right) = \mathcal{O}(X)
+H^{0,0}_{\bar\partial}(X) = \ker\left( \bar\partial : \Omega^{0,0}(X) \rightarrow \Omega^{0,1}(X) \right) = \mathcal{O}(X)
 $$
 
 로 전역 holomorphic function의 공간이 된다. $X$가 콤팩트 연결이면 이는 $\mathbb{C}$이다 ([§복소다양체, ⁋정리 14](/ko/math/complex_geometry/complex_manifolds#thm14)). 더 높은 $q$에서는 $\bar\partial$-방정식의 풀이가능성이 비자명한 정보가 되며, 이 정보가 정확히 holomorphic 형식 층의 cohomology로 해석된다는 것이 이 글의 주된 결과이다. 그 다리를 놓는 국소 보조정리부터 세운다.
@@ -234,7 +234,7 @@ $$
 들로 정의되는 층이라 한다. 곧 국소적으로 $\omega = \sum_{\lvert I \rvert = p} f_I\, dz_I$이되 모든 계수 $f_I$가 holomorphic인 형식들의 층이다.
 :::
 
-$p = 0$일 때 $\Omega^0$은 holomorphic function의 구조층 $\mathcal{O}_X$이다. $p = 1$일 때 $\Omega^1$은 holomorphic 1-형식의 층으로, holomorphic cotangent bundle의 holomorphic 단면들이 이루는 층이다 ([§복소다양체, ⁋정의 11](/ko/math/complex_geometry/complex_manifolds#def11)). 조건 $\bar\partial\omega = 0$은 $(p,0)$-형식의 계수에 대한 Cauchy–Riemann 방정식이며, 정의에 의해 $\Omega^p = \ker(\bar\partial : \Omega^{p,0} \to \Omega^{p,1})$로 $\bar\partial$-닫힌 $(p,0)$-형식들의 층이다. 이 층의 sheaf cohomology ([\[대수다양체\] §층 코호몰로지, ⁋정의 1](/ko/math/algebraic_varieties/sheaf_cohomology#def1)) $H^q(X, \Omega^p)$가 Dolbeault cohomology의 정체임을 보이려 한다.
+$p = 0$일 때 $\Omega^0$은 holomorphic function의 구조층 $\mathcal{O}_X$이다. $p = 1$일 때 $\Omega^1$은 holomorphic 1-형식의 층으로, holomorphic cotangent bundle의 holomorphic 단면들이 이루는 층이다 ([§복소다양체, ⁋정의 11](/ko/math/complex_geometry/complex_manifolds#def11)). 조건 $\bar\partial\omega = 0$은 $(p,0)$-형식의 계수에 대한 Cauchy–Riemann 방정식이며, 정의에 의해 $\Omega^p = \ker(\bar\partial : \Omega^{p,0} \rightarrow \Omega^{p,1})$로 $\bar\partial$-닫힌 $(p,0)$-형식들의 층이다. 이 층의 sheaf cohomology ([\[대수다양체\] §층 코호몰로지, ⁋정의 1](/ko/math/algebraic_varieties/sheaf_cohomology#def1)) $H^q(X, \Omega^p)$가 Dolbeault cohomology의 정체임을 보이려 한다.
 
 추상 de Rham 논법의 핵심은 smooth 형식의 층 $\mathcal{A}^{p,q}$ (각 $U$에 $\Omega^{p,q}(U)$를 대응시키는 층)가 *fine sheaf<sub>미세층</sub>* 라는 점이다. 미세층은 임의의 open covering에 종속된 partition of unity를 가지는 층으로, 그러한 partition of unity가 존재하면 그 층은 sheaf cohomology에서 acyclic하다. smooth 함수의 partition of unity가 $\mathcal{A}^{p,q}$의 단면에 그대로 곱해지므로 $\mathcal{A}^{p,q}$는 미세층이고, 따라서 모든 $q' > 0$에 대하여 $H^{q'}(X, \mathcal{A}^{p,q}) = 0$이다. 이제 $\bar\partial$-복합체가 $\Omega^p$의 분해임을 확인한다.
 
@@ -251,9 +251,9 @@ $$
 ::: 증명
 완전성은 줄기(stalk) 수준에서, 곧 각 점의 임의로 작은 근방에서 확인하면 충분하다. 각 점은 폴리디스크 근방을 가지므로 [보조정리 6](#lem6)을 그러한 근방에서 쓸 수 있다.
 
-먼저 $\Omega^p \to \mathcal{A}^{p,0}$의 위치에서의 완전성, 곧 $\Omega^p = \ker(\bar\partial : \mathcal{A}^{p,0} \to \mathcal{A}^{p,1})$이다. 이는 [정의 7](#def7) 그 자체이다. $\Omega^p$로의 사상은 포함사상이고, holomorphic $(p,0)$-형식이 정확히 $\bar\partial$로 죽는 smooth $(p,0)$-형식이므로 이 위치에서 완전하다 ($\Omega^p \to \mathcal{A}^{p,0}$이 단사이고 그 상이 $\bar\partial$의 핵과 같다).
+먼저 $\Omega^p \rightarrow \mathcal{A}^{p,0}$의 위치에서의 완전성, 곧 $\Omega^p = \ker(\bar\partial : \mathcal{A}^{p,0} \rightarrow \mathcal{A}^{p,1})$이다. 이는 [정의 7](#def7) 그 자체이다. $\Omega^p$로의 사상은 포함사상이고, holomorphic $(p,0)$-형식이 정확히 $\bar\partial$로 죽는 smooth $(p,0)$-형식이므로 이 위치에서 완전하다 ($\Omega^p \rightarrow \mathcal{A}^{p,0}$이 단사이고 그 상이 $\bar\partial$의 핵과 같다).
 
-다음으로 $q \geq 1$에서 $\ker(\bar\partial : \mathcal{A}^{p,q} \to \mathcal{A}^{p,q+1}) = \Img(\bar\partial : \mathcal{A}^{p,q-1} \to \mathcal{A}^{p,q})$임을 보인다. 포함 $\Img \subseteq \ker$은 [명제 3](#prop3)의 $\bar\partial^2 = 0$에서 따라온다. 반대 포함을 줄기에서 본다. $x \in X$와 $x$ 근방의 $\bar\partial$-닫힌 $(p,q)$-형식 $\omega$의 줄기가 주어지면, $x$의 충분히 작은 폴리디스크 근방 $\Delta$를 잡아 $\omega$가 $\Delta$에서 정의된 $\bar\partial$-닫힌 형식이게 할 수 있다. [보조정리 6](#lem6)에 의해 $\Delta$에서 $\omega = \bar\partial\eta$인 $\eta \in \mathcal{A}^{p,q-1}(\Delta)$가 존재하므로, 줄기 수준에서 $\omega$는 $\bar\partial$의 상에 든다. 따라서 $\ker \subseteq \Img$이고 이 위치에서도 완전하다.
+다음으로 $q \geq 1$에서 $\ker(\bar\partial : \mathcal{A}^{p,q} \rightarrow \mathcal{A}^{p,q+1}) = \Img(\bar\partial : \mathcal{A}^{p,q-1} \rightarrow \mathcal{A}^{p,q})$임을 보인다. 포함 $\Img \subseteq \ker$은 [명제 3](#prop3)의 $\bar\partial^2 = 0$에서 따라온다. 반대 포함을 줄기에서 본다. $x \in X$와 $x$ 근방의 $\bar\partial$-닫힌 $(p,q)$-형식 $\omega$의 줄기가 주어지면, $x$의 충분히 작은 폴리디스크 근방 $\Delta$를 잡아 $\omega$가 $\Delta$에서 정의된 $\bar\partial$-닫힌 형식이게 할 수 있다. [보조정리 6](#lem6)에 의해 $\Delta$에서 $\omega = \bar\partial\eta$인 $\eta \in \mathcal{A}^{p,q-1}(\Delta)$가 존재하므로, 줄기 수준에서 $\omega$는 $\bar\partial$의 상에 든다. 따라서 $\ker \subseteq \Img$이고 이 위치에서도 완전하다.
 
 각 $\mathcal{A}^{p,q}$가 미세층임은 smooth 함수의 partition of unity $\{\rho_i\}$를 $(p,q)$-형식의 단면에 점별로 곱하는 연산 $\omega \mapsto \rho_i\omega$이 층사상이고 $\sum_i \rho_i = 1$을 주므로 따라온다. 따라서 sequence는 $\Omega^p$의 fine resolution이다.
 :::
@@ -279,16 +279,16 @@ $$
 
 는 $\Omega^p$의 분해이고, 각 $\mathcal{A}^{p,q}$는 미세층이라 $\Gamma(X, -)$-acyclic하다 (미세층은 모든 양의 차수 sheaf cohomology가 소멸한다). 따라서 이는 acyclic resolution이다.
 
-acyclic resolution에 대한 추상 de Rham 정리는, $0 \to \mathcal{F} \to \mathcal{A}^0 \to \mathcal{A}^1 \to \cdots$이 $\Gamma(X,-)$-acyclic resolution이면
+acyclic resolution에 대한 추상 de Rham 정리는, $0 \rightarrow \mathcal{F} \rightarrow \mathcal{A}^0 \rightarrow \mathcal{A}^1 \rightarrow \cdots$이 $\Gamma(X,-)$-acyclic resolution이면
 
 $$
-H^q(X, \mathcal{F}) \cong \frac{\ker\left( \Gamma(X, \mathcal{A}^q) \to \Gamma(X, \mathcal{A}^{q+1}) \right)}{\Img\left( \Gamma(X, \mathcal{A}^{q-1}) \to \Gamma(X, \mathcal{A}^q) \right)}
+H^q(X, \mathcal{F}) \cong \frac{\ker\left( \Gamma(X, \mathcal{A}^q) \rightarrow \Gamma(X, \mathcal{A}^{q+1}) \right)}{\Img\left( \Gamma(X, \mathcal{A}^{q-1}) \rightarrow \Gamma(X, \mathcal{A}^q) \right)}
 $$
 
 임을 준다 ([\[대수다양체\] §층 코호몰로지, ⁋명제 17](/ko/math/algebraic_varieties/sheaf_cohomology#prop17)). 우리 분해에 적용하면 $\mathcal{F} = \Omega^p$, $\mathcal{A}^q = \mathcal{A}^{p,q}$이고 전역단면은 $\Gamma(X, \mathcal{A}^{p,q}) = \Omega^{p,q}(X)$, 그 사이의 사상은 $\bar\partial$이다. 따라서
 
 $$
-H^q(X, \Omega^p) \cong \frac{\ker\left( \bar\partial : \Omega^{p,q}(X) \to \Omega^{p,q+1}(X) \right)}{\Img\left( \bar\partial : \Omega^{p,q-1}(X) \to \Omega^{p,q}(X) \right)} = H^{p,q}_{\bar\partial}(X)
+H^q(X, \Omega^p) \cong \frac{\ker\left( \bar\partial : \Omega^{p,q}(X) \rightarrow \Omega^{p,q+1}(X) \right)}{\Img\left( \bar\partial : \Omega^{p,q-1}(X) \rightarrow \Omega^{p,q}(X) \right)} = H^{p,q}_{\bar\partial}(X)
 $$
 
 이다. 이 동형은 acyclic resolution이 유도하는 표준 사상이므로 자연스럽다.

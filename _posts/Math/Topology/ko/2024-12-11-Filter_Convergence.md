@@ -16,7 +16,7 @@ weight: 15
 우선 다음을 정의한다.
 
 ::: 정의 1
-위상공간 $X$가 *limit point compact*라는 것은 $X$의 모든 무한집합이 limit point를 갖는 것을 의미한다. ([§집합의 내부, 폐포, 경계, ⁋정의 8](/ko/math/topology/other_concepts#def8))
+위상공간 $X$가 *limit point compact<sub>극한점 옹골</sub>*라는 것은 $X$의 모든 무한집합이 limit point를 갖는 것을 의미한다. ([§집합의 내부, 폐포, 경계, ⁋정의 8](/ko/math/topology/other_concepts#def8))
 :::
 
 일반적으로 다음이 성립한다.
@@ -110,8 +110,8 @@ $X$가 [보조정리 7](#lem7)의 역이 성립한다는 공간이라 하자. �
 ::: 정의 10
 위상공간 $X$에 대하여 다음을 정의한다.
 
-1. $X$가 *first countable*이라는 것은 $X$의 임의의 점 $x\in X$에 대하여 $x$의 countable local base가 존재하는 것을 의미한다.
-2. $X$가 *second countable*이라는 것은 $X$의 countable base가 존재하는 것을 의미한다.
+1. $X$가 *first countable<sub>제1 가산</sub>*이라는 것은 $X$의 임의의 점 $x\in X$에 대하여 $x$의 countable local base가 존재하는 것을 의미한다.
+2. $X$가 *second countable<sub>제2 가산</sub>*이라는 것은 $X$의 countable base가 존재하는 것을 의미한다.
 :::
 
 ::: 명제 11

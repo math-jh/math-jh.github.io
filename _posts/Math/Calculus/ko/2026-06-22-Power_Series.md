@@ -41,11 +41,11 @@ $$\lvert c_n x^n\rvert = \lvert c_n x_0^n\rvert \cdot r^n \leq M r^n$$
 
 여기서 $R=0$인 경우는 주어진 멱급수가 $x=0$에서만 수렴하는 경우로 해석되며 (따라서 우리의 관심사가 아니다), 반대쪽 극한인 $R=\infty$의 경우는 주어진 멱급수가 실수 전체에서 수렴하는 경우로 해석된다. 이 두 경우를 제외하면, 수렴반경은 $\lvert x\rvert=R$인 경우에 대한 수렴여부는 결정해주지 않으며 실제로 멱급수에 따라 모든 조합이 가능하다.
 
-그 모양으로 인해, 멱급수의 수렴반경은 보통 비판정이나 [§무한급수, ⁋명제 8](/ko/math/calculus/series#prop8)으로 계산한다. 가령 비판정법을 적용하여 $\left\lvert c_{n+1}/c_n\right\rvert \to L$이면 인접한 항의 비가 $L\lvert x\rvert$로 가므로 $R = 1/L$으로 두면 된다는 것을 알고, 더 일반적으로는 
+그 모양으로 인해, 멱급수의 수렴반경은 보통 비판정이나 [§무한급수, ⁋명제 8](/ko/math/calculus/series#prop8)으로 계산한다. 가령 비판정법을 적용하여 $\left\lvert c_{n+1}/c_n\right\rvert \rightarrow L$이면 인접한 항의 비가 $L\lvert x\rvert$로 가므로 $R = 1/L$으로 두면 된다는 것을 알고, 더 일반적으로는 
 
-$$\frac{1}{R} = \limsup_{n\to\infty} \lvert c_n\rvert^{1/n}$$
+$$\frac{1}{R} = \limsup_{n\rightarrow\infty} \lvert c_n\rvert^{1/n}$$
 
-이 항상 성립한다. 가령 $\sum_n x^n/n!$에 비판정을 적용하면 인접한 항의 비가 $\lvert x\rvert/(n+1) \to 0$이므로 $R = \infty$, 곧 이 멱급수는 실수 전체에서 수렴한다.
+이 항상 성립한다. 가령 $\sum_n x^n/n!$에 비판정을 적용하면 인접한 항의 비가 $\lvert x\rvert/(n+1) \rightarrow 0$이므로 $R = \infty$, 곧 이 멱급수는 실수 전체에서 수렴한다.
 
 ## 초등함수의 전개
 
@@ -68,7 +68,7 @@ $$\left(1 + \frac1n\right)^n = \sum_{k=0}^n \binom{n}{k}\frac{1}{n^k} = \sum_{k=
 
 $$\left(1 + \frac1n\right)^n \geq \sum_{k=0}^m \frac{1}{k!}\prod_{j=0}^{k-1}\left(1 - \frac{j}{n}\right)$$
 
-을 얻는다. 좌변은 $L$ 이하이므로 우변 또한 $L$ 이하이고, $m$을 고정한 채 $n \to \infty$를 보내면 우변은 유한합이고 각 인수가 $1 - j/n \to 1$이므로 [§함수의 극한, ⁋명제 5](/ko/math/calculus/functions_and_limits#prop5)에 의해 $s_m$으로 수렴한다. ([§수열의 극한, ⁋명제 2](/ko/math/calculus/sequences#prop2)) 수렴하는 수열의 모든 항이 $L$ 이하이면 그 극한도 $L$ 이하이므로 $s_m \leq L$이고, 다시 $m \to \infty$를 보내면 $s \leq L$이다. 두 부등식을 합쳐 $L = s$, 즉 두 글에서 정의한 $e$는 같은 수이다.
+을 얻는다. 좌변은 $L$ 이하이므로 우변 또한 $L$ 이하이고, $m$을 고정한 채 $n \rightarrow \infty$를 보내면 우변은 유한합이고 각 인수가 $1 - j/n \rightarrow 1$이므로 [§함수의 극한, ⁋명제 5](/ko/math/calculus/functions_and_limits#prop5)에 의해 $s_m$으로 수렴한다. ([§수열의 극한, ⁋명제 2](/ko/math/calculus/sequences#prop2)) 수렴하는 수열의 모든 항이 $L$ 이하이면 그 극한도 $L$ 이하이므로 $s_m \leq L$이고, 다시 $m \rightarrow \infty$를 보내면 $s \leq L$이다. 두 부등식을 합쳐 $L = s$, 즉 두 글에서 정의한 $e$는 같은 수이다.
 :::
 
 ## 멱급수의 연산

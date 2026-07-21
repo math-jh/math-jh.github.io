@@ -35,9 +35,9 @@ $$(\bar{1},\bar{1},\cdots)$$
 를 포함하지만, 우변은 $\iota_i(\bar{1})$들의 *유한한* 연산을 통해 얻어지는 원소만을 포함하므로 위의 원소를 포함할 수 없다.
 
 ::: 정의 1
-Group들의 family $(G_i)$가 주어졌다 하고, $G_i$들의 subgroup $H_i$들을 고정하자. 그럼 유한개를 제외한 모든 $i$에 대해 $\pr_ix\in H_i$를 만족하는 $x$들로 이루어진 subgroup을 $H_i$에 대한 $G_i$들의 *restricted sum*이라 부르고 $\prod^H G_i$라 표현한다.
+Group들의 family $(G_i)$가 주어졌다 하고, $G_i$들의 subgroup $H_i$들을 고정하자. 그럼 유한개를 제외한 모든 $i$에 대해 $\pr_ix\in H_i$를 만족하는 $x$들로 이루어진 subgroup을 $H_i$에 대한 $G_i$들의 *restricted sum<sub>제한합</sub>*이라 부르고 $\prod^H G_i$라 표현한다.
 
-특별히 모든 $i$에 대해 $H_i=\{e\}$인 경우 $G_i$들의 *weak direct product*라 부르고, 간단히
+특별히 모든 $i$에 대해 $H_i=\{e\}$인 경우 $G_i$들의 *weak direct product<sub>약한 직접곱</sub>*라 부르고, 간단히
 
 $${\prod_{i\in I}}^w G_i$$
 
@@ -104,7 +104,7 @@ $G$가 group이고, $(H_i)$들이 $G$의 subgroup들의 family라 하자. 만일
 또, 다음을 정의한다.
 
 ::: 정의 4
- 위와 같은 상황에서, 만일 $\iota$가 isomorphism이라면 $G$가 $H_i$들의 *internal weak direct product*라고 부른다. 
+ 위와 같은 상황에서, 만일 $\iota$가 isomorphism이라면 $G$가 $H_i$들의 *internal weak direct product<sub>내부 약한 직접곱</sub>*라고 부른다. 
 :::
 
 [정리 2](#thm2)에서 만들어낸 homomorphism $f$의 모양을 생각하면, $G$가 $H_i$들의 internal weak direct product인 것은 다음 조건

@@ -102,7 +102,7 @@ $$(\varphi\vert_U)^\sharp(V): \mathcal{O}_V(V) \rightarrow \mathcal{O}_U(U)$$
 으로부터 얻어낼 수 있으면 좋을 것이다. 그러나 물론 임의의 scheme morphism $\varphi: X \rightarrow Y$에 대하여, $Y$의 affine open subset의 preimage가 affine이 되지는 않는다. ([§스킴, ⁋예시 8](/ko/math/scheme_theory/schemes#ex8))
 
 ::: 정의 8
-Scheme morphism $\varphi: X \rightarrow Y$가 *affine*이라는 것은 $Y$의 임의의 affine open subset $V$에 대하여 $\varphi^{-1}(V)$가 $X$의 affine open subset인 것이다. 
+Scheme morphism $\varphi: X \rightarrow Y$가 *affine<sub>아핀</sub>*이라는 것은 $Y$의 임의의 affine open subset $V$에 대하여 $\varphi^{-1}(V)$가 $X$의 affine open subset인 것이다. 
 :::
 
 그럼 affine morphism의 합성이 affine인 것은 자명하다. 뿐만 아니라 이 성질은 [정의 1](#def1)의 성질 또한 만족하며, 그 증명은 다음 명제에서 한다. 

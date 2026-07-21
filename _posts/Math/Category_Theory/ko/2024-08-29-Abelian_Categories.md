@@ -8,7 +8,7 @@ permalink: /ko/math/category_theory/abelian_categories
 sidebar: 
     nav: "category_theory-ko"
 
-date: 2022-12-21
+date: 2024-08-29
 weight: 9
 
 ---
@@ -110,7 +110,7 @@ $\mathcal{A}^\op$에서의 chain complex는 *cochain complex<sub>공사슬복합
 
 $$\cdots \rightarrow A_{n+1}\overset{d_{n+1}}{\longrightarrow}A_n\overset{d_n}{\longrightarrow}A_{n-1}\rightarrow\cdots$$
 
-이 $A_n$에서 *exact*라는 것은 위의 monomorphism $Z_n \rightarrow B_n$이 isomorphism인 것이다. 모든 곳에서 exact인 chain complex를 *exact sequence*라 부른다.
+이 $A_n$에서 *exact<sub>완전</sub>*라는 것은 위의 monomorphism $Z_n \rightarrow B_n$이 isomorphism인 것이다. 모든 곳에서 exact인 chain complex를 *exact sequence*라 부른다.
 :::
 
 ::: 예시 6
@@ -132,7 +132,7 @@ $$\cdots \rightarrow F(A_{n+1}) \overset{F(d_{n+1})}{\longrightarrow} F(A_n) \ov
 가 chain complex가 된다는 것을 쉽게 확인할 수 있다. 즉 additive functor $F$는 functor $\Ch(\mathcal{A})\rightarrow \Ch(\mathcal{B})$를 유도한다. 그러나 일반적인 functor에 대하여, 원래의 chain complex $A_\bullet$이 exact라는 것이 위와 같이 얻어진 새로운 complex $F(A_\bullet)$가 exact라는 것을 보장해주지는 않는다.
 
 ::: 정의 7
-Additive functor $F: \mathcal{A} \rightarrow \mathcal{B}$가 *left exact*인 것은 임의의 short exact sequence
+Additive functor $F: \mathcal{A} \rightarrow \mathcal{B}$가 *left exact<sub>왼쪽 완전</sub>*인 것은 임의의 short exact sequence
 
 $$0 \rightarrow A \rightarrow B \rightarrow C \rightarrow 0$$
 
@@ -140,11 +140,11 @@ $$0 \rightarrow A \rightarrow B \rightarrow C \rightarrow 0$$
 
 $$0 \rightarrow F(A) \rightarrow F(B) \rightarrow F(C)$$
 
-가 exact인 것이다. 비슷하게 $F$가 *right exact*인 것은 위와 같이 임의의 short exact sequence가 주어졌을 때, 다음의 sequence
+가 exact인 것이다. 비슷하게 $F$가 *right exact<sub>오른쪽 완전</sub>*인 것은 위와 같이 임의의 short exact sequence가 주어졌을 때, 다음의 sequence
 
 $$A \rightarrow B \rightarrow C \rightarrow 0$$
 
-이 exact인 것이다. Left exact인 동시에 right exact인 functor를 *exact functor*라 부른다.
+이 exact인 것이다. Left exact인 동시에 right exact인 functor를 *exact functor<sub>완전 함자</sub>*라 부른다.
 :::
 
 즉, kernel을 보존하는 additive functor를 left exact functor라 부르고, cokernel을 보존하는 functor를 right exact functor라 부른다. 그럼 특히 left adjoint functor는 right exact이고, right adjoint functor는 left exact임을 확인할 수 있다.

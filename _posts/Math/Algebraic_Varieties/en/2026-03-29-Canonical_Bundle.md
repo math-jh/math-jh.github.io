@@ -26,7 +26,7 @@ Our basic philosophy is that using [§Affine Varieties](/en/math/algebraic_varie
 
 However, applying this directly is problematic. Recall that our goal is to view $M$ as a vector bundle defined on $X$. Roughly speaking, our goal is to attach $M$ nicely above each point of $X$, but according to [§Affine Varieties](/en/math/algebraic_varieties/affine_varieties), if $M$ appears in the world of varieties (as a fiber), the coordinate ring defining it must be its coordinate functions. That is, we must use $M^\vee$ instead of $M$, and therefore we consider $\S_A(M^\vee)$ rather than $\S_A(M)$. Then this is an $A$-algebra, and thus we obtain a function $A\rightarrow \S_A(M^\vee)$ between coordinate rings; applying [§Affine Varieties](/en/math/algebraic_varieties/affine_varieties) to this yields a morphism from some variety $V(M)$ to $X$. 
 
-Let us verify that this morphism actually carries a vector bundle structure over $X$. A point $x\in X$ corresponds to the maximal ideal $\mathfrak{m}_x$ of the coordinate ring $A$, and therefore the points of the set-theoretic fiber $V(M)_x = \pi^{-1}(x)$ above $x$ in $V(M) \to X$ are the maximal ideals of $\S_A(M^\vee)$ containing $\mathfrak{m}_x\cdot \S_A(M^\vee)$. 
+Let us verify that this morphism actually carries a vector bundle structure over $X$. A point $x\in X$ corresponds to the maximal ideal $\mathfrak{m}_x$ of the coordinate ring $A$, and therefore the points of the set-theoretic fiber $V(M)_x = \pi^{-1}(x)$ above $x$ in $V(M) \rightarrow X$ are the maximal ideals of $\S_A(M^\vee)$ containing $\mathfrak{m}_x\cdot \S_A(M^\vee)$. 
 
 To obtain the coordinate ring defining this fiber algebraically, we must first think about what functions are defined on it. Now, the functions contained in the maximal ideal $\mathfrak{m}_x$ defining $x\in X$ all vanish at $x$, so it is reasonable to think of the functions defined on this fiber as $A/\mathfrak{m}_x$-valued functions. We call this field $\kappa(x)=A/\mathfrak{m}_x$ the *residue field* at $x$, and therefore in general $\kappa(x)$ is an algebraic extension of $\mathbb{K}$. ([\[Commutative Algebra\] §Nullstellensatz, ⁋Theorem 4](/en/math/commutative_algebra/nullstellensatz#thm4)) Since we usually consider the case where $\mathbb{K}$ is an algebraically closed field, we may simply think of $\kappa(x)$ as $\mathbb{K}$. 
 
@@ -244,7 +244,7 @@ here $\pi$ is an isomorphism away from the fiber of $Z$, and the fiber of $Z$ is
 
 $$E=\mathbb{P}(\mathcal{N}_{Z/X})$$
 
-Here $\mathcal{N}_{Z/X}$ is the normal bundle of $Z$ in $X$, and $\mathbb{P}(\mathcal{N}_{Z/X})$ means the projective bundle obtained by projectivizing the vector space corresponding to the fiber at each point of $Z$. This is the analogue of what was done in [§Rational Maps, ⁋Example 12](/en/math/algebraic_varieties/rational_maps#ex12), where the exceptional divisor corresponding to the fiber of a point $0$ was attached by projectivizing the directions <em-ko>coming into</em-ko> this point from outside it. 
+Here $\mathcal{N}_{Z/X}$ is the normal bundle of $Z$ in $X$, and $\mathbb{P}(\mathcal{N}_{Z/X})$ means the projective bundle obtained by projectivizing the vector space corresponding to the fiber at each point of $Z$. This is the analogue of what was done in [§Rational Maps, ⁋Example 12](/en/math/algebraic_varieties/rational_maps#ex12), where the exceptional divisor corresponding to the fiber of a point $0$ was attached by projectivizing the directions *coming into* this point from outside it. 
 
 Now restricting $\pi:\widetilde{X}\rightarrow X$ to $E$, let us consider
 
@@ -252,7 +252,7 @@ $$\pi\vert_E: E\rightarrow Z$$
 
 Thinking of the tangent bundle of $E$, we can divide it into the horizontal direction $(\pi\vert_E)^\ast T_Z$ coming from the base space $Z$ and the relative tangent bundle direction $T_{E/Z}$ perpendicular to it. That is, we obtain the following short exact sequence
 
-$$0 \to T_{E/Z} \to T_E \to \pi_E^\ast T_Z \to 0\tag{$\ast$}$$
+$$0 \rightarrow T_{E/Z} \rightarrow T_E \rightarrow \pi_E^\ast T_Z \rightarrow 0\tag{$\ast$}$$
 
 On the other hand, since $Z$ was of codimension $r$ by assumption, $\mathcal{N}_{Z/X}$ is of rank $r$ and therefore each fiber of $E$ is $\mathbb{P}^{r-1}$. We generalize [Proposition 7](#prop7) to obtain the following. 
 
@@ -290,7 +290,7 @@ Therefore, returning to our situation, we obtain the following exact sequence
 $$0\rightarrow \mathcal{O}_E\rightarrow (\pi\vert_E)^\ast \mathcal{N}_{Z/X}\otimes \mathcal{O}_E(1)\rightarrow T_{E/Z}\rightarrow 0\tag{$\ast\ast$}$$
 
 ::: Proposition 12 (Canonical bundle of a blow-up)
-For the blow-up $\pi: \widetilde{X} \to X$ of a smooth variety $X$ along a smooth subvariety $Z$ of codimension $r$, letting $E$ be the exceptional divisor,
+For the blow-up $\pi: \widetilde{X} \rightarrow X$ of a smooth variety $X$ along a smooth subvariety $Z$ of codimension $r$, letting $E$ be the exceptional divisor,
 
 $$K_{\widetilde{X}} = \pi^\ast K_X + (r-1)E$$
 

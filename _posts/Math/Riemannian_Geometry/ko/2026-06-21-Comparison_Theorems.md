@@ -47,7 +47,7 @@ $$\operatorname{Ric}(v, v) = \sum_{i=1}^{n-1} \langle R(e_i, v) v,\, e_i\rangle$
 비교 정리의 핵심 장치는 한 측지선을 다른 측지선들로 흔드는 변분의 변분장이다. [§측지선, ⁋정리 3](/ko/math/riemannian_geometry/geodesics#thm3)에서 곡선의 변분을 도입했는데, 변분의 각 곡선이 다시 측지선이 되도록 제한하면 변분장이 만족하는 이계 방정식을 곡률로 표현할 수 있다.
 
 ::: 정의 3
-측지선 $\gamma : I \to M$을 따른 벡터장 $J$가 *Jacobi equation<sub>야코비 방정식</sub>*
+측지선 $\gamma : I \rightarrow M$을 따른 벡터장 $J$가 *Jacobi equation<sub>야코비 방정식</sub>*
 
 $$D_t^2 J + R(J, \dot\gamma)\dot\gamma = 0$$
 
@@ -57,9 +57,9 @@ $$D_t^2 J + R(J, \dot\gamma)\dot\gamma = 0$$
 Jacobi equation은 $\gamma$를 따른 벡터장에 대한 선형 이계 상미분방정식이다. Local frame을 잡아 성분으로 풀어 쓰면 $J$의 성분에 대한 선형 이계 시스템이 되며, 그 계수는 $\gamma$를 따른 곡률 $R(\cdot, \dot\gamma)\dot\gamma$로 주어진다. 다음 명제는 이 방정식이 측지선의 변분에서 자연히 등장함을 보이고, 동시에 해의 존재와 유일성을 정리한다.
 
 ::: 명제 4
-측지선 $\gamma : [a, b] \to M$에 대해 다음이 성립한다.
+측지선 $\gamma : [a, b] \rightarrow M$에 대해 다음이 성립한다.
 
-1. 변분 $\Gamma : (-\varepsilon, \varepsilon) \times [a, b] \to M$의 각 곡선 $t \mapsto \Gamma(s, t)$가 측지선이면, 그 변분장 $J(t) = \partial_s \Gamma\vert_{s=0}(t)$는 $\gamma$를 따른 Jacobi field이다.
+1. 변분 $\Gamma : (-\varepsilon, \varepsilon) \times [a, b] \rightarrow M$의 각 곡선 $t \mapsto \Gamma(s, t)$가 측지선이면, 그 변분장 $J(t) = \partial_s \Gamma\vert_{s=0}(t)$는 $\gamma$를 따른 Jacobi field이다.
 2. 임의의 $t_0 \in [a, b]$와 두 벡터 $u, w \in T_{\gamma(t_0)} M$에 대해, $J(t_0) = u$, $D_t J(t_0) = w$를 만족하는 Jacobi field $J$가 $[a, b]$ 위에서 유일하게 존재한다. 따라서 $\gamma$를 따른 Jacobi field들은 $2n$차원 벡터공간을 이룬다.
 :::
 
@@ -94,7 +94,7 @@ $$\ddot J^i(t) + \sum_{j} a^i_j(t)\, J^j(t) = 0, \qquad a^i_j(t) = \langle R(E_j
 측지선을 따라 두 점에서 변분장이 동시에 소멸하는 비자명한 Jacobi field가 있으면, 그 두 점은 측지선을 따라 이웃 측지선들이 다시 한 점으로 모이는 위치이다. 이를 다음과 같이 부른다.
 
 ::: 정의 5
-측지선 $\gamma : [a, b] \to M$ 위의 두 점 $\gamma(t_0)$, $\gamma(t_1)$ ($t_0 < t_1$)에 대해, $J(t_0) = 0$이고 $J(t_1) = 0$이면서 $J \not\equiv 0$인 Jacobi field $J$가 존재하면, $\gamma(t_1)$을 $\gamma(t_0)$을 따른 *conjugate point<sub>켤레점</sub>*라 부른다.
+측지선 $\gamma : [a, b] \rightarrow M$ 위의 두 점 $\gamma(t_0)$, $\gamma(t_1)$ ($t_0 < t_1$)에 대해, $J(t_0) = 0$이고 $J(t_1) = 0$이면서 $J \not\equiv 0$인 Jacobi field $J$가 존재하면, $\gamma(t_1)$을 $\gamma(t_0)$을 따른 *conjugate point<sub>켤레점</sub>*라 부른다.
 :::
 
 $J(t_0) = 0$인 Jacobi field는 정확히 $\gamma(t_0)$에서 출발하는 측지선들의 변분의 변분장이며, 이런 $J$가 $t_1$에서 다시 소멸한다는 것은 $\gamma(t_0)$에서 나온 측지선 다발이 무한소적으로 $\gamma(t_1)$에서 재초점됨을 뜻한다. Conjugate point는 또한 exponential map의 임계점과 정확히 대응한다. $\gamma(t) = \exp_p(t v)$ ($p = \gamma(0)$, $v = \dot\gamma(0)$) 꼴로 쓰면, $J(0) = 0$인 Jacobi field는 $J(t) = (d\exp_p)_{tv}(t\, w)$ 형태이고 ([§지수사상, ⁋보조정리 8](/ko/math/riemannian_geometry/exponential_map#lem8)의 변분장 계산과 같은 형태이다), 따라서 $\gamma(t_1)$이 conjugate point인 것은 $(d\exp_p)_{t_1 v}$가 비가역, 즉 $t_1 v$가 $\exp_p$의 임계점인 것과 동치이다. 이 동치성이 Cartan–Hadamard 증명에서 결정적으로 쓰인다.
@@ -103,10 +103,10 @@ $J(t_0) = 0$인 Jacobi field는 정확히 $\gamma(t_0)$에서 출발하는 측�
 
 측지선이 길이 또는 에너지를 *최소화*하는지를 판정하려면 [§측지선, ⁋정리 3](/ko/math/riemannian_geometry/geodesics#thm3)의 제1변분만으로는 부족하고, 임계점에서의 이차 거동, 즉 제2변분을 보아야 한다. 그 이차형식이 index form이다. 먼저 그것을 정의한다.
 
-측지선 $\gamma : [a, b] \to M$에 대해, $\gamma$를 따른 벡터장 중 양 끝에서 소멸하고 ($V(a) = V(b) = 0$) 조각마다 smooth 것들의 공간을 생각하자. 그 위에서 다음 대칭 bilinear form을 정의한다.
+측지선 $\gamma : [a, b] \rightarrow M$에 대해, $\gamma$를 따른 벡터장 중 양 끝에서 소멸하고 ($V(a) = V(b) = 0$) 조각마다 smooth 것들의 공간을 생각하자. 그 위에서 다음 대칭 bilinear form을 정의한다.
 
 ::: 정의 6
-측지선 $\gamma : [a, b] \to M$과 양 끝에서 소멸하는 $\gamma$를 따른 벡터장 $V, W$에 대해, *index form<sub>지표형식</sub>* $I(V, W)$를
+측지선 $\gamma : [a, b] \rightarrow M$과 양 끝에서 소멸하는 $\gamma$를 따른 벡터장 $V, W$에 대해, *index form<sub>지표형식</sub>* $I(V, W)$를
 
 $$I(V, W) = \int_a^b \Bigl( \langle D_t V,\, D_t W\rangle - \langle R(V, \dot\gamma)\dot\gamma,\, W\rangle \Bigr) \mathop{dt}$$
 
@@ -116,7 +116,7 @@ $$I(V, W) = \int_a^b \Bigl( \langle D_t V,\, D_t W\rangle - \langle R(V, \dot\ga
 Index form이 측지선의 최소화 성질을 판정하는 도구임은 다음 제2변분 공식에서 드러난다. $\gamma$의 고정변분 $\Gamma$의 변분장이 $V$일 때, 에너지 $E(s) = E(\gamma_s)$의 $s = 0$에서의 이차도함수가 정확히 $I(V, V)$로 주어진다.
 
 ::: 명제 7 (에너지의 제2변분)
-측지선 $\gamma : [a, b] \to M$의 고정변분 $\Gamma$의 변분장을 $V$라 하자. 그럼
+측지선 $\gamma : [a, b] \rightarrow M$의 고정변분 $\Gamma$의 변분장을 $V$라 하자. 그럼
 
 $$\left.\frac{d^2}{ds^2}\right\vert_{s=0} E(\gamma_s) = I(V, V) = \int_a^b \Bigl( \lVert D_t V\rVert^2 - \langle R(V, \dot\gamma)\dot\gamma,\, V\rangle \Bigr) \mathop{dt}$$
 
@@ -168,7 +168,7 @@ $$\operatorname{Ric}(v, v) \ge (n-1)k$$
 :::
 
 ::: 증명
-두 점 $p, q \in M$를 잡고 $L := d(p, q)$라 하자. $M$이 complete이므로 Hopf-Rinow 정리에 의해 $p$에서 $q$로 가는, 호의 길이로 매개화된 최소화 측지선 $\gamma : [0, L] \to M$이 존재한다 ($\lVert \dot\gamma\rVert \equiv 1$). $L > \pi/\sqrt{k}$라 가정하고 모순을 이끈다.
+두 점 $p, q \in M$를 잡고 $L := d(p, q)$라 하자. $M$이 complete이므로 Hopf-Rinow 정리에 의해 $p$에서 $q$로 가는, 호의 길이로 매개화된 최소화 측지선 $\gamma : [0, L] \rightarrow M$이 존재한다 ($\lVert \dot\gamma\rVert \equiv 1$). $L > \pi/\sqrt{k}$라 가정하고 모순을 이끈다.
 
 $\gamma$를 따라 $\dot\gamma$에 수직인 parallel orthonormal frame $(E_1, \ldots, E_{n-1}, E_n = \dot\gamma)$을 잡는다 ([§리만 곡률, ⁋정의 2](/ko/math/riemannian_geometry/curvature#def2) 이전에 쓴 parallel transport로 $T_p M$의 orthonormal basis를 운반한 것이며, 측지선의 속도가 평행이라 직교성과 정규성이 보존된다). 각 $i = 1, \ldots, n-1$에 대해 양 끝에서 소멸하는 벡터장
 
@@ -198,9 +198,9 @@ Bonnet–Myers 정리에서 직경의 상한 $\pi/\sqrt{k}$는 sharp이다. 반�
 :::
 
 ::: 증명
-$M$의 universal cover $\pi : \tilde M \to M$를 생각하자. $\tilde M$에 $g$를 끌어올린 metric $\tilde g = \pi^\ast g$를 주면 $\pi$는 국소등거리사상이고, 따라서 $(\tilde M, \tilde g)$의 곡률은 $(M, g)$의 곡률을 국소적으로 그대로 가지므로 $\tilde M$도 같은 Ricci 하한 $\operatorname{Ric} \ge (n-1)k$를 만족한다. 또한 콤팩트 manifold $M$은 complete이고, 그 universal cover $\tilde M$ 역시 끌어올린 metric에 대해 complete이다 (covering map을 따라 측지선이 들어올려지므로). 그럼 [정리 8](#thm8)을 $(\tilde M, \tilde g)$에 적용하여 $\tilde M$도 콤팩트하다.
+$M$의 universal cover $\pi : \tilde M \rightarrow M$를 생각하자. $\tilde M$에 $g$를 끌어올린 metric $\tilde g = \pi^\ast g$를 주면 $\pi$는 국소등거리사상이고, 따라서 $(\tilde M, \tilde g)$의 곡률은 $(M, g)$의 곡률을 국소적으로 그대로 가지므로 $\tilde M$도 같은 Ricci 하한 $\operatorname{Ric} \ge (n-1)k$를 만족한다. 또한 콤팩트 manifold $M$은 complete이고, 그 universal cover $\tilde M$ 역시 끌어올린 metric에 대해 complete이다 (covering map을 따라 측지선이 들어올려지므로). 그럼 [정리 8](#thm8)을 $(\tilde M, \tilde g)$에 적용하여 $\tilde M$도 콤팩트하다.
 
-한편 $\pi : \tilde M \to M$의 각 fiber $\pi^{-1}(p)$는 deck transformation group과 전단사이고, universal cover의 경우 이 group이 $\pi_1(M)$과 isomorphic이다. $\tilde M$이 콤팩트하고 $\pi$가 covering map이므로 fiber $\pi^{-1}(p)$는 이산이며 콤팩트집합 $\tilde M$ 안에서 닫힌 이산집합, 즉 유한집합이다. 따라서 $\pi_1(M) \cong \pi^{-1}(p)$는 유한군이다.
+한편 $\pi : \tilde M \rightarrow M$의 각 fiber $\pi^{-1}(p)$는 deck transformation group과 전단사이고, universal cover의 경우 이 group이 $\pi_1(M)$과 isomorphic이다. $\tilde M$이 콤팩트하고 $\pi$가 covering map이므로 fiber $\pi^{-1}(p)$는 이산이며 콤팩트집합 $\tilde M$ 안에서 닫힌 이산집합, 즉 유한집합이다. 따라서 $\pi_1(M) \cong \pi^{-1}(p)$는 유한군이다.
 :::
 
 [따름정리 9](#cor9)는 양의 Ricci curvature가 위상에 거는 제약을 잘 보여준다. 예컨대 $\mathbb{R}^n$이나 평탄 토러스 $T^n$, 또는 무한 fundamental group을 가진 어떤 manifold도 양의 하한을 갖는 Ricci curvature를 허용할 수 없다. 특히 $\pi_1$이 무한인 콤팩트 manifold는 양의 Ricci metric을 가질 수 없다.
@@ -240,7 +240,7 @@ Conjugate point가 없다는 것은 [정의 5](#def5) 다음 문단에서 본 �
 ::: 정리 11 (Cartan–Hadamard)
 $(M, g)$가 $n$차원 complete, 단순연결 Riemannian manifold이고 모든 단면곡률이 $K \le 0$이라 하자. 그럼 임의의 점 $p \in M$에서 exponential map
 
-$$\exp_p : T_p M \to M$$
+$$\exp_p : T_p M \rightarrow M$$
 
 은 diffeomorphic이다. 특히 $M$은 $\mathbb{R}^n$과 diffeomorphic이고, $M$의 임의의 두 점은 유일한 측지선으로 이어지며 그 측지선이 최단 곡선이다.
 :::
@@ -248,9 +248,9 @@ $$\exp_p : T_p M \to M$$
 ::: 증명
 $M$이 complete이므로 Hopf-Rinow 정리에 의해 모든 측지선이 $\mathbb{R}$ 전체로 연장되어 $\exp_p$가 $T_p M$ 전체에서 정의된다. [보조정리 10](#lem10)에 의해 $\exp_p$는 모든 점에서 비특이이므로 국소 diffeomorphic이다.
 
-핵심은 $\exp_p$를 통해 $T_p M$ 위로 끌어올린 metric $\tilde g := \exp_p^\ast g$가 complete임을 보이는 것이다. $\exp_p$가 국소 diffeomorphic이므로 $\tilde g$는 $T_p M$ 위의 smooth Riemannian metric이고, $\exp_p : (T_p M, \tilde g) \to (M, g)$는 국소등거리사상이다. $(T_p M, \tilde g)$에서 원점을 지나는 직선 $t \mapsto tv$는 $\exp_p$ 아래에서 측지선 $\gamma_v(t) = \exp_p(tv)$로 보내지므로 ([§지수사상, ⁋보조정리 2](/ko/math/riemannian_geometry/exponential_map#lem2)) 이 직선들은 $\tilde g$의 측지선이며, 이들이 원점에서 모든 방향으로 모든 시간에 정의되므로 $(T_p M, \tilde g)$는 원점에서 geodesically complete이다. Hopf-Rinow 정리는 한 점에서의 geodesic completeness로부터 전체의 completeness를 주므로 $(T_p M, \tilde g)$는 complete이다.
+핵심은 $\exp_p$를 통해 $T_p M$ 위로 끌어올린 metric $\tilde g := \exp_p^\ast g$가 complete임을 보이는 것이다. $\exp_p$가 국소 diffeomorphic이므로 $\tilde g$는 $T_p M$ 위의 smooth Riemannian metric이고, $\exp_p : (T_p M, \tilde g) \rightarrow (M, g)$는 국소등거리사상이다. $(T_p M, \tilde g)$에서 원점을 지나는 직선 $t \mapsto tv$는 $\exp_p$ 아래에서 측지선 $\gamma_v(t) = \exp_p(tv)$로 보내지므로 ([§지수사상, ⁋보조정리 2](/ko/math/riemannian_geometry/exponential_map#lem2)) 이 직선들은 $\tilde g$의 측지선이며, 이들이 원점에서 모든 방향으로 모든 시간에 정의되므로 $(T_p M, \tilde g)$는 원점에서 geodesically complete이다. Hopf-Rinow 정리는 한 점에서의 geodesic completeness로부터 전체의 completeness를 주므로 $(T_p M, \tilde g)$는 complete이다.
 
-이제 국소등거리사상이자 국소 diffeomorphic인 $\exp_p$가 출발공간이 complete이고 도착공간이 연결일 때 covering map임을 쓴다 (완비 manifold 사이의 국소등거리 surjection은 covering map이라는 사실의 적용이며, surjectivity는 Hopf-Rinow에서 $\exp_p$의 상이 닫혀 있고 열려 있어 연결인 $M$ 전체가 되는 데서 나온다). 따라서 $\exp_p : T_p M \to M$은 covering map이다. $T_p M \cong \mathbb{R}^n$은 단순연결이므로 universal cover이고, $M$이 단순연결이라는 가정에서 covering map $\exp_p$는 한 겹, 즉 diffeomorphic이다.
+이제 국소등거리사상이자 국소 diffeomorphic인 $\exp_p$가 출발공간이 complete이고 도착공간이 연결일 때 covering map임을 쓴다 (완비 manifold 사이의 국소등거리 surjection은 covering map이라는 사실의 적용이며, surjectivity는 Hopf-Rinow에서 $\exp_p$의 상이 닫혀 있고 열려 있어 연결인 $M$ 전체가 되는 데서 나온다). 따라서 $\exp_p : T_p M \rightarrow M$은 covering map이다. $T_p M \cong \mathbb{R}^n$은 단순연결이므로 universal cover이고, $M$이 단순연결이라는 가정에서 covering map $\exp_p$는 한 겹, 즉 diffeomorphic이다.
 
 $\exp_p$가 전단사이므로 임의의 $q \in M$에 대해 $q = \exp_p(v)$인 $v$가 유일하게 존재하고, 그 측지선 $\gamma_v$가 $p$와 $q$를 잇는 유일한 측지선이다. [§지수사상, ⁋정리 9](/ko/math/riemannian_geometry/exponential_map#thm9)가 함의하듯 $\exp_p$가 diffeomorphic인 영역에서 방사 측지선은 길이를 최소화하므로, 이 유일한 측지선이 $p$와 $q$ 사이의 최단 곡선이다.
 :::

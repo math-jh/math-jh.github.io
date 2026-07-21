@@ -19,7 +19,7 @@ In [§Definition of Toric Varieties](/en/math/toric_geometry/toric_varieties) we
 
 ## Reflexive Polytopes
 
-First, fix a lattice $M$ and its dual lattice $N = \Hom(M, \mathbb{Z})$, and let $\langle -, - \rangle : M_{\mathbb{R}} \times N_{\mathbb{R}} \to \mathbb{R}$ be the natural dual pairing. Through this pairing we can transport a given polytope to the opposite dual lattice. By definition, a *reflexive polytope* is one for which the result is again a lattice polytope.
+First, fix a lattice $M$ and its dual lattice $N = \Hom(M, \mathbb{Z})$, and let $\langle -, - \rangle : M_{\mathbb{R}} \times N_{\mathbb{R}} \rightarrow \mathbb{R}$ be the natural dual pairing. Through this pairing we can transport a given polytope to the opposite dual lattice. By definition, a *reflexive polytope* is one for which the result is again a lattice polytope.
 
 ::: Definition 1
 A $d$-dimensional *lattice polytope* $\Delta$ in $M_{\mathbb{R}}$ is called a *reflexive polytope* if the following two conditions are satisfied:
@@ -173,7 +173,7 @@ The conclusion $K_V = 0$ of [Proposition 7](#prop7) gives $V$ a chance to enter 
 However, in general the variety $X_\Delta$ constructed from a reflexive polytope $\Delta$ is singular, and this creates two subtle problems.
 
 1. If the codimension-$1$ subvariety $V$ meets the singular locus of $X_\Delta$, then $V$ itself becomes singular at those points. In our example $\mathbb{P}^2/(\mathbb{Z}/3)$, the singular locus consists of three isolated points, so a generic cubic curve $V$ can avoid them and remain smooth; but as the dimension grows, the singular locus can have positive dimension, forcing $V$ to intersect it. Therefore we cannot directly apply the conclusion of [Proposition 7](#prop7) to a *singular* $V$.
-2. Thus, to obtain a genuine smooth Calabi-Yau from a singular $V$, an appropriate resolution $\pi: \widetilde{V} \to V$ is needed, but a general resolution does not preserve the canonical class. Specifically, it is known that an arbitrary resolution of a normal Gorenstein variety $V$ satisfies the following *discrepancy formula*:
+2. Thus, to obtain a genuine smooth Calabi-Yau from a singular $V$, an appropriate resolution $\pi: \widetilde{V} \rightarrow V$ is needed, but a general resolution does not preserve the canonical class. Specifically, it is known that an arbitrary resolution of a normal Gorenstein variety $V$ satisfies the following *discrepancy formula*:
 
     $$K_{\tilde V} = \pi^\ast K_V + \sum_i a_i E_i.$$
 
@@ -188,7 +188,7 @@ However, in general the variety $X_\Delta$ constructed from a reflexive polytope
 Therefore the only kind of resolution that *preserves* the Calabi-Yau property is one where all $a_i = 0$, and such a resolution is defined as follows.
 
 ::: Definition 8
-A resolution of singularities $\pi: \tilde{X} \to X$ of a normal Gorenstein variety $X$ — that is, $\tilde{X}$ is smooth and $\pi$ is a proper birational morphism — satisfying
+A resolution of singularities $\pi: \tilde{X} \rightarrow X$ of a normal Gorenstein variety $X$ — that is, $\tilde{X}$ is smooth and $\pi$ is a proper birational morphism — satisfying
 
 $$K_{\tilde{X}} = \pi^\ast K_X$$
 
@@ -197,7 +197,7 @@ is called a *crepant resolution*.
 
 That is, a crepant resolution is a resolution with no discrepancy. Then we can immediately verify that this condition is exactly what is needed to carry the conclusion of [Proposition 7](#prop7) into the singular setting, and from this $\widetilde{V}$ becomes a genuine (smooth) Calabi-Yau.
 
-In the toric setting, crepant resolutions translate into very explicit lattice data. We already saw in the discussion after [§Definition of Toric Varieties, ⁋Proposition 11](/en/math/toric_geometry/toric_varieties#prop11) that a general toric resolution is given by a refinement of a fan (i.e. a finer fan on the same support). Then the real question is when this resolution is crepant, and this too can be expressed in terms of combinatorial properties of the fan. Specifically, a birational morphism $\pi: X_{\Sigma'} \to X_\Delta$ is crepant if and only if all newly added rays $v$ lie on lattice points on the *boundary* of $\Delta^\circ$.
+In the toric setting, crepant resolutions translate into very explicit lattice data. We already saw in the discussion after [§Definition of Toric Varieties, ⁋Proposition 11](/en/math/toric_geometry/toric_varieties#prop11) that a general toric resolution is given by a refinement of a fan (i.e. a finer fan on the same support). Then the real question is when this resolution is crepant, and this too can be expressed in terms of combinatorial properties of the fan. Specifically, a birational morphism $\pi: X_{\Sigma'} \rightarrow X_\Delta$ is crepant if and only if all newly added rays $v$ lie on lattice points on the *boundary* of $\Delta^\circ$.
 
 Intuitively, this can be understood as the requirement that the anticanonical piecewise linear function $\psi_{-K}$ from the proof of [Proposition 3](#prop3) still satisfies $\psi_{-K}(v) = -1$ for each new ray $v$. This is because if $v$ falls inside a cone $\sigma$ (with vertex $u_\sigma$), then $\psi_{-K}(v) = \langle u_\sigma, v\rangle = -1$ is exactly equivalent to $v$ lying on the facet $F_{u_\sigma}$ of $\Delta^\circ$. For example, if we add the lattice points $(1,0), (0,1), (-1,-1)$ between adjacent rays in the fan of $\mathbb{P}^2/(\mathbb{Z}/3)$ as new rays, all three $\mathbb{Z}/3$ singularities are resolved simultaneously, and the result becomes the fan of smooth $\mathbb{P}^2$.
 

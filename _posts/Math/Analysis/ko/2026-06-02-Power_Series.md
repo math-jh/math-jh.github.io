@@ -23,7 +23,7 @@ published: false
 ::: 정리 1 (코시–아다마르)
 멱급수 $\sum_{n=0}^\infty c_n (x - a)^n$에 대하여
 
-$$R = \frac{1}{\limsup_{n\to\infty} \lvert c_n\rvert^{1/n}}$$
+$$R = \frac{1}{\limsup_{n\rightarrow\infty} \lvert c_n\rvert^{1/n}}$$
 
 으로 두면 ($0$과 $\infty$는 통상적으로 해석한다), $\lvert x - a\rvert < R$이면 절대수렴하고 $\lvert x - a\rvert > R$이면 발산한다.
 :::
@@ -90,22 +90,22 @@ d_n &= \frac{f^{(n)}(a)}{n!}
 코시–아다마르 공식 ([정리 1](#thm1)) 은 모든 멱급수에 통하지만, 실제 계산에서는 [§무한급수, ⁋정리 7](/ko/math/analysis/series#thm7)이 더 다루기 쉬운 경우가 많다. 계수의 비 $\lvert c_{n+1}/c_n\rvert$이 극한을 가지면 그 극한의 역수가 곧 수렴반경이 된다.
 
 ::: 명제 6 (비판정에 의한 수렴반경)
-$c_n \neq 0$이 충분히 큰 $n$에서 성립하고 $\lim_{n\to\infty}\lvert c_{n+1}/c_n\rvert = L$이 존재하면, 멱급수 $\sum c_n (x-a)^n$의 수렴반경은 $R = 1/L$이다 ($L = 0$이면 $R = \infty$, $L = \infty$이면 $R = 0$).
+$c_n \neq 0$이 충분히 큰 $n$에서 성립하고 $\lim_{n\rightarrow\infty}\lvert c_{n+1}/c_n\rvert = L$이 존재하면, 멱급수 $\sum c_n (x-a)^n$의 수렴반경은 $R = 1/L$이다 ($L = 0$이면 $R = \infty$, $L = \infty$이면 $R = 0$).
 :::
 
 ::: 증명
 고정된 $x \neq a$에서 항 $c_n (x-a)^n$에 비판정을 적용하면
 
 $$\begin{aligned}
-\lim_{n\to\infty}\left\lvert\frac{c_{n+1}(x-a)^{n+1}}{c_n (x-a)^n}\right\rvert
-&= \lvert x - a\rvert \cdot \lim_{n\to\infty}\left\lvert\frac{c_{n+1}}{c_n}\right\rvert \\
+\lim_{n\rightarrow\infty}\left\lvert\frac{c_{n+1}(x-a)^{n+1}}{c_n (x-a)^n}\right\rvert
+&= \lvert x - a\rvert \cdot \lim_{n\rightarrow\infty}\left\lvert\frac{c_{n+1}}{c_n}\right\rvert \\
 &= L \lvert x - a\rvert
 \end{aligned}$$
 
 이다. 이 값이 $1$보다 작으면, 곧 $\lvert x - a\rvert < 1/L$이면 절대수렴하고, $1$보다 크면 발산한다. 따라서 수렴반경은 $R = 1/L$이다. 비판정으로 극한이 존재할 때 근판정의 $\limsup$도 같은 값을 가지므로, 이는 [정리 1](#thm1)과 모순되지 않는다.
 :::
 
-가령 $c_n = n^2/2^n$이면 $\lvert c_{n+1}/c_n\rvert = (1/2)(n+1)^2/n^2 \to 1/2$이므로 [명제 6](#prop6)에서 곧바로 $R = 2$를 얻는다. 그러나 계수가 진동하여 비의 극한이 아예 존재하지 않는 급수에서는 [명제 6](#prop6)이 무력하고, 코시–아다마르 공식의 $\limsup$만이 답을 준다.
+가령 $c_n = n^2/2^n$이면 $\lvert c_{n+1}/c_n\rvert = (1/2)(n+1)^2/n^2 \rightarrow 1/2$이므로 [명제 6](#prop6)에서 곧바로 $R = 2$를 얻는다. 그러나 계수가 진동하여 비의 극한이 아예 존재하지 않는 급수에서는 [명제 6](#prop6)이 무력하고, 코시–아다마르 공식의 $\limsup$만이 답을 준다.
 
 ::: 예시 7 (비판정이 통하지 않는 경우)
 계수가 짝·홀에 따라 달라 비의 극한이 없을 때는 근판정을 쓴다. 멱급수
@@ -116,7 +116,7 @@ $$\sum_{n=0}^\infty c_n x^n, \qquad c_n = \begin{cases} 2^n & (n\ \text{짝수})
 
 $$\begin{aligned}
 \lvert c_n\rvert^{1/n} &= \begin{cases} 2 & (n\ \text{짝수}) \\ 3 & (n\ \text{홀수}) \end{cases} \\
-\limsup_{n\to\infty}\lvert c_n\rvert^{1/n} &= 3
+\limsup_{n\rightarrow\infty}\lvert c_n\rvert^{1/n} &= 3
 \end{aligned}$$
 
 이므로 코시–아다마르 공식 ([정리 1](#thm1)) 에 의해 $R = 1/3$이다. 이처럼 $\limsup$은 진동하는 계수에도 항상 정의된다.

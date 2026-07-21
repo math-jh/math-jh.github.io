@@ -82,7 +82,7 @@ $$\ker (A-I)^3=\span \{(1,0,0), (0,1,0), (0,0,1)\}$$
 직관이라 이름붙이기는 다소 거창하지만, 적어도 이 예시의 경우에서는 앞서 말한 관찰이 잘 성립한다는 것을 확인할 수 있다. 이제 본격적인 이야기를 위해 다음 정의를 도입하자. 
 
 ::: 정의 3
-유한차원 벡터공간 $V$ 위에 정의된 linear operator $A$와 $A$의 한 eigenvalue $\lambda$에 대하여, $A$의 $\lambda$에 대한 *generalized eigenspace*를 다음의 식
+유한차원 벡터공간 $V$ 위에 정의된 linear operator $A$와 $A$의 한 eigenvalue $\lambda$에 대하여, $A$의 $\lambda$에 대한 *generalized eigenspace<sub>일반화 고유공간</sub>*를 다음의 식
 
 $$G_\lambda(A)=\left\{v\in V\mid (A-\lambda I)^kv=0\text{ for some $k\geq 0$}\right\}$$
 
@@ -279,7 +279,7 @@ $$U=\span(v, Nv, \ldots, N^{k-1}v)$$
 어쨌든 이러한 과정을 거치고 나면 우리는 임의의 nilpotent operator $N$를 위의 식 (1) 형태의 direct sum (즉, 위의 행렬들이 대각성분에 있는 block diagonal matrix들)으로 나타낼 수 있음을 안다. $N$이 나오게 된 것은 generalized eigenspace $G_\lambda(A)$ 위에서의 nilpotent operator $A-\lambda I$ 때문이었으므로, 다음을 정의한다.
 
 ::: 정의 11
-크기 $k$의 *Jordan block* $J_k(\lambda)$를 다음의 $k\times k$ 행렬
+크기 $k$의 *Jordan block<sub>조르당 블록</sub>* $J_k(\lambda)$를 다음의 $k\times k$ 행렬
 
 $$J_k(\lambda)=\begin{pmatrix}\lambda&1&0&\cdots&0\\0&\lambda&1&\cdots&0\\\vdots&\vdots&\ddots&\ddots&\vdots\\0&0&\cdots&\lambda&1\\0&0&\cdots&0&\lambda\end{pmatrix}$$
 

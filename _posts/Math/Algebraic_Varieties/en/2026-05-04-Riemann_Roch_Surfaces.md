@@ -38,7 +38,7 @@ $$C \cdot D = \rchi(\mathcal{O}_S(C + D)) - \rchi(\mathcal{O}_S(C)) - \rchi(\mat
 
 To examine the geometric meaning of this, suppose $C$ and $D$ are effective divisors defined by global sections $s \in H^0(\mathcal{O}(C))$ and $t \in H^0(\mathcal{O}(D))$, respectively. Then their common zero locus is $C \cap D$, and the following exact sequence holds.
 
-$$0 \to \mathcal{O} \xrightarrow{(t,-s)} \mathcal{O}(C) \oplus \mathcal{O}(D) \xrightarrow{(s,t)} \mathcal{O}(C+D) \to \mathcal{O}_{C \cap D} \to 0$$
+$$0 \rightarrow \mathcal{O} \xrightarrow{(t,-s)} \mathcal{O}(C) \oplus \mathcal{O}(D) \xrightarrow{(s,t)} \mathcal{O}(C+D) \rightarrow \mathcal{O}_{C \cap D} \rightarrow 0$$
 
 Here the first arrow is $h \mapsto (ht, -hs)$, the second arrow is $(f, g) \mapsto fs + gt$, and the last arrow is the natural restriction map from $\mathcal{O}(C+D)$ to $C \cap D$. Then by additivity of the Euler characteristic,
 
@@ -108,7 +108,7 @@ $$\rchi(\mathcal{O}_S(D)) = \frac{1}{2} D \cdot (D - K_S) + \rchi(\mathcal{O}_S)
 ::: Proof
 First, consider the case where $D$ is a smooth irreducible effective divisor. From the short exact sequence
 
-$$0 \to \mathcal{O}_S \to \mathcal{O}_S(D) \to \mathcal{O}_D(D) \to 0$$
+$$0 \rightarrow \mathcal{O}_S \rightarrow \mathcal{O}_S(D) \rightarrow \mathcal{O}_D(D) \rightarrow 0$$
 
 and the additivity of the Euler characteristic, we obtain
 
@@ -159,7 +159,7 @@ This identity is indeed a consequence of [§Cohomology of Projective Spaces, ⁋
 :::
 
 ::: Example 6 (Blow-up of $\mathbb{P}^2$)
-Now we consider the blow-up $\pi: \widetilde{\mathbb{P}}^2 \to \mathbb{P}^2$ of $\mathbb{P}^2$ at a point $p$. By [§Canonical Bundle, ⁋Proposition 12](/en/math/algebraic_varieties/canonical_bundle#prop12), the canonical bundle is given by the formula
+Now we consider the blow-up $\pi: \widetilde{\mathbb{P}}^2 \rightarrow \mathbb{P}^2$ of $\mathbb{P}^2$ at a point $p$. By [§Canonical Bundle, ⁋Proposition 12](/en/math/algebraic_varieties/canonical_bundle#prop12), the canonical bundle is given by the formula
 
 $$K_{\widetilde{\mathbb{P}}^2} = \pi^\ast K_{\mathbb{P}^2} + E = -3H + E$$
 

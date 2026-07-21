@@ -120,9 +120,9 @@ $$\CH^\ast(X_\Sigma) \cong \mathbb{Z}[\x_\rho \mid \rho \in \Sigma(1)] \,/\, (\m
 :::
 
 ::: 증명
-표기를 위해 $R = \mathbb{Z}[\x_\rho \mid \rho \in \Sigma(1)]$이라 두자. $\x_\rho \mapsto [D_\rho]$는 ring homomorphism $\varphi: R \to \CH^\ast(X_\Sigma)$로 유일하게 확장된다. 우리는 $\varphi$가 surjective이고 $\ker \varphi = \mathcal{I}_{SR} + \mathcal{J}_{\mathrm{lin}}$임을 보인다.
+표기를 위해 $R = \mathbb{Z}[\x_\rho \mid \rho \in \Sigma(1)]$이라 두자. $\x_\rho \mapsto [D_\rho]$는 ring homomorphism $\varphi: R \rightarrow \CH^\ast(X_\Sigma)$로 유일하게 확장된다. 우리는 $\varphi$가 surjective이고 $\ker \varphi = \mathcal{I}_{SR} + \mathcal{J}_{\mathrm{lin}}$임을 보인다.
 
-$\varphi$가 $\mathcal{I}_{SR}$과 $\mathcal{J}_{\mathrm{lin}}$을 모두 $0$으로 보냄은 이미 보았다. 즉 $\mathcal{J}_{\mathrm{lin}}$의 generator는 $\varphi$ 하에서 $\sum_\rho \langle m, v_\rho\rangle [D_\rho] = [\divisor(\rchi^m)] = 0$이 되고 ([§토러스 인자와 선다발, ⁋명제 3](/ko/math/toric_geometry/toric_divisors#prop3)), $\mathcal{I}_{SR}$의 generator는 명제 2의 (2)에 의해 $0$이 된다. 따라서 $\varphi$는 quotient ring $\overline{\varphi}: R/(\mathcal{I}_{SR} + \mathcal{J}_{\mathrm{lin}}) \to \CH^\ast(X_\Sigma)$로 factor된다.
+$\varphi$가 $\mathcal{I}_{SR}$과 $\mathcal{J}_{\mathrm{lin}}$을 모두 $0$으로 보냄은 이미 보았다. 즉 $\mathcal{J}_{\mathrm{lin}}$의 generator는 $\varphi$ 하에서 $\sum_\rho \langle m, v_\rho\rangle [D_\rho] = [\divisor(\rchi^m)] = 0$이 되고 ([§토러스 인자와 선다발, ⁋명제 3](/ko/math/toric_geometry/toric_divisors#prop3)), $\mathcal{I}_{SR}$의 generator는 명제 2의 (2)에 의해 $0$이 된다. 따라서 $\varphi$는 quotient ring $\overline{\varphi}: R/(\mathcal{I}_{SR} + \mathcal{J}_{\mathrm{lin}}) \rightarrow \CH^\ast(X_\Sigma)$로 factor된다.
 
 다음으로 $\overline{\varphi}$의 surjectivity를 본다. $X_\Sigma$가 smooth이므로 Chow group은 orbit closure들로 generate된다. 구체적으로, complete toric variety에 대해 cycle class들 $\{[V(\sigma)] : \sigma \in \Sigma\}$이 $\CH^\ast(X_\Sigma)$를 $\mathbb{Z}$-module로서 generate한다. 이는 fan의 cone들이 주는 affine cell들에 의한 stratification과 [\[대수다양체\] §저우 군, ⁋명제 8](/ko/math/algebraic_varieties/chow_groups#prop8)를 cone 차원에 대해 귀납적으로 적용하여 얻어진다. 각 $[V(\sigma)]$는 명제 2의 (1)에 의해 $\sigma$를 generate하는 ray들의 divisor 곱 $[D_{\rho_1}] \cdots [D_{\rho_k}]$로 표현되므로 $[D_\rho]$들의 monomial이며, 따라서 $\varphi$의 image에 속한다. 결국 $\overline{\varphi}$는 surjective이다.
 

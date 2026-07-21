@@ -30,7 +30,7 @@ For a topological space $X$ and a subset $A$, the following are all equivalent.
 3. $A$ is open in its closure $\cl A$ (in $X$).
 :::
 ::: Proof
-First, suppose $A$ is locally closed, and for each $x\in A$ let $V_x$ be an open neighborhood of $x$ in $X$ satisfying the condition of [Definition 1](#def1). Then $U=\bigcup_{x\in A} V_x$ is an open set. Also, by applying [§Subspaces, ⁋Proposition 5](/en/math/topology/subspaces#prop5), we see that $A$ is closed in $U$. Thus $A=U\cap C$ for some closed set $C$ in $X$, so the second condition holds.
+First, suppose $A$ is locally closed, and for each $x\in A$ let $V_x$ be an open neighborhood of $x$ in $X$ satisfying the condition of [Definition 1](#def1). Then $U=\bigcup_{x\in A} V_x$ is an open set. Also, by applying [§Subspaces, ⁋Proposition 6](/en/math/topology/subspaces#prop6), we see that $A$ is closed in $U$. Thus $A=U\cap C$ for some closed set $C$ in $X$, so the second condition holds.
 
 Now suppose $A=U\cap C$ holds for an open set $U$ and a closed set $C$ in $X$. Then $\cl A\subseteq C$, so
 

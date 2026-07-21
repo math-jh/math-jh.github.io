@@ -37,7 +37,7 @@ $$g(w) = \frac{f(w)}{w - z}$$
 
 $$\oint_{C_r} g(w)\,dw = \oint_{C_\rho} g(w)\,dw$$
 
-이다. 이제 우변을 $\rho \to 0$의 극한으로 평가한다. 핵 부분의 적분 $\oint_{C_\rho} dw/(w - z)$는 중심 $z$를 한 바퀴 도는 원에서의 적분이므로 $2\pi i$이다 ([§복소적분, ⁋명제 10](/ko/math/complex_analysis/complex_integration#prop10)에서 $n = -1$인 경우, 평행이동으로 중심을 $z$로 옮긴 것). 따라서
+이다. 이제 우변을 $\rho \rightarrow 0$의 극한으로 평가한다. 핵 부분의 적분 $\oint_{C_\rho} dw/(w - z)$는 중심 $z$를 한 바퀴 도는 원에서의 적분이므로 $2\pi i$이다 ([§복소적분, ⁋명제 10](/ko/math/complex_analysis/complex_integration#prop10)에서 $n = -1$인 경우, 평행이동으로 중심을 $z$로 옮긴 것). 따라서
 
 $$\oint_{C_\rho} \frac{f(w)}{w - z}\,dw - 2\pi i\, f(z) = \oint_{C_\rho} \frac{f(w) - f(z)}{w - z}\,dw$$
 
@@ -45,7 +45,7 @@ $$\oint_{C_\rho} \frac{f(w)}{w - z}\,dw - 2\pi i\, f(z) = \oint_{C_\rho} \frac{f
 
 $$\left\lvert \oint_{C_\rho} \frac{f(w) - f(z)}{w - z}\,dw \right\rvert \leq \frac{\varepsilon}{\rho}\cdot 2\pi\rho = 2\pi\varepsilon$$
 
-이다. 좌변은 $\rho$에 무관한 상수 $\bigl\lvert \oint_{C_r} g\,dw - 2\pi i\, f(z)\bigr\rvert$이고 (앞의 homotopy 불변성으로 $C_\rho$ 적분이 $C_r$ 적분과 같으므로) 우변은 $\varepsilon \to 0$일 때 $0$으로 가므로, 이 상수는 $0$이다. 곧
+이다. 좌변은 $\rho$에 무관한 상수 $\bigl\lvert \oint_{C_r} g\,dw - 2\pi i\, f(z)\bigr\rvert$이고 (앞의 homotopy 불변성으로 $C_\rho$ 적분이 $C_r$ 적분과 같으므로) 우변은 $\varepsilon \rightarrow 0$일 때 $0$으로 가므로, 이 상수는 $0$이다. 곧
 
 $$\oint_{C_r} \frac{f(w)}{w - z}\,dw = 2\pi i\, f(z)$$
 
@@ -81,7 +81,7 @@ $$\frac{1}{a^{n+1}} - \frac{1}{b^{n+1}} = \frac{b^{n+1} - a^{n+1}}{a^{n+1}b^{n+1
 
 $$\frac{1}{h}\left( \frac{1}{(w - z - h)^{n+1}} - \frac{1}{(w - z)^{n+1}} \right) = \frac{\sum_{j=0}^{n} (w - z - h)^j (w - z)^{n-j}}{(w - z - h)^{n+1}(w - z)^{n+1}}$$
 
-가 된다. $h \to 0$이면 분자의 각 항이 $(w - z)^j (w - z)^{n-j} = (w-z)^n$으로 수렴하여 합이 $(n+1)(w - z)^n$이 되고, 분모는 $(w - z)^{2n+2}$으로 수렴하므로, 핵은 $C_r$ 위에서 균등하게
+가 된다. $h \rightarrow 0$이면 분자의 각 항이 $(w - z)^j (w - z)^{n-j} = (w-z)^n$으로 수렴하여 합이 $(n+1)(w - z)^n$이 되고, 분모는 $(w - z)^{2n+2}$으로 수렴하므로, 핵은 $C_r$ 위에서 균등하게
 
 $$\frac{(n+1)(w - z)^n}{(w - z)^{2n+2}} = \frac{n+1}{(w - z)^{n+2}}$$
 
@@ -143,7 +143,7 @@ $f$가 entire function이므로 ([§복소정칙함수, ⁋정의 2](/ko/math/co
 
 $$\bigl\lvert f'(z_0)\bigr\rvert \leq \frac{1!\,M}{r} = \frac{M}{r}$$
 
-이다. $f$가 평면 전체에서 holomorphic이므로 $r$을 임의로 크게 잡을 수 있고, $r \to \infty$이면 우변이 $0$으로 가므로 $f'(z_0) = 0$이다. $z_0$이 임의였으므로 $f' \equiv 0$이다. 도함수가 항상 $0$인 holomorphic function은 연결된 영역에서 상수이므로 (실수부와 허수부의 모든 편미분이 $0$이라 Cauchy–Riemann 관계 아래 $u, v$가 상수이다), $f$는 $\mathbb{C}$에서 상수함수이다.
+이다. $f$가 평면 전체에서 holomorphic이므로 $r$을 임의로 크게 잡을 수 있고, $r \rightarrow \infty$이면 우변이 $0$으로 가므로 $f'(z_0) = 0$이다. $z_0$이 임의였으므로 $f' \equiv 0$이다. 도함수가 항상 $0$인 holomorphic function은 연결된 영역에서 상수이므로 (실수부와 허수부의 모든 편미분이 $0$이라 Cauchy–Riemann 관계 아래 $u, v$가 상수이다), $f$는 $\mathbb{C}$에서 상수함수이다.
 :::
 
 Liouville 정리는 holomorphicity와 유계성이 양립하기에는 너무 강한 조건임을 말한다. Entire function이 상수가 아니라면 그 절댓값은 어딘가에서 반드시 무한히 커져야 한다. 가령 $\sin z$나 $e^z$ 같은 비상수 entire function은 ([§복소정칙함수, ⁋정의 10](/ko/math/complex_analysis/holomorphic_functions#def10)) 실축 위에서는 유계로 보이더라도 허수방향으로 가면 절댓값이 폭발한다. 이 단순한 정리가 대수학에서 가장 기본적인 사실 하나를 증명하는 열쇠가 된다.
@@ -167,7 +167,7 @@ $g$가 유계임을 보인다. $\lvert z\rvert$이 클 때 $p$의 거동을 보�
 
 $$p(z) = a_n z^n\left( 1 + \frac{a_{n-1}}{a_n z} + \cdots + \frac{a_0}{a_n z^n} \right)$$
 
-이고 괄호 안은 $\lvert z\rvert \to \infty$일 때 $1$로 수렴하므로, 충분히 큰 $R > 0$이 있어 $\lvert z\rvert \geq R$이면 괄호 안의 크기가 $1/2$ 이상이고 따라서
+이고 괄호 안은 $\lvert z\rvert \rightarrow \infty$일 때 $1$로 수렴하므로, 충분히 큰 $R > 0$이 있어 $\lvert z\rvert \geq R$이면 괄호 안의 크기가 $1/2$ 이상이고 따라서
 
 $$\lvert p(z)\rvert \geq \frac{1}{2}\,\lvert a_n\rvert\,\lvert z\rvert^n \geq \frac{1}{2}\,\lvert a_n\rvert\,R^n$$
 
@@ -225,7 +225,7 @@ $$F(z + h) - F(z) = \int_{[z, z+h]} f(\zeta)\,d\zeta$$
 
 $$\frac{F(z + h) - F(z)}{h} - f(z) = \frac{1}{h}\int_{[z, z+h]} \bigl( f(\zeta) - f(z) \bigr)\,d\zeta$$
 
-이고, $f$가 $z$에서 연속이라 $\lvert h\rvert$이 작으면 선분 위에서 $\lvert f(\zeta) - f(z)\rvert \leq \varepsilon$이므로 ML 부등식 ([§복소적분, ⁋명제 6](/ko/math/complex_analysis/complex_integration#prop6)) 으로 우변의 크기가 $\varepsilon$ 이하이다. 따라서 $h \to 0$일 때 차분비가 $f(z)$로 수렴하여 $F'(z) = f(z)$이고, $F$는 $D$에서 holomorphic이다.
+이고, $f$가 $z$에서 연속이라 $\lvert h\rvert$이 작으면 선분 위에서 $\lvert f(\zeta) - f(z)\rvert \leq \varepsilon$이므로 ML 부등식 ([§복소적분, ⁋명제 6](/ko/math/complex_analysis/complex_integration#prop6)) 으로 우변의 크기가 $\varepsilon$ 이하이다. 따라서 $h \rightarrow 0$일 때 차분비가 $f(z)$로 수렴하여 $F'(z) = f(z)$이고, $F$는 $D$에서 holomorphic이다.
 
 그런데 holomorphic function의 도함수는 다시 holomorphic이므로 (따름정리 3), $f = F'$이 $D$에서 holomorphic이다. $z_0$이 임의였으므로 $f$는 $\Omega$ 전체에서 holomorphic이다.
 :::

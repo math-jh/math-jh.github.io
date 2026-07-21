@@ -64,13 +64,13 @@ Scheme이 nilpotent를 허용한다는 점은 이미 [예시 2](#ex2)의 fat poi
 
 ## Relative geometry와 functor of points
 
-지금까지 우리가 다룬 variety의 coordinate ring은 모두 $\mathbb{K}$-algebra였다. $\mathbb{K}$-algebra라는 것은 환 준동형 $\mathbb{K}\to A$가 주어져 있다는 뜻이고, 이는 $\Spec$이 contravariant이므로 morphism $\Spec A\to\Spec\mathbb{K}$이 주어진 것과 같다. 즉 우리의 variety는 자연스럽게 $\Spec\mathbb{K}$ 위에 놓인 scheme이었던 셈이다. 
+지금까지 우리가 다룬 variety의 coordinate ring은 모두 $\mathbb{K}$-algebra였다. $\mathbb{K}$-algebra라는 것은 환 준동형 $\mathbb{K}\rightarrow A$가 주어져 있다는 뜻이고, 이는 $\Spec$이 contravariant이므로 morphism $\Spec A\rightarrow\Spec\mathbb{K}$이 주어진 것과 같다. 즉 우리의 variety는 자연스럽게 $\Spec\mathbb{K}$ 위에 놓인 scheme이었던 셈이다. 
 
-Scheme의 세계에서는 이 기저 $\Spec\mathbb{K}$를 임의의 scheme $S$로 바꾸어, 구조사상 $X\to S$를 갖는 *$S$-scheme*을 자연스럽게 다룬다. 이 *relative viewpoint* 아래에서는 임의의 기저 위에서 family를 논할 수 있으며, 위에서 만만치 않았던 곱조차 기저 위에서의 fiber product $X\times_S Y$로 깔끔하게 정의되며, 위에서의 product는 $S=\Spec \mathbb{K}$인 경우에 불과하다. 
+Scheme의 세계에서는 이 기저 $\Spec\mathbb{K}$를 임의의 scheme $S$로 바꾸어, 구조사상 $X\rightarrow S$를 갖는 *$S$-scheme*을 자연스럽게 다룬다. 이 *relative viewpoint* 아래에서는 임의의 기저 위에서 family를 논할 수 있으며, 위에서 만만치 않았던 곱조차 기저 위에서의 fiber product $X\times_S Y$로 깔끔하게 정의되며, 위에서의 product는 $S=\Spec \mathbb{K}$인 경우에 불과하다. 
 
 한편 이 관점은 [\[범주론\] §표현가능한 함자, ⁋정리 3](/ko/math/category_theory/representable_functors#thm3)와도 맞아떨어지는데, scheme $X$를 점들의 집합 대신, *functor of points* $h_X$로 보아, scheme을 다른 모든 scheme으로부터 morphism을 받는 functor
 
-$$h_X:(\Sch_{/S})^{\op}\to\Set,\qquad h_X(T)=\Hom_S(T,X)$$
+$$h_X:(\Sch_{/S})^{\op}\rightarrow\Set,\qquad h_X(T)=\Hom_S(T,X)$$
 
 로 파악하면, 이 정리는 $h_X$가 scheme $X$를 손실 없이 완전히 결정한다는 것을 보여주며, 이러한 관점에서 scheme을 $S$-scheme들의 category $\Sch_{/S}$ 위에서 정의된 contravariant functor로 이해할 수도 있다. 
 

@@ -39,7 +39,7 @@ $$f_{i_0 \cdots i_p} = \x_0^{a_0} \cdots \x_n^{a_n},\qquad \sum_{j=0}^n a_j=d,\q
 
 로 생성된다.
 
-Coboundary map $\delta : \check{C}^p \to \check{C}^{p+1}$의 경우,
+Coboundary map $\delta : \check{C}^p \rightarrow \check{C}^{p+1}$의 경우,
 
 $$(\delta f)_{i_0 \cdots i_{p+1}} = \sum_{k=0}^{p+1} (-1)^k f_{i_0 \cdots \hat{i_k} \cdots i_{p+1}}$$
 
@@ -85,7 +85,7 @@ $$0 \longrightarrow \mathcal{O}(d-1)\overset{\times \x_n}{\longrightarrow} \math
 
 를 생각하자. 그럼 이로부터 long exact sequence
 
-$$\cdots \to H^{i-1}(\mathbb{P}^{n-1}, \mathcal{O}(d)) \to H^i(\mathbb{P}^n, \mathcal{O}(d-1)) \to H^i(\mathbb{P}^n, \mathcal{O}(d)) \to H^i(\mathbb{P}^{n-1}, \mathcal{O}(d)) \to \cdots$$
+$$\cdots \rightarrow H^{i-1}(\mathbb{P}^{n-1}, \mathcal{O}(d)) \rightarrow H^i(\mathbb{P}^n, \mathcal{O}(d-1)) \rightarrow H^i(\mathbb{P}^n, \mathcal{O}(d)) \rightarrow H^i(\mathbb{P}^{n-1}, \mathcal{O}(d)) \rightarrow \cdots$$
 
 를 얻고 우리는 귀납적 과정에 의해 $\mathbb{P}^{n-1}$에서의 주장은 알고 있다. 그럼 특히 $0<i<n$에 대해서는
 
@@ -175,7 +175,7 @@ $$\binom{-d-1}{n}=(-1)^n\binom{n+d}{n}$$
 
 Euler characteristic은 short exact sequence에 대해 additivity라는 중요한 성질을 갖는다. 즉, short exact sequence 
 
-$$0 \to \mathcal{F} \to \mathcal{G} \to \mathcal{H} \to 0$$
+$$0 \rightarrow \mathcal{F} \rightarrow \mathcal{G} \rightarrow \mathcal{H} \rightarrow 0$$
 
 에 대해 $\rchi(\mathcal{G}) = \rchi(\mathcal{F}) + \rchi(\mathcal{H})$가 성립한다. 따라서 Euler characteristic은 개별 cohomology group의 정보를 잃는 대신, 계산과 조작이 훨씬 용이한 불변량이 된다.
 
@@ -218,7 +218,7 @@ $$\mathcal{O}_{\mathbb{P}^N}^{\oplus r_0} \twoheadrightarrow \mathcal{G}(n_0)$$
 
 이 존재한다. Kernel $\mathcal{K}_0$는 coherent하다. Short exact sequence
 
-$$0 \to \mathcal{K}_0 \to \mathcal{O}^{\oplus r_0} \to \mathcal{G}(n_0) \to 0$$
+$$0 \rightarrow \mathcal{K}_0 \rightarrow \mathcal{O}^{\oplus r_0} \rightarrow \mathcal{G}(n_0) \rightarrow 0$$
 
 의 long exact sequence에서, [명제 1](#prop1)에 의해 $H^j(\mathbb{P}^N, \mathcal{O}^{\oplus r_0}) = 0$ ($j > 0$)이므로,
 
@@ -230,7 +230,7 @@ $$\mathcal{O}^{\oplus r_1} \twoheadrightarrow \mathcal{K}_0(n_1)$$
 
 의 kernel $\mathcal{K}_1$에 대해
 
-$$0 \to \mathcal{K}_1 \to \mathcal{O}^{\oplus r_1} \to \mathcal{K}_0(n_1) \to 0$$
+$$0 \rightarrow \mathcal{K}_1 \rightarrow \mathcal{O}^{\oplus r_1} \rightarrow \mathcal{K}_0(n_1) \rightarrow 0$$
 
 의 long exact sequence에서
 
@@ -263,25 +263,25 @@ $$H^i(X, \mathcal{F} \otimes \mathcal{L}^{\otimes m - i}) = 0$$
 
 Coherent sheaf를 다룰 때 이러한 twisting이 유용해지는 핵심적인 이유 중 하나는, 충분히 twist하면 coherent sheaf가 *globally generated*가 되기 때문이다. 이 개념의 직관을 얻기 위해 우선 line bundle의 경우를 생각해보자. Line bundle $\mathcal{L}$이 [§선형계, ⁋정의 5](/ko/math/algebraic_varieties/linear_systems#def5)에서 정의된 바와 같이 *basepoint-free*라는 것은, 모든 점 $p \in X$에 대해 $s(p) \neq 0$인 global section $s \in H^0(X, \mathcal{L})$가 존재한다는 뜻이다. 즉 base locus가 비어있어, linear system $\lvert \mathcal{L} \rvert$가 각 점에서 반드시 nonzero 값을 제공한다. 이는 evaluation map
 
-$$H^0(X, \mathcal{L}) \otimes \mathcal{O}_X \to \mathcal{L}$$
+$$H^0(X, \mathcal{L}) \otimes \mathcal{O}_X \rightarrow \mathcal{L}$$
 
 이 surjective인 것과 동치이다. *Globally generated*는 이 조건을 임의의 coherent sheaf로 일반화한 것이다: coherent sheaf $\mathcal{F}$가 globally generated라는 것은, 마찬가지로 위와 같은 형태의 evaluation map이 surjective가 되어 global section들로 각 점의 stalk를 모두 생성할 수 있다는 의미이다. 특히 line bundle의 경우에는 globally generated인 것과 basepoint-free인 것이 동치이다. 이 성질은 [명제 4](#prop4)의 증명에서도 핵심적인 역할을 하였다.
 
 ::: 정의 6
-Coherent sheaf $\mathcal{F}$가 *globally generated*라는 것은 evaluation map
+Coherent sheaf $\mathcal{F}$가 *globally generated<sub>전역생성</sub>*라는 것은 evaluation map
 
-$$H^0(X, \mathcal{F}) \otimes \mathcal{O}_X \to \mathcal{F}$$
+$$H^0(X, \mathcal{F}) \otimes \mathcal{O}_X \rightarrow \mathcal{F}$$
 
 가 surjective인 것이다. 즉, global section들로 stalk를 모두 생성할 수 있다.
 :::
 
 Regularity를 일반적으로 정의하기 위해서는, 우선 twist의 개념이 필요하다. $\mathbb{P}^n$에서는 $\mathcal{O}(1)$을 기본으로 사용하므로 $\mathcal{F}(d) := \mathcal{F} \otimes \mathcal{O}(d)$로 쓴다. 임의의 projective variety $X$ 위에서는 ample line bundle $\mathcal{L}$을 택하고 $\mathcal{F}(d) := \mathcal{F} \otimes \mathcal{L}^{\otimes d}$로 정의한다. Twist는 다음의 성질들을 만족한다. Tensor product의 결합법칙에 의해 $\mathcal{F}(d)(e) = \mathcal{F}(d+e)$가 성립한다. 또한, tensor product functor $- \otimes \mathcal{L}^{\otimes d}$는 line bundle이므로 exact이고, 따라서 short exact sequence
 
-$$0 \to \mathcal{F} \to \mathcal{G} \to \mathcal{H} \to 0$$
+$$0 \rightarrow \mathcal{F} \rightarrow \mathcal{G} \rightarrow \mathcal{H} \rightarrow 0$$
 
 에 대해
 
-$$0 \to \mathcal{F}(d) \to \mathcal{G}(d) \to \mathcal{H}(d) \to 0$$
+$$0 \rightarrow \mathcal{F}(d) \rightarrow \mathcal{G}(d) \rightarrow \mathcal{H}(d) \rightarrow 0$$
 
 역시 short exact sequence가 된다.
 
@@ -298,21 +298,21 @@ $X$의 차원에 대한 귀납법으로 증명한다. $\dim X = 0$인 경우 $X$
 
 핵심은 $\mathcal{L}$의 global section $s \in H^0(X, \mathcal{L})$으로 정의되는 effective divisor $D$에 대한 restriction exact sequence를 이용하는 것이다. 일반적인 $s$를 택하면 Bertini의 정리에 의해 $D$는 smooth이며, 다음 short exact sequence를 얻는다.
 
-$$0 \to \mathcal{F} \otimes \mathcal{L}^{\otimes k-1} \xrightarrow{\cdot s} \mathcal{F} \otimes \mathcal{L}^{\otimes k} \to \mathcal{F} \otimes \mathcal{L}^{\otimes k}\vert_D \to 0$$
+$$0 \rightarrow \mathcal{F} \otimes \mathcal{L}^{\otimes k-1} \xrightarrow{\cdot s} \mathcal{F} \otimes \mathcal{L}^{\otimes k} \rightarrow \mathcal{F} \otimes \mathcal{L}^{\otimes k}\vert_D \rightarrow 0$$
 
 이 sequence의 cohomology long exact sequence는 다음을 준다.
 
-$$\cdots \to H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes k-1}) \to H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes k}) \to H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes k}\vert_D) \to H^{i+1}(\mathcal{F} \otimes \mathcal{L}^{\otimes k-1}) \to \cdots$$
+$$\cdots \rightarrow H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes k-1}) \rightarrow H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes k}) \rightarrow H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes k}\vert_D) \rightarrow H^{i+1}(\mathcal{F} \otimes \mathcal{L}^{\otimes k-1}) \rightarrow \cdots$$
 
 $\mathbb{P}^n$의 특수 경우에는 $\mathcal{L} = \mathcal{O}(1)$이고, $s$는 일반적인 linear form이며, $D$는 $\mathbb{P}^{n-1}$과 isomorphic한 hyperplane $H$가 된다.
 
 **1단계: $\mathcal{F}\vert_D$의 $m$-regularity.** $\mathcal{F}$가 $\mathcal{L}$에 대해 $m$-regular이므로 $H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m-i}) = 0$이 $i > 0$에 대해 성립한다. $\mathcal{F}\vert_D$가 $\mathcal{L}\vert_D$에 대해 $m$-regular임을 보이자. Restriction sequence에서 $k = m - i$를 대입하면 ($0 < i \leq n-1$)
 
-$$0 \to \mathcal{F} \otimes \mathcal{L}^{\otimes m-i-1} \to \mathcal{F} \otimes \mathcal{L}^{\otimes m-i} \to \mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m-i} \to 0$$
+$$0 \rightarrow \mathcal{F} \otimes \mathcal{L}^{\otimes m-i-1} \rightarrow \mathcal{F} \otimes \mathcal{L}^{\otimes m-i} \rightarrow \mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m-i} \rightarrow 0$$
 
 이고, 이의 long exact sequence에서
 
-$$H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m-i}) \to H^i(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m-i}) \to H^{i+1}(\mathcal{F} \otimes \mathcal{L}^{\otimes m-i-1})$$
+$$H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m-i}) \rightarrow H^i(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m-i}) \rightarrow H^{i+1}(\mathcal{F} \otimes \mathcal{L}^{\otimes m-i-1})$$
 
 이다. $m$-regularity에 의해 $H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m-i}) = 0$이고, $H^{i+1}(\mathcal{F} \otimes \mathcal{L}^{\otimes m-i-1}) = 0$ ($i+1 > 0$)이므로
 
@@ -324,11 +324,11 @@ $$H^i(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m-i}) = 0$$
 
 이제 $\mathcal{F} \otimes \mathcal{L}^{\otimes m}$이 globally generated임을 보이자. 임의의 점 $p \in X$에서 fiber $(\mathcal{F} \otimes \mathcal{L}^{\otimes m})_p$가 global section들의 상으로 생성됨을 확인하면 충분하다. $p$를 지나는 일반적인 divisor $D$를 택하고, restriction sequence에서 $k = m$을 대입하면
 
-$$0 \to \mathcal{F} \otimes \mathcal{L}^{\otimes m-1} \to \mathcal{F} \otimes \mathcal{L}^{\otimes m} \to \mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m} \to 0$$
+$$0 \rightarrow \mathcal{F} \otimes \mathcal{L}^{\otimes m-1} \rightarrow \mathcal{F} \otimes \mathcal{L}^{\otimes m} \rightarrow \mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m} \rightarrow 0$$
 
 이다. $m$-regularity에서 $i = 1$인 경우에 $H^1(\mathcal{F} \otimes \mathcal{L}^{\otimes m-1}) = 0$이므로
 
-$$H^0(\mathcal{F} \otimes \mathcal{L}^{\otimes m}) \to H^0(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m})$$
+$$H^0(\mathcal{F} \otimes \mathcal{L}^{\otimes m}) \rightarrow H^0(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m})$$
 
 는 surjective이다. 귀납적 가정에 의해 $\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m}$은 $D$ 위에서 globally generated이므로, 이 fiber at $p$는 $H^0(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m})$의 상으로 생성된다. Restriction map이 surjective이므로 $\mathcal{F} \otimes \mathcal{L}^{\otimes m}$의 global section들도 $p$에서의 fiber를 생성한다. 따라서 $\mathcal{F} \otimes \mathcal{L}^{\otimes m}$은 globally generated이다.
 
@@ -344,11 +344,11 @@ $$\mathcal{L}^{\oplus r_0} \twoheadrightarrow \mathcal{F} \otimes \mathcal{L}^{\
 
 이 문제를 해결하기 위해 $p$에 대한 귀납법을 사용한다. $p = 0$일 때 $\mathcal{F}(m)$이 $m$-regular인 것은 정의이다. $p \geq 1$이라 가정하고, $\mathcal{F}(m+p)$가 $(m+p)$-regular임, 즉 $H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-i}) = 0$ ($i > 0$)을 보이자. $i = 1$인 경우, restriction sequence에서 $k = m + p - 1$을 대입하면
 
-$$H^0(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-1}) \to H^1(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-2}) \to H^1(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-1})$$
+$$H^0(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-1}) \rightarrow H^1(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-2}) \rightarrow H^1(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-1})$$
 
 이다. 귀납적 가정 ($p-1$에 대한)에 의해 $H^1(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-2}) = 0$이다. 또한, $\mathcal{F}\vert_D$가 $m$-regular이므로 (2단계) 차원에 대한 귀납적 가정에 의해 $\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes p}$이 $(m+p)$-regular이고, 따라서 $H^1(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-1}) = 0$이다. 정확한 열에서 $H^1(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-1})$은 $H^1(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-1})$에 매장되므로 $H^1(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-1}) = 0$을 얻는다. $i \geq 2$인 경우, 같은 restriction sequence에서
 
-$$H^{i-1}(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-i}) \to H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-i-1}) \to H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-i}) \to H^i(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-i})$$
+$$H^{i-1}(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-i}) \rightarrow H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-i-1}) \rightarrow H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-i}) \rightarrow H^i(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-i})$$
 
 이다. 귀납적 가정에 의해 $H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-i-1}) = 0$ ($p' = p-1$, $j = i$에 대한 가정)이고, $\mathcal{F}\vert_D$에 대한 귀납적 가정 (차원에 대한 귀납)에 의해 $H^{i-1}(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-i}) = 0$과 $H^i(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m+p-i}) = 0$이 $i-1 \geq 1$, $i \leq n-1$에 대해 성립한다. 따라서 $H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p-i}) = 0$을 얻는다.
 :::
@@ -366,9 +366,9 @@ $\mathcal{L}$이 very ample이고 $\mathcal{M}$이 globally generated이면, $\m
 :::
 
 ::: 증명
-$\mathcal{L}$이 very ample이므로, projective embedding $i: X \hookrightarrow \mathbb{P}^N$이 존재하여 $\mathcal{L} = i^\ast\mathcal{O}_{\mathbb{P}^N}(1)$이도록 할 수 있다. 한편, $\mathcal{M}$이 globally generated이므로, global section들 $s_0, \ldots, s_n \in H^0(X, \mathcal{M})$가 모든 점에서 stalk를 generate하며, 이로부터 morphism $\phi: X \to \mathbb{P}^n$를 정의할 수 있다.
+$\mathcal{L}$이 very ample이므로, projective embedding $i: X \hookrightarrow \mathbb{P}^N$이 존재하여 $\mathcal{L} = i^\ast\mathcal{O}_{\mathbb{P}^N}(1)$이도록 할 수 있다. 한편, $\mathcal{M}$이 globally generated이므로, global section들 $s_0, \ldots, s_n \in H^0(X, \mathcal{M})$가 모든 점에서 stalk를 generate하며, 이로부터 morphism $\phi: X \rightarrow \mathbb{P}^n$를 정의할 수 있다.
 
-이제 closed embedding $(i, \phi): X \to \mathbb{P}^N \times \mathbb{P}^n$을 생각하자. 그럼 여기에 Segre embedding ([§사영다양체, ⁋예시 16](/ko/math/algebraic_varieties/projective_varieties#ex16)) 
+이제 closed embedding $(i, \phi): X \rightarrow \mathbb{P}^N \times \mathbb{P}^n$을 생각하자. 그럼 여기에 Segre embedding ([§사영다양체, ⁋예시 16](/ko/math/algebraic_varieties/projective_varieties#ex16)) 
 
 $$\sigma: \mathbb{P}^N \times \mathbb{P}^n \hookrightarrow \mathbb{P}^{Nn+N+n}$$
 

@@ -102,7 +102,7 @@ Field $\mathbb{K}$와 다항식들 $f_i\in \mathbb{K}[\x]$이 주어졌다 하�
 이제 다음을 정의한다. 
 
 ::: 정의 9
-Field $\mathbb{K}$의 *algebraic closure*는 $\mathbb{K}$의 algebraic extension 중 그 자체로 algebraically closed인 것을 뜻한다. 
+Field $\mathbb{K}$의 *algebraic closure<sub>대수적 폐포</sub>*는 $\mathbb{K}$의 algebraic extension 중 그 자체로 algebraically closed인 것을 뜻한다. 
 :::
 
 Algebraic closure의 존재성을 보이기 위해서 $\mathbb{K}[\x]$의 모든 (non-constant) 다항식들의 splitting field $\Omega$를 생각하는 것이 자연스러울 것이다. 그러나 $\Omega$가 algebraically closed임을 보이려면, $\mathbb{K}$에서 넣어준 근들을 계수로 갖는 다항식의 근들 또한 다시 $\Omega$에 속한다는 것을 보여야 하므로 이는 그렇기게 간단하지는 않다. 다음 명제는 이러한 상황을 고민할 필요가 없다는 것을 보여준다. 

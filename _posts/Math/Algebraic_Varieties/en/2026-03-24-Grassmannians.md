@@ -38,7 +38,7 @@ As always, to endow a set with a variety structure it suffices to construct an a
 ::: Definition 3
 For each set of $k$ indices $I = \{i_1 < \cdots < i_k\}$, define the open set $U_I$ by
 
-$$U_I = \{W \in \Gr(k, V) \mid \text{projection } W \to \operatorname{span}(e_{i_1}, \ldots, e_{i_k}) \text{ is an isomorphism}\}$$
+$$U_I = \{W \in \Gr(k, V) \mid \text{projection } W \rightarrow \operatorname{span}(e_{i_1}, \ldots, e_{i_k}) \text{ is an isomorphism}\}$$
 :::
 
 Fix a basis $e_1,\ldots, e_n$ of $V$, and let $w_1,\ldots, w_k$ be vectors spanning $W$. Then $W$ is the row space of the $k\times n$ matrix
@@ -72,7 +72,7 @@ $\dim \Gr(k, V) = k(n - k)$.
 We now show that the Grassmannian is a quasi-projective variety by defining an embedding into a suitable projective space.
 
 ::: Definition 6
-The *Plücker embedding* $\iota: \Gr(k, V) \to \mathbb{P}(\bigwedge^k V)$ is the map sending a $k$-dimensional subspace $W = \operatorname{span}(v_1, \ldots, v_k)$ to the element
+The *Plücker embedding* $\iota: \Gr(k, V) \rightarrow \mathbb{P}(\bigwedge^k V)$ is the map sending a $k$-dimensional subspace $W = \operatorname{span}(v_1, \ldots, v_k)$ to the element
 
 $$\iota(W) = [v_1 \wedge v_2 \wedge \cdots \wedge v_k]$$
 

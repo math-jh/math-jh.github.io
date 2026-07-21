@@ -120,7 +120,7 @@ $X$가 compact이고 $Y$가 Hausdorff라면 임의의 전단사인 연속함수 
 ## 유한 교집합 성질
 
 ::: 정의 10
-집합 $X$의 부분집합들의 family $\mathcal{A}$가 *finite intersection property*를 갖는다는 것은 $\mathcal{A}$의 유한히 많은 임의의 원소들 $A_1,\ldots, A_n$에 대하여 
+집합 $X$의 부분집합들의 family $\mathcal{A}$가 *finite intersection property<sub>유한교차성</sub>*를 갖는다는 것은 $\mathcal{A}$의 유한히 많은 임의의 원소들 $A_1,\ldots, A_n$에 대하여 
 
 $$A_1\cap\cdots\cap A_n$$
 

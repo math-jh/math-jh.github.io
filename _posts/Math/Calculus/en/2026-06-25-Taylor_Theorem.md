@@ -68,7 +68,7 @@ $$(-R_n(x))\bigl(-(n+1)(x-c)^n\bigr) = \bigl(-(x-a)^{n+1}\bigr)\left(-\frac{f^{(
 and canceling $(x-c)^n$ from both sides and rearranging yields $R_n(x) = f^{(n+1)}(c)(x-a)^{n+1}/(n+1)!$.
 :::
 
-Therefore, if we now compute the remainder term in the above theorem and show that $R_n(x) \to 0$ as $n \to \infty$, we know that the function agrees with the infinite series. The infinite series obtained in this way is called the *Taylor series* of $f$ (if the center is $0$, it is called the Maclaurin series).
+Therefore, if we now compute the remainder term in the above theorem and show that $R_n(x) \rightarrow 0$ as $n \rightarrow \infty$, we know that the function agrees with the infinite series. The infinite series obtained in this way is called the *Taylor series* of $f$ (if the center is $0$, it is called the Maclaurin series).
 
 Let us follow through these calculations in a few concrete examples.
 
@@ -83,7 +83,7 @@ $$R_n(x) = \frac{e^c x^{n+1}}{(n+1)!}$$
 
 and for fixed $x$,
 
-$$\lvert R_n(x)\rvert \leq \frac{e^{\lvert x\rvert}\lvert x\rvert^{n+1}}{(n+1)!} \to 0 \qquad (n \to \infty)$$
+$$\lvert R_n(x)\rvert \leq \frac{e^{\lvert x\rvert}\lvert x\rvert^{n+1}}{(n+1)!} \rightarrow 0 \qquad (n \rightarrow \infty)$$
 
 so ([§Limits of Sequences, ⁋Example 6](/en/math/calculus/sequences#ex6)) for every real number $x$,
 
@@ -131,7 +131,7 @@ The remainder from Taylor's theorem satisfies
 
 $$\lvert R_n(x)\rvert = \frac{\lvert f^{(n+1)}(c)\rvert}{(n+1)!}\lvert x-a\rvert^{n+1} \leq \frac{M \lvert x-a\rvert^{n+1}}{(n+1)!}$$
 
-The right-hand side goes to $0$ as $n \to \infty$ for fixed $x$ ([§Limits of Sequences, ⁋Example 6](/en/math/calculus/sequences#ex6), $r^n/n! \to 0$), so $R_n(x) \to 0$ and the partial sums converge to $f(x)$.
+The right-hand side goes to $0$ as $n \rightarrow \infty$ for fixed $x$ ([§Limits of Sequences, ⁋Example 6](/en/math/calculus/sequences#ex6), $r^n/n! \rightarrow 0$), so $R_n(x) \rightarrow 0$ and the partial sums converge to $f(x)$.
 :::
 
 Meanwhile, [Theorem 2](#thm2) is essentially numerical: using it, we can evaluate by hand how accurate an approximation is. For instance, if we approximate $\sin(0.1)$ by $P_3(x) = x - x^3/6$, the fourth-degree remainder is $\lvert R_3(0.1)\rvert \leq (0.1)^4/4! \approx 4.2\times 10^{-6}$, so we can verify that it is accurate to five decimal places, and the error in truncating $e = \sum_k 1/k!$ after the first $n+1$ terms is $\lvert R_n(1)\rvert \leq 3/(n+1)!$ (since $e^c < 3$).
@@ -139,9 +139,9 @@ Meanwhile, [Theorem 2](#thm2) is essentially numerical: using it, we can evaluat
 As another example, since Taylor expansion is not merely remembering the highest-degree or lowest-degree term, it can be used powerfully when computing limits of the form $0/0$.
 
 ::: Example 7 (Limit)
-Let us find the limit $\lim_{x\to 0}(e^x - 1 - x)/x^2$. From [Example 3](#ex3), we have $e^x = 1 + x + x^2/2 + x^3/6 + \cdots$, so
+Let us find the limit $\lim_{x\rightarrow 0}(e^x - 1 - x)/x^2$. From [Example 3](#ex3), we have $e^x = 1 + x + x^2/2 + x^3/6 + \cdots$, so
 
-$$\frac{e^x - 1 - x}{x^2} = \frac{x^2/2 + x^3/6 + \cdots}{x^2} = \frac12 + \frac{x}{6} + \cdots \to \frac12$$
+$$\frac{e^x - 1 - x}{x^2} = \frac{x^2/2 + x^3/6 + \cdots}{x^2} = \frac12 + \frac{x}{6} + \cdots \rightarrow \frac12$$
 
 This is a result that can also be verified by applying l'Hôpital's rule twice; the reason Taylor expansion works is that it retains information about higher-order terms, so even after canceling the denominator with the numerator, information still remains.
 :::

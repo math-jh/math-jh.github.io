@@ -22,7 +22,7 @@ Manifold $M$에 대하여,
 
 $$\mathcal{T}^{r,s}(M)=\mathcal{T}^{r,s}(TM),\quad \bigwedge\nolimits^\ast(M)=\bigwedge(T^\ast M),\quad \bigwedge\nolimits^k(M)=\bigwedge\nolimits^k(T^\ast M)$$
 
-를 각각 $M$ 위에서의 *$(r,s)$-tensor bundle*, *exterior algebra bundle*, *exterior $k$-bundle*이라 부른다. 이들의 smooth section
+를 각각 $M$ 위에서의 *$(r,s)$-tensor bundle*, *exterior algebra bundle<sub>외대수다발</sub>*, *exterior $k$-bundle<sub>$k$차 외대수다발</sub>*이라 부른다. 이들의 smooth section
 
 $$\Gamma\left(\mathcal{T}^{r,s}(M)\right),\quad\Omega^\ast(M):=\Gamma\left(\bigwedge\nolimits^\ast(M)\right),\quad\Omega^k(M):=\Gamma\left(\bigwedge\nolimits^k(M)\right)$$
 

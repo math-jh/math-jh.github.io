@@ -18,7 +18,7 @@ published: false
 
 [§고유 받음과 여섯 함자](/ko/math/sheaf_theory/six_functors)에서 우리는 콤팩트 받침을 따르는 고유 받음 $Rf_!$과 그 오른쪽 수반인 예외 역상 $f^!$을 도입하여, $Rf_\ast$, $Lf^\ast$, $\otimes^L$, $R\mathcal{H}om$과 함께 여섯 함자 형식을 완성하였다. 그 글의 도입부에서 예고하였듯이, 이 형식을 세운 가장 큰 동기는 비콤팩트 공간과 singular point를 가진 공간에까지 Poincaré 쌍대성을 확장하는 데 있다. 이 글에서 우리는 그 확장을 완성하는 정리, 곧 *Verdier 쌍대성<sub>Verdier duality</sub>*을 진술하고 증명한다.
 
-고전적인 Poincaré 쌍대성은 방향지어진 닫힌 $n$차원 manifold $M$에 대해 $H^p(M) \cong H_{n-p}(M)$이라는 cohomology와 homology 사이의 동형으로 나타나며, 그 경계를 가진 형태인 Poincaré–Lefschetz 쌍대성은 콤팩트 받침을 허용하여 비콤팩트 manifold로 일부 확장된다. 그러나 이 고전적 진술은 두 방향에서 한계를 가진다. 첫째, 그것은 상수 계수 또는 국소계 계수에 대해서만 진술되며 임의의 sheaf complex의 cohomology를 다루지 못한다. 둘째, 그것은 manifold, 즉 모든 점이 $\mathbb{R}^n$과 국소적으로 위상동형인 공간에 대해서만 성립하며, singular point를 가진 공간에서는 그대로 무너진다. Verdier 쌍대성은 이 두 한계를 한꺼번에 해소한다. 그 핵심은 manifold의 fundamental class가 떠맡던 역할을 한 점으로의 사상 $a_X: X \to \{\ast\}$에 대한 $f^!$이 대신하도록 만드는 것이다. $a_X^!$이 상수 sheaf에 주는 값을 *dualizing complex*라 부르고, 이것을 축으로 한 내부 Hom이 쌍대성을 매개한다.
+고전적인 Poincaré 쌍대성은 방향지어진 닫힌 $n$차원 manifold $M$에 대해 $H^p(M) \cong H_{n-p}(M)$이라는 cohomology와 homology 사이의 동형으로 나타나며, 그 경계를 가진 형태인 Poincaré–Lefschetz 쌍대성은 콤팩트 받침을 허용하여 비콤팩트 manifold로 일부 확장된다. 그러나 이 고전적 진술은 두 방향에서 한계를 가진다. 첫째, 그것은 상수 계수 또는 국소계 계수에 대해서만 진술되며 임의의 sheaf complex의 cohomology를 다루지 못한다. 둘째, 그것은 manifold, 즉 모든 점이 $\mathbb{R}^n$과 국소적으로 위상동형인 공간에 대해서만 성립하며, singular point를 가진 공간에서는 그대로 무너진다. Verdier 쌍대성은 이 두 한계를 한꺼번에 해소한다. 그 핵심은 manifold의 fundamental class가 떠맡던 역할을 한 점으로의 사상 $a_X: X \rightarrow \{\ast\}$에 대한 $f^!$이 대신하도록 만드는 것이다. $a_X^!$이 상수 sheaf에 주는 값을 *dualizing complex*라 부르고, 이것을 축으로 한 내부 Hom이 쌍대성을 매개한다.
 
 이 글 전체에서 공간과 사상에 대한 가정은 [§고유 받음과 여섯 함자](/ko/math/sheaf_theory/six_functors)와 같다. 즉 위상공간은 locally compact Hausdorff이고 유한한 cohomological dimension을 가지며, 사상은 separated인 연속함수로 한정한다. 계수로는, 별도의 언급이 없으면 고정된 field $k$를 택하여 $\mathcal{O}_X = k_X$인 sheaf of $k$-vector space를 다룬다. 이는 앞 글이 $\mathbb{Z}$ 계수로 진술한 것과 다른 선택인데, field 위에서는 dual $(-)^\vee = R\mathcal{H}om(-, k)$이 higher Ext 항을 만들지 않아 쌍대성이 cohomology 차원에서 군더더기 없이 진술되기 때문이다. $\mathbb{Z}$ 계수에서의 보정은 적절한 곳에서 언급한다.
 
@@ -27,7 +27,7 @@ published: false
 비콤팩트하거나 특이한 공간에서 Poincaré 쌍대성을 끌어내려면, manifold에서 fundamental class $[M] \in H_n(M)$이 cap product를 통해 수행하던 역할을 대체할 대상이 필요하다. manifold의 경우 [§고유 받음과 여섯 함자, ⁋정리 7](/ko/math/sheaf_theory/six_functors#thm7)이 알려 주듯 $a_X^! k \cong k_X[n]$이며, 차수 이동 $[n]$이 바로 fundamental class의 차원 정보를 담는다. 일반적인 공간에서는 $a_X^! k$이 더 이상 shift된 상수 sheaf가 아니지만, 그것이 쌍대성을 매개하는 객체로서의 역할은 그대로 유지한다. 우리는 이 객체를 다음과 같이 명명한다.
 
 ::: 정의 1
-위상공간 $X$의 구조 사상 $a_X: X \to \{\ast\}$에 대해, $\{\ast\}$ 위의 계수 $k$의 예외 역상
+위상공간 $X$의 구조 사상 $a_X: X \rightarrow \{\ast\}$에 대해, $\{\ast\}$ 위의 계수 $k$의 예외 역상
 $$\omega_X := a_X^! k$$
 을 $X$의 *dualizing complex<sub>쌍대화 복합체</sub>*라 부른다. 여기서 $a_X^!$은 [§고유 받음과 여섯 함자, ⁋정의 6](/ko/math/sheaf_theory/six_functors#def6)에서 정의한 $R(a_X)_!$의 오른쪽 수반이다.
 :::
@@ -37,9 +37,9 @@ $\omega_X$는 일반적으로 한 차수에 집중되지 않는 $D(\Sh(X))$의 �
 dualizing complex를 축으로 삼아 sheaf complex 하나하나에 그 "쌍대"를 대응시키는 함자를 정의한다. 이는 [§층의 유도 범주와 유도 함자, ⁋정의 7](/ko/math/sheaf_theory/derived_category_of_sheaves#def7)의 derived sheaf-Hom $R\mathcal{H}om$의 둘째 변수에 $\omega_X$를 고정한 것이다.
 
 ::: 정의 2
-$X$ 위의 *Verdier 쌍대 함자<sub>Verdier dual functor</sub>* $\mathbf{D}_X: D(\Sh(X))^{\op} \to D(\Sh(X))$를
+$X$ 위의 *Verdier 쌍대 함자<sub>Verdier dual functor</sub>* $\mathbf{D}_X: D(\Sh(X))^{\op} \rightarrow D(\Sh(X))$를
 $$\mathbf{D}_X(\mathcal{F}^\bullet) := R\mathcal{H}om(\mathcal{F}^\bullet, \omega_X)$$
-로 정의한다. $\mathbf{D}_X(\mathcal{F}^\bullet)$을 $\mathcal{F}^\bullet$의 *Verdier dual*이라 부른다.
+로 정의한다. $\mathbf{D}_X(\mathcal{F}^\bullet)$을 $\mathcal{F}^\bullet$의 *Verdier dual<sub>베르디에 쌍대</sub>*이라 부른다.
 :::
 
 정의에서 $\mathcal{F}^\bullet = k_X$로 두면 $\mathbf{D}_X(k_X) = R\mathcal{H}om(k_X, \omega_X) \cong \omega_X$이므로, 상수 sheaf의 Verdier dual이 dualizing complex 자신이다. 또 점 $\{\ast\}$ 위에서는 $a_{\{\ast\}} = \id$이므로 $\omega_{\{\ast\}} = k$이고, 따라서 점 위에서 $\mathbf{D}_{\{\ast\}}(\mathcal{F}^\bullet) = R\Hom_k(\mathcal{F}^\bullet, k) = (\mathcal{F}^\bullet)^\vee$이 통상적인 $k$-vector space complex의 dual로 환원된다. 이것이 $\mathbf{D}_X$를 "쌍대"라 부르는 근거이며, 아래에서 이 점별 dual이 콤팩트 받침 cohomology를 통해 대역적 cohomology와 짝지어짐을 본다.
@@ -60,7 +60,7 @@ $a_U = a_X \circ j$이므로 [§고유 받음과 여섯 함자, ⁋명제 5](/ko
 이제 이 글의 중심 정리를 진술한다. Verdier 쌍대성은 [§고유 받음과 여섯 함자, ⁋정의 6](/ko/math/sheaf_theory/six_functors#def6)의 $(Rf_!, f^!)$ 수반을 내부 Hom의 차원으로 끌어올린 것으로, 앞 글에서 확보한 모든 형식, 즉 두 adjunction과 projection formula가 한 줄의 동형으로 결집하는 지점이다. 진술은 두 층위로 주어진다. 먼저 $Y$ 위의 sheaf complex로서의 동형을 주는 국소적 형태이고, 거기에 전역 단면을 취해 얻는 대역적 형태이다.
 
 ::: 정리 4 (Verdier 쌍대성)
-Compactifiable map $f: X \to Y$와 $\mathcal{F}^\bullet \in D(\Sh(X))$, $\mathcal{G}^\bullet \in D(\Sh(Y))$에 대해 $Y$ 위의 자연스러운 동형
+Compactifiable map $f: X \rightarrow Y$와 $\mathcal{F}^\bullet \in D(\Sh(X))$, $\mathcal{G}^\bullet \in D(\Sh(Y))$에 대해 $Y$ 위의 자연스러운 동형
 $$Rf_\ast R\mathcal{H}om(\mathcal{F}^\bullet, f^! \mathcal{G}^\bullet) \cong R\mathcal{H}om(Rf_! \mathcal{F}^\bullet, \mathcal{G}^\bullet)$$
 이 성립한다. 전역 단면 $R\Gamma(Y, -)$을 취하면 대역적 형태
 $$R\Hom_X(\mathcal{F}^\bullet, f^! \mathcal{G}^\bullet) \cong R\Hom_Y(Rf_! \mathcal{F}^\bullet, \mathcal{G}^\bullet)$$
@@ -81,7 +81,7 @@ $$\begin{aligned}
 대역적 형태는 국소적 형태에 $R\Gamma(Y, -)$을 적용하여 얻는다. $a_Y \circ f = a_X$이므로 [§층의 유도 범주와 유도 함자, ⁋정리 10](/ko/math/sheaf_theory/derived_category_of_sheaves#thm10)의 합성 동형에 의해 $R\Gamma(Y, Rf_\ast(-)) = R\Gamma(X, -)$이고, [§층의 유도 범주와 유도 함자, ⁋명제 8](/ko/math/sheaf_theory/derived_category_of_sheaves#prop8) 직후의 서술에 따라 $R\Hom = R\Gamma \circ R\mathcal{H}om$이므로, 좌변은 $R\Gamma(X, R\mathcal{H}om(\mathcal{F}^\bullet, f^!\mathcal{G}^\bullet)) = R\Hom_X(\mathcal{F}^\bullet, f^!\mathcal{G}^\bullet)$이고 우변은 $R\Hom_Y(Rf_!\mathcal{F}^\bullet, \mathcal{G}^\bullet)$이다.
 :::
 
-대역적 형태에서 $f = a_X: X \to \{\ast\}$, $\mathcal{G}^\bullet = k$로 특수화하면 dualizing complex의 정의가 곧바로 작동하여, $\mathbf{D}_X$의 전역 cohomology가 콤팩트 받침 cohomology의 dual임을 얻는다. 이것이 Verdier 쌍대성의 가장 자주 인용되는 형태이다.
+대역적 형태에서 $f = a_X: X \rightarrow \{\ast\}$, $\mathcal{G}^\bullet = k$로 특수화하면 dualizing complex의 정의가 곧바로 작동하여, $\mathbf{D}_X$의 전역 cohomology가 콤팩트 받침 cohomology의 dual임을 얻는다. 이것이 Verdier 쌍대성의 가장 자주 인용되는 형태이다.
 
 ::: 따름정리 5
 임의의 $\mathcal{F}^\bullet \in D(\Sh(X))$에 대해 자연스러운 동형
@@ -113,16 +113,16 @@ cohomological 형태 $H^j(X, \mathbf{D}_X \mathcal{F}) \cong H^{-j}_c(X, \mathca
 ::: 정리 7 (biduality)
 $\mathcal{F}^\bullet \in D^b_c(X)$에 대해 자연스러운 동형
 $$\mathcal{F}^\bullet \xrightarrow{\ \sim\ } \mathbf{D}_X \mathbf{D}_X \mathcal{F}^\bullet$$
-이 성립한다. 따라서 $\mathbf{D}_X: D^b_c(X)^{\op} \to D^b_c(X)$는 삼각범주의 anti-equivalence이며 $\mathbf{D}_X^2 \cong \id$이다.
+이 성립한다. 따라서 $\mathbf{D}_X: D^b_c(X)^{\op} \rightarrow D^b_c(X)$는 삼각범주의 anti-equivalence이며 $\mathbf{D}_X^2 \cong \id$이다.
 :::
 ::: 증명
-자연 사상 $\mathcal{F}^\bullet \to \mathbf{D}_X \mathbf{D}_X \mathcal{F}^\bullet$은 tensor-hom adjunction의 evaluation, 즉 $\mathcal{F}^\bullet \otimes^L R\mathcal{H}om(\mathcal{F}^\bullet, \omega_X) \to \omega_X$에 대응하는 사상으로 표준적으로 존재한다 ([§층의 유도 범주와 유도 함자, ⁋명제 8](/ko/math/sheaf_theory/derived_category_of_sheaves#prop8)). 이것이 동형임을 보이는 것이 핵심이며, 동형 여부는 [§층의 유도 범주와 유도 함자, ⁋명제 1](/ko/math/sheaf_theory/derived_category_of_sheaves#prop1)의 stalk 판정에 의해 국소적인 문제이다. Stratification에 대한 귀납으로 환원되는데, 가장 낮은 차원의 stratum은 manifold이므로 그 위에서는 $\omega$가 shift된 국소계가 되어 ([§고유 받음과 여섯 함자, ⁋정리 7](/ko/math/sheaf_theory/six_functors#thm7)) biduality가 유한차원 vector space의 표준 동형 $V \cong (V^\vee)^\vee$으로 귀착되고, 이는 $\mathcal{H}^j(\mathcal{F}^\bullet)$의 stalk가 유한 rank라는 constructibility 가정에서 성립한다. 높은 차원의 stratum으로는 [§고유 받음과 여섯 함자, ⁋정리 10](/ko/math/sheaf_theory/six_functors#thm10)을 따라 $\mathbf{D}_X$가 두 변을 동형으로 보냄을 이어 올린다. 유한 rank 조건이 빠지면 $V \cong (V^\vee)^\vee$이 깨지므로 constructibility는 필수적이다. 자세한 논증은 [KS]의 Proposition 3.4.3을 따른다.
+자연 사상 $\mathcal{F}^\bullet \rightarrow \mathbf{D}_X \mathbf{D}_X \mathcal{F}^\bullet$은 tensor-hom adjunction의 evaluation, 즉 $\mathcal{F}^\bullet \otimes^L R\mathcal{H}om(\mathcal{F}^\bullet, \omega_X) \rightarrow \omega_X$에 대응하는 사상으로 표준적으로 존재한다 ([§층의 유도 범주와 유도 함자, ⁋명제 8](/ko/math/sheaf_theory/derived_category_of_sheaves#prop8)). 이것이 동형임을 보이는 것이 핵심이며, 동형 여부는 [§층의 유도 범주와 유도 함자, ⁋명제 1](/ko/math/sheaf_theory/derived_category_of_sheaves#prop1)의 stalk 판정에 의해 국소적인 문제이다. Stratification에 대한 귀납으로 환원되는데, 가장 낮은 차원의 stratum은 manifold이므로 그 위에서는 $\omega$가 shift된 국소계가 되어 ([§고유 받음과 여섯 함자, ⁋정리 7](/ko/math/sheaf_theory/six_functors#thm7)) biduality가 유한차원 vector space의 표준 동형 $V \cong (V^\vee)^\vee$으로 귀착되고, 이는 $\mathcal{H}^j(\mathcal{F}^\bullet)$의 stalk가 유한 rank라는 constructibility 가정에서 성립한다. 높은 차원의 stratum으로는 [§고유 받음과 여섯 함자, ⁋정리 10](/ko/math/sheaf_theory/six_functors#thm10)을 따라 $\mathbf{D}_X$가 두 변을 동형으로 보냄을 이어 올린다. 유한 rank 조건이 빠지면 $V \cong (V^\vee)^\vee$이 깨지므로 constructibility는 필수적이다. 자세한 논증은 [KS]의 Proposition 3.4.3을 따른다.
 :::
 
 biduality가 성립하면 $\mathbf{D}_X$는 다른 다섯 함자와의 호환 관계를 통해 그들을 짝지어 교환한다. 다음 명제는 Verdier 쌍대성의 형식적 귀결로서, $\mathbf{D}$가 $Rf_\ast$와 $Rf_!$을, 그리고 $Lf^\ast$와 $f^!$을 서로 맞바꾼다는 것을 말한다.
 
 ::: 명제 8
-Compactifiable map $f: X \to Y$와 $\mathcal{F}^\bullet \in D^b_c(X)$, $\mathcal{G}^\bullet \in D^b_c(Y)$에 대해 자연스러운 동형
+Compactifiable map $f: X \rightarrow Y$와 $\mathcal{F}^\bullet \in D^b_c(X)$, $\mathcal{G}^\bullet \in D^b_c(Y)$에 대해 자연스러운 동형
 $$\mathbf{D}_Y(Rf_! \mathcal{F}^\bullet) \cong Rf_\ast(\mathbf{D}_X \mathcal{F}^\bullet), \qquad f^!(\mathbf{D}_Y \mathcal{G}^\bullet) \cong \mathbf{D}_X(f^{-1}\mathcal{G}^\bullet)$$
 이 성립한다. Biduality와 결합하면 이로부터 $Rf_! \cong \mathbf{D}_Y Rf_\ast \mathbf{D}_X$와 $f^! \cong \mathbf{D}_X f^{-1} \mathbf{D}_Y$을 얻는다.
 :::
@@ -153,7 +153,7 @@ $$H^p(X, k) \cong H^{n-p}_c(X, k)^\vee$$
 이 성립한다.
 :::
 ::: 증명
-$a_X: X \to \{\ast\}$은 fiber가 $X$ 자신인 $n$차원 topological submersion이고, $X$가 방향지어졌으므로 상대 orientation sheaf는 $\operatorname{or}_{X/\{\ast\}} \cong k_X$이다 ([\[대수적 위상수학\] §푸앵카레 쌍대성, ⁋정의 1](/ko/math/algebraic_topology/Poincare_duality#def1)의 orientation sheaf가 자명한 경우). 따라서 [§고유 받음과 여섯 함자, ⁋정리 7](/ko/math/sheaf_theory/six_functors#thm7)에 의해
+$a_X: X \rightarrow \{\ast\}$은 fiber가 $X$ 자신인 $n$차원 topological submersion이고, $X$가 방향지어졌으므로 상대 orientation sheaf는 $\operatorname{or}_{X/\{\ast\}} \cong k_X$이다 ([\[대수적 위상수학\] §푸앵카레 쌍대성, ⁋정의 1](/ko/math/algebraic_topology/Poincare_duality#def1)의 orientation sheaf가 자명한 경우). 따라서 [§고유 받음과 여섯 함자, ⁋정리 7](/ko/math/sheaf_theory/six_functors#thm7)에 의해
 $$\omega_X = a_X^! k \cong a_X^{-1} k \otimes \operatorname{or}_{X/\{\ast\}}[n] \cong k_X[n]$$
 이다. 그러면 $\mathbf{D}_X k_X = R\mathcal{H}om(k_X, \omega_X) \cong \omega_X \cong k_X[n]$이다. [따름정리 5](#cor5)를 $\mathcal{F}^\bullet = k_X$에 적용하면
 $$H^j(X, \mathbf{D}_X k_X) \cong H^{-j}_c(X, k)^\vee$$
@@ -183,10 +183,10 @@ $$H^1_c(V, k) \cong k^2, \qquad H^2_c(V, k) \cong k^2$$
 이고 나머지 차수는 $0$이다. 한편 $H^q_c(\{0\}, k) = H^q(\{0\}, k)$은 $q = 0$에서 $k$, 그 외 $0$이다.
 
 Recollement triangle이 주는 long exact sequence
-$$\cdots \to H^q_c(V) \to H^q_c(U) \to H^q(\{0\}) \to H^{q+1}_c(V) \to \cdots$$
+$$\cdots \rightarrow H^q_c(V) \rightarrow H^q_c(U) \rightarrow H^q(\{0\}) \rightarrow H^{q+1}_c(V) \rightarrow \cdots$$
 를 차수별로 읽는다. $U$가 연결이고 콤팩트하지 않으므로 $H^0_c(U) = 0$이며, 따라서 $q = 0$ 부분
-$$0 = H^0_c(V) \to H^0_c(U) = 0 \to H^0(\{0\}) = k \xrightarrow{\delta} H^1_c(V) = k^2 \to H^1_c(U) \to H^1(\{0\}) = 0$$
-에서 연결 사상 $\delta$가 단사이고, $H^1_c(U) = \operatorname{coker}\delta \cong k^2 / k \cong k$이다. 한편 $q \geq 1$ 부분에서 $H^1(\{0\}) = 0 \to H^2_c(V) = k^2 \to H^2_c(U) \to H^2(\{0\}) = 0$이므로 $H^2_c(U) \cong k^2$이다. 정리하면 $H^1_c(U, k) \cong k$, $H^2_c(U, k) \cong k^2$이고 그 외는 $0$이다. (검산으로 콤팩트 받침 Euler 지표는 $\chi_c(U) = \chi_c(V) + \chi_c(\{0\})$에서 $\chi_c(S^1 \times \mathbb{R}) = 0$이므로 $\chi_c(U) = 0 + 1 = 1$이고, $-\dim H^1_c + \dim H^2_c = -1 + 2 = 1$과 일치한다.)
+$$0 = H^0_c(V) \rightarrow H^0_c(U) = 0 \rightarrow H^0(\{0\}) = k \xrightarrow{\delta} H^1_c(V) = k^2 \rightarrow H^1_c(U) \rightarrow H^1(\{0\}) = 0$$
+에서 연결 사상 $\delta$가 단사이고, $H^1_c(U) = \operatorname{coker}\delta \cong k^2 / k \cong k$이다. 한편 $q \geq 1$ 부분에서 $H^1(\{0\}) = 0 \rightarrow H^2_c(V) = k^2 \rightarrow H^2_c(U) \rightarrow H^2(\{0\}) = 0$이므로 $H^2_c(U) \cong k^2$이다. 정리하면 $H^1_c(U, k) \cong k$, $H^2_c(U, k) \cong k^2$이고 그 외는 $0$이다. (검산으로 콤팩트 받침 Euler 지표는 $\chi_c(U) = \chi_c(V) + \chi_c(\{0\})$에서 $\chi_c(S^1 \times \mathbb{R}) = 0$이므로 $\chi_c(U) = 0 + 1 = 1$이고, $-\dim H^1_c + \dim H^2_c = -1 + 2 = 1$과 일치한다.)
 
 이제 stalk 공식 $\mathcal{H}^j(\omega_X)_0 \cong H^{-j}_c(U, k)^\vee$에 대입하면 $\mathcal{H}^{-2}(\omega_X)_0 \cong H^2_c(U)^\vee \cong k^2$, $\mathcal{H}^{-1}(\omega_X)_0 \cong H^1_c(U)^\vee \cong k$을 얻어 [예시 10](#ex10)의 주장이 확인된다. 최고차 stalk $\mathcal{H}^{-2}(\omega_X)_0 \cong k^2$의 차원 $2$는 node를 지나는 국소 분지(branch)의 수와 정확히 일치하며, $0$이어야 할 $\mathcal{H}^{-1}(\omega_X)_0$에 추가로 나타나는 $k$가 singular point가 만들어 내는 잉여 항이다. smooth한 다양체였다면 [정리 9](#thm9)에 의해 $\omega_X$이 한 차수에 집중되었을 것이나, node에서는 두 차수에 퍼진다.
 

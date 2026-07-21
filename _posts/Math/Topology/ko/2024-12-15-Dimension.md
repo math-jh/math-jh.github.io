@@ -138,7 +138,7 @@ $$X=\bigcup_{i\in I} U_i$$
 이고 $U_i\cap U_j\neq \emptyset$이 모든 $i,j$에 대해 성립한다 하자. 그럼 $X$는 irreducible이다.
 :::
 ::: 증명
-임의의 두 열린집합 $V, W$가 주어졌다 하고, $V\cap W\neq\emptyset$임을 보이자. 그럼 주어진 가정으로부터 우선 $U_i\cap V\neq\emptyset$ 그리고 $U_j\cap W\neq\emptyset$을 만족하는 $i,j$가 존재한다. 이제 [명제 7](#prop7)의 셋째 결과와 [§부분공간, ⁋명제 4](/ko/math/topology/subspaces#prop4)로부터 $U_i$도 irreducible이므로, $U_i$의 두 nonempty subset $U_i\cap V$와 $U_i\cap U_j$도 반드시 공집합이 아닌 교집합을 가져야 한다. 즉
+임의의 두 열린집합 $V, W$가 주어졌다 하고, $V\cap W\neq\emptyset$임을 보이자. 그럼 주어진 가정으로부터 우선 $U_i\cap V\neq\emptyset$ 그리고 $U_j\cap W\neq\emptyset$을 만족하는 $i,j$가 존재한다. 이제 [명제 7](#prop7)의 셋째 결과와 [§부분공간, ⁋명제 5](/ko/math/topology/subspaces#prop5)로부터 $U_i$도 irreducible이므로, $U_i$의 두 nonempty subset $U_i\cap V$와 $U_i\cap U_j$도 반드시 공집합이 아닌 교집합을 가져야 한다. 즉
 
 $$(U_i\cap V)\cap (U_i\cap U_j)=U_i\cap U_j\cap V\neq\emptyset$$
 
@@ -152,7 +152,7 @@ $$(U_i\cap U_j\cap V)\cap (U_j\cap W)=U_i\cap U_j\cap V\cap W\neq\emptyset$$
 Connected component와 비슷하게 다음을 정의할 수 있다.
 
 ::: 정의 9
-위상공간 $X$의 부분집합 $A$에 대하여, $A$를 포함하는 *irreducible component*는 $A$를 포함하는 irreducible subset 중 가장 큰 것을 의미한다. 
+위상공간 $X$의 부분집합 $A$에 대하여, $A$를 포함하는 *irreducible component<sub>기약성분</sub>*는 $A$를 포함하는 irreducible subset 중 가장 큰 것을 의미한다. 
 :::
 
 그럼 [§연결공간, ⁋명제 2](/ko/math/topology/connected_spaces#prop2)과 비슷한 논증에 의하여, irreducible set의 closure는 irreducible인 것을 보일 수 있으므로 irreducible component는 반드시 closed subset이다. 

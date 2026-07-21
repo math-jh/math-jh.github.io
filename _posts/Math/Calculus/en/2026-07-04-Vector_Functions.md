@@ -14,7 +14,7 @@ translated_at: 2026-07-05T16:30:02+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-07-05T16:30:02+00:00
 ---
-So far, the functions we have dealt with were only $f:\mathbb{R}\to\mathbb{R}$ sending real numbers to real numbers, and to be honest, apart from the fact that the concept of limits was rigorously defined using $\epsilon$-$\delta$, there was little difference from what we learned in high school. We now generalize this to actually explore new material. The direction of generalization is to increase dimension, which includes raising the dimension of the domain and raising the dimension of the codomain. In this post, we first deal with the latter, namely a function $\mathbf{r}:\mathbb{R}\to\mathbb{R}^n$ that sends one real number to several real numbers. This is a vector-valued function that draws a curve in space with a single parameter, and can be viewed as the locus of a point moving in time, so that differentiation acquires the physical meaning of velocity and acceleration, and integration measures the length of a curve.
+So far, the functions we have dealt with were only $f:\mathbb{R}\rightarrow\mathbb{R}$ sending real numbers to real numbers, and to be honest, apart from the fact that the concept of limits was rigorously defined using $\epsilon$-$\delta$, there was little difference from what we learned in high school. We now generalize this to actually explore new material. The direction of generalization is to increase dimension, which includes raising the dimension of the domain and raising the dimension of the codomain. In this post, we first deal with the latter, namely a function $\mathbf{r}:\mathbb{R}\rightarrow\mathbb{R}^n$ that sends one real number to several real numbers. This is a vector-valued function that draws a curve in space with a single parameter, and can be viewed as the locus of a point moving in time, so that differentiation acquires the physical meaning of velocity and acceleration, and integration measures the length of a curve.
 
 ## Vector Space
 
@@ -55,7 +55,7 @@ In this post we mainly use the cross product as a tool to create perpendicular v
 Then we can first define the following.
 
 ::: Definition 1
-A function $\mathbf{r}\colon I \to \mathbb{R}^n$ that assigns to each $t$ in an interval $I \subseteq \mathbb{R}$ the point $\mathbf{r}(t) = (x_1(t), \ldots, x_n(t)) \in \mathbb{R}^n$ is called a *vector-valued function* or a *parametrized curve*, and each $x_i$ is called its *component function*.
+A function $\mathbf{r}\colon I \rightarrow \mathbb{R}^n$ that assigns to each $t$ in an interval $I \subseteq \mathbb{R}$ the point $\mathbf{r}(t) = (x_1(t), \ldots, x_n(t)) \in \mathbb{R}^n$ is called a *vector-valued function* or a *parametrized curve*, and each $x_i$ is called its *component function*.
 :::
 
 Intuitively, this is a rule by which a different point in the vector space corresponds as $t$ varies, and can be thought of as expressing the locus of a point moving in time.
@@ -72,11 +72,11 @@ we have
 
 $$\lvert x_i(t)-v_i\rvert=\lvert(\mathbf{r}(t)-\mathbf{v})\cdot\mathbf{e}_i\rvert\leq\lVert\mathbf{r}(t)-\mathbf{v}\rVert$$
 
-so if $\mathbf{r}(t)\to\mathbf{v}$ then each component also converges $x_i(t)\to v_i$. Conversely, if all components converge then
+so if $\mathbf{r}(t)\rightarrow\mathbf{v}$ then each component also converges $x_i(t)\rightarrow v_i$. Conversely, if all components converge then
 
-$$\lVert\mathbf{r}(t)-\mathbf{v}\rVert^2=\sum_i(x_i(t)-v_i)^2\to 0$$
+$$\lVert\mathbf{r}(t)-\mathbf{v}\rVert^2=\sum_i(x_i(t)-v_i)^2\rightarrow 0$$
 
-so $\mathbf{r}(t)\to\mathbf{v}$. That is, the convergence of a vector function is the same as the convergence of each component function, and in particular the continuity and differentiability of a vector function are both well defined component-wise.
+so $\mathbf{r}(t)\rightarrow\mathbf{v}$. That is, the convergence of a vector function is the same as the convergence of each component function, and in particular the continuity and differentiability of a vector function are both well defined component-wise.
 
 ::: Proposition 2
 If each component function of $\mathbf{r}(t) = (x_1(t), \ldots, x_n(t))$ is differentiable at $t$, then $\mathbf{r}$ is also differentiable at $t$ and $\mathbf{r}'(t) = (x_1'(t), \ldots, x_n'(t))$.
@@ -89,7 +89,7 @@ The $i$th component of the difference quotient $(\mathbf{r}(t+h) - \mathbf{r}(t)
 Also, by a similar argument the product rule for scalar functions carries over to vector products.
 
 ::: Proposition 3 (Differentiation Rules)
-If $\mathbf{u}, \mathbf{v}\colon I \to \mathbb{R}^n$ are differentiable and $f\colon I \to \mathbb{R}$ is differentiable and $\varphi\colon J \to I$ is a differentiable real function, then
+If $\mathbf{u}, \mathbf{v}\colon I \rightarrow \mathbb{R}^n$ are differentiable and $f\colon I \rightarrow \mathbb{R}$ is differentiable and $\varphi\colon J \rightarrow I$ is a differentiable real function, then
 
 $$(f \mathbf{u})' = f' \mathbf{u} + f \mathbf{u}', \qquad (\mathbf{u} \cdot \mathbf{v})' = \mathbf{u}' \cdot \mathbf{v} + \mathbf{u} \cdot \mathbf{v}', \qquad (\mathbf{u} \circ \varphi)'(t) = \varphi'(t) \mathbf{u}'(\varphi(t))$$
 
@@ -132,7 +132,7 @@ $$\sum_k \lVert \mathbf{r}(t_k) - \mathbf{r}(t_{k-1})\rVert$$
 and showing that as the partition is refined this converges to a Riemann sum for $\lVert \mathbf{r}'(t)\rVert$; compressing this process yields the following definition.
 
 ::: Definition 5
-The *arc length* of a $C^1$ curve $\mathbf{r}\colon [a, b] \to \mathbb{R}^n$ is
+The *arc length* of a $C^1$ curve $\mathbf{r}\colon [a, b] \rightarrow \mathbb{R}^n$ is
 
 $$L = \int_a^b \lVert \mathbf{r}'(t)\rVert \mathop{dt}$$
 :::

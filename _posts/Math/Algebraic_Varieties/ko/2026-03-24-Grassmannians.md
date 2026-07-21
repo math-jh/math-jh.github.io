@@ -38,7 +38,7 @@ $n$차원 벡터공간 $V$의 $k$차원 부분공간들의 집합을 *Grassmanni
 ::: 정의 3
 각 $k$개의 index들 $I = \{i_1 < \cdots < i_k\}$에 대해 open set $U_I$를
 
-$$U_I = \{W \in \Gr(k, V) \mid \text{projection } W \to \operatorname{span}(e_{i_1}, \ldots, e_{i_k}) \text{ is an isomorphism}\}$$
+$$U_I = \{W \in \Gr(k, V) \mid \text{projection } W \rightarrow \operatorname{span}(e_{i_1}, \ldots, e_{i_k}) \text{ is an isomorphism}\}$$
 
 으로 정의한다.
 :::
@@ -74,7 +74,7 @@ $\dim \Gr(k, V) = k(n - k)$이다.
 이제 우리는 Grassmannian이 quasi-projective variety임을 보인다. 즉, Grassmannian에서 적당한 projective space로의 embedding을 정의한다. 
 
 ::: 정의 6
-*Plücker embedding* $\iota: \Gr(k, V) \to \mathbb{P}(\bigwedge^k V)$는 $k$차원 부분공간 $W = \operatorname{span}(v_1, \ldots, v_k)$에 다음의 원소
+*Plücker embedding<sub>플뤼커 매장</sub>* $\iota: \Gr(k, V) \rightarrow \mathbb{P}(\bigwedge^k V)$는 $k$차원 부분공간 $W = \operatorname{span}(v_1, \ldots, v_k)$에 다음의 원소
 
 $$\iota(W) = [v_1 \wedge v_2 \wedge \cdots \wedge v_k]$$
 

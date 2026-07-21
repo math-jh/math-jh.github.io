@@ -71,7 +71,7 @@ $$\frac{1}{2\pi i}\oint_\gamma\frac{f'(z)}{f(z)}\,dz = \sum_{z_j \text{ 안쪽}}
 
 이다. 안쪽 영점에서는 $k_j$이 그 위수만큼 양수이고 안쪽 극에서는 그 위수만큼 음수이므로, 위수를 세어 더한 이 합은 정확히 $Z - P$이다.
 
-남은 것은 이 적분이 상곡선의 회전수와 같음을 보이는 일이다. $\gamma : [a, b] \to \mathbb{C}$이 piecewise $C^1$ 매개변수화이면 합성곡선 $\sigma = f \circ \gamma$ 역시 piecewise $C^1$이고, 그 자취 위에 $f$의 영점이 없으므로 $\sigma(t) = f(\gamma(t)) \neq 0$이다. 곧 $\sigma$은 원점을 지나지 않는 닫힌 곡선이다. 치환 $w = f(z)$, $dw = f'(z)\,dz$으로
+남은 것은 이 적분이 상곡선의 회전수와 같음을 보이는 일이다. $\gamma : [a, b] \rightarrow \mathbb{C}$이 piecewise $C^1$ 매개변수화이면 합성곡선 $\sigma = f \circ \gamma$ 역시 piecewise $C^1$이고, 그 자취 위에 $f$의 영점이 없으므로 $\sigma(t) = f(\gamma(t)) \neq 0$이다. 곧 $\sigma$은 원점을 지나지 않는 닫힌 곡선이다. 치환 $w = f(z)$, $dw = f'(z)\,dz$으로
 
 $$\oint_\gamma\frac{f'(z)}{f(z)}\,dz = \int_a^b\frac{f'(\gamma(t))\,\gamma'(t)}{f(\gamma(t))}\,dt = \int_a^b\frac{\sigma'(t)}{\sigma(t)}\,dt = \oint_\sigma\frac{dw}{w}$$
 
@@ -185,7 +185,7 @@ $$D(w_0, \varepsilon) \subseteq f(U)$$
 open mapping 정리는 holomorphic function의 상이 결코 찌부러질 수 없음을 말한다. 실변수의 smooth 함수는 가령 상수가 아니면서도 상이 한 구간으로 닫혀 있을 수 있지만, 비상수 holomorphic function의 상에는 그런 일이 없어 항상 열린집합으로 퍼진다. 이 정리에서 두 가지 중요한 귀결이 곧장 나온다. 하나는 단사 holomorphic function의 역사상이 자동으로 holomorphic이 된다는 사실이고, 다른 하나는 최대절댓값 원리의 새로운 증명이다. 먼저 역사상의 holomorphicity를 본다.
 
 ::: 따름정리 9 (역사상의 holomorphicity)
-$\Omega \subseteq \mathbb{C}$가 열린집합이고 $f : \Omega \to \mathbb{C}$이 holomorphic인 단사사상이라 하자. 그러면 상 $\Omega' = f(\Omega)$이 열린집합이고, 역사상 $f^{-1} : \Omega' \to \Omega$이 holomorphic이며 그 도함수는
+$\Omega \subseteq \mathbb{C}$가 열린집합이고 $f : \Omega \rightarrow \mathbb{C}$이 holomorphic인 단사사상이라 하자. 그러면 상 $\Omega' = f(\Omega)$이 열린집합이고, 역사상 $f^{-1} : \Omega' \rightarrow \Omega$이 holomorphic이며 그 도함수는
 
 $$(f^{-1})'(w) = \frac{1}{f'(f^{-1}(w))}$$
 
@@ -193,15 +193,15 @@ $$(f^{-1})'(w) = \frac{1}{f'(f^{-1}(w))}$$
 :::
 
 ::: 증명
-$f$이 단사이고 비상수이므로 (단사함수는 상수일 수 없다) open mapping 정리 (정리 8) 에 의해 $\Omega' = f(\Omega)$이 열려 있고, 더 일반적으로 $\Omega$의 임의의 열린 부분집합의 상이 열려 있다. 이는 곧 $f^{-1} : \Omega' \to \Omega$이 연속임을 뜻한다. 임의의 열린집합 $U \subseteq \Omega$에 대해 $(f^{-1})^{-1}(U) = f(U)$이 열려 있기 때문이다.
+$f$이 단사이고 비상수이므로 (단사함수는 상수일 수 없다) open mapping 정리 (정리 8) 에 의해 $\Omega' = f(\Omega)$이 열려 있고, 더 일반적으로 $\Omega$의 임의의 열린 부분집합의 상이 열려 있다. 이는 곧 $f^{-1} : \Omega' \rightarrow \Omega$이 연속임을 뜻한다. 임의의 열린집합 $U \subseteq \Omega$에 대해 $(f^{-1})^{-1}(U) = f(U)$이 열려 있기 때문이다.
 
 다음으로 $f$의 도함수가 어디서도 $0$이 아님을 본다. 만일 어떤 $z_0$에서 $f'(z_0) = 0$이면 $f - f(z_0)$이 $z_0$에서 위수 $m \geq 2$인 영점을 가지므로, 정리 7에 의해 $f$이 $z_0$의 구멍 뚫린 근방에서 어떤 값 $w$을 $m \geq 2$번 취하여 단사성에 어긋난다. 따라서 모든 $z \in \Omega$에서 $f'(z) \neq 0$이다.
 
-이제 $f^{-1}$의 복소미분가능성을 보인다. $w_0 \in \Omega'$을 고정하고 $z_0 = f^{-1}(w_0)$이라 하자. $w \to w_0$이면 $f^{-1}$의 연속성에서 $z = f^{-1}(w) \to z_0$이고, 단사성에서 $w \neq w_0$이면 $z \neq z_0$이다. 차분몫을 정리하면
+이제 $f^{-1}$의 복소미분가능성을 보인다. $w_0 \in \Omega'$을 고정하고 $z_0 = f^{-1}(w_0)$이라 하자. $w \rightarrow w_0$이면 $f^{-1}$의 연속성에서 $z = f^{-1}(w) \rightarrow z_0$이고, 단사성에서 $w \neq w_0$이면 $z \neq z_0$이다. 차분몫을 정리하면
 
 $$\frac{f^{-1}(w) - f^{-1}(w_0)}{w - w_0} = \frac{z - z_0}{f(z) - f(z_0)} = \left(\frac{f(z) - f(z_0)}{z - z_0}\right)^{-1}$$
 
-이고, $w \to w_0$일 때 $z \to z_0$이므로 오른쪽 괄호 안이 $f'(z_0) \neq 0$으로 수렴한다. 따라서 극한이 존재하여
+이고, $w \rightarrow w_0$일 때 $z \rightarrow z_0$이므로 오른쪽 괄호 안이 $f'(z_0) \neq 0$으로 수렴한다. 따라서 극한이 존재하여
 
 $$(f^{-1})'(w_0) = \frac{1}{f'(z_0)} = \frac{1}{f'(f^{-1}(w_0))}$$
 

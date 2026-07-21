@@ -27,11 +27,11 @@ $u,w\in W^P$에 대하여, Schubert variety와 opposite Schubert variety의 inte
 
 $$R_{u,w}=X_w\cap X^u$$
 
-을 *Richardson variety*라 하고, 두 열린 cell의 intersection
+을 *Richardson variety<sub>리처드슨 다양체</sub>*라 하고, 두 열린 cell의 intersection
 
 $$\mathring{R}_{u,w}=X_w^\circ\cap X^u_\circ$$
 
-을 *open Richardson variety*라 한다.
+을 *open Richardson variety<sub>열린 리처드슨 다양체</sub>*라 한다.
 :::
 
 정의에 의해 $R_{u,w}$는 $G/P$의 closed subvariety이고, $\mathring{R}_{u,w}$는 그 안의 Zariski open subset이다. 이 intersection은 Kazhdan–Lusztig [KL80]와 Deodhar [Deo85]의 연구에서 이미 등장한 것으로, 나중 Richardson [Ric92]에 의해 일반적인 기하적 성질이 연구되었다.
@@ -142,7 +142,7 @@ $$\mathfrak{z}_{\mathfrak{sl}_n}(N)=\span\{N,N^2,\ldots,N^{n-1}\}$$
 이제 $X$를 고정해 두고 보던 이 closed subvariety에 $H$에 대한 의존성을 추가하자. 우선 편의상 이름을 먼저 붙인다. 
 
 ::: 정의 6
-$X\in\mathfrak{g}$와 $\mathfrak{b}$를 포함하는 $\ad(\mathfrak{b})$-stable subspace $H\subseteq\mathfrak{g}$ (즉 $[\mathfrak{b},H]\subseteq H$)에 대하여, *Hessenberg variety*는
+$X\in\mathfrak{g}$와 $\mathfrak{b}$를 포함하는 $\ad(\mathfrak{b})$-stable subspace $H\subseteq\mathfrak{g}$ (즉 $[\mathfrak{b},H]\subseteq H$)에 대하여, *Hessenberg variety<sub>헤센베르크 다양체</sub>*는
 
 $$\mathcal{B}(X,H)=\{\,gB\in G/B\;\mid\;\Ad(g^{-1})X\in H\,\}$$
 
@@ -172,7 +172,7 @@ $$H=(H\cap \mathfrak{h})\oplus\bigoplus_{j\neq k}(H\cap \mathbb{C}E_{jk})$$
 
 $$[E_{lj},E_{jk}]=E_{lk}-\delta_{kl}E_{jj},\qquad[E_{jk},E_{km}]=E_{jm}-\delta_{jm}E_{kk}$$
 
-인데 $\delta$ 항들은 어차피 $\mathfrak{h}\subseteq H$ 안이므로, $H$가 자리 $(j,k)$를 포함하면 같은 열의 위쪽 자리 $(l,k)$ ($l\leq j$) 전부와 같은 행의 오른쪽 자리 $(j,m)$ ($m\geq k$) 전부도 포함해야 한다. 곧 각 열은 위에서부터 빈틈없이 채워지고, 채워진 깊이는 오른쪽 열로 갈수록 줄지 않는다. 따라서 $k$번째 열의 깊이를 $h(k)$라 적으면, $H$는 $h(i)\geq i$를 만족하는 단조증가함수 $h\colon\{1,\ldots,n\}\to\{1,\ldots,n\}$ (*Hessenberg 함수<sub>Hessenberg function</sub>*)가 결정하는 staircase
+인데 $\delta$ 항들은 어차피 $\mathfrak{h}\subseteq H$ 안이므로, $H$가 자리 $(j,k)$를 포함하면 같은 열의 위쪽 자리 $(l,k)$ ($l\leq j$) 전부와 같은 행의 오른쪽 자리 $(j,m)$ ($m\geq k$) 전부도 포함해야 한다. 곧 각 열은 위에서부터 빈틈없이 채워지고, 채워진 깊이는 오른쪽 열로 갈수록 줄지 않는다. 따라서 $k$번째 열의 깊이를 $h(k)$라 적으면, $H$는 $h(i)\geq i$를 만족하는 단조증가함수 $h\colon\{1,\ldots,n\}\rightarrow\{1,\ldots,n\}$ (*Hessenberg 함수<sub>Hessenberg function</sub>*)가 결정하는 staircase
 
 $$H_h=\{\,Y\in\mathfrak{gl}_n\;\mid\;YE_i\subseteq E_{h(i)}\ \forall i\,\}=\{\,Y\;\mid\;Y_{jk}=0\ \text{whenever $j>h(k)$}\,\}$$
 
@@ -192,7 +192,7 @@ $$\Ad(g^{-1})X\in H_h\iff g^{-1}Xg\in H_h\iff XgE_i\subseteq gE_{h(i)}\iff XV_i\
 [예시 7](#ex7)의 그림은 일반적인 경우에서도 그대로 성립한다. 이 경우, 위에서처럼 staircase가 $\mathfrak{b}$ 위로 더 채우는 자리들은 대각선 아래쪽, 곧 *negative* root 방향이다. 실제로 $\mathfrak{b}=\mathfrak{h}\oplus\bigoplus_{\alpha>0}\mathfrak{g}_\alpha$는 이미 모든 positive root 방향을 포함하므로, $H$를 $\mathfrak{b}$보다 키우는 일은 negative root 방향을 더하는 일일 수밖에 없다. 그러나, $\ad(\mathfrak{b})$-stability에 의하여 추가로 simple 조건이 강제되는데, 실제로 simple이 아닌 positive root $\alpha=\beta+\gamma$의 방향은 $[\mathfrak{g}_\beta,\mathfrak{g}_{-\alpha}]=\mathfrak{g}_{-\gamma}$를 통해 더 얕은 자리들을 함께 끌고 들어오는 반면, negative simple root 방향은 $\mathfrak{b}\oplus\mathfrak{g}_{-\alpha_i}$가 그 자체로 stable하다. 즉, $\mathfrak{b}$에서 한 칸씩 늘리는 최소 단위의 확장은 정확히 $\mathfrak{g}_{-\alpha_i}$들이고, type $A$에서는 위 그림의 subdiagonal 자리들이 이들이다. 그럼 $\mathfrak{b}$에 이 방향을 추가하여 만들어진 것이 Peterson variety의 $H$이다.
 
 ::: 정의 8
-*Peterson variety* $\mathcal{Y}$는 $G/B$의 closed subvariety
+*Peterson variety<sub>피터슨 다양체</sub>* $\mathcal{Y}$는 $G/B$의 closed subvariety
 
 $$\mathcal{Y}=\{\,gB\in G/B\;\mid\;\Ad(g^{-1})e\in H\,\}$$
 
@@ -275,11 +275,11 @@ $$\mathbb{C}[\mathcal{Y}^\vee_P]\cong QH^\ast(G/P)$$
 
 우리는 [§Borel subgroup, ⁋정의 12](/ko/math/lie_theory/borel_subgroup#def12)에서 flag variety를 도입한 후, 지금까지 대수기하의 언어를 아주 본격적으로 사용하지는 않았지만, 이 정리의 정신을 이해하기 위해서는 이를 더 이상 미룰 수 없다. 핵심적인 것은 대수기하학에서 ring $A$를 그 자체로 $\mathbb{C}$ 위의 기하적인 공간 $\Spec A$으로, $A$는 그 공간 위의 함수들의 ring으로 해석하는 방식이다. 이 사전에서, 공간 $\Spec A$의 각 점들은 $A$의 maximal ideal에 대응되며, ring homomorphism $A\rightarrow B$는 기하적인 함수 $\Spec B\rightarrow \Spec A$에 대응된다. 중요한 특수한 케이스는 $A=\mathbb{C}$와 $B=\mathbb{C}$일 때 각각으로, 우선 $A=\mathbb{C}$이면 대수적인 세계에서의 $\mathbb{C}\rightarrow B$는 ring $B$를 $\mathbb{C}$-algebra로 보게 하는 structure morphism이다. 이에 대응되는 기하적인 세상에서는 $\Spec \mathbb{C}$는 한 점이므로, 함수 $\Spec B\rightarrow \Spec A$는 한 점으로의 함수가 된다. 만일 $A,B$가 모두 $\mathbb{C}$-algebra가 되어 다음의 commutative diagram
 
-![$$A, B$$가 $$\mathbb{C}$$-algebra이면 unit이 주는 structure morphism $$\mathbb{C}\to A$$, $$\mathbb{C}\to B$$가 있고, ring homomorphism $$\varphi\colon A\to B$$가 이 둘과 commute하는 것(곧 $$\mathbb{C}$$를 고정하는 것)이 $$\varphi$$가 $$\mathbb{C}$$-algebra homomorphism이라는 조건이다.](/assets/images/Math/Lie_Theory/Richardson_Peterson_Variety-1.svg){:style="width:12em" class="invert" .align-center}
+![$$A, B$$가 $$\mathbb{C}$$-algebra이면 unit이 주는 structure morphism $$\mathbb{C}\rightarrow A$$, $$\mathbb{C}\rightarrow B$$가 있고, ring homomorphism $$\varphi\colon A\rightarrow B$$가 이 둘과 commute하는 것(곧 $$\mathbb{C}$$를 고정하는 것)이 $$\varphi$$가 $$\mathbb{C}$$-algebra homomorphism이라는 조건이다.](/assets/images/Math/Lie_Theory/Richardson_Peterson_Variety-1.svg){:style="width:12em" class="invert" .align-center}
 
 이 존재한다면, $\mathbb{C}$-algebra homomorphism $A\rightarrow B$는 이제 다음의 commutative diagram
 
-![위 삼각형에 $$\operatorname{Spec}$$을 먹이면 화살표가 모두 뒤집혀, $$\operatorname{Spec}\varphi\colon\operatorname{Spec}B\to\operatorname{Spec}A$$가 한 점 $$\operatorname{Spec}\mathbb{C}$$ 위에서의 morphism이 된다.](/assets/images/Math/Lie_Theory/Richardson_Peterson_Variety-2.svg){:style="width:18em" class="invert" .align-center}
+![위 삼각형에 $$\operatorname{Spec}$$을 먹이면 화살표가 모두 뒤집혀, $$\operatorname{Spec}\varphi\colon\operatorname{Spec}B\rightarrow\operatorname{Spec}A$$가 한 점 $$\operatorname{Spec}\mathbb{C}$$ 위에서의 morphism이 된다.](/assets/images/Math/Lie_Theory/Richardson_Peterson_Variety-2.svg){:style="width:18em" class="invert" .align-center}
 
 으로 번역된다. 한편 $B=\mathbb{C}$인 경우 ring homomorphism $A\rightarrow \mathbb{C}$는 기하적인 세계에서는 $\Spec \mathbb{C}\rightarrow\Spec A$로 번역되며, 즉 이 ring homomorphism은 그 자체로 하나의 점이 된다. 만일 $A$가 $\mathbb{C}$-algebra인 경우, 이 ring homomorphism을 우리는 보통 evaluation map으로 해석했던 것 또한 기억하자. 마지막으로, ring homomorphism $A\rightarrow B$로 $B$를 $A$-algebra로 보는 것은 위에서 보았듯 morphism $\Spec B\rightarrow\Spec A$, 곧 base $\Spec A$ 위에 놓인 상대적인 공간으로 해석되며, $A$-module은 $\Spec A$ 위의 sheaf(벡터다발에 준하는 대상)로 본다. 특히 rank $N$짜리 free module은 trivial rank $N$ bundle에 해당하여, 그런 $A$-algebra의 $\Spec$은 base로 보내는 fiber가 ($\dim$을 세면) $N$개인 finite morphism이 된다. 가장 기본적인 경우가 affine space로, polynomial algebra $\mathbb{C}[\x_1,\ldots,\x_n]$은 $\Spec$을 먹이면 affine $n$-space $\mathbb{A}^n$이며, 더 일반적으로 $A[\x_1,\ldots,\x_n]$은 base $\Spec A$ 위의 relative affine space에 대응한다.
 
@@ -297,7 +297,7 @@ $$QH^\ast(G/P)\otimes_{\mathbb{C}[q]}\mathbb{C}[q]/(q-q_0)\cong QH^\ast(G/P)/(q-
 
 ![Peterson 동형이 quantum cohomology의 spectrum을 flag로 실현하는 그림. $$\mathcal{Y}^\vee_P$$의 한 점 $$y$$ (곧 $$G^\vee/B^\vee$$의 flag) 가 주는 evaluation $$\operatorname{ev}_y$$는 Peterson 동형 $$\Phi\colon a\mapsto f_a$$를 통해 character $$\rchi_y=\operatorname{ev}_y\circ\Phi$$ (오른쪽 사각형, $$\rchi_y(a)=f_a(y)$$) 로 끌어올려지고, $$\mathbb{C}[q]$$로 제한하면 $$y$$의 quantum parameter 값 $$q_0$$에서의 evaluation이 된다 (왼쪽 사각형). 곧 $$q_0$$ 위의 fiber 점 $$=$$ $$q_0$$ 위의 character $$=$$ flag.](/assets/images/Math/Lie_Theory/Richardson_Peterson_Variety-4.svg){:style="width:24em" class="invert" .align-center}
 
-을 생각할 수 있으며, 이 때 마지막 수직방향 $\ev_y$가 $\mathcal{Y}^\vee_P$ 위의 한 점을 정의하게 된다. 이제 이 점이 무엇을 담고 있는지를 사전을 따라 풀어 보자. 우선 $QH^\ast(G/P)/(q-q_0)$은 $\mathbb{C}$ 위의 finite-dimensional algebra이고, 그 위에서 각 cohomology class $a$는 quantum product로 곱하는 연산자 $a\qtimes-$를 준다. 위에서 얻은 점 $y$에 대응하는 character $\rchi_y\colon QH^\ast(G/P)/(q-q_0)\to\mathbb{C}$는 각 $a$에 스칼라 $\rchi_y(a)$를 배정하되, ring homomorphism이므로 $\rchi_y(a\qtimes b)=\rchi_y(a)\,\rchi_y(b)$와 $\rchi_y(1)=1$을 지킨다. 이는 $\rchi_y(a)$가 연산자 $a\qtimes-$의 고유값이고, 그 고유값들이 quantum product와 모순 없이 동시에 배정된다는 말과 같다. 곧 fiber의 한 점은 generic $q_0$에서 모든 quantum 곱셈 연산자에 동시 고유값 한 벌을 일관되게 주는 방법이다. 
+을 생각할 수 있으며, 이 때 마지막 수직방향 $\ev_y$가 $\mathcal{Y}^\vee_P$ 위의 한 점을 정의하게 된다. 이제 이 점이 무엇을 담고 있는지를 사전을 따라 풀어 보자. 우선 $QH^\ast(G/P)/(q-q_0)$은 $\mathbb{C}$ 위의 finite-dimensional algebra이고, 그 위에서 각 cohomology class $a$는 quantum product로 곱하는 연산자 $a\qtimes-$를 준다. 위에서 얻은 점 $y$에 대응하는 character $\rchi_y\colon QH^\ast(G/P)/(q-q_0)\rightarrow\mathbb{C}$는 각 $a$에 스칼라 $\rchi_y(a)$를 배정하되, ring homomorphism이므로 $\rchi_y(a\qtimes b)=\rchi_y(a)\,\rchi_y(b)$와 $\rchi_y(1)=1$을 지킨다. 이는 $\rchi_y(a)$가 연산자 $a\qtimes-$의 고유값이고, 그 고유값들이 quantum product와 모순 없이 동시에 배정된다는 말과 같다. 곧 fiber의 한 점은 generic $q_0$에서 모든 quantum 곱셈 연산자에 동시 고유값 한 벌을 일관되게 주는 방법이다. 
 
 그리고 이 동시 고유값들이 어디에 놓여 있는지를 말해 주는 것이 [정리 11](#thm11)이다. Isomorphism $\mathbb{C}[\mathcal{Y}^\vee_P]\cong QH^\ast(G/P)$ 아래에서 각 class $a$는 $\mathcal{Y}^\vee_P$ 위의 regular function $f_a$에 대응하므로, 사전의 언어로 위 character $\rchi_y$는 다름 아닌 flag $y$에서의 evaluation $\rchi_y=\ev_y$이고, 따라서 $\rchi_y(a)=f_a(y)$이다. 즉 동시 고유값 $\rchi_y(a)$는 추상적으로 떠 있는 수가 아니라, $G^\vee/B^\vee$ 안의 구체적인 flag $y$에서 좌표함수 $f_a$의 값을 읽은 것이다. 이렇게 추상적인 대수 $QH^\ast(G/P)$의 spectrum $\Spec QH^\ast(G/P)=\mathcal{Y}^\vee_P$이 flag variety $G^\vee/B^\vee$ 안에 실제 점들로 앉고, 그 점(곧 flag) 하나하나가 quantum 곱셈의 동시 고유값 한 벌을 손에 쥐어 준다. 
 

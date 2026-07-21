@@ -28,16 +28,16 @@ GIT의 기초 — reductive group, invariant ring, affine GIT quotient $X/\!/G =
 군 action에 대한 quotient를 정의하는 방식은 *어떤 보편 성질을 만족하는 morphism인가*와 *집합으로서 어떤 equivalence class를 잡는가*의 두 관점으로 갈린다. 전자는 categorical, 후자는 set-theoretic 관점이며, GIT의 핵심 통찰은 이 둘이 일반적으로 일치하지 않는다는 점이다. 가령 $\mathbb{C}^\ast$가 $\mathbb{C}^2$ 위에 $t\cdot(z_1, z_2) = (tz_1, tz_2)$로 작용할 때, 원점은 닫힌 궤도이지만 나머지 모든 궤도의 closure가 원점을 포함하므로 set-theoretic quotient $\mathbb{C}^2/\mathbb{C}^\ast$에는 분리 성질이 결여된다. 이러한 상황을 체계적으로 다루기 위해 다음 두 개념을 분리한다.
 
 ::: 정의 1
-Algebraic group $G$가 작용하는 variety $X$에 대해, morphism $\varphi: X \to Y$가 *categorical quotient<sub>범주적 몫</sub>*라 함은 다음 두 조건을 만족함을 의미한다:
+Algebraic group $G$가 작용하는 variety $X$에 대해, morphism $\varphi: X \rightarrow Y$가 *categorical quotient<sub>범주적 몫</sub>*라 함은 다음 두 조건을 만족함을 의미한다:
 
 1. $\varphi$는 $G$-invariant이다. 즉 모든 $g \in G$에 대해 $\varphi \circ g = \varphi$.
-2. $G$-invariant morphism $f: X \to Z$가 주어질 때마다 유일한 morphism $\tilde{f}: Y \to Z$가 존재하여 $f = \tilde{f} \circ \varphi$.
+2. $G$-invariant morphism $f: X \rightarrow Z$가 주어질 때마다 유일한 morphism $\tilde{f}: Y \rightarrow Z$가 존재하여 $f = \tilde{f} \circ \varphi$.
 :::
 
 이는 보편 성질이므로 $Y$가 존재한다면 유일성은 자동이다. 다만 정의는 $Y$가 한 점으로 붕괴할 가능성을 배제하지 않으며, 위에서 본 $\mathbb{C}^\ast$의 scaling 예시에서는 실제로 categorical quotient가 한 점에 불과하다 ([예시 5](#ex5)). 즉 categorical quotient는 *너무 적은 정보*를 담을 수 있다.
 
 ::: 정의 2
-Categorical quotient $\varphi: X \to Y$가 *geometric quotient<sub>기하학적 몫</sub>*라 함은 추가로 다음 조건이 성립함을 의미한다:
+Categorical quotient $\varphi: X \rightarrow Y$가 *geometric quotient<sub>기하학적 몫</sub>*라 함은 추가로 다음 조건이 성립함을 의미한다:
 
 1. $\varphi$는 surjective이고, 각 $y \in Y$의 fiber $\varphi^{-1}(y)$는 정확히 하나의 $G$-궤도이다.
 2. $\varphi$는 submersion. 즉, $U \subseteq Y$가 열린 집합인 것과 $\varphi^{-1}(U) \subseteq X$가 열린 $G$-불변 집합인 것은 동치이다.
@@ -59,9 +59,9 @@ $A^G$의 유한생성성은 *Hilbert finiteness theorem*의 결과이다. $G$가
 
 $$A = A^G \oplus A_0.$$
 
-이로부터 $A^G$ 방향으로의 *Reynolds operator* $R: A \to A^G$가 정의된다. Reynolds operator는 $A^G$-module homomorphism이며 $A^G$ 위에서 항등이다. 이를 이용하면 임의의 $G$-불변 ideal $I \subseteq A$의 inverse image와 $R(I) = I \cap A^G$의 관계로부터 $A^G$의 ideal에 관한 ascending chain condition이 $A$의 그것에서 따라나오므로, $A$가 Noetherian이면 $A^G$도 Noetherian이다. 더 강한 finite generation은 $A$가 finitely generated $\mathbb{C}$-algebra일 때 $A^G$가 적당한 $G$-stable finitely generated subalgebra의 invariants와 일치함을 보임으로써 얻어진다 ([Mum] §1.1 또는 [New] §3.4).
+이로부터 $A^G$ 방향으로의 *Reynolds operator* $R: A \rightarrow A^G$가 정의된다. Reynolds operator는 $A^G$-module homomorphism이며 $A^G$ 위에서 항등이다. 이를 이용하면 임의의 $G$-불변 ideal $I \subseteq A$의 inverse image와 $R(I) = I \cap A^G$의 관계로부터 $A^G$의 ideal에 관한 ascending chain condition이 $A$의 그것에서 따라나오므로, $A$가 Noetherian이면 $A^G$도 Noetherian이다. 더 강한 finite generation은 $A$가 finitely generated $\mathbb{C}$-algebra일 때 $A^G$가 적당한 $G$-stable finitely generated subalgebra의 invariants와 일치함을 보임으로써 얻어진다 ([Mum] §1.1 또는 [New] §3.4).
 
-이제 $\varphi$의 categorical quotient 성질을 본다. $G$-invariant morphism $f: X \to Z = \Spec B$가 주어지면 이에 대응하는 ring homomorphism $f^\sharp: B \to A$의 상은 $G$-invariant element로 이루어지므로 $A^G$에 포함된다. 따라서 $f^\sharp$는 $B \to A^G$를 거쳐 분해되고, 이는 $f$가 $\varphi$를 통해 유일하게 분해됨을 뜻한다. 일반적인 $Z$에 대해서는 affine cover로 환원하면 동일한 결론이 따른다.
+이제 $\varphi$의 categorical quotient 성질을 본다. $G$-invariant morphism $f: X \rightarrow Z = \Spec B$가 주어지면 이에 대응하는 ring homomorphism $f^\sharp: B \rightarrow A$의 상은 $G$-invariant element로 이루어지므로 $A^G$에 포함된다. 따라서 $f^\sharp$는 $B \rightarrow A^G$를 거쳐 분해되고, 이는 $f$가 $\varphi$를 통해 유일하게 분해됨을 뜻한다. 일반적인 $Z$에 대해서는 affine cover로 환원하면 동일한 결론이 따른다.
 
 두 점이 같은 상을 가질 조건을 보인다. 두 궤도 closure가 교차하면 그 교집합 위에서 모든 $G$-invariant 함수는 두 점에서 같은 값을 가지므로, 임의의 $f \in A^G$에 대해 $f(x) = f(x')$이다. 역으로 $\overline{G \cdot x} \cap \overline{G \cdot x'} = \emptyset$이라 가정하자. 두 닫힌 $G$-불변 부분집합이 disjoint이므로 그 ideal들 $I_x, I_{x'} \subseteq A$에 대해 $I_x + I_{x'} = A$이다. Reductivity로부터 $I_x^G + I_{x'}^G = A^G$가 성립하며, 이로부터 $f(x) = 0$, $f(x') = 1$인 $f \in A^G$가 존재한다. 따라서 $\varphi(x) \ne \varphi(x')$이다.
 :::
@@ -131,7 +131,7 @@ $$\mathbb{P}^{n-1} = (\mathbb{C}^n \setminus \{0\}) / \mathbb{C}^\ast$$
 Projective space의 homogeneous coordinate ring은 $\mathbb{C}[\x_0, \ldots, \x_n]$으로, 각 변수가 $\mathbb{P}^n$의 coordinate hyperplane에 대응한다. Cox는 이를 toric variety로 확장하기 위해, fan의 1차원 cone 각각에 변수를 대응시킨다.
 
 ::: 정의 7
-Toric variety $X_\Sigma$의 *homogeneous coordinate ring* 혹은 *Cox ring*은 다음과 같이 정의된다:
+Toric variety $X_\Sigma$의 *homogeneous coordinate ring<sub>동차 좌표환</sub>* 혹은 *Cox ring<sub>콕스 환</sub>*은 다음과 같이 정의된다:
 
 $$S = \mathbb{C}[\x_\rho \mid \rho \in \Sigma(1)].$$
 :::
@@ -157,11 +157,11 @@ Cox ring $S$ 위의 $\Cl(X_\Sigma)$-grading은 다음과 같이 정의된다: $\
 
 $$\hat{\x}_\sigma = \prod_{\rho \not\subset \sigma} \x_\rho$$
 
-로 정의한다. *Irrelevant ideal* $B(\Sigma)$는 이들 monomial로 생성되는 ideal
+로 정의한다. *Irrelevant ideal<sub>무관 아이디얼</sub>* $B(\Sigma)$는 이들 monomial로 생성되는 ideal
 
 $$B(\Sigma) = \langle \hat{\x}_\sigma \mid \sigma \in \Sigma \rangle \subseteq S$$
 
-이며, *exceptional set* $Z(\Sigma) = V(B(\Sigma)) \subseteq \mathbb{C}^{\Sigma(1)}$은 그 zero locus이다.
+이며, *exceptional set<sub>예외집합</sub>* $Z(\Sigma) = V(B(\Sigma)) \subseteq \mathbb{C}^{\Sigma(1)}$은 그 zero locus이다.
 :::
 
 명칭의 유래는 $\mathbb{P}^n$의 경우 $B(\Sigma) = \langle \x_0, \ldots, \x_n \rangle$이 되어 usual homogeneous coordinate ring의 irrelevant ideal과 일치하는 데 있다. 실제로 $\mathbb{P}^n$의 fan은 $n+1$개의 1차원 cone을 가지며, 각 maximal cone은 그 중 $n$개를 포함하므로 $\hat{\x}_\sigma$는 변수 하나만 빼고 곱한 것이 된다. 모든 maximal cone에 대해 모으면 $\langle \x_0, \ldots, \x_n \rangle$이 생성된다.

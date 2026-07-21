@@ -81,7 +81,7 @@ $$\cdots \rightarrow M\otimes_AN_1\rightarrow M\otimes_AN_0\rightarrow M\otimes_
 
 $$H^n(\Hom_\lMod{A}(M, I^\bullet)) \cong H^n(\Hom_\lMod{A}(P_\bullet, N))$$
 
-이 성립한다. 여기서 $P_\bullet \to M$은 $M$의 projective resolution이고, $N \to I^\bullet$은 $N$의 injective resolution이다.
+이 성립한다. 여기서 $P_\bullet \rightarrow M$은 $M$의 projective resolution이고, $N \rightarrow I^\bullet$은 $N$의 injective resolution이다.
 :::
 
 ::: 증명
@@ -141,7 +141,7 @@ $$\cdots \longrightarrow \Hom_\lMod{A}(M, I^{n-1}) \overset{\delta_{n-1}}{\longr
 
 에서, $H^n(F^{n-1}\Tot(K)^\bullet)$은 connecting homomorphism $\delta_{n-1}$의 cokernel이라는 것을 안다. 이 때, $H^n(F^n\Tot(K)^\bullet)$은 이미 $p=n$인 경우에 구했으며, connecting homomorphism $\delta_{n-1}$은 다시 $\Hom_\lMod{A}(M, I^{n-1})\rightarrow \Hom_\lMod{A}(M, I^{n})$으로부터 오는 것이므로
 
-$$H^n(F^{n-1}\Tot(K)^\bullet)=\frac{\ker(\Hom_\lMod{A}(M, I^n) \to \Hom_\lMod{A}(M, I^{n+1}))}{\im(\Hom_\lMod{A}(M, I^{n-1}) \to \Hom_\lMod{A}(M, I^n))}$$
+$$H^n(F^{n-1}\Tot(K)^\bullet)=\frac{\ker(\Hom_\lMod{A}(M, I^n) \rightarrow \Hom_\lMod{A}(M, I^{n+1}))}{\im(\Hom_\lMod{A}(M, I^{n-1}) \rightarrow \Hom_\lMod{A}(M, I^n))}$$
 
 을 얻는다. 이제 $p< n-1$에 대해서는 isomorphism ($\ast\ast$)을 사용하여 모든 경우가 $p=n-1$과 isomorphic함을 알 수 있고 특히
 
@@ -211,7 +211,7 @@ $$0 \rightarrow \mathbb{Z}\rightarrow \mathbb{Z}\rightarrow \mathbb{Z}/n\mathbb{
 
 을 생각하고 $\Hom_\mathbb{Z}(-,A)$를 취하자. 그럼 $\Hom_\mathbb{Z}(\mathbb{Z},A)$는 $1$의 image에 의해 결정되므로, $\Hom_\mathbb{Z}(\mathbb{Z}, A)\cong A$이고 이로부터 다음의 complex
 
-$$0 \to A \xrightarrow{\cdot n} A \to 0$$
+$$0 \rightarrow A \xrightarrow{\cdot n} A \rightarrow 0$$
 
 를 얻는다. 이 때, 첫 번째 함수는 $a \mapsto na$이며, 따라서 첫 번째 homology는
 
@@ -220,26 +220,26 @@ $$\Ext^1_\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, A) \cong \coker(\cdot n ) = A/nA$$
 이다. $\Hom_\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, A)=A[n]$인 것은 단순 계산이다.
 :::
 
-더 일반적으로, $\Ext^1(M,N)$는 $0 \to N \to E \to M \to 0$ 형태의 short exact sequence, 즉 $N$에 의한 $M$의 extension의 equivalence class와 연결되며, 이는 Yoneda Ext를 통해 확인할 수 있다. ([Wikipedia](https://en.wikipedia.org/wiki/Ext_functor)) [명제 5](#prop5)보다는 덜 직관적이지만, [명제 6](#prop6) 또한 이러한 의미에서 $\Ext$라는 명칭의 기원을 보여준다 할 수 있다. 
+더 일반적으로, $\Ext^1(M,N)$는 $0 \rightarrow N \rightarrow E \rightarrow M \rightarrow 0$ 형태의 short exact sequence, 즉 $N$에 의한 $M$의 extension의 equivalence class와 연결되며, 이는 Yoneda Ext를 통해 확인할 수 있다. ([Wikipedia](https://en.wikipedia.org/wiki/Ext_functor)) [명제 5](#prop5)보다는 덜 직관적이지만, [명제 6](#prop6) 또한 이러한 의미에서 $\Ext$라는 명칭의 기원을 보여준다 할 수 있다. 
 
 마지막으로 우리는 다음을 정의한다. 
 
 ::: 정의 7
-Commutative ring $A$와 rank $n$ free $A$-module $F$, 그리고 $A$-linear map $\varphi : F \to A$가 주어졌다 하자. 그럼 *Koszul complex* $K(\varphi)_\bullet$은 exterior algebra $K=\bigwedge F$에 다음과 같이 chain complex 구조를 부여한 것이다. 
+Commutative ring $A$와 rank $n$ free $A$-module $F$, 그리고 $A$-linear map $\varphi : F \rightarrow A$가 주어졌다 하자. 그럼 *Koszul complex<sub>코쥴 복합체</sub>* $K(\varphi)_\bullet$은 exterior algebra $K=\bigwedge F$에 다음과 같이 chain complex 구조를 부여한 것이다. 
 
 1. 각각의 $i$에 대하여, $K_i = \bigwedge\nolimits^i F$이다.
-2. 각각의 $i$에 대하여, $d_i: K_i \to K_{i-1}$는 degree $-1$의 graded derivation으로, 식 $d(f) = \varphi(f)$와 Leibniz rule
+2. 각각의 $i$에 대하여, $d_i: K_i \rightarrow K_{i-1}$는 degree $-1$의 graded derivation으로, 식 $d(f) = \varphi(f)$와 Leibniz rule
     
     $$d(\xi \wedge \eta) = d(\xi) \wedge \eta + (-1)^{\degree(\xi)} \, \xi \wedge d(\eta)$$
 
     에 의해 유일하게 결정된다.
 :::
 
-Augmentation map $\epsilon: K_0=A\to A/\im\varphi$를 canonical projection으로 정의하면, $K(\varphi)_\bullet$을 $A/\im\varphi$의 resolution으로 생각할 수 있다. 편의상 $F$의 basis $e_1, \ldots, e_n$을 고정하고 $\x_i = \varphi(e_i)$라 하면 $\im\varphi = (\x_1, \ldots, \x_n)$이므로, 이를 $K_\bullet(\x_1, \ldots, \x_n)$이라고도 쓴다.
+Augmentation map $\epsilon: K_0=A\rightarrow A/\im\varphi$를 canonical projection으로 정의하면, $K(\varphi)_\bullet$을 $A/\im\varphi$의 resolution으로 생각할 수 있다. 편의상 $F$의 basis $e_1, \ldots, e_n$을 고정하고 $\x_i = \varphi(e_i)$라 하면 $\im\varphi = (\x_1, \ldots, \x_n)$이므로, 이를 $K_\bullet(\x_1, \ldots, \x_n)$이라고도 쓴다.
 
 만일 $\x_1, \ldots, \x_n$이 $A$에서 regular sequence라면, Koszul complex는 $A/(\x_1, \ldots, \x_n)$의 *free resolution*이 된다. ([\[가환대수학\] §정칙국소환, ⁋정의 2](/ko/math/commutative_algebra/regular_local_rings#def2)) 즉
 
-$$0 \to K_n \to \cdots \to K_1 \xrightarrow{d_1} A \xrightarrow{\epsilon} A/(\x_1, \ldots, \x_n) \to 0$$
+$$0 \rightarrow K_n \rightarrow \cdots \rightarrow K_1 \xrightarrow{d_1} A \xrightarrow{\epsilon} A/(\x_1, \ldots, \x_n) \rightarrow 0$$
 
 이 exact하다. 
 
@@ -259,7 +259,7 @@ $$d_i = \begin{pmatrix} d'_i & (-1)^i \x_n \\ 0 & d'_{i-1} \end{pmatrix}$$
 
 이는 특히 field $\mathbb{K}$ 위의 polynomial algebra $A=\mathbb{K}[\x_1,\ldots, \x_n]$과 regular sequence $(\x_1,\ldots, \x_n)$의 경우에 잘 적용된다. 이 때 $F=\bigoplus_1^nAe_i$이고 augmentation map은 $e_i\mapsto \x_i$로 주어진다. 위의 논의에 의해 Koszul complex는 $\mathbb{K}$의 free resolution이 되며, 각각의 $K_i$는 free $A$-module이므로 $-\otimes_A\mathbb{K}$를 적용하면 다음의 complex
 
-$$0 \to \bigwedge\nolimits^n \mathbb{K}^n \to \cdots \to \bigwedge\nolimits^1 \mathbb{K}^n \to \bigwedge\nolimits^0 \mathbb{K}^n \to 0$$
+$$0 \rightarrow \bigwedge\nolimits^n \mathbb{K}^n \rightarrow \cdots \rightarrow \bigwedge\nolimits^1 \mathbb{K}^n \rightarrow \bigwedge\nolimits^0 \mathbb{K}^n \rightarrow 0$$
 
 을 얻으며, 이는 $A/(\x_1,\ldots, \x_n)\cong \mathbb{K}$의 resolution이다. 한편 $d_i$는 $\varphi$로부터 유도된 것이므로, $-\otimes_A \mathbb{K}$를 적용하면 모든 $\x_j$-계수가 $0$으로 가므로 $d_i \otimes 1 = 0$이다. 따라서
 

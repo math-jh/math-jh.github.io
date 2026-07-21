@@ -39,7 +39,7 @@ $$(uu')(u'^{-1}u^{-1})=u(u'u'^{-1})u^{-1}=uu^{-1}=1$$
 ::: 예시 2
 Ring $\mathbb{Z}$에서 $uv=1$을 만족하는 정수 $u,v$는 $u=v=1$ 또는 $u=v=-1$뿐이므로 $\mathbb{Z}^\times=\{1,-1\}$이다.
 
-임의의 division ring $A$에서는 $0$을 제외한 모든 원소가 정의상 역원을 가지므로 $A^\times=A\setminus\{0\}$이다 ([\[대수적 구조\] §분수체, ⁋정의 3](/ko/math/algebraic_structures/field_of_fractions#def3)). 특히 field $\mathbb{K}$에 대해 $\mathbb{K}^\times=\mathbb{K}\setminus\{0\}$은 곱셈에 대한 commutative group이다.
+임의의 division ring $A$에서는 $0$을 제외한 모든 원소가 정의상 역원을 가지므로 $A^\times=A\setminus\{0\}$이다 ([\[대수적 구조\] §분수체, ⁋정의 3](/ko/math/algebraic_structures/field_of_fractions#def3)). 특히 field $\mathbb{K}$에 대해 $\mathbb{K}^\times=\mathbb{K}\setminus\{0\}$은 곱셈에 대한 abelian group이다.
 
 주의할 것 중 하나는 한 ring의 unit이 그 특정 subring에서는 unit이 아닐 수 있다는 것이다. 가령 $2\in\mathbb{Q}$는 $\mathbb{Q}^\times$의 원소이지만, $\mathbb{Z}$ 안에서는 $2v=1$을 만족하는 정수 $v$가 없으므로 $2\not\in\mathbb{Z}^\times$이다. 
 :::

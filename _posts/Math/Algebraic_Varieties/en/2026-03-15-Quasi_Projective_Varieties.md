@@ -115,7 +115,7 @@ holds for all $q \in U$.
 So far, when we spoke of a variety we assumed an embedding into affine space or projective space, and the above definition lies on the same line of assumption. Through this we can perform concrete calculations, but one could hardly call this definition intrinsic. The following proposition shows that this definition admits a natural interpretation from the viewpoint of regular functions.
 
 ::: Proposition 8
-A map $\varphi: X \to Y$ is a morphism if and only if for every affine open set $V$ of $Y$ and every regular function $f \in \mathcal{O}_Y(V)$, the composition $f \circ \varphi: \varphi^{-1}(V) \to \mathbb{K}$ is a regular function.
+A map $\varphi: X \rightarrow Y$ is a morphism if and only if for every affine open set $V$ of $Y$ and every regular function $f \in \mathcal{O}_Y(V)$, the composition $f \circ \varphi: \varphi^{-1}(V) \rightarrow \mathbb{K}$ is a regular function.
 :::
 
 The heart of the proof is that a morphism is expressed locally by homogeneous polynomials, and a regular function on $Y$ can be written in the form $F/G$ for homogeneous polynomials $F, G$ of the same degree (thinking of the dehomogenization process), so their composition must also be a regular function. Using this, one can show the following.
@@ -129,7 +129,7 @@ This is essentially [§Affine Varieties, ⁋Definition 15](/en/math/algebraic_va
 ## Properties of Regular Maps
 
 ::: Proposition 10
-A regular map $\varphi: X \to Y$ is continuous.
+A regular map $\varphi: X \rightarrow Y$ is continuous.
 :::
 
 ::: Proof
@@ -149,13 +149,13 @@ The composition of regular maps is a regular map. The identity map is a regular 
 :::
 
 ::: Proof
-Let $\varphi: X \to Y$ and $\psi: Y \to Z$ be regular maps. If $W \subseteq Z$ is open and $f \in \mathcal{O}(W)$, then since $\psi$ is regular we have $f \circ \psi \in \mathcal{O}(\psi^{-1}(W))$. Now since $\varphi$ is regular, $(f \circ \psi) \circ \varphi \in \mathcal{O}(\varphi^{-1}(\psi^{-1}(W)))$. That is,
+Let $\varphi: X \rightarrow Y$ and $\psi: Y \rightarrow Z$ be regular maps. If $W \subseteq Z$ is open and $f \in \mathcal{O}(W)$, then since $\psi$ is regular we have $f \circ \psi \in \mathcal{O}(\psi^{-1}(W))$. Now since $\varphi$ is regular, $(f \circ \psi) \circ \varphi \in \mathcal{O}(\varphi^{-1}(\psi^{-1}(W)))$. That is,
 
 $$f \circ (\psi \circ \varphi) \in \mathcal{O}((\psi \circ \varphi)^{-1}(W))$$
 
 so $\psi \circ \varphi$ is a regular map.
 
-For the identity map $\id_X: X \to X$, we have $f \circ \id_X = f$, so it is trivially a regular map.
+For the identity map $\id_X: X \rightarrow X$, we have $f \circ \id_X = f$, so it is trivially a regular map.
 :::
 
 Thus quasi-projective varieties and regular maps form a category.
@@ -165,13 +165,13 @@ The restriction of a regular map to a closed subset is a regular map. The restri
 :::
 
 ::: Proof
-Let $\varphi: X \to Y$ be a regular map and let $Z \subseteq Y$ be closed. Consider $\psi = \varphi\vert_{\varphi^{-1}(Z)}: \varphi^{-1}(Z) \to Z$. If $f$ is a regular function on an open set $V$ of $Z$, then $f$ extends to a regular function on some open set $V' \supseteq V$ of $Y$ (at least locally). Concretely, by intersecting $V$ with an open affine cover of $Z$ and defining regular functions on each piece, one can glue them regularly to obtain a regular function on an open neighborhood $V'$ of $Y$. This works because regular functions are essentially local expressions of rational functions, so their definitions on affine charts are consistent and patch together on intersections of Zariski open covers. Then $f \circ \psi = (f \circ \varphi)\vert_{\varphi^{-1}(Z)}$, and since $f \circ \varphi$ is regular on $\varphi^{-1}(V')$, its restriction is also regular.
+Let $\varphi: X \rightarrow Y$ be a regular map and let $Z \subseteq Y$ be closed. Consider $\psi = \varphi\vert_{\varphi^{-1}(Z)}: \varphi^{-1}(Z) \rightarrow Z$. If $f$ is a regular function on an open set $V$ of $Z$, then $f$ extends to a regular function on some open set $V' \supseteq V$ of $Y$ (at least locally). Concretely, by intersecting $V$ with an open affine cover of $Z$ and defining regular functions on each piece, one can glue them regularly to obtain a regular function on an open neighborhood $V'$ of $Y$. This works because regular functions are essentially local expressions of rational functions, so their definitions on affine charts are consistent and patch together on intersections of Zariski open covers. Then $f \circ \psi = (f \circ \varphi)\vert_{\varphi^{-1}(Z)}$, and since $f \circ \varphi$ is regular on $\varphi^{-1}(V')$, its restriction is also regular.
 
 The case of an open subset is simpler. If $U \subseteq Y$ is open and $f$ is regular on $V \subseteq U$, then $f \circ \varphi$ is regular on $\varphi^{-1}(V)$.
 :::
 
 ::: Definition 13
-A morphism $\varphi: X \to Y$ is called an *isomorphism* if there exists an inverse map $\psi: Y \to X$ that is also a morphism.
+A morphism $\varphi: X \rightarrow Y$ is called an *isomorphism* if there exists an inverse map $\psi: Y \rightarrow X$ that is also a morphism.
 :::
 
 The notion of isomorphism means geometrically that two varieties are the same. That is, isomorphic varieties cannot be distinguished from the point of view of regular functions.

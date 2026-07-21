@@ -25,14 +25,14 @@ between the Jacobi ring and quantum cohomology. However, as we also observed in 
 Intuitively, a Frobenius manifold is a manifold whose tangent space at each point carries a Frobenius algebra structure.
 
 ::: Definition 1
-Let $A$ be a finite-dimensional commutative, associative $\mathbb{C}$-algebra equipped with a non-degenerate symmetric bilinear form $\eta: A \otimes A \to \mathbb{C}$. If for all elements $x,y,z\in A$ the identity
+Let $A$ be a finite-dimensional commutative, associative $\mathbb{C}$-algebra equipped with a non-degenerate symmetric bilinear form $\eta: A \otimes A \rightarrow \mathbb{C}$. If for all elements $x,y,z\in A$ the identity
 
 $$\eta(x \cdot y,z) = \eta(x,y \cdot z)$$
 
 holds, then the pair $(A, \eta)$ is called a *Frobenius algebra*.
 :::
 
-This condition means that the multiplication $\cdot : A \otimes A \to A$ and the bilinear form $\eta$ are compatible, defining a trilinear form $c(x,y,z) := \eta(x \cdot y,z)$ that is symmetric in all three arguments. Indeed, commutativity gives
+This condition means that the multiplication $\cdot : A \otimes A \rightarrow A$ and the bilinear form $\eta$ are compatible, defining a trilinear form $c(x,y,z) := \eta(x \cdot y,z)$ that is symmetric in all three arguments. Indeed, commutativity gives
 
 $$c(x,y,z) = \eta(x \cdot y,z) = \eta(y \cdot x,z) = c(y,x,z)$$
 
@@ -57,7 +57,7 @@ holds for all $\alpha,\beta,\gamma$, which follows from the associativity of the
 Meanwhile, in the examples of [§Overview of Mirror Symmetry](/en/math/mirror_symmetry/overview) we introduced the Landau–Ginzburg model, which consists of a holomorphic function $W$ on a given manifold $\check{X}$; the Jacobi ring containing the critical points of $W$ carried the information of the B-model. Locally this is written as follows.
 
 ::: Definition 3
-A holomorphic function $f : \mathbb{C}^n \to \mathbb{C}$ is said to have an *isolated hypersurface singularity* at the origin if the following two conditions hold.
+A holomorphic function $f : \mathbb{C}^n \rightarrow \mathbb{C}$ is said to have an *isolated hypersurface singularity* at the origin if the following two conditions hold.
 
 1. $f(0) = 0$, $df(0) = 0$.
 2. The origin is *isolated* among the critical points of $f$, i.e., in some neighborhood of the origin the only solution to $df = 0$ is the origin itself.
@@ -72,7 +72,7 @@ $$\Jac(f) = \mathbb{C}[\x_1, \ldots, \x_n]/(\partial_1 f, \ldots, \partial_n f).
 Its dimension $\mu(f)=\dim \Jac(f)$ counts the singularities of $f$ with multiplicity; intuitively, one may think of it as obtaining $\mu(f)$ simple critical points after a small perturbation. In singularity theory this $\mu(f)$ is called the *Milnor number* of $f$.
 
 ::: Example 4
-For a polynomial $f : \mathbb{C}^n \to \mathbb{C}$ all of whose critical points are isolated hypersurface singularities, the *residue pairing* $\eta$ on the Jacobi ring $\Jac(f)$ is defined by the formula
+For a polynomial $f : \mathbb{C}^n \rightarrow \mathbb{C}$ all of whose critical points are isolated hypersurface singularities, the *residue pairing* $\eta$ on the Jacobi ring $\Jac(f)$ is defined by the formula
 
 $$\eta(g, h) := \frac{1}{(2\pi i)^n} \oint_{\Gamma_\epsilon} \frac{g(\x) h(\x) \, d\x_1 \wedge \cdots \wedge d\x_n}{\partial_1 f \cdots \partial_n f}.$$
 
@@ -183,7 +183,7 @@ We now have all the ingredients needed to define a Frobenius manifold.
 A tuple $(M, \eta, \circ, e, E)$ is called a *Frobenius manifold* if the following conditions all hold.
 
 1. The Levi-Civita connection induced by the symmetric non-degenerate bilinear form $\eta$ on $TM$ is flat.
-2. At each $p\in M$ there exists a commutative associative product $\circ_p: T_p M \otimes T_p M \to T_p M$ that is smooth in $p$.
+2. At each $p\in M$ there exists a commutative associative product $\circ_p: T_p M \otimes T_p M \rightarrow T_p M$ that is smooth in $p$.
 3. There exists a vector field $e$ that is the identity element for the multiplication $\circ$ at every point, and $\nabla e = 0$.
 4. There exists a vector field $E$ satisfying the affine condition $\nabla^2 E=0$ such that for a suitable constant $d\in \mathbb{C}$,
     
@@ -199,7 +199,7 @@ A tuple $(M, \eta, \circ, e, E)$ is called a *Frobenius manifold* if the followi
 The last condition in [Definition 5](#def5) is called potentiality because it allows the trilinear form $c$ to be expressed as the third partial derivatives of a suitable scalar function $F:M \rightarrow \mathbb{C}$.
 
 ::: Proposition 6
-For a Frobenius manifold $(M, \eta, \circ, e, E)$ with flat coordinates $t^1, \ldots, t^n$, there exists a holomorphic function $F: M \to \mathbb{C}$ (defined locally) such that
+For a Frobenius manifold $(M, \eta, \circ, e, E)$ with flat coordinates $t^1, \ldots, t^n$, there exists a holomorphic function $F: M \rightarrow \mathbb{C}$ (defined locally) such that
 
 $$c_{\alpha\beta\gamma}(t) := \eta(\partial_{t^\alpha} \circ \partial_{t^\beta}, \partial_{t^\gamma}) = \frac{\partial^3 F}{\partial t^\alpha \partial t^\beta \partial t^\gamma}$$
 

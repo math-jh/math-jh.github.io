@@ -53,7 +53,7 @@ $$\Div_T(X_\Sigma) \hookrightarrow \Div(X_\Sigma) \twoheadrightarrow \Cl(X_\Sigm
 
 정의에 의해 이 kernel은 $\Div_T(X_\Sigma)$의 원소 중 $\Cl(X_\Sigma)$에서 $0$이 되는 것들, 즉 *torus-invariant이면서 동시에 principal*한 divisor들의 모임이다. 그러므로 이는 결국 toric variety 위에서 어떤 rational function이 torus-invariant principal divisor를 정의하는지를 묻는 문제로 귀결된다.
 
-그럼 가장 자연스러운 후보는 lattice $M$의 원소 $m \in M$에 대응하는 *character* $\rchi^m$이다. 각각의 $m \in M$에 대해, character $\rchi^m: T_N \to \mathbb{C}^\ast$는 $T_N \subset X_\Sigma$가 open dense이므로 $X_\Sigma$ 위의 유리함수로 볼 수 있다 ([§아핀 토릭 다양체, ⁋명제 10](/ko/math/toric_geometry/affine_toric_varieties#prop10)). 이 때, $\rchi^m$ 자체는 $T_N$의 작용 하에서 invariant하지 않지만, $t \in T_N$에 대해
+그럼 가장 자연스러운 후보는 lattice $M$의 원소 $m \in M$에 대응하는 *character* $\rchi^m$이다. 각각의 $m \in M$에 대해, character $\rchi^m: T_N \rightarrow \mathbb{C}^\ast$는 $T_N \subset X_\Sigma$가 open dense이므로 $X_\Sigma$ 위의 유리함수로 볼 수 있다 ([§아핀 토릭 다양체, ⁋명제 10](/ko/math/toric_geometry/affine_toric_varieties#prop10)). 이 때, $\rchi^m$ 자체는 $T_N$의 작용 하에서 invariant하지 않지만, $t \in T_N$에 대해
 
 $$(t \cdot \rchi^m)(x) = \rchi^m(t x) = \rchi^m(t) \cdot \rchi^m(x)$$
 
@@ -66,7 +66,7 @@ $$\divisor(\rchi^m) = \sum_{\rho \in \Sigma(1)} \langle m, v_\rho \rangle D_\rho
 :::
 
 ::: 증명
-$X_\Sigma$가 normal이므로 ([§토릭 다양체의 정의, ⁋명제 4](/ko/math/toric_geometry/toric_varieties#prop4)) 각 prime divisor $D_\rho$의 generic point에서의 local ring $\mathcal{O}_{X_\Sigma, D_\rho}$은 DVR이고, 이 위의 valuation을 $v_{D_\rho}: \mathbb{C}(X_\Sigma)^\ast \to \mathbb{Z}$로 적자. Principal divisor의 정의에 의해
+$X_\Sigma$가 normal이므로 ([§토릭 다양체의 정의, ⁋명제 4](/ko/math/toric_geometry/toric_varieties#prop4)) 각 prime divisor $D_\rho$의 generic point에서의 local ring $\mathcal{O}_{X_\Sigma, D_\rho}$은 DVR이고, 이 위의 valuation을 $v_{D_\rho}: \mathbb{C}(X_\Sigma)^\ast \rightarrow \mathbb{Z}$로 적자. Principal divisor의 정의에 의해
 
 $$\divisor(\rchi^m) = \sum_{\rho \in \Sigma(1)} v_{D_\rho}(\rchi^m) D_\rho$$
 
@@ -75,7 +75,7 @@ $$\divisor(\rchi^m) = \sum_{\rho \in \Sigma(1)} v_{D_\rho}(\rchi^m) D_\rho$$
 
 이로부터 우리는 자연스러운 group homomorphism 
 
-$$M \to \Div_T(X_\Sigma);\qquad m \mapsto \divisor(\rchi^m)$$
+$$M \rightarrow \Div_T(X_\Sigma);\qquad m \mapsto \divisor(\rchi^m)$$
 
 을 얻는다. 이 homomorphism의 image는 principal divisor들의 모임이며, 이것이 정확히 (1)의 kernel이라는 것이 우리의 주장이다.
 
@@ -88,9 +88,9 @@ $$0 \longrightarrow M \longrightarrow \Div_T(X_\Sigma) \longrightarrow \Cl(X_\Si
 :::
 
 ::: 증명
-먼저 $M \to \Div_T(X_\Sigma)$가 injective임을 보인다. 만약 $\divisor(\rchi^m) = 0$이라면 모든 $\rho \in \Sigma(1)$에 대해 $\langle m, v_\rho \rangle = 0$이다. Fan $\Sigma$가 $N_\mathbb{R}$를 span한다고 가정하면, primitive generator들 $\{v_\rho\}$가 $N_\mathbb{R}$를 span하므로 $m = 0$이다.
+먼저 $M \rightarrow \Div_T(X_\Sigma)$가 injective임을 보인다. 만약 $\divisor(\rchi^m) = 0$이라면 모든 $\rho \in \Sigma(1)$에 대해 $\langle m, v_\rho \rangle = 0$이다. Fan $\Sigma$가 $N_\mathbb{R}$를 span한다고 가정하면, primitive generator들 $\{v_\rho\}$가 $N_\mathbb{R}$를 span하므로 $m = 0$이다.
 
-다음으로 $\Div_T(X_\Sigma) \to \Cl(X_\Sigma)$의 kernel이 character들의 divisor들과 정확히 일치함을 보인다. 정의에 의해 kernel은 principal divisor이면서 동시에 $T$-invariant인 divisor들의 모임이다. $D = \divisor(f)$가 $T$-invariant라 하자. $T$-invariant divisor의 support는 boundary $X_\Sigma \setminus T_N = \bigcup_{\rho \in \Sigma(1)} D_\rho$에 들어가므로, $f$를 열린 조밀한 부분집합 $T_N$에 제한하면 $\divisor(f \rvert_{T_N}) = 0$이다. 따라서 $f\rvert_{T_N}$은 $T_N$의 좌표환 $\mathbb{C}[M]$의 unit이다. $\mathbb{C}[M]$의 unit은 정확히 $c \cdot \rchi^m$ ($c \in \mathbb{C}^\ast$, $m \in M$)의 꼴이므로, $f\rvert_{T_N} = c \cdot \rchi^m$이며 $X_\Sigma$의 정규성에 의해 $f = c \cdot \rchi^m$ on $X_\Sigma$이다. 그러므로 $D = \divisor(\rchi^m)$.
+다음으로 $\Div_T(X_\Sigma) \rightarrow \Cl(X_\Sigma)$의 kernel이 character들의 divisor들과 정확히 일치함을 보인다. 정의에 의해 kernel은 principal divisor이면서 동시에 $T$-invariant인 divisor들의 모임이다. $D = \divisor(f)$가 $T$-invariant라 하자. $T$-invariant divisor의 support는 boundary $X_\Sigma \setminus T_N = \bigcup_{\rho \in \Sigma(1)} D_\rho$에 들어가므로, $f$를 열린 조밀한 부분집합 $T_N$에 제한하면 $\divisor(f \rvert_{T_N}) = 0$이다. 따라서 $f\rvert_{T_N}$은 $T_N$의 좌표환 $\mathbb{C}[M]$의 unit이다. $\mathbb{C}[M]$의 unit은 정확히 $c \cdot \rchi^m$ ($c \in \mathbb{C}^\ast$, $m \in M$)의 꼴이므로, $f\rvert_{T_N} = c \cdot \rchi^m$이며 $X_\Sigma$의 정규성에 의해 $f = c \cdot \rchi^m$ on $X_\Sigma$이다. 그러므로 $D = \divisor(\rchi^m)$.
 
 마지막으로 surjectivity를 보인다. 임의의 divisor $D \in \Div(X_\Sigma)$에 대해 $T_N$으로의 제한 $D \cap T_N$은 $T_N \cong (\mathbb{C}^\ast)^n$ 위의 divisor이다. $T_N$의 좌표환 $\mathbb{C}[M]$이 UFD이므로 이는 principal이며, 따라서 어떤 $f \in \mathbb{C}(X_\Sigma)^\ast$에 대해 $D - \divisor(f)$의 support가 $X_\Sigma \setminus T_N = \bigcup_{\rho \in \Sigma(1)} D_\rho$ 안에 들어가도록 할 수 있다. 우변은 torus-invariant divisor의 합으로 표현되므로, $[D] = [D - \divisor(f)]$는 torus-invariant representative를 갖는다.
 :::
@@ -102,7 +102,7 @@ $$0 \longrightarrow M \longrightarrow \Div_T(X_\Sigma) \longrightarrow \Cl(X_\Si
 한편, divisor를 통해 line bundle의 이야기를 하기 위해서는 Cartier divisor를 살펴보아야 한다. 우리는 위에서 Weil divisor를 살펴보았고, smooth case에서는 Weil divisor와 Cartier divisor가 서로 같으므로 부분적으로 이는 완료되었지만, toric variety에서는 (smooth하지 않더라도) Cartier divisor를 기술하는 방법이 존재한다. 
 
 ::: 정의 5
-Fan $\Sigma$의 *support* $\lvert \Sigma \rvert = \bigcup_{\sigma \in \Sigma} \sigma$ 위에 정의된 함수 $\psi: \lvert \Sigma \rvert \to \mathbb{R}$가 *piecewise linear function<sub>조각별 선형 함수</sub>*이라는 것은, 각각의 cone $\sigma \in \Sigma$에 대해 $\psi\rvert_\sigma$는 어떤 $m_\sigma \in M_\mathbb{R}$에 의해 $\psi(v) = \langle m_\sigma, v \rangle$의 꼴로 나타나는 것이다. Piecewise linear function $\psi$가 *integral<sub>정수형</sub>*이라는 것은 각각의 $m_\sigma$가 $M$에 속하는 것이다.
+Fan $\Sigma$의 *support* $\lvert \Sigma \rvert = \bigcup_{\sigma \in \Sigma} \sigma$ 위에 정의된 함수 $\psi: \lvert \Sigma \rvert \rightarrow \mathbb{R}$가 *piecewise linear function<sub>조각별 선형 함수</sub>*이라는 것은, 각각의 cone $\sigma \in \Sigma$에 대해 $\psi\rvert_\sigma$는 어떤 $m_\sigma \in M_\mathbb{R}$에 의해 $\psi(v) = \langle m_\sigma, v \rangle$의 꼴로 나타나는 것이다. Piecewise linear function $\psi$가 *integral<sub>정수형</sub>*이라는 것은 각각의 $m_\sigma$가 $M$에 속하는 것이다.
 :::
 
 Piecewise linear function들의 모임을 $\PL(\Sigma, M_\mathbb{R})$, integral piecewise linear function들의 모임을 $\PL(\Sigma, M)$으로 적는다. 그럼 중요한 것은 torus-invariant Cartier divisor $D$는 하나의 $\psi_D \in \PL(\Sigma, M)$을 결정한다는 것이다.
@@ -110,7 +110,7 @@ Piecewise linear function들의 모임을 $\PL(\Sigma, M_\mathbb{R})$, integral 
 ::: 명제 6
 Torus-invariant Cartier divisor $D = \sum_{\rho \in \Sigma(1)} a_\rho D_\rho$에 대해, 각 maximal cone $\sigma \in \Sigma$ 위에서 $D\rvert_{U_\sigma} = \divisor(\rchi^{-m_\sigma})$로 결정되는 $m_\sigma \in M$을 사용하여
 
-$$\psi_D: \lvert \Sigma \rvert \to \mathbb{R};\qquad \psi_D(v) = \langle m_\sigma, v \rangle \quad \text{for } v \in \sigma$$
+$$\psi_D: \lvert \Sigma \rvert \rightarrow \mathbb{R};\qquad \psi_D(v) = \langle m_\sigma, v \rangle \quad \text{for } v \in \sigma$$
 
 로 정의되는 함수는 $\PL(\Sigma, M)$의 원소이며, 특히 각 ray $\rho \in \Sigma(1)$의 primitive generator $v_\rho$에서 $\psi_D(v_\rho) = -a_\rho$의 값을 갖는다.
 :::
@@ -163,12 +163,12 @@ $$\Delta_D = \{m \in M_\mathbb{R} \mid \langle m, v_\rho \rangle \ge -a_\rho \te
 
 을 정의할 수 있다. 이 때, $\Delta_D$ 내부의 lattice point들의 모임이 summand의 $m$들과 정확히 일치한다는 것을 안다. 
 
-한편 우리는 이렇게 polyhedron 내부의 lattice point들이 기하적인 의미를 갖는 상황을 처음 마주치는 것이 아닌데, [§토릭 다양체의 정의, ⁋명제 9](/ko/math/toric_geometry/toric_varieties#prop9)에서 우리는 lattice polytope $P$의 lattice points $P \cap M = \{m_0, \ldots, m_s\}$로부터 monomial map $\phi_P: T_N \to \mathbb{P}^s$를 구성하였고, 이 map의 image의 Zariski closure가 $X_P$와 isomorphic함을 보였다. 그럼 이 lattice points들은 위 [명제 7](#prop7)의 관점에서 보면 정확히 $P = \Delta_D$에 대응되는 $H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))$의 character basis와 일치한다. 즉, lattice point가 결정하던 projective embedding은 사실 line bundle $\mathcal{O}_{X_\Sigma}(D)$의 global sections이 결정하는 standard linear system embedding이었던 것이다.
+한편 우리는 이렇게 polyhedron 내부의 lattice point들이 기하적인 의미를 갖는 상황을 처음 마주치는 것이 아닌데, [§토릭 다양체의 정의, ⁋명제 9](/ko/math/toric_geometry/toric_varieties#prop9)에서 우리는 lattice polytope $P$의 lattice points $P \cap M = \{m_0, \ldots, m_s\}$로부터 monomial map $\phi_P: T_N \rightarrow \mathbb{P}^s$를 구성하였고, 이 map의 image의 Zariski closure가 $X_P$와 isomorphic함을 보였다. 그럼 이 lattice points들은 위 [명제 7](#prop7)의 관점에서 보면 정확히 $P = \Delta_D$에 대응되는 $H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))$의 character basis와 일치한다. 즉, lattice point가 결정하던 projective embedding은 사실 line bundle $\mathcal{O}_{X_\Sigma}(D)$의 global sections이 결정하는 standard linear system embedding이었던 것이다.
 
 이 관점은 toric variety에서 ample이라는 기하학적 조건이 fan의 조합론으로 어떻게 번역되는지를 묻는 것을 자연스럽게 만든다. 결과부터 적자면, 이는 piecewise linear function의 볼록성으로 완전히 기술된다.
 
 ::: 정의 8
-Piecewise linear function $\psi: \lvert \Sigma \rvert \to \mathbb{R}$가 *strictly convex<sub>엄격볼록</sub>*하다는 것은 임의의 서로 다른 두 maximal cone $\sigma_1, \sigma_2 \in \Sigma$와 각각에 대응하는 $m_{\sigma_1}, m_{\sigma_2} \in M_\mathbb{R}$에 대해,
+Piecewise linear function $\psi: \lvert \Sigma \rvert \rightarrow \mathbb{R}$가 *strictly convex<sub>엄격볼록</sub>*하다는 것은 임의의 서로 다른 두 maximal cone $\sigma_1, \sigma_2 \in \Sigma$와 각각에 대응하는 $m_{\sigma_1}, m_{\sigma_2} \in M_\mathbb{R}$에 대해,
 
 $$\psi(v) = \langle m_{\sigma_1}, v \rangle \text{ for } v \in \sigma_1, \qquad \psi(v) = \langle m_{\sigma_2}, v \rangle \text{ for } v \in \sigma_2$$
 
@@ -213,7 +213,7 @@ Toric variety $X_\Sigma$에 대해 다음이 성립한다.
 ::: 증명
 (1) 일반적인 대수다양체에서 Cartier divisor의 group $\CaDiv(X)$는 line bundle들의 group과 동형이며, principal divisor들로의 quotient가 Picard group을 준다. Toric variety에서 torus-invariant Cartier divisor만으로도 모든 linear equivalence class를 대표할 수 있으므로, $\Pic(X_\Sigma) \cong \CaDiv_T(X_\Sigma) / M$이 성립한다.
 
-(2) $M \to \Div_T(X_\Sigma)$의 image $\divisor(\rchi^m)$은 principal divisor이므로 자동으로 Cartier이며, 따라서 이 화살표는 $M \to \CaDiv_T(X_\Sigma)$로 factor된다. 결과적으로 commutative diagram의 좌측 두 column은 동일한 $M$이고, quotient $\Pic(X_\Sigma) = \CaDiv_T(X_\Sigma)/M$이 $\Cl(X_\Sigma) = \Div_T(X_\Sigma)/M$의 부분군으로 자연스럽게 들어간다. Injectivity는 $\CaDiv_T(X_\Sigma) \hookrightarrow \Div_T(X_\Sigma)$가 injective이고 두 quotient가 동일한 $M$의 image로 나눈 것이라는 사실로부터 따라 나온다.
+(2) $M \rightarrow \Div_T(X_\Sigma)$의 image $\divisor(\rchi^m)$은 principal divisor이므로 자동으로 Cartier이며, 따라서 이 화살표는 $M \rightarrow \CaDiv_T(X_\Sigma)$로 factor된다. 결과적으로 commutative diagram의 좌측 두 column은 동일한 $M$이고, quotient $\Pic(X_\Sigma) = \CaDiv_T(X_\Sigma)/M$이 $\Cl(X_\Sigma) = \Div_T(X_\Sigma)/M$의 부분군으로 자연스럽게 들어간다. Injectivity는 $\CaDiv_T(X_\Sigma) \hookrightarrow \Div_T(X_\Sigma)$가 injective이고 두 quotient가 동일한 $M$의 image로 나눈 것이라는 사실로부터 따라 나온다.
 :::
 
 Toric variety의 Picard group은 piecewise linear function의 언어로 명시적으로 기술될 수 있다. $\PL(\Sigma, M)$에서 globally linear한 것들, 즉 전역적으로 하나의 $m \in M$에 의해 $\psi(v) = \langle m, v \rangle$로 주어지는 함수들을 quotient하면 Picard group을 얻는다. 이는 toric variety의 조합론적 불변량을 계산하는 강력한 방법을 제공한다.

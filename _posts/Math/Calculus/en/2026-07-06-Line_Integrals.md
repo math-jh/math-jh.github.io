@@ -19,7 +19,7 @@ Now we examine the integral of vector functions. The first step is the line inte
 ## Line Integral
 
 ::: Definition 1
-The *line integral* of a continuous scalar field $f$ over a $C^1$ curve $\mathbf{r}\colon [a, b] \to \mathbb{R}^n$ is
+The *line integral* of a continuous scalar field $f$ over a $C^1$ curve $\mathbf{r}\colon [a, b] \rightarrow \mathbb{R}^n$ is
 
 $$\int_C f\mathop{ds} = \int_a^b f(\mathbf{r}(t))\lvert \mathbf{r}'(t)\rvert \mathop{dt}$$
 
@@ -31,7 +31,7 @@ By definition, the integral above is evaluated using an arc-length parametrizati
 To lift this to the integral of a vector function, we must take the direction of the curve into account and define it as follows.
 
 ::: Definition 2
-The *line integral* of a continuous vector field $\mathbf{F}$ over a $C^1$ curve $\mathbf{r}\colon [a, b] \to \mathbb{R}^n$ is
+The *line integral* of a continuous vector field $\mathbf{F}$ over a $C^1$ curve $\mathbf{r}\colon [a, b] \rightarrow \mathbb{R}^n$ is
 
 $$\int_C \mathbf{F} \cdot d\mathbf{r} = \int_a^b \mathbf{F}(\mathbf{r}(t)) \cdot \mathbf{r}'(t)\mathop{dt}$$
 
@@ -83,7 +83,7 @@ Hence the core claim is $(3 \Rightarrow 1)$. For this we must construct a potent
 
 $$\frac{f(\mathbf{x} + h \mathbf{e}_i) - f(\mathbf{x})}{h}$$
 
-is the integral over the straight line segment from $\mathbf{x}$ to $\mathbf{x} + h \mathbf{e}_i$ divided by $h$, so as $h \to 0$ it converges to $F_i(\mathbf{x})$; therefore $\partial f/\partial x_i = F_i$, that is, $\nabla f = \mathbf{F}$.
+is the integral over the straight line segment from $\mathbf{x}$ to $\mathbf{x} + h \mathbf{e}_i$ divided by $h$, so as $h \rightarrow 0$ it converges to $F_i(\mathbf{x})$; therefore $\partial f/\partial x_i = F_i$, that is, $\nabla f = \mathbf{F}$.
 :::
 
 Let us verify this in the following example.

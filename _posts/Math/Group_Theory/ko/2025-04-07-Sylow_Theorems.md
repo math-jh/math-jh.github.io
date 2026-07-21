@@ -180,7 +180,7 @@ $M=gMg^{-1}$을 만족하는 $g\in G$를 택하자. 그럼 $gPg^{-1}$는 $M$의 
 :::
 
 ::: 따름정리 10
- Finite group 사이의 group homomorphism $f: G_1 \to G_2$을 고정하자.  $G_1$의 Sylow $p$-subgroup $P_1$에 대해, $f(P_1)$를 포함하는 $G_2$의 Sylow $p$-subgroup $P_2$가 존재한다.
+ Finite group 사이의 group homomorphism $f: G_1 \rightarrow G_2$을 고정하자.  $G_1$의 Sylow $p$-subgroup $P_1$에 대해, $f(P_1)$를 포함하는 $G_2$의 Sylow $p$-subgroup $P_2$가 존재한다.
 :::
 
 ::: 증명

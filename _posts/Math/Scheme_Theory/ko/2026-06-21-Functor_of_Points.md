@@ -112,7 +112,7 @@ $$\Hom_\Sch(X,Y)\cong \operatorname{Nat}(h_X, h_Y)$$
 이제 거꾸로, 주어진 functor가 어떤 scheme의 functor of points로 나타나는지를 묻는 것이 자연스럽다. 
 
 ::: 정의 5
-Functor $F:\Sch^\op \rightarrow \Set$가 *representable<sub>표현가능</sub>*하다는 것은, scheme $X$와 natural isomorphism $F\cong h_X$이 존재하는 것이다. 이 때 $X$를 $F$의 *representing object*라 부른다. 
+Functor $F:\Sch^\op \rightarrow \Set$가 *representable<sub>표현가능</sub>*하다는 것은, scheme $X$와 natural isomorphism $F\cong h_X$이 존재하는 것이다. 이 때 $X$를 $F$의 *representing object<sub>표현 대상</sub>*라 부른다. 
 :::
 
 [따름정리 4](#cor4)에 의하여, representing object는 (존재한다면) isomorphism까지 유일하게 결정된다. 따라서 어떤 기하학적 대상을 구성하고자 할 때, 그 대상이 가져야 할 $T$-point들의 집합 $F(T)$를 먼저 functorial하게 기술한 뒤, 이 $F$가 representable임을 보이는 전략을 취할 수 있다. 실제로 moduli problem들은 거의 항상 이러한 형태로 제기된다. 이 절의 마지막으로, representability를 [정리 3](#thm3)의 언어로 다시 풀어 쓴 universal element의 관점을 기록해둔다. 

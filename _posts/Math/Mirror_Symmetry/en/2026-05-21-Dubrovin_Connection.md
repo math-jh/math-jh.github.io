@@ -36,7 +36,7 @@ Thus, considering the connection
 
 $$\nabla^z_{\partial_\alpha} = \partial_\alpha + \frac{1}{z}\, \mathcal{C}_\alpha$$
 
-that interpolates between the two, we obtain a one-parameter family converging to the Levi-Civita connection $\nabla$ as $z \to \infty$ and diverging to the classical limit of the product $\circ$ as $z \to 0$; when computing at $z\rightarrow 0$ one simply rescales to extract the leading term of $z\nabla^z_{\partial_\alpha} = z\partial_\alpha + \mathcal{C}_\alpha$ in the $z \to 0$ limit. In this sense $\nabla^z$ is a *flat pencil of connections* joining the two structures, and physically it is interpreted as the string coupling constant.
+that interpolates between the two, we obtain a one-parameter family converging to the Levi-Civita connection $\nabla$ as $z \rightarrow \infty$ and diverging to the classical limit of the product $\circ$ as $z \rightarrow 0$; when computing at $z\rightarrow 0$ one simply rescales to extract the leading term of $z\nabla^z_{\partial_\alpha} = z\partial_\alpha + \mathcal{C}_\alpha$ in the $z \rightarrow 0$ limit. In this sense $\nabla^z$ is a *flat pencil of connections* joining the two structures, and physically it is interpreted as the string coupling constant.
 
 ::: Definition 1
 Let $M$ be a Frobenius manifold and $z \in \mathbb{C}^\ast$ an auxiliary complex parameter. The *Dubrovin connection* $\nabla^z$ is the connection on the pullback bundle defined via the projection

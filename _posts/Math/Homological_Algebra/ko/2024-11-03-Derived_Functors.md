@@ -26,7 +26,7 @@ $$\cdots\rightarrow H_n(A)\rightarrow H_n(B)\rightarrow H_n(C)\rightarrow H_{n-1
 를 만들 수 있다는 것을 증명했었다. 이 증명의 가장 핵심적인 부분은 connecting map $\delta$를 정의하는 부분인데, 이 과정을 일반화하여 다음과 같이 정의한다. 
 
 ::: 정의 1
-두 abelian category $\mathcal{A},\mathcal{B}$가 주어졌다 하자. 그럼 $\mathcal{A}$에서 $\mathcal{B}$로의 *homological $\delta$-functor*는 additive functor들 $T_n:\mathcal{A}\rightarrow\mathcal{B}$ ($n\geq 0$), 그리고 임의의 short exact sequence
+두 abelian category $\mathcal{A},\mathcal{B}$가 주어졌다 하자. 그럼 $\mathcal{A}$에서 $\mathcal{B}$로의 *homological $\delta$-functor<sub>호몰로지 $\delta$-함자</sub>*는 additive functor들 $T_n:\mathcal{A}\rightarrow\mathcal{B}$ ($n\geq 0$), 그리고 임의의 short exact sequence
 
 $$0\longrightarrow A\longrightarrow B\longrightarrow C\longrightarrow 0$$
 
@@ -71,7 +71,7 @@ $$0\longrightarrow A\longrightarrow B\longrightarrow C\longrightarrow 0$$
 ![morphism_of_delta_functor](/assets/images/Math/Homological_Algebra/Derived_Functors-3.svg){:style="width:41.13em" class="invert" .align-center}
 
 ::: 정의 3
-임의의 $\delta$-functor $T$가 *universal $\delta$-functor*라는 것은 임의의 $\delta$-functor $S$와 natural transformation $\alpha_0:S_0\rightarrow T_0$이 주어질 때마다, 이를 확장하는 유일한 $\delta$-functor들 사이의 morphism $(\alpha_n:S_n\Rightarrow T_n)$이 존재하는 것이다.
+임의의 $\delta$-functor $T$가 *universal $\delta$-functor<sub>보편 $\delta$-함자</sub>*라는 것은 임의의 $\delta$-functor $S$와 natural transformation $\alpha_0:S_0\rightarrow T_0$이 주어질 때마다, 이를 확장하는 유일한 $\delta$-functor들 사이의 morphism $(\alpha_n:S_n\Rightarrow T_n)$이 존재하는 것이다.
 :::
 
 ## 유도함자

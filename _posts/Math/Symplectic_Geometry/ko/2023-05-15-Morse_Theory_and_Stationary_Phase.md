@@ -19,24 +19,24 @@ published: false
 
 $$\mathcal{I}(z) = \int_\gamma e^{W(x)/z}\,\omega$$
 
-의 $z\to 0$ 점근행동이 자주 등장하며, 그 점근치가 phase function $W$의 임계점에서의 국소 데이터로 환원된다는 사실은 양자역학의 semiclassical limit, partial differential equation의 WKB 해석, singularity theory 등 다양한 맥락에서 핵심적이다. 이러한 환원은 두 개의 기초 위에 서 있다. 첫째는 임계점 근방에서 phase를 표준형으로 환원하는 *Morse lemma*이며, 둘째는 Gaussian integral의 다변수 일반화로 얻어지는 *stationary phase formula*이다. 또한 적분 경로의 선택을 통제하는 *Lefschetz thimble*의 구성도 본질적으로 Morse 이론의 gradient flow에 의해 주어진다. 본 글에서는 이 세 도구를 차례로 정리한다.
+의 $z\rightarrow 0$ 점근행동이 자주 등장하며, 그 점근치가 phase function $W$의 임계점에서의 국소 데이터로 환원된다는 사실은 양자역학의 semiclassical limit, partial differential equation의 WKB 해석, singularity theory 등 다양한 맥락에서 핵심적이다. 이러한 환원은 두 개의 기초 위에 서 있다. 첫째는 임계점 근방에서 phase를 표준형으로 환원하는 *Morse lemma*이며, 둘째는 Gaussian integral의 다변수 일반화로 얻어지는 *stationary phase formula*이다. 또한 적분 경로의 선택을 통제하는 *Lefschetz thimble*의 구성도 본질적으로 Morse 이론의 gradient flow에 의해 주어진다. 본 글에서는 이 세 도구를 차례로 정리한다.
 
 ## Morse function과 임계점
 
 우선 critical point와 그 non-degeneracy 개념을 정확히 하자.
 
 ::: 정의 1
-Smooth manifold ([\[미분다양체\] §미분다양체, ⁋정의 1](/ko/math/manifolds/smooth_manifolds#def1)) $M$과 smooth function $f:M\to\mathbb{R}$이 주어졌다 하자. 점 $p\in M$이 $f$의 *critical point<sub>임계점</sub>*라는 것은 differential ([\[미분다양체\] §미분사상, ⁋정의 7](/ko/math/manifolds/differentials#def7)) $df_p:T_pM\to\mathbb{R}$이 zero map인 것을 뜻한다. 여기서 $T_pM$은 $p$에서의 tangent space이다 ([\[미분다양체\] §접공간, ⁋정의 3](/ko/math/manifolds/tangent_space#def3)).
+Smooth manifold ([\[미분다양체\] §미분다양체, ⁋정의 1](/ko/math/manifolds/smooth_manifolds#def1)) $M$과 smooth function $f:M\rightarrow\mathbb{R}$이 주어졌다 하자. 점 $p\in M$이 $f$의 *critical point<sub>임계점</sub>*라는 것은 differential ([\[미분다양체\] §미분사상, ⁋정의 7](/ko/math/manifolds/differentials#def7)) $df_p:T_pM\rightarrow\mathbb{R}$이 zero map인 것을 뜻한다. 여기서 $T_pM$은 $p$에서의 tangent space이다 ([\[미분다양체\] §접공간, ⁋정의 3](/ko/math/manifolds/tangent_space#def3)).
 :::
 
 좌표 $(x_1,\ldots,x_n)$을 점 $p$ 근방에 잡으면 위 조건은 $\partial f/\partial x_i(p)=0$이 모든 $i$에 대해 성립한다는 것과 동치이다. 임계점에서는 일차 정보가 사라지므로, 함수의 국소적 형상은 이차 정보, 즉 Hessian이 결정한다.
 
 ::: 정의 2
-$f:M\to\mathbb{R}$의 임계점 $p$에서의 *Hessian<sub>헤시안</sub>* $\operatorname{Hess}_p(f)$는 다음의 식
+$f:M\rightarrow\mathbb{R}$의 임계점 $p$에서의 *Hessian<sub>헤시안</sub>* $\operatorname{Hess}_p(f)$는 다음의 식
 
 $$\operatorname{Hess}_p(f)(X,Y) = X_p(\tilde Y f)$$
 
-으로 정의되는 대칭 bilinear form $T_pM\times T_pM\to\mathbb{R}$이다. 여기서 $\tilde Y$는 $Y$의 임의의 smooth extension이고, $p$가 critical point라는 사실에 의해 위 표현은 extension의 선택과 무관하다.
+으로 정의되는 대칭 bilinear form $T_pM\times T_pM\rightarrow\mathbb{R}$이다. 여기서 $\tilde Y$는 $Y$의 임의의 smooth extension이고, $p$가 critical point라는 사실에 의해 위 표현은 extension의 선택과 무관하다.
 :::
 
 좌표 $(x_1,\ldots,x_n)$에서는
@@ -46,7 +46,7 @@ $$\operatorname{Hess}_p(f) = \left[\frac{\partial^2 f}{\partial x_i\partial x_j}
 으로 주어지는 대칭행렬이다. Critical point가 $df_p=0$이라는 1차 조건만으로 결정되는 데에 반해, Hessian은 그 critical point가 어떤 종류인가, 즉 극소·극대·안장점인가를 구분하는 이차 정보를 담는다.
 
 ::: 정의 3
-Critical point $p$가 *non-degenerate<sub>비퇴화</sub>*라는 것은 $\operatorname{Hess}_p(f)$가 비퇴화 대칭 bilinear form인 것, 즉 좌표를 잡았을 때 이 Hessian 행렬이 가역인 것을 뜻한다. 모든 critical point가 non-degenerate인 smooth function $f:M\to\mathbb{R}$을 *Morse function<sub>모스 함수</sub>*이라 부른다.
+Critical point $p$가 *non-degenerate<sub>비퇴화</sub>*라는 것은 $\operatorname{Hess}_p(f)$가 비퇴화 대칭 bilinear form인 것, 즉 좌표를 잡았을 때 이 Hessian 행렬이 가역인 것을 뜻한다. 모든 critical point가 non-degenerate인 smooth function $f:M\rightarrow\mathbb{R}$을 *Morse function<sub>모스 함수</sub>*이라 부른다.
 :::
 
 Non-degenerate critical point $p$에서 $\operatorname{Hess}_p(f)$의 signature는 좌표 변환에 대한 불변량이다. 양의 eigenvalue의 개수와 음의 eigenvalue의 개수가 좌표 선택에 의존하지 않으므로 다음 정의가 의미를 가진다.
@@ -68,7 +68,7 @@ $$\sigma_p = n - 2\lambda_p$$
 Non-degenerate critical point는 Hessian의 signature 외에는 어떠한 추가적인 좌표 불변량을 갖지 않는다. 다음 정리가 이 사실을 엄밀히 진술한다.
 
 ::: 정리 6 (Morse lemma)
-$f:M\to\mathbb{R}$의 non-degenerate critical point $p$에 대하여, 적당한 좌표 차트 $(U,\varphi=(y_1,\ldots,y_n))$이 존재하여 $\varphi(p)=0$이고
+$f:M\rightarrow\mathbb{R}$의 non-degenerate critical point $p$에 대하여, 적당한 좌표 차트 $(U,\varphi=(y_1,\ldots,y_n))$이 존재하여 $\varphi(p)=0$이고
 
 $$f\circ\varphi^{-1}(y) = f(p) - y_1^2 - \cdots - y_{\lambda_p}^2 + y_{\lambda_p+1}^2 + \cdots + y_n^2$$
 
@@ -76,7 +76,7 @@ $$f\circ\varphi^{-1}(y) = f(p) - y_1^2 - \cdots - y_{\lambda_p}^2 + y_{\lambda_p
 :::
 
 ::: 증명
-논의를 $M=\mathbb{R}^n$의 원점 근방으로 옮겨도 무방하다. $f(0)=0$, $df_0=0$이라 가정하자. 우선 다음의 보조 항등식이 필요하다. 임의의 smooth function $g:U\to\mathbb{R}$이 $g(0)=0$을 만족하면
+논의를 $M=\mathbb{R}^n$의 원점 근방으로 옮겨도 무방하다. $f(0)=0$, $df_0=0$이라 가정하자. 우선 다음의 보조 항등식이 필요하다. 임의의 smooth function $g:U\rightarrow\mathbb{R}$이 $g(0)=0$을 만족하면
 
 $$g(x) = \int_0^1 \frac{d}{dt}g(tx)\,dt = \sum_{i=1}^n x_i\int_0^1 \frac{\partial g}{\partial x_i}(tx)\,dt = \sum_{i=1}^n x_i\,g_i(x)$$
 
@@ -130,7 +130,7 @@ $f$의 non-degenerate critical point는 고립되어 있다. 특히 compact mani
 :::
 
 ::: 예시 9
-$\mathbb{R}^3$에 표준적으로 들어가 있는 토러스 $T^2$ 위의 *height function* $h:T^2\to\mathbb{R}$, $h(x,y,z)=z$를 생각하자. 토러스를 도넛 모양으로 세워두면 $h$는 정확히 네 개의 critical point를 가진다: 최고점($\lambda=2$), 안쪽 위 안장점($\lambda=1$), 안쪽 아래 안장점($\lambda=1$), 최저점($\lambda=0$). Hessian 계산으로 이들이 모두 비퇴화임을 확인할 수 있으므로 $h$는 Morse function이며, Morse 부등식
+$\mathbb{R}^3$에 표준적으로 들어가 있는 토러스 $T^2$ 위의 *height function* $h:T^2\rightarrow\mathbb{R}$, $h(x,y,z)=z$를 생각하자. 토러스를 도넛 모양으로 세워두면 $h$는 정확히 네 개의 critical point를 가진다: 최고점($\lambda=2$), 안쪽 위 안장점($\lambda=1$), 안쪽 아래 안장점($\lambda=1$), 최저점($\lambda=0$). Hessian 계산으로 이들이 모두 비퇴화임을 확인할 수 있으므로 $h$는 Morse function이며, Morse 부등식
 
 $$\sum_p (-1)^{\lambda_p} = \chi(T^2) = 0$$
 
@@ -141,14 +141,14 @@ $$\sum_p (-1)^{\lambda_p} = \chi(T^2) = 0$$
 
 ## Stationary phase 근사
 
-Morse lemma의 첫 번째 응용은 진동적분의 점근전개이다. Smooth amplitude $a\in C_c^\infty(M)$과 smooth phase $\phi:M\to\mathbb{R}$이 주어졌을 때, 우리는 다음의 *oscillating integral<sub>진동적분</sub>*
+Morse lemma의 첫 번째 응용은 진동적분의 점근전개이다. Smooth amplitude $a\in C_c^\infty(M)$과 smooth phase $\phi:M\rightarrow\mathbb{R}$이 주어졌을 때, 우리는 다음의 *oscillating integral<sub>진동적분</sub>*
 
 $$I(\hbar) = \int_M e^{i\phi(x)/\hbar}\,a(x)\,dx$$
 
-의 $\hbar\to 0^+$ 점근 행동을 구하고자 한다. 여기서 $dx$는 manifold 위의 고정된 (예컨대 Riemannian) volume form이며, support condition은 $a$의 compact support로 보장된다. 직관적으로 $\hbar\to 0$인 극한에서 phase $\phi/\hbar$가 빠르게 진동하므로 적분의 기여는 phase의 미분이 $0$이 되는 점, 즉 $\phi$의 critical point 근방에서만 살아남는다. 이를 정량화하는 것이 다음 정리이다.
+의 $\hbar\rightarrow 0^+$ 점근 행동을 구하고자 한다. 여기서 $dx$는 manifold 위의 고정된 (예컨대 Riemannian) volume form이며, support condition은 $a$의 compact support로 보장된다. 직관적으로 $\hbar\rightarrow 0$인 극한에서 phase $\phi/\hbar$가 빠르게 진동하므로 적분의 기여는 phase의 미분이 $0$이 되는 점, 즉 $\phi$의 critical point 근방에서만 살아남는다. 이를 정량화하는 것이 다음 정리이다.
 
 ::: 정리 10 (stationary phase formula)
-$\phi:M\to\mathbb{R}$이 $\operatorname{supp}(a)$ 위에서 유한 개의 non-degenerate critical point만을 가진다고 하자. $n=\dim M$이라 할 때, $\hbar\to 0^+$에서 다음의 점근전개가 성립한다.
+$\phi:M\rightarrow\mathbb{R}$이 $\operatorname{supp}(a)$ 위에서 유한 개의 non-degenerate critical point만을 가진다고 하자. $n=\dim M$이라 할 때, $\hbar\rightarrow 0^+$에서 다음의 점근전개가 성립한다.
 
 $$I(\hbar) = (2\pi\hbar)^{n/2}\sum_{p\in\operatorname{Crit}(\phi)\cap\operatorname{supp}(a)} \frac{e^{i\phi(p)/\hbar}\,e^{i\pi\sigma_p/4}}{\sqrt{\lvert\det\operatorname{Hess}_p(\phi)\rvert}}\,a(p) + O(\hbar^{n/2+1})$$
 
@@ -176,7 +176,7 @@ $$I(\hbar) = e^{i\phi(p)/\hbar}\int_{\mathbb{R}^n} e^{iQ(y)/(2\hbar)}\,\tilde a(
 
 $$J(\hbar) = \int_{\mathbb{R}^n} e^{i\sum_i \epsilon_i y_i^2/\hbar}\,\tilde a(y)\,dy$$
 
-의 $\hbar\to 0$ 점근을 계산하는 것이다.
+의 $\hbar\rightarrow 0$ 점근을 계산하는 것이다.
 
 **3단계 (Gaussian integral).** $\tilde a(y) = \tilde a(0) + \sum_i y_i \tilde a_i(y)$로 Taylor 전개하면, $y_i$항들은 부분적분 후 $O(\hbar)$의 보정만을 주므로 leading order는
 
@@ -199,7 +199,7 @@ $$I(\hbar) = (2\pi\hbar)^{n/2}\,\frac{e^{i\phi(p)/\hbar}\,e^{i\pi\sigma_p/4}}{\s
 을 얻는다. 1단계의 partition of unity에 의해 여러 critical point가 있는 일반적인 경우 위 leading term이 각 점에서 합산되어 원하는 공식이 성립한다.
 :::
 
-[정리 10](#thm10)의 본질은 다음과 같이 요약된다. 진동적분의 $\hbar\to 0$ 점근은 *critical point의 국소 데이터*인 (1) critical value $\phi(p)$, (2) Hessian의 determinant 절댓값, (3) Hessian의 signature, 그리고 (4) amplitude의 critical point에서의 값으로 완전히 결정된다. Signature가 위상 인자 $e^{i\pi\sigma_p/4}$로 나타나는 것은 Fresnel 적분의 부호별 위상회전이 누적된 결과이며, 이는 *Maslov index*가 등장하는 가장 단순한 정황이기도 하다.
+[정리 10](#thm10)의 본질은 다음과 같이 요약된다. 진동적분의 $\hbar\rightarrow 0$ 점근은 *critical point의 국소 데이터*인 (1) critical value $\phi(p)$, (2) Hessian의 determinant 절댓값, (3) Hessian의 signature, 그리고 (4) amplitude의 critical point에서의 값으로 완전히 결정된다. Signature가 위상 인자 $e^{i\pi\sigma_p/4}$로 나타나는 것은 Fresnel 적분의 부호별 위상회전이 누적된 결과이며, 이는 *Maslov index*가 등장하는 가장 단순한 정황이기도 하다.
 
 ::: 참고 11
 위 정리는 leading order만을 진술하였으나, 동일한 방법은 모든 차수의 점근전개를 제공한다. 즉
@@ -237,11 +237,11 @@ $$\int_{\mathbb{R}^2} e^{ixy/\hbar}\,a(x,y)\,dx\,dy = 2\pi\hbar\,a(0,0) + O(\hba
 
 지금까지 우리는 phase function이 *실가*라고 가정하였다. 그러나 응용에서 마주치는 phase는 holomorphic function인 경우가 많고 (가령 singularity theory의 versal family 등), 이 경우 적분 contour 자체를 신중하게 선택해야 한다. 이 선택을 Morse 이론으로부터 자연스럽게 얻어내는 구성이 *Lefschetz thimble*이다.
 
-$X$가 complex manifold이고 $W:X\to\mathbb{C}$가 holomorphic function이라 하자. 형식적으로 우리는 진동적분
+$X$가 complex manifold이고 $W:X\rightarrow\mathbb{C}$가 holomorphic function이라 하자. 형식적으로 우리는 진동적분
 
 $$\int_\Gamma e^{W(x)/\hbar}\,\omega$$
 
-를 정의하고 싶지만, $\operatorname{Re}(W)$가 $X$ 위에서 bounded above가 아니므로 임의의 cycle $\Gamma$에 대해 적분이 수렴할 보장이 없다. 이를 해결하기 위해 적분 경로를 $\operatorname{Re}(W/\hbar)\to-\infty$인 영역으로 빨려들어가는 경로로 잡아야 한다. 이를 위해 다음 함수에 주목한다. $h:X\to\mathbb{R}$을
+를 정의하고 싶지만, $\operatorname{Re}(W)$가 $X$ 위에서 bounded above가 아니므로 임의의 cycle $\Gamma$에 대해 적분이 수렴할 보장이 없다. 이를 해결하기 위해 적분 경로를 $\operatorname{Re}(W/\hbar)\rightarrow-\infty$인 영역으로 빨려들어가는 경로로 잡아야 한다. 이를 위해 다음 함수에 주목한다. $h:X\rightarrow\mathbb{R}$을
 
 $$h(x) = -\operatorname{Re}(W(x)/\hbar)$$
 
@@ -254,13 +254,13 @@ $W$의 비퇴화 critical point $p$에 대하여, $h=-\operatorname{Re}(W/\hbar)
 
 $$\frac{dx}{dt} = -\nabla h(x)$$
 
-의 $p$에서의 unstable manifold, 즉 $t\to-\infty$일 때 $p$로 수렴하는 점들의 집합이다.
+의 $p$에서의 unstable manifold, 즉 $t\rightarrow-\infty$일 때 $p$로 수렴하는 점들의 집합이다.
 :::
 
 이 thimble의 차원이 항상 $\dim_\mathbb{C} X$임은 holomorphic이라는 가정의 직접적 결과이며, 다음 명제로 정리한다.
 
 ::: 명제 15
-Holomorphic function $W: U \to \mathbb{C}$ ($U \subset \mathbb{C}^n$ open)의 non-degenerate critical point $p$와 $\hbar \in \mathbb{C}^\ast$에 대해, real-valued function $h = -\operatorname{Re}(W/\hbar): U \to \mathbb{R}$의 $p$에서의 Morse index $\lambda_p$는 항상 $n$이다. 즉 $\operatorname{Hess}_p(h)$의 양·음 eigenvalue 개수가 정확히 $n$씩으로 split된다.
+Holomorphic function $W: U \rightarrow \mathbb{C}$ ($U \subset \mathbb{C}^n$ open)의 non-degenerate critical point $p$와 $\hbar \in \mathbb{C}^\ast$에 대해, real-valued function $h = -\operatorname{Re}(W/\hbar): U \rightarrow \mathbb{R}$의 $p$에서의 Morse index $\lambda_p$는 항상 $n$이다. 즉 $\operatorname{Hess}_p(h)$의 양·음 eigenvalue 개수가 정확히 $n$씩으로 split된다.
 :::
 
 ::: 증명
@@ -279,7 +279,7 @@ $n$차원의 경우 [정리 6](#thm6)의 복소 버전 (holomorphic Morse lemma)
 
 기하적으로는 complex 구조 $J$ (즉 $i$를 곱하는 operator)가 $\operatorname{Hess}_p(h)$의 양·음 eigenspace를 서로 swap한다는 사실 ($HJ = -JH$, anti-$J$-invariance)로 해석할 수 있으며, 이는 두 eigenspace의 차원이 자동으로 $n$씩 split됨을 강제한다. Holomorphic이라는 가정이 real-valued Morse function이 항상 *saddle* (index $n$)만 갖도록 만들어, real Morse 이론의 "극대점 (index $2n$)"이나 "극소점 (index $0$)" 타입은 holomorphic setting에서 존재할 수 없다.
 
-[명제 15](#prop15)로부터, $\Gamma_p$는 $X$의 실차원의 절반에 해당하는 real submanifold이며, 정확히 적분의 수렴 조건 $\operatorname{Re}(W/\hbar)\to -\infty$를 따라가는 경로의 다발이 된다. 정의에 의해 $h$는 $\Gamma_p$ 위에서 $p$에서 최소를 가지므로 $\operatorname{Re}(W/\hbar)$는 $p$에서 최대를 가지며, $\Gamma_p$를 따라 무한대로 가면 $\operatorname{Re}(W/\hbar)\to-\infty$이다. 따라서 적분
+[명제 15](#prop15)로부터, $\Gamma_p$는 $X$의 실차원의 절반에 해당하는 real submanifold이며, 정확히 적분의 수렴 조건 $\operatorname{Re}(W/\hbar)\rightarrow -\infty$를 따라가는 경로의 다발이 된다. 정의에 의해 $h$는 $\Gamma_p$ 위에서 $p$에서 최소를 가지므로 $\operatorname{Re}(W/\hbar)$는 $p$에서 최대를 가지며, $\Gamma_p$를 따라 무한대로 가면 $\operatorname{Re}(W/\hbar)\rightarrow-\infty$이다. 따라서 적분
 
 $$\mathcal{I}_p(\hbar) = \int_{\Gamma_p} e^{W(x)/\hbar}\,\omega$$
 
@@ -287,10 +287,10 @@ $$\mathcal{I}_p(\hbar) = \int_{\Gamma_p} e^{W(x)/\hbar}\,\omega$$
 
 이렇게 정의된 thimble들 $\{\Gamma_p\}_{p\in\operatorname{Crit}(W)}$는 rapid decay relative cohomology의 기저를 이루며, 임의의 적분 contour의 deformation을 thimble들의 정수계수 선형결합으로 분해할 수 있다. 이는 *Picard–Lefschetz 공식*의 출발점이며, 자세한 내용은 **[AGV]**의 II장 또는 **[Pha]**를 참조한다.
 
-각 thimble $\Gamma_p$ 위에서 $\hbar\to 0$ 점근을 계산하면 [정리 10](#thm10)을 holomorphic 세팅으로 확장한 다음의 진술을 얻는다.
+각 thimble $\Gamma_p$ 위에서 $\hbar\rightarrow 0$ 점근을 계산하면 [정리 10](#thm10)을 holomorphic 세팅으로 확장한 다음의 진술을 얻는다.
 
 ::: 명제 16
-$W$가 비퇴화 critical point $p$를 가질 때, $\hbar\to 0^+$에서
+$W$가 비퇴화 critical point $p$를 가질 때, $\hbar\rightarrow 0^+$에서
 
 $$\int_{\Gamma_p} e^{W(x)/\hbar}\,\omega = (2\pi\hbar)^{n/2}\,\frac{e^{W(p)/\hbar}}{\sqrt{\det\operatorname{Hess}_p(W)}}\bigl(\alpha(p) + O(\hbar)\bigr)$$
 

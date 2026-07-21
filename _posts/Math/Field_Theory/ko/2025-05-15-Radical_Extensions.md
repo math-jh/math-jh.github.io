@@ -32,7 +32,7 @@ $$\x^2-2,\qquad \x^2-3$$
 ## $p$-제곱근확대체
 
 ::: 정의 1
-Field extension $\mathbb{L}/\mathbb{K}$에 대하여, $x\in \mathbb{L}$이 *$p$-radical*이라는 것은 어떠한 $m\geq 0$이 존재하여 $x^{p^m}\in \mathbb{K}$이도록 할 수 있는 것이다. 이러한 $m$들 중 가장 작은 것을 $x$의 *height*라 부른다. 
+Field extension $\mathbb{L}/\mathbb{K}$에 대하여, $x\in \mathbb{L}$이 *$p$-radical*이라는 것은 어떠한 $m\geq 0$이 존재하여 $x^{p^m}\in \mathbb{K}$이도록 할 수 있는 것이다. 이러한 $m$들 중 가장 작은 것을 $x$의 *height<sub>높이</sub>*라 부른다. 
 :::
 
 만일 $p=1$이라면 위의 정의는 별 의미가 없으며, 이번 글에서 나올 나머지 내용들 또한 마찬가지이다. 즉, 본질적으로 이번 글의 내용은 모두 characteristic $p$의 field에 대한 것이라 보아도 된다. 
@@ -69,7 +69,7 @@ $$g=\bigl((\x-\alpha)^{p^c}\bigr)^u=(\x^{p^c}-\alpha^{p^c})^u$$
 다음 정의는 [정의 1](#def1) 직후에 왔어도 자연스러웠을 것이다. 
 
 ::: 정의 4
-Field extension $\mathbb{L}/\mathbb{K}$가 *$p$-radical*이라는 것은 $\mathbb{L}$의 임의의 원소가 $p$-radical인 것이다. 만일 $\mathbb{L}$의 <em-ko>모든</em-ko> 원소 $x$에 대하여 $x^{p^e}\in \mathbb{K}$가 성립하도록 하는 정수 $e$가 존재한다면, 이러한 성질을 만족하는 $e$들 중 가장 작은 것을 $\mathbb{L}$의 *height*라 부른다. 
+Field extension $\mathbb{L}/\mathbb{K}$가 *$p$-radical*이라는 것은 $\mathbb{L}$의 임의의 원소가 $p$-radical인 것이다. 만일 $\mathbb{L}$의 <em-ko>모든</em-ko> 원소 $x$에 대하여 $x^{p^e}\in \mathbb{K}$가 성립하도록 하는 정수 $e$가 존재한다면, 이러한 성질을 만족하는 $e$들 중 가장 작은 것을 $\mathbb{L}$의 *height<sub>높이</sub>*라 부른다. 
 :::
 
 즉 $\mathbb{L}/\mathbb{K}$의 height는 (만일 정의된다면) $\mathbb{L}$의 원소들의 height들의 maximum이라 생각할 수 있다. 또, [명제 2](#prop2)에 의하여 임의의 $p$-radical extension은 자연스럽게 algebraic extension이다. 

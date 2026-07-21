@@ -36,13 +36,13 @@ A morphism between two locally ringed spaces $(X, \mathcal{O}_X)$ and $(Y, \math
 
 We now need to define $\mathcal{O}_{\Spec A}$. As mentioned at the beginning of this post, this is the sheaf of algebraic functions on $\Spec A$, and it is precisely the generalization of [\[Algebraic Varieties\] §Affine Varieties, ⁋Definition 14](/en/math/algebraic_varieties/affine_varieties#def14).
 
-Let us generalize this discussion to schemes. First, we think of elements of $A$ as functions $f$, just as in algebraic varieties. Then the <em-ko>function value</em-ko> of $f$ at a point $\mathfrak{p}\in\Spec A$ is the image of $f$ under the canonical projection $\pi: A \rightarrow A/\mathfrak{p}$. In particular, $f$ vanishing at the point $\mathfrak{p}$ means
+Let us generalize this discussion to schemes. First, we think of elements of $A$ as functions $f$, just as in algebraic varieties. Then the *function value* of $f$ at a point $\mathfrak{p}\in\Spec A$ is the image of $f$ under the canonical projection $\pi: A \rightarrow A/\mathfrak{p}$. In particular, $f$ vanishing at the point $\mathfrak{p}$ means
 
 $$f\equiv 0\pmod{\mathfrak{p}}\iff f\in \mathfrak{p}\iff \mathfrak{p}\in Z(f)$$
 
 That is, $Z(f)$ can be understood as the locus of points where $f=0$, and its complement, the principal open set $D(f)$, can be understood as the locus of points where $f\neq 0$.
 
-From this perspective, we can describe what the <em-ko>algebraic functions</em-ko> on $\Spec A$ are. Just as in [\[Algebraic Varieties\] §Affine Varieties, ⁋Definition 14](/en/math/algebraic_varieties/affine_varieties#def14), they are defined to be functions that can be represented as rational functions whose denominators are functions not vanishing on the given open set.
+From this perspective, we can describe what the *algebraic functions* on $\Spec A$ are. Just as in [\[Algebraic Varieties\] §Affine Varieties, ⁋Definition 14](/en/math/algebraic_varieties/affine_varieties#def14), they are defined to be functions that can be represented as rational functions whose denominators are functions not vanishing on the given open set.
 
 Now suppose a principal open set $D(f)$ is given. Then by definition, when an algebraic function on $D(f)$ is represented as a rational function $g/h$, the functions $h$ that can appear in the denominator must satisfy $D(f)\subseteq D(h)$.
 
@@ -334,7 +334,7 @@ In this diagram, the vertical maps are all isomorphisms, and we know that all fa
 
 ![commuting_square](/assets/images/Math/Scheme_Theory/Affine_Schemes-10.svg){:style="width:13.26em" class="invert" .align-center}
 
-are commuting squares. Therefore, in the above diagram, $A \rightarrow \mathcal{O}_{\Spec B, \mathfrak{q}}$ is determined identically regardless of which path we take, and applying [\[Commutative Algebra\] §Localization, ⁋Proposition 6](/en/math/commutative_algebra/localization#prop6) to this function uniquely determines $A_{\varphi(\mathfrak{q})} \rightarrow \mathcal{O}_{\Spec B, \mathfrak{q}}$. From this we know that <em-ko>all</em-ko> faces of the above diagram are commuting squares. That is, $\phi_\mathfrak{q}:A_{\varphi(\mathfrak{q})}\rightarrow B_\mathfrak{q}$ is also a local homomorphism, and therefore $\phi^{-1}(\mathfrak{q})=\varphi(\mathfrak{q})$. Now that $\phi$ agrees with $\varphi^\sharp$ on the structure sheaf, it suffices to consider restriction maps, and thus the desired claim is proved.
+are commuting squares. Therefore, in the above diagram, $A \rightarrow \mathcal{O}_{\Spec B, \mathfrak{q}}$ is determined identically regardless of which path we take, and applying [\[Commutative Algebra\] §Localization, ⁋Proposition 6](/en/math/commutative_algebra/localization#prop6) to this function uniquely determines $A_{\varphi(\mathfrak{q})} \rightarrow \mathcal{O}_{\Spec B, \mathfrak{q}}$. From this we know that *all* faces of the above diagram are commuting squares. That is, $\phi_\mathfrak{q}:A_{\varphi(\mathfrak{q})}\rightarrow B_\mathfrak{q}$ is also a local homomorphism, and therefore $\phi^{-1}(\mathfrak{q})=\varphi(\mathfrak{q})$. Now that $\phi$ agrees with $\varphi^\sharp$ on the structure sheaf, it suffices to consider restriction maps, and thus the desired claim is proved.
 :::
 
 Therefore, viewing $\Spec$ as a contravariant functor from $\cRing$ to $\AffSch$, it is a categorical equivalence between the two categories $\cRing^\op$ and $\AffSch$. Moreover, by [Proposition 11](#prop11), $\AffSch$ is a full subcategory of $\LRS$.

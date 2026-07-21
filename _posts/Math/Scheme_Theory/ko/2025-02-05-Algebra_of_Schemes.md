@@ -176,7 +176,7 @@ Locally noetherian scheme $X$의 한 점 $x$와 $x$의 affine open neighborhood 
 이제 [\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 첫째 조건은 만일 $X$가 quasicompact locally noetherian scheme일 경우, 즉 $X$가 noetherian scheme일 경우 associated point들의 유한성 또한 보장해준다. 이제 [정의 8](#def8)이 앞서 본 것처럼 $U$의 선택과 무관하게 stalk만으로 재서술되므로, 우리는 우리의 관심사를 noetherian ring의 spectrum $\Spec A$로 한정할 수 있다. 
 
 ::: 정의 9
-Noetherian ring의 spectrum $\Spec A$의 associated point들 중, $\Spec A$의 irreducible component들의 generic point에 해당하지 않는 것들을 *embedded point*라 부른다. 
+Noetherian ring의 spectrum $\Spec A$의 associated point들 중, $\Spec A$의 irreducible component들의 generic point에 해당하지 않는 것들을 *embedded point<sub>매장점</sub>*라 부른다. 
 :::
 
 즉, [정의 8](#def8)을 도입하기 전에 언급한, irreducible component의 generic point만으로는 놓치는 zero-divisor의 위치에 해당하는 점들이 바로 embedded point이며, 이는 [예시 11](#ex11)에서 구체적으로 확인할 수 있다. 직관적으로 embedded point는 이미 다른 (더 큰) irreducible component에 속해 있는 점이면서도 그 자리에서 $A$가 국소적으로 추가적인 nilpotent 방향의 정보를 갖는다는 것을 기록하는 점으로, 그 근처에서 scheme은 그 component만으로 결정되는 reduced 구조보다 실제로 더 많은 정보를 담고 있다.

@@ -40,7 +40,7 @@ $$\oint_C P\mathop{dx} = -\iint_D \partial P/\partial y\mathop{dA}$$
 
 $$\iint_D \frac{\partial P}{\partial y}\mathop{dA} = \int_a^b \bigl(P(x, g_2(x)) - P(x, g_1(x))\bigr)\mathop{dx}$$
 
-이다. 한편 경계 $C$는 아래 곡선 $y = g_1(x)$를 $x\colon a \to b$로, 위 곡선 $y = g_2(x)$를 $x\colon b \to a$로 도는 두 조각으로 이루어지고, 양 옆 수직변에서는 $x$가 상수라 $dx = 0$이다. 따라서
+이다. 한편 경계 $C$는 아래 곡선 $y = g_1(x)$를 $x\colon a \rightarrow b$로, 위 곡선 $y = g_2(x)$를 $x\colon b \rightarrow a$로 도는 두 조각으로 이루어지고, 양 옆 수직변에서는 $x$가 상수라 $dx = 0$이다. 따라서
 
 $$\oint_C P\mathop{dx} = \int_a^b P(x, g_1(x))\mathop{dx} + \int_b^a P(x, g_2(x))\mathop{dx} = -\int_a^b \bigl(P(x,g_2) - P(x,g_1)\bigr)\mathop{dx}$$
 

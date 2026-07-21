@@ -29,11 +29,11 @@ published: false
 
 $$\mathcal{M}:\Sch^\op \rightarrow \Grpd$$
 
-를 이룰 때, 이를 그 moduli 문제의 *moduli functor*라 부른다. ([§Fibered category와 stack, ⁋정의 3](/ko/math/stacks/fibered_categories_and_stacks#def3)) 각 fiber groupoid $\mathcal{M}(T)$의 isomorphism class만을 취하여 얻는 set-값 functor
+를 이룰 때, 이를 그 moduli 문제의 *moduli functor<sub>모듈라이 함자</sub>*라 부른다. ([§Fibered category와 stack, ⁋정의 3](/ko/math/stacks/fibered_categories_and_stacks#def3)) 각 fiber groupoid $\mathcal{M}(T)$의 isomorphism class만을 취하여 얻는 set-값 functor
 
 $$\underline{M}:\Sch^\op \rightarrow \Set,\qquad \underline{M}(T)=\obj \mathcal{M}(T)/\cong$$
 
-를 그 moduli 문제의 *coarse moduli functor* 또는 *set-값 moduli functor*라 부른다.
+를 그 moduli 문제의 *coarse moduli functor<sub>성긴 모듈라이 함자</sub>* 또는 *set-값 moduli functor*라 부른다.
 :::
 
 여기에서 "족"이 정확히 무엇인지는 분류 문제마다 다르다. 종수 $g$ 곡선의 분류에서는 $T$ 위의 족이란 smooth projective morphism $X \rightarrow T$로서 모든 기하적 fiber가 종수 $g$의 곡선인 것이고, 고정된 variety $X$ 위의 vector bundle의 분류에서는 $X\times T$ 위의 위수 $r$ vector bundle이며, 절단을 가진 타원곡선의 분류에서는 절단을 가진 종수 $1$의 smooth projective curve의 족이다. 어느 경우든 pullback은 morphism $f: T' \rightarrow T$에 대한 fiber product를 통한 base change로 주어지고, 정합성 자료는 base change가 합성과 정준 동형으로 호환된다는 것에서 나온다. 이 정합성이 등호가 아니라 정준 동형으로만 성립하기 때문에 $\mathcal{M}$은 진짜 pseudofunctor이며, 동치인 fibered category의 언어로 다루는 편이 자연스럽다. ([§Fibered category와 stack, ⁋참고 4](/ko/math/stacks/fibered_categories_and_stacks#rmk4))
@@ -49,7 +49,7 @@ Moduli 문제의 set-값 moduli functor $\underline{M}:\Sch^\op \rightarrow \Set
 
 $$\underline{M}\cong \Hom_{\Sch}(-, M)$$
 
-이 존재할 때, $M$을 그 문제의 *fine moduli space<sub>섬세한 moduli 공간</sub>*라 부른다. 이 natural isomorphism 아래에서 항등사상 $\id_M\in \Hom_\Sch(M, M)$에 대응하는 원소
+이 존재할 때, $M$을 그 문제의 *fine moduli space<sub>섬세한 모듈라이 공간</sub>*라 부른다. 이 natural isomorphism 아래에서 항등사상 $\id_M\in \Hom_\Sch(M, M)$에 대응하는 원소
 
 $$\mathcal{U}\in \underline{M}(M)$$
 
@@ -124,7 +124,7 @@ Moduli stack 위에는 언제나 보편 족이 존재한다. Set-값 functor에�
 두 번째 보정은 stack을 포기하고 scheme(또는 algebraic space)의 세계에 머무르되, isomorphism class만을 담는 가장 좋은 근사를 찾는 것이다.
 
 ::: 정의 8
-한 moduli 문제의 set-값 moduli functor $\underline{M}:\Sch^\op \rightarrow \Set$에 대하여, scheme $M$과 natural transformation $\Phi:\underline{M} \rightarrow \Hom_\Sch(-, M)$의 쌍이 *coarse moduli space<sub>성긴 moduli 공간</sub>*라는 것은 다음 두 조건을 만족하는 것이다.
+한 moduli 문제의 set-값 moduli functor $\underline{M}:\Sch^\op \rightarrow \Set$에 대하여, scheme $M$과 natural transformation $\Phi:\underline{M} \rightarrow \Hom_\Sch(-, M)$의 쌍이 *coarse moduli space<sub>성긴 모듈라이 공간</sub>*라는 것은 다음 두 조건을 만족하는 것이다.
 
 1. (보편성) 임의의 scheme $N$과 natural transformation $\Psi:\underline{M} \rightarrow \Hom_\Sch(-, N)$에 대하여, $\Psi=\Hom_\Sch(-, \pi)\circ \Phi$을 만족하는 morphism $\pi: M \rightarrow N$이 유일하게 존재한다. 곧 $\Phi$은 scheme으로 가는 natural transformation들 가운데 initial object이다.
 

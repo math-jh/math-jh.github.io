@@ -57,10 +57,10 @@ Concretely, this is obtained by expressing an element of $\mathbb{P}^n$ as $[x_0
 Now, thinking about how we defined regular maps from regular functions, it is obvious how to define rational maps from rational functions.
 
 ::: Definition 5
-A *rational map* between two varieties $X, Y$ is a pair $(U,\varphi)$ consisting of a nonempty open subset $U$ of $X$ and a regular map $\varphi: U \to Y$ defined on it.
+A *rational map* between two varieties $X, Y$ is a pair $(U,\varphi)$ consisting of a nonempty open subset $U$ of $X$ and a regular map $\varphi: U \rightarrow Y$ defined on it.
 :::
 
-As before, two rational maps $\varphi: U \to Y$ and $\psi: V \to Y$ are regarded as the same if they agree on $U \cap V$. A rational map is usually denoted $\varphi: X \dashrightarrow Y$, where the dashed arrow indicates that it may not be defined at every point. The points where it is undefined are called *base points*.
+As before, two rational maps $\varphi: U \rightarrow Y$ and $\psi: V \rightarrow Y$ are regarded as the same if they agree on $U \cap V$. A rational map is usually denoted $\varphi: X \dashrightarrow Y$, where the dashed arrow indicates that it may not be defined at every point. The points where it is undefined are called *base points*.
 
 On the other hand, for a rational map $\varphi:U\rightarrow Y$ we can consider rational functions equivalent to $(U,\varphi)$. Then taking the union of the domains of all these rational functions, we obtain the *largest* open set on which $\varphi$ can be defined.
 
@@ -118,7 +118,7 @@ First, for $\mathbb{P}^1 \times \mathbb{P}^1$, by [Proposition 3](#prop3) it suf
 
 Now consider the quadric surface $Q = V(\x\y - \z\w) \subset \mathbb{P}^3$. Similarly by [Proposition 3](#prop3) it suffices to compute on the affine patch $\{\w \ne 0\}$. On this patch setting $\x' = \x/\w$, $\y' = \y/\w$, $\z' = \z/\w$, the equation $\x\y - \z\w = 0$ becomes $\x'\y' - \z' = 0$. Hence $\z' = \x'\y'$, and the coordinate ring of this patch is $\mathbb{K}[\x', \y', \z']/(\x'\y' - \z') \cong \mathbb{K}[\x', \y']$. By [Proposition 2](#prop2) we have $\mathbb{K}(Q) = \operatorname{Frac}(\mathbb{K}[\x', \y']) = \mathbb{K}(\x', \y') \cong \mathbb{K}(\t_1, \t_2)$.
 
-Therefore since $\mathbb{K}(\mathbb{P}^1 \times \mathbb{P}^1) \cong \mathbb{K}(Q) \cong \mathbb{K}(\t_1, \t_2)$, by [Proposition 10](#prop10) the two varieties are birationally equivalent. In fact, the image of the Segre embedding $\mathbb{P}^1 \times \mathbb{P}^1 \to \mathbb{P}^3$, $([x : y], [u : v]) \mapsto [xu : xv : yu : yv]$ discussed in [§Projective Varieties, ⁋Example 16](/en/math/algebraic_varieties/projective_varieties#ex16) is exactly $V(\x\y - \z\w)$. That is, in this case the birational equivalence is actually an isomorphism. This example shows that birational equivalence is weaker than isomorphism but includes isomorphism.
+Therefore since $\mathbb{K}(\mathbb{P}^1 \times \mathbb{P}^1) \cong \mathbb{K}(Q) \cong \mathbb{K}(\t_1, \t_2)$, by [Proposition 10](#prop10) the two varieties are birationally equivalent. In fact, the image of the Segre embedding $\mathbb{P}^1 \times \mathbb{P}^1 \rightarrow \mathbb{P}^3$, $([x : y], [u : v]) \mapsto [xu : xv : yu : yv]$ discussed in [§Projective Varieties, ⁋Example 16](/en/math/algebraic_varieties/projective_varieties#ex16) is exactly $V(\x\y - \z\w)$. That is, in this case the birational equivalence is actually an isomorphism. This example shows that birational equivalence is weaker than isomorphism but includes isomorphism.
 :::
 
 ## Blow-up
@@ -140,7 +140,7 @@ This set is a closed subvariety of $\mathbb{A}^2 \times \mathbb{P}^1$. The condi
 ![Blowup](/assets/images/Math/Algebraic_Varieties/Rational_Maps-1.png){:style="width:32em" class="invert" .align-center}
 <cap markdown="1">[Har1] p.29. Fig. 3.</cap>
 
-Concretely, defining the projection $\pi_1: \operatorname{Bl}_{(0,0)} \mathbb{A}^2 \to \mathbb{A}^2$ by $\pi((x, y), [u : v]) = (x, y)$, the preimage of every point other than the origin is a single point, and the preimage of the origin is $\mathbb{P}^1$. This is called the *exceptional divisor*.
+Concretely, defining the projection $\pi_1: \operatorname{Bl}_{(0,0)} \mathbb{A}^2 \rightarrow \mathbb{A}^2$ by $\pi((x, y), [u : v]) = (x, y)$, the preimage of every point other than the origin is a single point, and the preimage of the origin is $\mathbb{P}^1$. This is called the *exceptional divisor*.
 
 From this, since the two varieties $\mathbb{A}^2$ and $\Bl_{(0,0)}\mathbb{A}^2$ are isomorphic on the rest of the plane excluding the origin, $\pi$ is a birational map.
 

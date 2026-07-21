@@ -58,7 +58,7 @@ $$a_nb^n+\cdots+a_1b+a_0=0,\qquad a_i\in \Frac(A)$$
 Integral domain $A$가 주어졌다 하고, integral extension $A \rightarrow B$가 주어졌다 하자. 그럼 $B$의 prime ideal $\mathfrak{q}$이 maximal ideal인 것과 $\mathfrak{q}\cap A$가 $A$의 maximal ideal인 것이 동치이다.
 :::
 ::: 증명
-이 또한 [명제 1](#prop1)의 증명에서와 마찬가지로, $\mathfrak{q}\cap A$와 $\mathfrak{q}$로 각각 quotient를 취해주면, 두 integral domain $A,B$ 그리고 integral extension $A \hookrightarrow B$가 주어졌을 떄, $A$가 field인 것과 $B$가 field인 것이 동치라는 것을 보이면 충분하다. 한편, 만일 $A$가 field라면 [보조정리 2](#lem2)에 의하여 $B$는 nonzero ideal을 갖지 않아야 한다. 즉, $B$는 field이다. 
+이 또한 [명제 1](#prop1)의 증명에서와 마찬가지로, $\mathfrak{q}\cap A$와 $\mathfrak{q}$로 각각 quotient를 취해주면, 두 integral domain $A,B$ 그리고 integral extension $A \hookrightarrow B$가 주어졌을 때, $A$가 field인 것과 $B$가 field인 것이 동치라는 것을 보이면 충분하다. 한편, 만일 $A$가 field라면 [보조정리 2](#lem2)에 의하여 $B$는 nonzero ideal을 갖지 않아야 한다. 즉, $B$는 field이다. 
 
 따라서 $B$가 field임을 가정하고 $A$가 field임을 보이면 충분하다. $A$의 maximal ideal $\mathfrak{m}$이 주어졌다 하자. 그럼 [명제 1](#prop1)에 의하여, 우리는 적당한 $B$의 prime ideal $\mathfrak{q}$가 존재하여 $\mathfrak{q}\cap A= \mathfrak{m}$이 성립하도록 할 수 있다. 그런데 $B$는 field이므로, $\mathfrak{q}=0$이고 따라서 $\mathfrak{m}=0$이다. 이로부터 원하는 결과를 얻는다. 
 :::

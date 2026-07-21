@@ -24,14 +24,14 @@ $$\Jac(W_q) \cong QH^\ast(X_\Sigma)$$
 Frobenius manifold는 직관적으로 각 점에서 Frobenius algebra structure를 갖는 manifold이다. 
 
 ::: 정의 1
-Finite-dimensional commutative, associative $\mathbb{C}$-algebra $A$와 그 위에 정의된 non-degenerate symmetric bilinear form $\eta: A \otimes A \to \mathbb{C}$가 주어졌다 하자. 만일 모든 원소 $x,y,z\in A$에 대하여 다음의 식
+Finite-dimensional commutative, associative $\mathbb{C}$-algebra $A$와 그 위에 정의된 non-degenerate symmetric bilinear form $\eta: A \otimes A \rightarrow \mathbb{C}$가 주어졌다 하자. 만일 모든 원소 $x,y,z\in A$에 대하여 다음의 식
 
 $$\eta(x \cdot y,z) = \eta(x,y \cdot z)$$
 
 이 성립한다면, 이 pair $(A, \eta)$를 *Frobenius algebra<sub>프로베니우스 대수</sub>*라 부른다.
 :::
 
-위 조건은 $A$의 곱셈 $\cdot : A \otimes A \to A$와 bilinear form $\eta$가 호환되어, 세 인수 모두에 대해 대칭인 trilinear form $c(x,y,z) := \eta(x \cdot y,z)$를 정의함을 의미한다. 실제로 commutativity로부터 
+위 조건은 $A$의 곱셈 $\cdot : A \otimes A \rightarrow A$와 bilinear form $\eta$가 호환되어, 세 인수 모두에 대해 대칭인 trilinear form $c(x,y,z) := \eta(x \cdot y,z)$를 정의함을 의미한다. 실제로 commutativity로부터 
 
 $$c(x,y,z) = \eta(x \cdot y,z) = \eta(y \cdot x,z) = c(y,x,z)$$
 
@@ -56,10 +56,10 @@ $$\eta(\alpha \smile \beta, \gamma) = \eta(\alpha, \beta \smile \gamma)$$
 한편, 우리는 [§거울대칭 개요](/ko/math/mirror_symmetry/overview)의 예시에서 Landau-Ginzburg model을 소개했는데, 이는 주어진 manifold $\check{X}$ 위에 주어진 holomorphic function $W$로 이루어지며, $W$의 critical point들을 담고 있는 Jacobi ring이 B-model의 정보를 들고 있었다. 국소적으로 이는 다음과 같이 적힌다. 
 
 ::: 정의 3
-Holomorphic function $f : \mathbb{C}^n \to \mathbb{C}$가 원점에서 *isolated hypersurface singularity*를 갖는다는 것은 다음의 두 조건이 성립하는 것이다.
+Holomorphic function $f : \mathbb{C}^n \rightarrow \mathbb{C}$가 원점에서 *isolated hypersurface singularity<sub>고립 초곡면 특이점</sub>*를 갖는다는 것은 다음의 두 조건이 성립하는 것이다.
 
 1. $f(0) = 0$, $df(0) = 0$.
-2. 원점이 $f$의 critical point들 중 *isolated*인 것, 즉 원점의 어떤 근방 안에서 $df = 0$의 해가 원점 하나뿐이다.
+2. 원점이 $f$의 critical point들 중 *isolated<sub>고립된</sub>*인 것, 즉 원점의 어떤 근방 안에서 $df = 0$의 해가 원점 하나뿐이다.
 :::
 
 표준적인 예시는 $f(\x) = \x^{k+1}$ ($k \geq 1$)이며, 우리는 이를 $A_k$-type singularity라 부른다. 
@@ -71,7 +71,7 @@ $$\Jac(f) = \mathbb{C}[\x_1, \ldots, \x_n]/(\partial_1 f, \ldots, \partial_n f)$
 을 생각할 수 있다. 그 차원 $\mu(f)=\dim \Jac(f)$는 $f$의 singularity의 개수를 order를 포함해서 센 것으로, 직관적으로는 약간의 perturbation을 통하여 $\mu(f)$개의 simple critical point들을 갖는 것으로 생각할 수도 있다. Singularity theory에서는 이 $\mu(f)$를 $f$의 *Milnor number*라 부른다.
 
 ::: 예시 4
-모든 critical point가 isolated hypersurface singularity인 다항식 $f : \mathbb{C}^n \to \mathbb{C}$의 Jacobi ring $\Jac(f)$ 위에 *residue pairing* $\eta$를 다음의 식
+모든 critical point가 isolated hypersurface singularity인 다항식 $f : \mathbb{C}^n \rightarrow \mathbb{C}$의 Jacobi ring $\Jac(f)$ 위에 *residue pairing* $\eta$를 다음의 식
 
 $$\eta(g, h) := \frac{1}{(2\pi i)^n} \oint_{\Gamma_\epsilon} \frac{g(\x) h(\x) \, d\x_1 \wedge \cdots \wedge d\x_n}{\partial_1 f \cdots \partial_n f}$$
 
@@ -182,7 +182,7 @@ $$\Lie_E(\eta) = (2 - d)\eta$$
 쌍 $(M, \eta, \circ, e, E)$가 *Frobenius manifold<sub>프로베니우스 다양체</sub>*라는 것은 다음의 조건이 모두 성립하는 것이다. 
 
 1. $TM$ 위의 symmetric non-degenerate bilinear form $\eta$가 유도하는 Levi-Civita connection이 flat이다. 
-2. 각 $p\in M$마다 commutative associative product $\circ_p: T_p M \otimes T_p M \to T_p M$이 존재하며 이는 $p$에 대해 smooth이다. 
+2. 각 $p\in M$마다 commutative associative product $\circ_p: T_p M \otimes T_p M \rightarrow T_p M$이 존재하며 이는 $p$에 대해 smooth이다. 
 3. 모든 점에서 곱셈 $\circ$의 항등원이 되는 vector field $e$가 존재하며 $\nabla e = 0$이다.
 4. Affine 조건 $\nabla^2 E=0$을 만족하는 vector field $E$가 존재하여, 적당한 상수 $d\in \mathbb{C}$에 대해
     
@@ -198,7 +198,7 @@ $$\Lie_E(\eta) = (2 - d)\eta$$
 [정의 5](#def5)의 마지막 조건이 potentiality라 불리는 이유는 이것이 trilinear form $c$를 적절한 scalar function $F:M \rightarrow \mathbb{C}$의 삼계도함수로 표현해주기 때문이다. 
 
 ::: 명제 6
-Frobenius manifold $(M, \eta, \circ, e, E)$의 flat coordinate $t^1, \ldots, t^n$에 대해, $M$ 위에 (국소적으로) 정의된 holomorphic function $F: M \to \mathbb{C}$가 존재하여
+Frobenius manifold $(M, \eta, \circ, e, E)$의 flat coordinate $t^1, \ldots, t^n$에 대해, $M$ 위에 (국소적으로) 정의된 holomorphic function $F: M \rightarrow \mathbb{C}$가 존재하여
 
 $$c_{\alpha\beta\gamma}(t) := \eta(\partial_{t^\alpha} \circ \partial_{t^\beta}, \partial_{t^\gamma}) = \frac{\partial^3 F}{\partial t^\alpha \partial t^\beta \partial t^\gamma}$$
 

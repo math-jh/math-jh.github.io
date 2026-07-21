@@ -23,7 +23,7 @@ The slope of the line joining two points $(a, f(a))$ and $(x, f(x))$ is the aver
 ::: Definition 1
 A function $f$ is said to be *differentiable* at a point $a$ if the limit
 
-$$f'(a) := \lim_{x \to a} \frac{f(x) - f(a)}{x - a} = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h}$$
+$$f'(a) := \lim_{x \rightarrow a} \frac{f(x) - f(a)}{x - a} = \lim_{h \rightarrow 0} \frac{f(a+h) - f(a)}{h}$$
 
 exists. This value $f'(a)$ is called the *derivative* of $f$ at $a$. If $f$ is differentiable at every point of its domain, the function $f'$ defined by $a \mapsto f'(a)$ is called the *derivative function* of $f$.
 :::
@@ -53,9 +53,9 @@ For $x \neq a$ we have
 
 $$f(x) - f(a) = \frac{f(x)-f(a)}{x-a}\cdot(x-a).$$
 
-As $x \to a$, the first factor on the right converges to $f'(a)$ and the second factor converges to $0$, so by [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5),
+As $x \rightarrow a$, the first factor on the right converges to $f'(a)$ and the second factor converges to $0$, so by [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5),
 
-$$\lim_{x\to a}\bigl(f(x)-f(a)\bigr) = f'(a)\cdot 0 = 0.$$
+$$\lim_{x\rightarrow a}\bigl(f(x)-f(a)\bigr) = f'(a)\cdot 0 = 0.$$
 
 Hence $f$ is continuous at $a$.
 :::
@@ -68,9 +68,9 @@ Indeed,
 
 $$\frac{f(h)-f(0)}{h} = \frac{\lvert h\rvert}{h}=\begin{cases}1&\text{if $h>0$}\\-1&\text{if $h<0$}\end{cases}$$
 
-so the derivative of this function is $1$ as $h \to 0^+$ and $-1$ as $h \to 0^-$; the one-sided limits differ, so the limit does not exist.
+so the derivative of this function is $1$ as $h \rightarrow 0^+$ and $-1$ as $h \rightarrow 0^-$; the one-sided limits differ, so the limit does not exist.
 
-As a similar example, $f(x) = \sqrt[3]{x}$ has a *vertical tangent* at $0$, where the average rate of change diverges as $h^{-2/3} \to \infty$.
+As a similar example, $f(x) = \sqrt[3]{x}$ has a *vertical tangent* at $0$, where the average rate of change diverges as $h^{-2/3} \rightarrow \infty$.
 
 ![Vertical tangent of the cube root function](/assets/images/Math/Calculus/Derivatives-2.svg){:style="width:12.46em" class="invert" .align-center}
 
@@ -89,7 +89,7 @@ $$f(x) = \begin{cases} x^2 & (x \in \mathbb{Q}) \\ 0 & (x \notin \mathbb{Q}) \en
 
 For $a \neq 0$, along a sequence of rationals and a sequence of irrationals converging to $a$ the function values split to $a^2$ and $0$ respectively, so $f$ is discontinuous and hence not differentiable by the contrapositive of [Proposition 2](#prop2). On the other hand, at $0$ we have $\lvert f(x)\rvert \leq x^2$, so $f$ is continuous, and the average rate of change satisfies
 
-$$\left\lvert \frac{f(x) - f(0)}{x - 0} \right\rvert = \frac{\lvert f(x)\rvert}{\lvert x\rvert} \leq \lvert x\rvert \to 0$$
+$$\left\lvert \frac{f(x) - f(0)}{x - 0} \right\rvert = \frac{\lvert f(x)\rvert}{\lvert x\rvert} \leq \lvert x\rvert \rightarrow 0$$
 
 so $f'(0) = 0$ exists. That is, $f$ is differentiable only at $0$.
 :::
@@ -125,7 +125,7 @@ Finally, just as a limit exists only when the left and right limits agree, the e
 ::: Definition 6
 The *right-hand derivative* and *left-hand derivative* of a function $f$ at a point $a$ are defined respectively by
 
-$$f'_+(a) := \lim_{h \to 0^+} \frac{f(a+h) - f(a)}{h}, \qquad f'_-(a) := \lim_{h \to 0^-} \frac{f(a+h) - f(a)}{h}.$$
+$$f'_+(a) := \lim_{h \rightarrow 0^+} \frac{f(a+h) - f(a)}{h}, \qquad f'_-(a) := \lim_{h \rightarrow 0^-} \frac{f(a+h) - f(a)}{h}.$$
 
 Both one-sided derivatives exist and are equal if and only if $f$ is differentiable at $a$, and then their common value is $f'(a)$.
 :::

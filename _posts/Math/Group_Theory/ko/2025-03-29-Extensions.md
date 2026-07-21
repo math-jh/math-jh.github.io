@@ -58,7 +58,7 @@ $G$의 $F$에 의한 extension $\mathcal{E}:F \rightarrow E \rightarrow G$이 ex
 
 $$\mathcal{E}_0:F \rightarrow F\oplus G \rightarrow G$$
 
-과 isomorphic하다면, 이를 *trivial extension*이라고 부른다. 
+과 isomorphic하다면, 이를 *trivial extension<sub>자명한 확장</sub>*이라고 부른다. 
 :::
 
 그럼 다음이 성립한다. 
@@ -86,7 +86,7 @@ Extension $\mathcal{E}:F \rightarrow E \rightarrow G$에 대하여, 다음이 �
 만일 $i(F)$가 $E$의 center $C(E)$에 포함되었다면, 세 번째 조건에서 $s(G)$와 $i(F)$의 관계는 무시하여도 좋을 것이다. ([\[대수적 구조\] §군의 작용, ⁋정의 12](/ko/math/algebraic_structures/group_actions#def12))
 
 ::: 정의 5
-Extension $\mathcal{E}:F \rightarrow E \rightarrow G$가 *central extension*이라는 것은 $F$의 $E$에서의 image가 $E$의 center에 포함되는 것이다. 
+Extension $\mathcal{E}:F \rightarrow E \rightarrow G$가 *central extension<sub>중심확장</sub>*이라는 것은 $F$의 $E$에서의 image가 $E$의 center에 포함되는 것이다. 
 :::
 
 ## 군의 반직접곱
@@ -95,7 +95,7 @@ Extension $\mathcal{E}:F \rightarrow E \rightarrow G$가 *central extension*이�
 
 $$G\cong (G/N)\oplus N$$
 
-이 항상 성립하지는 <em-ko>않기</em-ko> 떄문이다. 그러나 그 역이 항상 성립하는 것은 아니다. 
+이 항상 성립하지는 <em-ko>않기</em-ko> 때문이다. 그러나 그 역이 항상 성립하는 것은 아니다. 
 
 ::: 정의 6
 두 group $N,H$와 group homomorphism $\tau:H \rightarrow \Aut(N)$이 주어졌다 하자. 그럼 $N$과 $H$의 $\tau$에 대한 *semi-direct product<sub>반직접곱</sub>* $N\rtimes_\tau H$는 집합 $N\times H$ 위에 다음의 연산

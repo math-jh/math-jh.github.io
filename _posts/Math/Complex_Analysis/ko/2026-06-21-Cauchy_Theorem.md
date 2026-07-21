@@ -18,7 +18,7 @@ published: false
 
 ## Goursat 정리
 
-복소적분에서 닫힌 경로 적분의 소멸을 끌어내는 가장 약한 출발점은, holomorphic function을 가장 단순한 닫힌 경로인 삼각형의 경계 위에서 적분하는 것이다. 놀라운 점은 이 적분이 항상 $0$이며, 그 증명에 도함수 $f'$의 연속성이나 Cauchy–Riemann 방정식의 holomorphicity 판정조차 필요하지 않다는 사실이다. 복소미분가능성의 정의 ([§복소정칙함수, ⁋정의 1](/ko/math/complex_analysis/holomorphic_functions#def1)) 가 주는 한 점에서의 일차 근사만으로 충분하다. 삼각형이라 함은 평면의 세 점 $a, b, c$가 이루는 닫힌 삼각형 영역을 가리키며, 그 경계 $\partial T$는 $a \to b \to c \to a$를 잇는 세 선분을 이어붙인 닫힌 곡선으로, piecewise $C^1$ 곡선 ([§복소적분, ⁋정의 1](/ko/math/complex_analysis/complex_integration#def1)) 이다.
+복소적분에서 닫힌 경로 적분의 소멸을 끌어내는 가장 약한 출발점은, holomorphic function을 가장 단순한 닫힌 경로인 삼각형의 경계 위에서 적분하는 것이다. 놀라운 점은 이 적분이 항상 $0$이며, 그 증명에 도함수 $f'$의 연속성이나 Cauchy–Riemann 방정식의 holomorphicity 판정조차 필요하지 않다는 사실이다. 복소미분가능성의 정의 ([§복소정칙함수, ⁋정의 1](/ko/math/complex_analysis/holomorphic_functions#def1)) 가 주는 한 점에서의 일차 근사만으로 충분하다. 삼각형이라 함은 평면의 세 점 $a, b, c$가 이루는 닫힌 삼각형 영역을 가리키며, 그 경계 $\partial T$는 $a \rightarrow b \rightarrow c \rightarrow a$를 잇는 세 선분을 이어붙인 닫힌 곡선으로, piecewise $C^1$ 곡선 ([§복소적분, ⁋정의 1](/ko/math/complex_analysis/complex_integration#def1)) 이다.
 
 ::: 정리 1 (Goursat)
 $\Omega \subseteq \mathbb{C}$가 열린집합이고 $f$가 $\Omega$에서 holomorphic이라 하자. 삼각형 $T$가 그 내부와 경계를 모두 포함하여 $\Omega$에 들어 있으면, 그 경계를 따른 적분은
@@ -87,7 +87,7 @@ $$F(z) = \int_{[z_\ast, z]} f(\zeta)\,d\zeta$$
 
 로 정의한다. $F$가 $z$에서 복소미분가능하고 $F'(z) = f(z)$임을 보이면 된다.
 
-점 $z \in \Omega$를 고정한다. $\Omega$가 열려 있으므로 작은 원판 $B(z, \rho) \subseteq \Omega$이 있고, $\lvert h\rvert < \rho$인 $h$에 대해 $z + h \in \Omega$이다. 세 점 $z_\ast, z, z+h$를 꼭짓점으로 하는 삼각형 $T$를 생각하자. 별중심의 성질로 변 $[z_\ast, z]$와 $[z_\ast, z+h]$가 $\Omega$에 들어 있고, 나머지 변 $[z, z+h]$는 $B(z,\rho)$ 안에 있어 역시 $\Omega$에 들어 있다. 더 나아가 별중심에서 이 삼각형의 각 변 위의 점으로 가는 선분이 모두 $\Omega$에 있으므로 삼각형의 내부도 $\Omega$에 포함되며, 따라서 Goursat 정리 (정리 1) 를 이 삼각형에 적용할 수 있다. 경계 $z_\ast \to z \to z+h \to z_\ast$를 따른 적분이 $0$이므로
+점 $z \in \Omega$를 고정한다. $\Omega$가 열려 있으므로 작은 원판 $B(z, \rho) \subseteq \Omega$이 있고, $\lvert h\rvert < \rho$인 $h$에 대해 $z + h \in \Omega$이다. 세 점 $z_\ast, z, z+h$를 꼭짓점으로 하는 삼각형 $T$를 생각하자. 별중심의 성질로 변 $[z_\ast, z]$와 $[z_\ast, z+h]$가 $\Omega$에 들어 있고, 나머지 변 $[z, z+h]$는 $B(z,\rho)$ 안에 있어 역시 $\Omega$에 들어 있다. 더 나아가 별중심에서 이 삼각형의 각 변 위의 점으로 가는 선분이 모두 $\Omega$에 있으므로 삼각형의 내부도 $\Omega$에 포함되며, 따라서 Goursat 정리 (정리 1) 를 이 삼각형에 적용할 수 있다. 경계 $z_\ast \rightarrow z \rightarrow z+h \rightarrow z_\ast$를 따른 적분이 $0$이므로
 
 $$\int_{[z_\ast, z]} f\,d\zeta + \int_{[z, z+h]} f\,d\zeta + \int_{[z+h, z_\ast]} f\,d\zeta = 0$$
 
@@ -103,7 +103,7 @@ $$\frac{F(z+h) - F(z)}{h} - f(z) = \frac{1}{h}\int_{[z, z+h]} \bigl( f(\zeta) - 
 
 $$\frac{1}{\lvert h\rvert}\cdot \varepsilon \cdot \mathrm{length}([z, z+h]) = \frac{1}{\lvert h\rvert}\cdot \varepsilon\, \lvert h\rvert = \varepsilon$$
 
-이하이다. 따라서 $h \to 0$일 때 차분비가 $f(z)$로 수렴하여 $F'(z) = f(z)$이다. $z$가 임의였으므로 $F$는 $\Omega$에서 $f$의 원시함수이다.
+이하이다. 따라서 $h \rightarrow 0$일 때 차분비가 $f(z)$로 수렴하여 $F'(z) = f(z)$이다. $z$가 임의였으므로 $F$는 $\Omega$에서 $f$의 원시함수이다.
 :::
 
 정리 3은 holomorphicity라는 미분 조건을, 적분의 경로 독립성을 보장하는 원시함수의 존재로 번역한다. 그 다리가 바로 Goursat 정리이며, 원시함수의 차분비가 작은 삼각형 위의 적분으로 표현되고 그 적분이 $0$이라는 사실이 미분가능성을 낳는다. 원시함수가 존재하면 복소적분 이론의 일반 원리 ([§복소적분, ⁋따름정리 9](/ko/math/complex_analysis/complex_integration#cor9)) 에 의해 닫힌 경로 적분이 곧바로 소멸하므로, 다음 형태의 Cauchy 정리가 따라 나온다.
@@ -127,9 +127,9 @@ $$\oint_\gamma f(z)\,dz = 0$$
 따름정리 4의 별모양 조건은 영역의 *모양*에 대한 구체적 요구라 다루기 번거롭다. 더 본질적인 조건은 위상적인 것으로, 두 경로가 영역 안에서 서로 연속적으로 변형될 수 있는가, 그리고 닫힌 경로가 영역 안에서 한 점으로 수축될 수 있는가이다. 이 변형 가능성을 homotopy로 정식화하면, holomorphic function의 적분이 경로의 연속적 변형에 무관함을 보일 수 있다. 먼저 같은 끝점을 갖는 두 경로 사이의 homotopy를 정의한다.
 
 ::: 정의 5
-$\Omega \subseteq \mathbb{C}$가 영역이고 $\gamma_0, \gamma_1 : [a, b] \to \Omega$가 같은 시점 $p = \gamma_0(a) = \gamma_1(a)$와 같은 종점 $q = \gamma_0(b) = \gamma_1(b)$을 갖는 두 곡선이라 하자. 두 곡선이 $\Omega$ 안에서 *끝점을 고정하여 homotopic<sub>호모토픽</sub>*하다는 것은, 연속사상
+$\Omega \subseteq \mathbb{C}$가 영역이고 $\gamma_0, \gamma_1 : [a, b] \rightarrow \Omega$가 같은 시점 $p = \gamma_0(a) = \gamma_1(a)$와 같은 종점 $q = \gamma_0(b) = \gamma_1(b)$을 갖는 두 곡선이라 하자. 두 곡선이 $\Omega$ 안에서 *끝점을 고정하여 homotopic<sub>호모토픽</sub>*하다는 것은, 연속사상
 
-$$H : [a, b] \times [0, 1] \to \Omega$$
+$$H : [a, b] \times [0, 1] \rightarrow \Omega$$
 
 이 있어 모든 $t \in [a, b]$와 $s \in [0, 1]$에 대하여
 
@@ -149,7 +149,7 @@ $$\int_{\gamma_0} f(z)\,dz = \int_{\gamma_1} f(z)\,dz$$
 :::
 
 ::: 증명
-$H : [a, b] \times [0, 1] \to \Omega$를 $\gamma_0$에서 $\gamma_1$로 가는 homotopy라 하자. 상 $K = H([a,b]\times[0,1])$은 콤팩트집합 위의 연속상이므로 콤팩트이고 $\Omega$에 들어 있다. 콤팩트집합 $K$와 닫힌집합 $\mathbb{C}\setminus\Omega$ 사이의 거리는 양수이므로, $3r < \operatorname{dist}(K, \mathbb{C}\setminus\Omega)$인 $r > 0$을 잡으면 $K$의 각 점을 중심으로 한 반지름 $2r$인 원판이 통째로 $\Omega$에 들어간다.
+$H : [a, b] \times [0, 1] \rightarrow \Omega$를 $\gamma_0$에서 $\gamma_1$로 가는 homotopy라 하자. 상 $K = H([a,b]\times[0,1])$은 콤팩트집합 위의 연속상이므로 콤팩트이고 $\Omega$에 들어 있다. 콤팩트집합 $K$와 닫힌집합 $\mathbb{C}\setminus\Omega$ 사이의 거리는 양수이므로, $3r < \operatorname{dist}(K, \mathbb{C}\setminus\Omega)$인 $r > 0$을 잡으면 $K$의 각 점을 중심으로 한 반지름 $2r$인 원판이 통째로 $\Omega$에 들어간다.
 
 $H$가 콤팩트집합 위에서 균등연속이므로, 분할을 충분히 잘게 잡아 $a = t_0 < t_1 < \cdots < t_n = b$와 $0 = s_0 < s_1 < \cdots < s_m = 1$을 택하면, 각 작은 직사각형 $[t_{i-1}, t_i]\times[s_{j-1}, s_j]$의 $H$-상이 지름 $r$인 원판 안에 들어가도록 할 수 있다. 격자점의 상을 $w_{i,j} = H(t_i, s_j)$라 하자.
 
@@ -193,7 +193,7 @@ $\Omega$가 단순연결이므로 자취가 $\Omega$에 들어 있는 임의의 
 단순연결이 아닌 영역에서는 닫힌 경로가 한 점으로 수축되지 못하고, 그 장애는 경로가 영역의 구멍을 몇 번 감는가에서 비롯한다. 이 감는 횟수를 정수로 정확히 재는 것이 회전수이며, 그 정의 자체가 핵심 계산 $\oint dz/z = 2\pi i$ ([§복소적분, ⁋명제 10](/ko/math/complex_analysis/complex_integration#prop10)) 를 일반화한 적분으로 주어진다.
 
 ::: 정의 9
-$\gamma : [a, b] \to \mathbb{C}$가 닫힌 piecewise $C^1$ 곡선이고 $z_0$이 그 자취 위에 있지 않은 점이라 하자. $\gamma$의 $z_0$에 대한 *winding number<sub>회전수</sub>*를
+$\gamma : [a, b] \rightarrow \mathbb{C}$가 닫힌 piecewise $C^1$ 곡선이고 $z_0$이 그 자취 위에 있지 않은 점이라 하자. $\gamma$의 $z_0$에 대한 *winding number<sub>회전수</sub>*를
 
 $$n(\gamma, z_0) = \frac{1}{2\pi i}\oint_\gamma \frac{dz}{z - z_0}$$
 
@@ -207,7 +207,7 @@ $$n(\gamma, z_0) = \frac{1}{2\pi i}\oint_\gamma \frac{dz}{z - z_0}$$
 :::
 
 ::: 증명
-평행이동으로 $z_0 = 0$이라 두어도 일반성을 잃지 않으며, $\gamma : [a, b] \to \mathbb{C}\setminus\{0\}$이 닫힌 곡선이다. 함수
+평행이동으로 $z_0 = 0$이라 두어도 일반성을 잃지 않으며, $\gamma : [a, b] \rightarrow \mathbb{C}\setminus\{0\}$이 닫힌 곡선이다. 함수
 
 $$g(t) = \int_a^t \frac{\gamma'(\tau)}{\gamma(\tau)}\,d\tau$$
 

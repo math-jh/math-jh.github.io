@@ -39,7 +39,7 @@ $$F(x+h) - F(x) = \int_a^{x+h} f - \int_a^x f = \int_x^{x+h} f(t)\mathop{dt}$$
 
 $$m_h \leq \frac{F(x+h) - F(x)}{h} \leq M_h$$
 
-이 성립한다. 이제 $h \to 0$일 때 구간 $[x, x+h]$가 한 점 $x$로 줄어들고, $f$의 연속성에 의해 $m_h, M_h \to f(x)$이므로, [§함수의 극한, ⁋명제 8](/ko/math/calculus/functions_and_limits#prop8)에 의해 평균변화율이 $f(x)$로 수렴한다. $h < 0$인 경우도 비슷한 방식으로 증명을 완료할 수 있다. 
+이 성립한다. 이제 $h \rightarrow 0$일 때 구간 $[x, x+h]$가 한 점 $x$로 줄어들고, $f$의 연속성에 의해 $m_h, M_h \rightarrow f(x)$이므로, [§함수의 극한, ⁋명제 8](/ko/math/calculus/functions_and_limits#prop8)에 의해 평균변화율이 $f(x)$로 수렴한다. $h < 0$인 경우도 비슷한 방식으로 증명을 완료할 수 있다. 
 :::
 
 이 정리는 <em-ko>넓이가 쌓이는 속도가 곧 높이</em-ko>라는 직관의 엄밀한 표현이다. 즉, 적분으로 정의된 함수 $F(x)$가 한 점에서 늘어나는 비율 $F'(x)$는 바로 그 점에서의 피적분함수 값 $f(x)$이다.

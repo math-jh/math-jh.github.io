@@ -51,9 +51,9 @@ $$P_C(t) = dt + \frac{d(3-d)}{2}$$
 Hilbert 함수 $H(t)$는 차수 $t$인 homogeneous polynomial 공간의 원소 가울데 $C$ 위에서 0이 되는 것들을 제거한 후 남은 독립적인 원소의 개수, 즉 $C$ 위에서 서로 다른 함수로 작용하는 homogeneous polynomial들의 개수이다. $t$가 커질수록 이 수는 다항식처럼 자라며, 그 차수는 $C$의 차원인 $1$과 같고, 최고차항 계수는 차수 $d$와 비례하며, 상수항은 arithmetic genus $1 - \frac{(d-1)(d-2)}{2}$와 같다.
 
 ::: 증명
-$S = \mathbb{K}[\x_0, \x_1, \x_2]$라 하자. $(S/(F))_t$의 차원은 $S_t$에서 $F$의 배수들을 제거하여 얻는 공간의 차원과 같다. 곱셈 $\cdot F: S(-d) \to S$는 단사이므로 다음 short exact sequence를 얻는다.
+$S = \mathbb{K}[\x_0, \x_1, \x_2]$라 하자. $(S/(F))_t$의 차원은 $S_t$에서 $F$의 배수들을 제거하여 얻는 공간의 차원과 같다. 곱셈 $\cdot F: S(-d) \rightarrow S$는 단사이므로 다음 short exact sequence를 얻는다.
 
-$$0 \to S(-d) \xrightarrow{\cdot F} S \to S/(F) \to 0$$
+$$0 \rightarrow S(-d) \xrightarrow{\cdot F} S \rightarrow S/(F) \rightarrow 0$$
 
 $\dim_\mathbb{K} S_t = \binom{t+2}{2}$이므로, degree $t$ 부분의 차원을 비교하면
 
@@ -101,12 +101,12 @@ $$\mathbb{K}[\x, \y]/(f, g) \cong \prod_{p \in V(f,g)} \mathcal{O}_{\mathbb{A}^2
 
 이다. 따라서 $\dim_\mathbb{K} \mathbb{K}[\x, \y]/(f, g) = \sum_p i_p(C, D)$이다.
 
-한편, $S = \mathbb{K}[\x_0, \x_1, \x_2]$의 quotient $R = S/(F, G)$의 Hilbert 함수 $H(t) = \dim_\mathbb{K} R_t$는 $t \gg 0$에서 상수가 되며(단계 2에서 증명), 이 상숫값은 $\dim_\mathbb{K} \mathbb{K}[\x, \y]/(f, g)$와 같다. 이는 $t \gg 0$일 때 차수 $t$가 충분히 크면 각 교점에서의 값을 독립적으로 조절할 수 있는 다항식이 존재하여, 평가 사상 $R_t \to \mathbb{K}^{\lvert V(F,G) \rvert}$이 전사가 되기 때문이다.
+한편, $S = \mathbb{K}[\x_0, \x_1, \x_2]$의 quotient $R = S/(F, G)$의 Hilbert 함수 $H(t) = \dim_\mathbb{K} R_t$는 $t \gg 0$에서 상수가 되며(단계 2에서 증명), 이 상숫값은 $\dim_\mathbb{K} \mathbb{K}[\x, \y]/(f, g)$와 같다. 이는 $t \gg 0$일 때 차수 $t$가 충분히 크면 각 교점에서의 값을 독립적으로 조절할 수 있는 다항식이 존재하여, 평가 사상 $R_t \rightarrow \mathbb{K}^{\lvert V(F,G) \rvert}$이 전사가 되기 때문이다.
 
-**단계 2.** 이제 $\dim_\mathbb{K} (\mathbb{K}[\x_0, \x_1, \x_2]/(F, G))_t = mn$임을 보인다($t \gg 0$). $S = \mathbb{K}[\x_0, \x_1, \x_2]$라 쓰자. $F, G$가 공통인 irreducible factor를 갖지 않으므로 곱셈사상 $\cdot F: S(-m) \to S$과 $\cdot G: S/(F)(-n) \to S/(F)$은 모두 단사이며, 다음 두 short exact sequence를 얻는다.
+**단계 2.** 이제 $\dim_\mathbb{K} (\mathbb{K}[\x_0, \x_1, \x_2]/(F, G))_t = mn$임을 보인다($t \gg 0$). $S = \mathbb{K}[\x_0, \x_1, \x_2]$라 쓰자. $F, G$가 공통인 irreducible factor를 갖지 않으므로 곱셈사상 $\cdot F: S(-m) \rightarrow S$과 $\cdot G: S/(F)(-n) \rightarrow S/(F)$은 모두 단사이며, 다음 두 short exact sequence를 얻는다.
 
-$$0 \to S(-m) \xrightarrow{\cdot F} S \to S/(F) \to 0$$
-$$0 \to S/(F)(-n) \xrightarrow{\cdot G} S/(F) \to S/(F, G) \to 0$$
+$$0 \rightarrow S(-m) \xrightarrow{\cdot F} S \rightarrow S/(F) \rightarrow 0$$
+$$0 \rightarrow S/(F)(-n) \xrightarrow{\cdot G} S/(F) \rightarrow S/(F, G) \rightarrow 0$$
 
 [명제 3](#prop3)에서 차수를 $m$으로 읽으면, $S/(F)$의 Hilbert 다항식은 $P_F(t) = mt + c_1$의 꼴이 된다. 두 번째 exact sequence에 Hilbert 다항식을 적용하면 $S/(F, G)$의 Hilbert 다항식은
 

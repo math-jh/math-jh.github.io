@@ -154,14 +154,14 @@ Conversely, suppose $X$ is LCH. We must separate two distinct points of $X^+$. I
 Combining [Theorem 10](#thm10) and [Theorem 11](#thm11), when $X$ is an LCH space, $X^+$ becomes a compact Hausdorff space and by [Proposition 9](#prop9) $X$ is embedded in it as an open subspace. In particular, if $X$ is not compact, this embedding is dense. This is the existence part of Alexandroff's theorem: any LCH space can be embedded as a dense open subspace of some compact Hausdorff space. What remains is that such a compactification is essentially unique, which is formalized by the following universality property.
 
 ::: Theorem 12
-Let an LCH space $X$ be given. If a compact Hausdorff space $Y$, a point $p\in Y$, and a homeomorphism $\varphi:X\to Y\setminus\{p\}$ are given, then there exists a unique homeomorphism $h:X^+\to Y$ such that $h=\varphi$ on $X$ and $h(\infty)=p$.
+Let an LCH space $X$ be given. If a compact Hausdorff space $Y$, a point $p\in Y$, and a homeomorphism $\varphi:X\rightarrow Y\setminus\{p\}$ are given, then there exists a unique homeomorphism $h:X^+\rightarrow Y$ such that $h=\varphi$ on $X$ and $h(\infty)=p$.
 :::
 ::: Proof
 Identifying $X$ and $Y\setminus\{p\}$ via $\varphi$, we regard $X$ as a subset of $Y$. Since $Y$ is Hausdorff, $\{p\}$ is a closed set of $Y$, and therefore $X=Y\setminus\{p\}$ is an open subspace of $Y$. That is, the topology of $X$ coincides with the subspace topology induced from $Y$.
 
 We now show that the open sets of $Y$ correspond exactly to the open sets of $X^+$. If an open set $O$ of $Y$ does not contain $p$, then $O\subseteq X$ and since $X$ is an open subspace of $Y$, $O$ is an open set of $X$, that is, of the first kind. Conversely, an open set of $X$ is open in $Y$ since $X$ is open in $Y$. On the other hand, if an open set $O$ of $Y$ contains $p$, then $Y\setminus O$ is a closed subset of the compact space $Y$ and hence is compact ([§Compact Spaces, ⁋Lemma 3](/en/math/topology/compact_spaces#lem3)), and $Y\setminus O\subseteq X$ and is closed in $Y$ so also closed in $X$. Therefore $O=X^+\setminus(Y\setminus O)$ is the complement of a compact closed subset of $X$, that is, of the second kind. Conversely, for a compact closed subset $C$ of $X$, since $C$ is also compact in $Y$ and $Y$ is Hausdorff, it is closed ([§Compact Spaces, ⁋Corollary 5](/en/math/topology/compact_spaces#cor5)), so $Y\setminus C$ is an open set of $Y$ containing $p$.
 
-Therefore the correspondence $h:X^+\to Y$ identifying $p$ with $\infty$ sends open sets to open sets and vice versa, bijectively, and hence is a homeomorphism. Since $h$ must agree with $\varphi$ on $X$ and send $\infty$ to $p$, it is unique.
+Therefore the correspondence $h:X^+\rightarrow Y$ identifying $p$ with $\infty$ sends open sets to open sets and vice versa, bijectively, and hence is a homeomorphism. Since $h$ must agree with $\varphi$ on $X$ and send $\infty$ to $p$, it is unique.
 :::
 
 [Theorem 12](#thm12) says that for an LCH space $X$, there is only one way to add a point to make a compact Hausdorff space, up to homeomorphism. This is the uniqueness part of Alexandroff's theorem expressed in the language of universality. Thanks to this uniqueness, we can treat $X^+$ independently of its concrete construction, and in actual calculations we may choose any convenient compact Hausdorff model and identify it with $X^+$.
@@ -179,7 +179,7 @@ The most familiar example is that the one-point compactification of Euclidean sp
 ::: Example 14
 Consider the north pole $N=(0,\ldots,0,1)$ of the $n$-sphere $S^n=\{x\in\mathbb{R}^{n+1}\mid\lVert x\rVert=1\}$. The stereographic projection
 
-$$\sigma:S^n\setminus\{N\}\to\mathbb{R}^n,\qquad \sigma(x_1,\ldots,x_{n+1})=\frac{1}{1-x_{n+1}}(x_1,\ldots,x_n)$$
+$$\sigma:S^n\setminus\{N\}\rightarrow\mathbb{R}^n,\qquad \sigma(x_1,\ldots,x_{n+1})=\frac{1}{1-x_{n+1}}(x_1,\ldots,x_n)$$
 
 is well known to be a homeomorphism between $S^n\setminus\{N\}$ and $\mathbb{R}^n$. Since $S^n$ is a closed bounded subset of $\mathbb{R}^{n+1}$, it is compact by the Heine–Borel theorem, and it is Hausdorff as a subspace. Therefore $S^n$ is a compact Hausdorff space, and removing the single point $N$ yields a space homeomorphic to $\mathbb{R}^n$; thus by [Theorem 12](#thm12) there is a unique homeomorphism
 
@@ -195,7 +195,7 @@ Endow the set of natural numbers $\mathbb{N}=\{1,2,3,\ldots\}$ with the discrete
 
 This space is realized by a familiar subset of the real numbers. Consider the function
 
-$$f:\mathbb{N}^+\to\mathbb{R},\qquad f(n)=\frac1n\quad(n\in\mathbb{N}),\qquad f(\infty)=0$$
+$$f:\mathbb{N}^+\rightarrow\mathbb{R},\qquad f(n)=\frac1n\quad(n\in\mathbb{N}),\qquad f(\infty)=0$$
 
 Then $f$ is a bijection between $\mathbb{N}^+$ and $\{0\}\cup\{1/n\mid n\geq 1\}$. Each $n\in\mathbb{N}$ is an isolated point in $\mathbb{N}^+$ and its image $1/n$ is also an isolated point in $\{0\}\cup\{1/n\}$, and since the cofinite neighborhoods of $\infty$ map to neighborhoods of $0$, $f$ is continuous. Since the domain is compact and the codomain is Hausdorff, by [§Compact Spaces, ⁋Proposition 9](/en/math/topology/compact_spaces#prop9) $f$ is a homeomorphism. That is, $\mathbb{N}^+$ is homeomorphic to a convergent sequence with one limit point.
 :::
@@ -208,9 +208,9 @@ The one-point compactification is not merely an existential tool; it is also use
 Any LCH space is completely regular. Therefore any LCH space is a Tychonoff space. ([§Hausdorff Spaces, ⁋Definition 3](/en/math/topology/Hausdorff_spaces#def3))
 :::
 ::: Proof
-We first show that any compact Hausdorff space $Y$ is completely regular. Let a point $p\in Y$ and a closed set $C\subseteq Y$ not containing $p$ be given. Since $Y$ is Hausdorff, it is $T_1$ and thus $\{p\}$ is a closed set; $\{p\}$ and $C$ are two disjoint closed sets. Since $Y$ is normal, ([§Compact Spaces, ⁋Proposition 7](/en/math/topology/compact_spaces#prop7)) by Urysohn's lemma there exists a continuous function $g:Y\to[0,1]$ taking the value $0$ on $\{p\}$ and $1$ on $C$. ([§Urysohn's Lemma and Tietze Extension Theorem, ⁋Theorem 2](/en/math/topology/urysohn_and_tietze#thm2)) This means precisely that $p$ and $C$ can be separated by a continuous function, so $Y$ is completely regular.
+We first show that any compact Hausdorff space $Y$ is completely regular. Let a point $p\in Y$ and a closed set $C\subseteq Y$ not containing $p$ be given. Since $Y$ is Hausdorff, it is $T_1$ and thus $\{p\}$ is a closed set; $\{p\}$ and $C$ are two disjoint closed sets. Since $Y$ is normal, ([§Compact Spaces, ⁋Proposition 7](/en/math/topology/compact_spaces#prop7)) by Urysohn's lemma there exists a continuous function $g:Y\rightarrow[0,1]$ taking the value $0$ on $\{p\}$ and $1$ on $C$. ([§Urysohn's Lemma and Tietze Extension Theorem, ⁋Theorem 2](/en/math/topology/urysohn_and_tietze#thm2)) This means precisely that $p$ and $C$ can be separated by a continuous function, so $Y$ is completely regular.
 
-Now let $X$ be LCH. By [Theorem 10](#thm10) and [Theorem 11](#thm11), $X^+$ is a compact Hausdorff space and hence completely regular as shown above. By [Proposition 9](#prop9), $X$ is a subspace of $X^+$. We show that complete regularity is inherited by subspaces. Let $x\in X$ and a closed set $C$ of $X$ not containing $x$ be given; by the property of closed sets in a subspace, there exists a closed set $C'$ of $X^+$ such that $C=C'\cap X$. Since $x\in X$ and $x\notin C$, we have $x\notin C'$, and since $X^+$ is completely regular, there exists a continuous function $g:X^+\to[0,1]$ such that $g(x)=0$ and $g$ takes the value $1$ on $C'$. The restriction $g\vert_X$ to $X$ is a continuous function separating $x$ and $C\subseteq C'$, so $X$ is completely regular. Finally, $X$ is Hausdorff and hence $T_0$, so $X$ is a Tychonoff space.
+Now let $X$ be LCH. By [Theorem 10](#thm10) and [Theorem 11](#thm11), $X^+$ is a compact Hausdorff space and hence completely regular as shown above. By [Proposition 9](#prop9), $X$ is a subspace of $X^+$. We show that complete regularity is inherited by subspaces. Let $x\in X$ and a closed set $C$ of $X$ not containing $x$ be given; by the property of closed sets in a subspace, there exists a closed set $C'$ of $X^+$ such that $C=C'\cap X$. Since $x\in X$ and $x\notin C$, we have $x\notin C'$, and since $X^+$ is completely regular, there exists a continuous function $g:X^+\rightarrow[0,1]$ such that $g(x)=0$ and $g$ takes the value $1$ on $C'$. The restriction $g\vert_X$ to $X$ is a continuous function separating $x$ and $C\subseteq C'$, so $X$ is completely regular. Finally, $X$ is Hausdorff and hence $T_0$, so $X$ is a Tychonoff space.
 :::
 
 [Corollary 16](#cor16) guarantees that on an LCH space, we can always obtain a continuous function separating two distinct points or a point and a closed set. This is a fundamental fact indicating how well-behaved locally compact spaces are as analytic objects, and it serves as the starting point for various constructions that patch together locally defined data into global ones using continuous functions.
@@ -336,10 +336,10 @@ We only sketch the key idea of the proof and leave the details to standard liter
 
 ## Existence of Partitions of Unity
 
-We now formalize the partition of unity, the tool that patches locally defined data into a global object. The *support* of a continuous function $\phi:X\to[0,1]$ is defined as $\supp\phi=\cl(\{x\in X\mid\phi(x)\neq 0\})$, which is the smallest closed set containing the region where $\phi$ takes non-zero values.
+We now formalize the partition of unity, the tool that patches locally defined data into a global object. The *support* of a continuous function $\phi:X\rightarrow[0,1]$ is defined as $\supp\phi=\cl(\{x\in X\mid\phi(x)\neq 0\})$, which is the smallest closed set containing the region where $\phi$ takes non-zero values.
 
 ::: Definition 25
-A family $(\phi_i)_{i\in I}$ of continuous functions on a topological space $X$ is called a *partition of unity* if each $\phi_i:X\to[0,1]$ satisfies the following two conditions.
+A family $(\phi_i)_{i\in I}$ of continuous functions on a topological space $X$ is called a *partition of unity* if each $\phi_i:X\rightarrow[0,1]$ satisfies the following two conditions.
 
 1. The family $(\supp\phi_i)_{i\in I}$ is locally finite.
 2. For every $x\in X$, $\sum_{i\in I}\phi_i(x)=1$ holds.
@@ -390,17 +390,17 @@ $$\cl(Q_\alpha)\subseteq P_\alpha\subseteq\cl(P_\alpha)\subseteq V_\alpha\subset
 
 for all $\alpha$.
 
-**(3) Bump functions.** For each $\alpha$, the sets $\cl(Q_\alpha)$ and $X\setminus P_\alpha$ are two disjoint closed sets. Since $X$ is normal, by Urysohn's lemma there exists a continuous function $\psi_\alpha:X\to[0,1]$ taking the value $1$ on $\cl(Q_\alpha)$ and $0$ on $X\setminus P_\alpha$. ([§Urysohn's Lemma and Tietze Extension Theorem, ⁋Theorem 2](/en/math/topology/urysohn_and_tietze#thm2)) Then $\{x\mid\psi_\alpha(x)\neq 0\}\subseteq P_\alpha$, so
+**(3) Bump functions.** For each $\alpha$, the sets $\cl(Q_\alpha)$ and $X\setminus P_\alpha$ are two disjoint closed sets. Since $X$ is normal, by Urysohn's lemma there exists a continuous function $\psi_\alpha:X\rightarrow[0,1]$ taking the value $1$ on $\cl(Q_\alpha)$ and $0$ on $X\setminus P_\alpha$. ([§Urysohn's Lemma and Tietze Extension Theorem, ⁋Theorem 2](/en/math/topology/urysohn_and_tietze#thm2)) Then $\{x\mid\psi_\alpha(x)\neq 0\}\subseteq P_\alpha$, so
 
 $$\supp\psi_\alpha=\cl(\{x\mid\psi_\alpha(x)\neq 0\})\subseteq\cl(P_\alpha)\subseteq V_\alpha\subseteq U_\alpha$$
 
 In particular, $(\supp\psi_\alpha)_{\alpha\in J}$ is locally finite since $\supp\psi_\alpha\subseteq V_\alpha$ and $(V_\alpha)$ is locally finite.
 
-**(4) Normalization.** Since the family $(\psi_\alpha)$ has locally finite support, for each point $x$ there is a neighborhood where only finitely many $\psi_\alpha$ are non-zero. On that neighborhood the sum $\psi=\sum_{\alpha\in J}\psi_\alpha$ is a finite sum, and a finite sum of continuous functions is continuous, so $\psi$ is continuous on that neighborhood. Since continuity is a local property, $\psi:X\to\mathbb{R}$ is a continuous function. Also, since $(Q_\alpha)$ covers $X$, any $x$ belongs to some $Q_\alpha$, and then $\psi_\alpha(x)=1$ on $\cl(Q_\alpha)$, so $\psi(x)\geq 1>0$. Therefore, defining
+**(4) Normalization.** Since the family $(\psi_\alpha)$ has locally finite support, for each point $x$ there is a neighborhood where only finitely many $\psi_\alpha$ are non-zero. On that neighborhood the sum $\psi=\sum_{\alpha\in J}\psi_\alpha$ is a finite sum, and a finite sum of continuous functions is continuous, so $\psi$ is continuous on that neighborhood. Since continuity is a local property, $\psi:X\rightarrow\mathbb{R}$ is a continuous function. Also, since $(Q_\alpha)$ covers $X$, any $x$ belongs to some $Q_\alpha$, and then $\psi_\alpha(x)=1$ on $\cl(Q_\alpha)$, so $\psi(x)\geq 1>0$. Therefore, defining
 
 $$\phi_\alpha=\frac{\psi_\alpha}{\psi}$$
 
-each $\phi_\alpha:X\to[0,1]$ is a continuous function (since $\psi$ is nowhere zero). Since $\psi>0$, we have $\{x\mid\phi_\alpha(x)\neq 0\}=\{x\mid\psi_\alpha(x)\neq 0\}$, and thus $\supp\phi_\alpha=\supp\psi_\alpha\subseteq U_\alpha$ and $(\supp\phi_\alpha)$ is locally finite. Finally, for each $x$,
+each $\phi_\alpha:X\rightarrow[0,1]$ is a continuous function (since $\psi$ is nowhere zero). Since $\psi>0$, we have $\{x\mid\phi_\alpha(x)\neq 0\}=\{x\mid\psi_\alpha(x)\neq 0\}$, and thus $\supp\phi_\alpha=\supp\psi_\alpha\subseteq U_\alpha$ and $(\supp\phi_\alpha)$ is locally finite. Finally, for each $x$,
 
 $$\sum_{\alpha\in J}\phi_\alpha(x)=\frac{1}{\psi(x)}\sum_{\alpha\in J}\psi_\alpha(x)=\frac{\psi(x)}{\psi(x)}=1$$
 
@@ -416,7 +416,7 @@ The converse of [Theorem 27](#thm27) also holds. Let a space $X$ be given such t
 Once a partition of unity is available, the standard procedure for patching locally defined data into a global object opens up. In this section we illustrate the principle with the case of continuous functions.
 
 ::: Example 29
-Let an open cover $(U_\alpha)_{\alpha\in J}$ of a paracompact Hausdorff space $X$ be given, and let continuous functions $f_\alpha:U_\alpha\to\mathbb{R}$ defined only on each $U_\alpha$ be given. By [Theorem 27](#thm27), choose a partition of unity $(\phi_\alpha)_{\alpha\in J}$ subordinate to $(U_\alpha)$. For each $\alpha$, the product $\phi_\alpha f_\alpha$ is continuous on $U_\alpha$; since $\supp\phi_\alpha\subseteq U_\alpha$ is a closed set of $X$, we can extend this product continuously to all of $X$ by setting it to $0$ outside $U_\alpha$. Writing this extension again as $\phi_\alpha f_\alpha$, since the family $(\supp\phi_\alpha)$ is locally finite,
+Let an open cover $(U_\alpha)_{\alpha\in J}$ of a paracompact Hausdorff space $X$ be given, and let continuous functions $f_\alpha:U_\alpha\rightarrow\mathbb{R}$ defined only on each $U_\alpha$ be given. By [Theorem 27](#thm27), choose a partition of unity $(\phi_\alpha)_{\alpha\in J}$ subordinate to $(U_\alpha)$. For each $\alpha$, the product $\phi_\alpha f_\alpha$ is continuous on $U_\alpha$; since $\supp\phi_\alpha\subseteq U_\alpha$ is a closed set of $X$, we can extend this product continuously to all of $X$ by setting it to $0$ outside $U_\alpha$. Writing this extension again as $\phi_\alpha f_\alpha$, since the family $(\supp\phi_\alpha)$ is locally finite,
 
 $$f=\sum_{\alpha\in J}\phi_\alpha f_\alpha$$
 

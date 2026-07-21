@@ -12,7 +12,7 @@ date: 2026-07-01
 weight: 14
 ---
 
-앞선 글에서 우리는 공역의 차원을 올려 한 실수를 여러 실수로 보내는 함수, 곧 매개변수로 매개화된 곡선 $\mathbf{r}:\mathbb{R}\to\mathbb{R}^n$을 다루었다. 이제 거꾸로 정의역의 차원을 올려, 여러 실수를 한 실수로 보내는 다변수함수 $f:\mathbb{R}^m\to\mathbb{R}$을 다룬다. 미분은 여전히 한 점 근방에서의 일차 근사라는 본질을 갖지만, 정의역이 벡터공간이 되면서 다가오는 방향이 무수히 많아져 방향이 중요해지고, 일차 근사가 숫자 하나가 아닌 선형사상으로 주어진다. 벡터공간과 내적·노름은 [§곡선과 벡터함수](/ko/math/calculus/vector_functions)에서 다루었으므로, 이 글에서는 다변수 미분의 핵심 도구인 선형사상과 행렬, 행렬식을 간략히 정리한 뒤 편미분과 기울기, 미분가능성, 다변수 연쇄법칙, 극값을 다룬다.
+앞선 글에서 우리는 공역의 차원을 올려 한 실수를 여러 실수로 보내는 함수, 곧 매개변수로 매개화된 곡선 $\mathbf{r}:\mathbb{R}\rightarrow\mathbb{R}^n$을 다루었다. 이제 거꾸로 정의역의 차원을 올려, 여러 실수를 한 실수로 보내는 다변수함수 $f:\mathbb{R}^m\rightarrow\mathbb{R}$을 다룬다. 미분은 여전히 한 점 근방에서의 일차 근사라는 본질을 갖지만, 정의역이 벡터공간이 되면서 다가오는 방향이 무수히 많아져 방향이 중요해지고, 일차 근사가 숫자 하나가 아닌 선형사상으로 주어진다. 벡터공간과 내적·노름은 [§곡선과 벡터함수](/ko/math/calculus/vector_functions)에서 다루었으므로, 이 글에서는 다변수 미분의 핵심 도구인 선형사상과 행렬, 행렬식을 간략히 정리한 뒤 편미분과 기울기, 미분가능성, 다변수 연쇄법칙, 극값을 다룬다.
 
 ## 선형사상과 행렬
 
@@ -41,11 +41,11 @@ $$\det\begin{pmatrix} a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \\ a_
 미분을 정의하기에 앞서, 다변수함수의 극한과 연속을 짚고 넘어가야 한다. 일변수함수에서 극한은 점 $a$의 양쪽, 즉 좌·우 두 방향만 보면 충분했다. 그러나 정의역이 $\mathbb{R}^m$이 되면 점 $\mathbf{a}$로 다가오는 경로가 무수히 많아지므로 다소 주의할 필요가 있다. 
 
 ::: 정의 1
-다변수함수 $f: \mathbb{R}^m \to \mathbb{R}$가 점 $\mathbf{a}$에서 *극한<sub>limit</sub>* $L$을 가진다는 것은, 임의의 $\varepsilon > 0$에 대해 어떤 $\delta > 0$가 존재하여
+다변수함수 $f: \mathbb{R}^m \rightarrow \mathbb{R}$가 점 $\mathbf{a}$에서 *극한<sub>limit</sub>* $L$을 가진다는 것은, 임의의 $\varepsilon > 0$에 대해 어떤 $\delta > 0$가 존재하여
 
 $$0 < \lVert \mathbf{x} - \mathbf{a}\rVert < \delta \quad\Rightarrow\quad \lvert f(\mathbf{x}) - L\rvert < \varepsilon$$
 
-가 $0 < \lVert \mathbf{x} - \mathbf{a}\rVert < \delta$를 만족하는 모든 $\mathbf{x}$에 대해 성립하는 것이다. 이를 $\lim_{\mathbf{x}\to\mathbf{a}} f(\mathbf{x}) = L$로 쓰며, 특히 $\lim_{\mathbf{x}\to\mathbf{a}} f(\mathbf{x}) = f(\mathbf{a})$일 때 $f$는 $\mathbf{a}$에서 *연속<sub>continuous</sub>*이라 한다.
+가 $0 < \lVert \mathbf{x} - \mathbf{a}\rVert < \delta$를 만족하는 모든 $\mathbf{x}$에 대해 성립하는 것이다. 이를 $\lim_{\mathbf{x}\rightarrow\mathbf{a}} f(\mathbf{x}) = L$로 쓰며, 특히 $\lim_{\mathbf{x}\rightarrow\mathbf{a}} f(\mathbf{x}) = f(\mathbf{a})$일 때 $f$는 $\mathbf{a}$에서 *연속<sub>continuous</sub>*이라 한다.
 :::
 
 이 정의의 형식은 일변수와 본질적으로 같으며, 차이는 $1$차원에서의 거리 $\lvert x - a\rvert$가 $m$차원에서의 거리 $\lVert\mathbf{x} - \mathbf{a}\rVert$로 바뀐 것이 전부다. 그러나, 예를 들어, 주어진 함수의 극한값이 $L$임을 확인하기 위해서는 임의의 방향 $\mathbb{v}=(v_1, \ldots, v_m)$에 대하여 다음 극한
@@ -67,7 +67,7 @@ $$f(\mathbf{x})=\begin{cases}1&\text{if $y=x^2$,}\\ 0&\text{otherwise}\end{cases
 ::: 정의 2
 다변수함수 $f(x_1, \ldots, x_n)$의 점 $\mathbf{a}$에서 변수 $x_i$에 대한 *편미분<sub>partial derivative</sub>*은 나머지 변수를 고정한 채 $x_i$로만 미분한 것이다. 즉, 
 
-$$\frac{\partial f}{\partial x_i}(  \mathbf{a}) = \lim_{h\to 0}\frac{f(\mathbf{a} + h \mathbf{e}_i) - f(\mathbf{a})}{h}$$
+$$\frac{\partial f}{\partial x_i}(  \mathbf{a}) = \lim_{h\rightarrow 0}\frac{f(\mathbf{a} + h \mathbf{e}_i) - f(\mathbf{a})}{h}$$
 
 으로 주어지며, 여기서 $\mathbf{e}_i$는 $i$번째 성분만 $1$, 나머지 성분은 $0$인 표준기저벡터이다. 모든 편미분을 모은 벡터 
 
@@ -115,7 +115,7 @@ $$\lim_{h\rightarrow 0}\frac{f(a+h)-(f(a)+kh)}{h}=0$$
 ::: 정의 3
 다변수함수 $f$가 점 $\mathbf{a}$에서 *미분가능<sub>differentiable</sub>*하다는 것은, 벡터 $\mathbf{n}$이 존재하여
 
-$$\lim_{\mathbf{h} \to 0}\frac{f(\mathbf{a} + \mathbf{h}) - f(\mathbf{a}) - \mathbf{n}\cdot \mathbf{h}}{\lVert \mathbf{h}\rVert} = 0$$
+$$\lim_{\mathbf{h} \rightarrow 0}\frac{f(\mathbf{a} + \mathbf{h}) - f(\mathbf{a}) - \mathbf{n}\cdot \mathbf{h}}{\lVert \mathbf{h}\rVert} = 0$$
 
 이 성립하는 것이다.
 :::
@@ -129,7 +129,7 @@ $f$가 점 $\mathbf{a}$에서 미분가능하면, [정의 3](#def3)의 벡터 $\
 ::: 증명
 [정의 3](#def3)의 극한에서 $\mathbf{h} = t \mathbf{e}_i$로 두면, $\lVert \mathbf{h}\rVert = \lvert t\rvert$이므로
 
-$$\lim_{t \to 0}\frac{f(\mathbf{a} + t \mathbf{e}_i) - f(\mathbf{a}) - \mathbf{n}\cdot (t \mathbf{e}_i)}{\lvert t\rvert} = 0$$
+$$\lim_{t \rightarrow 0}\frac{f(\mathbf{a} + t \mathbf{e}_i) - f(\mathbf{a}) - \mathbf{n}\cdot (t \mathbf{e}_i)}{\lvert t\rvert} = 0$$
 
 이다. $\mathbf{n}\cdot (t \mathbf{e}_i) = t n_i$이다. $t>0$일 때 $\lvert t\rvert = t$이므로 위 극한의 분자를 $t$로 정리하면 $\frac{f(\mathbf{a} + t \mathbf{e}_i) - f(\mathbf{a})}{t} - n_i$이고, 이는 편미분의 정의에 의해 $\frac{\partial f}{\partial x_i}(\mathbf{a}) - n_i$로 수렴한다. $t<0$일 때도 같은 논리로 같은 결론이므로, 위 극한이 $0$이 되려면 $n_i = \frac{\partial f}{\partial x_i}(\mathbf{a})$이어야 한다. 모든 $i$에 대해 이를 모으면 $\mathbf{n} = \nabla f(\mathbf{a})$이다.
 :::
@@ -152,7 +152,7 @@ $$f(a+h,b+k) - f(a,b) = f_x(a+\theta_1 h, b+k) h + f_y(a, b+\theta_2 k) k$$
 
 $$f(a+h,b+k) - f(a,b) - \nabla f(a,b)\cdot(h,k) = \bigl(f_x(a+\theta_1 h, b+k) - f_x(a,b)\bigr)h + \bigl(f_y(a, b+\theta_2 k) - f_y(a,b)\bigr)k$$
 
-를 얻는다. 그럼 $f_x, f_y$가 $(a,b)$에서 연속이므로 $(h,k)\to(0,0)$일 때 두 괄호가 모두 $0$으로 가고, $\lvert h\rvert, \lvert k\rvert \le \lVert(h,k)\rVert$이므로 [정의 3](#def3)의 극한이 성립한다. 즉, $f$는 $(a,b)$에서 미분가능하고 그 기울기는 $\nabla f(a,b)$이다.
+를 얻는다. 그럼 $f_x, f_y$가 $(a,b)$에서 연속이므로 $(h,k)\rightarrow(0,0)$일 때 두 괄호가 모두 $0$으로 가고, $\lvert h\rvert, \lvert k\rvert \le \lVert(h,k)\rVert$이므로 [정의 3](#def3)의 극한이 성립한다. 즉, $f$는 $(a,b)$에서 미분가능하고 그 기울기는 $\nabla f(a,b)$이다.
 :::
 
 ## 연쇄법칙과 혼합편미분
@@ -170,11 +170,11 @@ $$\frac{d}{dt} f(\mathbf{x}(t)) = \nabla f(\mathbf{x}(t)) \cdot \mathbf{x}'(t) =
 :::
 
 ::: 증명
-[정의 3](#def3)을 점 $\mathbf{x}(t)$와 변화량 $\Delta\mathbf{x}=\mathbf{x}(t+\Delta t)-\mathbf{x}(t)$에 적용하면 $\Delta t\to 0$일 때
+[정의 3](#def3)을 점 $\mathbf{x}(t)$와 변화량 $\Delta\mathbf{x}=\mathbf{x}(t+\Delta t)-\mathbf{x}(t)$에 적용하면 $\Delta t\rightarrow 0$일 때
 
-$$\frac{f(\mathbf{x}(t+\Delta t))-f(\mathbf{x}(t))-\nabla f(\mathbf{x}(t))\cdot\Delta\mathbf{x}}{\lVert\Delta\mathbf{x}\rVert}\to 0$$
+$$\frac{f(\mathbf{x}(t+\Delta t))-f(\mathbf{x}(t))-\nabla f(\mathbf{x}(t))\cdot\Delta\mathbf{x}}{\lVert\Delta\mathbf{x}\rVert}\rightarrow 0$$
 
-이다. 양변을 $\Delta t$로 나누면 우변은 일차항 $\nabla f(\mathbf{x}(t))\cdot\frac{\Delta\mathbf{x}}{\Delta t}$과 나머지항으로 갈라지는데, 이 나머지항은 위에서 $0$으로 간 양에 $\lVert\Delta\mathbf{x}\rVert/\Delta t$가 곱해진 것이다. 곡선의 미분가능성으로 $\Delta\mathbf{x}/\Delta t\to\mathbf{x}'(t)$이므로 $\lVert\Delta\mathbf{x}\rVert/\lvert\Delta t\rvert$가 유계이며, 따라서 나머지항도 $\Delta t\to 0$에서 $0$으로 사라져 공식을 얻는다.
+이다. 양변을 $\Delta t$로 나누면 우변은 일차항 $\nabla f(\mathbf{x}(t))\cdot\frac{\Delta\mathbf{x}}{\Delta t}$과 나머지항으로 갈라지는데, 이 나머지항은 위에서 $0$으로 간 양에 $\lVert\Delta\mathbf{x}\rVert/\Delta t$가 곱해진 것이다. 곡선의 미분가능성으로 $\Delta\mathbf{x}/\Delta t\rightarrow\mathbf{x}'(t)$이므로 $\lVert\Delta\mathbf{x}\rVert/\lvert\Delta t\rvert$가 유계이며, 따라서 나머지항도 $\Delta t\rightarrow 0$에서 $0$으로 사라져 공식을 얻는다.
 :::
 
 [정리 6](#thm6)는 한 변수가 여러 변수에 의존할 때 편미분이 사슬처럼 연결됨을 말하며, 좌표변환에서 주로 쓰인다. 가령 $z = f(x,y)$에서 극좌표 $x = r\cos\theta$, $y = r\sin\theta$로 바꾸면 $\partial z/\partial r = f_x\cos\theta + f_y\sin\theta$가 곧바로 나온다.
@@ -197,7 +197,7 @@ $$\Delta = \frac{\partial^2 f}{\partial y \partial x}(a+\theta_1 h, b+\theta_2 k
 
 $$\Delta = \frac{\partial^2 f}{\partial x \partial y}(a+\theta_3 h, b+\theta_4 k) hk$$
 
-이다. 두 식을 $hk$로 나눈 뒤 $(h,k)\to(0,0)$의 극한을 취하면, 두 혼합편미분이 $(a,b)$에서 연속이므로 우변이 각각 $\frac{\partial^2 f}{\partial y\partial x}(a,b)$와 $\frac{\partial^2 f}{\partial x\partial y}(a,b)$로 수렴하여 둘이 같다.
+이다. 두 식을 $hk$로 나눈 뒤 $(h,k)\rightarrow(0,0)$의 극한을 취하면, 두 혼합편미분이 $(a,b)$에서 연속이므로 우변이 각각 $\frac{\partial^2 f}{\partial y\partial x}(a,b)$와 $\frac{\partial^2 f}{\partial x\partial y}(a,b)$로 수렴하여 둘이 같다.
 :::
 
 ## 방향도함수와 기울기

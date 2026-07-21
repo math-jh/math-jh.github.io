@@ -18,7 +18,7 @@ weight: 120
 우리는 이제 미분의 개념을 도입한다. 더 정확히 말하자면 우리가 생각할 것은 differential form의 개념으로, 이를 다루기 위해서는 graded algebra가 필요하다. 앞으로 graded algebra의 구조를 주는 abelian group을 $\Delta$로 표기하기로 한다. 
 
 ::: 정의 1
-Abelian group $(\Delta, +, 0)$에 대하여, 함수 $\varepsilon : \Delta \times \Delta \to \{ \pm 1 \}$가 다음의 세 조건을 만족한다 하자. 
+Abelian group $(\Delta, +, 0)$에 대하여, 함수 $\varepsilon : \Delta \times \Delta \rightarrow \{ \pm 1 \}$가 다음의 세 조건을 만족한다 하자. 
 
 - $$\varepsilon(\alpha + \alpha', \beta) = \varepsilon(\alpha, \beta)\varepsilon(\alpha', \beta)$$  
 - $$\varepsilon(\alpha, \beta + \beta') = \varepsilon(\alpha, \beta)\varepsilon(\alpha, \beta')$$  
@@ -37,22 +37,22 @@ $$\varepsilon(p,q)=1,\qquad \varepsilon(p,q)=(-1)^{pq}$$
 
 이제 commutative ring $A$, $\Delta$-graded $A$-module $E$, $E'$, $E''$, $F$, $F'$, $F''$와 $A$-bilinear map들
 
-$$\mu: E \times E' \to E'', \qquad \lambda_1: F \times E' \to F', \qquad \lambda_2: E \times F' \to F''$$
+$$\mu: E \times E' \rightarrow E'', \qquad \lambda_1: F \times E' \rightarrow F', \qquad \lambda_2: E \times F' \rightarrow F''$$
 
 그리고 이들이 유도하는 $A$-linear map들
 
-$$E \otimes_A E' \to E'', \qquad F \otimes_A E' \to F'', \qquad E \otimes_A F' \to F''$$
+$$E \otimes_A E' \rightarrow E'', \qquad F \otimes_A E' \rightarrow F'', \qquad E \otimes_A F' \rightarrow F''$$
 
 을 생각하고, 이 세 $A$-linear map들이 모두 degree $0$ graded homomorphism이라 하자. 이들은 각각 곱셈에 해당하는 연산들로, 우리는 가령 $x\otimes x'$의 $E''$에서의 image를 간단히 $xx'$로 적을 것이다. $E\otimes_A E'$에서 원소 $x\otimes x'$는 degree $\degree(x)+\degree(x')$에 있으므로, 위와 같은 가정에서 $xx'$는 $E''$의 degree $\degree(x)+\degree(x')$ 성분에 있게 된다. 
 
 이제 다음을 정의한다. 
 
 ::: 정의 2
-위의 상황에 더해 commutation factor $\varepsilon: \Delta \times \Delta \to \{ \pm 1 \}$이 주어졌다 하자. 그럼 $(E, E', E'')$에서 $(F, F', F'')$로 가는 degree $\delta$의 *$(A, \varepsilon)$-derivation<sub>$(A,\varepsilon)$-미분</sub>* 혹은 간단히 *$\varepsilon$-derivation*은 다음의 조건 
+위의 상황에 더해 commutation factor $\varepsilon: \Delta \times \Delta \rightarrow \{ \pm 1 \}$이 주어졌다 하자. 그럼 $(E, E', E'')$에서 $(F, F', F'')$로 가는 degree $\delta$의 *$(A, \varepsilon)$-derivation<sub>$(A,\varepsilon)$-미분</sub>* 혹은 간단히 *$\varepsilon$-derivation*은 다음의 조건 
 
 $$d''(xx') = (dx)x' + \varepsilon(\delta, \deg(x))x(d'x')$$
 
-을 만족하는 degree $\delta$ graded $A$-module homomorphism들의 triple $d: E \rightarrow F$, $d': E' \rightarrow F'$, $d'': E'' \rightarrow F''$이다. 만일 $\varepsilon$이 항상 $1$이 되어, 위의 식에서 $\varepsilon$을 없앨 수 있다면 $(d,d',d'')$를 간단히 *derivation*이라 부른다. 
+을 만족하는 degree $\delta$ graded $A$-module homomorphism들의 triple $d: E \rightarrow F$, $d': E' \rightarrow F'$, $d'': E'' \rightarrow F''$이다. 만일 $\varepsilon$이 항상 $1$이 되어, 위의 식에서 $\varepsilon$을 없앨 수 있다면 $(d,d',d'')$를 간단히 *derivation<sub>미분</sub>*이라 부른다. 
 :::
 
 위의 정의에서 혼동을 피하기 위해서는 각 항들이 어디에 속하는지, 가령 우변의 $(dx)x'$는 $dx\in F$와 $x'\in E'$를 $\lambda_1$에 의해 곱하여 얻은 $F''$의 원소라는 것 등을 살펴보는 것도 좋다. 그러나 실제로는 우리는 다음과 같은 특별한 두 경우에 관심이 있다.
@@ -60,7 +60,7 @@ $$d''(xx') = (dx)x' + \varepsilon(\delta, \deg(x))x(d'x')$$
 1. $E=F$, $E'=F'$, $E''=F''$, 그리고 세 개의 bilinear map $\mu, \lambda_1, \lambda_2$가 모두 동일한 경우
 2. $E=E'=E''$, $F=F'=F''$이고, 따라서 $\mu:E\otimes_A E \rightarrow E$에 의해 $E$가 *graded* algebra가 되며, 
 
-    $$\lambda_1: F \otimes_A E \to F, \qquad \lambda_2: E \otimes_A F \to F$$
+    $$\lambda_1: F \otimes_A E \rightarrow F, \qquad \lambda_2: E \otimes_A F \rightarrow F$$
 
     인 경우. 이 경우, 임의의 $x,y\in E$에 대하여 다음의 식
 
@@ -187,7 +187,7 @@ $$P(D)(x x') = \sum_i (Q_i(D) x)(R_i(D) x')$$
 이제 우리는 [정의 2](#def2) 이후 다뤘던 두 가지 특별한 경우 중 두 번째 경우를 살펴본다. 즉 $\Delta$-graded $A$-algebra $E$와 graded $A$-module $F$, 그리고 두 개의 곱셈 $E\otimes_AF \rightarrow F$와 $F\otimes_AE \rightarrow F$가 주어졌다 하자. 
 
 ::: 명제 6
-Degree $\delta$의 $\varepsilon$-derivation $d:E \to F$에 대하여, $\ker(d)$는 $E$의 graded subalgebra이며, 만약 $E$가 $1$을 갖는다면 $1 \in \ker(d)$이다.
+Degree $\delta$의 $\varepsilon$-derivation $d:E \rightarrow F$에 대하여, $\ker(d)$는 $E$의 graded subalgebra이며, 만약 $E$가 $1$을 갖는다면 $1 \in \ker(d)$이다.
 :::
 ::: 증명
 우선 $\ker(d)$가 $E$의 $A$-submodule인 것은 자명하므로, $\ker(d)$가 곱셈에 대해 닫혀있다는 것만 보이면 된다. 임의의 homogeneous $x, y \in \ker(d)$에 대하여,
@@ -206,7 +206,7 @@ $$d(1) = d(1 \cdot 1) = (d1) \cdot 1 + \varepsilon_{\delta, 0} \cdot 1 \cdot (d1
 따라서 만일 $d_1,d_2$가 $E$에서 $F$로의 degree $\delta$ $\varepsilon$-derivation이고 이들이 $A$의 algebra로서의 generator에서 그 값이 모두 같다면 $d_1=d_2$여야 한다. 한편 역원에 대해서는 다음이 성립한다.
 
 ::: 명제 7
-$E$가 $1$을 갖는 $\Delta$-graded $A$-algebra라 하고, degree $\delta$의 $\varepsilon$-derivation $d:E \to F$를 생각하자. 만일 $x$가 $E$의 invertible homogeneous element라면, 그 역원 $x^{-1}$에 대하여 다음의 식
+$E$가 $1$을 갖는 $\Delta$-graded $A$-algebra라 하고, degree $\delta$의 $\varepsilon$-derivation $d:E \rightarrow F$를 생각하자. 만일 $x$가 $E$의 invertible homogeneous element라면, 그 역원 $x^{-1}$에 대하여 다음의 식
 
 $$d(x^{-1}) = -\varepsilon_{\delta, \deg(x)} x^{-1}(d(x))x^{-1}
 = -\varepsilon_{\delta, \deg(x)} (d(x)) x^{-2}$$
@@ -269,7 +269,7 @@ $$Z_\varepsilon=\{a\in A\mid \text{$xa_d=\varepsilon(\deg(a),\deg(x))a_dx$ for a
 으로 정의하자. 
 
 ::: 명제 9
- $A$가 unital graded associative $A$-algebra이고 $E$가 graded $(A, A)$-bimodule이라 하자. 이제 $d: A \to E$가 degree $\delta$의 $\varepsilon$-derivation이고, $a$가 degree $\alpha$의 $Z_\varepsilon$의 homogeneous element라 하자. 그러면 morphism
+ $A$가 unital graded associative $A$-algebra이고 $E$가 graded $(A, A)$-bimodule이라 하자. 이제 $d: A \rightarrow E$가 degree $\delta$의 $\varepsilon$-derivation이고, $a$가 degree $\alpha$의 $Z_\varepsilon$의 homogeneous element라 하자. 그러면 morphism
 
 $$x \mapsto a (d x)$$
 

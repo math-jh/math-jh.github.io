@@ -66,13 +66,13 @@ The fact that schemes allow nilpotents was already seen in the fat point of [Exa
 
 ## Relative geometry and the functor of points
 
-The coordinate rings of the varieties we have dealt with so far were all $\mathbb{K}$-algebras. Being a $\mathbb{K}$-algebra means that a ring homomorphism $\mathbb{K}\to A$ is given, and since $\Spec$ is contravariant, this is the same as giving a morphism $\Spec A\to\Spec\mathbb{K}$. That is, our varieties were naturally schemes over $\Spec\mathbb{K}$.
+The coordinate rings of the varieties we have dealt with so far were all $\mathbb{K}$-algebras. Being a $\mathbb{K}$-algebra means that a ring homomorphism $\mathbb{K}\rightarrow A$ is given, and since $\Spec$ is contravariant, this is the same as giving a morphism $\Spec A\rightarrow\Spec\mathbb{K}$. That is, our varieties were naturally schemes over $\Spec\mathbb{K}$.
 
-In the world of schemes, we replace this base $\Spec\mathbb{K}$ by an arbitrary scheme $S$, and naturally deal with *$S$-schemes* equipped with a structure morphism $X\to S$. Under this *relative viewpoint*, we can discuss families over an arbitrary base, and even the product that was troublesome above is cleanly defined as the fiber product $X\times_S Y$ over the base; the product above is merely the case $S=\Spec \mathbb{K}$.
+In the world of schemes, we replace this base $\Spec\mathbb{K}$ by an arbitrary scheme $S$, and naturally deal with *$S$-schemes* equipped with a structure morphism $X\rightarrow S$. Under this *relative viewpoint*, we can discuss families over an arbitrary base, and even the product that was troublesome above is cleanly defined as the fiber product $X\times_S Y$ over the base; the product above is merely the case $S=\Spec \mathbb{K}$.
 
 On the other hand, this perspective also dovetails with [\[Category Theory\] §Representable Functors, ⁋Theorem 3](/en/math/category_theory/representable_functors#thm3): if we view a scheme $X$ not as a set of points but as its *functor of points* $h_X$, understanding a scheme as the functor
 
-$$h_X:(\Sch_{/S})^{\op}\to\Set,\qquad h_X(T)=\Hom_S(T,X)$$
+$$h_X:(\Sch_{/S})^{\op}\rightarrow\Set,\qquad h_X(T)=\Hom_S(T,X)$$
 
 that receives morphisms from all other schemes, this theorem shows that $h_X$ completely determines the scheme $X$ without loss, and from this perspective a scheme can also be understood as a contravariant functor defined on the category $\Sch_{/S}$ of $S$-schemes.
 

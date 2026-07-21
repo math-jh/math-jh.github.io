@@ -21,13 +21,13 @@ holomorphic function의 미분이 한 점에서 평면을 회전·확대하는 �
 곡선이 한 점에서 이루는 각이라는 개념부터 정확히 한다. 점 $z_0$을 지나는 smooth 곡선 $\gamma(t)$ ($\gamma(t_0) = z_0$, $\gamma'(t_0) \neq 0$) 의 그 점에서의 tangent vector는 복소수 $\gamma'(t_0)$이고, 그 편각 $\arg \gamma'(t_0)$이 곡선이 그 점에서 향하는 방향을 준다. 두 곡선 $\gamma_1, \gamma_2$이 $z_0$에서 이루는 각은 두 tangent vector의 편각의 차 $\arg \gamma_2'(t_0) - \arg \gamma_1'(t_0)$로 정의되며, 부호까지 포함한 이 차가 방향이 매겨진 각이다.
 
 ::: 정의 1
-열린집합 $\Omega \subseteq \mathbb{C}$ 위의 사상 $f : \Omega \to \mathbb{C}$가 점 $z_0$에서 *conformal<sub>등각</sub>*하다는 것은, $z_0$을 지나는 임의의 두 smooth 곡선이 $z_0$에서 이루는 (방향이 매겨진) 각이 그 상곡선들이 $f(z_0)$에서 이루는 각과 같은 것을 뜻한다. $f$가 $\Omega$의 모든 점에서 등각하면 $f$를 $\Omega$ 위의 *등각사상<sub>conformal map</sub>*이라 한다.
+열린집합 $\Omega \subseteq \mathbb{C}$ 위의 사상 $f : \Omega \rightarrow \mathbb{C}$가 점 $z_0$에서 *conformal<sub>등각</sub>*하다는 것은, $z_0$을 지나는 임의의 두 smooth 곡선이 $z_0$에서 이루는 (방향이 매겨진) 각이 그 상곡선들이 $f(z_0)$에서 이루는 각과 같은 것을 뜻한다. $f$가 $\Omega$의 모든 점에서 등각하면 $f$를 $\Omega$ 위의 *등각사상<sub>conformal map</sub>*이라 한다.
 :::
 
 등각성은 각의 크기뿐 아니라 회전의 방향까지 보존할 것을 요구한다는 점이 핵심이다. 가령 켤레사상 $z \mapsto \bar z$는 모든 각의 크기를 보존하지만 방향을 뒤집으므로 (반사이므로) 위의 정의에서는 등각으로 치지 않는다. 이 방향성의 요구가 holomorphicity와 정확히 맞물리며, 다음 명제가 그 동치를 정식으로 적는다.
 
 ::: 명제 2
-$\Omega \subseteq \mathbb{C}$가 열려 있고 $f : \Omega \to \mathbb{C}$가 $z_0$에서 복소미분가능하다고 하자. 그러면 $f$가 $z_0$에서 등각인 것은 $f'(z_0) \neq 0$인 것과 동치이다.
+$\Omega \subseteq \mathbb{C}$가 열려 있고 $f : \Omega \rightarrow \mathbb{C}$가 $z_0$에서 복소미분가능하다고 하자. 그러면 $f$가 $z_0$에서 등각인 것은 $f'(z_0) \neq 0$인 것과 동치이다.
 :::
 
 ::: 증명
@@ -51,7 +51,7 @@ $$\arg (f \circ \gamma_2)'(t_0) - \arg (f \circ \gamma_1)'(t_0) = \arg \gamma_2'
 명제 2는 등각성이라는 기하적 성질이 "holomorphic이고 도함수가 $0$이 아니다"라는 해석적 조건과 완전히 같음을 말한다. 도함수가 소멸하는 점, 곧 $f'(z_0) = 0$인 점은 *임계점<sub>critical point</sub>*이라 부르며, 그 점에서는 위수에 따라 각이 정수배로 확대되어 등각성이 깨진다. 영역 전체에서 도함수가 결코 $0$이 되지 않는 holomorphic function은 따라서 각 점에서 무한소적으로 닮음변환처럼 행동하며, 작은 도형을 형태를 유지한 채 회전·확대해 옮긴다. holomorphic인 전단사사상은 항상 이런 등각사상이 되는데, 이는 단엽 holomorphic function의 도함수가 어디서도 $0$이 아니라는 사실의 귀결이다.
 
 ::: 명제 3
-$\Omega \subseteq \mathbb{C}$가 열려 있고 $f : \Omega \to \mathbb{C}$가 holomorphic인 단사사상이라 하자. 그러면 $\Omega$의 모든 점에서 $f'(z) \neq 0$이고, 따라서 $f$는 $\Omega$ 위의 등각사상이다.
+$\Omega \subseteq \mathbb{C}$가 열려 있고 $f : \Omega \rightarrow \mathbb{C}$가 holomorphic인 단사사상이라 하자. 그러면 $\Omega$의 모든 점에서 $f'(z) \neq 0$이고, 따라서 $f$는 $\Omega$ 위의 등각사상이다.
 :::
 
 ::: 증명
@@ -154,7 +154,7 @@ $$(z_1, z_2; z_3, z_4) = \frac{(z_1 - z_3)(z_2 - z_4)}{(z_1 - z_4)(z_2 - z_3)}$$
 로 정의한다. 네 점 가운데 하나가 $\infty$이면, 그 점이 들어간 두 차의 비를 $1$로 두어 얻는 극한값으로 정의한다.
 :::
 
-가령 $z_4 = \infty$이면 위 정의에서 $(z_2 - z_4)/(z_1 - z_4) \to 1$이므로 $(z_1, z_2; z_3, \infty) = (z_1 - z_3)/(z_2 - z_3)$이다. 교차비는 네 점의 순서에 의존하며, 우리는 위의 순서 약속을 고정해 쓴다. 이 양의 결정적 성질은 Möbius 변환에 대한 불변성이다.
+가령 $z_4 = \infty$이면 위 정의에서 $(z_2 - z_4)/(z_1 - z_4) \rightarrow 1$이므로 $(z_1, z_2; z_3, \infty) = (z_1 - z_3)/(z_2 - z_3)$이다. 교차비는 네 점의 순서에 의존하며, 우리는 위의 순서 약속을 고정해 쓴다. 이 양의 결정적 성질은 Möbius 변환에 대한 불변성이다.
 
 ::: 명제 9
 임의의 Möbius 변환 $T$와 $\widehat{\mathbb{C}}$의 서로 다른 네 점 $z_1, z_2, z_3, z_4$에 대하여
@@ -225,7 +225,7 @@ $$\varphi_{-a}(\varphi_a(z)) = \frac{\frac{z - a}{1 - \bar a z} + a}{1 + \bar a 
 사상 $\varphi_a$은 단위원판의 automorphism을 다룰 때 가장 기본이 되는 벽돌이다. 그것은 임의로 주어진 내부의 한 점 $a$를 중심 $0$으로 끌어오면서 단위원판 구조를 보존하므로, 원점을 특별한 위치로 옮겨 문제를 단순화하는 데 쓰인다. 여기에 회전을 합성하면 단위원판의 모든 holomorphic automorphism이 나온다는 것이 다음 정리이며, 그 증명은 원점을 고정하는 automorphism이 회전뿐이라는 Schwarz 보조정리의 귀결 ([§영점과 일치정리, ⁋예시 8](/ko/math/complex_analysis/zeros_and_identity_theorem#ex8)) 을 핵심으로 쓴다.
 
 ::: 정리 12 (단위원판의 automorphism)
-$f : \mathbb{D} \to \mathbb{D}$가 holomorphic 전단사이고 그 역사상도 holomorphic이라 하자. 그러면 어떤 $a \in \mathbb{D}$와 실수 $\theta$가 있어
+$f : \mathbb{D} \rightarrow \mathbb{D}$가 holomorphic 전단사이고 그 역사상도 holomorphic이라 하자. 그러면 어떤 $a \in \mathbb{D}$와 실수 $\theta$가 있어
 
 $$f(z) = e^{i\theta}\,\frac{z - a}{1 - \bar a z} = e^{i\theta}\,\varphi_a(z)$$
 
@@ -249,7 +249,7 @@ $$f = g \circ \varphi_a, \qquad f(z) = e^{i\theta}\,\varphi_a(z) = e^{i\theta}\,
 정리 12는 단위원판의 holomorphic automorphism 전체가 두 매개변수, 곧 $a \in \mathbb{D}$와 회전각 $\theta$로 매개됨을 말한다. 이 automorphism들은 모두 Möbius 변환이므로 단위원판의 automorphism group은 $\mathrm{PSL}(2, \mathbb{C})$의 한 subgroup이며, 그 안에서 단위원을 보존하는 변환들로 이루어진다. 같은 분류는 단위원판 위의 holomorphic 사상이 자연스러운 거리를 늘리지 않는다는 정량적 결과로 이어지는데, 이것이 Schwarz–Pick 정리이다.
 
 ::: 정리 13 (Schwarz–Pick)
-$f : \mathbb{D} \to \mathbb{D}$가 holomorphic이라 하자. 그러면 모든 $z, w \in \mathbb{D}$에 대하여
+$f : \mathbb{D} \rightarrow \mathbb{D}$가 holomorphic이라 하자. 그러면 모든 $z, w \in \mathbb{D}$에 대하여
 
 $$\left\lvert \frac{f(z) - f(w)}{1 - \overline{f(w)}\,f(z)} \right\rvert \leq \left\lvert \frac{z - w}{1 - \bar w z} \right\rvert$$
 
@@ -265,11 +265,11 @@ $w \in \mathbb{D}$를 고정하고 보조사상
 
 $$F = \varphi_{f(w)} \circ f \circ \varphi_{-w} = \varphi_{f(w)} \circ f \circ \varphi_w^{-1}$$
 
-을 생각한다. 명제 11에 의해 $\varphi_{-w}$과 $\varphi_{f(w)}$이 $\mathbb{D}$를 $\mathbb{D}$로 보내고 $f$도 그러하므로 $F : \mathbb{D} \to \mathbb{D}$은 holomorphic이다. 또 $\varphi_{-w}(0) = w$이므로
+을 생각한다. 명제 11에 의해 $\varphi_{-w}$과 $\varphi_{f(w)}$이 $\mathbb{D}$를 $\mathbb{D}$로 보내고 $f$도 그러하므로 $F : \mathbb{D} \rightarrow \mathbb{D}$은 holomorphic이다. 또 $\varphi_{-w}(0) = w$이므로
 
 $$F(0) = \varphi_{f(w)}(f(\varphi_{-w}(0))) = \varphi_{f(w)}(f(w)) = 0$$
 
-이다 ($\varphi_{f(w)}$이 $f(w)$를 $0$으로 보내므로). 곧 $F$는 원점을 고정하는 $\mathbb{D} \to \mathbb{D}$ holomorphic 사상이라, Schwarz 보조정리 ([§영점과 일치정리, ⁋정리 7](/ko/math/complex_analysis/zeros_and_identity_theorem#thm7)) 에 의해 모든 $\zeta \in \mathbb{D}$에서 $\lvert F(\zeta)\rvert \leq \lvert \zeta\rvert$이고 $\lvert F'(0)\rvert \leq 1$이다.
+이다 ($\varphi_{f(w)}$이 $f(w)$를 $0$으로 보내므로). 곧 $F$는 원점을 고정하는 $\mathbb{D} \rightarrow \mathbb{D}$ holomorphic 사상이라, Schwarz 보조정리 ([§영점과 일치정리, ⁋정리 7](/ko/math/complex_analysis/zeros_and_identity_theorem#thm7)) 에 의해 모든 $\zeta \in \mathbb{D}$에서 $\lvert F(\zeta)\rvert \leq \lvert \zeta\rvert$이고 $\lvert F'(0)\rvert \leq 1$이다.
 
 이제 $\zeta = \varphi_w(z)$를 대입한다. 정의상 $\zeta = (z - w)/(1 - \bar w z)$이고, $\varphi_{-w} = \varphi_w^{-1}$이므로 $\varphi_{-w}(\zeta) = z$, 따라서
 
@@ -279,7 +279,7 @@ $$F(\zeta) = \varphi_{f(w)}(f(z)) = \frac{f(z) - f(w)}{1 - \overline{f(w)}\,f(z)
 
 $$\left\lvert \frac{f(z) - f(w)}{1 - \overline{f(w)}\,f(z)} \right\rvert \leq \left\lvert \frac{z - w}{1 - \bar w z} \right\rvert$$
 
-을 얻는다. 미분형은 이 부등식에서 $z \to w$의 극한을 취해 나온다. 좌변을 $\lvert z - w\rvert$로 나누고 $z \to w$로 보내면, 좌변의 분자 차분비는 $\lvert f'(w)\rvert$로, 분모는 $1 - \lvert f(w)\rvert^2$로 가고 (분모에서 $\overline{f(w)}f(z) \to \lvert f(w)\rvert^2$), 우변은 $1/(1 - \lvert w\rvert^2)$로 가므로
+을 얻는다. 미분형은 이 부등식에서 $z \rightarrow w$의 극한을 취해 나온다. 좌변을 $\lvert z - w\rvert$로 나누고 $z \rightarrow w$로 보내면, 좌변의 분자 차분비는 $\lvert f'(w)\rvert$로, 분모는 $1 - \lvert f(w)\rvert^2$로 가고 (분모에서 $\overline{f(w)}f(z) \rightarrow \lvert f(w)\rvert^2$), 우변은 $1/(1 - \lvert w\rvert^2)$로 가므로
 
 $$\frac{\lvert f'(w)\rvert}{1 - \lvert f(w)\rvert^2} \leq \frac{1}{1 - \lvert w\rvert^2}$$
 
@@ -292,7 +292,7 @@ Schwarz–Pick 정리는 Schwarz 보조정리를 원점이라는 특정 점에 �
 
 $$\rho(z, w) = \left\lvert \frac{z - w}{1 - \bar w z} \right\rvert$$
 
-은 단위원판 위의 두 점 사이의 *유사쌍곡거리<sub>pseudo-hyperbolic distance</sub>*라 불리며, 정리 13의 첫 부등식은 임의의 holomorphic 사상 $f : \mathbb{D} \to \mathbb{D}$이 이 거리를 늘리지 않음을 뜻한다. 미분형은 같은 사실을 무한소 수준에서 적은 것으로, 단위원판에 $ds = \lvert dz\rvert/(1 - \lvert z\rvert^2)$ 꼴의 거리 (쌍곡거리) 를 줄 때 holomorphic 사상이 그 거리를 늘리지 않으며, automorphism일 때만 정확히 보존한다는 진술이다. 등호가 automorphism에서만 성립한다는 사실은 단위원판의 automorphism group이 이 쌍곡거리의 등거리변환군과 정확히 일치함을 시사한다.
+은 단위원판 위의 두 점 사이의 *유사쌍곡거리<sub>pseudo-hyperbolic distance</sub>*라 불리며, 정리 13의 첫 부등식은 임의의 holomorphic 사상 $f : \mathbb{D} \rightarrow \mathbb{D}$이 이 거리를 늘리지 않음을 뜻한다. 미분형은 같은 사실을 무한소 수준에서 적은 것으로, 단위원판에 $ds = \lvert dz\rvert/(1 - \lvert z\rvert^2)$ 꼴의 거리 (쌍곡거리) 를 줄 때 holomorphic 사상이 그 거리를 늘리지 않으며, automorphism일 때만 정확히 보존한다는 진술이다. 등호가 automorphism에서만 성립한다는 사실은 단위원판의 automorphism group이 이 쌍곡거리의 등거리변환군과 정확히 일치함을 시사한다.
 
 ## 상반평면과 Cayley 변환
 

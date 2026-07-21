@@ -235,7 +235,7 @@ $$g\in\ker\rho\iff\rho_g=\id_G\iff gxg^{-1}=x\quad\text{for all $x\in G$}$$
 이제 다시 우리는 일반적인 집합 $E$ 위에 정의된 group action을 생각한다. 우선 다음을 정의하자. 
 
 ::: 정의 13
-집합 $E$ 위에 group $G$의 action이 정의되었다 하자. 그럼 원소 $x\in E$의 *orbit*은 다음의 집합
+집합 $E$ 위에 group $G$의 action이 정의되었다 하자. 그럼 원소 $x\in E$의 *orbit<sub>궤도</sub>*은 다음의 집합
 
 $$G\cdot x=\{g\cdot x\mid g\in G\}$$
 

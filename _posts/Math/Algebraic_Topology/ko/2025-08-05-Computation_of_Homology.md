@@ -33,7 +33,7 @@ $$\cdots \longrightarrow C_k(X,A)\overset{\partial}{\longrightarrow} C_{k-1}(X,A
 를 만들 수 있다. 
 
 ::: 정의 1
-위의 chain complex의 $k$번째 homology $H_k(X,A)$를 *relative homology*라 부른다. 
+위의 chain complex의 $k$번째 homology $H_k(X,A)$를 *relative homology<sub>상대 호몰로지</sub>*라 부른다. 
 :::
 
 이제 category $\Ch_{\geq 0}(\Ab)$에서의 short exact sequence
@@ -71,7 +71,7 @@ $$H_k(X\setminus Z, A\setminus Z)\rightarrow H_k(X,A)$$
 한편 우리는 기하적인 상황에서 이와 같이 $A$에 들어있는 정보를 무시하는 방법을 알고 있다. 즉, $A$를 하나의 점으로 줄이는 quotient space $X/A$이다. 그럼 homology $H_k(X/A)$와 relative homology $H_k(X,A)$ 사이의 관계가 있다는 것이 합리적인 추측이다. 물론 위의 정리와 마찬가지로 이는 $A$가 아주 이상한 공간은 아니어야 가능하다. 
 
 ::: 정의 3
-공간 $X$와 부분공간 $A$에 대하여, 이들 $(X,A)$가 *good pair*라는 것은 $A$가 닫힌집합이고, $X$의 적당한 열린집합 $U$가 존재하여 $A\subset U$이고 $A$가 $U$의 strong deformation retract인 것이다. 
+공간 $X$와 부분공간 $A$에 대하여, 이들 $(X,A)$가 *good pair<sub>좋은 쌍</sub>*라는 것은 $A$가 닫힌집합이고, $X$의 적당한 열린집합 $U$가 존재하여 $A\subset U$이고 $A$가 $U$의 strong deformation retract인 것이다. 
 :::
 
 Good pair $(X,A)$가 주어졌다 하고, $U$가 [정의 3](#def3)의 가정을 만족하는 열린집합이라 하자. 그럼 다음의 diagram
@@ -208,7 +208,7 @@ $$H_k(\Delta^k, \partial\Delta^{k})\cong H_{k-1}(\Delta^{k-1}, \partial\Delta^{k
 
 $$\partial:H_k(X,A)\rightarrow H_{k-1}(A,\emptyset):=H_{k-1}(A)$$
 
-들에 대하여, *Eilenberg-Steenrod axiom*은 다음의 공리들을 뜻한다. 
+들에 대하여, *Eilenberg-Steenrod axiom<sub>에일렌베르크-스틴로드 공리</sub>*은 다음의 공리들을 뜻한다. 
 
 - (Homotopy) 두 homotopic map $(X,A) \rightarrow (Y,B)$이 주어졌다면, 이들이 유도하는 두 homomorphism들 $H_k(X,A) \rightarrow H_k(Y,B)$들도 동일하다. 
 - (Excision) [정리 2](#thm2)의 조건을 만족하는 $(X,A,Z)$에 대하여, $(X\setminus Z, A\setminus Z)\hookrightarrow (X,A)$는 isomorphism을 유도한다. 

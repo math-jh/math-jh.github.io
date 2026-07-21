@@ -119,7 +119,7 @@ $f$가 구멍 뚫린 원판 $0 < \lvert z - z_0\rvert < R$에서 holomorphic이�
 
 1. $z_0$이 $f$의 removable singularity이다.
 2. $f$가 $z_0$의 어떤 구멍 뚫린 근방에서 bounded이다.
-3. $\lim_{z \to z_0}(z - z_0)f(z) = 0$이다.
+3. $\lim_{z \rightarrow z_0}(z - z_0)f(z) = 0$이다.
 
 이 경우 $f$는 $z_0$에서 holomorphic function으로 유일하게 확장된다.
 :::
@@ -127,11 +127,11 @@ $f$가 구멍 뚫린 원판 $0 < \lvert z - z_0\rvert < R$에서 holomorphic이�
 ::: 증명
 $(1) \Rightarrow (2)$. 주부가 없으면 $f(z) = \sum_{n=0}^{\infty} a_n(z - z_0)^n$이 $0 < \lvert z - z_0\rvert < R$에서 성립하는데, 이 멱급수는 $z_0$에서도 수렴하여 holomorphic function을 정의한다 ([§복소정칙함수, ⁋정리 9](/ko/math/complex_analysis/holomorphic_functions#thm9)). holomorphic function은 연속이므로 $z_0$의 한 근방에서 bounded이다.
 
-$(2) \Rightarrow (3)$. $0 < \lvert z - z_0\rvert < \delta$에서 $\lvert f(z)\rvert \leq M$이라 하면 $\lvert (z - z_0)f(z)\rvert \leq M\lvert z - z_0\rvert \to 0$이므로 (3)이 따른다.
+$(2) \Rightarrow (3)$. $0 < \lvert z - z_0\rvert < \delta$에서 $\lvert f(z)\rvert \leq M$이라 하면 $\lvert (z - z_0)f(z)\rvert \leq M\lvert z - z_0\rvert \rightarrow 0$이므로 (3)이 따른다.
 
 $(3) \Rightarrow (1)$. 함수 $h(z) = (z - z_0)^2 f(z)$를 생각하고 $h(z_0) = 0$으로 정의하자. $z \neq z_0$에서 $h$는 holomorphic이고, $z_0$에서는 차분비
 
-$$\frac{h(z) - h(z_0)}{z - z_0} = \frac{(z - z_0)^2 f(z)}{z - z_0} = (z - z_0)f(z) \xrightarrow[z \to z_0]{} 0$$
+$$\frac{h(z) - h(z_0)}{z - z_0} = \frac{(z - z_0)^2 f(z)}{z - z_0} = (z - z_0)f(z) \xrightarrow[z \rightarrow z_0]{} 0$$
 
 이 가정 (3)에 의해 $0$으로 수렴하므로 $h'(z_0) = 0$이 존재한다. 따라서 $h$는 $z_0$을 포함한 원판 $D(z_0, R)$ 전체에서 holomorphic이고, $h(z_0) = 0$, $h'(z_0) = 0$이므로 그 Taylor 전개는 ([§멱급수와 해석성, ⁋정리 1](/ko/math/complex_analysis/power_series_and_analyticity#thm1)) $n = 2$부터 시작한다. 곧 $h(z) = \sum_{n=2}^{\infty} c_n (z - z_0)^n$이고, $(z - z_0)^2$으로 나누면
 
@@ -155,7 +155,7 @@ $f$가 $z_0$에서 isolated singularity를 가진다고 하자. 다음 세 조�
 2. $z_0$의 어떤 구멍 뚫린 근방에서 holomorphic이고 $g(z_0) \neq 0$인 함수 $g$가 있어 $f(z) = (z - z_0)^{-m}g(z)$이며, $g$는 $z_0$에서 holomorphic으로 확장된다.
 3. $1/f$가 $z_0$에서 (removable singularity를 메운 뒤) 위수 $m$인 영점을 가진다.
 
-특히 $z_0$이 $f$의 극이면 $\lim_{z \to z_0}\lvert f(z)\rvert = \infty$이다.
+특히 $z_0$이 $f$의 극이면 $\lim_{z \rightarrow z_0}\lvert f(z)\rvert = \infty$이다.
 :::
 
 ::: 증명
@@ -173,7 +173,7 @@ $$\frac{1}{f(z)} = (z - z_0)^m \frac{1}{g(z)}$$
 
 이다. $1/g$은 $g(z_0) \neq 0$이므로 $z_0$에서 holomorphic이고 $(1/g)(z_0) = 1/g(z_0) \neq 0$이다. 곧 $1/f$는 인수 $(z - z_0)^m$에 $z_0$에서 사라지지 않는 holomorphic function을 곱한 꼴이므로, 영점의 인수분해 ([§멱급수와 해석성, ⁋명제 6](/ko/math/complex_analysis/power_series_and_analyticity#prop6)) 에 의해 $z_0$에서 위수 $m$인 영점을 가진다. 역으로 $1/f$가 $z_0$에서 위수 $m$인 영점을 가지면 같은 인수분해로 $1/f(z) = (z - z_0)^m h(z)$ ($h(z_0) \neq 0$) 이고, 역수를 취하면 $f(z) = (z - z_0)^{-m}(1/h(z))$이 (2)의 꼴이다.
 
-발산은 (2)에서 곧장 나온다. $z \to z_0$일 때 $\lvert g(z)\rvert \to \lvert g(z_0)\rvert > 0$이고 $\lvert z - z_0\rvert^{-m} \to \infty$이므로 $\lvert f(z)\rvert = \lvert z - z_0\rvert^{-m}\lvert g(z)\rvert \to \infty$이다.
+발산은 (2)에서 곧장 나온다. $z \rightarrow z_0$일 때 $\lvert g(z)\rvert \rightarrow \lvert g(z_0)\rvert > 0$이고 $\lvert z - z_0\rvert^{-m} \rightarrow \infty$이므로 $\lvert f(z)\rvert = \lvert z - z_0\rvert^{-m}\lvert g(z)\rvert \rightarrow \infty$이다.
 :::
 
 명제 6은 극을 영점의 거울상으로 본다. 위수 $m$인 영점이 인수 $(z - z_0)^m$을 내놓았듯이 ([§멱급수와 해석성, ⁋명제 6](/ko/math/complex_analysis/power_series_and_analyticity#prop6)), 위수 $m$인 극은 인수 $(z - z_0)^{-m}$을 내놓고, 두 거동은 역수를 취하는 조작으로 정확히 맞바뀐다. 이 대응 덕분에 극의 위수 계산은 영점의 위수 계산으로 환원된다. 가령 $f(z) = \dfrac{z + 1}{z^2(z - 1)}$의 원점에서의 극의 위수는 분모 $z^2(z-1)$이 원점에서 가지는 영점의 위수가 $2$이고 분자가 원점에서 $1 \neq 0$이므로 $2$이다. 마지막 발산 진술은 극과 다른 두 종류의 singular point를 가르는 결정적 기준이기도 하다. removable singularity에서는 함수가 bounded이고 essential singularity에서는 곧 보겠듯이 극한이 아예 존재하지 않으므로, $z_0$에서 $\lvert f\rvert$이 무한대로 발산하는 것은 정확히 극인 경우뿐이다.
@@ -210,7 +210,7 @@ $g(z_0) = 0$이면 $g$가 $z_0$에서 holomorphic이고 ($g = 1/(f - w)$이 $U$�
 두 경우 모두 모순이므로, $f(U)$이 어떤 원판을 피한다는 가정이 틀렸다. 곧 임의의 $w$의 임의의 근방이 $f(U)$과 만나며, $f(U)$이 $\mathbb{C}$에서 조밀하다.
 :::
 
-Casorati–Weierstrass 정리는 세 종류의 isolated singularity를 함수값의 극한 거동으로 완전히 구별하게 해 준다. removable singularity에서는 $\lim_{z \to z_0} f(z)$이 (유한한 값으로) 존재하고, 극에서는 $\lim_{z \to z_0}\lvert f(z)\rvert = \infty$로 한 방향으로 확정되며, essential singularity에서는 함수값이 평면 어디에나 임의로 가깝게 다가가므로 어떤 극한도 존재하지 않는다. 이 세 가지가 서로 배타적이고 빠짐없으므로, 극한 거동만 보아도 singular point의 종류를 판정할 수 있다. 정리의 결론은 사실 더 강화될 수 있어서, essential singularity 근방에서 함수값이 단지 조밀하게 흩어지는 데 그치지 않고 많아야 한 점을 제외한 모든 복소수값을 무한히 자주 취한다 (Picard의 큰 정리). $e^{1/z}$이 원점 근방에서 $0$만 제외하고 모든 복소수값을 취하는 것이 그 예이다.
+Casorati–Weierstrass 정리는 세 종류의 isolated singularity를 함수값의 극한 거동으로 완전히 구별하게 해 준다. removable singularity에서는 $\lim_{z \rightarrow z_0} f(z)$이 (유한한 값으로) 존재하고, 극에서는 $\lim_{z \rightarrow z_0}\lvert f(z)\rvert = \infty$로 한 방향으로 확정되며, essential singularity에서는 함수값이 평면 어디에나 임의로 가깝게 다가가므로 어떤 극한도 존재하지 않는다. 이 세 가지가 서로 배타적이고 빠짐없으므로, 극한 거동만 보아도 singular point의 종류를 판정할 수 있다. 정리의 결론은 사실 더 강화될 수 있어서, essential singularity 근방에서 함수값이 단지 조밀하게 흩어지는 데 그치지 않고 많아야 한 점을 제외한 모든 복소수값을 무한히 자주 취한다 (Picard의 큰 정리). $e^{1/z}$이 원점 근방에서 $0$만 제외하고 모든 복소수값을 취하는 것이 그 예이다.
 
 ## 무한대에서의 거동
 

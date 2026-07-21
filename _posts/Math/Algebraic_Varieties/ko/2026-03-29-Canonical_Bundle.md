@@ -26,7 +26,7 @@ weight: 11
 
 그러나 이를 곧바로 적용하기에는 문제가 있다. 우리의 목적은 $M$을 $X$ 위에 정의된 vector bundle로 보려는 것임을 기억하자. 즉 대략적으로 $X$의 각 점 위에 $M$을 잘 달아주는 것이 우리의 목적인데, [§아핀다양체](/ko/math/algebraic_varieties/affine_varieties)에 따르면 $M$이 variety의 세상에서 (fiber로) 등장한다면, 이를 정의하는 coordinate ring은 이것의 좌표함수여야 한다. 즉, 우리는 $M$ 대신 $M^\vee$를 사용해야만 하고, 따라서 $\S_A(M)$ 대신 $\S_A(M^\vee)$을 생각한다. 그럼 이는 $A$-algebra이며 따라서 coordinate ring 사이의 함수 $A\rightarrow \S_A(M^\vee)$을 얻고, 여기에 [§아핀다양체](/ko/math/algebraic_varieties/affine_varieties)를 적용하면 어떠한 variety $V(M)$에서 $X$로 가는 morphism을 얻는다. 
 
-이 morphism이 실제로 $X$ 위의 vector bundle 구조를 갖는지 확인하자. 점 $x\in X$는 coordinate ring $A$의 maximal ideal $\mathfrak{m}_x$에 해당하며, 따라서 $V(M) \to X$에서 $x$ 위의 set-theoretic fiber $V(M)_x = \pi^{-1}(x)$의 점들은 $\mathfrak{m}_x\cdot \S_A(M^\vee)$를 포함하는 $\S_A(M^\vee)$의 maximal ideal들이다. 
+이 morphism이 실제로 $X$ 위의 vector bundle 구조를 갖는지 확인하자. 점 $x\in X$는 coordinate ring $A$의 maximal ideal $\mathfrak{m}_x$에 해당하며, 따라서 $V(M) \rightarrow X$에서 $x$ 위의 set-theoretic fiber $V(M)_x = \pi^{-1}(x)$의 점들은 $\mathfrak{m}_x\cdot \S_A(M^\vee)$를 포함하는 $\S_A(M^\vee)$의 maximal ideal들이다. 
 
 대수적으로 이 fiber를 정의하는 coordinate ring을 얻기 위해서는 이 위에서 정의된 함수가 무엇인지부터 생각해야 한다. 그런데 $x\in X$를 정의하는 maximal ideal $\mathfrak{m}_x$에 포함되는 함수들은 모두 $x$ 위에서 vanish하므로, 이 fiber에서 정의된 함수는 $A/\mathfrak{m}_x$-valued function으로 생각하는 것이 타당하다. 우리는 이 field $\kappa(x)=A/\mathfrak{m}_x$를 $x$에서의 *residue field*라 부르며, 따라서 일반적으로 $\kappa(x)$는 $\mathbb{K}$의 algebraic extension이다. ([\[가환대수학\] §영점정리, ⁋정리 4](/ko/math/commutative_algebra/nullstellensatz#thm4)) 우리는 보통 $\mathbb{K}$가 algebraically closed field인 경우를 생각하므로, $\kappa(x)$는 그냥 $\mathbb{K}$라 생각해도 무방하다. 
 
@@ -127,7 +127,7 @@ $$\omega_X = \bigwedge\nolimits^{\!n} \Omega_X^1$$
 한편 우리는 line bundle과 divisor class의 대응으로부터 다음을 정의할 수 있다.
 
 ::: 정의 6
-Canonical bundle $\omega_X$에 대응하는 divisor class를 *canonical divisor*라 하고 $K_X$로 표기한다. 즉, $\omega_X \cong \mathcal{O}_X(K_X)$이다.
+Canonical bundle $\omega_X$에 대응하는 divisor class를 *canonical divisor<sub>표준 인자</sub>*라 하고 $K_X$로 표기한다. 즉, $\omega_X \cong \mathcal{O}_X(K_X)$이다.
 :::
 
 이를 위해서는 [§선다발과 벡터다발, ⁋명제 19](/ko/math/algebraic_varieties/line_bundles#prop19)를 사용하므로, $K_X$는 오직 divisor class로만 정의된다는 것에 유의하자.
@@ -260,7 +260,7 @@ $$\pi\vert_E: E\rightarrow Z$$
 
 를 생각하자. 이제 $E$의 tangent bundle을 생각하면, 우리는 이를 base space $Z$로부터 오는 수평 방향 $(\pi\vert_E)^\ast T_Z$과 그에 수직인 relative tangenb bundle 방향 $T_{E/Z}$으로 나눌 수 있다. 즉 다음의 short exact sequence
 
-$$0 \to T_{E/Z} \to T_E \to \pi_E^\ast T_Z \to 0\tag{$\ast$}$$
+$$0 \rightarrow T_{E/Z} \rightarrow T_E \rightarrow \pi_E^\ast T_Z \rightarrow 0\tag{$\ast$}$$
 
 를 얻는다. 
 
@@ -304,7 +304,7 @@ $$0\rightarrow \mathcal{O}_E\rightarrow (\pi\vert_E)^\ast \mathcal{N}_{Z/X}\otim
 를 얻는다. 
 
 ::: 명제 12 (Blow-up의 canonical bundle)
-Smooth variety $X$의 codimension $r$인 smooth subvariety $Z$를 blow-up한 $\pi: \widetilde{X} \to X$에 대하여, exceptional divisor를 $E$라 하면
+Smooth variety $X$의 codimension $r$인 smooth subvariety $Z$를 blow-up한 $\pi: \widetilde{X} \rightarrow X$에 대하여, exceptional divisor를 $E$라 하면
 
 $$K_{\widetilde{X}} = \pi^\ast K_X + (r-1)E$$
 
