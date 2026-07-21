@@ -120,9 +120,47 @@ $$\Hom_{\Alg{A}}(\T_A(M), \phi^\ast \T_B(\phi_!M))\cong \Hom_\Alg{B}(\phi_! \T_A
 
 ## Mixed tensor
 
-이제 free $A$-module $M$을 고정하고, $M\oplus M^\ast$의 tensor algebra $\T(M\oplus M^\ast)$를 생각하면, [명제 3](#prop3)의 결과로부터 $\T^n(M\oplus M^\ast)$는 
+이제 $A$-module $M$과 그 dual module $M^\ast$, 그리고 이 둘 사이의 Kronecker pairing $\langle x,\xi\rangle$를 기억하자. ([§쌍대공간, ⁋정의 1](/ko/math/multilinear_algebra/dual_spaces#def1)) 선형대수에서 다루는 많은 대상들은 $M$과 $M^\ast$ 여러 개의 tensor product 안에서 찾을 수 있는데, 가령 $M$이 finitely generated projective라면 [§Hom과 텐서곱, ⁋따름정리 4](/ko/math/multilinear_algebra/hom_and_tensor#cor4)에 의하여 $M^\ast\otimes_AM\cong \End_\rMod{A}(M)$이다. 이러한 대상들을 한꺼번에 다루기 위해 tensor algebra $\T(M\oplus M^\ast)$를 생각하면, 앞 절에서 살펴본 direct sum 분해를 $M_1=M$, $M_2=M^\ast$에 적용하여 다음의 isomorphism
 
-아 이게 애매하네... tensor field를 저걸로 정의하면 깔끔할 것 같은데 저럼 순서가 다르면 다른걸로 취급하게 되니까... 암튼 이걸 해결한다면 contraction 먹여서 죽이는거 설명하면 될거같다
+$$\T^n(M\oplus M^\ast)\cong\bigoplus_{(i_1,\ldots, i_n)\in\{1,2\}^n} M_{i_1}\otimes\cdots\otimes M_{i_n}$$
+
+을 얻는다. 즉 $\T^n(M\oplus M^\ast)$의 각 summand는 $M$과 $M^\ast$를 재료로 하는 길이 $n$의 tensor product이며, 담고 있는 $M$과 $M^\ast$의 개수가 같더라도 그 배열 순서가 다르면 서로 다른 summand로 취급된다. 가령 $n=2$일 때 $M\otimes_AM^\ast$와 $M^\ast\otimes_AM$은 위의 분해에서 서로 다른 summand이다.
+
+그러나 이 구별은 표기 이상의 정보를 담고 있지 않다. $(i_1,\ldots, i_n)$이 $p$개의 자리에서 $M$을, $q=n-p$개의 자리에서 $M^\ast$를 가리킨다 하고, $(z_1,\ldots, z_n)\in M_{i_1}\times\cdots\times M_{i_n}$에 대하여 $M$에 속하는 성분들을 원래 순서대로 $x_1,\ldots, x_p$로, $M^\ast$에 속하는 성분들을 원래 순서대로 $\xi_1,\ldots, \xi_q$로 적자. 그럼 다음의 식
+
+$$(z_1,\ldots, z_n)\mapsto x_1\otimes\cdots\otimes x_p\otimes\xi_1\otimes\cdots\otimes\xi_q$$
+
+으로 정의된 함수는 각 성분에 대해 $A$-linear이므로, tensor product의 universal property에 의하여 $A$-linear map $M_{i_1}\otimes\cdots\otimes M_{i_n}\rightarrow M^{\otimes p}\otimes_A(M^\ast)^{\otimes q}$이 유도된다. 반대방향의 map 또한 같은 방식으로 얻어지며, 이 둘은 decomposable tensor들 위에서 서로의 역함수이고 decomposable tensor들이 전체를 생성하므로 이 map은 isomorphism이다. 따라서 각 summand는 $M$의 성분들을 앞으로 모아둔
+
+$$\T^p_q(M)=M^{\otimes p}\otimes_A (M^\ast)^{\otimes q}$$
+
+와 canonical하게 isomorphic하며, 배열 순서의 구별은 잃는 정보 없이 지워도 된다. 우리는 $\T^p_q(M)$의 원소들을 *contravariant* order $p$, *covariant* order $q$의 tensor, 혹은 간단히 type $(p,q)$의 tensor라 부르고, 특히 $p,q\geq 1$인 경우 이들을 *mixed tensor*라 부른다. 이 이름들은 basis를 바꿀 때 각 성분의 좌표가 변환되는 방식에서 유래한 고전적인 용어이다. 정의로부터 $\T^p_0(M)=\T^p(M)$이고 $\T^0_q(M)=\T^q(M^\ast)$이며, $\T^0_0(M)=A$이다.
+
+Mixed tensor가 순수한 tensor power와 다른 점은 $M$의 성분과 $M^\ast$의 성분이 한 tensor 안에 공존한다는 것이고, 따라서 이 둘을 Kronecker pairing으로 짝지어 소거하는 연산이 존재한다. $p,q\geq 1$과 $1\leq i\leq p$, $1\leq j\leq q$를 고정하고, 함수 $M^p\times (M^\ast)^q \rightarrow \T^{p-1}_{q-1}(M)$을 다음의 식
+
+$$(x_1,\ldots, x_p,\xi_1,\ldots, \xi_q)\mapsto \langle x_i,\xi_j\rangle\cdot x_1\otimes\cdots\otimes x_{i-1}\otimes x_{i+1}\otimes\cdots\otimes x_p\otimes \xi_1\otimes\cdots\otimes \xi_{j-1}\otimes\xi_{j+1}\otimes\cdots\otimes \xi_q$$
+
+으로 정의하자. $A$가 commutative이므로 Kronecker pairing은 $A$-bilinear이고, 나머지 성분들은 그대로 tensor product에 들어가므로 이 함수는 각 성분에 대해 $A$-linear이다. 따라서 위에서와 마찬가지로 유일한 $A$-linear map
+
+$$c^i_j: \T^p_q(M)\rightarrow \T^{p-1}_{q-1}(M)$$
+
+이 유도되며, 우리는 이를 $i$번째 contravariant 성분과 $j$번째 covariant 성분의 *contraction*이라 부른다. Contraction은 이름 그대로 tensor의 type을 $(p,q)$에서 $(p-1,q-1)$로 줄이는 연산이다.
+
+가장 간단한 경우인 $p=q=1$에서 $c^1_1: M\otimes_AM^\ast\rightarrow A$는 $x\otimes\xi$를 $\langle x,\xi\rangle$로 보내는 map이며, 두 성분의 위치를 바꾸는 canonical isomorphism $M\otimes_AM^\ast\cong M^\ast\otimes_AM$을 통해 보면 이는 [§Hom과 텐서곱, §§Trace](/ko/math/multilinear_algebra/hom_and_tensor#trace)에서 정의한 $A$-linear map $\tau: M^\ast\otimes_AM \rightarrow A$와 일치한다. 특히 만일 $M$이 finitely generated projective라면 위에서 언급한 isomorphism $M^\ast\otimes_AM\cong\End_\rMod{A}(M)$ 아래에서 $c^1_1$은 정확히 [§Hom과 텐서곱, ⁋정의 6](/ko/math/multilinear_algebra/hom_and_tensor#def6)의 trace map이 된다. 이러한 의미에서 일반적인 contraction $c^i_j$는 $i$번째 contravariant 성분과 $j$번째 covariant 성분이 이루는 type $(1,1)$ 부분에 trace를 취하고 나머지 성분들은 그대로 두는 연산이라 생각할 수 있다.
+
+이를 좌표로도 살펴보자. $M$이 finitely generated free $A$-module이라 하고, $M$의 basis $(e_k)_{1\leq k\leq r}$과 그 dual basis $(e_k^\ast)_{1\leq k\leq r}$를 고정하자. ([§쌍대공간, ⁋정의 6](/ko/math/multilinear_algebra/dual_spaces#def6)) 그럼 [명제 3](#prop3)에서와 같은 논증에 의하여 $\T^p_q(M)$은 다음의 꼴
+
+$$e_{s_1}\otimes\cdots\otimes e_{s_p}\otimes e_{t_1}^\ast\otimes\cdots\otimes e_{t_q}^\ast$$
+
+의 원소들을 basis로 갖는 free $A$-module이다. 가령 type $(1,1)$의 tensor $z\in M\otimes_AM^\ast$를 이 basis로 전개하여
+
+$$z=\sum_{k,l=1}^r a^k_l (e_k\otimes e_l^\ast)$$
+
+로 적으면, $\langle e_k, e_l^\ast\rangle=\delta_{kl}$이므로 다음의 식
+
+$$c^1_1(z)=\sum_{k,l=1}^r a^k_l\langle e_k, e_l^\ast\rangle=\sum_{k=1}^r a^k_k$$
+
+을 얻고, 이는 $z$에 대응되는 endomorphism의 trace를 계수들의 행렬 $(a^k_l)$의 대각성분의 합으로 계산한 것이다. 일반적인 $c^i_j$ 또한 마찬가지로 $i$번째 위첨자와 $j$번째 아래첨자를 같은 값으로 놓고 그 값에 대해 합을 취하는 연산이며, 이는 고전적인 tensor 표기법에서 위아래로 반복하여 나타나는 index끼리 짝지어 소거하는 관례에 해당한다. 마지막으로 $p=q$인 mixed tensor에 contraction을 $p$번 반복하여 적용하면 $\T^0_0(M)=A$의 원소, 즉 scalar를 얻는다.
 
 ## 대칭대수의 정의
 
