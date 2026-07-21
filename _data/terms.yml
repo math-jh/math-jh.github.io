@@ -179,6 +179,13 @@ A:
   defs:
   - label: '[대수다양체] §사영다양체'
     url: /ko/math/algebraic_varieties/projective_varieties
+- id: affine_derived_scheme
+  en: affine derived scheme
+  ko: ''
+  primary: en
+  defs:
+  - label: '[유도대수기하학] §Derived scheme과 derived stack'
+    url: /ko/math/derived_algebraic_geometry/derived_schemes
 - id: affine-local_property
   en: affine-local property
   ko: 아핀-국소 성질
@@ -531,14 +538,14 @@ A:
     url: /ko/math/representation_theory/auslander_reiten
 - id: auslander_reiten_sequence
   en: Auslander–Reiten sequence
-  ko: Auslander–Reiten 수열
+  ko: 아우스란더-라이텐 수열
   primary: en
   defs:
   - label: '[표현론] §Auslander–Reiten 이론'
     url: /ko/math/representation_theory/auslander_reiten
 - id: auslander_reiten_translate
   en: Auslander–Reiten translate
-  ko: AR 변환
+  ko: 아우스란더-라이텐 변환
   primary: en
   defs:
   - label: '[표현론] §Auslander–Reiten 이론'
@@ -671,7 +678,7 @@ A:
 B:
 - id: b-model_connection
   en: B-model connection
-  ko: B-model 접속
+  ko: B-모델 접속
   primary: en
   defs:
   - label: '[거울대칭] §가우스-마닌 접속'
@@ -738,7 +745,7 @@ B:
     url: /ko/math/category_theory/functors
 - id: big_givental_j_-function
   en: big Givental $J$-function
-  ko: 큰 Givental $J$-함수
+  ko: 큰 기벤탈 $J$-함수
   primary: en
   defs:
   - label: '[거울대칭] §Givental J-function과 Mirror Theorem'
@@ -2237,6 +2244,13 @@ D:
   see:
   - label: Principal ideal domain
     id: principal_ideal_domain
+- id: defective
+  en: defective
+  ko: 결손
+  primary: ko
+  defs:
+  - label: '[해석학] §선형 미분방정식계'
+    url: /ko/math/analysis/linear_ode
 - id: deformation_retract
   en: deformation retract
   ko: 변형 수축
@@ -2614,7 +2628,7 @@ D:
     url: /ko/math/commutative_algebra/regular_local_rings
 - id: discrete_valuation_ring
   en: discrete valuation ring
-  ko: 이산 valuation 환
+  ko: 이산값매김환
   primary: en
   defs:
   - label: '[가환대수학] §정칙국소환'
@@ -3725,7 +3739,7 @@ G:
     url: /ko/math/scheme_theory/algebraic_groups
 - id: givental_j_-function
   en: Givental $J$-function
-  ko: Givental $J$-함수
+  ko: 기벤탈 $J$-함수
   primary: en
   defs:
   - label: '[거울대칭] §Givental J-function과 Mirror Theorem'
@@ -5651,6 +5665,13 @@ M:
   defs:
   - label: '[선형대수학] §행렬'
     url: /ko/math/linear_algebra/matrices
+- id: matrix_exponential
+  en: matrix exponential
+  ko: 행렬지수
+  primary: ko
+  defs:
+  - label: '[해석학] §선형 미분방정식계'
+    url: /ko/math/analysis/linear_ode
 - id: maximal
   en: maximal
   ko: 극대
@@ -6385,6 +6406,13 @@ O:
   defs:
   - label: '[대수적 구조] §군의 작용'
     url: /ko/math/algebraic_structures/group_actions
+- id: orbit_closure
+  en: orbit closure
+  ko: ''
+  primary: en
+  defs:
+  - label: '[토릭 기하학] §토릭 다양체의 교차 이론'
+    url: /ko/math/toric_geometry/toric_intersection_theory
 - id: order
   en: order
   ko: 위수
@@ -6689,7 +6717,7 @@ P:
     url: /ko/math/linear_algebra/existence_and_uniqueness_of_determinant
 - id: perverse_t-structure
   en: perverse t-structure
-  ko: perverse t-구조
+  ko: ''
   primary: en
   defs:
   - label: '[층론] §Perverse 층'
@@ -6890,6 +6918,13 @@ P:
   defs:
   - label: '[대수적 구조] §분수체'
     url: /ko/math/algebraic_structures/field_of_fractions
+- id: primitive_cohomology
+  en: primitive cohomology
+  ko: ''
+  primary: en
+  defs:
+  - label: '[복소기하학] §Hodge 이론'
+    url: /ko/math/complex_geometry/hodge_theory
 - id: principal_cartier_divisor
   en: principal Cartier divisor
   ko: 주 카르티에 인자
@@ -7560,7 +7595,7 @@ R:
     url: /ko/math/gromov-witten_theory/perfect_obstruction_theory
 - id: relative_trace
   en: relative trace
-  ko: 상대 trace
+  ko: ''
   primary: en
   defs:
   - label: '[다중선형대수학] §대칭텐서'
@@ -8242,6 +8277,13 @@ S:
   defs:
   - label: '[리 이론] §근계'
     url: /ko/math/lie_theory/root_systems
+- id: simplicial_homology
+  en: simplicial homology
+  ko: ''
+  primary: en
+  defs:
+  - label: '[대수적 위상수학] §호몰로지'
+    url: /ko/math/algebraic_topology/homology
 - id: simplicial_identity
   en: simplicial identity
   ko: 단체 항등식
@@ -9613,7 +9655,7 @@ V:
     url: /ko/math/commutative_algebra/regular_local_rings
 - id: valuation_ring
   en: valuation ring
-  ko: valuation 환
+  ko: 값매김환
   primary: en
   defs:
   - label: '[가환대수학] §정칙국소환'

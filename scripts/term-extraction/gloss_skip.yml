@@ -44,3 +44,7 @@ skip:
 - unimodular  # 형용사 조건 단독어, 같은 절에서 smooth의 동의어로만 제시됨
 - virtual 차원  # 혼합 표기 키
 - 'weight $\lambda$의 weight space'  # 이미 한국어 혼성 + 변수 포함
+# 2026-07-21 혼성 병기 정리 룰링: 마커가 '$n$-th simplicial homology'라 entry
+# 'simplicial homology'의 dedup_key와 안 맞음 — 이 정확형만 skip으로 차단
+# (orbit closure·primitive cohomology·affine derived scheme은 ko-빈 entry가 보호)
+- '$n$-th simplicial homology'

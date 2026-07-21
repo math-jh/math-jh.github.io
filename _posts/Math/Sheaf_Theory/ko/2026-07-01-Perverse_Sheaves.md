@@ -88,10 +88,10 @@ $$\tau_{\leq 0} C^\bullet = (\cdots \rightarrow C^{-1} \rightarrow \ker d^0 \rig
 
 ## Perverse (middle) t-structure
 
-이제 무대를 constructible 유도 범주로 옮긴다. $X$ 위의 bounded constructible complex들이 이루는 충만한 삼각부분범주 $D^b_c(X)$는 [§Verdier 쌍대성, ⁋정의 6](/ko/math/sheaf_theory/verdier_duality#def6)에서 정의하였고, 그것이 여섯 functor와 Verdier 쌍대 functor $\mathbf{D}_X$ 모두에 대해 닫혀 있음을 그 글에서 확인하였다. Standard t-structure의 support는 cohomology sheaf $\mathcal{H}^i(\mathcal{F})$가 어느 차수에서 살아 있는지만 보지만, constructible 세계에서는 각 $\mathcal{H}^i$가 받침을 갖는 부분다양체의 *차원*이라는 추가 정보가 있다. Middle perversity t-structure는 차수와 차원을 한꺼번에 묶어, "cohomology가 높은 차수로 갈수록 받침이 그만큼 작아질 것"을 요구한다.
+이제 무대를 constructible 유도 범주로 옮긴다. $X$ 위의 bounded constructible complex들이 이루는 충만한 삼각부분범주 $D^b_c(X)$는 [§Verdier 쌍대성, ⁋정의 6](/ko/math/sheaf_theory/verdier_duality#def6)에서 정의하였고, 그것이 여섯 functor와 Verdier 쌍대 functor $\mathbf{D}_X$ 모두에 대해 닫혀 있음을 그 글에서 확인하였다. Standard t-structure의 support는 cohomology sheaf $\mathcal{H}^i(\mathcal{F})$가 어느 차수에서 살아 있는지만 보지만, constructible 세계에서는 각 $\mathcal{H}^i$가 support를 갖는 부분다양체의 *차원*이라는 추가 정보가 있다. Middle perversity t-structure는 차수와 차원을 한꺼번에 묶어, "cohomology가 높은 차수로 갈수록 support가 그만큼 작아질 것"을 요구한다.
 
 ::: 정의 6
-$\mathcal{F}^\bullet \in D^b_c(X)$의 cohomology sheaf의 받침을 $\operatorname{supp}\mathcal{H}^i(\mathcal{F}^\bullet) := \overline{\{x \in X : \mathcal{H}^i(\mathcal{F}^\bullet)_x \neq 0\}}$로 적는다. *perverse t-structure<sub>perverse t-구조</sub>* (middle perversity)를 다음 충만한 부분범주들로 정의한다.
+$\mathcal{F}^\bullet \in D^b_c(X)$의 cohomology sheaf의 support를 $\operatorname{supp}\mathcal{H}^i(\mathcal{F}^\bullet) := \overline{\{x \in X : \mathcal{H}^i(\mathcal{F}^\bullet)_x \neq 0\}}$로 적는다. *perverse t-structure* (middle perversity)를 다음 충만한 부분범주들로 정의한다.
 $$
 {}^{p}D^{\leq 0}(X) := \{ \mathcal{F}^\bullet : \dim \operatorname{supp}\mathcal{H}^i(\mathcal{F}^\bullet) \leq -i \text{ for all } i \},
 $$
@@ -103,7 +103,7 @@ $$\operatorname{Perv}(X) := {}^{p}D^{\leq 0}(X) \cap {}^{p}D^{\geq 0}(X)$$
 의 대상을 $X$ 위의 *perverse 층<sub>perverse sheaf</sub>*이라 부른다.
 :::
 
-support 조건은 차수 $i$가 커질수록 받침의 차원이 $-i$ 이하로 줄어들기를 요구하며, 특히 $i > 0$이면 $\dim \operatorname{supp}\mathcal{H}^i \leq -i < 0$이므로 $\mathcal{H}^i = 0$이다. 따라서 ${}^{p}D^{\leq 0}$의 대상은 차수 $\leq 0$에 집중되고, 받침이 $d$차원인 곳에서는 차수 $-d$까지만 cohomology를 가질 수 있다. Cosupport 조건은 이 제약을 $\mathbf{D}_X$로 옮긴 것으로, biduality $\mathbf{D}_X^2 \cong \id$ ([§Verdier 쌍대성, ⁋정리 7](/ko/math/sheaf_theory/verdier_duality#thm7)) 덕분에 두 조건이 $\mathbf{D}_X$ 아래에서 정확히 맞교환된다. smooth 연결 $n$차원 variety $X$ 위의 rank 유한 local system $L$에 대해 $L[n]$을 보면, $\mathcal{H}^{-n}(L[n]) = L$의 받침이 $X$ 전체이므로 $\dim X = n \leq -(-n) = n$이 등호로 성립하고 다른 차수의 cohomology가 없어 support 조건을 만족하며, $\mathbf{D}_X(L[n]) \cong L^\vee[n]$ 역시 같은 이유로 support 조건을 만족하므로 $L[n] \in \operatorname{Perv}(X)$이다. 이것이 이름의 "middle"이 가리키는 normalization이다.
+support 조건은 차수 $i$가 커질수록 support의 차원이 $-i$ 이하로 줄어들기를 요구하며, 특히 $i > 0$이면 $\dim \operatorname{supp}\mathcal{H}^i \leq -i < 0$이므로 $\mathcal{H}^i = 0$이다. 따라서 ${}^{p}D^{\leq 0}$의 대상은 차수 $\leq 0$에 집중되고, support가 $d$차원인 곳에서는 차수 $-d$까지만 cohomology를 가질 수 있다. Cosupport 조건은 이 제약을 $\mathbf{D}_X$로 옮긴 것으로, biduality $\mathbf{D}_X^2 \cong \id$ ([§Verdier 쌍대성, ⁋정리 7](/ko/math/sheaf_theory/verdier_duality#thm7)) 덕분에 두 조건이 $\mathbf{D}_X$ 아래에서 정확히 맞교환된다. smooth 연결 $n$차원 variety $X$ 위의 rank 유한 local system $L$에 대해 $L[n]$을 보면, $\mathcal{H}^{-n}(L[n]) = L$의 support가 $X$ 전체이므로 $\dim X = n \leq -(-n) = n$이 등호로 성립하고 다른 차수의 cohomology가 없어 support 조건을 만족하며, $\mathbf{D}_X(L[n]) \cong L^\vee[n]$ 역시 같은 이유로 support 조건을 만족하므로 $L[n] \in \operatorname{Perv}(X)$이다. 이것이 이름의 "middle"이 가리키는 normalization이다.
 
 ::: 정리 7
 $({}^{p}D^{\leq 0}(X), {}^{p}D^{\geq 0}(X))$은 $D^b_c(X)$ 위의 bounded t-structure이다. 따라서 $\operatorname{Perv}(X)$은 abelian 범주이고, 그 위의 cohomology functor ${}^{p}\mathcal{H}^i: D^b_c(X) \rightarrow \operatorname{Perv}(X)$이 정의된다. 또한 Verdier 쌍대 functor는 $\mathbf{D}_X({}^{p}D^{\leq 0}) = {}^{p}D^{\geq 0}$, $\mathbf{D}_X({}^{p}D^{\geq 0}) = {}^{p}D^{\leq 0}$을 만족하므로 $\operatorname{Perv}(X)$을 자기 자신으로 보내며, $\operatorname{Perv}(X)$은 noetherian이자 artinian, 즉 모든 대상이 유한 길이를 가진다.
@@ -138,29 +138,29 @@ $$\operatorname{IC}_Z(L) := (i_Z)_\ast j_{!\ast}(L[d]) \in \operatorname{Perv}(X
 을 $(Z, L)$의 *intersection cohomology 층* 또는 *IC 층*이라 부른다.
 :::
 
-정의에서 $L[d]$는 smooth $d$차원 variety $U_Z$ 위의 perverse 층이고 ([예시 8](#ex8)), closed embedding에 대한 $(i_Z)_\ast$은 perverse 층을 perverse 층으로 보내는 t-완전 functor이므로 $\operatorname{IC}_Z(L)$은 $X$ 위의 perverse 층이다. 받침은 $Z$이며, $Z$의 smooth한 부분으로 제한하면 $L[d]$로 돌아온다. $X$ 자신이 irreducible이고 $L$이 자명한 rank $1$ local system이면 $\operatorname{IC}_X := \operatorname{IC}_X(k_{U})$로 적고, 이것이 $X$의 intersection cohomology를 계산하는 complex이다. smooth한 $X$에서는 $U = X$, $j = \id$이므로 $\operatorname{IC}_X = k_X[\dim X]$이 되어 [예시 8](#ex8)의 상수 sheaf shift로 환원된다.
+정의에서 $L[d]$는 smooth $d$차원 variety $U_Z$ 위의 perverse 층이고 ([예시 8](#ex8)), closed embedding에 대한 $(i_Z)_\ast$은 perverse 층을 perverse 층으로 보내는 t-완전 functor이므로 $\operatorname{IC}_Z(L)$은 $X$ 위의 perverse 층이다. support는 $Z$이며, $Z$의 smooth한 부분으로 제한하면 $L[d]$로 돌아온다. $X$ 자신이 irreducible이고 $L$이 자명한 rank $1$ local system이면 $\operatorname{IC}_X := \operatorname{IC}_X(k_{U})$로 적고, 이것이 $X$의 intersection cohomology를 계산하는 complex이다. smooth한 $X$에서는 $U = X$, $j = \id$이므로 $\operatorname{IC}_X = k_X[\dim X]$이 되어 [예시 8](#ex8)의 상수 sheaf shift로 환원된다.
 
-Intermediate extension의 결정적 성질은 그것이 열린 부분 위의 자료를 닫힌 부분으로 "과잉도 부족도 없이" 연장한다는 것이며, 이를 부분대상과 quotient object의 받침으로 특징짓는다.
+Intermediate extension의 결정적 성질은 그것이 열린 부분 위의 자료를 닫힌 부분으로 "과잉도 부족도 없이" 연장한다는 것이며, 이를 부분대상과 quotient object의 support로 특징짓는다.
 
 ::: 명제 11
 Open embedding $j: U \hookrightarrow X$, 닫힌 보충 $i: Z = X \setminus U \hookrightarrow X$와 $\mathcal{F} \in \operatorname{Perv}(U)$에 대해 다음이 성립한다.
 
-1. $j_{!\ast}\mathcal{F}$는 $j^{-1}(j_{!\ast}\mathcal{F}) \cong \mathcal{F}$인 $\operatorname{Perv}(X)$의 대상 가운데, $Z$에 받침을 가진 $0$ 아닌 부분대상도 quotient object도 가지지 않는 유일한 것이다.
+1. $j_{!\ast}\mathcal{F}$는 $j^{-1}(j_{!\ast}\mathcal{F}) \cong \mathcal{F}$인 $\operatorname{Perv}(X)$의 대상 가운데, $Z$에 support를 가진 $0$ 아닌 부분대상도 quotient object도 가지지 않는 유일한 것이다.
 2. Verdier 쌍대성과 교환한다. 즉 $\mathbf{D}_X(j_{!\ast}\mathcal{F}) \cong j_{!\ast}(\mathbf{D}_U \mathcal{F})$이다. 특히 $L$이 자기쌍대 local system이면 $\operatorname{IC}_Z(L)$은 자기쌍대 perverse 층이다.
 :::
 ::: 증명
-(1) $j_{!\ast}\mathcal{F}$를 상으로 정의했으므로 $j_!$ 쪽에서 오는 표준 사상은 전사, $Rj_\ast$ 쪽으로 가는 사상은 단사이다. 만약 $j_{!\ast}\mathcal{F}$가 $Z$에 받침을 가진 $0$ 아닌 부분대상 $\mathcal{S}$를 가진다면, $\mathcal{S} = i_\ast i^{-1}\mathcal{S}$이고 이는 ${}^{p}\mathcal{H}^0(Rj_\ast\mathcal{F})$로 가는 단사를 통해 살아남아야 하는데, [§고유 받음과 여섯 함자, ⁋정리 10](/ko/math/sheaf_theory/six_functors#thm10)이 주는 recollement의 t-완전성 분석에서 $Rj_\ast$로의 단사가 $Z$-받침 부분대상을 죽이므로 모순이다. Quotient object에 대해서는 $j_!$로부터의 전사와 같은 논증을 쌍대로 적용한다. 유일성은 두 조건 (부분대상·quotient object의 부재)을 동시에 만족하는 연장이 표준 사상의 상과 일치할 수밖에 없음을 보여 얻는다.
+(1) $j_{!\ast}\mathcal{F}$를 상으로 정의했으므로 $j_!$ 쪽에서 오는 표준 사상은 전사, $Rj_\ast$ 쪽으로 가는 사상은 단사이다. 만약 $j_{!\ast}\mathcal{F}$가 $Z$에 support를 가진 $0$ 아닌 부분대상 $\mathcal{S}$를 가진다면, $\mathcal{S} = i_\ast i^{-1}\mathcal{S}$이고 이는 ${}^{p}\mathcal{H}^0(Rj_\ast\mathcal{F})$로 가는 단사를 통해 살아남아야 하는데, [§고유 받음과 여섯 함자, ⁋정리 10](/ko/math/sheaf_theory/six_functors#thm10)이 주는 recollement의 t-완전성 분석에서 $Rj_\ast$로의 단사가 $Z$에 support를 가진 부분대상을 죽이므로 모순이다. Quotient object에 대해서는 $j_!$로부터의 전사와 같은 논증을 쌍대로 적용한다. 유일성은 두 조건 (부분대상·quotient object의 부재)을 동시에 만족하는 연장이 표준 사상의 상과 일치할 수밖에 없음을 보여 얻는다.
 
 (2) Verdier 쌍대성은 [§Verdier 쌍대성, ⁋명제 8](/ko/math/sheaf_theory/verdier_duality#prop8)에 의해 $j_!$과 $Rj_\ast$을 맞교환하고 $j^{-1}$을 보존하므로, 사상 $j_!\mathcal{F} \rightarrow Rj_\ast\mathcal{F}$에 $\mathbf{D}_X$를 적용하면 $\mathbf{D}_U\mathcal{F}$에 대한 같은 종류의 사상 $j_!(\mathbf{D}_U\mathcal{F}) \rightarrow Rj_\ast(\mathbf{D}_U\mathcal{F})$이 (방향을 보존한 채) 나온다. $\mathbf{D}_X$가 anti-equivalence이므로 상의 $\mathbf{D}_X$는 $\mathbf{D}_X$의 상이고, 따라서 $\mathbf{D}_X(j_{!\ast}\mathcal{F}) \cong j_{!\ast}(\mathbf{D}_U\mathcal{F})$이다. smooth $d$차원 $U_Z$ 위에서 $\mathbf{D}_{U_Z}(L[d]) \cong L^\vee[d]$이므로, $L \cong L^\vee$이면 $\operatorname{IC}_Z(L)$이 자기쌍대이다. 자세한 논증은 [BBD]의 §2.1.9–2.1.11을 따른다.
 :::
 
-[명제 11](#prop11)의 첫째 성질이 단순성을 함의한다. $Z$에 받침을 가진 부분대상도 quotient object도 없는 perverse 층은, local system $L$이 irreducible이면 더 쪼갤 수 없다. 이로부터 $\operatorname{Perv}(X)$의 단순 대상이 완전히 분류된다.
+[명제 11](#prop11)의 첫째 성질이 단순성을 함의한다. $Z$에 support를 가진 부분대상도 quotient object도 없는 perverse 층은, local system $L$이 irreducible이면 더 쪼갤 수 없다. 이로부터 $\operatorname{Perv}(X)$의 단순 대상이 완전히 분류된다.
 
 ::: 정리 12
 $\operatorname{Perv}(X)$의 단순 대상은 정확히, irreducible 닫힌 부분다양체 $Z \subseteq X$와 그 smooth한 조밀 열린 부분 위의 irreducible local system $L$의 쌍 $(Z, L)$에 대한 IC 층 $\operatorname{IC}_Z(L)$들이다. 서로 다른 쌍 $(Z, L)$ (단, $L$은 동형을 제외)은 서로 isomorphic하지 않은 단순 대상을 주며, 이로써 단순 대상이 $(Z, L)$로 완전히 분류된다.
 :::
 ::: 증명
-$L$이 irreducible이면 $\operatorname{IC}_Z(L)$이 단순함을 보인다. $0 \neq \mathcal{G} \subsetneq \operatorname{IC}_Z(L)$인 부분대상이 있다면, 받침이 $Z$이므로 smooth한 열린 부분 $U_Z$로 제한한 $j^{-1}\mathcal{G}$는 $L[d]$의 부분대상이고 $L$의 irreducibility에 의해 $0$ 또는 $L[d]$이다. $j^{-1}\mathcal{G} = 0$이면 $\mathcal{G}$가 $Z$의 더 작은 닫힌 부분에 받침을 가지므로 [명제 11](#prop11)의 첫째 성질에 어긋나고, $j^{-1}\mathcal{G} = L[d]$이면 quotient $\operatorname{IC}_Z(L)/\mathcal{G}$가 그 작은 닫힌 부분에 받침을 가져 다시 어긋난다. 따라서 $\operatorname{IC}_Z(L)$은 단순하다. 역으로 임의의 단순 perverse 층 $\mathcal{S}$를 잡아 그 받침 $Z = \operatorname{supp}\mathcal{S}$ (irreducible임을 보일 수 있다)와 smooth한 조밀 열린 부분 $U_Z$ 위로의 제한을 보면, 그 제한이 어떤 irreducible local system $L$의 shift $L[d]$이고 $\mathcal{S} = \operatorname{IC}_Z(L)$임이 [명제 11](#prop11)의 유일성에서 따라 나온다. 완전한 논증은 [BBD]의 Théorème 4.3.1을 따른다.
+$L$이 irreducible이면 $\operatorname{IC}_Z(L)$이 단순함을 보인다. $0 \neq \mathcal{G} \subsetneq \operatorname{IC}_Z(L)$인 부분대상이 있다면, support가 $Z$이므로 smooth한 열린 부분 $U_Z$로 제한한 $j^{-1}\mathcal{G}$는 $L[d]$의 부분대상이고 $L$의 irreducibility에 의해 $0$ 또는 $L[d]$이다. $j^{-1}\mathcal{G} = 0$이면 $\mathcal{G}$가 $Z$의 더 작은 닫힌 부분에 support를 가지므로 [명제 11](#prop11)의 첫째 성질에 어긋나고, $j^{-1}\mathcal{G} = L[d]$이면 quotient $\operatorname{IC}_Z(L)/\mathcal{G}$가 그 작은 닫힌 부분에 support를 가져 다시 어긋난다. 따라서 $\operatorname{IC}_Z(L)$은 단순하다. 역으로 임의의 단순 perverse 층 $\mathcal{S}$를 잡아 그 support $Z = \operatorname{supp}\mathcal{S}$ (irreducible임을 보일 수 있다)와 smooth한 조밀 열린 부분 $U_Z$ 위로의 제한을 보면, 그 제한이 어떤 irreducible local system $L$의 shift $L[d]$이고 $\mathcal{S} = \operatorname{IC}_Z(L)$임이 [명제 11](#prop11)의 유일성에서 따라 나온다. 완전한 논증은 [BBD]의 Théorème 4.3.1을 따른다.
 :::
 
 [정리 12](#thm12)와 [정리 7](#thm7)의 유한 길이성을 결합하면, $X$ 위의 모든 perverse 층은 IC 층들의 유한 번 반복된 extension으로 얻어진다. 즉 IC 층이 perverse 층의 범주의 단순 대상 전체를 이룬다. 이 사실이 perverse 층을 특이공간의 cohomology 이론의 자연스러운 계수로 만든다. $\operatorname{IC}_X$의 hypercohomology $H^k(X, \operatorname{IC}_X)$이 곧 $X$의 intersection cohomology이며, [명제 11](#prop11)의 자기쌍대성에 의해 ($k_{U}$가 자기쌍대이므로) [§Verdier 쌍대성, ⁋따름정리 5](/ko/math/sheaf_theory/verdier_duality#cor5)를 통해 특이 $X$에서도 Poincaré 쌍대성을 회복한다.
@@ -178,7 +178,7 @@ $$Rf_\ast \operatorname{IC}_X \cong \bigoplus_{i \in \mathbb{Z}} {}^{p}\mathcal{
 원래의 증명 ([BBD])은 정리를 표수 $p$의 유한체 위로 환원한다. 그곳에서 $\operatorname{IC}_X$은 Frobenius에 대해 *순수*하고 (weight가 한 값에 집중), Gabber의 순수성 정리에 의해 $Rf_\ast$이 순수성을 보존하므로, 순수 complex가 자신의 perverse cohomology의 shift들의 direct sum으로 갈라진다는 weight 논증이 작동한다. 그 뒤 $\ell$-진 sheaf의 결과를 비교 정리로 복소해석 위로 옮긴다. 이후 de Cataldo–Migliorini는 같은 정리에 순수 Hodge 이론과 relative hard Lefschetz를 결합한 직접적인 증명을 주었고 ([dCM]), Saito의 mixed Hodge module 이론은 또 다른 경로를 제공한다. 어느 증명에서나 핵심은 $\operatorname{IC}_X$의 *순수성*과 proper 받음이 그것을 보존한다는 사실, 그리고 relative hard Lefschetz가 주는 Lefschetz 분해이다. 분량과 사용하는 기계가 이 글의 범위를 넘으므로 [BBD]의 Théorème 6.2.5와 [dCM]의 주 정리를 참조한다.
 :::
 
-분해정리는 통상적 sheaf 이론에서는 기대할 수 없는 강력한 강직성을 말한다. 일반적으로 $Rf_\ast$은 perverse cohomology의 shift들로 direct sum 분해되지 않으며 비자명한 extension으로 엮여 있다. 분해정리는 입력이 순수 대상 (IC 층)이고 사상이 proper일 때 이 extension이 모두 갈라져, 받음이 단순 perverse 층들의 shift된 direct sum으로 완전히 분해됨을 보장한다. 이 분해는 받침에 따라 항을 모으면 받침 부분다양체 위의 intersection cohomology 항들의 합으로 정리되며, 특이 받침에 놓인 항들이 사상 $f$의 특이 fiber가 만드는 cohomology를 정확히 포착한다. 이 분해가 cohomological Hall 대수, flop 공식, Springer 이론 등 여러 기하학적 논증의 토대가 된다.
+분해정리는 통상적 sheaf 이론에서는 기대할 수 없는 강력한 강직성을 말한다. 일반적으로 $Rf_\ast$은 perverse cohomology의 shift들로 direct sum 분해되지 않으며 비자명한 extension으로 엮여 있다. 분해정리는 입력이 순수 대상 (IC 층)이고 사상이 proper일 때 이 extension이 모두 갈라져, 받음이 단순 perverse 층들의 shift된 direct sum으로 완전히 분해됨을 보장한다. 이 분해는 support에 따라 항을 모으면 support 부분다양체 위의 intersection cohomology 항들의 합으로 정리되며, singular support에 놓인 항들이 사상 $f$의 특이 fiber가 만드는 cohomology를 정확히 포착한다. 이 분해가 cohomological Hall 대수, flop 공식, Springer 이론 등 여러 기하학적 논증의 토대가 된다.
 
 ## 근방·소멸 cycle과 disk 위의 perverse 층
 
@@ -218,7 +218,7 @@ $\Delta^\ast$ 위의 rank $r$ local system $L$의 monodromy를 $T: V \rightarrow
 
 세 자료 모두 $T_\Psi = \id + \operatorname{var}\circ\operatorname{can} = T$이 되어 [정리 15](#thm15)의 가역성 조건을 만족함을 즉시 확인할 수 있다 (monodromy $T$는 자동으로 automorphism이다). 표준 사상 $j_!(L[1]) \rightarrow Rj_\ast(L[1])$은 자료의 사상 $(\id_V, T - \id): (V, V, \id, T-\id) \rightarrow (V, V, T-\id, \id)$으로 나타나고 ($\Psi$ 위에서는 항등, $\Phi$ 위에서는 $T - \id$), 그 상이 바로 셋째 자료
 $$\big(V,\ \operatorname{im}(T - \id),\ \operatorname{can} = (T - \id)\ \text{(전사)},\ \operatorname{var} = \text{포함}\big)$$
-으로, 곧 $\operatorname{can}$이 전사이고 $\operatorname{var}$이 단사인 intermediate extension이다. 이는 [명제 11](#prop11)이 추상적으로 기술한 "$Z = \{0\}$에 받침을 가진 부분대상·quotient object의 부재"를 선형대수로 본 것인데, $\{0\}$에 받침을 가진 자료는 $\Psi = 0$인 것 ($\Phi$만 있는 skyscraper)이고, $\operatorname{can}$ 전사성이 그러한 quotient object를, $\operatorname{var}$ 단사성이 그러한 부분대상을 배제한다. 실제로 stalk와 costalk는 $i^{-1}M$이 complex $[\Psi \xrightarrow{\operatorname{can}} \Phi]$로, $i^! M$이 $[\Phi \xrightarrow{\operatorname{var}} \Psi]$로 계산되므로, $\operatorname{can}$이 isomorphic하면 $i^{-1} = 0$ (extension by zero, 곧 $j_!$)이고 $\operatorname{var}$이 isomorphic하면 $i^! = 0$ (곧 $Rj_\ast$)임이 위 자료와 일관된다.
+으로, 곧 $\operatorname{can}$이 전사이고 $\operatorname{var}$이 단사인 intermediate extension이다. 이는 [명제 11](#prop11)이 추상적으로 기술한 "$Z = \{0\}$에 support를 가진 부분대상·quotient object의 부재"를 선형대수로 본 것인데, $\{0\}$에 support를 가진 자료는 $\Psi = 0$인 것 ($\Phi$만 있는 skyscraper)이고, $\operatorname{can}$ 전사성이 그러한 quotient object를, $\operatorname{var}$ 단사성이 그러한 부분대상을 배제한다. 실제로 stalk와 costalk는 $i^{-1}M$이 complex $[\Psi \xrightarrow{\operatorname{can}} \Phi]$로, $i^! M$이 $[\Phi \xrightarrow{\operatorname{var}} \Psi]$로 계산되므로, $\operatorname{can}$이 isomorphic하면 $i^{-1} = 0$ (extension by zero, 곧 $j_!$)이고 $\operatorname{var}$이 isomorphic하면 $i^! = 0$ (곧 $Rj_\ast$)임이 위 자료와 일관된다.
 
 monodromy가 자명한 특수한 경우 $T = \id$ (상수 sheaf $k_{\Delta^\ast}$)에서는 $T - \id = 0$이므로 $\operatorname{im}(T - \id) = 0$이고, 따라서 $\operatorname{IC}_\Delta(k) \leftrightarrow (V, 0, 0, 0)$, 곧 소멸 cycle이 없는 자료가 되어 $j_{!\ast}(k_{\Delta^\ast}[1]) = k_\Delta[1]$이 [예시 8](#ex8)의 smooth한 경우로 환원된다. 반면 $j_!$과 $Rj_\ast$은 이때 $\Phi = V \neq 0$인 자료를 주어, 원점에서 $V$만큼의 잉여를 가진 채 perverse 층으로 남는다. 이 잉여가 [참고 9](#rmk9)에서 본 특이공간의 잉여 stalk와 같은 종류의 현상이며, intermediate extension이 그것을 정확히 깎아 내어 자기쌍대 대상을 만든다.
 

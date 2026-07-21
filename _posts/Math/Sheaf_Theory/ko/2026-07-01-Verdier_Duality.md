@@ -16,9 +16,9 @@ published: false
 
 ---
 
-[§고유 받음과 여섯 함자](/ko/math/sheaf_theory/six_functors)에서 우리는 콤팩트 받침을 따르는 고유 받음 $Rf_!$과 그 오른쪽 수반인 예외 역상 $f^!$을 도입하여, $Rf_\ast$, $Lf^\ast$, $\otimes^L$, $R\mathcal{H}om$과 함께 여섯 함자 형식을 완성하였다. 그 글의 도입부에서 예고하였듯이, 이 형식을 세운 가장 큰 동기는 비콤팩트 공간과 singular point를 가진 공간에까지 Poincaré 쌍대성을 확장하는 데 있다. 이 글에서 우리는 그 확장을 완성하는 정리, 곧 *Verdier 쌍대성<sub>Verdier duality</sub>*을 진술하고 증명한다.
+[§고유 받음과 여섯 함자](/ko/math/sheaf_theory/six_functors)에서 우리는 compact support를 따르는 고유 받음 $Rf_!$과 그 오른쪽 수반인 예외 역상 $f^!$을 도입하여, $Rf_\ast$, $Lf^\ast$, $\otimes^L$, $R\mathcal{H}om$과 함께 여섯 함자 형식을 완성하였다. 그 글의 도입부에서 예고하였듯이, 이 형식을 세운 가장 큰 동기는 비콤팩트 공간과 singular point를 가진 공간에까지 Poincaré 쌍대성을 확장하는 데 있다. 이 글에서 우리는 그 확장을 완성하는 정리, 곧 *Verdier 쌍대성<sub>Verdier duality</sub>*을 진술하고 증명한다.
 
-고전적인 Poincaré 쌍대성은 방향지어진 닫힌 $n$차원 manifold $M$에 대해 $H^p(M) \cong H_{n-p}(M)$이라는 cohomology와 homology 사이의 동형으로 나타나며, 그 경계를 가진 형태인 Poincaré–Lefschetz 쌍대성은 콤팩트 받침을 허용하여 비콤팩트 manifold로 일부 확장된다. 그러나 이 고전적 진술은 두 방향에서 한계를 가진다. 첫째, 그것은 상수 계수 또는 국소계 계수에 대해서만 진술되며 임의의 sheaf complex의 cohomology를 다루지 못한다. 둘째, 그것은 manifold, 즉 모든 점이 $\mathbb{R}^n$과 국소적으로 위상동형인 공간에 대해서만 성립하며, singular point를 가진 공간에서는 그대로 무너진다. Verdier 쌍대성은 이 두 한계를 한꺼번에 해소한다. 그 핵심은 manifold의 fundamental class가 떠맡던 역할을 한 점으로의 사상 $a_X: X \rightarrow \{\ast\}$에 대한 $f^!$이 대신하도록 만드는 것이다. $a_X^!$이 상수 sheaf에 주는 값을 *dualizing complex*라 부르고, 이것을 축으로 한 내부 Hom이 쌍대성을 매개한다.
+고전적인 Poincaré 쌍대성은 방향지어진 닫힌 $n$차원 manifold $M$에 대해 $H^p(M) \cong H_{n-p}(M)$이라는 cohomology와 homology 사이의 동형으로 나타나며, 그 경계를 가진 형태인 Poincaré–Lefschetz 쌍대성은 compact support를 허용하여 비콤팩트 manifold로 일부 확장된다. 그러나 이 고전적 진술은 두 방향에서 한계를 가진다. 첫째, 그것은 상수 계수 또는 국소계 계수에 대해서만 진술되며 임의의 sheaf complex의 cohomology를 다루지 못한다. 둘째, 그것은 manifold, 즉 모든 점이 $\mathbb{R}^n$과 국소적으로 위상동형인 공간에 대해서만 성립하며, singular point를 가진 공간에서는 그대로 무너진다. Verdier 쌍대성은 이 두 한계를 한꺼번에 해소한다. 그 핵심은 manifold의 fundamental class가 떠맡던 역할을 한 점으로의 사상 $a_X: X \rightarrow \{\ast\}$에 대한 $f^!$이 대신하도록 만드는 것이다. $a_X^!$이 상수 sheaf에 주는 값을 *dualizing complex*라 부르고, 이것을 축으로 한 내부 Hom이 쌍대성을 매개한다.
 
 이 글 전체에서 공간과 사상에 대한 가정은 [§고유 받음과 여섯 함자](/ko/math/sheaf_theory/six_functors)와 같다. 즉 위상공간은 locally compact Hausdorff이고 유한한 cohomological dimension을 가지며, 사상은 separated인 연속함수로 한정한다. 계수로는, 별도의 언급이 없으면 고정된 field $k$를 택하여 $\mathcal{O}_X = k_X$인 sheaf of $k$-vector space를 다룬다. 이는 앞 글이 $\mathbb{Z}$ 계수로 진술한 것과 다른 선택인데, field 위에서는 dual $(-)^\vee = R\mathcal{H}om(-, k)$이 higher Ext 항을 만들지 않아 쌍대성이 cohomology 차원에서 군더더기 없이 진술되기 때문이다. $\mathbb{Z}$ 계수에서의 보정은 적절한 곳에서 언급한다.
 
@@ -42,7 +42,7 @@ $$\mathbf{D}_X(\mathcal{F}^\bullet) := R\mathcal{H}om(\mathcal{F}^\bullet, \omeg
 로 정의한다. $\mathbf{D}_X(\mathcal{F}^\bullet)$을 $\mathcal{F}^\bullet$의 *Verdier dual<sub>베르디에 쌍대</sub>*이라 부른다.
 :::
 
-정의에서 $\mathcal{F}^\bullet = k_X$로 두면 $\mathbf{D}_X(k_X) = R\mathcal{H}om(k_X, \omega_X) \cong \omega_X$이므로, 상수 sheaf의 Verdier dual이 dualizing complex 자신이다. 또 점 $\{\ast\}$ 위에서는 $a_{\{\ast\}} = \id$이므로 $\omega_{\{\ast\}} = k$이고, 따라서 점 위에서 $\mathbf{D}_{\{\ast\}}(\mathcal{F}^\bullet) = R\Hom_k(\mathcal{F}^\bullet, k) = (\mathcal{F}^\bullet)^\vee$이 통상적인 $k$-vector space complex의 dual로 환원된다. 이것이 $\mathbf{D}_X$를 "쌍대"라 부르는 근거이며, 아래에서 이 점별 dual이 콤팩트 받침 cohomology를 통해 대역적 cohomology와 짝지어짐을 본다.
+정의에서 $\mathcal{F}^\bullet = k_X$로 두면 $\mathbf{D}_X(k_X) = R\mathcal{H}om(k_X, \omega_X) \cong \omega_X$이므로, 상수 sheaf의 Verdier dual이 dualizing complex 자신이다. 또 점 $\{\ast\}$ 위에서는 $a_{\{\ast\}} = \id$이므로 $\omega_{\{\ast\}} = k$이고, 따라서 점 위에서 $\mathbf{D}_{\{\ast\}}(\mathcal{F}^\bullet) = R\Hom_k(\mathcal{F}^\bullet, k) = (\mathcal{F}^\bullet)^\vee$이 통상적인 $k$-vector space complex의 dual로 환원된다. 이것이 $\mathbf{D}_X$를 "쌍대"라 부르는 근거이며, 아래에서 이 점별 dual이 compactly supported cohomology를 통해 대역적 cohomology와 짝지어짐을 본다.
 
 쌍대 함자가 잘 행동하기 위해 먼저 확인할 형식적 성질은, dualizing complex가 열린 부분공간으로의 제한과 호환된다는 사실이다. 이는 $\omega_X$가 본질적으로 국소적인 객체임을 말하며, [예시 10](#ex10)의 stalk 계산을 정당화한다.
 
@@ -81,7 +81,7 @@ $$\begin{aligned}
 대역적 형태는 국소적 형태에 $R\Gamma(Y, -)$을 적용하여 얻는다. $a_Y \circ f = a_X$이므로 [§층의 유도 범주와 유도 함자, ⁋정리 10](/ko/math/sheaf_theory/derived_category_of_sheaves#thm10)의 합성 동형에 의해 $R\Gamma(Y, Rf_\ast(-)) = R\Gamma(X, -)$이고, [§층의 유도 범주와 유도 함자, ⁋명제 8](/ko/math/sheaf_theory/derived_category_of_sheaves#prop8) 직후의 서술에 따라 $R\Hom = R\Gamma \circ R\mathcal{H}om$이므로, 좌변은 $R\Gamma(X, R\mathcal{H}om(\mathcal{F}^\bullet, f^!\mathcal{G}^\bullet)) = R\Hom_X(\mathcal{F}^\bullet, f^!\mathcal{G}^\bullet)$이고 우변은 $R\Hom_Y(Rf_!\mathcal{F}^\bullet, \mathcal{G}^\bullet)$이다.
 :::
 
-대역적 형태에서 $f = a_X: X \rightarrow \{\ast\}$, $\mathcal{G}^\bullet = k$로 특수화하면 dualizing complex의 정의가 곧바로 작동하여, $\mathbf{D}_X$의 전역 cohomology가 콤팩트 받침 cohomology의 dual임을 얻는다. 이것이 Verdier 쌍대성의 가장 자주 인용되는 형태이다.
+대역적 형태에서 $f = a_X: X \rightarrow \{\ast\}$, $\mathcal{G}^\bullet = k$로 특수화하면 dualizing complex의 정의가 곧바로 작동하여, $\mathbf{D}_X$의 전역 cohomology가 compactly supported cohomology의 dual임을 얻는다. 이것이 Verdier 쌍대성의 가장 자주 인용되는 형태이다.
 
 ::: 따름정리 5
 임의의 $\mathcal{F}^\bullet \in D(\Sh(X))$에 대해 자연스러운 동형
@@ -98,7 +98,7 @@ $$R\Hom_X(\mathcal{F}^\bullet, a_X^! k) = R\Hom_X(\mathcal{F}^\bullet, \omega_X)
 이다. 두 변을 같게 두면 첫 동형이 성립한다. Cohomology 차원의 식은, field $k$ 위에서 dual functor $R\Hom_k(-, k)$이 exact하여 $H^j(C^\bullet{}^\vee) = (H^{-j}(C^\bullet))^\vee$이 성립하므로 얻어진다.
 :::
 
-cohomological 형태 $H^j(X, \mathbf{D}_X \mathcal{F}) \cong H^{-j}_c(X, \mathcal{F})^\vee$이 모든 sheaf complex에 대해 성립한다는 점이 고전적 Poincaré 쌍대성을 넘어서는 일반성이다. 우변의 콤팩트 받침 cohomology가 차수의 부호를 뒤집어 좌변의 통상적 cohomology와 짝지어진다. Field $k$를 택한 것이 결정적인데, $\mathbb{Z}$ 계수에서는 $R\Hom_\mathbb{Z}(-, \mathbb{Z})$이 $\Ext^1_\mathbb{Z}$ 항을 만들어 universal coefficient 보정이 붙으므로 위의 깔끔한 차수별 동형 대신 short exact sequence가 끼어든다.
+cohomological 형태 $H^j(X, \mathbf{D}_X \mathcal{F}) \cong H^{-j}_c(X, \mathcal{F})^\vee$이 모든 sheaf complex에 대해 성립한다는 점이 고전적 Poincaré 쌍대성을 넘어서는 일반성이다. 우변의 compactly supported cohomology가 차수의 부호를 뒤집어 좌변의 통상적 cohomology와 짝지어진다. Field $k$를 택한 것이 결정적인데, $\mathbb{Z}$ 계수에서는 $R\Hom_\mathbb{Z}(-, \mathbb{Z})$이 $\Ext^1_\mathbb{Z}$ 항을 만들어 universal coefficient 보정이 붙으므로 위의 깔끔한 차수별 동형 대신 short exact sequence가 끼어든다.
 
 ## Constructible complex와 biduality
 
@@ -108,7 +108,7 @@ cohomological 형태 $H^j(X, \mathbf{D}_X \mathcal{F}) \cong H^{-j}_c(X, \mathca
 위상공간 $X$의 *stratification<sub>층화</sub>*은 국소 유한한 locally closed 부분공간들의 분할 $X = \bigsqcup_\alpha S_\alpha$로서, 각 $\overline{S_\alpha}$가 다른 stratum들의 합집합이 되는 것을 말한다. 유계 complex $\mathcal{F}^\bullet \in D^b(\Sh(X))$가 *constructible<sub>구성가능</sub>*하다는 것은 어떤 stratification $\{S_\alpha\}$가 존재하여, 모든 $j$와 모든 $\alpha$에 대해 cohomology sheaf의 제한 $\mathcal{H}^j(\mathcal{F}^\bullet)\vert_{S_\alpha}$이 유한 rank의 locally constant sheaf가 되는 것이다. Constructible complex들이 이루는 $D^b(\Sh(X))$의 충만한 부분삼각범주를 $D^b_c(X)$로 적는다.
 :::
 
-직관적으로 constructible complex는 공간을 유한히 많은 조각으로 잘랐을 때 각 조각 위에서 국소상수가 되는 complex이다. 상수 sheaf $k_X$ (전체를 한 stratum으로), 닫힌 부분다양체에 받침을 가진 상수 sheaf, 그리고 [예시 10](#ex10)에서 다룰 특이공간의 dualizing complex가 모두 이 부류에 속한다. 우리가 가정한 공간 위에서 $D^b_c(X)$는 여섯 함자 모두에 대해 닫혀 있으며, 특히 $\omega_X \in D^b_c(X)$이고 $\mathbf{D}_X$가 $D^b_c(X)$를 자기 자신으로 보낸다. 이 사실의 증명은 stratification에 대한 귀납과 [§고유 받음과 여섯 함자, ⁋정리 10](/ko/math/sheaf_theory/six_functors#thm10)을 사용하며, 그 자체로 상당한 분량이므로 여기서는 결과만 인용하고 [KS]의 §3.4와 [Dim]의 §4를 참조한다.
+직관적으로 constructible complex는 공간을 유한히 많은 조각으로 잘랐을 때 각 조각 위에서 국소상수가 되는 complex이다. 상수 sheaf $k_X$ (전체를 한 stratum으로), 닫힌 부분다양체에 support를 가진 상수 sheaf, 그리고 [예시 10](#ex10)에서 다룰 특이공간의 dualizing complex가 모두 이 부류에 속한다. 우리가 가정한 공간 위에서 $D^b_c(X)$는 여섯 함자 모두에 대해 닫혀 있으며, 특히 $\omega_X \in D^b_c(X)$이고 $\mathbf{D}_X$가 $D^b_c(X)$를 자기 자신으로 보낸다. 이 사실의 증명은 stratification에 대한 귀납과 [§고유 받음과 여섯 함자, ⁋정리 10](/ko/math/sheaf_theory/six_functors#thm10)을 사용하며, 그 자체로 상당한 분량이므로 여기서는 결과만 인용하고 [KS]의 §3.4와 [Dim]의 §4를 참조한다.
 
 ::: 정리 7 (biduality)
 $\mathcal{F}^\bullet \in D^b_c(X)$에 대해 자연스러운 동형
@@ -162,7 +162,7 @@ $$H^j(X, \mathbf{D}_X k_X) \cong H^{-j}_c(X, k)^\vee$$
 
 이 동형을 [\[대수적 위상수학\] §푸앵카레 쌍대성, ⁋정리 11](/ko/math/algebraic_topology/Poincare_duality#thm11)의 고전적 진술과 대조하는 것이 유익하다. 그 정리는 방향지어진 콤팩트 $n$차원 manifold $M$에 대해 fundamental class와의 cap product가 동형 $H^p(M; A) \cong H_{n-p}(M; A)$을 준다고 말한다. $M$이 콤팩트이면 [§고유 받음과 여섯 함자, ⁋따름정리 4](/ko/math/sheaf_theory/six_functors#cor4)에 의해 $H^{n-p}_c(M, k) = H^{n-p}(M, k)$이고, field $k$ 위에서 universal coefficient에 의해 $H^{n-p}(M, k)^\vee \cong H_{n-p}(M, k)$이므로, [정리 9](#thm9)의 우변은 $H_{n-p}(M, k)$으로 정리되어 고전적 형태와 정확히 일치한다. 두 진술의 차이는 도달하는 경로에 있다. 고전적 증명은 fundamental class라는 기하학적 cycle을 cap product로 작용시키는 반면, Verdier 쌍대성은 같은 동형을 $a_X^! k \cong k_X[n]$이라는 함자적 사실로부터 끌어낸다. 후자는 콤팩트성을 요구하지 않으며 ($H_c$가 그 역할을 흡수한다) 상수 계수에 국한되지 않으므로, 임의의 국소계나 더 일반적인 constructible complex로 그대로 확장된다.
 
-비콤팩트 경우의 구체적 점검으로 $X = \mathbb{R}^n$을 보면, [§고유 받음과 여섯 함자, ⁋예시 12](/ko/math/sheaf_theory/six_functors#ex12)에서 계산한 $H^{n-p}_c(\mathbb{R}^n, k) \cong k$ ($p = 0$일 때, 즉 $n - p = n$일 때) 외에는 $0$이라는 결과와, $H^p(\mathbb{R}^n, k) \cong k$ ($p = 0$), 그 외 $0$이라는 가축성이 [정리 9](#thm9)의 동형 $H^0 \cong (H^n_c)^\vee$을 통해 정확히 맞아떨어진다. 콤팩트성을 콤팩트 받침 cohomology가 대신함을 보여 주는 가장 단순한 사례이다.
+비콤팩트 경우의 구체적 점검으로 $X = \mathbb{R}^n$을 보면, [§고유 받음과 여섯 함자, ⁋예시 12](/ko/math/sheaf_theory/six_functors#ex12)에서 계산한 $H^{n-p}_c(\mathbb{R}^n, k) \cong k$ ($p = 0$일 때, 즉 $n - p = n$일 때) 외에는 $0$이라는 결과와, $H^p(\mathbb{R}^n, k) \cong k$ ($p = 0$), 그 외 $0$이라는 가축성이 [정리 9](#thm9)의 동형 $H^0 \cong (H^n_c)^\vee$을 통해 정확히 맞아떨어진다. 콤팩트성을 compactly supported cohomology가 대신함을 보여 주는 가장 단순한 사례이다.
 
 ## 특이공간에서의 dualizing complex
 
@@ -176,7 +176,7 @@ $$\mathcal{H}^{-2}(\omega_X)_0 \cong k^2, \qquad \mathcal{H}^{-1}(\omega_X)_0 \c
 
 계산은 [명제 3](#prop3)에 기반한 국소적 묘사에서 출발한다. Dualizing complex의 stalk는 작은 열린근방의 쌍대성으로 표현되는데, [명제 3](#prop3)에 의해 열린근방 $U \ni 0$ 위에서 $\omega_X\vert_U = \omega_U$이므로
 $$\mathcal{H}^j(\omega_X)_0 = \varinjlim_{U \ni 0} H^j(U, \omega_U) = \varinjlim_{U \ni 0} H^j(U, \mathbf{D}_U k_U)$$
-이고, [따름정리 5](#cor5)를 $U$ 위에서 $\mathcal{F}^\bullet = k_U$에 적용하면 $H^j(U, \mathbf{D}_U k_U) \cong H^{-j}_c(U, k)^\vee$이다. 따라서 충분히 작은 원뿔형 근방 $U$에 대한 콤팩트 받침 cohomology $H^\bullet_c(U, k)$을 계산하면 된다. (이 colimit은 원뿔형 근방들의 cofinal 계열 위에서 안정화되며, 그 극한값이 곧 stalk이다. 이 사실은 $\mathcal{H}^{-i}(\omega_X)_0 \cong H^{BM}_i(U)$, 즉 dualizing complex의 stalk가 국소 Borel–Moore homology라는 표준적 해석의 한 형태이다.)
+이고, [따름정리 5](#cor5)를 $U$ 위에서 $\mathcal{F}^\bullet = k_U$에 적용하면 $H^j(U, \mathbf{D}_U k_U) \cong H^{-j}_c(U, k)^\vee$이다. 따라서 충분히 작은 원뿔형 근방 $U$에 대한 compactly supported cohomology $H^\bullet_c(U, k)$을 계산하면 된다. (이 colimit은 원뿔형 근방들의 cofinal 계열 위에서 안정화되며, 그 극한값이 곧 stalk이다. 이 사실은 $\mathcal{H}^{-i}(\omega_X)_0 \cong H^{BM}_i(U)$, 즉 dualizing complex의 stalk가 국소 Borel–Moore homology라는 표준적 해석의 한 형태이다.)
 
 원점의 작은 근방 $U$는 두 복소직선 각각에서의 작은 원판 $\{x = 0, \lvert y\rvert < \varepsilon\}$과 $\{y = 0, \lvert x\rvert < \varepsilon\}$이 원점에서 한 점으로 붙은 공간, 곧 두 개의 열린 $2$-원판을 중심에서 접합한 공간이다. 그 link는 두 원 $S^1 \sqcup S^1$이다. $H^\bullet_c(U, k)$을 계산하기 위해 닫힌집합 $\{0\}$과 열린 보충집합 $V = U \setminus \{0\}$에 대한 [§고유 받음과 여섯 함자, ⁋정리 10](/ko/math/sheaf_theory/six_functors#thm10)의 첫째 recollement triangle에 $R\Gamma_c(U, -)$을 적용한다. 보충집합 $V$는 두 개의 punctured disk, 즉 두 개의 $S^1 \times \mathbb{R}$의 disjoint union이다. 각 $S^1 \times \mathbb{R}$은 방향지어진 $2$차원 manifold이므로 [정리 9](#thm9)에 의해 $H^q_c(S^1 \times \mathbb{R}, k) \cong H^{2-q}(S^1 \times \mathbb{R}, k)^\vee \cong H^{2-q}(S^1, k)^\vee$ ($\mathbb{R}$이 가축이므로 Künneth에 의해 $H^\bullet(S^1 \times \mathbb{R}) \cong H^\bullet(S^1)$)이고, 이는 $q = 1$과 $q = 2$에서 각각 $k$, 그 외에는 $0$이다. 따라서 두 성분을 합하여
 $$H^1_c(V, k) \cong k^2, \qquad H^2_c(V, k) \cong k^2$$
@@ -186,7 +186,7 @@ Recollement triangle이 주는 long exact sequence
 $$\cdots \rightarrow H^q_c(V) \rightarrow H^q_c(U) \rightarrow H^q(\{0\}) \rightarrow H^{q+1}_c(V) \rightarrow \cdots$$
 를 차수별로 읽는다. $U$가 연결이고 콤팩트하지 않으므로 $H^0_c(U) = 0$이며, 따라서 $q = 0$ 부분
 $$0 = H^0_c(V) \rightarrow H^0_c(U) = 0 \rightarrow H^0(\{0\}) = k \xrightarrow{\delta} H^1_c(V) = k^2 \rightarrow H^1_c(U) \rightarrow H^1(\{0\}) = 0$$
-에서 연결 사상 $\delta$가 단사이고, $H^1_c(U) = \operatorname{coker}\delta \cong k^2 / k \cong k$이다. 한편 $q \geq 1$ 부분에서 $H^1(\{0\}) = 0 \rightarrow H^2_c(V) = k^2 \rightarrow H^2_c(U) \rightarrow H^2(\{0\}) = 0$이므로 $H^2_c(U) \cong k^2$이다. 정리하면 $H^1_c(U, k) \cong k$, $H^2_c(U, k) \cong k^2$이고 그 외는 $0$이다. (검산으로 콤팩트 받침 Euler 지표는 $\chi_c(U) = \chi_c(V) + \chi_c(\{0\})$에서 $\chi_c(S^1 \times \mathbb{R}) = 0$이므로 $\chi_c(U) = 0 + 1 = 1$이고, $-\dim H^1_c + \dim H^2_c = -1 + 2 = 1$과 일치한다.)
+에서 연결 사상 $\delta$가 단사이고, $H^1_c(U) = \operatorname{coker}\delta \cong k^2 / k \cong k$이다. 한편 $q \geq 1$ 부분에서 $H^1(\{0\}) = 0 \rightarrow H^2_c(V) = k^2 \rightarrow H^2_c(U) \rightarrow H^2(\{0\}) = 0$이므로 $H^2_c(U) \cong k^2$이다. 정리하면 $H^1_c(U, k) \cong k$, $H^2_c(U, k) \cong k^2$이고 그 외는 $0$이다. (검산으로 compactly supported Euler 지표는 $\chi_c(U) = \chi_c(V) + \chi_c(\{0\})$에서 $\chi_c(S^1 \times \mathbb{R}) = 0$이므로 $\chi_c(U) = 0 + 1 = 1$이고, $-\dim H^1_c + \dim H^2_c = -1 + 2 = 1$과 일치한다.)
 
 이제 stalk 공식 $\mathcal{H}^j(\omega_X)_0 \cong H^{-j}_c(U, k)^\vee$에 대입하면 $\mathcal{H}^{-2}(\omega_X)_0 \cong H^2_c(U)^\vee \cong k^2$, $\mathcal{H}^{-1}(\omega_X)_0 \cong H^1_c(U)^\vee \cong k$을 얻어 [예시 10](#ex10)의 주장이 확인된다. 최고차 stalk $\mathcal{H}^{-2}(\omega_X)_0 \cong k^2$의 차원 $2$는 node를 지나는 국소 분지(branch)의 수와 정확히 일치하며, $0$이어야 할 $\mathcal{H}^{-1}(\omega_X)_0$에 추가로 나타나는 $k$가 singular point가 만들어 내는 잉여 항이다. smooth한 다양체였다면 [정리 9](#thm9)에 의해 $\omega_X$이 한 차수에 집중되었을 것이나, node에서는 두 차수에 퍼진다.
 
