@@ -356,6 +356,13 @@ A:
   defs:
   - label: '[대수다양체] §선형계'
     url: /ko/math/algebraic_varieties/linear_systems
+- id: analytic
+  en: analytic
+  ko: 해석적
+  primary: ko
+  defs:
+  - label: '[해석학] §멱급수와 해석함수'
+    url: /ko/math/analysis/power_series
 - id: annihilator
   en: annihilator
   ko: 소멸자
@@ -1356,6 +1363,13 @@ C:
   defs:
   - label: '[스택] §Fibered category와 stack'
     url: /ko/math/stacks/fibered_categories_and_stacks
+- id: clopen_set
+  en: clopen set
+  ko: 열린닫힌집합
+  primary: en
+  defs:
+  - label: '[해석학] §열린집합과 닫힌집합'
+    url: /ko/math/analysis/open_and_closed_sets
 - id: closed
   en: closed
   ko: 닫힌
@@ -1758,6 +1772,8 @@ C:
     url: /ko/math/manifolds/vector_fields
   - label: '[토릭 기하학] §토릭 다양체의 정의'
     url: /ko/math/toric_geometry/toric_varieties
+  - label: '[해석학] §거리공간'
+    url: /ko/math/analysis/metric_spaces
 - id: complete_category
   en: complete category
   ko: 완비범주
@@ -2466,6 +2482,13 @@ D:
   defs:
   - label: '[미분다양체] §미분사상'
     url: /ko/math/manifolds/differentials
+- id: differentiable
+  en: differentiable
+  ko: 미분가능
+  primary: ko
+  defs:
+  - label: '[해석학] §다변수 미분'
+    url: /ko/math/analysis/multivariable_differentiation
 - id: differentiable_manifold
   en: differentiable manifold
   ko: 미분다양체
@@ -2609,6 +2632,13 @@ D:
   defs:
   - label: '[해석학] §연결성과 중간값 정리'
     url: /ko/math/analysis/connectedness
+- id: discrete_metric
+  en: discrete metric
+  ko: 이산거리
+  primary: ko
+  defs:
+  - label: '[해석학] §열린집합과 닫힌집합'
+    url: /ko/math/analysis/open_and_closed_sets
 - id: discrete_topology
   en: discrete topology
   ko: 이산위상
@@ -3002,6 +3032,13 @@ E:
     url: /ko/math/multilinear_algebra/change_of_basis
   - label: '[가환대수학] §완비화'
     url: /ko/math/commutative_algebra/completion
+- id: equivalent_metrics
+  en: equivalent metrics
+  ko: 동치인 거리
+  primary: ko
+  defs:
+  - label: '[해석학] §열린집합과 닫힌집합'
+    url: /ko/math/analysis/open_and_closed_sets
 - id: essentially_surjective
   en: essentially surjective
   ko: 본질적 전사 함자
@@ -5727,6 +5764,20 @@ M:
   defs:
   - label: '[집합론] §유향집합'
     url: /ko/math/set_theory/directed_set
+- id: metric
+  en: metric
+  ko: 거리
+  primary: ko
+  defs:
+  - label: '[해석학] §거리공간'
+    url: /ko/math/analysis/metric_spaces
+- id: metric_space
+  en: metric space
+  ko: 거리공간
+  primary: ko
+  defs:
+  - label: '[해석학] §거리공간'
+    url: /ko/math/analysis/metric_spaces
 - id: minimal
   en: minimal
   ko: 극소
@@ -6296,6 +6347,13 @@ O:
   defs:
   - label: '[미분다양체] §벡터장'
     url: /ko/math/manifolds/vector_fields
+- id: open_ball
+  en: open ball
+  ko: 열린공
+  primary: ko
+  defs:
+  - label: '[해석학] §거리공간'
+    url: /ko/math/analysis/metric_spaces
 - id: open_cover
   en: open cover
   ko: 열린덮개
@@ -7702,6 +7760,13 @@ R:
   see:
   - label: Section
     id: section
+- id: reverse_triangle_inequality
+  en: reverse triangle inequality
+  ko: 역삼각부등식
+  primary: ko
+  defs:
+  - label: '[해석학] §거리공간'
+    url: /ko/math/analysis/metric_spaces
 - id: richardson_variety
   en: Richardson variety
   ko: 리처드슨 다양체
