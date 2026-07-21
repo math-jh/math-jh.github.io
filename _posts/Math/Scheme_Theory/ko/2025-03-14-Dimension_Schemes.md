@@ -1,6 +1,6 @@
 ---
 title: "차원"
-description: "스킴의 차원을 크룰 차원으로 정의하고, 가환대수학적 차원과의 관계를 살펴본다. 유한 사상과 적분 사상의 성질을 함께 다룬다."
+description: "스킴의 차원을 Krull dimension으로 정의하고, 가환대수학적 차원과의 관계를 살펴본다. Finite morphism과 integral morphism의 성질을 함께 다룬다."
 excerpt: "Scheme의 dimension 정의와 local ring의 Krull dimension과의 관계"
 
 categories: [Math / Scheme Theory]
@@ -35,7 +35,7 @@ $X$의 임의의 irreducible closed subset들의 chain
 
 $$Y_0\subsetneq Y_1\subsetneq\cdots\subsetneq Y_r$$
 
-에서 가장 작은 항 $Y_0$의 generic point $\eta_0$는 $X$의 점이므로 covering $(U_i)$에 의해 어떤 $U_i$에 속한다. 그러면 chain의 모든 항이 $U_i$와 만나므로, [\[위상수학\] §차원, ⁋명제 14](/ko/math/topology/dimension#prop14)의 inclusion-preserving bijection을 생각하면 $U_i$ 안의 같은 길이의 chain으로 대응된다. 거꾸로 $U_i$의 임의의 chain은 $X$ 안에서 closure를 취해 올려지므로 $\dim X\geq\dim U_i$이고, 따라서 $\dim X=\sup_i\dim U_i$이며 이는 명제의 조건과 동치이다.
+에서 가장 작은 항 $Y_0$의 generic point $y_0$는 $X$의 점이므로 covering $(U_i)$에 의해 어떤 $U_i$에 속한다. 그러면 chain의 모든 항이 $U_i$와 만나므로, [\[위상수학\] §차원, ⁋명제 14](/ko/math/topology/dimension#prop14)의 inclusion-preserving bijection을 생각하면 $U_i$ 안의 같은 길이의 chain으로 대응된다. 거꾸로 $U_i$의 임의의 chain은 $X$ 안에서 closure를 취해 올려지므로 $\dim X\geq\dim U_i$이고, 따라서 $\dim X=\sup_i\dim U_i$이며 이는 명제의 조건과 동치이다.
 :::
 
 한편 우리는 [§스킴 사상의 성질들, ⁋명제 14](/ko/math/scheme_theory/properties_of_scheme_morphisms#prop14)에서 finite morphism은 integral morphism of finite type인 것을 살펴보았으며, [§올곱, ⁋명제 14](/ko/math/scheme_theory/fiber_products#prop14)에서 임의의 finite morphism은 quasi-finite인 것을 살펴보았다. 일반적으로 integral morphism이지만 finite type은 아닌 morphism이 존재하며, 따라서 아직까지는 integral morphism의 fiber에 대한 이야기를 할 수가 없다.
@@ -70,7 +70,7 @@ $$\mathbb{C}\otimes_\mathbb{R} \mathbb{C}\cong \mathbb{C}\otimes_\mathbb{R} \fra
 
 이며, $\x^2+1$은 $\mathbb{C}$에서는 두 일차식의 곱 $\x^2+1=(\x-i)(\x+i)$로 인수분해되며, $(\x-i)$와 $(\x+i)$는 comaximal이므로 [\[환론\] §중국인의 나머지정리, ⁋명제 6](/ko/math/ring_theory/chinese_remainder_theorem#prop6)에 의하여 
 
-$$\frac{\mathbb{C}[\x]}{((\x-i)(\x+i)}\cong\frac{\mathbb{C}[\x]}{(\x-i)}\times\frac{\mathbb{C}[\x]}{(\x+i)}\cong\mathbb{C}\times\mathbb{C}$$
+$$\frac{\mathbb{C}[\x]}{((\x-i)(\x+i))}\cong\frac{\mathbb{C}[\x]}{(\x-i)}\times\frac{\mathbb{C}[\x]}{(\x+i)}\cong\mathbb{C}\times\mathbb{C}$$
 
 가 된다. 위의 예시에서 살펴본 Galois group의 언어로 생각하면 이는 위 분해의 두 factor $\mathbb{C}[\x]/(\x-i)$와 $\mathbb{C}[\x]/(\x+i)$가 곧 $\mathbb{R}$을 고정하는 $\mathbb{C}\rightarrow \mathbb{C}$의 automorphism, 즉 $\Gal(\mathbb{C}/\mathbb{R})$의 두 원소에 해당하기 때문에 나타나는 것이며 같은 일이 [예시 3](#ex3)의 $\mathbb{Q}\rightarrow \overline{\mathbb{Q}}$에서도 나타난다. 유일한 차이는 $\Gal(\overline{\mathbb{Q}}/\mathbb{Q})$는 무한하므로 fiber가 두 개가 아닌 무한개가 된다는 것이다. 
 
@@ -88,7 +88,7 @@ $$\varphi^{-1}(y)=X\times_Y\Spec \kappa(y)$$
 
 $$\varphi^{-1}(y)=X\times_Y\Spec \kappa(y) \rightarrow \Spec \kappa(y)$$
 
-는 integral morphism이며, integral morphism은 그 정의에 의해 affine morphism이므로 임의의 integral morphism $\Spec B \rightarrow \Spec \mathbb{K}$에 대하여 $\dim \Spec B=\dim B=0$임을 보이면 충분하다. 즉, 임의의 integral extension $\mathbb{K} \rightarrow B$에 대하여, $B$의 prime ideal들의 chain
+는 integral morphism이며, integral morphism은 그 정의에 의해 affine morphism이므로 integral morphism $\Spec B \rightarrow \Spec \kappa(y)$에 대하여 $\dim \Spec B=\dim B=0$임을 보이면 충분하다. 즉, 임의의 integral extension $\kappa(y) \rightarrow B$에 대하여, $B$의 prime ideal들의 chain
 
 $$\mathfrak{q}_1\subsetneq \mathfrak{q}_2$$
 
@@ -110,13 +110,13 @@ $$\dim\Spec A=\dim\Spec B$$
 특히 임의의 integral domain $A$와 그 normalization $\tilde{A}$에 대하여, extension $A\hookrightarrow\tilde{A}$가 integral이므로 [명제 5](#prop5)에 의하여 $\dim\Spec\tilde{A}=\dim\Spec A$이다. 여기서 normalization $\tilde{A}$는 $A$를 그 field of fractions $\Frac(A)$ 안에서 integrally closed가 되도록 확장한 것, 곧 $\Frac(A)$의 원소 가운데 $A$ 위에서 integral인 것들을 모두 $A$에 붙여 얻는 확장이다. ([\[가환대수학\] §정수적 확장, ⁋정의 3](/ko/math/commutative_algebra/integral_extension#def3)) 정의에 의해 $A\subseteq\tilde{A}\subseteq\Frac(A)$이므로 $\Frac(\tilde{A})=\Frac(A)$, 즉 normalization은 $A$의 function field를 보존한다.
 
 ::: 예시 6
-위의 논의에서 우리는 normalization이 function field를 보존한다는 것을 살펴보았다. 기하적으로 이는 normalization으로 얻어지는 두 공간이 birational하다는 것이다. ([\[대수다양체\] §유리사상, ⁋명제 10](/ko/math/algebraic_varieties/rational_maps#prop10)) 즉, normalization은 무시할만큼 작은 특정한 loci 바깥에서는 원래의 공간과 같다. 
+위의 논의에서 우리는 normalization이 function field를 보존한다는 것을 살펴보았다. 기하적으로, $A$가 $\mathbb{K}$ 위의 affine variety의 coordinate ring인 경우 이는 normalization으로 얻어지는 두 공간이 birational하다는 것이다. ([\[대수다양체\] §유리사상, ⁋명제 10](/ko/math/algebraic_varieties/rational_maps#prop10)) 즉, normalization은 무시할만큼 작은 특정한 loci 바깥에서는 원래의 공간과 같다. 
 
 Normalization은 여기에 더해 이 특정한 locus가 정확히 singular point들이 되도록 한다. 대표적인 예로 [\[대수다양체\] §접공간과 매끄러움, ⁋예시 7](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#ex7)의 cusp
 
 $$A=\mathbb{K}[\x,\y]/(\y^2-\x^3)\cong\mathbb{K}[t^2,t^3]$$
 
-를 보자. $A$의 field of fraction을 보기 위해 $t=\y/\x$임을 사용하면 $\Frac(A)=\mathbb{K}(t)$임을 확인할 수 있고, 이 때 원소 $t\in\Frac(A)$는 $t^2=\x\in A$를 만족하므로 $A$ 위에서 integral이다. 따라서 $t$를 붙여 얻은 extension 
+를 보자. $A$의 field of fractions를 보기 위해 $t=\y/\x$임을 사용하면 $\Frac(A)=\mathbb{K}(t)$임을 확인할 수 있고, 이 때 원소 $t\in\Frac(A)$는 $t^2=\x\in A$를 만족하므로 $A$ 위에서 integral이다. 따라서 $t$를 붙여 얻은 extension 
 
 $$A[t]=\mathbb{K}[t^2,t^3,t]=\mathbb{K}[t]$$
 
@@ -126,13 +126,13 @@ $$A[t]=\mathbb{K}[t^2,t^3,t]=\mathbb{K}[t]$$
 
 $$\Spec A[t]\rightarrow \Spec A$$
 
-을 살펴보아야 한다. 우선 곡선 $\Spec A$의 singular point인 원점 $\mathfrak m=(t^2,t^3)\in\Spec A$을 보면, 이 점에서의 위의 map의 fiber는 다음의 pullback diagram
+을 살펴보아야 한다. 우선 곡선 $\Spec A$의 singular point인 원점 $\mathfrak{m}=(t^2,t^3)\in\Spec A$을 보면, 이 점에서의 위의 map의 fiber는 다음의 pullback diagram
 
 ![cusp-fiber](/assets/images/Math/Scheme_Theory/Dimension_Schemes-2.svg){:style="width:17.35em" class="invert" .align-center}
 
 즉 다음의 map
 
-$$\Spec(A[t]\otimes_A A/\mathfrak m)=\Spec(A[t]/(t^2,t^3))=\Spec(A[t]/(t^2))$$
+$$\Spec(A[t]\otimes_A A/\mathfrak{m})=\Spec(A[t]/(t^2,t^3))=\Spec(A[t]/(t^2))$$
 
 로 주어진다. 즉, fiber 자체는 한 점이 되지만 그 위에 주어진 scheme 구조는 non-reduced이며, 반면 $\Spec A$의 원점 $\Spec A/\mathfrak{m}$은 field의 spectrum으로서 reduced인 한 점이므로 위의 fiber는 이 점과 같아질 수 없다. 반면 원점을 뺀 열린집합 $D(\x)$에서는 $\x=t^2$가 invertible해지므로, $t=t^3\cdot(t^2)^{-1}$가 들어와
 
@@ -151,14 +151,14 @@ $$A_{\mathfrak{m}}=\mathbb{K}[t^2,t^3]_{(t^2, t^3)}$$
 임을 확인할 수 있다. 이들을 비교하면 normalization이 원점에서 무엇을 하는지가 대수적으로 드러난다. $A_{\mathfrak{m}}$은 $1$차원 local ring임에도 maximal ideal을 하나의 원소로 생성할 수 없고 $t^2$과 $t^3$ 두 원소를 필요로 하므로 regular local ring이 아니다. ([\[가환대수학\] §차원, ⁋정의 12](/ko/math/commutative_algebra/Krull_dimension#def12)) 실제로 $\mathfrak{m}/\mathfrak{m}^2$은 $t^2$과 $t^3$의 image로 생성되는 $2$차원 벡터공간이며, 이는 [\[대수다양체\] §접공간과 매끄러움, ⁋예시 7](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#ex7)에서 cusp의 원점에서의 tangent space가 curve의 차원보다 큰 $2$차원으로 계산되었던 것과 같은 현상이다. 반면 normalization의 local ring $A[t]_{(t)}=\mathbb{K}[t]_{(t)}$는 maximal ideal이 단 하나의 원소 $t$로 생성되는 regular local ring이다. 즉 normalization은 singular한 local ring $A_{\mathfrak{m}}$을 regular local ring $A[t]_{(t)}$로 바꾸어 cusp를 펴는 것이다.
 :::
 
-임의의 integral scheme $X$에 대해서도 normalization을 같은 방식으로 정의할 수 있다. $X$를 affine open $\Spec A_i$들로 덮자. $X$가 integral이므로 유일한 generic point $x$를 가지며, 이 점은 각 $\Spec A_i$에서 domain $A_i$의 minimal prime $(0)$에 대응하여 그 stalk이 $\Frac(A_i)$가 된다. stalk $\mathcal{O}_{X,x}$는 어느 affine open에서 계산하든 같으므로 모든 $\Frac(A_i)$가 하나의 공통 function field $K(X)$로 일치하며 ([§스킴의 대수구조, §§유리함수](/ko/math/scheme_theory/algebra_of_schemes#유리함수)), 우리는 각 조각에서 $A_i$의 $K(X)$ 안에서의 normalization $\tilde{A_i}$를 취할 수 있다. 이 때 normalization은 localization과 commute하므로 ([\[가환대수학\] §정수적 확장, ⁋명제 12](/ko/math/commutative_algebra/integral_extension#prop12)) 각 $\Spec\tilde{A_i}$의 겹침 $\Spec A_i\cap\Spec A_j$로의 restriction들이 서로 일치하고, 따라서 이들은 하나의 scheme $\tilde{X}$로 붙어 normalization morphism $\tilde{X}\rightarrow X$를 정의한다. 이 사상은 affine-locally $A_i\hookrightarrow\tilde{A_i}$가 integral extension이므로 integral morphism이며, [명제 5](#prop5)에 의하여 각 조각에서 $\dim\Spec\tilde{A_i}=\dim\Spec A_i$이므로 [명제 2](#prop2)로부터 $\dim\tilde{X}=\dim X$를 얻는다. 
+임의의 integral scheme $X$에 대해서도 normalization을 같은 방식으로 정의할 수 있다. $X$를 affine open $\Spec A_i$들로 덮자. $X$가 integral이므로 유일한 generic point $x$를 가지며, 이 점은 각 $\Spec A_i$에서 domain $A_i$의 minimal prime $(0)$에 대응하여 그 stalk이 $\Frac(A_i)$가 된다. stalk $\mathcal{O}_{X,x}$는 어느 affine open에서 계산하든 같으므로 모든 $\Frac(A_i)$가 하나의 공통 function field $K(X)$로 일치하며 ([§스킴의 대수구조, §§유리함수](/ko/math/scheme_theory/algebra_of_schemes#유리함수)), 우리는 각 조각에서 $A_i$의 $K(X)$ 안에서의 normalization $\tilde{A}_i$를 취할 수 있다. 이 때 normalization은 localization과 commute하므로 ([\[가환대수학\] §정수적 확장, ⁋명제 12](/ko/math/commutative_algebra/integral_extension#prop12)) 각 $\Spec\tilde{A}_i$의 겹침 $\Spec A_i\cap\Spec A_j$로의 restriction들이 서로 일치하고, 따라서 이들은 하나의 scheme $\tilde{X}$로 붙어 normalization morphism $\tilde{X}\rightarrow X$를 정의한다. 이 사상은 affine-locally $A_i\hookrightarrow\tilde{A}_i$가 integral extension이므로 integral morphism이며, [명제 5](#prop5)에 의하여 각 조각에서 $\dim\Spec\tilde{A}_i=\dim\Spec A_i$이므로 [명제 2](#prop2)로부터 $\dim\tilde{X}=\dim X$를 얻는다. 
 
 이제 우리는 codimension을 정의한다. 
 
 ::: 정의 7
 위상공간 $X$의 irreducible subset $Y$에 대하여, $Y$의 $X$에서의 *codimension<sub>여차원</sub>* $\codim_XY$를 $X$의 irreducible closed subset들의 strictly descending chain 
 
-$$A_n\supsetneq A_{n-1}\supsetneq\cdots\supsetneq A_0=\cl_X(Y)$$
+$$Z_n\supsetneq Z_{n-1}\supsetneq\cdots\supsetneq Z_0=\cl_X(Y)$$
 
 의 length의 supremum으로 정의한다. 
 :::
@@ -169,7 +169,7 @@ $$A_n\supsetneq A_{n-1}\supsetneq\cdots\supsetneq A_0=\cl_X(Y)$$
 $X$의 irreducible closed subset $Y$와 $Y$의 generic point $y$에 대하여, $\codim_X Y=\dim \mathcal{O}_{X,y}$이 성립한다.
 :::
 ::: 증명
-$Y$가 generic point $y$를 가지므로, 정의에 의해 $\codim_XY$와 $\codim_X\{y\}$가 같다. 이제 $y$를 포함하는 임의의 affine open subset $U\cong\Spec A$를 택하고, 이 isomorphism에 의해 $y\in U$가 $\mathfrak{p}_y\in \Spec A$에 대응된다 하자. 그럼  [\[위상수학\] §차원, ⁋명제 14](/ko/math/topology/dimension#prop14)로부터 우리는 $U$와 만나는 $X$의 irreducible closed subset들과 $U$의 irreducible closed subset들 사이의 일대일 대응이 존재한다는 것을 안다. 즉, $\codim_X\{y\}=\codim_U \mathfrak{p}_y$이다. 이제 [§스펙트럼, ⁋명제 16](/ko/math/scheme_theory/spectrums#prop16)으로부터 원하는 결과를 얻는다. 
+$Y$가 generic point $y$를 가지므로, 정의에 의해 $\codim_XY$와 $\codim_X\{y\}$가 같다. 이제 $y$를 포함하는 임의의 affine open subset $U\cong\Spec A$를 택하고, 이 isomorphism에 의해 $y\in U$가 $\mathfrak{p}_y\in \Spec A$에 대응된다 하자. 그럼 [\[위상수학\] §차원, ⁋명제 14](/ko/math/topology/dimension#prop14)로부터 우리는 $U$와 만나는 $X$의 irreducible closed subset들과 $U$의 irreducible closed subset들 사이의 일대일 대응이 존재한다는 것을 안다. 즉, $\codim_X\{y\}=\codim_U \mathfrak{p}_y$이다. 이제 [§스펙트럼, ⁋명제 16](/ko/math/scheme_theory/spectrums#prop16)으로부터 원하는 결과를 얻는다. 
 :::
 
 더 일반적으로 우리는 [\[가환대수학\] §차원, ⁋정의 2](/ko/math/commutative_algebra/Krull_dimension#def2)에서 codimension을 정의한 후 다음의 부등식
@@ -224,7 +224,13 @@ $$\x_1=z_1+y_m^{r_1},\quad \ldots\quad,\quad \x_{m-1}=z_{m-1}+y_m^{r_{m-1}},\qua
 
 $$\alpha_{d_1d_2\cdots d_m}y_m^{r_1d_1+\cdots+r_{m-1}d_{m-1}+d_m}$$
 
-과 $z_k$를 포함하는 그 외의 항들이 될 것이다. 이제 $r_1,\ldots, r_{m-1}$을 충분히 크게 잡으면, 이러한 형태의 항이 최고차항이 되도록 할 수 있고, 따라서 위의 등식 ($\ast\ast$)은 $y_m$이 $z_1,\ldots, z_{m-1}$에 대해 integrally dependent임을 보여준다. 한편 $z_1,\ldots, z_{m-1}$로 생성되는 $A$의 $\mathbb{K}$-subalgebra $A'$, 즉 ($\ast\ast$)를 $y_m$의 일변수 다항식으로 보았을 때 그 계수들이 존재하는 $A$의 $\mathbb{K}$-subalgebra $A'$에 대해서는 귀납적 가정에 의해 원하는 조건을 만족하는 $x_1,\ldots, x_n\in A$들이 존재한다. 이제 $A$는 위의 논증에 의해 finite $A'$-module이고, $A'$는 귀납적 가정에 의해 finite $\mathbb{K}[x_1,\ldots, x_n]$-module이므로 원하는 결과를 얻는다.
+과 $z_k$를 포함하는 그 외의 항들이 될 것이다. 이제 $f$에 실제로 나타나는 지수 $d_j$들의 최댓값보다 큰 정수 $r$을 택하여 $r_i=r^i$로 두면, $f$의 서로 다른 monomial마다 지수
+
+$$r_1d_1+\cdots+r_{m-1}d_{m-1}+d_m=d_m+d_1r+\cdots+d_{m-1}r^{m-1}$$
+
+이 $r$진법 전개의 유일성에 의해 서로 다른 값을 가지므로, 이러한 형태의 항 가운데 정확히 하나가 최고차항으로 남는다. 그 계수는 $\mathbb{K}$의 $0$이 아닌 원소이므로 양변을 그것으로 나눌 수 있고, 따라서 위의 등식 ($\ast\ast$)은 $y_m$이 $z_1,\ldots, z_{m-1}$에 대해 integrally dependent임을 보여준다.
+
+한편 $z_1,\ldots, z_{m-1}$로 생성되는 $A$의 $\mathbb{K}$-subalgebra $A'$, 즉 ($\ast\ast$)를 $y_m$의 일변수 다항식으로 보았을 때 그 계수들이 존재하는 $A$의 $\mathbb{K}$-subalgebra $A'$를 생각하자. 위의 논증에 의해 $A$는 finite $A'$-module이고, 따라서 $\Frac(A)$는 $\Frac(A')$의 algebraic extension이므로 $\trdeg_\mathbb{K}\Frac(A')=n$이다. 그럼 $A'$는 $m-1$개의 원소로 생성되는 integral domain이므로 귀납적 가정에 의해 원하는 조건을 만족하는 $x_1,\ldots, x_n\in A'$들이 존재하며, $A'$가 finite $\mathbb{K}[x_1,\ldots, x_n]$-module이므로 $A$ 또한 finite $\mathbb{K}[x_1,\ldots, x_n]$-module이다.
 :::
 
 기하적으로 $A=\mathbb{K}[y_1,\ldots, y_m]/\mathfrak{p}$라 두는 것은 $\Spec A$가 affine space $\mathbb{A}^m_\mathbb{K}$의 integral closed subscheme이라는 것과 같으므로, 위의 정리의 결과로 얻어지는 finite ring homomorphism $\mathbb{K}[x_1,\ldots, x_n] \rightarrow \mathbb{K}[y_1,\ldots, y_m]/\mathfrak{p}$는 기하적으로는 finite scheme morphism $\Spec A \rightarrow \Spec \mathbb{K}[x_1,\ldots, x_n]$을 찾는 것과 같다. 이제 finite extension $\mathbb{K}[x_1,\ldots, x_n] \rightarrow A$은 integral extension이므로 [명제 5](#prop5)에 의하여 $\dim A=\dim \mathbb{K}[x_1,\ldots, x_n]$이므로, [\[가환대수학\] §매개계, ⁋따름정리 11](/ko/math/commutative_algebra/system_of_parameters#cor11)에 의하여 다음 결과를 얻는다.
@@ -244,14 +250,22 @@ $(f)$를 포함하는 $A$의 minimal prime $\mathfrak{p}$를 택하자. [\[가�
 
 ## Principal ideal theorem
 
-앞서 우리는 임의의 affine integral $\mathbb{K}$-scheme $X=\Spec A$에 대하여, $A$의 nonzero non-unit $f$를 통해 정의된 closed subscheme $Z(f)$는 $A$보다 하나 적은 차원을 갖는다는 것을 살펴보았다. 이는 분명 유용한 결과이지만, 다음과 같이 더 일반적인 경우에도 그 결과를 살펴볼 수 있다.
+앞서 우리는 finite type인 affine integral $\mathbb{K}$-scheme $X=\Spec A$에 대하여, $A$의 nonzero non-unit $f$를 통해 정의된 closed subscheme $Z(f)$는 $X$보다 하나 적은 차원을 갖는다는 것을 살펴보았다. 이는 분명 유용한 결과이지만, 다음과 같이 더 일반적인 경우에도 그 결과를 살펴볼 수 있다.
 
 ::: 명제 12
 Locally noetherian scheme $X$와 $X$ 위의 함수 $f$에 대하여, $Z(f)$의 irreducible component는 codimension $0$이거나 codimension $1$이다.
 :::
 ::: 증명
-[\[가환대수학\] §차원, ⁋정리 6](/ko/math/commutative_algebra/Krull_dimension#thm6)
+$W$를 $Z(f)$의 irreducible component라 하고 $w$를 $W$의 generic point라 하자. 이제 $w$를 포함하는 affine open subset $U\cong\Spec A$를 택하면, $X$가 locally noetherian이므로 $A$를 noetherian ring으로 잡을 수 있으며, 이 isomorphism에 의해 $w$가 $\mathfrak{p}\in\Spec A$에 대응된다 하자. [\[위상수학\] §차원, ⁋명제 14](/ko/math/topology/dimension#prop14)의 대응에 의하여 $W\cap U$는 $Z(f\vert_U)$의 irreducible component이므로, $\mathfrak{p}$는 $f\vert_U\in A$가 생성하는 principal ideal을 포함하는 minimal prime ideal이다. 따라서 [\[가환대수학\] §차원, ⁋정리 6](/ko/math/commutative_algebra/Krull_dimension#thm6)에 의하여 $\codim\mathfrak{p}\leq 1$이다.
+
+한편 stalk은 $w$의 열린근방에만 의존하므로 $\mathcal{O}_{U,w}=\mathcal{O}_{X,w}$이고, $W$와 $W\cap U$는 각각 $X$와 $U$의 irreducible closed subset으로서 모두 $w$를 generic point로 가지므로 [명제 8](#prop8)을 두 번 적용하면
+
+$$\codim_XW=\dim\mathcal{O}_{X,w}=\dim\mathcal{O}_{U,w}=\codim_U(W\cap U)$$
+
+를 얻는다. 이제 $\Spec A$에서 점 $\mathfrak{p}$의 codimension이 ring $A$에서의 $\codim\mathfrak{p}$와 같으므로 ([\[가환대수학\] §차원, ⁋정의 2](/ko/math/commutative_algebra/Krull_dimension#def2)) 결국 $\codim_XW=\codim\mathfrak{p}\leq 1$이다.
 :::
+
+$\codim_XW=0$인 것은 $W$가 $X$ 자신의 irreducible component라는 것, 곧 $f$가 그 component 위에서 항등적으로 소멸한다는 것과 같다. 따라서 $f$가 $X$의 어떤 irreducible component 위에서도 항등적으로 소멸하지 않는다면 $Z(f)$의 모든 component는 codimension이 정확히 $1$이 되며, 이것이 [명제 11](#prop11)에서 $A$가 integral domain이고 $f$가 nonzero라는 가정이 하던 역할이다.
 
 ---
 
