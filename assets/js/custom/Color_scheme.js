@@ -1,3 +1,7 @@
+---
+# Liquid 처리용 front matter — 본문의 Liquid include 태그가 테마 코어를 삽입한다
+# (이중 SoT 감사 [8], 2026-07-22)
+---
 /* Theme controller — 3-state: auto | light | dark.
  *
  * Dark/light is a stylesheet swap (main.css <-> main_dark.css), toggled by
@@ -7,44 +11,17 @@
  *  - light/dark : pinned, ignores the OS.
  *
  * Choice persists in the MTHEME cookie (legacy MDARK Y/N is migrated on read).
- * This file is a head_script, so it runs before paint; a tiny inline twin in
- * head.html applies the stylesheet even earlier to fully kill FOUC.
+ * This file is a head_script, so it runs before paint; head.html 의 pre-paint
+ * 인라인이 같은 코어를 삽입해 더 이른 시점에 스타일시트를 맞춘다.
+ *
+ * 쿠키 파싱·모드 해석·스타일시트 토글의 단일 출처는
+ * _includes/js/theme-core.js (빌드 시 Liquid include 로 삽입 — 이중 SoT 감사 [8]).
  */
 (function () {
-  function getCookie(name) {
-    var parts = document.cookie.split('; ');
-    for (var i = 0; i < parts.length; i++) {
-      if (parts[i].indexOf(name + '=') === 0) return parts[i].slice(name.length + 1);
-    }
-    return null;
-  }
-
-  function getTheme() {
-    var v = getCookie('MTHEME');
-    if (v === 'light' || v === 'dark' || v === 'auto') return v;
-    var legacy = getCookie('MDARK'); // migrate old 2-state cookie
-    if (legacy === 'Y') return 'dark';
-    if (legacy === 'N') return 'light';
-    return 'auto';
-  }
-
-  function systemPrefersDark() {
-    return !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
-  }
-
-  function effective(mode) {
-    if (mode === 'dark') return 'dark';
-    if (mode === 'light') return 'light';
-    return systemPrefersDark() ? 'dark' : 'light';
-  }
+  {% include js/theme-core.js %}
 
   function apply(mode) {
-    var darkLink = document.getElementById('theme-dark');
-    if (!darkLink) return; // dark theme disabled site-wide
-    var lightLink = document.getElementById('theme-light');
-    var dark = effective(mode) === 'dark';
-    darkLink.disabled = !dark;
-    if (lightLink) lightLink.disabled = dark;
+    if (!themeApplyStylesheets(mode)) return; // dark theme disabled site-wide
     syncUI(mode);
   }
 
@@ -72,16 +49,16 @@
   };
 
   // Apply immediately (head-time) so the swap is correct before paint.
-  apply(getTheme());
+  apply(themeGetMode());
 
   // Follow the OS live while in auto mode.
   if (window.matchMedia) {
     var mq = window.matchMedia('(prefers-color-scheme: dark)');
-    var onChange = function () { if (getTheme() === 'auto') apply('auto'); };
+    var onChange = function () { if (themeGetMode() === 'auto') apply('auto'); };
     if (mq.addEventListener) mq.addEventListener('change', onChange);
     else if (mq.addListener) mq.addListener(onChange); // older Safari
   }
 
   // Re-sync the menu highlight once the masthead exists.
-  document.addEventListener('DOMContentLoaded', function () { apply(getTheme()); });
+  document.addEventListener('DOMContentLoaded', function () { apply(themeGetMode()); });
 })();

@@ -28,13 +28,14 @@ ROOT = os.path.dirname(os.path.dirname(HERE))
 sys.path.insert(0, HERE)
 sys.path.insert(0, os.path.join(ROOT, ".claude", "hooks"))
 from md_lint import _DEPR, _depr_count  # noqa: E402
+from terms_common import is_draft  # noqa: E402
 from terms_usage_lint import prose_lines  # noqa: E402
 
 if _DEPR is None:
     sys.exit("_data/terms.yml 로드 실패")
 tier1, protected = _DEPR
 
-_PUBFALSE_RE = re.compile(r"^published\s*:\s*false", re.M)
+# 초안 판정은 terms_common.is_draft 단일 출처 (이중 SoT 감사 [9], 2026-07-22).
 BASELINE = os.path.join(HERE, "deprecated_baseline.txt")
 
 FLAGS = {"--all", "--notify", "--write-baseline"}
@@ -53,7 +54,7 @@ else:
             head = open(path, encoding="utf-8").read(2000)
         except OSError:
             continue
-        if include_published or _PUBFALSE_RE.search(head):
+        if include_published or is_draft(head):
             targets.append(path)
 
 total = 0

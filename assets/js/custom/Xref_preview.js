@@ -20,13 +20,9 @@
     .join(',') ||
     '.definition,.proposition,.example,.remark,.misc,.proof,.proof--alone,.details';
 
-  // _includes/scripts.html 의 본문 렌더 설정과 동일하게 유지할 것.
-  var DELIMS = [
-    { left: '$$', right: '$$', display: true },
-    { left: '$', right: '$', display: false },
-    { left: '\\(', right: '\\)', display: false },
-    { left: '\\[', right: '\\]', display: true }
-  ];
+  // 본문 렌더(scripts.html)와 같은 딜리미터 — 단일 출처 katex-macros.js
+  // (head_scripts 에서 이 파일보다 먼저 로드됨. 이중 SoT 감사 [13], 2026-07-22)
+  var DELIMS = window.KATEX_DELIMITERS;
 
   var docCache = {}; // path -> Promise<Document|null>
   var card = null;

@@ -72,7 +72,7 @@ BLOG_ROOT = SCRIPT_DIR.parents[1]
 sys.path.insert(0, str(SCRIPT_DIR))
 
 from terms_common import (  # noqa: E402
-    TERMS_PATH, category_ko_maps, chunk_field, chunk_id, dedup_key,
+    GEN_ED_DIRS, TERMS_PATH, category_ko_maps, chunk_field, chunk_id, dedup_key,
     insert_sorted, join_file, letter_of, permalink_map, semantic_checks,
     slugify_id, split_file, url_slug, yaml_quote,
 )
@@ -396,10 +396,11 @@ def wiki_query(term: str, cache: dict) -> dict:
 # ---------------------------------------------------------------------------
 
 # 교양수학 예외(2026-07-21 룰링): 신규 용어가 여러 글에 등장하고 논리적으로
-# 가장 앞선 정의처가 교양수학(Calculus/Linear_Algebra)이면, 교양 정의처 +
-# 그 다음 순위의 비교양 정의처 **둘 다**에 병기해 비교양 쪽에 "정식 거처"를
-# 보장한다. 앞선 정의처가 비교양이면 기존 규칙(단일 선택) 그대로.
-EDU_CATEGORIES = {"Calculus", "Linear_Algebra"}
+# 가장 앞선 정의처가 교양수학이면, 교양 정의처 + 그 다음 순위의 비교양
+# 정의처 **둘 다**에 병기해 비교양 쪽에 "정식 거처"를 보장한다. 앞선
+# 정의처가 비교양이면 기존 규칙(단일 선택) 그대로.
+# 교양수학 집합은 terms_common.GEN_ED_DIRS (단일 출처: _data/categories.yml
+# 의 section: liberal_arts — 이중 SoT 감사 [U2], 2026-07-22).
 
 
 @dataclass
@@ -488,8 +489,8 @@ def classify_all(groups: dict[str, list[Occurrence]],
             file_note = (f"동일 카테고리({next(iter(cats.values()))}) "
                         f"weight 최소({weights[chosen_files[0]]}) 글 선택")
         else:
-            edu_files = [f for f in files if cats[f] in EDU_CATEGORIES]
-            other_files = [f for f in files if cats[f] not in EDU_CATEGORIES]
+            edu_files = [f for f in files if cats[f] in GEN_ED_DIRS]
+            other_files = [f for f in files if cats[f] not in GEN_ED_DIRS]
             other_cats = {cats[f] for f in other_files}
             if edu_files and len(other_cats) <= 1:
                 # 교양수학 예외: 교양 정의처가 논리적으로 가장 앞선다고 보고,

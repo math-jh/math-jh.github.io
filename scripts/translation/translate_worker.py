@@ -97,6 +97,16 @@ sys.path.insert(0, str(SCRIPT_DIR))
 from label_normalize import fix_text as label_fix, audit_text as label_audit  # noqa: E402
 from math_delimiters import math_profile  # noqa: E402
 
+# 수식 스팬 정규식의 단일 출처는 .claude/hooks/md_lint.py — mech_sweep·josa_check 와
+# 같은 관례로 import 한다 (이중 SoT 감사 [3] Phase 1, 2026-07-22). 예전엔 여기
+# 아래(Math-mismatch verification 절)에 패턴이 자구까지 같은 사본이 따로 있었다.
+sys.path.insert(0, str(BLOG_ROOT / ".claude" / "hooks"))
+import md_lint as _md_lint  # noqa: E402
+
+# 초안(published:false) 판정의 단일 출처는 terms_common (이중 SoT 감사 [9]).
+sys.path.insert(0, str(BLOG_ROOT / "scripts" / "term-extraction"))
+from terms_common import published_false_in_fm as _published_false_in_fm  # noqa: E402
+
 
 # ---------------------------------------------------------------------------
 # Lock
@@ -125,6 +135,10 @@ def release_lock() -> None:
 # State
 # ---------------------------------------------------------------------------
 
+# translation_state.json 스키마의 정본은 이 파일이다. 외부 소비자:
+# scripts/term-extraction/term_extract_worker.py 의 load_translation_ts 가
+# files/status=="done"/last_attempt_ts 를 읽는다 (이중 SoT 감사 [U1], 2026-07-22).
+# 키를 바꾸면 저쪽 tripwire 경고를 확인할 것.
 def load_state() -> dict:
     if STATE_PATH.exists():
         return json.loads(STATE_PATH.read_text(encoding="utf-8"))
@@ -191,13 +205,9 @@ def _ko_body_length(ko_path: Path) -> int:
 
 
 def is_draft(ko_path: Path) -> bool:
-    """True if frontmatter has `published: false`. Drafts are skipped."""
-    for line in _read_frontmatter(ko_path).splitlines():
-        s = line.strip()
-        if s.startswith("published"):
-            value = s.split(":", 1)[1].strip().strip('"').strip("'").lower()
-            return value == "false"
-    return False
+    """True if frontmatter has `published: false`. Drafts are skipped.
+    판정은 단일 출처 terms_common.published_false_in_fm (이중 SoT 감사 [9])."""
+    return _published_false_in_fm(_read_frontmatter(ko_path))
 
 
 def ko_wants_drift(ko_path: Path) -> bool:
@@ -332,7 +342,22 @@ def commit_translation(ko_path: Path, en_path: Path, reason: str) -> None:
         os.close(fd)
 
 
-TRANSLATION_SOURCE_TAG = "kimi-cli"
+# EN frontmatter 의 translation_source 태그. 단일 출처 = _config.yml 의
+# translation_source_tag (이중 SoT 감사 [U3], 2026-07-22) — 같은 값을
+# _includes/translation-notice.html 이 site.translation_source_tag 로 비교한다.
+# 값은 역사적으로 "kimi-cli" 로 고정 (백엔드가 GLM/Kimi 어느 쪽이든 "기계번역
+# 파이프라인 산출물"이라는 뜻의 마커다 — 백엔드명으로 바꾸면 기존 EN 652편의
+# 프론트매터와 어긋난다).
+def _load_translation_source_tag() -> str:
+    for line in (BLOG_ROOT / "_config.yml").read_text(encoding="utf-8").splitlines():
+        s = line.strip()
+        if s.startswith("translation_source_tag"):
+            return s.split(":", 1)[1].split("#")[0].strip().strip('"').strip("'")
+    sys.exit("_config.yml 에 translation_source_tag 가 없음 — 노티스 include 와 "
+             "짝이 되는 정본 키다. 지우지 말 것.")
+
+
+TRANSLATION_SOURCE_TAG = _load_translation_source_tag()
 
 
 _META_KEYS = ("translated_at", "translation_source", "last_polished_at")
@@ -1210,9 +1235,11 @@ _SUB_STRIP_RE = re.compile(r"<sub>.*?</sub>", re.DOTALL)
 
 _DISPLAY_RE = re.compile(r"\$\$(.*?)\$\$", re.DOTALL)
 _INLINE_RE  = re.compile(r"\$([^$\n]+?)\$")
-# 수식 스팬 하나 — `$$...$$` 를 먼저 시도하므로 `$$` 를 single-$ 두 개로 쪼개지 않는다.
-# (kramdown 의 inline_math 파서와 같은 교대 순서다.)
-_MATH_SPAN_RE = re.compile(r"\$\$(.*?)\$\$|(?<!\\)\$(?!\$)([^$\n]+?)(?<!\\)\$(?!\$)", re.DOTALL)
+# 수식 스팬 하나 — 단일 출처 md_lint._MATH_SPAN_RE (파일 머리 import 참고).
+# `$$...$$` 를 먼저 시도하므로 `$$` 를 single-$ 두 개로 쪼개지 않는다
+# (kramdown 의 inline_math 파서와 같은 교대 순서). 그룹 구조도 동일:
+# group(1)=display 본문, group(2)=inline 본문 — _span_tex 가 이에 의존한다.
+_MATH_SPAN_RE = _md_lint._MATH_SPAN_RE
 
 
 def _span_tex(m: "re.Match") -> str:

@@ -3,20 +3,33 @@
 a centered brass open square ("the black box"). Same mark as the inline SVG tab
 favicon in _includes/head.html.
 
-Mark (32-unit grid): fill #0a1120 (navy), open square x8..24 stroke #c89441 w3.
-Everything is drawn directly with PIL (supersampled for clean edges) — no SVG
-rasteriser needed. Re-run after a brand-colour change.
+Mark (32-unit grid): navy tile, open square x8..24 brass stroke w3. 색의 단일
+출처는 _data/brand.yml (이중 SoT 감사 [6], 2026-07-22 — 예전엔 여기 튜플로
+하드코딩). Everything is drawn directly with PIL (supersampled for clean edges)
+— no SVG rasteriser needed. Re-run after a brand-colour change.
 
 Outputs to assets/favicons/: favicon-16/32, favicon.ico, apple-touch-icon (180),
-android-chrome-192/512, mstile-150. safari-pinned-tab.svg + site.webmanifest are
-written by the caller (they're text, not raster).
+android-chrome-192/512, mstile-150. safari-pinned-tab.svg 는 수동 관리(모노크롬
+마스크라 색은 head/custom.html 의 mask-icon color 가 정한다), site.webmanifest
+는 Liquid 가 brand.yml 을 직접 읽는다.
 """
 import os
+
+import yaml
 from PIL import Image, ImageDraw
 
 OUT = os.path.join(os.path.dirname(__file__), "..", "..", "assets", "favicons")
-NAVY = (10, 17, 32)     # #0a1120
-BRASS = (200, 148, 65)  # #c89441
+_BRAND = yaml.safe_load(open(os.path.join(
+    os.path.dirname(__file__), "..", "..", "_data", "brand.yml"), encoding="utf-8"))
+
+
+def _rgb(hexstr: str) -> tuple:
+    h = hexstr.lstrip("#")
+    return tuple(int(h[i:i + 2], 16) for i in (0, 2, 4))
+
+
+NAVY = _rgb(_BRAND["navy"])
+BRASS = _rgb(_BRAND["brass"])
 SS = 8                  # supersample factor for anti-aliasing
 
 

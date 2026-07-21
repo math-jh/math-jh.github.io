@@ -32,10 +32,28 @@ BLOG_ROOT = Path("/home/junhyeok/math-jh.github.io")
 TERMS_PATH = BLOG_ROOT / "_data" / "terms.yml"
 CATEGORIES_PATH = BLOG_ROOT / "_data" / "categories.yml"
 
-# 교양수학 카테고리 (url 슬러그). 2026-07-21 룰링: 이들 카테고리의 정의는
+# 교양수학 카테고리. 2026-07-21 룰링: 이들 카테고리의 정의는
 # 커리큘럼상 선행이지만 '정식 거처'가 아니므로, 어떤 용어의 defs가 전부
 # 교양수학뿐이면 이후 전공 글의 정의를 뉘앙스 판정 없이 defs에 추가한다.
-GEN_ED_CATS = {"calculus", "linear_algebra"}
+#
+# 단일 출처 = _data/categories.yml 의 `section: liberal_arts` (이중 SoT 감사
+# [U2], 2026-07-22). 예전엔 여기(슬러그)와 gloss_backfill(폴더명)에 각각
+# 하드코딩돼 있었다 — 교양 카테고리가 늘면 yml 의 section 만 바꾸면 된다.
+
+
+def _gen_ed_sets() -> tuple[frozenset, frozenset]:
+    """(url 슬러그 집합, _posts/Math/<Category> 폴더명 집합)."""
+    cats = yaml.safe_load(CATEGORIES_PATH.read_text(encoding="utf-8"))
+    slugs, dirs = set(), set()
+    for name, info in (cats.get("subjects") or {}).items():
+        if (info or {}).get("section") == "liberal_arts":
+            base = name.split(" / ")[-1].replace(" ", "_")
+            dirs.add(base)
+            slugs.add(base.lower())
+    return frozenset(slugs), frozenset(dirs)
+
+
+GEN_ED_CATS, GEN_ED_DIRS = _gen_ed_sets()
 
 # ---------------------------------------------------------------------------
 # 정규화 (글자 분류·정렬·중복 키)
@@ -92,6 +110,30 @@ def slugify_id(en: str) -> str:
 
 _FM_RE = re.compile(r"^---\s*\n(.*?)\n---\s*\n", re.DOTALL)
 
+# `published: false` 초안 판정의 **단일 출처** (이중 SoT 감사 [9], 2026-07-22).
+# 예전엔 4곳(여기 permalink_map·terms_usage_lint·deprecated_terms_lint·
+# translate_worker)이 각자 다른 정규식/라인스캔으로 재구현해, `published : false`
+# 같은 변형에서 판정이 갈릴 수 있었다. 콜론 앞 공백·대소문자·따옴표 변형을 전부
+# 허용하고, 라인 전체를 매치해 `published_at:` 류 오인은 배제한다.
+# (실코퍼스 규약은 `published: false` 한 형태뿐 — 허용 폭은 방어용이다.)
+_PUB_FALSE_LINE_RE = re.compile(r"^published\s*:\s*['\"]?false['\"]?\s*$", re.I | re.M)
+
+
+def published_false_in_fm(fm_block: str) -> bool:
+    """frontmatter 블록 본문(`---` 사이 텍스트)만 갖고 있을 때의 판정."""
+    return bool(_PUB_FALSE_LINE_RE.search(fm_block))
+
+
+def is_draft(text: str) -> bool:
+    """파일 전문(또는 head 절단본)에서 published:false 초안 판정.
+
+    닫는 `---` 가 절단돼도 동작한다 — head 를 2000자만 읽는 호출자를 위해
+    `\\n---` 이전(없으면 끝까지)을 frontmatter 로 본다."""
+    if not text.startswith("---"):
+        return False
+    block = text[3:].split("\n---", 1)[0]
+    return published_false_in_fm(block)
+
 
 def _frontmatter(text: str) -> dict[str, str]:
     m = _FM_RE.match(text)
@@ -112,15 +154,16 @@ def permalink_map() -> dict[str, dict]:
     for base in (BLOG_ROOT / "_posts", BLOG_ROOT / "_pages"):
         for p in base.rglob("*.md"):
             try:
-                fm = _frontmatter(p.read_text(encoding="utf-8"))
+                text = p.read_text(encoding="utf-8")
             except (OSError, UnicodeDecodeError):
                 continue
+            fm = _frontmatter(text)
             pl, title = fm.get("permalink"), fm.get("title")
             if not pl or not title:
                 continue
             out[pl.rstrip("/")] = {
                 "title": title,
-                "published": fm.get("published", "").lower() != "false",
+                "published": not is_draft(text),  # 단일 출처 판정 (감사 [9])
                 "path": str(p.relative_to(BLOG_ROOT)),
             }
     return out

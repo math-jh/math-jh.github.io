@@ -1,0 +1,18 @@
+// 커스텀 파티션 단일 목록 — 라이트/다크 엔트리(assets/css/main.scss, main_dark.scss) 공용.
+// 새 파티션은 **여기에만** 추가한다. 엔트리 파일에 @import 를 직접 넣지 말 것 —
+// 한쪽 엔트리에만 추가하면 라이트/다크가 조용히 갈리는 사고(이중 SoT 감사 [2],
+// 2026-07-22)를 막기 위해 목록을 이 파일 하나로 단일화했다.
+// 순서 불변식: 엔트리에서 skin @import 뒤에 이 파일이 와야 한다 (skin 이 !default
+// 변수를 먼저 깔아야 _variables.scss 가 안 덮는다).
+@import "minimal-mistakes"; // main partials
+@import "recents-sidebar"; // custom: recent posts / comments in the right sidebar
+@import "pagefind-overrides"; // Pagefind UI styling wired to theme vars
+@import "search-overlay"; // backdrop-style search popup
+@import "recent-overlay"; // backdrop-style recent-posts popup
+@import "subject-cards"; // subject-home card grid
+@import "lang-select"; // language-select landing cards
+@import "settings-dropdown"; // masthead theme/language picker (shared by both skins)
+@import "local-graph"; // per-post floating dependency graph panel
+@import "graph-page"; // global dependency graph page (index panel + Brass card)
+@import "term-index"; // 찾아보기(용어 색인) book-index layout
+@import "terms-overlay"; // 찾아보기 검색 팝업 (색인 페이지의 경량판)

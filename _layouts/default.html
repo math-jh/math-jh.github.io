@@ -21,7 +21,7 @@
     {% include head/custom.html %}
     <style>
       body::-webkit-scrollbar{width: 16px;}
-      body::-webkit-scrollbar-track {background-color:#071734;}
+      body::-webkit-scrollbar-track {background-color:{{ site.data.brand.chrome_dark }};}
       body::-webkit-scrollbar-thumb:hover {background: #a9874a; background-clip: padding-box; border: 2px solid transparent}
       /* Left nav + right TOC: hover-reveal. The 6px gutter is always reserved
          (no layout shift) but the thumb is transparent at rest and only gets a

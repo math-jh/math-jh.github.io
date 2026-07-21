@@ -51,6 +51,31 @@ REPO = "math-jh/math-jh.github.io"
 DISCUSSION_LIMIT = 30  # how many recent discussions to scan
 PER_LANG_LIMIT = 5     # how many comments to keep per language
 
+
+def _assert_pathname_mapping() -> None:
+    """이 스크립트 전체가 'discussion 제목 == pathname'(giscus mapping) 가정 위에
+    서 있다. 정본은 _config.yml comments.giscus.discussion_term — 어긋나면 매칭이
+    조용히 0건이 되므로 (이중 SoT 감사 [7], 2026-07-22) 시작부터 하드 실패한다.
+    yaml 모듈 없이 라인 매치로 읽는다 (frontmatter 아님, 최상위 config)."""
+    cfg = (BLOG_ROOT / "_config.yml").read_text(encoding="utf-8")
+    in_giscus = False
+    for line in cfg.splitlines():
+        if line.strip().startswith("giscus"):
+            in_giscus = True
+            continue
+        if in_giscus:
+            s = line.strip()
+            if s.startswith("discussion_term"):
+                val = s.split(":", 1)[1].split("#")[0].strip().strip('"').strip("'")
+                if val != "pathname":
+                    sys.exit(f"_config.yml giscus.discussion_term={val!r} — 이 스크립트는 "
+                             "pathname 매핑 전용이다. GraphQL 매칭 로직을 함께 고칠 것.")
+                return
+            if line and not line.startswith(" "):  # giscus 블록 밖으로 나감
+                break
+    sys.exit("_config.yml 에서 comments.giscus.discussion_term 을 찾지 못함 — "
+             "설정이 옮겨졌으면 이 스크립트의 가정도 함께 점검할 것.")
+
 GRAPHQL_QUERY = """
 query($owner: String!, $name: String!, $first: Int!) {
   repository(owner: $owner, name: $name) {
@@ -172,6 +197,7 @@ def _post_title_for(pathname: str) -> str:
 
 
 def main() -> int:
+    _assert_pathname_mapping()
     token = _load_token()
     if not token:
         print("error: no GitHub token. Run `gh auth login` or set MATHJH_GH_TOKEN.", file=sys.stderr)

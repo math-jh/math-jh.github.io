@@ -142,10 +142,14 @@
     if (window.renderMathInElement) {
       try {
         renderMathInElement(list, {
-          delimiters: [
-            { left: '$$', right: '$$', display: false },
-            { left: '$', right: '$', display: false }
-          ],
+          // 정본(window.KATEX_DELIMITERS)에서 $ 계열만 취하고 display:false 로
+          // 강제한 **의도된 파생형** — 짧은 표제어 수식을 블록으로 띄우지 않기
+          // 위함이다 (이중 SoT 감사 [13], 2026-07-22).
+          delimiters: window.KATEX_DELIMITERS.filter(function (d) {
+            return d.left.charAt(0) === '$';
+          }).map(function (d) {
+            return { left: d.left, right: d.right, display: false };
+          }),
           macros: window.KATEX_MACROS,
           strict: false,
           throwOnError: false

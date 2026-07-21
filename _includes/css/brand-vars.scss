@@ -1,0 +1,5 @@
+// 브랜드 색 SCSS 주입 — 단일 출처 _data/brand.yml (이중 SoT 감사 [6], 2026-07-22).
+// 라이트/다크 엔트리(assets/css/main*.scss)가 skin @import 앞에서 include 해야
+// skins/_custom.scss 의 $brand-* 참조가 정의돼 있다.
+$brand-navy: {{ site.data.brand.navy }};
+$brand-brass: {{ site.data.brand.brass }};

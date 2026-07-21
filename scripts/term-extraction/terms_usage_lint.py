@@ -33,6 +33,9 @@ import sys
 
 import yaml
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from terms_common import is_draft as _tc_is_draft  # noqa: E402
+
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 TERMS_YML = os.path.join(ROOT, "_data", "terms.yml")
 POST_GLOB = os.path.join(ROOT, "_posts", "Math", "**", "ko", "*.md")
@@ -73,13 +76,11 @@ def clean_line(line: str) -> str:
 
 
 def is_draft(path: str) -> bool:
-    """frontmatter 에 published: false 가 있으면 초안(LLM 작성분 포함)."""
+    """frontmatter 에 published: false 가 있으면 초안(LLM 작성분 포함).
+    판정 자체는 단일 출처 terms_common.is_draft (이중 SoT 감사 [9], 2026-07-22)."""
     with open(path, encoding="utf-8") as f:
         head = f.read(2000)
-    if not head.startswith("---"):
-        return False
-    fm = head.split("\n---", 1)[0]
-    return re.search(r"^published:\s*false", fm, re.M) is not None
+    return _tc_is_draft(head)
 
 
 def prose_lines(path: str):

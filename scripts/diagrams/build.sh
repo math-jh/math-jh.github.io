@@ -29,6 +29,11 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 PRE="$ROOT/assets/diagrams/.preamble"
+
+# katex-macros.js ↔ Operators.sty 겹침 매크로 드리프트 게이트 (이중 SoT 감사 [0],
+# 2026-07-22). 어긋나면 SVG 와 본문 KaTeX 가 같은 명령을 다르게 그리므로 빌드를
+# 세운다. 해소: 양쪽 렌더를 맞춘 뒤 scripts/audit/macro_parity.py --write.
+python3 "$ROOT/scripts/audit/macro_parity.py" || exit 1
 BASEFONT=10
 SCALE=1.1          # display scale: node text = SCALE x body text (1.0 = exact match)
 GLYPH_BOLD=0.25    # pt of stroke added to glyphs so thin CM hairlines don't go subpixel (0 = off)

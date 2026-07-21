@@ -136,12 +136,21 @@ def all_ko_posts() -> list[str]:
 
 
 def load_translation_ts() -> dict[str, float]:
-    """rel path → 마지막 번역 완료 시각 (status done 만)."""
+    """rel path → 마지막 번역 완료 시각 (status done 만).
+
+    스키마(files/status/last_attempt_ts)의 정본은 생산자
+    scripts/translation/translate_worker.py 다 (이중 SoT 감사 [U1], 2026-07-22).
+    키가 개명되면 이 함수는 빈 결과로 조용히 강등되므로, 파일은 있는데 아는
+    키가 하나도 없으면 스키마 변경으로 보고 경고를 남긴다 (우선순위 기능만
+    무뎌질 뿐 치명적이지 않아 하드 실패는 하지 않는다)."""
     p = BLOG_ROOT / "scripts/translation/translation_state.json"
     try:
         files = json.loads(p.read_text(encoding="utf-8")).get("files", {})
     except (OSError, json.JSONDecodeError):
         return {}
+    if files and not any(isinstance(v, dict) and "status" in v for v in files.values()):
+        log("경고: translation_state.json 에 status 키가 없음 — 생산자"
+            "(translate_worker) 스키마가 바뀐 듯. 번역 연동 우선순위 비활성.")
     return {rel: v.get("last_attempt_ts", 0.0)
             for rel, v in files.items() if v.get("status") == "done"}
 

@@ -115,6 +115,41 @@ def _order_key(c: str):
     return (nat_key(chunk_field(c, "en") or ""), chunk_id(c))
 
 
+def check_parser_parity(text: str, data: dict) -> list[Issue]:
+    """청크 파서(terms_common.split_file/chunk_field)와 yaml.safe_load 가 같은
+    사실을 읽는지 교차 검증 (이중 SoT 감사 [10], 2026-07-22).
+
+    terms.yml 은 두 파서 계열이 함께 읽는다 — 조판·수술은 포맷 보존 청크
+    파서로, lint·워커 게이트는 yaml 로. 청크 파서는 `  key: value` 평면
+    스칼라 형태를 가정하는데, 이 가정을 강제하는 게이트가 없어서 블록
+    스칼라(`ko: |-`)나 이상 들여쓰기가 들어오면 두 계열이 **다른 값을
+    조용히** 읽는다. 여기서 id·en·ko·primary 를 항목 단위로 대조해 어긋나면
+    E — 편집 훅(terms_lint_hook)이 즉시 막는다."""
+    issues: list[Issue] = []
+    _, groups = split_file(text)
+    for letter, chunks in groups.items():
+        ents = (data.get(letter) or []) if isinstance(data, dict) else []
+        if len(chunks) != len(ents):
+            issues.append(Issue("E", "PARSER", f"{letter} 그룹 항목 수가 파서별로 다름 "
+                                f"(청크 {len(chunks)} vs yaml {len(ents)})"))
+            continue
+        for c, e in zip(chunks, ents):
+            if not isinstance(e, dict):
+                issues.append(Issue("E", "PARSER", f"{letter} 그룹에 매핑 아닌 항목"))
+                continue
+            for f in ("id", "en", "ko", "primary"):
+                cv = chunk_id(c) if f == "id" else chunk_field(c, f)
+                yv = e.get(f)
+                cv = "" if cv is None else str(cv)
+                yv = "" if yv is None else str(yv)
+                if cv != yv:
+                    issues.append(Issue("E", "PARSER",
+                                        f"{chunk_id(c) or '?'}: {f} 가 파서별로 다름 "
+                                        f"(청크 {cv!r} vs yaml {yv!r} — 블록 스칼라/"
+                                        f"들여쓰기 이상 의심)"))
+    return issues
+
+
 def check_order(text: str) -> list[Issue]:
     """그룹 내 정렬 (fold 정규화 nat_key, 동률은 id). Terms 페이지가 파일
     순서 그대로 렌더하므로 여기가 곧 조판 순서다."""
@@ -272,7 +307,7 @@ def run(path: Path, fix: bool, notify: bool) -> int:
     pmap = permalink_map()
     ko_by_slug, _ = category_ko_maps()
     issues = (semantic_checks(data, pmap, ko_by_slug) + check_order(text)
-              + check_defs_order(text, pmap))
+              + check_defs_order(text, pmap) + check_parser_parity(text, data))
 
     if fix and any(i.fixable for i in issues):
         BACKUP_PATH.write_text(text, encoding="utf-8")
@@ -299,7 +334,7 @@ def run(path: Path, fix: bool, notify: bool) -> int:
             log(f"자동 수정: 라벨 {n_lbl}건, 그룹 이동 {n_grp}건, "
                 f"정렬 {n_ord}그룹, defs 재정렬 {n_def}건 (백업: {BACKUP_PATH.name})")
             issues = (semantic_checks(nd, pmap, ko_by_slug) + check_order(new)
-                      + check_defs_order(new, pmap))
+                      + check_defs_order(new, pmap) + check_parser_parity(new, nd))
 
     errors = [i for i in issues if i.level == "E"]
     warns = [i for i in issues if i.level == "W"]

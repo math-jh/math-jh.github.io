@@ -8,11 +8,11 @@
 $text-color: #1a2233 !default;                                    //  navy ink
 $background-color: #edeae1 !default;                              //  warm paper
 $muted-text-color: #5a6276 !default;                             //  secondary text
-$primary-color: #0a1120 !default;                                //  masthead/footer navy
-$footer-background-color: #0a1120 !default;
+$primary-color: $brand-navy !default;                            //  masthead/footer navy (_data/brand.yml)
+$footer-background-color: $brand-navy !default;
 $link-color: #1f4fd0 !default;                                    //  link blue
 $masthead-link-color: #f3f1ea !default;
-$masthead-link-color-hover: #c89441 !default;                    //  brass (bright)
+$masthead-link-color-hover: $brand-brass !default;               //  brass (bright, _data/brand.yml)
 $navicon-link-color-hover: mix($background-color, $text-color, 80%) !default;
 $border-color: #d7d2c5 !default;                                 //  warm hairline
 $highlight-color: #ad7a2e;                                       //  brass accent
