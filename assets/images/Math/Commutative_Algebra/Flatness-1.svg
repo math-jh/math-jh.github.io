@@ -10,13 +10,13 @@
 </defs>
 <g id='page1'>
 <g transform='matrix(1 0 0 1 -33.72187 19.4205)'>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='9.741971' y='-78.973883' xlink:href='#g0-71'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='9.741971' y='-78.973883' xlink:href='#g0-71'/>
 </g>
 <g transform='matrix(1 0 0 1 -33.7004 19.4205)'>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='-32.01804' y='-46.941189' xlink:href='#g0-70'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='-32.01804' y='-46.941189' xlink:href='#g0-70'/>
 </g>
 <g transform='matrix(1 0 0 1 -35.18097 19.4205)'>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='9.741971' y='-46.941189' xlink:href='#g0-77'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='9.741971' y='-46.941189' xlink:href='#g0-77'/>
 </g>
 <path d='M-20.0625-55.70703V-40.92187' stroke='#000' fill='none' stroke-width='.69739' stroke-miterlimit='10'/>
 <path d='M-20.062482-39.13672L-19.109357-41.55469L-20.062482-40.74609L-21.015607-41.55469Z'/>
@@ -25,13 +25,13 @@
 <path d='M-29.085909-55.121119L-31.58591-54.406273L-30.363249-54.144558L-30.425748-52.89456Z'/>
 <path d='M-29.085909-55.121119L-31.58591-54.406273L-30.363249-54.144558L-30.425748-52.89456Z' stroke='#000' fill='none' stroke-width='.697353' stroke-miterlimit='10'/>
 <g transform='matrix(1 0 0 1 -7.4066 -1.626)'>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='-40.202618' y='-46.941189' xlink:href='#g1-118'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='-40.202618' y='-46.941189' xlink:href='#g1-118'/>
 </g>
 <path d='M-53.4375-30.0117H-32.67188' stroke='#000' fill='none' stroke-width='.69739' stroke-miterlimit='10'/>
 <path d='M-30.89067-30.011698L-33.30864-30.964823L-32.50004-30.011698L-33.30864-29.058573Z'/>
 <path d='M-30.89067-30.011698L-33.30864-30.964823L-32.50004-30.011698L-33.30864-29.058573Z' stroke='#000' fill='none' stroke-width='.69739' stroke-miterlimit='10'/>
 <g transform='matrix(1 0 0 1 -3.8358 22.4259)'>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='-40.202618' y='-46.941189' xlink:href='#g1-117'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='-40.202618' y='-46.941189' xlink:href='#g1-117'/>
 </g>
 </g>
 </svg>

@@ -17,8 +17,8 @@
 <path d='M-59.515633-35.039087L-61.449225-31.718779L-59.902348-32.687529L-58.753908-31.273467Z' fill='#a56f14'/>
 <path d='M-59.515633-35.039087L-61.449225-31.718779L-59.902348-32.687529L-58.753908-31.273467Z' stroke='#a56f14' fill='none' stroke-width='1.243649' stroke-miterlimit='10'/>
 <g transform='matrix(1 0 0 1 -9.1326 1.8275)'>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='32.737266' y='-29.625249' xlink:href='#g0-32'/>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='41.039536' y='-29.625249' xlink:href='#g0-33'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='32.737266' y='-29.625249' xlink:href='#g0-32'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='41.039536' y='-29.625249' xlink:href='#g0-33'/>
 </g>
 <path d='M106.4375-29.625L120.6133-9.7812C126.8477-22.53906 126.8477-36.71094 120.6133-49.4687Z' fill='#f6f1e7'/>
 <path d='M134.7853 10.0586L78.0937-69.3086' stroke='#000' fill='none' stroke-width='1.39478' stroke-miterlimit='10'/>

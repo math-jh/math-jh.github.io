@@ -21,60 +21,60 @@
 </defs>
 <g id='page1'>
 <g transform='matrix(1 0 0 1 -129.8201 20.5828)'>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='64.100398' y='-78.488216' xlink:href='#g2-65'/>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='73.786263' y='-78.488216' xlink:href='#g0-10'/>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='83.748877' y='-78.488216' xlink:href='#g5-40'/>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='87.62325' y='-78.488216' xlink:href='#g2-73'/>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='94.998308' y='-78.488216' xlink:href='#g0-10'/>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='104.960921' y='-78.488216' xlink:href='#g2-66'/>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='113.017529' y='-78.488216' xlink:href='#g5-41'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='64.100398' y='-78.488216' xlink:href='#g2-65'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='73.786263' y='-78.488216' xlink:href='#g0-10'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='83.748877' y='-78.488216' xlink:href='#g5-40'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='87.62325' y='-78.488216' xlink:href='#g2-73'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='94.998308' y='-78.488216' xlink:href='#g0-10'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='104.960921' y='-78.488216' xlink:href='#g2-66'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='113.017529' y='-78.488216' xlink:href='#g5-41'/>
 </g>
 <g transform='matrix(1 0 0 1 -129.8201 20.5828)'>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='209.575375' y='-78.488216' xlink:href='#g5-40'/>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='213.449748' y='-78.488216' xlink:href='#g2-65'/>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='223.135614' y='-78.488216' xlink:href='#g0-10'/>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='233.098227' y='-78.488216' xlink:href='#g2-73'/>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='238.259418' y='-78.488216' xlink:href='#g5-41'/>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='244.347658' y='-78.488216' xlink:href='#g0-10'/>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='254.310272' y='-78.488216' xlink:href='#g2-66'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='209.575375' y='-78.488216' xlink:href='#g5-40'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='213.449748' y='-78.488216' xlink:href='#g2-65'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='223.135614' y='-78.488216' xlink:href='#g0-10'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='233.098227' y='-78.488216' xlink:href='#g2-73'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='238.259418' y='-78.488216' xlink:href='#g5-41'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='244.347658' y='-78.488216' xlink:href='#g0-10'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='254.310272' y='-78.488216' xlink:href='#g2-66'/>
 </g>
 <g transform='matrix(1 0 0 1 -117.2767 20.5828)'>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='136.837886' y='-43.964862' xlink:href='#g2-65'/>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='146.523751' y='-43.964862' xlink:href='#g0-10'/>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='156.486365' y='-43.964862' xlink:href='#g2-66'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='136.837886' y='-43.964862' xlink:href='#g2-65'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='146.523751' y='-43.964862' xlink:href='#g0-10'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='156.486365' y='-43.964862' xlink:href='#g2-66'/>
 </g>
 <path d='M-8.4375-60.3984H72.5234' stroke='#000' fill='none' stroke-width='.69739' stroke-miterlimit='10'/>
 <path d='M74.30856-60.398477L71.88669-61.351602L72.69528-60.398477L71.88669-59.445352Z'/>
 <path d='M74.30856-60.398477L71.88669-61.351602L72.69528-60.398477L71.88669-59.445352Z' stroke='#000' fill='none' stroke-width='.69739' stroke-miterlimit='10'/>
 <g transform='matrix(1 0 0 1 -12.1539 -20.8955)'>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='33.415205' y='-43.964862' xlink:href='#g3-11'/>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='38.594546' y='-42.963049' xlink:href='#g4-65'/>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='43.755827' y='-42.963049' xlink:href='#g4-59'/>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='46.038954' y='-42.963049' xlink:href='#g4-73'/>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='49.543207' y='-42.963049' xlink:href='#g4-59'/>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='51.826335' y='-42.963049' xlink:href='#g4-66'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='33.415205' y='-43.964862' xlink:href='#g3-11'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='38.594546' y='-42.963049' xlink:href='#g4-65'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='43.755827' y='-42.963049' xlink:href='#g4-59'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='46.038954' y='-42.963049' xlink:href='#g4-73'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='49.543207' y='-42.963049' xlink:href='#g4-59'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='51.826335' y='-42.963049' xlink:href='#g4-66'/>
 </g>
 <path d='M-20.7305-51.57031L13.7383-35.21094' stroke='#000' fill='none' stroke-width='.69739' stroke-miterlimit='10'/>
 <path d='M15.351558-34.449222L13.574214-36.347657L13.894529-35.136719L12.753904-34.625001Z'/>
 <path d='M15.351558-34.449222L13.574214-36.347657L13.894529-35.136719L12.753904-34.625001Z' stroke='#000' fill='none' stroke-width='.697354' stroke-miterlimit='10'/>
 <g transform='matrix(1 0 0 1 -67.3285 8.4988)'>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='33.415205' y='-43.964862' xlink:href='#g6-105'/>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='35.670651' y='-43.964862' xlink:href='#g6-100'/>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='40.070834' y='-42.963049' xlink:href='#g4-65'/>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='45.730245' y='-43.964862' xlink:href='#g1-10'/>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='51.956924' y='-43.964862' xlink:href='#g3-21'/>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='56.68229' y='-42.963049' xlink:href='#g4-66'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='33.415205' y='-43.964862' xlink:href='#g6-105'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='35.670651' y='-43.964862' xlink:href='#g6-100'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='40.070834' y='-42.963049' xlink:href='#g4-65'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='45.730245' y='-43.964862' xlink:href='#g1-10'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='51.956924' y='-43.964862' xlink:href='#g3-21'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='56.68229' y='-42.963049' xlink:href='#g4-66'/>
 </g>
 <path d='M87.5625-51.57031L53.0898-35.21094' stroke='#000' fill='none' stroke-width='.69739' stroke-miterlimit='10'/>
 <path d='M51.48046-34.449218L54.074217-34.624998L52.933592-35.136717L53.257804-36.347653Z'/>
 <path d='M51.48046-34.449218L54.074217-34.624998L52.933592-35.136717L53.257804-36.347653Z' stroke='#000' fill='none' stroke-width='.697354' stroke-miterlimit='10'/>
 <g transform='matrix(1 0 0 1 38.1647 8.4988)'>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='33.415205' y='-43.964862' xlink:href='#g3-26'/>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='37.548691' y='-42.963049' xlink:href='#g4-65'/>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='43.208102' y='-43.964862' xlink:href='#g1-10'/>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='49.434782' y='-43.964862' xlink:href='#g6-105'/>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='51.690227' y='-43.964862' xlink:href='#g6-100'/>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='56.090411' y='-42.963049' xlink:href='#g4-66'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='33.415205' y='-43.964862' xlink:href='#g3-26'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='37.548691' y='-42.963049' xlink:href='#g4-65'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='43.208102' y='-43.964862' xlink:href='#g1-10'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='49.434782' y='-43.964862' xlink:href='#g6-105'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='51.690227' y='-43.964862' xlink:href='#g6-100'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='56.090411' y='-42.963049' xlink:href='#g4-66'/>
 </g>
 </g>
 </svg>

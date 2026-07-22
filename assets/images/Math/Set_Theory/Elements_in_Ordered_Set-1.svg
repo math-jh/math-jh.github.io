@@ -7,10 +7,10 @@
 </defs>
 <g id='page1'>
 <g transform='matrix(1 0 0 1 -9.5557 18.2166)'>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='-56.162423' y='-80.288396' xlink:href='#g0-97'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='-56.162423' y='-80.288396' xlink:href='#g0-97'/>
 </g>
 <g transform='matrix(1 0 0 1 -9.0604 18.2166)'>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='-56.162423' y='-48.145003' xlink:href='#g0-98'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='-56.162423' y='-48.145003' xlink:href='#g0-98'/>
 </g>
 <path d='M-63.085938-58.2266V-40.69141' stroke='#000' fill='none' stroke-width='.69739' stroke-miterlimit='10'/>
 </g>

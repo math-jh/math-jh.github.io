@@ -10,25 +10,25 @@
 </defs>
 <g id='page1'>
 <g transform='matrix(1 0 0 1 -31.9126 3.4039)'>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='-33.805815' y='-51.126787' xlink:href='#g0-65'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='-33.805815' y='-51.126787' xlink:href='#g0-65'/>
 </g>
 <g transform='matrix(1 0 0 1 -31.3584 3.4039)'>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='6.084103' y='-51.126787' xlink:href='#g0-66'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='6.084103' y='-51.126787' xlink:href='#g0-66'/>
 </g>
 <path d='M-53.25-56.23828C-44.96094-62.1328-37.90625-62.0625-31.9453-57.63672' stroke='#000' fill='none' stroke-width='.69739' stroke-miterlimit='10'/>
 <path d='M-30.511772-56.57418L-31.886768-58.781207L-31.804737-57.535118L-33.023487-57.253865Z'/>
 <path d='M-30.511772-56.57418L-31.886768-58.781207L-31.804737-57.535118L-33.023487-57.253865Z' stroke='#000' fill='none' stroke-width='.697355' stroke-miterlimit='10'/>
 <g transform='matrix(1 0 0 1 -2.4389 -11.9707)'>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='-42.072711' y='-51.126787' xlink:href='#g2-70'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='-42.072711' y='-51.126787' xlink:href='#g2-70'/>
 </g>
 <path d='M-29.7383-44.42578C-37.90625-38.3633-44.96094-38.293-51.01172-42.59766' stroke='#000' fill='none' stroke-width='.69739' stroke-miterlimit='10'/>
 <path d='M-52.464837-43.62886L-51.046868-41.449176L-51.15624-42.695264L-49.941396-43.003859Z'/>
 <path d='M-52.464837-43.62886L-51.046868-41.449176L-51.15624-42.695264L-49.941396-43.003859Z' stroke='#000' fill='none' stroke-width='.697359' stroke-miterlimit='10'/>
 <g transform='matrix(1 0 0 1 -2.4778 18.5625)'>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='-42.072711' y='-51.126787' xlink:href='#g2-71'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='-42.072711' y='-51.126787' xlink:href='#g2-71'/>
 </g>
 <g transform='matrix(0 1 -1 0 -94.9974 -10.6109)'>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='-42.072711' y='-51.126787' xlink:href='#g1-97'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='-42.072711' y='-51.126787' xlink:href='#g1-97'/>
 </g>
 </g>
 </svg>

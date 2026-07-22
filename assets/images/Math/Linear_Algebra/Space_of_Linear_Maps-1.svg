@@ -11,32 +11,32 @@
 </defs>
 <g id='page1'>
 <g transform='matrix(1 0 0 1 -32.7774 19.4205)'>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='-32.941001' y='-78.973883' xlink:href='#g0-66'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='-32.941001' y='-78.973883' xlink:href='#g0-66'/>
 </g>
 <g transform='matrix(1 0 0 1 -33.36691 19.4205)'>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='8.367912' y='-78.973883' xlink:href='#g1-86'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='8.367912' y='-78.973883' xlink:href='#g1-86'/>
 </g>
 <g transform='matrix(1 0 0 1 -34.75061 19.4205)'>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='8.367912' y='-46.941189' xlink:href='#g1-87'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='8.367912' y='-46.941189' xlink:href='#g1-87'/>
 </g>
 <path d='M-54.3828-55.91016L-33.03906-39.35547' stroke='#000' fill='none' stroke-width='.69739' stroke-miterlimit='10'/>
 <path d='M-31.632838-38.26172L-32.960968-40.500004L-32.902375-39.250005L-34.128934-38.992191Z'/>
 <path d='M-31.632838-38.26172L-32.960968-40.500004L-32.902375-39.250005L-34.128934-38.992191Z' stroke='#000' fill='none' stroke-width='.697359' stroke-miterlimit='10'/>
 <g transform='matrix(1 0 0 1 -8.6036 5.6449)'>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='-40.653716' y='-46.941189' xlink:href='#g2-103'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='-40.653716' y='-46.941189' xlink:href='#g2-103'/>
 </g>
 <path d='M-52.7656-62.043H-32.23437' stroke='#000' fill='none' stroke-width='.69739' stroke-miterlimit='10'/>
 <path d='M-52.765602-64.58592C-53.464821-64.58592-54.03513-64.0156-54.03513-63.31638C-54.03513-62.61326-53.464821-62.042947-52.765602-62.042947' stroke='#000' fill='none' stroke-width='.69739' stroke-miterlimit='10'/>
 <path d='M-30.44925-62.042947L-32.87112-62.996072L-32.05862-62.042947L-32.87112-61.089822Z'/>
 <path d='M-30.44925-62.042947L-32.87112-62.996072L-32.05862-62.042947L-32.87112-61.089822Z' stroke='#000' fill='none' stroke-width='.69739' stroke-miterlimit='10'/>
 <g transform='matrix(1 0 0 1 -2.7556 -17.5968)'>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='-40.653716' y='-46.941189' xlink:href='#g2-19'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='-40.653716' y='-46.941189' xlink:href='#g2-19'/>
 </g>
 <path d='M-20.9844-55.70703V-40.92187' stroke='#000' fill='none' stroke-width='.69739' stroke-miterlimit='10' stroke-dasharray='4.88173 2.78955'/>
 <path d='M-20.984393-39.13672L-20.031268-41.55469L-20.984393-40.74609L-21.937518-41.55469Z'/>
 <path d='M-20.984393-39.13672L-20.031268-41.55469L-20.984393-40.74609L-21.937518-41.55469Z' stroke='#000' fill='none' stroke-width='.69739' stroke-miterlimit='10'/>
 <g transform='matrix(1 0 0 1 22.1616 2.3827)'>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='-40.653716' y='-46.941189' xlink:href='#g2-71'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='-40.653716' y='-46.941189' xlink:href='#g2-71'/>
 </g>
 </g>
 </svg>

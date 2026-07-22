@@ -10,12 +10,12 @@
 <path d='M-12.91798-53.027345L-17.06251-55.10156L-15.50782-53.027345L-17.06251-50.95703'/>
 <path d='M-40.2698-53.027345C-40.2698-53.578126-40.7148-54.023439-41.2658-54.023439C-41.8128-54.023439-42.2618-53.578126-42.2618-53.027345C-42.2618-52.476564-41.8128-52.031251-41.2658-52.031251C-40.7148-52.031251-40.2698-52.476564-40.2698-53.027345Z'/>
 <g transform='matrix(1 0 0 1 -115.0823 6.73)'>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='72.123245' y='-53.027678' xlink:href='#g1-48'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='72.123245' y='-53.027678' xlink:href='#g1-48'/>
 </g>
 <path d='M1.2578-53.027345H27.6094' stroke='#000' fill='none' stroke-width='.3985' stroke-miterlimit='10' stroke-dasharray='2.98883 2.98883'/>
 <path d='M29.60159-53.027345L26.41409-54.6211L27.609405-53.027345L26.41409-51.4336'/>
 <g transform='matrix(1 0 0 1 -60.2913 -3.5198)'>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='72.123245' y='-53.027678' xlink:href='#g0-8'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='72.123245' y='-53.027678' xlink:href='#g0-8'/>
 </g>
 <path d='M72.125001-53.027345C81.63281-66.6094 100.4688-69.6094 100.4688-53.027345' stroke='#000' fill='none' stroke-width='.79701' stroke-miterlimit='10'/>
 <path d='M100.4688-53.027345C100.4688-36.8789 82.2344-38.9492 74.46094-50.05469' stroke='#000' fill='none' stroke-width='.79701' stroke-miterlimit='10'/>

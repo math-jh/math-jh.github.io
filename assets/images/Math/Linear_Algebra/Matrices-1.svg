@@ -14,18 +14,18 @@
 <path id='g2-65' d='M5.808219-.388543C5.798257-.498132 5.738481-.498132 5.529265-.498132H4.98132C4.762142-.498132 4.702366-.498132 4.702366-.358655C4.702366 .667497 4.692403 3.038605 4.433375 5.519303C3.895392 10.669988 2.570361 14.236613 .388543 17.295143C.318804 17.384807 .318804 17.404732 .318804 17.424658C.318804 17.524284 .398506 17.524284 .547945 17.524284C.707347 17.524284 .727273 17.524284 .747198 17.504359C.787049 17.474471 2.052304 16.019925 3.058531 14.017435C4.373599 11.387298 5.200498 8.368618 5.569116 4.742217C5.599004 4.433375 5.808219 2.361146 5.808219 0V-.388543Z'/>
 </defs>
 <g id='page1'>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='-70.007476' y='-69.360078' xlink:href='#g2-48'/>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='-70.007476' y='-51.427159' xlink:href='#g2-64'/>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='-55.362353' y='-55.561648' xlink:href='#g0-48'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='-70.007476' y='-69.360078' xlink:href='#g2-48'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='-70.007476' y='-51.427159' xlink:href='#g2-64'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='-55.362353' y='-55.561648' xlink:href='#g0-48'/>
 <rect x='-36.38352' y='-70.007476' height='23.910336' width='.3985'/>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='-31.003701' y='-61.638895' xlink:href='#g1-49'/>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='-31.003701' y='-49.683727' xlink:href='#g1-51'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='-31.003701' y='-61.638895' xlink:href='#g1-49'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='-31.003701' y='-49.683727' xlink:href='#g1-51'/>
 <rect x='-66.271471' y='-46.09714' height='.3985' width='45.230426'/>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='-61.290151' y='-37.330059' xlink:href='#g1-50'/>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='-46.346176' y='-37.330059' xlink:href='#g1-52'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='-61.290151' y='-37.330059' xlink:href='#g1-50'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='-46.346176' y='-37.330059' xlink:href='#g1-52'/>
 <rect x='-36.38352' y='-45.69864' height='12.054831' width='.3985'/>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='-31.003701' y='-37.230396' xlink:href='#g1-48'/>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='-26.022365' y='-69.360078' xlink:href='#g2-49'/>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='-26.022365' y='-51.427159' xlink:href='#g2-65'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='-31.003701' y='-37.230396' xlink:href='#g1-48'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='-26.022365' y='-69.360078' xlink:href='#g2-49'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='-26.022365' y='-51.427159' xlink:href='#g2-65'/>
 </g>
 </svg>

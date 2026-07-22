@@ -8,14 +8,14 @@
 </defs>
 <g id='page1'>
 <g transform='matrix(1 0 0 1 -39.1672 19.7652)'>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='-26.546888' y='-78.632892' xlink:href='#g1-69'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='-26.546888' y='-78.632892' xlink:href='#g1-69'/>
 </g>
 <g transform='matrix(1 0 0 1 -40.5647 19.7652)'>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='25.944015' y='-78.632892' xlink:href='#g1-69'/>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='33.872608' y='-82.248255' xlink:href='#g0-48'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='25.944015' y='-78.632892' xlink:href='#g1-69'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='33.872608' y='-82.248255' xlink:href='#g0-48'/>
 </g>
 <g transform='matrix(1 0 0 1 -39.2312 19.7652)'>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='-1.000201' y='-46.592672' xlink:href='#g1-66'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='-1.000201' y='-46.592672' xlink:href='#g1-66'/>
 </g>
 <path d='M-53.293-61.3594H-21.8594' stroke='#000' fill='none' stroke-width='.69739' stroke-miterlimit='10'/>
 <path d='M-20.07418-61.359395L-22.49605-62.31252L-21.68355-61.359395L-22.49605-60.40627Z'/>

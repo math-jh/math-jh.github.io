@@ -82,20 +82,20 @@
 <rect x='-34.783578' y='-54.736921' height='.368552' width='14.560176' transform='matrix(1 0 0 1 195.1222 2.2416)'/>
 <rect x='-34.783578' y='-40.545297' height='.368552' width='14.560176' transform='matrix(1 0 0 1 195.1222 2.2416)'/>
 <g transform='matrix(1 0 0 1 -4.6143 30.5316)'>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='-48.975202' y='-52.311051' xlink:href='#g0-74'/>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='-43.897728' y='-51.314802' xlink:href='#g1-49'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='-48.975202' y='-52.311051' xlink:href='#g0-74'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='-43.897728' y='-51.314802' xlink:href='#g1-49'/>
 </g>
 <g transform='matrix(1 0 0 1 65.2235 30.5316)'>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='-48.975202' y='-52.311051' xlink:href='#g0-74'/>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='-43.897728' y='-51.314802' xlink:href='#g1-50'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='-48.975202' y='-52.311051' xlink:href='#g0-74'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='-43.897728' y='-51.314802' xlink:href='#g1-50'/>
 </g>
 <g transform='matrix(1 0 0 1 135.0614 30.5316)'>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='-48.975202' y='-52.311051' xlink:href='#g0-74'/>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='-43.897728' y='-51.314802' xlink:href='#g1-51'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='-48.975202' y='-52.311051' xlink:href='#g0-74'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='-43.897728' y='-51.314802' xlink:href='#g1-51'/>
 </g>
 <g transform='matrix(1 0 0 1 204.8992 30.5316)'>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='-48.975202' y='-52.311051' xlink:href='#g0-74'/>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='-43.897728' y='-51.314802' xlink:href='#g1-52'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='-48.975202' y='-52.311051' xlink:href='#g0-74'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='-43.897728' y='-51.314802' xlink:href='#g1-52'/>
 </g>
 </g>
 </svg>

@@ -10,16 +10,16 @@
 </defs>
 <g id='page1'>
 <g transform='matrix(1 0 0 1 -32.5398 19.4205)'>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='-33.114651' y='-78.973883' xlink:href='#g2-69'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='-33.114651' y='-78.973883' xlink:href='#g2-69'/>
 </g>
 <g transform='matrix(1 0 0 1 -32.58818 19.4205)'>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='7.415581' y='-78.973883' xlink:href='#g2-86'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='7.415581' y='-78.973883' xlink:href='#g2-86'/>
 </g>
 <g transform='matrix(1 0 0 1 -32.6038 19.4205)'>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='-33.114651' y='-46.941189' xlink:href='#g2-66'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='-33.114651' y='-46.941189' xlink:href='#g2-66'/>
 </g>
 <g transform='matrix(1 0 0 1 -31.06618 19.4205)'>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='7.415581' y='-46.941189' xlink:href='#g1-3'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='7.415581' y='-46.941189' xlink:href='#g1-3'/>
 </g>
 <path d='M-53.2383-62.043H-32.40625' stroke='#000' fill='none' stroke-width='.69739' stroke-miterlimit='10'/>
 <path d='M-30.62105-62.042947L-33.04293-62.996072L-32.23434-62.042947L-33.04293-61.089822Z'/>
@@ -28,7 +28,7 @@
 <path d='M-61.691427-39.13672L-60.738302-41.55469L-61.691427-40.74609L-62.644552-41.55469Z'/>
 <path d='M-61.691427-39.13672L-60.738302-41.55469L-61.691427-40.74609L-62.644552-41.55469Z' stroke='#000' fill='none' stroke-width='.69739' stroke-miterlimit='10'/>
 <g transform='matrix(1 0 0 1 -11.0936 -4.7429)'>
-<use stroke='#000' stroke-width='0.25' stroke-linejoin='round' x='-41.432397' y='-46.941189' xlink:href='#g0-121'/>
+<use stroke='#000' stroke-width='0.20' stroke-linejoin='round' x='-41.432397' y='-46.941189' xlink:href='#g0-121'/>
 </g>
 <path d='M-21.1602-55.70703V-38.74609' stroke='#000' fill='none' stroke-width='.69739' stroke-miterlimit='10'/>
 <path d='M-21.160206-36.96486L-20.207081-39.38283L-21.160206-38.57424L-22.113331-39.38283Z'/>
