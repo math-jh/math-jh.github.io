@@ -2704,6 +2704,13 @@ D:
     url: /ko/math/topology/dimension
   - label: '[스킴] §차원'
     url: /ko/math/scheme_theory/dimension
+- id: dimension_formula
+  en: dimension formula
+  ko: 차원 공식
+  primary: ko
+  defs:
+  - label: '[가환대수학] §뇌터 정규화'
+    url: /ko/math/commutative_algebra/noether_normalization
 - id: direct_limit
   en: direct limit (injective limit)
   ko: 직접극한 (귀납적극한)

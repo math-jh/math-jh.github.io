@@ -5033,3 +5033,8 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 | `schema` | looks like emphasis (no <sub> partner) |
 | `멱집합` | looks like emphasis (no <sub> partner) |
 
+
+## term_extract_worker 2026-07-23 03:00
+
+- _posts/Math/Commutative_Algebra/ko/2025-01-24-Divisors.md: 병기 필요 'pure codimension' — 소스 없음 (KMS exact ✗, 위키 ko ✗)
+- _posts/Math/Commutative_Algebra/ko/2025-01-24-Divisors.md: 병기 필요 'uniform한 기준' — 소스 없음 (KMS exact ✗, 위키 ko ✗)
