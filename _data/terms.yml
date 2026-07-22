@@ -393,6 +393,8 @@ A:
   defs:
   - label: '[미적분학] §적분'
     url: /ko/math/calculus/integration
+  - label: '[복소해석학] §복소적분'
+    url: /ko/math/complex_analysis/complex_integration
 - id: antipodal_map
   en: antipodal map
   ko: 대척사상
@@ -1387,6 +1389,13 @@ C:
   defs:
   - label: '[리만기하학] §접속'
     url: /ko/math/riemannian_geometry/connection
+- id: circle_or_line
+  en: circle or line
+  ko: 원-직선
+  primary: ko
+  defs:
+  - label: '[복소해석학] §등각사상과 Möbius 변환'
+    url: /ko/math/complex_analysis/conformal_maps
 - id: class
   en: class
   ko: 클래스
@@ -1440,6 +1449,13 @@ C:
     url: /ko/math/set_theory/filter_and_ideal
   - label: '[위상수학] §집합의 내부, 폐포, 경계'
     url: /ko/math/topology/other_concepts
+- id: closed_curve
+  en: closed curve
+  ko: 닫힌 곡선
+  primary: ko
+  defs:
+  - label: '[복소해석학] §복소적분'
+    url: /ko/math/complex_analysis/complex_integration
 - id: closed_embedding
   en: closed embedding
   ko: 닫힌 몰입
@@ -1944,6 +1960,13 @@ C:
   defs:
   - label: '[복소해석학] §복소수와 복소평면'
     url: /ko/math/complex_analysis/complex_numbers
+- id: complex_differentiable
+  en: complex differentiable
+  ko: 복소미분가능
+  primary: ko
+  defs:
+  - label: '[복소해석학] §복소정칙함수'
+    url: /ko/math/complex_analysis/holomorphic_functions
 - id: complex_manifold
   en: complex manifold
   ko: 복소다양체
@@ -2003,10 +2026,24 @@ C:
   defs:
   - label: '[해석학] §무한급수'
     url: /ko/math/analysis/series
+- id: conformal
+  en: conformal
+  ko: 등각
+  primary: ko
+  defs:
+  - label: '[복소해석학] §등각사상과 Möbius 변환'
+    url: /ko/math/complex_analysis/conformal_maps
 - id: conformal_isomorphism
   en: conformal isomorphism
   ko: 등각동형사상
   primary: en
+  defs:
+  - label: '[복소해석학] §등각사상과 Möbius 변환'
+    url: /ko/math/complex_analysis/conformal_maps
+- id: conformal_map
+  en: conformal map
+  ko: 등각사상
+  primary: ko
   defs:
   - label: '[복소해석학] §등각사상과 Möbius 변환'
     url: /ko/math/complex_analysis/conformal_maps
@@ -2123,6 +2160,13 @@ C:
   defs:
   - label: '[집합론] §기수'
     url: /ko/math/set_theory/cardinals
+- id: contour_integral
+  en: contour integral
+  ko: 경로적분
+  primary: ko
+  defs:
+  - label: '[복소해석학] §복소적분'
+    url: /ko/math/complex_analysis/complex_integration
 - id: contraction
   en: contraction
   ko: 축약사상
@@ -2213,6 +2257,13 @@ C:
   defs:
   - label: '[대수적 구조] §몫군'
     url: /ko/math/algebraic_structures/quotient_groups
+- id: cosine
+  en: cosine
+  ko: 코사인
+  primary: ko
+  defs:
+  - label: '[복소해석학] §복소정칙함수'
+    url: /ko/math/complex_analysis/holomorphic_functions
 - id: cotangent_bundle
   en: cotangent bundle
   ko: 여접다발
@@ -2321,6 +2372,8 @@ C:
   defs:
   - label: '[미적분학] §평균값 정리'
     url: /ko/math/calculus/mean_value_theorem
+  - label: '[복소해석학] §등각사상과 Möbius 변환'
+    url: /ko/math/complex_analysis/conformal_maps
 - id: cross_product
   en: cross product
   ko: 외적
@@ -2328,6 +2381,13 @@ C:
   defs:
   - label: '[미적분학] §곡선과 벡터함수'
     url: /ko/math/calculus/vector_functions
+- id: cross-ratio
+  en: cross-ratio
+  ko: 교차비
+  primary: ko
+  defs:
+  - label: '[복소해석학] §등각사상과 Möbius 변환'
+    url: /ko/math/complex_analysis/conformal_maps
 - id: cup_product
   en: cup product
   ko: 합곱
@@ -2512,6 +2572,8 @@ D:
   defs:
   - label: '[미적분학] §미분과 도함수'
     url: /ko/math/calculus/derivatives
+  - label: '[복소해석학] §복소정칙함수'
+    url: /ko/math/complex_analysis/holomorphic_functions
 - id: derivative_function
   en: derivative function
   ko: 도함수
@@ -2965,6 +3027,8 @@ D:
     url: /ko/math/set_theory/functions
   - label: '[범주론] §범주'
     url: /ko/math/category_theory/categories
+  - label: '[복소해석학] §복소정칙함수'
+    url: /ko/math/complex_analysis/holomorphic_functions
 - id: domain_of_convergence
   en: domain of convergence
   ko: 수렴역
@@ -3202,6 +3266,13 @@ E:
   defs:
   - label: '[호몰로지 대수학] §분해'
     url: /ko/math/homological_algebra/resolutions
+- id: entire_function
+  en: entire function
+  ko: 전해석함수
+  primary: en
+  defs:
+  - label: '[복소해석학] §복소정칙함수'
+    url: /ko/math/complex_analysis/holomorphic_functions
 - id: epimorphism
   en: epimorphism
   ko: ''
@@ -3391,6 +3462,13 @@ E:
   defs:
   - label: '[토릭 기하학] §Cox 구성과 GIT quotient'
     url: /ko/math/toric_geometry/cox_construction
+- id: exponential_function
+  en: exponential function
+  ko: 지수함수
+  primary: ko
+  defs:
+  - label: '[복소해석학] §복소정칙함수'
+    url: /ko/math/complex_analysis/holomorphic_functions
 - id: extended_rees_algebra
   en: extended Rees algebra
   ko: 확장된 리스 대수
@@ -4294,6 +4372,20 @@ H:
   defs:
   - label: '[사교기하학] §사교다양체'
     url: /ko/math/symplectic_geometry/symplectic_manifold
+- id: harmonic_conjugate
+  en: harmonic conjugate
+  ko: 조화켤레
+  primary: ko
+  defs:
+  - label: '[복소해석학] §복소정칙함수'
+    url: /ko/math/complex_analysis/holomorphic_functions
+- id: harmonic_function
+  en: harmonic function
+  ko: 조화함수
+  primary: ko
+  defs:
+  - label: '[복소해석학] §복소정칙함수'
+    url: /ko/math/complex_analysis/holomorphic_functions
 - id: hartogs_number
   en: Hartogs number
   ko: 하르톡스 수
@@ -4755,6 +4847,13 @@ I:
   defs:
   - label: '[집합론] §서수들 사이의 순서관계'
     url: /ko/math/set_theory/order_relations_between_ordinals
+- id: initial_point
+  en: initial point
+  ko: 시점
+  primary: ko
+  defs:
+  - label: '[복소해석학] §복소적분'
+    url: /ko/math/complex_analysis/complex_integration
 - id: initial_segment
   en: initial segment
   ko: 앞절편
@@ -5402,6 +5501,13 @@ L:
   defs:
   - label: '[거울대칭] §거울대칭 개요'
     url: /ko/math/mirror_symmetry/overview
+- id: laplacian
+  en: laplacian
+  ko: Laplace 연산자
+  primary: ko
+  defs:
+  - label: '[복소해석학] §복소정칙함수'
+    url: /ko/math/complex_analysis/holomorphic_functions
 - id: lattice
   en: lattice
   ko: 격자
@@ -5637,6 +5743,8 @@ L:
     url: /ko/math/topology/dimension
   - label: '[리만기하학] §리만 계량'
     url: /ko/math/riemannian_geometry/Riemannian_metric
+  - label: '[복소해석학] §복소적분'
+    url: /ko/math/complex_analysis/complex_integration
 - id: Leray_theorem
   en: Leray theorem
   ko: 르레 정리
@@ -5761,6 +5869,13 @@ L:
   defs:
   - label: '[해석학] §미분방정식의 존재성과 유일성'
     url: /ko/math/analysis/existence_uniqueness_ode
+- id: linear_fractional_transformation
+  en: linear fractional transformation
+  ko: 일차분수변환
+  primary: ko
+  defs:
+  - label: '[복소해석학] §등각사상과 Möbius 변환'
+    url: /ko/math/complex_analysis/conformal_maps
 - id: linear_functional
   en: linear functional
   ko: 선형범함수
@@ -6292,6 +6407,13 @@ M:
   defs:
   - label: '[선형대수학] §최소제곱법'
     url: /ko/math/linear_algebra/least_squares_method
+- id: möbius_transformation
+  en: möbius transformation
+  ko: 뫼비우스 변환
+  primary: en
+  defs:
+  - label: '[복소해석학] §등각사상과 Möbius 변환'
+    url: /ko/math/complex_analysis/conformal_maps
 - id: model
   en: model
   ko: 모델
@@ -7538,6 +7660,13 @@ P:
   defs:
   - label: '[대수적 구조] §분수체'
     url: /ko/math/algebraic_structures/field_of_fractions
+- id: primitive
+  en: primitive
+  ko: 원시함수
+  primary: en
+  defs:
+  - label: '[복소해석학] §복소적분'
+    url: /ko/math/complex_analysis/complex_integration
 - id: primitive_cohomology
   en: primitive cohomology
   ko: ''
@@ -7767,6 +7896,13 @@ P:
   defs:
   - label: '[리 이론] §Weyl 완전가약성 정리'
     url: /ko/math/lie_theory/weyl_complete_reducibility
+- id: pseudo-hyperbolic_distance
+  en: pseudo-hyperbolic distance
+  ko: 유사쌍곡거리
+  primary: ko
+  defs:
+  - label: '[복소해석학] §등각사상과 Möbius 변환'
+    url: /ko/math/complex_analysis/conformal_maps
 - id: pseudo-riemannian_metric
   en: pseudo-riemannian metric
   ko: 준-리만 계량
@@ -9031,6 +9167,13 @@ S:
   defs:
   - label: '[선형대수학] §고유공간분해'
     url: /ko/math/linear_algebra/eigenspace_decomposition
+- id: sine
+  en: sine
+  ko: 사인
+  primary: ko
+  defs:
+  - label: '[복소해석학] §복소정칙함수'
+    url: /ko/math/complex_analysis/holomorphic_functions
 - id: singular
   en: singular
   ko: 특이
@@ -9956,6 +10099,13 @@ T:
   see:
   - label: Initial object
     id: initial_object
+- id: terminal_point
+  en: terminal point
+  ko: 종점
+  primary: ko
+  defs:
+  - label: '[복소해석학] §복소적분'
+    url: /ko/math/complex_analysis/complex_integration
 - id: topological_manifold
   en: topological manifold
   ko: 위상다양체
@@ -10642,6 +10792,13 @@ W:
   defs:
   - label: '[복소해석학] §Cauchy 정리'
     url: /ko/math/complex_analysis/cauchy_theorem
+- id: wirtinger_derivative
+  en: wirtinger derivative
+  ko: Wirtinger 미분
+  primary: ko
+  defs:
+  - label: '[복소해석학] §복소정칙함수'
+    url: /ko/math/complex_analysis/holomorphic_functions
 Z:
 - id: zariski_tangent_space
   en: Zariski tangent space
