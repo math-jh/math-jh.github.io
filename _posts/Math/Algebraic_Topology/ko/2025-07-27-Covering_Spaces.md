@@ -106,7 +106,7 @@ Covering map $p:E \rightarrow B$와 $E$의 임의의 한 점 $y_0$을 생각하�
 
 이에 대한 증명은 본질적으로 [보조정리 6](#lem6)와 다를 것이 없으므로 생략하기로 한다. 중요한 것은 이 보조정리가 주는 path homotopy에 의하여, covering space $p:E \rightarrow B$와, path class $[\alpha]\in\Hom_{\Pi_1(B)}(x_0,x_1)$이 주어졌다 하면 $y_0\in p^{-1}(x_0)$의 선택이 $E$의 path class $[\widetilde{\alpha}]\in \Hom_{\Pi_1(E)}(y_0,y_1)$을 유일하게 결정한다는 것이다. 
 
-이제 다시 fundamental groupoid $\Pi_1(B)$를 생각하고, covering map $p:E \rightarrow B$을 고정하자. 그럼 evenly covered 조건에 의해, 각각의 $x\in B$에 대하여 $p^{-1}(x)$는 discrete set이다. 이 때 임의의 path class $[\alpha]\in\Hom_{\Pi_1(B)}(x_0,x_1)$에 대하여, $y_0\in p^{-1}(x_0)$을 택하면 [보조정리 7](#lem7)는 유일한 path class $[\widetilde{\alpha}]$를 정의하고, 따라서 $y_1\in p^{-1}(x)$를 정의한다. 즉 $[\alpha]$는 함수 $p^{-1}(x_0)\rightarrow p^{-1}(x_1)$를 정의한다. 
+이제 다시 fundamental groupoid $\Pi_1(B)$를 생각하고, covering map $p:E \rightarrow B$을 고정하자. 그럼 evenly covered 조건에 의해, 각각의 $x\in B$에 대하여 $p^{-1}(x)$는 discrete set이다. 이 때 임의의 path class $[\alpha]\in\Hom_{\Pi_1(B)}(x_0,x_1)$에 대하여, $y_0\in p^{-1}(x_0)$을 택하면 [보조정리 7](#lem7)는 유일한 path class $[\widetilde{\alpha}]$를 정의하고, 따라서 $y_1\in p^{-1}(x_1)$를 정의한다. 즉 $[\alpha]$는 함수 $p^{-1}(x_0)\rightarrow p^{-1}(x_1)$를 정의한다. 
 
 ::: 정의 8
 위와 같은 상황에서, 함수 $p^{-1}(x_0)\rightarrow p^{-1}(x_1)$을 *transport map*이라 부르고 $T_{[\alpha]}$로 적는다. 

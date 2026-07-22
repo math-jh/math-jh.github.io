@@ -108,6 +108,13 @@ A:
   defs:
   - label: '[해석학] §무한급수'
     url: /ko/math/analysis/series
+- id: acceleration
+  en: acceleration
+  ko: 가속도
+  primary: ko
+  defs:
+  - label: '[미적분학] §곡선과 벡터함수'
+    url: /ko/math/calculus/vector_functions
 - id: action
   en: action
   ko: 작용
@@ -379,6 +386,13 @@ A:
     url: /ko/math/linear_algebra/dual_space
   - label: '[가환대수학] §기본 개념들'
     url: /ko/math/commutative_algebra/basic_notions
+- id: antiderivative
+  en: antiderivative
+  ko: 원시함수
+  primary: ko
+  defs:
+  - label: '[미적분학] §적분'
+    url: /ko/math/calculus/integration
 - id: antipodal_map
   en: antipodal map
   ko: 대척사상
@@ -415,6 +429,13 @@ A:
   defs:
   - label: '[범주론] §극한'
     url: /ko/math/category_theory/limits
+- id: arc_length
+  en: arc length
+  ko: 호의 길이
+  primary: en
+  defs:
+  - label: '[미적분학] §곡선과 벡터함수'
+    url: /ko/math/calculus/vector_functions
 - id: artinian
   en: artinian
   ko: 아틴가군
@@ -960,6 +981,20 @@ B:
   - label: '[미분다양체] §접다발과 여접다발'
     url: /ko/math/manifolds/tangent_and_cotangent_bundles
 C:
+- id: c_1
+  en: $c^1$
+  ko: 일급
+  primary: ko
+  defs:
+  - label: '[미적분학] §곡선과 벡터함수'
+    url: /ko/math/calculus/vector_functions
+- id: c_1_-regular_curve
+  en: $c^1$-regular curve
+  ko: 일급정칙곡선
+  primary: ko
+  defs:
+  - label: '[미적분학] §곡선과 벡터함수'
+    url: /ko/math/calculus/vector_functions
 - id: c_k_-differentiable_manifold
   en: $C^k$-differentiable manifold
   ko: k급 미분다양체
@@ -2015,6 +2050,13 @@ C:
   defs:
   - label: '[대수다양체] §층 코호몰로지'
     url: /ko/math/algebraic_varieties/sheaf_cohomology
+- id: constrained_extremum
+  en: constrained extremum
+  ko: 제약극값
+  primary: ko
+  defs:
+  - label: '[미적분학] §다변수함수와 편미분'
+    url: /ko/math/calculus/partial_derivatives
 - id: continuous
   en: continuous
   ko: 연속
@@ -2242,6 +2284,13 @@ C:
   defs:
   - label: '[미적분학] §평균값 정리'
     url: /ko/math/calculus/mean_value_theorem
+- id: cross_product
+  en: cross product
+  ko: 외적
+  primary: ko
+  defs:
+  - label: '[미적분학] §곡선과 벡터함수'
+    url: /ko/math/calculus/vector_functions
 - id: cup_product
   en: cup product
   ko: 합곱
@@ -2249,6 +2298,13 @@ C:
   defs:
   - label: '[대수적 위상수학] §합곱'
     url: /ko/math/algebraic_topology/cup_products
+- id: curvature
+  en: curvature
+  ko: 곡률
+  primary: ko
+  defs:
+  - label: '[미적분학] §곡선과 벡터함수'
+    url: /ko/math/calculus/vector_functions
 - id: cusp
   en: cusp
   ko: 첨점
@@ -2263,6 +2319,13 @@ C:
   defs:
   - label: '[호몰로지 대수학] §호몰로지'
     url: /ko/math/homological_algebra/homology
+- id: cylindrical_coordinates
+  en: cylindrical coordinates
+  ko: 원기둥좌표
+  primary: ko
+  defs:
+  - label: '[미적분학] §다중적분'
+    url: /ko/math/calculus/multiple_integrals
 D:
 - id: de_Morgan's_law
   en: de Morgan's law
@@ -2868,6 +2931,13 @@ D:
   see:
   - label: Dual space
     id: dual_space
+- id: double_integral
+  en: double integral
+  ko: 이중적분
+  primary: ko
+  defs:
+  - label: '[미적분학] §다중적분'
+    url: /ko/math/calculus/multiple_integrals
 - id: dual_basis
   en: dual basis
   ko: 쌍대기저
@@ -3989,6 +4059,13 @@ G:
   defs:
   - label: '[대수적 구조] §등급가군'
     url: /ko/math/algebraic_structures/graded_modules
+- id: gradient
+  en: gradient
+  ko: 기울기
+  primary: ko
+  defs:
+  - label: '[미적분학] §다변수함수와 편미분'
+    url: /ko/math/calculus/partial_derivatives
 - id: grading_operator
   en: grading operator
   ko: 등급 연산자
@@ -4173,6 +4250,8 @@ H:
   defs:
   - label: '[리만기하학] §접속'
     url: /ko/math/riemannian_geometry/connection
+  - label: '[미적분학] §다변수함수와 편미분'
+    url: /ko/math/calculus/partial_derivatives
 - id: holomorphic
   en: holomorphic
   ko: 복소정칙
@@ -4379,6 +4458,8 @@ H:
   defs:
   - label: '[대수다양체] §아핀다양체'
     url: /ko/math/algebraic_varieties/affine_varieties
+  - label: '[미적분학] §다변수함수와 편미분'
+    url: /ko/math/calculus/partial_derivatives
 I:
 - id: i_-graded_left_a_-module
   en: $I$-graded left $A$-module
@@ -4492,6 +4573,13 @@ I:
   defs:
   - label: '[집합론] §단조함수'
     url: /ko/math/set_theory/monotone_functions
+- id: indefinite_integral
+  en: indefinite integral
+  ko: 부정적분
+  primary: ko
+  defs:
+  - label: '[미적분학] §적분'
+    url: /ko/math/calculus/integration
 - id: index
   en: index
   ko: 인덱스
@@ -4678,6 +4766,13 @@ I:
     url: /ko/math/linear_algebra/bilinear_form
   - label: '[선형대수학] §내적공간'
     url: /ko/math/linear_algebra/inner_product_spaces
+- id: integrable
+  en: integrable
+  ko: 적분가능
+  primary: ko
+  defs:
+  - label: '[미적분학] §적분'
+    url: /ko/math/calculus/integration
 - id: integral
   en: integral
   ko: 정수적
@@ -5014,6 +5109,13 @@ I:
   defs:
   - label: '[사교기하학] §사교벡터공간'
     url: /ko/math/symplectic_geometry/linear_symplectic_geometry
+- id: iterated_integral
+  en: iterated integral
+  ko: 반복적분
+  primary: ko
+  defs:
+  - label: '[미적분학] §다중적분'
+    url: /ko/math/calculus/multiple_integrals
 - id: i_th_row_vector
   en: $i$th row vector
   ko: $i$번째 행벡터
@@ -5036,6 +5138,13 @@ J:
   defs:
   - label: '[사교기하학] §J-holomorphic curves'
     url: /ko/math/symplectic_geometry/j_holomorphic_curves
+- id: jacobi_matrix
+  en: Jacobi matrix
+  ko: 야코비 행렬
+  primary: ko
+  defs:
+  - label: '[미적분학] §다중적분'
+    url: /ko/math/calculus/multiple_integrals
 - id: jacobson_radical
   en: Jacobson radical
   ko: 제이콥슨 근기
@@ -5177,6 +5286,13 @@ K:
   - label: '[위상수학] §차원'
     url: /ko/math/topology/dimension
 L:
+- id: lagrange_multiplier
+  en: Lagrange multiplier
+  ko: 라그랑주 승수
+  primary: ko
+  defs:
+  - label: '[미적분학] §다변수함수와 편미분'
+    url: /ko/math/calculus/partial_derivatives
 - id: lagrangian_subspace
   en: Lagrangian subspace
   ko: 라그랑지안 부분공간
@@ -5492,6 +5608,8 @@ L:
     url: /ko/math/category_theory/limits
   - label: '[해석학] §수열의 수렴'
     url: /ko/math/analysis/convergence_of_sequences
+  - label: '[미적분학] §다변수함수와 편미분'
+    url: /ko/math/calculus/partial_derivatives
 - id: limit_ordinal
   en: limit ordinal
   ko: 극한서수
@@ -5632,6 +5750,7 @@ L:
   en: local
   ko: 국소적
   primary: en
+  note: '관형 용법: 뒤 명사까지 표준 영어 용어면 구 전체 영어(local ring 등), 아니면 한글 유지. 서술형은 ''<en>한/하다'' 꼴'
   defs:
   - label: '[스킴] §스킴의 위상구조'
     url: /ko/math/scheme_theory/topology_of_schemes
@@ -5991,6 +6110,13 @@ M:
   defs:
   - label: '[집합론] §유향집합'
     url: /ko/math/set_theory/directed_set
+- id: mesh
+  en: mesh
+  ko: 너비
+  primary: en
+  defs:
+  - label: '[미적분학] §적분'
+    url: /ko/math/calculus/integration
 - id: metric
   en: metric
   ko: 거리
@@ -6197,6 +6323,13 @@ M:
   defs:
   - label: '[선형대수학] §행렬식'
     url: /ko/math/linear_algebra/determinant
+- id: multiple_integral
+  en: multiple integral
+  ko: 다중적분
+  primary: ko
+  defs:
+  - label: '[미적분학] §다중적분'
+    url: /ko/math/calculus/multiple_integrals
 - id: multiplication
   en: multiplication
   ko: 곱셈
@@ -6800,6 +6933,8 @@ O:
   defs:
   - label: '[다중선형대수학] §쌍대공간'
     url: /ko/math/multilinear_algebra/dual_spaces
+  - label: '[미적분학] §곡선과 벡터함수'
+    url: /ko/math/calculus/vector_functions
 - id: orthogonal_basis
   en: orthogonal basis
   ko: 직교기저
@@ -6893,6 +7028,20 @@ P:
   defs:
   - label: '[가환대수학] §매개계'
     url: /ko/math/commutative_algebra/system_of_parameters
+- id: parametrized_curve
+  en: parametrized curve
+  ko: 매개곡선
+  primary: ko
+  defs:
+  - label: '[미적분학] §곡선과 벡터함수'
+    url: /ko/math/calculus/vector_functions
+- id: partial_derivative
+  en: partial derivative
+  ko: 편미분
+  primary: ko
+  defs:
+  - label: '[미적분학] §다변수함수와 편미분'
+    url: /ko/math/calculus/partial_derivatives
 - id: partial_mapping
   en: partial mapping
   ko: 편사상
@@ -6919,6 +7068,8 @@ P:
   ko: 분할
   primary: ko
   defs:
+  - label: '[미적분학] §적분'
+    url: /ko/math/calculus/integration
   - label: '[집합론] §집합의 합'
     url: /ko/math/set_theory/sum_of_sets
   - label: '[다중선형대수학] §대칭텐서'
@@ -7831,6 +7982,8 @@ R:
   defs:
   - label: '[대수다양체] §준사영다양체'
     url: /ko/math/algebraic_varieties/quasi_projective_varieties
+  - label: '[미적분학] §곡선과 벡터함수'
+    url: /ko/math/calculus/vector_functions
   see:
   - label: Singular point
     id: singular_point
@@ -8048,6 +8201,13 @@ R:
   defs:
   - label: '[대수다양체] §곡선에서의 리만-로흐 정리'
     url: /ko/math/algebraic_varieties/riemann_roch_theorem
+- id: riemann_sum
+  en: Riemann sum
+  ko: 리만 합
+  primary: ko
+  defs:
+  - label: '[미적분학] §적분'
+    url: /ko/math/calculus/integration
 - id: riemannian_manifold
   en: Riemannian manifold
   ko: 리만다양체
@@ -8240,6 +8400,13 @@ R:
   - label: '[집합론] §ZFC 공리계'
     url: /ko/math/set_theory/zfc_axioms
 S:
+- id: saddle_point
+  en: saddle point
+  ko: 안장점
+  primary: ko
+  defs:
+  - label: '[미적분학] §다변수함수와 편미분'
+    url: /ko/math/calculus/partial_derivatives
 - id: saturated
   en: saturated
   ko: 포화된
@@ -8879,6 +9046,13 @@ S:
     url: /ko/math/linear_algebra/characteristic_polynomial
   - label: '[스킴] §스펙트럼'
     url: /ko/math/scheme_theory/spectrums
+- id: speed
+  en: speed
+  ko: 속력
+  primary: ko
+  defs:
+  - label: '[미적분학] §곡선과 벡터함수'
+    url: /ko/math/calculus/vector_functions
 - id: sphere_bundle
   en: sphere bundle
   ko: 구면다발
@@ -8886,6 +9060,13 @@ S:
   defs:
   - label: '[대수적 위상수학] §벡터다발의 특성류'
     url: /ko/math/algebraic_topology/characteristic_classes
+- id: spherical_coordinates
+  en: spherical coordinates
+  ko: 구면좌표
+  primary: ko
+  defs:
+  - label: '[미적분학] §다중적분'
+    url: /ko/math/calculus/multiple_integrals
 - id: split
   en: split
   ko: 분해
@@ -9769,6 +9950,13 @@ T:
   defs:
   - label: '[호몰로지 대수학] §유도카테고리'
     url: /ko/math/homological_algebra/derived_categories
+- id: triple_integral
+  en: triple integral
+  ko: 삼중적분
+  primary: ko
+  defs:
+  - label: '[미적분학] §다중적분'
+    url: /ko/math/calculus/multiple_integrals
 - id: trivial_extension
   en: trivial extension
   ko: 자명한 확장
@@ -9928,6 +10116,20 @@ U:
   defs:
   - label: '[집합론] §집합의 합'
     url: /ko/math/set_theory/sum_of_sets
+- id: unit_normal_vector
+  en: unit normal vector
+  ko: 단위법선벡터
+  primary: ko
+  defs:
+  - label: '[미적분학] §곡선과 벡터함수'
+    url: /ko/math/calculus/vector_functions
+- id: unit_tangent_vector
+  en: unit tangent vector
+  ko: 단위접선벡터
+  primary: ko
+  defs:
+  - label: '[미적분학] §곡선과 벡터함수'
+    url: /ko/math/calculus/vector_functions
 - id: unital_a_-algebra
   en: unital $A$-algebra
   ko: 단위 $A$-대수
@@ -10104,6 +10306,20 @@ V:
   defs:
   - label: '[선형대수학] §벡터공간'
     url: /ko/math/linear_algebra/vector_spaces
+- id: vector-valued_function
+  en: vector-valued function
+  ko: 벡터값 함수
+  primary: ko
+  defs:
+  - label: '[미적분학] §곡선과 벡터함수'
+    url: /ko/math/calculus/vector_functions
+- id: velocity
+  en: velocity
+  ko: 속도
+  primary: ko
+  defs:
+  - label: '[미적분학] §곡선과 벡터함수'
+    url: /ko/math/calculus/vector_functions
 - id: velocity_vector
   en: velocity vector
   ko: 속도벡터

@@ -286,7 +286,7 @@ $$\theta=\frac{g^d}{f^e}\in \mathfrak{q}\iff g^d\in \mathfrak{p}\iff g\in \mathf
 이다. 따라서 [보조정리 8](#lem8)의 homeomorphism은 [따름정리 6](#cor6)의 $D_+(fg)=D_+(f)\cap D_+(g)$를 정확히 $D(\theta)$ 위로 옮긴다.
 :::
 
-따라서, $\Spec A_{(g)}$의 principal open set $D(f^{\deg g}/g^{\deg f})\subseteq \Spec A_{(f)}$와 $\Spec A_{(f)}$의 principal open set $\Spec A_{(fg)}\cong D(g^{\deg f}/f^{\deg g})$ 사이의 isomorphism이 존재한다. 이제 다음 정리는 단순한 계산이다. 
+따라서, $\Spec A_{(g)}$의 principal open set $D(f^{\deg g}/g^{\deg f})\subseteq \Spec A_{(g)}$와 $\Spec A_{(f)}$의 principal open set $\Spec A_{(fg)}\cong D(g^{\deg f}/f^{\deg g})$ 사이의 isomorphism이 존재한다. 이제 다음 정리는 단순한 계산이다. 
 
 ::: 정리 10
 위에서 정의한 $\Spec A_{(f)}$들과 open subscheme들 $D(g^{\deg f}/f^{\deg g})$, 그리고 isomorphism

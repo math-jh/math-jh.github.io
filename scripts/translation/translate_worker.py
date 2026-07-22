@@ -1807,10 +1807,20 @@ _KO_TYPO_INLINE_RE = re.compile(
     r"(?:genuine\s+)?(?:mathematical\s+)?(?:errors?|typos?))\b", re.I)
 
 
+# "(none detected)" / "(none found)" / "None detected." 류의 빈 목록 마커.
+_KO_TYPO_NONE_RE = re.compile(r"^\(?\s*none\b[^()]*\)?\s*\.?$", re.I)
+
+
 def extract_ko_typos(verdict_text: str) -> list:
     """Errors the verifier spotted in the KO source. Reported whether the verdict
     was safe or lossy — a KO typo is not an EN defect, so it never shows up as
-    'lossy', which is exactly why these went unnoticed for so long."""
+    'lossy', which is exactly why these went unnoticed for so long.
+
+    KO-TYPOS 섹션 헤더가 있으면 그 섹션만 믿는다 — 비어 있어도 legacy
+    fallback 으로 넘어가지 않는다. 예전엔 빈 섹션이 fallback 을 타면서
+    `\\btypos?\\b` 가 "KO-TYPOS:" 헤더 자체에 매치돼, 오타 0건이
+    "FLAGGED — 1 ko-typo"(내용은 헤더 문자열)로 둔갑했다 (2026-07-22
+    로그 리뷰에서 확인 — 최근 플래그 8건 중 7건이 이 오탐)."""
     if not verdict_text:
         return []
     m = _KO_TYPO_HEAD_RE.search(verdict_text)
@@ -1822,10 +1832,11 @@ def extract_ko_typos(verdict_text: str) -> list:
                 continue
             if not s.startswith("-"):      # next section began
                 break
-            out.append(s.lstrip("- ").strip())
-        if out:
-            return out
-    # Legacy / narrated form.
+            item = s.lstrip("- ").strip()
+            if item and not _KO_TYPO_NONE_RE.match(item):
+                out.append(item)
+        return out
+    # Legacy / narrated form (KO-TYPOS 섹션이 아예 없던 옛 verdict 전용).
     return [ln.strip().lstrip("- ").strip()
             for ln in verdict_text.splitlines() if _KO_TYPO_INLINE_RE.search(ln)]
 
