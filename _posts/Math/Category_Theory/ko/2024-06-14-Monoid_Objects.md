@@ -23,7 +23,7 @@ weight: 7
 Monoidal category $(\mathcal{A},\otimes, I)$에서의 *monoid object<sub>모노이드 대상</sub>*이란 다음의 데이터 
 - 대상 $M$,
 - *multiplication<sub>곱셈</sub>* $\mu:M\otimes M \rightarrow M$,
-- *unit* $\eta:I \rightarrow M$
+- *unit<sub>단위</sub>* $\eta:I \rightarrow M$
 으로 주어진다. 이들은 다음 조건을 만족한다. 
 
 - (Associativity)[^1]
