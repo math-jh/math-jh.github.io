@@ -10,6 +10,8 @@ sidebar:
 
 date: 2025-03-23
 weight: 21
+published: false
+drift_needed: true
 
 ---
 
@@ -97,3 +99,54 @@ $$(0)\subset(\x_n)\subset(\x_{n-1},\x_n)\subset\cdots\subset(\x_{d+1},\ldots, \x
 
 은 이 ideal의 height가 적어도 $n-d$임을 보여주며, 몫환 $B/(\x_{d+1},\ldots, \x_n)\cong\mathbb{K}[\x_1,\ldots, \x_d]$가 $d$차원이므로 ([§매개계, ⁋따름정리 11](/ko/math/commutative_algebra/system_of_parameters#cor11)) 부등식 $\dim+\operatorname{ht}\leq n$으로 height는 기껏해야 $n-d$이다. 따라서 $\operatorname{ht}_B(\x_{d+1},\ldots, \x_n)=n-d$이며, 결국 $\operatorname{ht}\mathfrak{p}=n-d=\dim A-\dim A/\mathfrak{p}$이다.
 :::
+
+## 제네릭 자유성
+
+지금까지는 base가 field인 상황을 다루었다. 이를 Noetherian integral domain $A$로 넓히면 finite type $A$-algebra $B$와 그 위의 finitely generated module $M$이 $A$-module로서 free일 이유는 없다. 그러나 $A$의 $0$이 아닌 원소 하나를 뒤집는 것만으로 언제나 free로 만들 수 있다는 것이 다음의 결과이며, localization $A_a$가 $A$와 같은 field of fractions를 가지므로 이는 free성이 generic하게 성립한다는 뜻이다.
+
+::: 정리 5 (Grothendieck의 generic freeness)
+Noetherian integral domain $A$와 finite type $A$-algebra $B$, 그리고 finitely generated $B$-module $M$이 주어졌다 하자. 그럼 $0$이 아닌 $a\in A$가 존재하여 $M_a$가 free $A_a$-module이 된다.
+:::
+::: 증명
+$B$는 Noetherian integral domain $A$ 위의 finite type 대수이므로 [§기본 개념들, ⁋정리 12](/ko/math/commutative_algebra/basic_notions#thm12)에 의하여 Noetherian ring이다.
+
+**Dévissage.** [§동반소아이디얼, ⁋보조정리 6](/ko/math/commutative_algebra/associated_primes#lem6)을 $B$와 $M$에 적용하면 filtration
+
+$$0=M_0\subseteq M_1\subseteq\cdots\subseteq M_n=M,\qquad M_i/M_{i-1}\cong B/\mathfrak{q}_i$$
+
+를 얻는다. 각 $B/\mathfrak{q}_i$에 대하여 결론이 성립한다 하고 그 원소들의 곱을 $a$라 하면, exact sequence
+
+$$0 \longrightarrow (M_{i-1})_a \longrightarrow (M_i)_a \longrightarrow (B/\mathfrak{q}_i)_a \longrightarrow 0$$
+
+의 오른쪽 항이 free module이므로 이 exact sequence는 split하고, $i$에 대한 귀납법으로 $(M_i)_a$가 모두 free $A_a$-module이 된다. 따라서 $M=B/\mathfrak{q}$인 경우, 즉 $B$를 $B/\mathfrak{q}$로 바꾸어 $B$가 integral domain이고 $M=B$인 경우만 보이면 충분하다.
+
+**환원.** $\varphi: A \rightarrow B$의 kernel이 $0$이 아니라면 $0\neq a\in \ker \varphi$를 택하자. $B_a=B\otimes_AA_a$에서 $\varphi(a)=0$이면서 $a$가 unit이므로 $B_a=0$이고, 이는 rank $0$의 free module이다. 따라서 $A\subseteq B$라 가정해도 좋다.
+
+**귀납.** $K=\Frac(A)$라 하자. $B\otimes_AK$는 $A\setminus\{0\}$에서의 $B$의 localization이므로 $0$이 아닌 integral domain이며, $K$ 위의 finite type 대수이다. $d=\dim (B\otimes_AK)$에 대한 귀납법을 쓴다.
+
+[정리 1](#thm1)을 ideal의 chain 없이 적용하면 algebraically independent한 원소들 $y_1,\ldots, y_d\in B\otimes_AK$가 존재하여 $B\otimes_AK$가 $K[y_1,\ldots,y_d]$ 위의 finite module이다. 각 $y_i$에 $A$의 $0$이 아닌 원소를 곱해도 대수적 독립성과 유한성은 유지되므로, 처음부터 $y_i\in B$라 가정해도 좋다.
+
+$B$를 $A$-algebra로서 생성하는 원소를 $b_1,\ldots, b_m$이라 하면 각 $b_j$는 $K[y_1,\ldots,y_d]$ 위에서 integral하다. 이 정수 방정식들에 등장하는 계수는 유한개이므로, 그 분모를 모두 없애는 $0\neq a_0\in A$를 택할 수 있다. 그럼 각 $b_j$는
+
+$$C=A_{a_0}[y_1,\ldots, y_d]$$
+
+위에서 integral하고, 따라서 $B_{a_0}$는 finite $C$-module이다. 여기에서 $y_i$들이 $K$ 위에서 대수적으로 독립이므로 $C$는 $A_{a_0}$ 위의 polynomial ring이며, 특히 free $A_{a_0}$-module이다.
+
+이제 dévissage를 Noetherian ring $C$와 finite $C$-module $B_{a_0}$에 다시 적용하면, quotient가 $C/\mathfrak{p}$ 꼴인 finite filtration을 얻는다. 따라서 각 $C/\mathfrak{p}$에 대하여 결론을 보이면 충분하다.
+
+귀납의 기저는 $d=0$인 경우이다. 이때 $C=A_{a_0}$이므로 위의 dévissage가 주는 quotient는 $A_{a_0}/\mathfrak{p}$ 꼴이고, $\mathfrak{p}=0$이면 free module이며 $\mathfrak{p}\neq 0$이면 $\mathfrak{p}$의 $0$이 아닌 원소를 뒤집어 $0$으로 만들 수 있다.
+
+이제 $d>0$이라 하자. $\mathfrak{p}=0$이면 $C$ 자신이 free $A_{a_0}$-module이므로 볼 것이 없다. $\mathfrak{p}\neq 0$이라 하자. 만일 $\mathfrak{p}\cap A_{a_0}\neq 0$이면 그 안의 $0$이 아닌 원소 $a_1$을 택했을 때 $(C/\mathfrak{p})_{a_1}=0$이므로 결론이 성립한다. 그렇지 않다면 $S=A_{a_0}\setminus\{0\}$에 대하여 $S^{-1}C=K[y_1,\ldots,y_d]$이고 $\mathfrak{p}\cap S=\emptyset$이므로, $\mathfrak{p}K[y_1,\ldots,y_d]$는 $K[y_1,\ldots,y_d]$의 $0$이 아닌 prime ideal이다. 이제
+
+$$(C/\mathfrak{p})\otimes_{A_{a_0}}K=K[y_1,\ldots,y_d]/\mathfrak{p}K[y_1,\ldots,y_d]$$
+
+인데, $0\neq g\in \mathfrak{p}K[y_1,\ldots,y_d]$를 택하면 이 quotient ring에서 $y_1,\ldots,y_d$의 image들은 $g=0$이라는 대수적 관계를 만족하므로 대수적으로 독립일 수 없다. 그런데 이 quotient ring은 이들 image로 생성되는 $K$-algebra이므로 그 field of fractions의 초월차수는 $d$보다 작고, [정리 3](#thm3)에 의하여
+
+$$\dim\big((C/\mathfrak{p})\otimes_{A_{a_0}}K\big)<d$$
+
+이다. $A_{a_0}$ 또한 $K$를 field of fractions로 갖는 Noetherian integral domain이고 $C/\mathfrak{p}$는 그 위의 finite type integral domain이므로, 귀납가정을 적용하면 $0\neq a_\mathfrak{p}\in A_{a_0}$가 존재하여 $(C/\mathfrak{p})_{a_\mathfrak{p}}$가 free $(A_{a_0})_{a_\mathfrak{p}}$-module이다. 필요하다면 $a_0$의 거듭제곱을 곱하여 $a_\mathfrak{p}\in A$로 볼 수 있다.
+
+Filtration에 등장하는 유한개의 $\mathfrak{p}$들에 대한 $a_\mathfrak{p}$와 $a_0$의 곱을 $a$로 두면 $B_a=(B_{a_0})_a$는 free $A_a$-module이다.
+:::
+
+증명에서 결정적인 것은 두 가지이다. 하나는 dévissage로 $M$을 $B/\mathfrak{q}$ 꼴의 quotient들로 분해하여 문제를 domain의 경우로 옮기는 것이고, 다른 하나는 [정리 1](#thm1)로 $B$를 $A_{a_0}$ 위의 polynomial ring 위에서 finite하게 만든 뒤 [정리 3](#thm3)의 차원 계산으로 초월차수를 떨어뜨려 귀납을 돌리는 것이다. Free module은 flat이므로 [정리 5](#thm5)는 flatness가 generic하게 성립한다는 진술로도 읽히며, 이 형태가 대수기하에서 finite type 사상이 base의 조밀한 열린집합 위에서 flat이 된다는 사실과 finite type 사상의 상이 constructible이라는 Chevalley의 정리를 준다.

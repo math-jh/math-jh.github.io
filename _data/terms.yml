@@ -10206,6 +10206,13 @@ U:
   defs:
   - label: '[집합론] §집합의 합'
     url: /ko/math/set_theory/sum_of_sets
+- id: unit
+  en: unit
+  ko: 단위
+  primary: en
+  defs:
+  - label: '[범주론] §모노이드 대상'
+    url: /ko/math/category_theory/monoid_objects#def1
 - id: unit_normal_vector
   en: unit normal vector
   ko: 단위법선벡터
