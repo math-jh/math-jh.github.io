@@ -3679,6 +3679,13 @@ F:
   see:
   - label: Projective module
     id: projective_module
+- id: flux
+  en: flux
+  ko: 선속
+  primary: ko
+  defs:
+  - label: '[미적분학] §면적분과 선속'
+    url: /ko/math/calculus/surface_integrals
 - id: four_fundamental_subspaces
   en: four fundamental subspaces
   ko: 네 개의 기본공간들
@@ -5123,6 +5130,8 @@ I:
     url: /ko/math/algebraic_structures/algebraic_structures
   - label: '[대수다양체] §아핀다양체'
     url: /ko/math/algebraic_varieties/affine_varieties
+  - label: '[범주론] §범주'
+    url: /ko/math/category_theory/categories
 - id: isomorphism_class
   en: isomorphism class
   ko: 동형류
@@ -6940,6 +6949,8 @@ O:
   defs:
   - label: '[대수적 위상수학] §벡터다발의 특성류'
     url: /ko/math/algebraic_topology/characteristic_classes
+  - label: '[미적분학] §면적분과 선속'
+    url: /ko/math/calculus/surface_integrals
 - id: orientation_double_cover
   en: orientation double cover
   ko: 방향 이중덮개
@@ -7070,6 +7081,13 @@ P:
   defs:
   - label: '[미적분학] §곡선과 벡터함수'
     url: /ko/math/calculus/vector_functions
+- id: parametrized_surface
+  en: parametrized surface
+  ko: 매개곡면
+  primary: ko
+  defs:
+  - label: '[미적분학] §면적분과 선속'
+    url: /ko/math/calculus/surface_integrals
 - id: partial_derivative
   en: partial derivative
   ko: 편미분
@@ -8033,6 +8051,8 @@ R:
     url: /ko/math/algebraic_varieties/quasi_projective_varieties
   - label: '[미적분학] §곡선과 벡터함수'
     url: /ko/math/calculus/vector_functions
+  - label: '[미적분학] §면적분과 선속'
+    url: /ko/math/calculus/surface_integrals
   see:
   - label: Singular point
     id: singular_point
@@ -9498,6 +9518,20 @@ S:
   see:
   - label: Infimum (greatest lower bound)
     id: infimum
+- id: surface_area
+  en: surface area
+  ko: 곡면넓이
+  primary: ko
+  defs:
+  - label: '[미적분학] §면적분과 선속'
+    url: /ko/math/calculus/surface_integrals
+- id: surface_integral
+  en: surface integral
+  ko: 면적분
+  primary: ko
+  defs:
+  - label: '[미적분학] §면적분과 선속'
+    url: /ko/math/calculus/surface_integrals
 - id: surjective
   en: surjective
   ko: 전사
