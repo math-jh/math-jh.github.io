@@ -436,6 +436,13 @@ A:
   defs:
   - label: '[미적분학] §곡선과 벡터함수'
     url: /ko/math/calculus/vector_functions
+- id: argument
+  en: argument
+  ko: 편각
+  primary: ko
+  defs:
+  - label: '[복소해석학] §복소수와 복소평면'
+    url: /ko/math/complex_analysis/complex_numbers
 - id: artinian
   en: artinian
   ko: 아틴가군
@@ -1930,6 +1937,13 @@ C:
   defs:
   - label: '[층론] §Perverse 층'
     url: /ko/math/sheaf_theory/perverse_sheaves
+- id: complex_conjugate
+  en: complex conjugate
+  ko: 복소켤레
+  primary: ko
+  defs:
+  - label: '[복소해석학] §복소수와 복소평면'
+    url: /ko/math/complex_analysis/complex_numbers
 - id: complex_manifold
   en: complex manifold
   ko: 복소다양체
@@ -1937,6 +1951,20 @@ C:
   defs:
   - label: '[복소기하학] §복소다양체'
     url: /ko/math/complex_geometry/complex_manifolds
+- id: complex_number
+  en: complex number
+  ko: 복소수
+  primary: ko
+  defs:
+  - label: '[복소해석학] §복소수와 복소평면'
+    url: /ko/math/complex_analysis/complex_numbers
+- id: complex_plane
+  en: complex plane
+  ko: 복소평면
+  primary: ko
+  defs:
+  - label: '[복소해석학] §복소수와 복소평면'
+    url: /ko/math/complex_analysis/complex_numbers
 - id: composition
   en: composition
   ko: 합성
@@ -2148,6 +2176,8 @@ C:
   defs:
   - label: '[미적분학] §평균값 정리'
     url: /ko/math/calculus/mean_value_theorem
+  - label: '[복소해석학] §Cauchy 정리'
+    url: /ko/math/complex_analysis/cauchy_theorem
 - id: coordinate_form
   en: coordinate form
   ko: 좌표 형식
@@ -3295,6 +3325,13 @@ E:
   defs:
   - label: '[대수적 위상수학] §벡터다발의 특성류'
     url: /ko/math/algebraic_topology/characteristic_classes
+- id: euler_s_formula
+  en: 'euler''s formula'
+  ko: Euler 공식
+  primary: ko
+  defs:
+  - label: '[복소해석학] §복소수와 복소평면'
+    url: /ko/math/complex_analysis/complex_numbers
 - id: evaluation_map
   en: evaluation map
   ko: 값매김사상
@@ -4290,10 +4327,10 @@ H:
   ko: 헤시안
   primary: en
   defs:
-  - label: '[리만기하학] §접속'
-    url: /ko/math/riemannian_geometry/connection
   - label: '[미적분학] §다변수함수와 편미분'
     url: /ko/math/calculus/partial_derivatives
+  - label: '[리만기하학] §접속'
+    url: /ko/math/riemannian_geometry/connection
 - id: holomorphic
   en: holomorphic
   ko: 복소정칙
@@ -4498,10 +4535,10 @@ H:
   ko: 초곡면
   primary: en
   defs:
-  - label: '[대수다양체] §아핀다양체'
-    url: /ko/math/algebraic_varieties/affine_varieties
   - label: '[미적분학] §다변수함수와 편미분'
     url: /ko/math/calculus/partial_derivatives
+  - label: '[대수다양체] §아핀다양체'
+    url: /ko/math/algebraic_varieties/affine_varieties
 I:
 - id: i_-graded_left_a_-module
   en: $I$-graded left $A$-module
@@ -4567,6 +4604,20 @@ I:
   see:
   - label: Preimage
     id: preimage
+- id: imaginary_part
+  en: imaginary part
+  ko: 허수부
+  primary: ko
+  defs:
+  - label: '[복소해석학] §복소수와 복소평면'
+    url: /ko/math/complex_analysis/complex_numbers
+- id: imaginary_unit
+  en: imaginary unit
+  ko: 허수단위
+  primary: ko
+  defs:
+  - label: '[복소해석학] §복소수와 복소평면'
+    url: /ko/math/complex_analysis/complex_numbers
 - id: immersion
   en: immersion
   ko: 몰입
@@ -5133,12 +5184,12 @@ I:
   defs:
   - label: '[선형대수학] §동형사상'
     url: /ko/math/linear_algebra/isomorphic_vector_spaces
+  - label: '[범주론] §범주'
+    url: /ko/math/category_theory/categories
   - label: '[대수적 구조] §대수적 구조'
     url: /ko/math/algebraic_structures/algebraic_structures
   - label: '[대수다양체] §아핀다양체'
     url: /ko/math/algebraic_varieties/affine_varieties
-  - label: '[범주론] §범주'
-    url: /ko/math/category_theory/categories
 - id: isomorphism_class
   en: isomorphism class
   ko: 동형류
@@ -5648,12 +5699,12 @@ L:
   defs:
   - label: '[미적분학] §함수의 극한'
     url: /ko/math/calculus/functions_and_limits
+  - label: '[미적분학] §다변수함수와 편미분'
+    url: /ko/math/calculus/partial_derivatives
   - label: '[범주론] §극한'
     url: /ko/math/category_theory/limits
   - label: '[해석학] §수열의 수렴'
     url: /ko/math/analysis/convergence_of_sequences
-  - label: '[미적분학] §다변수함수와 편미분'
-    url: /ko/math/calculus/partial_derivatives
 - id: limit_ordinal
   en: limit ordinal
   ko: 극한서수
@@ -6161,6 +6212,13 @@ M:
   defs:
   - label: '[집합론] §유향집합'
     url: /ko/math/set_theory/directed_set
+- id: meromorphic
+  en: meromorphic
+  ko: 유리형
+  primary: ko
+  defs:
+  - label: '[복소해석학] §편각원리와 Rouché 정리'
+    url: /ko/math/complex_analysis/argument_principle
 - id: mesh
   en: mesh
   ko: 너비
@@ -6248,6 +6306,13 @@ M:
   defs:
   - label: '[스택] §Moduli 문제: fine moduli와 coarse moduli'
     url: /ko/math/stacks/moduli_problems
+- id: modulus
+  en: modulus
+  ko: 절댓값
+  primary: ko
+  defs:
+  - label: '[복소해석학] §복소수와 복소평면'
+    url: /ko/math/complex_analysis/complex_numbers
 - id: monodromy_functor
   en: monodromy functor
   ko: ''
@@ -6798,6 +6863,13 @@ O:
   defs:
   - label: '[집합론] §유향집합'
     url: /ko/math/set_theory/directed_set
+- id: open_map
+  en: open map
+  ko: 열린사상
+  primary: en
+  defs:
+  - label: '[복소해석학] §편각원리와 Rouché 정리'
+    url: /ko/math/complex_analysis/argument_principle
 - id: open_mapping
   en: open mapping
   ko: 열린사상
@@ -6961,10 +7033,10 @@ O:
   ko: 방향
   primary: ko
   defs:
-  - label: '[대수적 위상수학] §벡터다발의 특성류'
-    url: /ko/math/algebraic_topology/characteristic_classes
   - label: '[미적분학] §면적분과 선속'
     url: /ko/math/calculus/surface_integrals
+  - label: '[대수적 위상수학] §벡터다발의 특성류'
+    url: /ko/math/algebraic_topology/characteristic_classes
 - id: orientation_double_cover
   en: orientation double cover
   ko: 방향 이중덮개
@@ -6991,10 +7063,10 @@ O:
   ko: 작교
   primary: en
   defs:
-  - label: '[다중선형대수학] §쌍대공간'
-    url: /ko/math/multilinear_algebra/dual_spaces
   - label: '[미적분학] §곡선과 벡터함수'
     url: /ko/math/calculus/vector_functions
+  - label: '[다중선형대수학] §쌍대공간'
+    url: /ko/math/multilinear_algebra/dual_spaces
 - id: orthogonal_basis
   en: orthogonal basis
   ko: 직교기저
@@ -7307,6 +7379,13 @@ P:
   defs:
   - label: '[해석학] §함수열과 점별수렴'
     url: /ko/math/analysis/sequences_of_functions
+- id: polar_form
+  en: polar form
+  ko: 극형식
+  primary: ko
+  defs:
+  - label: '[복소해석학] §복소수와 복소평면'
+    url: /ko/math/complex_analysis/complex_numbers
 - id: polynomial_algebra
   en: polynomial algebra
   ko: 다항식 대수
@@ -7973,6 +8052,13 @@ R:
   defs:
   - label: '[대수다양체] §저우 군'
     url: /ko/math/algebraic_varieties/chow_groups
+- id: real_part
+  en: real part
+  ko: 실수부
+  primary: ko
+  defs:
+  - label: '[복소해석학] §복소수와 복소평면'
+    url: /ko/math/complex_analysis/complex_numbers
 - id: recursion_theorem
   en: recursion theorem
   ko: 재귀정리
@@ -8061,12 +8147,12 @@ R:
   ko: 정칙
   primary: en
   defs:
-  - label: '[대수다양체] §준사영다양체'
-    url: /ko/math/algebraic_varieties/quasi_projective_varieties
   - label: '[미적분학] §곡선과 벡터함수'
     url: /ko/math/calculus/vector_functions
   - label: '[미적분학] §면적분과 선속'
     url: /ko/math/calculus/surface_integrals
+  - label: '[대수다양체] §준사영다양체'
+    url: /ko/math/algebraic_varieties/quasi_projective_varieties
   see:
   - label: Singular point
     id: singular_point
@@ -8461,6 +8547,13 @@ R:
   defs:
   - label: '[리 이론] §근계'
     url: /ko/math/lie_theory/root_systems
+- id: root_of_unity
+  en: root of unity
+  ko: Moivre 공식의 한 특수한 경우인 $$n$$제곱근 $$1$$, 곧 *단위근
+  primary: en
+  defs:
+  - label: '[복소해석학] §복소수와 복소평면'
+    url: /ko/math/complex_analysis/complex_numbers
 - id: root_system
   en: root system
   ko: 근계
@@ -8915,6 +9008,8 @@ S:
   defs:
   - label: '[미적분학] §그린 정리'
     url: /ko/math/calculus/greens_theorem
+  - label: '[복소해석학] §Cauchy 정리'
+    url: /ko/math/complex_analysis/cauchy_theorem
 - id: simply_connected_space
   en: simply connected space
   ko: 단순연결공간
@@ -9213,6 +9308,20 @@ S:
   defs:
   - label: '[스킴] §매끄러운 사상과 étale 사상'
     url: /ko/math/scheme_theory/smooth_and_etale_morphisms
+- id: star_center
+  en: star center
+  ko: 별중심
+  primary: ko
+  defs:
+  - label: '[복소해석학] §Cauchy 정리'
+    url: /ko/math/complex_analysis/cauchy_theorem
+- id: star-shaped
+  en: star-shaped
+  ko: 별모양
+  primary: en
+  defs:
+  - label: '[복소해석학] §Cauchy 정리'
+    url: /ko/math/complex_analysis/cauchy_theorem
 - id: stiefel-whitney_class
   en: Stiefel-whitney class
   ko: 슈티펠-휘트니 특성류
@@ -10398,10 +10507,10 @@ V:
   ko: 벡터장
   primary: ko
   defs:
-  - label: '[미분다양체] §벡터장'
-    url: /ko/math/manifolds/vector_fields
   - label: '[미적분학] §벡터장'
     url: /ko/math/calculus/vector_fields
+  - label: '[미분다양체] §벡터장'
+    url: /ko/math/manifolds/vector_fields
 - id: vector_space
   en: vector space
   ko: 벡터공간
@@ -10526,6 +10635,13 @@ W:
   defs:
   - label: '[대수다양체] §천 특성류'
     url: /ko/math/algebraic_varieties/chern_classes
+- id: winding_number
+  en: winding number
+  ko: 회전수
+  primary: ko
+  defs:
+  - label: '[복소해석학] §Cauchy 정리'
+    url: /ko/math/complex_analysis/cauchy_theorem
 Z:
 - id: zariski_tangent_space
   en: Zariski tangent space

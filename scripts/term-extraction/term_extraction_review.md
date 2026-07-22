@@ -5038,3 +5038,12 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 
 - _posts/Math/Commutative_Algebra/ko/2025-01-24-Divisors.md: 병기 필요 'pure codimension' — 소스 없음 (KMS exact ✗, 위키 ko ✗)
 - _posts/Math/Commutative_Algebra/ko/2025-01-24-Divisors.md: 병기 필요 'uniform한 기준' — 소스 없음 (KMS exact ✗, 위키 ko ✗)
+
+## term_extract_worker 2026-07-23 04:30
+
+- _posts/Math/Complex_Analysis/ko/2026-06-20-Complex_Numbers.md: 상한 초과 신규 후보 'distance' — 보류
+- _posts/Math/Complex_Analysis/ko/2026-06-20-Complex_Numbers.md: 상한 초과 신규 후보 'extended complex plane' — 보류
+- _posts/Math/Complex_Analysis/ko/2026-06-20-Complex_Numbers.md: 상한 초과 신규 후보 'Riemann sphere' — 보류
+- _posts/Math/Complex_Analysis/ko/2026-06-20-Complex_Numbers.md: 상한 초과 신규 후보 'stereographic projection' — 보류
+- _posts/Math/Complex_Analysis/ko/2026-06-20-Complex_Numbers.md: 상한 초과 신규 후보 'chordal metric' — 보류
+- _posts/Math/Complex_Analysis/ko/2026-06-20-Complex_Numbers.md: 상한 초과 신규 후보 'one-point compactification' — 보류
