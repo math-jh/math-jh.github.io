@@ -1,0 +1,44 @@
+{% comment %}
+  헤더 리드용 날짜 블록: 작성일/수정일 두 줄. 아이콘·라벨·날짜 3열 그리드라
+  줄 수와 무관하게 날짜 열이 수직정렬된다 (스타일: _page.scss .page__dates).
+  archive 카드·hero가 쓰는 page__meta.html과 별개다 (그쪽은 한 줄 요약용).
+{% endcomment %}
+{% assign date_format = site.date_format | default: "%B %-d, %Y" %}
+
+{% assign lang = site.locale %}
+{% assign lang_prefix = page.url | truncate: 3, "" %}
+{% if lang_prefix contains "en" or lang_prefix contains "ko" %}
+  {% assign lang = lang_prefix | remove_first: "/" %}
+{% endif %}
+
+{% comment %} Liquid는 A and B or C를 A and (B or C)로 우측결합 평가한다 {% endcomment %}
+{% if page.show_date != false and page.date or page.last_modified_at %}
+  {% comment %} page__meta 클래스 금지: .page .page__inner-wrap .page__meta가 float+clear라
+     본문 clearance가 헤더 margin-bottom을 무시하게 된다 (2026-07-22 실측) {% endcomment %}
+  <div class="page__dates">
+    {% if page.date %}
+    <span class="page__dates-row">
+      <i class="material-icons md-14" aria-hidden="true">event_available</i>
+      <span class="page__dates-label">{{ site.data.ui-text[lang].date_created_label | default: "Posted" }}</span>
+      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: date_format }}</time>
+    </span>
+    {% endif %}
+    {% if page.last_modified_at %}
+    <span class="page__dates-row">
+      <i class="material-icons md-14" aria-hidden="true">update</i>
+      <span class="page__dates-label">{{ site.data.ui-text[lang].date_updated_label | default: "Updated" }}</span>
+      <time class="dt-updated" datetime="{{ page.last_modified_at | date: "%Y-%m-%d" }}">{{ page.last_modified_at | date: date_format }}</time>
+    </span>
+    {% endif %}
+    {% if page.read_time %}
+      {% assign words_per_minute = page.words_per_minute | default: site.words_per_minute | default: 200 %}
+      {% assign words = page.content | strip_html | number_of_words %}
+    <span class="page__dates-row">
+      <i class="material-icons md-14" aria-hidden="true">hourglass_empty</i>
+      <span class="page__dates-readtime">
+        {% if words < words_per_minute %}{{ site.data.ui-text[lang].less_than | default: "less than" }} 1 {{ site.data.ui-text[lang].minute_read | default: "minute read" }}{% elsif words == words_per_minute %}1 {{ site.data.ui-text[lang].minute_read | default: "minute read" }}{% else %}{{ words | divided_by: words_per_minute }} {{ site.data.ui-text[lang].minute_read | default: "minute read" }}{% endif %}
+      </span>
+    </span>
+    {% endif %}
+  </div>
+{% endif %}

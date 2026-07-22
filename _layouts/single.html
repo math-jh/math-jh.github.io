@@ -47,7 +47,7 @@ layout: default
           </h1>{% endif %}
           {% if page.tagline %}<p class="page__subtitle">{{ page.tagline | markdownify | remove: "<p>" | remove: "</p>" }}</p>
           {% elsif page.header.show_overlay_excerpt != false and page.excerpt %}<p class="page__subtitle">{{ page.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>{% endif %}
-          {% include page__meta.html %}
+          {% include page__dates.html %}
         </header>
       {% endunless %}
 
@@ -71,14 +71,6 @@ layout: default
         {{ content }}
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
-
-      <footer class="page__meta">
-        {% if site.data.ui-text[lang].meta_label %}
-          <h4 class="page__meta-title">{{ site.data.ui-text[lang].meta_label }}</h4>
-        {% endif %}
-        {% include page__taxonomy.html %}
-        {% include page__date.html %}
-      </footer>
 
       {% if page.share %}{% include social-share.html %}{% endif %}
 

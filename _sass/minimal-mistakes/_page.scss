@@ -87,7 +87,7 @@ body {
    category eyebrow + hue dot, serif title, italic subtitle. The hue comes from
    --hero-hue/--hero-sat on <body> (set in default.html from the category). */
 .page__header--lead {
-  margin-bottom: 1.6em;
+  margin-bottom: 2.4em;
 
   .page__eyebrow {
     display: -webkit-box;
@@ -131,9 +131,6 @@ body {
     color: $muted-text-color;
   }
 
-  .page__meta {
-    margin-top: 0.9em;
-  }
 }
 
 .page__lead {
@@ -392,6 +389,40 @@ body {
 
   a {
     color: inherit;
+  }
+}
+
+/* 헤더 리드의 작성일/수정일 블록 (_includes/page__dates.html).
+   아이콘·라벨·날짜 3열 grid: 행이 몇 개든 날짜 열의 시작점이 맞는다.
+   라벨-날짜 사이는 라벨 셀의 margin-right로 벌린다 (콜론 없이 거리로 구분).
+   주의: page__meta 클래스를 얹지 말 것 — .page__inner-wrap의 float+clear 규칙에
+   걸려 본문 clearance가 헤더 margin-bottom을 무시한다. 타이포는 여기서 직접. */
+.page__dates {
+  margin-top: 1.35em;
+  color: $muted-text-color;
+  font-family: $sans-serif;
+  font-size: $type-size-6;
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  column-gap: 0.5em;
+  row-gap: 0.4em;
+  align-items: baseline;
+
+  .page__dates-row {
+    display: contents;   /* 자식(아이콘·라벨·날짜)이 직접 grid 셀이 된다 */
+  }
+
+  .material-icons {
+    align-self: center;  /* 아이콘 폰트는 baseline이 어긋나므로 행 중앙 정렬 */
+  }
+
+  .page__dates-label {
+    margin-right: 0.9em;
+    font-weight: 600;
+  }
+
+  .page__dates-readtime {
+    grid-column: 2 / -1;
   }
 }
 
