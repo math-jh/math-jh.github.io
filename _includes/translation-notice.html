@@ -1,11 +1,11 @@
 {% comment %}
   Renders a notice block at the top of any post whose frontmatter
-  `translation_source` matches site.translation_source_tag (_config.yml 정본 —
-  이중 SoT 감사 [U3], 2026-07-22; 예전엔 "kimi-cli" 리터럴이 여기 하드코딩).
-  The text comes from `_data/ui-text.yml` -> `<lang>.kimi_translation_notice`
-  (per-language). No per-file edits are needed; the frontmatter key is enough.
+  `translation_source` matches site.translation_source_tag (_config.yml 정본).
+  태그가 비어 있으면 어떤 페이지에도 노티스를 내지 않는다. The text comes from
+  `_data/ui-text.yml` -> `<lang>.kimi_translation_notice` (per-language).
+  No per-file edits are needed; the frontmatter key is enough.
 {% endcomment %}
-{% if page.translation_source and page.translation_source == site.translation_source_tag %}
+{% if site.translation_source_tag != blank and page.translation_source == site.translation_source_tag %}
   {% assign _lang = site.locale %}
   {% assign _lang_prefix = page.url | truncate: 3, "" %}
   {% if _lang_prefix contains "en" or _lang_prefix contains "ko" %}

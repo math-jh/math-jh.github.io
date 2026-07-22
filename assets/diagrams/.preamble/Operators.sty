@@ -2,15 +2,9 @@
 %%
 %% 의도된 이중 유지: 본문 수식 매크로의 정본은 assets/js/katex-macros.js
 %% (window.KATEX_MACROS)이고, 이 파일은 다이어그램 LaTeX 컴파일용으로 그중
-%% 필요한 어휘를 같은 이름·같은 렌더로 다시 정의한다 (JS↔LaTeX 라 파생 불가).
-%%
-%% 2026-07-22 (이중 SoT 감사 [0]): 실제 다이어그램이 쓰지 않는 매크로 111개를
-%% 제거했다 — 미사용 정의는 katex-macros.js 와 조용히 어긋나는 잠재 드리프트
-%% 표면일 뿐이다 (실제로 \lmod \rmod \RP \CP 가 이미 어긋난 채 발견됨).
-%% 새 다이어그램에 매크로가 필요하면: katex-macros.js 의 렌더와 맞춰 여기 추가
-%% 하고 scripts/audit/macro_parity.py 를 돌려 lock 을 갱신할 것 (build.sh 가
-%% 자동 실행해 어긋나면 빌드를 세운다).
-%% (2026-07-17: \Alg 인자, \lMod/\rMod prescript/subscript, \CRing→\cRing 동기화.)
+%% 필요한 어휘만 같은 이름·같은 렌더로 다시 정의한다 (JS↔LaTeX 라 파생 불가).
+%% 새 매크로는 katex-macros.js 의 렌더와 맞춰 추가하고, 겹치는 매크로를 고칠
+%% 때는 양쪽을 함께 맞출 것.
 
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
 \ProvidesPackage{Operators}[2023/05/17 Custom]

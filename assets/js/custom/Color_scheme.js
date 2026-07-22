@@ -1,6 +1,5 @@
 ---
 # Liquid 처리용 front matter — 본문의 Liquid include 태그가 테마 코어를 삽입한다
-# (이중 SoT 감사 [8], 2026-07-22)
 ---
 /* Theme controller — 3-state: auto | light | dark.
  *
@@ -10,12 +9,12 @@
  *  - auto : follow the OS (prefers-color-scheme), live (matchMedia listener).
  *  - light/dark : pinned, ignores the OS.
  *
- * Choice persists in the MTHEME cookie (legacy MDARK Y/N is migrated on read).
+ * Choice persists in the MTHEME cookie.
  * This file is a head_script, so it runs before paint; head.html 의 pre-paint
  * 인라인이 같은 코어를 삽입해 더 이른 시점에 스타일시트를 맞춘다.
  *
  * 쿠키 파싱·모드 해석·스타일시트 토글의 단일 출처는
- * _includes/js/theme-core.js (빌드 시 Liquid include 로 삽입 — 이중 SoT 감사 [8]).
+ * _includes/js/theme-core.js (빌드 시 Liquid include 로 삽입).
  */
 (function () {
   {% include js/theme-core.js %}

@@ -1,7 +1,6 @@
 // KaTeX macro definitions for math-jh.github.io
 // head_scripts 로 로드된다 (커스텀 스크립트들보다 먼저 — Xref_preview.js 가
-// parse 시점에 KATEX_DELIMITERS 를 읽는다). 2026-07-22 전까지는 scripts.html
-// 푸터에서 로드했다.
+// parse 시점에 KATEX_DELIMITERS 를 읽는다).
 // Exposed on window for the inline auto-render initializer.
 //
 // 의도된 이중 유지: 여기가 본문 수식 매크로의 정본이고, 다이어그램 LaTeX 쪽
@@ -243,10 +242,9 @@ window.KATEX_MACROS = {
     "\\shift":"(#1)\\text{-shifted}",
 };
 
-// renderMathInElement 딜리미터의 단일 출처 (이중 SoT 감사 [13], 2026-07-22).
+// renderMathInElement 딜리미터의 단일 출처.
 // 소비자: _includes/scripts.html(본문), Xref_preview.js(호버 미리보기 — 동일해야
-// 함), Terms_overlay.js(표제어 — display:false 로 강제한 파생형). 예전엔 세 곳에
-// 배열이 각자 하드코딩돼 주석으로만 동기화됐다.
+// 함), Terms_overlay.js(표제어 — display:false 로 강제한 파생형).
 window.KATEX_DELIMITERS = [
     {left: '$$', right: '$$', display: true},
     {left: '$', right: '$', display: false},

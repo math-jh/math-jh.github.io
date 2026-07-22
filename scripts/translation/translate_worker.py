@@ -100,12 +100,11 @@ from label_normalize import fix_text as label_fix, audit_text as label_audit  # 
 from math_delimiters import math_profile  # noqa: E402
 
 # 수식 스팬 정규식의 단일 출처는 .claude/hooks/md_lint.py — mech_sweep·josa_check 와
-# 같은 관례로 import 한다 (이중 SoT 감사 [3] Phase 1, 2026-07-22). 예전엔 여기
-# 아래(Math-mismatch verification 절)에 패턴이 자구까지 같은 사본이 따로 있었다.
+# 같은 관례로 import 한다.
 sys.path.insert(0, str(BLOG_ROOT / ".claude" / "hooks"))
 import md_lint as _md_lint  # noqa: E402
 
-# 초안(published:false) 판정의 단일 출처는 terms_common (이중 SoT 감사 [9]).
+# 초안(published:false) 판정의 단일 출처는 terms_common.
 sys.path.insert(0, str(BLOG_ROOT / "scripts" / "term-extraction"))
 from terms_common import published_false_in_fm as _published_false_in_fm  # noqa: E402
 
@@ -139,7 +138,7 @@ def release_lock() -> None:
 
 # translation_state.json 스키마의 정본은 이 파일이다. 외부 소비자:
 # scripts/term-extraction/term_extract_worker.py 의 load_translation_ts 가
-# files/status=="done"/last_attempt_ts 를 읽는다 (이중 SoT 감사 [U1], 2026-07-22).
+# files/status=="done"/last_attempt_ts 를 읽는다.
 # 키를 바꾸면 저쪽 tripwire 경고를 확인할 것.
 def load_state() -> dict:
     if STATE_PATH.exists():
@@ -208,7 +207,7 @@ def _ko_body_length(ko_path: Path) -> int:
 
 def is_draft(ko_path: Path) -> bool:
     """True if frontmatter has `published: false`. Drafts are skipped.
-    판정은 단일 출처 terms_common.published_false_in_fm (이중 SoT 감사 [9])."""
+    판정은 단일 출처 terms_common.published_false_in_fm."""
     return _published_false_in_fm(_read_frontmatter(ko_path))
 
 
@@ -345,11 +344,9 @@ def commit_translation(ko_path: Path, en_path: Path, reason: str) -> None:
 
 
 # EN frontmatter 의 translation_source 태그. 단일 출처 = _config.yml 의
-# translation_source_tag (이중 SoT 감사 [U3], 2026-07-22) — 같은 값을
-# _includes/translation-notice.html 이 site.translation_source_tag 로 비교한다.
-# 값은 역사적으로 "kimi-cli" 로 고정 (백엔드가 GLM/Kimi 어느 쪽이든 "기계번역
-# 파이프라인 산출물"이라는 뜻의 마커다 — 백엔드명으로 바꾸면 기존 EN 652편의
-# 프론트매터와 어긋난다).
+# translation_source_tag — 같은 값을 _includes/translation-notice.html 이
+# site.translation_source_tag 로 비교한다. 현재 번역 워커의 태그이며, 워커가
+# 본격적으로 바뀌면 _config.yml 값과 함께 바뀐다.
 def _load_translation_source_tag() -> str:
     for line in (BLOG_ROOT / "_config.yml").read_text(encoding="utf-8").splitlines():
         s = line.strip()
@@ -813,7 +810,7 @@ _KO_PATH_RE    = re.compile(r"/ko/[A-Za-z0-9_\-/]+")
 # Fence-/raw-aware: a `:::` or `<ins>` inside ``` code fences or {% raw %} blocks
 # is ignored, exactly as the plugin ignores it.
 
-# 박스 어휘의 단일 출처 = _data/theorem_vocab.yml (이중 SoT 감사 [4], 2026-07-22).
+# 박스 어휘의 단일 출처 = _data/theorem_vocab.yml.
 # 플러그인 KIND_MAP 과 같은 파일에서 파생하므로 새 종류를 더해도 여기는 무변경.
 _VOCAB = yaml.safe_load(
     (BLOG_ROOT / "_data" / "theorem_vocab.yml").read_text(encoding="utf-8"))

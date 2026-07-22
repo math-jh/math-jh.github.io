@@ -1,6 +1,5 @@
 ---
 # Liquid 처리용 front matter — theme/background 색의 정본은 _data/brand.yml
-# (이중 SoT 감사 [6], 2026-07-22. 예전엔 hex 가 여기 하드코딩)
 ---
 {
     "name": "Blackbox",

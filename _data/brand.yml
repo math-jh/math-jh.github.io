@@ -1,6 +1,4 @@
-# 브랜드 마크 색 — 단일 출처 (이중 SoT 감사 [6], 2026-07-22).
-# 예전엔 같은 hex 가 SCSS·head 인클루드 2개·webmanifest·favicon 파이썬에 각자
-# 하드코딩돼 수동 동기화였다. 소비처:
+# 브랜드 마크 색 — 단일 출처. 소비처:
 #   _includes/head.html          — 파비콘 인라인 SVG(navy·brass), meta theme-color(chrome_dark)
 #   _includes/head/custom.html   — safari mask-icon 색(brass)
 #   _layouts/default.html        — 다크 스크롤바 트랙(chrome_dark)
@@ -9,8 +7,6 @@
 #   scripts/favicons/gen_favicons.py — 래스터 파비콘 생성 (yaml 로 읽음)
 # 주의: 색을 바꾸면 gen_favicons.py 재실행(래스터 재생성) +
 #       assets/favicons/safari-pinned-tab.svg 는 수동 확인.
-navy: "#0a1120"         # 마크 타일 · masthead/footer · PWA theme/background
+navy: &navy "#0a1120"   # 마크 타일 · masthead/footer · PWA theme/background
 brass: "#c89441"        # 마크 사각 스트로크 · masthead hover · mask-icon
-chrome_dark: "#071734"  # 브라우저 크롬(meta theme-color) · 다크 스크롤바 트랙.
-                        # navy 보다 짙은 의도된 별도 토큰 — manifest theme_color(navy)와
-                        # 값이 다른 현상태를 보존했다 (통일 여부는 취향 결정 사항).
+chrome_dark: *navy      # 브라우저 크롬(meta theme-color) · 다크 스크롤바 트랙 — navy 와 동일(alias)

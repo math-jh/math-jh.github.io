@@ -56,10 +56,10 @@ comments:
     discussion_term      : "pathname" # keeps ko/en pages as separate threads
     reactions_enabled    : "1"
     theme                : "preferred_color_scheme"
-# 기계번역 파이프라인 마커 — EN frontmatter `translation_source:` 의 정본 값
-# (이중 SoT 감사 [U3], 2026-07-22). 쓰는 곳: scripts/translation/translate_worker.py
-# (태그 기록), _includes/translation-notice.html (노티스 표시 조건). 값은 백엔드
-# (Kimi/GLM)와 무관한 역사적 고정 마커다 — 바꾸면 기존 EN 전체와 어긋난다.
+# 기계번역 파이프라인 마커 — EN frontmatter `translation_source:` 의 정본 값.
+# 쓰는 곳: scripts/translation/translate_worker.py (태그 기록),
+# _includes/translation-notice.html (값이 비어 있지 않고 페이지 태그와 일치할
+# 때만 노티스). 현재 번역 워커의 태그다 — 워커가 본격적으로 바뀌면 함께 바꾼다.
 translation_source_tag   : "kimi-cli"
 atom_feed:
   path                   : # blank (default) uses feed.xml
@@ -165,7 +165,6 @@ include:
   - .htaccess
   - _pages
   # _main.js 는 언더스코어 시작이라 기본 무시됨 — footer_scripts 직접 서빙에 필요
-  # (이중 SoT 감사 [1], 2026-07-22)
   - assets/js/_main.js
 exclude:
   - "*.sublime-project"
@@ -177,9 +176,8 @@ exclude:
   - .bundle
   - .jekyll-assets-cache
   - .sass-cache
-  # assets/js/plugins·_main.js 는 2026-07-22(이중 SoT 감사 [1])부터 exclude 를
-  # 풀고 소스를 직접 서빙한다 — 커밋된 minify 번들(main.min.js)은 재생성 경로가
-  # 없어 폐기했다. footer_scripts 목록(아래) 참고.
+  # assets/js/plugins·_main.js 는 exclude 하지 않는다 — footer_scripts 가 소스를
+  # 직접 서빙한다 (아래 footer_scripts 목록 참고).
   - assets/diagrams
   - assets/js/vendor/jquery/jquery-3.6.0.js
   - Capfile
@@ -316,12 +314,9 @@ defaults:
       # (Subject-home / category pages set their own overlay in frontmatter and
       # keep their hero.)
 
-# Footer scripts — 옛 main.min.js 번들의 전개형 (이중 SoT 감사 [1], 2026-07-22).
-# 번들은 jquery + plugins 6종 + _main.js 를 minify 한 커밋 산출물이었는데 재생성
-# 빌드 경로가 레포에 없어 소스와 이미 어긋나 있었다 (permalink 아이콘
-# vertical-align 패치가 번들에만 존재 → _main.js 로 역이식). 순서는 번들 내부
-# 순서 그대로다. jQuery 가 head_scripts 와 여기서 두 번 로드되는 것은 원래
-# 번들 시절과 동일한 의도된 구조다 (Blog_Development/Back_to_Top 글 참고).
+# Footer scripts — jquery + plugins 6종 + _main.js 를 이 순서대로 직접 서빙한다.
+# jQuery 가 head_scripts 와 여기서 두 번 로드되는 것은 의도된 구조다
+# (Blog_Development/Back_to_Top 글 참고).
 footer_scripts:
   - /assets/js/vendor/jquery-min/jquery-3.6.0.min.js
   - /assets/js/plugins/jquery.fitvids.js
@@ -336,7 +331,7 @@ footer_scripts:
 head_scripts:
   - /assets/js/vendor/jquery-min/jquery-3.6.0.min.js
   # katex-macros 는 커스텀 스크립트보다 먼저 — Xref_preview 가 parse 시점에
-  # window.KATEX_DELIMITERS 를 읽는다 (이중 SoT 감사 [13], 2026-07-22)
+  # window.KATEX_DELIMITERS 를 읽는다
   - /assets/js/katex-macros.js
   - /assets/js/custom/Color_scheme.js
   - /assets/js/custom/HiddenTopButton.js

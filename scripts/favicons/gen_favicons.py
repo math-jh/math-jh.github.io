@@ -4,9 +4,8 @@ a centered brass open square ("the black box"). Same mark as the inline SVG tab
 favicon in _includes/head.html.
 
 Mark (32-unit grid): navy tile, open square x8..24 brass stroke w3. 색의 단일
-출처는 _data/brand.yml (이중 SoT 감사 [6], 2026-07-22 — 예전엔 여기 튜플로
-하드코딩). Everything is drawn directly with PIL (supersampled for clean edges)
-— no SVG rasteriser needed. Re-run after a brand-colour change.
+출처는 _data/brand.yml. Everything is drawn directly with PIL (supersampled for
+clean edges) — no SVG rasteriser needed. Re-run after a brand-colour change.
 
 Outputs to assets/favicons/: favicon-16/32, favicon.ico, apple-touch-icon (180),
 android-chrome-192/512, mstile-150. safari-pinned-tab.svg 는 수동 관리(모노크롬
