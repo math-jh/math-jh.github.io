@@ -10,7 +10,7 @@ sidebar:
     nav: "scheme_theory-ko"
 
 date: 2025-03-08
-weight: 15
+weight: 11
 published: false
 
 ---
@@ -19,7 +19,7 @@ published: false
 
 이번 글에서 우리는 이 대응을 scheme의 단계로 끌어올린다. 즉 homogeneous ideal이 $\mathbb{P}^n$의 closed subscheme을 정의하고, 거꾸로 $\mathbb{P}^n$의 임의의 closed subscheme이 이러한 방식으로 얻어진다는 것을 살펴본다. 이번 글에서 $S_\bullet=\mathbb{K}[\x_0,\ldots,\x_n]$은 표준적인 grading이 주어진 graded ring이고, $\mathbb{P}^n=\Proj S_\bullet$이다.
 
-## 동차 아이디얼이 정의하는 닫힌 부분스킴
+## $V_+(\mathfrak{a})$의 구성
 
 Affine scheme의 경우 closed subscheme은 정확히 surjection $A \rightarrow A/\mathfrak{a}$들로부터 얻어졌다. ([§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3) 이후의 논의) 비록 $\Proj$는 functor가 아니지만 ([§사영스킴](/ko/math/scheme_theory/projective_schemes)), graded ring의 *surjection*은 언제나 $\Proj$들 사이의 morphism을 유도하며, 이것이 위 이야기의 projective 버전이 된다.
 
@@ -52,7 +52,7 @@ $$\mathfrak{a}_{(\x_i)}=\left\{\frac{a}{\x_i^d}\middle\vert\text{$a\in\mathfrak{
 한편 $\mathbb{P}^2$의 두 closed subscheme $V_+(\x_0)$과 $V_+(\x_0^2)$을 비교하면, 이들의 underlying space는 $Z_+(\x_0)=Z_+(\x_0^2)$으로 동일하지만 scheme 구조는 다르다. 실제로 chart $D_+(\x_2)\cong\Spec\mathbb{K}[\x_0/\x_2,\x_1/\x_2]$ 위에서 전자는 ideal $(\x_0/\x_2)$로, 후자는 $(\x_0^2/\x_2^2)$로 주어지며 후자의 coordinate ring은 nilpotent element를 갖는다. 이는 [§닫힌 부분스킴, ⁋예시 1](/ko/math/scheme_theory/closed_subschemes#ex1)에서 살펴본 double point의 projective 버전이다.
 :::
 
-## 모든 닫힌 부분스킴은 동차 아이디얼로부터 얻어진다
+## 닫힌 부분스킴의 homogeneous ideal
 
 이제 거꾸로 $\mathbb{P}^n$의 임의의 closed subscheme이 $V_+(\mathfrak{a})$의 꼴임을 보인다.
 
@@ -85,8 +85,45 @@ $$\left(\frac{\x_i}{\x_j}\right)^{m_j}h=\frac{\x_i^{m_j}f}{\x_j^{m_j+d}}\in \mat
 종합하면 $Z$와 $V_+(\mathfrak{a})$는 $\mathbb{P}^n$의 closed subscheme으로서 같은 ideal sheaf를 가지므로, [§닫힌 부분스킴, ⁋보조정리 9](/ko/math/scheme_theory/closed_subschemes#lem9)를 양방향으로 적용하면 $Z=V_+(\mathfrak{a})$이다.
 :::
 
-::: 참고 4
-Affine의 경우와 달리 이 대응은 일대일이 아니다. 가령 irrelevant ideal $S_+=(\x_0,\ldots,\x_n)$에 대하여 $Z_+(S_+)=\emptyset$이므로 $V_+(S_+)=V_+(S_\bullet)$은 모두 empty scheme이다. 더 일반적으로 두 homogeneous ideal이 충분히 큰 degree에서 일치한다면 같은 closed subscheme을 정의하는데, 이는 chart $D_+(\x_i)$ 위에서의 ideal $\mathfrak{a}_{(\x_i)}$가 $\x_i$의 거듭제곱을 곱하는 것에 영향을 받지 않기 때문이다. 주어진 closed subscheme을 정의하는 homogeneous ideal 중 가장 큰 것을 택하는 표준적인 방법이 있으며 (*saturation*), 이에 대해서는 필요할 때 다시 살펴보기로 한다.
+Affine의 경우와 달리 이 대응은 일대일이 아니다. 가령 irrelevant ideal $S_+=(\x_0,\ldots,\x_n)$에 대하여 $Z_+(S_+)=\emptyset$이므로 $V_+(S_+)$와 $V_+(S_\bullet)$은 모두 empty scheme이며, 더 일반적으로 두 homogeneous ideal이 충분히 큰 degree에서 일치하면 같은 closed subscheme을 정의한다.
+
+## Saturation
+
+비단사성의 원인은 [명제 1](#prop1)의 증명에 이미 드러나 있다. Chart 위에서 ideal을 계산할 때 $\x_i$의 거듭제곱은 분모로 흡수되므로, $\x_i$를 충분히 곱하면 $\mathfrak{a}$에 들어가는 원소는 $\mathfrak{a}$ 자신의 원소와 같은 정보를 준다. 이러한 원소들을 모두 모아 ideal을 키우면 그 정보만 남는다.
+
+::: 정의 4
+Homogeneous ideal $\mathfrak{a}\subseteq S_\bullet$에 대하여, 각 $i$마다 $\x_i^Nf\in \mathfrak{a}$인 $N\geq 0$이 존재하는 $f\in S_\bullet$들의 모임을 $\mathfrak{a}$의 *saturation*이라 부르고 $\mathfrak{a}^{\mathrm{sat}}$으로 적는다. $\mathfrak{a}=\mathfrak{a}^{\mathrm{sat}}$인 homogeneous ideal은 *saturated*라 부른다.
+:::
+
+$\mathfrak{a}^{\mathrm{sat}}$이 $\mathfrak{a}$를 포함하는 ideal인 것은 정의에서 곧바로 나온다. 또 $\mathfrak{a}$가 homogeneous이므로 $\x_i^Nf\in \mathfrak{a}$는 $f$의 각 homogeneous component에 대해서도 성립하며, 따라서 $\mathfrak{a}^{\mathrm{sat}}$ 또한 homogeneous ideal이다. 한편 차수가 충분히 큰 monomial은 언제나 어떤 $\x_i^{N_i}$로 나누어떨어지므로, 정의 4의 조건은 적당한 $N$에 대하여 $S_+^Nf\subseteq \mathfrak{a}$인 것과 같다. 곧 $\mathfrak{a}^{\mathrm{sat}}=(\mathfrak{a}:S_+^\infty)$이다.
+
+::: 명제 5
+Homogeneous ideal $\mathfrak{a},\mathfrak{b}\subseteq S_\bullet$에 대하여 다음이 성립한다.
+
+1. $V_+(\mathfrak{a})=V_+(\mathfrak{a}^{\mathrm{sat}})$이다.
+2. $V_+(\mathfrak{a})=V_+(\mathfrak{b})$인 것과 $\mathfrak{a}^{\mathrm{sat}}=\mathfrak{b}^{\mathrm{sat}}$인 것은 서로 동치이다.
+
+특히 $\mathbb{P}^n$의 closed subscheme들은 saturated homogeneous ideal들과 일대일로 대응한다.
+:::
+::: 증명
+[명제 1](#prop1)의 증명에서 보았듯 $V_+(\mathfrak{a})\cap D_+(\x_i)$는 ideal $\mathfrak{a}_{(\x_i)}\subseteq S_{(\x_i)}$가 결정하고, affine scheme의 closed subscheme은 ideal과 일대일로 대응하므로 ([§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3) 이후의 논의), $V_+(\mathfrak{a})=V_+(\mathfrak{b})$인 것은 모든 $i$에 대하여 $\mathfrak{a}_{(\x_i)}=\mathfrak{b}_{(\x_i)}$인 것과 동치이다.
+
+1. $\mathfrak{a}\subseteq \mathfrak{a}^{\mathrm{sat}}$이므로 $\mathfrak{a}_{(\x_i)}\subseteq (\mathfrak{a}^{\mathrm{sat}})_{(\x_i)}$이다. 거꾸로 $f\in \mathfrak{a}^{\mathrm{sat}}$가 차수 $d$의 homogeneous element이고 $\x_i^Nf\in \mathfrak{a}$라 하면
+
+    $$\frac{f}{\x_i^d}=\frac{\x_i^Nf}{\x_i^{N+d}}\in \mathfrak{a}_{(\x_i)}$$
+
+    이므로 반대 포함도 성립한다.
+2. 한 방향은 1번의 결과이다. 역으로 $V_+(\mathfrak{a})=V_+(\mathfrak{b})$라 하고 $f\in \mathfrak{a}^{\mathrm{sat}}$가 차수 $d$의 homogeneous element라 하자. 1번의 계산에 의하여 $f/\x_i^d\in \mathfrak{a}_{(\x_i)}=\mathfrak{b}_{(\x_i)}$이므로, 차수 $e$의 homogeneous element $g\in \mathfrak{b}$가 존재하여 $S_{(\x_i)}$ 안에서 $f/\x_i^d=g/\x_i^e$이다. $S_\bullet$이 integral domain이라 $S_\bullet \rightarrow S_{\x_i}$가 단사이므로 이는 $\x_i^ef=\x_i^dg\in \mathfrak{b}$를 뜻한다. $i$가 임의였으므로 $f\in \mathfrak{b}^{\mathrm{sat}}$이고, homogeneous component별로 확인하면 $\mathfrak{a}^{\mathrm{sat}}\subseteq \mathfrak{b}^{\mathrm{sat}}$을 얻는다. $\mathfrak{a}$와 $\mathfrak{b}$의 역할을 바꾸면 반대 포함이 나온다.
+
+마지막 주장은 [정리 3](#thm3)과 1번에 의하여 임의의 closed subscheme이 saturated ideal로부터 얻어지고, 2번이 그러한 ideal의 유일성을 주기 때문이다.
+:::
+
+[명제 5](#prop5)의 둘째 결과는 $\mathfrak{a}^{\mathrm{sat}}$이 $V_+(\mathfrak{a})$를 정의하는 homogeneous ideal 가운데 가장 큰 것임을 말해준다. $V_+(\mathfrak{b})=V_+(\mathfrak{a})$이면 $\mathfrak{b}\subseteq \mathfrak{b}^{\mathrm{sat}}=\mathfrak{a}^{\mathrm{sat}}$이기 때문이다. 또 이 관점에서 보면 [정리 3](#thm3)의 증명이 만든 ideal은 이미 saturated이다. 그 증명의 $T$는 모든 $i$에 대하여 $f/\x_i^{\deg f}\in \mathfrak{b}_i$인 homogeneous element $f$들의 모임이었고, 위의 계산은 이것이 정확히 $\mathfrak{a}^{\mathrm{sat}}$의 homogeneous element들임을 말해주기 때문이다.
+
+::: 예시 6
+$\mathbb{P}^1$에서 $\mathfrak{a}=(\x_0^2,\x_0\x_1)$을 생각하자. $D_+(\x_1)$ 위에서 $\mathfrak{a}_{(\x_1)}$은 $\x_0^2/\x_1^2$과 $\x_0\x_1/\x_1^2=\x_0/\x_1$로 생성되므로 $(\x_0/\x_1)$이고, $D_+(\x_0)$ 위에서는 $\x_0^2/\x_0^2=1$을 포함하므로 $S_{(\x_0)}$ 전체이다. 따라서 $V_+(\mathfrak{a})$는 점 $[0:1]$ 하나로 이루어진 reduced closed subscheme, 곧 $V_+(\x_0)$이다.
+
+이를 saturation으로 다시 읽으면, $\x_0^N\cdot \x_0\in (\x_0^2)$이고 $\x_1^N\cdot \x_0\in (\x_0\x_1)$이므로 $\x_0\in \mathfrak{a}^{\mathrm{sat}}$이다. 거꾸로 $f\in \mathfrak{a}^{\mathrm{sat}}$이면 $\x_1^Nf\in \mathfrak{a}\subseteq (\x_0)$인데 $(\x_0)$가 prime ideal이고 $\x_1\notin (\x_0)$이므로 $f\in (\x_0)$이다. 즉 $\mathfrak{a}^{\mathrm{sat}}=(\x_0)$이며, $\mathfrak{a}$는 이 점을 정의하지만 saturated는 아니다.
 :::
 
 ---

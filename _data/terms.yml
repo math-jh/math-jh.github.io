@@ -2033,6 +2033,13 @@ C:
   defs:
   - label: '[리만기하학] §접속'
     url: /ko/math/riemannian_geometry/connection
+- id: conservative_field
+  en: conservative field
+  ko: 보존장
+  primary: ko
+  defs:
+  - label: '[미적분학] §벡터장'
+    url: /ko/math/calculus/vector_fields
 - id: constant_function
   en: constant function
   ko: 상수함수
@@ -2298,6 +2305,13 @@ C:
   defs:
   - label: '[대수적 위상수학] §합곱'
     url: /ko/math/algebraic_topology/cup_products
+- id: curl
+  en: curl
+  ko: 회전
+  primary: ko
+  defs:
+  - label: '[미적분학] §벡터장'
+    url: /ko/math/calculus/vector_fields
 - id: curvature
   en: curvature
   ko: 곡률
@@ -2862,6 +2876,13 @@ D:
   defs:
   - label: '[미적분학] §무한급수'
     url: /ko/math/calculus/series
+- id: divergence
+  en: divergence
+  ko: 발산
+  primary: ko
+  defs:
+  - label: '[미적분학] §벡터장'
+    url: /ko/math/calculus/vector_fields
 - id: diverges
   en: diverges
   ko: 발산
@@ -4066,6 +4087,13 @@ G:
   defs:
   - label: '[미적분학] §다변수함수와 편미분'
     url: /ko/math/calculus/partial_derivatives
+- id: gradient_field
+  en: gradient field
+  ko: 기울기장
+  primary: ko
+  defs:
+  - label: '[미적분학] §벡터장'
+    url: /ko/math/calculus/vector_fields
 - id: grading_operator
   en: grading operator
   ko: 등급 연산자
@@ -5643,6 +5671,13 @@ L:
   defs:
   - label: '[대수다양체] §선다발과 벡터다발'
     url: /ko/math/algebraic_varieties/line_bundles
+- id: line_integral
+  en: line integral
+  ko: 선적분
+  primary: ko
+  defs:
+  - label: '[미적분학] §선적분'
+    url: /ko/math/calculus/line_integrals
 - id: linear_combination
   en: linear combination
   ko: 일차결합
@@ -7268,6 +7303,13 @@ P:
   defs:
   - label: '[환론] §정역'
     url: /ko/math/ring_theory/integral_domains
+- id: positive_orientation
+  en: positive orientation
+  ko: 양의 방향
+  primary: ko
+  defs:
+  - label: '[미적분학] §그린 정리'
+    url: /ko/math/calculus/greens_theorem
 - id: positive_root
   en: positive root
   ko: 양의 근
@@ -7275,6 +7317,13 @@ P:
   defs:
   - label: '[리 이론] §근계'
     url: /ko/math/lie_theory/root_systems
+- id: potential
+  en: potential
+  ko: 퍼텐셜
+  primary: en
+  defs:
+  - label: '[미적분학] §벡터장'
+    url: /ko/math/calculus/vector_fields
 - id: power_series
   en: power series
   ko: 멱급수
@@ -8825,6 +8874,13 @@ S:
   defs:
   - label: '[유도대수기하학] §Simplicial 가환환과 animation'
     url: /ko/math/derived_algebraic_geometry/animated_rings
+- id: simply_connected
+  en: simply connected
+  ko: 단순연결
+  primary: ko
+  defs:
+  - label: '[미적분학] §그린 정리'
+    url: /ko/math/calculus/greens_theorem
 - id: simply_connected_space
   en: simply connected space
   ko: 단순연결공간
@@ -10289,6 +10345,8 @@ V:
   defs:
   - label: '[미분다양체] §벡터장'
     url: /ko/math/manifolds/vector_fields
+  - label: '[미적분학] §벡터장'
+    url: /ko/math/calculus/vector_fields
 - id: vector_space
   en: vector space
   ko: 벡터공간

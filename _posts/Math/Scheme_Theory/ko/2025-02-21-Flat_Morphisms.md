@@ -9,7 +9,7 @@ sidebar:
     nav: "scheme_theory-ko"
 
 date: 2025-02-21
-weight: 13
+weight: 14
 published: false
 drift_needed: true
 ---
@@ -172,11 +172,13 @@ $$\Spec \mathbb{K}[t, \x, \y]/(\x\y - t) \longrightarrow \mathbb{A}^1_\mathbb{K}
 지금까지 본 family에서 fiber는 모두 $\mathbb{A}^2$ 안의 곡선이었고, 따라서 무한대에 놓인 점들이 빠져 있었다. 이들까지 함께 보려면 곡선을 $\mathbb{P}^2$ 안에서 자르는 것이 자연스럽다. ([§사영스킴](/ko/math/scheme_theory/projective_schemes)) 이 때 $X$는 더 이상 affine이 아니므로 flatness는 affine chart마다 확인하게 된다.
 
 ::: 예시 8
-$\x,\y,\z$의 차수로 grading을 준 graded ring $\mathbb{K}[t][\x,\y,\z]$를 생각하자. 여기에서 $t$는 차수 $0$이며, 따라서 base ring은 $\mathbb{K}[t]$이다. 이제
+$\x,\y,\z$의 차수로 grading을 준 graded ring $R=\mathbb{K}[t][\x,\y,\z]$를 생각하자. 여기에서 $t$는 차수 $0$이며, 따라서 base ring은 $R_0=\mathbb{K}[t]$이다. Chart를 계산하면 $R_{(\x)}=\mathbb{K}[t][\y/\x,\z/\x]$이므로 $D_+(\x)$는 $\mathbb{A}^2_{\mathbb{K}[t]}$이고, $t$가 차수 $0$이라 localization에서 살아남는다. 세 chart를 붙이면 $\Proj R$은 $\mathbb{P}^2\times_\mathbb{K}\mathbb{A}^1_\mathbb{K}$가 되며, 모든 $f$에 대하여 $R_0\subseteq R_{(f)}$이므로 이들이 붙어 structure morphism $\Proj R \rightarrow \mathbb{A}^1_\mathbb{K}$를 준다.
 
-$$X=\Proj \mathbb{K}[t][\x,\y,\z]/(\x\z-t\y^2)$$
+이제 $\x\z-t\y^2$을 보면 $\x\z$와 $t\y^2$이 모두 $\x,\y,\z$에 대하여 차수 $2$이므로 이는 homogeneous element이다. 여기에서도 $t$의 차수가 $0$인 것이 쓰인다. 따라서 $(\x\z-t\y^2)$는 homogeneous ideal이고, [§사영공간의 닫힌 부분스킴, ⁋명제 1](/ko/math/scheme_theory/closed_subschemes_of_projective_spaces#prop1)에 의하여
 
-라 두면 structure morphism $X \rightarrow \mathbb{A}^1_\mathbb{K}$를 얻으며, $X$는 $\mathbb{P}^2$ 안에서 방정식 $\x\z=t\y^2$이 자르는 곡선들의 family이다.
+$$X=\Proj R/(\x\z-t\y^2)$$
+
+은 $\mathbb{P}^2\times_\mathbb{K}\mathbb{A}^1_\mathbb{K}$의 닫힌 부분스킴으로서 $Z_+(\x\z-t\y^2)$이다. 즉 $X$는 $\mathbb{P}^2$ 안에서 방정식 $\x\z=t\y^2$이 자르는 곡선들의 family이며, 위의 structure morphism이 이를 $\mathbb{A}^1_\mathbb{K}$ 위의 family로 만든다.
 
 이 사상이 flat인 것은 세 개의 affine chart에서 확인된다. $D_+(\y)$ 위에서 $u=\x/\y$, $v=\z/\y$로 두면 관계식을 $\y^2$으로 나누어 $uv=t$를 얻으므로 coordinate ring은 $\mathbb{K}[t][u,v]/(uv-t)$이며, 이는 $t=uv$를 통해 integral domain $\mathbb{K}[u,v]$와 isomorphic이다. 따라서 [명제 5](#prop5)에 의하여 flat이다. $D_+(\x)$ 위에서 $w=\y/\x$, $s=\z/\x$로 두면 관계식을 $\x^2$으로 나누어 $s=tw^2$을 얻으므로 coordinate ring은 $\mathbb{K}[t][w]$이고, 이는 free $\mathbb{K}[t]$-module이므로 flat이다. $D_+(\z)$의 경우도 symmetric이다. 이 셋이 $X$를 덮으므로 $X \rightarrow \mathbb{A}^1_\mathbb{K}$는 flat이다.
 
