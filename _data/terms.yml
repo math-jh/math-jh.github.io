@@ -6206,6 +6206,13 @@ M:
   see:
   - label: Characteristic polynomial
     id: characteristic_polynomial
+- id: minimal_prime_ideal
+  en: minimal prime ideal
+  ko: 극소소아이디얼
+  primary: en
+  defs:
+  - label: '[가환대수학] §으뜸분해'
+    url: /ko/math/commutative_algebra/primary_decomposition
 - id: minimal_projective_presentation
   en: minimal projective presentation
   ko: 최소 사영 표시
