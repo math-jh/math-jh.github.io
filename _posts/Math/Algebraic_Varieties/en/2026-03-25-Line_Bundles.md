@@ -21,7 +21,7 @@ To overcome this restriction, we introduce *line bundles*. A line bundle $\mathc
 
 ## Definition of Line Bundles
 
-Line bundles, and more generally vector bundles, which we will define later in this post, are defined in the same way as in other fields such as differential geometry. ([\[Differential Manifolds\] §Tangent and Cotangent Bundles, ⁋Definition 1](/en/math/manifolds/tangent_and_cotangent_bundles#def1) or [\[Algebraic Topology\] §Stiefel-Whitney Characteristic Classes, ⁋Definition 2](/en/math/algebraic_topology/stiefel_whitney_classes#def2), etc.)
+Line bundles, and more generally vector bundles, which we will define later in this post, are defined in the same way as in other fields such as differential geometry. ([\[Manifolds\] §Tangent and Cotangent Bundles, ⁋Definition 1](/en/math/manifolds/tangent_and_cotangent_bundles#def1) or [\[Algebraic Topology\] §Stiefel-Whitney Characteristic Classes, ⁋Definition 2](/en/math/algebraic_topology/stiefel_whitney_classes#def2), etc.)
 
 ::: Definition 1
 A *line bundle* $\mathcal{L}$ on a variety $X$ consists of the following data.
@@ -202,7 +202,7 @@ The tautological bundle $\mathcal{O}_{\mathbb{P}^n}(-1)$ is the dual of $\mathca
 Let us construct a local trivialization of $\mathcal{O}_{\mathbb{P}^n}(-1)$ on the standard open cover $U_i = \{x \mid x_i \ne 0\}$. For any $(x, v) \in \mathcal{O}_{\mathbb{P}^n}(-1)$, we can write $v = \lambda x$ ($\lambda \in \mathbb{K}$), so defining $\phi_i(x, v) = (x, v_i)$ gives $\phi_i: \pi^{-1}(U_i) \rightarrow U_i \times \mathbb{A}^1$. The inverse is $\phi_i^{-1}(x, t) = (x, (t/x_i)\, x)$. The transition function on $U_i \cap U_j$ is obtained from $\phi_j \circ \phi_i^{-1}(x, t) = (x, t x_j / x_i)$ as $g_{ij}(x) = x_j/x_i$. This is the inverse of the transition function $x_i/x_j$ of $\mathcal{O}_{\mathbb{P}^n}(1)$.
 :::
 
-In particular, examining $\mathcal{O}(-1)$ on $\mathbb{P}^1$ makes the meaning of the intuitive <em>twist</em> explained above much clearer. The process of making $\mathbb{P}^1$ from $\mathbb{A}^2\setminus \{0\}$ can be thought of as first mapping $\mathbb{A}^2\setminus\{0\}$ to the unit circle via radial projection, and then identifying antipodal points of the unit circle; during this process, vectors in opposite directions are identified, which causes the fibers to twist. One way to see this twist is to look at sections of the line bundle $\mathcal{L}$.
+In particular, examining $\mathcal{O}(-1)$ on $\mathbb{P}^1$ makes the meaning of the intuitive *twist* explained above much clearer. The process of making $\mathbb{P}^1$ from $\mathbb{A}^2\setminus \{0\}$ can be thought of as first mapping $\mathbb{A}^2\setminus\{0\}$ to the unit circle via radial projection, and then identifying antipodal points of the unit circle; during this process, vectors in opposite directions are identified, which causes the fibers to twist. One way to see this twist is to look at sections of the line bundle $\mathcal{L}$.
 
 ::: Definition 15
 We denote the space of *global sections* of a line bundle $\mathcal{L}$ by $\Gamma(X, \mathcal{L})$. That is, $\Gamma(X, \mathcal{L})$ is the set of regular maps assigning to each point $x\in X$ an element of the fiber $\pi^{-1}(x)\subset \mathcal{L}$.
@@ -222,7 +222,7 @@ $$\phi_j(s) = (\x_j/\x_i)\, \phi_i(s)$$
 However, since $\phi_i(s) \in \mathbb{K}[\x_0/\x_i, \ldots, \widehat{\x_i/\x_i}, \ldots, \x_n/\x_i]$ cannot contain a term $\x_i/\x_j$, for $(\x_j/\x_i)\, \phi_i(s)$ to lie in $\mathcal{O}(U_j) = \mathbb{K}[\x_0/\x_j, \ldots, \widehat{\x_j/\x_j}, \ldots, \x_n/\x_j]$ we must have $\phi_i(s) = 0$. Therefore $s = 0$.
 :::
 
-This proposition shows the <em>twist</em> of the tautological bundle from the viewpoint of sections. For example, the fact that $\Gamma(\mathbb{P}^1, \mathcal{O}(-1))=0$ means in particular that there is no "constant function" assigning the element 1 of the fiber to every $x\in \mathbb{P}^1$. From the geometric perspective above, this is because when we go around $\mathbb{P}^1$ once, the original 1 becomes (for example) $-1$.
+This proposition shows the *twist* of the tautological bundle from the viewpoint of sections. For example, the fact that $\Gamma(\mathbb{P}^1, \mathcal{O}(-1))=0$ means in particular that there is no "constant function" assigning the element 1 of the fiber to every $x\in \mathbb{P}^1$. From the geometric perspective above, this is because when we go around $\mathbb{P}^1$ once, the original 1 becomes (for example) $-1$.
 
 On the other hand, the computation in [Example 16](#ex16) can be extended to arbitrary $d$; in particular, for any $d<0$ we can show $\Gamma(\mathbb{P}^1, \mathcal{O}(d))=0$ by the same logic, and for $d=0$, i.e. for $\mathcal{O}_{\mathbb{P}^n}(0)=\mathcal{O}_{\mathbb{P}^n}$, the sections are homogeneous polynomials of degree $0$, i.e. constant functions, so the computation in [§Quasi-Projective Varieties, ⁋Example 6](/en/math/algebraic_varieties/quasi_projective_varieties#ex6) is confirmed again.
 

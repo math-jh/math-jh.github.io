@@ -22,7 +22,7 @@ The fundamental theorem of linear algebra that we prove in this post shows not o
 
 ## Fundamental Theorem: Euclidean Spaces
 
-In [§The Space of Linear Maps](/en/math/linear_algebra/space_of_linear_maps), we agreed to understand a linear map $L$ satisfying
+In [§Space of Linear Maps](/en/math/linear_algebra/space_of_linear_maps), we agreed to understand a linear map $L$ satisfying
 
 $$\begin{aligned}L(x_1)&=\alpha_{11}y_1+\alpha_{21}y_2+\cdots+\alpha_{m1}y_m\\L(x_2)&=\alpha_{12}y_1+\alpha_{22}y_2+\cdots+\alpha_{m2}y_m\\&\phantom{a}\vdots\\L(x_n)&=\alpha_{1n}y_1+\alpha_{2n}y_2+\cdots+\alpha_{mn}y_m\end{aligned}$$
 
@@ -174,7 +174,7 @@ $$(L_2\circ L_1)(x_i)=\left(\sum_{l=1}^m\alpha_{l,i}\beta_{1,l}\right)z_1+\cdots
 As we verified earlier, the $i$-th column of $[L_2\circ L_1]^{\mathcal{B}_1}_{\mathcal{B}_3}$ is exactly the coordinate representation in $\mathcal{B}_3$ of the vector to which $x_i$ is mapped by $L_2\circ L_1$, so the entry in row $j$, column $i$ of the matrix $[L_2\circ L_1]^{\mathcal{B}_1}_{\mathcal{B}_3}$ is the $j$-th component $\sum_{l=1}^m\alpha_{l,i}\beta_{j,l}$ of this vector. Just as in [Theorem 3](#thm3), this component is the $(i,j)$-entry of the matrix product $[L_2]^{\mathcal{B}_2}_{\mathcal{B}_3}[L_1]^{\mathcal{B}_1}_{\mathcal{B}_2}$, so the proof is complete.
 :::
 
-[Theorem 4](#thm4) above shows that once we choose bases for $V,W$, we can treat $\Hom(V,W)$ and $\Mat_{m\times n}(\mathbb{K})$ as the same thing. For instance, the $mn$ bases of $\Mat_{m\times n}(\mathbb{K})$ correspond to the $mn$ bases examined in [§The Space of Linear Maps, ⁋Proposition 5](/en/math/linear_algebra/space_of_linear_maps#prop5). The following corollary is also a consequence of the fundamental theorem.
+[Theorem 4](#thm4) above shows that once we choose bases for $V,W$, we can treat $\Hom(V,W)$ and $\Mat_{m\times n}(\mathbb{K})$ as the same thing. For instance, the $mn$ bases of $\Mat_{m\times n}(\mathbb{K})$ correspond to the $mn$ bases examined in [§Space of Linear Maps, ⁋Proposition 5](/en/math/linear_algebra/space_of_linear_maps#prop5). The following corollary is also a consequence of the fundamental theorem.
 
 ::: Corollary 6
 Let two $n$-dimensional $\mathbb{K}$-vector spaces $V,W$ be given, and fix their bases $\mathcal{B},\mathcal{C}$. Then for any $L\in\Hom(V,W)$, the matrix representation $[L^{-1}]^{\mathcal{C}}_{\mathcal{B}}$ of $L^{-1}\in\Hom(W,V)$ with respect to the bases $\mathcal{C},\mathcal{B}$ is equal to the inverse matrix of $[L]^{\mathcal{B}}_\mathcal{C}$.
@@ -187,7 +187,7 @@ In this way, most of the concepts defined in [§Matrices](/en/math/linear_algebr
 
 ## Change-of-Basis Matrices
 
-To summarize [Theorem 4](#thm4) in one sentence: a linear map from an $n$-dimensional vector space $V$ to an $m$-dimensional vector space $W$ can be represented as an $m\times n$ matrix once we fix bases $\mathcal{B},\mathcal{C}$ for each, and conversely any $m\times n$ matrix can be understood as a linear map. Then one natural question is what happens when we change the basis, and in fact the answer is already given in [Theorem 5](#thm5).
+To summarize [Theorem 4](#thm4) in one sentence: a linear map from an $n$-dimensional vector space $V$ to an $m$-dimensional vector space $W$ can be represented as an $m\times n$ matrix once we fix bases $\mathcal{B}, \mathcal{C}$ for each, and conversely any $m\times n$ matrix can be understood as a linear map. Then one natural question is what happens when we change the basis, and in fact the answer is already given in [Theorem 5](#thm5).
 
 ::: Definition 7
 For any finite-dimensional $\mathbb{K}$-vector space $V$ and two bases $\mathcal{B},\mathcal{B}'$ of $V$, the *change-of-basis matrix* from $\mathcal{B}$ to $\mathcal{B}'$ is

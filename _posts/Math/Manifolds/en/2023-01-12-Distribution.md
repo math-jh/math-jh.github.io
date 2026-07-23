@@ -179,7 +179,7 @@ $$Y_1=\frac{\partial}{\partial x^1}.$$
 
 For the remaining $Y_2,\ldots, Y_k$, using the formula
 
-$$\frac{\partial}{\partial x^1}Y_i(x^{k+j})=Y_1(Y_i(x^{k+j})=[Y_1,Y_i]x^{k+j}$$
+$$\frac{\partial}{\partial x^1}Y_i(x^{k+j})=Y_1(Y_i(x^{k+j}))=[Y_1,Y_i]x^{k+j}$$
 
 and applying
 

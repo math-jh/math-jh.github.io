@@ -13,7 +13,7 @@ weight: 9
 
 ---
 
-[§미분과 도함수](/ko/math/calculus/derivatives)에서 우리는 함수를 한번 미분하여 얻어진 미분계수가 함수의 접선 
+[§미분과 도함수](/ko/math/calculus/derivatives)에서 우리는 함수를 한번 미분하여 얻어진 derivative가 함수의 접선 
 
 $$f(x) \approx f(a) + f'(a)(x-a)$$
 
@@ -21,7 +21,7 @@ $$f(x) \approx f(a) + f'(a)(x-a)$$
 
 ## 테일러 다항식
 
-함수 $f$가 점 $a$에서 $n$번 미분가능하면, $a$에서 함숫값과 처음 $n$개의 도함수 값을 $f$와 똑같이 갖는 차수 $n$의 다항식을 만들 수 있다. 
+함수 $f$가 점 $a$에서 $n$번 미분가능하면, $a$에서 함숫값과 처음 $n$개의 도함수 값을 $f$와 똑같이 갖는 degree $n$의 다항식을 만들 수 있다. 
 
 ::: 정의 1
 $f$가 점 $a$에서 $n$번 미분가능할 때, $f$의 $a$에서의 *$n$차 테일러 다항식<sub>Taylor polynomial</sub>*은

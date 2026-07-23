@@ -13,7 +13,7 @@ weight: 3
 published: false
 ---
 
-[§접속](/ko/math/riemannian_geometry/connection)에서 우리는 임의의 vector bundle 위에 connection이 항상 존재한다는 것을 살펴봤지만, 그러한 connection은 일반적으로 유일하지 않다. 한편 manifold 위에 추가로 non-degenerate symmetric bilinear 자료 — 즉 (pseudo-)Riemannian metric — 이 주어지면 그것으로부터 자연스럽게 *canonical*한 connection을 하나 골라낼 수 있는데, 이 글에서는 이러한 connection — *Levi-Civita 접속* — 을 정의하고 그 존재와 유일성을 보인 뒤, 이를 통해 *parallel transport*까지 도달한다.
+[§접속](/ko/math/riemannian_geometry/connection)에서 우리는 임의의 vector bundle 위에 connection이 항상 존재한다는 것을 살펴봤지만, 그러한 connection은 일반적으로 유일하지 않다. 한편 manifold 위에 추가로 non-degenerate symmetric bilinear 자료 — 즉 (pseudo-)Riemannian metric — 이 주어지면 그것으로부터 자연스럽게 *canonical*한 connection을 하나 골라낼 수 있는데, 이 글에서는 이러한 connection — *Levi-Civita connection* — 을 정의하고 그 존재와 유일성을 보인 뒤, 이를 통해 *parallel transport*까지 도달한다.
 
 ## 리만 계량과의 호환성
 
@@ -70,7 +70,7 @@ $$T(E_i, E_j) = \nabla_{E_i} E_j - \nabla_{E_j} E_i = (\Gamma_{ij}^k - \Gamma_{j
 이제 우리는 (pseudo-)Riemannian manifold 위에 metric-compatible torsion-free connection이 유일하게 존재한다는 것을 보인다. 이것이 *리만 기하학의 기본 정리<sub>fundamental theorem of Riemannian geometry</sub>*이다.
 
 ::: 정리 4 (리만 기하학의 기본 정리)
-Pseudo-Riemannian manifold $(M, g)$ 위에 metric과 compatible하고 torsion-free인 connection $\nabla$이 유일하게 존재한다. 이 connection을 $g$의 *Levi-Civita 접속<sub>Levi-Civita connection</sub>*이라 부른다.
+Pseudo-Riemannian manifold $(M, g)$ 위에 metric과 compatible하고 torsion-free인 connection $\nabla$이 유일하게 존재한다. 이 connection을 $g$의 *Levi-Civita connection<sub>Levi-Civita 접속</sub>*이라 부른다.
 :::
 
 ::: 증명
@@ -94,7 +94,7 @@ $$2 \langle \nabla_X Y, Z\rangle = X\langle Y, Z\rangle + Y\langle Z, X\rangle -
 위 정리의 증명 과정에서 등장한 식 ($\ast$)을 다시 명제로 정리해 두자.
 
 ::: 명제 5 (Koszul 공식)
-Pseudo-Riemannian manifold $(M, g)$의 Levi-Civita 접속 $\nabla$는 다음의 식
+Pseudo-Riemannian manifold $(M, g)$의 Levi-Civita connection $\nabla$는 다음의 식
 
 $$2\langle \nabla_X Y, Z\rangle = X\langle Y, Z\rangle + Y\langle Z, X\rangle - Z\langle X, Y\rangle - \langle X, [Y, Z]\rangle + \langle Y, [Z, X]\rangle + \langle Z, [X, Y]\rangle$$
 
@@ -110,7 +110,7 @@ $$2\langle \nabla_{E_i} E_j, E_k\rangle = E_i g_{jk} + E_j g_{ki} - E_k g_{ij}$$
 가 된다. 따라서 metric $(g_{ij})$의 역행렬 $(g^{ij})$에 대해 $\nabla_{E_i} E_j = \Gamma_{ij}^k E_k$의 *Christoffel 기호* $\Gamma_{ij}^k$는 다음과 같이 명시적으로 표현된다.
 
 ::: 명제 6
-Pseudo-Riemannian manifold $(M, g)$의 Levi-Civita 접속의 connection coefficient는 local coordinate $(x^i)$에서
+Pseudo-Riemannian manifold $(M, g)$의 Levi-Civita connection의 connection coefficient는 local coordinate $(x^i)$에서
 
 $$\Gamma_{ij}^k = \frac{1}{2} \sum_{l=1}^n g^{kl} \left(\frac{\partial g_{jl}}{\partial x^i} + \frac{\partial g_{il}}{\partial x^j} - \frac{\partial g_{ij}}{\partial x^l}\right)$$
 
@@ -120,7 +120,7 @@ $$\Gamma_{ij}^k = \frac{1}{2} \sum_{l=1}^n g^{kl} \left(\frac{\partial g_{jl}}{\
 Christoffel 기호는 index $i, j$에 대해 대칭이며 ($\Gamma_{ij}^k = \Gamma_{ji}^k$), 이는 [정의 3](#def3) 직후의 관찰과 일치하는 결과이다.
 
 ::: 예시 7
-유클리드 공간 $\mathbb{R}^n$에 standard metric $g_{ij} = \delta_{ij}$를 주면 모든 $\Gamma_{ij}^k = 0$이며, Levi-Civita 접속은 표준적인 component별 미분
+유클리드 공간 $\mathbb{R}^n$에 standard metric $g_{ij} = \delta_{ij}$를 주면 모든 $\Gamma_{ij}^k = 0$이며, Levi-Civita connection은 표준적인 component별 미분
 
 $$\nabla_X Y = \sum_{k=1}^n X(Y^k) \frac{\partial}{\partial x^k}$$
 
@@ -155,10 +155,10 @@ $$\dot V^k(t) + \sum_{i, j} \Gamma_{ij}^k(\gamma(t))\, \dot\gamma^i(t)\, V^j(t) 
 이라는 $n$개의 일계 선형 ODE 시스템과 동치가 된다. 초기값 $V^k(t_0)$가 주어지면 ODE의 표준 이론에 의해 유일한 해가 존재한다.
 :::
 
-Metric-compatible 접속이라는 추가 가정이 들어가면, 더 강한 성질이 따른다.
+Metric-compatible connection이라는 추가 가정이 들어가면, 더 강한 성질이 따른다.
 
 ::: 명제 10
-$(M, g)$의 Levi-Civita 접속 $\nabla$에 대해, parallel transport $P_\gamma^{t_0, t_1} : T_{\gamma(t_0)} M \rightarrow T_{\gamma(t_1)} M$은 *isometry*이다. 즉 임의의 $v, w \in T_{\gamma(t_0)} M$에 대해
+$(M, g)$의 Levi-Civita connection $\nabla$에 대해, parallel transport $P_\gamma^{t_0, t_1} : T_{\gamma(t_0)} M \rightarrow T_{\gamma(t_1)} M$은 *isometry*이다. 즉 임의의 $v, w \in T_{\gamma(t_0)} M$에 대해
 
 $$\langle P_\gamma^{t_0, t_1}(v), P_\gamma^{t_0, t_1}(w)\rangle = \langle v, w\rangle$$
 

@@ -69,7 +69,7 @@ $$A=\left\{x\mid\left(x\in\bigcup\left(\bigcup R\right)\right)\wedge P(x)\right\
 
 $$R\subseteq \pr_1 R\times\pr_2R\subseteq A\times B$$
 
-이므로 데카르트 곱 $A\times B$는 $A$를 source로, $B$를 target으로 갖는 이항관계 중 가장 큰 것이라 할 수 있다.
+이므로 cartesian product $A\times B$는 $A$를 source로, $B$를 target으로 갖는 이항관계 중 가장 큰 것이라 할 수 있다.
 :::
 
 ## 이항관계의 정의역과 상

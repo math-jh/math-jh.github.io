@@ -85,7 +85,7 @@ Maximal ideal $I$에 대해, $x\wedge y\in I$라 하자. 결론에 반하여 $x,
 
 ## Galois connection
 
-지금부터 소개할 Galois connection은 그 이름에서부터 짐작할 수 있듯 field extension에 대한 갈루아 이론으로부터 나온 것이지만, 이를 추상화하여 ordered set 두 개 사이의 관계로 생각할 수 있으며, 이 추상화는 많은 분야에서 유용하게 사용된다. 
+지금부터 소개할 Galois connection은 그 이름에서부터 짐작할 수 있듯 field extension에 대한 Galois theory로부터 나온 것이지만, 이를 추상화하여 ordered set 두 개 사이의 관계로 생각할 수 있으며, 이 추상화는 많은 분야에서 유용하게 사용된다. 
 
 ::: 정의 6
 두 ordered set $A,B$가 주어졌다 하자. 

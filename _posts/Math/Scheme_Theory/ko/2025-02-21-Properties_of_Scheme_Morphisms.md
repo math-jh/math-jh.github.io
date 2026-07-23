@@ -95,7 +95,7 @@ $$\Hom_\Sch(X, \Spec B)\cong\Hom_\cRing (B, \Gamma(X, \mathcal{O}_X))$$
 
 $$\Hom_\Sch(\Spec A,\Spec B)\cong\Hom_\cRing (B, A)$$
 
-가 성립하는 것을 안다. ([§아핀스킴, ⁋명제 11](/ko/math/scheme_theory/affine_schemes#prop11)) 따라서, 위와 같이 affine-local on target인 스킴 사상의 성질을 살펴볼 때에는, $Y$의 임의의 affine open subset $V\cong\Spec B$에 대하여 $U=\varphi^{-1}(V)$도 $X$의 open subscheme $U\cong \Spec A$이고, 따라서 $\varphi\vert_U: U \rightarrow V$가 affine scheme들 사이의 morphism이 되어 이 성질을 ring homomorphism 
+가 성립하는 것을 안다. ([§아핀스킴, ⁋명제 11](/ko/math/scheme_theory/affine_schemes#prop11)) 따라서, 위와 같이 affine-local on target인 scheme morphism의 성질을 살펴볼 때에는, $Y$의 임의의 affine open subset $V\cong\Spec B$에 대하여 $U=\varphi^{-1}(V)$도 $X$의 open subscheme $U\cong \Spec A$이고, 따라서 $\varphi\vert_U: U \rightarrow V$가 affine scheme들 사이의 morphism이 되어 이 성질을 ring homomorphism 
 
 $$(\varphi\vert_U)^\sharp(V): \mathcal{O}_V(V) \rightarrow \mathcal{O}_U(U)$$
 
@@ -119,7 +119,7 @@ $$(\Spec\phi)^{-1}(D(f))=D(\phi(f))$$
 
 으로부터 임의의 $f\in B$에 대하여 $\varphi^{-1}(\Spec B_f)=D(\phi(f))\cong\Spec A_{\phi(f)}$이므로 $\Spec B_f$ 또한 $P$를 만족한다.
 
-이제 둘째 조건을 확인해야 한다. 즉 $B=(f_1,\ldots, f_r)$이고 각각의 $U_i=\varphi^{-1}(D(f_i))$가 affine이라 가정한 후, $U=\varphi^{-1}(\Spec B)$가 affine임을 보여야 한다. 편의상 $R=\Gamma(U, \mathcal{O}_X)$라 하고 $f_i$의 $\varphi^\sharp(\Spec B): B \rightarrow R$에 의한 상을 $g_i\in R$이라 하자. 또, $g\in \Gamma(U, \mathcal{O}_X)$에 대하여 $g$의 stalk이 $\mathcal{O}_{X,x}$의 maximal ideal에 속하지 <em-ko>않는</em-ko> 점 $x$들의 집합을 $U_g$로 적자. 그럼 $U$의 임의의 affine open subset $\Spec A$에 대하여 $U_g\cap \Spec A=D(g\vert_{\Spec A})$인 것이 정의에 의해 자명하고, 특히 $U_g$는 열린집합이다. 
+이제 둘째 조건을 확인해야 한다. 즉 $B=(f_1,\ldots, f_r)$이고 각각의 $U_i=\varphi^{-1}(D(f_i))$가 affine이라 가정한 후, $U=\varphi^{-1}(\Spec B)$가 affine임을 보여야 한다. 편의상 $R=\Gamma(U, \mathcal{O}_X)$라 하고 $f_i$의 $\varphi^\sharp(\Spec B): B \rightarrow R$에 의한 image를 $g_i\in R$이라 하자. 또, $g\in \Gamma(U, \mathcal{O}_X)$에 대하여 $g$의 stalk이 $\mathcal{O}_{X,x}$의 maximal ideal에 속하지 <em-ko>않는</em-ko> 점 $x$들의 집합을 $U_g$로 적자. 그럼 $U$의 임의의 affine open subset $\Spec A$에 대하여 $U_g\cap \Spec A=D(g\vert_{\Spec A})$인 것이 정의에 의해 자명하고, 특히 $U_g$는 열린집합이다. 
 
 다음의 세 가지를 관찰한다. 첫째로, $B=(f_1,\ldots, f_r)$이므로 $\Spec B=\bigcup_{i=1}^rD(f_i)$이고 따라서 $\{U_i\}_{i=1}^r$은 $U$의 유한한 affine open covering이다. 뿐만 아니라 $1=\sum_{i=1}^rb_if_i$인 $b_i\in B$를 택하여 $\varphi^\sharp(\Spec B)$를 취하면 $g_1,\ldots, g_r$이 $R$의 unit ideal을 생성함을 안다. 둘째로, $\varphi$가 locally ringed space들 사이의 morphism이므로 각각의 $x\in U$에서 $\varphi^\sharp_x:\mathcal{O}_{Y,\varphi(x)} \rightarrow \mathcal{O}_{X,x}$는 local homomorphism이고, 따라서 $\varphi(x)\in D(f_i)$인 것과 $x\in U_{g_i}$인 것이 동치이므로 $U_i=U_{g_i}$이다. 셋째로, $U_i\cong \Spec A_i$라 하고 $\Spec A_i \rightarrow \Spec B_{f_i}$에 대응되는 ring homomorphism을 $\phi_i$라 하면 $D(f_j)\cap D(f_i)$는 $\Spec B_{f_i}$의 principal open set이므로 위와 같이 [§스펙트럼, ⁋명제 8](/ko/math/scheme_theory/spectrums#prop8)을 적용하여 $U_i\cap U_j$가 $\Spec A_i$의 principal open set, 특히 affine임을 안다.
 
@@ -135,7 +135,7 @@ $$0 \rightarrow R_{g_i} \rightarrow \bigoplus_{j=1}^r \mathcal{O}_X(U_j)_{g_i} \
 
 $$\mathcal{O}_X(U_j)_{g_i}=\mathcal{O}_X(U_j\cap U_{g_i}),\qquad \mathcal{O}_X(U_j\cap U_k)_{g_i}=\mathcal{O}_X(U_j\cap U_k\cap U_{g_i})$$
 
-를 얻는다. 그런데 이렇게 얻어진 exact sequence는 정확히 $U_{g_i}$의 open covering $\{U_j\cap U_{g_i}\}_{j=1}^r$에 대한 층 조건이 주는 exact sequence이므로, $R_{g_i}$와 $\Gamma(U_{g_i}, \mathcal{O}_X)$는 모두 같은 함수의 kernel이 되어 canonical map $R_{g_i} \rightarrow \Gamma(U_{g_i}, \mathcal{O}_X)$은 isomorphism이다.
+를 얻는다. 그런데 이렇게 얻어진 exact sequence는 정확히 $U_{g_i}$의 open covering $\{U_j\cap U_{g_i}\}_{j=1}^r$에 대한 sheaf 조건이 주는 exact sequence이므로, $R_{g_i}$와 $\Gamma(U_{g_i}, \mathcal{O}_X)$는 모두 같은 함수의 kernel이 되어 canonical map $R_{g_i} \rightarrow \Gamma(U_{g_i}, \mathcal{O}_X)$은 isomorphism이다.
 
 마지막으로 [§아핀스킴, ⁋정리 13](/ko/math/scheme_theory/affine_schemes#thm13)의 adjunction
 

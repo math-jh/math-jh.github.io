@@ -139,7 +139,7 @@ $$q:\Spec A \longrightarrow \Spec \mathcal{O} \longrightarrow T \hookrightarrow 
 
 는 $\Spec A$의 generic point $(0)$을 $\xi$로, closed point $\mathfrak{m}_A$를 $\eta$로 보낸다.
 
-이제 $g_1=p_1\circ q$, $g_2=p_2\circ q$라 하고, $f\circ p_1=f\circ p_2$이므로 잘 정의되는 $w=f\circ g_1=f\circ g_2:\Spec A \rightarrow Y$를 생각하자. [명제 4](#prop4)의 증명에서 보았듯 $x$의 affine open neighborhood $U$와 $f(U)$를 포함하는 $Y$의 affine open subset $V$를 택하면 $U\times_VU$는 $X\times_YX$에서 $\xi$의 open neighborhood이고 그 위에서 $\Delta$는 closed embedding이므로 ([보조정리 5](#lem5)), stalk 사이의 사상 $\mathcal{O}_{X\times_YX,\xi} \rightarrow \mathcal{O}_{X,x}$는 surjective이고 따라서 $\kappa(\xi) \rightarrow \kappa(x)$ 또한 surjective이다. 한편 $p_1\circ\Delta=\id_X$이므로 합성 $\kappa(x) \rightarrow \kappa(\xi) \rightarrow \kappa(x)$는 항등사상이고, 그러므로 두 사상은 서로의 역이 되는 isomorphism이다. 곧 $K=\kappa(\xi)\cong\kappa(x)$이다. 이 동일시 아래에서 점 $x$와 $\kappa(x)\cong K$가 정의하는 canonical morphism을 $u:\Spec K \rightarrow X$라 하면, $\Delta\circ u$는 점 $\xi$와 $\kappa(\xi)\cong K$가 정의하는 canonical morphism이고 이는 $q\circ j$와 같다. 실제로 $q\circ j$는 $\xi$를 상으로 갖고 residue field 위에서 $\kappa(\xi)=\Frac(\mathcal{O})=K$의 항등사상을 유도하기 때문이다. 따라서
+이제 $g_1=p_1\circ q$, $g_2=p_2\circ q$라 하고, $f\circ p_1=f\circ p_2$이므로 잘 정의되는 $w=f\circ g_1=f\circ g_2:\Spec A \rightarrow Y$를 생각하자. [명제 4](#prop4)의 증명에서 보았듯 $x$의 affine open neighborhood $U$와 $f(U)$를 포함하는 $Y$의 affine open subset $V$를 택하면 $U\times_VU$는 $X\times_YX$에서 $\xi$의 open neighborhood이고 그 위에서 $\Delta$는 closed embedding이므로 ([보조정리 5](#lem5)), stalk 사이의 morphism $\mathcal{O}_{X\times_YX,\xi} \rightarrow \mathcal{O}_{X,x}$는 surjective이고 따라서 $\kappa(\xi) \rightarrow \kappa(x)$ 또한 surjective이다. 한편 $p_1\circ\Delta=\id_X$이므로 합성 $\kappa(x) \rightarrow \kappa(\xi) \rightarrow \kappa(x)$는 항등사상이고, 그러므로 두 morphism은 서로의 역이 되는 isomorphism이다. 곧 $K=\kappa(\xi)\cong\kappa(x)$이다. 이 동일시 아래에서 점 $x$와 $\kappa(x)\cong K$가 정의하는 canonical morphism을 $u:\Spec K \rightarrow X$라 하면, $\Delta\circ u$는 점 $\xi$와 $\kappa(\xi)\cong K$가 정의하는 canonical morphism이고 이는 $q\circ j$와 같다. 실제로 $q\circ j$는 $\xi$를 image로 갖고 residue field 위에서 $\kappa(\xi)=\Frac(\mathcal{O})=K$의 항등사상을 유도하기 때문이다. 따라서
 
 $$g_1\circ j=p_1\circ q\circ j=p_1\circ \Delta\circ u=u,\qquad g_2\circ j=p_2\circ q\circ j=p_2\circ\Delta\circ u=u$$
 
@@ -184,27 +184,27 @@ Noetherian scheme $X$와 finite type scheme morphism $f:X \rightarrow Y$에 대�
 
 먼저 $f$가 proper라 하자. Proper morphism은 separated이므로 [정리 6](#thm6)에 의하여 lifting은 많아야 하나이고, 따라서 존재성만 보이면 된다. $v$를 따라 base change하여 $X_A=X\times_Y\Spec A$와 projection $\pi:X_A \rightarrow \Spec A$를 얻자. $f$가 universally closed이므로 $\pi$는 closed map이다. ([정의 8](#def8)) 한편 $u$와 $j$는 fiber product의 universal property에 의해 $\Spec A$ 위의 morphism $\tilde{u}:\Spec K \rightarrow X_A$를 유도하며, $\Spec A \rightarrow X_A$ 꼴의 $\pi$의 section으로서 $\tilde{u}$를 연장하는 것을 찾으면 이를 $X$로 project하여 원하는 lifting을 얻는다.
 
-$\xi\in X_A$를 $\tilde{u}$의 상이 되는 점이라 하고 $Z=\cl(\{\xi\})$에 reduced scheme structure를 주자. ([§닫힌 부분스킴, ⁋정의 14](/ko/math/scheme_theory/closed_subschemes#def14)) $\pi\circ\tilde{u}=j$이므로 $\pi(\xi)$는 $\Spec A$의 generic point $(0)$이고, $\pi$가 closed map이므로 $\pi(Z)$는 $(0)$을 포함하는 닫힌집합, 곧 $\Spec A$ 전체이다. 따라서 $\pi(z)=\mathfrak{m}_A$인 $z\in Z$가 존재한다.
+$\xi\in X_A$를 $\tilde{u}$의 image가 되는 점이라 하고 $Z=\cl(\{\xi\})$에 reduced scheme structure를 주자. ([§닫힌 부분스킴, ⁋정의 14](/ko/math/scheme_theory/closed_subschemes#def14)) $\pi\circ\tilde{u}=j$이므로 $\pi(\xi)$는 $\Spec A$의 generic point $(0)$이고, $\pi$가 closed map이므로 $\pi(Z)$는 $(0)$을 포함하는 닫힌집합, 곧 $\Spec A$ 전체이다. 따라서 $\pi(z)=\mathfrak{m}_A$인 $z\in Z$가 존재한다.
 
-Residue field들을 살펴보자. $\pi\circ \tilde{u}=j$가 $(0)$에서 유도하는 사상 $\kappa((0))=K \rightarrow K$는 항등사상이고, 이것은 $\pi$가 유도하는 $K\rightarrow\kappa(\xi)$와 $\tilde{u}$가 유도하는 $\kappa(\xi) \rightarrow K$의 합성이므로 두 사상은 서로의 역이 되는 isomorphism이다. 곧 $\kappa(\xi)\cong K$이다. 그럼 $Z$는 generic point $\xi$를 갖는 integral scheme이므로, [정리 6](#thm6)의 증명에서와 같이 $z$를 포함하는 affine open subset을 택하여
+Residue field들을 살펴보자. $\pi\circ \tilde{u}=j$가 $(0)$에서 유도하는 morphism $\kappa((0))=K \rightarrow K$는 항등사상이고, 이것은 $\pi$가 유도하는 $K\rightarrow\kappa(\xi)$와 $\tilde{u}$가 유도하는 $\kappa(\xi) \rightarrow K$의 합성이므로 두 morphism은 서로의 역이 되는 isomorphism이다. 곧 $\kappa(\xi)\cong K$이다. 그럼 $Z$는 generic point $\xi$를 갖는 integral scheme이므로, [정리 6](#thm6)의 증명에서와 같이 $z$를 포함하는 affine open subset을 택하여
 
 $$\mathcal{O}:=\mathcal{O}_{Z,z}\subseteq \kappa(\xi)=K,\qquad \Frac(\mathcal{O})=K$$
 
-임을 안다. 또 $\pi\vert_Z$가 유도하는 사상 $A=\mathcal{O}_{\Spec A,\mathfrak{m}_A} \rightarrow \mathcal{O}_{Z,z}$는 local homomorphism이며, generic point에서 이것이 유도하는 $K \rightarrow \kappa(\xi)=K$가 항등사상이므로 이 사상은 $K$의 subring 사이의 포함사상이다. 곧 $\mathcal{O}$는 $A$를 dominate하는 $K$의 local subring이고, 위의 극대성에 의하여 $\mathcal{O}_{Z,z}=A$이다.
+임을 안다. 또 $\pi\vert_Z$가 유도하는 morphism $A=\mathcal{O}_{\Spec A,\mathfrak{m}_A} \rightarrow \mathcal{O}_{Z,z}$는 local homomorphism이며, generic point에서 이것이 유도하는 $K \rightarrow \kappa(\xi)=K$가 항등사상이므로 이 morphism은 $K$의 subring 사이의 포함사상이다. 곧 $\mathcal{O}$는 $A$를 dominate하는 $K$의 local subring이고, 위의 극대성에 의하여 $\mathcal{O}_{Z,z}=A$이다.
 
-그럼 canonical morphism $\Spec A=\Spec\mathcal{O}_{Z,z} \rightarrow Z \hookrightarrow X_A$를 얻고, 이것과 $\pi$의 합성은 ring 수준에서 $A$의 항등사상에 대응하므로 $\pi$의 section이다. 이 section을 $\Spec K$로 제한한 것은 $\xi$를 상으로 갖고 residue field 위에서 $\kappa(\xi)=K$의 항등사상을 유도하므로 $\tilde{u}$와 같다. 따라서 이 section을 $X$로 project하면 $g\circ j=u$이고 $f\circ g=v$인 $g:\Spec A \rightarrow X$를 얻는다.
+그럼 canonical morphism $\Spec A=\Spec\mathcal{O}_{Z,z} \rightarrow Z \hookrightarrow X_A$를 얻고, 이것과 $\pi$의 합성은 ring 수준에서 $A$의 항등사상에 대응하므로 $\pi$의 section이다. 이 section을 $\Spec K$로 제한한 것은 $\xi$를 image로 갖고 residue field 위에서 $\kappa(\xi)=K$의 항등사상을 유도하므로 $\tilde{u}$와 같다. 따라서 이 section을 $X$로 project하면 $g\circ j=u$이고 $f\circ g=v$인 $g:\Spec A \rightarrow X$를 얻는다.
 
 거꾸로 판정법이 성립한다고 가정하자. Lifting의 유일성과 [정리 6](#thm6)으로부터 $f$는 separated이고 finite type은 가정이므로, $f$가 universally closed임만 보이면 된다. 우리는 Noetherian scheme들의 범주 안에서 작업하고 있으므로 base change $Y' \rightarrow Y$ 또한 Noetherian scheme에 대한 것으로 제한한다.
 
 우선 판정법이 base change에 대해 안정적이다. $Y' \rightarrow Y$와 $X'=X\times_YY'$, $f':X' \rightarrow Y'$가 주어졌다 하고, $\Spec K \rightarrow X'$와 $\Spec A \rightarrow Y'$가 $f'$에 대한 바깥쪽 square를 이룬다 하자. 이들을 $X' \rightarrow X$, $Y' \rightarrow Y$와 합성하면 $f$에 대한 바깥쪽 square를 얻으므로 유일한 lifting $g:\Spec A \rightarrow X$가 존재하고, $g$와 $\Spec A \rightarrow Y'$는 universal property에 의해 유일한 $g':\Spec A \rightarrow X'$를 준다. $g'\circ j$와 주어진 $\Spec K \rightarrow X'$는 $X' \rightarrow X$, $X' \rightarrow Y'$와 합성한 결과가 각각 같으므로 서로 같고, 따라서 $g'$는 $f'$에 대한 lifting이다. 유일성 또한 두 lifting을 $X' \rightarrow X$와 합성하여 $f$에 대한 lifting의 유일성을 쓰면 얻어진다. 한편 finite type morphism은 base change에 대해 안정적이고 Noetherian scheme 위의 finite type scheme은 다시 Noetherian이므로, $X'$는 Noetherian이고 $f'$는 finite type이다. 따라서 Noetherian scheme $X$와 finite type morphism $f:X \rightarrow Y$가 판정법의 존재성 부분을 만족할 때 $f$가 closed map임을 보이면, 이를 모든 base change에 적용하여 증명이 끝난다.
 
-이를 보이기 위해 $X$의 닫힌집합 $T$를 택하고 reduced scheme structure를 주자. Closed embedding $T\hookrightarrow X$는 finite morphism이므로 ([§닫힌 부분스킴, ⁋명제 4](/ko/math/scheme_theory/closed_subschemes#prop4)) finite type이고, 따라서 $T$는 Noetherian scheme이며 $f\vert_T:T \rightarrow Y$ 또한 finite type이다. 또 $f\vert_T$는 판정법의 존재성 부분을 물려받는다. 실제로 $\Spec K \rightarrow T$와 $\Spec A \rightarrow Y$가 $f\vert_T$에 대한 square를 이루면, $\Spec K \rightarrow T\hookrightarrow X$에 판정법을 적용하여 lifting $g_0:\Spec A \rightarrow X$를 얻는다. $\Spec A$의 모든 점은 generic point $(0)$의 specialization이고 morphism은 specialization을 보존하므로 $g_0(\Spec A)\subseteq \cl(\{g_0((0))\})\subseteq T$이며, $\Spec A$는 reduced이므로 $g_0$는 $T$를 경유한다. 여기에서 마지막 사실은 다음과 같이 얻어진다. Reduced scheme $S$에서의 morphism $\varphi:S \rightarrow X$의 상이 닫힌집합 $T$에 들어간다 하고, $X$의 affine open subset $\Spec B$와 $\varphi^{-1}(\Spec B)$의 affine open subset $\Spec R$을 택하자. $T\cap \Spec B=Z(\mathfrak{b})$ ($\mathfrak{b}$는 radical ideal)라 하면 $T$의 reduced structure는 그 위에서 $\Spec (B/\mathfrak{b})$이고, 대응하는 ring homomorphism $\psi:B \rightarrow R$는 임의의 prime ideal $\mathfrak{p}\subseteq R$에 대해 $\mathfrak{b}\subseteq \psi^{-1}(\mathfrak{p})$를 만족하므로
+이를 보이기 위해 $X$의 닫힌집합 $T$를 택하고 reduced scheme structure를 주자. Closed embedding $T\hookrightarrow X$는 finite morphism이므로 ([§닫힌 부분스킴, ⁋명제 4](/ko/math/scheme_theory/closed_subschemes#prop4)) finite type이고, 따라서 $T$는 Noetherian scheme이며 $f\vert_T:T \rightarrow Y$ 또한 finite type이다. 또 $f\vert_T$는 판정법의 존재성 부분을 물려받는다. 실제로 $\Spec K \rightarrow T$와 $\Spec A \rightarrow Y$가 $f\vert_T$에 대한 square를 이루면, $\Spec K \rightarrow T\hookrightarrow X$에 판정법을 적용하여 lifting $g_0:\Spec A \rightarrow X$를 얻는다. $\Spec A$의 모든 점은 generic point $(0)$의 specialization이고 morphism은 specialization을 보존하므로 $g_0(\Spec A)\subseteq \cl(\{g_0((0))\})\subseteq T$이며, $\Spec A$는 reduced이므로 $g_0$는 $T$를 경유한다. 여기에서 마지막 사실은 다음과 같이 얻어진다. Reduced scheme $S$에서의 morphism $\varphi:S \rightarrow X$의 image가 닫힌집합 $T$에 들어간다 하고, $X$의 affine open subset $\Spec B$와 $\varphi^{-1}(\Spec B)$의 affine open subset $\Spec R$을 택하자. $T\cap \Spec B=Z(\mathfrak{b})$ ($\mathfrak{b}$는 radical ideal)라 하면 $T$의 reduced structure는 그 위에서 $\Spec (B/\mathfrak{b})$이고, 대응하는 ring homomorphism $\psi:B \rightarrow R$는 임의의 prime ideal $\mathfrak{p}\subseteq R$에 대해 $\mathfrak{b}\subseteq \psi^{-1}(\mathfrak{p})$를 만족하므로
 
 $$\psi(\mathfrak{b})\subseteq \bigcap_{\mathfrak{p}\in\Spec R}\mathfrak{p}=\sqrt{(0)}=(0)$$
 
-이다. 곧 $\psi$는 $B/\mathfrak{b}$를 유일하게 경유하고, 이렇게 얻어진 국소적인 factorization들은 유일성에 의해 붙는다.
+이다. 곧 $\psi$는 $B/\mathfrak{b}$를 유일하게 경유하고, 이렇게 얻어진 local factorization들은 유일성에 의해 붙는다.
 
-따라서 $f(T)=f\vert_T(T)$가 닫힌집합임을 보이면 되고, 결국 판정법의 존재성 부분을 만족하는 finite type morphism $f:X \rightarrow Y$ (단 $X$는 Noetherian)의 상 $f(X)$가 닫혀 있음을 보이면 충분하다.
+따라서 $f(T)=f\vert_T(T)$가 닫힌집합임을 보이면 되고, 결국 판정법의 존재성 부분을 만족하는 finite type morphism $f:X \rightarrow Y$ (단 $X$는 Noetherian)의 image $f(X)$가 닫혀 있음을 보이면 충분하다.
 
 $f(X)$가 specialization에 대해 닫혀 있음을 먼저 본다. $y_1=f(x_1)\in f(X)$이고 $y_0\in\cl(\{y_1\})$이라 하자. $W=\cl(\{y_1\})$에 reduced scheme structure를 주면 $W$는 generic point $y_1$을 갖는 integral scheme이고, 앞에서와 같이 $\mathcal{O}=\mathcal{O}_{W,y_0}$는 $\Frac(\mathcal{O})=\kappa(y_1)$인 local domain이다. 이제 $K=\kappa(x_1)$이라 하고 $f$가 유도하는 field homomorphism $\kappa(y_1)\hookrightarrow K$를 통해 $\mathcal{O}$를 $K$의 local subring으로 보자. 그럼 $\mathcal{O}$를 dominate하는 $K$의 valuation ring $A$가 존재하고, 이로부터 두 morphism
 
@@ -245,13 +245,13 @@ $\pi$가 separated인 것은 chart 위에서 직접 확인된다. $\mathbb{P}^n_
 
 $$\mathbb{Z}[\x_0/\x_i,\ldots,\x_n/\x_i]\otimes_\mathbb{Z}\mathbb{Z}[\x_0/\x_j,\ldots,\x_n/\x_j] \longrightarrow \mathcal{O}(U_i\cap U_j)=\mathbb{Z}[\x_0/\x_i,\ldots,\x_n/\x_i]_{\x_j/\x_i}$$
 
-를 보면, 우변은 $\mathbb{Z}$ 위에서 $\x_l/\x_i$들과 $(\x_j/\x_i)^{-1}=\x_i/\x_j$로 생성되는데 앞의 것들은 첫째 인자에서, 뒤의 것은 둘째 인자에서 오므로 이 사상은 surjective이다. 따라서 $\Delta$는 각 $U_i\times_\mathbb{Z}U_j$ 위에서 closed embedding이고, closed embedding은 target에 대해 affine-local이므로 ([§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)) $\Delta$ 자체가 closed embedding이다.
+를 보면, 우변은 $\mathbb{Z}$ 위에서 $\x_l/\x_i$들과 $(\x_j/\x_i)^{-1}=\x_i/\x_j$로 생성되는데 앞의 것들은 첫째 인자에서, 뒤의 것은 둘째 인자에서 오므로 이 morphism은 surjective이다. 따라서 $\Delta$는 각 $U_i\times_\mathbb{Z}U_j$ 위에서 closed embedding이고, closed embedding은 target에 대해 affine-local이므로 ([§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)) $\Delta$ 자체가 closed embedding이다.
 
-$\Spec \mathbb{Z}$는 scheme들의 category에서 terminal object이므로, valuation ring $A$와 $K=\Frac(A)$에 대한 바깥쪽 square를 주는 것은 morphism $\Spec K \rightarrow \mathbb{P}^n_\mathbb{Z}$를 주는 것과 같다. Lifting의 유일성은 $\pi$가 separated인 것과 [정리 6](#thm6)에서 따르므로 존재성만 보이면 된다. $\Spec K$는 한 점이므로 주어진 morphism의 상은 적당한 chart $U_i$에 들어가고, 따라서 이 morphism은 ring homomorphism
+$\Spec \mathbb{Z}$는 scheme들의 category에서 terminal object이므로, valuation ring $A$와 $K=\Frac(A)$에 대한 바깥쪽 square를 주는 것은 morphism $\Spec K \rightarrow \mathbb{P}^n_\mathbb{Z}$를 주는 것과 같다. Lifting의 유일성은 $\pi$가 separated인 것과 [정리 6](#thm6)에서 따르므로 존재성만 보이면 된다. $\Spec K$는 한 점이므로 주어진 morphism의 image는 적당한 chart $U_i$에 들어가고, 따라서 이 morphism은 ring homomorphism
 
 $$\mathbb{Z}[\x_0/\x_i,\ldots,\x_n/\x_i] \longrightarrow K$$
 
-에 대응한다. $\x_j/\x_i$의 상을 $a_j\in K$라 하면 $a_i=1$이다. 이제 $K^\times$ 위에서 $s\preceq t$를 $t/s\in A$로 정의하면, valuation ring의 정의에 의하여 임의의 $s,t$에 대해 $s\preceq t$이거나 $t\preceq s$이고, $t/s\in A$이고 $r/t\in A$일 때 $r/s=(r/t)(t/s)\in A$이므로 $\preceq$는 $K^\times$ 위의 total preorder이다. $a_i=1\neq 0$이므로 유한집합 $\{a_j : a_j\neq 0\}$은 공집합이 아니고, 따라서 이 집합의 최소원 $a_k$를 택할 수 있다. 곧 모든 $j$에 대하여
+에 대응한다. $\x_j/\x_i$의 image를 $a_j\in K$라 하면 $a_i=1$이다. 이제 $K^\times$ 위에서 $s\preceq t$를 $t/s\in A$로 정의하면, valuation ring의 정의에 의하여 임의의 $s,t$에 대해 $s\preceq t$이거나 $t\preceq s$이고, $t/s\in A$이고 $r/t\in A$일 때 $r/s=(r/t)(t/s)\in A$이므로 $\preceq$는 $K^\times$ 위의 total preorder이다. $a_i=1\neq 0$이므로 유한집합 $\{a_j : a_j\neq 0\}$은 공집합이 아니고, 따라서 이 집합의 최소원 $a_k$를 택할 수 있다. 곧 모든 $j$에 대하여
 
 $$b_j:=a_j/a_k\in A$$
 
@@ -259,7 +259,7 @@ $$b_j:=a_j/a_k\in A$$
 
 $$\mathbb{Z}[\x_0/\x_k,\ldots,\x_n/\x_k] \longrightarrow A;\qquad \x_j/\x_k\mapsto b_j$$
 
-가 정의되고, 이는 morphism $\Spec A \rightarrow U_k\subseteq\mathbb{P}^n_\mathbb{Z}$를 준다. 이것이 lifting임을 보이려면 $A\hookrightarrow K$와의 합성이 처음 주어진 morphism과 같음을 확인하면 된다. $a_k\neq 0$이므로 처음의 ring homomorphism은 $\x_k/\x_i$를 $K$의 unit $a_k$로 보내고, 따라서 처음 morphism의 상은 $D(\x_k/\x_i)=U_i\cap U_k$에 들어간다. 그럼 $U_k$ 위에서 이 morphism은 transition 관계
+가 정의되고, 이는 morphism $\Spec A \rightarrow U_k\subseteq\mathbb{P}^n_\mathbb{Z}$를 준다. 이것이 lifting임을 보이려면 $A\hookrightarrow K$와의 합성이 처음 주어진 morphism과 같음을 확인하면 된다. $a_k\neq 0$이므로 처음의 ring homomorphism은 $\x_k/\x_i$를 $K$의 unit $a_k$로 보내고, 따라서 처음 morphism의 image는 $D(\x_k/\x_i)=U_i\cap U_k$에 들어간다. 그럼 $U_k$ 위에서 이 morphism은 transition 관계
 
 $$\x_j/\x_k=(\x_j/\x_i)\cdot(\x_k/\x_i)^{-1}$$
 

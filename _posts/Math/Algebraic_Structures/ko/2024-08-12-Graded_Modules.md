@@ -43,7 +43,7 @@ $$u(M_{i+j})\subseteq M_j',\qquad u(M_j)=0\text{ if $j-i\not\in I$}$$
 
 으로 정의할 수도 있다. 다만 이러한 방식으로 정의할 때 주의할 점은 bijective graded homomorphism of degree $i$는 $i\neq 0$일 경우, 일반적으로 $I$-graded left $A$-module들 사이의 isomorphism으로 생각하지 않는다는 것이다. 
 
-이러한 방식의 일반화는 호몰로지 대수학에서 더 자세히 다룬다.
+이러한 방식의 일반화는 homological algebra에서 더 자세히 다룬다.
 
 ## 등급부분가군
 

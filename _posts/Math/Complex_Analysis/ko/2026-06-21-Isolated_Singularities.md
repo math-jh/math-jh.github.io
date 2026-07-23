@@ -51,7 +51,7 @@ $z \in A$을 고정하고 $r < \rho_1 < \lvert z - z_0\rvert < \rho_2 < R$이 �
 
 $$f(z) = \frac{1}{2\pi i}\oint_{\lvert w - z_0\rvert = \rho_2}\frac{f(w)}{w - z}\,dw \;-\; \frac{1}{2\pi i}\oint_{\lvert w - z_0\rvert = \rho_1}\frac{f(w)}{w - z}\,dw$$
 
-이다. 이 환형 영역 형태는 두 경계원을 반대 방향으로 도는 닫힌 경로에 Cauchy 적분공식을 적용한 것으로, 안쪽 원의 부호가 음인 것은 그 방향이 영역의 경계로서 시계방향이기 때문이다.
+이다. 이 환형 영역 형태는 두 경계원을 반대 방향으로 도는 닫힌 경로에 Cauchy 적분공식을 적용한 것으로, 안쪽 원의 부호가 음인 것은 그 방향이 영역의 boundary로서 시계방향이기 때문이다.
 
 바깥 원 위에서는 $\lvert w - z_0\rvert = \rho_2 > \lvert z - z_0\rvert$이므로 Taylor 전개에서와 똑같이 kernel을 양의 멱으로 전개한다. 곧
 
@@ -104,11 +104,11 @@ $$f(z) = \sum_{n=1}^{\infty} z^{-n} - \frac{1}{z} = \sum_{n=2}^{\infty} z^{-n} \
 $f$가 어떤 $R > 0$에 대해 구멍 뚫린 원판 $0 < \lvert z - z_0\rvert < R$에서 holomorphic이지만 $z_0$ 자체에서는 holomorphic이 아니라 하자. 이때 $z_0$을 $f$의 *isolated singularity<sub>고립특이점</sub>*라 한다. $z_0$을 중심으로 하는 이 환형 영역에서의 Laurent 전개 $f(z) = \sum_{n=-\infty}^{\infty} a_n (z - z_0)^n$의 주부에 따라 isolated singularity를 다음 셋으로 분류한다.
 
 1. 모든 $n < 0$에서 $a_n = 0$이면, 곧 주부가 없으면 $z_0$을 *removable singularity<sub>가제거 특이점</sub>*라 한다.
-2. 음의 지수 계수 가운데 $0$이 아닌 것이 유한 개이면, 곧 어떤 $m \geq 1$이 있어 $a_{-m} \neq 0$이고 모든 $n < -m$에서 $a_n = 0$이면 $z_0$을 위수 $m$인 *pole<sub>극</sub>*이라 한다.
+2. 음의 지수 계수 가운데 $0$이 아닌 것이 유한 개이면, 곧 어떤 $m \geq 1$이 있어 $a_{-m} \neq 0$이고 모든 $n < -m$에서 $a_n = 0$이면 $z_0$을 order $m$인 *pole<sub>극</sub>*이라 한다.
 3. 음의 지수 계수 가운데 $0$이 아닌 것이 무한히 많으면 $z_0$을 *essential singularity<sub>본질적 특이점</sub>*라 한다.
 :::
 
-이 분류는 주부가 가진 항의 개수가 $0$이냐, 유한이냐, 무한이냐는 단순한 기준에 따른 것이지만, 곧 보겠듯이 각 경우 함수가 $z_0$ 근방에서 보이는 거동이 질적으로 완전히 다르다. 위수 $1$인 극을 *simple pole<sub>단순극</sub>*이라 부른다. 예시 3의 $f(z) = 1/(z(z-1))$은 영역 $0 < \lvert z\rvert < 1$에서의 전개 주부가 $-1/z$ 한 항이므로 원점에서 단순극을 가지고, $e^{1/z} = \sum_{n=0}^{\infty} \frac{1}{n!}z^{-n}$은 모든 음의 멱이 살아 있으므로 원점에서 essential singularity를 가진다. 분류가 영역 선택과 무관함을 짚어 둘 필요가 있다. isolated singularity의 분류는 항상 $z_0$에 *가장 가까운* 환형 영역, 곧 $0 < \lvert z - z_0\rvert < R$ 형태에서의 전개로 정의하므로 (예시 3의 바깥 영역 같은 다른 환형 영역이 아니라), 분류는 함수와 점 $z_0$에 의해 일의적으로 결정된다.
+이 분류는 주부가 가진 항의 개수가 $0$이냐, 유한이냐, 무한이냐는 단순한 기준에 따른 것이지만, 곧 보겠듯이 각 경우 함수가 $z_0$ 근방에서 보이는 거동이 질적으로 완전히 다르다. order $1$인 극을 *simple pole<sub>단순극</sub>*이라 부른다. 예시 3의 $f(z) = 1/(z(z-1))$은 영역 $0 < \lvert z\rvert < 1$에서의 전개 주부가 $-1/z$ 한 항이므로 원점에서 단순극을 가지고, $e^{1/z} = \sum_{n=0}^{\infty} \frac{1}{n!}z^{-n}$은 모든 음의 멱이 살아 있으므로 원점에서 essential singularity를 가진다. 분류가 영역 선택과 무관함을 짚어 둘 필요가 있다. isolated singularity의 분류는 항상 $z_0$에 *가장 가까운* 환형 영역, 곧 $0 < \lvert z - z_0\rvert < R$ 형태에서의 전개로 정의하므로 (예시 3의 바깥 영역 같은 다른 환형 영역이 아니라), 분류는 함수와 점 $z_0$에 의해 일의적으로 결정된다.
 
 ## Removable singularity와 Riemann 가제거 정리
 
@@ -146,40 +146,40 @@ $$f(z) = \frac{h(z)}{(z - z_0)^2} = \sum_{n=2}^{\infty} c_n (z - z_0)^{n-2} = \s
 
 ## Pole에서의 거동
 
-극은 함수가 무한대로 깔끔하게 발산하는 singular point이다. 주부가 유한 개의 음의 멱으로 이루어지므로, 가장 낮은 음의 멱이 발산의 차수를 정확히 결정한다. 위수 $m$인 극은 $1/(z - z_0)^m$과 같은 속도로 터지며, 이 발산은 영점의 인수분해를 뒤집은 인수분해로 깔끔하게 기술된다.
+극은 함수가 무한대로 깔끔하게 발산하는 singular point이다. 주부가 유한 개의 음의 멱으로 이루어지므로, 가장 낮은 음의 멱이 발산의 degree를 정확히 결정한다. order $m$인 극은 $1/(z - z_0)^m$과 같은 속도로 터지며, 이 발산은 영점의 인수분해를 뒤집은 인수분해로 깔끔하게 기술된다.
 
 ::: 명제 6 (극의 특징과 발산)
-$f$가 $z_0$에서 isolated singularity를 가진다고 하자. 다음 세 조건은 동치이며, 각 경우 $z_0$은 위수 $m$인 극이다.
+$f$가 $z_0$에서 isolated singularity를 가진다고 하자. 다음 세 조건은 동치이며, 각 경우 $z_0$은 order $m$인 극이다.
 
-1. $z_0$이 $f$의 위수 $m$인 극이다.
+1. $z_0$이 $f$의 order $m$인 극이다.
 2. $z_0$의 어떤 구멍 뚫린 근방에서 holomorphic이고 $g(z_0) \neq 0$인 함수 $g$가 있어 $f(z) = (z - z_0)^{-m}g(z)$이며, $g$는 $z_0$에서 holomorphic으로 확장된다.
-3. $1/f$가 $z_0$에서 (removable singularity를 메운 뒤) 위수 $m$인 영점을 가진다.
+3. $1/f$가 $z_0$에서 (removable singularity를 메운 뒤) order $m$인 영점을 가진다.
 
 특히 $z_0$이 $f$의 극이면 $\lim_{z \rightarrow z_0}\lvert f(z)\rvert = \infty$이다.
 :::
 
 ::: 증명
-$(1) \Rightarrow (2)$. 위수 $m$인 극이면 Laurent 전개가 $f(z) = \sum_{n=-m}^{\infty} a_n (z - z_0)^n$ ($a_{-m} \neq 0$) 이다. $(z - z_0)^m$을 묶어내면
+$(1) \Rightarrow (2)$. order $m$인 극이면 Laurent 전개가 $f(z) = \sum_{n=-m}^{\infty} a_n (z - z_0)^n$ ($a_{-m} \neq 0$) 이다. $(z - z_0)^m$을 묶어내면
 
 $$f(z) = (z - z_0)^{-m}\sum_{n=-m}^{\infty} a_n (z - z_0)^{n+m} = (z - z_0)^{-m}\sum_{k=0}^{\infty} a_{k-m}(z - z_0)^k$$
 
 이고, $g(z) = \sum_{k=0}^{\infty} a_{k-m}(z - z_0)^k$로 두면 이 멱급수는 $z_0$에서 holomorphic으로 확장되며 ([§복소정칙함수, ⁋정리 9](/ko/math/complex_analysis/holomorphic_functions#thm9)) $g(z_0) = a_{-m} \neq 0$이다.
 
-$(2) \Rightarrow (1)$. $g$가 $z_0$에서 holomorphic이고 $g(z_0) \neq 0$이면 $g(z) = \sum_{k=0}^{\infty} b_k (z - z_0)^k$ ($b_0 = g(z_0) \neq 0$) 이고, $f(z) = (z - z_0)^{-m}g(z) = \sum_{k=0}^{\infty} b_k (z - z_0)^{k-m}$이다. 이는 가장 낮은 멱이 $-m$이고 그 계수 $b_0 \neq 0$인 Laurent 전개이므로 $z_0$은 위수 $m$인 극이다.
+$(2) \Rightarrow (1)$. $g$가 $z_0$에서 holomorphic이고 $g(z_0) \neq 0$이면 $g(z) = \sum_{k=0}^{\infty} b_k (z - z_0)^k$ ($b_0 = g(z_0) \neq 0$) 이고, $f(z) = (z - z_0)^{-m}g(z) = \sum_{k=0}^{\infty} b_k (z - z_0)^{k-m}$이다. 이는 가장 낮은 멱이 $-m$이고 그 계수 $b_0 \neq 0$인 Laurent 전개이므로 $z_0$은 order $m$인 극이다.
 
 $(2) \Leftrightarrow (3)$. (2)에서 $g(z_0) \neq 0$이고 $g$가 holomorphic이므로 연속성에 의해 $z_0$의 어떤 근방에서 $g$가 $0$이 아니고, 따라서 그 근방에서
 
 $$\frac{1}{f(z)} = (z - z_0)^m \frac{1}{g(z)}$$
 
-이다. $1/g$은 $g(z_0) \neq 0$이므로 $z_0$에서 holomorphic이고 $(1/g)(z_0) = 1/g(z_0) \neq 0$이다. 곧 $1/f$는 인수 $(z - z_0)^m$에 $z_0$에서 사라지지 않는 holomorphic function을 곱한 꼴이므로, 영점의 인수분해 ([§멱급수와 해석성, ⁋명제 6](/ko/math/complex_analysis/power_series_and_analyticity#prop6)) 에 의해 $z_0$에서 위수 $m$인 영점을 가진다. 역으로 $1/f$가 $z_0$에서 위수 $m$인 영점을 가지면 같은 인수분해로 $1/f(z) = (z - z_0)^m h(z)$ ($h(z_0) \neq 0$) 이고, 역수를 취하면 $f(z) = (z - z_0)^{-m}(1/h(z))$이 (2)의 꼴이다.
+이다. $1/g$은 $g(z_0) \neq 0$이므로 $z_0$에서 holomorphic이고 $(1/g)(z_0) = 1/g(z_0) \neq 0$이다. 곧 $1/f$는 인수 $(z - z_0)^m$에 $z_0$에서 사라지지 않는 holomorphic function을 곱한 꼴이므로, 영점의 인수분해 ([§멱급수와 해석성, ⁋명제 6](/ko/math/complex_analysis/power_series_and_analyticity#prop6)) 에 의해 $z_0$에서 order $m$인 영점을 가진다. 역으로 $1/f$가 $z_0$에서 order $m$인 영점을 가지면 같은 인수분해로 $1/f(z) = (z - z_0)^m h(z)$ ($h(z_0) \neq 0$) 이고, 역수를 취하면 $f(z) = (z - z_0)^{-m}(1/h(z))$이 (2)의 꼴이다.
 
 발산은 (2)에서 곧장 나온다. $z \rightarrow z_0$일 때 $\lvert g(z)\rvert \rightarrow \lvert g(z_0)\rvert > 0$이고 $\lvert z - z_0\rvert^{-m} \rightarrow \infty$이므로 $\lvert f(z)\rvert = \lvert z - z_0\rvert^{-m}\lvert g(z)\rvert \rightarrow \infty$이다.
 :::
 
-명제 6은 극을 영점의 거울상으로 본다. 위수 $m$인 영점이 인수 $(z - z_0)^m$을 내놓았듯이 ([§멱급수와 해석성, ⁋명제 6](/ko/math/complex_analysis/power_series_and_analyticity#prop6)), 위수 $m$인 극은 인수 $(z - z_0)^{-m}$을 내놓고, 두 거동은 역수를 취하는 조작으로 정확히 맞바뀐다. 이 대응 덕분에 극의 위수 계산은 영점의 위수 계산으로 환원된다. 가령 $f(z) = \dfrac{z + 1}{z^2(z - 1)}$의 원점에서의 극의 위수는 분모 $z^2(z-1)$이 원점에서 가지는 영점의 위수가 $2$이고 분자가 원점에서 $1 \neq 0$이므로 $2$이다. 마지막 발산 진술은 극과 다른 두 종류의 singular point를 가르는 결정적 기준이기도 하다. removable singularity에서는 함수가 bounded이고 essential singularity에서는 곧 보겠듯이 극한이 아예 존재하지 않으므로, $z_0$에서 $\lvert f\rvert$이 무한대로 발산하는 것은 정확히 극인 경우뿐이다.
+명제 6은 극을 영점의 거울상으로 본다. order $m$인 영점이 인수 $(z - z_0)^m$을 내놓았듯이 ([§멱급수와 해석성, ⁋명제 6](/ko/math/complex_analysis/power_series_and_analyticity#prop6)), order $m$인 극은 인수 $(z - z_0)^{-m}$을 내놓고, 두 거동은 역수를 취하는 조작으로 정확히 맞바뀐다. 이 대응 덕분에 극의 order 계산은 영점의 order 계산으로 환원된다. 가령 $f(z) = \dfrac{z + 1}{z^2(z - 1)}$의 원점에서의 극의 order는 분모 $z^2(z-1)$이 원점에서 가지는 영점의 order가 $2$이고 분자가 원점에서 $1 \neq 0$이므로 $2$이다. 마지막 발산 진술은 극과 다른 두 종류의 singular point를 가르는 결정적 기준이기도 하다. removable singularity에서는 함수가 bounded이고 essential singularity에서는 곧 보겠듯이 극한이 아예 존재하지 않으므로, $z_0$에서 $\lvert f\rvert$이 무한대로 발산하는 것은 정확히 극인 경우뿐이다.
 
 ::: 예시 7 (극의 위수 판정)
-함수 $f(z) = \dfrac{1}{\sin z}$의 isolated singularity와 그 위수를 살핀다. $\sin z$의 영점은 $z = k\pi$ ($k \in \mathbb{Z}$) 이고, 각 영점에서 $(\sin z)' = \cos(k\pi) = (-1)^k \neq 0$이므로 모두 단순영점이다 ([§멱급수와 해석성, ⁋정의 5](/ko/math/complex_analysis/power_series_and_analyticity#def5) 뒤의 단순영점 판정). 따라서 명제 6의 조건 (3)에 의해 $1/\sin z$는 각 $z = k\pi$에서 위수 $1$인 극, 곧 단순극을 가진다. 다른 점에서는 $\sin z \neq 0$이어서 $f$가 holomorphic이므로, $f$의 singular point는 정수 $k$에 대한 $k\pi$들뿐이고 모두 단순극이다.
+함수 $f(z) = \dfrac{1}{\sin z}$의 isolated singularity와 그 order를 살핀다. $\sin z$의 영점은 $z = k\pi$ ($k \in \mathbb{Z}$) 이고, 각 영점에서 $(\sin z)' = \cos(k\pi) = (-1)^k \neq 0$이므로 모두 단순영점이다 ([§멱급수와 해석성, ⁋정의 5](/ko/math/complex_analysis/power_series_and_analyticity#def5) 뒤의 단순영점 판정). 따라서 명제 6의 조건 (3)에 의해 $1/\sin z$는 각 $z = k\pi$에서 order $1$인 극, 곧 단순극을 가진다. 다른 점에서는 $\sin z \neq 0$이어서 $f$가 holomorphic이므로, $f$의 singular point는 정수 $k$에 대한 $k\pi$들뿐이고 모두 단순극이다.
 :::
 
 ## Essential singularity와 Casorati–Weierstrass 정리
@@ -205,7 +205,7 @@ $$\lvert g(z)\rvert = \frac{1}{\lvert f(z) - w\rvert} \leq \frac{1}{\varepsilon}
 
 $g(z_0) \neq 0$이면 $f(z) - w = 1/g(z)$이 $z_0$에서 holomorphic이고 ($g(z_0) \neq 0$이므로) 그 값이 $1/g(z_0)$으로 유한하다. 그러면 $f$ 자신이 $z_0$ 근방에서 bounded이므로 다시 정리 5에 의해 $z_0$이 $f$의 removable singularity가 되어, $z_0$이 essential singularity이라는 가정에 어긋난다.
 
-$g(z_0) = 0$이면 $g$가 $z_0$에서 holomorphic이고 ($g = 1/(f - w)$이 $U$에서 결코 $0$이 될 수 없으므로 $g$는 $U$에서 항등적으로 $0$이 아니다) 어떤 위수 $m \geq 1$인 영점을 가진다. 그러면 명제 6의 (3)에 의해 $f(z) - w = 1/g(z)$이 $z_0$에서 위수 $m$인 극을 가지고, 상수 $w$를 더해도 극의 본성은 변하지 않으므로 $f$ 역시 $z_0$에서 위수 $m$인 극을 가진다. 이는 다시 $z_0$이 essential singularity이라는 가정에 어긋난다.
+$g(z_0) = 0$이면 $g$가 $z_0$에서 holomorphic이고 ($g = 1/(f - w)$이 $U$에서 결코 $0$이 될 수 없으므로 $g$는 $U$에서 항등적으로 $0$이 아니다) 어떤 order $m \geq 1$인 영점을 가진다. 그러면 명제 6의 (3)에 의해 $f(z) - w = 1/g(z)$이 $z_0$에서 order $m$인 극을 가지고, 상수 $w$를 더해도 극의 본성은 변하지 않으므로 $f$ 역시 $z_0$에서 order $m$인 극을 가진다. 이는 다시 $z_0$이 essential singularity이라는 가정에 어긋난다.
 
 두 경우 모두 모순이므로, $f(U)$이 어떤 원판을 피한다는 가정이 틀렸다. 곧 임의의 $w$의 임의의 근방이 $f(U)$과 만나며, $f(U)$이 $\mathbb{C}$에서 조밀하다.
 :::
@@ -217,28 +217,28 @@ Casorati–Weierstrass 정리는 세 종류의 isolated singularity를 함수값
 지금까지는 유한한 점에서의 singular point만 다루었다. 함수의 큰 $\lvert z\rvert$에서의 거동도 같은 틀로 분석할 수 있는데, 변수치환 $z \mapsto 1/z$로 무한대를 원점으로 끌어오면 된다. 이로써 다항식이 무한대에서 극을, $e^z$이 무한대에서 essential singularity를 가진다는 직관이 정확한 의미를 얻는다.
 
 ::: 정의 9 (무한대에서의 singular point)
-$f$가 어떤 $\rho > 0$에 대해 $\lvert z\rvert > \rho$에서 holomorphic이라 하자. 함수 $\tilde{f}(\zeta) = f(1/\zeta)$를 생각하면 $\tilde{f}$는 구멍 뚫린 원판 $0 < \lvert\zeta\rvert < 1/\rho$에서 holomorphic이다. $f$가 $\infty$에서 가지는 singular point의 종류를 $\tilde{f}$가 $\zeta = 0$에서 가지는 singular point의 종류로 정의한다. 곧 $\tilde{f}$가 $0$에서 removable singularity·위수 $m$인 극·essential singularity를 가지면, $f$가 $\infty$에서 각각 removable singularity·위수 $m$인 극·essential singularity를 가진다고 한다.
+$f$가 어떤 $\rho > 0$에 대해 $\lvert z\rvert > \rho$에서 holomorphic이라 하자. 함수 $\tilde{f}(\zeta) = f(1/\zeta)$를 생각하면 $\tilde{f}$는 구멍 뚫린 원판 $0 < \lvert\zeta\rvert < 1/\rho$에서 holomorphic이다. $f$가 $\infty$에서 가지는 singular point의 종류를 $\tilde{f}$가 $\zeta = 0$에서 가지는 singular point의 종류로 정의한다. 곧 $\tilde{f}$가 $0$에서 removable singularity·order $m$인 극·essential singularity를 가지면, $f$가 $\infty$에서 각각 removable singularity·order $m$인 극·essential singularity를 가진다고 한다.
 :::
 
-치환 $z = 1/\zeta$에서 $\lvert z\rvert > \rho$가 $0 < \lvert\zeta\rvert < 1/\rho$로 옮겨지므로, $\lvert z\rvert > \rho$에서의 $f$의 Laurent 전개 $f(z) = \sum_{n} a_n z^n$은 $\tilde{f}(\zeta) = \sum_n a_n \zeta^{-n}$이 되어 두 전개의 지수 부호가 뒤집힌다. 따라서 무한대에서의 분류는 $f$의 전개에서 *양의* 멱의 거동으로 읽힌다. $f$의 전개에 양의 멱이 없으면 ($a_n = 0$ for $n > 0$) $\infty$이 removable singularity이고, 양의 멱이 유한 개로 가장 높은 것이 $z^m$이면 ($a_m \neq 0$, $a_n = 0$ for $n > m$) $\infty$이 위수 $m$인 극이며, 양의 멱이 무한히 많으면 essential singularity이다. 차수 $m$인 다항식 $p(z) = a_m z^m + \cdots + a_0$은 양의 멱이 $z^m$까지 정확히 유한 개이므로 $\infty$에서 위수 $m$인 극을 가지고, $e^z = \sum_{n \geq 0} z^n/n!$은 양의 멱이 무한히 많으므로 ([§복소정칙함수, ⁋정의 10](/ko/math/complex_analysis/holomorphic_functions#def10)) $\infty$에서 essential singularity를 가진다.
+치환 $z = 1/\zeta$에서 $\lvert z\rvert > \rho$가 $0 < \lvert\zeta\rvert < 1/\rho$로 옮겨지므로, $\lvert z\rvert > \rho$에서의 $f$의 Laurent 전개 $f(z) = \sum_{n} a_n z^n$은 $\tilde{f}(\zeta) = \sum_n a_n \zeta^{-n}$이 되어 두 전개의 지수 부호가 뒤집힌다. 따라서 무한대에서의 분류는 $f$의 전개에서 *양의* 멱의 거동으로 읽힌다. $f$의 전개에 양의 멱이 없으면 ($a_n = 0$ for $n > 0$) $\infty$이 removable singularity이고, 양의 멱이 유한 개로 가장 높은 것이 $z^m$이면 ($a_m \neq 0$, $a_n = 0$ for $n > m$) $\infty$이 order $m$인 극이며, 양의 멱이 무한히 많으면 essential singularity이다. degree $m$인 다항식 $p(z) = a_m z^m + \cdots + a_0$은 양의 멱이 $z^m$까지 정확히 유한 개이므로 $\infty$에서 order $m$인 극을 가지고, $e^z = \sum_{n \geq 0} z^n/n!$은 양의 멱이 무한히 많으므로 ([§복소정칙함수, ⁋정의 10](/ko/math/complex_analysis/holomorphic_functions#def10)) $\infty$에서 essential singularity를 가진다.
 
 이 관점이 곧장 주는 깔끔한 결과 하나는 전해석함수의 분류이다. 전해석함수가 무한대에서 길들기만 하면 그 모양이 다항식으로 강제된다.
 
 ::: 명제 10 (무한대에서 극을 가지는 전해석함수)
-$f$가 entire function이고 $\infty$에서 removable singularity 또는 극을 가진다고 하자. 그러면 $f$는 다항식이다. 특히 $\infty$이 removable singularity이면 $f$는 상수이고, $\infty$이 위수 $m$인 극이면 $f$는 차수 $m$인 다항식이다.
+$f$가 entire function이고 $\infty$에서 removable singularity 또는 극을 가진다고 하자. 그러면 $f$는 다항식이다. 특히 $\infty$이 removable singularity이면 $f$는 상수이고, $\infty$이 order $m$인 극이면 $f$는 degree $m$인 다항식이다.
 :::
 
 ::: 증명
 $f$가 entire function이므로 평면 전체에서 Taylor 전개 $f(z) = \sum_{n=0}^{\infty} a_n z^n$을 가진다 ([§멱급수와 해석성, ⁋정리 1](/ko/math/complex_analysis/power_series_and_analyticity#thm1)). 이것이 곧 $\lvert z\rvert > 0$에서의 Laurent 전개이기도 하므로, 무한대에서의 거동은 위에서 본 대로 양의 멱의 거동으로 읽힌다.
 
-$\infty$이 removable singularity이면 양의 멱이 모두 사라져 ($n > 0$에서 $a_n = 0$) $f(z) = a_0$이 상수이다. $\infty$이 위수 $m$인 극이면 가장 높은 양의 멱이 $z^m$이고 ($a_m \neq 0$, $n > m$에서 $a_n = 0$) 따라서
+$\infty$이 removable singularity이면 양의 멱이 모두 사라져 ($n > 0$에서 $a_n = 0$) $f(z) = a_0$이 상수이다. $\infty$이 order $m$인 극이면 가장 높은 양의 멱이 $z^m$이고 ($a_m \neq 0$, $n > m$에서 $a_n = 0$) 따라서
 
 $$f(z) = \sum_{n=0}^{m} a_n z^n$$
 
-이 차수 $m$인 다항식이다. 두 경우 모두 $f$가 다항식이다.
+이 degree $m$인 다항식이다. 두 경우 모두 $f$가 다항식이다.
 :::
 
-명제 10은 다항식을 무한대에서의 거동으로 특징짓는다. 전해석함수 가운데 무한대에서 가장 거칠지 않게, 곧 essential singularity 없이 행동하는 것은 정확히 다항식뿐이며, essential singularity를 가지는 전해석함수는 $e^z$이나 $\sin z$처럼 다항식이 아닌 초월적 entire function이다. removable singularity인 경우가 상수라는 결론은 Liouville 정리 ([§Cauchy 적분공식, ⁋따름정리 5](/ko/math/complex_analysis/cauchy_integral_formula#cor5)) 와도 맞물린다. $\infty$에서 removable singularity를 가지는 전해석함수는 큰 $\lvert z\rvert$에서 bounded이고 평면의 나머지에서도 연속이므로 평면 전체에서 bounded여서, Liouville 정리로 곧장 상수임이 따른다.
+명제 10은 다항식을 무한대에서의 거동으로 특징짓는다. 전해석함수 가운데 무한대에서 가장 거칠지 않게, 곧 essential singularity 없이 행동하는 것은 정확히 다항식뿐이며, essential singularity를 가지는 전해석함수는 $e^z$이나 $\sin z$처럼 다항식이 아닌 transcendental entire function이다. removable singularity인 경우가 상수라는 결론은 Liouville 정리 ([§Cauchy 적분공식, ⁋따름정리 5](/ko/math/complex_analysis/cauchy_integral_formula#cor5)) 와도 맞물린다. $\infty$에서 removable singularity를 가지는 전해석함수는 큰 $\lvert z\rvert$에서 bounded이고 평면의 나머지에서도 연속이므로 평면 전체에서 bounded여서, Liouville 정리로 곧장 상수임이 따른다.
 
 ---
 

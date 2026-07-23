@@ -17,7 +17,7 @@ drift_needed: true
 
 ## 대수적 군
 
-우리는 수학적 대상이 다른 대상에 작용하는 많은 예시들을 알고 있다. 대수적으로 가장 중요한 예시는 벡터공간 위에 작용하는 군일 것이며, 기하적으로는 Lie group action이 있다. 대수기하학은 algebraic한 대상들에 기하학적인 의미를 부여하므로, algebraic group의 action은 이들 두 관점을 잘 통합하는 형태로 나타난다. 이번 글에서 우리는 편의상 $\mathbb{k}=\mathbb{C}$로 통일한다. 
+우리는 수학적 대상이 다른 대상에 작용하는 많은 예시들을 알고 있다. 대수적으로 가장 중요한 예시는 벡터공간 위에 작용하는 group일 것이며, 기하적으로는 Lie group action이 있다. 대수기하학은 algebraic한 대상들에 기하학적인 의미를 부여하므로, algebraic group의 action은 이들 두 관점을 잘 통합하는 형태로 나타난다. 이번 글에서 우리는 편의상 $\mathbb{k}=\mathbb{C}$로 통일한다. 
 
 우선 다음 정의는 자명하다. 
 
@@ -89,7 +89,7 @@ $$\rho: G \rightarrow \GL(V)$$
 그럼 다음 정의 또한 Lie group에서와 동일한 것이다. 
 
 ::: 정의 7
-표현 $\rho: G \rightarrow \GL(V)$의 *character<sub>지표</sub>* $\chi_\rho: G \rightarrow \mathbb{C}$는
+Representation $\rho: G \rightarrow \GL(V)$의 *character<sub>지표</sub>* $\chi_\rho: G \rightarrow \mathbb{C}$는
 
 $$\chi_\rho(g) = \tr(\rho(g))$$
 
@@ -201,7 +201,7 @@ $$A^G = \{a \in A \mid \rho(a) = a \otimes 1\}$$
 Invariant ring의 원소들은 group action에 의해 변하지 않는 대칭성을 포착한다. Coordinate ring $A$의 원소를 $\Spec A$ 위의 함수로 본다면, 기하적으로 $A^G$의 원소들은 각각의 orbit 위에서 상수함수가 된다. 따라서 이들을 가지고 만든 공간 $\Spec(A^G)$는 orbit space $X/G$의 좋은 근사로 생각할 수 있게 된다. 그러나 문제는 $A^G$가 대수적으로 잘 행동하지 않을 수도 있다는 것이다. 
 
 ::: 정의 15
-Affine algebraic group $G$가 *reductive*라는 것은 $G$의 모든 유한차원 representation이 completely reducible인 것이다. 즉, 임의의 representation $V$가 irreducible representation들의 direct sum으로 분해되는 것이다. (엄밀히는 이 성질을 *linearly reductive*라 부르며, 표수 $0$ — 이 글의 $\mathbb{C}$처럼 — 에서는 unipotent radical이 자명하다는 기하적 정의의 reductive와 동치이다. 이 글은 표수 $0$ 위에서만 다루므로 두 개념을 구분하지 않는다.)
+Affine algebraic group $G$가 *reductive*라는 것은 $G$의 모든 유한차원 representation이 completely reducible인 것이다. 즉, 임의의 representation $V$가 irreducible representation들의 direct sum으로 분해되는 것이다. (엄밀히는 이 성질을 *linearly reductive*라 부르며, characteristic $0$ — 이 글의 $\mathbb{C}$처럼 — 에서는 unipotent radical이 자명하다는 기하적 정의의 reductive와 동치이다. 이 글은 characteristic $0$ 위에서만 다루므로 두 개념을 구분하지 않는다.)
 :::
 
 만일 $G$가 reductive group이라면 Hilbert basis theorem과 Nagata theorem을 통해 invariant ring $A^G$가 항상 finitely generated라는 것을 보일 수 있으며, 따라서 $\Spec(A^G)$가 well-defined affine variety가 된다.
@@ -233,7 +233,7 @@ $$X /\!/ G = \Spec(A^G)$$
 
 $$t \cdot [x:y] = [tx:y]$$
 
-로 작용한다고 하자. Homogeneous coordinate ring $\mathbb{C}[x,y]$에서 $t$가 $x$에 대해서는 $t$-배, $y$에 대해서는 1-배로 작용한다고 하면, 각 차수 $d$의 성분 $\mathbb{C}_d[x,y]$에서 monomial $x^a y^{d-a}$는 $t$에 의해 $t^a$-배로 작용한다. 즉, 각 monomial이 서로 다른 weight를 갖는다.
+로 작용한다고 하자. Homogeneous coordinate ring $\mathbb{C}[x,y]$에서 $t$가 $x$에 대해서는 $t$-배, $y$에 대해서는 1-배로 작용한다고 하면, 각 degree $d$의 성분 $\mathbb{C}_d[x,y]$에서 monomial $x^a y^{d-a}$는 $t$에 의해 $t^a$-배로 작용한다. 즉, 각 monomial이 서로 다른 weight를 갖는다.
 
 이 경우 $\mathbb{C}_d[x,y]$ 전체를 보존하는 $G$-invariant subspace는 $y^d$뿐이며, $A_d^G = \mathbb{C} \cdot y^d$로 well-defined이다. 그러나 일반적인 projective variety의 action에서는 action이 $\mathbb{P}^n$ 전체로 확장되지 않으면, grading과 action이 서로 compatible하지 않아 $A_d^G$가 잘 정의되지 않는다.
 
@@ -244,7 +244,7 @@ Reductive group $G$의 projective variety $X$ 위로의 action에 대한 *linear
 2. $\mathbb{P}^n$ 위의 $G$-action이 linear (즉, $\GL(n+1, \mathbb{C})$로 lift됨)
 :::
 
-Linearization은 이 문제를 해결한다. Linear action은 homogeneous coordinate ring의 각 차수 $d$ 성분 $A_d$를 보존하므로, $A_d$ 위에 $G$가 잘 작용하고 따라서 $A_d^G$를 취할 수 있다. 위의 예시에서 action은 이미 linear이며, $A_d^G = \mathbb{C} \cdot y^d$이고
+Linearization은 이 문제를 해결한다. Linear action은 homogeneous coordinate ring의 각 degree $d$ 성분 $A_d$를 보존하므로, $A_d$ 위에 $G$가 잘 작용하고 따라서 $A_d^G$를 취할 수 있다. 위의 예시에서 action은 이미 linear이며, $A_d^G = \mathbb{C} \cdot y^d$이고
 
 $$\mathbb{P}^1 /\!/ \mathbb{C}^\ast = \Proj\left(\bigoplus_{d \ge 0} \mathbb{C} \cdot y^d\right) = \{[1]\} \cong \mathrm{pt}$$
 

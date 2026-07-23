@@ -15,7 +15,7 @@ published: false
 
 ---
 
-Lie group의 국소 구조는 그 Lie algebra에 담겨 있으며 ([§리 군, ⁋정리 17](/ko/math/lie_theory/Lie_groups#thm17)), Lie algebra의 구조 이론은 두 극단적인 부류, 곧 *가해<sub>solvable</sub>* Lie algebra와 *nilpotent* Lie algebra의 분석에서 출발한다. 이 두 부류는 각각 Lie group의 가해성과 nilpotency에 대응하며, 임의의 유한차원 Lie algebra는 가장 큰 가해 ideal인 radical로 quotient를 취해 반단순 부분을 떼어내는 방식으로 분석된다. 이 글에서 우리는 먼저 추상 Lie algebra에 대한 subalgebra, ideal, homomorphism, quotient, 그리고 adjoint representation을 정리하고, derived series와 lower central series를 통해 가해성과 nilpotency를 정의한다. 그 뒤 nilpotency를 ad-nilpotency로 판정하는 Engel의 정리와, 가해 Lie algebra가 동시 상삼각화 가능함을 보이는 Lie의 정리를 증명한다.
+Lie group의 국소 구조는 그 Lie algebra에 담겨 있으며 ([§리 군, ⁋정리 17](/ko/math/lie_theory/Lie_groups#thm17)), Lie algebra의 구조 이론은 두 극단적인 부류, 곧 *solvable<sub>가해</sub>* Lie algebra와 *nilpotent* Lie algebra의 분석에서 출발한다. 이 두 부류는 각각 Lie group의 solvability와 nilpotency에 대응하며, 임의의 유한차원 Lie algebra는 가장 큰 solvable ideal인 radical로 quotient를 취해 semisimple 부분을 떼어내는 방식으로 분석된다. 이 글에서 우리는 먼저 추상 Lie algebra에 대한 subalgebra, ideal, homomorphism, quotient, 그리고 adjoint representation을 정리하고, derived series와 lower central series를 통해 solvability와 nilpotency를 정의한다. 그 뒤 nilpotency를 ad-nilpotency로 판정하는 Engel의 정리와, solvable Lie algebra가 동시 상삼각화 가능함을 보이는 Lie의 정리를 증명한다.
 
 이 글 전체에서 $k$는 고정된 체이고, 별다른 언급이 없는 한 $\mathfrak{g}$는 $k$ 위에 정의된 유한차원 Lie algebra이다. ([§리 군, ⁋정의 8](/ko/math/lie_theory/Lie_groups#def8)) Lie bracket은 $[-,-]$로 적으며, anticommutativity와 Jacobi identity는 자유로이 사용한다.
 
@@ -44,7 +44,7 @@ Bracket의 anticommutativity에 의해 $[x,a]=-[a,x]$이므로, Lie algebra에�
 4. $Z(\mathfrak{g})=\mathfrak{g}$인 경우, 곧 모든 bracket이 $0$인 Lie algebra를 *abelian<sub>가환</sub>* Lie algebra라 부른다. 이는 $[\mathfrak{g},\mathfrak{g}]=0$인 것과 같다.
 :::
 
-이제 두 Lie algebra 사이의 사상과 quotient를 정의한다. Lie algebra의 사상은 단순히 bracket을 보존하는 선형사상이다.
+이제 두 Lie algebra 사이의 morphism과 quotient를 정의한다. Lie algebra의 morphism은 단순히 bracket을 보존하는 선형사상이다.
 
 ::: 정의 4
 두 Lie algebra $\mathfrak{g},\mathfrak{h}$ 사이의 $k$-linear map $\phi:\mathfrak{g}\rightarrow\mathfrak{h}$가 *Lie algebra homomorphism<sub>준동형</sub>*이라는 것은 임의의 $x,y\in\mathfrak{g}$에 대하여
@@ -86,10 +86,10 @@ Lie algebra $\mathfrak{g}$에 대하여, 각 $x\in\mathfrak{g}$에 선형사상
 
 $$\ad x:\mathfrak{g}\rightarrow\mathfrak{g};\qquad (\ad x)(y)=[x,y]$$
 
-를 대응시키는 사상 $\ad:\mathfrak{g}\rightarrow\mathfrak{gl}(\mathfrak{g})$를 $\mathfrak{g}$의 *adjoint representation<sub>수반 표현</sub>*이라 부른다.
+를 대응시키는 morphism $\ad:\mathfrak{g}\rightarrow\mathfrak{gl}(\mathfrak{g})$를 $\mathfrak{g}$의 *adjoint representation<sub>수반 표현</sub>*이라 부른다.
 :::
 
-이 정의는 Lie group $G$의 adjoint representation을 ([§리 군, ⁋정의 19](/ko/math/lie_theory/Lie_groups#def19)) 미분하여 얻어지는 사상의 추상적·대수적 판본이며, 그 글에서 확인한 $\ad(x)y=[x,y]$를 그대로 정의로 채택한 것이다. 다음 명제는 $\ad$가 표현, 곧 $\mathfrak{g}$에서 $\mathfrak{gl}(\mathfrak{g})$로의 homomorphism임을 보이며, 그 본질은 Jacobi identity이다.
+이 정의는 Lie group $G$의 adjoint representation을 ([§리 군, ⁋정의 19](/ko/math/lie_theory/Lie_groups#def19)) 미분하여 얻어지는 morphism의 추상적·대수적 판본이며, 그 글에서 확인한 $\ad(x)y=[x,y]$를 그대로 정의로 채택한 것이다. 다음 명제는 $\ad$가 representation, 곧 $\mathfrak{g}$에서 $\mathfrak{gl}(\mathfrak{g})$로의 homomorphism임을 보이며, 그 본질은 Jacobi identity이다.
 
 ::: 명제 7
 $\ad:\mathfrak{g}\rightarrow\mathfrak{gl}(\mathfrak{g})$은 Lie algebra homomorphism이며, $\ker(\ad)=Z(\mathfrak{g})$이다.
@@ -110,7 +110,7 @@ $$[[x,y],z]+[[y,z],x]+[[z,x],y]=0$$
 
 ## Derived series와 lower central series
 
-가해성과 nilpotency는 모두 반복적인 bracket이 결국 $0$이 되는지를 묻는 조건이며, 두 조건은 반복 방식의 차이로 구별된다. 한쪽은 매번 직전 단계를 자기 자신과 bracket하고, 다른 쪽은 매번 전체 $\mathfrak{g}$와 bracket한다.
+Solvability와 nilpotency는 모두 반복적인 bracket이 결국 $0$이 되는지를 묻는 조건이며, 두 조건은 반복 방식의 차이로 구별된다. 한쪽은 매번 직전 단계를 자기 자신과 bracket하고, 다른 쪽은 매번 전체 $\mathfrak{g}$와 bracket한다.
 
 ::: 정의 8
 Lie algebra $\mathfrak{g}$의 *derived series<sub>유도열</sub>* $\bigl(\mathfrak{g}^{(n)}\bigr)_{n\geq 0}$는
@@ -171,7 +171,7 @@ $$\mathfrak{g}^{(n+1)}=[\mathfrak{g}^{(n)},\mathfrak{g}^{(n)}]\subseteq[\mathfra
 
 ## Solvability의 닫힘 성질과 radical
 
-가해성은 부분대상, quotient object, 그리고 extension에 대해 닫혀 있다. 이 닫힘 성질들은 가장 큰 가해 ideal인 radical이 잘 정의됨을 보장하는 데에 쓰인다.
+Solvability는 부분대상, quotient object, 그리고 extension에 대해 닫혀 있다. 이 닫힘 성질들은 가장 큰 solvable ideal인 radical이 잘 정의됨을 보장하는 데에 쓰인다.
 
 ::: 명제 14
 Lie algebra $\mathfrak{g}$에 대하여 다음이 성립한다.
@@ -202,7 +202,7 @@ $$(\mathfrak{a}+\mathfrak{b})/\mathfrak{b}\cong\mathfrak{a}/(\mathfrak{a}\cap\ma
 유한차원 Lie algebra $\mathfrak{g}$의 *radical<sub>근기</sub>* $\rad\mathfrak{g}$은 $\mathfrak{g}$의 solvable ideal 가운데 포함관계에 대하여 가장 큰 것이다.
 :::
 
-이러한 가장 큰 solvable ideal이 유일하게 존재함을 확인해 둔다. $\mathfrak{g}$가 유한차원이므로, 차원이 최대인 solvable ideal $\mathfrak{r}$을 택할 수 있다. 만일 $\mathfrak{a}$가 임의의 solvable ideal이면 위에서 본 대로 $\mathfrak{r}+\mathfrak{a}$도 solvable ideal이고 $\mathfrak{r}\subseteq\mathfrak{r}+\mathfrak{a}$이다. $\mathfrak{r}$의 차원이 최대이므로 $\mathfrak{r}+\mathfrak{a}=\mathfrak{r}$, 곧 $\mathfrak{a}\subseteq\mathfrak{r}$이다. 따라서 $\mathfrak{r}$은 모든 solvable ideal을 포함하는 유일한 가장 큰 solvable ideal이다. quotient $\mathfrak{g}/\rad\mathfrak{g}$은 자명하지 않은 solvable ideal을 갖지 않으며, 이러한 Lie algebra를 *semisimple*이라 부른다. 임의의 유한차원 Lie algebra는 이렇게 가해 부분과 반단순 부분으로 나뉘어 분석된다.
+이러한 가장 큰 solvable ideal이 유일하게 존재함을 확인해 둔다. $\mathfrak{g}$가 유한차원이므로, 차원이 최대인 solvable ideal $\mathfrak{r}$을 택할 수 있다. 만일 $\mathfrak{a}$가 임의의 solvable ideal이면 위에서 본 대로 $\mathfrak{r}+\mathfrak{a}$도 solvable ideal이고 $\mathfrak{r}\subseteq\mathfrak{r}+\mathfrak{a}$이다. $\mathfrak{r}$의 차원이 최대이므로 $\mathfrak{r}+\mathfrak{a}=\mathfrak{r}$, 곧 $\mathfrak{a}\subseteq\mathfrak{r}$이다. 따라서 $\mathfrak{r}$은 모든 solvable ideal을 포함하는 유일한 가장 큰 solvable ideal이다. quotient $\mathfrak{g}/\rad\mathfrak{g}$은 자명하지 않은 solvable ideal을 갖지 않으며, 이러한 Lie algebra를 *semisimple*이라 부른다. 임의의 유한차원 Lie algebra는 이렇게 solvable 부분과 semisimple 부분으로 나뉘어 분석된다.
 
 ## Engel의 정리
 
@@ -224,7 +224,7 @@ $$W=\left\{v\in V\mid xv=0\text{ for all }x\in\mathfrak{h}\right\}$$
 
 $$x(yw)=y(xw)+[x,y]w=y\cdot 0+[x,y]w$$
 
-인데, $\mathfrak{h}$가 ideal이므로 $[x,y]\in\mathfrak{h}$이고 $w\in W$이므로 $[x,y]w=0$이다. 따라서 $x(yw)=0$이 모든 $x\in\mathfrak{h}$에 대해 성립하여 $yw\in W$이다. 즉 $y$는 $W$를 보존한다. $y$가 $V$ 위의 nilpotent endomorphism이므로 그 제한 $y\vert_W$도 nilpotent endomorphism이고, $W\neq 0$이므로 $y\vert_W$는 $0$이 아닌 kernel을 갖는다. 곧 어떤 $0\neq v\in W$가 존재하여 $yv=0$이다. 이 $v$는 모든 $x\in\mathfrak{h}$에 대하여 $xv=0$이고 $yv=0$이므로, $\mathfrak{g}=\mathfrak{h}+ky$의 모든 원소에 의해 소멸된다.
+인데, $\mathfrak{h}$가 ideal이므로 $[x,y]\in\mathfrak{h}$이고 $w\in W$이므로 $[x,y]w=0$이다. 따라서 $x(yw)=0$이 모든 $x\in\mathfrak{h}$에 대해 성립하여 $yw\in W$이다. 즉 $y$는 $W$를 보존한다. $y$가 $V$ 위의 nilpotent endomorphism이므로 그 restriction $y\vert_W$도 nilpotent endomorphism이고, $W\neq 0$이므로 $y\vert_W$는 $0$이 아닌 kernel을 갖는다. 곧 어떤 $0\neq v\in W$가 존재하여 $yv=0$이다. 이 $v$는 모든 $x\in\mathfrak{h}$에 대하여 $xv=0$이고 $yv=0$이므로, $\mathfrak{g}=\mathfrak{h}+ky$의 모든 원소에 의해 소멸된다.
 :::
 
 위 보조정리에서 공통 kernel vector $v_1$을 하나 얻은 뒤, quotient $V/kv_1$에 같은 논증을 반복하면 $\mathfrak{g}$가 동시에 strictly 상삼각화됨을 알 수 있다. 이를 정리하면 다음 따름정리가 된다.
@@ -252,7 +252,7 @@ $$0=\bar V_0\subsetneq\bar V_1\subsetneq\cdots\subsetneq\bar V_{n-1}=\bar V$$
 ::: 증명
 $\dim\mathfrak{g}$에 대한 귀납법으로 증명한다. $\mathfrak{g}=0$이면 자명하다. $\mathfrak{g}\neq 0$이라 하자. $\ad\mathfrak{g}=\{\ad x\mid x\in\mathfrak{g}\}$는 $\mathfrak{gl}(\mathfrak{g})$의 subalgebra이고 ([명제 7](#prop7)), 가정에 의해 그 모든 원소가 nilpotent endomorphism이다. 만일 $\ad\mathfrak{g}=0$이면 $\mathfrak{g}=Z(\mathfrak{g})$이므로 $\mathfrak{g}$는 abelian, 따라서 nilpotent이다. $\ad\mathfrak{g}\neq 0$인 경우, $\mathfrak{g}=\ker(\ad)$가 아니므로 [보조정리 16](#lem16)을 $V=\mathfrak{g}$, $\ad\mathfrak{g}\subseteq\mathfrak{gl}(\mathfrak{g})$에 적용하면 어떤 $0\neq z\in\mathfrak{g}$가 존재하여 모든 $x\in\mathfrak{g}$에 대하여 $(\ad x)(z)=[x,z]=0$이다. 곧 $z\in Z(\mathfrak{g})$이고 $z\neq 0$이므로 $Z(\mathfrak{g})\neq 0$이다.
 
-quotient $\bar{\mathfrak{g}}=\mathfrak{g}/Z(\mathfrak{g})$를 생각하면 $\dim\bar{\mathfrak{g}}<\dim\mathfrak{g}$이다. quotient map $\pi$에 대하여 $\overline{\ad}\,\pi(x)=\ad x$가 $\bar{\mathfrak{g}}$ 위에 유도하는 사상은 $\ad x$의 quotient이므로 nilpotent endomorphism이다. 따라서 $\bar{\mathfrak{g}}$의 모든 원소도 ad-nilpotent이고, 귀납 가정에 의해 $\bar{\mathfrak{g}}$는 nilpotent이다. 곧 어떤 $m$에 대하여 $\bar{\mathfrak{g}}^{m}=0$이며, 이는 $\mathfrak{g}^{m}\subseteq Z(\mathfrak{g})$를 뜻한다. 그럼
+quotient $\bar{\mathfrak{g}}=\mathfrak{g}/Z(\mathfrak{g})$를 생각하면 $\dim\bar{\mathfrak{g}}<\dim\mathfrak{g}$이다. quotient map $\pi$에 대하여 $\overline{\ad}\,\pi(x)=\ad x$가 $\bar{\mathfrak{g}}$ 위에 유도하는 morphism은 $\ad x$의 quotient이므로 nilpotent endomorphism이다. 따라서 $\bar{\mathfrak{g}}$의 모든 원소도 ad-nilpotent이고, 귀납 가정에 의해 $\bar{\mathfrak{g}}$는 nilpotent이다. 곧 어떤 $m$에 대하여 $\bar{\mathfrak{g}}^{m}=0$이며, 이는 $\mathfrak{g}^{m}\subseteq Z(\mathfrak{g})$를 뜻한다. 그럼
 
 $$\mathfrak{g}^{m+1}=[\mathfrak{g},\mathfrak{g}^{m}]\subseteq[\mathfrak{g},Z(\mathfrak{g})]=0$$
 
@@ -263,12 +263,12 @@ $$\mathfrak{g}^{m+1}=[\mathfrak{g},\mathfrak{g}^{m}]\subseteq[\mathfrak{g},Z(\ma
 
 ## Lie의 정리
 
-Engel의 정리가 임의의 체에서 성립하는 것과 달리, 가해 Lie algebra에 대한 동시 상삼각화는 기반 체에 대한 제약을 요구한다. Lie의 정리는 $k$가 대수적으로 닫혀 있고 표수가 $0$일 때, 가해 Lie algebra of endomorphisms가 공통 eigenvector를 가짐을 보인다. 표수 $0$이라는 가정은 아래 [보조정리 19](#lem19)의 증명에서 어떤 정수로 나누는 단계에 본질적으로 쓰이며, 양의 표수에서는 정리가 성립하지 않는 반례가 알려져 있다.
+Engel의 정리가 임의의 체에서 성립하는 것과 달리, solvable Lie algebra에 대한 동시 상삼각화는 기반 체에 대한 제약을 요구한다. Lie의 정리는 $k$가 대수적으로 닫혀 있고 characteristic이 $0$일 때, solvable Lie algebra of endomorphisms가 공통 eigenvector를 가짐을 보인다. Characteristic $0$이라는 가정은 아래 [보조정리 19](#lem19)의 증명에서 어떤 정수로 나누는 단계에 본질적으로 쓰이며, 양의 characteristic에서는 정리가 성립하지 않는 반례가 알려져 있다.
 
 증명의 핵심은 ideal에 대한 공통 eigenvalue가 정의하는 eigenspace가 전체 Lie algebra의 action에 의해 보존된다는 다음 불변성 보조정리이다.
 
 ::: 보조정리 19
-$k$가 대수적으로 닫힌 표수 $0$의 체이고, $V$가 $0$이 아닌 유한차원 $k$-벡터공간, $\mathfrak{g}\subseteq\mathfrak{gl}(V)$가 subalgebra라 하자. $\mathfrak{a}\subseteq\mathfrak{g}$가 ideal이고 $\lambda:\mathfrak{a}\rightarrow k$가 linear functional일 때,
+$k$가 대수적으로 닫힌 characteristic $0$의 체이고, $V$가 $0$이 아닌 유한차원 $k$-벡터공간, $\mathfrak{g}\subseteq\mathfrak{gl}(V)$가 subalgebra라 하자. $\mathfrak{a}\subseteq\mathfrak{g}$가 ideal이고 $\lambda:\mathfrak{a}\rightarrow k$가 linear functional일 때,
 
 $$W=\left\{v\in V\mid av=\lambda(a)v\text{ for all }a\in\mathfrak{a}\right\}$$
 
@@ -297,13 +297,13 @@ $$\tr(a\vert_{W_m})=m\,\lambda(a)$$
 
 $$0=\tr([x,b]\vert_{W_m})=m\,\lambda([x,b])$$
 
-이며, $k$의 표수가 $0$이고 $m\geq 1$이므로 $\lambda([x,b])=0$이다. 임의의 $a=[a',x]=-[x,a']$ ($a'\in\mathfrak{a}$) 꼴에 대해서도 $\lambda([a',x])=-\lambda([x,a'])=0$이므로, 처음의 등식 $a(xw)=\lambda(a)xw+\lambda([a,x])w$에서 모든 $a$에 대해 $\lambda([a,x])=0$이다. 따라서 $xw\in W$이다.
+이며, $k$의 characteristic이 $0$이고 $m\geq 1$이므로 $\lambda([x,b])=0$이다. 임의의 $a=[a',x]=-[x,a']$ ($a'\in\mathfrak{a}$) 꼴에 대해서도 $\lambda([a',x])=-\lambda([x,a'])=0$이므로, 처음의 등식 $a(xw)=\lambda(a)xw+\lambda([a,x])w$에서 모든 $a$에 대해 $\lambda([a,x])=0$이다. 따라서 $xw\in W$이다.
 :::
 
-표수 $0$ 가정이 사용된 유일한 지점은 마지막 단계에서 $m\lambda([x,b])=0$으로부터 $\lambda([x,b])=0$을 끌어내는 부분이다. 표수가 $m$을 나누는 양의 정수이면 이 추론이 무너지며, 실제로 그러한 체에서 Lie의 정리는 성립하지 않는다. 이제 이 보조정리로부터 공통 eigenvector의 존재를 귀납적으로 얻는다.
+Characteristic $0$ 가정이 사용된 유일한 지점은 마지막 단계에서 $m\lambda([x,b])=0$으로부터 $\lambda([x,b])=0$을 끌어내는 부분이다. Characteristic이 $m$을 나누는 양의 정수이면 이 추론이 무너지며, 실제로 그러한 체에서 Lie의 정리는 성립하지 않는다. 이제 이 보조정리로부터 공통 eigenvector의 존재를 귀납적으로 얻는다.
 
 ::: 정리 20 (Lie)
-$k$가 대수적으로 닫힌 표수 $0$의 체이고, $V$가 $0$이 아닌 유한차원 $k$-벡터공간, $\mathfrak{g}\subseteq\mathfrak{gl}(V)$가 solvable subalgebra라 하자. 그럼 $\mathfrak{g}$의 모든 원소가 공유하는 eigenvector $0\neq v\in V$가 존재한다. 곧 linear functional $\lambda:\mathfrak{g}\rightarrow k$가 존재하여 모든 $x\in\mathfrak{g}$에 대하여 $xv=\lambda(x)v$이다.
+$k$가 대수적으로 닫힌 characteristic $0$의 체이고, $V$가 $0$이 아닌 유한차원 $k$-벡터공간, $\mathfrak{g}\subseteq\mathfrak{gl}(V)$가 solvable subalgebra라 하자. 그럼 $\mathfrak{g}$의 모든 원소가 공유하는 eigenvector $0\neq v\in V$가 존재한다. 곧 linear functional $\lambda:\mathfrak{g}\rightarrow k$가 존재하여 모든 $x\in\mathfrak{g}$에 대하여 $xv=\lambda(x)v$이다.
 :::
 ::: 증명
 $\dim\mathfrak{g}$에 대한 귀납법으로 증명한다. $\dim\mathfrak{g}=0$이면 $k$가 대수적으로 닫혀 있으므로 임의의 $0\neq v\in V$가 (공허하게) 조건을 만족한다. $\dim\mathfrak{g}=1$인 경우, $\mathfrak{g}=kx$이고 $x$의 eigenvector가 $k$가 대수적으로 닫혀 있다는 데에서 존재한다.
@@ -314,13 +314,13 @@ $\dim\mathfrak{g}$에 대한 귀납법으로 증명한다. $\dim\mathfrak{g}=0$�
 
 $$W=\left\{v\in V\mid av=\lambda(a)v\text{ for all }a\in\mathfrak{a}\right\}$$
 
-은 $0$이 아니다. [보조정리 19](#lem19)에 의해 $W$는 $\mathfrak{g}$에 의해 보존된다. 이제 $\mathfrak{g}=\mathfrak{a}+kx$가 되도록 $x\in\mathfrak{g}\setminus\mathfrak{a}$를 하나 택하자. $x$가 $W$를 보존하고 $W\neq 0$이며 $k$가 대수적으로 닫혀 있으므로, 제한 $x\vert_W$는 $W$ 안에 eigenvector $0\neq v\in W$를 갖는다. 곧 어떤 $c\in k$에 대하여 $xv=cv$이다. 이 $v$는 $W$의 원소이므로 모든 $a\in\mathfrak{a}$에 대하여 $av=\lambda(a)v$이고, 동시에 $xv=cv$이다. $\lambda$를 $\lambda(x)=c$로 확장하여 $\mathfrak{g}=\mathfrak{a}+kx$ 위의 linear functional로 두면, $v$는 모든 $\mathfrak{g}$의 원소가 공유하는 eigenvector이다.
+은 $0$이 아니다. [보조정리 19](#lem19)에 의해 $W$는 $\mathfrak{g}$에 의해 보존된다. 이제 $\mathfrak{g}=\mathfrak{a}+kx$가 되도록 $x\in\mathfrak{g}\setminus\mathfrak{a}$를 하나 택하자. $x$가 $W$를 보존하고 $W\neq 0$이며 $k$가 대수적으로 닫혀 있으므로, restriction $x\vert_W$는 $W$ 안에 eigenvector $0\neq v\in W$를 갖는다. 곧 어떤 $c\in k$에 대하여 $xv=cv$이다. 이 $v$는 $W$의 원소이므로 모든 $a\in\mathfrak{a}$에 대하여 $av=\lambda(a)v$이고, 동시에 $xv=cv$이다. $\lambda$를 $\lambda(x)=c$로 확장하여 $\mathfrak{g}=\mathfrak{a}+kx$ 위의 linear functional로 두면, $v$는 모든 $\mathfrak{g}$의 원소가 공유하는 eigenvector이다.
 :::
 
 [따름정리 17](#cor17)과 동일한 flag 구성을 반복하면, 공통 eigenvector로부터 동시 상삼각화를 얻는다. 다만 이번에는 매 단계에서 strictly 상삼각이 아니라 단지 상삼각이 된다.
 
 ::: 따름정리 21
-$k$가 대수적으로 닫힌 표수 $0$의 체이고 $\mathfrak{g}\subseteq\mathfrak{gl}(V)$가 $0\neq V$ 위의 solvable subalgebra이면, $V$의 기저를 적절히 택하여 $\mathfrak{g}$의 모든 원소가 동시에 상삼각행렬로 표현되도록 할 수 있다. 곧 flag
+$k$가 대수적으로 닫힌 characteristic $0$의 체이고 $\mathfrak{g}\subseteq\mathfrak{gl}(V)$가 $0\neq V$ 위의 solvable subalgebra이면, $V$의 기저를 적절히 택하여 $\mathfrak{g}$의 모든 원소가 동시에 상삼각행렬로 표현되도록 할 수 있다. 곧 flag
 
 $$0=V_0\subsetneq V_1\subsetneq\cdots\subsetneq V_n=V,\qquad \dim V_i=i$$
 
@@ -334,7 +334,7 @@ $$0=\bar V_0\subsetneq\bar V_1\subsetneq\cdots\subsetneq\bar V_{n-1}=\bar V$$
 이 존재하여 모든 $\bar x$에 대하여 $\bar x\bar V_i\subseteq\bar V_i$이다. quotient map에 의한 $\bar V_i$의 preimage를 $V_{i+1}$로 두면 $V_1\subsetneq V_2\subsetneq\cdots\subsetneq V_n=V$이고 $\dim V_{i+1}=i+1$이며 $xV_{i+1}\subseteq V_{i+1}$이다. 이 flag에 맞춘 기저에서 $\mathfrak{g}$의 원소는 모두 상삼각행렬이다.
 :::
 
-추상적 형태로 다시 쓰면, $k$가 대수적으로 닫힌 표수 $0$의 체이고 $\mathfrak{g}$가 유한차원 solvable Lie algebra이면, [따름정리 21](#cor21)를 adjoint representation $\ad:\mathfrak{g}\rightarrow\mathfrak{gl}(\mathfrak{g})$의 상에 적용하여 $\ad\mathfrak{g}$가 동시 상삼각화됨을 알 수 있다. 그 직접적인 귀결로 $[\mathfrak{g},\mathfrak{g}]$의 원소들은 모두 strictly 상삼각인 $\ad$로 작용하므로, $x\in[\mathfrak{g},\mathfrak{g}]$에 대하여 $\ad x$가 nilpotent endomorphism이 된다. 따라서 [정리 18](#thm18)에 의해 $[\mathfrak{g},\mathfrak{g}]$는 nilpotent이다. 즉 표수 $0$의 algebraically closed field 위에서 solvable Lie algebra의 derived algebra는 항상 nilpotent이며, 이는 Cartan의 판정법과 더불어 반단순 Lie algebra의 구조 이론으로 이어지는 출발점이 된다.
+추상적 형태로 다시 쓰면, $k$가 대수적으로 닫힌 characteristic $0$의 체이고 $\mathfrak{g}$가 유한차원 solvable Lie algebra이면, [따름정리 21](#cor21)를 adjoint representation $\ad:\mathfrak{g}\rightarrow\mathfrak{gl}(\mathfrak{g})$의 상에 적용하여 $\ad\mathfrak{g}$가 동시 상삼각화됨을 알 수 있다. 그 직접적인 귀결로 $[\mathfrak{g},\mathfrak{g}]$의 원소들은 모두 strictly 상삼각인 $\ad$로 작용하므로, $x\in[\mathfrak{g},\mathfrak{g}]$에 대하여 $\ad x$가 nilpotent endomorphism이 된다. 따라서 [정리 18](#thm18)에 의해 $[\mathfrak{g},\mathfrak{g}]$는 nilpotent이다. 즉 characteristic $0$의 algebraically closed field 위에서 solvable Lie algebra의 derived algebra는 항상 nilpotent이며, 이는 Cartan의 판정법과 더불어 semisimple Lie algebra의 구조 이론으로 이어지는 출발점이 된다.
 
 ---
 

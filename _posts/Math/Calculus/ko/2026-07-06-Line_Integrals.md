@@ -22,7 +22,7 @@ $C^1$ 곡선 $\mathbf{r}\colon [a, b] \rightarrow \mathbb{R}^n$ 위에서 연속
 
 $$\int_C f\mathop{ds} = \int_a^b f(\mathbf{r}(t))\lvert \mathbf{r}'(t)\rvert \mathop{dt}$$
 
-이다. 여기서 $ds = \lvert \mathbf{r}'(t)\rvert \mathop{dt}$는 호의 길이 원소이다.
+이다. 여기서 $ds = \lvert \mathbf{r}'(t)\rvert \mathop{dt}$는 arc length 원소이다.
 :::
 
 정의에 의해 위의 적분은 arc-length parametrization을 사용한 적분값이므로 이는 곡선의 매개화에 의존하지 않는다. 특수한 경우로 $f \equiv 1$이면 $\int_C \mathop{ds}$가 곡선의 길이를 줄 것이다. 
@@ -45,7 +45,7 @@ $$\int_C \mathbf{F}\cdot d\mathbf{r} = \int_C (\mathbf{F}\cdot \mathbf{T})\matho
 
 $$\int_C \mathbf{F}\cdot d\mathbf{r} = \int_C P\mathop{dx} + Q\mathop{dy}$$
 
-로 쓰는 표기도 흔히 쓰인다. 또, 닫힌곡선을 따라 적분한 결과를 나타내기 위해 $\oint$를 사용하기도 하지만, 이는 기호의 문제이고 본질적으로 새로운 내용이 더해지는 것은 없다. 
+로 쓰는 표기도 흔히 쓰인다. 또, closed curve를 따라 적분한 결과를 나타내기 위해 $\oint$를 사용하기도 하지만, 이는 기호의 문제이고 본질적으로 새로운 내용이 더해지는 것은 없다. 
 
 ## 선적분의 기본정리
 
@@ -73,14 +73,14 @@ $$\int_C \nabla f \cdot d\mathbf{r} = \int_a^b \nabla f(\mathbf{r}(t)) \cdot \ma
 $\mathbf{F}$가 연결된 열린 영역 $D$에서 연속일 때, 다음은 동치이다.
 
 1. $\mathbf{F}$는 $D$에서 보존장이다.
-2. $D$ 안의 모든 닫힌 곡선 $C$에 대해 $\oint_C \mathbf{F} \cdot d\mathbf{r} = 0$이다.
+2. $D$ 안의 모든 closed curve $C$에 대해 $\oint_C \mathbf{F} \cdot d\mathbf{r} = 0$이다.
 3. $\int_C \mathbf{F}\cdot d\mathbf{r}$는 $C$의 양 끝점에만 의존하고 경로에는 무관하다.
 :::
 
 ::: 증명
-$(1 \Rightarrow 3)$은 [정리 3](#thm3)이다. $(3 \Leftrightarrow 2)$는 닫힌 곡선을 한 점에서 끊어 두 경로로 보고, 한 경로를 거꾸로 이으면 닫힌 곡선이 되므로 자명하다. 
+$(1 \Rightarrow 3)$은 [정리 3](#thm3)이다. $(3 \Leftrightarrow 2)$는 closed curve를 한 점에서 끊어 두 경로로 보고, 한 경로를 거꾸로 이으면 closed curve가 되므로 자명하다. 
 
-따라서 핵심 주장은 $(3 \Rightarrow 1)$이다. 이를 위해 퍼텐셜을 직접 만들어야 한다. 기준점 $\mathbf{x}_0 \in D$를 고정하고, 임의의 $\mathbf{x}\in D$에 대해서 $f(\mathbf{x})$를 $\mathbf{x}_0$에서 $\mathbf{x}$를 따라 $\mathbf{F}$를 선적분한 값으로 두자. 이는 원래대로라면 $\mathbf{x}_0$과 $\mathbf{x}$를 잇는 곡선 $\mathbf{r}$의 선택에 의존하지만, 우리는 셋째 조건을 가정하고 있으므로 이 정의가 정당하다. 이제 한 좌표방향 $\mathbf{e}_i$로의 평균변화율 
+따라서 핵심 주장은 $(3 \Rightarrow 1)$이다. 이를 위해 potential을 직접 만들어야 한다. 기준점 $\mathbf{x}_0 \in D$를 고정하고, 임의의 $\mathbf{x}\in D$에 대해서 $f(\mathbf{x})$를 $\mathbf{x}_0$에서 $\mathbf{x}$를 따라 $\mathbf{F}$를 선적분한 값으로 두자. 이는 원래대로라면 $\mathbf{x}_0$과 $\mathbf{x}$를 잇는 곡선 $\mathbf{r}$의 선택에 의존하지만, 우리는 셋째 조건을 가정하고 있으므로 이 정의가 정당하다. 이제 한 좌표방향 $\mathbf{e}_i$로의 평균변화율 
 
 $$\frac{f(\mathbf{x} + h \mathbf{e}_i) - f(\mathbf{x})}{h}$$
 
@@ -102,7 +102,7 @@ $$\mathbf{F}\cdot \mathbf{r}' = t^2 + 2t^2 = 3t^2$$
 
 $$\int_C \mathbf{F}\cdot d\mathbf{r} = \int_0^1 3t^2\mathop{dt} = 1$$
 
-이다. 실제로, $\mathbf{F} = \nabla(xy)$이므로 [정리 3](#thm3)으로 $xy$의 양 끝 값 차이 $1\cdot 1 - 0\cdot 0 = 1$를 계산해보면 위의 계산을 복원할 수 있다. 이는 오직 끝점에만 의존하는 것으로, 가령 $\mathbf{r}(t)=(t,t)$ ($0 \leq t \leq 1$)로 주면
+이다. 실제로, $\mathbf{F} = \nabla(xy)$이므로 [정리 3](#thm3)으로 $xy$의 양 끝 값 차이 $1\cdot 1 - 0\cdot 0 = 1$을 계산해보면 위의 계산을 복원할 수 있다. 이는 오직 끝점에만 의존하는 것으로, 가령 $\mathbf{r}(t)=(t,t)$ ($0 \leq t \leq 1$)로 주면
 
 $$\mathbf{F}(\mathbf{r}(t))=(t,t),\qquad \mathbf{r}'(t)=(1,1)$$
 
@@ -113,7 +113,7 @@ $$\int_C \mathbf{F}\cdot d\mathbf{r} = \int_0^1 2t\mathop{dt} = 1$$
 임을 확인할 수 있다.
 :::
 
-한편 [§벡터장, ⁋명제 6](/ko/math/calculus/vector_fields#prop6)에서 보존장은 무회전이라는 필요조건을 가짐을 보았다. [정리 4](#thm4)는 이것이 충분조건이 못 되는 까닭을 경로독립성의 언어로 드러낸다. 보존장은 모든 닫힌 곡선에서의 적분이 $0$이라는 것과 동치이므로, 무회전이라도 닫힌 곡선 적분이 $0$이 아닌 예가 하나라도 있으면 보존장이 아니다. 그런 예는 정의역에 구멍이 있을 때 실제로 생기는데, 바로 다음 예시가 그것이다.
+한편 [§벡터장, ⁋명제 6](/ko/math/calculus/vector_fields#prop6)에서 보존장은 무회전이라는 필요조건을 가짐을 보았다. [정리 4](#thm4)는 이것이 충분조건이 못 되는 까닭을 경로독립성의 언어로 드러낸다. 보존장은 모든 closed curve에서의 적분이 $0$이라는 것과 동치이므로, 무회전이라도 closed curve 적분이 $0$이 아닌 예가 하나라도 있으면 보존장이 아니다. 그런 예는 정의역에 구멍이 있을 때 실제로 생기는데, 바로 다음 예시가 그것이다.
 
 ::: 예시 6
 원점을 뺀 평면 $\mathbb{R}^2 \setminus \{0\}$에서 정의된 벡터장

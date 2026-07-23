@@ -15,7 +15,7 @@ published: false
 
 ---
 
-[§제곱근확대체](/ko/math/field_theory/radical_extensions)의 서두에서 우리는 다항식의 근들을 서로 바꾸는 action으로 group을 만들고, 이 group을 통해 extension들을 분류하겠다는 Galois 이론의 철학을 언급했었다. [§갈루아 이론의 기본정리](/ko/math/field_theory/fundamental_theorem_of_galois_theory)로 이 철학이 완성되었으므로, 이제 우리는 Galois 이론의 역사적인 출발점이었던 질문에 답할 수 있다. 어떤 다항식의 근을 사칙연산과 거듭제곱근만으로 표현할 수 있는가?
+[§제곱근확대체](/ko/math/field_theory/radical_extensions)의 서두에서 우리는 다항식의 root들을 서로 바꾸는 action으로 group을 만들고, 이 group을 통해 extension들을 분류하겠다는 Galois 이론의 철학을 언급했었다. [§갈루아 이론의 기본정리](/ko/math/field_theory/fundamental_theorem_of_galois_theory)로 이 철학이 완성되었으므로, 이제 우리는 Galois 이론의 역사적인 출발점이었던 질문에 답할 수 있다. 어떤 다항식의 root를 사칙연산과 거듭제곱근만으로 표현할 수 있는가?
 
 ::: remark 참고 {#rmk}
 이번 글에서 모든 field는 characteristic $0$을 갖는다. 그럼 characteristic exponent가 $1$이므로 Frobenius endomorphism이 identity가 되어 모든 field가 perfect이고, 따라서 [§분리가능확대체, ⁋명제 9](/ko/math/field_theory/separable_extensions#prop9)에 의하여 모든 algebraic extension이 separable이다. 특히 임의의 quasi-Galois extension이 Galois extension이다. Characteristic $p$에서의 가해성 이론은 separability와 관련된 추가적인 논의를 필요로 하므로 여기서는 다루지 않는다.
@@ -33,20 +33,20 @@ $G$의 원소들의 order들의 최소공배수를 $n$이라 하자. 우선 orde
 
 $\lcm(r,s)$를 소인수분해하여 각 소인수의 거듭제곱 $p^e$마다, $p^e$가 $r$ 혹은 $s$를 나누므로 $x^{r/p^e}$ 혹은 $y^{s/p^e}$가 order $p^e$의 원소가 된다. 따라서 order가 서로소인 두 원소 $u,v$의 곱이 order $\ord(u)\ord(v)$를 갖는 것만 보이면 충분하다. $G$가 abelian이므로 $(uv)^{\ord(u)\ord(v)}=e$이고, 거꾸로 $(uv)^k=e$라면 $u^k=v^{-k}\in\langle u\rangle\cap\langle v\rangle$인데 이 교집합의 order는 [\[대수적 구조\] §몫군, ⁋명제 5](/ko/math/algebraic_structures/quotient_groups#prop5)에 의해 서로소인 $\ord(u)$와 $\ord(v)$를 모두 나누므로 $1$이다. 즉 $u^k=v^k=e$이고 $\ord(u),\ord(v)$가 모두 $k$를 나누므로 $\ord(u)\ord(v)\mid k$이다.
 
-이제 $G$의 모든 원소는 $x^n=1$, 즉 다항식 $\x^n-1$의 근이다. Field 위에서 $n$차 다항식은 많아야 $n$개의 근을 가지므로 ([\[환론\] §다항식환, ⁋명제 9](/ko/math/ring_theory/polynomial_rings#prop9)) $\card G\leq n$이다. 한편 위에서 찾은 order $n$의 원소 $a$에 대하여 $\langle a\rangle$은 $n$개의 원소를 갖는 $G$의 subgroup이므로 $G=\langle a\rangle$이고, 즉 $G$는 cyclic이다.
+이제 $G$의 모든 원소는 $x^n=1$, 즉 다항식 $\x^n-1$의 root이다. Field 위에서 $n$차 다항식은 많아야 $n$개의 root를 가지므로 ([\[환론\] §다항식환, ⁋명제 9](/ko/math/ring_theory/polynomial_rings#prop9)) $\card G\leq n$이다. 한편 위에서 찾은 order $n$의 원소 $a$에 대하여 $\langle a\rangle$은 $n$개의 원소를 갖는 $G$의 subgroup이므로 $G=\langle a\rangle$이고, 즉 $G$는 cyclic이다.
 :::
 
 ::: 정의 2
-Field $\mathbb{K}$와 자연수 $n\geq1$에 대하여, $\overline{\mathbb{K}}$에서의 다항식 $\x^n-1$의 근들의 모임을 $\mu_n$으로 적고 그 원소들을 *1의 $n$제곱근<sub>$n$-th root of unity</sub>*이라 부른다. Group $\mu_n$의 generator를 *primitive $n$-th root of unity<sub>1의 원시 $n$제곱근</sub>*이라 부른다.
+Field $\mathbb{K}$와 자연수 $n\geq1$에 대하여, $\overline{\mathbb{K}}$에서의 다항식 $\x^n-1$의 root들의 모임을 $\mu_n$으로 적고 그 원소들을 *1의 $n$제곱근<sub>$n$-th root of unity</sub>*이라 부른다. Group $\mu_n$의 generator를 *primitive $n$-th root of unity<sub>1의 원시 $n$제곱근</sub>*이라 부른다.
 :::
 
-이 정의가 말이 되는 것을 확인하자. $\mu_n$이 $\overline{\mathbb{K}}^\times$의 subgroup인 것은 자명하다. 한편 $\x^n-1$의 derivative는 $n\x^{n-1}$이고, characteristic이 $0$이므로 이 둘은 공통근을 갖지 않는다. 따라서 [\[환론\] §다항식환, ⁋명제 11](/ko/math/ring_theory/polynomial_rings#prop11)에 의해 $\x^n-1$의 근들은 모두 simple root이고, $\overline{\mathbb{K}}$에서 $\x^n-1$이 일차식들로 쪼개지므로 $\card\mu_n=n$이다. 그럼 [보조정리 1](#lem1)에 의하여 $\mu_n$은 order $n$의 cyclic group이고, 특히 generator, 즉 primitive $n$-th root of unity $\zeta$가 존재한다.
+이 정의가 말이 되는 것을 확인하자. $\mu_n$이 $\overline{\mathbb{K}}^\times$의 subgroup인 것은 자명하다. 한편 $\x^n-1$의 derivative는 $n\x^{n-1}$이고, characteristic이 $0$이므로 이 둘은 공통근을 갖지 않는다. 따라서 [\[환론\] §다항식환, ⁋명제 11](/ko/math/ring_theory/polynomial_rings#prop11)에 의해 $\x^n-1$의 root들은 모두 simple root이고, $\overline{\mathbb{K}}$에서 $\x^n-1$이 일차식들로 쪼개지므로 $\card\mu_n=n$이다. 그럼 [보조정리 1](#lem1)에 의하여 $\mu_n$은 order $n$의 cyclic group이고, 특히 generator, 즉 primitive $n$-th root of unity $\zeta$가 존재한다.
 
 ::: 명제 3
 Primitive $n$-th root of unity $\zeta$에 대하여, $\mathbb{K}(\zeta)/\mathbb{K}$는 finite degree Galois extension이고 그 Galois group은 abelian group $(\mathbb{Z}/n\mathbb{Z})^\times$의 subgroup과 isomorphic하다.
 :::
 ::: 증명
-$\mu_n=\langle\zeta\rangle$이므로 $\mathbb{K}(\zeta)$는 $\x^n-1$의 모든 근을 포함하고, 따라서 $\x^n-1$의 splitting field이다. 그럼 [§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5)에 의해 $\mathbb{K}(\zeta)/\mathbb{K}$는 quasi-Galois이고, characteristic $0$ 가정에 의해 Galois이며, 하나의 algebraic element로 생성되므로 finite degree이다.
+$\mu_n=\langle\zeta\rangle$이므로 $\mathbb{K}(\zeta)$는 $\x^n-1$의 모든 root를 포함하고, 따라서 $\x^n-1$의 splitting field이다. 그럼 [§갈루아 확장, ⁋명제 5](/ko/math/field_theory/galois_extension#prop5)에 의해 $\mathbb{K}(\zeta)/\mathbb{K}$는 quasi-Galois이고, characteristic $0$ 가정에 의해 Galois이며, 하나의 algebraic element로 생성되므로 finite degree이다.
 
 이제 임의의 $\sigma\in\Gal(\mathbb{K}(\zeta)/\mathbb{K})$에 대하여, $\sigma$는 $\mu_n$의 원소를 $\mu_n$의 원소로 보내고 group 연산을 보존하므로 cyclic group $\mu_n$의 automorphism을 유도한다. 그럼 $\sigma(\zeta)$도 $\mu_n$의 generator여야 하므로 $n$과 서로소인 $a_\sigma$에 대하여 $\sigma(\zeta)=\zeta^{a_\sigma}$로 쓸 수 있다. 대응 $\sigma\mapsto a_\sigma$가 group homomorphism
 
@@ -63,9 +63,9 @@ $$\Gal(\mathbb{K}(\zeta)/\mathbb{K}) \rightarrow (\mathbb{Z}/n\mathbb{Z})^\times
 $a\in\mathbb{K}^\times$와, $\alpha^n=a$를 만족하는 $\alpha\in\overline{\mathbb{K}}$에 대하여 $\mathbb{K}(\alpha)/\mathbb{K}$는 finite degree Galois extension이고, 그 Galois group은 $n$을 나누는 order의 cyclic group이다.
 :::
 ::: 증명
-다항식 $\x^n-a$의 근들은 정확히 $\zeta^i\alpha$ ($i=0,\ldots,n-1$)들이고 ($n$개의 서로 다른 원소들이 모두 근이며 근은 많아야 $n$개이므로), $\zeta\in\mathbb{K}$이므로 이들이 모두 $\mathbb{K}(\alpha)$에 속한다. 즉 $\mathbb{K}(\alpha)$는 $\x^n-a$의 splitting field이고, [명제 3](#prop3)의 증명에서와 같이 finite degree Galois extension이다.
+다항식 $\x^n-a$의 root들은 정확히 $\zeta^i\alpha$ ($i=0,\ldots,n-1$)들이고 ($n$개의 서로 다른 원소들이 모두 root이며 root는 많아야 $n$개이므로), $\zeta\in\mathbb{K}$이므로 이들이 모두 $\mathbb{K}(\alpha)$에 속한다. 즉 $\mathbb{K}(\alpha)$는 $\x^n-a$의 splitting field이고, [명제 3](#prop3)의 증명에서와 같이 finite degree Galois extension이다.
 
-이제 임의의 $\sigma\in\Gal(\mathbb{K}(\alpha)/\mathbb{K})$에 대하여 $\sigma(\alpha)$도 $\x^n-a$의 근이므로 $\sigma(\alpha)/\alpha\in\mu_n$이다. 대응 $\sigma\mapsto\sigma(\alpha)/\alpha$를 생각하면, $\mu_n\subseteq\mathbb{K}$가 $\sigma$들에 의해 고정되므로
+이제 임의의 $\sigma\in\Gal(\mathbb{K}(\alpha)/\mathbb{K})$에 대하여 $\sigma(\alpha)$도 $\x^n-a$의 root이므로 $\sigma(\alpha)/\alpha\in\mu_n$이다. 대응 $\sigma\mapsto\sigma(\alpha)/\alpha$를 생각하면, $\mu_n\subseteq\mathbb{K}$가 $\sigma$들에 의해 고정되므로
 
 $$(\sigma\tau)(\alpha)/\alpha=\sigma\bigl(\tau(\alpha)/\alpha\bigr)\cdot\sigma(\alpha)/\alpha=\bigl(\tau(\alpha)/\alpha\bigr)\bigl(\sigma(\alpha)/\alpha\bigr)$$
 
@@ -107,7 +107,7 @@ $$\mathbb{K}=\mathbb{K}_0\subseteq\mathbb{K}_1\subseteq\cdots\subseteq\mathbb{K}
 이 *거듭제곱근 탑<sub>radical tower</sub>*이라는 것은 각각의 $i$마다 적당한 $\alpha_i\in\mathbb{K}_{i+1}$와 자연수 $n_i\geq1$이 존재하여 $\mathbb{K}_{i+1}=\mathbb{K}_i(\alpha_i)$이고 $\alpha_i^{n_i}\in\mathbb{K}_i$인 것이다. 다항식 $f\in\mathbb{K}[\x]$가 *거듭제곱근으로 풀린다<sub>solvable by radicals</sub>*는 것은 $f$의 splitting field $\mathbb{L}_f$가 어떤 거듭제곱근 탑의 가장 위의 field $\mathbb{K}_r$에 포함되는 것이다.
 :::
 
-즉 $f$가 거듭제곱근으로 풀린다는 것은, $f$의 모든 근을 $\mathbb{K}$의 원소들로부터 시작하여 사칙연산과 거듭제곱근을 유한 번 취하는 것으로 표현할 수 있다는 것이다.
+즉 $f$가 거듭제곱근으로 풀린다는 것은, $f$의 모든 root를 $\mathbb{K}$의 원소들로부터 시작하여 사칙연산과 거듭제곱근을 유한 번 취하는 것으로 표현할 수 있다는 것이다.
 
 ::: 참고 7
 여기서의 radical tower는 [§제곱근확대체](/ko/math/field_theory/radical_extensions)의 $p$-radical extension과는 별개의 개념이다. 후자는 characteristic $p$에서 Frobenius와 관련된 inseparability를 다루는 개념이고, 전자는 임의의 거듭제곱근을 추가하는 조작이다. 영문 문헌에서 둘 모두 radical이라는 단어를 사용하므로 주의해야 한다.
@@ -186,7 +186,7 @@ $$\mathbb{N}=\mathbb{K}\bigl(u_1(E)\cup\cdots\cup u_s(E)\bigr)$$
 
 $$u_j(\alpha_i)^{n_i}=u_j(\alpha_i^{n_i})\in u_j(\mathbb{K}_i(\zeta))=\mathbb{K}\bigl(u_j(\zeta),u_j(\alpha_0),\ldots,u_j(\alpha_{i-1})\bigr)$$
 
-이다. 따라서 $\mathbb{K}(\zeta)$에서 시작하여 $u_1(E)$의 생성원들, $u_2(E)$의 생성원들, $\ldots$을 차례로 추가하면, 각 단계에서 추가되는 원소의 거듭제곱이 항상 그 이전까지 만들어진 field에 속하므로 ($u_j(\zeta)\in\mu_n=\langle\zeta\rangle\subseteq\mathbb{K}(\zeta)$이고 위의 식), 이는 $\mathbb{K}$에서 $\mathbb{N}$까지의 거듭제곱근 탑
+이다. 따라서 $\mathbb{K}(\zeta)$에서 시작하여 $u_1(E)$의 generator들, $u_2(E)$의 generator들, $\ldots$을 차례로 추가하면, 각 단계에서 추가되는 원소의 거듭제곱이 항상 그 이전까지 만들어진 field에 속하므로 ($u_j(\zeta)\in\mu_n=\langle\zeta\rangle\subseteq\mathbb{K}(\zeta)$이고 위의 식), 이는 $\mathbb{K}$에서 $\mathbb{N}$까지의 거듭제곱근 탑
 
 $$\mathbb{K}\subseteq\mathbb{K}(\zeta)=\mathbb{T}_1\subseteq\mathbb{T}_2\subseteq\cdots\subseteq\mathbb{T}_t=\mathbb{N}$$
 

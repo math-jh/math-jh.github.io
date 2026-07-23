@@ -15,7 +15,7 @@ published: false
 
 ---
 
-Lie algebra $\mathfrak{g}$의 표현론은 본질적으로 결합대수의 가군 이론으로 환원된다. 그 환원을 가능하게 하는 대상이 *universal enveloping algebra*이며, 이는 $\mathfrak{g}$의 Lie bracket을 결합대수의 commutator로 실현하는 가장 보편적인 결합대수이다. 이 글에서 우리는 이 대수를 tensor algebra의 quotient로 정의하고, 그 보편 성질을 서술한 뒤, 표준 여과<sub>filtration</sub>를 통해 얻어지는 associated graded가 symmetric algebra와 isomorphic임을 주장하는 Poincaré–Birkhoff–Witt 정리를 증명한다. 이 정리는 자연스러운 사상 $\mathfrak{g}\rightarrow U(\mathfrak{g})$가 단사임을 즉시 함의하며, 반단순 Lie algebra의 표현론 전체의 기초가 된다.
+Lie algebra $\mathfrak{g}$의 표현론은 본질적으로 결합대수의 가군 이론으로 환원된다. 그 환원을 가능하게 하는 대상이 *universal enveloping algebra*이며, 이는 $\mathfrak{g}$의 Lie bracket을 결합대수의 commutator로 실현하는 가장 보편적인 결합대수이다. 이 글에서 우리는 이 대수를 tensor algebra의 quotient로 정의하고, 그 보편 성질을 서술한 뒤, 표준 여과<sub>filtration</sub>를 통해 얻어지는 associated graded가 symmetric algebra와 isomorphic임을 주장하는 Poincaré–Birkhoff–Witt 정리를 증명한다. 이 정리는 자연스러운 morphism $\mathfrak{g}\rightarrow U(\mathfrak{g})$가 단사임을 즉시 함의하며, semisimple Lie algebra의 표현론 전체의 기초가 된다.
 
 이 글 전체에서 $k$는 고정된 체이고, $\mathfrak{g}$는 $k$ 위에 정의된 Lie algebra이다. ([§리 군, ⁋정의 8](/ko/math/lie_theory/Lie_groups#def8)) Lie algebra의 정의는 임의의 체 위에서 동일하게 주어지므로, 우리는 기반 체를 $k$로 일반화하여 사용한다.
 
@@ -59,20 +59,20 @@ $$U(\mathfrak{g})=\T(\mathfrak{g})/\mathfrak{I}$$
 를 $\mathfrak{g}$의 *universal enveloping algebra<sub>보편 포락 대수</sub>*라 부른다. 합성 $\mathfrak{g}=\T^1(\mathfrak{g})\hookrightarrow\T(\mathfrak{g})\twoheadrightarrow U(\mathfrak{g})$로 얻어지는 $k$-linear map을 $\iota:\mathfrak{g}\rightarrow U(\mathfrak{g})$로 표기한다.
 :::
 
-생성원 $x\otimes y-y\otimes x-[x,y]$는 tensor algebra의 degree $2$ 성분과 degree $1$ 성분이 섞인 비동차<sub>inhomogeneous</sub> 원소이므로, $\mathfrak{I}$는 동차 이데알이 아니다. 이는 대칭대수나 exterior algebra를 정의할 때 사용한 [\[다중선형대수학\] §텐서대수, ⁋정의 5](/ko/math/multilinear_algebra/tensor_algebras#def5)의 동차 이데알과의 결정적인 차이이며, 따라서 $U(\mathfrak{g})$는 grading을 갖지 않는다. 그 대신 $U(\mathfrak{g})$는 아래 [정의 6](#def6)에서 보듯 자연스러운 여과를 가지며, PBW 정리의 핵심은 이 여과의 associated graded가 symmetric algebra와 isomorphic이라는 데에 있다.
+generator $x\otimes y-y\otimes x-[x,y]$는 tensor algebra의 degree $2$ 성분과 degree $1$ 성분이 섞인 비동차<sub>inhomogeneous</sub> 원소이므로, $\mathfrak{I}$는 homogeneous 이데알이 아니다. 이는 symmetric algebra나 exterior algebra를 정의할 때 사용한 [\[다중선형대수학\] §텐서대수, ⁋정의 5](/ko/math/multilinear_algebra/tensor_algebras#def5)의 homogeneous 이데알과의 결정적인 차이이며, 따라서 $U(\mathfrak{g})$는 grading을 갖지 않는다. 그 대신 $U(\mathfrak{g})$는 아래 [정의 6](#def6)에서 보듯 자연스러운 여과를 가지며, PBW 정리의 핵심은 이 여과의 associated graded가 symmetric algebra와 isomorphic이라는 데에 있다.
 
-$U(\mathfrak{g})$에서 $\iota(x)\iota(y)-\iota(y)\iota(x)=\iota([x,y])$가 성립함을 강조해 둔다. 정의에 의하여 $x\otimes y-y\otimes x-[x,y]\in\mathfrak{I}$이므로 quotient에서 이 원소는 $0$이 되고, $\iota$가 $\T^1$에서의 사상이라는 점을 함께 쓰면 위 등식을 얻는다. 표기의 번거로움을 피하기 위해, 이후 $\iota$를 생략하고 $\mathfrak{g}$의 원소와 그 $U(\mathfrak{g})$에서의 상을 같은 기호로 적으며, $U(\mathfrak{g})$에서의 곱은 병치<sub>juxtaposition</sub>로 적는다. 이 표기 하에서 위의 관계는 $U(\mathfrak{g})$ 안에서
+$U(\mathfrak{g})$에서 $\iota(x)\iota(y)-\iota(y)\iota(x)=\iota([x,y])$가 성립함을 강조해 둔다. 정의에 의하여 $x\otimes y-y\otimes x-[x,y]\in\mathfrak{I}$이므로 quotient에서 이 원소는 $0$이 되고, $\iota$가 $\T^1$에서의 morphism이라는 점을 함께 쓰면 위 등식을 얻는다. 표기의 번거로움을 피하기 위해, 이후 $\iota$를 생략하고 $\mathfrak{g}$의 원소와 그 $U(\mathfrak{g})$에서의 상을 같은 기호로 적으며, $U(\mathfrak{g})$에서의 곱은 병치<sub>juxtaposition</sub>로 적는다. 이 표기 하에서 위의 관계는 $U(\mathfrak{g})$ 안에서
 
 $$xy-yx=[x,y]\qquad\text{for all $x,y\in\mathfrak{g}$}$$
 
 로 적힌다. 다만 이 시점에서 $\iota$가 단사인지는 아직 알 수 없으며, 이는 PBW 정리의 따름정리로 비로소 확립된다. ([따름정리 11](#cor11))
 
 ::: 예시 3
-$\mathfrak{g}$가 abelian Lie algebra, 곧 모든 $x,y$에 대하여 $[x,y]=0$인 경우를 생각하자. 이 때 $\mathfrak{I}$의 생성원은 $x\otimes y-y\otimes x$가 되며, 이는 정확히 symmetric algebra $\S(\mathfrak{g})$를 정의하는 이데알의 생성원이다. 따라서
+$\mathfrak{g}$가 abelian Lie algebra, 곧 모든 $x,y$에 대하여 $[x,y]=0$인 경우를 생각하자. 이 때 $\mathfrak{I}$의 generator는 $x\otimes y-y\otimes x$가 되며, 이는 정확히 symmetric algebra $\S(\mathfrak{g})$를 정의하는 이데알의 generator이다. 따라서
 
 $$U(\mathfrak{g})\cong\S(\mathfrak{g})$$
 
-이고, $\mathfrak{g}$의 기저를 고정하면 이는 다항식 대수 $k[\x_i]_{i\in I}$가 된다. ([\[다중선형대수학\] §텐서대수, ⁋명제 8](/ko/math/multilinear_algebra/tensor_algebras#prop8)) 즉 abelian인 경우 보편 포락 대수는 가환대수이며, PBW 정리는 이 동형이 일반적인 $\mathfrak{g}$에 대해서도 그 associated graded 수준에서 성립함을 주장하는 것으로 이해할 수 있다.
+이고, $\mathfrak{g}$의 기저를 고정하면 이는 polynomial algebra $k[\x_i]_{i\in I}$가 된다. ([\[다중선형대수학\] §텐서대수, ⁋명제 8](/ko/math/multilinear_algebra/tensor_algebras#prop8)) 즉 abelian인 경우 보편 포락 대수는 가환대수이며, PBW 정리는 이 동형이 일반적인 $\mathfrak{g}$에 대해서도 그 associated graded 수준에서 성립함을 주장하는 것으로 이해할 수 있다.
 :::
 
 ## 보편 성질
@@ -87,7 +87,7 @@ $$\iota:\mathfrak{g}\rightarrow U(\mathfrak{g}),\qquad f=\bar{f}\circ\iota$$
 을 만족하는 결합 단위 대수 준동형 $\bar{f}:U(\mathfrak{g})\rightarrow A$가 유일하게 존재한다.
 :::
 ::: 증명
-$f$를 단순히 벡터공간 사이의 $k$-linear map으로 보면, [\[다중선형대수학\] §텐서대수, ⁋명제 2](/ko/math/multilinear_algebra/tensor_algebras#prop2)의 보편 성질에 의하여 결합 단위 대수 준동형 $\tilde{f}:\T(\mathfrak{g})\rightarrow A$가 유일하게 존재하여 $\T^1(\mathfrak{g})=\mathfrak{g}$ 위에서 $\tilde{f}=f$이도록 할 수 있다. 이제 $\tilde{f}$가 이데알 $\mathfrak{I}$를 $0$으로 보냄을 보이면 충분하다. $\mathfrak{I}$는 $x\otimes y-y\otimes x-[x,y]$ 꼴의 원소들로 생성되는 two-sided ideal이므로, 이 생성원들이 $\ker\tilde{f}$에 속함을 확인하면 된다. 임의의 $x,y\in\mathfrak{g}$에 대하여
+$f$를 단순히 벡터공간 사이의 $k$-linear map으로 보면, [\[다중선형대수학\] §텐서대수, ⁋명제 2](/ko/math/multilinear_algebra/tensor_algebras#prop2)의 보편 성질에 의하여 결합 단위 대수 준동형 $\tilde{f}:\T(\mathfrak{g})\rightarrow A$가 유일하게 존재하여 $\T^1(\mathfrak{g})=\mathfrak{g}$ 위에서 $\tilde{f}=f$이도록 할 수 있다. 이제 $\tilde{f}$가 이데알 $\mathfrak{I}$를 $0$으로 보냄을 보이면 충분하다. $\mathfrak{I}$는 $x\otimes y-y\otimes x-[x,y]$ 꼴의 원소들로 생성되는 two-sided ideal이므로, 이 generator들이 $\ker\tilde{f}$에 속함을 확인하면 된다. 임의의 $x,y\in\mathfrak{g}$에 대하여
 
 $$\tilde{f}(x\otimes y-y\otimes x-[x,y])=f(x)f(y)-f(y)f(x)-f([x,y])=[f(x),f(y)]_A-f([x,y])$$
 
@@ -151,7 +151,7 @@ $\gr U(\mathfrak{g})$가 $U_1/U_0$의 상으로 생성되므로, degree $1$ homo
 
 $$\bar{x}\bar{y}-\bar{y}\bar{x}=\overline{xy-yx}\in U_2/U_1$$
 
-인데, $U(\mathfrak{g})$에서 $xy-yx=[x,y]\in\mathfrak{g}\subseteq U_1$이므로 $xy-yx$의 $U_2/U_1$에서의 상은 $0$이다. 따라서 $\bar{x}\bar{y}=\bar{y}\bar{x}$이고, 생성원들이 서로 commute하므로 $\gr U(\mathfrak{g})$ 전체가 commutative하다.
+인데, $U(\mathfrak{g})$에서 $xy-yx=[x,y]\in\mathfrak{g}\subseteq U_1$이므로 $xy-yx$의 $U_2/U_1$에서의 상은 $0$이다. 따라서 $\bar{x}\bar{y}=\bar{y}\bar{x}$이고, generator들이 서로 commute하므로 $\gr U(\mathfrak{g})$ 전체가 commutative하다.
 :::
 
 $\gr U(\mathfrak{g})$가 commutative하고 $\mathfrak{g}$의 상으로 생성되므로, [\[다중선형대수학\] §텐서대수, ⁋명제 6](/ko/math/multilinear_algebra/tensor_algebras#prop6)의 보편 성질에 의하여 자연스러운 결합대수 준동형이 하나 정해진다. $\mathfrak{g}$를 $U_1/U_0\subseteq\gr U(\mathfrak{g})$로 보내는 $k$-linear map은 가환대수로 들어가므로, 유일한 결합대수 준동형
@@ -182,7 +182,7 @@ $$x_{i_j}x_{i_{j+1}}=x_{i_{j+1}}x_{i_j}+[x_{i_j},x_{i_{j+1}}]$$
 
 $$z_S=x_{i_1}x_{i_2}\cdots x_{i_n},\qquad S=(i_1\leq i_2\leq\cdots\leq i_n)$$
 
-들을 기저로 갖는 다항식 대수이다. ([\[다중선형대수학\] §텐서대수, ⁋명제 8](/ko/math/multilinear_algebra/tensor_algebras#prop8)) 여기에서 $S$는 $I$의 원소들로 이루어진 비내림차순<sub>nondecreasing</sub> 유한열을 가리킨다. 우리는 다음 두 조건을 만족하는 $k$-linear action $x_i\cdot(-):\S(\mathfrak{g})\rightarrow\S(\mathfrak{g})$들을 구성하고자 한다.
+들을 기저로 갖는 polynomial algebra이다. ([\[다중선형대수학\] §텐서대수, ⁋명제 8](/ko/math/multilinear_algebra/tensor_algebras#prop8)) 여기에서 $S$는 $I$의 원소들로 이루어진 비내림차순<sub>nondecreasing</sub> 유한열을 가리킨다. 우리는 다음 두 조건을 만족하는 $k$-linear action $x_i\cdot(-):\S(\mathfrak{g})\rightarrow\S(\mathfrak{g})$들을 구성하고자 한다.
 
 1. $i\leq S$ ($i$가 $S$의 모든 첨자 이하)인 경우 $x_i\cdot z_S=z_{(i,S)}$, 곧 $i$를 맨 앞에 덧붙인 정렬된 단항식이다.
 2. 임의의 $i,j\in I$와 $s\in\S(\mathfrak{g})$에 대하여 $x_i\cdot(x_j\cdot s)-x_j\cdot(x_i\cdot s)=[x_i,x_j]\cdot s$이 성립한다.
@@ -246,7 +246,7 @@ $$h=\begin{pmatrix}1&0\\0&-1\end{pmatrix},\quad e=\begin{pmatrix}0&1\\0&0\end{pm
 
 $$[h,e]=2e,\quad [h,f]=-2f,\quad [e,f]=h$$
 
-을 갖는다. 이 commutation relation은 $\sl_2$의 표현론에서 핵심적인 역할을 하며, $e,f$는 각각 weight을 올리고 내리는 raising, lowering operator로 작용한다. ([§근계, ⁋정의 8](/ko/math/lie_theory/root_systems#def8)) 따라서 $U(\sl_2)$는 세 생성원 $e,f,h$와 관계식
+을 갖는다. 이 commutation relation은 $\sl_2$의 표현론에서 핵심적인 역할을 하며, $e,f$는 각각 weight을 올리고 내리는 raising, lowering operator로 작용한다. ([§근계, ⁋정의 8](/ko/math/lie_theory/root_systems#def8)) 따라서 $U(\sl_2)$는 세 generator $e,f,h$와 관계식
 
 $$he-eh=2e,\qquad hf-fh=-2f,\qquad ef-fe=h$$
 
@@ -279,7 +279,7 @@ $$\begin{aligned}
 
 $$\Omega=2fe+h+\tfrac{1}{2}h^2$$
 
-으로 다시 쓸 수 있는데, 이는 $ef=fe+h$를 사용해 $ef+fe=2fe+h$로 정렬한 것이다. 이 Casimir element는 $\sl_2$의 유한차원 표현 분류에서 각 irreducible 표현 위에 스칼라로 작용하여, 표현을 구별하는 불변량의 역할을 한다. ([§근계, ⁋정의 8](/ko/math/lie_theory/root_systems#def8))
+으로 다시 쓸 수 있는데, 이는 $ef=fe+h$를 사용해 $ef+fe=2fe+h$로 정렬한 것이다. 이 Casimir element는 $\sl_2$의 유한차원 representation 분류에서 각 irreducible representation 위에 스칼라로 작용하여, representation을 구별하는 불변량의 역할을 한다. ([§근계, ⁋정의 8](/ko/math/lie_theory/root_systems#def8))
 
 ---
 

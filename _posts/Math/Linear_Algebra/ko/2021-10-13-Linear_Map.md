@@ -78,8 +78,8 @@ $$(L_2\circ L_1)(\alpha u)=L_2(L_1(\alpha u))=L_2(\alpha L_1(u))=\alpha(L_2(L_1(
 ::: 정의 5
 두 $\mathbb{K}$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$에 대하여,
 
-1. $L(v_1)=L(v_2)$일 때마다 $v_1=v_2$라면, $L$이 *단사<sub>injective</sub>*라 힌다.
-2. 임의의 $w\in W$에 대해 $L(v)=w$를 만족하는 $v\in L$이 존재한다면, $L$이 *전사<sub>surjective</sub>*라 한다. 
+1. $L(v_1)=L(v_2)$일 때마다 $v_1=v_2$라면, $L$이 *단사<sub>injective</sub>*라 한다.
+2. 임의의 $w\in W$에 대해 $L(v)=w$를 만족하는 $v\in V$가 존재한다면, $L$이 *전사<sub>surjective</sub>*라 한다. 
 :::
 
 일반적으로 단사함수 혹은 전사함수를 다룰 때 사용할 수 있는 도구는 위의 정의가 거의 전부지만, 지금 상황과 같이 다루는 대상이 단순한 집합이 아니라 어떠한 연산이 주어진 경우, 대수적인 도구도 사용할 수 있다.
@@ -198,7 +198,7 @@ $$L(v)=0\text{ for all $v\in V$}$$
 
 $$\iota(w)=w\text{ for all $w\in W$}$$
 
-으로 정의된 $\iota:W\rightarrow V$는 linear map이다. 이번에는 $\im\iota=W$이고, $\ker \iota=\{0\}$이다. 즉, $L$은 단사함수이다.
+으로 정의된 $\iota:W\rightarrow V$는 linear map이다. 이번에는 $\im\iota=W$이고, $\ker \iota=\{0\}$이다. 즉, $\iota$는 단사함수이다.
 :::
 
 위의 예시에서 특별히 $W=V$인 경우 $L$은 항등함수 $\id_V$와 같게 된다. ([\[집합론\] §함수들 사이의 연산, ⁋예시 3](/ko/math/set_theory/operation_of_functions#ex3)) 

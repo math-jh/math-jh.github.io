@@ -22,8 +22,8 @@ weight: 121
 ::: 명제 1
 두 associative unital graded $A$-algebra $E,F$가 주어졌다 하고, $M$을 $(E,E)$-bimodule, $N$을 graded $(F,F)$-bimodule이라 하자. 그럼 graded $A$-algebra homomorphism $\rho: E \rightarrow F$와, $\rho$에 의해 정의되는 $E$-bimodule들의 degree $0$ graded $E$-homomorphism $\theta: M \rightarrow N$이 주어졌다 하면 다음이 성립한다. 
 
-1. 임의의 $\varepsilon$-derivation $d': F \rightarrow N$에 대하여, $d'\circ\rho: E \rightarrow \rho^\ast N$ 또한 같은 차수의 $\varepsilon$-derivation이다. 
-2. 임의의 $\varepsilon$-derivation $d: E \rightarrow M$에 대하여, $\theta\circ d: E \rightarrow \rho^\ast N$ 또한 같은 차수의 $\varepsilon$-derivation이다.
+1. 임의의 $\varepsilon$-derivation $d': F \rightarrow N$에 대하여, $d'\circ\rho: E \rightarrow \rho^\ast N$ 또한 같은 degree의 $\varepsilon$-derivation이다. 
+2. 임의의 $\varepsilon$-derivation $d: E \rightarrow M$에 대하여, $\theta\circ d: E \rightarrow \rho^\ast N$ 또한 같은 degree의 $\varepsilon$-derivation이다.
 :::
 
 이에 대한 증명은 $\rho^\ast$의 정의에 의해 자명하다. 한편, 이와 같은 상황에서 우리는 $F$에도 $(E,E)$-bimodule structure를 줄 수 있다. 그렇다면 $d':F \rightarrow N$이 언제 (left/right) $E$-linear이기도 한지를 살펴보는 것이 당연할 것이다. 
@@ -52,11 +52,11 @@ $$(M[\delta])_\mu=M_{\delta+\mu}$$
 
 으로 정의하자. 그럼 $\Delta$-graded $A$-algebra $E\oplus M[\delta]$가 존재하므로, 이제 homogeneous element $x\in E$와, 이를 사용하여 얻어지는 $E\oplus M[\delta]$의 원소 $(x,y), (x',y')$에 대하여 다음의 식
 
-$$(x,y)(x',y')=(xx', xy+\varepsilon(\delta, \deg x)xy')$$
+$$(x,y)(x',y')=(xx', yx'+\varepsilon(\delta, \deg x)xy')$$
 
 을 사용하여 $E\oplus M[\delta]$ 위에 graded $A$-algebra 구조를 줄 수 있다. 이 때, projection map $\epsilon: E\oplus M[\delta] \rightarrow E$를 우리는 *augmentation map*이라 부르고, 이것이 graded $A$-algebra homomorphism이 된다는 것을 안다. 
 
-이제 degree $0$의 graded $A$-linear map $g:E \rightarrow E\oplus M[\delta]$이 만일 $\epsilon\circ g=\id_A$를 만족한다면, 정의에 의해 우리는 적당한 degree $\delta$ graded $A$-linear map $f:E \rightarrow M$에 대하여 $x\mapsto (x,f(x))$의 꼴이여야 한다는 것을 알고, 거꾸로 임의의 degree $\delta$ $A$-linear map $f$는 위의 조건을 만족하는 $g$를 정의한다. 
+이제 degree $0$의 graded $A$-linear map $g:E \rightarrow E\oplus M[\delta]$이 만일 $\epsilon\circ g=\id_E$를 만족한다면, 정의에 의해 우리는 적당한 degree $\delta$ graded $A$-linear map $f:E \rightarrow M$에 대하여 $x\mapsto (x,f(x))$의 꼴이여야 한다는 것을 알고, 거꾸로 임의의 degree $\delta$ $A$-linear map $f$는 위의 조건을 만족하는 $g$를 정의한다. 
 
 그럼 다음 명제 또한 단순한 계산의 결과이다. 
 
@@ -96,11 +96,11 @@ $$(b, t)(b', t') = (bb', bt' + b't)$$
 
 으로 곱셈을 정의하여 이를 associative $\mathbb{Z}$-algebra로 생각하자. 그럼 canonical injection $t\mapsto (0,t)$에 의하여 $E$를 $\mathbb{Z}$-algebra $B\oplus E$의 two-sided ideal과 동일시할 수 있으며 이 때 $E^2=0$이다. 
 
-한편, $h_0: B \rightarrow B \oplus E$를 $h_0(a) = (a, d_0(a))$로 정의하면, 이는 [명제 3](#prop3)에 의해 (unital) ring homomorphism이며 이를 통해 $B \oplus E$는 $A$-algebra가 된다. 이제 $B\oplus E$ 위에 이러한 $A$-module 구조를 준 후 $h_1(x) = (x, d_1(x))$로 정의된 함수 $h_1: M \rightarrow B\oplus E$를 생각하자. 그럼 주어진 조건에 의하여 다음의 식
+한편, $h_0: A \rightarrow B \oplus E$를 $h_0(a) = (a, d_0(a))$로 정의하면, 이는 [명제 3](#prop3)에 의해 (unital) ring homomorphism이며 이를 통해 $B \oplus E$는 $A$-algebra가 된다. 이제 $B\oplus E$ 위에 이러한 $A$-module 구조를 준 후 $h_1(x) = (x, d_1(x))$로 정의된 함수 $h_1: M \rightarrow B\oplus E$를 생각하자. 그럼 주어진 조건에 의하여 다음의 식
 
 $$h_1(ax) = h_0(a) h_1(x)$$
 
-이 성립하므로, $h_1$은 $M$에서 $B$로의 $A$-linear map이다. 따라서 우리는 주어진 가정들을 사용하여, $T(M)$, $S(M)$ 혹은 $\bigwedge(M)$의 universal property를 사용하여 $h\vert_M=h_1$을 만족하는 유일한 $A$-algebra homomorphism $h:B \rightarrow B\oplus E$를 얻는다. 한편, $h$를 augmentation map $B\oplus E \rightarrow B$와 합성하면 $\id_B$가 되는 것을 쉽게 확인할 수 있으므로, 다시 [명제 3](#prop3)에 의해 $h(b)=(b,d(b))$이도록 하는 유일한 $\varepsilon$-derivation $d:B \rightarrow E$가 존재하고 이로부터 원하는 결과를 얻는다. 
+이 성립하므로, $h_1$은 $M$에서 $B\oplus E$로의 $A$-linear map이다. 따라서 우리는 주어진 가정들을 사용하여, $\T(M)$, $\S(M)$ 혹은 $\bigwedge(M)$의 universal property를 사용하여 $h\vert_M=h_1$을 만족하는 유일한 $A$-algebra homomorphism $h:B \rightarrow B\oplus E$를 얻는다. 한편, $h$를 augmentation map $B\oplus E \rightarrow B$와 합성하면 $\id_B$가 되는 것을 쉽게 확인할 수 있으므로, 다시 [명제 3](#prop3)에 의해 $h(b)=(b,d(b))$이도록 하는 유일한 $\varepsilon$-derivation $d:B \rightarrow E$가 존재하고 이로부터 원하는 결과를 얻는다. 
 :::
 
 ## Universal property
@@ -142,7 +142,7 @@ $$\sum_i x_i\otimes y_i=\sum_i \left(x_i(1\otimes y_i)-(x_iy_i)\otimes 1\right)=
 
 $$f(x \otimes 1 - 1 \otimes x) = dx$$
 
-여야 함을 알고 있고, [보조정리 6](#lem6)에 의하여 $\mathfrak{I}$는 $\delta_E$의 image에 의하여 유일하게 생성되므로 주어진 조건을 만족하는 $f$는 존재한다면 유일해야 한다. 추가적으로 앞선 보조정리에서의 계산을 활용하면 임의의 $\sum x_i y_i\in \mathfrak{I}$에 대하여 다음의 식
+여야 함을 알고 있고, [보조정리 6](#lem6)에 의하여 $\mathfrak{I}$는 $\delta_E$의 image에 의하여 유일하게 생성되므로 주어진 조건을 만족하는 $f$는 존재한다면 유일해야 한다. 추가적으로 앞선 보조정리에서의 계산을 활용하면 임의의 $\sum x_i \otimes y_i\in \mathfrak{I}$에 대하여 다음의 식
 
 $$f\left( \sum_i x_i \otimes y_i \right) = \sum_i x_i  f(1 \otimes y_i - y_i \otimes 1) = - \sum_i x_i  dy_i$$
 

@@ -56,11 +56,11 @@ $(g\circ f)(x)$의 임의의 근방 $W$를 택하자. 그럼 $g$가 $f(x)$에서
 
 이제 둘째 조건을 가정하고 세 번째 조건을 보이자. $Y$의 임의의 닫힌집합 $C$에 대하여, 다음 포함관계
 
-$$f(\cl(f^{-1}(C))\subseteq \cl(f(f^{-1}(C))\subseteq\cl(C)=C$$
+$$f(\cl(f^{-1}(C)))\subseteq \cl(f(f^{-1}(C)))\subseteq\cl(C)=C$$
 
 가 성립하므로,
 
-$$\cl(f^{-1}(C))\subseteq f^{-1}(f(\cl(f^{-1}(C)))\subseteq f^{-1}(C)$$
+$$\cl(f^{-1}(C))\subseteq f^{-1}(f(\cl(f^{-1}(C))))\subseteq f^{-1}(C)$$
 
 로부터 $f^{-1}(C)$가 닫힌집합이라는 것을 안다. 식 $(f^{-1}(A))^c=f^{-1}(A^c)$가 임의의 부분집합 $A\subseteq Y$에 대해 성립하므로, 이로부터 넷째 조건 또한 얻어진다는 것이 자명하다. 
 

@@ -57,11 +57,11 @@ That the first condition implies the second is a consequence of [Proposition 2](
 
 Now assume the second condition and prove the third. For any closed set $C$ in $Y$, the inclusion
 
-$$f(\cl(f^{-1}(C))\subseteq \cl(f(f^{-1}(C))\subseteq\cl(C)=C$$
+$$f(\cl(f^{-1}(C)))\subseteq \cl(f(f^{-1}(C)))\subseteq\cl(C)=C$$
 
 holds, so from
 
-$$\cl(f^{-1}(C))\subseteq f^{-1}(f(\cl(f^{-1}(C)))\subseteq f^{-1}(C)$$
+$$\cl(f^{-1}(C))\subseteq f^{-1}(f(\cl(f^{-1}(C))))\subseteq f^{-1}(C)$$
 
 we see that $f^{-1}(C)$ is closed. Since the identity $(f^{-1}(A))^c=f^{-1}(A^c)$ holds for any subset $A\subseteq Y$, it is obvious that the fourth condition follows from this.
 

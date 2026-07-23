@@ -51,7 +51,7 @@ $$\sum_{i=1}^{n} \alpha_i u_i = 0$$
 
 for $u_1,\ldots, u_n\in\Hom_{\Alg{\mathbb{K}}}(A, \mathbb{L})$. Then for $x,y\in A$ the computation
 
-$$\sum_{i=1}^{n-1} \alpha_i([u_i(x) - u_n(x)) u_i(y) = \sum_{i=1}^{n} \alpha_i u_i(xy) - u_n(x) \sum_{i=1}^{n} \alpha_i u_i(y) = 0$$
+$$\sum_{i=1}^{n-1} \alpha_i(u_i(x) - u_n(x)) u_i(y) = \sum_{i=1}^{n} \alpha_i u_i(xy) - u_n(x) \sum_{i=1}^{n} \alpha_i u_i(y) = 0$$
 
 gives
 
@@ -106,7 +106,7 @@ then the induced map $\mathbb{L}^n\rightarrow B^\ast$ is injective, and hence $B
 
 Now define the polynomial $g \in \mathbb{L}[\y_1,\ldots, \y_n]$ by
 
-$$g(\y_1, \ldots, \y_n) = f\left( \sum_{j=1}^n u_1(a_j)y_j, \ldots, \sum_{j=1}^n u_n(a_j)\y'_j \right).$$
+$$g(\y_1, \ldots, \y_n) = f\left( \sum_{j=1}^n u_1(a_j)y_j, \ldots, \sum_{j=1}^n u_n(a_j)\y_j \right).$$
 
 Substituting arbitrary elements $y_i\in \mathbb{K}$ and setting $x=\sum_{i=1}^n a_iy_i$, we have
 
@@ -114,7 +114,7 @@ $$g(y_1, \dots, y_n) = f(u_1(x), \dots, u_n(x)) = 0,$$
 
 and by the hypothesis on $f$ we know that $g(y_1,\ldots, y_n)=0$. Since $\mathbb{K}$ is infinite, $g$ must be identically $0$; letting $(v_{ij})$ be the inverse matrix of $(u_i(a_j))$, we have
 
-$$f(\x_1,\ldots, \x_n)=g\left(\sum_{j=1}^n b_{1j}\x_j, \dots, \sum_{j=1}^n b_{nj}\x_j \right)$$
+$$f(\x_1,\ldots, \x_n)=g\left(\sum_{j=1}^n v_{1j}\x_j, \dots, \sum_{j=1}^n v_{nj}\x_j \right)$$
 
 and therefore $f$ is also identically $0$.
 :::

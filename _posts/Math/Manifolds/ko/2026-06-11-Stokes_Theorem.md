@@ -18,15 +18,15 @@ published: false
 
 $$\int_a^bf'(t)\,dt=f(b)-f(a)$$
 
-를 manifold의 언어로 일반화하는 것이다. 좌변은 "도함수를 영역 위에서 적분한 것"이고 우변은 "원래 함수를 영역의 경계에서 (부호를 붙여) 읽은 것"이므로, [§적분](/ko/math/manifolds/integration)과 [§경계가 있는 다양체](/ko/math/manifolds/manifolds_with_boundary)의 언어로는 다음과 같이 일반화되어야 할 것이다. 도함수의 역할은 exterior derivative $d$가, 영역의 역할은 oriented manifold with boundary가, 부호의 역할은 induced orientation이 맡는다.
+를 manifold의 언어로 일반화하는 것이다. 좌변은 "도함수를 영역 위에서 적분한 것"이고 우변은 "원래 함수를 영역의 boundary에서 (부호를 붙여) 읽은 것"이므로, [§적분](/ko/math/manifolds/integration)과 [§경계가 있는 다양체](/ko/math/manifolds/manifolds_with_boundary)의 언어로는 다음과 같이 일반화되어야 할 것이다. 도함수의 역할은 exterior derivative $d$가, 영역의 역할은 oriented manifold with boundary가, 부호의 역할은 induced orientation이 맡는다.
 
 ## 경계가 있는 다양체 위에서의 적분
 
-우선 [§적분](/ko/math/manifolds/integration)의 정의가 경계가 있는 경우로 그대로 확장된다는 것을 확인하자. $\mathbb{H}^m$의 열린집합 $V$ 위의 compactly supported $m$-form $\omega=f\,dr^1\wedge\cdots\wedge dr^m$에 대하여, 그 적분을 미적분학에서의 반복적분
+우선 [§적분](/ko/math/manifolds/integration)의 정의가 boundary가 있는 경우로 그대로 확장된다는 것을 확인하자. $\mathbb{H}^m$의 열린집합 $V$ 위의 compactly supported $m$-form $\omega=f\,dr^1\wedge\cdots\wedge dr^m$에 대하여, 그 적분을 미적분학에서의 반복적분
 
 $$\int_V\omega=\int_{\mathbb{R}^{m-1}}\int_0^\infty f\,dr^m\,dr^1\cdots dr^{m-1}$$
 
-으로 정의한다. 여기서 $f$는 $V$ 바깥에서 $0$으로 확장한 것이다. 한편 $\partial\mathbb{H}^m$은 각 변수의 적분에 기여하지 않으므로, 이 적분은 $V\cap\interior\mathbb{H}^m$ 위에서의 적분과 같다. [§경계가 있는 다양체, ⁋명제 3](/ko/math/manifolds/manifolds_with_boundary#prop3)에서 살펴본 것과 같이 chart들의 transition은 내부를 내부로 보내는 diffeomorphism이므로, 적분의 잘 정의됨과 chart 무관성, 그리고 partition of unity를 통한 전체 적분의 정의는 [§적분](/ko/math/manifolds/integration)에서의 논증이 글자 그대로 적용된다. 즉 oriented manifold with boundary $M$ 위의 compactly supported $m$-form $\omega$에 대하여 $\int_M\omega$가 잘 정의된다.
+으로 정의한다. 여기서 $f$는 $V$ 바깥에서 $0$으로 확장한 것이다. 한편 $\partial\mathbb{H}^m$은 각 변수의 적분에 기여하지 않으므로, 이 적분은 $V\cap\interior\mathbb{H}^m$ 위에서의 적분과 같다. [§경계가 있는 다양체, ⁋명제 3](/ko/math/manifolds/manifolds_with_boundary#prop3)에서 살펴본 것과 같이 chart들의 transition은 interior를 interior로 보내는 diffeomorphism이므로, 적분의 잘 정의됨과 chart 무관성, 그리고 partition of unity를 통한 전체 적분의 정의는 [§적분](/ko/math/manifolds/integration)에서의 논증이 글자 그대로 적용된다. 즉 oriented manifold with boundary $M$ 위의 compactly supported $m$-form $\omega$에 대하여 $\int_M\omega$가 잘 정의된다.
 
 $m=1$인 경우에는 [§경계가 있는 다양체](/ko/math/manifolds/manifolds_with_boundary)에서 살펴본 것과 같이 positively oriented chart만으로 $M$을 덮지 못할 수 있으므로, negatively oriented chart $(U,x)$에 대해서는
 
@@ -82,7 +82,7 @@ $$\int_Md\omega=(-1)^{m-1}\int_{\mathbb{R}^{m-1}}\bigl(-f_m(r',0)\bigr)\,dr'=(-1
 
 을 얻는다. 특히 $U$가 $\partial M$과 만나지 않는다면 $f_m(r',0)=0$이므로 $\int_Md\omega=0$이고, 이 경우 $\iota^\ast\omega=0$이므로 주장이 성립한다.
 
-이제 경계 쪽을 계산하자. Inclusion $\partial\mathbb{H}^m\hookrightarrow\mathbb{H}^m$을 따라 pullback하면 $r^m$이 상수함수 $0$이 되므로 $dr^m$은 $0$으로 당겨지고, 따라서 $i<m$인 항들이 모두 사라져
+이제 boundary 쪽을 계산하자. Inclusion $\partial\mathbb{H}^m\hookrightarrow\mathbb{H}^m$을 따라 pullback하면 $r^m$이 상수함수 $0$이 되므로 $dr^m$은 $0$으로 당겨지고, 따라서 $i<m$인 항들이 모두 사라져
 
 $$\iota^\ast\eta=f_m(r',0)\;dr^1\wedge\cdots\wedge dr^{m-1}$$
 
@@ -107,10 +107,10 @@ $$\int_{\partial M}\iota^\ast\omega=\epsilon(p)f(p)=-\epsilon f(p)=\int_Mdf$$
 가 되어 주장이 성립한다.
 :::
 
-위의 증명을 한 문장으로 줄이자면, Stokes 정리는 본질적으로 미적분학의 기본정리에 partition of unity를 묻힌 것이다. 정리의 형태에서 바로 읽을 수 있는 중요한 특수한 경우는 경계가 없는 경우이다.
+위의 증명을 한 문장으로 줄이자면, Stokes 정리는 본질적으로 미적분학의 기본정리에 partition of unity를 묻힌 것이다. 정리의 형태에서 바로 읽을 수 있는 중요한 특수한 경우는 boundary가 없는 경우이다.
 
 ::: 따름정리 2
-경계가 없는 oriented manifold $M$ 위의 compactly supported $(m-1)$-form $\omega$에 대하여 $\int_Md\omega=0$이다. 특히 $M$이 compact라면, $M$ 위의 임의의 exact $m$-form의 적분은 $0$이다.
+Boundary가 없는 oriented manifold $M$ 위의 compactly supported $(m-1)$-form $\omega$에 대하여 $\int_Md\omega=0$이다. 특히 $M$이 compact라면, $M$ 위의 임의의 exact $m$-form의 적분은 $0$이다.
 :::
 ::: 증명
 [정리 1](#thm1)에서 $\partial M=\emptyset$인 경우이다. $M$이 compact라면 임의의 differential form이 compactly supported이므로 둘째 주장이 따라나온다.
@@ -125,7 +125,7 @@ $$\int_{[0,1]}df=f(1)-f(0)$$
 :::
 
 ::: 참고 4
-미적분학에서 다루는 Green 정리, divergence 정리, 고전적인 Stokes 정리는 모두 [정리 1](#thm1)의 특수한 경우이다. 가령 $\mathbb{R}^2$의 (경계가 smooth한) 영역 $D$와 $1$-form $\omega=P\,dx+Q\,dy$에 대하여 $d\omega=(\partial Q/\partial x-\partial P/\partial y)\,dx\wedge dy$이므로 [정리 1](#thm1)은 Green 정리가 된다. 이들 고전적 정리들에서 등장하는 "반시계 방향"이나 "바깥쪽 법선" 같은 조건들이 정확히 induced orientation의 내용이다.
+미적분학에서 다루는 Green 정리, divergence 정리, 고전적인 Stokes 정리는 모두 [정리 1](#thm1)의 특수한 경우이다. 가령 $\mathbb{R}^2$의 (boundary가 smooth한) 영역 $D$와 $1$-form $\omega=P\,dx+Q\,dy$에 대하여 $d\omega=(\partial Q/\partial x-\partial P/\partial y)\,dx\wedge dy$이므로 [정리 1](#thm1)은 Green 정리가 된다. 이들 고전적 정리들에서 등장하는 "반시계 방향"이나 "바깥쪽 법선" 같은 조건들이 정확히 induced orientation의 내용이다.
 :::
 
 ---

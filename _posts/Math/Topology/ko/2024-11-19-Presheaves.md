@@ -66,7 +66,7 @@ Category $\Open(X)$를 ordered set $(\mathcal{T}, \subseteq)$를 category로 본
 - 특별히 열린집합들 $U\subseteq V$와 $s\in \mathcal{F}(V)$에 대하여, $\rho_{VU}(s)\in \mathcal{F}(U)$를 간단히 $s\vert_U$로 표기한다.
 :::
 
-한편 위의 [정의 2](#def2)에서, $\Set$은 적절한 카테고리, 예를 들어 $\Ab$와 같은 카테고리로 바꿀 수도 있다. 가령 [예시 3](#ex3)에서 $Y=\mathbb{R}$이었다면, $\mathbb{R}$ 위에 정의된 덧셈을 사용하여 연속함수들의 덧셈을 정의할 수도 있었을 것이며, 그럼 $\mathcal{F}(U)$는 abelian group의 구조를 가지게 되었을 것이다. 이러한 경우 $\mathcal{F}$를 $X$ 위에 정의된 abelian group들의 presheaf라 부른다. 편의상 앞으로 presheaf $\mathcal{F}: \Open(X)^\op \rightarrow \mathcal{A}$를 $\mathcal{A}$-valued presheaf라 부르기로 한다. Presheaf 중 위의 [보조정리 1](#lem1)의 gluing condition을 만족하는 것들을 sheaf라 부르는데, 이는 다음 글에서 정의한다. 
+한편 위의 [정의 2](#def2)에서, $\Set$은 적절한 category, 예를 들어 $\Ab$와 같은 category로 바꿀 수도 있다. 가령 [예시 3](#ex3)에서 $Y=\mathbb{R}$이었다면, $\mathbb{R}$ 위에 정의된 덧셈을 사용하여 연속함수들의 덧셈을 정의할 수도 있었을 것이며, 그럼 $\mathcal{F}(U)$는 abelian group의 구조를 가지게 되었을 것이다. 이러한 경우 $\mathcal{F}$를 $X$ 위에 정의된 abelian group들의 presheaf라 부른다. 편의상 앞으로 presheaf $\mathcal{F}: \Open(X)^\op \rightarrow \mathcal{A}$를 $\mathcal{A}$-valued presheaf라 부르기로 한다. Presheaf 중 위의 [보조정리 1](#lem1)의 gluing condition을 만족하는 것들을 sheaf라 부르는데, 이는 다음 글에서 정의한다. 
 
 ## 준층의 예시들
 
@@ -124,7 +124,7 @@ $$(s,U)\sim(t,V)\iff\text{$\exists$ open neighborhood $W\subseteq U\cap V$ of $x
 
 을 통해 정의된다. 즉 직관적으로 $\mathcal{F}_x$의 원소 $(s,U)$들은 $x$에서의 함숫값 $s(x)$와, $x$ 근방에서 $s$의 국소적인 정보[^1]를 추가로 갖고 있는 대상이라 생각할 수 있다. 편의상 임의의 $s\in \mathcal{F}(U)$에 대하여, $s$의 $\mathcal{F}(U) \rightarrow \mathcal{F}_x$에 의한 image를 $s_x$로 적는다. 
 
-현채로서 presheaf는 기하적인 대상이라기보다는 대수적인 정보를 추가로 넣어준 대상이라 할 수 있는데, 이를 기하적인 물건으로 만드는 것도 가능하다. 위상공간 $X$위에 정의된 presheaf $\mathcal{F}$를 생각하고, 다음의 집합
+현재로서 presheaf는 기하적인 대상이라기보다는 대수적인 정보를 추가로 넣어준 대상이라 할 수 있는데, 이를 기하적인 물건으로 만드는 것도 가능하다. 위상공간 $X$위에 정의된 presheaf $\mathcal{F}$를 생각하고, 다음의 집합
 
 $$\Spe(\mathcal{F})=\coprod_{x\in X} \mathcal{F}_x=\{(x,\xi)\mid x\in X, \xi\in \mathcal{F}_x\}$$
 
@@ -140,7 +140,7 @@ $$\tilde{s}:U \rightarrow \Spe(\mathcal{F}); \quad x\mapsto (x,s_x)$$
 고정된 위상공간 $X$ 위에서 정의된 두 presheaf $\mathcal{F}, \mathcal{G}:\Open(X) \rightarrow \mathcal{A}$ 사이의 natural transformation을 *presheaf morphism<sub>준층 사상</sub>*으로 정의한다.
 :::
 
-즉 $X$ 위에서 정의된 $\mathcal{A}$-valued presheaf들의 카테고리는 functor category $[\Open(X)^\op, \mathcal{A}]$이다. 이를 $\PSh(X; \mathcal{A})$로 표기하며, 문맥상 혼동의 여지가 없을 때에는 $\PSh(X)$로만 적기도 한다. 여담으로 [예시 8](#ex8)의 $f_\ast$는 functor $\PSh(X; \mathcal{A})\rightarrow \PSh(Y; \mathcal{A})$이다. 
+즉 $X$ 위에서 정의된 $\mathcal{A}$-valued presheaf들의 category는 functor category $[\Open(X)^\op, \mathcal{A}]$이다. 이를 $\PSh(X; \mathcal{A})$로 표기하며, 문맥상 혼동의 여지가 없을 때에는 $\PSh(X)$로만 적기도 한다. 여담으로 [예시 8](#ex8)의 $f_\ast$는 functor $\PSh(X; \mathcal{A})\rightarrow \PSh(Y; \mathcal{A})$이다. 
 
 우리에게 직관을 주는 [예시 3](#ex3)를 생각해보면, 열린집합 $U$에 대하여 정의된 $\phi(U):\mathcal{F}(U) \rightarrow \mathcal{G}(U)$는 $\phi:\mathcal{F}\rightarrow \mathcal{G}$를 열린집합 $U$로 제한하여 얻어지는 함수라 생각할 수 있으므로, 이를 종종 $\phi(U)$ 대신 $\phi\vert_U$로 적는다. 
 
@@ -176,7 +176,7 @@ $$\left(\prod_{i\in I} \mathcal{F}_i\right)(U)=\prod_{i\in I} \mathcal{F}_i(U)$$
 
 ## 가환준층
 
-지금까지 우리는 presheaf가 어떤 카테고리에서 값을 갖는지를 무시해왔는데, 이제 우리는 특별히 카테고리 $\Ab$에서 값을 갖는 presheaf들을 살펴본다. 
+지금까지 우리는 presheaf가 어떤 category에서 값을 갖는지를 무시해왔는데, 이제 우리는 특별히 category $\Ab$에서 값을 갖는 presheaf들을 살펴본다. 
 
 ::: 정의 15
 위상공간 $X$에 대하여, contravariant functor $\Open(X)\rightarrow\Ab$을 *abelian presheaf<sub>아벨 준층</sub>*라 부른다.
@@ -208,7 +208,7 @@ $$\left(\prod_{i\in I} \mathcal{F}_i\right)(U)=\prod_{i\in I} \mathcal{F}_i(U)$$
 와 kernel의 universal property에 의해 자명하다. 
 :::
 
-이와 마찬가지 방법으로, *presheaf cokernel*, *presheaf image*, *presheaf coimage* 혹은 *presheaf quotient* 등등을 모두 정의할 수 있다. 따라서 주어진 위상공간 $X$ 위에서 정의된 abelian presheaf들의 카테고리 $\PSh(X;\Ab)$은 abelian category가 된다.
+이와 마찬가지 방법으로, *presheaf cokernel*, *presheaf image*, *presheaf coimage* 혹은 *presheaf quotient* 등등을 모두 정의할 수 있다. 따라서 주어진 위상공간 $X$ 위에서 정의된 abelian presheaf들의 category $\PSh(X;\Ab)$은 abelian category가 된다.
   
 ---
 **참고문헌**
@@ -217,4 +217,4 @@ $$\left(\prod_{i\in I} \mathcal{F}_i\right)(U)=\prod_{i\in I} \mathcal{F}_i(U)$$
 
 ---
 
-[^1]: 가령, $$X=\mathbb{R}$$이라 하면 $$\mathbb{R}$$의 한 점 $$x$$에서의 미분을 정의하기 위해서는 $$x$$의 아주 작은 근방에서의 $$f$$의 값들만 알면 충분하다. 이러한 점에서 $$f'(x)$$는 $$x$$가 갖고 있는 국소적인 정보 중 하나라 할 수 있다. 
+[^1]: 가령, $X=\mathbb{R}$이라 하면 $\mathbb{R}$의 한 점 $x$에서의 미분을 정의하기 위해서는 $x$의 아주 작은 근방에서의 $f$의 값들만 알면 충분하다. 이러한 점에서 $f'(x)$는 $x$가 갖고 있는 국소적인 정보 중 하나라 할 수 있다. 

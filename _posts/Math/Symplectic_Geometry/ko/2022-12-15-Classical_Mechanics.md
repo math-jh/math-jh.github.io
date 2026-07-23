@@ -13,7 +13,7 @@ weight: 1
 
 ---
 
-이번 글에서는 사교기하에서 다루는 사교다양체가 도입된 역사적인 (물리적인) 배경을 살펴본다. 수학도로서 이곳저곳에서 주워들은 내용을 정리한 것이라 물리적으로는 오류가 조금 있을 수도 있다.
+이번 글에서는 사교기하에서 다루는 symplectic manifold가 도입된 역사적인 (물리적인) 배경을 살펴본다. 수학도로서 이곳저곳에서 주워들은 내용을 정리한 것이라 물리적으로는 오류가 조금 있을 수도 있다.
 
 ## 에너지 보존법칙
 
@@ -53,7 +53,7 @@ weight: 1
 
 > 물체가 $x_0$에서 $x_1$로 움직일 때, 이 물체는 다음의 *액션*의 극값 $z(t)=(x(t),y(t))$ ($t_0\leq t\leq t_1$)를 따라 움직인다.
 > 
-> $$\mathcal{A}_H(z)=\int_{t_0}^{t_1}\langle y,\dot{x}\rangle-H(z)\mathop{dt}$$
+> $\mathcal{A}_H(z)=\int_{t_0}^{t_1}\langle y,\dot{x}\rangle-H(z)\mathop{dt}$
 
 식에서 새로 도입한 $H$는 *Hamiltonian<sub>해밀토니안</sub>*을 의미하며, 앞으로 할 이야기에서는 그냥 에너지라 생각해도 무방하다. 이 원리는 $H$가 시간에 의존할 경우에도 국소적으로는 성립하며, 이 때는 $H$를 $H_t$로 바꾸어 쓰면 된다. 수학적으로 이러한 문제를 어떻게 다루는지는 아주 잘 알려져있다.
 
@@ -110,7 +110,7 @@ $$X_H=-J_0\nabla H(z)$$
 
 ## Symplectic form
 
-위의 과정을 요약하자면, 해밀토니안 $H$는 다음의 식
+위의 과정을 요약하자면, Hamiltonian $H$는 다음의 식
 
 $$dH=\langle-J_0\nabla H(z), -\rangle$$
 
@@ -118,7 +118,7 @@ $$dH=\langle-J_0\nabla H(z), -\rangle$$
 
 $$\omega_0(-,-):=\langle J_0-, -\rangle$$
 
-을 정의하면, 위의 식은 함수 $f$의 gradient $f$가 $df=\langle \nabla f,-\rangle$을 정의하는 것과 유사하게
+을 정의하면, 위의 식은 함수 $f$의 gradient $\nabla f$가 $df=\langle \nabla f,-\rangle$을 정의하는 것과 유사하게
 
 $$dH=\omega_0(X_H, -)$$
 
@@ -148,4 +148,4 @@ $$\omega_0=\sum_{j=1}^n dx^j\wedge dy^j$$
 
 ---
 
-[^1]: 벡터공간 $$V$$에 정의된 *linear complex structure*는 $$J^2=-\id$$를 만족하는 $$J\in\End(V)$$를 뜻한다. 이러한 $$J$$가 주어질 경우, 식 $$(a+bi)\cdot v:=av+bJv$$를 통해 $$V$$가 $$\mathbb{C}$$-벡터공간의 구조를 갖는다는 것을 확인할 수 있다. 
+[^1]: 벡터공간 $V$에 정의된 *linear complex structure*는 $J^2=-\id$를 만족하는 $J\in\End(V)$를 뜻한다. 이러한 $J$가 주어질 경우, 식 $(a+bi)\cdot v:=av+bJv$를 통해 $V$가 $\mathbb{C}$-벡터공간의 구조를 갖는다는 것을 확인할 수 있다. 

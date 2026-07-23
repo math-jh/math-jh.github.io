@@ -62,7 +62,7 @@ $$\lvert x-a\rvert < \delta\Rightarrow\lvert f(x) - b\rvert < \eta$$
 holds. Chaining the two steps, when $\lvert x-a\rvert < \delta$ we have $y = f(x)$ satisfying $\lvert y - b\rvert < \eta$, and therefore $\lvert g(f(x)) - g(f(a))\rvert < \epsilon$.
 :::
 
-We can verify that constant functions and the identity function $f(x)=x$ are continuous. Hence, by repeatedly taking sums and products of these, any polynomial is continuous; and by further taking quotients, any rational function is continuous everywhere except where its denominator is zero. Here is a slightly less obvious example of a continuous function.
+We can verify that constant functions and the linear function $f(x)=x$ are continuous. Hence, by repeatedly taking sums and products of these, any polynomial is continuous; and by further taking quotients, any rational function is continuous everywhere except where its denominator is zero. Here is a slightly less obvious example of a continuous function.
 
 ::: Example 3
 Let us show that the trigonometric function $\sin x$ is continuous at every point of its domain. From the sum-to-product formulas for trigonometric functions, we know that

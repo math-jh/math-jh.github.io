@@ -133,7 +133,7 @@ Lie group $G$가 주어졌다 하고, $\mathfrak{g}$를 $G$ 위에서 정의된 
     
     으로 정의하면 $\alpha$는 isomorphism이 된다.
 2. 임의의 $X\in\mathfrak{g}$는 $C^\infty$이다.
-3. 임의의 $X,Y\in\mathfrak{g}$에 대하여, $X$와 $Y$의 Lie bracket$[X,Y]$ 또한 left-invariant이고, 따라서 $\mathfrak{g}$는 $\mathbb{R}$ 위에서 정의된 Lie algebra가 된다.
+3. 임의의 $X,Y\in\mathfrak{g}$에 대하여, $X$와 $Y$의 Lie bracket $[X,Y]$ 또한 left-invariant이고, 따라서 $\mathfrak{g}$는 $\mathbb{R}$ 위에서 정의된 Lie algebra가 된다.
 :::
 ::: 증명
 1. 벡터장들의 덧셈과 스칼라곱에 대하여 $\mathfrak{g}$가 $\mathbb{R}$-벡터공간이 된다는 것은 자명하고, 또 $\alpha$가 linear map이라는 것 또한 자명하다. 이제 $\alpha$가 isomorphism임을 보여야 하는데, $T_eG$는 유한차원 벡터공간이므로 $\alpha$가 전단사임을 보이면 충분하다. 우선 $\alpha(X)=\alpha(Y)$를 만족하는 두 $X,Y\in\mathfrak{g}$가 존재한다 가정하면, 임의의 $g\in G$에 대하여
@@ -163,7 +163,7 @@ Lie group $G$가 주어졌다 하고, $\mathfrak{g}$를 $G$ 위에서 정의된 
 
 위의 과정을 통해 얻어진 Lie algebra $\mathfrak{g}$를 *$G$의 Lie algebra*라 부른다. 일반적으로 Lie group을 $G$라 적으면, 이에 해당하는 프락투어 소문자 $\mathfrak{g}$를 통해 $G$의 Lie algebra를 적는 것이 보통이다. 
 
-특별한 예시로, 임의의 manifold $M$에서 자기자신으로의 diffeomorphism들의 group $\Diff(M)$을 생각하면, 이는 무한차원 Lie group으로 생각할 수 있다. 이 Lie group의 identity $\id_M$에서의 tangent space는 $\id_M$을 지나는 $\Diff(M)$의 curve들의 적당한 equivalence class이며, 이 때 [\[미분다양체\] §벡터장, ⁋정리 6](/ko/math/manifolds/vector_fields#thm6)을 생각하면 이 정보는 정확하게 $\mathfrak{X}(M)$에 담겨있다. 이러한 방식으로 Lie group $G$의 Lie algebra $\mathfrak{g}$는 $G$가 자기 자신 위에 act할 때의 infinitisimal action을 정의한다.
+특별한 예시로, 임의의 manifold $M$에서 자기자신으로의 diffeomorphism들의 group $\Diff(M)$을 생각하면, 이는 무한차원 Lie group으로 생각할 수 있다. 이 Lie group의 identity $\id_M$에서의 tangent space는 $\id_M$을 지나는 $\Diff(M)$의 curve들의 적당한 equivalence class이며, 이 때 [\[미분다양체\] §벡터장, ⁋정리 6](/ko/math/manifolds/vector_fields#thm6)을 생각하면 이 정보는 정확하게 $\mathfrak{X}(M)$에 담겨있다. 이러한 방식으로 Lie group $G$의 Lie algebra $\mathfrak{g}$는 $G$가 자기 자신 위에 act할 때의 infinitesimal action을 정의한다.
 
 ::: 예시 10
 앞선 [예시 2](#ex2), [예시 3](#ex3), 그리고 [예시 4](#ex4)의 $\GL(n;\mathbb{R})$의 경우는 모두 벡터공간으로부터 오므로, 이들의 tangent space는 각각 원래의 벡터공간과 isomorphic하다. 즉 $\mathbb{R}^n$의 경우 그 tangent space는 $\mathbb{R}^n$ 자기자신이며, 비슷하게 $n$-torus $T^n\cong \mathbb{R}^n/\mathbb{Z}^n$의 경우 각 점에서의 tangent space는 quotient topology를 취하기 전인 $\mathbb{R}^n$과 같다. $\GL(n;\mathbb{R})$의 경우, 벡터공간 $\Mat_n(\mathbb{R})$의 open submanifold이므로 마찬가지로 각 점에서의 tangent space는 $\Mat_n(\mathbb{R})$과 같다.
@@ -265,7 +265,7 @@ Lie group $G$와 $\Omega_\text{l.inv}^\ast(G)$에 대하여 다음이 성립한�
 
 ## 리 대응
 
-임의의 manifold에 대하여, 그 tangent space를 위와 같이 곡선의 germ으로 생각할 수 있다. 따라서 우리는 임의의 Lie group $G$와 그 Lie algebra $\mathfrak{g}$에 대하여, $\mathfrak{g}$의 원소가 주어질 때마다 $G$의 곡선을 대응시켜줄 수 있다. 이러한 방식으로 Lie algebra는 Lie group에 대한 모든 정보를 보여줄 수 있다. 더 정확히 말하자면, 이렇게 곡선을 통해 $G$의 정보를 읽어오기 위해서는 곡선을 대응시키는 방법이 (up to homotopy) 유일해야하고, 존재해야 할 것이므로 Lie algebra는 simply connected Lie group에 대한 모든 정보를 가지고 있다. 이 섹션에서 우리는 이 대응관계를 조금 더 자세히, 그러나 증명은 생략하고 실펴보기로 한다.
+임의의 manifold에 대하여, 그 tangent space를 위와 같이 곡선의 germ으로 생각할 수 있다. 따라서 우리는 임의의 Lie group $G$와 그 Lie algebra $\mathfrak{g}$에 대하여, $\mathfrak{g}$의 원소가 주어질 때마다 $G$의 곡선을 대응시켜줄 수 있다. 이러한 방식으로 Lie algebra는 Lie group에 대한 모든 정보를 보여줄 수 있다. 더 정확히 말하자면, 이렇게 곡선을 통해 $G$의 정보를 읽어오기 위해서는 곡선을 대응시키는 방법이 (up to homotopy) 유일해야하고, 존재해야 할 것이므로 Lie algebra는 simply connected Lie group에 대한 모든 정보를 가지고 있다. 이 섹션에서 우리는 이 대응관계를 조금 더 자세히, 그러나 증명은 생략하고 살펴보기로 한다.
 
 리 대응은 다음과 같은 종류의 Lie group-Lie algebra 사이의 관계에 대한 결과들의 모임이다. 
 
@@ -278,7 +278,7 @@ Lie group $G$와 $\Omega_\text{l.inv}^\ast(G)$에 대하여 다음이 성립한�
 
 즉, 바꾸어 말하자면 $\LieGrp$에서 $\LieAlg$로의 functor $\Lie:\LieGrp \rightarrow \LieAlg$는, simply connected Lie group들로 이루어진 $\LieGrp$의 full subcategory로 제한했을 때 두 category의 equivalence를 준다. 
 
-Category-theoretic한 결과 외에도 이 정리는, 가령, 임의의 Lie group $G$와 그 Lie algebra $\mathfrak{g}$에 대하여 matrix exponential과 비슷한 exponential map을 정의할 수 있도록 해 준다. 이는 $(\mathbb{R},+)$이 1차원 simply connected Lie group이므로 그 Lie algebra 또한 1차원이고, 따라서 여기에서 다른 Lie algebra로의 Lie algebra homomorphism은 basis $d/dt$가 어디로 가는지에 의해 유일하게 결정되미 이 때 $d/dt$가 $X\in \mathfrak{g}$로 옮겨진다면 이 Lie algebra homomorphism에 [정리 15](#thm15)을 적용하여 얻어지는 Lie group homomorphism $\gamma: \mathbb{R}\rightarrow G$이 원하는 곡선을 정의하기 때문이다. 
+Category-theoretic한 결과 외에도 이 정리는, 가령, 임의의 Lie group $G$와 그 Lie algebra $\mathfrak{g}$에 대하여 matrix exponential과 비슷한 exponential map을 정의할 수 있도록 해 준다. 이는 $(\mathbb{R},+)$이 1차원 simply connected Lie group이므로 그 Lie algebra 또한 1차원이고, 따라서 여기에서 다른 Lie algebra로의 Lie algebra homomorphism은 basis $d/dt$가 어디로 가는지에 의해 유일하게 결정되며 이 때 $d/dt$가 $X\in \mathfrak{g}$로 옮겨진다면 이 Lie algebra homomorphism에 [정리 15](#thm15)을 적용하여 얻어지는 Lie group homomorphism $\gamma: \mathbb{R}\rightarrow G$이 원하는 곡선을 정의하기 때문이다. 
 
 ::: 정의 16
 임의의 Lie group $G$와 그 Lie algebra $\mathfrak{g}$, 그리고 원소 $X\in \mathfrak{g}$에 대하여, 위의 과정을 통해 얻어지는 곡선을 $\gamma_X$로 표기하자. 그럼 $\exp:\mathfrak{g}\rightarrow G$를 $X\mapsto \gamma_X(1)$로 정의한다.
@@ -333,14 +333,14 @@ $$\ad(X)Y =[X,Y]$$
 ::: 정리 20
 Connected compact Lie group $G$에 대하여 다음이 성립한다.
 
-1. $$d(\exp(e))=\id_\mathfrak{g}$$
-2. $$\Ad\circ\exp=\exp_{\GL(\mathfrak{g})}\circ \ad$$
+1. $d(\exp(e))=\id_\mathfrak{g}$
+2. $\Ad\circ\exp=\exp_{\GL(\mathfrak{g})}\circ \ad$
 3. $\rho_x\circ\exp=\exp\circ\Ad(x)$
 :::
 
 만일 $G$가 abelian group이었다면 $\rho_g$는 그냥 identity map이고 따라서 $\Ad_g(X)=X$가 임의의 $g\in G$와 임의의 $X\in \mathfrak{g}$에 대해 성립하고, 따라서 그 미분인 $\mathfrak{g}$의 adjoint representation은 $0$이다. 즉, 임의의 abelian Lie group에 대하여, 그 Lie algebra의 Lie bracket은 항상 $0$이고 우리는 이를 *abelian* Lie algebra라 부른다. 이는 [정의 8](#def8)에 의해 anticommutative인 Lie bracket이 commutative이기도 하기 위한 유일한 방법이므로 그 이름이 어색하지 않다. 
 
-그럼, $G$가 abelian일 경우 특히 [정리 17](#thm17)에 의하여 $\exp(X+Y)=\exp(X)\exp(Y)$이 성립한다. 즉 $\exp$는 group homomorphism이다. 뿐만 아니라 이 경우 [정리 17](#thm17)의 우변 $\exp$ 안의 식은 반드시 수렴하며 이는 ($G$가 conencted일 경우) $\exp$가 *surjective* group homomorphism이라는 결과로 나타난다. 따라서, first isomorphism theorem에 의하여
+그럼, $G$가 abelian일 경우 특히 [정리 17](#thm17)에 의하여 $\exp(X+Y)=\exp(X)\exp(Y)$이 성립한다. 즉 $\exp$는 group homomorphism이다. 뿐만 아니라 이 경우 [정리 17](#thm17)의 우변 $\exp$ 안의 식은 반드시 수렴하며 이는 ($G$가 connected일 경우) $\exp$가 *surjective* group homomorphism이라는 결과로 나타난다. 따라서, first isomorphism theorem에 의하여
 
 $$G\cong \mathfrak{g}/\ker(\exp)$$
 

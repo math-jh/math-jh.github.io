@@ -86,10 +86,10 @@ $$K(M \cup N) = K(M)(N) = K(N)(M)$$
 
 만일 $\mathbb{L}=\mathbb{K}(A)$이도록 하는 유한집합 $A$가 존재한다면, extension $\mathbb{L}/\mathbb{K}$를 *finite extension*이라 부른다. 그럼 특히 finite degree field extension은 finite extension이다. $\mathbb{L}$을 $\mathbb{K}$-벡터공간으로서의 basis가 $\mathbb{L}$의 field로서의 generator가 될 것이기 때문이다. 
 
-이제 두 개의 $\mathbb{K}$-extension $\mathbb{L}_1/\mathbb{K}$, $\mathbb{L}_2/\mathbb{L}$이 주어졌다 하자. 그럼 우리는 $\mathbb{L}_1$과 $\mathbb{L}_2$를 동시에 포함하는 가장 작은 extension을 생각할 수 있다. 
+이제 두 개의 $\mathbb{K}$-extension $\mathbb{L}_1/\mathbb{K}$, $\mathbb{L}_2/\mathbb{K}$가 주어졌다 하자. 그럼 우리는 $\mathbb{L}_1$과 $\mathbb{L}_2$를 동시에 포함하는 가장 작은 extension을 생각할 수 있다. 
 
 ::: 정의 7
-두 개의 $\mathbb{K}$-extension $\mathbb{L}_1/\mathbb{K}$, $\mathbb{L}_2/\mathbb{L}$에 대하여, $\mathbb{K}$-extension $\mathbb{K} \rightarrow \mathbb{M}$이 이들의 *composite*이라는 것은 다음의 diagram
+두 개의 $\mathbb{K}$-extension $\mathbb{L}_1/\mathbb{K}$, $\mathbb{L}_2/\mathbb{K}$에 대하여, $\mathbb{K}$-extension $\mathbb{K} \rightarrow \mathbb{M}$이 이들의 *composite*이라는 것은 다음의 diagram
 
 ![composite_field](/assets/images/Math/Field_Theory/Algebraic_Extensions-2.svg){:style="width:10.57em" class="invert" .align-center}
 
@@ -111,7 +111,7 @@ $$K(M \cup N) = K(M)(N) = K(N)(M)$$
 ::: 증명
 1. $u_1\ast u_2$의 image $\im(u_1\ast u_2)$는 field $\mathbb{M}$의 subring이고, 따라서 integral domain이다. 이제 주어진 주장은 [\[대수적 구조\] §분수체, ⁋명제 8](/ko/math/algebraic_structures/field_of_fractions#prop8)과 [\[대수적 구조\] §몫환, 환 동형사상, ⁋정리 3](/ko/math/algebraic_structures/quotient_rings#thm3)으로부터 자명하다. 
 
-2. 거꾸로 $\mathfrak{p}$가 $\mathbb{L}_1\otimes_\mathbb{K}\mathbb{L}_2$의 prime ideal이라 하고, integral domain $(\mathbb{L}_1\otimes\mathbb{K}\mathbb{L}_2)/\mathfrak{p}$의 field of fraction을 $\mathbb{M}=\Frac((\mathbb{L}_1\otimes_\mathbb{K}\mathbb{L}_2)/\mathfrak{p})$라 하자. 그럼 각각의 $x_1\in \mathbb{L}_1$과 $x_2\in \mathbb{L}_2$에 대하여, $u_1(x_1)$을 $x_1\otimes 1$의 $\mathbb{M}$에서의 image, $u_2(x_2)$를 $1\otimes x_2$의 $\mathbb{M}$에서의 image로 정의하면 이들이 원하는 조건을 만족함을 알 수 있다. 
+2. 거꾸로 $\mathfrak{p}$가 $\mathbb{L}_1\otimes_\mathbb{K}\mathbb{L}_2$의 prime ideal이라 하고, integral domain $(\mathbb{L}_1\otimes_\mathbb{K}\mathbb{L}_2)/\mathfrak{p}$의 field of fraction을 $\mathbb{M}=\Frac((\mathbb{L}_1\otimes_\mathbb{K}\mathbb{L}_2)/\mathfrak{p})$라 하자. 그럼 각각의 $x_1\in \mathbb{L}_1$과 $x_2\in \mathbb{L}_2$에 대하여, $u_1(x_1)$을 $x_1\otimes 1$의 $\mathbb{M}$에서의 image, $u_2(x_2)$를 $1\otimes x_2$의 $\mathbb{M}$에서의 image로 정의하면 이들이 원하는 조건을 만족함을 알 수 있다. 
 :::
 
 뿐만 아니라, 두 번째 결과에 의해 얻어지는 composite field가 isomorphism에 대하여 유일하게 결정된다는 것 또한 자명하다. 한편, 임의의 두 $\mathbb{K}$-extension $\mathbb{L}_1, \mathbb{L}_2$에 대하여, $\mathbb{L}_1\otimes_\mathbb{K} \mathbb{L}_2$는 항상 prime ideal을 가지므로 ([\[대수적 구조\] §환의 정의, ⁋정리 10](/ko/math/algebraic_structures/rings#thm10)) 임의의 두 $\mathbb{K}$-extension은 composite field를 갖는다는 것을 확인할 수 있다. 

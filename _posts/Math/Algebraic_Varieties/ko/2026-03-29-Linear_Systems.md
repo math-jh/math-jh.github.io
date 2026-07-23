@@ -35,7 +35,7 @@ $$\lvert \mathcal{L} \rvert = \mathbb{P}(\Gamma(X, \mathcal{L}))$$
 
 ## Projective space의 linear system
 
-앞서 [§선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_varieties/line_bundles#ex12) 이후의 계산에 의해 $\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(d))$가 차수 $d$의 동차다항식들의 공간 $\mathbb{K}[\x_0, \ldots, \x_n]_d$와 동형임을 보았다. 이 공간의 각 원소들은 $\mathbb{P}^n$의 degree $d$ hypersurface를 정의하므로, 우리는 $\mathcal{O}_{\mathbb{P}^n}(d)$의 complete linear system
+앞서 [§선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_varieties/line_bundles#ex12) 이후의 계산에 의해 $\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(d))$가 degree $d$의 homogeneous polynomial들의 공간 $\mathbb{K}[\x_0, \ldots, \x_n]_d$와 동형임을 보았다. 이 공간의 각 원소들은 $\mathbb{P}^n$의 degree $d$ hypersurface를 정의하므로, 우리는 $\mathcal{O}_{\mathbb{P}^n}(d)$의 complete linear system
 
 $$\lvert \mathcal{O}_{\mathbb{P}^n}(d)\rvert=\mathbb{P}(\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(d)))\cong \mathbb{P}(\mathbb{K}[\x_0,\ldots, \x_n]_d)\cong \mathbb{P}^{\binom{n+d}{d} - 1}$$
 
@@ -66,13 +66,13 @@ $$C_1: Z((\x_0-2\x_2)^2+\x_1^2-9\x_2^2),\qquad C_2: Z((\x_0+2\x_2)^2+\x_1^2-9\x_
 
 $$(\x-2)^2+\y^2=9,\qquad (\x+2)^2+\y^2=9$$
 
-의 방정식이다. 이들은 $U_2$ 위에서는 위의 두 식으로부터 계산되는 $(x,y)=(0,\pm\sqrt{5})$에서 만나며, $U_2$ 바깥 --- 즉 $U_2$의 <em_ko>무한대 직선</em_ko>[^1] --- 에서는 두 점 $[1:i:0]$, $[1: -i:0]$에서 만난다. 위의 pencil $Z(\lambda F_1+\mu F_2)$는, 그럼 이들 교집합 $C_1\cap C_2$을 지나는 conic들의 모임이다. 
+의 방정식이다. 이들은 $U_2$ 위에서는 위의 두 식으로부터 계산되는 $(x,y)=(0,\pm\sqrt{5})$에서 만나며, $U_2$ 바깥 --- 즉 $U_2$의 <em-ko>무한대 직선</em-ko>[^1] --- 에서는 두 점 $[1:i:0]$, $[1: -i:0]$에서 만난다. 위의 pencil $Z(\lambda F_1+\mu F_2)$는, 그럼 이들 교집합 $C_1\cap C_2$을 지나는 conic들의 모임이다. 
 
 한편 일반적인 degree 2 homogeneous polynomial은
 
 $$F(\x_0,\x_1,\x_2) = a_{00}\x_0^2 + a_{11}\x_1^2 + a_{22}\x_2^2 + a_{01}\x_0\x_1 + a_{02}\x_0\x_2 + a_{12}\x_1\x_2$$
 
-의 꼴이며, 이것이 정확히 $\Gamma(X, \mathcal{O}(2))$가 $6$차원 공간인 이유이다. 한편, 위에서 계산한 네 점짜리 집합 $C_1\cap C_2$를 지나야 한다는 조건을 추가한다면, 이들 네 점이 각각 하나씩의 제약조건을 걸이 필요한 parameter를 하나씩 지워주므로 이를 나타내기 위한 parameter는 2개임을 안다. 더 구체적으로, 다음 네 개의 조건
+의 꼴이며, 이것이 정확히 $\Gamma(X, \mathcal{O}(2))$가 $6$차원 공간인 이유이다. 한편, 위에서 계산한 네 점짜리 집합 $C_1\cap C_2$를 지나야 한다는 조건을 추가한다면, 이들 네 점이 각각 하나씩의 제약조건을 걸어 필요한 parameter를 하나씩 지워주므로 이를 나타내기 위한 parameter는 2개임을 안다. 더 구체적으로, 다음 네 개의 조건
 
 $$0=F(0,\sqrt{5},1)=5a_{11}+a_{22}+\sqrt{5}a_{12}$$
 
@@ -91,7 +91,7 @@ $$0=F(1,-i,0)=a_{00}-a_{11}-ia_{01}$$
 
 $$\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(d)) \rightarrow \Gamma(X, \mathcal{O}_{\mathbb{P}^n}(d)\vert_X)$$
 
-은 homogeneous polynomial $F \in \mathbb{K}[\x_0, \ldots, \x_n]_d$를 $X$ 위의 section으로 보내며, 그 kernel은 $I(X)$의 차수 $d$인 homogeneous part $I(X)_d$이다. 따라서
+은 homogeneous polynomial $F \in \mathbb{K}[\x_0, \ldots, \x_n]_d$를 $X$ 위의 section으로 보내며, 그 kernel은 $I(X)$의 degree $d$인 homogeneous part $I(X)_d$이다. 따라서
 
 $$\Gamma(X, \mathcal{O}_{\mathbb{P}^n}(d)\vert_X) \cong \mathbb{K}[\x_0, \ldots, \x_n]_d / I(X)_d$$
 
@@ -133,11 +133,11 @@ $$\operatorname{Bs}(L) = \bigcap_{s \in V \setminus \{0\}} \operatorname{Supp}(\
 $L$이 *basepoint-free<sub>기저점 없음</sub>*라는 것은 $\operatorname{Bs}(L) = \emptyset$인 것이다. 즉, 임의의 점 $p \in X$에서 $p$를 지나지 않는 $L$의 원소가 항상 존재한다.
 :::
 
-Basepoint-free linear system의 핵심적인 성질은 다음과 같다. $L=\mathbb{P}(V)$가 basepoint-free이면 $V$의 기저 $F_0,\ldots,F_r$는 $\bigcap Z(F_i)\cap X=\emptyset$을 만족하므로, 이를 사용하면 다음의 regular map
+Basepoint-free linear system의 핵심적인 성질은 다음과 같다. $L=\mathbb{P}(V)$가 basepoint-free이면 $V$의 basis $F_0,\ldots,F_r$는 $\bigcap Z(F_i)\cap X=\emptyset$을 만족하므로, 이를 사용하면 다음의 regular map
 
 $$\varphi_L:X\rightarrow\mathbb{P}^r,\quad p\mapsto[F_0(p):\cdots:F_r(p)]$$
 
-을 정의된다. 우리가 처음 linear system에 관심을 가진 것은 주어진 divisor $D$에 대해 $D$와 linearly equivalent한 effective divisor를 찾기 위해서였는데, 다음 명제는 이에 대한 직접적인 대답을 준다.
+을 정의할 수 있다. 우리가 처음 linear system에 관심을 가진 것은 주어진 divisor $D$에 대해 $D$와 linearly equivalent한 effective divisor를 찾기 위해서였는데, 다음 명제는 이에 대한 직접적인 대답을 준다.
 
 ::: 명제 6
 위의 상황에서, $\mathbb{P}^r$의 hyperplane $H$는 $\lvert L\rvert$에 속하는 effective divisor를 정의한다. 
@@ -214,4 +214,4 @@ $\mathcal{L}$이 *ample<sub>풍부한</sub>*이라는 것은 어떤 $m > 0$에 �
 
 ---
 
-[^1]: $$\mathbb{P}^2$$의 <em-ko>무한대 직선</em-ko>과 그 기하적인 직관에 대해서는 [§사영다양체, ⁋예시 11](/ko/math/algebraic_varieties/projective_varieties#ex11)에서 이미 분석하였다. 
+[^1]: $\mathbb{P}^2$의 <em-ko>무한대 직선</em-ko>과 그 기하적인 직관에 대해서는 [§사영다양체, ⁋예시 11](/ko/math/algebraic_varieties/projective_varieties#ex11)에서 이미 분석하였다. 

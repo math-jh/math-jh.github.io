@@ -14,7 +14,7 @@ translated_at: 2026-07-12T00:00:01+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-07-12T00:00:01+00:00
 ---
-We introduced Green's theorem and saw that it is a two-dimensional analogue of the fundamental theorem of calculus. The culmination of calculus is to generalize this to higher dimensions, and the spirit shared by all of them is the connection between the integral over a region and the integral over its boundary.
+We introduced Green's theorem and saw that it is a two-dimensional analogue of the fundamental theorem of calculus. The culmination of calculus is to generalize this to higher dimensions, and the spirit shared by all of them is the connection between the integral over the interior of a region and the integral over its boundary.
 
 ## Divergence Theorem
 
@@ -112,5 +112,4 @@ Even without using Stokes' theorem, direct computation yields
 $$\mathbf{F}(\mathbf{r}(t))\cdot \mathbf{r}'(t) = (-\sin t, \cos t, 0)\cdot(-\sin t, \cos t, 0) = 1$$
 
 so the integral is $\oint_C = \int_0^{2\pi} dt = 2\pi$, agreeing with the above, and one can check that choosing a different surface sharing the same boundary, such as a hemisphere, does not change the value.
-
 :::

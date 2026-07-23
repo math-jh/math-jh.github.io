@@ -14,7 +14,7 @@ translated_at: 2026-06-01T19:30:01+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-06-01T19:30:01+00:00
 ---
-Now we define differential modules. For this we need a simple lemma; first consider the second case assumed in [§Derivations, ⁋Definition 2](/en/math/multilinear_algebra/derivations#def2). That is, we consider a commutative ring $A$, a $\Delta$-graded $A$-algebra $E$, a graded $A$-module $F$, and an $\varepsilon$-derivation $d:E \rightarrow F$.
+Now we define differential modules. For this we need a simple lemma; first consider the second case assumed in [§Differentiation, ⁋Definition 2](/en/math/multilinear_algebra/derivations#def2). That is, we consider a commutative ring $A$, a $\Delta$-graded $A$-algebra $E$, a graded $A$-module $F$, and an $\varepsilon$-derivation $d:E \rightarrow F$.
 
 ## Functoriality of Derivations
 
@@ -35,13 +35,15 @@ Assume the situation of [Proposition 1](#prop1), and let an $\varepsilon$-deriva
 
 Now define $\Der_A(F, N)$ to be the set of $A$-derivations from $F$ to $N$. Then the subset of derivations satisfying the condition of [Proposition 2](#prop2) — that is, those that become $E$-linear — coincides with the set of derivations vanishing identically on $\rho(E)$; hence this subset forms an $A$-submodule of $\Der_A(F, N)$. We denote it by $\Der_E(F,N)$.
 
-Furthermore, let three graded $A$-algebras $E,F,G$ be given, and let graded $A$-algebra homomorphisms $\rho: E \rightarrow F$, $\sigma: F \rightarrow G$ be given. Then for any graded $A$-algebra $H$, the sequence
+Furthermore, let three graded $A$-algebras $E,F,G$ be given, and let graded $A$-algebra homomorphisms $\rho: E \rightarrow F$, $\sigma: F \rightarrow G$ be given. Then for any graded $A$-algebra $H$, for the three $A$-modules
+
+$$\Der_E(F, \rho_\ast H),\qquad \Der_F(G,H),\qquad\Der_E(G, H)$$
+
+it is obvious that
 
 $$0 \rightarrow \Der_F(G, H) \rightarrow \Der_E(G,H) \rightarrow \Der_E(F, H)$$
 
-is exact for the three $A$-modules
-
-$$\Der_E(F, \rho_\ast H),\qquad \Der_F(G,H),\qquad\Der_E(G, H).$$
+is exact.
 
 For any $\Delta$-graded $A$-module $M$ and any $\delta\in \Delta$, define $M[\delta]$ by the formula
 
@@ -49,11 +51,11 @@ $$(M[\delta])_\mu=M_{\delta+\mu}$$
 
 Since the $\Delta$-graded $A$-algebra $E\oplus M[\delta]$ exists, we can now endow $E\oplus M[\delta]$ with a graded $A$-algebra structure using the following formula for homogeneous elements $x\in E$ and the resulting elements $(x,y), (x',y')$ of $E\oplus M[\delta]$:
 
-$$(x,y)(x',y')=(xx', xy+\varepsilon(\delta, \deg x)xy')$$
+$$(x,y)(x',y')=(xx', yx'+\varepsilon(\delta, \deg x)xy')$$
 
 In this case, we call the projection map $\epsilon: E\oplus M[\delta] \rightarrow E$ the *augmentation map*, and we know that this is a graded $A$-algebra homomorphism.
 
-Now if a degree $0$ graded $A$-linear map $g:E \rightarrow E\oplus M[\delta]$ satisfies $\epsilon\circ g=\id_A$, then by definition it must be of the form $x\mapsto (x,f(x))$ for some degree $\delta$ graded $A$-linear map $f:E \rightarrow M$, and conversely any degree $\delta$ $A$-linear map $f$ defines a $g$ satisfying the above condition.
+Now if a degree $0$ graded $A$-linear map $g:E \rightarrow E\oplus M[\delta]$ satisfies $\epsilon\circ g=\id_E$, then by definition it must be of the form $x\mapsto (x,f(x))$ for some degree $\delta$ graded $A$-linear map $f:E \rightarrow M$, and conversely any degree $\delta$ $A$-linear map $f$ defines a $g$ satisfying the above condition.
 
 Then the following proposition is also a consequence of a simple calculation.
 
@@ -93,11 +95,11 @@ $$(b, t)(b', t') = (bb', bt' + b't)$$
 
 and regard this as an associative $\mathbb{Z}$-algebra. Then via the canonical injection $t\mapsto (0,t)$ we can identify $E$ with a two-sided ideal of the $\mathbb{Z}$-algebra $B\oplus E$, and in this case $E^2=0$.
 
-On the other hand, defining $h_0: B \rightarrow B \oplus E$ by $h_0(a) = (a, d_0(a))$, this is a (unital) ring homomorphism by [Proposition 3](#prop3), and via this $B \oplus E$ becomes an $A$-algebra. Now after giving $B\oplus E$ such an $A$-module structure, consider the function $h_1: M \rightarrow B\oplus E$ defined by $h_1(x) = (x, d_1(x))$. Then by the given conditions the formula
+On the other hand, defining $h_0: A \rightarrow B \oplus E$ by $h_0(a) = (a, d_0(a))$, this is a (unital) ring homomorphism by [Proposition 3](#prop3), and via this $B \oplus E$ becomes an $A$-algebra. Now after giving $B\oplus E$ such an $A$-module structure, consider the function $h_1: M \rightarrow B\oplus E$ defined by $h_1(x) = (x, d_1(x))$. Then by the given conditions the formula
 
 $$h_1(ax) = h_0(a) h_1(x)$$
 
-holds, so $h_1$ is an $A$-linear map from $M$ to $B$. Therefore, using the given assumptions and the universal property of $T(M)$, $S(M)$, or $\bigwedge(M)$, we obtain a unique $A$-algebra homomorphism $h:B \rightarrow B\oplus E$ satisfying $h\vert_M=h_1$. Meanwhile, we can easily check that composing $h$ with the augmentation map $B\oplus E \rightarrow B$ yields $\id_B$, so again by [Proposition 3](#prop3) there exists a unique $\varepsilon$-derivation $d:B \rightarrow E$ such that $h(b)=(b,d(b))$, and from this we obtain the desired result.
+holds, so $h_1$ is an $A$-linear map from $M$ to $B\oplus E$. Therefore, using the given assumptions and the universal property of $\T(M)$, $\S(M)$, or $\bigwedge(M)$, we obtain a unique $A$-algebra homomorphism $h:B \rightarrow B\oplus E$ satisfying $h\vert_M=h_1$. Meanwhile, we can easily check that composing $h$ with the augmentation map $B\oplus E \rightarrow B$ yields $\id_B$, so again by [Proposition 3](#prop3) there exists a unique $\varepsilon$-derivation $d:B \rightarrow E$ such that $h(b)=(b,d(b))$, and from this we obtain the desired result.
 :::
 
 ## Universal Property
@@ -139,7 +141,7 @@ On the other hand, for uniqueness, from the definition of $\delta_E$ we know tha
 
 $$f(x \otimes 1 - 1 \otimes x) = dx,$$
 
-and since by [Lemma 6](#lem6) $\mathfrak{I}$ is generated by the image of $\delta_E$, any $f$ satisfying the given condition must be unique if it exists. Moreover, using the calculation from the preceding lemma, we know that for any $\sum x_i y_i\in \mathfrak{I}$ the formula
+and since by [Lemma 6](#lem6) $\mathfrak{I}$ is generated by the image of $\delta_E$, any $f$ satisfying the given condition must be unique if it exists. Moreover, using the calculation from the preceding lemma, we know that for any $\sum x_i \otimes y_i\in \mathfrak{I}$ the formula
 
 $$f\left( \sum_i x_i \otimes y_i \right) = \sum_i x_i  f(1 \otimes y_i - y_i \otimes 1) = - \sum_i x_i  dy_i$$
 
@@ -205,7 +207,7 @@ $\delta_{E/A}$ is an $A$-derivation and satisfies the following universal proper
 :::
 
 ::: Definition 9
-The $E$-module $\mathfrak{I}/\mathfrak{I}^2$ is called the module of *$A$-differentials* (or the ($E$-)module of differentials), and is denoted by $\Omega_{A}(E)$ or $\Omega_{E/A}$. Also, we write $\delta_{E/A}(x)$ as $d_{E/A}(x)$, and when there is no danger of confusion we simply write this as $dx$. For each $x \in E$, we call $d_{E/A}(x)$ the *differential* of $x$.
+The $E$-module $\mathfrak{I}/\mathfrak{I}^2$ is called the ($E$-)module of *$A$-differentials*, and is denoted by $\Omega_{A}(E)$ or $\Omega_{E/A}$. Also, we write $\delta_{E/A}(x)$ as $d_{E/A}(x)$, and when there is no danger of confusion we simply write this as $dx$. For each $x \in E$, we call $d_{E/A}(x)$ the *differential* of $x$.
 :::
 
 Therefore, we obtain the canonical isomorphism
@@ -219,7 +221,7 @@ $$D=g\circ d_{\S(M)/A}$$
 
 holds.
 
-Meanwhile, given any $A$-derivation $D:\S(M)\rightarrow L$, we can verify through [Proposition 5](#prop5) that its restriction $D\vert_M$ to $M$ is an $A$-module homomorphism from $M$ to $L$, and that this correspondence $D\mapsto D\vert_M$ is in fact an $\S(M)$-module isomorphism. On the other hand, since $L$ is an $\S(M)$-module, by [[Algebraic Structures] §Change of Base Ring, ⁋Proposition 6](/en/math/algebraic_structures/change_of_base_ring#prop6) we have
+Meanwhile, given any $A$-derivation $D:\S(M)\rightarrow L$, we can verify through [Proposition 5](#prop5) that its restriction $D\vert_M$ to $M$ is an $A$-module homomorphism from $M$ to $L$, and that this correspondence $D\mapsto D\vert_M$ is in fact an $\S(M)$-module isomorphism. On the other hand, since $L$ is an $\S(M)$-module, by [\[Algebraic Structures\] §Change of Base Ring, ⁋Proposition 6](/en/math/algebraic_structures/change_of_base_ring#prop6) we have
 
 $$\Hom_{\S(M)}(M\otimes_A\S(M),L)\cong\Hom_A(M,L),$$
 
@@ -259,7 +261,7 @@ The proof is nothing but an appropriate use of the other universal properties em
 
 From this we see that if we regard $\Omega$ as the correspondence taking an $A$-algebra $A \rightarrow E$ to the module of its differentials $\Omega_A(E)$, then $\Omega$ also possesses functoriality.
 
-On the other hand, since $\Omega_{A'}(E')$ is an $A'$-module, by [[Algebraic Structures] §Change of Base Ring, ⁋Proposition 6](/en/math/algebraic_structures/change_of_base_ring#prop6) we obtain from [Proposition 11](#prop11) the following $A'$-linear map:
+On the other hand, since $\Omega_{A'}(E')$ is an $A'$-module, by [\[Algebraic Structures\] §Change of Base Ring, ⁋Proposition 6](/en/math/algebraic_structures/change_of_base_ring#prop6) we obtain from [Proposition 11](#prop11) the following $A'$-linear map:
 
 $$\Omega_0(u):\Omega_A(E)\otimes_E E'\rightarrow\Omega_{A'}(E').$$
 
@@ -273,7 +275,7 @@ given by the universal property of [Proposition 8](#prop8), we obtain the follow
 
 ![change_of_base_ring-3](/assets/images/Math/Multilinear_Algebra/Differential_Modules-3.svg){:style="width:29.41em" class="invert" .align-center}
 
-Here the right-hand vertical map is the composite of the above isomorphism and the isomorphism of [[Algebraic Structures] §Change of Base Ring, ⁋Proposition 6](/en/math/algebraic_structures/change_of_base_ring#prop6),
+Here the right-hand vertical map is the composite of the above isomorphism and the isomorphism of [\[Algebraic Structures\] §Change of Base Ring, ⁋Proposition 6](/en/math/algebraic_structures/change_of_base_ring#prop6),
 
 $$\Hom_{E'}(\Omega_A(E)\otimes_EE', N) \rightarrow \Hom_E(\Omega_A(E), N)\rightarrow\Der_A(E, N),$$
 

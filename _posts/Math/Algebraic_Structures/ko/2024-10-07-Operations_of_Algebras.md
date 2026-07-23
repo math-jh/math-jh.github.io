@@ -13,7 +13,7 @@ weight: 302
 
 ---
 
-우리는 [§가군의 직접곱과 직합, 텐서곱](/ko/math/algebraic_structures/operations_of_modules)에서 가군들의 연산을, [§환의 곱, 쌍대곱, 텐서곱](/ko/math/algebraic_structures/operations_of_rings)에서 환들의 연산을 살펴보았다. $A$-algebra는 $A$-module 위에 bilinear한 곱셈을 추가한 구조이므로 ([§대수, ⁋정의 1](/ko/math/algebraic_structures/algebras#def1)), 가군의 단계에서 정의된 연산들 위에 곱셈이 잘 따라오는지를 확인하는 것이 이번 글의 내용이다. [§대수](/ko/math/algebraic_structures/algebras)에서와 마찬가지로 $A$는 항상 commutative ring이다.
+우리는 [§가군의 직접곱과 직합, 텐서곱](/ko/math/algebraic_structures/operations_of_modules)에서 가군들의 연산을, [§환의 곱, 쌍대곱, 텐서곱](/ko/math/algebraic_structures/operations_of_rings)에서 ring들의 연산을 살펴보았다. $A$-algebra는 $A$-module 위에 bilinear한 곱셈을 추가한 구조이므로 ([§대수, ⁋정의 1](/ko/math/algebraic_structures/algebras#def1)), 가군의 단계에서 정의된 연산들 위에 곱셈이 잘 따라오는지를 확인하는 것이 이번 글의 내용이다. [§대수](/ko/math/algebraic_structures/algebras)에서와 마찬가지로 $A$는 항상 commutative ring이다.
 
 ## 대수의 직접곱과 직합
 
@@ -53,7 +53,7 @@ $$u(xy)=(u_i(xy))_{i\in I}=(u_i(x)u_i(y))_{i\in I}=u(x)u(y)$$
 이기 때문이다.
 :::
 
-한편, 우리는 다른 대수적인 구조들에서 했던 것처럼 다음의 subalgebra를 생각할 수 있다. 
+한편, 우리는 다른 algebraic structure들에서 했던 것처럼 다음의 subalgebra를 생각할 수 있다. 
 
 ::: 명제 4
 $A$-module direct sum $\bigoplus_{i\in I}E_i\subseteq\prod_{i\in I}E_i$는 direct product의 곱셈을 제한하면 그 subalgebra, 곧 $A$-algebra가 된다.
@@ -106,18 +106,18 @@ $$E\times E' \rightarrow E\otimes_AE';\qquad (x,x')\mapsto xy\otimes x'y'$$
 
 $$m_{(\alpha y+z,y')}(x\otimes x')=x(\alpha y+z)\otimes x'y'=\alpha(xy\otimes x'y')+xz\otimes x'y'=\bigl(\alpha m_{(y,y')}+m_{(z,y')}\bigr)(x\otimes x')$$
 
-이 생성원들 위에서 성립하므로 $m_{(\alpha y+z,y')}=\alpha m_{(y,y')}+m_{(z,y')}$이다. 따라서 한 번 더 universal property를 적용하면 $y\otimes y'\mapsto m_{(y,y')}$이도록 하는 $A$-linear map $\tilde{m}:E\otimes_AE' \rightarrow \End_{\lMod{A}}(E\otimes_AE')$을 얻는다. 이제
+이 generator들 위에서 성립하므로 $m_{(\alpha y+z,y')}=\alpha m_{(y,y')}+m_{(z,y')}$이다. 따라서 한 번 더 universal property를 적용하면 $y\otimes y'\mapsto m_{(y,y')}$이도록 하는 $A$-linear map $\tilde{m}:E\otimes_AE' \rightarrow \End_{\lMod{A}}(E\otimes_AE')$을 얻는다. 이제
 
 $$\mu(s,t)=\tilde{m}(t)(s)$$
 
-로 정의하면 $\mu$는 각 변수에 대해 $A$-linear이고, 생성원들 위에서 식 $(1)$을 만족한다. 유일성은 $E\otimes_AE'$이 $x\otimes x'$ 꼴의 원소들로 생성된다는 것으로부터 자명하다.
+로 정의하면 $\mu$는 각 변수에 대해 $A$-linear이고, generator들 위에서 식 $(1)$을 만족한다. 유일성은 $E\otimes_AE'$이 $x\otimes x'$ 꼴의 원소들로 생성된다는 것으로부터 자명하다.
 :::
 
 ::: 정의 7
 두 $A$-algebra $E,E'$에 대하여, [명제 6](#prop6)의 곱셈이 주어진 $A$-algebra $E\otimes_AE'$을 $E$와 $E'$의 *tensor product<sub>텐서곱</sub>*이라 부른다.
 :::
 
-direct product에서와 마찬가지로, tensor product는 두 대수의 성질을 그대로 물려받는다. 가령 $E,E'$이 모두 associative라면 생성원들 위에서
+direct product에서와 마찬가지로, tensor product는 두 대수의 성질을 그대로 물려받는다. 가령 $E,E'$이 모두 associative라면 generator들 위에서
 
 $$\bigl((x\otimes x')(y\otimes y')\bigr)(z\otimes z')=(xy)z\otimes (x'y')z'=x(yz)\otimes x'(y'z')=(x\otimes x')\bigl((y\otimes y')(z\otimes z')\bigr)$$
 
@@ -127,19 +127,19 @@ $$\iota:E \rightarrow E\otimes_AE';\quad x\mapsto x\otimes 1_{E'},\qquad \iota':
 
 이 정의되며, 이들의 image는 서로 commute한다. 즉 $(x\otimes 1)(1\otimes x')=x\otimes x'=(1\otimes x')(x\otimes 1)$이다. 
 
-우리가 처음 도입했던 것과 같이, tensor product는 commutative $A$-algebra들의 category에서 coproduct가 된다. 이를 설명하는 것이 다음의 명제이다. 
+우리가 처음 도입했던 것과 같이, tensor product는 commutative $A$-algebra들의 category에서 coproduct가 된다. 이를 설명하는 것이 다음의 정리이다. 
 
 ::: 정리 8
 Commutative $A$-algebra $E,E'$과, 임의의 commutative $A$-algebra $F$, 그리고 $A$-algebra homomorphism들 $u:E \rightarrow F$, $u':E' \rightarrow F$가 주어졌다 하자. 그럼 $w\circ\iota=u$, $w\circ\iota'=u'$을 만족하는 유일한 $A$-algebra homomorphism $w:E\otimes_AE' \rightarrow F$가 존재한다. 
 :::
 ::: 증명
-함수 $E\times E' \rightarrow F$를 $(x,x')\mapsto u(x)u'(x')$으로 정의하면 이는 $A$-bilinear이므로, $w(x\otimes x')=u(x)u'(x')$이도록 하는 유일한 $A$-linear map $w:E\otimes_AE' \rightarrow F$가 존재한다. $w$가 곱셈을 보존하는 것은 생성원들 위에서 확인하면 충분한데,
+함수 $E\times E' \rightarrow F$를 $(x,x')\mapsto u(x)u'(x')$으로 정의하면 이는 $A$-bilinear이므로, $w(x\otimes x')=u(x)u'(x')$이도록 하는 유일한 $A$-linear map $w:E\otimes_AE' \rightarrow F$가 존재한다. $w$가 곱셈을 보존하는 것은 generator들 위에서 확인하면 충분한데,
 
 $$w\bigl((x\otimes x')(y\otimes y')\bigr)=w(xy\otimes x'y')=u(xy)u'(x'y')=u(x)u(y)u'(x')u'(y')=u(x)u'(x')u(y)u'(y')=w(x\otimes x')w(y\otimes y')$$
 
 이고, 네 번째 등식에서 $F$가 commutative라는 가정이 사용되었다. 또 $w(1_E\otimes 1_{E'})=u(1_E)u'(1_{E'})=1_F$이며, $w\circ\iota=u$와 $w\circ\iota'=u'$은 정의로부터 자명하다.
 
-유일성을 보이자. $w'$이 같은 조건을 만족한다면, 임의의 생성원에 대하여
+유일성을 보이자. $w'$이 같은 조건을 만족한다면, 임의의 generator에 대하여
 
 $$w'(x\otimes x')=w'\bigl((x\otimes 1_{E'})(1_E\otimes x')\bigr)=w'(\iota(x))w'(\iota'(x'))=u(x)u'(x')=w(x\otimes x')$$
 

@@ -25,7 +25,7 @@ weight: 121
 복소내적공간 $V$ 위의 linear operator $L:V\rightarrow V$가 *self-adjoint<sub>self-adjoint</sub>*, 또는 *Hermitian*이라는 것은 $L=L^\ast$인 것, 즉 모든 $v,w\in V$에 대하여 $\langle Lv,w\rangle=\langle v,Lw\rangle$인 것이다.
 :::
 
-즉, 이는 내적이 주는 isomorphism을 통해 $V^\ast$를 $V$로 옮겨왔을 때, dual operator $L^\ast: V^\ast\rightarrow V^\ast$가 $V$로 번역된 것이 곧 자기자신이라는 것이다. 실수행렬의 경우, 이는 symmetric matrix로 나왔으나 복소수의 경우 이것이 conjugate-tranpose matrix로 나온다는 점만 다르다. 다소 헷갈릴 수 있는 지점은 $L^\ast$가 이제 conjugate-transpose이자 dual map을 나타내는 표기가 된다는 것이지만, 위에서 살펴봤듯 complex inner product space가 주는 isomorphism을 통해 $V$와 $V^\ast$를 같은 것으로 보면 이들 둘이 실제로 같아지므로 큰 해는 없다. 
+즉, 이는 내적이 주는 isomorphism을 통해 $V^\ast$를 $V$로 옮겨왔을 때, dual operator $L^\ast: V^\ast\rightarrow V^\ast$가 $V$로 번역된 것이 곧 자기자신이라는 것이다. 실수행렬의 경우, 이는 symmetric matrix로 나왔으나 복소수의 경우 이것이 conjugate-transpose matrix로 나온다는 점만 다르다. 다소 헷갈릴 수 있는 지점은 $L^\ast$가 이제 conjugate-transpose이자 dual map을 나타내는 표기가 된다는 것이지만, 위에서 살펴봤듯 complex inner product space가 주는 isomorphism을 통해 $V$와 $V^\ast$를 같은 것으로 보면 이들 둘이 실제로 같아지므로 큰 해는 없다. 
 
 실수에서와 다른 점 중 하나는 이제 self-adjoint operator들만이 orthonormal basis로 대각화되는 것이 <em-ko>아니라는</em-ko> 것으로, 이를 위해서는 다음 정의와 같이 일반화를 해야 한다. 
 
@@ -49,7 +49,7 @@ $$LL^\ast=L^\ast L$$
 ::: 증명
 $\dim V$에 대한 귀납법으로 진행한다. 우리는 $V$의 orthonormal basis $\{e_1,\ldots,e_n\}$이 존재하여 각 $j$에 대해 $Le_j\in\span(e_1,\ldots,e_j)$임을 보여야 한다. $\dim V\leq 1$인 경우는 자명하므로, $\dim V=n\geq 2$라 하자.
 
-$L^\ast$의 특성다항식은 차수가 $1$ 이상이므로 [§특성다항식, ⁋정리 8](/ko/math/linear_algebra/characteristic_polynomial#thm8)에 의하여 근을 가지고, 따라서 $L^\ast$은 $\lVert e_n\rVert=1$인 고유벡터 $e_n$을 가진다. 이제 $V$에서 $e_n$이 span하는 직선의 complement $W=(\span e_n)^\perp$를 생각하자. 그럼
+$L^\ast$의 특성다항식은 degree가 $1$ 이상이므로 [§특성다항식, ⁋정리 8](/ko/math/linear_algebra/characteristic_polynomial#thm8)에 의하여 근을 가지고, 따라서 $L^\ast$은 $\lVert e_n\rVert=1$인 고유벡터 $e_n$을 가진다. 이제 $V$에서 $e_n$이 span하는 직선의 complement $W=(\span e_n)^\perp$를 생각하자. 그럼
 
 $$\langle Lw,e_n\rangle=\langle w,L^\ast e_n\rangle=\langle w,\mu e_n\rangle=\mu\langle w,e_n\rangle=0$$
 
@@ -117,14 +117,14 @@ $$\langle Lv,v\rangle=\langle\lambda v,v\rangle=\bar\lambda\lVert v\rVert^2$$
 
 이므로, 두 식을 비교하면 $\lambda\lVert v\rVert^2=\bar\lambda\lVert v\rVert^2$이고 $\lVert v\rVert^2>0$이므로 $\lambda=\bar\lambda$, 즉 $\lambda$는 실수이다.
 
-둘째 결과를 살펴보가 위해 $L$이 unitary이고 $Lv=\lambda v$, $v\neq 0$이라 하자. Unitary operator는 내적을 보존하므로
+둘째 결과를 살펴보기 위해 $L$이 unitary이고 $Lv=\lambda v$, $v\neq 0$이라 하자. Unitary operator는 내적을 보존하므로
 
 $$\lVert v\rVert^2=\langle Lv,Lv\rangle=\langle\lambda v,\lambda v\rangle=\bar\lambda\lambda\lVert v\rVert^2=\lvert\lambda\rvert^2\lVert v\rVert^2$$
 
 이고, $\lVert v\rVert^2>0$이므로 $\lvert\lambda\rvert^2=1$, 즉 $\lvert\lambda\rvert=1$이다.
 :::
 
-복소 spectrum 정리는 실수판인 [§스펙트럼 정리, ⁋정리 5](/ko/math/linear_algebra/spectral_theorem#thm5)를 특수한 경우로 포함한다. 즉, 실수symmetric matrix $A$는 성분이 실수이므로 복소행렬로 보면 $A^\ast=\bar A^t=A^t=A$가 되어 복소수 상에서도 self-adjoint이고, 따라서 [명제 7](#prop7)에 의하여 그 고윳값은 모두 실수이기 때문이다.  
+복소 spectrum 정리는 실수판인 [§스펙트럼 정리, ⁋정리 5](/ko/math/linear_algebra/spectral_theorem#thm5)를 특수한 경우로 포함한다. 즉, 실수 symmetric matrix $A$는 성분이 실수이므로 복소행렬로 보면 $A^\ast=\bar A^t=A^t=A$가 되어 복소수 상에서도 self-adjoint이고, 따라서 [명제 7](#prop7)에 의하여 그 고윳값은 모두 실수이기 때문이다.  
 
 ---
 

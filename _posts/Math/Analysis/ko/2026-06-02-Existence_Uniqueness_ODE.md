@@ -16,22 +16,22 @@ drift_needed: true
 published: false
 ---
 
-미분방정식은 함수와 그 도함수의 관계로 함수를 규정한다. 가장 기본적인 물음은 주어진 초기 조건 아래 해가 존재하는가, 그리고 유일한가이다. 해가 없으면 모형이 무의미하고 해가 여럿이면 미래가 초기 상태로 결정되지 않으니, 어떤 조건 아래 초기값 문제가 잘 정의되는가를 가려내는 것이 미분방정식 이론의 출발점이 된다. 이 글에서는 해석학의 존재 정리를 떠받치는 축약사상 원리를 증명하고, 이를 미분방정식에 적용한다.
+미분방정식은 함수와 그 도함수의 관계로 함수를 규정한다. 가장 기본적인 물음은 주어진 초기 조건 아래 해가 존재하는가, 그리고 유일한가이다. 해가 없으면 모형이 무의미하고 해가 여럿이면 미래가 초기 상태로 결정되지 않으니, 어떤 조건 아래 초기값 문제가 잘 정의되는가를 가려내는 것이 미분방정식 이론의 출발점이 된다. 이 글에서는 해석학의 존재 정리를 떠받치는 contraction 원리를 증명하고, 이를 미분방정식에 적용한다.
 
-우리가 택하는 전략은 미분방정식을 적분방정식으로 바꾸고, 그 적분방정식의 해를 어떤 사상의 *고정점<sub>fixed point</sub>*으로 보는 것이다. 그러면 문제는 추상적인 거리공간 위에서 사상이 고정점을 가지는가라는 순수 해석학의 문제로 환원되고, 이 환원은 축약사상 원리라는 하나의 정리로 깔끔하게 해결된다. 이러한 발상은 미분방정식뿐 아니라 적분방정식, 함수방정식, 수치해석의 반복법 등 해석학 전반에서 되풀이된다.
+우리가 택하는 전략은 미분방정식을 적분방정식으로 바꾸고, 그 적분방정식의 해를 어떤 사상의 *fixed point<sub>고정점</sub>*로 보는 것이다. 그러면 문제는 추상적인 거리공간 위에서 사상이 fixed point를 가지는가라는 순수 해석학의 문제로 환원되고, 이 환원은 contraction 원리라는 하나의 정리로 깔끔하게 해결된다. 이러한 발상은 미분방정식뿐 아니라 적분방정식, 함수방정식, 수치해석의 반복법 등 해석학 전반에서 되풀이된다.
 
 ## 축약사상 원리
 
-거리공간 위의 사상이 두 점 사이의 거리를 일정 비율 이상으로 줄인다면, 그 사상을 반복 적용할 때 점들이 한곳으로 모일 것이라는 직관은 자연스럽다. 이 직관을 정확히 다듬은 것이 축약사상의 개념이다.
+거리공간 위의 사상이 두 점 사이의 거리를 일정 비율 이상으로 줄인다면, 그 사상을 반복 적용할 때 점들이 한곳으로 모일 것이라는 직관은 자연스럽다. 이 직관을 정확히 다듬은 것이 contraction의 개념이다.
 
 ::: 정의 1
-거리공간 $(X, d)$의 사상 $T : X \rightarrow X$가 *축약사상<sub>contraction</sub>*이라는 것은, 어떤 상수 $0 \leq \lambda < 1$에 대하여 모든 $x, y$에서 $d(T x, T y) \leq \lambda  d(x, y)$인 것이다.
+거리공간 $(X, d)$의 사상 $T : X \rightarrow X$가 *contraction<sub>축약사상</sub>*이라는 것은, 어떤 상수 $0 \leq \lambda < 1$에 대하여 모든 $x, y$에서 $d(T x, T y) \leq \lambda  d(x, y)$인 것이다.
 :::
 
-상수 $\lambda$를 *축약상수<sub>contraction constant</sub>*라 부른다. 부등식이 모든 점에서 같은 $\lambda$로 성립해야 한다는 점, 그리고 $\lambda$가 $1$보다 *진성으로* 작아야 한다는 점이 핵심이다. 만약 $\lambda = 1$만 보장된다면, 즉 $d(Tx, Ty) \leq d(x, y)$인 경우에는 $T$를 *비확장사상<sub>nonexpansive map</sub>*이라 부르며, 이때는 고정점이 존재하지 않거나 유일하지 않을 수 있다. 예컨대 실직선 위의 평행이동 $Tx = x + 1$은 거리를 정확히 보존하지만 고정점이 없다.
+상수 $\lambda$를 *축약상수<sub>contraction constant</sub>*라 부른다. 부등식이 모든 점에서 같은 $\lambda$로 성립해야 한다는 점, 그리고 $\lambda$가 $1$보다 *진성으로* 작아야 한다는 점이 핵심이다. 만약 $\lambda = 1$만 보장된다면, 즉 $d(Tx, Ty) \leq d(x, y)$인 경우에는 $T$를 *비확장사상<sub>nonexpansive map</sub>*이라 부르며, 이때는 fixed point가 존재하지 않거나 유일하지 않을 수 있다. 예컨대 실직선 위의 평행이동 $Tx = x + 1$은 거리를 정확히 보존하지만 fixed point가 없다.
 
 ::: 정리 2 (바나흐 고정점 정리)
-완비 거리공간 위의 축약사상 $T$는 유일한 고정점 $x^\ast = T x^\ast$를 가지며, 임의의 출발점 $x_0$에서 시작한 반복 $x_{n+1} = T x_n$이 그 고정점으로 수렴한다.
+완비 거리공간 위의 contraction $T$는 유일한 fixed point $x^\ast = T x^\ast$를 가지며, 임의의 출발점 $x_0$에서 시작한 반복 $x_{n+1} = T x_n$이 그 fixed point로 수렴한다.
 :::
 
 ::: 증명
@@ -51,22 +51,22 @@ d(x_m, x_n) &\leq \sum_{k=n}^{m-1} d(x_{k+1}, x_k) \leq \sum_{k=n}^{m-1}\lambda^
 
 이다. 우변은 $n \rightarrow \infty$일 때 ($0 \leq \lambda < 1$이므로) $0$으로 가고, 이는 $m, n$에 관해 균등하게 작아지므로 $(x_n)$은 Cauchy 수열이다. 공간이 완비이므로 ([§거리공간, ⁋정의 4](/ko/math/analysis/metric_spaces#def4)) 극한 $x_n \rightarrow x^\ast$이 존재한다.
 
-이 극한이 고정점임을 보인다. 축약사상은 $d(Tx, Ty) \leq \lambda  d(x, y)$에서 곧바로 연속이므로
+이 극한이 fixed point임을 보인다. contraction은 $d(Tx, Ty) \leq \lambda  d(x, y)$에서 곧바로 연속이므로
 
 $$x^\ast = \lim_{n\rightarrow\infty} x_{n+1} = \lim_{n\rightarrow\infty} T x_n = T\Bigl(\lim_{n\rightarrow\infty} x_n\Bigr) = T x^\ast$$
 
-이다. 마지막으로 유일성을 본다. $x^\ast, y^\ast$가 둘 다 고정점이면
+이다. 마지막으로 유일성을 본다. $x^\ast, y^\ast$가 둘 다 fixed point이면
 
 $$d(x^\ast, y^\ast) = d(Tx^\ast, Ty^\ast) \leq \lambda  d(x^\ast, y^\ast)$$
 
 이고, $\lambda < 1$이므로 $(1 - \lambda) d(x^\ast, y^\ast) \leq 0$이 되어 $d(x^\ast, y^\ast) = 0$, 곧 $x^\ast = y^\ast$이다.
 :::
 
-위 증명은 고정점의 존재와 유일성뿐 아니라 *수렴 속도*에 대한 정량적 정보까지 준다. 부등식 $d(x_m, x_n) \leq \lambda^n/(1-\lambda) \cdot d(x_1, x_0)$에서 $m \rightarrow \infty$로 보내면
+위 증명은 fixed point의 존재와 유일성뿐 아니라 *수렴 속도*에 대한 정량적 정보까지 준다. 부등식 $d(x_m, x_n) \leq \lambda^n/(1-\lambda) \cdot d(x_1, x_0)$에서 $m \rightarrow \infty$로 보내면
 
 $$d(x_n, x^\ast) \leq \frac{\lambda^n}{1 - \lambda} d(x_1, x_0)$$
 
-라는 *선험적 오차 평가<sub>a priori error estimate</sub>*를 얻는다. 즉 반복 $n$번이면 오차가 $\lambda^n$의 비율로 줄어드는데, 이를 *선형 수렴<sub>linear convergence</sub>*이라 한다. 이 평가는 수치적으로 고정점을 근사할 때 몇 번 반복해야 원하는 정밀도에 도달하는지를 미리 알려 준다.
+라는 *선험적 오차 평가<sub>a priori error estimate</sub>*를 얻는다. 즉 반복 $n$번이면 오차가 $\lambda^n$의 비율로 줄어드는데, 이를 *선형 수렴<sub>linear convergence</sub>*이라 한다. 이 평가는 수치적으로 fixed point를 근사할 때 몇 번 반복해야 원하는 정밀도에 도달하는지를 미리 알려 준다.
 
 ## 피카르–린델뢰프 정리
 
@@ -103,7 +103,7 @@ $$y(t) = y_0 + \int_{t_0}^t f(s, y(s)) ds$$
 
 $$(Ty)(t) = y_0 + \int_{t_0}^t f(s, y(s)) ds$$
 
-를 생각하자. 그러면 적분방정식의 해는 정확히 $T$의 고정점 $Ty = y$이다. 충분히 짧은 닫힌구간 $I = [t_0 - h, t_0 + h]$ 위에서 연속함수들의 공간 $C(I)$에 상한노름 $\lVert g\rVert_\infty = \sup_{t\in I}\lvert g(t)\rvert$을 주면 이는 완비 거리공간이다. 두 연속함수 $y_1, y_2$에 대해, 립시츠 조건을 적분 안에서 적용하면
+를 생각하자. 그러면 적분방정식의 해는 정확히 $T$의 fixed point $Ty = y$이다. 충분히 짧은 닫힌구간 $I = [t_0 - h, t_0 + h]$ 위에서 연속함수들의 공간 $C(I)$에 상한노름 $\lVert g\rVert_\infty = \sup_{t\in I}\lvert g(t)\rvert$을 주면 이는 완비 거리공간이다. 두 연속함수 $y_1, y_2$에 대해, 립시츠 조건을 적분 안에서 적용하면
 
 $$\begin{aligned}
 \lvert (Ty_1)(t) - (Ty_2)(t)\rvert &= \left\lvert \int_{t_0}^t \bigl(f(s, y_1(s)) - f(s, y_2(s))\bigr) ds\right\rvert \\
@@ -116,7 +116,7 @@ $$\begin{aligned}
 
 $$\lVert Ty_1 - Ty_2\rVert_\infty \leq L h \lVert y_1 - y_2\rVert_\infty$$
 
-이다. 이제 구간의 반폭 $h$를 $Lh < 1$이 되도록, 가령 $h < 1/L$로 잡으면 $T$가 축약상수 $\lambda = Lh$인 축약사상이 된다. [정리 2](#thm2)에 의해 $T$는 유일한 고정점 $y \in C(I)$를 가지며, 이 $y$가 초기값 문제의 유일한 해이다.
+이다. 이제 구간의 반폭 $h$를 $Lh < 1$이 되도록, 가령 $h < 1/L$로 잡으면 $T$가 축약상수 $\lambda = Lh$인 contraction이 된다. [정리 2](#thm2)에 의해 $T$는 유일한 fixed point $y \in C(I)$를 가지며, 이 $y$가 초기값 문제의 유일한 해이다.
 :::
 
 증명에서 구간의 길이를 $Lh < 1$이 되도록 줄인 점에 주목하자. 이는 해가 *국소적으로* 존재함만을 보장한다. 즉 초기점 $t_0$ 근방의 작은 구간에서만 해가 보장되며, 그 구간이 전 구간으로 확장되는지는 별개의 문제이다. 한편 립시츠 상수가 작거나 구간이 짧을수록 작용소의 축약 효과가 강해 피카르 반복이 빠르게 수렴한다. 다음에서는 이 반복을 실제로 수행해 해를 구하는 예를 본다.
@@ -187,7 +187,7 @@ $$\lVert y_n - y\rVert_\infty \leq \frac{(Lh)^n}{1 - Lh} \lVert y_1 - y_0\rVert_
 :::
 
 ::: 증명
-작용소 $T$는 $C(I)$ 위에서 축약상수 $\lambda = Lh < 1$의 축약사상이고 $y$는 그 고정점이므로, [정리 2](#thm2)의 증명에서 얻은 선험적 오차 평가
+작용소 $T$는 $C(I)$ 위에서 축약상수 $\lambda = Lh < 1$의 contraction이고 $y$는 그 fixed point이므로, [정리 2](#thm2)의 증명에서 얻은 선험적 오차 평가
 
 $$d(x_n, x^\ast) \leq \frac{\lambda^n}{1 - \lambda} d(x_1, x_0)$$
 
@@ -196,4 +196,4 @@ $$d(x_n, x^\ast) \leq \frac{\lambda^n}{1 - \lambda} d(x_1, x_0)$$
 
 이 평가 덕분에 피카르 반복은 단순한 존재 증명의 도구를 넘어, 정해진 오차 안에서 해를 근사하는 실제 계산법이 된다. $Lh$가 작을수록 한 번의 반복으로 오차가 더 크게 줄어든다.
 
-이렇게 축약사상 원리는 미분방정식의 초기값 문제를 고정점 문제로 환원하여, 해의 존재·유일성을 한꺼번에 그리고 구성적으로 확립한다. $f$가 $y$에 대해 선형이면 립시츠 조건이 전역적으로 성립하여 해가 구간 전체로 확장된다([명제 6](#prop6)).
+이렇게 contraction 원리는 미분방정식의 초기값 문제를 fixed point 문제로 환원하여, 해의 존재·유일성을 한꺼번에 그리고 구성적으로 확립한다. $f$가 $y$에 대해 선형이면 립시츠 조건이 전역적으로 성립하여 해가 구간 전체로 확장된다([명제 6](#prop6)).

@@ -15,7 +15,7 @@ weight: 125
 
 ---
 
-우리가 지금까지 살펴본 것은 내적에서 파생된 여러가지 정리들로, 이를 통해 우리는 내적, 더 나아가 일반적인 bilinear form이 유용하다는 것을 확인했다. 이제 우리는 약간 방향을 바꾸어, $\mathbb{K}=\mathbb{R}$인 경우에 symmetric bilinear form이 적절한 기저 위에서 얼마나 단순한 형태로 표현되는지를 살펴본다. 이 글에서 다루는 모든 bilinear form은 symmetric인 것으로 가정한다. 
+우리가 지금까지 살펴본 것은 내적에서 파생된 여러가지 정리들로, 이를 통해 우리는 내적, 더 나아가 일반적인 bilinear form이 유용하다는 것을 확인했다. 이제 우리는 약간 방향을 바꾸어, $\mathbb{K}=\mathbb{R}$인 경우에 symmetric bilinear form이 적절한 basis 위에서 얼마나 단순한 형태로 표현되는지를 살펴본다. 이 글에서 다루는 모든 bilinear form은 symmetric인 것으로 가정한다. 
 
 ## 이차형식
 
@@ -41,7 +41,7 @@ $$\langle v,w\rangle=\frac{1}{2}\bigl(Q(v+w)-Q(v)-Q(w)\bigr)\tag{1}$$
 
 ## 합동과 대각형
 
-$V$ 위에 symmetric bilinear form $\langle -,-\rangle$이 주어졌다 하고, $V$의 basis $\mathcal{B}$를 택하자. 그럼 [§쌍선형형식, §§Gram matrix](/ko/math/linear_algebra/bilinear_form#gram-matrix)에서 살펴본 대로, $(i,j)$ 성분이 $\langle x_i,x_j\rangle$인 Gram matrix $G_\mathcal{B}$에 대하여 $\langle v,w\rangle=[v]_\mathcal{B}^tG_\mathcal{B}[w]_\mathcal{B}$이 성립하며, $\langle-,-\rangle$이 symmetric이므로 $G_\mathcal{B}$는 symmetric matrix이다. 또 다른 basis $\mathcal{C}$를 택하면, 기저변환행렬 $P=[\id]_\mathcal{C}^\mathcal{B}$에 대하여 
+$V$ 위에 symmetric bilinear form $\langle -,-\rangle$이 주어졌다 하고, $V$의 basis $\mathcal{B}$를 택하자. 그럼 [§쌍선형형식, §§Gram matrix](/ko/math/linear_algebra/bilinear_form#gram-matrix)에서 살펴본 대로, $(i,j)$ 성분이 $\langle x_i,x_j\rangle$인 Gram matrix $G_\mathcal{B}$에 대하여 $\langle v,w\rangle=[v]_\mathcal{B}^tG_\mathcal{B}[w]_\mathcal{B}$이 성립하며, $\langle-,-\rangle$이 symmetric이므로 $G_\mathcal{B}$는 symmetric matrix이다. 또 다른 basis $\mathcal{C}$를 택하면, change-of-basis matrix $P=[\id]_\mathcal{C}^\mathcal{B}$에 대하여 
 
 $$G_\mathcal{C}=P^tG_\mathcal{B}P$$
 
@@ -68,7 +68,7 @@ $$\langle e_i,e_i\rangle=\frac{\langle f_i,f_i\rangle}{\lvert\langle f_i,f_i\ran
 이 된다. 스칼라배는 orthogonality를 보존하므로 $\{e_1,\ldots,e_n\}$은 원하는 조건을 모두 만족하는 basis이다.
 :::
 
-[명제 2](#prop2)의 basis에 대한 Gram matrix는 대각성분이 $1$, $-1$, $0$인 diagonal matrix이다. 기저를 적절히 재배열하면, 이 diagonal matrix를 $1$이 $p$개, $-1$이 $q$개, $0$이 $r$개 나타나는 다음의 꼴
+[명제 2](#prop2)의 basis에 대한 Gram matrix는 대각성분이 $1$, $-1$, $0$인 diagonal matrix이다. Basis를 적절히 재배열하면, 이 diagonal matrix를 $1$이 $p$개, $-1$이 $q$개, $0$이 $r$개 나타나는 다음의 꼴
 
 $$\begin{pmatrix}I_p&&\\&-I_q&\\&&0_r\end{pmatrix}$$
 

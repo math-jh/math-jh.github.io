@@ -49,7 +49,7 @@ $$\nabla^z_{\partial_\alpha} = \partial_\alpha + \frac{1}{z}\, \mathcal{C}_\alph
 
 $$\nabla^z_{\partial_z} = \partial_z - \frac{1}{z^2}E\circ(-) + \frac{1}{z}\mu$$
 
-으로 주어진다. 여기서 $E$는 [§프로베니우스 다양체, ⁋정의 5](/ko/math/mirror_symmetry/frobenius_manifold#def5)의 Euler vector field이고, $\mu$는 *grading operator<sub>등급 연산자</sub>*로, flat coordinate $t^\alpha$에 대응하는 cohomology class $\sigma^\alpha$의 절반 차수 $d_\alpha = \tfrac{1}{2}\deg\sigma^\alpha$와 conformal dimension $d$로부터 $\mu(\partial_\alpha) = (d_\alpha - d/2)\, \partial_\alpha$로 정의된다.
+으로 주어진다. 여기서 $E$는 [§프로베니우스 다양체, ⁋정의 5](/ko/math/mirror_symmetry/frobenius_manifold#def5)의 Euler vector field이고, $\mu$는 *grading operator<sub>등급 연산자</sub>*로, flat coordinate $t^\alpha$에 대응하는 cohomology class $\sigma^\alpha$의 절반 degree $d_\alpha = \tfrac{1}{2}\deg\sigma^\alpha$와 conformal dimension $d$로부터 $\mu(\partial_\alpha) = (d_\alpha - d/2)\, \partial_\alpha$로 정의된다.
 :::
 
 앞서 [§프로베니우스 다양체, ⁋정의 5](/ko/math/mirror_symmetry/frobenius_manifold#def5)에서 Frobenius manifold를 정의할 때, 각 점에서의 Frobenius algebra의 grading structure를 담기 위해 $E$를 도입했던 것을 기억하자. 구체적으로, 
@@ -68,7 +68,7 @@ $$E = \sum_\alpha (1-d_\alpha)t^\alpha \partial_\alpha + \text{(constant terms)}
 
 $$\mu(\partial_\alpha) = \frac{2-d}{2} - (1-d_\alpha) = d_\alpha - d/2$$
 
-이므로 $\mu$ 또한 eigenvalue $d_\alpha-d/2$를 갖는다. 여기서 $\frac{2-d}{2}$만큼의 이동은 $\mu$를 $\eta$에 대해 skew-symmetric하게 만들기 위한 것으로, $\eta$가 차수 $d_\alpha$인 class를 차수 $d - d_\alpha$인 것과 짝짓는 데서 비롯한다.
+이므로 $\mu$ 또한 eigenvalue $d_\alpha-d/2$를 갖는다. 여기서 $\frac{2-d}{2}$만큼의 이동은 $\mu$를 $\eta$에 대해 skew-symmetric하게 만들기 위한 것으로, $\eta$가 degree $d_\alpha$인 class를 degree $d - d_\alpha$인 것과 짝짓는 데서 비롯한다.
 
 Dubrovin connection의 가장 중요한 성질은 이것이 모든 $z$에 대해 flat이라는 것이다. 이를 확인하기 위해 곡률 $[\nabla^z_{\partial_\alpha}, \nabla^z_{\partial_\beta}]$을 계산하자. Flat coordinate에서 $\nabla^z_{\partial_\alpha} = \partial_\alpha + z^{-1}\mathcal{C}_\alpha$이고, $[\partial_\alpha, \partial_\beta] = 0$이며 Leibniz 법칙에 의해 $[\partial_\alpha, \mathcal{C}_\beta] = \partial_\alpha \mathcal{C}_\beta$ ($\mathcal{C}_\beta$의 성분을 미분한 endomorphism)이므로,
 
@@ -119,7 +119,7 @@ $$\partial_\alpha s^\beta + \frac{1}{z} \sum_\gamma c_{\alpha\gamma}^\beta\, s^\
 
 을 얻고, 이를 *quantum differential equation*이라 부른다. 한편 위의 방정식은 first order linear ODE이므로, base point $b_0$와 초기조건 $s(b_0)$이 주어지면 경로를 따라 그 해가 유일하게 결정되고, $\nabla^z$가 flat이므로 이 parallel transport가 경로에 무관하여 $b_0$의 simply connected neighborhood에서 well-defined horizontal section을 준다. 따라서 위의 QDE의 solution space는 다발의 rank와 일치하는 $\dim_\mathbb{C} M$차원이 되며, base $M \times \mathbb{C}^\ast$의 $\pi_1$이 평행이동을 통해 이 해 공간에 작용하여 monodromy representation을 준다. 특히 $z$-방향 $\mathbb{C}^\ast$의 loop ($\pi_1 \cong \mathbb{Z}$)은 $z = 0, \infty$의 irregular singularity 둘레 monodromy를, Novikov parameter $q = e^t$의 $q$-방향 loop은 quantum monodromy를 준다. 
 
-Frobenius manifold의 대표적인 예시는 quantum cohomology의 deformation을 담는 $M = H^\ast(X, \mathbb{C})$의 경우였다. ([§프로베니우스 다양체, ⁋명제 9](/ko/math/mirror_symmetry/frobenius_manifold#prop9)) 이 경우의 Dubrovin connection을 구체적으로 살펴보자. 우선 base manifold는 $M \times \mathbb{C}^\ast$이고, 이 manifold의 점을 $(t,z)\in M\times \mathbb{C}^\ast$으로 쓸 수 있다. 정의에 의하여, 한 점 $(t,z)$ 위의 fiber는 $(\pr_1^\ast TM)_{(t,z)}\cong T_tM$이고, $M$은 원래부터 벡터공간이었으므로 이 fiber는 $H^\ast(X, \mathbb{C})$와 canonically isomorphic하며 이들 각각에 $t$가 정의하는 big quantum product $\circ_t$를 주는 것이 Frobenius manifold의 구조이다. 이 bundle 위에서 Dubrovin connection은 $\nabla^z_{\partial_\alpha} = \partial_\alpha + z^{-1}\mathcal{C}_\alpha$으로 주어지며, $\mathcal{C}_\alpha = \partial_\alpha \circ_t -$는 big quantum product로 곱하는 endomorphism이다. 이렇게 $M = H^\ast(X)$ 전체를 base로 둔 것이 big quantum cohomology에 대응하는 quantum $D$-module이다. 앞선 글에서 살펴봤듯, 우리가 우선적으로 관심있는 대상은 이 중 small quantum cohomology에 해당하는 $H^2$ 방향 deformation이므로, 특별히 $H^2(X)$의 basis를 $\{T_\alpha\}$라 하면, 이 방향의 connection constant는 $\mathcal{C}_a=T_a\qtimes -$이다. 따라서 이 방향의 QDE는
+Frobenius manifold의 대표적인 예시는 quantum cohomology의 deformation을 담는 $M = H^\ast(X, \mathbb{C})$의 경우였다. ([§프로베니우스 다양체, ⁋명제 9](/ko/math/mirror_symmetry/frobenius_manifold#prop9)) 이 경우의 Dubrovin connection을 구체적으로 살펴보자. 우선 base manifold는 $M \times \mathbb{C}^\ast$이고, 이 manifold의 점을 $(t,z)\in M\times \mathbb{C}^\ast$으로 쓸 수 있다. 정의에 의하여, 한 점 $(t,z)$ 위의 fiber는 $(\pr_1^\ast TM)_{(t,z)}\cong T_tM$이고, $M$은 원래부터 벡터공간이었으므로 이 fiber는 $H^\ast(X, \mathbb{C})$와 canonically isomorphic하며 이들 각각에 $t$가 정의하는 big quantum product $\circ_t$를 주는 것이 Frobenius manifold의 구조이다. 이 bundle 위에서 Dubrovin connection은 $\nabla^z_{\partial_\alpha} = \partial_\alpha + z^{-1}\mathcal{C}_\alpha$으로 주어지며, $\mathcal{C}_\alpha = \partial_\alpha \circ_t -$는 big quantum product로 곱하는 endomorphism이다. 이렇게 $M = H^\ast(X)$ 전체를 base로 둔 것이 big quantum cohomology에 대응하는 quantum $D$-module이다. 앞선 글에서 살펴봤듯, 우리가 우선적으로 관심있는 대상은 이 중 small quantum cohomology에 해당하는 $H^2$ 방향 deformation이므로, 특별히 $H^2(X)$의 basis를 $\{T_a\}$라 하면, 이 방향의 connection constant는 $\mathcal{C}_a=T_a\qtimes -$이다. 따라서 이 방향의 QDE는
 
 $$z\, q_a \partial_{q_a} s = -\,(T_a \qtimes s), \qquad a = 1, \ldots, r$$
 

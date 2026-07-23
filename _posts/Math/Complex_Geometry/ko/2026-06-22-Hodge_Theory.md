@@ -22,11 +22,11 @@ $$
 
 가 일반 complex manifold에서는 성립하지 않으며, 그것이 성립하려면 추가 기하구조가 필요함을 예고하였다. 그 추가 구조가 바로 Kähler 조건 $d\omega = 0$이며 ([§Kähler 다양체, ⁋정의 3](/ko/math/complex_geometry/kahler_manifolds#def3)), 거기서 따라오는 [§Kähler 다양체, ⁋정리 12](/ko/math/complex_geometry/kahler_manifolds#thm12)가 위 분해를 콤팩트 Kähler manifold에서 정확히 성립하게 만든다. 이 분해와 그에 동반하는 대칭을 규명하는 것이 Hodge 이론이며, 그것이 콤팩트 Kähler manifold의 위상에 부과하는 제약이 이 글의 주제이다.
 
-핵심 발상은 cohomology class마다 표준 대표원을 고르는 것이다. de Rham cohomology class $[\alpha] \in H^k_{\mathrm{dR}}(X)$는 $\alpha + d\beta$ 꼴의 닫힌형식 전체로 이루어진 affine 공간이며, 그 가운데 어느 하나를 본받아 류 전체를 다룰 자연스러운 방법이 없다. 그러나 Riemannian metric을 도입하면 형식들에 길이가 생기고, 각 류에서 $L^2$-노름을 최소화하는 유일한 대표원을 고를 수 있다. 이 최소 대표원이 *조화형식<sub>harmonic form</sub>*이며, Laplace 작용소의 kernel로 특징지어진다. 조화형식들의 공간 $\mathcal{H}^k$가 cohomology를 그대로 실현한다는 것이 Hodge 정리이고, Kähler 조건 아래에서 $\mathcal{H}^k$가 $(p,q)$-차수로 쪼개진다는 것이 Hodge 분해이다.
+핵심 발상은 cohomology class마다 표준 대표원을 고르는 것이다. de Rham cohomology class $[\alpha] \in H^k_{\mathrm{dR}}(X)$는 $\alpha + d\beta$ 꼴의 닫힌형식 전체로 이루어진 affine 공간이며, 그 가운데 어느 하나를 본받아 류 전체를 다룰 자연스러운 방법이 없다. 그러나 Riemannian metric을 도입하면 형식들에 길이가 생기고, 각 류에서 $L^2$-norm을 최소화하는 유일한 대표원을 고를 수 있다. 이 최소 대표원이 *조화형식<sub>harmonic form</sub>*이며, Laplace 작용소의 kernel로 특징지어진다. 조화형식들의 공간 $\mathcal{H}^k$가 cohomology를 그대로 실현한다는 것이 Hodge 정리이고, Kähler 조건 아래에서 $\mathcal{H}^k$가 $(p,q)$-degree로 쪼개진다는 것이 Hodge 분해이다.
 
 ## Hodge star와 수반작용소
 
-콤팩트 지향 Riemannian manifold $(M, g)$ 위에서 형식들에 점별 내적과 전역 $L^2$-내적을 부여하는 데서 출발한다. 차원을 $m = \dim_{\mathbb{R}} M$이라 하자. 계량 $g$는 각 점에서 cotangent space $T_x^\ast M$에 내적을 주고, 이를 exterior algebra $\Lambda^k T_x^\ast M$로 끌어올리면 $k$-형식들에 점별 내적 $\langle \cdot, \cdot \rangle_x$가 생긴다. 지향성은 표준 부피형식 $\mathrm{vol}_g$를 정해 주며, 이 둘을 결합하면 차수를 바꾸는 선형 동형이 따라온다.
+콤팩트 지향 Riemannian manifold $(M, g)$ 위에서 형식들에 점별 내적과 전역 $L^2$-내적을 부여하는 데서 출발한다. 차원을 $m = \dim_{\mathbb{R}} M$이라 하자. 계량 $g$는 각 점에서 cotangent space $T_x^\ast M$에 내적을 주고, 이를 exterior algebra $\Lambda^k T_x^\ast M$로 끌어올리면 $k$-형식들에 점별 내적 $\langle \cdot, \cdot \rangle_x$가 생긴다. 지향성은 표준 부피형식 $\mathrm{vol}_g$를 정해 주며, 이 둘을 결합하면 degree를 바꾸는 선형 동형이 따라온다.
 
 ::: 정의 1
 콤팩트 지향 Riemannian manifold $(M, g)$의 차원을 $m$이라 하자. *Hodge star operator<sub>호지 별작용소</sub>* $\ast : \Lambda^k T^\ast M \rightarrow \Lambda^{m-k} T^\ast M$를, 모든 $k$-형식 $\alpha, \beta$에 대하여
@@ -61,10 +61,10 @@ $$
 (d\alpha, \beta) = (\alpha, d^\ast\beta)
 $$
 
-가 성립하는 작용소로 정의한다. 명시적으로, $p$-형식 위에서 $d^\ast = (-1)^{m(p+1)+1} \ast d\, \ast$이며, 이는 차수를 하나 내린다.
+가 성립하는 작용소로 정의한다. 명시적으로, $p$-형식 위에서 $d^\ast = (-1)^{m(p+1)+1} \ast d\, \ast$이며, 이는 degree를 하나 내린다.
 :::
 
-수반작용소가 존재하고 유일함은 Stokes 정리에서 나온다. $M$이 경계 없는 콤팩트 manifold이므로 $\int_M d(\alpha \wedge \ast\beta) = 0$이고, $d(\alpha \wedge \ast\beta) = d\alpha \wedge \ast\beta + (-1)^k \alpha \wedge d(\ast\beta)$를 전개하여 $\ast\ast$의 부호를 정리하면 위 명시 공식이 $(d\alpha, \beta) = (\alpha, d^\ast\beta)$를 만족함을 직접 확인할 수 있다. 작용소 $d$가 차수를 하나 올리는 반면 $d^\ast$는 하나 내리며, $d^2 = 0$에서 $(d^\ast)^2 = 0$이 따라온다. complex manifold에서는 같은 방식으로 $\partial$과 $\bar\partial$의 수반작용소 $\partial^\ast$, $\bar\partial^\ast$를 $L^2$-내적에 대해 정의하며 ([§Kähler 다양체, ⁋정리 12](/ko/math/complex_geometry/kahler_manifolds#thm12)에서 이미 도입), $\partial^\ast = -\ast\bar\partial\ast$, $\bar\partial^\ast = -\ast\partial\ast$ 꼴이다 (Hodge star가 $\partial$과 $\bar\partial$를 맞바꾸므로 수반에 켤레 작용소가 나타난다).
+수반작용소가 존재하고 유일함은 Stokes 정리에서 나온다. $M$이 boundary 없는 콤팩트 manifold이므로 $\int_M d(\alpha \wedge \ast\beta) = 0$이고, $d(\alpha \wedge \ast\beta) = d\alpha \wedge \ast\beta + (-1)^k \alpha \wedge d(\ast\beta)$를 전개하여 $\ast\ast$의 부호를 정리하면 위 명시 공식이 $(d\alpha, \beta) = (\alpha, d^\ast\beta)$를 만족함을 직접 확인할 수 있다. 작용소 $d$가 degree를 하나 올리는 반면 $d^\ast$는 하나 내리며, $d^2 = 0$에서 $(d^\ast)^2 = 0$이 따라온다. complex manifold에서는 같은 방식으로 $\partial$과 $\bar\partial$의 수반작용소 $\partial^\ast$, $\bar\partial^\ast$를 $L^2$-내적에 대해 정의하며 ([§Kähler 다양체, ⁋정리 12](/ko/math/complex_geometry/kahler_manifolds#thm12)에서 이미 도입), $\partial^\ast = -\ast\bar\partial\ast$, $\bar\partial^\ast = -\ast\partial\ast$ 꼴이다 (Hodge star가 $\partial$과 $\bar\partial$를 맞바꾸므로 수반에 켤레 작용소가 나타난다).
 
 ## Laplace 작용소와 조화형식
 
@@ -86,7 +86,7 @@ $$
 로 적는다.
 :::
 
-작용소 $\Delta_d$는 차수를 보존하는 이차 미분작용소이며, $d$와 $d^\ast$가 서로 수반이므로 $L^2$-내적에 대해 자기수반이다. 곧 $(\Delta_d\alpha, \beta) = (\alpha, \Delta_d\beta)$이다. 조화형식은 단순히 $\Delta_d$로 죽는 형식인데, 콤팩트성 덕분에 이 조건이 훨씬 강한 조건과 동치가 된다.
+작용소 $\Delta_d$는 degree를 보존하는 이차 미분작용소이며, $d$와 $d^\ast$가 서로 수반이므로 $L^2$-내적에 대해 자기수반이다. 곧 $(\Delta_d\alpha, \beta) = (\alpha, \Delta_d\beta)$이다. 조화형식은 단순히 $\Delta_d$로 죽는 형식인데, 콤팩트성 덕분에 이 조건이 훨씬 강한 조건과 동치가 된다.
 
 ::: 명제 5
 콤팩트 지향 Riemannian manifold $M$ 위의 $k$-형식 $\alpha$에 대하여 다음이 동치이다.
@@ -107,11 +107,11 @@ $$
 이다. 두 항이 모두 음이 아닌 실수인데 그 합이 $0$이므로 각각 $0$이고, $L^2$-내적이 양의 정부호이므로 $d\alpha = 0$, $d^\ast\alpha = 0$이 따라온다.
 :::
 
-이 동치는 조화형식이 닫힌형식임을 보장한다. 조화형식은 $d\alpha = 0$이므로 cohomology class $[\alpha] \in H^k_{\mathrm{dR}}(M)$를 정의하며, 동시에 $d^\ast\alpha = 0$이라는 추가 조건이 그 류 안에서 $\alpha$를 특별한 위치에 놓는다. 닫힌형식 $\alpha + d\beta$ 가운데 $\alpha$가 조화라는 것은 그것이 같은 류 안에서 $L^2$-노름을 최소화한다는 것과 같다. $\lVert \alpha + d\beta \rVert^2 = \lVert \alpha \rVert^2 + 2(\alpha, d\beta) + \lVert d\beta \rVert^2 = \lVert \alpha \rVert^2 + 2(d^\ast\alpha, \beta) + \lVert d\beta \rVert^2 = \lVert \alpha \rVert^2 + \lVert d\beta \rVert^2 \geq \lVert \alpha \rVert^2$이기 때문이다 (여기서 $d^\ast\alpha = 0$을 썼다). 곧 조화 대표원은 각 류에서 가장 짧은 형식이다.
+이 동치는 조화형식이 닫힌형식임을 보장한다. 조화형식은 $d\alpha = 0$이므로 cohomology class $[\alpha] \in H^k_{\mathrm{dR}}(M)$를 정의하며, 동시에 $d^\ast\alpha = 0$이라는 추가 조건이 그 류 안에서 $\alpha$를 특별한 위치에 놓는다. 닫힌형식 $\alpha + d\beta$ 가운데 $\alpha$가 조화라는 것은 그것이 같은 류 안에서 $L^2$-norm을 최소화한다는 것과 같다. $\lVert \alpha + d\beta \rVert^2 = \lVert \alpha \rVert^2 + 2(\alpha, d\beta) + \lVert d\beta \rVert^2 = \lVert \alpha \rVert^2 + 2(d^\ast\alpha, \beta) + \lVert d\beta \rVert^2 = \lVert \alpha \rVert^2 + \lVert d\beta \rVert^2 \geq \lVert \alpha \rVert^2$이기 때문이다 (여기서 $d^\ast\alpha = 0$을 썼다). 곧 조화 대표원은 각 류에서 가장 짧은 형식이다.
 
 ## Hodge 정리
 
-조화형식이 각 cohomology class에서 노름 최소 대표라는 관찰은, 그러한 대표가 실제로 존재하고 유일한가라는 물음을 남긴다. 이것이 Hodge 이론의 해석적 심장이며, 그 답은 $\Delta_d$가 타원작용소라는 사실에서 나오는 깊은 결과이다.
+조화형식이 각 cohomology class에서 norm 최소 대표라는 관찰은, 그러한 대표가 실제로 존재하고 유일한가라는 물음을 남긴다. 이것이 Hodge 이론의 해석적 심장이며, 그 답은 $\Delta_d$가 타원작용소라는 사실에서 나오는 깊은 결과이다.
 
 ::: 정리 6 (Hodge 정리)
 $M$을 콤팩트 지향 Riemannian manifold라 하자. 그러면 각 $k$에 대하여 조화 $k$-형식 공간 $\mathcal{H}^k(M)$은 유한차원이고, $L^2$-직교분해
@@ -155,7 +155,7 @@ $$
 \Delta_\partial = \partial\partial^\ast + \partial^\ast\partial, \qquad \Delta_{\bar\partial} = \bar\partial\bar\partial^\ast + \bar\partial^\ast\bar\partial
 $$
 
-이다. 일반 Hermitian manifold에서는 이 셋이 서로 다른 작용소이며, 특히 $\Delta_d$가 차수보존인 반면 $\Delta_\partial$, $\Delta_{\bar\partial}$는 $(p,q)$-차수를 보존한다. Kähler 조건은 이 셋을 상수배로 묶어, $\Delta_d$의 조화형식이 자동으로 $(p,q)$-차수로 갈라지게 한다.
+이다. 일반 Hermitian manifold에서는 이 셋이 서로 다른 작용소이며, 특히 $\Delta_d$가 차수보존인 반면 $\Delta_\partial$, $\Delta_{\bar\partial}$는 $(p,q)$-degree를 보존한다. Kähler 조건은 이 셋을 상수배로 묶어, $\Delta_d$의 조화형식이 자동으로 $(p,q)$-degree로 갈라지게 한다.
 
 ::: 정리 7 (Kähler Laplace 항등식)
 $(X, J, g)$가 Kähler manifold이면
@@ -164,7 +164,7 @@ $$
 \Delta_d = 2\,\Delta_\partial = 2\,\Delta_{\bar\partial}
 $$
 
-이 성립한다. 특히 $\Delta_d$는 $(p,q)$-차수를 보존하며, 콤팩트 Kähler manifold에서 조화 $k$-형식 공간은
+이 성립한다. 특히 $\Delta_d$는 $(p,q)$-degree를 보존하며, 콤팩트 Kähler manifold에서 조화 $k$-형식 공간은
 
 $$
 \mathcal{H}^k_d(X) = \bigoplus_{p+q=k} \mathcal{H}^{p,q}_{\bar\partial}(X)
@@ -192,7 +192,7 @@ $$
 
 이다. 마지막 두 괄호의 교차항이 Kähler 항등식 아래에서 소멸함을 보이면 된다. $\bar\partial^\ast = -i[\Lambda, \partial]$를 쓰면 $\partial\bar\partial^\ast + \bar\partial^\ast\partial = -i\big( \partial\Lambda\partial - \partial\partial\Lambda + \Lambda\partial\partial - \partial\Lambda\partial \big) = -i(-\partial^2\Lambda + \Lambda\partial^2) = 0$이다 ($\partial^2 = 0$). 켤레로 $\bar\partial\partial^\ast + \partial^\ast\bar\partial = 0$도 따라온다. 따라서 교차항이 모두 사라져 $\Delta_d = \Delta_\partial + \Delta_{\bar\partial} = 2\Delta_{\bar\partial}$이다 ($\Delta_\partial = \Delta_{\bar\partial}$이므로). 같은 이유로 $\Delta_d = 2\Delta_\partial$이다.
 
-마지막으로 차수분해를 본다. $\Delta_{\bar\partial}$가 $(p,q)$-차수를 보존하므로 $\Delta_d = 2\Delta_{\bar\partial}$도 차수를 보존한다. 따라서 $k$-형식 $\alpha = \sum_{p+q=k}\alpha^{p,q}$가 $\Delta_d\alpha = 0$인 것은 각 차수 성분이 $\Delta_d\alpha^{p,q} = 0$, 곧 $\Delta_{\bar\partial}\alpha^{p,q} = 0$인 것과 동치이다. 그러므로 $\mathcal{H}^k_d(X) = \bigoplus_{p+q=k}\mathcal{H}^{p,q}_{\bar\partial}(X)$이다.
+마지막으로 차수분해를 본다. $\Delta_{\bar\partial}$가 $(p,q)$-degree를 보존하므로 $\Delta_d = 2\Delta_{\bar\partial}$도 degree를 보존한다. 따라서 $k$-형식 $\alpha = \sum_{p+q=k}\alpha^{p,q}$가 $\Delta_d\alpha = 0$인 것은 각 degree 성분이 $\Delta_d\alpha^{p,q} = 0$, 곧 $\Delta_{\bar\partial}\alpha^{p,q} = 0$인 것과 동치이다. 그러므로 $\mathcal{H}^k_d(X) = \bigoplus_{p+q=k}\mathcal{H}^{p,q}_{\bar\partial}(X)$이다.
 :::
 
 이 정리가 Hodge 이론의 전환점이다. 등식 $\Delta_d = 2\Delta_{\bar\partial}$은 Kähler 조건에서만 성립하며, 일반 Hermitian manifold에서는 두 Laplace 작용소가 일치하지 않고 따라서 조화형식의 차수분해도 깨진다. 콤팩트 Kähler manifold에서는 [정리 6](#thm6)의 조화 표현과 위 차수분해가 맞물려, de Rham cohomology가 차수별로 쪼개진다. 이 차수보존성이 다음 절의 Hodge 분해를 즉시 낳는다.
@@ -202,13 +202,13 @@ $$
 이제 콤팩트 Kähler manifold에서 de Rham cohomology의 $(p,q)$-분해를 정식화하고, 그것에 동반하는 복소켤레 대칭을 끌어낸다.
 
 ::: 정의 8
-콤팩트 Kähler manifold $X$에 대하여, $(p,q)$-차수의 *Hodge 부분공간<sub>Hodge subspace</sub>*을
+콤팩트 Kähler manifold $X$에 대하여, $(p,q)$-degree의 *Hodge 부분공간<sub>Hodge subspace</sub>*을
 
 $$
 H^{p,q}(X) = \{ [\alpha] \in H^{p+q}_{\mathrm{dR}}(X, \mathbb{C}) \mid \alpha \in \mathcal{H}^{p,q}_{\bar\partial}(X) \}
 $$
 
-로, 곧 $(p,q)$-차수의 조화형식이 대표하는 de Rham cohomology class들의 공간으로 정의한다. 그 복소차원 $h^{p,q}(X) = \dim_{\mathbb{C}} H^{p,q}(X)$를 *Hodge number<sub>호지 수</sub>*라 한다.
+로, 곧 $(p,q)$-degree의 조화형식이 대표하는 de Rham cohomology class들의 공간으로 정의한다. 그 복소차원 $h^{p,q}(X) = \dim_{\mathbb{C}} H^{p,q}(X)$를 *Hodge number<sub>호지 수</sub>*라 한다.
 :::
 
 [정리 7](#thm7)에 의해 $\mathcal{H}^{p,q}_{\bar\partial}(X) \subseteq \mathcal{H}^{p+q}_d(X)$이므로, 각 $(p,q)$-조화형식은 닫힌형식이고 de Rham 류를 잘 정의한다. 또 콤팩트 Hermitian manifold에서 Dolbeault cohomology가 $\bar\partial$-조화형식으로 실현되므로 ([정리 6](#thm6)의 $\bar\partial$-판본), $H^{p,q}(X)$는 $H^{p,q}_{\bar\partial}(X)$와 자연히 isomorphic이다. 곧 $H^{p,q}(X) \cong H^{p,q}_{\bar\partial}(X) \cong H^q(X, \Omega^p)$로, 마지막 동형은 [§Dolbeault 코호몰로지, ⁋정리 9](/ko/math/complex_geometry/dolbeault_cohomology#thm9)에서 온다. 이 동일시가 Hodge 수가 [§Dolbeault 코호몰로지, ⁋정의 4](/ko/math/complex_geometry/dolbeault_cohomology#def4)의 Hodge 수와 일치함을 보장한다.
@@ -254,24 +254,24 @@ $$
 b_k(X) = \sum_{p+q=k} h^{p,q}(X)
 $$
 
-이고, 홀수 차수 Betti 수는 모두 짝수이다. 곧 모든 $k$에 대해 $b_{2k+1}(X)$는 짝수이다.
+이고, 홀수 degree Betti 수는 모두 짝수이다. 곧 모든 $k$에 대해 $b_{2k+1}(X)$는 짝수이다.
 :::
 
 ::: 증명
 [정리 9](#thm9)의 direct sum 분해에서 차원을 세면 $b_k(X) = \dim_{\mathbb{C}} H^k_{\mathrm{dR}}(X, \mathbb{C}) = \sum_{p+q=k} \dim_{\mathbb{C}} H^{p,q}(X) = \sum_{p+q=k} h^{p,q}(X)$이다.
 
-홀수 차수의 경우 $k = 2l+1$로 두면, 합 $\sum_{p+q=2l+1} h^{p,q}$의 항들은 $p \neq q$인 쌍 $(p,q)$로만 이루어진다 ($p + q$가 홀수라 $p = q$가 불가능). 이 항들은 [정리 9](#thm9)의 Hodge 대칭 $h^{p,q} = h^{q,p}$에 의해 $(p,q)$와 $(q,p)$가 같은 값을 갖는 쌍으로 묶이며, 두 index가 서로 다르므로 각 쌍이 서로 다른 두 항을 준다. 따라서
+홀수 degree의 경우 $k = 2l+1$로 두면, 합 $\sum_{p+q=2l+1} h^{p,q}$의 항들은 $p \neq q$인 쌍 $(p,q)$로만 이루어진다 ($p + q$가 홀수라 $p = q$가 불가능). 이 항들은 [정리 9](#thm9)의 Hodge 대칭 $h^{p,q} = h^{q,p}$에 의해 $(p,q)$와 $(q,p)$가 같은 값을 갖는 쌍으로 묶이며, 두 index가 서로 다르므로 각 쌍이 서로 다른 두 항을 준다. 따라서
 
 $$
 b_{2l+1}(X) = \sum_{p+q=2l+1} h^{p,q}(X) = 2 \sum_{\substack{p+q=2l+1 \\ p < q}} h^{p,q}(X)
 $$
 
-로 $2$의 배수이다. 곧 홀수 차수 Betti 수는 짝수이다.
+로 $2$의 배수이다. 곧 홀수 degree Betti 수는 짝수이다.
 :::
 
-가장 단순한 경우 $k = 1$에서 $b_1(X) = h^{1,0}(X) + h^{0,1}(X) = 2 h^{1,0}(X)$로, 첫 Betti 수가 holomorphic 1-form space 차원의 두 배가 된다. 이 짝수성은 콤팩트 complex manifold가 Kähler인지를 가르는 가장 손쉬운 장애이다. Hopf 곡면 $S^1 \times S^3$은 콤팩트 complex manifold이면서 $b_1 = 1$이 홀수이므로, 어떤 Hermitian 계량으로도 Kähler 구조를 가질 수 없다 ([§Kähler 다양체, ⁋명제 11](/ko/math/complex_geometry/kahler_manifolds#prop11)이 짝수 차수에 준 장애를 홀수 차수로 보완한다). 이로써 Kähler 조건은 짝수 Betti 수의 양성($b_{2k} \geq 1$)과 홀수 Betti 수의 짝수성이라는 두 위상적 제약을 동시에 부과한다.
+가장 단순한 경우 $k = 1$에서 $b_1(X) = h^{1,0}(X) + h^{0,1}(X) = 2 h^{1,0}(X)$로, 첫 Betti 수가 holomorphic 1-form space 차원의 두 배가 된다. 이 짝수성은 콤팩트 complex manifold가 Kähler인지를 가르는 가장 손쉬운 장애이다. Hopf 곡면 $S^1 \times S^3$은 콤팩트 complex manifold이면서 $b_1 = 1$이 홀수이므로, 어떤 Hermitian 계량으로도 Kähler 구조를 가질 수 없다 ([§Kähler 다양체, ⁋명제 11](/ko/math/complex_geometry/kahler_manifolds#prop11)이 짝수 degree에 준 장애를 홀수 degree로 보완한다). 이로써 Kähler 조건은 짝수 Betti 수의 양성($b_{2k} \geq 1$)과 홀수 Betti 수의 짝수성이라는 두 위상적 제약을 동시에 부과한다.
 
-Hodge 수들을 차수에 따라 마름모꼴로 배열한 것을 Hodge 다이아몬드라 부르며, 이는 한 콤팩트 Kähler manifold의 cohomology 구조를 한눈에 담는다. $h^{p,q}$를 $(p,q)$ 위치에 두고 위에서 아래로 $k = p + q$가 커지도록 쌓으면, Hodge 대칭은 수직축에 대한 좌우 대칭으로, 복소차원 $n$의 [\[대수적 위상수학\] §푸앵카레 쌍대성, ⁋정리 11](/ko/math/algebraic_topology/Poincare_duality#thm11)에서 오는 $h^{p,q} = h^{n-p, n-q}$는 중심에 대한 점대칭으로 나타난다. 아래 그림은 복소곡면($n = 2$)의 Hodge 다이아몬드를 보여준다.
+Hodge 수들을 degree에 따라 마름모꼴로 배열한 것을 Hodge 다이아몬드라 부르며, 이는 한 콤팩트 Kähler manifold의 cohomology 구조를 한눈에 담는다. $h^{p,q}$를 $(p,q)$ 위치에 두고 위에서 아래로 $k = p + q$가 커지도록 쌓으면, Hodge 대칭은 수직축에 대한 좌우 대칭으로, 복소차원 $n$의 [\[대수적 위상수학\] §푸앵카레 쌍대성, ⁋정리 11](/ko/math/algebraic_topology/Poincare_duality#thm11)에서 오는 $h^{p,q} = h^{n-p, n-q}$는 중심에 대한 점대칭으로 나타난다. 아래 그림은 복소곡면($n = 2$)의 Hodge 다이아몬드를 보여준다.
 
 ![복소곡면 n=2의 Hodge 다이아몬드: h^{p,q}를 마름모꼴로 배열, 수직축 좌우대칭이 Hodge 대칭](/assets/images/Math/Complex_Geometry/Hodge_Theory-1.svg){:style="width:22.97em" class="invert" .align-center}
 
@@ -286,7 +286,7 @@ $$
 H^k_{\mathrm{dR}}(\mathbb{CP}^n, \mathbb{C}) = \begin{cases} \mathbb{C} & k = 0, 2, 4, \ldots, 2n \\ 0 & \text{그 외} \end{cases}
 $$
 
-로, $0$이 아닌 cohomology는 짝수 차수에만 있고 각각 $1$차원이며 Kähler 형식의 거듭제곱 $[\omega^p]$가 생성한다. 따라서 Hodge 분해에서 $H^{2p}_{\mathrm{dR}} = H^{p,p}(\mathbb{CP}^n)$만 비고 나머지 $H^{p,q}$ ($p \neq q$)는 모두 $0$이다. 곧 Hodge 수는
+로, $0$이 아닌 cohomology는 짝수 degree에만 있고 각각 $1$차원이며 Kähler 형식의 거듭제곱 $[\omega^p]$가 생성한다. 따라서 Hodge 분해에서 $H^{2p}_{\mathrm{dR}} = H^{p,p}(\mathbb{CP}^n)$만 비고 나머지 $H^{p,q}$ ($p \neq q$)는 모두 $0$이다. 곧 Hodge 수는
 
 $$
 h^{p,q}(\mathbb{CP}^n) = \begin{cases} 1 & p = q,\ 0 \leq p \leq n \\ 0 & p \neq q \end{cases}
@@ -311,7 +311,7 @@ $$
 로 정의한다. 그 $L^2$-수반작용소 $\Lambda : H^k(X, \mathbb{C}) \rightarrow H^{k-2}(X, \mathbb{C})$를 *contraction operator<sub>축약 연산자</sub>*라 한다.
 :::
 
-연산자 $L$이 cohomology에서 잘 정의됨은 $\omega$가 닫힌형식이라 닫힌형식을 닫힌형식으로, 완전형식을 완전형식으로 보내기 때문이다. $L$은 차수를 $2$씩 올리며, $\omega$가 실 $(1,1)$-형식이므로 $H^{p,q}$를 $H^{p+1, q+1}$로 보내 Hodge 분해와 어울린다. 형식 수준에서 $L$과 $\Lambda = L^\ast$는 [§Kähler 다양체, ⁋정리 12](/ko/math/complex_geometry/kahler_manifolds#thm12)에 나온 바로 그 작용소들이며, cohomology로 내려와 다음 정리를 만족한다.
+연산자 $L$이 cohomology에서 잘 정의됨은 $\omega$가 닫힌형식이라 닫힌형식을 닫힌형식으로, 완전형식을 완전형식으로 보내기 때문이다. $L$은 degree를 $2$씩 올리며, $\omega$가 실 $(1,1)$-형식이므로 $H^{p,q}$를 $H^{p+1, q+1}$로 보내 Hodge 분해와 어울린다. 형식 수준에서 $L$과 $\Lambda = L^\ast$는 [§Kähler 다양체, ⁋정리 12](/ko/math/complex_geometry/kahler_manifolds#thm12)에 나온 바로 그 작용소들이며, cohomology로 내려와 다음 정리를 만족한다.
 
 ::: 정리 13 (Hard Lefschetz 정리)
 $X$를 콤팩트 Kähler manifold, $n = \dim_{\mathbb{C}} X$라 하자. 그러면 각 $0 \leq k \leq n$에 대하여 $L$의 거듭제곱
@@ -329,7 +329,7 @@ $$
 이 성립한다.
 :::
 
-이 정리는 Hodge 정리와 같은 타원작용소 이론의 산물로, $L$, $\Lambda$, 그리고 차수를 세는 작용소 $H = [L, \Lambda]$가 콤팩트 Kähler manifold의 조화형식 공간 위에서 $\mathfrak{sl}_2$의 표현을 이룬다는 사실에서 따라온다. 그 표현론적 구조가 $L^{n-k}$의 동형성과 primitive 분해를 동시에 강제한다. 우리는 이 정리를 증명 없이 인용하며, 그 형식 수준의 핵심 입력인 Kähler 항등식은 [§Kähler 다양체, ⁋정리 12](/ko/math/complex_geometry/kahler_manifolds#thm12)에서 이미 확보하였다. Hard Lefschetz 정리의 한 가지 즉각적 귀결은 Betti 수의 단봉성, 곧 $b_0 \leq b_2 \leq \cdots \leq b_{2\lfloor n/2 \rfloor}$이며 ($L^{n-k}$가 단사라 $b_k \leq b_{2n-k}$이고 Poincaré 쌍대로 $b_k = b_{2n-k}$, 또 $L$이 $k \leq n-1$에서 단사라 $b_k \leq b_{k+2}$), 이는 콤팩트 Kähler manifold의 Hodge 다이아몬드가 중앙으로 갈수록 넓어지는 형태임을 뜻한다. $\mathbb{CP}^n$의 Hodge 다이아몬드에서 $L : H^{2p} \rightarrow H^{2p+2}$이 $0 \leq p \leq n-1$에서 동형이라는 것이 그 가장 단순한 예이며 ([예시 11](#ex11)), 거기서 모든 짝수 cohomology가 $[\omega^p]$로 생성됨이 바로 $L^p[\,1\,] = [\omega^p]$의 비소멸로 설명된다.
+이 정리는 Hodge 정리와 같은 타원작용소 이론의 산물로, $L$, $\Lambda$, 그리고 degree를 세는 작용소 $H = [L, \Lambda]$가 콤팩트 Kähler manifold의 조화형식 공간 위에서 $\mathfrak{sl}_2$의 representation을 이룬다는 사실에서 따라온다. 그 표현론적 구조가 $L^{n-k}$의 동형성과 primitive 분해를 동시에 강제한다. 우리는 이 정리를 증명 없이 인용하며, 그 형식 수준의 핵심 입력인 Kähler 항등식은 [§Kähler 다양체, ⁋정리 12](/ko/math/complex_geometry/kahler_manifolds#thm12)에서 이미 확보하였다. Hard Lefschetz 정리의 한 가지 즉각적 귀결은 Betti 수의 단봉성, 곧 $b_0 \leq b_2 \leq \cdots \leq b_{2\lfloor n/2 \rfloor}$이며 ($L^{n-k}$가 단사라 $b_k \leq b_{2n-k}$이고 Poincaré 쌍대로 $b_k = b_{2n-k}$, 또 $L$이 $k \leq n-1$에서 단사라 $b_k \leq b_{k+2}$), 이는 콤팩트 Kähler manifold의 Hodge 다이아몬드가 중앙으로 갈수록 넓어지는 형태임을 뜻한다. $\mathbb{CP}^n$의 Hodge 다이아몬드에서 $L : H^{2p} \rightarrow H^{2p+2}$이 $0 \leq p \leq n-1$에서 동형이라는 것이 그 가장 단순한 예이며 ([예시 11](#ex11)), 거기서 모든 짝수 cohomology가 $[\omega^p]$로 생성됨이 바로 $L^p[\,1\,] = [\omega^p]$의 비소멸로 설명된다.
 
 ---
 

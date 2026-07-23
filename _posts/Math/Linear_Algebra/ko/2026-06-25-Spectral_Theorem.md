@@ -36,10 +36,10 @@ $$\langle Lv,w\rangle=\langle v,Lw\rangle$$
 Self-adjoint operator의 대각화에서 핵심이 되는 사실은, (실수) symmetric matrix의 고윳값이 항상 실수라는 것이다. 
 
 ::: 보조정리 2
-실수 symmetric matrix $A$의 모든 고윳값은 실수이다. 즉 $A$의 특성다항식의 모든 근은 실수이다. 
+실수 symmetric matrix $A$의 모든 고윳값은 실수이다. 즉 $A$의 특성다항식의 모든 root는 실수이다. 
 :::
 ::: 증명
-$A$의 특성다항식은 실수를 계수로 갖는 $n$차 다항식이며, [§특성다항식, ⁋정리 8](/ko/math/linear_algebra/characteristic_polynomial#thm8)에 의하여, 이 다항식은 $\mathbb{C}$까지 포함하면 $n$개의 근 $\lambda$를 가진다. 
+$A$의 특성다항식은 실수를 계수로 갖는 $n$차 다항식이며, [§특성다항식, ⁋정리 8](/ko/math/linear_algebra/characteristic_polynomial#thm8)에 의하여, 이 다항식은 $\mathbb{C}$까지 포함하면 $n$개의 root $\lambda$를 가진다. 
 
 이제 이에 해당하는 eigenvector $z\in\mathbb{C}^n$를 생각하고, $z$의 각 성분을 켤레복소수로 바꾼 벡터를 $\bar z$라 하고, 다음의 복소수
 
@@ -62,7 +62,7 @@ $$\bar s=\overline{\bar z^tAz}=z^t\bar A\bar z=z^tA\bar z=(z^tA\bar z)^t=\bar z^
 $0$이 아닌 $\mathbb{R}$-내적공간 $V$ 위의 self-adjoint operator $L:V\rightarrow V$는 항상 고유벡터를 가진다. 
 :::
 ::: 증명
-$V$의 orthonormal basis를 택하면 $L$의 행렬표현 $A$는 실수 symmetric matrix이다. $\dim V\geq 1$이므로 $A$의 특성다항식은 차수가 $1$ 이상이고, 대수학의 기본정리에 의하여 $\mathbb{C}$에서 근을 가진다. [보조정리 2](#lem2)에 의하여 이 근은 실수이므로, $A$는 실수인 고윳값 $\lambda$를 가진다. 그럼 $\lambda I-A$가 singular이므로 $(\lambda I-A)v=0$을 만족하는 영이 아닌 $v\in\mathbb{R}^n$이 존재하고, 이것이 $L$의 고유벡터이다. 
+$V$의 orthonormal basis를 택하면 $L$의 행렬표현 $A$는 실수 symmetric matrix이다. $\dim V\geq 1$이므로 $A$의 특성다항식은 degree가 $1$ 이상이고, 대수학의 기본정리에 의하여 $\mathbb{C}$에서 root를 가진다. [보조정리 2](#lem2)에 의하여 이 root는 실수이므로, $A$는 실수인 고윳값 $\lambda$를 가진다. 그럼 $\lambda I-A$가 singular이므로 $(\lambda I-A)v=0$을 만족하는 영이 아닌 $v\in\mathbb{R}^n$이 존재하고, 이것이 $L$의 고유벡터이다. 
 :::
 
 ## 스펙트럼 정리
@@ -80,7 +80,7 @@ $$\langle Lw,u\rangle=\langle w,Lu\rangle$$
 이고, $L(U)\subseteq U$이므로 $Lu\in U$이며 $w\in U^\perp$이므로 $\langle w,Lu\rangle=0$이다. 즉 $\langle Lw,u\rangle=0$이 모든 $u\in U$에 대해 성립하므로 $Lw\in U^\perp$이다. 
 :::
 
-이제 스펙트럼 정리를 증명할 준비가 되었다. 
+이제 spectrum 정리를 증명할 준비가 되었다. 
 
 ::: 정리 5 (스펙트럼 정리)
 $\mathbb{R}$-내적공간 $V$ 위의 self-adjoint operator $L:V\rightarrow V$에 대하여, $L$의 고유벡터들로 이루어진 $V$의 orthonormal basis가 존재한다. 특히 이 고윳값들은 모두 실수이다. 

@@ -45,7 +45,7 @@ $$NM=(\det M) I_r$$
 
 이 성립하도록 하는 $r\times r$ 행렬 $N$이 존재한다. 이제 양 변에서 $a_j$에 해당하는 열벡터가 어디로 가는지를 계산해보면 우리는 반드시 $(\det M)a_j=0$이 모든 $j$에 대해 성립해야 하는 것을 알고, 따라서 $(\det M)\mathfrak{a}=0$이 성립한다. 
 
-한편, 행렬 $M$은 그 정의에 의하여 $\mathfrak{a}$로 자른 후에는 $I_r$이 되며, 따라서 그 행렬식 $\det M$ 또한 (modulo $\mathfrak{a}$로) $1$이 된다. 이제 $e=1-D$로 두면 $e$가 원하는 idempotent가 된다. 
+한편, 행렬 $M$은 그 정의에 의하여 $\mathfrak{a}$로 자른 후에는 $I_r$이 되며, 따라서 그 행렬식 $\det M$ 또한 (modulo $\mathfrak{a}$로) $1$이 된다. 이제 $e=1-\det M$으로 두면 $e$가 원하는 idempotent가 된다. 
 :::
 
 그럼 étale algebra에 대한 differential characterization은 다음과 같이 주어진다. 
@@ -54,7 +54,7 @@ $$NM=(\det M) I_r$$
 Finite degree commutative $\mathbb{K}$-algebra $A$에 대하여, $A$가 étale인 것과 $\Omega_{A/\mathbb{K}}=0$인 것이 동치이다. 
 :::
 ::: 증명
-우선 $\Omega_{A/\mathbb{K}}$와 étale algebra의 개념은 base change에 대해 잘 행동하므로 우리는 $\mathbb{K}$가 algebraically closure라 가정해도 된다. 더 정확히 말해, $A$가 étale인 것은 $\mathbb{K}$의 algebraic closure $\overline{\mathbb{K}}$에 대해 $\overline{\mathbb{K}}$-algebra $A_{(\overline{\mathbb{K}})}=A\otimes_\mathbb{K}\overline{\mathbb{K}}$이 diagonalizable인 것과 동치이며 ([§에탈대수, ⁋명제 8](/ko/math/field_theory/etale_algebras#prop8), 한편 [\[다중선형대수학\] §미분가군, ⁋명제 12](/ko/math/multilinear_algebra/differential_modules#prop12)의 canonical isomorphism과 $\overline{\mathbb{K}}$-algebra $A_{(\overline{\mathbb{K}})}$의 정의에 의하여 다음의 isomorphism
+우선 $\Omega_{A/\mathbb{K}}$와 étale algebra의 개념은 base change에 대해 잘 행동하므로 우리는 $\mathbb{K}$가 algebraically closure라 가정해도 된다. 더 정확히 말해, $A$가 étale인 것은 $\mathbb{K}$의 algebraic closure $\overline{\mathbb{K}}$에 대해 $\overline{\mathbb{K}}$-algebra $A_{(\overline{\mathbb{K}})}=A\otimes_\mathbb{K}\overline{\mathbb{K}}$이 diagonalizable인 것과 동치이며 ([§에탈대수, ⁋명제 8](/ko/math/field_theory/etale_algebras#prop8)), 한편 [\[다중선형대수학\] §미분가군, ⁋명제 12](/ko/math/multilinear_algebra/differential_modules#prop12)의 canonical isomorphism과 $\overline{\mathbb{K}}$-algebra $A_{(\overline{\mathbb{K}})}$의 정의에 의하여 다음의 isomorphism
 
 $$\Omega_{A_{(\overline{\mathbb{K}})}/\overline{\mathbb{K}}}\cong \Omega_{A/\mathbb{K}}\otimes_A A_{(\overline{\mathbb{K}})}=\Omega_{A/\mathbb{K}}\otimes_A A\otimes_\mathbb{K}\overline{\mathbb{K}}\cong \Omega_{A/\mathbb{K}}\otimes_\mathbb{K}\overline{\mathbb{K}}$$
 
@@ -73,7 +73,7 @@ $$A\cong \mathfrak{a}\oplus\mathfrak{m}\cong \mathbb{K}\times A/\mathfrak{a}$$
 으로 적을 수 있다. 이제 $\Omega$가 right exact functor이므로 ([\[다중선형대수학\] §미분가군, ⁋명제 13](/ko/math/multilinear_algebra/differential_modules#prop13)) $\Omega_{(A/\mathfrak{a})/\mathbb{K}}$는 $\Omega_{A/\mathbb{K}}=0$의 quotient가 되어 $0$이다. 따라서, $A/\mathfrak{a}$는 귀납적 가정에 의하여 diagonalizable이고, 이를 $\mathbb{K}$와 곱한 $A$ 또한 마찬가지이다. 
 :::
 
-앞서 우리는 [§제곱근확대체, ⁋예시 9](/ko/math/field_theory/radical_extensions#ex9)에서 갈루아 이론을 전개할 때 문제가 될 수 있는 상황을 살펴보았었는데, 이 예시를 바탕으로 [정리 3](#thm3)을 살펴보자. 
+앞서 우리는 [§제곱근확대체, ⁋예시 9](/ko/math/field_theory/radical_extensions#ex9)에서 Galois 이론을 전개할 때 문제가 될 수 있는 상황을 살펴보았었는데, 이 예시를 바탕으로 [정리 3](#thm3)을 살펴보자. 
 
 ::: 예시 4
 좋은 경우는, [§제곱근확대체](/ko/math/field_theory/radical_extensions)의 서두에서 살펴보았듯, $\mathbb{Q}(\sqrt{2})/\mathbb{Q}$가 있다. 우리는 [\[다중선형대수학\] §미분가군, ⁋예시 10](/ko/math/multilinear_algebra/differential_modules#ex10)의 계산으로부터, $\Omega_{\mathbb{Q}[\x]/\mathbb{Q}}$는 $d\x$로 생성되는 free $\mathbb{Q}[\x]$-module임을 안다. 한편 $\mathbb{Q}[\x]$의 ideal $\mathfrak{I}=(\x^2-2)$를 생각하면 [\[다중선형대수학\] §미분가군, ⁋명제 14](/ko/math/multilinear_algebra/differential_modules#prop14)로부터 다음의 exact sequence
@@ -154,7 +154,7 @@ Field $\mathbb{K}$가 perfect인 것과 임의의 algebraic extension $\mathbb{L
 
 결론에 반하여 $\mathbb{K}$가 perfect가 아니라 가정하고, 따라서 characteristic $p\neq 0$을 갖는다 하자. 그럼 $\mathbb{K}$가 perfect가 아니라는 가정으로부터 (algebraic closure $\overline{\mathbb{K}}/\mathbb{K}$ 안에서의 relative) $p$-radical extension $\mathbb{K}(a)/\mathbb{K}$를 생각할 수 있다. 한편, embedding $\mathbb{K}\hookrightarrow\overline{\mathbb{K}}$로부터 얻어지는 $\mathbb{K}(a)\rightarrow\overline{\mathbb{K}}$는 [§제곱근확대체, ⁋명제 6](/ko/math/field_theory/radical_extensions#prop6)에 의하여 유일하다. 다르게 말하면, 집합 $\Hom_{\Alg{\mathbb{K}}}(\mathbb{K}(a), \overline{\mathbb{K}})$는 singleton이며 따라서 
 
-$$1=[\mathbb{K}(a):\mathbb{K}]_s\nleq [\mathbb{K}(a):\mathbb{K}]=p^e$$
+$$1=[\mathbb{K}(a):\mathbb{K}]_s\lneq [\mathbb{K}(a):\mathbb{K}]=p^e$$
 
 이므로 $\mathbb{K}(a)$는 étale이 아니고 따라서 separable이 아니다. 
 :::

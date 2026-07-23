@@ -45,7 +45,7 @@ $$\iint_D \lvert \mathbf{r}_u \times \mathbf{r}_v\rvert \mathop{du}\mathop{dv}$$
 and we write the area element as $dS = \lvert \mathbf{r}_u \times \mathbf{r}_v\rvert \mathop{du}\mathop{dv}$.
 :::
 
-The area element $dS$ plays the same role as the Jacobian determinant in multiple integrals, and with this area element we can integrate a scalar quantity distributed over the surface.
+The area element $dS$ plays the same role as the Jacobian determinant in multiple integrals, and with this area element $dS$ we can integrate a scalar quantity distributed over the surface.
 
 ::: Definition 3
 The *surface integral* of a continuous scalar field $f$ on a surface $S$ is

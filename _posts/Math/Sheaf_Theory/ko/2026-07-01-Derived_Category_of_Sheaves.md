@@ -57,7 +57,7 @@ $$\mathcal{I} = \prod_{x \in X} (i_x)_\ast I_x$$
 $$\Hom_{\operatorname{Mod}(\mathcal{O}_X)}(\mathcal{G}, (i_x)_\ast I_x) \cong \Hom_{\mathcal{O}_{X,x}}(\mathcal{G}_x, I_x)$$
 가 성립한다. 이 adjunction 동형의 우변에서 right adjoint $(i_x)_\ast$는 exact functor $i_x^{-1}$의 right adjoint이므로 injective object를 보존하고, $I_x$가 injective이므로 $(i_x)_\ast I_x$는 injective $\mathcal{O}_X$-module이다. Injective object의 곱은 injective이므로 $\mathcal{I}$도 injective이다.
 
-마지막으로 단사 $\mathcal{F} \hookrightarrow \mathcal{I}$를 구성한다. 각 $x$마다 위 adjunction에 의해 합성 $\mathcal{F}_x \hookrightarrow I_x$는 sheaf morphism $\mathcal{F} \rightarrow (i_x)_\ast I_x$에 대응하고, 이들을 모아 $\mathcal{F} \rightarrow \mathcal{I}$를 얻는다. 이 morphism이 단사임은 stalk를 점 $y$에서 보아 확인한다. 곱 $\mathcal{I} = \prod_x (i_x)_\ast I_x$에는 $y$ 성분으로의 projection $\mathcal{I} \rightarrow (i_y)_\ast I_y$가 있고, skyscraper sheaf의 stalk가 $((i_y)_\ast I_y)_y = I_y$이므로 이 projection의 stalk를 $y$에서 취하면 사상 $\mathcal{I}_y \rightarrow I_y$를 얻는다. 합성 $\mathcal{F}_y \rightarrow \mathcal{I}_y \rightarrow I_y$는 구성에 의해 처음에 택한 단사 $\mathcal{F}_y \hookrightarrow I_y$와 일치하므로 $\mathcal{F}_y \rightarrow \mathcal{I}_y$ 또한 단사이고, 모든 $y$에서 stalk가 단사이므로 [명제 1](#prop1)에 의해 $\mathcal{F} \rightarrow \mathcal{I}$는 monomorphism이다.
+마지막으로 단사 $\mathcal{F} \hookrightarrow \mathcal{I}$를 구성한다. 각 $x$마다 위 adjunction에 의해 합성 $\mathcal{F}_x \hookrightarrow I_x$는 sheaf morphism $\mathcal{F} \rightarrow (i_x)_\ast I_x$에 대응하고, 이들을 모아 $\mathcal{F} \rightarrow \mathcal{I}$를 얻는다. 이 morphism이 단사임은 stalk를 점 $y$에서 보아 확인한다. 곱 $\mathcal{I} = \prod_x (i_x)_\ast I_x$에는 $y$ 성분으로의 projection $\mathcal{I} \rightarrow (i_y)_\ast I_y$가 있고, skyscraper sheaf의 stalk가 $((i_y)_\ast I_y)_y = I_y$이므로 이 projection의 stalk를 $y$에서 취하면 morphism $\mathcal{I}_y \rightarrow I_y$를 얻는다. 합성 $\mathcal{F}_y \rightarrow \mathcal{I}_y \rightarrow I_y$는 구성에 의해 처음에 택한 단사 $\mathcal{F}_y \hookrightarrow I_y$와 일치하므로 $\mathcal{F}_y \rightarrow \mathcal{I}_y$ 또한 단사이고, 모든 $y$에서 stalk가 단사이므로 [명제 1](#prop1)에 의해 $\mathcal{F} \rightarrow \mathcal{I}$는 monomorphism이다.
 :::
 
 이 정리로부터 $\Sh(X)$ 위에서 $D(\mathcal{A})$의 모든 추상적 기계를 가동할 수 있게 된다. 특히 bounded below derived category $D^+(\Sh(X))$의 임의의 complex는 $K$-injective resolution을 가지며 ([\[호몰로지 대수학\] §유도카테고리, ⁋명제 7](/ko/math/homological_algebra/derived_categories#prop7) 직후의 서술), 따라서 임의의 left exact functor의 right derived functor가 정의된다.
@@ -65,7 +65,7 @@ $$\Hom_{\operatorname{Mod}(\mathcal{O}_X)}(\mathcal{G}, (i_x)_\ast I_x) \cong \H
 ::: 따름정리 3
 위상공간 $X$에 대해 $D^+(\Sh(X))$ 위의 right derived functor
 $$R\Gamma(X, -): D^+(\Sh(X)) \rightarrow D^+(\Ab), \qquad Rf_\ast: D^+(\Sh(X)) \rightarrow D^+(\Sh(Y))$$
-가 존재한다. 여기서 $f: X \rightarrow Y$는 continuous map이다. 한 점으로의 사상 $a_X: X \rightarrow \{\ast\}$에 대해 $\Sh(\{\ast\}) = \Ab$이고 $(a_X)_\ast = \Gamma(X, -)$이므로, $R\Gamma(X, -) = R(a_X)_\ast$이다.
+가 존재한다. 여기서 $f: X \rightarrow Y$는 continuous map이다. 한 점으로의 morphism $a_X: X \rightarrow \{\ast\}$에 대해 $\Sh(\{\ast\}) = \Ab$이고 $(a_X)_\ast = \Gamma(X, -)$이므로, $R\Gamma(X, -) = R(a_X)_\ast$이다.
 :::
 ::: 증명
 $\Gamma(X, -)$와 $f_\ast$는 모두 left exact functor이다. $f_\ast$의 left exactness는 그것이 exact functor $f^{-1}$의 right adjoint이기 때문이고 ([\[위상수학\] §층, ⁋보조정리 11](/ko/math/topology/sheaves#lem11)), $\Gamma(X, -) = (a_X)_\ast$는 그 특수한 경우이다. [정리 2](#thm2)에 의해 $\Sh(X)$가 충분한 injective를 가지므로, [\[호몰로지 대수학\] §유도카테고리, ⁋정의 8](/ko/math/homological_algebra/derived_categories#def8)의 right derived functor 구성이 그대로 적용된다. $\{\ast\}$ 위의 sheaf는 그 유일한 열린집합 $\{\ast\}$ 위의 section, 즉 하나의 abelian group으로 결정되므로 $\Sh(\{\ast\}) = \Ab$이고, 정의에 의해 $(a_X)_\ast \mathcal{F} = \mathcal{F}(X) = \Gamma(X, \mathcal{F})$이다.
@@ -103,7 +103,7 @@ Continuous map $f: X \rightarrow Y$에 대해 $f^{-1}: \Sh(Y) \rightarrow \Sh(X)
 $f^{-1}$은 stalk를 보존한다. 정확히는 임의의 sheaf $\mathcal{G} \in \Sh(Y)$와 점 $x \in X$에 대해 $(f^{-1}\mathcal{G})_x \cong \mathcal{G}_{f(x)}$이다. 이는 $f^{-1}\mathcal{G}$가 presheaf $U \mapsto \varinjlim_{V \supseteq f(U)} \mathcal{G}(V)$의 sheafification으로 정의되는 것 ([\[위상수학\] §층, ⁋정의 10](/ko/math/topology/sheaves#def10) 및 그 구성식)으로부터, stalk를 취하면 $f(x)$를 포함하는 열린집합들에 대한 colimit이 되어 $\mathcal{G}_{f(x)}$가 되기 때문이다. Stalk functor $\mathcal{G} \mapsto \mathcal{G}_{f(x)}$는 exact하므로 ([명제 1](#prop1)의 stalk 판정), $f^{-1}$은 short exact sequence를 short exact sequence로 보낸다. Exact functor는 quasi-isomorphism을 보존하므로 $D(\Sh(Y)) \rightarrow D(\Sh(X))$로 곧바로 내려가며, derived functor의 정의에서 resolution이 불필요해 $Lf^{-1} = f^{-1} = Rf^{-1}$이다.
 :::
 
-$\Sh(X; \Ab)$ 수준에서는 이것으로 충분하지만, ringed space의 경우에는 더 미묘한 점이 있다. $f: (X, \mathcal{O}_X) \rightarrow (Y, \mathcal{O}_Y)$가 ringed space 사이의 morphism일 때, $\mathcal{O}_Y$-module의 당김은 단순한 $f^{-1}$이 아니라 $f^{-1}\mathcal{O}_Y$-module을 $\mathcal{O}_X$-module로 확장하는 단계를 포함한다.
+$\Sh(X; \Ab)$ 수준에서는 이것으로 충분하지만, ringed space의 경우에는 더 미묘한 점이 있다. $f: (X, \mathcal{O}_X) \rightarrow (Y, \mathcal{O}_Y)$가 ringed space 사이의 morphism일 때, $\mathcal{O}_Y$-module의 pullback은 단순한 $f^{-1}$이 아니라 $f^{-1}\mathcal{O}_Y$-module을 $\mathcal{O}_X$-module로 확장하는 단계를 포함한다.
 
 ::: 정의 6
 Ringed space 사이의 morphism $f: (X, \mathcal{O}_X) \rightarrow (Y, \mathcal{O}_Y)$가 주어졌다 하자. $\mathcal{O}_Y$-module $\mathcal{G}$의 *module pullback<sub>가군 당김</sub>* $f^\ast \mathcal{G}$를
@@ -166,7 +166,7 @@ derived category로 옮긴 가장 큰 이득은 합성에서 드러난다. 미�
 ::: 정리 10 (Grothendieck composite functor 정리)
 Continuous map $f: X \rightarrow Y$, $g: Y \rightarrow Z$에 대해 $D^+(\Sh(X))$ 위에서 자연스러운 동형
 $$R(g f)_\ast \cong Rg_\ast \circ Rf_\ast$$
-가 성립한다. 같은 동형이 ringed space 사이의 사상에 대한 $\operatorname{Mod}(\mathcal{O}_X)$ 차원에서도 성립한다.
+가 성립한다. 같은 동형이 ringed space 사이의 morphism에 대한 $\operatorname{Mod}(\mathcal{O}_X)$ 차원에서도 성립한다.
 :::
 ::: 증명
 핵심은 $f_\ast$가 injective sheaf를 $g_\ast$-acyclic sheaf로 보낸다는 사실이다. $f_\ast$는 exact functor $f^{-1}$의 right adjoint이므로 injective object를 injective object로 보낸다. 즉 $\mathcal{I}$가 injective이면 $f_\ast \mathcal{I}$도 injective이고, injective sheaf는 flasque이며 ([\[대수다양체\] §층 코호몰로지, ⁋보조정리 9](/ko/math/algebraic_varieties/sheaf_cohomology#lem9)) flasque sheaf는 $g_\ast$-acyclic이다 ([명제 4](#prop4)의 증명).
@@ -190,13 +190,13 @@ $$E_2^{p,q} = H^p(Y, R^q f_\ast \mathcal{F}) \Rightarrow H^{p+q}(X, \mathcal{F})
 원 $S^1$ 위의 constant sheaf $\mathbb{Z}_{S^1}$의 cohomology를 구하고, 이로부터 torus $T^2 = S^1 \times S^1$의 cohomology를 Leray spectral sequence로 복원한다.
 :::
 
-먼저 $a: S^1 \rightarrow \{\ast\}$에 대한 $R\Gamma(S^1, \mathbb{Z}_{S^1}) = Ra_\ast \mathbb{Z}_{S^1}$을 계산한다. $S^1$을 두 호 $U, V$로 덮자. 각각은 열린 구간과 위상동형이고 $U \cap V$는 서로소인 두 호 $W_1 \sqcup W_2$이며, $U$, $V$, $W_1$, $W_2$는 모두 가축이라 그 위에서 $\mathbb{Z}$ 계수 cohomology가 차수 $0$에 집중된다. 이 covering에 대한 Čech complex를 적으면 ([\[대수다양체\] §층 코호몰로지, ⁋정의 3](/ko/math/algebraic_varieties/sheaf_cohomology#def3))
+먼저 $a: S^1 \rightarrow \{\ast\}$에 대한 $R\Gamma(S^1, \mathbb{Z}_{S^1}) = Ra_\ast \mathbb{Z}_{S^1}$을 계산한다. $S^1$을 두 호 $U, V$로 덮자. 각각은 열린 구간과 위상동형이고 $U \cap V$는 서로소인 두 호 $W_1 \sqcup W_2$이며, $U$, $V$, $W_1$, $W_2$는 모두 가축이라 그 위에서 $\mathbb{Z}$ 계수 cohomology가 degree $0$에 집중된다. 이 covering에 대한 Čech complex를 적으면 ([\[대수다양체\] §층 코호몰로지, ⁋정의 3](/ko/math/algebraic_varieties/sheaf_cohomology#def3))
 $$\check{C}^0 = \mathbb{Z}_U \oplus \mathbb{Z}_V = \mathbb{Z}^2, \qquad \check{C}^1 = \mathbb{Z}_{W_1} \oplus \mathbb{Z}_{W_2} = \mathbb{Z}^2$$
 이고 그 이상은 $0$이다. Coboundary $d: \mathbb{Z}^2 \rightarrow \mathbb{Z}^2$는 $(s_U, s_V) \mapsto (s_V - s_U, s_V - s_U)$로, $W_1$과 $W_2$ 두 성분에서 같은 차 $s_V - s_U$를 준다. 따라서
 $$\ker d = \{(s_U, s_V): s_U = s_V\} \cong \mathbb{Z}, \qquad \operatorname{coker} d = \mathbb{Z}^2 / \{(t, t): t \in \mathbb{Z}\} \cong \mathbb{Z}$$
 이고, covering의 각 성분이 acyclic이므로 ([\[대수다양체\] §층 코호몰로지, ⁋정리 11](/ko/math/algebraic_varieties/sheaf_cohomology#thm11)) 이 Čech cohomology가 sheaf cohomology와 일치한다. 그러므로
 $$H^0(S^1, \mathbb{Z}_{S^1}) = \mathbb{Z}, \qquad H^1(S^1, \mathbb{Z}_{S^1}) = \mathbb{Z}, \qquad H^i = 0 \quad (i \geq 2)$$
-이고, derived category에서 $Ra_\ast \mathbb{Z}_{S^1}$은 cohomology가 차수 $0$과 $1$에서 각각 $\mathbb{Z}$인 complex이다. 비자명한 $R^1$의 출현은 $S^1$이 단일한 가축 열린집합으로 덮이지 않는다는 위상적 사실, 즉 $d$의 cokernel이 비자명하다는 데서 직접 비롯한다.
+이고, derived category에서 $Ra_\ast \mathbb{Z}_{S^1}$은 cohomology가 degree $0$과 $1$에서 각각 $\mathbb{Z}$인 complex이다. 비자명한 $R^1$의 출현은 $S^1$이 단일한 가축 열린집합으로 덮이지 않는다는 위상적 사실, 즉 $d$의 cokernel이 비자명하다는 데서 직접 비롯한다.
 
 이제 projection $p: T^2 = S^1 \times S^1 \rightarrow S^1$, $(x, y) \mapsto x$를 따라 $Rp_\ast \mathbb{Z}_{T^2}$를 계산한다. $R^q p_\ast \mathbb{Z}_{T^2}$는 presheaf $V \mapsto H^q(p^{-1}(V), \mathbb{Z})$의 sheafification이다. $V \subset S^1$이 충분히 작은 호이면 $p^{-1}(V) = V \times S^1$이고, $V$가 가축이므로 $H^q(V \times S^1, \mathbb{Z}) = H^q(S^1, \mathbb{Z})$이다. 따라서 stalk 차원에서
 $$(R^0 p_\ast \mathbb{Z}_{T^2})_x = \mathbb{Z}, \qquad (R^1 p_\ast \mathbb{Z}_{T^2})_x = \mathbb{Z}, \qquad (R^q p_\ast \mathbb{Z}_{T^2})_x = 0 \quad (q \geq 2)$$
@@ -206,9 +206,9 @@ $$R^0 p_\ast \mathbb{Z}_{T^2} \cong \mathbb{Z}_{S^1}, \qquad R^1 p_\ast \mathbb{
 
 이 두 결과를 Leray spectral sequence $E_2^{p,q} = H^p(S^1, R^q p_\ast \mathbb{Z}_{T^2}) \Rightarrow H^{p+q}(T^2, \mathbb{Z})$에 넣는다. 위에서 구한 $R^q p_\ast$와 $S^1$의 cohomology에 의해 비자명한 $E_2$ 항은
 $$E_2^{0,0} = H^0(S^1, \mathbb{Z}_{S^1}) = \mathbb{Z}, \quad E_2^{1,0} = H^1(S^1, \mathbb{Z}_{S^1}) = \mathbb{Z}, \quad E_2^{0,1} = H^0(S^1, \mathbb{Z}_{S^1}) = \mathbb{Z}, \quad E_2^{1,1} = H^1(S^1, \mathbb{Z}_{S^1}) = \mathbb{Z}$$
-의 네 개이고 나머지는 모두 $0$이다. $E_2$ page가 $p, q \in \{0, 1\}$의 정사각형에 집중되어 있으므로 차수 차이가 $2$ 이상인 미분 $d_2: E_2^{p,q} \rightarrow E_2^{p+2, q-1}$은 시작 항이나 도착 항 중 하나가 항상 $0$이라 모두 zero map이다. 따라서 spectral sequence는 $E_2$에서 degenerate하고 $E_\infty = E_2$이다. 각 전체 차수 $n = p + q$별로 항들을 모으면
+의 네 개이고 나머지는 모두 $0$이다. $E_2$ page가 $p, q \in \{0, 1\}$의 정사각형에 집중되어 있으므로 degree 차이가 $2$ 이상인 미분 $d_2: E_2^{p,q} \rightarrow E_2^{p+2, q-1}$은 시작 항이나 도착 항 중 하나가 항상 $0$이라 모두 zero map이다. 따라서 spectral sequence는 $E_2$에서 degenerate하고 $E_\infty = E_2$이다. 각 전체 degree $n = p + q$별로 항들을 모으면
 $$H^0(T^2, \mathbb{Z}) = E_\infty^{0,0} = \mathbb{Z}, \qquad H^1(T^2, \mathbb{Z}) = E_\infty^{1,0} \oplus E_\infty^{0,1} = \mathbb{Z}^2, \qquad H^2(T^2, \mathbb{Z}) = E_\infty^{1,1} = \mathbb{Z}$$
-를 얻는다. 등급 군의 extension이 자유 $\mathbb{Z}$-module 사이의 것이라 분열되므로 $H^1$이 두 항의 direct sum이 된다. 이는 torus의 well-known한 cohomology $H^\ast(T^2, \mathbb{Z}) = (\mathbb{Z}, \mathbb{Z}^2, \mathbb{Z})$와 일치하며, derived pushforward $Rp_\ast \mathbb{Z}_{T^2}$가 fiber와 base의 cohomology를 어떻게 결합하는지를 명시적으로 보여 준다.
+를 얻는다. graded group의 extension이 자유 $\mathbb{Z}$-module 사이의 것이라 분열되므로 $H^1$이 두 항의 direct sum이 된다. 이는 torus의 well-known한 cohomology $H^\ast(T^2, \mathbb{Z}) = (\mathbb{Z}, \mathbb{Z}^2, \mathbb{Z})$와 일치하며, derived pushforward $Rp_\ast \mathbb{Z}_{T^2}$가 fiber와 base의 cohomology를 어떻게 결합하는지를 명시적으로 보여 준다.
 
 이 계산에서 fibration이 곱구조라 monodromy가 없었기에 $R^1 p_\ast$가 constant sheaf가 되었지만, Klein bottle처럼 fiber가 부호를 바꾸며 붙는 비자명한 $S^1$-bundle에서는 $R^1 p_\ast$가 비자명한 monodromy를 갖는 rank $1$ local system이 되어 $H^1$의 계산이 달라진다. Derived pushforward $Rp_\ast$는 이러한 fiber 위의 비틀림 정보를 base 위의 sheaf로 충실히 기록한다.
 

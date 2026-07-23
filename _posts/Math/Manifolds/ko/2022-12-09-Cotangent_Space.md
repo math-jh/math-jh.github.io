@@ -43,7 +43,7 @@ $$\begin{aligned}
             v_L(\mathbf{f}\cdot\mathbf{g})&=L((\mathbf{fg}-\mathbf{f(p)g(p)})+\mathfrak{m}_p^2)\\
             &=L(((\mathbf{f}-\mathbf{f(p)})(\mathbf{g}-\mathbf{g(p)})+\mathbf{f(p)}(\mathbf{g}-\mathbf{g(p)})+(\mathbf{f}-\mathbf{f(p)})\mathbf{g(p)})+\mathfrak{m}_p^2)\\
             &=\mathbf{f}(p)L((\mathbf{g}-\mathbf{g(p)})+\mathfrak{m}_p^2)+\mathbf{g}(p)L((\mathbf{f}-\mathbf{f(p)})+\mathfrak{m}_p^2)\\
-            &=\mathbf{f}(p)+v_L(\mathbf{g})+\mathbf{g}(p)v_L(\mathbf{f}).
+            &=\mathbf{f}(p)v_L(\mathbf{g})+\mathbf{g}(p)v_L(\mathbf{f}).
         \end{aligned}
 $$
 
@@ -97,7 +97,7 @@ $$\sum_{i=1}^m a_i\mathbf{r}^i=0\mod \mathfrak{m}^2_0$$
 
 가 된다. 
 
-우리는 아직 $\partial/\partial x^i$를 정의하진 않았지만, 유클리드 공간에서의 방향미분은 잘 알고 있다. 이를 이용해서 위 식의 양변에 $\partial/\partial r^j$를 취하면, 우변의 $0$ (즉 $\mathfrak{n}^2$의 어떤 원소)는 라이프니츠 법칙에 의해 $0$이 될 것이고, 따라서 이 식은
+우리는 아직 $\partial/\partial x^i$를 정의하진 않았지만, 유클리드 공간에서의 방향미분은 잘 알고 있다. 이를 이용해서 위 식의 양변에 $\partial/\partial r^j$를 취하면, 우변의 $0$ (즉 $\mathfrak{m}_0^2$의 어떤 원소)는 라이프니츠 법칙에 의해 $0$이 될 것이고, 따라서 이 식은
 
 $$a_j=\frac{\partial}{\partial r^j}\bigg\vert_0\sum a_i r^i=0$$
 

@@ -42,7 +42,7 @@ $$\Hom_{\lMod{A}}\left(\bigoplus_{i\in I} M_i, \prod_{j\in J} N_j\right)\cong\pr
 
 Similarly, consider the relationship between $\otimes$ and $\bigoplus$. This time we take a right $A$-module $M$, a family of right $A$-modules $(M_i)_{i\in I}$, a left $A$-module $N$, and a family of left $A$-modules $(N_j)_{j\in J}$. Since $\otimes$ preserves colimits, we have abelian group isomorphisms
 
-$$M\otimes_A \left(\bigoplus_{j\in J}N_j\right)\cong\bigoplus_{j\in J} (M\otimes_AN_j),\qquad \left(\bigoplus_{i\in I} M_i\right)\otimes_A N\cong \bigoplus_{i\in I} M_i\otimes_AN)$$
+$$M\otimes_A \left(\bigoplus_{j\in J}N_j\right)\cong\bigoplus_{j\in J} (M\otimes_AN_j),\qquad \left(\bigoplus_{i\in I} M_i\right)\otimes_A N\cong \bigoplus_{i\in I} (M_i\otimes_AN)$$
 
 and combining these gives
 
@@ -85,7 +85,7 @@ $$M_1 \rightarrow M_2 \rightarrow M_3 \rightarrow 0$$
 
 is given, the sequence obtained by applying the (contravariant) additive functor $\Hom_{\lMod{A}}(-, N):\lMod{A} \rightarrow\lMod{\mathbb{Z}}$,
 
-$$0 \rightarrow \Hom_\lMod{A}(M_3, N) \rightarrow \Hom_\lMod{A}(M_2, N)\rightarrow\Hom_\lMod{A}(M_1,A)$$
+$$0 \rightarrow \Hom_\lMod{A}(M_3, N) \rightarrow \Hom_\lMod{A}(M_2, N)\rightarrow\Hom_\lMod{A}(M_1,N)$$
 
 is exact. Similarly, the isomorphism (3) says that when a short exact sequence
 

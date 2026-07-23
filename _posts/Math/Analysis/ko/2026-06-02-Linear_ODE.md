@@ -16,7 +16,7 @@ drift_needed: true
 published: false
 ---
 
-[§미분방정식의 존재성과 유일성](/ko/math/analysis/existence_uniqueness_ode)에서 립시츠 조건 아래 해가 국소적으로 존재함을 보았다. 미분방정식 가운데 가장 잘 이해된 부류가 선형계이며, 여기서는 해가 전역적으로 존재할 뿐 아니라 선형대수로 명시적으로 풀린다. 이로써 해석학의 미분방정식 이론이 선형대수와 만난다.
+[§미분방정식의 존재성과 유일성](/ko/math/analysis/existence_uniqueness_ode)에서 립시츠 조건 아래 해가 국소적으로 존재함을 보았다. 미분방정식 가운데 가장 잘 이해된 부류가 linear system이며, 여기서는 해가 전역적으로 존재할 뿐 아니라 선형대수로 명시적으로 풀린다. 이로써 해석학의 미분방정식 이론이 선형대수와 만난다.
 
 ## 선형계의 전역 존재유일성
 
@@ -50,7 +50,7 @@ $$\frac{d}{dt}\lvert y\rvert \leq \lvert y'\rvert = \lvert A(t)y + b(t)\rvert \l
 로 통제되고, 그뢴발 부등식을 적용하면 $\lvert y(t)\rvert$이 컴팩트 부분구간에서 bounded로 머문다. 따라서 해가 구간의 끝점으로 다가가도 발산하지 않으므로 $I$ 전체로 연장된다.
 :::
 
-비선형 방정식의 해가 유한 시간에 발산할 수 있는 것과 달리, 선형계의 해는 계수가 정의된 구간 전체에 걸쳐 존재한다. 가령 스칼라 방정식 $y' = y^2$, $y(0) = 1$은 $y(t) = 1/(1-t)$이라 $t \rightarrow 1^-$에서 폭발하지만, 이는 우변 $y^2$의 립시츠 상수가 $\lvert y\rvert$에 따라 무한히 커지는 비선형성 때문이다. 선형계에서는 이런 일이 원천적으로 일어나지 않는다.
+비선형 방정식의 해가 유한 시간에 발산할 수 있는 것과 달리, linear system의 해는 계수가 정의된 구간 전체에 걸쳐 존재한다. 가령 스칼라 방정식 $y' = y^2$, $y(0) = 1$은 $y(t) = 1/(1-t)$이라 $t \rightarrow 1^-$에서 폭발하지만, 이는 우변 $y^2$의 립시츠 상수가 $\lvert y\rvert$에 따라 무한히 커지는 비선형성 때문이다. linear system에서는 이런 일이 원천적으로 일어나지 않는다.
 
 ## 행렬지수와 상수계수 해
 
@@ -64,11 +64,11 @@ $$e^{A} = \sum_{k=0}^{\infty}\frac{A^k}{k!} = I + A + \frac{A^2}{2!} + \cdots$$
 으로 정의한다. 이 급수는 모든 $A$에 대해 (성분별로) 절대수렴한다.
 :::
 
-급수의 수렴은 부분합이 코시열을 이룸을 보이면 된다. 작용소노름이 곱에 대해 $\lVert A^k\rVert \leq \lVert A\rVert^k$로 열등승법적이므로
+급수의 수렴은 부분합이 Cauchy 수열을 이룸을 보이면 된다. 작용소노름이 곱에 대해 $\lVert A^k\rVert \leq \lVert A\rVert^k$로 열등승법적이므로
 
 $$\left\lVert \frac{A^k}{k!}\right\rVert \leq \frac{\lVert A\rVert^k}{k!}$$
 
-이고, 우변의 합 $\sum_k \lVert A\rVert^k/k! = e^{\lVert A\rVert}$이 수렴하는 스칼라 급수이다. 따라서 [§균등수렴, ⁋정리 4](/ko/math/analysis/uniform_convergence#thm4)에 의해 행렬급수가 (성분별로, 그리고 노름에서) 절대수렴하며, $\lVert e^A\rVert \leq e^{\lVert A\rVert}$이라는 유용한 부등식도 함께 얻는다.
+이고, 우변의 합 $\sum_k \lVert A\rVert^k/k! = e^{\lVert A\rVert}$이 수렴하는 스칼라 급수이다. 따라서 [§균등수렴, ⁋정리 4](/ko/math/analysis/uniform_convergence#thm4)에 의해 행렬급수가 (성분별로, 그리고 norm에서) 절대수렴하며, $\lVert e^A\rVert \leq e^{\lVert A\rVert}$이라는 유용한 부등식도 함께 얻는다.
 
 행렬지수는 스칼라 지수의 여러 성질을 그대로 물려받지만, 한 가지 중요한 예외가 있다. $A$와 $B$가 *교환할 때*, 즉 $AB = BA$일 때에만
 
@@ -201,7 +201,7 @@ $$e^{-tA}y(t) - e^{-t_0 A}y_0 = \int_{t_0}^t e^{-sA}b(s) ds$$
 :::
 
 ::: 증명
-Jordan canonical form으로 $e^{tA}$의 각 성분은 유한 개의 $t^j e^{\lambda t}$ 꼴 항의 합이며, 여기서 $\lambda$는 고윳값, $j$는 해당 조르당 블록 크기 미만의 음이 아닌 정수이다. 각 항의 크기는
+Jordan canonical form으로 $e^{tA}$의 각 성분은 유한 개의 $t^j e^{\lambda t}$ 꼴 항의 합이며, 여기서 $\lambda$는 고윳값, $j$는 해당 Jordan block 크기 미만의 음이 아닌 정수이다. 각 항의 크기는
 
 $$\lvert t^j e^{\lambda t}\rvert = t^j e^{(\Real\lambda) t}$$
 
@@ -210,4 +210,4 @@ $$\lvert t^j e^{\lambda t}\rvert = t^j e^{(\Real\lambda) t}$$
 
 symmetric으로, 어떤 고윳값이 $\Real\lambda > 0$이면 그 모드를 따라 해가 지수적으로 발산하고, 고윳값이 모두 순허수이면 [예시 6](#ex6)처럼 해가 진동하며 bounded로 머문다. 이렇게 평형 $y = 0$의 안정·불안정·중립 거동이 고윳값의 실수부 부호로 한꺼번에 읽힌다.
 
-이렇게 선형 미분방정식의 풀이는 행렬의 고윳값·고유벡터, 곧 선형사상의 spectrum 구조로 완전히 귀착된다 ([\[다중선형대수학\] §행렬과 선형사상](/ko/math/multilinear_algebra/matrices_and_linear_maps)). 미분방정식의 해의 정성적 거동(평형의 안정성, 진동, 발산)이 고윳값의 실수부와 허수부로 읽힌다는 사실은 동역학계 이론의 출발점이며, 해석학·선형대수·기하가 만나는 지점이다.
+이렇게 선형 미분방정식의 풀이는 행렬의 고윳값·고유벡터, 곧 선형사상의 spectrum 구조로 완전히 귀착된다 ([\[다중선형대수학\] §행렬과 선형사상](/ko/math/multilinear_algebra/matrices_and_linear_maps)). 미분방정식의 해의 정성적 거동(평형의 stability, 진동, 발산)이 고윳값의 실수부와 허수부로 읽힌다는 사실은 동역학계 이론의 출발점이며, 해석학·선형대수·기하가 만나는 지점이다.

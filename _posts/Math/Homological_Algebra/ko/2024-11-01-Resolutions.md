@@ -108,7 +108,7 @@ $$I(A)=\prod_{f\in\Hom_\Ab(A, \mathbb{Q}/\mathbb{Z})} \mathbb{Q}/\mathbb{Z}$$
 
 ## 분해의 유일성
 
-한편, projective resolution과 단사분해의 유일성은 다음의 더 강력한 정리로부터 얻어진다. 
+한편, projective resolution과 injective resolution의 유일성은 다음의 더 강력한 정리로부터 얻어진다. 
 
 ::: 정리 6
 Projective resolution $P_\bullet \rightarrow M$과 임의의 $u:M \rightarrow N$이 주어졌다 하자. 그럼 임의의 left resolution $Q_\bullet \rightarrow N$가 주어질 때마다 다음의 diagram

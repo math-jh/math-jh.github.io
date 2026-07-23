@@ -49,10 +49,10 @@ $X$가 $d$차원 위상공간이라 하고, $Y$의 임의의 open covering $\{V_
 다음 명제는 [정의 2](#def2) 이후에 언급한 주의점을 더 수학적으로 다듬은 것이다.
 
 ::: 명제 4
-만일 위상공간 $X$의 두 유한차원 닫힌 부분공간 $Y,Z$가 존재하여 $X=Y\cup Z$라면, $\dim X=\max(\dim Y,\dim Z)$이다. 
+만일 위상공간 $X$의 두 유한차원 closed subspace $Y,Z$가 존재하여 $X=Y\cup Z$라면, $\dim X=\max(\dim Y,\dim Z)$이다. 
 :::
 ::: 증명
-$Y,Z$가 닫힌 부분공간이므로 [명제 3](#prop3)에 의해 $\max(\dim Y,\dim Z)\leq \dim X$이다. 따라서 $m=\max(\dim Y,\dim Z)$라 할 때 $\dim X\leq m$임을 보이면 충분하다.
+$Y,Z$가 closed subspace이므로 [명제 3](#prop3)에 의해 $\max(\dim Y,\dim Z)\leq \dim X$이다. 따라서 $m=\max(\dim Y,\dim Z)$라 할 때 $\dim X\leq m$임을 보이면 충분하다.
 
 우선 다음을 관찰하자. 위상공간 $T$가 $\dim T\leq m$을 만족하고 $T$의 유한한 open covering $(V_1,\ldots,V_k)$이 주어졌다면, 각각의 $i$마다 $W_i\subseteq V_i$이고 order가 $m+1$ 이하인 open covering $(W_1,\ldots,W_k)$이 존재한다. 여기서 일부 $W_i$는 공집합일 수 있다. 실제로 차원의 정의에 의해 $(V_i)$의 order $\leq m+1$짜리 open refinement $(O_j)_{j\in J}$가 존재하고, 각각의 $j$마다 $O_j\subseteq V_{i(j)}$이도록 하는 index $i(j)$를 하나씩 택한 후
 
@@ -243,5 +243,5 @@ $$\{\text{irreducible closed subset of $U$}\} \rightarrow \{\text{irreducible cl
 이제 다음 명제를 보이자.
 
 ::: 명제 15
-만일 위상공간 $X$의 두 유한차원 닫힌 부분공간 $Y,Z$가 존재하여 $X=Y\cup Z$라면, 이들의 Krull dimension 또한 식 $\dim X=\max(\dim Y,\dim Z)$을 만족한다.
+만일 위상공간 $X$의 두 유한차원 closed subspace $Y,Z$가 존재하여 $X=Y\cup Z$라면, 이들의 Krull dimension 또한 식 $\dim X=\max(\dim Y,\dim Z)$을 만족한다.
 :::

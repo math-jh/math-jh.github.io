@@ -22,7 +22,7 @@ weight: 5
 
 $$(x_0,\ldots, x_n)\sim (y_0,\ldots, y_n)\iff\text{$x_i=\lambda y_i$ for some $\lambda\neq 0$, for all $i$}$$
 
-를 정의하면 projective space $\mathbb{P}^n$은 quotient space $(\mathbb{R}^{n+1}\setminus \{0\})/{\sim}$으로 정의되는 위상공간이며, $(x_0,\ldots, x_n)$을 포함하는 동치류를 표기의 편의를 위해 $[x_0:x_1:\cdots:x_n]$으로 표기한다. 
+를 정의하면 projective space $\mathbb{P}^n$은 quotient space $(\mathbb{R}^{n+1}\setminus \{0\})/{\sim}$으로 정의되는 위상공간이며, $(x_0,\ldots, x_n)$을 포함하는 equivalence class를 표기의 편의를 위해 $[x_0:x_1:\cdots:x_n]$으로 표기한다. 
 
 이 때, canonical projection $\pi:\mathbb{R}^{n+1}\setminus\{0\}\rightarrow \mathbb{P}^n$를 생각하자. 그럼 $\mathbb{P}^n$의 한 점 $[x_0:x_1:\cdots:x_n]$의 fiber는 그 정의에 의하여
 
@@ -42,7 +42,7 @@ $$\mathbb{P}^n=\mathbb{R}^n\coprod \mathbb{P}^{n-1}$$
 
 ![stereographic_projection](/assets/images/Math/Scheme_Theory/Projective_Schemes-1.svg){:style="width:31.18em" class="invert" .align-center}
 
-이를 식으로 적으면, $\mathbb{P}^n$의 한 점 $[x_0:\cdots:x_n]$에 대하여, 만일 $x_i\neq 0$이라면 $[x_0:\cdots:x_n]$의 동치류 안에서 $i$번째 좌표가 $1$이 되는 점을 (유일하게) 찾을 수 있으며, 이 점을 $P_i$의 점으로 보아 다음 부분집합
+이를 식으로 적으면, $\mathbb{P}^n$의 한 점 $[x_0:\cdots:x_n]$에 대하여, 만일 $x_i\neq 0$이라면 $[x_0:\cdots:x_n]$의 equivalence class 안에서 $i$번째 좌표가 $1$이 되는 점을 (유일하게) 찾을 수 있으며, 이 점을 $P_i$의 점으로 보아 다음 부분집합
 
 $$U_i=\{[x_0:\cdots:x_n]\in \mathbb{P}^n\mid x_i\neq 0\}$$
 
@@ -161,7 +161,7 @@ Graded ring $A_\bullet$에 대하여 다음이 성립한다.
     를 생각하면, $\mathfrak{p}$가 homogeneous이므로 $ab_i$들은 모두 $\mathfrak{p}$의 원소이다. 한편 앞선 가정에 의해 $b\not\in \mathfrak{p}$이므로, $b_i\not\in \mathfrak{p}$를 만족하는 $i$가 존재하고, 그럼 $ab_i$는 $\mathfrak{p}$에 속하는 homogeneous element이며 $b_i\not\in \mathfrak{p}$이므로 [\[가환대수학\] §등급환의 국소화, ⁋보조정리 2](/ko/math/commutative_algebra/localization_of_graded_rings#lem2)에 의해 $a\in \mathfrak{p}$이다. 따라서 $\mathfrak{a}\subseteq \mathfrak{p}$가 성립한다. 
 2. 이는 $\sum \mathfrak{a}_i$가 ideal들 $\mathfrak{a}_i$ 각각을 모두 포함하는 ideal 중 가장 작은 것으로 정의되므로 자명하다.
 3. [\[가환대수학\] §국소화의 성질들, ⁋따름정리 8](/ko/math/commutative_algebra/properties_of_localization#cor8).
-4. 정의에 의해 $Z_+(\mathfrak{a})\subseteq Z_+(\mathfrak{a}\cap A_+)$는 자명하므로 반대방향만 보이면 충분하다. 즉, $\mathfrak{p}$가 $\mathfrak{a}$의 양의 차수를 갖는 homogeneous element들을 모두 가지며, $A_+$를 통째로 포함하지는 않는 prime ideal이라 하고 $\mathfrak{a}\subseteq \mathfrak{p}$임을 보이자. 이를 위해서는 임의의 $a\in \mathfrak{a}\cap A_0$을 택했을 때, 위의 가정으로부터 $a$ 또한 $\mathfrak{p}$에 속함을 보이면 충분하다.  
+4. 정의에 의해 $Z_+(\mathfrak{a})\subseteq Z_+(\mathfrak{a}\cap A_+)$는 자명하므로 반대방향만 보이면 충분하다. 즉, $\mathfrak{p}$가 $\mathfrak{a}$의 양의 degree를 갖는 homogeneous element들을 모두 가지며, $A_+$를 통째로 포함하지는 않는 prime ideal이라 하고 $\mathfrak{a}\subseteq \mathfrak{p}$임을 보이자. 이를 위해서는 임의의 $a\in \mathfrak{a}\cap A_0$을 택했을 때, 위의 가정으로부터 $a$ 또한 $\mathfrak{p}$에 속함을 보이면 충분하다.  
     이제 $A_+\not\subset\mathfrak{p}$이므로, $\mathfrak{p}$에 속하지 않는 homogeneous element $f$가 존재한다. 이제 $af\in \mathfrak{a}\cap A_+\subseteq \mathfrak{p}$이고, $f\not\in \mathfrak{p}$이므로 $a\in \mathfrak{p}$이다. 
 :::
 
@@ -235,7 +235,7 @@ $$\Spec A_{(fg)}\cong D(g^{\deg f}/f^{\deg g})\subseteq \Spec A_{(f)}$$
 이 존재한다. 
 :::
 ::: 증명
-$\Proj A_\bullet$의 임의의 점 $\mathfrak{p}$는 $A_+\not\subseteq \mathfrak{p}$를 만족하므로 $\mathfrak{p}$에 속하지 않는 $A_+$의 homogeneous element를 갖는다. 즉 $\Proj A_\bullet$을 덮는 것은 양의 차수를 갖는 $f$들이 주는 $D_+(f)$들이므로, 이하에서 $f$와 $g$는 모두 양의 차수를 갖는 것으로 두고 $d=\deg f\geq 1$과 $e=\deg g\geq 1$로 적는다. 그럼 $\deg (g^d)=de=\deg (f^e)$이므로
+$\Proj A_\bullet$의 임의의 점 $\mathfrak{p}$는 $A_+\not\subseteq \mathfrak{p}$를 만족하므로 $\mathfrak{p}$에 속하지 않는 $A_+$의 homogeneous element를 갖는다. 즉 $\Proj A_\bullet$을 덮는 것은 양의 degree를 갖는 $f$들이 주는 $D_+(f)$들이므로, 이하에서 $f$와 $g$는 모두 양의 degree를 갖는 것으로 두고 $d=\deg f\geq 1$과 $e=\deg g\geq 1$로 적는다. 그럼 $\deg (g^d)=de=\deg (f^e)$이므로
 
 $$\theta=\frac{g^{\deg f}}{f^{\deg g}}=\frac{g^d}{f^e}$$
 
@@ -336,7 +336,7 @@ $$u=\frac{h^d}{f^m},\qquad v=\frac{h^e}{g^m}$$
 
 $$\frac{u^e}{v^d}=\frac{h^{de}}{f^{me}}\cdot\frac{g^{md}}{h^{de}}=\left(\frac{g^d}{f^e}\right)^m$$
 
-이고 우변은 $\rho_{f,fg}(\theta_{f,g})^m$, 즉 unit이다. 따라서 $u^e$와 $v^d$는 unit 배만큼만 차이나고, $\Spec A_{(fg)}$에서 $D(u)=D(v)$이며 $A_{(fg)}$를 $u$에서 국소화한 것과 $v$에서 국소화한 것은 같은 ring이다. 즉 $\varphi_{fg}$는 $X_{fg}\cap X_{fh}$를 $X_{gf}\cap X_{gh}$ 위로 옮기며, 이 제한은 ring homomorphism
+이고 우변은 $\rho_{f,fg}(\theta_{f,g})^m$, 즉 unit이다. 따라서 $u^e$와 $v^d$는 unit 배만큼만 차이나고, $\Spec A_{(fg)}$에서 $D(u)=D(v)$이며 $A_{(fg)}$를 $u$에서 국소화한 것과 $v$에서 국소화한 것은 같은 ring이다. 즉 $\varphi_{fg}$는 $X_{fg}\cap X_{fh}$를 $X_{gf}\cap X_{gh}$ 위로 옮기며, 이 restriction은 ring homomorphism
 
 $$\alpha:(A_{(g)})_{\theta_{g,fh}} \rightarrow (A_{(f)})_{\theta_{f,gh}}$$
 
@@ -344,11 +344,11 @@ $$\alpha:(A_{(g)})_{\theta_{g,fh}} \rightarrow (A_{(f)})_{\theta_{f,gh}}$$
 
 $$\tau: A_{(fg)}\overset{\Phi_{f,g}^{-1}}{\longrightarrow}(A_{(f)})_{\theta_{f,g}} \longrightarrow (A_{(f)})_{\theta_{f,gh}}\overset{\Psi_f}{\longrightarrow} A_{(fgh)}$$
 
-을 생각하면, $\Phi_{f,g}$와 $\Psi_f$가 각각 $\rho_{f,fg}$와 $\rho_{f,fgh}$를 확장하므로 $\tau\circ\rho_{f,fg}=\rho_{f,fgh}$이다. 그런데 $A_{(fg)}$는 $\Phi_{f,g}$를 통해 $A_{(f)}$의 $\theta_{f,g}$에서의 국소화이며 $\rho_{fg,fgh}$ 또한 같은 식을 만족하므로, [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)의 유일성에 의하여 $\tau=\rho_{fg,fgh}$이다. 이로부터
+을 생각하면, $\Phi_{f,g}$와 $\Psi_f$가 각각 $\rho_{f,fg}$와 $\rho_{f,fgh}$를 확장하므로 $\tau\circ\rho_{f,fg}=\rho_{f,fgh}$이다. 그런데 $A_{(fg)}$는 $\Phi_{f,g}$를 통해 $A_{(f)}$의 $\theta_{f,g}$에서의 localization이며 $\rho_{fg,fgh}$ 또한 같은 식을 만족하므로, [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)의 유일성에 의하여 $\tau=\rho_{fg,fgh}$이다. 이로부터
 
 $$\Psi_f\circ\alpha\vert_{A_{(g)}}=\tau\circ \rho_{g,fg}=\rho_{fg,fgh}\circ\rho_{g,fg}=\rho_{g,fgh}=\Psi_g\vert_{A_{(g)}}$$
 
-를 얻고, 다시 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)의 유일성을 $A_{(g)}$의 국소화 $(A_{(g)})_{\theta_{g,fh}}$에 적용하면 $\Psi_f\circ\alpha=\Psi_g$, 곧 $\alpha=\Psi_f^{-1}\circ\Psi_g$이다. 즉
+를 얻고, 다시 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)의 유일성을 $A_{(g)}$의 localization $(A_{(g)})_{\theta_{g,fh}}$에 적용하면 $\Psi_f\circ\alpha=\Psi_g$, 곧 $\alpha=\Psi_f^{-1}\circ\Psi_g$이다. 즉
 
 $$\varphi_{fg}\vert_{X_{fg}\cap X_{fh}}=\Spec(\Psi_f^{-1}\circ \Psi_g)$$
 
@@ -375,7 +375,7 @@ $$\mathcal{O}_{\Proj A_\bullet,\mathfrak{p}}\cong A_{(\mathfrak{p})}$$
 이 존재한다. 
 :::
 ::: 증명
-$\mathfrak{p}\in \Proj A_\bullet$이므로 $A_+\not\subseteq \mathfrak{p}$이고, 따라서 $\mathfrak{p}$에 속하지 않는 $A_+$의 homogeneous element $f$가 존재한다. $d=\deg f\geq 1$이라 두자. 그럼 $\mathfrak{p}\in D_+(f)$이고, [정리 10](#thm10)에 의하여 $D_+(f)$는 $\Spec A_{(f)}$와 isomorphic한 $\Proj A_\bullet$의 open subscheme이다. 열린 부분스킴의 stalk은 원래 scheme의 stalk과 같으므로, [보조정리 8](#lem8)이 $\mathfrak{p}$를 옮기는 점 $\mathfrak{q}=\mathfrak{p}A_f\cap A_{(f)}$에 대하여 [§아핀스킴, ⁋보조정리 8](/ko/math/scheme_theory/affine_schemes#lem8)로부터
+$\mathfrak{p}\in \Proj A_\bullet$이므로 $A_+\not\subseteq \mathfrak{p}$이고, 따라서 $\mathfrak{p}$에 속하지 않는 $A_+$의 homogeneous element $f$가 존재한다. $d=\deg f\geq 1$이라 두자. 그럼 $\mathfrak{p}\in D_+(f)$이고, [정리 10](#thm10)에 의하여 $D_+(f)$는 $\Spec A_{(f)}$와 isomorphic한 $\Proj A_\bullet$의 open subscheme이다. open subscheme의 stalk은 원래 scheme의 stalk과 같으므로, [보조정리 8](#lem8)이 $\mathfrak{p}$를 옮기는 점 $\mathfrak{q}=\mathfrak{p}A_f\cap A_{(f)}$에 대하여 [§아핀스킴, ⁋보조정리 8](/ko/math/scheme_theory/affine_schemes#lem8)로부터
 
 $$\mathcal{O}_{\Proj A_\bullet,\mathfrak{p}}\cong \mathcal{O}_{\Spec A_{(f)},\mathfrak{q}}\cong (A_{(f)})_\mathfrak{q}$$
 

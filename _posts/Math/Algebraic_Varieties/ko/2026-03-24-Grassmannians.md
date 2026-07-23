@@ -13,7 +13,7 @@ weight: 7
 
 ---
 
-우리는 특수한 다양체를 하나 소개하며 대수기하학의 기본적인 연구대상들에 대한 소개를 마무리한다. 
+우리는 특수한 variety를 하나 소개하며 대수기하학의 기본적인 연구대상들에 대한 소개를 마무리한다. 
 
 정의에 의해 projective space $\mathbb{P}^n$은 $\mathbb{A}^{n+1}$의 직선들의 공간이다. 이번 글에서 소개할 Grassmannian은 이를 일반화한 것으로, $\mathbb{A}^n$의 $k$차원 linear subspace들의 공간이다. 
 
@@ -160,7 +160,7 @@ $$\dim(W \cap F_{n - k + i - \lambda_i}) \geq i \quad\text{for all } 1 \leq i \l
 이 조건은 $W$와 flag의 교집합의 차원이 특정 패턴을 따른다는 것을 의미한다. 구체적으로, $W$는 $F_{n-k+i-\lambda_i}$를 최소 $i$차원에서 만나야 한다. Partition 조건 $\lambda_1 \leq n - k$은 첫 번째 부등식 $\dim(W \cap F_{n - k + 1 - \lambda_1}) \geq 1$에서 $n - k + 1 - \lambda_1 \geq 1$이 되도록 보장한다.
 
 ::: 명제 14
-Schubert variety $\Omega_\lambda(F_\bullet)$는 $\Gr(k, V)$의 closed subvariety이며, 그 차원은 $\lvert \lambda \rvert$이다.
+Schubert variety $\Omega_\lambda(F_\bullet)$는 $\Gr(k, V)$의 closed subvariety이며, 그 차원은 $k(n-k) - \lvert \lambda \rvert$이다.
 :::
 
 ::: 증명
@@ -170,10 +170,10 @@ $\Omega_\lambda(F_\bullet)$가 closed인 것은 정의 조건이 regular functio
 
 $$\dim(W \cap F_{n - k + i - \lambda_i}) = i \quad\text{for all } 1 \leq i \leq k$$
 
-으로 얻어지며, $\Omega_\lambda(F_\bullet)$의 open dense subset이다. 이 cell의 차원을 계산하면 $\lambda_1 + \cdots + \lambda_k = \lvert \lambda \rvert$이 되며, 따라서 $\Omega_\lambda(F_\bullet)$의 차원 또한 $\lvert \lambda \rvert$이다.
+으로 얻어지며, $\Omega_\lambda(F_\bullet)$의 open dense subset이다. 이 cell의 차원을 계산하면 $k(n-k) - (\lambda_1 + \cdots + \lambda_k) = k(n-k) - \lvert \lambda \rvert$이 되며, 따라서 $\Omega_\lambda(F_\bullet)$의 차원 또한 $k(n-k) - \lvert \lambda \rvert$이다.
 :::
 
-Schubert varietie들은 Grassmannian의 *cell decomposition*을 제공한다. 즉, 서로 다른 partition $\lambda$에 해당하는 Schubert cell들 $\Omega_\lambda^\circ(F_\bullet)$들은 $\Gr(k, V)$에 cell complex 구조를 주며, 각 cell은 affine space $\mathbb{A}^{\lvert \lambda \rvert}$와 isomorphic하다. 이를 통해 Grassmannian의 위상적, 조합론적 성질을 연구할 수 있다.
+Schubert variety들은 Grassmannian의 *cell decomposition*을 제공한다. 즉, 서로 다른 partition $\lambda$에 해당하는 Schubert cell들 $\Omega_\lambda^\circ(F_\bullet)$들은 $\Gr(k, V)$에 cell complex 구조를 주며, 각 cell은 affine space $\mathbb{A}^{k(n-k) - \lvert \lambda \rvert}$와 isomorphic하다. 이를 통해 Grassmannian의 위상적, 조합론적 성질을 연구할 수 있다.
 
 ---
 

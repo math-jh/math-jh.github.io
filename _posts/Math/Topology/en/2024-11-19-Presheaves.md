@@ -163,7 +163,7 @@ For a family of presheaves $(\mathcal{F}_i:\Open(X) \rightarrow \Set)_{i\in I}$ 
 $$\left(\prod_{i\in I} \mathcal{F}_i\right)(U)=\prod_{i\in I} \mathcal{F}_i(U)$$
 :::
 
-Using definitions as above, structures defined in a category $\mathcal{A}$—for example products, coproducts, limits, colimits, monoidal products, etc.—can be transferred to $\PSh(X; \mathcal{A})$. In particular, $\PSh(X; \Ab)$ inherits the monoidal structure $(\Ab,\otimes, \mathbb{Z})$, and the monoidal objects here are $\PSh(X; \Ring)$. In the same vein, the following example can be understood.
+Using definitions as above, structures defined in a category $\mathcal{A}$—for example products, coproducts, limits, colimits, monoidal products, etc.—can be transferred to $\PSh(X; \mathcal{A})$. In particular, $\PSh(X; \Ab)$ inherits the monoidal structure $(\Ab,\otimes, \mathbb{Z})$ defined on $\Ab$, and the monoidal objects here are $\PSh(X; \Ring)$. In the same vein, the following example can be understood.
 
 ::: Example 14
 For a $\Ring$-valued presheaf $\mathcal{O}_X$ on a topological space $X$, a left $\mathcal{O}_X$-module object $\mathcal{F}\in\PSh(X;\Ab)$ is simply called an $\mathcal{O}_X$-module.
@@ -206,4 +206,4 @@ In the same way, one can define *presheaf cokernel*, *presheaf image*, *presheaf
 
 ---
 
-[^1]: For example, if $$X=\mathbb{R}$$, then to define the derivative of a function at a point $$x$$ of $$\mathbb{R}$$, it suffices to know the values of $$f$$ in an arbitrarily small neighborhood of $$x$$. From this perspective, $$f'(x)$$ can be regarded as one of the pieces of local information that $$x$$ carries.
+[^1]: For example, if $X=\mathbb{R}$, then to define the derivative of a function at a point $x$ of $\mathbb{R}$, it suffices to know the values of $f$ in an arbitrarily small neighborhood of $x$. From this perspective, $f'(x)$ can be regarded as one of the pieces of local information that $x$ carries.

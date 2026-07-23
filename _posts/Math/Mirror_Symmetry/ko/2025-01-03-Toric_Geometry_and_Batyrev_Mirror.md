@@ -41,7 +41,7 @@ $$h^{1,1}_{\mathrm{st}}(Y_\Delta) = h^{n-2,1}_{\mathrm{st}}(Y_{\Delta^\circ}), \
 :::
 
 ::: 증명
-면 $\Theta$ 위의 lattice points 개수를 $l(\Theta)$, 상대 내부 lattice points 개수를 $l^\ast(\Theta)$라 표기하자. Batyrev는 toric variety의 조합론적 성질을 이용하여 stringy Hodge number를 lattice point count로 직접 표현하였다:
+face $\Theta$ 위의 lattice points 개수를 $l(\Theta)$, relative interior lattice points 개수를 $l^\ast(\Theta)$라 표기하자. Batyrev는 toric variety의 조합론적 성질을 이용하여 stringy Hodge number를 lattice point count로 직접 표현하였다:
 
 $$h^{1,1}_{\mathrm{st}}(Y_\Delta) = l(\Delta^\circ) - 1 - n - \sum_{\operatorname{codim} \Theta^\circ = 1} l^\ast(\Theta^\circ) + \sum_{\operatorname{codim} \Theta^\circ = 2} l^\ast(\Theta^\circ) l^\ast(\Theta),$$
 
@@ -66,15 +66,15 @@ $$\sigma_1 = \operatorname{Cone}(v_2, v_3), \qquad \sigma_2 = \operatorname{Cone
 이며, 각각 $\mathbb{C}^2$에 해당하는 affine chart를 준다. 이들은 $\mathbb{P}^2$의 표준적인 좌표차트 $U_i = \{[x_0:x_1:x_2] \mid x_i \neq 0\}$와 일치한다.
 :::
 
-$\mathbb{P}^2$의 fan $\Sigma$는 어떤 lattice polytope의 normal fan인가? $N_{\mathbb{R}}$에서 $\Delta^\circ = \operatorname{Conv}\{(1,0), (0,1), (-1,-1)\}$라 하자. 이 polytope의 각 면에 대응하는 inner normal 벡터를 계산하면 다음과 같다.
+$\mathbb{P}^2$의 fan $\Sigma$는 어떤 lattice polytope의 normal fan인가? $N_{\mathbb{R}}$에서 $\Delta^\circ = \operatorname{Conv}\{(1,0), (0,1), (-1,-1)\}$라 하자. 이 polytope의 각 face에 대응하는 inner normal 벡터를 계산하면 다음과 같다.
 
 Facet $\Theta_1 = \operatorname{Conv}\{(0,1), (-1,-1)\}$를 생각하자. 이 edge를 포함하는 직선은 $y = 2x + 1$, 즉 $2x - y = -1$이다. 임의의 $(x,y) \in \Delta^\circ$에 대해 $2x - y \ge -1$를 확인할 수 있는데, $(1,0)$에서 $2 > -1$이고 $(0,1), (-1,-1)$에서는 등호가 성립한다. 따라서 $\langle (x,y), (2,-1) \rangle = 2x - y = -1$이 되며, 정수 벡터 $(2,-1) \in N$에 의해 $\Theta_1$가 정의된다.
 
-Facet $\Theta_2 = \operatorname{Conv}\{(1,0), (-1,-1)\}$는 직선 $x - 2y = 1$ 위에 있다. 정수 벡터 $(-1, 2) \in N$에 대해 $\langle (x,y), (-1, 2) \rangle = -x + 2y = -1$이 되며, $\Delta^\circ$의 내부인 원점에서는 $0 > -1$이므로 이것이 inner normal direction임을 확인할 수 있다. 남은 점 $(0,1)$에 대해서는 $\langle (0,1), (-1,2) \rangle = 2 > -1$이므로 $(-1,2)$는 올바른 inner normal 벡터이다.
+Facet $\Theta_2 = \operatorname{Conv}\{(1,0), (-1,-1)\}$는 직선 $x - 2y = 1$ 위에 있다. 정수 벡터 $(-1, 2) \in N$에 대해 $\langle (x,y), (-1, 2) \rangle = -x + 2y = -1$이 되며, $\Delta^\circ$의 interior인 원점에서는 $0 > -1$이므로 이것이 inner normal direction임을 확인할 수 있다. 남은 점 $(0,1)$에 대해서는 $\langle (0,1), (-1,2) \rangle = 2 > -1$이므로 $(-1,2)$는 올바른 inner normal 벡터이다.
 
 Facet $\Theta_3 = \operatorname{Conv}\{(1,0), (0,1)\}$는 직선 $x + y = 1$ 위에 있다. 정수 벡터 $(-1,-1) \in N$에 대해 $\langle (x,y), (-1,-1) \rangle = -x-y = -1$이 되어 역시 reflexive 조건을 만족한다.
 
-원점 $(0,0)$은 $\Delta^\circ$의 내부에 있으므로, 위의 계산에 의해 $\Delta^\circ$는 reflexive polytope임을 확인할 수 있다. 이제 dual polytope $\Delta$를 계산한다.
+원점 $(0,0)$은 $\Delta^\circ$의 interior에 있으므로, 위의 계산에 의해 $\Delta^\circ$는 reflexive polytope임을 확인할 수 있다. 이제 dual polytope $\Delta$를 계산한다.
 
 $$\Delta = \{u \in M_{\mathbb{R}} \mid \langle u, v \rangle \ge -1 \text{ for all } v \in \Delta^\circ\}$$
 
@@ -102,9 +102,9 @@ $n=2$인 경우 anticanonical hypersurface $Y_\Delta \subset X_\Delta = \mathbb{
 
 ## Grassmannian mirror symmetry로의 연결
 
-Toric variety에 대한 Batyrev mirror construction은 조합론적 데이터의 쌍대성을 통해 mirror pair를 명시적으로 구성하는 아름다운 예시이다. 그러나 toric variety는 homogeneous space의 특별한 경우에 불과하며, 더 일반적인 공간으로의 extension은 비자명한 문제이다. 특히 Grassmannian $\Gr(k, n)$은 toric variety가 아니므로 Batyrev의 construction을 직접 적용할 수 없다.
+Toric variety에 대한 Batyrev mirror construction은 조합론적 데이터의 duality를 통해 mirror pair를 명시적으로 구성하는 아름다운 예시이다. 그러나 toric variety는 homogeneous space의 특별한 경우에 불과하며, 더 일반적인 공간으로의 extension은 비자명한 문제이다. 특히 Grassmannian $\Gr(k, n)$은 toric variety가 아니므로 Batyrev의 construction을 직접 적용할 수 없다.
 
-[§거울대칭 개요](/ko/math/mirror_symmetry/overview)에서 살펴 보았듯이, toric variety의 mirror는 Landau-Ginzburg model $(\bar{X}, W)$의 형태를 띠며, 이는 charge matrix를 통해 구체적으로 기술된다. Grassmannian의 경우 Marsh와 Rietsch는 Plücker coordinate를 이용하여 이와 유사한 Landau-Ginzburg model을 구성하였고 ([§Marsh–Rietsch superpotential](/ko/math/mirror_symmetry/marsh_rietsch_superpotential)), 그 Jacobi ring이 quantum cohomology ring과 isomorphic함을 보였다 ([§Marsh-Rietsch Mirror Theorem](/ko/math/mirror_symmetry/mr_mirror_theorem)). 이 construction은 toric case에서의 Batyrev mirror가 갖는 조합론적 투명성을 완전히 잃는 대신, Lie theory와 cluster algebra의 풍부한 구조를 대신 활용한다. Grassmannian mirror symmetry는 본 시리즈의 연구용 stream에 모아 두었으며, Bruhat decomposition, Richardson variety, Peterson variety 등의 Lie-theoretic 도구들이 본 글의 toric/Batyrev 흐름과 어떻게 차별화되는지 그 stream에서 다룬다. 그 stream은 거울 대칭의 우변에 해당하는 [§Grassmannian의 양자 코호몰로지](/ko/math/mirror_symmetry/quantum_cohomology_of_grassmannians)에서 출발하여, 거울 대칭이 Grassmannian을 넘어 그 안의 특이 Schubert variety로까지 확장되는 [§Schubert variety의 거울과 head-over-tails superpotential](/ko/math/mirror_symmetry/schubert_variety_mirror)에서 정점에 이른다.
+[§거울대칭 개요](/ko/math/mirror_symmetry/overview)에서 살펴 보았듯이, toric variety의 mirror는 Landau-Ginzburg model $(\bar{X}, W)$의 형태를 띠며, 이는 charge matrix를 통해 구체적으로 기술된다. Grassmannian의 경우 Marsh와 Rietsch는 Plücker coordinate를 이용하여 이와 유사한 Landau-Ginzburg model을 구성하였고 ([§Marsh–Rietsch superpotential](/ko/math/mirror_symmetry/marsh_rietsch_superpotential)), 그 Jacobi ring이 quantum cohomology ring과 isomorphic함을 보였다 ([§Marsh-Rietsch Mirror Theorem](/ko/math/mirror_symmetry/mr_mirror_theorem)). 이 construction은 toric case에서의 Batyrev mirror가 갖는 조합론적 투명성을 완전히 잃는 대신, Lie theory와 cluster algebra의 풍부한 구조를 대신 활용한다. Grassmannian mirror symmetry는 본 시리즈의 연구용 stream에 모아 두었으며, Bruhat decomposition, Richardson variety, Peterson variety 등의 Lie-theoretic 도구들이 본 글의 toric/Batyrev 흐름과 어떻게 차별화되는지 그 stream에서 다룬다. 그 stream은 거울 대칭의 우변에 해당하는 [§Grassmannian의 양자 코호몰로지](/ko/math/mirror_symmetry/quantum_cohomology_of_grassmannians)에서 출발하여, 거울 대칭이 Grassmannian을 넘어 그 안의 singular Schubert variety로까지 확장되는 [§Schubert variety의 거울과 head-over-tails superpotential](/ko/math/mirror_symmetry/schubert_variety_mirror)에서 정점에 이른다.
 
 ---
 

@@ -56,7 +56,7 @@ $f$가 $a$에서, $g$가 $b = f(a)$에서 미분가능하면 $g \circ f$가 $a$�
 
 $$g(f(x)) - g(f(a)) = \psi(f(x)) \bigl(f(x) - f(a)\bigr) = \psi(f(x)) \varphi(x) (x - a)$$
 
-이다. $f$가 $a$에서 연속이고 $\psi$가 $b = f(a)$에서 연속이므로 $x \mapsto \psi(f(x))\varphi(x)$는 $a$에서 연속이고, [명제 1](#prop1)에 의해 $g\circ f$가 $a$에서 미분가능하며 그 미분계수는 $\psi(f(a))\varphi(a) = g'(b)f'(a)$이다.
+이다. $f$가 $a$에서 연속이고 $\psi$가 $b = f(a)$에서 연속이므로 $x \mapsto \psi(f(x))\varphi(x)$는 $a$에서 연속이고, [명제 1](#prop1)에 의해 $g\circ f$가 $a$에서 미분가능하며 그 derivative는 $\psi(f(a))\varphi(a) = g'(b)f'(a)$이다.
 :::
 
 difference quotient를 직접 다룰 때 생기던 "$f(x) - f(a) = 0$일 때 0으로 나누는" 문제가 이 증명에는 전혀 나타나지 않는다. 같은 방식으로 합·곱·quotient의 미분법도 엄밀하게 재현된다 ([\[미적분학\] §미분법](/ko/math/calculus/differentiation_rules)).
@@ -119,7 +119,7 @@ $$\left(\frac{f}{g}\right)'(a) = \Psi(a) = \frac{\varphi(a)g(a) - f(a)\psi(a)}{g
 
 ## 역함수의 미분
 
-연쇄법칙의 한 응용으로 역함수의 미분계수를 계산할 수 있다. Carathéodory 형태는 여기서도 0으로 나누는 일을 피하게 해 준다.
+연쇄법칙의 한 응용으로 역함수의 derivative를 계산할 수 있다. Carathéodory 형태는 여기서도 0으로 나누는 일을 피하게 해 준다.
 
 ::: 명제 6 (역함수의 미분)
 $f$가 구간 $I$에서 연속이고 단사이며 $a \in I$에서 미분가능하고 $f'(a) \neq 0$이라 하자. 역함수 $f^{-1}$이 $b = f(a)$에서 미분가능하면

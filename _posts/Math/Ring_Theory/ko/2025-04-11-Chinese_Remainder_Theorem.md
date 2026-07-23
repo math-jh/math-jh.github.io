@@ -53,7 +53,7 @@ $$\mathfrak{a}(\mathfrak{b}+\mathfrak{c})=\mathfrak{a}\mathfrak{b}+\mathfrak{a}\
 
 $$\left(\sum_{i=1}^{n_1} x_i^{(1)}y_i^{(1)}\right)z_1+\cdots+\left(\sum_{i=1}^{n_k}x_i^{(k)}y_i^{(k)}\right)z_k$$
 
-의 꼴로 쓰일 수 있으며, 분배법칙을 이용하여 이를 모두 풀어준 후 오른쪽 두 개를 묶어주면 이 원소가 $\mathfrak{a}(\mathfrak{b}\mathfrak{c})$에 속하는 것을 알 수 있다. 반대 방향 포함관계도 똑같은 방식으로 증명할 수 있으므로, 곱셈이 결합법칙을 만족한다. 또, 임의의 two-sided ideal $\mathfrak{a}$에 대해 $A \mathfrak{a}=\mathfrak{a}A=\mathfrak{a}$임이 자명하다. 
+의 꼴로 쓰일 수 있으며, 분배법칙을 이용하여 이를 모두 풀어준 후 오른쪽 두 개를 묶어주면 이 원소가 $\mathfrak{a}(\mathfrak{b}\mathfrak{c})$에 속하는 것을 알 수 있다. 반대 방향 포함관계도 똑같은 방식으로 증명할 수 있으므로, 곱셈이 associative하다. 또, 임의의 two-sided ideal $\mathfrak{a}$에 대해 $A \mathfrak{a}=\mathfrak{a}A=\mathfrak{a}$임이 자명하다. 
 
 마지막으로 임의의 $b_1+c_1,\ldots, b_n+c_n\in \mathfrak{b}+\mathfrak{c}$에 대하여 
 
@@ -80,7 +80,7 @@ Ring $A$의 두 two-sided ideal $\mathfrak{a},\mathfrak{b}$가 $\mathfrak{a}+\ma
 
 $$1=u+v,\qquad\text{$u\in\mathfrak{a}$, $v\in\mathfrak{b}$}$$
 
-꼴로 표현된다는 것과 동치이며, 이는 정수론에서 서로소인 두 정수 $m,n$에 대하여 Bézout 항등식 $mu+nv=1$이 존재하는 것과 정확히 대응한다. ([\[정수론\] §유클리드 호제법과 Bézout 항등식, ⁋정리 3](/ko/math/number_theory/euclidean_algorithm#thm3)) 따라서 $\mathbb{Z}$에서는 서로수인 두 정수 $m,n$의 ideal $m\mathbb{Z},n\mathbb{Z}$가 comaximal이 된다. 
+꼴로 표현된다는 것과 동치이며, 이는 정수론에서 서로소인 두 정수 $m,n$에 대하여 Bézout 항등식 $mu+nv=1$이 존재하는 것과 정확히 대응한다. ([\[정수론\] §유클리드 호제법과 Bézout 항등식, ⁋정리 3](/ko/math/number_theory/euclidean_algorithm#thm3)) 따라서 $\mathbb{Z}$에서는 서로소인 두 정수 $m,n$의 ideal $m\mathbb{Z},n\mathbb{Z}$가 comaximal이 된다. 
 
 한편, 일반적으로는 성립하지 않던 등식 $\mathfrak{a}\mathfrak{b}=\mathfrak{a}\cap\mathfrak{b}$가 두 ideal이 comaximal일 때는 성립한다. 이를 보이기 위한 결과는 다음과 같다. 
 
@@ -119,7 +119,7 @@ $$x=x\cdot 1=x(u+v)=xu+xv\in \mathfrak{b}_2 \mathfrak{b}_1+\mathfrak{b}_1 \mathf
 
 이다. 따라서 $\mathfrak{b}_1\cap\mathfrak{b}_2=\mathfrak{b}_1\mathfrak{b}_2$이다.
 
-이제 $n>2$라 하자. 두 ideal $\mathfrak{a}=\mathfrak{b}_n$과 $\mathfrak{b}_1,\ldots,\mathfrak{b}_{n-1}$이 pairwise comaximal임은 자명하므로, 여기에 [명제 4](#prop4)을 적용하면
+이제 $n>2$라 하자. 두 ideal $\mathfrak{a}=\mathfrak{b}_n$과 $\mathfrak{b}_1,\ldots,\mathfrak{b}_{n-1}$이 pairwise comaximal임은 자명하므로, 여기에 [명제 4](#prop4)를 적용하면
 
 $$A=\mathfrak{b}_n+(\mathfrak{b}_1\cap\cdots\cap \mathfrak{b}_{n-1})$$
 
@@ -134,7 +134,7 @@ $$\mathfrak{b}_1\cap\cdots\cap \mathfrak{b}_n=(\mathfrak{b}_1\cap\cdots\cap \mat
 
 이제 우리는 이 글의 핵심 정리를 살펴본다.
 
-Ring $A$와, $A$의 two-sided ideal들 $\mathfrak{a}_i$가 주어졌다 하자. 그럼 각 몫환으로의 projection들 $\pi_i:A \rightarrow A/\mathfrak{a}_i$이 존재하며, 이들로부터 ring homomorphism $\pi:A \rightarrow\prod A/\mathfrak{a}_i$가 정의된다. 이 사상이 언제 isomorphism이 되는지가 중국인의 나머지정리의 핵심이다.
+Ring $A$와, $A$의 two-sided ideal들 $\mathfrak{a}_i$가 주어졌다 하자. 그럼 각 몫환으로의 projection들 $\pi_i:A \rightarrow A/\mathfrak{a}_i$이 존재하며, 이들로부터 ring homomorphism $\pi:A \rightarrow\prod A/\mathfrak{a}_i$가 정의된다. 이 morphism이 언제 isomorphism이 되는지가 중국인의 나머지정리의 핵심이다.
 
 ::: 명제 6
 Ring $A$와, $A$의 pairwise comaximal two-sided ideal들 $\mathfrak{a}_1,\ldots, \mathfrak{a}_n$이 주어졌다 하자. 그럼 위에서 정의한 $\pi:A \rightarrow \prod_1^n A/\mathfrak{a}_i$는 surjective이고, 이 map의 kernel은 $\bigcap \mathfrak{a}_i$와 같다.
@@ -193,7 +193,7 @@ $$\sum\bar{e}_i=\bar{1},\qquad \bar{e}_i^2=\bar{e}_i,\qquad \bar{e}_i\bar{e}_j=0
 
 $$a=a\cdot 1=a\sum_i e_i=\sum_i ae_i$$
 
-이고, 만일 $x\in Ae_i\cap\sum_{j\neq i}Ae_j$라면 $x$는 $ae_i$꼴인 동시에 $\sum_{j\neq i} a_j e_j$ 꼴이며, 이를 만족할 수 있는 $x$는 $0$뿐이므로 이것이 direct sum을 준다는 것에서 얻어진다. 이제 $e_i\in C(A)$이므로 각 $Ae_i$는 항등원 $e_i$를 갖는 ring이며, 사상 
+이고, 만일 $x\in Ae_i\cap\sum_{j\neq i}Ae_j$라면 $x$는 $ae_i$꼴인 동시에 $\sum_{j\neq i} a_j e_j$ 꼴이며, 이를 만족할 수 있는 $x$는 $0$뿐이므로 이것이 direct sum을 준다는 것에서 얻어진다. 이제 $e_i\in C(A)$이므로 각 $Ae_i$는 항등원 $e_i$를 갖는 ring이며, morphism 
 
 $$A\rightarrow Ae_i;\qquad a\mapsto ae_i$$
 

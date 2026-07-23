@@ -34,7 +34,7 @@ $$I_n=\begin{pmatrix}1&0&\cdots&0\\0&1&\cdots&0\\\vdots&\vdots&\ddots&\vdots\\0&
 
 $M_n(A)$는 canonical basis $(E_{ij})$를 갖는데, 이들에 대해 structure constant를 생각해보면 다음 식
 
-$$E_{ij}E_{jk}=\delta_{jh}E_{ik}$$
+$$E_{ij}E_{hk}=\delta_{jh}E_{ik}$$
 
 으로 적어줄 수 있다.
 
@@ -53,21 +53,21 @@ $$\bigl([u^{-1}]_{\mathcal{B}}^\mathcal{B}\bigr)^t=\bigl(\bigl[u^\ast\bigr]_{\ma
 ::: 명제 4
 임의의 $A$-module $M$과 $M$의 유한한 basis $\mathcal{B}=(e_i)_{i\in I}$가 주어졌다 하자. 그럼 다음 식
 
-$$e_i'=\sum_{j=1}^n a_{ji}e_i,\qquad 1\leq i\leq n$$
+$$e_i'=\sum_{j=1}^n a_{ji}e_j,\qquad 1\leq i\leq n$$
 
 이 $M$의 basis가 되는 것과, 정사각행렬 $(a_{ji})$의 역행렬이 존재하는 것이 동치이다.
 :::
 ::: 증명
 주어진 행렬 $(a_{ji})$는 단순히 다음의 식
 
-$$u:e_i\mapsto e_i'=\sum_{j=1}^n a_{ji}e_i$$
+$$u:e_i\mapsto e_i'=\sum_{j=1}^n a_{ji}e_j$$
 
 으로 정의되는 linear map $u\in\End_{\lMod{A}}(M)$의 $\mathcal{B}$에 대한 행렬표현 $[u]_{\mathcal{B}}^\mathcal{B}\in\Mat_n(A)$이다. 이제 이 행렬이 역행렬을 갖는 것은 $u$가 isomorphism인 것과 동치이고, 이는 $(u(e_i))_{i\in I}$가 $M$의 basis가 되는 것과 동치이다. 
 :::
 
 위의 증명과는 반대로, 행렬 $(a_{ji})$를 identity map $\id_M:M \rightarrow M$을 서로 다른 basis에 대해 행렬표현을 한 것으로 생각할 수도 있다. Basis $(e_i')$를 $\mathcal{B}'$로 쓰기로 하자. 그럼 
 
-$$\id_M(e_i')=\sum_{j=1}^n a_{ji}e_i$$
+$$\id_M(e_i')=\sum_{j=1}^n a_{ji}e_j$$
 
 이므로, 
 

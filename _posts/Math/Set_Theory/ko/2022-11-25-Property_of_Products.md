@@ -18,7 +18,7 @@ weight: 11
 
 ## 부분곱과 결합법칙
 
-집합의 곱이 결합법칙을 만족한다는 이야기를 하기 위해서는 우선 부분곱을 정의해야 한다.
+집합의 곱이 associative하다는 이야기를 하기 위해서는 우선 부분곱을 정의해야 한다.
 
 ::: 정의 1
 Family $(A_i)_{i\in I}$와 그 product $\prod_{i\in I} A_i$가 주어졌다고 하자. 그럼 index set의 부분집합 $J\subseteq I$에 대하여, $\prod_{j\in J} A_j$를 *부분곱<sub>partial product</sub>*이라 부른다. 

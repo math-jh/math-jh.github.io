@@ -20,7 +20,7 @@ We saw in [§Fields, ⁋Proposition 2](/en/math/field_theory/fields#prop2) that 
 
 We call an injective field morphism a *field extension*. Then, for a fixed field $\mathbb{K}\in\Field$, the under category of $\mathbb{K}$ becomes the category of extensions of $\mathbb{K}$.
 
-Although this notation differs slightly from that of [§Categories, ⁋Example 13](/en/math/category_theory/categories#ex13), we often denote a field extension $\mathbb{K}\rightarrow \mathbb{L}$ by $\mathbb{L}/\mathbb{K}$. Then, whenever a field extension $\mathbb{L}/\mathbb{K}$ is given, we can identify $\mathbb{K}$ with a subfield of $\mathbb{L}$ via the injective map $\mathbb{K}\hookrightarrow\mathbb{L}$. However, if $\mathbb{L}=\mathbb{K}$ and $\mathbb{K}\hookrightarrow\mathbb{L}=\mathbb{K}$ is an endomorphism, such an identification may cause confusion, so in this case we do not identify $\mathbb{K}$ with a subfield of $\mathbb{L}$.
+Although this notation differs slightly from that of [\[Category Theory\] §Categories, ⁋Example 13](/en/math/category_theory/categories#ex13), we often denote a field extension $\mathbb{K}\rightarrow \mathbb{L}$ by $\mathbb{L}/\mathbb{K}$. Then, whenever a field extension $\mathbb{L}/\mathbb{K}$ is given, we can identify $\mathbb{K}$ with a subfield of $\mathbb{L}$ via the injective map $\mathbb{K}\hookrightarrow\mathbb{L}$. However, if $\mathbb{L}=\mathbb{K}$ and $\mathbb{K}\hookrightarrow\mathbb{L}=\mathbb{K}$ is an endomorphism, such an identification may cause confusion, so in this case we do not identify $\mathbb{K}$ with a subfield of $\mathbb{L}$.
 
 By definition, given two extensions $\mathbb{K} \rightarrow \mathbb{L}_1$ and $\mathbb{K} \rightarrow \mathbb{L}_2$, the following commutative diagram
 
@@ -34,7 +34,7 @@ Thus any field extension $\mathbb{L}/\mathbb{K}$ can be regarded as an associati
 We consider $\mathbb{K}$-algebras and homomorphisms between them in order to treat situations similar to the above; henceforth in our posts the category $\Alg{\mathbb{K}}$ will always be the category of unital associative $\mathbb{K}$-algebras. That is, by a $\mathbb{K}$-algebra we shall always mean a unital associative $\mathbb{K}$-algebra, and by a $\mathbb{K}$-algebra homomorphism we shall always mean a unital $\mathbb{K}$-algebra homomorpihsm.
 :::
 
-Any $\mathbb{K}$-algebra is also a $\mathbb{K}$-module, so its dimension is well-defined. ([§Basis, ⁋Proposition 6](/en/math/multilinear_algebra/basis_of_free_modules#prop6))
+Any $\mathbb{K}$-algebra is also a $\mathbb{K}$-module, so its dimension is well-defined. ([\[Multilinear Algebra\] §Basis, ⁋Proposition 6](/en/math/multilinear_algebra/basis_of_free_modules#prop6))
 
 ::: Definition 1
 For any $\mathbb{K}$-algebra $A$, we call $\dim_{\mathbb{K}}A$ the *degree* of $A$ and denote it by $[A:\mathbb{K}]$.
@@ -87,10 +87,10 @@ Let $\mathcal{F}$ be the set of subfields of a field $E$; with the inclusion rel
 
 If there exists a finite set $A$ such that $\mathbb{L}=\mathbb{K}(A)$, we call the extension $\mathbb{L}/\mathbb{K}$ a *finite extension*. Then in particular a finite degree field extension is a finite extension, because a basis of $\mathbb{L}$ as a $\mathbb{K}$-vector space will serve as a set of generators of $\mathbb{L}$ as a field.
 
-Now let two $\mathbb{K}$-extensions $\mathbb{L}_1/\mathbb{K}$, $\mathbb{L}_2/\mathbb{L}$ be given. Then we can consider the smallest extension containing both $\mathbb{L}_1$ and $\mathbb{L}_2$.
+Now let two $\mathbb{K}$-extensions $\mathbb{L}_1/\mathbb{K}$, $\mathbb{L}_2/\mathbb{K}$ be given. Then we can consider the smallest extension containing both $\mathbb{L}_1$ and $\mathbb{L}_2$.
 
 ::: Definition 7
-For two $\mathbb{K}$-extensions $\mathbb{L}_1/\mathbb{K}$, $\mathbb{L}_2/\mathbb{L}$, a $\mathbb{K}$-extension $\mathbb{K} \rightarrow \mathbb{M}$ is called their *composite* if there exist $\mathbb{K}$-algebra homomorphisms $\mathbb{L}_1 \rightarrow \mathbb{M}$ and $\mathbb{L}_2 \rightarrow \mathbb{M}$ making the following diagram
+For two $\mathbb{K}$-extensions $\mathbb{L}_1/\mathbb{K}$, $\mathbb{L}_2/\mathbb{K}$, a $\mathbb{K}$-extension $\mathbb{K} \rightarrow \mathbb{M}$ is called their *composite* if there exist $\mathbb{K}$-algebra homomorphisms $\mathbb{L}_1 \rightarrow \mathbb{M}$ and $\mathbb{L}_2 \rightarrow \mathbb{M}$ making the following diagram
 
 ![composite_field](/assets/images/Math/Field_Theory/Algebraic_Extensions-2.svg){:style="width:10.57em" class="invert" .align-center}
 
@@ -110,12 +110,12 @@ Let two $\mathbb{K}$-extensions $\mathbb{L}_1, \mathbb{L}_2$ be given.
 2. Conversely, for any prime ideal $\mathfrak{p}$ of $\mathbb{L}_1\otimes_\mathbb{K} \mathbb{L}_2$, there exist a suitable composite field $\mathbb{M}$ and extensions $u_i: \mathbb{L}_i \rightarrow \mathbb{M}$ such that $\mathfrak{p}$ is the kernel of $u_1\ast u_2$.
 :::
 ::: Proof
-1. The image $\im(u_1\ast u_2)$ of $u_1\ast u_2$ is a subring of the field $\mathbb{M}$, and hence an integral domain. The given claim is now obvious from [§Field of Fractions, ⁋Proposition 8](/en/math/algebraic_structures/field_of_fractions#prop8) and [§Quotient Rings and Ring Homomorphisms, ⁋Theorem 3](/en/math/algebraic_structures/quotient_rings#thm3).
+1. The image $\im(u_1\ast u_2)$ of $u_1\ast u_2$ is a subring of the field $\mathbb{M}$, and hence an integral domain. The given claim is now obvious from [\[Algebraic Structures\] §Field of Fractions, ⁋Proposition 8](/en/math/algebraic_structures/field_of_fractions#prop8) and [\[Algebraic Structures\] §Quotient Rings and Ring Homomorphisms, ⁋Theorem 3](/en/math/algebraic_structures/quotient_rings#thm3).
 
 2. Conversely, let $\mathfrak{p}$ be a prime ideal of $\mathbb{L}_1\otimes_\mathbb{K}\mathbb{L}_2$, and let $\mathbb{M}=\Frac((\mathbb{L}_1\otimes_\mathbb{K}\mathbb{L}_2)/\mathfrak{p})$ be the field of fractions of the integral domain $(\mathbb{L}_1\otimes_\mathbb{K}\mathbb{L}_2)/\mathfrak{p}$. Then for each $x_1\in \mathbb{L}_1$ and $x_2\in \mathbb{L}_2$, defining $u_1(x_1)$ to be the image of $x_1\otimes 1$ in $\mathbb{M}$ and $u_2(x_2)$ to be the image of $1\otimes x_2$ in $\mathbb{M}$, we see that these satisfy the required conditions.
 :::
 
-Moreover, it is also obvious that the composite field obtained from the second result is uniquely determined up to isomorphism. Meanwhile, for any two $\mathbb{K}$-extensions $\mathbb{L}_1, \mathbb{L}_2$, since $\mathbb{L}_1\otimes_\mathbb{K} \mathbb{L}_2$ always has a prime ideal ([§Definition of a Ring, ⁋Theorem 10 (Krull)](/en/math/algebraic_structures/rings#thm10)), we can verify that any two $\mathbb{K}$-extensions have a composite field.
+Moreover, it is also obvious that the composite field obtained from the second result is uniquely determined up to isomorphism. Meanwhile, for any two $\mathbb{K}$-extensions $\mathbb{L}_1, \mathbb{L}_2$, since $\mathbb{L}_1\otimes_\mathbb{K} \mathbb{L}_2$ always has a prime ideal ([\[Algebraic Structures\] §Definition of a Ring, ⁋Theorem 10 (Krull)](/en/math/algebraic_structures/rings#thm10)), we can verify that any two $\mathbb{K}$-extensions have a composite field.
 
 ## Algebraic Extensions
 

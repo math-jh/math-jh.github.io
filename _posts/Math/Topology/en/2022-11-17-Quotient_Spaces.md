@@ -70,7 +70,7 @@ $$X\longrightarrow X/S\longrightarrow (X/S)/(R/S)$$
 so it is continuous.
 :::
 
-Meanwhile, let topological spaces $X,Y$ and a continuous function $f:X\rightarrow Y$ be given, and consider the equivalence relation $R$ defined by $f$. ([[Set Theory] §Examples of Equivalence Relations, ⁋Definition 2](/en/math/set_theory/examples_of_equivalence#def2)) Then we may consider the canonical decomposition of $f$
+Meanwhile, let topological spaces $X,Y$ and a continuous function $f:X\rightarrow Y$ be given, and consider the equivalence relation $R$ defined by $f$. ([[Set Theory] §Equivalence Relations](/en/math/set_theory/equivalence_relations)) Then we may consider the canonical decomposition of $f$
 
 $$X\overset{p}{\longrightarrow}X/R\overset{\bar{f}}{\longrightarrow}f(X)\overset{i}{\longrightarrow}Y$$
 

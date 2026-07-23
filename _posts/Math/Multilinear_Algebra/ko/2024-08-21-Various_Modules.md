@@ -43,7 +43,7 @@ $$\Hom_{\lMod{A}}\left(\bigoplus_{i\in I} M_i, \prod_{j\in J} N_j\right)\cong\pr
 
 비슷하게 $\otimes$와 $\bigoplus$의 관계를 살펴보자. 이번에는 right $A$-module $M$, right $A$-module들의 family $(M_i)_{i\in I}$, left $A$-module $N$, left $A$-module들의 family $(N_j)_{j\in J}$를 생각한다. 그럼 $\otimes$는 colimit을 보존하므로 abelian group isomorphism
 
-$$M\otimes_A \left(\bigoplus_{j\in J}N_j\right)\cong\bigoplus_{j\in J} (M\otimes_AN_j),\qquad \left(\bigoplus_{i\in I} M_i\right)\otimes_A N\cong \bigoplus_{i\in I} M_i\otimes_AN)$$
+$$M\otimes_A \left(\bigoplus_{j\in J}N_j\right)\cong\bigoplus_{j\in J} (M\otimes_AN_j),\qquad \left(\bigoplus_{i\in I} M_i\right)\otimes_A N\cong \bigoplus_{i\in I} (M_i\otimes_AN)$$
 
 그리고 이들을 종합하여
 
@@ -86,7 +86,7 @@ $$M_1 \rightarrow M_2 \rightarrow M_3 \rightarrow 0$$
 
 가 주어졌을 때, 여기에 (contravariant) additive functor $\Hom_{\lMod{A}}(-, N):\lMod{A} \rightarrow\lMod{\mathbb{Z}}$를 취해 얻어지는 다음의 sequence
 
-$$0 \rightarrow \Hom_\lMod{A}(M_3, N) \rightarrow \Hom_\lMod{A}(M_2, N)\rightarrow\Hom_\lMod{A}(M_1,A)$$
+$$0 \rightarrow \Hom_\lMod{A}(M_3, N) \rightarrow \Hom_\lMod{A}(M_2, N)\rightarrow\Hom_\lMod{A}(M_1,N)$$
 
 가 exact라는 것과 같은 말이다. 비슷하게 식 (3)의 isomorphism은 다음의 short exact sequence
 

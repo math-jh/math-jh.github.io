@@ -38,9 +38,9 @@ Of course, by the preceding argument this is nothing other than the directional 
 
 ## Lie Derivative of Vector Fields
 
-The simplest example is the derivative of a vector field. Since a vector field $Y$ is a map from $M$ to $TM$, one might attempt to differentiate it by a method similar to [Definition 1](#def1) above, but this is far from straightforward. The obstacle here is more fundamental than for functions: $Y(\phi^t(p))$ is an element of $T_{\phi^t(p)}$, whereas $Y(p)$ is an element of $T_pM$, so there is no way even to form their difference $Y_{\phi^t(p)}-Y_p$. 
+The simplest example is the derivative of a vector field. Since a vector field $Y$ is a map from $M$ to $TM$, one might attempt to differentiate it by a method similar to [Definition 1](#def1) above, but this is far from straightforward. The obstacle here is more fundamental than for functions: $Y(\phi^t(p))$ is an element of $T_{\phi^t(p)}M$, whereas $Y(p)$ is an element of $T_pM$, so there is no way even to form their difference $Y_{\phi^t(p)}-Y_p$. 
 
-Nevertheless, differentiation is still possible in our setting. Recalling [§Vector Fields, ⁋Theorem 6](/en/math/manifolds/vector_fields#thm6), since $\phi^t$ is a diffeomorphism, $d\phi^t$ induces an isomorphism from $T_pM$ to $T_{\phi^t(p)}$. Moreover, the same theorem tells us that the inverse of this isomorphism is $d\phi^{-t}$. Therefore, by pulling $Y_{\phi^t(p)}$ back to $T_pM$ via $d\phi^{-t}$, we can make the following definition.
+Nevertheless, differentiation is still possible in our setting. Recalling [§Vector Fields, ⁋Theorem 6](/en/math/manifolds/vector_fields#thm6), since $\phi^t$ is a diffeomorphism, $d\phi^t$ induces an isomorphism from $T_pM$ to $T_{\phi^t(p)}M$. Moreover, the same theorem tells us that the inverse of this isomorphism is $d\phi^{-t}$. Therefore, by pulling $Y_{\phi^t(p)}$ back to $T_pM$ via $d\phi^{-t}$, we can make the following definition.
 
 ::: Definition 2
 Fix a manifold $M$ and a vector field $X$ defined on it, and suppose another vector field $Y:M\rightarrow TM$ is given. Then the *Lie derivative* $\mathcal{L}_XY$ of $Y$ is the vector field defined by the formula

@@ -73,7 +73,7 @@ $$Z=X\cap W=(Y\cap U)\cap W=(Y\cap W)\cap U$$
 이제 위의 명제에 의해, 다음과 같이 정의할 수 있다.
 
 ::: 정의 5
-Quasi-projective variety $X$ 위의 함수 $f: X \rightarrow \mathbb{K}$가 *regular<sub>정칙</sub>*라는 것은 $X$의 open affine cover $\{U_i\}$가 존재하여, 각 $i$에 대해 restriction 
+Quasi-projective variety $X$ 위의 함수 $f: X \rightarrow \mathbb{K}$가 *regular<sub>정칙</sub>*이라는 것은 $X$의 open affine cover $\{U_i\}$가 존재하여, 각 $i$에 대해 restriction 
 
 $$f\vert_{U_i}:U_i\rightarrow\mathbb{K}$$
 
@@ -160,11 +160,11 @@ $$f \circ (\psi \circ \varphi) \in \mathcal{O}((\psi \circ \varphi)^{-1}(W))$$
 따라서 quasi-projective variety들과 regular map들은 category를 이룬다.
 
 ::: 명제 12
-닫힌집합으로의 regular map의 제한은 regular map이다. 열린집합으로의 regular map의 제한도 regular map이다.
+닫힌집합으로의 regular map의 restriction은 regular map이다. 열린집합으로의 regular map의 restriction도 regular map이다.
 :::
 
 ::: 증명
-$\varphi: X \rightarrow Y$가 regular map이고 $Z \subseteq Y$가 닫힌집합이라 하자. $\psi = \varphi\vert_{\varphi^{-1}(Z)}: \varphi^{-1}(Z) \rightarrow Z$를 생각하자. $f$가 $Z$의 열린집합 $V$에서 regular function이라면, $f$는 $Y$의 어떤 열린집합 $V' \supseteq V$로 확장되어 regular function이 된다 (적어도 국소적으로). 구체적으로, $V$를 $Z$의 open affine cover로 교차하여 각 조각에서 regular function을 정의하면, 이들을 정칙적으로 이어붙여 $Y$의 열린근방 $V'$에서의 regular function을 얻을 수 있다. 이는 정칙함수가 본질적으로 유리함수의 국소적 표현이므로, affine chart 위에서의 정의가 Zariski 개방 덮개의 교집합에서도 일관되게 합쳐지기 때문이다. 그럼 $f \circ \psi = (f \circ \varphi)\vert_{\varphi^{-1}(Z)}$이고, $f \circ \varphi$는 $\varphi^{-1}(V')$에서 regular이므로 그 제한도 regular이다.
+$\varphi: X \rightarrow Y$가 regular map이고 $Z \subseteq Y$가 닫힌집합이라 하자. $\psi = \varphi\vert_{\varphi^{-1}(Z)}: \varphi^{-1}(Z) \rightarrow Z$를 생각하자. $f$가 $Z$의 열린집합 $V$에서 regular function이라면, $f$는 $Y$의 어떤 열린집합 $V' \supseteq V$로 확장되어 regular function이 된다 (적어도 국소적으로). 구체적으로, $V$를 $Z$의 open affine cover로 교차하여 각 조각에서 regular function을 정의하면, 이들을 정칙적으로 이어붙여 $Y$의 열린근방 $V'$에서의 regular function을 얻을 수 있다. 이는 regular function이 본질적으로 유리함수의 국소적 표현이므로, affine chart 위에서의 정의가 Zariski open cover의 교집합에서도 일관되게 합쳐지기 때문이다. 그럼 $f \circ \psi = (f \circ \varphi)\vert_{\varphi^{-1}(Z)}$이고, $f \circ \varphi$는 $\varphi^{-1}(V')$에서 regular이므로 그 restriction도 regular이다.
 
 열린집합의 경우는 더 간단하다. $U \subseteq Y$가 열린집합이면, $f$가 $V \subseteq U$에서 regular이면 $f \circ \varphi$는 $\varphi^{-1}(V)$에서 regular이다.
 :::
@@ -173,7 +173,7 @@ $\varphi: X \rightarrow Y$가 regular map이고 $Z \subseteq Y$가 닫힌집합�
 Morphism $\varphi: X \rightarrow Y$가 *isomorphism<sub>동형사상</sub>*이라는 것은 역함수 $\psi: Y \rightarrow X$가 존재하여 $\psi$도 morphism인 것이다.
 :::
 
-Isomorphism의 개념은 기하학적으로 두 다양체가 같다는 것을 의미한다. 즉, isomorphic한 다양체들은 regular function의 관점에서 구별할 수 없다.
+Isomorphism의 개념은 기하학적으로 두 variety가 같다는 것을 의미한다. 즉, isomorphic한 variety들은 regular function의 관점에서 구별할 수 없다.
 
 ::: 예시 14
 우리는 이미 projective variety들 사이의 morphism과 affine variety들 사이의 morphism 각각을 따로 살펴보았으므로, projective variety와 affine variety들을 엮어주는 함수들이 새로운 것들이다. 가령 canonical surjection

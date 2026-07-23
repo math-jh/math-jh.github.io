@@ -97,7 +97,7 @@ $A$가 ordered set이고 $X\subset A$가 supremum과 infimum을 모두 갖는다
 
 ## 상한, 하한과 집합간의 연산
 
-이제 지금까지 살펴본 집합의 연산과 상한, 하한의 관계를 살펴본다.
+이제 지금까지 살펴본 집합의 연산과 supremum, infimum의 관계를 살펴본다.
 
 ::: 명제 8
 Ordered set $A$의 두 부분집합 $X,X'$에 대하여, $\sup_AX,\sup_AX'$가 각각 정의되고 $X'\subseteq X$라면 $\sup X'\leq\sup X$이다.

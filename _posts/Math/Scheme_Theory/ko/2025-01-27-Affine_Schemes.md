@@ -36,7 +36,7 @@ weight: 3
 
 이제 $\mathcal{O}_{\Spec A}$를 정의해야 한다. 이는 이 글의 서두에서 언급한 것과 같이, $\Spec A$ 위에 정의된 대수적인 함수들의 sheaf이며, 이는 정확히 [\[대수다양체\] §아핀다양체, ⁋정의 14](/ko/math/algebraic_varieties/affine_varieties#def14)의 일반화이다. 
 
-이 논의를 scheme으로 일반화하자. 우선 $A$의 원소는 대수다양체에서와 마찬가지로 함수 $f$로 생각한다. 그럼 이 때 $f$의 점 $\mathfrak{p}\in\Spec A$에서의 <em-ko>함숫값</em-ko>은 canonical projection $\pi: A \rightarrow A/\mathfrak{p}$에 의한 $f$의 image이다. 그럼 특히 $f$가 점 $\mathfrak{p}$에서 $0$이 된다는 것은
+이 논의를 scheme으로 일반화하자. 우선 $A$의 원소는 algebraic variety에서와 마찬가지로 함수 $f$로 생각한다. 그럼 이 때 $f$의 점 $\mathfrak{p}\in\Spec A$에서의 <em-ko>함숫값</em-ko>은 canonical projection $\pi: A \rightarrow A/\mathfrak{p}$에 의한 $f$의 image이다. 그럼 특히 $f$가 점 $\mathfrak{p}$에서 $0$이 된다는 것은
 
 $$f\equiv 0\pmod{\mathfrak{p}}\iff f\in \mathfrak{p}\iff \mathfrak{p}\in Z(f)$$
 
@@ -341,9 +341,9 @@ $$(\Spec \phi)(\mathfrak{q})=\phi^{-1}(\mathfrak{q})=\varphi(\mathfrak{q})$$
 을 제외한 모든 면들은 commuting square임을 알고 있다. 따라서 위의 diagram에서 $A \rightarrow \mathcal{O}_{\Spec B, \mathfrak{q}}$는 어떤 함수를 타고 가도 동일하게 결정되며, 이 함수에 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)를 적용하면 $A_{\varphi(\mathfrak{q})} \rightarrow \mathcal{O}_{\Spec B, \mathfrak{q}}$가 유일하게 결정된다. 이로부터 위의 diagram의 <em-ko>모든</em-ko> 면들이 commuting square인 것을 안다. 즉, $\phi_\mathfrak{q}:A_{\varphi(\mathfrak{q})}\rightarrow B_\mathfrak{q}$도 local homomorphism이고, 따라서 $\phi^{-1}(\mathfrak{q})=\varphi(\mathfrak{q})$임을 안다. 이제 structure sheaf에서 $\phi$가 $\varphi^\sharp$과 같다는 것은 restriction map만 생각하면 충분하므로, 이상에서 원하는 주장이 증명된다. 
 :::
 
-따라서 $\Spec$을 $\cRing$에서 $\AffSch$로의 contravariant functor로 보면 $\Spec$은 두 카테고리 $\cRing^\op$와 $\AffSch$ 사이의 categorical equivalence이다. 뿐만 아니라, [명제 11](#prop11)에 의해 $\AffSch$는 $\LRS$의 full subcategory이다. 
+따라서 $\Spec$을 $\cRing$에서 $\AffSch$로의 contravariant functor로 보면 $\Spec$은 두 category $\cRing^\op$와 $\AffSch$ 사이의 categorical equivalence이다. 뿐만 아니라, [명제 11](#prop11)에 의해 $\AffSch$는 $\LRS$의 full subcategory이다. 
 
-한편 임의의 스펙트럼 $(\Spec A, \mathcal{O}_{\Spec A})$에 대하여, 우리는 정의에 의해 
+한편 임의의 spectrum $(\Spec A, \mathcal{O}_{\Spec A})$에 대하여, 우리는 정의에 의해 
 
 $$\mathcal{O}_{\Spec A}(A)=\mathcal{O}_{\Spec A}(D(1))\cong A$$
 
@@ -468,4 +468,4 @@ $$\Phi((\Spec\theta)\circ\varphi)=\Phi(\varphi)\circ\theta$$
 
 ---
 
-[^1]: 일반적으로 우리는 임의의 $$X$$ 위의 sheaf $$\mathcal{F}$$에 대해 $$\mathcal{F}(X)$$를 $$\Gamma(X, \mathcal{F})$$로 표기한다. 
+[^1]: 일반적으로 우리는 임의의 $X$ 위의 sheaf $\mathcal{F}$에 대해 $\mathcal{F}(X)$를 $\Gamma(X, \mathcal{F})$로 표기한다. 

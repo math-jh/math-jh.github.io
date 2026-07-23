@@ -74,13 +74,13 @@ $$\Hom_{\lMod{A}}(M,L)\otimes_AN \rightarrow \Hom_{\lMod{A}}(M, L\otimes_BN)$$
 
 $$x\mapsto u(x)\otimes_Ay$$
 
-으로 $M$에서 $L\otimes_AN$으로의 $A$-linear map을 정의하고, 그럼 $(u,y)\in\Hom_{\rMod{A}}(M,L)\times N$의 원소를 받아 $\Hom_{\rMod{A}}(M, L\otimes_AB)$의 원소를 대응시키는 위의 함수가 $A$-balanced인 것을 알 수 있다. 따라서 이로부터 위의 $A$-linear map $\nu$가 유도된다. 
+으로 $M$에서 $L\otimes_AN$으로의 $A$-linear map을 정의하고, 그럼 $(u,y)\in\Hom_{\rMod{A}}(M,L)\times N$의 원소를 받아 $\Hom_{\rMod{A}}(M, L\otimes_AN)$의 원소를 대응시키는 위의 함수가 $A$-balanced인 것을 알 수 있다. 따라서 이로부터 위의 $A$-linear map $\nu$가 유도된다. 
 
 ::: 명제 3
 위와 같이 정의된 $\nu$에 대하여, 다음이 성립한다.
 
 1. 만일 $N$이 projective $A$-module이라면 $\nu$는 injective이다. 또, $N$이 finitely generated projective라면 $\nu$는 bijective이다.
-2. 만일 $M$이 fintiely generated projective $A$-module이라면, $\nu$는 bijective이다.
+2. 만일 $M$이 finitely generated projective $A$-module이라면, $\nu$는 bijective이다.
 :::
 
 특히 만일 $L=A$인 경우 다음의 따름정리를 얻는다.

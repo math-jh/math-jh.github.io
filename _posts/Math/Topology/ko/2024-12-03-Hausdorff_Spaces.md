@@ -14,7 +14,7 @@ weight: 13
 
 ---
 
-이제 우리는 하우스도르프 공간을 정의한다. 그 전에 우선 다음을 정의한다.
+이제 우리는 Hausdorff space를 정의한다. 그 전에 우선 다음을 정의한다.
 
 ## 점열의 수렴
 
@@ -38,7 +38,7 @@ $$n\geq N\implies x_n\in U$$
 
 - 위상공간 $X$의 두 점 $x,y$가 서로 다르다는 것은 $x\neq y$인 것이다. 
 - 위상공간 $X$의 두 점 $x,y$가 *위상적으로 구별가능<sub>topologically distinguishable</sub>*하다는 것은 $\mathcal{N}(x)\neq \mathcal{N}(y)$인 것이다.[^1] ([§열린집합, §§Neighborhood filter](/ko/math/topology/open_sets#neighborhood-filter))
-- 위상공간 $X$의 두 부분집합 $A,B$가 *분리가능<sub>separated</sub>*이라는 것은 $x,y$ 각각이 서로를 포함하지 않는 근방을 갖는 것이다.
+- 위상공간 $X$의 두 부분집합 $A,B$가 *분리가능<sub>separated</sub>*이라는 것은 $A,B$ 각각이 서로를 포함하지 않는 근방을 갖는 것이다.
 - 위상공간 $X$의 두 부분집합 $A,B$가 *근방으로 분리가능<sub>separated by neighborhoods</sub>*이라는 것은 이들이 서로소인 근방을 갖는 것이다.
 - 위상공간 $X$의 두 부분집합 $A,B$가 *닫힌근방으로 분리가능<sub>separated by closed neighborhoods</sub>*이라는 것은 이들이 서로소인 닫힌근방을 갖는 것이다.
 - 위상공간 $X$의 두 부분집합 $A,B$가 *연속함수로 분리가능<sub>separated by continuous functions</sub>*이라는 것은 적당한 연속함수 $f:X \rightarrow \mathbb{R}$이 존재하여 $A\subseteq f^{-1}(\{0\})$이고 $B\subseteq f^{-1}(\{1\})$인 것이다. 
@@ -164,4 +164,4 @@ $$x\sim y\iff f(x)=f(y)$$
 
 
 
-[^1]: 이는 $$x$$와 $$y$$를 각각 포함하는 열린집합들의 모임이 서로 같지 않다는 것과 동치이다. 
+[^1]: 이는 $x$와 $y$를 각각 포함하는 열린집합들의 모임이 서로 같지 않다는 것과 동치이다. 

@@ -237,7 +237,7 @@ $$e^{iz} = \cos z + i\sin z$$
 
 ## 조화함수
 
-holomorphic function의 실수부와 허수부는 단지 smooth한 실함수가 아니라, 평면의 Laplace 방정식을 만족하는 조화함수라는 더 강한 구조를 가진다. 이 사실은 복소해석학과 평면의 퍼텐셜 이론을 잇는 다리가 된다. 이 절에서는 holomorphic function이 두 번 복소미분가능하다는 사실, 곧 $u, v$가 $C^2$급이라는 사실을 받아들이고 출발한다. 이는 적분 이론에서 증명되는 holomorphic function의 무한미분가능성의 한 귀결이다.
+holomorphic function의 실수부와 허수부는 단지 smooth한 실함수가 아니라, 평면의 Laplace 방정식을 만족하는 조화함수라는 더 강한 구조를 가진다. 이 사실은 복소해석학과 평면의 potential 이론을 잇는 다리가 된다. 이 절에서는 holomorphic function이 두 번 복소미분가능하다는 사실, 곧 $u, v$가 $C^2$급이라는 사실을 받아들이고 출발한다. 이는 적분 이론에서 증명되는 holomorphic function의 무한미분가능성의 한 귀결이다.
 
 ::: 정의 11
 열린집합 $\Omega \subseteq \mathbb{R}^2$ 위의 $C^2$급 실숫값 함수 $u$가 *조화함수<sub>harmonic function</sub>*라는 것은 $\Omega$에서 *Laplace 방정식*

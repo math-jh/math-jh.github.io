@@ -59,7 +59,7 @@ $M$의 임의의 submodule $M'$은 primary submodule들의 교집합이다. 즉,
     은 $S^{-1}A$에 대한 $S^{-1}M$의 minimal primary decomposition이다.
 :::
 
-특히 $M=A$이고 $M'=\mathfrak a$가 $A$의 ideal인 경우, [정리 3](#thm3)의 셋째 결과에서 $\mathfrak a$를 포함하는 prime ideal들 가운데 포함관계에 대해 극소인 것들을 $\mathfrak a$의 *minimal prime ideal<sub>극소소아이디얼</sub>*이라 부르며, $\mathfrak a=(0)$일 때는 이를 단순히 $A$의 minimal prime ideal이라 부른다.
+특히 $M=A$이고 $M'=\mathfrak a$가 $A$의 ideal인 경우, [정리 3](#thm3)의 셋째 결과에서 $\mathfrak a$를 포함하는 prime ideal들 가운데 포함관계에 대해 minimal한 것들을 $\mathfrak a$의 *minimal prime ideal<sub>극소소아이디얼</sub>*이라 부르며, $\mathfrak a=(0)$일 때는 이를 단순히 $A$의 minimal prime ideal이라 부른다.
 
 이를 증명하기 위해, 우선 우리는 module의 irreducible decomposition을 정의한다.
 

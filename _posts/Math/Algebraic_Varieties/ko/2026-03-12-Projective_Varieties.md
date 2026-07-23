@@ -16,7 +16,7 @@ weight: 2
 
 ## 사영공간의 정의
 
-이제 우리는 대수다양체의 다른 중요한 클래스인 사영다양체를 정의한다. 우선 다음부터 시작한다. 
+이제 우리는 algebraic variety의 다른 중요한 class인 projective variety를 정의한다. 우선 다음부터 시작한다. 
 
 ::: 정의 1
 Field $\mathbb{K}$ 위의 *projective $n$-space<sub>$n$차원 사영공간</sub>* $\mathbb{P}^n_{\mathbb{K}}$를 다음과 같이 정의한다. 집합으로서
@@ -34,7 +34,7 @@ Equivalence class $[(x_0, \ldots, x_n)]$은 보통 $[x_0 : \cdots : x_n]$으로 
 
 ## 동차다항식과 사영공간
 
-이제 우리는 affine case에서와 마찬가지로 $\mathbb{P}^n$에 위상구조를 주어야 한다. Projective space에서도 마찬가지로 우리는 다항식들의 zero set으로 닫힌집합을 정의할 것인데, 주의할 점은 $\mathbb{P}^n$은 quotient set으로 정의되었으므로 일반적으로는 다항식이 $\mathbb{P}^N$ 위에 정의된 함수를 정의하지 않는다는 것이다. 즉 임의의 $F \in \mathbb{K}[x_0, \ldots, x_n]$에 대하여, $[x_0 : \cdots : x_n] = [\lambda x_0 : \cdots : \lambda x_n]$이지만 일반적으로
+이제 우리는 affine case에서와 마찬가지로 $\mathbb{P}^n$에 위상구조를 주어야 한다. Projective space에서도 마찬가지로 우리는 다항식들의 zero set으로 닫힌집합을 정의할 것인데, 주의할 점은 $\mathbb{P}^n$은 quotient set으로 정의되었으므로 일반적으로는 다항식이 $\mathbb{P}^n$ 위에 정의된 함수를 정의하지 않는다는 것이다. 즉 임의의 $F \in \mathbb{K}[x_0, \ldots, x_n]$에 대하여, $[x_0 : \cdots : x_n] = [\lambda x_0 : \cdots : \lambda x_n]$이지만 일반적으로
 
 $$F(x_0, \ldots, x_n)\neq F(\lambda x_0, \ldots, \lambda x_n)$$
 
@@ -101,7 +101,7 @@ $$I(X) = \{F \in \mathbb{K}[\x_0, \ldots, \x_n] \mid F \text{ is homogeneous and
 :::
 
 ::: 정리 7
-(Projective Nullstellensatz) Field $\mathbb{K}$가 대수적으로 닫힌 체이고 $\mathfrak{a} \subseteq \mathbb{K}[\x_0, \ldots, \x_n]$이 homogeneous ideal이라 하자. 그럼
+(Projective Nullstellensatz) $\mathbb{K}$가 algebraically closed field이고 $\mathfrak{a} \subseteq \mathbb{K}[\x_0, \ldots, \x_n]$이 homogeneous ideal이라 하자. 그럼
 
 1. $Z(\mathfrak{a}) = \emptyset \iff \mathfrak{a} \supseteq (\x_0, \ldots, \x_n)$,
 2. $I(Z(\mathfrak{a})) = \sqrt{\mathfrak{a}}$ (if $Z(\mathfrak{a}) \ne \emptyset$).
@@ -236,7 +236,7 @@ $$\varphi(x) = [F_0(x) : \cdots : F_m(x)]$$
 이고, 모든 $x \in X$에 대해 $F_i(x)$들이 동시에 $0$이 아닌 것이다.
 :::
 
-만일 $F_0, \ldots, F_m$이 모두 같은 차수 $d$의 homogeneous polynomial이라면, $F_i(\lambda x) = \lambda^d F_i(x)$이므로
+만일 $F_0, \ldots, F_m$이 모두 같은 degree $d$의 homogeneous polynomial이라면, $F_i(\lambda x) = \lambda^d F_i(x)$이므로
 
 $$[F_0(\lambda x) : \cdots : F_m(\lambda x)] = [\lambda^d F_0(x) : \cdots : \lambda^d F_m(x)] = [F_0(x) : \cdots : F_m(x)]$$
 

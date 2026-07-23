@@ -101,7 +101,7 @@ $$W^\omega=\{v\in V\mid\omega(v,w)=0\text{ for all $w\in W$}\}$$
 Symplectic vector space $(V,\omega)$와 그 부분공간 $W$에 대하여, 다음이 성립한다.
 
 1. $\dim W+\dim W^\omega=\dim V$이고, $(W^\omega)^\omega=W$이 성립한다.
-2. $W$가 symplectic subspace인 것은 $W^\omega$가 sympelctic subspace인 것과 동치이다.
+2. $W$가 symplectic subspace인 것은 $W^\omega$가 symplectic subspace인 것과 동치이다.
 3. $W$가 isotropic인 것은 $W^\omega$가 coisotropic인 것과 동치이다. 또, $W$가 coisotropic인 것은 $W^\omega$가 isotropic인 것과 동치이다.
 4. $W$가 Lagrangian인 것은 $W$가 isotropic이고 $\dim W=\frac{1}{2}\dim V$인 것과 동치이다.
 :::
@@ -116,7 +116,7 @@ Symplectic vector space $(V,\omega)$와 그 부분공간 $W$에 대하여, 다�
     
     $$0=\varphi(w)=\omega(u,w)\qquad\text{for all $w\in W$}$$
     
-    이 성립하므로 $u\in W^\omega$이다. 즉, 위의 isomorphism을 통해 우리는 두 공간 $W^\perp$와 $W^\omega$가 isomorphic하다는. 것을 안다. 이제 1번의 첫 등식은
+    이 성립하므로 $u\in W^\omega$이다. 즉, 위의 isomorphism을 통해 우리는 두 공간 $W^\perp$와 $W^\omega$가 isomorphic하다는 것을 안다. 이제 1번의 첫 등식은
 
     $$\dim V=\dim W+\dim W^\perp=\dim W+\dim W^\omega$$
 
@@ -129,7 +129,7 @@ Symplectic vector space $(V,\omega)$와 그 부분공간 $W$에 대하여, 다�
 
 ## Symplectic quotient
 
-한편, $\mathbb{R}$-벡터공간 $V$와 임의의 부분공간 $W$에 대하여, quotient space $V/W$는 항상 잘 정의된다. 그리나 $V$가 symplectic vector space였다 하더라도 일반적으로 $V/W$가 symplectic vector space의 구조를 가질 필요는 없다. 가령 $W$가 홀수차원 부분공간이었다면 $V/W$ 또한 홀수차원이 되므로, 당연히 symplectic vector space의 구조를 가질 수 없다. 
+한편, $\mathbb{R}$-벡터공간 $V$와 임의의 부분공간 $W$에 대하여, quotient space $V/W$는 항상 잘 정의된다. 그러나 $V$가 symplectic vector space였다 하더라도 일반적으로 $V/W$가 symplectic vector space의 구조를 가질 필요는 없다. 가령 $W$가 홀수차원 부분공간이었다면 $V/W$ 또한 홀수차원이 되므로, 당연히 symplectic vector space의 구조를 가질 수 없다. 
 
 $W$가 짝수차원 부분공간이어도 이는 마찬가지인데, 우리는 quotient space $V/W$에
 

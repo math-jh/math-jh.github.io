@@ -54,7 +54,7 @@ What plays an important role in this process is the following *principle of leas
 
 > When an object moves from $x_0$ to $x_1$, it follows the extremum $z(t)=(x(t),y(t))$ ($t_0\leq t\leq t_1$) of the following *action*.
 > 
-> $$\mathcal{A}_H(z)=\int_{t_0}^{t_1}\langle y,\dot{x}\rangle-H(z)\mathop{dt}$$
+> $\mathcal{A}_H(z)=\int_{t_0}^{t_1}\langle y,\dot{x}\rangle-H(z)\mathop{dt}$
 
 In this formula, the newly introduced $H$ denotes the *Hamiltonian*, and for our purposes we may simply regard it as the energy. This principle holds locally even when $H$ depends on time; in that case one merely replaces $H$ by $H_t$. The mathematical treatment of such problems is very well known.
 
@@ -105,7 +105,7 @@ Therefore, finding the actual trajectory of the object in phase space—that is,
 
 $$X_H=-J_0\nabla H(z)$$
 
-and we know that this is always possible. ([\[Differential Manifolds\] §Vector Fields, ⁋Theorem 6](/en/math/manifolds/vector_fields#thm6))
+and we know that this is always possible. ([\[Manifolds\] §Vector Fields, ⁋Theorem 6](/en/math/manifolds/vector_fields#thm6))
 
 ## Symplectic Form
 
@@ -117,7 +117,7 @@ Now define a $2$-form on $\mathbb{R}^{2n}$ by
 
 $$\omega_0(-,-):=\langle J_0-, -\rangle$$
 
-Then the above formula can be written, by analogy with the definition of the gradient of a function $f$ via $df=\langle\nabla f,-\rangle$, as
+Then the above formula can be written, by analogy with the definition of the gradient of a function $f$ via $df=\langle \nabla f,-\rangle$, as
 
 $$dH=\omega_0(X_H, -)$$
 
@@ -145,4 +145,4 @@ Before long we shall see that the entire discussion above remains valid when $\m
 
 ---
 
-[^1]: A *linear complex structure* on a vector space $$V$$ is an endomorphism $$J\in\End(V)$$ satisfying $$J^2=-\id$$. When such a $$J$$ is given, one can verify that $$V$$ acquires the structure of a $$\mathbb{C}$$-vector space via the formula $$(a+bi)\cdot v:=av+bJv$$.
+[^1]: A *linear complex structure* on a vector space $V$ is an endomorphism $J\in\End(V)$ satisfying $J^2=-\id$. When such a $J$ is given, one can verify that $V$ acquires the structure of a $\mathbb{C}$-vector space via the formula $(a+bi)\cdot v:=av+bJv$.

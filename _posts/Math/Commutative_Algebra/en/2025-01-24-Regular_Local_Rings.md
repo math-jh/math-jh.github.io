@@ -230,7 +230,7 @@ are the same as those obtained by taking $\mathfrak{p}_k$ to be an associated pr
 
 Now let us prove the claim. First, if each $A_i$ is normal, then condition (S2) follows from the result of [Theorem 9](#thm9), and condition (R1) holds because the localization of $A$ at a codimension $c$ prime ideal $\mathfrak{p}$ can be viewed, via the above description of $\mathfrak{p}$, as the localization of $A_k$ at a codimension $c$ prime $\mathfrak{p}_k$.
 
-Conversely, assume that conditions R1 and S2 hold. Then first, $R$ is a reduced ring. Indeed, if
+Conversely, assume that conditions R1 and S2 hold. Then first, $A$ is a reduced ring. Indeed, if
 
 $$0=\bigcap \mathfrak{q}_i,\qquad\text{$\mathfrak{q}_i$ a $\mathfrak{p}_i$-primary ideal}$$
 

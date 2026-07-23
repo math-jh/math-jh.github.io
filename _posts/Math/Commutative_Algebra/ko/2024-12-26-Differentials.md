@@ -15,7 +15,7 @@ published: false
 
 ---
 
-이번 글에서의 목표는 대수적으로 미분을 정의하는 것이다. 
+이번 글에서의 목표는 대수적으로 derivation을 정의하는 것이다. 
 
 ## 캘러미분가군
 
@@ -114,13 +114,13 @@ $N$을 $\Omega_{\varphi/A}'$의 image, 즉 원소들 $d_{E'/A}\varphi(x)$ ($x\in
 
 우선 $\Omega_\varphi$가 surjective인 것을 보이자. $\Omega_{E'/E}$는 $E'$-module로서 원소들 $d_{E'/E}y'$ ($y'\in E'$)으로 생성되는데, 위에서 살펴본 식 $d_{E'/E}=\Omega_\varphi\circ d_{E'/A}$에 의하여 이들은 모두 $\Omega_\varphi$의 image에 속하기 때문이다.
 
-다음으로 두 map의 합성이 $0$임을 보이자. $\Omega_{E/A}\otimes_EE'$의 생성원 $d_{E/A}x\otimes 1$은 $\Omega_{\varphi/A}'$에 의해 $d_{E'/A}\varphi(x)$로 옮겨지고, 다시 $\Omega_\varphi$에 의해 $d_{E'/E}\varphi(x)$로 옮겨진다. 그런데 $d_{E'/E}$는 $E$-derivation이므로 $\varphi(x)$ 꼴의 원소들, 즉 $E$에서 온 원소들을 모두 $0$으로 보낸다. 따라서 $\Omega_\varphi\circ\Omega_{\varphi/A}'=0$이고, 특히 $N\subseteq \ker\Omega_\varphi$이므로 $\Omega_\varphi$는 $E'$-linear map $\psi':C \rightarrow \Omega_{E'/E}$를 유도한다.
+다음으로 두 map의 합성이 $0$임을 보이자. $\Omega_{E/A}\otimes_EE'$의 generator $d_{E/A}x\otimes 1$은 $\Omega_{\varphi/A}'$에 의해 $d_{E'/A}\varphi(x)$로 옮겨지고, 다시 $\Omega_\varphi$에 의해 $d_{E'/E}\varphi(x)$로 옮겨진다. 그런데 $d_{E'/E}$는 $E$-derivation이므로 $\varphi(x)$ 꼴의 원소들, 즉 $E$에서 온 원소들을 모두 $0$으로 보낸다. 따라서 $\Omega_\varphi\circ\Omega_{\varphi/A}'=0$이고, 특히 $N\subseteq \ker\Omega_\varphi$이므로 $\Omega_\varphi$는 $E'$-linear map $\psi':C \rightarrow \Omega_{E'/E}$를 유도한다.
 
 이제 $\ker\Omega_\varphi\subseteq N$임을 보이면 증명이 끝난다. 이를 위해 합성 $\delta=\pi\circ d_{E'/A}:E' \rightarrow C$를 생각하자. 그럼 $\delta$는 $A$-derivation이며, $N$의 정의에 의하여 $\varphi(E)$의 원소들을 모두 $0$으로 보낸다. 그런데 임의의 $e\in E$와 $y'\in E'$에 대하여
 
 $$\delta(\varphi(e)y')=\varphi(e)\,\delta(y')+y'\,\delta(\varphi(e))=\varphi(e)\,\delta(y')$$
 
-이므로 $\delta$는 $E$-linear이고, 따라서 $E$-derivation이다. 그럼 [보조정리 2](#lem2)의 universal property에 의하여 $\psi\circ d_{E'/E}=\delta$를 만족하는 유일한 $E'$-linear map $\psi:\Omega_{E'/E} \rightarrow C$가 존재한다. 이제 두 합성 $\psi\circ\psi'$와 $\psi'\circ\psi$를 생각하면, 각각 $C$와 $\Omega_{E'/E}$의 생성원들 위에서
+이므로 $\delta$는 $E$-linear이고, 따라서 $E$-derivation이다. 그럼 [보조정리 2](#lem2)의 universal property에 의하여 $\psi\circ d_{E'/E}=\delta$를 만족하는 유일한 $E'$-linear map $\psi:\Omega_{E'/E} \rightarrow C$가 존재한다. 이제 두 합성 $\psi\circ\psi'$와 $\psi'\circ\psi$를 생각하면, 각각 $C$와 $\Omega_{E'/E}$의 generator들 위에서
 
 $$\pi(d_{E'/A}y')\overset{\psi'}{\longmapsto} d_{E'/E}y'\overset{\psi}{\longmapsto}\pi(d_{E'/A}y'),\qquad d_{E'/E}y'\overset{\psi}{\longmapsto}\pi(d_{E'/A}y')\overset{\psi'}{\longmapsto}d_{E'/E}y'$$
 
@@ -155,7 +155,7 @@ $$K/K^2 \overset{\bar{d}}{\longrightarrow}\Omega_{E/A}\otimes_EE' \rightarrow\Om
 ::: 증명
 가운데 map은 [명제 5](#prop5)에서의 $\Omega_{\varphi/A}'$이다. $N'$을 $\bar{d}$의 image로 생성되는 $\Omega_{E/A}\otimes_EE'$의 $E'$-submodule이라 하고, $C'=(\Omega_{E/A}\otimes_EE')/N'$과 quotient map $\pi:\Omega_{E/A}\otimes_EE' \rightarrow C'$를 생각하자.
 
-우선 $\Omega_{\varphi/A}'$가 surjective인 것을 보이자. $\varphi$가 surjective이므로 $\Omega_{E'/A}$의 임의의 생성원은 $x\in E$에 대하여 $d_{E'/A}\varphi(x)$의 꼴로 쓸 수 있고, 이는 $\Omega_{\varphi/A}'(d_{E/A}x\otimes 1)$과 같기 때문이다.
+우선 $\Omega_{\varphi/A}'$가 surjective인 것을 보이자. $\varphi$가 surjective이므로 $\Omega_{E'/A}$의 임의의 generator는 $x\in E$에 대하여 $d_{E'/A}\varphi(x)$의 꼴로 쓸 수 있고, 이는 $\Omega_{\varphi/A}'(d_{E/A}x\otimes 1)$과 같기 때문이다.
 
 다음으로 두 map의 합성이 $0$임을 보이자. 임의의 $k\in K$에 대하여 $\bar{d}(k+K^2)=d_{E/A}k\otimes 1$이고, 이는 $\Omega_{\varphi/A}'$에 의해 $d_{E'/A}\varphi(k)=d_{E'/A}(0)=0$으로 옮겨진다. 특히 $N'\subseteq\ker\Omega_{\varphi/A}'$이므로 $\Omega_{\varphi/A}'$는 $E'$-linear map $\psi':C' \rightarrow \Omega_{E'/A}$를 유도한다.
 
@@ -163,7 +163,7 @@ $$K/K^2 \overset{\bar{d}}{\longrightarrow}\Omega_{E/A}\otimes_EE' \rightarrow\Om
 
 $$\delta(x'y')=\pi(d_{E/A}(xy)\otimes 1)=\pi((x\,d_{E/A}y+y\,d_{E/A}x)\otimes 1)=x'\,\delta(y')+y'\,\delta(x')$$
 
-이므로 $A$-derivation이다. 여기서 마지막 등식은 $\Omega_{E/A}\otimes_EE'$ 위에서 $E$의 action이 $\varphi$를 통한 $E'$의 action과 일치한다는 것에 따른 것이다. 그럼 [보조정리 2](#lem2)의 universal property에 의하여 $\psi\circ d_{E'/A}=\delta$를 만족하는 유일한 $E'$-linear map $\psi:\Omega_{E'/A} \rightarrow C'$가 존재한다. 두 합성 $\psi\circ\psi'$와 $\psi'\circ\psi$는 각각 생성원들 위에서
+이므로 $A$-derivation이다. 여기서 마지막 등식은 $\Omega_{E/A}\otimes_EE'$ 위에서 $E$의 action이 $\varphi$를 통한 $E'$의 action과 일치한다는 것에 따른 것이다. 그럼 [보조정리 2](#lem2)의 universal property에 의하여 $\psi\circ d_{E'/A}=\delta$를 만족하는 유일한 $E'$-linear map $\psi:\Omega_{E'/A} \rightarrow C'$가 존재한다. 두 합성 $\psi\circ\psi'$와 $\psi'\circ\psi$는 각각 generator들 위에서
 
 $$\pi(d_{E/A}x\otimes 1)\overset{\psi'}{\longmapsto}d_{E'/A}\varphi(x)\overset{\psi}{\longmapsto}\pi(d_{E/A}x\otimes 1),\qquad d_{E'/A}x'\overset{\psi}{\longmapsto}\pi(d_{E/A}x\otimes 1)\overset{\psi'}{\longmapsto}d_{E'/A}x'$$
 

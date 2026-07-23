@@ -15,7 +15,7 @@ published: false
 drift_needed: true
 ---
 
-우리는 [\[대수다양체\] §층 코호몰로지](/ko/math/algebraic_varieties/sheaf_cohomology)에서 quasi-projective variety 위의 quasi-coherent sheaf에 대한 sheaf cohomology를 derived functor로 정의하고, Čech cohomology와의 비교 및 Leray 정리를 통해 이를 계산하는 방법을 살펴보았다. 그곳의 논증은 사실상 quasi-projective라는 가정을 거의 사용하지 않으며, separated 조건과 affine 위의 소멸 정리만으로 작동한다. 이제 우리는 [§준연접층](/ko/math/scheme_theory/quasicoherent_sheaves)에서 임의의 scheme 위로 끌어올린 quasi-coherent sheaf의 언어를 갖추었으므로, sheaf cohomology 또한 임의의 scheme 위로 옮겨 다시 정립할 수 있다. 이 글에서 우리는 그 정의를 scheme 수준에서 다시 적고, **Serre의 아핀 소멸 정리**가 affine scheme 위에서 quasi-coherent sheaf의 higher cohomology를 죽인다는 것을 증명하며, 이를 토대로 사영공간 위의 line bundle $\mathcal{O}(d)$의 cohomology를 재계산한다. 마지막으로 Noetherian projective scheme 위에서 coherent sheaf의 cohomology가 유한차원이라는 것과, 충분히 twist하면 higher cohomology가 소멸한다는 Serre vanishing을 다룬다.
+우리는 [\[대수다양체\] §층 코호몰로지](/ko/math/algebraic_varieties/sheaf_cohomology)에서 quasi-projective variety 위의 quasi-coherent sheaf에 대한 sheaf cohomology를 derived functor로 정의하고, Čech cohomology와의 비교 및 Leray 정리를 통해 이를 계산하는 방법을 살펴보았다. 그곳의 논증은 사실상 quasi-projective라는 가정을 거의 사용하지 않으며, separated 조건과 affine 위의 소멸 정리만으로 작동한다. 이제 우리는 [§준연접층](/ko/math/scheme_theory/quasicoherent_sheaves)에서 임의의 scheme 위로 끌어올린 quasi-coherent sheaf의 언어를 갖추었으므로, sheaf cohomology 또한 임의의 scheme 위로 옮겨 다시 정립할 수 있다. 이 글에서 우리는 그 정의를 scheme 수준에서 다시 적고, **Serre의 affine 소멸 정리**가 affine scheme 위에서 quasi-coherent sheaf의 higher cohomology를 죽인다는 것을 증명하며, 이를 토대로 사영공간 위의 line bundle $\mathcal{O}(d)$의 cohomology를 재계산한다. 마지막으로 Noetherian projective scheme 위에서 coherent sheaf의 cohomology가 유한차원이라는 것과, 충분히 twist하면 higher cohomology가 소멸한다는 Serre vanishing을 다룬다.
 
 ## 유도 함자로서의 코호몰로지
 
@@ -46,7 +46,7 @@ $$0 \rightarrow H^0(X, \mathcal{F}') \rightarrow H^0(X, \mathcal{F}) \rightarrow
 $\Gamma(X, -)$는 left exact functor이고 $\Sh(X)$는 enough injective를 가지므로, right derived functor가 정의하는 $\delta$-functor의 long exact sequence가 그대로 성립한다. (이는 [\[호몰로지 대수학\] §유도함자, ⁋명제 8](/ko/math/homological_algebra/derived_functors#prop8)의 쌍대 명제에 의한다.)
 :::
 
-[\[대수다양체\] §층 코호몰로지](/ko/math/algebraic_varieties/sheaf_cohomology)에서 도입한 Čech cohomology의 정의 또한 그대로 옮겨진다. Scheme $X$의 open cover $\mathcal{U}=\{U_i\}_{i\in I}$와 sheaf $\mathcal{F}$에 대하여, Čech complex $\check C^\bullet(\mathcal{U}, \mathcal{F})$와 그 cohomology $\check H^p(\mathcal{U}, \mathcal{F})$는 ([\[대수다양체\] §층 코호몰로지, ⁋정의 3](/ko/math/algebraic_varieties/sheaf_cohomology#def3), [\[대수다양체\] §층 코호몰로지, ⁋정의 4](/ko/math/algebraic_varieties/sheaf_cohomology#def4)) 위상공간 수준의 정의이므로 scheme 위에서도 곧바로 의미를 가진다. 우리의 목표는 좋은 덮개에 대하여 Čech cohomology가 [정의 1](#def1)의 derived functor cohomology와 일치함을 보이는 것이며, 그 핵심에는 affine scheme 위의 소멸 정리가 있다.
+[\[대수다양체\] §층 코호몰로지](/ko/math/algebraic_varieties/sheaf_cohomology)에서 도입한 Čech cohomology의 정의 또한 그대로 옮겨진다. Scheme $X$의 open cover $\mathcal{U}=\{U_i\}_{i\in I}$와 sheaf $\mathcal{F}$에 대하여, Čech complex $\check C^\bullet(\mathcal{U}, \mathcal{F})$와 그 cohomology $\check H^p(\mathcal{U}, \mathcal{F})$는 ([\[대수다양체\] §층 코호몰로지, ⁋정의 3](/ko/math/algebraic_varieties/sheaf_cohomology#def3), [\[대수다양체\] §층 코호몰로지, ⁋정의 4](/ko/math/algebraic_varieties/sheaf_cohomology#def4)) 위상공간 수준의 정의이므로 scheme 위에서도 곧바로 의미를 가진다. 우리의 목표는 좋은 covering에 대하여 Čech cohomology가 [정의 1](#def1)의 derived functor cohomology와 일치함을 보이는 것이며, 그 핵심에는 affine scheme 위의 소멸 정리가 있다.
 
 ## Serre의 아핀 소멸 정리
 
@@ -83,7 +83,7 @@ $A$가 noetherian이 아닌 경우에는, $\Spec A$의 임의의 open cover에 �
 
 [정리 3](#thm3)의 핵심은 affine scheme이 cohomology의 관점에서 "단순한" 공간이라는 것이다. 즉 affine 위에서는 quasi-coherent sheaf의 정보가 모두 $H^0$, 곧 그 global section 가군에 담겨 있으며, higher cohomology는 어떠한 새로운 정보도 주지 않는다. 이는 위상공간이 Čech cohomology의 관점에서 contractible한 것에 대응하는 대수기하학적 현상이다.
 
-이로부터 곧바로 affine 덮개에 대한 Leray 정리를 scheme 수준에서 얻는다. [\[대수다양체\] §층 코호몰로지, ⁋정리 11](/ko/math/algebraic_varieties/sheaf_cohomology#thm11)은 cover $\mathcal{U}$의 모든 유한 교집합 위에서 $\mathcal{F}$가 acyclic이면 $\check H^p(\mathcal{U}, \mathcal{F})\cong H^p(X, \mathcal{F})$임을 주는데, 이는 위상공간 수준의 정리이므로 scheme 위에서도 그대로 적용된다.
+이로부터 곧바로 affine covering에 대한 Leray 정리를 scheme 수준에서 얻는다. [\[대수다양체\] §층 코호몰로지, ⁋정리 11](/ko/math/algebraic_varieties/sheaf_cohomology#thm11)은 cover $\mathcal{U}$의 모든 유한 교집합 위에서 $\mathcal{F}$가 acyclic이면 $\check H^p(\mathcal{U}, \mathcal{F})\cong H^p(X, \mathcal{F})$임을 주는데, 이는 위상공간 수준의 정리이므로 scheme 위에서도 그대로 적용된다.
 
 ::: 따름정리 4
 Separated scheme $X$와 ([§값매김환, ⁋정의 3](/ko/math/scheme_theory/valuative_criteria#def3)) 그 위의 quasi-coherent sheaf $\mathcal{F}$, 그리고 affine open cover $\mathcal{U}=\{U_i\}$에 대하여, 모든 $p$에 대해
@@ -93,14 +93,14 @@ $$\check H^p(\mathcal{U}, \mathcal{F})\cong H^p(X, \mathcal{F})$$
 이 성립한다.
 :::
 ::: 증명
-[\[대수다양체\] §층 코호몰로지, ⁋정리 11](/ko/math/algebraic_varieties/sheaf_cohomology#thm11)에 의하여, $\mathcal{U}$의 임의의 유한 교집합 $U_{i_0}\cap\cdots\cap U_{i_p}$ 위에서 $\mathcal{F}$가 acyclic임을 보이면 충분하다. $X$가 separated이므로 diagonal morphism $\Delta:X \rightarrow X\times_{\Spec \mathbb{Z}}X$이 closed immersion이고, 따라서 임의의 두 affine open subset $U_i, U_j$의 교집합 $U_i\cap U_j$는 다시 affine이다. 실제로 $U_i\cap U_j$는 fiber product $U_i\times_X U_j$이며, 이는 affine scheme $U_i\times_{\Spec \mathbb{Z}}U_j$의 closed subscheme $\Delta^{-1}(U_i\times U_j)$와 동형이므로 affine이다. 같은 논증을 반복하면 유한 교집합 $U_{i_0}\cap\cdots\cap U_{i_p}$ 또한 affine scheme이다. 그럼 $\mathcal{F}$의 이 위로의 제한은 affine scheme 위의 quasi-coherent sheaf이므로 [정리 3](#thm3)에 의하여 acyclic이고, 따라서 [\[대수다양체\] §층 코호몰로지, ⁋정리 11](/ko/math/algebraic_varieties/sheaf_cohomology#thm11)의 전제가 충족된다.
+[\[대수다양체\] §층 코호몰로지, ⁋정리 11](/ko/math/algebraic_varieties/sheaf_cohomology#thm11)에 의하여, $\mathcal{U}$의 임의의 유한 교집합 $U_{i_0}\cap\cdots\cap U_{i_p}$ 위에서 $\mathcal{F}$가 acyclic임을 보이면 충분하다. $X$가 separated이므로 diagonal morphism $\Delta:X \rightarrow X\times_{\Spec \mathbb{Z}}X$이 closed immersion이고, 따라서 임의의 두 affine open subset $U_i, U_j$의 교집합 $U_i\cap U_j$는 다시 affine이다. 실제로 $U_i\cap U_j$는 fiber product $U_i\times_X U_j$이며, 이는 affine scheme $U_i\times_{\Spec \mathbb{Z}}U_j$의 closed subscheme $\Delta^{-1}(U_i\times U_j)$와 동형이므로 affine이다. 같은 논증을 반복하면 유한 교집합 $U_{i_0}\cap\cdots\cap U_{i_p}$ 또한 affine scheme이다. 그럼 $\mathcal{F}$의 이 위로의 restriction은 affine scheme 위의 quasi-coherent sheaf이므로 [정리 3](#thm3)에 의하여 acyclic이고, 따라서 [\[대수다양체\] §층 코호몰로지, ⁋정리 11](/ko/math/algebraic_varieties/sheaf_cohomology#thm11)의 전제가 충족된다.
 :::
 
-따라서 separated scheme 위에서는 affine 덮개 하나를 잡아 Čech complex만 계산하면 derived functor cohomology가 그대로 얻어진다. Affine scheme 사이의 morphism은 항상 separated이고 ([§값매김환, ⁋보조정리 5](/ko/math/scheme_theory/valuative_criteria#lem5)), $\mathbb{P}^n$을 비롯한 projective scheme 또한 separated이므로, 우리가 실제로 다루는 대부분의 scheme에서 이 비교가 작동한다.
+따라서 separated scheme 위에서는 affine covering 하나를 잡아 Čech complex만 계산하면 derived functor cohomology가 그대로 얻어진다. Affine scheme 사이의 morphism은 항상 separated이고 ([§값매김환, ⁋보조정리 5](/ko/math/scheme_theory/valuative_criteria#lem5)), $\mathbb{P}^n$을 비롯한 projective scheme 또한 separated이므로, 우리가 실제로 다루는 대부분의 scheme에서 이 비교가 작동한다.
 
 ## 사영공간 위의 line bundle
 
-이제 affine 덮개에 대한 Čech 계산을 사용하여 사영공간 위의 line bundle $\mathcal{O}(d)$의 cohomology를 scheme 수준에서 다룬다. 우선 $\mathcal{O}(d)$를 graded 가군의 언어로 정의한다. ring $A$ 위의 사영공간은 $\mathbb{P}^n_A=\Proj A[\x_0,\ldots, \x_n]$이며 ([§사영스킴, ⁋정의 1](/ko/math/scheme_theory/projective_schemes#def1)), 이는 standard affine cover $\mathcal{U}=\{D_+(\x_i)\}_{i=0}^n$을 가진다.
+이제 affine covering에 대한 Čech 계산을 사용하여 사영공간 위의 line bundle $\mathcal{O}(d)$의 cohomology를 scheme 수준에서 다룬다. 우선 $\mathcal{O}(d)$를 graded 가군의 언어로 정의한다. ring $A$ 위의 사영공간은 $\mathbb{P}^n_A=\Proj A[\x_0,\ldots, \x_n]$이며 ([§사영스킴, ⁋정의 1](/ko/math/scheme_theory/projective_schemes#def1)), 이는 standard affine cover $\mathcal{U}=\{D_+(\x_i)\}_{i=0}^n$을 가진다.
 
 ::: 정의 5
 $S=A[\x_0,\ldots, \x_n]$을 standard grading을 가진 graded ring이라 하고, $S(d)$를 $S(d)_m=S_{d+m}$으로 grading을 옮긴 graded $S$-가군이라 하자. 그럼 standard affine cover $\mathcal{U}=\{D_+(\x_i)\}$ 위에서 각각의 $D_+(\x_i)=\Spec S_{(\x_i)}$에
@@ -110,7 +110,7 @@ $$\mathcal{O}(d)(D_+(\x_i))=\bigl(S(d)_{\x_i}\bigr)_0=\x_i^d\cdot S_{(\x_i)}$$
 을 대응시키고, 겹치는 부분 위에서 자연스러운 동일시로 붙여 얻는 $\mathbb{P}^n_A$ 위의 invertible sheaf를 *twisting sheaf<sub>꼬임층</sub>* $\mathcal{O}(d)$라 부른다.
 :::
 
-여기에서 $S_{(\x_i)}$은 $S_{\x_i}$의 degree $0$ 부분이며, $\x_i^d\cdot S_{(\x_i)}$은 $S_{\x_i}$ 안에서 degree $d$인 원소들의 모임이다. 각 chart 위에서 $\mathcal{O}(d)\vert_{D_+(\x_i)}$은 $\x_i^d$를 생성원으로 하는 자유 $S_{(\x_i)}$-가군이므로 rank $1$ free이고, 따라서 $\mathcal{O}(d)$는 invertible sheaf이다. ([§준연접층, ⁋정의 15](/ko/math/scheme_theory/quasicoherent_sheaves#def15)) $d=0$인 경우 $\mathcal{O}(0)=\mathcal{O}_{\mathbb{P}^n_A}$이고, $\mathcal{O}(d)\otimes\mathcal{O}(e)\cong\mathcal{O}(d+e)$가 성립하므로 $\mathcal{O}(d)\cong\mathcal{O}(1)^{\otimes d}$이다. 이 정의는 [\[대수다양체\] §사영공간의 코호몰로지](/ko/math/algebraic_varieties/cohomology_of_projective_spaces)에서 variety 위의 $\mathcal{O}(d)$를 chart별 section으로 기술한 것과 정확히 일치한다.
+여기에서 $S_{(\x_i)}$은 $S_{\x_i}$의 degree $0$ 부분이며, $\x_i^d\cdot S_{(\x_i)}$은 $S_{\x_i}$ 안에서 degree $d$인 원소들의 모임이다. 각 chart 위에서 $\mathcal{O}(d)\vert_{D_+(\x_i)}$은 $\x_i^d$를 generator로 하는 자유 $S_{(\x_i)}$-가군이므로 rank $1$ free이고, 따라서 $\mathcal{O}(d)$는 invertible sheaf이다. ([§준연접층, ⁋정의 15](/ko/math/scheme_theory/quasicoherent_sheaves#def15)) $d=0$인 경우 $\mathcal{O}(0)=\mathcal{O}_{\mathbb{P}^n_A}$이고, $\mathcal{O}(d)\otimes\mathcal{O}(e)\cong\mathcal{O}(d+e)$가 성립하므로 $\mathcal{O}(d)\cong\mathcal{O}(1)^{\otimes d}$이다. 이 정의는 [\[대수다양체\] §사영공간의 코호몰로지](/ko/math/algebraic_varieties/cohomology_of_projective_spaces)에서 variety 위의 $\mathcal{O}(d)$를 chart별 section으로 기술한 것과 정확히 일치한다.
 
 이제 cohomology를 계산한다. $\mathbb{P}^n_A$은 separated이므로 [따름정리 4](#cor4)에 의해 standard affine cover에 대한 Čech complex를 계산하면 충분하다. 그 결과는 variety의 경우와 형태가 동일하다.
 
@@ -132,7 +132,7 @@ $$0 \rightarrow \mathcal{O}(d-1)\xrightarrow{\times\x_n}\mathcal{O}(d) \rightarr
 
 의 long exact sequence를 ([명제 2](#prop2)) 사용한 $n$에 대한 귀납으로 처리한다. 중간 차원에서의 소멸과 top 차원에서의 $\coker$ 계산이 모두 variety의 경우와 일치한다.
 
-마지막으로 $q=n$, $d\leq -n-1$에서 얻어지는 공간이 표기 $A[\x_0^{-1},\ldots, \x_n^{-1}]_{-d-n-1}$로 적히는 이유는 [\[대수다양체\] §사영공간의 코호몰로지, ⁋명제 1](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop1) 직후의 설명과 동일하다. 즉 모든 지수가 $-1$ 이하인 $d$차 monomial들을 $\y_j=\x_j^{-1}$로 치환하면 $\lvert d\rvert-(n+1)=-d-n-1$차의 "음의 차수" monomial 공간이 된다.
+마지막으로 $q=n$, $d\leq -n-1$에서 얻어지는 공간이 표기 $A[\x_0^{-1},\ldots, \x_n^{-1}]_{-d-n-1}$로 적히는 이유는 [\[대수다양체\] §사영공간의 코호몰로지, ⁋명제 1](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop1) 직후의 설명과 동일하다. 즉 모든 지수가 $-1$ 이하인 $d$차 monomial들을 $\y_j=\x_j^{-1}$로 치환하면 $\lvert d\rvert-(n+1)=-d-n-1$차의 "음의 degree" monomial 공간이 된다.
 :::
 
 [정리 6](#thm6)에서 $d\geq 0$일 때 $H^0(\mathbb{P}^n_A, \mathcal{O}(d))=A[\x_0,\ldots, \x_n]_d$이 degree $d$ homogeneous polynomial들의 free $A$-가군이라는 것은 $\mathcal{O}(d)$의 global section이 곧 $S_d$임을 다시 확인해 준다. 또 양 끝 차원 $H^0$와 $H^n$ 사이에는 Serre duality

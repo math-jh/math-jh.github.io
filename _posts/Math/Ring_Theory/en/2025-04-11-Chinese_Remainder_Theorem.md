@@ -42,7 +42,7 @@ $$x(x_1y_1+\cdots+x_ny_n)=xx_1y_1+\cdots xx_ny_n$$
 and since $xx_i\in \mathfrak{a}$ we have $x(x_1y_1+\cdots+x_ny_n)\in \mathfrak{a}\mathfrak{b}$. A similar argument works when multiplying by $x$ on the right, so we can verify that $\mathfrak{a}\mathfrak{b}$ is a two-sided ideal of $A$.
 
 ::: Proposition 2
-With the multiplication defined above, the collection of two-sided ideals of $A$ forms a monoid with identity $A$ ([\[Algebraic Structures\] §Semigroups, Monoids, Groups, ⁋Definition 3](/en/math/algebraic_structures/groups#def3)). Moreover, the distributive laws
+With the multiplication defined above, the collection of two-sided ideals of $A$ forms a monoid with identity $A$ ([\[Algebraic Structures\] §Semigroups, Monoids, and Groups, ⁋Definition 3](/en/math/algebraic_structures/groups#def3)). Moreover, the distributive laws
 
 $$\mathfrak{a}(\mathfrak{b}+\mathfrak{c})=\mathfrak{a}\mathfrak{b}+\mathfrak{a}\mathfrak{c},\quad (\mathfrak{a}+\mathfrak{b})\mathfrak{c}=\mathfrak{a}\mathfrak{c}+\mathfrak{b}\mathfrak{c}$$
 
@@ -197,7 +197,7 @@ and if $x\in Ae_i\cap\sum_{j\neq i}Ae_j$ then $x$ is of the form $ae_i$ and simu
 
 $$A\rightarrow Ae_i;\qquad a\mapsto ae_i$$
 
-is surjective with kernel $A(1-e_i)=\mathfrak{a}_i$, so $A/\mathfrak{a}_i\cong Ae_i$. Combining these, since the direct sum defined in [\[Algebraic Structures\] §Products, Coproducts, and Tensor Products of Rings, ⁋Definition 3](/en/math/algebraic_structures/operations_of_rings#def3) coincides with the direct product for finite indices,
+is surjective with kernel $A(1-e_i)=\mathfrak{a}_i$, so $A/\mathfrak{a}_i\cong Ae_i$. Combining these, since the direct sum defined in [\[Algebraic Structures\] §Product, Coproduct, and Tensor Product of Rings, ⁋Definition 3](/en/math/algebraic_structures/operations_of_rings#def3) coincides with the direct product for finite indices,
 
 $$\bigoplus_{i=1}^n A/\mathfrak{a}_i\cong \prod_{i=1}^n A/\mathfrak{a}_i\cong\prod_{i=1}^n Ae_i\cong A$$
 

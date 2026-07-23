@@ -54,7 +54,7 @@ Polynomial ring $P=A[\x]_{i\in I}$의 임의의 원소
 
 $$u(\x)=\sum_{\nu\in \mathbb{N}^{(I)}} a_\nu \x^\nu,\qquad\text{$a_\nu=0$ for all but finitely many $\nu$}$$
 
-가 주어졌다 하자. 그럼 $u_n\neq 0$을 만족하는 가장 큰 $n$을 $u$의 *degree*라 부르고 $\deg(u)$와 같이 표기한다. 정의에 의하여 상수항만을 가지는 다항식의 차수는 $0$이지만, 특별히 $P$의 덧셈에 대한 항등원 $0$에 대하여는 $\deg(0)=-\infty$로 정의한다.  
+가 주어졌다 하자. 그럼 $u_n\neq 0$을 만족하는 가장 큰 $n$을 $u$의 *degree*라 부르고 $\deg(u)$와 같이 표기한다. 정의에 의하여 상수항만을 가지는 다항식의 degree는 $0$이지만, 특별히 $P$의 덧셈에 대한 항등원 $0$에 대하여는 $\deg(0)=-\infty$로 정의한다.  
 :::
 
 그럼 다음 명제가 성립하는 것이 당연하다. 
@@ -146,7 +146,7 @@ $$b_n^k u(\x)=(b_n^{k-1}a_m\x^{m-n}+q_1(\x))v(\x)+r(\x)$$
 을 얻는다. 
 :::
 
-여기서 등장하는 계수 $b_n^k$는 $v$에서 차수를 하나씩 올려가며 $u$와 최고차항을 맞춰줄 때 생기는 것으로, 가령 $b_n$이 invertible하다면 위의 식을 만족하는 $q$와 $r$은 유일하게 결정됨을 확인할 수 있다. 특히 만일 $A$의 임의의 nonzero element가 invertible이라면, 즉 $A=\mathbb{K}$라면 우리는 위와 같은 상황에서
+여기서 등장하는 계수 $b_n^k$는 $v$에서 degree를 하나씩 올려가며 $u$와 최고차항을 맞춰줄 때 생기는 것으로, 가령 $b_n$이 invertible하다면 위의 식을 만족하는 $q$와 $r$은 유일하게 결정됨을 확인할 수 있다. 특히 만일 $A$의 임의의 nonzero element가 invertible이라면, 즉 $A=\mathbb{K}$라면 우리는 위와 같은 상황에서
 
 $$u=qv+r,\qquad \deg r < n$$
 
@@ -167,14 +167,14 @@ $$N: u\mapsto \deg(u)\qquad \text{단, $N(0)=0$}$$
 한편 $\mathbb{K}[\x]$는 UFD이며, 따라서 $\mathbb{K}[\x]$의 irreducible element 등을 정의할 수 있다. 한편 $\mathbb{K}[\x]$의 unit은 정확히 $\mathbb{K}$의 unit과 동일하므로, 임의의 irreducible polynomial $u$는 (정의에 의해) $\deg(u)\geq 1$을 만족하며, $u$가 irreducible이므로 만일 $v\mid u$라면 $v$는 상수 다항식이거나 $u$의 상수배이다. 특히, 임의의 두 irreducible polynomial은 서로의 상수배여야만 하므로, 서로 다른 두 *monic* irreducible polynomial은 서로소이다. 이와 같이 $A[\x]$의 임의의 다항식은, leading coefficient와 monic irreducible polynomial의 곱으로 유일하게 나타낼 수 있다. 
 
 ::: 명제 7
-임의의 다항식 $u\in A[\x]$와 $a\in A$에 대하여, $u(\x)$를 $\x-a$로 나눈 나머지는 $u(a)$이다. 따라서, $u$가 근 $a$를 갖는 것과 $\x-a$가 $A[\x]$ 안에서 $u$의 약수인 것이 동치이다. 
+임의의 다항식 $u\in A[\x]$와 $a\in A$에 대하여, $u(\x)$를 $\x-a$로 나눈 나머지는 $u(a)$이다. 따라서, $u$가 root $a$를 갖는 것과 $\x-a$가 $A[\x]$ 안에서 $u$의 약수인 것이 동치이다. 
 :::
 
-이에 대한 증명은 당연히 Euclidean algorithm을 돌리면 되며, 이는 사실 중학교 때부터 익숙한 결과이다. 또 다른 결과로, 만일 $u$가 근 $a$를 갖는다면 $u$는 반드시 다음의 꼴
+이에 대한 증명은 당연히 Euclidean algorithm을 돌리면 되며, 이는 사실 중학교 때부터 익숙한 결과이다. 또 다른 결과로, 만일 $u$가 root $a$를 갖는다면 $u$는 반드시 다음의 꼴
 
 $$u(\x)=(\x-a)^p v(\x),\qquad v(a)\neq 0$$
 
-로 쓰여져야 하는 것을 안다. 이 때 우리는 $p$를 근 $a$의 *multiplicity*라 부른다. 그럼 다음이 성립한다. 
+로 쓰여져야 하는 것을 안다. 이 때 우리는 $p$를 root $a$의 *multiplicity*라 부른다. 그럼 다음이 성립한다. 
 
 ::: 명제 8
 임의의 두 다항식 $u,v\in A[\x]$이 공통근 $a$를 갖는다 하고, $u$와 $v$ 각각에서 $a$의 multiplicity가 $p,q$라 하자. 그럼 다음이 성립한다.
@@ -187,7 +187,7 @@ $u(\x) = (\x-a)^p u_1(\x)$, $v(\x) = (\x-a)^q v_1(\x)$이고 $u_1(a) \neq 0$, $v
 
 $$u(\x) + v(\x) = (\x-a)^p (u_1(\x) + (\x-a)^{q-p}v_1(\x))$$
 
-을 얻으므로 원하는 부등식을 얻는다. 만일 여기에서 $p < q$였다면 $a$는 $u_1(\x) + (\x-a)^{q-p}v_1(\x)$의 근이 아니므로 원하는 결과를 얻는다. 
+을 얻으므로 원하는 부등식을 얻는다. 만일 여기에서 $p < q$였다면 $a$는 $u_1(\x) + (\x-a)^{q-p}v_1(\x)$의 root가 아니므로 원하는 결과를 얻는다. 
 
 둘째 결과의 경우, 동일한 가정 하에서
 
@@ -199,21 +199,21 @@ $$u(\x)v(\x) = (\x-a)^{p+q}u_1(\x)v_1(\x)$$
 더 나아가 만일 $A$가 integral domain이라면 귀납적으로 다음을 보일 수 있다.
 
 ::: 명제 9
-Integral domain $A$를 고정하자. $A[\x]$의 nonzero element $u$가 근 $a_1,\ldots, a_r$을 가지며, 이들의 multiplicity가 각각 $p_1,\ldots, p_r$이라 하자. 그럼 
+Integral domain $A$를 고정하자. $A[\x]$의 nonzero element $u$가 root $a_1,\ldots, a_r$을 가지며, 이들의 multiplicity가 각각 $p_1,\ldots, p_r$이라 하자. 그럼 
 
 $$u(\x)=(\x-a_1)^{p_1}\cdots(\x-a_r)^{p_r}v(\x),\qquad v(a_1),\ldots, v(a_r)\neq0$$
 
 이도록 하는 $v\in A[\x]$가 존재한다. 
 :::
 ::: 증명
-$r$에 대한 귀납법으로 진행한다. $p=1$인 경우는 자명하므로, $u$의 $r$개의 근 $a_1,\ldots, a_r$이 주어졌다 하고, 앞의 $r-1$개의 근에 귀납적 가정을 적용하여 
+$r$에 대한 귀납법으로 진행한다. $r=1$인 경우는 자명하므로, $u$의 $r$개의 root $a_1,\ldots, a_r$이 주어졌다 하고, 앞의 $r-1$개의 root에 귀납적 가정을 적용하여 
 
 $$u(\x)=u_1(\x)u_2(\x)=(\x-a_1)^{p_1}\cdots(\x-a_{r-1})^{p_{r-1}}u_2(\x)$$
 
 이라 적자. 그럼 $A$가 integral domain이라는 가정으로부터 $u_1(a_r)\neq 0$임을 알고 있으므로, 반드시 $u_2(a_r)=0$이어야 하고 $u_2$에서 $a_r$의 multiplicity가 $p_r$이어야 한다. 이로부터 원하는 주장을 얻는다. 
 :::
 
-특히, 임의의 integral domain $A$에 대하여, $A[\x]$의 임의의 $n$차 다항식은 (중복을 허용하여 셌을 때) 많아야 $n$개의 근을 갖는다는 것을 안다. 따라서 만일 $n$차 이하의 두 다항식 $f,g\in A[\x]$가 주어졌다 하고, 서로 다른 $n+1$개의 원소 $a_1,\ldots, a_{n+1}$에 대해 $f(a_i)=g(a_i)$가 성립한다 가정하면 $f=g$여야만 한다. 이로부터 다음의 결과를 얻는다. 
+특히, 임의의 integral domain $A$에 대하여, $A[\x]$의 임의의 $n$차 다항식은 (중복을 허용하여 셌을 때) 많아야 $n$개의 root를 갖는다는 것을 안다. 따라서 만일 $n$차 이하의 두 다항식 $f,g\in A[\x]$가 주어졌다 하고, 서로 다른 $n+1$개의 원소 $a_1,\ldots, a_{n+1}$에 대해 $f(a_i)=g(a_i)$가 성립한다 가정하면 $f=g$여야만 한다. 이로부터 다음의 결과를 얻는다. 
 
 ::: 명제 10
 Field $\mathbb{K}$의 서로 다른 $n$개의 원소들 $a_1,\ldots, a_n$을 고정하자. $\mathbb{K}$의 임의의 원소들 $b_1,\ldots, b_n$에 대하여, 각각의 $i$마다
@@ -230,9 +230,9 @@ $$u=b_1 u_1 + \cdots + b_n u_n$$
 유일성은 위의 논증에 의해 자명하고, 남는 것은 $u$에 각각의 $a_i$를 대입하여 그 값이 $b_i$가 나오는 것을 확인하는 것 뿐이다. 
 :::
 
-한편, 중근을 찾아내는 방법 중 유용한 것은 주어진 다항식을 미분하는 것이다. 우리는 대수적으로 미분이 무엇인지를 정의할 수 있으나 ([\[다중선형대수학\] §미분](/ko/math/multilinear_algebra/derivations)) 이 카테고리에서는 이러한 논의 없이 정의로서 $D: A[\x] \rightarrow A[\x]$를 다음의 식
+한편, 중근을 찾아내는 방법 중 유용한 것은 주어진 다항식을 미분하는 것이다. 우리는 대수적으로 derivation이 무엇인지를 정의할 수 있으나 ([\[다중선형대수학\] §미분](/ko/math/multilinear_algebra/derivations)) 이 카테고리에서는 이러한 논의 없이 정의로서 $D: A[\x] \rightarrow A[\x]$를 다음의 식
 
-$$D:\left(u(\x)=\sum_{i=0}^n a_i\x^i\right)\mapsto \left((Du)(\x)=i.a_i\x^{i-1}\right)\tag{$\ast$}$$
+$$D:\left(u(\x)=\sum_{i=0}^n a_i\x^i\right)\mapsto \left((Du)(\x)=\sum_{i=1}^n i.a_i\x^{i-1}\right)\tag{$\ast$}$$
 
 로 정하기로 한다. 여기서 $i.a_i$는 
 
@@ -242,19 +242,19 @@ $$i.a_i=\underbrace{a_i+\cdots+a_i}_\text{\scriptsize$i$ times}$$
 
 $$D(uv)=(Du)v+u(Dv)$$
 
-이며, 이는 [\[다중선형대수학\] §미분](/ko/math/multilinear_algebra/derivations)에서는 미분의 정의이지만 위의 식 ($\ast$)를 정의로 받아들인다면 직접 계산을 통해 확인할 수 있다. 
+이며, 이는 [\[다중선형대수학\] §미분](/ko/math/multilinear_algebra/derivations)에서는 derivation의 정의이지만 위의 식 ($\ast$)를 정의로 받아들인다면 직접 계산을 통해 확인할 수 있다. 
 
 ::: 명제 11
-임의의 다항식 $u \in A[\x]$에 대하여, $u$의 근 $a \in A$가 simple root이기 위한 필요충분조건은 $a$가 $Du$의 근이 아닌 것이다. 
+임의의 다항식 $u \in A[\x]$에 대하여, $u$의 root $a \in A$가 simple root이기 위한 필요충분조건은 $a$가 $Du$의 root가 아닌 것이다. 
 :::
 ::: 증명
-$a$가 $u$의 근이라는 가정에 의해 $u = (\x - a)v$이도록 하는 $v \in A[\x]$가 존재하며, 이 때 $a$가 $u$의 simple root일 필요충분조건은 $v(a) \neq 0$인 것이다. 이제 $Du = v + (\x - a)Dv$이므로, $(Du)(a) = v(a)$이다.
+$a$가 $u$의 root라는 가정에 의해 $u = (\x - a)v$이도록 하는 $v \in A[\x]$가 존재하며, 이 때 $a$가 $u$의 simple root일 필요충분조건은 $v(a) \neq 0$인 것이다. 이제 $Du = v + (\x - a)Dv$이므로, $(Du)(a) = v(a)$이다.
 :::
 
 더 일반적으로, 귀납법을 사용하면 다음을 보일 수 있다.
 
 ::: 명제 12
-임의의 다항식 $u \in A[\x]$에 대하여, $u$의 근 $a \in A$가 multiplicity $k$를 가진다면, $a$는 $Du$의 multiplicity $\geq k-1$의 근이다. 만일 $k \cdot 1$이 $A$에서 cancellable하다면, $a$는 $Du$에 대해 order $k-1$을 가진다.
+임의의 다항식 $u \in A[\x]$에 대하여, $u$의 root $a \in A$가 multiplicity $k$를 가진다면, $a$는 $Du$의 multiplicity $\geq k-1$의 root이다. 만일 $k \cdot 1$이 $A$에서 cancellable하다면, $a$는 $Du$에 대해 order $k-1$을 가진다.
 :::
 ::: 증명
 위의 명제와 비슷하게 $u=(\x-a)^k v$로 두고 $v(a)\neq 0$이므로, 
@@ -311,11 +311,11 @@ $(\Frac A)[\x]$의 다항식 $u$가 두 다항식의 곱
 
 $$u(\x)=\tilde{v}_1(\x)\tilde{v}_2(\x),\qquad \tilde{v}_i\in (\Frac A)[\x]$$
 
-으로 나타난다 하자. 그럼 $\tilde{v}_1$과 $\tilde{v}_2$의 계수들의 최대공배수들을 양변에 곱하여, 적절한 $a\in A$에 대하여
+으로 나타난다 하자. 그럼 $\tilde{v}_1$과 $\tilde{v}_2$의 계수들의 최소공배수들을 양변에 곱하여, 적절한 $a\in A$에 대하여
 
 $$a u(\x)=v_1(\x)v_2(\x)$$
 
-이도록 하는 $v_i\in A[\x]$들이 존재한다. 만일 $a$가 unit이라면 더 중명할 것이 없으므로, $a$가 unit이 아니라 가정하자. 그럼 $a=p_1\cdots p_r$이도록 하는 irreducible element $p_i\in A$들이 존재한다. 이 때, [§정역, ⁋명제 17](/ko/math/ring_theory/integral_domains#prop17)에 의하여 $(p_i)$는 $A$의 prime ideal이며, 따라서 
+이도록 하는 $v_i\in A[\x]$들이 존재한다. 만일 $a$가 unit이라면 더 증명할 것이 없으므로, $a$가 unit이 아니라 가정하자. 그럼 $a=p_1\cdots p_r$이도록 하는 irreducible element $p_i\in A$들이 존재한다. 이 때, [§정역, ⁋명제 17](/ko/math/ring_theory/integral_domains#prop17)에 의하여 $(p_i)$는 $A$의 prime ideal이며, 따라서 
 
 $$(A/p_iA)[\x]\cong A[\x]/P_i$$
 
@@ -352,7 +352,7 @@ UFD $A$에 대하여, $A[\x]$의 $0$이 아닌 원소를 $u(\x)$라 하고, $u(\
 
 ## 유리식환
 
-이제 우리는 다항식환의 변형인 유리수환과 멱급수환을 정의한다. 앞서 [명제 4](#prop4)에서 우리는 임의의 field $\mathbb{K}$에 대하여, $\mathbb{K}[\x_i]_{i\in I}$는 integral domain이라는 것을 증명하였다. 따라서 $\mathbb{K}[\x_i]_{i\in I}$의 field of fraction이 잘 정의된다.
+이제 우리는 다항식환의 변형인 유리식환과 멱급수환을 정의한다. 앞서 [명제 4](#prop4)에서 우리는 임의의 field $\mathbb{K}$에 대하여, $\mathbb{K}[\x_i]_{i\in I}$는 integral domain이라는 것을 증명하였다. 따라서 $\mathbb{K}[\x_i]_{i\in I}$의 field of fraction이 잘 정의된다.
 
 ::: 정의 17
 Field $\mathbb{K}$ 위에 정의된 polynomial ring $\mathbb{K}[\x_i]_{i\in I}$의 field of fraction을 *field of rational functions<sub>유리함수체</sub>*라 부르고 $\mathbb{K}(\x_i)_{i\in I}$으로 적는다. 
@@ -386,13 +386,13 @@ $$\deg(u/v)=\deg(u)-\deg(v)$$
     &= \sup(\deg(uz) - \deg(vz), \deg(vw) - \deg(vz)) \\
     &= \sup(\deg r, \deg s).\end{aligned}$$
     
-    이다.  한편 이제 $$\deg r = \deg s$$, 즉 $$\deg u + \deg z = \deg w + \deg v$$라고 하고, $$r + s \ne 0$$이라면
+    이다.  한편 이제 $\deg r = \deg s$, 즉 $\deg u + \deg z = \deg w + \deg v$라고 하고, $r + s \ne 0$이라면
     
     $$\deg(r + s) = \deg(uz + vw) - \deg(vz)\leq \deg(uz) - \deg(vz) = \deg r$$
 
     이므로 주장이 성립한다. 
     
-2. $$rs = (uw)/(vz)$$이고, 따라서
+2. $rs = (uw)/(vz)$이고, 따라서
 
     $$\deg(rs) = \deg(uw) - \deg(vz) = \deg u - \deg v + \deg w - \deg z = \deg r + \deg s.$$
     
@@ -405,9 +405,9 @@ $$\deg(u/v)=\deg(u)-\deg(v)$$
 
 $$u(\x)=\sum_{\nu\in \mathbb{N}^{(I)}} a_\nu \x^\nu,\qquad\text{$a_\nu$ need not satisfy finiteness condition}$$
 
-들의 모임이다. 이를 $$A[[\x_i]]_{i\in I}$$으로 적고, *ring of formal power series*라 부른다. 
+들의 모임이다. 이를 $A[[\x_i]]_{i\in I}$으로 적고, *ring of formal power series*라 부른다. 
 
-Formal power series들은 단항식의 <em-ko>무한한</em-ko> 합이라는 사실만 제외하면 다항식과 유사한 개념들을 정의할 수 있다. 가령 우리는 formal power series $$u$$의 degree $$p$$ 성분 $$u_p$$를 정의할 수 있다. 그러나 $$u$$의 (total) degree의 경우, 다항식이 아닌 한 원소들의 degree는 $$+\infty$$일 것이기 때문에 굳이 $$A[[\x_i]]_{i\in I}$$에서 이를 사용할 이유가 없다. 대신 임의의 formal power series $$u$$에 대하여, $$u$$의 *order* $$\omega(u)$$를 $$u_p\neq 0$$이도록 하는 가장 <em-ko>작은</em-ko> $$p$$로 정한다. 마찬가지로 $$\omega(0)=\infty$$라 놓으면 다음의 식
+Formal power series들은 단항식의 <em-ko>무한한</em-ko> 합이라는 사실만 제외하면 다항식과 유사한 개념들을 정의할 수 있다. 가령 우리는 formal power series $u$의 degree $p$ 성분 $u_p$를 정의할 수 있다. 그러나 $u$의 (total) degree의 경우, 다항식이 아닌 한 원소들의 degree는 $+\infty$일 것이기 때문에 굳이 $A[[\x_i]]_{i\in I}$에서 이를 사용할 이유가 없다. 대신 임의의 formal power series $u$에 대하여, $u$의 *order* $\omega(u)$를 $u_p\neq 0$이도록 하는 가장 <em-ko>작은</em-ko> $p$로 정한다. 마찬가지로 $\omega(0)=\infty$라 놓으면 다음의 식
 
 $$\omega(u+v)\geq \inf(\omega(u),\omega(v)),\quad\text{equality if $\omega(u)\neq\omega(v)$}$$
 
@@ -417,22 +417,22 @@ $$\omega(uv)\geq \omega(u)+\omega(v)$$
 
 이 성립한다. 
 
-Degree에 대해서는 위의 부등식이 만일 $$A$$가 integral domain이었다면 성립했었다. 이와 같이 다음이 성립한다. 
+Degree에 대해서는 위의 부등식이 만일 $A$가 integral domain이었다면 성립했었다. 이와 같이 다음이 성립한다. 
 
 ::: 명제 19
-Integral domain $$A$$에 대하여 다음이 성립한다. 
+Integral domain $A$에 대하여 다음이 성립한다. 
 
-1. $$A[[x_i]]_{i\in I}$$이 integral domain이다. 
-2. 두 nonzero element $$u,v\in A[[x_i]]_{i\in I}$$에 대하여, $$\omega(uv)=\omega(u)+\omega(v)$$가 성립한다. 
+1. $A[[x_i]]_{i\in I}$이 integral domain이다. 
+2. 두 nonzero element $u,v\in A[[x_i]]_{i\in I}$에 대하여, $\omega(uv)=\omega(u)+\omega(v)$가 성립한다. 
 :::
 
-단, 다소 주의할 것은 [명제 4](#prop4)와는 다르게 $$A[[x_i]]_{i\in I}$$의 unit은 $$A$$의 unit보다 크다는 것이다. 가령 다음의 식
+단, 다소 주의할 것은 [명제 4](#prop4)와는 다르게 $A[[x_i]]_{i\in I}$의 unit은 $A$의 unit보다 크다는 것이다. 가령 다음의 식
 
 $$(1-\x)\left( \sum_{n=0}^\infty \x^n\right)=1$$
 
 을 생각하면 된다. 더 일반적으로 다음이 성립한다.
 
 ::: 명제 20
-임의의 $$u\in A[[x_i]]_{i\in I}$$에 대하여, $$u$$가 $$A[[x_i]]_{i\in I}$$에서 invertible인 것과 $$u$$의 상수항이 $$A$$에서 invertible인 것이 동치이다. 
+임의의 $u\in A[[x_i]]_{i\in I}$에 대하여, $u$가 $A[[x_i]]_{i\in I}$에서 invertible인 것과 $u$의 상수항이 $A$에서 invertible인 것이 동치이다. 
 :::
 

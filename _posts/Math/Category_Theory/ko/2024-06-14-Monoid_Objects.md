@@ -78,7 +78,7 @@ $$\mu(\eta(1)\otimes m)=\mu((\eta\otimes\id_M)(1\otimes m))=\lambda_M(1\otimes m
 
 ![group_axiom](/assets/images/Math/Category_Theory/Monoid_Objects-3.svg){:style="width:9.69em" class="invert" .align-center}
 
-가 되어야 할 것이다. 여기에서 $e_G$는 $G$의 모든 원소를 $G$의 항등원으로 보내는 group homomorphism이고, $(-1)^{-1}\times \id_G$는 두 map $(-)^{-1}:G \rightarrow G$와 $\id_G:G \rightarrow G$의 곱이다. 물론 두 데이터를 전부 추가해서 이를 group object라 할 수도 있겠지만, 그렇게 한다면 예컨대 (monoid object로서의) unit $\eta:I \rightarrow G$와 새로 정의한 morphism $e_G$가 서로 아무런 관련이 없을 것이기 때문에 좋은 해결책이 아니다.
+가 되어야 할 것이다. 여기에서 $e_G$는 $G$의 모든 원소를 $G$의 항등원으로 보내는 group homomorphism이고, $(-)^{-1}\times \id_G$는 두 map $(-)^{-1}:G \rightarrow G$와 $\id_G:G \rightarrow G$의 곱이다. 물론 두 데이터를 전부 추가해서 이를 group object라 할 수도 있겠지만, 그렇게 한다면 예컨대 (monoid object로서의) unit $\eta:I \rightarrow G$와 새로 정의한 morphism $e_G$가 서로 아무런 관련이 없을 것이기 때문에 좋은 해결책이 아니다.
 
 그런데 만일 원래의 category가 monoidal category가 아니라, cartesian monoidal category였다면 이 모든 문제가 깔끔하게 해결된다. 우선 $e_G$의 경우는 다음의 합성
 
@@ -88,7 +88,7 @@ $$G\overset{\epsilon_G}{\longrightarrow}\{e\}\overset{\eta}{\longrightarrow}G$$
 
 ![inverse_morphism](/assets/images/Math/Category_Theory/Monoid_Objects-4.svg){:style="width:11.93em" class="invert" .align-center}
 
-을 통해 $(-1)^{-1}\times \id_G$이 잘 정의된다. 
+을 통해 $(-)^{-1}\times \id_G$이 잘 정의된다. 
 
 ::: 정의 3
 Cartesian monoidal category $(\mathcal{A},\times, I)$에 대하여, 이 category에서의 *group object<sub>군 대상</sub>*은 다음과 같은 데이터
@@ -143,7 +143,7 @@ Symmetric monoidal category $(\mathcal{A},\otimes,I)$가 주어졌다 하자. �
 - Comultiplication과 counit이 모두 monoid morphism이다.
 :::
 
-Monoid object $M$이 주어졌을 때, $M\otimes M$에 monoid 구조를 주기 위해서는 symmetor의 역할이 중요하기 때문에, 일반적으로 bimonoid의 개념도 symmetric monoidal category에서만 정의한다. 이제 Hopf monoid를 다음과 같이 정의한다.
+Monoid object $M$이 주어졌을 때, $M\otimes M$에 monoid 구조를 주기 위해서는 symmetry의 역할이 중요하기 때문에, 일반적으로 bimonoid의 개념도 symmetric monoidal category에서만 정의한다. 이제 Hopf monoid를 다음과 같이 정의한다.
 
 ::: 정의 7
 Symmetric monoidal category $(\mathcal{A},\otimes,I)$에서 $(H,\mu,\eta,\Delta,\epsilon,\iota)$가 *Hopf monoid<sub>호프 모노이드</sub>*라는 것은 $(H,\mu,\eta,\Delta,\epsilon)$이 bimonoid이고 $\iota$가 [정의 3](#def3)의 마지막 diagram과 동일한 조건을 만족하는 것이다.
@@ -171,5 +171,5 @@ $\iota$에 대한 조건을 명시적으로 쓰기 위해서는 [정의 3](#def3
 
 ---
 
-[^1]: 이전 글에서 motivation을 위해 살펴보았던 monoid의 associativity에 대한 diagram에서는 $$(M\times M)\times M$$과 $$M\times(M\times M)$$을 모두 같은 것으로 보아 diagram이 사각형이었지만, 여기에서는 $$(M\otimes M)\otimes M$$과 $$M\otimes(M\otimes M)$$이 다른 대상이므로 오각형이 되었다.
-[^2]: 두 morphism의 곱은 product category에서부터 나온다고 착각할 수도 있는데, 두 morphism $$f:G\rightarrow G$$와 $$g:G\rightarrow G$$를 곱하면 $$(f,g):G\times G \rightarrow G\times G$$가 나온다. 뒤쪽 $$G\times G$$에 monoidal product $$\otimes$$를 적용하면 $$(f,g)$$의 target을 $$G\otimes G$$로 만들어줄 수는 있지만, 
+[^1]: 이전 글에서 motivation을 위해 살펴보았던 monoid의 associativity에 대한 diagram에서는 $(M\times M)\times M$과 $M\times(M\times M)$을 모두 같은 것으로 보아 diagram이 사각형이었지만, 여기에서는 $(M\otimes M)\otimes M$과 $M\otimes(M\otimes M)$이 다른 대상이므로 오각형이 되었다.
+[^2]: 두 morphism의 곱은 product category에서부터 나온다고 착각할 수도 있는데, 두 morphism $f:G\rightarrow G$와 $g:G\rightarrow G$를 곱하면 $(f,g):G\times G \rightarrow G\times G$가 나온다. 뒤쪽 $G\times G$에 monoidal product $\otimes$를 적용하면 $(f,g)$의 target을 $G\otimes G$로 만들어줄 수는 있지만, 

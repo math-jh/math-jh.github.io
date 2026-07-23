@@ -29,21 +29,21 @@ $u$를 고정하고 $v$만 움직이면 곡면 위의 곡선이 그려지고 그
 
 $$\mathbf{N} = \mathbf{r}_u \times \mathbf{r}_v$$
 
-가 곡면의 법선벡터이다. 우리는 $\mathbf{N} \neq 0$인 곡면을 *정칙<sub>regular</sub>*이라 한다.
+가 곡면의 법선벡터이다. 우리는 $\mathbf{N} \neq 0$인 곡면을 *regular<sub>정칙</sub>*이라 한다.
 
 ## 곡면넓이
 
 곡면을 매개변수 영역의 작은 직사각형들로 쪼개면, 각 조각은 접평면 위의 작은 평행사변형, 더 구체적으로는 $\mathbf{r}_u\Delta u$와 $\mathbf{r}_v\Delta v$가 만드는 평행사변형으로 근사된다. 이 넓이가 $\lvert \mathbf{r}_u \times \mathbf{r}_v\rvert\Delta u\Delta v$이므로, 이를 모아 극한을 취한 것이 곡면넓이이다.
 
 ::: 정의 2
-정칙 매개곡면 $\mathbf{r}\colon D \rightarrow \mathbb{R}^3$의 *곡면넓이<sub>surface area</sub>*는
+regular 매개곡면 $\mathbf{r}\colon D \rightarrow \mathbb{R}^3$의 *곡면넓이<sub>surface area</sub>*는
 
 $$\iint_D \lvert \mathbf{r}_u \times \mathbf{r}_v\rvert \mathop{du}\mathop{dv}$$
 
 이고, 면적원소를 $dS = \lvert \mathbf{r}_u \times \mathbf{r}_v\rvert \mathop{du}\mathop{dv}$로 적는다.
 :::
 
-면적원소 $dS$는 다중적분의 야코비 행렬식과 같은 역할을 하는 것으로, 이렇게 정의한 면적작용소 $dS$로 곡면 위에 분포한 스칼라량을 적분할 수 있다.
+면적원소 $dS$는 다중적분의 야코비 행렬식과 같은 역할을 하는 것으로, 이렇게 정의한 면적원소 $dS$로 곡면 위에 분포한 스칼라량을 적분할 수 있다.
 
 ::: 정의 3
 곡면 $S$ 위에서 연속인 스칼라장 $f$의 *면적분<sub>surface integral</sub>*은
@@ -90,7 +90,7 @@ $$\iint_S \mathop{dS} = \int_0^{2\pi} \int_0^\pi R^2\sin\phi \mathop{d\phi} \mat
 다음은 벡터함수의 적분의 예시이다. 
 
 ::: 예시 6
-[예시 5](#ex5)의 구에, 바깥 방향으로의 향을 주자. 이 예시에서 우리의 목표는 
+[예시 5](#ex5)의 구에, 바깥 방향을 주자. 이 예시에서 우리의 목표는 
 
 $$\mathbf{F}(x,y,z) = (x,y,z)$$
 

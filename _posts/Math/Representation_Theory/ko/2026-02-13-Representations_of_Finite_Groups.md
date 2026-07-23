@@ -65,7 +65,7 @@ $G$-representation $V, W$에 대하여, 다음의 $G$-action을 통해 새로운
 
 ## Category $\lMod{\mathbb{C}[G]}$
 
-위의 [정의 3]에서 tensor product와 $\Hom$의 경우 다소 그 정의가 인위적으로 보일 수 있는데, 이를 탐구하기 위해서는  group algebra의 언어가 유용하다. ([\[대수적 구조\] §대수, ⁋정의 5](/ko/math/algebraic_structures/algebras#def5)) 이를 간단히 리뷰하자면, 집합으로서 $\mathbb{C}[G]$는 $G$에서 $\mathbb{C}$로의 함수들의 모임이었다. 각각의 $x\in G$에 대하여 $\delta_x:G\rightarrow \mathbb{C}$를
+위의 [정의 3](#def3)에서 tensor product와 $\Hom$의 경우 다소 그 정의가 인위적으로 보일 수 있는데, 이를 탐구하기 위해서는  group algebra의 언어가 유용하다. ([\[대수적 구조\] §대수, ⁋정의 5](/ko/math/algebraic_structures/algebras#def5)) 이를 간단히 리뷰하자면, 집합으로서 $\mathbb{C}[G]$는 $G$에서 $\mathbb{C}$로의 함수들의 모임이었다. 각각의 $x\in G$에 대하여 $\delta_x:G\rightarrow \mathbb{C}$를
 
 $$\delta_x(y)=\begin{cases}1&\text{if $y=x$}\\0&\text{otherwise}\end{cases}$$
 
@@ -121,7 +121,7 @@ $$\mathbb{C}[G]\rightarrow \mathbb{C}[G]\otimes \mathbb{C}[G]$$
 
 ## 마슈케의 정리
 
-이제 우리는 유한군의 표현에 필요한 기본적인 개념들은 대충 살펴보았다. 본격적인 이야기를 시작하기 전에, 임의의 representation $V$에 대하여 다음의 부분공간
+이제 우리는 유한군의 representation에 필요한 기본적인 개념들은 대충 살펴보았다. 본격적인 이야기를 시작하기 전에, 임의의 representation $V$에 대하여 다음의 부분공간
 
 $$V^G=\{v\in V\mid g\cdot v=v\text{ for all $g\in G$}\}$$
 
@@ -223,7 +223,7 @@ $$\Hom_G(W, V)=\Hom_G\left(W, \bigoplus V_j\right)\cong \bigoplus \Hom_G(W, V_j)
 
 이 정의는 일반론과 일치한다. $d_W$의 image는 $W$와 isomorphic한 $V$의 simple submodule들이 생성하는 부분공간이므로 정확히 [\[환론\] §Semisimple module, ⁋정의 7](/ko/math/ring_theory/semisimple_modules#def7)의 $W$-isotypic component이고, [같은 글, ⁋명제 8](/ko/math/ring_theory/semisimple_modules#prop8)에 의해 이 분해는 irreducible decomposition의 선택과 무관하게 canonical하다.
 
-표현의 유일성 또한 이제 [\[환론\] §Semisimple module, ⁋명제 9](/ko/math/ring_theory/semisimple_modules#prop9)로부터 얻어진다. 즉, 우리는 임의의 representation $V$가 주어졌을 때 이를 다음의 decomposition
+representation의 유일성 또한 이제 [\[환론\] §Semisimple module, ⁋명제 9](/ko/math/ring_theory/semisimple_modules#prop9)로부터 얻어진다. 즉, 우리는 임의의 representation $V$가 주어졌을 때 이를 다음의 decomposition
 
 $$V=V_1^{\oplus r_1}\oplus\cdots\oplus V_k^{\oplus r_k}$$
 

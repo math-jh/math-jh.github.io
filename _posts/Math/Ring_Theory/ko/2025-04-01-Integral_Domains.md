@@ -31,10 +31,10 @@ $$a = qb + r \qquad\text{with $r = 0$ or $N(r) < N(b)$}$$
 를 만족하는 것이다. 여기서 $q$를 *몫<sub>quotient</sub>*, $r$을 *나머지<sub>remainder</sub>*라고 부른다.
 :::
 
-이는 $A$를 정수 $\mathbb{Z}$로 대체하고, $N$을 절댓값 함수 $\lvert-\rvert:\mathbb{Z} \rightarrow \mathbb{Z}_{\geq 0}$으로 보면 우리가 잘 알고 있는 정수의 나눗셈 알고리즘, 즉 [\[정수론\] §나눗셈과 최대공약수, ⁋정리 3](/ko/math/number_theory/divisibility#thm3)과 동일하다. 또 다른 예로, polynomial ring $\mathbb{K}[\x]$ 위에 $N$을 다항식의 차수를 주는 함수로 정의하면 다항식의 나눗셈 알고리즘을 얻게 될 것이다. 마지막으로, 임의의 field $\mathbb{K}$는 Euclidean domain이며, 이는 모든 $x\in\mathbb{K}$를 $0$으로 보내는 함수 $N$에 의해 얻어진다. 이것이 위의 조건을 만족하는 이유는 field의 모든 (nonzero) 원소는 항상 다른 원소를 나누기 때문이다. 
+이는 $A$를 정수 $\mathbb{Z}$로 대체하고, $N$을 절댓값 함수 $\lvert-\rvert:\mathbb{Z} \rightarrow \mathbb{Z}_{\geq 0}$으로 보면 우리가 잘 알고 있는 정수의 나눗셈 알고리즘, 즉 [\[정수론\] §나눗셈과 최대공약수, ⁋정리 3](/ko/math/number_theory/divisibility#thm3)과 동일하다. 또 다른 예로, polynomial ring $\mathbb{K}[\x]$ 위에 $N$을 다항식의 degree를 주는 함수로 정의하면 다항식의 나눗셈 알고리즘을 얻게 될 것이다. 마지막으로, 임의의 field $\mathbb{K}$는 Euclidean domain이며, 이는 모든 $x\in\mathbb{K}$를 $0$으로 보내는 함수 $N$에 의해 얻어진다. 이것이 위의 조건을 만족하는 이유는 field의 모든 (nonzero) 원소는 항상 다른 원소를 나누기 때문이다. 
 
 ::: 명제 3
-Euclidean Domain의 모든 ideal은 principal이다. 좀 더 정확히 말하면, Euclidean Domain $A$의 임의의 영이 아닌 ideal $\mathfrak{a}$에 대하여, $\mathfrak{a}$의 minimal norm을 갖는 원소를 $a$라 하면 $\mathfrak{a}=a$이다. 
+Euclidean Domain의 모든 ideal은 principal이다. 좀 더 정확히 말하면, Euclidean Domain $A$의 임의의 영이 아닌 ideal $\mathfrak{a}$에 대하여, $\mathfrak{a}$의 minimal norm을 갖는 원소를 $a$라 하면 $\mathfrak{a}=(a)$이다. 
 :::
 ::: 증명
 $\mathfrak{a}$가 zero ideal이라면 증명할 것이 없으므로, $\mathfrak{a}\neq 0$이라 가정하자. 
@@ -86,7 +86,7 @@ $d = 0$이거나 $d' = 0$이면 자명하므로, $d, d'$가 모두 $0$이 아니
 
 $$d = xd',\qquad d' = yd$$
 
-를 만족한다. 그러면 $d = xyd$로부터 $(1-xy)d=0$이다. 이제 $A$가 integral domain이라는 가정과 $d \neq 0$으로부터 $xy = 1$이라는 것을 알고, 따라서 $xy$는 각각이 서로의 역원이 되는 unit이다. 
+를 만족한다. 그러면 $d = xyd$로부터 $(1-xy)d=0$이다. 이제 $A$가 integral domain이라는 가정과 $d \neq 0$으로부터 $xy = 1$이라는 것을 알고, 따라서 $x, y$는 각각이 서로의 역원이 되는 unit이다. 
 :::
 
 정수의 경우 [\[정수론\] §유클리드 호제법과 Bézout 항등식, ⁋정리 3](/ko/math/number_theory/euclidean_algorithm#thm3)이 Bézout lemma에 해당하며, Euclidean domain에 대해서도 다음과 같은 Bézout 항등식이 성립한다. 
@@ -150,7 +150,7 @@ Principal Ideal Domain $A$의 모든 $0$이 아닌 prime ideal은 maximal ideal�
 
 ## 단일인수분해정역
 
-이제 우리는 마지막으로 단일인수분해정역을 정의한다. 이를 위해 우선 용어를 정리하자. 
+이제 우리는 마지막으로 unique factorization domain을 정의한다. 이를 위해 우선 용어를 정리하자. 
 
 ::: 정의 11
 $A$를 integral domain이라 하자. 
@@ -166,7 +166,7 @@ $$10=2\times 5=(-2)\times (-5)=(-1)^2\times 2\times 5=\cdots$$
 
 과 같은 형태의 곱으로 $10$을 나타낼 수도 있으며, 우리는 이러한 식은 서로 다르지 않은 것으로 취급하고 싶다. 이 때문에 위의 정의에서 unit만큼 차이나는 두 원소는 (사실상) 같은 것으로 보는 것이다. 
 
-한편, irreducible과 prime의 차이는 다소 미묘한데, 단일인수분해정역을 제대로 정의하기 위해서는 이들을 확실하게 구별해야 한다. 우선 다음 명제는 자명하다. 
+한편, irreducible과 prime의 차이는 다소 미묘한데, unique factorization domain을 제대로 정의하기 위해서는 이들을 확실하게 구별해야 한다. 우선 다음 명제는 자명하다. 
 
 ::: 명제 12
 Integral domain $A$에서 prime element는 항상 irreducible이다.
@@ -227,7 +227,7 @@ $$\mathfrak{a}=(3, 1+\sqrt{-5})$$
 
 $$N(3)=9,\qquad N(1+\sqrt{-5})=6$$
 
-이므로 만일 적당한 $x\in A$가 존재하여 $\mathfrak{a}=(a)$라면 $N(x)$는 $3$의 약수여야 한다. 그러나 [예시 13](#ex13)에서 살펴본 것과 같이 $N(x)=3$을 만족하는 $x\in A$는 존재하지 않으므로, 유일한 가능성은 $N(x)=1$이고 따라서 $(3, 1+\sqrt{-5})$가 unit ideal인 것이다. 
+이므로 만일 적당한 $x\in A$가 존재하여 $\mathfrak{a}=(x)$라면 $N(x)$는 $3$의 약수여야 한다. 그러나 [예시 13](#ex13)에서 살펴본 것과 같이 $N(x)=3$을 만족하는 $x\in A$는 존재하지 않으므로, 유일한 가능성은 $N(x)=1$이고 따라서 $(3, 1+\sqrt{-5})$가 unit ideal인 것이다. 
 
 그러나 $2\not\in \mathfrak{a}$이다. 이를 보이기 위해, 적당한 $x,y\in A$에 대하여
 
@@ -310,7 +310,7 @@ $$c = q_1^{g_1} \cdots q_m^{g_m}$$
 :::
 
 ::: 증명
-보여야 할 것은 오직 임의의 PID가 UFD라는 사실 뿐이다. PID $A$를 고정하고, non-zero, non-unit $r\in A$를 고정하자. 우선 우리는 prime ideal들의 chain
+보여야 할 것은 오직 임의의 PID가 UFD라는 사실 뿐이다. PID $A$를 고정하고, non-zero, non-unit $r\in A$를 고정하자. 우선 우리는 ideal들의 chain
 
 $$(r)=(r_0) \subsetneq (r_1) \subsetneq (r_2) \subsetneq \cdots$$
 

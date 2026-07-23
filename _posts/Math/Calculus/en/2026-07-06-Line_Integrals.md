@@ -14,7 +14,7 @@ translated_at: 2026-07-13T22:30:02+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-07-13T22:30:02+00:00
 ---
-Now we examine the integral of vector functions. The first step is the line integral, which traces a curve defined within the space $\mathbb{R}^n$ where the vector field is defined, accumulating the contributions of the vector at each point. What is interesting is that if the vector field is conservative, this integral becomes <em>independent</em> of the path and depends only on the endpoints; this can be regarded as a higher-dimensional version of the [§Fundamental Theorem of Calculus](/en/math/calculus/fundamental_theorem_of_calculus).
+Now we examine the integral of vector functions. The first step is the line integral, which traces a curve defined within the space $\mathbb{R}^n$ where the vector field is defined, accumulating all the forces contributed by the vector at each point. What is interesting is that if the vector field is conservative, this integral becomes <em>independent</em> of the path and depends only on the endpoints; this can be regarded as a higher-dimensional version of [§The Fundamental Theorem of Calculus](/en/math/calculus/fundamental_theorem_of_calculus).
 
 ## Line Integral
 
@@ -60,7 +60,7 @@ In particular, the line integral of a conservative field depends only on the two
 :::
 
 ::: Proof
-By [§Multivariable Functions and Partial Derivatives, ⁋Theorem 6](/en/math/calculus/partial_derivatives#thm6), we have $\frac{d}{dt} f(\mathbf{r}(t)) = \nabla f(\mathbf{r}(t)) \cdot \mathbf{r}'(t)$. Therefore, applying [§Fundamental Theorem of Calculus, ⁋Theorem 4](/en/math/calculus/fundamental_theorem_of_calculus#thm4),
+By [§Multivariable Functions and Partial Derivatives, ⁋Theorem 6](/en/math/calculus/partial_derivatives#thm6), we have $\frac{d}{dt} f(\mathbf{r}(t)) = \nabla f(\mathbf{r}(t)) \cdot \mathbf{r}'(t)$. Therefore, applying [§The Fundamental Theorem of Calculus, ⁋Theorem 4](/en/math/calculus/fundamental_theorem_of_calculus#thm4),
 
 $$\int_C \nabla f \cdot d\mathbf{r} = \int_a^b \nabla f(\mathbf{r}(t)) \cdot \mathbf{r}'(t)\mathop{dt} = \int_a^b \frac{d}{dt} f(\mathbf{r}(t))\mathop{dt} = f(\mathbf{r}(b)) - f(\mathbf{r}(a))$$
 

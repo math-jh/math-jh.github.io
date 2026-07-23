@@ -21,10 +21,10 @@ published: false
 
 ## 원분다항식
 
-Field $\mathbb{K}$와 자연수 $n\geq1$에 대하여 $\mu_n\subseteq\overline{\mathbb{K}}^\times$은 order $n$의 cyclic group이고, primitive $n$-th root of unity란 그 generator를 뜻하였다. ([§거듭제곱근 가해성, ⁋정의 2](/ko/math/field_theory/solvability_by_radicals#def2)) Order $n$의 cyclic group의 generator는 $n$과 서로소인 $m$에 대한 $\zeta^m$들이므로, generator를 하나 고정하면 나머지가 모두 결정된다. 그럼 이들 전체를 근으로 갖는 다항식을 생각하는 것이 자연스럽다.
+Field $\mathbb{K}$와 자연수 $n\geq1$에 대하여 $\mu_n\subseteq\overline{\mathbb{K}}^\times$은 order $n$의 cyclic group이고, primitive $n$-th root of unity란 그 generator를 뜻하였다. ([§거듭제곱근 가해성, ⁋정의 2](/ko/math/field_theory/solvability_by_radicals#def2)) Order $n$의 cyclic group의 generator는 $n$과 서로소인 $m$에 대한 $\zeta^m$들이므로, generator를 하나 고정하면 나머지가 모두 결정된다. 그럼 이들 전체를 root로 갖는 다항식을 생각하는 것이 자연스럽다.
 
 ::: 정의 1
-Field $\mathbb{K}$와 자연수 $n\geq1$에 대하여, $\overline{\mathbb{K}}$ 안의 primitive $n$-th root of unity 전체를 근으로 갖는 monic polynomial
+Field $\mathbb{K}$와 자연수 $n\geq1$에 대하여, $\overline{\mathbb{K}}$ 안의 primitive $n$-th root of unity 전체를 root로 갖는 monic polynomial
 
 $$\Phi_n(\x)=\prod_{\zeta}(\x-\zeta)\in\overline{\mathbb{K}}[\x]$$
 
@@ -50,13 +50,13 @@ $$\Phi_p(\x)=\frac{\x^p-1}{\x-1}=\x^{p-1}+\x^{p-2}+\cdots+\x+1$$
 ::: 증명
 우선 1을 보인다. $\mu_n$의 원소 $\omega$의 order를 $d$라 하면 $d\mid n$이고, $\omega$가 생성하는 subgroup $\langle\omega\rangle$은 order $d$의 cyclic group이며 $\omega^d=1$로부터 $\langle\omega\rangle\subseteq\mu_d$이다. 그런데 $\card\mu_d=d$이므로 $\langle\omega\rangle=\mu_d$, 즉 $\omega$는 primitive $d$-th root of unity이다. 거꾸로 $d\mid n$일 때 primitive $d$-th root of unity는 $\mu_d\subseteq\mu_n$의 원소로서 order $d$를 가지므로, $\mu_n$은 $d\mid n$에 따라 primitive $d$-th root of unity들의 집합으로 분할된다.
 
-한편 $\x^n-1$은 monic degree $n$ 다항식이면서 $\mu_n$의 $n$개의 원소를 모두 근으로 가지므로 $\x^n-1=\prod_{\omega\in\mu_n}(\x-\omega)$이고, 이 곱을 위의 분할에 따라 묶으면 1을 얻는다.
+한편 $\x^n-1$은 monic degree $n$ 다항식이면서 $\mu_n$의 $n$개의 원소를 모두 root로 가지므로 $\x^n-1=\prod_{\omega\in\mu_n}(\x-\omega)$이고, 이 곱을 위의 분할에 따라 묶으면 1을 얻는다.
 
 이제 2를 $n$에 대한 강한 귀납법으로 보인다. $n=1$이면 $\Phi_1=\x-1\in\mathbb{Z}[\x]$이다. $n>1$이라 하고 $n$의 진약수 $d$에 대하여 $\Phi_d\in\mathbb{Z}[\x]$가 성립한다고 가정한 뒤
 
 $$g(\x)=\prod_{\substack{d\mid n\\ d<n}}\Phi_d(\x)$$
 
-로 두면, $g$는 monic이고 귀납적 가정에 의해 $\mathbb{Z}[\x]$에 속하며 1에 의해 $\x^n-1=\Phi_n g$이다. $g$가 monic이므로 [\[환론\] §다항식환, ⁋명제 5](/ko/math/ring_theory/polynomial_rings#prop5)에 의하여 $\x^n-1=qg+r$과 $\deg r<\deg g$를 만족하는 $q,r\in\mathbb{Z}[\x]$가 존재한다. 그런데 $g$가 monic이면 이러한 몫과 나머지는 $\overline{\mathbb{K}}[\x]$ 안에서 유일하게 결정되므로 $q=\Phi_n$이고 $r=0$이며, 따라서 $\Phi_n=q\in\mathbb{Z}[\x]$이다.
+로 두면, $g$는 monic이고 귀납적 가정에 의해 $\mathbb{Z}[\x]$에 속하며 1에 의해 $\x^n-1=\Phi_n g$이다. $g$가 monic이므로 [\[환론\] §다항식환, ⁋명제 5](/ko/math/ring_theory/polynomial_rings#prop5)에 의하여 $\x^n-1=qg+r$과 $\deg r<\deg g$를 만족하는 $q,r\in\mathbb{Z}[\x]$가 존재한다. 그런데 $g$가 monic이면 이러한 quotient와 나머지는 $\overline{\mathbb{K}}[\x]$ 안에서 유일하게 결정되므로 $q=\Phi_n$이고 $r=0$이며, 따라서 $\Phi_n=q\in\mathbb{Z}[\x]$이다.
 :::
 
 특히 $\Phi_n$은 $\mathbb{Z}[\x]$의 원소로 한 번 계산해 두면 characteristic $0$인 모든 field에서 같은 다항식으로 쓸 수 있다. 계수가 정수라는 것과 $\x^n-1$을 나눈다는 것만 보면 계수가 $0$과 $\pm1$뿐일 것 같지만 그렇지 않으며, $\Phi_{105}$가 최초의 반례로 $\x^7$과 $\x^{41}$의 계수가 $-2$이다. 서로 다른 홀수 소인수를 세 개 갖는 가장 작은 정수가 $105=3\cdot5\cdot7$이라는 것이 이 현상의 출발점이다.
@@ -78,9 +78,9 @@ $af\in\mathbb{Z}[\x]$이도록 하는 최소의 양의 정수를 $a$, $bg\in\mat
 임의의 자연수 $n\geq1$에 대하여 $\Phi_n$은 $\mathbb{Q}[\x]$에서 irreducible이다.
 :::
 ::: 증명
-Primitive $n$-th root of unity $\zeta\in\overline{\mathbb{Q}}$를 하나 고정하고, $f\in\mathbb{Q}[\x]$를 $\zeta$의 minimal polynomial이라 하자. $\Phi_n(\zeta)=0$과 $\zeta^n-1=0$이므로 [§대수적 확장, ⁋정리 15](/ko/math/field_theory/algebraic_extensions#thm15)에 의하여 $f$는 $\Phi_n$과 $\x^n-1$을 모두 나눈다. 몫을 $g$라 하여 $\x^n-1=fg$로 쓰면 $f,g$가 모두 monic이므로 [보조정리 3](#lem3)에 의해 $f,g\in\mathbb{Z}[\x]$이다.
+Primitive $n$-th root of unity $\zeta\in\overline{\mathbb{Q}}$를 하나 고정하고, $f\in\mathbb{Q}[\x]$를 $\zeta$의 minimal polynomial이라 하자. $\Phi_n(\zeta)=0$과 $\zeta^n-1=0$이므로 [§대수적 확장, ⁋정리 15](/ko/math/field_theory/algebraic_extensions#thm15)에 의하여 $f$는 $\Phi_n$과 $\x^n-1$을 모두 나눈다. quotient를 $g$라 하여 $\x^n-1=fg$로 쓰면 $f,g$가 모두 monic이므로 [보조정리 3](#lem3)에 의해 $f,g\in\mathbb{Z}[\x]$이다.
 
-증명의 핵심은 $n$을 나누지 않는 임의의 소수 $p$와 $f$의 임의의 근 $\omega$에 대하여 $\omega^p$ 또한 $f$의 근이라는 주장이다. 이를 보이기 위해 $f(\omega^p)\neq0$이라 가정하자. $\omega^n=1$이므로 $\omega^p$는 $\x^n-1$의 근이고, 따라서 $g(\omega^p)=0$이다. 즉 $\omega$는 $g(\x^p)\in\mathbb{Z}[\x]$의 근이다. 한편 $f$는 minimal polynomial이므로 monic irreducible이고, $f(\omega)=0$이므로 [§대수적 확장, ⁋정리 15](/ko/math/field_theory/algebraic_extensions#thm15)에 의해 $f$는 $\omega$의 minimal polynomial이며 따라서 $f$는 $g(\x^p)$를 나눈다. $f$가 monic이므로 그 몫 또한 $\mathbb{Z}[\x]$에 속한다. ([\[환론\] §다항식환, ⁋명제 5](/ko/math/ring_theory/polynomial_rings#prop5))
+증명의 핵심은 $n$을 나누지 않는 임의의 소수 $p$와 $f$의 임의의 root $\omega$에 대하여 $\omega^p$ 또한 $f$의 root라는 주장이다. 이를 보이기 위해 $f(\omega^p)\neq0$이라 가정하자. $\omega^n=1$이므로 $\omega^p$는 $\x^n-1$의 root이고, 따라서 $g(\omega^p)=0$이다. 즉 $\omega$는 $g(\x^p)\in\mathbb{Z}[\x]$의 root이다. 한편 $f$는 minimal polynomial이므로 monic irreducible이고, $f(\omega)=0$이므로 [§대수적 확장, ⁋정리 15](/ko/math/field_theory/algebraic_extensions#thm15)에 의해 $f$는 $\omega$의 minimal polynomial이며 따라서 $f$는 $g(\x^p)$를 나눈다. $f$가 monic이므로 그 quotient 또한 $\mathbb{Z}[\x]$에 속한다. ([\[환론\] §다항식환, ⁋명제 5](/ko/math/ring_theory/polynomial_rings#prop5))
 
 이 관계를 $\mathbb{F}_p[\x]$로 보내자. $\mathbb{F}_p^\times$의 order가 $p-1$이므로 [\[대수적 구조\] §몫군, ⁋명제 5](/ko/math/algebraic_structures/quotient_groups#prop5)에 의해 $\mathbb{F}_p$의 모든 원소 $c$가 $c^p=c$를 만족하고, Frobenius endomorphism이 ring homomorphism이므로 ([§체, ⁋정리 10](/ko/math/field_theory/fields#thm10)) $\bar g(\x)=\sum c_i\x^i$에 대하여
 
@@ -88,9 +88,9 @@ $$\bar g(\x)^p=\sum c_i^p\x^{ip}=\sum c_i(\x^p)^i=\bar g(\x^p)$$
 
 가 성립한다. 따라서 $\bar f$는 $\bar g^p$를 나눈다. $\deg\bar f=\deg f\geq1$이므로 $\bar f$의 irreducible factor $h$를 하나 택하면 $h$는 $\bar g^p$를 나누는데, $\mathbb{F}_p[\x]$가 UFD이므로 ([\[환론\] §다항식환, ⁋정리 16](/ko/math/ring_theory/polynomial_rings#thm16)) [\[환론\] §정역, ⁋명제 17](/ko/math/ring_theory/integral_domains#prop17)에 의하여 $h$는 prime이고 따라서 $\bar g$를 나눈다. 그럼 $h^2$이 $\bar f\bar g=\x^n-1$을 나눈다.
 
-그러나 $p\nmid n$이므로 $\mathbb{F}_p$에서 $n\neq0$이고, $\x^n-1$의 derivative $n\x^{n-1}$의 유일한 근인 $0$은 $\x^n-1$의 근이 아니다. 따라서 [\[환론\] §다항식환, ⁋명제 11](/ko/math/ring_theory/polynomial_rings#prop11)에 의해 $\x^n-1$의 $\overline{\mathbb{F}_p}$에서의 근은 모두 simple root이다. 그런데 $h$의 근을 $\overline{\mathbb{F}_p}$에서 하나 택하면 $h^2\mid\x^n-1$로부터 그것이 $\x^n-1$의 중근이 되어 모순이다. 이로써 주장이 증명되었다.
+그러나 $p\nmid n$이므로 $\mathbb{F}_p$에서 $n\neq0$이고, $\x^n-1$의 derivative $n\x^{n-1}$의 유일한 root인 $0$은 $\x^n-1$의 root가 아니다. 따라서 [\[환론\] §다항식환, ⁋명제 11](/ko/math/ring_theory/polynomial_rings#prop11)에 의해 $\x^n-1$의 $\overline{\mathbb{F}_p}$에서의 root는 모두 simple root이다. 그런데 $h$의 root를 $\overline{\mathbb{F}_p}$에서 하나 택하면 $h^2\mid\x^n-1$로부터 그것이 $\x^n-1$의 중근이 되어 모순이다. 이로써 주장이 증명되었다.
 
-이제 $\gcd(m,n)=1$인 $1\leq m\leq n$을 택하고 $m=p_1\cdots p_r$을 소인수분해라 하면 ($m=1$인 경우는 $r=0$) 각 $p_i$는 $n$과 서로소이므로 $n$을 나누지 않는다. 따라서 위의 주장을 $\zeta,\zeta^{p_1},\zeta^{p_1p_2},\ldots$에 차례로 적용하여 $\zeta^m$이 $f$의 근임을 얻는다. 즉 $f$는 $\varphi(n)$개의 primitive $n$-th root of unity를 모두 근으로 가지므로 $\deg f\geq\varphi(n)=\deg\Phi_n$이고, $f$가 $\Phi_n$을 나누며 둘 다 monic이므로 $f=\Phi_n$이다. 따라서 $\Phi_n$은 minimal polynomial로서 irreducible이다.
+이제 $\gcd(m,n)=1$인 $1\leq m\leq n$을 택하고 $m=p_1\cdots p_r$을 소인수분해라 하면 ($m=1$인 경우는 $r=0$) 각 $p_i$는 $n$과 서로소이므로 $n$을 나누지 않는다. 따라서 위의 주장을 $\zeta,\zeta^{p_1},\zeta^{p_1p_2},\ldots$에 차례로 적용하여 $\zeta^m$이 $f$의 root임을 얻는다. 즉 $f$는 $\varphi(n)$개의 primitive $n$-th root of unity를 모두 root로 가지므로 $\deg f\geq\varphi(n)=\deg\Phi_n$이고, $f$가 $\Phi_n$을 나누며 둘 다 monic이므로 $f=\Phi_n$이다. 따라서 $\Phi_n$은 minimal polynomial로서 irreducible이다.
 :::
 
 ::: 따름정리 5
@@ -159,7 +159,7 @@ $\Phi_n$이 정수 계수를 갖는다는 사실은 field 이론 바깥에서도
 ::: 증명
 [명제 2](#prop2)의 등식은 $\mathbb{Z}[\x]$에서 성립하므로 $\mathbb{F}_p[\x]$로 보내도 성립한다. 특히 $\Phi_n$은 $\x^n-1$을 나누므로 $p\mid a^n-1$이고, 따라서 $\bar a\in\mathbb{F}_p^\times$이며 그 order $d$는 $n$을 나눈다.
 
-$d<n$이라 가정하자. $\bar a^d=1$이므로 $\bar a$는 $\x^d-1$의 근이고, [명제 2](#prop2)에 의해 어떤 $e\mid d$에 대하여 $\Phi_e(\bar a)=0$이다. 그런데 $e\mid d$이고 $d<n$이므로 $e\neq n$이며, 따라서 $\Phi_e$는 $\mathbb{F}_p[\x]$에서 $(\x^n-1)/\Phi_n$을 나눈다. 가정에서 $\Phi_n(\bar a)=0$이었으므로 $\bar a$는 $\Phi_n$과 $(\x^n-1)/\Phi_n$의 공통근이고, 그럼 $\bar a$는 $\x^n-1$의 중근이다. 이는 $p\nmid n$일 때 $\x^n-1$의 근이 모두 simple root라는 [정리 4](#thm4)의 증명 속 관찰에 모순이므로 $d=n$이다.
+$d<n$이라 가정하자. $\bar a^d=1$이므로 $\bar a$는 $\x^d-1$의 root이고, [명제 2](#prop2)에 의해 어떤 $e\mid d$에 대하여 $\Phi_e(\bar a)=0$이다. 그런데 $e\mid d$이고 $d<n$이므로 $e\neq n$이며, 따라서 $\Phi_e$는 $\mathbb{F}_p[\x]$에서 $(\x^n-1)/\Phi_n$을 나눈다. 가정에서 $\Phi_n(\bar a)=0$이었으므로 $\bar a$는 $\Phi_n$과 $(\x^n-1)/\Phi_n$의 공통근이고, 그럼 $\bar a$는 $\x^n-1$의 중근이다. 이는 $p\nmid n$일 때 $\x^n-1$의 root가 모두 simple root라는 [정리 4](#thm4)의 증명 속 관찰에 모순이므로 $d=n$이다.
 
 마지막으로 $\mathbb{F}_p^\times$의 order가 $p-1$이므로 [\[대수적 구조\] §몫군, ⁋명제 5](/ko/math/algebraic_structures/quotient_groups#prop5)에 의하여 $n=d$는 $p-1$을 나눈다.
 :::

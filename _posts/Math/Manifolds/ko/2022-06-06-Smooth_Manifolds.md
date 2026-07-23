@@ -13,7 +13,7 @@ weight: 1
 
 ---
 
-우리는 위상수학에서 위상다양체의 개념을 정의했는데, 이 글타래에서는 미분다양체, 그 중에서도 특히 매끄러운 다양체를 다룬다.
+우리는 위상수학에서 topological manifold의 개념을 정의했는데, 이 글타래에서는 미분다양체, 그 중에서도 특히 smooth manifold를 다룬다.
 
 ## 표기법
 
@@ -58,7 +58,7 @@ $$\mathcal{A}'=\{((-\infty, 1), \id_{(-\infty, 1)}), ((-1, \infty),\id_{(-1,\inf
 한편, 수학에서 어떠한 대상을 알기 위해서는 이 대상 위에 정의된 함수를 알면 된다. 앞으로 모든 manifold는 smooth differentiable manifold인 것으로 생각한다. 
 
 ::: 정의 2
-Manifold $M$과 한 점 $p\in M$을 생각하자. $p$의 적당한 열린근방에서 정의된 함수 $f$가 $p$에서 $C^\infty$이라는 것은 $p$를 포함하는 어떤 coorinate chart $(U,\varphi)$에 대하여, 함수 $f\circ\varphi^{-1}:U'\rightarrow \mathbb{R}$이 점 $\varphi(p)$에서 $C^\infty$인 것이다.
+Manifold $M$과 한 점 $p\in M$을 생각하자. $p$의 적당한 열린근방에서 정의된 함수 $f$가 $p$에서 $C^\infty$이라는 것은 $p$를 포함하는 어떤 coordinate chart $(U,\varphi)$에 대하여, 함수 $f\circ\varphi^{-1}:U'\rightarrow \mathbb{R}$이 점 $\varphi(p)$에서 $C^\infty$인 것이다.
 :::
 
 점 $p$의 또 다른 열린근방에서 coordinate chart $(V,\psi)$가 정의되었다 하자. 만일 $f\circ\varphi^{-1}$이 $\varphi(p)$에서 $C^\infty$이지만 $f\circ\psi^{-1}$은 $\psi(p)$에서 그렇지 않다면 이 정의는 좋은 정의가 아니다. 그러나 $\psi(U\cap V)$에서

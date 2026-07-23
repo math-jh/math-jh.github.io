@@ -16,7 +16,7 @@ published: false
 
 곡면 $M \subseteq \mathbb{R}^3$의 Gauss 곡률은 본래 외재적인 양으로 정의된다. 각 점에서 곡면이 주변 공간 안에서 법선 방향으로 얼마나 휘는지를 재는 shape operator의 행렬식이 곧 Gauss 곡률이며, 이는 곡면이 $\mathbb{R}^3$ 안에 어떻게 놓여 있는지에 의존하는 듯 보인다. 그런데 Gauss가 1827년에 발견한 *놀라운 정리<sub>Theorema Egregium</sub>*는 이 양이 실제로는 곡면 위의 거리, 즉 제1기본형식만으로 결정되는 *내재적* 불변량이라고 말한다. 따라서 Gauss 곡률은 곡면을 휘거나 구부려도 길이를 보존하는 한 변하지 않는다. 이 글에서는 [§제2기본형식, ⁋정리 6](/ko/math/riemannian_geometry/second_fundamental_form#thm6)에서 일반 submanifold에 대해 증명한 Gauss 방정식을 곡면의 경우에 적용하여 이 사실을 증명한다.
 
-이 글 전체에서 $M \subseteq \mathbb{R}^3$은 매장된 2차원 곡면이고, $g = \iota^\ast \bar g$는 표준 Euclid metric $\bar g$의 제한이며, $\nabla, \bar\nabla$는 각각 $(M, g)$와 $\mathbb{R}^3$의 Levi-Civita 접속이다. $M$의 codimension이 $1$이므로 각 점 $p$에서 단위 법벡터 $\nu$는 부호를 빼면 유일하고, 이에 대응하는 shape operator $S_\nu : T_p M \rightarrow T_p M$를 ([§제2기본형식, ⁋정의 4](/ko/math/riemannian_geometry/second_fundamental_form#def4)) 단순히 $S$로 적는다.
+이 글 전체에서 $M \subseteq \mathbb{R}^3$은 매장된 2차원 곡면이고, $g = \iota^\ast \bar g$는 표준 Euclid metric $\bar g$의 restriction이며, $\nabla, \bar\nabla$는 각각 $(M, g)$와 $\mathbb{R}^3$의 Levi-Civita connection이다. $M$의 codimension이 $1$이므로 각 점 $p$에서 단위 법벡터 $\nu$는 부호를 빼면 유일하고, 이에 대응하는 shape operator $S_\nu : T_p M \rightarrow T_p M$를 ([§제2기본형식, ⁋정의 4](/ko/math/riemannian_geometry/second_fundamental_form#def4)) 단순히 $S$로 적는다.
 
 ## 곡면의 Gauss 곡률
 
@@ -58,7 +58,7 @@ $$K = \det S = \det([S]) = \det(\mathrm{I}^{-1} \mathrm{II}) = \frac{\det \mathr
 를 얻는다. 마지막에서 $\det \mathrm{I} = EG - F^2 > 0$ (제1기본형식이 양의 정부호이므로)임을 사용했다.
 :::
 
-[명제 2](#prop2)의 우변은 외재적인 자료로 적혀 있다. 분자 $\det \mathrm{II}$는 곡면이 주변 공간 안에서 휘는 방식을 담은 제2기본형식의 행렬식이며, 이 자체로는 매장에 의존하는 양이다. Gauss의 정리가 주장하는 바는 이 비 $\det \mathrm{II} / \det \mathrm{I}$가 결국 분모의 제1기본형식만으로 결정된다는 사실이다.
+[명제 2](#prop2)의 우변은 외재적인 자료로 적혀 있다. 분자 $\det \mathrm{II}$는 곡면이 주변 공간 안에서 휘는 방식을 담은 제2기본형식의 행렬식이며, 이 자체로는 embedding에 의존하는 양이다. Gauss의 정리가 주장하는 바는 이 비 $\det \mathrm{II} / \det \mathrm{I}$가 결국 분모의 제1기본형식만으로 결정된다는 사실이다.
 
 ## Theorema Egregium
 
@@ -69,7 +69,7 @@ Gauss 곡률이 내재적임을 보이는 열쇠는 [§제2기본형식, ⁋정�
 
 $$K = \langle R(e_1, e_2) e_2, e_1\rangle$$
 
-로 주어진다. 우변은 제1기본형식 $g$로부터 그 Levi-Civita 접속을 거쳐 정의되는 내재적 양이므로, $K$는 곡면의 매장이 아니라 제1기본형식만으로 결정되는 내재불변량이다.
+로 주어진다. 우변은 제1기본형식 $g$로부터 그 Levi-Civita connection을 거쳐 정의되는 내재적 양이므로, $K$는 곡면의 embedding이 아니라 제1기본형식만으로 결정되는 내재불변량이다.
 :::
 
 ::: 증명
@@ -89,7 +89,7 @@ $$\langle \mathrm{II}(e_1, e_1), \mathrm{II}(e_2, e_2)\rangle - \lvert \mathrm{I
 
 $$\langle R(e_1, e_2) e_2, e_1\rangle = K$$
 
-를 얻는다. 좌변은 $g$의 Levi-Civita 접속의 곡률 텐서 $R$만으로 ([§리만 곡률, ⁋정의 2](/ko/math/riemannian_geometry/curvature#def2)) 적혀 있고, $R$은 $g$로부터 내재적으로 정의되므로 $K$도 그러하다.
+를 얻는다. 좌변은 $g$의 Levi-Civita connection의 곡률 텐서 $R$만으로 ([§리만 곡률, ⁋정의 2](/ko/math/riemannian_geometry/curvature#def2)) 적혀 있고, $R$은 $g$로부터 내재적으로 정의되므로 $K$도 그러하다.
 :::
 
 [정리 3](#thm3)의 좌변 $K = \det \mathrm{II} / \det \mathrm{I}$는 외재적으로, 우변 $\langle R(e_1, e_2) e_2, e_1\rangle$는 내재적으로 적힌 같은 수이다. 이 등식이 정리의 핵심이다. 정의에서 $K$는 제2기본형식을 통해 곡면이 $\mathbb{R}^3$ 안에서 어떻게 휘는지에 의존하는 듯 보이지만, Gauss 방정식이 그 휘는 정보를 내재적 곡률 $R$로 흡수해 버린다. 곡면을 $\mathbb{R}^3$ 안에서 다르게 매장하더라도 길이를 보존하는 한 제1기본형식 $g$가 같고, 따라서 $R$도 같으며, 결국 $K$도 같다.
@@ -117,7 +117,7 @@ $\varphi : M \rightarrow M'$이 곡면 사이의 국소 등거리이면, 즉 $\v
 :::
 
 ::: 증명
-$\varphi$가 제1기본형식을 보존하므로 그 Levi-Civita 접속과 곡률 텐서도 보존한다. 구체적으로 $\varphi^\ast g' = g$이면 리만 기하학의 기본 정리의 유일성에 의해 $\varphi$는 두 곡면의 Levi-Civita 접속을 대응시키고, 따라서 [§리만 곡률, ⁋정의 2](/ko/math/riemannian_geometry/curvature#def2)의 곡률 텐서도 대응시켜 $\varphi_\ast(R_p(X, Y)Z) = R'_{\varphi(p)}(\varphi_\ast X, \varphi_\ast Y)\varphi_\ast Z$를 만족한다. $\varphi_\ast$가 내적을 보존하므로 orthonormal basis $\{e_1, e_2\} \subseteq T_p M$은 orthonormal basis $\{\varphi_\ast e_1, \varphi_\ast e_2\} \subseteq T_{\varphi(p)} M'$로 옮겨지고, [정리 3](#thm3)에 의해
+$\varphi$가 제1기본형식을 보존하므로 그 Levi-Civita connection과 곡률 텐서도 보존한다. 구체적으로 $\varphi^\ast g' = g$이면 리만 기하학의 기본 정리의 유일성에 의해 $\varphi$는 두 곡면의 Levi-Civita connection을 대응시키고, 따라서 [§리만 곡률, ⁋정의 2](/ko/math/riemannian_geometry/curvature#def2)의 곡률 텐서도 대응시켜 $\varphi_\ast(R_p(X, Y)Z) = R'_{\varphi(p)}(\varphi_\ast X, \varphi_\ast Y)\varphi_\ast Z$를 만족한다. $\varphi_\ast$가 내적을 보존하므로 orthonormal basis $\{e_1, e_2\} \subseteq T_p M$은 orthonormal basis $\{\varphi_\ast e_1, \varphi_\ast e_2\} \subseteq T_{\varphi(p)} M'$로 옮겨지고, [정리 3](#thm3)에 의해
 
 $$K_M(p) = \langle R(e_1, e_2) e_2, e_1\rangle = \langle R'(\varphi_\ast e_1, \varphi_\ast e_2)\varphi_\ast e_2, \varphi_\ast e_1\rangle = K_{M'}(\varphi(p))$$
 

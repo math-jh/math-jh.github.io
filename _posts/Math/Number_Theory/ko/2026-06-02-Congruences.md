@@ -29,7 +29,7 @@ $$a \equiv b \pmod{n}$$
 [§나눗셈과 최대공약수, ⁋정리 3](/ko/math/number_theory/divisibility#thm3)에 의해 $a \equiv b \pmod n$인 것은 $a$와 $b$를 $n$으로 나눈 나머지가 같은 것과 동치이다. 즉 합동은 "나머지가 같음"을 그대로 옮긴 것이다.
 
 ::: 명제 2
-법 $n$에 대한 합동은 정수 위의 동치관계이다. 즉 반사적($a \equiv a$), symmetric($a\equiv b \Rightarrow b \equiv a$), transitive($a \equiv b,\ b\equiv c \Rightarrow a \equiv c$)이다.
+법 $n$에 대한 합동은 정수 위의 동치관계이다. 즉 reflexive($a \equiv a$), symmetric($a\equiv b \Rightarrow b \equiv a$), transitive($a \equiv b,\ b\equiv c \Rightarrow a \equiv c$)이다.
 :::
 
 ::: 증명
@@ -115,7 +115,7 @@ $$ax = 1 - ny \equiv 1 \pmod n$$
 이 되어 $x$가 $a$의 곱셈 역원이다. 거꾸로 $ax \equiv 1 \pmod n$인 $x$가 존재하면 어떤 정수 $y$에 대해 $ax - 1 = ny$, 곧 $ax - ny = 1$이다. $d = \gcd(a, n)$이라 하면 $d \mid a$이고 $d \mid n$이므로 좌변을 나누어 $d \mid 1$이고 ([§나눗셈과 최대공약수, ⁋명제 2](/ko/math/number_theory/divisibility#prop2)), 따라서 $d = 1$, 즉 $\gcd(a, n) = 1$이다.
 :::
 
-따라서 $\mathbb{Z}/n\mathbb{Z}$에서 곱셈 역원을 갖는 원소는 정확히 $n$과 서로소인 residue class들이다. $n = p$가 소수이면 $1, \ldots, p-1$이 모두 $p$와 서로소이므로 $0$이 아닌 모든 원소가 역원을 가지며, 이때 $\mathbb{Z}/p\mathbb{Z}$는 체를 이룬다. 역원이 존재할 때 그것은 법 $n$에 대해 유일하다.
+따라서 $\mathbb{Z}/n\mathbb{Z}$에서 곱셈 역원을 갖는 원소는 정확히 $n$과 서로소인 residue class들이다. $n = p$가 소수이면 $1, \ldots, p-1$이 모두 $p$와 서로소이므로 $0$이 아닌 모든 원소가 역원을 가지며, 이때 $\mathbb{Z}/p\mathbb{Z}$는 field를 이룬다. 역원이 존재할 때 그것은 법 $n$에 대해 유일하다.
 
 ::: 명제 8 (역원의 유일성)
 $\gcd(a, n) = 1$이면 $ax \equiv 1 \pmod n$을 만족하는 residue class $[x]$는 유일하다.

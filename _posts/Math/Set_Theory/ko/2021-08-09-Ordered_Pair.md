@@ -38,7 +38,7 @@ $A\subseteq B$이고 $B\subseteq C$이면 $A\subseteq C$이다.
 우선 전제는 임의의 $x$에 대하여 두 명제 $x\in A\implies x\in B$와 $x\in B\implies x\in C$가 참이라는 것을 뜻한다. 따라서 삼단논법에 의해 $x\in A\implies x\in C$도 참이고, $x$는 임의로 택할 수 있으므로 $A\subseteq C$가 성립한다. 
 :::
 
-위 두 명제로부터 $\subseteq$가 집합들 사이의 순서관계가 된다는 것을 안다. ([§순서관계의 정의, ⁋정의 1](/ko/math/set_theory/order_relations#def1))
+위 두 명제로부터 $\subseteq$가 집합들 사이의 order relation이 된다는 것을 안다. ([§순서관계의 정의, ⁋정의 1](/ko/math/set_theory/order_relations#def1))
 
 ## 순서쌍
 

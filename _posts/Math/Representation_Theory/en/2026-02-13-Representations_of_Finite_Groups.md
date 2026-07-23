@@ -14,7 +14,7 @@ translated_at: 2026-07-14T01:30:02+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-07-14T01:30:02+00:00
 ---
-One common strategy when dealing with mathematical objects of complicated structure is to observe how they act on simpler ones. In this post, we study representation theory, and among its branches, the representation theory of finite groups.
+One common strategy when dealing with mathematical objects of complicated structure is to observe how they act on simpler ones. In this category, we study representation theory, and among its branches, the representation theory of finite groups.
 
 ## Basic Notions of Representation Theory
 
@@ -64,7 +64,7 @@ For $G$-representations $V, W$, we define new $G$-representations via the follow
 
 ## Category $\lMod{\mathbb{C}[G]}$
 
-In [Definition 3] above, the definitions of the tensor product and $\Hom$ may look somewhat artificial; to understand them, the language of group algebras is useful. ([\[Algebraic Structures\] §Algebras, ⁋Definition 5](/en/math/algebraic_structures/algebras#def5)) To briefly review, as a set $\mathbb{C}[G]$ was the collection of functions from $G$ to $\mathbb{C}$. For each $x\in G$, defining $\delta_x:G\rightarrow \mathbb{C}$ by
+In [Definition 3](#def3) above, the definitions of the tensor product and $\Hom$ may look somewhat artificial; to understand them, the language of group algebras is useful. ([\[Algebraic Structures\] §Algebras, ⁋Definition 5](/en/math/algebraic_structures/algebras#def5)) To briefly review, as a set $\mathbb{C}[G]$ was the collection of functions from $G$ to $\mathbb{C}$. For each $x\in G$, defining $\delta_x:G\rightarrow \mathbb{C}$ by
 
 $$\delta_x(y)=\begin{cases}1&\text{if $y=x$}\\0&\text{otherwise}\end{cases}$$
 

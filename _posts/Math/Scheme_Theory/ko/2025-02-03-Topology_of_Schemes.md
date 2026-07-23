@@ -14,7 +14,7 @@ weight: 6
 
 ## 일반점
 
-이제 우리는 스킴이 갖는 위상적인 구조를 살펴볼 것이다. 가장 특이한 것 중 하나는 한점집합이 닫힌집합이 아닐 수도 있다는 것이다. 
+이제 우리는 scheme이 갖는 위상적인 구조를 살펴볼 것이다. 가장 특이한 것 중 하나는 한점집합이 닫힌집합이 아닐 수도 있다는 것이다. 
 
 
 ::: 정의 1
@@ -82,7 +82,7 @@ $$Z(\x\y)=\Spec \frac{\mathbb{K}[\x,\y]}{(\x\y)}$$
 
 ![counterexamples](/assets/images/Math/Scheme_Theory/Topology_of_Schemes-1.svg){:style="width:21.87em" class="invert" .align-center}
 
-이들은 generic point의 관점에서도 설명할 수 있다. 앞서 우리는 함수 $f$가 정의하는 generic point는 $f$가 정의하는 ideal 그 자체라고 하였으며, 따라서, 예를 들어 $y$축을 나타내는 아이디얼 $(\x)$가 바로 $y$축의 generic point이며, 비슷하게 $(\y)$는 $x$축을 나타내는 generic point이다. 문제는 위에서 살펴본 $Z(\x\y)$를 나타내는 아이디얼이 없다는 것으로, 두 축을 합집합하여 얻어지는 대상에 해당하는 아이디얼은 이들 두 아이디얼의 교집합에 포함되어야 할테지만 이 두 아이디얼의 교집합은 $(0)$ 뿐이며, 이는 전체 ring $\mathbb{K}[\x,\y]/(\x\y)$의 prime ideal이 <em-ko>아니다</em-ko>, 즉, $\mathbb{K}[\x,\y]/(\x\y)$는 integral domain이 아니며, 이는 $\x\y=0$임에도 $\x,\y\neq 0$이기 때문이다. 이 때 zero-divisor의 역할을 해 주는 $\x,\y$들은 각각 서로 다른 component에서 $0$이 되는 함수들로, 더 복잡한 scheme의 경우에서도 약간의 계산은 추가되지만 그 정신은 같은 원리로 나타나게 된다. 
+이들은 generic point의 관점에서도 설명할 수 있다. 앞서 우리는 함수 $f$가 정의하는 generic point는 $f$가 정의하는 ideal 그 자체라고 하였으며, 따라서, 예를 들어 $y$축을 나타내는 ideal $(\x)$가 바로 $y$축의 generic point이며, 비슷하게 $(\y)$는 $x$축을 나타내는 generic point이다. 문제는 위에서 살펴본 $Z(\x\y)$를 나타내는 ideal이 없다는 것으로, 두 축을 합집합하여 얻어지는 대상에 해당하는 ideal은 이들 두 ideal의 교집합에 포함되어야 할테지만 이 두 ideal의 교집합은 $(0)$ 뿐이며, 이는 전체 ring $\mathbb{K}[\x,\y]/(\x\y)$의 prime ideal이 <em-ko>아니다</em-ko>, 즉, $\mathbb{K}[\x,\y]/(\x\y)$는 integral domain이 아니며, 이는 $\x\y=0$임에도 $\x,\y\neq 0$이기 때문이다. 이 때 zero-divisor의 역할을 해 주는 $\x,\y$들은 각각 서로 다른 component에서 $0$이 되는 함수들로, 더 복잡한 scheme의 경우에서도 약간의 계산은 추가되지만 그 정신은 같은 원리로 나타나게 된다. 
 :::
 
 우리는 [\[위상수학\] §차원, ⁋정의 11](/ko/math/topology/dimension#def11)에서 위상공간이 noetherian이라는 개념을 정의하였다. 이를 scheme의 언어로 옮겨올 때에는 약간의 주의가 필요한데, 우선 affine scheme에 대해서는 다음 명제가 성립한다.
@@ -208,13 +208,13 @@ Ring $A$가 noetherian인 것은 local property이고, 따라서 affine-local pr
 
 첫째 조건은 [\[가환대수학\] §국소화, ⁋따름정리 9](/ko/math/commutative_algebra/localization#cor9)로부터 얻어지며, 혹은 [\[위상수학\] §차원, ⁋명제 13](/ko/math/topology/dimension#prop13)의 첫째 결과를 사용해도 충분하다.
 
-둘째 조건을 보자. $A=(f_1,\ldots, f_r)$이고 각 $A_{f_i}$가 noetherian이라 가정한 뒤, $A$의 임의의 ideal $\mathfrak{a}$가 유한생성임을 보이면 된다. 각 $i$에 대하여 $A_{f_i}$가 noetherian이므로 ideal $\mathfrak{a}A_{f_i}$는 유한생성이며, 생성원들의 분모를 없애면 $\mathfrak{a}$의 원소 $a_{i1},\ldots, a_{in_i}$이 존재하여 이들의 상이 $\mathfrak{a}A_{f_i}$를 생성하게 할 수 있다. 이제 이 유한개의 원소들 전체가 생성하는 ideal을 $\mathfrak{b}\subseteq \mathfrak{a}$라 하면, 구성에 의하여 모든 $i$에 대해 $\mathfrak{b}A_{f_i}=\mathfrak{a}A_{f_i}$이다.
+둘째 조건을 보자. $A=(f_1,\ldots, f_r)$이고 각 $A_{f_i}$가 noetherian이라 가정한 뒤, $A$의 임의의 ideal $\mathfrak{a}$가 finitely generated임을 보이면 된다. 각 $i$에 대하여 $A_{f_i}$가 noetherian이므로 ideal $\mathfrak{a}A_{f_i}$는 finitely generated이며, generator들의 분모를 없애면 $\mathfrak{a}$의 원소 $a_{i1},\ldots, a_{in_i}$이 존재하여 이들의 상이 $\mathfrak{a}A_{f_i}$를 생성하게 할 수 있다. 이제 이 유한개의 원소들 전체가 생성하는 ideal을 $\mathfrak{b}\subseteq \mathfrak{a}$라 하면, 구성에 의하여 모든 $i$에 대해 $\mathfrak{b}A_{f_i}=\mathfrak{a}A_{f_i}$이다.
 
-이제 $\mathfrak{a}=\mathfrak{b}$임을 보이면 된다. Localization이 완전함수이므로 $M=\mathfrak{a}/\mathfrak{b}$는 모든 $i$에 대하여 $M_{f_i}=0$을 만족한다. 임의의 $m\in M$을 잡으면 각 $i$마다 $f_i^{n}m=0$이 되는 $n$이 존재하고, $i$가 유한개이므로 충분히 큰 $n$ 하나를 공통으로 잡을 수 있다. 한편 $D(f_i)=D(f_i^n)$이므로 $D(f_i^n)$들 또한 $\Spec A$를 덮고, 따라서 $f_1^n,\ldots, f_r^n$은 단위 ideal을 생성하여 $1=\sum_{i=1}^r g_if_i^n$인 $g_i\in A$가 존재한다. 그럼
+이제 $\mathfrak{a}=\mathfrak{b}$임을 보이면 된다. Localization이 완전함수이므로 $M=\mathfrak{a}/\mathfrak{b}$는 모든 $i$에 대하여 $M_{f_i}=0$을 만족한다. 임의의 $m\in M$을 잡으면 각 $i$마다 $f_i^{n}m=0$이 되는 $n$이 존재하고, $i$가 유한개이므로 충분히 큰 $n$ 하나를 공통으로 잡을 수 있다. 한편 $D(f_i)=D(f_i^n)$이므로 $D(f_i^n)$들 또한 $\Spec A$를 덮고, 따라서 $f_1^n,\ldots, f_r^n$은 unit ideal을 생성하여 $1=\sum_{i=1}^r g_if_i^n$인 $g_i\in A$가 존재한다. 그럼
 
 $$m=\sum_{i=1}^r g_if_i^nm=0$$
 
-이므로 $M=0$, 곧 $\mathfrak{a}=\mathfrak{b}$가 유한생성이다.
+이므로 $M=0$, 곧 $\mathfrak{a}=\mathfrak{b}$가 finitely generated이다.
 :::
 
 ::: 정의 14

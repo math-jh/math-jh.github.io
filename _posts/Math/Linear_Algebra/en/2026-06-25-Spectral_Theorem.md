@@ -40,7 +40,7 @@ The key fact in the diagonalization of a self-adjoint operator is that the eigen
 All eigenvalues of a real symmetric matrix $A$ are real. That is, all roots of the characteristic polynomial of $A$ are real.
 :::
 ::: Proof
-The characteristic polynomial of $A$ is a polynomial of degree $n$ with real coefficients, and by the fundamental theorem of algebra ([§Characteristic Polynomial, ⁋Theorem 8](/en/math/linear_algebra/characteristic_polynomial#thm8)), this polynomial has $n$ roots $\lambda$ when extended to $\mathbb{C}$.
+The characteristic polynomial of $A$ is a polynomial of degree $n$ with real coefficients, and by [§Characteristic Polynomial, ⁋Theorem 8](/en/math/linear_algebra/characteristic_polynomial#thm8), this polynomial has $n$ roots $\lambda$ when extended to $\mathbb{C}$.
 
 Now consider an eigenvector $z\in\mathbb{C}^n$ corresponding to such a root, and let $\bar z$ be the vector obtained by taking the complex conjugate of each component of $z$. Consider the complex number
 

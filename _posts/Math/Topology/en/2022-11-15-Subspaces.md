@@ -24,11 +24,11 @@ Let a topological space $(X,\mathcal{T})$ and a subset $A$ of $X$ be given. Then
 
 For any open set $U$ of $X$, we have $\iota^{-1}(U)=U\cap A$, and for any family of open sets $(U_i)_{i\in I}$,
 
-$$\iota^{-1}\left(\bigcup_{i\in I} U_i\right)=\left(\bigcup_{i\in I} U_i\right)\cap A=\bigcup_{i\in I} (U_i\cap A)=\bigcup_{i\in I} \iota^{-1}(U)$$
+$$\iota^{-1}\left(\bigcup_{i\in I} U_i\right)=\left(\bigcup_{i\in I} U_i\right)\cap A=\bigcup_{i\in I} (U_i\cap A)=\bigcup_{i\in I} \iota^{-1}(U_i)$$
 
 and for any finite family of open sets $(U_i)_{i\in I}$,
 
-$$\iota^{-1}\left(\bigcap_{i\in I} U_i\right)=\left(\bigcap_{i\in I} U_i\right)\cap A=\bigcap_{i\in I} (U_i\cap A)=\bigcap_{i\in I} \iota^{-1}(U)$$
+$$\iota^{-1}\left(\bigcap_{i\in I} U_i\right)=\left(\bigcap_{i\in I} U_i\right)\cap A=\bigcap_{i\in I} (U_i\cap A)=\bigcap_{i\in I} \iota^{-1}(U_i)$$
 
 hold, so by [§Initial and Final Topology, ⁋Proposition 2](/en/math/topology/initial_and_final_topology#prop2) we see that the subspace topology $\mathcal{T}_A$ is given by the formula
 

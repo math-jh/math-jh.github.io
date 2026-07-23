@@ -33,7 +33,7 @@ $$\iota:\Proj (A_\bullet/\mathfrak{a}) \rightarrow \Proj A_\bullet=\mathbb{P}^n$
 ::: 증명
 [\[대수적 구조\] §등급환](/ko/math/algebraic_structures/graded_rings)에서 살펴본 것과 같이 $A_\bullet/\mathfrak{a}$는 graded ring이고, quotient ring의 ideal correspondence는 homogeneous ideal들을 homogeneous ideal들로 대응시킨다. 특히 $\mathfrak{q}\mapsto \pi^{-1}(\mathfrak{q})$는 $\Proj(A_\bullet/\mathfrak{a})$의 점들, 즉 $(A_\bullet/\mathfrak{a})_+$를 포함하지 않는 homogeneous prime ideal들을, $\mathfrak{a}$를 포함하고 $A_+$를 포함하지 않는 $A_\bullet$의 homogeneous prime ideal들로 보내는 bijection이며, 후자는 정확히 $Z_+(\mathfrak{a})$이다. ([§사영스킴, ⁋정의 2](/ko/math/scheme_theory/projective_schemes#def2)) 또, 이 대응 하에서 $Z_+(\bar{\mathfrak{b}})$ 꼴의 닫힌집합은 $Z_+(\pi^{-1}(\bar{\mathfrak{b}}))\cap Z_+(\mathfrak{a})$와 대응되므로 $\iota$는 그 image $Z_+(\mathfrak{a})$로의 homeomorphism이다.
 
-이제 scheme morphism의 구조와 sheaf morphism의 surjectivity를 표준적인 affine cover 위에서 확인하자. 각각의 $i$에 대하여 $\bar{\x}_i=\pi(\x_i)$라 하면, 위의 대응에 의해 $\iota^{-1}(D_+(\x_i))=D_+(\bar{\x}_i)$이다. [§사영스킴, ⁋보조정리 8](/ko/math/scheme_theory/projective_schemes#lem8)의 identification $D_+(\x_i)\cong\Spec A_{(\x_i)}$, $D_+(\bar\x_i)\cong \Spec (A_\bullet/\mathfrak{a})_{(\bar\x_i)}$ 하에서, $\iota$의 제한은 ring homomorphism
+이제 scheme morphism의 구조와 sheaf morphism의 surjectivity를 표준적인 affine cover 위에서 확인하자. 각각의 $i$에 대하여 $\bar{\x}_i=\pi(\x_i)$라 하면, 위의 대응에 의해 $\iota^{-1}(D_+(\x_i))=D_+(\bar{\x}_i)$이다. [§사영스킴, ⁋보조정리 8](/ko/math/scheme_theory/projective_schemes#lem8)의 identification $D_+(\x_i)\cong\Spec A_{(\x_i)}$, $D_+(\bar\x_i)\cong \Spec (A_\bullet/\mathfrak{a})_{(\bar\x_i)}$ 하에서, $\iota$의 restriction은 ring homomorphism
 
 $$A_{(\x_i)} \rightarrow (A_\bullet/\mathfrak{a})_{(\bar\x_i)};\qquad \frac{f}{\x_i^d}\mapsto \frac{\pi(f)}{\bar\x_i^d}$$
 
@@ -66,7 +66,7 @@ $$T=\left\{f\in A_\bullet\middle\vert\text{$f$ homogeneous,}\quad \frac{f}{\x_i^
 
 을 생각하고, $\mathfrak{a}$를 $T$로 생성되는 ideal이라 하자. $T$가 homogeneous element들로 이루어져 있으므로 $\mathfrak{a}$는 homogeneous ideal이다. 우리의 주장은 모든 $i$에 대해 $\mathfrak{a}_{(\x_i)}=\mathfrak{b}_i$가 성립한다는 것이다.
 
-우선 $\mathfrak{a}_{(\x_i)}$는 $f/\x_i^{\deg f}$ ($f\in T$) 꼴의 원소들로 생성되는 $A_{(\x_i)}$의 ideal인데, $T$의 정의에 의해 이들 생성원이 모두 $\mathfrak{b}_i$에 속하므로 $\mathfrak{a}_{(\x_i)}\subseteq \mathfrak{b}_i$이다.
+우선 $\mathfrak{a}_{(\x_i)}$는 $f/\x_i^{\deg f}$ ($f\in T$) 꼴의 원소들로 생성되는 $A_{(\x_i)}$의 ideal인데, $T$의 정의에 의해 이들 generator가 모두 $\mathfrak{b}_i$에 속하므로 $\mathfrak{a}_{(\x_i)}\subseteq \mathfrak{b}_i$이다.
 
 거꾸로 $g=f/\x_i^d\in \mathfrak{b}_i$가 주어졌다 하자. 여기서 $f$는 degree $d$의 homogeneous polynomial이다. 충분히 큰 $N$에 대하여 $\x_i^Nf\in T$임을 보이면, $g=(\x_i^Nf)/\x_i^{N+d}\in\mathfrak{a}_{(\x_i)}$가 되어 증명이 끝난다. 이를 위해 각각의 $j$에 대하여 $(\x_i^Nf)/\x_j^{N+d}\in \mathfrak{b}_j$이도록 하는 $N$을 찾자. $j=i$인 경우는 임의의 $N$에 대해 성립하므로 $j\neq i$라 하자.
 
@@ -95,7 +95,7 @@ Affine의 경우와 달리 이 대응은 일대일이 아니다. 가령 irreleva
 Homogeneous ideal $\mathfrak{a}\subseteq A_\bullet$에 대하여, 각 $i$마다 $\x_i^Nf\in \mathfrak{a}$인 $N\geq 0$이 존재하는 $f\in A_\bullet$들의 모임을 $\mathfrak{a}$의 *saturation*이라 부르고 $\mathfrak{a}^{\mathrm{sat}}$으로 적는다. $\mathfrak{a}=\mathfrak{a}^{\mathrm{sat}}$인 homogeneous ideal은 *saturated*라 부른다.
 :::
 
-$\mathfrak{a}^{\mathrm{sat}}$이 $\mathfrak{a}$를 포함하는 ideal인 것은 정의에서 곧바로 나온다. 또 $\mathfrak{a}$가 homogeneous이므로 $\x_i^Nf\in \mathfrak{a}$는 $f$의 각 homogeneous component에 대해서도 성립하며, 따라서 $\mathfrak{a}^{\mathrm{sat}}$ 또한 homogeneous ideal이다. 한편 차수가 충분히 큰 monomial은 언제나 어떤 $\x_i^{N_i}$로 나누어떨어지므로, 정의 4의 조건은 적당한 $N$에 대하여 $A_+^Nf\subseteq \mathfrak{a}$인 것과 같다. 곧 $\mathfrak{a}^{\mathrm{sat}}=(\mathfrak{a}:A_+^\infty)$이다.
+$\mathfrak{a}^{\mathrm{sat}}$이 $\mathfrak{a}$를 포함하는 ideal인 것은 정의에서 곧바로 나온다. 또 $\mathfrak{a}$가 homogeneous이므로 $\x_i^Nf\in \mathfrak{a}$는 $f$의 각 homogeneous component에 대해서도 성립하며, 따라서 $\mathfrak{a}^{\mathrm{sat}}$ 또한 homogeneous ideal이다. 한편 degree가 충분히 큰 monomial은 언제나 어떤 $\x_i^{N_i}$로 나누어떨어지므로, 정의 4의 조건은 적당한 $N$에 대하여 $A_+^Nf\subseteq \mathfrak{a}$인 것과 같다. 곧 $\mathfrak{a}^{\mathrm{sat}}=(\mathfrak{a}:A_+^\infty)$이다.
 
 ::: 명제 5
 Homogeneous ideal $\mathfrak{a},\mathfrak{b}\subseteq A_\bullet$에 대하여 다음이 성립한다.
@@ -108,12 +108,12 @@ Homogeneous ideal $\mathfrak{a},\mathfrak{b}\subseteq A_\bullet$에 대하여 �
 ::: 증명
 [명제 1](#prop1)의 증명에서 보았듯 $V_+(\mathfrak{a})\cap D_+(\x_i)$는 ideal $\mathfrak{a}_{(\x_i)}\subseteq A_{(\x_i)}$가 결정하고, affine scheme의 closed subscheme은 ideal과 일대일로 대응하므로 ([§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3) 이후의 논의), $V_+(\mathfrak{a})=V_+(\mathfrak{b})$인 것은 모든 $i$에 대하여 $\mathfrak{a}_{(\x_i)}=\mathfrak{b}_{(\x_i)}$인 것과 동치이다.
 
-1. $\mathfrak{a}\subseteq \mathfrak{a}^{\mathrm{sat}}$이므로 $\mathfrak{a}_{(\x_i)}\subseteq (\mathfrak{a}^{\mathrm{sat}})_{(\x_i)}$이다. 거꾸로 $f\in \mathfrak{a}^{\mathrm{sat}}$가 차수 $d$의 homogeneous element이고 $\x_i^Nf\in \mathfrak{a}$라 하면
+1. $\mathfrak{a}\subseteq \mathfrak{a}^{\mathrm{sat}}$이므로 $\mathfrak{a}_{(\x_i)}\subseteq (\mathfrak{a}^{\mathrm{sat}})_{(\x_i)}$이다. 거꾸로 $f\in \mathfrak{a}^{\mathrm{sat}}$가 degree $d$의 homogeneous element이고 $\x_i^Nf\in \mathfrak{a}$라 하면
 
     $$\frac{f}{\x_i^d}=\frac{\x_i^Nf}{\x_i^{N+d}}\in \mathfrak{a}_{(\x_i)}$$
 
     이므로 반대 포함도 성립한다.
-2. 한 방향은 1번의 결과이다. 역으로 $V_+(\mathfrak{a})=V_+(\mathfrak{b})$라 하고 $f\in \mathfrak{a}^{\mathrm{sat}}$가 차수 $d$의 homogeneous element라 하자. 1번의 계산에 의하여 $f/\x_i^d\in \mathfrak{a}_{(\x_i)}=\mathfrak{b}_{(\x_i)}$이므로, 차수 $e$의 homogeneous element $g\in \mathfrak{b}$가 존재하여 $A_{(\x_i)}$ 안에서 $f/\x_i^d=g/\x_i^e$이다. $A_\bullet$이 integral domain이라 $A_\bullet \rightarrow A_{\x_i}$가 단사이므로 이는 $\x_i^ef=\x_i^dg\in \mathfrak{b}$를 뜻한다. $i$가 임의였으므로 $f\in \mathfrak{b}^{\mathrm{sat}}$이고, homogeneous component별로 확인하면 $\mathfrak{a}^{\mathrm{sat}}\subseteq \mathfrak{b}^{\mathrm{sat}}$을 얻는다. $\mathfrak{a}$와 $\mathfrak{b}$의 역할을 바꾸면 반대 포함이 나온다.
+2. 한 방향은 1번의 결과이다. 역으로 $V_+(\mathfrak{a})=V_+(\mathfrak{b})$라 하고 $f\in \mathfrak{a}^{\mathrm{sat}}$가 degree $d$의 homogeneous element라 하자. 1번의 계산에 의하여 $f/\x_i^d\in \mathfrak{a}_{(\x_i)}=\mathfrak{b}_{(\x_i)}$이므로, degree $e$의 homogeneous element $g\in \mathfrak{b}$가 존재하여 $A_{(\x_i)}$ 안에서 $f/\x_i^d=g/\x_i^e$이다. $A_\bullet$이 integral domain이라 $A_\bullet \rightarrow A_{\x_i}$가 단사이므로 이는 $\x_i^ef=\x_i^dg\in \mathfrak{b}$를 뜻한다. $i$가 임의였으므로 $f\in \mathfrak{b}^{\mathrm{sat}}$이고, homogeneous component별로 확인하면 $\mathfrak{a}^{\mathrm{sat}}\subseteq \mathfrak{b}^{\mathrm{sat}}$을 얻는다. $\mathfrak{a}$와 $\mathfrak{b}$의 역할을 바꾸면 반대 포함이 나온다.
 
 마지막 주장은 [정리 3](#thm3)과 1번에 의하여 임의의 closed subscheme이 saturated ideal로부터 얻어지고, 2번이 그러한 ideal의 유일성을 주기 때문이다.
 :::

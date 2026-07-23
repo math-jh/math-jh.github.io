@@ -13,7 +13,7 @@ date: 2026-03-05
 weight: 1
 ---
 
-Toric geometry는 말 그대로 toric variety라 불리는 특별한 대수다양체를 연구하는 분야이다. 일반적인 대수다양체에 비해 toric variety가 가지는 장점은 이것이 본질적으로 조합론적인 정보로 만들어지므로 더 손에 잡히는 계산을 수행하기 용이하다는 것이다. 우리는 이 글에서 먼저 가장 간단한 toric variety, 즉 affine toric variety를 살펴본다. 
+Toric geometry는 말 그대로 toric variety라 불리는 특별한 algebraic variety를 연구하는 분야이다. 일반적인 algebraic variety에 비해 toric variety가 가지는 장점은 이것이 본질적으로 조합론적인 정보로 만들어지므로 더 손에 잡히는 계산을 수행하기 용이하다는 것이다. 우리는 이 글에서 먼저 가장 간단한 toric variety, 즉 affine toric variety를 살펴본다. 
 
 ## 격자와 뿔
 
@@ -131,7 +131,7 @@ $$U_\sigma \cong \mathbb{C}^k \times (\mathbb{C}^\ast)^{n-k}$$
 :::
 
 ::: 증명
-($\Leftarrow$) $\sigma$가 smooth라 하자. 정의에 의해 ray generator $v_1, \ldots, v_k$가 $N$의 어떤 기저 $\{v_1, \ldots, v_n\}$의 일부를 이룬다. 이 기저의 dual basis $\{v_1^\ast, \ldots, v_n^\ast\} \subset M$를 택하면,
+($\Leftarrow$) $\sigma$가 smooth라 하자. 정의에 의해 ray generator $v_1, \ldots, v_k$가 $N$의 어떤 basis $\{v_1, \ldots, v_n\}$의 일부를 이룬다. 이 basis의 dual basis $\{v_1^\ast, \ldots, v_n^\ast\} \subset M$를 택하면,
 
 $$\sigma^\vee = \{u \in M_{\mathbb{R}} \mid \langle u, v_i\rangle \ge 0,\ i = 1, \ldots, k\} = \mathbb{R}_{\ge 0}\langle v_1^\ast, \ldots, v_k^\ast\rangle + \mathbb{R}\langle v_{k+1}^\ast, \ldots, v_n^\ast\rangle$$
 
@@ -145,7 +145,7 @@ $$\mathbb{C}[S_\sigma] = \mathbb{C}[\rchi^{v_1^\ast}, \ldots, \rchi^{v_k^\ast}, 
 
 이므로 $U_\sigma \cong \mathbb{C}^k \times (\mathbb{C}^\ast)^{n-k}$가 smooth이다.
 
-($\Rightarrow$) 역방향은 $U_\sigma$의 unique torus-fixed point (orbit-cone correspondence에서 $\sigma$ 자신에 대응)에서 cotangent space 차원이 ray 수 $\lvert \sigma(1) \rvert$와 같음을 보이는 데서 출발한다. $U_\sigma$가 smooth이면 이 차원이 $n = \dim U_\sigma$여야 하므로 ray 수가 $n$, 즉 $\sigma$가 simplicial이고 또한 $N$의 $\mathbb{Z}$-기저를 이뤄야 한다.
+($\Rightarrow$) 역방향은 $U_\sigma$의 unique torus-fixed point (orbit-cone correspondence에서 $\sigma$ 자신에 대응)에서 cotangent space 차원이 ray 수 $\lvert \sigma(1) \rvert$와 같음을 보이는 데서 출발한다. $U_\sigma$가 smooth이면 이 차원이 $n = \dim U_\sigma$여야 하므로 ray 수가 $n$, 즉 $\sigma$가 simplicial이고 또한 $N$의 $\mathbb{Z}$-basis를 이뤄야 한다.
 :::
 
 가령 $N = \mathbb{Z}^2$에서 $\sigma = \mathrm{cone}(e_2,\ 2e_1 - e_2)$를 잡으면, 두 ray의 primitive generator로 만든 행렬
@@ -267,7 +267,7 @@ $\sigma = \{0\}$인 경우 $\sigma^\vee = M_{\mathbb{R}}$이므로 $S_\sigma = M
 
 $$T_N = \Spec(\mathbb{C}[M]) \longrightarrow \Spec(\mathbb{C}[S_\sigma]) = U_\sigma$$
 
-을 유도한다. 더욱이 $\sigma$가 strongly convex이므로 $\sigma^\vee$는 $M_{\mathbb{R}}$에서 full-dimensional cone이고, 그 내부에 lattice point $u_0 \in M$이 존재한다. 임의의 $m \in M$에 대해 충분히 큰 $N$을 잡으면 $Nu_0$과 $Nu_0 + m$이 모두 $S_\sigma$에 속하므로 $m = (Nu_0 + m) - Nu_0$로 $S_\sigma$가 group으로서 $M$ 전체를 생성하고, $\mathbb{C}[S_\sigma]$의 fraction field는 $\mathbb{C}(M)$과 일치한다. 따라서 $T_N \hookrightarrow U_\sigma$는 열린 조밀한 부분집합이 된다.
+을 유도한다. 더욱이 $\sigma$가 strongly convex이므로 $\sigma^\vee$는 $M_{\mathbb{R}}$에서 full-dimensional cone이고, 그 interior에 lattice point $u_0 \in M$이 존재한다. 임의의 $m \in M$에 대해 충분히 큰 $N$을 잡으면 $Nu_0$과 $Nu_0 + m$이 모두 $S_\sigma$에 속하므로 $m = (Nu_0 + m) - Nu_0$로 $S_\sigma$가 group으로서 $M$ 전체를 생성하고, $\mathbb{C}[S_\sigma]$의 fraction field는 $\mathbb{C}(M)$과 일치한다. 따라서 $T_N \hookrightarrow U_\sigma$는 열린 조밀한 부분집합이 된다.
 :::
 
 이어서 face 구조가 affine toric variety 위에서 어떻게 발현되는지 살펴본다. 이를 위해 다음 보조정리가 핵심적이다.
@@ -335,7 +335,7 @@ $$(t_1, t_2) \cdot (z_1, z_2) = (t_1 z_1, t_2 z_2)$$
 
 $$(\mathbb{C}^\ast)^2 = \{(z_1, z_2) \mid z_1 \neq 0, z_2 \neq 0\}$$
 
-으로, 이는 $2$차원 torus $T_N$ 자체이다. 또 흥미로운 것은 이보다 낮은 차원의 orbit들로, coordinate axis들 $(\mathbb{C}^\ast) \times \{0\}$과 $\{0\} \times (\mathbb{C}^\ast)$이 이에 해당한다. 이들은 각각 한 개의 coordinate가 0이 되어 torus action의 자유도가 하나 줄어든 궤도이다. 마찬가지로 원점 $(0, 0)$는 torus action의 fixed point로, 형식적으로는 $0$차원 orbit으로 생각할 수 있다. 
+으로, 이는 $2$차원 torus $T_N$ 자체이다. 또 흥미로운 것은 이보다 낮은 차원의 orbit들로, coordinate axis들 $(\mathbb{C}^\ast) \times \{0\}$과 $\{0\} \times (\mathbb{C}^\ast)$이 이에 해당한다. 이들은 각각 한 개의 coordinate가 0이 되어 torus action의 자유도가 하나 줄어든 orbit이다. 마찬가지로 원점 $(0, 0)$는 torus action의 fixed point로, 형식적으로는 $0$차원 orbit으로 생각할 수 있다. 
 :::
 
 마지막으로 affine toric variety의 기본적인 성질을 증명하며 이 글을 마친다.
@@ -351,7 +351,7 @@ Affine toric variety $U_\sigma$에 대해 다음이 성립한다:
 ::: 증명
 1. Normality의 경우, Gordan's lemma에 의해 $S_\sigma = \sigma^\vee \cap M$은 finitely generated semigroup이다. 더욱이 $S_\sigma$는 *saturated*이다: 즉 $k \cdot u \in S_\sigma$인 $k \in \mathbb{Z}_{>0}$와 $u \in M$에 대해 $u \in S_\sigma$이다. 이는 $\langle u, v \rangle \ge 0$가 $\sigma$ 위에서 성립함을 의미한다. Affine semigroup algebra가 normal domain이 되는 것은 그 semigroup이 saturated인 것과 동치이므로, $\mathbb{C}[S_\sigma]$는 normal domain이고 그 spectrum인 $U_\sigma$는 normal이다.
 2. Irreducibility의 경우, $S_\sigma$는 torsion-free abelian group $M$의 부분 semigroup이므로, $\mathbb{C}[S_\sigma]$에는 zero divisor가 존재하지 않는다. 따라서 $\mathbb{C}[S_\sigma]$는 integral domain이고 $U_\sigma = \Spec(\mathbb{C}[S_\sigma])$는 irreducible이다.
-3. $\mathbb{C}[S_\sigma] \subseteq \mathbb{C}[M]$이므로 fraction field는 $\mathbb{C}(M)$에 포함된다. 한편 $\sigma$가 strongly convex이므로 $\sigma^\vee$는 $M_{\mathbb{R}}$에서 full-dimensional cone이며, 따라서 $\sigma^\vee$ 내부에 lattice point $u_0 \in M$이 존재한다. 임의의 $m \in M$에 대해 충분히 큰 $N$을 잡으면 $Nu_0$과 $Nu_0 + m$이 모두 $S_\sigma$에 속하므로 $m = (Nu_0 + m) - Nu_0$로 $S_\sigma$가 group으로서 $M$ 전체를 생성하고, $\mathbb{C}[S_\sigma]$의 fraction field는 정확히 $\mathbb{C}(M)$과 일치한다. $M \cong \mathbb{Z}^n$이므로 $\mathbb{C}(M)$의 transcendence degree는 $n$이고, 이로부터 $\dim U_\sigma = n$이 성립한다.
+3. $\mathbb{C}[S_\sigma] \subseteq \mathbb{C}[M]$이므로 fraction field는 $\mathbb{C}(M)$에 포함된다. 한편 $\sigma$가 strongly convex이므로 $\sigma^\vee$는 $M_{\mathbb{R}}$에서 full-dimensional cone이며, 따라서 $\sigma^\vee$의 interior에 lattice point $u_0 \in M$이 존재한다. 임의의 $m \in M$에 대해 충분히 큰 $N$을 잡으면 $Nu_0$과 $Nu_0 + m$이 모두 $S_\sigma$에 속하므로 $m = (Nu_0 + m) - Nu_0$로 $S_\sigma$가 group으로서 $M$ 전체를 생성하고, $\mathbb{C}[S_\sigma]$의 fraction field는 정확히 $\mathbb{C}(M)$과 일치한다. $M \cong \mathbb{Z}^n$이므로 $\mathbb{C}(M)$의 transcendence degree는 $n$이고, 이로부터 $\dim U_\sigma = n$이 성립한다.
 :::
 
 ---

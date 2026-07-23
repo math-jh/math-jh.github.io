@@ -51,7 +51,7 @@ $$x = (\xi_1, \xi_2, \ldots, \xi_n) \in \mathbb{R}^n$$
 
 $$\lVert x_m \rVert > m$$
 
-인 점 $x_m \in K$을 고를 수 있고, 이 점열의 임의의 부분수열도 노름이 무한대로 발산하므로 수렴할 수 없다. 따라서 $K$는 점렬컴팩트가 아니다. 다음으로 $K$가 닫혀 있지 않다 하자. [§열린집합과 닫힌집합, ⁋명제 4](/ko/math/analysis/open_and_closed_sets#prop4)에 의해 $K$의 점열 $x_m \rightarrow x$이면서 $x \notin K$인 경우가 존재한다. 이때 $(x_m)$의 모든 부분수열은 같은 극한 $x$로 수렴하는데 ([§부분수열과 Bolzano–Weierstrass 정리, ⁋명제 2](/ko/math/analysis/bolzano_weierstrass#prop2)) $x \notin K$이므로, $K$ 안의 점으로 수렴하는 부분수열이 하나도 없다. 따라서 $K$는 점렬컴팩트가 아니다. 두 경우를 종합하면, $K$가 점렬컴팩트이면 $K$는 닫혀 있고 bounded이다.
+인 점 $x_m \in K$을 고를 수 있고, 이 점열의 임의의 부분수열도 norm이 무한대로 발산하므로 수렴할 수 없다. 따라서 $K$는 점렬컴팩트가 아니다. 다음으로 $K$가 닫혀 있지 않다 하자. [§열린집합과 닫힌집합, ⁋명제 4](/ko/math/analysis/open_and_closed_sets#prop4)에 의해 $K$의 점열 $x_m \rightarrow x$이면서 $x \notin K$인 경우가 존재한다. 이때 $(x_m)$의 모든 부분수열은 같은 극한 $x$로 수렴하는데 ([§부분수열과 Bolzano–Weierstrass 정리, ⁋명제 2](/ko/math/analysis/bolzano_weierstrass#prop2)) $x \notin K$이므로, $K$ 안의 점으로 수렴하는 부분수열이 하나도 없다. 따라서 $K$는 점렬컴팩트가 아니다. 두 경우를 종합하면, $K$가 점렬컴팩트이면 $K$는 닫혀 있고 bounded이다.
 :::
 
 따라서 닫힌구간 $[a, b]$, 닫힌 공, 닫힌 직육면체 등은 모두 점렬컴팩트이다. 반면 개구간 $(0, 1)$은 닫혀 있지 않아, $\mathbb{R}$ 전체는 bounded가 아니어서 점렬컴팩트가 아니다.
@@ -106,7 +106,7 @@ $$z_k = (x_k, y_k) \xrightarrow[ k \in T ]{} (x, y) \in K \times L$$
 이다. 따라서 $K \times L$의 임의의 점열에서 $K \times L$ 안의 점으로 수렴하는 부분수열을 뽑았으므로, $K \times L$은 점렬컴팩트이다.
 :::
 
-이 명제를 닫힌구간에 거듭 적용하면, 닫힌 직육면체 $[a_1, b_1] \times \cdots \times [a_n, b_n]$이 점렬컴팩트임을 곧바로 얻는다. 하이네–보렐 정리의 ($\Leftarrow$) 방향은 임의의 닫힌 bounded set을 이러한 직육면체 안에 가두는 것으로 볼 수도 있다.
+이 명제를 닫힌구간에 거듭 적용하면, 닫힌 직육면체 $[a_1, b_1] \times \cdots \times [a_n, b_n]$이 점렬컴팩트임을 곧바로 얻는다. 하이네–보렐 정리의 ($\Leftarrow$) 방향은 임의의 closed bounded set을 이러한 직육면체 안에 가두는 것으로 볼 수도 있다.
 
 ## 응용
 
@@ -149,14 +149,14 @@ $K \subseteq \mathbb{R}^n$이 비어 있지 않은 점렬컴팩트집합이고 $
 
 $$d(p, K) = \inf_{y \in K} \lVert p - y \rVert$$
 
-는 실제로 $K$의 어떤 점에서 달성된다. 즉 $\lVert p - y_0 \rVert = d(p, K)$인 $y_0 \in K$가 존재한다. 실제로 하한의 정의에 의해
+는 실제로 $K$의 어떤 점에서 달성된다. 즉 $\lVert p - y_0 \rVert = d(p, K)$인 $y_0 \in K$가 존재한다. 실제로 infimum의 정의에 의해
 
 $$\lVert p - y_m \rVert \rightarrow d(p, K) \qquad (y_m \in K)$$
 
-인 점열 $(y_m)$을 잡을 수 있고, $K$가 점렬컴팩트이므로 $y_{m_k} \rightarrow y_0 \in K$인 부분수열을 뽑는다. 노름이 연속이므로
+인 점열 $(y_m)$을 잡을 수 있고, $K$가 점렬컴팩트이므로 $y_{m_k} \rightarrow y_0 \in K$인 부분수열을 뽑는다. norm이 연속이므로
 
 $$\lVert p - y_0 \rVert = \lim_k \lVert p - y_{m_k} \rVert = d(p, K)$$
 
-이 되어, 하한이 $y_0 \in K$에서 달성된다. $K$가 닫혀 있지 않으면 이 결론이 깨질 수 있다. 가령 $K = (0, 1)$, $p = 0$이면 $d(p, K) = 0$이지만 이를 달성하는 점이 $K$ 안에 없다.
+이 되어, infimum이 $y_0 \in K$에서 달성된다. $K$가 닫혀 있지 않으면 이 결론이 깨질 수 있다. 가령 $K = (0, 1)$, $p = 0$이면 $d(p, K) = 0$이지만 이를 달성하는 점이 $K$ 안에 없다.
 :::
 

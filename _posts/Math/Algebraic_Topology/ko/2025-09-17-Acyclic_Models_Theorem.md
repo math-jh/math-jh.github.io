@@ -39,7 +39,7 @@ Category with models $(\mathcal{A},\mathcal{M})$이 주어졌다 하고, covaria
 
 예를 들어, standard $n$-simplex들 $\Delta^n$들의 모임 $\mathcal{M}$을 model들로 갖는 category with models $(\Top, \mathcal{M})$을 생각하자. 그럼 각각의 $X\in \Top$마다 singular $n$-simplex들의 chain complex $C_\bullet(X)$을 대응시키는 functor $C_\bullet:\Top \rightarrow \Ab$는 acyclic on $\mathcal{M}$인 동시에 free on $\mathcal{M}$이다.
 
-- $C_\bullet$이 acyclic on $\mathcal{M}$이라는 것은, 각 모델 $\Delta^n$이 convex set이라 한 점으로 수축가능하고, 그 직선 수축이 유도하는 cone 연산자가 $C_\bullet(\Delta^n)$을 $i>0$에서 직접 수축시키기 때문으로, 이는 [§호몰로지, ⁋명제 11](/ko/math/algebraic_topology/homology#prop11)의 일반화라 생각할 수 있다. 여기에서 functor $F_\bullet$이 $\mathcal{M}$ 위에서 acyclic하다는 조건은 $F_\bullet(X)$의 $0$번째 homology가 $0$일 것을 <em-ko>요구하지는 않는다</em-ko>는 것에 주의하자. 
+- $C_\bullet$이 acyclic on $\mathcal{M}$이라는 것은, 각 model $\Delta^n$이 convex set이라 한 점으로 수축가능하고, 그 직선 수축이 유도하는 cone 연산자가 $C_\bullet(\Delta^n)$을 $i>0$에서 직접 수축시키기 때문으로, 이는 [§호몰로지, ⁋명제 11](/ko/math/algebraic_topology/homology#prop11)의 일반화라 생각할 수 있다. 여기에서 functor $F_\bullet$이 $\mathcal{M}$ 위에서 acyclic하다는 조건은 $F_\bullet(X)$의 $0$번째 homology가 $0$일 것을 <em-ko>요구하지는 않는다</em-ko>는 것에 주의하자. 
 - $C_\bullet$이 free on $\mathcal{M}$이라는 것은 정확히 각각의 $C_n(X)$들이 $\Delta^n \rightarrow X$로 생성되는 free abelian group이므로, 즉 $C_n(X)=\mathbb{Z}\Hom_\Top(\Delta^n,X)$이므로 자명하다. 
 
 
@@ -70,7 +70,7 @@ $$f_\bullet(-):F_\bullet(-) \rightarrow G_\bullet(-)$$
 
 에 의하여, $F_0(X)\rightarrow H_0(G(X))$는 자명한 방식으로 정의되고, $p_G$가 surjective이므로 이로부터 lifting $F_0(X)\rightarrow G_0(X)$를 정의할 수 있다. 
 
-그러나 더 높은 차수에서 $f_\bullet(X)$를 정의하려면 약간의 문제가 있다. 귀납적으로 $f_{n-1}(X)$까지의 성분이 정의되었다고 하고 $f_n(X)$를 정의하자. 즉 다음의 diagram 
+그러나 더 높은 degree에서 $f_\bullet(X)$를 정의하려면 약간의 문제가 있다. 귀납적으로 $f_{n-1}(X)$까지의 성분이 정의되었다고 하고 $f_n(X)$를 정의하자. 즉 다음의 diagram 
 
 ![lifting_general](/assets/images/Math/Algebraic_Topology/Acyclic_Models_Theorem-2.svg){:style="width:24.16em" class="invert" .align-center}
 

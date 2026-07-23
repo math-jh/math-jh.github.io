@@ -96,7 +96,7 @@ $$(\id_M-\rho)(\id_M+\rho+\rho^2+\cdots+\rho^{N-1})=\id_M-\rho^N=\id_M$$
 이제 유한 길이 module의 indecomposable 분해가 존재하며 isomorphism과 순서를 무시하면 유일함을 증명한다. 존재성은 길이에 대한 귀납으로, 유일성은 endomorphism ring이 local이라는 사실을 이용한 exchange 논법으로 얻는다. 다음 보조정리가 두 분해를 맞바꾸는 핵심 단계를 담는다.
 
 ::: 보조정리 5
-$M$이 유한 길이를 갖는 indecomposable $A$-module이라 하자. $M\cong N_1\oplus\cdots\oplus N_s$인 동형이 주어지고, 이 분해에 대한 projection $\pi_j:M\rightarrow N_j$와 포함 $\iota_j:N_j\rightarrow M$을 생각하면 $\sum_{j=1}^s\iota_j\pi_j=\id_M$이다. 그럼 어떤 $j$가 존재하여 $\pi_j:M\rightarrow N_j$가 split monomorphism, 곧 왼쪽 역을 가지는 단사사상이고, 그 상 $\pi_j(M)$은 $N_j$의 한 direct summand이다. 특히 그 $N_j$가 indecomposable이면 $\pi_j:M\rightarrow N_j$는 isomorphism이다.
+$M$이 유한 길이를 갖는 indecomposable $A$-module이라 하자. $M\cong N_1\oplus\cdots\oplus N_s$인 isomorphism이 주어지고, 이 분해에 대한 projection $\pi_j:M\rightarrow N_j$와 포함 $\iota_j:N_j\rightarrow M$을 생각하면 $\sum_{j=1}^s\iota_j\pi_j=\id_M$이다. 그럼 어떤 $j$가 존재하여 $\pi_j:M\rightarrow N_j$가 split monomorphism, 곧 왼쪽 역을 가지는 단사사상이고, 그 image $\pi_j(M)$은 $N_j$의 한 direct summand이다. 특히 그 $N_j$가 indecomposable이면 $\pi_j:M\rightarrow N_j$는 isomorphism이다.
 :::
 ::: 증명
 분해 $M\cong N_1\oplus\cdots\oplus N_s$를 동일시하면 projection과 포함의 정의로부터 $\sum_{j=1}^s\iota_j\pi_j=\id_M$이다. $\id_M$은 $\End_A(M)$의 가역원이고, $M$이 유한 길이 indecomposable이므로 [따름정리 4](#cor4)에 의하여 $\End_A(M)$은 local ring이다. 따름정리 4 직후에 관찰한 대로, local ring에서 가역원이 유한개의 합으로 적히면 그 합의 항 중 적어도 하나가 가역이다. 따라서 어떤 $j$에 대하여 $\theta:=\iota_j\pi_j\in\End_A(M)$이 automorphism이다.
@@ -105,7 +105,7 @@ $M$이 유한 길이를 갖는 indecomposable $A$-module이라 하자. $M\cong N
 
 $$(\theta^{-1}\iota_j)\circ\pi_j=\theta^{-1}(\iota_j\pi_j)=\theta^{-1}\theta=\id_M$$
 
-이고, 따라서 $\pi_j:M\rightarrow N_j$는 왼쪽 역 $\sigma:=\theta^{-1}\iota_j:N_j\rightarrow M$을 가지는 split monomorphism이다. 일반적으로 왼쪽 역 $\sigma$를 가지는 사상 $\pi_j$에 대하여 $\pi_j\sigma:N_j\rightarrow N_j$는 $(\pi_j\sigma)(\pi_j\sigma)=\pi_j(\sigma\pi_j)\sigma=\pi_j\sigma$이므로 idempotent이고, 이로부터 $N_j=\im(\pi_j\sigma)\oplus\ker(\pi_j\sigma)$이며 $\im(\pi_j\sigma)=\pi_j(M)$이다. 곧 $\pi_j(M)$은 $N_j$의 direct summand이고, $\pi_j$는 $M$에서 이 summand 위로의 isomorphism이다.
+이고, 따라서 $\pi_j:M\rightarrow N_j$는 왼쪽 역 $\sigma:=\theta^{-1}\iota_j:N_j\rightarrow M$을 가지는 split monomorphism이다. 일반적으로 왼쪽 역 $\sigma$를 가지는 morphism $\pi_j$에 대하여 $\pi_j\sigma:N_j\rightarrow N_j$는 $(\pi_j\sigma)(\pi_j\sigma)=\pi_j(\sigma\pi_j)\sigma=\pi_j\sigma$이므로 idempotent이고, 이로부터 $N_j=\im(\pi_j\sigma)\oplus\ker(\pi_j\sigma)$이며 $\im(\pi_j\sigma)=\pi_j(M)$이다. 곧 $\pi_j(M)$은 $N_j$의 direct summand이고, $\pi_j$는 $M$에서 이 summand 위로의 isomorphism이다.
 
 끝으로 $N_j$가 indecomposable이라 하자. $N_j=\pi_j(M)\oplus\ker(\pi_j\sigma)$인데 $\pi_j(M)\cong M\neq 0$이므로 indecomposable의 정의에 의하여 $\ker(\pi_j\sigma)=0$, 곧 $\pi_j(M)=N_j$이다. 따라서 단사사상 $\pi_j:M\rightarrow N_j$가 전사이기도 하여 isomorphism이다.
 :::
@@ -117,7 +117,7 @@ $$(\theta^{-1}\iota_j)\circ\pi_j=\theta^{-1}(\iota_j\pi_j)=\theta^{-1}\theta=\id
 
 $$M=M_1\oplus M_2\oplus\cdots\oplus M_r$$
 
-으로 적힌다. 또한 이 분해는 isomorphism과 순서를 무시하면 유일하다. 곧 다른 indecomposable 분해 $M=N_1\oplus\cdots\oplus N_s$가 주어지면 $r=s$이고, 적절한 치환 $\sigma$가 존재하여 모든 $i$에 대하여 $M_i\cong N_{\sigma(i)}$이다.
+으로 적힌다. 또한 이 분해는 isomorphism과 순서를 무시하면 유일하다. 곧 다른 indecomposable 분해 $M=N_1\oplus\cdots\oplus N_s$가 주어지면 $r=s$이고, 적절한 permutation $\sigma$가 존재하여 모든 $i$에 대하여 $M_i\cong N_{\sigma(i)}$이다.
 
 특히 quiver $Q$의 임의의 nonzero 유한차원 representation은 indecomposable representation들의 direct sum으로 적히며, 그 분해는 isomorphism과 순서를 무시하면 유일하다.
 :::
@@ -128,7 +128,7 @@ $$M=M_1\oplus M_2\oplus\cdots\oplus M_r$$
 
 $$M=M_1\oplus\cdots\oplus M_r=N_1\oplus\cdots\oplus N_s$$
 
-가 주어졌다 하자. $r$에 대한 귀납으로 진행한다. $r=0$이면 $M=0$이고 $s=0$이므로 자명하다. $r\geq 1$이라 하자. $M_1$에 관련된 사상들을 모은다. 둘째 분해에 대한 projection $\pi_j:M\rightarrow N_j$와 포함 $\iota_j:N_j\rightarrow M$, 그리고 첫째 분해에 대한 $M_1$로의 projection $p:M\rightarrow M_1$과 포함 $q:M_1\rightarrow M$을 생각하자. $\sum_{j=1}^s\iota_j\pi_j=\id_M$이므로 $M_1$ 위에서
+가 주어졌다 하자. $r$에 대한 귀납으로 진행한다. $r=0$이면 $M=0$이고 $s=0$이므로 자명하다. $r\geq 1$이라 하자. $M_1$에 관련된 morphism들을 모은다. 둘째 분해에 대한 projection $\pi_j:M\rightarrow N_j$와 포함 $\iota_j:N_j\rightarrow M$, 그리고 첫째 분해에 대한 $M_1$로의 projection $p:M\rightarrow M_1$과 포함 $q:M_1\rightarrow M$을 생각하자. $\sum_{j=1}^s\iota_j\pi_j=\id_M$이므로 $M_1$ 위에서
 
 $$\sum_{j=1}^s (p\,\iota_j)(\pi_j\,q)=p\Bigl(\sum_{j=1}^s\iota_j\pi_j\Bigr)q=p\,q=\id_{M_1}$$
 
@@ -148,7 +148,7 @@ $$M=N_1\oplus M''=N_1\oplus M_2\oplus\cdots\oplus M_r$$
 
 $$M_2\oplus\cdots\oplus M_r\cong N_2\oplus\cdots\oplus N_s$$
 
-를 얻는다. 좌변은 $r-1$개의 indecomposable 분해이므로 귀납가정에 의하여 $r-1=s-1$, 곧 $r=s$이고, $\{2,\ldots,r\}$ 위의 치환 $\sigma'$가 존재하여 $M_i\cong N_{\sigma'(i)}$이다. 여기에 $M_1\cong N_1$을 더하면 원하는 치환 $\sigma$를 얻는다.
+를 얻는다. 좌변은 $r-1$개의 indecomposable 분해이므로 귀납가정에 의하여 $r-1=s-1$, 곧 $r=s$이고, $\{2,\ldots,r\}$ 위의 permutation $\sigma'$가 존재하여 $M_i\cong N_{\sigma'(i)}$이다. 여기에 $M_1\cong N_1$을 더하면 원하는 permutation $\sigma$를 얻는다.
 
 마지막으로 representation에 대한 진술은 $\Rep(Q)\cong\lMod{kQ}$의 동치에서 따라온다 ([§Quiver와 경로대수, ⁋정리 12](/ko/math/representation_theory/path_algebras#thm12)). 유한차원 representation은 $k$ 위에서 유한차원, 따라서 유한 길이인 $kQ$-module에 대응하고, indecomposable representation은 indecomposable module에 대응하며 direct sum이 보존되므로, module에 대한 위의 결과가 그대로 옮겨진다.
 :::
@@ -158,7 +158,7 @@ $$M_2\oplus\cdots\oplus M_r\cong N_2\oplus\cdots\oplus N_s$$
 이 정리가 보장하는 유일성 덕분에, 유한차원 representation $V$에 대하여 그 분해에 나타나는 indecomposable들의 isomorphism class와 각각의 중복도가 $V$의 불변량으로 잘 정의된다. 따라서 $\Rep(Q)$의 유한차원 대상을 이해하는 문제는 indecomposable representation들을 isomorphism을 무시하고 분류하는 문제로 환원된다. 예시 2에서 보았듯 선형 $A_2$ quiver의 indecomposable은 두 simple representation과 한 개의 비simple indecomposable로 이루어지며, 이러한 분류가 모든 quiver에 대하여 가능한지, 가능하다면 그 목록이 무엇인지가 다음 논의의 주제이다.
 
 ::: 참고 7
-Krull–Schmidt 정리는 indecomposable들의 isomorphism class를 유한차원 representation 이론의 기본 단위로 확정한다. 이 단위 위에서 indecomposable들 사이의 사상을 체계적으로 기술하는 것이 *Auslander–Reiten 이론*이며, almost split sequence와 Auslander–Reiten quiver가 그 핵심 도구이다. 또한 어떤 quiver $Q$가 유한개의 indecomposable representation만을 가지는지, 곧 *representation-finite*인지를 묻는 문제의 답이 *Gabriel의 정리*로, $Q$의 underlying graph가 type $A$, $D$, $E$의 Dynkin diagram일 때에 한정된다. 두 이론 모두 분해의 존재성과 유일성을 전제로 indecomposable의 세계를 분석하므로, 이 글의 결과가 그 출발점에 놓인다.
+Krull–Schmidt 정리는 indecomposable들의 isomorphism class를 유한차원 representation 이론의 기본 단위로 확정한다. 이 단위 위에서 indecomposable들 사이의 morphism을 체계적으로 기술하는 것이 *Auslander–Reiten 이론*이며, almost split sequence와 Auslander–Reiten quiver가 그 핵심 도구이다. 또한 어떤 quiver $Q$가 유한개의 indecomposable representation만을 가지는지, 곧 *representation-finite*인지를 묻는 문제의 답이 *Gabriel의 정리*로, $Q$의 underlying graph가 type $A$, $D$, $E$의 Dynkin diagram일 때에 한정된다. 두 이론 모두 분해의 존재성과 유일성을 전제로 indecomposable의 세계를 분석하므로, 이 글의 결과가 그 출발점에 놓인다.
 :::
 
 ---

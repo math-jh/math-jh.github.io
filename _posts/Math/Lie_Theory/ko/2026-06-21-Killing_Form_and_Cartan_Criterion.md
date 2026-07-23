@@ -14,9 +14,9 @@ weight: 3.6
 published: false
 ---
 
-가해성과 nilpotency를 derived series와 lower central series로 정의하고 Engel·Lie의 정리를 증명한 뒤 ([§가해 Lie algebra와 nilpotent Lie algebra, ⁋정의 10](/ko/math/lie_theory/solvable_nilpotent_lie_algebras#def10)), 우리는 임의의 유한차원 Lie algebra가 가장 큰 가해 ideal인 radical과 그 몫인 반단순 부분으로 나뉜다는 것을 보았다. 그러나 그 정의만으로는 주어진 Lie algebra가 가해인지, 혹은 반단순인지를 직접 판정하기 어렵다. Cartan은 이 두 물음을 모두 하나의 bilinear form, 곧 Killing form의 trace 조건으로 환원하였다. 이 글에서 우리는 Killing form $\kappa(x,y)=\tr(\ad x\,\ad y)$를 정의하고 그 invariance와 ideal에 대한 제한 성질을 정리한 뒤, 임의의 $\mathfrak{g}\subseteq\gl(V)$의 가해성이 trace form의 소멸로 판정된다는 Cartan의 가해성 판정법과, $\mathfrak{g}$의 반단순성이 Killing form의 nondegeneracy로 판정된다는 Cartan의 반단순성 판정법을 증명한다.
+Solvability와 nilpotency를 derived series와 lower central series로 정의하고 Engel·Lie의 정리를 증명한 뒤 ([§가해 Lie algebra와 nilpotent Lie algebra, ⁋정의 10](/ko/math/lie_theory/solvable_nilpotent_lie_algebras#def10)), 우리는 임의의 유한차원 Lie algebra가 가장 큰 solvable ideal인 radical과 그 몫인 semisimple 부분으로 나뉜다는 것을 보았다. 그러나 그 정의만으로는 주어진 Lie algebra가 solvable인지, 혹은 semisimple인지를 직접 판정하기 어렵다. Cartan은 이 두 물음을 모두 하나의 bilinear form, 곧 Killing form의 trace 조건으로 환원하였다. 이 글에서 우리는 Killing form $\kappa(x,y)=\tr(\ad x\,\ad y)$를 정의하고 그 invariance와 ideal에 대한 restriction 성질을 정리한 뒤, 임의의 $\mathfrak{g}\subseteq\gl(V)$의 solvability가 trace form의 소멸로 판정된다는 Cartan의 가해성 판정법과, $\mathfrak{g}$의 semisimplicity가 Killing form의 nondegeneracy로 판정된다는 Cartan의 반단순성 판정법을 증명한다.
 
-이 글 전체에서 $k$는 대수적으로 닫힌 표수 $0$의 체이고, 별다른 언급이 없는 한 $\mathfrak{g}$는 $k$ 위의 유한차원 Lie algebra이다. $\ad:\mathfrak{g}\rightarrow\gl(\mathfrak{g})$는 [§가해 Lie algebra와 nilpotent Lie algebra, ⁋정의 6](/ko/math/lie_theory/solvable_nilpotent_lie_algebras#def6)의 adjoint representation을 가리키며, $\rad\mathfrak{g}$는 [§가해 Lie algebra와 nilpotent Lie algebra, ⁋정의 15](/ko/math/lie_theory/solvable_nilpotent_lie_algebras#def15)의 radical을 가리킨다.
+이 글 전체에서 $k$는 대수적으로 닫힌 characteristic $0$의 체이고, 별다른 언급이 없는 한 $\mathfrak{g}$는 $k$ 위의 유한차원 Lie algebra이다. $\ad:\mathfrak{g}\rightarrow\gl(\mathfrak{g})$는 [§가해 Lie algebra와 nilpotent Lie algebra, ⁋정의 6](/ko/math/lie_theory/solvable_nilpotent_lie_algebras#def6)의 adjoint representation을 가리키며, $\rad\mathfrak{g}$는 [§가해 Lie algebra와 nilpotent Lie algebra, ⁋정의 15](/ko/math/lie_theory/solvable_nilpotent_lie_algebras#def15)의 radical을 가리킨다.
 
 ## Killing form
 
@@ -95,15 +95,15 @@ $$\kappa(x,y)=\tr_{\mathfrak{g}}(\ad x\,\ad y)=\tr_{\mathfrak{a}}\bigl((\ad x\,\
 이다. 한편 $x,y\in\mathfrak{a}$이므로 $(\ad x\,\ad y)\vert_{\mathfrak{a}}=\ad_{\mathfrak{a}}x\,\ad_{\mathfrak{a}}y$이며, 여기에서 $\ad_{\mathfrak{a}}$는 $\mathfrak{a}$ 위의 adjoint representation이다. 그러므로 우변은 $\tr_{\mathfrak{a}}(\ad_{\mathfrak{a}}x\,\ad_{\mathfrak{a}}y)=\kappa_{\mathfrak{a}}(x,y)$이다.
 :::
 
-이 제한 성질 덕분에 Killing form은 ideal 단위로 분석된다. 특히 $\mathfrak{g}$의 Killing form에 대한 *radical<sub>근기</sub>*
+이 restriction 성질 덕분에 Killing form은 ideal 단위로 분석된다. 특히 $\mathfrak{g}$의 Killing form에 대한 *radical<sub>근기</sub>*
 
 $$\mathfrak{g}^{\perp}=\left\{x\in\mathfrak{g}\mid \kappa(x,y)=0\text{ for all }y\in\mathfrak{g}\right\}$$
 
-은 그 자체로 $\mathfrak{g}$의 ideal이 된다. 임의의 $x\in\mathfrak{g}^{\perp}$, $z\in\mathfrak{g}$에 대하여 [명제 2](#prop2)의 invariance로부터 $\kappa([z,x],y)=-\kappa(x,[z,y])=0$이 모든 $y$에 대해 성립하기 때문이다. Killing form이 nondegenerate라는 것은 정확히 $\mathfrak{g}^{\perp}=0$이라는 것이며, 아래에서 이 조건이 반단순성과 동치임을 본다.
+은 그 자체로 $\mathfrak{g}$의 ideal이 된다. 임의의 $x\in\mathfrak{g}^{\perp}$, $z\in\mathfrak{g}$에 대하여 [명제 2](#prop2)의 invariance로부터 $\kappa([z,x],y)=-\kappa(x,[z,y])=0$이 모든 $y$에 대해 성립하기 때문이다. Killing form이 nondegenerate라는 것은 정확히 $\mathfrak{g}^{\perp}=0$이라는 것이며, 아래에서 이 조건이 semisimplicity와 동치임을 본다.
 
 ## Jordan–Chevalley 분해
 
-Cartan의 판정법의 증명은 단 한 번, endomorphism을 반단순 부분과 nilpotent 부분으로 쪼개는 분해에 의존한다. 우리는 이를 선형대수의 사실로서 상기한다.
+Cartan의 판정법의 증명은 단 한 번, endomorphism을 semisimple 부분과 nilpotent 부분으로 쪼개는 분해에 의존한다. 우리는 이를 선형대수의 사실로서 상기한다.
 
 ::: 명제 5 (Jordan–Chevalley)
 $V$가 algebraically closed field $k$ 위의 유한차원 벡터공간이고 $x\in\End(V)$라 하자. 그럼 다음을 만족하는 $x_s,x_n\in\End(V)$가 유일하게 존재한다.
@@ -111,17 +111,17 @@ $V$가 algebraically closed field $k$ 위의 유한차원 벡터공간이고 $x\
 1. $x=x_s+x_n$이고 $x_s$는 diagonalizable, $x_n$은 nilpotent이며 $x_s x_n=x_n x_s$이다.
 2. $x_s$와 $x_n$은 각각 $x$의 상수항 없는 다항식으로 표현된다.
 
-또한 $\ad x_s$는 diagonalizable, $\ad x_n$은 nilpotent이고 두 사상이 commute하므로, $\ad x=\ad x_s+\ad x_n$이 $\gl(V)$ 안에서 $\ad x$의 Jordan–Chevalley 분해이다.
+또한 $\ad x_s$는 diagonalizable, $\ad x_n$은 nilpotent이고 두 morphism이 commute하므로, $\ad x=\ad x_s+\ad x_n$이 $\gl(V)$ 안에서 $\ad x$의 Jordan–Chevalley 분해이다.
 :::
 ::: 증명
-$x$의 특성다항식을 $\prod_i (T-\lambda_i)^{m_i}$ ($\lambda_i$는 서로 다른 고윳값) 라 하자. 중국인의 나머지정리로 각 $i$에 대해 $p(T)\equiv\lambda_i\pmod{(T-\lambda_i)^{m_i}}$ (그리고 $0$이 고윳값이면 $p(T)\equiv 0\pmod T$를 함께) 를 만족하는 상수항 없는 다항식 $p$가 존재한다. $x_s=p(x)$, $x_n=x-x_s$로 두면, 각 일반화 고유공간 $V_i=\ker(x-\lambda_i)^{m_i}$ 위에서 $x_s$는 스칼라 $\lambda_i$로 작용하므로 $x_s$는 diagonalizable이고 $x_n=x-x_s$는 $V_i$ 위에서 nilpotent이다. 둘 다 $x$의 다항식이므로 서로 commute하며 $x$와 commute하는 임의의 endomorphism과도 commute한다. 유일성은 다음에서 온다. $x=s+n$이 조건 1을 만족하는 또 하나의 분해이면 $s,n$은 $x$와 commute하므로 $x$의 다항식인 $x_s,x_n$과도 commute한다. 그럼 $x_s-s=n-x_n$에서 좌변은 commuting diagonalizable들의 차로 diagonalizable, 우변은 commuting nilpotent들의 차로 nilpotent인데, diagonalizable이면서 nilpotent인 endomorphism은 $0$뿐이므로 $s=x_s$, $n=x_n$이다. 끝으로 $\ad x_s$가 diagonalizable, $\ad x_n$이 nilpotent이고 둘이 commute하므로, 방금 보인 유일성에 의해 $\ad x=\ad x_s+\ad x_n$이 $\ad x$의 Jordan–Chevalley 분해이다.
+$x$의 특성다항식을 $\prod_i (T-\lambda_i)^{m_i}$ ($\lambda_i$는 서로 다른 고윳값) 라 하자. 중국인의 나머지정리로 각 $i$에 대해 $p(T)\equiv\lambda_i\pmod{(T-\lambda_i)^{m_i}}$ (그리고 $0$이 고윳값이면 $p(T)\equiv 0\pmod T$를 함께) 를 만족하는 상수항 없는 다항식 $p$가 존재한다. $x_s=p(x)$, $x_n=x-x_s$로 두면, 각 generalized eigenspace $V_i=\ker(x-\lambda_i)^{m_i}$ 위에서 $x_s$는 스칼라 $\lambda_i$로 작용하므로 $x_s$는 diagonalizable이고 $x_n=x-x_s$는 $V_i$ 위에서 nilpotent이다. 둘 다 $x$의 다항식이므로 서로 commute하며 $x$와 commute하는 임의의 endomorphism과도 commute한다. 유일성은 다음에서 온다. $x=s+n$이 조건 1을 만족하는 또 하나의 분해이면 $s,n$은 $x$와 commute하므로 $x$의 다항식인 $x_s,x_n$과도 commute한다. 그럼 $x_s-s=n-x_n$에서 좌변은 commuting diagonalizable들의 차로 diagonalizable, 우변은 commuting nilpotent들의 차로 nilpotent인데, diagonalizable이면서 nilpotent인 endomorphism은 $0$뿐이므로 $s=x_s$, $n=x_n$이다. 끝으로 $\ad x_s$가 diagonalizable, $\ad x_n$이 nilpotent이고 둘이 commute하므로, 방금 보인 유일성에 의해 $\ad x=\ad x_s+\ad x_n$이 $\ad x$의 Jordan–Chevalley 분해이다.
 :::
 
 여기에서 $x_s$를 $x$의 *semisimple part<sub>반단순 부분</sub>*, $x_n$을 *nilpotent part<sub>멱영 부분</sub>*라 부른다. $x_s,x_n$이 다항식으로 주어진다는 사실로부터 $x$와 commute하는 모든 endomorphism이 $x_s,x_n$과도 commute함이 따라온다. 우리가 아래에서 실제로 쓰는 것은 다음 한 가지 사실뿐이다. $x=x_s+x_n$이 $x\in\End(V)$의 분해이고 $x_s$의 고윳값이 $\lambda_1,\ldots,\lambda_n$이면, 임의의 다항식 $p\in k[T]$로 만든 endomorphism은 적절한 좌표에서 통제되며, 특히 trace $\tr(x\,y)$를 고윳값의 항으로 분석할 수 있다는 것이다. 이 점은 다음 절의 보조정리에서 구체화된다.
 
 ## Cartan의 가해성 판정
 
-Cartan의 가해성 판정법은 $\gl(V)$의 subalgebra가 가해인지를 trace의 소멸이라는 검사 가능한 조건으로 환원한다. 그 핵심은 어떤 endomorphism이 nilpotent임을 trace 조건만으로 판정하는 다음 보조정리이며, 이것이 증명에서 Jordan–Chevalley 분해를 쓰는 유일한 지점이다.
+Cartan의 가해성 판정법은 $\gl(V)$의 subalgebra가 solvable인지를 trace의 소멸이라는 검사 가능한 조건으로 환원한다. 그 핵심은 어떤 endomorphism이 nilpotent임을 trace 조건만으로 판정하는 다음 보조정리이며, 이것이 증명에서 Jordan–Chevalley 분해를 쓰는 유일한 지점이다.
 
 ::: 보조정리 6
 $V$가 유한차원 $k$-벡터공간이고 $A\subseteq B$가 $\gl(V)$의 두 부분공간이라 하자.
@@ -133,7 +133,7 @@ $$M=\left\{x\in\gl(V)\mid [x,B]\subseteq A\right\}$$
 ::: 증명
 $x=s+n$을 $x$의 Jordan–Chevalley 분해라 하고 ([명제 5](#prop5)), $s$가 어떤 기저에서 대각성분 $\lambda_1,\ldots,\lambda_m$의 대각행렬이라 하자. $x$가 nilpotent임을 보이는 것은 모든 $\lambda_i=0$임을 보이는 것과 같다. 고윳값들이 생성하는 $\mathbb{Q}$-벡터공간 $E=\span_{\mathbb{Q}}\{\lambda_1,\ldots,\lambda_m\}$을 생각하고, $E=0$임을 보이기 위해 임의의 $\mathbb{Q}$-linear functional $f:E\rightarrow\mathbb{Q}$가 항등적으로 $0$임을 보인다.
 
-$f$가 주어지면, 같은 기저에서 대각성분이 $f(\lambda_1),\ldots,f(\lambda_m)$인 대각행렬 $y$를 정의한다. $s$의 고유공간 분해에 맞춰 $\ad s$는 행렬단위 $e_{ij}$ 위에서 $(\lambda_i-\lambda_j)$로, $\ad y$는 $(f(\lambda_i)-f(\lambda_j))$로 작용한다. $f$가 $\mathbb{Q}$-선형이므로 $\lambda_i-\lambda_j\mapsto f(\lambda_i)-f(\lambda_j)$를 보내는 다항식 $r\in k[T]$로 (Lagrange 보간을 써서, 상수항 없이) $\ad y=r(\ad s)$가 되도록 할 수 있다. 한편 $\ad s$는 $\ad x$의 반단순 부분이므로 $\ad x$의 상수항 없는 다항식이며, 따라서 $\ad y$도 $\ad x$의 상수항 없는 다항식이다. $x\in M$, 곧 $\ad x(B)\subseteq A$이므로 $\ad x(A)\subseteq\ad x(B)\subseteq A$이고 $\ad y$가 $\ad x$의 다항식이라는 점에서 $\ad y(B)\subseteq A$, 곧 $y\in M$이다.
+$f$가 주어지면, 같은 기저에서 대각성분이 $f(\lambda_1),\ldots,f(\lambda_m)$인 대각행렬 $y$를 정의한다. $s$의 고유공간 분해에 맞춰 $\ad s$는 행렬단위 $e_{ij}$ 위에서 $(\lambda_i-\lambda_j)$로, $\ad y$는 $(f(\lambda_i)-f(\lambda_j))$로 작용한다. $f$가 $\mathbb{Q}$-선형이므로 $\lambda_i-\lambda_j\mapsto f(\lambda_i)-f(\lambda_j)$를 보내는 다항식 $r\in k[T]$로 (Lagrange 보간을 써서, 상수항 없이) $\ad y=r(\ad s)$가 되도록 할 수 있다. 한편 $\ad s$는 $\ad x$의 semisimple 부분이므로 $\ad x$의 상수항 없는 다항식이며, 따라서 $\ad y$도 $\ad x$의 상수항 없는 다항식이다. $x\in M$, 곧 $\ad x(B)\subseteq A$이므로 $\ad x(A)\subseteq\ad x(B)\subseteq A$이고 $\ad y$가 $\ad x$의 다항식이라는 점에서 $\ad y(B)\subseteq A$, 곧 $y\in M$이다.
 
 따라서 가정에 의해 $\tr(xy)=0$이다. 그런데 $xy$의 대각성분은 $\lambda_i f(\lambda_i)$이므로
 
@@ -142,7 +142,7 @@ $$0=\tr(xy)=\sum_{i=1}^{m}\lambda_i f(\lambda_i)$$
 이다. 양변에 $f$를 적용하면 ($f(\lambda_i)\in\mathbb{Q}\subseteq k$이고 $f$가 $\mathbb{Q}$-선형) $\sum_i f(\lambda_i)^2=0$을 얻는데, $f(\lambda_i)$는 모두 유리수이므로 각 $f(\lambda_i)=0$이다. $f$가 $\lambda_i$들에서 모두 $0$이고 이들이 $E$를 생성하므로 $f=0$이다. 임의의 $f$에 대해 그러하므로 $E=0$, 곧 모든 $\lambda_i=0$이며 $s=0$이다. 따라서 $x=n$은 nilpotent이다.
 :::
 
-이 보조정리를 $A=[\mathfrak{g},\mathfrak{g}]$, $B=\mathfrak{g}$로 적용할 채비를 한 뒤 Cartan의 판정법을 서술한다. 가해성의 충분조건 방향은 Lie의 정리로부터 derived algebra의 원소가 strictly 상삼각화된다는 사실과 결합된다 ([§가해 Lie algebra와 nilpotent Lie algebra, ⁋따름정리 21](/ko/math/lie_theory/solvable_nilpotent_lie_algebras#cor21)).
+이 보조정리를 $A=[\mathfrak{g},\mathfrak{g}]$, $B=\mathfrak{g}$로 적용할 채비를 한 뒤 Cartan의 판정법을 서술한다. Solvability의 충분조건 방향은 Lie의 정리로부터 derived algebra의 원소가 strictly 상삼각화된다는 사실과 결합된다 ([§가해 Lie algebra와 nilpotent Lie algebra, ⁋따름정리 21](/ko/math/lie_theory/solvable_nilpotent_lie_algebras#cor21)).
 
 ::: 정리 7 (Cartan의 가해성 판정법)
 $V$가 $0$이 아닌 유한차원 $k$-벡터공간이고 $\mathfrak{g}\subseteq\gl(V)$가 subalgebra라 하자. 그럼 $\mathfrak{g}$가 solvable인 것과, 모든 $x\in[\mathfrak{g},\mathfrak{g}]$와 $y\in\mathfrak{g}$에 대하여
@@ -167,7 +167,7 @@ $$\tr([a,b]z)=\tr(a[b,z])=\tr([z,a]b)$$
 을 쓴다 (이는 [명제 2](#prop2)의 증명에서 본 $\tr([f,g]h)=\tr(f[g,h])$의 두 가지 적용이다). $z\in M$이므로 $[z,a]\in[\mathfrak{g},\mathfrak{g}]$이고 $b\in\mathfrak{g}$이다. 가정에 의해 $[\mathfrak{g},\mathfrak{g}]$의 원소와 $\mathfrak{g}$의 원소를 곱한 trace는 $0$이므로 $\tr([z,a]b)=0$, 곧 $\tr([a,b]z)=0$이다. 따라서 $\tr(xz)=0$이 모든 $z\in M$에 대해 성립하여 $x$는 nilpotent endomorphism이다. 이로써 $[\mathfrak{g},\mathfrak{g}]$의 모든 원소가 nilpotent이고, 결론이 따른다.
 :::
 
-이 판정법을 추상적 Lie algebra $\mathfrak{g}$에 직접 적용하려면 $\mathfrak{g}$를 $\gl(V)$ 안으로 실현해야 하는데, $V=\mathfrak{g}$로 두고 $\ad:\mathfrak{g}\rightarrow\gl(\mathfrak{g})$를 쓰는 것이 자연스럽다. 그 결과 Killing form만으로 가해성을 판정하는 다음 따름정리를 얻는다.
+이 판정법을 추상적 Lie algebra $\mathfrak{g}$에 직접 적용하려면 $\mathfrak{g}$를 $\gl(V)$ 안으로 실현해야 하는데, $V=\mathfrak{g}$로 두고 $\ad:\mathfrak{g}\rightarrow\gl(\mathfrak{g})$를 쓰는 것이 자연스럽다. 그 결과 Killing form만으로 solvability를 판정하는 다음 따름정리를 얻는다.
 
 ::: 따름정리 8
 유한차원 Lie algebra $\mathfrak{g}$가 solvable인 것과
@@ -186,7 +186,7 @@ $\ad:\mathfrak{g}\rightarrow\gl(\mathfrak{g})$를 생각하면 $\ker(\ad)=Z(\mat
 
 ## Cartan의 반단순성 판정
 
-이제 반단순성을 다룬다. $\mathfrak{g}$가 *semisimple*이라는 것은 그 radical이 $0$인 것, 곧 $\mathfrak{g}$가 $0$이 아닌 solvable ideal을 갖지 않는 것이었다 ([§가해 Lie algebra와 nilpotent Lie algebra, ⁋정의 15](/ko/math/lie_theory/solvable_nilpotent_lie_algebras#def15) 이후의 논의). 가해성 판정법의 따름으로, 반단순성은 Killing form의 nondegeneracy와 정확히 일치한다.
+이제 semisimplicity를 다룬다. $\mathfrak{g}$가 *semisimple*이라는 것은 그 radical이 $0$인 것, 곧 $\mathfrak{g}$가 $0$이 아닌 solvable ideal을 갖지 않는 것이었다 ([§가해 Lie algebra와 nilpotent Lie algebra, ⁋정의 15](/ko/math/lie_theory/solvable_nilpotent_lie_algebras#def15) 이후의 논의). 가해성 판정법의 따름으로, semisimplicity는 Killing form의 nondegeneracy와 정확히 일치한다.
 
 ::: 정리 9 (Cartan의 반단순성 판정법)
 유한차원 Lie algebra $\mathfrak{g}$가 semisimple인 것과 그 Killing form $\kappa$가 nondegenerate인 것이 동치이다.
@@ -205,7 +205,7 @@ $$\kappa(a,x)=\tr(\ad a\,\ad x)=\tr(\phi)=0$$
 이다. $x\in\mathfrak{g}$가 임의였으므로 $a\in\mathfrak{g}^{\perp}$이고, 따라서 $0\neq\mathfrak{a}\subseteq\mathfrak{g}^{\perp}$이다. 곧 $\kappa$는 nondegenerate가 아니다.
 :::
 
-이 판정법은 [§근계, ⁋명제 3](/ko/math/lie_theory/root_systems#prop3)에서 증명 없이 인용했던 동치, 곧 반단순성과 Killing form의 nondegeneracy의 동치를 정확히 채운다. Nondegenerate Killing form은 $\mathfrak{g}$ 위에 invariant nondegenerate symmetric bilinear form을 제공하며, 이는 반단순 Lie algebra의 구조 이론 전체에서 직교 분해의 도구로 쓰인다. 그 첫 적용으로, 반단순 Lie algebra가 simple ideal들의 직합으로 유일하게 분해됨을 본다.
+이 판정법은 [§근계, ⁋명제 3](/ko/math/lie_theory/root_systems#prop3)에서 증명 없이 인용했던 동치, 곧 semisimplicity와 Killing form의 nondegeneracy의 동치를 정확히 채운다. Nondegenerate Killing form은 $\mathfrak{g}$ 위에 invariant nondegenerate symmetric bilinear form을 제공하며, 이는 semisimple Lie algebra의 구조 이론 전체에서 직교 분해의 도구로 쓰인다. 그 첫 적용으로, semisimple Lie algebra가 simple ideal들의 직합으로 유일하게 분해됨을 본다.
 
 ::: 정리 10
 $\mathfrak{g}$가 $0$이 아닌 유한차원 semisimple Lie algebra이면, $\mathfrak{g}$의 simple ideal들 $\mathfrak{g}_1,\ldots,\mathfrak{g}_r$이 존재하여
@@ -217,14 +217,14 @@ $$\mathfrak{g}=\mathfrak{g}_1\oplus\cdots\oplus\mathfrak{g}_r$$
 ::: 증명
 $\dim\mathfrak{g}$에 대한 귀납법으로 분해의 존재를 보인다. $\mathfrak{g}$가 $0$이 아닌 proper ideal을 갖지 않으면, $\mathfrak{g}$가 semisimple이라 abelian이 아니므로 $\mathfrak{g}$ 자신이 simple이고 분해는 자명하다. 그렇지 않으면 $0$이 아닌 minimal한 ideal $\mathfrak{a}\subseteq\mathfrak{g}$를 택한다.
 
-$\mathfrak{a}^{\perp}=\{x\in\mathfrak{g}\mid\kappa(x,\mathfrak{a})=0\}$이라 두면, [명제 2](#prop2)의 invariance에 의해 $\mathfrak{a}^{\perp}$도 $\mathfrak{g}$의 ideal이다. 임의의 $x\in\mathfrak{a}^{\perp}$, $z\in\mathfrak{g}$, $a\in\mathfrak{a}$에 대하여 $\kappa([z,x],a)=-\kappa(x,[z,a])=0$이고 $[z,a]\in\mathfrak{a}$이기 때문이다. 그럼 $\mathfrak{a}\cap\mathfrak{a}^{\perp}$은 ideal이고, 그 위에서 $\mathfrak{g}$의 Killing form은 항등적으로 $0$이다. [명제 4](#prop4)에 의해 ideal $\mathfrak{b}=\mathfrak{a}\cap\mathfrak{a}^{\perp}$의 Killing form $\kappa_{\mathfrak{b}}$가 $\kappa$의 제한과 같으므로 $\kappa_{\mathfrak{b}}$가 항등적으로 $0$, 특히 $\kappa_{\mathfrak{b}}(\mathfrak{b},[\mathfrak{b},\mathfrak{b}])=0$이고 [따름정리 8](#cor8)에 의해 $\mathfrak{b}$는 solvable ideal이다. $\mathfrak{g}$가 semisimple이므로 $\mathfrak{b}=\mathfrak{a}\cap\mathfrak{a}^{\perp}=0$이다.
+$\mathfrak{a}^{\perp}=\{x\in\mathfrak{g}\mid\kappa(x,\mathfrak{a})=0\}$이라 두면, [명제 2](#prop2)의 invariance에 의해 $\mathfrak{a}^{\perp}$도 $\mathfrak{g}$의 ideal이다. 임의의 $x\in\mathfrak{a}^{\perp}$, $z\in\mathfrak{g}$, $a\in\mathfrak{a}$에 대하여 $\kappa([z,x],a)=-\kappa(x,[z,a])=0$이고 $[z,a]\in\mathfrak{a}$이기 때문이다. 그럼 $\mathfrak{a}\cap\mathfrak{a}^{\perp}$은 ideal이고, 그 위에서 $\mathfrak{g}$의 Killing form은 항등적으로 $0$이다. [명제 4](#prop4)에 의해 ideal $\mathfrak{b}=\mathfrak{a}\cap\mathfrak{a}^{\perp}$의 Killing form $\kappa_{\mathfrak{b}}$가 $\kappa$의 restriction과 같으므로 $\kappa_{\mathfrak{b}}$가 항등적으로 $0$, 특히 $\kappa_{\mathfrak{b}}(\mathfrak{b},[\mathfrak{b},\mathfrak{b}])=0$이고 [따름정리 8](#cor8)에 의해 $\mathfrak{b}$는 solvable ideal이다. $\mathfrak{g}$가 semisimple이므로 $\mathfrak{b}=\mathfrak{a}\cap\mathfrak{a}^{\perp}=0$이다.
 
-$\kappa$가 nondegenerate이므로 ([정리 9](#thm9)) 임의의 ideal $\mathfrak{a}$에 대하여 $\dim\mathfrak{a}+\dim\mathfrak{a}^{\perp}=\dim\mathfrak{g}$이고, $\mathfrak{a}\cap\mathfrak{a}^{\perp}=0$과 합쳐 $\mathfrak{g}=\mathfrak{a}\oplus\mathfrak{a}^{\perp}$를 얻는다. 두 ideal $\mathfrak{a},\mathfrak{a}^{\perp}$가 직합이므로 $[\mathfrak{a},\mathfrak{a}^{\perp}]\subseteq\mathfrak{a}\cap\mathfrak{a}^{\perp}=0$이며, 따라서 $\mathfrak{a}$와 $\mathfrak{a}^{\perp}$ 안에서의 ideal은 곧 $\mathfrak{g}$ 안에서의 ideal이다. 특히 $\mathfrak{a}$가 minimal ideal이었으므로 $\mathfrak{a}$는 $0$이 아닌 proper ideal을 갖지 않고, abelian도 아니므로 ($\mathfrak{a}$가 abelian이면 $\mathfrak{g}$의 $0$이 아닌 solvable ideal이 되어 반단순성에 모순) simple이다. 또 $\mathfrak{a}^{\perp}$의 임의의 solvable ideal은 $\mathfrak{g}$의 solvable ideal이므로 $0$이고, 따라서 $\mathfrak{a}^{\perp}$도 semisimple이다. $\dim\mathfrak{a}^{\perp}<\dim\mathfrak{g}$이므로 귀납 가정을 $\mathfrak{a}^{\perp}$에 적용하면 simple ideal들의 직합 $\mathfrak{a}^{\perp}=\mathfrak{g}_2\oplus\cdots\oplus\mathfrak{g}_r$을 얻고, $\mathfrak{g}_1=\mathfrak{a}$와 합쳐 원하는 분해 $\mathfrak{g}=\mathfrak{g}_1\oplus\cdots\oplus\mathfrak{g}_r$을 얻는다.
+$\kappa$가 nondegenerate이므로 ([정리 9](#thm9)) 임의의 ideal $\mathfrak{a}$에 대하여 $\dim\mathfrak{a}+\dim\mathfrak{a}^{\perp}=\dim\mathfrak{g}$이고, $\mathfrak{a}\cap\mathfrak{a}^{\perp}=0$과 합쳐 $\mathfrak{g}=\mathfrak{a}\oplus\mathfrak{a}^{\perp}$를 얻는다. 두 ideal $\mathfrak{a},\mathfrak{a}^{\perp}$가 직합이므로 $[\mathfrak{a},\mathfrak{a}^{\perp}]\subseteq\mathfrak{a}\cap\mathfrak{a}^{\perp}=0$이며, 따라서 $\mathfrak{a}$와 $\mathfrak{a}^{\perp}$ 안에서의 ideal은 곧 $\mathfrak{g}$ 안에서의 ideal이다. 특히 $\mathfrak{a}$가 minimal ideal이었으므로 $\mathfrak{a}$는 $0$이 아닌 proper ideal을 갖지 않고, abelian도 아니므로 ($\mathfrak{a}$가 abelian이면 $\mathfrak{g}$의 $0$이 아닌 solvable ideal이 되어 semisimplicity에 모순) simple이다. 또 $\mathfrak{a}^{\perp}$의 임의의 solvable ideal은 $\mathfrak{g}$의 solvable ideal이므로 $0$이고, 따라서 $\mathfrak{a}^{\perp}$도 semisimple이다. $\dim\mathfrak{a}^{\perp}<\dim\mathfrak{g}$이므로 귀납 가정을 $\mathfrak{a}^{\perp}$에 적용하면 simple ideal들의 직합 $\mathfrak{a}^{\perp}=\mathfrak{g}_2\oplus\cdots\oplus\mathfrak{g}_r$을 얻고, $\mathfrak{g}_1=\mathfrak{a}$와 합쳐 원하는 분해 $\mathfrak{g}=\mathfrak{g}_1\oplus\cdots\oplus\mathfrak{g}_r$을 얻는다.
 
 유일성을 보인다. $\mathfrak{g}=\bigoplus_i\mathfrak{g}_i$가 위 분해이고 $\mathfrak{b}$가 $\mathfrak{g}$의 임의의 simple ideal이라 하자. $\mathfrak{b}$가 ideal이고 각 $\mathfrak{g}_i$도 ideal이므로 $[\mathfrak{b},\mathfrak{g}_i]\subseteq\mathfrak{b}\cap\mathfrak{g}_i$이다. 만일 모든 $i$에 대하여 $[\mathfrak{b},\mathfrak{g}_i]=0$이면 $\mathfrak{b}$는 $\mathfrak{g}=\bigoplus_i\mathfrak{g}_i$ 전체와 commute하여 $\mathfrak{b}\subseteq Z(\mathfrak{g})=0$이 되는데 ($\mathfrak{g}$가 semisimple이라 $Z(\mathfrak{g})=0$), 이는 $\mathfrak{b}\neq 0$에 모순이다. 따라서 어떤 $i$에 대하여 $[\mathfrak{b},\mathfrak{g}_i]\neq 0$이다. 그럼 $0\neq[\mathfrak{b},\mathfrak{g}_i]\subseteq\mathfrak{b}\cap\mathfrak{g}_i$이고, $\mathfrak{b}\cap\mathfrak{g}_i$가 $\mathfrak{b}$와 $\mathfrak{g}_i$ 양쪽의 $0$이 아닌 ideal이므로 두 simple ideal의 단순성에서 $\mathfrak{b}\cap\mathfrak{g}_i=\mathfrak{b}=\mathfrak{g}_i$이다. 곧 $\mathfrak{b}=\mathfrak{g}_i$이다. 이로써 모든 simple ideal이 분해의 성분 가운데 하나이며, 따라서 성분 $\mathfrak{g}_i$들의 모임은 유일하게 결정된다.
 :::
 
-이 분해에서 각 simple ideal $\mathfrak{g}_i$는 그 자체로 simple Lie algebra이고, [§근계, ⁋정의 2](/ko/math/lie_theory/root_systems#def2)에서 도입한 simple과 semisimple의 정의가 여기에서 직합 분해로 정확히 실현된다. 반단순 Lie algebra의 분류가 각 simple 성분의 분류로 환원되는 것이 이 정리의 직접적인 귀결이며, 그 분류는 Cartan subalgebra와 root system을 통해 이루어진다 ([§근계, ⁋정의 4](/ko/math/lie_theory/root_systems#def4)).
+이 분해에서 각 simple ideal $\mathfrak{g}_i$는 그 자체로 simple Lie algebra이고, [§근계, ⁋정의 2](/ko/math/lie_theory/root_systems#def2)에서 도입한 simple과 semisimple의 정의가 여기에서 직합 분해로 정확히 실현된다. Semisimple Lie algebra의 분류가 각 simple 성분의 분류로 환원되는 것이 이 정리의 직접적인 귀결이며, 그 분류는 Cartan subalgebra와 root system을 통해 이루어진다 ([§근계, ⁋정의 4](/ko/math/lie_theory/root_systems#def4)).
 
 ---
 

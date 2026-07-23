@@ -207,7 +207,7 @@ $$\rho((x_n),(y_n))=\sum_{n=1}^\infty\frac{\lvert x_n-y_n\rvert}{2^n}$$
 
 이 정의하는 거리로 metrizable이며, metric space의 부분공간은 다시 metric space이므로, $X$가 $[0,1]^{\mathbb{N}}$의 부분공간과 위상동형임을 보이면 충분하다.
 
-먼저 $X$는 [보조정리 8](#lem8)에 의해 normal이므로 [정리 2](#thm2)를 사용할 수 있다. $X$의 가산 base $\{B_n\}_{n\geq 1}$을 고정하고, $\cl(B_m)\subseteq B_n$을 만족하는 순서쌍 $(m,n)$마다 [정리 2](#thm2)를 서로소인 두 닫힌집합 $\cl(B_m)$과 $X\setminus B_n$에 적용하여, $\cl(B_m)$에서 $1$의 값을, $X\setminus B_n$에서 $0$의 값을 갖는 연속함수를 하나씩 얻는다. 이러한 순서쌍은 가산 개이므로 이렇게 얻은 함수들을 $f_1,f_2,\ldots$로 나열할 수 있다.
+먼저 $X$는 [보조정리 8](#lem8)에 의해 normal이므로 [정리 2](#thm2)를 사용할 수 있다. $X$의 countable base $\{B_n\}_{n\geq 1}$을 고정하고, $\cl(B_m)\subseteq B_n$을 만족하는 순서쌍 $(m,n)$마다 [정리 2](#thm2)를 서로소인 두 닫힌집합 $\cl(B_m)$과 $X\setminus B_n$에 적용하여, $\cl(B_m)$에서 $1$의 값을, $X\setminus B_n$에서 $0$의 값을 갖는 연속함수를 하나씩 얻는다. 이러한 순서쌍은 가산 개이므로 이렇게 얻은 함수들을 $f_1,f_2,\ldots$로 나열할 수 있다.
 
 이 함수족은 점과 닫힌집합을 분리한다. 즉 점 $x$와 이를 포함하지 않는 닫힌집합 $C$가 주어지면, $x\in X\setminus C$이고 base의 정의에서 $x\in B_n\subseteq X\setminus C$인 $B_n$이 존재한다. $X$가 regular이므로 [보조정리 1](#lem1)과 같은 방식으로 $x\in B_m\subseteq\cl(B_m)\subseteq B_n$인 base 원소 $B_m$을 잡을 수 있고, 이 순서쌍 $(m,n)$에 대응하는 함수 $f_k$는 $f_k(x)=1$이며 $C\subseteq X\setminus B_n$ 위에서 $0$의 값을 갖는다.
 
@@ -215,9 +215,9 @@ $$\rho((x_n),(y_n))=\sum_{n=1}^\infty\frac{\lvert x_n-y_n\rvert}{2^n}$$
 
 $$F:X\rightarrow[0,1]^{\mathbb{N}},\qquad F(x)=(f_1(x),f_2(x),\ldots)$$
 
-를 정의한다. 각 좌표함수 $f_k$가 연속이므로 $F$는 연속이다. $F$가 단사임은 $X$가 $T_1$인 데에서 따른다. 서로 다른 두 점 $x\neq y$에 대해 $\{y\}$는 닫힌집합이고 $x\notin\{y\}$이므로 위의 분리 성질에서 어떤 $f_k$가 $f_k(x)=1$, $f_k(y)=0$이 되기 때문이다. 끝으로 $F$가 상 위로의 homeomorphism임을 보이려면 $F$가 열린 사상임을, 즉 $X$의 열린집합 $U$에 대해 $F(U)$가 $F(X)$에서 열려 있음을 확인하면 된다. $x\in U$가 주어지면 위의 분리 성질에서 $f_k(x)>0$이고 $X\setminus U$ 위에서 $f_k=0$인 $f_k$가 존재하므로, $k$번째 좌표가 양수인 $[0,1]^{\mathbb{N}}$의 열린집합과 $F(X)$의 교집합은 $F(x)$를 포함하며 $F(U)$ 안에 놓인다. 이로써 $F$는 상 위로의 homeomorphism이 되어 $X$는 metrizable이다.
+를 정의한다. 각 좌표함수 $f_k$가 연속이므로 $F$는 연속이다. $F$가 단사임은 $X$가 $T_1$인 데에서 따른다. 서로 다른 두 점 $x\neq y$에 대해 $\{y\}$는 닫힌집합이고 $x\notin\{y\}$이므로 위의 분리 성질에서 어떤 $f_k$가 $f_k(x)=1$, $f_k(y)=0$이 되기 때문이다. 끝으로 $F$가 image 위로의 homeomorphism임을 보이려면 $F$가 열린 사상임을, 즉 $X$의 열린집합 $U$에 대해 $F(U)$가 $F(X)$에서 열려 있음을 확인하면 된다. $x\in U$가 주어지면 위의 분리 성질에서 $f_k(x)>0$이고 $X\setminus U$ 위에서 $f_k=0$인 $f_k$가 존재하므로, $k$번째 좌표가 양수인 $[0,1]^{\mathbb{N}}$의 열린집합과 $F(X)$의 교집합은 $F(x)$를 포함하며 $F(U)$ 안에 놓인다. 이로써 $F$는 image 위로의 homeomorphism이 되어 $X$는 metrizable이다.
 
-여기서 사용한 매장 보조사실, 즉 점과 닫힌집합을 분리하는 연속함수족이 항상 곱공간으로의 매장을 낳는다는 사실과 Hilbert cube의 거리화 가능성에 대한 세부 논증은 표준적인 문헌을 따른다. **[Mun]**
+여기서 사용한 embedding 보조사실, 즉 점과 닫힌집합을 분리하는 연속함수족이 항상 곱공간으로의 embedding을 낳는다는 사실과 Hilbert cube의 거리화 가능성에 대한 세부 논증은 표준적인 문헌을 따른다. **[Mun]**
 :::
 
 이 정리는 second countable이라는 가산성 조건이 붙는 순간 위상적 separation axiom과 거리 구조가 사실상 같은 것임을 말해 준다. 이로써 우리는 추상적인 위상공간과 익숙한 metric space 사이의 간극이 생각보다 좁다는 사실을 확인한다.

@@ -17,14 +17,14 @@ published: false
 
 앞선 글에서 우리는 유한차원 $kQ$-module이 indecomposable들의 direct sum으로 본질적으로 유일하게 분해됨을 보았다 ([§Krull–Schmidt 정리, ⁋정리 6](/ko/math/representation_theory/krull_schmidt#thm6)). 이로써 유한차원 representation을 이해하는 문제는 indecomposable들을 분류하고, 그들 사이의 morphism을 기술하는 문제로 환원된다. *Auslander–Reiten 이론*은 후자에 대한 체계적인 답을 제공한다. 핵심 발상은 indecomposable들 사이의 모든 morphism이 가장 기본적인 morphism, 곧 *irreducible morphism*들의 합성으로 생성된다는 것이며, 이 irreducible morphism들을 표준적인 short exact sequence인 *almost split sequence*로 한꺼번에 포착하는 것이다. 이 자료를 그래프로 정리한 것이 *Auslander–Reiten quiver*이고, 이 quiver는 module category의 구조를 시각적으로 압축한다.
 
-이 글에서 $A$는 field $k$ 위의 유한차원 결합대수이고, module이라 하면 별다른 언급이 없는 한 유한차원 left $A$-module을 뜻한다. 이러한 module들이 이루는 category를 $\operatorname{mod} A$로 적는다. Path algebra $kQ$가 $Q$에 oriented cycle이 없을 때 유한차원이므로 ([§Quiver와 경로대수, ⁋명제 5](/ko/math/representation_theory/path_algebras#prop5)), $A=kQ$인 경우가 우리의 주된 관심사이며, 이때 $\operatorname{mod} A$는 유한차원 representation들의 category $\Rep(Q)$와 동치이다 ([§Quiver와 경로대수, ⁋정리 12](/ko/math/representation_theory/path_algebras#thm12)). 유한차원성 덕분에 모든 module은 유한 길이를 가지며, 따라서 Krull–Schmidt 정리가 적용된다. $M,N$이 module일 때 $\Hom_A(M,N)$은 $A$-linear 사상들의 $k$-벡터공간이고, $M$이 indecomposable이면 $\End_A(M)$은 local ring이다 ([§Krull–Schmidt 정리, ⁋따름정리 4](/ko/math/representation_theory/krull_schmidt#cor4)).
+이 글에서 $A$는 field $k$ 위의 유한차원 결합대수이고, module이라 하면 별다른 언급이 없는 한 유한차원 left $A$-module을 뜻한다. 이러한 module들이 이루는 category를 $\operatorname{mod} A$로 적는다. Path algebra $kQ$가 $Q$에 oriented cycle이 없을 때 유한차원이므로 ([§Quiver와 경로대수, ⁋명제 5](/ko/math/representation_theory/path_algebras#prop5)), $A=kQ$인 경우가 우리의 주된 관심사이며, 이때 $\operatorname{mod} A$는 유한차원 representation들의 category $\Rep(Q)$와 동치이다 ([§Quiver와 경로대수, ⁋정리 12](/ko/math/representation_theory/path_algebras#thm12)). 유한차원성 덕분에 모든 module은 유한 길이를 가지며, 따라서 Krull–Schmidt 정리가 적용된다. $M,N$이 module일 때 $\Hom_A(M,N)$은 $A$-linear morphism들의 $k$-벡터공간이고, $M$이 indecomposable이면 $\End_A(M)$은 local ring이다 ([§Krull–Schmidt 정리, ⁋따름정리 4](/ko/math/representation_theory/krull_schmidt#cor4)).
 
 ## Irreducible morphism
 
 Indecomposable들 사이의 morphism 가운데 어떤 것이 가장 기본적인가를 먼저 결정한다. Isomorphism은 분류의 관점에서 자명하고, 둘로 쪼개지는 morphism, 곧 split monomorphism이나 split epimorphism도 direct sum의 포함·projection에 다름 아니므로 새로운 정보를 담지 않는다. 우리는 이들을 제외한 뒤, 비자명한 방식으로 더 작은 morphism들의 합성으로 분해되지 않는 morphism을 골라낸다. 여기서 *section*은 left inverse를 가지는 morphism(split monomorphism), *retraction*은 right inverse를 가지는 morphism(split epimorphism)을 뜻한다.
 
 ::: 정의 1
-$A$-module 사상 $f:M\rightarrow N$이 *irreducible<sub>기약</sub>*이라는 것은 다음 두 조건이 성립하는 것이다.
+$A$-module morphism $f:M\rightarrow N$이 *irreducible<sub>기약</sub>*이라는 것은 다음 두 조건이 성립하는 것이다.
 
 1. $f$는 section도 retraction도 아니다.
 2. $f=gh$로 분해될 때마다, $h$가 section이거나 $g$가 retraction이다. 곧 $f$가 $M\xrightarrow{h}X\xrightarrow{g}N$으로 적히면 $h$가 split monomorphism이거나 $g$가 split epimorphism이다.
@@ -33,7 +33,7 @@ $A$-module 사상 $f:M\rightarrow N$이 *irreducible<sub>기약</sub>*이라는 
 조건 (1)은 $f$가 isomorphism이 아닐 뿐 아니라 direct sum 인자의 포함이나 projection처럼 분해를 동반하지도 않음을 뜻한다. 실제로 irreducible morphism은 자동으로 단사이거나 전사이다. $f$의 image $I=\im f$를 통하여 $f$를 전사 $M\twoheadrightarrow I$와 단사 $I\hookrightarrow N$의 합성으로 적으면, 조건 (2)에 의하여 둘 중 하나가 split이고, 그러면 $f$ 자신이 단사 또는 전사가 되기 때문이다. 조건 (2)는 $f$가 더 단순한 두 단계로 비자명하게 쪼개지지 않는다는 *최소성*을 표현한다. 비자명한 분해란 $h$가 split mono도 아니고 $g$가 split epi도 아닌 분해를 말하며, irreducible morphism은 그러한 분해를 허용하지 않는다.
 
 ::: 명제 2
-$M,N$이 indecomposable이고 $f:M\rightarrow N$이 isomorphism이 아닌 nonzero 사상이라 하자. 그럼 $f$가 section이거나 retraction일 수 없다. 따라서 indecomposable 사이의 사상에 대하여 [정의 1](#def1)의 조건 (1)은 "$f$가 isomorphism이 아니다"와 동치이다.
+$M,N$이 indecomposable이고 $f:M\rightarrow N$이 isomorphism이 아닌 nonzero morphism이라 하자. 그럼 $f$가 section이거나 retraction일 수 없다. 따라서 indecomposable 사이의 morphism에 대하여 [정의 1](#def1)의 조건 (1)은 "$f$가 isomorphism이 아니다"와 동치이다.
 :::
 ::: 증명
 $f:M\rightarrow N$이 section이라 하자. 그럼 left inverse $g:N\rightarrow M$이 있어 $gf=\id_M$이다. 이때 $e=fg\in\End_A(N)$은 $e^2=fgfg=f\id_M g=fg=e$이므로 idempotent이고, $N=\im e\oplus\ker e$이다. $N$이 indecomposable이므로 $e=0$ 또는 $e=\id_N$이다. $e=0$이면 $fgf=ef=0$이지만 $gf=\id_M$에서 $fgf=f$이므로 $f=0$이 되어 $f\neq 0$에 모순이다. 따라서 $e=fg=\id_N$이고, 이는 $gf=\id_M$과 함께 $f$가 isomorphism임을 뜻하여 가정에 모순이다.
@@ -43,17 +43,17 @@ $f$가 retraction인 경우도 symmetric이다. Right inverse $g:N\rightarrow M$
 역으로 $f$가 isomorphism이면 $f$ 자신이 section이자 retraction이므로 조건 (1)이 깨진다. 따라서 indecomposable 사이에서 조건 (1)은 $f$가 isomorphism이 아니라는 것과 같다.
 :::
 
-명제 2는 indecomposable 사이의 morphism을 다룰 때 irreducible morphism의 조건 (1)을 "isomorphism이 아니다"로 단순화할 수 있게 해 준다. 따라서 indecomposable $M,N$에 대하여 irreducible morphism $f:M\rightarrow N$이란, isomorphism이 아니면서 임의의 분해 $f=gh$에서 $h$가 split mono이거나 $g$가 split epi인 nonzero 사상이다. 이러한 morphism들이 module category에서 "한 칸 떨어진" 가장 가까운 이웃 사이의 사상을 나타내며, Auslander–Reiten quiver의 화살표가 된다.
+명제 2는 indecomposable 사이의 morphism을 다룰 때 irreducible morphism의 조건 (1)을 "isomorphism이 아니다"로 단순화할 수 있게 해 준다. 따라서 indecomposable $M,N$에 대하여 irreducible morphism $f:M\rightarrow N$이란, isomorphism이 아니면서 임의의 분해 $f=gh$에서 $h$가 split mono이거나 $g$가 split epi인 nonzero morphism이다. 이러한 morphism들이 module category에서 "한 칸 떨어진" 가장 가까운 이웃 사이의 morphism을 나타내며, Auslander–Reiten quiver의 화살표가 된다.
 
 ## Almost split sequence
 
-Irreducible morphism들을 한 module $C$ 둘레에서 한꺼번에 포착하기 위하여, $C$로 들어오는 모든 비자명한 사상이 단 하나의 사상을 통하여 인수분해되는 표준적인 사상을 찾는다. 이것이 *right almost split morphism*이며, symmetric으로 *left almost split morphism*도 정의한다.
+Irreducible morphism들을 한 module $C$ 둘레에서 한꺼번에 포착하기 위하여, $C$로 들어오는 모든 비자명한 morphism이 단 하나의 morphism을 통하여 인수분해되는 표준적인 morphism을 찾는다. 이것이 *right almost split morphism*이며, symmetric으로 *left almost split morphism*도 정의한다.
 
 ::: 정의 3
-$A$-module 사상에 대하여 다음을 정의한다.
+$A$-module morphism에 대하여 다음을 정의한다.
 
-1. 사상 $g:B\rightarrow C$가 *right almost split<sub>오른쪽 거의 분할</sub>*이라는 것은 $g$가 retraction이 아니며, retraction이 아닌 임의의 사상 $h:X\rightarrow C$가 $g$를 통하여 인수분해되는 것이다. 곧 $h=g h'$인 $h':X\rightarrow B$가 존재한다.
-2. 사상 $f:A\rightarrow B$가 *left almost split<sub>왼쪽 거의 분할</sub>*이라는 것은 $f$가 section이 아니며, section이 아닌 임의의 사상 $h:A\rightarrow Y$가 $f$를 통하여 인수분해되는 것이다. 곧 $h=h' f$인 $h':B\rightarrow Y$가 존재한다.
+1. morphism $g:B\rightarrow C$가 *right almost split<sub>오른쪽 거의 분할</sub>*이라는 것은 $g$가 retraction이 아니며, retraction이 아닌 임의의 morphism $h:X\rightarrow C$가 $g$를 통하여 인수분해되는 것이다. 곧 $h=g h'$인 $h':X\rightarrow B$가 존재한다.
+2. morphism $f:A\rightarrow B$가 *left almost split<sub>왼쪽 거의 분할</sub>*이라는 것은 $f$가 section이 아니며, section이 아닌 임의의 morphism $h:A\rightarrow Y$가 $f$를 통하여 인수분해되는 것이다. 곧 $h=h' f$인 $h':B\rightarrow Y$가 존재한다.
 
 short exact sequence
 
@@ -62,7 +62,7 @@ $$0\longrightarrow A\xrightarrow{\ f\ }B\xrightarrow{\ g\ }C\longrightarrow 0$$
 이 *almost split sequence<sub>거의 분할 수열</sub>* 또는 *Auslander–Reiten sequence<sub>아우스란더-라이텐 수열</sub>*라는 것은, 이 열이 split하지 않으며, $f$가 left almost split이고 $g$가 right almost split인 것이다.
 :::
 
-이 정의의 비대칭적 모양에도 불구하고 두 조건은 서로를 강하게 제약한다. $g$가 right almost split이고 $C$로의 split epimorphism이 아니라는 것은, $C$로 가는 모든 사상 가운데 split epi로 들어오지 못하는 것들이 전부 $B$를 경유함을 뜻한다. 특히 항등사상 $\id_C:C\rightarrow C$는 retraction이지만, $C$가 indecomposable일 때 $C$의 proper submodule이나 다른 indecomposable로부터 들어오는 비자명한 사상은 모두 $g$를 통과한다. Almost split sequence에서 $A$와 $C$가 자동으로 indecomposable이 됨을 다음에서 확인한다.
+이 정의의 비대칭적 모양에도 불구하고 두 조건은 서로를 강하게 제약한다. $g$가 right almost split이고 $C$로의 split epimorphism이 아니라는 것은, $C$로 가는 모든 morphism 가운데 split epi로 들어오지 못하는 것들이 전부 $B$를 경유함을 뜻한다. 특히 항등사상 $\id_C:C\rightarrow C$는 retraction이지만, $C$가 indecomposable일 때 $C$의 proper submodule이나 다른 indecomposable로부터 들어오는 비자명한 morphism은 모두 $g$를 통과한다. Almost split sequence에서 $A$와 $C$가 자동으로 indecomposable이 됨을 다음에서 확인한다.
 
 ::: 명제 4
 $0\rightarrow A\xrightarrow{f}B\xrightarrow{g}C\rightarrow 0$이 almost split sequence이면 $A$와 $C$는 모두 indecomposable이며, $C$는 projective가 아니고 $A$는 injective가 아니다. 또한 이러한 almost split sequence는 $C$에 의하여 isomorphism을 무시하면 유일하게 결정된다. 곧 $0\rightarrow A'\xrightarrow{f'}B'\xrightarrow{g'}C\rightarrow 0$이 같은 끝점 $C$를 가지는 또 하나의 almost split sequence이면, 세 수직사상이 모두 isomorphism이고 두 사각형이 commute하는 exact sequence의 동형
@@ -76,7 +76,7 @@ $0\rightarrow A\xrightarrow{f}B\xrightarrow{g}C\rightarrow 0$이 almost split se
 
 $C$가 projective가 아님을 보인다. $C$가 projective이면 전사 $g:B\rightarrow C$가 분할되어 $g$가 retraction이 되는데, 이는 right almost split의 정의에 모순이다. symmetric으로 $A$가 injective이면 단사 $f:A\rightarrow B$가 분할되어 $f$가 section이 되어 left almost split에 모순이므로, $A$는 injective가 아니다.
 
-이제 유일성을 보인다. 두 almost split sequence가 같은 $C$로 끝난다 하자. $g':B'\rightarrow C$는 retraction이 아니므로 right almost split인 $g$를 통하여 $g'=g\varphi$로 인수분해되고, 마찬가지로 $g:B\rightarrow C$가 $g=g'\psi$로 인수분해되어 사상 $\varphi:B'\rightarrow B$, $\psi:B\rightarrow B'$를 얻는다. 그럼 $\theta:=\varphi\psi\in\End_A(B)$가 $g\theta=g'\psi=g$를 만족한다. 여기서 $\theta$가 automorphism임을 보인다. $g(\id_B-\theta)=0$이므로 $\id_B-\theta$는 image가 $\ker g=\im f$에 들어가며, $f$가 단사이므로 유일한 $\rho:B\rightarrow A$에 대하여 $\id_B-\theta=f\rho$로 적힌다. 곧 $\theta=\id_B-f\rho$이다. 합성 $\rho f\in\End_A(A)$를 보자. $A$가 indecomposable이므로 $\End_A(A)$는 local ring이고 ([§Krull–Schmidt 정리, ⁋따름정리 4](/ko/math/representation_theory/krull_schmidt#cor4)), 따라서 $\rho f$는 automorphism이거나 nilpotent이다. 만일 $\rho f$가 automorphism이면 $(\rho f)^{-1}\rho$가 $f$의 왼쪽 역이 되어 $f$가 section, 곧 split mono가 되는데 이는 $f$가 left almost split이라는 데에 모순이다. 따라서 $\rho f$는 nilpotent이고, 적당한 $n$에 대하여 $(\rho f)^n=0$이다. 그럼
+이제 유일성을 보인다. 두 almost split sequence가 같은 $C$로 끝난다 하자. $g':B'\rightarrow C$는 retraction이 아니므로 right almost split인 $g$를 통하여 $g'=g\varphi$로 인수분해되고, 마찬가지로 $g:B\rightarrow C$가 $g=g'\psi$로 인수분해되어 morphism $\varphi:B'\rightarrow B$, $\psi:B\rightarrow B'$를 얻는다. 그럼 $\theta:=\varphi\psi\in\End_A(B)$가 $g\theta=g'\psi=g$를 만족한다. 여기서 $\theta$가 automorphism임을 보인다. $g(\id_B-\theta)=0$이므로 $\id_B-\theta$는 image가 $\ker g=\im f$에 들어가며, $f$가 단사이므로 유일한 $\rho:B\rightarrow A$에 대하여 $\id_B-\theta=f\rho$로 적힌다. 곧 $\theta=\id_B-f\rho$이다. 합성 $\rho f\in\End_A(A)$를 보자. $A$가 indecomposable이므로 $\End_A(A)$는 local ring이고 ([§Krull–Schmidt 정리, ⁋따름정리 4](/ko/math/representation_theory/krull_schmidt#cor4)), 따라서 $\rho f$는 automorphism이거나 nilpotent이다. 만일 $\rho f$가 automorphism이면 $(\rho f)^{-1}\rho$가 $f$의 왼쪽 역이 되어 $f$가 section, 곧 split mono가 되는데 이는 $f$가 left almost split이라는 데에 모순이다. 따라서 $\rho f$는 nilpotent이고, 적당한 $n$에 대하여 $(\rho f)^n=0$이다. 그럼
 
 $$(f\rho)^{n+1}=f\,(\rho f)^n\,\rho=0$$
 
@@ -116,7 +116,7 @@ functor $(-)^{\ast}=\Hom_A(-,A)$는 left $A$-module을 right $A$-module로 보�
 
 $$\D M=\Hom_k(M,k)$$
 
-로 정의한다. $M$이 left $A$-module이면 $\D M$ 위에 $(\xi\cdot a)(m)=\xi(am)$ ($\xi\in\D M$, $a\in A$, $m\in M$) 으로 right $A$-action을 주어 $\D M$을 right $A$-module로 만들고, symmetric으로 right module을 left module로 옮긴다. 유한차원 벡터공간 위에서 evaluation 사상 $M\rightarrow\D\D M$이 isomorphism이므로 $\D$는 left와 right module category 사이의 contravariant equivalence이다. 이를 이용하여 non-projective indecomposable left $A$-module $C$의 *Auslander–Reiten translate<sub>아우스란더-라이텐 변환</sub>*를
+로 정의한다. $M$이 left $A$-module이면 $\D M$ 위에 $(\xi\cdot a)(m)=\xi(am)$ ($\xi\in\D M$, $a\in A$, $m\in M$) 으로 right $A$-action을 주어 $\D M$을 right $A$-module로 만들고, symmetric으로 right module을 left module로 옮긴다. 유한차원 벡터공간 위에서 evaluation morphism $M\rightarrow\D\D M$이 isomorphism이므로 $\D$는 left와 right module category 사이의 contravariant equivalence이다. 이를 이용하여 non-projective indecomposable left $A$-module $C$의 *Auslander–Reiten translate<sub>아우스란더-라이텐 변환</sub>*를
 
 $$\tau C=\D\Tr C$$
 
@@ -143,7 +143,7 @@ $$0\longrightarrow \tau C\xrightarrow{\ f\ }B\xrightarrow{\ g\ }C\longrightarrow
 [명제 4](#prop4)에 의하여 이 almost split sequence는 $C$ (각각 $A$)에 의하여 isomorphism을 무시하면 유일하게 결정된다.
 :::
 ::: 증명
-이 정리는 Auslander와 Reiten이 도입한 functorial 방법으로 증명된다. 핵심은 $\D\Tr C$를 $\End_A(C)$의 잉여체로의 사상에 대한 functor $\D\Hom_A(-,C)$의 minimal projective resolution과 연결짓는 것으로, 이로부터 $\Ext_A^1(C,\tau C)$ 안에 right almost split이 되는 표준적인 원소가 존재함을 보인다. 완전한 증명은 길어 여기서 재구성하지 않으며, [ASS, Chapter IV, Theorem 1.13 및 Theorem 3.1]과 [ARS, Chapter V]의 functorial 논증을 따른다. Schiffler의 [Sch, Chapter 7]에는 hereditary algebra의 경우에 대한 보다 직접적인 구성이 있다.
+이 정리는 Auslander와 Reiten이 도입한 functorial 방법으로 증명된다. 핵심은 $\D\Tr C$를 $\End_A(C)$의 잉여체로의 morphism에 대한 functor $\D\Hom_A(-,C)$의 minimal projective resolution과 연결짓는 것으로, 이로부터 $\Ext_A^1(C,\tau C)$ 안에 right almost split이 되는 표준적인 원소가 존재함을 보인다. 완전한 증명은 길어 여기서 재구성하지 않으며, [ASS, Chapter IV, Theorem 1.13 및 Theorem 3.1]과 [ARS, Chapter V]의 functorial 논증을 따른다. Schiffler의 [Sch, Chapter 7]에는 hereditary algebra의 경우에 대한 보다 직접적인 구성이 있다.
 
 존재성을 전제로 하면, 시작점이 $\tau C$임은 다음과 같이 정리된다. Almost split sequence는 $\Ext_A^1(C,A')$의 원소이며, 그것이 almost split이라는 조건이 $A'\cong\D\Tr C$를 강제한다. 한편 [명제 4](#prop4)의 유일성은 존재성과 독립적으로 성립하므로, 일단 almost split sequence가 존재하면 그것은 $C$로부터 유일하게 결정되고 그 시작점은 $\tau C$로 확정된다. 두 번째 진술은 $\D$를 통한 left–right 대칭과 $\tau^{-1}=\Tr\D$로부터 첫 번째와 symmetric으로 따라온다.
 :::
@@ -156,7 +156,7 @@ $$0\longrightarrow \tau C\xrightarrow{\ f\ }B\xrightarrow{\ g\ }C\longrightarrow
 유한차원 대수 $A$의 *Auslander–Reiten quiver* $\Gamma_A$는 다음의 quiver이다. Vertex는 indecomposable $A$-module들의 isomorphism class이다. 두 indecomposable $M,N$에 대하여, irreducible morphism $M\rightarrow N$이 존재할 때 vertex $[M]$에서 $[N]$으로 화살표를 하나 그린다. (보다 정밀하게는 화살표에 $\Irr(M,N)=\rad(M,N)/\rad^2(M,N)$의 차원을 valuation으로 붙이나, $k$가 algebraically closed이고 $A=kQ$가 acyclic이면 모든 valuation이 $1$이다.) 또한 $\tau$가 정의되는 non-projective vertex $[C]$마다 점선 $[C]\dashrightarrow[\tau C]$를 그려 AR translate를 기록한다.
 :::
 
-Auslander–Reiten quiver는 정리 7이 보장하는 구조를 그래프로 압축한 것이다. 각 almost split sequence $0\rightarrow\tau C\rightarrow\bigoplus_i B_i\rightarrow C\rightarrow 0$은 quiver 안에서 *mesh*라 불리는 그림, 곧 $\tau C$에서 각 $B_i$로 향하는 화살표들과 각 $B_i$에서 $C$로 향하는 화살표들로 이루어진 평행사변형 모양을 이룬다. 이 mesh 구조 덕분에 $\Gamma_A$의 한 부분을 알면 $\tau$를 따라 나머지를 복원할 수 있으며, representation-finite 대수의 경우 $\Gamma_A$는 유한 그래프로서 module category 전체를 담는다. 구체적인 모양을 선형 $A_3$ quiver에서 계산한다.
+Auslander–Reiten quiver는 정리 7이 보장하는 구조를 그래프로 압축한 것이다. 각 almost split sequence $0\rightarrow\tau C\rightarrow\bigoplus_i B_i\rightarrow C\rightarrow 0$은 quiver 안에서 *mesh*라 불리는 diagram, 곧 $\tau C$에서 각 $B_i$로 향하는 화살표들과 각 $B_i$에서 $C$로 향하는 화살표들로 이루어진 평행사변형 모양을 이룬다. 이 mesh 구조 덕분에 $\Gamma_A$의 한 부분을 알면 $\tau$를 따라 나머지를 복원할 수 있으며, representation-finite 대수의 경우 $\Gamma_A$는 유한 그래프로서 module category 전체를 담는다. 구체적인 모양을 선형 $A_3$ quiver에서 계산한다.
 
 ::: 예시 9
 선형 $A_3$ quiver $1\xrightarrow{\alpha}2\xrightarrow{\beta}3$ ([§Quiver와 경로대수, ⁋예시 6](/ko/math/representation_theory/path_algebras#ex6)) 를 생각하자. 이 quiver의 indecomposable representation은 정확히 여섯 개이며, 각 $1\leq i\leq j\leq 3$에 대하여 vertex $i,i+1,\ldots,j$에 $k$를, 그 사이의 arrow에 $\id_k$를, 나머지에 $0$을 둔 representation $M_{[i,j]}$로 주어진다. 이를 dimension vector $(\dim V_1,\dim V_2,\dim V_3)$로 적으면
@@ -184,7 +184,7 @@ $$0\rightarrow M_{[3,3]}\rightarrow M_{[2,3]}\rightarrow M_{[2,2]}\rightarrow 0.
 
 
 ::: 참고 10
-Irreducible morphism은 module category의 *radical*로도 특징지어진다. $\rad(M,N)$을 isomorphism의 합성으로 분해되지 않는 사상들이 이루는 부분공간(indecomposable $M,N$에 대해서는 non-isomorphism들)으로, $\rad^2(M,N)$을 $\rad(M,X)$와 $\rad(X,N)$의 원소들의 합성으로 생성되는 부분공간으로 두면, indecomposable $M,N$에 대하여 $f:M\rightarrow N$이 irreducible인 것은
+Irreducible morphism은 module category의 *radical*로도 특징지어진다. $\rad(M,N)$을 isomorphism의 합성으로 분해되지 않는 morphism들이 이루는 부분공간(indecomposable $M,N$에 대해서는 non-isomorphism들)으로, $\rad^2(M,N)$을 $\rad(M,X)$와 $\rad(X,N)$의 원소들의 합성으로 생성되는 부분공간으로 두면, indecomposable $M,N$에 대하여 $f:M\rightarrow N$이 irreducible인 것은
 
 $$f\in\rad(M,N)\setminus\rad^2(M,N)$$
 

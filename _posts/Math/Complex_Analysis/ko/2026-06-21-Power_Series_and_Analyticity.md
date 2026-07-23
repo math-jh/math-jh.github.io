@@ -18,7 +18,7 @@ Cauchy 적분공식은 ([§Cauchy 적분공식, ⁋정리 1](/ko/math/complex_an
 
 ## Holomorphic function의 Taylor 전개
 
-핵심 발상은 Cauchy 적분공식의 kernel을 기하급수로 펼치는 것이다. 중심 $z_0$을 둘러싼 경계원 위의 $w$와 그 내부의 점 $z$에 대해
+핵심 발상은 Cauchy 적분공식의 kernel을 기하급수로 펼치는 것이다. 중심 $z_0$을 둘러싼 경계원 위의 $w$와 그 interior의 점 $z$에 대해
 
 $$\frac{1}{w - z} = \frac{1}{(w - z_0) - (z - z_0)} = \frac{1}{w - z_0}\cdot\frac{1}{1 - \frac{z - z_0}{w - z_0}}$$
 
@@ -33,7 +33,7 @@ $$f(z) = \sum_{n=0}^{\infty} \frac{f^{(n)}(z_0)}{n!}\,(z - z_0)^n$$
 :::
 
 ::: 증명
-$z \in D(z_0, R)$을 고정하고, $\lvert z - z_0\rvert < r < R$이 되도록 반지름 $r$을 잡는다. 닫힌 원판 $\overline{D(z_0, r)}$이 holomorphic인 영역에 들어 있으므로 Cauchy 적분공식 ([§Cauchy 적분공식, ⁋정리 1](/ko/math/complex_analysis/cauchy_integral_formula#thm1)) 에 의해
+$z \in D(z_0, R)$을 고정하고, $\lvert z - z_0\rvert < r < R$이 되도록 반지름 $r$을 잡는다. closed 원판 $\overline{D(z_0, r)}$이 holomorphic인 영역에 들어 있으므로 Cauchy 적분공식 ([§Cauchy 적분공식, ⁋정리 1](/ko/math/complex_analysis/cauchy_integral_formula#thm1)) 에 의해
 
 $$f(z) = \frac{1}{2\pi i}\oint_{\lvert w - z_0\rvert = r} \frac{f(w)}{w - z}\,dw$$
 
@@ -123,28 +123,28 @@ $$G'(z) = \sum_{n=0}^{\infty} \frac{a_n}{n+1}\cdot(n+1)(z - z_0)^n = \sum_{n=0}^
 
 ## 영점의 위수
 
-해석성은 holomorphic function이 영점 근방에서 어떻게 사라지는지를 정밀하게 기술하게 해 준다. $f(z_0) = 0$이면 Taylor 급수의 상수항이 사라지고, 더 높은 차수의 계수까지 차례로 사라지는 정도가 영점의 깊이를 잰다. 항등적으로 $0$이 아닌 holomorphic function에서는 이 사라짐이 유한한 차수에서 멈추며, 그 차수가 영점의 위수이다.
+해석성은 holomorphic function이 영점 근방에서 어떻게 사라지는지를 정밀하게 기술하게 해 준다. $f(z_0) = 0$이면 Taylor 급수의 상수항이 사라지고, 더 높은 degree의 계수까지 차례로 사라지는 정도가 영점의 깊이를 잰다. 항등적으로 $0$이 아닌 holomorphic function에서는 이 사라짐이 유한한 degree에서 멈추며, 그 degree가 영점의 order이다.
 
 ::: 정의 5 (영점의 위수)
 $f$가 $z_0$에서 holomorphic이고 $f(z_0) = 0$이며 $z_0$의 어떤 근방에서 $f$가 항등적으로 $0$은 아니라 하자. $z_0$에서의 Taylor 계수 $a_n = f^{(n)}(z_0)/n!$ 가운데 $0$이 아닌 것이 처음 나타나는 지수, 곧
 
 $$m = \min\{\,n \geq 0 : a_n \neq 0\,\}$$
 
-을 $z_0$에서 $f$의 *영점의 위수<sub>order of the zero</sub>*라 한다.
+을 $z_0$에서 $f$의 *order of the zero<sub>영점의 위수</sub>*라 한다.
 :::
 
-영점이라는 가정에서 $a_0 = f(z_0) = 0$이므로 위수는 항상 $m \geq 1$이다. 위수 $1$인 영점을 *단순영점<sub>simple zero</sub>*이라 부르고, 이는 $f(z_0) = 0$이면서 $f'(z_0) \neq 0$인 경우와 같다. 위수 $m$이 잘 정의되려면 그런 $0$이 아닌 계수가 존재해야 하는데, 만일 모든 $a_n$이 $0$이면 Taylor 급수가 항등적으로 $0$이 되어 정리 1에 의해 $f$가 $z_0$의 근방에서 항등적으로 $0$이 되므로, 그 경우를 정의에서 배제한 것이다. 위수의 핵심은 영점에서 $(z - z_0)^m$을 정확히 그만큼 뽑아낼 수 있다는 다음 인수분해이다.
+영점이라는 가정에서 $a_0 = f(z_0) = 0$이므로 order는 항상 $m \geq 1$이다. Order $1$인 영점을 *단순영점<sub>simple zero</sub>*이라 부르고, 이는 $f(z_0) = 0$이면서 $f'(z_0) \neq 0$인 경우와 같다. Order $m$이 잘 정의되려면 그런 $0$이 아닌 계수가 존재해야 하는데, 만일 모든 $a_n$이 $0$이면 Taylor 급수가 항등적으로 $0$이 되어 정리 1에 의해 $f$가 $z_0$의 근방에서 항등적으로 $0$이 되므로, 그 경우를 정의에서 배제한 것이다. Order의 핵심은 영점에서 $(z - z_0)^m$을 정확히 그만큼 뽑아낼 수 있다는 다음 인수분해이다.
 
 ::: 명제 6 (영점의 인수분해)
-$f$가 $z_0$에서 holomorphic이고 그곳에서 위수 $m \geq 1$인 영점을 가진다고 하자. 그러면 $z_0$의 어떤 근방에서 holomorphic이고 $g(z_0) \neq 0$인 함수 $g$가 존재하여 그 근방에서
+$f$가 $z_0$에서 holomorphic이고 그곳에서 order $m \geq 1$인 영점을 가진다고 하자. 그러면 $z_0$의 어떤 근방에서 holomorphic이고 $g(z_0) \neq 0$인 함수 $g$가 존재하여 그 근방에서
 
 $$f(z) = (z - z_0)^m\,g(z)$$
 
-가 성립한다. 역으로 이러한 인수분해가 성립하면 $f$는 $z_0$에서 위수 $m$인 영점을 가진다.
+가 성립한다. 역으로 이러한 인수분해가 성립하면 $f$는 $z_0$에서 order $m$인 영점을 가진다.
 :::
 
 ::: 증명
-정리 1에 의해 $z_0$의 어떤 원판 $D(z_0, R)$에서 $f(z) = \sum_{n=0}^{\infty} a_n (z - z_0)^n$이다. 위수의 정의에서 $a_0 = \cdots = a_{m-1} = 0$이고 $a_m \neq 0$이므로, 합을 $n = m$부터 시작하도록 다시 적고 $(z - z_0)^m$을 묶어내면
+정리 1에 의해 $z_0$의 어떤 원판 $D(z_0, R)$에서 $f(z) = \sum_{n=0}^{\infty} a_n (z - z_0)^n$이다. Order의 정의에서 $a_0 = \cdots = a_{m-1} = 0$이고 $a_m \neq 0$이므로, 합을 $n = m$부터 시작하도록 다시 적고 $(z - z_0)^m$을 묶어내면
 
 $$f(z) = \sum_{n=m}^{\infty} a_n (z - z_0)^n = (z - z_0)^m \sum_{k=0}^{\infty} a_{m+k}(z - z_0)^k$$
 
@@ -158,26 +158,26 @@ $$g(z) = \sum_{k=0}^{\infty} a_{m+k}(z - z_0)^k$$
 
 $$f(z) = \sum_{k=0}^{\infty} b_k (z - z_0)^{m+k}$$
 
-이므로 $f$의 Taylor 계수는 $n < m$에서 모두 $0$이고 $n = m$에서 $b_0 \neq 0$이다. 따라서 $f$는 $z_0$에서 위수 $m$인 영점을 가진다.
+이므로 $f$의 Taylor 계수는 $n < m$에서 모두 $0$이고 $n = m$에서 $b_0 \neq 0$이다. 따라서 $f$는 $z_0$에서 order $m$인 영점을 가진다.
 :::
 
-명제 6은 holomorphic function의 영점이 다항식의 근과 똑같은 방식으로 인수 $(z - z_0)^m$을 내놓되, 남는 인수 $g$가 영점에서 사라지지 않는 holomorphic function이라는 점만 다름을 보인다. 이 인수분해에서 $g(z_0) \neq 0$이라는 조건이 $g$가 $z_0$ 근방에서 부호 없이 $0$에서 떨어져 있게 하므로, $z_0$ 근처에서 $f$의 영점은 $z_0$ 하나뿐이다. 곧 항등적으로 $0$이 아닌 holomorphic function의 영점은 고립되어 있다. 또 위수 $m$은 $f$가 영점 근방에서 $\lvert f(z)\rvert \approx \lvert g(z_0)\rvert\,\lvert z - z_0\rvert^m$의 비율로 사라짐을 알려 주어, 영점의 깊이를 정량적으로 잰다.
+명제 6은 holomorphic function의 영점이 다항식의 root와 똑같은 방식으로 인수 $(z - z_0)^m$을 내놓되, 남는 인수 $g$가 영점에서 사라지지 않는 holomorphic function이라는 점만 다름을 보인다. 이 인수분해에서 $g(z_0) \neq 0$이라는 조건이 $g$가 $z_0$ 근방에서 부호 없이 $0$에서 떨어져 있게 하므로, $z_0$ 근처에서 $f$의 영점은 $z_0$ 하나뿐이다. 곧 항등적으로 $0$이 아닌 holomorphic function의 영점은 고립되어 있다. 또 order $m$은 $f$가 영점 근방에서 $\lvert f(z)\rvert \approx \lvert g(z_0)\rvert\,\lvert z - z_0\rvert^m$의 비율로 사라짐을 알려 주어, 영점의 깊이를 정량적으로 잰다.
 
 ::: 예시 7 (위수의 계산)
-함수 $f(z) = z^2(e^z - 1)$의 원점에서의 영점의 위수를 구한다. $e^z = \sum_{n\geq 0} z^n/n!$이므로 ([§복소정칙함수, ⁋정의 10](/ko/math/complex_analysis/holomorphic_functions#def10))
+함수 $f(z) = z^2(e^z - 1)$의 원점에서의 영점의 order를 구한다. $e^z = \sum_{n\geq 0} z^n/n!$이므로 ([§복소정칙함수, ⁋정의 10](/ko/math/complex_analysis/holomorphic_functions#def10))
 
 $$e^z - 1 = z + \frac{z^2}{2!} + \frac{z^3}{3!} + \cdots = z\left(1 + \frac{z}{2!} + \frac{z^2}{3!} + \cdots\right)$$
 
-이고, 괄호 안의 멱급수는 원점에서 값이 $1 \neq 0$이므로 $e^z - 1$은 원점에서 위수 $1$인 영점을 가진다. 따라서
+이고, 괄호 안의 멱급수는 원점에서 값이 $1 \neq 0$이므로 $e^z - 1$은 원점에서 order $1$인 영점을 가진다. 따라서
 
 $$f(z) = z^2(e^z - 1) = z^3\left(1 + \frac{z}{2!} + \frac{z^2}{3!} + \cdots\right)$$
 
-이고 마지막 인수가 원점에서 $1 \neq 0$이므로, 명제 6에 의해 $f$는 원점에서 위수 $3$인 영점을 가진다. 인수가 곱해질 때 위수가 더해진다는 일반 규칙의 한 사례이다.
+이고 마지막 인수가 원점에서 $1 \neq 0$이므로, 명제 6에 의해 $f$는 원점에서 order $3$인 영점을 가진다. 인수가 곱해질 때 order가 더해진다는 일반 규칙의 한 사례이다.
 :::
 
 ## Cauchy 곱
 
-두 holomorphic function의 곱도 holomorphic이므로 다시 멱급수로 전개되며, 그 계수는 두 인수의 계수로부터 유한 합으로 표현된다. 이것이 멱급수의 Cauchy 곱으로, 두 급수의 항을 형식적으로 모두 곱한 뒤 같은 차수끼리 묶어 얻는다. holomorphic function의 곱셈을 계수 수준에서 명시적으로 수행하게 해 주어, 전개를 도함수 계산 없이 대수적으로 결합하는 데 쓰인다.
+두 holomorphic function의 곱도 holomorphic이므로 다시 멱급수로 전개되며, 그 계수는 두 인수의 계수로부터 유한 합으로 표현된다. 이것이 멱급수의 Cauchy 곱으로, 두 급수의 항을 형식적으로 모두 곱한 뒤 같은 degree끼리 묶어 얻는다. holomorphic function의 곱셈을 계수 수준에서 명시적으로 수행하게 해 주어, 전개를 도함수 계산 없이 대수적으로 결합하는 데 쓰인다.
 
 ::: 명제 8 (Cauchy 곱)
 두 멱급수 $f(z) = \sum_{n=0}^{\infty} a_n (z - z_0)^n$과 $g(z) = \sum_{n=0}^{\infty} b_n (z - z_0)^n$이 각각 수렴반지름 $\rho_f, \rho_g > 0$을 가진다고 하자. 그러면 곱 $fg$은 $\rho = \min(\rho_f, \rho_g)$ 이상의 수렴반지름을 가지는 멱급수
@@ -188,14 +188,14 @@ $$f(z)\,g(z) = \sum_{n=0}^{\infty} c_n (z - z_0)^n, \qquad c_n = \sum_{k=0}^{n} 
 :::
 
 ::: 증명
-두 급수는 모두 $D(z_0, \rho)$에서 절대수렴하므로 (정리 1의 절대수렴, 또는 각자의 수렴원판이 $D(z_0, \rho)$을 포함하므로), 절대수렴하는 두 급수의 곱을 재배열하는 정리를 적용할 수 있다. 곱 $f(z)g(z)$의 모든 항 $a_k (z - z_0)^k \cdot b_l (z - z_0)^l$을 더하되 절대수렴이 임의의 재배열을 허용하므로, 같은 총차수 $k + l = n$인 항끼리 묶으면
+두 급수는 모두 $D(z_0, \rho)$에서 절대수렴하므로 (정리 1의 절대수렴, 또는 각자의 수렴원판이 $D(z_0, \rho)$을 포함하므로), 절대수렴하는 두 급수의 곱을 재배열하는 정리를 적용할 수 있다. 곱 $f(z)g(z)$의 모든 항 $a_k (z - z_0)^k \cdot b_l (z - z_0)^l$을 더하되 절대수렴이 임의의 재배열을 허용하므로, 같은 total degree $k + l = n$인 항끼리 묶으면
 
 $$f(z)\,g(z) = \sum_{k=0}^{\infty}\sum_{l=0}^{\infty} a_k\,b_l\,(z - z_0)^{k+l} = \sum_{n=0}^{\infty}\left(\sum_{k=0}^{n} a_k\,b_{n-k}\right)(z - z_0)^n$$
 
 이 되어 주장하는 계수 $c_n = \sum_{k=0}^{n} a_k b_{n-k}$를 얻는다. 한편 $f$와 $g$가 모두 $D(z_0, \rho)$에서 holomorphic이므로 그 곱 $fg$도 $D(z_0, \rho)$에서 holomorphic이고 ([§복소정칙함수, ⁋명제 3](/ko/math/complex_analysis/holomorphic_functions#prop3)), 정리 1에 의해 그 Taylor 급수가 $D(z_0, \rho)$ 전체에서 수렴하므로 곱급수의 수렴반지름은 $\rho$ 이상이다.
 :::
 
-명제 8의 계수 공식 $c_n = \sum_{k=0}^{n} a_k b_{n-k}$는 두 계수열의 합성곱이며, 차수 $n$의 계수가 두 인수에서 차수의 합이 $n$이 되는 모든 조합의 기여를 모은 것이다. 이는 다항식의 곱셈을 무한급수로 확장한 것에 지나지 않으나, holomorphic function의 절대수렴이 재배열을 정당화해 주는 덕분에 유한 다항식에서와 똑같이 작동한다. 곱의 수렴반지름이 두 인수의 더 작은 쪽 이상이라는 결론도 따름정리 2의 시각에서 자연스럽다. 곱 $fg$의 singular point는 $f$나 $g$ 가운데 적어도 하나가 특이한 곳에서만 생기므로, 가장 가까운 singular point까지의 거리가 두 함수 각각의 그것보다 가까워질 수 없기 때문이다.
+명제 8의 계수 공식 $c_n = \sum_{k=0}^{n} a_k b_{n-k}$는 두 계수열의 합성곱이며, degree $n$의 계수가 두 인수에서 degree의 합이 $n$이 되는 모든 조합의 기여를 모은 것이다. 이는 다항식의 곱셈을 무한급수로 확장한 것에 지나지 않으나, holomorphic function의 절대수렴이 재배열을 정당화해 주는 덕분에 유한 다항식에서와 똑같이 작동한다. 곱의 수렴반지름이 두 인수의 더 작은 쪽 이상이라는 결론도 따름정리 2의 시각에서 자연스럽다. 곱 $fg$의 singular point는 $f$나 $g$ 가운데 적어도 하나가 특이한 곳에서만 생기므로, 가장 가까운 singular point까지의 거리가 두 함수 각각의 그것보다 가까워질 수 없기 때문이다.
 
 ::: 예시 9 (Cauchy 곱으로 얻는 전개)
 기하급수 $\dfrac{1}{1 - z} = \sum_{n=0}^{\infty} z^n$ ($\lvert z\rvert < 1$) 을 자기 자신과 Cauchy 곱하여 $1/(1 - z)^2$의 전개를 얻는다. $a_n = b_n = 1$이므로

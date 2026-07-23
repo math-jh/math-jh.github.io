@@ -52,7 +52,7 @@ Field $\mathbb{N}$과, $\mathbb{N}$의 automorphism들로 이루어진 유한군
 ::: 증명
 $\card H=m$이라 하고 $H=\{\sigma_1,\ldots,\sigma_m\}$이라 적자. 여기서 $\sigma_1=\id_\mathbb{N}$이다. 결론에 반하여 $\mathbb{N}^H$ 위에서 일차독립인 원소들 $x_1,\ldots,x_{m+1}\in \mathbb{N}$이 존재한다 가정하자.
 
-다음의 동차 연립일차방정식
+다음의 homogeneous 연립일차방정식
 
 $$\sum_{j=1}^{m+1}\sigma_i(x_j)\,c_j=0,\qquad i=1,\ldots,m$$
 

@@ -78,14 +78,14 @@ $\mathbb{P}^n$의 cone은 $\mathbb{A}^{n+1}$이고 $\dim \mathbb{A}^{n+1} = n+1$
 
 ## 초곡면의 차원
 
-Hypersurface는 단일 다항식의 zero set으로 정의되는 다양체이다. 직관적으로, 하나의 식을 추가하는 것은 하나의 제약조건을 주는 것과 같으므로 차원을 하나 줄이게 될 것이다. 
+Hypersurface는 단일 다항식의 zero set으로 정의되는 variety이다. 직관적으로, 하나의 식을 추가하는 것은 하나의 제약조건을 주는 것과 같으므로 차원을 하나 줄이게 될 것이다. 
 
 ::: 명제 6
 Irreducible polynomial $f \in \mathbb{K}[\x_1, \ldots, \x_n]$에 대해, irreducible hypersurface $Z(f) \subset \mathbb{A}^n$의 차원은 $n - 1$이다.
 :::
 
 ::: 증명
-$f$가 irreducible이므로 $(f)$는 prime ideal이고, 따라서 $Z(f)$의 coordinate ring은 $\mathbb{K}[\x_1, \ldots, \x_n]/(f)$이다. 이제 $\mathbb{K}[\x_1, \ldots, \x_n]$에서 $(f)$의 codimension—가 1임을 보이자. $(0) \subsetneq (f)$는 길이 1의 chain이므로 $\codim(f) \ge 1$이다. 반면, UFD $\mathbb{K}[\x_1, \ldots, \x_n]$에서 codimension 1인 prime ideal은 모두 principal prime ideal이므로, $(f)$ 사이에 다른 prime ideal이 존재할 수 없다. 따라서 $\codim(f) = 1$이고,
+$f$가 irreducible이므로 $(f)$는 prime ideal이고, 따라서 $Z(f)$의 coordinate ring은 $\mathbb{K}[\x_1, \ldots, \x_n]/(f)$이다. 이제 $\mathbb{K}[\x_1, \ldots, \x_n]$에서 $(f)$의 codimension이 1임을 보이자. $(0) \subsetneq (f)$는 길이 1의 chain이므로 $\codim(f) \ge 1$이다. 반면, UFD $\mathbb{K}[\x_1, \ldots, \x_n]$에서 codimension 1인 prime ideal은 모두 principal prime ideal이므로, $(0)$과 $(f)$ 사이에 다른 prime ideal이 존재할 수 없다. 따라서 $\codim(f) = 1$이고,
 
 $$\dim \mathbb{K}[\x_1, \ldots, \x_n]/(f) = \dim \mathbb{K}[\x_1, \ldots, \x_n] - \codim(f) = n - 1$$
 
@@ -94,7 +94,7 @@ $$\dim \mathbb{K}[\x_1, \ldots, \x_n]/(f) = \dim \mathbb{K}[\x_1, \ldots, \x_n] 
 
 ## 함수체를 통한 차원
 
-차원을 정의하는 또 다른 방법은 함수체를 사용하는 것이다. 함수체 $\mathbb{K}(X)$는 다양체의 generic point에서의 정보를 담고 있으며, birational invariant이기도 하다. 다음 명제 또한 대수적인 사실로부터 유도된다.
+차원을 정의하는 또 다른 방법은 함수체를 사용하는 것이다. 함수체 $\mathbb{K}(X)$는 variety의 generic point에서의 정보를 담고 있으며, birational invariant이기도 하다. 다음 명제 또한 대수적인 사실로부터 유도된다.
 
 ::: 명제 7
 Variety $X$의 차원은 함수체 $\mathbb{K}(X)$의 $\mathbb{K}$ 위에서의 transcendence degree와 같다.
@@ -125,7 +125,7 @@ $$Y = Y_0 \supsetneq Y_1 \supsetneq \cdots \supsetneq Y_n \neq \emptyset$$
 
 $$X \supsetneq Y = Y_0 \supsetneq Y_1 \supsetneq \cdots \supsetneq Y_n$$
 
-은 $X$의  길이는 $n+1$ chain이다.
+은 $X$의 길이가 $n+1$인 chain이다.
 :::
 
 이는 [명제 6](#prop6)의 일반화라 생각할 수 있다. 이제 regular map과 차원의 관계에 대해 살펴보자. 
@@ -153,7 +153,7 @@ $$X \supsetneq Y = Y_0 \supsetneq Y_1 \supsetneq \cdots \supsetneq Y_n$$
 첫째 결과는 일반적으로 기하적인 함수가 차원을 높일 수 없다는 우리의 직관을 뒷받침한다. 둘째 결과는 대략적으로 $\varphi$가 (up to birational equivalence) surjective라면 target의 차원이 domain의 차원보다 높을 수 없다는 것을 보여준다.
 
 ::: 정의 11
-Irreducible 다양체 $X, Y$ 사이의 regular map $\varphi: X \rightarrow Y$가 *finite*라는 것은, 모든 affine open $U \subseteq Y$에 대하여 $\varphi^{-1}(U)$가 affine이고, $\mathbb{K}[\varphi^{-1}(U)]$가 $\mathbb{K}[U]$ 위의 finitely generated module인 것을 의미한다.
+Irreducible variety $X, Y$ 사이의 regular map $\varphi: X \rightarrow Y$가 *finite*라는 것은, 모든 affine open $U \subseteq Y$에 대하여 $\varphi^{-1}(U)$가 affine이고, $\mathbb{K}[\varphi^{-1}(U)]$가 $\mathbb{K}[U]$ 위의 finitely generated module인 것을 의미한다.
 :::
 
 Finite morphism은 finite fiber를 갖는다는 것을 보일 수 있다. 그럼 다음이 자명하다. 

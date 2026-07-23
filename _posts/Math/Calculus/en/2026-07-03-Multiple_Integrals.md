@@ -56,7 +56,7 @@ $$\int_R f \mathop{dV} = \int_{a_1}^{b_1}\left(\int_{a_2}^{b_2}\cdots\left(\int_
 and the order of integration may be changed arbitrarily.
 :::
 
-A rigorous proof essentially relies on the analytical fact that $f$ is uniformly continuous on the compact box $R$, so we omit it in this post. In any case, the inner integrals on the right-hand side of the theorem are ordinary definite integrals in which one variable is held constant and the others are integrated, so a multiple integral becomes a repetition of single-variable integrals solved by the [Fundamental Theorem of Calculus](/en/math/calculus/fundamental_theorem_of_calculus) and integration techniques. If the integrand separates variables as $f(x_1,\ldots,x_n) = g_1(x_1)\cdots g_n(x_n)$ and the region is a box, one step further: the multiple integral decomposes into the product of $n$ single-variable integrals
+A rigorous proof essentially relies on the analytical fact that $f$ is uniformly continuous on the compact box $R$, so we omit it in this post. In any case, the inner integrals on the right-hand side of the theorem are ordinary definite integrals in which one variable is held constant and another is integrated, so a multiple integral becomes a repetition of single-variable integrals solved by [§The Fundamental Theorem of Calculus](/en/math/calculus/fundamental_theorem_of_calculus) and integration techniques. If the integrand separates variables as $f(x_1,\ldots,x_n) = g_1(x_1)\cdots g_n(x_n)$ and the region is a box, one step further: the multiple integral decomposes into the product of $n$ single-variable integrals
 
 $$(\int_{a_1}^{b_1} g_1)\cdots(\int_{a_n}^{b_n} g_n)$$
 

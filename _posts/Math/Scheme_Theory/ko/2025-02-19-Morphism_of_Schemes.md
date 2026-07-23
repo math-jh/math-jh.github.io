@@ -47,14 +47,14 @@ $$s_i:=\varphi_i^\sharp(W)(s)\in \mathcal{O}_X(\varphi^{-1}(W)\cap U_i)$$
 을 생각하자. 그럼 이들 역시 같은 이유로 서로의 겹침 위에서 일치하고, $\{\varphi^{-1}(W)\cap U_i\}$가 $\varphi^{-1}(W)$의 open covering이므로 [\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1)의 두 조건에 의하여 이들을 붙인 $s'\in \mathcal{O}_X(\varphi^{-1}(W))$가 유일하게 존재한다. 이제 $\varphi^\sharp(W): s\mapsto s'$으로 정의하면 restriction map과의 호환성은 각각의 $U_i$ 위에서 확인하면 충분하고, $\varphi^\sharp$가 $x\in U_i$의 stalk 위에 유도하는 함수는 $\varphi_i^\sharp$가 유도하는 것과 같으므로 local homomorphism이다. 따라서 $\varphi$는 scheme morphism이며, $(\varphi\vert_{U_i})\vert^{V_i}=\varphi_i$라는 조건이 $\varphi$를 완전히 결정하므로 이러한 $\varphi$는 유일하다. 
 :::
 
-첫 주장은 [§아핀스킴, ⁋명제 11](/ko/math/scheme_theory/affine_schemes#prop11)의 $\AffSch$가 $\LRS$의 full subcategory라는 사실을 scheme morphism의 국소적인 모습에 그대로 적용한 것에 지나지 않는다. 다만 둘째 주장의 gluing condition은 환 준동형사상들 사이의 조건으로 적히지 않는다는 데 주의해야 한다. $V_i\neq V_k$인 경우 $\varphi_i$와 $\varphi_k$를 하나의 affine scheme 안에서 비교할 수 없어 이들을 $Y$ 안에서 비교해야 하고, 또 $U_i\cap U_k$는 일반적으로 affine scheme이 아니기 때문이다. 즉 scheme morphism을 붙이기 위해 주어지는 데이터는 환 준동형사상들이지만, 이들이 붙는지를 판정하는 조건은 그렇지 않다. 
+첫 주장은 [§아핀스킴, ⁋명제 11](/ko/math/scheme_theory/affine_schemes#prop11)의 $\AffSch$가 $\LRS$의 full subcategory라는 사실을 scheme morphism의 국소적인 모습에 그대로 적용한 것에 지나지 않는다. 다만 둘째 주장의 gluing condition은 ring homomorphism들 사이의 조건으로 적히지 않는다는 데 주의해야 한다. $V_i\neq V_k$인 경우 $\varphi_i$와 $\varphi_k$를 하나의 affine scheme 안에서 비교할 수 없어 이들을 $Y$ 안에서 비교해야 하고, 또 $U_i\cap U_k$는 일반적으로 affine scheme이 아니기 때문이다. 즉 scheme morphism을 붙이기 위해 주어지는 데이터는 ring homomorphism들이지만, 이들이 붙는지를 판정하는 조건은 그렇지 않다. 
 
 ::: 예시 2
 Affine scheme들 사이의 morphism이 아닌 scheme morphism의 예시로, [§사영스킴, §§사영공간](/ko/math/scheme_theory/projective_schemes#사영공간)에서 motivation을 위해 처음 등장했던 map
 
 $$\varphi:\mathbb{A}_\mathbb{K}^{n+1}\setminus \{0\} \rightarrow \mathbb{P}^n_\mathbb{K}$$
 
-이 있다. 이 식은 전통적으로 projective space를 만들 때 사용하는 식이었으나, [§사영스킴, ⁋예시 12](/ko/math/scheme_theory/projective_schemes#ex12)에서 전통적인 projective space를 스킴의 언어로 옮길 때는 등장하지 않았었다. 이 morphism은 물론 식 
+이 있다. 이 식은 전통적으로 projective space를 만들 때 사용하는 식이었으나, [§사영스킴, ⁋예시 12](/ko/math/scheme_theory/projective_schemes#ex12)에서 전통적인 projective space를 scheme의 언어로 옮길 때는 등장하지 않았었다. 이 morphism은 물론 식 
 
 $$(x_0,\ldots, x_n)\mapsto [x_0:\cdots:x_n]$$
 
@@ -122,7 +122,7 @@ $$\Hom_\Sch(X, \Spec A)=\Hom_\LRS(X, \Spec A)\cong \Hom_\cRing(A, \Gamma(X, \mat
 이제 [예시 2](#ex2)를 더욱 일반화하는 다음의 예시를 보자.
 
 ::: 예시 5
-Ring $A$와 $A$-scheme $X$를 생각하고, $X$ 위에 정의된 함수들 $f_0,\ldots, f_n\in \Gamma(X, \mathcal{O}_X)$이 주어졌다 하자. 이때 이들이 단위아이디얼을 생성한다, 즉 $(f_0,\ldots, f_n)=\mathcal{O}_X$를 만족한다 하자. 또한 $X$의 affine open covering $X=\bigcup U_j$를 생각하자. 그럼
+Ring $A$와 $A$-scheme $X$를 생각하고, $X$ 위에 정의된 함수들 $f_0,\ldots, f_n\in \Gamma(X, \mathcal{O}_X)$이 주어졌다 하자. 이때 이들이 unit ideal을 생성한다, 즉 $(f_0,\ldots, f_n)=\mathcal{O}_X$를 만족한다 하자. 또한 $X$의 affine open covering $X=\bigcup U_j$를 생각하자. 그럼
 
 $$U_{ij}:=D(f_i)\cap U_j=D(f_i\vert_{U_j})\subseteq U_j$$
 
@@ -215,7 +215,7 @@ $$\pi^{-1}(x_0)=\{(x_0,y,z)\in \mathbb{R}^3\mid y^2+z^2=1-x_0^2\}$$
 이다. 이를 기하학적으로 표현하면, 각각의 $x_0\in \mathbb{R}_x$마다 원 $y^2+z^2=1-x_0^2$가 대응된 상황으로 볼 수 있으며, 따라서 $\pi$를 <em-ko>$x$축으로 parametrize된 원들의 family</em-ko>로 생각할 수 있다. 
 :::
 
-이 예시를 스킴으로 바로 나타낼 수 없는 이유 중 덜 본질적인 것은 $S$가 $\mathbb{R}^3$의 닫힌집합이고, 우리는 닫힌집합 위에 scheme structure를 주는 방법을 모른다는 것이다. 이는 [§닫힌 부분스킴](/ko/math/scheme_theory/closed_subschemes)에서 해결하게 된다. 더 미묘하고 본질적인 부분은 함수 $\pi$의 점 $x_0$에서의 fiber $\pi^{-1}(x_0)$을 나타낼 방법이 없는 것이다. 물론 scheme morphism은 기본적으로 연속함수이므로 이를 연속함수의 fiber로 볼 수 있겠지만, 그렇게 하였을 경우 $\pi^{-1}(x_0)$에 scheme structure를 주는 방법이 ([§닫힌 부분스킴](/ko/math/scheme_theory/closed_subschemes)의 내용을 가정하더라도) 존재하지 않는다. 이를 설명하기 위해서 우리는 조금 더 기다려야 한다. 
+이 예시를 scheme으로 바로 나타낼 수 없는 이유 중 덜 본질적인 것은 $S$가 $\mathbb{R}^3$의 닫힌집합이고, 우리는 닫힌집합 위에 scheme structure를 주는 방법을 모른다는 것이다. 이는 [§닫힌 부분스킴](/ko/math/scheme_theory/closed_subschemes)에서 해결하게 된다. 더 미묘하고 본질적인 부분은 함수 $\pi$의 점 $x_0$에서의 fiber $\pi^{-1}(x_0)$을 나타낼 방법이 없는 것이다. 물론 scheme morphism은 기본적으로 연속함수이므로 이를 연속함수의 fiber로 볼 수 있겠지만, 그렇게 하였을 경우 $\pi^{-1}(x_0)$에 scheme structure를 주는 방법이 ([§닫힌 부분스킴](/ko/math/scheme_theory/closed_subschemes)의 내용을 가정하더라도) 존재하지 않는다. 이를 설명하기 위해서 우리는 조금 더 기다려야 한다. 
 
 ---
 **참고문헌**

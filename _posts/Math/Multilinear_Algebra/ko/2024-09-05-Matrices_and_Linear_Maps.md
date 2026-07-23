@@ -101,7 +101,7 @@ $$[v \circ u]_\mathcal{D}^\mathcal{B}=[v]_\mathcal{D}^\mathcal{C}[u]_\mathcal{C}
 ::: 증명
 임의의 $x\in M$에 대하여,
 
-$$[v \circ u]_\mathcal{D}^\mathcal{B}[x]_\mathcal{B}=[(v \circ u)(x)]_\mathcal{D}=[(v(u(x))]_\mathcal{D}=[v]_\mathcal{D}^\mathcal{C}[u(x)]_\mathcal{C}=[v]_\mathcal{D}^\mathcal{C}[u]_\mathcal{C}^\mathcal{B}[x]_\mathcal{B}$$
+$$[v \circ u]_\mathcal{D}^\mathcal{B}[x]_\mathcal{B}=[(v \circ u)(x)]_\mathcal{D}=[v(u(x))]_\mathcal{D}=[v]_\mathcal{D}^\mathcal{C}[u(x)]_\mathcal{C}=[v]_\mathcal{D}^\mathcal{C}[u]_\mathcal{C}^\mathcal{B}[x]_\mathcal{B}$$
 
 이므로, $Z(A)$-isomorphism $\Mat_{K\times I}(A)\cong\Hom_\lMod{A}(M,L)$로부터 원하는 결과를 얻는다. 
 :::
@@ -120,7 +120,7 @@ $$\left([u]_\mathcal{C}^\mathcal{B}\right)^t=\left[u^\ast\right]_{\mathcal{B}^\a
 ::: 증명
 [§쌍대공간, ⁋명제 8](/ko/math/multilinear_algebra/dual_spaces#prop8)에 의하여 $M$과 $M^{\ast\ast}$를 같은 것으로 취급할 수 있고, 이 때 $\mathcal{B}$는 $\mathcal{B}^\ast$의 dual basis $\mathcal{B}^{\ast\ast}$에 대응되게 된다. 이제
 
-$$\left(\left[u^\ast\right]_{\mathcal{B}^\ast}^{\mathcal{C}^\ast}\right)_{ji}=\langle u^\ast(f_j^\ast), e_i^{\ast\ast}\rangle=\langle e_i, u^\ast(f^\ast)\rangle=\langle u(e_i), f_j^\ast\rangle=\left([u]_\mathcal{C}^\mathcal{B}\right)_{ij}=\left(\left([u]_\mathcal{C}^\mathcal{B}\right)^t\right)_{ji} $$
+$$\left(\left[u^\ast\right]_{\mathcal{B}^\ast}^{\mathcal{C}^\ast}\right)_{ji}=\langle u^\ast(f_j^\ast), e_i^{\ast\ast}\rangle=\langle e_i, u^\ast(f_j^\ast)\rangle=\langle u(e_i), f_j^\ast\rangle=\left([u]_\mathcal{C}^\mathcal{B}\right)_{ij}=\left(\left([u]_\mathcal{C}^\mathcal{B}\right)^t\right)_{ji} $$
 
 이므로 원하는 결과를 얻는다.
 :::

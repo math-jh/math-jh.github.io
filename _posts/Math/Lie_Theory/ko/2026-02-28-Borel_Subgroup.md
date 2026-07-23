@@ -40,10 +40,10 @@ $$(\alpha_i,\alpha_j)=\begin{cases}2 & i=j\\ -1 & \lvert i-j\rvert=1\\ 0 & \text
 Dynkin diagram의 핵심 성질은 다음과 같다.
 
 ::: 명제 3
-Dynkin diagram은 연결되어 있거나, 연결 성분들의 disjoint union으로 나타난다. 각 연결 성분은 irreducible root system에 대응한다.
+Dynkin diagram은 연결되어 있거나, connected component들의 disjoint union으로 나타난다. 각 connected component는 irreducible root system에 대응한다.
 :::
 ::: 증명
-Dynkin diagram의 연결 성분들은 simple root들의 partition $\Delta=\Delta_1\sqcup\cdots\sqcup\Delta_k$를 정의한다. 각 $\Delta_i$로 생성되는 root subsystem $\Phi_i$를 생각하면, [§근계, ⁋명제 6](/ko/math/lie_theory/root_systems#prop6)에 의하여 서로 다른 $\Delta_i$에 속한 root들은 orthogonal이다. 따라서 $\Phi=\Phi_1\sqcup\cdots\sqcup\Phi_k$이고, 각 $\Phi_i$는 irreducible이다.
+Dynkin diagram의 connected component들은 simple root들의 partition $\Delta=\Delta_1\sqcup\cdots\sqcup\Delta_k$를 정의한다. 각 $\Delta_i$로 생성되는 root subsystem $\Phi_i$를 생각하면, [§근계, ⁋명제 6](/ko/math/lie_theory/root_systems#prop6)에 의하여 서로 다른 $\Delta_i$에 속한 root들은 orthogonal이다. 따라서 $\Phi=\Phi_1\sqcup\cdots\sqcup\Phi_k$이고, 각 $\Phi_i$는 irreducible이다.
 
 역으로 irreducible root system의 Dynkin diagram이 연결되어 있지 않다면 위의 논증에 의해 reducible이 되어 모순이다.
 :::
@@ -73,7 +73,7 @@ $$\sum_{\beta\in\Delta,\beta\neq\alpha}\lvert\langle\alpha,\beta\rangle\rvert\le
 이다.
 :::
 ::: 증명
-Simple root $\alpha$에 수직인 초평면을 $H_\alpha$라 하자. $\alpha$와 이웃한 simple root들 $\beta_1,\ldots,\beta_m$을 생각하면, 각 $\beta_i$는 $H_\alpha$와 다른 각도를 이룬다. 
+Simple root $\alpha$에 수직인 hyperplane을 $H_\alpha$라 하자. $\alpha$와 이웃한 simple root들 $\beta_1,\ldots,\beta_m$을 생각하면, 각 $\beta_i$는 $H_\alpha$와 다른 각도를 이룬다. 
 
 $\beta_i$를 $H_\alpha$에 정사영한 벡터들의 linear independence로부터 $m\leq 3$임을 보일 수 있다. 또한 각 $\beta_i$에 대해 $\lvert\langle\alpha,\beta_i\rangle\rvert\leq 3$이므로 총합은 $4$를 넘지 않는다.
 :::
@@ -110,12 +110,12 @@ Irreducible root system의 Dynkin diagram은 다음 type들 중 하나이다.
 
 | Type | Lie algebra | Dimension |
 |------|-------------|-----------|
-| $$A_n$$ | $$\mathfrak{sl}(n+1,\mathbb{C})$$ | $$n(n+2)$$ |
-| $$B_n$$ | $$\mathfrak{so}(2n+1,\mathbb{C})$$ | $$n(2n+1)$$ |
-| $$C_n$$ | $$\mathfrak{sp}(2n,\mathbb{C})$$ | $$n(2n+1)$$ |
-| $$D_n$$ | $$\mathfrak{so}(2n,\mathbb{C})$$ | $$n(2n-1)$$ |
+| $A_n$ | $\mathfrak{sl}(n+1,\mathbb{C})$ | $n(n+2)$ |
+| $B_n$ | $\mathfrak{so}(2n+1,\mathbb{C})$ | $n(2n+1)$ |
+| $C_n$ | $\mathfrak{sp}(2n,\mathbb{C})$ | $n(2n+1)$ |
+| $D_n$ | $\mathfrak{so}(2n,\mathbb{C})$ | $n(2n-1)$ |
 
-Exceptional type들 $$E_6, E_7, E_8, F_4, G_2$$에 대응하는 Lie algebra들은 classical matrix algebra로 실현되지 않는다. 이들의 dimension은 각각 $$78, 133, 248, 52, 14$$이다.
+Exceptional type들 $E_6, E_7, E_8, F_4, G_2$에 대응하는 Lie algebra들은 classical matrix algebra로 실현되지 않는다. 이들의 dimension은 각각 $78, 133, 248, 52, 14$이다.
 :::
 
 ### Simply-laced root system
@@ -123,70 +123,70 @@ Exceptional type들 $$E_6, E_7, E_8, F_4, G_2$$에 대응하는 Lie algebra들�
 모든 root의 길이가 같은 root system을 *simply-laced*라 부른다. 이들은 특별한 성질을 갖는다.
 
 ::: 정의 8
-Root system $$\Phi$$가 *simply-laced*라는 것은 모든 $$\alpha,\beta\in\Phi$$에 대해 $$\lvert\alpha\rvert=\lvert\beta\rvert$$인 것이다. Equivalently, Dynkin diagram에 double edge나 triple edge가 없는 것이다.
+Root system $\Phi$가 *simply-laced*라는 것은 모든 $\alpha,\beta\in\Phi$에 대해 $\lvert\alpha\rvert=\lvert\beta\rvert$인 것이다. Equivalently, Dynkin diagram에 double edge나 triple edge가 없는 것이다.
 :::
 
-Simply-laced root system은 정확히 $$A_n$$, $$D_n$$, $$E_6$$, $$E_7$$, $$E_8$$ type이며, 이들을 통칭하여 *ADE type*이라 부른다. ADE type은 다양한 수학적 상황에서 등장한다. 가령 du Val singularity의 분류, Platonic solid의 대칭군, 그리고 2차원 conformal field theory 등에서 ADE pattern이 나타난다.
+Simply-laced root system은 정확히 $A_n$, $D_n$, $E_6$, $E_7$, $E_8$ type이며, 이들을 통칭하여 *ADE type*이라 부른다. ADE type은 다양한 수학적 상황에서 등장한다. 가령 du Val singularity의 분류, Platonic solid의 대칭군, 그리고 2차원 conformal field theory 등에서 ADE pattern이 나타난다.
 
-이들의 Dynkin diagram은 다음과 같다. 모두 single edge만으로 이루어지며, $$A_n$$은 chain, $$D_n$$은 한쪽 끝에서 갈라지는 fork, 그리고 $$E_6,E_7,E_8$$은 세 갈래가 한 vertex에서 만나는 형태를 갖는다.
+이들의 Dynkin diagram은 다음과 같다. 모두 single edge만으로 이루어지며, $A_n$은 chain, $D_n$은 한쪽 끝에서 갈라지는 fork, 그리고 $E_6,E_7,E_8$은 세 갈래가 한 vertex에서 만나는 형태를 갖는다.
 
 ![ADE type Dynkin diagram](/assets/images/Math/Lie_Theory/Borel_Subgroup-1.svg){:style="width:25.06em" class="invert" .align-center}
 
 ## Borel subalgebra
 
-이제 root system으로부터 자연스럽게 정의되는 Lie algebra의 subalgebra를 살펴보자. [§근계, ⁋정의 15](/ko/math/lie_theory/root_systems#def15)에서 positive root들의 모임 $$\Phi^+$$를 정의하였다. 이는 Weyl chamber를 하나 선택하는 것과 같으며, 이로부터 Lie algebra의 특별한 subalgebra를 정의할 수 있다.
+이제 root system으로부터 자연스럽게 정의되는 Lie algebra의 subalgebra를 살펴보자. [§근계, ⁋정의 15](/ko/math/lie_theory/root_systems#def15)에서 positive root들의 모임 $\Phi^+$를 정의하였다. 이는 Weyl chamber를 하나 선택하는 것과 같으며, 이로부터 Lie algebra의 특별한 subalgebra를 정의할 수 있다.
 
 ::: 정의 9
-Semisimple Lie algebra $$\mathfrak{g}$$, Cartan subalgebra $$\mathfrak{h}$$, 그리고 positive root들의 모임 $$\Phi^+$$에 대하여, *Borel subalgebra*는 다음의 subalgebra이다.
+Semisimple Lie algebra $\mathfrak{g}$, Cartan subalgebra $\mathfrak{h}$, 그리고 positive root들의 모임 $\Phi^+$에 대하여, *Borel subalgebra*는 다음의 subalgebra이다.
 
 $$\mathfrak{b}=\mathfrak{h}\oplus\bigoplus_{\alpha\in\Phi^+}\mathfrak{g}_\alpha$$
 
-이 때 $$\mathfrak{n}=\bigoplus_{\alpha>0}\mathfrak{g}_\alpha$$를 $$\mathfrak{b}$$의 *nilradical*이라 한다.
+이 때 $\mathfrak{n}=\bigoplus_{\alpha>0}\mathfrak{g}_\alpha$를 $\mathfrak{b}$의 *nilradical*이라 한다.
 :::
 
 Borel subalgebra는 positive root들에 해당하는 root space들을 모두 포함하며, Cartan subalgebra를 포함하는 가장 큰 "upper triangular" 형태의 subalgebra로 생각할 수 있다.
 
 ::: 명제 10
-Borel subalgebra $$\mathfrak{b}$$에 대하여 다음이 성립한다.
+Borel subalgebra $\mathfrak{b}$에 대하여 다음이 성립한다.
 
-1. $$\mathfrak{b}$$는 solvable이다.
-2. $$\mathfrak{b}$$는 $$\mathfrak{g}$$의 maximal solvable subalgebra이다.
-3. $$\mathfrak{b}$$의 모든 conjugate은 어떤 Borel subalgebra이다. 즉, 임의의 $$g\in G$$에 대하여 $$\Ad(g)\mathfrak{b}$$는 어떤 positive system $$\Phi'^+$$에 대한 Borel subalgebra이다.
+1. $\mathfrak{b}$는 solvable이다.
+2. $\mathfrak{b}$는 $\mathfrak{g}$의 maximal solvable subalgebra이다.
+3. $\mathfrak{b}$의 모든 conjugate은 어떤 Borel subalgebra이다. 즉, 임의의 $g\in G$에 대하여 $\Ad(g)\mathfrak{b}$는 어떤 positive system $\Phi'^+$에 대한 Borel subalgebra이다.
 :::
 ::: 증명
-(1) $$\mathfrak{b}$$의 derived series를 생각하자. $$\mathfrak{b}^{(1)}=[\mathfrak{b},\mathfrak{b}]=\mathfrak{n}$$이고, $$\mathfrak{n}$$은 nilpotent이므로 $$\mathfrak{b}$$는 solvable이다. 구체적으로 $$\mathfrak{n}$$은 strictly upper triangular matrix들의 algebra와 유사한 구조를 갖는다.
+(1) $\mathfrak{b}$의 derived series를 생각하자. $\mathfrak{b}^{(1)}=[\mathfrak{b},\mathfrak{b}]=\mathfrak{n}$이고, $\mathfrak{n}$은 nilpotent이므로 $\mathfrak{b}$는 solvable이다. 구체적으로 $\mathfrak{n}$은 strictly upper triangular matrix들의 algebra와 유사한 구조를 갖는다.
 
-(2) $$\mathfrak{b}$$를 포함하는 solvable subalgebra $$\mathfrak{s}$$가 있다 하자. Root decomposition에 의하여 $$\mathfrak{s}=\mathfrak{h}\oplus\bigoplus_{\alpha\in S}\mathfrak{g}_\alpha$$의 꼴이어야 한다. 만일 $$S$$가 어떤 positive root를 포함하지 않는다면 $$\mathfrak{s}\subset\mathfrak{b}$$이고, 만일 $$S$$가 negative root를 포함한다면 $$\mathfrak{s}$$는 더 이상 solvable이 아니다. 따라서 $$\mathfrak{s}=\mathfrak{b}$$이다.
+(2) $\mathfrak{b}$를 포함하는 solvable subalgebra $\mathfrak{s}$가 있다 하자. Root decomposition에 의하여 $\mathfrak{s}=\mathfrak{h}\oplus\bigoplus_{\alpha\in S}\mathfrak{g}_\alpha$의 꼴이어야 한다. 만일 $S$가 어떤 positive root를 포함하지 않는다면 $\mathfrak{s}\subset\mathfrak{b}$이고, 만일 $S$가 negative root를 포함한다면 $\mathfrak{s}$는 더 이상 solvable이 아니다. 따라서 $\mathfrak{s}=\mathfrak{b}$이다.
 
-(3) $$\Ad(g)\mathfrak{b}$$는 다시 maximal solvable subalgebra이므로, 위의 (2)에 의하여 어떤 positive system에 대한 Borel subalgebra이다.
+(3) $\Ad(g)\mathfrak{b}$는 다시 maximal solvable subalgebra이므로, 위의 (2)에 의하여 어떤 positive system에 대한 Borel subalgebra이다.
 :::
 
 ## Borel subgroup과 flag variety
 
-이제 Lie group 관점으로 넘어가자. Complex semisimple Lie group $$G_\mathbb{C}$$에 대하여, Borel subalgebra $$\mathfrak{b}$$에 대응하는 Lie subgroup을 생각할 수 있다.
+이제 Lie group 관점으로 넘어가자. Complex semisimple Lie group $G_\mathbb{C}$에 대하여, Borel subalgebra $\mathfrak{b}$에 대응하는 Lie subgroup을 생각할 수 있다.
 
 ::: 정의 11
-Complex semisimple Lie group $$G_\mathbb{C}$$의 *Borel subgroup<sub>보렐 부분군</sub>* $$B$$는 Borel subalgebra $$\mathfrak{b}$$에 대응하는 connected Lie subgroup이다.
+Complex semisimple Lie group $G_\mathbb{C}$의 *Borel subgroup<sub>보렐 부분군</sub>* $B$는 Borel subalgebra $\mathfrak{b}$에 대응하는 connected Lie subgroup이다.
 
 $$\mathfrak{b}=\Lie(B)$$
 :::
 
-Borel subgroup $$B$$는 $$G_\mathbb{C}$$의 maximal connected solvable subgroup이다. 이제 quotient 공간을 정의하자.
+Borel subgroup $B$는 $G_\mathbb{C}$의 maximal connected solvable subgroup이다. 이제 quotient 공간을 정의하자.
 
 ::: 정의 12
-Complex semisimple Lie group $$G_\mathbb{C}$$와 그 Borel subgroup $$B$$에 대하여, *flag variety<sub>깃발 다양체</sub>*는 다음의 homogeneous space이다.
+Complex semisimple Lie group $G_\mathbb{C}$와 그 Borel subgroup $B$에 대하여, *flag variety<sub>깃발 다양체</sub>*는 다음의 homogeneous space이다.
 
 $$\mathcal{F}=G_\mathbb{C}/B$$
 :::
 
-Flag variety라는 이름은 $$\GL(n,\mathbb{C})$$의 경우 $$\mathcal{F}$$가 $$\mathbb{C}^n$$의 complete flag들의 공간과 일치하기 때문에 붙여졌다. 일반적으로 flag variety는 projective variety이며, 이는 $$G_\mathbb{C}$$의 representation theory와 깊은 관계를 갖는다.
+Flag variety라는 이름은 $\GL(n,\mathbb{C})$의 경우 $\mathcal{F}$가 $\mathbb{C}^n$의 complete flag들의 공간과 일치하기 때문에 붙여졌다. 일반적으로 flag variety는 projective variety이며, 이는 $G_\mathbb{C}$의 representation theory와 깊은 관계를 갖는다.
 
 ::: 예시 13
-$$G_\mathbb{C}=\GL(n,\mathbb{C})$$인 경우를 생각하자. Borel subgroup $$B$$는 upper triangular matrix들의 모임이고, flag variety $$\GL(n,\mathbb{C})/B$$는 $$\mathbb{C}^n$$의 complete flag
+$G_\mathbb{C}=\GL(n,\mathbb{C})$인 경우를 생각하자. Borel subgroup $B$는 upper triangular matrix들의 모임이고, flag variety $\GL(n,\mathbb{C})/B$는 $\mathbb{C}^n$의 complete flag
 
 $$0=V_0\subset V_1\subset V_2\subset\cdots\subset V_n=\mathbb{C}^n,\qquad \dim V_i=i$$
 
-들의 공간과 일대일대응된다. 구체적으로 $$gB\in\GL(n,\mathbb{C})/B$$는 flag $$V_i=\span\{ge_1,\ldots,ge_i\}$$에 대응한다. 이 공간은 다음의 embedding
+들의 공간과 일대일대응된다. 구체적으로 $gB\in\GL(n,\mathbb{C})/B$는 flag $V_i=\span\{ge_1,\ldots,ge_i\}$에 대응한다. 이 공간은 다음의 embedding
 
 $$\GL(n,\mathbb{C})/B\hookrightarrow\mathbb{P}(\wedge^1\mathbb{C}^n)\times\mathbb{P}(\wedge^2\mathbb{C}^n)\times\cdots\times\mathbb{P}(\wedge^{n-1}\mathbb{C}^n)$$
 
@@ -195,75 +195,75 @@ $$\GL(n,\mathbb{C})/B\hookrightarrow\mathbb{P}(\wedge^1\mathbb{C}^n)\times\mathb
 
 ## Compact form과의 연결
 
-이제 compact Lie group $$G$$와 그 complexification $$G_\mathbb{C}$$ 사이의 관계를 살펴보자. 이 연결은 두 관점 — compact group의 $$G/T$$와 complex group의 $$G_\mathbb{C}/B$$ — 사이의 bridge를 제공한다.
+이제 compact Lie group $G$와 그 complexification $G_\mathbb{C}$ 사이의 관계를 살펴보자. 이 연결은 두 관점 — compact group의 $G/T$와 complex group의 $G_\mathbb{C}/B$ — 사이의 bridge를 제공한다.
 
 ::: 정의 14
-Complex Lie group $$G_\mathbb{C}$$의 *compact form<sub>콤팩트 형식</sub>*은 다음 조건을 만족하는 compact Lie group $$G$$이다.
+Complex Lie group $G_\mathbb{C}$의 *compact form<sub>콤팩트 형식</sub>*은 다음 조건을 만족하는 compact Lie group $G$이다.
 
-1. $$G$$는 $$G_\mathbb{C}$$의 Lie subgroup이다.
-2. $$G$$의 Lie algebra $$\mathfrak{g}_0$$는 $$\mathfrak{g}$$의 real form이다. 즉 $$\mathfrak{g}=\mathfrak{g}_0\otimes_\mathbb{R}\mathbb{C}$$이다.
-3. $$\mathfrak{g}_0$$ 위에서 Killing form은 negative definite이다.
+1. $G$는 $G_\mathbb{C}$의 Lie subgroup이다.
+2. $G$의 Lie algebra $\mathfrak{g}_0$는 $\mathfrak{g}$의 real form이다. 즉 $\mathfrak{g}=\mathfrak{g}_0\otimes_\mathbb{R}\mathbb{C}$이다.
+3. $\mathfrak{g}_0$ 위에서 Killing form은 negative definite이다.
 :::
 
-모든 complex semisimple Lie group은 compact form을 갖는다. 예를 들어 $$\SL(n,\mathbb{C})$$의 compact form은 $$\SU(n)$$이고, $$\SO(n,\mathbb{C})$$의 compact form은 $$\SO(n)$$이며, $$\Sp(2n,\mathbb{C})$$의 compact form은 $$\Sp(n)=\Sp(2n,\mathbb{C})\cap\operatorname{U}(2n)$$이다.
+모든 complex semisimple Lie group은 compact form을 갖는다. 예를 들어 $\SL(n,\mathbb{C})$의 compact form은 $\SU(n)$이고, $\SO(n,\mathbb{C})$의 compact form은 $\SO(n)$이며, $\Sp(2n,\mathbb{C})$의 compact form은 $\Sp(n)=\Sp(2n,\mathbb{C})\cap\operatorname{U}(2n)$이다.
 
 이제 핵심적인 결과를 서술한다.
 
 ::: 명제 15
-Compact connected Lie group $$G$$와 그 complexification $$G_\mathbb{C}$$, maximal torus $$T\subset G$$, 그리고 대응하는 Borel subgroup $$B\subset G_\mathbb{C}$$에 대하여, 다음의 inclusion
+Compact connected Lie group $G$와 그 complexification $G_\mathbb{C}$, maximal torus $T\subset G$, 그리고 대응하는 Borel subgroup $B\subset G_\mathbb{C}$에 대하여, 다음의 inclusion
 
 $$G/T\hookrightarrow G_\mathbb{C}/B$$
 
-은 homotopy equivalence이다. 특히 $$G/T$$와 $$G_\mathbb{C}/B$$는 같은 cohomology를 갖는다.
+은 homotopy equivalence이다. 특히 $G/T$와 $G_\mathbb{C}/B$는 같은 cohomology를 갖는다.
 :::
 ::: 증명
-$$G_\mathbb{C}$$의 Iwasawa decomposition $$G_\mathbb{C}=G\cdot A\cdot N$$을 생각하자. 여기서
+$G_\mathbb{C}$의 Iwasawa decomposition $G_\mathbb{C}=G\cdot A\cdot N$을 생각하자. 여기서
 
-- $$A=\exp(i\mathfrak{t})$$는 $$T$$의 split real form에 해당하는 abelian subgroup이다.
-- $$N=\exp(\mathfrak{n})$$은 $$\mathfrak{n}=\bigoplus_{\alpha>0}\mathfrak{g}_\alpha$$에 대응하는 unipotent subgroup이다.
+- $A=\exp(i\mathfrak{t})$는 $T$의 split real form에 해당하는 abelian subgroup이다.
+- $N=\exp(\mathfrak{n})$은 $\mathfrak{n}=\bigoplus_{\alpha>0}\mathfrak{g}_\alpha$에 대응하는 unipotent subgroup이다.
 
-Iwasawa decomposition은 $$G\cap (A\cdot N)=\{e\}$$ (각 원소의 분해가 유일)을 함의한다. Borel subgroup $$B$$는 complex maximal torus $$T_\mathbb{C}=T\cdot A$$를 포함하며 $$B=T\cdot A\cdot N$$으로 분해되므로, $$G\cap B = T\cdot(G\cap A\cdot N)=T$$이다. 이제 다음의 chain을 생각하자.
+Iwasawa decomposition은 $G\cap (A\cdot N)=\{e\}$ (각 원소의 분해가 유일)을 함의한다. Borel subgroup $B$는 complex maximal torus $T_\mathbb{C}=T\cdot A$를 포함하며 $B=T\cdot A\cdot N$으로 분해되므로, $G\cap B = T\cdot(G\cap A\cdot N)=T$이다. 이제 다음의 chain을 생각하자.
 
 $$G/T\hookrightarrow G_\mathbb{C}/B=(G\cdot A\cdot N)/(T\cdot A\cdot N)\cong G/(G\cap T\cdot A\cdot N)=G/T$$
 
-첫 번째 inclusion은 $$G\hookrightarrow G_\mathbb{C}$$로부터 유도되며, composition이 $$G/T$$의 identity map이므로 이 inclusion은 homotopy equivalence이다.
+첫 번째 inclusion은 $G\hookrightarrow G_\mathbb{C}$로부터 유도되며, composition이 $G/T$의 identity map이므로 이 inclusion은 homotopy equivalence이다.
 
-더 정확히는 $$A\cdot N\cong\mathbb{R}^n$$ (Euclidean space로 contractible)이므로 $$G_\mathbb{C}/B\rightarrow G/T$$는 deformation retraction을 유도한다.
+더 정확히는 $A\cdot N\cong\mathbb{R}^n$ (Euclidean space로 contractible)이므로 $G_\mathbb{C}/B\rightarrow G/T$는 deformation retraction을 유도한다.
 :::
 
-이 결과는 compact Lie group 관점에서의 $$G/T$$와 complex Lie group 관점에서의 flag variety $$G_\mathbb{C}/B$$가 본질적으로 같은 대상임을 의미한다. 특히 $$G/T$$의 위상적 성질 — cohomology, homotopy group 등 — 을 연구하기 위해 flag variety의 대수기하적 성질을 활용할 수 있다.
+이 결과는 compact Lie group 관점에서의 $G/T$와 complex Lie group 관점에서의 flag variety $G_\mathbb{C}/B$가 본질적으로 같은 대상임을 의미한다. 특히 $G/T$의 위상적 성질 — cohomology, homotopy group 등 — 을 연구하기 위해 flag variety의 대수기하적 성질을 활용할 수 있다.
 
 ## Bruhat decomposition
 
-마지막으로 $$G_\mathbb{C}$$의 중요한 분해를 소개한다. 이 분해는 flag variety의 cell structure를 이해하는 데 핵심적이다.
+마지막으로 $G_\mathbb{C}$의 중요한 분해를 소개한다. 이 분해는 flag variety의 cell structure를 이해하는 데 핵심적이다.
 
 ::: 명제 16
-Complex semisimple Lie group $$G_\mathbb{C}$$, Borel subgroup $$B$$, 그리고 Weyl group $$W$$에 대하여, 다음의 분해가 성립한다.
+Complex semisimple Lie group $G_\mathbb{C}$, Borel subgroup $B$, 그리고 Weyl group $W$에 대하여, 다음의 분해가 성립한다.
 
 $$G_\mathbb{C}=\bigsqcup_{w\in W}BwB$$
 
-이를 *Bruhat decomposition*이라 한다. 이에 대한 더 자세한 논의와 parabolic subgroup으로의 일반화는 [§Bruhat decomposition, ⁋정리 5](/ko/math/lie_theory/bruhat_decomposition#thm5)에서 다룬다. 각 double coset $$BwB$$는 $$G_\mathbb{C}$$에서 locally closed subset이며, 그 closure는 다음과 같이 주어진다.
+이를 *Bruhat decomposition*이라 한다. 이에 대한 더 자세한 논의와 parabolic subgroup으로의 일반화는 [§Bruhat decomposition, ⁋정리 5](/ko/math/lie_theory/bruhat_decomposition#thm5)에서 다룬다. 각 double coset $BwB$는 $G_\mathbb{C}$에서 locally closed subset이며, 그 closure는 다음과 같이 주어진다.
 
 $$\overline{BwB}=\bigcup_{v\leq w}BvB$$
 
-여기서 $$\leq$$는 Weyl group 위의 Bruhat order이다.
+여기서 $\leq$는 Weyl group 위의 Bruhat order이다.
 :::
 ::: 증명
-우선 $$G_\mathbb{C}=\bigcup_{w\in W}BwB$$임을 보이자. 임의의 $$g\in G_\mathbb{C}$$에 대하여, $$g^{-1}B\cap T\neq\emptyset$$인지 확인한 후, Weyl group의 원소를 이용하여 $$g$$를 적절한 double coset으로 보낼 수 있다.
+우선 $G_\mathbb{C}=\bigcup_{w\in W}BwB$임을 보이자. 임의의 $g\in G_\mathbb{C}$에 대하여, $g^{-1}B\cap T\neq\emptyset$인지 확인한 후, Weyl group의 원소를 이용하여 $g$를 적절한 double coset으로 보낼 수 있다.
 
-Disjointness를 보기 위해, $$BwB=BvB$$라 하자. 그럼 $$wBw^{-1}=vBv^{-1}$$이고, 이로부터 $$w^{-1}v\in N(T)$$이며 $$w^{-1}v$$는 $$B$$를 normalize한다. 그런데 $$B\cap N(T)=T$$이므로 $$w^{-1}v\in T$$이고, 따라서 $$w=v$$ in $$W$$이다.
+Disjointness를 보기 위해, $BwB=BvB$라 하자. 그럼 $wBw^{-1}=vBv^{-1}$이고, 이로부터 $w^{-1}v\in N(T)$이며 $w^{-1}v$는 $B$를 normalize한다. 그런데 $B\cap N(T)=T$이므로 $w^{-1}v\in T$이고, 따라서 $w=v$ in $W$이다.
 
 Closure에 대한 진술은 Bruhat order의 정의로부터 따라나온다.
 :::
 
-Bruhat decomposition은 flag variety $$G_\mathbb{C}/B$$의 cell decomposition을 제공한다. 각 $$w\in W$$에 대하여 $$X_w=BwB/B$$는 dimension $$\ell(w)$$의 affine space와 동형이고, 이들을 모으면 $$G_\mathbb{C}/B$$의 전체를 덮는다. 여기서 $$\ell(w)$$는 $$w$$의 *length*, 즉 $$w$$를 simple reflection들의 곱으로 표현할 때 필요한 최소 개수이다.
+Bruhat decomposition은 flag variety $G_\mathbb{C}/B$의 cell decomposition을 제공한다. 각 $w\in W$에 대하여 $X_w=BwB/B$는 dimension $\ell(w)$의 affine space와 동형이고, 이들을 모으면 $G_\mathbb{C}/B$의 전체를 덮는다. 여기서 $\ell(w)$는 $w$의 *length*, 즉 $w$를 simple reflection들의 곱으로 표현할 때 필요한 최소 개수이다.
 
 ::: 예시 17
-$$G_\mathbb{C}=\GL(n,\mathbb{C})$$인 경우, Weyl group $$W\cong S_n$$이고 각 permutation $$\sigma\in S_n$$에 대하여 $$\ell(\sigma)$$는 inversion의 개수이다. 이 분해의 구체적 모습과 Gauss elimination과의 관련은 [§Bruhat decomposition, ⁋예시 7](/ko/math/lie_theory/bruhat_decomposition#ex7)에서 다룬다.
+$G_\mathbb{C}=\GL(n,\mathbb{C})$인 경우, Weyl group $W\cong S_n$이고 각 permutation $\sigma\in S_n$에 대하여 $\ell(\sigma)$는 inversion의 개수이다. 이 분해의 구체적 모습과 Gauss elimination과의 관련은 [§Bruhat decomposition, ⁋예시 7](/ko/math/lie_theory/bruhat_decomposition#ex7)에서 다룬다.
 
-구체적으로 $$\sigma$$의 inversion은 $$i<j$$이면서 $$\sigma(i)>\sigma(j)$$인 쌍 $$(i,j)$$의 개수이다. Bruhat decomposition에 의해 $$\GL(n,\mathbb{C})/B$$는 $$0$$차원 cell (identity permutation, inversion $$0$$개)부터 $$n(n-1)/2$$차원 cell (reverse permutation, inversion 최대)까지의 cell decomposition를 갖는다.
+구체적으로 $\sigma$의 inversion은 $i<j$이면서 $\sigma(i)>\sigma(j)$인 쌍 $(i,j)$의 개수이다. Bruhat decomposition에 의해 $\GL(n,\mathbb{C})/B$는 $0$차원 cell (identity permutation, inversion $0$개)부터 $n(n-1)/2$차원 cell (reverse permutation, inversion 최대)까지의 cell decomposition을 갖는다.
 
-이 cell decomposition로부터 $$\GL(n,\mathbb{C})/B$$의 cohomology를 계산할 수 있으며, 그 Betti number는 Weyl group의 Bruhat order에 의해 결정된다.
+이 cell decomposition으로부터 $\GL(n,\mathbb{C})/B$의 cohomology를 계산할 수 있으며, 그 Betti number는 Weyl group의 Bruhat order에 의해 결정된다.
 :::
 
 ---

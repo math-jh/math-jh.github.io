@@ -38,8 +38,8 @@ $$L_V:V\rightarrow V,\qquad L_W:W\rightarrow W$$
 ::: 명제 2
 Representation $V, W$에 대해 다음이 성립한다. 
 
-1. $$\rchi_{V\oplus W}=\rchi_V\oplus \rchi_W$$
-2. $$\rchi_{V\otimes W}=\rchi_V\rchi_W$$
+1. $\rchi_{V\oplus W}=\rchi_V\oplus \rchi_W$
+2. $\rchi_{V\otimes W}=\rchi_V\rchi_W$
 3. $\rchi_{V^\ast}=\overline{\rchi}_V$
 :::
 
@@ -60,7 +60,7 @@ $$\rchi_\rho(hgh^{-1})=\tr(\rho(h)\rho(g)\rho(h)^{-1})=\tr(\rho(g))=\rchi_\rho(g
 가 성립하므로 ([\[선형대수학\] §특성다항식, ⁋따름정리 5](/ko/math/linear_algebra/characteristic_polynomial#cor5)), 우리는 이로부터 $\rchi_\rho$가 $G$의 *conjugacy class*들 위에서 상수임을 안다. 이러한 함수들에도 이름이 있다. 
 
 ::: 정의 3
-함수 $\rchi:G\rightarrow\mathbb{C}$가 *class function<sub>유함수</sub>*이라는 것은 $\rchi(hgh^{-1})=f(g)$가 모든 $g,h\in G$에 대해 성립하는 것이다. $G$ 위에 정의된 모든 class function들의 모임을 $\mathbb{C}_\class(G)$으로 적는다. 
+함수 $\rchi:G\rightarrow\mathbb{C}$가 *class function<sub>유함수</sub>*이라는 것은 $\rchi(hgh^{-1})=\rchi(g)$가 모든 $g,h\in G$에 대해 성립하는 것이다. $G$ 위에 정의된 모든 class function들의 모임을 $\mathbb{C}_\class(G)$으로 적는다. 
 :::
 
 정의에 의해 class function들은 각 conjugacy class들 위에서의 함수값에 의해 결정되며, 따라서 벡터공간으로서 $\mathbb{C}_\class(G)$는 $G$의 conjugacy class의 개수만큼의 차원을 갖는다. 한편 앞선 글에서 우리가 중요하게 생각했던 아이디어는 어떠한 값이 주어졌을 때, 이를 $G$ 전체에 대하여 평균내주어 $G$-invariant한 값을 얻어낼 수 있다는 것이었는데, 이를 이용하면 $\mathbb{C}_\class(G)$ 위에 다음과 같은 정의를 해줄 수 있다. 
@@ -230,7 +230,7 @@ $$\rho_0: S_3 \rightarrow \Aut(\mathbb{C})\qquad \sigma\mapsto \id_\mathbb{C}$$
 
 $$\rho_\sgn: S_3 \rightarrow \Aut(\mathbb{C})\qquad \sigma\mapsto \sgn(\sigma)\id_\mathbb{C}$$
 
-이 $\sigma$의 두 irreducible representation이 되는 것은 자명하다. 한편 $S_3$은 $\mathbb{C}^3$ 위에 permutation을 통해
+이 $S_3$의 두 irreducible representation이 되는 것은 자명하다. 한편 $S_3$은 $\mathbb{C}^3$ 위에 permutation을 통해
 
 $$\sigma\cdot(x_1,x_2,x_3)=(x_{\sigma(1)},x_{\sigma(2)},x_{\sigma(3)})$$
 
@@ -261,7 +261,7 @@ $$\{e_1=(1,0,-1), e_2=(0,1,-1)\}$$
 
 을 택하자. 그럼 $(\;)$는 이 basis를 건드리지 않으므로 당연히 $\rchi_\std$는 $A_1$ 위에서 값 $2$를 갖는다. $A_2$ 위에서는, 가령, $(1\;2)$를 작용하면 이는 basis를 서로 바꿔주므로 다음 행렬
 
-$$\rho_\std((1\;2))\begin{pmatrix}0&1\\1&0\end{pmatrix}$$
+$$\rho_\std((1\;2))=\begin{pmatrix}0&1\\1&0\end{pmatrix}$$
 
 에 대응되며 그 trace는 $0$이다. 참고로 만일 $(1\;3)$이 이 basis 위에 작용한다면, $e_1$은 $-e_1$으로, $e_2$는 $(-1,1,0)=-e_1+e_2$로 옮겨지므로 다음 행렬
 

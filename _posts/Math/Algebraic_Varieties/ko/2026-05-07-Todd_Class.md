@@ -24,7 +24,7 @@ $$\operatorname{ch}(E)=\sum_{i=1}^r e^{x_i}$$
 으로 정의된다. 여기서 $e^{x_i}$는 $1+x_i+\frac{x_i^2}{2!}+\frac{x_i^3}{3!}+\cdots$의 형태로 전개되는 formal power series이다.
 :::
 
-Chern character는 Chern roots에 대한 대칭 함수이므로, Chern class $c_i(E)$들의 다항식으로 표현할 수 있다. 실제로 $e^{x_i}$를 전개하고 $k$차 동차 성분을 모으면,
+Chern character는 Chern roots에 대한 대칭 함수이므로, Chern class $c_i(E)$들의 다항식으로 표현할 수 있다. 실제로 $e^{x_i}$를 전개하고 $k$차 homogeneous 성분을 모으면,
 
 $$\operatorname{ch}(E)=\operatorname{rk}(E)+c_1(E)+\frac{c_1(E)^2-2c_2(E)}{2}+\frac{c_1(E)^3-3c_1(E)c_2(E)+3c_3(E)}{6}+\cdots$$
 
@@ -102,7 +102,7 @@ $$\operatorname{td}(E)=\prod_i \frac{x_i'}{1-e^{-x_i'}}\cdot\prod_j \frac{x_j''}
 가 성립한다. 직접합의 경우 $0\rightarrow E\rightarrow E\oplus F\rightarrow F\rightarrow 0$이 exact sequence이므로 동일한 결론이 따른다. $\square$
 :::
 
-Smooth projective variety $X$에 대하여, 그 **Todd class** $\operatorname{td}(X)$는 tangent bundle $T_X$의 Todd class로 정의한다. 즉 $\operatorname{td}(X)=\operatorname{td}(T_X)$이다. HRR 정리의 우변은 $\operatorname{ch}(E)\cdot\operatorname{td}(T_X)$이며, 이는 Chow ring (또는 cohomology ring) 위에서의 곱셈이다. $X$가 $n$-dimensional일 때, 적분 $\int_X$는 $A^n(X)\otimes\mathbb{Q}$ (또는 $H^{2n}(X,\mathbb{Q})$) 위의 degree map을 의미하므로, HRR 공식의 우변은 $\operatorname{ch}(E)\cdot\operatorname{td}(T_X)$의 $n$-차 동차 성분을 취한 후 적분한 값이다.
+Smooth projective variety $X$에 대하여, 그 **Todd class** $\operatorname{td}(X)$는 tangent bundle $T_X$의 Todd class로 정의한다. 즉 $\operatorname{td}(X)=\operatorname{td}(T_X)$이다. HRR 정리의 우변은 $\operatorname{ch}(E)\cdot\operatorname{td}(T_X)$이며, 이는 Chow ring (또는 cohomology ring) 위에서의 곱셈이다. $X$가 $n$-dimensional일 때, 적분 $\int_X$는 $A^n(X)\otimes\mathbb{Q}$ (또는 $H^{2n}(X,\mathbb{Q})$) 위의 degree map을 의미하므로, HRR 공식의 우변은 $\operatorname{ch}(E)\cdot\operatorname{td}(T_X)$의 $n$-차 homogeneous 성분을 취한 후 적분한 값이다.
 
 이제 저차원의 구체적인 예시를 살펴본다.
 
@@ -147,7 +147,7 @@ $$0\longrightarrow\mathscr{O}_{\mathbb{P}^n}\longrightarrow\mathscr{O}_{\mathbb{
 
 $$\operatorname{td}(T_{\mathbb{P}^n})=\left(\frac{h}{1-e^{-h}}\right)^{n+1}$$
 
-이다. 이는 $\mathbb{P}^n$의 Chow ring $A^\bullet(\mathbb{P}^n)\cong\mathbb{Z}[h]/(h^{n+1})$ 위에서, $h^{n+1}=0$이므로 적당한 차수에서 truncate된 formal power series로 이해된다. 예를 들어 $n=2$의 경우,
+이다. 이는 $\mathbb{P}^n$의 Chow ring $A^\bullet(\mathbb{P}^n)\cong\mathbb{Z}[h]/(h^{n+1})$ 위에서, $h^{n+1}=0$이므로 적당한 degree에서 truncate된 formal power series로 이해된다. 예를 들어 $n=2$의 경우,
 
 $$\left(\frac{h}{1-e^{-h}}\right)^3=\left(1+\frac{h}{2}+\frac{h^2}{12}\right)^3=1+\frac{3h}{2}+h^2$$
 

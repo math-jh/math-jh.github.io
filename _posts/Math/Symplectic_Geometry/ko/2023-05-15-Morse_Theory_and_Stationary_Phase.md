@@ -19,7 +19,7 @@ published: false
 
 $$\mathcal{I}(z) = \int_\gamma e^{W(x)/z}\,\omega$$
 
-의 $z\rightarrow 0$ 점근행동이 자주 등장하며, 그 점근치가 phase function $W$의 임계점에서의 국소 데이터로 환원된다는 사실은 양자역학의 semiclassical limit, partial differential equation의 WKB 해석, singularity theory 등 다양한 맥락에서 핵심적이다. 이러한 환원은 두 개의 기초 위에 서 있다. 첫째는 임계점 근방에서 phase를 표준형으로 환원하는 *Morse lemma*이며, 둘째는 Gaussian integral의 다변수 일반화로 얻어지는 *stationary phase formula*이다. 또한 적분 경로의 선택을 통제하는 *Lefschetz thimble*의 구성도 본질적으로 Morse 이론의 gradient flow에 의해 주어진다. 본 글에서는 이 세 도구를 차례로 정리한다.
+의 $z\rightarrow 0$ 점근행동이 자주 등장하며, 그 점근치가 phase function $W$의 critical point에서의 국소 데이터로 환원된다는 사실은 양자역학의 semiclassical limit, partial differential equation의 WKB 해석, singularity theory 등 다양한 맥락에서 핵심적이다. 이러한 환원은 두 개의 기초 위에 서 있다. 첫째는 critical point 근방에서 phase를 표준형으로 환원하는 *Morse lemma*이며, 둘째는 Gaussian integral의 다변수 일반화로 얻어지는 *stationary phase formula*이다. 또한 적분 경로의 선택을 통제하는 *Lefschetz thimble*의 구성도 본질적으로 Morse 이론의 gradient flow에 의해 주어진다. 본 글에서는 이 세 도구를 차례로 정리한다.
 
 ## Morse function과 임계점
 
@@ -29,10 +29,10 @@ $$\mathcal{I}(z) = \int_\gamma e^{W(x)/z}\,\omega$$
 Smooth manifold ([\[미분다양체\] §미분다양체, ⁋정의 1](/ko/math/manifolds/smooth_manifolds#def1)) $M$과 smooth function $f:M\rightarrow\mathbb{R}$이 주어졌다 하자. 점 $p\in M$이 $f$의 *critical point<sub>임계점</sub>*라는 것은 differential ([\[미분다양체\] §미분사상, ⁋정의 7](/ko/math/manifolds/differentials#def7)) $df_p:T_pM\rightarrow\mathbb{R}$이 zero map인 것을 뜻한다. 여기서 $T_pM$은 $p$에서의 tangent space이다 ([\[미분다양체\] §접공간, ⁋정의 3](/ko/math/manifolds/tangent_space#def3)).
 :::
 
-좌표 $(x_1,\ldots,x_n)$을 점 $p$ 근방에 잡으면 위 조건은 $\partial f/\partial x_i(p)=0$이 모든 $i$에 대해 성립한다는 것과 동치이다. 임계점에서는 일차 정보가 사라지므로, 함수의 국소적 형상은 이차 정보, 즉 Hessian이 결정한다.
+좌표 $(x_1,\ldots,x_n)$을 점 $p$ 근방에 잡으면 위 조건은 $\partial f/\partial x_i(p)=0$이 모든 $i$에 대해 성립한다는 것과 동치이다. Critical point에서는 일차 정보가 사라지므로, 함수의 국소적 형상은 이차 정보, 즉 Hessian이 결정한다.
 
 ::: 정의 2
-$f:M\rightarrow\mathbb{R}$의 임계점 $p$에서의 *Hessian<sub>헤시안</sub>* $\operatorname{Hess}_p(f)$는 다음의 식
+$f:M\rightarrow\mathbb{R}$의 critical point $p$에서의 *Hessian<sub>헤시안</sub>* $\operatorname{Hess}_p(f)$는 다음의 식
 
 $$\operatorname{Hess}_p(f)(X,Y) = X_p(\tilde Y f)$$
 
@@ -120,7 +120,7 @@ $f$의 non-degenerate critical point는 고립되어 있다. 특히 compact mani
 :::
 
 ::: 증명
-[정리 6](#thm6)의 표준형 $f(y)=f(p)-y_1^2-\cdots-y_{\lambda_p}^2+y_{\lambda_p+1}^2+\cdots+y_n^2$에서 $df(y)=(-2y_1,\ldots,-2y_{\lambda_p},2y_{\lambda_p+1},\ldots,2y_n)$이므로, $y=0$ 외에는 critical point가 존재하지 않는다. 즉 $p$의 적당한 근방에는 $p$ 외의 critical point가 없으므로 $p$는 고립된 critical point이다. $M$이 compact이면 임계점 집합이 closed이며 isolated point들로 구성되므로 유한집합이다.
+[정리 6](#thm6)의 표준형 $f(y)=f(p)-y_1^2-\cdots-y_{\lambda_p}^2+y_{\lambda_p+1}^2+\cdots+y_n^2$에서 $df(y)=(-2y_1,\ldots,-2y_{\lambda_p},2y_{\lambda_p+1},\ldots,2y_n)$이므로, $y=0$ 외에는 critical point가 존재하지 않는다. 즉 $p$의 적당한 근방에는 $p$ 외의 critical point가 없으므로 $p$는 isolated critical point이다. $M$이 compact이면 critical point 집합이 closed이며 isolated point들로 구성되므로 유한집합이다.
 :::
 
 두 가지 표준적인 예시를 살펴본다.
@@ -130,7 +130,7 @@ $f$의 non-degenerate critical point는 고립되어 있다. 특히 compact mani
 :::
 
 ::: 예시 9
-$\mathbb{R}^3$에 표준적으로 들어가 있는 토러스 $T^2$ 위의 *height function* $h:T^2\rightarrow\mathbb{R}$, $h(x,y,z)=z$를 생각하자. 토러스를 도넛 모양으로 세워두면 $h$는 정확히 네 개의 critical point를 가진다: 최고점($\lambda=2$), 안쪽 위 안장점($\lambda=1$), 안쪽 아래 안장점($\lambda=1$), 최저점($\lambda=0$). Hessian 계산으로 이들이 모두 비퇴화임을 확인할 수 있으므로 $h$는 Morse function이며, Morse 부등식
+$\mathbb{R}^3$에 표준적으로 들어가 있는 토러스 $T^2$ 위의 *height function* $h:T^2\rightarrow\mathbb{R}$, $h(x,y,z)=z$를 생각하자. 토러스를 도넛 모양으로 세워두면 $h$는 정확히 네 개의 critical point를 가진다: 최고점($\lambda=2$), 안쪽 위 안장점($\lambda=1$), 안쪽 아래 안장점($\lambda=1$), 최저점($\lambda=0$). Hessian 계산으로 이들이 모두 nondegenerate함을 확인할 수 있으므로 $h$는 Morse function이며, Morse 부등식
 
 $$\sum_p (-1)^{\lambda_p} = \chi(T^2) = 0$$
 
@@ -245,12 +245,12 @@ $$\int_\Gamma e^{W(x)/\hbar}\,\omega$$
 
 $$h(x) = -\operatorname{Re}(W(x)/\hbar)$$
 
-라 하면, $h$는 smooth real-valued function이며, $W$의 holomorphic critical point $p$ (즉 $dW(p)=0$) 가 정확히 $h$의 critical point에 대응한다. 또한 $W$가 $p$에서 non-degenerate, 즉 complex Hessian이 가역이라는 조건은 $h$가 $p$에서 비퇴화 critical point를 가짐과 동치이다. 단 그 *Morse index*는 항상 $n$ (= 절반 차원)이며, 이는 아래 [명제 15](#prop15)에서 정식으로 보인다.
+라 하면, $h$는 smooth real-valued function이며, $W$의 holomorphic critical point $p$ (즉 $dW(p)=0$) 가 정확히 $h$의 critical point에 대응한다. 또한 $W$가 $p$에서 non-degenerate, 즉 complex Hessian이 가역이라는 조건은 $h$가 $p$에서 nondegenerate critical point를 가짐과 동치이다. 단 그 *Morse index*는 항상 $n$ (= 절반 차원)이며, 이는 아래 [명제 15](#prop15)에서 정식으로 보인다.
 
 $X$ 위에 적당한 Kähler metric을 고정하고 (실 부분이 Riemannian metric을 이루므로 [\[리만기하학\] §리만 계량](/ko/math/riemannian_geometry/Riemannian_metric)의 일반론에 따라 gradient vector field가 정의된다) $h$의 gradient flow를 생각하자.
 
 ::: 정의 14
-$W$의 비퇴화 critical point $p$에 대하여, $h=-\operatorname{Re}(W/\hbar)$의 *Lefschetz thimble<sub>레프셰츠 팀블</sub>* $\Gamma_p$는 $h$의 negative gradient flow
+$W$의 nondegenerate critical point $p$에 대하여, $h=-\operatorname{Re}(W/\hbar)$의 *Lefschetz thimble<sub>레프셰츠 팀블</sub>* $\Gamma_p$는 $h$의 negative gradient flow
 
 $$\frac{dx}{dt} = -\nabla h(x)$$
 
@@ -290,7 +290,7 @@ $$\mathcal{I}_p(\hbar) = \int_{\Gamma_p} e^{W(x)/\hbar}\,\omega$$
 각 thimble $\Gamma_p$ 위에서 $\hbar\rightarrow 0$ 점근을 계산하면 [정리 10](#thm10)을 holomorphic 세팅으로 확장한 다음의 진술을 얻는다.
 
 ::: 명제 16
-$W$가 비퇴화 critical point $p$를 가질 때, $\hbar\rightarrow 0^+$에서
+$W$가 nondegenerate critical point $p$를 가질 때, $\hbar\rightarrow 0^+$에서
 
 $$\int_{\Gamma_p} e^{W(x)/\hbar}\,\omega = (2\pi\hbar)^{n/2}\,\frac{e^{W(p)/\hbar}}{\sqrt{\det\operatorname{Hess}_p(W)}}\bigl(\alpha(p) + O(\hbar)\bigr)$$
 

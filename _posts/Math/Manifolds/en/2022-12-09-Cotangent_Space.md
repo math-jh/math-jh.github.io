@@ -44,7 +44,7 @@ $$\begin{aligned}
             v_L(\mathbf{f}\cdot\mathbf{g})&=L((\mathbf{fg}-\mathbf{f(p)g(p)})+\mathfrak{m}_p^2)\\
             &=L(((\mathbf{f}-\mathbf{f(p)})(\mathbf{g}-\mathbf{g(p)})+\mathbf{f(p)}(\mathbf{g}-\mathbf{g(p)})+(\mathbf{f}-\mathbf{f(p)})\mathbf{g(p)})+\mathfrak{m}_p^2)\\
             &=\mathbf{f}(p)L((\mathbf{g}-\mathbf{g(p)})+\mathfrak{m}_p^2)+\mathbf{g}(p)L((\mathbf{f}-\mathbf{f(p)})+\mathfrak{m}_p^2)\\
-            &=\mathbf{f}(p)+v_L(\mathbf{g})+\mathbf{g}(p)v_L(\mathbf{f}).
+            &=\mathbf{f}(p)v_L(\mathbf{g})+\mathbf{g}(p)v_L(\mathbf{f}).
         \end{aligned}
 $$
 
@@ -94,7 +94,7 @@ $$\sum_{i=1}^m a_i (x^i\circ\varphi^{-1})=0\mod \mathfrak{m}_0^2$$
 
 $$\sum_{i=1}^m a_i\mathbf{r}^i=0\mod \mathfrak{m}^2_0$$
 
-We have not yet defined $\partial/\partial x^i$, but we are well acquainted with directional derivatives in Euclidean space. Applying $\partial/\partial r^j$ to both sides of the above equation, the $0$ on the right-hand side (that is, some element of $\mathfrak{n}^2$) becomes $0$ by the Leibniz rule, and hence this equation yields
+We have not yet defined $\partial/\partial x^i$, but we are well acquainted with directional derivatives in Euclidean space. Applying $\partial/\partial r^j$ to both sides of the above equation, the $0$ on the right-hand side (that is, some element of $\mathfrak{m}_0^2$) becomes $0$ by the Leibniz rule, and hence this equation yields
 
 $$a_j=\frac{\partial}{\partial r^j}\bigg\vert_0\sum a_i r^i=0$$
 

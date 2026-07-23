@@ -19,38 +19,38 @@ drift_needed: true
 
 ## Leray–Hirsch 정리
 
-[§코호몰로지, ⁋따름정리 10](/ko/math/algebraic_topology/cohomology#cor10)은 곱공간 $X\times Y$의 cohomology를 두 인자의 cohomology의 tensor product로 계산해 주었다. Fiber bundle $\pi:E\rightarrow B$는 밑공간 $B$ 위에 fiber $F$를 비틀어 붙인 뒤틀린 곱으로, 국소적으로는 $U\times F$의 꼴이지만 전역적으로는 그렇지 않을 수 있다. 그럼에도 전공간의 cohomology $H^\bullet(E)$가 곱공간에서와 마찬가지로 밑공간과 fiber의 cohomology만으로 결정되는 경우가 있는데, Leray–Hirsch 정리는 이를 보장하는 충분조건을 준다. 그 조건은 fiber의 cohomology를 이루는 class들이 전공간 위의 전역적인 class의 제한으로 실현되는 것이다.
+[§코호몰로지, ⁋따름정리 10](/ko/math/algebraic_topology/cohomology#cor10)은 곱공간 $X\times Y$의 cohomology를 두 인자의 cohomology의 tensor product로 계산해 주었다. Fiber bundle $\pi:E\rightarrow B$는 밑공간 $B$ 위에 fiber $F$를 비틀어 붙인 뒤틀린 곱으로, 국소적으로는 $U\times F$의 꼴이지만 전역적으로는 그렇지 않을 수 있다. 그럼에도 전공간의 cohomology $H^\bullet(E)$가 곱공간에서와 마찬가지로 밑공간과 fiber의 cohomology만으로 결정되는 경우가 있는데, Leray–Hirsch 정리는 이를 보장하는 충분조건을 준다. 그 조건은 fiber의 cohomology를 이루는 class들이 전공간 위의 전역적인 class의 restriction으로 실현되는 것이다.
 
 우리가 이 정리를 사용하는 주된 목적은 splitting principle이다. [§벡터다발의 특성류, ⁋예시 8](/ko/math/algebraic_topology/characteristic_classes#ex8)에서 보았듯 line bundle의 Chern class는 first Chern class 하나로 완전히 통제되고 Whitney 합에 대해서도 단순하게 행동하므로, rank가 높은 bundle의 Chern class 계산은 그 bundle을 line bundle들의 합으로 쪼갤 수 있을 때 크게 간단해진다. 임의의 vector bundle이 실제로 line bundle들의 합인 것은 아니지만, Leray–Hirsch 정리를 아래에서 구성할 projective bundle에 적용하면 cohomology 계산에 관한 한 언제나 그렇게 취급해도 좋다는 것이 splitting principle의 내용이다.
 
 여기서 fiber bundle이란 [§호모토피의 계산, ⁋참고 5](/ko/math/algebraic_topology/fibrations#rmk5)에서와 같이 밑공간이 열린집합들로 덮여 각 $U$ 위에서 $\pi^{-1}(U)$가 $U\times F$와 자연스럽게 homeomorphic한, 국소적으로 자명한 사상을 뜻한다. 이러한 $U$를 *trivializing open*이라 부르자.
 
 ::: 정리 1 (Leray–Hirsch)
-Paracompact 밑공간 $B$ 위의 fiber bundle $\pi:E\rightarrow B$의 fiber $F$에 대하여, $H^\bullet(F;\mathbb{Z})$가 유한 rank의 자유 abelian group이라 하자. 만일 class들 $a_1,\ldots,a_r\in H^\bullet(E;\mathbb{Z})$이 존재하여 각 fiber로의 제한 $a_1\vert_F,\ldots,a_r\vert_F$이 $H^\bullet(F;\mathbb{Z})$의 기저를 이룬다면, $H^\bullet(E;\mathbb{Z})$은 $a_1,\ldots,a_r$을 기저로 하는 $H^\bullet(B;\mathbb{Z})$ 위의 자유가군이다.
+Paracompact 밑공간 $B$ 위의 fiber bundle $\pi:E\rightarrow B$의 fiber $F$에 대하여, $H^\bullet(F;\mathbb{Z})$가 유한 rank의 자유 abelian group이라 하자. 만일 class들 $a_1,\ldots,a_r\in H^\bullet(E;\mathbb{Z})$이 존재하여 각 fiber로의 restriction $a_1\vert_F,\ldots,a_r\vert_F$이 $H^\bullet(F;\mathbb{Z})$의 basis를 이룬다면, $H^\bullet(E;\mathbb{Z})$은 $a_1,\ldots,a_r$을 basis로 하는 $H^\bullet(B;\mathbb{Z})$ 위의 자유가군이다.
 :::
 
-즉, 각 원소 $\xi\in H^\bullet(E)$는 $\xi=\sum_j\pi^\ast(\alpha_j)\smile a_j$의 꼴로 밑공간의 class $\alpha_j\in H^\bullet(B)$을 계수로 하여 유일하게 적힌다. 이를 사상의 언어로 다시 적으면, $a_j\vert_F$이 $H^\bullet(F)$의 기저이므로 이들로 $H^\bullet(F)$를 식별하여 얻는
+즉, 각 원소 $\xi\in H^\bullet(E)$는 $\xi=\sum_j\pi^\ast(\alpha_j)\smile a_j$의 꼴로 밑공간의 class $\alpha_j\in H^\bullet(B)$을 계수로 하여 유일하게 적힌다. 이를 morphism의 언어로 다시 적으면, $a_j\vert_F$이 $H^\bullet(F)$의 basis이므로 이들로 $H^\bullet(F)$를 식별하여 얻는
 
 $$\Phi:H^\bullet(B)\otimes_{\mathbb{Z}}H^\bullet(F)\rightarrow H^\bullet(E),\qquad \Phi\bigl(\alpha\otimes(a_j\vert_F)\bigr)=\pi^\ast\alpha\smile a_j$$
 
 가 $H^\bullet(B)$-가군의 isomorphism이라는 것이다.
 
 ::: 증명
-열린집합 $U\subseteq B$에 대하여 $E_U=\pi^{-1}(U)$라 쓰고, 같은 식으로 정의된 사상
+열린집합 $U\subseteq B$에 대하여 $E_U=\pi^{-1}(U)$라 쓰고, 같은 식으로 정의된 morphism
 
 $$\Phi_U:H^\bullet(U)\otimes H^\bullet(F)\rightarrow H^\bullet(E_U),\qquad \Phi_U\bigl(\alpha\otimes(a_j\vert_F)\bigr)=\pi^\ast\alpha\smile a_j\vert_{E_U}$$
 
-을 생각하자. $a_j\vert_{E_U}$은 여전히 각 fiber로 제한하면 기저를 주므로, 우리가 보일 것은 $U=B$에서 $\Phi_B=\Phi$가 isomorphism이라는 것이다. 이를 $B$의 유한 trivializing covering의 크기에 대한 귀납으로 보인다.
+을 생각하자. $a_j\vert_{E_U}$은 여전히 각 fiber로 제한하면 basis를 주므로, 우리가 보일 것은 $U=B$에서 $\Phi_B=\Phi$가 isomorphism이라는 것이다. 이를 $B$의 유한 trivializing covering의 크기에 대한 귀납으로 보인다.
 
 우선 $U$가 하나의 trivializing open인 경우, $E_U\cong U\times F$이고 $\pi$는 projection이 된다. $H^\bullet(F)$가 자유이므로 [§코호몰로지, ⁋따름정리 10](/ko/math/algebraic_topology/cohomology#cor10)에 의하여
 
 $$H^\bullet(U\times F)\cong H^\bullet(U)\otimes H^\bullet(F)$$
 
-이 성립하고, 따라서 우변은 $\{1\times(a_k\vert_F)\}_k$을 기저로 하는 유한 rank의 자유 $H^\bullet(U)$-가군이다. 좌변 $H^\bullet(U)\otimes H^\bullet(F)$ 또한 $\{1\otimes(a_k\vert_F)\}_k$을 기저로 하는 같은 rank의 자유 $H^\bullet(U)$-가군이며, $\Phi_U$는 이를 원소 $a_j\vert_{E_U}\in H^\bullet(U\times F)$들로 보낸다. 그런데 $a_j\vert_{E_U}$을 한 fiber $\{u\}\times F$로 제한하면 $a_j\vert_F$이 되므로, Künneth 분해에서
+이 성립하고, 따라서 우변은 $\{1\times(a_k\vert_F)\}_k$을 basis로 하는 유한 rank의 자유 $H^\bullet(U)$-가군이다. 좌변 $H^\bullet(U)\otimes H^\bullet(F)$ 또한 $\{1\otimes(a_k\vert_F)\}_k$을 basis로 하는 같은 rank의 자유 $H^\bullet(U)$-가군이며, $\Phi_U$는 이를 원소 $a_j\vert_{E_U}\in H^\bullet(U\times F)$들로 보낸다. 그런데 $a_j\vert_{E_U}$을 한 fiber $\{u\}\times F$로 제한하면 $a_j\vert_F$이 되므로, Künneth 분해에서
 
 $$a_j\vert_{E_U}=1\times(a_j\vert_F)+(\text{$U$의 차수가 양인 항들})$$
 
-이 성립한다. 곧 기저 $\{1\times(a_k\vert_F)\}$에 대한 $\{a_j\vert_{E_U}\}$의 전이행렬은 대각성분이 $1$이고 밑공간 차수를 올리는 방향으로만 어긋나는 삼각행렬이므로 $H^\bullet(U)$ 위에서 가역이다. 따라서 $\Phi_U$는 isomorphism이다.
+이 성립한다. 곧 basis $\{1\times(a_k\vert_F)\}$에 대한 $\{a_j\vert_{E_U}\}$의 전이행렬은 대각성분이 $1$이고 밑공간 degree를 올리는 방향으로만 어긋나는 삼각행렬이므로 $H^\bullet(U)$ 위에서 가역이다. 따라서 $\Phi_U$는 isomorphism이다.
 
 다음으로 $U=U'\cup U''$이고 $\Phi_{U'}$, $\Phi_{U''}$, $\Phi_{U'\cap U''}$이 모두 isomorphism이라 하자. $E_{U'\cup U''}=E_{U'}\cup E_{U''}$이고 $E_{U'}\cap E_{U''}=E_{U'\cap U''}$이므로, 밑공간과 전공간에서 [§코호몰로지, ⁋명제 6](/ko/math/algebraic_topology/cohomology#prop6)이 주는 두 exact sequence가 얻어진다. 앞의 exact sequence를 자유 abelian group $H^\bullet(F)$와 tensor하면 (자유이므로 완전성이 보존된다) 각 항이 $H^\bullet(U)\otimes H^\bullet(F)$, $\bigl(H^\bullet(U')\oplus H^\bullet(U'')\bigr)\otimes H^\bullet(F)$, $H^\bullet(U'\cap U'')\otimes H^\bullet(F)$로 이어지는 exact sequence를 얻는다. 이를 위 행에, 전공간의 Mayer–Vietoris exact sequence를 아래 행에 두고 세로 방향으로 $\Phi_U$, $\Phi_{U'}\oplus\Phi_{U''}$, $\Phi_{U'\cap U''}$을 놓으면 사다리 모양의 diagram이 된다. $\pi^\ast$와 고정된 class $a_j$와의 cup product가 restriction 및 Mayer–Vietoris의 connecting homomorphism과 (부호를 무시하면) 교환하므로 각 사각형은 commute하며, 가정에 의해 $\Phi_{U'}\oplus\Phi_{U''}$과 $\Phi_{U'\cap U''}$이 isomorphism이므로 [\[호몰로지 대수학\] §Diagram chasing, ⁋따름정리 2](/ko/math/homological_algebra/diagram_chasing#cor2)에 의하여 $\Phi_U$ 또한 isomorphism이다.
 
@@ -80,21 +80,21 @@ $$\pi^\ast E\cong\gamma_E\oplus\gamma_E^\perp$$
 로 쪼갤 수 있고, 여기서 $\gamma_E^\perp$는 rank $(n-1)$의 complex vector bundle이다.
 
 ::: 정리 3
-Complex rank $n$ vector bundle $E\rightarrow B$의 projective bundle $\pi:\mathbb{P}(E)\rightarrow B$와 tautological line bundle $\gamma_E$에 대하여, $a=c_1(\gamma_E)\in H^2(\mathbb{P}(E);\mathbb{Z})$이라 두자. 그럼 $H^\bullet(\mathbb{P}(E);\mathbb{Z})$은 $1,a,\ldots,a^{n-1}$을 기저로 하는 $H^\bullet(B;\mathbb{Z})$ 위의 자유가군이다. 특히 $\pi^\ast:H^\bullet(B)\rightarrow H^\bullet(\mathbb{P}(E))$은 단사이다.
+Complex rank $n$ vector bundle $E\rightarrow B$의 projective bundle $\pi:\mathbb{P}(E)\rightarrow B$와 tautological line bundle $\gamma_E$에 대하여, $a=c_1(\gamma_E)\in H^2(\mathbb{P}(E);\mathbb{Z})$이라 두자. 그럼 $H^\bullet(\mathbb{P}(E);\mathbb{Z})$은 $1,a,\ldots,a^{n-1}$을 basis로 하는 $H^\bullet(B;\mathbb{Z})$ 위의 자유가군이다. 특히 $\pi^\ast:H^\bullet(B)\rightarrow H^\bullet(\mathbb{P}(E))$은 단사이다.
 :::
 
 ::: 증명
-각 fiber $\mathbb{P}(E_x)$는 $\CP^{n-1}$이고, 그 위로 $\gamma_E$를 제한하면 정확히 $\CP^{n-1}$의 tautological line bundle이 되므로, $a$를 이 fiber로 제한하면 그 first Chern class $c_1(\gamma)$가 된다. [§벡터다발의 특성류, ⁋예시 8](/ko/math/algebraic_topology/characteristic_classes#ex8)에서 $H^\bullet(\CP^\infty;\mathbb{Z})=\mathbb{Z}[c_1(\gamma)]$이고 $c_1(\gamma)$가 $H^2$의 생성원이었으며, $\CP^{n-1}$은 $2(n-1)$차 이하의 짝수 cell만 가지므로 restriction $H^\bullet(\CP^\infty)\rightarrow H^\bullet(\CP^{n-1})$이 그 범위에서 isomorphism이고 위로는 $0$이 되어
+각 fiber $\mathbb{P}(E_x)$는 $\CP^{n-1}$이고, 그 위로 $\gamma_E$를 제한하면 정확히 $\CP^{n-1}$의 tautological line bundle이 되므로, $a$를 이 fiber로 제한하면 그 first Chern class $c_1(\gamma)$가 된다. [§벡터다발의 특성류, ⁋예시 8](/ko/math/algebraic_topology/characteristic_classes#ex8)에서 $H^\bullet(\CP^\infty;\mathbb{Z})=\mathbb{Z}[c_1(\gamma)]$이고 $c_1(\gamma)$가 $H^2$의 generator였으며, $\CP^{n-1}$은 $2(n-1)$차 이하의 짝수 cell만 가지므로 restriction $H^\bullet(\CP^\infty)\rightarrow H^\bullet(\CP^{n-1})$이 그 범위에서 isomorphism이고 위로는 $0$이 되어
 
 $$H^\bullet(\CP^{n-1};\mathbb{Z})=\mathbb{Z}[c_1(\gamma)]/(c_1(\gamma)^n)$$
 
-이다. 따라서 $1,a,\ldots,a^{n-1}$의 fiber로의 제한은 $H^\bullet(\CP^{n-1})$의 기저를 이룬다. $H^\bullet(\CP^{n-1})$은 유한 rank의 자유가군이므로 [정리 1](#thm1)에 의하여 $H^\bullet(\mathbb{P}(E))$은 $1,a,\ldots,a^{n-1}$을 기저로 하는 $H^\bullet(B)$ 위의 자유가군이다. 이 기저에서 $1$에 대응하는 성분이 $\pi^\ast\alpha=\pi^\ast\alpha\smile 1$이고 $\Phi$가 isomorphism이므로 $\pi^\ast$은 단사이다.
+이다. 따라서 $1,a,\ldots,a^{n-1}$의 fiber로의 restriction은 $H^\bullet(\CP^{n-1})$의 basis를 이룬다. $H^\bullet(\CP^{n-1})$은 유한 rank의 자유가군이므로 [정리 1](#thm1)에 의하여 $H^\bullet(\mathbb{P}(E))$은 $1,a,\ldots,a^{n-1}$을 basis로 하는 $H^\bullet(B)$ 위의 자유가군이다. 이 basis에서 $1$에 대응하는 성분이 $\pi^\ast\alpha=\pi^\ast\alpha\smile 1$이고 $\Phi$가 isomorphism이므로 $\pi^\ast$은 단사이다.
 :::
 
-생성원으로 $a=c_1(\gamma_E)$ 대신 그 dual $\gamma_E^\vee$의 first Chern class를 택해도 거듭제곱들이 같은 자유가군의 기저를 이루므로 결과는 같다. [정리 3](#thm3)은 projective bundle의 cohomology가 밑공간의 cohomology 위에서 tautological class $a$의 거듭제곱들로 완전히 펼쳐짐을 뜻한다.
+Generator로 $a=c_1(\gamma_E)$ 대신 그 dual $\gamma_E^\vee$의 first Chern class를 택해도 거듭제곱들이 같은 자유가군의 basis를 이루므로 결과는 같다. [정리 3](#thm3)은 projective bundle의 cohomology가 밑공간의 cohomology 위에서 tautological class $a$의 거듭제곱들로 완전히 펼쳐짐을 뜻한다.
 
 ::: 참고 4
-[정리 3](#thm3)은 사실 관계식까지 담아 정밀하게 적을 수 있다. Tautological line bundle의 dual $\gamma_E^\vee$의 first Chern class를 $\xi=c_1(\gamma_E^\vee)$라 하면, $H^\bullet(\mathbb{P}(E))$은 $H^\bullet(B)$-대수로서 생성원 $\xi$가 유일한 관계식
+[정리 3](#thm3)은 사실 관계식까지 담아 정밀하게 적을 수 있다. Tautological line bundle의 dual $\gamma_E^\vee$의 first Chern class를 $\xi=c_1(\gamma_E^\vee)$라 하면, $H^\bullet(\mathbb{P}(E))$은 $H^\bullet(B)$-대수로서 generator $\xi$가 유일한 관계식
 
 $$\xi^n+\pi^\ast c_1(E)\smile \xi^{n-1}+\cdots+\pi^\ast c_n(E)=0$$
 
@@ -119,7 +119,7 @@ $n\geq 2$라 하고, rank $n-1$까지 명제가 성립한다 가정하자. proje
 
 $$\pi^\ast E\cong\gamma_E\oplus\gamma_E^\perp$$
 
-가 성립하며 $\gamma_E^\perp$는 rank $(n-1)$이다. 귀납가정을 $\mathbb{P}(E)$ 위의 $\gamma_E^\perp$에 적용하면, 연속함수 $\rho':F(\gamma_E^\perp)\rightarrow\mathbb{P}(E)$가 존재하여 $\rho'^\ast$이 단사이고 $\rho'^\ast\gamma_E^\perp\cong L_2\oplus\cdots\oplus L_n$이 line bundle들의 합이 된다. 이제 $F(E)=F(\gamma_E^\perp)$와 $\rho=\pi\circ\rho'$로 두면, $\rho^\ast=\rho'^\ast\pi^\ast$은 단사인 두 사상의 합성이므로 단사이고,
+가 성립하며 $\gamma_E^\perp$는 rank $(n-1)$이다. 귀납가정을 $\mathbb{P}(E)$ 위의 $\gamma_E^\perp$에 적용하면, 연속함수 $\rho':F(\gamma_E^\perp)\rightarrow\mathbb{P}(E)$가 존재하여 $\rho'^\ast$이 단사이고 $\rho'^\ast\gamma_E^\perp\cong L_2\oplus\cdots\oplus L_n$이 line bundle들의 합이 된다. 이제 $F(E)=F(\gamma_E^\perp)$와 $\rho=\pi\circ\rho'$로 두면, $\rho^\ast=\rho'^\ast\pi^\ast$은 단사인 두 morphism의 합성이므로 단사이고,
 
 $$\rho^\ast E=\rho'^\ast\pi^\ast E=\rho'^\ast(\gamma_E\oplus\gamma_E^\perp)=\rho'^\ast\gamma_E\oplus L_2\oplus\cdots\oplus L_n$$
 

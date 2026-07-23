@@ -49,7 +49,7 @@ $$(v,-): W\rightarrow \mathbb{K}$$
 
 is never the zero function, then this pairing is called *non-degenerate on the left*; similarly, if for every nonzero $w\in W$ the map
 
-$$(-,w):U\rightarrow \mathbb{K}$$
+$$(-,w):V\rightarrow \mathbb{K}$$
 
 is never the zero function, then this pairing is called *non-degenerate on the right*. A pairing that is non-degenerate on both the left and the right is simply called a *non-degenerate pairing*.
 :::

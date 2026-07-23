@@ -25,7 +25,7 @@ GIT의 기초 — reductive group, invariant ring, affine GIT quotient $X/\!/G =
 
 ## Categorical quotient와 geometric quotient
 
-군 action에 대한 quotient를 정의하는 방식은 *어떤 보편 성질을 만족하는 morphism인가*와 *집합으로서 어떤 equivalence class를 잡는가*의 두 관점으로 갈린다. 전자는 categorical, 후자는 set-theoretic 관점이며, GIT의 핵심 통찰은 이 둘이 일반적으로 일치하지 않는다는 점이다. 가령 $\mathbb{C}^\ast$가 $\mathbb{C}^2$ 위에 $t\cdot(z_1, z_2) = (tz_1, tz_2)$로 작용할 때, 원점은 닫힌 궤도이지만 나머지 모든 궤도의 closure가 원점을 포함하므로 set-theoretic quotient $\mathbb{C}^2/\mathbb{C}^\ast$에는 분리 성질이 결여된다. 이러한 상황을 체계적으로 다루기 위해 다음 두 개념을 분리한다.
+Group action에 대한 quotient를 정의하는 방식은 *어떤 universal property를 만족하는 morphism인가*와 *집합으로서 어떤 equivalence class를 잡는가*의 두 관점으로 갈린다. 전자는 categorical, 후자는 set-theoretic 관점이며, GIT의 핵심 통찰은 이 둘이 일반적으로 일치하지 않는다는 점이다. 가령 $\mathbb{C}^\ast$가 $\mathbb{C}^2$ 위에 $t\cdot(z_1, z_2) = (tz_1, tz_2)$로 작용할 때, 원점은 closed orbit이지만 나머지 모든 orbit의 closure가 원점을 포함하므로 set-theoretic quotient $\mathbb{C}^2/\mathbb{C}^\ast$에는 분리 성질이 결여된다. 이러한 상황을 체계적으로 다루기 위해 다음 두 개념을 분리한다.
 
 ::: 정의 1
 Algebraic group $G$가 작용하는 variety $X$에 대해, morphism $\varphi: X \rightarrow Y$가 *categorical quotient<sub>범주적 몫</sub>*라 함은 다음 두 조건을 만족함을 의미한다:
@@ -34,39 +34,39 @@ Algebraic group $G$가 작용하는 variety $X$에 대해, morphism $\varphi: X 
 2. $G$-invariant morphism $f: X \rightarrow Z$가 주어질 때마다 유일한 morphism $\tilde{f}: Y \rightarrow Z$가 존재하여 $f = \tilde{f} \circ \varphi$.
 :::
 
-이는 보편 성질이므로 $Y$가 존재한다면 유일성은 자동이다. 다만 정의는 $Y$가 한 점으로 붕괴할 가능성을 배제하지 않으며, 위에서 본 $\mathbb{C}^\ast$의 scaling 예시에서는 실제로 categorical quotient가 한 점에 불과하다 ([예시 5](#ex5)). 즉 categorical quotient는 *너무 적은 정보*를 담을 수 있다.
+이는 universal property이므로 $Y$가 존재한다면 유일성은 자동이다. 다만 정의는 $Y$가 한 점으로 붕괴할 가능성을 배제하지 않으며, 위에서 본 $\mathbb{C}^\ast$의 scaling 예시에서는 실제로 categorical quotient가 한 점에 불과하다 ([예시 5](#ex5)). 즉 categorical quotient는 *너무 적은 정보*를 담을 수 있다.
 
 ::: 정의 2
 Categorical quotient $\varphi: X \rightarrow Y$가 *geometric quotient<sub>기하학적 몫</sub>*라 함은 추가로 다음 조건이 성립함을 의미한다:
 
-1. $\varphi$는 surjective이고, 각 $y \in Y$의 fiber $\varphi^{-1}(y)$는 정확히 하나의 $G$-궤도이다.
+1. $\varphi$는 surjective이고, 각 $y \in Y$의 fiber $\varphi^{-1}(y)$는 정확히 하나의 $G$-orbit이다.
 2. $\varphi$는 submersion. 즉, $U \subseteq Y$가 열린 집합인 것과 $\varphi^{-1}(U) \subseteq X$가 열린 $G$-불변 집합인 것은 동치이다.
-3. 구조층의 차원에서 $\mathcal{O}_Y = (\varphi_\ast \mathcal{O}_X)^G$.
+3. Structure sheaf의 차원에서 $\mathcal{O}_Y = (\varphi_\ast \mathcal{O}_X)^G$.
 :::
 
-Geometric quotient는 통상 $Y = X/G$로 표기하며, $Y$의 점은 정확히 $X$의 $G$-궤도와 일대일 대응한다. Categorical quotient는 닫힌 궤도들을 한 점으로 묶을 뿐이지만 ([명제 3](#prop3)), geometric quotient는 모든 궤도를 분리한다. 직관적으로 두 개념 사이의 간극은 $X$ 안에 *다른 궤도의 closure에 포함되는 궤도*가 있을 때 발생한다.
+Geometric quotient는 통상 $Y = X/G$로 표기하며, $Y$의 점은 정확히 $X$의 $G$-orbit과 일대일 대응한다. Categorical quotient는 closed orbit들을 한 점으로 묶을 뿐이지만 ([명제 3](#prop3)), geometric quotient는 모든 orbit을 분리한다. 직관적으로 두 개념 사이의 간극은 $X$ 안에 *다른 orbit의 closure에 포함되는 orbit*이 있을 때 발생한다.
 
 ::: 명제 3
 Reductive group $G$가 affine variety $X = \Spec A$ 위에 작용한다고 하자. 그러면 [\[스킴\] §대수적 군, ⁋정의 14](/ko/math/scheme_theory/algebraic_groups#def14)의 invariant subring $A^G \subseteq A$는 finitely generated이며, 자연스러운 morphism
 
 $$\varphi : X \longrightarrow X /\!/ G := \Spec(A^G)$$
 
-는 categorical quotient이다 ([\[스킴\] §대수적 군, ⁋정의 17](/ko/math/scheme_theory/algebraic_groups#def17)). 더욱이 두 점 $x, x' \in X$가 $\varphi$에 의해 같은 상을 가질 필요충분조건은 두 orbit closure $\overline{G\cdot x}$와 $\overline{G\cdot x'}$가 교차하는 것이다.
+는 categorical quotient이다 ([\[스킴\] §대수적 군, ⁋정의 17](/ko/math/scheme_theory/algebraic_groups#def17)). 더욱이 두 점 $x, x' \in X$가 $\varphi$에 의해 같은 image를 가질 필요충분조건은 두 orbit closure $\overline{G\cdot x}$와 $\overline{G\cdot x'}$가 교차하는 것이다.
 :::
 
 ::: 증명
-$A^G$의 유한생성성은 *Hilbert finiteness theorem*의 결과이다. $G$가 reductive이므로 모든 rational $G$-module은 완전가약(completely reducible)이고 ([\[스킴\] §대수적 군, ⁋정의 15](/ko/math/scheme_theory/algebraic_groups#def15)), 그 결과 $A$는 trivial한 invariant 성분과 그 보충 $G$-불변 부분공간 $A_0$로 분해된다:
+$A^G$의 finite generation은 *Hilbert finiteness theorem*의 결과이다. $G$가 reductive이므로 모든 rational $G$-module은 완전가약(completely reducible)이고 ([\[스킴\] §대수적 군, ⁋정의 15](/ko/math/scheme_theory/algebraic_groups#def15)), 그 결과 $A$는 trivial한 invariant 성분과 그 보충 $G$-불변 부분공간 $A_0$로 분해된다:
 
 $$A = A^G \oplus A_0.$$
 
 이로부터 $A^G$ 방향으로의 *Reynolds operator* $R: A \rightarrow A^G$가 정의된다. Reynolds operator는 $A^G$-module homomorphism이며 $A^G$ 위에서 항등이다. 이를 이용하면 임의의 $G$-불변 ideal $I \subseteq A$의 inverse image와 $R(I) = I \cap A^G$의 관계로부터 $A^G$의 ideal에 관한 ascending chain condition이 $A$의 그것에서 따라나오므로, $A$가 Noetherian이면 $A^G$도 Noetherian이다. 더 강한 finite generation은 $A$가 finitely generated $\mathbb{C}$-algebra일 때 $A^G$가 적당한 $G$-stable finitely generated subalgebra의 invariants와 일치함을 보임으로써 얻어진다 ([Mum] §1.1 또는 [New] §3.4).
 
-이제 $\varphi$의 categorical quotient 성질을 본다. $G$-invariant morphism $f: X \rightarrow Z = \Spec B$가 주어지면 이에 대응하는 ring homomorphism $f^\sharp: B \rightarrow A$의 상은 $G$-invariant element로 이루어지므로 $A^G$에 포함된다. 따라서 $f^\sharp$는 $B \rightarrow A^G$를 거쳐 분해되고, 이는 $f$가 $\varphi$를 통해 유일하게 분해됨을 뜻한다. 일반적인 $Z$에 대해서는 affine cover로 환원하면 동일한 결론이 따른다.
+이제 $\varphi$의 categorical quotient 성질을 본다. $G$-invariant morphism $f: X \rightarrow Z = \Spec B$가 주어지면 이에 대응하는 ring homomorphism $f^\sharp: B \rightarrow A$의 image는 $G$-invariant element로 이루어지므로 $A^G$에 포함된다. 따라서 $f^\sharp$는 $B \rightarrow A^G$를 거쳐 분해되고, 이는 $f$가 $\varphi$를 통해 유일하게 분해됨을 뜻한다. 일반적인 $Z$에 대해서는 affine cover로 환원하면 동일한 결론이 따른다.
 
-두 점이 같은 상을 가질 조건을 보인다. 두 orbit closure가 교차하면 그 교집합 위에서 모든 $G$-invariant 함수는 두 점에서 같은 값을 가지므로, 임의의 $f \in A^G$에 대해 $f(x) = f(x')$이다. 역으로 $\overline{G \cdot x} \cap \overline{G \cdot x'} = \emptyset$이라 가정하자. 두 닫힌 $G$-불변 부분집합이 disjoint이므로 그 ideal들 $I_x, I_{x'} \subseteq A$에 대해 $I_x + I_{x'} = A$이다. Reductivity로부터 $I_x^G + I_{x'}^G = A^G$가 성립하며, 이로부터 $f(x) = 0$, $f(x') = 1$인 $f \in A^G$가 존재한다. 따라서 $\varphi(x) \ne \varphi(x')$이다.
+두 점이 같은 image를 가질 조건을 보인다. 두 orbit closure가 교차하면 그 교집합 위에서 모든 $G$-invariant 함수는 두 점에서 같은 값을 가지므로, 임의의 $f \in A^G$에 대해 $f(x) = f(x')$이다. 역으로 $\overline{G \cdot x} \cap \overline{G \cdot x'} = \emptyset$이라 가정하자. 두 closed $G$-불변 부분집합이 disjoint이므로 그 ideal들 $I_x, I_{x'} \subseteq A$에 대해 $I_x + I_{x'} = A$이다. Reductivity로부터 $I_x^G + I_{x'}^G = A^G$가 성립하며, 이로부터 $f(x) = 0$, $f(x') = 1$인 $f \in A^G$가 존재한다. 따라서 $\varphi(x) \ne \varphi(x')$이다.
 :::
 
-위 명제의 두 번째 부분이 categorical quotient와 geometric quotient의 차이를 정량화한다. 즉 $X/\!/G$의 한 점은 $X$의 *$G$-궤도들의 equivalence class*에 대응하되, 그 동치관계는 *orbit closure가 사슬로 연결됨*이다. 모든 궤도가 이미 닫혀 있다면 이 equivalence class는 곧 궤도 자체이고 이 경우 categorical quotient는 geometric quotient가 된다.
+위 명제의 두 번째 부분이 categorical quotient와 geometric quotient의 차이를 정량화한다. 즉 $X/\!/G$의 한 점은 $X$의 *$G$-orbit들의 equivalence class*에 대응하되, 그 동치관계는 *orbit closure가 사슬로 연결됨*이다. 모든 orbit이 이미 닫혀 있다면 이 equivalence class는 곧 orbit 자체이고 이 경우 categorical quotient는 geometric quotient가 된다.
 
 ::: 참고 4
 명제의 finite generation 부분은 $G$가 reductive라는 가정을 본질적으로 사용한다. Nagata는 unipotent group의 action에 대해 invariant ring이 finitely generated가 아닐 수 있음을 보여 Hilbert의 14번째 문제의 반례를 제시하였다. 본 글에서 $G$를 reductive로 제한하는 것은 단순한 편의가 아니라 GIT가 성립하기 위한 핵심 가정이다.
@@ -89,7 +89,7 @@ $$A^G = \mathbb{C}$$
 
 $$\mathbb{C}^2 /\!/ \mathbb{C}^\ast = \Spec \mathbb{C} = \{\mathrm{pt}\}$$
 
-으로 한 점으로 붕괴한다. 모든 비원점 궤도의 closure가 원점을 포함하여 [명제 3](#prop3)에 의해 모든 점이 같은 equivalence class에 속한 결과이다.
+으로 한 점으로 붕괴한다. 모든 비원점 orbit의 closure가 원점을 포함하여 [명제 3](#prop3)에 의해 모든 점이 같은 equivalence class에 속한 결과이다.
 
 이제 비자명 character $\chi(t) = t$로 자명 line bundle $L = X \times \mathbb{C}$를 linearize하면 ([\[스킴\] §대수적 군, ⁋정의 18](/ko/math/scheme_theory/algebraic_groups#def18)) invariant section은
 
@@ -103,7 +103,7 @@ $$\bigoplus_{n \ge 0} H^0(X, L^{\otimes n})^{G, \chi^n} = \mathbb{C}[\z_1, \z_2]
 
 $$\mathbb{C}^2 /\!/_\chi \mathbb{C}^\ast = \Proj \mathbb{C}[\z_1, \z_2] = \mathbb{P}^1$$
 
-이다. Semistable 집합을 직접 확인하면 $(z_1, z_2) \ne (0, 0)$인 모든 점이 semistable이며 (양의 차수 homogeneous polynomial 중 0이 아닌 값을 주는 것이 존재), 원점은 unstable이다. 즉
+이다. Semistable 집합을 직접 확인하면 $(z_1, z_2) \ne (0, 0)$인 모든 점이 semistable이며 (양의 degree homogeneous polynomial 중 0이 아닌 값을 주는 것이 존재), 원점은 unstable이다. 즉
 
 $$X^{\mathrm{ss}}(L_\chi) = X^{\mathrm{s}}(L_\chi) = \mathbb{C}^2 \setminus \{0\}$$
 
@@ -111,7 +111,7 @@ $$X^{\mathrm{ss}}(L_\chi) = X^{\mathrm{s}}(L_\chi) = \mathbb{C}^2 \setminus \{0\
 
 $$(\mathbb{C}^2 \setminus \{0\}) / \mathbb{C}^\ast = \mathbb{P}^1$$
 
-과 일치한다. 같은 variety, 같은 군의 action임에도 linearization의 character 선택에 따라 quotient가 한 점에서 $\mathbb{P}^1$로 달라진다.
+과 일치한다. 같은 variety, 같은 group의 action임에도 linearization의 character 선택에 따라 quotient가 한 점에서 $\mathbb{P}^1$로 달라진다.
 :::
 
 ::: 예시 6
@@ -168,7 +168,7 @@ $$B(\Sigma) = \langle \hat{\x}_\sigma \mid \sigma \in \Sigma \rangle \subseteq S
 
 ## Toric variety를 GIT quotient로 재구성하기
 
-이제 toric variety $X_\Sigma$를 affine space $\mathbb{C}^{\Sigma(1)}$에서 exceptional set $Z(\Sigma)$를 제거한 뒤 군 $G$로 quotient를 취함으로써 재구성할 수 있다.
+이제 toric variety $X_\Sigma$를 affine space $\mathbb{C}^{\Sigma(1)}$에서 exceptional set $Z(\Sigma)$를 제거한 뒤 group $G$로 quotient를 취함으로써 재구성할 수 있다.
 
 ::: 명제 9
 Toric variety $X_\Sigma$는 $\mathbb{C}^{\Sigma(1)} \setminus Z(\Sigma)$에 대한 $G$의 action의 categorical quotient로
@@ -190,7 +190,7 @@ $$(S_{\hat{\x}_\sigma})^{(0)} \cong \mathbb{C}[\sigma^\vee \cap M].$$
 Simplicial인 경우, 각 cone이 simplicial이므로 local chart $U_\sigma$에 대한 action의 stabilizer가 유한군이 되어 ([명제 3](#prop3)의 orbit closure 기준이 단순화됨) geometric quotient가 된다. 역으로 geometric quotient이려면 stabilizer가 유한해야 하고, 이는 각 cone이 simplicial임을 의미한다.
 :::
 
-명제 9의 geometric quotient 버전은 매우 중요하다. Simplicial toric variety의 경우 점들이 실제로 $G$의 궤도로 대응되므로 homogeneous coordinate의 직관적 이해가 가능하다. Non-simplicial 경우에는 categorical quotient에 그치므로 점들이 $G$-orbit과 일대일 대응하지는 않지만, 여전히 좋은 geometric interpretation을 제공한다.
+명제 9의 geometric quotient 버전은 매우 중요하다. Simplicial toric variety의 경우 점들이 실제로 $G$의 orbit으로 대응되므로 homogeneous coordinate의 직관적 이해가 가능하다. Non-simplicial 경우에는 categorical quotient에 그치므로 점들이 $G$-orbit과 일대일 대응하지는 않지만, 여전히 좋은 geometric interpretation을 제공한다.
 
 ## 예시
 
@@ -258,7 +258,7 @@ Cox ring $S$의 $\beta$차 성분은 monomial $\prod_\rho \x_\rho^{a_\rho}$들�
 
 Cox 구성은 toric variety의 birational geometry를 이해하는 데도 강력한 도구이다. [§토릭 다양체의 정의, ⁋명제 8](/ko/math/toric_geometry/toric_varieties#prop8)에서 보았듯이 lattice polytope으로부터 projective toric variety가 구성되며, Cox 구성의 관점에서 이러한 polytope의 변화는 GIT quotient에서 linearization의 변화에 정확히 대응한다.
 
-구체적으로, Cox ring $S$와 군 $G$를 고정하면 서로 다른 linearization은 서로 다른 ample line bundle의 선택, 즉 character space의 chamber 선택에 대응한다. Effective cone $\mathrm{Eff}(X_\Sigma)$ — divisor class group에서 pseudo-effective divisor들이 이루는 cone — 은 유한 개의 rational polyhedral chamber로 분해되며, 각 chamber 내부에서는 GIT quotient가 같은 birational type의 toric variety를 준다. 이 chamber 분해를 *secondary fan*이라 부른다.
+구체적으로, Cox ring $S$와 group $G$를 고정하면 서로 다른 linearization은 서로 다른 ample line bundle의 선택, 즉 character space의 chamber 선택에 대응한다. Effective cone $\mathrm{Eff}(X_\Sigma)$ — divisor class group에서 pseudo-effective divisor들이 이루는 cone — 은 유한 개의 rational polyhedral chamber로 분해되며, 각 chamber 내부에서는 GIT quotient가 같은 birational type의 toric variety를 준다. 이 chamber 분해를 *secondary fan*이라 부른다.
 
 Secondary fan은 toric variety의 moduli space를 이해하는 데 중요하며, 특히 toric Mori theory와 밀접하게 연관된다. Wall crossing은 birational contraction이나 flip에 대응하여 toric variety의 minimal model program을 구체적으로 기술할 수 있게 한다. 자세한 논의는 본 글의 범위를 벗어나므로 [CLS] Chapter 14 및 [Mum] §2를 참고한다.
 

@@ -39,7 +39,7 @@ $$h_X(g)(f)=f\circ g$$
 
 집합 $X(T)=\Hom_\Sch(T,X)$의 원소를 *$T$-valued point*라고도 부른다. $T$를 변화시키며 scheme $X$를 관찰하는 이 관점에서, $T$는 일종의 측정 도구의 역할을 한다. 가장 단순한 test scheme은 한 점 $\Spec \mathbb{K}$이며, 이 경우 $X(\mathbb{K})$는 [§스킴 사이의 사상, ⁋예시 7](/ko/math/scheme_theory/morphism_of_schemes#ex7)에서 살펴본 고전적인 점들을 회복한다. 그러나 $T$로 더 큰 scheme을 사용하면 고전적인 점만으로는 보이지 않던 정보까지 함께 관찰할 수 있다.
 
-Functoriality에 대해 부연하자면, scheme morphism $g: T' \rightarrow T$가 주어졌을 때 $X(T)$의 원소 $f: T \rightarrow X$를 $f\circ g: T' \rightarrow X$로 보내는 사상은 $X$의 $T$-point를 $g$를 따라 $T'$-point로 끌어당기는 것으로 이해할 수 있다. 특히 $T'=\Spec R'$, $T=\Spec R$이 affine scheme이고 $g$가 ring homomorphism $\varphi: R \rightarrow R'$로부터 온 경우, $X(R) \rightarrow X(R')$은 "$R$ 위에서 정의된 점을 $\varphi$를 통해 $R'$ 위로 옮기는" 사상이다.
+Functoriality에 대해 부연하자면, scheme morphism $g: T' \rightarrow T$가 주어졌을 때 $X(T)$의 원소 $f: T \rightarrow X$를 $f\circ g: T' \rightarrow X$로 보내는 morphism은 $X$의 $T$-point를 $g$를 따라 $T'$-point로 끌어당기는 것으로 이해할 수 있다. 특히 $T'=\Spec R'$, $T=\Spec R$이 affine scheme이고 $g$가 ring homomorphism $\varphi: R \rightarrow R'$로부터 온 경우, $X(R) \rightarrow X(R')$은 "$R$ 위에서 정의된 점을 $\varphi$를 통해 $R'$ 위로 옮기는" morphism이다.
 
 ::: 예시 2
 Scheme morphism $\varphi: X \rightarrow Y$가 주어졌다 하자. 그럼 각각의 test scheme $T$에 대하여, 합성
@@ -67,7 +67,7 @@ $$\operatorname{Nat}(h_X, F)\cong F(X)$$
 이 존재한다. 
 :::
 ::: 증명
-Natural transformation $\eta: h_X \rightarrow F$가 주어졌다 하면, 성분 $\eta_X: h_X(X)=\Hom_\Sch(X,X) \rightarrow F(X)$이 존재하고, 여기에 $\id_X\in h_X(X)$를 대입하여 원소 $\eta_X(\id_X)\in F(X)$를 얻는다. 이로써 사상
+Natural transformation $\eta: h_X \rightarrow F$가 주어졌다 하면, 성분 $\eta_X: h_X(X)=\Hom_\Sch(X,X) \rightarrow F(X)$이 존재하고, 여기에 $\id_X\in h_X(X)$를 대입하여 원소 $\eta_X(\id_X)\in F(X)$를 얻는다. 이로써 morphism
 
 $$\Phi: \operatorname{Nat}(h_X, F) \rightarrow F(X);\qquad \eta\mapsto \eta_X(\id_X)$$
 
@@ -79,7 +79,7 @@ $$\eta^\xi_T(f)=F(f)(\xi)\in F(T)$$
 
 $$\eta^\xi_{T'}(h_X(g)(f))=\eta^\xi_{T'}(f\circ g)=F(f\circ g)(\xi)=F(g)(F(f)(\xi))=F(g)(\eta^\xi_T(f))$$
 
-이 functoriality $F(f\circ g)=F(g)\circ F(f)$로부터 성립한다. 이로써 사상
+이 functoriality $F(f\circ g)=F(g)\circ F(f)$로부터 성립한다. 이로써 morphism
 
 $$\Psi: F(X) \rightarrow \operatorname{Nat}(h_X, F);\qquad \xi\mapsto \eta^\xi$$
 
@@ -97,7 +97,7 @@ $$\eta_T(f)=\eta_T(h_X(f)(\id_X))=F(f)(\eta_X(\id_X))=F(f)(\xi)=\eta^\xi_T(f)$$
 [정리 3](#thm3)에서 $F$로 다른 functor of points $h_Y$를 택하면 곧바로 다음을 얻는다. 
 
 ::: 따름정리 4
-임의의 scheme $X, Y$에 대하여, [예시 2](#ex2)의 사상은 일대일대응
+임의의 scheme $X, Y$에 대하여, [예시 2](#ex2)의 morphism은 일대일대응
 
 $$\Hom_\Sch(X,Y)\cong \operatorname{Nat}(h_X, h_Y)$$
 
@@ -142,14 +142,14 @@ $$\mathbb{A}^1(T)\cong \Gamma(T, \mathcal{O}_T)=\mathcal{O}_T(T)$$
 
 $$\Hom_\Sch(T, \Spec A)\cong \Hom_\cRing(A, \Gamma(T, \mathcal{O}_T))$$
 
-에서 $A=\mathbb{Z}[\x]$로 두자. Ring $\mathbb{Z}[\x]$는 $\cRing$에서 free object이므로, ring homomorphism $\mathbb{Z}[\x] \rightarrow \Gamma(T, \mathcal{O}_T)$은 생성원 $\x$의 image $\x\mapsto a$를 자유롭게 정하는 것과 같고, 이는 정확히 원소 $a\in \Gamma(T, \mathcal{O}_T)$를 하나 고르는 것이다. 따라서
+에서 $A=\mathbb{Z}[\x]$로 두자. Ring $\mathbb{Z}[\x]$는 $\cRing$에서 free object이므로, ring homomorphism $\mathbb{Z}[\x] \rightarrow \Gamma(T, \mathcal{O}_T)$은 generator $\x$의 image $\x\mapsto a$를 자유롭게 정하는 것과 같고, 이는 정확히 원소 $a\in \Gamma(T, \mathcal{O}_T)$를 하나 고르는 것이다. 따라서
 
 $$\mathbb{A}^1(T)=\Hom_\Sch(T, \Spec \mathbb{Z}[\x])\cong \Hom_\cRing(\mathbb{Z}[\x], \Gamma(T, \mathcal{O}_T))\cong \Gamma(T, \mathcal{O}_T)$$
 
 이다. 자연스러움은 임의의 $g: T' \rightarrow T$에 대하여 restriction map $\Gamma(T, \mathcal{O}_T) \rightarrow \Gamma(T', \mathcal{O}_{T'})$이 위의 대응과 commute한다는 것으로, adjunction의 자연스러움으로부터 따라온다. 
 :::
 
-[명제 7](#prop7)은 affine line의 $T$-point가 정확히 $T$ 위의 전역 regular function 하나라는 것을 말한다. 이 관점에서 $\mathbb{A}^1$은 "함수를 측정하는" scheme이다. 이를 $n$개의 생성원으로 일반화하면 다음을 얻는다. 
+[명제 7](#prop7)은 affine line의 $T$-point가 정확히 $T$ 위의 전역 regular function 하나라는 것을 말한다. 이 관점에서 $\mathbb{A}^1$은 "함수를 측정하는" scheme이다. 이를 $n$개의 generator로 일반화하면 다음을 얻는다. 
 
 ::: 명제 8
 $\mathbb{Z}$ 위의 affine $n$-space $\mathbb{A}^n=\Spec \mathbb{Z}[\x_1,\ldots, \x_n]$에 대하여, 자연스러운 일대일대응
@@ -159,7 +159,7 @@ $$\mathbb{A}^n(T)\cong \Gamma(T, \mathcal{O}_T)^n$$
 이 존재한다. 즉 $\mathbb{A}^n$의 $T$-point는 $T$ 위의 regular function $n$개의 순서쌍이다. 
 :::
 ::: 증명
-[명제 7](#prop7)의 증명과 동일하게, free ring $\mathbb{Z}[\x_1,\ldots, \x_n]$에서 나가는 ring homomorphism은 각 생성원 $\x_i$의 image $a_i\in \Gamma(T, \mathcal{O}_T)$를 자유롭게 정하는 것이므로
+[명제 7](#prop7)의 증명과 동일하게, free ring $\mathbb{Z}[\x_1,\ldots, \x_n]$에서 나가는 ring homomorphism은 각 generator $\x_i$의 image $a_i\in \Gamma(T, \mathcal{O}_T)$를 자유롭게 정하는 것이므로
 
 $$\mathbb{A}^n(T)\cong \Hom_\cRing(\mathbb{Z}[\x_1,\ldots, \x_n], \Gamma(T, \mathcal{O}_T))\cong \Gamma(T, \mathcal{O}_T)^n$$
 
@@ -247,11 +247,11 @@ $$h_G:(\Sch_{/S})^\op \rightarrow \mathbf{Grp}$$
 이 존재하여, forgetful functor $\mathbf{Grp} \rightarrow \Set$과 합성하면 $\Hom_{\Sch_{/S}}(-, G)$이 되는 것이다. 풀어 말하면, 각각의 $S$-scheme $T$에 대하여 $G(T)$에 group 구조가 주어지고, 임의의 morphism $T' \rightarrow T$가 유도하는 $G(T) \rightarrow G(T')$이 group homomorphism인 것이다. 
 :::
 
-[정의 14](#def14)는 group scheme을 "functorial하게 group인 scheme"으로 규정한다. 이것이 곱셈, 역원, 항등원 morphism으로 주어지는 고전적인 정의와 동치임은 Yoneda 보조정리로부터 따라온다. 실제로 [따름정리 4](#cor4)에 의하여 $\mathbf{Grp}$-값 lift를 주는 것은, group의 공리를 표현하는 가환 도식을 만족하는 morphism
+[정의 14](#def14)는 group scheme을 "functorial하게 group인 scheme"으로 규정한다. 이것이 곱셈, 역원, 항등원 morphism으로 주어지는 고전적인 정의와 동치임은 Yoneda 보조정리로부터 따라온다. 실제로 [따름정리 4](#cor4)에 의하여 $\mathbf{Grp}$-값 lift를 주는 것은, group의 공리를 표현하는 commutative diagram을 만족하는 morphism
 
 $$m: G\times_S G \rightarrow G,\qquad i: G \rightarrow G,\qquad e: S \rightarrow G$$
 
-들을 주는 것과 같다. 여기에서 $m, i, e$는 각각 $T$-point 수준에서의 곱셈, 역원, 항등원을 [명제 13](#prop13)을 통해 표현한 것이다. Functorial한 정의의 장점은, group의 공리를 직접 가환 도식으로 적는 대신 각 $G(T)$가 통상적인 의미에서 group이라는 것만 확인하면 된다는 데 있다. 
+들을 주는 것과 같다. 여기에서 $m, i, e$는 각각 $T$-point 수준에서의 곱셈, 역원, 항등원을 [명제 13](#prop13)을 통해 표현한 것이다. Functorial한 정의의 장점은, group의 공리를 직접 commutative diagram으로 적는 대신 각 $G(T)$가 통상적인 의미에서 group이라는 것만 확인하면 된다는 데 있다. 
 
 ::: 예시 15
 다음은 $\mathbb{Z}$ 위의 대표적인 group scheme들이다. 
@@ -269,7 +269,7 @@ $$\GL_n=\Spec \mathbb{Z}[\x_{11},\ldots, \x_{nn}, \det{}^{-1}]$$
 으로 representable한 group scheme이 된다. 여기에서 $\det$은 행렬 $(\x_{ij})$의 determinant이며, 이를 가역으로 만든 localization을 취한 것이다. 
 :::
 
-[예시 15](#ex15)의 각 경우에서 group 구조는 test scheme $T$에 대해 점별로 통상적인 대수 구조를 주는 것만으로 정의되었으며, 별도의 가환 도식을 그릴 필요가 없었다. 특히 $\mu_n$의 경우, $\mathbb{Z}[\x]/(\x^n-1)$이 $n$이 base ring에서 가역이 아닐 때에는 reduced가 아닐 수 있으므로, 이는 고전적인 variety의 언어로는 잘 포착되지 않는 nilpotent를 가진 group scheme의 예이다. 이러한 대상까지 자연스럽게 다룰 수 있다는 점이 functorial한 관점과 scheme 언어의 강점이다. 
+[예시 15](#ex15)의 각 경우에서 group 구조는 test scheme $T$에 대해 점별로 통상적인 대수 구조를 주는 것만으로 정의되었으며, 별도의 commutative diagram을 그릴 필요가 없었다. 특히 $\mu_n$의 경우, $\mathbb{Z}[\x]/(\x^n-1)$이 $n$이 base ring에서 가역이 아닐 때에는 reduced가 아닐 수 있으므로, 이는 고전적인 variety의 언어로는 잘 포착되지 않는 nilpotent를 가진 group scheme의 예이다. 이러한 대상까지 자연스럽게 다룰 수 있다는 점이 functorial한 관점과 scheme 언어의 강점이다. 
 
 마지막으로, 위의 모든 구성은 base scheme $S$를 고정한 상대적인 상황으로 일반화된다. 즉 임의의 functor $F:(\Sch_{/S})^\op \rightarrow \Set$을 다룰 수 있으며, 이 경우 representability는 $S$-scheme의 존재로 묻게 된다. Affine space, projective space, Grassmannian, group scheme의 functorial한 정의는 모두 $\Spec \mathbb{Z}$ 위에서 주어졌으므로, 임의의 base $S$ 위로 base change하여 상대적인 버전 $\mathbb{A}^n_S, \mathbb{P}^n_S, \Gr(k,n)_S, \GL_{n,S}$를 얻는다. ([§올곱, ⁋예시 9](/ko/math/scheme_theory/fiber_products#ex9)) Functor of points의 언어에서 이는 단지 test scheme을 $\Sch_{/S}$로 제한하는 것에 해당하며, 따라서 절대적인 경우와 상대적인 경우가 하나의 틀 안에서 통일적으로 다루어진다. 
 

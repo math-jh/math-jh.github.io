@@ -172,7 +172,7 @@ $$[E_{lj},E_{jk}]=E_{lk}-\delta_{kl}E_{jj},\qquad[E_{jk},E_{km}]=E_{jm}-\delta_{
 
 and since the $\delta$ terms already lie in $\mathfrak{h}\subseteq H$, if $H$ contains position $(j,k)$ then it must also contain all positions above it in the same column, $(l,k)$ for $l\leq j$, and all positions to the right in the same row, $(j,m)$ for $m\geq k$. Thus each column is filled from the top without gaps, and the filled depth does not decrease as we move to the right. Writing $h(k)$ for the depth of the $k$-th column, $H$ is the staircase determined by a nondecreasing function $h\colon\{1,\ldots,n\}\rightarrow\{1,\ldots,n\}$ with $h(i)\geq i$ (a *Hessenberg function*):
 
-$$H_h=\{\,Y\in\mathfrak{gl}_n\;\mid\;YE_i\subseteq E_{h(i)}\ \forall i\,\}=\{\,Y\;\mid\;Y_{jk}=0\ \text{whenever }j>h(k)\,\}$$
+$$H_h=\{\,Y\in\mathfrak{gl}_n\;\mid\;YE_i\subseteq E_{h(i)}\ \forall i\,\}=\{\,Y\;\mid\;Y_{jk}=0\ \text{whenever $j>h(k)$}\,\}$$
 
 and the converse is easily verified. For example, when $n=4$ the two staircases
 
@@ -273,9 +273,11 @@ This theorem was introduced in Peterson's 1997 MIT lecture; there is no separate
 
 Since introducing the flag variety in [§Borel subgroup, ⁋Definition 12](/en/math/lie_theory/borel_subgroup#def12), we have not used the language of algebraic geometry very heavily, but to understand the spirit of this theorem we can no longer postpone it. The key point is the way algebraic geometry interprets a ring $A$ as a geometric space $\Spec A$ over $\mathbb{C}$, with $A$ as the ring of functions on that space. In this dictionary, the points of the space $\Spec A$ correspond to maximal ideals of $A$, and a ring homomorphism $A\rightarrow B$ corresponds to a geometric function $\Spec B\rightarrow \Spec A$. An important special case is when $A=\mathbb{C}$ and $B=\mathbb{C}$: first, if $A=\mathbb{C}$, then algebraically $\mathbb{C}\rightarrow B$ is the structure morphism making the ring $B$ a $\mathbb{C}$-algebra. In the geometric world, $\Spec \mathbb{C}$ is a point, so the function $\Spec B\rightarrow \Spec A$ becomes a function to a point. If both $A,B$ are $\mathbb{C}$-algebras and the following commutative diagram
 
-![If $$A, B$$ are $$\mathbb{C}$$-algebras, the unit gives structure morphisms $$\mathbb{C}\rightarrow A$$, $$\mathbb{C}\rightarrow B$$, and a ring homomorphism $$\varphi\colon A\rightarrow B$$ commuting with these (i.e. fixing $$\mathbb{C}$$) is the condition for $$\varphi$$ to be a $$\mathbb{C}$$-algebra homomorphism.](/assets/images/Math/Lie_Theory/Richardson_Peterson_Variety-1.svg){:style="width:12em" class="invert" .align-center}
+![If $A, B$ are $\mathbb{C}$-algebras, the unit gives structure morphisms $\mathbb{C}\rightarrow A$, $\mathbb{C}\rightarrow B$, and a ring homomorphism $\varphi\colon A\rightarrow B$ commuting with these (i.e. fixing $\mathbb{C}$) is the condition for $\varphi$ to be a $\mathbb{C}$-algebra homomorphism.](/assets/images/Math/Lie_Theory/Richardson_Peterson_Variety-1.svg){:style="width:12em" class="invert" .align-center}
 
-exists, then applying $\operatorname{Spec}$ to the above triangle reverses all arrows, and $\operatorname{Spec}\varphi\colon\operatorname{Spec}B\rightarrow\operatorname{Spec}A$ becomes a morphism over the point $\operatorname{Spec}\mathbb{C}$.](/assets/images/Math/Lie_Theory/Richardson_Peterson_Variety-2.svg){:style="width:18em" class="invert" .align-center}
+exists, then the $\mathbb{C}$-algebra homomorphism $A\rightarrow B$ now translates into the following commutative diagram
+
+![Applying $\operatorname{Spec}$ to the above triangle reverses all arrows, so that $\operatorname{Spec}\varphi\colon\operatorname{Spec}B\rightarrow\operatorname{Spec}A$ becomes a morphism over the point $\operatorname{Spec}\mathbb{C}$.](/assets/images/Math/Lie_Theory/Richardson_Peterson_Variety-2.svg){:style="width:18em" class="invert" .align-center}
 
 On the other hand, when $B=\mathbb{C}$, a ring homomorphism $A\rightarrow \mathbb{C}$ translates in the geometric world to $\Spec \mathbb{C}\rightarrow\Spec A$, i.e. this ring homomorphism is itself a point. Also recall that when $A$ is a $\mathbb{C}$-algebra, we usually interpreted this ring homomorphism as an evaluation map. Finally, viewing $B$ as an $A$-algebra via a ring homomorphism $A\rightarrow B$ is interpreted as a morphism $\Spec B\rightarrow\Spec A$, i.e. a relative space over the base $\Spec A$, and an $A$-module is viewed as a sheaf over $\Spec A$ (an object analogous to a vector bundle). In particular, a free module of rank $N$ corresponds to a trivial rank $N$ bundle, so the $\Spec$ of such an $A$-algebra is a finite morphism whose fibers (counting dimension) have $N$ points. The most basic case is affine space: the polynomial algebra $\mathbb{C}[\x_1,\ldots,\x_n]$ becomes affine $n$-space $\mathbb{A}^n$ under $\Spec$, and more generally $A[\x_1,\ldots,\x_n]$ corresponds to a relative affine space over the base $\Spec A$.
 
@@ -283,7 +285,7 @@ Now, to return to the interpretation of [Theorem 11](#thm11), let us first add a
 
 Then considering an arbitrary generic fiber over a point $q_0$ in $\Spec \mathbb{C}[q]\cong\mathbb{A}^k$ corresponds exactly to the following diagram:
 
-![The commutative square corresponding to the fiber over $$q=q_0$$. Restricting the character $$\rchi_y$$ of a point $$y$$ to $$\mathbb{C}[q]$$ gives the evaluation $$\operatorname{ev}_{q_0}$$ at $$q_0$$, meaning that $$y$$ lies over $$q_0$$.](/assets/images/Math/Lie_Theory/Richardson_Peterson_Variety-3.svg){:style="width:14em" class="invert" .align-center}
+![The commutative square corresponding to the fiber over $q=q_0$. Restricting the character $\rchi_y$ of a point $y$ to $\mathbb{C}[q]$ gives the evaluation $\operatorname{ev}_{q_0}$ at $q_0$, meaning that $y$ lies over $q_0$.](/assets/images/Math/Lie_Theory/Richardson_Peterson_Variety-3.svg){:style="width:14em" class="invert" .align-center}
 
 Algebraically this is the following tensor product
 
@@ -291,7 +293,7 @@ $$QH^\ast(G/P)\otimes_{\mathbb{C}[q]}\mathbb{C}[q]/(q-q_0)\cong QH^\ast(G/P)/(q-
 
 and a point of this fiber is again a ring homomorphism $QH^\ast(G/P)/(q-q_0)\rightarrow \mathbb{C}$. Similarly, applying the isomorphism of [Theorem 11](#thm11) gives the following commutative diagram:
 
-![The picture of the Peterson isomorphism realizing the spectrum of quantum cohomology as flags. A point $$y$$ of $$\mathcal{Y}^\vee_P$$ (i.e. a flag of $$G^\vee/B^\vee$$) gives an evaluation $$\operatorname{ev}_y$$, which via the Peterson isomorphism $$\Phi\colon a\mapsto f_a$$ lifts to the character $$\rchi_y=\operatorname{ev}_y\circ\Phi$$ (right square, $$\rchi_y(a)=f_a(y)$$), and restricting to $$\mathbb{C}[q]$$ gives the evaluation at the quantum parameter value $$q_0$$ of $$y$$ (left square). That is, a fiber point over $$q_0$$ = a character over $$q_0$$ = a flag.](/assets/images/Math/Lie_Theory/Richardson_Peterson_Variety-4.svg){:style="width:24em" class="invert" .align-center}
+![The picture of the Peterson isomorphism realizing the spectrum of quantum cohomology as flags. A point $y$ of $\mathcal{Y}^\vee_P$ (i.e. a flag of $G^\vee/B^\vee$) gives an evaluation $\operatorname{ev}_y$, which via the Peterson isomorphism $\Phi\colon a\mapsto f_a$ lifts to the character $\rchi_y=\operatorname{ev}_y\circ\Phi$ (right square, $\rchi_y(a)=f_a(y)$), and restricting to $\mathbb{C}[q]$ gives the evaluation at the quantum parameter value $q_0$ of $y$ (left square). That is, a fiber point over $q_0$ = a character over $q_0$ = a flag.](/assets/images/Math/Lie_Theory/Richardson_Peterson_Variety-4.svg){:style="width:24em" class="invert" .align-center}
 
 and at this point the last vertical map $\ev_y$ defines a point on $\mathcal{Y}^\vee_P$. Let us now decode what this point contains, following the dictionary. First, $QH^\ast(G/P)/(q-q_0)$ is a finite-dimensional algebra over $\mathbb{C}$, and on it each cohomology class $a$ gives the operator $a\qtimes-$ of quantum multiplication by $a$. For the point $y$ obtained above, the corresponding character $\rchi_y\colon QH^\ast(G/P)/(q-q_0)\rightarrow\mathbb{C}$ assigns to each $a$ a scalar $\rchi_y(a)$, and since it is a ring homomorphism, it satisfies $\rchi_y(a\qtimes b)=\rchi_y(a)\,\rchi_y(b)$ and $\rchi_y(1)=1$. This means that $\rchi_y(a)$ is an eigenvalue of the operator $a\qtimes-$, and these eigenvalues are assigned simultaneously without contradiction with the quantum product. In other words, a point of the fiber is a way to consistently assign a simultaneous eigenvalue tuple to all quantum multiplication operators at a generic $q_0$.
 
@@ -334,4 +336,4 @@ The affine paving of [Proposition 9](#prop9) is also the starting point for coho
 **[IT]** E. Insko, J. Tymoczko, *Affine pavings of regular nilpotent Hessenberg varieties and intersection theory of the Peterson variety*, J. Combin. Theory Ser. A **187** (2022), 105572.
 
 ---
-[^1]: Note that the $$\mathfrak{h}$$ denoting the Cartan subalgebra, which comes from [§Root system, ⁋Definition 4](/en/math/lie_theory/root_systems#def4), is <em>unrelated</em> to the $$H$$ in our discussion.
+[^1]: Note that the $\mathfrak{h}$ denoting the Cartan subalgebra, which comes from [§Root Systems, ⁋Definition 4](/en/math/lie_theory/root_systems#def4), is <em>unrelated</em> to the $H$ in our discussion.

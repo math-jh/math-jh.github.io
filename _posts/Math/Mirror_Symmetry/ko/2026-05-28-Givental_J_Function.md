@@ -58,7 +58,7 @@ $$\psi_i=\sum_{\substack{S \subset \{1, \ldots, n\} \\ i \in S, j, k \notin S, \
 :::
 
 ::: 증명
-$n = 4$일 때 $\overline{\mathcal{M}}_{0,4} \cong \mathbb{P}^1$이고 $\psi_i$는 차수 $1$의 점 class인데, 이는 $i$를 $j, k$로부터 가르는 유일한 boundary divisor $D_{\{i, l\}}$ ($l$은 넷째 index) 와 선형동치이므로 $n = 4$에서 우변과 일치한다. 일반 $n$은 $i, j, k$와 한 점만 남기는 forgetful morphism $\pi: \overline{\mathcal{M}}_{0,n} \rightarrow \overline{\mathcal{M}}_{0,4}$에 대해 cotangent line class를 비교하면 $\psi_i$가 $\pi^\ast \psi_i$와 $i$가 $j, k$로부터 갈리는 boundary 만큼 차이남을 얻고, 이를 반복 적용하면 우변의 boundary 합이 나온다. 이는 $\overline{\mathcal{M}}_{0,n}$의 표준적 사실이다 ([CK, §10]).
+$n = 4$일 때 $\overline{\mathcal{M}}_{0,4} \cong \mathbb{P}^1$이고 $\psi_i$는 degree $1$의 점 class인데, 이는 $i$를 $j, k$로부터 가르는 유일한 boundary divisor $D_{\{i, l\}}$ ($l$은 넷째 index) 와 linearly equivalent하므로 $n = 4$에서 우변과 일치한다. 일반 $n$은 $i, j, k$와 한 점만 남기는 forgetful morphism $\pi: \overline{\mathcal{M}}_{0,n} \rightarrow \overline{\mathcal{M}}_{0,4}$에 대해 cotangent line class를 비교하면 $\psi_i$가 $\pi^\ast \psi_i$와 $i$가 $j, k$로부터 갈리는 boundary 만큼 차이남을 얻고, 이를 반복 적용하면 우변의 boundary 합이 나온다. 이는 $\overline{\mathcal{M}}_{0,n}$의 표준적 사실이다 ([CK, §10]).
 :::
 
 그럼 target $X$가 주어진 stable map의 moduli space $\overline{\mathcal{M}}_{0, n}(X, \beta)$에서도 forgetful morphism $\overline{\mathcal{M}}_{0, n}(X, \beta) \rightarrow \overline{\mathcal{M}}_{0, n}$의 pullback을 통해 위의 공식을 옮겨줄 수 있다. 
@@ -137,7 +137,7 @@ $$T_a \qtimes t_{(2)} = T_a \smile t_{(2)} + \sum_{\beta \neq 0} q^\beta (t_{(2)
 
 $$\partial_{t^a}\bigl((t_{(2)})^2/2\bigr) = \partial_{t^a}\!\left(\frac{1}{2}\sum_{b, c} t^b t^c T_b \smile T_c\right) = \sum_c t^c T_a \smile T_c = T_a \smile t_{(2)}$$
 
-로 직접 확인된다. Quantum 부분의 antiderivative는 $q^\beta = e^{t_{(2)}\cdot \beta}$로부터 오는 관계 $q_a\partial_{q_a} q^\beta = (T_a \cdot \beta) q^\beta$을 이용해 $\beta$별로 풀어내면, 각 $\beta$에 대해 $q^\beta$ 인자와 *primary* GW invariant ($\psi$-class 삽입 없는 descendant invariant) $\langle T_a, T^c\rangle_{0, 2, \beta}$로 결정되는 $H^\ast(X)$-valued correction으로 정리되며, 따라서 $s_2$는 classical $(t_{(2)})^2/2$와 이 quantum correction의 합이 된다. 더 높은 $z^{-k}$ ($k \geq 2$) 차수에서는 같은 recursion을 따라 $\tau_{k-1}(T_a)$ 형태의 *gravitational descendant*가 차례로 누적되며, $J$-function은 결국 이렇게 강제되는 fundamental solution을 한 줄로 명시적으로 적은 것이다.
+로 직접 확인된다. Quantum 부분의 antiderivative는 $q^\beta = e^{t_{(2)}\cdot \beta}$로부터 오는 관계 $q_a\partial_{q_a} q^\beta = (T_a \cdot \beta) q^\beta$을 이용해 $\beta$별로 풀어내면, 각 $\beta$에 대해 $q^\beta$ 인자와 *primary* GW invariant ($\psi$-class 삽입 없는 descendant invariant) $\langle T_a, T^c\rangle_{0, 2, \beta}$로 결정되는 $H^\ast(X)$-valued correction으로 정리되며, 따라서 $s_2$는 classical $(t_{(2)})^2/2$와 이 quantum correction의 합이 된다. 더 높은 $z^{-k}$ ($k \geq 2$) degree에서는 같은 recursion을 따라 $\tau_{k-1}(T_a)$ 형태의 *gravitational descendant*가 차례로 누적되며, $J$-function은 결국 이렇게 강제되는 fundamental solution을 한 줄로 명시적으로 적은 것이다.
 
 ::: 정의 3
 $X$의 (small) *Givental $J$-function<sub>기벤탈 J-함수</sub>* $J_X: (\mathbb{C}^\ast)^r \times \mathbb{C}^\ast \rightarrow H^\ast(X)$는 다음으로 정의된다.
@@ -145,7 +145,7 @@ $X$의 (small) *Givental $J$-function<sub>기벤탈 J-함수</sub>* $J_X: (\math
 $$J_X(q, z) := e^{t_{(2)}/z}\left( 1 + \sum_{\substack{\beta \in H_2(X, \mathbb{Z})_{\mathrm{eff}} \\ \beta \neq 0}} \sum_{a=0}^s q^\beta \left\langle \frac{T_a}{z(z - \psi)} \right\rangle_{0, 1, \beta} T^a \right)$$
 :::
 
-여기서 $H_2(X, \mathbb{Z})_{\mathrm{eff}}$는 effective curve class들의 집합 ([\[사교기하학\] §양자 코호몰로지, §§Novikov ring](/ko/math/symplectic_geometry/quantum_cohomology#novikov-ring)에서 정의)으로, $\beta$가 이 위를 달리며 각 $\beta \neq 0$이 차수 $q^\beta$의 instanton 보정에 기여한다.
+여기서 $H_2(X, \mathbb{Z})_{\mathrm{eff}}$는 effective curve class들의 집합 ([\[사교기하학\] §양자 코호몰로지, §§Novikov ring](/ko/math/symplectic_geometry/quantum_cohomology#novikov-ring)에서 정의)으로, $\beta$가 이 위를 달리며 각 $\beta \neq 0$이 degree $q^\beta$의 instanton 보정에 기여한다.
 
 앞서 우리는 다음의 식
 
@@ -199,15 +199,15 @@ $$\left\langle \frac{T_a}{z - \psi}, 1\right\rangle_{0, 2, \beta} = \sum_{k \geq
 
 $$\langle \tau_k(T_a), 1\rangle_{0, 2, \beta} = \langle \tau_{k-1}(T_a)\rangle_{0, 1, \beta}$$
 
-이 모든 $k\geq 1$에 대해 성립한다. $k = 0$인 항은 string equation 우변에서 내릴 $\psi$가 없어 빈 합이 되므로, $\langle T_a, 1\rangle_{0, 2, \beta} = 0$ ($\beta \neq 0$)으로 사라진다 (이는 fundamental class를 evaluate하는 marked point가 $\beta \neq 0$에서 기여하지 않는다는 사실에 다름 아니다). 따라서 멱급수의 차수가 한 칸씩 내려가서 다음의 식
+이 모든 $k\geq 1$에 대해 성립한다. $k = 0$인 항은 string equation 우변에서 내릴 $\psi$가 없어 빈 합이 되므로, $\langle T_a, 1\rangle_{0, 2, \beta} = 0$ ($\beta \neq 0$)으로 사라진다 (이는 fundamental class를 evaluate하는 marked point가 $\beta \neq 0$에서 기여하지 않는다는 사실에 다름 아니다). 따라서 멱급수의 degree가 한 칸씩 내려가서 다음의 식
 
 $$\sum_{k \geq 1} z^{-k-1}\langle \tau_{k-1}(T_a)\rangle_{0, 1, \beta} = \sum_{m \geq 0} z^{-m-2}\langle \tau_m(T_a)\rangle_{0, 1, \beta} = \left\langle \frac{T_a}{z(z - \psi)}\right\rangle_{0, 1, \beta}$$
 
 이 된다. 이것이 정확히 [정의 3](#def3)의 small $J$ 식 안에 들어 있는 항이며, 여기에 prefactor $e^{t_{(2)}/z}$를 곱한 것이 $J_X = e^{t_{(2)}/z} S(q, z) T_0$이다. 이것이 [정의 3](#def3)에서 다소 어색하게 보일 수 있었던 추가적인 $z^{-1}$의 기원이다. 
 
-이제 $S$의 각 열 $S(q,z)T_b$가 horizontal section임을 보이자. 이를 위해서는  $z q_a\partial_{q_a}$를 $S(q, z) T_b$에 직접 작용시켜보면 된다. 우선 $S(q, z) T_b$는 $\beta$마다 $q^\beta$를 인자로 갖는 항들의 합으로 나타나는데, $J$-function을 도입하기 전 살펴본 recursion relation과 [\[사교기하학\] §Gromov-Witten 불변량, ⁋명제 4](/ko/math/symplectic_geometry/gromov_witten#prop4)을 사용하면 $z q_a\partial_{q_a}$는 결국 $T_a$를 한 점으로 삽입하면서, 곱해진 $z$로 distinguished marked point의 $1/(z - \psi)$에서 $\psi$를 한 차수 내리는 효과를 준다.
+이제 $S$의 각 열 $S(q,z)T_b$가 horizontal section임을 보이자. 이를 위해서는  $z q_a\partial_{q_a}$를 $S(q, z) T_b$에 직접 작용시켜보면 된다. 우선 $S(q, z) T_b$는 $\beta$마다 $q^\beta$를 인자로 갖는 항들의 합으로 나타나는데, $J$-function을 도입하기 전 살펴본 recursion relation과 [\[사교기하학\] §Gromov-Witten 불변량, ⁋명제 4](/ko/math/symplectic_geometry/gromov_witten#prop4)을 사용하면 $z q_a\partial_{q_a}$는 결국 $T_a$를 한 점으로 삽입하면서, 곱해진 $z$로 distinguished marked point의 $1/(z - \psi)$에서 $\psi$를 한 degree 내리는 효과를 준다.
 
-이제 이렇게 차수를 내린 $\psi$를 [명제 2](#prop2)로 (정확히는 [명제 2](#prop2)에서 target을 살린 버전으로) boundary divisor들의 합 $\sum_S D_S$로 분해할 수 있다. 이 때, 각 $D_S$ 위에서 source curve는 effective class가 $\beta = \beta_1 + \beta_2$로 쪼개진 두 component로 갈라지고, 그 사이의 node에서는 diagonal class $\sum_c T_c \otimes T^c$가 끼어든다. 새로 삽입한 $T_a$가 모이는 component는 3-point invariant $\langle T_a, T_c, T_d\rangle_{0, 3, \beta_1}$, 곧 quantum product $T_a \qtimes$를 basis로 표현한 structure constant를 주고, 나머지 component는 $T^c$를 node로 갖는 $S(q, z) T_b$의 (더 낮은 차수인) $\beta_2$에 해당하는 부분을 복원한다. 따라서 모든 $c$와 분해 $\beta = \beta_1 + \beta_2$에 대해 합하면 $T_a \qtimes$를 벡터 $S(q, z) T_b$에 적용한 것, 곧 우변 $T_a \qtimes \bigl(S(q, z) T_b\bigr)$가 정확히 복원된다.
+이제 이렇게 degree를 내린 $\psi$를 [명제 2](#prop2)로 (정확히는 [명제 2](#prop2)에서 target을 살린 버전으로) boundary divisor들의 합 $\sum_S D_S$로 분해할 수 있다. 이 때, 각 $D_S$ 위에서 source curve는 effective class가 $\beta = \beta_1 + \beta_2$로 쪼개진 두 component로 갈라지고, 그 사이의 node에서는 diagonal class $\sum_c T_c \otimes T^c$가 끼어든다. 새로 삽입한 $T_a$가 모이는 component는 3-point invariant $\langle T_a, T_c, T_d\rangle_{0, 3, \beta_1}$, 곧 quantum product $T_a \qtimes$를 basis로 표현한 structure constant를 주고, 나머지 component는 $T^c$를 node로 갖는 $S(q, z) T_b$의 (더 낮은 degree인) $\beta_2$에 해당하는 부분을 복원한다. 따라서 모든 $c$와 분해 $\beta = \beta_1 + \beta_2$에 대해 합하면 $T_a \qtimes$를 벡터 $S(q, z) T_b$에 적용한 것, 곧 우변 $T_a \qtimes \bigl(S(q, z) T_b\bigr)$가 정확히 복원된다.
 :::
 
 따라서 $q\rightarrow 0$일 때 모든 $q^\beta$항이 사라지므로, $S$의 classical limit은 $\id$이다. 이는 A-side에서는 quantum cup product의 classical limit이 ordinary cup product라는 것의 결과로 생각할 수 있다. 
@@ -216,7 +216,7 @@ $$\sum_{k \geq 1} z^{-k-1}\langle \tau_{k-1}(T_a)\rangle_{0, 1, \beta} = \sum_{m
 
 특히 $H^\ast(X)$가 $H^2(X)$로 생성되는 경우, 가령 $X = \mathbb{P}^n$이나 대부분의 toric Fano variety인 경우 이 한 열 $J$가 사실상 $S$ 전체를 결정한다. 실제로 [명제 4](#prop4)의 flat section equation $z q_a\partial_{q_a} J = T_a \qtimes J$를 반복 적용하면 $H^2$ class들의 quantum product $T_{a_1} \qtimes \cdots \qtimes T_{a_k} \qtimes J$가 차례로 생성되는데, $H^\ast(X)$가 $H^2$로 생성되면 이 quantum product들이 모든 $T_b$를 cohomology의 basis로 훑으므로 나머지 열 $S(q, z) T_b$도 전부 $J$의 미분으로 복원되기 때문이다. 이는 [주장 5](#conj5)에서 우리의 "Mirror theorem"이 오직 첫 열에 대한 주장만 하는 것에 대한 정당성을 부여한다.
 
-한편 이 계산은 앞서 ($\ast$)에서부터 계산하여 적분을 반복하며 얻어진 적분상수의 처리와도 관련되어 있는데, 바로 [명제 4](#prop4)의 $S$는 이 적분상수를 모든 차수에서 $0$으로 버린 해라는 것이다. 즉, $t_{(2)}$에서 나오는 성분들을 prefactor $e^{t_{(2)}/z}$로 따로 떼어내고 나면 남는 모든 보정이 $\beta \neq 0$의 instanton 차수 $q^\beta$만을 갖도록, 따라서 위와 같이 $q \rightarrow 0$일 때 classical limit이 나오도록 한 fundamental solution이다. 
+한편 이 계산은 앞서 ($\ast$)에서부터 계산하여 적분을 반복하며 얻어진 적분상수의 처리와도 관련되어 있는데, 바로 [명제 4](#prop4)의 $S$는 이 적분상수를 모든 degree에서 $0$으로 버린 해라는 것이다. 즉, $t_{(2)}$에서 나오는 성분들을 prefactor $e^{t_{(2)}/z}$로 따로 떼어내고 나면 남는 모든 보정이 $\beta \neq 0$의 instanton degree $q^\beta$만을 갖도록, 따라서 위와 같이 $q \rightarrow 0$일 때 classical limit이 나오도록 한 fundamental solution이다. 
 
 ## Mirror theorem
 
@@ -274,13 +274,13 @@ $$I_X(q, z) = 1 + \tau(q)/z + O(z^{-2})$$
 
 증명을 위해 양 변을 각각 살펴보면, $J_X$는 [명제 4](#prop4)에서 본 대로 small QDE ($\ast$)의 fundamental solution이고, $I_X$는 [정의 6](#def6)에서 charge 데이터로 명시적으로 주어진 hypergeometric 함수이다. 증명의 핵심은 이 명시적 $I_X$ 또한 $J_X$와 같은 $D$-module의 해, 즉 같은 QDE ($\ast$)의 해임을 직접 확인하는 데 있다. 만일 $X$가 toric Fano이면 $H^\ast(X)$가 $H^2(X)$로 생성되므로, ($\ast$)는 $I_X$의 한 성분에 대한 미분방정식으로 귀결되고, 이 때 $I_X$의 hypergeometric 곱에 $z q_a\partial_{q_a}$를 직접 먹이면 곱의 각 인자가 항별로 이 방정식을 만족함이 확인된다. 한편 $I_X$와 $J_X$는 모두 $z \rightarrow \infty$에서 $1 + O(z^{-1})$의 normalization을 가지는데, QDE의 해는 $s_0$이 결정되면 나머지는 이 leading asymptotic으로부터 점화식 형태로 유일하게 결정되므로 $J_X(\tau(q), z) = I_X(q, z)$를 얻는다. 이에 대한 구체적인 계산은 $X = \mathbb{P}^n$에서 확인해보기로 한다. ([예시 8](#ex8))
 
-여기서 mirror map이 잘 정의되는 것은 $X$의 Fano 성질 덕분임에 유의하자. $X$가 Fano이면 영이 아닌 모든 effective curve class $\beta$에 대해 $-K_X \cdot \beta > 0$이므로 $q^\beta$ 보정이 전부 $z^{-1}$ 이하 차수에만 나타나고, 따라서 $I_X$의 $z^0$ 항이 정확히 $1$이 되어 ($I_X = 1 + O(z^{-1})$) $z^{-1}$ 계수로 $\tau(q)$를 읽어낼 수 있다. 더 일반적으로 $-K_X$가 nef이기만 한 *semi-positive* 경우에는 $-K_X \cdot \beta = 0$인 방향이 $z^0$ 차수에 보정 $I_0(q) \neq 1$을 만들어 관계식이 $J_X(\tau(q), z) = I_X(q, z)/I_0(q)$로 수정된다. 
+여기서 mirror map이 잘 정의되는 것은 $X$의 Fano 성질 덕분임에 유의하자. $X$가 Fano이면 영이 아닌 모든 effective curve class $\beta$에 대해 $-K_X \cdot \beta > 0$이므로 $q^\beta$ 보정이 전부 $z^{-1}$ 이하 degree에만 나타나고, 따라서 $I_X$의 $z^0$ 항이 정확히 $1$이 되어 ($I_X = 1 + O(z^{-1})$) $z^{-1}$ 계수로 $\tau(q)$를 읽어낼 수 있다. 더 일반적으로 $-K_X$가 nef이기만 한 *semi-positive* 경우에는 $-K_X \cdot \beta = 0$인 방향이 $z^0$ degree에 보정 $I_0(q) \neq 1$을 만들어 관계식이 $J_X(\tau(q), z) = I_X(q, z)/I_0(q)$로 수정된다. 
 
 비슷한 결에서, $X$의 Fano index가 $2$ 이상인 경우를 보자. 여기서 *Fano index* $r_X$란 $-K_X = r_X H$를 만족하는 $H \in \Pic(X)$가 존재하는 가장 큰 양의 정수이다. 그럼 이 경우 $H = -K_X / r_X$도 ample이므로, 영이 아닌 effective curve class $\beta$에 대해 $H \cdot \beta \geq 1$이고, 따라서 
 
 $$-K_X \cdot \beta = r_X (H \cdot \beta) \geq 2$$
 
-가 되어 $q$에 의존하는 보정이 전부 $z^{-2}$ 이하 차수로 밀려난다. 그 결과 mirror map $\tau(q)$에 $q$-보정이 남지 않으며, 이 경우 $J_X(q, z) = I_X(q, z)$가 좌표변환 없이 그대로 성립한다. 다음 [예시 8](#ex8)의 $\mathbb{P}^n$ ($-K = (n+1)H$, Fano index $n+1 \geq 2$)이 이 경우이다.
+가 되어 $q$에 의존하는 보정이 전부 $z^{-2}$ 이하 degree로 밀려난다. 그 결과 mirror map $\tau(q)$에 $q$-보정이 남지 않으며, 이 경우 $J_X(q, z) = I_X(q, z)$가 좌표변환 없이 그대로 성립한다. 다음 [예시 8](#ex8)의 $\mathbb{P}^n$ ($-K = (n+1)H$, Fano index $n+1 \geq 2$)이 이 경우이다.
 
 ::: 예시 8 ($X = \mathbb{P}^n$)
 $\mathbb{P}^n$의 fan은 standard simplex의 normal fan으로, $n+1$개의 ray 
@@ -299,11 +299,11 @@ $$\frac{\prod_{k=-\infty}^{0}(D_i + kz)}{\prod_{k=-\infty}^{D_i \cdot \beta}(D_i
 
 $$I_{\mathbb{P}^n}(q, z) = e^{H \ln q /z} \sum_{d \geq 0} \frac{q^d}{\prod_{j=1}^d (H + jz)^{n+1}}$$
 
-이 된다. $H^{n+1} = 0$이므로, 분모의 $(H + jz)^{-(n+1)}$를 $z^{-1}$의 멱급수로 전개하고, $e^{H\ln q/z}$를 테일러전개한 후 차수별로 묶으면 다음의 전개식을 얻는다.
+이 된다. $H^{n+1} = 0$이므로, 분모의 $(H + jz)^{-(n+1)}$를 $z^{-1}$의 멱급수로 전개하고, $e^{H\ln q/z}$를 테일러전개한 후 degree별로 묶으면 다음의 전개식을 얻는다.
 
 $$I_{\mathbb{P}^n}(q, z) = 1 + \frac{H \ln q}{z} + \frac{(H \ln q)^2}{2 z^2} + \cdots + q \frac{1}{(H+z)^{n+1}} + \cdots$$
 
-이제 $\mathbb{P}^n$의 Fano index는 $-K_{\mathbb{P}^n} = (n+1) H$로부터 $n+1 \geq 2$이다. 위 전개에서 $q$에 의존하는 보정 ($d \geq 1$의 $q^d$ 항)은 $z^{-(n+1)}$ 이하 차수에만 나타나므로 $I_{\mathbb{P}^n}$의 $z^{-1}$ 계수는 prefactor에서 오는 $H \ln q$ (곧 $t_{(2)}$)뿐이다. 따라서 [명제 7](#prop7) 직후 논의대로 mirror map은 identity이고
+이제 $\mathbb{P}^n$의 Fano index는 $-K_{\mathbb{P}^n} = (n+1) H$로부터 $n+1 \geq 2$이다. 위 전개에서 $q$에 의존하는 보정 ($d \geq 1$의 $q^d$ 항)은 $z^{-(n+1)}$ 이하 degree에만 나타나므로 $I_{\mathbb{P}^n}$의 $z^{-1}$ 계수는 prefactor에서 오는 $H \ln q$ (곧 $t_{(2)}$)뿐이다. 따라서 [명제 7](#prop7) 직후 논의대로 mirror map은 identity이고
 
 $$J_{\mathbb{P}^n}(q, z) = I_{\mathbb{P}^n}(q, z)$$
 
@@ -349,7 +349,7 @@ $X$의 *big Givental $J$-function<sub>큰 기벤탈 $J$-함수</sub>* $J_X^{\mat
 
 $$J_X^{\mathrm{big}}(t, z) := e^{t_{(2)}/z}\left( 1 + \sum_{\substack{\beta \in H_2(X, \mathbb{Z})_{\mathrm{eff}}, n \geq 0 \\ (\beta, n) \neq (0, 0)}} \sum_{a=0}^s \frac{q^\beta}{n!} \left\langle \frac{T_a}{z - \psi}, t, \ldots, t \right\rangle_{0, n+1, \beta} T^a \right)$$
 
-여기서 첫 marked point에 $T_a/(z-\psi)$가 (즉 $T_a$의 pullback에 모든 차수의 $\psi^k$가 generating function 형태로) 끼이고, 나머지 $n$개 marked point에 모두 $t \in H^\ast(X)$가 삽입되어 총 $n+1$개 marked point를 이룬다.
+여기서 첫 marked point에 $T_a/(z-\psi)$가 (즉 $T_a$의 pullback에 모든 degree의 $\psi^k$가 generating function 형태로) 끼이고, 나머지 $n$개 marked point에 모두 $t \in H^\ast(X)$가 삽입되어 총 $n+1$개 marked point를 이룬다.
 :::
 
 Big $J$-function이 big QDE의 horizontal section을 이룬다는 사실은 [명제 4](#prop4)의 small 버전과 같은 논증을 따르면 된다. Small $J$-function은 big $J$-function의 $t = t_{(2)} \in H^2(X)$ specialization으로 복원되는데, $H^2$ 삽입에 (descendant 보정항이 붙은) divisor equation을 $n$번 적용하면 $t_{(2)}$ 삽입들이 $(t_{(2)} \cdot \beta)^n$ 인자와 $\psi$-shift 보정으로 빠져나오고, 이들이 $\sum_n (t_{(2)}\cdot \beta)^n/n! = q^\beta$로 합산되며 $\psi$-shift 보정이 추가 $z^{-1}$ 인자를 만들어내어, 결과적으로 marked point가 $1$개로 줄어든 [정의 3](#def3)의 small $J$-function 형태가 그대로 복원된다. 

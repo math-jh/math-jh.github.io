@@ -176,7 +176,7 @@ $$p\vert_{W^\perp}:W^\perp\rightarrow V/W$$
 $W$가 non-degenerate이므로 [명제 8](#prop8)에 의하여 $V=W\oplus W^\perp$이다. Natural projection은 $\ker p=W$를 만족하므로 $p\vert_{W^\perp}$의 kernel은 $W^\perp\cap W=\{0\}$이라 단사이고, $V=W+W^\perp$이므로 임의의 $v=w+w'$ ($w\in W$, $w'\in W^\perp$)에 대하여 $p(w')=w'+W=v+W$이라 전사이다. 따라서 $p\vert_{W^\perp}$은 isomorphism이다.
 :::
 
-곧 direct sum $V=W\oplus W^\perp$에서 $W$를 접어 없애면 $W^\perp$이 정확히 그 몫 $V/W$을 실현하게 된다. 일반적으로 quotient space $V/W$는 $\langle-,-\rangle$ 없이도 정의되는 표준적인 대상인 반면, 이를 $V$ 안에서 실현한 대상인 $W^\perp$은 form에 의존하게 되며 [명제 8](#prop8)의 non-degeneracy 없이는 이러한 표현이 불가능하다. 가령 $W$가 isotropic이면 $W\cap W^\perp\neq\{0\}$이라 $p\vert_{W^\perp}$이 단사가 되지 못한다.
+곧 direct sum $V=W\oplus W^\perp$에서 $W$를 접어 없애면 $W^\perp$이 정확히 그 quotient $V/W$을 실현하게 된다. 일반적으로 quotient space $V/W$는 $\langle-,-\rangle$ 없이도 정의되는 표준적인 대상인 반면, 이를 $V$ 안에서 실현한 대상인 $W^\perp$은 form에 의존하게 되며 [명제 8](#prop8)의 non-degeneracy 없이는 이러한 표현이 불가능하다. 가령 $W$가 isotropic이면 $W\cap W^\perp\neq\{0\}$이라 $p\vert_{W^\perp}$이 단사가 되지 못한다.
 
 ## 네 개의 기본공간들
 

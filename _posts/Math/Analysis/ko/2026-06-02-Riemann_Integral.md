@@ -34,7 +34,7 @@ $$L(P, f) = \sum_{i=1}^n m_i \Delta x_i, \qquad U(P, f) = \sum_{i=1}^n M_i \Delt
 
 $$L(P, f) \leq L(P', f) \leq U(P', f) \leq U(P, f)$$
 
-가 성립한다. 점 하나를 추가하는 경우만 보이면 귀납으로 충분한데, 부분구간 $[x_{i-1}, x_i]$에 점 $c$를 넣어 두 조각으로 나누면 좁은 구간의 하한이 넓은 구간의 하한보다 작지 않으므로 $m' = \inf_{[x_{i-1},c]} f \geq m_i$, $m'' = \inf_{[c, x_i]} f \geq m_i$이고
+가 성립한다. 점 하나를 추가하는 경우만 보이면 귀납으로 충분한데, 부분구간 $[x_{i-1}, x_i]$에 점 $c$를 넣어 두 조각으로 나누면 좁은 구간의 infimum이 넓은 구간의 infimum보다 작지 않으므로 $m' = \inf_{[x_{i-1},c]} f \geq m_i$, $m'' = \inf_{[c, x_i]} f \geq m_i$이고
 
 $$\begin{aligned}
 m' (c - x_{i-1}) + m'' (x_i - c) &\geq m_i (c - x_{i-1}) + m_i (x_i - c) \\
@@ -70,7 +70,7 @@ $[a,b]$에서 연속인 함수는 Riemann 적분가능하다.
 :::
 
 ::: 증명
-$f$는 컴팩트구간 $[a,b]$에서 연속이므로 균등연속이다 ([§연속함수의 성질, ⁋정리 4](/ko/math/analysis/continuous_functions#thm4)). 임의의 $\varepsilon > 0$에 대해, 균등연속성으로 $\lvert x - y\rvert < \delta$이면 $\lvert f(x) - f(y)\rvert < \varepsilon/(b - a)$이게 하는 $\delta$가 있다. 너비가 $\delta$ 미만인 분할 $P$를 잡으면, 각 부분구간에서 $f$가 (컴팩트성으로) 최댓값과 최솟값을 가지므로 $M_i - m_i \leq \varepsilon/(b-a)$이고
+$f$는 컴팩트구간 $[a,b]$에서 연속이므로 균등연속이다 ([§연속함수의 성질, ⁋정리 4](/ko/math/analysis/continuous_functions#thm4)). 임의의 $\varepsilon > 0$에 대해, 균등연속성으로 $\lvert x - y\rvert < \delta$이면 $\lvert f(x) - f(y)\rvert < \varepsilon/(b - a)$이게 하는 $\delta$가 있다. mesh가 $\delta$ 미만인 분할 $P$를 잡으면, 각 부분구간에서 $f$가 (컴팩트성으로) 최댓값과 최솟값을 가지므로 $M_i - m_i \leq \varepsilon/(b-a)$이고
 
 $$U(P, f) - L(P, f) = \sum_i (M_i - m_i)\Delta x_i \leq \frac{\varepsilon}{b-a}\sum_i \Delta x_i = \varepsilon$$
 
@@ -132,11 +132,11 @@ $$\int_a^b (f + g) = \int_a^b f + \int_a^b g, \qquad \int_a^b cf = c\int_a^b f$$
 :::
 
 ::: 증명
-합에 대해, 임의의 부분구간에서 하한·상한이 $\inf(f+g) \geq \inf f + \inf g$, $\sup(f+g) \leq \sup f + \sup g$를 만족하므로
+합에 대해, 임의의 부분구간에서 infimum·supremum이 $\inf(f+g) \geq \inf f + \inf g$, $\sup(f+g) \leq \sup f + \sup g$를 만족하므로
 
 $$L(P,f) + L(P,g) \leq L(P, f+g) \leq U(P, f+g) \leq U(P,f) + U(P,g)$$
 
-이다. 적분가능성으로 양 끝의 차를 $\varepsilon$ 미만으로 만드는 공통세분을 잡으면 가운데도 그러하여 $f+g$가 적분가능하고, 같은 부등식에서 세 적분이 모두 같은 값으로 죄어들어 $\int(f+g) = \int f + \int g$가 된다. 상수배는 $c \geq 0$이면 하한·상한이 $c$배로 곱해지고 $c < 0$이면 하한과 상한의 역할이 바뀔 뿐이므로 곧바로 따른다. 단조성은 $f \leq g$일 때 모든 분할에서 $L(P, f) \leq L(P, g)$이고 상한을 취하면 $\int f = \underline{\int} f \leq \underline{\int} g = \int g$임에서 나온다.
+이다. 적분가능성으로 양 끝의 차를 $\varepsilon$ 미만으로 만드는 공통세분을 잡으면 가운데도 그러하여 $f+g$가 적분가능하고, 같은 부등식에서 세 적분이 모두 같은 값으로 죄어들어 $\int(f+g) = \int f + \int g$가 된다. 상수배는 $c \geq 0$이면 infimum·supremum이 $c$배로 곱해지고 $c < 0$이면 infimum과 supremum의 역할이 바뀔 뿐이므로 곧바로 따른다. 단조성은 $f \leq g$일 때 모든 분할에서 $L(P, f) \leq L(P, g)$이고 supremum을 취하면 $\int f = \underline{\int} f \leq \underline{\int} g = \int g$임에서 나온다.
 :::
 
 단조성에서 $g = \lvert f\rvert$, $-\lvert f\rvert \leq f \leq \lvert f\rvert$를 쓰면 적분의 삼각부등식 $\bigl\lvert \int_a^b f\bigr\rvert \leq \int_a^b \lvert f\rvert$도 따라 나온다. 마지막으로 적분 영역을 쪼개고 이어 붙이는 성질을 본다.
@@ -154,7 +154,7 @@ $$\int_a^b f = \int_a^c f + \int_c^b f$$
 
 $$U(P, f) - L(P, f) = \bigl(U(P_1, f) - L(P_1, f)\bigr) + \bigl(U(P_2, f) - L(P_2, f)\bigr)$$
 
-이 성립한다. 좌변을 $\varepsilon$ 미만으로 만들 수 있음과 두 괄호를 각각 작게 만들 수 있음은 (둘 다 음이 아니므로) 동치이고, 이로써 적분가능성의 동치가 따른다. 더불어 $L(P_1, f) + L(P_2, f) = L(P, f)$의 상한을 취하면 적분값의 가법성 $\int_a^b f = \int_a^c f + \int_c^b f$를 얻는다.
+이 성립한다. 좌변을 $\varepsilon$ 미만으로 만들 수 있음과 두 괄호를 각각 작게 만들 수 있음은 (둘 다 음이 아니므로) 동치이고, 이로써 적분가능성의 동치가 따른다. 더불어 $L(P_1, f) + L(P_2, f) = L(P, f)$의 supremum을 취하면 적분값의 가법성 $\int_a^b f = \int_a^c f + \int_c^b f$를 얻는다.
 :::
 
 이로써 [\[미적분학\] §적분, ⁋정리 10](/ko/math/calculus/integration#thm10)에서 받아들였던 연속함수의 적분가능성이 완비성에 기초하여 증명되었고, 같은 다르부 틀에서 선형성·구간가법성·단조성도 모두 따라 나왔다.

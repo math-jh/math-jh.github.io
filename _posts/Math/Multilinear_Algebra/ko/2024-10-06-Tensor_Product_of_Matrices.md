@@ -43,7 +43,7 @@ $$(u\otimes u')\circ(v\otimes v')=(u\circ v)\otimes(u'\circ v'),\qquad \id_M\oti
 이 성립한다.
 :::
 ::: 증명
-양변 모두 $A$-linear map이므로 $M\otimes_AM'$ 혹은 $N\otimes_AN'$의 생성원들 위에서 일치하는 것만 확인하면 충분하다. 임의의 $y\otimes y'\in N\otimes_AN'$에 대하여
+양변 모두 $A$-linear map이므로 $M\otimes_AM'$ 혹은 $N\otimes_AN'$의 generator들 위에서 일치하는 것만 확인하면 충분하다. 임의의 $y\otimes y'\in N\otimes_AN'$에 대하여
 
 $$\bigl((u\otimes u')\circ(v\otimes v')\bigr)(y\otimes y')=(u\otimes u')\bigl(v(y)\otimes v'(y')\bigr)=u(v(y))\otimes u'(v'(y'))=\bigl((u\circ v)\otimes (u'\circ v')\bigr)(y\otimes y')$$
 

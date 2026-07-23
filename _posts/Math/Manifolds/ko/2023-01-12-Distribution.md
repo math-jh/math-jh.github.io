@@ -178,7 +178,7 @@ $$Y_1=\frac{\partial}{\partial x^1}$$
 
 이 성립한다. 나머지 $Y_2,\ldots, Y_k$에 대해서는 우선 다음의 식
 
-$$\frac{\partial}{\partial x^1}Y_i(x^{k+j})=Y_1(Y_i(x^{k+j})=[Y_1,Y_i]x^{k+j}$$
+$$\frac{\partial}{\partial x^1}Y_i(x^{k+j})=Y_1(Y_i(x^{k+j}))=[Y_1,Y_i]x^{k+j}$$
 
 을 사용하면, $\mathcal{D}$가 involutive라는 조건으로부터 
 

@@ -46,7 +46,7 @@ $$\length(\gamma)^2 = \left(\int_a^b \lVert \dot\gamma(t)\rVert_g \mathop{dt}\ri
 를 얻는다. Cauchy-Schwarz 부등식의 등호 조건은 $f$와 $h$가 일차종속, 즉 $f$가 상수배 $h$인 것이므로, 여기서는 $\lVert \dot\gamma(t)\rVert_g$가 상수인 것과 동치이다.
 :::
 
-따라서 일정한 속력을 갖는 곡선들만 비교한다면 에너지를 최소화하는 것과 길이를 최소화하는 것이 일치한다. 임의의 곡선은 (속력이 $0$인 점이 없을 때) 호의 길이로 reparametrize해 일정한 속력을 갖도록 만들 수 있으므로, 길이의 최소화 문제를 에너지의 최소화 문제로 옮겨 다루어도 일반성을 잃지 않는다. 이것이 우리가 다루기 쉬운 에너지를 통해 측지선을 정의하는 근거이다.
+따라서 일정한 속력을 갖는 곡선들만 비교한다면 에너지를 최소화하는 것과 길이를 최소화하는 것이 일치한다. 임의의 곡선은 (속력이 $0$인 점이 없을 때) arc length로 reparametrize해 일정한 속력을 갖도록 만들 수 있으므로, 길이의 최소화 문제를 에너지의 최소화 문제로 옮겨 다루어도 일반성을 잃지 않는다. 이것이 우리가 다루기 쉬운 에너지를 통해 측지선을 정의하는 근거이다.
 
 ## 에너지의 제1변분
 
@@ -56,11 +56,11 @@ $$V(t) := \left.\frac{\partial \Gamma}{\partial s}\right\vert_{s = 0}(t) \in T_{
 
 을 그 변분의 *변분장<sub>variation field</sub>*이라 부른다. 끝점을 고정하는 변분, 즉 모든 $s$에 대해 $\Gamma(s, a) = \gamma(a)$와 $\Gamma(s, b) = \gamma(b)$를 만족하는 변분을 *고정변분<sub>proper variation</sub>*이라 부르며, 이 경우 $V(a) = V(b) = 0$이다.
 
-이제 곡선을 따른 미분을 명시하기 위해, $\Gamma$를 따라 정의된 vector field $\partial_t \Gamma$와 $\partial_s \Gamma$를 생각한다. Levi-Civita 접속 $\nabla$는 곡선을 따른 covariant derivative $D_t, D_s$를 유도하며, $\Gamma$의 좌표성분에 대한 직접적인 계산으로부터 다음의 *대칭 보조정리*
+이제 곡선을 따른 미분을 명시하기 위해, $\Gamma$를 따라 정의된 vector field $\partial_t \Gamma$와 $\partial_s \Gamma$를 생각한다. Levi-Civita connection $\nabla$는 곡선을 따른 covariant derivative $D_t, D_s$를 유도하며, $\Gamma$의 좌표성분에 대한 직접적인 계산으로부터 다음의 *대칭 보조정리*
 
 $$D_s \partial_t \Gamma = D_t \partial_s \Gamma$$
 
-가 성립한다. 이는 Levi-Civita 접속이 torsion-free, 즉 [§레비-치비타 접속, ⁋정의 3](/ko/math/riemannian_geometry/Levi-Civita_connection#def3)에서 $\Gamma_{ij}^k = \Gamma_{ji}^k$가 성립하는 데서 비롯한다. 이 사실을 이용해 에너지의 제1변분을 계산한다.
+가 성립한다. 이는 Levi-Civita connection이 torsion-free, 즉 [§레비-치비타 접속, ⁋정의 3](/ko/math/riemannian_geometry/Levi-Civita_connection#def3)에서 $\Gamma_{ij}^k = \Gamma_{ji}^k$가 성립하는 데서 비롯한다. 이 사실을 이용해 에너지의 제1변분을 계산한다.
 
 ::: 정리 3 (에너지의 제1변분)
 곡선 $\gamma : [a, b] \rightarrow M$의 변분 $\Gamma$와 그 변분장 $V$에 대해, $E(s) := E(\gamma_s)$라 두면 다음의 식
@@ -105,7 +105,7 @@ $$\left.\frac{d}{ds}\right\vert_{s = 0} E(\gamma_s) = \langle V(b), \dot\gamma(b
 가속도가 소멸하는 곡선을 정식으로 정의한다.
 
 ::: 정의 4
-Riemannian manifold $(M, g)$의 Levi-Civita 접속 $\nabla$에 대해, 곡선 $\gamma : I \rightarrow M$이 다음의 식
+Riemannian manifold $(M, g)$의 Levi-Civita connection $\nabla$에 대해, 곡선 $\gamma : I \rightarrow M$이 다음의 식
 
 $$\nabla_{\dot\gamma} \dot\gamma = D_t \dot\gamma = 0$$
 
@@ -189,7 +189,7 @@ $$\ddot\gamma^k(t) = 0, \qquad k = 1, \ldots, n$$
 :::
 
 ::: 예시 9
-$\mathbb{R}^3$에 매장된 단위 구면 $S^2$에 standard round metric, 즉 $\iota : S^2 \hookrightarrow \mathbb{R}^3$로 유도된 metric을 주자. 한 점 $p \in S^2$와 단위 vector $v \in T_p S^2$를 잡고, $p$와 $v$가 펼치는 $\mathbb{R}^3$의 평면 $P = \span\{p, v\}$를 생각하자. 이 평면이 구면과 만나는 교선은 *대원<sub>great circle</sub>*
+$\mathbb{R}^3$에 매장된 단위 구면 $S^2$에 standard round metric, 즉 $\iota : S^2 \hookrightarrow \mathbb{R}^3$로 유도된 metric을 주자. 한 점 $p \in S^2$와 unit vector $v \in T_p S^2$를 잡고, $p$와 $v$가 펼치는 $\mathbb{R}^3$의 평면 $P = \span\{p, v\}$를 생각하자. 이 평면이 구면과 만나는 교선은 *대원<sub>great circle</sub>*
 
 $$\gamma(t) = (\cos t)\, p + (\sin t)\, v$$
 
@@ -197,7 +197,7 @@ $$\gamma(t) = (\cos t)\, p + (\sin t)\, v$$
 
 $$\ddot\gamma(t) = -(\cos t)\, p - (\sin t)\, v = -\gamma(t)$$
 
-이다. 한편 $S^2$의 점 $\gamma(t)$에서 단위 법선벡터는 위치벡터 $\gamma(t)$ 자신이므로, $\ddot\gamma(t) = -\gamma(t)$는 모든 $t$에서 $T_{\gamma(t)} S^2$에 수직이다. 매장된 submanifold의 Levi-Civita 접속에 대한 가속도 $D_t \dot\gamma$는 주변 공간 $\mathbb{R}^3$에서의 가속도 $\ddot\gamma$를 tangent space $T_{\gamma(t)} S^2$로 정사영한 것과 같다는 사실을 적용하면, 접성분이 $0$이므로 $D_t \dot\gamma = 0$이다. 따라서 대원은 측지선이며, [정리 7](#thm7)의 유일성에 의해 $S^2$의 측지선은 정확히 대원들 (을 일정한 속력으로 매개화한 곡선들) 임을 알 수 있다.
+이다. 한편 $S^2$의 점 $\gamma(t)$에서 단위 법선벡터는 위치벡터 $\gamma(t)$ 자신이므로, $\ddot\gamma(t) = -\gamma(t)$는 모든 $t$에서 $T_{\gamma(t)} S^2$에 수직이다. 매장된 submanifold의 Levi-Civita connection에 대한 가속도 $D_t \dot\gamma$는 주변 공간 $\mathbb{R}^3$에서의 가속도 $\ddot\gamma$를 tangent space $T_{\gamma(t)} S^2$로 정사영한 것과 같다는 사실을 적용하면, 접성분이 $0$이므로 $D_t \dot\gamma = 0$이다. 따라서 대원은 측지선이며, [정리 7](#thm7)의 유일성에 의해 $S^2$의 측지선은 정확히 대원들 (을 일정한 속력으로 매개화한 곡선들) 임을 알 수 있다.
 :::
 
 [예시 9](#ex9)에서 사용한 "주변 공간의 가속도를 tangent space로 정사영한 것이 곡선 위의 covariant derivative"라는 사실은 [§리만 계량, §§Normal bundle](/ko/math/riemannian_geometry/Riemannian_metric#normal-bundle)에서 도입한 tangential-normal 분해를 곡선의 가속도에 적용한 것이다. 이 관찰은 일반적인 매장된 submanifold의 측지선을 다룰 때 핵심적인 도구가 된다.

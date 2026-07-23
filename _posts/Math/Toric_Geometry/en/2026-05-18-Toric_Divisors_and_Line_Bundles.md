@@ -59,7 +59,7 @@ The most natural candidates are the *characters* $\rchi^m$ corresponding to elem
 
 $$(t \cdot \rchi^m)(x) = \rchi^m(t x) = \rchi^m(t) \cdot \rchi^m(x)$$
 
-by the convention of [§Affine Toric Varieties, ⁋Proposition 10](/en/math/toric_geometry/affine_toric_varieties#prop10)), so they differ only by a scalar multiple. Since scalar multiples do not change zeros and poles, even though the $\rchi^m$ themselves are not torus-invariant, their divisors $\divisor(\rchi^m)$ are torus-invariant and lie in $\Div_T(X_\Sigma)$. Our first goal is to write this divisor explicitly in terms of the data of the fan.
+(by the convention of [§Affine Toric Varieties, ⁋Proposition 10](/en/math/toric_geometry/affine_toric_varieties#prop10)), so they differ only by a scalar multiple. Since scalar multiples do not change zeros and poles, even though the $\rchi^m$ themselves are not torus-invariant, their divisors $\divisor(\rchi^m)$ are torus-invariant and lie in $\Div_T(X_\Sigma)$. Our first goal is to write this divisor explicitly in terms of the data of the fan.
 
 ::: Proposition 3
 The principal divisor corresponding to the character $\rchi^m$ is given by

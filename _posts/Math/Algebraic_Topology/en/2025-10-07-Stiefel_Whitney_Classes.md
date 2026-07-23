@@ -59,7 +59,7 @@ For an $(n+1)$-dimensional vector space $\mathbb{R}^{n+1}$, we call the space of
 
 Now let us take this space $\RP^n$ as the base space $B$, and define the vector bundle $E(\gamma_n^1)$ over it as follows. As a set,
 
-$$E(\gamma_n^1)=\{((x,v)\in \RP^n\times \mathbb{R}^{n+1}\mid x\in \span(x)\}$$
+$$E(\gamma_n^1)=\{(x,v)\in \RP^n\times \mathbb{R}^{n+1}\mid v\in \span(x)\}$$
 
 with the projection $\gamma_n^1:E(\gamma_n^1)\rightarrow \RP^n$ being the projection onto the first coordinate. That is, $\gamma_n^1$ attaches to each point $x\in \RP^n$ precisely the line that $x$ originally belonged to in $\mathbb{R}^{n+1}$.
 

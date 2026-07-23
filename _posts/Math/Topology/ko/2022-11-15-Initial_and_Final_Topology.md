@@ -86,7 +86,7 @@ $$\mathcal{T}_\fin=\{U\subseteq X\mid f^{-1}_i(U)\text{ is open in $Y_i$ for all
 ::: 증명
 주어진 위상 $\mathcal{T}_\fin$가 실제로 위상이 된다는 것은 쉽게 확인할 수 있다. 따라서 $\mathcal{T}_\fin$가 [정의 4](#def4)의 조건을 모두 만족한다는 것만 보이면 충분하다. 
 
-우선, 임의의 $U\in\mathcal{T}_\fin$와, 임의의 $i$에 대하여 $f_i^{-1}(U)$가 $Y_i$에서 open인 것은 $\mathcal{T}_\fin$의 정의로부터 명확하다. 한편, $X$ 위에 주어진 조건을 만족하는 또 다른 topology $\mathcal{T}$가 주어졌다 하자. 그럼 임의의 $U\in\mathcal{T}$에 대하여, $f^{-1}_i(U)$가 $Y_i$에서 연속이어야 한다. 따라서, $\mathcal{T}_\fin$의 정의에 의해 $U\in\mathcal{T}_\fin$이고 따라서 $\mathcal{T}_\fin$가 $\mathcal{T}$보다 강하다.
+우선, 임의의 $U\in\mathcal{T}_\fin$와, 임의의 $i$에 대하여 $f_i^{-1}(U)$가 $Y_i$에서 open인 것은 $\mathcal{T}_\fin$의 정의로부터 명확하다. 한편, $X$ 위에 주어진 조건을 만족하는 또 다른 topology $\mathcal{T}$가 주어졌다 하자. 그럼 임의의 $U\in\mathcal{T}$에 대하여, $f^{-1}_i(U)$가 $Y_i$에서 open이어야 한다. 따라서, $\mathcal{T}_\fin$의 정의에 의해 $U\in\mathcal{T}_\fin$이고 따라서 $\mathcal{T}_\fin$가 $\mathcal{T}$보다 강하다.
 :::
 
 역시 마찬가지로 final topology 또한 initial topology와 비슷한 다음의 universal property를 만족한다. 

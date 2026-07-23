@@ -31,13 +31,13 @@ $\mathcal{F}$가 열린집합 $\Omega \subseteq \mathbb{C}$ 위의 holomorphic f
 :::
 
 ::: 증명
-콤팩트 집합 $K \subseteq \Omega$을 고정한다. $K$이 $\Omega$의 콤팩트 부분집합이므로 그것과 $\partial\Omega$ 사이의 거리 $3r = \operatorname{dist}(K, \partial\Omega) > 0$이 양수이다 ($\Omega = \mathbb{C}$이면 $r$을 임의의 양수로 둔다). $K$의 각 점을 중심으로 반지름 $2r$인 닫힌 원판들의 합집합
+콤팩트 집합 $K \subseteq \Omega$을 고정한다. $K$이 $\Omega$의 콤팩트 부분집합이므로 그것과 $\partial\Omega$ 사이의 거리 $3r = \operatorname{dist}(K, \partial\Omega) > 0$이 양수이다 ($\Omega = \mathbb{C}$이면 $r$을 임의의 양수로 둔다). $K$의 각 점을 중심으로 반지름 $2r$인 closed 원판들의 합집합
 
 $$L = \{\,z \in \mathbb{C} : \operatorname{dist}(z, K) \leq 2r\,\}$$
 
 은 $\Omega$에 포함되는 콤팩트 집합이므로, 가정에 의해 어떤 상수 $M = M_L$이 있어 모든 $f \in \mathcal{F}$과 $\zeta \in L$에서 $\lvert f(\zeta)\rvert \leq M$이다.
 
-이제 $z, w \in K$이고 $\lvert z - w\rvert < r$이라 하자. 중심 $z$, 반지름 $2r$인 원 $\gamma$ 위의 점 $\zeta$은 $L$에 속하고, $z$과 $w$ 모두 이 원의 내부에 있다 ($\lvert z - w\rvert < r < 2r$이므로). Cauchy 적분공식 ([§Cauchy 적분공식, ⁋정리 1](/ko/math/complex_analysis/cauchy_integral_formula#thm1)) 을 두 점에서 적용하여 빼면
+이제 $z, w \in K$이고 $\lvert z - w\rvert < r$이라 하자. 중심 $z$, 반지름 $2r$인 원 $\gamma$ 위의 점 $\zeta$은 $L$에 속하고, $z$과 $w$ 모두 이 원의 interior에 있다 ($\lvert z - w\rvert < r < 2r$이므로). Cauchy 적분공식 ([§Cauchy 적분공식, ⁋정리 1](/ko/math/complex_analysis/cauchy_integral_formula#thm1)) 을 두 점에서 적용하여 빼면
 
 $$f(z) - f(w) = \frac{1}{2\pi i}\oint_\gamma f(\zeta)\left(\frac{1}{\zeta - z} - \frac{1}{\zeta - w}\right)d\zeta = \frac{z - w}{2\pi i}\oint_\gamma \frac{f(\zeta)}{(\zeta - z)(\zeta - w)}\,d\zeta$$
 
@@ -59,7 +59,7 @@ $\mathcal{F}$의 임의의 함수열 $(f_n)$을 잡아, $\Omega$의 모든 콤�
 
 먼저 $\Omega$ 안의 가산조밀집합 $E = \{w_1, w_2, \dots\}$을 택한다 (가령 $\Omega$에 속하는 유리좌표점 전체). 수열 $(f_n(w_1))$은 가정의 국소유계성에서 ($\{w_1\}$이 콤팩트이므로) bounded인 복소수열이고, Bolzano–Weierstrass 정리에 의해 수렴 부분열 $(f_{n}^{(1)})$을 가진다. 이 부분열에서 다시 점 $w_2$에서의 값이 수렴하도록 부분열 $(f_n^{(2)})$을 뽑고, 이를 거듭하면 부분열의 사슬 $(f_n^{(1)}) \supseteq (f_n^{(2)}) \supseteq \cdots$을 얻는데, $(f_n^{(k)})$은 $w_1, \dots, w_k$ 모두에서 수렴한다. 대각선열 $g_n = f_n^{(n)}$을 잡으면, 각 $j$에 대해 $(g_n)$은 $n \geq j$부터 $(f_n^{(j)})$의 부분열이므로 $w_j$에서 수렴한다. 곧 $(g_n)$은 $E$의 모든 점에서 수렴하는 $(f_n)$의 부분열이다.
 
-이제 $(g_n)$이 $\Omega$의 임의의 콤팩트 집합 $K$ 위에서 균등수렴함을 보인다. 콤팩트성을 다루기 위해 $K$을 조금 부풀린 콤팩트 집합 $K' = \{z : \operatorname{dist}(z, K) \leq \rho\} \subseteq \Omega$ ($\rho > 0$ 충분히 작게) 위에서 작업한다. $\varepsilon > 0$이 주어졌을 때, 보조정리 2에 의해 $K'$ 위에서 $\mathcal{F}$이 동등연속이므로 어떤 $\delta \in (0, \rho)$이 있어 $z, w \in K'$, $\lvert z - w\rvert < \delta$이면 모든 $n$에서 $\lvert g_n(z) - g_n(w)\rvert < \varepsilon/3$이다. $K$이 콤팩트이므로 반지름 $\delta$인 원판들로 유한 덮개를 이루고, 각 원판의 중심을 $E$의 점으로 잡을 수 있다 ($E$이 조밀하므로). 이렇게 얻은 유한 개의 점 $w_{j_1}, \dots, w_{j_p} \in E \cap K'$은 $K$의 각 점이 그 가운데 적어도 하나와 거리 $\delta$ 안에 있도록 한다.
+이제 $(g_n)$이 $\Omega$의 임의의 콤팩트 집합 $K$ 위에서 균등수렴함을 보인다. 콤팩트성을 다루기 위해 $K$을 조금 부풀린 콤팩트 집합 $K' = \{z : \operatorname{dist}(z, K) \leq \rho\} \subseteq \Omega$ ($\rho > 0$ 충분히 작게) 위에서 작업한다. $\varepsilon > 0$이 주어졌을 때, 보조정리 2에 의해 $K'$ 위에서 $\mathcal{F}$이 동등연속이므로 어떤 $\delta \in (0, \rho)$이 있어 $z, w \in K'$, $\lvert z - w\rvert < \delta$이면 모든 $n$에서 $\lvert g_n(z) - g_n(w)\rvert < \varepsilon/3$이다. $K$이 콤팩트이므로 반지름 $\delta$인 원판들로 유한 covering을 이루고, 각 원판의 중심을 $E$의 점으로 잡을 수 있다 ($E$이 조밀하므로). 이렇게 얻은 유한 개의 점 $w_{j_1}, \dots, w_{j_p} \in E \cap K'$은 $K$의 각 점이 그 가운데 적어도 하나와 거리 $\delta$ 안에 있도록 한다.
 
 유한 개의 점 $w_{j_1}, \dots, w_{j_p}$ 각각에서 $(g_n)$이 수렴하므로 Cauchy 수열이고, 따라서 어떤 $N$이 있어 $m, n \geq N$이면 모든 $i = 1, \dots, p$에서 $\lvert g_n(w_{j_i}) - g_m(w_{j_i})\rvert < \varepsilon/3$이다. 이제 임의의 $z \in K$을 잡고, $\lvert z - w_{j_i}\rvert < \delta$인 중심 $w_{j_i}$을 고른다. $m, n \geq N$에 대해 삼각부등식으로
 
@@ -72,14 +72,14 @@ Montel 정리는 holomorphic function 족에 대한 콤팩트성 판정을 함�
 
 ## Hurwitz 정리
 
-정규족에서 뽑은 극한이 단사성을 잃지 않는지를 통제하려면, 단사 holomorphic function 열의 국소균등극한이 단사이거나 상수임을 알아야 한다. 이는 영점의 개수가 국소균등수렴 아래 안정적이라는 더 일반적인 사실의 특수한 경우이며, 그 안정성은 영점 수를 경계적분으로 세는 편각원리에서 나온다. 함수열이 균등수렴하면 그 대수적 미분 $f_n'/f_n$도 균등수렴하므로, 경계 위의 적분이 극한과 어울려 영점 수가 보존된다.
+정규족에서 뽑은 극한이 단사성을 잃지 않는지를 통제하려면, 단사 holomorphic function 열의 국소균등극한이 단사이거나 상수임을 알아야 한다. 이는 영점의 개수가 국소균등수렴 아래 안정적이라는 더 일반적인 사실의 특수한 경우이며, 그 안정성은 영점 수를 경계적분으로 세는 편각원리에서 나온다. 함수열이 균등수렴하면 그 대수적 미분 $f_n'/f_n$도 균등수렴하므로, boundary 위의 적분이 극한과 어울려 영점 수가 보존된다.
 
 ::: 정리 4 (Hurwitz)
-$\Omega \subseteq \mathbb{C}$가 연결 열린집합이고 holomorphic function 열 $(f_n)$이 $\Omega$의 콤팩트 부분집합 위에서 holomorphic function $f$로 균등수렴한다고 하자. 만일 각 $f_n$이 $\Omega$에서 영점을 갖지 않으면, $f$은 $\Omega$에서 항등적으로 $0$이거나 영점을 갖지 않는다.
+$\Omega \subseteq \mathbb{C}$가 connected 열린집합이고 holomorphic function 열 $(f_n)$이 $\Omega$의 콤팩트 부분집합 위에서 holomorphic function $f$로 균등수렴한다고 하자. 만일 각 $f_n$이 $\Omega$에서 영점을 갖지 않으면, $f$은 $\Omega$에서 항등적으로 $0$이거나 영점을 갖지 않는다.
 :::
 
 ::: 증명
-국소균등극한 $f$은 holomorphic이다. $f$이 항등적으로 $0$이 아니라고 하고, $f$이 영점을 갖지 않음을 보인다. 어떤 $z_0 \in \Omega$에서 $f(z_0) = 0$이라 가정하여 모순을 이끈다. $f$의 영점이 고립되어 있으므로 ([§영점과 일치정리, ⁋명제 2](/ko/math/complex_analysis/zeros_and_identity_theorem#prop2)), 충분히 작은 $\rho > 0$을 잡아 닫힌 원판 $\overline{D(z_0, \rho)} \subseteq \Omega$ 안에서 $f$의 영점이 $z_0$ 하나뿐이도록 할 수 있다. 그러면 경계원 $\gamma : \lvert z - z_0\rvert = \rho$ 위에서 $f(z) \neq 0$이므로
+국소균등극한 $f$은 holomorphic이다. $f$이 항등적으로 $0$이 아니라고 하고, $f$이 영점을 갖지 않음을 보인다. 어떤 $z_0 \in \Omega$에서 $f(z_0) = 0$이라 가정하여 모순을 이끈다. $f$의 영점이 고립되어 있으므로 ([§영점과 일치정리, ⁋명제 2](/ko/math/complex_analysis/zeros_and_identity_theorem#prop2)), 충분히 작은 $\rho > 0$을 잡아 closed 원판 $\overline{D(z_0, \rho)} \subseteq \Omega$ 안에서 $f$의 영점이 $z_0$ 하나뿐이도록 할 수 있다. 그러면 경계원 $\gamma : \lvert z - z_0\rvert = \rho$ 위에서 $f(z) \neq 0$이므로
 
 $$\mu = \min_{z \in \gamma}\lvert f(z)\rvert > 0$$
 
@@ -91,11 +91,11 @@ $(f_n)$이 $\gamma$ 위에서 $f$로 균등수렴하므로, 충분히 큰 $n$에
 Hurwitz 정리는 영점을 갖지 않는다는 성질이 국소균등극한 아래 보존됨을 말하되, 극한이 통째로 $0$으로 무너지는 퇴화의 가능성만을 예외로 남긴다. 이 정리에서 단사성에 관한 따름정리가 곧장 나온다. 단사 holomorphic function 열의 극한은 단사이거나 상수인데, 단사성을 깨는 유일한 길이 상수로 무너지는 것이기 때문이다.
 
 ::: 따름정리 5 (단사성의 보존)
-$\Omega \subseteq \mathbb{C}$가 연결 열린집합이고 단사 holomorphic function 열 $(f_n)$이 $\Omega$의 콤팩트 부분집합 위에서 holomorphic function $f$로 균등수렴한다고 하자. 그러면 $f$은 단사이거나 상수이다.
+$\Omega \subseteq \mathbb{C}$가 connected 열린집합이고 단사 holomorphic function 열 $(f_n)$이 $\Omega$의 콤팩트 부분집합 위에서 holomorphic function $f$로 균등수렴한다고 하자. 그러면 $f$은 단사이거나 상수이다.
 :::
 
 ::: 증명
-$f$이 상수가 아니라고 하고 단사임을 보인다. 단사성에 어긋난다고 가정하여, 서로 다른 두 점 $a, b \in \Omega$ ($a \neq b$) 에서 $f(a) = f(b) = c$이라 하자. 두 보조 함수열을 생각한다. 점 $b$을 포함하지 않는 연결 열린집합 $\Omega' = \Omega \setminus \{b\}$ 위에서 함수열
+$f$이 상수가 아니라고 하고 단사임을 보인다. 단사성에 어긋난다고 가정하여, 서로 다른 두 점 $a, b \in \Omega$ ($a \neq b$) 에서 $f(a) = f(b) = c$이라 하자. 두 보조 함수열을 생각한다. 점 $b$을 포함하지 않는 connected 열린집합 $\Omega' = \Omega \setminus \{b\}$ 위에서 함수열
 
 $$g_n(z) = f_n(z) - f_n(b)$$
 
@@ -149,9 +149,9 @@ $$\varphi(z)^2 = z - a \qquad (z \in \Omega)$$
 
 이다 (단순연결 영역에서 영점 없는 holomorphic function은 holomorphic 로그를 가지므로, $\varphi = \exp(\tfrac{1}{2}\log(z - a))$으로 제곱근이 정의된다).
 
-먼저 $\varphi$이 단사임을 본다. $\varphi(z_1) = \varphi(z_2)$이면 양변을 제곱하여 $z_1 - a = z_2 - a$, 곧 $z_1 = z_2$이다. 또 $\varphi$은 더 강한 성질을 가진다. $\varphi(z_1) = -\varphi(z_2)$이어도 양변을 제곱하면 $z_1 = z_2$이 되어 $\varphi(z_1) = -\varphi(z_1)$, 곧 $\varphi(z_1) = 0$인데, $\varphi(z_1)^2 = z_1 - a \neq 0$이라 이는 불가능하다. 따라서 $\varphi$의 상 $\varphi(\Omega)$은 어떤 점 $w$을 포함하면 $-w$은 포함하지 않는다.
+먼저 $\varphi$이 단사임을 본다. $\varphi(z_1) = \varphi(z_2)$이면 양변을 제곱하여 $z_1 - a = z_2 - a$, 곧 $z_1 = z_2$이다. 또 $\varphi$은 더 강한 성질을 가진다. $\varphi(z_1) = -\varphi(z_2)$이어도 양변을 제곱하면 $z_1 = z_2$이 되어 $\varphi(z_1) = -\varphi(z_1)$, 곧 $\varphi(z_1) = 0$인데, $\varphi(z_1)^2 = z_1 - a \neq 0$이라 이는 불가능하다. 따라서 $\varphi$의 image $\varphi(\Omega)$은 어떤 점 $w$을 포함하면 $-w$은 포함하지 않는다.
 
-$\varphi$은 비상수 holomorphic 단사사상이므로 open mapping이고 ([§편각원리와 Rouché 정리, ⁋정리 8](/ko/math/complex_analysis/argument_principle#thm8)), 따라서 $\varphi(\Omega)$은 어떤 점 $w_0 = \varphi(z_0)$을 중심으로 하는 원판 $D(w_0, r) \subseteq \varphi(\Omega)$ ($r > 0$) 을 포함한다. 방금 본 성질에서 $\varphi(\Omega)$은 원판 $D(-w_0, r)$과 만나지 않는다 ($D(-w_0, r)$의 점 $-w$은 $w \in D(w_0, r) \subseteq \varphi(\Omega)$에 대응하는데 그러한 $-w$은 상에 없으므로). 곧 모든 $z \in \Omega$에서
+$\varphi$은 비상수 holomorphic 단사사상이므로 open mapping이고 ([§편각원리와 Rouché 정리, ⁋정리 8](/ko/math/complex_analysis/argument_principle#thm8)), 따라서 $\varphi(\Omega)$은 어떤 점 $w_0 = \varphi(z_0)$을 중심으로 하는 원판 $D(w_0, r) \subseteq \varphi(\Omega)$ ($r > 0$) 을 포함한다. 방금 본 성질에서 $\varphi(\Omega)$은 원판 $D(-w_0, r)$과 만나지 않는다 ($D(-w_0, r)$의 점 $-w$은 $w \in D(w_0, r) \subseteq \varphi(\Omega)$에 대응하는데 그러한 $-w$은 image에 없으므로). 곧 모든 $z \in \Omega$에서
 
 $$\lvert \varphi(z) + w_0\rvert \geq r$$
 
@@ -168,7 +168,7 @@ $$f = \varphi_b \circ \psi : \Omega \rightarrow \mathbb{D}$$
 을 정의하면, $f$은 holomorphic이고 단사이며 ($\varphi_b$이 $\mathbb{D}$의 automorphism이므로) $f(z_0) = \varphi_b(b) = 0$이다. 따라서 $f \in \mathcal{F}$이고 $\mathcal{F} \neq \varnothing$이다.
 :::
 
-보조정리 7은 단순연결성을 두 곳에서 쓴다. 하나는 영점 없는 holomorphic function $z - a$의 holomorphic 제곱근을 뽑는 데이고, 다른 하나는 그 제곱근이 상에서 한 원판을 통째로 비껴가게 만드는 데이다. 제곱근의 두 가지 $\pm\varphi$ 가운데 한쪽만 상에 나타난다는 사실이 핵심 장치로, 이 빈 원판을 반전으로 단위원판 안에 가두어 $\mathcal{F}$의 첫 원소를 짓는다. holomorphic 제곱근의 존재 자체가 단순연결성의 직접적 귀결이므로, 이 보조정리에서 정리의 위상적 가정이 본질적으로 소비된다. 이제 비어 있지 않은 $\mathcal{F}$ 위에서 극값사상을 추출한다.
+보조정리 7은 단순연결성을 두 곳에서 쓴다. 하나는 영점 없는 holomorphic function $z - a$의 holomorphic 제곱근을 뽑는 데이고, 다른 하나는 그 제곱근이 image에서 한 원판을 통째로 비껴가게 만드는 데이다. 제곱근의 두 가지 $\pm\varphi$ 가운데 한쪽만 image에 나타난다는 사실이 핵심 장치로, 이 빈 원판을 inversion으로 단위원판 안에 가두어 $\mathcal{F}$의 첫 원소를 짓는다. holomorphic 제곱근의 존재 자체가 단순연결성의 직접적 귀결이므로, 이 보조정리에서 정리의 위상적 가정이 본질적으로 소비된다. 이제 비어 있지 않은 $\mathcal{F}$ 위에서 극값사상을 추출한다.
 
 ## 극값사상의 추출과 전사성
 
@@ -179,7 +179,7 @@ $\Omega \subsetneq \mathbb{C}$가 공집합이 아닌 단순연결 열린집합�
 
 $$M = \sup_{f \in \mathcal{F}} \lvert f'(z_0)\rvert$$
 
-은 유한하고 양수이며, 이 상한을 달성하는 $f^\ast \in \mathcal{F}$이 존재한다. 더 나아가 이러한 극값사상 $f^\ast$은 $\Omega$를 $\mathbb{D}$ 위로 보내는 전사사상이다.
+은 유한하고 양수이며, 이 supremum을 달성하는 $f^\ast \in \mathcal{F}$이 존재한다. 더 나아가 이러한 극값사상 $f^\ast$은 $\Omega$를 $\mathbb{D}$ 위로 보내는 전사사상이다.
 :::
 
 ::: 증명
@@ -189,11 +189,11 @@ $$M = \sup_{f \in \mathcal{F}} \lvert f'(z_0)\rvert$$
 
 $$\lvert f'(z_0)\rvert = \left\lvert\frac{1}{2\pi i}\oint_{\lvert z - z_0\rvert = \rho}\frac{f(z)}{(z - z_0)^2}\,dz\right\rvert \leq \frac{1}{2\pi}\cdot\frac{1}{\rho^2}\cdot 2\pi\rho = \frac{1}{\rho}$$
 
-이라 $M \leq 1/\rho < \infty$이다. 상한의 정의에서 $\lvert f_n'(z_0)\rvert \rightarrow M$인 함수열 $(f_n) \subseteq \mathcal{F}$을 택한다. $\mathcal{F}$의 모든 함수가 절댓값 $1$로 bounded라 국소유계하므로 Montel 정리 (정리 3) 에 의해 $\mathcal{F}$은 정규족이고, $(f_n)$의 부분열이 $\Omega$의 콤팩트 부분집합 위에서 어떤 holomorphic function $f^\ast$로 균등수렴한다. 이 부분열을 다시 $(f_n)$이라 적는다.
+이라 $M \leq 1/\rho < \infty$이다. supremum의 정의에서 $\lvert f_n'(z_0)\rvert \rightarrow M$인 함수열 $(f_n) \subseteq \mathcal{F}$을 택한다. $\mathcal{F}$의 모든 함수가 절댓값 $1$로 bounded라 국소유계하므로 Montel 정리 (정리 3) 에 의해 $\mathcal{F}$은 정규족이고, $(f_n)$의 부분열이 $\Omega$의 콤팩트 부분집합 위에서 어떤 holomorphic function $f^\ast$로 균등수렴한다. 이 부분열을 다시 $(f_n)$이라 적는다.
 
-$f^\ast$이 $\mathcal{F}$에 속함을 확인한다. 국소균등수렴에서 도함수도 국소균등수렴하므로 $f^\ast{}'(z_0) = \lim_n f_n'(z_0)$이고 $\lvert f^\ast{}'(z_0)\rvert = M > 0$이라 $f^\ast$은 비상수이다. 각 $f_n$이 단사이므로 따름정리 5에 의해 그 극한 $f^\ast$은 단사이거나 상수인데, 방금 비상수임을 보았으니 단사이다. 또 각 $f_n$이 $\mathbb{D}$로 가므로 $\lvert f^\ast\rvert \leq 1$이고, $f^\ast$이 비상수 holomorphic 사상이라 open mapping이므로 ([§편각원리와 Rouché 정리, ⁋정리 8](/ko/math/complex_analysis/argument_principle#thm8)) 그 상이 열려 있어 경계 $\lvert w\rvert = 1$에 닿을 수 없다. 따라서 $\lvert f^\ast\rvert < 1$, 곧 $f^\ast : \Omega \rightarrow \mathbb{D}$이다. 끝으로 $f^\ast(z_0) = \lim_n f_n(z_0) = 0$이다. 그러므로 $f^\ast \in \mathcal{F}$이고 $\lvert f^\ast{}'(z_0)\rvert = M$이라 상한이 달성된다.
+$f^\ast$이 $\mathcal{F}$에 속함을 확인한다. 국소균등수렴에서 도함수도 국소균등수렴하므로 $f^\ast{}'(z_0) = \lim_n f_n'(z_0)$이고 $\lvert f^\ast{}'(z_0)\rvert = M > 0$이라 $f^\ast$은 비상수이다. 각 $f_n$이 단사이므로 따름정리 5에 의해 그 극한 $f^\ast$은 단사이거나 상수인데, 방금 비상수임을 보았으니 단사이다. 또 각 $f_n$이 $\mathbb{D}$로 가므로 $\lvert f^\ast\rvert \leq 1$이고, $f^\ast$이 비상수 holomorphic 사상이라 open mapping이므로 ([§편각원리와 Rouché 정리, ⁋정리 8](/ko/math/complex_analysis/argument_principle#thm8)) 그 image가 열려 있어 boundary $\lvert w\rvert = 1$에 닿을 수 없다. 따라서 $\lvert f^\ast\rvert < 1$, 곧 $f^\ast : \Omega \rightarrow \mathbb{D}$이다. 끝으로 $f^\ast(z_0) = \lim_n f_n(z_0) = 0$이다. 그러므로 $f^\ast \in \mathcal{F}$이고 $\lvert f^\ast{}'(z_0)\rvert = M$이라 supremum이 달성된다.
 
-이제 $f^\ast$이 전사임을 보인다. 전사가 아니라고 가정하여, 어떤 $\alpha \in \mathbb{D}$이 $f^\ast$의 상에 들지 않는다고 하자. 곧 모든 $z \in \Omega$에서 $f^\ast(z) \neq \alpha$이다. 이때 $\lvert f^\ast{}'(z_0)\rvert$을 더 크게 만드는 $\mathcal{F}$의 원소를 짜내어 극값성에 모순을 일으킨다. 단위원판의 automorphism $\varphi_\alpha(w) = (w - \alpha)/(1 - \bar\alpha w)$ ([§등각사상과 Möbius 변환, ⁋명제 11](/ko/math/complex_analysis/conformal_maps#prop11)) 을 합성한 함수
+이제 $f^\ast$이 전사임을 보인다. 전사가 아니라고 가정하여, 어떤 $\alpha \in \mathbb{D}$이 $f^\ast$의 image에 들지 않는다고 하자. 곧 모든 $z \in \Omega$에서 $f^\ast(z) \neq \alpha$이다. 이때 $\lvert f^\ast{}'(z_0)\rvert$을 더 크게 만드는 $\mathcal{F}$의 원소를 짜내어 극값성에 모순을 일으킨다. 단위원판의 automorphism $\varphi_\alpha(w) = (w - \alpha)/(1 - \bar\alpha w)$ ([§등각사상과 Möbius 변환, ⁋명제 11](/ko/math/complex_analysis/conformal_maps#prop11)) 을 합성한 함수
 
 $$F(z) = \varphi_\alpha(f^\ast(z)) = \frac{f^\ast(z) - \alpha}{1 - \bar\alpha f^\ast(z)}$$
 
@@ -233,10 +233,10 @@ $$f'(z_0) = e^{-i\vartheta}f^\ast{}'(z_0) = e^{-i\vartheta}\lvert f^\ast{}'(z_0)
 이라 $f'(z_0) > 0$이다. 따라서 normalization 조건을 만족하는 holomorphic 전단사사상 $f : \Omega \rightarrow \mathbb{D}$이 존재하고, 이미 보인 유일성과 합쳐 정리 6이 증명된다. $\Omega$이 $\mathbb{D}$와 등각동형이라는 결론은 holomorphic 전단사사상 $f$이 등각사상이라는 사실 ([§등각사상과 Möbius 변환, ⁋명제 3](/ko/math/complex_analysis/conformal_maps#prop3)) 에서 곧장 따라 나온다.
 
 ::: 참고 9 (경계 거동)
-Riemann 사상정리는 conformal isomorphism의 존재만을 단언할 뿐, 그 사상이 영역의 경계까지 연속적으로 확장되는지는 말하지 않는다. 경계가 충분히 좋은 경우, 가령 $\partial\Omega$이 Jordan 곡선이면 사상이 closure $\overline{\Omega}$에서 $\overline{\mathbb{D}}$로의 위상동형으로 확장된다는 것이 Carathéodory의 정리이지만, 일반적인 단순연결 영역에서는 경계가 프랙탈처럼 거칠어 그러한 extension이 성립하지 않을 수 있다. 본문의 변분적 증명은 내부에서의 등각동형만을 다루므로 경계 거동과는 무관하게 작동한다.
+Riemann 사상정리는 conformal isomorphism의 존재만을 단언할 뿐, 그 사상이 영역의 boundary까지 연속적으로 확장되는지는 말하지 않는다. boundary가 충분히 좋은 경우, 가령 $\partial\Omega$이 Jordan 곡선이면 사상이 closure $\overline{\Omega}$에서 $\overline{\mathbb{D}}$로의 위상동형으로 확장된다는 것이 Carathéodory의 정리이지만, 일반적인 단순연결 영역에서는 boundary가 프랙탈처럼 거칠어 그러한 extension이 성립하지 않을 수 있다. 본문의 변분적 증명은 interior에서의 등각동형만을 다루므로 boundary 거동과는 무관하게 작동한다.
 :::
 
-참고 9가 강조하듯, 정리의 내용은 철저히 영역 내부에 관한 것이다. 단순연결성이라는 위상적 가정만으로 내부의 등각형이 단위원판 하나로 통일된다는 사실은, 복소해석학에서 위상과 등각기하가 맞물리는 가장 깊은 지점 가운데 하나이다. 단순연결이 아닌 영역에서는 사정이 전혀 달라, 가령 환형 영역들은 그 안팎 반지름의 비라는 등각불변량으로 서로 구별되어 단 하나의 표준영역으로 환원되지 않는다.
+참고 9가 강조하듯, 정리의 내용은 철저히 영역 interior에 관한 것이다. 단순연결성이라는 위상적 가정만으로 interior의 등각형이 단위원판 하나로 통일된다는 사실은, 복소해석학에서 위상과 등각기하가 맞물리는 가장 깊은 지점 가운데 하나이다. 단순연결이 아닌 영역에서는 사정이 전혀 달라, 가령 환형 영역들은 그 안팎 반지름의 비라는 등각불변량으로 서로 구별되어 단 하나의 표준영역으로 환원되지 않는다.
 
 ---
 

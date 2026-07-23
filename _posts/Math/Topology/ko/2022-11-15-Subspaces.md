@@ -23,11 +23,11 @@ weight: 7
 
 $X$의 임의의 열린집합 $U$에 대하여, $\iota^{-1}(U)=U\cap A$이고, 임의의 열린집합들의 family $(U_i)_{i\in I}$에 대해
 
-$$\iota^{-1}\left(\bigcup_{i\in I} U_i\right)=\left(\bigcup_{i\in I} U_i\right)\cap A=\bigcup_{i\in I} (U_i\cap A)=\bigcup_{i\in I} \iota^{-1}(U)$$
+$$\iota^{-1}\left(\bigcup_{i\in I} U_i\right)=\left(\bigcup_{i\in I} U_i\right)\cap A=\bigcup_{i\in I} (U_i\cap A)=\bigcup_{i\in I} \iota^{-1}(U_i)$$
 
 그리고 열린집합들의 유한한 family $(U_i)_{i\in I}$에 대하여
 
-$$\iota^{-1}\left(\bigcap_{i\in I} U_i\right)=\left(\bigcap_{i\in I} U_i\right)\cap A=\bigcap_{i\in I} (U_i\cap A)=\bigcap_{i\in I} \iota^{-1}(U)$$
+$$\iota^{-1}\left(\bigcap_{i\in I} U_i\right)=\left(\bigcap_{i\in I} U_i\right)\cap A=\bigcap_{i\in I} (U_i\cap A)=\bigcap_{i\in I} \iota^{-1}(U_i)$$
 
 이 성립하므로 [§Initial topology와 final topology, ⁋명제 2](/ko/math/topology/initial_and_final_topology#prop2)에 의하여 부분위상 $\mathcal{T}_A$는 다음의 식
 

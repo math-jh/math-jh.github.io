@@ -66,7 +66,7 @@ hold.
 ::: Proof
 Let $\mathcal{B}_i'$ be an $A$-basis of $P_i$. Lifting these, we can extend them to a basis of a supplementary $A$-submodule $\mathcal{B}_i$ of $M_{i-1}$, and their union $\mathcal{B} = \bigcup \mathcal{B}_i$ becomes an $A$-basis of $M$. Now for each $\alpha \in E$, let $X_{ii}$ be the matrix of the endomorphism $\alpha_{P_i}$ with respect to $\mathcal{B}_i$; then the full matrix of $\alpha_M$
 
-$$e_M \sim
+$$\alpha_M \sim
 \begin{pmatrix}
 X_{rr} & \ast  & \cdots & \ast  \\
 0 & X_{r-1,r-1} & \cdots & \ast  \\
@@ -80,7 +80,7 @@ has a block upper-triangular form with diagonal blocks $X_{ii}$. Since the trace
 By the same principle, the following holds.
 
 ::: Proposition 3
-Let $E$ and $E'$ be $A$-algebras, and let $M$ and $M'$ be an $E$-module and an $E'$-module, respectively.
+Let $E$ and $E'$ be $A$-algebras, and let $M$ and $M'$ be an $E$-module and an $E'$-module, respectively.  
 Suppose that $M$ and $M'$ are free as $A$-modules, of ranks $n$ and $n'$, respectively. If we regard $M \otimes_A M'$ as an $E \otimes_A E'$-module, then for any $\alpha \in E$ and $\alpha' \in E'$ the following formulas
 
 $$\tr_{M \otimes M'/A}(\alpha \otimes \alpha') = \tr_{M/A}(\alpha) \cdot \tr_{M'/A}(\alpha'),\qquad N_{M \otimes M'/A}(\alpha \otimes \alpha') = N_{M/A}(\alpha)^{n'} \cdot N_{M'/A}(\alpha')^n$$
@@ -91,7 +91,7 @@ hold.
 Now we come to the essential definition. Since the norm is essentially the determinant, and the determinant is the tool that detects invertibility of a matrix, it is not surprising that the following holds.
 
 ::: Proposition 4
-Let $E$ be an $A$-algebra having a finite $A$-basis.
+Let $E$ be an $A$-algebra having a finite $A$-basis.  
 Then $\alpha \in E$ is invertible if and only if $N_{E/A}(\alpha)$ is invertible in $A$.
 :::
 ::: Proof

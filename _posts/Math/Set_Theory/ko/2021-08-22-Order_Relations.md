@@ -23,7 +23,7 @@ weight: 14
 가 항상 성립하는 것이다.
 :::
 
-그럼 순서관계는 다음과 같이 정의된다. 
+그럼 order relation은 다음과 같이 정의된다. 
 
 ::: 정의 2
  이항관계 $(R,A,A)$가 *order relation<sub>순서관계</sub>*이라는 것은 $R$이 reflexive하며, transitive, anti-symmetric한 것이다.
@@ -43,7 +43,7 @@ Ordered set은 $\leq$라는 관계가 추가적으로 정의된 집합이므로,
 
 앞으로 ordered set들 사이에서 isomorphism이라 하면 항상 order isomorphism을 뜻하는 것으로 이해한다. 
 
-[§동치관계, ⁋명제 3](/ko/math/set_theory/equivalence_relations#prop3)과 비슷한 것을 순서관계에 대해서도 할 수 있다.
+[§동치관계, ⁋명제 3](/ko/math/set_theory/equivalence_relations#prop3)과 비슷한 것을 order relation에 대해서도 할 수 있다.
 
 ::: 명제 5
 이항관계 $(R,A,A)$가 order relation인 것은 다음의 두 조건과 동치이다.

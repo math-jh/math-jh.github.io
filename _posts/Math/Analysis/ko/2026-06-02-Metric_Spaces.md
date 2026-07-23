@@ -49,7 +49,7 @@ published: false
 거리공간 $(X, d)$에서 모든 Cauchy 점열이 (그 공간 안의 점으로) 수렴하면 $(X, d)$를 *완비<sub>complete</sub>*하다고 한다.
 :::
 
-실수의 완비성은 곧 표준 거리를 준 $\mathbb{R}$이 완비 거리공간이라는 진술이다. ([§Cauchy 수열과 완비성, ⁋정리 4](/ko/math/analysis/cauchy_sequences#thm4)) 같은 논증을 좌표별로 적용하면 유클리드 공간 $\mathbb{R}^n$도 완비임을 얻는다. 반면 유리수 $\mathbb{Q}$나 개구간 $(0,1)$은 완비가 아니다 — 경계로 다가가는 Cauchy 점열의 극한이 빠져 있기 때문이다. 완비성은 부동점 정리를 비롯한 존재 정리들의 무대가 되며, 이는 [§미분방정식의 존재성과 유일성](/ko/math/analysis/existence_uniqueness_ode)에서 결정적으로 쓰인다.
+실수의 완비성은 곧 표준 거리를 준 $\mathbb{R}$이 완비 거리공간이라는 진술이다. ([§Cauchy 수열과 완비성, ⁋정리 4](/ko/math/analysis/cauchy_sequences#thm4)) 같은 논증을 좌표별로 적용하면 유클리드 공간 $\mathbb{R}^n$도 완비임을 얻는다. 반면 유리수 $\mathbb{Q}$나 개구간 $(0,1)$은 완비가 아니다 — boundary로 다가가는 Cauchy 점열의 극한이 빠져 있기 때문이다. 완비성은 부동점 정리를 비롯한 존재 정리들의 무대가 되며, 이는 [§미분방정식의 존재성과 유일성](/ko/math/analysis/existence_uniqueness_ode)에서 결정적으로 쓰인다.
 
 ## 거리의 기본 성질
 
@@ -161,7 +161,7 @@ Y \text{가 닫힘},\ y_n \in Y &\implies x \in Y
 
 이 명제는 닫힌구간 $[a,b]$가 완비라는 사실을 즉시 설명한다. $[a,b]$는 완비공간 $\mathbb{R}$의 닫힌 부분집합이므로 [명제 9](#prop9)에 의해 완비이고, [예시 8](#ex8)에서 본 $(0,1)$과의 차이가 바로 닫힘 여부에 있었던 것이다. 같은 논리로 $\mathbb{R}^n$의 닫힌 공이나 구면처럼 닫힌 집합들은 모두 완비 거리공간이 된다.
 
-완비성이 마련해 주는 가장 중요한 도구는 *축약사상<sub>contraction</sub>*의 고정점이다. 거리를 일정 비율 $\lambda < 1$로 줄이는 사상 $T$, 곧 $d(Tx, Ty) \leq \lambda  d(x, y)$를 만족하는 사상을 한 점에서 반복하면, 완비성 덕분에 그 반복열이 Cauchy가 되어 유일한 고정점으로 수렴한다. 가령 $\mathbb{R}$ 위의 $T(x) = x/2 + 1$은 비율 $\lambda = 1/2$의 축약사상이고, 그 반복은 유일한 고정점 $2 = T(2)$로 수렴한다. 이 현상을 일반화한 것이 완비 거리공간 위의 [§미분방정식의 존재성과 유일성, ⁋정리 2](/ko/math/analysis/existence_uniqueness_ode#thm2)이며, $\mathbb{R}$의 완비성이 수렴을 보장하는 핵심이었듯 완비성이 그 무대가 된다 ([§미분방정식의 존재성과 유일성, ⁋정리 2](/ko/math/analysis/existence_uniqueness_ode#thm2)).
+완비성이 마련해 주는 가장 중요한 도구는 *contraction<sub>축약사상</sub>*의 fixed point이다. 거리를 일정 비율 $\lambda < 1$로 줄이는 사상 $T$, 곧 $d(Tx, Ty) \leq \lambda  d(x, y)$를 만족하는 사상을 한 점에서 반복하면, 완비성 덕분에 그 반복열이 Cauchy가 되어 유일한 fixed point로 수렴한다. 가령 $\mathbb{R}$ 위의 $T(x) = x/2 + 1$은 비율 $\lambda = 1/2$의 contraction이고, 그 반복은 유일한 fixed point $2 = T(2)$로 수렴한다. 이 현상을 일반화한 것이 완비 거리공간 위의 [§미분방정식의 존재성과 유일성, ⁋정리 2](/ko/math/analysis/existence_uniqueness_ode#thm2)이며, $\mathbb{R}$의 완비성이 수렴을 보장하는 핵심이었듯 완비성이 그 무대가 된다 ([§미분방정식의 존재성과 유일성, ⁋정리 2](/ko/math/analysis/existence_uniqueness_ode#thm2)).
 
 ## 위상으로의 연결
 

@@ -67,7 +67,7 @@ N_{M/A}(\alpha) = \prod_{i=1}^r N_{P_i/A}(\alpha),\qquad
 ::: 증명
 $P_i$의 $A$-basis를 $\mathcal{B}_i'$라 하자. 이들을 lift하면 $M_{i-1}$의 supplementary $A$-submodule $\mathcal{B}_i$의 basis로 확장할 수 있고, 그 합집합 $\mathcal{B} = \bigcup \mathcal{B}_i$는 $M$의 $A$-basis가 된다. 이제 각 $\alpha \in E$에 대해, endomorphism $\alpha_{P_i}$의 $\mathcal{B}_i$에 대한 행렬을 $X_{ii}$라 하면, $\alpha_M$의 전체 행렬
 
-$$e_M \sim
+$$\alpha_M \sim
 \begin{pmatrix}
 X_{rr} & \ast  & \cdots & \ast  \\
 0 & X_{r-1,r-1} & \cdots & \ast  \\

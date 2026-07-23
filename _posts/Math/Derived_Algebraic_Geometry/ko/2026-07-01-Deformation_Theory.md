@@ -34,7 +34,7 @@ $$0\longrightarrow M\longrightarrow A'\overset{\pi}{\longrightarrow}A\longrighta
 으로 적는다.
 :::
 
-조건 $M^2=0$은 $M$ 위의 $A'$-action이 $M$의 원소를 곱하는 부분을 모두 죽인다는 뜻이므로, $M$의 $A'$-module 구조가 $A$-module 구조로 내려온다는 마지막 조건은 자동으로 따라온다. 기하적으로 $\Spec A\hookrightarrow\Spec A'$는 정의 ideal의 제곱이 $0$인 닫힌 immersion, 곧 첫 번째 무한소 이웃 수준의 두꺼워짐이다. 이러한 확대는 [\[스킴\] §매끄러운 사상과 étale 사상, ⁋정리 11](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm11)에서 무한소 lifting 판정의 무대로 이미 등장하였다.
+조건 $M^2=0$은 $M$ 위의 $A'$-action이 $M$의 원소를 곱하는 부분을 모두 죽인다는 뜻이므로, $M$의 $A'$-module 구조가 $A$-module 구조로 내려온다는 마지막 조건은 자동으로 따라온다. 기하적으로 $\Spec A\hookrightarrow\Spec A'$는 정의 ideal의 제곱이 $0$인 closed immersion, 곧 첫 번째 무한소 이웃 수준의 두꺼워짐이다. 이러한 확대는 [\[스킴\] §매끄러운 사상과 étale 사상, ⁋정리 11](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm11)에서 무한소 lifting 판정의 무대로 이미 등장하였다.
 
 ::: 예시 2
 가장 기본적인 square-zero extension은 $M=A$에 대한 *trivial extension*
@@ -70,7 +70,7 @@ $k[\epsilon]=k[t]/(t^2)$이므로 [\[가환대수학\] §평탄성, ⁋따름정
 
 $$0\longrightarrow B\overset{\times\epsilon}{\longrightarrow}B'\longrightarrow B\longrightarrow0$$
 
-가 exact, 곧 $\times\epsilon:B\rightarrow B'$이 injective인 것과 같다. 이 사상은 $p+I\mapsto\overline{\epsilon p}$로 주어지므로, injectivity는 "$\epsilon p\in(F_1,\ldots,F_m)$이면 $p\in I$"라는 명제와 동치이다.
+가 exact, 곧 $\times\epsilon:B\rightarrow B'$이 injective인 것과 같다. 이 morphism은 $p+I\mapsto\overline{\epsilon p}$로 주어지므로, injectivity는 "$\epsilon p\in(F_1,\ldots,F_m)$이면 $p\in I$"라는 명제와 동치이다.
 
 이제 $\epsilon p\in(F_j)$이 무엇을 뜻하는지 풀어 쓰자. $A_j=a_j+\epsilon b_j$ ($a_j, b_j\in P$)에 대하여
 
@@ -95,7 +95,7 @@ $$\varphi:I/I^2\longrightarrow B$$
 
 $$\Der_k(P,B)=\Hom_B(\Omega_{P/k}\otimes_PB,B)\overset{\overline{d}^\ast}{\longrightarrow}\Hom_B(I/I^2,B)$$
 
-의 image에 속하는 경우이다. 여기서 $\overline{d}^\ast$는 conormal 사상 $\overline{d}:I/I^2\rightarrow\Omega_{P/k}\otimes_PB$의 dual이다.
+의 image에 속하는 경우이다. 여기서 $\overline{d}^\ast$는 conormal morphism $\overline{d}:I/I^2\rightarrow\Omega_{P/k}\otimes_PB$의 dual이다.
 
 ## Naive 여접 복합체와 $T^i$
 
@@ -121,7 +121,7 @@ $$T^0(B/k,M)=\ker\overline{d}^\ast,\qquad T^1(B/k,M)=\coker\overline{d}^\ast$$
 로 정의한다. 더 나아가 $(f_1,\ldots,f_m)$의 syzygy module $\operatorname{Syz}\subseteq P^m$과 그 안의 Koszul syzygy들 $f_ie_j-f_je_i$로 생성되는 부분 $\operatorname{Kos}\subseteq\operatorname{Syz}$를 잡아 $L_2=(\operatorname{Syz}/\operatorname{Kos})\otimes_PB$라 두고, 이를 포함한 3항 복합체를 dual하여 얻는 둘째 cohomology를 $T^2(B/k,M)$로 정의한다. 이들을 $B$의 *Lichtenbaum–Schlessinger functor<sub>리히텐바움-슐레진저 함자</sub>*라 부른다.
 :::
 
-$T^0$는 곧바로 $\Der_k(B,M)$이다. 실제로 $\ker\overline{d}^\ast$는 conormal 사상과 합성하여 $0$이 되는 derivation $P\rightarrow M$들, 곧 $I$를 죽여 $B=P/I$ 위의 derivation으로 내려오는 것들이며, 이는 $\Der_k(B,M)=\Hom_B(\Omega_{B/k},M)$과 일치한다. $T^1$은 앞 절에서 본 "평탄 변형 modulo trivial"의 정확한 공식이다. $T^2$의 정의에서 $L_2$가 등장하는 이유는, 장애가 syzygy들 사이의 이차 관계, 곧 Koszul 관계를 넘어서는 syzygy들에 의해 통제되기 때문이다. 이 점은 장애를 다룰 때 분명해진다.
+$T^0$는 곧바로 $\Der_k(B,M)$이다. 실제로 $\ker\overline{d}^\ast$는 conormal morphism과 합성하여 $0$이 되는 derivation $P\rightarrow M$들, 곧 $I$를 죽여 $B=P/I$ 위의 derivation으로 내려오는 것들이며, 이는 $\Der_k(B,M)=\Hom_B(\Omega_{B/k},M)$과 일치한다. $T^1$은 앞 절에서 본 "평탄 변형 modulo trivial"의 정확한 공식이다. $T^2$의 정의에서 $L_2$가 등장하는 이유는, 장애가 syzygy들 사이의 이차 관계, 곧 Koszul 관계를 넘어서는 syzygy들에 의해 통제되기 때문이다. 이 점은 장애를 다룰 때 분명해진다.
 
 ::: 참고 6
 $T^0, T^1$은 두 항짜리 복합체 $\operatorname{NL}_{B/k}$만으로 올바르게 계산되지만, $T^2$는 $L_2$라는 셋째 항을 추가로 요구한다. 더 정확히는, 뒤에서 언급할 완전한 여접 복합체 $L_{B/k}$에 대하여 $T^i(B/k,M)=\Ext^i_B(L_{B/k},M)$이며, $\operatorname{NL}_{B/k}$는 $L_{B/k}$의 degree $0,1$ 절단이므로 $i=0,1$에서만 양자가 일치한다. $T^2$가 naive 복합체의 범위를 벗어난다는 이 사실이, 장애를 제대로 다루려면 완전한 여접 복합체가 필요하다는 첫 신호이다.
@@ -214,7 +214,7 @@ $$\operatorname{NL}_{B/k}=\Bigl[B\overline{f}\overset{\overline{d}}{\longrightar
 
 $$T^1(B/k,B)=\coker\overline{d}^\ast=B/(\x,\y)=k[\x,\y]/(\x\y,\x,\y)\cong k$$
 
-이다. 이 $1$차원 $T^1$의 생성원은 $f=\x\y$를 $\x\y-\epsilon$로 흔드는 first-order deformation에 대응하며, 이것이 *Tjurina algebra* $k[\x,\y]/(\x\y,\partial_\x f,\partial_\y f)$의 정체이다. lci이므로 $T^2=0$이고 ([명제 10](#prop10) 뒤의 논의), 이 일차 변형은 장애 없이
+이다. 이 $1$차원 $T^1$의 generator는 $f=\x\y$를 $\x\y-\epsilon$로 흔드는 first-order deformation에 대응하며, 이것이 *Tjurina algebra* $k[\x,\y]/(\x\y,\partial_\x f,\partial_\y f)$의 정체이다. lci이므로 $T^2=0$이고 ([명제 10](#prop10) 뒤의 논의), 이 일차 변형은 장애 없이
 
 $$\x\y=t$$
 
@@ -236,7 +236,7 @@ $$\overline{d}(\x\cdot\overline{f_2})=\x\cdot(0,\z,\y)=(0,\x\z,\x\y)=(0,0,0)$$
 
 $$H_1(\operatorname{NL}_{B/k})\neq0,\qquad \overline{\x\y\z}\in H_1(\operatorname{NL}_{B/k})$$
 
-이다. 이 nonzero class는 conormal 사상 $\overline{d}$의 왼쪽 끝 비단사성, 곧 conormal exact sequence를 왼쪽으로 연장했을 때 비로소 보이는 정보이며, $\Omega_{B/k}$만으로는 결코 검출되지 않는다. ($\overline{\x\y\z}$는 세 generator 어느 쪽으로 보아도 같은 원소로서, $\z\cdot\overline{f_1}=\x\cdot\overline{f_2}=\y\cdot\overline{f_3}$이 모두 kernel에 속한다.) 이것이 naive 여접 복합체의 $H_1$이 non-smoothness를 재는 가장 깨끗한 사례이다.
+이다. 이 nonzero class는 conormal morphism $\overline{d}$의 왼쪽 끝 비단사성, 곧 conormal exact sequence를 왼쪽으로 연장했을 때 비로소 보이는 정보이며, $\Omega_{B/k}$만으로는 결코 검출되지 않는다. ($\overline{\x\y\z}$는 세 generator 어느 쪽으로 보아도 같은 원소로서, $\z\cdot\overline{f_1}=\x\cdot\overline{f_2}=\y\cdot\overline{f_3}$이 모두 kernel에 속한다.) 이것이 naive 여접 복합체의 $H_1$이 non-smoothness를 재는 가장 깨끗한 사례이다.
 :::
 
 ::: 예시 13 (장애가 있는 변형)
@@ -246,7 +246,7 @@ $$X=\Spec k[\z_0,\z_1,\z_2,\z_3,\z_4]/I_2(M),\qquad M=\begin{pmatrix}\z_0&\z_1&\
 
 이다. 여기서 $I_2(M)$은 $M$의 $2\times2$ minor들로 생성되는 ideal로, codimension $3$의 isolated singular point를 정의한다. Pinkham이 계산한 이 singular point의 semiuniversal deformation의 base는 한 점에서 만나는 두 component, 곧 차원 $3$인 성분과 차원 $1$인 성분으로 이루어져, base가 그 교점에서 singular하다. 이는 $T^1$의 어떤 접방향(한 component의 접방향에서 벗어난 방향)이 [정리 9](#thm9)의 의미에서 *obstructed*임을, 곧 그 first-order deformation을 이차로 연장할 때 $\operatorname{ob}(\xi)\neq0\in T^2(X/k,\mathcal{O}_X)$임을 뜻한다.
 
-codimension $3$ 이상에서 이러한 장애가 일반적으로 나타나는 반면, $\mathbb{P}^3$ 위 rational normal cubic의 cone과 같은 codimension $2$ Cohen–Macaulay singular point는 항상 unobstructed하여 base가 매끄럽다. 따라서 [예시 12](#ex12)처럼 lci가 아니어도 장애가 없을 수 있으며, "non-lci"와 "obstructed"는 서로 다른 현상이다. 장애의 유무는 $T^2$와 그 위에서 정의되는 이차 사상 $\operatorname{ob}$이 결정하는 것이지, $\Omega$나 $H_1(\operatorname{NL})$만으로 읽히지 않는다. 이 예시의 명시적 계산은 ([Ser], [Har])를 참조하라.
+codimension $3$ 이상에서 이러한 장애가 일반적으로 나타나는 반면, $\mathbb{P}^3$ 위 rational normal cubic의 cone과 같은 codimension $2$ Cohen–Macaulay singular point는 항상 unobstructed하여 base가 매끄럽다. 따라서 [예시 12](#ex12)처럼 lci가 아니어도 장애가 없을 수 있으며, "non-lci"와 "obstructed"는 서로 다른 현상이다. 장애의 유무는 $T^2$와 그 위에서 정의되는 이차 morphism $\operatorname{ob}$이 결정하는 것이지, $\Omega$나 $H_1(\operatorname{NL})$만으로 읽히지 않는다. 이 예시의 명시적 계산은 ([Ser], [Har])를 참조하라.
 :::
 
 ## 완전한 여접 복합체의 필요성
@@ -254,7 +254,7 @@ codimension $3$ 이상에서 이러한 장애가 일반적으로 나타나는 �
 지금까지 naive 여접 복합체 $\operatorname{NL}_{B/k}$로 $T^0, T^1$을 완전히 통제하였고, $T^2$는 syzygy의 셋째 항 $L_2$를 손으로 덧붙여 다루었다. 그러나 이 임시방편은 곧 한계에 부딪힌다.
 
 ::: 참고 14
-첫째, [참고 6](#rmk6)에서 보았듯 $\operatorname{NL}_{B/k}$ 자체는 $T^2$ 이상의 cohomology를 담지 못한다. 반복적 변형, 곧 $k[t]/(t^n)$ 위로의 연장을 무한히 쌓아 올리는 과정에서는 더 높은 $T^i$가 모두 관여하므로, 모든 degree에서 homology를 갖는 단일한 대상이 필요하다. 둘째, 변형이론은 사상의 합성에 대한 *transitivity*를 요구하는데, Kähler 미분과 naive 여접 복합체는 [\[다중선형대수학\] §미분가군, ⁋명제 13](/ko/math/multilinear_algebra/differential_modules#prop13)의 transitivity exact sequence처럼 오른쪽에서만 exact한 exact sequence밖에 주지 못한다. 완전한 이론은 ring 사상의 사슬 $A\rightarrow B\rightarrow C$에 대하여 exact sequence가 아니라 distinguished triangle
+첫째, [참고 6](#rmk6)에서 보았듯 $\operatorname{NL}_{B/k}$ 자체는 $T^2$ 이상의 cohomology를 담지 못한다. 반복적 변형, 곧 $k[t]/(t^n)$ 위로의 연장을 무한히 쌓아 올리는 과정에서는 더 높은 $T^i$가 모두 관여하므로, 모든 degree에서 homology를 갖는 단일한 대상이 필요하다. 둘째, 변형이론은 morphism의 합성에 대한 *transitivity*를 요구하는데, Kähler 미분과 naive 여접 복합체는 [\[다중선형대수학\] §미분가군, ⁋명제 13](/ko/math/multilinear_algebra/differential_modules#prop13)의 transitivity exact sequence처럼 오른쪽에서만 exact한 exact sequence밖에 주지 못한다. 완전한 이론은 ring morphism의 사슬 $A\rightarrow B\rightarrow C$에 대하여 exact sequence가 아니라 distinguished triangle
 
 $$L_{B/A}\otimes_B^{\mathbb{L}}C\longrightarrow L_{C/A}\longrightarrow L_{C/B}\longrightarrow$$
 

@@ -22,7 +22,7 @@ weight: 10
 이제 우리는 이를 더 일반화하여 $p^{-1}(x)$ 위에 (discrete set이 아닌) 추가적인 구조가 있는 경우를 살펴본다. 가장 일반적인 정의는 다음과 같다. 
 
 ::: 정의 1
-위상공간 사이의 contiuous surjection $p:E \rightarrow B$, 그리고 위상공간 $F$에 대하여 *fiber bundle<sub>올다발</sub>*이라는 것은 각각의 $x\in B$마다 열린집합 $U$가 존재하여, 다음의 diagram
+위상공간 사이의 continuous surjection $p:E \rightarrow B$, 그리고 위상공간 $F$에 대하여 *fiber bundle<sub>올다발</sub>*이라는 것은 각각의 $x\in B$마다 열린집합 $U$가 존재하여, 다음의 diagram
 
 ![fiber_bundle](/assets/images/Math/Algebraic_Topology/Stiefel_Whitney_Classes-1.svg){:style="width:10.09em" class="invert" .align-center}
 
@@ -35,7 +35,7 @@ weight: 10
 
 ## 벡터다발
 
-우선 우리는 $F$가 벡터공간일 경우를 생각한다. Fiber $F$가 topological group일 경우, $F$는 이미 위상구조가 부여되어 있으므로 [정의 1](#def1)에서 product space $U\times F$의 위상구조가 명확하지만 벡터공간일 경우는 다소 애매하다. 가장 일반적인 세팅으로는 topological ring $\mathbb{K}$이 작용하는 topological vector space $V$념을 사용하면 되지만, 우리는 편의를 위해 당장은 $F$의 base field가 $\mathbb{R}$이고, $F$는 canonical inner product로부터 오는 metric topology가 부여된 공간인 경우만 생각하기로 한다.
+우선 우리는 $F$가 벡터공간일 경우를 생각한다. Fiber $F$가 topological group일 경우, $F$는 이미 위상구조가 부여되어 있으므로 [정의 1](#def1)에서 product space $U\times F$의 위상구조가 명확하지만 벡터공간일 경우는 다소 애매하다. 가장 일반적인 세팅으로는 topological ring $\mathbb{K}$이 작용하는 topological vector space $V$ 개념을 사용하면 되지만, 우리는 편의를 위해 당장은 $F$의 base field가 $\mathbb{R}$이고, $F$는 canonical inner product로부터 오는 metric topology가 부여된 공간인 경우만 생각하기로 한다.
 
 ::: 정의 2
 Fiber bundle $p:E \rightarrow B$에 대하여, fiber space $F$가 위와 같이 위상구조가 주어진 $\mathbb{R}$-벡터공간이고, 추가로 임의의 $x\in B$와, [정의 1](#def1)의 homeomorphism $\phi:U\times  F\rightarrow p^{-1}(U)$에 대하여 다음의 함수
@@ -45,7 +45,7 @@ $$\phi(x,-):F \rightarrow p^{-1}(x);\qquad v\mapsto \phi(x,v)$$
 가 벡터공간 사이의 isomorphism인 것이다. 
 :::
 
-이를 통해 각각의 fiber $p^{-1}(x)$에는 $F$로부터 물려받는 vector space 구조가 정의된다. 일반적으로 두 vector bundle $p_1:E_1 \rightarrow B_1$과 $p_2:E_2\rightarrow B_2$가 주어졌을 때, 이들 사이의 *morphism*은 연속함수들의 commutatuve diagram
+이를 통해 각각의 fiber $p^{-1}(x)$에는 $F$로부터 물려받는 vector space 구조가 정의된다. 일반적으로 두 vector bundle $p_1:E_1 \rightarrow B_1$과 $p_2:E_2\rightarrow B_2$가 주어졌을 때, 이들 사이의 *morphism*은 연속함수들의 commutative diagram
 
 ![morphism_of_bundles](/assets/images/Math/Algebraic_Topology/Stiefel_Whitney_Classes-2.svg){:style="width:7.15em" class="invert" .align-center}
 
@@ -60,7 +60,7 @@ $n+1$차원 벡터공간 $\mathbb{R}^{n+1}$에 대하여, 원점을 지나는 �
 
 이제 이 공간 $\RP^n$을 base space $B$로 두고, 이 위에 정의된 vector bundle $E(\gamma_n^1)$를 다음과 같이 정의하자. 집합으로서 
 
-$$E(\gamma_n^1)=\{((x,v)\in \RP^n\times \mathbb{R}^{n+1}\mid x\in \span(x)\}$$
+$$E(\gamma_n^1)=\{(x,v)\in \RP^n\times \mathbb{R}^{n+1}\mid v\in \span(x)\}$$
 
 으로 정의되며, projection $\gamma_n^1:E(\gamma_n^1)\rightarrow \RP^n$는 첫 번째 좌표로의 projection이다. 즉 $\gamma_n^1$는 각 점 $x\in \RP^n$마다, $x$가 원래 $\mathbb{R}^{n+1}$에 있을 때 속해있던 바로 그 직선을 붙여준 것이다.
 
@@ -276,7 +276,7 @@ $$G_\bullet:\quad \langle e_1+e_4\rangle\subset\langle e_1+e_4,e_2+e_3\rangle\su
 
 더 일반적으로 우리는 이들 partition을 *Young diagram*으로 나타내고, 이를 이용하여 두 Schubert class의 cup product $\sigma_\lambda\smile\sigma_\mu$를 계산했을 때, $\lvert\nu\rvert=\lvert\lambda\rvert+\lvert\mu\rvert$를 만족하는 $\nu$에 대해 $\sigma_\nu$ 앞에 붙는 계수를 계산할 수 있다.
 
-이제 우리는 $\Gr(k,\mathbb{R}^\infty)$와 그 위의 universal bundle을 정의해야 한다. 이를 위해 $\Gr(k,\mathbb{R}^n)$ 위의 tautoogical bundle을 먼저 정의한다. [예시 3](#ex3)과 같은 방식으로, $\Gr(k,\mathbb{R}^{n+k})$의 각각의 점마다 그 점에 해당하는 vector space를 달아주는 다음의 bundle
+이제 우리는 $\Gr(k,\mathbb{R}^\infty)$와 그 위의 universal bundle을 정의해야 한다. 이를 위해 $\Gr(k,\mathbb{R}^n)$ 위의 tautological bundle을 먼저 정의한다. [예시 3](#ex3)과 같은 방식으로, $\Gr(k,\mathbb{R}^{n+k})$의 각각의 점마다 그 점에 해당하는 vector space를 달아주는 다음의 bundle
 
 $$E(\gamma^k_n)=\left\{([V], x)\in \Gr(k,\mathbb{R}^{n+k})\mid \text{$V$ a $k$-dimensional subspace of $\mathbb{R}^{n+k}$ and $x\in V$}\right\}$$
 
@@ -320,4 +320,4 @@ $$w_1\in H^1(\Gr(k,\mathbb{R}^\infty);\mathbb{Z}/2),\cdots, w_k\in H^k(\Gr(k,\ma
 
 $$w_1^{a_1}w_2^{a_2}\cdots w_k^{a_k}$$
 
-에 대응되며 이는 $H^\bullet(\Gr(k,\mathbb{R}^\infty);\mathbb{Z}/2)$의 (무한히 많은) *$\mathbb{Z}/2$-module로서의* gemerator 중 하나가 되며 이는 앞에서 언급한 Littlewood-Richardson rule에 의해 계산된다. 이제 이들 $w_i$들은 Stiefel-Whitney class가 만족하는 공리들을 모두 만족하며, 이것이 pullback에 의해 보존되는 것으로부터 존재성이 증명된다.
+에 대응되며 이는 $H^\bullet(\Gr(k,\mathbb{R}^\infty);\mathbb{Z}/2)$의 (무한히 많은) *$\mathbb{Z}/2$-module로서의* generator 중 하나가 되며 이는 앞에서 언급한 Littlewood-Richardson rule에 의해 계산된다. 이제 이들 $w_i$들은 Stiefel-Whitney class가 만족하는 공리들을 모두 만족하며, 이것이 pullback에 의해 보존되는 것으로부터 존재성이 증명된다.

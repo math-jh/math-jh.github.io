@@ -161,11 +161,11 @@ $$\initial(x)=x+M_{k+1}\quad\text{in $M_k/M_{k+1}$,}\qquad\text{where $k$ is the
 위와 같은 상황에서, 임의의 $A$-submodule $M'\subseteq M$이 주어졌다 하자. 그럼 $\gr_\mathcal{J}M$를 $\gr_\mathfrak{a}A$-module로 보고, $\initial(M')$을 $x\in M'$들에 대해 $\initial(x)$으로 생성된 $\gr_\mathcal{J}M$의 $\gr_\mathfrak{a}A$-submodule로 정의할 수 있다. 
 
 ::: 예시 10
-$A=\mathbb{K}[\x,\y]$라 하고, $\mathfrak{a}=(\x,\y)$라 하자. 그럼 $\gr_\mathfrak{a}A$는 다항식의 차수를 통해 grading이 결정된 graded ring이다. 이제 $M=A$로 두고, $M$의 $A$-submodule (즉 $A$의 ideal) $\mathfrak{b}=(\x^2, \y^2)$를 생각하자. 그럼 $\mathfrak{b}$의 임의의 원소는
+$A=\mathbb{K}[\x,\y]$라 하고, $\mathfrak{a}=(\x,\y)$라 하자. 그럼 $\gr_\mathfrak{a}A$는 다항식의 degree를 통해 grading이 결정된 graded ring이다. 이제 $M=A$로 두고, $M$의 $A$-submodule (즉 $A$의 ideal) $\mathfrak{b}=(\x^2, \y^2)$를 생각하자. 그럼 $\mathfrak{b}$의 임의의 원소는
 
 $$f(\x,\y)\x^2+g(\x,\y)\y^2$$
 
-의 꼴이므로, $\initial(\mathfrak{b})$는 $\x^2, \y^2$으로 생성되는 $\gr_\mathcal{a}A$의 homogeneous ideal이다. 
+의 꼴이므로, $\initial(\mathfrak{b})$는 $\x^2, \y^2$으로 생성되는 $\gr_\mathfrak{a}A$의 homogeneous ideal이다. 
 :::
 
 그러나 일반적으로 $\initial(M')$은 $M'$의 generator들의 initial form들로 생성되지는 않는다. 

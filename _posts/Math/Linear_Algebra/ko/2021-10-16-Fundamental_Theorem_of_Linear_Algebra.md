@@ -133,7 +133,7 @@ $$[L(v)]_\mathcal{C}=[L]^\mathcal{B}_\mathcal{C}[v]_\mathcal{B}\tag{3}$$
 $\Hom(V,W)\cong \Mat_{m\times n}(\mathbb{K})$.
 :::
 ::: 증명
-$V$, $W$의 기저 $\mathcal{B}$, $\mathcal{C}$를 각각 고정하자. 함수 $L\mapsto[L]^\mathcal{B}_\mathcal{C}$가 linear임을 보여야 한다.
+$V$, $W$의 basis $\mathcal{B}$, $\mathcal{C}$를 각각 고정하자. 함수 $L\mapsto[L]^\mathcal{B}_\mathcal{C}$가 linear임을 보여야 한다.
 
 $L_1,L_2$가 모두 $\Hom(V,W)$의 원소라 하자. 그럼 각각의 $x_i\in\mathcal{B}$에 대하여, 
 
@@ -178,7 +178,7 @@ $$(L_2\circ L_1)(x_i)=\left(\sum_{l=1}^m\alpha_{l,i}\beta_{1,l}\right)z_1+\cdots
 위의 [정리 4](#thm4)는 $V,W$에 대한 basis를 선택하기만 하면 $\Hom(V,W)$와 $\Mat_{m\times n}(\mathbb{K})$를 같은 것으로 취급할 수 있다는 것을 보여준다. 예컨대 $\Mat_{m\times n}(\mathbb{K})$의 $mn$개의 basis는 [§선형사상들의 공간, ⁋명제 5](/ko/math/linear_algebra/space_of_linear_maps#prop5)에서 살펴본 $mn$개의 basis에 대응된다. 다음 따름정리 또한 기본정리의 결과이다.
 
 ::: 따름정리 6
-두 $n$차원 $\mathbb{K}$-벡터공간 $V,W$가 주어졌다 하고, 이들의 기저 $\mathcal{B},\mathcal{C}$를 고정하자. 그럼 임의의 $L\in\Hom(V,W)$에 대하여, $L^{-1}\in\Hom(W,V)$의 기저 $\mathcal{C},\mathcal{B}$에 대한 행렬표현 $[L^{-1}]^{\mathcal{C}}_{\mathcal{B}}$은 행렬 $[L]^{\mathcal{B}}_\mathcal{C}$의 역행렬과 같다.
+두 $n$차원 $\mathbb{K}$-벡터공간 $V,W$가 주어졌다 하고, 이들의 basis $\mathcal{B},\mathcal{C}$를 고정하자. 그럼 임의의 $L\in\Hom(V,W)$에 대하여, $L^{-1}\in\Hom(W,V)$의 basis $\mathcal{C},\mathcal{B}$에 대한 행렬표현 $[L^{-1}]^{\mathcal{C}}_{\mathcal{B}}$은 행렬 $[L]^{\mathcal{B}}_\mathcal{C}$의 역행렬과 같다.
 :::
 ::: 증명
 역행렬과 역함수의 유일성에 의하여 자명.

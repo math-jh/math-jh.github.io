@@ -26,7 +26,7 @@ is a maximal ideal. We then proved that the tangent space can be identified with
 
 $$(\mathfrak{m}_x/\mathfrak{m}_x^2)^\ast$$
 
-([\[Manifolds\] §Cotangent Spaces, ⁋Lemma 1](/en/math/manifolds/cotangent_space#lem1)). This construction is usually not emphasized in differential geometry, but it is essential for generalization to algebraic varieties. Namely, fixing the affine case for convenience, we already know what functions on algebraic varieties are ([§Quasi-Projective Varieties, ⁋Definition 5](/en/math/algebraic_varieties/quasi_projective_varieties#def5)), and we also know that the set of all functions vanishing at a point $x\in X$ corresponds to the maximal ideal of $\mathbb{K}[X]$ at that point. Thus we define
+([\[Manifolds\] §Cotangent Space, ⁋Lemma 1](/en/math/manifolds/cotangent_space#lem1)). This construction is usually not emphasized in differential geometry, but it is essential for generalization to algebraic varieties. Namely, fixing the affine case for convenience, we already know what functions on algebraic varieties are ([§Quasi-Projective Varieties, ⁋Definition 5](/en/math/algebraic_varieties/quasi_projective_varieties#def5)), and we also know that the set of all functions vanishing at a point $x\in X$ corresponds to the maximal ideal of $\mathbb{K}[X]$ at that point. Thus we define
 
 $$\mathfrak{m}_x=\{f\in \mathbb{K}[X]\mid f(x)=0\}$$
 
@@ -140,7 +140,7 @@ In the examples above, we naturally used the following proposition.
 :::
 
 ::: Proof
-In [Proposition 2](#prop2), we showed that $\dim T_x X = n - \operatorname{rank}(J_x)$. By [Definition 5](#def5), $x$ is a smooth point precisely when $\dim T_x X = \dim X$. Thus $x$ is a smooth point if and only if
+In [Proposition 3](#prop3), we showed that $\dim T_x X = n - \operatorname{rank}(J_x)$. By [Definition 5](#def5), $x$ is a smooth point precisely when $\dim T_x X = \dim X$. Thus $x$ is a smooth point if and only if
 
 $$n - \operatorname{rank}(J_x) = \dim X$$
 

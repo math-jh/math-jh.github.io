@@ -23,7 +23,7 @@ $$\ell(D) - \ell(K_C - D) = \deg D + 1 - g$$
 
 직관적으로, 위 식의 우변에서 등장하는 $\deg D$는 일종의 선형인 항이라 생각할 수 있으나, 이렇게 곡면에서의 일반화를 하는 과정에서 우리는 추가적인 <em-ko>이차항들</em-ko> $D\cdot D$, $D\cdot K_S$ 등을 고려하게 된다. 이들은 surface 위의 두 divisor가 얼마나 교차하는지를 담고 있는 양으로, curve case에서의 divisor들, 즉 점들은 곡선 안에서 일반적으로 만나지 않지만, 곡면에서의 divisor들, 즉 곡선들은 이 곡면 안에서 일반적으로 유한 개의 점에서 만나기 때문에 생겨난다. 
 
-이 글에서는 intersection number의 정의와 그 기본 성질을 다루고, Riemann–Roch 공식을 엄밀하게 유도한 뒤, 이를 활용하여 Hodge index theorem과 plurigenera에 대한 부등식을 증명한다. 또한 교차 형식이 surface의 birational geometry에서 갖는 의미를 살펴본다.
+이 글에서는 intersection number의 정의와 그 기본 성질을 다루고, Riemann–Roch 공식을 엄밀하게 유도한 뒤, 이를 활용하여 Hodge index theorem과 plurigenera에 대한 부등식을 증명한다. 또한 intersection form이 surface의 birational geometry에서 갖는 의미를 살펴본다.
 
 ## 교차수
 
@@ -88,7 +88,7 @@ $$\omega_D \cong (\omega_S \otimes \mathcal{O}_S(D))\vert_D$$
 
 $$\deg(\omega_D) = \deg(\omega_S\vert_D) + \deg(\mathcal{O}_D(D))$$
 
-이다. 우리는 앞서 [§곡선에서의 리만-로흐 정리, ⁋명제 3](/ko/math/algebraic_varieties/riemann_roch_theorem#prop3)의 결과로 $\deg(\omega_D)=2g-2$라는 것을 유도하였으며 우변의 두 항만 intersection numbery로 해석하면 된다. 우선 $\omega_S\vert_D$는 $D$ 위로 restriction된 canonical bundle로, 이는 $D$와 canonical divisor $K_S$의 교차수를 측정한다. 구체적으로 $K_S$가 $\omega_S$에 대응하는 divisor이므로, $\omega_S\vert_D$의 degree는 $D$ 위에서 $K_S$가 차지하는 점들의 수, 즉 $D \cdot K_S$가 된다. 비슷하게 $\mathcal{O}_D(D)$는 $D$의 normal bundle $\mathcal{N}_{D/S}$에 해당하며, 이는 $D$가 $S$ 안에서 자기 자신과 만나는 정도를 측정한다. 이 bundle의 degree는 $D$의 self-intersection number $D^2$와 일치한다. 이들을 종합하면
+이다. 우리는 앞서 [§곡선에서의 리만-로흐 정리, ⁋명제 3](/ko/math/algebraic_varieties/riemann_roch_theorem#prop3)의 결과로 $\deg(\omega_D)=2g-2$라는 것을 유도하였으며 우변의 두 항만 intersection number로 해석하면 된다. 우선 $\omega_S\vert_D$는 $D$ 위로 restriction된 canonical bundle로, 이는 $D$와 canonical divisor $K_S$의 intersection number를 측정한다. 구체적으로 $K_S$가 $\omega_S$에 대응하는 divisor이므로, $\omega_S\vert_D$의 degree는 $D$ 위에서 $K_S$가 차지하는 점들의 수, 즉 $D \cdot K_S$가 된다. 비슷하게 $\mathcal{O}_D(D)$는 $D$의 normal bundle $\mathcal{N}_{D/S}$에 해당하며, 이는 $D$가 $S$ 안에서 자기 자신과 만나는 정도를 측정한다. 이 bundle의 degree는 $D$의 self-intersection number $D^2$와 일치한다. 이들을 종합하면
 
 $$2g(D) - 2 = D \cdot K_S + D^2$$
 
@@ -173,7 +173,7 @@ $$\rchi(\mathcal{O}_{\widetilde{\mathbb{P}}^2}(dH - kE)) = \frac{1}{2}(dH - kE) 
 임을 계산할 수 있다.
 :::
 
-한편 곡선에서의 Riemann-Roch 정리는 위의 [명제 4](#prop4)에서 [§세르 쌍대성](/ko/math/algebraic_varieties/serre_duality)를 적용하여 $h^1$ 부분을 $h^0$으로 바꾼 것으로, 곡면에서의 경우에도 이를 활용하여 $h^2(\mathcal{O}(D)) = h^0(\omega_S(-D))$로 적을 수 있고, 그럼 Riemann–Roch 공식은 다음의 식
+한편 곡선에서의 Riemann-Roch 정리는 위의 [명제 4](#prop4)에서 [§세르 쌍대성](/ko/math/algebraic_varieties/serre_duality)을 적용하여 $h^1$ 부분을 $h^0$으로 바꾼 것으로, 곡면에서의 경우에도 이를 활용하여 $h^2(\mathcal{O}(D)) = h^0(\omega_S(-D))$로 적을 수 있고, 그럼 Riemann–Roch 공식은 다음의 식
 
 $$h^0(\mathcal{O}(D)) - h^1(\mathcal{O}(D)) + h^0(\omega_S(-D)) = \rchi(\mathcal{O}_S) + \frac{1}{2}(D^2 - D \cdot K_S)$$
 

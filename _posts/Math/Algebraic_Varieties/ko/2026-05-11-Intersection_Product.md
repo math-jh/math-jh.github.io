@@ -83,8 +83,6 @@ $$Z \cdot W \in \CH^{k+l}(X)$$
 
 가 잘 정의된다. 뿐만 아니라, 이는 다음의 성질들을 만족한다. 
 
-를 정의할 수 있다. 
-
 1. *Symmetry.* $Z \cdot W = W \cdot Z$가 성립한다.
 2. *Bilinearity.* $(aZ_1 + bZ_2) \cdot W = a(Z_1 \cdot W) + b(Z_2 \cdot W)$가 성립한다. 
 3. *Associativity*. $(Z_1 \cdot Z_2) \cdot Z_3 = Z_1 \cdot (Z_2 \cdot Z_3)$가 성립한다. 
@@ -141,7 +139,7 @@ $\CH^\ast(\mathbb{P}^n) \cong \mathbb{Z}[H] / (H^{n+1})$이다. 여기서 $H$는
 
 $$[C] \cdot [D] = \sum_{p \in C \cap D} i_p(C, D) [p] \in \CH^2(S)$$
 
-임을 보았다. 일반적인 surface의 경우 $\CH^2(S)$의 구조는 매우 복잡하며, 일반적으로 intersection multiplicity $C \cdot D = \sum_{p \in C \cap D} i_p(C, D)$는 degree map의 image로서 정수값을 얻지만, 이것의 kernel이 nontrivial이 아닐 수 있어 $\CH^2(S)$가 $\mathbb{Z}$이 아닐 수 있다.
+임을 보았다. 일반적인 surface의 경우 $\CH^2(S)$의 구조는 매우 복잡하며, 일반적으로 intersection multiplicity $C \cdot D = \sum_{p \in C \cap D} i_p(C, D)$는 degree map의 image로서 정수값을 얻지만, 이것의 kernel이 nontrivial일 수 있어 $\CH^2(S)$가 $\mathbb{Z}$이 아닐 수 있다.
 
 그러나 $\mathbb{P}^2$에서는 상황이 단순하다. $\CH^\ast(\mathbb{P}^2) = \mathbb{Z}[H]/(H^3)$이므로 $\CH^2(\mathbb{P}^2) \cong \mathbb{Z}$이고, 교차 수가 완전히 결정된다. Chow ring에서 conic의 class는 $[X] = 2H$이고 직선의 class는 $[L] = H$이므로, $[X] \cdot [L] = 2H \cdot H = 2H^2 = 2[\text{point}]$이다.
 :::

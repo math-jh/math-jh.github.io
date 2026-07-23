@@ -15,7 +15,7 @@ published: false
 
 ---
 
-[§적분](/ko/math/manifolds/integration)에서 우리는 oriented manifold 위에서 differential form을 적분하는 방법을 살펴보았다. 미적분학의 기본정리를 이 언어로 일반화하기 위해서는 "영역과 그 경계"를 다룰 수 있어야 하는데, 지금까지의 manifold는 모든 점이 유클리드 공간의 열린집합과 닮아 있어 경계라 부를 만한 점이 없다. 이번 글에서는 모델 공간을 유클리드 공간에서 반공간으로 바꾸어 이 문제를 해결한다.
+[§적분](/ko/math/manifolds/integration)에서 우리는 oriented manifold 위에서 differential form을 적분하는 방법을 살펴보았다. 미적분학의 기본정리를 이 언어로 일반화하기 위해서는 "영역과 그 boundary"를 다룰 수 있어야 하는데, 지금까지의 manifold는 모든 점이 유클리드 공간의 열린집합과 닮아 있어 boundary라 부를 만한 점이 없다. 이번 글에서는 model 공간을 유클리드 공간에서 반공간으로 바꾸어 이 문제를 해결한다.
 
 ## 반공간과 매끄러운 함수
 
@@ -27,7 +27,7 @@ $$\mathbb{H}^m=\left\{x\in\mathbb{R}^m\mid x^m\geq 0\right\}$$
 
 $$\partial\mathbb{H}^m=\left\{x\in \mathbb{H}^m\mid x^m=0\right\},\qquad \interior\mathbb{H}^m=\left\{x\in\mathbb{H}^m\mid x^m>0\right\}$$
 
-을 각각 $\mathbb{H}^m$의 경계와 내부라 부른다. $\interior\mathbb{H}^m$은 $\mathbb{R}^m$의 열린집합이지만, $\mathbb{H}^m$의 열린집합들 가운데에는 $\partial\mathbb{H}^m$과 만나는 것들도 있다는 것에 주의해야 한다.
+을 각각 $\mathbb{H}^m$의 boundary와 interior라 부른다. $\interior\mathbb{H}^m$은 $\mathbb{R}^m$의 열린집합이지만, $\mathbb{H}^m$의 열린집합들 가운데에는 $\partial\mathbb{H}^m$과 만나는 것들도 있다는 것에 주의해야 한다.
 
 반공간의 부분집합은 $\mathbb{R}^m$의 열린집합이 아닐 수 있으므로, 그 위에서의 미분가능성을 다음과 같이 정의한다.
 
@@ -80,13 +80,13 @@ $m$차원의 경계가 있는 manifold $M$에 대하여 다음이 성립한다.
 ::: 증명
 우선 첫째 주장을 보이자. $p\in\interior M$이라 하면 chart $(U,\varphi)$에 대해 $\varphi(p)\in\interior\mathbb{H}^m$이고, $\interior\mathbb{H}^m$이 $\mathbb{H}^m$에서 열린집합이므로 $U'=\varphi^{-1}(\interior\mathbb{H}^m\cap\varphi(U))$는 $p$의 열린근방이다. [명제 3](#prop3)에 의해 $U'$의 모든 점이 내부점이므로 $\interior M$은 열린집합이고, 이러한 $(U',\varphi\vert_{U'})$들은 $\mathbb{R}^m$의 열린집합으로 가는 chart들이므로 $\interior M$은 $m$차원 manifold이다.
 
-이제 둘째 주장을 보이자. $\partial M$은 열린집합 $\interior M$의 여집합이므로 닫힌집합이다. Chart $(U,\varphi)$에 대하여 [명제 3](#prop3)에 의해 $\varphi(U\cap\partial M)=\varphi(U)\cap\partial\mathbb{H}^m$이고, $\partial\mathbb{H}^m$을 $\mathbb{R}^{m-1}$과 identify하면 이는 $\mathbb{R}^{m-1}$의 열린집합이다. 따라서 $(\varphi^1,\ldots,\varphi^{m-1})\vert_{U\cap\partial M}$은 $U\cap\partial M$에서 $\mathbb{R}^{m-1}$의 열린집합으로의 homeomorphism이고, 이들의 transition은 $M$의 transition들의 제한이므로 $C^\infty$이다. $\partial M$이 $M$의 subspace로서 Hausdorff이고 second countable인 것은 자명하므로 $\partial M$은 $(m-1)$차원 manifold이다.
+이제 둘째 주장을 보이자. $\partial M$은 열린집합 $\interior M$의 여집합이므로 닫힌집합이다. Chart $(U,\varphi)$에 대하여 [명제 3](#prop3)에 의해 $\varphi(U\cap\partial M)=\varphi(U)\cap\partial\mathbb{H}^m$이고, $\partial\mathbb{H}^m$을 $\mathbb{R}^{m-1}$과 identify하면 이는 $\mathbb{R}^{m-1}$의 열린집합이다. 따라서 $(\varphi^1,\ldots,\varphi^{m-1})\vert_{U\cap\partial M}$은 $U\cap\partial M$에서 $\mathbb{R}^{m-1}$의 열린집합으로의 homeomorphism이고, 이들의 transition은 $M$의 transition들의 restriction이므로 $C^\infty$이다. $\partial M$이 $M$의 subspace로서 Hausdorff이고 second countable인 것은 자명하므로 $\partial M$은 $(m-1)$차원 manifold이다.
 :::
 
 ::: 예시 5
-반공간 $\mathbb{H}^m$ 자신은 identity chart 하나로 이루어진 atlas에 대해 경계가 있는 manifold이고, 그 경계는 정의에 의해 $\partial\mathbb{H}^m\cong\mathbb{R}^{m-1}$이다. 비슷하게 닫힌구간 $[0,1]$은 두 chart $t\mapsto t$ (on $[0,1)$), $t\mapsto 1-t$ (on $(0,1]$)에 대해 $1$차원의 경계가 있는 manifold이고 $\partial[0,1]=\{0,1\}$이다.
+반공간 $\mathbb{H}^m$ 자신은 identity chart 하나로 이루어진 atlas에 대해 경계가 있는 manifold이고, 그 boundary는 정의에 의해 $\partial\mathbb{H}^m\cong\mathbb{R}^{m-1}$이다. 비슷하게 닫힌구간 $[0,1]$은 두 chart $t\mapsto t$ (on $[0,1)$), $t\mapsto 1-t$ (on $(0,1]$)에 대해 $1$차원의 경계가 있는 manifold이고 $\partial[0,1]=\{0,1\}$이다.
 
-조금 더 의미있는 예시로 닫힌 공 $\overline{B}^m=\{x\in\mathbb{R}^m\mid \lvert x\rvert\leq 1\}$을 생각하자. 내부는 열린 공이므로 chart 하나로 충분하다. 경계 근방의 점들에 대해서는, $S^{m-1}$의 chart $(V,\theta)$마다 함수
+조금 더 의미있는 예시로 닫힌 공 $\overline{B}^m=\{x\in\mathbb{R}^m\mid \lvert x\rvert\leq 1\}$을 생각하자. interior는 열린 공이므로 chart 하나로 충분하다. boundary 근방의 점들에 대해서는, $S^{m-1}$의 chart $(V,\theta)$마다 함수
 
 $$x\mapsto \bigl(\theta(x/\lvert x\rvert),\,1-\lvert x\rvert\bigr)$$
 
@@ -126,7 +126,7 @@ $$\det D\tau(x(p))=\frac{\partial y^m}{\partial x^m}(x(p))\cdot\det\left(\frac{\
 
 ## 유도된 향
 
-$\interior M$은 경계가 없는 $m$차원 manifold이므로, 우리는 $M$이 *orientable*이라는 것을 $\interior M$이 orientable인 것으로, $M$의 *orientation*을 $\interior M$의 orientation으로 정의한다. ([§향, ⁋정의 1](/ko/math/manifolds/orientation#def1), 그리고 connected 가정에 대해서는 아래의 [참고 10](#rmk10)을 보라.) 또, $M$의 chart $(U,x)$가 *positively oriented*라는 것은 그 제한 $(U\cap\interior M,x)$가 [§향, ⁋명제 2](/ko/math/manifolds/orientation#prop2)의 의미에서 주어진 orientation과 호환되는 것, 즉 $dx^1\wedge\cdots\wedge dx^m$이 $U\cap\interior M$ 위에서 선택된 component에 들어가는 것이다.
+$\interior M$은 boundary가 없는 $m$차원 manifold이므로, 우리는 $M$이 *orientable*이라는 것을 $\interior M$이 orientable인 것으로, $M$의 *orientation*을 $\interior M$의 orientation으로 정의한다. ([§향, ⁋정의 1](/ko/math/manifolds/orientation#def1), 그리고 connected 가정에 대해서는 아래의 [참고 10](#rmk10)을 보라.) 또, $M$의 chart $(U,x)$가 *positively oriented*라는 것은 그 restriction $(U\cap\interior M,x)$가 [§향, ⁋명제 2](/ko/math/manifolds/orientation#prop2)의 의미에서 주어진 orientation과 호환되는 것, 즉 $dx^1\wedge\cdots\wedge dx^m$이 $U\cap\interior M$ 위에서 선택된 component에 들어가는 것이다.
 
 $m\geq 2$라면 oriented manifold with boundary $M$은 항상 positively oriented chart들로 덮을 수 있다. Chart가 positively oriented가 아니라면 $x^1$의 부호를 바꾼 chart $(U,(-x^1,x^2,\ldots,x^m))$가 여전히 $\mathbb{H}^m$의 열린집합으로 가는 chart이면서 orientation이 뒤집히기 때문이다. 반면 $m=1$인 경우에는 이러한 조작이 불가능한데, 부호를 바꿀 수 있는 좌표가 마지막 좌표 $x^1$ 뿐이고 이것의 부호를 바꾸면 chart가 $\mathbb{H}^1$을 벗어나기 때문이다. 실제로 $[0,1]$의 양 끝점을 모두 $\mathbb{H}^1$-chart로 덮으면 두 chart의 orientation은 반드시 반대가 된다. 이러한 이유로 $m=1$인 경우에는 negatively oriented chart도 함께 사용하되, 적분 등을 정의할 때 부호를 붙여 사용한다.
 
@@ -138,7 +138,7 @@ $$\bigl(U\cap\partial M,\ (x^1,\ldots,x^{m-1})\vert_{\partial M}\bigr)$$
 은 transition들의 Jacobian의 행렬식이 항상 $0$보다 큰 $\partial M$의 atlas를 이룬다. 특히 $\partial M$은 orientable이다.
 :::
 ::: 증명
-두 positively oriented chart의 transition $\tau$와 경계점에서의 그 제한을 생각하자. $\partial M$ 위에서의 transition의 Jacobian matrix는 정확히 $\bigl(\partial y^i/\partial x^j\bigr)_{1\leq i,j\leq m-1}$이고, [보조정리 7](#lem7)에 의하여 이 행렬의 행렬식은 $\det D\tau>0$과 같은 부호를 가지므로 양수이다.
+두 positively oriented chart의 transition $\tau$와 경계점에서의 그 restriction을 생각하자. $\partial M$ 위에서의 transition의 Jacobian matrix는 정확히 $\bigl(\partial y^i/\partial x^j\bigr)_{1\leq i,j\leq m-1}$이고, [보조정리 7](#lem7)에 의하여 이 행렬의 행렬식은 $\det D\tau>0$과 같은 부호를 가지므로 양수이다.
 :::
 
 다만 Stokes 정리의 부호를 맞추기 위해서는 [명제 8](#prop8)의 orientation을 그대로 쓰는 대신 다음과 같이 수정하는 것이 표준적이다. 점 $p\in\partial M$에서, outward vector $\nu$를 맨 앞에 둔 ordered basis $(\nu,v_1,\ldots,v_{m-1})$ ($v_i\in T_p\partial M$)가 $M$의 orientation에 대해 positively oriented일 때 $(v_1,\ldots,v_{m-1})$이 positively oriented이도록 $\partial M$의 orientation을 잡는 것이다. Positively oriented chart $(U,x)$에서 $\nu=-\partial/\partial x^m$으로 택하고 행렬식을 계산하면

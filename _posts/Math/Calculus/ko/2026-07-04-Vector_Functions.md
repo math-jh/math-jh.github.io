@@ -38,7 +38,7 @@ $$\mathbf{v}=\sum_{i=1}^n v_i \mathbf{e}_i$$
 
 으로 써줄 수 있다.
 
-우리가 다루는 공간은 유클리드 공간이므로 여기에 내적과 노름도 함께 사용한다. 두 벡터 $\mathbf{v},\mathbf{w}\in\mathbb{R}^n$의 *내적<sub>inner product</sub>*은 좌표별 곱의 합
+우리가 다루는 공간은 유클리드 공간이므로 여기에 내적과 norm도 함께 사용한다. 두 벡터 $\mathbf{v},\mathbf{w}\in\mathbb{R}^n$의 *내적<sub>inner product</sub>*은 좌표별 곱의 합
 
 $$\mathbf{v}\cdot \mathbf{w}=v_1w_1+\cdots+v_nw_n$$
 
@@ -64,7 +64,7 @@ $$\mathbf{v}\times \mathbf{w}=(v_2w_3-v_3w_2,\ v_3w_1-v_1w_3,\ v_1w_2-v_2w_1)$$
 
 $$0<\lvert t-t_0\rvert<\delta\implies \lVert \mathbf{r}(t)-\mathbf{v}\rVert<\epsilon$$
 
-를 만족하도록 할 수 있을 때 이 벡터함수 $\mathbf{r}$이 $t\rightarrow t_0$일 때 벡터 $\mathbf{v}$로 수렴한다고 말한다. 그럼 코시–슈바르츠 부등식 
+를 만족하도록 할 수 있을 때 이 벡터함수 $\mathbf{r}$이 $t\rightarrow t_0$일 때 벡터 $\mathbf{v}$로 수렴한다고 말한다. 그럼 Cauchy–Schwarz 부등식 
 
 $$\lvert\mathbf{a}\cdot\mathbf{b}\rvert\leq\lVert\mathbf{a}\rVert\lVert\mathbf{b}\rVert$$
 
@@ -117,7 +117,7 @@ $$\mathbf{T}(t) = \frac{\mathbf{r}'(t)}{\lVert \mathbf{r}'(t)\rVert}$$
 속도는 곡선의 진행 방향을 가리키고 그 크기가 점이 움직이는 빠르기이며, 단위접선벡터는 속도의 방향만 남긴 것이다. 이것이 잘 정의되기 위한 조건은 매개곡선 $\mathbf{r}$이 *일급정칙곡선<sub>$C^1$-regular curve</sub>*이라는 것으로, 이는 다음 두 조건을 모두 만족하는 곡선들이다. 
 
 1. $\mathbf{r}$이 *일급<sub>$C^1$</sub>*이다. 즉, 속도벡터 $\mathbf{r}'(t)$가 연속적으로 존재한다. 
-2. $\mathbf{r}$이 *정칙<sub>regular</sub>*이다. 즉, $\mathbf{r}'(t)$가 $0$이 되는 곳이 없다. 
+2. $\mathbf{r}$이 *regular<sub>정칙</sub>*이다. 즉, $\mathbf{r}'(t)$가 $0$이 되는 곳이 없다. 
 
 그럼 특히 둘째 조건에 의해 단위접선벡터 $\mathbf{T}$가 어디서나 잘 정의되며, 첫째 조건에 의해 $\mathbf{T}(t)$는 연속이다. 이 글에서는 특별한 언급이 없는 한 일급정칙 곡선을 기본으로 다룬다. 
 
@@ -139,7 +139,7 @@ $$L = \int_a^b \lVert \mathbf{r}'(t)\rVert \mathop{dt}$$
 이다.
 :::
 
-피적분함수 $\lVert \mathbf{r}'(t)\rVert$는 연속이므로 적분가능하다 ([§적분, ⁋정리 10](/ko/math/calculus/integration#thm10)). 이제 시작점에서 잰 호의 길이
+피적분함수 $\lVert \mathbf{r}'(t)\rVert$는 연속이므로 적분가능하다 ([§적분, ⁋정리 10](/ko/math/calculus/integration#thm10)). 이제 시작점에서 잰 arc length
 
 $$s(t) = \int_a^t \lVert \mathbf{r}'(\tau)\rVert \mathop{d\tau}$$
 

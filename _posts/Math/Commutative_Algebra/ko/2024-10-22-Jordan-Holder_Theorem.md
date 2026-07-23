@@ -60,7 +60,7 @@ $$M=M_0\supsetneq M_1\supsetneq \cdots$$
 
 이제 두 번째 결과를 보인다. 주어진 chain의 유한성으로부터 조건을 만족하는 maximal ideal들 또한 유한하다는 것을 알고, 따라서 $\bigoplus_\mathfrak{m} M_\mathfrak{m}$은 $\prod_\mathfrak{m} M_\mathfrak{m}$으로 볼 수 있으며 이 때 주어진 함수는 $M \rightarrow M_\mathfrak{m}$들에 direct product의 universal property를 적용하여 얻어진다. 이 함수가 isomorphism이 된다는 것을 보이려면 [§국소화의 성질들, ⁋명제 4](/ko/math/commutative_algebra/properties_of_localization#prop4)를 적용하여 maximal ideal에서의 localization을 보면 충분하다. 
 
-이를 위해 우선 $M\cong R/\mathfrak{m}$이라면 임의의 maximal ideal $\mathfrak{m}'$에 대하여
+이를 위해 우선 $M\cong A/\mathfrak{m}$이라면 임의의 maximal ideal $\mathfrak{m}'$에 대하여
 
 $$M_{\mathfrak{m}'}=\begin{cases}M&\text{if $\mathfrak{m}=\mathfrak{m}'$,}\\0&\text{otherwise.}\end{cases}$$
 
@@ -138,7 +138,7 @@ $$\left(\prod_{i\in I} A/\mathfrak{q}_i\right)_\mathfrak{m}=(A/\mathfrak{q}_i)_\
 :::
 
 ::: 따름정리 6
-Noetherian ring $A$와 finiely generated $A$-module $M$에 대하여, 다음이 모두 동치이다. 
+Noetherian ring $A$와 finitely generated $A$-module $M$에 대하여, 다음이 모두 동치이다. 
 
 1. $M$이 유한한 길이를 갖는다.
 2. 적당한 maximal ideal들의 곱 $\prod_{i=1}^n \mathfrak{m}_i$가 $M$을 annihilate한다.
@@ -146,8 +146,7 @@ Noetherian ring $A$와 finiely generated $A$-module $M$에 대하여, 다음이 
 4. $A/\ann(M)$이 Artinian이다.
 :::
 ::: 증명
-우선 첫째 조건을 가정하면 [정리 3](#thm3)의 두 번째와 세 번째 결과로부터 두 번째 조건이 성립하는 것이 자명하다. 이제 두 번째 조건을 가정하자. 그럼 $\ann(M)$을 포함하는 임의의 prime ideal $\mathfrak{p}$에 대하여, $\mathfrak{p}\supseteq\prod \mathfrak{m}_i$이므로 어떠한 $i$에 대하여 $\mathfrak{p}\supseteq \mathfrak{m}_i$이고, 따라서 $$\mathfrak{p}=\mathfrak{m} 
-_i$$이다. 세 번째 조건이 네 번째 조건을 함의하는 것은 [정리 4](#thm4)의 첫째 조건과 셋째 조건의 동치이며, 마지막으로 네 번째 조건을 가정하면 $A/\ann(M)$은 [정리 4](#thm4)의 둘째 조건으로 인해 $A/\ann(M)$-module로서 유한한 길이를 가지고, $M$은 finitely generated $A/\ann(M)$-module이므로 원하는 결과를 얻는다. 
+우선 첫째 조건을 가정하면 [정리 3](#thm3)의 두 번째와 세 번째 결과로부터 두 번째 조건이 성립하는 것이 자명하다. 이제 두 번째 조건을 가정하자. 그럼 $\ann(M)$을 포함하는 임의의 prime ideal $\mathfrak{p}$에 대하여, $\mathfrak{p}\supseteq\prod \mathfrak{m}_i$이므로 어떠한 $i$에 대하여 $\mathfrak{p}\supseteq \mathfrak{m}_i$이고, 따라서 $\mathfrak{p}=\mathfrak{m}_i$이다. 세 번째 조건이 네 번째 조건을 함의하는 것은 [정리 4](#thm4)의 첫째 조건과 셋째 조건의 동치이며, 마지막으로 네 번째 조건을 가정하면 $A/\ann(M)$은 [정리 4](#thm4)의 둘째 조건으로 인해 $A/\ann(M)$-module로서 유한한 길이를 가지고, $M$은 finitely generated $A/\ann(M)$-module이므로 원하는 결과를 얻는다. 
 :::
 
 그럼 다음이 성립한다.

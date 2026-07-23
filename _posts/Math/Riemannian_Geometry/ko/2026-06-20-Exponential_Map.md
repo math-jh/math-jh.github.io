@@ -92,7 +92,7 @@ $$(d\exp_p)_0(v) = \left.\frac{d}{dt}\right\vert_{t = 0} \exp_p(tv) = \left.\fra
 [명제 4](#prop4)에서 $(d\exp_p)_0$이 가역이므로, manifold 사이의 smooth 함수에 대한 역함수 정리를 적용할 수 있다. 이로부터 exponential map이 $p$ 근방에 좌표계를 부여한다.
 
 ::: 정의 5
-Riemannian manifold $(M, g)$의 점 $p$에 대해, $0$의 star-shaped 열린근방 $V \subseteq T_p M$이 존재하여 $\exp_p\vert_V : V \rightarrow \exp_p(V)$가 diffeomorphism이 될 때, 상 $U := \exp_p(V)$를 $p$의 *normal neighborhood<sub>정규근방</sub>*라 부른다.
+Riemannian manifold $(M, g)$의 점 $p$에 대해, $0$의 star-shaped 열린근방 $V \subseteq T_p M$이 존재하여 $\exp_p\vert_V : V \rightarrow \exp_p(V)$가 diffeomorphism이 될 때, image $U := \exp_p(V)$를 $p$의 *normal neighborhood<sub>정규근방</sub>*라 부른다.
 :::
 
 ::: 증명
@@ -102,14 +102,14 @@ Riemannian manifold $(M, g)$의 점 $p$에 대해, $0$의 star-shaped 열린근�
 Normal neighborhood 위에서 exponential map의 역사상은 $T_p M$ 위로의 smooth 좌표를 준다. 여기에 tangent space의 orthonormal basis를 통한 선형동형을 합성하면 manifold 위의 구체적인 좌표계를 얻는다.
 
 ::: 정의 6
-$p$의 normal neighborhood $U = \exp_p(V)$와 $T_p M$의 $g_p$에 대한 orthonormal basis $(E_1, \ldots, E_n)$이 주어졌다 하자. 이 기저가 정하는 선형동형 $E : \mathbb{R}^n \rightarrow T_p M$, $E(x^1, \ldots, x^n) = \sum_i x^i E_i$에 대해, 합성
+$p$의 normal neighborhood $U = \exp_p(V)$와 $T_p M$의 $g_p$에 대한 orthonormal basis $(E_1, \ldots, E_n)$이 주어졌다 하자. 이 basis가 정하는 선형동형 $E : \mathbb{R}^n \rightarrow T_p M$, $E(x^1, \ldots, x^n) = \sum_i x^i E_i$에 대해, 합성
 
 $$\varphi := E^{-1} \circ (\exp_p\vert_V)^{-1} : U \rightarrow \mathbb{R}^n$$
 
 을 $p$를 중심으로 하는 *normal coordinate<sub>정규좌표</sub>*라 부른다.
 :::
 
-정의에 의해 $\varphi(p) = 0$이며, 점 $\exp_p(v) \in U$의 normal coordinate는 $v = \sum_i x^i E_i$를 만족하는 $(x^1, \ldots, x^n)$이다. 이 좌표계가 가지는 특징적인 성질들을 모아 다음 명제로 정리한다. 핵심은 normal coordinate에서 $p$를 지나는 측지선들이 원점을 지나는 직선으로 보이고, 그 결과 $p$에서 metric과 접속이 가장 단순한 형태를 가진다는 것이다.
+정의에 의해 $\varphi(p) = 0$이며, 점 $\exp_p(v) \in U$의 normal coordinate는 $v = \sum_i x^i E_i$를 만족하는 $(x^1, \ldots, x^n)$이다. 이 좌표계가 가지는 특징적인 성질들을 모아 다음 명제로 정리한다. 핵심은 normal coordinate에서 $p$를 지나는 측지선들이 원점을 지나는 직선으로 보이고, 그 결과 $p$에서 metric과 connection이 가장 단순한 형태를 가진다는 것이다.
 
 ::: 명제 7
 $p$를 중심으로 하는 normal coordinate $(x^i)$에서 다음이 성립한다.
@@ -140,14 +140,14 @@ $$\sum_{i, j} \Gamma_{ij}^k(\gamma_v(t))\, v^i v^j = 0$$
 
 $$\sum_{i, j} \Gamma_{ij}^k(p)\, v^i v^j = 0$$
 
-이고, 이는 모든 $v = (v^1, \ldots, v^n) \in \mathbb{R}^n$ (충분히 작은 $v$, 따라서 척도조정으로 모든 $v$)에 대해 성립한다. 각 $k$에 대해 $\sum_{i, j} \Gamma_{ij}^k(p) v^i v^j$는 $v$에 대한 이차형식이고, Levi-Civita 접속은 torsion-free이므로 [§레비-치비타 접속, ⁋정의 3](/ko/math/riemannian_geometry/Levi-Civita_connection#def3)에 의해 $\Gamma_{ij}^k(p) = \Gamma_{ji}^k(p)$로 대칭이다. 대칭인 이차형식이 항등적으로 $0$이면 그 계수가 모두 $0$이므로 ($v = E_i + E_j$ 등을 대입해 편극화하면), $\Gamma_{ij}^k(p) = 0$을 얻는다.
+이고, 이는 모든 $v = (v^1, \ldots, v^n) \in \mathbb{R}^n$ (충분히 작은 $v$, 따라서 척도조정으로 모든 $v$)에 대해 성립한다. 각 $k$에 대해 $\sum_{i, j} \Gamma_{ij}^k(p) v^i v^j$는 $v$에 대한 이차형식이고, Levi-Civita connection은 torsion-free이므로 [§레비-치비타 접속, ⁋정의 3](/ko/math/riemannian_geometry/Levi-Civita_connection#def3)에 의해 $\Gamma_{ij}^k(p) = \Gamma_{ji}^k(p)$로 대칭이다. 대칭인 이차형식이 항등적으로 $0$이면 그 계수가 모두 $0$이므로 ($v = E_i + E_j$ 등을 대입해 편극화하면), $\Gamma_{ij}^k(p) = 0$을 얻는다.
 :::
 
 [명제 7](#prop7)은 normal coordinate가 점 $p$에서 manifold를 "유클리드 공간에 일차근사적으로 가장 가깝게" 펴는 좌표임을 말해 준다. $g_{ij}(p) = \delta_{ij}$와 $\Gamma_{ij}^k(p) = 0$은 곡률을 계산할 때 한 점에서의 계산을 크게 단순화하는 도구가 된다. 다만 이 성질들은 일반적으로 점 $p$에서만 성립하며, $p$를 벗어나면 $g_{ij}$의 일차 도함수가 다시 나타날 수 있다 (오직 $M$이 평탄할 때만 좌표 전체에서 $g_{ij} = \delta_{ij}$로 둘 수 있다).
 
 ## Gauss lemma
 
-Normal coordinate는 $p$를 지나는 측지선을 원점을 지나는 직선으로 펴므로, $T_p M$의 동심 구면이 normal neighborhood 안에서 어떤 자취로 보이는지를 물을 수 있다. Gauss lemma는 이 측지구면이 방사방향 측지선과 직교함을 말한다. 먼저 그 자취들에 이름을 붙인다. 반지름 $r > 0$에 대해, exponential map의 정의역 안의 구면 $S_r := \{v \in V \mid \lVert v \rVert_g = r\}$의 상 $\exp_p(S_r)$을 반지름 $r$의 *geodesic sphere<sub>측지구면</sub>*라 부른다.
+Normal coordinate는 $p$를 지나는 측지선을 원점을 지나는 직선으로 펴므로, $T_p M$의 동심 구면이 normal neighborhood 안에서 어떤 자취로 보이는지를 물을 수 있다. Gauss lemma는 이 측지구면이 방사방향 측지선과 직교함을 말한다. 먼저 그 자취들에 이름을 붙인다. 반지름 $r > 0$에 대해, exponential map의 정의역 안의 구면 $S_r := \{v \in V \mid \lVert v \rVert_g = r\}$의 image $\exp_p(S_r)$을 반지름 $r$의 *geodesic sphere<sub>측지구면</sub>*라 부른다.
 
 Gauss lemma를 깔끔하게 진술하기 위해, exponential map의 미분이 방사벡터와 그에 수직인 벡터에 대해 어떻게 작용하는지를 비교한다. 다음 보조정리가 핵심 계산이다.
 
@@ -202,16 +202,16 @@ Normal neighborhood $U = \exp_p(V)$ 안에서, $p$를 지나는 방사 측지선
 :::
 
 ::: 증명
-측지구면 $\exp_p(S_r)$의 $q = \exp_p(v)$에서의 tangent space는, $S_r = \{u \in V \mid \lVert u \rVert = r\}$이 $v$에서 가지는 tangent space를 $(d\exp_p)_v$로 보낸 것이다. $S_r$의 $v$에서의 tangent space는 $v$에 수직인 vector들 $\{w \in T_p M \mid \langle v, w \rangle_p = 0\}$로 이루어지므로, $\exp_p(S_r)$의 $q$에서의 접벡터는 $\langle v, w \rangle_p = 0$인 $w$에 대한 $(d\exp_p)_v(w)$ 꼴이다.
+측지구면 $\exp_p(S_r)$의 $q = \exp_p(v)$에서의 tangent space는, $S_r = \{u \in V \mid \lVert u \rVert = r\}$이 $v$에서 가지는 tangent space를 $(d\exp_p)_v$로 보낸 것이다. $S_r$의 $v$에서의 tangent space는 $v$에 수직인 vector들 $\{w \in T_p M \mid \langle v, w \rangle_p = 0\}$로 이루어지므로, $\exp_p(S_r)$의 $q$에서의 tangent vector는 $\langle v, w \rangle_p = 0$인 $w$에 대한 $(d\exp_p)_v(w)$ 꼴이다.
 
-한편 [보조정리 8](#lem8)의 증명에서 $\dot\gamma_v(1) = (d\exp_p)_v(v)$임을 보였다. 따라서 임의의 그러한 접벡터 $(d\exp_p)_v(w)$에 대해, [보조정리 8](#lem8)에 의해
+한편 [보조정리 8](#lem8)의 증명에서 $\dot\gamma_v(1) = (d\exp_p)_v(v)$임을 보였다. 따라서 임의의 그러한 tangent vector $(d\exp_p)_v(w)$에 대해, [보조정리 8](#lem8)에 의해
 
 $$\langle \dot\gamma_v(1),\, (d\exp_p)_v(w) \rangle_q = \langle (d\exp_p)_v(v),\, (d\exp_p)_v(w) \rangle_q = \langle v, w \rangle_p = 0$$
 
-이다. 즉 $\dot\gamma_v(1)$는 측지구면의 모든 접벡터에 수직이다.
+이다. 즉 $\dot\gamma_v(1)$는 측지구면의 모든 tangent vector에 수직이다.
 :::
 
-Gauss lemma는 normal neighborhood 안에서 exponential map이 방사방향으로는 *등거리*임을 (방사 측지선의 호의 길이가 $T_p M$에서의 거리 $\lVert v \rVert$와 같음을) 함의하며, 이는 측지선이 충분히 짧은 구간에서 길이를 최소화함을 증명하는 출발점이 된다. 이 사실은 [§측지선, ⁋따름정리 5](/ko/math/riemannian_geometry/geodesics#cor5) 뒤에서 언급했던 "측지선이 충분히 짧은 구간에서 최단곡선"이라는 주장을 정당화한다.
+Gauss lemma는 normal neighborhood 안에서 exponential map이 방사방향으로는 *등거리*임을 (방사 측지선의 arc length가 $T_p M$에서의 거리 $\lVert v \rVert$와 같음을) 함의하며, 이는 측지선이 충분히 짧은 구간에서 길이를 최소화함을 증명하는 출발점이 된다. 이 사실은 [§측지선, ⁋따름정리 5](/ko/math/riemannian_geometry/geodesics#cor5) 뒤에서 언급했던 "측지선이 충분히 짧은 구간에서 최단곡선"이라는 주장을 정당화한다.
 
 ## 예시
 
@@ -226,7 +226,7 @@ $$\exp_p(v) = \gamma_v(1) = p + v$$
 :::
 
 ::: 예시 11
-$\mathbb{R}^3$에 매장된 단위 구면 $S^2$에 round metric을 주자. [§측지선, ⁋예시 9](/ko/math/riemannian_geometry/geodesics#ex9)에서 점 $p \in S^2$와 단위 vector $v \in T_p S^2$에 대한 측지선이 대원
+$\mathbb{R}^3$에 매장된 단위 구면 $S^2$에 round metric을 주자. [§측지선, ⁋예시 9](/ko/math/riemannian_geometry/geodesics#ex9)에서 점 $p \in S^2$와 unit vector $v \in T_p S^2$에 대한 측지선이 대원
 
 $$\gamma_v(t) = (\cos t)\, p + (\sin t)\, v$$
 
@@ -238,7 +238,7 @@ $$\gamma_v(t) = (\cos rt)\, p + \frac{\sin rt}{r}\, v$$
 
 $$\exp_p(v) = \gamma_v(1) = (\cos r)\, p + \frac{\sin r}{r}\, v, \qquad r = \lVert v \rVert$$
 
-이다. 기하적으로 $\exp_p$는 접평면 $T_p S^2$의 vector $v$를, $v$ 방향의 대원을 따라 호의 길이 $r = \lVert v \rVert$만큼 나아간 점으로 보내는 *방사사상*이다. 이 사상은 $r < \pi$인 영역, 즉 열린 공 $\{v \mid \lVert v \rVert < \pi\}$ 위에서 diffeomorphism이며, 그 상은 $p$의 대척점 $-p$를 제외한 $S^2 \setminus \{-p\}$로서 $p$의 normal neighborhood이다. 반지름 $r$의 측지구면 $\exp_p(S_r)$은 $p$로부터 측지거리 $r$만큼 떨어진 위도원이며, [정리 9](#thm9)가 말하듯 $p$에서 나오는 대원들(경도선)이 이 위도원들과 직교한다. $r = \pi$에서 $\exp_p$가 구면 $S_\pi$ 전체를 한 점 $-p$로 보내 diffeomorphism이 깨지는 것은, normal neighborhood가 일반적으로 $T_p M$ 전체로 확장되지 않는 전형적인 예이다.
+이다. 기하적으로 $\exp_p$는 접평면 $T_p S^2$의 vector $v$를, $v$ 방향의 대원을 따라 arc length $r = \lVert v \rVert$만큼 나아간 점으로 보내는 *방사사상*이다. 이 사상은 $r < \pi$인 영역, 즉 열린 공 $\{v \mid \lVert v \rVert < \pi\}$ 위에서 diffeomorphism이며, 그 image는 $p$의 대척점 $-p$를 제외한 $S^2 \setminus \{-p\}$로서 $p$의 normal neighborhood이다. 반지름 $r$의 측지구면 $\exp_p(S_r)$은 $p$로부터 측지거리 $r$만큼 떨어진 위도원이며, [정리 9](#thm9)가 말하듯 $p$에서 나오는 대원들(경도선)이 이 위도원들과 직교한다. $r = \pi$에서 $\exp_p$가 구면 $S_\pi$ 전체를 한 점 $-p$로 보내 diffeomorphism이 깨지는 것은, normal neighborhood가 일반적으로 $T_p M$ 전체로 확장되지 않는 전형적인 예이다.
 :::
 
 [예시 11](#ex11)에서 보듯 $S^2$의 exponential map은 한 점의 접평면에서 측지거리를 따라 구면을 펴는 사상이며, 이는 지도제작에서 한 점을 중심으로 한 *방위투영*의 기하적 모형이기도 하다. 일반의 Riemannian manifold에서도 exponential map은 같은 방식으로 tangent space의 평탄한 기하를 측지선을 따라 manifold 위로 옮기며, 이로써 우리는 한 점 근방의 곡률 정보를 tangent space 위의 좌표로 환원해 분석할 수 있다.

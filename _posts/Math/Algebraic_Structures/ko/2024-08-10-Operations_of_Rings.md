@@ -17,7 +17,7 @@ weight: 103
 
 ## 환들의 곱
 
-환들의 곱의 경우는 어렵지 않게 정의할 수 있다. Ring들의 family $(A_i)_{i\in I}$가 주어졌다 하자. 그럼 abelian group의 product $\prod_{i\in I}A_i$가 잘 정의된다. 한편 $A_i$ 위에 곱셈구조를 주는 $\mu_i: A_i\otimes A_i \rightarrow A_i$는 bilinear map $A_i\times A_i \rightarrow A_i$와 같고, 이를 통해 집합들 사이의 함수
+Ring들의 곱의 경우는 어렵지 않게 정의할 수 있다. Ring들의 family $(A_i)_{i\in I}$가 주어졌다 하자. 그럼 abelian group의 product $\prod_{i\in I}A_i$가 잘 정의된다. 한편 $A_i$ 위에 곱셈구조를 주는 $\mu_i: A_i\otimes A_i \rightarrow A_i$는 bilinear map $A_i\times A_i \rightarrow A_i$와 같고, 이를 통해 집합들 사이의 함수
 
 $$\left(\prod_{i\in I} A_i\right)\times\left(\prod_{i\in I} A_i\right) \cong \prod_{i\in I} (A_i\times A_i) \overset{\prod \mu_i}{\longrightarrow} \prod_{i\in I}A_i$$
 
@@ -60,7 +60,7 @@ Abelian group의 경우 direct sum이 coproduct가 되지만 ([\[대수적 구�
 
 ## 환들의 쌍대곱
 
-한편 ring들의 coproduct를 정의하기 위해서는 약간의 노력이 필요하다. 이는 본질적으로 위에서 지적한 것과 같이 ring의 곱셈 연산이 commutative하지 않기 때문으로, $\Grp$에서 쌍대곱을 정의할 때도 비슷한 문제가 있었다. 이를 극복하기 위해 우리는 [§자유곱](/ko/math/algebraic_structures/free_products)에서 꽤나 귀찮은 방식으로 free product를 정의했어야 했다. Ring에서도 마찬가지 방식으로 coproduct를 정의할 수 있지만, 앞으로의 논의에 이것이 쓰일 일은 없으므로 다음과 같이 명제로 남겨두기만 한다. 
+한편 ring들의 coproduct를 정의하기 위해서는 약간의 노력이 필요하다. 이는 본질적으로 위에서 지적한 것과 같이 ring의 곱셈 연산이 commutative하지 않기 때문으로, $\Grp$에서 coproduct를 정의할 때도 비슷한 문제가 있었다. 이를 극복하기 위해 우리는 [§자유곱](/ko/math/algebraic_structures/free_products)에서 꽤나 귀찮은 방식으로 free product를 정의했어야 했다. Ring에서도 마찬가지 방식으로 coproduct를 정의할 수 있지만, 앞으로의 논의에 이것이 쓰일 일은 없으므로 다음과 같이 명제로 남겨두기만 한다. 
 
 ::: 명제 4
 임의의 ring들의 family $(A_i)_{i\in I}$에 대하여, 이들의 coproduct가 존재한다. 

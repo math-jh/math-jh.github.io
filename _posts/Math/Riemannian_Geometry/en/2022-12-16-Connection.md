@@ -84,7 +84,7 @@ $$\nabla_{E_i}E_j=\Gamma_{ij}^k E_k$$
 
 there exist $n^3$ $C^\infty$ functions $\Gamma_{ij}^k$ satisfying this. Then equation (1) above can be written as
 
-$$\nabla_XY=\sum_{k=1}^n\left(\sum_{i,j=1}^nX(Y^k)+X^iY^j\Gamma_{ij}^k\right)E_k$$
+$$\nabla_XY=\sum_{k=1}^n\left(X(Y^k)+\sum_{i,j=1}^nX^iY^j\Gamma_{ij}^k\right)E_k$$
 
 ::: Definition 3
 The $n^3$ functions $\Gamma_{ij}^k$ defined above are called the *connection coefficients*.
@@ -92,7 +92,7 @@ The $n^3$ functions $\Gamma_{ij}^k$ defined above are called the *connection coe
 
 On the other hand, the tangent bundle over any manifold $M$ always admits a connection. To verify this, just as with a Riemannian metric, one can take the connection on Euclidean space
 
-$$\nabla_vY:=v(Y^1)\frac{\partial}{\partial x^i}+\cdots+v(Y^n)\frac{\partial}{\partial x^n}$$
+$$\nabla_vY:=v(Y^1)\frac{\partial}{\partial x^1}+\cdots+v(Y^n)\frac{\partial}{\partial x^n}$$
 
 and patch it together via a partition of unity.
 

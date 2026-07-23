@@ -94,7 +94,7 @@ $$\dim A/\mathfrak{p}+(h-1)=d-1$$
 :::
 
 ::: 명제 5
-Complete regular local noethereian ring $(A, \mathfrak{m})$의 차원이 $d$이고, residue field $\kappa=A/\mathfrak{m}$라 하자. 만일 $A$가 어떠한 field를 포함한다면 $A\cong \kappa[[\x_1,\ldots, \x_d]]$이며, 이 isomorphism은 각각의 변수 $\x_i$들과 $A$의 regular system of parameters를 대응시킨다.
+Complete regular local noetherian ring $(A, \mathfrak{m})$의 차원이 $d$이고, residue field $\kappa=A/\mathfrak{m}$라 하자. 만일 $A$가 어떠한 field를 포함한다면 $A\cong \kappa[[\x_1,\ldots, \x_d]]$이며, 이 isomorphism은 각각의 변수 $\x_i$들과 $A$의 regular system of parameters를 대응시킨다.
 :::
 ::: 증명
 [§완비화의 성질들, ⁋정리 8](/ko/math/commutative_algebra/properties_of_completion#thm8)에 의하여, 주어진 가정으로부터 $A$가 $\kappa$를 포함해야 한다는 것을 안다. 이제 [§완비화의 성질들, ⁋정리 5](/ko/math/commutative_algebra/properties_of_completion#thm5)의 첫째 결과에 의하여 $\kappa$-algebra homomorphism $\phi:\kappa[[\x_1,\ldots, \x_d]]\rightarrow A$를 얻으며, 둘째 결과에 의하여 $\phi$는 surjective이다. 한편 $\kappa[[\x_1,\ldots, \x_d]]$는 [따름정리 1](#cor1)에 의하여 $d$차원이므로 
@@ -231,7 +231,7 @@ $$a=(a_1,\ldots, a_n),\qquad\text{$a_i$ a non-zerodivisor of $A_i$}$$
 
 이제 주장을 증명하자. 우선 각각의 $A_i$가 normal이라면 (S2)조건은 [정리 9](#thm9)의 결과로 얻어지고, (R1) 조건은 $A$의 codimension $c$짜리 prime ideal $\mathfrak{p}$에서의 localization을 위에서의 $\mathfrak{p}$의 묘사를 통해 $A_k$에서의 codimension $c$ prime $\mathfrak{p}_k$에서의 localization으로 볼 수 있기 때문에 성립한다.
 
-거꾸로 R1S2 조건이 성립한다 하자. 그럼 우선 $R$은 reduced ring이다. 이는 만일
+거꾸로 R1S2 조건이 성립한다 하자. 그럼 우선 $A$는 reduced ring이다. 이는 만일
 
 $$0=\bigcap \mathfrak{q}_i,\qquad\text{$\mathfrak{q}_i$ a $\mathfrak{p}_i$-primary ideal}$$
 

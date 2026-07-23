@@ -29,7 +29,7 @@ weight: 14
 위상공간 $X$의 부분공간 $Y$를 생각하자. 그럼 $Y$가 compact인 것과, $X$의 열린집합들의 family $(U_i)_{i\in I}$가 $Y\subseteq\bigcup U_i$를 만족할 때마다 유한한 부분집합 $J\subseteq I$가 존재하여 $(U_j)_{j\in J}$의 합집합이 여전히 $Y$를 포함하는 것이 동치이다.
 :::
 ::: 증명
-우선 $Y$가 compact라 가정하고, $Y\subseteq\bigcup U_i$를 만족하는 $X$의 열린집합들의 family $(U_i)_{i\in I}$가 주어졌다 하자. 그럼 $Y\cap U_i$들은 $Y$에서 열린집합이고 따라서 $(U_i\cap Y)_{i\in I}$는 $Y$의 open covering이며, 이로부터 유한한 부분집합 $J$를 택하여 $(U_j\cap Y)_{i\in J}$가 여전히 $Y$의 open covering이도록 할 수 있다. 그럼 $(U_j)$들의 합집합이 여전히 $Y$를 포함하는 것이 자명하다.
+우선 $Y$가 compact라 가정하고, $Y\subseteq\bigcup U_i$를 만족하는 $X$의 열린집합들의 family $(U_i)_{i\in I}$가 주어졌다 하자. 그럼 $Y\cap U_i$들은 $Y$에서 열린집합이고 따라서 $(U_i\cap Y)_{i\in I}$는 $Y$의 open covering이며, 이로부터 유한한 부분집합 $J$를 택하여 $(U_j\cap Y)_{j\in J}$가 여전히 $Y$의 open covering이도록 할 수 있다. 그럼 $(U_j)$들의 합집합이 여전히 $Y$를 포함하는 것이 자명하다.
 
 거꾸로 주어진 조건이 성립한다 하고, $Y$의 임의의 open covering $(V_i)_{i\in I}$이 주어졌다 하자. 그럼 $Y$의 위상구조의 정의에 의하여 $V_i=U_i\cap Y$이도록 하는 $X$의 열린집합들 $(U_i)$가 존재하며, $\bigcup U_i$는 $Y$를 포함한다. 따라서 유한한 부분집합 $J$가 존재하여 $(U_j)_{j\in J}$들의 합집합이 $Y$를 포함한다. 그럼 $(V_j)_{j\in J}$가 원하는 $(V_i)_{i\in I}$의 finite subcover이다.
 :::
@@ -51,7 +51,7 @@ Compact space $X$, $X$의 닫힌집합 $Y$가 주어졌다 하고 $Y$의 open co
 Hausdorff space $X$가 주어졌다 하고, $X$의 한 점 $x$, 그리고 $x$를 포함하지 않는 $X$의 compact subspace $Y$가 주어졌다 하자. 그럼 두 집합 $\{x\}$와 $Y$는 근방으로 분리가능하다.
 :::
 ::: 증명
-$X$가 Hausdorff space이므로, 각각의 $y\in A$마다 $x$의 열린근방 $U_{xy}$, $y$의 열린근방 $V_y$가 존재하여 $U_{xy}\cap V_y=\emptyset$이다. 이제 [보조정리 3](#lem3)에 의하여 $(V_y)_{y\in Y}$의 finite subcover $V_{y_1},\ldots,V_{y_n}$이 존재하여 여전히
+$X$가 Hausdorff space이므로, 각각의 $y\in Y$마다 $x$의 열린근방 $U_{xy}$, $y$의 열린근방 $V_y$가 존재하여 $U_{xy}\cap V_y=\emptyset$이다. 이제 [보조정리 3](#lem3)에 의하여 $(V_y)_{y\in Y}$의 finite subcover $V_{y_1},\ldots,V_{y_n}$이 존재하여 여전히
 
 $$Y\subseteq V_{y_1}\cup\cdots\cup V_{y_n}$$
 
@@ -75,7 +75,7 @@ $$U_x=U_{xy_1}\cap \cdots\cap U_{xy_n}$$
 이라 하면 $X\setminus Y=\bigcup_{x\not\in Y} U_x$이다.
 :::
 
-앞서 언급한 것과 같이, compact Hausdorff space는 다음의 추가적인 분리공리를 만족한다. ([§하우스도르프 공간, ⁋정의 3](/ko/math/topology/Hausdorff_spaces#def3))
+앞서 언급한 것과 같이, compact Hausdorff space는 다음의 추가적인 separation axiom을 만족한다. ([§하우스도르프 공간, ⁋정의 3](/ko/math/topology/Hausdorff_spaces#def3))
 
 ::: 보조정리 6
 Compact Hausdorff space는 regular space이다.

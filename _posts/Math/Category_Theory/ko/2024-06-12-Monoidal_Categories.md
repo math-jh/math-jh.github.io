@@ -13,9 +13,9 @@ weight: 6
 
 ---
 
-범주론 카테고리의 글은 기본적으로 [\[집합론\]](/ko/set_theory/) 카테고리의 글만 읽으면 이해할 수 있도록 되어있고, 이번 글에서 다루는 모노이드 카테고리 또한 그런 방식으로 글을 쓸 수도 있지만 특별히 이번 글의 첫 번째 부분은 이해를 돕기 위해 [\[대수적 구조\]](/ko/algebraic_structures) 카테고리의 글을 가져오게 되었다.
+범주론 카테고리의 글은 기본적으로 [\[집합론\]](/ko/set_theory/) 카테고리의 글만 읽으면 이해할 수 있도록 되어있고, 이번 글에서 다루는 monoidal category 또한 그런 방식으로 글을 쓸 수도 있지만 특별히 이번 글의 첫 번째 부분은 이해를 돕기 위해 [\[대수적 구조\]](/ko/algebraic_structures) 카테고리의 글을 가져오게 되었다.
 
-이번 글과 다음 글에서는 monoidal category와 그 안에서 정의된 monoidal object에 대해 살펴본다. 대략적으로 이야기해서 monoid object란 대수적으로 정의했던 monoid와 비슷한 성질을 갖는 어떤 category의 대상인데, 이 때 monoid와 비슷한 성질을 갖는다는 이야기를 하기 위해서는 이 category가 monoidal category여야 한다. 따라서 우리는 우선 대수적으로 monoid가 어떤 것이었는지를 가볍게 복습한 후, 어떻게 하면 이 이야기를 category의 언어로 바꾸어 쓸 수 있는지를 생각해본다.
+이번 글과 다음 글에서는 monoidal category와 그 안에서 정의된 monoid object에 대해 살펴본다. 대략적으로 이야기해서 monoid object란 대수적으로 정의했던 monoid와 비슷한 성질을 갖는 어떤 category의 대상인데, 이 때 monoid와 비슷한 성질을 갖는다는 이야기를 하기 위해서는 이 category가 monoidal category여야 한다. 따라서 우리는 우선 대수적으로 monoid가 어떤 것이었는지를 가볍게 복습한 후, 어떻게 하면 이 이야기를 category의 언어로 바꾸어 쓸 수 있는지를 생각해본다.
 
 ## 모노이드
 
@@ -98,7 +98,7 @@ Associator와 unitor들의 coherence condition은 Mac Lane의 coherence theorem�
 - $\Set$에 일반적인 product를 장착하고 ([§극한, ⁋예시 6](/ko/math/category_theory/limits#ex6)), $I$는 아무 singleton으로 가져오면 $\Set$은 symmetric monoidal category가 된다.
 - $\Grp$에 일반적인 product를 장착하고, $I$는 trivial group $\{e\}$으로 가져오면 $\Grp$이 symmetric monoidal category가 된다. 
 - $\Top$에 product 구조를 product topology로 주고, $I$는 아무 singleton으로 가져오면 $\Top$은 symmetric monoidal category가 된다. 
-- 임의의 commutative ring $R$에 대하여, $R$-module들의 카테고리 $\lMod{R}$은 tensor product $\otimes$에 대해 symmetric monoidal category이다.
+- 임의의 commutative ring $R$에 대하여, $R$-module들의 category $\lMod{R}$은 tensor product $\otimes$에 대해 symmetric monoidal category이다.
 - 특히 $R=k$인 경우 위의 예시는 $\Vect_k$가 symmetric monoidal category임을 보여주고, $R=\mathbb{Z}$인 경우 우리는 $\Ab$이 symmetric monoidal category임을 알 수 있다. 
 :::
 

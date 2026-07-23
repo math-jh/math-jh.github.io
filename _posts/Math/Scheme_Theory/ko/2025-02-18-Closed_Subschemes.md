@@ -61,7 +61,7 @@ $$\Spec\pi_1:\Spec \mathbb{K}[\x]/(\x) \rightarrow \Spec \mathbb{K}[\x],\qquad \
 
 ## 닫힌 부분스킴
 
-위에서 살펴본 것과 같이, 닫힌 부분스킴에 대한 우리의 모델은 canonical projection $\pi: A \rightarrow A/\mathfrak{a}$와, 이로부터 나오는 scheme morphism
+위에서 살펴본 것과 같이, closed subscheme에 대한 우리의 model은 canonical projection $\pi: A \rightarrow A/\mathfrak{a}$와, 이로부터 나오는 scheme morphism
 
 $$(\Spec \pi, (\Spec\pi)^\sharp): \Spec A/\mathfrak{a} \rightarrow\Spec A$$
 
@@ -92,7 +92,7 @@ Scheme morphism $\varphi: X \rightarrow Y$에 대하여 다음 두 조건이 동
 ::: 증명
 우선 둘째 조건을 가정하고 $\varphi$가 closed embedding임을 보이자. $Y$를 affine open subset들 $\{V_i=\Spec B_i\}$로 덮으면, 가정에 의하여 $\varphi^{-1}(V_i)\cong \Spec A_i$이며 이에 대응하는 $\beta_i: B_i \rightarrow A_i$가 surjective이다. 그럼 first isomorphism theorem에 의하여 $\mathfrak{b}_i=\ker\beta_i$라 둘 때 $A_i\cong B_i/\mathfrak{b}_i$이고, 따라서 $\varphi$를 $\varphi^{-1}(V_i)$로 제한한 것은 canonical projection $\pi: B_i \rightarrow B_i/\mathfrak{b}_i$가 정의하는 $\Spec\pi$이다.
 
-이제 [§스펙트럼, ⁋명제 9](/ko/math/scheme_theory/spectrums#prop9)에 의하여 $\Spec\pi$는 injective이고 그 image는 닫힌집합 $Z(\mathfrak{b}_i)$이며, $\Spec\pi$는 이 image 위로의 homeomorphism이다. 우선 이로부터 $\varphi$가 injective인 것을 안다. 실제로 $\varphi(x)=\varphi(x')$이라면 이 점을 포함하는 $V_i$를 택할 때 $x,x'\in \varphi^{-1}(V_i)$이고, $\varphi$를 $\varphi^{-1}(V_i)$로 제한한 것이 injective이기 때문이다. 또 각각의 $i$에 대하여 $\varphi(X)\cap V_i=Z(\mathfrak{b}_i)$가 $V_i$의 닫힌집합이고 $\{V_i\}$가 $Y$의 열린덮개이므로 $\varphi(X)$는 $Y$의 닫힌집합이다. 마지막으로 $X$의 임의의 열린집합 $U$에 대하여, $\varphi$가 injective인 것으로부터
+이제 [§스펙트럼, ⁋명제 9](/ko/math/scheme_theory/spectrums#prop9)에 의하여 $\Spec\pi$는 injective이고 그 image는 닫힌집합 $Z(\mathfrak{b}_i)$이며, $\Spec\pi$는 이 image 위로의 homeomorphism이다. 우선 이로부터 $\varphi$가 injective인 것을 안다. 실제로 $\varphi(x)=\varphi(x')$이라면 이 점을 포함하는 $V_i$를 택할 때 $x,x'\in \varphi^{-1}(V_i)$이고, $\varphi$를 $\varphi^{-1}(V_i)$로 제한한 것이 injective이기 때문이다. 또 각각의 $i$에 대하여 $\varphi(X)\cap V_i=Z(\mathfrak{b}_i)$가 $V_i$의 닫힌집합이고 $\{V_i\}$가 $Y$의 open cover이므로 $\varphi(X)$는 $Y$의 닫힌집합이다. 마지막으로 $X$의 임의의 열린집합 $U$에 대하여, $\varphi$가 injective인 것으로부터
 
 $$\varphi(U)\cap V_i=\varphi(U\cap \varphi^{-1}(V_i))$$
 
@@ -102,17 +102,17 @@ $$\varphi(U)\cap V_i=\varphi(U\cap \varphi^{-1}(V_i))$$
 
 $$(\varphi_\ast \mathcal{O}_X)_y=\varinjlim_{W\ni y}\mathcal{O}_X(\varphi^{-1}(W))\cong \mathcal{O}_{X,x}$$
 
-이다. 이제 $y\in V_i$인 $i$를 택하고 $y$에 해당하는 $B_i$의 prime ideal을 $\mathfrak{q}$, $x$에 해당하는 $A_i$의 prime ideal을 $\mathfrak{p}=\mathfrak{q}/\mathfrak{b}_i$라 하면, [§아핀스킴, ⁋보조정리 8](/ko/math/scheme_theory/affine_schemes#lem8)에 의하여 $y$에서의 stalk 사이의 사상은 $\beta_i$의 국소화
+이다. 이제 $y\in V_i$인 $i$를 택하고 $y$에 해당하는 $B_i$의 prime ideal을 $\mathfrak{q}$, $x$에 해당하는 $A_i$의 prime ideal을 $\mathfrak{p}=\mathfrak{q}/\mathfrak{b}_i$라 하면, [§아핀스킴, ⁋보조정리 8](/ko/math/scheme_theory/affine_schemes#lem8)에 의하여 $y$에서의 stalk 사이의 morphism은 $\beta_i$의 localization
 
 $$(B_i)_\mathfrak{q} \rightarrow (A_i)_\mathfrak{p}\cong (B_i/\mathfrak{b}_i)_\mathfrak{q}$$
 
-이다. 그런데 localization은 exact functor이므로 ([\[가환대수학\] §국소화의 성질들, ⁋명제 2](/ko/math/commutative_algebra/properties_of_localization#prop2)) 이 사상은 surjective이고, 따라서 $\varphi^\sharp$은 surjective이다. 즉 $\varphi$는 closed embedding이다.
+이다. 그런데 localization은 exact functor이므로 ([\[가환대수학\] §국소화의 성질들, ⁋명제 2](/ko/math/commutative_algebra/properties_of_localization#prop2)) 이 morphism은 surjective이고, 따라서 $\varphi^\sharp$은 surjective이다. 즉 $\varphi$는 closed embedding이다.
 
-반대 방향은 형식적이지 않다. $\varphi$가 closed embedding이라 가정하고, $Y$의 affine open subset $V=\Spec B$를 고정한 후 $W=\varphi^{-1}(V)$라 쓰자. 앞선 논증에서와 마찬가지로 $\varphi$가 image 위로의 homeomorphism이라는 사실로부터, 임의의 $\mathfrak{q}=\varphi(x)\in \varphi(X)\cap V$에 대하여 $(\varphi_\ast \mathcal{O}_X)_\mathfrak{q}\cong \mathcal{O}_{X,x}$이고 $\varphi(X)$ 바깥의 점에서는 $(\varphi_\ast \mathcal{O}_X)_\mathfrak{q}=0$이다. 즉 우리는 $\varphi_\ast \mathcal{O}_X$의 stalk들을 알고 있다. 그러나 이것만으로는 $\varphi_\ast \mathcal{O}_X$가 $V$의 열린집합들 위에서 어떤 section을 갖는지 알 수 없으며, 특히 $W$가 affine scheme인지도 알 수 없다. 이를 위해 필요한 것은 closed embedding $\varphi$에 대하여 $\varphi_\ast \mathcal{O}_X$와 ideal sheaf $\ker\varphi^\sharp$이 *quasi-coherent*하다는 사실, 즉 $Y$의 affine open subset $\Spec B$와 임의의 $f\in B$에 대하여 canonical한 사상
+반대 방향은 형식적이지 않다. $\varphi$가 closed embedding이라 가정하고, $Y$의 affine open subset $V=\Spec B$를 고정한 후 $W=\varphi^{-1}(V)$라 쓰자. 앞선 논증에서와 마찬가지로 $\varphi$가 image 위로의 homeomorphism이라는 사실로부터, 임의의 $\mathfrak{q}=\varphi(x)\in \varphi(X)\cap V$에 대하여 $(\varphi_\ast \mathcal{O}_X)_\mathfrak{q}\cong \mathcal{O}_{X,x}$이고 $\varphi(X)$ 바깥의 점에서는 $(\varphi_\ast \mathcal{O}_X)_\mathfrak{q}=0$이다. 즉 우리는 $\varphi_\ast \mathcal{O}_X$의 stalk들을 알고 있다. 그러나 이것만으로는 $\varphi_\ast \mathcal{O}_X$가 $V$의 열린집합들 위에서 어떤 section을 갖는지 알 수 없으며, 특히 $W$가 affine scheme인지도 알 수 없다. 이를 위해 필요한 것은 closed embedding $\varphi$에 대하여 $\varphi_\ast \mathcal{O}_X$와 ideal sheaf $\ker\varphi^\sharp$이 *quasi-coherent*하다는 사실, 즉 $Y$의 affine open subset $\Spec B$와 임의의 $f\in B$에 대하여 canonical한 morphism
 
 $$\left((\varphi_\ast \mathcal{O}_X)(\Spec B)\right)_f \rightarrow (\varphi_\ast \mathcal{O}_X)(D(f))$$
 
-이 isomorphism이라는 사실이다. 이는 [명제 6](#prop6)에서 ideal들에 요구했던 국소화 조건과 정확히 같은 형태의 조건이지만, 지금은 $\varphi$가 affine morphism인지조차 모르는 상황이므로 이를 우리가 가진 도구만으로 얻을 수는 없다. 따라서 우리는 이 사실만을 증명 없이 인용하고 (Stacks 01QO), 나머지 논증은 우리가 이미 가진 도구들로 완결한다.
+이 isomorphism이라는 사실이다. 이는 [명제 6](#prop6)에서 ideal들에 요구했던 localization 조건과 정확히 같은 형태의 조건이지만, 지금은 $\varphi$가 affine morphism인지조차 모르는 상황이므로 이를 우리가 가진 도구만으로 얻을 수는 없다. 따라서 우리는 이 사실만을 증명 없이 인용하고 (Stacks 01QO), 나머지 논증은 우리가 이미 가진 도구들로 완결한다.
 
 $C=(\varphi_\ast \mathcal{O}_X)(V)=\Gamma(W, \mathcal{O}_W)$라 두고 $\beta=\varphi^\sharp(V): B \rightarrow C$라 하자. 그럼 $D(f)$들이 $V$의 base를 이루므로 [§아핀스킴, ⁋보조정리 8](/ko/math/scheme_theory/affine_schemes#lem8)의 논증을 그대로 반복하여, 위의 사실로부터 임의의 $\mathfrak{q}\in V$에 대하여
 
@@ -120,13 +120,13 @@ $$(\varphi_\ast \mathcal{O}_X)_\mathfrak{q}\cong C_\mathfrak{q}$$
 
 를 얻는다. 여기에서 $C_\mathfrak{q}$는 $B$-module $C$를 $\mathfrak{q}$에서 국소화한 것이고, 이 isomorphism은 restriction map들로부터 유도된 것이다.
 
-첫째로 $\beta$는 surjective이다. 실제로 $\varphi^\sharp$이 surjective이므로 [\[위상수학\] §층, ⁋명제 15](/ko/math/topology/sheaves#prop15)에 의하여 각각의 $\mathfrak{q}$에서 stalk 사이의 사상 $B_\mathfrak{q} \rightarrow C_\mathfrak{q}$가 surjective이고, 이는 $B$-module homomorphism $\beta$의 국소화이므로 [\[가환대수학\] §국소화의 성질들, ⁋명제 4](/ko/math/commutative_algebra/properties_of_localization#prop4)에 의하여 $\beta$가 surjective이다. 따라서 $\mathfrak{b}=\ker\beta$라 하면 $C\cong B/\mathfrak{b}$이다.
+첫째로 $\beta$는 surjective이다. 실제로 $\varphi^\sharp$이 surjective이므로 [\[위상수학\] §층, ⁋명제 15](/ko/math/topology/sheaves#prop15)에 의하여 각각의 $\mathfrak{q}$에서 stalk 사이의 morphism $B_\mathfrak{q} \rightarrow C_\mathfrak{q}$가 surjective이고, 이는 $B$-module homomorphism $\beta$의 localization이므로 [\[가환대수학\] §국소화의 성질들, ⁋명제 4](/ko/math/commutative_algebra/properties_of_localization#prop4)에 의하여 $\beta$가 surjective이다. 따라서 $\mathfrak{b}=\ker\beta$라 하면 $C\cong B/\mathfrak{b}$이다.
 
 둘째로 $W$는 affine scheme이다. 우선 위상적으로, $\mathfrak{q}\in V$가 $\varphi(X)$에 속하는 것은 위에서 계산한 stalk이 $0$이 아닌 것과 동치이다. $\varphi(X)$ 바깥의 점에서 stalk이 $0$인 것은 이미 보았고, $\mathfrak{q}=\varphi(x)$인 경우 stalk은 local ring $\mathcal{O}_{X,x}$이므로 $0$이 아니기 때문이다. 그런데 $(\varphi_\ast \mathcal{O}_X)_\mathfrak{q}\cong (B/\mathfrak{b})_\mathfrak{q}$이고 이것이 $0$이 아닌 것은 $\mathfrak{b}\subseteq \mathfrak{q}$인 것과 동치이므로
 
 $$\varphi(X)\cap V=Z(\mathfrak{b})$$
 
-이다. 이제 [§아핀스킴, ⁋정리 13](/ko/math/scheme_theory/affine_schemes#thm13)의 adjunction을 항등사상 $C \rightarrow \Gamma(W, \mathcal{O}_W)$에 적용하면 canonical한 morphism $j: W \rightarrow \Spec C$를 얻고, adjunction의 naturality에 의하여 $\Spec\beta\circ j=\varphi\vert_W$이다. 한편 $\Spec\beta: \Spec B/\mathfrak{b} \rightarrow \Spec B$는 $Z(\mathfrak{b})$ 위로의 homeomorphism이고 ([§스펙트럼, ⁋명제 9](/ko/math/scheme_theory/spectrums#prop9)), $\varphi\vert_W$ 또한 $\varphi(X)\cap V=Z(\mathfrak{b})$ 위로의 homeomorphism이므로 $j$는 homeomorphism이다. 또 임의의 $x\in W$와 $\mathfrak{q}=\varphi(x)$에 대하여 $j$가 stalk에서 유도하는 사상은 [§아핀스킴, ⁋보조정리 8](/ko/math/scheme_theory/affine_schemes#lem8)에 의하여 $C_\mathfrak{q} \rightarrow \mathcal{O}_{W,x}$이며, 이는 restriction map들로부터 유도된 사상, 곧 위에서 얻은 isomorphism $C_\mathfrak{q}\cong (\varphi_\ast \mathcal{O}_X)_\mathfrak{q}\cong \mathcal{O}_{W,x}$과 같은 것이다. 따라서 $j$는 homeomorphism이면서 모든 stalk에서 isomorphism이므로 locally ringed space들의 isomorphism이다.
+이다. 이제 [§아핀스킴, ⁋정리 13](/ko/math/scheme_theory/affine_schemes#thm13)의 adjunction을 항등사상 $C \rightarrow \Gamma(W, \mathcal{O}_W)$에 적용하면 canonical한 morphism $j: W \rightarrow \Spec C$를 얻고, adjunction의 naturality에 의하여 $\Spec\beta\circ j=\varphi\vert_W$이다. 한편 $\Spec\beta: \Spec B/\mathfrak{b} \rightarrow \Spec B$는 $Z(\mathfrak{b})$ 위로의 homeomorphism이고 ([§스펙트럼, ⁋명제 9](/ko/math/scheme_theory/spectrums#prop9)), $\varphi\vert_W$ 또한 $\varphi(X)\cap V=Z(\mathfrak{b})$ 위로의 homeomorphism이므로 $j$는 homeomorphism이다. 또 임의의 $x\in W$와 $\mathfrak{q}=\varphi(x)$에 대하여 $j$가 stalk에서 유도하는 morphism은 [§아핀스킴, ⁋보조정리 8](/ko/math/scheme_theory/affine_schemes#lem8)에 의하여 $C_\mathfrak{q} \rightarrow \mathcal{O}_{W,x}$이며, 이는 restriction map들로부터 유도된 morphism, 곧 위에서 얻은 isomorphism $C_\mathfrak{q}\cong (\varphi_\ast \mathcal{O}_X)_\mathfrak{q}\cong \mathcal{O}_{W,x}$과 같은 것이다. 따라서 $j$는 homeomorphism이면서 모든 stalk에서 isomorphism이므로 locally ringed space들의 isomorphism이다.
 
 이상에서 $W\cong \Spec C=\Spec B/\mathfrak{b}$는 affine scheme이고 $B \rightarrow C$는 surjective이다. $V$는 $Y$의 임의의 affine open subset이었으므로 $\varphi$는 affine morphism이며 둘째 조건이 성립한다.
 :::
@@ -196,7 +196,7 @@ $$X\overset{\varphi\vert^Z}{\longrightarrow}Z\overset{\iota}{\longrightarrow} Y$
 
 ## 스킴 사상의 상
 
-이제 우리는 스킴 사상의 상을 정의한다. 당연히 임의의 scheme morphism $\varphi: X \rightarrow Y$가 주어졌을 때, 우리는 그 image $\im\varphi$ 또한 스킴 구조가 주어지기를 바랄 것이다. 그러나 위상공간 $Y$의 부분집합으로서 $\im\varphi$는 열린집합도, 닫힌집합도 아닐 수 있으므로 $Y$의 structure sheaf를 이용하여 $\im\varphi$에 structure sheaf를 정의하는 것은 요원해보인다. 
+이제 우리는 scheme morphism의 image를 정의한다. 당연히 임의의 scheme morphism $\varphi: X \rightarrow Y$가 주어졌을 때, 우리는 그 image $\im\varphi$ 또한 scheme 구조가 주어지기를 바랄 것이다. 그러나 위상공간 $Y$의 부분집합으로서 $\im\varphi$는 열린집합도, 닫힌집합도 아닐 수 있으므로 $Y$의 structure sheaf를 이용하여 $\im\varphi$에 structure sheaf를 정의하는 것은 요원해보인다. 
 
 이에 대한 해결책은 $\varphi$의 image를 포함하는 closed subscheme 중 가장 작은 것을 $\varphi$의 *scheme-theoretic image*로 정의하는 것이다. 이를 위해서는 우선 $X$의 closed subscheme이 다른 closed subscheme보다 작다는 것이 무엇인지를 살펴보아야 한다.
 
@@ -215,11 +215,11 @@ $$\mathcal{O}_X\overset{\iota_2^\sharp}{\longrightarrow}(\iota_2)_\ast \mathcal{
 
 $$\iota_k^{-1}(U)\cong \Spec A/\mathfrak{a}_k,\qquad \mathfrak{a}_k=\mathcal{I}_{Z_k/X}(U)$$
 
-이며 이 때 $\iota_k$의 $\iota_k^{-1}(U)$로의 제한은 canonical projection $A \rightarrow A/\mathfrak{a}_k$에 대응된다. 가정에 의하여 $\mathfrak{a}_2\subseteq \mathfrak{a}_1$이므로 $A \rightarrow A/\mathfrak{a}_1$은 $A \rightarrow A/\mathfrak{a}_2$를 통해 유일하게 인수분해되며, 이렇게 얻어지는 $\pi_U: A/\mathfrak{a}_2 \rightarrow A/\mathfrak{a}_1$은 surjective이다. 따라서 [정의 2](#def2) 직전의 논의에 의하여 $\varphi_U=\Spec\pi_U: \iota_1^{-1}(U) \rightarrow \iota_2^{-1}(U)$는 closed embedding이고, 구성에 의하여 $\iota_1$의 $\iota_1^{-1}(U)$로의 제한은 $\iota_2$의 제한과 $\varphi_U$의 합성이다. 
+이며 이 때 $\iota_k$의 $\iota_k^{-1}(U)$로의 restriction은 canonical projection $A \rightarrow A/\mathfrak{a}_k$에 대응된다. 가정에 의하여 $\mathfrak{a}_2\subseteq \mathfrak{a}_1$이므로 $A \rightarrow A/\mathfrak{a}_1$은 $A \rightarrow A/\mathfrak{a}_2$를 통해 유일하게 인수분해되며, 이렇게 얻어지는 $\pi_U: A/\mathfrak{a}_2 \rightarrow A/\mathfrak{a}_1$은 surjective이다. 따라서 [정의 2](#def2) 직전의 논의에 의하여 $\varphi_U=\Spec\pi_U: \iota_1^{-1}(U) \rightarrow \iota_2^{-1}(U)$는 closed embedding이고, 구성에 의하여 $\iota_1$의 $\iota_1^{-1}(U)$로의 restriction은 $\iota_2$의 restriction과 $\varphi_U$의 합성이다. 
 
 이제 $X$의 두 affine open subset $U=\Spec A$, $U'$에 대하여 $\varphi_U$와 $\varphi_{U'}$이 교집합 위에서 일치함을 보이면 된다. [§스킴의 위상구조, ⁋보조정리 11](/ko/math/scheme_theory/topology_of_schemes#lem11)에 의하여 $U\cap U'$을 $U$와 $U'$ 모두에서 principal open set인 열린집합들로 덮을 수 있고, localization이 exact functor이므로 ([\[가환대수학\] §국소화의 성질들, ⁋명제 2](/ko/math/commutative_algebra/properties_of_localization#prop2)) 이러한 $D(f)\cong \Spec A_f$ 위에서 $\mathcal{I}_{Z_k/X}(D(f))=\mathfrak{a}_kA_f$이다. 따라서 $\varphi_U$와 $\varphi_{U'}$은 모두 $D(f)$ 위에서 $\mathfrak{a}_2A_f\subseteq \mathfrak{a}_1A_f$가 유도하는 canonical projection $A_f/\mathfrak{a}_2A_f \rightarrow A_f/\mathfrak{a}_1A_f$에 대응되어 서로 같다. 그럼 [§스킴 사이의 사상, ⁋명제 1](/ko/math/scheme_theory/morphism_of_schemes#prop1)에 의하여 이들은 scheme morphism $\varphi: Z_1 \rightarrow Z_2$로 붙고, 구성에 의하여 $\iota_1=\iota_2\circ\varphi$이다. 
 
-마지막으로 $\iota_1=\iota_2\circ\varphi$를 만족하는 <em-ko>임의의</em-ko> $\varphi$가 closed embedding임을 보이자. $X$의 affine open subset $U$에 대하여 $\varphi^{-1}(\iota_2^{-1}(U))=\iota_1^{-1}(U)$이고, $\varphi$의 이 열린집합으로의 제한에 대응되는 ring homomorphism $A/\mathfrak{a}_2 \rightarrow A/\mathfrak{a}_1$은 $A$로부터의 두 canonical projection과 가환이어야 하므로 위의 $\pi_U$일 수밖에 없다. 그런데 $\iota_2$가 affine morphism이므로 $U$가 $X$의 affine open covering을 훑을 때 $\iota_2^{-1}(U)$들은 $Z_2$의 affine open covering을 이루고, closed embedding은 affine-local on target이므로 ([명제 3](#prop3)) $\varphi$는 closed embedding이다. 
+마지막으로 $\iota_1=\iota_2\circ\varphi$를 만족하는 <em-ko>임의의</em-ko> $\varphi$가 closed embedding임을 보이자. $X$의 affine open subset $U$에 대하여 $\varphi^{-1}(\iota_2^{-1}(U))=\iota_1^{-1}(U)$이고, $\varphi$의 이 열린집합으로의 restriction에 대응되는 ring homomorphism $A/\mathfrak{a}_2 \rightarrow A/\mathfrak{a}_1$은 $A$로부터의 두 canonical projection과 가환이어야 하므로 위의 $\pi_U$일 수밖에 없다. 그런데 $\iota_2$가 affine morphism이므로 $U$가 $X$의 affine open covering을 훑을 때 $\iota_2^{-1}(U)$들은 $Z_2$의 affine open covering을 이루고, closed embedding은 affine-local on target이므로 ([명제 3](#prop3)) $\varphi$는 closed embedding이다. 
 :::
 
 Scheme $X$의 두 closed subscheme $Z_1,Z_2$에 대하여, closed embedding $\varphi:Z_1 \rightarrow Z_2$가 존재한다면 $Z_1$이 $Z_2$보다 <em-ko>작은</em-ko> closed subscheme인 것으로 생각하자. 
@@ -243,7 +243,7 @@ $$(\Spec\phi)((\epsilon))=\phi^{-1}((\epsilon))=(\x_1-a_1,\ldots, \x_n-a_n)$$
 
 로 보낸다. 실제로 $\phi(\x_i-a_i)=b_i\epsilon\in(\epsilon)$이므로 $(\x_1-a_1,\ldots, \x_n-a_n)\subseteq\phi^{-1}((\epsilon))$이며, 좌변이 maximal ideal이고 우변이 proper ideal이므로 이 포함관계는 등식이 된다. 즉 연속함수로서 $\Spec\phi$는 한점공간 $\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$을 $\mathbb{A}^n$의 한 점 $(a_1,\ldots, a_n)$으로 보낸다.
 
-기하적으로 $\Spec\phi$는 $\mathbb{A}^n$의 한 점 $(a_1,\ldots, a_n)$에서의 tangent vector $(b_1,\ldots, b_n)$에 대응된다. 이는 $\mathbb{A}^n$의 임의의 함수 $f\in \mathbb{K}[\x_1,\ldots, \x_n]$의 점 $(a_1,\ldots, a_n)$에서 벡터 $(b_1,\ldots, b_n)$의 방향으로의 방향미분이 정확히 $\phi(f)$로 주어진다는 것으로부터 확인할 수 있다. 더 일반적으로 $\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$ 대신 $\Spec \mathbb{K}[\epsilon]/(\epsilon^k)$를 생각하면 우리는 $k-1$차 미분계수까지 볼 수 있게 된다. 
+기하적으로 $\Spec\phi$는 $\mathbb{A}^n$의 한 점 $(a_1,\ldots, a_n)$에서의 tangent vector $(b_1,\ldots, b_n)$에 대응된다. 이는 $\mathbb{A}^n$의 임의의 함수 $f\in \mathbb{K}[\x_1,\ldots, \x_n]$의 점 $(a_1,\ldots, a_n)$에서 벡터 $(b_1,\ldots, b_n)$의 방향으로의 방향미분이 정확히 $\phi(f)$로 주어진다는 것으로부터 확인할 수 있다. 더 일반적으로 $\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$ 대신 $\Spec \mathbb{K}[\epsilon]/(\epsilon^k)$를 생각하면 우리는 $k-1$차 derivative까지 볼 수 있게 된다. 
 :::
 
 위의 예시에서 $X$가 affine scheme이라고 가정하기는 하였지만, $\varphi^\sharp:\mathcal{O}_Y \rightarrow \varphi_\ast \mathcal{O}_X$는 어차피 scheme morphism $\varphi$가 포함하고 있는 정보이므로 여기에는 새로울 것이 없다. 차이는 $Y$를 일반적인 scheme으로 일반화할 때 나오게 되는데, $Y$의 임의의 affine open subset $V=\Spec B$가 주어질 때마다 ideal
@@ -256,13 +256,13 @@ $$\mathcal{I}(V):=\ker(\varphi^\sharp(V))\subset B$$
 Scheme morphism $\varphi: X \rightarrow Y$가 주어졌다 하자. 만일 $X$가 reduced이거나, $\varphi$가 quasi-compact라면 위에서 정의한 ideal sheaf $\mathcal{I}$는 [명제 6](#prop6)의 조건을 만족하고 따라서 $\mathcal{I}$는 $Y$의 closed subscheme을 정의하며 이것이 $\varphi$의 scheme-theoretic image가 된다.
 :::
 ::: 증명
-$Y$의 affine open subset $V=\Spec B$와 $f\in B$를 고정하고 $U=\varphi^{-1}(V)$, $U'=\varphi^{-1}(D(f))$이라 하자. 그럼 [명제 6](#prop6)이 요구하는 것은 canonical map $\mathcal{I}(V)_f \rightarrow \mathcal{I}(D(f))$이 isomorphism이라는 것이다. 편의상 $f$의 $\varphi^\sharp(V): B \rightarrow \mathcal{O}_X(U)$에 의한 상을 $g$라 하자. 
+$Y$의 affine open subset $V=\Spec B$와 $f\in B$를 고정하고 $U=\varphi^{-1}(V)$, $U'=\varphi^{-1}(D(f))$이라 하자. 그럼 [명제 6](#prop6)이 요구하는 것은 canonical map $\mathcal{I}(V)_f \rightarrow \mathcal{I}(D(f))$이 isomorphism이라는 것이다. 편의상 $f$의 $\varphi^\sharp(V): B \rightarrow \mathcal{O}_X(U)$에 의한 image를 $g$라 하자. 
 
 $\varphi$가 locally ringed space들 사이의 morphism이므로 각각의 $x\in U$에서 $\varphi^\sharp_x$는 local homomorphism이고, 따라서 $U'$은 정확히 $g$의 stalk이 $\mathcal{O}_{X,x}$의 maximal ideal에 속하지 <em-ko>않는</em-ko> 점들의 집합이다. 특히 $U$의 임의의 affine open subset $\Spec A$에 대하여 $U'\cap \Spec A=D(g\vert_{\Spec A})$이므로 $g$의 $U'$로의 restriction은 $\mathcal{O}_X(U')$의 unit이고, 따라서 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)의 universal property에 의하여 restriction map $\mathcal{O}_X(U) \rightarrow \mathcal{O}_X(U')$은 canonical map
 
 $$\alpha: \mathcal{O}_X(U)_g \rightarrow \mathcal{O}_X(U')$$
 
-을 유도한다. 또 $\varphi^\sharp$이 sheaf morphism이라는 것으로부터 $\varphi^\sharp(D(f)): B_f \rightarrow \mathcal{O}_X(U')$은 $\varphi^\sharp(V)$의 국소화 $B_f \rightarrow \mathcal{O}_X(U)_g$와 $\alpha$의 합성이다. 그런데 localization은 exact functor이므로 ([\[가환대수학\] §국소화의 성질들, ⁋명제 2](/ko/math/commutative_algebra/properties_of_localization#prop2))
+을 유도한다. 또 $\varphi^\sharp$이 sheaf morphism이라는 것으로부터 $\varphi^\sharp(D(f)): B_f \rightarrow \mathcal{O}_X(U')$은 $\varphi^\sharp(V)$의 localization $B_f \rightarrow \mathcal{O}_X(U)_g$와 $\alpha$의 합성이다. 그런데 localization은 exact functor이므로 ([\[가환대수학\] §국소화의 성질들, ⁋명제 2](/ko/math/commutative_algebra/properties_of_localization#prop2))
 
 $$\ker\bigl(B_f \rightarrow \mathcal{O}_X(U)_g\bigr)=\ker\bigl(\varphi^\sharp(V)\bigr)_f=\mathcal{I}(V)_f$$
 
@@ -270,7 +270,7 @@ $$\ker\bigl(B_f \rightarrow \mathcal{O}_X(U)_g\bigr)=\ker\bigl(\varphi^\sharp(V)
 
 우선 $\varphi$가 quasi-compact이라 하자. 그럼 $U$는 quasi-compact이므로 유한히 많은 affine open subset $\Spec A_1,\ldots, \Spec A_n$으로 덮인다. $s\in \mathcal{O}_X(U)$가 $s\vert_{U'}=0$을 만족한다 하면, 각각의 $l$에 대하여 $s\vert_{\Spec A_l}\in A_l$의 $U'\cap \Spec A_l=D(g\vert_{\Spec A_l})$로의 restriction이 $0$이므로 적당한 $n_l$에 대하여 $(g^{n_l}s)\vert_{\Spec A_l}=0$이다. $l$이 유한개이므로 공통의 $N$을 택하면 $g^Ns$는 모든 $\Spec A_l$ 위에서 $0$이고, 따라서 [\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1)의 첫째 조건에 의하여 $g^Ns=0$이다. 즉 $\mathcal{O}_X(U)_g$에서 $s/g^m=0$이므로 $\alpha$는 injective이다. 
 
-이번에는 $X$가 reduced라 하자. ([§스킴의 대수구조, ⁋정의 1](/ko/math/scheme_theory/algebra_of_schemes#def1)) $s\in \mathcal{O}_X(U)$가 $s\vert_{U'}=0$을 만족한다 하고 $gs$를 생각하면, $U'$의 점에서는 $s$의 stalk이 $0$이므로 $gs$의 stalk이 $0$이고, $U'$에 속하지 않는 점 $x$에서는 $g$의 stalk이 $\mathcal{O}_{X,x}$의 maximal ideal에 속한다. 따라서 $U$의 임의의 affine open subset $\Spec A$에 대하여 $(gs)\vert_{\Spec A}$는 $A$의 모든 prime ideal에 속하고, [\[가환대수학\] §국소화의 성질들, ⁋따름정리 8](/ko/math/commutative_algebra/properties_of_localization#cor8)과 $A$가 reduced ring이라는 사실로부터 $(gs)\vert_{\Spec A}=0$이다. 그럼 다시 층 조건에 의하여 $gs=0$이고, 따라서 $s/g^m=(gs)/g^{m+1}=0$이므로 $\alpha$는 injective이다. 
+이번에는 $X$가 reduced라 하자. ([§스킴의 대수구조, ⁋정의 1](/ko/math/scheme_theory/algebra_of_schemes#def1)) $s\in \mathcal{O}_X(U)$가 $s\vert_{U'}=0$을 만족한다 하고 $gs$를 생각하면, $U'$의 점에서는 $s$의 stalk이 $0$이므로 $gs$의 stalk이 $0$이고, $U'$에 속하지 않는 점 $x$에서는 $g$의 stalk이 $\mathcal{O}_{X,x}$의 maximal ideal에 속한다. 따라서 $U$의 임의의 affine open subset $\Spec A$에 대하여 $(gs)\vert_{\Spec A}$는 $A$의 모든 prime ideal에 속하고, [\[가환대수학\] §국소화의 성질들, ⁋따름정리 8](/ko/math/commutative_algebra/properties_of_localization#cor8)과 $A$가 reduced ring이라는 사실로부터 $(gs)\vert_{\Spec A}=0$이다. 그럼 다시 sheaf 조건에 의하여 $gs=0$이고, 따라서 $s/g^m=(gs)/g^{m+1}=0$이므로 $\alpha$는 injective이다. 
 
 이상에서 [명제 6](#prop6)에 의하여 $\mathcal{I}$는 $Y$의 closed subscheme $\iota: Z \rightarrow Y$를 유일하게 유도한다. 이것이 [정의 10](#def10)의 의미에서 $\varphi$의 image를 포함한다는 것은, $Y$의 임의의 affine open subset $V$에 대하여 $\mathcal{I}_{Z/Y}(V)=\ker (\varphi^\sharp(V))$이므로 합성 $\mathcal{I}_{Z/Y}(V) \rightarrow \mathcal{O}_Y(V) \rightarrow (\varphi_\ast \mathcal{O}_X)(V)$이 $0$이 되고, affine open subset들이 $Y$의 base를 이루기 때문이다. 거꾸로 $\varphi$의 image를 포함하는 $Y$의 임의의 closed subscheme $\iota': Z' \rightarrow Y$에 대하여 같은 합성이 $0$이므로 $\mathcal{I}_{Z'/Y}(V)\subseteq \ker (\varphi^\sharp(V))=\mathcal{I}_{Z/Y}(V)$이고, 두 ideal sheaf가 모두 $\mathcal{O}_Y$의 subsheaf이므로 이로부터 $\mathcal{I}_{Z'/Y}\subseteq \mathcal{I}_{Z/Y}$를 얻는다. 따라서 [보조정리 9](#lem9)에 의하여 closed embedding $Z \rightarrow Z'$가 존재하고, 곧 $Z$는 $\varphi$의 image를 포함하는 가장 작은 closed subscheme, 즉 $\varphi$의 scheme-theoretic image이다. 
 :::
@@ -291,7 +291,7 @@ $$X=\coprod_{k\geq 0} \Spec \mathbb{K}[\epsilon]/(\epsilon^k)$$
 
 ## 닫힌집합 위에 정의된 축소스킴구조
 
-이 글의 서두에서 우리는 affine scheme $\Spec A$의 임의의 닫힌집합 $Z(\mathfrak{a})$ 위에 두 개의 structure sheaf $(\Spec\pi)_\ast \mathcal{O}_{\Spec A/\mathfrak{a}}$ 그리고 $\iota^{-1} \mathcal{O}_{\Spec A}$를 정의할 수 있었다. 이 중 $(\Spec\pi)_\ast \mathcal{O}_{\Spec A/ \mathfrak{a}}$를 우리는 $Z(\mathfrak{a})$ 위에 정의된 올바른 스킴 구조로 생각하기로 하였다. 이제 우리는 $\iota^{-1} \mathcal{O}_{\Spec A}$에 대해 살펴본다.
+이 글의 서두에서 우리는 affine scheme $\Spec A$의 임의의 닫힌집합 $Z(\mathfrak{a})$ 위에 두 개의 structure sheaf $(\Spec\pi)_\ast \mathcal{O}_{\Spec A/\mathfrak{a}}$ 그리고 $\iota^{-1} \mathcal{O}_{\Spec A}$를 정의할 수 있었다. 이 중 $(\Spec\pi)_\ast \mathcal{O}_{\Spec A/ \mathfrak{a}}$를 우리는 $Z(\mathfrak{a})$ 위에 정의된 올바른 scheme 구조로 생각하기로 하였다. 이제 우리는 $\iota^{-1} \mathcal{O}_{\Spec A}$에 대해 살펴본다.
 
 더 일반적으로 임의의 scheme $Y$와 $Y$의 닫힌집합 $X$를 생각하자. 그럼 $Y$의 임의의 열린집합 $\Spec B$에 대하여, $\Spec B$의 닫힌집합 $X\cap \Spec B$는 [§스펙트럼, ⁋정리 15](/ko/math/scheme_theory/spectrums#thm15)에 의하여 
 $B$의 radical ideal $\mathfrak{b}$에 대해 $Z(\mathfrak{b})$의 꼴로 쓸 수 있다. 뿐만 아니라, $\mathfrak{b}$는 정의에 의하여 $X\cap \Spec B= Z(\mathfrak{b}')$이도록 하는 $B$의 ideal들 중 가장 큰 것이므로 [보조정리 9](#lem9)에 의하여 $X\cap \Spec B$에 줄 수 있는 closed subscheme 구조 중 가장 작은 것이다.

@@ -35,7 +35,7 @@ as is readily verified.
 
 $M_n(A)$ has the canonical basis $(E_{ij})$, and the structure constants with respect to this basis are given by
 
-$$E_{ij}E_{jk}=\delta_{jh}E_{ik}$$
+$$E_{ij}E_{hk}=\delta_{jh}E_{ik}$$
 
 ::: Definition 3
 We denote by $\GL_n(A)$ the subset of $\Mat_n(A)$ consisting of those elements that admit a multiplicative inverse.
@@ -50,21 +50,21 @@ $$\bigl([u^{-1}]_{\mathcal{B}}^\mathcal{B}\bigr)^t=\bigl(\bigl[u^\ast\bigr]_{\ma
 ::: Proposition 4
 Let $M$ be an arbitrary $A$-module and let $\mathcal{B}=(e_i)_{i\in I}$ be a finite basis of $M$. Then the formula
 
-$$e_i'=\sum_{j=1}^n a_{ji}e_i,\qquad 1\leq i\leq n$$
+$$e_i'=\sum_{j=1}^n a_{ji}e_j,\qquad 1\leq i\leq n$$
 
 defines a basis of $M$ if and only if the square matrix $(a_{ji})$ is invertible.
 :::
 ::: Proof
 The given matrix $(a_{ji})$ is precisely the matrix representation $[u]_{\mathcal{B}}^\mathcal{B}\in\Mat_n(A)$ with respect to $\mathcal{B}$ of the linear map $u\in\End_{\lMod{A}}(M)$ defined by
 
-$$u:e_i\mapsto e_i'=\sum_{j=1}^n a_{ji}e_i$$
+$$u:e_i\mapsto e_i'=\sum_{j=1}^n a_{ji}e_j$$
 
 This matrix is invertible if and only if $u$ is an isomorphism, which in turn holds if and only if $(u(e_i))_{i\in I}$ is a basis of $M$.
 :::
 
 Conversely, we may also regard the matrix $(a_{ji})$ as the matrix representation of the identity map $\id_M:M \rightarrow M$ with respect to different bases. Write the basis $(e_i')$ as $\mathcal{B}'$. Then
 
-$$\id_M(e_i')=\sum_{j=1}^n a_{ji}e_i$$
+$$\id_M(e_i')=\sum_{j=1}^n a_{ji}e_j$$
 
 and thus
 

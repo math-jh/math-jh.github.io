@@ -148,7 +148,7 @@ The restriction $V^\ast\rightarrow W^\ast$, which is the dual of the inclusion m
 
 $$V\rightarrow W^\ast;\qquad v\mapsto\langle v,-\rangle\vert_W$$
 
-is also surjective, and its kernel is $W^\perp$ by definition. Thus by [§Isomorphic Vector Spaces, ⁋Theorem 7](/en/math/linear_algebra/isomorphic_vector_spaces#thm7), we have $\dim W^\perp=\dim V-\dim W^\ast=\dim V-\dim W$, so the first equality holds. The second claim follows from reflexivity giving $W\subseteq(W^\perp)^\perp$, and thus applying the first equality twice gives
+is also surjective, and its kernel is $W^\perp$ by definition. Thus by [§Isomorphisms, ⁋Theorem 7](/en/math/linear_algebra/isomorphic_vector_spaces#thm7), we have $\dim W^\perp=\dim V-\dim W^\ast=\dim V-\dim W$, so the first equality holds. The second claim follows from reflexivity giving $W\subseteq(W^\perp)^\perp$, and thus applying the first equality twice gives
 
 $$\dim(W^\perp)^\perp=\dim V-\dim W^\perp=\dim W$$
 
@@ -164,7 +164,7 @@ Thus the radical $W\cap W^\perp$ of $W$ being $\{0\}$ is equivalent to $W+W^\per
 For non-degenerate subspaces satisfying the above condition, the orthogonal complement defined in this way is canonically isomorphic to the quotient space.
 
 ::: Proposition 9
-For a non-degenerate subspace $W\leq V$ of a finite-dimensional $\mathbb{K}$-vector space $V$ with a non-degenerate reflexive bilinear form given, the restriction of the natural projection $p:V\rightarrow V/W$ ([§Quotient Space, ⁋Definition 3](/en/math/linear_algebra/quotient_space#def3)) to $W^\perp$
+For a non-degenerate subspace $W\leq V$ of a finite-dimensional $\mathbb{K}$-vector space $V$ with a non-degenerate reflexive bilinear form given, the restriction of the natural projection $p:V\rightarrow V/W$ ([§Quotient Spaces, ⁋Definition 3](/en/math/linear_algebra/quotient_space#def3)) to $W^\perp$
 
 $$p\vert_{W^\perp}:W^\perp\rightarrow V/W$$
 

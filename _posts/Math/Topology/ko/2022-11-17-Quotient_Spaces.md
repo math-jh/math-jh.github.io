@@ -74,7 +74,7 @@ $$X\longrightarrow X/S\longrightarrow (X/S)/(R/S)$$
 
 $$X\overset{p}{\longrightarrow}X/R\overset{\bar{f}}{\longrightarrow}f(X)\overset{i}{\longrightarrow}Y$$
 
-을 생각할 수 있다. 이제 $f(X)$에 부분위상을 부여하면, [명제 4](#prop4)와 [§Initial topology와 final topology, ⁋명제 3](/ko/math/topology/initial_and_final_topology#prop3)에 의하여 $\bar{f}$가 연속인 것은 자명하다. 또, canonical decomposition의 정의에 의하여 $\bar{f}$는 전단사함수이다. 일반적으로 $\bar{f}$가 homeomorphism이 될 필요는 없지만 ([§연속함수, ⁋예시 5](/ko/math/topology/continuous_functions#ex5)), 다음의 성립한다. 
+을 생각할 수 있다. 이제 $f(X)$에 부분위상을 부여하면, [명제 4](#prop4)와 [§Initial topology와 final topology, ⁋명제 3](/ko/math/topology/initial_and_final_topology#prop3)에 의하여 $\bar{f}$가 연속인 것은 자명하다. 또, canonical decomposition의 정의에 의하여 $\bar{f}$는 전단사함수이다. 일반적으로 $\bar{f}$가 homeomorphism이 될 필요는 없지만 ([§연속함수, ⁋예시 5](/ko/math/topology/continuous_functions#ex5)), 다음이 성립한다. 
 
 ::: 명제 6
 위의 diagram에 대하여, 다음이 동치이다.

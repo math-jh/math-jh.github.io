@@ -14,7 +14,7 @@ weight: 6
 
 ---
 
-미분기하학에서와 마찬가지로 대수기하학에서도 접공간은 다양체의 국소적 구조를 이해하는 핵심 도구이다.
+미분기하학에서와 마찬가지로 대수기하학에서도 tangent space는 variety의 국소적 구조를 이해하는 핵심 도구이다.
 
 ## 접공간의 정의
 
@@ -74,7 +74,7 @@ $$T_x X = (\mathfrak{m}_x / \mathfrak{m}_x^2)^\ast \cong \{v \in \mathbb{K}^n \m
 을 얻는다.
 :::
 
-증명은 maximal ideal의 언어를 사용하며 복잡하게 쓰여졌지만, 그 철학은 $X=Z(f_i)$에 대해 생각해보면 간단하다. 이 경우 $(df_i)_x(v)=0$은 ($\mathbb{K}^n$을 $\mathbb{A}^n$으로 본다면) 정확히 $\mathbb{A}^n$ 안에서 초곡면 $Z(f_i)$의 (일상적인) 접공간이다. [명제 2](#prop2)은 그 자체만으로는 affine variety에 대해서만 적용되는 것이기는 하지만, 임의의 variety $X$의 임의의 점 $x$는 affine neighborhood를 가지므로 본질적으로는 모든 variety에 대해 적용되는 것이다. 접공간의 차원에 대한 다음 명제 또한 마찬가지다.
+증명은 maximal ideal의 언어를 사용하며 복잡하게 쓰여졌지만, 그 철학은 $X=Z(f_i)$에 대해 생각해보면 간단하다. 이 경우 $(df_i)_x(v)=0$은 ($\mathbb{K}^n$을 $\mathbb{A}^n$으로 본다면) 정확히 $\mathbb{A}^n$ 안에서 hypersurface $Z(f_i)$의 (일상적인) tangent space이다. [명제 2](#prop2)은 그 자체만으로는 affine variety에 대해서만 적용되는 것이기는 하지만, 임의의 variety $X$의 임의의 점 $x$는 affine neighborhood를 가지므로 본질적으로는 모든 variety에 대해 적용되는 것이다. tangent space의 차원에 대한 다음 명제 또한 마찬가지다.
 
 ::: 명제 3
 $T_x X$는 $\mathbb{K}$-벡터공간이며, 그 차원은 $n - \operatorname{rank}(J_x)$이다. 여기서 $J_x$는 $k \times n$ Jacobian matrix
@@ -129,7 +129,7 @@ $$\dim T_x X = \dim_{\mathbb{K}}(\mathfrak{m}_x/\mathfrak{m}_x^2) \ge \dim \math
 
     $$J_{(x,y)} = \begin{pmatrix} -2x - 3x^2 & 2y \end{pmatrix}$$
 
-    이므로, 원점에서 Jacobian은 $(0,0)$이고, 따라서 [명제 3](#prop3)에 의해 원점은 singular point이다. 기하학적으로, 접공간이 2차원이라는 것은 두 갈래의 접선 방향이 모두 포함된다는 것을 의미한다. 구체적으로, $\y^2 - \x^2(\x+1) \approx \y^2 - \x^2 = (\y-\x)(\y+\x)$이므로, 원점 근처에서 곡선은 $\y = \x$와 $\y = -\x$ 두 직선의 합집합처럼 보인다. Node는 "가장 온화한" 특이점 중 하나이다.
+    이므로, 원점에서 Jacobian은 $(0,0)$이고, 따라서 [명제 3](#prop3)에 의해 원점은 singular point이다. 기하학적으로, tangent space가 2차원이라는 것은 두 갈래의 접선 방향이 모두 포함된다는 것을 의미한다. 구체적으로, $\y^2 - \x^2(\x+1) \approx \y^2 - \x^2 = (\y-\x)(\y+\x)$이므로, 원점 근처에서 곡선은 $\y = \x$와 $\y = -\x$ 두 직선의 합집합처럼 보인다. Node는 "가장 온화한" singular point 중 하나이다.
 2. (Cusp) 이번에는 $Z(\y^2 - \x^3)\subset \mathbb{A}^2$를 생각하자.
 
     ![cusp](/assets/images/Math/Algebraic_Varieties/Tangent_Spaces_and_Smoothness-2.svg){:style="width:18.80em" class="invert" .align-center}
@@ -138,7 +138,7 @@ $$\dim T_x X = \dim_{\mathbb{K}}(\mathfrak{m}_x/\mathfrak{m}_x^2) \ge \dim \math
 
     $$J_{(x,y)}=\begin{pmatrix}-3x^2&2y\end{pmatrix}$$
 
-    이므로 원점에서 $\nabla f(0,0) = (0, 0)$이다. 기하학적으로, 이 상황에서 접공간이 2차원이라는 것은 원점에서 모든 방향이 "접한다"는 것을 의미하며, 이는 곡선이 너무 뾰족해서 어떤 방향으로도 접선을 정의할 수 없음을 나타낸다.
+    이므로 원점에서 $\nabla f(0,0) = (0, 0)$이다. 기하학적으로, 이 상황에서 tangent space가 2차원이라는 것은 원점에서 모든 방향이 "접한다"는 것을 의미하며, 이는 곡선이 너무 뾰족해서 어떤 방향으로도 접선을 정의할 수 없음을 나타낸다.
 :::
 
 위의 예시들에서 우리는 다음 명제를 자연스럽게 이용했다.
@@ -148,7 +148,7 @@ $$\dim T_x X = \dim_{\mathbb{K}}(\mathfrak{m}_x/\mathfrak{m}_x^2) \ge \dim \math
 :::
 
 ::: 증명
-[명제 2](#prop2)에서 $\dim T_x X = n - \operatorname{rank}(J_x)$임을 보였다. [정의 5](#def5)에서 $x$가 smooth point라는 것은 $\dim T_x X = \dim X$인 것이다. 따라서 $x$가 smooth point일 필요충분조건은
+[명제 3](#prop3)에서 $\dim T_x X = n - \operatorname{rank}(J_x)$임을 보였다. [정의 5](#def5)에서 $x$가 smooth point라는 것은 $\dim T_x X = \dim X$인 것이다. 따라서 $x$가 smooth point일 필요충분조건은
 
 $$n - \operatorname{rank}(J_x) = \dim X$$
 
@@ -176,7 +176,7 @@ $$X_\sm = \{x \in X \mid \operatorname{rank}(J_x) = n - d\}$$
 
 이다. 이제 이 집합이 dense open subset임을 보인다. 우선 $X_\sm$이 열린집합인 것은 상대적으로 자명하다.  Rank가 정확히 $n-d$라는 것은 두 조건의 동시 성립을 의미한다. 첫째, rank가 $n-d$ *이상*이라는 것은, 어떤 $(n-d) \times (n-d)$ 부분행렬의 행렬식이 0이 아닌 것과 동치이고, 이는 Zariski 위상에서 열린조건이다. 둘째, rank가 $n-d$ *이하*라는 것은, 모든 $(n-d+1) \times (n-d+1)$ 부분행렬의 행렬식이 0인 것과 동치이고, 이는 닫힌조건이다. 따라서 rank가 정확히 $n-d$인 점들의 집합은 $X$의 열린집합이다.
 
-$X_\sm$이 공집합을 아님을 보이는 것이 다소 기술적인데, 아이디어는 일반적인 점이 smooth point가 되어야 하므로, $X$의 generic point $\eta$를 생각하는 것이다. $\eta$에서의 localization을 생각하면, local ring $\mathcal{O}_{X,\eta} = \mathbb{K}(X)$는 field이므로 regular local ring이다. 그런데 [\[가환대수학\] §매개계, ⁋명제 2](/ko/math/commutative_algebra/system_of_parameters#prop2)에 의해
+$X_\sm$이 공집합이 아님을 보이는 것이 다소 기술적인데, 아이디어는 일반적인 점이 smooth point가 되어야 하므로, $X$의 generic point $\eta$를 생각하는 것이다. $\eta$에서의 localization을 생각하면, local ring $\mathcal{O}_{X,\eta} = \mathbb{K}(X)$는 field이므로 regular local ring이다. 그런데 [\[가환대수학\] §매개계, ⁋명제 2](/ko/math/commutative_algebra/system_of_parameters#prop2)에 의해
 
 $$\dim_{\mathbb{K}}(\mathfrak{m}_\eta/\mathfrak{m}_\eta^2) \ge \dim \mathcal{O}_{X,\eta} = d$$
 
@@ -195,9 +195,9 @@ Variety $X$가 *smooth* (또는 *nonsingular<sub>비특이</sub>*)라는 것은 
 
 ## 접원뿔
 
-Singular point에서는 tangent space가 너무 커서 다양체의 국소적 구조를 정확히 반영하지 못한다. 이 경우 *tangent cone*이 더 정확한 정보를 제공한다. 직관적으로, tangent space가 너무 큰 것은 Jacobian의 rank가 너무 작은 것이고, 이는, 예를 들어, 주어진 함수의 일차근사만으로는 아무런 정보가 없기 때문에 일어난다. 따라서 만일 주어진 함수의 더 높은 차수의 근사를 생각한다면 상황이 달라질 수도 있을 것이다. 
+Singular point에서는 tangent space가 너무 커서 variety의 국소적 구조를 정확히 반영하지 못한다. 이 경우 *tangent cone*이 더 정확한 정보를 제공한다. 직관적으로, tangent space가 너무 큰 것은 Jacobian의 rank가 너무 작은 것이고, 이는, 예를 들어, 주어진 함수의 일차근사만으로는 아무런 정보가 없기 때문에 일어난다. 따라서 만일 주어진 함수의 더 높은 degree의 근사를 생각한다면 상황이 달라질 수도 있을 것이다. 
 
-이를 위해, 임의의 다항식 $f\in \mathbb{K}[\x_1,\ldots, \x_n]$에 대하여 $f$의 *initial term* $\initial(f)$을 $f$의 homogeneous component 중 가장 작은 차수를 갖는 것으로 정의한다. 그럼 임의의 ideal $\mathfrak{a}$에 대하여, $\mathfrak{a}$의 *initial ideal* $\initial(\mathfrak{a})$를 $\initial(f)$들로 생성되는 homogeneous ideal로 정의한다. 
+이를 위해, 임의의 다항식 $f\in \mathbb{K}[\x_1,\ldots, \x_n]$에 대하여 $f$의 *initial term* $\initial(f)$을 $f$의 homogeneous component 중 가장 작은 degree를 갖는 것으로 정의한다. 그럼 임의의 ideal $\mathfrak{a}$에 대하여, $\mathfrak{a}$의 *initial ideal* $\initial(\mathfrak{a})$를 $\initial(f)$들로 생성되는 homogeneous ideal로 정의한다. 
 
 ::: 정의 13
 임의의 affine variety $X\subseteq \mathbb{A}^n$에 대하여, $\initial(I(X))$이 정의하는 algebraic variety를 $X$의 원점에서의 *tangent cone<sub>접뿔</sub>*이라 정의한다.

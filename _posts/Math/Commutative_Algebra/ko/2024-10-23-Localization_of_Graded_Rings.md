@@ -42,19 +42,19 @@ $$xa \mathfrak{b}\subseteq x \mathfrak{a}\subseteq \mathfrak{a}$$
 우리는 [\[대수적 구조\] §등급환, ⁋명제 6](/ko/math/algebraic_structures/graded_rings#prop6)에서 임의의 homogeneous ideal은 항상 homogeneous element들로 생성됨을 보였는데, 이를 이용하면 다음의 [보조정리 2](#lem2)를 보일 수 있다. 
 
 ::: 보조정리 2
-Graded ring $A$와 $A$의 homogeneous ideal들 $\mathfrak{a},\mathfrak{b}$에 대하여 다음이 성립한다. 다음이 성립한다.
+Graded ring $A$와 $A$의 homogeneous ideal들 $\mathfrak{a},\mathfrak{b}$에 대하여 다음이 성립한다.
 
 1. $\sqrt{\mathfrak{a}}$는 homogeneous ideal이다. 
 2. $(\mathfrak{a}:\mathfrak{b})$는 homogeneous ideal이다. 
 3. 임의의 homogeneous element $a,b\in A$가 $ab\in \mathfrak{a}$를 만족할 때마다 $a\in \mathfrak{a}$ 혹은 $b\in \mathfrak{a}$가 성립한다 하자. 그럼 $\mathfrak{a}$는 prime ideal이다. 
 :::
 ::: 증명
-1. 우선 $\sqrt{\mathfrak{a}}$가 homogeneous ideal인 것을 보이자. 즉 임의의 $x\in \sqrt{\mathfrak{a}}$에 대하여, $x$를 homogeneous ideal들의 합
+1. 우선 $\sqrt{\mathfrak{a}}$가 homogeneous ideal인 것을 보이자. 즉 임의의 $x\in \sqrt{\mathfrak{a}}$에 대하여, $x$를 homogeneous element들의 합
     
     $$x=x_{d_1}+\cdots+x_{d_l},\quad d_1 < \cdots < d_l\tag{$\ast$}$$
     
-    으로 나타냈을 때, $x_i$들 각각이 $\sqrt{\mathfrak{a}}$에 속한다는 것을 보여야 한다. 우선 $x\in \mathfrak{a}$인 것으로부터, 적당한 $k$가 존재하여 $x^k\in \mathfrak{a}$이다. 한편, 일반성을 잃지 않고 위의 표현 ($\ast$)에서 $x_l$이 가장 큰 차수를 갖는다고 하면, $x^k$를 homogeneous element들의 합으로 나타냈을 때, $x_l^k$가 차수 $k\deg x_l$에 있는 유일한 원소이다. 이제 $x^k\in \mathfrak{a}$이고 $\mathfrak{a}$가 homogeneous ideal인 것으로부터 $x_l^k\in \mathfrak{a}$, 즉 $x_l\in \sqrt{\mathfrak{a}}$인 것을 안다. 이후에는 $x-x_l\in\sqrt{\mathfrak{a}}$이므로 같은 논증을 반복하면 된다.
-2. $x\in (\mathfrak{a}:\mathfrak{b})$라 하자. 위와 마찬가지로 $x$를 homogeneous ideal들의 합 ($\ast$)으로 나타냈을 때, $x_i$들 각각이 $(\mathfrak{a}:\mathfrak{b})$에 속함을 보여야 한다. 이제 $\mathfrak{b}$를 생성하는 임의의 homogeneous element $b$가 주어졌다 하자. 그럼 $x_ib$는 원소 $xb\in \mathfrak{a}$의 $\deg x_i+\deg b$에 해당하는 homogeneous element이며, $\mathfrak{a}$가 homogeneous ideal이므로 $x_ib\in \mathfrak{a}$이다. 
+    으로 나타냈을 때, $x_i$들 각각이 $\sqrt{\mathfrak{a}}$에 속한다는 것을 보여야 한다. 우선 $x\in \sqrt{\mathfrak{a}}$인 것으로부터, 적당한 $k$가 존재하여 $x^k\in \mathfrak{a}$이다. 한편, 일반성을 잃지 않고 위의 표현 ($\ast$)에서 $x_l$이 가장 큰 degree를 갖는다고 하면, $x^k$를 homogeneous element들의 합으로 나타냈을 때, $x_l^k$가 degree $k\deg x_l$에 있는 유일한 원소이다. 이제 $x^k\in \mathfrak{a}$이고 $\mathfrak{a}$가 homogeneous ideal인 것으로부터 $x_l^k\in \mathfrak{a}$, 즉 $x_l\in \sqrt{\mathfrak{a}}$인 것을 안다. 이후에는 $x-x_l\in\sqrt{\mathfrak{a}}$이므로 같은 논증을 반복하면 된다.
+2. $x\in (\mathfrak{a}:\mathfrak{b})$라 하자. 위와 마찬가지로 $x$를 homogeneous element들의 합 ($\ast$)으로 나타냈을 때, $x_i$들 각각이 $(\mathfrak{a}:\mathfrak{b})$에 속함을 보여야 한다. 이제 $\mathfrak{b}$를 생성하는 임의의 homogeneous element $b$가 주어졌다 하자. 그럼 $x_ib$는 원소 $xb\in \mathfrak{a}$의 $\deg x_i+\deg b$에 해당하는 homogeneous element이며, $\mathfrak{a}$가 homogeneous ideal이므로 $x_ib\in \mathfrak{a}$이다. 
 3. 마지막으로 주어진 조건을 가정한 후, 임의의 두 원소 $x,y\in A$를 homogeneous element들의 합
     
     $$x=x_{d_1}+\cdots+x_{d_m},\quad y=y_{e_1}+\cdots+y_{e_n},\qquad d_1<\cdots< d_m,\quad e_1<\cdots< e_n$$
@@ -68,7 +68,7 @@ Graded ring $A$와 $A$의 homogeneous ideal들 $\mathfrak{a},\mathfrak{b}$에 �
 
 특히 임의의 ring의 prime ideal에서의 localization이 중요한 예시였던 것과 같이, $A$가 graded ring일 경우에도 *homogeneous* prime ideal $\mathfrak{p}$에서의 localization은 중요한 예시가 된다. 따라서 위 보조정리의 세 번째 결과는 특히 기억할만하다. 
 
-어쨌든 우선 우리는 일반적인 경우부터 시작한다. 다음 명제는 원소들의 degree가 어떻게 행동하는지만 살펴보면 중명할 수 있으며 그 증명도 자명하다.
+어쨌든 우선 우리는 일반적인 경우부터 시작한다. 다음 명제는 원소들의 degree가 어떻게 행동하는지만 살펴보면 증명할 수 있으며 그 증명도 자명하다.
 
 ::: 명제 3
 $A$의 multiplicative subset $S$의 모든 원소가 homogeneous라 하자. 그럼 임의의 homogeneous element $x\in M_n$과 $s\in S$에 대하여, $x/s\in S^{-1}M$를 degree $n-\deg s$에 있는 것으로 정의하면 $S^{-1}M$는 $\mathbb{Z}$-graded $A$-module의 구조를 갖는다. 만일 $M=A$인 경우, 이 grading은 $S^{-1}A$ 위에 정의된 곱셈에 대하여도 잘 작동하여 $S^{-1}A$를 $\mathbb{Z}$-graded ring으로 만든다.

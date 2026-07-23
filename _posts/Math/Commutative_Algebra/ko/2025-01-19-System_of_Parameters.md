@@ -163,7 +163,7 @@ $$\phi\otimes_A\id_{A/\mathfrak{p}_2}: A/\mathfrak{p}_2\cong A\otimes_A A/\mathf
 그럼 다음이 성립한다.
 
 ::: 정리 9
-Noetherian local ring 사이의 국소사상 $\phi:(A,\mathfrak{m}) \rightarrow (B, \mathfrak{n})$이 존재한다면
+Noetherian local ring 사이의 local homomorphism $\phi:(A,\mathfrak{m}) \rightarrow (B, \mathfrak{n})$이 존재한다면
 
 $$\dim B\leq \dim A +\dim B/\mathfrak{m}B$$
 

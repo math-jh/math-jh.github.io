@@ -58,7 +58,7 @@ $$\mathbb{K}(\mathbb{L}^p)=\mathbb{K}(\mathbb{K}(S)^p)=\mathbb{K}(\mathbb{K}^p(S
 
 이므로 $\mathbb{K}(S^p)=\mathbb{K}(\mathbb{L}^p)=\mathbb{K}[\mathbb{L}^p]$이 성립한다. 우선 위의 [보조정리 1](#lem1)를 $A=\mathbb{L}$에 적용하면 $\mathbb{L}/\mathbb{K}$가 finite degree extension인 경우는 이것이 $\mathbb{L}$가 étale $\mathbb{K}$-algebra인 것과 동치이므로 자명하다. 이제 $\mathbb{L}/\mathbb{K}$가 infinite degree인 경우에도,  $\mathbb{L}/\mathbb{K}$의 임의의 finite degree subextension $\mathbb{L}'/\mathbb{K}$은 separable이므로 앞선 논의에 의해 
 
-$$\mathbb{L}'=\mathbb{K}[(\mathbb{L}')^p]=\subseteq \mathbb{K}[\mathbb{L}^p]$$
+$$\mathbb{L}'=\mathbb{K}[(\mathbb{L}')^p]\subseteq \mathbb{K}[\mathbb{L}^p]$$
 
 이 성립하고, $\mathbb{K}[\mathbb{L}^p]$는 $\mathbb{L}'/\mathbb{K}$들의 union으로 원하는 등식을 얻는다. 임의의 $n$에 대한 등식은 단순한 귀납법이다. 
 :::
@@ -92,7 +92,7 @@ $$\sum x_i a_i^{p^{-n}}=0\implies a_i=0$$
 Field extension $\mathbb{L}/\mathbb{K}$에 대하여, $\mathbb{L}_s$를 $\mathbb{K}$에 대해 algebraic, separable한 원소들의 모임이라 하자. 그럼 $\mathbb{L}_s$는 $\mathbb{L}/\mathbb{K}$의 subextension이며, 뿐만 아니라 $\mathbb{L}$에 속하고 separable인 algebraic extension 중 가장 큰 것이다. 
 :::
 ::: 증명
-우선 separable extension의 임의의 원소는 separable이므로 ([§분리가능확대체, ⁋명제 12](/ko/math/field_theory/separable_extensions#prop12)), separable인 $\mathbb{L}$의 subextension은 항상 $\mathbb{L}$에 포함된다. 한편, 역으로 separable element들로만 생성되는 algebraic extension은 마찬가지로 [§분리가능확대체, ⁋명제 12](/ko/math/field_theory/separable_extensions#prop12)에 의해 separable이므로, $\mathbb{K}(\mathbb{L}_s)$는 그 자체로 separable extension이며 다시 위의 주장에 의해 $\mathbb{K}(\mathbb{L}_s)\subseteq \mathbb{L}_s$가 성립한다. 즉, $\mathbb{K}(\mathbb{L}_s)=\mathbb{L}_s$가 성립하여 $\mathbb{L}_s$ 자신이 $\mathbb{L}/\mathbb{K}$의 subextension이고, 앞서 본 maximality와 합쳐 $\mathbb{L}_s$가 가장 큰 separable subextension임을 얻는다. 
+우선 separable extension의 임의의 원소는 separable이므로 ([§분리가능확대체, ⁋명제 12](/ko/math/field_theory/separable_extensions#prop12)), separable인 $\mathbb{L}$의 subextension은 항상 $\mathbb{L}_s$에 포함된다. 한편, 역으로 separable element들로만 생성되는 algebraic extension은 마찬가지로 [§분리가능확대체, ⁋명제 12](/ko/math/field_theory/separable_extensions#prop12)에 의해 separable이므로, $\mathbb{K}(\mathbb{L}_s)$는 그 자체로 separable extension이며 다시 위의 주장에 의해 $\mathbb{K}(\mathbb{L}_s)\subseteq \mathbb{L}_s$가 성립한다. 즉, $\mathbb{K}(\mathbb{L}_s)=\mathbb{L}_s$가 성립하여 $\mathbb{L}_s$ 자신이 $\mathbb{L}/\mathbb{K}$의 subextension이고, 앞서 본 maximality와 합쳐 $\mathbb{L}_s$가 가장 큰 separable subextension임을 얻는다. 
 :::
 
 위에서 언급한 것과 같이, $\mathbb{L}_s$를 ($\mathbb{L}/\mathbb{K}$에서의) *relative separable algebraic closure*라 부른다. 
@@ -114,7 +114,7 @@ Algebraic extension $\mathbb{L}/\mathbb{K}$와, [명제 5](#prop5)에서 정의�
 마지막 주장은 [명제 5](#prop5)의 유일성으로부터 얻어진다. 
 :::
 
-그럼 algebraic extension이 separable한 것은 base change에 대해 stable하므로, 만일 어떠한 extension의 두 subextension $\mathbb{L}/\mathbb{K}$, $\mathbb{K}'/\mathbb{K}$, 그리고 $\mathbb{L}$에서의 $\mathbb{K}$의 relative separable closure $\mathbb{L}_s$에 대하여 $\mathbb{K}'(\mathbb{L}_s)$가 $\mathbb{K}'$의 $\mathbb{K}'(\mathbb{L})$에서의 relative seprable closure가 되는 것을 확인할 수 있다. 또, relative separable closure의 유일성으로부터, finite degree extension $\mathbb{L}/\mathbb{K}$에 대하여 다음의 식 
+그럼 algebraic extension이 separable한 것은 base change에 대해 stable하므로, 만일 어떠한 extension의 두 subextension $\mathbb{L}/\mathbb{K}$, $\mathbb{K}'/\mathbb{K}$, 그리고 $\mathbb{L}$에서의 $\mathbb{K}$의 relative separable closure $\mathbb{L}_s$에 대하여 $\mathbb{K}'(\mathbb{L}_s)$가 $\mathbb{K}'$의 $\mathbb{K}'(\mathbb{L})$에서의 relative separable closure가 되는 것을 확인할 수 있다. 또, relative separable closure의 유일성으로부터, finite degree extension $\mathbb{L}/\mathbb{K}$에 대하여 다음의 식 
 
 $$\mathbb{L}_s=\bigcap_{n\geq 0} \mathbb{K}(\mathbb{L}^{p^n})$$
 
@@ -128,13 +128,13 @@ Field $\mathbb{K}$가 *separably closed<sub>분리가능닫힘</sub>*이라는 �
 
 그럼 임의의 separable algebraic extension은 algebraic이므로 algebraically closed field는 항상 separably closed이다. 거꾸로 임의의 *perfect* field $\mathbb{K}$의 임의의 algebraic extension은 separable이므로, separably closed perfect field는 algebraically closed이다. 
 
-그램 다음이 성랍한다. 
+그럼 다음이 성립한다. 
 
 ::: 명제 8
 Field $\mathbb{K}$의 algebraic closure $\overline{\mathbb{K}}$를 고정하자. 
 
 1. $\overline{\mathbb{K}}$에서의 relative separable algebraic closure $\overline{\mathbb{K}}_s$는 $\mathbb{K}$의 separable closure이다. 
-2. $\mathbb{K}$의 separable algebraic closure는 isomorphism에 대하여 유일하게 결쟁된다.
+2. $\mathbb{K}$의 separable algebraic closure는 isomorphism에 대하여 유일하게 결정된다.
 :::
 ::: 증명
 1. $\overline{\mathbb{K}}_s$는 [명제 5](#prop5)에 의해 separable이고, algebraic closure $\overline{\mathbb{K}}$의 subextension이므로 algebraic이다. 따라서 주장은 임의의 separable algebraic extension $\mathbb{L}/\overline{\mathbb{K}}_s$가 주어졌을 때, $\mathbb{L}$이 $\overline{\mathbb{K}}_s$의 trivial extension임을 보이면 충분하다. 이는 우선 extension $\mathbb{L}/\overline{\mathbb{K}}_s$이 algebraic이므로 유일한 $\overline{\mathbb{K}}_s$-homomorphism $u:\mathbb{L}\rightarrow\overline{\mathbb{K}}$가 존재하며 ([§대수적 폐포, ⁋정리 5](/ko/math/field_theory/algebraically_closed_extensions#thm5)) 그 image $u(\mathbb{L})$은 [§분리가능확대체, ⁋명제 15](/ko/math/field_theory/separable_extensions#prop15)에 의해 separable algebraic이고, 따라서 $u(\mathbb{L})=\overline{\mathbb{K}}_s$가 성립한다. 

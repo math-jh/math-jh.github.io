@@ -31,11 +31,11 @@ $$\chi(X,\mathcal{F})=\int_X\operatorname{ch}(\mathcal{F})\cdot\operatorname{td}
 여기서 $\operatorname{ch}(\mathcal{F})$는 $\mathcal{F}$의 Chern character, $\operatorname{td}(T_X)$는 tangent bundle $T_X$의 Todd class이며, $\int_X$는 Chow group $A_{\dim X}(X)$ (또는 cohomology $H^{2\dim X}(X,\mathbb{Q})$) 위의 degree map을 의미한다.
 :::
 
-정리 [2](#thm2)에서 우변의 $\operatorname{ch}(\mathcal{F})\cdot\operatorname{td}(T_X)$는 Chow ring $A^\bullet(X)\otimes_\mathbb{Z}\mathbb{Q}$ 위에서의 곱셈이며, $\int_X$는 이 곱의 $\dim X$차 동차 성분을 취한 후 그 degree를 적분하는 연산이다. 즉, $n=\dim X$일 때
+정리 [2](#thm2)에서 우변의 $\operatorname{ch}(\mathcal{F})\cdot\operatorname{td}(T_X)$는 Chow ring $A^\bullet(X)\otimes_\mathbb{Z}\mathbb{Q}$ 위에서의 곱셈이며, $\int_X$는 이 곱의 $\dim X$차 homogeneous 성분을 취한 후 그 degree를 적분하는 연산이다. 즉, $n=\dim X$일 때
 
 $$\int_X\operatorname{ch}(\mathcal{F})\cdot\operatorname{td}(T_X)=\bigl[\operatorname{ch}(\mathcal{F})\cdot\operatorname{td}(T_X)\bigr]_n$$
 
-으로, 여기서 $[\bullet]_n$는 $n$차 동차 성분을 의미한다.
+으로, 여기서 $[\bullet]_n$는 $n$차 homogeneous 성분을 의미한다.
 
 ## 저차원으로의 환원
 
@@ -135,7 +135,7 @@ Chern character는 ring homomorphism
 
 $$\operatorname{ch}:K_0(X)\longrightarrow A^\bullet(X)\otimes_\mathbb{Z}\mathbb{Q}$$
 
-을 정의하며, Todd class는 vector bundle의 직접합에 대해 multiplicative이다. 이들을 조합하여
+을 정의하며, Todd class는 vector bundle의 direct sum에 대해 multiplicative이다. 이들을 조합하여
 
 $$\tau_X(\mathcal{F})=\operatorname{ch}(\mathcal{F})\cdot\operatorname{td}(T_X)$$
 

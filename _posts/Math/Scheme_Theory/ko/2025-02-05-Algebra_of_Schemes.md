@@ -12,7 +12,7 @@ date: 2025-02-05
 weight: 7
 ---
 
-스킴은 기하적인 동시에 대수적인 대상이므로, 이를 잘 알기 위해서는 앞선 글에서 살펴본 스킴의 위상구조 뿐만 아니라 대수적인 구조도 동시에 고려할 필요가 있으며, 우리는 이전 글에서 이러한 철학이 어떻게 반영되는지를 간략하게 살펴보았다. 이번 글에서는 이 철학을 더욱 발전시킨다. 
+Scheme은 기하적인 동시에 대수적인 대상이므로, 이를 잘 알기 위해서는 앞선 글에서 살펴본 scheme의 위상구조 뿐만 아니라 대수적인 구조도 동시에 고려할 필요가 있으며, 우리는 이전 글에서 이러한 철학이 어떻게 반영되는지를 간략하게 살펴보았다. 이번 글에서는 이 철학을 더욱 발전시킨다. 
 
 ## 축소스킴과 정역스킴
 
@@ -207,7 +207,7 @@ $$\supp(f)=Z(\ann(f))=Z(\mathfrak{p})$$
 
 이고, $\mathfrak{p}$가 $\ann(f)=\mathfrak{p}$의 minimal prime인 것은 자명하므로 $\mathfrak{p}$는 $\supp f$의 generic point이다.
 
-거꾸로 $\mathfrak{p}$가 적당한 $g\in A$에 대하여 $\supp(g)$의 generic point라 하자. 즉 $\mathfrak{p}$가 $\ann(g)$를 포함하는 minimal prime ideal이라 하자. 사상 $A \rightarrow Ag$, $a\mapsto ag$의 kernel이 정확히 $\ann(g)$이므로 $Ag\cong A/\ann(g)$이고, 특히 $\ann(A/\ann(g))=\ann(g)$이다. 이제 [\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 첫째 결과를 $A$-module $A/\ann(g)$에 적용하면 $\mathfrak{p}\in \Ass(A/\ann(g))=\Ass(Ag)$를 얻는다. 그런데 $Ag$는 $A$의 submodule이므로 [\[가환대수학\] §동반소아이디얼, ⁋보조정리 5](/ko/math/commutative_algebra/associated_primes#lem5)의 첫 번째 포함관계에 의하여 $\Ass(Ag)\subseteq \Ass(A)$이고, 따라서 $\mathfrak{p}\in \Ass(A)$, 즉 $\mathfrak{p}$는 $\Spec A$의 associated point이다.
+거꾸로 $\mathfrak{p}$가 적당한 $g\in A$에 대하여 $\supp(g)$의 generic point라 하자. 즉 $\mathfrak{p}$가 $\ann(g)$를 포함하는 minimal prime ideal이라 하자. Morphism $A \rightarrow Ag$, $a\mapsto ag$의 kernel이 정확히 $\ann(g)$이므로 $Ag\cong A/\ann(g)$이고, 특히 $\ann(A/\ann(g))=\ann(g)$이다. 이제 [\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 첫째 결과를 $A$-module $A/\ann(g)$에 적용하면 $\mathfrak{p}\in \Ass(A/\ann(g))=\Ass(Ag)$를 얻는다. 그런데 $Ag$는 $A$의 submodule이므로 [\[가환대수학\] §동반소아이디얼, ⁋보조정리 5](/ko/math/commutative_algebra/associated_primes#lem5)의 첫 번째 포함관계에 의하여 $\Ass(Ag)\subseteq \Ass(A)$이고, 따라서 $\mathfrak{p}\in \Ass(A)$, 즉 $\mathfrak{p}$는 $\Spec A$의 associated point이다.
 :::
 
 위의 증명에서 사용한 식
@@ -242,7 +242,7 @@ $$\x_2\cdot(p(\x_1)+c\x_2)=p(0)\x_2$$
 
 ## 유리함수
 
-이제 우리는 스킴 위에서 정의된 유리함수를 정의한다. 우선 [\[가환대수학\] §동반소아이디얼, ⁋따름정리 4](/ko/math/commutative_algebra/associated_primes#cor4)의 둘째 결과에 의하여 다음의 함수
+이제 우리는 scheme 위에서 정의된 유리함수를 정의한다. 우선 [\[가환대수학\] §동반소아이디얼, ⁋따름정리 4](/ko/math/commutative_algebra/associated_primes#cor4)의 둘째 결과에 의하여 다음의 함수
 
 $$A \rightarrow \prod_\text{\scriptsize $\mathfrak{p}$ associated prime} A_\mathfrak{p}$$
 
@@ -281,7 +281,7 @@ $$(\x_2)\cup(\x_1,\x_2)=(\x_1,\x_2)$$
 
 과 같으므로, non-zerodivisor는 정확히 원점에서 사라지지 않는 원소, 즉 $q(0)\ne0$를 만족하는 $q$에 대하여 $s=q(\x_1)+c'\x_2$의 꼴이다. 이러한 $s$는 두 associated prime $(\x_2),(\x_1,\x_2)$ 어디에도 속하지 않으므로 $D(s)$는 $X$의 두 associated point를 모두 포함하여 [정의 12](#def12)의 조건을 만족하는 유효한 정의역이 되며, [§아핀스킴, ⁋보조정리 6](/ko/math/scheme_theory/affine_schemes#lem6)에 의하여 그 위의 함수들은 $A_s$로 주어진다. 
 
-우리 주장은 이 정의역 $D(s)$에서 정의된 유리함수들만 보아도 이들이 $X$ 전체의 유리함수들이 된다는 것이다. 이를 위해 임의의 정의역 $U$가 주어졌다 하고, $X\setminus U=Z(I)$라 하자. 그럼 $U$가 associated point를 포함해야 하므로, 이를 위해서는 $I$의 원소 중 원점에서 $0$이 되지 않는 함수, 즉 ideal $(\x_1,\x_2)$에 포함되지 않는 원소가 존재해야 한다. 이러한 원소가 정확히 위에서 살펴본 non-zerodivisor $s$이며, $s\in I$로부터 $D(s)\subseteq U$를 얻는다. 즉 임의의 정의역은 언제나 이러한 $D(s)$를 그 안에 포함하며, 이를 통해 $U$ 위에 정의된 함수를 $D(s)$로 제한할 수 있으며, $D(s)$는 모든 associated point를 이미 포함하고 있으므로 ($\ast$)의 injectivity에 의해 이 제한은 $U$ 위에서 서로 다른 함수를 $D(s)$에서도 다른 것으로 유지한다. 뿐만 아니라 같은 이유에서 $U$에 대한 ($\ast$)는 이 제한과 $D(s)$에 대한 ($\ast$)의 합성으로 분해되므로, $U$ 위의 함수를 $D(s)$로 제한하여도 그 image, 즉 그것이 정의하는 rational function은 변하지 않는다. 
+우리 주장은 이 정의역 $D(s)$에서 정의된 유리함수들만 보아도 이들이 $X$ 전체의 유리함수들이 된다는 것이다. 이를 위해 임의의 정의역 $U$가 주어졌다 하고, $X\setminus U=Z(I)$라 하자. 그럼 $U$가 associated point를 포함해야 하므로, 이를 위해서는 $I$의 원소 중 원점에서 $0$이 되지 않는 함수, 즉 ideal $(\x_1,\x_2)$에 포함되지 않는 원소가 존재해야 한다. 이러한 원소가 정확히 위에서 살펴본 non-zerodivisor $s$이며, $s\in I$로부터 $D(s)\subseteq U$를 얻는다. 즉 임의의 정의역은 언제나 이러한 $D(s)$를 그 안에 포함하며, 이를 통해 $U$ 위에 정의된 함수를 $D(s)$로 제한할 수 있으며, $D(s)$는 모든 associated point를 이미 포함하고 있으므로 ($\ast$)의 injectivity에 의해 이 restriction은 $U$ 위에서 서로 다른 함수를 $D(s)$에서도 다른 것으로 유지한다. 뿐만 아니라 같은 이유에서 $U$에 대한 ($\ast$)는 이 restriction과 $D(s)$에 대한 ($\ast$)의 합성으로 분해되므로, $U$ 위의 함수를 $D(s)$로 제한하여도 그 image, 즉 그것이 정의하는 rational function은 변하지 않는다. 
 
 이상에서 $X$의 rational function 전체가 이루는 total quotient ring $K(X)$는, [예시 11](#ex11)에서 본 원소의 표기를 그대로 쓰면
 
@@ -292,7 +292,7 @@ $$K(X)=\left\{\frac{p(\x_1)+c\x_2}{q(\x_1)+c'\x_2} : q(0)\neq0\right\}$$
 이것이 고전적인 function field와 다른 점은, 위의 $K(X)$는 nonzero nilpotent을 담는다는 것이며 이것이 정확히 embedded point 때문이다. 구체적으로, $\x_2$는 $\x_2^2=0$을 만족하는 nilpotent element이면서도 $K(X)$에서 nonzero function이 된다. 만일 [정의 12](#def12)가 이 embedded point를 정의역에 담을 것을 요구하지 않았다면 원점을 뺀 $D(\x_1)$ 또한 정의역으로 허용되었을 것이고, [예시 11](#ex11)에서 보았듯 그 위에서 $\x_2$는 이미 $0$이므로 $\x_2$는 $K(X)$에서 사라졌을 것이며 따라서 $X$의 nilpotent 방향의 thickening이 $K(X)$에서 감지되지 않았을 것이다. 
 :::
 
-더 일반적으로, locally noetherian scheme $X$ 위에 정의된 rational function들의 모임은 위의 construction과 마찬가지 방식으로 *total quotient ring* $K(X)$를 정의한다. 만일 $X$가 integral scheme이라면 $X$는 특히 irreducible이므로 유일한 generic point $x$를 가지며, 이 점은 임의의 affine open subset $U\cong\Spec A$에 대하여 integral domain $A$의 유일한 minimal prime ideal $(0)$에 대응되어야 한다. 그럼 이 점에서의 localization은 $A$의 nonzero element들을 모두 분모로 추가해 준 것, 즉 $\Frac(A)$와 같으므로 $K(X)\cong \mathcal{O}_{X,x}\cong \Frac(A)$이며, 이는 $X$가 하나의 affine open $\Spec A$로 이루어진 경우 이미 알고 있던 $A$의 fraction field가 일반적인 integral scheme에서도 그대로 유리함수체의 역할을 한다는 것을 보여준다. 
+더 일반적으로, locally noetherian scheme $X$ 위에 정의된 rational function들의 모임은 위의 construction과 마찬가지 방식으로 *total quotient ring* $K(X)$를 정의한다. 만일 $X$가 integral scheme이라면 $X$는 특히 irreducible이므로 유일한 generic point $x$를 가지며, 이 점은 임의의 affine open subset $U\cong\Spec A$에 대하여 integral domain $A$의 유일한 minimal prime ideal $(0)$에 대응되어야 한다. 그럼 이 점에서의 localization은 $A$의 nonzero element들을 모두 분모로 추가해 준 것, 즉 $\Frac(A)$와 같으므로 $K(X)\cong \mathcal{O}_{X,x}\cong \Frac(A)$이며, 이는 $X$가 하나의 affine open $\Spec A$로 이루어진 경우 이미 알고 있던 $A$의 fraction field가 일반적인 integral scheme에서도 그대로 field of rational functions의 역할을 한다는 것을 보여준다. 
 
 
 ---
@@ -302,4 +302,4 @@ $$K(X)=\left\{\frac{p(\x_1)+c\x_2}{q(\x_1)+c'\x_2} : q(0)\neq0\right\}$$
 **[Vak]** R. Vakil, *The rising sea: Foundation of algebraic geometry*. Available [online](https://math.stanford.edu/~vakil/216blog/).  
 
 ---
-[^1]: 이 과정에서 $$X$$의 irreducible component들이 유한히 많기 때문에 각각의 component들이 열린집합임을 사용하였다. 
+[^1]: 이 과정에서 $X$의 irreducible component들이 유한히 많기 때문에 각각의 component들이 열린집합임을 사용하였다. 

@@ -14,7 +14,7 @@ translated_at: 2026-07-21T06:45:01+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-07-21T06:45:01+00:00
 ---
-Earlier we defined the intersection number of two divisors in [§Riemann–Roch Theorem for Surfaces, ⁋Definition 1](/en/math/algebraic_varieties/riemann_roch_surfaces#def1). This is of course a very interesting concept, and in this post we define the *Chow group* in order to generalize this notion to an arbitrary variety.
+Earlier we defined the intersection number of two divisors in [§The Riemann–Roch Theorem for Surfaces, ⁋Definition 1](/en/math/algebraic_varieties/riemann_roch_surfaces#def1). This is of course a very interesting concept, and in this post we define the *Chow group* in order to generalize this notion to an arbitrary variety.
 
 ## Chow group
 

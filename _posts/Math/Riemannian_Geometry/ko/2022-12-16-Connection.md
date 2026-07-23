@@ -87,7 +87,7 @@ $$\nabla_{E_i}E_j=\Gamma_{ij}^k E_k$$
 
 을 만족하는 $n^3$개의 $C^\infty$-함수들 $\Gamma_{ij}^k$가 존재한다. 그럼 위의 식 (1)은
 
-$$\nabla_XY=\sum_{k=1}^n\left(\sum_{i,j=1}^nX(Y^k)+X^iY^j\Gamma_{ij}^k\right)E_k$$
+$$\nabla_XY=\sum_{k=1}^n\left(X(Y^k)+\sum_{i,j=1}^nX^iY^j\Gamma_{ij}^k\right)E_k$$
 
 으로 쓸 수 있다.
 
@@ -97,7 +97,7 @@ $$\nabla_XY=\sum_{k=1}^n\left(\sum_{i,j=1}^nX(Y^k)+X^iY^j\Gamma_{ij}^k\right)E_k
 
 한편, 임의의 manifold $M$위의 tangent bundle은 항상 connection을 갖는다. 이를 확인하기 위해서는 Riemannian metric 때와 마찬가지로, 유클리드 공간에서의 connection
 
-$$\nabla_vY:=v(Y^1)\frac{\partial}{\partial x^i}+\cdots+v(Y^n)\frac{\partial}{\partial x^n}$$
+$$\nabla_vY:=v(Y^1)\frac{\partial}{\partial x^1}+\cdots+v(Y^n)\frac{\partial}{\partial x^n}$$
 
 을 partition of unity를 통해 이어붙이면 된다.
 

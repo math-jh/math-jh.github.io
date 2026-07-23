@@ -15,11 +15,11 @@ weight: 9
 
 ---
 
-이번 글에서 우리는 대수적 위상수학의 아름다운 정리인 푸앵카레 쌍대성에 대해 다룬다. 이전 글에서 언급한 것과 같이, 푸앵카레 쌍대성은 homology와 cohomology 사이의 쌍대성을 보여준다. 우리가 이미 살펴본 [§코호몰로지, ⁋정리 5](/ko/math/algebraic_topology/cohomology#thm5)의 경우, $C^\bullet(X;A)$를 $C_\bullet(X;A)$의 dual로서 정의했을 때 어느정도 예상 가능한 결과였지만 푸앵카레 쌍대성은 보다 더 기하학적인 의미를 가지고 있다. 
+이번 글에서 우리는 대수적 위상수학의 아름다운 정리인 Poincaré duality에 대해 다룬다. 이전 글에서 언급한 것과 같이, Poincaré duality는 homology와 cohomology 사이의 duality를 보여준다. 우리가 이미 살펴본 [§코호몰로지, ⁋정리 5](/ko/math/algebraic_topology/cohomology#thm5)의 경우, $C^\bullet(X;A)$를 $C_\bullet(X;A)$의 dual로서 정의했을 때 어느정도 예상 가능한 결과였지만 Poincaré duality는 보다 더 기하학적인 의미를 가지고 있다. 
 
 ## 방향층
 
-푸앵카레 쌍대성을 정의하기 위해서는 우선 방향의 개념을 정의해야 한다. 이는 topological manifold ([§위상다양체, ⁋정의 2](/ko/math/algebraic_topology/topological_manifolds#def2)) 위에서 정의되는 개념으로, 이번 글에서는 별다른 말이 없다면 임의의 manifold는 *connected*인 것으로 가정한다. 
+Poincaré duality를 정의하기 위해서는 우선 방향의 개념을 정의해야 한다. 이는 topological manifold ([§위상다양체, ⁋정의 2](/ko/math/algebraic_topology/topological_manifolds#def2)) 위에서 정의되는 개념으로, 이번 글에서는 별다른 말이 없다면 임의의 manifold는 *connected*인 것으로 가정한다. 
 
 임의의 topological manifold $M$ of dimension $m$과 열린집합 $U$를 생각하면, 다음의 대응
 
@@ -157,14 +157,14 @@ $$H_m(M; A)\rightarrow H_m(M,M\setminus\{x\};A)\tag{1}$$
 
 을 통해, 임의의 top homology class $\alpha\in H_m(M;A)$는 local homology group의 원소 $\alpha_x\in H_m(M,M\setminus\{x\};A)$를 정의하는 것을 안다. 그렇다면 자연스러운 질문 중 하나는 각각의 $x\in S_x$마다 주어진 local orientation $s_x$들을 $A^\times$의 원소로 보아 이를 $H_m(M,M\setminus\{x\};A)$의 원소로 취급했을 때, 모든 $x\in X$에 대하여 $\alpha\in H_m(M;A)$의 $H_m(M,M\setminus\{x\};A)$에서의 image가 $s_x$이도록 할 수 있는 $\alpha$가 존재하는지의 여부일 것이다. 
 
-위의 두 문단은 푸앵카레 쌍대성이 어떠한 꼴인지를 보여준다. Global section $s:M \rightarrow \Spe(\omega_M^A)$는 본질적으로 $M$ 전체 위에 정의된 함수로서, $0$번째 cohomology에 해당하는 개념이다. 반면 $\alpha\in H_m(M;A)$는 $m$번째 homology의 원소이다. 푸앵카레 쌍대성은 이들 두 개념이 동치라는 것과, 더 일반적으로, $k$번째 cohomology와 $n-k$번째 homology 사이의 duality를 보여준다.
+위의 두 문단은 Poincaré duality가 어떠한 꼴인지를 보여준다. Global section $s:M \rightarrow \Spe(\omega_M^A)$는 본질적으로 $M$ 전체 위에 정의된 함수로서, $0$번째 cohomology에 해당하는 개념이다. 반면 $\alpha\in H_m(M;A)$는 $m$번째 homology의 원소이다. Poincaré duality는 이들 두 개념이 동치라는 것과, 더 일반적으로, $k$번째 cohomology와 $n-k$번째 homology 사이의 duality를 보여준다.
 
 이제 남은 글에서 우리가 해야 할 것은 크게 두 가지이다. 
 
 1. Canonical homomorphism (1)의 lifting이 global orientation을 정의하고, 그 반대도 성립한다는 것을 보인다.
 2. Global orientation $M \rightarrow \Spe(\omega_M^A)$가 존재하는 *sheaf cohomology*를 정의한다.
 
-푸앵카레 쌍대성의 핵심적인 내용은 모두 첫째 단계에 담겨있는 것이며, 둘째 단계는 이를 현명하게 표현할 수 있는 언어를 배우는 것에 가깝다. 따라서 우리는 우선 첫째 단계부터 시작한다. 이는 다음의 보조정리에 의해 얻어진다.
+Poincaré duality의 핵심적인 내용은 모두 첫째 단계에 담겨있는 것이며, 둘째 단계는 이를 현명하게 표현할 수 있는 언어를 배우는 것에 가깝다. 따라서 우리는 우선 첫째 단계부터 시작한다. 이는 다음의 보조정리에 의해 얻어진다.
 
 ::: 보조정리 8
 Topological manifold $M$ of dimension $m$을 고정하자. $M$의 임의의 compact subset $C$에 대하여 다음이 성립한다.
@@ -204,7 +204,7 @@ $$0=H_{m+1}(M,M\setminus (C_1\cap C_2);A)\rightarrow H_m(M,M\setminus (C_1\cup C
 이제 귀납법의 기초단계를 위해서는 $M=\mathbb{R}^m$이고 $A$가 convex compact subset인 경우를 생각하면 충분하다. 임의의 manifold $M$의 compact set을 Euclidean chart로 덮은 후, compactness를 사용하면 $M=\mathbb{R}^m$으로 가정해도 충분하며 $\mathbb{R}^m$의 open ball들의 basis를 사용하고 다시 compactness를 사용하면 $A$가 convex임을 추가로 가정해도 되기 때문이다. 그럼 이 단계에서 두 공간 $\mathbb{R}^m\setminus A$와 $\mathbb{R}^m\setminus \{x\}$가 모두 같은 공간 $S^{m-1}$로 deformation retract하므로 isomorphism이 되고, 이로부터 증명이 끝난다. 
 :::
 
-이 증명에서 compactness는 Mayer-Vietoris sequence를 사용하여 귀납적인 방식으로 $\alpha$를 구성할 때, 이 귀납적인 과정이 유한한 단계에서 끝나도록 하려면 반드시 필요하다. 실제로 compactness가 빠질 경우 푸앵카레 쌍대성은 다소 다른 형태를 띄게 되는데, 이를 공통된 식으로 표현하기 위해 도입해야 하는 것이 sheaf cohomology의 언어이다. 
+이 증명에서 compactness는 Mayer-Vietoris sequence를 사용하여 귀납적인 방식으로 $\alpha$를 구성할 때, 이 귀납적인 과정이 유한한 단계에서 끝나도록 하려면 반드시 필요하다. 실제로 compactness가 빠질 경우 Poincaré duality는 다소 다른 형태를 띄게 되는데, 이를 공통된 식으로 표현하기 위해 도입해야 하는 것이 sheaf cohomology의 언어이다. 
 
 어쨌든 위의 [보조정리 8](#lem8)에 의하여, 만일 $M$이 compact topological manifold of dimension $m$이라면, $C=M$으로 두어 다음의 정리를 얻는다.
 
@@ -345,7 +345,7 @@ $$U_1\subset U_1\cup U_2\subset U_1\cup U_2\cup U_3\cdots$$
 
 $M$이 $A$-orientable이 아닐 경우 [정리 11](#thm11)이 성립하지 않는 가장 큰 이유는, 근본적으로, $\or_M^A$가 constant sheaf가 되는 것에 실패하고 오직 locally constant이기만 하기 때문이다. 이는 covering space의 언어로 하자면, monodromy action이 stalk $A$에 nontrivial하게 작용하기 때문에, "한 바퀴"를 돌아왔을 때 stalk $A$가 꼬여서 붙게 되는 것으로 생각할 수 있다. 이 꼬임은 $A$의 automorphism이므로, 우리는 이를 보기 위해 $A$의 unit group $A^\times$의 bijection을 생각하면 충분했다.
 
-이제 이 꼬임을 쌍대성에서 함께 고려하기 위해 우리는 *homology with local coefficient*을 정의한다. 
+이제 이 꼬임을 duality에서 함께 고려하기 위해 우리는 *homology with local coefficient*을 정의한다. 
 
 ::: 정의 14
 $M$ 위에 정의된 locally constant sheaf $\mathscr{L}$을 *local coefficient system<sub>국소 계수 체계</sub>*이라 부른다. 
@@ -369,7 +369,7 @@ $$C(\widetilde{M})\otimes_{\mathbb{Z}[\pi_1(X)]} A$$
 
 를 구성하여 얻어지는 chain complex를 생각하여도 이것이 위의 homology group과 같은 homology group을 주는 것을 안다. 
 
-이는 어떻게 보면 다소 과한 일반화라 할 수도 있는데, non-orientable 버전의 푸앵카레 쌍대성을 기술하기 위해 우리는 어차피 local coefficient system $\mathscr{L}$을 constant sheaf $\underline{A}$로 둘 것이기 때문이다. 그러나 이러한 일반화를 통해 우리는 cohomology 부분도 일반화가 가능하고, 이 일반화가 푸앵카레 쌍대성을 조금 더 투명하게 보여준다. 
+이는 어떻게 보면 다소 과한 일반화라 할 수도 있는데, non-orientable 버전의 Poincaré duality를 기술하기 위해 우리는 어차피 local coefficient system $\mathscr{L}$을 constant sheaf $\underline{A}$로 둘 것이기 때문이다. 그러나 이러한 일반화를 통해 우리는 cohomology 부분도 일반화가 가능하고, 이 일반화가 Poincaré duality를 조금 더 투명하게 보여준다. 
 
 임의의 위상공간 $X$와 그 위에 정의된 sheaf $\mathscr{F}$에 대하여, global section functor 
 
@@ -407,15 +407,15 @@ $$H^k(X; \mathscr{F})$$
 으로 적고, 이를 *sheaf cohomology*라 부른다. 
 :::
 
-이에 대한 자세한 내용은 [\[대수다양체\] §층 코호몰로지, ⁋정의 1](/ko/math/algebraic_varieties/sheaf_cohomology#def1)에서 더 자세히 다룬다. 이제 푸앵카레 쌍대성은 다음의 isomorphism
+이에 대한 자세한 내용은 [\[대수다양체\] §층 코호몰로지, ⁋정의 1](/ko/math/algebraic_varieties/sheaf_cohomology#def1)에서 더 자세히 다룬다. 이제 Poincaré duality는 다음의 isomorphism
 
 $$H^k(M;\mathscr{L})\cong H_{m-k}(M;\or_M^A\otimes \mathscr{L})$$
 
-으로 일반화된다. 여기에서 원래의 푸앵카레 쌍대성으로 돌아가기 위해서는 우선 $\mathscr{L}$을 constant sheaf $\underline{A}$로 둔다. 그럼 manifold와 같이 좋은 경우에는 sheaf cohomology $H^k(M;\underline{A})$와 singular cohomology $H^k(M;A)$가 isomorphic하다는 것이 알려져 있으므로 다음의 isomorphism
+으로 일반화된다. 여기에서 원래의 Poincaré duality로 돌아가기 위해서는 우선 $\mathscr{L}$을 constant sheaf $\underline{A}$로 둔다. 그럼 manifold와 같이 좋은 경우에는 sheaf cohomology $H^k(M;\underline{A})$와 singular cohomology $H^k(M;A)$가 isomorphic하다는 것이 알려져 있으므로 다음의 isomorphism
 
 $$H^k(M;A)\cong H_{m-k}(M;\or_M^A)$$
 
-을 얻는다. 추가로 만일 $M$이 $A$-orientable일 경우 $\or_M^A$도 constant sheaf가 되므로, 이로부터 classical한 푸앵카레 쌍대성
+을 얻는다. 추가로 만일 $M$이 $A$-orientable일 경우 $\or_M^A$도 constant sheaf가 되므로, 이로부터 classical한 Poincaré duality
 
 $$H^k(M;A)\cong H_{m-k}(M;A)$$
 

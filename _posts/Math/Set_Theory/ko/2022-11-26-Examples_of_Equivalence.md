@@ -121,7 +121,7 @@ $$X'=p^{-1}(p(X'))\supseteq p^{-1}(p(X))$$
 
 ![canonical_decomposition](/assets/images/Math/Set_Theory/Examples_of_Equivalence-3.svg){:style="width:12.57em"  class="invert" .align-center}
 
-이 때 $\tilde{f}$는 $f$의 공역 $F$를 $f(A)$로 제한하여 얻어지는 함수이고, $j$는 canonical injection이다. 위 그림의 commutativity로부터 식
+이 때 $\tilde{f}$는 $f$의 공역 $F$를 $f(A)$로 제한하여 얻어지는 함수이고, $j$는 canonical injection이다. 위 diagram의 commutativity로부터 식
 
 $$f=j\circ\tilde{f}=j\circ h\circ p$$
 

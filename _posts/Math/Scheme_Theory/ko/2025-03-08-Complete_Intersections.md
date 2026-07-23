@@ -17,7 +17,7 @@ drift_needed: true
 
 ---
 
-닫힌 부분스킴의 중요한 예시 중 하나는 [§닫힌 부분스킴, ⁋정의 7](/ko/math/scheme_theory/closed_subschemes#def7)에서 정의한 vanishing scheme이며, 이에 대한 motivation은 당연히 유클리드 공간 $\mathbb{R}^n$과 그 위에서 정의되는 함수 $f: \mathbb{R}^n \rightarrow \mathbb{R}$에 대하여 $f^{-1}(0)$으로 정의되는 $\mathbb{R}^n$의 hypersurface $f=0$이다. 
+Closed subscheme의 중요한 예시 중 하나는 [§닫힌 부분스킴, ⁋정의 7](/ko/math/scheme_theory/closed_subschemes#def7)에서 정의한 vanishing scheme이며, 이에 대한 motivation은 당연히 유클리드 공간 $\mathbb{R}^n$과 그 위에서 정의되는 함수 $f: \mathbb{R}^n \rightarrow \mathbb{R}$에 대하여 $f^{-1}(0)$으로 정의되는 $\mathbb{R}^n$의 hypersurface $f=0$이다. 
 
 한편 우리는 더 일반적으로 global section들의 (유한한) family $s_1,\ldots, s_k\in \Gamma(X, \mathcal{O}_X)$가 주어졌을 때 이들이 정의하는 vanishing scheme $Z(s_1,\ldots, s_k)$에도 관심이 있다. 직관적으로 이는 우선 $X$에서 global section $s_1$을 사용하여 만든 vanishing scheme $\iota_1:Z(s_1)\hookrightarrow X$을 생각한 후, $Z(s_1)$의 global section 
 
@@ -107,6 +107,6 @@ $$0=\dim A_\mathfrak{p}/(s_1,\ldots, s_k)=\dim A_\mathfrak{p}-k$$
 :::
 
 ::: 참고 7
-[정의 4](#def4)는 regular sequence를 *국소적으로만* 요구한다. 이보다 강한 조건으로, projective scheme $Z\subseteq \mathbb{P}^n$이 codimension만큼의 homogeneous polynomial들의 vanishing으로 *대역적으로* 잘리는 경우를 *대역적 완전교차*라 부른다. 이 둘은 일치하지 않는다. 예를 들어 $\mathbb{P}^3$ 안의 꼬인 삼차곡선<sub>twisted cubic</sub>은 codimension $2$의 국소 완전교차이지만, 두 개의 동차다항식만으로는 잘리지 않아 대역적 완전교차는 아니다. 
+[정의 4](#def4)는 regular sequence를 *국소적으로만* 요구한다. 이보다 강한 조건으로, projective scheme $Z\subseteq \mathbb{P}^n$이 codimension만큼의 homogeneous polynomial들의 vanishing으로 *대역적으로* 잘리는 경우를 *대역적 완전교차*라 부른다. 이 둘은 일치하지 않는다. 예를 들어 $\mathbb{P}^3$ 안의 꼬인 삼차곡선<sub>twisted cubic</sub>은 codimension $2$의 국소 완전교차이지만, 두 개의 homogeneous polynomial만으로는 잘리지 않아 대역적 완전교차는 아니다. 
 :::
 

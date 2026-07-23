@@ -121,7 +121,7 @@ Basis의 중요한 성질 중 하나는 basis의 원소에서의 함수값들이
 
 ## 대수의 기저
 
-이제 우리는 대수의 기저에 대해 살펴보자. [선형대수학](/ko/linear_algebra) category에서 우리의 주된 관심사는 $A$-module이기는 하지만, 고정된 $A$-module의 endomorphism algebra를 살펴볼 때는 $A$-algebra를 생각하게 된다. 
+이제 우리는 대수의 basis에 대해 살펴보자. [선형대수학](/ko/linear_algebra) category에서 우리의 주된 관심사는 $A$-module이기는 하지만, 고정된 $A$-module의 endomorphism algebra를 살펴볼 때는 $A$-algebra를 생각하게 된다. 
 
 앞서 $A$-algebra를 이야기할 때에는 항상 $A$가 commutative인 것을 가정했었다는 것을 기억하자.
 

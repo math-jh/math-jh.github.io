@@ -115,7 +115,7 @@ $$\Omega^1_X(\log D)(U) = \{\omega \in \Omega^1_{\mathbb{C}(X)/\mathbb{C}}(U) \m
 
 $$\frac{dz_1}{z_1}, \ldots, \frac{dz_k}{z_k}, dz_{k+1}, \ldots, dz_n$$
 
-으로 자유롭게 생성되는 free $\mathcal{O}_X$-module이다. 더 높은 차수의 logarithmic form sheaf는 외적으로 $\Omega^p_X(\log D) := \bigwedge^p \Omega^1_X(\log D)$로 정의한다.
+으로 자유롭게 생성되는 free $\mathcal{O}_X$-module이다. 더 높은 degree의 logarithmic form sheaf는 외적으로 $\Omega^p_X(\log D) := \bigwedge^p \Omega^1_X(\log D)$로 정의한다.
 :::
 
 [§아핀 토릭 다양체, ⁋명제 9](/ko/math/toric_geometry/affine_toric_varieties#prop9)에서 보았듯 smooth toric variety $X_\Sigma$의 affine chart $U_\sigma$는 적당한 좌표에서 $\mathbb{C}^k \times (\mathbb{C}^\ast)^{n-k}$이고 boundary는 좌표 hyperplane $\{\x_1 = 0\}, \ldots, \{\x_k = 0\}$의 합이므로, smooth toric variety의 toric boundary는 자동으로 [정의 5](#def5)의 SNC divisor이며 [정의 6](#def6)의 logarithmic cotangent sheaf $\Omega^p_{X_\Sigma}(\log D)$가 잘 정의된다.

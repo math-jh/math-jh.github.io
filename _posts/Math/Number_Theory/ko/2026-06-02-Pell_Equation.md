@@ -14,7 +14,7 @@ weight: 16
 published: false
 ---
 
-[§연분수](/ko/math/number_theory/continued_fractions)는 무리수를 유리수로 근사하는 도구였다. 그 가장 빛나는 응용이 펠 방정식 $x^2 - Dy^2 = 1$의 정수해를 모두 찾는 것이다. 이 방정식은 [§가우스 정수와 두 제곱수의 합](/ko/math/number_theory/gaussian_integers)에서 본 노름의 산술과 깊이 연결된다.
+[§연분수](/ko/math/number_theory/continued_fractions)는 무리수를 유리수로 근사하는 도구였다. 그 가장 빛나는 응용이 펠 방정식 $x^2 - Dy^2 = 1$의 정수해를 모두 찾는 것이다. 이 방정식은 [§가우스 정수와 두 제곱수의 합](/ko/math/number_theory/gaussian_integers)에서 본 norm의 산술과 깊이 연결된다.
 
 ## 펠 방정식과 노름
 
@@ -24,7 +24,7 @@ published: false
 방정식 $x^2 - Dy^2 = 1$을 *펠 방정식<sub>Pell's equation</sub>*이라 한다. $x = \pm 1, y = 0$인 해를 *자명한 해*라 한다.
 :::
 
-수 $\alpha = x + y\sqrt{D}$ ($x, y \in \mathbb{Z}$) 들이 이루는 ring $\mathbb{Z}[\sqrt D]$에서 *노름*을 $N(\alpha) = (x + y\sqrt D)(x - y\sqrt D) = x^2 - Dy^2$으로 정의하면, 펠 방정식의 해는 정확히 $N(\alpha) = 1$인 원소이다. 노름은 곱셈적이므로 — $N(\alpha\beta) = N(\alpha)N(\beta)$ — 해들의 곱도 다시 해이다. 이것이 해의 구조를 지배한다.
+수 $\alpha = x + y\sqrt{D}$ ($x, y \in \mathbb{Z}$) 들이 이루는 ring $\mathbb{Z}[\sqrt D]$에서 *norm*을 $N(\alpha) = (x + y\sqrt D)(x - y\sqrt D) = x^2 - Dy^2$으로 정의하면, 펠 방정식의 해는 정확히 $N(\alpha) = 1$인 원소이다. norm은 곱셈적이므로 — $N(\alpha\beta) = N(\alpha)N(\beta)$ — 해들의 곱도 다시 해이다. 이것이 해의 구조를 지배한다.
 
 ## 기본해의 존재
 
@@ -35,7 +35,7 @@ published: false
 :::
 
 ::: 증명
-[§연분수, ⁋정리 3](/ko/math/number_theory/continued_fractions#thm3)에 의해 $\left\lvert \sqrt D - \dfrac{p}{q}\right\rvert < \dfrac{1}{q^2}$인 유리수가 무한히 많다. 이런 $p, q$에 대해 $\lvert p^2 - Dq^2\rvert = \lvert p - q\sqrt D\rvert\,\lvert p + q\sqrt D\rvert < \dfrac1q\cdot(2q\sqrt D + 1)$이 bounded이므로, $p^2 - Dq^2$이 같은 값 $k$를 갖는 해가 무한히 많다. 그중 $p, q$가 법 $\lvert k\rvert$에 대해 같은 coset인 두 해 $\alpha_1, \alpha_2$를 고르면, 비 $\alpha_1/\alpha_2$가 노름 $1$인 자명하지 않은 정수해 $\mathbb{Z}[\sqrt D]$의 원소를 준다. 실제로 $\sqrt D$의 순환연분수의 한 주기에서 나오는 점근분수가 기본해를 직접 산출한다.
+[§연분수, ⁋정리 3](/ko/math/number_theory/continued_fractions#thm3)에 의해 $\left\lvert \sqrt D - \dfrac{p}{q}\right\rvert < \dfrac{1}{q^2}$인 유리수가 무한히 많다. 이런 $p, q$에 대해 $\lvert p^2 - Dq^2\rvert = \lvert p - q\sqrt D\rvert\,\lvert p + q\sqrt D\rvert < \dfrac1q\cdot(2q\sqrt D + 1)$이 bounded이므로, $p^2 - Dq^2$이 같은 값 $k$를 갖는 해가 무한히 많다. 그중 $p, q$가 법 $\lvert k\rvert$에 대해 같은 coset인 두 해 $\alpha_1, \alpha_2$를 고르면, 비 $\alpha_1/\alpha_2$가 norm $1$인 자명하지 않은 정수해 $\mathbb{Z}[\sqrt D]$의 원소를 준다. 실제로 $\sqrt D$의 순환연분수의 한 주기에서 나오는 점근분수가 기본해를 직접 산출한다.
 :::
 
 자명하지 않은 양의 해 중 $x + y\sqrt D$가 가장 작은 것을 *기본해<sub>fundamental solution</sub>* $\varepsilon_1 = x_1 + y_1\sqrt D$라 한다.
@@ -51,7 +51,7 @@ $$x_n + y_n\sqrt D = (x_1 + y_1\sqrt D)^n \qquad (n = 1, 2, 3, \ldots)$$
 :::
 
 ::: 증명
-노름의 곱셈성으로 $N(\varepsilon_1^n) = N(\varepsilon_1)^n = 1$이므로 각 $\varepsilon_1^n$은 해이다. 거꾸로 $\beta = x + y\sqrt D > 1$이 어떤 해인데 $\varepsilon_1^n$ 꼴이 아니라면, $\varepsilon_1^n \leq \beta < \varepsilon_1^{n+1}$인 $n$을 잡을 수 있고 $1 \leq \beta\varepsilon_1^{-n} < \varepsilon_1$이다. $\beta\varepsilon_1^{-n}$도 노름 $1$의 해인데 $1$보다 작은 자명하지 않은 해가 되어 기본해의 최소성에 모순이다 (또는 $1$이어서 $\beta = \varepsilon_1^n$). 따라서 모든 양의 해가 거듭제곱으로 소진된다.
+norm의 곱셈성으로 $N(\varepsilon_1^n) = N(\varepsilon_1)^n = 1$이므로 각 $\varepsilon_1^n$은 해이다. 거꾸로 $\beta = x + y\sqrt D > 1$이 어떤 해인데 $\varepsilon_1^n$ 꼴이 아니라면, $\varepsilon_1^n \leq \beta < \varepsilon_1^{n+1}$인 $n$을 잡을 수 있고 $1 \leq \beta\varepsilon_1^{-n} < \varepsilon_1$이다. $\beta\varepsilon_1^{-n}$도 norm $1$의 해인데 $1$보다 작은 자명하지 않은 해가 되어 기본해의 최소성에 모순이다 (또는 $1$이어서 $\beta = \varepsilon_1^n$). 따라서 모든 양의 해가 거듭제곱으로 소진된다.
 :::
 
 ::: 예시 4
@@ -85,7 +85,7 @@ $$\begin{aligned}
 
 $$\begin{pmatrix} x_{n+1} \\ y_{n+1} \end{pmatrix} = \begin{pmatrix} x_1 & D\,y_1 \\ y_1 & x_1 \end{pmatrix} \begin{pmatrix} x_n \\ y_n \end{pmatrix}$$
 
-이므로, 해의 열은 행렬 $M = \left(\begin{smallmatrix} x_1 & D y_1 \\ y_1 & x_1 \end{smallmatrix}\right)$의 거듭제곱을 초기벡터 $(x_1, y_1)^{\mathsf T}$에 작용시켜 얻는다. $\det M = x_1^2 - D y_1^2 = 1$이라 $M \in \mathrm{SL}_2(\mathbb{Z})$이며, 펠 방정식의 군 구조가 이 행렬군 안에 자연스럽게 들어앉음을 보여 준다.
+이므로, 해의 열은 행렬 $M = \left(\begin{smallmatrix} x_1 & D y_1 \\ y_1 & x_1 \end{smallmatrix}\right)$의 거듭제곱을 초기벡터 $(x_1, y_1)^{\mathsf T}$에 작용시켜 얻는다. $\det M = x_1^2 - D y_1^2 = 1$이라 $M \in \mathrm{SL}_2(\mathbb{Z})$이며, 펠 방정식의 group 구조가 이 행렬군 안에 자연스럽게 들어앉음을 보여 준다.
 
 ::: 예시 6
 $D = 2$의 기본해 $\varepsilon_1 = 3 + 2\sqrt2$에 명제 5를 적용하면 $x_{n+1} = 3x_n + 4y_n$, $y_{n+1} = 3y_n + 2x_n$이다. $(x_1, y_1) = (3, 2)$에서 출발하면
@@ -115,11 +115,11 @@ D = 13:&\ (649, 180), \qquad D = 61:\ (1766319049,\ 226153980)
 이다. $D = 60$이 $(31, 4)$로 작은 데 비해 바로 옆 $D = 61$의 기본해가 십억 자리로 치솟는 것이 단조성의 결여를 극명하게 보여 준다.
 :::
 
-$D = 61$의 사례는 인도 수학자 바스카라 2세와 브라마굽타가 이미 다루었고, 17세기에 페르마가 이를 도전 문제로 제시한 일화로 유명하다. 기본해가 이처럼 거대해질 수 있다는 사실은, 단지 작은 정수를 대입해 보는 방식으로는 펠 방정식이 풀리지 않으며 연분수 같은 구조적 도구가 필수임을 말해 준다. 점근분수의 분모 $q_k$는 기하급수적으로 증가하므로, 한 주기 안에서 노름 $1$을 처음 내는 점근분수까지의 단계 수만큼만 계산하면 거대한 기본해도 효율적으로 산출된다.
+$D = 61$의 사례는 인도 수학자 바스카라 2세와 브라마굽타가 이미 다루었고, 17세기에 페르마가 이를 도전 문제로 제시한 일화로 유명하다. 기본해가 이처럼 거대해질 수 있다는 사실은, 단지 작은 정수를 대입해 보는 방식으로는 펠 방정식이 풀리지 않으며 연분수 같은 구조적 도구가 필수임을 말해 준다. 점근분수의 분모 $q_k$는 기하급수적으로 증가하므로, 한 주기 안에서 norm $1$을 처음 내는 점근분수까지의 단계 수만큼만 계산하면 거대한 기본해도 효율적으로 산출된다.
 
 ## 음의 펠 방정식
 
-노름이 $-1$인 방정식 $x^2 - Dy^2 = -1$은 *음의 펠 방정식<sub>negative Pell equation</sub>*이라 불리며, 보통의 펠 방정식과 달리 항상 풀리지는 않는다. 그 해법 가능성은 $\sqrt D$ 연분수의 주기 길이의 홀짝성에 달려 있다.
+norm이 $-1$인 방정식 $x^2 - Dy^2 = -1$은 *음의 펠 방정식<sub>negative Pell equation</sub>*이라 불리며, 보통의 펠 방정식과 달리 항상 풀리지는 않는다. 그 해법 가능성은 $\sqrt D$ 연분수의 주기 길이의 홀짝성에 달려 있다.
 
 ::: 명제 8
 $x^2 - Dy^2 = -1$이 정수해를 가지면 $D$는 두 제곱수의 합으로 표현되며, 특히 $4$로 나눈 나머지가 $3$인 소인수를 갖지 않는다. 따라서 $D \equiv 3 \pmod 4$이거나 $D$가 그런 소인수를 가지면 음의 펠 방정식은 풀리지 않는다.
@@ -129,14 +129,14 @@ $x^2 - Dy^2 = -1$이 정수해를 가지면 $D$는 두 제곱수의 합으로 �
 $x^2 - Dy^2 = -1$이면 $x^2 + 1 = D y^2$이다. $p \mid D$인 홀소수 $p$를 잡으면 $p \mid x^2 + 1$, 곧 $x^2 \equiv -1 \pmod p$이므로 $-1$이 법 $p$의 이차잉여이다. 오일러 판정법 ([§가우스 정수와 두 제곱수의 합](/ko/math/number_theory/gaussian_integers)에서 본 사실) 에 의해 이는 $p \equiv 1 \pmod 4$와 동치이다. 또 $x$는 홀수여야 하는데, 만약 $x$가 짝수이면 $x^2 + 1$이 홀수이고 $D y^2$도 홀수여야 하므로 $D$와 $y$가 모두 홀수가 되어 $x^2 - Dy^2 \equiv -y^2 \equiv 3 \pmod 4$ ($y$ 홀수일 때) 등으로 $-1 \pmod 4$과의 정합성을 따져 보면 $D \not\equiv 3 \pmod 4$가 강제된다. 종합하면 $D$의 모든 홀소인수가 $1 \pmod 4$이고 $D \not\equiv 3 \pmod 4$여서, 두 제곱수의 합 정리에 의해 $D$는 두 제곱수의 합이다.
 :::
 
-위 조건은 필요조건일 뿐 충분조건은 아니다. 가령 $D = 34 = 25 + 9$는 두 제곱수의 합이고 모든 홀소인수($2$와 $17$)가 적격이지만, $x^2 - 34 y^2 = -1$은 해가 없다. 정확한 판정은 $\sqrt D$ 연분수의 최소 주기 길이 $\ell$이 홀수일 때 음의 펠 방정식이 풀리고 짝수이면 풀리지 않는다는 것이며, 풀리는 경우 기본해 $\varepsilon_1$ 자체가 노름 $-1$을 갖고 $\varepsilon_1^2$이 노름 $1$ 펠 방정식의 기본해가 된다.
+위 조건은 필요조건일 뿐 충분조건은 아니다. 가령 $D = 34 = 25 + 9$는 두 제곱수의 합이고 모든 홀소인수($2$와 $17$)가 적격이지만, $x^2 - 34 y^2 = -1$은 해가 없다. 정확한 판정은 $\sqrt D$ 연분수의 최소 주기 길이 $\ell$이 홀수일 때 음의 펠 방정식이 풀리고 짝수이면 풀리지 않는다는 것이며, 풀리는 경우 기본해 $\varepsilon_1$ 자체가 norm $-1$을 갖고 $\varepsilon_1^2$이 norm $1$ 펠 방정식의 기본해가 된다.
 
 ::: 예시 9
-$D = 2$에서 $x^2 - 2y^2 = -1$은 $(x, y) = (1, 1)$로 풀린다 ($1 - 2 = -1$). 이때 $\eta = 1 + \sqrt2$는 노름 $-1$의 단원이고
+$D = 2$에서 $x^2 - 2y^2 = -1$은 $(x, y) = (1, 1)$로 풀린다 ($1 - 2 = -1$). 이때 $\eta = 1 + \sqrt2$는 norm $-1$의 단원이고
 
 $$\eta^2 = (1 + \sqrt2)^2 = 3 + 2\sqrt2 = \varepsilon_1$$
 
-로, 그 제곱이 정확히 예시 4의 노름 $1$ 기본해를 준다. 한편 $D = 3$에서는 $\sqrt3 = [1; \overline{1, 2}]$의 주기가 $2$로 짝수여서 $x^2 - 3y^2 = -1$은 해가 없다. 실제로 임의의 정수에 대해 $x^2 - 3y^2 \equiv x^2 + y^2 \pmod 3$이 $2$가 될 수 없어 $-1 \equiv 2 \pmod 3$과 모순이다.
+로, 그 제곱이 정확히 예시 4의 norm $1$ 기본해를 준다. 한편 $D = 3$에서는 $\sqrt3 = [1; \overline{1, 2}]$의 주기가 $2$로 짝수여서 $x^2 - 3y^2 = -1$은 해가 없다. 실제로 임의의 정수에 대해 $x^2 - 3y^2 \equiv x^2 + y^2 \pmod 3$이 $2$가 될 수 없어 $-1 \equiv 2 \pmod 3$과 모순이다.
 :::
 
 ## 응용

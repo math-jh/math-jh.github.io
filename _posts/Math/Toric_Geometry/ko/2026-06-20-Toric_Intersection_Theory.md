@@ -77,7 +77,7 @@ $$[D_{\rho_1}] \cdots [D_{\rho_k}] = [V(\sigma)]$$
 
 을 얻는다.
 
-(2) $\rho_1, \ldots, \rho_k$가 $\Sigma$의 어떤 cone도 이루지 않는다고 하자. 그러면 어떤 maximal cone도 이들 ray를 모두 포함하지 못한다. Divisor $D_{\rho_i}$의 support는 정확히 ray $\rho_i$를 포함하는 cone들에 대응하는 orbit들의 합집합이므로, 교집합 $\bigcap_i \operatorname{Supp} D_{\rho_i}$는 $\rho_1, \ldots, \rho_k$를 모두 면으로 갖는 cone에 대응하는 orbit들로 이루어진다. 그러한 cone이 $\Sigma$에 존재하지 않으므로 이 교집합은 공집합이다. 한편 [\[대수다양체\] §교차곱, ⁋보조정리 8](/ko/math/algebraic_varieties/intersection_product#lem8)의 moving lemma에 의해 $[D_{\rho_1}] \cdots [D_{\rho_k}]$는 generic하게 transverse한 대표원으로 계산할 수 있는데, 각 $D_{\rho_i}$는 $\divisor(\rchi^{m_i})$만큼 이동시켜도 같은 class를 주므로 ($m_i \in M$), 적절한 character 이동으로 얻은 대표원들의 교집합 또한 비어 있게 만들 수 있다. 따라서 곱은 $0$이다.
+(2) $\rho_1, \ldots, \rho_k$가 $\Sigma$의 어떤 cone도 이루지 않는다고 하자. 그러면 어떤 maximal cone도 이들 ray를 모두 포함하지 못한다. Divisor $D_{\rho_i}$의 support는 정확히 ray $\rho_i$를 포함하는 cone들에 대응하는 orbit들의 합집합이므로, 교집합 $\bigcap_i \operatorname{Supp} D_{\rho_i}$는 $\rho_1, \ldots, \rho_k$를 모두 face로 갖는 cone에 대응하는 orbit들로 이루어진다. 그러한 cone이 $\Sigma$에 존재하지 않으므로 이 교집합은 공집합이다. 한편 [\[대수다양체\] §교차곱, ⁋보조정리 8](/ko/math/algebraic_varieties/intersection_product#lem8)의 moving lemma에 의해 $[D_{\rho_1}] \cdots [D_{\rho_k}]$는 generic하게 transverse한 대표원으로 계산할 수 있는데, 각 $D_{\rho_i}$는 $\divisor(\rchi^{m_i})$만큼 이동시켜도 같은 class를 주므로 ($m_i \in M$), 적절한 character 이동으로 얻은 대표원들의 교집합 또한 비어 있게 만들 수 있다. 따라서 곱은 $0$이다.
 :::
 
 명제 2의 (2)가 *Stanley-Reisner relation*이다. Fan $\Sigma$의 ray 집합 $\Sigma(1)$ 위에서, "함께 하나의 cone을 이루는 ray들의 부분집합"을 face라 부르면 $\Sigma$는 추상적인 simplicial complex의 구조를 가지며, cone을 이루지 않는 부분집합 $\{\rho_{i_1}, \ldots, \rho_{i_k}\}$을 *non-face*라 부른다. 명제 2의 (2)는 정확히 모든 non-face에 대응하는 monomial $\x_{\rho_{i_1}} \cdots \x_{\rho_{i_k}}$이 사라진다는 진술이다. 이 두 종류의 관계가 Chow ring을 완전히 결정한다는 것이 다음 절의 주제이다.
@@ -92,7 +92,7 @@ $$[D_{\rho_1}] \cdots [D_{\rho_k}] = \frac{1}{\mult(\sigma)}\,[V(\sigma)], \qqua
 
 ## Chow 환의 표현
 
-이제 위의 관찰을 하나의 ring isomorphism으로 묶는다. 각 ray $\rho \in \Sigma(1)$에 변수 $\x_\rho$를 대응시킨 polynomial ring을 생각하면 (이는 [§Cox 구성과 GIT quotient, ⁋정의 7](/ko/math/toric_geometry/cox_construction#def7)의 Cox ring과 같은 변수 집합이다), divisor class $[D_\rho]$들이 $\x_\rho$의 상이 되도록 하는 surjection을 만들 수 있고, 그 kernel이 정확히 linear relation과 Stanley-Reisner relation으로 generate된다.
+이제 위의 관찰을 하나의 ring isomorphism으로 묶는다. 각 ray $\rho \in \Sigma(1)$에 변수 $\x_\rho$를 대응시킨 polynomial ring을 생각하면 (이는 [§Cox 구성과 GIT quotient, ⁋정의 7](/ko/math/toric_geometry/cox_construction#def7)의 Cox ring과 같은 변수 집합이다), divisor class $[D_\rho]$들이 $\x_\rho$의 image가 되도록 하는 surjection을 만들 수 있고, 그 kernel이 정확히 linear relation과 Stanley-Reisner relation으로 generate된다.
 
 ::: 정의 4
 Fan $\Sigma$에 대해 polynomial ring $\mathbb{Z}[\x_\rho \mid \rho \in \Sigma(1)]$ 안에서 다음 두 ideal을 정의한다.
@@ -112,7 +112,7 @@ Fan $\Sigma$에 대해 polynomial ring $\mathbb{Z}[\x_\rho \mid \rho \in \Sigma(
 $\mathcal{I}_{SR}$은 모든 non-face에 대응하는 monomial을 다 모을 필요 없이, 그 중 *minimal*한 non-face들에 대응하는 monomial만 generator로 취하면 충분하다. $\mathcal{J}_{\mathrm{lin}}$은 $M$의 basis $e_1^\ast, \ldots, e_n^\ast$가 주는 $n$개의 선형형식으로 generate된다. 이 둘의 합을 quotient하면 Chow ring이 나온다.
 
 ::: 정리 5 (Chow ring의 조합론적 표현)
-$X_\Sigma$가 smooth complete toric variety이면, $\x_\rho \mapsto [D_\rho]$로 정의되는 사상은 graded ring의 isomorphism
+$X_\Sigma$가 smooth complete toric variety이면, $\x_\rho \mapsto [D_\rho]$로 정의되는 morphism은 graded ring의 isomorphism
 
 $$\CH^\ast(X_\Sigma) \cong \mathbb{Z}[\x_\rho \mid \rho \in \Sigma(1)] \,/\, (\mathcal{I}_{SR} + \mathcal{J}_{\mathrm{lin}})$$
 
@@ -126,7 +126,7 @@ $\varphi$가 $\mathcal{I}_{SR}$과 $\mathcal{J}_{\mathrm{lin}}$을 모두 $0$으
 
 다음으로 $\overline{\varphi}$의 surjectivity를 본다. $X_\Sigma$가 smooth이므로 Chow group은 orbit closure들로 generate된다. 구체적으로, complete toric variety에 대해 cycle class들 $\{[V(\sigma)] : \sigma \in \Sigma\}$이 $\CH^\ast(X_\Sigma)$를 $\mathbb{Z}$-module로서 generate한다. 이는 fan의 cone들이 주는 affine cell들에 의한 stratification과 [\[대수다양체\] §저우 군, ⁋명제 8](/ko/math/algebraic_varieties/chow_groups#prop8)를 cone 차원에 대해 귀납적으로 적용하여 얻어진다. 각 $[V(\sigma)]$는 명제 2의 (1)에 의해 $\sigma$를 generate하는 ray들의 divisor 곱 $[D_{\rho_1}] \cdots [D_{\rho_k}]$로 표현되므로 $[D_\rho]$들의 monomial이며, 따라서 $\varphi$의 image에 속한다. 결국 $\overline{\varphi}$는 surjective이다.
 
-마지막으로 injectivity를 본다. 이를 직접 보이는 대신, $X_\Sigma$가 smooth complete일 때 두 graded abelian group이 각 차수에서 같은 유한 rank를 가짐을 이용한다. $X_\Sigma$가 smooth complete이면 maximal cone들이 주는 affine cell에 의한 cellular decomposition이 존재하여 $\CH^k(X_\Sigma)$는 free abelian group이며 그 차수별 rank는 fan의 $h$-vector로 주어진다. 한편 quotient $R/(\mathcal{I}_{SR} + \mathcal{J}_{\mathrm{lin}})$의 차수별 rank도 동일한 $h$-vector로 계산됨이 알려져 있다 ([Sta] 또는 [CLS] Theorem 12.4.4). 두 graded group이 surjection $\overline{\varphi}$로 연결되어 있고 각 차수에서 같은 유한 rank를 가지므로, free abelian group 사이의 차수별 surjection이 rank를 보존하면 isomorphism이라는 사실로부터 $\overline{\varphi}$는 isomorphism이다.
+마지막으로 injectivity를 본다. 이를 직접 보이는 대신, $X_\Sigma$가 smooth complete일 때 두 graded abelian group이 각 degree에서 같은 유한 rank를 가짐을 이용한다. $X_\Sigma$가 smooth complete이면 maximal cone들이 주는 affine cell에 의한 cellular decomposition이 존재하여 $\CH^k(X_\Sigma)$는 free abelian group이며 그 degree별 rank는 fan의 $h$-vector로 주어진다. 한편 quotient $R/(\mathcal{I}_{SR} + \mathcal{J}_{\mathrm{lin}})$의 degree별 rank도 동일한 $h$-vector로 계산됨이 알려져 있다 ([Sta] 또는 [CLS] Theorem 12.4.4). 두 graded group이 surjection $\overline{\varphi}$로 연결되어 있고 각 degree에서 같은 유한 rank를 가지므로, free abelian group 사이의 degree별 surjection이 rank를 보존하면 isomorphism이라는 사실로부터 $\overline{\varphi}$는 isomorphism이다.
 :::
 
 정리 5는 smooth complete toric variety의 Chow ring을 fan으로부터 완전히 기계적으로 계산하게 해 준다. 변수는 ray의 개수 $\lvert \Sigma(1) \rvert$만큼이고, linear ideal이 $n$개의 변수를 소거하므로 $\CH^1(X_\Sigma) \cong \Cl(X_\Sigma)$의 rank가 $\lvert \Sigma(1) \rvert - n$이 되는 것은 [§토러스 인자와 선다발, ⁋명제 4](/ko/math/toric_geometry/toric_divisors#prop4)의 exact sequence와 부합한다.
@@ -174,14 +174,14 @@ $$D^n = n!\, \vol(P_D)$$
 
 $$\dim_\mathbb{C} H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(kD)) = \#(kP_D \cap M)$$
 
-이다. $D$가 ample이므로 충분히 큰 $k$에 대해 고차 cohomology가 사라지고, 따라서 좌변은 Euler characteristic $\chi(\mathcal{O}_{X_\Sigma}(kD))$와 같다. Asymptotic Riemann-Roch에 의해 이 Euler characteristic은 $k$에 대한 차수 $n$의 다항식이며 그 최고차항은
+이다. $D$가 ample이므로 충분히 큰 $k$에 대해 고차 cohomology가 사라지고, 따라서 좌변은 Euler characteristic $\chi(\mathcal{O}_{X_\Sigma}(kD))$와 같다. Asymptotic Riemann-Roch에 의해 이 Euler characteristic은 $k$에 대한 degree $n$의 다항식이며 그 최고차항은
 
 $$\chi(\mathcal{O}_{X_\Sigma}(kD)) = \frac{D^n}{n!}\, k^n + O(k^{n-1})$$
 
 이다. 한편 lattice point의 개수 $\#(kP_D \cap M)$는 Ehrhart 다항식으로, 그 최고차항은 $\vol(P_D)\, k^n$이다. 두 다항식의 최고차항을 비교하면 $D^n / n! = \vol(P_D)$, 즉 $D^n = n!\, \vol(P_D)$를 얻는다.
 :::
 
-이 결과는 toric variety의 교차 이론과 볼록 기하의 격자점 셈을 잇는 다리이다. 가장 단순한 예로 $\mathbb{P}^n$의 hyperplane class $H$는 $P_H$가 standard simplex $\Delta_n$이 되어 $H^n = n!\, \vol(\Delta_n) = n! \cdot \frac{1}{n!} = 1$을 주며, 이는 $\CH^\ast(\mathbb{P}^n) = \mathbb{Z}[H]/(H^{n+1})$에서 $H^n = [\mathrm{pt}]$인 것과 일치한다 ([\[대수다양체\] §교차곱, ⁋예시 10](/ko/math/algebraic_varieties/intersection_product#ex10)).
+이 결과는 toric variety의 교차 이론과 convex geometry의 격자점 셈을 잇는 다리이다. 가장 단순한 예로 $\mathbb{P}^n$의 hyperplane class $H$는 $P_H$가 standard simplex $\Delta_n$이 되어 $H^n = n!\, \vol(\Delta_n) = n! \cdot \frac{1}{n!} = 1$을 주며, 이는 $\CH^\ast(\mathbb{P}^n) = \mathbb{Z}[H]/(H^{n+1})$에서 $H^n = [\mathrm{pt}]$인 것과 일치한다 ([\[대수다양체\] §교차곱, ⁋예시 10](/ko/math/algebraic_varieties/intersection_product#ex10)).
 
 ## 사영공간
 
@@ -264,7 +264,7 @@ $$\mathcal{I}_{SR} = (\x_0 \x_3,\ \x_1 \x_2)$$
 
 $$\langle e_1^\ast, v_0\rangle \x_0 + \langle e_1^\ast, v_1\rangle \x_1 + \langle e_1^\ast, v_2\rangle \x_2 + \langle e_1^\ast, v_3\rangle \x_3 = -\x_0 + \x_1 + \x_3 = 0,$$
 
-$m = e_2^\ast$에 대해 $-\x_0 + \x_2 + \x_3 = 0$을 준다. 이로부터 $\x_1 = \x_0 - \x_3$, $\x_2 = \x_0 - \x_3$이다. 생성원으로 $H := \x_0$ (pullback된 hyperplane class)와 $E := \x_3$를 택하면 $\x_1 = \x_2 = H - E$이고, 두 Stanley-Reisner 관계는
+$m = e_2^\ast$에 대해 $-\x_0 + \x_2 + \x_3 = 0$을 준다. 이로부터 $\x_1 = \x_0 - \x_3$, $\x_2 = \x_0 - \x_3$이다. Generator로 $H := \x_0$ (pullback된 hyperplane class)와 $E := \x_3$를 택하면 $\x_1 = \x_2 = H - E$이고, 두 Stanley-Reisner 관계는
 
 $$\x_0 \x_3 = H E = 0, \qquad \x_1 \x_2 = (H - E)^2 = 0$$
 

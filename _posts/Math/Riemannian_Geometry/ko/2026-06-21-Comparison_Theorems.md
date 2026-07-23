@@ -28,7 +28,7 @@ $$K(u, v) = \frac{\langle R(u, v) v,\, u\rangle}{\langle u, u\rangle \langle v, 
 로 정의한다.
 :::
 
-분모는 $u, v$가 펼치는 평행사변형의 넓이의 제곱으로, $u, v$가 일차독립일 때 양수이다. [§리만 곡률, ⁋명제 5](/ko/math/riemannian_geometry/curvature#prop5)의 대칭성을 사용하면 $K(u, v)$가 평면 $\Pi$에만 의존하고 그 안의 기저 $\{u, v\}$의 선택과 무관함을 확인할 수 있으므로, $K$를 $2$-평면들의 함수 $K(\Pi)$로 보아도 된다. 특히 $u, v$가 정규직교이면 분모가 $1$이 되어 $K(u, v) = \langle R(u, v) v, u\rangle$이다. $2$차원 manifold에서는 평면이 tangent space 자신 하나뿐이므로 $K$가 점마다 하나의 수가 되며, 이것이 고전적인 Gauss curvature와 일치한다.
+분모는 $u, v$가 펼치는 평행사변형의 넓이의 제곱으로, $u, v$가 일차독립일 때 양수이다. [§리만 곡률, ⁋명제 5](/ko/math/riemannian_geometry/curvature#prop5)의 대칭성을 사용하면 $K(u, v)$가 평면 $\Pi$에만 의존하고 그 안의 basis $\{u, v\}$의 선택과 무관함을 확인할 수 있으므로, $K$를 $2$-평면들의 함수 $K(\Pi)$로 보아도 된다. 특히 $u, v$가 정규직교이면 분모가 $1$이 되어 $K(u, v) = \langle R(u, v) v, u\rangle$이다. $2$차원 manifold에서는 평면이 tangent space 자신 하나뿐이므로 $K$가 점마다 하나의 수가 되며, 이것이 고전적인 Gauss curvature와 일치한다.
 
 Ricci curvature는 단면곡률을 한 방향에 대해 평균낸 것으로, Bonnet–Myers에서 가정으로 쓰이는 곡률이다.
 
@@ -97,11 +97,11 @@ $$\ddot J^i(t) + \sum_{j} a^i_j(t)\, J^j(t) = 0, \qquad a^i_j(t) = \langle R(E_j
 측지선 $\gamma : [a, b] \rightarrow M$ 위의 두 점 $\gamma(t_0)$, $\gamma(t_1)$ ($t_0 < t_1$)에 대해, $J(t_0) = 0$이고 $J(t_1) = 0$이면서 $J \not\equiv 0$인 Jacobi field $J$가 존재하면, $\gamma(t_1)$을 $\gamma(t_0)$을 따른 *conjugate point<sub>켤레점</sub>*라 부른다.
 :::
 
-$J(t_0) = 0$인 Jacobi field는 정확히 $\gamma(t_0)$에서 출발하는 측지선들의 변분의 변분장이며, 이런 $J$가 $t_1$에서 다시 소멸한다는 것은 $\gamma(t_0)$에서 나온 측지선 다발이 무한소적으로 $\gamma(t_1)$에서 재초점됨을 뜻한다. Conjugate point는 또한 exponential map의 임계점과 정확히 대응한다. $\gamma(t) = \exp_p(t v)$ ($p = \gamma(0)$, $v = \dot\gamma(0)$) 꼴로 쓰면, $J(0) = 0$인 Jacobi field는 $J(t) = (d\exp_p)_{tv}(t\, w)$ 형태이고 ([§지수사상, ⁋보조정리 8](/ko/math/riemannian_geometry/exponential_map#lem8)의 변분장 계산과 같은 형태이다), 따라서 $\gamma(t_1)$이 conjugate point인 것은 $(d\exp_p)_{t_1 v}$가 비가역, 즉 $t_1 v$가 $\exp_p$의 임계점인 것과 동치이다. 이 동치성이 Cartan–Hadamard 증명에서 결정적으로 쓰인다.
+$J(t_0) = 0$인 Jacobi field는 정확히 $\gamma(t_0)$에서 출발하는 측지선들의 변분의 변분장이며, 이런 $J$가 $t_1$에서 다시 소멸한다는 것은 $\gamma(t_0)$에서 나온 측지선 다발이 무한소적으로 $\gamma(t_1)$에서 재초점됨을 뜻한다. Conjugate point는 또한 exponential map의 critical point와 정확히 대응한다. $\gamma(t) = \exp_p(t v)$ ($p = \gamma(0)$, $v = \dot\gamma(0)$) 꼴로 쓰면, $J(0) = 0$인 Jacobi field는 $J(t) = (d\exp_p)_{tv}(t\, w)$ 형태이고 ([§지수사상, ⁋보조정리 8](/ko/math/riemannian_geometry/exponential_map#lem8)의 변분장 계산과 같은 형태이다), 따라서 $\gamma(t_1)$이 conjugate point인 것은 $(d\exp_p)_{t_1 v}$가 비가역, 즉 $t_1 v$가 $\exp_p$의 critical point인 것과 동치이다. 이 동치성이 Cartan–Hadamard 증명에서 결정적으로 쓰인다.
 
 ## Index form과 에너지의 제2변분
 
-측지선이 길이 또는 에너지를 *최소화*하는지를 판정하려면 [§측지선, ⁋정리 3](/ko/math/riemannian_geometry/geodesics#thm3)의 제1변분만으로는 부족하고, 임계점에서의 이차 거동, 즉 제2변분을 보아야 한다. 그 이차형식이 index form이다. 먼저 그것을 정의한다.
+측지선이 길이 또는 에너지를 *최소화*하는지를 판정하려면 [§측지선, ⁋정리 3](/ko/math/riemannian_geometry/geodesics#thm3)의 제1변분만으로는 부족하고, critical point에서의 이차 거동, 즉 제2변분을 보아야 한다. 그 이차형식이 index form이다. 먼저 그것을 정의한다.
 
 측지선 $\gamma : [a, b] \rightarrow M$에 대해, $\gamma$를 따른 벡터장 중 양 끝에서 소멸하고 ($V(a) = V(b) = 0$) 조각마다 smooth 것들의 공간을 생각하자. 그 위에서 다음 대칭 bilinear form을 정의한다.
 
@@ -168,7 +168,7 @@ $$\operatorname{Ric}(v, v) \ge (n-1)k$$
 :::
 
 ::: 증명
-두 점 $p, q \in M$를 잡고 $L := d(p, q)$라 하자. $M$이 complete이므로 Hopf-Rinow 정리에 의해 $p$에서 $q$로 가는, 호의 길이로 매개화된 최소화 측지선 $\gamma : [0, L] \rightarrow M$이 존재한다 ($\lVert \dot\gamma\rVert \equiv 1$). $L > \pi/\sqrt{k}$라 가정하고 모순을 이끈다.
+두 점 $p, q \in M$를 잡고 $L := d(p, q)$라 하자. $M$이 complete이므로 Hopf-Rinow 정리에 의해 $p$에서 $q$로 가는, arc length로 매개화된 최소화 측지선 $\gamma : [0, L] \rightarrow M$이 존재한다 ($\lVert \dot\gamma\rVert \equiv 1$). $L > \pi/\sqrt{k}$라 가정하고 모순을 이끈다.
 
 $\gamma$를 따라 $\dot\gamma$에 수직인 parallel orthonormal frame $(E_1, \ldots, E_{n-1}, E_n = \dot\gamma)$을 잡는다 ([§리만 곡률, ⁋정의 2](/ko/math/riemannian_geometry/curvature#def2) 이전에 쓴 parallel transport로 $T_p M$의 orthonormal basis를 운반한 것이며, 측지선의 속도가 평행이라 직교성과 정규성이 보존된다). 각 $i = 1, \ldots, n-1$에 대해 양 끝에서 소멸하는 벡터장
 
@@ -188,7 +188,7 @@ $$(n-1)\,\frac{L}{2}\Bigl( \frac{\pi^2}{L^2} - k \Bigr)$$
 
 이다. 가정 $L > \pi/\sqrt{k}$는 $\pi^2/L^2 < k$를 뜻하므로 이 값은 음수이고, 따라서 적어도 하나의 $i$에서 $I(V_i, V_i) < 0$이다. [명제 7](#prop7)에 의해 변분장 $V_i$를 갖는 고정변분을 따라 흔들면 에너지가 (따라서 길이가) $\gamma$보다 작은 곡선이 존재하므로, $\gamma$는 $p$와 $q$ 사이의 최소화 곡선이 아니다. 이는 $\gamma$가 최소화 측지선이라는 데 모순이다. 따라서 $L \le \pi/\sqrt{k}$이다.
 
-$p, q$가 임의였으므로 $\operatorname{diam}(M) \le \pi/\sqrt{k} < \infty$이다. Complete이고 metrically bounded인 manifold는 Hopf-Rinow 정리에 의해 닫힌 metrically bounded 집합이 콤팩트이므로 $M = \bar B(p, \pi/\sqrt{k})$ 자신이 콤팩트하다.
+$p, q$가 임의였으므로 $\operatorname{diam}(M) \le \pi/\sqrt{k} < \infty$이다. Complete이고 metrically bounded인 manifold는 Hopf-Rinow 정리에 의해 closed metrically bounded 집합이 콤팩트이므로 $M = \bar B(p, \pi/\sqrt{k})$ 자신이 콤팩트하다.
 :::
 
 Bonnet–Myers 정리에서 직경의 상한 $\pi/\sqrt{k}$는 sharp이다. 반지름 $1/\sqrt{k}$의 둥근 구면 $S^n$은 모든 단면곡률이 $k$이므로 $\operatorname{Ric} = (n-1)k$를 등호로 만족하고, 그 직경이 정확히 $\pi/\sqrt{k}$이다. 콤팩트성으로부터 fundamental group에 대한 다음 결과가 곧바로 따라온다.
@@ -200,17 +200,17 @@ Bonnet–Myers 정리에서 직경의 상한 $\pi/\sqrt{k}$는 sharp이다. 반�
 ::: 증명
 $M$의 universal cover $\pi : \tilde M \rightarrow M$를 생각하자. $\tilde M$에 $g$를 끌어올린 metric $\tilde g = \pi^\ast g$를 주면 $\pi$는 국소등거리사상이고, 따라서 $(\tilde M, \tilde g)$의 곡률은 $(M, g)$의 곡률을 국소적으로 그대로 가지므로 $\tilde M$도 같은 Ricci 하한 $\operatorname{Ric} \ge (n-1)k$를 만족한다. 또한 콤팩트 manifold $M$은 complete이고, 그 universal cover $\tilde M$ 역시 끌어올린 metric에 대해 complete이다 (covering map을 따라 측지선이 들어올려지므로). 그럼 [정리 8](#thm8)을 $(\tilde M, \tilde g)$에 적용하여 $\tilde M$도 콤팩트하다.
 
-한편 $\pi : \tilde M \rightarrow M$의 각 fiber $\pi^{-1}(p)$는 deck transformation group과 전단사이고, universal cover의 경우 이 group이 $\pi_1(M)$과 isomorphic이다. $\tilde M$이 콤팩트하고 $\pi$가 covering map이므로 fiber $\pi^{-1}(p)$는 이산이며 콤팩트집합 $\tilde M$ 안에서 닫힌 이산집합, 즉 유한집합이다. 따라서 $\pi_1(M) \cong \pi^{-1}(p)$는 유한군이다.
+한편 $\pi : \tilde M \rightarrow M$의 각 fiber $\pi^{-1}(p)$는 deck transformation group과 전단사이고, universal cover의 경우 이 group이 $\pi_1(M)$과 isomorphic이다. $\tilde M$이 콤팩트하고 $\pi$가 covering map이므로 fiber $\pi^{-1}(p)$는 이산이며 콤팩트집합 $\tilde M$ 안에서 closed 이산집합, 즉 유한집합이다. 따라서 $\pi_1(M) \cong \pi^{-1}(p)$는 유한군이다.
 :::
 
 [따름정리 9](#cor9)는 양의 Ricci curvature가 위상에 거는 제약을 잘 보여준다. 예컨대 $\mathbb{R}^n$이나 평탄 토러스 $T^n$, 또는 무한 fundamental group을 가진 어떤 manifold도 양의 하한을 갖는 Ricci curvature를 허용할 수 없다. 특히 $\pi_1$이 무한인 콤팩트 manifold는 양의 Ricci metric을 가질 수 없다.
 
 ## Cartan–Hadamard 정리
 
-반대쪽 부호, 즉 단면곡률이 어디서도 양이 아닌 경우를 다룬다. 이때는 Jacobi field가 발산만 할 뿐 다시 소멸하지 못하므로 conjugate point가 없고, 그 결과 exponential map이 어디서도 임계점을 갖지 않아 전역 diffeomorphic이 된다. 먼저 conjugate point의 부재를 보인다.
+반대쪽 부호, 즉 단면곡률이 어디서도 양이 아닌 경우를 다룬다. 이때는 Jacobi field가 발산만 할 뿐 다시 소멸하지 못하므로 conjugate point가 없고, 그 결과 exponential map이 어디서도 critical point를 갖지 않아 전역 diffeomorphic이 된다. 먼저 conjugate point의 부재를 보인다.
 
 ::: 보조정리 10
-$(M, g)$의 모든 단면곡률이 $K \le 0$이라 하자. 그럼 임의의 측지선 $\gamma$ 위에는 conjugate point가 없다. 동치로, $p \in M$의 임의의 점에서 $\exp_p$는 정의역의 모든 점에서 비특이 (미분이 가역) 이다.
+$(M, g)$의 모든 단면곡률이 $K \le 0$이라 하자. 그럼 임의의 측지선 $\gamma$ 위에는 conjugate point가 없다. 동치로, $p \in M$의 임의의 점에서 $\exp_p$는 정의역의 모든 점에서 nonsingular (미분이 가역) 이다.
 :::
 
 ::: 증명
@@ -230,12 +230,12 @@ $$\langle R(J, \dot\gamma)\dot\gamma,\, J\rangle = K(J, \dot\gamma)\,\bigl(\lVer
 
 $$f''(t) = 2\lVert D_t J\rVert^2 - 2\langle R(J, \dot\gamma)\dot\gamma, J\rangle \ge 0$$
 
-이 되어 $f$는 볼록함수이다. $J \not\equiv 0$이고 $J(t_0) = 0$이므로 $D_t J(t_0) \ne 0$이고 (그렇지 않으면 [명제 4](#prop4)의 유일성에 의해 $J \equiv 0$), 따라서 $f(t_0) = 0$, $f'(t_0) = 0$, 그리고 $f''(t_0) = 2\lVert D_t J(t_0)\rVert^2 > 0$이다. 볼록이고 $t_0$에서 최솟값 $0$을 갖는 $f$는 $t > t_0$에서 $f(t) > 0$, 즉 $J(t) \ne 0$이다. 그러므로 $J$는 $t_0$ 이후 다시 소멸하지 않으며 conjugate point가 없다.
+이 되어 $f$는 convex 함수이다. $J \not\equiv 0$이고 $J(t_0) = 0$이므로 $D_t J(t_0) \ne 0$이고 (그렇지 않으면 [명제 4](#prop4)의 유일성에 의해 $J \equiv 0$), 따라서 $f(t_0) = 0$, $f'(t_0) = 0$, 그리고 $f''(t_0) = 2\lVert D_t J(t_0)\rVert^2 > 0$이다. Convex이고 $t_0$에서 최솟값 $0$을 갖는 $f$는 $t > t_0$에서 $f(t) > 0$, 즉 $J(t) \ne 0$이다. 그러므로 $J$는 $t_0$ 이후 다시 소멸하지 않으며 conjugate point가 없다.
 
-Conjugate point가 없다는 것은 [정의 5](#def5) 다음 문단에서 본 동치성에 의해 $(d\exp_p)_{tv}$가 모든 $tv$에서 가역, 즉 $\exp_p$가 정의역 전체에서 비특이임과 같다.
+Conjugate point가 없다는 것은 [정의 5](#def5) 다음 문단에서 본 동치성에 의해 $(d\exp_p)_{tv}$가 모든 $tv$에서 가역, 즉 $\exp_p$가 정의역 전체에서 nonsingular임과 같다.
 :::
 
-이제 단면곡률이 비양인 완비 단순연결 manifold의 전역 구조를 결정한다. $\exp_p$가 비특이일 뿐 아니라 전역 diffeomorphic임을 보이는 것이 관건이며, 단순연결성이 그 도약을 가능하게 한다.
+이제 단면곡률이 비양인 완비 단순연결 manifold의 전역 구조를 결정한다. $\exp_p$가 nonsingular일 뿐 아니라 전역 diffeomorphic임을 보이는 것이 관건이며, 단순연결성이 그 도약을 가능하게 한다.
 
 ::: 정리 11 (Cartan–Hadamard)
 $(M, g)$가 $n$차원 complete, 단순연결 Riemannian manifold이고 모든 단면곡률이 $K \le 0$이라 하자. 그럼 임의의 점 $p \in M$에서 exponential map
@@ -246,11 +246,11 @@ $$\exp_p : T_p M \rightarrow M$$
 :::
 
 ::: 증명
-$M$이 complete이므로 Hopf-Rinow 정리에 의해 모든 측지선이 $\mathbb{R}$ 전체로 연장되어 $\exp_p$가 $T_p M$ 전체에서 정의된다. [보조정리 10](#lem10)에 의해 $\exp_p$는 모든 점에서 비특이이므로 국소 diffeomorphic이다.
+$M$이 complete이므로 Hopf-Rinow 정리에 의해 모든 측지선이 $\mathbb{R}$ 전체로 연장되어 $\exp_p$가 $T_p M$ 전체에서 정의된다. [보조정리 10](#lem10)에 의해 $\exp_p$는 모든 점에서 nonsingular이므로 국소 diffeomorphic이다.
 
 핵심은 $\exp_p$를 통해 $T_p M$ 위로 끌어올린 metric $\tilde g := \exp_p^\ast g$가 complete임을 보이는 것이다. $\exp_p$가 국소 diffeomorphic이므로 $\tilde g$는 $T_p M$ 위의 smooth Riemannian metric이고, $\exp_p : (T_p M, \tilde g) \rightarrow (M, g)$는 국소등거리사상이다. $(T_p M, \tilde g)$에서 원점을 지나는 직선 $t \mapsto tv$는 $\exp_p$ 아래에서 측지선 $\gamma_v(t) = \exp_p(tv)$로 보내지므로 ([§지수사상, ⁋보조정리 2](/ko/math/riemannian_geometry/exponential_map#lem2)) 이 직선들은 $\tilde g$의 측지선이며, 이들이 원점에서 모든 방향으로 모든 시간에 정의되므로 $(T_p M, \tilde g)$는 원점에서 geodesically complete이다. Hopf-Rinow 정리는 한 점에서의 geodesic completeness로부터 전체의 completeness를 주므로 $(T_p M, \tilde g)$는 complete이다.
 
-이제 국소등거리사상이자 국소 diffeomorphic인 $\exp_p$가 출발공간이 complete이고 도착공간이 연결일 때 covering map임을 쓴다 (완비 manifold 사이의 국소등거리 surjection은 covering map이라는 사실의 적용이며, surjectivity는 Hopf-Rinow에서 $\exp_p$의 상이 닫혀 있고 열려 있어 연결인 $M$ 전체가 되는 데서 나온다). 따라서 $\exp_p : T_p M \rightarrow M$은 covering map이다. $T_p M \cong \mathbb{R}^n$은 단순연결이므로 universal cover이고, $M$이 단순연결이라는 가정에서 covering map $\exp_p$는 한 겹, 즉 diffeomorphic이다.
+이제 국소등거리사상이자 국소 diffeomorphic인 $\exp_p$가 출발공간이 complete이고 도착공간이 connected일 때 covering map임을 쓴다 (완비 manifold 사이의 국소등거리 surjection은 covering map이라는 사실의 적용이며, surjectivity는 Hopf-Rinow에서 $\exp_p$의 상이 닫혀 있고 열려 있어 connected인 $M$ 전체가 되는 데서 나온다). 따라서 $\exp_p : T_p M \rightarrow M$은 covering map이다. $T_p M \cong \mathbb{R}^n$은 단순연결이므로 universal cover이고, $M$이 단순연결이라는 가정에서 covering map $\exp_p$는 한 겹, 즉 diffeomorphic이다.
 
 $\exp_p$가 전단사이므로 임의의 $q \in M$에 대해 $q = \exp_p(v)$인 $v$가 유일하게 존재하고, 그 측지선 $\gamma_v$가 $p$와 $q$를 잇는 유일한 측지선이다. [§지수사상, ⁋정리 9](/ko/math/riemannian_geometry/exponential_map#thm9)가 함의하듯 $\exp_p$가 diffeomorphic인 영역에서 방사 측지선은 길이를 최소화하므로, 이 유일한 측지선이 $p$와 $q$ 사이의 최단 곡선이다.
 :::

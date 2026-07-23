@@ -100,7 +100,7 @@ $$h:\Omega_{R/A}\otimes_RE \rightarrow \mathfrak{I}'/\mathfrak{I}'^2;\qquad d\x_
 
 이 잘 정의된다. 여기서 $\varphi(\x_s)-\psi(\x_s)\in\mathfrak{I}'$인 것은 [보조정리 3](#lem3)의 증명에서 보았고, $\mathfrak{I}'/\mathfrak{I}'^2$의 $E$-module 구조는 [§미분가군, ⁋명제 14](/ko/math/multilinear_algebra/differential_modules#prop14) 직전의 논의에서와 같다. 이제 $h$가 $\operatorname{NL}(\varphi)-\operatorname{NL}(\psi)$의 chain homotopy임을 보인다.
 
-우선 degree $0$에서, 생성원 $d\x_s\otimes 1$에 대하여
+우선 degree $0$에서, generator $d\x_s\otimes 1$에 대하여
 
 $$\overline{d}'\bigl(h(d\x_s\otimes1)\bigr)=d\bigl(\varphi(\x_s)-\psi(\x_s)\bigr)\otimes1=\bigl(\operatorname{NL}(\varphi)-\operatorname{NL}(\psi)\bigr)(d\x_s\otimes1)$$
 

@@ -15,7 +15,7 @@ weight: 9
 
 ---
 
-우리는 앞선 글에서 다양체 $X$ 위의 divisor들을 정의하고, 이들의 linear equivalence class들이 $\Cl(X)$를 이룸을 보았다. 그러나 모든 divisor가 어떤 유리함수의 zero/pole으로부터 오는 것은 아니다. 예를 들어 $\Cl(\mathbb{P}^n) \cong \mathbb{Z}$이므로 ([§인자, ⁋예시 11](/ko/math/algebraic_varieties/divisors#ex11)), $\mathbb{P}^n$에서 일반적인 divisor $dH$는 $d \ge 0$일 때만 어떤 함수의 zero set으로 나온다.
+우리는 앞선 글에서 variety $X$ 위의 divisor들을 정의하고, 이들의 linear equivalence class들이 $\Cl(X)$를 이룸을 보았다. 그러나 모든 divisor가 어떤 유리함수의 zero/pole으로부터 오는 것은 아니다. 예를 들어 $\Cl(\mathbb{P}^n) \cong \mathbb{Z}$이므로 ([§인자, ⁋예시 11](/ko/math/algebraic_varieties/divisors#ex11)), $\mathbb{P}^n$에서 일반적인 divisor $dH$는 $d \ge 0$일 때만 어떤 함수의 zero set으로 나온다.
 
 이러한 제약을 극복하기 위해 우리는 *line bundle*을 도입한다. Line bundle $\mathcal{L}$은 각 점 $p \in X$에 1차원 벡터공간을 대응시키는 기하학적 대상이며, $\mathcal{L}$의 section $s$는 자연스럽게 divisor $\divisor(s)$를 정의한다. 이 관점에서는 임의의 divisor $D$에 대해 $\mathcal{O}_X(D)$라는 line bundle을 만들 수 있고, 그 section들이 $D$보다 크거나 같은 divisor들에 대응된다. 즉, line bundle은 divisor를 함수의 zero 혹은 pole이라는 제약에서 벗어나 독립적으로 다룰 수 있게 해 준다.
 
@@ -328,10 +328,10 @@ Embedding $i: C \hookrightarrow \mathbb{P}^n$에 대해, $i^\ast \mathcal{O}_{\m
 
 ## Vector Bundle
 
-지금까지 우리는 1차원 벡터공간을 fiber로 갖는 line bundle을 살펴보았다. 이 개념을 일반화하여 각 fiber가 고차원 벡터공간인 *vector bundle*을 정의할 수 있다. Vector bundle은 다양체의 접공간, 법공간 등 기하학적으로 자연스럽게 등장하는 구조를 포착하며, 미분기하학에서의 접다발, 벡터장 등의 개념의 대수기하학적 아날로그이다. Line bundle은 rank 1 vector bundle의 특수한 경우이며, vector bundle 이론의 관점에서 line bundle의 성질들을 더욱 명확하게 이해할 수 있다.
+지금까지 우리는 1차원 벡터공간을 fiber로 갖는 line bundle을 살펴보았다. 이 개념을 일반화하여 각 fiber가 고차원 벡터공간인 *vector bundle*을 정의할 수 있다. Vector bundle은 variety의 tangent space, 법공간 등 기하학적으로 자연스럽게 등장하는 구조를 포착하며, 미분기하학에서의 tangent bundle, 벡터장 등의 개념의 대수기하학적 아날로그이다. Line bundle은 rank 1 vector bundle의 특수한 경우이며, vector bundle 이론의 관점에서 line bundle의 성질들을 더욱 명확하게 이해할 수 있다.
 
 ::: 정의 23
-다양체 $X$ 위의 *rank r vector bundle<sub>랭크 $r$ 벡터다발</sub>* $\mathcal{E}$는 다음과 같은 데이터로 구성된다.
+Variety $X$ 위의 *rank r vector bundle<sub>랭크 $r$ 벡터다발</sub>* $\mathcal{E}$는 다음과 같은 데이터로 구성된다.
 
 1. Projection $\pi: \mathcal{E} \rightarrow X$.
 2. $X$의 open cover $\{U_i\}$와 각 $i$에 대한 *local trivialization* $\phi_i: \pi^{-1}(U_i) \overset{\sim}{\longrightarrow} U_i \times \mathbb{A}^r$. 이들이 정의하는
@@ -373,7 +373,7 @@ Grassmannian $\Gr(k, n)$ 위에 다음 두 vector bundle을 정의한다.
 
 $$0 \rightarrow S \rightarrow \mathcal{O}_{\Gr(k,n)}^{\oplus n} \rightarrow Q \rightarrow 0$$
 
-여기서 가운데 항은 $\Gr(k, n) \times \mathbb{A}^n$으로, trivial bundle of rank $n$이다. 첫 번째 사상은 각 점 $([V], v) \in S$를 $([V], v) \in \mathcal{O}^{\oplus n}$으로 포함시키는 것이고, 두 번째 사상은 $([V], w) \in \mathcal{O}^{\oplus n}$을 $([V], [w]) \in Q$로 보내는 quotient map이다.
+여기서 가운데 항은 $\Gr(k, n) \times \mathbb{A}^n$으로, trivial bundle of rank $n$이다. 첫 번째 morphism은 각 점 $([V], v) \in S$를 $([V], v) \in \mathcal{O}^{\oplus n}$으로 포함시키는 것이고, 두 번째 morphism은 $([V], w) \in \mathcal{O}^{\oplus n}$을 $([V], [w]) \in Q$로 보내는 quotient map이다.
 
 ::: 명제 26
 $\Gr(1, n+1) = \mathbb{P}^n$에서 tautological bundle $S$는 $\mathcal{O}_{\mathbb{P}^n}(-1)$과 isomorphic하다.

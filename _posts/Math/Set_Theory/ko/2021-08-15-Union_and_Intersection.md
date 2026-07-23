@@ -88,7 +88,7 @@ $$\bigcup_{j\in J}A_j\subset\bigcup_{i\in I} A_i,\qquad\bigcap_{j\in J}A_j\supse
 
 ## 결합법칙
 
-집합의 연산들은 결합법칙을 만족한다.
+집합의 연산들은 associative하다.
 
 ::: 명제 5
  $(A_i)_{i\in I}$가 집합들의 family고, index set $I$가 family $(J_k)_{k\in K}$들의 합집합이라 하자. 그럼

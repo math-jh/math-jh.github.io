@@ -14,14 +14,14 @@ weight: 5
 published: false
 ---
 
-Cauchy 정리는 ([§Cauchy 정리](/ko/math/complex_analysis/cauchy_theorem)) 단순연결 영역에서 holomorphic function의 닫힌 경로 적분이 소멸함을 알려 주었다. 이 소멸 현상의 진짜 위력은, 피적분함수에 $1/(w-z)$라는 인위적인 극점을 하나 끼워 넣었을 때 비로소 드러난다. holomorphic function $f$를 원판의 경계에서 적분하되 핵 $1/(w-z)$로 무게를 주면, 그 적분이 내부의 한 점 $z$에서의 함숫값 $f(z)$를 정확히 되돌려 준다. 이것이 Cauchy 적분공식으로, holomorphic function이 경계 위의 값만으로 내부 전체에서 완전히 결정된다는 놀라운 강성을 표현한다. 더 나아가 이 공식의 적분기호 안에서 $z$에 대해 미분을 자유로이 반복할 수 있어, 한 번 복소미분가능한 함수가 자동으로 무한히 미분가능하다는 실해석에는 유례가 없는 결론이 따라 나온다. 여기에서 도함수의 크기를 경계값으로 어림하는 Cauchy 부등식이 나오고, 그로부터 유계 entire function이 상수임을 말하는 Liouville 정리와 대수학의 기본정리가, 그리고 적분공식의 역방향으로 Cauchy 정리의 역인 Morera 정리가 차례로 갈라져 나온다.
+Cauchy 정리는 ([§Cauchy 정리](/ko/math/complex_analysis/cauchy_theorem)) 단순연결 영역에서 holomorphic function의 closed 경로 적분이 소멸함을 알려 주었다. 이 소멸 현상의 진짜 위력은, 피적분함수에 $1/(w-z)$라는 인위적인 극점을 하나 끼워 넣었을 때 비로소 드러난다. holomorphic function $f$를 원판의 boundary에서 적분하되 kernel $1/(w-z)$로 무게를 주면, 그 적분이 interior의 한 점 $z$에서의 함숫값 $f(z)$를 정확히 되돌려 준다. 이것이 Cauchy 적분공식으로, holomorphic function이 boundary 위의 값만으로 interior 전체에서 완전히 결정된다는 놀라운 강성을 표현한다. 더 나아가 이 공식의 적분기호 안에서 $z$에 대해 미분을 자유로이 반복할 수 있어, 한 번 복소미분가능한 함수가 자동으로 무한히 미분가능하다는 실해석에는 유례가 없는 결론이 따라 나온다. 여기에서 도함수의 크기를 경계값으로 어림하는 Cauchy 부등식이 나오고, 그로부터 유계 entire function이 상수임을 말하는 Liouville 정리와 대수학의 기본정리가, 그리고 적분공식의 역방향으로 Cauchy 정리의 역인 Morera 정리가 차례로 갈라져 나온다.
 
 ## Cauchy 적분공식
 
-$f$가 닫힌 원판 $\overline{D(z_0, r)}$를 품는 영역에서 holomorphic이라 하자. 경계원 위에서 $f$를 핵 $1/(w-z)$로 무게를 주어 적분하면, 그 값이 내부 점 $z$에서의 $f(z)$를 복원한다는 것이 Cauchy 적분공식이다. 증명의 발상은 다음과 같다. 함수 $w \mapsto f(w)/(w-z)$는 $w = z$를 제외한 원판 위에서 holomorphic이므로, Cauchy 정리의 homotopy 형태를 써서 적분의 경로를 경계원에서 $z$를 중심으로 한 아주 작은 원으로 옮길 수 있다. 그 작은 원 위에서는 $f(w) \approx f(z)$이고, 남는 적분 $\oint dw/(w-z)$이 정확히 $2\pi i$를 내므로 결과가 $2\pi i\, f(z)$가 된다.
+$f$가 closed 원판 $\overline{D(z_0, r)}$를 품는 영역에서 holomorphic이라 하자. 경계원 위에서 $f$를 kernel $1/(w-z)$로 무게를 주어 적분하면, 그 값이 interior 점 $z$에서의 $f(z)$를 복원한다는 것이 Cauchy 적분공식이다. 증명의 발상은 다음과 같다. 함수 $w \mapsto f(w)/(w-z)$는 $w = z$를 제외한 원판 위에서 holomorphic이므로, Cauchy 정리의 homotopy 형태를 써서 적분의 경로를 경계원에서 $z$를 중심으로 한 아주 작은 원으로 옮길 수 있다. 그 작은 원 위에서는 $f(w) \approx f(z)$이고, 남는 적분 $\oint dw/(w-z)$이 정확히 $2\pi i$를 내므로 결과가 $2\pi i\, f(z)$가 된다.
 
 ::: 정리 1 (Cauchy 적분공식)
-$\Omega \subseteq \mathbb{C}$가 열린집합이고 $f$가 $\Omega$에서 holomorphic이라 하자. 닫힌 원판 $\overline{D(z_0, r)}$이 $\Omega$에 들어 있으면, 열린 원판 $D(z_0, r)$ 안의 임의의 점 $z$에 대하여
+$\Omega \subseteq \mathbb{C}$가 열린집합이고 $f$가 $\Omega$에서 holomorphic이라 하자. closed 원판 $\overline{D(z_0, r)}$이 $\Omega$에 들어 있으면, 열린 원판 $D(z_0, r)$ 안의 임의의 점 $z$에 대하여
 
 $$f(z) = \frac{1}{2\pi i}\oint_{\lvert w - z_0\rvert = r} \frac{f(w)}{w - z}\,dw$$
 
@@ -29,15 +29,15 @@ $$f(z) = \frac{1}{2\pi i}\oint_{\lvert w - z_0\rvert = r} \frac{f(w)}{w - z}\,dw
 :::
 
 ::: 증명
-$z \in D(z_0, r)$을 고정한다. 닫힌 원판이 열린집합 $\Omega$에 들어 있으므로, 약간 더 큰 열린 원판 $D(z_0, R) \subseteq \Omega$ ($R > r$) 을 잡을 수 있다. 함수
+$z \in D(z_0, r)$을 고정한다. closed 원판이 열린집합 $\Omega$에 들어 있으므로, 약간 더 큰 열린 원판 $D(z_0, R) \subseteq \Omega$ ($R > r$) 을 잡을 수 있다. 함수
 
 $$g(w) = \frac{f(w)}{w - z}$$
 
-는 $w = z$를 뺀 $D(z_0, R)$에서 holomorphic이다. 경계원 $C_r : \lvert w - z_0\rvert = r$과, $z$를 중심으로 한 충분히 작은 원 $C_\rho : \lvert w - z\rvert = \rho$ (둘 다 반시계방향, $\rho$은 $\overline{D(z, \rho)} \subseteq D(z_0, r)$이 되도록 작게) 을 생각한다. 두 원은 모두 구멍 뚫린 영역 $D(z_0, R)\setminus\{z\}$ 안의 닫힌 곡선이고, 이 영역 안에서 서로 homotopic하다. 곧 반지름을 연속적으로 키우거나 중심을 옮기며 한 원을 다른 원으로 변형하되 그 과정에서 점 $z$를 넘지 않을 수 있다. 따라서 Cauchy의 homotopy 정리 ([§Cauchy 정리, ⁋정리 6](/ko/math/complex_analysis/cauchy_theorem#thm6)) 에 의해
+는 $w = z$를 뺀 $D(z_0, R)$에서 holomorphic이다. 경계원 $C_r : \lvert w - z_0\rvert = r$과, $z$를 중심으로 한 충분히 작은 원 $C_\rho : \lvert w - z\rvert = \rho$ (둘 다 반시계방향, $\rho$은 $\overline{D(z, \rho)} \subseteq D(z_0, r)$이 되도록 작게) 을 생각한다. 두 원은 모두 구멍 뚫린 영역 $D(z_0, R)\setminus\{z\}$ 안의 closed 곡선이고, 이 영역 안에서 서로 homotopic하다. 곧 반지름을 연속적으로 키우거나 중심을 옮기며 한 원을 다른 원으로 변형하되 그 과정에서 점 $z$를 넘지 않을 수 있다. 따라서 Cauchy의 homotopy 정리 ([§Cauchy 정리, ⁋정리 6](/ko/math/complex_analysis/cauchy_theorem#thm6)) 에 의해
 
 $$\oint_{C_r} g(w)\,dw = \oint_{C_\rho} g(w)\,dw$$
 
-이다. 이제 우변을 $\rho \rightarrow 0$의 극한으로 평가한다. 핵 부분의 적분 $\oint_{C_\rho} dw/(w - z)$는 중심 $z$를 한 바퀴 도는 원에서의 적분이므로 $2\pi i$이다 ([§복소적분, ⁋명제 10](/ko/math/complex_analysis/complex_integration#prop10)에서 $n = -1$인 경우, 평행이동으로 중심을 $z$로 옮긴 것). 따라서
+이다. 이제 우변을 $\rho \rightarrow 0$의 극한으로 평가한다. kernel 부분의 적분 $\oint_{C_\rho} dw/(w - z)$는 중심 $z$를 한 바퀴 도는 원에서의 적분이므로 $2\pi i$이다 ([§복소적분, ⁋명제 10](/ko/math/complex_analysis/complex_integration#prop10)에서 $n = -1$인 경우, 평행이동으로 중심을 $z$로 옮긴 것). 따라서
 
 $$\oint_{C_\rho} \frac{f(w)}{w - z}\,dw - 2\pi i\, f(z) = \oint_{C_\rho} \frac{f(w) - f(z)}{w - z}\,dw$$
 
@@ -52,14 +52,14 @@ $$\oint_{C_r} \frac{f(w)}{w - z}\,dw = 2\pi i\, f(z)$$
 이고, 양변을 $2\pi i$로 나누면 주장하는 공식을 얻는다.
 :::
 
-정리 1은 holomorphic function의 내부값이 경계값에 의해 일의적으로 결정됨을 말한다. 경계원 위의 $f$ 값만 알면 적분 한 번으로 원판 내부 어디에서나 $f$를 계산할 수 있으므로, holomorphicity는 실해석의 smooth 함수에는 없는 극단적인 강성을 함수에 부여한다. 가령 두 holomorphic function이 한 원의 경계에서 일치하면 그 원판 전체에서 일치한다. 적분기호 안의 $z$ 의존성이 핵 $1/(w-z)$에만 들어 있고 $f(w)$에는 들어 있지 않다는 점이 결정적인데, 이 깔끔한 분리 덕분에 $z$에 대한 미분을 적분 안으로 옮겨 핵만 미분하는 것이 가능해진다. 이것이 다음 절의 미분공식이다.
+정리 1은 holomorphic function의 내부값이 경계값에 의해 일의적으로 결정됨을 말한다. 경계원 위의 $f$ 값만 알면 적분 한 번으로 원판 interior 어디에서나 $f$를 계산할 수 있으므로, holomorphicity는 실해석의 smooth 함수에는 없는 극단적인 강성을 함수에 부여한다. 가령 두 holomorphic function이 한 원의 boundary에서 일치하면 그 원판 전체에서 일치한다. 적분기호 안의 $z$ 의존성이 kernel $1/(w-z)$에만 들어 있고 $f(w)$에는 들어 있지 않다는 점이 결정적인데, 이 깔끔한 분리 덕분에 $z$에 대한 미분을 적분 안으로 옮겨 kernel만 미분하는 것이 가능해진다. 이것이 다음 절의 미분공식이다.
 
 ## 미분공식과 무한미분가능성
 
-Cauchy 적분공식은 $f(z)$를 매개변수 $z$에 의존하는 적분으로 표현한다. 핵 $1/(w-z)$이 $z$에 대해 매끄럽게 의존하므로, 차분비를 만들어 적분기호 안에서 극한을 취하면 $f$의 도함수가 다시 같은 꼴의 적분으로 표현되리라 기대할 수 있다. 이를 반복하면 $f$가 임의의 차수로 미분되며, 각 도함수가 경계적분으로 주어진다. 결론적으로 한 번 복소미분가능한 함수는 자동으로 무한히 미분가능하다.
+Cauchy 적분공식은 $f(z)$를 매개변수 $z$에 의존하는 적분으로 표현한다. kernel $1/(w-z)$이 $z$에 대해 매끄럽게 의존하므로, 차분비를 만들어 적분기호 안에서 극한을 취하면 $f$의 도함수가 다시 같은 꼴의 적분으로 표현되리라 기대할 수 있다. 이를 반복하면 $f$가 임의의 차수로 미분되며, 각 도함수가 경계적분으로 주어진다. 결론적으로 한 번 복소미분가능한 함수는 자동으로 무한히 미분가능하다.
 
 ::: 정리 2 (Cauchy 미분공식)
-$\Omega \subseteq \mathbb{C}$가 열린집합이고 $f$가 $\Omega$에서 holomorphic이라 하자. 닫힌 원판 $\overline{D(z_0, r)}$이 $\Omega$에 들어 있으면, $f$는 $D(z_0, r)$에서 모든 차수로 복소미분가능하고, 각 $z \in D(z_0, r)$과 정수 $n \geq 0$에 대하여
+$\Omega \subseteq \mathbb{C}$가 열린집합이고 $f$가 $\Omega$에서 holomorphic이라 하자. closed 원판 $\overline{D(z_0, r)}$이 $\Omega$에 들어 있으면, $f$는 $D(z_0, r)$에서 모든 차수로 복소미분가능하고, 각 $z \in D(z_0, r)$과 정수 $n \geq 0$에 대하여
 
 $$f^{(n)}(z) = \frac{n!}{2\pi i}\oint_{\lvert w - z_0\rvert = r} \frac{f(w)}{(w - z)^{n+1}}\,dw$$
 
@@ -77,11 +77,11 @@ $$\frac{f^{(n)}(z + h) - f^{(n)}(z)}{h} = \frac{n!}{2\pi i}\oint_{C_r} f(w)\cdot
 
 $$\frac{1}{a^{n+1}} - \frac{1}{b^{n+1}} = \frac{b^{n+1} - a^{n+1}}{a^{n+1}b^{n+1}} = (b - a)\,\frac{\sum_{j=0}^{n} a^j b^{n-j}}{a^{n+1}b^{n+1}}$$
 
-를 써서 $1/h$을 약분하면, 차분비의 핵은
+를 써서 $1/h$을 약분하면, 차분비의 kernel은
 
 $$\frac{1}{h}\left( \frac{1}{(w - z - h)^{n+1}} - \frac{1}{(w - z)^{n+1}} \right) = \frac{\sum_{j=0}^{n} (w - z - h)^j (w - z)^{n-j}}{(w - z - h)^{n+1}(w - z)^{n+1}}$$
 
-가 된다. $h \rightarrow 0$이면 분자의 각 항이 $(w - z)^j (w - z)^{n-j} = (w-z)^n$으로 수렴하여 합이 $(n+1)(w - z)^n$이 되고, 분모는 $(w - z)^{2n+2}$으로 수렴하므로, 핵은 $C_r$ 위에서 균등하게
+가 된다. $h \rightarrow 0$이면 분자의 각 항이 $(w - z)^j (w - z)^{n-j} = (w-z)^n$으로 수렴하여 합이 $(n+1)(w - z)^n$이 되고, 분모는 $(w - z)^{2n+2}$으로 수렴하므로, kernel은 $C_r$ 위에서 균등하게
 
 $$\frac{(n+1)(w - z)^n}{(w - z)^{2n+2}} = \frac{n+1}{(w - z)^{n+2}}$$
 
@@ -92,7 +92,7 @@ $$f^{(n+1)}(z) = \frac{n!}{2\pi i}\oint_{C_r} f(w)\cdot \frac{n+1}{(w - z)^{n+2}
 이다. 이로써 차수 $n+1$에 대한 공식이 성립하고, 동시에 $f^{(n)}$이 $D(z_0, r)$에서 미분가능함이 확인되었다. 귀납법에 의해 $f$는 모든 차수로 미분가능하며 각 도함수가 위 적분으로 주어진다.
 :::
 
-정리 2의 가장 중요한 귀결은 holomorphic function의 무한미분가능성이다. $\Omega$에서 holomorphic인 $f$와 임의의 점 $z_0 \in \Omega$에 대해, $\Omega$가 열려 있으므로 작은 닫힌 원판 $\overline{D(z_0, r)} \subseteq \Omega$을 잡을 수 있고, 정리 2에 의해 $f$는 그 원판 안에서 모든 차수로 미분가능하다. 점 $z_0$이 임의였으므로 $f$는 $\Omega$ 전체에서 무한히 미분가능하며, 더구나 모든 도함수 $f^{(n)}$이 다시 holomorphic이다.
+정리 2의 가장 중요한 귀결은 holomorphic function의 무한미분가능성이다. $\Omega$에서 holomorphic인 $f$와 임의의 점 $z_0 \in \Omega$에 대해, $\Omega$가 열려 있으므로 작은 closed 원판 $\overline{D(z_0, r)} \subseteq \Omega$을 잡을 수 있고, 정리 2에 의해 $f$는 그 원판 안에서 모든 차수로 미분가능하다. 점 $z_0$이 임의였으므로 $f$는 $\Omega$ 전체에서 무한히 미분가능하며, 더구나 모든 도함수 $f^{(n)}$이 다시 holomorphic이다.
 
 ::: 따름정리 3
 $f$가 영역 $\Omega \subseteq \mathbb{C}$에서 holomorphic이면, $f$는 $\Omega$에서 무한히 복소미분가능하고, 모든 차수의 도함수 $f^{(n)}$ 역시 $\Omega$에서 holomorphic이다.
@@ -106,10 +106,10 @@ $z_0 \in \Omega$을 임의로 잡으면 $\Omega$가 열려 있어 $\overline{D(z
 
 ## Cauchy 부등식과 Liouville 정리
 
-미분공식은 도함수 $f^{(n)}(z_0)$을 경계원 위의 적분으로 표현하므로, ML 부등식으로 그 크기를 경계 위 $f$의 최댓값으로 직접 어림할 수 있다. 이렇게 얻는 Cauchy 부등식은 도함수의 성장을 함숫값의 크기로 통제하며, 이로부터 평면 전체에서 유계인 holomorphic function이 상수일 수밖에 없다는 Liouville 정리가 따라 나온다.
+미분공식은 도함수 $f^{(n)}(z_0)$을 경계원 위의 적분으로 표현하므로, ML 부등식으로 그 크기를 boundary 위 $f$의 최댓값으로 직접 어림할 수 있다. 이렇게 얻는 Cauchy 부등식은 도함수의 성장을 함숫값의 크기로 통제하며, 이로부터 평면 전체에서 유계인 holomorphic function이 상수일 수밖에 없다는 Liouville 정리가 따라 나온다.
 
 ::: 정리 4 (Cauchy 부등식)
-$f$가 닫힌 원판 $\overline{D(z_0, r)}$를 품는 영역에서 holomorphic이고, 경계원 $\lvert w - z_0\rvert = r$ 위에서 $\lvert f(w)\rvert \leq M$이라 하자. 그러면 모든 정수 $n \geq 0$에 대하여
+$f$가 closed 원판 $\overline{D(z_0, r)}$를 품는 영역에서 holomorphic이고, 경계원 $\lvert w - z_0\rvert = r$ 위에서 $\lvert f(w)\rvert \leq M$이라 하자. 그러면 모든 정수 $n \geq 0$에 대하여
 
 $$\bigl\lvert f^{(n)}(z_0)\bigr\rvert \leq \frac{n!\,M}{r^n}$$
 
@@ -132,14 +132,14 @@ $$\bigl\lvert f^{(n)}(z_0)\bigr\rvert = \frac{n!}{2\pi}\left\lvert \oint \frac{f
 이다.
 :::
 
-Cauchy 부등식은 도함수의 크기를 경계 위 함숫값의 최댓값과 원의 반지름으로 직접 묶는다. 특히 $f$가 더 큰 영역에서 holomorphic이어서 반지름 $r$을 키울 수 있다면, $M$이 $r$과 함께 너무 빨리 커지지 않는 한 우변을 $r$을 키워 줄일 수 있다. 이 관찰을 $n = 1$과 평면 전체에서 유계인 함수에 적용하면 다음 정리가 즉시 나온다.
+Cauchy 부등식은 도함수의 크기를 boundary 위 함숫값의 최댓값과 원의 반지름으로 직접 묶는다. 특히 $f$가 더 큰 영역에서 holomorphic이어서 반지름 $r$을 키울 수 있다면, $M$이 $r$과 함께 너무 빨리 커지지 않는 한 우변을 $r$을 키워 줄일 수 있다. 이 관찰을 $n = 1$과 평면 전체에서 유계인 함수에 적용하면 다음 정리가 즉시 나온다.
 
 ::: 따름정리 5 (Liouville 정리)
 $f$가 entire function이고 평면 전체에서 유계이면, 곧 어떤 상수 $M$이 있어 모든 $z \in \mathbb{C}$에 대해 $\lvert f(z)\rvert \leq M$이면, $f$는 상수함수이다.
 :::
 
 ::: 증명
-$f$가 entire function이므로 ([§복소정칙함수, ⁋정의 2](/ko/math/complex_analysis/holomorphic_functions#def2)) 임의의 점 $z_0 \in \mathbb{C}$과 임의의 $r > 0$에 대해 닫힌 원판 $\overline{D(z_0, r)}$가 holomorphic 영역에 들어 있다. 경계원 위에서 $\lvert f\rvert \leq M$이므로 정리 4를 $n = 1$에 적용하면
+$f$가 entire function이므로 ([§복소정칙함수, ⁋정의 2](/ko/math/complex_analysis/holomorphic_functions#def2)) 임의의 점 $z_0 \in \mathbb{C}$과 임의의 $r > 0$에 대해 closed 원판 $\overline{D(z_0, r)}$가 holomorphic 영역에 들어 있다. 경계원 위에서 $\lvert f\rvert \leq M$이므로 정리 4를 $n = 1$에 적용하면
 
 $$\bigl\lvert f'(z_0)\bigr\rvert \leq \frac{1!\,M}{r} = \frac{M}{r}$$
 
@@ -150,14 +150,14 @@ Liouville 정리는 holomorphicity와 유계성이 양립하기에는 너무 강
 
 ## 대수학의 기본정리
 
-복소수체에서는 상수가 아닌 모든 다항식이 근을 가진다. 이 사실이 대수학의 기본정리이며, 그 이름과 달리 순수하게 algebraic한 증명은 알려져 있지 않고 해석학의 도구가 본질적으로 개입한다. Liouville 정리를 쓰면 근이 없다는 가정에서 다항식의 역수가 유계인 entire function이 되어 모순이 빚어짐을 간단히 보일 수 있다.
+복소수체에서는 상수가 아닌 모든 다항식이 root를 가진다. 이 사실이 대수학의 기본정리이며, 그 이름과 달리 순수하게 algebraic한 증명은 알려져 있지 않고 해석학의 도구가 본질적으로 개입한다. Liouville 정리를 쓰면 root가 없다는 가정에서 다항식의 역수가 유계인 entire function이 되어 모순이 빚어짐을 간단히 보일 수 있다.
 
 ::: 정리 6 (대수학의 기본정리)
-차수가 $1$ 이상인 임의의 복소계수 다항식 $p(z) = a_n z^n + \cdots + a_1 z + a_0$ ($a_n \neq 0$, $n \geq 1$) 은 $\mathbb{C}$에서 적어도 하나의 근을 가진다.
+degree가 $1$ 이상인 임의의 복소계수 다항식 $p(z) = a_n z^n + \cdots + a_1 z + a_0$ ($a_n \neq 0$, $n \geq 1$) 은 $\mathbb{C}$에서 적어도 하나의 root를 가진다.
 :::
 
 ::: 증명
-$p$가 근을 갖지 않는다고 가정하면, 곧 모든 $z \in \mathbb{C}$에 대해 $p(z) \neq 0$이면 함수
+$p$가 root를 갖지 않는다고 가정하면, 곧 모든 $z \in \mathbb{C}$에 대해 $p(z) \neq 0$이면 함수
 
 $$g(z) = \frac{1}{p(z)}$$
 
@@ -171,19 +171,19 @@ $$p(z) = a_n z^n\left( 1 + \frac{a_{n-1}}{a_n z} + \cdots + \frac{a_0}{a_n z^n} 
 
 $$\lvert p(z)\rvert \geq \frac{1}{2}\,\lvert a_n\rvert\,\lvert z\rvert^n \geq \frac{1}{2}\,\lvert a_n\rvert\,R^n$$
 
-이다. 곧 $\lvert z\rvert \geq R$인 곳에서 $\lvert g(z)\rvert \leq 2/(\lvert a_n\rvert R^n)$로 유계이다. 한편 닫힌 원판 $\overline{D(0, R)}$은 콤팩트이고 $g$가 그 위에서 연속이므로 $\lvert g\rvert$은 거기서 어떤 최댓값 이하로 유계이다. 두 어림을 합치면 $g$는 $\mathbb{C}$ 전체에서 유계인 entire function이다.
+이다. 곧 $\lvert z\rvert \geq R$인 곳에서 $\lvert g(z)\rvert \leq 2/(\lvert a_n\rvert R^n)$로 유계이다. 한편 closed 원판 $\overline{D(0, R)}$은 콤팩트이고 $g$가 그 위에서 연속이므로 $\lvert g\rvert$은 거기서 어떤 최댓값 이하로 유계이다. 두 어림을 합치면 $g$는 $\mathbb{C}$ 전체에서 유계인 entire function이다.
 
-Liouville 정리 (따름정리 5) 에 의해 $g$는 상수이고, 따라서 $p = 1/g$도 상수이다. 그런데 이는 $p$의 차수가 $n \geq 1$이라는 가정에 어긋난다. 모순이므로 $p$는 적어도 하나의 근을 가진다.
+Liouville 정리 (따름정리 5) 에 의해 $g$는 상수이고, 따라서 $p = 1/g$도 상수이다. 그런데 이는 $p$의 degree가 $n \geq 1$이라는 가정에 어긋난다. 모순이므로 $p$는 적어도 하나의 root를 가진다.
 :::
 
-정리 6에서 근을 하나 얻으면 인수분해 $p(z) = (z - \alpha)q(z)$로 차수를 하나 낮추고, $q$에 같은 정리를 반복 적용하여 $p$가 (중복도를 세어) 정확히 $n$개의 근을 가짐을 얻는다. 곧 $\mathbb{C}$ 위에서 차수 $n$인 다항식은 $p(z) = a_n(z - \alpha_1)\cdots(z - \alpha_n)$으로 일차식의 곱으로 완전히 쪼개지며, 이는 복소수체가 대수적으로 닫혀 있다는 진술과 같다. 해석학의 강성 정리 하나가 대수학의 근본 사실을 떠받친다는 점이 인상적이다.
+정리 6에서 root를 하나 얻으면 인수분해 $p(z) = (z - \alpha)q(z)$로 degree를 하나 낮추고, $q$에 같은 정리를 반복 적용하여 $p$가 (중복도를 세어) 정확히 $n$개의 root를 가짐을 얻는다. 곧 $\mathbb{C}$ 위에서 degree $n$인 다항식은 $p(z) = a_n(z - \alpha_1)\cdots(z - \alpha_n)$으로 일차식의 곱으로 완전히 쪼개지며, 이는 복소수체가 대수적으로 닫혀 있다는 진술과 같다. 해석학의 강성 정리 하나가 대수학의 근본 사실을 떠받친다는 점이 인상적이다.
 
 ## 평균값 성질과 Morera 정리
 
-Cauchy 적분공식을 원의 중심에서 평가하면 경계원을 매개화하여 곧장 평균값 성질이 나온다. holomorphic function의 중심값이 경계 위 값들의 평균과 같다는 이 성질은 적분공식의 가장 직접적인 기하학적 그림자이다. 끝으로 적분공식의 논리를 거꾸로 밟아, 모든 삼각형에서 적분이 소멸하는 연속함수가 holomorphic이라는 Morera 정리를 보인다. 이는 Cauchy 정리의 역에 해당하며, holomorphicity의 적분 판정법을 준다.
+Cauchy 적분공식을 원의 중심에서 평가하면 경계원을 매개화하여 곧장 평균값 성질이 나온다. holomorphic function의 중심값이 boundary 위 값들의 평균과 같다는 이 성질은 적분공식의 가장 직접적인 기하학적 그림자이다. 끝으로 적분공식의 논리를 거꾸로 밟아, 모든 삼각형에서 적분이 소멸하는 연속함수가 holomorphic이라는 Morera 정리를 보인다. 이는 Cauchy 정리의 역에 해당하며, holomorphicity의 적분 판정법을 준다.
 
 ::: 따름정리 7 (평균값 성질)
-$f$가 닫힌 원판 $\overline{D(z_0, r)}$를 품는 영역에서 holomorphic이면
+$f$가 closed 원판 $\overline{D(z_0, r)}$를 품는 영역에서 holomorphic이면
 
 $$f(z_0) = \frac{1}{2\pi}\int_0^{2\pi} f\bigl(z_0 + r e^{i\theta}\bigr)\,d\theta$$
 
@@ -205,7 +205,7 @@ $$f(z_0) = \frac{1}{2\pi i}\int_0^{2\pi} \frac{f(z_0 + r e^{i\theta})}{r e^{i\th
 평균값 성질은 holomorphic function이 어떤 점에서도 주위 원을 따른 평균을 그 중심값으로 되돌려 받음을 말한다. 실수부와 허수부를 따로 떼어 보면 이는 조화함수의 평균값 성질이기도 하며 ([§복소정칙함수, ⁋명제 12](/ko/math/complex_analysis/holomorphic_functions#prop12)에서 holomorphic function의 실허부가 조화함수임), 조화함수가 따르는 최대값 원리와 같은 정성적 결론의 출발점이 된다. 이제 적분공식이 의지하던 Cauchy 정리의 방향을 뒤집는다. Cauchy 정리는 holomorphicity에서 삼각형 적분의 소멸을 끌어냈는데, Morera 정리는 그 역으로 삼각형 적분의 소멸에서 holomorphicity를 회복한다.
 
 ::: 정리 8 (Morera)
-$f$가 영역 $\Omega \subseteq \mathbb{C}$에서 연속이고, $\Omega$에 (내부와 경계를 포함하여) 들어 있는 임의의 삼각형 $T$에 대하여
+$f$가 영역 $\Omega \subseteq \mathbb{C}$에서 연속이고, $\Omega$에 (interior와 boundary를 포함하여) 들어 있는 임의의 삼각형 $T$에 대하여
 
 $$\oint_{\partial T} f(z)\,dz = 0$$
 
@@ -217,7 +217,7 @@ holomorphicity는 국소적 성질이므로, 각 점 $z_0 \in \Omega$의 어떤 
 
 $$F(z) = \int_{[z_0, z]} f(\zeta)\,d\zeta \qquad (z \in D)$$
 
-을 정의한다. $F$가 $D$에서 $f$의 원시함수임을 보인다. $z \in D$과 $z + h \in D$에 대해 세 점 $z_0, z, z + h$가 이루는 삼각형은 볼록한 $D$에 통째로 들어 있으므로, 가정에 의해 그 경계 적분이 $0$이고, 변의 향과 이어붙이기를 정리하면 ([§복소적분, ⁋명제 4](/ko/math/complex_analysis/complex_integration#prop4))
+을 정의한다. $F$가 $D$에서 $f$의 원시함수임을 보인다. $z \in D$과 $z + h \in D$에 대해 세 점 $z_0, z, z + h$가 이루는 삼각형은 볼록한 $D$에 통째로 들어 있으므로, 가정에 의해 그 boundary 적분이 $0$이고, 변의 향과 이어붙이기를 정리하면 ([§복소적분, ⁋명제 4](/ko/math/complex_analysis/complex_integration#prop4))
 
 $$F(z + h) - F(z) = \int_{[z, z+h]} f(\zeta)\,d\zeta$$
 

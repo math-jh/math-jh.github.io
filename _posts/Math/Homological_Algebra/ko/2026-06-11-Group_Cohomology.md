@@ -14,7 +14,7 @@ published: false
 
 ---
 
-지금까지 우리는 derived functor의 일반론을 만들고 ([§유도함자](/ko/math/homological_algebra/derived_functors)), 그 대표적인 예시로 $\Ext$와 $\Tor$를 살펴보았다 ([§Ext와 Tor](/ko/math/homological_algebra/ext_and_tor)). 이번 글에서는 이 기계를 group에 적용한다. Group $G$가 abelian group에 작용하는 상황은 수학 전반에서 등장하는데, 이 때 가장 기본적인 조작인 "$G$-invariant들을 취하는 것"은 exact functor가 아니다. 군 cohomology는 정확히 이 functor의 derived functor이다.
+지금까지 우리는 derived functor의 일반론을 만들고 ([§유도함자](/ko/math/homological_algebra/derived_functors)), 그 대표적인 예시로 $\Ext$와 $\Tor$를 살펴보았다 ([§Ext와 Tor](/ko/math/homological_algebra/ext_and_tor)). 이번 글에서는 이 기계를 group에 적용한다. Group $G$가 abelian group에 작용하는 상황은 수학 전반에서 등장하는데, 이 때 가장 기본적인 조작인 "$G$-invariant들을 취하는 것"은 exact functor가 아니다. Group cohomology는 정확히 이 functor의 derived functor이다.
 
 ## G-가군
 
@@ -56,18 +56,18 @@ $$\varphi_m(x\cdot n)=\varepsilon(x)nm=\sum_ga_g(nm)=x\cdot(nm)=x\cdot\varphi_m(
 즉 invariant들을 취하는 functor $M\mapsto M^G$는 $\Hom_{\lMod{\mathbb{Z}G}}(\mathbb{Z},-)$와 같은 functor이고, 특히 left exact이다. 따라서 다음의 정의가 자연스럽다.
 
 ::: 정의 3
-Group $G$와 $G$-module $M$에 대하여, $G$의 $M$에서의 계수를 갖는 *군 cohomology<sub>group cohomology</sub>*는 다음의 식
+Group $G$와 $G$-module $M$에 대하여, $G$의 $M$에서의 계수를 갖는 *group cohomology<sub>군 코호몰로지</sub>*는 다음의 식
 
 $$H^n(G;M)=\Ext^n_{\mathbb{Z}G}(\mathbb{Z},M)$$
 
 으로 정의된다. ([§Ext와 Tor, ⁋정의 1](/ko/math/homological_algebra/ext_and_tor#def1))
 :::
 
-정의와 [명제 2](#prop2)에 의하여 $H^0(G;M)=M^G$이고, $G$-module들의 short exact sequence는 군 cohomology의 long exact sequence를 유도한다.
+정의와 [명제 2](#prop2)에 의하여 $H^0(G;M)=M^G$이고, $G$-module들의 short exact sequence는 group cohomology의 long exact sequence를 유도한다.
 
 ## 표준 분해
 
-[§Ext와 Tor, ⁋명제 3](/ko/math/homological_algebra/ext_and_tor#prop3)에 의하여 $\Ext^n_{\mathbb{Z}G}(\mathbb{Z},M)$은 $\mathbb{Z}$의 projective resolution을 하나 고정하여 계산할 수 있다. 군 cohomology가 쓸모있는 이유는 모든 group에 대해 일괄적으로 작동하는 표준적인 resolution이 있기 때문이다.
+[§Ext와 Tor, ⁋명제 3](/ko/math/homological_algebra/ext_and_tor#prop3)에 의하여 $\Ext^n_{\mathbb{Z}G}(\mathbb{Z},M)$은 $\mathbb{Z}$의 projective resolution을 하나 고정하여 계산할 수 있다. Group cohomology가 쓸모있는 이유는 모든 group에 대해 일괄적으로 작동하는 표준적인 resolution이 있기 때문이다.
 
 각각의 $n\geq0$에 대하여, $B_n$을 기호들 $[g_1\mid g_2\mid\cdots\mid g_n]$ ($g_i\in G$)을 basis로 갖는 free $\mathbb{Z}G$-module이라 하자. $n=0$일 때는 빈 기호 $[\ ]$ 하나가 basis이므로 $B_0=\mathbb{Z}G$이다. 이제 $\mathbb{Z}G$-linear map $d_n:B_n \rightarrow B_{n-1}$을 basis 위에서 다음의 식
 
@@ -130,7 +130,7 @@ $$(d\varphi)(g_1,\ldots,g_{n+1})=g_1\cdot\varphi(g_2,\ldots,g_{n+1})+\sum_{i=1}^
 
 ## 낮은 차수에서의 해석
 
-차수가 낮을 때는 위의 cochain complex를 손으로 읽을 수 있다. $n=0$일 때 $C^0(G;M)=M$이고 $(d m)(g)=g\cdot m-m$이므로 $H^0(G;M)=M^G$를 다시 얻는다. $n=1$일 때 cocycle 조건은
+Degree가 낮을 때는 위의 cochain complex를 손으로 읽을 수 있다. $n=0$일 때 $C^0(G;M)=M$이고 $(d m)(g)=g\cdot m-m$이므로 $H^0(G;M)=M^G$를 다시 얻는다. $n=1$일 때 cocycle 조건은
 
 $$(d\varphi)(g,h)=g\cdot\varphi(h)-\varphi(gh)+\varphi(g)=0$$
 
@@ -192,7 +192,7 @@ $$0\longrightarrow M\overset{\sigma-1}{\longrightarrow}M\overset{N_M}{\longright
 즉 유한 cyclic group의 cohomology는 주기 $2$를 갖는다. 특히 $H^1$은 "norm이 $0$인 원소들"을 "자명한 이유로 norm이 $0$인 원소들"로 나눈 것으로, 이 quotient가 사라지는지를 묻는 것이 고전적인 Hilbert의 정리 90의 내용이다.
 
 ::: 참고 9
-군 cohomology의 낮은 차수들은 모두 고전적인 대수학의 문제들과 연결된다. $H^1$이 crossed homomorphism을 분류하는 것을 [명제 6](#prop6)에서 보았고, $H^2(G;M)$은 abelian kernel $M$을 갖는 $G$의 extension들을 분류한다는 것이 알려져 있다. ([\[군론\] §군의 확장](/ko/math/group_theory/extensions)) 또, Galois extension $\mathbb{L}/\mathbb{K}$에 대하여 $\Gal(\mathbb{L}/\mathbb{K})$가 $\mathbb{L}^\times$에 작용하는 상황의 cohomology를 *Galois cohomology*라 부르며, 이 경우 $H^1$이 자명하다는 것이 Hilbert의 정리 90이다. 이들 각각은 별도의 글에서 다루기로 한다.
+Group cohomology의 낮은 degree들은 모두 고전적인 대수학의 문제들과 연결된다. $H^1$이 crossed homomorphism을 분류하는 것을 [명제 6](#prop6)에서 보았고, $H^2(G;M)$은 abelian kernel $M$을 갖는 $G$의 extension들을 분류한다는 것이 알려져 있다. ([\[군론\] §군의 확장](/ko/math/group_theory/extensions)) 또, Galois extension $\mathbb{L}/\mathbb{K}$에 대하여 $\Gal(\mathbb{L}/\mathbb{K})$가 $\mathbb{L}^\times$에 작용하는 상황의 cohomology를 *Galois cohomology*라 부르며, 이 경우 $H^1$이 자명하다는 것이 Hilbert의 정리 90이다. 이들 각각은 별도의 글에서 다루기로 한다.
 :::
 
 ---

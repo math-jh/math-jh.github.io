@@ -14,7 +14,7 @@ translated_at: 2026-07-11T22:30:02+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-07-11T22:30:02+00:00
 ---
-We examined operations on modules in [§Direct Products, Direct Sums, and Tensor Products of Modules](/en/math/algebraic_structures/operations_of_modules) and operations on rings in [§Products, Dual Products, and Tensor Products of Rings](/en/math/algebraic_structures/operations_of_rings). Since an $A$-algebra is a structure obtained by adding a bilinear multiplication to an $A$-module ([§Algebras, ⁋Definition 1](/en/math/algebraic_structures/algebras#def1)), the content of this post is to verify that the multiplication is well-behaved under the operations defined at the module level. As in [§Algebras](/en/math/algebraic_structures/algebras), $A$ is always a commutative ring.
+We examined operations on modules in [§Direct Products, Direct Sums, and Tensor Products of Modules](/en/math/algebraic_structures/operations_of_modules) and operations on rings in [§Product, Coproduct, and Tensor Product of Rings](/en/math/algebraic_structures/operations_of_rings). Since an $A$-algebra is a structure obtained by adding a bilinear multiplication to an $A$-module ([§Algebras, ⁋Definition 1](/en/math/algebraic_structures/algebras#def1)), the content of this post is to verify that the multiplication is well-behaved under the operations defined at the module level. As in [§Algebras](/en/math/algebraic_structures/algebras), $A$ is always a commutative ring.
 
 ## Direct Products and Direct Sums of Algebras
 

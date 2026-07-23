@@ -235,7 +235,7 @@ $$x=\varphi(\sigma)=\frac{\sigma(c)}{c}$$
 :::
 
 ::: 참고 9
-[정의 6](#def6)의 1-cocycle은 [\[호몰로지 대수학\] §군 코호몰로지](/ko/math/homological_algebra/group_cohomology)에서 다루는 crossed homomorphism을 곱셈 표기로 옮긴 것이다. 즉 $\mathbb{L}^\times$를 $G$-module로 보면 $H^1(G,\mathbb{L}^\times)$는 군 cohomology의 $H^1$이고, [정리 7](#thm7)은 이것이 사라진다는 주장이며, [따름정리 8](#cor8)은 cyclic group의 cohomology 계산과 결합한 것이다. 한편 $\mathbb{L}/\mathbb{K}$가 infinite degree Galois extension인 경우에는 임의의 cocycle 대신 이 글에서 정의한 Krull topology에 대해 연속인 cocycle들을 사용해야 올바른 이론이 얻어지며, 이것이 이 글에서 위상구조를 공들여 만든 또 하나의 이유이다. 덧셈 버전, 즉 $\mathbb{L}$을 덧셈 group으로 보았을 때 $H^1(G,\mathbb{L})$이 사라진다는 것도 성립하는데, 이는 normal basis 정리와 관련이 있으므로 추후 필요할 때 다루기로 한다.
+[정의 6](#def6)의 1-cocycle은 [\[호몰로지 대수학\] §군 코호몰로지](/ko/math/homological_algebra/group_cohomology)에서 다루는 crossed homomorphism을 곱셈 표기로 옮긴 것이다. 즉 $\mathbb{L}^\times$를 $G$-module로 보면 $H^1(G,\mathbb{L}^\times)$는 group cohomology의 $H^1$이고, [정리 7](#thm7)은 이것이 사라진다는 주장이며, [따름정리 8](#cor8)은 cyclic group의 cohomology 계산과 결합한 것이다. 한편 $\mathbb{L}/\mathbb{K}$가 infinite degree Galois extension인 경우에는 임의의 cocycle 대신 이 글에서 정의한 Krull topology에 대해 연속인 cocycle들을 사용해야 올바른 이론이 얻어지며, 이것이 이 글에서 위상구조를 공들여 만든 또 하나의 이유이다. 덧셈 버전, 즉 $\mathbb{L}$을 덧셈 group으로 보았을 때 $H^1(G,\mathbb{L})$이 사라진다는 것도 성립하는데, 이는 normal basis 정리와 관련이 있으므로 추후 필요할 때 다루기로 한다.
 :::
 
 ---

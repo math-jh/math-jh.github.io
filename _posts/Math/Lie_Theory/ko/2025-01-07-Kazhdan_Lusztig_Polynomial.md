@@ -178,7 +178,7 @@ $$\sum_{i \ge 0} \dim \mathcal{H}^i(\operatorname{IC}_{X_w})_{vB/B} \cdot q^{i/2
 Schubert variety $X_w$가 smooth한 것은 모든 $v \le w$에 대해 $P_{v, w}(q) = 1$인 것과 동치이다.
 :::
 ::: 증명
-$X_w$의 매끄러움은 모든 점 $vB/B \in X_w$에서 매끄러움을 의미하므로, 이는 모든 $v \le w$에 대해 $\mathcal{H}^i(\operatorname{IC}_{X_w})_{vB/B}$가 $i = 0$에서만 1차원이고 다른 차수에서는 $0$임을 뜻한다. 정리 [정리 8](#thm8)에 의해 이는 $P_{v, w}(q) = 1$과 동치이다.
+$X_w$의 매끄러움은 모든 점 $vB/B \in X_w$에서 매끄러움을 의미하므로, 이는 모든 $v \le w$에 대해 $\mathcal{H}^i(\operatorname{IC}_{X_w})_{vB/B}$가 $i = 0$에서만 1차원이고 다른 degree에서는 $0$임을 뜻한다. 정리 [정리 8](#thm8)에 의해 이는 $P_{v, w}(q) = 1$과 동치이다.
 :::
 
 이 따름정리는 일반적으로 매끄러움 판정 문제가 KL polynomial의 계산으로 환원됨을 보여준다. 실제로 type $A$에서는 이 조건이 pattern avoidance (Lakshmibai–Sandhya 정리에 의해 permutation $w$가 패턴 $3412$와 $4231$을 피한다는 것) 와 동치이며, 다른 type에 대해서도 유사한 조합적 매끄러움 판정이 알려져 있다.

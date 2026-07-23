@@ -91,7 +91,7 @@ Submodule $N$의 경우, [보조정리 3](#lem3)에 의해 $M=N\oplus\bigoplus_{
 $M=\sum_{i\in I}S_i$가 simple submodule들의 합이라 하자. 그럼 $M$의 임의의 simple submodule $U$는 적당한 $i\in I$에 대하여 $S_i$와 isomorphic하다.
 :::
 ::: 증명
-[보조정리 3](#lem3)을 $N=U$에 적용하면 $M=U\oplus\bigoplus_{j\in J}S_j$인 $J$가 존재한다. $p:M\rightarrow U$를 이 분해에 대한 projection이라 하자. $U=p(M)=\sum_{i\in I}p(S_i)$이고 $U\neq 0$이므로 $p(S_i)\neq 0$인 $i$가 존재한다. 그럼 $p$의 제한 $S_i\rightarrow U$는 simple module 사이의 nonzero homomorphism이므로 [§나눗셈환, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10)에 의해 isomorphism이다.
+[보조정리 3](#lem3)을 $N=U$에 적용하면 $M=U\oplus\bigoplus_{j\in J}S_j$인 $J$가 존재한다. $p:M\rightarrow U$를 이 분해에 대한 projection이라 하자. $U=p(M)=\sum_{i\in I}p(S_i)$이고 $U\neq 0$이므로 $p(S_i)\neq 0$인 $i$가 존재한다. 그럼 $p$의 restriction $S_i\rightarrow U$는 simple module 사이의 nonzero homomorphism이므로 [§나눗셈환, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10)에 의해 isomorphism이다.
 :::
 
 ::: 정의 7

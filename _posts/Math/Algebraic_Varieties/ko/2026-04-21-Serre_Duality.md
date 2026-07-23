@@ -15,7 +15,7 @@ weight: 14
 
 ---
 
-기하적으로 좋은 경우 dimension $k$의 cohomology와 codimension $k$ cohomology 사이에는 자연스러운 쌍대성이 존재한다. 이를 증명하기 위해 우리는 perfect pairing
+기하적으로 좋은 경우 dimension $k$의 cohomology와 codimension $k$ cohomology 사이에는 자연스러운 duality가 존재한다. 이를 증명하기 위해 우리는 perfect pairing
 
 $$H^k(M;R)\times H^{n-k}(M;R)\rightarrow R$$
 

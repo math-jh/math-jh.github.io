@@ -64,7 +64,7 @@ $$x+y=(\epsilon(\alpha\delta)+\epsilon(\beta\gamma))\epsilon(\gamma\delta)^{-1}=
 
     을 확인할 수 있으므로 원하는 식이 성립한다.
 
-2. 이렇게 정의한 $+$는 결합법칙을 만족한다. 임의의 $x_1=\alpha_1/\gamma_1,x_2=\alpha_2/\gamma_2,x_3=\alpha_3/\gamma_3$에 대하여,
+2. 이렇게 정의한 $+$는 associative하다. 임의의 $x_1=\alpha_1/\gamma_1,x_2=\alpha_2/\gamma_2,x_3=\alpha_3/\gamma_3$에 대하여,
 
     $$(x_1+x_2)+x_3=\frac{\alpha_1\gamma_2+\alpha_2\gamma_1}{\gamma_1\gamma_2}+\frac{\alpha_3}{\gamma_3}=\frac{(\alpha_1\gamma_2+\alpha_2\gamma_1)\gamma_3+\alpha_3(\gamma_1\gamma_2)}{\gamma_1\gamma_2\gamma_3}=\frac{\alpha_1\gamma_2\gamma_3+\gamma_1\alpha_2\gamma_3+\gamma_1\gamma_2\alpha_3}{\gamma_1\gamma_2\gamma_3}$$
 

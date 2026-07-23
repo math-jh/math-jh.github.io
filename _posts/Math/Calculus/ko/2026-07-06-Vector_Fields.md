@@ -25,7 +25,7 @@ weight: 16
 벡터장은 각 점에 그 점에서 출발하는 화살표를 꽂은 그림으로 이해하는 것이 가장 직관적이다. 가령, 유체의 흐름이라면 각 점에서의 유속을 표현한 것은 벡터장을 이룬다. 우리는 이미 이런 대상을 하나 알고 있다. ([§다변수함수와 편미분, ⁋정의 2](/ko/math/calculus/partial_derivatives#def2))
 
 ::: 정의 2
-$C^1$ 스칼라함수 $f$의 기울기 $\nabla f = (\partial f/\partial x_1, \ldots, \partial f/\partial x_n)$로 주어지는 벡터장을 $f$의 *기울기장<sub>gradient field</sub>*이라 한다. 어떤 스칼라함수 $f$에 대해 $\mathbf{F} = \nabla f$로 쓸 수 있는 벡터장 $\mathbf{F}$를 *보존장<sub>conservative field</sub>*이라 하고, 그 $f$를 $\mathbf{F}$의 *퍼텐셜<sub>potential</sub>*이라 한다.
+$C^1$ 스칼라함수 $f$의 기울기 $\nabla f = (\partial f/\partial x_1, \ldots, \partial f/\partial x_n)$로 주어지는 벡터장을 $f$의 *기울기장<sub>gradient field</sub>*이라 한다. 어떤 스칼라함수 $f$에 대해 $\mathbf{F} = \nabla f$로 쓸 수 있는 벡터장 $\mathbf{F}$를 *보존장<sub>conservative field</sub>*이라 하고, 그 $f$를 $\mathbf{F}$의 *potential<sub>퍼텐셜</sub>*이라 한다.
 :::
 
 ## 발산과 회전
@@ -85,5 +85,5 @@ $$\curl \mathbf{F} = (\partial_y y - \partial_z(x^2+z),\ \partial_z(2xy) - \part
 
 이라 보존장일 가능성이 있다. 따라서 $\mathbf{F}=\nabla f$를 만족하는 $f$를 찾을 수 있는지 살펴보자. 
 
-이러한 $f$는 우선 첫째 성분에 의해 $f_x = 2xy$를 만족해야 하므로, $f = x^2 y + g(y, z)$의 꼴이어야 한다. 이제 이를 $y$에 대해 미분하면 $f_y = x^2 + g_y$이고, 만일 $\mathbf{F}$가 보존장이었다면 이 값이 $\mathbf{F}$의 둘째 성분 $x^2 + z$와 맞아야 하므로 $g_y = z$, 즉 $g = yz + h(z)$여야 한다. 이제 마지막으로 이를 다시 $f$에 넣고 $z$로 미분한 후 계수를 맞춰주면, $f_z = y + h'(z) = y$여야 하므로 $h' = 0$이다. 따라서 $f = x^2 y + yz$가 퍼텐셜이 될 수 있으며, 실제로 $\mathbf{F} = \nabla f$이 성립한다. 
+이러한 $f$는 우선 첫째 성분에 의해 $f_x = 2xy$를 만족해야 하므로, $f = x^2 y + g(y, z)$의 꼴이어야 한다. 이제 이를 $y$에 대해 미분하면 $f_y = x^2 + g_y$이고, 만일 $\mathbf{F}$가 보존장이었다면 이 값이 $\mathbf{F}$의 둘째 성분 $x^2 + z$와 맞아야 하므로 $g_y = z$, 즉 $g = yz + h(z)$여야 한다. 이제 마지막으로 이를 다시 $f$에 넣고 $z$로 미분한 후 계수를 맞춰주면, $f_z = y + h'(z) = y$여야 하므로 $h' = 0$이다. 따라서 $f = x^2 y + yz$가 potential이 될 수 있으며, 실제로 $\mathbf{F} = \nabla f$이 성립한다. 
 :::

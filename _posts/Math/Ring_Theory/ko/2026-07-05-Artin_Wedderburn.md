@@ -16,25 +16,25 @@ published: false
 
 ---
 
-[§Semisimple module](/ko/math/ring_theory/semisimple_modules)에서 우리는 simple module들의 직합으로 분해되는 module을 다루었다. 이 글에서는 그 개념을 환 자신에 적용한다. 환 $R$을 자기 자신 위의 left module로 보아 semisimple이 되는 환이 semisimple ring인데, 이는 그 위의 모든 module이 semisimple인 환과 정확히 일치하며, module 이론이 완전히 분해되는 환이라 할 수 있다. 이 글의 목표는 이러한 환의 완전한 분류인 Artin-Wedderburn 정리이다. Semisimple ring은 division ring 위의 행렬환 유한개의 곱과 정확히 같으며, 이 분해는 본질적으로 유일하다. [§나눗셈환, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10)가 여기 등장하는 division ring의 출처이고, [§Idempotent과 곱분해, ⁋정리 5](/ko/math/ring_theory/idempotents#thm5)의 central idempotent 기계가 곱분해를 담당한다.
+[§Semisimple module](/ko/math/ring_theory/semisimple_modules)에서 우리는 simple module들의 직합으로 분해되는 module을 다루었다. 이 글에서는 그 개념을 ring 자신에 적용한다. Ring $R$을 자기 자신 위의 left module로 보아 semisimple이 되는 ring이 semisimple ring인데, 이는 그 위의 모든 module이 semisimple인 ring과 정확히 일치하며, module 이론이 완전히 분해되는 ring이라 할 수 있다. 이 글의 목표는 이러한 ring의 완전한 분류인 Artin-Wedderburn 정리이다. Semisimple ring은 division ring 위의 행렬환 유한개의 곱과 정확히 같으며, 이 분해는 본질적으로 유일하다. [§나눗셈환, ⁋보조정리 10](/ko/math/ring_theory/division_rings#lem10)가 여기 등장하는 division ring의 출처이고, [§Idempotent과 곱분해, ⁋정리 5](/ko/math/ring_theory/idempotents#thm5)의 central idempotent 기계가 곱분해를 담당한다.
 
-이 글에서도 환은 항등원을 갖는, 가환이라 가정하지 않는 환이며, module은 언제나 left module이다.
+이 글에서도 ring은 항등원을 갖는, 가환이라 가정하지 않는 ring이며, module은 언제나 left module이다.
 
 ## Semisimple ring
 
 ::: 정의 1
-환 $R$을 자기 자신 위의 left module로 보았을 때 semisimple이면, 즉 $R$이 simple left ideal들의 직합이면 $R$을 *semisimple ring<sub>반단순환</sub>*이라 부른다.
+Ring $R$을 자기 자신 위의 left module로 보았을 때 semisimple이면, 즉 $R$이 simple left ideal들의 직합이면 $R$을 *semisimple ring<sub>반단순환</sub>*이라 부른다.
 :::
 
 Left regular module $R$의 submodule은 정확히 $R$의 left ideal이므로, 이 정의는 [§Semisimple module, ⁋정의 1](/ko/math/ring_theory/semisimple_modules#def1)을 regular module에 적용한 것이다. 정의가 left module 구조를 사용하므로 좌우 비대칭해 보이지만, 구조 정리를 거치면 이 선택이 무관하다는 것이 드러난다 ([참고 13](#rmk13)).
 
-환 하나의 성질처럼 보이는 이 정의는 사실 그 위의 module 이론 전체를 결정한다.
+Ring 하나의 성질처럼 보이는 이 정의는 사실 그 위의 module 이론 전체를 결정한다.
 
 ::: 명제 2
-환 $R$에 대하여, $R$이 semisimple ring인 것은 모든 left $R$-module이 semisimple인 것과 동치이다.
+Ring $R$에 대하여, $R$이 semisimple ring인 것은 모든 left $R$-module이 semisimple인 것과 동치이다.
 :::
 ::: 증명
-모든 module이 semisimple이라면 특히 regular module $R$이 semisimple이다. 거꾸로 $R$이 semisimple ring이라 하자. 임의의 index 집합 $I$에 대하여 free module $R^{(I)}$는 $R$의 복사본들의 직합이고, 각 복사본이 simple submodule들의 합이므로 $R^{(I)}$ 또한 simple submodule들의 합이다. 따라서 [§Semisimple module, ⁋정리 4](/ko/math/ring_theory/semisimple_modules#thm4)에 의해 $R^{(I)}$는 semisimple이다. 이제 임의의 module $M$은 생성원들을 택하면 적당한 전사 $R^{(I)}\rightarrow M$을 가지므로 semisimple module의 quotient이고, [§Semisimple module, ⁋따름정리 5](/ko/math/ring_theory/semisimple_modules#cor5)에 의해 semisimple이다.
+모든 module이 semisimple이라면 특히 regular module $R$이 semisimple이다. 거꾸로 $R$이 semisimple ring이라 하자. 임의의 index 집합 $I$에 대하여 free module $R^{(I)}$는 $R$의 복사본들의 직합이고, 각 복사본이 simple submodule들의 합이므로 $R^{(I)}$ 또한 simple submodule들의 합이다. 따라서 [§Semisimple module, ⁋정리 4](/ko/math/ring_theory/semisimple_modules#thm4)에 의해 $R^{(I)}$는 semisimple이다. 이제 임의의 module $M$은 generator들을 택하면 적당한 전사 $R^{(I)}\rightarrow M$을 가지므로 semisimple module의 quotient이고, [§Semisimple module, ⁋따름정리 5](/ko/math/ring_theory/semisimple_modules#cor5)에 의해 semisimple이다.
 :::
 
 ::: 명제 3
@@ -48,10 +48,10 @@ $R=\bigoplus_{i\in I}L_i$를 simple left ideal들의 직합이라 하자. 항등
 
 ## Division ring 위의 행렬환
 
-구조 정리의 building block은 division ring 위의 행렬환이다. 이를 다루기 위해 먼저 곱셈의 순서를 뒤집은 환을 정의한다.
+구조 정리의 building block은 division ring 위의 행렬환이다. 이를 다루기 위해 먼저 곱셈의 순서를 뒤집은 ring을 정의한다.
 
 ::: 정의 4
-환 $R$에 대하여, $R$과 같은 abelian group 위에 곱셈을 $a\ast b=ba$로 정의한 환을 $R$의 *opposite ring<sub>반대환</sub>*이라 부르고 $R^{\mathrm{op}}$로 적는다.
+Ring $R$에 대하여, $R$과 같은 abelian group 위에 곱셈을 $a\ast b=ba$로 정의한 ring을 $R$의 *opposite ring<sub>반대환</sub>*이라 부르고 $R^{\mathrm{op}}$로 적는다.
 :::
 
 정의에서 바로 $(R^{\mathrm{op}})^{\mathrm{op}}=R$이고, right $R$-module은 left $R^{\mathrm{op}}$-module과 같은 것이다. 또 $D$가 division ring이면 nonzero 원소의 역원이 그대로 역원이 되므로 $D^{\mathrm{op}}$ 또한 division ring이다.
@@ -88,7 +88,7 @@ $$\varphi(v)=\sum_iA_i\varphi(e_1)=\sum_iA_i(e_1d)=vd=\rho_d(v)$$
 이 두 명제로 행렬환 쪽의 재료는 끝났다. 이제 semisimple ring을 행렬환으로 옮겨 줄 endomorphism ring 계산들을 준비한다.
 
 ::: 보조정리 7
-임의의 환 $R$에 대하여 $\End_R(R)\cong R^{\mathrm{op}}$이다.
+임의의 ring $R$에 대하여 $\End_R(R)\cong R^{\mathrm{op}}$이다.
 :::
 ::: 증명
 $\Phi:\End_R(R)\rightarrow R^{\mathrm{op}}$를 $\Phi(f)=f(1)$로 정의하자. $f$가 $R$-linear이므로 $f(r)=f(r\cdot 1)=rf(1)$, 즉 $f$는 $f(1)$의 오른쪽 곱셈이다. $\Phi$는 additive이고 $\Phi(\id)=1$이며,
@@ -116,7 +116,7 @@ $$\pi_{i,a}\circ(\varphi\circ\psi)\circ\iota_{i,c}=\sum_{b}(\pi_{i,a}\circ\varph
 :::
 
 ::: 보조정리 9
-임의의 환 $\Delta$에 대하여 transpose는 isomorphism $\Mat_n(\Delta)^{\mathrm{op}}\cong\Mat_n(\Delta^{\mathrm{op}})$을 준다.
+임의의 ring $\Delta$에 대하여 transpose는 isomorphism $\Mat_n(\Delta)^{\mathrm{op}}\cong\Mat_n(\Delta^{\mathrm{op}})$을 준다.
 :::
 ::: 증명
 $T(A)=A^{\mathsf{T}}$는 additive bijection이고 항등행렬을 보존한다. $\Mat_n(\Delta)^{\mathrm{op}}$의 곱 $A\ast B=BA$에 대하여
@@ -149,7 +149,7 @@ $e_i$들이 central orthogonal idempotent의 complete set임은 성분별 계산
 이제 모든 재료가 준비되었다.
 
 ::: 정리 11 (Artin-Wedderburn)
-환 $R$에 대하여 다음이 동치이다.
+Ring $R$에 대하여 다음이 동치이다.
 
 1. $R$은 semisimple ring이다.
 2. 적당한 division ring들 $D_1,\ldots,D_k$와 자연수 $n_1,\ldots,n_k$에 대하여
@@ -180,7 +180,7 @@ $$E_i\cong\End_R(W_i)^{\mathrm{op}}\cong\End_R(S_i)^{\mathrm{op}}=\Delta_i^{\mat
 이다. 따라서 division ring들도 isomorphism을 무시하면 유일하다.
 :::
 
-증명이 보여 주듯 분해의 각 인자는 canonical한 대상이다. 실제로 존재 방향의 분해에서 isotypic component $R_{S_i}\cong S_i^{n_i}$들은 two-sided ideal인데, 임의의 $r\in R$에 대한 오른쪽 곱셈이 left module endomorphism이고 [§Semisimple module, ⁋명제 8](/ko/math/ring_theory/semisimple_modules#prop8)에 의해 endomorphism이 isotypic component를 보존하기 때문이다. 따라서 $R=\bigoplus_iR_{S_i}$는 two-sided ideal들의 직합이고, [§Idempotent과 곱분해, ⁋정리 5](/ko/math/ring_theory/idempotents#thm5)에 의해 central idempotent의 complete set과 환의 곱분해가 대응된다. 이 central idempotent들이 정확히 [정리 11](#thm11)의 곱분해에서 각 인자의 항등원이다.
+증명이 보여 주듯 분해의 각 인자는 canonical한 대상이다. 실제로 존재 방향의 분해에서 isotypic component $R_{S_i}\cong S_i^{n_i}$들은 two-sided ideal인데, 임의의 $r\in R$에 대한 오른쪽 곱셈이 left module endomorphism이고 [§Semisimple module, ⁋명제 8](/ko/math/ring_theory/semisimple_modules#prop8)에 의해 endomorphism이 isotypic component를 보존하기 때문이다. 따라서 $R=\bigoplus_iR_{S_i}$는 two-sided ideal들의 직합이고, [§Idempotent과 곱분해, ⁋정리 5](/ko/math/ring_theory/idempotents#thm5)에 의해 central idempotent의 complete set과 ring의 곱분해가 대응된다. 이 central idempotent들이 정확히 [정리 11](#thm11)의 곱분해에서 각 인자의 항등원이다.
 
 ::: 따름정리 12
 $R\cong\prod_{i=1}^k\Mat_{n_i}(D_i)$가 semisimple ring이라 하자. 그럼 simple left $R$-module은 isomorphism을 무시하면 정확히 $V_1,\ldots,V_k$ ($V_i=D_i^{n_i}$)뿐이고, 임의의 left $R$-module은 이들의 복사본들의 직합이다.
@@ -190,11 +190,11 @@ $R\cong\prod_{i=1}^k\Mat_{n_i}(D_i)$가 semisimple ring이라 하자. 그럼 sim
 :::
 
 ::: 참고 13
-정의 1은 left module 구조로 주어졌지만, right module로 정의해도 같은 환들을 얻는다. Right $R$-module은 left $R^{\mathrm{op}}$-module과 같으므로, $R$이 right semisimple이라는 것은 $R^{\mathrm{op}}$가 semisimple ring이라는 것이다. 그런데 $R$이 semisimple ring이면 [정리 11](#thm11)의 분해에 [보조정리 9](#lem9)를 적용하여 $R^{\mathrm{op}}\cong\prod_i\Mat_{n_i}(D_i^{\mathrm{op}})$ 또한 행렬환들의 곱이 되므로 semisimple ring이고, 역도 symmetric으로 성립한다. 따라서 semisimple ring의 개념은 좌우의 선택과 무관하다.
+정의 1은 left module 구조로 주어졌지만, right module로 정의해도 같은 ring들을 얻는다. Right $R$-module은 left $R^{\mathrm{op}}$-module과 같으므로, $R$이 right semisimple이라는 것은 $R^{\mathrm{op}}$가 semisimple ring이라는 것이다. 그런데 $R$이 semisimple ring이면 [정리 11](#thm11)의 분해에 [보조정리 9](#lem9)를 적용하여 $R^{\mathrm{op}}\cong\prod_i\Mat_{n_i}(D_i^{\mathrm{op}})$ 또한 행렬환들의 곱이 되므로 semisimple ring이고, 역도 symmetric으로 성립한다. 따라서 semisimple ring의 개념은 좌우의 선택과 무관하다.
 :::
 
 ::: 참고 14
-유한군 $G$의 group algebra $\mathbb{C}[G]$는 이 정리의 대표적인 응용처이다. [\[표현론\] §유한군의 표현론, ⁋따름정리 7](/ko/math/representation_theory/representations_of_finite_groups#cor7)에 의해 모든 유한차원 representation이 semisimple $\mathbb{C}[G]$-module이고, 특히 regular representation $\mathbb{C}[G]$ 자신이 그러하므로 $\mathbb{C}[G]$는 semisimple ring이다. [정리 11](#thm11)의 분해에 등장하는 division ring들은 simple module $V_i$의 endomorphism ring으로부터 나오는데, algebraically closed field 위의 유한차원 표현에서는 $\End_{\mathbb{C}[G]}(V_i)\cong\mathbb{C}$이므로 ([같은 글, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)) 모든 $D_i$가 $\mathbb{C}$가 된다. 따라서
+유한군 $G$의 group algebra $\mathbb{C}[G]$는 이 정리의 대표적인 응용처이다. [\[표현론\] §유한군의 표현론, ⁋따름정리 7](/ko/math/representation_theory/representations_of_finite_groups#cor7)에 의해 모든 유한차원 representation이 semisimple $\mathbb{C}[G]$-module이고, 특히 regular representation $\mathbb{C}[G]$ 자신이 그러하므로 $\mathbb{C}[G]$는 semisimple ring이다. [정리 11](#thm11)의 분해에 등장하는 division ring들은 simple module $V_i$의 endomorphism ring으로부터 나오는데, algebraically closed field 위의 유한차원 representation에서는 $\End_{\mathbb{C}[G]}(V_i)\cong\mathbb{C}$이므로 ([같은 글, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)) 모든 $D_i$가 $\mathbb{C}$가 된다. 따라서
 
 $$\mathbb{C}[G]\cong\prod_{i=1}^k\Mat_{d_i}(\mathbb{C})$$
 

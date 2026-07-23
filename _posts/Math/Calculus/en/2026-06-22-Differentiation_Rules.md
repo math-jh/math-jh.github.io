@@ -14,7 +14,7 @@ translated_at: 2026-06-24T08:00:02+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-06-24T08:00:02+00:00
 ---
-We covered the definition of differentiation and its basic properties in [§Derivatives](/en/math/calculus/derivatives). In this post, we treat derivatives of concrete functions and differentiation rules that apply to general functions.
+We covered the definition of differentiation and its basic properties in [§Differentiation and Derivatives](/en/math/calculus/derivatives). In this post, we treat derivatives of concrete functions and differentiation rules that apply to general functions.
 
 ## Term-by-Term Differentiation of Power Series
 
@@ -44,7 +44,7 @@ That the radius of convergence of the series on the right-hand side is $R$ itsel
 
 Before examining differentiation rules in earnest, we derive the derivatives of several functions.
 
-First, the exponential function was defined in [§Power Series, ⁋Example 4](/en/math/calculus/power_series#ex4) by $e^x = \sum_{n\geq 0} x^n/n!$. Applying [Proposition 1](#prop1) now, its derivative is the sum of the term-by-term derivatives
+First, the exponential function was defined in [§Power Series, ⁋Example 3](/en/math/calculus/power_series#ex3) by $e^x = \sum_{n\geq 0} x^n/n!$. Applying [Proposition 1](#prop1) now, its derivative is the sum of the term-by-term derivatives
 
 $$(e^x)' = \sum_{n=1}^\infty n \frac{x^{n-1}}{n!} = \sum_{n=1}^\infty \frac{x^{n-1}}{(n-1)!} = \sum_{m=0}^\infty \frac{x^m}{m!} = e^x$$
 
@@ -70,7 +70,7 @@ and as $h \rightarrow 0$, by the two limits above this converges to $\sin x \cdo
 
 ## Various Differentiation Rules
 
-We now state differentiation rules that apply to general forms. In [§Derivatives, ⁋Proposition 4](/en/math/calculus/derivatives#prop4) we saw that differentiation behaves well with respect to constant multiples and addition, but it does not simply distribute over products.
+We now state differentiation rules that apply to general forms. In [§Differentiation and Derivatives, ⁋Proposition 4](/en/math/calculus/derivatives#prop4) we saw that differentiation behaves well with respect to constant multiples and addition, but it does not simply distribute over products.
 
 ::: Proposition 3 (Product Rule)
 If $f, g$ are differentiable at $a$, then $fg$ is also differentiable at $a$ and
@@ -83,7 +83,7 @@ Adding and subtracting the same term in the difference quotient gives
 
 $$\frac{f(a+h)g(a+h) - f(a)g(a)}{h} = \frac{f(a+h)-f(a)}{h} g(a+h) + f(a) \frac{g(a+h)-g(a)}{h}$$
 
-As $h \rightarrow 0$, the difference quotient in the first term converges to $f'(a)$, $g(a+h)$ converges to $g(a)$ by continuity of $g$ ([§Derivatives, ⁋Proposition 2](/en/math/calculus/derivatives#prop2)), and the difference quotient in the second term converges to $g'(a)$, so by [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5) the sum converges to $f'(a)g(a) + f(a)g'(a)$.
+As $h \rightarrow 0$, the difference quotient in the first term converges to $f'(a)$, $g(a+h)$ converges to $g(a)$ by continuity of $g$ ([§Differentiation and Derivatives, ⁋Proposition 2](/en/math/calculus/derivatives#prop2)), and the difference quotient in the second term converges to $g'(a)$, so by [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5) the sum converges to $f'(a)g(a) + f(a)g'(a)$.
 :::
 
 The most widely used rule is the differentiation of composite functions.
@@ -147,7 +147,7 @@ The function
 
 $$f(x) = \begin{cases} x^2 \sin(1/x) & (x \neq 0) \\ 0 & (x = 0) \end{cases}$$
 
-is differentiable at every point. For $x \neq 0$, by the product rule and the chain rule $f'(x) = 2x\sin(1/x) - \cos(1/x)$, and at $0$ the difference quotient is $x\sin(1/x) \rightarrow 0$ so $f'(0) = 0$. However, as $x \rightarrow 0$ we have $2x\sin(1/x) \rightarrow 0$ but $\cos(1/x)$ oscillates infinitely within $[-1, 1]$ and has no limit, so $f'$ is discontinuous at $0$. That is, $f$ is differentiable everywhere but its derivative is not continuous, so it is not $C^1$ (in the sense of [§Derivatives, ⁋Definition 5](/en/math/calculus/derivatives#def5)).
+is differentiable at every point. For $x \neq 0$, by the product rule and the chain rule $f'(x) = 2x\sin(1/x) - \cos(1/x)$, and at $0$ the difference quotient is $x\sin(1/x) \rightarrow 0$ so $f'(0) = 0$. However, as $x \rightarrow 0$ we have $2x\sin(1/x) \rightarrow 0$ but $\cos(1/x)$ oscillates infinitely within $[-1, 1]$ and has no limit, so $f'$ is discontinuous at $0$. That is, $f$ is differentiable everywhere but its derivative is not continuous, so it is not $C^1$ (in the sense of [§Differentiation and Derivatives, ⁋Definition 5](/en/math/calculus/derivatives#def5)).
 :::
 
 Nevertheless, derivatives cannot be discontinuous in just any manner. Even if a derivative is not continuous, it must necessarily assume every intermediate value (*Darboux's theorem*), so it cannot have jump discontinuities, and the discontinuity appearing in [Example 7](#ex7) is not a jump but one caused by oscillation.

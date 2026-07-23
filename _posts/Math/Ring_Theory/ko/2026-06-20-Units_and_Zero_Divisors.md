@@ -14,7 +14,7 @@ weight: 1
 
 ---
 
-이 글에서 우리는 환의 곱셈 구조에서 가장 기본적인 두 부류의 원소, 즉 곱셈에 대한 역원을 갖는 *unit*과, 곱하여 $0$을 만드는 짝을 갖는 *zero divisor*를 정리한다. 이 두 개념은 이미 여러 곳에서 암묵적으로 쓰였다. Integral domain은 zero divisor가 없는 가환환으로 정의되었고 ([\[대수적 구조\] §분수체, ⁋정의 5](/ko/math/algebraic_structures/field_of_fractions#def5)), field는 모든 nonzero 원소가 unit인 division ring이었다 ([\[대수적 구조\] §분수체, ⁋정의 3](/ko/math/algebraic_structures/field_of_fractions#def3)). 여기서는 unit을 본격적으로 정의하여 그 모임이 군을 이룸을 확인하고, unit과 zero divisor가 서로 배타적임을 보인 뒤, 유한가환환에서는 zero divisor가 아닌 모든 원소가 자동으로 unit이 된다는 사실을 증명한다. 그 직접적 귀결로 유한 integral domain이 field임을 얻는다.
+이 글에서 우리는 ring의 곱셈 구조에서 가장 기본적인 두 부류의 원소, 즉 곱셈에 대한 역원을 갖는 *unit*과, 곱하여 $0$을 만드는 짝을 갖는 *zero divisor*를 정리한다. 이 두 개념은 이미 여러 곳에서 암묵적으로 쓰였다. Integral domain은 zero divisor가 없는 가환환으로 정의되었고 ([\[대수적 구조\] §분수체, ⁋정의 5](/ko/math/algebraic_structures/field_of_fractions#def5)), field는 모든 nonzero 원소가 unit인 division ring이었다 ([\[대수적 구조\] §분수체, ⁋정의 3](/ko/math/algebraic_structures/field_of_fractions#def3)). 여기서는 unit을 본격적으로 정의하여 그 모임이 group을 이룸을 확인하고, unit과 zero divisor가 서로 배타적임을 보인 뒤, 유한가환환에서는 zero divisor가 아닌 모든 원소가 자동으로 unit이 된다는 사실을 증명한다. 그 직접적 귀결로 유한 integral domain이 field임을 얻는다.
 
 별도의 언급이 없는 한 $A$는 항등원 $1\neq 0$을 갖는 ring이며, commutativity는 필요한 곳에서 그때그때 명시한다.
 
@@ -34,7 +34,7 @@ $$v=v\cdot 1=v(uw)=(vu)w=1\cdot w=w$$
 
 $$(uu')(u'^{-1}u^{-1})=u(u'u'^{-1})u^{-1}=uu^{-1}=1$$
 
-이며 같은 방식으로 $(u'^{-1}u^{-1})(uu')=1$이므로 $uu'\in A^\times$이고 그 역원은 $u'^{-1}u^{-1}$이다. 또 $u\in A^\times$이면 $u^{-1}$도 $u$를 역원으로 가지므로 $u^{-1}\in A^\times$이다. 따라서 $A^\times$는 $A$의 곱셈을 연산으로 갖는 군이며, 이를 $A$의 *unit group<sub>가역원군</sub>*이라 부른다.
+이며 같은 방식으로 $(u'^{-1}u^{-1})(uu')=1$이므로 $uu'\in A^\times$이고 그 역원은 $u'^{-1}u^{-1}$이다. 또 $u\in A^\times$이면 $u^{-1}$도 $u$를 역원으로 가지므로 $u^{-1}\in A^\times$이다. 따라서 $A^\times$는 $A$의 곱셈을 연산으로 갖는 group이며, 이를 $A$의 *unit group<sub>가역원군</sub>*이라 부른다.
 
 ::: 예시 2
 Ring $\mathbb{Z}$에서 $uv=1$을 만족하는 정수 $u,v$는 $u=v=1$ 또는 $u=v=-1$뿐이므로 $\mathbb{Z}^\times=\{1,-1\}$이다.
@@ -60,13 +60,13 @@ Ring $\mathbb{Z}$에서 $uv=1$을 만족하는 정수 $u,v$는 $u=v=1$ 또는 $u
 
 정의에 의해, $0$ 자신은 $A\neq 0$인 한 nonzero 원소 (가령 $1$)와 곱했을 때 항상 $0$이므로 zero divisor이며, 그 대우명제를 생각하면 regular element는 항상 nonzero여야 한다. 
 
-우리의 관심사는 regular element와 unit 사이의 관계이다. 먼저 한 방향은 일반적인 환에서 항상 성립한다.
+우리의 관심사는 regular element와 unit 사이의 관계이다. 먼저 한 방향은 일반적인 ring에서 항상 성립한다.
 
 ::: 명제 4
 Ring $A$의 임의의 unit은 regular element이다.
 :::
 ::: 증명
-결론에 반하여 $u\in A^\times$이라 하고 적당한 $b\in A$에 대해 $ub=0$이라 하자. 양변의 왼쪽에 $u^{-1}$을 곱하면
+결론에 반하여 $u\in A^\times$이라 하고 적당한 $b\neq 0$에 대해 $ub=0$이라 하자. 양변의 왼쪽에 $u^{-1}$을 곱하면
 
 $$b=1\cdot b=(u^{-1}u)b=u^{-1}(ub)=u^{-1}\cdot 0=0$$
 
@@ -133,7 +133,7 @@ $$A^\times=A_1^\times\times\cdots\times A_n^\times$$
 ::: 증명
 $A$의 곱셈은 성분별로 이루어지고 항등원은 $(1,\ldots,1)$이다. 원소 $a=(a_1,\ldots,a_n)$이 unit이면 $ab=ba=(1,\ldots,1)$을 만족하는 $b=(b_1,\ldots,b_n)$이 존재하는데, 이는 각 성분에서 $a_ib_i=b_ia_i=1$임을 뜻하므로 각 $a_i$가 unit이고 $b_i=a_i^{-1}$이다. 
 
-거꾸로 각 $a_i$가 unit이면 $b=(a_1^{-1},\ldots,a_n^{-1})$이 $ab=ba=(1,\ldots,1)$을 만족하므로 $a$가 unit이다. 따라서 $a\in A^\times$인 것과 각 $a_i\in A_i^\times$인 것이 동치이며, 사상
+거꾸로 각 $a_i$가 unit이면 $b=(a_1^{-1},\ldots,a_n^{-1})$이 $ab=ba=(1,\ldots,1)$을 만족하므로 $a$가 unit이다. 따라서 $a\in A^\times$인 것과 각 $a_i\in A_i^\times$인 것이 동치이며, morphism
 
 $$A^\times\longrightarrow A_1^\times\times\cdots\times A_n^\times,\qquad (a_1,\ldots,a_n)\longmapsto(a_1,\ldots,a_n)$$
 

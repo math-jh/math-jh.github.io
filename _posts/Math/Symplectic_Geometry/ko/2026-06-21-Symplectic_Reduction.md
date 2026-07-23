@@ -15,9 +15,9 @@ published: false
 
 ---
 
-대칭성을 가진 역학계는 그 대칭성을 이용해 자유도를 줄일 수 있다. 보존되는 운동량을 고정하고 대칭의 작용으로 나누면, 더 낮은 차원의 새 위상공간에서 같은 운동을 기술하게 된다. 이 절차의 사교기하학적 형태가 *사교 축약<sub>symplectic reduction</sub>*이다. 출발점은 [§운동량 사상, ⁋정의 2](/ko/math/symplectic_geometry/moment_map#def2)의 Hamiltonian $G$-공간 $(M,\omega,G,\mu)$이다. 운동량 사상의 한 값, 가령 $0\in\mathfrak{g}^\ast$을 고정하면 그 fiber $\mu^{-1}(0)$은 $G$-불변인 부분다양체이고, 이를 $G$로 나눈 몫 $\mu^{-1}(0)/G$이 다시 symplectic manifold가 된다는 것이 핵심이다.
+대칭성을 가진 역학계는 그 대칭성을 이용해 자유도를 줄일 수 있다. 보존되는 운동량을 고정하고 대칭의 작용으로 나누면, 더 낮은 차원의 새 phase space에서 같은 운동을 기술하게 된다. 이 절차의 사교기하학적 형태가 *사교 축약<sub>symplectic reduction</sub>*이다. 출발점은 [§운동량 사상, ⁋정의 2](/ko/math/symplectic_geometry/moment_map#def2)의 Hamiltonian $G$-공간 $(M,\omega,G,\mu)$이다. 운동량 사상의 한 값, 가령 $0\in\mathfrak{g}^\ast$을 고정하면 그 fiber $\mu^{-1}(0)$은 $G$-불변인 부분다양체이고, 이를 $G$로 나눈 quotient $\mu^{-1}(0)/G$이 다시 symplectic manifold가 된다는 것이 핵심이다.
 
-이 결과는 1974년 Marsden과 Weinstein, 그리고 독립적으로 Meyer가 증명하였다. 차원을 세어 보면 $\mu^{-1}(0)$은 $M$에서 $\dim G$만큼 낮고 다시 $G$로 나누며 또 $\dim G$만큼 낮아져, 축약공간은 $M$보다 정확히 $2\dim G$만큼 차원이 낮다. 이 짝수만큼의 감소가 사교 구조와 정확히 맞물린다는 점이 정리의 내용이다. 우리는 먼저 $\mu^{-1}(0)$이 smooth manifold임을 보장하는 조건을 정리하고, 그 위에서 symplectic form이 몫으로 잘 내려옴을 선형대수적으로 확인한 뒤, 일반값과 coadjoint orbit에서의 축약을 서술하고 $\mathbb{CP}^n$의 예시로 마무리한다.
+이 결과는 1974년 Marsden과 Weinstein, 그리고 독립적으로 Meyer가 증명하였다. 차원을 세어 보면 $\mu^{-1}(0)$은 $M$에서 $\dim G$만큼 낮고 다시 $G$로 나누며 또 $\dim G$만큼 낮아져, 축약공간은 $M$보다 정확히 $2\dim G$만큼 차원이 낮다. 이 짝수만큼의 감소가 사교 구조와 정확히 맞물린다는 점이 정리의 내용이다. 우리는 먼저 $\mu^{-1}(0)$이 smooth manifold임을 보장하는 조건을 정리하고, 그 위에서 symplectic form이 quotient로 잘 내려옴을 선형대수적으로 확인한 뒤, 일반값과 coadjoint orbit에서의 축약을 서술하고 $\mathbb{CP}^n$의 예시로 마무리한다.
 
 ## 영점집합의 기하
 
@@ -31,17 +31,17 @@ $$\ker d\mu_p=(\mathfrak{g}\cdot p)^{\omega},\qquad \im d\mu_p=(\mathfrak{g}_p)^
 여기서 $\mathfrak{g}\cdot p=\{X_M(p):X\in\mathfrak{g}\}\subseteq T_pM$은 orbit의 tangent space, $(\,\cdot\,)^{\omega}$은 $\omega_p$에 대한 사교여공간 ([§사교벡터공간, ⁋정의 3](/ko/math/symplectic_geometry/linear_symplectic_geometry#def3)), $\mathfrak{g}_p=\{X\in\mathfrak{g}:X_M(p)=0\}$은 stabilizer의 Lie algebra, $(\mathfrak{g}_p)^{\circ}\subseteq\mathfrak{g}^\ast$은 그 annihilator이다. 특히 $0$이 regular value일 필요충분조건은 모든 $p\in\mu^{-1}(0)$에서 $\mathfrak{g}_p=0$, 즉 작용이 $\mu^{-1}(0)$ 위에서 locally free인 것이다.
 :::
 ::: 증명
-각 $X\in\mathfrak{g}$에 대하여, [§운동량 사상, ⁋정의 2](/ko/math/symplectic_geometry/moment_map#def2)의 조건 1은 $d\mu^X=\iota_{X_M}\omega$이다. 점 $p$와 접벡터 $v\in T_pM$에서 이를 평가하면
+각 $X\in\mathfrak{g}$에 대하여, [§운동량 사상, ⁋정의 2](/ko/math/symplectic_geometry/moment_map#def2)의 조건 1은 $d\mu^X=\iota_{X_M}\omega$이다. 점 $p$와 tangent vector $v\in T_pM$에서 이를 평가하면
 
 $$\langle d\mu_p(v),X\rangle=d\mu_p^X(v)=\omega_p(X_M(p),v)$$
 
-이다. 따라서 $v\in\ker d\mu_p$일 필요충분조건은 모든 $X\in\mathfrak{g}$에 대해 $\omega_p(X_M(p),v)=0$, 즉 $v$가 모든 orbit 접벡터 $X_M(p)$와 $\omega_p$-직교하는 것이다. 이것이 정확히 $v\in(\mathfrak{g}\cdot p)^{\omega}$이므로 $\ker d\mu_p=(\mathfrak{g}\cdot p)^{\omega}$이다.
+이다. 따라서 $v\in\ker d\mu_p$일 필요충분조건은 모든 $X\in\mathfrak{g}$에 대해 $\omega_p(X_M(p),v)=0$, 즉 $v$가 모든 orbit tangent vector $X_M(p)$와 $\omega_p$-직교하는 것이다. 이것이 정확히 $v\in(\mathfrak{g}\cdot p)^{\omega}$이므로 $\ker d\mu_p=(\mathfrak{g}\cdot p)^{\omega}$이다.
 
-상에 대해서는, 위 식이 말하는 바를 $X$에 대한 linear functional로 보면 $d\mu_p(v)$는 $X\mapsto\omega_p(X_M(p),v)$이다. 한 원소 $\xi=d\mu_p(v)$가 어떤 $X\in\mathfrak{g}_p$, 즉 $X_M(p)=0$인 $X$에서 소멸함은 자명하므로 $\im d\mu_p\subseteq(\mathfrak{g}_p)^{\circ}$이다. 역포함은 차원 계산으로 따라온다. symplectic form의 nondegeneracy로부터 부분공간 $U=\mathfrak{g}\cdot p$에 대해 $\dim U+\dim U^{\omega}=\dim T_pM$이므로
+image에 대해서는, 위 식이 말하는 바를 $X$에 대한 linear functional로 보면 $d\mu_p(v)$는 $X\mapsto\omega_p(X_M(p),v)$이다. 한 원소 $\xi=d\mu_p(v)$가 어떤 $X\in\mathfrak{g}_p$, 즉 $X_M(p)=0$인 $X$에서 소멸함은 자명하므로 $\im d\mu_p\subseteq(\mathfrak{g}_p)^{\circ}$이다. 역포함은 차원 계산으로 따라온다. symplectic form의 nondegeneracy로부터 부분공간 $U=\mathfrak{g}\cdot p$에 대해 $\dim U+\dim U^{\omega}=\dim T_pM$이므로
 
 $$\dim\ker d\mu_p=\dim(\mathfrak{g}\cdot p)^{\omega}=\dim T_pM-\dim(\mathfrak{g}\cdot p)$$
 
-이고, 한편 $X\mapsto X_M(p)$의 핵이 $\mathfrak{g}_p$이므로 $\dim(\mathfrak{g}\cdot p)=\dim\mathfrak{g}-\dim\mathfrak{g}_p$이다. 이를 합치면 rank-nullity에 의하여
+이고, 한편 $X\mapsto X_M(p)$의 kernel이 $\mathfrak{g}_p$이므로 $\dim(\mathfrak{g}\cdot p)=\dim\mathfrak{g}-\dim\mathfrak{g}_p$이다. 이를 합치면 rank-nullity에 의하여
 
 $$\dim\im d\mu_p=\dim T_pM-\dim\ker d\mu_p=\dim(\mathfrak{g}\cdot p)=\dim\mathfrak{g}-\dim\mathfrak{g}_p=\dim(\mathfrak{g}_p)^{\circ}$$
 
@@ -52,11 +52,11 @@ $$\dim\im d\mu_p=\dim T_pM-\dim\ker d\mu_p=\dim(\mathfrak{g}\cdot p)=\dim\mathfr
 
 이 보조정리는 영점집합의 두 가지 기하학적 사실을 한꺼번에 준다. 첫째, $0$이 regular value이면 $\mu^{-1}(0)$은 codimension $\dim G$의 smooth 부분다양체이고 $T_p(\mu^{-1}(0))=\ker d\mu_p=(\mathfrak{g}\cdot p)^{\omega}$이다. 둘째, 이 tangent space가 orbit tangent space $\mathfrak{g}\cdot p$의 사교여공간이라는 등식 $T_p(\mu^{-1}(0))=(\mathfrak{g}\cdot p)^{\omega}$이 다음 절에서 symplectic form을 내릴 때 결정적으로 쓰인다. 작용이 ($\mu^{-1}(0)$ 위에서) 자유로우면 $\mathfrak{g}_p=0$이므로 regularity는 자동이며, 우리는 앞으로 이 강한 가정 아래에서 작업한다.
 
-등식 $T_p(\mu^{-1}(0))=(\mathfrak{g}\cdot p)^{\omega}$을 사교벡터공간의 언어로 다시 읽으면, $\mu^{-1}(0)$이 *coisotropic* 부분다양체임을 뜻한다. 부분공간 $W\subseteq T_pM$이 coisotropic이라는 것은 $W^{\omega}\subseteq W$인 것인데 ([§사교벡터공간, ⁋정의 3](/ko/math/symplectic_geometry/linear_symplectic_geometry#def3)), $W=T_p(\mu^{-1}(0))$에 대하여 $W^{\omega}=\bigl((\mathfrak{g}\cdot p)^{\omega}\bigr)^{\omega}=\mathfrak{g}\cdot p$이고, $p\in\mu^{-1}(0)$에서 각 $X_M(p)$이 $\mu^{-1}(0)$에 접하므로 ($G$가 $\mu^{-1}(0)$을 보존하기 때문) $\mathfrak{g}\cdot p\subseteq T_p(\mu^{-1}(0))=W$이다. 즉 영점집합의 사교수직방향이 정확히 orbit 방향이며, 이것이 몫을 취해 symplectic form을 회복할 수 있게 하는 구조적 이유이다.
+등식 $T_p(\mu^{-1}(0))=(\mathfrak{g}\cdot p)^{\omega}$을 symplectic vector space의 언어로 다시 읽으면, $\mu^{-1}(0)$이 *coisotropic* 부분다양체임을 뜻한다. 부분공간 $W\subseteq T_pM$이 coisotropic이라는 것은 $W^{\omega}\subseteq W$인 것인데 ([§사교벡터공간, ⁋정의 3](/ko/math/symplectic_geometry/linear_symplectic_geometry#def3)), $W=T_p(\mu^{-1}(0))$에 대하여 $W^{\omega}=\bigl((\mathfrak{g}\cdot p)^{\omega}\bigr)^{\omega}=\mathfrak{g}\cdot p$이고, $p\in\mu^{-1}(0)$에서 각 $X_M(p)$이 $\mu^{-1}(0)$에 접하므로 ($G$가 $\mu^{-1}(0)$을 보존하기 때문) $\mathfrak{g}\cdot p\subseteq T_p(\mu^{-1}(0))=W$이다. 즉 영점집합의 사교수직방향이 정확히 orbit 방향이며, 이것이 quotient를 취해 symplectic form을 회복할 수 있게 하는 구조적 이유이다.
 
 ## Marsden-Weinstein-Meyer 정리
 
-이제 symplectic form을 몫으로 내릴 준비가 되었다. 작용이 자유롭고 proper하면 quotient space $\mu^{-1}(0)/G$은 smooth manifold가 되고, 사영 $\pi:\mu^{-1}(0)\rightarrow\mu^{-1}(0)/G$은 principal $G$-bundle이 된다. 우리가 할 일은 $\mu^{-1}(0)$ 위로 당겨 온 symplectic form $\iota^\ast\omega$이 이 사영을 통해 밑공간의 형식으로 유일하게 내려옴을 보이는 것이다. 여기서 $\iota:\mu^{-1}(0)\hookrightarrow M$은 포함사상이다.
+이제 symplectic form을 quotient로 내릴 준비가 되었다. 작용이 자유롭고 proper하면 quotient space $\mu^{-1}(0)/G$은 smooth manifold가 되고, 사영 $\pi:\mu^{-1}(0)\rightarrow\mu^{-1}(0)/G$은 principal $G$-bundle이 된다. 우리가 할 일은 $\mu^{-1}(0)$ 위로 당겨 온 symplectic form $\iota^\ast\omega$이 이 사영을 통해 밑공간의 형식으로 유일하게 내려옴을 보이는 것이다. 여기서 $\iota:\mu^{-1}(0)\hookrightarrow M$은 포함사상이다.
 
 ::: 정리 2 (Marsden-Weinstein-Meyer)
 $(M,\omega,G,\mu)$를 Hamiltonian $G$-공간이라 하고, $G$가 compact Lie group이며 $0\in\mathfrak{g}^\ast$이 $\mu$의 regular value라 하자. 또 $G$가 $\mu^{-1}(0)$ 위에 자유롭게 작용한다고 하자. 그럼 *축약공간<sub>reduced space</sub>*
@@ -74,13 +74,13 @@ $$\dim M /\!\!/ G=\dim M-2\dim G$$
 이다.
 :::
 ::: 증명
-$Z=\mu^{-1}(0)$으로 적는다. $0$이 regular value이므로 $Z$은 codimension $\dim\mathfrak{g}^\ast=\dim G$의 smooth 부분다양체이고, [보조정리 1](#lem1)에 의하여 $T_pZ=(\mathfrak{g}\cdot p)^{\omega}$이다. $G$가 compact이고 $Z$ 위에 자유롭게 작용하므로 작용은 proper하며, 따라서 몫 $M /\!\!/ G=Z/G$은 smooth manifold이고 $\pi:Z\rightarrow Z/G$은 smooth submersion (principal $G$-bundle)이다. 자유로운 작용은 $\mathfrak{g}_p=0$을 주므로 $\dim(\mathfrak{g}\cdot p)=\dim\mathfrak{g}=\dim G$이고
+$Z=\mu^{-1}(0)$으로 적는다. $0$이 regular value이므로 $Z$은 codimension $\dim\mathfrak{g}^\ast=\dim G$의 smooth 부분다양체이고, [보조정리 1](#lem1)에 의하여 $T_pZ=(\mathfrak{g}\cdot p)^{\omega}$이다. $G$가 compact이고 $Z$ 위에 자유롭게 작용하므로 작용은 proper하며, 따라서 quotient $M /\!\!/ G=Z/G$은 smooth manifold이고 $\pi:Z\rightarrow Z/G$은 smooth submersion (principal $G$-bundle)이다. 자유로운 작용은 $\mathfrak{g}_p=0$을 주므로 $\dim(\mathfrak{g}\cdot p)=\dim\mathfrak{g}=\dim G$이고
 
 $$\dim Z/G=\dim Z-\dim G=(\dim M-\dim G)-\dim G=\dim M-2\dim G$$
 
 이다.
 
-이제 symplectic form을 내린다. 점 $p\in Z$에서 $d\pi_p:T_pZ\rightarrow T_{\pi(p)}(Z/G)$은 surjective이고 그 핵은 정확히 fiber의 tangent space, 곧 orbit 방향 $\mathfrak{g}\cdot p$이다. 밑공간의 형식을 정의하려면, 두 벡터 $\bar u,\bar v\in T_{\pi(p)}(Z/G)$에 대해 이를 $u,v\in T_pZ$로 들어 올려
+이제 symplectic form을 내린다. 점 $p\in Z$에서 $d\pi_p:T_pZ\rightarrow T_{\pi(p)}(Z/G)$은 surjective이고 그 kernel은 정확히 fiber의 tangent space, 곧 orbit 방향 $\mathfrak{g}\cdot p$이다. 밑공간의 형식을 정의하려면, 두 벡터 $\bar u,\bar v\in T_{\pi(p)}(Z/G)$에 대해 이를 $u,v\in T_pZ$로 들어 올려
 
 $$(\omega_{\mathrm{red}})_{\pi(p)}(\bar u,\bar v):=\omega_p(u,v)$$
 
@@ -101,10 +101,10 @@ $$\omega_p(X_M(p),v)=\langle d\mu_p(v),X\rangle=0$$
 *Nondegeneracy.* $\bar u\in T_{\pi(p)}(Z/G)$이 모든 $\bar v$에 대해 $(\omega_{\mathrm{red}})_{\pi(p)}(\bar u,\bar v)=0$이라 하자. 들어 올림 $u\in T_pZ$을 택하면 모든 $v\in T_pZ$에 대해 $\omega_p(u,v)=0$이므로 $u\in(T_pZ)^{\omega}$이다. 그런데 $T_pZ=(\mathfrak{g}\cdot p)^{\omega}$이므로 $(T_pZ)^{\omega}=\mathfrak{g}\cdot p$이고, 따라서 $u\in\mathfrak{g}\cdot p=\ker d\pi_p$이다. 즉 $\bar u=d\pi_p(u)=0$이므로 $\omega_{\mathrm{red}}$은 nondegenerate이다.
 :::
 
-축약공간의 표기 $M /\!\!/ G$은 사교 몫임을 강조하는 기호로, 단순한 위상적 몫 $M/G$과 구별된다. 위 증명에서 symplectic form이 내려올 수 있었던 두 기둥은 [보조정리 1](#lem1)의 등식 $T_pZ=(\mathfrak{g}\cdot p)^{\omega}$이다. 이 한 등식이 (i)에서는 $\iota^\ast\omega$의 퇴화방향이 정확히 orbit 방향임을, nondegeneracy에서는 그 퇴화방향을 몫으로 죽이고 나면 남는 형식이 nondegenerate임을 동시에 보장한다. Coisotropic 부분다양체를 그 null 방향으로 나누어 symplectic manifold를 얻는 이 절차는 *coisotropic reduction*이라는 더 일반적인 구성의 특수한 경우이다.
+축약공간의 표기 $M /\!\!/ G$은 사교 몫임을 강조하는 기호로, 단순한 위상적 몫 $M/G$과 구별된다. 위 증명에서 symplectic form이 내려올 수 있었던 두 기둥은 [보조정리 1](#lem1)의 등식 $T_pZ=(\mathfrak{g}\cdot p)^{\omega}$이다. 이 한 등식이 (i)에서는 $\iota^\ast\omega$의 퇴화방향이 정확히 orbit 방향임을, nondegeneracy에서는 그 퇴화방향을 quotient로 죽이고 나면 남는 형식이 nondegenerate임을 동시에 보장한다. Coisotropic 부분다양체를 그 null 방향으로 나누어 symplectic manifold를 얻는 이 절차는 *coisotropic reduction*이라는 더 일반적인 구성의 특수한 경우이다.
 
 ::: 참고 3
-정리의 가정은 결론을 위한 충분조건일 뿐 최선은 아니다. $G$의 compactness는 작용이 proper함을 보장하기 위한 것이며, $G$가 noncompact이더라도 작용이 $\mu^{-1}(0)$ 위에서 자유롭고 proper하기만 하면 같은 결론이 성립한다. 자유로운 작용 대신 단지 locally free인 경우에는 $0$이 여전히 regular value여서 $\mu^{-1}(0)$은 매끄럽지만 몫 $\mu^{-1}(0)/G$은 smooth manifold가 아니라 orbifold가 될 수 있으며, $\omega_{\mathrm{red}}$은 orbifold 위의 symplectic form으로 살아남는다. Stabilizer가 더 큰 일반적인 경우의 축약은 stratified symplectic space를 낳는다.
+정리의 가정은 결론을 위한 충분조건일 뿐 최선은 아니다. $G$의 compactness는 작용이 proper함을 보장하기 위한 것이며, $G$가 noncompact이더라도 작용이 $\mu^{-1}(0)$ 위에서 자유롭고 proper하기만 하면 같은 결론이 성립한다. 자유로운 작용 대신 단지 locally free인 경우에는 $0$이 여전히 regular value여서 $\mu^{-1}(0)$은 매끄럽지만 quotient $\mu^{-1}(0)/G$은 smooth manifold가 아니라 orbifold가 될 수 있으며, $\omega_{\mathrm{red}}$은 orbifold 위의 symplectic form으로 살아남는다. Stabilizer가 더 큰 일반적인 경우의 축약은 stratified symplectic space를 낳는다.
 :::
 
 ## 일반값과 coadjoint orbit에서의 축약
@@ -119,7 +119,7 @@ $$M /\!\!/_{\!\xi}\, G:=\mu^{-1}(\xi)/G_\xi$$
 으로 정의한다.
 :::
 
-이 정의에서 $\xi=0$이면 $\Ad_g^\ast 0=0$이 모든 $g$에 대해 성립하므로 $G_0=G$이고, 따라서 $M /\!\!/_{\!0}\,G=M /\!\!/ G$은 [정리 2](#thm2)의 축약공간으로 환원된다. $G$가 abelian, 가령 torus이면 coadjoint 작용이 자명하여 모든 $\xi$에 대해 $G_\xi=G$이므로, abelian 군에 대해서는 임의의 regular value $\xi$에서 곧바로 $\mu^{-1}(\xi)/G$을 취할 수 있다. 일반적인 $\xi$에서의 축약이 다시 symplectic manifold임은 다음과 같이 $0$에서의 축약으로 환원된다.
+이 정의에서 $\xi=0$이면 $\Ad_g^\ast 0=0$이 모든 $g$에 대해 성립하므로 $G_0=G$이고, 따라서 $M /\!\!/_{\!0}\,G=M /\!\!/ G$은 [정리 2](#thm2)의 축약공간으로 환원된다. $G$가 abelian, 가령 torus이면 coadjoint 작용이 자명하여 모든 $\xi$에 대해 $G_\xi=G$이므로, abelian group에 대해서는 임의의 regular value $\xi$에서 곧바로 $\mu^{-1}(\xi)/G$을 취할 수 있다. 일반적인 $\xi$에서의 축약이 다시 symplectic manifold임은 다음과 같이 $0$에서의 축약으로 환원된다.
 
 ::: 명제 5
 [정의 4](#def4)의 가정 아래 축약공간 $M /\!\!/_{\!\xi}\,G=\mu^{-1}(\xi)/G_\xi$은 자연스러운 symplectic form을 갖는 smooth manifold이며, 그 차원은
@@ -135,31 +135,31 @@ $$M /\!\!/_{\!\xi}\, G\cong\mu^{-1}(\mathcal{O}_\xi)/G$$
 ::: 증명
 subgroup $G_\xi\subseteq G$은 Lie subgroup이고 그 Lie algebra는 $\mathfrak{g}_\xi=\{X\in\mathfrak{g}:\ad_X^\ast\xi=0\}$이다. $\mu$을 $\mu^{-1}(\xi)$의 근방에서 affine 평행이동하여 생각하면 $\xi$을 regular value로 갖는 상황은 국소적으로 $0$을 regular value로 갖는 상황과 같으므로, $\mu^{-1}(\xi)$은 codimension $\dim G$의 smooth 부분다양체이다.
 
-이제 $G_\xi$-작용에 대한 운동량 사상을 만든다. 포함 $\mathfrak{g}_\xi\hookrightarrow\mathfrak{g}$의 dual restriction $r:\mathfrak{g}^\ast\rightarrow\mathfrak{g}_\xi^\ast$을 합성한 $\mu_\xi:=r\circ(\mu-\xi):M\rightarrow\mathfrak{g}_\xi^\ast$은 $G_\xi$-작용의 운동량 사상이고, $\mu^{-1}(\xi)\subseteq\mu_\xi^{-1}(0)$이다. $\mu^{-1}(\xi)$ 위에서 $G_\xi$이 자유롭고 proper하게 작용하므로 [정리 2](#thm2)의 증명과 동일한 논법이 적용되어, $T_p(\mu^{-1}(\xi))$의 $\omega_p$에 대한 퇴화방향이 정확히 $\mathfrak{g}_\xi\cdot p$임을 확인하면 symplectic form이 몫 $\mu^{-1}(\xi)/G_\xi$으로 내려온다. 차원은
+이제 $G_\xi$-작용에 대한 운동량 사상을 만든다. 포함 $\mathfrak{g}_\xi\hookrightarrow\mathfrak{g}$의 dual restriction $r:\mathfrak{g}^\ast\rightarrow\mathfrak{g}_\xi^\ast$을 합성한 $\mu_\xi:=r\circ(\mu-\xi):M\rightarrow\mathfrak{g}_\xi^\ast$은 $G_\xi$-작용의 운동량 사상이고, $\mu^{-1}(\xi)\subseteq\mu_\xi^{-1}(0)$이다. $\mu^{-1}(\xi)$ 위에서 $G_\xi$이 자유롭고 proper하게 작용하므로 [정리 2](#thm2)의 증명과 동일한 논법이 적용되어, $T_p(\mu^{-1}(\xi))$의 $\omega_p$에 대한 퇴화방향이 정확히 $\mathfrak{g}_\xi\cdot p$임을 확인하면 symplectic form이 quotient $\mu^{-1}(\xi)/G_\xi$으로 내려온다. 차원은
 
 $$\dim\mu^{-1}(\xi)/G_\xi=(\dim M-\dim G)-\dim G_\xi$$
 
 이다.
 
-동형 $\mu^{-1}(\xi)/G_\xi\cong\mu^{-1}(\mathcal{O}_\xi)/G$은 다음 사상에서 온다. Equivariance에 의해 $\mu(\mu^{-1}(\mathcal{O}_\xi))=\mathcal{O}_\xi$이고 $G$이 $\mu^{-1}(\mathcal{O}_\xi)$을 보존한다. 포함 $\mu^{-1}(\xi)\hookrightarrow\mu^{-1}(\mathcal{O}_\xi)$은 $G_\xi$-동변이므로 몫 사이의 사상
+동형 $\mu^{-1}(\xi)/G_\xi\cong\mu^{-1}(\mathcal{O}_\xi)/G$은 다음 morphism에서 온다. Equivariance에 의해 $\mu(\mu^{-1}(\mathcal{O}_\xi))=\mathcal{O}_\xi$이고 $G$이 $\mu^{-1}(\mathcal{O}_\xi)$을 보존한다. 포함 $\mu^{-1}(\xi)\hookrightarrow\mu^{-1}(\mathcal{O}_\xi)$은 $G_\xi$-동변이므로 quotient 사이의 morphism
 
 $$\mu^{-1}(\xi)/G_\xi\rightarrow\mu^{-1}(\mathcal{O}_\xi)/G$$
 
-을 유도한다. 이 사상이 전단사임은 다음에서 나온다. $\mathcal{O}_\xi\cong G/G_\xi$이므로 임의의 $q\in\mu^{-1}(\mathcal{O}_\xi)$에 대해 $\mu(q)=\Ad_g^\ast\xi$인 $g$이 존재하여 $g^{-1}\cdot q\in\mu^{-1}(\xi)$이고, 따라서 모든 $G$-orbit은 $\mu^{-1}(\xi)$을 만난다 (전사). 그 교집합은 $\mu^{-1}(\xi)$ 위의 한 $G_\xi$-orbit과 정확히 일치하므로 (단사) 사상은 전단사이며, smooth 동형이다.
+을 유도한다. 이 morphism이 전단사임은 다음에서 나온다. $\mathcal{O}_\xi\cong G/G_\xi$이므로 임의의 $q\in\mu^{-1}(\mathcal{O}_\xi)$에 대해 $\mu(q)=\Ad_g^\ast\xi$인 $g$이 존재하여 $g^{-1}\cdot q\in\mu^{-1}(\xi)$이고, 따라서 모든 $G$-orbit은 $\mu^{-1}(\xi)$을 만난다 (전사). 그 교집합은 $\mu^{-1}(\xi)$ 위의 한 $G_\xi$-orbit과 정확히 일치하므로 (단사) morphism은 전단사이며, smooth 동형이다.
 :::
 
-동형 $M /\!\!/_{\!\xi}\,G\cong\mu^{-1}(\mathcal{O}_\xi)/G$은 일반값에서의 축약을 다시 $G$ 전체에 대한 몫으로 보는 관점을 준다. Coadjoint orbit $\mathcal{O}_\xi$ 자체가 Kirillov-Kostant-Souriau 형식이라 불리는 표준 symplectic form을 갖는 Hamiltonian $G$-공간인데, 위 동형은 $\xi$에서의 축약이 곱공간 $M\times\mathcal{O}_\xi^{-}$을 $0$에서 축약한 것과 같음을 보이는 *shifting trick*으로 이어진다. 여기서 $\mathcal{O}_\xi^{-}$은 부호를 뒤집은 symplectic form을 준 orbit이며, 곱의 운동량 사상은 [§운동량 사상, ⁋명제 6](/ko/math/symplectic_geometry/moment_map#prop6)에 따라 성분별 합이 된다. 이로써 임의 값에서의 축약 이론 전체가 [정리 2](#thm2)의 영점 축약으로 통일된다.
+동형 $M /\!\!/_{\!\xi}\,G\cong\mu^{-1}(\mathcal{O}_\xi)/G$은 일반값에서의 축약을 다시 $G$ 전체에 대한 quotient로 보는 관점을 준다. Coadjoint orbit $\mathcal{O}_\xi$ 자체가 Kirillov-Kostant-Souriau 형식이라 불리는 표준 symplectic form을 갖는 Hamiltonian $G$-공간인데, 위 동형은 $\xi$에서의 축약이 곱공간 $M\times\mathcal{O}_\xi^{-}$을 $0$에서 축약한 것과 같음을 보이는 *shifting trick*으로 이어진다. 여기서 $\mathcal{O}_\xi^{-}$은 부호를 뒤집은 symplectic form을 준 orbit이며, 곱의 운동량 사상은 [§운동량 사상, ⁋명제 6](/ko/math/symplectic_geometry/moment_map#prop6)에 따라 성분별 합이 된다. 이로써 임의 값에서의 축약 이론 전체가 [정리 2](#thm2)의 영점 축약으로 통일된다.
 
 ## 복소 사영공간
 
-가장 투명한 예시는 $\mathbb{C}^{n+1}$ 위의 대각 원작용을 축약하여 $\mathbb{CP}^n$을 얻는 것이다. 이 예시는 [§운동량 사상, ⁋예시 8](/ko/math/symplectic_geometry/moment_map#ex8) 뒤에서 언급한 $S^{2n+1}$ 위 제약과 대각 $S^1$ 몫이 정확히 사교 축약임을 확인해 준다.
+가장 투명한 예시는 $\mathbb{C}^{n+1}$ 위의 대각 원작용을 축약하여 $\mathbb{CP}^n$을 얻는 것이다. 이 예시는 [§운동량 사상, ⁋예시 8](/ko/math/symplectic_geometry/moment_map#ex8) 뒤에서 언급한 $S^{2n+1}$ 위 제약과 대각 $S^1$ quotient가 정확히 사교 축약임을 확인해 준다.
 
 ::: 예시 6
 $M=\mathbb{C}^{n+1}$에 좌표 $z_j=x_j+iy_j$ ($j=0,1,\ldots,n$)와 symplectic form $\omega=\sum_{j=0}^n dx_j\wedge dy_j$을 주자 ([§운동량 사상, ⁋예시 8](/ko/math/symplectic_geometry/moment_map#ex8)). $G=S^1$이 모든 좌표에 동시에 작용하는 *대각* 회전
 
 $$t\cdot(z_0,\ldots,z_n)=(e^{2\pi it}z_0,\ldots,e^{2\pi it}z_n)$$
 
-을 생각한다. 이는 $\sum_j\lvert z_j\rvert^2$을 보존하므로 $\omega$를 보존하는 Hamiltonian 작용이고, 예시 8의 계산을 대각 생성원 $X=(1,\ldots,1)\in\mathbb{R}^{n+1}=\mathfrak{t}$에 적용하면 운동량 사상은
+을 생각한다. 이는 $\sum_j\lvert z_j\rvert^2$을 보존하므로 $\omega$를 보존하는 Hamiltonian 작용이고, 예시 8의 계산을 대각 generator $X=(1,\ldots,1)\in\mathbb{R}^{n+1}=\mathfrak{t}$에 적용하면 운동량 사상은
 
 $$\mu(z)=-\pi\sum_{j=0}^n\lvert z_j\rvert^2+c$$
 
@@ -183,7 +183,7 @@ $$\mathbb{C}^{n+1} /\!\!/ S^1=S^{2n+1}/S^1=\mathbb{CP}^n$$
 이 예시는 [§운동량 사상, ⁋예시 8](/ko/math/symplectic_geometry/moment_map#ex8) 뒤에서 윤곽만 그렸던 절차를 사교 축약의 언어로 완성한다. 거기서는 $T^{n+1}$ 작용을 다루며 대각 $S^1$을 나눈 뒤 남은 $T^n=T^{n+1}/S^1$의 운동량 다면체가 단체가 됨을 보였는데, 그 "대각 $S^1$을 나누는" 단계가 바로 위의 $\mathbb{C}^{n+1} /\!\!/ S^1=\mathbb{CP}^n$이다. 더 일반적으로, 원작용을 음이 아닌 운동량 값 $\xi$에서 축약하면 구면의 반지름이 바뀌어 Fubini-Study form이 상수배만큼 재조정된 $\mathbb{CP}^n$을 얻으며, 이렇게 운동량 값을 변화시키며 얻는 축약공간들의 족이 사교 축약을 토릭 기하 및 기하학적 불변식론과 잇는 다리가 된다.
 
 ::: 참고 7
-사교 축약은 [§운동량 사상, ⁋명제 3](/ko/math/symplectic_geometry/moment_map#prop3)와 같은 뿌리에서 나온 쌍둥이 절차이다. Noether 정리가 대칭성으로부터 보존량 $\mu$을 얻어 그 값을 고정하는 것이라면, 사교 축약은 그렇게 고정한 등위면 $\mu^{-1}(\xi)$ 위에서 대칭의 작용으로 나누어 자유도를 실제로 제거하는 것이다. $G$-불변 Hamiltonian $H$은 $\mu^{-1}(\xi)$ 위로 제한되고 다시 축약공간 $M /\!\!/_{\!\xi}\,G$ 위의 함수 $H_{\mathrm{red}}$으로 내려오며, $M$ 위의 $H$-흐름은 정확히 축약공간 위의 $H_{\mathrm{red}}$-흐름으로 사영된다. 이것이 고전역학에서 보존량을 이용해 위상공간의 차원을 낮추는 절차의 좌표 없는 정식화이다.
+사교 축약은 [§운동량 사상, ⁋명제 3](/ko/math/symplectic_geometry/moment_map#prop3)와 같은 뿌리에서 나온 쌍둥이 절차이다. Noether 정리가 대칭성으로부터 보존량 $\mu$을 얻어 그 값을 고정하는 것이라면, 사교 축약은 그렇게 고정한 등위면 $\mu^{-1}(\xi)$ 위에서 대칭의 작용으로 나누어 자유도를 실제로 제거하는 것이다. $G$-불변 Hamiltonian $H$은 $\mu^{-1}(\xi)$ 위로 제한되고 다시 축약공간 $M /\!\!/_{\!\xi}\,G$ 위의 함수 $H_{\mathrm{red}}$으로 내려오며, $M$ 위의 $H$-흐름은 정확히 축약공간 위의 $H_{\mathrm{red}}$-흐름으로 사영된다. 이것이 고전역학에서 보존량을 이용해 phase space의 차원을 낮추는 절차의 좌표 없는 정식화이다.
 :::
 
 ---

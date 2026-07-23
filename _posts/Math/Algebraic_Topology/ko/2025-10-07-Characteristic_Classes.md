@@ -19,10 +19,10 @@ weight: 11
 지금까지 우리는 $\mathbb{Z}/2$-coefficient를 사용하여 orientability의 문제를 효과적으로 피해왔다. 이제 우리는 orientation까지 고려하기로 한다. $\mathbb{Z}/2$-coefficient에서는 부호를 구별할 수 없어 모든 fiber가 자동으로 "방향"을 가졌지만, $\mathbb{Z}$-coefficient로 넘어가면 $1$과 $-1$이 분명히 다른 원소가 되므로 각 fiber에 방향을 일관되게 줄 수 있는지가 문제가 되고, 그것이 가능한 경우 top Stiefel-Whitney class $w_n$을 정수로 들어올린 더 섬세한 불변량이 나타난다. 이것이 Euler class이다.
 
 ::: 정의 1
-Rank $n$ vector bundle $p:E\rightarrow B$의 *orientation<sub>방향</sub>*이란, 각 fiber $p^{-1}(x)$에 방향, 즉 $H^n(p^{-1}(x), p^{-1}(x)\setminus 0;\mathbb{Z})\cong\mathbb{Z}$의 한 생성원 $u_x$의 선택을 각 local trivialization에서 연속적으로 부여하는 것이다. 이러한 방향이 존재하는 bundle을 *oriented vector bundle*이라 한다.
+Rank $n$ vector bundle $p:E\rightarrow B$의 *orientation<sub>방향</sub>*이란, 각 fiber $p^{-1}(x)$에 방향, 즉 $H^n(p^{-1}(x), p^{-1}(x)\setminus 0;\mathbb{Z})\cong\mathbb{Z}$의 한 generator $u_x$의 선택을 각 local trivialization에서 연속적으로 부여하는 것이다. 이러한 방향이 존재하는 bundle을 *oriented vector bundle*이라 한다.
 :::
 
-방향을 주는 것은 크게 세 가지로 생각할 수 있다. 우선 첫째로, 우리는 일반적으로 벡터다발 $E\rightarrow B$가 주어지면, zero section $0:B\rightarrow E$를 통해 $B$가 $E$에 들어있는 것으로 생각한다. 그럼 위의 정의에서 relative cohomology $H^n(p^{-1}(x), p^{-1}(x)\setminus 0;\mathbb{Z})$은 그 자체로는 fiber의 원점, 즉 base $B$의 해당하는 점에 $+$ 혹은 $-$라는 데이터를 붙여둔 것이다.
+방향을 주는 것은 크게 세 가지로 생각할 수 있다. 우선 첫째로, 우리는 일반적으로 vector bundle $E\rightarrow B$가 주어지면, zero section $0:B\rightarrow E$를 통해 $B$가 $E$에 들어있는 것으로 생각한다. 그럼 위의 정의에서 relative cohomology $H^n(p^{-1}(x), p^{-1}(x)\setminus 0;\mathbb{Z})$은 그 자체로는 fiber의 원점, 즉 base $B$의 해당하는 점에 $+$ 혹은 $-$라는 데이터를 붙여둔 것이다.
 
 이는 미분기하학 등에서는 다음과 같이 해석된다. Fiber $p^{-1}(x)\cong\mathbb{R}^n$에서 원점을 뺀 것이 구면 $S^{n-1}$으로 deformation retract되므로 pair의 long exact sequence로부터 다음 isomorphism
 
@@ -34,7 +34,7 @@ $$H^n(p^{-1}(x), p^{-1}(x)\setminus 0;\mathbb{Z})\cong \widetilde{H}^{n-1}(S^{n-
 
 이것이 언제 가능한지는 앞서 본 $\pi_0(\GL(n;\mathbb{R}))\cong \mathbb{Z}/2$가 알려준다. 즉, 각 transition function에서 방향에 관련된 정보로 남는 것은 $\det g_{ij}$의 부호 $\varepsilon_{ij}=\operatorname{sgn}\det g_{ij}:U_{ij}\rightarrow \{\pm 1\}$뿐이며, 이 때 이들을 이어붙인 class $[\varepsilon_{ij}]\in H^1(B;\mathbb{Z}/2)$가 $\GL^+$로의 축소에 대한 obstruction이 된다. 이 class가 정확히 $w_1(E)$이며 ([§슈티펠-휘트니 특성류, ⁋정의 5](/ko/math/algebraic_topology/stiefel_whitney_classes#def5)), 이는 앞서 $H^1(M;\mathbb{Z}/2)$가 covering space의 방향 정보를 담았던 것의 rank $n$ 버전으로 생각하면 된다. 즉, $E$가 orientable인 것은 정확히 $w_1(E)=0$인 것과 동치이다. 
 
-앞으로 이 절에서 다루는 bundle은 모두 oriented인 것으로 가정한다. 이렇게 방향이 주어지면 fiber마다 흩어져 있던 생성원 $u_x$들이 하나의 cohomology class로 묶인다.
+앞으로 이 절에서 다루는 bundle은 모두 oriented인 것으로 가정한다. 이렇게 방향이 주어지면 fiber마다 흩어져 있던 generator $u_x$들이 하나의 cohomology class로 묶인다.
 
 ::: 정리 2 (Thom isomorphism)
 Oriented rank $n$ vector bundle $p:E\rightarrow B$에 대하여 $E_0=E\setminus 0(B)$를 zero section을 제거한 부분공간이라 하자. 그럼 유일한 *Thom class* $u\in H^n(E, E_0;\mathbb{Z})$가 존재하여, 각 $x\in B$에 대해 $u$를 $(p^{-1}(x), p^{-1}(x)\setminus 0)$로 제한한 것이 $u_x$이다. 더 나아가, cup product와 pullback의 합성
@@ -49,7 +49,7 @@ $$H^k(B;\mathbb{Z})\xrightarrow{\ \cong\ }H^{k+n}(E, E_0;\mathbb{Z}),\qquad \alp
 
 $$H^{k+n}(B\times\mathbb{R}^n, B\times(\mathbb{R}^n\setminus 0))\cong H^k(B)\otimes H^n(\mathbb{R}^n,\mathbb{R}^n\setminus 0)$$
 
-이다. 그런데 우변의 둘째 인자는 $\mathbb{Z}$이고, 그 생성원이 fiber의 방향 $u_x$이다. 우리가 원하는 class는 이 경우에는 $u=1\otimes u_x$로 두면 충분하며, 일반적인 경우는 trivializing open cover를 잡아 Mayer-Vietoris로 이들 isomorphism들을 이어붙이면 된다. 자세한 증명은 [MS]의 10장에 맡겨둔다.
+이다. 그런데 우변의 둘째 인자는 $\mathbb{Z}$이고, 그 generator가 fiber의 방향 $u_x$이다. 우리가 원하는 class는 이 경우에는 $u=1\otimes u_x$로 두면 충분하며, 일반적인 경우는 trivializing open cover를 잡아 Mayer-Vietoris로 이들 isomorphism들을 이어붙이면 된다. 자세한 증명은 [MS]의 10장에 맡겨둔다.
 :::
 
 Thom class는 vector bundle $E$의 zero section 근방에 집중된 fiber 방향의 cohomology class로 이해할 수 있다. 그럼 위의 isomorphism은 $B$에 살고 있는 cohomology class $\alpha$를 $E$의 fiber 방향으로 늘려준 후 $u$와 곱해주는 것이며, 이것이 isomorphism이 된다는 것이 위 정리의 주장이다. 혹은 [§푸앵카레 쌍대성, ⁋예시 16](/ko/math/algebraic_topology/Poincare_duality#ex16)의 관점에서 보면, $u$는 zero section의 (relative) Poincaré dual로서, 위 isomorphism은 $\alpha$가 정의하는 homology class를 fiber를 따라 늘린 후, 이를 zero section과 곱하여 원래대로 돌아오는 (그러나 homology class가 이제 total space의 homology group에 살게 된) 상황으로 생각할 수 있다.
@@ -91,9 +91,9 @@ Euler class는 다음을 만족한다.
 
 넷째 주장의 경우, $\mathbb{Z}$ 위에서는 generic section의 zero locus를 부호까지 세지만 $\mathbb{Z}/2$로 내리면 그 부호를 잊는다는 것이다. 그럼 부호 없이 센 영점 개수가 정확히 top Stiefel-Whitney class $w_n$이므로, $e(E)$는 $w_n$을 부호까지 기억하도록 정수로 들어올린 것이고, 그 역과정이 mod $2$를 취하는 것이다. 
 
-다섯째 주장의 경우, 방향을 뒤집으면 모든 영점의 부호가 함께 뒤집혀 $e\mapsto -e$가 되고, 특히 $n$이 홀수이면 fiber마다의 반사 $v\mapsto -v$가 행렬식 $(-1)^n=-1$로 방향을 뒤집는 bundle 자기동형이라 $e=-e$를 강제하므로 $2e(E)=0$, 곧 홀수 rank oriented bundle의 Euler class는 언제나 2-torsion이라는 것을 곧바로 얻을 수 있다.
+다섯째 주장의 경우, 방향을 뒤집으면 모든 영점의 부호가 함께 뒤집혀 $e\mapsto -e$가 되고, 특히 $n$이 홀수이면 fiber마다의 반사 $v\mapsto -v$가 행렬식 $(-1)^n=-1$로 방향을 뒤집는 bundle automorphism이라 $e=-e$를 강제하므로 $2e(E)=0$, 곧 홀수 rank oriented bundle의 Euler class는 언제나 2-torsion이라는 것을 곧바로 얻을 수 있다.
 
-Euler class라는 이름은 그것이 재는 양에서 온다. $M$이 닫힌 oriented $n$-manifold이고 $E=TM$이 그 tangent bundle이면, $e(TM)$을 [§푸앵카레 쌍대성, ⁋정의 10](/ko/math/algebraic_topology/Poincare_duality#def10)의 fundamental class $[M]$ 위에서 evaluate한 값이 정확히 Euler characteristic 
+Euler class라는 이름은 그것이 재는 양에서 온다. $M$이 closed oriented $n$-manifold이고 $E=TM$이 그 tangent bundle이면, $e(TM)$을 [§푸앵카레 쌍대성, ⁋정의 10](/ko/math/algebraic_topology/Poincare_duality#def10)의 fundamental class $[M]$ 위에서 evaluate한 값이 정확히 Euler characteristic 
 
 $$\rchi(M)=\int_{[M]} e(TM)$$
 
@@ -174,7 +174,7 @@ $$H^k(D(E), S(E))\cong H^k(E, E_0)\cong H^{k-n}(B)$$
 
 ![pair cohomology 완전열과 Gysin 완전열](/assets/images/Math/Algebraic_Topology/Characteristic_Classes-1.svg){:style="width:40.87em" class="invert" .align-center}
 
-을 얻을 수 있으며, 이 때 둘째 열의 map들은 수직 방향의 isomorphism을 따라 위쪽 exact sequence의 map들을 옮겨온 것이다. 구체적으로, 첫째 사상 $H^{k-n}(B)\rightarrow H^k(B)$를 따라가 보자. Thom isomorphism $\Phi:\alpha\mapsto p^\ast\alpha\smile u$로 $\alpha\in H^{k-n}(B)$를 $H^k(E, E_0)$로 올린 뒤 위 행의 첫 사상 $j^\ast$를 합성하면
+을 얻을 수 있으며, 이 때 둘째 열의 map들은 수직 방향의 isomorphism을 따라 위쪽 exact sequence의 map들을 옮겨온 것이다. 구체적으로, 첫째 morphism $H^{k-n}(B)\rightarrow H^k(B)$를 따라가 보자. Thom isomorphism $\Phi:\alpha\mapsto p^\ast\alpha\smile u$로 $\alpha\in H^{k-n}(B)$를 $H^k(E, E_0)$로 올린 뒤 위 행의 첫 morphism $j^\ast$를 합성하면
 
 $$j^\ast\Phi(\alpha)=j^\ast(p^\ast\alpha\smile u)=p^\ast\alpha\smile j^\ast u$$
 
@@ -185,9 +185,9 @@ $$0^\ast(p^\ast\alpha\smile j^\ast u)=0^\ast p^\ast\alpha\smile 0^\ast j^\ast u=
 가 된다. ([정의 3](#def3)) 비슷하게, 둘째 map $H^k(D(E))=H^k(B)\rightarrow H^k(S(E))$는 restriction, 곧 $\pi^\ast$인 것을 알 수 있으며, Gysin map $\pi_!$는 connecting homomorphism $\delta$를 Thom isomorphism $H^{k+1}(D(E), S(E))\cong H^{k-n+1}(B)$로 옮긴 것이다.
 :::
 
-세 번째 사상 $\pi_!:H^k(S(E))\rightarrow H^{k-n+1}(B)$는 조금 특별한 성질을 갖는다. 보통 연속사상 $\pi:S(E)\rightarrow B$가 cohomology에 주는 자연스러운 사상은 pullback $\pi^\ast:H^\ast(B)\rightarrow H^\ast(S(E))$로, $\pi$의 역방향이며 차수를 보존한다. 반면 $\pi_!$는 $\pi$와 같은 방향으로 가면서 차수를 $(n-1)$만큼 낮추는데, 이와 같이 연속함수에 의해 마땅히 유도되어야 할 방향의 반대방향으로 거스르는 사상을 *wrong way map*이라 하고 첨자 $!$를 붙여 표기하는 것이 관례이다.
+세 번째 morphism $\pi_!:H^k(S(E))\rightarrow H^{k-n+1}(B)$는 조금 특별한 성질을 갖는다. 보통 연속사상 $\pi:S(E)\rightarrow B$가 cohomology에 주는 자연스러운 morphism은 pullback $\pi^\ast:H^\ast(B)\rightarrow H^\ast(S(E))$로, $\pi$의 역방향이며 degree를 보존한다. 반면 $\pi_!$는 $\pi$와 같은 방향으로 가면서 degree를 $(n-1)$만큼 낮추는데, 이와 같이 연속함수에 의해 마땅히 유도되어야 할 방향의 반대방향으로 거스르는 morphism을 *wrong way map*이라 하고 첨자 $!$를 붙여 표기하는 것이 관례이다.
 
-이 사상의 직관은 [정리 2](#thm2)를 뒤집는 데 있다. Thom isomorphism $\alpha\mapsto p^\ast\alpha\smile u$가 base의 class $\alpha$를 fiber 위 각 점에 복사($p^\ast\alpha$)한 뒤 fiber 방향 class $u$를 곱해 차수를 올리는, fiber 방향으로의 lift였다면, $\pi_!$는 그 역이라고 생각하면 된다. 즉 $S(E)$의 class를 base 방향 성분과 fiber 방향 성분으로 보면, fiber 방향 성분은 각 fiber $S^{n-1}$을 따라 적분해 밖으로 빼고 (그래서 fiber 차원 $n-1$만큼 차수가 깎인다), 남은 base 방향 class는 그대로 돌려놓는 것이다. 이 성질을 수학적으로 엄밀하게 적은 것이 바로 *projection formula*
+이 morphism의 직관은 [정리 2](#thm2)를 뒤집는 데 있다. Thom isomorphism $\alpha\mapsto p^\ast\alpha\smile u$가 base의 class $\alpha$를 fiber 위 각 점에 복사($p^\ast\alpha$)한 뒤 fiber 방향 class $u$를 곱해 degree를 올리는, fiber 방향으로의 lift였다면, $\pi_!$는 그 역이라고 생각하면 된다. 즉 $S(E)$의 class를 base 방향 성분과 fiber 방향 성분으로 보면, fiber 방향 성분은 각 fiber $S^{n-1}$을 따라 적분해 밖으로 빼고 (그래서 fiber 차원 $n-1$만큼 degree가 깎인다), 남은 base 방향 class는 그대로 돌려놓는 것이다. 이 성질을 수학적으로 엄밀하게 적은 것이 바로 *projection formula*
 
 $$\pi_!(\pi^\ast\alpha\smile\beta)=\alpha\smile\pi_!\beta,\qquad \alpha\in H^\ast(B), \quad\beta\in H^\ast(S(E))$$
 
@@ -211,7 +211,7 @@ $$H^{k-n}(B)=H^{k-n+1}(B)=0$$
 
 $$\cdots\rightarrow H^{k-2n}(B)\xrightarrow{\ \smile e\ }H^k(B)\xrightarrow{\ \pi_0^\ast\ }H^k(E_0)\rightarrow H^{k-2n+1}(B)\rightarrow\cdots$$
 
-이 성립하고, 위에서 살펴본 것과 같이 $k\leq 2n-2$이면 양 끝의 $H^{k-2n}(B)$와 $H^{k-2n+1}(B)$가 모두 음의 차수라 $0$이므로, $\pi_0^\ast:H^k(B)\rightarrow H^k(E_0)$는 isomorphism이다.
+이 성립하고, 위에서 살펴본 것과 같이 $k\leq 2n-2$이면 양 끝의 $H^{k-2n}(B)$와 $H^{k-2n+1}(B)$가 모두 음의 degree라 $0$이므로, $\pi_0^\ast:H^k(B)\rightarrow H^k(E_0)$는 isomorphism이다.
 
 ::: 정의 6
 Complex rank $n$ vector bundle $E\rightarrow B$의 *Chern class<sub>천 특성류</sub>* $c_i(E)\in H^{2i}(B;\mathbb{Z})$를 vector bundle의 rank $n$에 대해 귀납적으로 다음과 같이 정의한다.
@@ -240,7 +240,7 @@ Chern class는 다음을 만족한다.
 ::: 증명
 둘째 조건과 셋째 조건은 $c_n=e(E_{\mathbb{R}})$의 vanishing을 [명제 4](#prop4)의 셋째 조건을 사용하기만 하면 정의로부터 바로 오는 것이다. 
 
-첫째 조건은 $n$에 대한 귀납으로 보인다. $c_n$의 naturality는 Euler class의 naturality로부터 온다. ([명제 4](#prop4)의 첫째 조건) $0<i<n$에서는 $f$가 deleted space와 complement bundle, 그리고 Gysin sequence 전체와 호환되는 bundle map $E_0'\rightarrow E_0$을 유도하고, 그 위에서 $f^\ast(L^\perp)\cong(f^\ast L)^\perp$이므로 귀납가정과 $\pi_0^\ast$의 자연성으로부터 $c_i$의 naturality가 따라온다.
+첫째 조건은 $n$에 대한 귀납으로 보인다. $c_n$의 naturality는 Euler class의 naturality로부터 온다. ([명제 4](#prop4)의 첫째 조건) $0<i<n$에서는 $f$가 deleted space와 complement bundle, 그리고 Gysin sequence 전체와 호환되는 bundle map $E_0'\rightarrow E_0$을 유도하고, 그 위에서 $f^\ast(L^\perp)\cong(f^\ast L)^\perp$이므로 귀납가정과 $\pi_0^\ast$의 naturality로부터 $c_i$의 naturality가 따라온다.
 :::
 
 즉 Chern class는 Stiefel-Whitney class와 비슷한 종류의 공리적인 성질을 만족한다. ([§슈티펠-휘트니 특성류, ⁋정의 5](/ko/math/algebraic_topology/stiefel_whitney_classes#def5)) 우리는 Stiefel-Whitney class의 존재성을 보이기 위해 real infinite Grassmannian $\Gr(k,\mathbb{R}^\infty)$를 생각한 후, 여기서의 cohomology class를 원래의 공간으로 pullback해와서 이들이 Stiefel-Whitney class의 공리적 조건을 만족함을 보였었는데, Chern class에 대해서도 비슷한 종류의 construction이 가능하다. 
@@ -362,7 +362,7 @@ $$c_i(\bar{E})=(-1)^ic_i(E)$$
 일반적인 경우 또한 위의 증명과 마찬가지로 splitting principle을 사용하면 된다. 
 :::
 
-가령 [예시 8](#ex8)의 tautological bundle $\gamma$는 $c_1(\gamma)$가 $H^2(\CP^\infty;\mathbb{Z})\cong\mathbb{Z}$의 생성원이라 $c_1(\bar{\gamma})=-c_1(\gamma)\neq c_1(\gamma)$이고, 따라서 $\gamma\not\cong\bar{\gamma}$이다. 물론 이 구별에는 한계가 있어서, 홀수 Chern class가 모두 $2$-torsion이거나 $0$인 bundle의 켤레는 Chern class만으로는 구별되지 않지만 여전히 Chern class가 real bundle보다는 풍부한 정보를 갖고 있음을 확인할 수 있다.
+가령 [예시 8](#ex8)의 tautological bundle $\gamma$는 $c_1(\gamma)$가 $H^2(\CP^\infty;\mathbb{Z})\cong\mathbb{Z}$의 generator라 $c_1(\bar{\gamma})=-c_1(\gamma)\neq c_1(\gamma)$이고, 따라서 $\gamma\not\cong\bar{\gamma}$이다. 물론 이 구별에는 한계가 있어서, 홀수 Chern class가 모두 $2$-torsion이거나 $0$인 bundle의 켤레는 Chern class만으로는 구별되지 않지만 여전히 Chern class가 real bundle보다는 풍부한 정보를 갖고 있음을 확인할 수 있다.
 
 한편 지금까지의 예시는 모두 line bundle이었으므로, rank가 높은 bundle에서 [정리 9](#thm9)이 실제 계산에 어떻게 쓰이는지를 보여주는 예시를 하나 보기로 한다.
 
@@ -434,4 +434,4 @@ Real vector bundle $E,F\rightarrow B$에 대하여 다음이 성립한다.
 **[Hat]** A. Hatcher, *Vector Bundles and K-Theory*, online notes, 2017.
 
 ---
-[^1]: $$S^\infty$$을 $$\mathbb{C}^\infty=\bigcup_n\mathbb{C}^n$$의 단위구로 보자. Shift 사상 $$T(x_1,x_2,\ldots)=(0,x_1,x_2,\ldots)$$에 대하여, 벡터를 $$v\mapsto v/\lvert v\rvert$$로 정규화한 두 직선 homotopy $$x\mapsto\bigl((1-t)x+tT(x)\bigr)/\lvert(1-t)x+tT(x)\rvert$$과 $$x\mapsto\bigl((1-t)T(x)+te_1\bigr)/\lvert(1-t)T(x)+te_1\rvert$$이 각각 항등사상을 $$T$$로, 그리고 $$T$$를 상수사상 $$x\mapsto e_1=(1,0,\ldots)$$으로 잇는다. 두 분모 모두 $$0$$이 되지 않는데, 앞의 것은 $$x$$와 $$T(x)$$의 좌표가 한 칸 어긋나 $$(1-t)x+tT(x)=0$$이 $$x=0$$을 강제하고, 뒤의 것은 합의 첫 좌표가 $$t$$라 $$0$$이려면 $$t=0$$이어야 하며 그럼 $$T(x)=0$$, 곧 $$x=0$$이기 때문이다. 이 둘을 이으면 $$S^\infty$$이 한 점으로 수축한다. 
+[^1]: $S^\infty$을 $\mathbb{C}^\infty=\bigcup_n\mathbb{C}^n$의 단위구로 보자. Shift morphism $T(x_1,x_2,\ldots)=(0,x_1,x_2,\ldots)$에 대하여, 벡터를 $v\mapsto v/\lvert v\rvert$로 정규화한 두 직선 homotopy $x\mapsto\bigl((1-t)x+tT(x)\bigr)/\lvert(1-t)x+tT(x)\rvert$과 $x\mapsto\bigl((1-t)T(x)+te_1\bigr)/\lvert(1-t)T(x)+te_1\rvert$이 각각 항등사상을 $T$로, 그리고 $T$를 상수사상 $x\mapsto e_1=(1,0,\ldots)$으로 잇는다. 두 분모 모두 $0$이 되지 않는데, 앞의 것은 $x$와 $T(x)$의 좌표가 한 칸 어긋나 $(1-t)x+tT(x)=0$이 $x=0$을 강제하고, 뒤의 것은 합의 첫 좌표가 $t$라 $0$이려면 $t=0$이어야 하며 그럼 $T(x)=0$, 곧 $x=0$이기 때문이다. 이 둘을 이으면 $S^\infty$이 한 점으로 수축한다. 

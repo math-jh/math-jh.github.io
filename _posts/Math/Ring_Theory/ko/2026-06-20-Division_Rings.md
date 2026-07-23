@@ -62,10 +62,10 @@ $$z^{-1}x=z^{-1}xzz^{-1}=z^{-1}zxz^{-1}=xz^{-1}$$
 
 $$\Phi_n(\x)=\prod_{\substack{1\leq m\leq n\\ \gcd(m,n)=1}}\bigl(\x-\zeta^m\bigr),\qquad \zeta=e^{2\pi i/n}$$
 
-으로 정의한다. 즉 $\Phi_n(\x)$는 $n$번째 primitive root of unity들을 근으로 갖는 monic polynomial이다.
+으로 정의한다. 즉 $\Phi_n(\x)$는 $n$번째 primitive root of unity들을 root로 갖는 monic polynomial이다.
 :::
 
-Cyclotomic polynomial의 기본 성질로 우리는 두 가지를 사용한다. 첫째, $\x^n-1$의 모든 근은 어떤 $d\mid n$에 대한 primitive $d$번째 root of unity이므로
+Cyclotomic polynomial의 기본 성질로 우리는 두 가지를 사용한다. 첫째, $\x^n-1$의 모든 root는 어떤 $d\mid n$에 대한 primitive $d$번째 root of unity이므로
 
 $$\x^n-1=\prod_{d\mid n}\Phi_d(\x)$$
 
@@ -125,7 +125,7 @@ $$q^n-1=(q-1)+\sum_{x}\frac{q^n-1}{q^{d(x)}-1}\tag{$\ast$}$$
 따라서 $n=1$이고 $D=Z$이다. $Z$는 commutative하므로 $D$는 field이다.
 :::
 
-증명에서 유한성은 두 곳에서 결정적으로 쓰였다. 하나는 $D$가 center $Z$ 위의 유한차원 vector space가 되어 위수가 $q^n$ 꼴로 표현된 것이고, 다른 하나는 class equation의 항들이 cyclotomic polynomial이라는 강한 정수론적 정보를 갖게 된 것이다. Cyclotomic polynomial의 약수 관계와 [명제 4](#prop4)의 부등식만이 본질이며, 그 둘은 위 증명에서 자체적으로 확립하였다. Cyclotomic polynomial의 더 깊은 이론은 별도의 표준 문헌에 미룬다.
+증명에서 유한성은 두 곳에서 결정적으로 쓰였다. 하나는 $D$가 center $Z$ 위의 유한차원 vector space가 되어 order가 $q^n$ 꼴로 표현된 것이고, 다른 하나는 class equation의 항들이 cyclotomic polynomial이라는 강한 정수론적 정보를 갖게 된 것이다. Cyclotomic polynomial의 약수 관계와 [명제 4](#prop4)의 부등식만이 본질이며, 그 둘은 위 증명에서 자체적으로 확립하였다. Cyclotomic polynomial의 더 깊은 이론은 별도의 표준 문헌에 미룬다.
 
 이 정리의 첫 번째 귀결은 유한 integral domain에 대한 결과를 다시 준다. 유한 division ring과 유한 integral domain은 commutative하다는 결론을 공유하는데, 후자는 곱셈의 단사성에서 직접 따라온 결과였고 ([§가역원과 영인자, ⁋따름정리 6](/ko/math/ring_theory/units_and_zero_divisors#cor6)), 전자는 그보다 강한 주장이다.
 
@@ -133,7 +133,7 @@ $$q^n-1=(q-1)+\sum_{x}\frac{q^n-1}{q^{d(x)}-1}\tag{$\ast$}$$
 $0\neq 1$인 finite ring $A$가 nonzero zero divisor를 갖지 않으면 $A$는 field이다.
 :::
 ::: 증명
-$A$가 finite ring이고 $0$ 이외의 zero divisor가 없다고 하자. 임의의 nonzero $a\in A$에 대해 left multiplication 사상 $\lambda_a:A\rightarrow A$, $\lambda_a(x)=ax$를 생각하면, $ax=ay$일 때 $a(x-y)=0$이고 $a$가 zero divisor가 아니므로 $x=y$, 즉 $\lambda_a$가 단사이다. $A$가 유한집합이므로 $\lambda_a$는 전사이고, $av=1$인 $v$가 존재한다. 같은 논법을 right multiplication에 적용하면 $wa=1$인 $w$가 존재하며, $w=w(av)=(wa)v=v$이므로 $v$는 $a$의 양쪽 역원이다. 따라서 모든 nonzero 원소가 unit이고 $A$는 division ring이다. 유한 division ring은 [정리 5](#thm5)에 의해 field이다.
+$A$가 finite ring이고 $0$ 이외의 zero divisor가 없다고 하자. 임의의 nonzero $a\in A$에 대해 left multiplication morphism $\lambda_a:A\rightarrow A$, $\lambda_a(x)=ax$를 생각하면, $ax=ay$일 때 $a(x-y)=0$이고 $a$가 zero divisor가 아니므로 $x=y$, 즉 $\lambda_a$가 단사이다. $A$가 유한집합이므로 $\lambda_a$는 전사이고, $av=1$인 $v$가 존재한다. 같은 논법을 right multiplication에 적용하면 $wa=1$인 $w$가 존재하며, $w=w(av)=(wa)v=v$이므로 $v$는 $a$의 양쪽 역원이다. 따라서 모든 nonzero 원소가 unit이고 $A$는 division ring이다. 유한 division ring은 [정리 5](#thm5)에 의해 field이다.
 :::
 
 여기서는 commutativity를 가정하지 않고 출발하여 division ring임을 먼저 얻은 뒤 Wedderburn 정리로 commutativity를 결론지었다. commutativity를 처음부터 가정하면 [정리 5](#thm5) 없이도 곱셈사상의 단사성만으로 field임을 얻으며, 이것이 "유한 integral domain은 field"라는 앞선 결과였다 ([§가역원과 영인자, ⁋따름정리 6](/ko/math/ring_theory/units_and_zero_divisors#cor6)). Wedderburn 정리의 힘은 commutativity 가정 없이 zero divisor의 부재만으로 같은 결론에 이른다는 데에 있다.
@@ -158,7 +158,7 @@ $$i^2=j^2=k^2=-1,\qquad ij=k,\quad jk=i,\quad ki=j,\qquad ji=-k,\quad kj=-i,\qua
 
 $$q\longmapsto\begin{pmatrix}z&-\bar w\\ w&\bar z\end{pmatrix}$$
 
-는 $\mathbb{H}$를 $\Mat_2(\mathbb{C})$의 subring으로 본는 isomorphism을 주며, 실제로 이 표현에서 [정의 7](#def7)의 관계식이 모두 만족되는 것을 확인할 수 있다. 이 원소의 행렬식 
+는 $\mathbb{H}$를 $\Mat_2(\mathbb{C})$의 subring으로 본는 isomorphism을 주며, 실제로 이 representation에서 [정의 7](#def7)의 관계식이 모두 만족되는 것을 확인할 수 있다. 이 원소의 행렬식 
 
 $$\lvert z\rvert^2+\lvert w\rvert^2=a^2+b^2+c^2+d^2$$
 
@@ -209,7 +209,7 @@ $$\bigl(N(q)^{-1}\bar q\bigr)\cdot q=N(q)^{-1}(\bar q q)=N(q)^{-1}N(q)=1$$
 가 되는 것을 확인할 수 있다. 즉, $q^{-1}=N(q)^{-1}\bar q$가 $q$의 양쪽 역원이며 이로부터 원하는 주장을 얻는다. 
 :::
 
-$\mathbb{H}$가 무한 noncommutative division ring으로 존재할 수 있는 것은, [정리 5](#thm5)의 증명을 지탱하던 두 기계(center 위의 유한차원 vector space 구조와 class equation의 cyclotomic 항)가 무한 차원·무한 위수에서는 작동하지 않기 때문이다.
+$\mathbb{H}$가 무한 noncommutative division ring으로 존재할 수 있는 것은, [정리 5](#thm5)의 증명을 지탱하던 두 기계(center 위의 유한차원 vector space 구조와 class equation의 cyclotomic 항)가 무한 차원·무한 order에서는 작동하지 않기 때문이다.
 
 ## 단순 가군의 자기사상환
 
@@ -224,7 +224,7 @@ ring $R$ 위의 simple module $M,N$에 대하여 다음이 성립한다.
 ::: 증명
 $f:M\rightarrow N$을 nonzero $R$-module homomorphism이라 하자. $\ker f$는 $M$의 submodule이고 $f\neq 0$이므로 $\ker f\neq M$이다. $M$이 simple이므로 $\ker f=0$, 즉 $f$는 단사이다. 또 $\im f$는 $N$의 nonzero submodule이고 $N$이 simple이므로 $\im f=N$, 즉 $f$는 전사이다. 따라서 $f$는 isomorphism이다. 이로써 1이 성립한다.
 
-이제 $M=N$인 경우를 보면, $\End_R(M)$은 사상의 합성을 곱셈으로, 항등사상 $\id_M$을 항등원으로 하는 ring이다. $M$이 nonzero이므로 $\id_M\neq 0$, 즉 이 ring은 $0$이 아니다. 1에 의해 nonzero $f\in\End_R(M)$은 isomorphism이고, 그 역사상 $f^{-1}$ 또한 $R$-module homomorphism이므로 $\End_R(M)$의 원소이다. $f\circ f^{-1}=f^{-1}\circ f=\id_M$이므로 $f$는 unit이다. 따라서 모든 nonzero 원소가 unit이고, $\End_R(M)$은 division ring이다.
+이제 $M=N$인 경우를 보면, $\End_R(M)$은 morphism의 합성을 곱셈으로, 항등사상 $\id_M$을 항등원으로 하는 ring이다. $M$이 nonzero이므로 $\id_M\neq 0$, 즉 이 ring은 $0$이 아니다. 1에 의해 nonzero $f\in\End_R(M)$은 isomorphism이고, 그 역사상 $f^{-1}$ 또한 $R$-module homomorphism이므로 $\End_R(M)$의 원소이다. $f\circ f^{-1}=f^{-1}\circ f=\id_M$이므로 $f$는 unit이다. 따라서 모든 nonzero 원소가 unit이고, $\End_R(M)$은 division ring이다.
 :::
 
 이 보조정리는 simple module의 endomorphism ring이라는 형태로 division ring을 대량으로 공급한다. 표현론에서는 이 division ring이 흔히 작은 field로 판명되는데, 가령 algebraically closed field $\mathbb{C}$ 위의 유한군 $G$의 irreducible representation에 대해 $\End_{\mathbb{C}[G]}(M)\cong\mathbb{C}$가 됨이 알려져 있다 ([\[표현론\] §유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)). 그러나 base field가 algebraically closed가 아니면 이 division ring이 진정으로 noncommutative하거나 base field보다 큰 field가 될 수 있으며, 이때 보조정리 10이 주는 division ring 구조가 본질적인 정보를 담는다. 이것이 Artin–Wedderburn 이론에서 semisimple ring을 division ring 위의 matrix ring들의 곱으로 분해할 때 등장하는 division ring의 출처이다.

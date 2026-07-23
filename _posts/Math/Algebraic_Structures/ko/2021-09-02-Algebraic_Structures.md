@@ -13,7 +13,7 @@ weight: 1
 
 ---
 
-[대수적 구조](/ko/algebraic_structures) 카테고리에서 우리는 group과 ring을 정의하고, 이들의 기본적인 성질들을 탐구한다. 이들은 집합 위에 이항연산의 구조를 추가하여 얻어지는데, group은 하나의 연산을, ring은 두 개의 연산을 추가하여 얻어지는 구조이다. 이들에 추가적으로 ring의 action을 주면 module과 algebra를 얻는다. 이들 대수적 구조 외에 갈루아 이론이나 tensor algebra 등은 별도의 카테고리로 분리하였다.
+[대수적 구조](/ko/algebraic_structures) 카테고리에서 우리는 group과 ring을 정의하고, 이들의 기본적인 성질들을 탐구한다. 이들은 집합 위에 이항연산의 구조를 추가하여 얻어지는데, group은 하나의 연산을, ring은 두 개의 연산을 추가하여 얻어지는 구조이다. 이들에 추가적으로 ring의 action을 주면 module과 algebra를 얻는다. 이들 대수적 구조 외에 Galois 이론이나 tensor algebra 등은 별도의 카테고리로 분리하였다.
 
 ## 이항연산
 
@@ -46,10 +46,10 @@ $$4-(1-2)=5\neq 1=(4-1)-2$$
 
 $$x\star(y\star z)=(x\star y)\star z$$
 
-가 항상 성립하다면, $\star$가 *결합법칙을 만족한다<sub>associative</sub>*고 하고, 마그마 $A$를 *결합법칙을 만족하는 마그마<sub>associative magma</sub>*라 부른다.
+가 항상 성립하다면, $\star$가 *associative<sub>결합법칙을 만족한다</sub>*하다고 하고, 마그마 $A$를 *결합법칙을 만족하는 마그마<sub>associative magma</sub>*라 부른다.
 :::
 
-만일 $\star$가 결합법칙을 만족한다면, 표현 $x\star y\star z$을 두 가지 방법으로 계산하여도
+만일 $\star$가 associative하다면, 표현 $x\star y\star z$을 두 가지 방법으로 계산하여도
 
 $$(x\star y)\star z=x\star(y\star z)$$
 
@@ -64,7 +64,7 @@ $$(x\star y)\star z=x\star(y\star z)$$
 
 $$x\star y=y\star x$$
 
-가 항상 성립한다면, $\star$가 *교환법칙을 만족한다<sub>commutative</sub>*고 하고, 마그마 $A$를 *교환법칙을 만족하는 마그마<sub>commutative magma</sub>*라 부른다.
+가 항상 성립한다면, $\star$가 *commutative<sub>교환법칙을 만족한다</sub>*하다고 하고, 마그마 $A$를 *교환법칙을 만족하는 마그마<sub>commutative magma</sub>*라 부른다.
 :::
 
 교환법칙은 다음의 diagram
@@ -86,7 +86,7 @@ $$\prod_{i\in I}\star_i:\prod_{i\in I} (A_i\times A_i) \rightarrow \prod_{i\in I
 
 를 $\left(\prod_{i\in I} A_i\right)\times\left(\prod_{i\in I}A_i\right)$에서 $\left(\prod_{i\in I} A_i\right)\times\left(\prod_{i\in I}A_i\right)$로의 함수로 볼 수 있다. ([\[집합론\] §곱집합의 성질, ⁋정의 4](/ko/math/set_theory/property_of_products#def4)) 따라서 $\prod A_i$는 $\star=\prod\star_i$에 대해 마그마 구조를 갖는다. 이렇게 얻어지는 마그마 $(\prod A_i, \star)$를 *곱<sub>product magma</sub>*이라고 부른다. 
 
-위의 두 diagram들을 모든 $i\in I$에 대하여 곱하면, 만일 $\star_i$들이 모두 교환법칙을 만족하거나, 모두 결합법칙을 만족한다면 $\star$ 또한 그렇다는 것을 알 수 있다. 
+위의 두 diagram들을 모든 $i\in I$에 대하여 곱하면, 만일 $\star_i$들이 모두 commutative하거나, 모두 associative하다면 $\star$ 또한 그렇다는 것을 알 수 있다. 
 :::
 
 ## 준동형사상과 부분구조

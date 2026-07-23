@@ -15,7 +15,7 @@ weight: 11
 
 ## 벡터장
 
-앞선 글에서 벡터다발을 정의한 것은 나중에 사용하기 위한 것이기도 하지만, 당장은 벡터장을 정의하기 위해 필요했기 때문이다.
+앞선 글에서 vector bundle을 정의한 것은 나중에 사용하기 위한 것이기도 하지만, 당장은 벡터장을 정의하기 위해 필요했기 때문이다.
 
 ::: 정의 1
 임의의 vector bundle $\pi:E\rightarrow M$에 대하여, $\pi\circ\sigma=\id_M$을 만족하는 $\sigma:M\rightarrow E$를 vector bundle $E\rightarrow M$의 *section*이라 부른다. 
@@ -104,7 +104,7 @@ $$X_1(p)=h(p, e_1),\quad X_2(p)=h(p,e_2),\quad\ldots,\quad X_m(p)=h(p,e_m)\tag{1
 Manifold $M$이 주어졌다 하고, $\dim M=m$이라 하자.
 
 - $X_1,\ldots, X_k$가 $M$의 부분집합 $A$에서 *일차독립<sub>linearly independent</sub>*이라는 것은 각각의 $p\in A$마다 $T_pM$의 벡터들 $X_1(p),\ldots, X_k(p)$이 linearly independent인 것이다.
-- $X_1,\ldots, X_k$가 $M$의 부분집합 $A$에서 tangent bundle $TM$을 *생성<sub>span</sub>*한다는 것은 각각의 $p\in A$마다 $T_pM$의 벡터들 $X_1(p),\ldots, X_k(p)$이 $T_pM$을 생성하는 것이다.
+- $X_1,\ldots, X_k$가 $M$의 부분집합 $A$에서 tangent bundle $TM$을 *span<sub>생성</sub>*한다는 것은 각각의 $p\in A$마다 $T_pM$의 벡터들 $X_1(p),\ldots, X_k(p)$이 $T_pM$을 생성하는 것이다.
 - 열린집합 $U\subseteq M$에서 정의된 일차독립인 벡터장들 $X_1,\ldots, X_k$이 tangent bundle을 생성한다면 이들을 $M$의 *local frame*이라 부른다.
 - 위의 정의에서 만일 $U=M$이도록 잡을 수 있다면 이 벡터장들을 $M$의 *global frame*이라 부른다.
 :::

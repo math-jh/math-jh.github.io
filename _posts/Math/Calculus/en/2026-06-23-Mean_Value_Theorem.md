@@ -14,7 +14,7 @@ translated_at: 2026-06-24T15:00:02+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-06-24T15:00:02+00:00
 ---
-In [§Derivatives](/en/math/calculus/derivatives) we examined the definition of the derivative. Now we investigate what information the derivative carries about a function, and the first step is the mean value theorem.
+In [§Differentiation and Derivatives](/en/math/calculus/derivatives) we examined the definition of the derivative. Now we investigate what information the derivative carries about a function, and the first step is the mean value theorem.
 
 ## Rolle's Theorem and the Mean Value Theorem
 
@@ -134,7 +134,7 @@ Meanwhile, [Theorem 3](#thm3) is also used to bound the number of zeros of a fun
 
 ![Parabola and tangent for root separation](/assets/images/Math/Calculus/Mean_Value_Theorem-1.svg){:style="width:14.76em" class="invert" .align-center}
 
-Intuitively, after a function has a zero, in order to reach the next zero it must <em>turn around</em> so that the function value returns to $0$, and this turning point is where the derivative becomes $0$. Stating this more precisely:
+Intuitively, after a function has a zero, in order to reach the next zero it must *turn around* so that the function value returns to $0$, and this turning point is where the derivative becomes $0$. Stating this more precisely:
 
 ::: Proposition 10 (Root Separation)
 If $f$ is differentiable on an interval $I$ and $f'$ has at most $k$ zeros on $I$, then $f$ has at most $k + 1$ zeros on $I$.
@@ -175,7 +175,7 @@ If $f$ is continuous on a closed bounded interval $[a, b]$ and differentiable on
 :::
 
 ::: Proof
-By [§Continuous Functions, ⁋Theorem 4](/en/math/calculus/continuity#thm4), $f$ attains its maximum at some point $c \in [a, b]$. If $c$ is an endpoint, it is in the candidate set. If $c$ lies in the interior $(a, b)$, then it is a global maximum and hence in particular a local maximum, so by Fermat's theorem ([Theorem 2](#thm2)) we have $f'(c) = 0$, i.e. $c$ is a critical point. The minimum is analogous. Thus both extrema occur within the stated finite set.
+By [§Continuous Functions, ⁋Theorem 4](/en/math/calculus/continuity#thm4), $f$ attains its maximum at some point $c \in [a, b]$. If $c$ is an endpoint, it is in the candidate set. If $c$ lies in the interior $(a, b)$, then it is a global maximum and hence in particular a local maximum, so by [Theorem 2](#thm2) we have $f'(c) = 0$, i.e. $c$ is a critical point. The minimum is analogous. Thus both extrema occur within the stated finite set.
 :::
 
 For example, to optimize $f(x) = x^3 - 3x$ on $[-2, 2]$, we compare the values at the critical points $x = \pm 1$ of $f'(x) = 3(x-1)(x+1)$ with the endpoint values $f(-2) = -2$, $f(-1) = 2$, $f(1) = -2$, $f(2) = 2$, obtaining maximum $2$ (at $x = -1, 2$) and minimum $-2$ (at $x = -2, 1$).

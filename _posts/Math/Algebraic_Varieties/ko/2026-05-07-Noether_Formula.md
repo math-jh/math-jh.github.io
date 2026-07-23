@@ -96,7 +96,7 @@ Euler characteristic의 정의에 의해
 
 $$\rchi(\mathcal{O}_S)=h^0(\mathcal{O}_S)-h^1(\mathcal{O}_S)+h^2(\mathcal{O}_S)$$
 
-이다. $S$가 연결된 projective variety이므로 $h^0(\mathcal{O}_S)=1$이다. [§세르 쌍대성, ⁋명제 2](/ko/math/algebraic_varieties/serre_duality#prop2)에 의해
+이다. $S$가 connected projective variety이므로 $h^0(\mathcal{O}_S)=1$이다. [§세르 쌍대성, ⁋명제 2](/ko/math/algebraic_varieties/serre_duality#prop2)에 의해
 
 $$h^2(\mathcal{O}_S)=h^0(K_S)=p_g$$
 

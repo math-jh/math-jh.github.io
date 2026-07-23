@@ -57,7 +57,7 @@ $$\dim \mathfrak{a}+\codim \mathfrak{a}\leq \dim A$$
 
 ## 차원의 계산
 
-일반적으로 차원을 다를 때에는 ring $A$가 noetherian인 경우를 주로 다루게 된다. 가장 큰 이유 중 하나는 [정리 7](#thm7)이 noetherian ring에서만 성립하기 때문이다. 본격적으로 차원을 계산하기 전에, 간단한 예시를 먼저 살펴보자. 
+일반적으로 차원을 다룰 때에는 ring $A$가 noetherian인 경우를 주로 다루게 된다. 가장 큰 이유 중 하나는 [정리 7](#thm7)이 noetherian ring에서만 성립하기 때문이다. 본격적으로 차원을 계산하기 전에, 간단한 예시를 먼저 살펴보자. 
 
 우선 우리는 [§조르단-횔더 정리, ⁋정리 4](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm4)의 첫째 조건과 셋째 조건 사이의 동치를 통해 $0$차원의 noetherian ring들이 어떠한 것인지는 정확히 알고 있다. 
 
@@ -84,7 +84,7 @@ $$\mathfrak{p}^{(n)}=\{a\in A\mid\text{$ba\in \mathfrak{p}^n$ for some $b\in A\s
 으로 정의한다. 
 :::
 
-정의에 의해 $\mathfrak{p}^{(n)}$은 localization $A \rightarrow A_\mathfrak{p}$을 통해 ideal $(\mathfrak{p}A_\mathfrak{p})^n$을 $A$로 옮겨온 것이다. 그럼 $\mathfrak{p}$ 바깥에 있는 원소들은 modulo $\mathfrak{p}^({n})$으로 non-zerodivisor가 되며, $\mathfrak{p}^{(n)}A_\mathfrak{p}=(\mathfrak{p}A_\mathfrak{p})^n$임이 자명하다. 또, symbolic power들의 descending chain
+정의에 의해 $\mathfrak{p}^{(n)}$은 localization $A \rightarrow A_\mathfrak{p}$을 통해 ideal $(\mathfrak{p}A_\mathfrak{p})^n$을 $A$로 옮겨온 것이다. 그럼 $\mathfrak{p}$ 바깥에 있는 원소들은 modulo $\mathfrak{p}^{(n)}$으로 non-zerodivisor가 되며, $\mathfrak{p}^{(n)}A_\mathfrak{p}=(\mathfrak{p}A_\mathfrak{p})^n$임이 자명하다. 또, symbolic power들의 descending chain
 
 $$A=\mathfrak{p}^{(0)}\supseteq \mathfrak{p}=\mathfrak{p}^{(1)}\supseteq \mathfrak{p}^{(2)}\supseteq \mathfrak{p}^{(3)}\supseteq\cdots$$
 

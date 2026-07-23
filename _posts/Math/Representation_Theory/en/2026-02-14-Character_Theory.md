@@ -39,8 +39,8 @@ we know how their direct sum $L_V\oplus L_W: V\oplus W\rightarrow V\oplus W$ and
 ::: Proposition 2
 For representations $V, W$, the following hold.
 
-1. $$\rchi_{V\oplus W}=\rchi_V\oplus \rchi_W$$
-2. $$\rchi_{V\otimes W}=\rchi_V\rchi_W$$
+1. $\rchi_{V\oplus W}=\rchi_V\oplus \rchi_W$
+2. $\rchi_{V\otimes W}=\rchi_V\rchi_W$
 3. $\rchi_{V^\ast}=\overline{\rchi}_V$
 :::
 
@@ -61,7 +61,7 @@ $$\rchi_\rho(hgh^{-1})=\tr(\rho(h)\rho(g)\rho(h)^{-1})=\tr(\rho(g))=\rchi_\rho(g
 holds, so ([\[Linear Algebra\] §Characteristic Polynomial, ⁋Corollary 5](/en/math/linear_algebra/characteristic_polynomial#cor5)) we see that $\rchi_\rho$ is constant on the *conjugacy classes* of $G$. Such functions also have a name.
 
 ::: Definition 3
-A function $\rchi:G\rightarrow\mathbb{C}$ is called a *class function* if $\rchi(hgh^{-1})=f(g)$ holds for all $g,h\in G$. We denote the collection of all class functions defined on $G$ by $\mathbb{C}_\class(G)$.
+A function $\rchi:G\rightarrow\mathbb{C}$ is called a *class function* if $\rchi(hgh^{-1})=\rchi(g)$ holds for all $g,h\in G$. We denote the collection of all class functions defined on $G$ by $\mathbb{C}_\class(G)$.
 :::
 
 By definition, class functions are determined by their values on each conjugacy class, and thus, as a vector space, $\mathbb{C}_\class(G)$ has dimension equal to the number of conjugacy classes of $G$. Meanwhile, the idea we considered important in the previous post was that given a value, we could average it over all of $G$ to obtain a $G$-invariant value. Using this, we can give the following definition on $\mathbb{C}_\class(G)$.
@@ -140,7 +140,7 @@ $$\dim\Hom_G(V,W)=\frac{1}{\lvert G\rvert}\sum_{g\in G}\overline{\rchi_V(g)}\rch
 
 .
 
-Finally, assuming $V,W$ are irreducible representations, by [§Representation Theory of Finite Groups, ⁋Lemma 8 (Schur)](/en/math/representation_theory/representations_of_finite_groups#lem8), $\Hom_G(V,W)$ is $1$-dimensional if $V\cong W$ and $0$-dimensional otherwise, so
+Finally, assuming $V,W$ are irreducible representations, by [§Representation Theory of Finite Groups, ⁋Lemma 8](/en/math/representation_theory/representations_of_finite_groups#lem8), $\Hom_G(V,W)$ is $1$-dimensional if $V\cong W$ and $0$-dimensional otherwise, so
 
 $$\dim \Hom_\mathbb{C}(V,W)^G=\dim \Hom_G(V,W)=\begin{cases}1&\text{if $V\cong W$,}\\0&\text{otherwise}\end{cases}$$
 
@@ -180,7 +180,7 @@ $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r V_i^{\dim V_i}$$
 
 .
 
-Moreover, $\mathbb{C}[G]$ acts on itself by multiplication, and under this action, thinking that by [§Representation Theory of Finite Groups, ⁋Lemma 8 (Schur)](/en/math/representation_theory/representations_of_finite_groups#lem8) each $V_i$ maps only into $V_i$, we know that each $V_i^{\dim V_i}$ is exactly the matrix algebra $\Mat_{d_i}(\mathbb{C})$, and by the uniqueness of the Artin–Wedderburn theorem we can verify that this is precisely
+Moreover, $\mathbb{C}[G]$ acts on itself by multiplication, and under this action, thinking that by [§Representation Theory of Finite Groups, ⁋Lemma 8](/en/math/representation_theory/representations_of_finite_groups#lem8) each $V_i$ maps only into $V_i$, we know that each $V_i^{\dim V_i}$ is exactly the matrix algebra $\Mat_{d_i}(\mathbb{C})$, and by the uniqueness of the Artin–Wedderburn theorem we can verify that this is precisely
 
 $$\mathbb{C}[G]\cong \bigoplus_{i=1}^r\Mat_{d_i}(\mathbb{C})$$
 
@@ -219,7 +219,7 @@ we must have exactly $\phi(g)=\phi(hgh^{-1})$, that is, $\phi$ must be a class f
 
 Now we use this to show that every class function can be expressed as a linear combination of irreducible characters. That is, we must show that if for a class function $\phi$, $\langle \rchi_V,\phi\rangle=0$ holds for all irreducible characters $\rchi_V$, then $\phi=0$.
 
-To this end, apply the above lemma to a class function $\phi$ and an irreducible representation $\rho:G\rightarrow\Aut(V)$. Since $\phi$ is a class function, so is $\overline{\phi}$, and thus $\rho_{\overline{\phi}}$ is a $G$-map; by [§Representation Theory of Finite Groups, ⁋Lemma 8 (Schur)](/en/math/representation_theory/representations_of_finite_groups#lem8), $\rho_{\overline{\phi}}$ is of the form $\lambda\id_V$. Now taking the trace here, we know that
+To this end, apply the above lemma to a class function $\phi$ and an irreducible representation $\rho:G\rightarrow\Aut(V)$. Since $\phi$ is a class function, so is $\overline{\phi}$, and thus $\rho_{\overline{\phi}}$ is a $G$-map; by [§Representation Theory of Finite Groups, ⁋Lemma 8](/en/math/representation_theory/representations_of_finite_groups#lem8), $\rho_{\overline{\phi}}$ is of the form $\lambda\id_V$. Now taking the trace here, we know that
 
 $$(\dim V)\lambda=\tr(\rho_{\overline{\phi}})=\tr\left(\sum_{g\in G}\overline{\phi(g)}\rho(g)\right)=\sum_{g\in G}\overline{\phi(g)}\rchi_V(g)=\lvert G\rvert\langle \rchi_V,\phi\rangle=0$$
 
@@ -284,7 +284,7 @@ $$\{e_1=(1,0,-1), e_2=(0,1,-1)\}$$
 
 Then $(\;)$ does not touch this basis, so of course $\rchi_\std$ takes the value $2$ on $A_1$. On $A_2$, for instance, acting by $(1\;2)$ swaps the basis elements, so it corresponds to the matrix
 
-$$\rho_\std((1\;2))\begin{pmatrix}0&1\\1&0\end{pmatrix}$$
+$$\rho_\std((1\;2))=\begin{pmatrix}0&1\\1&0\end{pmatrix}$$
 
 and its trace is $0$. For reference, if $(1\;3)$ acts on this basis, $e_1$ is sent to $-e_1$ and $e_2$ to $(-1,1,0)=-e_1+e_2$, so it corresponds to the matrix
 

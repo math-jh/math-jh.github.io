@@ -150,7 +150,7 @@ $$\begin{pmatrix} 0 & 0 & 1 \\ 0 & 1 & 0 \\ 1 & 0 & 0 \end{pmatrix}$$
 
 ## 프로베니우스 다양체
 
-앞선 절에서 우리는 프로베니우스 대수를 정의하고, 이것이 mirror symmetry의 ring isomorphism $\Jac(W_q) \cong QH^\ast(X_\Sigma)$를 Frobenius algebra 차원으로 격상시킨다는 것을 확인하였다. 그러나 mirror symmetry isomorphism
+앞선 절에서 우리는 Frobenius algebra를 정의하고, 이것이 mirror symmetry의 ring isomorphism $\Jac(W_q) \cong QH^\ast(X_\Sigma)$를 Frobenius algebra 차원으로 격상시킨다는 것을 확인하였다. 그러나 mirror symmetry isomorphism
 
 $$\Jac(W_q)\cong QH^\ast(X)$$
 
@@ -210,7 +210,7 @@ Flat coordinate $t^\alpha$에 대해 $\nabla_{\partial_{t^\delta}}$는 단순한
 
 $$\partial_{t^\delta} c_{\alpha\beta\gamma} = \partial_{t^\alpha} c_{\delta\beta\gamma}$$
 
-가 네 인덱스에 대해 대칭으로 성립한다는 의미이다. 한편 $c$ 자체가 세 인덱스에 대해 대칭이므로, 이를 함께 모으면 1-form $\omega_{\beta\gamma} := \sum_\alpha c_{\alpha\beta\gamma} dt^\alpha$가 closed임을 얻는다. Poincaré lemma로부터 국소적으로 함수 $G_{\beta\gamma}$가 존재해 $\partial_{t^\alpha} G_{\beta\gamma} = c_{\alpha\beta\gamma}$이며, $c$의 대칭성으로부터 $G_{\beta\gamma} = G_{\gamma\beta}$이고 또한 $\partial_{t^\alpha} G_{\beta\gamma} = \partial_{t^\beta} G_{\alpha\gamma}$가 성립한다. 다시 Poincaré lemma를 한 단계 더 적용하면 함수 $H_\gamma$가 존재해 $\partial_{t^\beta} H_\gamma = G_{\beta\gamma}$이고, $H_\gamma$의 대칭성 $\partial_{t^\delta} H_\gamma = \partial_{t^\gamma} H_\delta$로부터 마지막으로 scalar function $F$가 존재해 $\partial_{t^\gamma} F = H_\gamma$가 성립한다. 종합하면 $\partial_{t^\alpha} \partial_{t^\beta} \partial_{t^\gamma} F = c_{\alpha\beta\gamma}$이다.
+가 네 index에 대해 대칭으로 성립한다는 의미이다. 한편 $c$ 자체가 세 index에 대해 대칭이므로, 이를 함께 모으면 1-form $\omega_{\beta\gamma} := \sum_\alpha c_{\alpha\beta\gamma} dt^\alpha$가 closed임을 얻는다. Poincaré lemma로부터 국소적으로 함수 $G_{\beta\gamma}$가 존재해 $\partial_{t^\alpha} G_{\beta\gamma} = c_{\alpha\beta\gamma}$이며, $c$의 대칭성으로부터 $G_{\beta\gamma} = G_{\gamma\beta}$이고 또한 $\partial_{t^\alpha} G_{\beta\gamma} = \partial_{t^\beta} G_{\alpha\gamma}$가 성립한다. 다시 Poincaré lemma를 한 단계 더 적용하면 함수 $H_\gamma$가 존재해 $\partial_{t^\beta} H_\gamma = G_{\beta\gamma}$이고, $H_\gamma$의 대칭성 $\partial_{t^\delta} H_\gamma = \partial_{t^\gamma} H_\delta$로부터 마지막으로 scalar function $F$가 존재해 $\partial_{t^\gamma} F = H_\gamma$가 성립한다. 종합하면 $\partial_{t^\alpha} \partial_{t^\beta} \partial_{t^\gamma} F = c_{\alpha\beta\gamma}$이다.
 :::
 
 이러한 $F$를 Frobenius manifold의 *potential*이라 부른다. 이로부터 만일 flat coordinate을 잡고, $\eta^{\alpha\beta}$를 $\eta_{\alpha\beta}$의 역행렬이라 하면 곱셈의 structure constant는
@@ -245,7 +245,7 @@ $$\sum_{e, f} \frac{\partial^3 F}{\partial t^\alpha \partial t^\beta \partial t^
 
 WDVV equation은 $F$의 삼계도함수들 사이의 quadratic relation이며, $F$ 자체에 대해서는 3차 비선형 편미분방정식 시스템이다. Mirror symmetry의 A-model 측에서 quantum cohomology의 Gromov-Witten potential은 이 equation을 만족하는 대표적 예시로, 이는 *splitting axiom*에 반영되어 있다 ([\[사교기하학\] §Gromov-Witten 불변량, ⁋명제 6](/ko/math/symplectic_geometry/gromov_witten#prop6)). 
 
-위의 증명에서 알 수 있듯 Frobenius manifold의 언어에서 WDVV equation은 본질적으로 $\circ$의 associativity이지만, A-model에서는 이와 같이 덜 자명한 splitting axiom의 형태를 띤다는 것에 주목하자. 반면 B-model에서 $\circ$의 associativity는, $\Jac(W)$이 ring의 quotient이므로, 자명하게 얻어지는 것이다. 반대로, A-model에서는 Gromov-Witten potential이 $F$의 역할을 하는 것이 투명하게 보이지만 B-model에서 이를 만들기 위해서는 꽤나 많은 작업이 필요하다. 이는 mirror symmetry의 철학을 다시 보여주는 예시로, 한쪽에서는 어려운 문제를 mirror를 통해 반대쪽 모델로 옮기면 상대적으로 쉬운 문제로 바뀐다는 것이다. 
+위의 증명에서 알 수 있듯 Frobenius manifold의 언어에서 WDVV equation은 본질적으로 $\circ$의 associativity이지만, A-model에서는 이와 같이 덜 자명한 splitting axiom의 형태를 띤다는 것에 주목하자. 반면 B-model에서 $\circ$의 associativity는, $\Jac(W)$이 ring의 quotient이므로, 자명하게 얻어지는 것이다. 반대로, A-model에서는 Gromov-Witten potential이 $F$의 역할을 하는 것이 투명하게 보이지만 B-model에서 이를 만들기 위해서는 꽤나 많은 작업이 필요하다. 이는 mirror symmetry의 철학을 다시 보여주는 예시로, 한쪽에서는 어려운 문제를 mirror를 통해 반대쪽 model로 옮기면 상대적으로 쉬운 문제로 바뀐다는 것이다. 
 
 ## 예시
 
@@ -323,7 +323,7 @@ $$F(t^0, t^1) = \frac{1}{2}(t^0)^2 t^1 + e^{t^1}$$
 
 $$\partial_{t^0}^3 F = 0,\qquad \partial_{t^0}^2\partial_{t^1} F = 1,\qquad \partial_{t^0}\partial_{t^1}^2 F = 0,\qquad \partial_{t^1}^3 F = e^{t^1}$$
 
-이다. 이제 $\eta$의 inverse matrix는 어차피 자기자신이므로, (1)를 사용해 계산하면 
+이다. 이제 $\eta$의 inverse matrix는 어차피 자기자신이므로, (1)을 사용해 계산하면 
 
 $$\partial_{t^0} \circ_t \partial_{t^\alpha} = \partial_{t^\alpha}, \qquad \partial_{t^1} \circ_t \partial_{t^1} = e^{t^1}\, \partial_{t^0}$$
 

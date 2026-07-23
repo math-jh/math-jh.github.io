@@ -27,7 +27,7 @@ Hasse diagram에서, 큰 원소는 위쪽에 적는 것이 보편적이지만 �
  Preordered set $A$가 *right directed<sub>오른쪽으로 유향</sub>*이라는 것은 $A$의 원소 두 개짜리 임의의 부분집합이 bounded above인 것이다. 이와 비슷하게 preordered set $A$가 *left directed<sub>왼쪽으로 유향</sub>*라는 것은 $A$의 원소 두 개짜리 부분집합이 bounded below인 것이다.
 :::
 
-예컨대 임의의 집합 $A$에 대하여, 순서집합 $(\mathcal{P}(A),\subseteq)$는 right directed이다. 임의의 $X, Y\in\mathcal{P}(A)$에 대하여, $X\cup Y$는 $\mathcal{P}(A)$의 원소이고 $X$와 $Y$의 upper bound이기 때문이다. 이를 diagram으로 나타내면 다음과 같다.
+예컨대 임의의 집합 $A$에 대하여, ordered set $(\mathcal{P}(A),\subseteq)$는 right directed이다. 임의의 $X, Y\in\mathcal{P}(A)$에 대하여, $X\cup Y$는 $\mathcal{P}(A)$의 원소이고 $X$와 $Y$의 upper bound이기 때문이다. 이를 diagram으로 나타내면 다음과 같다.
 
 ![directed_system](/assets/images/Math/Set_Theory/Directed_Set-2.png){:style="width:24em" class="invert" .align-center}
 

@@ -50,7 +50,7 @@ $$\sum_{i=1}^{n} \alpha_i u_i = 0$$
 
 을 만족한다 하자. 그럼 $x,y\in A$에 대해 다음의 계산
 
-$$\sum_{i=1}^{n-1} \alpha_i([u_i(x) - u_n(x)) u_i(y) = \sum_{i=1}^{n} \alpha_i u_i(xy) - u_n(x) \sum_{i=1}^{n} \alpha_i u_i(y) = 0$$
+$$\sum_{i=1}^{n-1} \alpha_i(u_i(x) - u_n(x)) u_i(y) = \sum_{i=1}^{n} \alpha_i u_i(xy) - u_n(x) \sum_{i=1}^{n} \alpha_i u_i(y) = 0$$
 
 으로부터 
 
@@ -105,7 +105,7 @@ $$\bigl((u_1(x),\cdots, u_n(x)), (\alpha_1,\ldots, \alpha_n)\bigr) \mapsto \sum_
 
 이제 다항식 $g \in \mathbb{L}[\y_1,\ldots, \y_n]$을 다음의 식
 
-$$g(\y_1, \ldots, \y_n) = f\left( \sum_{j=1}^n u_1(a_j)y_j, \ldots, \sum_{j=1}^n u_n(a_j)\y'_j \right)$$
+$$g(\y_1, \ldots, \y_n) = f\left( \sum_{j=1}^n u_1(a_j)y_j, \ldots, \sum_{j=1}^n u_n(a_j)\y_j \right)$$
 
 으로 정의하자. 여기에 임의의 원소들 $y_i\in \mathbb{K}$들을 대입하고, $x=\sum_{i=1}^n a_iy_i$라 하면 
 
@@ -113,7 +113,7 @@ $$g(y_1, \dots, y_n) = f(u_1(x), \dots, u_n(x)) = 0$$
 
 이고, $f$의 가정으로부터 우리는 $g(y_1,\ldots, y_n)=0$이어야 함을 안다. 이제 $\mathbb{K}$는 무한집합이므로 $g$는 항등적으로 $0$이어야만 하고, $(u_i(a_j))$의 역행렬을 $(v_{ij})$라 하면
 
-$$f(\x_1,\ldots, \x_n)=g\left(\sum_{j=1}^n b_{1j}\x_j, \dots, \sum_{j=1}^n b_{nj}\x_j \right)$$
+$$f(\x_1,\ldots, \x_n)=g\left(\sum_{j=1}^n v_{1j}\x_j, \dots, \sum_{j=1}^n v_{nj}\x_j \right)$$
 
 이므로 $f$도 항등적으로 $0$이다.
 :::
@@ -189,7 +189,7 @@ $\mathbb{K}^n$의 canonical basis를 $(e_1, \dots, e_n)$이라 하고, $\mathbb{
 
 따라서 $A$의 임의의 subalgebra 또한 diagonalizable이므로, 우리는 $A$의 임의의 subalgebra가 주어질 때마다 [명제 6](#prop6)의 둘째 조건을 만족하는 basis를 찾을 수 있어야만 한다. 그런데 $\mathbb{K}^n$의 idempotent들은 정확히 $\{1,\ldots, n\}$의 부분집합 $I$에 대하여 $e_I=\sum_{i\in I} e_i$의 꼴로 나타나는 것들 뿐이고, 이들은 $e_Ie_J=e_{I\cap J}$를 만족한다. 즉, 둘째 조건을 만족하는 idempotent들의 쌍은 많아봐야 $\{1,\ldots, n\}$의 partition의 개수만큼이고 따라서 $A$의 임의의 subalgebra는 유한히 많다. 
 
-비슷하게, $\mathfrak{a}_I$를 $(e_i)_{i\in I}$들을 basis로 갖는 $\mathbb{K}$의 부분공간이라 하면 ideal의 유한성을 보일 수 있으며 $\mathbb{K}^n/\mathfrak{a}_I$의 diagonalizability 또한 [명제 6](#prop6)으로 보일 수 있다.
+비슷하게, $\mathfrak{a}_I$를 $(e_i)_{i\in I}$들을 basis로 갖는 $\mathbb{K}^n$의 부분공간이라 하면 ideal의 유한성을 보일 수 있으며 $\mathbb{K}^n/\mathfrak{a}_I$의 diagonalizability 또한 [명제 6](#prop6)으로 보일 수 있다.
 :::
 
 ## 분리가능차수

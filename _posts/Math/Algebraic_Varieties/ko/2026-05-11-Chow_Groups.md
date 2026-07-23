@@ -153,7 +153,7 @@ Complex variety $X$에 대해 *cycle class map*
 
 $$\cl: \CH_k(X) \rightarrow H^{\text{BM}}_{2k}(X, \mathbb{Z})$$
 
-이 존재한다. 이는 algebraic cycle을 위상적으로 해석하는 사상으로, $X$가 smooth projective이면 Poincaré duality에 의해 $\cl: \CH^k(X) \rightarrow H^{2k}(X, \mathbb{Z})$로 볼 수 있다.
+이 존재한다. 이는 algebraic cycle을 위상적으로 해석하는 morphism으로, $X$가 smooth projective이면 Poincaré duality에 의해 $\cl: \CH^k(X) \rightarrow H^{2k}(X, \mathbb{Z})$로 볼 수 있다.
 :::
 
 여기서 우변의 $H^{\text{BM}}$은 Borel-Moore homology로, singular homology와는 다르게 (non-compact 상황에서) closed oriented submanifold를 Borel-Moore homology에서의 class로 볼 수 있으며, 이런 관점에서 우리의 Chow group과는 singular cohomology보다는 Borel-Moore homology가 조금 더 맞는 analogue임을 알 수 있다. 또 $X$는 complex variety이므로 우변의 차원은 두 배가 되어 $2k$가 되는 것도 주목할 만하다.

@@ -67,7 +67,7 @@ Our interest lies in the relationship between regular elements and units. One di
 Every unit in a ring $A$ is a regular element.
 :::
 ::: Proof
-Suppose, for contradiction, that $u\in A^\times$ and $ub=0$ for some $b\in A$. Multiplying both sides on the left by $u^{-1}$ gives
+Suppose, for contradiction, that $u\in A^\times$ and $ub=0$ for some $b\neq 0$. Multiplying both sides on the left by $u^{-1}$ gives
 
 $$b=1\cdot b=(u^{-1}u)b=u^{-1}(ub)=u^{-1}\cdot 0=0$$
 

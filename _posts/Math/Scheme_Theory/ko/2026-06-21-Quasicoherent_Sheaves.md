@@ -14,7 +14,7 @@ weight: 18
 published: false
 ---
 
-스킴 $X$의 structure sheaf $\mathcal{O}_X$는 그 자체로 ring들의 sheaf이지만, 우리는 종종 $\mathcal{O}_X$ 위에서 정의된 가군들의 sheaf를 다루어야 한다. 가령 affine scheme $\Spec A$ 위에서 우리가 관심을 가지는 대상들, 즉 $A$-가군 $M$은 $\Spec A$ 위의 sheaf로 변환되어야 자연스럽게 기하학과 연결되며, ideal sheaf나 line bundle 또한 이러한 sheaf의 예시이다. 그러나 임의의 $\mathcal{O}_X$-가군층은 너무 거칠어서 affine 위에서의 algebraic한 정보로 환원되지 않는다. 이번 글에서는 affine 위에서 가군으로부터 직접 만들어지는 sheaf를 정의하고, 이로부터 *quasi-coherent sheaf*의 개념을 도입한다. 핵심은 affine scheme 위에서 가군과 그 연관층이 본질적으로 같은 정보를 담는다는 것이며, 이로부터 준연접성이 affine-local property임을 얻는다.
+Scheme $X$의 structure sheaf $\mathcal{O}_X$는 그 자체로 ring들의 sheaf이지만, 우리는 종종 $\mathcal{O}_X$ 위에서 정의된 가군들의 sheaf를 다루어야 한다. 가령 affine scheme $\Spec A$ 위에서 우리가 관심을 가지는 대상들, 즉 $A$-가군 $M$은 $\Spec A$ 위의 sheaf로 변환되어야 자연스럽게 기하학과 연결되며, ideal sheaf나 line bundle 또한 이러한 sheaf의 예시이다. 그러나 임의의 $\mathcal{O}_X$-가군층은 너무 거칠어서 affine 위에서의 algebraic한 정보로 환원되지 않는다. 이번 글에서는 affine 위에서 가군으로부터 직접 만들어지는 sheaf를 정의하고, 이로부터 *quasi-coherent sheaf*의 개념을 도입한다. 핵심은 affine scheme 위에서 가군과 그 연관층이 본질적으로 같은 정보를 담는다는 것이며, 이로부터 준연접성이 affine-local property임을 얻는다.
 
 ## $\mathcal{O}_X$-가군층
 
@@ -24,7 +24,7 @@ published: false
 Ringed space $(X, \mathcal{O}_X)$ 위의 abelian group들의 sheaf $\mathcal{F}$가 *$\mathcal{O}_X$-module<sub>$\mathcal{O}_X$-가군층</sub>*이라는 것은, 임의의 열린집합 $U$에 대하여 $\mathcal{F}(U)$가 $\mathcal{O}_X(U)$-가군의 구조를 가지며, 이 가군 구조가 restriction map과 호환되는 것이다. 즉 $V\subseteq U$와 $a\in \mathcal{O}_X(U)$, $s\in \mathcal{F}(U)$에 대하여 $(a\cdot s)\vert_V=(a\vert_V)\cdot (s\vert_V)$가 성립하는 것이다. 두 $\mathcal{O}_X$-가군층 $\mathcal{F}, \mathcal{G}$ 사이의 *morphism*은 sheaf 사이의 morphism $\varphi:\mathcal{F} \rightarrow \mathcal{G}$ 가운데, 각각의 $U$에 대하여 $\varphi(U):\mathcal{F}(U) \rightarrow \mathcal{G}(U)$가 $\mathcal{O}_X(U)$-가군 homomorphism인 것이다.
 :::
 
-즉 scalar 곱을 먼저 한 뒤 제한하는 것과 제한을 먼저 한 뒤 scalar 곱을 하는 것이 일치한다는 것이다. $X$ 위의 $\mathcal{O}_X$-가군층들과 그 사이의 morphism들은 category를 이루며, 이를 $\Mod(\mathcal{O}_X)$로 적는다. 가장 기본적인 예시는 $\mathcal{O}_X$ 자기 자신으로, 이는 각각의 $\mathcal{O}_X(U)$를 그 위의 rank $1$ free 가군으로 보아 얻어지는 $\mathcal{O}_X$-가군층이다.
+즉 scalar 곱을 먼저 한 뒤 제한하는 것과 restriction을 먼저 한 뒤 scalar 곱을 하는 것이 일치한다는 것이다. $X$ 위의 $\mathcal{O}_X$-가군층들과 그 사이의 morphism들은 category를 이루며, 이를 $\Mod(\mathcal{O}_X)$로 적는다. 가장 기본적인 예시는 $\mathcal{O}_X$ 자기 자신으로, 이는 각각의 $\mathcal{O}_X(U)$를 그 위의 rank $1$ free 가군으로 보아 얻어지는 $\mathcal{O}_X$-가군층이다.
 
 $\mathcal{O}_X$-가군층은 stalk 수준에서도 가군 구조를 물려받는다. 임의의 $x\in X$에 대하여 stalk $\mathcal{F}_x=\varinjlim_{U\ni x}\mathcal{F}(U)$는 $\mathcal{O}_{X,x}=\varinjlim_{U\ni x}\mathcal{O}_X(U)$ 위의 가군이 되는데, 이는 direct limit이 $\Mod$에서 가군 구조와 호환되기 때문이다.
 
@@ -140,7 +140,7 @@ $$\psi(\Spec A):\widetilde M(\Spec A)=M \rightarrow N=\widetilde N(\Spec A)$$
 
 ![localization square](/assets/images/Math/Scheme_Theory/Quasicoherent_Sheaves-1.svg){:style="width:6.60em" class="invert" .align-center}
 
-이 commute하며, 여기에서 세로 사상은 localization map이다. 한편 $\psi(D(f))$는 $A_f$-가군 homomorphism이므로 윗줄의 $\phi$와 commute한다는 조건과 $A_f$-선형성에 의해 임의의 $m/f^n\in M_f$에 대하여
+이 commute하며, 여기에서 세로 morphism은 localization map이다. 한편 $\psi(D(f))$는 $A_f$-가군 homomorphism이므로 윗줄의 $\phi$와 commute한다는 조건과 $A_f$-선형성에 의해 임의의 $m/f^n\in M_f$에 대하여
 
 $$\psi(D(f))\Bigl(\frac{m}{f^n}\Bigr)=\frac{1}{f^n}\psi(D(f))\Bigl(\frac{m}{1}\Bigr)=\frac{1}{f^n}\frac{\phi(m)}{1}=\frac{\phi(m)}{f^n}=\widetilde\phi(D(f))\Bigl(\frac{m}{f^n}\Bigr)$$
 
@@ -165,17 +165,17 @@ $$\widetilde{(-)}:\Mod(A) \rightarrow \QCoh(\Spec A)$$
 ::: 증명
 [정리 7](#thm7)에 의하여 $\widetilde{(-)}$는 fully faithful이므로, ([\[범주론\] §자연변환, ⁋정리 5](/ko/math/category_theory/natural_transformations#thm5)) essentially surjective임을 보이면 충분하다. 즉 임의의 quasi-coherent sheaf $\mathcal{F}\in \QCoh(\Spec A)$가 적당한 $A$-가군의 연관층과 동형임을 보여야 한다.
 
-$M=\mathcal{F}(\Spec A)$라 하고, 우리는 $\mathcal{F}\cong \widetilde M$임을 주장한다. Restriction map들로부터 각각의 $f\in A$마다 $M=\mathcal{F}(\Spec A) \rightarrow \mathcal{F}(D(f))$가 유도되고, 이 상이 $f$의 action에 대해 invertible하므로 $A_f$의 universal property에 의해 $A_f$-가군 homomorphism
+$M=\mathcal{F}(\Spec A)$라 하고, 우리는 $\mathcal{F}\cong \widetilde M$임을 주장한다. Restriction map들로부터 각각의 $f\in A$마다 $M=\mathcal{F}(\Spec A) \rightarrow \mathcal{F}(D(f))$가 유도되고, 이 image가 $f$의 action에 대해 invertible하므로 $A_f$의 universal property에 의해 $A_f$-가군 homomorphism
 
 $$\theta_f:M_f \rightarrow \mathcal{F}(D(f))$$
 
 가 결정된다. 이들은 base $\{D(f)\}$ 위에서 morphism $\theta:\widetilde M \rightarrow \mathcal{F}$를 정의하므로, $\theta$가 stalk마다 동형임을 보이면 된다.
 
-이를 위해 $\mathcal{F}$의 준연접성을 사용한다. 각 점 $\mathfrak{p}$에 대하여 $\mathfrak{p}\in D(g)$이고 $\mathcal{F}\vert_{D(g)}\cong \widetilde N$인 적당한 $g$와 $A_g$-가군 $N$이 존재한다. ([정의 8](#def8)에서 affine open neighborhood를 principal open set으로 줄일 수 있는 것은 이들이 base이기 때문이다.) 그럼 $N=\mathcal{F}(D(g))$이고, [명제 5](#prop5)에 의하여 $D(g)$ 위로 제한된 $\theta$는 $\widetilde{M_g} \rightarrow \widetilde N$의 꼴이다. 두 연관층 사이의 사상은 [정리 7](#thm7)에 의해 그 global section 사상으로 결정되므로, 이 제한이 isomorphic한 것은 자연스러운 localization 사상 $M_g=\mathcal{F}(\Spec A)_g \rightarrow \mathcal{F}(D(g))=N$이 isomorphic한 것과 같다. 이제 이 사상이 동형임을 확인한다. $\Spec A$이 quasi-compact하므로 그 위에서 $\mathcal{F}$가 연관층이 되는 유한 개의 principal open $D(h_1),\ldots,D(h_m)$으로 $\Spec A$을 덮을 수 있고, sheaf 조건은 exact sequence
+이를 위해 $\mathcal{F}$의 준연접성을 사용한다. 각 점 $\mathfrak{p}$에 대하여 $\mathfrak{p}\in D(g)$이고 $\mathcal{F}\vert_{D(g)}\cong \widetilde N$인 적당한 $g$와 $A_g$-가군 $N$이 존재한다. ([정의 8](#def8)에서 affine open neighborhood를 principal open set으로 줄일 수 있는 것은 이들이 base이기 때문이다.) 그럼 $N=\mathcal{F}(D(g))$이고, [명제 5](#prop5)에 의하여 $D(g)$ 위로 제한된 $\theta$는 $\widetilde{M_g} \rightarrow \widetilde N$의 꼴이다. 두 연관층 사이의 morphism은 [정리 7](#thm7)에 의해 그 global section morphism으로 결정되므로, 이 restriction이 isomorphic한 것은 자연스러운 localization morphism $M_g=\mathcal{F}(\Spec A)_g \rightarrow \mathcal{F}(D(g))=N$이 isomorphic한 것과 같다. 이제 이 morphism이 동형임을 확인한다. $\Spec A$이 quasi-compact하므로 그 위에서 $\mathcal{F}$가 연관층이 되는 유한 개의 principal open $D(h_1),\ldots,D(h_m)$으로 $\Spec A$을 덮을 수 있고, sheaf 조건은 exact sequence
 
 $$0 \rightarrow \mathcal{F}(\Spec A) \rightarrow \prod_i \mathcal{F}(D(h_i)) \rightarrow \prod_{i,j}\mathcal{F}(D(h_ih_j))$$
 
-을 준다. 각 $D(h_i)$·$D(h_ih_j)$ 위에서 $\mathcal{F}$가 연관층이라 그 section은 $A$-가군이고 곱이 유한하므로, 완전한 localization $(-)\otimes_A A_g$은 이 열의 완전성을 보존할 뿐 아니라 곱을 통과한다. 그 결과 위 열을 $g$에서 localize한 것은 covering $\{D(h_ig)\}$에 대한 $D(g)$ 위의 sheaf 조건과 정확히 일치하는 exact sequence가 되어 $M_g\cong \mathcal{F}(D(g))=N$을 얻는다. 여기서 $\Spec A$의 quasi-compactness가 유한 덮개를 보장하는 데 본질적으로 쓰였다. 따라서 $\theta$는 각 $D(g)$ 위에서 isomorphic하고, 이로부터 모든 stalk에서 isomorphic하므로 $\theta:\widetilde M \rightarrow \mathcal{F}$는 sheaf의 isomorphism이다.
+을 준다. 각 $D(h_i)$·$D(h_ih_j)$ 위에서 $\mathcal{F}$가 연관층이라 그 section은 $A$-가군이고 곱이 유한하므로, 완전한 localization $(-)\otimes_A A_g$은 이 열의 완전성을 보존할 뿐 아니라 곱을 통과한다. 그 결과 위 열을 $g$에서 localize한 것은 covering $\{D(h_ig)\}$에 대한 $D(g)$ 위의 sheaf 조건과 정확히 일치하는 exact sequence가 되어 $M_g\cong \mathcal{F}(D(g))=N$을 얻는다. 여기서 $\Spec A$의 quasi-compactness가 유한 covering을 보장하는 데 본질적으로 쓰였다. 따라서 $\theta$는 각 $D(g)$ 위에서 isomorphic하고, 이로부터 모든 stalk에서 isomorphic하므로 $\theta:\widetilde M \rightarrow \mathcal{F}$는 sheaf의 isomorphism이다.
 :::
 
 [정리 9](#thm9)는 affine scheme 위에서 quasi-coherent sheaf를 다루는 것이 곧 가군을 다루는 것과 같음을 말해준다. 즉 $\Spec A$ 위의 모든 quasi-coherent sheaf는 그 global section 가군 $M=\Gamma(\Spec A, \mathcal{F})$으로 완전히 복원되며, 이 대응은 [명제 6](#prop6)의 exactness와 위에서 언급한 tensor product 호환성을 통해 가군의 대수와 sheaf의 대수를 일치시킨다.
@@ -267,7 +267,7 @@ $$\mathcal{L}^\vee\vert_U=\sHom_{\mathcal{O}_U}(\mathcal{O}_U, \mathcal{O}_U)\co
 
 $$(\mathcal{L}\otimes_{\mathcal{O}_X}\mathcal{L}^\vee)\vert_U\cong \mathcal{O}_U\otimes_{\mathcal{O}_U}\mathcal{O}_U\cong \mathcal{O}_U$$
 
-이고, 이 국소적 동형들이 자연스럽게 정의된 evaluation 사상 $\mathcal{L}\otimes_{\mathcal{O}_X}\mathcal{L}^\vee \rightarrow \mathcal{O}_X$로부터 오므로 ($s\otimes \phi\mapsto \phi(s)$) 이들이 붙어 전역적인 동형 $\mathcal{L}\otimes_{\mathcal{O}_X}\mathcal{L}^\vee\cong \mathcal{O}_X$를 준다.
+이고, 이 국소적 동형들이 자연스럽게 정의된 evaluation morphism $\mathcal{L}\otimes_{\mathcal{O}_X}\mathcal{L}^\vee \rightarrow \mathcal{O}_X$로부터 오므로 ($s\otimes \phi\mapsto \phi(s)$) 이들이 붙어 전역적인 동형 $\mathcal{L}\otimes_{\mathcal{O}_X}\mathcal{L}^\vee\cong \mathcal{O}_X$를 준다.
 :::
 
 따라서 invertible sheaf들은 tensor product를 연산으로 하여 group을 이루며, 항등원은 $\mathcal{O}_X$, $\mathcal{L}$의 역원은 $\mathcal{L}^\vee$이다. 이는 [\[대수다양체\] §선다발과 벡터다발, ⁋정의 9](/ko/math/algebraic_varieties/line_bundles#def9)에서 정의한 Picard group $\Pic(X)$의 scheme 버전이다.
@@ -279,7 +279,7 @@ $$(\mathcal{L}\otimes_{\mathcal{O}_X}\mathcal{L}^\vee)\vert_U\cong \mathcal{O}_U
 ::: 정의 17
 Scheme morphism $f:X \rightarrow Y$가 주어졌다 하자.
 
-1. $X$ 위의 $\mathcal{O}_X$-가군층 $\mathcal{F}$에 대하여, *pushforward* $f_\ast \mathcal{F}$는 열린집합마다 $V\mapsto \mathcal{F}(f^{-1}(V))$로 주어지는 $Y$ 위의 $\mathcal{O}_Y$-가군층이다. 그 가군 구조는 morphism의 sheaf 사상 $f^\sharp:\mathcal{O}_Y \rightarrow f_\ast \mathcal{O}_X$을 통해 주어진다.
+1. $X$ 위의 $\mathcal{O}_X$-가군층 $\mathcal{F}$에 대하여, *pushforward* $f_\ast \mathcal{F}$는 열린집합마다 $V\mapsto \mathcal{F}(f^{-1}(V))$로 주어지는 $Y$ 위의 $\mathcal{O}_Y$-가군층이다. 그 가군 구조는 morphism의 sheaf morphism $f^\sharp:\mathcal{O}_Y \rightarrow f_\ast \mathcal{O}_X$을 통해 주어진다.
 2. $Y$ 위의 $\mathcal{O}_Y$-가군층 $\mathcal{G}$에 대하여, *pullback* $f^\ast \mathcal{G}$는 다음 식
 
     $$f^\ast \mathcal{G}=f^{-1}\mathcal{G}\otimes_{f^{-1}\mathcal{O}_Y}\mathcal{O}_X$$

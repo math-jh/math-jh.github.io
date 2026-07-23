@@ -15,9 +15,9 @@ published: false
 
 ---
 
-[§사교다양체, ⁋참고 8](/ko/math/symplectic_geometry/symplectic_manifold#rmk8)에서 우리는 임의의 symplectic manifold $(M,\omega)$가 각 점 근방에서 표준 모델 $(\mathbb{R}^{2n},\omega_0)$과 symplectomorphic하다는 *Darboux 정리*를 예고하였다. 이는 symplectic 기하가 리만 기하와 근본적으로 다른 지점이다. 리만 기하에서는 곡률이라는 국소 불변량이 존재하여, 두 리만 manifold가 국소적으로 isometric하려면 곡률 텐서가 일치해야 한다. 반면 symplectic 기하에는 이러한 국소 불변량이 전혀 없다. 모든 symplectic manifold는 같은 차원이라면 국소적으로 완전히 동일하게 생겼으며, symplectic 기하의 모든 비자명한 내용은 대역적인 차원에서 비로소 나타난다.
+[§사교다양체, ⁋참고 8](/ko/math/symplectic_geometry/symplectic_manifold#rmk8)에서 우리는 임의의 symplectic manifold $(M,\omega)$가 각 점 근방에서 표준 model $(\mathbb{R}^{2n},\omega_0)$과 symplectomorphic하다는 *Darboux 정리*를 예고하였다. 이는 symplectic 기하가 리만 기하와 근본적으로 다른 지점이다. 리만 기하에서는 곡률이라는 국소 불변량이 존재하여, 두 리만 manifold가 국소적으로 isometric하려면 곡률 텐서가 일치해야 한다. 반면 symplectic 기하에는 이러한 국소 불변량이 전혀 없다. 모든 symplectic manifold는 같은 차원이라면 국소적으로 완전히 동일하게 생겼으며, symplectic 기하의 모든 비자명한 내용은 대역적인 차원에서 비로소 나타난다.
 
-이 사실을 증명하는 현대적인 방법은 J. Moser가 1965년에 도입한 *Moser의 방법<sub>Moser's method</sub>*, 혹은 *Moser의 trick*이다. 그 핵심은 두 symplectic form을 직선으로 잇는 경로 $\omega_t$를 만든 뒤, 이 경로를 따라 form을 옮겨 주는 시간의존 벡터장을 nondegeneracy를 이용해 풀어내는 것이다. 이 방법은 Darboux 정리뿐 아니라 그 대역적 일반화인 Moser 안정성 정리까지 한꺼번에 준다. 우리는 먼저 증명에 필요한 Poincaré lemma의 정밀한 형태를 정리한 후, Moser의 방법을 전개하여 Darboux 정리를 증명하고, 끝으로 Moser 안정성 정리를 서술한다.
+이 사실을 증명하는 현대적인 방법은 J. Moser가 1965년에 도입한 *Moser의 방법<sub>Moser's method</sub>*, 혹은 *Moser의 trick*이다. 그 핵심은 두 symplectic form을 직선으로 잇는 경로 $\omega_t$를 만든 뒤, 이 경로를 따라 form을 옮겨 주는 시간의존 벡터장을 nondegeneracy를 이용해 풀어내는 것이다. 이 방법은 Darboux 정리뿐 아니라 그 대역적 일반화인 Moser stability 정리까지 한꺼번에 준다. 우리는 먼저 증명에 필요한 Poincaré lemma의 정밀한 형태를 정리한 후, Moser의 방법을 전개하여 Darboux 정리를 증명하고, 끝으로 Moser stability 정리를 서술한다.
 
 ## Poincaré lemma
 
@@ -44,7 +44,7 @@ $$d\alpha=d(h\beta)=\psi_1^\ast\beta=\beta$$
 마지막으로 $\beta_0=0$인 경우를 보자. 위 적분식에서 $\alpha_x=(h\beta)_x$는 피적분함수 $t^{k-1}\beta_{tx}(x,-)$의 적분이다. $x=0$을 대입하면 모든 $t$에 대해 피적분함수가 $\beta_0(0,-)=0$이므로 $\alpha_0=0$이다.
 :::
 
-위 보조정리에서 구성한 $\alpha$는 단지 존재할 뿐 아니라 $\beta$에 선형적으로 의존하므로, 본문에서 $\beta=\omega-\omega_0$에 적용할 때 $\omega$와 $\omega_0$이 한 점에서 일치하면 $\beta$가 그 점에서 사라지고, 따라서 $\alpha$ 또한 그 점에서 사라지도록 택할 수 있다. 이 마지막 성질은 Moser의 방법에서 생성하는 벡터장이 중심점을 고정점으로 갖게 하여, 흐름이 그 점 근방에서 짧은 시간 동안 잘 정의되도록 보장하는 데 결정적이다.
+위 보조정리에서 구성한 $\alpha$는 단지 존재할 뿐 아니라 $\beta$에 선형적으로 의존하므로, 본문에서 $\beta=\omega-\omega_0$에 적용할 때 $\omega$와 $\omega_0$이 한 점에서 일치하면 $\beta$가 그 점에서 사라지고, 따라서 $\alpha$ 또한 그 점에서 사라지도록 택할 수 있다. 이 마지막 성질은 Moser의 방법에서 생성하는 벡터장이 중심점을 fixed point로 갖게 하여, 흐름이 그 점 근방에서 짧은 시간 동안 잘 정의되도록 보장하는 데 결정적이다.
 
 ## Moser의 방법과 Darboux 정리
 
@@ -123,10 +123,10 @@ Moser의 방법의 핵심은 두 군데에서 nondegeneracy를 사용한다는 �
 
 ## Moser 안정성 정리
 
-Moser의 방법은 한 점 근방이 아니라 compact manifold 전체에서도 작동하며, 이때 얻어지는 결과가 Moser 안정성 정리이다. Darboux 정리에서는 두 form $\omega_0$과 $\omega$이 한 점에서 일치한다는 사실로부터 $\alpha$가 그 점에서 사라지게 만들어 흐름이 짧은 시간 동안 존재함을 보장하였다. 대역적인 경우에는 $M$이 compact라는 가정이 흐름의 대역적 존재를 보장하는 역할을 대신하며, $\omega-\omega_0$이 exact라는 조건이 $\alpha$의 존재를 준다.
+Moser의 방법은 한 점 근방이 아니라 compact manifold 전체에서도 작동하며, 이때 얻어지는 결과가 Moser stability 정리이다. Darboux 정리에서는 두 form $\omega_0$과 $\omega$이 한 점에서 일치한다는 사실로부터 $\alpha$가 그 점에서 사라지게 만들어 흐름이 짧은 시간 동안 존재함을 보장하였다. 대역적인 경우에는 $M$이 compact라는 가정이 흐름의 대역적 존재를 보장하는 역할을 대신하며, $\omega-\omega_0$이 exact라는 조건이 $\alpha$의 존재를 준다.
 
 ::: 정리 4 (Moser 안정성)
-$M$이 경계가 없는 compact manifold이고, $\{\omega_t\}_{t\in[0,1]}$이 $M$ 위의 symplectic form들의 $C^\infty$ 경로라 하자. 만일 de Rham cohomology class $[\omega_t]\in H^2_{\mathrm{dR}}(M)$이 모든 $t$에 대해 일정하다면, isotopy $\{\phi_t\}_{t\in[0,1]}$이 존재하여 $\phi_0=\id$이고
+$M$이 boundary가 없는 compact manifold이고, $\{\omega_t\}_{t\in[0,1]}$이 $M$ 위의 symplectic form들의 $C^\infty$ 경로라 하자. 만일 de Rham cohomology class $[\omega_t]\in H^2_{\mathrm{dR}}(M)$이 모든 $t$에 대해 일정하다면, isotopy $\{\phi_t\}_{t\in[0,1]}$이 존재하여 $\phi_0=\id$이고
 
 $$\phi_t^\ast\omega_t=\omega_0$$
 
@@ -148,7 +148,7 @@ $$\frac{d}{dt}(\phi_t^\ast\omega_t)=\phi_t^\ast\left(\mathcal{L}_{X_t}\omega_t+\
 을 얻는다. 따라서 $\phi_t^\ast\omega_t$는 $t$에 무관하게 일정하며, $\phi_0=\id$이므로 $\phi_t^\ast\omega_t=\omega_0$이다. $t=1$로 두면 $\phi_1^\ast\omega_1=\omega_0$이므로 $\phi_1$은 symplectomorphism이다.
 :::
 
-이 정리는 symplectic 구조가 cohomology class를 고정한 채로는 *변형에 대해 안정적*이라는 것을 말한다. 즉 같은 cohomology class를 갖는 두 symplectic form을 그 class를 유지하는 경로로 이을 수 있다면, 그 둘은 본질적으로 같은 symplectic manifold를 정의한다. Darboux 정리는 이 정리의 국소판으로 볼 수 있는데, 국소적으로는 $H^2_{\mathrm{dR}}$이 소멸하므로 cohomology class 조건이 자동으로 성립하고, compact성 대신 중심점을 고정점으로 갖는 흐름의 국소존재성이 그 역할을 대신한다.
+이 정리는 symplectic 구조가 cohomology class를 고정한 채로는 *변형에 대해 안정적*이라는 것을 말한다. 즉 같은 cohomology class를 갖는 두 symplectic form을 그 class를 유지하는 경로로 이을 수 있다면, 그 둘은 본질적으로 같은 symplectic manifold를 정의한다. Darboux 정리는 이 정리의 국소판으로 볼 수 있는데, 국소적으로는 $H^2_{\mathrm{dR}}$이 소멸하므로 cohomology class 조건이 자동으로 성립하고, compact성 대신 중심점을 fixed point로 갖는 흐름의 국소존재성이 그 역할을 대신한다.
 
 ::: 참고 5
 Cohomology class가 일정하다는 가정은 본질적이다. 만일 $[\omega_0]\neq[\omega_1]$이라면, symplectomorphism $\phi_1$은 $\phi_1^\ast[\omega_1]=[\omega_0]$을 강제하는데, $\phi_1$이 $\id$과 isotopic하다면 $\phi_1^\ast$는 $H^2_{\mathrm{dR}}(M)$ 위에서 항등사상이므로 $[\omega_1]=[\omega_0]$이어야 하기 때문이다. 가령 $2$차원 torus $T^2$ 위에서 area form의 전체 면적은 $\int_{T^2}\omega=[\omega]\frown[T^2]$로 cohomology class에 의해 결정되며, 면적이 다른 두 area form은 결코 symplectomorphic할 수 없다. 따라서 대역적인 symplectic 기하에는 Darboux 정리에도 불구하고 부피와 같은 대역 불변량이 존재한다.

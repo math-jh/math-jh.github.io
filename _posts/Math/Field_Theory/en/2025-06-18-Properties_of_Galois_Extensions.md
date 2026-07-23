@@ -176,7 +176,7 @@ Also, since the 1-cocycles form an abelian group under pointwise multiplication 
 For a finite degree Galois extension $\mathbb{L}/\mathbb{K}$, every 1-cocycle $\varphi:G \rightarrow \mathbb{L}^\times$ is a 1-coboundary. That is, $H^1(G,\mathbb{L}^\times)$ is trivial.
 :::
 ::: Proof
-Since the elements of $G$ are distinct homomorphisms from $\mathbb{L}$ to $\mathbb{L}$, by Dedekind's theorem in [§Étale Algebras, ⁋Corollary 3](/en/math/field_theory/etale_algebras#cor3), they are linearly independent over the $\mathbb{L}$-vector space. Since the values of $\varphi$ are all non-zero, the linear combination
+Since the elements of $G$ are distinct homomorphisms from $\mathbb{L}$ to $\mathbb{L}$, by [§Étale Algebras, ⁋Corollary 3](/en/math/field_theory/etale_algebras#cor3), they are linearly independent over the $\mathbb{L}$-vector space. Since the values of $\varphi$ are all non-zero, the linear combination
 
 $$\sum_{\tau\in G}\varphi(\tau)\,\tau$$
 

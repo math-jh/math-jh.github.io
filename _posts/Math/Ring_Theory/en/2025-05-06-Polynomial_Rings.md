@@ -199,7 +199,7 @@ Fix an integral domain $A$. Let a nonzero element $u$ of $A[\x]$ have roots $a_1
 $$u(\x)=(\x-a_1)^{p_1}\cdots(\x-a_r)^{p_r}v(\x),\qquad v(a_1),\ldots, v(a_r)\neq0$$
 :::
 ::: Proof
-We proceed by induction on $r$. The case $p=1$ is trivial, so suppose $r$ roots $a_1,\ldots, a_r$ of $u$ are given, and apply the inductive hypothesis to the first $r-1$ roots to write
+We proceed by induction on $r$. The case $r=1$ is trivial, so suppose $r$ roots $a_1,\ldots, a_r$ of $u$ are given, and apply the inductive hypothesis to the first $r-1$ roots to write
 
 $$u(\x)=u_1(\x)u_2(\x)=(\x-a_1)^{p_1}\cdots(\x-a_{r-1})^{p_{r-1}}u_2(\x)$$
 
@@ -223,9 +223,9 @@ is the unique polynomial of degree less than $n$ satisfying $u(a_i)=b_i$ for eac
 Uniqueness is trivial by the above argument, and it remains only to verify that substituting each $a_i$ into $u$ yields the value $b_i$.
 :::
 
-On the other hand, one useful method for finding multiple roots is to differentiate the given polynomial. We can define algebraically what differentiation is ([\[Multilinear Algebra\] §Derivations](/en/math/multilinear_algebra/derivations)), but in this post we define $D: A[\x] \rightarrow A[\x]$ by the formula
+On the other hand, one useful method for finding multiple roots is to differentiate the given polynomial. We can define algebraically what a derivation is ([\[Multilinear Algebra\] §Derivations](/en/math/multilinear_algebra/derivations)), but in this post we define $D: A[\x] \rightarrow A[\x]$ by the formula
 
-$$D:\left(u(\x)=\sum_{i=0}^n a_i\x^i\right)\mapsto \left((Du)(\x)=i.a_i\x^{i-1}\right)\tag{$\ast$}$$
+$$D:\left(u(\x)=\sum_{i=0}^n a_i\x^i\right)\mapsto \left((Du)(\x)=\sum_{i=1}^n i.a_i\x^{i-1}\right)\tag{$\ast$}$$
 
 Here, $i.a_i$ is the element of $A$ defined by
 
@@ -379,13 +379,13 @@ For both claims, it suffices to consider only the case where $r, s \ne 0$. There
     &= \sup(\deg(uz) - \deg(vz), \deg(vw) - \deg(vz)) \\
     &= \sup(\deg r, \deg s).\end{aligned}$$
 
-    Now suppose $$\deg r = \deg s$$, that is, $$\deg u + \deg z = \deg w + \deg v$$, and if $$r + s \ne 0$$, then
+    Now suppose $\deg r = \deg s$, that is, $\deg u + \deg z = \deg w + \deg v$, and if $r + s \ne 0$, then
 
     $$\deg(r + s) = \deg(uz + vw) - \deg(vz)\leq \deg(uz) - \deg(vz) = \deg r$$
 
     so the claim holds.
 
-2. $$rs = (uw)/(vz)$$, and therefore
+2. $rs = (uw)/(vz)$, and therefore
 
     $$\deg(rs) = \deg(uw) - \deg(vz) = \deg u - \deg v + \deg w - \deg z = \deg r + \deg s.$$
 :::
@@ -396,9 +396,9 @@ A power series ring is another variant of a polynomial ring, and is now the set 
 
 $$u(\x)=\sum_{\nu\in \mathbb{N}^{(I)}} a_\nu \x^\nu,\qquad\text{$a_\nu$ need not satisfy finiteness condition}$$
 
-We write this as $$A[[\x_i]]_{i\in I}$$ and call it the *ring of formal power series*.
+We write this as $A[[\x_i]]_{i\in I}$ and call it the *ring of formal power series*.
 
-Formal power series can be defined with concepts similar to polynomials, except for the fact that they are *infinite* sums of monomials. For example, we can define the degree $$p$$ component $$u_p$$ of a formal power series $$u$$. However, for the (total) degree of $$u$$, since the degree of elements other than polynomials would be $$+\infty$$, there is no reason to use this in $$A[[\x_i]]_{i\in I}$$. Instead, for any formal power series $$u$$, we define the *order* $$\omega(u)$$ of $$u$$ as the *smallest* $$p$$ such that $$u_p\neq 0$$. Similarly, setting $$\omega(0)=\infty$$, the formulas
+Formal power series can be defined with concepts similar to polynomials, except for the fact that they are *infinite* sums of monomials. For example, we can define the degree $p$ component $u_p$ of a formal power series $u$. However, for the (total) degree of $u$, since the degree of elements other than polynomials would be $+\infty$, there is no reason to use this in $A[[\x_i]]_{i\in I}$. Instead, for any formal power series $u$, we define the *order* $\omega(u)$ of $u$ as the *smallest* $p$ such that $u_p\neq 0$. Similarly, setting $\omega(0)=\infty$, the formulas
 
 $$\omega(u+v)\geq \inf(\omega(u),\omega(v)),\quad\text{equality if $\omega(u)\neq\omega(v)$}$$
 
@@ -408,21 +408,21 @@ $$\omega(uv)\geq \omega(u)+\omega(v)$$
 
 hold.
 
-For degree, the above inequality would have held if $$A$$ were an integral domain. Similarly, the following holds.
+For degree, the above inequality would have held if $A$ were an integral domain. Similarly, the following holds.
 
 ::: Proposition 19
-For an integral domain $$A$$, the following hold.
+For an integral domain $A$, the following hold.
 
-1. $$A[[x_i]]_{i\in I}$$ is an integral domain.
-2. For two nonzero elements $$u,v\in A[[x_i]]_{i\in I}$$, we have $$\omega(uv)=\omega(u)+\omega(v)$$.
+1. $A[[x_i]]_{i\in I}$ is an integral domain.
+2. For two nonzero elements $u,v\in A[[x_i]]_{i\in I}$, we have $\omega(uv)=\omega(u)+\omega(v)$.
 :::
 
-However, one must be somewhat careful: unlike [Proposition 4](#prop4), the units of $$A[[x_i]]_{i\in I}$$ are larger than those of $$A$$. For example, consider the formula
+However, one must be somewhat careful: unlike [Proposition 4](#prop4), the units of $A[[x_i]]_{i\in I}$ are larger than those of $A$. For example, consider the formula
 
 $$(1-\x)\left( \sum_{n=0}^\infty \x^n\right)=1$$
 
 More generally, the following holds.
 
 ::: Proposition 20
-For any $$u\in A[[x_i]]_{i\in I}$$, $$u$$ being invertible in $$A[[x_i]]_{i\in I}$$ is equivalent to the constant term of $$u$$ being invertible in $$A$$.
+For any $u\in A[[x_i]]_{i\in I}$, $u$ being invertible in $A[[x_i]]_{i\in I}$ is equivalent to the constant term of $u$ being invertible in $A$.
 :::

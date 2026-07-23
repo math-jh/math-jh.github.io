@@ -14,7 +14,7 @@ weight: 2
 ---
 
 ::: remark 참고 {#rmk}
-이 카테고리의 모든 글들에서 ring은 commutative ring (with unity)를 의미한다. 
+이 category의 모든 글들에서 ring은 commutative ring (with unity)를 의미한다. 
 :::
 
 이번 글에서 우리는 대수기하학의 가장 기본적인 대상인 spectrum을 정의한다. spectrum은 적당한 structure sheaf가 주어져 있는 위상공간으로, 우리는 우선 이번 글에서 이를 집합으로서 정의하고, 그 위에 위상을 정의할 것이다. 그 후, 다음 글에서는 $\Spec A$ 위에 structure sheaf를 정의하게 된다. 
@@ -96,7 +96,7 @@ $\Spec A$ 위에 위상구조를 정의할 때 가장 중요한 것은 다음의
 위와 같이 정의된 $\Spec A$의 위상을 *Zariski topology<sub>자리스키 위상</sub>*이라 부른다.
 :::
 
-Zariski topology는 일반적으로 우리가 좋다고 생각했던 위상이 아니다. 가령 임의의 integral domain $A$에 대하여, $(0)$은 그 자체로 prime ideal이며, 여기에 포함된 $A$의 공집합이 아닌 부분집합도 $(0)$ 뿐이다. 즉, $(0)\in\Spec A$를 포함하는 닫힌집합은 오직 $Z(0)=\Spec A$ 뿐이며, 따라서 $A$가 field가 아닌 이상 한점집합 $\{(0)\}$은 닫힌집합이 아니다. 특히 Zariski topology는 일반적으로 Hausdorff space가 아니다. 그러나 이 카테고리의 글들에서 논의를 진행해 나갈수록 우리는 이 구조에서 친숙한 기하학적인 개념들을 발견하게 될 것이다. 
+Zariski topology는 일반적으로 우리가 좋다고 생각했던 위상이 아니다. 가령 임의의 integral domain $A$에 대하여, $(0)$은 그 자체로 prime ideal이며, 여기에 포함된 $A$의 공집합이 아닌 부분집합도 $(0)$ 뿐이다. 즉, $(0)\in\Spec A$를 포함하는 닫힌집합은 오직 $Z(0)=\Spec A$ 뿐이며, 따라서 $A$가 field가 아닌 이상 한점집합 $\{(0)\}$은 닫힌집합이 아니다. 특히 Zariski topology는 일반적으로 Hausdorff space가 아니다. 그러나 이 category의 글들에서 논의를 진행해 나갈수록 우리는 이 구조에서 친숙한 기하학적인 개념들을 발견하게 될 것이다. 
 
 앞서 우리는 [명제 2](#prop2)에서 $\Spec$을 functor $\Spec: \cRing^\op \rightarrow \Set$으로 취급할 수 있음을 살펴보았다. 뿐만 아니라, $\Spec$은 $\cRing^\op$에서 $\Top$으로의 functor이기도 하다.
 
@@ -220,7 +220,7 @@ $$Z(I(Z(S)))=Z(S),\qquad I(Z(I(T)))=I(T)$$
 ::: 명제 14
 Closure operator $IZ: \mathcal{P}(A) \rightarrow \mathcal{P}(A)$, $ZI: \mathcal{P}(\Spec A) \rightarrow \mathcal{P}(\Spec A)$에 대하여, 다음이 성립한다.
 
-1. $$IZ(S)=\sqrt{(S)}$$
+1. $IZ(S)=\sqrt{(S)}$
 2. $ZI(T)=\cl(T)$
 :::
 ::: 증명
@@ -243,18 +243,18 @@ Closure operator $IZ: \mathcal{P}(A) \rightarrow \mathcal{P}(A)$, $ZI: \mathcal{
 즉, 다음을 얻는다.
 
 ::: 정리 15
-Ring $$A$$의 radical ideal들과, $$\Spec A$$의 닫힌집합들 사이의 Galois correspondence가 존재한다. 
+Ring $A$의 radical ideal들과, $\Spec A$의 닫힌집합들 사이의 Galois correspondence가 존재한다. 
 :::
 
-이 대응에서 다소 헷갈릴 수 있는 것은 $$A$$의 임의의 prime ideal은 항상 radical ideal이므로, ring $$A$$의 radical ideal들의 모임은 항상 (집합으로서) $$\Spec A$$를 포함한다. 
+이 대응에서 다소 헷갈릴 수 있는 것은 $A$의 임의의 prime ideal은 항상 radical ideal이므로, ring $A$의 radical ideal들의 모임은 항상 (집합으로서) $\Spec A$를 포함한다. 
 
 ::: 명제 16
-Ring $$A$$의 prime ideal들과, $$\Spec A$$의 irreducible closed subset들 사이의 Galois correspondence가 존재한다.
+Ring $A$의 prime ideal들과, $\Spec A$의 irreducible closed subset들 사이의 Galois correspondence가 존재한다.
 :::
 ::: 증명
-즉 임의의 prime ideal $$\mathfrak{p}$$에 대하여 $$Z(\mathfrak{p})$$가 irreducible인 것과, 임의의 irreducible closed subset $$Y$$에 대하여 $$I(Y)$$가 prime ideal인 것을 보여야 한다.
+즉 임의의 prime ideal $\mathfrak{p}$에 대하여 $Z(\mathfrak{p})$가 irreducible인 것과, 임의의 irreducible closed subset $Y$에 대하여 $I(Y)$가 prime ideal인 것을 보여야 한다.
 
-우선 $$Z(\mathfrak{p})$$가 irreducible이 아니라 가정하면, $$Z(\mathfrak{p})$$의 두 비자명한 닫힌집합 $$Z(\mathfrak{a}), Z(\mathfrak{b})$$가 존재하여 $$Z(\mathfrak{p})=Z(\mathfrak{a})\cup Z(\mathfrak{b})$$이다. ([\[위상수학\] §차원, ⁋정의 6](/ko/math/topology/dimension#def6)) 이제 
+우선 $Z(\mathfrak{p})$가 irreducible이 아니라 가정하면, $Z(\mathfrak{p})$의 두 비자명한 닫힌집합 $Z(\mathfrak{a}), Z(\mathfrak{b})$가 존재하여 $Z(\mathfrak{p})=Z(\mathfrak{a})\cup Z(\mathfrak{b})$이다. ([\[위상수학\] §차원, ⁋정의 6](/ko/math/topology/dimension#def6)) 이제 
 
 $$Z(\mathfrak{p})=Z(\mathfrak{a})\cup Z(\mathfrak{b})=Z(\mathfrak{ab})\iff \mathfrak{p}=\sqrt{\mathfrak{p}}=\sqrt{\mathfrak{ab}}=\sqrt{\mathfrak{a}\cap \mathfrak{b}}$$
 
@@ -262,32 +262,32 @@ $$Z(\mathfrak{p})=Z(\mathfrak{a})\cup Z(\mathfrak{b})=Z(\mathfrak{ab})\iff \math
 
 $$\sqrt{\mathfrak{a}\cap \mathfrak{b}}\supseteq \mathfrak{a}\cap \mathfrak{b}\supseteq \mathfrak{a}\mathfrak{b}$$
 
-이므로 위의 두 식을 종합하면 $$\mathfrak{p}\supseteq \mathfrak{a}$$ 혹은 $$\mathfrak{p}\supseteq \mathfrak{b}$$가 성립해야 하는 것을 알고 따라서 $$Z(\mathfrak{p})=Z(\mathfrak{a})$$ 혹은 $$Z(\mathfrak{p})=Z(\mathfrak{b})$$가 되어 모순이다.
+이므로 위의 두 식을 종합하면 $\mathfrak{p}\supseteq \mathfrak{a}$ 혹은 $\mathfrak{p}\supseteq \mathfrak{b}$가 성립해야 하는 것을 알고 따라서 $Z(\mathfrak{p})=Z(\mathfrak{a})$ 혹은 $Z(\mathfrak{p})=Z(\mathfrak{b})$가 되어 모순이다.
 
-거꾸로 임의의 irreducible closed subset $$Y$$에 대하여, $$I(Y)$$가 prime ideal이라는 것을 보여야 한다. 우선 $$Y$$가 닫힌집합이므로 [정리 15](#thm15)와 [명제 5](#prop5)에 의하여 $$Y=Z(\mathfrak{a})$$이도록 하는 radical ideal $$\mathfrak{a}$$가 존재한다. 그럼 $$\mathfrak{a}=IZ(\mathfrak{a})=I(Y)$$가 prime인 것을 보이면 충분하다. 
+거꾸로 임의의 irreducible closed subset $Y$에 대하여, $I(Y)$가 prime ideal이라는 것을 보여야 한다. 우선 $Y$가 닫힌집합이므로 [정리 15](#thm15)와 [명제 5](#prop5)에 의하여 $Y=Z(\mathfrak{a})$이도록 하는 radical ideal $\mathfrak{a}$가 존재한다. 그럼 $\mathfrak{a}=IZ(\mathfrak{a})=I(Y)$가 prime인 것을 보이면 충분하다. 
 
-이를 위해 $$fg\in \mathfrak{a}$$라 하고, 동시에 공집합은 아닌 $$\Spec A$$의 두 열린집합 $$D(f), D(g)$$를 생각하면 
+이를 위해 $fg\in \mathfrak{a}$라 하고, 동시에 공집합은 아닌 $\Spec A$의 두 열린집합 $D(f), D(g)$를 생각하면 
 
 $$(D(f)\cap Y)\cap (D(g)\cap Y)=D(f)\cap D(g)\cap Y=D(fg)\cap Y$$
 
-가 공집합이어야 함을 안다. 그런데 $$D(f)\cap Y$$와 $$D(g)\cap Y$$는 irreducible closed set $$Y$$의 두 열린집합이므로, 이것이 성립하기 위해서는 둘 중 하나가 공집합이어야 한다. ([\[위상수학\] §차원, ⁋명제 7](/ko/math/topology/dimension#prop7)) 이로부터 $$f\in \mathfrak{a}$$ 혹은 $$g\in \mathfrak{a}$$가 성립해야 함을 알고, 따라서 $$\mathfrak{a}$$는 prime ideal이다. 
+가 공집합이어야 함을 안다. 그런데 $D(f)\cap Y$와 $D(g)\cap Y$는 irreducible closed set $Y$의 두 열린집합이므로, 이것이 성립하기 위해서는 둘 중 하나가 공집합이어야 한다. ([\[위상수학\] §차원, ⁋명제 7](/ko/math/topology/dimension#prop7)) 이로부터 $f\in \mathfrak{a}$ 혹은 $g\in \mathfrak{a}$가 성립해야 함을 알고, 따라서 $\mathfrak{a}$는 prime ideal이다. 
 :::
 
-특히, prime ideal $$\mathfrak{p}$$에 대하여 $$\mathfrak{q}\subsetneq \mathfrak{p}$$를 만족하는 prime ideal이 없다면, 즉 $$\mathfrak{p}$$가 *minimal* prime ideal이라면 $$Z(\mathfrak{p})$$는 irreducible component 중 가장 큰 것, 즉 irreducible component가 된다. 이로부터 다음을 얻는다.
+특히, prime ideal $\mathfrak{p}$에 대하여 $\mathfrak{q}\subsetneq \mathfrak{p}$를 만족하는 prime ideal이 없다면, 즉 $\mathfrak{p}$가 *minimal* prime ideal이라면 $Z(\mathfrak{p})$는 irreducible component 중 가장 큰 것, 즉 irreducible component가 된다. 이로부터 다음을 얻는다.
 
 ::: 따름정리 17
-Ring $$A$$의 minimal prime ideal들과 $$\Spec A$$의 irreducible component 사이의 Galois correspondence가 존재한다. 
+Ring $A$의 minimal prime ideal들과 $\Spec A$의 irreducible component 사이의 Galois correspondence가 존재한다. 
 :::
 ::: 증명
-[명제 14](#prop14)에 의하여 임의의 prime ideal $$\mathfrak{p}$$에 대해서는 $$IZ(\mathfrak{p})=\sqrt{\mathfrak{p}}=\mathfrak{p}$$이고, $$\Spec A$$의 임의의 닫힌집합 $$Y$$에 대해서는 $$ZI(Y)=\cl(Y)=Y$$이므로, $$Z$$와 $$I$$는 서로 역이 되는 대응이다. 따라서 [명제 16](#prop16)에 의하여 $$\mathfrak{p}\mapsto Z(\mathfrak{p})$$는 $$A$$의 prime ideal들과 $$\Spec A$$의 irreducible closed subset들 사이의 전단사이며, 그 역은 $$Y\mapsto I(Y)$$이다. 뿐만 아니라 두 prime ideal $$\mathfrak{p},\mathfrak{q}$$에 [보조정리 6](#lem6)의 셋째 결과를 적용하면 
+[명제 14](#prop14)에 의하여 임의의 prime ideal $\mathfrak{p}$에 대해서는 $IZ(\mathfrak{p})=\sqrt{\mathfrak{p}}=\mathfrak{p}$이고, $\Spec A$의 임의의 닫힌집합 $Y$에 대해서는 $ZI(Y)=\cl(Y)=Y$이므로, $Z$와 $I$는 서로 역이 되는 대응이다. 따라서 [명제 16](#prop16)에 의하여 $\mathfrak{p}\mapsto Z(\mathfrak{p})$는 $A$의 prime ideal들과 $\Spec A$의 irreducible closed subset들 사이의 전단사이며, 그 역은 $Y\mapsto I(Y)$이다. 뿐만 아니라 두 prime ideal $\mathfrak{p},\mathfrak{q}$에 [보조정리 6](#lem6)의 셋째 결과를 적용하면 
 
 $$Z(\mathfrak{q})\subseteq Z(\mathfrak{p})\iff \sqrt{\mathfrak{q}}\supseteq \sqrt{\mathfrak{p}}\iff \mathfrak{q}\supseteq \mathfrak{p}$$
 
 이므로 이 전단사는 포함관계를 뒤집는다.
 
-한편 [\[위상수학\] §차원, ⁋정의 9](/ko/math/topology/dimension#def9)에 의하여 $$\Spec A$$의 irreducible component는 irreducible subset들 가운데 극대인 것이고, irreducible set의 closure는 다시 irreducible이므로 이들은 항상 닫힌집합이다. 거꾸로 irreducible closed subset들 가운데 극대인 $$Y$$가 주어졌다 하고, $$Y$$를 포함하는 임의의 irreducible subset $$S$$를 생각하자. 그럼 $$\cl(S)$$는 $$Y$$를 포함하는 irreducible closed subset이므로 $$Y$$의 극대성에 의하여 $$\cl(S)=Y$$이고, 따라서 $$S\subseteq Y$$, 즉 $$S=Y$$이다. 이상에서 $$\Spec A$$의 irreducible component들은 정확히 irreducible closed subset들 가운데 포함관계에 대해 극대인 것들이다.
+한편 [\[위상수학\] §차원, ⁋정의 9](/ko/math/topology/dimension#def9)에 의하여 $\Spec A$의 irreducible component는 irreducible subset들 가운데 maximal인 것이고, irreducible set의 closure는 다시 irreducible이므로 이들은 항상 닫힌집합이다. 거꾸로 irreducible closed subset들 가운데 maximal인 $Y$가 주어졌다 하고, $Y$를 포함하는 임의의 irreducible subset $S$를 생각하자. 그럼 $\cl(S)$는 $Y$를 포함하는 irreducible closed subset이므로 $Y$의 maximality에 의하여 $\cl(S)=Y$이고, 따라서 $S\subseteq Y$, 즉 $S=Y$이다. 이상에서 $\Spec A$의 irreducible component들은 정확히 irreducible closed subset들 가운데 포함관계에 대해 maximal인 것들이다.
 
-이제 위의 전단사가 포함관계를 뒤집으므로, 이는 prime ideal들 가운데 극소인 것들, 즉 minimal prime ideal들과, irreducible closed subset들 가운데 극대인 것들, 즉 $$\Spec A$$의 irreducible component들을 서로 대응시킨다. 
+이제 위의 전단사가 포함관계를 뒤집으므로, 이는 prime ideal들 가운데 minimal인 것들, 즉 minimal prime ideal들과, irreducible closed subset들 가운데 maximal인 것들, 즉 $\Spec A$의 irreducible component들을 서로 대응시킨다. 
 :::
 
 ---

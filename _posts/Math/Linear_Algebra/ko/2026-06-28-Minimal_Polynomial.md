@@ -92,10 +92,10 @@ $$p_A(A)v=\left(\prod_{\mu\neq\lambda}(A-\mu I)^{d_\mu}\right)(A-\lambda I)^{d_\
 케일리-해밀턴 정리는 $p(A)=0$을 만족하는 영이 아닌 다항식 $p$가 항상 존재함을 보여준다. 그러한 다항식 중 가장 간단한 것에 이름을 붙이자.
 
 ::: 정의 5
-$n\times n$ 행렬 $A$에 대하여, $p(A)=0$을 만족하는 monic polynomial 가운데 차수가 가장 작은 것을 $A$의 *minimal polynomial<sub>최소다항식</sub>*이라 부르고 $m_A$로 적는다.
+$n\times n$ 행렬 $A$에 대하여, $p(A)=0$을 만족하는 monic polynomial 가운데 degree가 가장 작은 것을 $A$의 *minimal polynomial<sub>최소다항식</sub>*이라 부르고 $m_A$로 적는다.
 :::
 
-[정리 4](#thm4)에 의하여 $p_A(A)=0$이고, $p_A$를 최고차항의 계수로 나누면 monic polynomial을 얻으므로 위 정의에서 차수가 가장 작은 monic polynomial은 반드시 존재한다. 다음 명제는 이 minimal polynomial이 유일하며, $A$를 소멸시키는 모든 다항식을 나눈다는 것을 보여준다. 
+[정리 4](#thm4)에 의하여 $p_A(A)=0$이고, $p_A$를 최고차항의 계수로 나누면 monic polynomial을 얻으므로 위 정의에서 degree가 가장 작은 monic polynomial은 반드시 존재한다. 다음 명제는 이 minimal polynomial이 유일하며, $A$를 소멸시키는 모든 다항식을 나눈다는 것을 보여준다. 
 
 ::: 명제 6
 $n\times n$ 행렬 $A$에 대하여, 다항식 $p$가 $p(A)=0$을 만족하면 $m_A\mid p$이다. 특히 $A$의 minimal polynomial은 유일하며, $m_A\mid p_A$가 성립한다. 
@@ -105,22 +105,22 @@ $n\times n$ 행렬 $A$에 대하여, 다항식 $p$가 $p(A)=0$을 만족하면 $
 
 $$r(A)=p(A)-q(A)m_A(A)=0-q(A)\cdot 0=0$$
 
-이다. 만일 $r\neq 0$이라면, $r$을 최고차항의 계수로 나누어 $m_A$보다 차수가 작으면서 $A$를 소멸시키는 monic polynomial을 얻게 되어 $m_A$의 최소성에 모순이다. 따라서 $r=0$이고 $m_A\mid p$이다. 
+이다. 만일 $r\neq 0$이라면, $r$을 최고차항의 계수로 나누어 $m_A$보다 degree가 작으면서 $A$를 소멸시키는 monic polynomial을 얻게 되어 $m_A$의 최소성에 모순이다. 따라서 $r=0$이고 $m_A\mid p$이다. 
 
-유일성을 보이기 위해 $m_A'$ 또한 minimal polynomial의 조건을 만족한다 하자. 그럼 위 논증에 의해 $m_A\mid m_A'$이고 $m_A'\mid m_A$이며, 둘 다 같은 차수의 monic polynomial이므로 $m_A=m_A'$이다. 마지막으로 [정리 4](#thm4)에서 $p_A(A)=0$이므로 $m_A\mid p_A$이다.
+유일성을 보이기 위해 $m_A'$ 또한 minimal polynomial의 조건을 만족한다 하자. 그럼 위 논증에 의해 $m_A\mid m_A'$이고 $m_A'\mid m_A$이며, 둘 다 같은 degree의 monic polynomial이므로 $m_A=m_A'$이다. 마지막으로 [정리 4](#thm4)에서 $p_A(A)=0$이므로 $m_A\mid p_A$이다.
 :::
 
-minimal polynomial의 근은 특성다항식의 근과 정확히 일치한다. 즉, 차수는 더 작을 수 있지만, 차수가 빠지는 방식은 중복된 eigenvalue에서 중복도를 낮추는 방식으로만 일어나며, 따라서 이 과정에서 어떤 eigenvalue도 빠뜨리지 않는다. 
+minimal polynomial의 root는 특성다항식의 root와 정확히 일치한다. 즉, degree는 더 작을 수 있지만, degree가 빠지는 방식은 중복된 eigenvalue에서 중복도를 낮추는 방식으로만 일어나며, 따라서 이 과정에서 어떤 eigenvalue도 빠뜨리지 않는다. 
 
 ::: 명제 7
-$n\times n$ 행렬 $A$에 대하여, $m_A$의 근들의 집합은 $A$의 eigenvalue들의 집합과 같다. 
+$n\times n$ 행렬 $A$에 대하여, $m_A$의 root들의 집합은 $A$의 eigenvalue들의 집합과 같다. 
 :::
 ::: 증명
 우선 임의의 다항식 $p$와 eigenvalue $\lambda$, 그리고 이에 해당하는 eigenvector $v$에 대하여 $A^iv=\lambda^iv$이므로 $p(A)v=p(\lambda)v$가 성립한다. 이제 $\lambda$가 $A$의 eigenvalue라 하고 $v\neq 0$을 이에 해당하는 eigenvector라 하면 
 
 $$0=m_A(A)v=m_A(\lambda)v$$
 
-이고 $v\neq 0$이므로 $m_A(\lambda)=0$이다. 즉 모든 eigenvalue는 $m_A$의 근이다. 거꾸로 $\lambda$가 $m_A$의 근이라 하면 [명제 6](#prop6)의 $m_A\mid p_A$로부터 $\lambda$는 $p_A$의 근, 즉 $A$의 eigenvalue이다.
+이고 $v\neq 0$이므로 $m_A(\lambda)=0$이다. 즉 모든 eigenvalue는 $m_A$의 root이다. 거꾸로 $\lambda$가 $m_A$의 root이라 하면 [명제 6](#prop6)의 $m_A\mid p_A$로부터 $\lambda$는 $p_A$의 root, 즉 $A$의 eigenvalue이다.
 :::
 
 이제 Jordan canonical form을 이용하면 minimal polynomial의 정확한 형태를 결정할 수 있다. 다음 정리에서 $e_\lambda$는 generalized eigenspace $G_\lambda(A)$ 위에서의 nilpotent operator $(A-\lambda I)\vert_{G_\lambda(A)}$의 nilpotency index, 즉 $\lambda$에 해당하는 가장 큰 Jordan block의 크기이다.
@@ -147,7 +147,7 @@ $$p(A)\vert_{G_\lambda(A)}=0\iff (\x-\lambda)^{e_\lambda}\mid p$$
 
 가 성립한다. 
 
-이제 [§조르당 표준형, ⁋정리 6](/ko/math/linear_algebra/Jordan_canonical_form#thm6)의 분해 $V=\bigoplus_i G_{\lambda_i}(A)$로부터, $p(A)=0$인 것은 모든 $i$에 대하여 $p(A)\vert_{G_{\lambda_i}(A)}=0$인 것과 동치이고, 이는 다시 모든 $i$에 대하여 $(\x-\lambda_i)^{e_{\lambda_i}}\mid p$인 것, 즉 $\prod_i(\x-\lambda_i)^{e_{\lambda_i}}\mid p$인 것과 동치이다. 이러한 monic polynomial 가운데 차수가 가장 작은 것은 $\prod_i(\x-\lambda_i)^{e_{\lambda_i}}$ 자신이므로, 이것이 곧 $m_A$이다.
+이제 [§조르당 표준형, ⁋정리 6](/ko/math/linear_algebra/Jordan_canonical_form#thm6)의 분해 $V=\bigoplus_i G_{\lambda_i}(A)$로부터, $p(A)=0$인 것은 모든 $i$에 대하여 $p(A)\vert_{G_{\lambda_i}(A)}=0$인 것과 동치이고, 이는 다시 모든 $i$에 대하여 $(\x-\lambda_i)^{e_{\lambda_i}}\mid p$인 것, 즉 $\prod_i(\x-\lambda_i)^{e_{\lambda_i}}\mid p$인 것과 동치이다. 이러한 monic polynomial 가운데 degree가 가장 작은 것은 $\prod_i(\x-\lambda_i)^{e_{\lambda_i}}$ 자신이므로, 이것이 곧 $m_A$이다.
 :::
 
 특히 minimal polynomial은 대각화가능성을 간결하게 판정해준다. 
@@ -177,12 +177,12 @@ $$B=\begin{pmatrix}0&1\\1&0\end{pmatrix}$$
 
 ## 조르당-슈발레 분해
 
-지금까지의 논의에서, 핵심적인 도구이자 motivation 역할을 한 것은 Jordan form이었다. 한편 각각의 Jordan block을 생각하면, 이 block은 두 개의 조각, 즉 eigenvalue를 담고 있는 diagonal part와, 그 위에 super-diagonal 성분으로 나타나는 nilpotent부분으로 나뉘었다. 우리는 지금까지의 논의를 적용하여, 이 분해를 공간 전체로 확장하는 작업으로 이 글을 마무리한다. 
+지금까지의 논의에서, 핵심적인 도구이자 motivation 역할을 한 것은 Jordan form이었다. 한편 각각의 Jordan block을 생각하면, 이 block은 두 개의 조각, 즉 eigenvalue를 담고 있는 diagonal part와, 그 위에 super-diagonal 성분으로 나타나는 nilpotent 부분으로 나뉘었다. 우리는 지금까지의 논의를 적용하여, 이 분해를 공간 전체로 확장하는 작업으로 이 글을 마무리한다. 
 
 우선 분해의 유일성에 필요한 세 가지 사실을 관찰해 두자. 
 
-1. Diagonalizable이면서 동시에 nilpotent인 작용소는 $0$뿐이다. 그러한 작용소는 nilpotent이라 모든 eigenvalue가 $0$이고, diagonalizable이라 적당한 기저에서 모든 대각성분이 $0$인 대각행렬과 같기 때문이다. 
-2. Commute하는 두 diagonalizable 작용소의 차는 다시 diagonalizable이다. [§고유공간분해, ⁋명제 10](/ko/math/linear_algebra/eigenspace_decomposition#prop10)에 의해 commute하는 두 diagonalizable operator는 simultaneously diagonalizable이므로, 공통의 고유기저에서 두 operator가 모두 대각이고 그 차 또한 같은 기저에서 대각이기 때문이다. 
+1. Diagonalizable이면서 동시에 nilpotent인 작용소는 $0$뿐이다. 그러한 작용소는 nilpotent이라 모든 eigenvalue가 $0$이고, diagonalizable이라 적당한 basis에서 모든 대각성분이 $0$인 대각행렬과 같기 때문이다. 
+2. Commute하는 두 diagonalizable 작용소의 차는 다시 diagonalizable이다. [§고유공간분해, ⁋명제 10](/ko/math/linear_algebra/eigenspace_decomposition#prop10)에 의해 commute하는 두 diagonalizable operator는 simultaneously diagonalizable이므로, 공통의 고유기저에서 두 operator가 모두 대각이고 그 차 또한 같은 basis에서 대각이기 때문이다. 
 3. Commute하는 두 nilpotent operator $N,M$의 차는 다시 nilpotent이다. $N^a=M^b=0$이면 $N,M$이 commute하므로 이항정리로부터 $(N-M)^{a+b}=0$이기 때문이다.
 
 ::: 정리 11 (조르당-슈발레 분해)

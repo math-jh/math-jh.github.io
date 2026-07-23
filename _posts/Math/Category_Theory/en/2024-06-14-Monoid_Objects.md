@@ -76,7 +76,7 @@ However, there is a problem if we try to translate this into the language of mon
 
 ![group_axiom](/assets/images/Math/Category_Theory/Monoid_Objects-3.svg){:style="width:9.69em" class="invert" .align-center}
 
-it should look as follows. Here $e_G$ is the group homomorphism sending every element of $G$ to the identity element of $G$, and $(-1)^{-1}\times \id_G$ is the product of the two maps $(-)^{-1}:G \rightarrow G$ and $\id_G:G \rightarrow G$. Of course one could add both pieces of data and call this a group object, but doing so would not be a good solution because, for example, the unit $\eta:I \rightarrow G$ (as a monoid object) and the newly defined morphism $e_G$ would be entirely unrelated.
+it should look as follows. Here $e_G$ is the group homomorphism sending every element of $G$ to the identity element of $G$, and $(-)^{-1}\times \id_G$ is the product of the two maps $(-)^{-1}:G \rightarrow G$ and $\id_G:G \rightarrow G$. Of course one could add both pieces of data and call this a group object, but doing so would not be a good solution because, for example, the unit $\eta:I \rightarrow G$ (as a monoid object) and the newly defined morphism $e_G$ would be entirely unrelated.
 
 But if the original category were not merely a monoidal category but a cartesian monoidal category, then all these problems would be neatly resolved. First, $e_G$ is given by the composition
 
@@ -86,7 +86,7 @@ where $\epsilon_G$ is the unique morphism from $G$ to the terminal object $\{e\}
 
 ![inverse_morphism](/assets/images/Math/Category_Theory/Monoid_Objects-4.svg){:style="width:11.93em" class="invert" .align-center}
 
-shows that $(-1)^{-1}\times \id_G$ is well defined.
+shows that $(-)^{-1}\times \id_G$ is well defined.
 
 ::: Definition 3
 In a cartesian monoidal category $(\mathcal{A},\times, I)$, a *group object* consists of the following data:
@@ -169,5 +169,5 @@ The following are all examples of Hopf monoids.
 
 ---
 
-[^1]: In the diagram for the associativity of a monoid that we examined for motivation in a previous post, $$(M\times M)\times M$$ and $$M\times(M\times M)$$ were regarded as the same thing, so the diagram was a quadrilateral, but here $$(M\otimes M)\otimes M$$ and $$M\otimes(M\otimes M)$$ are different objects, so it becomes a pentagon.
-[^2]: One might mistakenly think that the product of two morphisms comes from the product category, but when we multiply two morphisms $$f:G\rightarrow G$$ and $$g:G\rightarrow G$$, we get $$(f,g):G\times G \rightarrow G\times G$$. Applying the monoidal product $$\otimes$$ to the latter $$G\times G$$ can make the target of $$(f,g)$$ into $$G\otimes G$$, but
+[^1]: In the diagram for the associativity of a monoid that we examined for motivation in a previous post, $(M\times M)\times M$ and $M\times(M\times M)$ were regarded as the same thing, so the diagram was a quadrilateral, but here $(M\otimes M)\otimes M$ and $M\otimes(M\otimes M)$ are different objects, so it becomes a pentagon.
+[^2]: One might mistakenly think that the product of two morphisms comes from the product category, but when we multiply two morphisms $f:G\rightarrow G$ and $g:G\rightarrow G$, we get $(f,g):G\times G \rightarrow G\times G$. Applying the monoidal product $\otimes$ to the latter $G\times G$ can make the target of $(f,g)$ into $G\otimes G$, but

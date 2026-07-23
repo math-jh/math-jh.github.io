@@ -75,7 +75,7 @@ First, for any $u\in\Hom_{\rMod{A}}(M,L)$ and any $y\in N$, the formula
 
 $$x\mapsto u(x)\otimes_Ay$$
 
-defines an $A$-linear map from $M$ to $L\otimes_AN$. Then one checks that the above function sending $(u,y)\in\Hom_{\rMod{A}}(M,L)\times N$ to an element of $\Hom_{\rMod{A}}(M, L\otimes_AB)$ is $A$-balanced. Therefore it induces the $A$-linear map $\nu$.
+defines an $A$-linear map from $M$ to $L\otimes_AN$. Then one checks that the above function sending $(u,y)\in\Hom_{\rMod{A}}(M,L)\times N$ to an element of $\Hom_{\rMod{A}}(M, L\otimes_AN)$ is $A$-balanced. Therefore it induces the $A$-linear map $\nu$.
 
 ::: Proposition 3
 For $\nu$ defined as above, the following hold.

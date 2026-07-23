@@ -147,7 +147,7 @@ Therefore, there is an inclusion-preserving bijection between the prime ideals o
 :::
 ::: Proof
 1. First, $\mathfrak{b}^{ce}\subseteq \mathfrak{b}$ always holds in general. For the reverse direction, let $a/s\in \mathfrak{b}$. Then $s(a/s)=a/1$ must belong to $\mathfrak{b}$, so $a\in \mathfrak{b}^c$. Hence $a/1\in \mathfrak{b}^{ce}$, and from this we see $a/s=(1/s)(a/1)\in \mathfrak{b}^{ce}$.
-2. Let us denote the right-hand side of the given equation by $\mathfrak{a}'$ for convenience. Then first, for any $a'\in \mathfrak{a}'$, there exists $s$ such that $sa'\in \mathfrak{a}$. From $a'/1=sa'/s\in \mathfrak{a}^e$ we see that $a'\in \mathfrak{a}^{ec}$. Conversely, for any $a\in \mathfrak{a}^{ec}$, we can find $a\in \mathfrak{a}$ and $s\in S$ satisfying $a/1=a'/s$. Then there exists suitable $t\in S$ such that $tsa=ta'\in \mathfrak{a}$, and since $ts\in S$ we have $a\in \mathfrak{a}'$ by definition. Also
+2. Let us denote the right-hand side of the given equation by $\mathfrak{a}'$ for convenience. Then first, for any $a'\in \mathfrak{a}'$, there exists $s$ such that $sa'\in \mathfrak{a}$. From $a'/1=sa'/s\in \mathfrak{a}^e$ we see that $a'\in \mathfrak{a}^{ec}$. Conversely, for any $a\in \mathfrak{a}^{ec}$, we can find $a'\in \mathfrak{a}$ and $s\in S$ satisfying $a/1=a'/s$. Then there exists suitable $t\in S$ such that $tsa=ta'\in \mathfrak{a}$, and since $ts\in S$ we have $a\in \mathfrak{a}'$ by definition. Also
   
   $$\mathfrak{a}^e=S^{-1}A\iff 1/1\in \mathfrak{a}^e\iff 1\in \mathfrak{a}^{ec}\iff \text{there exists $s\in S$ s.t. $s1\in \mathfrak{a}$}\iff \mathfrak{a}\cap S\neq \emptyset$$
 

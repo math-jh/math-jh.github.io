@@ -56,7 +56,7 @@ $$\mathcal{I}_\Gamma(q,z)=\int_\Gamma e^{W_q/z}\omega$$
 
 $$\Gamma_p := \left\{ x \in \check{X} \,\middle\vert\, \lim_{t \rightarrow +\infty} \Real\!\left(\frac{W_q(x(t))}{z}\right) = -\infty,\; x(0) = p \right\}$$
 
-로 나타나는 cycle을 *Lefschetz thimble*이라 부른다. 만일 $W_q$가 Morse type이라면 $\Gamma_p$는 real dimension $N$의 cycle을 이룬다는 것이 알려져 있다 ([\[사교기하학\] §Morse 이론과 stationary phase 근사, ⁋정의 14](/ko/math/symplectic_geometry/morse_stationary_phase#def14)). 한편 [§거울대칭 개요](/ko/math/mirror_symmetry/overview)에서 살펴본 ring 동형 $\Jac(W_q) \cong QH^\ast(X)$로부터 critical point의 개수는 정확히 $\dim_\mathbb{C} H^\ast(X, \mathbb{C})$와 일치한다. 이 critical point에 대응하는 Lefschetz thimble들 $\{\Gamma_p\}_{p \in \Crit(W_q)}$는 *$N$th rapid decay homology*
+로 나타나는 cycle을 *Lefschetz thimble*이라 부른다. 만일 $W_q$가 Morse type이라면 $\Gamma_p$는 real dimension $N$의 cycle을 이룬다는 것이 알려져 있다 ([\[사교기하학\] §Morse 이론과 stationary phase 근사, ⁋정의 14](/ko/math/symplectic_geometry/morse_stationary_phase#def14)). 한편 [§거울대칭 개요](/ko/math/mirror_symmetry/overview)에서 살펴본 ring isomorphism $\Jac(W_q) \cong QH^\ast(X)$로부터 critical point의 개수는 정확히 $\dim_\mathbb{C} H^\ast(X, \mathbb{C})$와 일치한다. 이 critical point에 대응하는 Lefschetz thimble들 $\{\Gamma_p\}_{p \in \Crit(W_q)}$는 *$N$th rapid decay homology*
 
 $$H_N(\check{X}, \{\Real(W_q/z) \ll 0\}; \mathbb{C})$$
 
@@ -117,7 +117,7 @@ Vector bundle $\mathcal{H} \rightarrow (\mathbb{C}^\ast)^r \times \mathbb{C}^\as
 
 > Section $\mathbf{s}: (q, z) \mapsto [\alpha(q, z)] \in \mathcal{H}_{(q,z)}$가 *$\nabla^{GM}$-flat*이라는 것은, [정의 2](#def2) 직후의 의미로 continuously isotoped된 *임의의* cycle family $\{\Gamma(q, z)\}$에 대해 *period<sub>주기</sub>*
 > 
-> $$\Pi_\Gamma(q, z) := \int_{\Gamma(q, z)} \alpha(q, z)$$
+> $\Pi_\Gamma(q, z) := \int_{\Gamma(q, z)} \alpha(q, z)$
 > 
 > 이 $(q, z)$의 locally constant function이 되는 것과 동치이다.
 :::
@@ -195,7 +195,7 @@ $$\mathcal{I}^a_p(q, z) \;:=\; \langle e_a,\,[\Gamma_p]\rangle \;=\; \int_{\Gamm
 
 $$T_a\cdot \partial_{q_i}W_q = \sum_b (M_i)^a_b\, T_b,\qquad T_a\cdot W_q = \sum_b E^a_b\, T_b\quad\text{in}\;\Jac(W_q)$$
 
-로 정의하면, period matrix $\mathcal{I} = (\mathcal{I}^a_p)$는 닫힌 ODE system
+로 정의하면, period matrix $\mathcal{I} = (\mathcal{I}^a_p)$는 closed ODE system
 
 $$z\,\partial_{q_i}\mathcal{I}^a_p = \sum_b (M_i)^a_b\,\mathcal{I}^b_p,\qquad z^2\,\partial_z\mathcal{I}^a_p = -\sum_b E^a_b\,\mathcal{I}^b_p$$
 
@@ -270,4 +270,4 @@ $$\mathcal{I}_{\Gamma_{x_\zeta}}(q, z) \sim (2\pi z)^{n/2}\,\frac{\exp\bigl((n+1
 
 ---
 
-[^1]: 여기서 $$m_1, \ldots, m_N$$은 character lattice $$M$$의 $$\mathbb{Z}$$-basis이다 ([\[토릭 기하학\] §토릭 다양체 위의 로그 미분형식, ⁋명제 13](/ko/math/toric_geometry/logarithmic_differentials#prop13)).
+[^1]: 여기서 $m_1, \ldots, m_N$은 character lattice $M$의 $\mathbb{Z}$-basis이다 ([\[토릭 기하학\] §토릭 다양체 위의 로그 미분형식, ⁋명제 13](/ko/math/toric_geometry/logarithmic_differentials#prop13)).

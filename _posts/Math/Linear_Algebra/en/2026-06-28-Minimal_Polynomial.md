@@ -87,7 +87,7 @@ $$p_A(A)v=\left(\prod_{\mu\neq\lambda}(A-\mu I)^{d_\mu}\right)(A-\lambda I)^{d_\
 Since $V$ is the direct sum of the $G_\lambda(A)$, we have $p_A(A)v=0$ for any $v\in V$, and thus $p_A(A)=0$.
 :::
 
-We have only considered the case where $\mathbb{K}$ is an algebraically closed field; if it is not, we may take any algebraically closed field $\mathbb{L}$ containing $\mathbb{K}$ (for example, $\mathbb{C}$ for $\mathbb{R}$), and regard $p$ as a polynomial over $\mathbb{L}$. In this case, the characteristic polynomial of $A$ is still $p_A$ over $\mathbb{L}$, so by the proof above we likewise obtain $p_A(A)=0$, and since all coefficients of this polynomial belong to $\mathbb{K}$, this equality also holds over $\mathbb{K}$. However, showing the existence of such an $\mathbb{L}$ is difficult at our present level, so we have briefly explained this outside the proof. In any case, intuitively the Cayley–Hamilton theorem says that because the characteristic polynomial contains all eigenvalues of $A$ with sufficiently high multiplicity, substituting $A$ annihilates even the nilpotent part on each generalized eigenspace.
+We have only considered the case where $\mathbb{K}$ is an algebraically closed field; if it is not, we may take any algebraically closed field $\mathbb{L}$ containing $\mathbb{K}$ (for example, $\mathbb{C}$ for $\mathbb{R}$), and regard $p$ as a polynomial over $\mathbb{L}$. In this case, the characteristic polynomial of $A$ is still $p_A$ over $\mathbb{L}$, so by the proof above we likewise obtain $p_A(A)=0$, and since all coefficients of this polynomial (although we have regarded it as a polynomial over $\mathbb{L}$) belong to $\mathbb{K}$, this equality also holds over $\mathbb{K}$. However, showing the existence of such an $\mathbb{L}$ is difficult at our present level, so we have briefly explained this outside the proof. In any case, intuitively the Cayley–Hamilton theorem says that because the characteristic polynomial contains all eigenvalues of $A$ with sufficiently high multiplicity, substituting $A$ annihilates even the nilpotent part on each generalized eigenspace.
 
 ## Minimal Polynomial
 
@@ -228,7 +228,7 @@ Consider the matrix
 
 $$A=\begin{pmatrix}2&1&0\\0&2&0\\0&0&3\end{pmatrix}$$
 
-The generalized eigenspace for eigenvalue $2$ is the 2-dimensional space spanned by $e_1,e_2$, on which the nilpotency index of $A-2I$ is $2$; the generalized eigenspace for eigenvalue $3$ is spanned by $e_3$. Setting $p(\x)=\x^2-4\x+6$, we have $p(2)=2$, $p'(2)=0$, $p(3)=3$, so $p$ satisfies the congruences $p\equiv 2\pmod{(\x-2)^2}$, $p\equiv 3\pmod{\x-3}$ of [Theorem 11](#thm11), and
+The generalized eigenspace for eigenvalue $2$ is the $2$-dimensional space spanned by $e_1,e_2$, on which the nilpotency index of $A-2I$ is $2$; the generalized eigenspace for eigenvalue $3$ is spanned by $e_3$. Setting $p(\x)=\x^2-4\x+6$, we have $p(2)=2$, $p'(2)=0$, $p(3)=3$, so $p$ satisfies the congruences $p\equiv 2\pmod{(\x-2)^2}$, $p\equiv 3\pmod{\x-3}$ of [Theorem 11](#thm11), and
 
 $$A_s=p(A)=A^2-4A+6I=\begin{pmatrix}2&0&0\\0&2&0\\0&0&3\end{pmatrix},\qquad A_n=A-A_s=\begin{pmatrix}0&1&0\\0&0&0\\0&0&0\end{pmatrix}$$
 

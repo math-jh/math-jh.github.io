@@ -154,7 +154,7 @@ $$\dim(W \cap F_{n - k + i - \lambda_i}) \geq i \quad\text{for all } 1 \leq i \l
 This condition means that the dimensions of the intersections of $W$ with the flag follow a specific pattern: $W$ must meet $F_{n-k+i-\lambda_i}$ in dimension at least $i$. The partition condition $\lambda_1 \leq n - k$ guarantees that $n - k + 1 - \lambda_1 \geq 1$ in the first inequality $\dim(W \cap F_{n - k + 1 - \lambda_1}) \geq 1$.
 
 ::: Proposition 14
-The Schubert variety $\Omega_\lambda(F_\bullet)$ is a closed subvariety of $\Gr(k, V)$, and its dimension is $\lvert \lambda \rvert$.
+The Schubert variety $\Omega_\lambda(F_\bullet)$ is a closed subvariety of $\Gr(k, V)$, and its dimension is $k(n-k) - \lvert \lambda \rvert$.
 :::
 
 ::: Proof
@@ -164,10 +164,10 @@ To compute the dimension, consider the (open) *Schubert cell* $\Omega_\lambda^\c
 
 $$\dim(W \cap F_{n - k + i - \lambda_i}) = i \quad\text{for all } 1 \leq i \leq k$$
 
-and forms an open dense subset of $\Omega_\lambda(F_\bullet)$. The dimension of this cell is $\lambda_1 + \cdots + \lambda_k = \lvert \lambda \rvert$, and therefore $\dim \Omega_\lambda(F_\bullet) = \lvert \lambda \rvert$ as well.
+and forms an open dense subset of $\Omega_\lambda(F_\bullet)$. The dimension of this cell is $k(n-k) - (\lambda_1 + \cdots + \lambda_k) = k(n-k) - \lvert \lambda \rvert$, and therefore $\dim \Omega_\lambda(F_\bullet) = k(n-k) - \lvert \lambda \rvert$ as well.
 :::
 
-Schubert varieties provide a *cell decomposition* of the Grassmannian. That is, the Schubert cells $\Omega_\lambda^\circ(F_\bullet)$ corresponding to distinct partitions $\lambda$ give $\Gr(k, V)$ the structure of a cell complex, and each cell is isomorphic to the affine space $\mathbb{A}^{\lvert \lambda \rvert}$. Through this decomposition one can study the topological and combinatorial properties of the Grassmannian.
+Schubert varieties provide a *cell decomposition* of the Grassmannian. That is, the Schubert cells $\Omega_\lambda^\circ(F_\bullet)$ corresponding to distinct partitions $\lambda$ give $\Gr(k, V)$ the structure of a cell complex, and each cell is isomorphic to the affine space $\mathbb{A}^{k(n-k) - \lvert \lambda \rvert}$. Through this decomposition one can study the topological and combinatorial properties of the Grassmannian.
 
 ---
 

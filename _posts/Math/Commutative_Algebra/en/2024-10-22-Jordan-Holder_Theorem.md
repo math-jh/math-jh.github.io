@@ -60,7 +60,7 @@ The first result is proved in the same way as the Jordan-Hölder theorem, so we 
 
 We now prove the second result. From the finiteness of the given chain, we know that there are only finitely many maximal ideals satisfying the condition, so $\bigoplus_\mathfrak{m} M_\mathfrak{m}$ can be identified with $\prod_\mathfrak{m} M_\mathfrak{m}$; the map in question is then obtained by applying the universal property of the direct product to the maps $M \rightarrow M_\mathfrak{m}$. To show that this map is an isomorphism, it suffices to localize at a maximal ideal and apply [§Properties of Localization, ⁋Proposition 4](/en/math/commutative_algebra/properties_of_localization#prop4).
 
-For this, we first note that if $M\cong R/\mathfrak{m}$, then for any maximal ideal $\mathfrak{m}'$,
+For this, we first note that if $M\cong A/\mathfrak{m}$, then for any maximal ideal $\mathfrak{m}'$,
 
 $$M_{\mathfrak{m}'}=\begin{cases}M&\text{if $\mathfrak{m}=\mathfrak{m}'$,}\\0&\text{otherwise.}\end{cases}$$
 

@@ -14,9 +14,9 @@ weight: 14
 published: false
 ---
 
-유한차원 representation을 이해하는 문제는 indecomposable들을 분류하는 문제로 환원되며 ([§Krull–Schmidt 정리, ⁋정리 6](/ko/math/representation_theory/krull_schmidt#thm6)), 따라서 가장 먼저 물어야 할 것은 주어진 quiver가 과연 유한개의 indecomposable만을 가지는가이다. *Gabriel 정리*는 이 물음에 완벽하게 답한다. 연결 quiver $Q$가 isomorphism을 무시하여 유한개의 indecomposable representation만을 가지는 것은, $Q$의 화살표 방향을 잊은 underlying graph가 정확히 type $A_n$, $D_n$, $E_6$, $E_7$, $E_8$의 Dynkin diagram인 것과 동치이다. 더 나아가 이 경우 각 indecomposable은 그 차원벡터에 의하여 완전히 결정되며, 이 차원벡터들은 정확히 연관 root system의 positive root들이다. 곧 representation 이론의 분류 문제가 finite root system의 분류, 곧 ADE 분류와 정확히 포개진다. 이 글에서는 이 대응을 통제하는 Tits 이차형식을 도입하고, reflection functor를 도구로 삼아 정리의 골격을 제시한 뒤 선형 $A_3$ quiver에서 그 내용을 구체적으로 확인한다.
+유한차원 representation을 이해하는 문제는 indecomposable들을 분류하는 문제로 환원되며 ([§Krull–Schmidt 정리, ⁋정리 6](/ko/math/representation_theory/krull_schmidt#thm6)), 따라서 가장 먼저 물어야 할 것은 주어진 quiver가 과연 유한개의 indecomposable만을 가지는가이다. *Gabriel 정리*는 이 물음에 완벽하게 답한다. connected quiver $Q$가 isomorphism을 무시하여 유한개의 indecomposable representation만을 가지는 것은, $Q$의 화살표 방향을 잊은 underlying graph가 정확히 type $A_n$, $D_n$, $E_6$, $E_7$, $E_8$의 Dynkin diagram인 것과 동치이다. 더 나아가 이 경우 각 indecomposable은 그 차원벡터에 의하여 완전히 결정되며, 이 차원벡터들은 정확히 연관 root system의 positive root들이다. 곧 representation 이론의 분류 문제가 finite root system의 분류, 곧 ADE 분류와 정확히 포개진다. 이 글에서는 이 대응을 통제하는 Tits 이차형식을 도입하고, reflection functor를 도구로 삼아 정리의 골격을 제시한 뒤 선형 $A_3$ quiver에서 그 내용을 구체적으로 확인한다.
 
-이 글에서 $k$는 field를 가리키고, $Q=(Q_0,Q_1,s,t)$는 oriented cycle을 가지지 않으며 ([§Quiver와 경로대수, ⁋명제 5](/ko/math/representation_theory/path_algebras#prop5)) underlying graph가 연결인 유한 quiver이다. Representation이라 하면 유한차원 representation을 뜻하고 ([§Quiver와 경로대수, ⁋정의 9](/ko/math/representation_theory/path_algebras#def9)), $Q_0=\{1,\ldots,n\}$으로 둔다. Reflection functor $S_k^\pm$, Coxeter functor $C^\pm$, preprojective module, 그리고 Euler form과 Tits form의 정의는 [§반사 함자](/ko/math/representation_theory/reflection_functors)를 따르며, root system과 그 위의 reflection, positive root, 이차형식의 일반론은 [\[리 이론\] §근계](/ko/math/lie_theory/root_systems)를 따른다.
+이 글에서 $k$는 field를 가리키고, $Q=(Q_0,Q_1,s,t)$는 oriented cycle을 가지지 않으며 ([§Quiver와 경로대수, ⁋명제 5](/ko/math/representation_theory/path_algebras#prop5)) underlying graph가 connected인 유한 quiver이다. Representation이라 하면 유한차원 representation을 뜻하고 ([§Quiver와 경로대수, ⁋정의 9](/ko/math/representation_theory/path_algebras#def9)), $Q_0=\{1,\ldots,n\}$으로 둔다. Reflection functor $S_k^\pm$, Coxeter functor $C^\pm$, preprojective module, 그리고 Euler form과 Tits form의 정의는 [§반사 함자](/ko/math/representation_theory/reflection_functors)를 따르며, root system과 그 위의 reflection, positive root, 이차형식의 일반론은 [\[리 이론\] §근계](/ko/math/lie_theory/root_systems)를 따른다.
 
 ## Tits form과 ADE
 
@@ -33,7 +33,7 @@ $$q(d)=\langle d,d\rangle=\sum_{i\in Q_0}d_i^2-\sum_{\alpha\in Q_1}d_{s(\alpha)}
 Tits form은 화살표의 방향에 의존하지 않는다. $q(d)=\sum_i d_i^2-\sum_\alpha d_{s(\alpha)}d_{t(\alpha)}$에서 둘째 합의 각 항 $d_{s(\alpha)}d_{t(\alpha)}$는 곱이므로 $\alpha$의 방향을 뒤집어도 값이 같고, 따라서 $q$는 $Q$의 underlying graph와 그 위의 multiple edge 수에만 의존한다. 대칭화 $(-,-)$에 대하여 표준 기저벡터 $e_k$가 $(e_k,e_k)=2\langle e_k,e_k\rangle=2$를 만족하므로 ($Q$에 loop가 없어 $\langle e_k,e_k\rangle=1$), 각 vertex $k$는 root lattice의 simple root처럼 행동하고 reflection $s_k(d)=d-(d,e_k)e_k$가 정의된다 ([§반사 함자, ⁋정의 6](/ko/math/representation_theory/reflection_functors#def6)). 이 형식이 언제 positive definite인지가 핵심이며, 그 답이 곧 ADE 분류이다.
 
 ::: 명제 2
-연결 quiver $Q$에 대하여 다음이 동치이다.
+connected quiver $Q$에 대하여 다음이 동치이다.
 
 1. Tits form $q$가 positive definite이다. 곧 모든 $0\neq d\in\mathbb{Z}^n$에 대하여 $q(d)>0$이다.
 2. $Q$의 underlying graph가 type $A_n$, $D_n$, $E_6$, $E_7$, $E_8$의 Dynkin diagram 가운데 하나이다.
@@ -47,9 +47,9 @@ $$(e_i,e_j)=-\bigl(\#\{\alpha:i\rightarrow j\}+\#\{\alpha:j\rightarrow i\}\bigr)
 
 이다. 여기서 $m_{ij}$는 underlying graph에서 vertex $i$와 $j$를 잇는 edge의 개수이다. 따라서 행렬 $\bigl((e_i,e_j)\bigr)_{i,j}$은 대각이 $2$이고 비대각이 $-m_{ij}$인 대칭행렬, 곧 underlying graph의 *generalized Cartan matrix*의 대칭화이며, 이것이 $2q$의 Gram 행렬이다. 그러므로 $q$가 positive definite인 것은 이 대칭행렬이 positive definite인 것과 동치이다.
 
-이제 어떤 그래프의 generalized Cartan matrix가 positive definite인가를 묻는 문제는 root system 이론에서 완전히 해결되어 있다. 위와 같은 대각 $2$, 비대각 $\leq 0$, 대칭인 행렬이 positive definite인 연결 그래프는 정확히 단순 끈 ADE Dynkin diagram, 곧 $A_n$ ($n\geq 1$), $D_n$ ($n\geq 4$), $E_6,E_7,E_8$뿐이다 ([\[리 이론\] §근계, ⁋정의 16](/ko/math/lie_theory/root_systems#def16)). 이 분류의 핵심은 다음과 같다. 그래프가 cycle을 포함하거나, 한 vertex의 차수가 너무 크거나, 가지의 길이가 허용 한계를 넘으면 어떤 $0\neq d$에 대하여 $q(d)\leq 0$이 되는 벡터가 나타난다. 가장 작은 그러한 그래프들이 extended Dynkin diagram $\widetilde{A}_n,\widetilde{D}_n,\widetilde{E}_6,\widetilde{E}_7,\widetilde{E}_8$이며, 이들 위에서는 모든 좌표가 양인 *null vector* $\delta$가 존재하여 $q(\delta)=0$이 된다. 따라서 어떤 그래프 위에서 $q$가 positive definite이면 그 그래프는 어떤 extended Dynkin diagram도 부분그래프로 포함하지 않으며, 이로부터 그래프가 ADE Dynkin diagram임이 따라온다. 역으로 ADE Dynkin diagram 위에서 대칭화 $(-,-)$은 정확히 해당 단순 끈 root system의 Cartan form이고, 이 root system은 positive definite inner product space 위에 놓이므로 ([\[리 이론\] §근계, ⁋정의 9](/ko/math/lie_theory/root_systems#def9)) $q$ 또한 positive definite이다.
+이제 어떤 그래프의 generalized Cartan matrix가 positive definite인가를 묻는 문제는 root system 이론에서 완전히 해결되어 있다. 위와 같은 대각 $2$, 비대각 $\leq 0$, 대칭인 행렬이 positive definite인 connected 그래프는 정확히 단순 끈 ADE Dynkin diagram, 곧 $A_n$ ($n\geq 1$), $D_n$ ($n\geq 4$), $E_6,E_7,E_8$뿐이다 ([\[리 이론\] §근계, ⁋정의 16](/ko/math/lie_theory/root_systems#def16)). 이 분류의 핵심은 다음과 같다. 그래프가 cycle을 포함하거나, 한 vertex의 degree가 너무 크거나, 가지의 길이가 허용 한계를 넘으면 어떤 $0\neq d$에 대하여 $q(d)\leq 0$이 되는 벡터가 나타난다. 가장 작은 그러한 그래프들이 extended Dynkin diagram $\widetilde{A}_n,\widetilde{D}_n,\widetilde{E}_6,\widetilde{E}_7,\widetilde{E}_8$이며, 이들 위에서는 모든 좌표가 양인 *null vector* $\delta$가 존재하여 $q(\delta)=0$이 된다. 따라서 어떤 그래프 위에서 $q$가 positive definite이면 그 그래프는 어떤 extended Dynkin diagram도 부분그래프로 포함하지 않으며, 이로부터 그래프가 ADE Dynkin diagram임이 따라온다. 역으로 ADE Dynkin diagram 위에서 대칭화 $(-,-)$은 정확히 해당 단순 끈 root system의 Cartan form이고, 이 root system은 positive definite inner product space 위에 놓이므로 ([\[리 이론\] §근계, ⁋정의 9](/ko/math/lie_theory/root_systems#def9)) $q$ 또한 positive definite이다.
 
-마지막으로 $q$가 positive definite인 ADE의 경우 $\{d\in\mathbb{Z}^n\mid q(d)=1\}$이 root 전체와 일치함을 본다. $q(d)=\tfrac12(d,d)$이므로 $q(d)=1$은 $(d,d)=2$와 같다. 단순 끈 root system에서는 모든 root $\alpha$가 $(\alpha,\alpha)=2$를 만족하고, 거꾸로 root lattice $\bigoplus_k\mathbb{Z}e_k$ 안에서 길이의 제곱이 $2$인 벡터는 정확히 root뿐이다 (positive definite 격자에서 norm $2$인 벡터가 유한개이고, 각 root에 대한 reflection으로 생성되는 Weyl group의 궤도가 이들을 모두 채운다). 따라서 $q(d)=1$인 정수 벡터의 집합은 root 전체와 일치한다.
+마지막으로 $q$가 positive definite인 ADE의 경우 $\{d\in\mathbb{Z}^n\mid q(d)=1\}$이 root 전체와 일치함을 본다. $q(d)=\tfrac12(d,d)$이므로 $q(d)=1$은 $(d,d)=2$와 같다. 단순 끈 root system에서는 모든 root $\alpha$가 $(\alpha,\alpha)=2$를 만족하고, 거꾸로 root lattice $\bigoplus_k\mathbb{Z}e_k$ 안에서 길이의 제곱이 $2$인 벡터는 정확히 root뿐이다 (positive definite lattice에서 norm $2$인 벡터가 유한개이고, 각 root에 대한 reflection으로 생성되는 Weyl group의 orbit이 이들을 모두 채운다). 따라서 $q(d)=1$인 정수 벡터의 집합은 root 전체와 일치한다.
 :::
 
 명제 2는 Gabriel 정리에서 "ADE"라는 조건이 등장하는 근원을 설명한다. Quiver의 representation 이론이 직접 보는 것은 그 차원벡터 lattice 위의 이차형식 $q$ 하나이며, 이 $q$가 positive definite인가 아닌가가 모든 것을 가른다. $q$가 positive definite이면 명제의 마지막 주장에 의하여 $q(d)=1$인 차원벡터가 유한개뿐이고, 이들이 root와 일대일로 대응한다. 다음 절에서 indecomposable의 차원벡터가 항상 $q(d)=1$을 만족함을 보이면, indecomposable이 유한개일 수밖에 없다는 결론으로 이어진다. $q$가 positive definite가 아닌 경우, 곧 underlying graph가 ADE가 아닌 경우에는 $q(d)\leq 0$인 차원벡터가 무한히 많은 indecomposable을 허용하며, 이것이 representation-infinite의 근원이다.
@@ -68,10 +68,10 @@ $$d_m=\underline\dim\bigl((C^+)^m V\bigr)=c^m(\underline\dim V)$$
 
 로 주어진다. 여기서 $c=s_{k_n}\cdots s_{k_1}$은 admissible sink sequence가 정하는 Coxeter element이다. 각 $d_m$은 nonzero representation의 차원벡터이므로 음이 아닌 정수 좌표를 가지며, 특히 $d_m\neq 0$이다.
 
-이제 $q$가 positive definite임을 사용한다. Coxeter element $c$는 reflection들의 합성이므로 $q$를 보존하며 ([§반사 함자, ⁋명제 12](/ko/math/representation_theory/reflection_functors#prop12)), 따라서 모든 $m$에서 $q(d_m)=q(\underline\dim V)$로 일정하다. 한편 $q$가 positive definite이면 Coxeter element $c$는 유한위수(곧 어떤 $h\geq 1$에 대해 $c^h=\mathrm{id}$, 이 $h$가 Coxeter number이다)를 가지지만, $\mathbb{R}^n$ 위에서 $c$의 고윳값은 모두 $1$이 아닌 단위근이어서 $c$의 고정공간은 $\{0\}$이다. 곧 $c$는 어떤 nonzero 벡터도 고정하지 않는다. 핵심은 다음이다. $q$가 positive definite이면 $\{d\in\mathbb{Z}^n\mid q(d)=q(\underline\dim V)\}$은 유한집합인데 (positive definite 격자의 주어진 norm을 가지는 벡터는 유한개), 만일 모든 $d_m$이 음이 아닌 좌표를 가지면서 이 유한집합 안에 머문다면 비둘기집 원리로 $d_{m}=d_{m'}$인 $m<m'$이 존재하여 $c^{m'-m}$이 nonzero 벡터 $d_m$을 고정하게 된다. 그러나 positive definite 공간 위의 Coxeter element는 nonzero 벡터를 고정하지 않으므로 ($c$의 고정공간은 $\{0\}$이다) 이는 모순이다. 따라서 어떤 $m$에서 $(C^+)^m V=0$이어야 하고, $V$는 preprojective이다.
+이제 $q$가 positive definite임을 사용한다. Coxeter element $c$는 reflection들의 합성이므로 $q$를 보존하며 ([§반사 함자, ⁋명제 12](/ko/math/representation_theory/reflection_functors#prop12)), 따라서 모든 $m$에서 $q(d_m)=q(\underline\dim V)$로 일정하다. 한편 $q$가 positive definite이면 Coxeter element $c$는 유한위수(곧 어떤 $h\geq 1$에 대해 $c^h=\mathrm{id}$, 이 $h$가 Coxeter number이다)를 가지지만, $\mathbb{R}^n$ 위에서 $c$의 고윳값은 모두 $1$이 아닌 단위근이어서 $c$의 고정공간은 $\{0\}$이다. 곧 $c$는 어떤 nonzero 벡터도 고정하지 않는다. 핵심은 다음이다. $q$가 positive definite이면 $\{d\in\mathbb{Z}^n\mid q(d)=q(\underline\dim V)\}$은 유한집합인데 (positive definite lattice의 주어진 norm을 가지는 벡터는 유한개), 만일 모든 $d_m$이 음이 아닌 좌표를 가지면서 이 유한집합 안에 머문다면 비둘기집 원리로 $d_{m}=d_{m'}$인 $m<m'$이 존재하여 $c^{m'-m}$이 nonzero 벡터 $d_m$을 고정하게 된다. 그러나 positive definite 공간 위의 Coxeter element는 nonzero 벡터를 고정하지 않으므로 ($c$의 고정공간은 $\{0\}$이다) 이는 모순이다. 따라서 어떤 $m$에서 $(C^+)^m V=0$이어야 하고, $V$는 preprojective이다.
 :::
 
-명제 3은 ADE quiver의 representation 이론을 유한한 그림으로 가두는 결정적 단계이다. $q$가 positive definite이면 모든 indecomposable이 preprojective이므로, 모든 indecomposable은 어떤 indecomposable projective $P$로부터 $C^-$를 유한 번 적용하여 얻어진다 ([§반사 함자, ⁋정의 11](/ko/math/representation_theory/reflection_functors#def11) 직후의 논의). Indecomposable projective는 vertex의 개수 $n$만큼 있고, 각각의 $C^-$-궤도는 차원벡터 위에서 Coxeter element의 궤도로 나타나므로, 이 모든 궤도를 합한 것이 indecomposable 전체이다. 다음 명제가 그 차원벡터들이 정확히 root임을 말한다.
+명제 3은 ADE quiver의 representation 이론을 유한한 그림으로 가두는 결정적 단계이다. $q$가 positive definite이면 모든 indecomposable이 preprojective이므로, 모든 indecomposable은 어떤 indecomposable projective $P$로부터 $C^-$를 유한 번 적용하여 얻어진다 ([§반사 함자, ⁋정의 11](/ko/math/representation_theory/reflection_functors#def11) 직후의 논의). Indecomposable projective는 vertex의 개수 $n$만큼 있고, 각각의 $C^-$-orbit은 차원벡터 위에서 Coxeter element의 orbit으로 나타나므로, 이 모든 orbit을 합한 것이 indecomposable 전체이다. 다음 명제가 그 차원벡터들이 정확히 root임을 말한다.
 
 ::: 명제 4
 $Q$의 Tits form $q$가 positive definite이라 하자. 그럼 임의의 indecomposable representation $V$에 대하여 $q(\underline\dim V)=1$이다. 곧 $\underline\dim V$는 명제 2의 root system의 positive root이다.
@@ -86,21 +86,21 @@ $$q(\underline\dim V)=q\bigl(c^{-j}(\underline\dim P)\bigr)=q(\underline\dim P)=
 이다. 둘째 등호는 Coxeter element $c$ (따라서 그 역 $c^{-j}$) 가 $q$를 보존하기 때문이다 ([§반사 함자, ⁋명제 12](/ko/math/representation_theory/reflection_functors#prop12)). 따라서 $q(\underline\dim V)=1$이다. $V$가 nonzero representation이므로 $\underline\dim V$는 음이 아닌 좌표를 가지며 $0$이 아니므로, 명제 2에 의하여 $\underline\dim V$는 root이고, 좌표가 음이 아니므로 positive root이다.
 :::
 
-명제 4는 대응 $V\mapsto\underline\dim V$가 indecomposable의 isomorphism class에서 positive root로 가는 잘 정의된 사상임을 준다. 남은 것은 이 사상이 전단사임을 보이는 것이다. 단사성, 곧 같은 차원벡터를 가지는 indecomposable이 isomorphism을 무시하여 유일하다는 사실과, 전사성, 곧 모든 positive root가 어떤 indecomposable의 차원벡터로 실현된다는 사실을 reflection functor로 추적하면 Gabriel 정리가 완성된다.
+명제 4는 대응 $V\mapsto\underline\dim V$가 indecomposable의 isomorphism class에서 positive root로 가는 잘 정의된 morphism임을 준다. 남은 것은 이 morphism이 전단사임을 보이는 것이다. 단사성, 곧 같은 차원벡터를 가지는 indecomposable이 isomorphism을 무시하여 유일하다는 사실과, 전사성, 곧 모든 positive root가 어떤 indecomposable의 차원벡터로 실현된다는 사실을 reflection functor로 추적하면 Gabriel 정리가 완성된다.
 
 ## Gabriel 정리
 
 이제 앞 절들의 결과를 묶어 정리를 진술한다. 한 방향은 $q$가 positive definite이면 indecomposable이 유한개의 positive root에 일대일 대응한다는 것이고, 다른 방향은 $q$가 positive definite가 아니면 indecomposable이 무한히 많다는 것이다.
 
 ::: 정리 5
-(Gabriel) $Q$를 oriented cycle이 없는 연결 quiver라 하자. $Q$가 *representation-finite<sub>유한표현형</sub>*, 곧 isomorphism을 무시하여 유한개의 indecomposable representation만을 가지는 것은 $Q$의 underlying graph가 type $A_n$, $D_n$, $E_6$, $E_7$, $E_8$의 Dynkin diagram인 것과 동치이다. 이 경우 대응
+(Gabriel) $Q$를 oriented cycle이 없는 connected quiver라 하자. $Q$가 *representation-finite<sub>유한표현형</sub>*, 곧 isomorphism을 무시하여 유한개의 indecomposable representation만을 가지는 것은 $Q$의 underlying graph가 type $A_n$, $D_n$, $E_6$, $E_7$, $E_8$의 Dynkin diagram인 것과 동치이다. 이 경우 대응
 
 $$V\longmapsto\underline\dim V$$
 
 는 indecomposable representation의 isomorphism class들과 Tits form $q$의 positive root들 사이의 전단사를 이루며, 특히 indecomposable의 개수는 positive root의 개수와 같다.
 :::
 ::: 증명
-먼저 $Q$의 underlying graph가 ADE Dynkin diagram인 경우, 곧 $q$가 positive definite인 경우를 본다 ([명제 2](#prop2)). 명제 4에 의하여 $V\mapsto\underline\dim V$는 indecomposable의 isomorphism class에서 positive root로 가는 사상이다. 이 사상이 전단사임을 reflection functor로 보인다.
+먼저 $Q$의 underlying graph가 ADE Dynkin diagram인 경우, 곧 $q$가 positive definite인 경우를 본다 ([명제 2](#prop2)). 명제 4에 의하여 $V\mapsto\underline\dim V$는 indecomposable의 isomorphism class에서 positive root로 가는 morphism이다. 이 morphism이 전단사임을 reflection functor로 보인다.
 
 *단사성.* 차원벡터가 같은 두 indecomposable $V,V'$이 isomorphic함을 보인다. Admissible sink sequence를 따라 Coxeter functor $C^+$를 거듭 적용하면, 명제 3에 의하여 유한 번 만에 둘 다 $0$이 된다. 매 단계에서 $C^+$의 한 조각인 sink reflection $S_k^+$는 차원벡터 위에서 $s_k$로 작용하고 ([§반사 함자, ⁋명제 7](/ko/math/representation_theory/reflection_functors#prop7)) indecomposability를 보존하므로 ([§반사 함자, ⁋명제 8](/ko/math/representation_theory/reflection_functors#prop8)), 두 representation은 같은 단계에서 같은 vertex의 simple $S_k$에 도달하여 소멸한다. 곧 어떤 합성 $T=S_{k_r}^+\cdots S_{k_1}^+$에 대하여 $TV\cong S_k\cong TV'$이 되는 단계가 처음으로 나타나며, 이 simple에 도달하기까지의 모든 $S_{k_i}^+$는 $S_{k_i}$ 이외의 indecomposable 위에서 quasi-inverse $S_{k_i}^-$를 가진다 ([§반사 함자, ⁋명제 8](/ko/math/representation_theory/reflection_functors#prop8)). 따라서 이 quasi-inverse들을 역순으로 적용하여 $S_k$로부터 $V$와 $V'$를 모두 유일하게 복원하면 $V\cong V'$이다.
 
@@ -108,7 +108,7 @@ $$V\longmapsto\underline\dim V$$
 
 전단사가 확립되었으므로 indecomposable의 개수는 positive root의 개수와 같고, root system이 유한하므로 ([\[리 이론\] §근계, ⁋정의 9](/ko/math/lie_theory/root_systems#def9)) 유한이다. 따라서 ADE인 경우 $Q$는 representation-finite이다.
 
-역으로 $Q$의 underlying graph가 ADE Dynkin diagram이 아니라 하자. 그럼 $q$는 positive definite가 아니며 ([명제 2](#prop2)), 그 underlying graph는 어떤 extended Dynkin diagram을 부분그래프로 포함한다. Extended Dynkin diagram 위에서는 모든 좌표가 양인 null vector $\delta$가 존재하여 $q(\delta)=0$이고, 따라서 $q(m\delta)=m^2 q(\delta)=0$이 모든 $m\geq 1$에서 성립한다. Tame 또는 wild quiver의 표현론에서, 이러한 isotropic 또는 부정부호 방향을 따라 무한히 많은 indecomposable이 실현됨이 알려져 있다. 가장 단순한 증거는 Kronecker quiver $1\rightrightarrows 2$ ([§Quiver와 경로대수, ⁋예시 8](/ko/math/representation_theory/path_algebras#ex8)) 로, 이는 extended Dynkin diagram $\widetilde{A}_1$ 위의 quiver이며 차원벡터 $(1,1)$을 가지는 indecomposable이 $\mathbb{P}^1(k)$로 매개되는 무한족을 이룬다. 일반적으로 underlying graph가 ADE가 아닌 연결 quiver는 그 안에 이러한 무한족을 품으므로 representation-finite가 아니다. 완전한 논증은 [ASS, Chapter VII]과 [Br, §5]를 따른다.
+역으로 $Q$의 underlying graph가 ADE Dynkin diagram이 아니라 하자. 그럼 $q$는 positive definite가 아니며 ([명제 2](#prop2)), 그 underlying graph는 어떤 extended Dynkin diagram을 부분그래프로 포함한다. Extended Dynkin diagram 위에서는 모든 좌표가 양인 null vector $\delta$가 존재하여 $q(\delta)=0$이고, 따라서 $q(m\delta)=m^2 q(\delta)=0$이 모든 $m\geq 1$에서 성립한다. Tame 또는 wild quiver의 표현론에서, 이러한 isotropic 또는 부정부호 방향을 따라 무한히 많은 indecomposable이 실현됨이 알려져 있다. 가장 단순한 증거는 Kronecker quiver $1\rightrightarrows 2$ ([§Quiver와 경로대수, ⁋예시 8](/ko/math/representation_theory/path_algebras#ex8)) 로, 이는 extended Dynkin diagram $\widetilde{A}_1$ 위의 quiver이며 차원벡터 $(1,1)$을 가지는 indecomposable이 $\mathbb{P}^1(k)$로 매개되는 무한족을 이룬다. 일반적으로 underlying graph가 ADE가 아닌 connected quiver는 그 안에 이러한 무한족을 품으므로 representation-finite가 아니다. 완전한 논증은 [ASS, Chapter VII]과 [Br, §5]를 따른다.
 :::
 
 정리 5는 quiver의 representation 이론과 finite root system의 분류가 정확히 포개진다는 것을 말한다. 한 vertex에서의 reflection functor가 차원벡터 위에서 simple reflection으로 작용한다는 사실이 ([§반사 함자, ⁋명제 7](/ko/math/representation_theory/reflection_functors#prop7)), indecomposable의 분류를 root system의 조합론으로 옮겨 주는 다리이다. 각 indecomposable에 하나의 positive root가 대응하고, 그 root는 Weyl group의 action으로 simple root까지 환원되며, 그 환원의 매 단계가 곧 하나의 reflection functor이다. 이 그림에서 $q$가 positive definite인 경우, 곧 ADE인 경우에만 root가 유한하고 따라서 indecomposable도 유한하다. 다음 절에서 가장 작은 비자명한 예인 $A_3$에서 이 대응을 구체적으로 본다.
@@ -139,7 +139,7 @@ $$M_{[1,2]}=(1,1,0),\quad M_{[2,3]}=(0,1,1),\quad M_{[1,3]}=(1,1,1)$$
 임을 보았다. 곧 각 $1\leq i\leq j\leq 3$에 대하여 vertex $i,\ldots,j$에 $k$를 얹고 그 사이 arrow에 $\id_k$를 둔 interval representation $M_{[i,j]}$이 유일한 indecomposable이며, 그 차원벡터는 위에서 구한 여섯 개의 positive root와 일대일로 대응한다. 이로써 정리 5의 전단사 $V\mapsto\underline\dim V$가 $A_3$에서 구체적으로 확인된다.
 :::
 
-예시 6에서 차원벡터가 같은 indecomposable이 유일하다는 정리 5의 단사성은 interval representation $M_{[i,j]}$이 각 positive root마다 정확히 하나씩 있다는 사실로 나타나고, 전사성은 여섯 positive root가 모두 어떤 $M_{[i,j]}$로 실현된다는 사실로 나타난다. 또한 [§Auslander–Reiten 이론, ⁋예시 9](/ko/math/representation_theory/auslander_reiten#ex9)에서 본 AR translate $\tau$의 action은 차원벡터 위에서 Coxeter element $c$의 action에 대응한다. 가령 $\tau M_{[1,1]}=M_{[2,2]}$은 차원벡터 $(1,0,0)$이 $(0,1,0)$으로 옮겨지는 것으로, 이것이 명제 3에서 본 Coxeter functor에 의한 preprojective 궤도의 한 걸음이다. 이렇게 $A_3$의 작은 그림 안에서 Tits form, root system, reflection functor, AR 이론이 하나의 정합적인 구조로 묶인다.
+예시 6에서 차원벡터가 같은 indecomposable이 유일하다는 정리 5의 단사성은 interval representation $M_{[i,j]}$이 각 positive root마다 정확히 하나씩 있다는 사실로 나타나고, 전사성은 여섯 positive root가 모두 어떤 $M_{[i,j]}$로 실현된다는 사실로 나타난다. 또한 [§Auslander–Reiten 이론, ⁋예시 9](/ko/math/representation_theory/auslander_reiten#ex9)에서 본 AR translate $\tau$의 action은 차원벡터 위에서 Coxeter element $c$의 action에 대응한다. 가령 $\tau M_{[1,1]}=M_{[2,2]}$은 차원벡터 $(1,0,0)$이 $(0,1,0)$으로 옮겨지는 것으로, 이것이 명제 3에서 본 Coxeter functor에 의한 preprojective orbit의 한 걸음이다. 이렇게 $A_3$의 작은 그림 안에서 Tits form, root system, reflection functor, AR 이론이 하나의 정합적인 구조로 묶인다.
 
 ---
 
