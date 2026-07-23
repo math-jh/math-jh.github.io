@@ -30,7 +30,7 @@ holds. If $f$ is continuous at every point of its domain, we call $f$ a *continu
 
 Rewriting this in the $\epsilon$-$\delta$ language, for any $\epsilon > 0$ there exists some $\delta > 0$ such that
 
-$$\lvert x - a\rvert < \delta\Rightarrow\lvert f(x) - f(a)\rvert < \epsilon$$
+$$\lvert x - a\rvert < \delta\implies\lvert f(x) - f(a)\rvert < \epsilon$$
 
 holds. Here the condition $0 < \lvert x-a\rvert$ excluding $x = a$ has disappeared, because when $x = a$ we have $\lvert f(a)-f(a)\rvert = 0 < \epsilon$ automatically, so there is no need to exclude it.
 
@@ -53,11 +53,11 @@ If $f$ and $g$ are continuous at $a$, then $f+g$, $cf$ (where $c$ is a constant)
 ::: Proof
 Only the composite function case is new. Let any $\epsilon > 0$ be given. Since $g$ is continuous at $b := f(a)$, there exists some $\eta > 0$ such that
 
-$$\lvert y - b\rvert < \eta\Rightarrow\lvert g(y) - g(b)\rvert < \epsilon$$
+$$\lvert y - b\rvert < \eta\implies\lvert g(y) - g(b)\rvert < \epsilon$$
 
 holds. Again, since $f$ is continuous at $a$, for this $\eta$ there exists a corresponding $\delta > 0$ such that
 
-$$\lvert x-a\rvert < \delta\Rightarrow\lvert f(x) - b\rvert < \eta$$
+$$\lvert x-a\rvert < \delta\implies\lvert f(x) - b\rvert < \eta$$
 
 holds. Chaining the two steps, when $\lvert x-a\rvert < \delta$ we have $y = f(x)$ satisfying $\lvert y - b\rvert < \eta$, and therefore $\lvert g(f(x)) - g(f(a))\rvert < \epsilon$.
 :::

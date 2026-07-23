@@ -113,7 +113,7 @@ $$(-\epsilon,\epsilon)\times V\rightarrow M;\qquad(t,q)\mapsto X_t(q)$$
 
 is a well-defined $C^\infty$ map. ([§Vector Fields, ⁋Theorem 6](/en/math/manifolds/vector_fields#thm6)) Moreover, if we choose $\epsilon>0$ small enough that the inclusion
 
-$$(-\epsilon,\epsilon)\times W\subseteq V,\qquad \text{$W$ is an open neighborhood of the origin in $\mathbb{R}^{d-1}$}$$
+$$(-\epsilon,\epsilon)\times W\subseteq V,\qquad \text{$W$ is an open neighborhood of the origin in $\mathbb{R}^{m-1}$}$$
 
 holds, then the map
 

@@ -149,8 +149,8 @@ Speaking loosely, the smaller $\ker L$ is, the closer $L$ is to being injective,
 ::: Corollary 9
 Let two $\mathbb{K}$-vector spaces $V,W$ and a linear map $L:V\rightarrow W$ be given.
 
-1. If $L$ is injective, then for any linearly independent subset $S\subset V$, the image $L(S)$ is also linearly independent in $W$.
-2. If $L$ is surjective, then for any $S\subset V$ satisfying $\langle S\rangle=V$, the image $L(S)$ also satisfies $\span L(S)=W$.
+1. If $L$ is injective, then for any linearly independent subset $S\subseteq V$, the image $L(S)$ is also linearly independent in $W$.
+2. If $L$ is surjective, then for any $S\subseteq V$ satisfying $\langle S\rangle=V$, the image $L(S)$ also satisfies $\span L(S)=W$.
 :::
 ::: Proof
 1. For elements $L(x_1),\ldots, L(x_k)$ of $L(S)$, if

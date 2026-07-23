@@ -165,7 +165,7 @@ $$\frac{a}{s}=\frac{af^d}{s}\frac{1}{f^d}$$
 으로 쓸 수 있다는 것을 이용하면 쉽게 보일 수 있다.
 :::
 
-특별히 homogeneous prime ideal $\mathfrak{p}$을 하나 고정하고, $A_1\not\subset \mathfrak{p}$라 가정하자. $S$를 $\mathfrak{p}$에 속하지 않는 homogeneous element들로 이루어진 multiplicative subset이라 하면, 적어도 하나의 nonzero $f\in A_1$이 존재하여 $f\in S$이므로, 위의 명제에 의해
+특별히 homogeneous prime ideal $\mathfrak{p}$을 하나 고정하고, $A_1\not\subseteq \mathfrak{p}$라 가정하자. $S$를 $\mathfrak{p}$에 속하지 않는 homogeneous element들로 이루어진 multiplicative subset이라 하면, 적어도 하나의 nonzero $f\in A_1$이 존재하여 $f\in S$이므로, 위의 명제에 의해
 
 $$S^{-1}A\cong A_{(\mathfrak{p})}[T,T^{-1}]$$
 

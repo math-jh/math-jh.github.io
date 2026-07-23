@@ -60,7 +60,7 @@ $$\varphi^\ast\omega_0=\omega\vert_U$$
 ::: 증명
 문제가 국소적이므로, 우선 $p$ 근방의 임의의 좌표계를 잡아 상황을 $\mathbb{R}^{2n}$의 원점 $0$ 근방에서의 문제로 옮긴다. 즉 $0$의 열린근방 위에서 symplectic form $\omega$가 주어졌고 $p$가 $0$에 대응한다고 가정해도 좋으며, 우리의 목표는 $0$ 근방에서 정의된 diffeomorphism $\varphi$로 $0$을 고정하고 $\varphi^\ast\omega_0=\omega$를 만족하는 것을 찾는 것이다.
 
-**1단계 (한 점에서의 표준화).** $\omega_0$의 원점에서의 값 $\omega_0\vert_0$과 $\omega$의 원점에서의 값 $\omega\vert_0$을 $T_0\mathbb{R}^{2n}$ 위의 두 linear symplectic form으로 비교한다. ([§사교벡터공간, ⁋보조정리 2](/ko/math/symplectic_geometry/linear_symplectic_geometry#lem2)에 의하여) 두 linear symplectic form은 적당한 선형동형으로 옮겨지므로, 원점에서의 선형좌표변환 $A\in\GL(2n,\mathbb{R})$을 취하여 $A^\ast(\omega_0\vert_0)=\omega\vert_0$이 성립하도록 할 수 있다. $A$로 좌표를 한 번 더 바꾸면, 처음부터
+**1단계 (한 점에서의 표준화).** $\omega_0$의 원점에서의 값 $\omega_0\vert_0$과 $\omega$의 원점에서의 값 $\omega\vert_0$을 $T_0\mathbb{R}^{2n}$ 위의 두 linear symplectic form으로 비교한다. ([§사교벡터공간, ⁋보조정리 2](/ko/math/symplectic_geometry/linear_symplectic_geometry#lem2)에 의하여) 두 linear symplectic form은 적당한 선형동형으로 옮겨지므로, 원점에서의 선형좌표변환 $A\in\GL(2n;\mathbb{R})$을 취하여 $A^\ast(\omega_0\vert_0)=\omega\vert_0$이 성립하도록 할 수 있다. $A$로 좌표를 한 번 더 바꾸면, 처음부터
 
 $$\omega\vert_0=\omega_0\vert_0\qquad\text{(원점 }0\text{에서)}$$
 

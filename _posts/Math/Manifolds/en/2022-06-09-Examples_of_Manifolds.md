@@ -55,13 +55,13 @@ then $V$ becomes a manifold of the same dimension as $M$. We call such a manifol
 Of course, for this definition to be well defined, the subspace topology must satisfy the locally Euclidean, second countable, and Hausdorff conditions, and the elements of $\mathcal{A}_V$ must be pairwise $C^\infty$-compatible. However, the Hausdorff and second countability properties are both preserved by the subspace topology, and the locally Euclidean property also follows from the fact that $V$ is an open set. Moreover, the transition maps between elements of $\mathcal{A}_V$ are restrictions of $C^\infty$ functions, so they are also $C^\infty$.
 
 ::: Example 4
-Among the elements of $\Mat_{n}(\mathbb{R})$, the set $\GL(n,\mathbb{R})$ of invertible $n\times n$ matrices consists of those satisfying $\det(A)\neq 0$. Regarding the determinant $\det$ as a function from $\Mat_n(\mathbb{R})$ to $\mathbb{R}$, this function is a polynomial, hence continuous, and therefore $\GL(n,\mathbb{R})$, being the preimage of the open set $\mathbb{R}\setminus\{0\}$, is also an open subset of $\Mat_n(\mathbb{R})$. Thus $\GL(n,\mathbb{R})$ is an $n^2$-dimensional manifold. 
+Among the elements of $\Mat_{n}(\mathbb{R})$, the set $\GL(n;\mathbb{R})$ of invertible $n\times n$ matrices consists of those satisfying $\det(A)\neq 0$. Regarding the determinant $\det$ as a function from $\Mat_n(\mathbb{R})$ to $\mathbb{R}$, this function is a polynomial, hence continuous, and therefore $\GL(n;\mathbb{R})$, being the preimage of the open set $\mathbb{R}\setminus\{0\}$, is also an open subset of $\Mat_n(\mathbb{R})$. Thus $\GL(n;\mathbb{R})$ is an $n^2$-dimensional manifold. 
 
-On the other hand, $\GL(n,\mathbb{R})$ is the disjoint union of the matrices with $\det A>0$ and those with $\det A<0$, and each of these sets is open for the same reason as above, so $\GL(n,\mathbb{R})$ is not connected.
+On the other hand, $\GL(n;\mathbb{R})$ is the disjoint union of the matrices with $\det A>0$ and those with $\det A<0$, and each of these sets is open for the same reason as above, so $\GL(n;\mathbb{R})$ is not connected.
 :::
 
 ::: Example 5
-For an open set $U\subset\mathbb{R}^m$ and a $C^\infty$ function $f:U\rightarrow\mathbb{R}^n$, define the *graph* $\graph(f)$ of $f$ to be the set
+For an open set $U\subseteq\mathbb{R}^m$ and a $C^\infty$ function $f:U\rightarrow\mathbb{R}^n$, define the *graph* $\graph(f)$ of $f$ to be the set
 
 $$\graph(f)=\{(x,y)\in\mathbb{R}^m\times\mathbb{R}^n\mid \text{$x\in U$, $y=f(x)$}\}$$
 

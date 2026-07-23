@@ -240,7 +240,7 @@ $$H_1(\operatorname{NL}_{B/k})\neq0,\qquad \overline{\x\y\z}\in H_1(\operatornam
 :::
 
 ::: 예시 13 (장애가 있는 변형)
-장애가 실제로 $0$이 아닌 고전적 예는 rational normal quartic curve $C_4\subset\mathbb{P}^4$ 위의 affine cone
+장애가 실제로 $0$이 아닌 고전적 예는 rational normal quartic curve $C_4\subseteq\mathbb{P}^4$ 위의 affine cone
 
 $$X=\Spec k[\z_0,\z_1,\z_2,\z_3,\z_4]/I_2(M),\qquad M=\begin{pmatrix}\z_0&\z_1&\z_2&\z_3\\\z_1&\z_2&\z_3&\z_4\end{pmatrix}$$
 

@@ -25,7 +25,7 @@ published: false
 ::: 정의 1
 Genus $g$, $n$개의 marked points를 갖는 *prestable curve* $(C, p_1, \ldots, p_n)$이란
 
-- $C$는 connected complete (algebraic 또는 complex analytic) curve로, *node<sub>노드</sub>*만을 singularity로 가진다 (즉, 각 singular point의 local model이 $\{xy = 0\} \subset \mathbb{C}^2$).
+- $C$는 connected complete (algebraic 또는 complex analytic) curve로, *node<sub>노드</sub>*만을 singularity로 가진다 (즉, 각 singular point의 local model이 $\{xy = 0\} \subseteq \mathbb{C}^2$).
 - $p_1, \ldots, p_n \in C$는 distinct smooth points (즉 node가 아닌 점).
 - $g = h^1(C, \mathcal{O}_C) = p_a(C)$가 arithmetic genus.
 :::

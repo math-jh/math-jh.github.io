@@ -41,9 +41,9 @@ $$\det\begin{pmatrix} a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \\ a_
 미분을 정의하기에 앞서, 다변수함수의 극한과 연속을 짚고 넘어가야 한다. 일변수함수에서 극한은 점 $a$의 양쪽, 즉 좌·우 두 방향만 보면 충분했다. 그러나 정의역이 $\mathbb{R}^m$이 되면 점 $\mathbf{a}$로 다가오는 경로가 무수히 많아지므로 다소 주의할 필요가 있다. 
 
 ::: 정의 1
-다변수함수 $f: \mathbb{R}^m \rightarrow \mathbb{R}$가 점 $\mathbf{a}$에서 *극한<sub>limit</sub>* $L$을 가진다는 것은, 임의의 $\varepsilon > 0$에 대해 어떤 $\delta > 0$가 존재하여
+다변수함수 $f: \mathbb{R}^m \rightarrow \mathbb{R}$가 점 $\mathbf{a}$에서 *극한<sub>limit</sub>* $L$을 가진다는 것은, 임의의 $\epsilon > 0$에 대해 어떤 $\delta > 0$가 존재하여
 
-$$0 < \lVert \mathbf{x} - \mathbf{a}\rVert < \delta \quad\Rightarrow\quad \lvert f(\mathbf{x}) - L\rvert < \varepsilon$$
+$$0 < \lVert \mathbf{x} - \mathbf{a}\rVert < \delta \quad\implies\quad \lvert f(\mathbf{x}) - L\rvert < \epsilon$$
 
 가 $0 < \lVert \mathbf{x} - \mathbf{a}\rVert < \delta$를 만족하는 모든 $\mathbf{x}$에 대해 성립하는 것이다. 이를 $\lim_{\mathbf{x}\rightarrow\mathbf{a}} f(\mathbf{x}) = L$로 쓰며, 특히 $\lim_{\mathbf{x}\rightarrow\mathbf{a}} f(\mathbf{x}) = f(\mathbf{a})$일 때 $f$는 $\mathbf{a}$에서 *연속<sub>continuous</sub>*이라 한다.
 :::

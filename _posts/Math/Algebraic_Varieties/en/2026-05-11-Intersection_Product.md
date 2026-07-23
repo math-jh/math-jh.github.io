@@ -104,7 +104,7 @@ The key idea is as follows. For each irreducible component $V_i$ of $Z$, we cut 
 
 Then using the above lemma we move $Z$ to $Z'$ and define the intersection by the formula
 
-$$Z \cdot W := Z' \cdot W = \sum_{T \subset Z' \cap W} i_T(Z', W) [T].$$
+$$Z \cdot W := Z' \cdot W = \sum_{T \subseteq Z' \cap W} i_T(Z', W) [T].$$
 
 ## Deformation to Normal Cone
 

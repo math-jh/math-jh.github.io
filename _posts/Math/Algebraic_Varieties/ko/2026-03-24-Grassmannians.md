@@ -120,7 +120,7 @@ Grassmannian은 일종의 cell structure가 주어져서 조합론적인 관점�
 ::: 정의 10
 $n$차원 벡터공간 $V$의 *flag<sub>깃발</sub>*은 다음과 같은 부분공간들의 chain
 
-$$F_\bullet:\qquad 0 = F_0 \subset F_1 \subset F_2 \subset \cdots \subset F_n = V$$
+$$F_\bullet:\qquad 0 = F_0 \subseteq F_1 \subseteq F_2 \subseteq \cdots \subseteq F_n = V$$
 
 이다. 여기서 $\dim F_i = i$이다.
 :::

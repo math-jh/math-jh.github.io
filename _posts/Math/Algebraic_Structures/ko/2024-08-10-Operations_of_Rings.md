@@ -88,7 +88,7 @@ $$(A\otimes B)\otimes(A\otimes B) \rightarrow A\otimes B$$
 
 $$(A\otimes B)\otimes(A\otimes B)\cong (A\otimes A)\otimes (B\otimes B)$$
 
-가 성립하고, 따라서 $\mu_A:A\otimes A \rightarrow A$와 $\mu_B: B\otimes B$가 $A\otimes B$ 위의 곱셈
+가 성립하고, 따라서 $\mu_A:A\otimes A \rightarrow A$와 $\mu_B: B\otimes B \rightarrow B$가 $A\otimes B$ 위의 곱셈
 
 $$(A\otimes B)\otimes(A\otimes B)\cong (A\otimes A)\otimes (B\otimes B)\overset{\mu_A\otimes\mu_B}{\longrightarrow} A\otimes B$$
 

@@ -84,7 +84,7 @@ $A$가 ordered set이고 $X\subseteq A$이라 하자. $A$의 어떤 원소 $a$�
 $X\subseteq A$의 supremum이 존재한다면, 이를 $\sup_AX$로 쓰고, infimum은 $\inf_AX$로 쓴다. 정의에 의하여, $X\subseteq A$가 greatest element $a$를 갖는다면 $a=\sup_AX$임을 쉽게 확인할 수 있다.
 
 ::: 명제 7
-$A$가 ordered set이고 $X\subset A$가 supremum과 infimum을 모두 갖는다 하자. 
+$A$가 ordered set이고 $X\subseteq A$가 supremum과 infimum을 모두 갖는다 하자. 
 
 1. 만일 $X\neq\emptyset$일 경우 $\inf_A X\leq\sup_A X$이다.
 2. 만일 $X=\emptyset$이라면, $\sup_AX$와 $\inf_AX$는 각각 $A$의 least, greatest element가 된다.

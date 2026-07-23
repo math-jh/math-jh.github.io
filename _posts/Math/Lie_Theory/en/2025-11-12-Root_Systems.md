@@ -129,7 +129,7 @@ Hence the multiplication structure of $\sl(2;\mathbb{C})$ is given by the follow
 
 $$[H,E]=2E,\quad [H,F]=-2F,\quad [E,F]=H.$$
 
-We show that any $\sl(2;\mathbb{C})$-representation decomposes as a direct sum of irreducible representations. This is an obvious result for compact Lie groups, but remember that for non-compact groups such as $\SL(n,\mathbb{C})$ the existence of a Haar measure is not guaranteed, so ideas such as averaging an inner product via integration cannot be used.
+We show that any $\sl(2;\mathbb{C})$-representation decomposes as a direct sum of irreducible representations. This is an obvious result for compact Lie groups, but remember that for non-compact groups such as $\SL(n;\mathbb{C})$ the existence of a Haar measure is not guaranteed, so ideas such as averaging an inner product via integration cannot be used.
 
 Let an arbitrary finite-dimensional $\sl_2$-representation $V$ be given, and for each $\lambda\in \mathbb{C}$ define the weight space
 
@@ -137,7 +137,7 @@ $$V_\lambda=\{v\in V\mid H\cdot v=\lambda v\}.$$
 
 Then by the commutation relations examined above,
 
-$$E\cdot V_\lambda\subset V_{\lambda+2},\qquad F\cdot V_\lambda\subset V_{\lambda-2}$$
+$$E\cdot V_\lambda\subseteq V_{\lambda+2},\qquad F\cdot V_\lambda\subseteq V_{\lambda-2}$$
 
 hold. For this reason we also call $E$ and $F$ the *raising operator* and *lowering operator*, respectively. On the other hand, since $V$ is finite-dimensional, in the weight decomposition
 

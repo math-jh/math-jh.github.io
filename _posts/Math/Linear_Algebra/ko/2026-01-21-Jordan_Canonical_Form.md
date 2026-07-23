@@ -107,7 +107,7 @@ $$(A-\lambda I)^lv=0$$
 
 $$(A-\lambda I)^{k'}v =0$$
 
-임을 안다. 즉 $v\in\ker (A-\lambda I)^{k'}$이다. 그런데 $k$의 정의에 의하여 $\ker(A-\lambda I)^k=\ker(A-\lambda I)^{k'}$이고 이로부터 $v\in \ker (A-\lambda I)^k$이다. ($k'$는 $v$에 의존하지만, $k$는 그렇지 않다.) 포함관계 $\ker (A-\lambda I)^k\subset G_\lambda(A)$은 자명하므로 원하는 결과를 얻는다. 
+임을 안다. 즉 $v\in\ker (A-\lambda I)^{k'}$이다. 그런데 $k$의 정의에 의하여 $\ker(A-\lambda I)^k=\ker(A-\lambda I)^{k'}$이고 이로부터 $v\in \ker (A-\lambda I)^k$이다. ($k'$는 $v$에 의존하지만, $k$는 그렇지 않다.) 포함관계 $\ker (A-\lambda I)^k\subseteq G_\lambda(A)$은 자명하므로 원하는 결과를 얻는다. 
 :::
 
 직관적으로 generalized eigenspace들은 진짜 고유벡터들 뿐만 아니라, linear operator $(A-\lambda I)$를 거듭해서 적용했을 때 결국 $0$이 되는 벡터들을 포함하는 공간이다. 
@@ -212,7 +212,7 @@ $$N_\lambda:=(A-\lambda I)\vert_{G_\lambda(A)}: G_\lambda(A)\rightarrow G_\lambd
 가 nilpotent operator라는 사실이다. 
 
 ::: 정의 7
-벡터공간 $V$ 위에 정의된 linear operator $N:V \rightarrow V$가 *nilpotent<sub>멱영</sub>*라는 것은 적당한 정수 $k$가 존재하여 $N^k\equiv 0$을 만족하는 것이다. 이러한 $k$ 중 가장 작은 것을 $N$의 *(nilpotency) index<sub>멱영지수</sub>*라 부른다. 
+벡터공간 $V$ 위에 정의된 linear operator $N:V \rightarrow V$가 *nilpotent<sub>멱영</sub>*라는 것은 적당한 정수 $k$가 존재하여 $N^k=0$을 만족하는 것이다. 이러한 $k$ 중 가장 작은 것을 $N$의 *(nilpotency) index<sub>멱영지수</sub>*라 부른다. 
 :::
 
 즉, 만일 우리가 임의의 nilpotent operator의 표준형을 구할 수 있다면 우리는 전체 행렬 $A$ 또한 표준형으로 나타낼 수 있게 된다. 
@@ -258,20 +258,20 @@ $$V=U_1\oplus \cdots\oplus U_e$$
 
 $$U_1=\span (N^{k_1-1}v_1, \cdots, Nv_1, v_1)$$
 
-을 생각하자. 만일 $U_1=V$라면 더 이상 증명할 것이 없다. 그렇지 않다면 우리는 $V=U_1\oplus W_1$이도록 하는 *$T$-invariant* subspace $W_1$을 찾는다. $N$이 $W_1$ 위에서도 nilpotent인 것은 자명하므로, $N\vert_{W_1}$의 nilpotency index $k_2$를 잡고, $N^{k_2}v_2=0$이지만 $N^{k_2-1}v_2\neq 0$이도록 하는 $v_2$를 잡을 수 있다. 이제 다시 다음의 cyclic subspace
+을 생각하자. 만일 $U_1=V$라면 더 이상 증명할 것이 없다. 그렇지 않다면 우리는 $V=U_1\oplus W_1$이도록 하는 *$N$-invariant* subspace $W_1$을 찾는다. $N$이 $W_1$ 위에서도 nilpotent인 것은 자명하므로, $N\vert_{W_1}$의 nilpotency index $k_2$를 잡고, $N^{k_2}v_2=0$이지만 $N^{k_2-1}v_2\neq 0$이도록 하는 $v_2$를 잡을 수 있다. 이제 다시 다음의 cyclic subspace
 
 $$U_2=\span (N^{k_2-1}v_2, \cdots, Nv_2, v_2)$$
 
-를 얻고, 다시 $U_2$의 $T$-invariant complement를 얻는 과정을 반복해나가다 보면 원하는 decomposition을 얻는다. 
+를 얻고, 다시 $U_2$의 $N$-invariant complement를 얻는 과정을 반복해나가다 보면 원하는 decomposition을 얻는다. 
 
-이 증명에서 가장 핵심적인 부분은 $U$의 complement $W$를 $T$-invariant가 되도록 잡을 수 있다는 것이다. 
+이 증명에서 가장 핵심적인 부분은 $U$의 complement $W$를 $N$-invariant가 되도록 잡을 수 있다는 것이다. 
 
 ::: 보조정리 10
 임의의 벡터공간 $V$와 그 위에서 정의된 index $k$의 nilpotent operator $N$을 생각하고, $N^{k-1}v\neq 0$을 만족하는 벡터 $v$를 택하자. 그럼 $v$가 생성하는 cyclic subspace 
 
 $$U=\span(v, Nv, \ldots, N^{k-1}v)$$
 
-에 대하여, $V=U\oplus W$이도록 하는 $T$-invariant space $W$가 존재한다. 
+에 대하여, $V=U\oplus W$이도록 하는 $N$-invariant space $W$가 존재한다. 
 :::
 
 이에 대한 증명은 $N$의 nilpotency index에 대한 귀납법을 쓰면 되지만, 증명이 다소 귀찮은 감이 있어 생략하기로 한다. 
@@ -381,4 +381,4 @@ $$\begin{pmatrix}C(p_1)&&\\&\ddots&\\&&C(p_r)\end{pmatrix},\qquad p_i=(\x-\lambd
 
 ---
 
-[^1]: $U_1$의 complement $W_1$을 $T$-invariant가 되도록 할 수 있다는 것이 이 증명에서 가장 비자명한 부분이며 이는 귀납법을 통해 직접 보여야 한다. 
+[^1]: $U_1$의 complement $W_1$을 $N$-invariant가 되도록 할 수 있다는 것이 이 증명에서 가장 비자명한 부분이며 이는 귀납법을 통해 직접 보여야 한다. 

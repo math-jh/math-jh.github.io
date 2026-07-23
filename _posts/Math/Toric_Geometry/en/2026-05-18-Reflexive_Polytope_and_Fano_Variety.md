@@ -15,7 +15,7 @@ translated_at: 2026-06-03T11:30:02+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-06-03T11:30:02+00:00
 ---
-In [§Definition of Toric Varieties](/en/math/toric_geometry/toric_varieties) we saw how to construct a projective toric variety $X_P$ from a lattice polytope $P \subset M_{\mathbb{R}}$ via its normal fan $\Sigma_P$. In this construction there are many pathways by which the geometric properties of $P$ translate into algebro-geometric properties of $X_P$, and among them *reflexive polytopes* occupy a special position.
+In [§Definition of Toric Varieties](/en/math/toric_geometry/toric_varieties) we saw how to construct a projective toric variety $X_P$ from a lattice polytope $P \subseteq M_{\mathbb{R}}$ via its normal fan $\Sigma_P$. In this construction there are many pathways by which the geometric properties of $P$ translate into algebro-geometric properties of $X_P$, and among them *reflexive polytopes* occupy a special position.
 
 ## Reflexive Polytopes
 
@@ -37,7 +37,7 @@ The second condition is quite transparent, but the first may seem somewhat unmot
 True to its name, the most basic property of a reflexive polytope is that the dual operation $\Delta \mapsto \Delta^\circ$ defines an involution on the collection of reflexive polytopes.
 
 ::: Proposition 2 (Bipolar theorem)
-If $\Delta \subset M_{\mathbb{R}}$ is a reflexive polytope, then $\Delta^\circ \subset N_{\mathbb{R}}$ is also a reflexive polytope, and $(\Delta^\circ)^\circ = \Delta$.
+If $\Delta \subseteq M_{\mathbb{R}}$ is a reflexive polytope, then $\Delta^\circ \subseteq N_{\mathbb{R}}$ is also a reflexive polytope, and $(\Delta^\circ)^\circ = \Delta$.
 :::
 
 ::: Proof
@@ -52,7 +52,7 @@ This proposition exhibits the symmetry of reflexive polytopes. Although $\Delta$
 
 In algebraic geometry, a *Fano variety* is a normal projective variety $X$ whose anticanonical divisor $-K_X$ is ample. Here the canonical divisor $K_X$ is the divisor class corresponding to the canonical bundle ([\[Algebraic Varieties\] §Canonical Bundle, ⁋Definition 6](/en/math/algebraic_varieties/canonical_bundle#def6)), and $-K_X$ is its inverse. If $-K_X$ is additionally a Cartier divisor, then $X$ is called a *Gorenstein Fano variety*. In the context of toric varieties, this condition translates into a very explicit combinatorial one.
 
-As we saw in [§Definition of Toric Varieties, ⁋Proposition 8](/en/math/toric_geometry/toric_varieties#prop8), given a lattice polytope $P \subset M_{\mathbb{R}}$, we can construct the projective toric variety $X_P = X_{\Sigma_P}$ via the normal fan $\Sigma_P$ it defines. Now assume that $P = \Delta$ is a reflexive polytope.
+As we saw in [§Definition of Toric Varieties, ⁋Proposition 8](/en/math/toric_geometry/toric_varieties#prop8), given a lattice polytope $P \subseteq M_{\mathbb{R}}$, we can construct the projective toric variety $X_P = X_{\Sigma_P}$ via the normal fan $\Sigma_P$ it defines. Now assume that $P = \Delta$ is a reflexive polytope.
 
 ::: Proposition 3
 The anticanonical divisor $-K_{X_\Sigma}$ of a toric variety $X_\Sigma$, i.e. the inverse of the canonical divisor, is given by the sum of all boundary divisors:
@@ -65,13 +65,13 @@ Here $\Sigma(1)$ is the set of 1-dimensional cones of $\Sigma$, and each $D_\rho
 ::: Proof
 In [\[Algebraic Varieties\] §Canonical Bundle, ⁋Definition 6](/en/math/algebraic_varieties/canonical_bundle#def6), the canonical divisor $K_X$ was defined as the divisor class corresponding to the canonical bundle $\omega_X = \det \Omega^1_X$. We show that $K_{X_\Sigma} = -\sum_\rho D_\rho$, so that its inverse takes the form above.
 
-On the open dense torus $T_N = \operatorname{Spec} \mathbb{C}[M] \subset X_\Sigma$, choose a basis $m_1, \ldots, m_n$ of $M$; then the characters $\chi^{m_i}$ become coordinates on the torus, and the top form
+On the open dense torus $T_N = \Spec \mathbb{C}[M] \subseteq X_\Sigma$, choose a basis $m_1, \ldots, m_n$ of $M$; then the characters $\rchi^{m_i}$ become coordinates on the torus, and the top form
 
-$$\omega = \frac{d\chi^{m_1}}{\chi^{m_1}} \wedge \cdots \wedge \frac{d\chi^{m_n}}{\chi^{m_n}}$$
+$$\omega = \frac{d\rchi^{m_1}}{\rchi^{m_1}} \wedge \cdots \wedge \frac{d\rchi^{m_n}}{\rchi^{m_n}}$$
 
 trivializes $\Omega^n_{T_N}$. This is a $T_N$-invariant top form, independent of the choice of basis of $M$, and it extends naturally to a rational $n$-form on $X_\Sigma$.
 
-Now let us compute the vanishing degree of $\omega$ along each boundary divisor $D_\rho$. Choose a suitable basis of $N$ with the primitive generator $v_\rho \in N$ of the ray $\rho \in \Sigma(1)$ as the first basis vector, and take the dual basis $m_1, \ldots, m_n$ of $M$. Then in the affine chart $U_\sigma$ having $\rho$ as a face, the local equation of $D_\rho$ is $\chi^{m_1} = 0$. In the above expression, the term $d\chi^{m_1}/\chi^{m_1}$ creates exactly a simple pole along $D_\rho$, while the other factors are regular near $D_\rho$; hence $\omega$ has exactly a simple pole along $D_\rho$. Therefore
+Now let us compute the vanishing degree of $\omega$ along each boundary divisor $D_\rho$. Choose a suitable basis of $N$ with the primitive generator $v_\rho \in N$ of the ray $\rho \in \Sigma(1)$ as the first basis vector, and take the dual basis $m_1, \ldots, m_n$ of $M$. Then in the affine chart $U_\sigma$ having $\rho$ as a face, the local equation of $D_\rho$ is $\rchi^{m_1} = 0$. In the above expression, the term $d\rchi^{m_1}/\rchi^{m_1}$ creates exactly a simple pole along $D_\rho$, while the other factors are regular near $D_\rho$; hence $\omega$ has exactly a simple pole along $D_\rho$. Therefore
 
 $$\divisor(\omega) = -\sum_{\rho \in \Sigma(1)} D_\rho$$
 
@@ -83,7 +83,7 @@ Although this equality is well-defined for any fan, the *ample* condition that w
 When the anticanonical divisor $-K_{X_\Sigma}$ is Cartier, the corresponding piecewise linear function $\psi_{-K} \in \PL(\Sigma, M)$ is precisely the function satisfying $\psi_{-K}(v_\rho) = -1$ for all $\rho \in \Sigma(1)$. Moreover, in [§Torus-Invariant Divisors and Line Bundles, ⁋Proposition 6](/en/math/toric_geometry/toric_divisors#prop6) we saw that it suffices to check this condition only on maximal cones, and that this condition exactly coincides with the condition for the given divisor to be Cartier. The following proposition is the key observation: this condition matches the vertex condition of the dual $\Delta^\circ$ of a reflexive polytope.
 
 ::: Proposition 4
-For a reflexive polytope $\Delta \subset M_{\mathbb{R}}$, let $\Sigma_\Delta$ be the normal fan of $\Delta$ and write the corresponding toric variety as $X_\Delta = X_{\Sigma_\Delta}$. Then $X_\Delta$ is a Gorenstein Fano variety. Conversely, if a complete toric variety $X_\Sigma$ is Gorenstein Fano, then $\Sigma$ is the normal fan of some reflexive polytope.
+For a reflexive polytope $\Delta \subseteq M_{\mathbb{R}}$, let $\Sigma_\Delta$ be the normal fan of $\Delta$ and write the corresponding toric variety as $X_\Delta = X_{\Sigma_\Delta}$. Then $X_\Delta$ is a Gorenstein Fano variety. Conversely, if a complete toric variety $X_\Sigma$ is Gorenstein Fano, then $\Sigma$ is the normal fan of some reflexive polytope.
 :::
 
 ::: Proof
@@ -105,15 +105,15 @@ Conversely, assume that $X_\Sigma$ is Gorenstein Fano. Since $-K_{X_\Sigma}$ is 
 
 $$\Delta = \{ u \in M_{\mathbb{R}} \mid \langle u, v_\rho \rangle \ge -1 \text{ for all } \rho \in \Sigma(1) \}.$$
 
-Then $\Delta$ is a lattice polytope and $0 \in \operatorname{int}(\Delta)$. Its dual is $\Delta^\circ = \operatorname{conv}\{v_\rho \mid \rho \in \Sigma(1)\}$, which is a lattice polytope, so $\Delta$ is reflexive. That $\Sigma$ is the normal fan of $\Delta$ follows from the definition.
+Then $\Delta$ is a lattice polytope and $0 \in \interior(\Delta)$. Its dual is $\Delta^\circ = \operatorname{conv}\{v_\rho \mid \rho \in \Sigma(1)\}$, which is a lattice polytope, so $\Delta$ is reflexive. That $\Sigma$ is the normal fan of $\Delta$ follows from the definition.
 :::
 
 Moreover, the correspondence between a reflexive polytope $\Delta$ and the Gorenstein Fano variety $X_\Delta$ extends beyond the mere existence of the variety, to a correspondence between sections of line bundles on it. Specifically, the global sections of the line bundle $\mathcal{O}_{X_\Delta}(-K_{X_\Delta})$ corresponding to the anticanonical divisor $-K_{X_\Delta}$ are in one-to-one correspondence with the lattice points inside the reflexive polytope $\Delta$.
 
 ::: Proposition 5
-For a reflexive polytope $\Delta \subset M_{\mathbb{R}}$ and the corresponding toric variety $X_\Delta$, we have the following $\mathbb{C}$-vector space isomorphism:
+For a reflexive polytope $\Delta \subseteq M_{\mathbb{R}}$ and the corresponding toric variety $X_\Delta$, we have the following $\mathbb{C}$-vector space isomorphism:
 
-$$H^0\bigl(X_\Delta, \mathcal{O}_{X_\Delta}(-K_{X_\Delta})\bigr) \cong \bigoplus_{u \in \Delta \cap M} \mathbb{C} \cdot \chi^u.$$
+$$H^0\bigl(X_\Delta, \mathcal{O}_{X_\Delta}(-K_{X_\Delta})\bigr) \cong \bigoplus_{u \in \Delta \cap M} \mathbb{C} \cdot \rchi^u.$$
 :::
 
 ::: Proof
@@ -121,7 +121,7 @@ For a toric variety, the polytope $P_D$ corresponding to a $T_N$-invariant Carti
 
 $$P_D = \{ u \in M_{\mathbb{R}} \mid \langle u, v_\rho \rangle \ge -a_\rho \text{ for all } \rho \in \Sigma(1) \},$$
 
-and as shown in [§Torus-Invariant Divisors and Line Bundles, ⁋Proposition 7](/en/math/toric_geometry/toric_divisors#prop7), a basis of $H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))$ is given by the characters $\chi^u$ corresponding to the elements of $P_D \cap M$. For the anticanonical divisor $-K_{X_\Delta}$, we have $a_\rho = 1$ for all $\rho$, so
+and as shown in [§Torus-Invariant Divisors and Line Bundles, ⁋Proposition 7](/en/math/toric_geometry/toric_divisors#prop7), a basis of $H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))$ is given by the characters $\rchi^u$ corresponding to the elements of $P_D \cap M$. For the anticanonical divisor $-K_{X_\Delta}$, we have $a_\rho = 1$ for all $\rho$, so
 
 $$P_{-K} = \{ u \in M_{\mathbb{R}} \mid \langle u, v_\rho \rangle \ge -1 \text{ for all } \rho \in \Sigma_\Delta(1) \}.$$
 
@@ -130,7 +130,7 @@ Since $\Sigma_\Delta$ is the normal fan of $\Delta$, the polytope defined by the
 
 This result means that the number of lattice points of a reflexive polytope determines the dimension of the space of sections of the anticanonical line bundle of the Gorenstein Fano variety, i.e. the *anticanonical degree*. In particular, the cardinality of $\Delta \cap M$ equals $h^0(X_\Delta, \mathcal{O}(-K_{X_\Delta}))$.
 
-The most basic example of a reflexive polytope is the simplex corresponding to projective space $\mathbb{P}^n$. In [§Definition of Toric Varieties, ⁋Example 10](/en/math/toric_geometry/toric_varieties#ex10) we saw that the normal fan of the standard simplex $\Delta_n$ is the standard fan of $\mathbb{P}^n$. However, since one vertex of $\Delta_n$ is the origin, we have $0 \notin \operatorname{int}(\Delta_n)$. Thus $\Delta_n$ itself is not a reflexive polytope. Instead, we can consider a (homothetic) polytope obtained by appropriately extending each edge to move the origin into the interior.
+The most basic example of a reflexive polytope is the simplex corresponding to projective space $\mathbb{P}^n$. In [§Definition of Toric Varieties, ⁋Example 10](/en/math/toric_geometry/toric_varieties#ex10) we saw that the normal fan of the standard simplex $\Delta_n$ is the standard fan of $\mathbb{P}^n$. However, since one vertex of $\Delta_n$ is the origin, we have $0 \notin \interior(\Delta_n)$. Thus $\Delta_n$ itself is not a reflexive polytope. Instead, we can consider a (homothetic) polytope obtained by appropriately extending each edge to move the origin into the interior.
 
 ::: Example 6
 In the lattice $M = \mathbb{Z}^n$, define the polytope
@@ -157,7 +157,7 @@ If we look again at [Example 6](#ex6) above, an interesting phenomenon appears: 
 A natural question is whether there is a geometric relationship between these two varieties $X_\Delta$ and $X_{\Delta^\circ}$. As we saw in the simple example above, in general there is no direct morphism or birational isomorphism between them. Instead, the true connection is revealed through anticanonical hypersurfaces. The starting point is the following classical adjunction result.
 
 ::: Proposition 7
-A smooth divisor $V \subset X$ in the anticanonical linear system $\lvert -K_X \rvert$ of a smooth Fano variety $X$ has trivial canonical bundle. That is, $K_V = 0$.
+A smooth divisor $V \subseteq X$ in the anticanonical linear system $\lvert -K_X \rvert$ of a smooth Fano variety $X$ has trivial canonical bundle. That is, $K_V = 0$.
 :::
 
 ::: Proof
@@ -205,7 +205,7 @@ However, crepant resolutions do not always exist. For toric Gorenstein varieties
 
 Batyrev's key insight is that the two Calabi-Yau families $V, V^\circ$ form a *mirror dual* pair. More specifically, for the two families constructed from a reflexive pair $(\Delta, \Delta^\circ)$,
 
-$$\bigl\{ V \subset X_\Delta : V \in \lvert -K_{X_\Delta}\rvert \bigr\}, \qquad \bigl\{ V^\circ \subset X_{\Delta^\circ} : V^\circ \in \lvert -K_{X_{\Delta^\circ}}\rvert \bigr\}$$
+$$\bigl\{ V \subseteq X_\Delta : V \in \lvert -K_{X_\Delta}\rvert \bigr\}, \qquad \bigl\{ V^\circ \subseteq X_{\Delta^\circ} : V^\circ \in \lvert -K_{X_{\Delta^\circ}}\rvert \bigr\}$$
 
 the stringy Hodge numbers of their generic members satisfy the following mirror symmetry for $n \ge 4$:
 

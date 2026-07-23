@@ -70,7 +70,7 @@ $$\cdots \rightarrow H^n(X) \rightarrow H^n(Y) \rightarrow H^n(Z) \rightarrow H^
 :::
 ::: 증명
 핵심은 $\mathcal{C}$ 안의 morphism $f: X \rightarrow Y$에 대한 kernel과 cokernel을 절단으로 구성하는 것이다. $\mathcal{T}$ 안에서 $f$를 distinguished triangle $X \xrightarrow{f} Y \rightarrow C \xrightarrow{+1}$로 채우면 [\[호몰로지 대수학\] §유도카테고리, ⁋정의 11](/ko/math/homological_algebra/derived_categories#def11)의 (TR1)에 의해 $X, Y \in \mathcal{C} \subseteq \mathcal{T}^{\geq 0}$이므로 $C \in \mathcal{T}^{\geq -1}$이고 마찬가지로 $C \in \mathcal{T}^{\leq 0}$이다. 그러면 $\mathcal{C}$ 안에서
-$$\ker f := H^{-1}(C) = \tau_{\leq 0}(C[-1]), \qquad \operatorname{coker} f := H^0(C) = \tau_{\geq 0}(C)$$
+$$\ker f := H^{-1}(C) = \tau_{\leq 0}(C[-1]), \qquad \coker f := H^0(C) = \tau_{\geq 0}(C)$$
 으로 둘 수 있고, 직교성을 써서 이들이 kernel과 cokernel의 보편 성질을 만족함을 확인한다. Abelian 범주의 나머지 공리, 곧 모든 monomorphism이 자기 cokernel의 kernel이라는 등의 성질도 절단과 직교성의 결합으로 따라 나온다. Cohomology functor가 cohomological임은, $H^0$이 절단의 합성이고 절단이 distinguished triangle을 적절히 절단된 삼각형으로 보낸다는 사실에서 나온다. 완전한 증명은 [BBD]의 Théorème 1.3.6에 있다.
 :::
 
@@ -83,7 +83,7 @@ $$D^{\leq 0}(\mathcal{A}) := \{ C^\bullet : H^i(C^\bullet) = 0 \text{ for } i > 
 :::
 
 세 공리를 점검한다. 포함 조건은 cohomology의 소멸 범위가 넓어지는 단조성이므로 자명하게 성립한다. 직교성은 $C^\bullet \in D^{\leq 0}$, $D^\bullet \in D^{\geq 1}$일 때 $\Hom_{D(\mathcal{A})}(C^\bullet, D^\bullet) = 0$임을 말하는데, $D^\bullet$을 degree $\geq 1$에 놓인 $K$-injective resolution으로 바꾸고 $C^\bullet$의 cohomology가 degree $\leq 0$에 갇혀 있음을 쓰면, chain map과 homotopy가 모두 degree 어긋남으로 소멸하여 derived 범주에서의 morphism이 $0$이 된다. 절단 삼각형은 good truncation
-$$\tau_{\leq 0} C^\bullet = (\cdots \rightarrow C^{-1} \rightarrow \ker d^0 \rightarrow 0), \qquad \tau_{\geq 1} C^\bullet = (0 \rightarrow \operatorname{im} d^0 \rightarrow C^1 \rightarrow \cdots)$$
+$$\tau_{\leq 0} C^\bullet = (\cdots \rightarrow C^{-1} \rightarrow \ker d^0 \rightarrow 0), \qquad \tau_{\geq 1} C^\bullet = (0 \rightarrow \im d^0 \rightarrow C^1 \rightarrow \cdots)$$
 이 주는 short exact sequence에서 나온다. Heart는 $H^i = 0$ ($i \neq 0$)인 complex들, 곧 한 degree에 집중된 complex들이고 이는 $\mathcal{A}$와 동치이다. 이 standard t-structure 위에서 [정리 4](#thm4)는 [\[호몰로지 대수학\] §유도카테고리, ⁋정의 11](/ko/math/homological_algebra/derived_categories#def11)의 삼각범주 공리가 주는 사실, 곧 $\mathcal{A}$가 abelian 범주이고 distinguished triangle이 cohomology long exact sequence를 준다는 것을 그대로 재생산한다. Perverse sheaf의 이론은 같은 유도 범주 위에 standard t-structure와 *다른* t-structure를 얹고, 그 heart로 새로운 abelian 범주를 얻는 데에 있다.
 
 ## Perverse (middle) t-structure
@@ -132,7 +132,7 @@ $$\operatorname{Perv}(\{\ast\}) \cong \operatorname{Vec}^{fd}_k$$
 
 ::: 정의 10
 Open embedding $j: U \hookrightarrow X$와 perverse sheaf $\mathcal{F} \in \operatorname{Perv}(U)$에 대해, 표준 morphism $j_! \mathcal{F} \rightarrow Rj_\ast \mathcal{F}$에 perverse cohomology ${}^{p}\mathcal{H}^0$을 적용하여 얻는 $\operatorname{Perv}(X)$ 안의 morphism의 image
-$$j_{!\ast} \mathcal{F} := \operatorname{im}\big({}^{p}\mathcal{H}^0(j_! \mathcal{F}) \longrightarrow {}^{p}\mathcal{H}^0(Rj_\ast \mathcal{F})\big)$$
+$$j_{!\ast} \mathcal{F} := \im\big({}^{p}\mathcal{H}^0(j_! \mathcal{F}) \longrightarrow {}^{p}\mathcal{H}^0(Rj_\ast \mathcal{F})\big)$$
 을 $\mathcal{F}$의 *intermediate extension<sub>중간 연장</sub>*이라 부른다. 나아가 irreducible closed 부분다양체 $Z \subseteq X$ (복소 차원 $d$)와 그 smooth한 dense 열린 부분 $U_Z \subseteq Z$ 위의 local system $L$에 대해, open embedding $j: U_Z \hookrightarrow Z$와 closed embedding $i_Z: Z \hookrightarrow X$를 두고
 $$\operatorname{IC}_Z(L) := (i_Z)_\ast j_{!\ast}(L[d]) \in \operatorname{Perv}(X)$$
 을 $(Z, L)$의 *intersection cohomology sheaf* 또는 *IC sheaf*라 부른다.
@@ -213,14 +213,14 @@ $\Delta^\ast$ 위의 rank $r$ local system $L$의 monodromy를 $T: V \rightarrow
 
 1. $j_!(L[1]) \ \leftrightarrow\ (\Psi, \Phi, \operatorname{can}, \operatorname{var}) = (V, V, \id_V, T - \id)$,
 2. $Rj_\ast(L[1]) \ \leftrightarrow\ (V, V, T - \id, \id_V)$,
-3. $j_{!\ast}(L[1]) = \operatorname{IC}_\Delta(L) \ \leftrightarrow\ (V, \operatorname{im}(T - \id), T - \id, \hookrightarrow)$.
+3. $j_{!\ast}(L[1]) = \operatorname{IC}_\Delta(L) \ \leftrightarrow\ (V, \im(T - \id), T - \id, \hookrightarrow)$.
 :::
 
 세 자료 모두 $T_\Psi = \id + \operatorname{var}\circ\operatorname{can} = T$이 되어 [정리 15](#thm15)의 가역성 조건을 만족함을 즉시 확인할 수 있다 (monodromy $T$는 자동으로 automorphism이다). 표준 morphism $j_!(L[1]) \rightarrow Rj_\ast(L[1])$은 자료의 morphism $(\id_V, T - \id): (V, V, \id, T-\id) \rightarrow (V, V, T-\id, \id)$으로 나타나고 ($\Psi$ 위에서는 항등, $\Phi$ 위에서는 $T - \id$), 그 image가 바로 셋째 자료
-$$\big(V,\ \operatorname{im}(T - \id),\ \operatorname{can} = (T - \id)\ \text{(전사)},\ \operatorname{var} = \text{포함}\big)$$
+$$\big(V,\ \im(T - \id),\ \operatorname{can} = (T - \id)\ \text{(전사)},\ \operatorname{var} = \text{포함}\big)$$
 으로, 곧 $\operatorname{can}$이 전사이고 $\operatorname{var}$이 단사인 intermediate extension이다. 이는 [명제 11](#prop11)이 추상적으로 기술한 "$Z = \{0\}$에 support를 가진 부분대상·quotient object의 부재"를 선형대수로 본 것인데, $\{0\}$에 support를 가진 자료는 $\Psi = 0$인 것 ($\Phi$만 있는 skyscraper)이고, $\operatorname{can}$ 전사성이 그러한 quotient object를, $\operatorname{var}$ 단사성이 그러한 부분대상을 배제한다. 실제로 stalk와 costalk는 $i^{-1}M$이 complex $[\Psi \xrightarrow{\operatorname{can}} \Phi]$로, $i^! M$이 $[\Phi \xrightarrow{\operatorname{var}} \Psi]$로 계산되므로, $\operatorname{can}$이 isomorphic하면 $i^{-1} = 0$ (extension by zero, 곧 $j_!$)이고 $\operatorname{var}$이 isomorphic하면 $i^! = 0$ (곧 $Rj_\ast$)임이 위 자료와 일관된다.
 
-Monodromy가 자명한 특수한 경우 $T = \id$ (상수 sheaf $k_{\Delta^\ast}$)에서는 $T - \id = 0$이므로 $\operatorname{im}(T - \id) = 0$이고, 따라서 $\operatorname{IC}_\Delta(k) \leftrightarrow (V, 0, 0, 0)$, 곧 소멸 cycle이 없는 자료가 되어 $j_{!\ast}(k_{\Delta^\ast}[1]) = k_\Delta[1]$이 [예시 8](#ex8)의 smooth한 경우로 환원된다. 반면 $j_!$과 $Rj_\ast$은 이때 $\Phi = V \neq 0$인 자료를 주어, 원점에서 $V$만큼의 잉여를 가진 채 perverse sheaf로 남는다. 이 잉여가 [참고 9](#rmk9)에서 본 특이공간의 잉여 stalk와 같은 종류의 현상이며, intermediate extension이 그것을 정확히 깎아 내어 자기쌍대 대상을 만든다.
+Monodromy가 자명한 특수한 경우 $T = \id$ (상수 sheaf $k_{\Delta^\ast}$)에서는 $T - \id = 0$이므로 $\im(T - \id) = 0$이고, 따라서 $\operatorname{IC}_\Delta(k) \leftrightarrow (V, 0, 0, 0)$, 곧 소멸 cycle이 없는 자료가 되어 $j_{!\ast}(k_{\Delta^\ast}[1]) = k_\Delta[1]$이 [예시 8](#ex8)의 smooth한 경우로 환원된다. 반면 $j_!$과 $Rj_\ast$은 이때 $\Phi = V \neq 0$인 자료를 주어, 원점에서 $V$만큼의 잉여를 가진 채 perverse sheaf로 남는다. 이 잉여가 [참고 9](#rmk9)에서 본 특이공간의 잉여 stalk와 같은 종류의 현상이며, intermediate extension이 그것을 정확히 깎아 내어 자기쌍대 대상을 만든다.
 
 ---
 

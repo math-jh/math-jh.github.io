@@ -163,7 +163,7 @@ $$H^0(X, \mathcal{L}^{\otimes m}) \longrightarrow H^0(Z, \mathcal{L}^{\otimes m}
 
 를 고려하면, 만약 $H^1(X, \mathcal{I}_Z \otimes \mathcal{L}^{\otimes m}) = 0$이면 evaluation map이 surjective가 되어 separation of points가 성립함을 알 수 있다.
 
-마찬가지로 (2)의 경우, 점 $p$의 first infinitesimal neighborhood $\operatorname{Spec}(\mathcal{O}_{X,p}/\mathfrak{m}_p^2)$를 생각하여, $\mathcal{I}_p$를 $p$의 ideal sheaf라 할 때 short exact sequence
+마찬가지로 (2)의 경우, 점 $p$의 first infinitesimal neighborhood $\Spec(\mathcal{O}_{X,p}/\mathfrak{m}_p^2)$를 생각하여, $\mathcal{I}_p$를 $p$의 ideal sheaf라 할 때 short exact sequence
 
 $$0 \longrightarrow \mathcal{I}_p^2 \otimes \mathcal{L}^{\otimes m} \longrightarrow \mathcal{L}^{\otimes m} \longrightarrow \mathcal{L}^{\otimes m} \otimes (\mathcal{O}_X / \mathcal{I}_p^2) \longrightarrow 0$$
 

@@ -88,7 +88,7 @@ the element of $F_n(M)$ corresponding to $\id_M$ becomes $u$ in $F_n(X)$, and th
 
 But now for any $x_n\in F_n(M)$, since
 
-$$0=(f_{n-2}(M)\circ d_{n-1}^{F(M)}\circ d_n^{F(M)})(x_n)=(d_{n-1}^{G(M)}\circ f_{n-1}(M)\circ d_n^{F(M)})(x_m)$$
+$$0=(f_{n-2}(M)\circ d_{n-1}^{F(M)}\circ d_n^{F(M)})(x_n)=(d_{n-1}^{G(M)}\circ f_{n-1}(M)\circ d_n^{F(M)})(x_n)$$
 
 by the assumption that $G$ is acyclic on $\mathcal{M}$ we have
 

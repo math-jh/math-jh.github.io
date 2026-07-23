@@ -204,7 +204,7 @@ Scheme morphism $\varphi:X \rightarrow Y$가 finite인 것은 $\varphi$가 integ
 
 우선 algebraically closed field $\mathbb{K}$에 대하여, ring map $\iota:\mathbb{K}[\x] \rightarrow \mathbb{K}[\x,\y]$를 생각하면 $\mathbb{K}[\x,\y]$는 $\mathbb{K}[\x]$-algebra로서 하나의 원소 $\y$에 의해 생성되므로 finite type ring homomorphism이지만, $\mathbb{K}[\x]$-module로서는 유한하게 생성되지 않으므로 finite ring homomorphism은 아니다. 
 
-이제 이에 대응되는 scheme morphism $\Spec\iota: \Spec \mathbb{K}[\x,\y] \rightarrow\Spec \mathbb{K}[\x]$를 생각하자. 이는 임의의 prime ideal $\mathfrak{p}\subset \mathbb{K}[\x,\y]$를 받아 $\mathbb{K}[\x]$의 prime ideal $\mathfrak{p}\cap \mathbb{K}[\x]$를 내놓는 함수이다. 이는 기하적으로는 affine plane $\mathbb{A}^2_\mathbb{K}$의 점 $(x,y)$를 affine line $\mathbb{A}^1_\mathbb{K}$의 점 $x$에 대응시키는 함수이다. 
+이제 이에 대응되는 scheme morphism $\Spec\iota: \Spec \mathbb{K}[\x,\y] \rightarrow\Spec \mathbb{K}[\x]$를 생각하자. 이는 임의의 prime ideal $\mathfrak{p}\subseteq \mathbb{K}[\x,\y]$를 받아 $\mathbb{K}[\x]$의 prime ideal $\mathfrak{p}\cap \mathbb{K}[\x]$를 내놓는 함수이다. 이는 기하적으로는 affine plane $\mathbb{A}^2_\mathbb{K}$의 점 $(x,y)$를 affine line $\mathbb{A}^1_\mathbb{K}$의 점 $x$에 대응시키는 함수이다. 
 
 ![finite_type_morphism](/assets/images/Math/Scheme_Theory/Properties_of_Scheme_Morphisms-1.svg){:style="width:27.72em" class="invert" .align-center}
 

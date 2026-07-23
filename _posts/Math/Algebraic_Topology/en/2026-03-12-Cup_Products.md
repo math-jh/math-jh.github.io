@@ -152,7 +152,7 @@ $$\langle-,-\rangle: C^\bullet(X;A)\times C_\bullet(X;A) \rightarrow A$$
 
 For this identity to hold we must have
 
-$$\langle\alpha,\beta\frown \sigma\rangle=\langle\alpha\smile \beta,\sigma\rangle=\sum_i(-1)^{\lvert\beta\rvert\lvert\sigma_i\rangle}\alpha(\sigma_i)\beta(\tau_i)$$
+$$\langle\alpha,\beta\frown \sigma\rangle=\langle\alpha\smile \beta,\sigma\rangle=\sum_i(-1)^{\lvert\beta\rvert\lvert\sigma_i\rvert}\alpha(\sigma_i)\beta(\tau_i)$$
 
 where $\sigma_i$ and $\tau_i$ are the chains appearing when $\sigma$ is written as $\sum \sigma_i\otimes\tau_i$ via the Alexander–Whitney map. Since this must hold for all $\alpha$, we are forced to define
 

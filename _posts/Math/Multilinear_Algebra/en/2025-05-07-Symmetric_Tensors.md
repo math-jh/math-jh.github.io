@@ -177,7 +177,7 @@ The following hold.
     holds.
 5. Given any $x_1,\ldots, x_n\in M$, and for any subset $H\subseteq \{1,\ldots, n\}$ let $x_H=\sum_{i\in H}x_i$. Then the identity
     
-    $$(-1)^nx_1x_2\cdots x_n=\sum_{H\subset\{1,\ldots, n\}}(-1)^{\lvert H\rvert}\gamma_n(x_H)$$
+    $$(-1)^nx_1x_2\cdots x_n=\sum_{H\subseteq\{1,\ldots, n\}}(-1)^{\lvert H\rvert}\gamma_n(x_H)$$
 
     holds.
 :::
@@ -197,7 +197,7 @@ $$N_1=\sum_{\omega\in\Omega} Ay_\omega,\qquad N_2=\sum_{b'\in B'}Ab'$$
 
 according to the given decomposition, we have $N=N_1\oplus N_2$.
 
-Now what we must show is $N_1=N^H$. By assumption $N_1\subset N^H$ is obvious. On the other hand, for any $y\in N^H$, writing $y$ as a linear combination $y=\sum \alpha_b b$ of the $A$-basis $B$, we know that $\alpha_{bh}=\alpha_b$ must hold for all $b\in B$ and all $h\in H$. From this, $y$ must lie in $N_1$.
+Now what we must show is $N_1=N^H$. By assumption $N_1\subseteq N^H$ is obvious. On the other hand, for any $y\in N^H$, writing $y$ as a linear combination $y=\sum \alpha_b b$ of the $A$-basis $B$, we know that $\alpha_{bh}=\alpha_b$ must hold for all $b\in B$ and all $h\in H$. From this, $y$ must lie in $N_1$.
 :::
 
 Then using this, we can show the following proposition.
@@ -334,7 +334,7 @@ $$A[\x_1,\ldots, \x_n]^{S_n}=\{p\in A[x_1,\ldots, \x_n]\mid \sigma\cdot p=p\}.$$
 
 First, we can verify that these are generated as an $A$-algebra by the elements
 
-$$s_k=\sum_{\substack{H\subset \{1,\ldots, n\}\\\lvert H\rvert=k}}\prod_{i\in H} x_i.$$
+$$s_k=\sum_{\substack{H\subseteq \{1,\ldots, n\}\\\lvert H\rvert=k}}\prod_{i\in H} x_i.$$
 
 Explicitly,
 

@@ -24,7 +24,7 @@ weight: 4
 ::: 정의 1 (Kuratowski closure axiom)
 임의의 <em-ko>집합</em-ko> $X$에 대하여, 함수 $\cl:\mathcal{P}(X)\rightarrow\mathcal{P}(X)$가 다음의 조건들을 모두 만족한다 하자.
 
-- $$A\subset\cl(A)$$
+- $$A\subseteq\cl(A)$$
 - $$\cl(\cl(A))=\cl(A)$$
 - $$\cl(A\cup B)=\cl(A)\cup\cl(B)$$
 - $$\cl(\emptyset)=\emptyset$$
@@ -34,7 +34,7 @@ weight: 4
 
 세 번째 조건으로부터, 만일 $A\subseteq B$라면
 
-$$\cl(A)\subset\cl(A)\cup\cl(B)=\cl(A\cup B)=\cl(B)$$
+$$\cl(A)\subseteq\cl(A)\cup\cl(B)=\cl(A\cup B)=\cl(B)$$
 
 임을 알 수 있다. 
 
@@ -42,13 +42,13 @@ $$\cl(A)\subset\cl(A)\cup\cl(B)=\cl(A\cup B)=\cl(B)$$
 
 거꾸로 임의의 집합 $X$ 위에 위의 조건을 만족하는 closure operator $\cl:\mathcal{P}(X)\rightarrow\mathcal{P}(X)$이 주어졌다 하자. 이제 $\mathcal{P}(X)$의 원소들 중 $\cl(C)=C$를 만족하는 집합들의 모임을 $\mathcal{C}$로 적자. 그러면
 
-- $\cl(\emptyset)=\emptyset$이므로, $\emptyset\in\mathcal{C}$이다. 한편 $X\subset\cl(X)$이므로 $\cl(X)=X$이고 따라서 $X\in\mathcal{C}$이다.
+- $\cl(\emptyset)=\emptyset$이므로, $\emptyset\in\mathcal{C}$이다. 한편 $X\subseteq\cl(X)$이므로 $\cl(X)=X$이고 따라서 $X\in\mathcal{C}$이다.
 - 임의의 $A,B\in\mathcal{C}$에 대하여, $A\cup B=\cl(A)\cup\cl(B)=\cl(A\cup B)$가 성립하므로 $A\cup B\in\mathcal{C}$가 성립한다. 
-- 임의의 index set $I$와 $A_i\in\mathcal{C}$들에 대하여, $\bigcap A_i\subset\cl(\bigcap A_i)$이고, 또 $\bigcap A_i\subseteq A_i$으로부터 
+- 임의의 index set $I$와 $A_i\in\mathcal{C}$들에 대하여, $\bigcap A_i\subseteq\cl(\bigcap A_i)$이고, 또 $\bigcap A_i\subseteq A_i$으로부터 
 
-  $$\cl(\bigcap A_i)\subset\cl(A_i)=A_i$$
+  $$\cl(\bigcap A_i)\subseteq\cl(A_i)=A_i$$
 
-  가 성립하므로 $\cl(\bigcap A_i)\subset\bigcap A_i$ 또한 성립한다.
+  가 성립하므로 $\cl(\bigcap A_i)\subseteq\bigcap A_i$ 또한 성립한다.
 
 이로부터 다음의 정리가 얻어진다.
 

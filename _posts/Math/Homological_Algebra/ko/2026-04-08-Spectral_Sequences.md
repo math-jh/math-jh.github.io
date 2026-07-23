@@ -61,7 +61,7 @@ Filtration에 대한 가장 중요한 것은 filtered complex $A^\bullet$가 주
 ::: 정의 3
 Filtered complex $(A^\bullet, F)$가 주어졌다 하자. 그럼 inclusion $F^pA^\bullet\rightarrow A^\bullet$의 cohomology 레벨에서의 image를
 
-$$F^p H^n = \operatorname{im}\bigl(H^n(F^p A^\bullet) \rightarrow H^n(A^\bullet)\bigr)$$
+$$F^p H^n = \im\bigl(H^n(F^p A^\bullet) \rightarrow H^n(A^\bullet)\bigr)$$
 
 로 정의한다.
 :::
@@ -142,12 +142,12 @@ $$d_r \circ d_r = 0$$
 ::: 명제 8
 $f : (A^\bullet, F) \rightarrow (B^\bullet, G)$가 filtered complex 사이의 chain map이라 하자. 즉, 각 $p$에 대해 
 
-$$f(F^p A^\bullet) \subset G^p B^\bullet$$
+$$f(F^p A^\bullet) \subseteq G^p B^\bullet$$
 
 이 성립한다. 그럼 $f$는 각 $r$에 대해 well-defined된 morphism $f_r : E_r(A) \rightarrow E_r(B)$를 유도한다.
 :::
 ::: 증명
-$f$가 chain map이므로 cocycle을 cocycle으로, boundary를 boundary로 보낸다. 또한 $f(F^p) \subset G^p$이므로 $f(Z_r^{p,q}(A)) \subset Z_r^{p,q}(B)$이고 $f(B_r^{p,q}(A)) \subset B_r^{p,q}(B)$이다. 따라서 $f$는 각 $r$에 대해 $E_r$ 상에서 well-defined map을 유도한다.
+$f$가 chain map이므로 cocycle을 cocycle으로, boundary를 boundary로 보낸다. 또한 $f(F^p) \subseteq G^p$이므로 $f(Z_r^{p,q}(A)) \subseteq Z_r^{p,q}(B)$이고 $f(B_r^{p,q}(A)) \subseteq B_r^{p,q}(B)$이다. 따라서 $f$는 각 $r$에 대해 $E_r$ 상에서 well-defined map을 유도한다.
 :::
 
 그럼 우리의 핵심적인 결과는 이러한 spectral sequence가 실제로 원래의 complex의 cohomology에 도달한다는 것이다. 우선 다음을 정의하자.

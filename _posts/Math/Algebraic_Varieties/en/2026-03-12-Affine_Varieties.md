@@ -106,7 +106,7 @@ $$U = \bigcup_i (D(f_i) \cap X)$$
 :::
 
 ::: Proof
-By the definition of the Zariski topology, there exists an ideal $\mathfrak{a}\subset \mathbb{K}[\x_1,\ldots, \x_n]$ such that
+By the definition of the Zariski topology, there exists an ideal $\mathfrak{a}\subseteq \mathbb{K}[\x_1,\ldots, \x_n]$ such that
 
 $$X\setminus U=Z(\mathfrak{a})\cap X$$
 
@@ -230,8 +230,8 @@ We are now ready to extend the one-to-one correspondence between prime ideals of
 ::: Proposition 12
 Let $X \subseteq \mathbb{A}^n$ be an affine variety. Then there is a one-to-one correspondence between prime ideals of the coordinate ring $\mathbb{K}[X]$ and closed subvarieties of $X$, as follows.
 
-1. For a prime ideal $\mathfrak{p} \subset \mathbb{K}[X]$, letting $\tilde{\mathfrak{p}}$ be the preimage of $\mathfrak{p}$ in $\mathbb{K}[\x_1, \ldots, \x_n]$, the set $Z(\tilde{\mathfrak{p}}) \subseteq X$ is a closed subvariety of $X$.
-2. For a closed subvariety $Y \subseteq X$, the set $I(Y)/I(X) \subset \mathbb{K}[X]$ is a prime ideal.
+1. For a prime ideal $\mathfrak{p} \subseteq \mathbb{K}[X]$, letting $\tilde{\mathfrak{p}}$ be the preimage of $\mathfrak{p}$ in $\mathbb{K}[\x_1, \ldots, \x_n]$, the set $Z(\tilde{\mathfrak{p}}) \subseteq X$ is a closed subvariety of $X$.
+2. For a closed subvariety $Y \subseteq X$, the set $I(Y)/I(X) \subseteq \mathbb{K}[X]$ is a prime ideal.
 
 The correspondences $\mathfrak{p} \mapsto Z(\tilde{\mathfrak{p}})$ and $Y \mapsto I(Y)/I(X)$ are inverse to each other.
 :::

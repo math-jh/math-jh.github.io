@@ -67,7 +67,7 @@ Thus it suffices to assume that $B$ is a field and show that $A$ is a field. Let
 Finally, we consider the following.
 
 ::: Corollary 4
-For an integral extension $A\hookrightarrow B$, if two prime ideals $\mathfrak{q}_1\neq \mathfrak{q}_2$ of $B$ satisfy $A\cap \mathfrak{q}_1=A\cap \mathfrak{q}_2=\mathfrak{p}$, then $\mathfrak{q}_1\not\subset \mathfrak{q}_2$ and $\mathfrak{q}_2\not\subset \mathfrak{q}_1$.
+For an integral extension $A\hookrightarrow B$, if two prime ideals $\mathfrak{q}_1\neq \mathfrak{q}_2$ of $B$ satisfy $A\cap \mathfrak{q}_1=A\cap \mathfrak{q}_2=\mathfrak{p}$, then $\mathfrak{q}_1\not\subseteq \mathfrak{q}_2$ and $\mathfrak{q}_2\not\subseteq \mathfrak{q}_1$.
 :::
 ::: Proof
 Assume for contradiction that $\mathfrak{q}_1\subseteq \mathfrak{q}_2$, and set $A\cap \mathfrak{q}_1=A\cap \mathfrak{q}_2=\mathfrak{p}$. Taking the quotient of $A$ by $\mathfrak{p}$ and of $B$ by $\mathfrak{q}_1$, we may reduce to the situation in which $B$ is an integral domain with $\mathfrak{q}_1=0$ and $\mathfrak{q}_2\cap A=0$. Now, the integral equations satisfied by the elements of $B$ remain integral equations after taking the quotient by $\mathfrak{p}$; in particular, $\Frac(B)$ becomes an algebraic extension of $\Frac(A)$. Therefore, by [Lemma 2](#lem2), we obtain the desired result.

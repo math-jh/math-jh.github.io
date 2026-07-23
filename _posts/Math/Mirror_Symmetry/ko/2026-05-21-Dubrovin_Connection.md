@@ -54,7 +54,7 @@ $$\nabla^z_{\partial_z} = \partial_z - \frac{1}{z^2}E\circ(-) + \frac{1}{z}\mu$$
 
 앞서 [§프로베니우스 다양체, ⁋정의 5](/ko/math/mirror_symmetry/frobenius_manifold#def5)에서 Frobenius manifold를 정의할 때, 각 점에서의 Frobenius algebra의 grading structure를 담기 위해 $E$를 도입했던 것을 기억하자. 구체적으로, 
 
-$$\Lie_E(\circ)=\circ,\qquad \Lie_E(\eta)=(2-d)\eta$$
+$$\mathcal{L}_E(\circ)=\circ,\qquad \mathcal{L}_E(\eta)=(2-d)\eta$$
 
 는 quantum product가 degree를 respect한다는 사실과 Poincaré pairing이 top degree에 concentrate된다는 사실을 각각 반영하는 것이었다. 특히 우리의 관심의 대상인 [§프로베니우스 다양체, ⁋명제 9](/ko/math/mirror_symmetry/frobenius_manifold#prop9)의 경우, 위의 식에서 Euler vector field $E$가 base $M$ 위에서 좌표의 rescaling을 생성하는 grading이라면 $\mu$는 같은 grading을 fiber $T_tM \cong H^\ast(X)$ 위의 endomorphism으로 본 것으로, 둘은
 
@@ -127,7 +127,7 @@ $$z\, q_a \partial_{q_a} s = -\,(T_a \qtimes s), \qquad a = 1, \ldots, r$$
 
 우리는 manifold $M\times \mathbb{C}^\ast$에서 $M$의 $H^2$ 방향의 torus만 남겼으므로, 이제 우리가 다루는 A-side의 effective base는 $(r+1)$차원 algebraic torus
 
-$$M_A := (\mathbb{C}^\ast)^r \times \mathbb{C}^\ast_z = \operatorname{Spec}\mathbb{C}[q_1^{\pm}, \ldots, q_r^\pm, z^\pm]$$
+$$M_A := (\mathbb{C}^\ast)^r \times \mathbb{C}^\ast_z = \Spec\mathbb{C}[q_1^{\pm}, \ldots, q_r^\pm, z^\pm]$$
 
 이다. 이 $M_A$ 위에서의 fiber는 여전히 $\pr_1^\ast TM$의 fiber인 $H^\ast(X)$와 같고, 따라서 이 위의 bundle은 다음의 식
 

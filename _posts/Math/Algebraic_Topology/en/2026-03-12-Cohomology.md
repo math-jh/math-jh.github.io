@@ -54,7 +54,7 @@ $$0 \rightarrow B_k\overset{i_k}{\longrightarrow} Z_k \overset{p_k}{\longrightar
 
 Since $B_k$, $Z_k$, and $0$ are all free abelian groups, this may be viewed as a free resolution of $H_k(C_\bullet)$, and therefore by definition we can embed $\delta_k$ into the exact sequence
 
-$$0 \rightarrow \Tor_1^\mathbb{Z}(H_k(C))\rightarrow B_k\otimes_\mathbb{Z}A\overset{\delta_k}{\longrightarrow} Z_k\otimes_\mathbb{Z}A\rightarrow H_k\otimes_\mathbb{Z}A\rightarrow 0$$
+$$0 \rightarrow \Tor_1^\mathbb{Z}(H_k(C), A)\rightarrow B_k\otimes_\mathbb{Z}A\overset{\delta_k}{\longrightarrow} Z_k\otimes_\mathbb{Z}A\rightarrow H_k\otimes_\mathbb{Z}A\rightarrow 0$$
 
 That is, we have isomorphisms
 

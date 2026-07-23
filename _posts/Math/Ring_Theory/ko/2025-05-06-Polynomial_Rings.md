@@ -94,7 +94,7 @@ Integral domain $A$에 대하여, 다음이 성립한다.
 3. $A[\x]$는 integral domain이다. 
 :::
 
-이제 다시 일반적인 경우를 생각하자. 임의의 두 다항식 $u,v\in A[\x_i]_{i\in I}$가 주어졌다 하면, 이들 다항식에서 등장하는 미지수는 어차피 유한하므로 $uv$를 계산할 때에는 $A[\x_i]_{i\in I}$ 대신, 유한집합 $J\subset I$를 택하여 이를 $A[\x_j]_{j\in J}$를 보아도 충분하다. 그럼 이 때 $A[\x_j]_{j\in J}$가 integral domain인 것은 [보조정리 3](#lem3)과 다음의 isomorphism
+이제 다시 일반적인 경우를 생각하자. 임의의 두 다항식 $u,v\in A[\x_i]_{i\in I}$가 주어졌다 하면, 이들 다항식에서 등장하는 미지수는 어차피 유한하므로 $uv$를 계산할 때에는 $A[\x_i]_{i\in I}$ 대신, 유한집합 $J\subseteq I$를 택하여 이를 $A[\x_j]_{j\in J}$를 보아도 충분하다. 그럼 이 때 $A[\x_j]_{j\in J}$가 integral domain인 것은 [보조정리 3](#lem3)과 다음의 isomorphism
 
 $$A[\x_1,\x_2]\cong (A[\x_1])[\x_2]$$
 

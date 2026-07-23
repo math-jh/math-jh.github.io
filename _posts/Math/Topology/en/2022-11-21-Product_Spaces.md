@@ -42,19 +42,19 @@ From this we obtain the following two corollaries.
 Let two product spaces $X=\prod_{i\in I}X_i$, $Y=\prod_{i\in I}Y_i$ sharing the same index set $I$ be given, and suppose $f_i:X_i\rightarrow Y_i$ are given. Then the map $f:(x_i)\mapsto (f_i(x_i))$ is continuous if and only if each $f_i$ is continuous.
 :::
 
-For arbitrary sets $X, Y$ and a function $f:X \rightarrow Y$, the *graph* of $f$, denoted $\Gamma(f)$, is the subset of $X\times Y$ given by
+For arbitrary sets $X, Y$ and a function $f:X \rightarrow Y$, the *graph* of $f$, denoted $\graph(f)$, is the subset of $X\times Y$ given by
 
-$$\Gamma(f)=\{(x,f(x))\mid x\in X\}\subseteq X\times Y$$
+$$\graph(f)=\{(x,f(x))\mid x\in X\}\subseteq X\times Y$$
 
-If both $X, Y$ are topological spaces, then $\Gamma(f)$ inherits the subspace topology from the product space $X\times Y$.
+If both $X, Y$ are topological spaces, then $\graph(f)$ inherits the subspace topology from the product space $X\times Y$.
 
 ::: Corollary 4
-For topological spaces $X,Y$ and a function $f:X\rightarrow Y$, $f$ is continuous if and only if the function $g:x\mapsto (x,f(x))$ is a homeomorphism from $X$ to $\Gamma(f)$.
+For topological spaces $X,Y$ and a function $f:X\rightarrow Y$, $f$ is continuous if and only if the function $g:x\mapsto (x,f(x))$ is a homeomorphism from $X$ to $\graph(f)$.
 :::
 
 Moreover, we also know the obvious inverse of the above function $g$,
 
-$$\pr_X\vert_{\Gamma(f)}:\Gamma(f) \rightarrow X$$
+$$\pr_X\vert_{\graph(f)}:\graph(f) \rightarrow X$$
 
 In particular, since the constant map sending every point of $X$ to $y_0\in Y$ is continuous, by the above corollary we obtain the homeomorphism
 
@@ -64,7 +64,7 @@ Now consider an arbitrary subset $A$ of $X\times Y$. Then
 
 $$A\cap (X\times \{y_0\})=\{(x,y)\mid (x,y)\in A,\quad y=y_0\}=\{(x,y_0)\mid (x,y_0)\in A\}$$
 
-Since $\Gamma(f)$ is equipped with the subspace topology of $X\times Y$, the above set is open in $\Gamma(f)$ if $A$ is open in $X\times Y$, and closed in $\Gamma(f)$ if $A$ is closed in $X\times Y$. Therefore, applying [Corollary 4](#cor4) again and sending the above set to $X$, the corresponding set is also open or closed. Let us denote this set by $A(y_0)\subseteq X$. Of course, by a similar argument with the roles of $X$ and $Y$ interchanged, we can also obtain a subset $A(x_0)$ of $Y$.
+Since $\graph(f)$ is equipped with the subspace topology of $X\times Y$, the above set is open in $\graph(f)$ if $A$ is open in $X\times Y$, and closed in $\graph(f)$ if $A$ is closed in $X\times Y$. Therefore, applying [Corollary 4](#cor4) again and sending the above set to $X$, the corresponding set is also open or closed. Let us denote this set by $A(y_0)\subseteq X$. Of course, by a similar argument with the roles of $X$ and $Y$ interchanged, we can also obtain a subset $A(x_0)$ of $Y$.
 
 ::: Proposition 5
 For any open set $U$ in $X\times Y$, $\pr_X(U)$ and $\pr_Y(U)$ are open in $X$ and $Y$, respectively.

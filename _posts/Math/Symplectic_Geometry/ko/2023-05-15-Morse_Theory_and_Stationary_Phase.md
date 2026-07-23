@@ -260,7 +260,7 @@ $$\frac{dx}{dt} = -\nabla h(x)$$
 이 thimble의 차원이 항상 $\dim_\mathbb{C} X$임은 holomorphic이라는 가정의 직접적 결과이며, 다음 명제로 정리한다.
 
 ::: 명제 15
-Holomorphic function $W: U \rightarrow \mathbb{C}$ ($U \subset \mathbb{C}^n$ open)의 non-degenerate critical point $p$와 $\hbar \in \mathbb{C}^\ast$에 대해, real-valued function $h = -\operatorname{Re}(W/\hbar): U \rightarrow \mathbb{R}$의 $p$에서의 Morse index $\lambda_p$는 항상 $n$이다. 즉 $\operatorname{Hess}_p(h)$의 양·음 eigenvalue 개수가 정확히 $n$씩으로 split된다.
+Holomorphic function $W: U \rightarrow \mathbb{C}$ ($U \subseteq \mathbb{C}^n$ open)의 non-degenerate critical point $p$와 $\hbar \in \mathbb{C}^\ast$에 대해, real-valued function $h = -\operatorname{Re}(W/\hbar): U \rightarrow \mathbb{R}$의 $p$에서의 Morse index $\lambda_p$는 항상 $n$이다. 즉 $\operatorname{Hess}_p(h)$의 양·음 eigenvalue 개수가 정확히 $n$씩으로 split된다.
 :::
 
 ::: 증명

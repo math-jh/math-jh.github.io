@@ -46,7 +46,7 @@ $\dim \mathbb{A}^n = n$이다.
 [\[가환대수학\] §매개계, ⁋따름정리 11](/ko/math/commutative_algebra/system_of_parameters#cor11)
 :::
 
-한편, 우리는 임의의 prime ideal $\mathfrak{p}\subset \mathbb{K}[\x_1,\ldots, \x_n]$에 대하여 다음의 식
+한편, 우리는 임의의 prime ideal $\mathfrak{p}\subseteq \mathbb{K}[\x_1,\ldots, \x_n]$에 대하여 다음의 식
 
 $$\dim \mathbb{K}[\x_1,\ldots, \x_n]/\mathfrak{p}+\codim \mathfrak{p}=\dim \mathbb{K}[\x_1,\ldots, \x_n]=n\tag{$\ast$}$$
 
@@ -54,7 +54,7 @@ $$\dim \mathbb{K}[\x_1,\ldots, \x_n]/\mathfrak{p}+\codim \mathfrak{p}=\dim \math
 
 ## Projective variety의 차원
 
-문제는 projective variety로 넘어가면서부터 발생한다. $\mathbb{P}^n$의 global function은 오직 상수함수들 뿐이었음을 기억하자. 이러한 상황에서 projective variety의 차원을 정의하기 위해서는 affine chart를 잡으면 된다. 즉 $X\subset \mathbb{P}^n$이 주어졌을 때, $\mathbb{P}^n$의 affine open chart $U_i$를 택한 후, $X_i=X\cap U_i$의 affine variety로서의 차원을 생각하면 된다. 그러나 이 정의를 위해서는 임의의 열린집합의 차원이 원래 variety의 차원과 같다는 것을 보여야하므로 아직은 이를 정의로 택할 수 없다. 그 대신 우리는 $X$의 *affine cone* $C(X)$를 이용한다.
+문제는 projective variety로 넘어가면서부터 발생한다. $\mathbb{P}^n$의 global function은 오직 상수함수들 뿐이었음을 기억하자. 이러한 상황에서 projective variety의 차원을 정의하기 위해서는 affine chart를 잡으면 된다. 즉 $X\subseteq \mathbb{P}^n$이 주어졌을 때, $\mathbb{P}^n$의 affine open chart $U_i$를 택한 후, $X_i=X\cap U_i$의 affine variety로서의 차원을 생각하면 된다. 그러나 이 정의를 위해서는 임의의 열린집합의 차원이 원래 variety의 차원과 같다는 것을 보여야하므로 아직은 이를 정의로 택할 수 없다. 그 대신 우리는 $X$의 *affine cone* $C(X)$를 이용한다.
 
 Projective variety $X\subseteq \mathbb{P}^n$에 대하여, affine cone $C(X)\subseteq \mathbb{A}^{n+1}$은 $X$를 정의하는 homogeneous ideal을 $\mathbb{K}[\x_0,\ldots, \x_n]$의 ideal로 봤을 때 이것이 정의하는 $\mathbb{A}^{n+1}$의 affine variety이다. 즉 $X$가 정의하는 homogeneous ideal $I(X)$에 대하여, ring $S(X)$를
 
@@ -81,7 +81,7 @@ $\mathbb{P}^n$의 cone은 $\mathbb{A}^{n+1}$이고 $\dim \mathbb{A}^{n+1} = n+1$
 Hypersurface는 단일 다항식의 zero set으로 정의되는 variety이다. 직관적으로, 하나의 식을 추가하는 것은 하나의 제약조건을 주는 것과 같으므로 차원을 하나 줄이게 될 것이다. 
 
 ::: 명제 6
-Irreducible polynomial $f \in \mathbb{K}[\x_1, \ldots, \x_n]$에 대해, irreducible hypersurface $Z(f) \subset \mathbb{A}^n$의 차원은 $n - 1$이다.
+Irreducible polynomial $f \in \mathbb{K}[\x_1, \ldots, \x_n]$에 대해, irreducible hypersurface $Z(f) \subseteq \mathbb{A}^n$의 차원은 $n - 1$이다.
 :::
 
 ::: 증명

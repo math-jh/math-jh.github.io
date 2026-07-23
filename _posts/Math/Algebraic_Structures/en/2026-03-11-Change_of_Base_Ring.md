@@ -89,7 +89,7 @@ If $A$ is a commutative ring, then $\Phi$ is an $A$-linear map $\phi^\ast N_1\ot
 ::: Proof
 Define a map $\phi^\ast N_1\times\phi^\ast N_2 \rightarrow N_1\otimes_B N_2$ by $(y_1,y_2)\mapsto y_1\otimes_B y_2$, and verify that it is balanced with respect to the $A$-action. Since the $A$-action on $\phi^\ast N_1,\phi^\ast N_2$ is given by the $B$-action through $\phi(\alpha)$, for any $\alpha\in A$,
 
-$$(\alpha\cdot_A y_1,y_2)=(\phi(\alpha)\cdot_B y_1, y_2)\mapsto (\phi(\alpha)\cdot_B y_1)\otimes_B y_2=y_1\otimes_B(\phi(\alpha)\cdot_B y_1)$$
+$$(\alpha\cdot_A y_1,y_2)=(\phi(\alpha)\cdot_B y_1, y_2)\mapsto (\phi(\alpha)\cdot_B y_1)\otimes_B y_2=y_1\otimes_B(\phi(\alpha)\cdot_B y_2)$$
 
 holds, and therefore $(\alpha\cdot_A y_1,y_2)$ and $y_1,\alpha\cdot_Ay_2$ are sent to the same element; the claim follows from the universal property of the tensor product.
 :::

@@ -43,7 +43,7 @@ $N = \mathbb{Z}^2$에서 원점을 중심으로 방사형으로 세 개의 2차�
 
 이제 우리는 fan $\Sigma$가 주어졌을 때 이로부터 algebraic variety $X_\Sigma$를 정의할 수 있다. 사실 이를 위한 기본적인 도구는 이미 전부 설명했던 것이며, 오직 [정의 1](#def1)의 언어만이 추가로 필요했던 것이다. 이를 만드는 흐름을 명확한 수학적 언어로 정리하자면, fan $\Sigma$가 주어졌다 하고, 각각의 cone $\tau \in \Sigma$에 대하여 [§아핀 토릭 다양체, ⁋정의 5](/ko/math/toric_geometry/affine_toric_varieties#def5)에 의해 affine toric variety $U_\tau$를 얻는다. 이 때, 두 cone $\tau_1, \tau_2 \in \Sigma$가 공통 face $\tau_1 \cap \tau_2$를 가질 때, [§아핀 토릭 다양체, ⁋명제 13](/ko/math/toric_geometry/affine_toric_varieties#prop13)에 의해 $U_{\tau_1 \cap \tau_2}$는 $U_{\tau_1}$과 $U_{\tau_2}$ 모두의 principal open subset이 되며, 따라서 이들 사이의 isomorphism, inclusion
 
-$$U_{\tau_1} \supset U_{\tau_1 \cap \tau_2} \cong U_{\tau_2 \cap \tau_1} \subset U_{\tau_2}$$
+$$U_{\tau_1} \supset U_{\tau_1 \cap \tau_2} \cong U_{\tau_2 \cap \tau_1} \subseteq U_{\tau_2}$$
 
 이 존재하며, 이를 통해 $U_\tau$들을 이어붙일 수 있다.
 
@@ -61,12 +61,12 @@ Toric variety $X_\Sigma$는 normal, separated algebraic variety이다.
 $X_\Sigma$의 normality는 각 affine chart $U_\tau$가 [§아핀 토릭 다양체, ⁋명제 15](/ko/math/toric_geometry/affine_toric_varieties#prop15)에 의해 normal이고, 이 성질이 gluing에 의해 보존되기 때문에 얻어진다. Separatedness를 보이기 위해서는 diagonal morphism $\Delta: X_\Sigma \rightarrow X_\Sigma \times X_\Sigma$의 image가 closed set임을 확인하면 된다. 각 affine chart 위에서 이는 두 cone의 교집합이 face임을 보장하는 fan의 두 번째 조건에 의해 성립한다. 
 :::
 
-Toric variety $X_\Sigma$가 affine toric variety로부터 물려받는 중요한 성질 중 하나는 algebraic torus $T_N$을 열린 조밀한 부분집합으로 포함한다는 것이다. ([§아핀 토릭 다양체, ⁋명제 11](/ko/math/toric_geometry/affine_toric_varieties#prop11)) 실제로, 0차원 cone $\{0\} \in \Sigma$에 대응하는 affine chart $U_{\{0\}}$는 $T_N$과 동형이며, 다른 모든 $U_\tau$는 이를 열린 부분집합으로 포함한다. 따라서 $T_N \subset X_\Sigma$는 open dense embedding을 정의한다.
+Toric variety $X_\Sigma$가 affine toric variety로부터 물려받는 중요한 성질 중 하나는 algebraic torus $T_N$을 열린 조밀한 부분집합으로 포함한다는 것이다. ([§아핀 토릭 다양체, ⁋명제 11](/ko/math/toric_geometry/affine_toric_varieties#prop11)) 실제로, 0차원 cone $\{0\} \in \Sigma$에 대응하는 affine chart $U_{\{0\}}$는 $T_N$과 동형이며, 다른 모든 $U_\tau$는 이를 열린 부분집합으로 포함한다. 따라서 $T_N \subseteq X_\Sigma$는 open dense embedding을 정의한다.
 
 [§아핀 토릭 다양체, ⁋명제 10](/ko/math/toric_geometry/affine_toric_varieties#prop10)에서 보았듯이, 각 affine toric variety $U_\tau$ 위에는 algebraic torus $T_N$의 작용이 자연스럽게 정의된다. 우리는 해당 글에서, cone의 inclusion이 유도하는 affine toric variety들 사이의 inclusion이 torus action에 대해 invariant하다는 것을 살펴보았으므로, 이 작용은 gluing을 통해 $X_\Sigma$ 전체로 확장된다. 
 
 ::: 명제 5
-임의의 fan $\Sigma$에 대하여 toric variety $X_\Sigma$ 위에는 algebraic torus $T_N$의 작용이 자연스럽게 정의된다. 이 작용 하에서 $T_N \subset X_\Sigma$는 open dense $T_N$-invariant subset이며, 이 위에서 정의된 $T_N$의 자기 자신 위의 action이 $X_\Sigma$ 위의 작용으로 확장된다. 
+임의의 fan $\Sigma$에 대하여 toric variety $X_\Sigma$ 위에는 algebraic torus $T_N$의 작용이 자연스럽게 정의된다. 이 작용 하에서 $T_N \subseteq X_\Sigma$는 open dense $T_N$-invariant subset이며, 이 위에서 정의된 $T_N$의 자기 자신 위의 action이 $X_\Sigma$ 위의 작용으로 확장된다. 
 :::
 
 ::: 증명
@@ -103,11 +103,11 @@ $\Sigma_P$의 임의의 원소 $\tau_F$는 primitive inner normal vector들의 $
 
 따라서 normal fan은 toric variety $X_{\Sigma_P}$를 정의한다. 우리가 다음으로 살펴볼 것은 이렇게 얻어진 toric variety가 단순한 toric variety가 아닌 *projective* variety가 된다는 점이며, 더 나아가 projective인 toric variety는 사실상 모두 이 방식으로 얻어진다는 것이다. 이러한 양방향 대응을 정확히 기술하기 위해서는 toric variety 위의 line bundle과 polytope 사이의 관계를 먼저 정리해두는 것이 좋다.
 
-이미 [명제 5](#prop5) 직후에 살펴본 것처럼, $X_\Sigma$의 stratum 구조는 fan $\Sigma$의 cone들과 대응된다. 특히 0차원 cone $\{0\}$은 open dense torus $T_N \subset X_\Sigma$에, 1차원 cone $\rho \in \Sigma(1)$들 (여기서 $\Sigma(1)$은 $\Sigma$의 1차원 cone들의 집합)은 각각 codimension 1의 $T_N$-invariant prime divisor $D_\rho \subset X_\Sigma$에 대응된다. 따라서 free abelian group $\bigoplus_\rho \mathbb{Z} D_\rho$가 $X_\Sigma$ 위의 $T_N$-invariant Weil divisor 전체를 기술한다.
+이미 [명제 5](#prop5) 직후에 살펴본 것처럼, $X_\Sigma$의 stratum 구조는 fan $\Sigma$의 cone들과 대응된다. 특히 0차원 cone $\{0\}$은 open dense torus $T_N \subseteq X_\Sigma$에, 1차원 cone $\rho \in \Sigma(1)$들 (여기서 $\Sigma(1)$은 $\Sigma$의 1차원 cone들의 집합)은 각각 codimension 1의 $T_N$-invariant prime divisor $D_\rho \subseteq X_\Sigma$에 대응된다. 따라서 free abelian group $\bigoplus_\rho \mathbb{Z} D_\rho$가 $X_\Sigma$ 위의 $T_N$-invariant Weil divisor 전체를 기술한다.
 
 우리가 관심있는 것은 toric variety의 line bundle이므로, 우리는 *Cartier* divisor들에 집중해야 한다. Cartier divisor를 piecewise linear function의 언어로 기술하고 line bundle과 잇는 자세한 논의는 다음 글인 [§토러스 인자와 선다발](/ko/math/toric_geometry/toric_divisors)에서 다룰 것이지만, 이번 글에서의 논의를 위해 우리는 우선 [§토러스 인자와 선다발, ⁋명제 6](/ko/math/toric_geometry/toric_divisors#prop6)의 결과를 먼저 번역해오기로 한다. 
 
-이에 따르면 $T_N$-invariant Weil divisor $D = \sum_\rho a_\rho D_\rho$가 Cartier일 필요충분조건은, 각 maximal cone $\sigma \in \Sigma$에 대해 어떤 $m_\sigma \in M$이 존재하여 $\sigma$의 모든 ray $\rho$에 대해 $a_\rho = -\langle m_\sigma, v_\rho \rangle$이 성립하는 것이다. 여기서 $v_\rho$는 $\rho$의 primitive generator이다. 이러한 Cartier divisor $D$에 대해 polytope $P_D \subset M_\mathbb{R}$을
+이에 따르면 $T_N$-invariant Weil divisor $D = \sum_\rho a_\rho D_\rho$가 Cartier일 필요충분조건은, 각 maximal cone $\sigma \in \Sigma$에 대해 어떤 $m_\sigma \in M$이 존재하여 $\sigma$의 모든 ray $\rho$에 대해 $a_\rho = -\langle m_\sigma, v_\rho \rangle$이 성립하는 것이다. 여기서 $v_\rho$는 $\rho$의 primitive generator이다. 이러한 Cartier divisor $D$에 대해 polytope $P_D \subseteq M_\mathbb{R}$을
 
 $$P_D = \{u \in M_\mathbb{R} \mid \langle u, v_\rho \rangle \ge -a_\rho \text{ for all } \rho \in \Sigma(1)\}$$
 
@@ -127,7 +127,7 @@ Toric variety $X_\Sigma$가 projective variety인 것은 $\Sigma$가 어떤 full
 
 한편, polytope $P$로부터 projective toric variety $X_P$를 구성하는 또 다른 방법은 monomial map을 통해 명시적인 embedding을 주는 것이다. 핵심적인 아이디어는 $X_P$ 안에 $T_N$이 open dense subset으로 들어있다는 것이며, 따라서 $T_N$만 $\mathbb{P}^s$에 적당히 넣어주면 나머지 부분이 가야 할 곳은 자동으로 정해진다는 것이다. 
 
-$P \subset M_\mathbb{R}$의 lattice point들, 즉 $P \cap M = \{m_0, m_1, \ldots, m_s\}$를 생각하자. 이들을 통해 monomial map
+$P \subseteq M_\mathbb{R}$의 lattice point들, 즉 $P \cap M = \{m_0, m_1, \ldots, m_s\}$를 생각하자. 이들을 통해 monomial map
 
 $$\phi_P: T_N \longrightarrow \mathbb{P}^s, \qquad t \longmapsto [\rchi^{m_0}(t) : \rchi^{m_1}(t) : \cdots : \rchi^{m_s}(t)]$$
 
@@ -146,7 +146,7 @@ $P$가 very ample lattice polytope일 때 (즉, $X_P$ 위에서 대응되는 div
 이제 우리는 가장 기본적인 projective toric variety, 즉 projective space $\mathbb{P}^n$의 예시를 살펴본다.
 
 ::: 예시 10
-Lattice $M = \mathbb{Z}^n$에서 *standard simplex* $\Delta_n \subset M_\mathbb{R}$를
+Lattice $M = \mathbb{Z}^n$에서 *standard simplex* $\Delta_n \subseteq M_\mathbb{R}$를
 
 $$\Delta_n = \{(x_1, \ldots, x_n) \in \mathbb{R}^n \mid x_i \ge 0,\; x_1 + \cdots + x_n \le 1\}$$
 

@@ -295,7 +295,7 @@ $$H^p(\mathbb{R}^m,\mathbb{R}^m\setminus B;A)\cong H_{m-p}(\mathbb{R}^m;A)$$
 
 holds for all $p$. (For $p\neq m$, this is the zero map between zero modules, so it is an isomorphism.) Now if we increase the radius of $B$ and construct a directed system covering all of $\mathbb{R}^m$, we know that $H_c^p(M)\rightarrow H_{m-p}(M)$ is an isomorphism.
 
-For the next step, suppose there exist two open sets $U,V$ of $M$ such that $M=U\cup V$ and the given statement holds for $U,V,U\cap V$. Then for each compact subset $K\subset U$, $L\subset V$, considering the relative Mayer–Vietoris sequence
+For the next step, suppose there exist two open sets $U,V$ of $M$ such that $M=U\cup V$ and the given statement holds for $U,V,U\cap V$. Then for each compact subset $K\subseteq U$, $L\subseteq V$, considering the relative Mayer–Vietoris sequence
 
 $$\cdots\rightarrow H^k(M,M\setminus(K\cap L);A)\rightarrow H^k(M,M\setminus K;A)\oplus H^k(M,M\setminus L;A)\rightarrow H^k(M,M\setminus(K\cup L);A)\rightarrow \cdots$$
 
@@ -307,7 +307,7 @@ and the induction is completed by the inductive process and [\[Homological Algeb
 
 However, since we do not assume that $M$ is compact, a slight additional argument is needed. First, suppose $M$ is the union of a nested family of open subsets
 
-$$U_1\subset U_2\subset\cdots$$
+$$U_1\subseteq U_2\subseteq\cdots$$
 
 and the given statement holds for each of them. Then any compact subset of $M$ must be contained in some $U_i$, and from this we obtain the following isomorphisms
 
@@ -325,7 +325,7 @@ $$U_1,\quad U_1\cup U_2, \quad U_1\cup U_2\cup U_3,\quad \cdots$$
 
 satisfies the conclusion. Therefore, applying the preceding (infinite) induction to the sequence of nested open subsets
 
-$$U_1\subset U_1\cup U_2\subset U_1\cup U_2\cup U_3\cdots$$
+$$U_1\subseteq U_1\cup U_2\subseteq U_1\cup U_2\cup U_3\cdots$$
 
 we obtain the desired result.
 
@@ -341,70 +341,70 @@ When $M$ is not $A$-orientable, the main reason [Theorem 11](#thm11) fails is fu
 To incorporate this twist into the duality, we now define *homology with local coefficients*.
 
 ::: Definition 14
-A locally constant sheaf $\mathscr{L}$ defined on $M$ is called a *local coefficient system*.
+A locally constant sheaf $\mathcal{L}$ defined on $M$ is called a *local coefficient system*.
 :::
 
-Let the stalk of the local system $\mathscr{L}$ be $L$. Then by [§Covering Spaces, ⁋Theorem 11](/en/math/algebraic_topology/covering_spaces#thm11), we know that for any path $\alpha:[0,1]\rightarrow M$, there exists an isomorphism $\mathscr{L}_{\alpha(0)}\rightarrow \mathscr{L}_{\alpha(1)}$ between stalks. This is nothing other than the isomorphism obtained by lifting the path $\alpha$ in the covering space $\Spe(\mathscr{L})\rightarrow M$. That is, we obtain the following functor
+Let the stalk of the local system $\mathcal{L}$ be $L$. Then by [§Covering Spaces, ⁋Theorem 11](/en/math/algebraic_topology/covering_spaces#thm11), we know that for any path $\alpha:[0,1]\rightarrow M$, there exists an isomorphism $\mathcal{L}_{\alpha(0)}\rightarrow \mathcal{L}_{\alpha(1)}$ between stalks. This is nothing other than the isomorphism obtained by lifting the path $\alpha$ in the covering space $\Spe(\mathcal{L})\rightarrow M$. That is, we obtain the following functor
 
-$$\Pi_1(M)\rightarrow \Ab; \qquad x\mapsto \mathscr{L}_x$$
+$$\Pi_1(M)\rightarrow \Ab; \qquad x\mapsto \mathcal{L}_x$$
 
-Then fixing a point $e_0=(1,0,\ldots,0)$ of $\Delta^k$, we define $C_\bullet(M,\mathscr{L})$ by the formula
+Then fixing a point $e_0=(1,0,\ldots,0)$ of $\Delta^k$, we define $C_\bullet(M,\mathcal{L})$ by the formula
 
-$$C_\bullet(M,\mathscr{L})=\bigoplus_{\sigma:\Delta^k\rightarrow M}\mathscr{L}_{\sigma(e_0)}$$
+$$C_\bullet(M,\mathcal{L})=\bigoplus_{\sigma:\Delta^k\rightarrow M}\mathcal{L}_{\sigma(e_0)}$$
 
-After all, for each $x$ we have $\mathscr{L}_x\cong L$, but the key point of this definition is that the $L$ at each point can differ via nontrivial automorphisms. Then the differential map of this chain complex is defined, for a singular $k$-simplex $\sigma:\Delta^k \rightarrow M$ and a coefficient $a\in \mathscr{L}_{\sigma(e_0)}$, by
+After all, for each $x$ we have $\mathcal{L}_x\cong L$, but the key point of this definition is that the $L$ at each point can differ via nontrivial automorphisms. Then the differential map of this chain complex is defined, for a singular $k$-simplex $\sigma:\Delta^k \rightarrow M$ and a coefficient $a\in \mathcal{L}_{\sigma(e_0)}$, by
 
-$$\partial_k(a\sigma)=\sum_{i=0}^k(-1)^k\mathscr{L}_{\sigma_k}(a) (\sigma\vert_{[v_0,\ldots, \hat{v}_i,\ldots,v_k]})$$
+$$\partial_k(a\sigma)=\sum_{i=0}^k(-1)^k\mathcal{L}_{\sigma_k}(a) (\sigma\vert_{[v_0,\ldots, \hat{v}_i,\ldots,v_k]})$$
 
-Here $\mathscr{L}_{\sigma_k}$ is obtained by applying the functor $\Pi_1(M) \rightarrow \Ab$ to the path in $M$ obtained by sending the edge joining the first vertex $\sigma(e_0)$ of the original simplex and the first vertex of the $k$th face. In nice cases such as our situation, we know that using the universal cover $\widetilde{M}$ of $M$ and the monodromy action (i.e., Deck transformation) on it, and the monodromy representation $\pi_1(X)\rightarrow \Aut(A)$, the chain complex
+Here $\mathcal{L}_{\sigma_k}$ is obtained by applying the functor $\Pi_1(M) \rightarrow \Ab$ to the path in $M$ obtained by sending the edge joining the first vertex $\sigma(e_0)$ of the original simplex and the first vertex of the $k$th face. In nice cases such as our situation, we know that using the universal cover $\widetilde{M}$ of $M$ and the monodromy action (i.e., Deck transformation) on it, and the monodromy representation $\pi_1(X)\rightarrow \Aut(A)$, the chain complex
 
 $$C(\widetilde{M})\otimes_{\mathbb{Z}[\pi_1(X)]} A$$
 
 gives the same homology group as the above homology group.
 
-This may be seen as somewhat excessive a generalization, because to describe the non-orientable version of Poincaré duality we will anyway set the local coefficient system $\mathscr{L}$ to be the constant sheaf $\underline{A}$. However, through this generalization we can also generalize the cohomology part, and this generalization makes Poincaré duality slightly more transparent.
+This may be seen as somewhat excessive a generalization, because to describe the non-orientable version of Poincaré duality we will anyway set the local coefficient system $\mathcal{L}$ to be the constant sheaf $\underline{A}$. However, through this generalization we can also generalize the cohomology part, and this generalization makes Poincaré duality slightly more transparent.
 
-For any topological space $X$ and a sheaf $\mathscr{F}$ defined on it, the global section functor
+For any topological space $X$ and a sheaf $\mathcal{F}$ defined on it, the global section functor
 
 $$\Gamma(X,-):\Sh(X;\mathcal{A})\rightarrow \mathcal{A}$$
 
 is a left exact functor, so its right derived functor exists. To compute this directly, we use the Godement resolution, which is defined as follows.
 
-Consider a topological space $X$ and a sheaf $\mathscr{F}$ defined on it, and consider the étalé space $\Spe(\mathscr{F})$. We know that $\mathscr{F}$ is exactly the sheaf of continuous sections of $\Spe(\mathscr{F})\rightarrow X$. Now for any open set $U$ define
+Consider a topological space $X$ and a sheaf $\mathcal{F}$ defined on it, and consider the étalé space $\Spe(\mathcal{F})$. We know that $\mathcal{F}$ is exactly the sheaf of continuous sections of $\Spe(\mathcal{F})\rightarrow X$. Now for any open set $U$ define
 
-$$\mathscr{G}_0(U)=\prod_{x\in U}\mathscr{F}_x$$
+$$\mathcal{G}_0(U)=\prod_{x\in U}\mathcal{F}_x$$
 
-That is, $\mathscr{G}_0$ is the sheaf of set-theoretic sections (not necessarily continuous) of $\Spe(\mathscr{F})\rightarrow X$. Our idea is to push into the quotient sheaf $\mathscr{Q}$ the cases where locally defined functions do not glue to a function, via the following sequence induced by the inclusion $\mathscr{F}\rightarrow \mathscr{G}_0$:
+That is, $\mathcal{G}_0$ is the sheaf of set-theoretic sections (not necessarily continuous) of $\Spe(\mathcal{F})\rightarrow X$. Our idea is to push into the quotient sheaf $\mathcal{Q}$ the cases where locally defined functions do not glue to a function, via the following sequence induced by the inclusion $\mathcal{F}\rightarrow \mathcal{G}_0$:
 
-$$0 \rightarrow \mathscr{F}\rightarrow \mathscr{G}_0 \rightarrow \mathscr{Q}\rightarrow 0$$
+$$0 \rightarrow \mathcal{F}\rightarrow \mathcal{G}_0 \rightarrow \mathcal{Q}\rightarrow 0$$
 
-Then for the sheaf $\mathscr{Q}$ as well, we can similarly make a sheaf defined by
+Then for the sheaf $\mathcal{Q}$ as well, we can similarly make a sheaf defined by
 
-$$\mathscr{G}_1(U)=\prod_{x\in U}\mathscr{Q}_x$$
+$$\mathcal{G}_1(U)=\prod_{x\in U}\mathcal{Q}_x$$
 
 and this defines the following *Godement resolution*
 
-$$0 \rightarrow \mathscr{F}\rightarrow \mathscr{G}_0 \rightarrow \mathscr{G}_1\rightarrow \cdots$$
+$$0 \rightarrow \mathcal{F}\rightarrow \mathcal{G}_0 \rightarrow \mathcal{G}_1\rightarrow \cdots$$
 
-Intuitively, this repeatedly puts into $\mathscr{Q}$ the part that prevents global sections of $\Spe(\mathscr{F})$ from existing, and then into $\mathscr{Q}'$ the part that prevents global sections of $\mathscr{Q}$ from existing, and so on. This resolution $\mathscr{G}_\bullet$ is not an injective resolution, but because each sheaf is a flabby (flasque) sheaf, we can compute the right derived functors $R^i\Gamma$ of the global section functor through it.
+Intuitively, this repeatedly puts into $\mathcal{Q}$ the part that prevents global sections of $\Spe(\mathcal{F})$ from existing, and then into $\mathcal{Q}'$ the part that prevents global sections of $\mathcal{Q}$ from existing, and so on. This resolution $\mathcal{G}_\bullet$ is not an injective resolution, but because each sheaf is a flabby (flasque) sheaf, we can compute the right derived functors $R^i\Gamma$ of the global section functor through it.
 
 ::: Definition 15
-For a topological space $X$ and a sheaf $\mathscr{F}$ defined on it, the $k$th homology of the sequence of global sections of the Godement resolution
+For a topological space $X$ and a sheaf $\mathcal{F}$ defined on it, the $k$th homology of the sequence of global sections of the Godement resolution
 
-$$0 \rightarrow \mathscr{F}(X)\rightarrow \mathscr{G}_0(X)\rightarrow \mathscr{G}_1(X)\rightarrow \cdots$$
+$$0 \rightarrow \mathcal{F}(X)\rightarrow \mathcal{G}_0(X)\rightarrow \mathcal{G}_1(X)\rightarrow \cdots$$
 
 is denoted by
 
-$$H^k(X; \mathscr{F})$$
+$$H^k(X; \mathcal{F})$$
 
 and is called *sheaf cohomology*.
 :::
 
 For more details on this, see [\[Algebraic Varieties\] §Sheaf Cohomology, ⁋Definition 1](/en/math/algebraic_varieties/sheaf_cohomology#def1). Poincaré duality is now generalized to the following isomorphism
 
-$$H^k(M;\mathscr{L})\cong H_{m-k}(M;\or_M^A\otimes \mathscr{L})$$
+$$H^k(M;\mathcal{L})\cong H_{m-k}(M;\or_M^A\otimes \mathcal{L})$$
 
-To return to the original Poincaré duality from this, we first set $\mathscr{L}$ to the constant sheaf $\underline{A}$. Then in nice cases such as manifolds, it is known that sheaf cohomology $H^k(M;\underline{A})$ is isomorphic to singular cohomology $H^k(M;A)$, so we obtain the following isomorphism
+To return to the original Poincaré duality from this, we first set $\mathcal{L}$ to the constant sheaf $\underline{A}$. Then in nice cases such as manifolds, it is known that sheaf cohomology $H^k(M;\underline{A})$ is isomorphic to singular cohomology $H^k(M;A)$, so we obtain the following isomorphism
 
 $$H^k(M;A)\cong H_{m-k}(M;\or_M^A)$$
 

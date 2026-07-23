@@ -51,16 +51,16 @@ $$\mathcal{B}_U=\left\{B\cap U\mid B\in \mathcal{B}\right\}$$
 ::: 예시 4
 열린집합 $U\subseteq \mathbb{R}^n$과 연속함수 $f:U\rightarrow\mathbb{R}^k$에 대하여, $f$의 graph 
 
-$$\Gamma(f)=\left\{(x,f(x))\mid x\in U\right\}\subset \mathbb{R}^m\times \mathbb{R}^k$$
+$$\graph(f)=\left\{(x,f(x))\mid x\in U\right\}\subseteq \mathbb{R}^n\times \mathbb{R}^k$$
 
 는 $m$-manifold이다. 사실 이는 다음의 두 연속함수
 
 $$x\mapsto (x,f(x)),\qquad (x,f(x))\mapsto x$$
 
-가 서로의 inverse이므로 $\Gamma(f)$와 $U$가 homeomorphic하기 때문이다. 
+가 서로의 inverse이므로 $\graph(f)$와 $U$가 homeomorphic하기 때문이다. 
 :::
 
-[\[위상수학\] §하우스도르프 공간, ⁋따름정리 7](/ko/math/topology/Hausdorff_spaces#cor7)에 의해 $\Gamma(f)$는 $\mathbb{R}^{m+k}$의 닫힌집합이므로, 이는 [예시 3](#ex3)과는 다소 다른 결의 예시를 준다. 
+[\[위상수학\] §하우스도르프 공간, ⁋따름정리 7](/ko/math/topology/Hausdorff_spaces#cor7)에 의해 $\graph(f)$는 $\mathbb{R}^{m+k}$의 닫힌집합이므로, 이는 [예시 3](#ex3)과는 다소 다른 결의 예시를 준다. 
 
 한편 product topology에 대해서도 다음이 성립한다. 
 
@@ -78,7 +78,7 @@ $$\mathcal{B}=\left\{B_1\times B_2\mid B_i\in \mathcal{B}_i\right\}$$
 Quotient map $X \rightarrow X/R$에 대하여, $X$가 second-countable이고 $X/R$이 locally Euclidean이라 하자. 그럼 $X/R$은 second countable이다. 
 :::
 ::: 증명
-$X/R$이 locally Euclidean이므로 $X/R$을 Euclidean neighborhood들 $(U_i)_{i\in I}$로 덮을 수 있으며 이들의 premimage들의 모임 $(\pi^{-1}(U_i))_{i\in I}$들이 $X$를 덮는다. 이제 임의의 second-countable space는 Lindelöf이므로 ([§옹골성과 필터의 수렴, ⁋명제 12](/ko/math/topology/filter_convergence#prop12)) 적당한 countable subset $J\subset I$이 존재하여 $(\pi^{-1}(U_i)_{i\in J}$가 $X$의 countable open cover이며, 따라서 이들에 해당하는 $(U_i)_{i\in J}$들이 $X/R$의 countable cover가 된다. 그런데 이들 각각은 Euclidean neighborhood이므로 다시 countable base를 가지며, 이러한 것들이 countable하게 있으므로 이들을 모두 모은 것이 $X/R$의 countable base가 된다.
+$X/R$이 locally Euclidean이므로 $X/R$을 Euclidean neighborhood들 $(U_i)_{i\in I}$로 덮을 수 있으며 이들의 premimage들의 모임 $(\pi^{-1}(U_i))_{i\in I}$들이 $X$를 덮는다. 이제 임의의 second-countable space는 Lindelöf이므로 ([§옹골성과 필터의 수렴, ⁋명제 12](/ko/math/topology/filter_convergence#prop12)) 적당한 countable subset $J\subseteq I$이 존재하여 $(\pi^{-1}(U_i)_{i\in J}$가 $X$의 countable open cover이며, 따라서 이들에 해당하는 $(U_i)_{i\in J}$들이 $X/R$의 countable cover가 된다. 그런데 이들 각각은 Euclidean neighborhood이므로 다시 countable base를 가지며, 이러한 것들이 countable하게 있으므로 이들을 모두 모은 것이 $X/R$의 countable base가 된다.
 :::
 
 이 category의 흐름으로만 본다면 우리의 관심은 topological manifold로 한정지어도 충분할 것이나, 특히 cohomology의 곱셈 구조를 다룰 때는 미분다양체에서의 적분의 개념을 떠올리는 것이 더 편하다. 

@@ -13,7 +13,7 @@ date: 2026-05-18
 weight: 4
 ---
 
-[§토릭 다양체의 정의](/ko/math/toric_geometry/toric_varieties)에서 우리는 lattice polytope $P \subset M_{\mathbb{R}}$의 normal fan $\Sigma_P$을 통해 projective toric variety $X_P$를 구성하는 방법을 살펴 보았다. 이 구성에서 $P$의 기하학적 성질이 $X_P$의 대수기하학적 성질로 변환되는 여러 경로가 존재하며, 그 중에서도 특별한 위치를 차지하는 것이 *reflexive polytope*이다. 
+[§토릭 다양체의 정의](/ko/math/toric_geometry/toric_varieties)에서 우리는 lattice polytope $P \subseteq M_{\mathbb{R}}$의 normal fan $\Sigma_P$을 통해 projective toric variety $X_P$를 구성하는 방법을 살펴 보았다. 이 구성에서 $P$의 기하학적 성질이 $X_P$의 대수기하학적 성질로 변환되는 여러 경로가 존재하며, 그 중에서도 특별한 위치를 차지하는 것이 *reflexive polytope*이다. 
 
 ## 반사 다면체
 
@@ -35,7 +35,7 @@ $$\Delta^\circ = \{ v \in N_{\mathbb{R}} \mid \langle u, v \rangle \ge -1 \text{
 그 이름에 걸맞게, reflexive polytope의 가장 기본적인 성질은 dual 연산 $\Delta \mapsto \Delta^\circ$이 reflexive polytope들의 모임 위에서 involution을 이룬다는 것이다.
 
 ::: 명제 2 (Bipolar theorem)
-$\Delta \subset M_{\mathbb{R}}$가 reflexive polytope이면 $\Delta^\circ \subset N_{\mathbb{R}}$도 reflexive polytope이며, $(\Delta^\circ)^\circ = \Delta$가 성립한다.
+$\Delta \subseteq M_{\mathbb{R}}$가 reflexive polytope이면 $\Delta^\circ \subseteq N_{\mathbb{R}}$도 reflexive polytope이며, $(\Delta^\circ)^\circ = \Delta$가 성립한다.
 :::
 
 ::: 증명
@@ -50,7 +50,7 @@ $\Delta$가 reflexive이므로 $\Delta^\circ$는 정의에 의해 lattice polyto
 
 대수기하학에서 *Fano variety*는 anticanonical divisor $-K_X$가 ample인 normal projective variety $X$를 의미한다. 여기서 canonical divisor $K_X$는 canonical bundle에 대응하는 divisor class이며 ([\[대수다양체\] §표준선다발, ⁋정의 6](/ko/math/algebraic_varieties/canonical_bundle#def6)), $-K_X$는 그 역원이다. 만약 $-K_X$가 추가로 Cartier divisor라면 $X$를 *Gorenstein Fano variety*라 부른다. Toric variety의 맥락에서 이 조건은 매우 명시적인 조합론적 조건으로 번역된다.
 
-[§토릭 다양체의 정의, ⁋명제 8](/ko/math/toric_geometry/toric_varieties#prop8)에서 보았듯, lattice polytope $P \subset M_{\mathbb{R}}$이 주어지면 이것이 정의하는 normal fan $\Sigma_P$을 통해 projective toric variety $X_P = X_{\Sigma_P}$를 구성할 수 있다. 이제 $P = \Delta$가 reflexive polytope라고 가정하자.
+[§토릭 다양체의 정의, ⁋명제 8](/ko/math/toric_geometry/toric_varieties#prop8)에서 보았듯, lattice polytope $P \subseteq M_{\mathbb{R}}$이 주어지면 이것이 정의하는 normal fan $\Sigma_P$을 통해 projective toric variety $X_P = X_{\Sigma_P}$를 구성할 수 있다. 이제 $P = \Delta$가 reflexive polytope라고 가정하자.
 
 ::: 명제 3
 Toric variety $X_\Sigma$의 anticanonical divisor $-K_{X_\Sigma}$, 즉 canonical divisor의 역원은 모든 boundary divisor의 합으로 주어진다.
@@ -63,13 +63,13 @@ $$-K_{X_\Sigma} = \sum_{\rho \in \Sigma(1)} D_\rho.$$
 ::: 증명
 [\[대수다양체\] §표준선다발, ⁋정의 6](/ko/math/algebraic_varieties/canonical_bundle#def6)에서 canonical divisor $K_X$는 canonical bundle $\omega_X = \det \Omega^1_X$에 대응하는 divisor class로 정의되었다. 우리는 $K_{X_\Sigma} = -\sum_\rho D_\rho$임을 보여 그 역원이 위의 형태가 되는 것을 증명한다.
 
-Open dense torus $T_N = \operatorname{Spec} \mathbb{C}[M] \subset X_\Sigma$ 위에서, $M$의 기저 $m_1, \ldots, m_n$을 잡으면 character $\chi^{m_i}$들이 torus의 좌표가 되고, top form
+Open dense torus $T_N = \Spec \mathbb{C}[M] \subseteq X_\Sigma$ 위에서, $M$의 기저 $m_1, \ldots, m_n$을 잡으면 character $\rchi^{m_i}$들이 torus의 좌표가 되고, top form
 
-$$\omega = \frac{d\chi^{m_1}}{\chi^{m_1}} \wedge \cdots \wedge \frac{d\chi^{m_n}}{\chi^{m_n}}$$
+$$\omega = \frac{d\rchi^{m_1}}{\rchi^{m_1}} \wedge \cdots \wedge \frac{d\rchi^{m_n}}{\rchi^{m_n}}$$
 
 이 $\Omega^n_{T_N}$을 trivialize한다. 이는 $M$의 기저 선택과 무관한 $T_N$-invariant top form이며, $X_\Sigma$ 위의 rational $n$-form으로 자연스럽게 확장된다.
 
-이제 각 boundary divisor $D_\rho$ 위에서 $\omega$의 vanishing degree를 계산하자. Ray $\rho \in \Sigma(1)$의 primitive generator $v_\rho \in N$을 첫 번째 기저로 하는 $N$의 적절한 기저를 잡고 그 dual로 $M$의 기저 $m_1, \ldots, m_n$을 택하면, $\rho$를 face로 갖는 affine chart $U_\sigma$에서 $D_\rho$의 local equation은 $\chi^{m_1} = 0$이다. 그럼 위 표현에서 $d\chi^{m_1}/\chi^{m_1}$ 항이 $D_\rho$를 따라 정확히 1차 pole을 만들고, 다른 인자들은 $D_\rho$ 근방에서 regular하므로 $\omega$는 $D_\rho$를 따라 정확히 1차 pole을 갖는다. 따라서
+이제 각 boundary divisor $D_\rho$ 위에서 $\omega$의 vanishing degree를 계산하자. Ray $\rho \in \Sigma(1)$의 primitive generator $v_\rho \in N$을 첫 번째 기저로 하는 $N$의 적절한 기저를 잡고 그 dual로 $M$의 기저 $m_1, \ldots, m_n$을 택하면, $\rho$를 face로 갖는 affine chart $U_\sigma$에서 $D_\rho$의 local equation은 $\rchi^{m_1} = 0$이다. 그럼 위 표현에서 $d\rchi^{m_1}/\rchi^{m_1}$ 항이 $D_\rho$를 따라 정확히 1차 pole을 만들고, 다른 인자들은 $D_\rho$ 근방에서 regular하므로 $\omega$는 $D_\rho$를 따라 정확히 1차 pole을 갖는다. 따라서
 
 $$\divisor(\omega) = -\sum_{\rho \in \Sigma(1)} D_\rho$$
 
@@ -81,7 +81,7 @@ $$\divisor(\omega) = -\sum_{\rho \in \Sigma(1)} D_\rho$$
 Anticanonical divisor $-K_{X_\Sigma}$가 Cartier divisor일 때 그에 대응하는 piecewise linear function $\psi_{-K} \in \PL(\Sigma, M)$은 정확히 $\psi_{-K}(v_\rho) = -1$가 모든 $\rho \in \Sigma(1)$에 대해 성립하는 함수이다. 또, 우리는 [§토러스 인자와 선다발, ⁋명제 6](/ko/math/toric_geometry/toric_divisors#prop6)에서 maximal cone에서만 이 조건을 체크해도 될 뿐만 아니라, 해당 조건이 정확하게 주어진 divisor가 Cartier divisor일 조건과 일치하는 것을 살펴보았다. 이제 이 조건이 reflexive polytope의 dual $\Delta^\circ$의 꼭짓점 조건과 정확히 일치한다는 것이 다음 명제의 핵심이다.
 
 ::: 명제 4
-Reflexive polytope $\Delta \subset M_{\mathbb{R}}$에 대해, $\Delta$의 normal fan을 $\Sigma_\Delta$라 하고 대응하는 toric variety를 $X_\Delta = X_{\Sigma_\Delta}$라 적으면, $X_\Delta$는 Gorenstein Fano variety이다. 역으로, 어떤 complete toric variety $X_\Sigma$가 Gorenstein Fano이면 $\Sigma$는 어떤 reflexive polytope의 normal fan이다.
+Reflexive polytope $\Delta \subseteq M_{\mathbb{R}}$에 대해, $\Delta$의 normal fan을 $\Sigma_\Delta$라 하고 대응하는 toric variety를 $X_\Delta = X_{\Sigma_\Delta}$라 적으면, $X_\Delta$는 Gorenstein Fano variety이다. 역으로, 어떤 complete toric variety $X_\Sigma$가 Gorenstein Fano이면 $\Sigma$는 어떤 reflexive polytope의 normal fan이다.
 :::
 
 ::: 증명
@@ -103,15 +103,15 @@ $$\langle u_{\sigma'}, v\rangle = \sum_{\rho \in \sigma(1)} c_\rho \langle u_{\s
 
 $$\Delta = \{ u \in M_{\mathbb{R}} \mid \langle u, v_\rho \rangle \ge -1 \text{ for all } \rho \in \Sigma(1) \}$$
 
-으로 정의하면, $\Delta$는 lattice polytope이며 $0 \in \operatorname{int}(\Delta)$이다. $\Delta$의 dual은 $\Delta^\circ = \operatorname{conv}\{v_\rho \mid \rho \in \Sigma(1)\}$가 되고, 이는 lattice polytope이므로 $\Delta$는 reflexive이다. $\Sigma$가 $\Delta$의 normal fan임은 정의로부터 확인할 수 있다.
+으로 정의하면, $\Delta$는 lattice polytope이며 $0 \in \interior(\Delta)$이다. $\Delta$의 dual은 $\Delta^\circ = \operatorname{conv}\{v_\rho \mid \rho \in \Sigma(1)\}$가 되고, 이는 lattice polytope이므로 $\Delta$는 reflexive이다. $\Sigma$가 $\Delta$의 normal fan임은 정의로부터 확인할 수 있다.
 :::
 
 한편, reflexive polytope $\Delta$와 Gorenstein Fano variety $X_\Delta$ 사이의 대응은 단순히 variety의 존재를 넘어, 그 위에 놓인 line bundle의 해들 사이의 대응으로도 확장된다. 구체적으로, anticanonical divisor $-K_{X_\Delta}$에 대응하는 line bundle $\mathcal{O}_{X_\Delta}(-K_{X_\Delta})$의 global section들은 reflexive polytope $\Delta$ 내부의 lattice point들과 일대일로 대응한다.
 
 ::: 명제 5
-Reflexive polytope $\Delta \subset M_{\mathbb{R}}$와 대응하는 toric variety $X_\Delta$에 대해, 다음의 $\mathbb{C}$-vector space isomorphism이 성립한다.
+Reflexive polytope $\Delta \subseteq M_{\mathbb{R}}$와 대응하는 toric variety $X_\Delta$에 대해, 다음의 $\mathbb{C}$-vector space isomorphism이 성립한다.
 
-$$H^0\bigl(X_\Delta, \mathcal{O}_{X_\Delta}(-K_{X_\Delta})\bigr) \cong \bigoplus_{u \in \Delta \cap M} \mathbb{C} \cdot \chi^u.$$
+$$H^0\bigl(X_\Delta, \mathcal{O}_{X_\Delta}(-K_{X_\Delta})\bigr) \cong \bigoplus_{u \in \Delta \cap M} \mathbb{C} \cdot \rchi^u.$$
 :::
 
 ::: 증명
@@ -119,7 +119,7 @@ Toric variety에서 $T_N$-invariant Cartier divisor $D$에 대응하는 polytope
 
 $$P_D = \{ u \in M_{\mathbb{R}} \mid \langle u, v_\rho \rangle \ge -a_\rho \text{ for all } \rho \in \Sigma(1) \}$$
 
-으로 정의되며, [§토러스 인자와 선다발, ⁋명제 7](/ko/math/toric_geometry/toric_divisors#prop7)에서 보인 바와 같이 $H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))$의 basis는 $P_D \cap M$의 원소들에 대응하는 characters $\chi^u$들로 주어진다. Anticanonical divisor $-K_{X_\Delta}$의 경우 $a_\rho = 1$ for all $\rho$이므로,
+으로 정의되며, [§토러스 인자와 선다발, ⁋명제 7](/ko/math/toric_geometry/toric_divisors#prop7)에서 보인 바와 같이 $H^0(X_\Sigma, \mathcal{O}_{X_\Sigma}(D))$의 basis는 $P_D \cap M$의 원소들에 대응하는 characters $\rchi^u$들로 주어진다. Anticanonical divisor $-K_{X_\Delta}$의 경우 $a_\rho = 1$ for all $\rho$이므로,
 
 $$P_{-K} = \{ u \in M_{\mathbb{R}} \mid \langle u, v_\rho \rangle \ge -1 \text{ for all } \rho \in \Sigma_\Delta(1) \}$$
 
@@ -128,7 +128,7 @@ $$P_{-K} = \{ u \in M_{\mathbb{R}} \mid \langle u, v_\rho \rangle \ge -1 \text{ 
 
 이 결과는 reflexive polytope의 lattice point 개수가 Gorenstein Fano variety의 anticanonical line bundle의 해들의 차원, 즉 *anticanonical degree*를 결정함을 의미한다. 특히 $\Delta \cap M$의 원소 개수는 $h^0(X_\Delta, \mathcal{O}(-K_{X_\Delta}))$와 같다.
 
-역시 가장 기본적인 reflexive polytope의 예시는 projective space $\mathbb{P}^n$에 대응하는 simplex이다. [§토릭 다양체의 정의, ⁋예시 10](/ko/math/toric_geometry/toric_varieties#ex10)에서 standard simplex $\Delta_n$의 normal fan이 $\mathbb{P}^n$의 표준 fan임을 보았다. 그러나 $\Delta_n$의 꼭짓점 중 하나가 원점이므로 $0 \notin \operatorname{int}(\Delta_n)$이다. 따라서 $\Delta_n$ 자체는 reflexive polytope이 아니다. 대신, 이 polytope의 각 변을 적절히 늘려 원점을 interior로 옮긴 (닮음인) polytope을 생각할 수 있다.
+역시 가장 기본적인 reflexive polytope의 예시는 projective space $\mathbb{P}^n$에 대응하는 simplex이다. [§토릭 다양체의 정의, ⁋예시 10](/ko/math/toric_geometry/toric_varieties#ex10)에서 standard simplex $\Delta_n$의 normal fan이 $\mathbb{P}^n$의 표준 fan임을 보았다. 그러나 $\Delta_n$의 꼭짓점 중 하나가 원점이므로 $0 \notin \interior(\Delta_n)$이다. 따라서 $\Delta_n$ 자체는 reflexive polytope이 아니다. 대신, 이 polytope의 각 변을 적절히 늘려 원점을 interior로 옮긴 (닮음인) polytope을 생각할 수 있다.
 
 ::: 예시 6
 Lattice $M = \mathbb{Z}^n$에서 다음의 polytope
@@ -155,7 +155,7 @@ $$(-1,-1), (-1,0), (-1,1), (-1,2), (0,-1), (0,0), (0,1), (1,-1), (1,0), (2,-1)$$
 자연스러운 질문은 이들 두 variety들 $X_\Delta$와 $X_{\Delta^\circ}$ 사이에 기하학적 관계가 있느냐는 것이다. 위의 간단한 예시에서 보았듯, 일반적으로 $X_\Delta$와 $X_{\Delta^\circ}$ 사이에는 직접적인 morphism이나 birational 동형이 존재하지 않는다. 대신 둘 사이의 진정한 연결은 anticanonical hypersurface를 매개로 드러난다. 그 출발점은 다음의 고전적인 adjunction 결과이다.
 
 ::: 명제 7
-Smooth Fano variety $X$의 anticanonical linear system $\lvert -K_X \rvert$ 안의 smooth divisor $V \subset X$는 trivial canonical bundle을 갖는다. 즉 $K_V = 0$이다.
+Smooth Fano variety $X$의 anticanonical linear system $\lvert -K_X \rvert$ 안의 smooth divisor $V \subseteq X$는 trivial canonical bundle을 갖는다. 즉 $K_V = 0$이다.
 :::
 
 ::: 증명
@@ -205,7 +205,7 @@ Toric setting에서 crepant resolution은 매우 명시적인 lattice 데이터�
 
 Batyrev의 핵심 통찰은 두 Calabi-Yau family $V, V^\circ$가 서로 *mirror dual*을 이룬다는 것이다. 보다 구체적으로, reflexive pair $(\Delta, \Delta^\circ)$로부터 만들어지는 두 family
 
-$$\bigl\{ V \subset X_\Delta : V \in \lvert -K_{X_\Delta}\rvert \bigr\}, \qquad \bigl\{ V^\circ \subset X_{\Delta^\circ} : V^\circ \in \lvert -K_{X_{\Delta^\circ}}\rvert \bigr\}$$
+$$\bigl\{ V \subseteq X_\Delta : V \in \lvert -K_{X_\Delta}\rvert \bigr\}, \qquad \bigl\{ V^\circ \subseteq X_{\Delta^\circ} : V^\circ \in \lvert -K_{X_{\Delta^\circ}}\rvert \bigr\}$$
 
 의 generic member들의 stringy Hodge number는 $n \ge 4$일 때 다음의 mirror 대칭
 

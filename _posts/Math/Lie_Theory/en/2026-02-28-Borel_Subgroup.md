@@ -155,7 +155,7 @@ For a Borel subalgebra $\mathfrak{b}$, the following hold.
 ::: Proof
 (1) Consider the derived series of $\mathfrak{b}$. We have $\mathfrak{b}^{(1)}=[\mathfrak{b},\mathfrak{b}]=\mathfrak{n}$, and since $\mathfrak{n}$ is nilpotent, $\mathfrak{b}$ is solvable. Concretely, $\mathfrak{n}$ has a structure analogous to the algebra of strictly upper triangular matrices.
 
-(2) Suppose $\mathfrak{s}$ is a solvable subalgebra containing $\mathfrak{b}$. By the root decomposition it must be of the form $\mathfrak{s}=\mathfrak{h}\oplus\bigoplus_{\alpha\in S}\mathfrak{g}_\alpha$. If $S$ omits some positive root then $\mathfrak{s}\subset\mathfrak{b}$; if $S$ contains a negative root then $\mathfrak{s}$ is no longer solvable. Hence $\mathfrak{s}=\mathfrak{b}$.
+(2) Suppose $\mathfrak{s}$ is a solvable subalgebra containing $\mathfrak{b}$. By the root decomposition it must be of the form $\mathfrak{s}=\mathfrak{h}\oplus\bigoplus_{\alpha\in S}\mathfrak{g}_\alpha$. If $S$ omits some positive root then $\mathfrak{s}\subseteq\mathfrak{b}$; if $S$ contains a negative root then $\mathfrak{s}$ is no longer solvable. Hence $\mathfrak{s}=\mathfrak{b}$.
 
 (3) Since $\Ad(g)\mathfrak{b}$ is again a maximal solvable subalgebra, by (2) it is the Borel subalgebra for some positive system.
 :::
@@ -178,16 +178,16 @@ For a complex semisimple Lie group $G_\mathbb{C}$ and a Borel subgroup $B$, the 
 $$\mathcal{F}=G_\mathbb{C}/B.$$
 :::
 
-The term *flag variety* arises because for $\GL(n,\mathbb{C})$, the space $\mathcal{F}$ coincides with the space of complete flags in $\mathbb{C}^n$. In general the flag variety is a projective variety, and it is deeply connected to the representation theory of $G_\mathbb{C}$.
+The term *flag variety* arises because for $\GL(n;\mathbb{C})$, the space $\mathcal{F}$ coincides with the space of complete flags in $\mathbb{C}^n$. In general the flag variety is a projective variety, and it is deeply connected to the representation theory of $G_\mathbb{C}$.
 
 ::: Example 13
-Consider the case $G_\mathbb{C}=\GL(n,\mathbb{C})$. The Borel subgroup $B$ is the group of upper triangular matrices, and the flag variety $\GL(n,\mathbb{C})/B$ is in bijection with the space of complete flags in $\mathbb{C}^n$,
+Consider the case $G_\mathbb{C}=\GL(n;\mathbb{C})$. The Borel subgroup $B$ is the group of upper triangular matrices, and the flag variety $\GL(n;\mathbb{C})/B$ is in bijection with the space of complete flags in $\mathbb{C}^n$,
 
-$$0=V_0\subset V_1\subset V_2\subset\cdots\subset V_n=\mathbb{C}^n,\qquad \dim V_i=i.$$
+$$0=V_0\subseteq V_1\subseteq V_2\subseteq\cdots\subseteq V_n=\mathbb{C}^n,\qquad \dim V_i=i.$$
 
-Specifically, the coset $gB\in\GL(n,\mathbb{C})/B$ corresponds to the flag $V_i=\span\{ge_1,\ldots,ge_i\}$. This space is realized as a projective variety via the embedding
+Specifically, the coset $gB\in\GL(n;\mathbb{C})/B$ corresponds to the flag $V_i=\span\{ge_1,\ldots,ge_i\}$. This space is realized as a projective variety via the embedding
 
-$$\GL(n,\mathbb{C})/B\hookrightarrow\mathbb{P}(\wedge^1\mathbb{C}^n)\times\mathbb{P}(\wedge^2\mathbb{C}^n)\times\cdots\times\mathbb{P}(\wedge^{n-1}\mathbb{C}^n).$$
+$$\GL(n;\mathbb{C})/B\hookrightarrow\mathbb{P}(\wedge^1\mathbb{C}^n)\times\mathbb{P}(\wedge^2\mathbb{C}^n)\times\cdots\times\mathbb{P}(\wedge^{n-1}\mathbb{C}^n).$$
 :::
 
 ## Connection with the Compact Form
@@ -202,12 +202,12 @@ A *compact form* of a complex Lie group $G_\mathbb{C}$ is a compact Lie group $G
 3. The Killing form is negative definite on $\mathfrak{g}_0$.
 :::
 
-Every complex semisimple Lie group admits a compact form. For example, the compact form of $\SL(n,\mathbb{C})$ is $\SU(n)$, that of $\SO(n,\mathbb{C})$ is $\SO(n)$, and that of $\Sp(2n,\mathbb{C})$ is $\Sp(n)=\Sp(2n,\mathbb{C})\cap\operatorname{U}(2n)$.
+Every complex semisimple Lie group admits a compact form. For example, the compact form of $\SL(n;\mathbb{C})$ is $\SU(n)$, that of $\SO(n;\mathbb{C})$ is $\SO(n)$, and that of $\Sp(2n;\mathbb{C})$ is $\Sp(n)=\Sp(2n;\mathbb{C})\cap\Umat(2n)$.
 
 We now state the central result.
 
 ::: Proposition 15
-Let $G$ be a compact connected Lie group, $G_\mathbb{C}$ its complexification, $T\subset G$ a maximal torus, and $B\subset G_\mathbb{C}$ the corresponding Borel subgroup. Then the inclusion
+Let $G$ be a compact connected Lie group, $G_\mathbb{C}$ its complexification, $T\subseteq G$ a maximal torus, and $B\subseteq G_\mathbb{C}$ the corresponding Borel subgroup. Then the inclusion
 
 $$G/T\hookrightarrow G_\mathbb{C}/B$$
 
@@ -256,11 +256,11 @@ The statement concerning closures follows from the definition of the Bruhat orde
 The Bruhat decomposition provides a cell decomposition of the flag variety $G_\mathbb{C}/B$. For each $w\in W$, the Schubert cell $X_w=BwB/B$ is isomorphic to an affine space of dimension $\ell(w)$, and these cells together cover all of $G_\mathbb{C}/B$. Here $\ell(w)$ is the *length* of $w$, i.e. the minimal number of simple reflections needed to express $w$.
 
 ::: Example 17
-When $G_\mathbb{C}=\GL(n,\mathbb{C})$, the Weyl group is $W\cong S_n$, and for each permutation $\sigma\in S_n$ the length $\ell(\sigma)$ equals the number of inversions. The concrete form of this decomposition and its relation to Gaussian elimination are discussed in [§Bruhat Decomposition, ⁋Example 7](/en/math/lie_theory/bruhat_decomposition#ex7).
+When $G_\mathbb{C}=\GL(n;\mathbb{C})$, the Weyl group is $W\cong S_n$, and for each permutation $\sigma\in S_n$ the length $\ell(\sigma)$ equals the number of inversions. The concrete form of this decomposition and its relation to Gaussian elimination are discussed in [§Bruhat Decomposition, ⁋Example 7](/en/math/lie_theory/bruhat_decomposition#ex7).
 
-Specifically, an inversion of $\sigma$ is a pair $(i,j)$ with $i<j$ and $\sigma(i)>\sigma(j)$. By the Bruhat decomposition, $\GL(n,\mathbb{C})/B$ admits a cell decomposition ranging from a $0$-dimensional cell (the identity permutation, with $0$ inversions) up to an $n(n-1)/2$-dimensional cell (the reverse permutation, with the maximum number of inversions).
+Specifically, an inversion of $\sigma$ is a pair $(i,j)$ with $i<j$ and $\sigma(i)>\sigma(j)$. By the Bruhat decomposition, $\GL(n;\mathbb{C})/B$ admits a cell decomposition ranging from a $0$-dimensional cell (the identity permutation, with $0$ inversions) up to an $n(n-1)/2$-dimensional cell (the reverse permutation, with the maximum number of inversions).
 
-From this cell decomposition one can compute the cohomology of $\GL(n,\mathbb{C})/B$; its Betti numbers are determined by the Bruhat order on the Weyl group.
+From this cell decomposition one can compute the cohomology of $\GL(n;\mathbb{C})/B$; its Betti numbers are determined by the Bruhat order on the Weyl group.
 :::
 
 ---

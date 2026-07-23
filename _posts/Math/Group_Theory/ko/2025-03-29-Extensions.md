@@ -83,7 +83,7 @@ Extension $\mathcal{E}:F \rightarrow E \rightarrow G$에 대하여, 다음이 �
 거꾸로 둘째 조건이 성립한다 가정하자. 그럼 $(r,p): E \rightarrow F\oplus G$가 주어진 extension과 $F \rightarrow F\oplus G \rightarrow G$ 사이의 isomorphism이 된다. 비슷하게 셋째 조건을 가정하자. 그럼 $s(G)$가 $i(F)$의 centralizer에 포함되므로 $F\oplus G$에서 $F$와 $G$의 weak direct product를 거친 후 $E$로 가는 morphism을 만들 수 있다. 
 :::
 
-만일 $i(F)$가 $E$의 center $C(E)$에 포함되었다면, 세 번째 조건에서 $s(G)$와 $i(F)$의 관계는 무시하여도 좋을 것이다. ([\[대수적 구조\] §군의 작용, ⁋정의 12](/ko/math/algebraic_structures/group_actions#def12))
+만일 $i(F)$가 $E$의 center $Z(E)$에 포함되었다면, 세 번째 조건에서 $s(G)$와 $i(F)$의 관계는 무시하여도 좋을 것이다. ([\[대수적 구조\] §군의 작용, ⁋정의 12](/ko/math/algebraic_structures/group_actions#def12))
 
 ::: 정의 5
 Extension $\mathcal{E}:F \rightarrow E \rightarrow G$가 *central extension<sub>중심확장</sub>*이라는 것은 $F$의 $E$에서의 image가 $E$의 center에 포함되는 것이다. 

@@ -25,7 +25,7 @@ $$d_1>d_2>\cdots>d_m>0$$
 
 and a descending chain of ideals of $A$
 
-$$\mathfrak{a}_1\subset \mathfrak{a}_2\subset\cdots\subset \mathfrak{a}_m$$
+$$\mathfrak{a}_1\subseteq \mathfrak{a}_2\subseteq\cdots\subseteq \mathfrak{a}_m$$
 
 with $\dim \mathfrak{a}_i=d_i$. Then there exists a suitable subring $B\cong \mathbb{K}[\x_1,\ldots, \x_d]$ of $A$ such that $A$ is finitely generated as a $B$-module and the identity
 
@@ -48,11 +48,11 @@ The proof of [Theorem 1](#thm1) is then as follows.
 ::: Proof (Theorem 1)
 Since $A$ is a finitely generated $\mathbb{K}$-algebra, we may write $A=\mathbb{K}[\y_1,\ldots, \y_r]/\mathfrak{a}$. Given a chain of ideals satisfying the stated conditions, we consider the chain of their preimages in $\mathbb{K}[\y_1,\ldots, \y_r]$
 
-$$\tilde{\mathfrak{a}}_1\subset \tilde{\mathfrak{a}}_2\subset\cdots\subset  \tilde{\mathfrak{a}}_m$$
+$$\tilde{\mathfrak{a}}_1\subseteq \tilde{\mathfrak{a}}_2\subseteq\cdots\subseteq  \tilde{\mathfrak{a}}_m$$
 
 and insert $\mathfrak{a}_0=\mathfrak{a}$ to view it as a descending chain of ideals in $\mathbb{K}[\y_1,\ldots, \y_r]$
 
-$$\mathfrak{a}\subset \tilde{\mathfrak{a}}_1\subset \tilde{\mathfrak{a}}_2\subset\cdots\subset  \tilde{\mathfrak{a}}_m.$$
+$$\mathfrak{a}\subseteq \tilde{\mathfrak{a}}_1\subseteq \tilde{\mathfrak{a}}_2\subseteq\cdots\subseteq  \tilde{\mathfrak{a}}_m.$$
 
 Thus it suffices to prove the claim only for the polynomial ring $A=\mathbb{K}[\y_1,\ldots, \y_r]$. In this case, by [§System of Parameters, ⁋Corollary 11](/en/math/commutative_algebra/system_of_parameters#cor11) we must have $r=d$.
 
@@ -94,7 +94,7 @@ The inequality $\dim A/\mathfrak{p}+\operatorname{ht}\mathfrak{p}\leq\dim A$ hol
 
 Now we compute the height of the ideal $(\x_{d+1},\ldots, \x_n)$ in the polynomial ring $B=\mathbb{K}[\x_1,\ldots, \x_n]$. The chain
 
-$$(0)\subset(\x_n)\subset(\x_{n-1},\x_n)\subset\cdots\subset(\x_{d+1},\ldots, \x_n)$$
+$$(0)\subseteq(\x_n)\subseteq(\x_{n-1},\x_n)\subseteq\cdots\subseteq(\x_{d+1},\ldots, \x_n)$$
 
 shows that this ideal has height at least $n-d$, and since the quotient ring $B/(\x_{d+1},\ldots, \x_n)\cong\mathbb{K}[\x_1,\ldots, \x_d]$ has dimension $d$ ([§System of Parameters, ⁋Corollary 11](/en/math/commutative_algebra/system_of_parameters#cor11)), the inequality $\dim+\operatorname{ht}\leq n$ shows that the height is at most $n-d$. Therefore $\operatorname{ht}_B(\x_{d+1},\ldots, \x_n)=n-d$, and hence $\operatorname{ht}\mathfrak{p}=n-d=\dim A-\dim A/\mathfrak{p}$.
 :::

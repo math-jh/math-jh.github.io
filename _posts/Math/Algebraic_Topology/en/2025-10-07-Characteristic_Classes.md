@@ -130,7 +130,7 @@ For example, in the simplest case $n=1$, multiplication by $z=a+bi$ viewed as a 
 
 $$\begin{pmatrix}a&-b\\ b&a\end{pmatrix}$$
 
-and its determinant is $a^2+b^2>0$; for general $A$ the determinant always becomes positive in this way. That is, change of basis in a complex vector space always preserves orientation, so there is a canonical orientation on $V$ (as a real vector space), and the calculation above is exactly saying that $\GL(n;\mathbb{C})\subset \GL^+(2n; \mathbb{R})$.
+and its determinant is $a^2+b^2>0$; for general $A$ the determinant always becomes positive in this way. That is, change of basis in a complex vector space always preserves orientation, so there is a canonical orientation on $V$ (as a real vector space), and the calculation above is exactly saying that $\GL(n;\mathbb{C})\subseteq \GL^+(2n; \mathbb{R})$.
 
 In particular, the Euler class is canonically well defined for any complex vector bundle. Moreover, there are additional invariants beyond the Euler class. For example, a complex vector bundle $E$ and its conjugate $\bar{E}$ are the same as underlying real vector bundles, but they are generally different as complex vector bundles, and the *Chern classes* we will define can distinguish them.
 
@@ -179,7 +179,7 @@ and the maps in the second row are those of the upper exact sequence transported
 
 $$j^\ast\Phi(\alpha)=j^\ast(p^\ast\alpha\smile u)=p^\ast\alpha\smile j^\ast u$$
 
-where the second equality uses that $j^\ast$ is a homomorphism of relative cohomology rings preserving cup product, that is, $j^\ast p^\ast\alpha=p^\ast\alpha$, which is intuitively obvious because $p^\ast\alpha$ already lives on $H^\ast(E)$. Now we bring this down via the vertical identification $H^k(E)\cong H^k(B)$, which is done through the zero section $0:B\hookrightarrow E$ ($p\circ 0=\mathrm{id}$), so
+where the second equality uses that $j^\ast$ is a homomorphism of relative cohomology rings preserving cup product, that is, $j^\ast p^\ast\alpha=p^\ast\alpha$, which is intuitively obvious because $p^\ast\alpha$ already lives on $H^\ast(E)$. Now we bring this down via the vertical identification $H^k(E)\cong H^k(B)$, which is done through the zero section $0:B\hookrightarrow E$ ($p\circ 0=\id$), so
 
 $$0^\ast(p^\ast\alpha\smile j^\ast u)=0^\ast p^\ast\alpha\smile 0^\ast j^\ast u=\alpha\smile e(E)$$
 
@@ -299,7 +299,7 @@ For the first equality, let us first show that for any rank $n$ complex vector b
 
 $$c(E\oplus\varepsilon^1)=c(E)$$
 
-holds. Let $E'=E\oplus\varepsilon^1$; the section $s(x)=(0,1)$ taking the constant $1$ from the trivial component is nowhere zero, so it gives a section $s:B\rightarrow E'_0$ with $\pi_0\circ s=\mathrm{id}$. Now the orthogonal complement of $(0,1)$ at each point is exactly the fiber of $E$, so $s^\ast(E'^\perp)\cong E$, and hence applying $s^\ast$ to the formula $\pi_0^\ast c_i(E')=c_i(E'^\perp)$ of [Definition 6](#def6) for $0<i\leq n$ gives, by naturality of [Proposition 7](#prop7),
+holds. Let $E'=E\oplus\varepsilon^1$; the section $s(x)=(0,1)$ taking the constant $1$ from the trivial component is nowhere zero, so it gives a section $s:B\rightarrow E'_0$ with $\pi_0\circ s=\id$. Now the orthogonal complement of $(0,1)$ at each point is exactly the fiber of $E$, so $s^\ast(E'^\perp)\cong E$, and hence applying $s^\ast$ to the formula $\pi_0^\ast c_i(E')=c_i(E'^\perp)$ of [Definition 6](#def6) for $0<i\leq n$ gives, by naturality of [Proposition 7](#prop7),
 
 $$c_i(E')=s^\ast\pi_0^\ast c_i(E')=s^\ast c_i(E'^\perp)=c_i(s^\ast E'^\perp)=c_i(E)$$
 

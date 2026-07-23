@@ -228,7 +228,7 @@ Now let us examine the behavior of the morphism $\varphi_{K_C} : C \rightarrow \
 In [§Canonical Bundle, ⁋Example 10](/en/math/algebraic_varieties/canonical_bundle#ex10) we asserted the following proposition as a well-known fact to show that $\deg K_C=2g-2$, but now we can give a rigorous proof. Note, however, that this proceeds in exactly the opposite direction to that example: there the adjunction formula and degree-genus formula were used to prove $\deg K_C=2g-2$, whereas now we derive the degree-genus formula from $\deg K_C=2g-2$ together with the adjunction formula. The degree of $K_C$ was already obtained from Riemann–Roch before [Example 4](#ex4) (without using the degree-genus formula).
 
 ::: Proposition 7 (Degree-genus formula)
-For a smooth plane curve $C \subset \mathbb{P}^2$ of degree $d$,
+For a smooth plane curve $C \subseteq \mathbb{P}^2$ of degree $d$,
 
 $$g(C) = \frac{(d-1)(d-2)}{2}$$
 

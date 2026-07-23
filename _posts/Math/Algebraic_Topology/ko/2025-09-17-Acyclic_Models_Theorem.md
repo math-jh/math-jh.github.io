@@ -90,7 +90,7 @@ $$d_n^{G(X)}\circ f_n(X)=f_{n-1}(X)\circ d_n^{F(X)}$$
 
 을 lift하는 것이다. 그런데 이제 임의의 $x_n\in F_n(M)$에 대하여, 
 
-$$0=(f_{n-2}(M)\circ d_{n-1}^{F(M)}\circ d_n^{F(M)})(x_n)=(d_{n-1}^{G(M)}\circ f_{n-1}(M)\circ d_n^{F(M)})(x_m)$$
+$$0=(f_{n-2}(M)\circ d_{n-1}^{F(M)}\circ d_n^{F(M)})(x_n)=(d_{n-1}^{G(M)}\circ f_{n-1}(M)\circ d_n^{F(M)})(x_n)$$
 
 이므로 $G$가 acyclic on $\mathcal{M}$이라는 가정으로부터
 

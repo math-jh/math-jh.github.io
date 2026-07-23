@@ -49,7 +49,7 @@ Abelian group $H$와 semigroup homomorphism $\eta_S'$가 위의 universal mappin
 
 에서 $H$에 대한 universal property를 사용하면 $\eta_S=\bar{\eta}_S\circ\eta_S'$이도록 하는 $\bar{\eta}_S:H\rightarrow K(S)$가 존재한다. 그럼
 
-$$\bar{\eta}_S'\circ\bar{\eta}_S\circ\eta_S'=\bar{\eta}_S'\circ \eta_S=\eta=\id_{H}\circ \eta_S' $$
+$$\bar{\eta}_S'\circ\bar{\eta}_S\circ\eta_S'=\bar{\eta}_S'\circ \eta_S=\eta_S'=\id_{H}\circ \eta_S' $$
 
 이고, 다시 universal property에 의하여 $f\circ \eta_S'=\eta_S'$를 만족하는 $f$는 유일하므로 $f=\id_H=\bar{\eta}_S'\circ \bar{\eta}_S$이 성립한다. 혹은, diagram의 언어로는, 다음 diagram을 commute하게 만드는 $H\rightarrow H$는 유일하므로 $\id_H=\bar{\eta}_S'\circ \bar{\eta}_S$여야 한다.
 

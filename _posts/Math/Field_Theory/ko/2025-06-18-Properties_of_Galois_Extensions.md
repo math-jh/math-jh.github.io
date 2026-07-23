@@ -126,7 +126,7 @@ $$f(x+y)=u(x+y)\neq u(x)+u(y)=f(x)+f(y)$$
 
 한편 $\mathbb{L}/\mathbb{K}$이 Galois extension이라 하고, 이 extension의 Galois subextension $\mathbb{L}_i/\mathbb{K}$들이 $\mathbb{L}=\bigcup_{i\in I}\mathbb{L}_i$를 만족한다 하자. 그럼 우리는 이 위에 partial order
 
-$$i\leq j \iff \mathbb{L}_i\subset \mathbb{L}_j$$
+$$i\leq j \iff \mathbb{L}_i\subseteq \mathbb{L}_j$$
 
 를 주고, 이러한 partial order 하에서 다음의 restriction map들
 

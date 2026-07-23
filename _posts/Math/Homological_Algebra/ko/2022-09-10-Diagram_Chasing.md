@@ -145,7 +145,7 @@ $$i_C\circ g^\sharp\circ f^\sharp=g\circ i_B\circ f^\sharp=g\circ f\circ i_A=0$$
 
 $$(g')^\ast\circ(f')^\ast\circ p_A=(g')^\ast\circ p_B\circ f'=p_C\circ g'\circ f'=0$$
 
-이고, $p_A$가 전사인 것으로부터 $(g')^\ast\circ(f')^\ast=0$임을 확인할 수 있다. 따라서 주어진 명제를 보이기 위해서는 $f':A'\rightarrow B'$가 단사라면 $\ker(g^\sharp)\subset\im(f^\sharp)$이고, $g:B\rightarrow C$가 전사라면 $\ker((g')^\ast)\subset\im((f')^\ast)$임을 보이면 충분하다. 
+이고, $p_A$가 전사인 것으로부터 $(g')^\ast\circ(f')^\ast=0$임을 확인할 수 있다. 따라서 주어진 명제를 보이기 위해서는 $f':A'\rightarrow B'$가 단사라면 $\ker(g^\sharp)\subseteq\im(f^\sharp)$이고, $g:B\rightarrow C$가 전사라면 $\ker((g')^\ast)\subseteq\im((f')^\ast)$임을 보이면 충분하다. 
 
 우선 $f'$가 단사라고 가정하자. 만일 어떤 $b\in\ker(\beta)$에 대하여 $g^\sharp(b)=0$이라면, $g^\sharp$의 정의에 의해 $g(b)=0$이고 따라서 $b\in\ker(g)=\im(f)$이다. 따라서 어떤 $a\in A$가 존재하여 $f(a)=b$가 성립한다. 그런데
 
@@ -212,7 +212,7 @@ $$\ker(\beta)\rightarrow\ker(\gamma)\rightarrow\coker(\alpha)\rightarrow\coker(\
 
 $$((f')^\ast)(a'+\im(\alpha))=f'(a')+\im(\beta)=\beta(b)+\im(\beta)=0$$
 
-가 된다. 따라서 $\ker(\delta)\subset\im(g^\sharp)$이고 $\ker(f')^\ast\subset\im(\delta)$이라는 것만 보이면 충분하다.
+가 된다. 따라서 $\ker(\delta)\subseteq\im(g^\sharp)$이고 $\ker(f')^\ast\subseteq\im(\delta)$이라는 것만 보이면 충분하다.
 
 우선 $c\in\ker(\delta)$라 하자. 그럼 $a'$는 $g(b)=c$를 만족하는 $b$에 대해, 식 $f'(a')=\beta(b)$를 만족하는 원소로 정의되므로 $a'\in\im(\alpha)$이다. 이제 $\alpha(a)=a'$를 만족하는 $a\in A$를 택하자. 그럼
 

@@ -55,7 +55,7 @@ $$0 \rightarrow B_k\overset{i_k}{\longrightarrow} Z_k \overset{p_k}{\longrightar
 
 을 생각하자. 그럼, $B_k$과 $Z_k$, 그리고 $0$은 모두 free abelian group이므로 이는 $H_k(C_\bullet)$의 free resolution으로 볼 수 있고, 따라서 정의에 의해 $\delta_k$을 다음의 exact sequence
 
-$$0 \rightarrow \Tor_1^\mathbb{Z}(H_k(C))\rightarrow B_k\otimes_\mathbb{Z}A\overset{\delta_k}{\longrightarrow} Z_k\otimes_\mathbb{Z}A\rightarrow H_k\otimes_\mathbb{Z}A\rightarrow 0$$
+$$0 \rightarrow \Tor_1^\mathbb{Z}(H_k(C), A)\rightarrow B_k\otimes_\mathbb{Z}A\overset{\delta_k}{\longrightarrow} Z_k\otimes_\mathbb{Z}A\rightarrow H_k\otimes_\mathbb{Z}A\rightarrow 0$$
 
 에 넣을 수 있다. 즉, 다음의 isomorphism
 

@@ -54,13 +54,13 @@ Manifold $M$이 주어졌다 하자. $M$의 열린집합 $V$에 다음의 두 �
 물론 이 정의가 잘 정의되기 위해서는 subspace topology가 locally Euclidean, second countable, Hausdorff 조건을 모두 만족해야 하고, $\mathcal{A}_V$의 원소들이 각각 $C^\infty$-compatible해야 한다. 하지만 Hausdorff, second countability는 모두 subspace topology에 의해 잘 보존되는 성질이며, locally Euclidean 성질 또한 $V$가 열린집합이라는 사실로부터 얻어낼 수 있다. 뿐만 아니라, $\mathcal{A}_V$의 원소들 사이의 transition map은 $C^\infty$ 함수들의 restriction들이므로 이들 또한 $C^\infty$이다.
 
 ::: 예시 4
-$\Mat_{n}(\mathbb{R})$의 원소들 중, 역행렬을 갖는 $n\times n$ 행렬들의 집합 $\GL(n,\mathbb{R})$은 $\det(A)\neq 0$을 만족하는 행렬들의 모임이다. 행렬식 $\det$를 $\Mat_n(\mathbb{R})$에서 $\mathbb{R}$로의 함수로 보면, 이 함수는 다항함수이므로 연속이고, 따라서 열린집합 $\mathbb{R}\setminus\{0\}$의 preimage인 $\GL(n,\mathbb{R})$ 또한 $\Mat_n(\mathbb{R})$의 열린집합이다. 따라서 $\GL(n,\mathbb{R})$은 $n^2$차원 manifold이다. 
+$\Mat_{n}(\mathbb{R})$의 원소들 중, 역행렬을 갖는 $n\times n$ 행렬들의 집합 $\GL(n;\mathbb{R})$은 $\det(A)\neq 0$을 만족하는 행렬들의 모임이다. 행렬식 $\det$를 $\Mat_n(\mathbb{R})$에서 $\mathbb{R}$로의 함수로 보면, 이 함수는 다항함수이므로 연속이고, 따라서 열린집합 $\mathbb{R}\setminus\{0\}$의 preimage인 $\GL(n;\mathbb{R})$ 또한 $\Mat_n(\mathbb{R})$의 열린집합이다. 따라서 $\GL(n;\mathbb{R})$은 $n^2$차원 manifold이다. 
 
-한편, $\GL(n,\mathbb{R})$은 $\det A>0$인 행렬들과 $\det A<0$인 행렬들의 disjoint union이며, 이들 집합 각각은 위와 마찬가지 이유로 열린집합이므로 $\GL(n,\mathbb{R})$은 connected는 아니다.
+한편, $\GL(n;\mathbb{R})$은 $\det A>0$인 행렬들과 $\det A<0$인 행렬들의 disjoint union이며, 이들 집합 각각은 위와 마찬가지 이유로 열린집합이므로 $\GL(n;\mathbb{R})$은 connected는 아니다.
 :::
 
 ::: 예시 5
-열린집합 $U\subset\mathbb{R}^m$과 $C^\infty$ 함수 $f:U\rightarrow\mathbb{R}^n$에 대하여 $f$의 *그래프* $\graph(f)$를 다음의 집합
+열린집합 $U\subseteq\mathbb{R}^m$과 $C^\infty$ 함수 $f:U\rightarrow\mathbb{R}^n$에 대하여 $f$의 *그래프* $\graph(f)$를 다음의 집합
 
 $$\graph(f)=\{(x,y)\in\mathbb{R}^m\times\mathbb{R}^n\mid \text{$x\in U$, $y=f(x)$}\}$$
 

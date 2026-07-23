@@ -44,7 +44,7 @@ $$H_G^\bullet(X;R):=H^\bullet(X_G;R)$$
 
 $X_G$는 정확히 principal $G$-bundle $EG\rightarrow BG$에 fiber $X$를 붙인 associated bundle이다. ([\[대수적 위상수학\] §분류공간, ⁋정의 3](/ko/math/algebraic_topology/classifying_spaces#def3)) 계수환 $R$을 고정한 동안에는 이를 생략하고 $H_G^\bullet(X)$로 적는다. Cohomology의 cup product가 $H^\bullet(X_G)$에 graded-commutative $R$-algebra 구조를 주므로 ([\[대수적 위상수학\] §합곱, ⁋정의 1](/ko/math/algebraic_topology/cup_products#def1)) $H_G^\bullet(X)$ 역시 graded-commutative $R$-algebra이다.
 
-이 구성은 두 가지 방향으로 functorial하다. 첫째, $X$에 대해 contravariant이다. $G$-equivariant 연속함수 $f:X\rightarrow Y$는 $\mathrm{id}\times f:EG\times X\rightarrow EG\times Y$를 주고, 이것이 $G$-작용과 호환되므로 quotient 사이의 morphism $f_G:X_G\rightarrow Y_G$로 내려간다. 따라서 $f^\ast:H_G^\bullet(Y)\rightarrow H_G^\bullet(X)$를 얻으며, 항등사상과 합성을 보존한다. 둘째, $G$에 대해서도 contravariant이다. 연속적인 group homomorphism $\phi:H\rightarrow G$가 주어지면 $G$-space $X$는 $\phi$를 통해 $H$-space가 되고, $BH\rightarrow BG$를 덮는 $H$-equivariant morphism $EH\rightarrow EG$가 존재한다. ([\[대수적 위상수학\] §분류공간, ⁋보조정리 9](/ko/math/algebraic_topology/classifying_spaces#lem9)) 이 morphism이 $X_H=EH\times_H X\rightarrow EG\times_G X=X_G$를 유도하여 $H_G^\bullet(X)\rightarrow H_H^\bullet(X)$를 준다. 특히 $H=\{e\}$인 경우가 곧 아래에서 다룰 ordinary cohomology로의 restriction이다.
+이 구성은 두 가지 방향으로 functorial하다. 첫째, $X$에 대해 contravariant이다. $G$-equivariant 연속함수 $f:X\rightarrow Y$는 $\id\times f:EG\times X\rightarrow EG\times Y$를 주고, 이것이 $G$-작용과 호환되므로 quotient 사이의 morphism $f_G:X_G\rightarrow Y_G$로 내려간다. 따라서 $f^\ast:H_G^\bullet(Y)\rightarrow H_G^\bullet(X)$를 얻으며, 항등사상과 합성을 보존한다. 둘째, $G$에 대해서도 contravariant이다. 연속적인 group homomorphism $\phi:H\rightarrow G$가 주어지면 $G$-space $X$는 $\phi$를 통해 $H$-space가 되고, $BH\rightarrow BG$를 덮는 $H$-equivariant morphism $EH\rightarrow EG$가 존재한다. ([\[대수적 위상수학\] §분류공간, ⁋보조정리 9](/ko/math/algebraic_topology/classifying_spaces#lem9)) 이 morphism이 $X_H=EH\times_H X\rightarrow EG\times_G X=X_G$를 유도하여 $H_G^\bullet(X)\rightarrow H_H^\bullet(X)$를 준다. 특히 $H=\{e\}$인 경우가 곧 아래에서 다룰 ordinary cohomology로의 restriction이다.
 
 ## 동변 코호몰로지의 기본 성질
 
@@ -122,7 +122,7 @@ $H^\bullet(BT;\mathbb{Z})=\mathbb{Z}[t_1,\ldots,t_n]$이며 degree $2$ 부분 $H
 뒤따르는 두 계산은 모두 projective space를 fiber로 갖는 bundle의 cohomology를 구하는 일로 환원된다. 이를 위해 vector bundle의 projectivization에 대한 표준적인 결과를 line bundle들의 직합인 경우에 한해 정리해 둔다.
 
 ::: 명제 5 (사영다발 정리)
-Paracompact 공간 $B$ 위의 복소 line bundle들 $L_1,\ldots,L_r$과 그 직합 $E=L_1\oplus\cdots\oplus L_r$에 대하여, fiberwise 일차원 부분공간들의 공간 $\mathbb{P}(E)\xrightarrow{\pi}B$를 생각하자. Tautological subbundle $\mathcal{O}_{\mathbb{P}(E)}(-1)\subset\pi^\ast E$의 first Chern class를 $h=c_1(\mathcal{O}_{\mathbb{P}(E)}(-1))$라 하면, $H^\bullet(\mathbb{P}(E))$은 $1,h,\ldots,h^{r-1}$을 기저로 갖는 free $H^\bullet(B)$-가군이며 단 하나의 관계식
+Paracompact 공간 $B$ 위의 복소 line bundle들 $L_1,\ldots,L_r$과 그 직합 $E=L_1\oplus\cdots\oplus L_r$에 대하여, fiberwise 일차원 부분공간들의 공간 $\mathbb{P}(E)\xrightarrow{\pi}B$를 생각하자. Tautological subbundle $\mathcal{O}_{\mathbb{P}(E)}(-1)\subseteq\pi^\ast E$의 first Chern class를 $h=c_1(\mathcal{O}_{\mathbb{P}(E)}(-1))$라 하면, $H^\bullet(\mathbb{P}(E))$은 $1,h,\ldots,h^{r-1}$을 기저로 갖는 free $H^\bullet(B)$-가군이며 단 하나의 관계식
 
 $$\prod_{i=1}^r\big(h-\pi^\ast c_1(L_i)\big)=0$$
 
@@ -215,7 +215,7 @@ $$\prod_{i=0}^n(h-t_i)=h^{n+1}-e_1 h^n+e_2 h^{n-1}-\cdots+(-1)^{n+1}e_{n+1}$$
 
 $$\mathbb{Z}[t_0,\ldots,t_n][h]\Big/\prod_{i}(h-t_i)\xrightarrow{t_i\mapsto 0}\mathbb{Z}[h]/(h^{n+1})=H^\bullet(\mathbb{P}^n)$$
 
-을 주어, equivariant cohomology가 보통의 cohomology $H^\bullet(\mathbb{P}^n)=\mathbb{Z}[h]/(h^{n+1})$를 정확히 변형한 것임을 보여 준다. 한편 대각 $S^1\subset T$은 $\mathbb{P}^n$ 위에 자명하게 작용하지만, equivariant cohomology를 풍부하게 만들기 위해서는 효과적이지 않은 이 부분까지 포함한 full torus $T=(S^1)^{n+1}$을 쓰는 것이 자연스럽다. 관계식은 $n+1$개의 fixed point $p_i=[0:\cdots:1:\cdots:0]$에서 $h$가 각각 $t_i$로 제한된다는 사실을 기억하고 있다.
+을 주어, equivariant cohomology가 보통의 cohomology $H^\bullet(\mathbb{P}^n)=\mathbb{Z}[h]/(h^{n+1})$를 정확히 변형한 것임을 보여 준다. 한편 대각 $S^1\subseteq T$은 $\mathbb{P}^n$ 위에 자명하게 작용하지만, equivariant cohomology를 풍부하게 만들기 위해서는 효과적이지 않은 이 부분까지 포함한 full torus $T=(S^1)^{n+1}$을 쓰는 것이 자연스럽다. 관계식은 $n+1$개의 fixed point $p_i=[0:\cdots:1:\cdots:0]$에서 $h$가 각각 $t_i$로 제한된다는 사실을 기억하고 있다.
 
 ## Equivariant formality
 

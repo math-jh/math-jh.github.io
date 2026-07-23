@@ -85,7 +85,7 @@ Let $A$ be an ordered set and let $X\subseteq A$. An element $a$ of $A$ is calle
 If the supremum of $X\subseteq A$ exists, we denote it by $\sup_AX$, and the infimum by $\inf_AX$. By definition, one easily checks that if $X\subseteq A$ has a greatest element $a$, then $a=\sup_AX$.
 
 ::: Proposition 7
-Let $A$ be an ordered set and suppose $X\subset A$ has both a supremum and an infimum.
+Let $A$ be an ordered set and suppose $X\subseteq A$ has both a supremum and an infimum.
 
 1. If $X\neq\emptyset$, then $\inf_A X\leq\sup_A X$.
 2. If $X=\emptyset$, then $\sup_AX$ and $\inf_AX$ are the least and greatest elements of $A$, respectively.

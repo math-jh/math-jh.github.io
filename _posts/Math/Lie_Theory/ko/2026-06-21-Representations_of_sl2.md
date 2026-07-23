@@ -119,7 +119,7 @@ $$ef\cdot v_j=(j+1)\,e\cdot v_{j+1}=(j+1)(n-j)v_j,\qquad fe\cdot v_j=(n-j+1)\,f\
 각 정수 $n\geq 0$에 대하여 $V(n)$은 기약이다. 또한 임의의 유한차원 기약 $\sl_2$-representation은 어떤 $n\geq 0$에 대한 $V(n)$과 isomorphic하며, $V(m)\cong V(n)$이면 $m=n$이다.
 :::
 ::: 증명
-먼저 $V(n)$이 기약임을 보인다. $W\subseteq V(n)$이 $0$이 아닌 subrepresentation이라 하자. $W$는 $h$의 작용에 대해 닫혀 있고 $h$가 $V(n)$ 위에서 서로 다른 고윳값 $n-2j$들로 대각화되므로, $W$는 그 weight space들의 직합, 곧 어떤 첨자 집합 $J\subseteq\{0,\dots,n\}$에 대해 $\bigoplus_{j\in J}\mathbb{C}v_j$의 꼴이다. $J\neq\varnothing$이므로 $v_j\in W$인 $j$가 있고, $e\cdot v_j=(n-j+1)v_{j-1}$에서 계수 $n-j+1$은 $1\leq j\leq n$에 대해 $0$이 아니므로 $e$를 반복 적용하면 $v_0\in W$이다. 다시 $f\cdot v_j=(j+1)v_{j+1}$의 계수가 모두 $0$이 아니므로 $f$를 반복 적용하면 모든 $v_0,\dots,v_n\in W$, 곧 $W=V(n)$이다.
+먼저 $V(n)$이 기약임을 보인다. $W\subseteq V(n)$이 $0$이 아닌 subrepresentation이라 하자. $W$는 $h$의 작용에 대해 닫혀 있고 $h$가 $V(n)$ 위에서 서로 다른 고윳값 $n-2j$들로 대각화되므로, $W$는 그 weight space들의 직합, 곧 어떤 첨자 집합 $J\subseteq\{0,\dots,n\}$에 대해 $\bigoplus_{j\in J}\mathbb{C}v_j$의 꼴이다. $J\neq\emptyset$이므로 $v_j\in W$인 $j$가 있고, $e\cdot v_j=(n-j+1)v_{j-1}$에서 계수 $n-j+1$은 $1\leq j\leq n$에 대해 $0$이 아니므로 $e$를 반복 적용하면 $v_0\in W$이다. 다시 $f\cdot v_j=(j+1)v_{j+1}$의 계수가 모두 $0$이 아니므로 $f$를 반복 적용하면 모든 $v_0,\dots,v_n\in W$, 곧 $W=V(n)$이다.
 
 다음으로 임의의 유한차원 irreducible representation $V$를 생각하자. 위에서 보았듯 $V$에는 highest weight vector $v_0$이 존재하고 그 highest weight은 정수 $m\geq 0$이며, $v_0,\dots,v_m$이 span하는 부분공간 $V'$은 [명제 4](#prop4)에 의해 $h,e,f$의 작용에 대해 closed인 $V$의 $0$이 아닌 subrepresentation이다. $V$가 기약이므로 $V'=V$이고, 따라서 $v_0,\dots,v_m$은 $V$의 기저이며 그 위의 작용은 [정의 5](#def5)의 작용과 정확히 일치한다. 곧 $V\cong V(m)$이다.
 

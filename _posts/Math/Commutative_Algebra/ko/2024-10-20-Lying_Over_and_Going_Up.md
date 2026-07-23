@@ -66,7 +66,7 @@ Integral domain $A$가 주어졌다 하고, integral extension $A \rightarrow B$
 마지막으로 다음을 살펴보자. 
 
 ::: 따름정리 4
-Integral extension $A\hookrightarrow B$에 대하여, 만일 $B$의 두 prime ideal $\mathfrak{q}_1\neq \mathfrak{q}_2$이 $A\cap \mathfrak{q}_1=A\cap \mathfrak{q}_2=\mathfrak{p}$를 만족한다면 $\mathfrak{q}_1\not\subset \mathfrak{q}_2$이고 $\mathfrak{q}_2\not\subset \mathfrak{q}_1$이다.
+Integral extension $A\hookrightarrow B$에 대하여, 만일 $B$의 두 prime ideal $\mathfrak{q}_1\neq \mathfrak{q}_2$이 $A\cap \mathfrak{q}_1=A\cap \mathfrak{q}_2=\mathfrak{p}$를 만족한다면 $\mathfrak{q}_1\not\subseteq \mathfrak{q}_2$이고 $\mathfrak{q}_2\not\subseteq \mathfrak{q}_1$이다.
 :::
 ::: 증명
 결론에 반하여 $\mathfrak{q}_1\subseteq \mathfrak{q}_2$라 가정하고 $A\cap \mathfrak{q}_1=A\cap \mathfrak{q}_2=\mathfrak{p}$라 하자. 그럼 $A$에서는 $\mathfrak{p}$로, $B$에서는 $\mathfrak{q}_1$으로 quotient를 취하여, 주어진 상황을 integral domain $B$와 $\mathfrak{q}_1=0$, 그리고 $\mathfrak{q}_2\cap A=0$이 성립하도록 바꿔줄 수 있다. 그런데 $B$의 원소들에 대해 성립하는 integral equation들은 $\mathfrak{p}$로 quotient를 취하여도 그대로 integral equation이 되며, 특히 $\Frac(B)$가 $\Frac(A)$의 algebraic extension이 된다. 따라서 [보조정리 2](#lem2)에 의하여 원하는 결과를 얻는다.

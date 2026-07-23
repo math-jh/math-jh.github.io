@@ -136,11 +136,11 @@ $$\cdots\rightarrow\pi_n(A,x_0)\overset{i_\ast}{\longrightarrow}\pi_n(X,x_0)\ove
 ::: 증명
 핵심 관찰은 $\pi_n(X,A,x_0)$의 한 원소가 $0$이라는 것, 곧 그것이 $J^{n-1}$을 넘어 $\partial I^n$ 전체를 $x_0$으로 보내는 함수로 (쌍의 조건을 유지하며) 변형된다는 것이, 그 원소가 $A$ 안에 완전히 담긴 함수로 변형됨과 동치라는 것이다. 이를 이용해 각 마디의 완전성을 확인한다.
 
-$\pi_n(X)$에서의 완전성, 곧 $\operatorname{im}i_\ast=\ker j_\ast$를 보자. $f:(I^n,\partial I^n)\rightarrow(X,x_0)$에 대하여 $j_\ast[f]=0$이라는 것은 $f$가 쌍 $(X,A)$의 원소로서 자명하다는 것, 곧 $f$가 image 전체를 $A$ 안에 갖는 함수 $f'$과 homotopic하다는 것이다. 이는 정확히 $[f]$가 $i_\ast[f']$의 꼴이라는 것이므로 $\operatorname{im}i_\ast=\ker j_\ast$이다.
+$\pi_n(X)$에서의 완전성, 곧 $\im i_\ast=\ker j_\ast$를 보자. $f:(I^n,\partial I^n)\rightarrow(X,x_0)$에 대하여 $j_\ast[f]=0$이라는 것은 $f$가 쌍 $(X,A)$의 원소로서 자명하다는 것, 곧 $f$가 image 전체를 $A$ 안에 갖는 함수 $f'$과 homotopic하다는 것이다. 이는 정확히 $[f]$가 $i_\ast[f']$의 꼴이라는 것이므로 $\im i_\ast=\ker j_\ast$이다.
 
-$\pi_n(X,A)$에서의 완전성, 곧 $\operatorname{im}j_\ast=\ker\partial$을 보자. $f:(I^n,\partial I^n)\rightarrow(X,x_0)$에 대하여 $\partial(j_\ast[f])$는 $f\vert_{I^{n-1}}$인데, $f$가 절대 homotopy group에서 오므로 이 restriction은 상수함수 $x_0$이고 따라서 $0$이다. 역으로 $\partial[f]=0$인 $f:(I^n,\partial I^n,J^{n-1})\rightarrow(X,A,x_0)$가 주어지면, $f\vert_{I^{n-1}}$이 $A$ 안에서 $x_0$으로 향하는 null-homotopy를 가지므로, 이를 이용해 $f$를 $\partial I^n$ 전체를 $x_0$으로 보내는 함수로 변형할 수 있고 이는 $j_\ast$의 image에 속한다.
+$\pi_n(X,A)$에서의 완전성, 곧 $\im j_\ast=\ker\partial$을 보자. $f:(I^n,\partial I^n)\rightarrow(X,x_0)$에 대하여 $\partial(j_\ast[f])$는 $f\vert_{I^{n-1}}$인데, $f$가 절대 homotopy group에서 오므로 이 restriction은 상수함수 $x_0$이고 따라서 $0$이다. 역으로 $\partial[f]=0$인 $f:(I^n,\partial I^n,J^{n-1})\rightarrow(X,A,x_0)$가 주어지면, $f\vert_{I^{n-1}}$이 $A$ 안에서 $x_0$으로 향하는 null-homotopy를 가지므로, 이를 이용해 $f$를 $\partial I^n$ 전체를 $x_0$으로 보내는 함수로 변형할 수 있고 이는 $j_\ast$의 image에 속한다.
 
-$\pi_{n-1}(A)$에서의 완전성, 곧 $\operatorname{im}\partial=\ker i_\ast$을 보자. $[f]\in\pi_n(X,A)$에 대하여 $i_\ast(\partial[f])$는 $f\vert_{I^{n-1}}$을 $X$ 안의 함수로 본 것인데, $f$ 자체가 이 restriction을 $X$ 안에서 $x_0$으로 향하게 하는 homotopy ($t_1$-좌표를 따라 $I^{n-1}$을 $J^{n-1}$ 쪽으로 미는 것) 를 제공하므로 $i_\ast\partial=0$이다. 역으로 $g:(I^{n-1},\partial I^{n-1})\rightarrow(A,x_0)$이 $i_\ast[g]=0$을 만족하면, $g$를 $X$ 안에서 $x_0$으로 보내는 homotopy $H:I^{n-1}\times I\rightarrow X$가 존재한다. $H$를 $I^n$ 위의 함수로 보면 이는 쌍 $(X,A)$의 원소 $[H]$를 정의하고 $\partial[H]=[g]$가 성립한다.
+$\pi_{n-1}(A)$에서의 완전성, 곧 $\im\partial=\ker i_\ast$을 보자. $[f]\in\pi_n(X,A)$에 대하여 $i_\ast(\partial[f])$는 $f\vert_{I^{n-1}}$을 $X$ 안의 함수로 본 것인데, $f$ 자체가 이 restriction을 $X$ 안에서 $x_0$으로 향하게 하는 homotopy ($t_1$-좌표를 따라 $I^{n-1}$을 $J^{n-1}$ 쪽으로 미는 것) 를 제공하므로 $i_\ast\partial=0$이다. 역으로 $g:(I^{n-1},\partial I^{n-1})\rightarrow(A,x_0)$이 $i_\ast[g]=0$을 만족하면, $g$를 $X$ 안에서 $x_0$으로 보내는 homotopy $H:I^{n-1}\times I\rightarrow X$가 존재한다. $H$를 $I^n$ 위의 함수로 보면 이는 쌍 $(X,A)$의 원소 $[H]$를 정의하고 $\partial[H]=[g]$가 성립한다.
 
 각 단계에서 사용한 변형이 쌍의 조건과 base point를 유지함을 확인하는 것은 기술적이지만 직접적이며, 자세한 내용은 [Hat]의 정리 4.3에 있다.
 :::

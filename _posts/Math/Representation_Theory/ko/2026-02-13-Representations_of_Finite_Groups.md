@@ -57,7 +57,7 @@ Group $G$의 representation $G\times V\rightarrow V$에 대하여 다음을 정�
 $G$-representation $V, W$에 대하여, 다음의 $G$-action을 통해 새로운 $G$-representation들을 정의한다.
 
 1. Direct sum $V\oplus W$; $G$-action $g\cdot(v,w)=(g\cdot v,g\cdot w)$
-2. Tensor product $V\otimes W$; $G$-action $g\cdot(v\otimes w)=(g\cdot v)\otimes (g\cdot w)$, 그리고 이로부터 얻어지는 exterior power $\bigwedge^k V$, symmetric power $\operatorname{Sym}^k V$와 그 위의 $G$-action들
+2. Tensor product $V\otimes W$; $G$-action $g\cdot(v\otimes w)=(g\cdot v)\otimes (g\cdot w)$, 그리고 이로부터 얻어지는 exterior power $\bigwedge^k V$, symmetric power $\Sym^k V$와 그 위의 $G$-action들
 3. $\Hom_\mathbb{C}(V,W)$; $G$-action $(g\cdot f)(v)=g\cdot f(g^{-1}\cdot v)$
 4. 3번에서 $W=\mathbb{C}$로 두어 얻어지는 *dual representation<sub>쌍대 표현</sub>* $V^\ast$
 5. 스칼라곱을 conjugate으로 바꾸어 얻어지는 *conjugate representation<sub>켤레표현</sub>* $\overline{V}$ (동일한 $G$-action)
@@ -153,11 +153,11 @@ $$\langle v,w\rangle=\langle \rho(g) v,\rho(g) w\rangle=\langle \rho(g)^\dagger 
 ::: 증명
 $V$ 위의 임의의 Hermitian inner product $\langle -,- \rangle$에 대하여, 
 
-$$\langle\kern-1.5pt\langle u,v\rangle\kern-1.5pt\rangle = \frac{1}{\vert G\vert }\sum_{g \in G} \langle g\cdot u, g\cdot v \rangle$$
+$$\langle\kern-1.5pt\langle u,v\rangle\kern-1.5pt\rangle = \frac{1}{\lvert G\rvert }\sum_{g \in G} \langle g\cdot u, g\cdot v \rangle$$
 
 을 통해 새로운 inner product $\langle\kern-1.5pt\langle-,-\rangle\kern-1.5pt\rangle$를 정의하면 된다. 그럼 임의의 $h\in G$에 대하여
 
-$$\langle\kern-1.5pt\langle h\cdot u, h\cdot v\rangle\kern-1.5pt\rangle = \frac{1}{\vert G\vert }\sum_{g \in G} \langle gh\cdot u, gh\cdot v \rangle = \langle\kern-1.5pt\langle u, v\rangle\kern-1.5pt\rangle$$
+$$\langle\kern-1.5pt\langle h\cdot u, h\cdot v\rangle\kern-1.5pt\rangle = \frac{1}{\lvert G\rvert }\sum_{g \in G} \langle gh\cdot u, gh\cdot v \rangle = \langle\kern-1.5pt\langle u, v\rangle\kern-1.5pt\rangle$$
 
 이므로 이 inner product는 $G$-invariant이다.
 :::

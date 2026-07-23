@@ -161,7 +161,7 @@ Scheme의 affine-local property $P$에 대하여, scheme $(X, \mathcal{O}_X)$가
 Scheme $X$와 임의의 affine open subset $U,V$가 주어졌다 하자. 그럼 임의의 $x\in U\cap V$에 대하여, 적당한 $x\in W\subseteq U\cap V$가 존재하여 $W$가 $U$와 $V$ 모두에서 principal open subset이도록 할 수 있다. 
 :::
 ::: 증명
-표기를 위해 $U=\Spec A$, $V=\Spec B$라 하고, $x$가 이들 각각에서 prime ideal들 $\mathfrak{p}\subset A$, $\mathfrak{q}\subset B$에 대응된다 하자. 그럼 우선 $U\cap V$를 $U$의 열린집합으로 보아 [§스펙트럼, ⁋보조정리 11](/ko/math/scheme_theory/spectrums#lem11)를 적용하면 $U$의 principal open set $D(f)$를 택하여
+표기를 위해 $U=\Spec A$, $V=\Spec B$라 하고, $x$가 이들 각각에서 prime ideal들 $\mathfrak{p}\subseteq A$, $\mathfrak{q}\subseteq B$에 대응된다 하자. 그럼 우선 $U\cap V$를 $U$의 열린집합으로 보아 [§스펙트럼, ⁋보조정리 11](/ko/math/scheme_theory/spectrums#lem11)를 적용하면 $U$의 principal open set $D(f)$를 택하여
 
 $$\mathfrak{p}\in D(f)\subseteq U\cap V$$
 

@@ -212,7 +212,7 @@ $$\mathbb{C}^n\hookrightarrow\mathbb{C}^{n+1}\hookrightarrow \mathbb{C}^{n+2}\ho
 
 이 이전의 단위구면을 다음 단위구면의 적도에 넣어주는 inclusion $S^{2n-1}\hookrightarrow S^{2n+1}$을 유도하는 것을 보자. 따라서 $\mathbb{C}^\infty\setminus \{0\}$을 colimit $\varinjlim (\mathbb{C}^n\setminus \{0\})$으로 본다면, 이는 colimit $\varinjlim S^{2n-1}$로 deformation retract되며, 이는 $S^\infty$를 정의할 때 등장하는 inclusion
 
-$$S^1\subset S^2\subset S^3\cdots $$
+$$S^1\subseteq S^2\subseteq S^3\cdots $$
 
 의 cofinal subsequence이므로 그 결과는 $S^\infty$와 같다. 한편 $S^1$의 스칼라곱은 norm을 보존하므로, 이 action은 단위구면 $S^\infty\subseteq\mathbb{C}^\infty\setminus\{0\}$ 위의 free action으로 제한된다. 즉 $\E S^1=S^\infty$로 잡으면 이는 $S^1$이 free하게 작용하는 contractible space이며, $\mathbb{C}^\infty$의 각 complex line이 $S^\infty$와 만나는 자취가 정확히 하나의 $S^1$-orbit, 곧 그 직선 안의 unit circle이므로 그 orbit space는 complex projective space
 
@@ -323,7 +323,7 @@ $$H^\bullet(\Gr_n(\mathbb{C}^\infty);\mathbb{Z})=\mathbb{Z}[c_1,\ldots,c_n]$$
 
 임은 이미 [\[대수적 위상수학\] §벡터다발의 특성류, ⁋예시 8](/ko/math/algebraic_topology/characteristic_classes#ex8) 이후에 살펴보았다. 따라서 나중의 주장만 보이면 충분하다. 
 
-이 계산은 [따름정리 12](#cor12)와 사실상 같은 것으로, 핵심은 앞에서와 똑같이 maximal torus $T=(S^1)^n\subset\Umat(n)$을 대각으로 넣어 얻는 $\B T\rightarrow\B\Umat(n)$이다. $\Umat(n)$의 canonical representation $\mathbb{C}^n$을 $T$로 제한하면 좌표축을 따라
+이 계산은 [따름정리 12](#cor12)와 사실상 같은 것으로, 핵심은 앞에서와 똑같이 maximal torus $T=(S^1)^n\subseteq\Umat(n)$을 대각으로 넣어 얻는 $\B T\rightarrow\B\Umat(n)$이다. $\Umat(n)$의 canonical representation $\mathbb{C}^n$을 $T$로 제한하면 좌표축을 따라
 
 $$\mathbb{C}^n=L_1\oplus\cdots\oplus L_n$$
 

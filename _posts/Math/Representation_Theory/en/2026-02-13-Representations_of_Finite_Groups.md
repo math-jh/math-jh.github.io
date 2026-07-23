@@ -56,7 +56,7 @@ From the same perspective, for arbitrary representations $V,W$ we can define $V\
 For $G$-representations $V, W$, we define new $G$-representations via the following $G$-actions.
 
 1. Direct sum $V\oplus W$; $G$-action $g\cdot(v,w)=(g\cdot v,g\cdot w)$
-2. Tensor product $V\otimes W$; $G$-action $g\cdot(v\otimes w)=(g\cdot v)\otimes (g\cdot w)$, and from this the exterior powers $\bigwedge^k V$, symmetric powers $\operatorname{Sym}^k V$ and the $G$-actions on them
+2. Tensor product $V\otimes W$; $G$-action $g\cdot(v\otimes w)=(g\cdot v)\otimes (g\cdot w)$, and from this the exterior powers $\bigwedge^k V$, symmetric powers $\Sym^k V$ and the $G$-actions on them
 3. $\Hom_\mathbb{C}(V,W)$; $G$-action $(g\cdot f)(v)=g\cdot f(g^{-1}\cdot v)$
 4. The *dual representation* $V^\ast$ obtained by setting $W=\mathbb{C}$ in 3
 5. The *conjugate representation* $\overline{V}$ obtained by replacing scalar multiplication with its conjugate (same $G$-action)
@@ -150,11 +150,11 @@ Any representation $V$ admits a $G$-invariant inner product. That is, every repr
 ::: Proof
 For any Hermitian inner product $\langle -,- \rangle$ on $V$, define a new inner product $\langle\kern-1.5pt\langle-,-\rangle\kern-1.5pt\rangle$ by
 
-$$\langle\kern-1.5pt\langle u,v\rangle\kern-1.5pt\rangle = \frac{1}{\vert G\vert }\sum_{g \in G} \langle g\cdot u, g\cdot v \rangle$$
+$$\langle\kern-1.5pt\langle u,v\rangle\kern-1.5pt\rangle = \frac{1}{\lvert G\rvert }\sum_{g \in G} \langle g\cdot u, g\cdot v \rangle$$
 
 Then for any $h\in G$,
 
-$$\langle\kern-1.5pt\langle h\cdot u, h\cdot v\rangle\kern-1.5pt\rangle = \frac{1}{\vert G\vert }\sum_{g \in G} \langle gh\cdot u, gh\cdot v \rangle = \langle\kern-1.5pt\langle u, v\rangle\kern-1.5pt\rangle$$
+$$\langle\kern-1.5pt\langle h\cdot u, h\cdot v\rangle\kern-1.5pt\rangle = \frac{1}{\lvert G\rvert }\sum_{g \in G} \langle gh\cdot u, gh\cdot v \rangle = \langle\kern-1.5pt\langle u, v\rangle\kern-1.5pt\rangle$$
 
 so this inner product is $G$-invariant.
 :::

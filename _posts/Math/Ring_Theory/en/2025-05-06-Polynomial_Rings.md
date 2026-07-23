@@ -93,7 +93,7 @@ For an integral domain $A$, the following hold.
 3. $A[\x]$ is an integral domain.
 :::
 
-Now let us return to the general case. If any two polynomials $u,v\in A[\x_i]_{i\in I}$ are given, since only finitely many indeterminates appear in these polynomials, when computing $uv$ it suffices to consider $A[\x_j]_{j\in J}$ for some finite set $J\subset I$ instead of $A[\x_i]_{i\in I}$. Then the fact that $A[\x_j]_{j\in J}$ is an integral domain follows from [Lemma 3](#lem3) and the isomorphism
+Now let us return to the general case. If any two polynomials $u,v\in A[\x_i]_{i\in I}$ are given, since only finitely many indeterminates appear in these polynomials, when computing $uv$ it suffices to consider $A[\x_j]_{j\in J}$ for some finite set $J\subseteq I$ instead of $A[\x_i]_{i\in I}$. Then the fact that $A[\x_j]_{j\in J}$ is an integral domain follows from [Lemma 3](#lem3) and the isomorphism
 
 $$A[\x_1,\x_2]\cong (A[\x_1])[\x_2]$$
 

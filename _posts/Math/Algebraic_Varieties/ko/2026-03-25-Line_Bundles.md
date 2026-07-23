@@ -31,7 +31,7 @@ Variety $X$ 위의 *line bundle* $\mathcal{L}$은 다음과 같은 데이터로 
     
     $$\phi_j \circ \phi_i^{-1}: (U_i \cap U_j) \times \mathbb{A}^1 \rightarrow (U_i \cap U_j) \times \mathbb{A}^1$$
 
-    는 적당한 *transition function* $g_{ij} \in \mathcal{O}_X(U_i \cap U_j)^\ast$에 대하여 $(p, t) \mapsto (p, g_{ij}(p)t)$의 꼴이다.
+    는 적당한 *transition function* $g_{ij} \in \mathcal{O}_X(U_i \cap U_j)^\times$에 대하여 $(p, t) \mapsto (p, g_{ij}(p)t)$의 꼴이다.
 :::
 
 두 line bundle $\mathcal{L}, \mathcal{M} \rightarrow X$ 사이의 *morphism* $\varphi \colon \mathcal{L} \rightarrow \mathcal{M}$은 각 점 $p \in X$에서 fiber 사이의 $\mathbb{K}$-linear map $\varphi_p \colon \mathcal{L}_p \rightarrow \mathcal{M}_p$를 정의하며, 적당한 open cover $\{U_k\}$ 위에서 $\mathcal{O}_X(U_k)$-module homomorphism
@@ -207,7 +207,7 @@ Standard open cover $U_i = \{x \mid x_i \ne 0\}$ 위에서 $\mathcal{O}_{\mathbb
 특히 $\mathbb{P}^1$의 경우에서 $\mathcal{O}(-1)$을 살펴보면 위에서 직관적으로 설명한 <em-ko>꼬임</em-ko>의 의미가 훨씬 명확하다. $\mathbb{A}^2\setminus \{0\}$에서 $\mathbb{P}^1$을 만드는 과정은 우선, $\mathbb{A}^2\setminus\{0\}$을 radial projection을 통해 단위원으로 만든 후, 단위원의 antipodal point들을 identify하는 것으로 생각할 수 있는데, 이 과정에서 반대방향의 두 벡터가 identify되는 일, 즉 fiber가 꼬이는 일이 발생하기 때문이다. 이러한 꼬임을 보는 방법 중 하나는 line bundle $\mathcal{L}$의 section을 보는 것이다. 
 
 ::: 정의 15
-Line bundle $\mathcal{L}$의 *global section*들의 공간을 $\Gamma(X, \mathcal{L})$로 표기한다. 즉, $\Gamma(X, \mathcal{L})$는 각 점 $x\in X$마다 fiber $\pi^{-1}(x)\subset \mathcal{L}$ 내의 원소를 대응시키는 regular map들의 집합이다.
+Line bundle $\mathcal{L}$의 *global section*들의 공간을 $\Gamma(X, \mathcal{L})$로 표기한다. 즉, $\Gamma(X, \mathcal{L})$는 각 점 $x\in X$마다 fiber $\pi^{-1}(x)\subseteq \mathcal{L}$ 내의 원소를 대응시키는 regular map들의 집합이다.
 :::
 
 Global section space의 또 다른 대중적인 표기법 중 하나는 $H^0(X, \mathcal{L})$이다. 이 표기법은 [§층 코호몰로지, ⁋정의 1](/ko/math/algebraic_varieties/sheaf_cohomology#def1)에서 정당화될 것이나, 그 전까지는 $\Gamma(X, \mathcal{L})$을 사용하기로 한다. 
@@ -323,7 +323,7 @@ $\varphi^\ast(\mathcal{L} \otimes \mathcal{M}) \cong \varphi^\ast \mathcal{L} \o
 :::
 
 ::: 예시 22
-Embedding $i: C \hookrightarrow \mathbb{P}^n$에 대해, $i^\ast \mathcal{O}_{\mathbb{P}^n}(1)$은 curve $C$ 위의 line bundle이다. 이를 $C$ 위의 *hyperplane bundle*이라 부르며, $\mathcal{O}_C(1)$로 표기한다. 일반적으로 $\mathcal{O}_C(1)$은 nontrivial인데, 예를 들어 $C = \mathbb{P}^1 \subset \mathbb{P}^n$일 때 $\mathcal{O}_C(1) = \mathcal{O}_{\mathbb{P}^1}(1)$은 [예시 12](#ex12)에서 본 바와 같이 nontrivial line bundle이다. "Hyperplane bundle"이라는 이름은, $\mathbb{P}^n$의 hypersurface 중 degree $1$인 것, 즉 hyperplane $H$에 대응하는 line bundle $\mathcal{O}_{\mathbb{P}^n}(1)$을 $C$ 위로 당겼을 때 얻어지는 bundle이라는 의미에서 붙여졌다.
+Embedding $i: C \hookrightarrow \mathbb{P}^n$에 대해, $i^\ast \mathcal{O}_{\mathbb{P}^n}(1)$은 curve $C$ 위의 line bundle이다. 이를 $C$ 위의 *hyperplane bundle*이라 부르며, $\mathcal{O}_C(1)$로 표기한다. 일반적으로 $\mathcal{O}_C(1)$은 nontrivial인데, 예를 들어 $C = \mathbb{P}^1 \subseteq \mathbb{P}^n$일 때 $\mathcal{O}_C(1) = \mathcal{O}_{\mathbb{P}^1}(1)$은 [예시 12](#ex12)에서 본 바와 같이 nontrivial line bundle이다. "Hyperplane bundle"이라는 이름은, $\mathbb{P}^n$의 hypersurface 중 degree $1$인 것, 즉 hyperplane $H$에 대응하는 line bundle $\mathcal{O}_{\mathbb{P}^n}(1)$을 $C$ 위로 당겼을 때 얻어지는 bundle이라는 의미에서 붙여졌다.
 :::
 
 ## Vector Bundle
@@ -338,10 +338,10 @@ Variety $X$ 위의 *rank r vector bundle<sub>랭크 $r$ 벡터다발</sub>* $\ma
 
     $$\phi_j \circ \phi_i^{-1}: (U_i \cap U_j) \times \mathbb{A}^r \rightarrow (U_i \cap U_j) \times \mathbb{A}^r$$
 
-    는 적당한 *transition function* $g_{ij} \in \operatorname{GL}_r(\mathcal{O}_X(U_i \cap U_j))$에 대하여 $(p, v) \mapsto (p, g_{ij}(p)v)$의 꼴이다.
+    는 적당한 *transition function* $g_{ij} \in \GL_r(\mathcal{O}_X(U_i \cap U_j))$에 대하여 $(p, v) \mapsto (p, g_{ij}(p)v)$의 꼴이다.
 :::
 
-Line bundle의 정의와 비교하면, 유일한 차이는 fiber가 $\mathbb{A}^1$ 대신 $\mathbb{A}^r$이고, transition function이 $\mathcal{O}_X(U_i \cap U_j)^\ast = \operatorname{GL}_1(\mathcal{O}_X(U_i \cap U_j))$ 대신 $\operatorname{GL}_r(\mathcal{O}_X(U_i \cap U_j))$ 값을 갖는다는 점이다. 따라서 line bundle은 정확히 rank 1 vector bundle이다.
+Line bundle의 정의와 비교하면, 유일한 차이는 fiber가 $\mathbb{A}^1$ 대신 $\mathbb{A}^r$이고, transition function이 $\mathcal{O}_X(U_i \cap U_j)^\times = \GL_1(\mathcal{O}_X(U_i \cap U_j))$ 대신 $\GL_r(\mathcal{O}_X(U_i \cap U_j))$ 값을 갖는다는 점이다. 따라서 line bundle은 정확히 rank 1 vector bundle이다.
 
 [명제 2](#prop2)와 같은 cocycle condition이 성립한다. 다만 transition function이 행렬값을 가지므로 곱셈의 순서에 주의해야 한다.
 

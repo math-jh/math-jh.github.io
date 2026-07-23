@@ -73,7 +73,7 @@ $$T_x X = (\mathfrak{m}_x / \mathfrak{m}_x^2)^\ast \cong \{v \in \mathbb{K}^n \m
 Although the proof is written in the elaborate language of maximal ideals, its underlying idea is simple: for $X=Z(f_i)$, the condition $(df_i)_x(v)=0$ is precisely the (ordinary) tangent space of the hypersurface $Z(f_i)$ in $\mathbb{A}^n$ (viewing $\mathbb{K}^n$ as $\mathbb{A}^n$). While [Proposition 2](#prop2) is stated only for affine varieties, every point $x$ of any variety $X$ has an affine neighborhood, so it applies in essence to all varieties. The same is true of the following proposition on the dimension of the tangent space.
 
 ::: Proposition 3
-$T_x X$ is a $\mathbb{K}$-vector space, and its dimension is $n - \operatorname{rank}(J_x)$, where $J_x$ is the $k \times n$ Jacobian matrix
+$T_x X$ is a $\mathbb{K}$-vector space, and its dimension is $n - \rank(J_x)$, where $J_x$ is the $k \times n$ Jacobian matrix
 
 $$J_x = \left(\frac{\partial f_i}{\partial \x_j}(x)\right)_{1 \le i \le k, 1 \le j \le n}$$
 :::
@@ -82,7 +82,7 @@ Each $(df_i)_x: \mathbb{K}^n \rightarrow \mathbb{K}$ is a linear functional. By 
 
 $$T_x X = \ker(J_x) = \{v \in \mathbb{K}^n \mid J_x v = 0\}$$
 
-By the rank-nullity theorem, $\dim T_x X = n - \operatorname{rank}(J_x)$.
+By the rank-nullity theorem, $\dim T_x X = n - \rank(J_x)$.
 :::
 
 ## Smooth Points and Singular Points
@@ -113,7 +113,7 @@ A point $x \in X$ is a *smooth point* (or *nonsingular point*) if $\dim T_x X = 
 :::
 
 ::: Example 7 (Singular points)
-1. (Node) Consider $X = Z(\y^2 - \x^2(\x+1)) \subset \mathbb{A}^2$. This curve branches into two at the origin.
+1. (Node) Consider $X = Z(\y^2 - \x^2(\x+1)) \subseteq \mathbb{A}^2$. This curve branches into two at the origin.
 
     ![nodal_curve](/assets/images/Math/Algebraic_Varieties/Tangent_Spaces_and_Smoothness-1.svg){:style="width:23.17em" class="invert" .align-center}
 
@@ -122,7 +122,7 @@ A point $x \in X$ is a *smooth point* (or *nonsingular point*) if $\dim T_x X = 
     $$J_{(x,y)} = \begin{pmatrix} -2x - 3x^2 & 2y \end{pmatrix}$$
 
     so at the origin the Jacobian is $(0,0)$, and by [Proposition 3](#prop3) the origin is a singular point. Geometrically, the tangent space being 2-dimensional means that both tangent directions of the two branches are included. Specifically, since $\y^2 - \x^2(\x+1) \approx \y^2 - \x^2 = (\y-\x)(\y+\x)$, near the origin the curve looks like the union of the two lines $\y = \x$ and $\y = -\x$. A node is one of the "mildest" singularities.
-2. (Cusp) Now consider $Z(\y^2 - \x^3)\subset \mathbb{A}^2$.
+2. (Cusp) Now consider $Z(\y^2 - \x^3)\subseteq \mathbb{A}^2$.
 
     ![cusp](/assets/images/Math/Algebraic_Varieties/Tangent_Spaces_and_Smoothness-2.svg){:style="width:18.80em" class="invert" .align-center}
 
@@ -140,11 +140,11 @@ In the examples above, we naturally used the following proposition.
 :::
 
 ::: Proof
-In [Proposition 3](#prop3), we showed that $\dim T_x X = n - \operatorname{rank}(J_x)$. By [Definition 5](#def5), $x$ is a smooth point precisely when $\dim T_x X = \dim X$. Thus $x$ is a smooth point if and only if
+In [Proposition 3](#prop3), we showed that $\dim T_x X = n - \rank(J_x)$. By [Definition 5](#def5), $x$ is a smooth point precisely when $\dim T_x X = \dim X$. Thus $x$ is a smooth point if and only if
 
-$$n - \operatorname{rank}(J_x) = \dim X$$
+$$n - \rank(J_x) = \dim X$$
 
-that is, $\operatorname{rank}(J_x) = n - \dim X$.
+that is, $\rank(J_x) = n - \dim X$.
 :::
 
 ## Existence of Smooth Points
@@ -155,7 +155,7 @@ Any algebraic variety is smooth at most points. To establish this, we need the n
 The *generic point* $\eta$ of an irreducible variety $X$ is the unique point belonging to every nonempty open subset of $X$.
 :::
 
-In the affine case $X = \operatorname{Spec} A$, $\eta$ corresponds to the minimal prime ideal of $A$ (namely, the zero ideal), and the local ring $\mathcal{O}_{X,\eta}$ is exactly the function field $\mathbb{K}(X) = \operatorname{Frac}(A)$. Geometrically, the generic point is the "most general point" of $X$, a point possessing no particular property of $X$. We exploit this idea in the proof below.
+In the affine case $X = \Spec A$, $\eta$ corresponds to the minimal prime ideal of $A$ (namely, the zero ideal), and the local ring $\mathcal{O}_{X,\eta}$ is exactly the function field $\mathbb{K}(X) = \Frac(A)$. Geometrically, the generic point is the "most general point" of $X$, a point possessing no particular property of $X$. We exploit this idea in the proof below.
 
 ::: Proposition 10
 The set $X_\sm$ of smooth points of a variety $X$ is a dense open subset of $X$. In particular, $X_\sm \ne \emptyset$.
@@ -164,7 +164,7 @@ The set $X_\sm$ of smooth points of a variety $X$ is a dense open subset of $X$.
 ::: Proof
 Let $X = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$ have dimension $\dim X = d$. By the Jacobian criterion of [Proposition 8](#prop8),
 
-$$X_\sm = \{x \in X \mid \operatorname{rank}(J_x) = n - d\}$$
+$$X_\sm = \{x \in X \mid \rank(J_x) = n - d\}$$
 
 We now show that this set is a dense open subset. First, that $X_\sm$ is open is relatively straightforward. The rank being exactly $n-d$ is the simultaneous satisfaction of two conditions. First, the rank being *at least* $n-d$ is equivalent to some $(n-d) \times (n-d)$ minor having nonzero determinant, which is an open condition in the Zariski topology. Second, the rank being *at most* $n-d$ is equivalent to all $(n-d+1) \times (n-d+1)$ minors having zero determinant, which is a closed condition. Hence the set of points where the rank is exactly $n-d$ is an open subset of $X$.
 

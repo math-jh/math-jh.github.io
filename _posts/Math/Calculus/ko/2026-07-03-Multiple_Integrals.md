@@ -19,7 +19,7 @@ weight: 15
 한 변수 정적분이 구간 위의 함수값을 더한 것이었듯, 다변수에서는 영역 위의 함수값을 더한다. $\mathbb{R}^n$의 closed 상자부터 시작하자.
 
 ::: 정의 1
-Closed 상자 $R = [a_1,b_1]\times\cdots\times[a_n,b_n]\subset \mathbb{R}^n$ 위의 유계함수 $f$에 대하여, $R$을 작은 상자들(부피 $\Delta V$)로 분할하고 각 조각에서 표본점 $\mathbf{x}^\ast$을 택해 만든 리만 합
+Closed 상자 $R = [a_1,b_1]\times\cdots\times[a_n,b_n]\subseteq \mathbb{R}^n$ 위의 유계함수 $f$에 대하여, $R$을 작은 상자들(부피 $\Delta V$)로 분할하고 각 조각에서 표본점 $\mathbf{x}^\ast$을 택해 만든 리만 합
 
 $$\sum f(\mathbf{x}^\ast) \Delta V$$
 
@@ -99,7 +99,7 @@ $$\int_0^1 \int_0^y e^{y^2} \mathop{dx} \mathop{dy} = \int_0^1 y e^{y^2} \mathop
 한 변수의 치환적분에 대응하는 것이 다변수의 변수변환이며, 길이 비율 $g'$의 자리에 야코비 행렬식이 들어간다.
 
 ::: 정리 4 (변수변환)
-일대일 $C^1$ 사상 $\mathbf{x} = \mathbf{T}(\mathbf{u})$가 영역 $D'\subset \mathbb{R}^n$을 $D$로 보내고 야코비 행렬식이 $D'$에서 $0$이 아니면
+일대일 $C^1$ 사상 $\mathbf{x} = \mathbf{T}(\mathbf{u})$가 영역 $D'\subseteq \mathbb{R}^n$을 $D$로 보내고 야코비 행렬식이 $D'$에서 $0$이 아니면
 
 $$\int_D f(\mathbf{x}) \mathop{dV} = \int_{D'} f(\mathbf{T}(\mathbf{u})) \lvert \det J_{\mathbf{T}}(\mathbf{u})\rvert \mathop{dV'}$$
 

@@ -185,7 +185,7 @@ $$\gamma_k(x)=\underbrace{x\otimes\cdots\otimes x}_\text{\scriptsize $k$ times}$
     이 성립한다.
 5. 임의의 $x_1,\ldots, x_n\in M$이 주어졌다 하고, 임의의 부분집합 $H\subseteq \{1,\ldots, n\}$에 대하여 $x_H=\sum_{i\in H}x_i$라 하자. 그럼 다음의 식
     
-    $$(-1)^nx_1x_2\cdots x_n=\sum_{H\subset\{1,\ldots, n\}}(-1)^{\lvert H\rvert}\gamma_n(x_H)$$
+    $$(-1)^nx_1x_2\cdots x_n=\sum_{H\subseteq\{1,\ldots, n\}}(-1)^{\lvert H\rvert}\gamma_n(x_H)$$
 
     이 성립한다. 
 :::
@@ -205,7 +205,7 @@ $$N_1=\sum_{\omega\in\Omega} Ay_\omega,\qquad N_2=\sum_{b'\in B'}Ab'$$
 
 라 하면 $N=N_1\oplus N_2$이다. 
 
-이제 보여야 할 것은 $N_1=N^H$이다. 가정에 의해 $N_1\subset N^H$는 자명하다. 한편 임의의 $y\in N^H$에 대하여, $y$를 $A$-basis $B$의 linear combination $y=\sum \alpha_b b$로 나타내면 모든 $b\in B$와 모든 $h\in H$에 대하여 $\alpha_{bh}=\alpha_b$가 성립해야 하는 것을 안다. 이로부터 $y\in N_1$이어야 한다. 
+이제 보여야 할 것은 $N_1=N^H$이다. 가정에 의해 $N_1\subseteq N^H$는 자명하다. 한편 임의의 $y\in N^H$에 대하여, $y$를 $A$-basis $B$의 linear combination $y=\sum \alpha_b b$로 나타내면 모든 $b\in B$와 모든 $h\in H$에 대하여 $\alpha_{bh}=\alpha_b$가 성립해야 하는 것을 안다. 이로부터 $y\in N_1$이어야 한다. 
 :::
 
 그럼 이를 이용하여 다음의 명제를 보일 수 있다. 
@@ -342,7 +342,7 @@ $$A[\x_1,\ldots, \x_n]^{S_n}=\{p\in A[x_1,\ldots, \x_n]\mid \sigma\cdot p=p\}$$
 
 을 생각할 수 있다. 우선 우리는 이들이 $A$-algebra로서 다음의 원소들
 
-$$s_k=\sum_{\substack{H\subset \{1,\ldots, n\}\\\lvert H\rvert=k}}\prod_{i\in H} x_i$$
+$$s_k=\sum_{\substack{H\subseteq \{1,\ldots, n\}\\\lvert H\rvert=k}}\prod_{i\in H} x_i$$
 
 로 생성된다는 것을 확인할 수 있다. 명시적으로
 

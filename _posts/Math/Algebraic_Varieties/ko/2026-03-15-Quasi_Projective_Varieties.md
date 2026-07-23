@@ -48,7 +48,7 @@ $$X=\overline{i(X)}\cap U_0$$
 Quasi-projective variety $X$의 열린집합은 quasi-projective variety이다. 또, $X$의 irreducible closed subset도 quasi-projective variety이다.
 :::
 ::: 증명
-$X$가 projective variety $Y\subset \mathbb{P}^n$의 열린집합이라 하자. $X$의 열린집합은 $Y$의 열린집합이기도 하므로 $X$의 임의의 열린집합이 quasi-projective variety임은 자명하다. 따라서 $X$의 임의의 irreducible closed set이 quasi-projective임을 보이면 충분하다. 이를 위해
+$X$가 projective variety $Y\subseteq \mathbb{P}^n$의 열린집합이라 하자. $X$의 열린집합은 $Y$의 열린집합이기도 하므로 $X$의 임의의 열린집합이 quasi-projective variety임은 자명하다. 따라서 $X$의 임의의 irreducible closed set이 quasi-projective임을 보이면 충분하다. 이를 위해
 
 $$X=Y\cap U,\qquad \text{$U$ open in $\mathbb{P}^n$}$$
 
@@ -67,7 +67,7 @@ $$Z=X\cap W=(Y\cap U)\cap W=(Y\cap W)\cap U$$
 임의의 variety $X$와 임의의 $x\in X$에 대하여, affine variety들로 이루어진 $X$의 covering이 존재한다. 
 :::
 ::: 증명
-우선 $X$가 quasi-projective이므로, 적당한 projective variety $Y\subset \mathbb{P}^n$이 존재하여 $X$가 $Y$의 열린집합이도록 할 수 있다. 이제 $X$는 standard affine chart들을 사용하여 $X\cap U_i$들로 덮을 수 있고, 이 때 각각의 $X\cap U_i$들은 affine variety $Y\cap U_i$의 열린집합이다. ([§사영다양체, ⁋명제 10](/ko/math/algebraic_varieties/projective_varieties#prop10)) 이제 [§아핀다양체, ⁋명제 6](/ko/math/algebraic_varieties/affine_varieties#prop6)에 의해 affine variety의 임의의 열린집합은 principal open set으로 덮을 수 있으며, 이들은 [§아핀다양체, ⁋명제 7](/ko/math/algebraic_varieties/affine_varieties#prop7)에 의해 affine이므로 증명이 완료된다. 
+우선 $X$가 quasi-projective이므로, 적당한 projective variety $Y\subseteq \mathbb{P}^n$이 존재하여 $X$가 $Y$의 열린집합이도록 할 수 있다. 이제 $X$는 standard affine chart들을 사용하여 $X\cap U_i$들로 덮을 수 있고, 이 때 각각의 $X\cap U_i$들은 affine variety $Y\cap U_i$의 열린집합이다. ([§사영다양체, ⁋명제 10](/ko/math/algebraic_varieties/projective_varieties#prop10)) 이제 [§아핀다양체, ⁋명제 6](/ko/math/algebraic_varieties/affine_varieties#prop6)에 의해 affine variety의 임의의 열린집합은 principal open set으로 덮을 수 있으며, 이들은 [§아핀다양체, ⁋명제 7](/ko/math/algebraic_varieties/affine_varieties#prop7)에 의해 affine이므로 증명이 완료된다. 
 :::
 
 이제 위의 명제에 의해, 다음과 같이 정의할 수 있다.

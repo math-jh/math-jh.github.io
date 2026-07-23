@@ -49,7 +49,7 @@ In general, for both the affine and projective cases, open subsets of a given va
 An open subset of a quasi-projective variety $X$ is a quasi-projective variety. Moreover, an irreducible closed subset of $X$ is also a quasi-projective variety.
 :::
 ::: Proof
-Suppose $X$ is an open subset of a projective variety $Y\subset \mathbb{P}^n$. Since an open subset of $X$ is also an open subset of $Y$, it is obvious that any open subset of $X$ is a quasi-projective variety. Hence it suffices to show that any irreducible closed subset of $X$ is quasi-projective. For this, write
+Suppose $X$ is an open subset of a projective variety $Y\subseteq \mathbb{P}^n$. Since an open subset of $X$ is also an open subset of $Y$, it is obvious that any open subset of $X$ is a quasi-projective variety. Hence it suffices to show that any irreducible closed subset of $X$ is quasi-projective. For this, write
 
 $$X=Y\cap U,\qquad \text{$U$ open in $\mathbb{P}^n$}$$
 
@@ -68,7 +68,7 @@ From now on, unless stated otherwise, by a variety we shall always mean a quasi-
 For any variety $X$ and any point $x\in X$, there exists a covering of $X$ by affine varieties.
 :::
 ::: Proof
-First, since $X$ is quasi-projective, there exists a suitable projective variety $Y\subset \mathbb{P}^n$ such that $X$ is an open subset of $Y$. Now $X$ can be covered by the sets $X\cap U_i$ using the standard affine charts, and each $X\cap U_i$ is an open subset of the affine variety $Y\cap U_i$. ([§Projective Varieties, ⁋Proposition 10](/en/math/algebraic_varieties/projective_varieties#prop10)) By [§Affine Varieties, ⁋Proposition 6](/en/math/algebraic_varieties/affine_varieties#prop6), any open subset of an affine variety can be covered by principal open sets, and these are affine by [§Affine Varieties, ⁋Proposition 7](/en/math/algebraic_varieties/affine_varieties#prop7), which completes the proof.
+First, since $X$ is quasi-projective, there exists a suitable projective variety $Y\subseteq \mathbb{P}^n$ such that $X$ is an open subset of $Y$. Now $X$ can be covered by the sets $X\cap U_i$ using the standard affine charts, and each $X\cap U_i$ is an open subset of the affine variety $Y\cap U_i$. ([§Projective Varieties, ⁋Proposition 10](/en/math/algebraic_varieties/projective_varieties#prop10)) By [§Affine Varieties, ⁋Proposition 6](/en/math/algebraic_varieties/affine_varieties#prop6), any open subset of an affine variety can be covered by principal open sets, and these are affine by [§Affine Varieties, ⁋Proposition 7](/en/math/algebraic_varieties/affine_varieties#prop7), which completes the proof.
 :::
 
 Now, by the proposition above, we can make the following definition.

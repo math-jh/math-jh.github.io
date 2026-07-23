@@ -110,7 +110,7 @@ Hence $U_\sigma = \mathbb{C}^2$.
 In [Example 6](#ex6) with $\sigma = \{0\}$ and in [Example 7](#ex7) with the standard quadrant $\sigma = \mathrm{cone}(e_1, e_2)$, the varieties $U_\sigma$ were respectively $T_N$ and $\mathbb{C}^2$, both smooth algebraic varieties. We shall now see that this is no accident: the smoothness of $U_\sigma$ is completely determined by the combinatorial data of the cone $\sigma$.
 
 ::: Definition 8
-A strongly convex rational polyhedral cone $\sigma \subset N_{\mathbb{R}}$ is called *smooth* (or *regular*, or *nonsingular*) if its primitive ray generators $v_1, \ldots, v_k$ (with $k = \dim \sigma$) form part of a $\mathbb{Z}$-basis of the lattice $N$.
+A strongly convex rational polyhedral cone $\sigma \subseteq N_{\mathbb{R}}$ is called *smooth* (or *regular*, or *nonsingular*) if its primitive ray generators $v_1, \ldots, v_k$ (with $k = \dim \sigma$) form part of a $\mathbb{Z}$-basis of the lattice $N$.
 :::
 
 Although the definition may look somewhat abstract, in practice it is equivalent to the conjunction of the following two conditions.
@@ -127,7 +127,7 @@ $$U_\sigma \cong \mathbb{C}^k \times (\mathbb{C}^\ast)^{n-k}.$$
 :::
 
 ::: Proof
-($\Leftarrow$) Suppose $\sigma$ is smooth. By definition the ray generators $v_1, \ldots, v_k$ form part of a basis $\{v_1, \ldots, v_n\}$ of $N$. Choose the dual basis $\{v_1^\ast, \ldots, v_n^\ast\} \subset M$ of this basis; then
+($\Leftarrow$) Suppose $\sigma$ is smooth. By definition the ray generators $v_1, \ldots, v_k$ form part of a basis $\{v_1, \ldots, v_n\}$ of $N$. Choose the dual basis $\{v_1^\ast, \ldots, v_n^\ast\} \subseteq M$ of this basis; then
 
 $$\sigma^\vee = \{u \in M_{\mathbb{R}} \mid \langle u, v_i\rangle \ge 0,\ i = 1, \ldots, k\} = \mathbb{R}_{\ge 0}\langle v_1^\ast, \ldots, v_k^\ast\rangle + \mathbb{R}\langle v_{k+1}^\ast, \ldots, v_n^\ast\rangle$$
 

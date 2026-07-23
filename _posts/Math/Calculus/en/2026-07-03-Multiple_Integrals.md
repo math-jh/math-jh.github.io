@@ -21,7 +21,7 @@ We defined multivariable functions and examined their derivatives in [§Multivar
 Just as a single-variable definite integral sums function values over an interval, in several variables we sum function values over a region. Let us start with a closed box in $\mathbb{R}^n$.
 
 ::: Definition 1
-For a bounded function $f$ on a closed box $R = [a_1,b_1]\times\cdots\times[a_n,b_n]\subset \mathbb{R}^n$, partition $R$ into small boxes (of volume $\Delta V$), choose a sample point $\mathbf{x}^\ast$ in each piece, and form the Riemann sum
+For a bounded function $f$ on a closed box $R = [a_1,b_1]\times\cdots\times[a_n,b_n]\subseteq \mathbb{R}^n$, partition $R$ into small boxes (of volume $\Delta V$), choose a sample point $\mathbf{x}^\ast$ in each piece, and form the Riemann sum
 
 $$\sum f(\mathbf{x}^\ast) \Delta V$$
 
@@ -93,7 +93,7 @@ $$\int_0^1 \int_0^y e^{y^2} \mathop{dx} \mathop{dy} = \int_0^1 y e^{y^2} \mathop
 What corresponds to substitution in a single variable is change of variables in several variables, and the Jacobian determinant takes the place of the length ratio $g'$.
 
 ::: Theorem 4 (Change of Variables)
-If a one-to-one $C^1$ map $\mathbf{x} = \mathbf{T}(\mathbf{u})$ sends a region $D'\subset \mathbb{R}^n$ onto $D$ and the Jacobian determinant is nonzero on $D'$, then
+If a one-to-one $C^1$ map $\mathbf{x} = \mathbf{T}(\mathbf{u})$ sends a region $D'\subseteq \mathbb{R}^n$ onto $D$ and the Jacobian determinant is nonzero on $D'$, then
 
 $$\int_D f(\mathbf{x}) \mathop{dV} = \int_{D'} f(\mathbf{T}(\mathbf{u})) \lvert \det J_{\mathbf{T}}(\mathbf{u})\rvert \mathop{dV'}$$
 

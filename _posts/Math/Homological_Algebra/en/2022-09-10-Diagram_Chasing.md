@@ -146,7 +146,7 @@ and since $i_C$ is injective we verify that $g^\sharp\circ f^\sharp=0$. Similarl
 
 $$(g')^\ast\circ(f')^\ast\circ p_A=(g')^\ast\circ p_B\circ f'=p_C\circ g'\circ f'=0$$
 
-and since $p_A$ is surjective we verify that $(g')^\ast\circ(f')^\ast=0$. Therefore, to prove the statement it suffices to show that if $f':A'\rightarrow B'$ is injective then $\ker(g^\sharp)\subset\im(f^\sharp)$, and if $g:B\rightarrow C$ is surjective then $\ker((g')^\ast)\subset\im((f')^\ast)$.
+and since $p_A$ is surjective we verify that $(g')^\ast\circ(f')^\ast=0$. Therefore, to prove the statement it suffices to show that if $f':A'\rightarrow B'$ is injective then $\ker(g^\sharp)\subseteq\im(f^\sharp)$, and if $g:B\rightarrow C$ is surjective then $\ker((g')^\ast)\subseteq\im((f')^\ast)$.
 
 First assume that $f'$ is injective. If $g^\sharp(b)=0$ for some $b\in\ker(\beta)$, then by the definition of $g^\sharp$ we have $g(b)=0$ and therefore $b\in\ker(g)=\im(f)$. Thus there exists some $a\in A$ such that $f(a)=b$. But
 
@@ -213,7 +213,7 @@ into an exact sequence. First let $b\in \ker(\beta)$. If we write $\delta(g^\sha
 
 $$((f')^\ast)(a'+\im(\alpha))=f'(a')+\im(\beta)=\beta(b)+\im(\beta)=0$$
 
-Therefore it suffices to show that $\ker(\delta)\subset\im(g^\sharp)$ and $\ker(f')^\ast\subset\im(\delta)$.
+Therefore it suffices to show that $\ker(\delta)\subseteq\im(g^\sharp)$ and $\ker(f')^\ast\subseteq\im(\delta)$.
 
 First let $c\in\ker(\delta)$. Then $a'$ is defined as the element satisfying $f'(a')=\beta(b)$ for $b$ with $g(b)=c$, so $a'\in\im(\alpha)$. Now pick $a\in A$ satisfying $\alpha(a)=a'$. Then
 

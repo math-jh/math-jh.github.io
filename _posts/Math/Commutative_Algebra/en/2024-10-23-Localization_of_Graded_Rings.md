@@ -162,7 +162,7 @@ This is essentially the same proof as [Proposition 4](#prop4): choose an element
 $$\frac{a}{s}=\frac{af^d}{s}\frac{1}{f^d}.$$
 :::
 
-In particular, fix a homogeneous prime ideal $\mathfrak{p}$ and assume $A_1\not\subset \mathfrak{p}$. Let $S$ be the multiplicative subset consisting of homogeneous elements not belonging to $\mathfrak{p}$; then there exists at least one nonzero $f\in A_1$ such that $f\in S$, so by the above proposition we obtain
+In particular, fix a homogeneous prime ideal $\mathfrak{p}$ and assume $A_1\not\subseteq \mathfrak{p}$. Let $S$ be the multiplicative subset consisting of homogeneous elements not belonging to $\mathfrak{p}$; then there exists at least one nonzero $f\in A_1$ such that $f\in S$, so by the above proposition we obtain
 
 $$S^{-1}A\cong A_{(\mathfrak{p})}[T,T^{-1}].$$
 

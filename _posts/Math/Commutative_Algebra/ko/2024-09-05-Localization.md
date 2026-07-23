@@ -135,8 +135,8 @@ Ring homomorphism $f:A \rightarrow B$와 $A$의 ideal $\mathfrak{a}$, $B$의 ide
 ::: 명제 8
 임의의 ring $A$, multiplicative subset $S$와 localization $S^{-1}A$, 그리고 canonical map $\epsilon:A \rightarrow S^{-1}A$에 대하여 다음이 성립한다. 
 
-1. 임의의 ideal $\mathfrak{b}\subset S^{-1}A$에 대하여, $\mathfrak{b}=\mathfrak{b}^{ce}$이 성립한다.
-2. 임의의 ideal $\mathfrak{a}\subset A$에 대하여, 
+1. 임의의 ideal $\mathfrak{b}\subseteq S^{-1}A$에 대하여, $\mathfrak{b}=\mathfrak{b}^{ce}$이 성립한다.
+2. 임의의 ideal $\mathfrak{a}\subseteq A$에 대하여, 
   
     $$\mathfrak{a}^{ec}=\{a\in A\mid\text{there exists $s\in S$ satisfying $sa\in \mathfrak{a}$}\}$$
   

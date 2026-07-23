@@ -155,7 +155,7 @@ Cox ring $S$ 위의 $\Cl(X_\Sigma)$-grading은 다음과 같이 정의된다: $\
 ::: 정의 8
 각 cone $\sigma \in \Sigma$에 대해 monomial $\hat{\x}_\sigma$를
 
-$$\hat{\x}_\sigma = \prod_{\rho \not\subset \sigma} \x_\rho$$
+$$\hat{\x}_\sigma = \prod_{\rho \not\subseteq \sigma} \x_\rho$$
 
 로 정의한다. *Irrelevant ideal<sub>무관 아이디얼</sub>* $B(\Sigma)$는 이들 monomial로 생성되는 ideal
 

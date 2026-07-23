@@ -67,12 +67,12 @@ Thus, manifolds and smooth functions form the category $\Man$.
 One can endow the same topological manifold $M$ with distinct smooth structures that are diffeomorphic to each other but not identical. Define two smooth structures $\mathcal{A}_1$, $\mathcal{A}_2$ by the single charts $(\mathbb{R},\id_\mathbb{R})$ and $(\mathbb{R}, x\mapsto x^{3})$, respectively. Then $\mathcal{A}_1$ and $\mathcal{A}_2$ define different smooth structures. ([§Smooth Manifolds, ⁋Example 4](/en/math/manifolds/smooth_manifolds#ex4))  
 For convenience, write $(M,\mathcal{A}_1)=M_1$, $(M,\mathcal{A}_2)=M_2$, $\varphi=\id_\mathbb{R}$, and $\psi=(x\mapsto x^3)$.
 
-These two manifolds $M_1, M_2$ are diffeomorphic to each other. Define the function $F:M_1\rightarrow M_2$ by $x\mapsto x^{1/3}$. Then obviously $F^{-1}$ is given by $y\mapsto y^3$. By definition $F$ is $C^\infty$. For any point $p\in M_1$, taking the coordinate systems $(\mathbb{R},\varphi)$ on $M_1$ and $(\mathbb{R},\psi)$ on $M_2$, it is obvious that $p\in\mathbb{R}$ and $F(\mathbb{R})\subset\mathbb{R}$, and since they satisfy
+These two manifolds $M_1, M_2$ are diffeomorphic to each other. Define the function $F:M_1\rightarrow M_2$ by $x\mapsto x^{1/3}$. Then obviously $F^{-1}$ is given by $y\mapsto y^3$. By definition $F$ is $C^\infty$. For any point $p\in M_1$, taking the coordinate systems $(\mathbb{R},\varphi)$ on $M_1$ and $(\mathbb{R},\psi)$ on $M_2$, it is obvious that $p\in\mathbb{R}$ and $F(\mathbb{R})\subseteq\mathbb{R}$, and since they satisfy
 
 $$(\psi\circ F\circ \varphi^{-1})(t)=t$$
 
 we have that $\psi\circ F\circ\varphi^{-1}$ is $C^\infty$.  
-Moreover, $F^{-1}$ is also $C^\infty$, because similarly for any point $q\in M_2$, taking the same coordinate systems as above, we have $q\in\mathbb{R}$ and $F^{-1}(\mathbb{R})\subset\mathbb{R}$, and moreover
+Moreover, $F^{-1}$ is also $C^\infty$, because similarly for any point $q\in M_2$, taking the same coordinate systems as above, we have $q\in\mathbb{R}$ and $F^{-1}(\mathbb{R})\subseteq\mathbb{R}$, and moreover
 
 $$(\varphi\circ F^{-1}\circ \psi^{-1})(s)=s$$
 

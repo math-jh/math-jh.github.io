@@ -1,6 +1,6 @@
 ---
 title: "쌍대공간"
-description: "주어환 위의 가군에 대한 쌍대가군의 정의와 크로네커 쌍, 부분가군 사이의 작교 관계를 다룬다."
+description: "주어환 위의 가군에 대한 쌍대가군의 정의와 크로네커 쌍, 부분가군 사이의 직교 관계를 다룬다."
 excerpt: "Module의 Hom과 dual module, bidual map"
 
 categories: [Math / Multilinear Algebra]
@@ -48,7 +48,7 @@ $$(u\beta)(\alpha x)=u(\alpha x)\beta=\alpha u(x)\beta=\alpha((u\beta)(x))$$
 정의에 의해, 임의의 $x\in M$과 임의의 $\xi\in M^\ast$가 주어졌다면 이들 쌍은 $\xi(x)\in A$를 지정한다. 이를 $\langle x, \xi\rangle$로 적으며, 이러한 표기를 *Kronecker pairing<sub>크로네커 쌍</sub>*이라 부른다. 
 
 ::: 정의 2
-임의의 $A$-module $M$과 그 dual $M^\ast$에 대하여, $x\in M$과 $\xi\in M^\ast$가 *orthogonal<sub>작교</sub>*한다는 것은 $\langle x,\xi\rangle=0$인 것이다.
+임의의 $A$-module $M$과 그 dual $M^\ast$에 대하여, $x\in M$과 $\xi\in M^\ast$가 *orthogonal<sub>직교</sub>*한다는 것은 $\langle x,\xi\rangle=0$인 것이다.
 :::
 
 $M$과 $M^\ast$의 두 부분집합의 임의의 원소들의 쌍이 orthogonal이라면 이들 둘이 orthogonal하다 말한다. 한편, $x\in M$를 임의로 고정하고 $\xi,\xi_1,\xi_2\in M^\ast$와 $\alpha\in A$가 주어졌다 하자. 그럼
@@ -76,28 +76,28 @@ $$\Hom(u,A):\Hom_{\lMod{A}}(N,A)\rightarrow\Hom_{\lMod{A}}(M,A)$$
 이 $A$의 right action과 compatible함을 알 수 있다. 즉 $\Hom(u,A)$는 right $A$-module homomorphism이다.
 
 ::: 정의 4
-Left $A$-module들 사이의 $A$-linear map $u:M \rightarrow N$에 대하여, 위에서 정의한 right $A$-module homomorphism을 $u$의 *transpose<sub>전치</sub>*라 하고 $u^\ast$로 적는다.
+Left $A$-module들 사이의 $A$-linear map $u:M \rightarrow N$에 대하여, 위에서 정의한 right $A$-module homomorphism을 $u$의 *transpose<sub>전치</sub>*라 하고 $u^t$로 적는다.
 :::
 
-$u^\ast$는 임의의 $\xi\in N^\ast$에서의 값 $u^\ast(\xi)\in M^\ast$로 결정되며, 다시 $u^\ast(\xi)\in M^\ast$는 임의의 $x\in M$에서의 값 
+$u^t$는 임의의 $\xi\in N^\ast$에서의 값 $u^t(\xi)\in M^\ast$로 결정되며, 다시 $u^t(\xi)\in M^\ast$는 임의의 $x\in M$에서의 값 
 
-$$u^\ast(\xi)(x)=\langle x, u^\ast(\xi)\rangle$$
+$$u^t(\xi)(x)=\langle x, u^t(\xi)\rangle$$
 
-에 의해 결정된다. 한편 $u^\ast=\Hom(u,A)$의 정의에 의해 $u^\ast(\xi)=\xi\circ u$이다. 즉, 위의 식은
+에 의해 결정된다. 한편 $u^t=\Hom(u,A)$의 정의에 의해 $u^t(\xi)=\xi\circ u$이다. 즉, 위의 식은
 
-$$\langle u(x),\xi\rangle=\langle x, u^\ast\xi\rangle$$
+$$\langle u(x),\xi\rangle=\langle x, u^t\xi\rangle$$
 
-으로 쓸 수 있으며, 거꾸로 이 식이 모든 $x\in M$과 모든 $\xi\in N^\ast$에 대해 성립한다면 $u^\ast$가 유일하게 결정된다. 
+으로 쓸 수 있으며, 거꾸로 이 식이 모든 $x\in M$과 모든 $\xi\in N^\ast$에 대해 성립한다면 $u^t$가 유일하게 결정된다. 
 
 또, $\Hom(-,A)$의 functoriality와 [\[대수적 구조\] §가군, ⁋명제 8](/ko/math/algebraic_structures/modules#prop8)에 의해 다음 명제를 얻는다. 
 
 ::: 명제 5
 다음이 성립한다.
 
-1. 두 $A$-linear map $u,v:M \rightarrow N$에 대하여, $(u+v)^\ast=u^\ast+v^\ast$이다.
-2. 두 $A$-linear map $u:M \rightarrow N$, $v:N \rightarrow L$에 대하여, $(v\circ u)^\ast=u^\ast\circ v^\ast$이다.
-3. 임의의 $M$에 대하여, $(\id_M)^\ast=\id_{M^\ast}$이다.
-4. 임의의 $A$-linear isomorphism $u:M \rightarrow N$에 대하여, $(u^{-1})^\ast=(u^\ast)^{-1}$이다. 
+1. 두 $A$-linear map $u,v:M \rightarrow N$에 대하여, $(u+v)^t=u^t+v^t$이다.
+2. 두 $A$-linear map $u:M \rightarrow N$, $v:N \rightarrow L$에 대하여, $(v\circ u)^t=u^t\circ v^t$이다.
+3. 임의의 $M$에 대하여, $(\id_M)^t=\id_{M^\ast}$이다.
+4. 임의의 $A$-linear isomorphism $u:M \rightarrow N$에 대하여, $(u^{-1})^t=(u^t)^{-1}$이다. 
 :::
 
 ## 쌍대기저
@@ -108,9 +108,9 @@ $$\varepsilon: A^{\oplus I} \rightarrow M$$
 
 이 존재한다. 그럼 이 isomorphism의 dual을 생각하면 right $A$-module들 사이의 isomorphism
 
-$$\varepsilon^\ast: M^\ast \rightarrow (A_l^{\oplus I})^\ast=\Hom_{\lMod{A}}(A_l^{\oplus I}, A_l)\cong \prod_{i\in I}\left(\Hom_\lMod{A}(A_l,A_l)\right)\cong \prod_{i\in I} A_r$$
+$$\varepsilon^t: M^\ast \rightarrow (A_l^{\oplus I})^\ast=\Hom_{\lMod{A}}(A_l^{\oplus I}, A_l)\cong \prod_{i\in I}\left(\Hom_\lMod{A}(A_l,A_l)\right)\cong \prod_{i\in I} A_r$$
 
-을 얻는다. 이제 우변의 원소들 중, $i$번째 성분만 $1$이고, 나머지 성분은 $0$인 원소들을 생각하고, 이 원소의 $\varepsilon^\ast$에 대한 preimage를 $e_i^\ast$로 적자. 그럼 다음 식
+을 얻는다. 이제 우변의 원소들 중, $i$번째 성분만 $1$이고, 나머지 성분은 $0$인 원소들을 생각하고, 이 원소의 $\varepsilon^t$에 대한 preimage를 $e_i^\ast$로 적자. 그럼 다음 식
 
 $$\langle e_i, e_j^\ast\rangle=\delta_{ij}$$
 

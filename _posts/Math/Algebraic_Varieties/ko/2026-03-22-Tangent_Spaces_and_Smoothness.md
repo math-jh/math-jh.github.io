@@ -77,7 +77,7 @@ $$T_x X = (\mathfrak{m}_x / \mathfrak{m}_x^2)^\ast \cong \{v \in \mathbb{K}^n \m
 증명은 maximal ideal의 언어를 사용하며 복잡하게 쓰여졌지만, 그 철학은 $X=Z(f_i)$에 대해 생각해보면 간단하다. 이 경우 $(df_i)_x(v)=0$은 ($\mathbb{K}^n$을 $\mathbb{A}^n$으로 본다면) 정확히 $\mathbb{A}^n$ 안에서 hypersurface $Z(f_i)$의 (일상적인) tangent space이다. [명제 2](#prop2)은 그 자체만으로는 affine variety에 대해서만 적용되는 것이기는 하지만, 임의의 variety $X$의 임의의 점 $x$는 affine neighborhood를 가지므로 본질적으로는 모든 variety에 대해 적용되는 것이다. Tangent space의 차원에 대한 다음 명제 또한 마찬가지다.
 
 ::: 명제 3
-$T_x X$는 $\mathbb{K}$-벡터공간이며, 그 차원은 $n - \operatorname{rank}(J_x)$이다. 여기서 $J_x$는 $k \times n$ Jacobian matrix
+$T_x X$는 $\mathbb{K}$-벡터공간이며, 그 차원은 $n - \rank(J_x)$이다. 여기서 $J_x$는 $k \times n$ Jacobian matrix
 
 $$J_x = \left(\frac{\partial f_i}{\partial \x_j}(x)\right)_{1 \le i \le k, 1 \le j \le n}$$
 
@@ -88,7 +88,7 @@ $$J_x = \left(\frac{\partial f_i}{\partial \x_j}(x)\right)_{1 \le i \le k, 1 \le
 
 $$T_x X = \ker(J_x) = \{v \in \mathbb{K}^n \mid J_x v = 0\}$$
 
-이다. Rank-nullity theorem에 의해 $\dim T_x X = n - \operatorname{rank}(J_x)$이다.
+이다. Rank-nullity theorem에 의해 $\dim T_x X = n - \rank(J_x)$이다.
 :::
 
 ## 매끄러운 점과 특이점
@@ -121,7 +121,7 @@ $$\dim T_x X = \dim_{\mathbb{K}}(\mathfrak{m}_x/\mathfrak{m}_x^2) \ge \dim \math
 :::
 
 ::: 예시 7 (Singular points)
-1. (Node) $X = Z(\y^2 - \x^2(\x+1)) \subset \mathbb{A}^2$를 생각하자. 이 곡선은 원점에서 두 갈래로 갈라진다.
+1. (Node) $X = Z(\y^2 - \x^2(\x+1)) \subseteq \mathbb{A}^2$를 생각하자. 이 곡선은 원점에서 두 갈래로 갈라진다.
 
     ![nodal_curve](/assets/images/Math/Algebraic_Varieties/Tangent_Spaces_and_Smoothness-1.svg){:style="width:23.17em" class="invert" .align-center}
 
@@ -130,7 +130,7 @@ $$\dim T_x X = \dim_{\mathbb{K}}(\mathfrak{m}_x/\mathfrak{m}_x^2) \ge \dim \math
     $$J_{(x,y)} = \begin{pmatrix} -2x - 3x^2 & 2y \end{pmatrix}$$
 
     이므로, 원점에서 Jacobian은 $(0,0)$이고, 따라서 [명제 3](#prop3)에 의해 원점은 singular point이다. 기하학적으로, tangent space가 2차원이라는 것은 두 갈래의 접선 방향이 모두 포함된다는 것을 의미한다. 구체적으로, $\y^2 - \x^2(\x+1) \approx \y^2 - \x^2 = (\y-\x)(\y+\x)$이므로, 원점 근처에서 곡선은 $\y = \x$와 $\y = -\x$ 두 직선의 합집합처럼 보인다. Node는 "가장 온화한" singular point 중 하나이다.
-2. (Cusp) 이번에는 $Z(\y^2 - \x^3)\subset \mathbb{A}^2$를 생각하자.
+2. (Cusp) 이번에는 $Z(\y^2 - \x^3)\subseteq \mathbb{A}^2$를 생각하자.
 
     ![cusp](/assets/images/Math/Algebraic_Varieties/Tangent_Spaces_and_Smoothness-2.svg){:style="width:18.80em" class="invert" .align-center}
 
@@ -148,11 +148,11 @@ $$\dim T_x X = \dim_{\mathbb{K}}(\mathfrak{m}_x/\mathfrak{m}_x^2) \ge \dim \math
 :::
 
 ::: 증명
-[명제 3](#prop3)에서 $\dim T_x X = n - \operatorname{rank}(J_x)$임을 보였다. [정의 5](#def5)에서 $x$가 smooth point라는 것은 $\dim T_x X = \dim X$인 것이다. 따라서 $x$가 smooth point일 필요충분조건은
+[명제 3](#prop3)에서 $\dim T_x X = n - \rank(J_x)$임을 보였다. [정의 5](#def5)에서 $x$가 smooth point라는 것은 $\dim T_x X = \dim X$인 것이다. 따라서 $x$가 smooth point일 필요충분조건은
 
-$$n - \operatorname{rank}(J_x) = \dim X$$
+$$n - \rank(J_x) = \dim X$$
 
-즉, $\operatorname{rank}(J_x) = n - \dim X$인 것이다.
+즉, $\rank(J_x) = n - \dim X$인 것이다.
 :::
 
 ## 매끄러운 점들의 존재
@@ -163,7 +163,7 @@ $$n - \operatorname{rank}(J_x) = \dim X$$
 Irreducible variety $X$의 *generic point<sub>일반점</sub>* $\eta$는 $X$의 모든 nonempty open subset에 속하는 유일한 점이다.
 :::
 
-Affine case $X = \operatorname{Spec} A$에서, $\eta$는 $A$의 minimal prime ideal (즉, $(0)$ ideal)에 해당하며, local ring $\mathcal{O}_{X,\eta}$는 정확히 function field $\mathbb{K}(X) = \operatorname{Frac}(A)$이다. 기하학적으로, generic point는 $X$의 "가장 일반적인 점"으로, $X$의 어떤 특정한 성질도 갖지 않는 점으로 생각하면 된다. 이러한 아이디어를 다음 증명에서 활용할 수 있다. 
+Affine case $X = \Spec A$에서, $\eta$는 $A$의 minimal prime ideal (즉, $(0)$ ideal)에 해당하며, local ring $\mathcal{O}_{X,\eta}$는 정확히 function field $\mathbb{K}(X) = \Frac(A)$이다. 기하학적으로, generic point는 $X$의 "가장 일반적인 점"으로, $X$의 어떤 특정한 성질도 갖지 않는 점으로 생각하면 된다. 이러한 아이디어를 다음 증명에서 활용할 수 있다. 
 
 ::: 명제 10
 Variety $X$의 smooth points들의 집합 $X_\sm$은 $X$의 dense open subset이다. 특히, $X_\sm \ne \emptyset$이다.
@@ -172,7 +172,7 @@ Variety $X$의 smooth points들의 집합 $X_\sm$은 $X$의 dense open subset이
 ::: 증명
 $X = Z(f_1, \ldots, f_k) \subseteq \mathbb{A}^n$의 차원이 $\dim X = d$라 하자. [명제 8](#prop8)의 Jacobian criterion에 의해
 
-$$X_\sm = \{x \in X \mid \operatorname{rank}(J_x) = n - d\}$$
+$$X_\sm = \{x \in X \mid \rank(J_x) = n - d\}$$
 
 이다. 이제 이 집합이 dense open subset임을 보인다. 우선 $X_\sm$이 열린집합인 것은 상대적으로 자명하다.  Rank가 정확히 $n-d$라는 것은 두 조건의 동시 성립을 의미한다. 첫째, rank가 $n-d$ *이상*이라는 것은, 어떤 $(n-d) \times (n-d)$ 부분행렬의 행렬식이 0이 아닌 것과 동치이고, 이는 Zariski 위상에서 열린조건이다. 둘째, rank가 $n-d$ *이하*라는 것은, 모든 $(n-d+1) \times (n-d+1)$ 부분행렬의 행렬식이 0인 것과 동치이고, 이는 닫힌조건이다. 따라서 rank가 정확히 $n-d$인 점들의 집합은 $X$의 열린집합이다.
 

@@ -155,7 +155,7 @@ $$\tilde{s}:U \rightarrow \Spe(\mathcal{F}); \quad x\mapsto (x,s_x)$$
 ::: 예시 12 (Sheaf Hom)
 두 presheaf $\mathcal{F}, \mathcal{G}$를 고정하고, 임의의 $U$에 대하여 
 
-$$\mathcal{Hom}(\mathcal{F},\mathcal{G})(U)=\Hom_{\PSh(U)}(\mathcal{F}\vert_U, \mathcal{G}\vert_U)$$
+$$\sHom(\mathcal{F},\mathcal{G})(U)=\Hom_{\PSh(U)}(\mathcal{F}\vert_U, \mathcal{G}\vert_U)$$
 
 으로 정의한다. 
 :::

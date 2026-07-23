@@ -293,7 +293,7 @@ $$\rho_Y^{-1}(y)=(X\times_ZY)\times_Y\Spec \kappa(y)\cong X\times_Z\Spec \kappa(
 
 Also, by [Lemma 3](#lem3), for an affine open subset $\Spec R$ of $\varphi^{-1}(z)$, the scheme $\Spec (R\otimes_{\kappa(z)}\kappa(y))$ is an open subset of $\rho_Y^{-1}(y)$, and such sets cover $\rho_Y^{-1}(y)$.
 
-Suppose $\varphi$ is surjective. First we check that $\varphi^{-1}(z)$ is nonempty. Choose $x\in X$ with $\varphi(x)=z$, and choose an affine open subset $\Spec B\subseteq X$ containing $x$ that maps into $\Spec A$ under $\varphi$, together with the corresponding ring homomorphism $\phi:A \rightarrow B$. Letting $\mathfrak{q}\subset B$ and $\mathfrak{p}\subset A$ be the prime ideals corresponding to $x$ and $z$ respectively, we have $\phi^{-1}(\mathfrak{q})=\mathfrak{p}$, and by [Lemma 10](#lem10) and properties of localization,
+Suppose $\varphi$ is surjective. First we check that $\varphi^{-1}(z)$ is nonempty. Choose $x\in X$ with $\varphi(x)=z$, and choose an affine open subset $\Spec B\subseteq X$ containing $x$ that maps into $\Spec A$ under $\varphi$, together with the corresponding ring homomorphism $\phi:A \rightarrow B$. Letting $\mathfrak{q}\subseteq B$ and $\mathfrak{p}\subseteq A$ be the prime ideals corresponding to $x$ and $z$ respectively, we have $\phi^{-1}(\mathfrak{q})=\mathfrak{p}$, and by [Lemma 10](#lem10) and properties of localization,
 
 $$B\otimes_A\kappa(\mathfrak{p})\cong (B/\mathfrak{p}B)_\mathfrak{p}$$
 

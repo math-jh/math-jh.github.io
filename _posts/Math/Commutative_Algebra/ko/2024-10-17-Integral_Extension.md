@@ -105,9 +105,9 @@ $$(xx')MM'=(xM)(x'M')\subseteq MM',\qquad (x+x')MM'\subseteq xMM'+M(x'M')\subset
 
 ## 나카야마 보조정리
 
-이제 우리는 아주 유용한 보조정리를 증명한다. 우선 ring $A$의 *nilradical<sub>영근기</sub>* $\sqrt{(0)}$은 다음 식
+이제 우리는 아주 유용한 보조정리를 증명한다. 우선 ring $A$의 *nilradical<sub>영근기</sub>* $\mathfrak{N}(A)=\sqrt{(0)}$은 다음 식
 
-$$\sqrt{(0)}=\bigcap_\text{\scriptsize$\mathfrak{p}$ prime} \mathfrak{p}$$
+$$\mathfrak{N}(A)=\bigcap_\text{\scriptsize$\mathfrak{p}$ prime} \mathfrak{p}$$
 
 으로 주어지는 것을 기억하자. ([§국소화의 성질들, ⁋따름정리 8](/ko/math/commutative_algebra/properties_of_localization#cor8)) 비슷한 식으로 $A$의 *Jacobson radical<sub>제이콥슨 근기</sub>*를 다음 식
 
@@ -243,7 +243,7 @@ $$1=\sum_{i=1}^n \alpha_i a_i$$
 Ring homomorphism $\phi: A \rightarrow E$와 $x\in E$에 대하여, $x$가 $\phi$에 대해 integral인 것은, $A$의 임의의 prime ideal $\mathfrak{p}$에 대하여, $x$의 $E_\mathfrak{p}$에서의 image가 $\phi_\mathfrak{p}: A_\mathfrak{p} \rightarrow E_\mathfrak{p}$에 대해 integral인 것과 동치이다. 
 :::
 ::: 증명
-한쪽 방향은 [명제 14](#prop14)를 이용하면 된다. 따라서 임의의 prime ideal $\mathfrak{p}\subset A$에 대하여, $x$의 $E_\mathfrak{p}$에서의 image가 $A_\mathfrak{p}$에 대해 integral이라 하고, $x$가 integral임을 보이자. 이를 위해서는 $\phi(A)$와 $x$로 생성되는 $E$의 $A$-subalgebra $E'$를 잡은 후, $A \rightarrow E'$가 integral임을 보이면 된다. 
+한쪽 방향은 [명제 14](#prop14)를 이용하면 된다. 따라서 임의의 prime ideal $\mathfrak{p}\subseteq A$에 대하여, $x$의 $E_\mathfrak{p}$에서의 image가 $A_\mathfrak{p}$에 대해 integral이라 하고, $x$가 integral임을 보이자. 이를 위해서는 $\phi(A)$와 $x$로 생성되는 $E$의 $A$-subalgebra $E'$를 잡은 후, $A \rightarrow E'$가 integral임을 보이면 된다. 
 
 우선 가정으로부터, $E_\mathfrak{p}$에서 다음의 식
 

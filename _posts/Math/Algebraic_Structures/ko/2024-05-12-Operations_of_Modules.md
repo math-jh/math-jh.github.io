@@ -34,7 +34,7 @@ $$\Eq(u,v)=\{x\in M\mid u(x)=v(x)\}$$
 
 그리고
 
-$$\CoEq(u,v)=N/N',\qquad N'=\langle u(x)-v(x)\rangle\rangle$$
+$$\CoEq(u,v)=N/N',\qquad N'=\langle u(x)-v(x)\rangle$$
 
 을 통해 정의할 수 있다. 즉 다음이 성립한다. 
 

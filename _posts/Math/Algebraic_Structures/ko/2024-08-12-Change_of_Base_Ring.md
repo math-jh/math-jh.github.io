@@ -93,7 +93,7 @@ Right $B$-module $N_1$, left $B$-module $N_2$에 대하여, 두 abelian group $\
 ::: 증명
 $\phi^\ast N_1\times\phi^\ast N_2$에서 $N_1\otimes_B N_2$로의 함수를 $(y_1,y_2)\mapsto y_1\otimes_B y_2$로 정의한 후, 이것이 $A$의 스칼라곱에 대해서도 잘 행동하는 것을 보이면 된다. 그런데 $\phi^\ast N_1,\phi^\ast N_2$ 위에서 $A$의 스칼라곱은 $\phi(\alpha)$를 통한 $B$-action으로 정의되므로, 임의의 $\alpha\in A$에 대하여
 
-$$(\alpha\cdot_A y_1,y_2)=(\phi(\alpha)\cdot_B y_1, y_2)\mapsto (\phi(\alpha)\cdot_B y_1)\otimes_B y_2=y_1\otimes_B(\phi(\alpha)\cdot_B y_1)$$
+$$(\alpha\cdot_A y_1,y_2)=(\phi(\alpha)\cdot_B y_1, y_2)\mapsto (\phi(\alpha)\cdot_B y_1)\otimes_B y_2=y_1\otimes_B(\phi(\alpha)\cdot_B y_2)$$
 
 가 성립하며, 따라서 $(\alpha\cdot_A y_1,y_2)$와 $y_1,\alpha\cdot_Ay_2$가 같은 원소로 보내지므로 tensor product의 universal property에 의해 증명이 완료된다.
 :::

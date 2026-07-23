@@ -161,7 +161,7 @@ $$\sum a_ie_i\leftrightarrow\sum a_i\frac{\partial}{\partial r^i}$$
 ::: 예시 5
 $n\times n$ 행렬들의 모임 $\Mat_n(\mathbb{R})$은 $n^2$차원 $\mathbb{R}$-벡터공간이다. 따라서, $\Mat_n(\mathbb{R})$의 임의의 점에서의 tangent space는 $\Mat_n(\mathbb{R})$과 동일하다. 
 
-특별히 $\Mat_n(\mathbb{R})$의 open submanifold인 $\GL(n,\mathbb{R})$을 생각하면, $\GL(n,\mathbb{R})$의 임의의 원소에서의 tangent space는 이 원소를 $\Mat_n(\mathbb{R})$의 원소로 보았을 때의 tangent space와 동일하고, 따라서 $\Mat_n(\mathbb{R})$과 같다. 
+특별히 $\Mat_n(\mathbb{R})$의 open submanifold인 $\GL(n;\mathbb{R})$을 생각하면, $\GL(n;\mathbb{R})$의 임의의 원소에서의 tangent space는 이 원소를 $\Mat_n(\mathbb{R})$의 원소로 보았을 때의 tangent space와 동일하고, 따라서 $\Mat_n(\mathbb{R})$과 같다. 
 :::
 
 ## Tangent covector

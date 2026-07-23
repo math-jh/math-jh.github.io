@@ -28,7 +28,7 @@ Group들의 family $(G_i)$와, 이들의 product가 주어졌다 하자. 그럼 
 
 $$\prod_{i\in I} G_i=\left\langle\bigcup \iota_i(G_i)\right\rangle$$
 
-이 성립하는지를 생각할 수 있다. 이 식은 $I$가 무한집합이라면 거의 대부분 성립하지 않는다. 가장 간단한 예시로, $I=\mathbb{N}$이라 잡고 $G_i=\mathbb{Z}/2\mathbb{Z}=\{\bar{0}, \bar{1}\}이$라 하자. 그럼, 예를 들어 좌변은 원소
+이 성립하는지를 생각할 수 있다. 이 식은 $I$가 무한집합이라면 거의 대부분 성립하지 않는다. 가장 간단한 예시로, $I=\mathbb{N}$이라 잡고 $G_i=\mathbb{Z}/2\mathbb{Z}=\{\bar{0}, \bar{1}\}$이라 하자. 그럼, 예를 들어 좌변은 원소
 
 $$(\bar{1},\bar{1},\cdots)$$
 

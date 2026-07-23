@@ -31,7 +31,7 @@ A *line bundle* $\mathcal{L}$ on a variety $X$ consists of the following data.
 
     $$\phi_j \circ \phi_i^{-1}: (U_i \cap U_j) \times \mathbb{A}^1 \rightarrow (U_i \cap U_j) \times \mathbb{A}^1$$
 
-    which has the form $(p, t) \mapsto (p, g_{ij}(p)t)$ for suitable *transition functions* $g_{ij} \in \mathcal{O}_X(U_i \cap U_j)^\ast$.
+    which has the form $(p, t) \mapsto (p, g_{ij}(p)t)$ for suitable *transition functions* $g_{ij} \in \mathcal{O}_X(U_i \cap U_j)^\times$.
 :::
 
 A *morphism* $\varphi \colon \mathcal{L} \rightarrow \mathcal{M}$ between two line bundles $\mathcal{L}, \mathcal{M} \rightarrow X$ defines a $\mathbb{K}$-linear map $\varphi_p \colon \mathcal{L}_p \rightarrow \mathcal{M}_p$ between fibers at each point $p \in X$, and can be expressed over a suitable open cover $\{U_k\}$ as an $\mathcal{O}_X(U_k)$-module homomorphism
@@ -205,7 +205,7 @@ Let us construct a local trivialization of $\mathcal{O}_{\mathbb{P}^n}(-1)$ on t
 In particular, examining $\mathcal{O}(-1)$ on $\mathbb{P}^1$ makes the meaning of the intuitive *twist* explained above much clearer. The process of making $\mathbb{P}^1$ from $\mathbb{A}^2\setminus \{0\}$ can be thought of as first mapping $\mathbb{A}^2\setminus\{0\}$ to the unit circle via radial projection, and then identifying antipodal points of the unit circle; during this process, vectors in opposite directions are identified, which causes the fibers to twist. One way to see this twist is to look at sections of the line bundle $\mathcal{L}$.
 
 ::: Definition 15
-We denote the space of *global sections* of a line bundle $\mathcal{L}$ by $\Gamma(X, \mathcal{L})$. That is, $\Gamma(X, \mathcal{L})$ is the set of regular maps assigning to each point $x\in X$ an element of the fiber $\pi^{-1}(x)\subset \mathcal{L}$.
+We denote the space of *global sections* of a line bundle $\mathcal{L}$ by $\Gamma(X, \mathcal{L})$. That is, $\Gamma(X, \mathcal{L})$ is the set of regular maps assigning to each point $x\in X$ an element of the fiber $\pi^{-1}(x)\subseteq \mathcal{L}$.
 :::
 
 Another popular notation for the global section space is $H^0(X, \mathcal{L})$. This notation will be justified in [§Sheaf Cohomology, ⁋Definition 1](/en/math/algebraic_varieties/sheaf_cohomology#def1), but until then we will use $\Gamma(X, \mathcal{L})$.
@@ -321,7 +321,7 @@ To verify this from the transition function perspective, the transition function
 :::
 
 ::: Example 22
-For an embedding $i: C \hookrightarrow \mathbb{P}^n$, $i^\ast \mathcal{O}_{\mathbb{P}^n}(1)$ is a line bundle on the curve $C$. We call this the *hyperplane bundle* on $C$ and denote it by $\mathcal{O}_C(1)$. In general $\mathcal{O}_C(1)$ is nontrivial; for example, when $C = \mathbb{P}^1 \subset \mathbb{P}^n$, $\mathcal{O}_C(1) = \mathcal{O}_{\mathbb{P}^1}(1)$ is a nontrivial line bundle as seen in [Example 12](#ex12). The name "hyperplane bundle" comes from the fact that it is obtained by pulling back the line bundle $\mathcal{O}_{\mathbb{P}^n}(1)$ corresponding to a hyperplane $H$, which is a hypersurface of degree $1$ in $\mathbb{P}^n$, to $C$.
+For an embedding $i: C \hookrightarrow \mathbb{P}^n$, $i^\ast \mathcal{O}_{\mathbb{P}^n}(1)$ is a line bundle on the curve $C$. We call this the *hyperplane bundle* on $C$ and denote it by $\mathcal{O}_C(1)$. In general $\mathcal{O}_C(1)$ is nontrivial; for example, when $C = \mathbb{P}^1 \subseteq \mathbb{P}^n$, $\mathcal{O}_C(1) = \mathcal{O}_{\mathbb{P}^1}(1)$ is a nontrivial line bundle as seen in [Example 12](#ex12). The name "hyperplane bundle" comes from the fact that it is obtained by pulling back the line bundle $\mathcal{O}_{\mathbb{P}^n}(1)$ corresponding to a hyperplane $H$, which is a hypersurface of degree $1$ in $\mathbb{P}^n$, to $C$.
 :::
 
 ## Vector Bundle
@@ -336,10 +336,10 @@ A *rank r vector bundle* $\mathcal{E}$ on a variety $X$ consists of the followin
 
     $$\phi_j \circ \phi_i^{-1}: (U_i \cap U_j) \times \mathbb{A}^r \rightarrow (U_i \cap U_j) \times \mathbb{A}^r$$
 
-    which has the form $(p, v) \mapsto (p, g_{ij}(p)v)$ for suitable *transition functions* $g_{ij} \in \operatorname{GL}_r(\mathcal{O}_X(U_i \cap U_j))$.
+    which has the form $(p, v) \mapsto (p, g_{ij}(p)v)$ for suitable *transition functions* $g_{ij} \in \GL_r(\mathcal{O}_X(U_i \cap U_j))$.
 :::
 
-Comparing with the definition of a line bundle, the only difference is that the fiber is $\mathbb{A}^r$ instead of $\mathbb{A}^1$, and the transition function takes values in $\operatorname{GL}_r(\mathcal{O}_X(U_i \cap U_j))$ instead of $\mathcal{O}_X(U_i \cap U_j)^\ast = \operatorname{GL}_1(\mathcal{O}_X(U_i \cap U_j))$. Therefore a line bundle is exactly a rank 1 vector bundle.
+Comparing with the definition of a line bundle, the only difference is that the fiber is $\mathbb{A}^r$ instead of $\mathbb{A}^1$, and the transition function takes values in $\GL_r(\mathcal{O}_X(U_i \cap U_j))$ instead of $\mathcal{O}_X(U_i \cap U_j)^\times = \GL_1(\mathcal{O}_X(U_i \cap U_j))$. Therefore a line bundle is exactly a rank 1 vector bundle.
 
 The same cocycle condition as in [Proposition 2](#prop2) holds. However, since the transition functions are matrix-valued, one must be careful about the order of multiplication.
 

@@ -114,7 +114,7 @@ Manifold $M$의 부분집합 $A$가 주어졌다 하자. 만일 $A$를 $M$의 su
 
 ![uniqueness](/assets/images/Math/Manifolds/Uniqueness_of_Submanifold-4.svg){:style="width:12.99em" class="invert" .align-center}
 
-여기서 $\iota$와 $\iota'$는 모두 $A\hookrightarrow M$이지만, 구별을 위해 다른 이름으로 표기하였다. 정의에 의해 $(A,\mathcal{T},\mathcal{A})$가 $M$의 embedded submanifold이므로, 수직방향의 $\iota$는 embedding이고 따라서 [명제 2](#prop2)에 의하여 $\operatorname{id}$는 $C^\infty$이다. 또, 연쇄법칙에 의하여
+여기서 $\iota$와 $\iota'$는 모두 $A\hookrightarrow M$이지만, 구별을 위해 다른 이름으로 표기하였다. 정의에 의해 $(A,\mathcal{T},\mathcal{A})$가 $M$의 embedded submanifold이므로, 수직방향의 $\iota$는 embedding이고 따라서 [명제 2](#prop2)에 의하여 $\id$는 $C^\infty$이다. 또, 연쇄법칙에 의하여
 
 $$d\iota'=d\iota\circ d(\id)$$
 

@@ -59,7 +59,7 @@ Finally, for arbitrary $b_1+c_1,\ldots, b_n+c_n\in \mathfrak{b}+\mathfrak{c}$,
 
 $$a_1(b_1+c_1)+\cdots a_n(b_n+c_n)$$
 
-expanding using the distributive law gives $\mathfrak{a}(\mathfrak{b}+\mathfrak{c})\subset \mathfrak{a}\mathfrak{b}+\mathfrak{a}\mathfrak{c}$ easily. Conversely, for any
+expanding using the distributive law gives $\mathfrak{a}(\mathfrak{b}+\mathfrak{c})\subseteq \mathfrak{a}\mathfrak{b}+\mathfrak{a}\mathfrak{c}$ easily. Conversely, for any
 
 $$a_1b_1+\cdots a_nb_n + a_1'c_1+\cdots +a_m'c_m\in \mathfrak{a}\mathfrak{b}+\mathfrak{a}\mathfrak{c}$$
 
@@ -68,9 +68,9 @@ since the $b_i$'s and $c_i$'s are all elements of $\mathfrak{b}+\mathfrak{c}$, t
 
 For any two two-sided ideals $\mathfrak{a},\mathfrak{b}$, since both
 
-$$\mathfrak{a}\mathfrak{b}\subset \mathfrak{a}A\subset \mathfrak{a},\quad \mathfrak{a}\mathfrak{b}\subset A \mathfrak{b}\subset \mathfrak{b}$$
+$$\mathfrak{a}\mathfrak{b}\subseteq \mathfrak{a}A\subseteq \mathfrak{a},\quad \mathfrak{a}\mathfrak{b}\subseteq A \mathfrak{b}\subseteq \mathfrak{b}$$
 
-hold, we have $\mathfrak{a}\mathfrak{b}\subset \mathfrak{a}\cap \mathfrak{b}$. In general equality need not hold.
+hold, we have $\mathfrak{a}\mathfrak{b}\subseteq \mathfrak{a}\cap \mathfrak{b}$. In general equality need not hold.
 
 ::: Definition 3
 Two two-sided ideals $\mathfrak{a},\mathfrak{b}$ of a ring $A$ satisfying $\mathfrak{a}+\mathfrak{b}=A$ are called *comaximal*. We say several ideals $\mathfrak{a}_1,\ldots,\mathfrak{a}_n$ are *pairwise comaximal* if $\mathfrak{a}_i+\mathfrak{a}_j=A$ for all $i\ne j$.
@@ -92,7 +92,7 @@ $$A=\mathfrak{a}+\mathfrak{b}_1\cdots \mathfrak{b}_n=\mathfrak{a}+(\mathfrak{b}_
 holds.
 :::
 ::: Proof
-Since $\mathfrak{b}_1\cdots \mathfrak{b}_n\subset \mathfrak{b}_1\cap \cdots\cap \mathfrak{b}_n$ anyway, it suffices to show the equality $A=\mathfrak{a}+\mathfrak{b}_1\cdots \mathfrak{b}_n$. Also, since the proof works inductively, it suffices to consider the case $n=2$. That is, assume $A=\mathfrak{a}+\mathfrak{b}_1=\mathfrak{a}+\mathfrak{b}_2$ and let us show $A=\mathfrak{a}+\mathfrak{b}_1 \mathfrak{b}_2$.
+Since $\mathfrak{b}_1\cdots \mathfrak{b}_n\subseteq \mathfrak{b}_1\cap \cdots\cap \mathfrak{b}_n$ anyway, it suffices to show the equality $A=\mathfrak{a}+\mathfrak{b}_1\cdots \mathfrak{b}_n$. Also, since the proof works inductively, it suffices to consider the case $n=2$. That is, assume $A=\mathfrak{a}+\mathfrak{b}_1=\mathfrak{a}+\mathfrak{b}_2$ and let us show $A=\mathfrak{a}+\mathfrak{b}_1 \mathfrak{b}_2$.
 
 First, from $A=\mathfrak{a}+\mathfrak{b}_1=\mathfrak{a}+\mathfrak{b}_2$, we can choose $a,a'\in \mathfrak{a}, b_i\in \mathfrak{b}_i$ satisfying $1=a+b_1=a'+b_2$. Then
 
@@ -176,11 +176,11 @@ The integer version mentioned in the introduction is the special case $A=\mathbb
 On the other hand, the isomorphism $A\cong\prod A/\mathfrak{a}_i$ of [Proposition 6](#prop6) is a strong statement that the ring $A$ decomposes as a product of smaller rings, and this can be expressed neatly through the following equivalent proposition.
 
 ::: Proposition 7
-Let a ring $A$, its center $C(A)$, and two-sided ideals $\mathfrak{a}_1,\ldots, \mathfrak{a}_n$ be given. The following are all equivalent.
+Let a ring $A$, its center $Z(A)$, and two-sided ideals $\mathfrak{a}_1,\ldots, \mathfrak{a}_n$ be given. The following are all equivalent.
 
 1. The $\pi:A \rightarrow \prod A/\mathfrak{a}_i$ defined above is an isomorphism.
 2. For all $i\neq j$ we have $\mathfrak{a}_i+\mathfrak{a}_j=A$ and $\bigcap \mathfrak{a}_i=0$.
-3. There exist elements $e_1,\ldots, e_n$ of $C(A)$ such that $\sum e_i=1$, $e_i^2=e_i$ for all $i$, $e_ie_j=0$ for all $i\neq j$, and $\mathfrak{a}_i=A(1-e_i)$ for all $i$.
+3. There exist elements $e_1,\ldots, e_n$ of $Z(A)$ such that $\sum e_i=1$, $e_i^2=e_i$ for all $i$, $e_ie_j=0$ for all $i\neq j$, and $\mathfrak{a}_i=A(1-e_i)$ for all $i$.
 :::
 ::: Proof
 First, the equivalence of the first two conditions follows from [Proposition 6](#prop6). Now assume the second condition and show the third. Taking a hint from the proof of [Proposition 6](#prop6), let $\bar{e}_i$ be the element of $\prod A/\mathfrak{a}_i$ whose $i$-th component is $1+\mathfrak{a}_i$ and all others are $0$. Then
@@ -193,7 +193,7 @@ Finally, assume the third condition and show the first. First we show $A=\bigopl
 
 $$a=a\cdot 1=a\sum_i e_i=\sum_i ae_i$$
 
-and if $x\in Ae_i\cap\sum_{j\neq i}Ae_j$ then $x$ is of the form $ae_i$ and simultaneously of the form $\sum_{j\neq i} a_j e_j$, and the only $x$ satisfying this is $0$, so this gives a direct sum. Now since $e_i\in C(A)$, each $Ae_i$ is a ring with identity $e_i$, and the map
+and if $x\in Ae_i\cap\sum_{j\neq i}Ae_j$ then $x$ is of the form $ae_i$ and simultaneously of the form $\sum_{j\neq i} a_j e_j$, and the only $x$ satisfying this is $0$, so this gives a direct sum. Now since $e_i\in Z(A)$, each $Ae_i$ is a ring with identity $e_i$, and the map
 
 $$A\rightarrow Ae_i;\qquad a\mapsto ae_i$$
 

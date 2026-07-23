@@ -20,7 +20,7 @@ published: false
 
 우선 우리는 B-model의 무대를 만들어야 한다. [§거울대칭 개요, ⁋정의 4](/ko/math/mirror_symmetry/overview#def4)에서 살펴보았듯, Landau-Ginzburg model $(\check{X}, W_q)$에서 $\check{X}$는 보통 algebraic torus $(\mathbb{C}^\ast)^N$ 혹은 그 안에 있는 subvariety이며, $W_q$는 *quantum parameter* $q = (q_1, \ldots, q_r) \in (\mathbb{C}^\ast)^r$로 parametrize되는 holomorphic function이다. 여기서 $r$은 A-side mirror $X$의 *complexified Kähler moduli*의 차원이었으며, Fano variety의 경우
 
-$$r = \operatorname{rank}\,\operatorname{Pic}(X) = \dim_\mathbb{C} H^2(X; \mathbb{C})$$
+$$r = \rank\,\operatorname{Pic}(X) = \dim_\mathbb{C} H^2(X; \mathbb{C})$$
 
 로 주어졌다. 우리는 이 위에 oscillating integral을 정의하기 위해 우선 holomorphic volume form $\omega$를 정의한다.
 
@@ -35,7 +35,7 @@ $$\omega = d\log \rchi^{m_1} \wedge \cdots \wedge d\log \rchi^{m_N}$$
 을 만드는 구성[^1]의 일반화이다. 한편 이 구성이 작동하는 ambient 데이터 $(Y, D)$ 자체를 추상화하면 다음 정의의 log Calabi-Yau pair가 된다.
 
 ::: 정의 1
-Smooth projective variety $Y$와 reduced SNC divisor ([\[토릭 기하학\] §토릭 다양체 위의 로그 미분형식, ⁋정의 5](/ko/math/toric_geometry/logarithmic_differentials#def5)) $D \subset Y$의 쌍 $(Y, D)$가 $K_Y + D \sim 0$을 만족할 때 이를 *log Calabi-Yau pair<sub>로그 칼라비-야우 쌍</sub>*라 부른다. 이 때, 위의 construction을 통해 얻어지는 non-vanihsing volume form $\omega=\Omega\vert_{\check{X}}$을 log CY pair의 *canonical holomorphic volume form<sub>표준 정칙 부피 형식</sub>*이라 부른다. 
+Smooth projective variety $Y$와 reduced SNC divisor ([\[토릭 기하학\] §토릭 다양체 위의 로그 미분형식, ⁋정의 5](/ko/math/toric_geometry/logarithmic_differentials#def5)) $D \subseteq Y$의 쌍 $(Y, D)$가 $K_Y + D \sim 0$을 만족할 때 이를 *log Calabi-Yau pair<sub>로그 칼라비-야우 쌍</sub>*라 부른다. 이 때, 위의 construction을 통해 얻어지는 non-vanihsing volume form $\omega=\Omega\vert_{\check{X}}$을 log CY pair의 *canonical holomorphic volume form<sub>표준 정칙 부피 형식</sub>*이라 부른다. 
 :::
 
 기하적으로, 앞선 construction에서 $\mathcal{K}_Y\otimes \mathcal{O}_Y(D)\cong \mathcal{O}_Y$의 nowhere-vanishing global section을 통해 $\omega$를 택하는 것은 trivialization $\Omega^N_Y(\log D)\cong\mathcal{O}_Y$를 택하는 것과 같다. 특히 $\check{X}=(\mathbb{C}^\ast)^N$인 경우 standard affine coordinate들 $\x_i$에 대한 canonical volume form은
@@ -202,7 +202,7 @@ $$z\,\partial_{q_i}\mathcal{I}^a_p = \sum_b (M_i)^a_b\,\mathcal{I}^b_p,\qquad z^
 을 만족한다. 특히 $\mathcal{I}$는 invertible matrix-valued function이며, frame $\{e_a\}_a$로 trivialize한 B-model connection $\nabla^z_B$의 *fundamental solution matrix*를 이룬다.
 :::
 
-구체적으로, $\{[\Gamma_p]\}$의 dual basis $\{f^p\}\subset\mathcal{H}_{(q,z)}$는 [정의 4](#def4)에 의해 $\nabla^z_B$의 *horizontal sections*이고, $\mathcal{H}$ 안에서 non-flat frame $\{e_a\}$와 flat frame $\{f^p\}$ 사이의 change-of-basis가 정확히
+구체적으로, $\{[\Gamma_p]\}$의 dual basis $\{f^p\}\subseteq\mathcal{H}_{(q,z)}$는 [정의 4](#def4)에 의해 $\nabla^z_B$의 *horizontal sections*이고, $\mathcal{H}$ 안에서 non-flat frame $\{e_a\}$와 flat frame $\{f^p\}$ 사이의 change-of-basis가 정확히
 
 $$e_a = \sum_p \mathcal{I}^a_p\,f^p,\qquad f^p = \sum_a (\mathcal{I}^{-1})^p_a\,e_a$$
 

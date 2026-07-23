@@ -107,7 +107,7 @@ Finally, generic flatness is an important theorem stating that the flat locus fo
 (Generic flatness). Let $f: X \rightarrow Y$ be a dominant morphism of finite type from an integral scheme $X$ to a Noetherian scheme $Y$. Then there exists a dense open subset $U$ of $Y$ such that the restriction $f\rvert_{f^{-1}(U)}: f^{-1}(U) \rightarrow U$ is flat.
 :::
 ::: Proof
-The problem can be reduced to the affine case. That is, we set $Y = \operatorname{Spec} A$ and $X = \operatorname{Spec} B$, assume that $A$ is a Noetherian integral domain, that $B$ is an algebra of finite type over $A$, and that $A \rightarrow B$ is injective. By the algebraic version of generic flatness, there exists a nonzero element $f \neq 0$ in $A$ such that $B_f$ is flat over $A_f$. This means precisely that $f$ is flat over $D(f) \subseteq Y$. The proof of this theorem proceeds by viewing $B$ as a finitely generated $A$-algebra, securing flatness over its fraction field, and then propagating this to a suitable localization.
+The problem can be reduced to the affine case. That is, we set $Y = \Spec A$ and $X = \Spec B$, assume that $A$ is a Noetherian integral domain, that $B$ is an algebra of finite type over $A$, and that $A \rightarrow B$ is injective. By the algebraic version of generic flatness, there exists a nonzero element $f \neq 0$ in $A$ such that $B_f$ is flat over $A_f$. This means precisely that $f$ is flat over $D(f) \subseteq Y$. The proof of this theorem proceeds by viewing $B$ as a finitely generated $A$-algebra, securing flatness over its fraction field, and then propagating this to a suitable localization.
 :::
 
 ## Examples
@@ -121,15 +121,15 @@ Let us examine typical examples of flat and non-flat morphisms.
 :::
 
 ::: Example 10
-As a representative non-flat example, consider a family of cusps. Let $k$ be a field, and consider the family over $\mathbb{A}_k^1 = \operatorname{Spec} k[t]$
+As a representative non-flat example, consider a family of cusps. Let $k$ be a field, and consider the family over $\mathbb{A}_k^1 = \Spec k[t]$
 
-$$X = \operatorname{Spec} k[t, x, y]/(y^2 - x^3 - t) \longrightarrow \mathbb{A}_k^1$$
+$$X = \Spec k[t, x, y]/(y^2 - x^3 - t) \longrightarrow \mathbb{A}_k^1$$
 
 At points with $t \neq 0$, the fiber is a non-singular elliptic curve (genus 1), but at $t = 0$, the fiber becomes the cusp $y^2 = x^3$ and is singular. This morphism is not flat at $t = 0$. In fact, considering $k[t, x, y]/(y^2 - x^3 - t)_{(t)}$ over $k[t]_{(t)}$, this module has elements annihilated by $t$, so $t$-torsion exists and flatness fails. Intuitively, flatness is lost because the topological type of the fiber changes abruptly.
 
 Similarly, the family of nodes
 
-$$\operatorname{Spec} k[t, x, y]/(xy - t) \longrightarrow \mathbb{A}_k^1$$
+$$\Spec k[t, x, y]/(xy - t) \longrightarrow \mathbb{A}_k^1$$
 
 is also not flat at $t = 0$. When $t \neq 0$, the fiber is two intersecting lines, but at $t = 0$ it becomes the node $xy = 0$ and takes a topologically different form.
 :::
@@ -139,7 +139,7 @@ For a scheme $X$ over a field $k$ of positive characteristic $p > 0$, the **Frob
 
 $$F: X \longrightarrow X$$
 
-induces the $p$th power map $a \mapsto a^p$ on the structure sheaf. This morphism is generally not flat. By Kunz's theorem, $X$ being regular is equivalent to $F$ being flat. Therefore, if $X$ has a singular point, the Frobenius morphism is not flat. For example, $X = \operatorname{Spec} k[x, y]/(xy)$ is a node, and at this point the Frobenius is not flat.
+induces the $p$th power map $a \mapsto a^p$ on the structure sheaf. This morphism is generally not flat. By Kunz's theorem, $X$ being regular is equivalent to $F$ being flat. Therefore, if $X$ has a singular point, the Frobenius morphism is not flat. For example, $X = \Spec k[x, y]/(xy)$ is a node, and at this point the Frobenius is not flat.
 :::
 
 ## Properties of Flat Morphisms
@@ -163,7 +163,7 @@ It is also important that the set of points where a morphism fails to be flat fo
 For a morphism $f: X \rightarrow Y$ locally of finite presentation, the set of points of $X$ at which $f$ is not flat is a closed set. Equivalently, the flat locus is an open subset of $X$.
 :::
 ::: Proof
-The problem is local, so we may assume $Y = \operatorname{Spec} A$ and $X = \operatorname{Spec} B$. Let $B$ be of finite presentation over $A$. Flatness is checked locally by the vanishing of a $\operatorname{Tor}$ functor, and the vanishing of $\operatorname{Tor}_1^A(B, -)$ is described by the non-vanishing condition of certain determinants. Since such conditions are open conditions, the set of flat points is an open set. In the Noetherian case, this can be described more explicitly via the heights of ideals.
+The problem is local, so we may assume $Y = \Spec A$ and $X = \Spec B$. Let $B$ be of finite presentation over $A$. Flatness is checked locally by the vanishing of a $\operatorname{Tor}$ functor, and the vanishing of $\operatorname{Tor}_1^A(B, -)$ is described by the non-vanishing condition of certain determinants. Since such conditions are open conditions, the set of flat points is an open set. In the Noetherian case, this can be described more explicitly via the heights of ideals.
 :::
 
 ---

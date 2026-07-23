@@ -162,7 +162,7 @@ $$\rchi(\mathcal{O}_{\widetilde{\mathbb{P}}^2})=\rchi(\mathcal{O}_{\mathbb{P}^2}
 :::
 
 ::: 예시 9 ($\mathbb{P}^3$ 속 degree $d$ smooth surface)
-$S\subset\mathbb{P}^3$를 degree $d$인 smooth surface라 하자. Adjunction formula에 의해
+$S\subseteq\mathbb{P}^3$를 degree $d$인 smooth surface라 하자. Adjunction formula에 의해
 
 $$K_S=(K_{\mathbb{P}^3}+S)\vert_S=(-4H+dH)\vert_S=(d-4)h$$
 

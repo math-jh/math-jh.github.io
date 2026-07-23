@@ -166,13 +166,13 @@ $$\Jac(W_q)\cong QH^\ast(X)$$
 
 마지막으로 $QH^\ast(X)$에는 이미 grading이 주어져있으므로 이를 반영할 데이터가 추가로 필요하다. 여기서 $QH^\ast(X)$의 grading은 classical cohomology $H^\ast(X)$에 Novikov ring의 grading으로부터 나오는 grading을 더하여 얻어졌던 것을 기억하자. 즉 $QH^\ast(X) = H^\ast(X) \otimes_\mathbb{C} \Lambda$라 할 때, 임의의 generator $T_\alpha \otimes q^\beta$의 degree는 $\deg(T_\alpha \otimes q^\beta) = p_\alpha + 2\, c_1 \cdot \beta$로 주어졌었다. ([\[사교기하학\] §양자 코호몰로지, ⁋정의 2](/ko/math/symplectic_geometry/quantum_cohomology#def2))
 
-이러한 grading 자료를 manifold $M$ 위의 *vector field*로 부호화한 것이 *Euler vector field* $E$이다. $E$의 flow를 따라 곱셈 $\circ$를 흘려보냈을 때 그 *무한소 deformation*이 Lie derivative $\Lie_E(\circ)$로 주어지는데, [\[사교기하학\] §양자 코호몰로지](/ko/math/symplectic_geometry/quantum_cohomology)에서 살펴본 quantum product가 degree를 respect한다는 사실은 이 deformation이 정확히 $\circ$ 자기 자신과 같다는 식
+이러한 grading 자료를 manifold $M$ 위의 *vector field*로 부호화한 것이 *Euler vector field* $E$이다. $E$의 flow를 따라 곱셈 $\circ$를 흘려보냈을 때 그 *무한소 deformation*이 Lie derivative $\mathcal{L}_E(\circ)$로 주어지는데, [\[사교기하학\] §양자 코호몰로지](/ko/math/symplectic_geometry/quantum_cohomology)에서 살펴본 quantum product가 degree를 respect한다는 사실은 이 deformation이 정확히 $\circ$ 자기 자신과 같다는 식
 
-$$\Lie_E(\circ) = \circ$$
+$$\mathcal{L}_E(\circ) = \circ$$
 
 으로 나타낼 수 있다. 비슷하게, 우리의 직관에서 $\eta$는 Poincaré pairing이며 ([예시 2](#ex2)), 이는 오직 top degree에서만 살아남으므로 이 degree 조건은 
 
-$$\Lie_E(\eta) = (2 - d)\eta$$
+$$\mathcal{L}_E(\eta) = (2 - d)\eta$$
 
 로 번역된다. 이제 Euler vector field는 $\nabla^2 E=0$을 만족하는 *affine* vector field로, <em-ko>정확하게</em-ko> 이들 두 조건이 $E$를 완전하게 결정한다. 
 
@@ -186,7 +186,7 @@ $$\Lie_E(\eta) = (2 - d)\eta$$
 3. 모든 점에서 곱셈 $\circ$의 항등원이 되는 vector field $e$가 존재하며 $\nabla e = 0$이다.
 4. Affine 조건 $\nabla^2 E=0$을 만족하는 vector field $E$가 존재하여, 적당한 상수 $d\in \mathbb{C}$에 대해
     
-    $$\Lie_E(\circ)=\circ,\qquad \Lie_E(\eta)=(2-d)\eta$$
+    $$\mathcal{L}_E(\circ)=\circ,\qquad \mathcal{L}_E(\eta)=(2-d)\eta$$
 
     가 성립한다.
 5. 모든 vector field $X,Y,Z$에 대해 $\eta(X \circ Y, Z) = \eta(X, Y \circ Z)$가 성립한다.
@@ -260,13 +260,13 @@ $$\eta = \sum_{i=1}^n dt^i \otimes dt^i,\qquad \partial_{t^i} \circ \partial_{t^
 
 이제 이 manifold의 Euler vector field는 우리가 미적분학 시간에 Euler vector field라 부르는 바로 그 vector field $\sum_i t^i\partial_{t^i}$가 된다. 실제로, flat coordinate들에서 $E(t^i)=t^i$이므로 Lie derivative들을 구해보면
 
-$$\Lie_E(dt^i)=d(E(t^i))=dt^i,\qquad \Lie_E(\partial_{t^i})=[E, \partial_{t^i}]=-\partial_{t^i}$$
+$$\mathcal{L}_E(dt^i)=d(E(t^i))=dt^i,\qquad \mathcal{L}_E(\partial_{t^i})=[E, \partial_{t^i}]=-\partial_{t^i}$$
 
 가 되며, 이로부터
 
-$$\Lie_E(\eta) = \sum_i \bigl( \Lie_E(dt^i) \otimes dt^i + dt^i \otimes \Lie_E(dt^i) \bigr) = 2 \sum_i dt^i \otimes dt^i = 2\eta$$
+$$\mathcal{L}_E(\eta) = \sum_i \bigl( \mathcal{L}_E(dt^i) \otimes dt^i + dt^i \otimes \mathcal{L}_E(dt^i) \bigr) = 2 \sum_i dt^i \otimes dt^i = 2\eta$$
 
-임을 안다. 비슷하게 곱셈의 경우, $\circ=\sum dt^i\otimes dt^i\otimes\partial_{t^i}$로 쓴 후 위와 비슷한 계산을 수행하면 $\Lie_E(\circ)=\circ$임을 확인할 수 있다. 
+임을 안다. 비슷하게 곱셈의 경우, $\circ=\sum dt^i\otimes dt^i\otimes\partial_{t^i}$로 쓴 후 위와 비슷한 계산을 수행하면 $\mathcal{L}_E(\circ)=\circ$임을 확인할 수 있다. 
 
 Potentiality는 거의 자명하게 얻을 수 있으며, $i,j,k$ 방향으로 순서대로 미분했을 때 $\delta_{ijk}$가 나오는 함수가 무엇일지 역산해보면 (당연히) 
 
@@ -303,7 +303,7 @@ $$E = \sum_\alpha \Bigl(1 - \frac{1}{2}\deg \sigma^\alpha\Bigr) t^\alpha \partia
 3. 이 곱셈의 항등원은 $1 \in H^0(X)$이며, 이는 flat coordinate에서 constant section이므로 $\nabla e = 0$이다. 
 4. 한편 [\[사교기하학\] §양자 코호몰로지, ⁋정의 12](/ko/math/symplectic_geometry/quantum_cohomology#def12)에 의해 structure constant는 $c_{\alpha\beta\gamma}(t) = \eta(\partial_{t^\alpha} \circ_t \partial_{t^\beta}, \partial_{t^\gamma}) = \partial_{t^\alpha}\partial_{t^\beta}\partial_{t^\gamma} F$이므로, 이것이 세 index에 대해 대칭이라는 사실로부터 $\eta(X \circ Y, Z) = \eta(X, Y \circ Z)$를 얻는다.
 5. 비슷하게 $\nabla c$가 네 index에 대해 대칭이라는 것을 확인할 수 있으며, 이 potentiality 아래에서 associativity는 [명제 7](#prop7)의 WDVV equation과 동치이며, A-model 측에서는 GW invariant의 splitting axiom으로 보장된다. 
-6. 마지막으로 [\[사교기하학\] §양자 코호몰로지, ⁋정의 2](/ko/math/symplectic_geometry/quantum_cohomology#def2)의 grading이 위 본문에서 본 대로 $\Lie_E(\circ) = \circ$, $\Lie_E(\eta) = (2-d)\eta$로 번역되고, 주어진 $E$가 $\nabla^2 E = 0$인 affine vector field로서 이를 만족한다.
+6. 마지막으로 [\[사교기하학\] §양자 코호몰로지, ⁋정의 2](/ko/math/symplectic_geometry/quantum_cohomology#def2)의 grading이 위 본문에서 본 대로 $\mathcal{L}_E(\circ) = \circ$, $\mathcal{L}_E(\eta) = (2-d)\eta$로 번역되고, 주어진 $E$가 $\nabla^2 E = 0$인 affine vector field로서 이를 만족한다.
 :::
 
 한편 우리의 mirror symmetry statement
@@ -335,17 +335,17 @@ $$E = t^0 \partial_{t^0} + 2\partial_{t^1}$$
 
 로 주어진다. $E(t^0) = t^0$, $E(t^1) = 2$이므로 각 성분의 Lie derivative는
 
-$$\Lie_E(dt^0) = dt^0, \quad \Lie_E(dt^1) = 0, \quad \Lie_E(\partial_{t^0}) = [E, \partial_{t^0}] = -\partial_{t^0}, \quad \Lie_E(\partial_{t^1}) = [E, \partial_{t^1}] = 0$$
+$$\mathcal{L}_E(dt^0) = dt^0, \quad \mathcal{L}_E(dt^1) = 0, \quad \mathcal{L}_E(\partial_{t^0}) = [E, \partial_{t^0}] = -\partial_{t^0}, \quad \mathcal{L}_E(\partial_{t^1}) = [E, \partial_{t^1}] = 0$$
 
 이며, 이를 metric $\eta = dt^0 \otimes dt^1 + dt^1 \otimes dt^0$에 적용하면 각 항이 weight $1 + 0 = 1$이므로
 
-$$\Lie_E(\eta) = \Lie_E(dt^0)\otimes dt^1 + dt^1 \otimes \Lie_E(dt^0) = dt^0 \otimes dt^1 + dt^1 \otimes dt^0 = \eta$$
+$$\mathcal{L}_E(\eta) = \mathcal{L}_E(dt^0)\otimes dt^1 + dt^1 \otimes \mathcal{L}_E(dt^0) = dt^0 \otimes dt^1 + dt^1 \otimes dt^0 = \eta$$
 
-가 되어 $2 - d = 1$을 얻고, 이는 즉 $\dim_\mathbb{C}\mathbb{P}^1$의 값과 같다. 비슷한 계산으로, 곱셈 $\circ$의 비자명한 부분은 tensor $e^{t^1}\, dt^1 \otimes dt^1 \otimes \partial_{t^0}$ (즉 $\partial_{t^1} \circ \partial_{t^1} = e^{t^1}\partial_{t^0}$) 이며, $\Lie_E(e^{t^1}) = E(e^{t^1}) = 2e^{t^1}$ (weight $2$), $dt^1$ 둘이 weight $0$, $\partial_{t^0}$이 weight $-1$이므로
+가 되어 $2 - d = 1$을 얻고, 이는 즉 $\dim_\mathbb{C}\mathbb{P}^1$의 값과 같다. 비슷한 계산으로, 곱셈 $\circ$의 비자명한 부분은 tensor $e^{t^1}\, dt^1 \otimes dt^1 \otimes \partial_{t^0}$ (즉 $\partial_{t^1} \circ \partial_{t^1} = e^{t^1}\partial_{t^0}$) 이며, $\mathcal{L}_E(e^{t^1}) = E(e^{t^1}) = 2e^{t^1}$ (weight $2$), $dt^1$ 둘이 weight $0$, $\partial_{t^0}$이 weight $-1$이므로
 
-$$\Lie_E\bigl(e^{t^1}\, dt^1 \otimes dt^1 \otimes \partial_{t^0}\bigr) = (2 + 0 + 0 - 1)\, e^{t^1}\, dt^1 \otimes dt^1 \otimes \partial_{t^0} = e^{t^1}\, dt^1 \otimes dt^1 \otimes \partial_{t^0}$$
+$$\mathcal{L}_E\bigl(e^{t^1}\, dt^1 \otimes dt^1 \otimes \partial_{t^0}\bigr) = (2 + 0 + 0 - 1)\, e^{t^1}\, dt^1 \otimes dt^1 \otimes \partial_{t^0} = e^{t^1}\, dt^1 \otimes dt^1 \otimes \partial_{t^0}$$
 
-가 되어 $\Lie_E(\circ) = \circ$이다.
+가 되어 $\mathcal{L}_E(\circ) = \circ$이다.
 
 이제 Novikov variable을 $q = e^{t^1}$로 두면, 둘째 식은 $\partial_{t^1} \circ \partial_{t^1} = qe$가 되며, 이는 다시 cohomology 언어로 옮겨오면 $H \star H = q \cdot 1$이므로 [§거울대칭 개요, ⁋예시 5](/ko/math/mirror_symmetry/overview#ex5)에서의 small quantum ring을 복원한다. 뿐만 아니라, 이제 이 isomorphism은 $q=e^{t^1}$의 변화에 따라 parametrize되어 기존의 ring isomorphism 수준에서의 mirror symmetry를 더 업그레이드한 것이다.
 :::

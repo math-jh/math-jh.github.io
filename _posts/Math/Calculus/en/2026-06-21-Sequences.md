@@ -19,14 +19,14 @@ Before we begin calculus proper, we first define the limit of a sequence. Here a
 ## Convergence of Sequences
 
 ::: Definition 1
-For a real sequence $(a_n)_{n=1}^\infty$ and a real number $L$, if for every $\varepsilon > 0$ there exists a natural number $N$ such that
+For a real sequence $(a_n)_{n=1}^\infty$ and a real number $L$, if for every $\epsilon > 0$ there exists a natural number $N$ such that
 
-$$n > N \implies \lvert a_n - L \rvert < \varepsilon$$
+$$n > N \implies \lvert a_n - L \rvert < \epsilon$$
 
 holds, we call $L$ the *limit* of $a_n$ as $n \rightarrow \infty$, and write $\lim_{n\rightarrow\infty} a_n = L$.
 :::
 
-This definition is taken almost verbatim from [§Limits of Functions, ⁋Definition 14](/en/math/calculus/functions_and_limits#def14), and since a sequence has only natural numbers as its variable and goes in only one direction ($+\infty$), this is essentially the only way to define its limit. For example, $a_n = 1/n \rightarrow 0$ is verified by choosing, for arbitrary $\varepsilon > 0$, an $N > 1/\varepsilon$; then for $n > N$ we have $1/n < 1/N < \varepsilon$. A slight variant is when a sequence diverges to infinity, which is obtained by transcribing [§Limits of Functions, ⁋Definition 13](/en/math/calculus/functions_and_limits#def13): for arbitrary $M$, there exists $N$ such that $n > N \implies a_n > M$; for example, $b_n = n$ is such a sequence. However, there also exist sequences that neither converge nor diverge to infinity ([Example 11](#ex11)).
+This definition is taken almost verbatim from [§Limits of Functions, ⁋Definition 14](/en/math/calculus/functions_and_limits#def14), and since a sequence has only natural numbers as its variable and goes in only one direction ($+\infty$), this is essentially the only way to define its limit. For example, $a_n = 1/n \rightarrow 0$ is verified by choosing, for arbitrary $\epsilon > 0$, an $N > 1/\epsilon$; then for $n > N$ we have $1/n < 1/N < \epsilon$. A slight variant is when a sequence diverges to infinity, which is obtained by transcribing [§Limits of Functions, ⁋Definition 13](/en/math/calculus/functions_and_limits#def13): for arbitrary $M$, there exists $N$ such that $n > N \implies a_n > M$; for example, $b_n = n$ is such a sequence. However, there also exist sequences that neither converge nor diverge to infinity ([Example 11](#ex11)).
 
 The basic properties of convergent sequences are mostly obtained by copying the proofs from limits of functions. For example, the following proposition can be proved in exactly the same way as [§Limits of Functions, ⁋Proposition 5](/en/math/calculus/functions_and_limits#prop5).
 
@@ -54,7 +54,7 @@ A convergent sequence is bounded.
 :::
 
 ::: Proof
-If $a_n \rightarrow L$, then for $\varepsilon = 1$ there exists $N$ such that for $n \geq N$ we have $\lvert a_n\rvert \leq \lvert L\rvert + 1$. Including the remaining finitely many terms, set $M = \max\{\lvert a_1\rvert, \ldots, \lvert a_{N-1}\rvert, \lvert L\rvert + 1\}$; then $\lvert a_n\rvert \leq M$ for all $n$.
+If $a_n \rightarrow L$, then for $\epsilon = 1$ there exists $N$ such that for $n \geq N$ we have $\lvert a_n\rvert \leq \lvert L\rvert + 1$. Including the remaining finitely many terms, set $M = \max\{\lvert a_1\rvert, \ldots, \lvert a_{N-1}\rvert, \lvert L\rvert + 1\}$; then $\lvert a_n\rvert \leq M$ for all $n$.
 :::
 
 By the same copying, the following is the sequence version of [§Limits of Functions, ⁋Proposition 8](/en/math/calculus/functions_and_limits#prop8).
@@ -158,9 +158,9 @@ If a sequence $a_n$ converges to $L$, then every subsequence $(a_{n_k})$ also co
 :::
 
 ::: Proof
-For arbitrary $\varepsilon > 0$, pick $N$ such that for $n \geq N$ we have $\lvert a_n - L\rvert < \varepsilon$. Then by definition $n_k \geq k$, and thus for $k \geq N$ we have $n_k \geq N$, so
+For arbitrary $\epsilon > 0$, pick $N$ such that for $n \geq N$ we have $\lvert a_n - L\rvert < \epsilon$. Then by definition $n_k \geq k$, and thus for $k \geq N$ we have $n_k \geq N$, so
 
-$$\lvert a_{n_k} - L\rvert < \varepsilon$$
+$$\lvert a_{n_k} - L\rvert < \epsilon$$
 
 That is, $a_{n_k} \rightarrow L$.
 :::

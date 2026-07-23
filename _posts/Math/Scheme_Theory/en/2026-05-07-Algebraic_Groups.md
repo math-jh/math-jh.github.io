@@ -32,8 +32,8 @@ As with Lie groups, the most important examples are usually matrix groups.
 ::: Example 2
 The most basic examples are as follows:
 
-1. The *general linear group* $\GL(n, \mathbb{C}) = \{A \in M_{n \times n}(\mathbb{C}) \mid \det A \ne 0\}$ has the structure of an algebraic group as an open subvariety of $\mathbb{C}^{n\times n}$.
-2. The *special linear group* $\SL(n, \mathbb{C}) = \{A \in \GL(n, \mathbb{C}) \mid \det A = 1\}$ is an algebraic group as a closed subvariety of $\GL(n, \mathbb{C})$.
+1. The *general linear group* $\GL(n;\mathbb{C}) = \{A \in M_{n \times n}(\mathbb{C}) \mid \det A \ne 0\}$ has the structure of an algebraic group as an open subvariety of $\mathbb{C}^{n\times n}$.
+2. The *special linear group* $\SL(n;\mathbb{C}) = \{A \in \GL(n;\mathbb{C}) \mid \det A = 1\}$ is an algebraic group as a closed subvariety of $\GL(n;\mathbb{C})$.
 3. The two abelian groups $\mathbb{G}_a = \mathbb{C}$ (addition) and $\mathbb{G}_m = \mathbb{C}^\ast$ (multiplication) are both one-dimensional algebraic groups.
 :::
 
@@ -203,9 +203,9 @@ If $G$ is a reductive group, then by the Hilbert basis theorem and Nagata's theo
 Most algebraic groups we deal with are reductive.
 
 1. The *algebraic torus* $(\mathbb{C}^\ast)^n$ is reductive.
-2. The *general linear group* $\GL(n, \mathbb{C})$ is reductive.
-3. The *special linear group* $\SL(n, \mathbb{C})$ is reductive.
-4. The *orthogonal group* and *unitary group* $\operatorname{O}(n)$, $\operatorname{U}(n)$, etc., are also reductive.
+2. The *general linear group* $\GL(n;\mathbb{C})$ is reductive.
+3. The *special linear group* $\SL(n;\mathbb{C})$ is reductive.
+4. The *orthogonal group* and *unitary group* $\Omat(n)$, $\Umat(n)$, etc., are also reductive.
 
 By contrast, $\mathbb{G}_a = \mathbb{C}$ is not reductive.
 :::
@@ -232,7 +232,7 @@ In this case the only $G$-invariant subspace of $\mathbb{C}_d[x,y]$ is spanned b
 A *linearization* of an action of a reductive group $G$ on a projective variety $X$ is an extension of the action to an action of $G$ on $\mathbb{P}^n$ satisfying the following:
 
 1. $X \subseteq \mathbb{P}^n$ is $G$-invariant
-2. The $G$-action on $\mathbb{P}^n$ is linear (that is, it lifts to $\GL(n+1, \mathbb{C})$)
+2. The $G$-action on $\mathbb{P}^n$ is linear (that is, it lifts to $\GL(n+1;\mathbb{C})$)
 :::
 
 Linearization resolves this problem. A linear action preserves each degree $d$ component $A_d$ of the homogeneous coordinate ring, so $G$ acts on $A_d$ in a well-behaved manner and we can form $A_d^G$. In the example above, the action is already linear, $A_d^G = \mathbb{C} \cdot y^d$, and we can construct the quotient as

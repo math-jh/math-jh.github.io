@@ -23,7 +23,7 @@ Algebraically closed field $\mathbb{K}$에 대하여, finite degree의 commutati
 ::: 증명
 Field $A/\mathfrak{m}$는 algebraically closed field $\mathbb{K}$의 finite degree extension이므로, 이는 반드시 algebraic extension이고 따라서 $[A/\mathfrak{m}:\mathbb{K}]=1$이다. 따라서 각각의 $a\in A$에 대하여 우리는 $a-\lambda\in \mathfrak{m}$이도록 하는 $\lambda\in \mathbb{K}$를 찾을 수 있다. 그럼 다음의 식
 
-$$A \rightarrow \mathfrak{m}/\mathfrak{m}^2;\qquad a\mapsto a-\lambda)$$
+$$A \rightarrow \mathfrak{m}/\mathfrak{m}^2;\qquad a\mapsto a-\lambda$$
 
 으로 정의된 함수 $D:A \rightarrow \mathfrak{m}/\mathfrak{m}^2$이 $\mathbb{K}$-derivation이 되는 것이 자명하다. 이제 [\[다중선형대수학\] §미분가군, ⁋명제 8](/ko/math/multilinear_algebra/differential_modules#prop8)의 universal property로부터 $D$는 반드시 $\Omega_{A/\mathbb{K}}$를 factor through 해야 하고, 가정에 의해 이것이 $0$이므로 $D=0$이어야 한다. 
 :::
@@ -196,7 +196,7 @@ Algebraic extension $\mathbb{L}/\mathbb{K}$에 대하여 다음이 성립한다.
 ::: 증명
 첫째 결과는 자명하므로 둘째 결과만 보이면 충분하다. 즉, $\mathbb{L}$의 임의의 finite degree subextension $\mathbb{M}$을 잡은 후 이것이 étale임을 보여야 한다. 우선 $\mathbb{L}=\mathbb{K}(A)$이고 $\mathbb{M}$이 $\mathbb{L}$의 finite degree subextension이므로, $A$의 원소 중 유한개의 $x_1,\ldots, x_m$을 택하여
 
-$$\mathbb{M}\subset \mathbb{K}(x_1,\ldots, x_m)=\mathbb{K}[x_1,\ldots, x_m]$$
+$$\mathbb{M}\subseteq \mathbb{K}(x_1,\ldots, x_m)=\mathbb{K}[x_1,\ldots, x_m]$$
 
 이도록 할 수 있다. 이 때 각각의 $\mathbb{K}[x_i]$들이 separable extension인 것은 $A$의 가정으로부터 자명하므로 이들은 étale이고, 그럼 $\mathbb{K}[x_1,\ldots, x_m]$은 이들의 tensor product $\mathbb{K}[x_1]\otimes\cdots\otimes \mathbb{K}[x_n]$을 이들의 associativity와 commutativity를 나타내는 relation으로 잘라서 얻어지고 $\mathbb{M}$이 이것의 subalgebra이므로 [§에탈대수, ⁋따름정리 14](/ko/math/field_theory/etale_algebras#cor14)에 의하여 $\mathbb{M}$이 étale이다.
 :::
@@ -209,15 +209,15 @@ $$\mathbb{M}\subset \mathbb{K}(x_1,\ldots, x_m)=\mathbb{K}[x_1,\ldots, x_m]$$
 Infinite field $\mathbb{K}$에 대하여, commutative $\mathbb{K}$-algebra $A$를 고정하자. 만일 $A$가 오직 유한히 많은 subalgebra만을 가지고, $V$가 $A$를 생성하는 부분 벡터공간이라 하면 적당한 $x\in V$가 존재하여 $A=\mathbb{K}[x]$이도록 할 수 있다. 
 :::
 ::: 증명
-$A$의 subalgebra들이 $A_1,\ldots, A_n$ 뿐이라 가정하자. 그럼 우선 $V$는 $A$를 생성하므로 $A_i$들을 생성할 수는 없다. 즉 $V\not\subset A_i$이다. 만일 우리가 이로부터 $V\not\subset A_1\cup\cdots\cup A_n$임을 보인다면, $x\in V\setminus A_1\cup\cdots \cup A_n$에 대하여 $A$의 subalgebra $\mathbb{K}[x]$는 어떠한 $A_i$와도 같을 수 없고, 따라서 반드시 $A=\mathbb{K}[x]$여야 하므로 원하는 것을 증명할 수 있을 것이다. 
+$A$의 subalgebra들이 $A_1,\ldots, A_n$ 뿐이라 가정하자. 그럼 우선 $V$는 $A$를 생성하므로 $A_i$들을 생성할 수는 없다. 즉 $V\not\subseteq A_i$이다. 만일 우리가 이로부터 $V\not\subseteq A_1\cup\cdots\cup A_n$임을 보인다면, $x\in V\setminus A_1\cup\cdots \cup A_n$에 대하여 $A$의 subalgebra $\mathbb{K}[x]$는 어떠한 $A_i$와도 같을 수 없고, 따라서 반드시 $A=\mathbb{K}[x]$여야 하므로 원하는 것을 증명할 수 있을 것이다. 
 
-결론에 반하여 $V\subset A_1\cup\cdots\cup A_n$이라 가정하자. 주어진 가정으로부터 $V\not\subset A_n$이므로 적당한 $x\in V\setminus A_n$이 존재한다. 그럼 임의의 $y\in V$에 대하여, 무한집합
+결론에 반하여 $V\subseteq A_1\cup\cdots\cup A_n$이라 가정하자. 주어진 가정으로부터 $V\not\subseteq A_n$이므로 적당한 $x\in V\setminus A_n$이 존재한다. 그럼 임의의 $y\in V$에 대하여, 무한집합
 
 $$\{x\}\cup \{y+\lambda x\mid \lambda\in\mathbb{K}\}$$
 
-을 생각할 수 있다. 이 집합은 $V$의 부분집합이며 따라서 $A_1\cup\cdots\cup A_n$의 부분집합이다. 따라서, 비둘기집 원리에 의해 이들 중 적어도 두 개는 같은 $A_i$에 속해야 하며, 그럼 이 사실로부터 $x,y$를 동시에 포함하는 어떠한 $A_i$가 존재함을 안다. 가정에 의하여 $x\not\in A_n$이므로 $i$는 $n$이 될 수는 없고, 따라서 $y$는 ($x$와 마찬가지로) $A_1,\ldots, A_{n-1}$ 중 어느 하나에 속해야 한다. 이로부터 $y$가 $A_1\cup\cdots \cup A_{n-1}$에 속해야 한다는 것을 알고, $y$는 $V$의 임의의 원소이므로 $V\subset A_1\cup\cdots\cup A_{n-1}$이다. 
+을 생각할 수 있다. 이 집합은 $V$의 부분집합이며 따라서 $A_1\cup\cdots\cup A_n$의 부분집합이다. 따라서, 비둘기집 원리에 의해 이들 중 적어도 두 개는 같은 $A_i$에 속해야 하며, 그럼 이 사실로부터 $x,y$를 동시에 포함하는 어떠한 $A_i$가 존재함을 안다. 가정에 의하여 $x\not\in A_n$이므로 $i$는 $n$이 될 수는 없고, 따라서 $y$는 ($x$와 마찬가지로) $A_1,\ldots, A_{n-1}$ 중 어느 하나에 속해야 한다. 이로부터 $y$가 $A_1\cup\cdots \cup A_{n-1}$에 속해야 한다는 것을 알고, $y$는 $V$의 임의의 원소이므로 $V\subseteq A_1\cup\cdots\cup A_{n-1}$이다. 
 
-이제 이 과정을 귀납적으로 반복해나가면 $V\subset A_1$이 되어 모순이므로 $V\not\subset A_1\cup\cdots\cup A_n$여야 한다. 
+이제 이 과정을 귀납적으로 반복해나가면 $V\subseteq A_1$이 되어 모순이므로 $V\not\subseteq A_1\cup\cdots\cup A_n$여야 한다. 
 :::
 
 ::: 정리 14
@@ -229,7 +229,7 @@ Infinite field $\mathbb{K}$를 고정하자. Algebraic extension $\mathbb{L}/\ma
 ::: 증명
 우선 $\mathbb{L}$이 primitive element $x$를 갖는다 하고, $f(\x)\in \mathbb{K}[\x]$가 $x$의 minimal polynomial이라 하자. 다항식 $f(\x)$를 $\mathbb{L}[\x]$에서 나누는 monic polynomial $g(\x)\in \mathbb{L}[\x]$를 생각하면, 우리는 이러한 다항식 $g$가 주어질 때마다 $g$의 계수들로 생성되는 $\mathbb{L}$의 subextension을 생각할 수 있다. 이를 $\mathbb{K}_g$로 적자. 그럼 우리 주장은 이들 $\mathbb{K}_g$들이 정확히 $\mathbb{L}$의 subextension이라는 것이다. 특히 이러한 extension들은 $f$를 $d$차식이라 할 때, 많아야 $2^d$개이므로 둘째 조건이 성립할 것이다. 
 
-주장을 보이기 위해 임의의 subextension $\mathbb{M}$을 택하자. 그럼 $x$가 primitive element이므로 $\mathbb{M}[x]=\mathbb{L}$이 성립한다. 즉, $x$는 extension $\mathbb{L}/\mathbb{M}$의 algebraic element이므로, minimal polynomial $h(\x)\in\mathbb{M}[\x]$를 택할 수 있으며 이는 [§대수적 확장, ⁋정리 15](/ko/math/field_theory/algebraic_extensions#thm15)에 의하여 $\mathbb{L}[\x]$에서 $f$를 나누는 monic polynomial이다. 따라서 $\mathbb{K}_h$가 위와 같이 정의되며, 그 정의에 의하여 $\mathbb{K}_h\subset\mathbb{M}$이다. 한편 $x$가 $\mathbb{L}/\mathbb{K}$의 primitive element이므로, 우리는 다음의 등식
+주장을 보이기 위해 임의의 subextension $\mathbb{M}$을 택하자. 그럼 $x$가 primitive element이므로 $\mathbb{M}[x]=\mathbb{L}$이 성립한다. 즉, $x$는 extension $\mathbb{L}/\mathbb{M}$의 algebraic element이므로, minimal polynomial $h(\x)\in\mathbb{M}[\x]$를 택할 수 있으며 이는 [§대수적 확장, ⁋정리 15](/ko/math/field_theory/algebraic_extensions#thm15)에 의하여 $\mathbb{L}[\x]$에서 $f$를 나누는 monic polynomial이다. 따라서 $\mathbb{K}_h$가 위와 같이 정의되며, 그 정의에 의하여 $\mathbb{K}_h\subseteq\mathbb{M}$이다. 한편 $x$가 $\mathbb{L}/\mathbb{K}$의 primitive element이므로, 우리는 다음의 등식
 
 $$\mathbb{K}_h[x]=\mathbb{M}[x]=\mathbb{L}$$
 

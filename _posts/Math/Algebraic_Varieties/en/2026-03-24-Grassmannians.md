@@ -118,7 +118,7 @@ The Grassmannian carries a natural cell structure and can be understood from a c
 ::: Definition 10
 A *flag* in an $n$-dimensional vector space $V$ is a chain of subspaces
 
-$$F_\bullet:\qquad 0 = F_0 \subset F_1 \subset F_2 \subset \cdots \subset F_n = V$$
+$$F_\bullet:\qquad 0 = F_0 \subseteq F_1 \subseteq F_2 \subseteq \cdots \subseteq F_n = V$$
 
 with $\dim F_i = i$ for each $i$.
 :::

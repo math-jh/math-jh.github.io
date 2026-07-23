@@ -154,7 +154,7 @@ The following examples should have appeared under [Examples of presheaves](#exam
 ::: Example 12 (Sheaf Hom)
 Fix two presheaves $\mathcal{F}, \mathcal{G}$ and define, for any $U$,
 
-$$\mathcal{Hom}(\mathcal{F},\mathcal{G})(U)=\Hom_{\PSh(U)}(\mathcal{F}\vert_U, \mathcal{G}\vert_U)$$
+$$\sHom(\mathcal{F},\mathcal{G})(U)=\Hom_{\PSh(U)}(\mathcal{F}\vert_U, \mathcal{G}\vert_U)$$
 :::
 
 ::: Example 13 (Product)

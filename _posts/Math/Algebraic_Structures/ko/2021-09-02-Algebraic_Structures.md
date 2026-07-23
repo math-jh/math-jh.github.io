@@ -31,7 +31,7 @@ weight: 1
 $\mathbb{N}$ 위에 정의된 연산 $x-y$ 또한 이항연산이므로, $(\mathbb{N}, -)$ 또한 마그마이다.
 :::
 
-두 마그마 $(\mathcal{P}(X),\cup)$과 $\mathcal{P}(X),\cap)$에서는 다음의 식
+두 마그마 $(\mathcal{P}(X),\cup)$과 $(\mathcal{P}(X),\cap)$에서는 다음의 식
 
 $$A\cup(B\cup C)=(A\cup B)\cup C,\qquad A\cap(B\cap C)=(A\cap B)\cap C$$
 

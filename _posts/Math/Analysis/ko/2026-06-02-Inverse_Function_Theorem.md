@@ -54,7 +54,7 @@ $$\lVert DT_y(x)\rVert = \lVert Df(a) - Df(x)\rVert \leq \frac12$$
 
 $$\lVert T_y(x_1) - T_y(x_2)\rVert \leq \frac12 \lVert x_1 - x_2\rVert$$
 
-이 되어 $T_y$가 contraction이고, $\overline{B}$는 [§거리공간, ⁋명제 9](/ko/math/analysis/metric_spaces#prop9)에 의해 완비 거리공간이다. [§미분방정식의 존재성과 유일성, ⁋정리 2](/ko/math/analysis/existence_uniqueness_ode#thm2)에 의해 각 $y$에 대해 유일한 fixed point $x = f^{-1}(y)$가 존재하므로 $f$가 국소적으로 일대일 대응이다. 역함수의 미분가능성과 $Df^{-1} = (Df)^{-1}$은 연쇄법칙을 $f^{-1}\circ f = \mathrm{id}$에 적용하여 얻는다. 곧 양변을 미분하면 $Df^{-1}(f(a))\cdot Df(a) = I$이므로 $Df^{-1}(f(a)) = \bigl(Df(a)\bigr)^{-1}$이다.
+이 되어 $T_y$가 contraction이고, $\overline{B}$는 [§거리공간, ⁋명제 9](/ko/math/analysis/metric_spaces#prop9)에 의해 완비 거리공간이다. [§미분방정식의 존재성과 유일성, ⁋정리 2](/ko/math/analysis/existence_uniqueness_ode#thm2)에 의해 각 $y$에 대해 유일한 fixed point $x = f^{-1}(y)$가 존재하므로 $f$가 국소적으로 일대일 대응이다. 역함수의 미분가능성과 $Df^{-1} = (Df)^{-1}$은 연쇄법칙을 $f^{-1}\circ f = \id$에 적용하여 얻는다. 곧 양변을 미분하면 $Df^{-1}(f(a))\cdot Df(a) = I$이므로 $Df^{-1}(f(a)) = \bigl(Df(a)\bigr)^{-1}$이다.
 :::
 
 증명의 핵심은 방정식 $f(x) = y$를 푸는 일을 fixed point 문제로 바꾸어, 완비성과 축약성만으로 해의 존재·유일성을 동시에 확보한 데 있다. $C^1$ 가정은 두 곳에서 본질적으로 쓰인다. 첫째, $Df$의 연속성 덕분에 $a$ 근방에서 $\lVert I - Df(x)\rVert$을 작게 만들어 축약상수 $1/2$을 확보할 수 있다. 둘째, 같은 연속성이 역함수 $f^{-1}$의 미분이 다시 연속임을, 곧 $f^{-1}$이 $C^1$임을 보장한다. 실제로 $Df^{-1}(y) = \bigl(Df(f^{-1}(y))\bigr)^{-1}$인데, 행렬을 역행렬로 보내는 사상이 연속이고 $f^{-1}$과 $Df$가 연속이므로 그 합성도 연속이다.

@@ -119,7 +119,7 @@ $$P_{F,G}(t) = P_F(t) - P_F(t - n) = \bigl(mt + c_1\bigr) - \bigl(m(t-n) + c_1\b
 
 지금까지는 $\mathbb{P}^2$의 곡선에 대해서만 Bézout 정리를 증명했다. 이를 임의의 projective space와 일반적인 projective variety로 확장하려면 Chow ring이 필요하다. 핵심 사실은
 
-$$\operatorname{CH}^\ast(\mathbb{P}^n) \cong \mathbb{Z}[H]/(H^{n+1})$$
+$$\CH^\ast(\mathbb{P}^n) \cong \mathbb{Z}[H]/(H^{n+1})$$
 
 이다. 여기서 $H$는 hyperplane class이며, codimension이 $k$이며 degree가 $d$인 variety는 class $dH^k$를 갖는다. 특히 degree $d$인 hypersurface는 $dH$에 대응하므로, $n$개의 hypersurface $H_1, \ldots, H_n$의 교차곱은
 

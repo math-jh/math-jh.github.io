@@ -156,7 +156,7 @@ $$\langle-,-\rangle: C^\bullet(X;A)\times C_\bullet(X;A) \rightarrow A$$
 
 가 유도하는 pairing이다. 이제 이 식이 성립하기 위해서는, 
 
-$$\langle\alpha,\beta\frown \sigma\rangle=\langle\alpha\smile \beta,\sigma\rangle=\sum_i(-1)^{\lvert\beta\rvert\lvert\sigma_i\rangle}\alpha(\sigma_i)\beta(\tau_i)$$
+$$\langle\alpha,\beta\frown \sigma\rangle=\langle\alpha\smile \beta,\sigma\rangle=\sum_i(-1)^{\lvert\beta\rvert\lvert\sigma_i\rvert}\alpha(\sigma_i)\beta(\tau_i)$$
 
 이어야 한다. 여기서 $\sigma_i$와 $\tau_i$ 각각은 $\sigma$를 Alexander-Whitney map을 통해 $\sum \sigma_i\otimes\tau_i$로 나타냈을 때 등장하는 chain들이다. 그럼 이 식이 모든 $\alpha$에 대해 성립해야 하므로, 우리는
 

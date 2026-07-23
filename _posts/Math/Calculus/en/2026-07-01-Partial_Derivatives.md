@@ -41,9 +41,9 @@ $$\det\begin{pmatrix} a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \\ a_
 Before defining the derivative, we need to review limits and continuity of multivariable functions. For single-variable functions, it was sufficient to look at the limit from two directions: the left and right of a point $a$. However, when the domain becomes $\mathbb{R}^m$, there are infinitely many paths approaching a point $\mathbf{a}$, so some care is needed.
 
 ::: Definition 1
-A multivariable function $f: \mathbb{R}^m \rightarrow \mathbb{R}$ has *limit* $L$ at a point $\mathbf{a}$ if for every $\varepsilon > 0$ there exists a $\delta > 0$ such that
+A multivariable function $f: \mathbb{R}^m \rightarrow \mathbb{R}$ has *limit* $L$ at a point $\mathbf{a}$ if for every $\epsilon > 0$ there exists a $\delta > 0$ such that
 
-$$0 < \lVert \mathbf{x} - \mathbf{a}\rVert < \delta \quad\Rightarrow\quad \lvert f(\mathbf{x}) - L\rvert < \varepsilon$$
+$$0 < \lVert \mathbf{x} - \mathbf{a}\rVert < \delta \quad\implies\quad \lvert f(\mathbf{x}) - L\rvert < \epsilon$$
 
 holds for all $\mathbf{x}$ satisfying $0 < \lVert \mathbf{x} - \mathbf{a}\rVert < \delta$. We write this as $\lim_{\mathbf{x}\rightarrow\mathbf{a}} f(\mathbf{x}) = L$, and in particular when $\lim_{\mathbf{x}\rightarrow\mathbf{a}} f(\mathbf{x}) = f(\mathbf{a})$ we say $f$ is *continuous* at $\mathbf{a}$.
 :::

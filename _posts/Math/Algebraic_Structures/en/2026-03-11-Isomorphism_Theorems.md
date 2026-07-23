@@ -28,7 +28,7 @@ $$f(gxg^{-1})=f(g)f(x)f(g^{-1})=f(g)e'f(g)^{-1}=f(g)f(g)^{-1}=e'.$$
 
 Now consider the equivalence relation defined by $\ker f$
 
-$$x\sim y\iff xy^{-1}\ker f$$
+$$x\sim y\iff xy^{-1}\in\ker f$$
 
 From the equation
 
@@ -74,7 +74,7 @@ Therefore, every element of $N\vee K$ can be written in the form $n_1k_1\cdots n
 Let $K$ be a subgroup of a group $G$ and $N$ a normal subgroup of $G$. Then $K/(N\cap K)\cong NK/N$ holds.
 :::
 ::: Proof
-From the previous lemma, $N$ is a normal subgroup of $NK=N\vee K=KN$. Now since $K\subset NK$, we can consider the composition of homomorphisms
+From the previous lemma, $N$ is a normal subgroup of $NK=N\vee K=KN$. Now since $K\subseteq NK$, we can consider the composition of homomorphisms
 
 $$K\overset{\iota}{\hookrightarrow}NK\overset{\pi}{\twoheadrightarrow}NK/N$$
 

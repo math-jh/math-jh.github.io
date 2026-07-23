@@ -48,7 +48,7 @@ If $f$ is continuous at every point of $X$, we call $f$ a *continuous function*.
 For two topological spaces $X,Y$ and a function $f:X\rightarrow Y$, the following are all equivalent.
 
 1. $f$ is continuous.
-2. For any subset $A$ of $X$, we have $f(\cl A)\subset\cl f(A)$.
+2. For any subset $A$ of $X$, we have $f(\cl A)\subseteq\cl f(A)$.
 3. For any closed set $C$ in $Y$, the set $f^{-1}(C)$ is closed in $X$.
 4. For any open set $V$ in $Y$, the set $f^{-1}(V)$ is open in $X$.
 :::

@@ -25,12 +25,12 @@ $$\mathbb{P}^n = (\mathbb{K}^{n+1} \setminus \{0\}) / \sim$$
 
 where the equivalence relation $\sim$ is given by
 
-$$(x_0, \ldots, x_n) \sim (y_0, \ldots, y_n) \iff \text{$x_i = \lambda y_i$ for some $\lambda \in \mathbb{K}^\ast$, for all $i$}$$
+$$(x_0, \ldots, x_n) \sim (y_0, \ldots, y_n) \iff \text{$x_i = \lambda y_i$ for some $\lambda \in \mathbb{K}^\times$, for all $i$}$$
 
 We write $\mathbb{P}^n$ when there is no risk of confusion.
 :::
 
-The equivalence class $[(x_0, \ldots, x_n)]$ is usually denoted $[x_0 : \cdots : x_n]$, and these are called *homogeneous coordinates*. The elements $x_0, \ldots, x_n$ are called *coordinates*, and at least one of them must be nonzero. The key feature of homogeneous coordinates is that they determine only *ratios*: for every $\lambda \in \mathbb{K}^\ast$ we have $[x_0 : \cdots : x_n] = [\lambda x_0 : \cdots : \lambda x_n]$.
+The equivalence class $[(x_0, \ldots, x_n)]$ is usually denoted $[x_0 : \cdots : x_n]$, and these are called *homogeneous coordinates*. The elements $x_0, \ldots, x_n$ are called *coordinates*, and at least one of them must be nonzero. The key feature of homogeneous coordinates is that they determine only *ratios*: for every $\lambda \in \mathbb{K}^\times$ we have $[x_0 : \cdots : x_n] = [\lambda x_0 : \cdots : \lambda x_n]$.
 
 ## Homogeneous Polynomials and Projective Space
 

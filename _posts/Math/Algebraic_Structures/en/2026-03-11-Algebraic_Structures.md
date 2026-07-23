@@ -32,7 +32,7 @@ For any set $X$, both $(\mathcal{P}(X),\cup)$ and $(\mathcal{P}(X),\cap)$ are ma
 The operation $x-y$ defined on $\mathbb{N}$ is also a binary operation, so $(\mathbb{N}, -)$ is a magma as well.
 :::
 
-For the two magmas $(\mathcal{P}(X),\cup)$ and $\mathcal{P}(X),\cap)$, the identities
+For the two magmas $(\mathcal{P}(X),\cup)$ and $(\mathcal{P}(X),\cap)$, the identities
 
 $$A\cup(B\cup C)=(A\cup B)\cup C,\qquad A\cap(B\cap C)=(A\cap B)\cap C$$
 

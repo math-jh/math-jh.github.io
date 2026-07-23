@@ -25,12 +25,12 @@ $$\mathbb{P}^n = (\mathbb{K}^{n+1} \setminus \{0\}) / \sim$$
 
 이며, 여기서 동치관계 $\sim$은
 
-$$(x_0, \ldots, x_n) \sim (y_0, \ldots, y_n) \iff \text{$x_i = \lambda y_i$ for some $\lambda \in \mathbb{K}^\ast$, for all $i$}$$
+$$(x_0, \ldots, x_n) \sim (y_0, \ldots, y_n) \iff \text{$x_i = \lambda y_i$ for some $\lambda \in \mathbb{K}^\times$, for all $i$}$$
 
 으로 주어진다. 혼동의 여지가 없을 때는 $\mathbb{P}^n$으로 적는다.
 :::
 
-Equivalence class $[(x_0, \ldots, x_n)]$은 보통 $[x_0 : \cdots : x_n]$으로 표기하며, 이를 *homogeneous coordinates<sub>동차좌표</sub>*라 부른다. $x_0, \ldots, x_n$을 *좌표*라 하고, 이들 중 적어도 하나는 $0$이 아니어야 한다. Homogeneous coordinates의 핵심은 좌표들이 *비율*만을 결정한다는 것이다. 즉, 모든 $\lambda\in \mathbb{K}^\ast$에 대하여 $[x_0 : \cdots : x_n] = [\lambda x_0 : \cdots : \lambda x_n]$이 성립한다. 
+Equivalence class $[(x_0, \ldots, x_n)]$은 보통 $[x_0 : \cdots : x_n]$으로 표기하며, 이를 *homogeneous coordinates<sub>동차좌표</sub>*라 부른다. $x_0, \ldots, x_n$을 *좌표*라 하고, 이들 중 적어도 하나는 $0$이 아니어야 한다. Homogeneous coordinates의 핵심은 좌표들이 *비율*만을 결정한다는 것이다. 즉, 모든 $\lambda\in \mathbb{K}^\times$에 대하여 $[x_0 : \cdots : x_n] = [\lambda x_0 : \cdots : \lambda x_n]$이 성립한다. 
 
 ## 동차다항식과 사영공간
 

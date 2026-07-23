@@ -229,7 +229,7 @@ $$\varphi_{K_C}:C\rightarrow \mathbb{P}^1$$
 우리는 [§표준선다발, ⁋예시 10](/ko/math/algebraic_varieties/canonical_bundle#ex10)에서 $\deg K_C=2g-2$가 된다는 것을 보이기 위해 다음 명제를 잘 알려진 사실이라고 주장하며 넘겼지만, 이제는 이에 대한 증명을 엄밀하게 할 수 있다. 다만 이는 해당 예시와는 정반대로, 해당 예시에서는 adjunction formula와 degree-genus formula를 활용하여 $\deg K_C=2g-2$임을 증명하였지만 이제 우리는 $\deg K_C=2g-2$라는 사실과 adjunction formula로부터 degree-genus formula를 유도한다. $K_C$의 degree는 앞서 [예시 4](#ex4) 이전에 이미 Riemann-Roch로부터 (degree-genus formula를 사용하지 않고) 얻어졌음에 유의하자.
 
 ::: 명제 7 (Degree-genus formula)
-Degree $d$의 smooth plane curve $C \subset \mathbb{P}^2$에 대해
+Degree $d$의 smooth plane curve $C \subseteq \mathbb{P}^2$에 대해
 
 $$g(C) = \frac{(d-1)(d-2)}{2}$$
 

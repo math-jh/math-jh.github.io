@@ -129,7 +129,7 @@ $$\det\nolimits_{\mathbb{R}}(A)=\lvert\det\nolimits_{\mathbb{C}}(A)\rvert^2>0$$
 
 $$\begin{pmatrix}a&-b\\ b&a\end{pmatrix}$$
 
-이고 그 행렬식은 $a^2+b^2>0$이며, 일반적인 $A$도 이러한 방식으로 행렬식이 항상 양수가 되게 된다. 즉, complex vector space의 change of basis는 항상 방향을 보존하므로, $V$에 (real vector space로서는) 표준적인 방향이 존재하며, 우리가 위에서 한 계산이 실은 정확히 $\GL(n;\mathbb{C})\subset \GL^+(2n; \mathbb{R})$이라는 것이다. 
+이고 그 행렬식은 $a^2+b^2>0$이며, 일반적인 $A$도 이러한 방식으로 행렬식이 항상 양수가 되게 된다. 즉, complex vector space의 change of basis는 항상 방향을 보존하므로, $V$에 (real vector space로서는) 표준적인 방향이 존재하며, 우리가 위에서 한 계산이 실은 정확히 $\GL(n;\mathbb{C})\subseteq \GL^+(2n; \mathbb{R})$이라는 것이다. 
 
 특히 임의의 complex vector bundle에는 Euler class가 표준적으로 잘 정의된다. 뿐만 아니라, 여기서는 Euler class 외에 추가적인 불변량 또한 존재한다. 예를 들어 complex vector bundle $E$와 그 켤레 $\bar{E}$는 underlying real vector bundle로는 같지만, 이는 complex vector bundle로서는 일반적으로 다른 bundle이며, 우리가 정의할 *Chern class*들이 이 둘을 구별할 수 있다. 
 
@@ -178,7 +178,7 @@ $$H^k(D(E), S(E))\cong H^k(E, E_0)\cong H^{k-n}(B)$$
 
 $$j^\ast\Phi(\alpha)=j^\ast(p^\ast\alpha\smile u)=p^\ast\alpha\smile j^\ast u$$
 
-이다. 여기서 둘째 등호는 $j^\ast$가 relative cohomology ring의 homomorphism이라 cup product를 보존한다는 것, 곧 $j^\ast p^\ast\alpha=p^\ast\alpha$을 쓴 것이며, 이는 직관적으로 $p^\ast\alpha$는 이미 $H^\ast(E)$ 위에 살고 있으므로 당연하다. 이제 이를 다시 수직방향 identification $H^k(E)\cong H^k(B)$을 통해 내리면 되는데, 이는 zero section $0:B\hookrightarrow E$ ($p\circ 0=\mathrm{id}$)를 통해 이루어지므로
+이다. 여기서 둘째 등호는 $j^\ast$가 relative cohomology ring의 homomorphism이라 cup product를 보존한다는 것, 곧 $j^\ast p^\ast\alpha=p^\ast\alpha$을 쓴 것이며, 이는 직관적으로 $p^\ast\alpha$는 이미 $H^\ast(E)$ 위에 살고 있으므로 당연하다. 이제 이를 다시 수직방향 identification $H^k(E)\cong H^k(B)$을 통해 내리면 되는데, 이는 zero section $0:B\hookrightarrow E$ ($p\circ 0=\id$)를 통해 이루어지므로
 
 $$0^\ast(p^\ast\alpha\smile j^\ast u)=0^\ast p^\ast\alpha\smile 0^\ast j^\ast u=\alpha\smile e(E)$$
 
@@ -304,7 +304,7 @@ $$c_2(L\oplus L')=e\bigl((L\oplus L')_{\mathbb{R}}\bigr)$$
 
 $$c(E\oplus\varepsilon^1)=c(E)$$
 
-가 성립함을 보이자. $E'=E\oplus\varepsilon^1$이라 하면, trivial 성분에서 상수 $1$을 취하는 section $s(x)=(0,1)$은 어디서도 $0$이 아니므로 section $s:B\rightarrow E'_0$을 주며 $\pi_0\circ s=\mathrm{id}$이다. 이제 각 점에서 $(0,1)$의 orthogonal complement는 정확히 $E$의 fiber이므로 $s^\ast(E'^\perp)\cong E$이고, 따라서 $0<i\leq n$에 대하여 [정의 6](#def6)의 식 $\pi_0^\ast c_i(E')=c_i(E'^\perp)$에 $s^\ast$를 적용하면 [명제 7](#prop7)의 naturality로부터
+가 성립함을 보이자. $E'=E\oplus\varepsilon^1$이라 하면, trivial 성분에서 상수 $1$을 취하는 section $s(x)=(0,1)$은 어디서도 $0$이 아니므로 section $s:B\rightarrow E'_0$을 주며 $\pi_0\circ s=\id$이다. 이제 각 점에서 $(0,1)$의 orthogonal complement는 정확히 $E$의 fiber이므로 $s^\ast(E'^\perp)\cong E$이고, 따라서 $0<i\leq n$에 대하여 [정의 6](#def6)의 식 $\pi_0^\ast c_i(E')=c_i(E'^\perp)$에 $s^\ast$를 적용하면 [명제 7](#prop7)의 naturality로부터
 
 $$c_i(E')=s^\ast\pi_0^\ast c_i(E')=s^\ast c_i(E'^\perp)=c_i(s^\ast E'^\perp)=c_i(E)$$
 

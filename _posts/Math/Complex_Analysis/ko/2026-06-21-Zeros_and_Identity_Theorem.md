@@ -72,7 +72,7 @@ $h = f - g$로 두면 $h$는 $\Omega$에서 holomorphic이고 ([§복소정칙�
 
 $$A = \{z \in \Omega : h \text{가 } z \text{의 어떤 근방에서 항등적으로 } 0\}$$
 
-이라 두자. 방금 본 대로 $z_\ast \in A$이므로 $A \neq \varnothing$이다. 정의상 $A$는 열려 있다. $A$가 $\Omega$에서 닫혀 있음을 보이면, $\Omega$가 connected이고 $A$가 공집합 아닌 열린·닫힌 부분집합이므로 $A = \Omega$이 된다.
+이라 두자. 방금 본 대로 $z_\ast \in A$이므로 $A \neq \emptyset$이다. 정의상 $A$는 열려 있다. $A$가 $\Omega$에서 닫혀 있음을 보이면, $\Omega$가 connected이고 $A$가 공집합 아닌 열린·닫힌 부분집합이므로 $A = \Omega$이 된다.
 
 $A$가 닫혀 있음을 보이기 위해 $\Omega$ 안의 점 $w$가 $A$의 closure에 속한다고, 곧 $A$의 점들의 수열 $w_j \rightarrow w$이 있다고 하자. 각 $w_j$의 근방에서 $h \equiv 0$이므로 특히 $h(w_j) = 0$이고, $h$의 연속성에서 $h(w) = 0$이다. 더구나 $w_j \rightarrow w$이고 $w_j$들은 ($j$가 클 때) $w$ 아닌 $h$의 영점이므로 $w$ 역시 $Z(h)$의 isolated point가 아니다. 다시 명제 2에 의해 $h$가 $w$의 어떤 근방에서 항등적으로 $0$이고, 따라서 $w \in A$이다. 이로써 $A$가 $\Omega$에서 닫혀 있다.
 

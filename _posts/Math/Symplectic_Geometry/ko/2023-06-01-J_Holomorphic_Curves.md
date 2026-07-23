@@ -21,7 +21,7 @@ published: false
 ## Compatible almost complex structure
 
 ::: 정의 1
-Manifold $M$의 *almost complex structure<sub>거의 복소구조</sub>*란 tangent bundle 위의 endomorphism $J: TM \rightarrow TM$로 $J^2 = -\mathrm{id}_{TM}$을 만족하는 것이다. $(M, J)$를 *almost complex manifold*라 부른다.
+Manifold $M$의 *almost complex structure<sub>거의 복소구조</sub>*란 tangent bundle 위의 endomorphism $J: TM \rightarrow TM$로 $J^2 = -\id_{TM}$을 만족하는 것이다. $(M, J)$를 *almost complex manifold*라 부른다.
 :::
 
 Symplectic manifold $(M, \omega)$ 위에서는 $J$가 $\omega$와 어떤 *호환성*을 가질 때 특히 유용하다.
@@ -53,7 +53,7 @@ $$g_J(v, w) := \omega(v, J w)$$
 
 ## J-holomorphic curve의 정의
 
-이제 도메인 측은 Riemann surface로 둔다. $(\Sigma, j)$를 $j^2 = -\mathrm{id}$를 만족하는 almost complex structure가 부여된 (실 2차원) closed surface라 하자.
+이제 도메인 측은 Riemann surface로 둔다. $(\Sigma, j)$를 $j^2 = -\id$를 만족하는 almost complex structure가 부여된 (실 2차원) closed surface라 하자.
 
 ::: 정의 4
 Almost complex manifold $(M, J)$와 Riemann surface $(\Sigma, j)$에 대해, smooth map $u: \Sigma \rightarrow M$이 *J-holomorphic<sub>$J$-정칙</sub>* (또는 *pseudoholomorphic<sub>유사정칙</sub>*) 이라 함은 nonlinear *Cauchy-Riemann equation<sub>코시-리만 방정식</sub>*

@@ -21,7 +21,7 @@ published: false
 ## 연결집합
 
 ::: 정의 1
-거리공간의 부분집합 $E$가 *disconnected<sub>연결되지 않았다</sub>*라는 것은, 열린집합 $U, V$가 존재하여 $E \subseteq U \cup V$, $U \cap E \neq \varnothing$, $V \cap E \neq \varnothing$, 그리고 $U \cap V \cap E = \varnothing$인 것이다. 이러한 분할이 존재하지 않으면 $E$가 *connected<sub>연결</sub>*라고 한다.
+거리공간의 부분집합 $E$가 *disconnected<sub>연결되지 않았다</sub>*라는 것은, 열린집합 $U, V$가 존재하여 $E \subseteq U \cup V$, $U \cap E \neq \emptyset$, $V \cap E \neq \emptyset$, 그리고 $U \cap V \cap E = \emptyset$인 것이다. 이러한 분할이 존재하지 않으면 $E$가 *connected<sub>연결</sub>*라고 한다.
 :::
 
 [정의 1](#def1)의 분할 조건을 곱씹어 두는 것이 좋다. 우리는 $E$ 자체를 두 열린집합으로 가르는 것이 아니라, 주변 거리공간의 열린집합 $U, V$로 $E$를 덮되 두 조각 $U \cap E$와 $V \cap E$가 둘 다 비어 있지 않고 서로 겹치지 않도록 한다. 이때 $U \cap E$와 $V \cap E$는 부분공간 $E$의 상대위상에서 각각 열린집합이면서 동시에 (서로의 여집합이므로) 닫힌집합이 된다. 따라서 연결성은 "$E$ 안에서 공집합도 전체도 아닌 열린·닫힌 집합이 존재하지 않음"으로 바꾸어 말할 수 있다.
@@ -51,11 +51,11 @@ $E$가 열린집합 $U, V$로 분할되었다고 하자. 공통점 $p$는 $U$나
 
 $$\begin{aligned}
 E_\alpha &\subseteq E \subseteq U \cup V, \\
-U \cap E_\alpha &\ni p, \quad\text{즉 } U \cap E_\alpha \neq \varnothing, \\
-U \cap V \cap E_\alpha &\subseteq U \cap V \cap E = \varnothing.
+U \cap E_\alpha &\ni p, \quad\text{즉 } U \cap E_\alpha \neq \emptyset, \\
+U \cap V \cap E_\alpha &\subseteq U \cap V \cap E = \emptyset.
 \end{aligned}$$
 
-만약 어떤 $\alpha$에서 $V \cap E_\alpha \neq \varnothing$이라면 위 세 조건이 $E_\alpha$의 분할을 이루어 $E_\alpha$가 connected라는 데 모순이다. 따라서 모든 $\alpha$에서 $V \cap E_\alpha = \varnothing$, 곧 $E_\alpha \subseteq U$이고, 합집합을 취하면 $E \subseteq U$여서 $V \cap E = \varnothing$이다. 이는 $V \cap E \neq \varnothing$이라는 분할 조건에 모순이다. 그러므로 $E$는 connected이다.
+만약 어떤 $\alpha$에서 $V \cap E_\alpha \neq \emptyset$이라면 위 세 조건이 $E_\alpha$의 분할을 이루어 $E_\alpha$가 connected라는 데 모순이다. 따라서 모든 $\alpha$에서 $V \cap E_\alpha = \emptyset$, 곧 $E_\alpha \subseteq U$이고, 합집합을 취하면 $E \subseteq U$여서 $V \cap E = \emptyset$이다. 이는 $V \cap E \neq \emptyset$이라는 분할 조건에 모순이다. 그러므로 $E$는 connected이다.
 :::
 
 [명제 3](#prop3)은 연결성을 점에 붙여 전파시키는 도구이다. 한 점 $x$를 포함하는 모든 연결집합의 합집합은, [명제 3](#prop3)에 의해 다시 connected이며 그러한 연결집합 가운데 가장 큰 것이 된다. 이를 그 점의 성분이라 부른다.
@@ -76,13 +76,13 @@ $f : X \rightarrow Y$가 연속이고 $E \subseteq X$가 connected이면, 상 $f
 :::
 
 ::: 증명
-$f(E)$가 열린집합 $U, V$로 분할된다고 하자. 즉 $f(E) \subseteq U \cup V$, $U \cap f(E) \neq \varnothing$, $V \cap f(E) \neq \varnothing$, $U \cap V \cap f(E) = \varnothing$이라 하자. 연속성의 [§함수의 극한과 연속, ⁋명제 3](/ko/math/analysis/limits_and_continuity#prop3)에 의해 $f^{-1}(U)$와 $f^{-1}(V)$는 $X$의 열린집합이다. 이제 이 둘이 $E$를 분할함을 확인한다.
+$f(E)$가 열린집합 $U, V$로 분할된다고 하자. 즉 $f(E) \subseteq U \cup V$, $U \cap f(E) \neq \emptyset$, $V \cap f(E) \neq \emptyset$, $U \cap V \cap f(E) = \emptyset$이라 하자. 연속성의 [§함수의 극한과 연속, ⁋명제 3](/ko/math/analysis/limits_and_continuity#prop3)에 의해 $f^{-1}(U)$와 $f^{-1}(V)$는 $X$의 열린집합이다. 이제 이 둘이 $E$를 분할함을 확인한다.
 
 $$\begin{aligned}
 E &\subseteq f^{-1}(f(E)) \subseteq f^{-1}(U \cup V) = f^{-1}(U) \cup f^{-1}(V), \\
-f^{-1}(U) \cap E &\neq \varnothing \quad (\text{왜냐하면 } U \cap f(E) \neq \varnothing \text{이라 } f(x) \in U \text{인 } x \in E \text{가 있음}), \\
-f^{-1}(V) \cap E &\neq \varnothing \quad (\text{같은 이유}), \\
-f^{-1}(U) \cap f^{-1}(V) \cap E &= f^{-1}(U \cap V) \cap E = \varnothing \quad (\text{왜냐하면 } U \cap V \cap f(E) = \varnothing).
+f^{-1}(U) \cap E &\neq \emptyset \quad (\text{왜냐하면 } U \cap f(E) \neq \emptyset \text{이라 } f(x) \in U \text{인 } x \in E \text{가 있음}), \\
+f^{-1}(V) \cap E &\neq \emptyset \quad (\text{같은 이유}), \\
+f^{-1}(U) \cap f^{-1}(V) \cap E &= f^{-1}(U \cap V) \cap E = \emptyset \quad (\text{왜냐하면 } U \cap V \cap f(E) = \emptyset).
 \end{aligned}$$
 
 따라서 $f^{-1}(U), f^{-1}(V)$가 $E$의 분할을 이루어 $E$가 connected라는 데 모순이 생긴다. 그러므로 $f(E)$는 connected이다.
@@ -140,7 +140,7 @@ $$\begin{aligned}
 \gamma([0,1]) &\subseteq E \subseteq U \cup V, \\
 U \cap \gamma([0,1]) &\ni \gamma(0) = x, \\
 V \cap \gamma([0,1]) &\ni \gamma(1) = y, \\
-U \cap V \cap \gamma([0,1]) &\subseteq U \cap V \cap E = \varnothing
+U \cap V \cap \gamma([0,1]) &\subseteq U \cap V \cap E = \emptyset
 \end{aligned}$$
 
 이므로 $U, V$가 연결집합 $\gamma([0,1])$을 분할하게 되어 모순이다. 따라서 $E$는 connected이다.

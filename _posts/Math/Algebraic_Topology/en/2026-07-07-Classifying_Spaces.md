@@ -213,7 +213,7 @@ $$\mathbb{C}^n\hookrightarrow\mathbb{C}^{n+1}\hookrightarrow \mathbb{C}^{n+2}\ho
 
 induces the inclusion $S^{2n-1}\hookrightarrow S^{2n+1}$ putting the previous unit sphere into the equator of the next unit sphere. Therefore, if we view $\mathbb{C}^\infty\setminus \{0\}$ as the colimit $\varinjlim (\mathbb{C}^n\setminus \{0\})$, this deformation retracts to the colimit $\varinjlim S^{2n-1}$, which is a cofinal subsequence of the inclusions
 
-$$S^1\subset S^2\subset S^3\cdots $$
+$$S^1\subseteq S^2\subseteq S^3\cdots $$
 
 appearing in the definition of $S^\infty$, so the result is the same as $S^\infty$. On the other hand, since the scalar multiplication of $S^1$ preserves the norm, this action restricts to a free action on the unit sphere $S^\infty\subseteq\mathbb{C}^\infty\setminus\{0\}$. That is, if we take $\E S^1=S^\infty$, this is a contractible space on which $S^1$ acts freely, and since the trace of each complex line in $\mathbb{C}^\infty$ intersecting $S^\infty$ is exactly one $S^1$-orbit, that is, the unit circle in that line, the orbit space is the complex projective space
 
@@ -318,7 +318,7 @@ $$H^\bullet(\Gr_n(\mathbb{C}^\infty);\mathbb{Z})=\mathbb{Z}[c_1,\ldots,c_n],$$
 
 it suffices to show only the latter claim.
 
-This calculation is essentially the same as [Corollary 12](#cor12), and the key is, just as before, the map $\B T\rightarrow\B\Umat(n)$ obtained by embedding the maximal torus $T=(S^1)^n\subset\Umat(n)$ as diagonal matrices. Restricting the canonical representation $\mathbb{C}^n$ of $\Umat(n)$ to $T$ splits it along the coordinate axes as
+This calculation is essentially the same as [Corollary 12](#cor12), and the key is, just as before, the map $\B T\rightarrow\B\Umat(n)$ obtained by embedding the maximal torus $T=(S^1)^n\subseteq\Umat(n)$ as diagonal matrices. Restricting the canonical representation $\mathbb{C}^n$ of $\Umat(n)$ to $T$ splits it along the coordinate axes as
 
 $$\mathbb{C}^n=L_1\oplus\cdots\oplus L_n$$
 

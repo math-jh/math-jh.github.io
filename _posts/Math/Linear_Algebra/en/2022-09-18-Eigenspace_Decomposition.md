@@ -282,13 +282,13 @@ the operator defined by this satisfies $\ker (A-I)\cap \im(A-I)\neq \{0\}$. Howe
 In the above situation, the condition $\ker L\cap \im L=\{0\}$ is equivalent to $\ker L^2=\ker L$.
 :::
 ::: Proof
-With a little thought, we see that $\ker L^2=\ker L$ is equivalent to $\ker L^2\subset \ker L$. Therefore what we need to show is the equivalence
+With a little thought, we see that $\ker L^2=\ker L$ is equivalent to $\ker L^2\subseteq \ker L$. Therefore what we need to show is the equivalence
 
-$$\ker L\cap \im L=\{0\}\iff \ker L^2\subset\ker L$$
+$$\ker L\cap \im L=\{0\}\iff \ker L^2\subseteq\ker L$$
 
-First, assume $\ker L\cap \im L=\{0\}$ and let $v\in\ker L^2$. Then $0=L^2 v=L(Lv)$, so $Lv\in\ker L$, and therefore by assumption we must have $Lv=0$. That is, $v\in\ker L$. Conversely, assume $\ker L^2\subset \ker L$ and let $v\in \ker L\cap \im L$. Then since $v\in \im L$, there exists $w\in V$ such that $v=Lw$. But since $v\in\ker L$ as well,
+First, assume $\ker L\cap \im L=\{0\}$ and let $v\in\ker L^2$. Then $0=L^2 v=L(Lv)$, so $Lv\in\ker L$, and therefore by assumption we must have $Lv=0$. That is, $v\in\ker L$. Conversely, assume $\ker L^2\subseteq \ker L$ and let $v\in \ker L\cap \im L$. Then since $v\in \im L$, there exists $w\in V$ such that $v=Lw$. But since $v\in\ker L$ as well,
 
-$$0=Lv=L(Lw)=L^2w\implies w\in\ker(L^2)\subset \ker L$$
+$$0=Lv=L(Lw)=L^2w\implies w\in\ker(L^2)\subseteq \ker L$$
 
 so $w\in \ker L$. That is, $v=Lw=0$.
 :::

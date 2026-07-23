@@ -63,7 +63,7 @@ $$x\in\ker f\iff f(x)=e\iff \forall i(\pr_i^H(f(x))=e_i)\iff \forall i((f_i\circ
 
 이므로 $\ker f=\prod\ker f_i$가 성립한다.
 
-이와 유사하게, $y\in\prod H_i$에 대해 $y\in\im f$인 것은 $y=f(x)$인 $x\in H_i$가 존재하는 것과 동치이고, 이러한 $x$에 대하여
+이와 유사하게, $y\in\prod H_i$에 대해 $y\in\im f$인 것은 $y=f(x)$인 $x\in\prod G_i$가 존재하는 것과 동치이고, 이러한 $x$에 대하여
 
 $$\pr_i^H(y)=\pr_i^H(f(x))=f_i(\pr_i^G(x))\in\im f_i$$
 

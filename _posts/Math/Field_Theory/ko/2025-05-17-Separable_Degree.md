@@ -35,7 +35,7 @@ $$[A:\mathbb{K}]_s\leq[\mathbb{K}[A^p]:\mathbb{K}]_s$$
 
 $$[A:\mathbb{K}]=[A:\mathbb{K}]_s\leq[\mathbb{K}[A^p]:\mathbb{K}]_s\leq [\mathbb{K}[A^p]:\mathbb{K}]$$
 
-이 성립하고, 자명하게 $\mathbb{K}[A^p]\subset A$는 일반적인 경우에 대해 성립하므로 $A=\mathbb{K}[A^p]$가 성립한다. 
+이 성립하고, 자명하게 $\mathbb{K}[A^p]\subseteq A$는 일반적인 경우에 대해 성립하므로 $A=\mathbb{K}[A^p]$가 성립한다. 
 
 이제 거꾸로 $A=\mathbb{K}[A^p]$임을 가정하고 $A$가 étale임을 보이자. 이를 위해서는 뒤의 조건을 보이면 충분하다. $(a_i)$가 $A$의 $\mathbb{K}$-basis라 가정하면, $(a_i^p)$들이 $\mathbb{K}[A^p]$를 $\mathbb{K}$-벡터공간으로서 생성하는 것은 [§체, ⁋명제 12](/ko/math/field_theory/fields#prop12)의 결과이고, 그럼 주어진 가정 $A=\mathbb{K}[A^p]$로부터 $(a_i^p)$들은 $A$를 생성하기도 한다. 
 

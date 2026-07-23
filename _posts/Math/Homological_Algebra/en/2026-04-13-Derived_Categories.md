@@ -23,20 +23,20 @@ What deserves attention is that while the choice of injective or projective reso
 However, $\Ch(\mathcal{A})$ itself is not our ultimate object of interest. As explained above, we must regard all quasi-isomorphisms in $\Ch(\mathcal{A})$ as identical, so we must also take the corresponding quotient. Moreover, since chain maps that are chain homotopic are already identified, we make the following definition.
 
 ::: Definition 1
-The *homotopy category* $K(\mathcal{A})$ of an abelian category $\mathcal{A}$ is the quotient category of $\Ch(\mathcal{A})$ obtained by identifying chain homotopic maps. That is, with respect to the chain homotopy relation $\sim$,
+The *homotopy category* $\mathbf{K}(\mathcal{A})$ of an abelian category $\mathcal{A}$ is the quotient category of $\Ch(\mathcal{A})$ obtained by identifying chain homotopic maps. That is, with respect to the chain homotopy relation $\sim$,
 
 $$\Hom_{K(\mathcal{A})}(A^\bullet, B^\bullet) = \Hom_{\Ch(\mathcal{A})}(A^\bullet, B^\bullet) /{\sim}$$
 
 .
 :::
 
-We can verify that $K(\mathcal{A})$ is an additive category. On the other hand, we already observed in [§Long Exact Sequence, ⁋Definition 4](/en/math/homological_algebra/long_exact_sequence#def4) that a quasi-isomorphism is generally not an isomorphism in $K(\mathcal{A})$. Therefore, in order to regard quasi-isomorphic chain complexes (up to chain homotopy) as the same, we must forcibly adjoin inverses for quasi-isomorphisms.
+We can verify that $\mathbf{K}(\mathcal{A})$ is an additive category. On the other hand, we already observed in [§Long Exact Sequence, ⁋Definition 4](/en/math/homological_algebra/long_exact_sequence#def4) that a quasi-isomorphism is generally not an isomorphism in $\mathbf{K}(\mathcal{A})$. Therefore, in order to regard quasi-isomorphic chain complexes (up to chain homotopy) as the same, we must forcibly adjoin inverses for quasi-isomorphisms.
 
 ::: Definition 2
-The *derived category* $D(\mathcal{A})$ of an abelian category $\mathcal{A}$ is the Verdier quotient $K(\mathcal{A})/S$ of the homotopy category $K(\mathcal{A})$ by the class $S$ of quasi-isomorphisms.
+The *derived category* $D(\mathcal{A})$ of an abelian category $\mathcal{A}$ is the Verdier quotient $\mathbf{K}(\mathcal{A})/S$ of the homotopy category $\mathbf{K}(\mathcal{A})$ by the class $S$ of quasi-isomorphisms.
 :::
 
-We will not treat this definition with full rigor, but it is essentially the same construction as in [[Algebraic Structures] §Field of Fractions, ⁋Definition 2](/en/math/algebraic_structures/field_of_fractions#def2). The only difference is that the objects are non-commutative; with this caveat alone we can obtain the "localization" $D(\mathcal{A})$ of $K(\mathcal{A})$.
+We will not treat this definition with full rigor, but it is essentially the same construction as in [[Algebraic Structures] §Field of Fractions, ⁋Definition 2](/en/math/algebraic_structures/field_of_fractions#def2). The only difference is that the objects are non-commutative; with this caveat alone we can obtain the "localization" $D(\mathcal{A})$ of $\mathbf{K}(\mathcal{A})$.
 
 More concretely, when describing morphisms in $D(\mathcal{A})$ we often use roof diagrams. A morphism in $D(\mathcal{A})$ from $X$ to $Y$ is represented by a diagram
 
@@ -97,17 +97,17 @@ $$H^i(A[n]) = H^{i+n}(A)$$
 We mentioned earlier that the derived category helps us view derived functors correctly. To do so, we must introduce the notion of resolution at the level of complexes.
 
 ::: Definition 5
-A complex $P \in K(\mathcal{A})$ is called *$K$-projective* if for every quasi-isomorphism $s: A \rightarrow B$ in $K(\mathcal{A})$, the induced map
+A complex $P \in \mathbf{K}(\mathcal{A})$ is called *$K$-projective* if for every quasi-isomorphism $s: A \rightarrow B$ in $\mathbf{K}(\mathcal{A})$, the induced map
 
 $$\Hom(s, P):\Hom_{K(\mathcal{A})}(B, P)\rightarrow\Hom_{K(\mathcal{A})}(A, P)$$
 
 is an isomorphism.
 :::
 
-In other words, $P$ is a complex that makes the Hom functor $\Hom(-, P)$ invariant under quasi-isomorphisms in $K(\mathcal{A})$; it is obvious that only such objects descend well to the derived category. Of course we must also define the following.
+In other words, $P$ is a complex that makes the Hom functor $\Hom(-, P)$ invariant under quasi-isomorphisms in $\mathbf{K}(\mathcal{A})$; it is obvious that only such objects descend well to the derived category. Of course we must also define the following.
 
 ::: Definition 6
-A complex $I \in K(\mathcal{A})$ is called *$K$-injective* if for every quasi-isomorphism $s : A \rightarrow B$, the induced map
+A complex $I \in \mathbf{K}(\mathcal{A})$ is called *$K$-injective* if for every quasi-isomorphism $s : A \rightarrow B$, the induced map
 
 $$\Hom_{K(\mathcal{A})}(I, A) \xrightarrow{s_\ast} \Hom_{K(\mathcal{A})}(I, B)$$
 
@@ -209,7 +209,7 @@ $$R F(A) \rightarrow R F(B) \rightarrow R F(C) \rightarrow R F(A)[1]$$
 is also a distinguished triangle.
 :::
 ::: Proof
-View $A \rightarrow B$ as a map and let $I_A^\bullet$ and $I_B^\bullet$ be their $K$-injective resolutions. By the lifting property of $K$-injective resolutions, the map $A \rightarrow B$ extends to $I_A^\bullet \rightarrow I_B^\bullet$. Taking a $K$-injective resolution $I_C^\bullet$ of $C = C(f)$, the sequence $I_A^\bullet \rightarrow I_B^\bullet \rightarrow I_C^\bullet \rightarrow I_A^\bullet[1]$ is a distinguished triangle among $K$-injective complexes, and applying $F$ and viewing the result in $D(\mathcal{B})$ yields the desired distinguished triangle. Since bounded below $K$-injective complexes form a triangulated subcategory of $K(\mathcal{A})$, the mapping cone is also $K$-injective and the diagram commutes.
+View $A \rightarrow B$ as a map and let $I_A^\bullet$ and $I_B^\bullet$ be their $K$-injective resolutions. By the lifting property of $K$-injective resolutions, the map $A \rightarrow B$ extends to $I_A^\bullet \rightarrow I_B^\bullet$. Taking a $K$-injective resolution $I_C^\bullet$ of $C = C(f)$, the sequence $I_A^\bullet \rightarrow I_B^\bullet \rightarrow I_C^\bullet \rightarrow I_A^\bullet[1]$ is a distinguished triangle among $K$-injective complexes, and applying $F$ and viewing the result in $D(\mathcal{B})$ yields the desired distinguished triangle. Since bounded below $K$-injective complexes form a triangulated subcategory of $\mathbf{K}(\mathcal{A})$, the mapping cone is also $K$-injective and the diagram commutes.
 :::
 
 ## Derived Adjunction
@@ -239,7 +239,7 @@ The most representative example is the adjunction between tensor product and Hom
 
 $$\Hom(A \otimes B, C) \cong \Hom(A, \Hom(B, C))$$
 
-is one where we might wish to obtain an isomorphism of the same form for complexes $X, Y, Z$ in the derived category as well. However, the raw functors $-\otimes B$ and $\Hom(B,-)$ do not preserve quasi-isomorphisms, so this adjunction does not descend naively to the derived category. We verified earlier that when defining derived functors one must take a projective or injective resolution in order to descend well from $K(\mathcal{A})$ to $D(\mathcal{A})$; this is precisely because $-\otimes B$ is right exact and $\Hom(B,-)$ is left exact. Since localization with respect to quasi-isomorphisms does not automatically preserve the classical adjoint, a derived version that compensates for this lack of exactness is needed.
+is one where we might wish to obtain an isomorphism of the same form for complexes $X, Y, Z$ in the derived category as well. However, the raw functors $-\otimes B$ and $\Hom(B,-)$ do not preserve quasi-isomorphisms, so this adjunction does not descend naively to the derived category. We verified earlier that when defining derived functors one must take a projective or injective resolution in order to descend well from $\mathbf{K}(\mathcal{A})$ to $D(\mathcal{A})$; this is precisely because $-\otimes B$ is right exact and $\Hom(B,-)$ is left exact. Since localization with respect to quasi-isomorphisms does not automatically preserve the classical adjoint, a derived version that compensates for this lack of exactness is needed.
 
 To see this concretely, consider $R = \mathbb{Z}$ and $M = \mathbb{Z}/n\mathbb{Z}$. Since $M$ is not flat, tensoring is not exact. Applying $-\otimes M$ to $0 \rightarrow \mathbb{Z} \xrightarrow{\times n} \mathbb{Z} \rightarrow \mathbb{Z}/n\mathbb{Z} \rightarrow 0$ breaks exactness; specifically, since $\Tor_1^\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, \mathbb{Z}/n\mathbb{Z}) \cong \mathbb{Z}/n\mathbb{Z}$ exists, the naive adjunction does not work as expected. ([§Ext and Tor](/en/math/homological_algebra/ext_and_tor))
 

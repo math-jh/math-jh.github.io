@@ -157,7 +157,7 @@ For a sheaf $\mathcal{F}$ on a variety $X$, we define the following.
 
 1. A sheaf $\mathcal{F}$ is *acyclic* if $H^i(X, \mathcal{F}) = 0$ for all $i > 0$.
 2. An injective object $\mathcal{F}$ in $\Sh(X)$ is called an *injective sheaf*.
-3. If for any open sets $V\subset U$, the restriction map $$\mathcal{F}(U)
+3. If for any open sets $V\subseteq U$, the restriction map $$\mathcal{F}(U)
 \rightarrow \mathcal{F}(V)$$ is surjective, then $\mathcal{F}$ is called a *flasque sheaf*.
 :::
 
@@ -168,19 +168,19 @@ An injective sheaf $\mathcal{F}$ is flasque.
 :::
 
 ::: Proof
-By definition, $\mathcal{F}$ being injective means that for any monomorphism $\mathcal{A} \hookrightarrow \mathcal{B}$, the map $\Hom_{\Sh(X)}(\mathcal{B}, \mathcal{F}) \rightarrow \Hom_{\Sh(X)}(\mathcal{A}, \mathcal{F})$ is surjective. ([[Homological Algebra] §Resolutions, ⁋Definition 1](/en/math/homological_algebra/resolutions#def1)) We now show that for any open sets $V \subset U \subset X$, the restriction $\mathcal{F}(U) \rightarrow \mathcal{F}(V)$ is surjective.
+By definition, $\mathcal{F}$ being injective means that for any monomorphism $\mathcal{A} \hookrightarrow \mathcal{B}$, the map $\Hom_{\Sh(X)}(\mathcal{B}, \mathcal{F}) \rightarrow \Hom_{\Sh(X)}(\mathcal{A}, \mathcal{F})$ is surjective. ([[Homological Algebra] §Resolutions, ⁋Definition 1](/en/math/homological_algebra/resolutions#def1)) We now show that for any open sets $V \subseteq U \subseteq X$, the restriction $\mathcal{F}(U) \rightarrow \mathcal{F}(V)$ is surjective.
 
 This map is a morphism of abelian groups, not a sheaf morphism, and the tools we have are sheaf morphisms, so we need to rephrase this condition in terms of sheaf morphisms. To this end, we introduce the open embeddings
 
 $$i^U: U \hookrightarrow X,\qquad i^V: V \hookrightarrow X$$
 
-and the sheaves $i^U_!\mathbb{Z}_U, i^V_!\mathbb{Z}_V$ obtained from these by extension by zero. Here $\mathbb{Z}_U, \mathbb{Z}_V$ are constant sheaves, and since $V \subset U$ by assumption, there is a natural monomorphism $i^V_!\mathbb{Z}_V \rightarrow i^U_!\mathbb{Z}_U$.
+and the sheaves $i^U_!\mathbb{Z}_U, i^V_!\mathbb{Z}_V$ obtained from these by extension by zero. Here $\mathbb{Z}_U, \mathbb{Z}_V$ are constant sheaves, and since $V \subseteq U$ by assumption, there is a natural monomorphism $i^V_!\mathbb{Z}_V \rightarrow i^U_!\mathbb{Z}_U$.
 
 First, let us verify that $\Hom_{\Sh(X)}(i^U_!\mathbb{Z}_U, \mathcal{F}) \cong \mathcal{F}(U)$ holds. Since extension by zero $i^U_!$ is the left adjoint of restriction $\mathcal{G} \mapsto \mathcal{G}\vert_U$ ([[Topology] §Sheaves, ⁋Example 14](/en/math/topology/sheaves#ex14)), we have
 
 $$\Hom_{\Sh(X)}(i^U_!\mathbb{Z}_U, \mathcal{F}) \cong \Hom_{\Sh(U)}(\mathbb{Z}_U, \mathcal{F}\vert_U)$$
 
-Now $\mathbb{Z}_U$ is the constant sheaf on $U$, so for any open set $W \subset U$ we have $\mathbb{Z}_U(W) = \mathbb{Z}$, and every section is given by the restriction of a constant function. Therefore, a sheaf morphism $\varphi: \mathbb{Z}_U \rightarrow \mathcal{F}\vert_U$ is completely determined by the image of the global section $\varphi_U(1) \in \mathcal{F}(U)$. Conversely, for any $s \in \mathcal{F}(U)$, defining $\mathbb{Z}_U(W) \rightarrow \mathcal{F}(W),\; n \mapsto n \cdot s\vert_W$ for each $W \subset U$ gives a well-defined sheaf morphism. Thus
+Now $\mathbb{Z}_U$ is the constant sheaf on $U$, so for any open set $W \subseteq U$ we have $\mathbb{Z}_U(W) = \mathbb{Z}$, and every section is given by the restriction of a constant function. Therefore, a sheaf morphism $\varphi: \mathbb{Z}_U \rightarrow \mathcal{F}\vert_U$ is completely determined by the image of the global section $\varphi_U(1) \in \mathcal{F}(U)$. Conversely, for any $s \in \mathcal{F}(U)$, defining $\mathbb{Z}_U(W) \rightarrow \mathcal{F}(W),\; n \mapsto n \cdot s\vert_W$ for each $W \subseteq U$ gives a well-defined sheaf morphism. Thus
 
 $$\Hom_{\Sh(U)}(\mathbb{Z}_U, \mathcal{F}\vert_U) \cong \Hom_{\Ab}(\mathbb{Z}, \mathcal{F}(U)) \cong \mathcal{F}(U)$$
 
@@ -276,7 +276,7 @@ For a sheaf $\mathcal{F}$ on a topological space $X$, we define the *Godement sh
 
 $$C^0(\mathcal{F})(U) = \prod_{x \in U} \mathcal{F}_x$$
 
-for each open set $U \subset X$. Here $\mathcal{F}_x$ is the stalk of $\mathcal{F}$ at $x$.
+for each open set $U \subseteq X$. Here $\mathcal{F}_x$ is the stalk of $\mathcal{F}$ at $x$.
 :::
 
 Then for each $x\in X$, the identity $\mathcal{F}_x\rightarrow \mathcal{F}_x$ on the stalk gives a well-defined canonical morphism $\mathcal{F}\rightarrow C^0(\mathcal{F})$. Also, the fact that $C^0(\mathcal{F})$ is a sheaf is almost trivially defined.
@@ -288,7 +288,7 @@ The Godement sheaf $C^0(\mathcal{F})$ is a flasque sheaf. Moreover, $\mathcal{F}
 :::
 
 ::: Proof
-First, we show that the given sheaf is flasque. For open sets $V \subset U$, the restriction map $C^0(\mathcal{F})(U) = \prod_{x \in U} \mathcal{F}_x \rightarrow \prod_{x \in V} \mathcal{F}_x = C^0(\mathcal{F})(V)$ is a projection, so it is surjective. Therefore $C^0(\mathcal{F})$ is flasque.
+First, we show that the given sheaf is flasque. For open sets $V \subseteq U$, the restriction map $C^0(\mathcal{F})(U) = \prod_{x \in U} \mathcal{F}_x \rightarrow \prod_{x \in V} \mathcal{F}_x = C^0(\mathcal{F})(V)$ is a projection, so it is surjective. Therefore $C^0(\mathcal{F})$ is flasque.
 
 Exactness is trivial because the stalk functor $\mathcal{F} \mapsto \mathcal{F}_x$ is exact and $C^0(\mathcal{F})$ is just a product of stalks.
 :::
@@ -328,7 +328,7 @@ We proceed by induction on $i$. First, consider the case $i=1$. To show this, em
 
 $$0 \rightarrow \mathcal{F}\rightarrow\mathcal{I}\rightarrow\mathcal{Q}\rightarrow0$$
 
-Our claim is that $\mathcal{Q}$ is flasque, which can be shown by a diagram chase in the following commutative diagram for any open sets $V\subset U$
+Our claim is that $\mathcal{Q}$ is flasque, which can be shown by a diagram chase in the following commutative diagram for any open sets $V\subseteq U$
 
 ![Commutative diagram](/assets/images/Math/Algebraic_Varieties/Sheaf_Cohomology-1.svg){:style="width:23.07em" class="invert" .align-center}
 
@@ -497,11 +497,11 @@ $$0 \rightarrow E_2^{1,0} \rightarrow H^1(X, \mathcal{F}) \rightarrow E_2^{0,1} 
 
 To complete the proof, consider the components $E_2^{2,0}$, $E_2^{1,1}$, $E_2^{0,2}$ with $p+q = 2$. For the same reason, the only possibly nontrivial differential is $d_2 : E_2^{0,1} \rightarrow E_2^{2,0}$, and on the $E_3$ page defined by this differential,
 
-$$E_3^{0,2} = \ker(d_2 : E_2^{0,2} \rightarrow E_2^{2,1}), \qquad E_3^{2,0} = \operatorname{coker}(d_2 : E_2^{0,1} \rightarrow E_2^{2,0})$$
+$$E_3^{0,2} = \ker(d_2 : E_2^{0,2} \rightarrow E_2^{2,1}), \qquad E_3^{2,0} = \coker(d_2 : E_2^{0,1} \rightarrow E_2^{2,0})$$
 
 and again analyzing degrees, $E_3^{p,q} = E_\infty^{p,q}$, so
 
-$$E_\infty^{2,0} = E_3^{2,0} = \operatorname{coker}(d_2 : E_2^{0,1} \rightarrow E_2^{2,0})$$
+$$E_\infty^{2,0} = E_3^{2,0} = \coker(d_2 : E_2^{0,1} \rightarrow E_2^{2,0})$$
 
 We have shown so far that the exact sequence
 
@@ -509,7 +509,7 @@ $$0 \rightarrow E_2^{1,0} \rightarrow H^1(X, \mathcal{F}) \rightarrow E_2^{0,1} 
 
 exists, and from the above computation,
 
-$$E_\infty^{2,0} = E_3^{2,0} = \operatorname{coker}(d_2: E_2^{0,1} \rightarrow E_2^{2,0})$$
+$$E_\infty^{2,0} = E_3^{2,0} = \coker(d_2: E_2^{0,1} \rightarrow E_2^{2,0})$$
 
 so inserting via the filtration $F^2 H^2 \hookrightarrow H^2(X, \mathcal{F})$ gives that
 
@@ -538,27 +538,27 @@ This spectral sequence allows us to understand [Theorem 11](#thm11) in a broader
 
 ## Classification of Line Bundles
 
-Earlier we saw that a line bundle is determined by transition functions $g_{ij} \in \mathcal{O}_X^\ast(U_i \cap U_j)$ ([§Line Bundles and Vector Bundles, ⁋Proposition 2](/en/math/algebraic_varieties/line_bundles#prop2)). Transition functions satisfy the cocycle condition $g_{ij}g_{jk} = g_{ik}$, which corresponds exactly to the Čech 1-cocycle condition written in multiplicative notation. Also, an isomorphism of line bundles changes the transition function by $g_{ij} \mapsto h_i g_{ij} h_j^{-1}$ via functions $h_i \in \mathcal{O}_X^\ast(U_i)$ on each $U_i$, which again matches the equivalence relation given by Čech 1-coboundaries. That is, the isomorphism class of a line bundle naturally corresponds to an element of $\check{H}^1(X, \mathcal{O}_X^\ast)$.
+Earlier we saw that a line bundle is determined by transition functions $g_{ij} \in \mathcal{O}_X^\times(U_i \cap U_j)$ ([§Line Bundles and Vector Bundles, ⁋Proposition 2](/en/math/algebraic_varieties/line_bundles#prop2)). Transition functions satisfy the cocycle condition $g_{ij}g_{jk} = g_{ik}$, which corresponds exactly to the Čech 1-cocycle condition written in multiplicative notation. Also, an isomorphism of line bundles changes the transition function by $g_{ij} \mapsto h_i g_{ij} h_j^{-1}$ via functions $h_i \in \mathcal{O}_X^\times(U_i)$ on each $U_i$, which again matches the equivalence relation given by Čech 1-coboundaries. That is, the isomorphism class of a line bundle naturally corresponds to an element of $\check{H}^1(X, \mathcal{O}_X^\times)$.
 
-Organizing this observation rigorously gives the following. Note that here $\mathcal{O}_X^\ast$ is a sheaf of (abelian) groups with multiplicative structure, so in Čech cohomology the coboundary relation is expressed multiplicatively rather than additively. Specifically, a 1-coboundary is of the form $(g_{ij}) = (h_i \cdot h_j^{-1})$.
+Organizing this observation rigorously gives the following. Note that here $\mathcal{O}_X^\times$ is a sheaf of (abelian) groups with multiplicative structure, so in Čech cohomology the coboundary relation is expressed multiplicatively rather than additively. Specifically, a 1-coboundary is of the form $(g_{ij}) = (h_i \cdot h_j^{-1})$.
 
 ::: Proposition 22
-$\check{H}^1(X, \mathcal{O}_X^\ast) \cong \Pic(X)$.
+$\check{H}^1(X, \mathcal{O}_X^\times) \cong \Pic(X)$.
 :::
 
 ::: Proof
-First, we define a map from $\check{H}^1(X, \mathcal{O}_X^\ast)$ to $\Pic(X)$. Given a Čech 1-cocycle $(g_{ij}) \in \check{Z}^1(\mathcal{U}, \mathcal{O}_X^\ast)$, we construct a line bundle $\mathcal{L}$ with this as the transition function. To do this, we take the trivial bundle $U_i \times \mathbb{A}^1$ on each $U_i$, and on $U_i \cap U_j$ we glue by $(p, t) \mapsto (p, g_{ij}(p)t)$. Then by the cocycle condition $g_{ij}g_{jk} = g_{ik}$, this gluing is consistent, so we obtain a well-defined line bundle.
+First, we define a map from $\check{H}^1(X, \mathcal{O}_X^\times)$ to $\Pic(X)$. Given a Čech 1-cocycle $(g_{ij}) \in \check{Z}^1(\mathcal{U}, \mathcal{O}_X^\times)$, we construct a line bundle $\mathcal{L}$ with this as the transition function. To do this, we take the trivial bundle $U_i \times \mathbb{A}^1$ on each $U_i$, and on $U_i \cap U_j$ we glue by $(p, t) \mapsto (p, g_{ij}(p)t)$. Then by the cocycle condition $g_{ij}g_{jk} = g_{ik}$, this gluing is consistent, so we obtain a well-defined line bundle.
 
 On the other hand, given two cocycles that are equivalent by a coboundary, $g_{ij}^{\mathcal{L}} = h_i g_{ij}^{\mathcal{M}} h_j^{-1}$, we can define an isomorphism between the corresponding two line bundles by $\varphi_i: \mathcal{L}\vert_{U_i} \rightarrow \mathcal{M}\vert_{U_i}$, $v \mapsto h_i^{-1} v$. Then the compatibility of $\varphi_i$ and $\varphi_j$ on $U_i \cap U_j$ is verified by
 
 $$g_{ij}^{\mathcal{M}} \cdot \varphi_j(v) = g_{ij}^{\mathcal{M}} h_j^{-1} v = h_i^{-1} (h_i g_{ij}^{\mathcal{M}} h_j^{-1}) v = h_i^{-1} g_{ij}^{\mathcal{L}} v = \varphi_i(g_{ij}^{\mathcal{L}} v)$$
 
-and thus the map $\check{H}^1(\mathcal{U}, \mathcal{O}_X^\ast) \rightarrow \Pic(X)$ is well-defined.
+and thus the map $\check{H}^1(\mathcal{U}, \mathcal{O}_X^\times) \rightarrow \Pic(X)$ is well-defined.
 
-Conversely, any line bundle $\mathcal{L}$ is represented by transition functions $g_{ij}$ on an appropriate open cover $\mathcal{U}$ by [§Line Bundles and Vector Bundles, ⁋Definition 1](/en/math/algebraic_varieties/line_bundles#def1), and these form a Čech 1-cocycle. Since a line bundle isomorphism corresponds exactly to the equivalence relation by coboundaries, the kernel of this map consists of coboundaries. Therefore $\check{H}^1(\mathcal{U}, \mathcal{O}_X^\ast) \rightarrow \Pic(X)$ is injective. Now taking the direct limit gives $\check{H}^1(X, \mathcal{O}_X^\ast) \cong \Pic(X)$.
+Conversely, any line bundle $\mathcal{L}$ is represented by transition functions $g_{ij}$ on an appropriate open cover $\mathcal{U}$ by [§Line Bundles and Vector Bundles, ⁋Definition 1](/en/math/algebraic_varieties/line_bundles#def1), and these form a Čech 1-cocycle. Since a line bundle isomorphism corresponds exactly to the equivalence relation by coboundaries, the kernel of this map consists of coboundaries. Therefore $\check{H}^1(\mathcal{U}, \mathcal{O}_X^\times) \rightarrow \Pic(X)$ is injective. Now taking the direct limit gives $\check{H}^1(X, \mathcal{O}_X^\times) \cong \Pic(X)$.
 :::
 
-This proposition shows that the classification of line bundles reduces to a cohomology computation. That is, the problem of classifying elements of $\Pic(X)$ becomes the problem of classifying $\mathcal{O}_X^\ast$-valued Čech 1-cocycles, which is encouraging in that it is at least amenable to explicit computation. In the next post [§Cohomology of Projective Spaces](/en/math/algebraic_varieties/cohomology_of_projective_spaces) we compute the cohomology of the line bundle $\mathcal{O}(d)$ on $\mathbb{P}^n$.
+This proposition shows that the classification of line bundles reduces to a cohomology computation. That is, the problem of classifying elements of $\Pic(X)$ becomes the problem of classifying $\mathcal{O}_X^\times$-valued Čech 1-cocycles, which is encouraging in that it is at least amenable to explicit computation. In the next post [§Cohomology of Projective Spaces](/en/math/algebraic_varieties/cohomology_of_projective_spaces) we compute the cohomology of the line bundle $\mathcal{O}(d)$ on $\mathbb{P}^n$.
 
 ---
 

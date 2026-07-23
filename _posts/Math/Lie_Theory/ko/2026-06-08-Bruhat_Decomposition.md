@@ -85,7 +85,7 @@ $$\ell(w)=\lvert\{(i,j)\mid i<j,\ w(i)>w(j)\}\rvert=\operatorname{inv}(w)$$
 이제 우리는 위에서 살펴본 결과들을 이용하여 Bruhat decomposition을 생각한다. 다음 정리는 [§Borel subgroup, ⁋명제 16](/ko/math/lie_theory/borel_subgroup#prop16)에서 이미 살펴본 결과로, 편의를 위해 재서술해둔다. 
 
 ::: 정리 5 (Bruhat decomposition)
-Connected reductive algebraic group $G$, Borel subgroup $B$, maximal torus $T\subset B$, 그리고 Weyl group $W=N_G(T)/T$에 대하여, 다음의 disjoint union이 성립한다.
+Connected reductive algebraic group $G$, Borel subgroup $B$, maximal torus $T\subseteq B$, 그리고 Weyl group $W=N_G(T)/T$에 대하여, 다음의 disjoint union이 성립한다.
 
 $$G=\bigsqcup_{w\in W}BwB$$
 :::
@@ -116,7 +116,7 @@ $$U_w=\prod_{\substack{\gamma\in\Phi^+\\ w^{-1}\gamma\in\Phi^-}}U_\gamma$$
 
 곱에 등장하는 root의 개수는 $\ell(w)$이므로, $U_w$는 affine space $\mathbb{A}^{\ell(w)}$와 isomorphic하다. 즉 $U_w$는 "$w^{-1}$이 negative root로 보내는 positive root들"만 모은 unipotent subgroup이며, 그 차원이 곧 length이다 ($\ell(w^{-1})=\ell(w)$).
 
-이하에서 $BwB$나 곱 $uwb$처럼 $w\in W$를 행렬로 직접 다룰 때는, $N_G(T)$ 안의 대표원 하나를 고른 것으로 본다. 서로 다른 대표원은 $T\subset B$만큼만 차이나므로 double coset $BwB$와 그 coset $BwB/B$는 대표원 선택과 무관하다.
+이하에서 $BwB$나 곱 $uwb$처럼 $w\in W$를 행렬로 직접 다룰 때는, $N_G(T)$ 안의 대표원 하나를 고른 것으로 본다. 서로 다른 대표원은 $T\subseteq B$만큼만 차이나므로 double coset $BwB$와 그 coset $BwB/B$는 대표원 선택과 무관하다.
 
 ::: 명제 6
 각 $w\in W$에 대하여, product map
@@ -277,7 +277,7 @@ $$w(1)=2, \quad w(2)=4, \quad w(3)=1,\quad w(4)=3$$
 
 한편 우리는 근본적으로 Grassmannian (혹은 더 일반적으로 partial flag variety)가 reference flag에 대한 incidence condition으로 나온다는 것을 기억한다. Flag variety $\Fl(d_1, d_2, \ldots, d_m; n)$을 생각하자. 이 variety의 원소는 다음의 flag
 
-$$0\subset V_1\subset \cdots \subset V_m\subset \mathbb{C}^n,\qquad \dim V_k=d_k$$
+$$0\subseteq V_1\subseteq \cdots \subseteq V_m\subseteq \mathbb{C}^n,\qquad \dim V_k=d_k$$
 
 들로 구성되는 것이며, 이 flag의 위치는 reference flag와의 교차 차원 $\dim(V_i\cap E_j)$가 모두 결정하며, 이 정보를 공유하는 대상들이 바로 Bruhat cell이었다. 
 
@@ -286,7 +286,7 @@ $$0\subset V_1\subset \cdots \subset V_m\subset \mathbb{C}^n,\qquad \dim V_k=d_k
 - $E_0$에서 $E_1$으로 올라갈 때 생기는 방향은 $e_1$ 방향이며, 이 방향은 처음부터 $V$에 있는 방향이다. 즉 $u_1=0$이다.
 - $E_1$에서 $E_2$로 올라갈 때 생기는 방향은 $ae_1+be_2$ ($b\neq 0$) 방향으로, 이 방향은 $V$에 속해있지 않다. 즉 $u_2=1$이다. 
 - $E_2$에서 $E_3$으로 올라갈 때 생기는 방향은 $e_3$ 성분이 살아있는 $ae_1+be_2+ce_3$ ($c\neq0$) 꼴인데, 이번에는 $V$의 벡터 $e_2+e_3$가 바로 이런 방향이라 $\dim(V\cap E_3)$이 한 차원 커진다. 즉 이 방향이 $V$에 흡수되므로 $u_3=0$이다.
-- $E_3$에서 $E_4$로 올라갈 때 생기는 방향은 $e_4$ 방향이지만, 이미 $V\subset E_3$이라 새로 흡수될 $V$의 벡터가 없다. 즉 $u_4=1$이다.
+- $E_3$에서 $E_4$로 올라갈 때 생기는 방향은 $e_4$ 방향이지만, 이미 $V\subseteq E_3$이라 새로 흡수될 $V$의 벡터가 없다. 즉 $u_4=1$이다.
 
 네 성분을 모으면 우리가 만드는 $u$ word는 $u=0101$이다. 거꾸로 이런 word가 주어졌을 때 jump 데이터를 복원하는 것도 즉각적인데, 가령 이 예시에서 차원이 뛰는 곳은 $0$이 있는 첫째, 셋째 자리인 것이다. 더 일반적인 flag variety에 대해서는 $u$를 이루는 숫자들이 $0$과 $1$ 뿐만 아니라 다른 숫자들도 나타나는 것이며, 이들 숫자들이 우리가 flag의 몇 번째 성분을 보는것인지를 알려주고, 이들 숫자들의 위치가 이 성분이 어디서 뛰는지를 알려주는 것이다. 
 

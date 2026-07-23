@@ -380,7 +380,7 @@ $$\mathfrak{I}/\mathfrak{I}^2\overset{\overline{d}}{\longrightarrow}\Omega_{E/A}
 이 exact이다. 
 :::
 ::: 증명
-앞선 논증의 표기에서, 우리는 $\Omega_{E/A}\otimes_EE'$를 $\Omega_{E/A}/\mathfrak{I}\Omega_{E/A}$와 identify할 수 있다. 그럼 이 identification 하에서, $\overline{d}$의 image는 $d(\mathfrak{I})\subset\Omega_{E/A}$의 quotient module $\Omega_{E/A}/\mathfrak{I}\Omega_{E/A}$에서의 image가 된다. 따라서, $\Omega_{E/A}$의 $A$-submodule $I$를 $\mathfrak{I}\Omega_{E/A}$와 $d(\mathfrak{I})$에 의해 생성되는 것으로 잡으면 다음의 isomorphism
+앞선 논증의 표기에서, 우리는 $\Omega_{E/A}\otimes_EE'$를 $\Omega_{E/A}/\mathfrak{I}\Omega_{E/A}$와 identify할 수 있다. 그럼 이 identification 하에서, $\overline{d}$의 image는 $d(\mathfrak{I})\subseteq\Omega_{E/A}$의 quotient module $\Omega_{E/A}/\mathfrak{I}\Omega_{E/A}$에서의 image가 된다. 따라서, $\Omega_{E/A}$의 $A$-submodule $I$를 $\mathfrak{I}\Omega_{E/A}$와 $d(\mathfrak{I})$에 의해 생성되는 것으로 잡으면 다음의 isomorphism
 
 $$\frac{\Omega_{E/A}\otimes_EE'}{\im(\overline{d})}\cong\frac{\Omega_{E/A}}{I}$$
 

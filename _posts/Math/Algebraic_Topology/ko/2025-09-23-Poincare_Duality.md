@@ -302,7 +302,7 @@ $$H^p(\mathbb{R}^m,\mathbb{R}^m\setminus B;A)\cong H_{m-p}(\mathbb{R}^m;A)$$
 
 이 모든 $p$에 대해 성립한다. ($p\neq m$인 경우는 zero module 사이의 zero map이므로 isomorphism이다.) 이제 $B$의 반지름을 키워가며 $\mathbb{R}^m$ 전체를 덮는 directed system을 짜면 $H_c^p(M)\rightarrow H_{m-p}(M)$이 isomorphism임을 안다. 
 
-이제 다음 스텝으로, 만일 $M$의 두 열린집합 $U,V$가 존재하여 $M=U\cap V$이고 주어진 명제가 $U,V,U\cap V$에 대해 성립한다 가정하자. 그럼 각각의 compact subset $K\subset U$, $L\subset V$에 대하여 relative Mayer-Vietoris sequence
+이제 다음 스텝으로, 만일 $M$의 두 열린집합 $U,V$가 존재하여 $M=U\cap V$이고 주어진 명제가 $U,V,U\cap V$에 대해 성립한다 가정하자. 그럼 각각의 compact subset $K\subseteq U$, $L\subseteq V$에 대하여 relative Mayer-Vietoris sequence
 
 $$\cdots\rightarrow H^k(M,M\setminus(K\cap L);A)\rightarrow H^k(M,M\setminus K;A)\oplus H^k(M,M\setminus L;A)\rightarrow H^k(M,M\setminus(K\cup L);A)\rightarrow \cdots$$
 
@@ -314,7 +314,7 @@ $$\cdots\rightarrow H^k(M,M\setminus(K\cap L);A)\rightarrow H^k(M,M\setminus K;A
 
 그러나 $M$이 compact라는 가정이 없으므로 약간의 논증을 덧붙여야 한다. 우선 만일 $M$이 open subset들의 nested family 
 
-$$U_1\subset U_2\subset\cdots$$
+$$U_1\subseteq U_2\subseteq\cdots$$
 
 의 union이고 이들 각각에 대하여 주어진 명제가 성립한다 하자. 그럼 $M$의 임의의 compact subset은 어떠한 $U_i$에는 반드시 포함되어야 하고, 이로부터 다음의 isomorphism
 
@@ -332,7 +332,7 @@ $$U_1,\quad U_1\cup U_2, \quad U_1\cup U_2\cup U_3,\quad \cdots$$
 
 이 모두 결론을 만족하는 것을 안다. 따라서 이로부터 nested open subset들의 sequence
 
-$$U_1\subset U_1\cup U_2\subset U_1\cup U_2\cup U_3\cdots$$
+$$U_1\subseteq U_1\cup U_2\subseteq U_1\cup U_2\cup U_3\cdots$$
 
 에 앞선 (무한한) 귀납법을 적용하면 원하는 결과를 얻는다. 
 
@@ -348,70 +348,70 @@ $M$이 $A$-orientable이 아닐 경우 [정리 11](#thm11)이 성립하지 않�
 이제 이 꼬임을 duality에서 함께 고려하기 위해 우리는 *homology with local coefficient*을 정의한다. 
 
 ::: 정의 14
-$M$ 위에 정의된 locally constant sheaf $\mathscr{L}$을 *local coefficient system<sub>국소 계수 체계</sub>*이라 부른다. 
+$M$ 위에 정의된 locally constant sheaf $\mathcal{L}$을 *local coefficient system<sub>국소 계수 체계</sub>*이라 부른다. 
 :::
 
-Local system $\mathscr{L}$의 stalk을 $L$이라 하자. 그럼 [§피복공간, ⁋정리 11](/ko/math/algebraic_topology/covering_spaces#thm11)에 의하여, 우리는 임의의 path $\alpha:[0,1]\rightarrow M$이 주어질 때마다 stalk들 사이의 isomorphism $\mathscr{L}_{\alpha(0)}\rightarrow \mathscr{L}_{\alpha(1)}$이 존재하는 것을 안다. 이는 별다른 것이 아니라 covering space $\Spe(\mathscr{L})\rightarrow M$에서 path $\alpha$를 lift하여 얻어지는 isomorphism이다. 즉, 우리는 다음의 functor
+Local system $\mathcal{L}$의 stalk을 $L$이라 하자. 그럼 [§피복공간, ⁋정리 11](/ko/math/algebraic_topology/covering_spaces#thm11)에 의하여, 우리는 임의의 path $\alpha:[0,1]\rightarrow M$이 주어질 때마다 stalk들 사이의 isomorphism $\mathcal{L}_{\alpha(0)}\rightarrow \mathcal{L}_{\alpha(1)}$이 존재하는 것을 안다. 이는 별다른 것이 아니라 covering space $\Spe(\mathcal{L})\rightarrow M$에서 path $\alpha$를 lift하여 얻어지는 isomorphism이다. 즉, 우리는 다음의 functor
 
-$$\Pi_1(M)\rightarrow \Ab; \qquad x\mapsto \mathscr{L}_x$$
+$$\Pi_1(M)\rightarrow \Ab; \qquad x\mapsto \mathcal{L}_x$$
 
-를 얻는다. 그럼 우리는 $\Delta^k$의 한 점 $e_0=(1,0,\ldots,0)$을 고정하여, $C_\bullet(M,\mathscr{L})$을 다음의 식
+를 얻는다. 그럼 우리는 $\Delta^k$의 한 점 $e_0=(1,0,\ldots,0)$을 고정하여, $C_\bullet(M,\mathcal{L})$을 다음의 식
 
-$$C_\bullet(M,\mathscr{L})=\bigoplus_{\sigma:\Delta^k\rightarrow M}\mathscr{L}_{\sigma(e_0)}$$
+$$C_\bullet(M,\mathcal{L})=\bigoplus_{\sigma:\Delta^k\rightarrow M}\mathcal{L}_{\sigma(e_0)}$$
 
-으로 정의한다. 어차피 각각의 $x$에 대하여 $\mathscr{L}_x\cong L$이지만, 이 정의의 핵심은 각각의 점에서의 $L$이 nontrivial한 automorphism을 통해 달라질 수 있다는 것이다. 그럼 이 chain complex의 differential map은, singular $k$-simplex $\sigma:\Delta^k \rightarrow M$과 계수 $a\in \mathscr{L}_{\sigma(e_0)}$에 대하여 
+으로 정의한다. 어차피 각각의 $x$에 대하여 $\mathcal{L}_x\cong L$이지만, 이 정의의 핵심은 각각의 점에서의 $L$이 nontrivial한 automorphism을 통해 달라질 수 있다는 것이다. 그럼 이 chain complex의 differential map은, singular $k$-simplex $\sigma:\Delta^k \rightarrow M$과 계수 $a\in \mathcal{L}_{\sigma(e_0)}$에 대하여 
 
-$$\partial_k(a\sigma)=\sum_{i=0}^k(-1)^k\mathscr{L}_{\sigma_k}(a) (\sigma\vert_{[v_0,\ldots, \hat{v}_i,\ldots,v_k]})$$
+$$\partial_k(a\sigma)=\sum_{i=0}^k(-1)^k\mathcal{L}_{\sigma_k}(a) (\sigma\vert_{[v_0,\ldots, \hat{v}_i,\ldots,v_k]})$$
 
-로 정의된다. 여기서 $\mathscr{L}_{\sigma_k}$는 원래 simplex의 첫 번째 vertex $\sigma(e_0)$과, $k$번째 face의 첫 번째 vertex를 잇는 edge를 $M$으로 보내어 얻어진 path에 functor $\Pi_1(M) \rightarrow \Ab$를 적용하여 얻어진 것이다. 우리의 상황과 같이 좋은 경우, 우리는 $M$의 universal cover $\widetilde{M}$과 이 위에 작용하는 monodromy action (즉 Deck transformation), 그리고 monodromy representation $\pi_1(X)\rightarrow \Aut(A)$을 사용하여 다음의 chain complex
+로 정의된다. 여기서 $\mathcal{L}_{\sigma_k}$는 원래 simplex의 첫 번째 vertex $\sigma(e_0)$과, $k$번째 face의 첫 번째 vertex를 잇는 edge를 $M$으로 보내어 얻어진 path에 functor $\Pi_1(M) \rightarrow \Ab$를 적용하여 얻어진 것이다. 우리의 상황과 같이 좋은 경우, 우리는 $M$의 universal cover $\widetilde{M}$과 이 위에 작용하는 monodromy action (즉 Deck transformation), 그리고 monodromy representation $\pi_1(X)\rightarrow \Aut(A)$을 사용하여 다음의 chain complex
 
 $$C(\widetilde{M})\otimes_{\mathbb{Z}[\pi_1(X)]} A$$
 
 를 구성하여 얻어지는 chain complex를 생각하여도 이것이 위의 homology group과 같은 homology group을 주는 것을 안다. 
 
-이는 어떻게 보면 다소 과한 일반화라 할 수도 있는데, non-orientable 버전의 Poincaré duality를 기술하기 위해 우리는 어차피 local coefficient system $\mathscr{L}$을 constant sheaf $\underline{A}$로 둘 것이기 때문이다. 그러나 이러한 일반화를 통해 우리는 cohomology 부분도 일반화가 가능하고, 이 일반화가 Poincaré duality를 조금 더 투명하게 보여준다. 
+이는 어떻게 보면 다소 과한 일반화라 할 수도 있는데, non-orientable 버전의 Poincaré duality를 기술하기 위해 우리는 어차피 local coefficient system $\mathcal{L}$을 constant sheaf $\underline{A}$로 둘 것이기 때문이다. 그러나 이러한 일반화를 통해 우리는 cohomology 부분도 일반화가 가능하고, 이 일반화가 Poincaré duality를 조금 더 투명하게 보여준다. 
 
-임의의 위상공간 $X$와 그 위에 정의된 sheaf $\mathscr{F}$에 대하여, global section functor 
+임의의 위상공간 $X$와 그 위에 정의된 sheaf $\mathcal{F}$에 대하여, global section functor 
 
 $$\Gamma(X,-):\Sh(X;\mathcal{A})\rightarrow \mathcal{A}$$
 
 는 left exact functor이므로, 이 functor의 right derived functor가 존재한다. 이를 직접 계산하기 위해서는 Godement resolution을 사용하는데, 이는 다음과 같이 정의된다.
 
-위상공간 $X$와 그 위에 정의된 sheaf $\mathscr{F}$를 생각하고, étalé space $\Spe(\mathscr{F})$를 생각하자. 우리는 $\mathscr{F}$가 정확하게 $\Spe(\mathscr{F})\rightarrow X$의 continuous section들의 sheaf임을 안다. 이제 임의의 열린집합 $U$에 대하여
+위상공간 $X$와 그 위에 정의된 sheaf $\mathcal{F}$를 생각하고, étalé space $\Spe(\mathcal{F})$를 생각하자. 우리는 $\mathcal{F}$가 정확하게 $\Spe(\mathcal{F})\rightarrow X$의 continuous section들의 sheaf임을 안다. 이제 임의의 열린집합 $U$에 대하여
 
-$$\mathscr{G}_0(U)=\prod_{x\in U}\mathscr{F}_x$$
+$$\mathcal{G}_0(U)=\prod_{x\in U}\mathcal{F}_x$$
 
-으로 정의하자. 즉 $\mathscr{G}_0$는 $\Spe(\mathscr{F})\rightarrow X$의 (연속일 필요가 없는) 집합론적인 section들의 sheaf이다. 우리의 아이디어는, 일반적으로 local하게 정의된 함수들이 이어붙였을 때 함수가 되지 않는 경우를 inclusion $\mathscr{F}\rightarrow \mathscr{G}_0$에 의해 유도되는 다음의 sequence
+으로 정의하자. 즉 $\mathcal{G}_0$는 $\Spe(\mathcal{F})\rightarrow X$의 (연속일 필요가 없는) 집합론적인 section들의 sheaf이다. 우리의 아이디어는, 일반적으로 local하게 정의된 함수들이 이어붙였을 때 함수가 되지 않는 경우를 inclusion $\mathcal{F}\rightarrow \mathcal{G}_0$에 의해 유도되는 다음의 sequence
 
-$$0 \rightarrow \mathscr{F}\rightarrow \mathscr{G}_0 \rightarrow \mathscr{Q}\rightarrow 0$$
+$$0 \rightarrow \mathcal{F}\rightarrow \mathcal{G}_0 \rightarrow \mathcal{Q}\rightarrow 0$$
 
-을 통해 quotient sheaf $\mathscr{Q}$에 몰아넣어버리는 것이다. 그렇다면 sheaf $\mathscr{Q}$에 대해서도 마찬가지로 
+을 통해 quotient sheaf $\mathcal{Q}$에 몰아넣어버리는 것이다. 그렇다면 sheaf $\mathcal{Q}$에 대해서도 마찬가지로 
 
-$$\mathscr{G}_1(U)=\prod_{x\in U}\mathscr{Q}_x$$
+$$\mathcal{G}_1(U)=\prod_{x\in U}\mathcal{Q}_x$$
 
 으로 정의되는 sheaf를 만들 수 있고, 이것이 다음의 *Godement resolution*
 
-$$0 \rightarrow \mathscr{F}\rightarrow \mathscr{G}_0 \rightarrow \mathscr{G}_1\rightarrow \cdots$$
+$$0 \rightarrow \mathcal{F}\rightarrow \mathcal{G}_0 \rightarrow \mathcal{G}_1\rightarrow \cdots$$
 
-을 정의한다. 직관적으로 이는 $\Spe(\mathscr{F})$의 global section이 존재하지 못하도록 하는 부분을 $\mathscr{Q}$에, 그리고 다시 $\mathscr{Q}$의 global section이 존재하지 못하도록 하는 부븐을 $\mathscr{Q}'$에 담는 식으로 계속해서 반복하는 것이다. 이 resolution $\mathscr{G}_\bullet$은 injective resolution은 아니지만, 각각의 sheaf가 flabby (flasque) sheaf이기 때문에 이를 통해 global section functor의 right derived functor $R^i\Gamma$들을 계산할 수 있다. 
+을 정의한다. 직관적으로 이는 $\Spe(\mathcal{F})$의 global section이 존재하지 못하도록 하는 부분을 $\mathcal{Q}$에, 그리고 다시 $\mathcal{Q}$의 global section이 존재하지 못하도록 하는 부븐을 $\mathcal{Q}'$에 담는 식으로 계속해서 반복하는 것이다. 이 resolution $\mathcal{G}_\bullet$은 injective resolution은 아니지만, 각각의 sheaf가 flabby (flasque) sheaf이기 때문에 이를 통해 global section functor의 right derived functor $R^i\Gamma$들을 계산할 수 있다. 
 
 ::: 정의 15
-위상공간 $X$와 그 위에 정의된 sheaf $\mathscr{F}$에 대하여, Godement resolution의 global section들의 sequence
+위상공간 $X$와 그 위에 정의된 sheaf $\mathcal{F}$에 대하여, Godement resolution의 global section들의 sequence
 
-$$0 \rightarrow \mathscr{F}(X)\rightarrow \mathscr{G}_0(X)\rightarrow \mathscr{G}_1(X)\rightarrow \cdots$$
+$$0 \rightarrow \mathcal{F}(X)\rightarrow \mathcal{G}_0(X)\rightarrow \mathcal{G}_1(X)\rightarrow \cdots$$
 
 의 $k$번째 homology를 
 
-$$H^k(X; \mathscr{F})$$
+$$H^k(X; \mathcal{F})$$
 
 으로 적고, 이를 *sheaf cohomology*라 부른다. 
 :::
 
 이에 대한 자세한 내용은 [\[대수다양체\] §층 코호몰로지, ⁋정의 1](/ko/math/algebraic_varieties/sheaf_cohomology#def1)에서 더 자세히 다룬다. 이제 Poincaré duality는 다음의 isomorphism
 
-$$H^k(M;\mathscr{L})\cong H_{m-k}(M;\or_M^A\otimes \mathscr{L})$$
+$$H^k(M;\mathcal{L})\cong H_{m-k}(M;\or_M^A\otimes \mathcal{L})$$
 
-으로 일반화된다. 여기에서 원래의 Poincaré duality로 돌아가기 위해서는 우선 $\mathscr{L}$을 constant sheaf $\underline{A}$로 둔다. 그럼 manifold와 같이 좋은 경우에는 sheaf cohomology $H^k(M;\underline{A})$와 singular cohomology $H^k(M;A)$가 isomorphic하다는 것이 알려져 있으므로 다음의 isomorphism
+으로 일반화된다. 여기에서 원래의 Poincaré duality로 돌아가기 위해서는 우선 $\mathcal{L}$을 constant sheaf $\underline{A}$로 둔다. 그럼 manifold와 같이 좋은 경우에는 sheaf cohomology $H^k(M;\underline{A})$와 singular cohomology $H^k(M;A)$가 isomorphic하다는 것이 알려져 있으므로 다음의 isomorphism
 
 $$H^k(M;A)\cong H_{m-k}(M;\or_M^A)$$
 

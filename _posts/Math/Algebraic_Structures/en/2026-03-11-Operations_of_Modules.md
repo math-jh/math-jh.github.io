@@ -34,7 +34,7 @@ $$\Eq(u,v)=\{x\in M\mid u(x)=v(x)\}$$
 
 and
 
-$$\CoEq(u,v)=N/N',\qquad N'=\langle u(x)-v(x)\rangle\rangle$$
+$$\CoEq(u,v)=N/N',\qquad N'=\langle u(x)-v(x)\rangle$$
 
 That is, the following holds.
 

@@ -49,7 +49,7 @@ Then by the universal property, there exists a map $\bar{\eta}_S': K(S)\rightarr
 
 using the universal property for $H$, there exists a map $\bar{\eta}_S:H\rightarrow K(S)$ such that $\eta_S=\bar{\eta}_S\circ\eta_S'$. Then
 
-$$\bar{\eta}_S'\circ\bar{\eta}_S\circ\eta_S'=\bar{\eta}_S'\circ \eta_S=\eta=\id_{H}\circ \eta_S' $$
+$$\bar{\eta}_S'\circ\bar{\eta}_S\circ\eta_S'=\bar{\eta}_S'\circ \eta_S=\eta_S'=\id_{H}\circ \eta_S' $$
 
 and by the universal property again, the map $f$ satisfying $f\circ \eta_S'=\eta_S'$ is unique, so $f=\id_H=\bar{\eta}_S'\circ \bar{\eta}_S$. Or, in the language of diagrams, the unique map $H\rightarrow H$ making the following diagram commute must be $\id_H=\bar{\eta}_S'\circ \bar{\eta}_S$.
 

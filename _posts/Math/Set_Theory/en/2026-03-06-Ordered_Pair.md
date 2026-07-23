@@ -23,7 +23,7 @@ last_polished_at: 2026-06-02T10:00:02+00:00
 The statement $A\subseteq B$ means that for any $x$, the proposition $x\in A\implies x\in B$ is always true.
 :::
 
-The following two propositions are properties of $\subset$.
+The following two propositions are properties of $\subseteq$.
 
 ::: Proposition 2
 $A\subseteq A$ always holds.

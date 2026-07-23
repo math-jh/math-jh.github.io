@@ -67,11 +67,11 @@ The following hold.
 
 Using the functoriality of the fundamental groupoid $\Pi_1:\Top \rightarrow \Grpd$, any continuous map $p:E \rightarrow B$ defines the groupoid homomorphism
 
-$$\Pi_1(f):\Pi_1(E) \rightarrow \Pi_1(B)$$
+$$\Pi_1(p):\Pi_1(E) \rightarrow \Pi_1(B)$$
 
 In particular, for any $y_0, y_1\in E$, the homomorphism
 
-$$\Hom_{\Pi_1(E))}(y_0, y_1)\rightarrow \Hom_{\Pi_1(B)}(p(y_0), p(y_1))\tag{$\ast$}$$
+$$\Hom_{\Pi_1(E)}(y_0, y_1)\rightarrow \Hom_{\Pi_1(B)}(p(y_0), p(y_1))\tag{$\ast$}$$
 
 is well-defined. If $B$ is path-connected and $p(y_0)=p(y_1)$, this becomes a (groupoid) homomorphism into the fundamental group $\pi_1(B)$. If $E$ contains all information about the fundamental group (or groupoid) of $B$, then at least this homomorphism must be surjective.
 

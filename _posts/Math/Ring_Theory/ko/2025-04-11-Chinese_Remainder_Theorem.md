@@ -59,7 +59,7 @@ $$\left(\sum_{i=1}^{n_1} x_i^{(1)}y_i^{(1)}\right)z_1+\cdots+\left(\sum_{i=1}^{n
 
 $$a_1(b_1+c_1)+\cdots a_n(b_n+c_n)$$
 
-을 분배법칙을 사용하여 풀어주면 $\mathfrak{a}(\mathfrak{b}+\mathfrak{c})\subset \mathfrak{a}\mathfrak{b}+\mathfrak{a}\mathfrak{c}$를 쉽게 보일 수 있다. 거꾸로 임의의
+을 분배법칙을 사용하여 풀어주면 $\mathfrak{a}(\mathfrak{b}+\mathfrak{c})\subseteq \mathfrak{a}\mathfrak{b}+\mathfrak{a}\mathfrak{c}$를 쉽게 보일 수 있다. 거꾸로 임의의
 
 $$a_1b_1+\cdots a_nb_n + a_1'c_1+\cdots +a_m'c_m\in \mathfrak{a}\mathfrak{b}+\mathfrak{a}\mathfrak{c}$$
 
@@ -68,9 +68,9 @@ $$a_1b_1+\cdots a_nb_n + a_1'c_1+\cdots +a_m'c_m\in \mathfrak{a}\mathfrak{b}+\ma
 
 임의의 두 two-sided ideal $\mathfrak{a},\mathfrak{b}$에 대하여, 다음 두 식
 
-$$\mathfrak{a}\mathfrak{b}\subset \mathfrak{a}A\subset \mathfrak{a},\quad \mathfrak{a}\mathfrak{b}\subset A \mathfrak{b}\subset \mathfrak{b}$$
+$$\mathfrak{a}\mathfrak{b}\subseteq \mathfrak{a}A\subseteq \mathfrak{a},\quad \mathfrak{a}\mathfrak{b}\subseteq A \mathfrak{b}\subseteq \mathfrak{b}$$
 
-이 모두 성립하므로 $\mathfrak{a}\mathfrak{b}\subset \mathfrak{a}\cap \mathfrak{b}$이 성립한다. 일반적으로 등호가 성립할 필요는 없다.
+이 모두 성립하므로 $\mathfrak{a}\mathfrak{b}\subseteq \mathfrak{a}\cap \mathfrak{b}$이 성립한다. 일반적으로 등호가 성립할 필요는 없다.
 
 ::: 정의 3
 Ring $A$의 두 two-sided ideal $\mathfrak{a},\mathfrak{b}$가 $\mathfrak{a}+\mathfrak{b}=A$를 만족할 때 *comaximal<sub>공최대</sub>*이라 부른다. 여러 ideal $\mathfrak{a}_1,\ldots,\mathfrak{a}_n$이 *pairwise comaximal<sub>쌍마다 공최대</sub>*이라 함은 모든 $i\ne j$에 대하여 $\mathfrak{a}_i+\mathfrak{a}_j=A$임을 뜻한다.
@@ -92,7 +92,7 @@ $$A=\mathfrak{a}+\mathfrak{b}_1\cdots \mathfrak{b}_n=\mathfrak{a}+(\mathfrak{b}_
 이 성립한다. 
 :::
 ::: 증명
-어차피 $\mathfrak{b}_1\cdots \mathfrak{b}_n\subset \mathfrak{b}_1\cap \cdots\cap \mathfrak{b}_n$이므로 등식 $A=\mathfrak{a}+\mathfrak{b}_1\cdots \mathfrak{b}_n$만 보이면 충분하다. 또, 귀납적으로 증명이 가능하므로 $n=2$인 경우만 생각하면 충분하다. 즉 $A=\mathfrak{a}+\mathfrak{b}_1=\mathfrak{a}+\mathfrak{b}_2$라 하고, $A=\mathfrak{a}+\mathfrak{b}_1 \mathfrak{b}_2$임을 보이자. 
+어차피 $\mathfrak{b}_1\cdots \mathfrak{b}_n\subseteq \mathfrak{b}_1\cap \cdots\cap \mathfrak{b}_n$이므로 등식 $A=\mathfrak{a}+\mathfrak{b}_1\cdots \mathfrak{b}_n$만 보이면 충분하다. 또, 귀납적으로 증명이 가능하므로 $n=2$인 경우만 생각하면 충분하다. 즉 $A=\mathfrak{a}+\mathfrak{b}_1=\mathfrak{a}+\mathfrak{b}_2$라 하고, $A=\mathfrak{a}+\mathfrak{b}_1 \mathfrak{b}_2$임을 보이자. 
 
 우선 $A=\mathfrak{a}+\mathfrak{b}_1=\mathfrak{a}+\mathfrak{b}_2$로부터, $1=a+b_1=a'+b_2$를 만족하는 $a,a'\in \mathfrak{a}, b_i\in \mathfrak{b}_i$를 택할 수 있다. 그럼
 
@@ -176,11 +176,11 @@ $$A/\mathfrak{a}_1\cdots \mathfrak{a}_n\cong\prod_{i=1}^n A/\mathfrak{a}_i$$
 한편, [명제 6](#prop6)의 isomorphism $A\cong\prod A/\mathfrak{a}_i$는 ring $A$가 더 작은 ring들의 곱으로 쪼개진다는 강한 사실로, 이는 다음의 동치명제를 통해 깔끔하게 표현할 수 있다. 
 
 ::: 명제 7
-Ring $A$와 그 center $C(A)$, 그리고 two-sided ideal들 $\mathfrak{a}_1,\ldots, \mathfrak{a}_n$이 주어졌다 하자. 다음이 모두 동치이다.
+Ring $A$와 그 center $Z(A)$, 그리고 two-sided ideal들 $\mathfrak{a}_1,\ldots, \mathfrak{a}_n$이 주어졌다 하자. 다음이 모두 동치이다.
 
 1. 위에서 정의한 $\pi:A \rightarrow \prod A/\mathfrak{a}_i$가 isomorphism이다.
 2. 모든 $i\neq j$에 대하여 $\mathfrak{a}_i+\mathfrak{a}_j=A$이고 $\bigcap \mathfrak{a}_i=0$이다.
-3. $C(A)$의 원소들 $e_1,\ldots, e_n$이 존재하여 $\sum e_i=1$이며, 모든 $i$에 대하여 $e_i^2=e_i$, 모든 $i\neq j$에 대하여 $e_ie_j=0$이 성립하고, 모든 $i$에 대해 $\mathfrak{a}_i=A(1-e_i)$이다.
+3. $Z(A)$의 원소들 $e_1,\ldots, e_n$이 존재하여 $\sum e_i=1$이며, 모든 $i$에 대하여 $e_i^2=e_i$, 모든 $i\neq j$에 대하여 $e_ie_j=0$이 성립하고, 모든 $i$에 대해 $\mathfrak{a}_i=A(1-e_i)$이다.
 :::
 ::: 증명
 우선 처음 두 조건이 동치임은 [명제 6](#prop6)의 결과이다. 이제 둘째 조건을 가정하고 셋째 조건을 보이자. [명제 6](#prop6) 증명에서 힌트를 얻어, $\prod A/\mathfrak{a}_i$에서 $i$번째 성분만 $1+\mathfrak{a}_i$이고 나머지는 모두 $0$인 원소를 $\bar{e}_i$라 하자. 그럼 
@@ -193,7 +193,7 @@ $$\sum\bar{e}_i=\bar{1},\qquad \bar{e}_i^2=\bar{e}_i,\qquad \bar{e}_i\bar{e}_j=0
 
 $$a=a\cdot 1=a\sum_i e_i=\sum_i ae_i$$
 
-이고, 만일 $x\in Ae_i\cap\sum_{j\neq i}Ae_j$라면 $x$는 $ae_i$꼴인 동시에 $\sum_{j\neq i} a_j e_j$ 꼴이며, 이를 만족할 수 있는 $x$는 $0$뿐이므로 이것이 direct sum을 준다는 것에서 얻어진다. 이제 $e_i\in C(A)$이므로 각 $Ae_i$는 항등원 $e_i$를 갖는 ring이며, morphism 
+이고, 만일 $x\in Ae_i\cap\sum_{j\neq i}Ae_j$라면 $x$는 $ae_i$꼴인 동시에 $\sum_{j\neq i} a_j e_j$ 꼴이며, 이를 만족할 수 있는 $x$는 $0$뿐이므로 이것이 direct sum을 준다는 것에서 얻어진다. 이제 $e_i\in Z(A)$이므로 각 $Ae_i$는 항등원 $e_i$를 갖는 ring이며, morphism 
 
 $$A\rightarrow Ae_i;\qquad a\mapsto ae_i$$
 

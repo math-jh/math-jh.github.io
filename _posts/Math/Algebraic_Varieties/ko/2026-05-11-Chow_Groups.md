@@ -23,15 +23,15 @@ Variety $X$의 *algebraic $k$-cycle<sub>대수적 $k$-순환</sub>*은 $X$의 $k
 
 $$Z = \sum_{i} n_i V_i$$
 
-이다. 여기서 $V_i \subset X$는 $k$-dimensional closed irreducible subvariety이고 $n_i \in \mathbb{Z}$이다. $k$-cycle들이 이루는 free abelian group을 $Z_k(X)$로 표기한다.
+이다. 여기서 $V_i \subseteq X$는 $k$-dimensional closed irreducible subvariety이고 $n_i \in \mathbb{Z}$이다. $k$-cycle들이 이루는 free abelian group을 $Z_k(X)$로 표기한다.
 :::
 
 그 정의에 의해 algebraic $k$-cycle은 homology에 가까운 것이다. 만일 이를 (duality를 통해) cohomology의 관점에서 해석해야 할 일이 있을 때에는 *codimension $k$ cycle<sub>여차원 $k$ 순환</sub>*을 $Z^k(X) = Z_{n-k}(X)$ (단 $n = \dim X$)로 표기한다. 위에서 언급한 것과 같이 Chow group은 이들 $Z_k(X)$에 특정한 equivalence를 취하여 얻어지는 것이다. 
 
 ::: 정의 2
-Variety $X$의 $(k+1)$-dimensional closed irreducible subvariety $Y \subset X$ 위의 rational function $f \in \mathbb{K}(Y)^\ast$에 대해 *principal cycle<sub>주순환</sub>* $\divisor(f) \in Z_k(X)$를 다음의 식
+Variety $X$의 $(k+1)$-dimensional closed irreducible subvariety $Y \subseteq X$ 위의 rational function $f \in \mathbb{K}(Y)^\times$에 대해 *principal cycle<sub>주순환</sub>* $\divisor(f) \in Z_k(X)$를 다음의 식
 
-$$\divisor(f) = \sum_{V \subset Y, \dim V = k} v_V(f) \cdot V$$
+$$\divisor(f) = \sum_{V \subseteq Y, \dim V = k} v_V(f) \cdot V$$
 
 으로 정의한다. 여기서 $v_V(f)$는 $f$의 $V$에서의 valuation이다. 
 :::
@@ -77,7 +77,7 @@ $$\deg(V/f(V))=\begin{cases}[\mathbb{K}(V):\mathbb{K}(f(V))]&\text{if $\dim f(V)
 으로 적으면, 다음이 성립한다.
 
 ::: 명제 6
-Proper morphism $f: X \rightarrow Y$에 대해 pushforward $f_\ast: \CH_k(X) \rightarrow \CH_k(Y)$가 존재한다. 특히, 임의의 subvariety $V\subset X$에 대하여, 
+Proper morphism $f: X \rightarrow Y$에 대해 pushforward $f_\ast: \CH_k(X) \rightarrow \CH_k(Y)$가 존재한다. 특히, 임의의 subvariety $V\subseteq X$에 대하여, 
 
 $$f_\ast[V]=\deg(V/f(V))[f(V)]$$
 
@@ -89,19 +89,19 @@ $$f_\ast[V]=\deg(V/f(V))[f(V)]$$
 이제 우리는 pullback을 살펴본다. 이는 homology convention보다는 cohomology convention에 가까운 것이므로, 우리는 codimension $k$ Chow group을 생각한다. Pullback $f^\ast: \CH^k(Y)\rightarrow \CH^k(X)$는 직관적으로 target $Y$의 cycle을 받은 후, 이를 fiber 방향으로 늘려주어 source에서의 cycle을 주는 것으로 생각할 수 있다. 그럼 이것이 잘 정의되기 위해서는 $Y$의 각 점에 대한 fiber의 차원이 일정하고, 또 $Y$의 각 점을 parameter로 볼 때, 이 parameter에 따라 fiber의 구조가 갑작스레 바뀌지 않아야 한다. *Flat morphism*이 바로 이러한 성질을 반영하는 morphism으로, 이러한 경우에 우리는 다음의 명제를 얻는다. 
 
 ::: 명제 7
-Flat morphism $f: X \rightarrow Y$에 대해 pullback $f^\ast: \CH^k(Y) \rightarrow \CH^k(X)$가 존재한다. Subvariety $V \subset Y$에 대해 $f^\ast[V] = [f^{-1}(V)]$이다.
+Flat morphism $f: X \rightarrow Y$에 대해 pullback $f^\ast: \CH^k(Y) \rightarrow \CH^k(X)$가 존재한다. Subvariety $V \subseteq Y$에 대해 $f^\ast[V] = [f^{-1}(V)]$이다.
 :::
 
 ## 저우 군의 계산
 
-우리는 지금까지 두 가지 종류의 functoriality를 살펴 보았는데, 이들을 함께 사용하면 Chow group의 구조를 더 잘 이해할 수 있다. 예를 들어 $Z \subset X$를 closed subvariety라 하고 $U = X \setminus Z$라 하자. 그럼 $i: Z \hookrightarrow X$는 closed embedding이므로 proper morphism이고, 따라서 pushforward $i_\ast$가 정의된다. 한편 $j: U \hookrightarrow X$는 open embedding이므로 flat morphism이고, 따라서 pullback $j^\ast$가 정의된다. 
+우리는 지금까지 두 가지 종류의 functoriality를 살펴 보았는데, 이들을 함께 사용하면 Chow group의 구조를 더 잘 이해할 수 있다. 예를 들어 $Z \subseteq X$를 closed subvariety라 하고 $U = X \setminus Z$라 하자. 그럼 $i: Z \hookrightarrow X$는 closed embedding이므로 proper morphism이고, 따라서 pushforward $i_\ast$가 정의된다. 한편 $j: U \hookrightarrow X$는 open embedding이므로 flat morphism이고, 따라서 pullback $j^\ast$가 정의된다. 
 
 여기서 한 가지 짚고 넘어갈 것은, 원래 pullback $j^\ast$는 cohomology convention $\CH^k$에 대해 정의되는 contravariant 연산이다. 그러나 open embedding의 경우에는 $U$가 $X$와 같은 차원을 가지므로, $k$-dimensional cycle을 그대로 $U$로 제한하는 것이 자연스럽게 정의된다. 
 
 ::: 명제 8 (Localization Exact Sequence)
-$Z \subset X$가 closed subvariety이고 $U = X \setminus Z$이면, 다음의 exact sequence가 성립한다:
+$Z \subseteq X$가 closed subvariety이고 $U = X \setminus Z$이면, 다음의 exact sequence가 성립한다:
 
-$$\operatorname{CH}_k(Z) \xrightarrow{i_\ast} \operatorname{CH}_k(X) \xrightarrow{j^\ast} \operatorname{CH}_k(U) \rightarrow 0$$
+$$\CH_k(Z) \xrightarrow{i_\ast} \CH_k(X) \xrightarrow{j^\ast} \CH_k(U) \rightarrow 0$$
 
 여기서 $i: Z \hookrightarrow X$는 closed embedding이고 $j: U \hookrightarrow X$는 open embedding이다.
 :::
@@ -122,7 +122,7 @@ $$\CH_k(\mathbb{P}^n)=\mathbb{Z}\qquad\text{for all $0\leq k\leq n$}$$
 이 성립한다. 이는 Euclidean space와 projective space의 homology와 일치하는 결과로, 우리가 정의한 Chow group이 실제로 기하적 직관을 잘 반영함을 보여준다. 
 :::
 
-일반적으로 $n$-dimensional variety $X$에 대하여 $\CH_n(X) \cong \mathbb{Z}$이며, 그 generator는 $X$ 자신의 class $[X]$이다. 이는 $X$의 $n$-dimensional closed irreducible subvariety가 [§차원, ⁋명제 9](/ko/math/algebraic_varieties/dimension#prop9)에 의해 $X$ 자신뿐이고, rational equivalence를 정의할 $(n+1)$-dimensional subvariety는 존재하지 않기 때문이다. [예시 9](#ex9)의 계산 가운데 $k = n$인 경우가 여기에 해당한다. 한편 $k < n$에 대하여 $\CH_k(\mathbb{P}^n)$의 generator는 $k$-dimensional linear subspace $\ell_k = \mathbb{P}^k \subset \mathbb{P}^n$의 class $[\ell_k]$이며, 임의의 $k$-dimensional closed irreducible subvariety $V \subset \mathbb{P}^n$는 적당한 양의 정수 $d$에 대하여 $[V] = d[\ell_k]$를 만족한다. 이 정수 $d$는 $V$와 일반적인 위치에 있는 $(n-k)$-dimensional linear subspace가 만나는 점의 개수로, 이를 $V$의 *degree*라 부른다.
+일반적으로 $n$-dimensional variety $X$에 대하여 $\CH_n(X) \cong \mathbb{Z}$이며, 그 generator는 $X$ 자신의 class $[X]$이다. 이는 $X$의 $n$-dimensional closed irreducible subvariety가 [§차원, ⁋명제 9](/ko/math/algebraic_varieties/dimension#prop9)에 의해 $X$ 자신뿐이고, rational equivalence를 정의할 $(n+1)$-dimensional subvariety는 존재하지 않기 때문이다. [예시 9](#ex9)의 계산 가운데 $k = n$인 경우가 여기에 해당한다. 한편 $k < n$에 대하여 $\CH_k(\mathbb{P}^n)$의 generator는 $k$-dimensional linear subspace $\ell_k = \mathbb{P}^k \subseteq \mathbb{P}^n$의 class $[\ell_k]$이며, 임의의 $k$-dimensional closed irreducible subvariety $V \subseteq \mathbb{P}^n$는 적당한 양의 정수 $d$에 대하여 $[V] = d[\ell_k]$를 만족한다. 이 정수 $d$는 $V$와 일반적인 위치에 있는 $(n-k)$-dimensional linear subspace가 만나는 점의 개수로, 이를 $V$의 *degree*라 부른다.
 
 ::: 예시 10
 위의 예시를 더 직관적으로 보기 위해 degree $d$ morphism $f: \mathbb{P}^1 \rightarrow \mathbb{P}^1$을

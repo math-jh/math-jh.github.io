@@ -22,7 +22,7 @@ published: false
 ## Idempotent
 
 ::: 정의 1
-Ring $A$의 원소 $e\in A$가 $e^2=e$를 만족하면 이를 *idempotent<sub>멱등원</sub>*라 한다. 두 idempotent $e,f$가 $ef=fe=0$을 만족하면 이들이 *orthogonal<sub>직교</sub>*하다고 한다. 또, idempotent $e$가 $A$의 center $C(A)=\{c\in A: cx=xc\text{ for all }x\in A\}$에 속하면 이를 *central idempotent<sub>중심 멱등원</sub>*라 한다.
+Ring $A$의 원소 $e\in A$가 $e^2=e$를 만족하면 이를 *idempotent<sub>멱등원</sub>*라 한다. 두 idempotent $e,f$가 $ef=fe=0$을 만족하면 이들이 *orthogonal<sub>직교</sub>*하다고 한다. 또, idempotent $e$가 $A$의 center $Z(A)=\{c\in A: cx=xc\text{ for all }x\in A\}$에 속하면 이를 *central idempotent<sub>중심 멱등원</sub>*라 한다.
 :::
 
 임의의 ring은 두 idempotent $0$과 $1$을 가지며, 이 둘은 항상 central이다. 이들을 *trivial<sub>자명한</sub>* idempotent이라 부른다. Idempotent $e$가 주어지면 $1-e$ 또한 idempotent인데, 이는
@@ -51,7 +51,7 @@ $$e_i^2=e_i\ (\text{모든 }i),\qquad e_ie_j=0\ (i\neq j),\qquad e_1+\cdots+e_n=
 을 모두 만족하면, $\{e_1,\ldots, e_n\}$을 *orthogonal idempotent의 complete set<sub>완전 직교 멱등원 모임</sub>*이라 한다. 만일 각 $e_i$가 모두 central이면 이를 *central*한 complete set이라 한다.
 :::
 
-조건에서 $i\neq j$일 때 $e_ie_j=0$만을 요구하였으나, 사실 $e_je_i=0$도 자동으로 따라온다. 이는 아래 [명제 4](#prop4)의 증명 과정에서 확인된다. 가장 단순한 complete set은 $n=1$일 때의 $\{1\}$이며, [예시 2](#ex2)의 $\{3,4\}\subset\mathbb{Z}/6\mathbb{Z}$는 $n=2$인 central complete set의 예이다.
+조건에서 $i\neq j$일 때 $e_ie_j=0$만을 요구하였으나, 사실 $e_je_i=0$도 자동으로 따라온다. 이는 아래 [명제 4](#prop4)의 증명 과정에서 확인된다. 가장 단순한 complete set은 $n=1$일 때의 $\{1\}$이며, [예시 2](#ex2)의 $\{3,4\}\subseteq\mathbb{Z}/6\mathbb{Z}$는 $n=2$인 central complete set의 예이다.
 
 하나의 idempotent $e$가 주어지면 $\{e,1-e\}$는 언제나 orthogonal idempotent의 complete set이 된다. 따라서 complete set은 idempotent를 여러 조각으로 분할하는 일반화로 볼 수 있다. 이제 이 분할이 ring을 어떻게 쪼개는지 살펴본다.
 

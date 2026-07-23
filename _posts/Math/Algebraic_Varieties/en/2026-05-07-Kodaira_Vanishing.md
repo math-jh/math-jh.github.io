@@ -162,7 +162,7 @@ $$H^0(X, \mathcal{L}^{\otimes m}) \longrightarrow H^0(Z, \mathcal{L}^{\otimes m}
 
 If $H^1(X, \mathcal{I}_Z \otimes \mathcal{L}^{\otimes m}) = 0$, then the evaluation map becomes surjective, and we see that separation of points holds.
 
-Likewise, for (2), consider the first infinitesimal neighborhood of the point $p$, $\operatorname{Spec}(\mathcal{O}_{X,p}/\mathfrak{m}_p^2)$, and let $\mathcal{I}_p$ be the ideal sheaf of $p$. From the short exact sequence
+Likewise, for (2), consider the first infinitesimal neighborhood of the point $p$, $\Spec(\mathcal{O}_{X,p}/\mathfrak{m}_p^2)$, and let $\mathcal{I}_p$ be the ideal sheaf of $p$. From the short exact sequence
 
 $$0 \longrightarrow \mathcal{I}_p^2 \otimes \mathcal{L}^{\otimes m} \longrightarrow \mathcal{L}^{\otimes m} \longrightarrow \mathcal{L}^{\otimes m} \otimes (\mathcal{O}_X / \mathcal{I}_p^2) \longrightarrow 0$$
 

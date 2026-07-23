@@ -52,7 +52,7 @@ $$\graph(f)=\{(x,y)\in M\times N\mid x\in U, y=f(x)\}$$
 이제 우리는 유클리드 공간에서의 역함수 정리와 음함수 정리를 각각 manifold의 단계로 가져올 것이다. 우선 유클리드 공간에서의 역함수 정리는 다음과 같다.
 
 ::: 정리 4 (역함수 정리)
-$U\subset\mathbb{R}^m$이 열린집합이라 하고, $f:U\rightarrow\mathbb{R}^m$이 $C^\infty$ 함수라 하자. 임의의 점 $p_0\in U$에서 다음의 Jacobian matrix
+$U\subseteq\mathbb{R}^m$이 열린집합이라 하고, $f:U\rightarrow\mathbb{R}^m$이 $C^\infty$ 함수라 하자. 임의의 점 $p_0\in U$에서 다음의 Jacobian matrix
 
 $$\begin{pmatrix}\partial(r^1\circ f)/\partial r^1&\partial(r^1\circ f)/\partial r^2&\cdots&\partial(r^1\circ f)/\partial r^m\\\partial(r^2\circ f)/\partial r^1&\partial(r^2\circ f)/\partial r^2&\cdots&\partial(r^2\circ f)/\partial r^m\\\vdots&\vdots&\ddots&\vdots\\\partial(r^m\circ f)/\partial r^1&\partial(r^m\circ f)/\partial r^2&\cdots&\partial(r^m\circ f)/\partial r^m\end{pmatrix}$$
 
@@ -67,7 +67,7 @@ $F:M\rightarrow N$이 manifold들 사이의 $C^\infty$ 함수이고 $p\in M$이�
 ::: 증명
 우선 $dF_p$가 isomorphism인 것으로부터 $\dim M=\dim T_pM=\dim T_{F(p)}N=\dim N$을 얻는다. 이제 점 $F(p)$를 포함하는 coordinate system $(W,\tau)$를 잡고, $F(V)\subseteq W$를 만족하도록 $p$를 포함하는 coordinate system $(V,\varphi)$를 잡자. 그럼 함수 $(\tau\circ F\circ\varphi^{-1})\vert_{\varphi(V)}$는 같은 차원을 갖는 유클리드 공간 사이의 함수이며, 또 $dF_p$가 isomorphism인 것으로부터 이 함수의 점 $\varphi(p)$에서의 Jacobian matrix가 nonsingular라는 것을 안다. 
 
-따라서 역함수정리에 의해, $\varphi(p)\in U'\subset\varphi(V)$를 만족하는 열린집합 $U'$가 존재하여 $(\tau\circ F\circ\varphi^{-1})\vert_{U'}$이 $U'$와 $\tau\circ F\circ\varphi^{-1}(U')$ 사이의 diffeomorphism을 정의한다. 이제 $U=\varphi^{-1}(U')$로 잡으면 함수
+따라서 역함수정리에 의해, $\varphi(p)\in U'\subseteq\varphi(V)$를 만족하는 열린집합 $U'$가 존재하여 $(\tau\circ F\circ\varphi^{-1})\vert_{U'}$이 $U'$와 $\tau\circ F\circ\varphi^{-1}(U')$ 사이의 diffeomorphism을 정의한다. 이제 $U=\varphi^{-1}(U')$로 잡으면 함수
 
 $$\tau^{-1}\circ\bigl((\tau\circ F\circ\varphi^{-1})\vert_{U'}\bigr)\circ\varphi$$
 

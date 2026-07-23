@@ -77,28 +77,28 @@ $$\Hom(u,A):\Hom_{\lMod{A}}(N,A)\rightarrow\Hom_{\lMod{A}}(M,A)$$
 is compatible with the right action of $A$. That is, $\Hom(u,A)$ is a right $A$-module homomorphism.
 
 ::: Definition 4
-For an $A$-linear map $u:M \rightarrow N$ between left $A$-modules, the right $A$-module homomorphism defined above is called the *transpose* of $u$, and is denoted by $u^\ast$.
+For an $A$-linear map $u:M \rightarrow N$ between left $A$-modules, the right $A$-module homomorphism defined above is called the *transpose* of $u$, and is denoted by $u^t$.
 :::
 
-$u^\ast$ is determined by its values $u^\ast(\xi)\in M^\ast$ at any $\xi\in N^\ast$, and in turn each $u^\ast(\xi)\in M^\ast$ is determined by its values at any $x\in M$
+$u^t$ is determined by its values $u^t(\xi)\in M^\ast$ at any $\xi\in N^\ast$, and in turn each $u^t(\xi)\in M^\ast$ is determined by its values at any $x\in M$
 
-$$u^\ast(\xi)(x)=\langle x, u^\ast(\xi)\rangle$$
+$$u^t(\xi)(x)=\langle x, u^t(\xi)\rangle$$
 
-By definition of $u^\ast=\Hom(u,A)$, we have $u^\ast(\xi)=\xi\circ u$. Thus the above formula can be written as
+By definition of $u^t=\Hom(u,A)$, we have $u^t(\xi)=\xi\circ u$. Thus the above formula can be written as
 
-$$\langle u(x),\xi\rangle=\langle x, u^\ast\xi\rangle$$
+$$\langle u(x),\xi\rangle=\langle x, u^t\xi\rangle$$
 
-and conversely, if this formula holds for all $x\in M$ and all $\xi\in N^\ast$, then $u^\ast$ is uniquely determined.
+and conversely, if this formula holds for all $x\in M$ and all $\xi\in N^\ast$, then $u^t$ is uniquely determined.
 
 Moreover, by the functoriality of $\Hom(-,A)$ and [[Algebraic Structures] §Modules, ⁋Proposition 8](/en/math/algebraic_structures/modules#prop8), we obtain the following proposition.
 
 ::: Proposition 5
 The following hold.
 
-1. For any two $A$-linear maps $u,v:M \rightarrow N$, we have $(u+v)^\ast=u^\ast+v^\ast$.
-2. For any two $A$-linear maps $u:M \rightarrow N$ and $v:N \rightarrow L$, we have $(v\circ u)^\ast=u^\ast\circ v^\ast$.
-3. For any $M$, we have $(\id_M)^\ast=\id_{M^\ast}$.
-4. For any $A$-linear isomorphism $u:M \rightarrow N$, we have $(u^{-1})^\ast=(u^\ast)^{-1}$. 
+1. For any two $A$-linear maps $u,v:M \rightarrow N$, we have $(u+v)^t=u^t+v^t$.
+2. For any two $A$-linear maps $u:M \rightarrow N$ and $v:N \rightarrow L$, we have $(v\circ u)^t=u^t\circ v^t$.
+3. For any $M$, we have $(\id_M)^t=\id_{M^\ast}$.
+4. For any $A$-linear isomorphism $u:M \rightarrow N$, we have $(u^{-1})^t=(u^t)^{-1}$. 
 :::
 
 ## Dual Basis
@@ -109,9 +109,9 @@ $$\varepsilon: A^{\oplus I} \rightarrow M$$
 
 Taking the dual of this isomorphism yields an isomorphism of right $A$-modules
 
-$$\varepsilon^\ast: M^\ast \rightarrow (A_l^{\oplus I})^\ast=\Hom_{\lMod{A}}(A_l^{\oplus I}, A_l)\cong \prod_{i\in I}\left(\Hom_\lMod{A}(A_l,A_l)\right)\cong \prod_{i\in I} A_r$$
+$$\varepsilon^t: M^\ast \rightarrow (A_l^{\oplus I})^\ast=\Hom_{\lMod{A}}(A_l^{\oplus I}, A_l)\cong \prod_{i\in I}\left(\Hom_\lMod{A}(A_l,A_l)\right)\cong \prod_{i\in I} A_r$$
 
-Now consider the elements on the right-hand side whose $i$th component is $1$ and whose remaining components are $0$, and denote the preimage of each such element under $\varepsilon^\ast$ by $e_i^\ast$. Then we see that the formula
+Now consider the elements on the right-hand side whose $i$th component is $1$ and whose remaining components are $0$, and denote the preimage of each such element under $\varepsilon^t$ by $e_i^\ast$. Then we see that the formula
 
 $$\langle e_i, e_j^\ast\rangle=\delta_{ij}$$
 

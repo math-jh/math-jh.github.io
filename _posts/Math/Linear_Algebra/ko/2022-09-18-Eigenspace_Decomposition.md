@@ -282,15 +282,15 @@ $$A-I=\begin{pmatrix}0&1&1\\0&0&1\\0&0&0\end{pmatrix}$$
 위와 같은 상황에서, $\ker L\cap \im L=\{0\}$인 것은 $\ker L^2=\ker L$인 것과 동치이다. 
 :::
 ::: 증명
-약간의 생각을 통해, $\ker L^2=\ker L$은 $\ker L^2\subset \ker L$과 동치임을 안다. 따라서 보여야 할 것은 다음의 동치관계
+약간의 생각을 통해, $\ker L^2=\ker L$은 $\ker L^2\subseteq \ker L$과 동치임을 안다. 따라서 보여야 할 것은 다음의 동치관계
 
-$$\ker L\cap \im L=\{0\}\iff \ker L^2\subset\ker L$$
+$$\ker L\cap \im L=\{0\}\iff \ker L^2\subseteq\ker L$$
 
 이다. 
 
-우선 $\ker L\cap \im L=\{0\}$이라 하고 $v\in\ker L^2$이라 하자. 그럼 $0=L^2 v=L(Lv)$이므로 $Lv\in\ker L$이고, 따라서 가정에 의해 $Lv=0$이어야 한다. 즉 $v\in\ker L$이다. 거꾸로 $\ker L^2\subset \ker L$라 가정하고 $v\in \ker L\cap \im L$이라 하자. 그럼 $v\in \im L$이므로 $v=Lw$를 만족하는 $w\in V$가 존재한다. 그런데 $v\in\ker L$이기도 하므로,
+우선 $\ker L\cap \im L=\{0\}$이라 하고 $v\in\ker L^2$이라 하자. 그럼 $0=L^2 v=L(Lv)$이므로 $Lv\in\ker L$이고, 따라서 가정에 의해 $Lv=0$이어야 한다. 즉 $v\in\ker L$이다. 거꾸로 $\ker L^2\subseteq \ker L$라 가정하고 $v\in \ker L\cap \im L$이라 하자. 그럼 $v\in \im L$이므로 $v=Lw$를 만족하는 $w\in V$가 존재한다. 그런데 $v\in\ker L$이기도 하므로,
 
-$$0=Lv=L(Lw)=L^2w\implies w\in\ker(L^2)\subset \ker L$$
+$$0=Lv=L(Lw)=L^2w\implies w\in\ker(L^2)\subseteq \ker L$$
 
 이므로 $w\in \ker L$이다. 즉, $v=Lw=0$이다. 
 :::

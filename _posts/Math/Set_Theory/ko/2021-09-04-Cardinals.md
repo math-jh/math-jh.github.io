@@ -90,7 +90,7 @@ Cardinal들 간의 관계
 ::: 증명
 두 cardinal $\mathfrak{a}$와 $\mathfrak{b}$에 대해 $\mathfrak{a}\leq\mathfrak{b}$이고 $\mathfrak{b}\leq\mathfrak{a}$라 가정하자.  
 
-만일 $\mathfrak{a}$에서 $\mathfrak{b}$의 부분집합으로의 전단사함수를 $i$라 하면 $i(\mathfrak{a})\subset\mathfrak{b}$이고 $\mathfrak{a}$와 $i(\mathfrak{a})$은 equipotent하다. 따라서 $i(\mathfrak{a})$와 $\mathfrak{b}$ 사이의 전단사함수가 존재함을 보이면 충분하다.  
+만일 $\mathfrak{a}$에서 $\mathfrak{b}$의 부분집합으로의 전단사함수를 $i$라 하면 $i(\mathfrak{a})\subseteq\mathfrak{b}$이고 $\mathfrak{a}$와 $i(\mathfrak{a})$은 equipotent하다. 따라서 $i(\mathfrak{a})$와 $\mathfrak{b}$ 사이의 전단사함수가 존재함을 보이면 충분하다.  
 $\mathfrak{b}\leq\mathfrak{a}$이므로, $\mathfrak{b}$에서 $\mathfrak{a}$의 부분집합으로의 전단사함수가 존재하고, 이는 $\mathfrak{b}$에서 $\mathfrak{a}$로의 단사함수로 볼 수 있다. 힌퍈. $\mathfrak{a}$는 $i(\mathfrak{a})$와 equipotent하므로, 이 둘 사이의 전단사함수를 앞선 단사함수와 합성하면 $\mathfrak{b}$에서 $i(\mathfrak{a})$로의 단사함수를 얻는다. 이를 $f$라 하자. 이제 $C_0=\mathfrak{b}\setminus i(\mathfrak{a})$라 하고, 귀납적으로 $C_{n+1}=f(C_n)$으로 정의하고 $C=\bigcup C_n$이라 하자. 우리는 $h:\mathfrak{b}\rightarrow i(\mathfrak{a})$를 다음의 식 
 
 $$h(x)=\begin{cases} f(x)&x\in C\\ x&x\not\in C\end{cases}$$
@@ -114,9 +114,9 @@ Cardinal들을 모아둔 임의의 집합 $A$는 least element를 갖는다.
 집합 $A=\bigcup_{\mathfrak{a}\in E}\mathfrak{a}$를 생각하자. 그럼 임의의 cardinal $\mathfrak{a}\in E$는 $A$의 부분집합이다.
 
 Well-ordering principle에 의하여 이 집합 위에 well-order가 존재한다. 이를 $\leq$라 하자. 또, $A$의 임의의 부분집합은 $A$의 segment와 equipotent하다 (Review의 [명제](#prop-0)). 따라서 임의의 cardinal $\mathfrak{a}$에 대하여, 이와 equipotent한 $A$의 segment들의 집합은 공집합이 아니며, 따라서 $A^\ast$의 well-orderedness에 의하여 least element가 존재한다. 이 원소를 $\varphi(\mathfrak{a})$라 하자.  
-만일 우리가 $\mathfrak{a}\leq\mathfrak{b}$가 $\varphi(\mathfrak{a})\subset\varphi(\mathfrak{b})$와 동치임을 보인다면, $A$의 well-orderedness로부터 증명이 완료될 것이다. 
+만일 우리가 $\mathfrak{a}\leq\mathfrak{b}$가 $\varphi(\mathfrak{a})\subseteq\varphi(\mathfrak{b})$와 동치임을 보인다면, $A$의 well-orderedness로부터 증명이 완료될 것이다. 
 
-우선 나중의 조건이 첫번째 조건을 imply하는 것은 자명하다. 반대로 만일 $\mathfrak{a}\leq\mathfrak{b}$라면, 즉 $\mathfrak{a}$가 $\mathfrak{b}=\varphi(\mathfrak{b})$ (등호는 cardinal로써 성립) 의 부분집합과 equipotent하다고 가정하자. 만일 $\varphi(\mathfrak{b})\subset\varphi(\mathfrak{a})$이고 $\varphi(\mathfrak{a})\neq\varphi(\mathfrak{b})$라면, $\varphi(\mathfrak{b})$의 어떤 segment가 존재하여 $\mathfrak{a}$와 equipotent한 segment를 가질 것이고, 이는 $\varphi(\mathfrak{b})$의 정의에 모순이므로 두 조건은 동치이다.
+우선 나중의 조건이 첫번째 조건을 imply하는 것은 자명하다. 반대로 만일 $\mathfrak{a}\leq\mathfrak{b}$라면, 즉 $\mathfrak{a}$가 $\mathfrak{b}=\varphi(\mathfrak{b})$ (등호는 cardinal로써 성립) 의 부분집합과 equipotent하다고 가정하자. 만일 $\varphi(\mathfrak{b})\subseteq\varphi(\mathfrak{a})$이고 $\varphi(\mathfrak{a})\neq\varphi(\mathfrak{b})$라면, $\varphi(\mathfrak{b})$의 어떤 segment가 존재하여 $\mathfrak{a}$와 equipotent한 segment를 가질 것이고, 이는 $\varphi(\mathfrak{b})$의 정의에 모순이므로 두 조건은 동치이다.
 :::
 
 ---

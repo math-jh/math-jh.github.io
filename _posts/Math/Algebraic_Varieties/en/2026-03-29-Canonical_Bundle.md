@@ -134,9 +134,9 @@ Since we use [§Line Bundles and Vector Bundles, ⁋Proposition 19](/en/math/alg
 
 As in previous posts, the most familiar example for us is that of $\mathbb{P}^n$. Intuitively, if we unpack the quotient
 
-$$\mathbb{P}^n=(\mathbb{A}^{n+1}\setminus\{0\})/\mathbb{K}^\ast$$
+$$\mathbb{P}^n=(\mathbb{A}^{n+1}\setminus\{0\})/\mathbb{K}^\times$$
 
-defining $\mathbb{P}^n$, the $\mathbb{K}^\ast$-action is the action in the direction radiating from the origin, that is, the direction defined by the Euler vector field, and from the perspective of $\mathbb{P}^n$ this is merely a trivial line bundle. Then the tangent space of $\mathbb{P}^n$ corresponds to the remaining part after quotienting the directions of $\mathbb{A}^{n+1}$, that is, the linear forms, by this trivial line bundle. That is, the following short exact sequence corresponding to the tangent bundle
+defining $\mathbb{P}^n$, the $\mathbb{K}^\times$-action is the action in the direction radiating from the origin, that is, the direction defined by the Euler vector field, and from the perspective of $\mathbb{P}^n$ this is merely a trivial line bundle. Then the tangent space of $\mathbb{P}^n$ corresponds to the remaining part after quotienting the directions of $\mathbb{A}^{n+1}$, that is, the linear forms, by this trivial line bundle. That is, the following short exact sequence corresponding to the tangent bundle
 
 $$0 \rightarrow \mathcal{O}_{\mathbb{P}^{n}}\rightarrow \mathcal{O}_{\mathbb{P}^n}(1)^{\oplus (n+1)}\rightarrow T_{\mathbb{P}^n}\rightarrow 0$$
 
@@ -215,7 +215,7 @@ From this, the claim for the canonical divisor also follows immediately. In any 
 The following example shows a concrete calculation using this. 
 
 ::: Example 10
-Let $C \subset \mathbb{P}^2$ be a smooth curve of degree $d$. By the adjunction formula,
+Let $C \subseteq \mathbb{P}^2$ be a smooth curve of degree $d$. By the adjunction formula,
 
 $$\omega_C \cong \omega_{\mathbb{P}^2}\vert_C \otimes \mathcal{O}_{\mathbb{P}^2}(C)\vert_C \cong \mathcal{O}_{\mathbb{P}^2}(-3)\vert_C \otimes \mathcal{O}_{\mathbb{P}^2}(d)\vert_C \cong \mathcal{O}_C(d-3)$$
 
@@ -312,7 +312,7 @@ To do this, restricting the above formula to $E$ gives
 
 $$K_{\widetilde{X}}\vert_E = (\pi^\ast K_X)\vert_E + aE\vert_E$$
 
-Here $(\pi^\ast K_X)\vert_E = \pi_E^\ast(K_X\vert_Z)$, and by the adjunction formula for $Z \subset X$,
+Here $(\pi^\ast K_X)\vert_E = \pi_E^\ast(K_X\vert_Z)$, and by the adjunction formula for $Z \subseteq X$,
 
 $$K_X\vert_Z = K_Z \otimes \det(\mathcal{N}_{Z/X})^{-1}$$
 

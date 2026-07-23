@@ -199,7 +199,7 @@ $$j_! \mathbb{Z}_U \longrightarrow \mathbb{Z}_{[0,1]} \longrightarrow i_\ast \ma
 에 $R\Gamma([0,1], -)$을 적용한다. $[0,1]$이 가축이므로 $R\Gamma([0,1], \mathbb{Z}) = \mathbb{Z}$ (degree $0$)이고, $R\Gamma([0,1], i_\ast \mathbb{Z}_\partial) = R\Gamma(\partial, \mathbb{Z}) = \mathbb{Z}^2$ (degree $0$)이다. 또 $R\Gamma([0,1], j_! \mathbb{Z}_U) = R\Gamma_c(U, \mathbb{Z})$이다. 따라서 long exact sequence는
 $$0 \rightarrow H^0_c(U) \rightarrow H^0([0,1]) = \mathbb{Z} \xrightarrow{\rho} H^0(\partial) = \mathbb{Z}^2 \rightarrow H^1_c(U) \rightarrow H^1([0,1]) = 0$$
 이 된다. Restriction map $\rho$는 대역적 상수 $a$를 두 끝점에서의 값 $(a, a)$로 보내는 diagonal embedding이므로 단사이고, 그 cokernel은 $\mathbb{Z}^2 / \{(a,a)\} \cong \mathbb{Z}$이다. 그러므로
-$$H^0_c(U, \mathbb{Z}) = \ker \rho = 0, \qquad H^1_c(U, \mathbb{Z}) = \operatorname{coker} \rho \cong \mathbb{Z}$$
+$$H^0_c(U, \mathbb{Z}) = \ker \rho = 0, \qquad H^1_c(U, \mathbb{Z}) = \coker \rho \cong \mathbb{Z}$$
 이고, $R\Gamma_c((0,1), \mathbb{Z}) \cong \mathbb{Z}[-1]$이 degree $1$에 집중된다. 이는 통상적 cohomology가 degree $0$에 있던 것과 정반대이며, $1$차원 (방향지어진) manifold $U$에 대한 Poincaré duality $H^k_c(U) \cong H^{1-k}(U)^\vee$를 그대로 구현한다.
 
 이 계산은 곧바로 일반화된다. $\mathbb{R} \cong (0,1)$이므로 $R\Gamma_c(\mathbb{R}, \mathbb{Z}) \cong \mathbb{Z}[-1]$이고, Künneth 공식에 의해 $R\Gamma_c$가 곱에 대해 tensor로 행동하므로
@@ -213,7 +213,7 @@ $$H^0(\mathbb{P}^1, \mathbb{Z}) = \mathbb{Z}, \qquad H^1(\mathbb{P}^1, \mathbb{Z
 이다. 두 결과는 compactification $\mathbb{P}^1 = \mathbb{A}^1 \cup \{\infty\}$을 통한 recollement triangle로 일관되게 연결된다. Open embedding $j: \mathbb{A}^1 \hookrightarrow \mathbb{P}^1$과 closed embedding $i: \{\infty\} \hookrightarrow \mathbb{P}^1$에 대한 triangle $j_! \mathbb{Z}_{\mathbb{A}^1} \rightarrow \mathbb{Z}_{\mathbb{P}^1} \rightarrow i_\ast \mathbb{Z}_\infty \xrightarrow{+1}$에 $R\Gamma(\mathbb{P}^1, -)$을 적용하면 long exact sequence
 $$0 \rightarrow H^0_c(\mathbb{A}^1) \rightarrow H^0(\mathbb{P}^1) = \mathbb{Z} \xrightarrow{\rho} H^0(\{\infty\}) = \mathbb{Z} \rightarrow H^1_c(\mathbb{A}^1) \rightarrow H^1(\mathbb{P}^1) = 0$$
 $$0 \rightarrow H^2_c(\mathbb{A}^1) \rightarrow H^2(\mathbb{P}^1) = \mathbb{Z} \rightarrow H^2(\{\infty\}) = 0$$
-을 얻는다. 첫 줄의 restriction map $\rho: \mathbb{Z} \rightarrow \mathbb{Z}$는 대역적 상수를 한 점 $\infty$에서의 값으로 보내는 동형이므로 $H^0_c(\mathbb{A}^1) = \ker \rho = 0$, $H^1_c(\mathbb{A}^1) = \operatorname{coker} \rho = 0$이고, 둘째 줄에서 $H^2_c(\mathbb{A}^1) \cong H^2(\mathbb{P}^1) = \mathbb{Z}$이다. 이는 앞서 $\mathbb{R}^2$로부터 얻은 $R\Gamma_c(\mathbb{A}^1, \mathbb{Z}) \cong \mathbb{Z}[-2]$와 정확히 일치한다.
+을 얻는다. 첫 줄의 restriction map $\rho: \mathbb{Z} \rightarrow \mathbb{Z}$는 대역적 상수를 한 점 $\infty$에서의 값으로 보내는 동형이므로 $H^0_c(\mathbb{A}^1) = \ker \rho = 0$, $H^1_c(\mathbb{A}^1) = \coker \rho = 0$이고, 둘째 줄에서 $H^2_c(\mathbb{A}^1) \cong H^2(\mathbb{P}^1) = \mathbb{Z}$이다. 이는 앞서 $\mathbb{R}^2$로부터 얻은 $R\Gamma_c(\mathbb{A}^1, \mathbb{Z}) \cong \mathbb{Z}[-2]$와 정확히 일치한다.
 
 이 대조가 고유 받음의 역할을 선명하게 보여 준다. Compact한 $\mathbb{P}^1$에서는 $Rf_! = Rf_\ast$이어서 두 cohomology가 같지만, 비콤팩트한 $\mathbb{A}^1$에서는 $H^0$이 통상적 cohomology에서는 $\mathbb{Z}$였다가 compactly supported cohomology에서는 $0$으로 사라지고 대신 최고 degree $H^2_c$가 $\mathbb{Z}$로 살아난다. 무한대 점을 추가하는 compactification이 정확히 degree $0$의 대역적 단면을 제거하고 최고 degree의 class를 생성하며, 이 메커니즘이 $Rf_!$과 그 수반 $f^!$을 통해 비콤팩트 공간의 Poincaré–Verdier duality를 떠받친다.
 

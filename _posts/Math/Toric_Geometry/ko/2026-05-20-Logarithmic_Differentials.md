@@ -85,7 +85,7 @@ $T_N = \mathbb{C}^\ast$ ($n=1$)의 경우, $M = \mathbb{Z}$이며 $M$의 generat
 :::
 
 ::: 예시 4
-$T_N = (\mathbb{C}^\ast)^2$의 경우 standard 기저 $\{e_1^\ast, e_2^\ast\} \subset M$에 대해 $\rchi^{e_1^\ast} = \x$, $\rchi^{e_2^\ast} = \y$이며
+$T_N = (\mathbb{C}^\ast)^2$의 경우 standard 기저 $\{e_1^\ast, e_2^\ast\} \subseteq M$에 대해 $\rchi^{e_1^\ast} = \x$, $\rchi^{e_2^\ast} = \y$이며
 
 $$\omega_{T_N} = \frac{d\x}{\x} \wedge \frac{d\y}{\y}$$
 
@@ -101,13 +101,13 @@ $$\frac{d(\x\y)}{\x\y} \wedge \frac{d\y}{\y} = \left(\frac{d\x}{\x} + \frac{d\y}
 지금까지의 form들은 $T_N$ 위에서만 정의되었다. 우리는 이를 toric variety $X_\Sigma$ 전체로 확장하고자 하는데, character $\rchi^m$은 $X_\Sigma$ 위에서 *rational* function일 뿐이므로 ([§토러스 인자와 선다발, ⁋명제 3](/ko/math/toric_geometry/toric_divisors#prop3)) $d\log \rchi^m = d\rchi^m / \rchi^m$ 또한 일반적으로는 boundary $D_\rho$를 따라 pole을 가지는 rational form이 된다. 다행히 character의 logarithmic differential의 pole은 *가장 약한* 종류, 즉 logarithmic pole에 한정되며, 이러한 form 전체를 모은 sheaf가 fan으로부터 깔끔하게 기술된다.
 
 ::: 정의 5
-Smooth variety $X$ 위의 reduced effective divisor $D \subset X$가 *simple normal crossing divisor<sub>단순 정규교차 인자</sub>* (이하 *SNC divisor*)라는 것은, 각 점 $p \in X$ 주위에서 적당한 local coordinate $z_1, \ldots, z_n$을 잡았을 때 $D$의 local equation이 $z_1 \cdots z_k = 0$ ($0 \le k \le n$; $k = 0$인 경우 $D$가 $p$를 지나지 않음)의 형태로 표현되는 것을 말한다. 직관적으로, $D$를 이루는 component들이 각각 smooth이고 좌표평면처럼 transversally 만나는 경우이다.
+Smooth variety $X$ 위의 reduced effective divisor $D \subseteq X$가 *simple normal crossing divisor<sub>단순 정규교차 인자</sub>* (이하 *SNC divisor*)라는 것은, 각 점 $p \in X$ 주위에서 적당한 local coordinate $z_1, \ldots, z_n$을 잡았을 때 $D$의 local equation이 $z_1 \cdots z_k = 0$ ($0 \le k \le n$; $k = 0$인 경우 $D$가 $p$를 지나지 않음)의 형태로 표현되는 것을 말한다. 직관적으로, $D$를 이루는 component들이 각각 smooth이고 좌표평면처럼 transversally 만나는 경우이다.
 :::
 
 먼저 임의의 smooth variety와 SNC divisor에 대해 logarithmic pole만 허용한 form들의 sheaf를 정의한 뒤 (Saito-Deligne의 표준 정의), 이를 toric variety의 toric boundary에 적용한다.
 
 ::: 정의 6
-Smooth variety $X$와 [정의 5](#def5)의 SNC divisor $D \subset X$의 쌍 $(X, D)$에 대해, *logarithmic cotangent sheaf<sub>로그 코탄젠트 층</sub>* $\Omega^1_X(\log D)$는 $D$ 바깥에서 holomorphic이며 $D$를 따라서는 1차 이하의 극만 갖는 rational 1-form들로 이루어진 $\mathcal{O}_X$-module subsheaf이다. 추상적으로 affine open $U \subset X$에 대해
+Smooth variety $X$와 [정의 5](#def5)의 SNC divisor $D \subseteq X$의 쌍 $(X, D)$에 대해, *logarithmic cotangent sheaf<sub>로그 코탄젠트 층</sub>* $\Omega^1_X(\log D)$는 $D$ 바깥에서 holomorphic이며 $D$를 따라서는 1차 이하의 극만 갖는 rational 1-form들로 이루어진 $\mathcal{O}_X$-module subsheaf이다. 추상적으로 affine open $U \subseteq X$에 대해
 
 $$\Omega^1_X(\log D)(U) = \{\omega \in \Omega^1_{\mathbb{C}(X)/\mathbb{C}}(U) \mid \omega \text{와 } d\omega \text{가 } U \text{ 위에서 } D\text{를 따라 1차 이하의 극을 가짐}\}$$
 
@@ -121,7 +121,7 @@ $$\frac{dz_1}{z_1}, \ldots, \frac{dz_k}{z_k}, dz_{k+1}, \ldots, dz_n$$
 [§아핀 토릭 다양체, ⁋명제 9](/ko/math/toric_geometry/affine_toric_varieties#prop9)에서 보았듯 smooth toric variety $X_\Sigma$의 affine chart $U_\sigma$는 적당한 좌표에서 $\mathbb{C}^k \times (\mathbb{C}^\ast)^{n-k}$이고 boundary는 좌표 hyperplane $\{\x_1 = 0\}, \ldots, \{\x_k = 0\}$의 합이므로, smooth toric variety의 toric boundary는 자동으로 [정의 5](#def5)의 SNC divisor이며 [정의 6](#def6)의 logarithmic cotangent sheaf $\Omega^p_{X_\Sigma}(\log D)$가 잘 정의된다.
 
 ::: 정의 7
-Toric variety $X_\Sigma$의 *toric boundary<sub>토릭 경계</sub>* $D \subset X_\Sigma$를
+Toric variety $X_\Sigma$의 *toric boundary<sub>토릭 경계</sub>* $D \subseteq X_\Sigma$를
 
 $$D = X_\Sigma \setminus T_N = \sum_{\rho \in \Sigma(1)} D_\rho$$
 
@@ -138,7 +138,7 @@ $$\Omega^1_{X_\Sigma}(\log D) \cong M \otimes_\mathbb{Z} \mathcal{O}_{X_\Sigma}$
 이 존재한다. 더 구체적으로, character lattice $M$의 원소 $m \in M$을 logarithmic differential $d\log(\rchi^m) = d\rchi^m / \rchi^m$에 대응시키는 map이 위 isomorphism을 정의한다.
 :::
 ::: 증명
-먼저 각 $m \in M$에 대해 $d\log(\rchi^m)$이 $X_\Sigma$ 위의 global section of $\Omega^1_{X_\Sigma}(\log D)$임을 보인다. 이는 local에서 확인하면 충분하다. Smooth cone $\sigma \in \Sigma$에 대해 [§아핀 토릭 다양체, ⁋명제 9](/ko/math/toric_geometry/affine_toric_varieties#prop9)에 의해 $U_\sigma \cong \mathbb{C}^k \times (\mathbb{C}^\ast)^{n-k}$이고, $\sigma$의 ray들의 primitive generator $v_1, \ldots, v_k$를 $N$의 기저의 일부로 잡아 dual 기저 $\{v_1^\ast, \ldots, v_n^\ast\} \subset M$을 만들면 $U_\sigma$의 좌표가 $\x_i = \rchi^{v_i^\ast}$ ($i=1, \ldots, n$)로 주어지며 여기서 $\x_1, \ldots, \x_k$는 $\mathbb{C}$-값 좌표, $\x_{k+1}, \ldots, \x_n$는 $\mathbb{C}^\ast$-값 좌표이다. Boundary $D \cap U_\sigma$는 $\{\x_1 \x_2 \cdots \x_k = 0\}$이며 simple normal crossing이다. 임의의 $m = \sum_i a_i v_i^\ast \in M$에 대해
+먼저 각 $m \in M$에 대해 $d\log(\rchi^m)$이 $X_\Sigma$ 위의 global section of $\Omega^1_{X_\Sigma}(\log D)$임을 보인다. 이는 local에서 확인하면 충분하다. Smooth cone $\sigma \in \Sigma$에 대해 [§아핀 토릭 다양체, ⁋명제 9](/ko/math/toric_geometry/affine_toric_varieties#prop9)에 의해 $U_\sigma \cong \mathbb{C}^k \times (\mathbb{C}^\ast)^{n-k}$이고, $\sigma$의 ray들의 primitive generator $v_1, \ldots, v_k$를 $N$의 기저의 일부로 잡아 dual 기저 $\{v_1^\ast, \ldots, v_n^\ast\} \subseteq M$을 만들면 $U_\sigma$의 좌표가 $\x_i = \rchi^{v_i^\ast}$ ($i=1, \ldots, n$)로 주어지며 여기서 $\x_1, \ldots, \x_k$는 $\mathbb{C}$-값 좌표, $\x_{k+1}, \ldots, \x_n$는 $\mathbb{C}^\ast$-값 좌표이다. Boundary $D \cap U_\sigma$는 $\{\x_1 \x_2 \cdots \x_k = 0\}$이며 simple normal crossing이다. 임의의 $m = \sum_i a_i v_i^\ast \in M$에 대해
 
 $$d\log(\rchi^m) = d\log\!\left(\prod_i \x_i^{a_i}\right) = \sum_{i=1}^n a_i \, \frac{d\x_i}{\x_i}$$
 
@@ -209,7 +209,7 @@ $$\Omega^n_{X_\Sigma}(\log D) \cong \mathcal{O}_{X_\Sigma};\qquad K_{X_\Sigma} =
 ::: 증명
 [명제 8](#prop8)에서 $\Omega^1_{X_\Sigma}(\log D) \cong M \otimes \mathcal{O}_{X_\Sigma}$이므로 $\Omega^n_{X_\Sigma}(\log D) \cong \bigwedge^n (M \otimes \mathcal{O}) \cong (\bigwedge^n M) \otimes \mathcal{O} \cong \mathcal{O}_{X_\Sigma}$이며 ($M$이 rank $n$의 free abelian group이므로 $\bigwedge^n M \cong \mathbb{Z}$이다), 그 generator는 정확히 $\omega_\Sigma$이다. $M$의 기저를 바꾸면 $\GL_n(\mathbb{Z})$의 변환에 의해 $\omega_\Sigma$가 $\det \in \{\pm 1\}$배만 변하므로 canonical하다.
 
-이제 $K_{X_\Sigma}$를 계산하기 위해, $\omega_\Sigma$를 $\Omega^n_{X_\Sigma}$의 rational section으로 봐서 $\divisor(\omega_\Sigma)$를 계산한다. Smooth ray $\rho \in \Sigma(1)$에 대해 $\rho$를 face로 갖는 maximal cone $\sigma$를 잡고 (smooth가정에 의해 $\sigma$의 ray들이 $N$의 기저 $v_1, \ldots, v_n$의 일부를 이루며 $v_\rho = v_1$이라 할 수 있다), 그 dual 기저 $\{v_1^\ast, \ldots, v_n^\ast\} \subset M$를 $M$의 기저 $m_i$로 잡자. 그럼 $U_\sigma$ 위에서 $\rchi^{v_i^\ast} = \x_i$이고 $D_\rho \cap U_\sigma = \{\x_1 = 0\}$이며
+이제 $K_{X_\Sigma}$를 계산하기 위해, $\omega_\Sigma$를 $\Omega^n_{X_\Sigma}$의 rational section으로 봐서 $\divisor(\omega_\Sigma)$를 계산한다. Smooth ray $\rho \in \Sigma(1)$에 대해 $\rho$를 face로 갖는 maximal cone $\sigma$를 잡고 (smooth가정에 의해 $\sigma$의 ray들이 $N$의 기저 $v_1, \ldots, v_n$의 일부를 이루며 $v_\rho = v_1$이라 할 수 있다), 그 dual 기저 $\{v_1^\ast, \ldots, v_n^\ast\} \subseteq M$를 $M$의 기저 $m_i$로 잡자. 그럼 $U_\sigma$ 위에서 $\rchi^{v_i^\ast} = \x_i$이고 $D_\rho \cap U_\sigma = \{\x_1 = 0\}$이며
 
 $$\omega_\Sigma\vert_{U_\sigma} = \frac{d\x_1}{\x_1} \wedge \frac{d\x_2}{\x_2} \wedge \cdots \wedge \frac{d\x_n}{\x_n}$$
 
@@ -228,7 +228,7 @@ $\Omega^n_{X_\Sigma}$는 $\omega_X = \mathcal{O}(K_X)$이므로 ([\[대수다양
 
 ## Calabi-Yau hypersurface 위의 Poincaré residue
 
-[명제 13](#prop13)의 $\omega_\Sigma$가 갖는 또 하나의 핵심적 응용은 anticanonical hypersurface 위의 자연스러운 holomorphic volume form 구성이다. $X_\Sigma$가 Gorenstein Fano toric variety라 가정하고, $f \in H^0(X_\Sigma, \mathcal{O}(-K_{X_\Sigma}))$를 anticanonical section이라 하자. 그럼 $Y := \{f = 0\} \subset X_\Sigma$는 $-K_{X_\Sigma}$ linear system 내의 hypersurface이며, [§파노 다양체, ⁋명제 7](/ko/math/toric_geometry/reflexive_polytope_fano#prop7)의 adjunction에 의해 $Y$가 smooth이면 $K_Y = 0$, 즉 Calabi-Yau hypersurface가 된다.
+[명제 13](#prop13)의 $\omega_\Sigma$가 갖는 또 하나의 핵심적 응용은 anticanonical hypersurface 위의 자연스러운 holomorphic volume form 구성이다. $X_\Sigma$가 Gorenstein Fano toric variety라 가정하고, $f \in H^0(X_\Sigma, \mathcal{O}(-K_{X_\Sigma}))$를 anticanonical section이라 하자. 그럼 $Y := \{f = 0\} \subseteq X_\Sigma$는 $-K_{X_\Sigma}$ linear system 내의 hypersurface이며, [§파노 다양체, ⁋명제 7](/ko/math/toric_geometry/reflexive_polytope_fano#prop7)의 adjunction에 의해 $Y$가 smooth이면 $K_Y = 0$, 즉 Calabi-Yau hypersurface가 된다.
 
 이 경우 *Poincaré residue* 
 

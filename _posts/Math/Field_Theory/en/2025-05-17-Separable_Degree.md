@@ -36,7 +36,7 @@ holds. If $A$ is an étale $\mathbb{K}$-algebra, then by the inequality and its 
 
 $$[A:\mathbb{K}]=[A:\mathbb{K}]_s\leq[\mathbb{K}[A^p]:\mathbb{K}]_s\leq [\mathbb{K}[A^p]:\mathbb{K}]$$
 
-and since $\mathbb{K}[A^p]\subset A$ trivially holds in general, we obtain $A=\mathbb{K}[A^p]$.
+and since $\mathbb{K}[A^p]\subseteq A$ trivially holds in general, we obtain $A=\mathbb{K}[A^p]$.
 
 Conversely, assume that $A=\mathbb{K}[A^p]$ and let us show that $A$ is étale. For this, it suffices to prove the latter condition. Assuming that $(a_i)$ is a $\mathbb{K}$-basis of $A$, the fact that $(a_i^p)$ generates $\mathbb{K}[A^p]$ as a $\mathbb{K}$-vector space follows from [§Fields, ⁋Proposition 12](/en/math/field_theory/fields#prop12), and then the given assumption $A=\mathbb{K}[A^p]$ implies that $(a_i^p)$ also generates $A$.
 

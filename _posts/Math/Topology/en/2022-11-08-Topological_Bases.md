@@ -87,7 +87,7 @@ Then there exists a unique topology $\mathcal{T}$ on $X$ such that $\mathcal{B}$
 ::: Proof
 Define $\mathcal{B}(x)$ to be the <phrase>collection of elements of $\mathcal{B}$ containing $x$</phrase>, just as in the proof of the previous proposition. Also define
 
-$$\mathcal{N}(x)=\mathop{\uparrow}\mathcal{B}(x):=\bigcup_{B\in\mathcal{B}}\mathop{\uparrow}B$$
+$$\mathcal{N}(x)=\mathop{\uparrow}\mathcal{B}(x):=\bigcup_{B\in\mathcal{B}(x)}\mathop{\uparrow}B$$
 
 That is, $\mathcal{N}(x)$ is the collection containing every element of $\mathcal{B}$ that contains the given $x\in X$, together with all elements of $\mathcal{P}(X)$ larger than it.
 

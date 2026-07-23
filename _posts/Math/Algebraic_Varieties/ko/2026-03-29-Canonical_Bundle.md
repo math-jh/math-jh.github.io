@@ -136,9 +136,9 @@ Canonical bundle $\omega_X$에 대응하는 divisor class를 *canonical divisor<
 
 앞선 글들과 마찬가지로, 우리에게 가장 친숙한 예시는 $\mathbb{P}^n$의 예시이다. 직관적으로 $\mathbb{P}^n$을 정의하는 quotient
 
-$$\mathbb{P}^n=(\mathbb{A}^{n+1}\setminus\{0\})/\mathbb{K}^\ast$$
+$$\mathbb{P}^n=(\mathbb{A}^{n+1}\setminus\{0\})/\mathbb{K}^\times$$
 
-을 뜯어보면, $\mathbb{K}^\ast$-action은 원점을 중심으로 뻗어나가는 방향, 즉 Euler vector field가 정의하는 방향의 작용이며 이는 $\mathbb{P}^n$ 입장에서는 그냥 trivial line bundle에 불과하다. 그럼 $\mathbb{P}^n$의 tangent space는 $\mathbb{A}^{n+1}$의 방향, 즉 1차식들을 이 trivial line bundle로 quotient한 후 남은 부분에 해당한다. 즉 tangent bundle에 해당하는 다음의 short exact sequence
+을 뜯어보면, $\mathbb{K}^\times$-action은 원점을 중심으로 뻗어나가는 방향, 즉 Euler vector field가 정의하는 방향의 작용이며 이는 $\mathbb{P}^n$ 입장에서는 그냥 trivial line bundle에 불과하다. 그럼 $\mathbb{P}^n$의 tangent space는 $\mathbb{A}^{n+1}$의 방향, 즉 1차식들을 이 trivial line bundle로 quotient한 후 남은 부분에 해당한다. 즉 tangent bundle에 해당하는 다음의 short exact sequence
 
 $$0 \rightarrow \mathcal{O}_{\mathbb{P}^{n}}\rightarrow \mathcal{O}_{\mathbb{P}^n}(1)^{\oplus (n+1)}\rightarrow T_{\mathbb{P}^n}\rightarrow 0$$
 
@@ -221,7 +221,7 @@ $$\omega_D \cong (\omega_X \otimes \mathcal{O}_X(D))\vert_D$$
 다음 예시는 이를 사용한 계산을 구체적으로 보여준다. 
 
 ::: 예시 10
-$C \subset \mathbb{P}^2$가 degree $d$의 smooth curve라 하자. Adjunction formula에 의해
+$C \subseteq \mathbb{P}^2$가 degree $d$의 smooth curve라 하자. Adjunction formula에 의해
 
 $$\omega_C \cong \omega_{\mathbb{P}^2}\vert_C \otimes \mathcal{O}_{\mathbb{P}^2}(C)\vert_C \cong \mathcal{O}_{\mathbb{P}^2}(-3)\vert_C \otimes \mathcal{O}_{\mathbb{P}^2}(d)\vert_C \cong \mathcal{O}_C(d-3)$$
 
@@ -326,7 +326,7 @@ $$K_{\widetilde{X}} = \pi^\ast K_X + aE$$
 
 $$K_{\widetilde{X}}\vert_E = (\pi^\ast K_X)\vert_E + aE\vert_E$$
 
-이다. 여기서 $(\pi^\ast K_X)\vert_E = \pi_E^\ast(K_X\vert_Z)$이고, $Z \subset X$에 대한 adjunction formula에 의해
+이다. 여기서 $(\pi^\ast K_X)\vert_E = \pi_E^\ast(K_X\vert_Z)$이고, $Z \subseteq X$에 대한 adjunction formula에 의해
 
 $$K_X\vert_Z = K_Z \otimes \det(\mathcal{N}_{Z/X})^{-1}$$
 

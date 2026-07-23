@@ -136,8 +136,8 @@ To make the first definition we should prove that $f^{-1}(\mathfrak{b})$ is an i
 ::: Proposition 8
 For any ring $A$, multiplicative subset $S$, localization $S^{-1}A$, and canonical map $\epsilon:A \rightarrow S^{-1}A$, the following hold.
 
-1. For any ideal $\mathfrak{b}\subset S^{-1}A$, we have $\mathfrak{b}=\mathfrak{b}^{ce}$.
-2. For any ideal $\mathfrak{a}\subset A$,
+1. For any ideal $\mathfrak{b}\subseteq S^{-1}A$, we have $\mathfrak{b}=\mathfrak{b}^{ce}$.
+2. For any ideal $\mathfrak{a}\subseteq A$,
   
     $$\mathfrak{a}^{ec}=\{a\in A\mid\text{there exists $s\in S$ satisfying $sa\in \mathfrak{a}$}\}$$
   

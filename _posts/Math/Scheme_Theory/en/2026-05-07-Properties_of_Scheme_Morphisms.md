@@ -206,7 +206,7 @@ Let us look at examples of the morphisms we have examined in this section. In th
 
 First, for an algebraically closed field $\mathbb{K}$, considering the ring map $\iota:\mathbb{K}[\x] \rightarrow \mathbb{K}[\x,\y]$, we see that $\mathbb{K}[\x,\y]$ is generated as a $\mathbb{K}[\x]$-algebra by a single element $\y$, so it is a finite type ring homomorphism, but it is not a finite ring homomorphism since it is not finitely generated as a $\mathbb{K}[\x]$-module.
 
-Now consider the scheme morphism $\Spec\iota: \Spec \mathbb{K}[\x,\y] \rightarrow\Spec \mathbb{K}[\x]$ corresponding to this. This is the function that takes any prime ideal $\mathfrak{p}\subset \mathbb{K}[\x,\y]$ and outputs the prime ideal $\mathfrak{p}\cap \mathbb{K}[\x]$ of $\mathbb{K}[\x]$. Geometrically, this is the function that corresponds a point $(x,y)$ of the affine plane $\mathbb{A}^2_\mathbb{K}$ to the point $x$ of the affine line $\mathbb{A}^1_\mathbb{K}$.
+Now consider the scheme morphism $\Spec\iota: \Spec \mathbb{K}[\x,\y] \rightarrow\Spec \mathbb{K}[\x]$ corresponding to this. This is the function that takes any prime ideal $\mathfrak{p}\subseteq \mathbb{K}[\x,\y]$ and outputs the prime ideal $\mathfrak{p}\cap \mathbb{K}[\x]$ of $\mathbb{K}[\x]$. Geometrically, this is the function that corresponds a point $(x,y)$ of the affine plane $\mathbb{A}^2_\mathbb{K}$ to the point $x$ of the affine line $\mathbb{A}^1_\mathbb{K}$.
 
 ![finite_type_morphism](/assets/images/Math/Scheme_Theory/Properties_of_Scheme_Morphisms-1.svg){:style="width:27.72em" class="invert" .align-center}
 

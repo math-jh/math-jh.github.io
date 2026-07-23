@@ -158,7 +158,7 @@ $$i^\ast:H_T^\bullet(M)_{\mathrm{loc}}\xrightarrow{\ \cong\ }H_T^\bullet(M^T)_{\
 
 $$j_G^\ast J(\beta)=j_G^\ast j_{G\ast}\left(\frac{\beta_G}{e_T(N_G)}\right)=e_T(N_G)\smile\frac{\beta_G}{e_T(N_G)}=\beta_G$$
 
-이다. 곧 $i^\ast\circ J=\mathrm{id}$이고, $i^\ast$이 이미 동형이므로 $J=(i^\ast)^{-1}$이다.
+이다. 곧 $i^\ast\circ J=\id$이고, $i^\ast$이 이미 동형이므로 $J=(i^\ast)^{-1}$이다.
 :::
 
 정리의 내용을 다시 읽으면, $H_T^\bullet(M)_{\mathrm{loc}}$의 임의의 원소 $\alpha$는 그 fixed point로의 restriction $(i_F^\ast\alpha)_F$만으로 완전히 복원된다. 곧
@@ -280,14 +280,14 @@ $$i_{E_I}^\ast\zeta=-\sum_{i\in I}t_i$$
 
 $$\int_{\mathrm{Gr}(2,4)}\zeta^4=\sum_{\lvert I\rvert=2}\frac{\big(-\sum_{i\in I}t_i\big)^4}{\prod_{i\in I,\ j\notin I}(t_j-t_i)}=2$$
 
-가 된다 (우변은 $t$에 무관한 상수이며 $2$로 계산된다). 이는 $\mathrm{Gr}(2,4)\subset\mathbb{P}^5$의 degree가 $2$, 곧 $\mathbb{P}^3$ 안에서 일반 위치의 네 직선과 모두 만나는 직선의 개수가 $2$라는 고전적 Schubert 계산과 일치한다.
+가 된다 (우변은 $t$에 무관한 상수이며 $2$로 계산된다). 이는 $\mathrm{Gr}(2,4)\subseteq\mathbb{P}^5$의 degree가 $2$, 곧 $\mathbb{P}^3$ 안에서 일반 위치의 네 직선과 모두 만나는 직선의 개수가 $2$라는 고전적 Schubert 계산과 일치한다.
 :::
 
 이 예시가 보여 주듯, Schubert class의 fixed point restriction $i_{E_I}^\ast\sigma_\lambda$만 알면 모든 intersection number가 좌표 부분공간 위의 유한합으로 환원된다. 이 제한값들은 factorial Schur polynomial로 명시되며, equivariant Schubert calculus는 바로 이 localization 데이터를 조직하는 이론이다.
 
 ## 매끄러운 toric variety로의 적용
 
-마지막으로 이 글의 무대인 toric variety와의 연결을 본다. $N$을 rank $n$ lattice, $\Sigma\subset N_{\mathbb{R}}$를 fan, $X_\Sigma$를 그에 대응하는 toric variety라 하자. ([§토릭 다양체의 정의, ⁋정의 3](/ko/math/toric_geometry/toric_varieties#def3)) $X_\Sigma$ 위에는 algebraic torus $T_N=N\otimes\mathbb{C}^\ast$의 작용이 있고 ([§토릭 다양체의 정의, ⁋명제 5](/ko/math/toric_geometry/toric_varieties#prop5)), 그 콤팩트 subgroup $T=(S^1)^n$이 $X_\Sigma$ 위에 작용한다. $X_\Sigma$가 smooth complete이면 ([§토릭 다양체의 정의, ⁋명제 11](/ko/math/toric_geometry/toric_varieties#prop11)) 콤팩트 oriented variety로서 ABBV 공식의 가정을 만족한다.
+마지막으로 이 글의 무대인 toric variety와의 연결을 본다. $N$을 rank $n$ lattice, $\Sigma\subseteq N_{\mathbb{R}}$를 fan, $X_\Sigma$를 그에 대응하는 toric variety라 하자. ([§토릭 다양체의 정의, ⁋정의 3](/ko/math/toric_geometry/toric_varieties#def3)) $X_\Sigma$ 위에는 algebraic torus $T_N=N\otimes\mathbb{C}^\ast$의 작용이 있고 ([§토릭 다양체의 정의, ⁋명제 5](/ko/math/toric_geometry/toric_varieties#prop5)), 그 콤팩트 subgroup $T=(S^1)^n$이 $X_\Sigma$ 위에 작용한다. $X_\Sigma$가 smooth complete이면 ([§토릭 다양체의 정의, ⁋명제 11](/ko/math/toric_geometry/toric_varieties#prop11)) 콤팩트 oriented variety로서 ABBV 공식의 가정을 만족한다.
 
 이때 $T$-fixed point는 fan의 maximal cone, 곧 $n$차원 cone $\sigma\in\Sigma(n)$과 일대일 대응한다. 실제로 cone $\sigma$에 대응하는 orbit closure $V(\sigma)$는 ([§토릭 다양체의 교차 이론, ⁋정의 1](/ko/math/toric_geometry/toric_intersection_theory#def1)) $\sigma$가 maximal일 때 한 점으로 줄어들며, 이것이 affine chart $U_\sigma\cong\mathbb{C}^n$의 원점인 fixed point $x_\sigma$이다. $X_\Sigma$가 사영적이면 maximal cone들은 그 fan을 normal fan으로 갖는 polytope $P$의 꼭짓점들과 대응하므로 ([§토릭 다양체의 정의, ⁋명제 8](/ko/math/toric_geometry/toric_varieties#prop8)), fixed point는 곧 $P$의 꼭짓점이다.
 

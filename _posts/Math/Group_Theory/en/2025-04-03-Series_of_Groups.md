@@ -111,7 +111,7 @@ On the other hand, since $G$ is a normal subgroup of itself, by the same inducti
 ::: Proposition 5
 For any group $G$ and any natural numbers $m, n$, the inclusion
 
-$$[C_m(G), C_n(G)] \subset C_{m+n}(G)$$
+$$[C_m(G), C_n(G)] \subseteq C_{m+n}(G)$$
 
 holds.
 :::
@@ -144,12 +144,12 @@ For a group $G$ and a natural number $n$, the following are all equivalent.
     $$G = G_1 \supset G_2 \supset \cdots \supset G_{n+1} = \{e\}$$
 
     such that $[G, G_k] \subseteq G_{k+1}$ holds for all $k$.
-3. There exists a subgroup $A$ contained in the center $C(G)$ of $G$ such that $G/A$ is a nilpotent group of nilpotency class $\leq n-1$.
+3. There exists a subgroup $A$ contained in the center $Z(G)$ of $G$ such that $G/A$ is a nilpotent group of nilpotency class $\leq n-1$.
 :::
 ::: Proof
-First, assuming the first condition, $G_k = C_k(G)$ satisfies the second condition; conversely, if the second condition holds then by induction we can show $C_k(G) \subset G_k$ always holds.
+First, assuming the first condition, $G_k = C_k(G)$ satisfies the second condition; conversely, if the second condition holds then by induction we can show $C_k(G) \subseteq G_k$ always holds.
 
-For the remaining equivalence, assuming the first condition, the third condition holds by taking $A = C_n(G)$. To show the first condition holds assuming the third, we send $C_n(G)$ via the canonical morphism $G \rightarrow G/A$; then by [Proposition 4](#prop4) its image equals $C_n(G/A)$, which is $\{e\}$ by assumption, so $C_n(G) \subset A$ and therefore $C_{n+1}(G) = \{e\}$.
+For the remaining equivalence, assuming the first condition, the third condition holds by taking $A = C_n(G)$. To show the first condition holds assuming the third, we send $C_n(G)$ via the canonical morphism $G \rightarrow G/A$; then by [Proposition 4](#prop4) its image equals $C_n(G/A)$, which is $\{e\}$ by assumption, so $C_n(G) \subseteq A$ and therefore $C_{n+1}(G) = \{e\}$.
 :::
 
 Thus, intuitively, a nilpotent group of nilpotency class $\leq n$ can be thought of as obtained from the trivial group $\{e\}$ by $n$ successive central extensions.

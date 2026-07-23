@@ -25,7 +25,7 @@ By [§Interior, Closure, and Boundary, ⁋Proposition 2](/en/math/topology/other
 ::: Definition 1 (Kuratowski closure axiom)
 For an arbitrary *set* $X$, suppose a function $\cl:\mathcal{P}(X)\rightarrow\mathcal{P}(X)$ satisfies all of the following conditions.
 
-- $$A\subset\cl(A)$$
+- $$A\subseteq\cl(A)$$
 - $$\cl(\cl(A))=\cl(A)$$
 - $$\cl(A\cup B)=\cl(A)\cup\cl(B)$$
 - $$\cl(\emptyset)=\emptyset$$
@@ -35,7 +35,7 @@ A function satisfying these conditions is called a *closure operator*. ([\[Set T
 
 From the third condition, if $A\subseteq B$ then
 
-$$\cl(A)\subset\cl(A)\cup\cl(B)=\cl(A\cup B)=\cl(B)$$
+$$\cl(A)\subseteq\cl(A)\cup\cl(B)=\cl(A\cup B)=\cl(B)$$
 
 follows.
 
@@ -43,13 +43,13 @@ For any topological space $X$, it is obvious that the function $\cl:\mathcal{P}(
 
 Conversely, suppose a closure operator $\cl:\mathcal{P}(X)\rightarrow\mathcal{P}(X)$ satisfying the above conditions is given on a set $X$. Let $\mathcal{C}$ denote the collection of those elements $C$ of $\mathcal{P}(X)$ for which $\cl(C)=C$. Then
 
-- Since $\cl(\emptyset)=\emptyset$, we have $\emptyset\in\mathcal{C}$. On the other hand, since $X\subset\cl(X)$, we have $\cl(X)=X$ and therefore $X\in\mathcal{C}$.
+- Since $\cl(\emptyset)=\emptyset$, we have $\emptyset\in\mathcal{C}$. On the other hand, since $X\subseteq\cl(X)$, we have $\cl(X)=X$ and therefore $X\in\mathcal{C}$.
 - For arbitrary $A,B\in\mathcal{C}$, since $A\cup B=\cl(A)\cup\cl(B)=\cl(A\cup B)$, we have $A\cup B\in\mathcal{C}$.
-- For an arbitrary index set $I$ and $A_i\in\mathcal{C}$, we have $\bigcap A_i\subset\cl(\bigcap A_i)$, and since $\bigcap A_i\subseteq A_i$,
+- For an arbitrary index set $I$ and $A_i\in\mathcal{C}$, we have $\bigcap A_i\subseteq\cl(\bigcap A_i)$, and since $\bigcap A_i\subseteq A_i$,
 
-  $$\cl(\bigcap A_i)\subset\cl(A_i)=A_i$$
+  $$\cl(\bigcap A_i)\subseteq\cl(A_i)=A_i$$
 
-  holds, so $\cl(\bigcap A_i)\subset\bigcap A_i$ also holds.
+  holds, so $\cl(\bigcap A_i)\subseteq\bigcap A_i$ also holds.
 
 From this we obtain the following theorem.
 

@@ -22,20 +22,20 @@ weight: 8
 그러나 $\Ch(\mathcal{A})$ 자체는 우리의 관심의 대상은 아니다. 우리는 앞서 설명했듯 $\Ch(\mathcal{A})$에서 quasi-isomorphism을 모두 같은 것으로 봐야 하므로 이에 대한 quotient 또한 생각해야 한다. 또, 그 이전에 chain homotopic한 chain map들은 모두 같은 것이므로 다음과 같은 정의를 내려야 한다. 
 
 ::: 정의 1
-Abelian category $\mathcal{A}$의 *homotopy category<sub>호모토피 범주</sub>* $K(\mathcal{A})$는 $\Ch(\mathcal{A})$에서 chain homotopic인 map들을 동일시하여 얻은 quotient category이다. 즉 chain homotopy relation $\sim$에 대하여
+Abelian category $\mathcal{A}$의 *homotopy category<sub>호모토피 범주</sub>* $\mathbf{K}(\mathcal{A})$는 $\Ch(\mathcal{A})$에서 chain homotopic인 map들을 동일시하여 얻은 quotient category이다. 즉 chain homotopy relation $\sim$에 대하여
 
 $$\Hom_{K(\mathcal{A})}(A^\bullet, B^\bullet) = \Hom_{\Ch(\mathcal{A})}(A^\bullet, B^\bullet) /{\sim}$$
 
 이다. 
 :::
 
-그럼 우리는 $K(\mathcal{A})$이 additive category인 것을 확인할 수 있다. 한편, 우리는 quasi-isomorphism이 일반적으로 $K(\mathcal{A})$에서 isomorphism이 아닌 것은 이미 [§긴 완전열, ⁋정의 4](/ko/math/homological_algebra/long_exact_sequence#def4)에서 확인하였다. 따라서 quasi-isomorphic한 chain complex (up to chain homotopy)을 같은 것으로 보기 위해서 우리는 반드시 quasi-isomorphism의 inverse를 강제로 만들어주어야 한다. 
+그럼 우리는 $\mathbf{K}(\mathcal{A})$이 additive category인 것을 확인할 수 있다. 한편, 우리는 quasi-isomorphism이 일반적으로 $\mathbf{K}(\mathcal{A})$에서 isomorphism이 아닌 것은 이미 [§긴 완전열, ⁋정의 4](/ko/math/homological_algebra/long_exact_sequence#def4)에서 확인하였다. 따라서 quasi-isomorphic한 chain complex (up to chain homotopy)을 같은 것으로 보기 위해서 우리는 반드시 quasi-isomorphism의 inverse를 강제로 만들어주어야 한다. 
 
 ::: 정의 2
-Abelian category $\mathcal{A}$의 *derived category* $D(\mathcal{A})$는 homotopy category $K(\mathcal{A})$에서 quasi-isomorphism의 모임 $S$에 대한 Verdier quotient $K(\mathcal{A})/S$이다.
+Abelian category $\mathcal{A}$의 *derived category* $D(\mathcal{A})$는 homotopy category $\mathbf{K}(\mathcal{A})$에서 quasi-isomorphism의 모임 $S$에 대한 Verdier quotient $\mathbf{K}(\mathcal{A})/S$이다.
 :::
 
-우리는 이 정의를 아주 엄밀하게 다루지는 않지만, 이는 기본적으로 [\[대수적 구조\] §분수체, ⁋정의 2](/ko/math/algebraic_structures/field_of_fractions#def2)의 구성과 다르지 않다. 다른 점은 대상들이 non-commutative하다는 것으로, 이것만 주의하면 우리는 $K(\mathcal{A})$의 "localization" $D(\mathcal{A})$를 얻어낼 수 있다.
+우리는 이 정의를 아주 엄밀하게 다루지는 않지만, 이는 기본적으로 [\[대수적 구조\] §분수체, ⁋정의 2](/ko/math/algebraic_structures/field_of_fractions#def2)의 구성과 다르지 않다. 다른 점은 대상들이 non-commutative하다는 것으로, 이것만 주의하면 우리는 $\mathbf{K}(\mathcal{A})$의 "localization" $D(\mathcal{A})$를 얻어낼 수 있다.
 
 조금 더 구체적으로, $D(\mathcal{A})$의 morphism을 설명할 때 우리는 종종 roof diagram을 사용하여 설명한다. $X$에서 $Y$로의 $D(\mathcal{A})$에서의 morphism은 다음의 diagram
 
@@ -95,17 +95,17 @@ $$H^i(A[n]) = H^{i+n}(A)$$
 우리는 앞서 derived category가 derived functor를 올바르게 살펴보는 데에 도움을 준다고 하였다. 이를 위해서는 complex 수준에서 resolution의 개념을 도입해야 한다.
 
 ::: 정의 5
-Complex $P \in K(\mathcal{A})$가 *$K$-projective*라는 것은, 임의의 quasi-isomorphism $s: A \rightarrow B$ in $K(\mathcal{A})$에 대해 유도된 map
+Complex $P \in \mathbf{K}(\mathcal{A})$가 *$K$-projective*라는 것은, 임의의 quasi-isomorphism $s: A \rightarrow B$ in $\mathbf{K}(\mathcal{A})$에 대해 유도된 map
 
 $$\Hom(s, P):\Hom_{K(\mathcal{A})}(B, P)\rightarrow\Hom_{K(\mathcal{A})}(A, P)$$
 
 이 isomorphism인 것이다.
 :::
 
-즉 $P$는 $K(\mathcal{A})$에서 Hom functor $\Hom(-, P)$를 quasi-isomorphism에 대해 invariant하게 만드는 complex로, 이러한 대상들만이 derived category로 잘 떨어질 것은 자명하다. 물론 다음 또한 정의해야 한다.
+즉 $P$는 $\mathbf{K}(\mathcal{A})$에서 Hom functor $\Hom(-, P)$를 quasi-isomorphism에 대해 invariant하게 만드는 complex로, 이러한 대상들만이 derived category로 잘 떨어질 것은 자명하다. 물론 다음 또한 정의해야 한다.
 
 ::: 정의 6
-Complex $I \in K(\mathcal{A})$가 *$K$-injective*라는 것은, 임의의 quasi-isomorphism $s : A \rightarrow B$에 대해 유도된 map
+Complex $I \in \mathbf{K}(\mathcal{A})$가 *$K$-injective*라는 것은, 임의의 quasi-isomorphism $s : A \rightarrow B$에 대해 유도된 map
 
 $$\Hom_{K(\mathcal{A})}(I, A) \xrightarrow{s_\ast} \Hom_{K(\mathcal{A})}(I, B)$$
 
@@ -207,7 +207,7 @@ $$R F(A) \rightarrow R F(B) \rightarrow R F(C) \rightarrow R F(A)[1]$$
 도 distinguished triangle이다.
 :::
 ::: 증명
-$A \rightarrow B$를 map으로 보고, 이들의 $K$-injective resolution들을 각각 $I_A^\bullet$, $I_B^\bullet$이라 하자. $K$-injective resolution의 lifting property에 의해, map $A \rightarrow B$는 $I_A^\bullet \rightarrow I_B^\bullet$로 확장된다. $C = C(f)$의 $K$-injective resolution $I_C^\bullet$을 취하면, $I_A^\bullet \rightarrow I_B^\bullet \rightarrow I_C^\bullet \rightarrow I_A^\bullet[1]$은 $K$-injective complex들 사이의 distinguished triangle이며, $F$를 적용한 뒤 $D(\mathcal{B})$에서 보면 원하는 distinguished triangle을 얻는다. Bounded below $K$-injective complex들은 $K(\mathcal{A})$의 triangulated subcategory를 이루므로, mapping cone도 $K$-injective가 되고 이 diagram이 commute함을 알 수 있다.
+$A \rightarrow B$를 map으로 보고, 이들의 $K$-injective resolution들을 각각 $I_A^\bullet$, $I_B^\bullet$이라 하자. $K$-injective resolution의 lifting property에 의해, map $A \rightarrow B$는 $I_A^\bullet \rightarrow I_B^\bullet$로 확장된다. $C = C(f)$의 $K$-injective resolution $I_C^\bullet$을 취하면, $I_A^\bullet \rightarrow I_B^\bullet \rightarrow I_C^\bullet \rightarrow I_A^\bullet[1]$은 $K$-injective complex들 사이의 distinguished triangle이며, $F$를 적용한 뒤 $D(\mathcal{B})$에서 보면 원하는 distinguished triangle을 얻는다. Bounded below $K$-injective complex들은 $\mathbf{K}(\mathcal{A})$의 triangulated subcategory를 이루므로, mapping cone도 $K$-injective가 되고 이 diagram이 commute함을 알 수 있다.
 :::
 
 ## Derived Adjunction
@@ -237,7 +237,7 @@ $$\Hom_{\Ch(\mathcal{B})}(F(P_\bullet), I^\bullet) \cong \Hom_{\Ch(\mathcal{A})}
 
 $$\Hom(A \otimes B, C) \cong \Hom(A, \Hom(B, C))$$
 
-에서, complex $X, Y, Z$에 대해 동일한 형태의 isomorphism을 derived category에서도 얻고 싶을 수 있다. 그러나 raw functor $-\otimes B$와 $\Hom(B,-)$는 quasi-isomorphism을 보존하지 않으므로, 이 adjunction은 naive하게 derived category로 내려오지 않는다. 앞서 derived functor를 정의할 때 projective resolution 또는 injective resolution을 취해야만 $K(\mathcal{A}) \rightarrow D(\mathcal{A})$로 잘 descend한다는 점을 확인하였는데, 이는 바로 $-\otimes B$가 right exact이고 $\Hom(B,-)$가 left exact이기 때문이다. Quasi-isomorphism에 대한 localization을 거치면 classical adjoint는 자동으로 살아남지 않으므로, 이 exactness의 부족을 보완하는 derived version이 필요하다.
+에서, complex $X, Y, Z$에 대해 동일한 형태의 isomorphism을 derived category에서도 얻고 싶을 수 있다. 그러나 raw functor $-\otimes B$와 $\Hom(B,-)$는 quasi-isomorphism을 보존하지 않으므로, 이 adjunction은 naive하게 derived category로 내려오지 않는다. 앞서 derived functor를 정의할 때 projective resolution 또는 injective resolution을 취해야만 $\mathbf{K}(\mathcal{A}) \rightarrow D(\mathcal{A})$로 잘 descend한다는 점을 확인하였는데, 이는 바로 $-\otimes B$가 right exact이고 $\Hom(B,-)$가 left exact이기 때문이다. Quasi-isomorphism에 대한 localization을 거치면 classical adjoint는 자동으로 살아남지 않으므로, 이 exactness의 부족을 보완하는 derived version이 필요하다.
 
 이를 구체적으로 확인하기 위해 $R = \mathbb{Z}$, $M = \mathbb{Z}/n\mathbb{Z}$를 생각하자. $M$은 flat이 아니므로 tensoring이 exact하지 않다. $0 \rightarrow \mathbb{Z} \xrightarrow{\times n} \mathbb{Z} \rightarrow \mathbb{Z}/n\mathbb{Z} \rightarrow 0$에 $-\otimes M$을 적용하면 exactness가 깨지며, 구체적으로 $\Tor_1^\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, \mathbb{Z}/n\mathbb{Z}) \cong \mathbb{Z}/n\mathbb{Z}$이 존재하므로 naive adjunction은 기대하는 대로 작동하지 않는다. ([§Ext와 Tor](/ko/math/homological_algebra/ext_and_tor))
 

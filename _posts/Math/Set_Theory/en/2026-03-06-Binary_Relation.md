@@ -101,9 +101,9 @@ Let $y\in R(X)$. Then there exists some $x\in X$ such that $(x,y)\in R$. Since $
 
 By the above proposition, for any $A$ we have
 
-$$R(A)=\pr_2\{z\in R\mid\text{$\pr_1z\in A$}\}\subset\pr_2R$$
+$$R(A)=\pr_2\{z\in R\mid\text{$\pr_1z\in A$}\}\subseteq\pr_2R$$
 
-and therefore $R(A)\subset\pr_2R$ holds. In particular, if $A=\emptyset$ then $R(A)=\emptyset$, and more generally if $A\cap\pr_1R=\emptyset$ then $R(A)=\emptyset$.
+and therefore $R(A)\subseteq\pr_2R$ holds. In particular, if $A=\emptyset$ then $R(A)=\emptyset$, and more generally if $A\cap\pr_1R=\emptyset$ then $R(A)=\emptyset$.
 
 If for some $x$ we have $A=\{x\}$, we can think of $R(A)$ as something like the value of $R$ at $x$.
 

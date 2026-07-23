@@ -41,7 +41,7 @@ The first claim is immediate from the formula
 
 $$(x,y)\in R\iff (y,x)\in R^{-1}\iff (x,y)\in (R^{-1})^{-1}$$ 
 
-For the second claim, suppose $x\in\pr_1R^{-1}$. Then there exists some $y$ such that $(x,y)\in R^{-1}$. Since $(y,x)\in R$, we have $x\in\pr_2R$. Reversing this argument proves that $\pr_2R\subset\pr_1R^{-1}$.
+For the second claim, suppose $x\in\pr_1R^{-1}$. Then there exists some $y$ such that $(x,y)\in R^{-1}$. Since $(y,x)\in R$, we have $x\in\pr_2R$. Reversing this argument proves that $\pr_2R\subseteq\pr_1R^{-1}$.
 
 For the remaining equality $\pr_2R^{-1}=\pr_1R$, it suffices to replace $R$ by $R^{-1}$ in the claim just proved.   
 :::

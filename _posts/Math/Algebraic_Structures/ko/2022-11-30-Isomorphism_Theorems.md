@@ -28,7 +28,7 @@ $$f(gxg^{-1})=f(g)f(x)f(g^{-1})=f(g)e'f(g)^{-1}=f(g)f(g)^{-1}=e'.$$
 
 그런데 $\ker f$에 의하여 정의되는 동치관계 
 
-$$x\sim y\iff xy^{-1}\ker f$$
+$$x\sim y\iff xy^{-1}\in\ker f$$
 
 를 생각하면, 다음 식
 
@@ -76,7 +76,7 @@ Group $G$의 subgroup $K$, normal subgroup $N$이 주어졌다 하자. 그럼 �
 Group $G$의 subgroup $K$, normal subgroup $N$이 주어졌다 하자. 그럼 $K/(N\cap K)\cong NK/N$이 성립한다.
 :::
 ::: 증명
-우선 앞선 보조정리로부터, $N$은 $NK=N\vee K=KN$의 normal subgroup이 된다. 한편, $K\subset NK$이므로, 다음과 같은 homomorphism의 composition
+우선 앞선 보조정리로부터, $N$은 $NK=N\vee K=KN$의 normal subgroup이 된다. 한편, $K\subseteq NK$이므로, 다음과 같은 homomorphism의 composition
 
 $$K\overset{\iota}{\hookrightarrow}NK\overset{\pi}{\twoheadrightarrow}NK/N$$ 
 

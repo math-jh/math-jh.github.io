@@ -78,11 +78,11 @@ $$\bigcup_{k\in K} A_k=\bigcup_{k\in K} A_{f(k)}=\bigcup_{i\in I}A_i=A_{k_0},\qq
 
 이제 합집합과 교집합의 성질들을 조금 더 살펴보자. 만일 같은 index를 갖는 두 family $(A_i)_{i\in I}$와 $(B_i)_{i\in I}$가 주어졌고, $B_i\subseteq A_i$가 모든 $i\in I$에 대해 성립한다면 
 
-$$\bigcup_{i\in I} B_i\subset\bigcup_{i\in I} A_i,\qquad \bigcap_{i\in I} B_i\subset\bigcap_{i\in I} A_i$$
+$$\bigcup_{i\in I} B_i\subseteq\bigcup_{i\in I} A_i,\qquad \bigcap_{i\in I} B_i\subseteq\bigcap_{i\in I} A_i$$
 
 임은 자명하다. 또, 주어진 family $(A_i)_{i\in I}$와 $I$의 부분집합 $J$에 대하여, 
 
-$$\bigcup_{j\in J}A_j\subset\bigcup_{i\in I} A_i,\qquad\bigcap_{j\in J}A_j\supset\bigcap_{i\in I} A_i$$
+$$\bigcup_{j\in J}A_j\subseteq\bigcup_{i\in I} A_i,\qquad\bigcap_{j\in J}A_j\supset\bigcap_{i\in I} A_i$$
 
 임도 거의 자명하다. 
 
@@ -100,7 +100,7 @@ $$\bigcup_{i\in I} A_i=\bigcup_{k\in K}\left(\bigcup_{j\in J_k} A_j\right),\quad
 ::: 증명
 우선 합집합에 관한 식부터 보이자. 만일 $x\in \bigcup_{i\in I}A_i$라면, 어떠한 $i_0\in I$에 대하여 $x\in A_{i_0}$이다. 이제 $I=\bigcup_{k\in K} J_k$이므로, 어떤 $k_0$가 존재하여 $i_0\in J_{k_0}$이다. 그럼
 
-$$A_{i_0}=\bigcup_{i\in \{i_0\}}A_i\subset\bigcup_{j\in J_{k_0}} A_j=\bigcup_{k\in\left\{k_0\right\}}\left(\bigcup_{i\in J_k} A_i\right)\subseteq \bigcup_{k\in K}\left(\bigcup_{j\in J_k} A_j\right)$$
+$$A_{i_0}=\bigcup_{i\in \{i_0\}}A_i\subseteq\bigcup_{j\in J_{k_0}} A_j=\bigcup_{k\in\left\{k_0\right\}}\left(\bigcup_{i\in J_k} A_i\right)\subseteq \bigcup_{k\in K}\left(\bigcup_{j\in J_k} A_j\right)$$
 
 이므로 $x\in A_{i_0}\subseteq \bigcup_{k\in K}\left(\bigcup_{j\in J_k} A_j\right)$이다.  
 
@@ -116,7 +116,7 @@ $$A_{i_0}=\bigcup_{i\in \{i_0\}}A_i\subset\bigcup_{j\in J_{k_0}} A_j=\bigcup_{k\
 ::: 명제 6
  $(A_i)_{i\in I}$가 집합 $A$의 부분집합의 family고 $(R,A,B)$가 이항관계라 하자. 그럼
 
-$$R\left(\bigcup_{i\in I} A_i\right)=\bigcup_{i\in I}R(A_i),\quad R\left(\bigcap_{i\in I} A_i\right)\subset\bigcap_{i\in I}R(A_i)$$
+$$R\left(\bigcup_{i\in I} A_i\right)=\bigcup_{i\in I}R(A_i),\quad R\left(\bigcap_{i\in I} A_i\right)\subseteq\bigcap_{i\in I}R(A_i)$$
 :::
 ::: 증명
 우선 첫 번째 식을 보이자. 만일 $y\in R\left(\bigcup_{i\in I}A_i\right)$라면, 적당한 $x\in \bigcup_{i\in I}A_i$가 존재하여 $(x,y)\in R$이다. 이제 $x\in A_j$라 하면 $y\in R(A_j)$이므로 $y\in\bigcup_{i\in I}R\left(A_i\right)$가 성립한다. 반대로 만일 $y\in \bigcup_{i\in I}R\left(A_i\right)$라면 어떤 $j$에 대하여 $y\in R\left(A_j\right)$이므로, 적당한 $x\in A_j$가 존재하여 $(x,y)\in R$이다. 따라서 $y\in R\left(\bigcup_{i\in I} A_i\right)$가 성립한다.

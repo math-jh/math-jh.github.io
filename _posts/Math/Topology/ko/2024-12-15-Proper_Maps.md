@@ -81,7 +81,7 @@ $$\Gamma_f(x)=(x,f(x)),\qquad \Gamma_g(y)=(g(y), y)$$
 
 $$((g\circ f)\times\id_Y)\circ\Gamma_f=\Gamma_g\circ f$$
 
-이 성립하는 것을 쉽게 확인할 수 있다. 이 때 $\Gamma_f$와 $\Gamma_g$들은 각각 $X, Y$에서 $f,g$의 graph로의 homeomorphism이다. ([§곱공간, ⁋따름정리 4](/ko/math/topology/product_spaces#cor4)) 또, $Y$가 Hausdorff라는 가정으로부터 $\Gamma(f)\subseteq X\times Y$가 닫힌집합임을 안다. ([§하우스도르프 공간, ⁋따름정리 7](/ko/math/topology/Hausdorff_spaces#cor7)) 따라서 [명제 2](#prop2)로부터 $\Gamma_f$가 universally closed인 것을 안다. 한편 어렵지 않게 universally closed map들의 곱은 universally closed인 것을 보일 수 있으므로, 이것과 [명제 4](#prop4)를 종합하면 $(g\circ f)\times\id_Y$가 universally closed임을 안다. 따라서 위의 식의 우변 $\Gamma_g\circ f$ 또한 universally closed이고, $\Gamma_g$가 injective이므로 $f$는 universally closed이다.
+이 성립하는 것을 쉽게 확인할 수 있다. 이 때 $\Gamma_f$와 $\Gamma_g$들은 각각 $X, Y$에서 $f,g$의 graph로의 homeomorphism이다. ([§곱공간, ⁋따름정리 4](/ko/math/topology/product_spaces#cor4)) 또, $Y$가 Hausdorff라는 가정으로부터 $\graph(f)\subseteq X\times Y$가 닫힌집합임을 안다. ([§하우스도르프 공간, ⁋따름정리 7](/ko/math/topology/Hausdorff_spaces#cor7)) 따라서 [명제 2](#prop2)로부터 $\Gamma_f$가 universally closed인 것을 안다. 한편 어렵지 않게 universally closed map들의 곱은 universally closed인 것을 보일 수 있으므로, 이것과 [명제 4](#prop4)를 종합하면 $(g\circ f)\times\id_Y$가 universally closed임을 안다. 따라서 위의 식의 우변 $\Gamma_g\circ f$ 또한 universally closed이고, $\Gamma_g$가 injective이므로 $f$는 universally closed이다.
 :::
 
 ## 옹골성과 보편닫힌사상

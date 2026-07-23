@@ -35,7 +35,7 @@ Affine variety $X$에 대하여, $\mathbb{K}(X)=\Frac\mathbb{K}[X]$이 성립한
 
 이 명제의 핵심적인 부분은 임의의 열린집합 $U$와 그 위에서 정의된 임의의 regular function $f:U\rightarrow \mathbb{K}$를 실제로 분수꼴로 나타내는 것인데, 어차피 $U$는 $D(f)$들의 합집합으로 나타낼 수 있고 ([§아핀다양체, ⁋명제 6](/ko/math/algebraic_varieties/affine_varieties#prop6)) 이 위의 regular function은 $f$의 거듭제곱을 분모로 갖는 유리식의 꼴이므로 증명이 어렵지 않다.
 
-중요한 것은, 이 명제가 rational function을 계산하는 실질적인 방법을 제공한다는 것이다. 예를 들어, $X = V(\y - \x^2)$의 coordinate ring은 $\mathbb{K}[\x, \y]/(\y - \x^2) \cong \mathbb{K}[\x]$이고, 따라서 $\mathbb{K}(X) = \operatorname{Frac}(\mathbb{K}[\x]) = \mathbb{K}(\x)$이다.
+중요한 것은, 이 명제가 rational function을 계산하는 실질적인 방법을 제공한다는 것이다. 예를 들어, $X = V(\y - \x^2)$의 coordinate ring은 $\mathbb{K}[\x, \y]/(\y - \x^2) \cong \mathbb{K}[\x]$이고, 따라서 $\mathbb{K}(X) = \Frac(\mathbb{K}[\x]) = \mathbb{K}(\x)$이다.
 
 ::: 명제 3
 Variety $X$와 공집합이 아닌 열린집합 $U$에 대하여, $\mathbb{K}(U) = \mathbb{K}(X)$가 성립한다.
@@ -88,7 +88,7 @@ Rational map $\varphi: X \dashrightarrow Y$가 *dominant*라는 것은 $\varphi$
 :::
 
 ::: 정의 9
-Rational map $\varphi: X \dashrightarrow Y$가 *birational map<sub>쌍유리 사상</sub>*이라는 것은 또다른 rational map $\psi: Y \dashrightarrow X$가 존재하여 $\psi \circ \varphi = \operatorname{id}_X$와 $\varphi \circ \psi = \operatorname{id}_Y$가 (정의되는 곳에서) 성립하는 것이다. 두 variety $X, Y$가 *birationally equivalent<sub>쌍유리 동치</sub>*라는 것은 둘 사이에 birational map이 존재하는 것이다.
+Rational map $\varphi: X \dashrightarrow Y$가 *birational map<sub>쌍유리 사상</sub>*이라는 것은 또다른 rational map $\psi: Y \dashrightarrow X$가 존재하여 $\psi \circ \varphi = \id_X$와 $\varphi \circ \psi = \id_Y$가 (정의되는 곳에서) 성립하는 것이다. 두 variety $X, Y$가 *birationally equivalent<sub>쌍유리 동치</sub>*라는 것은 둘 사이에 birational map이 존재하는 것이다.
 :::
 
 Birationally equivalent한 두 variety들은 "대부분의 점에서" isomorphic하다. 구체적으로, 다음 명제에서 보듯 두 variety의 isomorphic한 열린집합들이 존재한다. 이는 birational equivalence가 isomorphism보다 약하지만 여전히 강력한 관계임을 보여준다.
@@ -103,7 +103,7 @@ Birationally equivalent한 두 variety들은 "대부분의 점에서" isomorphic
 ::: 증명
 우선 $X, Y$가 birationally equivalent하다고 하자. 그럼 birational map $\varphi: X\dashrightarrow Y$의 정의역 $\dom(\varphi)$를 생각하면 $\varphi$가 유도하는 function field의 homomorphism $\varphi^\ast: \mathbb{K}(Y)\rightarrow \mathbb{K}(\dom(\varphi))$가 존재한다. 비슷한 방식으로 $\varphi$의 birational inverse $\psi: Y\dashrightarrow X$는 $\psi^\ast: \mathbb{K}(X)\rightarrow \mathbb{K}(\dom(\psi))$를 정의한다. 이제 [명제 3](#prop3)에 의해 $\mathbb{K}(\dom(\varphi))=\mathbb{K}(X)$, $\mathbb{K}(\dom(\psi))=\mathbb{K}(Y)$이므로 이를 사용하면 $\mathbb{K}(X)\cong \mathbb{K}(Y)$임을 안다.
 
-이제 field isomorphism $\Phi: \mathbb{K}(X) \rightarrow \mathbb{K}(Y)$가 주어졌다 하자. $X$의 임의의 affine open subset $U \subseteq X$에 대하여, coordinate ring $\mathbb{K}[U]$는 $\mathbb{K}(X)$의 finitely generated $\mathbb{K}$-subalgebra이다. 이제 이들의 generator들의 $\Phi$에 대한 image들이 모두 regular이도록 하는 $Y$의 affine open subset $V\subseteq Y$를 잡고, 이를 통해 $\Phi\vert_{\mathbb{K}[U]}:\mathbb{K}[U]\rightarrow \mathbb{K}[V]$를 정의할 수 있다. 한편, 비슷한 방식으로 $\Phi^{-1}$을 이용해 $\Phi^{-1}\vert_{\mathbb{K}[V]}:\mathbb{K}[V]\rightarrow \mathbb{K}[U']$를 잡을 수 있고, 이 때 $U'\subset U$가 성립한다. 이제 $\Phi$가 isomorphism이라는 가정으로부터 $\mathbb{K}[U]=\mathbb{K}[U']$이고 $\mathbb{K}[U]\cong \mathbb{K}[V]$여야 한다.
+이제 field isomorphism $\Phi: \mathbb{K}(X) \rightarrow \mathbb{K}(Y)$가 주어졌다 하자. $X$의 임의의 affine open subset $U \subseteq X$에 대하여, coordinate ring $\mathbb{K}[U]$는 $\mathbb{K}(X)$의 finitely generated $\mathbb{K}$-subalgebra이다. 이제 이들의 generator들의 $\Phi$에 대한 image들이 모두 regular이도록 하는 $Y$의 affine open subset $V\subseteq Y$를 잡고, 이를 통해 $\Phi\vert_{\mathbb{K}[U]}:\mathbb{K}[U]\rightarrow \mathbb{K}[V]$를 정의할 수 있다. 한편, 비슷한 방식으로 $\Phi^{-1}$을 이용해 $\Phi^{-1}\vert_{\mathbb{K}[V]}:\mathbb{K}[V]\rightarrow \mathbb{K}[U']$를 잡을 수 있고, 이 때 $U'\subseteq U$가 성립한다. 이제 $\Phi$가 isomorphism이라는 가정으로부터 $\mathbb{K}[U]=\mathbb{K}[U']$이고 $\mathbb{K}[U]\cong \mathbb{K}[V]$여야 한다.
 
 마지막 조건이 첫째 조건을 함의하는 것은 [명제 3](#prop3)에 의해 자명하다. 
 :::
@@ -115,7 +115,7 @@ $\mathbb{P}^1 \times \mathbb{P}^1$과, $\mathbb{P}^3$에서의 quadric surface $
 
 우선 $\mathbb{P}^1 \times \mathbb{P}^1$의 경우, [명제 3](#prop3)에 의해 각 factor의 product open set $U_0 \times U_0$에서 계산하면 충분하다. 첫 번째 factor $\mathbb{P}^1$의 function field는 [예시 4](#ex4)에서 보았듯 $\mathbb{K}(\t_1)$이고, 두 번째 factor도 마찬가지로 $\mathbb{K}(\t_2)$이다. 그럼 이를 통해 이들의 function field는 $\mathbb{K}(\t_1,\t_2)$로 주어짐을 안다.
 
-이제 quadric surface $Q = V(\x\y - \z\w) \subset \mathbb{P}^3$를 생각하자. 마찬가지로 [명제 3](#prop3)에 의해 affine patch $\{\w \ne 0\}$에서 계산하면 충분하다. 이 patch에서 $\x' = \x/\w$, $\y' = \y/\w$, $\z' = \z/\w$로 두면, 방정식 $\x\y - \z\w = 0$은 $\x'\y' - \z' = 0$이 된다. 따라서 $\z' = \x'\y'$이고, 이 patch의 coordinate ring은 $\mathbb{K}[\x', \y', \z']/(\x'\y' - \z') \cong \mathbb{K}[\x', \y']$이다. [명제 2](#prop2)에 의해 $\mathbb{K}(Q) = \operatorname{Frac}(\mathbb{K}[\x', \y']) = \mathbb{K}(\x', \y') \cong \mathbb{K}(\t_1, \t_2)$이다.
+이제 quadric surface $Q = V(\x\y - \z\w) \subseteq \mathbb{P}^3$를 생각하자. 마찬가지로 [명제 3](#prop3)에 의해 affine patch $\{\w \ne 0\}$에서 계산하면 충분하다. 이 patch에서 $\x' = \x/\w$, $\y' = \y/\w$, $\z' = \z/\w$로 두면, 방정식 $\x\y - \z\w = 0$은 $\x'\y' - \z' = 0$이 된다. 따라서 $\z' = \x'\y'$이고, 이 patch의 coordinate ring은 $\mathbb{K}[\x', \y', \z']/(\x'\y' - \z') \cong \mathbb{K}[\x', \y']$이다. [명제 2](#prop2)에 의해 $\mathbb{K}(Q) = \Frac(\mathbb{K}[\x', \y']) = \mathbb{K}(\x', \y') \cong \mathbb{K}(\t_1, \t_2)$이다.
 
 따라서 $\mathbb{K}(\mathbb{P}^1 \times \mathbb{P}^1) \cong \mathbb{K}(Q) \cong \mathbb{K}(\t_1, \t_2)$이므로, [명제 10](#prop10)에 의해 두 variety는 birationally equivalent하다. 실은, [§사영다양체, ⁋예시 16](/ko/math/algebraic_varieties/projective_varieties#ex16)에서 다루는 Segre embedding $\mathbb{P}^1 \times \mathbb{P}^1 \rightarrow \mathbb{P}^3$, $([x : y], [u : v]) \mapsto [xu : xv : yu : yv]$의 image가 정확히 $V(\x\y - \z\w)$이다. 즉, 이 경우 birational equivalence는 실제로 isomorphism을 이룬다. 이 예시는 birational equivalence가 isomorphism보다 약하지만, isomorphism을 포함함을 보여준다.
 :::
@@ -139,11 +139,11 @@ $$\Bl_{(0,0)} \mathbb{A}^2 = \{((x, y), [u : v]) \in \mathbb{A}^2 \times \mathbb
 ![Blowup](/assets/images/Math/Algebraic_Varieties/Rational_Maps-1.png){:style="width:32em" class="invert" .align-center}
 <cap markdown="1">[Har1] p.29. Fig. 3.</cap>
 
-구체적으로, projection $\pi_1: \operatorname{Bl}_{(0,0)} \mathbb{A}^2 \rightarrow \mathbb{A}^2$를 $\pi((x, y), [u : v]) = (x, y)$로 정의하면, 원점이 아닌 모든 점의 preimage는 한 점이며, 원점의 preimage는 $\mathbb{P}^1$이다. 이를 *exceptional divisor*라 부른다.
+구체적으로, projection $\pi_1: \Bl_{(0,0)} \mathbb{A}^2 \rightarrow \mathbb{A}^2$를 $\pi((x, y), [u : v]) = (x, y)$로 정의하면, 원점이 아닌 모든 점의 preimage는 한 점이며, 원점의 preimage는 $\mathbb{P}^1$이다. 이를 *exceptional divisor*라 부른다.
 
 이로부터 원점을 제외한 평면의 나머지 부분에서는 두 variety $\mathbb{A}^2$와 $\Bl_{(0,0)}\mathbb{A}^2$가 isomorphic하므로 $\pi$는 birational map이다. 
 
-이제 앞서 언급한 rational map $\varphi: \mathbb{A}^2 \dashrightarrow \mathbb{P}^1$, $(x, y) \mapsto [x : y]$를 생각하자. 이는 원점 $(0, 0)$에서 정의되지 않지만, 그러나 blow-up $\operatorname{Bl}_{(0,0)} \mathbb{A}^2$에서 보면 이는 그저 $\mathbb{P}^1$ factor로의 projection $\pr_2$에 불과하며 특히 이는 regular map이다. 이러한 방식으로 우리는 birational map이 정의되지 않는 base point를 해소해줄 수 있다. 
+이제 앞서 언급한 rational map $\varphi: \mathbb{A}^2 \dashrightarrow \mathbb{P}^1$, $(x, y) \mapsto [x : y]$를 생각하자. 이는 원점 $(0, 0)$에서 정의되지 않지만, 그러나 blow-up $\Bl_{(0,0)} \mathbb{A}^2$에서 보면 이는 그저 $\mathbb{P}^1$ factor로의 projection $\pr_2$에 불과하며 특히 이는 regular map이다. 이러한 방식으로 우리는 birational map이 정의되지 않는 base point를 해소해줄 수 있다. 
 :::
 
 ---

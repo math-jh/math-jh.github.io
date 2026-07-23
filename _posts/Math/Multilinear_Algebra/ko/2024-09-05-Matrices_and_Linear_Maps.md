@@ -113,14 +113,14 @@ $$[v \circ u]_\mathcal{D}^\mathcal{B}[x]_\mathcal{B}=[(v \circ u)(x)]_\mathcal{D
 ::: 명제 5
 만일 $I,J$가 유한집합이라면 임의의 linear map $u:M \rightarrow N$에 대하여 다음 식
 
-$$\left([u]_\mathcal{C}^\mathcal{B}\right)^t=\left[u^\ast\right]_{\mathcal{B}^\ast}^{\mathcal{C}^\ast}$$
+$$\left([u]_\mathcal{C}^\mathcal{B}\right)^t=\left[u^t\right]_{\mathcal{B}^\ast}^{\mathcal{C}^\ast}$$
 
 이 성립한다. 여기서 $\mathcal{B}^\ast$와 $\mathcal{C}^\ast$는 각각 $\mathcal{B},\mathcal{C}$의 dual basis이다.
 :::
 ::: 증명
 [§쌍대공간, ⁋명제 8](/ko/math/multilinear_algebra/dual_spaces#prop8)에 의하여 $M$과 $M^{\ast\ast}$를 같은 것으로 취급할 수 있고, 이 때 $\mathcal{B}$는 $\mathcal{B}^\ast$의 dual basis $\mathcal{B}^{\ast\ast}$에 대응되게 된다. 이제
 
-$$\left(\left[u^\ast\right]_{\mathcal{B}^\ast}^{\mathcal{C}^\ast}\right)_{ji}=\langle u^\ast(f_j^\ast), e_i^{\ast\ast}\rangle=\langle e_i, u^\ast(f_j^\ast)\rangle=\langle u(e_i), f_j^\ast\rangle=\left([u]_\mathcal{C}^\mathcal{B}\right)_{ij}=\left(\left([u]_\mathcal{C}^\mathcal{B}\right)^t\right)_{ji} $$
+$$\left(\left[u^t\right]_{\mathcal{B}^\ast}^{\mathcal{C}^\ast}\right)_{ji}=\langle u^t(f_j^\ast), e_i^{\ast\ast}\rangle=\langle e_i, u^t(f_j^\ast)\rangle=\langle u(e_i), f_j^\ast\rangle=\left([u]_\mathcal{C}^\mathcal{B}\right)_{ij}=\left(\left([u]_\mathcal{C}^\mathcal{B}\right)^t\right)_{ji} $$
 
 이므로 원하는 결과를 얻는다.
 :::

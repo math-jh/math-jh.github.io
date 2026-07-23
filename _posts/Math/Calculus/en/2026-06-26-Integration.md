@@ -179,7 +179,7 @@ the *Riemann sum* of the function $f$.
 A Riemann sum approximates the area under the curve by rectangles of width $\Delta x_i$ and height $f(c_i)$. Taking the sample points $c_i$ to be the left endpoint, right endpoint, or points giving the minimum or maximum of the function on each subinterval yields the left and right Riemann sums, or the lower and upper sums, respectively. Intuitively, we expect that as the partition is made arbitrarily fine, this approximation converges to a single value independent of the choice of sample points.
 
 ::: Definition 9
-If there exists a real number $S$ such that for every $\varepsilon > 0$ there is a $\delta > 0$ with $\lvert S(P, f) - S\rvert < \varepsilon$ for every partition and every choice of sample points satisfying $\lVert P\rVert < \delta$, then $f$ is said to be *integrable* on $[a,b]$, and $S$ is called the *definite integral*, written
+If there exists a real number $S$ such that for every $\epsilon > 0$ there is a $\delta > 0$ with $\lvert S(P, f) - S\rvert < \epsilon$ for every partition and every choice of sample points satisfying $\lVert P\rVert < \delta$, then $f$ is said to be *integrable* on $[a,b]$, and $S$ is called the *definite integral*, written
 
 $$\int_a^b f(x)\mathop{dx} = S.$$
 

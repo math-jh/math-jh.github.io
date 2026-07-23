@@ -53,7 +53,7 @@ Intuitively, $\psi_i$ can be thought of as the sum $\sum_{i\in S} D_S$ of bounda
 ::: Proposition 2 (Genus 0 Topological Recursion Relation)
 For fixed three indices $i,j,k$ of $\{1, \ldots, n\}$ ($n\geq 4$), the $\psi$-class $\psi_i$ is represented as the sum of the following boundary divisors:
 
-$$\psi_i=\sum_{\substack{S \subset \{1, \ldots, n\} \\ i \in S, j, k \notin S, \lvert S\rvert \geq 2}} D_S \in H^2(\overline{\mathcal{M}}_{0, n})$$
+$$\psi_i=\sum_{\substack{S \subseteq \{1, \ldots, n\} \\ i \in S, j, k \notin S, \lvert S\rvert \geq 2}} D_S \in H^2(\overline{\mathcal{M}}_{0, n})$$
 
 :::
 

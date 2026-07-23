@@ -163,7 +163,7 @@ Variety $X$ 위의 sheaf $\mathcal{F}$에 대하여, 다음을 정의한다.
 
 1. Sheaf $\mathcal{F}$가 *acyclic<sub>비순환</sub>*이라는 것은 모든 $i > 0$에 대해 $H^i(X, \mathcal{F}) = 0$인 것이다.
 2. $\Sh(X)$의 injective object $\mathcal{F}$를 *injective sheaf<sub>단사층</sub>*라 부른다.
-3. 임의의 열린집합 $V\subset U$에 대하여, restriction map $$\mathcal{F}(U)
+3. 임의의 열린집합 $V\subseteq U$에 대하여, restriction map $$\mathcal{F}(U)
 \rightarrow \mathcal{F}(V)$$가 surjective라면 $\mathcal{F}$를 *flasque sheaf*라 부른다.
 :::
 
@@ -174,19 +174,19 @@ Injective sheaf $\mathcal{F}$는 flasque이다.
 :::
 
 ::: 증명
-정의에 의해 $\mathcal{F}$가 injective라는 것은 임의의 monomorphism $\mathcal{A} \hookrightarrow \mathcal{B}$에 대해 $\Hom_{\Sh(X)}(\mathcal{B}, \mathcal{F}) \rightarrow \Hom_{\Sh(X)}(\mathcal{A}, \mathcal{F})$가 surjective인 것이다. ([\[호몰로지 대수학\] §분해, ⁋정의 1](/ko/math/homological_algebra/resolutions#def1)) 이제 임의의 열린집합 $V \subset U \subset X$에 대해 restriction $\mathcal{F}(U) \rightarrow \mathcal{F}(V)$가 surjective임을 보이자.
+정의에 의해 $\mathcal{F}$가 injective라는 것은 임의의 monomorphism $\mathcal{A} \hookrightarrow \mathcal{B}$에 대해 $\Hom_{\Sh(X)}(\mathcal{B}, \mathcal{F}) \rightarrow \Hom_{\Sh(X)}(\mathcal{A}, \mathcal{F})$가 surjective인 것이다. ([\[호몰로지 대수학\] §분해, ⁋정의 1](/ko/math/homological_algebra/resolutions#def1)) 이제 임의의 열린집합 $V \subseteq U \subseteq X$에 대해 restriction $\mathcal{F}(U) \rightarrow \mathcal{F}(V)$가 surjective임을 보이자.
 
 이 map은 sheaf morphism이 아니라 abelian group들 사이의 morphism이고, 우리가 갖고 있는 도구는 sheaf morphism이므로 이 조건을 sheaf morphism으로 돌려놔야 한다. 이를 위해 open embedding
 
 $$i^U: U \hookrightarrow X,\qquad i^V: V \hookrightarrow X$$
 
-그리고 이들의 extension by zero로 얻어지는 sheaf들 $i^U_!\mathbb{Z}_U, i^V_!\mathbb{Z}_V$를 도입하자. 여기서 $\mathbb{Z}_U, \mathbb{Z}_V$는 각각 constant sheaf들이며, 가정에 의해 $V \subset U$이므로 natural한 monomorphism $i^V_!\mathbb{Z}_V \rightarrow i^U_!\mathbb{Z}_U$가 존재한다.
+그리고 이들의 extension by zero로 얻어지는 sheaf들 $i^U_!\mathbb{Z}_U, i^V_!\mathbb{Z}_V$를 도입하자. 여기서 $\mathbb{Z}_U, \mathbb{Z}_V$는 각각 constant sheaf들이며, 가정에 의해 $V \subseteq U$이므로 natural한 monomorphism $i^V_!\mathbb{Z}_V \rightarrow i^U_!\mathbb{Z}_U$가 존재한다.
 
 우선 $\Hom_{\Sh(X)}(i^U_!\mathbb{Z}_U, \mathcal{F}) \cong \mathcal{F}(U)$가 성립함을 확인하자. Extension by zero $i^U_!$는 restriction $\mathcal{G} \mapsto \mathcal{G}\vert_U$의 left adjoint이므로 ([\[위상수학\] §층, ⁋예시 14](/ko/math/topology/sheaves#ex14)),
 
 $$\Hom_{\Sh(X)}(i^U_!\mathbb{Z}_U, \mathcal{F}) \cong \Hom_{\Sh(U)}(\mathbb{Z}_U, \mathcal{F}\vert_U)$$
 
-이 성립한다. 이제 $\mathbb{Z}_U$는 $U$ 위의 constant sheaf이므로 임의의 열린집합 $W \subset U$에 대해 $\mathbb{Z}_U(W) = \mathbb{Z}$이며, 모든 section은 상수 함수의 restriction으로 주어진다. 따라서 sheaf morphism $\varphi: \mathbb{Z}_U \rightarrow \mathcal{F}\vert_U$는 global section의 image $\varphi_U(1) \in \mathcal{F}(U)$에 의해 완전히 결정된다. 역으로, 임의의 $s \in \mathcal{F}(U)$에 대해 각 $W \subset U$에서 $\mathbb{Z}_U(W) \rightarrow \mathcal{F}(W),\; n \mapsto n \cdot s\vert_W$로 정의하면 well-defined된 sheaf morphism이 된다. 따라서
+이 성립한다. 이제 $\mathbb{Z}_U$는 $U$ 위의 constant sheaf이므로 임의의 열린집합 $W \subseteq U$에 대해 $\mathbb{Z}_U(W) = \mathbb{Z}$이며, 모든 section은 상수 함수의 restriction으로 주어진다. 따라서 sheaf morphism $\varphi: \mathbb{Z}_U \rightarrow \mathcal{F}\vert_U$는 global section의 image $\varphi_U(1) \in \mathcal{F}(U)$에 의해 완전히 결정된다. 역으로, 임의의 $s \in \mathcal{F}(U)$에 대해 각 $W \subseteq U$에서 $\mathbb{Z}_U(W) \rightarrow \mathcal{F}(W),\; n \mapsto n \cdot s\vert_W$로 정의하면 well-defined된 sheaf morphism이 된다. 따라서
 
 $$\Hom_{\Sh(U)}(\mathbb{Z}_U, \mathcal{F}\vert_U) \cong \Hom_{\Ab}(\mathbb{Z}, \mathcal{F}(U)) \cong \mathcal{F}(U)$$
 
@@ -282,7 +282,7 @@ $$\Delta_X\hookrightarrow X\times X$$
 이번 섹션에서 살펴볼 Godement resolution 또한 같은 문제에서 출발한다. 즉 sheaf cohomology를 일반적으로 계산하는 것은 매우 복잡한 일이므로, [정의 1](#def1)이 개념적으로 깔끔한 것에 비해 실용성은 다소 떨어진다는 것이다. 우리는 이제 구체적인 resolution을 하나 정의한다. 이는 injective resolution은 아니지만, flasque resolution이며 우리의 사용에서는 이것으로 충분하다.
 
 ::: 정의 13
-위상공간 $X$ 위의 sheaf $\mathcal{F}$에 대하여, *Godement sheaf<sub>고드망 층</sub>* $C^0(\mathcal{F})$를 각 열린집합 $U \subset X$에 대하여
+위상공간 $X$ 위의 sheaf $\mathcal{F}$에 대하여, *Godement sheaf<sub>고드망 층</sub>* $C^0(\mathcal{F})$를 각 열린집합 $U \subseteq X$에 대하여
 
 $$C^0(\mathcal{F})(U) = \prod_{x \in U} \mathcal{F}_x$$
 
@@ -298,7 +298,7 @@ Godement sheaf $C^0(\mathcal{F})$는 flasque sheaf이다. 나아가, $\mathcal{F
 :::
 
 ::: 증명
-우선 주어진 sheaf가 flasque임을 보이자. 열린집합 $V \subset U$에 대하여, restriction map $C^0(\mathcal{F})(U) = \prod_{x \in U} \mathcal{F}_x \rightarrow \prod_{x \in V} \mathcal{F}_x = C^0(\mathcal{F})(V)$는 projection이므로 surjective이다. 따라서 $C^0(\mathcal{F})$는 flasque이다.
+우선 주어진 sheaf가 flasque임을 보이자. 열린집합 $V \subseteq U$에 대하여, restriction map $C^0(\mathcal{F})(U) = \prod_{x \in U} \mathcal{F}_x \rightarrow \prod_{x \in V} \mathcal{F}_x = C^0(\mathcal{F})(V)$는 projection이므로 surjective이다. 따라서 $C^0(\mathcal{F})$는 flasque이다.
 
 Exactness는 stalk functor $\mathcal{F} \mapsto \mathcal{F}_x$가 exact이고 $C^0(\mathcal{F})$는 stalk들의 product에 불과하므로 자명하다.
 :::
@@ -338,7 +338,7 @@ $i$에 대한 induction으로 진행한다. 우선 $i=1$인 경우를 보이자.
 
 $$0 \rightarrow \mathcal{F}\rightarrow\mathcal{I}\rightarrow\mathcal{Q}\rightarrow0$$
 
-을 생각한다. 우리 주장은 $\mathcal{Q}$가 flasque라는 것이며, 이는 임의의 열린집합 $V\subset U$에 대하여 다음의 commutative diagram
+을 생각한다. 우리 주장은 $\mathcal{Q}$가 flasque라는 것이며, 이는 임의의 열린집합 $V\subseteq U$에 대하여 다음의 commutative diagram
 
 ![Commutative diagram](/assets/images/Math/Algebraic_Varieties/Sheaf_Cohomology-1.svg){:style="width:23.07em" class="invert" .align-center}
 
@@ -514,11 +514,11 @@ $$0 \rightarrow E_2^{1,0} \rightarrow H^1(X, \mathcal{F}) \rightarrow E_2^{0,1} 
 
 이제 증명을 완성하기 위해 $p+q = 2$인 성분 $E_2^{2,0}$, $E_2^{1,1}$, $E_2^{0,2}$을 보자. 마찬가지 이유로 $d_2 : E_2^{0,1} \rightarrow E_2^{2,0}$가 유일한 비자명한 differential이며, 이 differential이 정의하는 $E_3$ page에서
 
-$$E_3^{0,2} = \ker(d_2 : E_2^{0,2} \rightarrow E_2^{2,1}), \qquad E_3^{2,0} = \operatorname{coker}(d_2 : E_2^{0,1} \rightarrow E_2^{2,0})$$
+$$E_3^{0,2} = \ker(d_2 : E_2^{0,2} \rightarrow E_2^{2,1}), \qquad E_3^{2,0} = \coker(d_2 : E_2^{0,1} \rightarrow E_2^{2,0})$$
 
 이고, 다시 degree를 분석하면 $E_3^{p,q} = E_\infty^{p,q}$이므로
 
-$$E_\infty^{2,0} = E_3^{2,0} = \operatorname{coker}(d_2 : E_2^{0,1} \rightarrow E_2^{2,0})$$
+$$E_\infty^{2,0} = E_3^{2,0} = \coker(d_2 : E_2^{0,1} \rightarrow E_2^{2,0})$$
 
 이다. 우리는 지금까지 exact sequence
 
@@ -526,7 +526,7 @@ $$0 \rightarrow E_2^{1,0} \rightarrow H^1(X, \mathcal{F}) \rightarrow E_2^{0,1} 
 
 가 존재함을 보였으며, 위의 계산에서
 
-$$E_\infty^{2,0} = E_3^{2,0} = \operatorname{coker}(d_2: E_2^{0,1} \rightarrow E_2^{2,0})$$
+$$E_\infty^{2,0} = E_3^{2,0} = \coker(d_2: E_2^{0,1} \rightarrow E_2^{2,0})$$
 
 이므로 filtration을 통해 $F^2 H^2 \hookrightarrow H^2(X, \mathcal{F})$로 넣어주면
 
@@ -555,27 +555,27 @@ $\mathcal{F}$의 Godement resolution $\mathcal{G}^\bullet(\mathcal{F})$을 잡�
 
 ## Line Bundle의 Classification
 
-앞서 우리는 line bundle이 transition function $g_{ij} \in \mathcal{O}_X^\ast(U_i \cap U_j)$들로 결정된다는 것을 보았다 ([§선다발과 벡터다발, ⁋명제 2](/ko/math/algebraic_varieties/line_bundles#prop2)). Transition function들은 cocycle condition $g_{ij}g_{jk} = g_{ik}$을 만족하는데, 이는 multiplicative notation으로 쓴 Čech 1-cocycle condition에 정확히 해당한다. 또한 line bundle의 isomorphism은 각 $U_i$ 위에서의 함수 $h_i \in \mathcal{O}_X^\ast(U_i)$에 의해 $g_{ij} \mapsto h_i g_{ij} h_j^{-1}$로 transition function이 변하는 것이므로, 이 역시 Čech 1-coboundary에 의한 동치관계와 일치한다. 즉, line bundle의 isomorphism class는 $\check{H}^1(X, \mathcal{O}_X^\ast)$의 원소와 자연스럽게 대응된다.
+앞서 우리는 line bundle이 transition function $g_{ij} \in \mathcal{O}_X^\times(U_i \cap U_j)$들로 결정된다는 것을 보았다 ([§선다발과 벡터다발, ⁋명제 2](/ko/math/algebraic_varieties/line_bundles#prop2)). Transition function들은 cocycle condition $g_{ij}g_{jk} = g_{ik}$을 만족하는데, 이는 multiplicative notation으로 쓴 Čech 1-cocycle condition에 정확히 해당한다. 또한 line bundle의 isomorphism은 각 $U_i$ 위에서의 함수 $h_i \in \mathcal{O}_X^\times(U_i)$에 의해 $g_{ij} \mapsto h_i g_{ij} h_j^{-1}$로 transition function이 변하는 것이므로, 이 역시 Čech 1-coboundary에 의한 동치관계와 일치한다. 즉, line bundle의 isomorphism class는 $\check{H}^1(X, \mathcal{O}_X^\times)$의 원소와 자연스럽게 대응된다.
 
-이 관찰을 엄밀하게 정리하면 다음을 얻는다. 여기서 주의할 점은 $\mathcal{O}_X^\ast$가 곱셈적 구조를 갖는 sheaf of (abelian) groups이므로, Čech cohomology에서 coboundary 관계가 덧셈적이 아닌 곱셈적으로 표현된다는 것이다. 구체적으로 1-coboundary는 $(g_{ij}) = (h_i \cdot h_j^{-1})$의 꼴이다.
+이 관찰을 엄밀하게 정리하면 다음을 얻는다. 여기서 주의할 점은 $\mathcal{O}_X^\times$가 곱셈적 구조를 갖는 sheaf of (abelian) groups이므로, Čech cohomology에서 coboundary 관계가 덧셈적이 아닌 곱셈적으로 표현된다는 것이다. 구체적으로 1-coboundary는 $(g_{ij}) = (h_i \cdot h_j^{-1})$의 꼴이다.
 
 ::: 명제 22
-$\check{H}^1(X, \mathcal{O}_X^\ast) \cong \Pic(X)$이다.
+$\check{H}^1(X, \mathcal{O}_X^\times) \cong \Pic(X)$이다.
 :::
 
 ::: 증명
-우선 $\check{H}^1(X, \mathcal{O}_X^\ast)$에서 $\Pic(X)$로의 map을 정의한다. Čech 1-cocycle $(g_{ij}) \in \check{Z}^1(\mathcal{U}, \mathcal{O}_X^\ast)$가 주어졌다 하고, 이를 transition function으로 하는 line bundle $\mathcal{L}$을 만들자. 이를 위해 우리는 각 $U_i$ 위에서는 trivial bundle $U_i \times \mathbb{A}^1$을 잡고, $U_i \cap U_j$ 위에서는 $(p, t) \mapsto (p, g_{ij}(p)t)$으로 붙여준다. 이 때, cocycle condition $g_{ij}g_{jk} = g_{ik}$에 의해 이 gluing이 consistent하므로 well-defined line bundle이 얻어진다.
+우선 $\check{H}^1(X, \mathcal{O}_X^\times)$에서 $\Pic(X)$로의 map을 정의한다. Čech 1-cocycle $(g_{ij}) \in \check{Z}^1(\mathcal{U}, \mathcal{O}_X^\times)$가 주어졌다 하고, 이를 transition function으로 하는 line bundle $\mathcal{L}$을 만들자. 이를 위해 우리는 각 $U_i$ 위에서는 trivial bundle $U_i \times \mathbb{A}^1$을 잡고, $U_i \cap U_j$ 위에서는 $(p, t) \mapsto (p, g_{ij}(p)t)$으로 붙여준다. 이 때, cocycle condition $g_{ij}g_{jk} = g_{ik}$에 의해 이 gluing이 consistent하므로 well-defined line bundle이 얻어진다.
 
 한편, coboundary에 의해 동치인 두 cocycle $g_{ij}^{\mathcal{L}} = h_i g_{ij}^{\mathcal{M}} h_j^{-1}$이 주어지면, 이에 대응하는 두 line bundle 사이의 isomorphism을 $\varphi_i: \mathcal{L}\vert_{U_i} \rightarrow \mathcal{M}\vert_{U_i}$, $v \mapsto h_i^{-1} v$로 정의할 수 있다. 그러면 $\varphi_i$와 $\varphi_j$가 $U_i \cap U_j$에서 compatible임은
 
 $$g_{ij}^{\mathcal{M}} \cdot \varphi_j(v) = g_{ij}^{\mathcal{M}} h_j^{-1} v = h_i^{-1} (h_i g_{ij}^{\mathcal{M}} h_j^{-1}) v = h_i^{-1} g_{ij}^{\mathcal{L}} v = \varphi_i(g_{ij}^{\mathcal{L}} v)$$
 
-에서 확인할 수 있으며, 따라서 map $\check{H}^1(\mathcal{U}, \mathcal{O}_X^\ast) \rightarrow \Pic(X)$가 well-defined이다.
+에서 확인할 수 있으며, 따라서 map $\check{H}^1(\mathcal{U}, \mathcal{O}_X^\times) \rightarrow \Pic(X)$가 well-defined이다.
 
-역으로, 임의의 line bundle $\mathcal{L}$은 [§선다발과 벡터다발, ⁋정의 1](/ko/math/algebraic_varieties/line_bundles#def1)에 의해 적당한 open cover $\mathcal{U}$ 위에서 transition function $g_{ij}$로 표현되며, 이는 Čech 1-cocycle을 이룬다. Line bundle isomorphism은 정확히 coboundary에 의한 동치관계에 해당하므로, 이 map의 kernel은 coboundary들이다. 따라서 $\check{H}^1(\mathcal{U}, \mathcal{O}_X^\ast) \rightarrow \Pic(X)$는 injective이다. 이제 direct limit을 취하면 $\check{H}^1(X, \mathcal{O}_X^\ast) \cong \Pic(X)$를 얻는다.
+역으로, 임의의 line bundle $\mathcal{L}$은 [§선다발과 벡터다발, ⁋정의 1](/ko/math/algebraic_varieties/line_bundles#def1)에 의해 적당한 open cover $\mathcal{U}$ 위에서 transition function $g_{ij}$로 표현되며, 이는 Čech 1-cocycle을 이룬다. Line bundle isomorphism은 정확히 coboundary에 의한 동치관계에 해당하므로, 이 map의 kernel은 coboundary들이다. 따라서 $\check{H}^1(\mathcal{U}, \mathcal{O}_X^\times) \rightarrow \Pic(X)$는 injective이다. 이제 direct limit을 취하면 $\check{H}^1(X, \mathcal{O}_X^\times) \cong \Pic(X)$를 얻는다.
 :::
 
-이 명제는 line bundle의 classification이 cohomology의 계산으로 귀결된다는 것을 보여준다. 즉, $\Pic(X)$의 원소를 분류하는 문제는 이제 $\mathcal{O}_X^\ast$-valued Čech 1-cocycle을 분류하는 문제가 되며, 이는 어쨌든 명시적인 계산이 가능하다는 점에서 고무적이다. 다음 글 [§사영공간의 코호몰로지](/ko/math/algebraic_varieties/cohomology_of_projective_spaces)에서 우리는 $\mathbb{P}^n$ 위의 line bundle $\mathcal{O}(d)$의 cohomology를 계산한다.
+이 명제는 line bundle의 classification이 cohomology의 계산으로 귀결된다는 것을 보여준다. 즉, $\Pic(X)$의 원소를 분류하는 문제는 이제 $\mathcal{O}_X^\times$-valued Čech 1-cocycle을 분류하는 문제가 되며, 이는 어쨌든 명시적인 계산이 가능하다는 점에서 고무적이다. 다음 글 [§사영공간의 코호몰로지](/ko/math/algebraic_varieties/cohomology_of_projective_spaces)에서 우리는 $\mathbb{P}^n$ 위의 line bundle $\mathcal{O}(d)$의 cohomology를 계산한다.
 
 ---
 

@@ -110,7 +110,7 @@ $$U = \bigcup_i (D(f_i) \cap X)$$
 :::
 
 ::: 증명
-Zariski topology의 정의에 의하여, 적당한 ideal $\mathfrak{a}\subset \mathbb{K}[\x_1,\ldots, \x_n]$가 존재하여 
+Zariski topology의 정의에 의하여, 적당한 ideal $\mathfrak{a}\subseteq \mathbb{K}[\x_1,\ldots, \x_n]$가 존재하여 
 
 $$X\setminus U=Z(\mathfrak{a})\cap X$$
 
@@ -238,8 +238,8 @@ $$X\rightarrow \mathbb{K};\qquad x\mapsto f(x)$$
 ::: 명제 12
 Affine variety $X \subseteq \mathbb{A}^n$이 주어졌다 하자. 그럼 coordinate ring $\mathbb{K}[X]$의 prime ideal들과 $X$의 closed subvariety들 사이에는 다음과 같은 일대일대응이 존재한다.
 
-1. Prime ideal $\mathfrak{p} \subset \mathbb{K}[X]$에 대하여, $\tilde{\mathfrak{p}}$를 $\mathfrak{p}$의 $\mathbb{K}[\x_1, \ldots, \x_n]$에서의 preimage라 하면, $Z(\tilde{\mathfrak{p}}) \subseteq X$는 $X$의 closed subvariety이다.
-2. Closed subvariety $Y \subseteq X$에 대하여, $I(Y)/I(X) \subset \mathbb{K}[X]$는 prime ideal이다.
+1. Prime ideal $\mathfrak{p} \subseteq \mathbb{K}[X]$에 대하여, $\tilde{\mathfrak{p}}$를 $\mathfrak{p}$의 $\mathbb{K}[\x_1, \ldots, \x_n]$에서의 preimage라 하면, $Z(\tilde{\mathfrak{p}}) \subseteq X$는 $X$의 closed subvariety이다.
+2. Closed subvariety $Y \subseteq X$에 대하여, $I(Y)/I(X) \subseteq \mathbb{K}[X]$는 prime ideal이다.
 
 이들 사이의 대응 $\mathfrak{p} \mapsto Z(\tilde{\mathfrak{p}})$와 $Y \mapsto I(Y)/I(X)$는 서로 역대응이다.
 :::

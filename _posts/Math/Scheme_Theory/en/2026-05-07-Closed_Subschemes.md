@@ -20,7 +20,7 @@ $$(\Spec\epsilon)^\sharp: \mathcal{O}_{\Spec A} \rightarrow (\Spec \epsilon)_\as
 
 obtained from $\epsilon: A \rightarrow A_f$, yielding
 
-$$(\Spec\epsilon \vert^{D(f)})^\sharp: \mathcal{O}_{D(f)} \rightarrow (\Spec\epsilon\vert^{D(f)})_\ast \mathcal{O}_{\Spec A_f}$$
+$$(\Spec\epsilon \lvert^{D(f)})^\sharp: \mathcal{O}_{D(f)} \rightarrow (\Spec\epsilon\rvert^{D(f)})_\ast \mathcal{O}_{\Spec A_f}$$
 
 and from the fact that $\Spec A_f$ is an open subset of $\Spec A$ we could conclude that this is an isomorphism.
 
@@ -248,7 +248,7 @@ Geometrically, $\Spec\phi$ corresponds to the tangent vector $(b_1,\ldots, b_n)$
 
 In the above example we assumed that $X$ is an affine scheme, but $\varphi^\sharp:\mathcal{O}_Y \rightarrow \varphi_\ast \mathcal{O}_X$ is anyway the information contained in the scheme morphism $\varphi$, so there is nothing new here. The difference appears when we generalize $Y$ to a general scheme: given any affine open subset $V=\Spec B$ of $Y$, the ideal
 
-$$\mathcal{I}(V):=\ker(\varphi^\sharp(V))\subset B$$
+$$\mathcal{I}(V):=\ker(\varphi^\sharp(V))\subseteq B$$
 
 defines a closed subscheme of $V$, but whether these can be glued together to form a single closed subscheme defined on all of $Y$ is a different matter. Of course we will use [Proposition 6](#prop6) for this, and this assumption is satisfied in particular when $X$ is a reduced scheme or $\varphi$ is quasi-compact.
 
@@ -299,7 +299,7 @@ More generally, consider any scheme $Y$ and a closed subset $X$ of $Y$. Then for
 For any closed subset $X$ of a scheme $Y$, the scheme structure defined above on $X$ is called the *reduced scheme structure*, and we write it as $X^\red$.
 :::
 
-Then in particular when $X=Y$, for any affine subset $\Spec B$ we can write $\Spec B=Z(0)$, so $\mathfrak{b}=\sqrt{(0)}$ and $B/\sqrt{(0)}$ becomes a reduced ring. On the other hand, the sheaf morphism
+Then in particular when $X=Y$, for any affine subset $\Spec B$ we can write $\Spec B=Z(0)$, so $\mathfrak{b}=\mathfrak{N}(B)$ and $B/\mathfrak{N}(B)$ becomes a reduced ring. On the other hand, the sheaf morphism
 
 $$\iota^{-1}\mathcal{O}_{\Spec A} \rightarrow (\Spec\pi\vert^{Z(\mathfrak{a})})_\ast \mathcal{O}_{\Spec A/\mathfrak{a}}$$
 

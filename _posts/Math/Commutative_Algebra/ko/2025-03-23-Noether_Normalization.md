@@ -26,7 +26,7 @@ $$d_1>d_2>\cdots>d_m>0$$
 
 을 만족하는 자연수들과, $\dim \mathfrak{a}_i=d_i$를 만족하는 $A$의 ideal들의 descending chain
 
-$$\mathfrak{a}_1\subset \mathfrak{a}_2\subset\cdots\subset \mathfrak{a}_m$$
+$$\mathfrak{a}_1\subseteq \mathfrak{a}_2\subseteq\cdots\subseteq \mathfrak{a}_m$$
 
 이 주어졌다 하자. 그럼 $A$의 적당한 subring $B\cong \mathbb{K}[\x_1,\ldots, \x_d]$가 존재하여, $A$가 $B$-module로서 finitely generated이고 다음 식
 
@@ -49,11 +49,11 @@ Field $\mathbb{K}$와, non-constant polynomial $f\in B=\mathbb{K}[\x_1,\ldots, \
 ::: 증명 (정리 1)
 우선 $A$가 finitely generated $\mathbb{K}$-algebra이므로 $A=\mathbb{K}[\y_1,\ldots, \y_r]/\mathfrak{a}$라 적을 수 있다. 그럼 주어진 조건을 만족하는 ideal들의 chain이 주어졌다 하면, 이들의 $\mathbb{K}[\y_1,\ldots, \y_r]$에서의 preimage들로 이루어진 chain
 
-$$\tilde{\mathfrak{a}}_1\subset \tilde{\mathfrak{a}}_2\subset\cdots\subset  \tilde{\mathfrak{a}}_m$$
+$$\tilde{\mathfrak{a}}_1\subseteq \tilde{\mathfrak{a}}_2\subseteq\cdots\subseteq  \tilde{\mathfrak{a}}_m$$
 
 를 생각한 후 $\mathfrak{a}_0=\mathfrak{a}$를 끼워넣어 이를 $\mathbb{K}[\y_1,\ldots, \y_r]$에서의 ideal들의 descending chain
 
-$$\mathfrak{a}\subset \tilde{\mathfrak{a}}_1\subset \tilde{\mathfrak{a}}_2\subset\cdots\subset  \tilde{\mathfrak{a}}_m$$
+$$\mathfrak{a}\subseteq \tilde{\mathfrak{a}}_1\subseteq \tilde{\mathfrak{a}}_2\subseteq\cdots\subseteq  \tilde{\mathfrak{a}}_m$$
 
 으로 볼 수 있으므로 주어진 주장을 polynomial ring $A=\mathbb{K}[\y_1,\ldots, \y_r]$에 대해서만 보이면 충분하다. 이 경우, [§매개계, ⁋따름정리 11](/ko/math/commutative_algebra/system_of_parameters#cor11)에 의하여 $r=d$여야 한다. 
 
@@ -95,7 +95,7 @@ $$\dim A/\mathfrak{p}+\operatorname{ht}\mathfrak{p}=\dim A$$
 
 이제 polynomial ring $B=\mathbb{K}[\x_1,\ldots, \x_n]$에서 ideal $(\x_{d+1},\ldots, \x_n)$의 height를 계산하자. Chain
 
-$$(0)\subset(\x_n)\subset(\x_{n-1},\x_n)\subset\cdots\subset(\x_{d+1},\ldots, \x_n)$$
+$$(0)\subseteq(\x_n)\subseteq(\x_{n-1},\x_n)\subseteq\cdots\subseteq(\x_{d+1},\ldots, \x_n)$$
 
 은 이 ideal의 height가 적어도 $n-d$임을 보여주며, 몫환 $B/(\x_{d+1},\ldots, \x_n)\cong\mathbb{K}[\x_1,\ldots, \x_d]$가 $d$차원이므로 ([§매개계, ⁋따름정리 11](/ko/math/commutative_algebra/system_of_parameters#cor11)) 부등식 $\dim+\operatorname{ht}\leq n$으로 height는 기껏해야 $n-d$이다. 따라서 $\operatorname{ht}_B(\x_{d+1},\ldots, \x_n)=n-d$이며, 결국 $\operatorname{ht}\mathfrak{p}=n-d=\dim A-\dim A/\mathfrak{p}$이다.
 :::

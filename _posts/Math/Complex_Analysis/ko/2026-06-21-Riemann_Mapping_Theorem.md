@@ -125,7 +125,7 @@ $$f(z_0) = 0, \qquad f'(z_0) > 0$$
 ::: 증명
 $f, g : \Omega \rightarrow \mathbb{D}$이 모두 normalization 조건을 만족하는 holomorphic 전단사사상이라 하자. 합성 $h = g \circ f^{-1} : \mathbb{D} \rightarrow \mathbb{D}$은 holomorphic 전단사사상이고 그 역사상도 holomorphic이므로 ([§편각원리와 Rouché 정리, ⁋따름정리 9](/ko/math/complex_analysis/argument_principle#cor9)), $\mathbb{D}$의 holomorphic automorphism이다. 또 $f(z_0) = g(z_0) = 0$이므로 $h(0) = g(f^{-1}(0)) = g(z_0) = 0$이라 $h$은 원점을 고정한다. 원점을 고정하는 단위원판의 automorphism은 회전뿐이므로 ([§영점과 일치정리, ⁋예시 8](/ko/math/complex_analysis/zeros_and_identity_theorem#ex8)), 어떤 실수 $\theta$에 대해 $h(w) = e^{i\theta}w$이다.
 
-이제 normalization의 둘째 조건을 쓴다. $g = h \circ f$이므로 연쇄법칙으로 $g'(z_0) = h'(f(z_0))\,f'(z_0) = h'(0)\,f'(z_0) = e^{i\theta}f'(z_0)$이다. 가정에서 $f'(z_0) > 0$과 $g'(z_0) > 0$이 모두 양의 실수이므로, $e^{i\theta} = g'(z_0)/f'(z_0)$도 양의 실수이고 절댓값이 $1$이라 $e^{i\theta} = 1$이다. 따라서 $h = \mathrm{id}$이고 $g = f$이다.
+이제 normalization의 둘째 조건을 쓴다. $g = h \circ f$이므로 연쇄법칙으로 $g'(z_0) = h'(f(z_0))\,f'(z_0) = h'(0)\,f'(z_0) = e^{i\theta}f'(z_0)$이다. 가정에서 $f'(z_0) > 0$과 $g'(z_0) > 0$이 모두 양의 실수이므로, $e^{i\theta} = g'(z_0)/f'(z_0)$도 양의 실수이고 절댓값이 $1$이라 $e^{i\theta} = 1$이다. 따라서 $h = \id$이고 $g = f$이다.
 :::
 
 유일성의 논증은 두 normalization 사상의 차이가 원점을 고정하는 automorphism, 곧 회전으로 환원되고, 도함수가 양의 실수라는 조건이 그 회전을 항등으로 못 박음을 보인다. Normalization 조건 $f'(z_0) > 0$은 사상을 회전의 자유도만큼 고정하는 위상고정 장치인 셈이다. 남은 것은 존재성이며, 이를 위해 단위원판으로 가는 단사 holomorphic 사상들의 모임을 도입한다.
@@ -165,7 +165,7 @@ $$\psi(z) = \frac{r}{2\,(\varphi(z) + w_0)}$$
 
 $$f = \varphi_b \circ \psi : \Omega \rightarrow \mathbb{D}$$
 
-을 정의하면, $f$은 holomorphic이고 단사이며 ($\varphi_b$이 $\mathbb{D}$의 automorphism이므로) $f(z_0) = \varphi_b(b) = 0$이다. 따라서 $f \in \mathcal{F}$이고 $\mathcal{F} \neq \varnothing$이다.
+을 정의하면, $f$은 holomorphic이고 단사이며 ($\varphi_b$이 $\mathbb{D}$의 automorphism이므로) $f(z_0) = \varphi_b(b) = 0$이다. 따라서 $f \in \mathcal{F}$이고 $\mathcal{F} \neq \emptyset$이다.
 :::
 
 보조정리 7은 단순연결성을 두 곳에서 쓴다. 하나는 영점 없는 holomorphic function $z - a$의 holomorphic 제곱근을 뽑는 데이고, 다른 하나는 그 제곱근이 image에서 한 원판을 통째로 비껴가게 만드는 데이다. 제곱근의 두 가지 $\pm\varphi$ 가운데 한쪽만 image에 나타난다는 사실이 핵심 장치로, 이 빈 원판을 inversion으로 단위원판 안에 가두어 $\mathcal{F}$의 첫 원소를 짓는다. Holomorphic 제곱근의 존재 자체가 단순연결성의 직접적 귀결이므로, 이 보조정리에서 정리의 위상적 가정이 본질적으로 소비된다. 이제 비어 있지 않은 $\mathcal{F}$ 위에서 극값사상을 추출한다.

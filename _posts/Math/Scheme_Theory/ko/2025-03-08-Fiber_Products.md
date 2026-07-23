@@ -300,7 +300,7 @@ $$\rho_Y^{-1}(y)=(X\times_ZY)\times_Y\Spec \kappa(y)\cong X\times_Z\Spec \kappa(
 
 를 얻는다. 또 [보조정리 3](#lem3)에 의하여, $\varphi^{-1}(z)$의 affine open subset $\Spec R$에 대하여 $\Spec (R\otimes_{\kappa(z)}\kappa(y))$는 $\rho_Y^{-1}(y)$의 열린집합이며 이러한 것들이 $\rho_Y^{-1}(y)$를 덮는다.
 
-$\varphi$가 surjective라 하자. 우선 $\varphi^{-1}(z)$가 공집합이 아님을 확인한다. $\varphi(x)=z$인 $x\in X$를 택하고, $x$를 포함하며 $\varphi$에 의해 $\Spec A$ 안으로 들어가는 affine open subset $\Spec B\subseteq X$와 이에 대응되는 ring homomorphism $\phi:A \rightarrow B$를 택하자. $x$와 $z$에 대응되는 prime ideal을 각각 $\mathfrak{q}\subset B$, $\mathfrak{p}\subset A$라 하면 $\phi^{-1}(\mathfrak{q})=\mathfrak{p}$이고, [보조정리 10](#lem10)과 localization의 성질로부터
+$\varphi$가 surjective라 하자. 우선 $\varphi^{-1}(z)$가 공집합이 아님을 확인한다. $\varphi(x)=z$인 $x\in X$를 택하고, $x$를 포함하며 $\varphi$에 의해 $\Spec A$ 안으로 들어가는 affine open subset $\Spec B\subseteq X$와 이에 대응되는 ring homomorphism $\phi:A \rightarrow B$를 택하자. $x$와 $z$에 대응되는 prime ideal을 각각 $\mathfrak{q}\subseteq B$, $\mathfrak{p}\subseteq A$라 하면 $\phi^{-1}(\mathfrak{q})=\mathfrak{p}$이고, [보조정리 10](#lem10)과 localization의 성질로부터
 
 $$B\otimes_A\kappa(\mathfrak{p})\cong (B/\mathfrak{p}B)_\mathfrak{p}$$
 

@@ -68,7 +68,7 @@ $$
 이제 holomorphic transition function을 갖는 manifold를 정의한다.
 
 ::: 정의 3
-$M$을 topological manifold라 하자. $M$ 위의 *holomorphic atlas<sub>정칙 좌표계 모임</sub>*는 차트들의 모임 $\{(U_\alpha, \varphi_\alpha)\}$로서, 각 $\varphi_\alpha : U_\alpha \rightarrow \varphi_\alpha(U_\alpha) \subseteq \mathbb{C}^n$이 homeomorphism이고 $\bigcup_\alpha U_\alpha = M$이며, $U_\alpha \cap U_\beta \neq \varnothing$일 때마다 *transition map<sub>전이함수</sub>*
+$M$을 topological manifold라 하자. $M$ 위의 *holomorphic atlas<sub>정칙 좌표계 모임</sub>*는 차트들의 모임 $\{(U_\alpha, \varphi_\alpha)\}$로서, 각 $\varphi_\alpha : U_\alpha \rightarrow \varphi_\alpha(U_\alpha) \subseteq \mathbb{C}^n$이 homeomorphism이고 $\bigcup_\alpha U_\alpha = M$이며, $U_\alpha \cap U_\beta \neq \emptyset$일 때마다 *transition map<sub>전이함수</sub>*
 
 $$
 \varphi_\beta \circ \varphi_\alpha^{-1} : \varphi_\alpha(U_\alpha \cap U_\beta) \longrightarrow \varphi_\beta(U_\alpha \cap U_\beta)
@@ -281,7 +281,7 @@ $$
 
 를 둔다. $S$는 정의상 열려 있다. $S$가 닫혀 있음과 비어 있지 않음을 보이면, $M$의 연결성으로 $S = M$이 되어 결론이 따른다.
 
-먼저 $S \neq \varnothing$을 보인다. $\lvert f \rvert$가 $p$에서 전역 최댓값을 가지므로, $p$를 포함하는 차트 $(U, \varphi)$를 잡아 $U$를 connected로 택하면, $g = f \circ \varphi^{-1} : \varphi(U) \rightarrow \mathbb{C}$는 holomorphic이고 $\lvert g \rvert$가 내부점 $\varphi(p)$에서 (적어도 국소) 최댓값을 가진다. [명제 12](#prop12)에 의해 $g$는 connected 열린집합 $\varphi(U)$에서 상수이므로 $f$는 $U$에서 상수이고, 따라서 $p \in S$이다.
+먼저 $S \neq \emptyset$을 보인다. $\lvert f \rvert$가 $p$에서 전역 최댓값을 가지므로, $p$를 포함하는 차트 $(U, \varphi)$를 잡아 $U$를 connected로 택하면, $g = f \circ \varphi^{-1} : \varphi(U) \rightarrow \mathbb{C}$는 holomorphic이고 $\lvert g \rvert$가 내부점 $\varphi(p)$에서 (적어도 국소) 최댓값을 가진다. [명제 12](#prop12)에 의해 $g$는 connected 열린집합 $\varphi(U)$에서 상수이므로 $f$는 $U$에서 상수이고, 따라서 $p \in S$이다.
 
 다음으로 $S$가 닫혀 있음을 보인다. $q_0 \in M$이 $S$의 limit point라 하자. $q_0$를 포함하는 connected 차트 $(V, \psi)$를 잡으면 $h = f \circ \psi^{-1} : \psi(V) \rightarrow \mathbb{C}$는 holomorphic이다. $S$의 한 점 $q_1 \in V \cap S$가 존재하고, $f$는 $q_1$의 근방에서 상수 $c = f(q_1)$이다. 그러면 $h - c$는 $\psi(V)$의 한 열린 부분집합 ($q_1$의 근방의 상) 에서 항등적으로 $0$이다. [명제 12](#prop12)의 증명에서 쓴 해석성 논법에 의해, holomorphic function $h - c$가 connected 열린집합 $\psi(V)$의 어떤 열린 부분집합에서 소멸하면 $\psi(V)$ 전체에서 소멸한다. 따라서 $f \equiv c$가 $V$에서 성립하고, 특히 $q_0$의 근방에서 $f$가 상수이므로 $q_0 \in S$이다.
 

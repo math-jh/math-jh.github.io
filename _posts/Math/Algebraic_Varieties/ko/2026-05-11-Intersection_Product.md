@@ -106,7 +106,7 @@ Smooth quasi-projective variety $X$와 cycle $Z \in \CH^k(X)$, 그리고 임의�
 
 그럼 우리는 위의 보조정리를 사용하여 $Z$를 $Z'$로 옮겨준 후, 다음의 식
 
-$$Z \cdot W := Z' \cdot W = \sum_{T \subset Z' \cap W} i_T(Z', W) [T]$$
+$$Z \cdot W := Z' \cdot W = \sum_{T \subseteq Z' \cap W} i_T(Z', W) [T]$$
 
 으로 intersection을 정의한다. 
 

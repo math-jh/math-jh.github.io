@@ -46,7 +46,7 @@ $\dim \mathbb{A}^n = n$.
 [[Commutative Algebra] §System of Parameters, ⁋Corollary 11](/en/math/commutative_algebra/system_of_parameters#cor11)
 :::
 
-On the other hand, for any prime ideal $\mathfrak{p}\subset \mathbb{K}[\x_1,\ldots, \x_n]$ we know that the following formula holds:
+On the other hand, for any prime ideal $\mathfrak{p}\subseteq \mathbb{K}[\x_1,\ldots, \x_n]$ we know that the following formula holds:
 
 $$\dim \mathbb{K}[\x_1,\ldots, \x_n]/\mathfrak{p}+\codim \mathfrak{p}=\dim \mathbb{K}[\x_1,\ldots, \x_n]=n\tag{$\ast$}$$
 
@@ -54,7 +54,7 @@ $$\dim \mathbb{K}[\x_1,\ldots, \x_n]/\mathfrak{p}+\codim \mathfrak{p}=\dim \math
 
 ## Dimension of a projective variety
 
-The problem arises when we move to projective varieties. Recall that the only global functions on $\mathbb{P}^n$ are the constant functions. In this situation, to define the dimension of a projective variety we might try to take an affine chart. That is, given $X\subset \mathbb{P}^n$, we choose an affine open chart $U_i$ of $\mathbb{P}^n$ and consider the dimension of $X_i=X\cap U_i$ as an affine variety. However, to make this a definition we would first have to show that the dimension of any open set equals that of the original variety, so we cannot yet adopt this as a definition. Instead we use the *affine cone* $C(X)$ of $X$.
+The problem arises when we move to projective varieties. Recall that the only global functions on $\mathbb{P}^n$ are the constant functions. In this situation, to define the dimension of a projective variety we might try to take an affine chart. That is, given $X\subseteq \mathbb{P}^n$, we choose an affine open chart $U_i$ of $\mathbb{P}^n$ and consider the dimension of $X_i=X\cap U_i$ as an affine variety. However, to make this a definition we would first have to show that the dimension of any open set equals that of the original variety, so we cannot yet adopt this as a definition. Instead we use the *affine cone* $C(X)$ of $X$.
 
 For a projective variety $X\subseteq \mathbb{P}^n$, the affine cone $C(X)\subseteq \mathbb{A}^{n+1}$ is the affine variety in $\mathbb{A}^{n+1}$ defined by the homogeneous ideal defining $X$, regarded as an ideal in $\mathbb{K}[\x_0,\ldots, \x_n]$. That is, for the homogeneous ideal $I(X)$ defining $X$, if we define the ring $S(X)$ by
 
@@ -81,7 +81,7 @@ The cone of $\mathbb{P}^n$ is $\mathbb{A}^{n+1}$ and $\dim \mathbb{A}^{n+1} = n+
 A hypersurface is a variety defined as the zero set of a single polynomial. Intuitively, adding one equation imposes one constraint, so it should reduce the dimension by one.
 
 ::: Proposition 6
-For an irreducible polynomial $f \in \mathbb{K}[\x_1, \ldots, \x_n]$, the irreducible hypersurface $Z(f) \subset \mathbb{A}^n$ has dimension $n - 1$.
+For an irreducible polynomial $f \in \mathbb{K}[\x_1, \ldots, \x_n]$, the irreducible hypersurface $Z(f) \subseteq \mathbb{A}^n$ has dimension $n - 1$.
 :::
 
 ::: Proof

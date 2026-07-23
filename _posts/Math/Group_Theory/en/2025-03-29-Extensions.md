@@ -82,7 +82,7 @@ Then we define the retraction $r:E \rightarrow F$ as $\pr_1\circ u$, and $s:G \r
 Conversely, assume that the second condition holds. Then $(r,p): E \rightarrow F\oplus G$ is an isomorphism between the given extension and $F \rightarrow F\oplus G \rightarrow G$. Similarly, assume the third condition. Then since $s(G)$ is contained in the centralizer of $i(F)$, we can construct a morphism from $F\oplus G$ to $E$ by taking the weak direct product of $F$ and $G$.
 :::
 
-If $i(F)$ is contained in the center $C(E)$ of $E$, then in the third condition we may ignore the relationship between $s(G)$ and $i(F)$. ([\[Algebraic Structures\] §Group Actions, ⁋Definition 12](/en/math/algebraic_structures/group_actions#def12))
+If $i(F)$ is contained in the center $Z(E)$ of $E$, then in the third condition we may ignore the relationship between $s(G)$ and $i(F)$. ([\[Algebraic Structures\] §Group Actions, ⁋Definition 12](/en/math/algebraic_structures/group_actions#def12))
 
 ::: Definition 5
 An extension $\mathcal{E}:F \rightarrow E \rightarrow G$ is called a *central extension* if the image of $F$ in $E$ is contained in the center of $E$.

@@ -113,14 +113,14 @@ The transpose of a matrix also has a corresponding notion for linear maps.
 ::: Proposition 5
 If $I,J$ are finite sets, then for any linear map $u:M \rightarrow N$, the formula
 
-$$\left([u]_\mathcal{C}^\mathcal{B}\right)^t=\left[u^\ast\right]_{\mathcal{B}^\ast}^{\mathcal{C}^\ast}$$
+$$\left([u]_\mathcal{C}^\mathcal{B}\right)^t=\left[u^t\right]_{\mathcal{B}^\ast}^{\mathcal{C}^\ast}$$
 
 holds. Here $\mathcal{B}^\ast$ and $\mathcal{C}^\ast$ are the dual bases of $\mathcal{B},\mathcal{C}$ respectively.
 :::
 ::: Proof
 By [§Dual Spaces, ⁋Proposition 8](/en/math/multilinear_algebra/dual_spaces#prop8), we may identify $M$ with $M^{\ast\ast}$, and then $\mathcal{B}$ corresponds to the dual basis $\mathcal{B}^{\ast\ast}$ of $\mathcal{B}^\ast$. Now
 
-$$\left(\left[u^\ast\right]_{\mathcal{B}^\ast}^{\mathcal{C}^\ast}\right)_{ji}=\langle u^\ast(f_j^\ast), e_i^{\ast\ast}\rangle=\langle e_i, u^\ast(f_j^\ast)\rangle=\langle u(e_i), f_j^\ast\rangle=\left([u]_\mathcal{C}^\mathcal{B}\right)_{ij}=\left(\left([u]_\mathcal{C}^\mathcal{B}\right)^t\right)_{ji} $$
+$$\left(\left[u^t\right]_{\mathcal{B}^\ast}^{\mathcal{C}^\ast}\right)_{ji}=\langle u^t(f_j^\ast), e_i^{\ast\ast}\rangle=\langle e_i, u^t(f_j^\ast)\rangle=\langle u(e_i), f_j^\ast\rangle=\left([u]_\mathcal{C}^\mathcal{B}\right)_{ij}=\left(\left([u]_\mathcal{C}^\mathcal{B}\right)^t\right)_{ji} $$
 
 so we obtain the desired result.
 :::

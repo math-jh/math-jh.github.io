@@ -89,7 +89,7 @@ Rank $r$ vector bundle $\mathcal{E} \rightarrow X$에 대하여, 연속사상 $f
 :::
 
 ::: 증명
-$\pi: \mathbb{P}(\mathcal{E}) \rightarrow X$를 택하면 [명제 4](#prop4)에 의해 $\pi^{\ast}$은 단사이다. $\mathbb{P}(\mathcal{E})$ 위에는 tautological line subbundle $\mathcal{O}_\mathcal{E}(-1) \subset \pi^{\ast}\mathcal{E}$가 있어 $\pi^{\ast}\mathcal{E}$가 이 line bundle과 rank $r-1$인 quotient $\mathcal{Q}$로의 short exact sequence를 이루며, metric을 주면 direct sum $\pi^{\ast}\mathcal{E} \cong \mathcal{O}_\mathcal{E}(-1) \oplus \mathcal{Q}$로 분리된다. 이제 $\mathcal{Q}$에 같은 과정을 반복하면 rank가 한 단계마다 하나씩 줄어들어, 유한 번 뒤 얻어지는 합성 $f: Y \rightarrow X$ 위에서 $f^{\ast}\mathcal{E}$가 line bundle들의 direct sum으로 분해된다. 각 단계의 pullback이 단사이므로 합성 $f^{\ast}$ 또한 단사이다.
+$\pi: \mathbb{P}(\mathcal{E}) \rightarrow X$를 택하면 [명제 4](#prop4)에 의해 $\pi^{\ast}$은 단사이다. $\mathbb{P}(\mathcal{E})$ 위에는 tautological line subbundle $\mathcal{O}_\mathcal{E}(-1) \subseteq \pi^{\ast}\mathcal{E}$가 있어 $\pi^{\ast}\mathcal{E}$가 이 line bundle과 rank $r-1$인 quotient $\mathcal{Q}$로의 short exact sequence를 이루며, metric을 주면 direct sum $\pi^{\ast}\mathcal{E} \cong \mathcal{O}_\mathcal{E}(-1) \oplus \mathcal{Q}$로 분리된다. 이제 $\mathcal{Q}$에 같은 과정을 반복하면 rank가 한 단계마다 하나씩 줄어들어, 유한 번 뒤 얻어지는 합성 $f: Y \rightarrow X$ 위에서 $f^{\ast}\mathcal{E}$가 line bundle들의 direct sum으로 분해된다. 각 단계의 pullback이 단사이므로 합성 $f^{\ast}$ 또한 단사이다.
 :::
 
 Splitting principle의 핵심은 $f^{\ast}$이 단사라는 점이다. $Y$는 $X$보다 복잡한 공간이 아니라 $X$의 cohomology 정보를 잃지 않으면서 다발의 twist만 풀어 주는 공간이며, 따라서 $Y$ 위에서 성립하는 cohomology 등식은 그대로 $X$로 내려온다. 덕분에 임의의 다발에 대한 Chern class의 계산을 line bundle의 경우로 환원할 수 있다. 이제 공리의 정당성을 확인할 수 있다.
@@ -186,7 +186,7 @@ $$\rchi_{\mathrm{top}}(\mathbb{P}^n) = \int_{\mathbb{P}^n} c_n(T_{\mathbb{P}^n})
 :::
 
 ::: 예시 12
-$X \subset \mathbb{P}^3$를 degree $d$의 smooth surface라 하자. $X$의 normal bundle은 $\mathcal{O}_X(d)$이므로 ([§표준선다발](/ko/math/algebraic_varieties/canonical_bundle)) short exact sequence
+$X \subseteq \mathbb{P}^3$를 degree $d$의 smooth surface라 하자. $X$의 normal bundle은 $\mathcal{O}_X(d)$이므로 ([§표준선다발](/ko/math/algebraic_varieties/canonical_bundle)) short exact sequence
 
 $$0 \rightarrow T_X \rightarrow T_{\mathbb{P}^3}\vert_X \rightarrow \mathcal{O}_X(d) \rightarrow 0$$
 

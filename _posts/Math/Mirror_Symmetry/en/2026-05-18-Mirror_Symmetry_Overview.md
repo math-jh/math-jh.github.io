@@ -78,9 +78,9 @@ A *Landau-Ginzburg model* is a pair $(\check{X}, W)$ of a complex manifold $\che
 
 The purpose of this post is to examine this phenomenon through light calculations before formally defining the concepts of mirror symmetry. Therefore, instead of explaining the data on both sides precisely, we replace this with brief ideas and intuition. First, from the $B$-model side, the charge matrix defines the *Jacobi ring* $\Jac(W_q)$, which can be viewed as the classical limit of the oscillating integral mentioned earlier. For a given Landau-Ginzburg model $(\check{X}, W)$, its Jacobi ring is given by definition as
 
-$$\Jac(W) = \frac{\mathcal{O}(\check{X})}{(\partial_1 W, \ldots, \partial_n W)}.$$
+$$\Jac(W) = \frac{\mathcal{O}(\check{X})}{(\partial_1 W, \ldots, \partial_m W)}.$$
 
-Here $\x_1, \ldots, \x_n$ are local coordinates on $\check{X}$, and the $\partial_i$ are the partial derivatives with respect to them. Geometrically, $\Jac(W)$ is the coordinate ring of the *critical scheme* $\Crit(W) = \{dW = 0\} \subset \check{X}$ of $W$. Then the mirror symmetry statement is that the Jacobi ring of the Hori-Vafa mirror in [Definition 4](#def4) recovers the data of the original A-side model. 
+Here $\x_1, \ldots, \x_n$ are local coordinates on $\check{X}$, and the $\partial_i$ are the partial derivatives with respect to them. Geometrically, $\Jac(W)$ is the coordinate ring of the *critical scheme* $\Crit(W) = \{dW = 0\} \subseteq \check{X}$ of $W$. Then the mirror symmetry statement is that the Jacobi ring of the Hori-Vafa mirror in [Definition 4](#def4) recovers the data of the original A-side model. 
 
 ::: Definition 4
 For a smooth projective toric Fano variety $X_\Sigma$ and additional data $q=(q_1,\ldots, q_r)\in \mathbb{C}^r$, the *Hori-Vafa mirror* defined by this is the following Landau-Ginzburg model.
@@ -171,7 +171,7 @@ Meanwhile, to compute the quantum cohomology in the A-model one uses the followi
 
 $$\langle H, H^2, H^2 \rangle_{0,3,1}^{\mathbb{P}^2} = 1.$$
 
-Geometrically this reflects the facts that (i) there is a unique $\mathbb{P}^1 \subset \mathbb{P}^2$ passing through two generic points $P_1, P_2 \in \mathbb{P}^2$, (ii) this line meets a generic line $H_1 \subset \mathbb{P}^2$ at exactly one point, and (iii) the three points thus obtained uniquely determine $f : \mathbb{P}^1 \xrightarrow{\sim} L$. Through this one knows that the quantum cohomology is the graded $\mathbb{C}[q]$-polynomial algebra
+Geometrically this reflects the facts that (i) there is a unique $\mathbb{P}^1 \subseteq \mathbb{P}^2$ passing through two generic points $P_1, P_2 \in \mathbb{P}^2$, (ii) this line meets a generic line $H_1 \subseteq \mathbb{P}^2$ at exactly one point, and (iii) the three points thus obtained uniquely determine $f : \mathbb{P}^1 \xrightarrow{\sim} L$. Through this one knows that the quantum cohomology is the graded $\mathbb{C}[q]$-polynomial algebra
 
 $$QH^\ast(\mathbb{P}^2) = \mathbb{C}[H, q] \big/ (H^3 - q), \qquad \deg H = 2,\;\; \deg q = 6.$$
 

@@ -113,7 +113,7 @@ $$Z=\Spec A\times_{X\times_YX}X \longrightarrow \Spec A$$
 
 한편 $p_1\circ h\circ j=g_1\circ j=u$이고 $p_2\circ h\circ j=g_2\circ j=u$이며, $p_1\circ \Delta\circ u=u$이고 $p_2\circ\Delta\circ u=u$이므로 universal property의 유일성으로부터 $h\circ j=\Delta\circ u$이다. 따라서 $j$는 pullback $Z$를 경유하고, 특히 $Z \rightarrow \Spec A$의 image는 $j$의 image, 곧 $A$의 zero ideal $(0)$을 포함하는 닫힌집합이다. $A$는 domain이므로 $(0)$은 $\Spec A$의 generic point이고 ([§스킴의 위상구조, ⁋예시 5](/ko/math/scheme_theory/topology_of_schemes#ex5)), 따라서 $(0)$을 포함하는 $\Spec A$의 닫힌집합은 $\Spec A$ 자신뿐이다. 그럼 $Z$는 $\Spec A$의 closed subscheme으로서 적당한 ideal $\mathfrak{a}\subseteq A$에 대해 $\Spec(A/\mathfrak{a})$의 꼴이며 ([§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)), 그 image가 $\Spec A$ 전체라는 것은 $\mathfrak{a}$가 $A$의 모든 prime ideal에 포함된다는 것, 곧
 
-$$\mathfrak{a}\subseteq \sqrt{(0)}=(0)$$
+$$\mathfrak{a}\subseteq \mathfrak{N}(A)=(0)$$
 
 임을 뜻한다. 마지막 등호는 $A$가 domain이라는 사실에서 온다. 따라서 $Z \rightarrow \Spec A$는 isomorphism이고, 이는 $h$가 $\Delta$를 경유한다는 것, 곧 적당한 $g:\Spec A \rightarrow X$에 대하여 $h=\Delta\circ g$임을 뜻한다. 그럼
 
@@ -200,7 +200,7 @@ $$\mathcal{O}:=\mathcal{O}_{Z,z}\subseteq \kappa(\xi)=K,\qquad \Frac(\mathcal{O}
 
 이를 보이기 위해 $X$의 닫힌집합 $T$를 택하고 reduced scheme structure를 주자. Closed embedding $T\hookrightarrow X$는 finite morphism이므로 ([§닫힌 부분스킴, ⁋명제 4](/ko/math/scheme_theory/closed_subschemes#prop4)) finite type이고, 따라서 $T$는 Noetherian scheme이며 $f\vert_T:T \rightarrow Y$ 또한 finite type이다. 또 $f\vert_T$는 판정법의 존재성 부분을 물려받는다. 실제로 $\Spec K \rightarrow T$와 $\Spec A \rightarrow Y$가 $f\vert_T$에 대한 square를 이루면, $\Spec K \rightarrow T\hookrightarrow X$에 판정법을 적용하여 lifting $g_0:\Spec A \rightarrow X$를 얻는다. $\Spec A$의 모든 점은 generic point $(0)$의 specialization이고 morphism은 specialization을 보존하므로 $g_0(\Spec A)\subseteq \cl(\{g_0((0))\})\subseteq T$이며, $\Spec A$는 reduced이므로 $g_0$는 $T$를 경유한다. 여기에서 마지막 사실은 다음과 같이 얻어진다. Reduced scheme $S$에서의 morphism $\varphi:S \rightarrow X$의 image가 닫힌집합 $T$에 들어간다 하고, $X$의 affine open subset $\Spec B$와 $\varphi^{-1}(\Spec B)$의 affine open subset $\Spec R$을 택하자. $T\cap \Spec B=Z(\mathfrak{b})$ ($\mathfrak{b}$는 radical ideal)라 하면 $T$의 reduced structure는 그 위에서 $\Spec (B/\mathfrak{b})$이고, 대응하는 ring homomorphism $\psi:B \rightarrow R$는 임의의 prime ideal $\mathfrak{p}\subseteq R$에 대해 $\mathfrak{b}\subseteq \psi^{-1}(\mathfrak{p})$를 만족하므로
 
-$$\psi(\mathfrak{b})\subseteq \bigcap_{\mathfrak{p}\in\Spec R}\mathfrak{p}=\sqrt{(0)}=(0)$$
+$$\psi(\mathfrak{b})\subseteq \bigcap_{\mathfrak{p}\in\Spec R}\mathfrak{p}=\mathfrak{N}(R)=(0)$$
 
 이다. 곧 $\psi$는 $B/\mathfrak{b}$를 유일하게 경유하고, 이렇게 얻어진 local factorization들은 유일성에 의해 붙는다.
 

@@ -68,7 +68,7 @@ $$E(\gamma_n^1)=\{(x,v)\in \RP^n\times \mathbb{R}^{n+1}\mid v\in \span(x)\}$$
 
 $$S^n \overset{q}{\longrightarrow} \RP^n \overset{s}{\longrightarrow} E\overset{\pr_2}{\longrightarrow} \mathbb{R}^{n+1}$$
 
-을 생각하면 이 함수는 $\mathbf{x}\in S^n\subset\mathbb{R}^{n+1}$을 $\mathbf{x}$의 상수배로 보낸다. 이 상수를 $t(\mathbf{x})$라 하면, $t$는 $S^n$에서 $\mathbb{R}$로의 연속함수이고 quotient map $q$로 인하여
+을 생각하면 이 함수는 $\mathbf{x}\in S^n\subseteq\mathbb{R}^{n+1}$을 $\mathbf{x}$의 상수배로 보낸다. 이 상수를 $t(\mathbf{x})$라 하면, $t$는 $S^n$에서 $\mathbb{R}$로의 연속함수이고 quotient map $q$로 인하여
 
 $$t(-\mathbf{x})=-t(\mathbf{x})$$
 
@@ -83,7 +83,7 @@ $$t(-\mathbf{x})=-t(\mathbf{x})$$
 
 한편 임의의 vector bundle $p:E \rightarrow B$와 임의의 연속함수 $f:B'\rightarrow B$가 주어졌을 때, 우리는 다음의 식
 
-$$f^\ast E=\{(x,v)\in B'\times E\mid f(x)=p(v)\}\subset E$$
+$$f^\ast E=\{(x,v)\in B'\times E\mid f(x)=p(v)\}\subseteq E$$
 
 로 두어 새로운 vector bundle $f^\ast E \rightarrow B'$를 정의할 수 있다. 우리는 이를 *pullback bundle*이라 부르며, 어렵지 않게 임의의 vector bundle $E' \rightarrow B'$가 위의 조건을 만족한다면 $f^\ast E$를 factor through하는 것을 알 수 있다. 
 
@@ -206,7 +206,7 @@ Vector bundle $E \rightarrow B$ of rank $n$과 vector bundle $F\rightarrow B$에
 
 이를 위해 $\mathbb{R}^n$의 full flag
 
-$$F_\bullet:\qquad 0=F_0\subset F_1\subset F_2\subset\cdots\subset F_n=\mathbb{R}^n$$
+$$F_\bullet:\qquad 0=F_0\subseteq F_1\subseteq F_2\subseteq\cdots\subseteq F_n=\mathbb{R}^n$$
 
 을 고정하자. 그럼 $\mathbb{R}^n$에 속한 임의의 $k$-plane $X$는
 
@@ -230,7 +230,7 @@ $$\dim(X\cap F_{n-k+i-\lambda_i})\geq i$$
 
 을 부여하여 이 정보를 담을 수 있다. 이들 partition은, flag
 
-$$F_0\subset F_1\subset\cdots\subset F_n$$
+$$F_0\subseteq F_1\subseteq\cdots\subseteq F_n$$
 
 를 고정했을 때 $X\cap F_i$의 차원이 언제 뛰었는지를 보여준다. 예를 들어 $X=F_k$일 때 이에 해당하는 partition은 $(0,0,\ldots,0)$이며, 이는 $X\cap F_i$들이 딜레이 없이, $i$가 증가함에 따라 처음 $k$개의 항에서 모든 차원의 점프가 완료된다는 뜻이다. 가령 $(0,1,0,\ldots,0)$은, $X\cap F_1$은 1차원, $X\cap F_2$도 $1$차원, $X\cap F_3$은 2차원이며 그 후로는 차원이 하나씩 딜레이 없이 뛴다는 것이다. 
 
@@ -263,11 +263,11 @@ $$\dim(X\cap F_{4-2+1-1})=\dim(X\cap F_2)\geq 1,\qquad \dim(X\cap F_{4-2+2-0})=\
 
 이제 cup product $\sigma_{(1,0)}\smile\sigma_{(1,0)}$을 계산하기 위해서는 general position에 있는 두 flag $F_\bullet$과 $F_\bullet'$을 생각해야 한다. 가령
 
-$$F_\bullet:\quad \langle e_1\rangle\subset \langle e_1,e_2\rangle\subset \langle e_1,e_2,e_3\rangle,\qquad F_\bullet':\quad \langle e_4\rangle\subset \langle e_3,e_4\rangle\subset \langle e_2,e_3,e_4\rangle$$
+$$F_\bullet:\quad \langle e_1\rangle\subseteq \langle e_1,e_2\rangle\subseteq \langle e_1,e_2,e_3\rangle,\qquad F_\bullet':\quad \langle e_4\rangle\subseteq \langle e_3,e_4\rangle\subseteq \langle e_2,e_3,e_4\rangle$$
 
 이 그러하다. 이제 우리가 고려할 $V$들은 $\langle e_1,e_2\rangle$과도, $\langle e_3,e_4\rangle$과도 $1$차원으로 만나야 한다. 이를 위해 또 다른 flag
 
-$$G_\bullet:\quad \langle e_1+e_4\rangle\subset\langle e_1+e_4,e_2+e_3\rangle\subset \langle e_1+e_4,e_2+e_3,e_2-e_3\rangle$$
+$$G_\bullet:\quad \langle e_1+e_4\rangle\subseteq\langle e_1+e_4,e_2+e_3\rangle\subseteq \langle e_1+e_4,e_2+e_3,e_2-e_3\rangle$$
 
 을 생각하자. 그럼 두 가지의 경우가 있는데, 우선 하나의 경우는 $F_2,F_2'$의 두 line으로 만들어지는 평면이 $G_3$에 포함되어있지 않은 경우이다. 예를 들어 $V$와 $F_2$가 $\span(e_1+e_2)$에서 만나고, $V$와 $F_2'$가 $\span(e_3+e_4)$에서 만나는 경우가 이에 해당한다. 이 경우, $V$는 정확하게 $\span(e_1+e_2,e_3+e_4)$로 쓰여질 수 있으며, 이는 $G_0,G_1$와는 $0$차원, $G_2,G_3$과는 $1$차원, 그리고 $G_4$에서야 $2$차원으로 만난다. 즉 이는 $(1,1)$에 해당하는 경우이다. 
 
@@ -292,7 +292,7 @@ $$\Gr(k,\mathbb{R}^k)\hookrightarrow \Gr(k,\mathbb{R}^{k+1})\hookrightarrow\cdot
 
 을 생각하면, 우리는 이들의 direct limit
 
-$$\Gr(k,\mathbb{R}^\infty)=\varinjlim_{n\geq 0}\Gr(k,\mathbb{R}^{k+i})$$
+$$\Gr(k,\mathbb{R}^\infty)=\varinjlim_{n\geq 0}\Gr(k,\mathbb{R}^{k+n})$$
 
 을 *infinite Grassmannian*이라 부른다. 마찬가지 방식으로 total space들의 direct limit
 
@@ -302,7 +302,7 @@ $$E(\gamma_\infty^k)=\varinjlim_{n\geq 0} E(\gamma^k_{k+n})$$
 
 직관적으로 $\Gr(k,\mathbb{R}^\infty)$는 각각의 $\Gr(k,\mathbb{R}^{k+n})$들을 이어붙여 complex 구조를 주는 것으로 생각할 수 있다. 뿐만 아니라 tautological bundle들 $E(\gamma^k_{n+k})$들도 이 구조와 호환되도록 붙어있게 된다. 
 
-Finite Grassmannian의 Schubert class들을 infinite Grassmannian으로 옮기는 것은 방향이 맞지 않다. 그러나, 위에서 설명했듯 infinite Grassmannian은 finite Grassmannian들을 subcomplex로 가지는 공간이며, 위에서 만든 Schubert cycle들은 이 inclusion들에 대해 잘 행동한다. 즉 partition $\lambda$에 해당하는 $\Gr(k,\mathbb{R}^{k+i})$의 Schubert cycle을 $\Gr(k,\mathbb{R}^{k+i})\rightarrow \Gr(k,\mathbb{R}^{k+i+1})$를 통해 집어넣은 것이나, $\Gr(k,\mathbb{R}^{k+i+1})$에서 바로 partition $\lambda$에 해당하는 Schubert cycle을 $\Gr(k,\mathbb{R}^n)\subset \Gr(k,\mathbb{R}^{k+i+1})$과 교집합한 것이나 같은 결과를 준다.
+Finite Grassmannian의 Schubert class들을 infinite Grassmannian으로 옮기는 것은 방향이 맞지 않다. 그러나, 위에서 설명했듯 infinite Grassmannian은 finite Grassmannian들을 subcomplex로 가지는 공간이며, 위에서 만든 Schubert cycle들은 이 inclusion들에 대해 잘 행동한다. 즉 partition $\lambda$에 해당하는 $\Gr(k,\mathbb{R}^{k+i})$의 Schubert cycle을 $\Gr(k,\mathbb{R}^{k+i})\rightarrow \Gr(k,\mathbb{R}^{k+i+1})$를 통해 집어넣은 것이나, $\Gr(k,\mathbb{R}^{k+i+1})$에서 바로 partition $\lambda$에 해당하는 Schubert cycle을 $\Gr(k,\mathbb{R}^n)\subseteq \Gr(k,\mathbb{R}^{k+i+1})$과 교집합한 것이나 같은 결과를 준다.
 
 이제 $k$개의 partition들
 

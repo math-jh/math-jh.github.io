@@ -121,7 +121,7 @@ Now, as a set, $\Proj A_\bullet$ is defined as follows.
 ::: Definition 1
 For a graded ring $A_\bullet$, $\Proj A_\bullet$ is defined as the set
 
-$$\Proj A_\bullet =\{\mathfrak{p}\in \Spec A\mid\text{$\mathfrak{p}$ is homogeneous and $A_+\not\subset \mathfrak{p}$}\}$$
+$$\Proj A_\bullet =\{\mathfrak{p}\in \Spec A\mid\text{$\mathfrak{p}$ is homogeneous and $A_+\not\subseteq \mathfrak{p}$}\}$$
 :::
 
 By definition, $\Proj A_\bullet$ is a subset of $\Spec A$. That is, all points of $\Proj A_\bullet$ are also points of $\Spec A$. This would be a somewhat awkward result if we had used $\MaxSpec A$ instead of $\Spec A$, but $\Spec A$ contains not only traditional points but also points corresponding to prime ideals. For example, considering the ideal $(\x_1-\x_2)$ of $A=\mathbb{K}[\x_1,\x_2]$, since $\mathbb{K}[\x_1,\x_2]/(\x_1-\x_2)\cong \mathbb{K}[\x_1]$, this ideal is a prime ideal. Moreover, when viewing $\mathbb{K}[\x_1,\x_2]$ as a graded ring $A_\bullet$, this ideal is a homogeneous prime ideal not containing $A_+$, so it is also a point of $\Proj A_\bullet$.
@@ -161,7 +161,7 @@ Of course, it is trivial that $\mathfrak{a}\mathfrak{b}$, $\sqrt{\mathfrak{a}}$,
 3. [[Commutative Algebra] §Properties of Localization, ⁋Corollary 8](/en/math/commutative_algebra/properties_of_localization#cor8).
 4. By definition $Z_+(\mathfrak{a})\subseteq Z_+(\mathfrak{a}\cap A_+)$ is trivial, so it suffices to show the reverse inclusion. That is, let $\mathfrak{p}$ be a prime ideal containing all homogeneous elements of $\mathfrak{a}$ of positive degree but not containing $A_+$ entirely, and we show $\mathfrak{a}\subseteq \mathfrak{p}$. For this, it suffices to show that for any $a\in \mathfrak{a}\cap A_0$, the above assumption implies $a$ also belongs to $\mathfrak{p}$.
 
-    Now, since $A_+\not\subset\mathfrak{p}$, there exists a homogeneous element $f$ not belonging to $\mathfrak{p}$. Then $af\in \mathfrak{a}\cap A_+\subseteq \mathfrak{p}$ and $f\not\in \mathfrak{p}$, so $a\in \mathfrak{p}$.
+    Now, since $A_+\not\subseteq\mathfrak{p}$, there exists a homogeneous element $f$ not belonging to $\mathfrak{p}$. Then $af\in \mathfrak{a}\cap A_+\subseteq \mathfrak{p}$ and $f\not\in \mathfrak{p}$, so $a\in \mathfrak{p}$.
 :::
 
 Looking at the results of this lemma, from the first and second results we can define the following.

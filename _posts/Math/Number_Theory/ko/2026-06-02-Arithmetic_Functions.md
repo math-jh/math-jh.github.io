@@ -44,7 +44,7 @@ $$(f \ast g)(n) = \sum_{d \mid n} f(d)\, g\!\left(\frac{n}{d}\right)$$
 으로 정의된다.
 :::
 
-상수함수 $\mathbf{1}(n) = 1$과 항등함수 $\mathrm{id}(n) = n$을 합성곱의 재료로 쓰면 약수 함수가 $\tau = \mathbf{1} \ast \mathbf{1}$, $\sigma = \mathbf{1} \ast \mathrm{id}$로 표현된다. 합성곱의 단위원은 $n = 1$에서만 $1$이고 나머지에서 $0$인 함수 $\varepsilon$이다. $\mathbf{1}$의 합성곱 역원이 다음의 뫼비우스 함수이다.
+상수함수 $\mathbf{1}(n) = 1$과 항등함수 $\id(n) = n$을 합성곱의 재료로 쓰면 약수 함수가 $\tau = \mathbf{1} \ast \mathbf{1}$, $\sigma = \mathbf{1} \ast \id$로 표현된다. 합성곱의 단위원은 $n = 1$에서만 $1$이고 나머지에서 $0$인 함수 $\varepsilon$이다. $\mathbf{1}$의 합성곱 역원이 다음의 뫼비우스 함수이다.
 
 ::: 정의 4
 *뫼비우스 함수<sub>Möbius function</sub>* $\mu$는 $\mu(1) = 1$, 그리고 $n > 1$이 서로 다른 $k$개의 소수의 곱이면 $\mu(n) = (-1)^k$, $n$이 어떤 소수의 제곱으로 나누어떨어지면 $\mu(n) = 0$으로 정의된다.
@@ -79,10 +79,10 @@ $$g(n) = \sum_{d \mid n} f(d) \quad\Longleftrightarrow\quad f(n) = \sum_{d \mid 
 :::
 
 ::: 예시 7
-약수에 걸친 $\varphi$의 합은 $\sum_{d \mid n}\varphi(d) = n$이다. 실제로 $1$부터 $n$까지의 각 정수 $m$을 $\gcd(m, n) = n/d$에 따라 분류하면, $\gcd(m,n) = n/d$인 $m$의 개수가 $\varphi(d)$이므로 전체 합이 $n$이 된다. 이 관계 $\mathbf{1}\ast\varphi = \mathrm{id}$에 뫼비우스 반전을 적용하면 $\varphi = \mu \ast \mathrm{id}$, 즉 $\varphi(n) = \sum_{d\mid n}\mu(d)\,\dfrac{n}{d}$이라는 $\varphi$의 또 다른 공식을 얻는다.
+약수에 걸친 $\varphi$의 합은 $\sum_{d \mid n}\varphi(d) = n$이다. 실제로 $1$부터 $n$까지의 각 정수 $m$을 $\gcd(m, n) = n/d$에 따라 분류하면, $\gcd(m,n) = n/d$인 $m$의 개수가 $\varphi(d)$이므로 전체 합이 $n$이 된다. 이 관계 $\mathbf{1}\ast\varphi = \id$에 뫼비우스 반전을 적용하면 $\varphi = \mu \ast \id$, 즉 $\varphi(n) = \sum_{d\mid n}\mu(d)\,\dfrac{n}{d}$이라는 $\varphi$의 또 다른 공식을 얻는다.
 :::
 
-마지막 식을 곱셈성과 결합하면 $\varphi$의 곱공식이 다시 나온다. $\varphi = \mu \ast \mathrm{id}$가 곱셈적 함수 두 개의 합성곱이므로 (아래 [명제 9](#prop9)) 곱셈적이고, 소수 거듭제곱에서
+마지막 식을 곱셈성과 결합하면 $\varphi$의 곱공식이 다시 나온다. $\varphi = \mu \ast \id$가 곱셈적 함수 두 개의 합성곱이므로 (아래 [명제 9](#prop9)) 곱셈적이고, 소수 거듭제곱에서
 
 $$\varphi(p^e) = \sum_{j=0}^{e}\mu(p^j)\,p^{e-j} = \mu(1)\,p^e + \mu(p)\,p^{e-1} = p^e - p^{e-1} = p^{e-1}(p-1)$$
 
@@ -138,7 +138,7 @@ $$\begin{aligned}
 이다. 또 $f, g$가 항등적으로 $0$이 아니므로 $(f\ast g)(1) = f(1)g(1) = 1 \neq 0$이어서 $f \ast g$는 항등적 $0$이 아니다. 따라서 곱셈적이다.
 :::
 
-명제 9는 곱셈적 함수가 합성곱 아래 닫혀 있음을 말한다. $\mathbf{1}$과 $\mathrm{id}$가 곱셈적이므로 $\tau = \mathbf{1}\ast\mathbf{1}$과 $\sigma = \mathbf{1}\ast\mathrm{id}$이 곱셈적임이 예시 2와 별개로 곧장 따라 나오고, $\mathbf{1}$의 역원 $\mu$ 역시 곱셈적임을 같은 틀에서 재확인할 수 있다. 더 일반적으로 $\mathrm{id}_k(n) = n^k$로 두면 $\sigma_k = \mathbf{1}\ast\mathrm{id}_k$, 즉 $\sigma_k(n) = \sum_{d \mid n} d^k$이 곱셈적이며, $k = 0$이면 $\tau$, $k = 1$이면 $\sigma$가 된다.
+명제 9는 곱셈적 함수가 합성곱 아래 닫혀 있음을 말한다. $\mathbf{1}$과 $\id$가 곱셈적이므로 $\tau = \mathbf{1}\ast\mathbf{1}$과 $\sigma = \mathbf{1}\ast\id$이 곱셈적임이 예시 2와 별개로 곧장 따라 나오고, $\mathbf{1}$의 역원 $\mu$ 역시 곱셈적임을 같은 틀에서 재확인할 수 있다. 더 일반적으로 $\id_k(n) = n^k$로 두면 $\sigma_k = \mathbf{1}\ast\id_k$, 즉 $\sigma_k(n) = \sum_{d \mid n} d^k$이 곱셈적이며, $k = 0$이면 $\tau$, $k = 1$이면 $\sigma$가 된다.
 
 ## 예시와 계산
 

@@ -115,7 +115,7 @@ First, applying [Proposition 4](#prop4) to the subspace topology $\mathcal{T}$, 
 
 ![uniqueness](/assets/images/Math/Manifolds/Uniqueness_of_Submanifold-4.svg){:style="width:12.99em" class="invert" .align-center}
 
-Here $\iota$ and $\iota'$ are both $A\hookrightarrow M$, but we have denoted them by different names for distinction. By definition $(A,\mathcal{T},\mathcal{A})$ is an embedded submanifold of $M$, so the vertical $\iota$ is an embedding; hence $\operatorname{id}$ is $C^\infty$ by [Proposition 2](#prop2). Moreover, by the chain rule
+Here $\iota$ and $\iota'$ are both $A\hookrightarrow M$, but we have denoted them by different names for distinction. By definition $(A,\mathcal{T},\mathcal{A})$ is an embedded submanifold of $M$, so the vertical $\iota$ is an embedding; hence $\id$ is $C^\infty$ by [Proposition 2](#prop2). Moreover, by the chain rule
 
 $$d\iota'=d\iota\circ d(\id)$$
 

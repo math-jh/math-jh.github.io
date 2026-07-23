@@ -37,7 +37,7 @@ weight: 21
 이 정리가 뜻하는 바는 집합 $A$가 원래 순서가 부여되어 있던 ordered set이든, 혹은 아무런 정보도 없는 그냥 집합이든 간에 관계 없이, 새로운 order relation을 부여할 수 있다는 것이다. 예를 들어 $(\mathbb{R},\leq)$는 well-ordered set이 아니지만, 그럼에도 불구하고 이 집합 $\mathbb{R}$을 well-ordered set으로 만드는 적당한 order relation $\preceq$을 정의할 수 있다.
 
 ::: 보조정리 2 (Tarski-Bourbaki)
-$A$가 집합이고, $\mathcal{S}\subset\mathcal{P}(A)$, $p:\mathcal{S}\rightarrow A$가 $p(X)\not\in X$를 만족한다고 하자. 그럼 well-ordered subset $(M,\leq)$가 존재하여 다음의 조건들을 만족한다.
+$A$가 집합이고, $\mathcal{S}\subseteq\mathcal{P}(A)$, $p:\mathcal{S}\rightarrow A$가 $p(X)\not\in X$를 만족한다고 하자. 그럼 well-ordered subset $(M,\leq)$가 존재하여 다음의 조건들을 만족한다.
 
 1. 모든 $x\in X$에 대하여, $S_x\in\mathcal{S}$이고 $p(S_x)=x$이다.
 2. $M\not\in\mathcal{S}$.

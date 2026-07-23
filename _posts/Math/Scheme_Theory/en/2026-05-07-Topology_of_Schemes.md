@@ -163,7 +163,7 @@ Then in [Lemma 12](#lem12), we show that if a scheme $X$ is locally $P$, then an
 Let a scheme $X$ and arbitrary affine open subsets $U,V$ be given. Then for any $x\in U\cap V$, there exists a suitable $x\in W\subseteq U\cap V$ such that $W$ is a principal open subset in both $U$ and $V$.
 :::
 ::: Proof
-For notation, let $U=\Spec A$, $V=\Spec B$, and suppose $x$ corresponds to prime ideals $\mathfrak{p}\subset A$, $\mathfrak{q}\subset B$ in each of these. Then first, viewing $U\cap V$ as an open subset of $U$ and applying [§Spectra, ⁋Lemma 11](/en/math/scheme_theory/spectrums#lem11), we can choose a principal open set $D(f)$ of $U$ such that
+For notation, let $U=\Spec A$, $V=\Spec B$, and suppose $x$ corresponds to prime ideals $\mathfrak{p}\subseteq A$, $\mathfrak{q}\subseteq B$ in each of these. Then first, viewing $U\cap V$ as an open subset of $U$ and applying [§Spectra, ⁋Lemma 11](/en/math/scheme_theory/spectrums#lem11), we can choose a principal open set $D(f)$ of $U$ such that
 
 $$\mathfrak{p}\in D(f)\subseteq U\cap V$$
 

@@ -154,7 +154,7 @@ $$\sum a_ie_i\leftrightarrow\sum a_i\frac{\partial}{\partial r^i}.$$
 ::: Example 5
 The set $\Mat_n(\mathbb{R})$ of $n\times n$ matrices is an $n^2$-dimensional $\mathbb{R}$-vector space. Hence the tangent space at any point of $\Mat_n(\mathbb{R})$ is the same as $\Mat_n(\mathbb{R})$.
 
-In particular, for the open submanifold $\GL(n,\mathbb{R})$ of $\Mat_n(\mathbb{R})$, the tangent space at any element of $\GL(n,\mathbb{R})$ coincides with the tangent space of that element viewed as an element of $\Mat_n(\mathbb{R})$, and therefore equals $\Mat_n(\mathbb{R})$.
+In particular, for the open submanifold $\GL(n;\mathbb{R})$ of $\Mat_n(\mathbb{R})$, the tangent space at any element of $\GL(n;\mathbb{R})$ coincides with the tangent space of that element viewed as an element of $\Mat_n(\mathbb{R})$, and therefore equals $\Mat_n(\mathbb{R})$.
 :::
 
 ## Tangent Covectors

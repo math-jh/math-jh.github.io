@@ -121,7 +121,7 @@ $X$에서 $Y\times Y$로의 연속함수 $x\mapsto (f(x), g(x))$를 생각하면
 ::: 따름정리 7
 연속함수 $f:X \rightarrow Y$에 대하여, 만일 $Y$가 Hausdorff라면 다음 집합
 
-$$\Gamma(f)=\{(x,f(x))\mid x\in X\}$$
+$$\graph(f)=\{(x,f(x))\mid x\in X\}$$
 
 은 $X\times Y$의 닫힌집합이다.
 :::

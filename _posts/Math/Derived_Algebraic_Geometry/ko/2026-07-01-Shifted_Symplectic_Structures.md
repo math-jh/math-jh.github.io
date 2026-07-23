@@ -223,7 +223,7 @@ $$T_M\simeq p_\ast\operatorname{ev}^\ast L_X[n]\simeq(p_\ast\operatorname{ev}^\a
 ::: 예시 14 (shifted 여접 stack)
 Derived stack $X$과 정수 $n$에 대하여, *$n$-shifted 여접 stack*을 $X$ 위의 상대 Spec
 
-$$T^\ast[n]X=\operatorname{Spec}_{\mathcal{O}_X}\Sym_{\mathcal{O}_X}\bigl(T_X[-n]\bigr)$$
+$$T^\ast[n]X=\Spec_{\mathcal{O}_X}\Sym_{\mathcal{O}_X}\bigl(T_X[-n]\bigr)$$
 
 으로 정의한다. 이는 여접 복합체 $L_X[n]$의 전체 공간에 해당하며, degree $n$의 canonical Liouville $1$-형식 $\lambda$을 가지고, 그 de Rham 미분 $\omega=d_{\dR}\lambda$이 $T^\ast[n]X$ 위의 $n$-shifted symplectic 구조를 준다. $n=0$이고 $X$이 smooth 고전적 variety이면 $T^\ast[0]X=T^\ast X$은 [예시 6](#ex6)의 통상적 cotangent bundle과 그 Liouville symplectic 구조로 되돌아온다. 반면 $n\neq0$이면 base $X$ 자체가 stack이거나 유도 두께를 가져도 되므로, 이 구성은 임의의 유도 대상 위에 표준적 shifted symplectic 두께를 자유롭게 공급한다. 특히 $X=\mathbf{B}G$, $n=1$이면 $T^\ast[1]\mathbf{B}G\simeq[\mathfrak{g}^\ast/G]$이 coadjoint quotient로서 $1$-shifted symplectic이 되어, 고전적 moment map 기하의 유도 판본을 준다.
 :::

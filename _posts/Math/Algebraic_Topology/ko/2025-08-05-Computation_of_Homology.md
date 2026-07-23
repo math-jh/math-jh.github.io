@@ -71,7 +71,7 @@ $$H_k(X\setminus Z, A\setminus Z)\rightarrow H_k(X,A)$$
 한편 우리는 기하적인 상황에서 이와 같이 $A$에 들어있는 정보를 무시하는 방법을 알고 있다. 즉, $A$를 하나의 점으로 줄이는 quotient space $X/A$이다. 그럼 homology $H_k(X/A)$와 relative homology $H_k(X,A)$ 사이의 관계가 있다는 것이 합리적인 추측이다. 물론 위의 정리와 마찬가지로 이는 $A$가 아주 이상한 공간은 아니어야 가능하다. 
 
 ::: 정의 3
-공간 $X$와 부분공간 $A$에 대하여, 이들 $(X,A)$가 *good pair<sub>좋은 쌍</sub>*라는 것은 $A$가 닫힌집합이고, $X$의 적당한 열린집합 $U$가 존재하여 $A\subset U$이고 $A$가 $U$의 strong deformation retract인 것이다. 
+공간 $X$와 부분공간 $A$에 대하여, 이들 $(X,A)$가 *good pair<sub>좋은 쌍</sub>*라는 것은 $A$가 닫힌집합이고, $X$의 적당한 열린집합 $U$가 존재하여 $A\subseteq U$이고 $A$가 $U$의 strong deformation retract인 것이다. 
 :::
 
 Good pair $(X,A)$가 주어졌다 하고, $U$가 [정의 3](#def3)의 가정을 만족하는 열린집합이라 하자. 그럼 다음의 diagram
@@ -100,7 +100,7 @@ $$H_k(X/A, [A])\cong H_k(X/A, U/A)$$
 
 ![excision-1](/assets/images/Math/Algebraic_Topology/Computation_of_Homology-3.svg){:style="width:17.12em" class="invert" .align-center}
 
-에 넣을 수 있다. 이제 $(X,A)$가 good pair라는 가정으로부터, $A\subset U\subset X$는 [정리 2](#thm2)의 조건 $\cl A\subseteq \interior U$를 만족하고 따라서 inclusion 
+에 넣을 수 있다. 이제 $(X,A)$가 good pair라는 가정으로부터, $A\subseteq U\subseteq X$는 [정리 2](#thm2)의 조건 $\cl A\subseteq \interior U$를 만족하고 따라서 inclusion 
 
 $$(X\setminus A, U\setminus A)\hookrightarrow (X,U)$$
 
@@ -172,7 +172,7 @@ $$H_\bullet^\Delta(A)\rightarrow H_\bullet^\Delta(A),\qquad H_\bullet^\Delta(X,A
 ::: 증명
 대략적인 흐름을 소개한다. 위의 commutative diagram에 의하여, $X$의 $\Delta$-complex 구조가 정의하는 filtration
 
-$$X_0\subset X_1\subset\cdots\subset X_l=X$$
+$$X_0\subseteq X_1\subseteq\cdots\subseteq X_l=X$$
 
 을 생각한 후 [\[호몰로지 대수학\] §Diagram chasing, ⁋따름정리 2](/ko/math/homological_algebra/diagram_chasing#cor2)를 다음 diagram
 
@@ -190,7 +190,7 @@ Singular homology에 대해서도 비슷한 결과가 성립하는데, 구체적
 
 $$\cdots\rightarrow H_n(\Delta^k,\Lambda)\rightarrow H_n(\Delta^k, \partial\Delta^k)\rightarrow H_{n-1}(\partial\Delta^k, \Lambda)\rightarrow H_{n-1}(\Delta^k,\Lambda)\rightarrow \cdots$$
 
-를 보면 $H_\bullet(\Delta^k,\Lambda)$들은 $\Delta^k$가 $\Lambda$로 deformation retract하므로 $0$이고 따라서 $H_k(\Delta^k, \partial\Delta^k)\cong H_{n-1}{\partial\Delta^k,\Lambda}$이며, 한편 good pair $(\partial\Delta^k,\Lambda)$에 대하여 quotient space $\partial\Delta^k/\Lambda$가 quotient space $\Delta^{k-1}/\partial\Delta^{k-1}$와 homeomorphic하므로 이들을 이용하면 
+를 보면 $H_\bullet(\Delta^k,\Lambda)$들은 $\Delta^k$가 $\Lambda$로 deformation retract하므로 $0$이고 따라서 $H_k(\Delta^k, \partial\Delta^k)\cong H_{k-1}(\partial\Delta^k,\Lambda)$이며, 한편 good pair $(\partial\Delta^k,\Lambda)$에 대하여 quotient space $\partial\Delta^k/\Lambda$가 quotient space $\Delta^{k-1}/\partial\Delta^{k-1}$와 homeomorphic하므로 이들을 이용하면 
 
 $$H_k(\Delta^k, \partial\Delta^{k})\cong H_{k-1}(\Delta^{k-1}, \partial\Delta^{k-1})$$
 

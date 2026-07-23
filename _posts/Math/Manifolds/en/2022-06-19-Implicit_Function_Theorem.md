@@ -44,7 +44,7 @@ However, if $M$ is embedded, we may choose $(V,\varphi)$ appropriately so that $
 We are now ready to extend the implicit function theorem to differentiable manifolds.
 
 ::: Theorem 3 (Implicit Function Theorem)
-Let $U\subset\mathbb{R}^{m-n}\times\mathbb{R}^n$ be an open set, and to distinguish the two factors, denote the coordinates of $\mathbb{R}^{m-n}$ by $r^1,\ldots, r^{m-n}$ and the coordinates of $\mathbb{R}^n$ by $s^1,\ldots, s^n$. Let $f:U\rightarrow\mathbb{R}^n$ be $C^\infty$, and suppose $f(x_0,y_0)=0$ for some point $(x_0, y_0)\in U$. If at the point $(x_0,y_0)$ the $n\times n$ submatrix
+Let $U\subseteq\mathbb{R}^{m-n}\times\mathbb{R}^n$ be an open set, and to distinguish the two factors, denote the coordinates of $\mathbb{R}^{m-n}$ by $r^1,\ldots, r^{m-n}$ and the coordinates of $\mathbb{R}^n$ by $s^1,\ldots, s^n$. Let $f:U\rightarrow\mathbb{R}^n$ be $C^\infty$, and suppose $f(x_0,y_0)=0$ for some point $(x_0, y_0)\in U$. If at the point $(x_0,y_0)$ the $n\times n$ submatrix
 
 $$\begin{pmatrix}\partial f^1/\partial s^1&\partial f^1/\partial s^2&\cdots&\partial f^1/\partial s^n\\\partial f^2/\partial s^1&\partial f^2/\partial s^2&\cdots&\partial f^2/\partial s^n\\\vdots&\vdots&\ddots&\vdots\\\partial f^n/\partial s^1&\partial f^n/\partial s^2&\cdots&\partial f^n/\partial s^n\end{pmatrix}$$
 

@@ -30,7 +30,7 @@ $$\lim_{x \rightarrow a} f(x) = f(a)$$
 
 이를 $\epsilon$-$\delta$ 논법으로 풀어쓰면, 임의의 $\epsilon > 0$에 대하여 어떤 $\delta > 0$이 존재하여 
 
-$$\lvert x - a\rvert < \delta\Rightarrow\lvert f(x) - f(a)\rvert < \epsilon$$
+$$\lvert x - a\rvert < \delta\implies\lvert f(x) - f(a)\rvert < \epsilon$$
 
 이 성립하는 것이다. 여기서 $x = a$를 제외하는 조건 $0 < \lvert x-a\rvert$가 사라졌는데, 이는 $x = a$일 때는 $\lvert f(a)-f(a)\rvert = 0 < \epsilon$이 자동으로 성립하므로 굳이 제외할 필요가 없기 때문이다.
 
@@ -53,11 +53,11 @@ $f$와 $g$가 $a$에서 연속이면 $f+g$, $cf$ ($c$는 상수), $fg$도 $a$에
 ::: 증명
 오직 합성함수만이 새로운 정리이다. 임의의 $\epsilon > 0$이 주어졌다 하자. 그럼 우선 $g$가 $b := f(a)$에서 연속이므로 어떤 $\eta > 0$이 존재하여 
 
-$$\lvert y - b\rvert < \eta\Rightarrow\lvert g(y) - g(b)\rvert < \epsilon$$
+$$\lvert y - b\rvert < \eta\implies\lvert g(y) - g(b)\rvert < \epsilon$$
 
 이다. 다시 $f$가 $a$에서 연속이므로 이 $\eta$에 대응하는 $\delta > 0$이 존재하여 
 
-$$\lvert x-a\rvert < \delta\Rightarrow\lvert f(x) - b\rvert < \eta$$
+$$\lvert x-a\rvert < \delta\implies\lvert f(x) - b\rvert < \eta$$
 
 이다. 두 단계를 이으면, $\lvert x-a\rvert < \delta$일 때 $y = f(x)$가 $\lvert y - b\rvert < \eta$를 만족하므로 $\lvert g(f(x)) - g(f(a))\rvert < \epsilon$이다.
 :::

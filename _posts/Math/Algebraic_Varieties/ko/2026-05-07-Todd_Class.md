@@ -111,13 +111,13 @@ Smooth projective curve $X$의 차원은 $n=1$이다. 이때 tangent bundle $T_X
 
 $$\operatorname{td}(T_X)=\frac{x_1}{1-e^{-x_1}}=1+\frac{x_1}{2}+\cdots=1+\frac{1}{2}c_1(T_X)=1-\frac{1}{2}K_X$$
 
-이다. 한편 line bundle $\mathscr{L}$에 대하여 $\operatorname{ch}(\mathscr{L})=1+c_1(\mathscr{L})$이므로,
+이다. 한편 line bundle $\mathcal{L}$에 대하여 $\operatorname{ch}(\mathcal{L})=1+c_1(\mathcal{L})$이므로,
 
-$$\operatorname{ch}(\mathscr{L})\cdot\operatorname{td}(T_X)=(1+c_1(\mathscr{L}))\left(1-\frac{1}{2}K_X\right)$$
+$$\operatorname{ch}(\mathcal{L})\cdot\operatorname{td}(T_X)=(1+c_1(\mathcal{L}))\left(1-\frac{1}{2}K_X\right)$$
 
-의 1차 성분은 $c_1(\mathscr{L})-\frac{1}{2}K_X$이다. 따라서
+의 1차 성분은 $c_1(\mathcal{L})-\frac{1}{2}K_X$이다. 따라서
 
-$$\chi(X,\mathscr{L})=\int_X c_1(\mathscr{L})-\frac{1}{2}K_X=\deg(\mathscr{L})+1-g$$
+$$\chi(X,\mathcal{L})=\int_X c_1(\mathcal{L})-\frac{1}{2}K_X=\deg(\mathcal{L})+1-g$$
 
 가 되어, classical Riemann-Roch theorem이 복원된다. ([§곡선에서의 리만-로흐 정리](/ko/math/algebraic_varieties/riemann_roch_theorem) 참조)
 :::

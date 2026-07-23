@@ -16,14 +16,14 @@ published: false
 
 [\[토릭 기하학\] §토릭 다양체의 정의, ⁋명제 8](/ko/math/toric_geometry/toric_varieties#prop8)에서 살펴 보았듯이, full-dimensional lattice polytope $P$의 normal fan $\Sigma_P$로부터 projective toric variety $X_{\Sigma_P}$를 구성할 수 있다. Batyrev는 이러한 toric variety의 특별한 경우, 즉 reflexive polytope이라는 조건 아래에서 두 개의 dual polytope으로부터 자연스럽게 mirror pair가 생겨남을 보였다. 본 글에서는 reflexive polytope과 그 dual의 정의를 소개하고, Batyrev mirror construction의 정수를 설명한다. 마지막으로 $\mathbb{P}^2$ 예제를 통해 이 construction이 실제로 어떻게 작동하는지를 구체적으로 계산하고, 이후 논의될 Grassmannian mirror symmetry와의 연결을 예고한다.
 
-Reflexive polytope의 정의와 기본 성질은 [\[토릭 기하학\] §파노 다양체, ⁋정의 1](/ko/math/toric_geometry/reflexive_polytope_fano#def1)에서 자세히 다루었으므로, 여기서는 그 결과를 바탕으로 Batyrev mirror construction을 설명한다. 핵심 사실은 reflexive polytope $\Delta \subset M_{\mathbb{R}}$와 그 dual $\Delta^\circ \subset N_{\mathbb{R}}$가 서로 쌍대 관계를 이루며, 그 normal fan으로부터 정의되는 toric variety $X_\Delta$, $X_{\Delta^\circ}$가 각각 Gorenstein Fano variety가 된다는 것이다.
+Reflexive polytope의 정의와 기본 성질은 [\[토릭 기하학\] §파노 다양체, ⁋정의 1](/ko/math/toric_geometry/reflexive_polytope_fano#def1)에서 자세히 다루었으므로, 여기서는 그 결과를 바탕으로 Batyrev mirror construction을 설명한다. 핵심 사실은 reflexive polytope $\Delta \subseteq M_{\mathbb{R}}$와 그 dual $\Delta^\circ \subseteq N_{\mathbb{R}}$가 서로 쌍대 관계를 이루며, 그 normal fan으로부터 정의되는 toric variety $X_\Delta$, $X_{\Delta^\circ}$가 각각 Gorenstein Fano variety가 된다는 것이다.
 
 ## Batyrev mirror construction
 
-Reflexive polytope $\Delta \subset M_{\mathbb{R}}$로부터 toric variety $X_\Delta = X_{\Sigma_\Delta}$가 Gorenstein Fano variety로 정의된다 ([\[토릭 기하학\] §파노 다양체, ⁋명제 4](/ko/math/toric_geometry/reflexive_polytope_fano#prop4)). 그 anticanonical divisor $-K_{X_\Delta}$의 global section은 $\Delta$의 lattice points $\Delta \cap M$에 의해 indexing된다 ([\[토릭 기하학\] §파노 다양체, ⁋명제 5](/ko/math/toric_geometry/reflexive_polytope_fano#prop5)).
+Reflexive polytope $\Delta \subseteq M_{\mathbb{R}}$로부터 toric variety $X_\Delta = X_{\Sigma_\Delta}$가 Gorenstein Fano variety로 정의된다 ([\[토릭 기하학\] §파노 다양체, ⁋명제 4](/ko/math/toric_geometry/reflexive_polytope_fano#prop4)). 그 anticanonical divisor $-K_{X_\Delta}$의 global section은 $\Delta$의 lattice points $\Delta \cap M$에 의해 indexing된다 ([\[토릭 기하학\] §파노 다양체, ⁋명제 5](/ko/math/toric_geometry/reflexive_polytope_fano#prop5)).
 
 ::: 정의 1
-Reflexive polytope $\Delta \subset M_{\mathbb{R}}$에 대하여, $\Delta$의 lattice points $\Delta \cap M = \{m_0, \ldots, m_s\}$를 이용하여 다음의 *general anticanonical section*을 정의한다.
+Reflexive polytope $\Delta \subseteq M_{\mathbb{R}}$에 대하여, $\Delta$의 lattice points $\Delta \cap M = \{m_0, \ldots, m_s\}$를 이용하여 다음의 *general anticanonical section*을 정의한다.
 
 $$f_\Delta(\x) = \sum_{i=0}^{s} c_i \x^{m_i} \in \mathbb{C}[M]$$
 
@@ -98,7 +98,7 @@ $\Delta$의 꼭짓점은 이들 직선의 교점들이므로 $(-1,-1), (2,-1), (
 
 $\Delta$의 facets는 $u_1 = -1$, $u_2 = -1$, $u_1 + u_2 = 1$이며, 이들의 primitive inner normal 벡터들은 각각 $(1,0), (0,1), (-1,-1)$이다. 따라서 $\Delta$의 normal fan은 ray generator들이 $(1,0), (0,1), (-1,-1)$인 fan으로, 이는 $\mathbb{P}^2$의 standard fan이다. 즉 ambient $X_\Delta \cong \mathbb{P}^2$. 반면 $\Delta^\circ$의 normal fan을 계산하면 ray들이 $(2,-1), (-1,2), (-1,-1)$이 되어 ($\mathbb{P}^2$의 fan과 lattice-isomorphic이 아니며, 인접 두 ray의 determinant가 $\pm 3$이다), $X_{\Delta^\circ}$는 세 점에 $\mathbb{Z}/3$ singular point를 갖는 singular Gorenstein Fano surface가 된다. ([\[토릭 기하학\] §파노 다양체, ⁋예시 6](/ko/math/toric_geometry/reflexive_polytope_fano#ex6)에서 같은 reflexive pair를 다룬다.)
 
-$n=2$인 경우 anticanonical hypersurface $Y_\Delta \subset X_\Delta = \mathbb{P}^2$는 일반적으로 차원 $1$의 smooth genus-$1$ curve (elliptic curve)가 된다 (anticanonical class $-K_{\mathbb{P}^2} = \mathcal{O}(3)$의 generic section은 cubic curve이며 generic이면 smooth). Mirror 측 $Y_{\Delta^\circ}$도 적절한 crepant resolution 후 genus-$1$ curve가 된다. 1차원 Calabi-Yau에서 mirror symmetry는 $g(Y_\Delta) = g(Y_{\Delta^\circ}) = 1$로 trivial하게 표현되며, 본격적인 Batyrev mirror symmetry는 $n \ge 4$인 경우 (K3 surface, CY 3-fold 등)에 들어가서야 비자명한 의미를 가진다. 위의 명제 2 공식은 이 영역에서 적용되며, $n=2$에서는 substituting 후 자명한 항등식으로 환원된다.
+$n=2$인 경우 anticanonical hypersurface $Y_\Delta \subseteq X_\Delta = \mathbb{P}^2$는 일반적으로 차원 $1$의 smooth genus-$1$ curve (elliptic curve)가 된다 (anticanonical class $-K_{\mathbb{P}^2} = \mathcal{O}(3)$의 generic section은 cubic curve이며 generic이면 smooth). Mirror 측 $Y_{\Delta^\circ}$도 적절한 crepant resolution 후 genus-$1$ curve가 된다. 1차원 Calabi-Yau에서 mirror symmetry는 $g(Y_\Delta) = g(Y_{\Delta^\circ}) = 1$로 trivial하게 표현되며, 본격적인 Batyrev mirror symmetry는 $n \ge 4$인 경우 (K3 surface, CY 3-fold 등)에 들어가서야 비자명한 의미를 가진다. 위의 명제 2 공식은 이 영역에서 적용되며, $n=2$에서는 substituting 후 자명한 항등식으로 환원된다.
 
 ## Grassmannian mirror symmetry로의 연결
 

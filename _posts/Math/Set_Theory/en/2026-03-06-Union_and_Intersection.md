@@ -79,11 +79,11 @@ hold.
 
 Let us now examine a few more properties of unions and intersections. If two families $(A_i)_{i\in I}$ and $(B_i)_{i\in I}$ with the same index set are given, and $B_i\subseteq A_i$ holds for every $i\in I$, then
 
-$$\bigcup_{i\in I} B_i\subset\bigcup_{i\in I} A_i,\qquad \bigcap_{i\in I} B_i\subset\bigcap_{i\in I} A_i$$
+$$\bigcup_{i\in I} B_i\subseteq\bigcup_{i\in I} A_i,\qquad \bigcap_{i\in I} B_i\subseteq\bigcap_{i\in I} A_i$$
 
 is obvious. Also, for a given family $(A_i)_{i\in I}$ and a subset $J$ of $I$,
 
-$$\bigcup_{j\in J}A_j\subset\bigcup_{i\in I} A_i,\qquad\bigcap_{j\in J}A_j\supset\bigcap_{i\in I} A_i$$
+$$\bigcup_{j\in J}A_j\subseteq\bigcup_{i\in I} A_i,\qquad\bigcap_{j\in J}A_j\supset\bigcap_{i\in I} A_i$$
 
 is almost obvious.
 
@@ -101,7 +101,7 @@ hold.
 ::: Proof
 Let us first prove the equality for unions. If $x\in \bigcup_{i\in I}A_i$, then for some $i_0\in I$ we have $x\in A_{i_0}$. Since $I=\bigcup_{k\in K} J_k$, there exists some $k_0$ such that $i_0\in J_{k_0}$. Then
 
-$$A_{i_0}=\bigcup_{i\in \{i_0\}}A_i\subset\bigcup_{j\in J_{k_0}} A_j=\bigcup_{k\in\left\{k_0\right\}}\left(\bigcup_{i\in J_k} A_i\right)\subseteq \bigcup_{k\in K}\left(\bigcup_{j\in J_k} A_j\right)$$
+$$A_{i_0}=\bigcup_{i\in \{i_0\}}A_i\subseteq\bigcup_{j\in J_{k_0}} A_j=\bigcup_{k\in\left\{k_0\right\}}\left(\bigcup_{i\in J_k} A_i\right)\subseteq \bigcup_{k\in K}\left(\bigcup_{j\in J_k} A_j\right)$$
 
 so $x\in A_{i_0}\subseteq \bigcup_{k\in K}\left(\bigcup_{j\in J_k} A_j\right)$.
 
@@ -117,7 +117,7 @@ We may also consider the image of a union or intersection as follows.
 ::: Proposition 6
  Let $(A_i)_{i\in I}$ be a family of subsets of a set $A$, and let $(R,A,B)$ be a binary relation. Then
 
-$$R\left(\bigcup_{i\in I} A_i\right)=\bigcup_{i\in I}R(A_i),\quad R\left(\bigcap_{i\in I} A_i\right)\subset\bigcap_{i\in I}R(A_i)$$
+$$R\left(\bigcup_{i\in I} A_i\right)=\bigcup_{i\in I}R(A_i),\quad R\left(\bigcap_{i\in I} A_i\right)\subseteq\bigcap_{i\in I}R(A_i)$$
 :::
 ::: Proof
 Let us first prove the first equality. If $y\in R\left(\bigcup_{i\in I}A_i\right)$, then there exists suitable $x\in \bigcup_{i\in I}A_i$ such that $(x,y)\in R$. Now if $x\in A_j$, then $y\in R(A_j)$, so $y\in\bigcup_{i\in I}R\left(A_i\right)$ holds. Conversely, if $y\in \bigcup_{i\in I}R\left(A_i\right)$, then for some $j$ we have $y\in R\left(A_j\right)$, so there exists suitable $x\in A_j$ such that $(x,y)\in R$. Therefore $y\in R\left(\bigcup_{i\in I} A_i\right)$ holds.

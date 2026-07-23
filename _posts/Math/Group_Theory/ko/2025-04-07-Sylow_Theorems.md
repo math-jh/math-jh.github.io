@@ -38,19 +38,19 @@ $$\lvert E^G\rvert\equiv\lvert E\rvert\pmod{p}$$
 즉, 집합 $E\setminus E^G$의 크기가 $p$의 배수임을 보여야 한다. 그런데 $E\setminus E^G$는 그 크기가 $1$보다 큰 (disjoint한) $G$-orbit들의 합집합이고, 이들 각각의 orbit은 [\[대수적 구조\] §군의 작용, ⁋정리 14](/ko/math/algebraic_structures/group_actions#thm14)에 의하여 그 크기가 $p$의 거듭제곱이므로 이것이 성립한다. 
 :::
 
-특별히 $E=G$ 위에 $G$가 inner automorphism으로 act하는 경우를 생각하면 $E^G$는 정확하게 $G$의 center이므로, [보조정리 2](#lem2)에 의하여 $p$-group $G$의 center $C(G)$는 trivial group이 아님을 알 수 있다. 
+특별히 $E=G$ 위에 $G$가 inner automorphism으로 act하는 경우를 생각하면 $E^G$는 정확하게 $G$의 center이므로, [보조정리 2](#lem2)에 의하여 $p$-group $G$의 center $Z(G)$는 trivial group이 아님을 알 수 있다. 
 
 ::: 정리 3
 크기 $p^r$의 $p$-group $G$에 대하여, $G$의 subgroup들의 series 
 
-$$G=G_1\supset G_2\supset\cdots G_{n+1}=\{e\}$$
+$$G=G_1\supset G_2\supset\cdots\supset G_{n+1}=\{e\}$$
 
 가 존재하여, $[G, G_k]\subseteq G_{k+1}$이 모든 $k$에 대해 성립하고, $G_k/G_{k+1}$이 order $p$의 cyclic group이도록 할 수 있다. 
 :::
 ::: 증명
-$G$의 크기에 대한 귀납법으로 증명한다. 우선 $G=\{e\}$인 경우는 증명할 것이 없다. 이제 $\lvert G\rvert=p^r$보다 작은 모든 $p$-group에서 주어진 주장이 성립한다 하고, $\lvert G\rvert=p^r$인 경우를 증명하자. 앞선 논증으로부터 $C(G)\neq\{e\}$이므로, 적당한 $x\in C(G)$가 존재하여 그 order가 $p^s$ ($1\leq s\leq r$)이도록 할 수 있다. 
+$G$의 크기에 대한 귀납법으로 증명한다. 우선 $G=\{e\}$인 경우는 증명할 것이 없다. 이제 $\lvert G\rvert=p^r$보다 작은 모든 $p$-group에서 주어진 주장이 성립한다 하고, $\lvert G\rvert=p^r$인 경우를 증명하자. 앞선 논증으로부터 $Z(G)\neq\{e\}$이므로, 적당한 $x\in Z(G)$가 존재하여 그 order가 $p^s$ ($1\leq s\leq r$)이도록 할 수 있다. 
 
-이제 원소 $x^{p^{s-1}}$로 생성되는 $C(G)$의 subgroup $H$를 생각하면, $G'=G/H$는 그 크기가 $p^{r-1}$인 $p$-group이므로 귀납적 가정에 의하여 주어진 조건을 만족하는 subgroup들의 series가 존재하며, 이제 이를 canonical projection $p: G \rightarrow G'$의 inverse image로 보낸 것이 원하는 조건을 만족한다. 
+이제 원소 $x^{p^{s-1}}$로 생성되는 $Z(G)$의 subgroup $H$를 생각하면, $G'=G/H$는 그 크기가 $p^{r-1}$인 $p$-group이므로 귀납적 가정에 의하여 주어진 조건을 만족하는 subgroup들의 series가 존재하며, 이제 이를 canonical projection $p: G \rightarrow G'$의 inverse image로 보낸 것이 원하는 조건을 만족한다. 
 :::
 
 따라서 [§군의 열, ⁋명제 7](/ko/math/group_theory/series_of_groups#prop7)의 첫째 조건과 둘째 조건의 동치에 의하여 임의의 $p$-group은 항상 nilpotent임을 안다.
@@ -105,7 +105,7 @@ $$G \times \{s\},\qquad s\in S$$
 
 이므로, $\lvert E^G\rvert=m$이고 이제 [보조정리 2](#lem2)에 의하여 
 
-$$\binom{n}{p^r} = \text{Card}(E) \equiv \text{Card}(E^G) = m \not\equiv 0 \pmod{p}$$
+$$\binom{n}{p^r} = \lvert E\rvert \equiv \lvert E^G\rvert = m \not\equiv 0 \pmod{p}$$
 
 가 성립한다. 
 :::
@@ -176,7 +176,7 @@ $P\in\Syl_p(G)$와 normalizer $N_G(P)$를 생각하자. $N_G(P)$을 포함하는
 :::
 
 ::: 증명
-$M=gMg^{-1}$을 만족하는 $g\in G$를 택하자. 그럼 $gPg^{-1}$는 $M$의 Sylow $p$-subgroup이다. 따라서 적당한 $h \in M$가 존재하여 $gPg^{-1} = hPh^{-1}$가 된다. 이제 $h^{-1}g \in N_G(P)$이고, 따라서 $g \in hN_G(P) \subset M$이다.
+$M=gMg^{-1}$을 만족하는 $g\in G$를 택하자. 그럼 $gPg^{-1}$는 $M$의 Sylow $p$-subgroup이다. 따라서 적당한 $h \in M$가 존재하여 $gPg^{-1} = hPh^{-1}$가 된다. 이제 $h^{-1}g \in N_G(P)$이고, 따라서 $g \in hN_G(P) \subseteq M$이다.
 :::
 
 ::: 따름정리 10
@@ -194,7 +194,7 @@ $G_2$의 subgroup $f(P_1)$에 대해 [정리 8](#thm8)의 둘째 결과를 적�
 
 ::: 증명
 1. $p$-group $P$는 $G$의 Sylow $p$-subgroup $Q$에 포함된다. 한편 $Q \cap H$는 $P$를 포함하는 $H$의 $p$-subgroup이므로, 결국 $P = Q \cap H$이다.
-2. $P'$를 $H$의 Sylow $p$-subgroup이라 하자. 그러면 적당한 $g \in G$가 존재하여 $gP'g^{-1} \subset Q$가 된다. $H$가 normal subgroup이므로, $P = gP'g^{-1}$는 다시 $H$에 포함되고 따라서 $P$는 $Q\cap H$에 포함된다. 이제 $Q \cap H$는 $H$의 $p$-subgroup이고, $P$는 Sylow $p$-subgroup이므로 $P = Q \cap H$이다.
+2. $P'$를 $H$의 Sylow $p$-subgroup이라 하자. 그러면 적당한 $g \in G$가 존재하여 $gP'g^{-1} \subseteq Q$가 된다. $H$가 normal subgroup이므로, $P = gP'g^{-1}$는 다시 $H$에 포함되고 따라서 $P$는 $Q\cap H$에 포함된다. 이제 $Q \cap H$는 $H$의 $p$-subgroup이고, $P$는 Sylow $p$-subgroup이므로 $P = Q \cap H$이다.
 :::
 
 ::: 따름정리 12

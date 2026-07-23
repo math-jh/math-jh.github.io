@@ -132,7 +132,7 @@ $$
 ::: 증명
 분해 자체는 타원작용소 이론의 결과이므로 그 핵심 입력만 인용하고, 거기서 cohomology와의 동형을 끌어내는 부분을 증명한다.
 
-작용소 $\Delta_d$는 콤팩트 manifold 위의 자기수반 이차 타원작용소이다. 타원성은 그 주표상 $\sigma(\Delta_d)(\xi) = -\lvert \xi \rvert^2 \cdot \mathrm{id}$이 $\xi \neq 0$에서 가역이라는 데서 나오며, 콤팩트 manifold 위 자기수반 타원작용소에 대한 일반론(Fredholm 이론과 elliptic regularity)이 다음을 준다. Kernel $\mathcal{H}^k = \ker\Delta_d$는 유한차원이고, $L^2$-직교분해 $\Omega^k = \ker\Delta_d \oplus \Img\Delta_d$가 성립하며, $\Img\Delta_d = \Img(d d^\ast + d^\ast d)$이다. 여기까지가 인용하는 해석적 사실이다.
+작용소 $\Delta_d$는 콤팩트 manifold 위의 자기수반 이차 타원작용소이다. 타원성은 그 주표상 $\sigma(\Delta_d)(\xi) = -\lvert \xi \rvert^2 \cdot \id$이 $\xi \neq 0$에서 가역이라는 데서 나오며, 콤팩트 manifold 위 자기수반 타원작용소에 대한 일반론(Fredholm 이론과 elliptic regularity)이 다음을 준다. Kernel $\mathcal{H}^k = \ker\Delta_d$는 유한차원이고, $L^2$-직교분해 $\Omega^k = \ker\Delta_d \oplus \Img\Delta_d$가 성립하며, $\Img\Delta_d = \Img(d d^\ast + d^\ast d)$이다. 여기까지가 인용하는 해석적 사실이다.
 
 이제 $\Img\Delta_d = d\,\Omega^{k-1} \oplus d^\ast\,\Omega^{k+1}$임을 본다. 포함 $\supseteq$의 직교성부터 본다. $d\eta$와 $d^\ast\zeta$의 내적은 $(d\eta, d^\ast\zeta) = (d d\eta, \zeta) = 0$이므로 두 부분공간은 직교한다. 또 $\Delta_d\gamma = d(d^\ast\gamma) + d^\ast(d\gamma) \in d\,\Omega^{k-1} + d^\ast\,\Omega^{k+1}$이므로 $\Img\Delta_d \subseteq d\,\Omega^{k-1} \oplus d^\ast\,\Omega^{k+1}$이다. 역으로 $d\eta$를 분해의 셋째 직교성으로 본다. $d\eta$는 $\mathcal{H}^k$와 직교한다 (조화 $\alpha$에 대해 $(d\eta, \alpha) = (\eta, d^\ast\alpha) = 0$, [명제 5](#prop5)). 마찬가지로 $d^\ast\zeta$도 $\mathcal{H}^k$와 직교한다 ($(d^\ast\zeta, \alpha) = (\zeta, d\alpha) = 0$). 따라서 $d\,\Omega^{k-1} \oplus d^\ast\,\Omega^{k+1} \subseteq (\mathcal{H}^k)^\perp = \Img\Delta_d$이고, 위 포함과 합쳐 등식이 성립한다. 이로써
 

@@ -53,7 +53,7 @@ is also an embedded submanifold, and the embedding is of course given by $x\maps
 We now lift the inverse function theorem and the implicit function theorem from Euclidean space to the setting of manifolds. First, the inverse function theorem in Euclidean space is as follows.
 
 ::: Theorem 4 (Inverse Function Theorem)
-Let $U\subset\mathbb{R}^m$ be an open set and let $f:U\rightarrow\mathbb{R}^m$ be a $C^\infty$ function. If the Jacobian matrix
+Let $U\subseteq\mathbb{R}^m$ be an open set and let $f:U\rightarrow\mathbb{R}^m$ be a $C^\infty$ function. If the Jacobian matrix
 
 $$\begin{pmatrix}\partial(r^1\circ f)/\partial r^1&\partial(r^1\circ f)/\partial r^2&\cdots&\partial(r^1\circ f)/\partial r^m\\\partial(r^2\circ f)/\partial r^1&\partial(r^2\circ f)/\partial r^2&\cdots&\partial(r^2\circ f)/\partial r^m\\\vdots&\vdots&\ddots&\vdots\\\partial(r^m\circ f)/\partial r^1&\partial(r^m\circ f)/\partial r^2&\cdots&\partial(r^m\circ f)/\partial r^m\end{pmatrix}$$
 
@@ -68,7 +68,7 @@ Let $F:M\rightarrow N$ be a $C^\infty$ function between manifolds and let $p\in 
 ::: Proof
 First, from the fact that $dF_p$ is an isomorphism we obtain $\dim M=\dim T_pM=\dim T_{F(p)}N=\dim N$. Now take a coordinate system $(W,\tau)$ containing the point $F(p)$, and a coordinate system $(V,\varphi)$ containing $p$ such that $F(V)\subseteq W$. Then the function $(\tau\circ F\circ\varphi^{-1})\vert_{\varphi(V)}$ is a map between Euclidean spaces of the same dimension, and since $dF_p$ is an isomorphism, the Jacobian matrix of this function at the point $\varphi(p)$ is nonsingular.
 
-Therefore, by the inverse function theorem, there exists an open set $U'$ with $\varphi(p)\in U'\subset\varphi(V)$ such that $(\tau\circ F\circ\varphi^{-1})\vert_{U'}$ defines a diffeomorphism between $U'$ and $\tau\circ F\circ\varphi^{-1}(U')$. Setting $U=\varphi^{-1}(U')$, the function
+Therefore, by the inverse function theorem, there exists an open set $U'$ with $\varphi(p)\in U'\subseteq\varphi(V)$ such that $(\tau\circ F\circ\varphi^{-1})\vert_{U'}$ defines a diffeomorphism between $U'$ and $\tau\circ F\circ\varphi^{-1}(U')$. Setting $U=\varphi^{-1}(U')$, the function
 
 $$\tau^{-1}\circ\bigl((\tau\circ F\circ\varphi^{-1})\vert_{U'}\bigr)\circ\varphi$$
 

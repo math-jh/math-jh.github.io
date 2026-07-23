@@ -127,7 +127,7 @@ so these $f$ are also not field homomorphisms. That is, the above open neighborh
 
 On the other hand, let $\mathbb{L}/\mathbb{K}$ be a Galois extension, and let $\mathbb{L}_i/\mathbb{K}$ be Galois subextensions of this extension satisfying $\mathbb{L}=\bigcup_{i\in I}\mathbb{L}_i$. Then we endow this with the partial order
 
-$$i\leq j \iff \mathbb{L}_i\subset \mathbb{L}_j$$
+$$i\leq j \iff \mathbb{L}_i\subseteq \mathbb{L}_j$$
 
 and under this partial order we can define the following restriction maps
 

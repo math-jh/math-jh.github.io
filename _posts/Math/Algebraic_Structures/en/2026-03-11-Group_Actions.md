@@ -220,14 +220,14 @@ $$G/\ker\rho\cong\Inn(G)$$
 holds. The kernel $\ker\rho$ also has a special name.
 
 ::: Definition 12
-Let $G$ be a group. For the group homomorphism $\rho:G\rightarrow\Inn(G)$ defined in [Proposition 9](#prop9), the kernel $\ker\rho$ is called the *center* of $G$ and is denoted by $C(G)$.
+Let $G$ be a group. For the group homomorphism $\rho:G\rightarrow\Inn(G)$ defined in [Proposition 9](#prop9), the kernel $\ker\rho$ is called the *center* of $G$ and is denoted by $Z(G)$.
 :::
 
 By definition,
 
 $$g\in\ker\rho\iff\rho_g=\id_G\iff gxg^{-1}=x\quad\text{for all $x\in G$}$$
 
-so the fixer $\Fix(G)$ in the situation where $G$ acts on itself by inner automorphisms is precisely $C(G)$. More generally, for any subset $A\subseteq G$ we define the *centralizer* $C_G(A)$ of $A$ to be its fixer $\Fix(A)$. Similarly, we define the *normalizer* $N_G(A)$ of $A$ to be $\Stab(A)$.
+so the fixer $\Fix(G)$ in the situation where $G$ acts on itself by inner automorphisms is precisely $Z(G)$. More generally, for any subset $A\subseteq G$ we define the *centralizer* $C_G(A)$ of $A$ to be its fixer $\Fix(A)$. Similarly, we define the *normalizer* $N_G(A)$ of $A$ to be $\Stab(A)$.
 
 ## Orbit-Stabilizer Theorem
 

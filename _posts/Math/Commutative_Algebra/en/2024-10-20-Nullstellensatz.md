@@ -43,7 +43,7 @@ For a ring $A$, the following are equivalent.
 ::: Proof
 First, suppose $A$ is Jacobson. Then it is immediate from the definition that any quotient $A/\mathfrak{p}$ is also Jacobson. Meanwhile, by [\[Algebraic Structures\] §Field of Fractions, ⁋Proposition 8](/en/math/algebraic_structures/field_of_fractions#prop8), $A/\mathfrak{p}$ is an integral domain, and since $(0)$ is a prime ideal in an integral domain, we can write $(0)$ as an intersection of maximal ideals. Now by [§Localization, ⁋Proposition 8](/en/math/commutative_algebra/localization#prop8), there is a one-to-one correspondence between prime ideals of $(A/\mathfrak{p})[a^{-1}]$ and prime ideals of $A/\mathfrak{p}$ not containing $a$. By assumption the only prime ideal of $(A/\mathfrak{p})[a^{-1}]$ is $0$, so the only prime ideal of $A/\mathfrak{p}$ not containing $a$ is also $0$. Hence every nonzero prime ideal of $A/\mathfrak{p}$ must contain $a$. But if such a prime ideal exists, then since $A/\mathfrak{p}$ is an integral domain,
 
-$$(0)=\sqrt{(0)}=\bigcap_\text{\scriptsize$\mathfrak{p}$ a prime} \mathfrak{p}$$
+$$(0)=\mathfrak{N}(A)=\bigcap_\text{\scriptsize$\mathfrak{p}$ a prime} \mathfrak{p}$$
 
 and thus $a=0$, which is a contradiction.
 

@@ -31,7 +31,7 @@ Finally, we show that $A^\ast$ is well-ordered. Since $s(A)$ is well-ordered, ad
 
 Via the isomorphism in the above proposition, we may regard each well-ordered set as
 
-> a set of well-ordered sets smaller than itself, ordered by $\subset$.
+> a set of well-ordered sets smaller than itself, ordered by $\subseteq$.
 
 ::: Definition 2 (von Neumann)
 A set $S$ is an *ordinal* if every element of $S$ is strictly well-ordered by $\in$, and every element of $S$ is also a subset of $S$.

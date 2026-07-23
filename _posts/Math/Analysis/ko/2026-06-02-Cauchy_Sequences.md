@@ -55,7 +55,7 @@ $\varepsilon = 1$에 대응하는 $N$을 잡으면, $n \geq N$에서 $\lvert a_n
 :::
 
 ::: 증명
-수렴 $\Rightarrow$ Cauchy는 [명제 2](#prop2)이다. 역을 보이자. $(a_n)$이 Cauchy이면 [명제 3](#prop3)에 의해 bounded이고, [§부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4)에 의해 수렴하는 부분수열 $a_{n_k} \rightarrow L$이 존재한다. 이제 전체 수열이 같은 $L$로 수렴함을 보인다. 임의의 $\varepsilon > 0$에 대해, Cauchy 조건으로 $m, n \geq N$이면 $\lvert a_m - a_n\rvert < \varepsilon/2$이게 $N$을 잡고, 부분수열의 수렴으로 $n_k \geq N$이면서 $\lvert a_{n_k} - L\rvert < \varepsilon/2$인 $k$를 잡는다. 그러면 모든 $n \geq N$에 대해
+수렴 $\implies$ Cauchy는 [명제 2](#prop2)이다. 역을 보이자. $(a_n)$이 Cauchy이면 [명제 3](#prop3)에 의해 bounded이고, [§부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4)에 의해 수렴하는 부분수열 $a_{n_k} \rightarrow L$이 존재한다. 이제 전체 수열이 같은 $L$로 수렴함을 보인다. 임의의 $\varepsilon > 0$에 대해, Cauchy 조건으로 $m, n \geq N$이면 $\lvert a_m - a_n\rvert < \varepsilon/2$이게 $N$을 잡고, 부분수열의 수렴으로 $n_k \geq N$이면서 $\lvert a_{n_k} - L\rvert < \varepsilon/2$인 $k$를 잡는다. 그러면 모든 $n \geq N$에 대해
 
 $$\lvert a_n - L\rvert \leq \lvert a_n - a_{n_k}\rvert + \lvert a_{n_k} - L\rvert < \varepsilon$$
 
@@ -65,7 +65,7 @@ $$\lvert a_n - L\rvert \leq \lvert a_n - a_{n_k}\rvert + \lvert a_{n_k} - L\rver
 ## 완비성의 동치 형태
 
 ::: 참고 5
-[정리 4](#thm4)에서 "Cauchy $\Rightarrow$ 수렴"은 실수의 완비성과 동치이다. 실제로 이 성질을 *완비성*의 정의로 채택하는 길도 있으며, 상한 성질로부터 (Bolzano–Weierstrass를 거쳐) 이를 유도한 것이 [정리 4](#thm4)이다.
+[정리 4](#thm4)에서 "Cauchy $\implies$ 수렴"은 실수의 완비성과 동치이다. 실제로 이 성질을 *완비성*의 정의로 채택하는 길도 있으며, 상한 성질로부터 (Bolzano–Weierstrass를 거쳐) 이를 유도한 것이 [정리 4](#thm4)이다.
 :::
 
 이 동치는 $\mathbb{Q}$ 위에서는 깨진다. 예컨대 $\sqrt{2}$의 십진 근삿값으로 이루어진 유리수열 $1, 1.4, 1.41, 1.414, \ldots$은 항들끼리 한없이 가까워지므로 Cauchy이지만, 그 극한 $\sqrt{2}$가 유리수가 아니므로 $\mathbb{Q}$ 안에서는 수렴하지 않는다. 완비성이란 바로 이런 "수렴해야 마땅한" Cauchy 수열이 실제로 극한을 갖도록 빈틈을 메운 것이다.

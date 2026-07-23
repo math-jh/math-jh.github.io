@@ -113,7 +113,7 @@ Paracompact 밑공간 $B$ 위의 complex rank $n$ vector bundle $E\rightarrow B$
 :::
 
 ::: 증명
-Rank $n$에 대한 귀납으로 보인다. $n=1$이면 $E$ 자체가 line bundle이므로 $F(E)=B$와 $\rho=\mathrm{id}$로 두면 된다.
+Rank $n$에 대한 귀납으로 보인다. $n=1$이면 $E$ 자체가 line bundle이므로 $F(E)=B$와 $\rho=\id$로 두면 된다.
 
 $n\geq 2$라 하고, rank $n-1$까지 명제가 성립한다 가정하자. Projective bundle $\pi:\mathbb{P}(E)\rightarrow B$를 잡으면 [정리 3](#thm3)에 의하여 $\pi^\ast$은 단사이고, tautological line bundle에 대하여
 

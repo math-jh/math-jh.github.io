@@ -66,13 +66,13 @@ Degree가 유용한 불변량이 되는 것은 그것이 함수의 연속적 변
 ::: 명제 3
 $n\geq 1$에 대한 연속함수들 $f,g:S^n\rightarrow S^n$에 대하여 다음이 성립한다.
 
-1. $\deg\operatorname{id}_{S^n}=1$이다.
+1. $\deg\id_{S^n}=1$이다.
 2. $f$와 $g$가 homotopic하면 $\deg f=\deg g$이다.
 3. $f$가 상수함수이면 $\deg f=0$이다.
 4. $\deg(g\circ f)=(\deg g)(\deg f)$이다.
 :::
 ::: 증명
-(1) $\operatorname{id}_{S^n}$은 $H_n$에서 항등사상을 유도하므로 ($H_n$이 functor이기 때문이다) 곱해지는 정수는 $1$이다.
+(1) $\id_{S^n}$은 $H_n$에서 항등사상을 유도하므로 ($H_n$이 functor이기 때문이다) 곱해지는 정수는 $1$이다.
 
 (2) 두 homotopic map은 homology에서 같은 준동형을 유도하므로 ([§호모토피, ⁋명제 6](/ko/math/algebraic_topology/homotopy#prop6)) $f_\ast=g_\ast$이고 따라서 $\deg f=\deg g$이다.
 
@@ -81,7 +81,7 @@ $n\geq 1$에 대한 연속함수들 $f,g:S^n\rightarrow S^n$에 대하여 다음
 (4) Functoriality에 의하여 $(g\circ f)_\ast=g_\ast\circ f_\ast$이다. $f_\ast$가 $\deg f$를, $g_\ast$가 $\deg g$를 곱하는 morphism이므로 그 합성은 $(\deg g)(\deg f)$를 곱하는 morphism이고, 이것이 $\deg(g\circ f)$이다.
 :::
 
-성질 (2)는 degree가 homotopy 불변량임을 말한다. 이 사실은 degree의 위력의 근원이다. 예를 들어 두 morphism의 degree가 다르면 그들은 결코 homotopic할 수 없으며, 뒤에서 보듯 이 관찰만으로 hairy ball 정리가 따라 나온다. 성질 (1)과 (3)을 합하면 $\operatorname{id}_{S^n}$은 상수함수와 homotopic하지 않다는 것, 곧 $S^n$은 contractible하지 않다는 것을 즉시 얻는다.
+성질 (2)는 degree가 homotopy 불변량임을 말한다. 이 사실은 degree의 위력의 근원이다. 예를 들어 두 morphism의 degree가 다르면 그들은 결코 homotopic할 수 없으며, 뒤에서 보듯 이 관찰만으로 hairy ball 정리가 따라 나온다. 성질 (1)과 (3)을 합하면 $\id_{S^n}$은 상수함수와 homotopic하지 않다는 것, 곧 $S^n$은 contractible하지 않다는 것을 즉시 얻는다.
 
 이제 degree가 실제로 $0$과 $1$ 이외의 값을 가질 수 있음을, 반사사상과 antipodal morphism을 통해 확인한다.
 
@@ -109,21 +109,21 @@ $$\deg a=(\deg r)^{n+1}=(-1)^{n+1}$$
 이다.
 :::
 
-따름정리 5는 antipodal morphism의 degree가 짝수 차원 구와 홀수 차원 구에서 부호가 다름을 말한다. $n$이 짝수이면 $\deg a=-1$이므로 $a$는 $\operatorname{id}$과 homotopic하지 않고, $n$이 홀수이면 $\deg a=1$로 $\operatorname{id}$과 degree가 같다. 이 부호 차이가 이어지는 절에서 벡터장의 존재 문제를 가른다.
+따름정리 5는 antipodal morphism의 degree가 짝수 차원 구와 홀수 차원 구에서 부호가 다름을 말한다. $n$이 짝수이면 $\deg a=-1$이므로 $a$는 $\id$과 homotopic하지 않고, $n$이 홀수이면 $\deg a=1$로 $\id$과 degree가 같다. 이 부호 차이가 이어지는 절에서 벡터장의 존재 문제를 가른다.
 
 ## No-retraction 보조정리와 Brouwer 고정점 정리
 
 Homology가 fixed point 문제에 개입하는 첫 통로는 원판을 그 boundary로 밀어내는 연속함수, 곧 retraction이 존재할 수 없다는 사실이다. $(n+1)$-공 $D^{n+1}=\{x\in\mathbb{R}^{n+1}\mid\lvert x\rvert\leq 1\}$의 boundary가 $S^n$임을 상기하자. Retraction이란 이 포함관계를 되돌리는 morphism이다.
 
 ::: 보조정리 6 (No-retraction)
-$n\geq 0$에 대하여, 포함사상 $\iota:S^n\hookrightarrow D^{n+1}$의 retraction, 곧 $r\circ\iota=\operatorname{id}_{S^n}$을 만족하는 연속함수 $r:D^{n+1}\rightarrow S^n$은 존재하지 않는다.
+$n\geq 0$에 대하여, 포함사상 $\iota:S^n\hookrightarrow D^{n+1}$의 retraction, 곧 $r\circ\iota=\id_{S^n}$을 만족하는 연속함수 $r:D^{n+1}\rightarrow S^n$은 존재하지 않는다.
 :::
 ::: 증명
-그러한 $r$가 존재한다고 가정하고 모순을 이끌어낸다. 먼저 $n\geq 1$인 경우를 보자. $r\circ\iota=\operatorname{id}_{S^n}$의 양변에 $H_n$을 취하면 functoriality에 의하여
+그러한 $r$가 존재한다고 가정하고 모순을 이끌어낸다. 먼저 $n\geq 1$인 경우를 보자. $r\circ\iota=\id_{S^n}$의 양변에 $H_n$을 취하면 functoriality에 의하여
 
 $$H_n(S^n)\overset{\iota_\ast}{\longrightarrow}H_n(D^{n+1})\overset{r_\ast}{\longrightarrow}H_n(S^n)$$
 
-의 합성이 $H_n(S^n)$ 위의 항등사상이 된다. 그런데 $D^{n+1}$은 convex 집합이므로 한 점으로 deformation retract하는 contractible 공간이고, 따라서 $n\geq 1$에 대하여 $H_n(D^{n+1})\cong H_n(\ast)=0$이다. ([§호몰로지, ⁋명제 11](/ko/math/algebraic_topology/homology#prop11)) 곧 항등사상 $\operatorname{id}:H_n(S^n)\rightarrow H_n(S^n)$이 $0$을 통과하게 되는데, [명제 1](#prop1)에 의하여 $H_n(S^n)\cong\mathbb{Z}\neq 0$이므로 이는 모순이다.
+의 합성이 $H_n(S^n)$ 위의 항등사상이 된다. 그런데 $D^{n+1}$은 convex 집합이므로 한 점으로 deformation retract하는 contractible 공간이고, 따라서 $n\geq 1$에 대하여 $H_n(D^{n+1})\cong H_n(\ast)=0$이다. ([§호몰로지, ⁋명제 11](/ko/math/algebraic_topology/homology#prop11)) 곧 항등사상 $\id:H_n(S^n)\rightarrow H_n(S^n)$이 $0$을 통과하게 되는데, [명제 1](#prop1)에 의하여 $H_n(S^n)\cong\mathbb{Z}\neq 0$이므로 이는 모순이다.
 
 $n=0$인 경우, $S^0$은 두 점, $D^1=[-1,1]$은 connected인 구간이다. $r:[-1,1]\rightarrow S^0$이 연속이고 두 끝점을 각각 자기 자신으로 보낸다면, connected space의 연속상은 connected이어야 하는데 $S^0$은 connected가 아니고 $r$의 상은 두 점을 모두 포함하므로 모순이다.
 :::
@@ -157,7 +157,7 @@ $$H:S^n\times[0,1]\rightarrow S^n;\qquad H(x,t)=(\cos\pi t)x+(\sin\pi t)v(x)$$
 
 $$\lvert H(x,t)\rvert^2=\cos^2\pi t\cdot\lvert x\rvert^2+\sin^2\pi t\cdot\lvert v(x)\rvert^2=\cos^2\pi t+\sin^2\pi t=1$$
 
-이고, 따라서 $H$는 실제로 $S^n$으로 가는 값을 가진다. 나아가 $H(x,0)=x$이고 $H(x,1)=-x$이므로, $H$는 항등사상 $\operatorname{id}_{S^n}$에서 antipodal morphism $a$로의 homotopy이다. [명제 3](#prop3)의 성질 (2)에 의하여 $\deg\operatorname{id}_{S^n}=\deg a$, 곧 [따름정리 5](#cor5)에 의하여
+이고, 따라서 $H$는 실제로 $S^n$으로 가는 값을 가진다. 나아가 $H(x,0)=x$이고 $H(x,1)=-x$이므로, $H$는 항등사상 $\id_{S^n}$에서 antipodal morphism $a$로의 homotopy이다. [명제 3](#prop3)의 성질 (2)에 의하여 $\deg\id_{S^n}=\deg a$, 곧 [따름정리 5](#cor5)에 의하여
 
 $$1=(-1)^{n+1}$$
 
@@ -174,7 +174,7 @@ $$x\cdot v(x)=-x_1x_2+x_2x_1-\cdots-x_{2m-1}x_{2m}+x_{2m}x_{2m-1}=0$$
 이므로 $v$는 tangent vector field이다. 따라서 $n$이 홀수이면 그러한 벡터장이 존재한다.
 :::
 
-특히 $S^2$처럼 짝수 차원 구에서는 어디서도 $0$이 아닌 tangent vector field가 존재하지 않는다. 곧 지구 표면의 바람은 어딘가에서 반드시 잦아든다. 증명의 핵심은 $0$이 아닌 tangent vector field가 있으면 그것을 회전의 매개변수로 삼아 $\operatorname{id}$을 antipodal morphism까지 연속적으로 끌고 갈 수 있고, 두 morphism의 degree가 같아야 한다는 제약이 곧바로 $n$의 홀짝성을 결정한다는 데 있다. 이 논증은 오직 degree만을 사용하며 어떠한 추가적 불변량도 필요로 하지 않는다.
+특히 $S^2$처럼 짝수 차원 구에서는 어디서도 $0$이 아닌 tangent vector field가 존재하지 않는다. 곧 지구 표면의 바람은 어딘가에서 반드시 잦아든다. 증명의 핵심은 $0$이 아닌 tangent vector field가 있으면 그것을 회전의 매개변수로 삼아 $\id$을 antipodal morphism까지 연속적으로 끌고 갈 수 있고, 두 morphism의 degree가 같아야 한다는 제약이 곧바로 $n$의 홀짝성을 결정한다는 데 있다. 이 논증은 오직 degree만을 사용하며 어떠한 추가적 불변량도 필요로 하지 않는다.
 
 ## Lefschetz 고정점 정리
 
@@ -188,7 +188,7 @@ $$L(f)=\sum_{i\geq 0}(-1)^i\operatorname{tr}\bigl(f_\ast:H_i(X;\mathbb{Q})\right
 를 $f$의 *Lefschetz number<sub>레프셰츠 수</sub>*라 부른다.
 :::
 
-정의의 합은 유한합이다. $X$가 위의 조건을 만족하면 유한개의 $i$에 대해서만 $H_i(X;\mathbb{Q})\neq 0$이기 때문이다. 또한 $L(f)$는 각 trace가 정수가 아닐 수도 있지만 그 교대합은 항상 정수가 되는데, 이는 $f_\ast$가 실제로는 정수계수 homology 위의 준동형에서 유래하기 때문이다. Lefschetz 수는 명백히 homotopy 불변량이다. Homotopic한 두 morphism은 각 $H_i(X;\mathbb{Q})$ 위에서 같은 선형사상을 유도하므로 trace가 일치한다. 특별히 $f=\operatorname{id}_X$이면 각 $f_\ast$가 항등사상이고 그 trace는 $\dim_\mathbb{Q}H_i(X;\mathbb{Q})$, 곧 $i$번째 Betti 수이므로 $L(\operatorname{id}_X)=\sum_i(-1)^i\dim_\mathbb{Q}H_i(X;\mathbb{Q})$은 $X$의 Euler characteristic과 같다.
+정의의 합은 유한합이다. $X$가 위의 조건을 만족하면 유한개의 $i$에 대해서만 $H_i(X;\mathbb{Q})\neq 0$이기 때문이다. 또한 $L(f)$는 각 trace가 정수가 아닐 수도 있지만 그 교대합은 항상 정수가 되는데, 이는 $f_\ast$가 실제로는 정수계수 homology 위의 준동형에서 유래하기 때문이다. Lefschetz 수는 명백히 homotopy 불변량이다. Homotopic한 두 morphism은 각 $H_i(X;\mathbb{Q})$ 위에서 같은 선형사상을 유도하므로 trace가 일치한다. 특별히 $f=\id_X$이면 각 $f_\ast$가 항등사상이고 그 trace는 $\dim_\mathbb{Q}H_i(X;\mathbb{Q})$, 곧 $i$번째 Betti 수이므로 $L(\id_X)=\sum_i(-1)^i\dim_\mathbb{Q}H_i(X;\mathbb{Q})$은 $X$의 Euler characteristic과 같다.
 
 ::: 정리 10 (Lefschetz 고정점 정리)
 $X$를 유한 CW complex이거나 삼각화가능한 콤팩트 공간이라 하고, $f:X\rightarrow X$를 연속함수라 하자. 만일 $L(f)\neq 0$이면 $f$는 fixed point를 갖는다.
@@ -229,7 +229,7 @@ $$L(f)=(-1)^0\cdot 1=1\neq 0$$
 ::: 예시 12
 Degree와 Lefschetz 수의 상호작용을 구면 위에서 구체적으로 살펴본다.
 
-1. **degree의 실현.** $S^1$을 복소평면의 단위원 $\{z\in\mathbb{C}\mid\lvert z\rvert=1\}$으로 보면, 각 정수 $k$에 대하여 $f_k(z)=z^k$은 연속 자기사상이다. $H_1(S^1)\cong\mathbb{Z}$의 generator를 원을 한 바퀴 도는 loop로 볼 때 $f_k$은 이를 $k$바퀴 도는 loop로 보내므로 $\deg f_k=k$이다. 곧 $S^1$의 자기사상은 모든 정수 degree를 실현한다. 더 높은 차원에서도, $S^{n-1}$의 degree $k$ morphism을 $S^n$으로 매다는 suspension을 취하면 degree가 보존되어 ($\operatorname{id}$과 반사사상의 관계가 [명제 4](#prop4)에서 한 차원씩 옮겨간 것과 같은 이유로) 모든 정수 degree의 $S^n$ 자기사상을 얻는다.
+1. **degree의 실현.** $S^1$을 복소평면의 단위원 $\{z\in\mathbb{C}\mid\lvert z\rvert=1\}$으로 보면, 각 정수 $k$에 대하여 $f_k(z)=z^k$은 연속 자기사상이다. $H_1(S^1)\cong\mathbb{Z}$의 generator를 원을 한 바퀴 도는 loop로 볼 때 $f_k$은 이를 $k$바퀴 도는 loop로 보내므로 $\deg f_k=k$이다. 곧 $S^1$의 자기사상은 모든 정수 degree를 실현한다. 더 높은 차원에서도, $S^{n-1}$의 degree $k$ morphism을 $S^n$으로 매다는 suspension을 취하면 degree가 보존되어 ($\id$과 반사사상의 관계가 [명제 4](#prop4)에서 한 차원씩 옮겨간 것과 같은 이유로) 모든 정수 degree의 $S^n$ 자기사상을 얻는다.
 
 2. **구면 위의 Lefschetz 수.** $n\geq 1$에 대하여 $f:S^n\rightarrow S^n$을 생각하자. [명제 1](#prop1)에 의하여 $H_0(S^n;\mathbb{Q})\cong\mathbb{Q}$, $H_n(S^n;\mathbb{Q})\cong\mathbb{Q}$이고 그 밖의 homology는 $0$이다. $S^n$이 path-connected이므로 $f_\ast$는 $H_0$ 위에서 항등사상이어서 trace가 $1$이고, $H_n$ 위에서는 $\deg f$를 곱하는 morphism이어서 trace가 $\deg f$이다. 따라서
 

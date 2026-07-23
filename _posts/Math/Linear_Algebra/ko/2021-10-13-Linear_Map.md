@@ -154,8 +154,8 @@ $$0=L(v_1)-L(v_2)=L(v_1-v_2)$$
 ::: 따름정리 9
 두 $\mathbb{K}$-벡터공간 $V,W$와 linear map $L:V\rightarrow W$가 주어졌다 하자.
 
-1. 만약 $L$이 단사라면, 임의의 일차독립인 부분집합 $S\subset V$에 대하여 $L(S)$ 또한 $W$에서 일차독립이다.
-2. 만약 $L$이 전사라면, $\langle S\rangle=V$를 만족하는 $S\subset V$에 대해, $L(S)$ 또한 $\span L(S)=W$를 만족한다.
+1. 만약 $L$이 단사라면, 임의의 일차독립인 부분집합 $S\subseteq V$에 대하여 $L(S)$ 또한 $W$에서 일차독립이다.
+2. 만약 $L$이 전사라면, $\langle S\rangle=V$를 만족하는 $S\subseteq V$에 대해, $L(S)$ 또한 $\span L(S)=W$를 만족한다.
 :::
 ::: 증명
 1. $L(S)$의 원소들 $L(x_1),\ldots, L(x_k)$들에 대하여, 만일

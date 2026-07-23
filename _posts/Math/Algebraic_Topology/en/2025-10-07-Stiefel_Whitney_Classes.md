@@ -67,7 +67,7 @@ This is not a trivial bundle. If it were, there would exist a non-vanishing cont
 
 $$S^n \overset{q}{\longrightarrow} \RP^n \overset{s}{\longrightarrow} E\overset{\pr_2}{\longrightarrow} \mathbb{R}^{n+1}$$
 
-This map sends $\mathbf{x}\in S^n\subset\mathbb{R}^{n+1}$ to a scalar multiple of $\mathbf{x}$. Denoting this scalar by $t(\mathbf{x})$, we see that $t$ is a continuous function from $S^n$ to $\mathbb{R}$, and because of the quotient map $q$ it satisfies
+This map sends $\mathbf{x}\in S^n\subseteq\mathbb{R}^{n+1}$ to a scalar multiple of $\mathbf{x}$. Denoting this scalar by $t(\mathbf{x})$, we see that $t$ is a continuous function from $S^n$ to $\mathbb{R}$, and because of the quotient map $q$ it satisfies
 
 $$t(-\mathbf{x})=-t(\mathbf{x}).$$
 
@@ -82,7 +82,7 @@ For a vector bundle $E$ of rank $n$ over a topological space $B$, $E$ is a trivi
 
 Now, given any vector bundle $p:E \rightarrow B$ and any continuous map $f:B'\rightarrow B$, we can define a new vector bundle $f^\ast E \rightarrow B'$ by setting
 
-$$f^\ast E=\{(x,v)\in B'\times E\mid f(x)=p(v)\}\subset E.$$
+$$f^\ast E=\{(x,v)\in B'\times E\mid f(x)=p(v)\}\subseteq E.$$
 
 We call this the *pullback bundle*, and it is not hard to see that if any vector bundle $E' \rightarrow B'$ satisfies the above condition, then it factors through $f^\ast E$.
 
@@ -201,7 +201,7 @@ Now let us examine the cohomology rings of these spaces. Since we are using $\ma
 
 To this end, fix a full flag of $\mathbb{R}^n$
 
-$$F_\bullet:\qquad 0=F_0\subset F_1\subset F_2\subset\cdots\subset F_n=\mathbb{R}^n.$$
+$$F_\bullet:\qquad 0=F_0\subseteq F_1\subseteq F_2\subseteq\cdots\subseteq F_n=\mathbb{R}^n.$$
 
 Then any $k$-plane $X$ in $\mathbb{R}^n$ defines
 
@@ -223,7 +223,7 @@ the condition
 
 $$\dim(X\cap F_{n-k+i-\lambda_i})\geq i.$$
 
-These partitions show, once the flag $F_0\subset F_1\subset\cdots\subset F_n$ is fixed, when the dimensions of $X\cap F_i$ jumped. For example, when $X=F_k$, the corresponding partition is $(0,0,\ldots,0)$, meaning that the dimension jumps in the first $k$ entries without delay as $i$ increases. For instance, $(0,1,0,\ldots,0)$ means that $X\cap F_1$ is 1-dimensional, $X\cap F_2$ is also 1-dimensional, $X\cap F_3$ is 2-dimensional, and thereafter the dimensions jump one by one without delay.
+These partitions show, once the flag $F_0\subseteq F_1\subseteq\cdots\subseteq F_n$ is fixed, when the dimensions of $X\cap F_i$ jumped. For example, when $X=F_k$, the corresponding partition is $(0,0,\ldots,0)$, meaning that the dimension jumps in the first $k$ entries without delay as $i$ increases. For instance, $(0,1,0,\ldots,0)$ means that $X\cap F_1$ is 1-dimensional, $X\cap F_2$ is also 1-dimensional, $X\cap F_3$ is 2-dimensional, and thereafter the dimensions jump one by one without delay.
 
 Now based on this, consider the subsets
 
@@ -254,11 +254,11 @@ Thus the only effective condition is $\dim(X\cap F_2)\geq 1$. That is, $X$ meets
 
 To compute the cup product $\sigma_{(1,0)}\smile\sigma_{(1,0)}$, we need to consider two flags $F_\bullet$ and $F_\bullet'$ in general position. For example,
 
-$$F_\bullet:\quad \langle e_1\rangle\subset \langle e_1,e_2\rangle\subset \langle e_1,e_2,e_3\rangle,\qquad F_\bullet':\quad \langle e_4\rangle\subset \langle e_3,e_4\rangle\subset \langle e_2,e_3,e_4\rangle$$
+$$F_\bullet:\quad \langle e_1\rangle\subseteq \langle e_1,e_2\rangle\subseteq \langle e_1,e_2,e_3\rangle,\qquad F_\bullet':\quad \langle e_4\rangle\subseteq \langle e_3,e_4\rangle\subseteq \langle e_2,e_3,e_4\rangle$$
 
 are such flags. Now the $V$ we consider must meet both $\langle e_1,e_2\rangle$ and $\langle e_3,e_4\rangle$ in dimension $1$. For this purpose, consider another flag
 
-$$G_\bullet:\quad \langle e_1+e_4\rangle\subset\langle e_1+e_4,e_2+e_3\rangle\subset \langle e_1+e_4,e_2+e_3,e_2-e_3\rangle.$$
+$$G_\bullet:\quad \langle e_1+e_4\rangle\subseteq\langle e_1+e_4,e_2+e_3\rangle\subseteq \langle e_1+e_4,e_2+e_3,e_2-e_3\rangle.$$
 
 Then there are two cases. First, one case is when the plane spanned by the two lines of $F_2$ and $F_2'$ is not contained in $G_3$. For example, if $V$ meets $F_2$ at $\span(e_1+e_2)$ and $F_2'$ at $\span(e_3+e_4)$, then $V$ can be written exactly as $\span(e_1+e_2,e_3+e_4)$, which meets $G_0,G_1$ in dimension $0$, $G_2,G_3$ in dimension $1$, and only reaches dimension $2$ at $G_4$. That is, this corresponds to the case $(1,1)$.
 
@@ -283,7 +283,7 @@ $$\Gr(k,\mathbb{R}^k)\hookrightarrow \Gr(k,\mathbb{R}^{k+1})\hookrightarrow\cdot
 
 we call its direct limit
 
-$$\Gr(k,\mathbb{R}^\infty)=\varinjlim_{n\geq 0}\Gr(k,\mathbb{R}^{k+i})$$
+$$\Gr(k,\mathbb{R}^\infty)=\varinjlim_{n\geq 0}\Gr(k,\mathbb{R}^{k+n})$$
 
 the *infinite Grassmannian*. In the same way, the direct limit of total spaces
 
@@ -293,7 +293,7 @@ is defined, and this defines a rank $k$ vector bundle over $\Gr(k,\mathbb{R}^\in
 
 Intuitively, $\Gr(k,\mathbb{R}^\infty)$ can be thought of as gluing together each $\Gr(k,\mathbb{R}^{k+n})$ to give a complex structure. Moreover, the tautological bundles $E(\gamma^k_{n+k})$ also fit together compatibly with this structure.
 
-It is not the right direction to carry the Schubert classes of finite Grassmannians into the infinite Grassmannian. However, as explained above, the infinite Grassmannian is a space having finite Grassmannians as subcomplexes, and the Schubert cycles we constructed above behave well under these inclusions. That is, pushing in the Schubert cycle of $\Gr(k,\mathbb{R}^{k+i})$ for partition $\lambda$ via $\Gr(k,\mathbb{R}^{k+i})\rightarrow \Gr(k,\mathbb{R}^{k+i+1})$, or intersecting the Schubert cycle for partition $\lambda$ in $\Gr(k,\mathbb{R}^{k+i+1})$ directly with $\Gr(k,\mathbb{R}^n)\subset \Gr(k,\mathbb{R}^{k+i+1})$, gives the same result.
+It is not the right direction to carry the Schubert classes of finite Grassmannians into the infinite Grassmannian. However, as explained above, the infinite Grassmannian is a space having finite Grassmannians as subcomplexes, and the Schubert cycles we constructed above behave well under these inclusions. That is, pushing in the Schubert cycle of $\Gr(k,\mathbb{R}^{k+i})$ for partition $\lambda$ via $\Gr(k,\mathbb{R}^{k+i})\rightarrow \Gr(k,\mathbb{R}^{k+i+1})$, or intersecting the Schubert cycle for partition $\lambda$ in $\Gr(k,\mathbb{R}^{k+i+1})$ directly with $\Gr(k,\mathbb{R}^n)\subseteq \Gr(k,\mathbb{R}^{k+i+1})$, gives the same result.
 
 Now consider the $k$ partitions
 

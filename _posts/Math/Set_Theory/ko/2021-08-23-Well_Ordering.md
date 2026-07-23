@@ -30,7 +30,7 @@ $s$가 증가함수인 것은 자명하다. 만약 $x\leq y$이고 $a\in S_x$라
 
 위 명제의 isomorphism을 통하면 well-ordered set을 다음의 정의
 
-> 각각의 well-ordered set은, 자신보다 작은 well-ordered set들에 $\subset$으로 포함관계가 주어진 집합이다.
+> 각각의 well-ordered set은, 자신보다 작은 well-ordered set들에 $\subseteq$으로 포함관계가 주어진 집합이다.
 
 처럼 취급해도 된다. 
 

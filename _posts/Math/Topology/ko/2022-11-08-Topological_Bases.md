@@ -88,7 +88,7 @@ $\mathcal{S}$의 원소들의 유한한 교집합들을 모아 새로운 모임 
 ::: 증명
 $\mathcal{B}(x)$를 앞선 명제의 증명에서와 같이 <phrase>$\mathcal{B}$의 원소들 중 $x$를 포함하는 것들의 모임</phrase>으로 정의하자. 또,
 
-$$\mathcal{N}(x)=\mathop{\uparrow}\mathcal{B}(x):=\bigcup_{B\in\mathcal{B}}\mathop{\uparrow}B$$
+$$\mathcal{N}(x)=\mathop{\uparrow}\mathcal{B}(x):=\bigcup_{B\in\mathcal{B}(x)}\mathop{\uparrow}B$$
 
 으로 정의하자. 즉 $\mathcal{N}(x)$는 주어진 $x\in X$를 포함하는 $\mathcal{B}$의 원소, 그리고 이 원소보다 큰 $\mathcal{P}(X)$의 원소들을 모두 포함하는 모임이다.
 

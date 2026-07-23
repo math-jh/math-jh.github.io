@@ -110,7 +110,7 @@ is also a closed embedding. That closed embeddings are stable under base change 
 
 On the other hand $p_1\circ h\circ j=g_1\circ j=u$ and $p_2\circ h\circ j=g_2\circ j=u$, and $p_1\circ \Delta\circ u=u$ and $p_2\circ\Delta\circ u=u$, so by the uniqueness in the universal property we have $h\circ j=\Delta\circ u$. Therefore $j$ factors through the pullback $Z$, and in particular the image of $Z \rightarrow \Spec A$ is a closed set containing the image of $j$, namely the zero ideal $(0)$ of $A$. Since $A$ is a domain, $(0)$ is the generic point of $\Spec A$ ([§Topology of Schemes, ⁋Example 5](/en/math/scheme_theory/topology_of_schemes#ex5)), and thus the only closed subset of $\Spec A$ containing $(0)$ is $\Spec A$ itself. Then $Z$ is a closed subscheme of $\Spec A$ of the form $\Spec(A/\mathfrak{a})$ for some ideal $\mathfrak{a}\subseteq A$ ([§Closed Subschemes, ⁋Proposition 3](/en/math/scheme_theory/closed_subschemes#prop3)), and the fact that its image is all of $\Spec A$ means that $\mathfrak{a}$ is contained in every prime ideal of $A$, i.e.,
 
-$$\mathfrak{a}\subseteq \sqrt{(0)}=(0).$$
+$$\mathfrak{a}\subseteq \mathfrak{N}(A)=(0).$$
 
 The last equality comes from the fact that $A$ is a domain. Therefore $Z \rightarrow \Spec A$ is an isomorphism, which means that $h$ factors through $\Delta$, i.e., $h=\Delta\circ g$ for some $g:\Spec A \rightarrow X$. Then
 
@@ -197,7 +197,7 @@ First, the criterion is stable under base change. Suppose $Y' \rightarrow Y$ and
 
 To show this, choose a closed subset $T$ of $X$ and give it a reduced scheme structure. The closed embedding $T\hookrightarrow X$ is a finite morphism, so ([§Closed Subschemes, ⁋Proposition 4](/en/math/scheme_theory/closed_subschemes#prop4)) it is of finite type, and thus $T$ is a Noetherian scheme and $f\vert_T:T \rightarrow Y$ is also of finite type. Moreover $f\vert_T$ inherits the existence part of the criterion. Indeed, if $\Spec K \rightarrow T$ and $\Spec A \rightarrow Y$ form a square for $f\vert_T$, applying the criterion to $\Spec K \rightarrow T\hookrightarrow X$ gives a lifting $g_0:\Spec A \rightarrow X$. Every point of $\Spec A$ is a specialization of the generic point $(0)$ and morphisms preserve specialization, so $g_0(\Spec A)\subseteq \cl(\{g_0((0))\})\subseteq T$, and since $\Spec A$ is reduced, $g_0$ factors through $T$. The last fact is obtained as follows. Suppose the image of a morphism $\varphi:S \rightarrow X$ from a reduced scheme $S$ lies in a closed subset $T$, and choose an affine open subset $\Spec B$ of $X$ and an affine open subset $\Spec R$ of $\varphi^{-1}(\Spec B)$. If $T\cap \Spec B=Z(\mathfrak{b})$ ($\mathfrak{b}$ a radical ideal), then the reduced structure of $T$ is $\Spec (B/\mathfrak{b})$ on it, and the corresponding ring homomorphism $\psi:B \rightarrow R$ satisfies $\mathfrak{b}\subseteq \psi^{-1}(\mathfrak{p})$ for every prime ideal $\mathfrak{p}\subseteq R$, so
 
-$$\psi(\mathfrak{b})\subseteq \bigcap_{\mathfrak{p}\in\Spec R}\mathfrak{p}=\sqrt{(0)}=(0).$$
+$$\psi(\mathfrak{b})\subseteq \bigcap_{\mathfrak{p}\in\Spec R}\mathfrak{p}=\mathfrak{N}(R)=(0).$$
 
 That is, $\psi$ uniquely factors through $B/\mathfrak{b}$, and these local factorizations glue by uniqueness.
 

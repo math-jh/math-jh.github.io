@@ -148,7 +148,7 @@ $1$-form $\alpha$를 section $s_\alpha:Q\rightarrow T^\ast Q$, $q\mapsto(q,\alph
 
 $$(s_\alpha^\ast\lambda)(\xi)=\lambda_{(q,\alpha_q)}\bigl(ds_\alpha(\xi)\bigr)=\alpha_q\bigl(d\pi(ds_\alpha(\xi))\bigr)=\alpha_q\bigl(d(\pi\circ s_\alpha)(\xi)\bigr)=\alpha_q(\xi)$$
 
-인데, 마지막 등식은 $\pi\circ s_\alpha=\mathrm{id}_Q$이기 때문이다. 따라서
+인데, 마지막 등식은 $\pi\circ s_\alpha=\id_Q$이기 때문이다. 따라서
 
 $$s_\alpha^\ast\omega=s_\alpha^\ast(-d\lambda)=-d(s_\alpha^\ast\lambda)=-d\alpha$$
 

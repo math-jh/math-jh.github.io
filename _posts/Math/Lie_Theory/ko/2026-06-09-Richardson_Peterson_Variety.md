@@ -36,7 +36,7 @@ $$\mathring{R}_{u,w}=X_w^\circ\cap X^u_\circ$$
 
 정의에 의해 $R_{u,w}$는 $G/P$의 closed subvariety이고, $\mathring{R}_{u,w}$는 그 안의 Zariski open subset이다. 이 intersection은 Kazhdan–Lusztig [KL80]와 Deodhar [Deo85]의 연구에서 이미 등장한 것으로, 나중 Richardson [Ric92]에 의해 일반적인 기하적 성질이 연구되었다.
 
-이 정의의 유용성은 Grassmannian $\Gr(k,n)$ (또는 일반적인 partial flag variety)에서 볼 수 있다. Reference flag $E_\bullet\colon E_1\subset E_2\subset\cdots\subset E_n=\mathbb{C}^n$를 하나 고정하면, 각 Schubert cell은 그 안의 $k$차원 subspace $V$가 이 flag와 만나는 방식, 곧 $\dim(V\cap E_j)$가 $j$를 키울 때 어느 자리에서 뛰는지로 결정되었던 것을 기억하자. Grassmannian 안에서 두 Schubert cell의 intersection을 계산하는 것은 이들이 동시에 만족하는 incidence condition을 찾는 것이다. 그러나 두 Schubert cell을 같은 reference flag에 대해 정의하면 두 조건이 서로 독립이 아니어서 intersection이 기대 차원에서 어긋나므로, reference flag들을 서로 generic position에 있는 것으로 택해야 한다.
+이 정의의 유용성은 Grassmannian $\Gr(k,n)$ (또는 일반적인 partial flag variety)에서 볼 수 있다. Reference flag $E_\bullet\colon E_1\subseteq E_2\subseteq\cdots\subseteq E_n=\mathbb{C}^n$를 하나 고정하면, 각 Schubert cell은 그 안의 $k$차원 subspace $V$가 이 flag와 만나는 방식, 곧 $\dim(V\cap E_j)$가 $j$를 키울 때 어느 자리에서 뛰는지로 결정되었던 것을 기억하자. Grassmannian 안에서 두 Schubert cell의 intersection을 계산하는 것은 이들이 동시에 만족하는 incidence condition을 찾는 것이다. 그러나 두 Schubert cell을 같은 reference flag에 대해 정의하면 두 조건이 서로 독립이 아니어서 intersection이 기대 차원에서 어긋나므로, reference flag들을 서로 generic position에 있는 것으로 택해야 한다.
 
 이것이 가장 쉽게 계산되는 예가 바로 주어진 flag $E_i=\span\{e_1,\ldots,e_i\}$를 거꾸로 읽는 *opposite flag* $\tilde{E}_j=\span\{e_n,\ldots,e_{n-j+1}\}$이다. 이렇게 잡은 두 flag는 모든 $i,j$에 대해 transversality condition
 
@@ -232,11 +232,11 @@ $$\sum_{j=1}^n\bigl(h(j)-j\bigr)=n-1$$
 
 이제 각각의 cell을 보기 위해 더 구체적으로 $n=3$인 경우를 보자. $Ne_1=0$, $Ne_2=e_1$, $Ne_3=e_2$이고 마지막 조건 $NV_2\subseteq V_3=\mathbb{C}^3$은 자동이므로 위의 정의를 그대로 사용하면
 
-$$\Pet_3=\{(V_1\subset V_2)\in \Fl_3\mid NV_1\subseteq V_2\}$$
+$$\Pet_3=\{(V_1\subseteq V_2)\in \Fl_3\mid NV_1\subseteq V_2\}$$
 
 이다. 그럼 위에서 살펴봤듯, $\dim_\mathbb{C}\Fl_3=3$에서 조건 하나가 차원을 $1$ 깎아 $\dim\Pet_3=2$가 된다. 그럼 Peterson variety의 차원과 $\rank(\mathfrak{g})$가 같으므로, 위의 설명에 따르면 Peterson variety $\Pet_3$은 $2^2=4$개의 조각으로 나뉘어야 한다. 한편 $\GL_3$의 Bruhat decomposition을 생각하면, Bruhat cell은 $w\in S_3$에 의해 index되는 $6$개이다. 즉 $6$개의 cell들 가운데 Peterson variety의 affine paving을 정의하지 않는 것이 두 개 있는데, 이들을 identify하기 위해 coordinate flag 
 
-$$E^w_\bullet:\qquad 0\subset \span\{e_{w(1)}\}\subset \span \{e_{w(1)}, e_{w(2)}\}\subset \span\{e_{w(1)}, e_{w(2)},e_{w(3)}\}=\mathbb{C}^3$$
+$$E^w_\bullet:\qquad 0\subseteq \span\{e_{w(1)}\}\subseteq \span \{e_{w(1)}, e_{w(2)}\}\subseteq \span\{e_{w(1)}, e_{w(2)},e_{w(3)}\}=\mathbb{C}^3$$
 
 를 생각하면 이것이 $\Pet_3$에 속하기 위해서는 $Ne_{w(1)}\in\span\{e_{w(1)},e_{w(2)}\}$, 즉
 
@@ -279,7 +279,7 @@ $$\mathbb{C}[\mathcal{Y}^\vee_P]\cong QH^\ast(G/P)$$
 
 이 존재한다면, $\mathbb{C}$-algebra homomorphism $A\rightarrow B$는 이제 다음의 commutative diagram
 
-![위 삼각형에 $\operatorname{Spec}$을 먹이면 화살표가 모두 뒤집혀, $\operatorname{Spec}\varphi\colon\operatorname{Spec}B\rightarrow\operatorname{Spec}A$가 한 점 $\operatorname{Spec}\mathbb{C}$ 위에서의 morphism이 된다.](/assets/images/Math/Lie_Theory/Richardson_Peterson_Variety-2.svg){:style="width:18em" class="invert" .align-center}
+![위 삼각형에 $\Spec$을 먹이면 화살표가 모두 뒤집혀, $\Spec\varphi\colon\Spec B\rightarrow\Spec A$가 한 점 $\Spec\mathbb{C}$ 위에서의 morphism이 된다.](/assets/images/Math/Lie_Theory/Richardson_Peterson_Variety-2.svg){:style="width:18em" class="invert" .align-center}
 
 으로 번역된다. 한편 $B=\mathbb{C}$인 경우 ring homomorphism $A\rightarrow \mathbb{C}$는 기하적인 세계에서는 $\Spec \mathbb{C}\rightarrow\Spec A$로 번역되며, 즉 이 ring homomorphism은 그 자체로 하나의 점이 된다. 만일 $A$가 $\mathbb{C}$-algebra인 경우, 이 ring homomorphism을 우리는 보통 evaluation map으로 해석했던 것 또한 기억하자. 마지막으로, ring homomorphism $A\rightarrow B$로 $B$를 $A$-algebra로 보는 것은 위에서 보았듯 morphism $\Spec B\rightarrow\Spec A$, 곧 base $\Spec A$ 위에 놓인 상대적인 공간으로 해석되며, $A$-module은 $\Spec A$ 위의 sheaf(vector bundle에 준하는 대상)로 본다. 특히 rank $N$짜리 free module은 trivial rank $N$ bundle에 해당하여, 그런 $A$-algebra의 $\Spec$은 base로 보내는 fiber가 ($\dim$을 세면) $N$개인 finite morphism이 된다. 가장 기본적인 경우가 affine space로, polynomial algebra $\mathbb{C}[\x_1,\ldots,\x_n]$은 $\Spec$을 먹이면 affine $n$-space $\mathbb{A}^n$이며, 더 일반적으로 $A[\x_1,\ldots,\x_n]$은 base $\Spec A$ 위의 relative affine space에 대응한다.
 

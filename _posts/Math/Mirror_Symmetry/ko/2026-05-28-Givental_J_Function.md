@@ -52,7 +52,7 @@ $$\int_\Sigma \psi_i\in \mathbb{Z}$$
 ::: 명제 2 (Genus 0 Topological Recursion Relation)
 $\{1, \ldots, n\}$ ($n\geq 4$)의 고정된 세 index $i,j,k$에 대하여, $\psi$-class $\psi_i$는 다음 boundary divisor들의 합
 
-$$\psi_i=\sum_{\substack{S \subset \{1, \ldots, n\} \\ i \in S, j, k \notin S, \lvert S\rvert \geq 2}} D_S \in H^2(\overline{\mathcal{M}}_{0, n})$$
+$$\psi_i=\sum_{\substack{S \subseteq \{1, \ldots, n\} \\ i \in S, j, k \notin S, \lvert S\rvert \geq 2}} D_S \in H^2(\overline{\mathcal{M}}_{0, n})$$
 
 으로 나타난다.
 :::

@@ -18,14 +18,14 @@ weight: 3
 ## 수열의 수렴
 
 ::: 정의 1
-실수열 $(a_n)_{n=1}^\infty$와 실수 $L$에 대해, 임의의 $\varepsilon > 0$에 대하여 어떤 자연수 $N$이 존재하여
+실수열 $(a_n)_{n=1}^\infty$와 실수 $L$에 대해, 임의의 $\epsilon > 0$에 대하여 어떤 자연수 $N$이 존재하여
 
-$$n > N \implies \lvert a_n - L \rvert < \varepsilon$$
+$$n > N \implies \lvert a_n - L \rvert < \epsilon$$
 
 이 성립할 때, $L$을 $n \rightarrow \infty$일 때 $a_n$의 *극한<sub>limit</sub>*이라 하고 $\lim_{n\rightarrow\infty} a_n = L$로 적는다.
 :::
 
-이 정의는 [§함수의 극한, ⁋정의 14](/ko/math/calculus/functions_and_limits#def14)를 거의 그대로 가져온 것으로, 수열은 변수가 자연수뿐이고 한 방향($+\infty$)으로만 가므로 극한을 정의하는 방법도 사실상 이것뿐이다. 가령 $a_n = 1/n \rightarrow 0$은 임의의 $\varepsilon > 0$에 대해 $N > 1/\varepsilon$인 $N$을 택하면 $n > N$에서 $1/n < 1/N < \varepsilon$이 되는 것으로 확인된다. 약간의 변종은 수열이 무한대로 발산하는 것으로, 이는 [§함수의 극한, ⁋정의 13](/ko/math/calculus/functions_and_limits#def13)에서 임의의 $M$에 대해 $n > N \implies a_n > M$인 $N$이 존재하는 것으로 옮겨 적으면 되며, 가령 $b_n = n$이 그러하다. 그러나 수렴하지도 무한대로 발산하지도 않는 수열 또한 존재한다 ([예시 11](#ex11)).
+이 정의는 [§함수의 극한, ⁋정의 14](/ko/math/calculus/functions_and_limits#def14)를 거의 그대로 가져온 것으로, 수열은 변수가 자연수뿐이고 한 방향($+\infty$)으로만 가므로 극한을 정의하는 방법도 사실상 이것뿐이다. 가령 $a_n = 1/n \rightarrow 0$은 임의의 $\epsilon > 0$에 대해 $N > 1/\epsilon$인 $N$을 택하면 $n > N$에서 $1/n < 1/N < \epsilon$이 되는 것으로 확인된다. 약간의 변종은 수열이 무한대로 발산하는 것으로, 이는 [§함수의 극한, ⁋정의 13](/ko/math/calculus/functions_and_limits#def13)에서 임의의 $M$에 대해 $n > N \implies a_n > M$인 $N$이 존재하는 것으로 옮겨 적으면 되며, 가령 $b_n = n$이 그러하다. 그러나 수렴하지도 무한대로 발산하지도 않는 수열 또한 존재한다 ([예시 11](#ex11)).
 
 수렴하는 수열의 기본 성질들은 대개 함수의 극한에서의 증명을 그대로 옮겨 얻어진다. 가령 다음 명제는 [§함수의 극한, ⁋명제 5](/ko/math/calculus/functions_and_limits#prop5)의 증명과 동일한 방식으로 진행하면 충분하다. 
 
@@ -53,7 +53,7 @@ $$\lim_{n\rightarrow\infty} a_n = L, \qquad \lim_{n\rightarrow\infty} b_n = M$$
 :::
 
 ::: 증명
-$a_n \rightarrow L$이면 $\varepsilon = 1$에 대응하는 $N$을 잡았을 때 $n \geq N$에서 $\lvert a_n\rvert \leq \lvert L\rvert + 1$이다. 나머지 유한개 항을 포함하여 $M = \max\{\lvert a_1\rvert, \ldots, \lvert a_{N-1}\rvert, \lvert L\rvert + 1\}$로 두면 모든 $n$에서 $\lvert a_n\rvert \leq M$이다.
+$a_n \rightarrow L$이면 $\epsilon = 1$에 대응하는 $N$을 잡았을 때 $n \geq N$에서 $\lvert a_n\rvert \leq \lvert L\rvert + 1$이다. 나머지 유한개 항을 포함하여 $M = \max\{\lvert a_1\rvert, \ldots, \lvert a_{N-1}\rvert, \lvert L\rvert + 1\}$로 두면 모든 $n$에서 $\lvert a_n\rvert \leq M$이다.
 :::
 
 같은 베껴오기로, 다음은 [§함수의 극한, ⁋명제 8](/ko/math/calculus/functions_and_limits#prop8)의 수열 버전이다.
@@ -158,9 +158,9 @@ $$a_n \leq \sum_{k=0}^{n}\frac{1}{k!} \leq 1 + \sum_{k=1}^{\infty}\frac{1}{2^{k-
 :::
 
 ::: 증명
-임의의 $\varepsilon > 0$에 대해 $n \geq N$이면 $\lvert a_n - L\rvert < \varepsilon$인 $N$을 잡자. 그럼 정의에 의해 $n_k \geq k$이고, 따라서 $k \geq N$이면 $n_k \geq N$이라
+임의의 $\epsilon > 0$에 대해 $n \geq N$이면 $\lvert a_n - L\rvert < \epsilon$인 $N$을 잡자. 그럼 정의에 의해 $n_k \geq k$이고, 따라서 $k \geq N$이면 $n_k \geq N$이라
 
-$$\lvert a_{n_k} - L\rvert < \varepsilon$$
+$$\lvert a_{n_k} - L\rvert < \epsilon$$
 
 이다. 즉 $a_{n_k} \rightarrow L$이다. 
 :::

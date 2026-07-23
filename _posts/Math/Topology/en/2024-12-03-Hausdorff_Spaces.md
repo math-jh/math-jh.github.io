@@ -121,7 +121,7 @@ Consider the continuous function $x\mapsto (f(x), g(x))$ from $X$ to $Y\times Y$
 ::: Corollary 7
 For a continuous function $f:X \rightarrow Y$, if $Y$ is Hausdorff then the set
 
-$$\Gamma(f)=\{(x,f(x))\mid x\in X\}$$
+$$\graph(f)=\{(x,f(x))\mid x\in X\}$$
 
 is a closed subset of $X\times Y$.
 :::

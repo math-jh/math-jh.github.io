@@ -156,7 +156,7 @@ Borel subalgebra $\mathfrak{b}$에 대하여 다음이 성립한다.
 ::: 증명
 (1) $\mathfrak{b}$의 derived series를 생각하자. $\mathfrak{b}^{(1)}=[\mathfrak{b},\mathfrak{b}]=\mathfrak{n}$이고, $\mathfrak{n}$은 nilpotent이므로 $\mathfrak{b}$는 solvable이다. 구체적으로 $\mathfrak{n}$은 strictly upper triangular matrix들의 algebra와 유사한 구조를 갖는다.
 
-(2) $\mathfrak{b}$를 포함하는 solvable subalgebra $\mathfrak{s}$가 있다 하자. Root decomposition에 의하여 $\mathfrak{s}=\mathfrak{h}\oplus\bigoplus_{\alpha\in S}\mathfrak{g}_\alpha$의 꼴이어야 한다. 만일 $S$가 어떤 positive root를 포함하지 않는다면 $\mathfrak{s}\subset\mathfrak{b}$이고, 만일 $S$가 negative root를 포함한다면 $\mathfrak{s}$는 더 이상 solvable이 아니다. 따라서 $\mathfrak{s}=\mathfrak{b}$이다.
+(2) $\mathfrak{b}$를 포함하는 solvable subalgebra $\mathfrak{s}$가 있다 하자. Root decomposition에 의하여 $\mathfrak{s}=\mathfrak{h}\oplus\bigoplus_{\alpha\in S}\mathfrak{g}_\alpha$의 꼴이어야 한다. 만일 $S$가 어떤 positive root를 포함하지 않는다면 $\mathfrak{s}\subseteq\mathfrak{b}$이고, 만일 $S$가 negative root를 포함한다면 $\mathfrak{s}$는 더 이상 solvable이 아니다. 따라서 $\mathfrak{s}=\mathfrak{b}$이다.
 
 (3) $\Ad(g)\mathfrak{b}$는 다시 maximal solvable subalgebra이므로, 위의 (2)에 의하여 어떤 positive system에 대한 Borel subalgebra이다.
 :::
@@ -179,16 +179,16 @@ Complex semisimple Lie group $G_\mathbb{C}$와 그 Borel subgroup $B$에 대하�
 $$\mathcal{F}=G_\mathbb{C}/B$$
 :::
 
-Flag variety라는 이름은 $\GL(n,\mathbb{C})$의 경우 $\mathcal{F}$가 $\mathbb{C}^n$의 complete flag들의 공간과 일치하기 때문에 붙여졌다. 일반적으로 flag variety는 projective variety이며, 이는 $G_\mathbb{C}$의 representation theory와 깊은 관계를 갖는다.
+Flag variety라는 이름은 $\GL(n;\mathbb{C})$의 경우 $\mathcal{F}$가 $\mathbb{C}^n$의 complete flag들의 공간과 일치하기 때문에 붙여졌다. 일반적으로 flag variety는 projective variety이며, 이는 $G_\mathbb{C}$의 representation theory와 깊은 관계를 갖는다.
 
 ::: 예시 13
-$G_\mathbb{C}=\GL(n,\mathbb{C})$인 경우를 생각하자. Borel subgroup $B$는 upper triangular matrix들의 모임이고, flag variety $\GL(n,\mathbb{C})/B$는 $\mathbb{C}^n$의 complete flag
+$G_\mathbb{C}=\GL(n;\mathbb{C})$인 경우를 생각하자. Borel subgroup $B$는 upper triangular matrix들의 모임이고, flag variety $\GL(n;\mathbb{C})/B$는 $\mathbb{C}^n$의 complete flag
 
-$$0=V_0\subset V_1\subset V_2\subset\cdots\subset V_n=\mathbb{C}^n,\qquad \dim V_i=i$$
+$$0=V_0\subseteq V_1\subseteq V_2\subseteq\cdots\subseteq V_n=\mathbb{C}^n,\qquad \dim V_i=i$$
 
-들의 공간과 일대일대응된다. 구체적으로 $gB\in\GL(n,\mathbb{C})/B$는 flag $V_i=\span\{ge_1,\ldots,ge_i\}$에 대응한다. 이 공간은 다음의 embedding
+들의 공간과 일대일대응된다. 구체적으로 $gB\in\GL(n;\mathbb{C})/B$는 flag $V_i=\span\{ge_1,\ldots,ge_i\}$에 대응한다. 이 공간은 다음의 embedding
 
-$$\GL(n,\mathbb{C})/B\hookrightarrow\mathbb{P}(\wedge^1\mathbb{C}^n)\times\mathbb{P}(\wedge^2\mathbb{C}^n)\times\cdots\times\mathbb{P}(\wedge^{n-1}\mathbb{C}^n)$$
+$$\GL(n;\mathbb{C})/B\hookrightarrow\mathbb{P}(\wedge^1\mathbb{C}^n)\times\mathbb{P}(\wedge^2\mathbb{C}^n)\times\cdots\times\mathbb{P}(\wedge^{n-1}\mathbb{C}^n)$$
 
 을 통해 projective variety로 실현된다.
 :::
@@ -205,12 +205,12 @@ Complex Lie group $G_\mathbb{C}$의 *compact form<sub>콤팩트 형식</sub>*은
 3. $\mathfrak{g}_0$ 위에서 Killing form은 negative definite이다.
 :::
 
-모든 complex semisimple Lie group은 compact form을 갖는다. 예를 들어 $\SL(n,\mathbb{C})$의 compact form은 $\SU(n)$이고, $\SO(n,\mathbb{C})$의 compact form은 $\SO(n)$이며, $\Sp(2n,\mathbb{C})$의 compact form은 $\Sp(n)=\Sp(2n,\mathbb{C})\cap\operatorname{U}(2n)$이다.
+모든 complex semisimple Lie group은 compact form을 갖는다. 예를 들어 $\SL(n;\mathbb{C})$의 compact form은 $\SU(n)$이고, $\SO(n;\mathbb{C})$의 compact form은 $\SO(n)$이며, $\Sp(2n;\mathbb{C})$의 compact form은 $\Sp(n)=\Sp(2n;\mathbb{C})\cap\Umat(2n)$이다.
 
 이제 핵심적인 결과를 서술한다.
 
 ::: 명제 15
-Compact connected Lie group $G$와 그 complexification $G_\mathbb{C}$, maximal torus $T\subset G$, 그리고 대응하는 Borel subgroup $B\subset G_\mathbb{C}$에 대하여, 다음의 inclusion
+Compact connected Lie group $G$와 그 complexification $G_\mathbb{C}$, maximal torus $T\subseteq G$, 그리고 대응하는 Borel subgroup $B\subseteq G_\mathbb{C}$에 대하여, 다음의 inclusion
 
 $$G/T\hookrightarrow G_\mathbb{C}/B$$
 
@@ -259,11 +259,11 @@ Closure에 대한 진술은 Bruhat order의 정의로부터 따라나온다.
 Bruhat decomposition은 flag variety $G_\mathbb{C}/B$의 cell decomposition을 제공한다. 각 $w\in W$에 대하여 $X_w=BwB/B$는 dimension $\ell(w)$의 affine space와 동형이고, 이들을 모으면 $G_\mathbb{C}/B$의 전체를 덮는다. 여기서 $\ell(w)$는 $w$의 *length*, 즉 $w$를 simple reflection들의 곱으로 표현할 때 필요한 최소 개수이다.
 
 ::: 예시 17
-$G_\mathbb{C}=\GL(n,\mathbb{C})$인 경우, Weyl group $W\cong S_n$이고 각 permutation $\sigma\in S_n$에 대하여 $\ell(\sigma)$는 inversion의 개수이다. 이 분해의 구체적 모습과 Gauss elimination과의 관련은 [§Bruhat decomposition, ⁋예시 7](/ko/math/lie_theory/bruhat_decomposition#ex7)에서 다룬다.
+$G_\mathbb{C}=\GL(n;\mathbb{C})$인 경우, Weyl group $W\cong S_n$이고 각 permutation $\sigma\in S_n$에 대하여 $\ell(\sigma)$는 inversion의 개수이다. 이 분해의 구체적 모습과 Gauss elimination과의 관련은 [§Bruhat decomposition, ⁋예시 7](/ko/math/lie_theory/bruhat_decomposition#ex7)에서 다룬다.
 
-구체적으로 $\sigma$의 inversion은 $i<j$이면서 $\sigma(i)>\sigma(j)$인 쌍 $(i,j)$의 개수이다. Bruhat decomposition에 의해 $\GL(n,\mathbb{C})/B$는 $0$차원 cell (identity permutation, inversion $0$개)부터 $n(n-1)/2$차원 cell (reverse permutation, inversion 최대)까지의 cell decomposition을 갖는다.
+구체적으로 $\sigma$의 inversion은 $i<j$이면서 $\sigma(i)>\sigma(j)$인 쌍 $(i,j)$의 개수이다. Bruhat decomposition에 의해 $\GL(n;\mathbb{C})/B$는 $0$차원 cell (identity permutation, inversion $0$개)부터 $n(n-1)/2$차원 cell (reverse permutation, inversion 최대)까지의 cell decomposition을 갖는다.
 
-이 cell decomposition으로부터 $\GL(n,\mathbb{C})/B$의 cohomology를 계산할 수 있으며, 그 Betti number는 Weyl group의 Bruhat order에 의해 결정된다.
+이 cell decomposition으로부터 $\GL(n;\mathbb{C})/B$의 cohomology를 계산할 수 있으며, 그 Betti number는 Weyl group의 Bruhat order에 의해 결정된다.
 :::
 
 ---

@@ -18,7 +18,7 @@ $$(\Spec\epsilon)^\sharp: \mathcal{O}_{\Spec A} \rightarrow (\Spec \epsilon)_\as
 
 에 [\[위상수학\] §층, ⁋보조정리 11](/ko/math/topology/sheaves#lem11)을 적용하여
 
-$$(\Spec\epsilon \vert^{D(f)})^\sharp: \mathcal{O}_{D(f)} \rightarrow (\Spec\epsilon\vert^{D(f)})_\ast \mathcal{O}_{\Spec A_f}$$
+$$(\Spec\epsilon \lvert^{D(f)})^\sharp: \mathcal{O}_{D(f)} \rightarrow (\Spec\epsilon\rvert^{D(f)})_\ast \mathcal{O}_{\Spec A_f}$$
 
 을 얻고, $\Spec A_f$가 $\Spec A$의 열린집합이라는 사실로부터 이것이 isomorphism이라는 사실을 얻을 수 있었다.
 
@@ -248,7 +248,7 @@ $$(\Spec\phi)((\epsilon))=\phi^{-1}((\epsilon))=(\x_1-a_1,\ldots, \x_n-a_n)$$
 
 위의 예시에서 $X$가 affine scheme이라고 가정하기는 하였지만, $\varphi^\sharp:\mathcal{O}_Y \rightarrow \varphi_\ast \mathcal{O}_X$는 어차피 scheme morphism $\varphi$가 포함하고 있는 정보이므로 여기에는 새로울 것이 없다. 차이는 $Y$를 일반적인 scheme으로 일반화할 때 나오게 되는데, $Y$의 임의의 affine open subset $V=\Spec B$가 주어질 때마다 ideal
 
-$$\mathcal{I}(V):=\ker(\varphi^\sharp(V))\subset B$$
+$$\mathcal{I}(V):=\ker(\varphi^\sharp(V))\subseteq B$$
 
 가 $V$의 closed subscheme을 정의하지만, 이들을 이어붙여 $Y$ 전체에서 정의된 단일한 closed subscheme을 만들 수 있는지는 다른 문제이기 때문이다. 물론 우리는 이를 위해 [명제 6](#prop6)을 사용할 것이며, 이 가정은 특히 $X$가 reduced scheme이거나 $\varphi$가 quasi-compact일 경우 만족된다.
 
@@ -300,7 +300,7 @@ $B$의 radical ideal $\mathfrak{b}$에 대해 $Z(\mathfrak{b})$의 꼴로 쓸 �
 Scheme $Y$의 임의의 닫힌집합 $X$에 대하여, $X$ 위에 앞에서 정의한 scheme 구조를 준 것을 *reduced scheme structure*라 부르고 $X^\red$으로 적는다. 
 :::
 
-그럼 특히 $X=Y$인 경우, 임의의 affine subset $\Spec B$에 대하여 $\Spec B=Z(0)$이라 적으면 $\mathfrak{b}=\sqrt{(0)}$이 되어 $B/\sqrt{(0)}$은 reduced ring이 된다. 한편 위에서 살펴본 sheaf morphism
+그럼 특히 $X=Y$인 경우, 임의의 affine subset $\Spec B$에 대하여 $\Spec B=Z(0)$이라 적으면 $\mathfrak{b}=\mathfrak{N}(B)$이 되어 $B/\mathfrak{N}(B)$은 reduced ring이 된다. 한편 위에서 살펴본 sheaf morphism
 
 $$\iota^{-1}\mathcal{O}_{\Spec A} \rightarrow (\Spec\pi\vert^{Z(\mathfrak{a})})_\ast \mathcal{O}_{\Spec A/\mathfrak{a}}$$
 

@@ -67,7 +67,7 @@ However, despite the theorem being intuitively obvious, its proof involves some 
 On the other hand, in geometric situations we already know a way to ignore the information contained in $A$ like this: namely, the quotient space $X/A$ obtained by collapsing $A$ to a point. Then it is a reasonable guess that there is a relationship between the homology $H_k(X/A)$ and the relative homology $H_k(X,A)$. Of course, as with the theorem above, this is only possible if $A$ is not too pathological a space.
 
 ::: Definition 3
-For a space $X$ and a subspace $A$, we say that $(X,A)$ is a *good pair* if $A$ is closed and there exists a suitable open set $U$ of $X$ such that $A\subset U$ and $A$ is a strong deformation retract of $U$.
+For a space $X$ and a subspace $A$, we say that $(X,A)$ is a *good pair* if $A$ is closed and there exists a suitable open set $U$ of $X$ such that $A\subseteq U$ and $A$ is a strong deformation retract of $U$.
 :::
 
 Suppose a good pair $(X,A)$ is given, and let $U$ be an open set satisfying the hypothesis of [Definition 3](#def3). Then in the following diagram
@@ -96,7 +96,7 @@ and these can be placed into the following diagram induced by the quotient map
 
 ![excision-1](/assets/images/Math/Algebraic_Topology/Computation_of_Homology-3.svg){:style="width:17.12em" class="invert" .align-center}
 
-Now from the assumption that $(X,A)$ is a good pair, $A\subset U\subset X$ satisfies the condition $\cl A\subseteq \interior U$ of [Theorem 2](#thm2), and therefore the map $H_k(X\setminus A, U\setminus A)\rightarrow H_k(X,U)$ induced by the inclusion
+Now from the assumption that $(X,A)$ is a good pair, $A\subseteq U\subseteq X$ satisfies the condition $\cl A\subseteq \interior U$ of [Theorem 2](#thm2), and therefore the map $H_k(X\setminus A, U\setminus A)\rightarrow H_k(X,U)$ induced by the inclusion
 
 $$(X\setminus A, U\setminus A)\hookrightarrow (X,U)$$
 
@@ -164,7 +164,7 @@ For any $\Delta$-complex $X$, the homomorphism in (3) is an isomorphism.
 ::: Proof
 We sketch the main idea. Using the commutative diagram above, we consider the filtration defined by the $\Delta$-complex structure on $X$,
 
-$$X_0\subset X_1\subset\cdots\subset X_l=X$$
+$$X_0\subseteq X_1\subseteq\cdots\subseteq X_l=X$$
 
 and then apply [\[Homological Algebra\] §Diagram chasing, ⁋Corollary 2](/en/math/homological_algebra/diagram_chasing#cor2) to the following diagram
 

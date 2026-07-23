@@ -36,7 +36,7 @@ For an affine variety $X$, we have $\mathbb{K}(X)=\Frac\mathbb{K}[X]$.
 
 The essential part of this proposition is to represent an arbitrary regular function $f:U\rightarrow \mathbb{K}$ defined on an arbitrary open set $U$ actually in fractional form; but since $U$ can be expressed as a union of $D(f)$'s ([§Affine Varieties, ⁋Proposition 6](/en/math/algebraic_varieties/affine_varieties#prop6)) and the regular functions on it are of the form of rational expressions with powers of $f$ in the denominator, the proof is not difficult.
 
-What is important is that this proposition provides a practical way to compute rational functions. For example, for $X = V(\y - \x^2)$ the coordinate ring is $\mathbb{K}[\x, \y]/(\y - \x^2) \cong \mathbb{K}[\x]$, and hence $\mathbb{K}(X) = \operatorname{Frac}(\mathbb{K}[\x]) = \mathbb{K}(\x)$.
+What is important is that this proposition provides a practical way to compute rational functions. For example, for $X = V(\y - \x^2)$ the coordinate ring is $\mathbb{K}[\x, \y]/(\y - \x^2) \cong \mathbb{K}[\x]$, and hence $\mathbb{K}(X) = \Frac(\mathbb{K}[\x]) = \mathbb{K}(\x)$.
 
 ::: Proposition 3
 For a variety $X$ and a nonempty open subset $U$, we have $\mathbb{K}(U) = \mathbb{K}(X)$.
@@ -89,7 +89,7 @@ A rational map $\varphi: X \dashrightarrow Y$ is said to be *dominant* if its im
 :::
 
 ::: Definition 9
-A rational map $\varphi: X \dashrightarrow Y$ is a *birational map* if there exists another rational map $\psi: Y \dashrightarrow X$ such that $\psi \circ \varphi = \operatorname{id}_X$ and $\varphi \circ \psi = \operatorname{id}_Y$ hold (where defined). Two varieties $X, Y$ are said to be *birationally equivalent* if there exists a birational map between them.
+A rational map $\varphi: X \dashrightarrow Y$ is a *birational map* if there exists another rational map $\psi: Y \dashrightarrow X$ such that $\psi \circ \varphi = \id_X$ and $\varphi \circ \psi = \id_Y$ hold (where defined). Two varieties $X, Y$ are said to be *birationally equivalent* if there exists a birational map between them.
 :::
 
 Two birationally equivalent varieties are isomorphic "at most points." Concretely, as we see in the following proposition, there exist isomorphic open subsets of the two varieties. This shows that birational equivalence is weaker than isomorphism but still a strong relationship.
@@ -104,7 +104,7 @@ For two varieties $X, Y$ the following are equivalent.
 ::: Proof
 First, suppose $X, Y$ are birationally equivalent. Then considering the domain $\dom(\varphi)$ of the birational map $\varphi: X\dashrightarrow Y$, there exists a homomorphism $\varphi^\ast: \mathbb{K}(Y)\rightarrow \mathbb{K}(\dom(\varphi))$ of function fields induced by $\varphi$. Similarly, the birational inverse $\psi: Y\dashrightarrow X$ of $\varphi$ defines $\psi^\ast: \mathbb{K}(X)\rightarrow \mathbb{K}(\dom(\psi))$. Now by [Proposition 3](#prop3) we have $\mathbb{K}(\dom(\varphi))=\mathbb{K}(X)$ and $\mathbb{K}(\dom(\psi))=\mathbb{K}(Y)$, so using this we see that $\mathbb{K}(X)\cong \mathbb{K}(Y)$.
 
-Now suppose a field isomorphism $\Phi: \mathbb{K}(X) \rightarrow \mathbb{K}(Y)$ is given. For any affine open subset $U \subseteq X$, the coordinate ring $\mathbb{K}[U]$ is a finitely generated $\mathbb{K}$-subalgebra of $\mathbb{K}(X)$. Now take an affine open subset $V\subseteq Y$ such that the images of its generators under $\Phi$ are all regular, and through this we can define $\Phi\vert_{\mathbb{K}[U]}:\mathbb{K}[U]\rightarrow \mathbb{K}[V]$. On the other hand, in a similar way we can take $\Phi^{-1}\vert_{\mathbb{K}[V]}:\mathbb{K}[V]\rightarrow \mathbb{K}[U']$ using $\Phi^{-1}$, and then $U'\subset U$ holds. Now from the assumption that $\Phi$ is an isomorphism we must have $\mathbb{K}[U]=\mathbb{K}[U']$ and $\mathbb{K}[U]\cong \mathbb{K}[V]$.
+Now suppose a field isomorphism $\Phi: \mathbb{K}(X) \rightarrow \mathbb{K}(Y)$ is given. For any affine open subset $U \subseteq X$, the coordinate ring $\mathbb{K}[U]$ is a finitely generated $\mathbb{K}$-subalgebra of $\mathbb{K}(X)$. Now take an affine open subset $V\subseteq Y$ such that the images of its generators under $\Phi$ are all regular, and through this we can define $\Phi\vert_{\mathbb{K}[U]}:\mathbb{K}[U]\rightarrow \mathbb{K}[V]$. On the other hand, in a similar way we can take $\Phi^{-1}\vert_{\mathbb{K}[V]}:\mathbb{K}[V]\rightarrow \mathbb{K}[U']$ using $\Phi^{-1}$, and then $U'\subseteq U$ holds. Now from the assumption that $\Phi$ is an isomorphism we must have $\mathbb{K}[U]=\mathbb{K}[U']$ and $\mathbb{K}[U]\cong \mathbb{K}[V]$.
 
 That the last condition implies the first is obvious by [Proposition 3](#prop3). 
 :::
@@ -116,7 +116,7 @@ Let us compute the function fields of $\mathbb{P}^1 \times \mathbb{P}^1$ and of 
 
 First, for $\mathbb{P}^1 \times \mathbb{P}^1$, by [Proposition 3](#prop3) it suffices to compute on the product open set $U_0 \times U_0$ of each factor. The function field of the first factor $\mathbb{P}^1$ is $\mathbb{K}(\t_1)$ as we saw in [Example 4](#ex4), and similarly the second factor is $\mathbb{K}(\t_2)$. Then through this we know that their function field is given as $\mathbb{K}(\t_1,\t_2)$.
 
-Now consider the quadric surface $Q = V(\x\y - \z\w) \subset \mathbb{P}^3$. Similarly by [Proposition 3](#prop3) it suffices to compute on the affine patch $\{\w \ne 0\}$. On this patch setting $\x' = \x/\w$, $\y' = \y/\w$, $\z' = \z/\w$, the equation $\x\y - \z\w = 0$ becomes $\x'\y' - \z' = 0$. Hence $\z' = \x'\y'$, and the coordinate ring of this patch is $\mathbb{K}[\x', \y', \z']/(\x'\y' - \z') \cong \mathbb{K}[\x', \y']$. By [Proposition 2](#prop2) we have $\mathbb{K}(Q) = \operatorname{Frac}(\mathbb{K}[\x', \y']) = \mathbb{K}(\x', \y') \cong \mathbb{K}(\t_1, \t_2)$.
+Now consider the quadric surface $Q = V(\x\y - \z\w) \subseteq \mathbb{P}^3$. Similarly by [Proposition 3](#prop3) it suffices to compute on the affine patch $\{\w \ne 0\}$. On this patch setting $\x' = \x/\w$, $\y' = \y/\w$, $\z' = \z/\w$, the equation $\x\y - \z\w = 0$ becomes $\x'\y' - \z' = 0$. Hence $\z' = \x'\y'$, and the coordinate ring of this patch is $\mathbb{K}[\x', \y', \z']/(\x'\y' - \z') \cong \mathbb{K}[\x', \y']$. By [Proposition 2](#prop2) we have $\mathbb{K}(Q) = \Frac(\mathbb{K}[\x', \y']) = \mathbb{K}(\x', \y') \cong \mathbb{K}(\t_1, \t_2)$.
 
 Therefore since $\mathbb{K}(\mathbb{P}^1 \times \mathbb{P}^1) \cong \mathbb{K}(Q) \cong \mathbb{K}(\t_1, \t_2)$, by [Proposition 10](#prop10) the two varieties are birationally equivalent. In fact, the image of the Segre embedding $\mathbb{P}^1 \times \mathbb{P}^1 \rightarrow \mathbb{P}^3$, $([x : y], [u : v]) \mapsto [xu : xv : yu : yv]$ discussed in [§Projective Varieties, ⁋Example 16](/en/math/algebraic_varieties/projective_varieties#ex16) is exactly $V(\x\y - \z\w)$. That is, in this case the birational equivalence is actually an isomorphism. This example shows that birational equivalence is weaker than isomorphism but includes isomorphism.
 :::
@@ -140,11 +140,11 @@ This set is a closed subvariety of $\mathbb{A}^2 \times \mathbb{P}^1$. The condi
 ![Blowup](/assets/images/Math/Algebraic_Varieties/Rational_Maps-1.png){:style="width:32em" class="invert" .align-center}
 <cap markdown="1">[Har1] p.29. Fig. 3.</cap>
 
-Concretely, defining the projection $\pi_1: \operatorname{Bl}_{(0,0)} \mathbb{A}^2 \rightarrow \mathbb{A}^2$ by $\pi((x, y), [u : v]) = (x, y)$, the preimage of every point other than the origin is a single point, and the preimage of the origin is $\mathbb{P}^1$. This is called the *exceptional divisor*.
+Concretely, defining the projection $\pi_1: \Bl_{(0,0)} \mathbb{A}^2 \rightarrow \mathbb{A}^2$ by $\pi((x, y), [u : v]) = (x, y)$, the preimage of every point other than the origin is a single point, and the preimage of the origin is $\mathbb{P}^1$. This is called the *exceptional divisor*.
 
 From this, since the two varieties $\mathbb{A}^2$ and $\Bl_{(0,0)}\mathbb{A}^2$ are isomorphic on the rest of the plane excluding the origin, $\pi$ is a birational map.
 
-Now consider the rational map $\varphi: \mathbb{A}^2 \dashrightarrow \mathbb{P}^1$, $(x, y) \mapsto [x : y]$ mentioned earlier. This is undefined at the origin $(0, 0)$, but from the viewpoint of the blow-up $\operatorname{Bl}_{(0,0)} \mathbb{A}^2$ it is simply the projection $\pr_2$ to the $\mathbb{P}^1$ factor, and in particular this is a regular map. In this way we can resolve base points at which a birational map is undefined.
+Now consider the rational map $\varphi: \mathbb{A}^2 \dashrightarrow \mathbb{P}^1$, $(x, y) \mapsto [x : y]$ mentioned earlier. This is undefined at the origin $(0, 0)$, but from the viewpoint of the blow-up $\Bl_{(0,0)} \mathbb{A}^2$ it is simply the projection $\pr_2$ to the $\mathbb{P}^1$ factor, and in particular this is a regular map. In this way we can resolve base points at which a birational map is undefined.
 :::
 
 ---

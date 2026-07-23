@@ -226,7 +226,7 @@ $$\Hom(\mathcal{F}^a, \mathcal{G})\xrightarrow{\ \sim\ }\Hom(\mathcal{F}, \mathc
 ::: 정의 18
 Site $(\mathcal{C}, \tau)$ 위의 sheaf of group $G$에 대하여, 대상 $T\in \mathcal{C}$ 위의 *$G$-torsor* (또는 *principal $G$-bundle*)란, $\mathcal{C}/T$ 위의 sheaf $P$과 $G\vert_T$의 좌작용 $G\vert_T\times P \rightarrow P$으로서 다음을 만족하는 것이다.
 
-1. (국소 비공) morphism $P \rightarrow \ast$ (종대상으로의 morphism)이 sheaf의 epimorphism이다. 즉 어떤 covering $\{T_i \rightarrow T\}$이 있어 각 $P(T_i)\neq \varnothing$이다.
+1. (국소 비공) morphism $P \rightarrow \ast$ (종대상으로의 morphism)이 sheaf의 epimorphism이다. 즉 어떤 covering $\{T_i \rightarrow T\}$이 있어 각 $P(T_i)\neq \emptyset$이다.
 2. (단순추이성) morphism $G\vert_T\times P \rightarrow P\times P$, $(g, p)\mapsto(g\cdot p, p)$이 sheaf의 isomorphism이다.
 
 두 $G$-torsor 사이의 morphism은 $G$-동변 sheaf morphism이며 (이는 자동으로 isomorphism이다), $T$ 위의 $G$-torsor들은 groupoid $\mathbf{B}G(T)$을 이룬다. 대응 $T\mapsto \mathbf{B}G(T)$이 정의하는 CFG를 *classifying stack<sub>분류 스택</sub>* $\mathbf{B}G$로 적는다.

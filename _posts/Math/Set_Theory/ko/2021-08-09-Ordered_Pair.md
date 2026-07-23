@@ -22,7 +22,7 @@ weight: 2
 $A\subseteq B$라는 것은 임의의 $x$에 대하여, 명제 $x\in A\implies x\in B$이 항상 참인 것이다. 
 :::
 
-다음의 두 명제들은 $\subset$의 두 성질들이다. 
+다음의 두 명제들은 $\subseteq$의 두 성질들이다. 
 
 ::: 명제 2
 $A\subseteq A$가 항상 성립한다.

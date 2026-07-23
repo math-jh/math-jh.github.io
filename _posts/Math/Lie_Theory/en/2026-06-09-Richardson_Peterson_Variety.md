@@ -38,7 +38,7 @@ is called an *open Richardson variety*.
 
 By definition $R_{u,w}$ is a closed subvariety of $G/P$, and $\mathring{R}_{u,w}$ is a Zariski open subset of it. This intersection already appeared in the work of Kazhdan–Lusztig [KL80] and Deodhar [Deo85], and its general geometric properties were later studied by Richardson [Ric92].
 
-The usefulness of this definition is best seen in the Grassmannian $\Gr(k,n)$ (or more generally in a partial flag variety). Fixing a reference flag $E_\bullet\colon E_1\subset E_2\subset\cdots\subset E_n=\mathbb{C}^n$, recall that each Schubert cell is determined by the way a $k$-dimensional subspace $V$ meets this flag, namely by the jumps in $\dim(V\cap E_j)$ as $j$ increases. Computing the intersection of two Schubert cells inside the Grassmannian amounts to finding the incidence conditions they satisfy simultaneously. However, if the two Schubert cells are defined with respect to the same reference flag, the two conditions are not independent and the intersection fails to have the expected dimension; one must instead choose reference flags in generic position.
+The usefulness of this definition is best seen in the Grassmannian $\Gr(k,n)$ (or more generally in a partial flag variety). Fixing a reference flag $E_\bullet\colon E_1\subseteq E_2\subseteq\cdots\subseteq E_n=\mathbb{C}^n$, recall that each Schubert cell is determined by the way a $k$-dimensional subspace $V$ meets this flag, namely by the jumps in $\dim(V\cap E_j)$ as $j$ increases. Computing the intersection of two Schubert cells inside the Grassmannian amounts to finding the incidence conditions they satisfy simultaneously. However, if the two Schubert cells are defined with respect to the same reference flag, the two conditions are not independent and the intersection fails to have the expected dimension; one must instead choose reference flags in generic position.
 
 The easiest example of this is the *opposite flag* $\tilde{E}_j=\span\{e_n,\ldots,e_{n-j+1}\}$, which reads the given flag $E_i=\span\{e_1,\ldots,e_i\}$ in reverse. These two flags satisfy the transversality condition
 
@@ -230,11 +230,11 @@ which equals $\rank(\mathfrak{sl}_n)$, confirming [Proposition 9](#prop9) again.
 
 To see the individual cells, let us look more concretely at the case $n=3$. We have $Ne_1=0$, $Ne_2=e_1$, $Ne_3=e_2$, and the last condition $NV_2\subseteq V_3=\mathbb{C}^3$ is automatic, so using the definition directly we get
 
-$$\Pet_3=\{(V_1\subset V_2)\in \Fl_3\mid NV_1\subseteq V_2\}.$$
+$$\Pet_3=\{(V_1\subseteq V_2)\in \Fl_3\mid NV_1\subseteq V_2\}.$$
 
 As we saw above, from $\dim_\mathbb{C}\Fl_3=3$ the single condition cuts the dimension by $1$, giving $\dim\Pet_3=2$. Since the dimension of the Peterson variety equals $\rank(\mathfrak{g})$, by the above description the Peterson variety $\Pet_3$ should split into $2^2=4$ pieces. On the other hand, thinking of the Bruhat decomposition of $\GL_3$, the Bruhat cells are indexed by $w\in S_3$, giving $6$ cells. That is, among the $6$ cells there are two that do not define an affine paving of the Peterson variety; to identify them, consider the coordinate flags
 
-$$E^w_\bullet:\qquad 0\subset \span\{e_{w(1)}\}\subset \span \{e_{w(1)}, e_{w(2)}\}\subset \span\{e_{w(1)}, e_{w(2)},e_{w(3)}\}=\mathbb{C}^3.$$
+$$E^w_\bullet:\qquad 0\subseteq \span\{e_{w(1)}\}\subseteq \span \{e_{w(1)}, e_{w(2)}\}\subseteq \span\{e_{w(1)}, e_{w(2)},e_{w(3)}\}=\mathbb{C}^3.$$
 
 For this to lie in $\Pet_3$ we need $Ne_{w(1)}\in\span\{e_{w(1)},e_{w(2)}\}$, i.e.
 
@@ -277,7 +277,7 @@ Since introducing the flag variety in [§Borel subgroup, ⁋Definition 12](/en/m
 
 exists, then the $\mathbb{C}$-algebra homomorphism $A\rightarrow B$ now translates into the following commutative diagram
 
-![Applying $\operatorname{Spec}$ to the above triangle reverses all arrows, so that $\operatorname{Spec}\varphi\colon\operatorname{Spec}B\rightarrow\operatorname{Spec}A$ becomes a morphism over the point $\operatorname{Spec}\mathbb{C}$.](/assets/images/Math/Lie_Theory/Richardson_Peterson_Variety-2.svg){:style="width:18em" class="invert" .align-center}
+![Applying $\Spec$ to the above triangle reverses all arrows, so that $\Spec\varphi\colon\Spec B\rightarrow\Spec A$ becomes a morphism over the point $\Spec\mathbb{C}$.](/assets/images/Math/Lie_Theory/Richardson_Peterson_Variety-2.svg){:style="width:18em" class="invert" .align-center}
 
 On the other hand, when $B=\mathbb{C}$, a ring homomorphism $A\rightarrow \mathbb{C}$ translates in the geometric world to $\Spec \mathbb{C}\rightarrow\Spec A$, i.e. this ring homomorphism is itself a point. Also recall that when $A$ is a $\mathbb{C}$-algebra, we usually interpreted this ring homomorphism as an evaluation map. Finally, viewing $B$ as an $A$-algebra via a ring homomorphism $A\rightarrow B$ is interpreted as a morphism $\Spec B\rightarrow\Spec A$, i.e. a relative space over the base $\Spec A$, and an $A$-module is viewed as a sheaf over $\Spec A$ (an object analogous to a vector bundle). In particular, a free module of rank $N$ corresponds to a trivial rank $N$ bundle, so the $\Spec$ of such an $A$-algebra is a finite morphism whose fibers (counting dimension) have $N$ points. The most basic case is affine space: the polynomial algebra $\mathbb{C}[\x_1,\ldots,\x_n]$ becomes affine $n$-space $\mathbb{A}^n$ under $\Spec$, and more generally $A[\x_1,\ldots,\x_n]$ corresponds to a relative affine space over the base $\Spec A$.
 

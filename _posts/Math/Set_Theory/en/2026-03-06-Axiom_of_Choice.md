@@ -37,7 +37,7 @@ Every set $A$ can be well-ordered.
 What this theorem means is that regardless of whether the set $A$ is an ordered set already equipped with an order, or merely a set with no additional structure, we can endow it with a new order relation. For example, $(\mathbb{R},\leq)$ is not a well-ordered set, but nevertheless we can define a suitable order relation $\preceq$ that makes the set $\mathbb{R}$ into a well-ordered set.
 
 ::: Lemma 2 (Tarski-Bourbaki)
-Let $A$ be a set, let $\mathcal{S}\subset\mathcal{P}(A)$, and let $p:\mathcal{S}\rightarrow A$ satisfy $p(X)\not\in X$. Then there exists a well-ordered subset $(M,\leq)$ satisfying the following conditions.
+Let $A$ be a set, let $\mathcal{S}\subseteq\mathcal{P}(A)$, and let $p:\mathcal{S}\rightarrow A$ satisfy $p(X)\not\in X$. Then there exists a well-ordered subset $(M,\leq)$ satisfying the following conditions.
 
 1. For every $x\in X$, we have $S_x\in\mathcal{S}$ and $p(S_x)=x$.
 2. $M\not\in\mathcal{S}$.

@@ -167,13 +167,13 @@ Moreover, given any connection $\nabla$, there exists *parallel transport* along
 
 Finally, since $QH^\ast(X)$ already carries a grading, additional data are needed to reflect this. Recall that the grading on $QH^\ast(X)$ was obtained by adding to the classical cohomology grading $H^\ast(X)$ the grading coming from the Novikov ring. That is, writing $QH^\ast(X) = H^\ast(X) \otimes_\mathbb{C} \Lambda$, the degree of any generator $T_\alpha \otimes q^\beta$ was given by $\deg(T_\alpha \otimes q^\beta) = p_\alpha + 2\, c_1 \cdot \beta$. ([[Symplectic Geometry] §Quantum Cohomology, ⁋Definition 2](/en/math/symplectic_geometry/quantum_cohomology#def2))
 
-The data of this grading are encoded by a *vector field* on the manifold $M$ called the *Euler vector field* $E$. The *infinitesimal deformation* of the multiplication $\circ$ along the flow of $E$ is given by the Lie derivative $\Lie_E(\circ)$; the fact that the quantum product respects degrees, which we examined in [[Symplectic Geometry] §Quantum Cohomology](/en/math/symplectic_geometry/quantum_cohomology), is expressed by the equation
+The data of this grading are encoded by a *vector field* on the manifold $M$ called the *Euler vector field* $E$. The *infinitesimal deformation* of the multiplication $\circ$ along the flow of $E$ is given by the Lie derivative $\mathcal{L}_E(\circ)$; the fact that the quantum product respects degrees, which we examined in [[Symplectic Geometry] §Quantum Cohomology](/en/math/symplectic_geometry/quantum_cohomology), is expressed by the equation
 
-$$\Lie_E(\circ) = \circ.$$
+$$\mathcal{L}_E(\circ) = \circ.$$
 
 Similarly, in our intuition $\eta$ is the Poincaré pairing ([Example 2](#ex2)), which survives only in the top degree, so this degree condition translates to
 
-$$\Lie_E(\eta) = (2 - d)\eta.$$
+$$\mathcal{L}_E(\eta) = (2 - d)\eta.$$
 
 The Euler vector field is then an *affine* vector field satisfying $\nabla^2 E=0$; precisely, these two conditions completely determine $E$.
 
@@ -187,7 +187,7 @@ A tuple $(M, \eta, \circ, e, E)$ is called a *Frobenius manifold* if the followi
 3. There exists a vector field $e$ that is the identity element for the multiplication $\circ$ at every point, and $\nabla e = 0$.
 4. There exists a vector field $E$ satisfying the affine condition $\nabla^2 E=0$ such that for a suitable constant $d\in \mathbb{C}$,
     
-    $$\Lie_E(\circ)=\circ,\qquad \Lie_E(\eta)=(2-d)\eta$$
+    $$\mathcal{L}_E(\circ)=\circ,\qquad \mathcal{L}_E(\eta)=(2-d)\eta$$
 
     holds.
 5. For all vector fields $X,Y,Z$ we have $\eta(X \circ Y, Z) = \eta(X, Y \circ Z)$.
@@ -259,13 +259,13 @@ This is simply the definition of Euclidean space lifted to $\mathbb{C}$; the fac
 
 The Euler vector field of this manifold is exactly the vector field $\sum_i t^i\partial_{t^i}$ that we call the Euler vector field in calculus. Indeed, since $E(t^i)=t^i$ in flat coordinates, computing the Lie derivatives gives
 
-$$\Lie_E(dt^i)=d(E(t^i))=dt^i,\qquad \Lie_E(\partial_{t^i})=[E, \partial_{t^i}]=-\partial_{t^i},$$
+$$\mathcal{L}_E(dt^i)=d(E(t^i))=dt^i,\qquad \mathcal{L}_E(\partial_{t^i})=[E, \partial_{t^i}]=-\partial_{t^i},$$
 
 whence
 
-$$\Lie_E(\eta) = \sum_i \bigl( \Lie_E(dt^i) \otimes dt^i + dt^i \otimes \Lie_E(dt^i) \bigr) = 2 \sum_i dt^i \otimes dt^i = 2\eta.$$
+$$\mathcal{L}_E(\eta) = \sum_i \bigl( \mathcal{L}_E(dt^i) \otimes dt^i + dt^i \otimes \mathcal{L}_E(dt^i) \bigr) = 2 \sum_i dt^i \otimes dt^i = 2\eta.$$
 
-Similarly, for the multiplication, writing $\circ=\sum dt^i\otimes dt^i\otimes\partial_{t^i}$ and performing a similar computation shows that $\Lie_E(\circ)=\circ$.
+Similarly, for the multiplication, writing $\circ=\sum dt^i\otimes dt^i\otimes\partial_{t^i}$ and performing a similar computation shows that $\mathcal{L}_E(\circ)=\circ$.
 
 Potentiality is obtained almost trivially; working backwards to find a function whose third partial derivatives in the $i,j,k$ directions give $\delta_{ijk}$ yields (of course)
 
@@ -302,7 +302,7 @@ We verify the six conditions of [Definition 5](#def5) in order.
 3. The unit for this multiplication is $1 \in H^0(X)$, which is a constant section in flat coordinates, so $\nabla e = 0$.
 4. Meanwhile, by [[Symplectic Geometry] §Quantum Cohomology, ⁋Definition 12](/en/math/symplectic_geometry/quantum_cohomology#def12) the structure constants are $c_{\alpha\beta\gamma}(t) = \eta(\partial_{t^\alpha} \circ_t \partial_{t^\beta}, \partial_{t^\gamma}) = \partial_{t^\alpha}\partial_{t^\beta}\partial_{t^\gamma} F$, and the symmetry of this expression in the three indices gives $\eta(X \circ Y, Z) = \eta(X, Y \circ Z)$.
 5. Similarly one checks that $\nabla c$ is symmetric in the four indices; under this potentiality, associativity is equivalent to the WDVV equation of [Proposition 7](#prop7), and on the A-model side it is guaranteed by the splitting axiom for GW invariants.
-6. Finally, the grading of quantum cohomology ([[Symplectic Geometry] §Quantum Cohomology, ⁋Definition 2](/en/math/symplectic_geometry/quantum_cohomology#def2)) translates as described in the main text into $\Lie_E(\circ) = \circ$ and $\Lie_E(\eta) = (2-d)\eta$, and the given $E$ satisfies this as an affine vector field with $\nabla^2 E = 0$.
+6. Finally, the grading of quantum cohomology ([[Symplectic Geometry] §Quantum Cohomology, ⁋Definition 2](/en/math/symplectic_geometry/quantum_cohomology#def2)) translates as described in the main text into $\mathcal{L}_E(\circ) = \circ$ and $\mathcal{L}_E(\eta) = (2-d)\eta$, and the given $E$ satisfies this as an affine vector field with $\nabla^2 E = 0$.
 :::
 
 Considering our mirror symmetry statement
@@ -334,19 +334,19 @@ $$E = t^0 \partial_{t^0} + 2\partial_{t^1}.$$
 
 Since $E(t^0) = t^0$ and $E(t^1) = 2$, the Lie derivatives of the components are
 
-$$\Lie_E(dt^0) = dt^0, \quad \Lie_E(dt^1) = 0, \quad \Lie_E(\partial_{t^0}) = [E, \partial_{t^0}] = -\partial_{t^0}, \quad \Lie_E(\partial_{t^1}) = [E, \partial_{t^1}] = 0;$$
+$$\mathcal{L}_E(dt^0) = dt^0, \quad \mathcal{L}_E(dt^1) = 0, \quad \mathcal{L}_E(\partial_{t^0}) = [E, \partial_{t^0}] = -\partial_{t^0}, \quad \mathcal{L}_E(\partial_{t^1}) = [E, \partial_{t^1}] = 0;$$
 
 applying this to the metric $\eta = dt^0 \otimes dt^1 + dt^1 \otimes dt^0$, each term has weight $1 + 0 = 1$, so
 
-$$\Lie_E(\eta) = \Lie_E(dt^0)\otimes dt^1 + dt^1 \otimes \Lie_E(dt^0) = dt^0 \otimes dt^1 + dt^1 \otimes dt^0 = \eta,$$
+$$\mathcal{L}_E(\eta) = \mathcal{L}_E(dt^0)\otimes dt^1 + dt^1 \otimes \mathcal{L}_E(dt^0) = dt^0 \otimes dt^1 + dt^1 \otimes dt^0 = \eta,$$
 
 yielding $2 - d = 1$, which equals $\dim_\mathbb{C}\mathbb{P}^1$.
 
-By a similar computation, the nontrivial part of the multiplication $\circ$ is the tensor $e^{t^1}\, dt^1 \otimes dt^1 \otimes \partial_{t^0}$ (i.e., $\partial_{t^1} \circ \partial_{t^1} = e^{t^1}\partial_{t^0}$). Since $\Lie_E(e^{t^1}) = E(e^{t^1}) = 2e^{t^1}$ (weight $2$), the two $dt^1$ factors have weight $0$, and $\partial_{t^0}$ has weight $-1$, we obtain
+By a similar computation, the nontrivial part of the multiplication $\circ$ is the tensor $e^{t^1}\, dt^1 \otimes dt^1 \otimes \partial_{t^0}$ (i.e., $\partial_{t^1} \circ \partial_{t^1} = e^{t^1}\partial_{t^0}$). Since $\mathcal{L}_E(e^{t^1}) = E(e^{t^1}) = 2e^{t^1}$ (weight $2$), the two $dt^1$ factors have weight $0$, and $\partial_{t^0}$ has weight $-1$, we obtain
 
-$$\Lie_E\bigl(e^{t^1}\, dt^1 \otimes dt^1 \otimes \partial_{t^0}\bigr) = (2 + 0 + 0 - 1)\, e^{t^1}\, dt^1 \otimes dt^1 \otimes \partial_{t^0} = e^{t^1}\, dt^1 \otimes dt^1 \otimes \partial_{t^0},$$
+$$\mathcal{L}_E\bigl(e^{t^1}\, dt^1 \otimes dt^1 \otimes \partial_{t^0}\bigr) = (2 + 0 + 0 - 1)\, e^{t^1}\, dt^1 \otimes dt^1 \otimes \partial_{t^0} = e^{t^1}\, dt^1 \otimes dt^1 \otimes \partial_{t^0},$$
 
-so $\Lie_E(\circ) = \circ$.
+so $\mathcal{L}_E(\circ) = \circ$.
 
 Now setting the Novikov variable to $q = e^{t^1}$, the second equation becomes $\partial_{t^1} \circ \partial_{t^1} = qe$, which translates back into cohomology language as $H \star H = q \cdot 1$, recovering the small quantum ring of [§Overview of Mirror Symmetry, ⁋Example 5](/en/math/mirror_symmetry/overview#ex5). Moreover, this isomorphism is now parametrized by the variation of $q=e^{t^1}$, upgrading the previous mirror symmetry at the level of ring isomorphisms.
 :::

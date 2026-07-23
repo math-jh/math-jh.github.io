@@ -41,7 +41,7 @@ $\mathbb{R}^n$의 convex polytope $\Delta$가 *Delzant 다면체<sub>Delzant pol
 세 조건은 점점 강해지는 정수론적 매끄러움의 단계이다. 조건 1은 꼭짓점이 $n$개의 facet의 횡단 교차로만 생김을 요구하여, 가령 정팔면체의 꼭짓점처럼 $n$개보다 많은 facet이 모이는 경우를 배제한다. 조건 3은 꼭짓점에서 나가는 $n$개의 모서리 방향이 lattice의 basis를 이룬다는 것으로, 동치로는 그 $n$개의 primitive 벡터를 열로 갖는 $n\times n$ 행렬의 행렬식이 $\pm1$이라는 조건이다. 이는 [§토릭 다양체의 정의, ⁋명제 11](/ko/math/toric_geometry/toric_varieties#prop11)에서 maximal cone의 generator들이 lattice의 basis일 때 toric variety가 smooth였던 조건과 정확히 같은 형태이며, 실제로 두 매끄러움은 같은 대응의 양면이다.
 
 ::: 참고 3
-조건 3은 각 꼭짓점 $p$에서의 국소 모형을 표준화한다. 꼭짓점 $p$에서 만나는 $n$개의 facet의 안쪽을 향하는 primitive 법선 벡터 $u_1,\ldots,u_n\in\mathbb{Z}^n$이 lattice의 basis를 이룰 때, 다면체는 $p$ 근방에서 표준 양사분면 $\mathbb{R}_{\geq0}^n$의 평행이동과 $\GL(n,\mathbb{Z})$ 변환으로 옮겨진다. 이 표준 모형이 아래 구성에서 각 꼭짓점에 대응하는 부분이 정확히 $\mathbb{C}^n$의 표준 toric chart가 되도록 보장하며, 그것이 결과 variety의 smoothness의 근원이다. Simple·rational만 만족하고 smooth가 깨지면 같은 구성이 smooth variety 대신 symplectic orbifold를 낳는다.
+조건 3은 각 꼭짓점 $p$에서의 국소 모형을 표준화한다. 꼭짓점 $p$에서 만나는 $n$개의 facet의 안쪽을 향하는 primitive 법선 벡터 $u_1,\ldots,u_n\in\mathbb{Z}^n$이 lattice의 basis를 이룰 때, 다면체는 $p$ 근방에서 표준 양사분면 $\mathbb{R}_{\geq0}^n$의 평행이동과 $\GL(n;\mathbb{Z})$ 변환으로 옮겨진다. 이 표준 모형이 아래 구성에서 각 꼭짓점에 대응하는 부분이 정확히 $\mathbb{C}^n$의 표준 toric chart가 되도록 보장하며, 그것이 결과 variety의 smoothness의 근원이다. Simple·rational만 만족하고 smooth가 깨지면 같은 구성이 smooth variety 대신 symplectic orbifold를 낳는다.
 :::
 
 ## Delzant 정리
@@ -51,10 +51,10 @@ $\mathbb{R}^n$의 convex polytope $\Delta$가 *Delzant 다면체<sub>Delzant pol
 ::: 정리 4 (Delzant)
 대응
 $$(M,\omega,\mathbb{T}^n,\mu)\longmapsto\mu(M)$$
-은 symplectic toric manifold의 isomorphism class와 Delzant 다면체의 격자 합동류 (즉 평행이동과 $\GL(n,\mathbb{Z})$ 변환을 무시한 류) 사이의 전단사이다. 구체적으로 다음이 성립한다.
+은 symplectic toric manifold의 isomorphism class와 Delzant 다면체의 격자 합동류 (즉 평행이동과 $\GL(n;\mathbb{Z})$ 변환을 무시한 류) 사이의 전단사이다. 구체적으로 다음이 성립한다.
 
 1. 임의의 symplectic toric manifold $(M,\omega,\mathbb{T}^n,\mu)$의 운동량 다면체 $\Delta=\mu(M)$은 Delzant 다면체이다.
-2. 두 symplectic toric manifold가 isomorphic할 필요충분조건은 그 운동량 다면체가 평행이동과 $\GL(n,\mathbb{Z})$ 변환으로 일치하는 것이다.
+2. 두 symplectic toric manifold가 isomorphic할 필요충분조건은 그 운동량 다면체가 평행이동과 $\GL(n;\mathbb{Z})$ 변환으로 일치하는 것이다.
 3. 임의의 Delzant 다면체 $\Delta\subseteq\mathbb{R}^n$에 대하여, $\mu(M)=\Delta$인 symplectic toric manifold $(M_\Delta,\omega_\Delta,\mathbb{T}^n,\mu_\Delta)$이 존재한다.
 :::
 
@@ -135,7 +135,7 @@ $$\dim M_\Delta=\dim\mathbb{C}^d-2\dim N=2d-2(d-n)=2n$$
 
 이다. $\Delta$이 compact이고 위에서 $\phi_N^{-1}(c)$이 $\Delta$ 위로 사영되며 각 fiber가 좌표들의 위상 $\lvert z_k\rvert$이 고정된 torus의 부분집합이라 bounded이고 닫혀 있으므로 $\phi_N^{-1}(c)$은 compact이고, 따라서 그 quotient $M_\Delta$도 compact이다. $\mathbb{C}^d$과 $N$, $\Delta$이 연결이므로 $M_\Delta$도 연결이다.
 
-잔여 action은 다음과 같이 내려온다. $\mathbb{T}^d$이 $\mathbb{C}^d$ 위에 작용하고 그 subgroup $N$의 action으로 나누었으므로, quotient group $\mathbb{T}^n=\mathbb{T}^d/N$이 $M_\Delta$ 위에 작용한다. 이 action은 $\omega_\Delta$을 보존하며 그 운동량 사상은 $\phi$이 $\phi_N^{-1}(c)$ 위에서 유도하는 사상이 $\mathbb{T}^n$ 방향으로 내려온 것, 즉 위에서 정의한 $\mu_\Delta(z)=x$이다. Action의 효과성은 다음에서 나온다. $\mathbb{T}^n$의 한 원소가 $M_\Delta$의 모든 점을 고정하면, 그것을 $\mathbb{T}^d$로 들어 올린 action은 $\phi_N^{-1}(c)$을 $N$-orbit 안에서 보존하는데, 내부점 $x\in\Delta^\circ$ 위의 fiber에서는 $I(z)=\varnothing$이라 $\mathbb{T}^d$ 전체가 자유롭게 작용하므로 그 원소는 $N$에 속해야 하고, 따라서 $\mathbb{T}^n$에서는 항등원이다.
+잔여 action은 다음과 같이 내려온다. $\mathbb{T}^d$이 $\mathbb{C}^d$ 위에 작용하고 그 subgroup $N$의 action으로 나누었으므로, quotient group $\mathbb{T}^n=\mathbb{T}^d/N$이 $M_\Delta$ 위에 작용한다. 이 action은 $\omega_\Delta$을 보존하며 그 운동량 사상은 $\phi$이 $\phi_N^{-1}(c)$ 위에서 유도하는 사상이 $\mathbb{T}^n$ 방향으로 내려온 것, 즉 위에서 정의한 $\mu_\Delta(z)=x$이다. Action의 효과성은 다음에서 나온다. $\mathbb{T}^n$의 한 원소가 $M_\Delta$의 모든 점을 고정하면, 그것을 $\mathbb{T}^d$로 들어 올린 action은 $\phi_N^{-1}(c)$을 $N$-orbit 안에서 보존하는데, 내부점 $x\in\Delta^\circ$ 위의 fiber에서는 $I(z)=\emptyset$이라 $\mathbb{T}^d$ 전체가 자유롭게 작용하므로 그 원소는 $N$에 속해야 하고, 따라서 $\mathbb{T}^n$에서는 항등원이다.
 
 끝으로 운동량 다면체가 $\Delta$임은 위 projection에서 직접 읽힌다. $\mu_\Delta(z)=x$이 가능한 값의 집합은 정확히 $\{x\in\mathbb{R}^n:\langle x,u_k\rangle+\lambda_k\geq0\text{ for all }k\}=\Delta$이므로 $\mu_\Delta(M_\Delta)=\Delta$이다.
 :::

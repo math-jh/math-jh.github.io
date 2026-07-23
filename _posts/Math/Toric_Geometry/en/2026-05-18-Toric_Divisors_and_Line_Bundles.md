@@ -55,7 +55,7 @@ One of our ultimate goals is to compute $\Cl(X_\Sigma)$ explicitly from the comb
 
 By definition this kernel consists of those elements of $\Div_T(X_\Sigma)$ that become $0$ in $\Cl(X_\Sigma)$, i.e. divisors that are *simultaneously torus-invariant and principal*. Thus the problem reduces to asking which rational functions on a toric variety define a torus-invariant principal divisor.
 
-The most natural candidates are the *characters* $\rchi^m$ corresponding to elements $m \in M$ of the lattice. For each $m \in M$, the character $\rchi^m: T_N \rightarrow \mathbb{C}^\ast$ can be viewed as a rational function on $X_\Sigma$ because $T_N \subset X_\Sigma$ is open dense ([§Affine Toric Varieties, ⁋Proposition 10](/en/math/toric_geometry/affine_toric_varieties#prop10)). The character $\rchi^m$ itself is not invariant under the action of $T_N$, but for $t \in T_N$ we have
+The most natural candidates are the *characters* $\rchi^m$ corresponding to elements $m \in M$ of the lattice. For each $m \in M$, the character $\rchi^m: T_N \rightarrow \mathbb{C}^\ast$ can be viewed as a rational function on $X_\Sigma$ because $T_N \subseteq X_\Sigma$ is open dense ([§Affine Toric Varieties, ⁋Proposition 10](/en/math/toric_geometry/affine_toric_varieties#prop10)). The character $\rchi^m$ itself is not invariant under the action of $T_N$, but for $t \in T_N$ we have
 
 $$(t \cdot \rchi^m)(x) = \rchi^m(t x) = \rchi^m(t) \cdot \rchi^m(x)$$
 
@@ -68,7 +68,7 @@ $$\divisor(\rchi^m) = \sum_{\rho \in \Sigma(1)} \langle m, v_\rho \rangle D_\rho
 :::
 
 ::: Proof
-Since $X_\Sigma$ is normal ([§Definition of Toric Varieties, ⁋Proposition 4](/en/math/toric_geometry/toric_varieties#prop4)), the local ring $\mathcal{O}_{X_\Sigma, D_\rho}$ at the generic point of each prime divisor $D_\rho$ is a DVR; write its valuation as $v_{D_\rho}: \mathbb{C}(X_\Sigma)^\ast \rightarrow \mathbb{Z}$. By the definition of principal divisor,
+Since $X_\Sigma$ is normal ([§Definition of Toric Varieties, ⁋Proposition 4](/en/math/toric_geometry/toric_varieties#prop4)), the local ring $\mathcal{O}_{X_\Sigma, D_\rho}$ at the generic point of each prime divisor $D_\rho$ is a DVR; write its valuation as $v_{D_\rho}: \mathbb{C}(X_\Sigma)^\times \rightarrow \mathbb{Z}$. By the definition of principal divisor,
 
 $$\divisor(\rchi^m) = \sum_{\rho \in \Sigma(1)} v_{D_\rho}(\rchi^m) D_\rho$$
 
@@ -94,7 +94,7 @@ First we show that $M \rightarrow \Div_T(X_\Sigma)$ is injective. If $\divisor(\
 
 Next we show that the kernel of $\Div_T(X_\Sigma) \rightarrow \Cl(X_\Sigma)$ coincides exactly with the divisors of characters. By definition the kernel is the set of divisors that are principal and simultaneously $T$-invariant. Suppose $D = \divisor(f)$ is $T$-invariant. Since the support of a $T$-invariant divisor lies in the boundary $X_\Sigma \setminus T_N = \bigcup_{\rho \in \Sigma(1)} D_\rho$, restricting $f$ to the open dense subset $T_N$ gives $\divisor(f \rvert_{T_N}) = 0$. Hence $f\rvert_{T_N}$ is a unit in the coordinate ring $\mathbb{C}[M]$ of $T_N$. The units of $\mathbb{C}[M]$ are exactly of the form $c \cdot \rchi^m$ ($c \in \mathbb{C}^\ast$, $m \in M$), so $f\rvert_{T_N} = c \cdot \rchi^m$, and by normality of $X_\Sigma$ we have $f = c \cdot \rchi^m$ on $X_\Sigma$. Therefore $D = \divisor(\rchi^m)$.
 
-Finally we show surjectivity. For any divisor $D \in \Div(X_\Sigma)$, its restriction $D \cap T_N$ to $T_N$ is a divisor on $T_N \cong (\mathbb{C}^\ast)^n$. Since the coordinate ring $\mathbb{C}[M]$ of $T_N$ is a UFD, this is principal, and thus for some $f \in \mathbb{C}(X_\Sigma)^\ast$ the support of $D - \divisor(f)$ can be made to lie in $X_\Sigma \setminus T_N = \bigcup_{\rho \in \Sigma(1)} D_\rho$. The right-hand side is expressed as a sum of torus-invariant divisors, so $[D] = [D - \divisor(f)]$ has a torus-invariant representative.
+Finally we show surjectivity. For any divisor $D \in \Div(X_\Sigma)$, its restriction $D \cap T_N$ to $T_N$ is a divisor on $T_N \cong (\mathbb{C}^\ast)^n$. Since the coordinate ring $\mathbb{C}[M]$ of $T_N$ is a UFD, this is principal, and thus for some $f \in \mathbb{C}(X_\Sigma)^\times$ the support of $D - \divisor(f)$ can be made to lie in $X_\Sigma \setminus T_N = \bigcup_{\rho \in \Sigma(1)} D_\rho$. The right-hand side is expressed as a sum of torus-invariant divisors, so $[D] = [D - \divisor(f)]$ has a torus-invariant representative.
 :::
 
 This exact sequence becomes a powerful tool for explicitly computing the class group of a toric variety. Under the assumption, $\Div_T(X_\Sigma) \cong \mathbb{Z}^{\Sigma(1)}$ is a free abelian group of rank $\lvert \Sigma(1) \rvert$ and $M \cong \mathbb{Z}^n$ is a free abelian group of rank $n$ embedded inside it, so $\Cl(X_\Sigma) \cong \mathbb{Z}^{\Sigma(1)} / M$ is a finitely generated abelian group of rank $\lvert \Sigma(1) \rvert - n$. However, note that it may have torsion in general—for instance, on $\mathbb{P}(1,1,2)$ we have $\Cl \cong \mathbb{Z} \oplus \mathbb{Z}/2$.
@@ -118,7 +118,7 @@ is an element of $\PL(\Sigma, M)$, and in particular takes the value $\psi_D(v_\
 :::
 
 ::: Proof
-Assume $D$ is a Cartier divisor. The definition of a Cartier divisor is that it is *locally* principal, but on an affine toric variety $U_\sigma$ a stronger fact holds: every $T$-invariant Cartier divisor on $U_\sigma$ is globally principal. This is based on the fact that the coordinate ring $\mathbb{C}[\sigma^\vee \cap M]$ carries an $M$-grading, so cocycle data for invertible $\mathcal{O}_{U_\sigma}$-modules trivializes. Accepting this, we have $D\rvert_{U_\sigma} = \divisor(f_\sigma)$ for some rational function $f_\sigma \in \mathbb{C}(X_\Sigma)^\ast$.
+Assume $D$ is a Cartier divisor. The definition of a Cartier divisor is that it is *locally* principal, but on an affine toric variety $U_\sigma$ a stronger fact holds: every $T$-invariant Cartier divisor on $U_\sigma$ is globally principal. This is based on the fact that the coordinate ring $\mathbb{C}[\sigma^\vee \cap M]$ carries an $M$-grading, so cocycle data for invertible $\mathcal{O}_{U_\sigma}$-modules trivializes. Accepting this, we have $D\rvert_{U_\sigma} = \divisor(f_\sigma)$ for some rational function $f_\sigma \in \mathbb{C}(X_\Sigma)^\times$.
 
 Since $D$ is $T$-invariant, for any $t \in T_N$ we have $\divisor(t \cdot f_\sigma) = t \cdot \divisor(f_\sigma) = \divisor(f_\sigma)$, and two rational functions with the same divisor differ only by a scalar, so $t \cdot f_\sigma = c(t) \cdot f_\sigma$ for some $c(t) \in \mathbb{C}^\ast$. That is, $f_\sigma$ is a weight vector for the $T_N$-action, and hence is of the form $f_\sigma = c \cdot \rchi^{-m_\sigma}$ for some $m_\sigma \in M$ and $c \in \mathbb{C}^\ast$. (We write $-m_\sigma$ in the exponent to make the sign calculation below neat.) Therefore on $U_\sigma$,
 

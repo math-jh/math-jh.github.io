@@ -89,7 +89,7 @@ $$0 \rightarrow M' \rightarrow M \rightarrow M'' \rightarrow 0$$
 
 가 주어졌다 하자. 그럼
 
-$$\Ass M'\subset \Ass M\subset (\Ass M')\cup (\Ass M'')$$
+$$\Ass M'\subseteq \Ass M\subseteq (\Ass M')\cup (\Ass M'')$$
 
 이 성립한다.
 :::

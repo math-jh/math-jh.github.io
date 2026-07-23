@@ -56,7 +56,7 @@ Here $E$ is the Euler vector field ([§Frobenius Manifolds, ⁋Definition 5](/en
 
 Recall that in [§Frobenius Manifolds, ⁋Definition 5](/en/math/mirror_symmetry/frobenius_manifold#def5), when defining a Frobenius manifold, we introduced $E$ to encode the grading structure of the Frobenius algebra at each point. Specifically,
 
-$$\Lie_E(\circ)=\circ,\qquad \Lie_E(\eta)=(2-d)\eta$$
+$$\mathcal{L}_E(\circ)=\circ,\qquad \mathcal{L}_E(\eta)=(2-d)\eta$$
 
 reflect the fact that the quantum product respects degree and that the Poincaré pairing is concentrated in top degree, respectively. In particular, for [§Frobenius Manifolds, ⁋Proposition 9](/en/math/mirror_symmetry/frobenius_manifold#prop9), which is our main object of interest, if the Euler vector field $E$ in the above formula generates the grading by rescaling coordinates on the base $M$, then $\mu$ is the same grading viewed as an endomorphism on the fiber $T_tM \cong H^\ast(X)$, and they are related by
 
@@ -129,7 +129,7 @@ and as we examined above, the solution space of this equation is $\dim_\mathbb{C
 
 Since from the manifold $M\times \mathbb{C}^\ast$ we have kept only the torus in the $H^2$ direction of $M$, the effective base on the A-side that we now treat is the $(r+1)$-dimensional algebraic torus
 
-$$M_A := (\mathbb{C}^\ast)^r \times \mathbb{C}^\ast_z = \operatorname{Spec}\mathbb{C}[q_1^{\pm}, \ldots, q_r^\pm, z^\pm]$$
+$$M_A := (\mathbb{C}^\ast)^r \times \mathbb{C}^\ast_z = \Spec\mathbb{C}[q_1^{\pm}, \ldots, q_r^\pm, z^\pm]$$
 
 The fiber over this $M_A$ is still the same as the fiber of $\pr_1^\ast TM$, namely $H^\ast(X)$, and therefore the bundle over it is given by
 

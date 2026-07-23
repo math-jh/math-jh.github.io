@@ -100,9 +100,9 @@ $y\in R(X)$라 하자. 그럼 어떤 $x\in X$가 존재하여 $(x,y)\in R$이다
 
 위의 명제에 의하여 임의의 $A$에 대해 
 
-$$R(A)=\pr_2\{z\in R\mid\text{$\pr_1z\in A$}\}\subset\pr_2R$$
+$$R(A)=\pr_2\{z\in R\mid\text{$\pr_1z\in A$}\}\subseteq\pr_2R$$
 
-이고, 따라서 $R(A)\subset\pr_2R$가 성립한다. 특히 $A=\emptyset$이라면 $R(A)=\emptyset$이며, 더 일반적으로 만일 $A\cap\pr_1R=\emptyset$이라면 $R(A)=\emptyset$이다. 
+이고, 따라서 $R(A)\subseteq\pr_2R$가 성립한다. 특히 $A=\emptyset$이라면 $R(A)=\emptyset$이며, 더 일반적으로 만일 $A\cap\pr_1R=\emptyset$이라면 $R(A)=\emptyset$이다. 
 
 만일 어떤 $x$에 대해 $A=\{x\}$라면 $R(A)$를 마치 $x$에서의 $R$의 함숫값처럼 생각할 수 있다. 
 

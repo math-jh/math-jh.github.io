@@ -43,7 +43,7 @@ $$\Hom_{\Alg{A}}(\T(M), \T(M))\cong \Hom_{\rMod{A}}(M, U\T(M))$$
 
 만일 위의 linear map $u$가 surjective라면, $\T(N)$이 $\T^1(N)$으로 생성되는 것으로부터 $\T(u): \T(M) \rightarrow \T(N)$이 surjective가 되는 것을 안다. 
 
-## 탠서대수의 성질들
+## 텐서대수의 성질들
 
 이제 우리는 $\rMod{A}$에서의 연산들이 functor $T:\rMod{A} \rightarrow \Alg{A}$를 통해 옮겨졌을 때, 이들이 어떻게 행동하는지를 살펴본다. 특히 direct sum과 extension of scalar에 관심이 있다. 이 절의 논의는 [명제 2](#prop2)와 같이, $T$를 $\rMod{A}$에서 associative unital $\mathbb{N}$-graded $A$-algebra들의 category들로 가는 functor로 이해하여도 동일한 논증이 성립하지만, 표기상의 복잡함을 해소하기 위해 target category를 $\Alg{A}$로 적기로 한다. 
 

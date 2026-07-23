@@ -49,21 +49,21 @@ $$\ell(D)-\ell(K_C-D)=\deg D+1-g$$
 로 환원된다. 여기서 $K_C$는 canonical divisor이며, $\ell(D)=\dim H^0(C,\mathcal{O}_C(D))$이다.
 :::
 ::: 증명
-Curve $C$의 차원은 $n=1$이다. Line bundle $\mathscr{L}=\mathcal{O}_C(D)$에 대하여 Chern character는 $\operatorname{ch}(\mathscr{L})=1+c_1(\mathscr{L})$이고, tangent bundle $T_C$의 rank가 $1$이므로 [§Todd Class, ⁋예시 5](/ko/math/algebraic_varieties/todd_class#ex5)에 의해
+Curve $C$의 차원은 $n=1$이다. Line bundle $\mathcal{L}=\mathcal{O}_C(D)$에 대하여 Chern character는 $\operatorname{ch}(\mathcal{L})=1+c_1(\mathcal{L})$이고, tangent bundle $T_C$의 rank가 $1$이므로 [§Todd Class, ⁋예시 5](/ko/math/algebraic_varieties/todd_class#ex5)에 의해
 
 $$\operatorname{td}(T_C)=1+\frac{1}{2}c_1(T_C)=1-\frac{1}{2}K_C$$
 
 이다. 따라서
 
-$$\operatorname{ch}(\mathscr{L})\cdot\operatorname{td}(T_C)=\left(1+c_1(\mathscr{L})\right)\left(1-\frac{1}{2}K_C\right)$$
+$$\operatorname{ch}(\mathcal{L})\cdot\operatorname{td}(T_C)=\left(1+c_1(\mathcal{L})\right)\left(1-\frac{1}{2}K_C\right)$$
 
-의 $1$차 성분은 $c_1(\mathscr{L})-\frac{1}{2}K_C$이며, 이를 적분하면
+의 $1$차 성분은 $c_1(\mathcal{L})-\frac{1}{2}K_C$이며, 이를 적분하면
 
-$$\chi(C,\mathscr{L})=\int_C c_1(\mathscr{L})-\frac{1}{2}K_C=\deg(\mathscr{L})+1-g$$
+$$\chi(C,\mathcal{L})=\int_C c_1(\mathcal{L})-\frac{1}{2}K_C=\deg(\mathcal{L})+1-g$$
 
 이 된다. 한편 Euler characteristic의 정의와 Serre duality에 의해
 
-$$\chi(C,\mathscr{L})=\dim H^0(C,\mathscr{L})-\dim H^1(C,\mathscr{L})=\ell(D)-\ell(K_C-D)$$
+$$\chi(C,\mathcal{L})=\dim H^0(C,\mathcal{L})-\dim H^1(C,\mathcal{L})=\ell(D)-\ell(K_C-D)$$
 
 이므로 classical Riemann-Roch 정리 [§곡선에서의 리만-로흐 정리, ⁋명제 3](/ko/math/algebraic_varieties/riemann_roch_theorem#prop3)을 복원한다. $\square$
 :::
@@ -119,7 +119,7 @@ $$f_\ast\bigl(\operatorname{ch}(\mathcal{F})\cdot\operatorname{td}(T_X)\bigr)=\o
 여기서 $f_\ast:A^\bullet(X)\otimes\mathbb{Q}\rightarrow A^\bullet(Y)\otimes\mathbb{Q}$는 Chow group에서의 push-forward, $Rf_\ast\mathcal{F}$는 $\mathcal{F}$의 derived direct image이며, 이의 Chern character는 $\operatorname{ch}(Rf_\ast\mathcal{F})=\sum_i(-1)^i\operatorname{ch}(R^i f_\ast\mathcal{F})$로 정의된다.
 :::
 
-정리 [5](#thm5)에서 $Y=\operatorname{Spec}(k)$로 두면, $f_\ast$는 적분 $\int_X$가 되고 $Rf_\ast\mathcal{F}$는 $H^\bullet(X,\mathcal{F})$를 나타내므로
+정리 [5](#thm5)에서 $Y=\Spec(k)$로 두면, $f_\ast$는 적분 $\int_X$가 되고 $Rf_\ast\mathcal{F}$는 $H^\bullet(X,\mathcal{F})$를 나타내므로
 
 $$\int_X\operatorname{ch}(\mathcal{F})\cdot\operatorname{td}(T_X)=\sum_i(-1)^i\dim H^i(X,\mathcal{F})=\chi(X,\mathcal{F})$$
 

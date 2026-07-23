@@ -33,8 +33,8 @@ Lie group에서와 마찬가지로, 가장 중요한 예시들은 보통 matrix 
 ::: 예시 2
 가장 기본적인 예시들은 다음과 같다:
 
-1. *General linear group* $\GL(n, \mathbb{C}) = \{A \in M_{n \times n}(\mathbb{C}) \mid \det A \ne 0\}$는 $\mathbb{C}^{n\times n}$의 open subvariety로서 algebraic group의 구조를 갖는다.
-2. *Special linear group* $\SL(n, \mathbb{C}) = \{A \in \GL(n, \mathbb{C}) \mid \det A = 1\}$는 $\GL(n, \mathbb{C})$의 closed subvariety로서 algebraic group이다.
+1. *General linear group* $\GL(n;\mathbb{C}) = \{A \in M_{n \times n}(\mathbb{C}) \mid \det A \ne 0\}$는 $\mathbb{C}^{n\times n}$의 open subvariety로서 algebraic group의 구조를 갖는다.
+2. *Special linear group* $\SL(n;\mathbb{C}) = \{A \in \GL(n;\mathbb{C}) \mid \det A = 1\}$는 $\GL(n;\mathbb{C})$의 closed subvariety로서 algebraic group이다.
 3. 두 abelian group $\mathbb{G}_a = \mathbb{C}$ (덧셈)과 $\mathbb{G}_m = \mathbb{C}^\ast$ (곱셈)은 모두 1차원 algebraic group이다.
 :::
 
@@ -210,9 +210,9 @@ Affine algebraic group $G$가 *reductive*라는 것은 $G$의 모든 유한차�
 우리가 다루는 대부분의 algebraic group들은 reductive group이다. 
 
 1. *Algebraic torus* $(\mathbb{C}^\ast)^n$은 reductive이다.
-2. *General linear group* $\GL(n, \mathbb{C})$는 reductive이다.
-3. *Special linear group* $\SL(n, \mathbb{C})$는 reductive이다.
-4. *Orthogonal group, Symplectic group* $\operatorname{O}(n, \mathbb{C})$, $\operatorname{Sp}(2n, \mathbb{C})$ 등도 reductive이다.
+2. *General linear group* $\GL(n;\mathbb{C})$는 reductive이다.
+3. *Special linear group* $\SL(n;\mathbb{C})$는 reductive이다.
+4. *Orthogonal group, Symplectic group* $\Omat(n, \mathbb{C})$, $\operatorname{Sp}(2n, \mathbb{C})$ 등도 reductive이다.
 
 반면, $\mathbb{G}_a = \mathbb{C}$는 reductive가 아니다.
 :::
@@ -241,7 +241,7 @@ $$t \cdot [x:y] = [tx:y]$$
 Reductive group $G$의 projective variety $X$ 위로의 action에 대한 *linearization<sub>선형화</sub>*이란, 다음을 만족하는 $G$의 $\mathbb{P}^n$ 위로의 action의 extension이다:
 
 1. $X \subseteq \mathbb{P}^n$은 $G$-invariant
-2. $\mathbb{P}^n$ 위의 $G$-action이 linear (즉, $\GL(n+1, \mathbb{C})$로 lift됨)
+2. $\mathbb{P}^n$ 위의 $G$-action이 linear (즉, $\GL(n+1;\mathbb{C})$로 lift됨)
 :::
 
 Linearization은 이 문제를 해결한다. Linear action은 homogeneous coordinate ring의 각 degree $d$ 성분 $A_d$를 보존하므로, $A_d$ 위에 $G$가 잘 작용하고 따라서 $A_d^G$를 취할 수 있다. 위의 예시에서 action은 이미 linear이며, $A_d^G = \mathbb{C} \cdot y^d$이고

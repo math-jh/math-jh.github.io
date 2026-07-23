@@ -114,7 +114,7 @@ $$f(x^{-1}y^{-1}xy)=f(x)^{-1}f(y)^{-1}f(x)f(y)\in [G, f(C_n(G))]\subseteq [G, C_
 ::: 명제 5
 임의의 group $G$와 임의의 자연수 $m,n$에 대하여, 다음의 포함관계
 
-$$[C_m(G), C_n(G)]\subset C_{m+n}(G)$$
+$$[C_m(G), C_n(G)]\subseteq C_{m+n}(G)$$
 
 가 성립한다. 
 :::
@@ -147,12 +147,12 @@ Group $G$와 자연수 $n$에 대하여, 다음이 모두 동치이다.
     $$G=G_1\supset G_2\supset\cdots\supset G_{n+1}=\{e\}$$
 
     가 존재하여 $[G, G_k]\subseteq G_{k+1}$이 모든 $k$에 대해 성립한다.
-3. $G$의 center $C(G)$에 포함되어 있는 subgroup $A$가 존재하여, $G/A$가 nilpotent group of nilpotency class $\leq n-1$이다. 
+3. $G$의 center $Z(G)$에 포함되어 있는 subgroup $A$가 존재하여, $G/A$가 nilpotent group of nilpotency class $\leq n-1$이다. 
 :::
 ::: 증명
-우선 첫째 조건을 가정하면, $G_k=C_k(G)$가 둘째 조건을 만족하며, 거꾸로 둘째 조건이 성립한다면 귀납적으로 $C_k(G)\subset G_k$가 항상 성립하는 것을 보일 수 있다. 
+우선 첫째 조건을 가정하면, $G_k=C_k(G)$가 둘째 조건을 만족하며, 거꾸로 둘째 조건이 성립한다면 귀납적으로 $C_k(G)\subseteq G_k$가 항상 성립하는 것을 보일 수 있다. 
 
-나머지 동치의 경우, 첫째 조건을 가정하면 셋째 조건이 성립하는 것은 $A=C_n(G)$로 두면 된다. 셋째 조건을 가정하고 첫째 조건이 성립하는 것을 보이는 것은 canonical morphism $G \rightarrow G/A$를 통해 $C_n(G)$를 보내면 그 image는 [명제 4](#prop4)에 의하여 $C_n(G/A)$와 같고, 가정에 의해 이것이 $\{e\}$이므로 $C_n(G)\subset A$이고 따라서 $C_{n+1}(G)=\{e\}$임을 확인하면 된다. 
+나머지 동치의 경우, 첫째 조건을 가정하면 셋째 조건이 성립하는 것은 $A=C_n(G)$로 두면 된다. 셋째 조건을 가정하고 첫째 조건이 성립하는 것을 보이는 것은 canonical morphism $G \rightarrow G/A$를 통해 $C_n(G)$를 보내면 그 image는 [명제 4](#prop4)에 의하여 $C_n(G/A)$와 같고, 가정에 의해 이것이 $\{e\}$이므로 $C_n(G)\subseteq A$이고 따라서 $C_{n+1}(G)=\{e\}$임을 확인하면 된다. 
 :::
 
 따라서, 직관적으로 nilpotent group of nilpotency class $\leq n$은 trivial group $\{e\}$로부터 $n$개의 central extension들을 통해 얻어지는 것으로 생각할 수 있다. 

@@ -51,16 +51,16 @@ Similarly, the set in [\[Topology\] §Hausdorff Spaces, ⁋Corollary 7](/en/math
 ::: Example 4
 For an open subset $U\subseteq \mathbb{R}^n$ and a continuous function $f:U\rightarrow\mathbb{R}^k$, the graph of $f$
 
-$$\Gamma(f)=\left\{(x,f(x))\mid x\in U\right\}\subset \mathbb{R}^m\times \mathbb{R}^k$$
+$$\graph(f)=\left\{(x,f(x))\mid x\in U\right\}\subseteq \mathbb{R}^n\times \mathbb{R}^k$$
 
 is an $m$-manifold. Indeed, this is because the two continuous maps
 
 $$x\mapsto (x,f(x)),\qquad (x,f(x))\mapsto x$$
 
-are inverses of each other, so $\Gamma(f)$ and $U$ are homeomorphic.
+are inverses of each other, so $\graph(f)$ and $U$ are homeomorphic.
 :::
 
-By [\[Topology\] §Hausdorff Spaces, ⁋Corollary 7](/en/math/topology/Hausdorff_spaces#cor7), $\Gamma(f)$ is a closed subset of $\mathbb{R}^{m+k}$, so this gives an example of a somewhat different character from [Example 3](#ex3).
+By [\[Topology\] §Hausdorff Spaces, ⁋Corollary 7](/en/math/topology/Hausdorff_spaces#cor7), $\graph(f)$ is a closed subset of $\mathbb{R}^{m+k}$, so this gives an example of a somewhat different character from [Example 3](#ex3).
 
 On the other hand, the following also holds for the product topology.
 
@@ -78,7 +78,7 @@ Finally, the general construction we examine is the quotient space. However, as 
 For a quotient map $X \rightarrow X/R$, suppose $X$ is second-countable and $X/R$ is locally Euclidean. Then $X/R$ is second countable.
 :::
 ::: Proof
-Since $X/R$ is locally Euclidean, we can cover $X/R$ by Euclidean neighborhoods $(U_i)_{i\in I}$, and the collection of their preimages $(\pi^{-1}(U_i))_{i\in I}$ covers $X$. Now any second-countable space is Lindelöf ([§Compactness and Convergence of Filters, ⁋Proposition 12](/en/math/topology/filter_convergence#prop12)), so there exists a countable subset $J\subset I$ such that $(\pi^{-1}(U_i))_{i\in J}$ is a countable open cover of $X$, and hence the corresponding $(U_i)_{i\in J}$ form a countable cover of $X/R$. But each of these is a Euclidean neighborhood, hence has a countable base, and since there are countably many of them, their union is a countable base for $X/R$.
+Since $X/R$ is locally Euclidean, we can cover $X/R$ by Euclidean neighborhoods $(U_i)_{i\in I}$, and the collection of their preimages $(\pi^{-1}(U_i))_{i\in I}$ covers $X$. Now any second-countable space is Lindelöf ([§Compactness and Convergence of Filters, ⁋Proposition 12](/en/math/topology/filter_convergence#prop12)), so there exists a countable subset $J\subseteq I$ such that $(\pi^{-1}(U_i))_{i\in J}$ is a countable open cover of $X$, and hence the corresponding $(U_i)_{i\in J}$ form a countable cover of $X/R$. But each of these is a Euclidean neighborhood, hence has a countable base, and since there are countably many of them, their union is a countable base for $X/R$.
 :::
 
 Viewed solely within the flow of this category, our interest might be sufficiently confined to topological manifolds; however, especially when dealing with the multiplicative structure of cohomology, it is more convenient to keep in mind the notion of integration on smooth manifolds.

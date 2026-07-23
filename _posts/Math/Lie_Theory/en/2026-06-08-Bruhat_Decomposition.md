@@ -86,7 +86,7 @@ equals the number of *inversions* of $w$.
 Now we use the results reviewed above to consider the Bruhat decomposition. The following theorem restates the result already seen in [§Borel subgroup, ⁋Proposition 16](/en/math/lie_theory/borel_subgroup#prop16), repeated here for convenience.
 
 ::: Theorem 5 (Bruhat decomposition)
-For a connected reductive algebraic group $G$, Borel subgroup $B$, maximal torus $T\subset B$, and Weyl group $W=N_G(T)/T$, the following disjoint union holds:
+For a connected reductive algebraic group $G$, Borel subgroup $B$, maximal torus $T\subseteq B$, and Weyl group $W=N_G(T)/T$, the following disjoint union holds:
 
 $$G=\bigsqcup_{w\in W}BwB$$
 :::
@@ -117,7 +117,7 @@ $$U_w=\prod_{\substack{\gamma\in\Phi^+\\ w^{-1}\gamma\in\Phi^-}}U_\gamma$$
 
 The number of roots appearing in the product is $\ell(w)$, so $U_w$ is isomorphic to the affine space $\mathbb{A}^{\ell(w)}$. That is, $U_w$ is the unipotent subgroup consisting of only those positive roots that $w^{-1}$ sends to negative roots, and its dimension is exactly the length ($\ell(w^{-1})=\ell(w)$).
 
-In what follows, when we treat $w\in W$ directly as a matrix in expressions like $BwB$ or the product $uwb$, we view it as a chosen representative in $N_G(T)$. Different representatives differ only by $T\subset B$, so the double coset $BwB$ and its coset $BwB/B$ are independent of the choice of representative.
+In what follows, when we treat $w\in W$ directly as a matrix in expressions like $BwB$ or the product $uwb$, we view it as a chosen representative in $N_G(T)$. Different representatives differ only by $T\subseteq B$, so the double coset $BwB$ and its coset $BwB/B$ are independent of the choice of representative.
 
 ::: Proposition 6
 For each $w\in W$, the product map
@@ -276,7 +276,7 @@ Then we can check that this element is exactly a $(2,2)$-shuffle, and for exampl
 
 On the other hand, we recall that fundamentally the Grassmannian (or more generally the partial flag variety) arises from incidence conditions with respect to a reference flag. Consider the flag variety $\Fl(d_1, d_2, \ldots, d_m; n)$. The elements of this variety are the flags
 
-$$0\subset V_1\subset \cdots \subset V_m\subset \mathbb{C}^n,\qquad \dim V_k=d_k$$
+$$0\subseteq V_1\subseteq \cdots \subseteq V_m\subseteq \mathbb{C}^n,\qquad \dim V_k=d_k$$
 
 and the position of this flag is determined by the intersection dimensions $\dim(V_i\cap E_j)$ with the reference flag, and the objects sharing this information were exactly the Bruhat cells.
 
@@ -285,7 +285,7 @@ To link these two pieces of information, let us write the jump data with respect
 - When going from $E_0$ to $E_1$, the new direction is the $e_1$ direction, and this direction is in $V$ from the start. So $u_1=0$.
 - When going from $E_1$ to $E_2$, the new direction is the $ae_1+be_2$ ($b\neq 0$) direction, and this direction is not in $V$. So $u_2=1$. 
 - When going from $E_2$ to $E_3$, the new direction is of the form $ae_1+be_2+ce_3$ ($c\neq0$) with an alive $e_3$ component, but this time the vector $e_2+e_3$ of $V$ is exactly such a direction, so $\dim(V\cap E_3)$ jumps by one dimension. That is, since this direction is absorbed into $V$, $u_3=0$.
-- When going from $E_3$ to $E_4$, the new direction is the $e_4$ direction, but since $V\subset E_3$ already, there is no new vector of $V$ to be absorbed. So $u_4=1$.
+- When going from $E_3$ to $E_4$, the new direction is the $e_4$ direction, but since $V\subseteq E_3$ already, there is no new vector of $V$ to be absorbed. So $u_4=1$.
 
 Collecting the four components, the $u$ word we construct is $u=0101$. Conversely, recovering the jump data from such a word is also immediate; for example in this case the dimensions jump at the first and third positions where $0$ appears. For a more general flag variety, the numbers making up $u$ are not just $0$ and $1$ but other numbers appear as well, and these numbers tell us which component of the flag we are looking at, while their positions tell us where this component jumps.
 

@@ -112,7 +112,7 @@ $$\mathbb{C}[S_\sigma] = \mathbb{C}[\rchi^{e_1^\ast}, \rchi^{e_2^\ast}] = \mathb
 위의 [예시 6](#ex6)의 $\sigma = \{0\}$과 [예시 7](#ex7)의 standard quadrant $\sigma = \mathrm{cone}(e_1, e_2)$에서 $U_\sigma$가 각각 $T_N$, $\mathbb{C}^2$로 모두 smooth algebraic variety였다. 이제 우리는 이것이 우연이 아닐 뿐만 아니라 $U_\sigma$의 smoothness가 cone $\sigma$의 조합론적 데이터만으로 완전히 판정된다는 것을 살펴볼 것이다.
 
 ::: 정의 8
-Strongly convex rational polyhedral cone $\sigma \subset N_{\mathbb{R}}$가 *smooth<sub>매끄러운</sub>* (또는 *regular*, *nonsingular*) cone이라는 것은, $\sigma$의 primitive ray generator들 $v_1, \ldots, v_k$ ($k = \dim \sigma$)이 lattice $N$의 어떤 $\mathbb{Z}$-basis의 일부를 이루는 것이다.
+Strongly convex rational polyhedral cone $\sigma \subseteq N_{\mathbb{R}}$가 *smooth<sub>매끄러운</sub>* (또는 *regular*, *nonsingular*) cone이라는 것은, $\sigma$의 primitive ray generator들 $v_1, \ldots, v_k$ ($k = \dim \sigma$)이 lattice $N$의 어떤 $\mathbb{Z}$-basis의 일부를 이루는 것이다.
 :::
 
 정의 자체는 다소 추상적으로 보일 수 있지만, 실용적으로는 다음의 두 조건이 합쳐진 것과 동치이다.
@@ -131,7 +131,7 @@ $$U_\sigma \cong \mathbb{C}^k \times (\mathbb{C}^\ast)^{n-k}$$
 :::
 
 ::: 증명
-($\Leftarrow$) $\sigma$가 smooth라 하자. 정의에 의해 ray generator $v_1, \ldots, v_k$가 $N$의 어떤 basis $\{v_1, \ldots, v_n\}$의 일부를 이룬다. 이 basis의 dual basis $\{v_1^\ast, \ldots, v_n^\ast\} \subset M$를 택하면,
+($\Leftarrow$) $\sigma$가 smooth라 하자. 정의에 의해 ray generator $v_1, \ldots, v_k$가 $N$의 어떤 basis $\{v_1, \ldots, v_n\}$의 일부를 이룬다. 이 basis의 dual basis $\{v_1^\ast, \ldots, v_n^\ast\} \subseteq M$를 택하면,
 
 $$\sigma^\vee = \{u \in M_{\mathbb{R}} \mid \langle u, v_i\rangle \ge 0,\ i = 1, \ldots, k\} = \mathbb{R}_{\ge 0}\langle v_1^\ast, \ldots, v_k^\ast\rangle + \mathbb{R}\langle v_{k+1}^\ast, \ldots, v_n^\ast\rangle$$
 
