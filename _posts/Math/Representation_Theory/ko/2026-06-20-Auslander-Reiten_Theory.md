@@ -52,10 +52,10 @@ Irreducible morphism들을 한 module $C$ 둘레에서 한꺼번에 포착하기
 ::: 정의 3
 $A$-module morphism에 대하여 다음을 정의한다.
 
-1. morphism $g:B\rightarrow C$가 *right almost split<sub>오른쪽 거의 분할</sub>*이라는 것은 $g$가 retraction이 아니며, retraction이 아닌 임의의 morphism $h:X\rightarrow C$가 $g$를 통하여 인수분해되는 것이다. 곧 $h=g h'$인 $h':X\rightarrow B$가 존재한다.
-2. morphism $f:A\rightarrow B$가 *left almost split<sub>왼쪽 거의 분할</sub>*이라는 것은 $f$가 section이 아니며, section이 아닌 임의의 morphism $h:A\rightarrow Y$가 $f$를 통하여 인수분해되는 것이다. 곧 $h=h' f$인 $h':B\rightarrow Y$가 존재한다.
+1. Morphism $g:B\rightarrow C$가 *right almost split<sub>오른쪽 거의 분할</sub>*이라는 것은 $g$가 retraction이 아니며, retraction이 아닌 임의의 morphism $h:X\rightarrow C$가 $g$를 통하여 인수분해되는 것이다. 곧 $h=g h'$인 $h':X\rightarrow B$가 존재한다.
+2. Morphism $f:A\rightarrow B$가 *left almost split<sub>왼쪽 거의 분할</sub>*이라는 것은 $f$가 section이 아니며, section이 아닌 임의의 morphism $h:A\rightarrow Y$가 $f$를 통하여 인수분해되는 것이다. 곧 $h=h' f$인 $h':B\rightarrow Y$가 존재한다.
 
-short exact sequence
+Short exact sequence
 
 $$0\longrightarrow A\xrightarrow{\ f\ }B\xrightarrow{\ g\ }C\longrightarrow 0$$
 
@@ -72,9 +72,9 @@ $0\rightarrow A\xrightarrow{f}B\xrightarrow{g}C\rightarrow 0$이 almost split se
 이 존재한다.
 :::
 ::: 증명
-먼저 $C$가 indecomposable임을 보인다. $C=C_1\oplus C_2$가 nonzero direct sum이라 하면, 각 인자의 포함 $\iota_t:C_t\rightarrow C$ ($t=1,2$)는 split mono이고, $C$가 nonzero direct sum으로 갈라지므로 $\iota_t$는 retraction이 아니다. (만일 $\iota_t$가 retraction이면 $\iota_t$는 전사이자 단사인 isomorphism이 되어 $C_t=C$, 곧 다른 인자가 $0$이 되어 모순이다.) 따라서 $\iota_t$는 $g$를 통하여 인수분해되어 $\iota_t=g\, s_t$인 $s_t:C_t\rightarrow B$가 있다. 이들을 모으면 $s=(s_1,s_2):C_1\oplus C_2\rightarrow B$가 $gs=\id_C$를 만족하므로 $g$가 retraction이 되는데, 이는 almost split sequence가 split하지 않는다는 가정에 모순이다. 따라서 $C$는 indecomposable이다. symmetric으로 $f$가 left almost split이라는 조건으로부터 $A$가 indecomposable임을 얻는다.
+먼저 $C$가 indecomposable임을 보인다. $C=C_1\oplus C_2$가 nonzero direct sum이라 하면, 각 인자의 포함 $\iota_t:C_t\rightarrow C$ ($t=1,2$)는 split mono이고, $C$가 nonzero direct sum으로 갈라지므로 $\iota_t$는 retraction이 아니다. (만일 $\iota_t$가 retraction이면 $\iota_t$는 전사이자 단사인 isomorphism이 되어 $C_t=C$, 곧 다른 인자가 $0$이 되어 모순이다.) 따라서 $\iota_t$는 $g$를 통하여 인수분해되어 $\iota_t=g\, s_t$인 $s_t:C_t\rightarrow B$가 있다. 이들을 모으면 $s=(s_1,s_2):C_1\oplus C_2\rightarrow B$가 $gs=\id_C$를 만족하므로 $g$가 retraction이 되는데, 이는 almost split sequence가 split하지 않는다는 가정에 모순이다. 따라서 $C$는 indecomposable이다. Symmetric으로 $f$가 left almost split이라는 조건으로부터 $A$가 indecomposable임을 얻는다.
 
-$C$가 projective가 아님을 보인다. $C$가 projective이면 전사 $g:B\rightarrow C$가 분할되어 $g$가 retraction이 되는데, 이는 right almost split의 정의에 모순이다. symmetric으로 $A$가 injective이면 단사 $f:A\rightarrow B$가 분할되어 $f$가 section이 되어 left almost split에 모순이므로, $A$는 injective가 아니다.
+$C$가 projective가 아님을 보인다. $C$가 projective이면 전사 $g:B\rightarrow C$가 분할되어 $g$가 retraction이 되는데, 이는 right almost split의 정의에 모순이다. Symmetric으로 $A$가 injective이면 단사 $f:A\rightarrow B$가 분할되어 $f$가 section이 되어 left almost split에 모순이므로, $A$는 injective가 아니다.
 
 이제 유일성을 보인다. 두 almost split sequence가 같은 $C$로 끝난다 하자. $g':B'\rightarrow C$는 retraction이 아니므로 right almost split인 $g$를 통하여 $g'=g\varphi$로 인수분해되고, 마찬가지로 $g:B\rightarrow C$가 $g=g'\psi$로 인수분해되어 morphism $\varphi:B'\rightarrow B$, $\psi:B\rightarrow B'$를 얻는다. 그럼 $\theta:=\varphi\psi\in\End_A(B)$가 $g\theta=g'\psi=g$를 만족한다. 여기서 $\theta$가 automorphism임을 보인다. $g(\id_B-\theta)=0$이므로 $\id_B-\theta$는 image가 $\ker g=\im f$에 들어가며, $f$가 단사이므로 유일한 $\rho:B\rightarrow A$에 대하여 $\id_B-\theta=f\rho$로 적힌다. 곧 $\theta=\id_B-f\rho$이다. 합성 $\rho f\in\End_A(A)$를 보자. $A$가 indecomposable이므로 $\End_A(A)$는 local ring이고 ([§Krull–Schmidt 정리, ⁋따름정리 4](/ko/math/representation_theory/krull_schmidt#cor4)), 따라서 $\rho f$는 automorphism이거나 nilpotent이다. 만일 $\rho f$가 automorphism이면 $(\rho f)^{-1}\rho$가 $f$의 왼쪽 역이 되어 $f$가 section, 곧 split mono가 되는데 이는 $f$가 left almost split이라는 데에 모순이다. 따라서 $\rho f$는 nilpotent이고, 적당한 $n$에 대하여 $(\rho f)^n=0$이다. 그럼
 
@@ -84,7 +84,7 @@ $$(f\rho)^{n+1}=f\,(\rho f)^n\,\rho=0$$
 
 $$\theta^{-1}=\id_B+(f\rho)+(f\rho)^2+\cdots+(f\rho)^n$$
 
-이 $\theta=\id_B-f\rho$의 역이 되어 $\theta=\varphi\psi$가 automorphism이다. symmetric으로, $g'\psi\varphi=g'$와 $f'$의 단사성을 이용하여 같은 논법을 $\psi\varphi\in\End_A(B')$에 적용하면 $\psi\varphi$ 또한 automorphism이다. 따라서 $\varphi,\psi$는 서로 역인 isomorphism이다. 끝으로 $g\varphi=g'$로부터 $\varphi$가 두 열의 오른쪽 사각형을 commute하게 하고, $\im f=\ker g$, $\im f'=\ker g'$가 $\varphi$ 아래에서 대응하므로 $\varphi f$가 $\im f'$로 들어가 $A\xrightarrow{\sim}A'$를 유도한다. 이로써 세 수직사상이 모두 isomorphism인 exact sequence의 동형을 얻는다.
+이 $\theta=\id_B-f\rho$의 역이 되어 $\theta=\varphi\psi$가 automorphism이다. Symmetric으로, $g'\psi\varphi=g'$와 $f'$의 단사성을 이용하여 같은 논법을 $\psi\varphi\in\End_A(B')$에 적용하면 $\psi\varphi$ 또한 automorphism이다. 따라서 $\varphi,\psi$는 서로 역인 isomorphism이다. 끝으로 $g\varphi=g'$로부터 $\varphi$가 두 열의 오른쪽 사각형을 commute하게 하고, $\im f=\ker g$, $\im f'=\ker g'$가 $\varphi$ 아래에서 대응하므로 $\varphi f$가 $\im f'$로 들어가 $A\xrightarrow{\sim}A'$를 유도한다. 이로써 세 수직사상이 모두 isomorphism인 exact sequence의 동형을 얻는다.
 :::
 
 명제 4의 유일성은 almost split sequence를 $C$의 불변량으로 만든다. 곧 non-projective indecomposable $C$ 하나에 대하여 그것으로 끝나는 almost split sequence가 (존재한다면) 본질적으로 하나뿐이므로, 시작점 $A$와 중간항 $B$가 $C$로부터 결정된다. 이 시작점 $A$를 $C$로부터 구성하는 표준적인 방법이 다음 절의 *AR translate*이며, 존재성 자체는 [정리 7](#thm7)에서 다룬다. 한편 $g:B\rightarrow C$가 right almost split이고 $B=\bigoplus_i B_i$를 indecomposable 분해라 하면, 각 합성 $B_i\hookrightarrow B\xrightarrow{g}C$가 irreducible morphism이 됨을 보일 수 있고, 이것이 [정의 8](#def8)에서 Auslander–Reiten quiver의 화살표 $B_i\rightarrow C$를 정의하는 근거가 된다.
@@ -109,7 +109,7 @@ $$\Tr C=\coker\bigl(p_1^{\ast}:P_0^{\ast}\rightarrow P_1^{\ast}\bigr)$$
 으로 정의한다. 이는 right $A$-module이다.
 :::
 
-functor $(-)^{\ast}=\Hom_A(-,A)$는 left $A$-module을 right $A$-module로 보내며, projective module $P$에 대하여 $P^{\ast}$ 또한 projective right module이다. Minimal projective presentation은 projective cover의 유일성에 의하여 isomorphism을 무시하면 유일하게 결정되므로, $\Tr C$ 또한 그러하다. 다만 $\Tr$는 projective summand에 둔감하다. $C$가 projective이면 $P_1=0$으로 둘 수 있어 $\Tr C=0$이 되며, 일반적으로 $\Tr$는 projective을 제외한 부분에서만 잘 정의된 대응을 준다. 다음으로 $k$ 위의 duality를 도입하여 right module을 다시 left module로 되돌린다.
+Functor $(-)^{\ast}=\Hom_A(-,A)$는 left $A$-module을 right $A$-module로 보내며, projective module $P$에 대하여 $P^{\ast}$ 또한 projective right module이다. Minimal projective presentation은 projective cover의 유일성에 의하여 isomorphism을 무시하면 유일하게 결정되므로, $\Tr C$ 또한 그러하다. 다만 $\Tr$는 projective summand에 둔감하다. $C$가 projective이면 $P_1=0$으로 둘 수 있어 $\Tr C=0$이 되며, 일반적으로 $\Tr$는 projective을 제외한 부분에서만 잘 정의된 대응을 준다. 다음으로 $k$ 위의 duality를 도입하여 right module을 다시 left module로 되돌린다.
 
 ::: 정의 6
 유한차원 대수 $A$ 위의 module $M$에 대하여, $k$ 위의 *duality<sub>쌍대성</sub>*를
@@ -138,7 +138,7 @@ $$0\longrightarrow \tau C\xrightarrow{\ f\ }B\xrightarrow{\ g\ }C\longrightarrow
 
 이 존재한다. 곧 그 시작점은 [정의 6](#def6)의 AR translate $\tau C=\D\Tr C$와 isomorphic하다.
 
-2. symmetric으로, 임의의 non-injective indecomposable $A$ 대하여 $A$로 시작하는 almost split sequence $0\rightarrow A\rightarrow B\rightarrow \tau^{-1}A\rightarrow 0$이 존재한다.
+2. Symmetric으로, 임의의 non-injective indecomposable $A$ 대하여 $A$로 시작하는 almost split sequence $0\rightarrow A\rightarrow B\rightarrow \tau^{-1}A\rightarrow 0$이 존재한다.
 
 [명제 4](#prop4)에 의하여 이 almost split sequence는 $C$ (각각 $A$)에 의하여 isomorphism을 무시하면 유일하게 결정된다.
 :::

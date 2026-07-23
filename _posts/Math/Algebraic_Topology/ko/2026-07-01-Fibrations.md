@@ -56,7 +56,7 @@ Hurewicz homomorphism $h_n$은 임의의 $f:S^n \rightarrow X$가 주어졌을 �
 
 ## 호모토피 올림 성질과 fibration
 
-covering space에 대한 우리의 논의에서 가장 핵심적인 성질은 path와 그 homotopy를 위로 들어올릴 수 있다는 것이었다. ([§피복공간, ⁋보조정리 6](/ko/math/algebraic_topology/covering_spaces#lem6), [§피복공간, ⁋보조정리 7](/ko/math/algebraic_topology/covering_spaces#lem7)) 이 lifting property를 임의의 공간에 대한 homotopy로 일반화한 것이 fibration의 정의이며, 피복사상은 그 특수한 경우에 해당한다.
+Covering space에 대한 우리의 논의에서 가장 핵심적인 성질은 path와 그 homotopy를 위로 들어올릴 수 있다는 것이었다. ([§피복공간, ⁋보조정리 6](/ko/math/algebraic_topology/covering_spaces#lem6), [§피복공간, ⁋보조정리 7](/ko/math/algebraic_topology/covering_spaces#lem7)) 이 lifting property를 임의의 공간에 대한 homotopy로 일반화한 것이 fibration의 정의이며, 피복사상은 그 특수한 경우에 해당한다.
 
 ::: 정의 3
 연속함수 $p:E\rightarrow B$가 공간 $X$에 대하여 *homotopy lifting property<sub>호모토피 올림 성질</sub>* (줄여서 HLP) 를 갖는다는 것은, 다음의 조건이 성립하는 것이다. 임의의 homotopy $g:X\times I\rightarrow B$와, $g_0=g\vert_{X\times\{0\}}$의 lifting $\widetilde{g}_0:X\rightarrow E$ (즉 $p\circ\widetilde{g}_0=g_0$) 가 주어질 때마다, $g$ 전체의 lifting $\widetilde{G}:X\times I\rightarrow E$가 존재하여 $p\circ\widetilde{G}=g$이고 $\widetilde{G}\vert_{X\times\{0\}}=\widetilde{g}_0$이도록 할 수 있다.
@@ -184,7 +184,7 @@ $$\cdots\rightarrow\pi_1(B,b_0)\overset{\partial}{\longrightarrow}\pi_0(F)\right
 
 $$\cdots\rightarrow\pi_n(F,e_0)\overset{i_\ast}{\longrightarrow}\pi_n(E,e_0)\overset{j_\ast}{\longrightarrow}\pi_n(E,F,e_0)\overset{\partial}{\longrightarrow}\pi_{n-1}(F,e_0)\rightarrow\cdots$$
 
-을 얻는다. 이제 [보조정리 9](#lem9)의 isomorphism $p_\ast:\pi_n(E,F,e_0)\overset{\cong}{\rightarrow}\pi_n(B,b_0)$을 이용하여 각 상대항 $\pi_n(E,F,e_0)$을 $\pi_n(B,b_0)$으로 대체한다. exact sequence의 한 항을 그것과 isomorphic한 항으로, morphism들과 가환하도록 바꾸면 완전성은 보존되므로, 남은 것은 두 morphism이 어떻게 바뀌는지를 확인하는 것뿐이다.
+을 얻는다. 이제 [보조정리 9](#lem9)의 isomorphism $p_\ast:\pi_n(E,F,e_0)\overset{\cong}{\rightarrow}\pi_n(B,b_0)$을 이용하여 각 상대항 $\pi_n(E,F,e_0)$을 $\pi_n(B,b_0)$으로 대체한다. Exact sequence의 한 항을 그것과 isomorphic한 항으로, morphism들과 가환하도록 바꾸면 완전성은 보존되므로, 남은 것은 두 morphism이 어떻게 바뀌는지를 확인하는 것뿐이다.
 
 우선 $\pi_n(E)\rightarrow\pi_n(E,F)\overset{p_\ast}{\rightarrow}\pi_n(B)$의 합성을 보면, $f:(I^n,\partial I^n)\rightarrow(E,e_0)$에 대하여 $j_\ast[f]$는 $f$를 쌍의 원소로 본 것이고 여기에 $p_\ast$를 취하면 $[p\circ f]$이다. 이는 곧 $p:E\rightarrow B$가 유도하는 절대 준동형 $p_\ast:\pi_n(E)\rightarrow\pi_n(B)$과 같다. 즉 $j_\ast$ 자리에는 $p_\ast$가 온다. 다음으로 상대항의 connecting homomorphism $\partial:\pi_n(E,F)\rightarrow\pi_{n-1}(F)$은 대체 후 $\partial\circ(p_\ast)^{-1}:\pi_n(B)\rightarrow\pi_{n-1}(F)$이 되며, 이것이 정리에서 말하는 $\partial$이다. 이로써 원하는 exact sequence를 얻는다.
 

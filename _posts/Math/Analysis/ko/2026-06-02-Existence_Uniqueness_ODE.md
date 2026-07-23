@@ -51,7 +51,7 @@ d(x_m, x_n) &\leq \sum_{k=n}^{m-1} d(x_{k+1}, x_k) \leq \sum_{k=n}^{m-1}\lambda^
 
 이다. 우변은 $n \rightarrow \infty$일 때 ($0 \leq \lambda < 1$이므로) $0$으로 가고, 이는 $m, n$에 관해 균등하게 작아지므로 $(x_n)$은 Cauchy 수열이다. 공간이 완비이므로 ([§거리공간, ⁋정의 4](/ko/math/analysis/metric_spaces#def4)) 극한 $x_n \rightarrow x^\ast$이 존재한다.
 
-이 극한이 fixed point임을 보인다. contraction은 $d(Tx, Ty) \leq \lambda  d(x, y)$에서 곧바로 연속이므로
+이 극한이 fixed point임을 보인다. Contraction은 $d(Tx, Ty) \leq \lambda  d(x, y)$에서 곧바로 연속이므로
 
 $$x^\ast = \lim_{n\rightarrow\infty} x_{n+1} = \lim_{n\rightarrow\infty} T x_n = T\Bigl(\lim_{n\rightarrow\infty} x_n\Bigr) = T x^\ast$$
 

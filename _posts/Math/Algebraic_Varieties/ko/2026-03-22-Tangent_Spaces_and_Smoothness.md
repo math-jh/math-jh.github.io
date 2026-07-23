@@ -74,7 +74,7 @@ $$T_x X = (\mathfrak{m}_x / \mathfrak{m}_x^2)^\ast \cong \{v \in \mathbb{K}^n \m
 을 얻는다.
 :::
 
-증명은 maximal ideal의 언어를 사용하며 복잡하게 쓰여졌지만, 그 철학은 $X=Z(f_i)$에 대해 생각해보면 간단하다. 이 경우 $(df_i)_x(v)=0$은 ($\mathbb{K}^n$을 $\mathbb{A}^n$으로 본다면) 정확히 $\mathbb{A}^n$ 안에서 hypersurface $Z(f_i)$의 (일상적인) tangent space이다. [명제 2](#prop2)은 그 자체만으로는 affine variety에 대해서만 적용되는 것이기는 하지만, 임의의 variety $X$의 임의의 점 $x$는 affine neighborhood를 가지므로 본질적으로는 모든 variety에 대해 적용되는 것이다. tangent space의 차원에 대한 다음 명제 또한 마찬가지다.
+증명은 maximal ideal의 언어를 사용하며 복잡하게 쓰여졌지만, 그 철학은 $X=Z(f_i)$에 대해 생각해보면 간단하다. 이 경우 $(df_i)_x(v)=0$은 ($\mathbb{K}^n$을 $\mathbb{A}^n$으로 본다면) 정확히 $\mathbb{A}^n$ 안에서 hypersurface $Z(f_i)$의 (일상적인) tangent space이다. [명제 2](#prop2)은 그 자체만으로는 affine variety에 대해서만 적용되는 것이기는 하지만, 임의의 variety $X$의 임의의 점 $x$는 affine neighborhood를 가지므로 본질적으로는 모든 variety에 대해 적용되는 것이다. Tangent space의 차원에 대한 다음 명제 또한 마찬가지다.
 
 ::: 명제 3
 $T_x X$는 $\mathbb{K}$-벡터공간이며, 그 차원은 $n - \operatorname{rank}(J_x)$이다. 여기서 $J_x$는 $k \times n$ Jacobian matrix

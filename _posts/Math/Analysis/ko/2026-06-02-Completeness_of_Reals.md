@@ -25,7 +25,7 @@ published: false
 먼저 순서로부터 정해지는 upper bound와 상한의 개념을 정리한다 ([\[집합론\] §순서집합의 원소들](/ko/math/set_theory/elements_in_ordered_set)).
 
 ::: 정의 1
-$S \subseteq \mathbb{R}$가 공집합이 아니라 하자. 실수 $M$이 $S$의 *upper bound<sub>상계</sub>*라는 것은 모든 $s \in S$에 대해 $s \leq M$인 것이고, upper bound가 하나라도 존재하면 $S$를 *bounded above<sub>위로 유계</sub>*라 한다. $S$의 upper bound 중 가장 작은 것이 존재하면 그것을 $S$의 *상한<sub>supremum</sub>*이라 하고 $\sup S$로 적는다. symmetric하게 *lower bound<sub>하계</sub>*, *bounded below*, *하한* $\inf S$를 정의한다.
+$S \subseteq \mathbb{R}$가 공집합이 아니라 하자. 실수 $M$이 $S$의 *upper bound<sub>상계</sub>*라는 것은 모든 $s \in S$에 대해 $s \leq M$인 것이고, upper bound가 하나라도 존재하면 $S$를 *bounded above<sub>위로 유계</sub>*라 한다. $S$의 upper bound 중 가장 작은 것이 존재하면 그것을 $S$의 *상한<sub>supremum</sub>*이라 하고 $\sup S$로 적는다. Symmetric하게 *lower bound<sub>하계</sub>*, *bounded below*, *하한* $\inf S$를 정의한다.
 :::
 
 상한 $\alpha = \sup S$는 두 조건으로 특징지어진다: (i) $\alpha$는 upper bound이다 (모든 $s \in S$에 대해 $s \leq \alpha$); (ii) $\alpha$는 가장 작은 upper bound이다 — 즉 임의의 $\varepsilon > 0$에 대해 $\alpha - \varepsilon$은 더 이상 upper bound가 아니므로 $s > \alpha - \varepsilon$인 $s \in S$가 존재한다. 조건 (ii)의 이 형태는 앞으로 거듭 쓰인다.
@@ -41,7 +41,7 @@ $S \subseteq \mathbb{R}$가 공집합이 아니라 하자. 실수 $M$이 $S$의 
 하한에 대한 대응 명제는 공리로 따로 둘 필요가 없다.
 
 ::: 명제 3
-bounded below인 공집합이 아닌 모든 $S \subseteq \mathbb{R}$은 하한 $\inf S$를 갖는다.
+Bounded below인 공집합이 아닌 모든 $S \subseteq \mathbb{R}$은 하한 $\inf S$를 갖는다.
 :::
 
 ::: 증명
@@ -81,7 +81,7 @@ $b - a > 0$이므로 [정리 4](#thm4)에 의해 $1/n < b - a$, 즉 $nb - na > 1
 상한 연산은 집합의 평행이동·스칼라배와 잘 호환된다. 이 단순한 규칙들은 이후 극한 계산에서 거듭 쓰이므로 명제로 정리해 둔다.
 
 ::: 명제 6 (상한의 평행이동과 양의 스칼라배)
-bounded above인 공집합이 아닌 $S \subseteq \mathbb{R}$와 실수 $c$, $\lambda > 0$에 대하여, $c + S = \{c + s \mid s \in S\}$와 $\lambda S = \{\lambda s \mid s \in S\}$ 역시 bounded above이고
+Bounded above인 공집합이 아닌 $S \subseteq \mathbb{R}$와 실수 $c$, $\lambda > 0$에 대하여, $c + S = \{c + s \mid s \in S\}$와 $\lambda S = \{\lambda s \mid s \in S\}$ 역시 bounded above이고
 
 $$\sup(c + S) = c + \sup S, \qquad \sup(\lambda S) = \lambda \sup S$$
 
@@ -113,7 +113,7 @@ $$\begin{aligned}
 완비성의 가장 기하학적인 표현 가운데 하나는 "끝없이 줄어드는 closed 구간들의 사슬은 빈 곳을 남기지 않는다"는 것이다. 이는 십진법 전개로 실수를 구성하는 직관의 바탕이 된다.
 
 ::: 정리 7 (중첩구간정리)
-closed 구간들의 중첩하는 사슬 $I_1 \supseteq I_2 \supseteq I_3 \supseteq \cdots$, $I_n = [a_n, b_n]$ ($a_n \leq b_n$) 에 대하여 교집합 $\bigcap_{n=1}^\infty I_n$은 공집합이 아니다.
+Closed 구간들의 중첩하는 사슬 $I_1 \supseteq I_2 \supseteq I_3 \supseteq \cdots$, $I_n = [a_n, b_n]$ ($a_n \leq b_n$) 에 대하여 교집합 $\bigcap_{n=1}^\infty I_n$은 공집합이 아니다.
 :::
 
 ::: 증명
@@ -134,7 +134,7 @@ $$a_n \leq \alpha \leq b_n \quad (\forall n), \qquad \text{즉} \quad \alpha \in
 이므로 교집합은 비어 있지 않다.
 :::
 
-closed 구간이라는 조건은 없앨 수 없다. 반열린 구간 $I_n = \left(0, \frac1n\right]$을 보면 모두 중첩하지만 임의의 $x > 0$은 아르키메데스 성질로 $\frac1n < x$가 되는 순간 빠져나가므로 $\bigcap_n I_n = \varnothing$이다. 구간의 길이 $b_n - a_n$이 $0$으로 줄어드는 경우에는 교집합이 정확히 한 점이 되며, 이 한 점이 모든 $a_n$의 상한이자 모든 $b_n$의 하한이다.
+Closed 구간이라는 조건은 없앨 수 없다. 반열린 구간 $I_n = \left(0, \frac1n\right]$을 보면 모두 중첩하지만 임의의 $x > 0$은 아르키메데스 성질로 $\frac1n < x$가 되는 순간 빠져나가므로 $\bigcap_n I_n = \varnothing$이다. 구간의 길이 $b_n - a_n$이 $0$으로 줄어드는 경우에는 교집합이 정확히 한 점이 되며, 이 한 점이 모든 $a_n$의 상한이자 모든 $b_n$의 하한이다.
 
 ::: 예시 8 (길이가 줄어드는 구간과 십진 전개)
 실수 $x$의 십진 전개는 중첩구간정리의 전형적 사례이다. $x = 0. d_1 d_2 d_3 \cdots$ ($d_k \in \{0, 1, \dots, 9\}$) 에 대해

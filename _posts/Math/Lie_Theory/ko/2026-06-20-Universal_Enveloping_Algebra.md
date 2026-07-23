@@ -52,14 +52,14 @@ Lie algebra $\mathfrak{g}$에 대하여, tensor algebra $\T(\mathfrak{g})$의 tw
 
 $$\mathfrak{I}=\langle\, x\otimes y-y\otimes x-[x,y]\,\mid\, x,y\in\mathfrak{g}\,\rangle$$
 
-을 생각하자. quotient algebra
+을 생각하자. Quotient algebra
 
 $$U(\mathfrak{g})=\T(\mathfrak{g})/\mathfrak{I}$$
 
 를 $\mathfrak{g}$의 *universal enveloping algebra<sub>보편 포락 대수</sub>*라 부른다. 합성 $\mathfrak{g}=\T^1(\mathfrak{g})\hookrightarrow\T(\mathfrak{g})\twoheadrightarrow U(\mathfrak{g})$로 얻어지는 $k$-linear map을 $\iota:\mathfrak{g}\rightarrow U(\mathfrak{g})$로 표기한다.
 :::
 
-generator $x\otimes y-y\otimes x-[x,y]$는 tensor algebra의 degree $2$ 성분과 degree $1$ 성분이 섞인 비동차<sub>inhomogeneous</sub> 원소이므로, $\mathfrak{I}$는 homogeneous 이데알이 아니다. 이는 symmetric algebra나 exterior algebra를 정의할 때 사용한 [\[다중선형대수학\] §텐서대수, ⁋정의 5](/ko/math/multilinear_algebra/tensor_algebras#def5)의 homogeneous 이데알과의 결정적인 차이이며, 따라서 $U(\mathfrak{g})$는 grading을 갖지 않는다. 그 대신 $U(\mathfrak{g})$는 아래 [정의 6](#def6)에서 보듯 자연스러운 여과를 가지며, PBW 정리의 핵심은 이 여과의 associated graded가 symmetric algebra와 isomorphic이라는 데에 있다.
+Generator $x\otimes y-y\otimes x-[x,y]$는 tensor algebra의 degree $2$ 성분과 degree $1$ 성분이 섞인 비동차<sub>inhomogeneous</sub> 원소이므로, $\mathfrak{I}$는 homogeneous 이데알이 아니다. 이는 symmetric algebra나 exterior algebra를 정의할 때 사용한 [\[다중선형대수학\] §텐서대수, ⁋정의 5](/ko/math/multilinear_algebra/tensor_algebras#def5)의 homogeneous 이데알과의 결정적인 차이이며, 따라서 $U(\mathfrak{g})$는 grading을 갖지 않는다. 그 대신 $U(\mathfrak{g})$는 아래 [정의 6](#def6)에서 보듯 자연스러운 여과를 가지며, PBW 정리의 핵심은 이 여과의 associated graded가 symmetric algebra와 isomorphic이라는 데에 있다.
 
 $U(\mathfrak{g})$에서 $\iota(x)\iota(y)-\iota(y)\iota(x)=\iota([x,y])$가 성립함을 강조해 둔다. 정의에 의하여 $x\otimes y-y\otimes x-[x,y]\in\mathfrak{I}$이므로 quotient에서 이 원소는 $0$이 되고, $\iota$가 $\T^1$에서의 morphism이라는 점을 함께 쓰면 위 등식을 얻는다. 표기의 번거로움을 피하기 위해, 이후 $\iota$를 생략하고 $\mathfrak{g}$의 원소와 그 $U(\mathfrak{g})$에서의 상을 같은 기호로 적으며, $U(\mathfrak{g})$에서의 곱은 병치<sub>juxtaposition</sub>로 적는다. 이 표기 하에서 위의 관계는 $U(\mathfrak{g})$ 안에서
 
@@ -110,7 +110,7 @@ $$\iota_{\mathfrak{h}}\circ\phi=U(\phi)\circ\iota_{\mathfrak{g}}$$
 을 만족하는 결합 단위 대수 준동형 $U(\phi):U(\mathfrak{g})\rightarrow U(\mathfrak{h})$가 유일하게 존재하며, 이 대응은 $U$를 functor로 만든다.
 :::
 ::: 증명
-합성 $\iota_{\mathfrak{h}}\circ\phi:\mathfrak{g}\rightarrow U(\mathfrak{h})_{\mathrm{Lie}}$는 Lie algebra 준동형의 합성이므로 다시 Lie algebra 준동형이다. 따라서 [명제 4](#prop4)를 $A=U(\mathfrak{h})$, $f=\iota_{\mathfrak{h}}\circ\phi$에 적용하면, $U(\phi)\circ\iota_{\mathfrak{g}}=\iota_{\mathfrak{h}}\circ\phi$를 만족하는 결합 단위 대수 준동형 $U(\phi):U(\mathfrak{g})\rightarrow U(\mathfrak{h})$가 유일하게 존재한다. functoriality는 보편 성질의 유일성 부분에서 따라온다. $\id_{\mathfrak{g}}$에 대응되는 $U(\id_{\mathfrak{g}})$와 항등사상 $\id_{U(\mathfrak{g})}$은 모두 $\iota_{\mathfrak{g}}$를 $\iota_{\mathfrak{g}}$로 보내므로 유일성에 의해 같고, 두 Lie algebra 준동형 $\phi,\psi$에 대하여 $U(\psi)\circ U(\phi)$와 $U(\psi\circ\phi)$도 같은 방식으로 일치한다.
+합성 $\iota_{\mathfrak{h}}\circ\phi:\mathfrak{g}\rightarrow U(\mathfrak{h})_{\mathrm{Lie}}$는 Lie algebra 준동형의 합성이므로 다시 Lie algebra 준동형이다. 따라서 [명제 4](#prop4)를 $A=U(\mathfrak{h})$, $f=\iota_{\mathfrak{h}}\circ\phi$에 적용하면, $U(\phi)\circ\iota_{\mathfrak{g}}=\iota_{\mathfrak{h}}\circ\phi$를 만족하는 결합 단위 대수 준동형 $U(\phi):U(\mathfrak{g})\rightarrow U(\mathfrak{h})$가 유일하게 존재한다. Functoriality는 보편 성질의 유일성 부분에서 따라온다. $\id_{\mathfrak{g}}$에 대응되는 $U(\id_{\mathfrak{g}})$와 항등사상 $\id_{U(\mathfrak{g})}$은 모두 $\iota_{\mathfrak{g}}$를 $\iota_{\mathfrak{g}}$로 보내므로 유일성에 의해 같고, 두 Lie algebra 준동형 $\phi,\psi$에 대하여 $U(\psi)\circ U(\phi)$와 $U(\psi\circ\phi)$도 같은 방식으로 일치한다.
 :::
 
 ## 표준 여과와 associated graded
@@ -125,7 +125,7 @@ $$U_n=\im\Bigl(\textstyle\bigoplus_{m\leq n}\T^m(\mathfrak{g})\longrightarrow U(
 이다. 이 부분공간들의 증가열 $U_0\subseteq U_1\subseteq U_2\subseteq\cdots$을 $U(\mathfrak{g})$의 *canonical filtration<sub>표준 여과</sub>*이라 부른다.
 :::
 
-정의에서 $U_0=k\cdot 1$이고 $U_1=k\cdot 1+\iota(\mathfrak{g})$이며, $U_n$은 $\mathfrak{g}$의 원소들의 길이 $n$ 이하의 곱들로 이루어진 부분공간이다. 합집합 $\bigcup_{n\geq 0}U_n$은 $U(\mathfrak{g})$ 전체이다. 이 여과가 대수 구조와 양립함은 다음으로 정리된다. tensor algebra의 곱이 degree를 더하므로, quotient에서
+정의에서 $U_0=k\cdot 1$이고 $U_1=k\cdot 1+\iota(\mathfrak{g})$이며, $U_n$은 $\mathfrak{g}$의 원소들의 길이 $n$ 이하의 곱들로 이루어진 부분공간이다. 합집합 $\bigcup_{n\geq 0}U_n$은 $U(\mathfrak{g})$ 전체이다. 이 여과가 대수 구조와 양립함은 다음으로 정리된다. Tensor algebra의 곱이 degree를 더하므로, quotient에서
 
 $$U_m\cdot U_n\subseteq U_{m+n}$$
 
@@ -187,7 +187,7 @@ $$z_S=x_{i_1}x_{i_2}\cdots x_{i_n},\qquad S=(i_1\leq i_2\leq\cdots\leq i_n)$$
 1. $i\leq S$ ($i$가 $S$의 모든 첨자 이하)인 경우 $x_i\cdot z_S=z_{(i,S)}$, 곧 $i$를 맨 앞에 덧붙인 정렬된 단항식이다.
 2. 임의의 $i,j\in I$와 $s\in\S(\mathfrak{g})$에 대하여 $x_i\cdot(x_j\cdot s)-x_j\cdot(x_i\cdot s)=[x_i,x_j]\cdot s$이 성립한다.
 
-여기에서 $[x_i,x_j]\cdot s$는 $[x_i,x_j]=\sum_l c_{ij}^l x_l$로 전개한 뒤 각 $x_l\cdot s$의 일차결합으로 정의한다. action을 $z_S$의 길이 $n=\lvert S\rvert$에 대한 귀납법으로 정의한다. $x_i\cdot z_S$를, $i\leq S$이면 조건 1로 정의하고, 그렇지 않으면 $S=(j,S')$ ($j<i$이고 $j\leq S'$)로 쓴 뒤
+여기에서 $[x_i,x_j]\cdot s$는 $[x_i,x_j]=\sum_l c_{ij}^l x_l$로 전개한 뒤 각 $x_l\cdot s$의 일차결합으로 정의한다. Action을 $z_S$의 길이 $n=\lvert S\rvert$에 대한 귀납법으로 정의한다. $x_i\cdot z_S$를, $i\leq S$이면 조건 1로 정의하고, 그렇지 않으면 $S=(j,S')$ ($j<i$이고 $j\leq S'$)로 쓴 뒤
 
 $$x_i\cdot z_S=x_j\cdot(x_i\cdot z_{S'})+[x_i,x_j]\cdot z_{S'}$$
 

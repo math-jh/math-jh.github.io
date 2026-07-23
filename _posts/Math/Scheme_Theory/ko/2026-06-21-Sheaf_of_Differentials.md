@@ -15,7 +15,7 @@ published: false
 drift_needed: true
 ---
 
-algebraic variety나 manifold 위에서 differential form은 tangent space와 그 쌍대를 통해 기하학을 해석학적으로 다루는 도구이다. Scheme의 세계에서는 좌표나 극한을 직접 쓸 수 없으므로, 미분을 순수하게 대수적으로 정의해야 한다. 그 출발점은 Kähler 미분 가군으로, 이는 Leibniz rule을 만족하는 도분 가운데 가장 보편적인 것을 표현한다. ([\[가환대수학\] §미분, ⁋정의 3](/ko/math/commutative_algebra/differentials#def3)) 이번 글에서는 우선 affine 수준에서 Kähler 미분 가군과 그에 딸린 두 exact sequence를 상기한 뒤, 이를 scheme morphism $f:X \rightarrow S$에 대해 sheaf로 옮긴 *cotangent sheaf* $\Omega_{X/S}$를 정의한다. 이 sheaf는 affine 위에서 Kähler 미분 가군의 연관층을 붙인 것이자, 동시에 대각선 morphism의 conormal로도 얻어진다. 이로부터 tangent sheaf와 Zariski tangent space, 그리고 affine space와 projective space 위의 미분층의 구조를 살펴본다.
+Algebraic variety나 manifold 위에서 differential form은 tangent space와 그 쌍대를 통해 기하학을 해석학적으로 다루는 도구이다. Scheme의 세계에서는 좌표나 극한을 직접 쓸 수 없으므로, 미분을 순수하게 대수적으로 정의해야 한다. 그 출발점은 Kähler 미분 가군으로, 이는 Leibniz rule을 만족하는 도분 가운데 가장 보편적인 것을 표현한다. ([\[가환대수학\] §미분, ⁋정의 3](/ko/math/commutative_algebra/differentials#def3)) 이번 글에서는 우선 affine 수준에서 Kähler 미분 가군과 그에 딸린 두 exact sequence를 상기한 뒤, 이를 scheme morphism $f:X \rightarrow S$에 대해 sheaf로 옮긴 *cotangent sheaf* $\Omega_{X/S}$를 정의한다. 이 sheaf는 affine 위에서 Kähler 미분 가군의 연관층을 붙인 것이자, 동시에 대각선 morphism의 conormal로도 얻어진다. 이로부터 tangent sheaf와 Zariski tangent space, 그리고 affine space와 projective space 위의 미분층의 구조를 살펴본다.
 
 ## Kähler 미분 가군과 완전열
 
@@ -25,7 +25,7 @@ $$\Der_A(B, M)\cong \Hom_B(\Omega_{B/A}, M)$$
 
 이 성립한다. ([\[가환대수학\] §미분, ⁋보조정리 2](/ko/math/commutative_algebra/differentials#lem2)) 즉 $\Omega_{B/A}$는 원소들 $db$ ($b\in B$)로 생성되며, $d(xy)=xdy+ydx$와 $A$-선형성을 relation으로 가지는 $B$-가군이다.
 
-scheme morphism으로 옮기기에 앞서, $\Omega$가 ring의 합성과 quotient에 대해 가지는 두 가지 functorial한 exact sequence를 정리해 둔다. 이들은 이후 cotangent sheaf의 국소적 거동을 통제하는 핵심 도구이다. 첫째는 ring들의 합성 $A \rightarrow B \rightarrow C$에 대한 추이 exact sequence이다.
+Scheme morphism으로 옮기기에 앞서, $\Omega$가 ring의 합성과 quotient에 대해 가지는 두 가지 functorial한 exact sequence를 정리해 둔다. 이들은 이후 cotangent sheaf의 국소적 거동을 통제하는 핵심 도구이다. 첫째는 ring들의 합성 $A \rightarrow B \rightarrow C$에 대한 추이 exact sequence이다.
 
 ::: 명제 1 (추이 exact sequence)
 $A$-algebra $B$와 $B$-algebra $C$가 주어졌다 하자. 합성 $A \rightarrow B \rightarrow C$를 통해 $C$를 $A$-algebra로 보면, $C$-가군들의 sequence
@@ -48,7 +48,7 @@ $$\mathfrak{a}/\mathfrak{a}^2 \overset{\bar{d}}{\longrightarrow} \Omega_{B/A}\ot
 은 exact이며, 첫째 morphism $\bar{d}$는 $f+\mathfrak{a}^2\mapsto df\otimes 1$로 주어진다.
 :::
 ::: 증명
-surjection $\varphi:B \rightarrow C=B/\mathfrak{a}$에 [\[가환대수학\] §미분, ⁋명제 6](/ko/math/commutative_algebra/differentials#prop6)을 적용하면, $K=\ker\varphi=\mathfrak{a}$이므로 주어진 sequence를 그대로 얻는다. 첫째 morphism $\bar{d}:\mathfrak{a}/\mathfrak{a}^2 \rightarrow \Omega_{B/A}\otimes_BC$는 $d_{B/A}\vert_\mathfrak{a}$를 base change한 뒤 $\mathfrak{a}^2$을 kernel에 포함시켜 유도한 것으로, 인용한 명제의 증명에서 보았듯 $f+\mathfrak{a}^2\mapsto df\otimes 1$로 주어진다.
+Surjection $\varphi:B \rightarrow C=B/\mathfrak{a}$에 [\[가환대수학\] §미분, ⁋명제 6](/ko/math/commutative_algebra/differentials#prop6)을 적용하면, $K=\ker\varphi=\mathfrak{a}$이므로 주어진 sequence를 그대로 얻는다. 첫째 morphism $\bar{d}:\mathfrak{a}/\mathfrak{a}^2 \rightarrow \Omega_{B/A}\otimes_BC$는 $d_{B/A}\vert_\mathfrak{a}$를 base change한 뒤 $\mathfrak{a}^2$을 kernel에 포함시켜 유도한 것으로, 인용한 명제의 증명에서 보았듯 $f+\mathfrak{a}^2\mapsto df\otimes 1$로 주어진다.
 :::
 
 여기서 $C=B/\mathfrak{a}$를 closed subscheme으로 생각하면, $\mathfrak{a}/\mathfrak{a}^2$은 그 *conormal module*에 해당한다. 즉 $\mathfrak{a}$가 정의하는 부분다양체의 법선 방향을 ideal의 일차항 $\mathfrak{a}/\mathfrak{a}^2$이 담고 있으며, conormal exact sequence는 부분다양체 위의 미분 $\Omega_{C/A}$를 ambient의 미분 $\Omega_{B/A}\otimes_BC$에서 법선 방향을 잘라내어 얻는다는 것을 말한다. 이 두 exact sequence는 모두 $\otimes_B C$나 quotient에 대해 자연스러우므로, affine open에서 affine open으로 제한하더라도 그대로 유지되며, 이것이 다음 절에서 미분층을 gluing할 수 있게 하는 형식적 근거이다.
@@ -87,7 +87,7 @@ $$\Omega_{X/S}\vert_U\cong \widetilde{\Omega_{B/A}}$$
 
 $$\mathfrak{a}/\mathfrak{a}^2\cong \Omega_{B/A}$$
 
-임을 보인다. morphism $\mathfrak{a}/\mathfrak{a}^2 \rightarrow \Omega_{B/A}$를 $b\otimes 1-1\otimes b\mapsto db$로 정의하고, 역사상 $\Omega_{B/A} \rightarrow \mathfrak{a}/\mathfrak{a}^2$을 universal derivation으로부터 얻는다. 구체적으로 $\delta:B \rightarrow \mathfrak{a}/\mathfrak{a}^2$를 $\delta(b)=(b\otimes 1-1\otimes b)+\mathfrak{a}^2$로 정의하면, 임의의 $b, b'\in B$에 대하여 $B\otimes_AB$ 안에서
+임을 보인다. Morphism $\mathfrak{a}/\mathfrak{a}^2 \rightarrow \Omega_{B/A}$를 $b\otimes 1-1\otimes b\mapsto db$로 정의하고, 역사상 $\Omega_{B/A} \rightarrow \mathfrak{a}/\mathfrak{a}^2$을 universal derivation으로부터 얻는다. 구체적으로 $\delta:B \rightarrow \mathfrak{a}/\mathfrak{a}^2$를 $\delta(b)=(b\otimes 1-1\otimes b)+\mathfrak{a}^2$로 정의하면, 임의의 $b, b'\in B$에 대하여 $B\otimes_AB$ 안에서
 
 $$\begin{aligned}
 (bb'\otimes 1-1\otimes bb')&=(b\otimes 1-1\otimes b)(1\otimes b')+(b'\otimes 1-1\otimes b')(b\otimes 1)\\
@@ -139,7 +139,7 @@ $$T_xX=\bigl(\Omega_{X/k}\otimes_{\mathcal{O}_X}\kappa(x)\bigr)^\vee=\Hom_{\kapp
 
 이 정의는 local ring의 maximal ideal을 통한 친숙한 묘사와 일치한다. $x$가 residue field $\kappa(x)=k$를 가지는 점, 곧 $k$-rational point이고 $(\mathcal{O}_{X,x}, \mathfrak{m}_x)$가 그 local ring일 때, conormal exact sequence를 stalk에서 분석하면 $\Omega_{X/k}\otimes \kappa(x)\cong \mathfrak{m}_x/\mathfrak{m}_x^2$이 성립한다. 따라서 Zariski tangent space는 $(\mathfrak{m}_x/\mathfrak{m}_x^2)^\vee$, 즉 cotangent space $\mathfrak{m}_x/\mathfrak{m}_x^2$의 쌍대이다. 한 점에서의 차원 $\dim_{\kappa(x)}T_xX$가 그 점의 국소적 차원 $\dim \mathcal{O}_{X,x}$과 같은지 여부가 그 점이 nonsingular한지를 가르는 기준이 되며, 일반적으로는 $\dim_{\kappa(x)}T_xX\geq \dim \mathcal{O}_{X,x}$이다.
 
-regular local ring의 cotangent space $\mathfrak{m}/\mathfrak{m}^2$이 정확히 차원만큼의 dimension을 가진다는 사실은 ([\[가환대수학\] §정칙국소환](/ko/math/commutative_algebra/regular_local_rings)) 이 부등식이 등호가 되는 경우와 직접 연결된다. 모든 점에서 등호가 성립하여 $\Omega_{X/k}$가 locally free가 되는 경우가 smoothness에 해당하지만, $\Omega$의 국소자유성과 regularity의 정확한 관계는 별도의 논의를 요한다.
+Regular local ring의 cotangent space $\mathfrak{m}/\mathfrak{m}^2$이 정확히 차원만큼의 dimension을 가진다는 사실은 ([\[가환대수학\] §정칙국소환](/ko/math/commutative_algebra/regular_local_rings)) 이 부등식이 등호가 되는 경우와 직접 연결된다. 모든 점에서 등호가 성립하여 $\Omega_{X/k}$가 locally free가 되는 경우가 smoothness에 해당하지만, $\Omega$의 국소자유성과 regularity의 정확한 관계는 별도의 논의를 요한다.
 
 ## Affine space와 사영공간의 미분층
 

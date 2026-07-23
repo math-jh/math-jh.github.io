@@ -86,7 +86,7 @@ $m$차원의 경계가 있는 manifold $M$에 대하여 다음이 성립한다.
 ::: 예시 5
 반공간 $\mathbb{H}^m$ 자신은 identity chart 하나로 이루어진 atlas에 대해 경계가 있는 manifold이고, 그 boundary는 정의에 의해 $\partial\mathbb{H}^m\cong\mathbb{R}^{m-1}$이다. 비슷하게 닫힌구간 $[0,1]$은 두 chart $t\mapsto t$ (on $[0,1)$), $t\mapsto 1-t$ (on $(0,1]$)에 대해 $1$차원의 경계가 있는 manifold이고 $\partial[0,1]=\{0,1\}$이다.
 
-조금 더 의미있는 예시로 닫힌 공 $\overline{B}^m=\{x\in\mathbb{R}^m\mid \lvert x\rvert\leq 1\}$을 생각하자. interior는 열린 공이므로 chart 하나로 충분하다. boundary 근방의 점들에 대해서는, $S^{m-1}$의 chart $(V,\theta)$마다 함수
+조금 더 의미있는 예시로 닫힌 공 $\overline{B}^m=\{x\in\mathbb{R}^m\mid \lvert x\rvert\leq 1\}$을 생각하자. Interior는 열린 공이므로 chart 하나로 충분하다. Boundary 근방의 점들에 대해서는, $S^{m-1}$의 chart $(V,\theta)$마다 함수
 
 $$x\mapsto \bigl(\theta(x/\lvert x\rvert),\,1-\lvert x\rvert\bigr)$$
 

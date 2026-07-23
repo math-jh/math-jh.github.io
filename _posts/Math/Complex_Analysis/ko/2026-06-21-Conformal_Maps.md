@@ -14,7 +14,7 @@ weight: 11
 published: false
 ---
 
-holomorphic function의 미분이 한 점에서 평면을 회전·확대하는 닮음변환이라는 사실은 ([§복소정칙함수, ⁋정리 5](/ko/math/complex_analysis/holomorphic_functions#thm5)) 이미 holomorphicity의 대수적 핵심으로 드러난 바 있다. 회전·확대는 길이의 비를 바꿀 수는 있어도 두 방향이 이루는 각은 건드리지 못하므로, 도함수가 $0$이 아닌 holomorphic function은 곡선들이 만나는 각을 크기와 방향까지 보존한다. 이렇게 각을 보존하는 사상을 등각사상이라 하며, 복소해석학을 평면기하의 변환이론으로 읽는 관점이 여기서 시작된다. 이 글에서는 먼저 holomorphicity와 등각성이 본질적으로 같은 조건임을 밝히고, 가장 단순하면서도 가장 풍부한 등각사상의 모임인 Möbius 변환을 다룬다. Möbius 변환은 확장복소평면 ([§복소수와 복소평면, ⁋정의 13](/ko/math/complex_analysis/complex_numbers#def13)) 전체의 holomorphic automorphism을 이루며, 원과 직선을 원과 직선으로 보내고 교차비라는 양을 불변으로 남긴다. 끝으로 이를 단위원판과 상반평면의 automorphism을 분류하는 데 적용한다.
+Holomorphic function의 미분이 한 점에서 평면을 회전·확대하는 닮음변환이라는 사실은 ([§복소정칙함수, ⁋정리 5](/ko/math/complex_analysis/holomorphic_functions#thm5)) 이미 holomorphicity의 대수적 핵심으로 드러난 바 있다. 회전·확대는 길이의 비를 바꿀 수는 있어도 두 방향이 이루는 각은 건드리지 못하므로, 도함수가 $0$이 아닌 holomorphic function은 곡선들이 만나는 각을 크기와 방향까지 보존한다. 이렇게 각을 보존하는 사상을 등각사상이라 하며, 복소해석학을 평면기하의 변환이론으로 읽는 관점이 여기서 시작된다. 이 글에서는 먼저 holomorphicity와 등각성이 본질적으로 같은 조건임을 밝히고, 가장 단순하면서도 가장 풍부한 등각사상의 모임인 Möbius 변환을 다룬다. Möbius 변환은 확장복소평면 ([§복소수와 복소평면, ⁋정의 13](/ko/math/complex_analysis/complex_numbers#def13)) 전체의 holomorphic automorphism을 이루며, 원과 직선을 원과 직선으로 보내고 교차비라는 양을 불변으로 남긴다. 끝으로 이를 단위원판과 상반평면의 automorphism을 분류하는 데 적용한다.
 
 ## 등각성
 
@@ -48,7 +48,7 @@ $$\arg (f \circ \gamma_2)'(t_0) - \arg (f \circ \gamma_1)'(t_0) = \arg \gamma_2'
 역으로 $f'(z_0) = 0$이라 하자. 그러면 위의 tangent vector 공식에서 모든 smooth 곡선에 대해 $(f \circ \gamma)'(t_0) = f'(z_0)\gamma'(t_0) = 0$이 되어, 상곡선의 일차 tangent vector가 소멸한다. 이때 상곡선이 $f(z_0)$에서 향하는 방향은 일차항이 아니라 처음으로 살아남는 고차항으로 결정되는데, 가령 $f(z) = z^m$ ($m \geq 2$) 을 $z_0 = 0$에서 보면 $\arg f(z) = m \arg z$이므로 원점에서 만나는 두 방향이 이루는 각이 $f$에 의해 $m$배로 늘어난다. 따라서 각이 보존되지 않아 $f$는 $z_0$에서 등각이 아니다.
 :::
 
-명제 2는 등각성이라는 기하적 성질이 "holomorphic이고 도함수가 $0$이 아니다"라는 해석적 조건과 완전히 같음을 말한다. 도함수가 소멸하는 점, 곧 $f'(z_0) = 0$인 점은 *critical point<sub>임계점</sub>*라 부르며, 그 점에서는 order에 따라 각이 정수배로 확대되어 등각성이 깨진다. 영역 전체에서 도함수가 결코 $0$이 되지 않는 holomorphic function은 따라서 각 점에서 무한소적으로 닮음변환처럼 행동하며, 작은 도형을 형태를 유지한 채 회전·확대해 옮긴다. holomorphic인 전단사사상은 항상 이런 등각사상이 되는데, 이는 단엽 holomorphic function의 도함수가 어디서도 $0$이 아니라는 사실의 귀결이다.
+명제 2는 등각성이라는 기하적 성질이 "holomorphic이고 도함수가 $0$이 아니다"라는 해석적 조건과 완전히 같음을 말한다. 도함수가 소멸하는 점, 곧 $f'(z_0) = 0$인 점은 *critical point<sub>임계점</sub>*라 부르며, 그 점에서는 order에 따라 각이 정수배로 확대되어 등각성이 깨진다. 영역 전체에서 도함수가 결코 $0$이 되지 않는 holomorphic function은 따라서 각 점에서 무한소적으로 닮음변환처럼 행동하며, 작은 도형을 형태를 유지한 채 회전·확대해 옮긴다. Holomorphic인 전단사사상은 항상 이런 등각사상이 되는데, 이는 단엽 holomorphic function의 도함수가 어디서도 $0$이 아니라는 사실의 귀결이다.
 
 ::: 명제 3
 $\Omega \subseteq \mathbb{C}$가 열려 있고 $f : \Omega \rightarrow \mathbb{C}$가 holomorphic인 단사사상이라 하자. 그러면 $\Omega$의 모든 점에서 $f'(z) \neq 0$이고, 따라서 $f$는 $\Omega$ 위의 등각사상이다.
@@ -100,7 +100,7 @@ $$AA' = \begin{pmatrix} aa' + bc' & ab' + bd' \\ ca' + dc' & cb' + dd' \end{pmat
 대응 $A \mapsto T_A$이 homomorphism임은 위에서 보았다. 그 kernel을 구한다. $T_A(z) = z$이 모든 $z$에서 성립하려면 $az + b = z(cz + d)$, 곧 $cz^2 + (d - a)z - b = 0$이 모든 $z$에서 성립해야 하므로 $c = 0$, $b = 0$, $a = d$이다. 곧 $A = aI$ ($a \neq 0$) 꼴이다. 역으로 그러한 $A$는 항등사상을 준다. 따라서 kernel은 $\{\lambda I : \lambda \in \mathbb{C}^\times\}$이고, 준동형정리에 의해 Möbius 변환군은 $\mathrm{GL}(2, \mathbb{C})/\{\lambda I\} = \mathrm{PGL}(2, \mathbb{C})$와 isomorphic하다. 한편 임의의 $A \in \mathrm{GL}(2, \mathbb{C})$는 $\mu^2 = \det A$인 $\mu$로 나누어 $A/\mu \in \mathrm{SL}(2, \mathbb{C})$로 만들 수 있고 이것이 같은 Möbius 변환을 주므로, $\mathrm{PGL}(2, \mathbb{C})$는 $\mathrm{SL}(2, \mathbb{C})$을 그 중심 $\{\pm I\}$로 나눈 $\mathrm{PSL}(2, \mathbb{C})$와 isomorphic하다.
 :::
 
-명제 5는 Möbius 변환의 합성이 행렬곱으로 번역됨을 말하며, 이로써 일차분수변환의 대수가 $2 \times 2$ 가역행렬의 대수로 환원된다. 행렬과 그 스칼라배가 같은 변환을 주므로, 변환을 행렬로 다룰 때는 언제든 $\det A = 1$이 되도록 normalize할 수 있다. group $\mathrm{PSL}(2, \mathbb{C})$이 정확히 $\widehat{\mathbb{C}}$의 모든 holomorphic automorphism을 이룬다는 사실까지 알려져 있는데, 그 증명은 무한대에서의 거동 분석을 요구하므로 여기서는 Möbius 변환이 automorphism임을 확인하는 데 그친다. Möbius 변환의 구조를 더 들여다보기 위해, 임의의 변환이 몇 가지 기본 변환의 합성으로 쪼개짐을 본다.
+명제 5는 Möbius 변환의 합성이 행렬곱으로 번역됨을 말하며, 이로써 일차분수변환의 대수가 $2 \times 2$ 가역행렬의 대수로 환원된다. 행렬과 그 스칼라배가 같은 변환을 주므로, 변환을 행렬로 다룰 때는 언제든 $\det A = 1$이 되도록 normalize할 수 있다. Group $\mathrm{PSL}(2, \mathbb{C})$이 정확히 $\widehat{\mathbb{C}}$의 모든 holomorphic automorphism을 이룬다는 사실까지 알려져 있는데, 그 증명은 무한대에서의 거동 분석을 요구하므로 여기서는 Möbius 변환이 automorphism임을 확인하는 데 그친다. Möbius 변환의 구조를 더 들여다보기 위해, 임의의 변환이 몇 가지 기본 변환의 합성으로 쪼개짐을 본다.
 
 ::: 명제 6
 임의의 Möbius 변환은 평행이동 $z \mapsto z + \beta$, 확대·회전 $z \mapsto \alpha z$ ($\alpha \neq 0$), inversion $z \mapsto 1/z$의 합성으로 표현된다.
@@ -129,7 +129,7 @@ $$A\,\lvert z\rvert^2 + \overline{B}z + B\bar{z} + C = 0 \tag{$\ast$}$$
 
 으로 한꺼번에 적힌다. 실제로 $z = x + iy$로 풀어 쓰면 이는 $A(x^2 + y^2) + 2\Real(\overline{B}z) + C = 0$ 꼴의 실방정식이고, $A \neq 0$이면 (완전제곱으로 정리하여) 원을, $A = 0$이면 직선을 나타낸다. 조건 $\lvert B\rvert^2 > AC$은 그 자취가 공집합이나 한 점이 아니라 진짜 원 또는 직선이 되도록 보장한다.
 
-명제 6에 의해 임의의 Möbius 변환이 평행이동, 확대·회전, inversion의 합성이므로, 이 세 기본 변환 각각이 $(\ast)$ 꼴 방정식을 다시 $(\ast)$ 꼴로 보냄을 보이면 충분하다. 평행이동 $z \mapsto z + \beta$와 확대·회전 $z \mapsto \alpha z$은 직선을 직선으로, 원을 원으로 보냄이 기하적으로 분명하고 방정식 차원에서도 $(\ast)$ 꼴이 보존된다. inversion $w = 1/z$, 곧 $z = 1/w$를 $(\ast)$에 대입하면
+명제 6에 의해 임의의 Möbius 변환이 평행이동, 확대·회전, inversion의 합성이므로, 이 세 기본 변환 각각이 $(\ast)$ 꼴 방정식을 다시 $(\ast)$ 꼴로 보냄을 보이면 충분하다. 평행이동 $z \mapsto z + \beta$와 확대·회전 $z \mapsto \alpha z$은 직선을 직선으로, 원을 원으로 보냄이 기하적으로 분명하고 방정식 차원에서도 $(\ast)$ 꼴이 보존된다. Inversion $w = 1/z$, 곧 $z = 1/w$를 $(\ast)$에 대입하면
 
 $$A\,\frac{1}{\lvert w\rvert^2} + \overline{B}\,\frac{1}{w} + B\,\frac{1}{\bar w} + C = 0$$
 
@@ -140,7 +140,7 @@ $$A + \overline{B}\,\bar w + B\,w + C\,\lvert w\rvert^2 = 0, \qquad \text{곧}\q
 이 된다. 이는 다시 $(\ast)$ 꼴이며 ($A, C$의 역할과 $B, \overline B$의 역할이 바뀌었을 뿐이고, 판별식 $\lvert B\rvert^2 > CA = AC$은 그대로이다), 따라서 inversion도 원-직선을 원-직선으로 보낸다. 세 기본 변환이 모두 $(\ast)$ 꼴을 보존하므로 그 합성인 임의의 Möbius 변환도 그러하다.
 :::
 
-정리 7은 원과 직선을 한데 묶어 다루는 관점이 Möbius 변환에 본질적임을 보여 준다. $\widehat{\mathbb{C}}$에서는 직선이 $\infty$를 지나는 "원"으로 자연스럽게 편입되므로, 원-직선이란 곧 Riemann 구면 위의 (입체사영을 통한) 진짜 원에 대응한다. inversion이 직선을 원으로 또는 원을 직선으로 바꿀 수 있음에 유의해야 한다. 가령 원점을 지나는 직선은 $A = C = 0$인 경우인데, inversion 후 방정식에서 상수항이 $A = 0$으로 남아 여전히 직선이지만, 원점을 지나지 않는 직선 ($A = 0$, $C \neq 0$) 은 inversion 후 $C\lvert w\rvert^2$ 항이 살아나 원이 된다.
+정리 7은 원과 직선을 한데 묶어 다루는 관점이 Möbius 변환에 본질적임을 보여 준다. $\widehat{\mathbb{C}}$에서는 직선이 $\infty$를 지나는 "원"으로 자연스럽게 편입되므로, 원-직선이란 곧 Riemann 구면 위의 (입체사영을 통한) 진짜 원에 대응한다. Inversion이 직선을 원으로 또는 원을 직선으로 바꿀 수 있음에 유의해야 한다. 가령 원점을 지나는 직선은 $A = C = 0$인 경우인데, inversion 후 방정식에서 상수항이 $A = 0$으로 남아 여전히 직선이지만, 원점을 지나지 않는 직선 ($A = 0$, $C \neq 0$) 은 inversion 후 $C\lvert w\rvert^2$ 항이 살아나 원이 된다.
 
 ## 교차비와 세 점 결정
 
@@ -165,7 +165,7 @@ $$(Tz_1, Tz_2; Tz_3, Tz_4) = (z_1, z_2; z_3, z_4)$$
 :::
 
 ::: 증명
-명제 6에 의해 $T$가 평행이동, 확대·회전, inversion의 합성이므로, 이 세 기본 변환 각각이 교차비를 보존함을 보이면 합성인 $T$도 보존한다. 두 점 $z, w$의 차에 대한 거동을 보면 충분하다. 평행이동 $T(z) = z + \beta$에 대해서는 $Tz - Tw = (z + \beta) - (w + \beta) = z - w$이므로 정의 8의 네 차가 모두 그대로이고 교차비가 불변이다. 확대·회전 $T(z) = \alpha z$에 대해서는 $Tz - Tw = \alpha(z - w)$이므로 네 차에 각각 $\alpha$가 곱해지는데, 교차비는 두 차의 곱을 다른 두 차의 곱으로 나눈 것이라 $\alpha$가 분자·분모에서 상쇄되어 불변이다. inversion $T(z) = 1/z$에 대해서는
+명제 6에 의해 $T$가 평행이동, 확대·회전, inversion의 합성이므로, 이 세 기본 변환 각각이 교차비를 보존함을 보이면 합성인 $T$도 보존한다. 두 점 $z, w$의 차에 대한 거동을 보면 충분하다. 평행이동 $T(z) = z + \beta$에 대해서는 $Tz - Tw = (z + \beta) - (w + \beta) = z - w$이므로 정의 8의 네 차가 모두 그대로이고 교차비가 불변이다. 확대·회전 $T(z) = \alpha z$에 대해서는 $Tz - Tw = \alpha(z - w)$이므로 네 차에 각각 $\alpha$가 곱해지는데, 교차비는 두 차의 곱을 다른 두 차의 곱으로 나눈 것이라 $\alpha$가 분자·분모에서 상쇄되어 불변이다. Inversion $T(z) = 1/z$에 대해서는
 
 $$Tz_i - Tz_j = \frac{1}{z_i} - \frac{1}{z_j} = \frac{z_j - z_i}{z_i z_j}$$
 
@@ -213,7 +213,7 @@ $$\lvert 1 - \bar a z\rvert = \lvert \bar z\rvert\,\lvert 1 - \bar a z\rvert = \
 
 이다 (둘째 등호에서 $\lvert \bar z\rvert = \lvert z\rvert = 1$을 썼다). 따라서 $\lvert z\rvert = 1$이면 $\lvert \varphi_a(z)\rvert = \lvert z - a\rvert / \lvert 1 - \bar a z\rvert = 1$이므로, $\varphi_a$은 단위원을 단위원으로 보낸다.
 
-이제 $\varphi_a$이 $\mathbb{D}$를 $\mathbb{D}$로 보냄을 본다. $\varphi_a$은 단위원에서 분모 $1 - \bar a z$가 $0$이 되지 않으므로 ($\lvert z\rvert \leq 1$, $\lvert a\rvert < 1$이면 $\lvert \bar a z\rvert < 1$) 닫힌 원판 $\overline{\mathbb{D}}$에서 연속이고 interior에서 holomorphic이다. boundary $\lvert z\rvert = 1$에서 $\lvert \varphi_a\rvert = 1$임을 방금 보였고, interior의 한 점 $z = a$에서 $\varphi_a(a) = 0$이라 $\lvert \varphi_a(a)\rvert = 0 < 1$이다. 따라서 연속인 $\lvert \varphi_a\rvert$이 boundary에서 $1$, interior 한 점에서 $1$ 미만이므로, 최대절댓값 원리 ([§영점과 일치정리, ⁋따름정리 6](/ko/math/complex_analysis/zeros_and_identity_theorem#cor6)) 에 의해 $\mathbb{D}$ 전체에서 $\lvert \varphi_a(z)\rvert < 1$이다 (interior에서 $1$에 이르면 상수가 되어야 하나 $\varphi_a$은 비상수이다). 곧 $\varphi_a(\mathbb{D}) \subseteq \mathbb{D}$이다.
+이제 $\varphi_a$이 $\mathbb{D}$를 $\mathbb{D}$로 보냄을 본다. $\varphi_a$은 단위원에서 분모 $1 - \bar a z$가 $0$이 되지 않으므로 ($\lvert z\rvert \leq 1$, $\lvert a\rvert < 1$이면 $\lvert \bar a z\rvert < 1$) 닫힌 원판 $\overline{\mathbb{D}}$에서 연속이고 interior에서 holomorphic이다. Boundary $\lvert z\rvert = 1$에서 $\lvert \varphi_a\rvert = 1$임을 방금 보였고, interior의 한 점 $z = a$에서 $\varphi_a(a) = 0$이라 $\lvert \varphi_a(a)\rvert = 0 < 1$이다. 따라서 연속인 $\lvert \varphi_a\rvert$이 boundary에서 $1$, interior 한 점에서 $1$ 미만이므로, 최대절댓값 원리 ([§영점과 일치정리, ⁋따름정리 6](/ko/math/complex_analysis/zeros_and_identity_theorem#cor6)) 에 의해 $\mathbb{D}$ 전체에서 $\lvert \varphi_a(z)\rvert < 1$이다 (interior에서 $1$에 이르면 상수가 되어야 하나 $\varphi_a$은 비상수이다). 곧 $\varphi_a(\mathbb{D}) \subseteq \mathbb{D}$이다.
 
 끝으로 역사상을 계산한다. $\varphi_{-a}(z) = (z + a)/(1 + \bar a z)$인데, 직접 합성하면
 

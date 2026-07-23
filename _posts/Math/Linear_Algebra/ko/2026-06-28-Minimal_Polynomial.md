@@ -110,7 +110,7 @@ $$r(A)=p(A)-q(A)m_A(A)=0-q(A)\cdot 0=0$$
 유일성을 보이기 위해 $m_A'$ 또한 minimal polynomial의 조건을 만족한다 하자. 그럼 위 논증에 의해 $m_A\mid m_A'$이고 $m_A'\mid m_A$이며, 둘 다 같은 degree의 monic polynomial이므로 $m_A=m_A'$이다. 마지막으로 [정리 4](#thm4)에서 $p_A(A)=0$이므로 $m_A\mid p_A$이다.
 :::
 
-minimal polynomial의 root는 특성다항식의 root와 정확히 일치한다. 즉, degree는 더 작을 수 있지만, degree가 빠지는 방식은 중복된 eigenvalue에서 중복도를 낮추는 방식으로만 일어나며, 따라서 이 과정에서 어떤 eigenvalue도 빠뜨리지 않는다. 
+Minimal polynomial의 root는 특성다항식의 root와 정확히 일치한다. 즉, degree는 더 작을 수 있지만, degree가 빠지는 방식은 중복된 eigenvalue에서 중복도를 낮추는 방식으로만 일어나며, 따라서 이 과정에서 어떤 eigenvalue도 빠뜨리지 않는다. 
 
 ::: 명제 7
 $n\times n$ 행렬 $A$에 대하여, $m_A$의 root들의 집합은 $A$의 eigenvalue들의 집합과 같다. 

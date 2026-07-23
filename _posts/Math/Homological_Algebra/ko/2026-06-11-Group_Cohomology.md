@@ -148,7 +148,7 @@ $$\varphi(gh)=g\cdot\varphi(h)+\varphi(g)$$
 $H^1(G;M)$은 crossed homomorphism들의 group을 principal crossed homomorphism들의 subgroup으로 나눈 quotient와 isomorphic하다. 특히 $G$가 $M$에 trivial하게 작용한다면 $H^1(G;M)\cong\Hom_{\Grp}(G,M)$이다.
 :::
 ::: 증명
-위에서 계산한 cocycle 조건이 정확히 crossed homomorphism의 조건이고, $1$-coboundary $dm$이 정확히 principal crossed homomorphism이므로 첫 주장은 정의 그대로이다. action이 trivial하다면 crossed homomorphism의 조건은 $\varphi(gh)=\varphi(h)+\varphi(g)$, 즉 group homomorphism의 조건이 되고, principal crossed homomorphism은 $0$ 뿐이다.
+위에서 계산한 cocycle 조건이 정확히 crossed homomorphism의 조건이고, $1$-coboundary $dm$이 정확히 principal crossed homomorphism이므로 첫 주장은 정의 그대로이다. Action이 trivial하다면 crossed homomorphism의 조건은 $\varphi(gh)=\varphi(h)+\varphi(g)$, 즉 group homomorphism의 조건이 되고, principal crossed homomorphism은 $0$ 뿐이다.
 :::
 
 ## 순환군의 코호몰로지

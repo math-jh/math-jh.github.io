@@ -48,7 +48,7 @@ $$A[\epsilon]=A[t]/(t^2),\qquad \epsilon=\overline{t},\quad \epsilon^2=0$$
 
 ## 평탄 변형과 일차 변형
 
-변형에서 결정적인 조건은 *flatness<sub>flatness</sub>*이다. flatness가 없으면 base 위의 점마다 fiber의 크기가 멋대로 변할 수 있어 "연속적인 가족"이라는 직관이 무너진다. flatness는 fiber가 base를 따라 일정한 방식으로 변한다는 것을 보장한다.
+변형에서 결정적인 조건은 *flatness<sub>flatness</sub>*이다. Flatness가 없으면 base 위의 점마다 fiber의 크기가 멋대로 변할 수 있어 "연속적인 가족"이라는 직관이 무너진다. Flatness는 fiber가 base를 따라 일정한 방식으로 변한다는 것을 보장한다.
 
 ::: 정의 3
 $A$-algebra $B$와 square-zero extension $0\rightarrow M\rightarrow A'\rightarrow A\rightarrow0$이 주어졌다 하자. $B$의 $A'$ 위로의 *변형<sub>deformation</sub>*이란, $A'$ 위에서 flat한 $A'$-algebra $B'$과 $A'$-algebra isomorphism $B'\otimes_{A'}A\cong B$의 짝을 뜻한다. 두 변형 $B', B''$이 *isomorphic*이라는 것은 $A$ 위로 환원했을 때 $B$ 위의 항등사상을 유도하는 $A'$-algebra isomorphism $B'\cong B''$이 존재하는 것이다.
@@ -56,7 +56,7 @@ $A$-algebra $B$와 square-zero extension $0\rightarrow M\rightarrow A'\rightarro
 특히 $A=k$이고 $A'=k[\epsilon]$인 경우의 변형을 $B$의 *first-order deformation<sub>일차 변형</sub>*이라 부른다.
 :::
 
-직관적으로 first-order deformation은 $B$를 정의하는 방정식들의 계수를 $\epsilon$의 일차까지 흔든 것이다. $B=P/I$를 polynomial ring $P=k[\x_1,\ldots,\x_n]$의 quotient로 쓰고 $I=(f_1,\ldots,f_m)$이라 하면, 각 $f_j$를 $F_j=f_j+\epsilon g_j$로 흔들어 $B'=P[\epsilon]/(F_1,\ldots,F_m)$을 얻는 것이 후보가 된다. 그러나 임의의 $g_j$가 모두 flat한 변형을 주지는 않는다. flatness라는 제약이 어떤 $g_j$가 허용되는지를 정확히 결정하며, 이것이 변형이론의 출발점이다.
+직관적으로 first-order deformation은 $B$를 정의하는 방정식들의 계수를 $\epsilon$의 일차까지 흔든 것이다. $B=P/I$를 polynomial ring $P=k[\x_1,\ldots,\x_n]$의 quotient로 쓰고 $I=(f_1,\ldots,f_m)$이라 하면, 각 $f_j$를 $F_j=f_j+\epsilon g_j$로 흔들어 $B'=P[\epsilon]/(F_1,\ldots,F_m)$을 얻는 것이 후보가 된다. 그러나 임의의 $g_j$가 모두 flat한 변형을 주지는 않는다. Flatness라는 제약이 어떤 $g_j$가 허용되는지를 정확히 결정하며, 이것이 변형이론의 출발점이다.
 
 ::: 명제 4
 $B=P/I$, $P=k[\x_1,\ldots,\x_n]$, $I=(f_1,\ldots,f_m)$이라 하고, $g_1,\ldots,g_m\in P$에 대하여 $F_j=f_j+\epsilon g_j$, $B'=P[\epsilon]/(F_1,\ldots,F_m)$이라 하자. 그럼 $B'$이 $k[\epsilon]$ 위에서 flat한 것은, $(f_1,\ldots,f_m)$의 모든 syzygy $(a_1,\ldots,a_m)$, 곧 $\sum_ja_jf_j=0$인 $(a_j)\in P^m$에 대하여
@@ -139,7 +139,7 @@ Finitely generated $k$-algebra $B$에 대하여, isomorphism class로 본 $B$의
 
 $$\Hom_B(I/I^2,B)\big/\im\overline{d}^\ast=\coker\overline{d}^\ast=T^1(B/k,B)$$
 
-이며, trivial deformation이 $0$에 대응한다. 다만 두 변형 $\varphi,\varphi'$이 같은 $T^1$ 원소를 주는 것이 isomorphic임을 확인해야 하는데, 두 변형의 차이를 주는 $\varphi-\varphi'$이 derivation에서 올 때 그 derivation이 $P[\epsilon]$의 좌표변환을 주어 동형을 구성하므로 성립한다. automorphism군에 관해서는, 변형 $B'$의 $A$ 위 항등을 유도하는 automorphism $u:B'\rightarrow B'$은 $u(b')-b'\in\epsilon B'\cong B$를 만족하고, $D(b')=u(b')-b'$이 $\epsilon^2=0$에 의하여 derivation $B\rightarrow B$가 되므로, 대응 $u\mapsto D$가 군 동형 $\Aut(B')\cong\Der_k(B,B)$을 준다.
+이며, trivial deformation이 $0$에 대응한다. 다만 두 변형 $\varphi,\varphi'$이 같은 $T^1$ 원소를 주는 것이 isomorphic임을 확인해야 하는데, 두 변형의 차이를 주는 $\varphi-\varphi'$이 derivation에서 올 때 그 derivation이 $P[\epsilon]$의 좌표변환을 주어 동형을 구성하므로 성립한다. Automorphism군에 관해서는, 변형 $B'$의 $A$ 위 항등을 유도하는 automorphism $u:B'\rightarrow B'$은 $u(b')-b'\in\epsilon B'\cong B$를 만족하고, $D(b')=u(b')-b'$이 $\epsilon^2=0$에 의하여 derivation $B\rightarrow B$가 되므로, 대응 $u\mapsto D$가 군 동형 $\Aut(B')\cong\Der_k(B,B)$을 준다.
 :::
 
 이 정리는 변형이론의 가장 기본적인 사전이다. $T^1$은 "tangent space"로서 first-order deformation의 방향을 분류하고, $T^0=\Der$는 그 변형을 보는 시점의 무한소 대칭, 곧 automorphism을 분류한다. 더 일반적인 base 위의 변형에 대해서도 같은 구조가 성립한다.
@@ -165,7 +165,7 @@ $$\operatorname{ob}(\xi)\in T^2(B/k,B)$$
 가 자연스럽게 정의되며, $\xi$가 연장 가능한 것은 $\operatorname{ob}(\xi)=0$인 것과 동치이다. 더 일반적으로, square-zero extension $0\rightarrow M\rightarrow A'\rightarrow A\rightarrow0$과 $A$ 위의 변형 $B_A$에 대하여, $B_A$를 $A'$ 위로 연장하는 것에 대한 장애는 $T^2(B/A,B\otimes_AM)$의 한 원소이고, 연장이 존재할 때 그 isomorphism class들은 $T^1(B/A,B\otimes_AM)$ 위의 torsor를 이룬다.
 :::
 ::: 증명
-$\xi$를 [명제 4](#prop4)와 같이 $F_j=f_j+tg_j$로 실현하자. flatness에 의하여 각 생성 syzygy $(a_j^{(r)})$에 대하여 $\sum_ja_j^{(r)}g_j=\sum_jc_j^{(r)}f_j$이도록 하는 $c_j^{(r)}\in P$가 존재한다. 이제 $k[t]/(t^3)$ 위로 연장하려면 $F_j^{(2)}=f_j+tg_j+t^2h_j$를 택하여 syzygy가 이차까지 들어올려지도록 해야 한다. [명제 4](#prop4)의 증명에서처럼 일차 syzygy lift $R_j^{(r)}=a_j^{(r)}-tc_j^{(r)}$를 잡으면
+$\xi$를 [명제 4](#prop4)와 같이 $F_j=f_j+tg_j$로 실현하자. Flatness에 의하여 각 생성 syzygy $(a_j^{(r)})$에 대하여 $\sum_ja_j^{(r)}g_j=\sum_jc_j^{(r)}f_j$이도록 하는 $c_j^{(r)}\in P$가 존재한다. 이제 $k[t]/(t^3)$ 위로 연장하려면 $F_j^{(2)}=f_j+tg_j+t^2h_j$를 택하여 syzygy가 이차까지 들어올려지도록 해야 한다. [명제 4](#prop4)의 증명에서처럼 일차 syzygy lift $R_j^{(r)}=a_j^{(r)}-tc_j^{(r)}$를 잡으면
 
 $$\sum_jR_j^{(r)}F_j=-t^2\sum_jc_j^{(r)}g_j$$
 
@@ -246,7 +246,7 @@ $$X=\Spec k[\z_0,\z_1,\z_2,\z_3,\z_4]/I_2(M),\qquad M=\begin{pmatrix}\z_0&\z_1&\
 
 이다. 여기서 $I_2(M)$은 $M$의 $2\times2$ minor들로 생성되는 ideal로, codimension $3$의 isolated singular point를 정의한다. Pinkham이 계산한 이 singular point의 semiuniversal deformation의 base는 한 점에서 만나는 두 component, 곧 차원 $3$인 성분과 차원 $1$인 성분으로 이루어져, base가 그 교점에서 singular하다. 이는 $T^1$의 어떤 접방향(한 component의 접방향에서 벗어난 방향)이 [정리 9](#thm9)의 의미에서 *obstructed*임을, 곧 그 first-order deformation을 이차로 연장할 때 $\operatorname{ob}(\xi)\neq0\in T^2(X/k,\mathcal{O}_X)$임을 뜻한다.
 
-codimension $3$ 이상에서 이러한 장애가 일반적으로 나타나는 반면, $\mathbb{P}^3$ 위 rational normal cubic의 cone과 같은 codimension $2$ Cohen–Macaulay singular point는 항상 unobstructed하여 base가 매끄럽다. 따라서 [예시 12](#ex12)처럼 lci가 아니어도 장애가 없을 수 있으며, "non-lci"와 "obstructed"는 서로 다른 현상이다. 장애의 유무는 $T^2$와 그 위에서 정의되는 이차 morphism $\operatorname{ob}$이 결정하는 것이지, $\Omega$나 $H_1(\operatorname{NL})$만으로 읽히지 않는다. 이 예시의 명시적 계산은 ([Ser], [Har])를 참조하라.
+Codimension $3$ 이상에서 이러한 장애가 일반적으로 나타나는 반면, $\mathbb{P}^3$ 위 rational normal cubic의 cone과 같은 codimension $2$ Cohen–Macaulay singular point는 항상 unobstructed하여 base가 매끄럽다. 따라서 [예시 12](#ex12)처럼 lci가 아니어도 장애가 없을 수 있으며, "non-lci"와 "obstructed"는 서로 다른 현상이다. 장애의 유무는 $T^2$와 그 위에서 정의되는 이차 morphism $\operatorname{ob}$이 결정하는 것이지, $\Omega$나 $H_1(\operatorname{NL})$만으로 읽히지 않는다. 이 예시의 명시적 계산은 ([Ser], [Har])를 참조하라.
 :::
 
 ## 완전한 여접 복합체의 필요성

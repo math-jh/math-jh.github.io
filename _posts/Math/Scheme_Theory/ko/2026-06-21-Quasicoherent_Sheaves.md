@@ -200,7 +200,7 @@ $\mathcal{F}$의 준연접성에 의하여 $U$의 각 점 $x$마다 ($X$에서�
 
 따라서 어떤 한 affine cover 위에서 연관층임을 확인하는 것만으로 준연접성이 보장되며, 그 결과 모든 affine open subset 위에서 자동으로 연관층이 된다. 이 affine-locality 덕분에 quasi-coherent sheaf에 대한 많은 명제들은 affine 위에서의 가군 명제로 환원하여 증명할 수 있다.
 
-quasi-coherent sheaf 가운데 특히 affine 위에서 finitely generated 가군 또는 finitely presented 가군에 대응하는 것들을 따로 구별한다. 이는 Noetherian 가정 아래에서 가장 잘 작동한다.
+Quasi-coherent sheaf 가운데 특히 affine 위에서 finitely generated 가군 또는 finitely presented 가군에 대응하는 것들을 따로 구별한다. 이는 Noetherian 가정 아래에서 가장 잘 작동한다.
 
 ::: 정의 11
 Scheme $X$ 위의 quasi-coherent sheaf $\mathcal{F}$가 *finite type<sub>유한형</sub>*이라는 것은, 각 점이 affine open neighborhood $U\cong \Spec A$를 가져 $\mathcal{F}\vert_U\cong \widetilde M$이고 $M$이 finitely generated $A$-가군인 것이다. 만일 추가로 모든 affine open 위에서 $M$이 finitely presented 가군이 되도록 할 수 있다면, $\mathcal{F}$를 *coherent sheaf<sub>연접층</sub>*라 부른다.
@@ -210,7 +210,7 @@ Locally Noetherian scheme 위에서는 finitely generated와 finitely presented�
 
 ## Ideal sheaf와 closed subscheme
 
-quasi-coherent sheaf의 중요한 예시로 ideal sheaf가 있다. Affine scheme $\Spec A$에서 ideal $\mathfrak{a}\subseteq A$는 그 자체로 $A$-가군이므로 연관층 $\widetilde{\mathfrak{a}}$를 정의하며, 이는 $\mathcal{O}_{\Spec A}=\widetilde A$의 부분 sheaf이다. 일반적인 scheme 위에서는 이를 다음과 같이 정의한다.
+Quasi-coherent sheaf의 중요한 예시로 ideal sheaf가 있다. Affine scheme $\Spec A$에서 ideal $\mathfrak{a}\subseteq A$는 그 자체로 $A$-가군이므로 연관층 $\widetilde{\mathfrak{a}}$를 정의하며, 이는 $\mathcal{O}_{\Spec A}=\widetilde A$의 부분 sheaf이다. 일반적인 scheme 위에서는 이를 다음과 같이 정의한다.
 
 ::: 정의 12
 Scheme $X$ 위의 quasi-coherent sheaf $\mathcal{I}$가 *ideal sheaf<sub>아이디얼층</sub>*라는 것은, $\mathcal{I}$가 $\mathcal{O}_X$의 부분 $\mathcal{O}_X$-가군층인 것이다. 즉 각각의 열린집합 $U$에 대하여 $\mathcal{I}(U)$가 ring $\mathcal{O}_X(U)$의 ideal이며, restriction map과 호환되는 것이다.
@@ -245,7 +245,7 @@ $$Y=\{\mathfrak{p}\mid \mathfrak{p}\supseteq \mathfrak{a}\}=Z(\mathfrak{a})$$
 
 ## Locally free sheaf와 invertible sheaf
 
-quasi-coherent sheaf 가운데 국소적으로 free 가군에 대응하는 것들은 vector bundle의 대수기하학적 대응물로서 특히 중요하다.
+Quasi-coherent sheaf 가운데 국소적으로 free 가군에 대응하는 것들은 vector bundle의 대수기하학적 대응물로서 특히 중요하다.
 
 ::: 정의 15
 Scheme $X$ 위의 $\mathcal{O}_X$-가군층 $\mathcal{E}$가 *locally free sheaf of rank $r$<sub>랭크 $r$ 국소 자유층</sub>*라는 것은, 각 점 $x\in X$의 열린근방 $U$가 존재하여 $\mathcal{E}\vert_U\cong \mathcal{O}_U^{\oplus r}$인 것이다. Rank $1$인 locally free sheaf를 *invertible sheaf<sub>가역층</sub>*라 부른다.

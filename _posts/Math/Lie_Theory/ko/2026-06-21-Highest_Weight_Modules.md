@@ -24,7 +24,7 @@ Semisimple Lie algebra $\mathfrak{g}$의 표현론은 Weyl의 완전가약성 �
 
 $$\mathfrak{g}=\mathfrak{h}\oplus\bigoplus_{\alpha\in\Phi}\mathfrak{g}_\alpha$$
 
-는 이미 확립되어 있고, 각 $\mathfrak{g}_\alpha$가 $1$차원이라는 사실도 알고 있다 ([§근계, ⁋정의 5](/ko/math/lie_theory/root_systems#def5) 및 [§근계, ⁋명제 6](/ko/math/lie_theory/root_systems#prop6) 이후의 논의). positive root들의 모임 $\Phi^+\subseteq\Phi$를 하나 고정한다 ([§근계, ⁋정의 15](/ko/math/lie_theory/root_systems#def15)).
+는 이미 확립되어 있고, 각 $\mathfrak{g}_\alpha$가 $1$차원이라는 사실도 알고 있다 ([§근계, ⁋정의 5](/ko/math/lie_theory/root_systems#def5) 및 [§근계, ⁋명제 6](/ko/math/lie_theory/root_systems#prop6) 이후의 논의). Positive root들의 모임 $\Phi^+\subseteq\Phi$를 하나 고정한다 ([§근계, ⁋정의 15](/ko/math/lie_theory/root_systems#def15)).
 
 ::: 정의 1
 Positive root들에 대응하는 root space들의 합
@@ -54,7 +54,7 @@ $$V_\lambda=\{v\in V\mid H\cdot v=\lambda(H)\,v\ \text{ for all }H\in\mathfrak{h
 을 *weight $\lambda$의 weight space*라 부른다. $V_\lambda\neq 0$인 $\lambda$를 $V$의 *weight<sub>무게</sub>*라 하고, $\dim V_\lambda$를 그 weight의 *multiplicity<sub>중복도</sub>*라 부른다. $V=\bigoplus_{\lambda\in\mathfrak{h}^\ast}V_\lambda$로 분해되는 가군을 *weight module<sub>무게 가군</sub>*이라 부른다.
 :::
 
-root space $\mathfrak{g}_\alpha$가 adjoint action에 대한 weight $\alpha$의 weight space라는 점에서, root 분해 자신이 adjoint representation의 weight 분해이다. 일반적인 가군의 action 위에서 root vector들이 weight를 어떻게 옮기는지는 root 분해의 bracket 관계가 그대로 결정한다. 다음 명제는 [§sl₂의 표현론, ⁋명제 2](/ko/math/lie_theory/representations_of_sl2#prop2)에서 $e,f$가 weight를 $\pm2$만큼 옮긴다는 사실을 임의의 root vector로 확장한다.
+Root space $\mathfrak{g}_\alpha$가 adjoint action에 대한 weight $\alpha$의 weight space라는 점에서, root 분해 자신이 adjoint representation의 weight 분해이다. 일반적인 가군의 action 위에서 root vector들이 weight를 어떻게 옮기는지는 root 분해의 bracket 관계가 그대로 결정한다. 다음 명제는 [§sl₂의 표현론, ⁋명제 2](/ko/math/lie_theory/representations_of_sl2#prop2)에서 $e,f$가 weight를 $\pm2$만큼 옮긴다는 사실을 임의의 root vector로 확장한다.
 
 ::: 명제 3
 $\mathfrak{g}$-가군 $V$, weight $\lambda\in\mathfrak{h}^\ast$, 그리고 root $\alpha\in\Phi$에 대하여
@@ -85,7 +85,7 @@ $\mathfrak{n}^+$가 $\Phi^+$의 root vector들로 생성되므로, $\mathfrak{n}
 
 ## Verma module
 
-highest weight $\lambda$를 갖는 가군 가운데 가장 보편적인 것을 구성한다. 발상은 highest weight vector 하나만을 형식적으로 도입하여 그 위에서 $\mathfrak{b}$가 정해진 방식으로 작용하도록 한 뒤, $\mathfrak{g}$ 전체의 action을 보편 포락 대수의 induced module로 자유롭게 풀어주는 것이다. 먼저 $\mathfrak{b}$ 위의 $1$차원 representation을 정한다.
+Highest weight $\lambda$를 갖는 가군 가운데 가장 보편적인 것을 구성한다. 발상은 highest weight vector 하나만을 형식적으로 도입하여 그 위에서 $\mathfrak{b}$가 정해진 방식으로 작용하도록 한 뒤, $\mathfrak{g}$ 전체의 action을 보편 포락 대수의 induced module로 자유롭게 풀어주는 것이다. 먼저 $\mathfrak{b}$ 위의 $1$차원 representation을 정한다.
 
 $\lambda\in\mathfrak{h}^\ast$에 대하여, $1$차원 벡터공간 $\mathbb{C}_\lambda=\mathbb{C}v_\lambda$ 위에 $\mathfrak{b}=\mathfrak{h}\oplus\mathfrak{n}^+$의 action을
 
@@ -101,7 +101,7 @@ $$M(\lambda)=U(\mathfrak{g})\otimes_{U(\mathfrak{b})}\mathbb{C}_\lambda$$
 을 highest weight $\lambda$의 *Verma module<sub>베르마 가군</sub>*이라 부른다. 여기에서 $U(\mathfrak{g})$는 오른쪽 곱으로 $U(\mathfrak{b})$-가군이 되고, $U(\mathfrak{g})$가 왼쪽 곱으로 작용하여 $M(\lambda)$를 $U(\mathfrak{g})$-가군으로 만든다.
 :::
 
-$M(\lambda)$의 generator $v_\lambda^+=1\otimes v_\lambda$는 $M(\lambda)$의 highest weight vector이다. 임의의 $H\in\mathfrak{h}$에 대하여 $H\cdot(1\otimes v_\lambda)=1\otimes(H\cdot v_\lambda)=\lambda(H)(1\otimes v_\lambda)$이고, 마찬가지로 $\mathfrak{n}^+\cdot v_\lambda^+=1\otimes(\mathfrak{n}^+\cdot v_\lambda)=0$이기 때문이다. tensor product에서 $\mathfrak{b}$의 원소를 왼쪽 인자에서 오른쪽 인자로 넘길 수 있다는 점이 이 계산의 핵심이며, 같은 이유로 $M(\lambda)$는 $v_\lambda^+$ 하나로 $U(\mathfrak{g})$-가군으로서 생성된다. 다음 명제는 이 highest weight vector가 갖는 보편성을 정확히 진술한다. 곧 $M(\lambda)$는 highest weight $\lambda$의 highest weight vector를 갖는 가군들의 범주에서 initial object이다.
+$M(\lambda)$의 generator $v_\lambda^+=1\otimes v_\lambda$는 $M(\lambda)$의 highest weight vector이다. 임의의 $H\in\mathfrak{h}$에 대하여 $H\cdot(1\otimes v_\lambda)=1\otimes(H\cdot v_\lambda)=\lambda(H)(1\otimes v_\lambda)$이고, 마찬가지로 $\mathfrak{n}^+\cdot v_\lambda^+=1\otimes(\mathfrak{n}^+\cdot v_\lambda)=0$이기 때문이다. Tensor product에서 $\mathfrak{b}$의 원소를 왼쪽 인자에서 오른쪽 인자로 넘길 수 있다는 점이 이 계산의 핵심이며, 같은 이유로 $M(\lambda)$는 $v_\lambda^+$ 하나로 $U(\mathfrak{g})$-가군으로서 생성된다. 다음 명제는 이 highest weight vector가 갖는 보편성을 정확히 진술한다. 곧 $M(\lambda)$는 highest weight $\lambda$의 highest weight vector를 갖는 가군들의 범주에서 initial object이다.
 
 ::: 명제 6
 $V$가 $\mathfrak{g}$-가군이고 $w\in V$가 highest weight $\lambda$의 highest weight vector이면, $\varphi(v_\lambda^+)=w$를 만족하는 $\mathfrak{g}$-가군 준동형 $\varphi:M(\lambda)\rightarrow V$가 유일하게 존재한다.
@@ -170,17 +170,17 @@ $\lambda\in\mathfrak{h}^\ast$에 대하여 $L(\lambda)$는 highest weight $\lamb
 ::: 증명
 $L(\lambda)$가 irreducible이고 highest weight $\lambda$를 가짐은 [정의 9](#def9) 직후에 확인하였다. 역방향을 보인다. $V$가 highest weight $\lambda$의 highest weight vector $w$로 생성되는 irreducible 가군이라 하자. [명제 6](#prop6)에 의하여 $\varphi(v_\lambda^+)=w$인 $\mathfrak{g}$-morphism $\varphi:M(\lambda)\rightarrow V$가 존재하고, $V$가 $w$로 생성되므로 $\varphi$는 전사이다. 따라서 $V\cong M(\lambda)/\ker\varphi$이다. $V$가 irreducible이므로 $\ker\varphi$는 $M(\lambda)$의 maximal submodule이고, [명제 8](#prop8)에 의해 maximal submodule은 $M^{\mathrm{rad}}(\lambda)$ 하나뿐이므로 $\ker\varphi=M^{\mathrm{rad}}(\lambda)$, 곧 $V\cong L(\lambda)$이다.
 
-highest weight의 유일성을 본다. $V$가 highest weight vector로 생성되는 irreducible 가군이면 위에서 본 대로 $V\cong L(\lambda)$이고, [명제 7](#prop7)에 의하여 $L(\lambda)$의 모든 weight는 $\lambda-\sum_k m_k\beta_k$ ($m_k\geq 0$, $\beta_k\in\Phi^+$)의 꼴이다. 이 weight들 가운데 어떤 다른 weight $\mu$에도 positive root를 더해서는 도달할 수 없는 maximal인 것은 $\lambda$뿐이다. $\lambda$에 positive root를 더하면 $\lambda$보다 위의 weight가 되는데 그러한 weight space는 $0$이기 때문이다. 따라서 $\lambda$는 $V$에 의해 내재적으로 결정되며, $L(\mu)\cong L(\lambda)$이면 양쪽의 이 maximal weight가 같아 $\mu=\lambda$이다.
+Highest weight의 유일성을 본다. $V$가 highest weight vector로 생성되는 irreducible 가군이면 위에서 본 대로 $V\cong L(\lambda)$이고, [명제 7](#prop7)에 의하여 $L(\lambda)$의 모든 weight는 $\lambda-\sum_k m_k\beta_k$ ($m_k\geq 0$, $\beta_k\in\Phi^+$)의 꼴이다. 이 weight들 가운데 어떤 다른 weight $\mu$에도 positive root를 더해서는 도달할 수 없는 maximal인 것은 $\lambda$뿐이다. $\lambda$에 positive root를 더하면 $\lambda$보다 위의 weight가 되는데 그러한 weight space는 $0$이기 때문이다. 따라서 $\lambda$는 $V$에 의해 내재적으로 결정되며, $L(\mu)\cong L(\lambda)$이면 양쪽의 이 maximal weight가 같아 $\mu=\lambda$이다.
 :::
 
 명제 10은 모든 irreducible highest weight 가군이 정확히 $\mathfrak{h}^\ast$의 원소로 색인됨을 말한다. 그러나 임의의 $\lambda\in\mathfrak{h}^\ast$에 대하여 $L(\lambda)$는 일반적으로 무한차원이다. $\sl_2$의 highest weight 사슬이 $\mu$가 음이 아닌 정수일 때에만 유한 단계에서 닫혔던 것처럼 ([§sl₂의 표현론, ⁋명제 4](/ko/math/lie_theory/representations_of_sl2#prop4) 이후의 논의), $L(\lambda)$가 유한차원이 되려면 $\lambda$가 각 simple root 방향으로 정수성 조건을 만족해야 한다. 다음 절에서 그 조건을 정확히 규정한다.
 
 ## 최고 무게 정리
 
-유한차원성의 조건을 simple root별 $\sl_2$-triple로 환원하여 읽어낸다. 각 root $\alpha\in\Phi$는 $\mathfrak{g}$ 안에 $\sl_2$와 isomorphic인 subalgebra $\sl_{2,\alpha}=\langle e_\alpha,f_\alpha,h_\alpha\rangle$를 낳으며, $h_\alpha\in\mathfrak{h}$는 표준 관계 $[h_\alpha,e_\alpha]=2e_\alpha$, $[h_\alpha,f_\alpha]=-2f_\alpha$, $[e_\alpha,f_\alpha]=h_\alpha$를 만족하는 *coroot*이다 ([§근계, ⁋명제 12](/ko/math/lie_theory/root_systems#prop12) 이전의 논의). simple root들을 $\Delta=\{\alpha_1,\ldots,\alpha_l\}$이라 하고 그 coroot을 $h_i=h_{\alpha_i}$, 대응하는 $\sl_2$-triple을 $(e_i,f_i,h_i)$로 적는다.
+유한차원성의 조건을 simple root별 $\sl_2$-triple로 환원하여 읽어낸다. 각 root $\alpha\in\Phi$는 $\mathfrak{g}$ 안에 $\sl_2$와 isomorphic인 subalgebra $\sl_{2,\alpha}=\langle e_\alpha,f_\alpha,h_\alpha\rangle$를 낳으며, $h_\alpha\in\mathfrak{h}$는 표준 관계 $[h_\alpha,e_\alpha]=2e_\alpha$, $[h_\alpha,f_\alpha]=-2f_\alpha$, $[e_\alpha,f_\alpha]=h_\alpha$를 만족하는 *coroot*이다 ([§근계, ⁋명제 12](/ko/math/lie_theory/root_systems#prop12) 이전의 논의). Simple root들을 $\Delta=\{\alpha_1,\ldots,\alpha_l\}$이라 하고 그 coroot을 $h_i=h_{\alpha_i}$, 대응하는 $\sl_2$-triple을 $(e_i,f_i,h_i)$로 적는다.
 
 ::: 정의 11
-weight $\lambda\in\mathfrak{h}^\ast$이 *dominant integral<sub>지배적 정수</sub>* weight이라는 것은 모든 simple root $\alpha_i$에 대하여
+Weight $\lambda\in\mathfrak{h}^\ast$이 *dominant integral<sub>지배적 정수</sub>* weight이라는 것은 모든 simple root $\alpha_i$에 대하여
 
 $$\lambda(h_i)\in\mathbb{Z}_{\geq 0}$$
 

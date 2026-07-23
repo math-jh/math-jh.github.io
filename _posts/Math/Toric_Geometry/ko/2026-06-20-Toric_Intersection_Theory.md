@@ -204,7 +204,7 @@ $$\CH^\ast(\mathbb{P}^n) \cong \mathbb{Z}[\x_0, \ldots, \x_n] / (\x_0 \cdots \x_
 
 $$\CH^\ast(\mathbb{P}^n) \cong \mathbb{Z}[H] / (H^{n+1})$$
 
-을 회복한다. 이는 [\[대수다양체\] §교차곱, ⁋예시 10](/ko/math/algebraic_varieties/intersection_product#ex10)의 결과와 정확히 일치한다. intersection number의 관점에서, 명제 7에 의해 서로 다른 $n$개의 $D_i$의 곱은 그들이 maximal cone을 이루므로 항상 $1$이고, 가령 $D_1 \cdots D_n = [\mathrm{pt}]$이다. 한편 $H^n = D_0^n$은 linear relation으로 $D_0 = D_1 = \cdots$이 되므로 $D_0^n = D_1 D_2 \cdots D_n = 1$로 계산되어 같은 답을 준다.
+을 회복한다. 이는 [\[대수다양체\] §교차곱, ⁋예시 10](/ko/math/algebraic_varieties/intersection_product#ex10)의 결과와 정확히 일치한다. Intersection number의 관점에서, 명제 7에 의해 서로 다른 $n$개의 $D_i$의 곱은 그들이 maximal cone을 이루므로 항상 $1$이고, 가령 $D_1 \cdots D_n = [\mathrm{pt}]$이다. 한편 $H^n = D_0^n$은 linear relation으로 $D_0 = D_1 = \cdots$이 되므로 $D_0^n = D_1 D_2 \cdots D_n = 1$로 계산되어 같은 답을 준다.
 :::
 
 ## 사영선의 곱
@@ -228,7 +228,7 @@ $$\mathcal{I}_{SR} = (\x_1 \x_3,\ \x_2 \x_4)$$
 
 $$\CH^\ast(\mathbb{P}^1 \times \mathbb{P}^1) \cong \mathbb{Z}[H_1, H_2] / (H_1^2,\ H_2^2)$$
 
-을 얻는다. 이는 [\[대수다양체\] §교차곱, ⁋예시 12](/ko/math/algebraic_varieties/intersection_product#ex12)의 결과와 일치한다. intersection number를 직접 확인하면, $\rho_1, \rho_2$는 maximal cone $\sigma_{12}$를 이루므로 명제 7에 의해 $D_1 D_2 = H_1 H_2 = 1 = [\mathrm{pt}]$이고, $\rho_1, \rho_3$은 cone을 이루지 않으므로 $D_1 D_3 = H_1^2 = 0$이다. 따라서 두 곡선 $C = aH_1 + bH_2$, $C' = a'H_1 + b'H_2$의 intersection number는
+을 얻는다. 이는 [\[대수다양체\] §교차곱, ⁋예시 12](/ko/math/algebraic_varieties/intersection_product#ex12)의 결과와 일치한다. Intersection number를 직접 확인하면, $\rho_1, \rho_2$는 maximal cone $\sigma_{12}$를 이루므로 명제 7에 의해 $D_1 D_2 = H_1 H_2 = 1 = [\mathrm{pt}]$이고, $\rho_1, \rho_3$은 cone을 이루지 않으므로 $D_1 D_3 = H_1^2 = 0$이다. 따라서 두 곡선 $C = aH_1 + bH_2$, $C' = a'H_1 + b'H_2$의 intersection number는
 
 $$C \cdot C' = (aH_1 + bH_2)(a'H_1 + b'H_2) = (ab' + a'b)\, H_1 H_2 = ab' + a'b$$
 

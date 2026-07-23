@@ -182,7 +182,7 @@ $$D(w_0, \varepsilon) \subseteq f(U)$$
 이고, $w_0 \in f(U)$이 임의였으므로 $f(U)$의 모든 점이 내부점이다. 곧 $f(U)$이 열려 있다.
 :::
 
-open mapping 정리는 holomorphic function의 image가 결코 찌부러질 수 없음을 말한다. 실변수의 smooth 함수는 가령 상수가 아니면서도 image가 한 구간으로 닫혀 있을 수 있지만, 비상수 holomorphic function의 image에는 그런 일이 없어 항상 열린집합으로 퍼진다. 이 정리에서 두 가지 중요한 귀결이 곧장 나온다. 하나는 단사 holomorphic function의 역사상이 자동으로 holomorphic이 된다는 사실이고, 다른 하나는 최대절댓값 원리의 새로운 증명이다. 먼저 역사상의 holomorphicity를 본다.
+Open mapping 정리는 holomorphic function의 image가 결코 찌부러질 수 없음을 말한다. 실변수의 smooth 함수는 가령 상수가 아니면서도 image가 한 구간으로 닫혀 있을 수 있지만, 비상수 holomorphic function의 image에는 그런 일이 없어 항상 열린집합으로 퍼진다. 이 정리에서 두 가지 중요한 귀결이 곧장 나온다. 하나는 단사 holomorphic function의 역사상이 자동으로 holomorphic이 된다는 사실이고, 다른 하나는 최대절댓값 원리의 새로운 증명이다. 먼저 역사상의 holomorphicity를 본다.
 
 ::: 따름정리 9 (역사상의 holomorphicity)
 $\Omega \subseteq \mathbb{C}$가 열린집합이고 $f : \Omega \rightarrow \mathbb{C}$이 holomorphic인 단사사상이라 하자. 그러면 image $\Omega' = f(\Omega)$이 열린집합이고, 역사상 $f^{-1} : \Omega' \rightarrow \Omega$이 holomorphic이며 그 도함수는
@@ -219,7 +219,7 @@ $\Omega \subseteq \mathbb{C}$가 connected 열린집합이고 $f$이 $\Omega$에
 ::: 증명
 $f$이 상수가 아니라고 가정하고 모순을 이끈다. $f$이 connected 열린집합에서 비상수이므로 open mapping 정리 (정리 8) 에 의해 $f$은 open mapping이다. $\lvert f\rvert$이 $z_0$에서 국소적 최댓값에 이른다 함은, 어떤 근방 $D(z_0, r) \subseteq \Omega$ 안의 모든 $z$에서 $\lvert f(z)\rvert \leq \lvert f(z_0)\rvert$임을 뜻한다. 곧 image $f(D(z_0, r))$이 closed 원판 $\overline{D(0, \lvert f(z_0)\rvert)}$ 안에 들어 있다.
 
-그런데 $w_0 = f(z_0)$은 그 closed 원판의 boundary $\lvert w\rvert = \lvert f(z_0)\rvert$ 위의 점이다. open mapping 정리에서 $f(D(z_0, r))$은 열린집합이므로 $w_0$의 한 근방 $D(w_0, \varepsilon)$을 포함하는데, 이 근방에는 $\lvert w\rvert > \lvert w_0\rvert$인 점 (가령 $w_0$을 원점에서 멀어지는 방향으로 조금 옮긴 점) 이 반드시 들어 있다. 이는 $f(D(z_0, r)) \subseteq \overline{D(0, \lvert f(z_0)\rvert)}$에 어긋난다. 따라서 가정이 틀렸고, $f$은 $\Omega$에서 상수이다.
+그런데 $w_0 = f(z_0)$은 그 closed 원판의 boundary $\lvert w\rvert = \lvert f(z_0)\rvert$ 위의 점이다. Open mapping 정리에서 $f(D(z_0, r))$은 열린집합이므로 $w_0$의 한 근방 $D(w_0, \varepsilon)$을 포함하는데, 이 근방에는 $\lvert w\rvert > \lvert w_0\rvert$인 점 (가령 $w_0$을 원점에서 멀어지는 방향으로 조금 옮긴 점) 이 반드시 들어 있다. 이는 $f(D(z_0, r)) \subseteq \overline{D(0, \lvert f(z_0)\rvert)}$에 어긋난다. 따라서 가정이 틀렸고, $f$은 $\Omega$에서 상수이다.
 :::
 
 따름정리 10은 최대절댓값 원리가 본질적으로 open mapping 정리의 한 표현임을 드러낸다. Holomorphic function의 image가 열려 있다면 image의 어느 점도 원점에서의 거리가 국소적 최대가 될 수 없는데, 그 점 주위로 더 먼 점이 항상 image에 들어 있기 때문이다. 곧 $\lvert f\rvert$의 국소적 최댓값은 image가 열려 있다는 사실과 양립할 수 없고, 이를 피할 유일한 길이 $f$이 상수가 되어 image가 한 점으로 줄어드는 것이다. 평균값 성질을 거친 앞선 증명과 비교하면, 이 증명은 적분 어림 없이 순전히 위상적 논증만으로 같은 결론에 이른다.

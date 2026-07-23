@@ -20,10 +20,10 @@ published: false
 
 ## Hermitian 선다발과 Chern 접속
 
-holomorphic line bundle은 그 자체로 미분기하적 양을 갖지 않으며, 곡률을 말하려면 먼저 fiber에 길이를 재는 계량을 얹어야 한다. complex manifold $X$ 위의 holomorphic line bundle $L$이란 각 점의 fiber가 복소 1차원 벡터공간이고 transition function이 holomorphic인 복소 line bundle이다 ([\[대수다양체\] §선다발과 벡터다발, ⁋정의 1](/ko/math/algebraic_varieties/line_bundles#def1)). 여기에 fiber마다 매끄럽게 변하는 Hermitian 내적을 주는 것이 출발점이다.
+Holomorphic line bundle은 그 자체로 미분기하적 양을 갖지 않으며, 곡률을 말하려면 먼저 fiber에 길이를 재는 계량을 얹어야 한다. Complex manifold $X$ 위의 holomorphic line bundle $L$이란 각 점의 fiber가 복소 1차원 벡터공간이고 transition function이 holomorphic인 복소 line bundle이다 ([\[대수다양체\] §선다발과 벡터다발, ⁋정의 1](/ko/math/algebraic_varieties/line_bundles#def1)). 여기에 fiber마다 매끄럽게 변하는 Hermitian 내적을 주는 것이 출발점이다.
 
 ::: 정의 1
-complex manifold $X$ 위의 holomorphic line bundle $L$의 *Hermitian metric<sub>에르미트 계량</sub>* $h$란, 각 점 $x \in X$의 fiber $L_x$ 위에 Hermitian 내적 $h_x : L_x \times L_x \rightarrow \mathbb{C}$를 매끄럽게 주는 것이다. 곧 국소 holomorphic frame $e$ ($L\vert_U$의 영점 없는 holomorphic section) 에 대하여 양의 함수
+Complex manifold $X$ 위의 holomorphic line bundle $L$의 *Hermitian metric<sub>에르미트 계량</sub>* $h$란, 각 점 $x \in X$의 fiber $L_x$ 위에 Hermitian 내적 $h_x : L_x \times L_x \rightarrow \mathbb{C}$를 매끄럽게 주는 것이다. 곧 국소 holomorphic frame $e$ ($L\vert_U$의 영점 없는 holomorphic section) 에 대하여 양의 함수
 
 $$
 h(e, e) = e^{-\varphi}, \qquad \varphi \in C^\infty(U, \mathbb{R})
@@ -58,7 +58,7 @@ $$
 \partial\, h(e,e) = \theta\, h(e,e), \qquad \bar\partial\, h(e,e) = \bar\theta\, h(e,e)
 $$
 
-가 따라온다. 첫 식에서 $\theta = \dfrac{\partial\, h(e,e)}{h(e,e)} = \partial\log h(e,e)$로 $\theta$가 유일하게 결정되고, 둘째 식은 그 켤레로 자동으로 성립한다. $h(e,e) = e^{-\varphi}$이면 $\theta = \partial(-\varphi) = -\partial\varphi$이다. 역으로 이렇게 정의한 $\theta$가 두 조건을 모두 만족함은 위 계산을 거꾸로 읽으면 된다. frame을 $e' = u e$로 바꾸면 $\theta' = \partial\log(\lvert u\rvert^2 h(e,e)) = \theta + \partial\log u$로 변환하는데, 이는 정확히 connection 형식의 게이지 변환 법칙이므로 국소 정의들이 하나의 대역적 connection $\nabla$로 이어붙는다.
+가 따라온다. 첫 식에서 $\theta = \dfrac{\partial\, h(e,e)}{h(e,e)} = \partial\log h(e,e)$로 $\theta$가 유일하게 결정되고, 둘째 식은 그 켤레로 자동으로 성립한다. $h(e,e) = e^{-\varphi}$이면 $\theta = \partial(-\varphi) = -\partial\varphi$이다. 역으로 이렇게 정의한 $\theta$가 두 조건을 모두 만족함은 위 계산을 거꾸로 읽으면 된다. Frame을 $e' = u e$로 바꾸면 $\theta' = \partial\log(\lvert u\rvert^2 h(e,e)) = \theta + \partial\log u$로 변환하는데, 이는 정확히 connection 형식의 게이지 변환 법칙이므로 국소 정의들이 하나의 대역적 connection $\nabla$로 이어붙는다.
 :::
 
 Chern connection의 곡률은 connection 형식의 exterior derivative로 주어지며, line bundle이므로 그 값은 행렬이 아니라 스칼라값 $2$-형식이 된다. 곡률 $\Theta = d\theta$를 계산하면, $\theta = -\partial\varphi$이므로
@@ -167,7 +167,7 @@ $$
 를 얻는다. 마지막 곡률항은 $L$이 양의 line bundle이라 $i\Theta = 2\pi\,\omega_L$이 양정치 $(1,1)$-형식이므로, $(n, q)$-형식($q > 0$) 위에서 양의 작용소가 된다. 곧 점별로 $([i\Theta, \Lambda]\alpha, \alpha) \geq c\, q\, \lvert \alpha \rvert^2$ ($c > 0$은 곡률의 최소 고윳값에서 오는 상수) 라는 Nakano 양정치 부등식이 성립한다. 그러면 위 등식의 우변은 음이 아닌 세 항의 합인데 그 합이 $0$이므로, 특히 곡률항이 $0$이고 따라서 $\alpha = 0$이다. $q > 0$인 모든 조화 $(n, q)$-형식이 $0$이므로 $H^q(X, K_X \otimes L) = 0$이다.
 :::
 
-이 소멸정리는 양의 line bundle $L$을 점점 더 큰 거듭제곱 $L^{\otimes k}$로 비틀면 더욱 강력해진다. $L$이 양이면 $L^{\otimes k}$의 곡률이 $k\Theta$로 $k$배 양정치이므로, $L^{\otimes k}$도 양의 line bundle이고 소멸정리가 그대로 적용된다. canonical line bundle과의 텐서를 떼어내기 위해 $L^{\otimes k} \otimes K_X^{-1}$에 적용하면, $k$가 충분히 클 때 $L^{\otimes k} \otimes K_X^{-1}$도 여전히 양이므로 $H^q(X, K_X \otimes (L^{\otimes k} \otimes K_X^{-1})) = H^q(X, L^{\otimes k}) = 0$ ($q > 0$) 이 따라온다. 이 고차 cohomology의 소멸이 전역단면의 풍부함을 보장하는 메커니즘이며, embedding 논법의 기관차가 된다. 한편 이 정리는 smooth한 projective variety에 대한 대수적 Kodaira 소멸정리 ([\[대수다양체\] §고다이라 소멸정리, ⁋명제 1](/ko/math/algebraic_varieties/kodaira_vanishing#prop1)) 와 같은 결론을 주며, 그쪽이 Serre 쌍대를 거친 대수적 판본인 반면 여기서는 곡률과 조화형식을 통한 해석적 판본이다.
+이 소멸정리는 양의 line bundle $L$을 점점 더 큰 거듭제곱 $L^{\otimes k}$로 비틀면 더욱 강력해진다. $L$이 양이면 $L^{\otimes k}$의 곡률이 $k\Theta$로 $k$배 양정치이므로, $L^{\otimes k}$도 양의 line bundle이고 소멸정리가 그대로 적용된다. Canonical line bundle과의 텐서를 떼어내기 위해 $L^{\otimes k} \otimes K_X^{-1}$에 적용하면, $k$가 충분히 클 때 $L^{\otimes k} \otimes K_X^{-1}$도 여전히 양이므로 $H^q(X, K_X \otimes (L^{\otimes k} \otimes K_X^{-1})) = H^q(X, L^{\otimes k}) = 0$ ($q > 0$) 이 따라온다. 이 고차 cohomology의 소멸이 전역단면의 풍부함을 보장하는 메커니즘이며, embedding 논법의 기관차가 된다. 한편 이 정리는 smooth한 projective variety에 대한 대수적 Kodaira 소멸정리 ([\[대수다양체\] §고다이라 소멸정리, ⁋명제 1](/ko/math/algebraic_varieties/kodaira_vanishing#prop1)) 와 같은 결론을 주며, 그쪽이 Serre 쌍대를 거친 대수적 판본인 반면 여기서는 곡률과 조화형식을 통한 해석적 판본이다.
 
 ## Kodaira 매장정리
 
@@ -198,7 +198,7 @@ $X$를 콤팩트 complex manifold라 하자. $X$ 위에 양의 line bundle $L$�
 
 정방향이 본질적인 내용이며, 핵심 단계만 제시한다. 목표는 충분히 큰 $k$에서 $L^{\otimes k}$이 [정의 8](#def8)의 세 조건을 만족함을 보이는 것이고, 세 조건 모두 적절한 전역 section의 존재로 환원된 뒤 [정리 7](#thm7)의 소멸로 해결된다.
 
-*점 분리.* 서로 다른 두 점 $x, y \in X$를 분리하려면, $s(x) = 0$이고 $s(y) \neq 0$인 section $s \in \Gamma(X, L^{\otimes k})$를 찾으면 된다. 두 점에서 동시에 소멸하는 section들의 부분공간을 보기 위해, $x, y$를 blow up한 $\pi : \widetilde{X} \rightarrow X$를 도입하고 그 예외인자를 $E_x, E_y$라 하자. blow-up의 canonical line bundle 변화 공식 ([\[대수다양체\] §표준선다발, ⁋명제 12](/ko/math/algebraic_varieties/canonical_bundle#prop12)) 에 의해, $\pi^\ast L^{\otimes k} \otimes \mathcal{O}(-E_x - E_y) \otimes K_{\widetilde{X}}^{-1}$이 $k \gg 0$에서 여전히 양이 되도록 할 수 있다. 그러면 [정리 7](#thm7)을 $\widetilde{X}$ 위에서 적용하여 $H^1(\widetilde{X}, \pi^\ast L^{\otimes k} \otimes \mathcal{O}(-E_x - E_y)) = 0$을 얻고, 이 $H^1$의 소멸이 제한사상
+*점 분리.* 서로 다른 두 점 $x, y \in X$를 분리하려면, $s(x) = 0$이고 $s(y) \neq 0$인 section $s \in \Gamma(X, L^{\otimes k})$를 찾으면 된다. 두 점에서 동시에 소멸하는 section들의 부분공간을 보기 위해, $x, y$를 blow up한 $\pi : \widetilde{X} \rightarrow X$를 도입하고 그 예외인자를 $E_x, E_y$라 하자. Blow-up의 canonical line bundle 변화 공식 ([\[대수다양체\] §표준선다발, ⁋명제 12](/ko/math/algebraic_varieties/canonical_bundle#prop12)) 에 의해, $\pi^\ast L^{\otimes k} \otimes \mathcal{O}(-E_x - E_y) \otimes K_{\widetilde{X}}^{-1}$이 $k \gg 0$에서 여전히 양이 되도록 할 수 있다. 그러면 [정리 7](#thm7)을 $\widetilde{X}$ 위에서 적용하여 $H^1(\widetilde{X}, \pi^\ast L^{\otimes k} \otimes \mathcal{O}(-E_x - E_y)) = 0$을 얻고, 이 $H^1$의 소멸이 제한사상
 
 $$
 \Gamma(X, L^{\otimes k}) \longrightarrow L^{\otimes k}_x \oplus L^{\otimes k}_y
@@ -239,7 +239,7 @@ $X$가 정수 Kähler 류 $[\omega] \in H^2(X, \mathbb{Z})$를 갖는다고 하�
 이제 $\omega$가 $c_1(L)$을 대표하는 양의 $(1,1)$-형식이므로, [명제 5](#prop5)에 의해 $L$은 양의 line bundle이다. [정리 9](#thm9)를 적용하면 $X$는 projective variety이다. 역으로 projective variety는 $\mathcal{O}(1)$의 restriction으로 양의 line bundle을 가지고, 그 Kähler 류 $[\omega_{\mathrm{FS}}\vert_X] = c_1(\mathcal{O}(1)\vert_X)$가 정수류이므로 Hodge manifold이다.
 :::
 
-이 따름정리가 Kodaira 정리의 가장 쓰기 좋은 형태이다. 콤팩트 complex manifold가 사영적인지를 묻는 대신, 그 위에 정수 Kähler 류가 있는지만 확인하면 된다. 그런데 사영적이라는 결론에는 아직 미세한 간격이 있다. embedding $X \hookrightarrow \mathbb{CP}^N$이 주는 것은 $X$가 $\mathbb{CP}^N$의 closed 복소 *해석적* 부분다양체라는 것이지, 곧바로 다항식으로 정의되는 대수적 부분다양체라는 것은 아니다. 이 간격을 메우는 것이 Chow의 정리이다.
+이 따름정리가 Kodaira 정리의 가장 쓰기 좋은 형태이다. 콤팩트 complex manifold가 사영적인지를 묻는 대신, 그 위에 정수 Kähler 류가 있는지만 확인하면 된다. 그런데 사영적이라는 결론에는 아직 미세한 간격이 있다. Embedding $X \hookrightarrow \mathbb{CP}^N$이 주는 것은 $X$가 $\mathbb{CP}^N$의 closed 복소 *해석적* 부분다양체라는 것이지, 곧바로 다항식으로 정의되는 대수적 부분다양체라는 것은 아니다. 이 간격을 메우는 것이 Chow의 정리이다.
 
 ::: 정리 12 (Chow)
 복소사영공간 $\mathbb{CP}^N$의 closed 복소 해석적 부분집합은 모두 algebraic하다. 곧 유한 개의 homogeneous polynomial의 공통 영점으로 주어진다. 따라서 $\mathbb{CP}^N$에 holomorphic embedding된 콤팩트 complex manifold는 smooth한 projective algebraic variety이다.
@@ -262,7 +262,7 @@ Kodaira 판정의 힘은 사영성과 비사영성을 가르는 구체적인 예
 대조적인 예가 복소토러스이다. 모든 복소토러스는 Kähler이지만 ([§Kähler 다양체, ⁋예시 7](/ko/math/complex_geometry/kahler_manifolds#ex7)), 사영적인 것은 그 가운데 일부뿐이다.
 
 ::: 예시 14 (복소토러스와 abelian variety)
-lattice $\Lambda \subseteq \mathbb{C}^n$에 의한 복소토러스 $T = \mathbb{C}^n/\Lambda$를 ([§복소다양체, ⁋예시 7](/ko/math/complex_geometry/complex_manifolds#ex7)) 생각하자. $T$가 사영적이려면 [따름정리 11](#cor11)에 의해 정수 Kähler 류를 가져야 하는데, $T$ 위의 평행이동 불변 Kähler 형식은 $\mathbb{C}^n$ 위의 양의 정부호 Hermitian 형식 $H$로 주어지고, 그 류가 정수류인 것은 $H$의 허수부 $\Img H$가 lattice $\Lambda$ 위에서 정수값을 갖고 $\Lambda \times \Lambda$ 위에서 정수 반대칭형식을 이루는 것과 동치이다. 이 조건이 *Riemann bilinear relations<sub>리만 쌍선형 관계</sub>*이다. Riemann 관계를 만족하는 양의 정부호 $H$가 존재할 때, 그리고 오직 그때 $T$는 사영적이며 이러한 $T$를 *abelian variety<sub>아벨 다양체</sub>*라 한다.
+Lattice $\Lambda \subseteq \mathbb{C}^n$에 의한 복소토러스 $T = \mathbb{C}^n/\Lambda$를 ([§복소다양체, ⁋예시 7](/ko/math/complex_geometry/complex_manifolds#ex7)) 생각하자. $T$가 사영적이려면 [따름정리 11](#cor11)에 의해 정수 Kähler 류를 가져야 하는데, $T$ 위의 평행이동 불변 Kähler 형식은 $\mathbb{C}^n$ 위의 양의 정부호 Hermitian 형식 $H$로 주어지고, 그 류가 정수류인 것은 $H$의 허수부 $\Img H$가 lattice $\Lambda$ 위에서 정수값을 갖고 $\Lambda \times \Lambda$ 위에서 정수 반대칭형식을 이루는 것과 동치이다. 이 조건이 *Riemann bilinear relations<sub>리만 쌍선형 관계</sub>*이다. Riemann 관계를 만족하는 양의 정부호 $H$가 존재할 때, 그리고 오직 그때 $T$는 사영적이며 이러한 $T$를 *abelian variety<sub>아벨 다양체</sub>*라 한다.
 
 차원 $n = 1$에서는 모든 lattice가 Riemann 관계를 만족하므로 모든 복소토러스가 타원곡선으로 사영적이다. 그러나 $n \geq 2$에서는 일반적인 lattice $\Lambda$가 Riemann 관계를 만족하는 $H$를 전혀 허용하지 않는다. 정수 반대칭형식과 양정치 Hermitian 형식을 동시에 맞추는 것은 lattice의 주기에 대한 비자명한 산술적 제약이며, 일반적인 $\Lambda$는 이를 어긴다. 따라서 *generic 복소토러스*는 양의 line bundle을 갖지 않아 사영적이지 않다. 이것이 Kähler이면서 사영적이지 않은 콤팩트 complex manifold의 가장 표준적인 예이며, Kodaira 판정이 빈 정리가 아님을 보여 준다.
 :::

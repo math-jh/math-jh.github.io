@@ -22,7 +22,7 @@ published: false
 ## Idempotent
 
 ::: 정의 1
-ring $A$의 원소 $e\in A$가 $e^2=e$를 만족하면 이를 *idempotent<sub>멱등원</sub>*라 한다. 두 idempotent $e,f$가 $ef=fe=0$을 만족하면 이들이 *orthogonal<sub>직교</sub>*하다고 한다. 또, idempotent $e$가 $A$의 center $C(A)=\{c\in A: cx=xc\text{ for all }x\in A\}$에 속하면 이를 *central idempotent<sub>중심 멱등원</sub>*라 한다.
+Ring $A$의 원소 $e\in A$가 $e^2=e$를 만족하면 이를 *idempotent<sub>멱등원</sub>*라 한다. 두 idempotent $e,f$가 $ef=fe=0$을 만족하면 이들이 *orthogonal<sub>직교</sub>*하다고 한다. 또, idempotent $e$가 $A$의 center $C(A)=\{c\in A: cx=xc\text{ for all }x\in A\}$에 속하면 이를 *central idempotent<sub>중심 멱등원</sub>*라 한다.
 :::
 
 임의의 ring은 두 idempotent $0$과 $1$을 가지며, 이 둘은 항상 central이다. 이들을 *trivial<sub>자명한</sub>* idempotent이라 부른다. Idempotent $e$가 주어지면 $1-e$ 또한 idempotent인데, 이는
@@ -32,7 +32,7 @@ $$(1-e)^2=1-2e+e^2=1-2e+e=1-e$$
 로부터 따라온다. 더욱이 $e(1-e)=e-e^2=0$이고 $(1-e)e=e-e^2=0$이므로 $e$와 $1-e$는 서로 orthogonal하다. 우리는 $e$를 *complementary idempotent* $1-e$와 짝지어 다룰 것이며, $e$가 central인 것과 $1-e$가 central인 것은 동치이다.
 
 ::: 예시 2
-ring $A=\mathbb{Z}/6\mathbb{Z}$를 보자. 이 ring에서 $x^2=x$를 만족하는 원소는 $0,1,3,4$인데, 가령 $3^2=9=3$, $4^2=16=4$이다. 한편 $3+4=7=1$이고 $3\cdot 4=12=0$이므로, $3$과 $4$는 서로 complementary한 orthogonal idempotent이며 그 합은 $1$이다. $A$가 commutative이므로 이 둘은 자동으로 central이다.
+Ring $A=\mathbb{Z}/6\mathbb{Z}$를 보자. 이 ring에서 $x^2=x$를 만족하는 원소는 $0,1,3,4$인데, 가령 $3^2=9=3$, $4^2=16=4$이다. 한편 $3+4=7=1$이고 $3\cdot 4=12=0$이므로, $3$과 $4$는 서로 complementary한 orthogonal idempotent이며 그 합은 $1$이다. $A$가 commutative이므로 이 둘은 자동으로 central이다.
 
 반면 $\mathbb{Z}/4\mathbb{Z}$에서는 $x^2=x$를 푸는 원소가 $0,1$뿐이다. 즉 trivial idempotent만 존재한다.
 :::
@@ -44,7 +44,7 @@ ring $A=\mathbb{Z}/6\mathbb{Z}$를 보자. 이 ring에서 $x^2=x$를 만족하�
 여러 개의 idempotent를 한꺼번에 다루기 위해 다음 개념을 도입한다.
 
 ::: 정의 3
-ring $A$의 원소들 $e_1,\ldots, e_n$이 다음 세 조건
+Ring $A$의 원소들 $e_1,\ldots, e_n$이 다음 세 조건
 
 $$e_i^2=e_i\ (\text{모든 }i),\qquad e_ie_j=0\ (i\neq j),\qquad e_1+\cdots+e_n=1$$
 
@@ -90,10 +90,10 @@ $$e_i\cdot(ae_i)=(e_ia)e_i=(ae_i)e_i=ae_i^2=ae_i$$
 
 ## Central idempotent과 곱분해
 
-이제 central한 complete set이 ring의 direct product 분해와 정확히 대응함을 보인다. ring $A$가 ring들 $A_1,\ldots, A_n$의 direct product $A\cong A_1\times\cdots\times A_n$으로 쓰인다는 것은, 성분별 덧셈과 곱셈을 갖는 product ring $\prod A_i$로의 ring isomorphism이 존재함을 뜻한다.
+이제 central한 complete set이 ring의 direct product 분해와 정확히 대응함을 보인다. Ring $A$가 ring들 $A_1,\ldots, A_n$의 direct product $A\cong A_1\times\cdots\times A_n$으로 쓰인다는 것은, 성분별 덧셈과 곱셈을 갖는 product ring $\prod A_i$로의 ring isomorphism이 존재함을 뜻한다.
 
 ::: 정리 5
-ring $A$에 대하여 다음 두 자료 사이에 일대일대응이 존재한다.
+Ring $A$에 대하여 다음 두 자료 사이에 일대일대응이 존재한다.
 
 1. $A$의 central한 orthogonal idempotent의 complete set $\{e_1,\ldots, e_n\}$.
 2. $A$를 $n$개의 nonzero two-sided ideal의 direct sum $A=\mathfrak{a}_1\oplus\cdots\oplus\mathfrak{a}_n$으로 쓰는 분해. 단, 이는 ring의 direct product 분해 $A\cong\prod_{i=1}^n \mathfrak{a}_i$를 준다.
@@ -101,7 +101,7 @@ ring $A$에 대하여 다음 두 자료 사이에 일대일대응이 존재한�
 이 대응에서 $\mathfrak{a}_i=Ae_i$이고, 거꾸로 $e_i$는 분해 $1=e_1+\cdots+e_n$의 $i$번째 성분, 즉 $\mathfrak{a}_i$의 항등원이다.
 :::
 ::: 증명
-$(1)\Rightarrow(2)$. Central한 complete set $\{e_1,\ldots, e_n\}$이 주어졌다 하자. [명제 4](#prop4)에 의해 $\mathfrak{a}_i:=Ae_i$는 two-sided ideal이고 $A=\mathfrak{a}_1\oplus\cdots\oplus\mathfrak{a}_n$은 left module로서의 direct sum이다. morphism
+$(1)\Rightarrow(2)$. Central한 complete set $\{e_1,\ldots, e_n\}$이 주어졌다 하자. [명제 4](#prop4)에 의해 $\mathfrak{a}_i:=Ae_i$는 two-sided ideal이고 $A=\mathfrak{a}_1\oplus\cdots\oplus\mathfrak{a}_n$은 left module로서의 direct sum이다. Morphism
 
 $$\varphi:A\longrightarrow \prod_{i=1}^n Ae_i,\qquad \varphi(x)=(xe_1,\ldots, xe_n)$$
 
@@ -129,7 +129,7 @@ $$x=x\cdot 1=xe_1+\cdots+xe_n$$
 가환환의 경우 모든 idempotent가 자동으로 central이므로, 정리의 대응은 단순히 "orthogonal idempotent의 complete set ↔ 곱분해"가 된다. Noncommutative한 경우에는 centrality 조건이 본질적이다. 다음 예시는 centrality가 빠지면 곱분해 대신 module 분해만 남음을 보여준다.
 
 ::: 예시 6
-ring $R$에 대하여 $n\times n$ matrix ring $A=M_n(R)$을 생각하자. $E_{ij}$를 $(i,j)$ 성분이 $1$이고 나머지가 $0$인 matrix unit이라 하면, 대각 성분들 $E_{11},\ldots, E_{nn}$은
+Ring $R$에 대하여 $n\times n$ matrix ring $A=M_n(R)$을 생각하자. $E_{ij}$를 $(i,j)$ 성분이 $1$이고 나머지가 $0$인 matrix unit이라 하면, 대각 성분들 $E_{11},\ldots, E_{nn}$은
 
 $$E_{ii}^2=E_{ii},\qquad E_{ii}E_{jj}=0\ (i\neq j),\qquad E_{11}+\cdots+E_{nn}=I$$
 
@@ -153,7 +153,7 @@ $$B=\left\{\diag(M_1,\ldots, M_r):M_k\in M_{n_k}(R)\right\}\cong\prod_{k=1}^r M_
 이제 앞선 글의 중국인의 나머지정리를 idempotent의 관점에서 다시 본다. 핵심은 pairwise comaximal 조건이 product ring의 자연스러운 idempotent들을 $A$ 안으로 끌어온다는 것이다.
 
 ::: 정리 7
-ring $A$와 그 two-sided ideal들 $\mathfrak{a}_1,\ldots, \mathfrak{a}_n$이 주어졌다 하고, $i\neq j$에 대해 항상 $\mathfrak{a}_i+\mathfrak{a}_j=A$ (즉 pairwise comaximal)라 하자. 그럼 자연스러운 morphism
+Ring $A$와 그 two-sided ideal들 $\mathfrak{a}_1,\ldots, \mathfrak{a}_n$이 주어졌다 하고, $i\neq j$에 대해 항상 $\mathfrak{a}_i+\mathfrak{a}_j=A$ (즉 pairwise comaximal)라 하자. 그럼 자연스러운 morphism
 
 $$\pi:A\longrightarrow\prod_{i=1}^n A/\mathfrak{a}_i,\qquad \pi(x)=(x+\mathfrak{a}_1,\ldots, x+\mathfrak{a}_n)$$
 
@@ -167,7 +167,7 @@ $$\frac{A}{\bigcap_{i=1}^n\mathfrak{a}_i}\cong\prod_{i=1}^n A/\mathfrak{a}_i$$
 이는 앞선 글에서 ([§중국인의 나머지정리, ⁋명제 6](/ko/math/ring_theory/chinese_remainder_theorem#prop6)) 증명되었다. 간략히 다시 적으면, $\ker\pi=\bigcap\mathfrak{a}_i$임은 정의에서 곧바로 따라오고, 전사성은 각 $i$에 대하여 $e_i\equiv 1\pmod{\mathfrak{a}_i}$, $e_i\equiv 0\pmod{\mathfrak{a}_j}$ ($j\ne i$)인 원소를 pairwise comaximal 조건 $1=u_{ij}+v_{ij}$로부터 $e_i=\prod_{j\ne i}v_{ij}$로 명시적으로 만든 뒤 $x=\sum_i x_ie_i$로 목표값을 맞추는 방식으로 얻어진다. 마지막의 isomorphism은 first isomorphism theorem의 직접적 귀결이다.
 :::
 
-이 정리가 [정리 5](#thm5)의 곱분해를 어떻게 만들어내는지 살펴보자. $\bigcap\mathfrak{a}_i=0$이라 가정하면 $\pi:A\xrightarrow{\sim}\prod A/\mathfrak{a}_i$는 ring isomorphism이다. product ring $\prod A/\mathfrak{a}_i$에는 자연스러운 central complete set이 있는데, 바로 $i$번째 성분만 $1$이고 나머지가 $0$인 원소
+이 정리가 [정리 5](#thm5)의 곱분해를 어떻게 만들어내는지 살펴보자. $\bigcap\mathfrak{a}_i=0$이라 가정하면 $\pi:A\xrightarrow{\sim}\prod A/\mathfrak{a}_i$는 ring isomorphism이다. Product ring $\prod A/\mathfrak{a}_i$에는 자연스러운 central complete set이 있는데, 바로 $i$번째 성분만 $1$이고 나머지가 $0$인 원소
 
 $$\bar e_i=(0,\ldots, 0,\underset{i}{1},0,\ldots, 0)$$
 
@@ -184,7 +184,7 @@ $$\mathbb{Z}/n\mathbb{Z}\cong\prod_{k=1}^r\mathbb{Z}/p_k^{a_k}\mathbb{Z}$$
 
 을 얻는다. 이것이 고전적인 중국인의 나머지정리이다.
 
-구체적으로 $n=6=2\cdot 3$인 경우를 보면 $\mathbb{Z}/6\mathbb{Z}\cong\mathbb{Z}/2\mathbb{Z}\times\mathbb{Z}/3\mathbb{Z}$이다. product ring $\mathbb{Z}/2\mathbb{Z}\times\mathbb{Z}/3\mathbb{Z}$의 두 idempotent $\bar e_1=(1,0)$, $\bar e_2=(0,1)$을 isomorphism으로 끌어오면, $\mathbb{Z}/6\mathbb{Z}$에서 $(1,0)$에 대응하는 원소는 $3$, $(0,1)$에 대응하는 원소는 $4$이다. 실제로 $3\equiv 1\ (\mathrm{mod}\ 2)$, $3\equiv 0\ (\mathrm{mod}\ 3)$이고 $4\equiv 0\ (\mathrm{mod}\ 2)$, $4\equiv 1\ (\mathrm{mod}\ 3)$이다. 이는 [예시 2](#ex2)에서 손으로 찾은 idempotent $3,4$와 정확히 일치한다.
+구체적으로 $n=6=2\cdot 3$인 경우를 보면 $\mathbb{Z}/6\mathbb{Z}\cong\mathbb{Z}/2\mathbb{Z}\times\mathbb{Z}/3\mathbb{Z}$이다. Product ring $\mathbb{Z}/2\mathbb{Z}\times\mathbb{Z}/3\mathbb{Z}$의 두 idempotent $\bar e_1=(1,0)$, $\bar e_2=(0,1)$을 isomorphism으로 끌어오면, $\mathbb{Z}/6\mathbb{Z}$에서 $(1,0)$에 대응하는 원소는 $3$, $(0,1)$에 대응하는 원소는 $4$이다. 실제로 $3\equiv 1\ (\mathrm{mod}\ 2)$, $3\equiv 0\ (\mathrm{mod}\ 3)$이고 $4\equiv 0\ (\mathrm{mod}\ 2)$, $4\equiv 1\ (\mathrm{mod}\ 3)$이다. 이는 [예시 2](#ex2)에서 손으로 찾은 idempotent $3,4$와 정확히 일치한다.
 :::
 
 마지막으로, 곱으로 더 쪼갤 수 없는 경우와의 대비를 명시해 둔다.

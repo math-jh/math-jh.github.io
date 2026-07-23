@@ -110,7 +110,7 @@ $$AQ=(Av_1\mid\cdots\mid Av_n)=(\lambda_1v_1\mid\cdots\mid\lambda_nv_n)=QD$$
 이고, 여기서 $D=\diag(\lambda_1,\ldots,\lambda_n)$이다. 양변에 오른쪽에서 $Q^t=Q^{-1}$을 곱하면 $A=QDQ^t$를 얻는다. 
 :::
 
-spectrum 정리는 또한 서로 다른 고윳값에 해당하는 고유공간들이 자동으로 직교함을 보여준다. 
+Spectrum 정리는 또한 서로 다른 고윳값에 해당하는 고유공간들이 자동으로 직교함을 보여준다. 
 
 ::: 따름정리 7
 $\mathbb{R}$-내적공간 $V$ 위의 self-adjoint operator $L$의 서로 다른 두 고윳값 $\lambda\neq\mu$와 이에 해당하는 고유벡터 $v,w$에 대하여, $\langle v,w\rangle=0$이다. 따라서 $V$는 고유공간들의 직교하는 direct sum으로 분해된다. 

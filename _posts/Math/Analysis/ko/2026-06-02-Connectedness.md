@@ -64,12 +64,12 @@ U \cap V \cap E_\alpha &\subseteq U \cap V \cap E = \varnothing.
 거리공간 $X$의 점 $x$에 대하여, $x$를 포함하는 $X$의 모든 connected 부분집합의 합집합을 $x$의 *connected component<sub>연결성분</sub>*라 한다.
 :::
 
-connected component는 [명제 3](#prop3)에 의해 그 자체로 connected이며, $x$를 포함하는 연결집합 중 maximal인 것이다. 서로 다른 두 점의 connected component는 같거나 서로소이므로, connected component들은 $X$를 분할한다. 가령 $\mathbb{Q}$의 각 점의 connected component는 그 점 하나뿐인 집합이며 (이런 공간을 완전부정연결<sub>totally disconnected</sub>이라 한다), $\mathbb{R} \setminus \{0\}$의 connected component는 두 반직선 $(-\infty, 0)$과 $(0, \infty)$이다.
+Connected component는 [명제 3](#prop3)에 의해 그 자체로 connected이며, $x$를 포함하는 연결집합 중 maximal인 것이다. 서로 다른 두 점의 connected component는 같거나 서로소이므로, connected component들은 $X$를 분할한다. 가령 $\mathbb{Q}$의 각 점의 connected component는 그 점 하나뿐인 집합이며 (이런 공간을 완전부정연결<sub>totally disconnected</sub>이라 한다), $\mathbb{R} \setminus \{0\}$의 connected component는 두 반직선 $(-\infty, 0)$과 $(0, \infty)$이다.
 
 
 ## 연결성의 보존과 중간값 정리
 
-컴팩트성과 마찬가지로 연결성도 연속함수가 보존하는 위상적 성질이다 ([§연속함수의 성질](/ko/math/analysis/continuous_functions)에서 컴팩트성의 보존을 보았다). 핵심 착상은, 상에서의 분할이 있다면 preimage를 취해 정의역에서의 분할을 만들 수 있다는 점이다. preimage가 열린집합을 열린집합으로 되돌린다는 사실 — 곧 연속성의 위상적 특징화 — 이 그대로 동력이 된다.
+컴팩트성과 마찬가지로 연결성도 연속함수가 보존하는 위상적 성질이다 ([§연속함수의 성질](/ko/math/analysis/continuous_functions)에서 컴팩트성의 보존을 보았다). 핵심 착상은, 상에서의 분할이 있다면 preimage를 취해 정의역에서의 분할을 만들 수 있다는 점이다. Preimage가 열린집합을 열린집합으로 되돌린다는 사실 — 곧 연속성의 위상적 특징화 — 이 그대로 동력이 된다.
 
 ::: 정리 5
 $f : X \rightarrow Y$가 연속이고 $E \subseteq X$가 connected이면, 상 $f(E)$도 connected이다.

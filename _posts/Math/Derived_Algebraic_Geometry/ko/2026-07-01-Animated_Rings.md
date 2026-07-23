@@ -40,17 +40,17 @@ $$N(M)_n=M_n/D_n,\qquad \partial=\sum_{i=0}^{n}(-1)^id_i:N(M)_n\rightarrow N(M)_
 로 정의한다. 이는 non-negatively graded, 곧 connective한 사슬 복합체이다.
 :::
 
-여기서 교대합 $\sum(-1)^id_i$가 $D_n$을 $D_{n-1}$로 보내 quotient 위에 잘 내려오고 $\partial^2=0$이 simplicial identity로부터 따르는 것은 직접 확인된다 ([\[호몰로지 대수학\] §호몰로지](/ko/math/homological_algebra/homology)의 사슬 복합체 형식). $N(M)_n$은 동형으로 $\bigcap_{i=0}^{n-1}\ker(d_i)\subseteq M_n$과 일치하며, 이 부분모듈 위에서 $\partial$은 남은 마지막 face $(-1)^nd_n$으로 주어진다. normalization이 담아내는 정보가 얼마나 손실 없는지를 말해 주는 것이 다음의 고전적 정리이다.
+여기서 교대합 $\sum(-1)^id_i$가 $D_n$을 $D_{n-1}$로 보내 quotient 위에 잘 내려오고 $\partial^2=0$이 simplicial identity로부터 따르는 것은 직접 확인된다 ([\[호몰로지 대수학\] §호몰로지](/ko/math/homological_algebra/homology)의 사슬 복합체 형식). $N(M)_n$은 동형으로 $\bigcap_{i=0}^{n-1}\ker(d_i)\subseteq M_n$과 일치하며, 이 부분모듈 위에서 $\partial$은 남은 마지막 face $(-1)^nd_n$으로 주어진다. Normalization이 담아내는 정보가 얼마나 손실 없는지를 말해 주는 것이 다음의 고전적 정리이다.
 
 ::: 정리 3 (Dold–Kan)
-normalization 사슬 복합체 functor는 simplicial $A$-module들의 범주와 connective 사슬 복합체들의 범주 사이의 범주 동치
+Normalization 사슬 복합체 functor는 simplicial $A$-module들의 범주와 connective 사슬 복합체들의 범주 사이의 범주 동치
 
 $$N:\operatorname{sMod}_A\overset{\sim}{\longrightarrow}\operatorname{Ch}_{\geq0}(A)$$
 
 를 준다. 더욱이 이 동치는 simplicial homotopy를 사슬 homotopy로, 따라서 약한 동치를 quasi-isomorphism으로 대응시킨다.
 :::
 ::: 증명
-inverse functor $\Gamma:\operatorname{Ch}_{\geq0}(A)\rightarrow\operatorname{sMod}_A$를 명시적으로 구성한다. Connective 복합체 $C$에 대하여
+Inverse functor $\Gamma:\operatorname{Ch}_{\geq0}(A)\rightarrow\operatorname{sMod}_A$를 명시적으로 구성한다. Connective 복합체 $C$에 대하여
 
 $$\Gamma(C)_n=\bigoplus_{[n]\twoheadrightarrow[k]}C_k$$
 

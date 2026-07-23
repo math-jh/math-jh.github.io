@@ -18,7 +18,7 @@ weight: 7
 
 ## Category with models
 
-homology 이론을 전개할 때 우리는 보통 $n$-simplex들을 사용하게 되며, 이들은 우리가 $\Top$의 임의의 원소들을 살펴보는데 도움이 된다. 이를 다음과 같이 정의로 삼을 수 있다. 
+Homology 이론을 전개할 때 우리는 보통 $n$-simplex들을 사용하게 되며, 이들은 우리가 $\Top$의 임의의 원소들을 살펴보는데 도움이 된다. 이를 다음과 같이 정의로 삼을 수 있다. 
 
 ::: 정의 1
 *Category with models<sub>모델을 갖는 범주</sub>*는 category $\mathcal{A}$와, $\mathcal{A}$의 object들의 모임 $\mathcal{M}$으로 이루어진 pair $(\mathcal{A},\mathcal{M})$을 뜻한다. 이 때, $\mathcal{M}$에 속하는 object들을 우리는 *model<sub>모델</sub>*들이라 부른다.

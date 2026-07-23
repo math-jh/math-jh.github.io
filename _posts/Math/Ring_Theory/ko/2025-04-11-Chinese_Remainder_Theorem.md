@@ -220,7 +220,7 @@ $$\mathfrak{b}_1\cap \cdots\cap \mathfrak{b}_n=\sum_{\sigma\in S_n} \mathfrak{b}
 ::: 증명
 [명제 5](#prop5)와 마찬가지로 귀납법으로 증명한다. 항상 $\sum_{\sigma\in S_n}\mathfrak{b}_{\sigma(1)}\cdots\mathfrak{b}_{\sigma(n)}\subseteq\mathfrak{b}_1\cap\cdots\cap\mathfrak{b}_n$이므로 역포함만 보이면 된다.
 
-우선 $n=2$라 하자. pairwise comaximal 조건에서 $1=b_1+b_2$ ($b_i\in\mathfrak{b}_i$)인 원소를 택하면, 임의의 $x\in\mathfrak{b}_1\cap\mathfrak{b}_2$에 대하여
+우선 $n=2$라 하자. Pairwise comaximal 조건에서 $1=b_1+b_2$ ($b_i\in\mathfrak{b}_i$)인 원소를 택하면, 임의의 $x\in\mathfrak{b}_1\cap\mathfrak{b}_2$에 대하여
 
 $$x=x\cdot 1=x(b_1+b_2)=xb_1+xb_2\in \mathfrak{b}_1\mathfrak{b}_2+\mathfrak{b}_2\mathfrak{b}_1$$
 

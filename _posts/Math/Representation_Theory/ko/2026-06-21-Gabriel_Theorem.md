@@ -14,7 +14,7 @@ weight: 14
 published: false
 ---
 
-유한차원 representation을 이해하는 문제는 indecomposable들을 분류하는 문제로 환원되며 ([§Krull–Schmidt 정리, ⁋정리 6](/ko/math/representation_theory/krull_schmidt#thm6)), 따라서 가장 먼저 물어야 할 것은 주어진 quiver가 과연 유한개의 indecomposable만을 가지는가이다. *Gabriel 정리*는 이 물음에 완벽하게 답한다. connected quiver $Q$가 isomorphism을 무시하여 유한개의 indecomposable representation만을 가지는 것은, $Q$의 화살표 방향을 잊은 underlying graph가 정확히 type $A_n$, $D_n$, $E_6$, $E_7$, $E_8$의 Dynkin diagram인 것과 동치이다. 더 나아가 이 경우 각 indecomposable은 그 차원벡터에 의하여 완전히 결정되며, 이 차원벡터들은 정확히 연관 root system의 positive root들이다. 곧 representation 이론의 분류 문제가 finite root system의 분류, 곧 ADE 분류와 정확히 포개진다. 이 글에서는 이 대응을 통제하는 Tits 이차형식을 도입하고, reflection functor를 도구로 삼아 정리의 골격을 제시한 뒤 선형 $A_3$ quiver에서 그 내용을 구체적으로 확인한다.
+유한차원 representation을 이해하는 문제는 indecomposable들을 분류하는 문제로 환원되며 ([§Krull–Schmidt 정리, ⁋정리 6](/ko/math/representation_theory/krull_schmidt#thm6)), 따라서 가장 먼저 물어야 할 것은 주어진 quiver가 과연 유한개의 indecomposable만을 가지는가이다. *Gabriel 정리*는 이 물음에 완벽하게 답한다. Connected quiver $Q$가 isomorphism을 무시하여 유한개의 indecomposable representation만을 가지는 것은, $Q$의 화살표 방향을 잊은 underlying graph가 정확히 type $A_n$, $D_n$, $E_6$, $E_7$, $E_8$의 Dynkin diagram인 것과 동치이다. 더 나아가 이 경우 각 indecomposable은 그 차원벡터에 의하여 완전히 결정되며, 이 차원벡터들은 정확히 연관 root system의 positive root들이다. 곧 representation 이론의 분류 문제가 finite root system의 분류, 곧 ADE 분류와 정확히 포개진다. 이 글에서는 이 대응을 통제하는 Tits 이차형식을 도입하고, reflection functor를 도구로 삼아 정리의 골격을 제시한 뒤 선형 $A_3$ quiver에서 그 내용을 구체적으로 확인한다.
 
 이 글에서 $k$는 field를 가리키고, $Q=(Q_0,Q_1,s,t)$는 oriented cycle을 가지지 않으며 ([§Quiver와 경로대수, ⁋명제 5](/ko/math/representation_theory/path_algebras#prop5)) underlying graph가 connected인 유한 quiver이다. Representation이라 하면 유한차원 representation을 뜻하고 ([§Quiver와 경로대수, ⁋정의 9](/ko/math/representation_theory/path_algebras#def9)), $Q_0=\{1,\ldots,n\}$으로 둔다. Reflection functor $S_k^\pm$, Coxeter functor $C^\pm$, preprojective module, 그리고 Euler form과 Tits form의 정의는 [§반사 함자](/ko/math/representation_theory/reflection_functors)를 따르며, root system과 그 위의 reflection, positive root, 이차형식의 일반론은 [\[리 이론\] §근계](/ko/math/lie_theory/root_systems)를 따른다.
 
@@ -33,7 +33,7 @@ $$q(d)=\langle d,d\rangle=\sum_{i\in Q_0}d_i^2-\sum_{\alpha\in Q_1}d_{s(\alpha)}
 Tits form은 화살표의 방향에 의존하지 않는다. $q(d)=\sum_i d_i^2-\sum_\alpha d_{s(\alpha)}d_{t(\alpha)}$에서 둘째 합의 각 항 $d_{s(\alpha)}d_{t(\alpha)}$는 곱이므로 $\alpha$의 방향을 뒤집어도 값이 같고, 따라서 $q$는 $Q$의 underlying graph와 그 위의 multiple edge 수에만 의존한다. 대칭화 $(-,-)$에 대하여 표준 기저벡터 $e_k$가 $(e_k,e_k)=2\langle e_k,e_k\rangle=2$를 만족하므로 ($Q$에 loop가 없어 $\langle e_k,e_k\rangle=1$), 각 vertex $k$는 root lattice의 simple root처럼 행동하고 reflection $s_k(d)=d-(d,e_k)e_k$가 정의된다 ([§반사 함자, ⁋정의 6](/ko/math/representation_theory/reflection_functors#def6)). 이 형식이 언제 positive definite인지가 핵심이며, 그 답이 곧 ADE 분류이다.
 
 ::: 명제 2
-connected quiver $Q$에 대하여 다음이 동치이다.
+Connected quiver $Q$에 대하여 다음이 동치이다.
 
 1. Tits form $q$가 positive definite이다. 곧 모든 $0\neq d\in\mathbb{Z}^n$에 대하여 $q(d)>0$이다.
 2. $Q$의 underlying graph가 type $A_n$, $D_n$, $E_6$, $E_7$, $E_8$의 Dynkin diagram 가운데 하나이다.

@@ -204,7 +204,7 @@ $$I=[\id_V]^{\mathcal{B}}_{\mathcal{B}}=[\id_V]_{\mathcal{B}}^{\mathcal{B}'}[\id
 
 으로부터 이러한 행렬은 항상 가역이라는 것을 알 수 있다.
 
-change of basis matrix가 어떤 방식으로 작동하는지를 살펴보기 위해 유한차원 $\mathbb{K}$-벡터공간 $V$를 고정하고, $V$ 위에 정의된 두 basis $\mathcal{B},\mathcal{B}'$가 주어졌다 하자. 선형대수학의 기본정리는 다음의 diagram이 commute한다는 것을 의미한다.
+Change of basis matrix가 어떤 방식으로 작동하는지를 살펴보기 위해 유한차원 $\mathbb{K}$-벡터공간 $V$를 고정하고, $V$ 위에 정의된 두 basis $\mathcal{B},\mathcal{B}'$가 주어졌다 하자. 선형대수학의 기본정리는 다음의 diagram이 commute한다는 것을 의미한다.
 
 ![change_of_basis](/assets/images/Math/Linear_Algebra/Change_of_Basis-1.svg){:style="width:5.93em" class="invert" .align-center}
 

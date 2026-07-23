@@ -223,7 +223,7 @@ $$\Hom_G(W, V)=\Hom_G\left(W, \bigoplus V_j\right)\cong \bigoplus \Hom_G(W, V_j)
 
 이 정의는 일반론과 일치한다. $d_W$의 image는 $W$와 isomorphic한 $V$의 simple submodule들이 생성하는 부분공간이므로 정확히 [\[환론\] §Semisimple module, ⁋정의 7](/ko/math/ring_theory/semisimple_modules#def7)의 $W$-isotypic component이고, [같은 글, ⁋명제 8](/ko/math/ring_theory/semisimple_modules#prop8)에 의해 이 분해는 irreducible decomposition의 선택과 무관하게 canonical하다.
 
-representation의 유일성 또한 이제 [\[환론\] §Semisimple module, ⁋명제 9](/ko/math/ring_theory/semisimple_modules#prop9)로부터 얻어진다. 즉, 우리는 임의의 representation $V$가 주어졌을 때 이를 다음의 decomposition
+Representation의 유일성 또한 이제 [\[환론\] §Semisimple module, ⁋명제 9](/ko/math/ring_theory/semisimple_modules#prop9)로부터 얻어진다. 즉, 우리는 임의의 representation $V$가 주어졌을 때 이를 다음의 decomposition
 
 $$V=V_1^{\oplus r_1}\oplus\cdots\oplus V_k^{\oplus r_k}$$
 

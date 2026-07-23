@@ -55,7 +55,7 @@ $$\bar\nabla_X Y = (\bar\nabla_X Y)^\top + (\bar\nabla_X Y)^\perp = \nabla_X Y +
 이라는 분해를 *Gauss 공식<sub>Gauss formula</sub>*이라 부른다. 그 법성분에 이름을 붙인다.
 
 ::: 정의 2
-embedding된 submanifold $M \subseteq \bar M$에 대해, $M$ 위의 벡터장 $X, Y$의 *second fundamental form<sub>제2기본형식</sub>* $\mathrm{II}(X, Y)$는 주변 미분의 법성분
+Embedding된 submanifold $M \subseteq \bar M$에 대해, $M$ 위의 벡터장 $X, Y$의 *second fundamental form<sub>제2기본형식</sub>* $\mathrm{II}(X, Y)$는 주변 미분의 법성분
 
 $$\mathrm{II}(X, Y) := (\bar\nabla_X Y)^\perp = \bar\nabla_X Y - \nabla_X Y$$
 
@@ -128,7 +128,7 @@ Weingarten 방정식은 제2기본형식 $\mathrm{II}$와 Weingarten 사상 $S_\
 제2기본형식의 가장 중요한 귀결은 $M$의 내재적 곡률과 $\bar M$의 곡률 사이의 관계이다. [§리만 곡률, ⁋정의 2](/ko/math/riemannian_geometry/curvature#def2)에서 곡률 텐서를 $R(X, Y) Z = \nabla_X \nabla_Y Z - \nabla_Y \nabla_X Z - \nabla_{[X, Y]} Z$로 정의했음을 상기하자. $\bar M$의 곡률 텐서 $\bar R$도 같은 식으로 $\bar\nabla$으로부터 정의된다. 이 둘의 차이가 정확히 제2기본형식의 이차식으로 통제된다.
 
 ::: 정리 6 (Gauss 방정식)
-embedding된 submanifold $M \subseteq \bar M$ 위의 접 벡터장 $X, Y, Z, W$에 대해 다음의 식
+Embedding된 submanifold $M \subseteq \bar M$ 위의 접 벡터장 $X, Y, Z, W$에 대해 다음의 식
 
 $$\langle \bar R(X, Y) Z, W\rangle = \langle R(X, Y) Z, W\rangle + \langle \mathrm{II}(X, Z), \mathrm{II}(Y, W)\rangle - \langle \mathrm{II}(Y, Z), \mathrm{II}(X, W)\rangle$$
 
@@ -164,7 +164,7 @@ $$\begin{aligned}
 Gauss 방정식은 $M$의 내재적 곡률 $R$이 주변 곡률 $\bar R$로부터 제2기본형식의 이차식만큼의 보정을 거쳐 결정됨을 말한다. 특히 주변 공간이 평탄한 경우, 즉 $\bar M = \mathbb{R}^{n+1}$이고 $\bar R = 0$인 경우에는 $M$의 모든 곡률이 순전히 제2기본형식으로부터 나온다. 이것이 Gauss의 *Theorema Egregium*의 일반적 형태로, 곡면의 Gauss 곡률이 주변 공간에 어떻게 embedding되었는지가 아니라 제1기본형식만으로 결정되는 *내재적* 양이라는 사실의 고차원 일반화이다.
 
 ::: 참고 7
-sectional curvature의 언어로 Gauss 방정식을 다시 읽으면 더 기하학적인 형태를 얻는다. $M$의 한 점에서 정규직교 벡터 $X, Y \in T_p M$이 펼치는 평면의 sectional curvature $K(X, Y)$와 같은 평면을 $\bar M$ 안에서 본 $\bar K(X, Y)$ 사이에
+Sectional curvature의 언어로 Gauss 방정식을 다시 읽으면 더 기하학적인 형태를 얻는다. $M$의 한 점에서 정규직교 벡터 $X, Y \in T_p M$이 펼치는 평면의 sectional curvature $K(X, Y)$와 같은 평면을 $\bar M$ 안에서 본 $\bar K(X, Y)$ 사이에
 
 $$K(X, Y) = \bar K(X, Y) + \langle \mathrm{II}(X, X), \mathrm{II}(Y, Y)\rangle - \lvert \mathrm{II}(X, Y)\rvert^2$$
 
@@ -190,7 +190,7 @@ $\mathrm{II}$가 텐서이고 trace가 basis 선택에 무관하므로 $H$는 we
 제2기본형식은 [§측지선, ⁋예시 9](/ko/math/riemannian_geometry/geodesics#ex9)에서 구면의 대원을 다룰 때 암묵적으로 사용한 "주변 가속도의 접성분"이라는 개념을 정확히 메운다. $M$ 위의 곡선 $\gamma$의 주변 가속도 $\bar D_t \dot\gamma$와 내재적 가속도 $D_t \dot\gamma$ 사이의 간격이 곧 제2기본형식이다.
 
 ::: 명제 9
-embedding된 submanifold $M \subseteq \bar M$ 위의 곡선 $\gamma : I \rightarrow M$에 대해, $\gamma$를 $\bar M$의 곡선으로 본 주변 가속도 $\bar D_t \dot\gamma$는
+Embedding된 submanifold $M \subseteq \bar M$ 위의 곡선 $\gamma : I \rightarrow M$에 대해, $\gamma$를 $\bar M$의 곡선으로 본 주변 가속도 $\bar D_t \dot\gamma$는
 
 $$\bar D_t \dot\gamma = D_t \dot\gamma + \mathrm{II}(\dot\gamma, \dot\gamma)$$
 

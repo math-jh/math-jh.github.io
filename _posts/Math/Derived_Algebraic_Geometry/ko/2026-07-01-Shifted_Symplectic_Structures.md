@@ -65,7 +65,7 @@ $$\mathcal{A}^{p,\mathrm{cl}}(X,n)\longrightarrow\mathcal{A}^p(X,n)$$
 이 정의의 핵심은 관계식 $d_{\dR}\omega_0=d\omega_1$이 읽히는 방식에 있다. 그것은 밑에 깔린 형식의 de Rham 미분 $d_{\dR}\omega_0$이 $0$과 *같다*는 성질이 아니라, $d_{\dR}\omega_0$을 $0$으로 축약하는 명시적 nullhomotopy $\omega_1$이 주어졌다는 *자료*이다. 나아가 $\omega_2,\omega_3,\ldots$은 이 nullhomotopy가 더 높은 weight에서도 정합적임을 보장하는 higher homotopy들이다. 따라서 closed $p$-형식은 밑에 깔린 형식 하나가 아니라, 그 형식을 닫는 무한한 정합 자료 전체를 나른다.
 
 ::: 참고 3
-망각 morphism $\mathcal{A}^{p,\mathrm{cl}}(X,n)\rightarrow\mathcal{A}^p(X,n)$은 일반적으로 동치가 아니며, 단사조차 아니다. 그 homotopy fiber가 "주어진 형식 $\omega_0$을 닫는 방법들의 공간"이고, 이 공간은 비어 있을 수도, 여러 connected component를 가질 수도 있다. 이것이 고전적 상황과 결정적으로 갈라지는 지점이다. smooth 고전적 variety 위에서는 $L_X=\Omega_X$이 degree $0$에 집중되어 higher homotopy가 소멸하므로, $\omega_0$을 닫는 방법의 공간은 $d_{\dR}\omega_0=0$일 때 (본질적으로 유일하게) 존재하고 그렇지 않으면 비어 있다. 곧 이 경우에 한하여 닫힘은 다시 성질로 환원되어 고전적 개념과 일치한다. 그러나 stack이나 유도 두께가 있으면 닫힘은 참으로 자료가 되며, 서로 다른 닫힘을 준 두 형식은 밑에 깔린 형식이 같더라도 closed 형식으로서는 다르다. 이 때문에 우리는 처음부터 형식이 아니라 형식의 *공간*을 다루고, symplectic 구조를 하나의 점이 아니라 자료를 갖춘 대상으로 취급한다.
+망각 morphism $\mathcal{A}^{p,\mathrm{cl}}(X,n)\rightarrow\mathcal{A}^p(X,n)$은 일반적으로 동치가 아니며, 단사조차 아니다. 그 homotopy fiber가 "주어진 형식 $\omega_0$을 닫는 방법들의 공간"이고, 이 공간은 비어 있을 수도, 여러 connected component를 가질 수도 있다. 이것이 고전적 상황과 결정적으로 갈라지는 지점이다. Smooth 고전적 variety 위에서는 $L_X=\Omega_X$이 degree $0$에 집중되어 higher homotopy가 소멸하므로, $\omega_0$을 닫는 방법의 공간은 $d_{\dR}\omega_0=0$일 때 (본질적으로 유일하게) 존재하고 그렇지 않으면 비어 있다. 곧 이 경우에 한하여 닫힘은 다시 성질로 환원되어 고전적 개념과 일치한다. 그러나 stack이나 유도 두께가 있으면 닫힘은 참으로 자료가 되며, 서로 다른 닫힘을 준 두 형식은 밑에 깔린 형식이 같더라도 closed 형식으로서는 다르다. 이 때문에 우리는 처음부터 형식이 아니라 형식의 *공간*을 다루고, symplectic 구조를 하나의 점이 아니라 자료를 갖춘 대상으로 취급한다.
 :::
 
 ## n-shifted symplectic 구조
@@ -112,7 +112,7 @@ $0$-shifted 구조가 고전적 symplectic 기하를 그대로 담고 $2$-shifte
 
 ## Derived critical locus의 (-1)-shifted 구조
 
-smooth variety $U$ 위의 함수 $f:U\rightarrow\mathbb{A}^1$에 대하여, 그 미분 $df$은 cotangent bundle $\Omega_U$의 절단이고, derived critical locus $\Crit(f)$은 $df$의 유도 영점자리로 정의되었다. ([§Derived scheme과 derived stack, ⁋예시 17](/ko/math/derived_algebraic_geometry/derived_schemes#ex17)) 이 대상은 quasi-smooth이고 virtual 차원 $0$이며, 그 접복합체가 Hessian의 대칭성 때문에 여접 복합체와 자기쌍대적이라는 점을 우리는 이미 관찰하였다. 이 자기쌍대성이 정확히 $(-1)$-shifted symplectic 구조로 정착됨을 이제 밝힌다.
+Smooth variety $U$ 위의 함수 $f:U\rightarrow\mathbb{A}^1$에 대하여, 그 미분 $df$은 cotangent bundle $\Omega_U$의 절단이고, derived critical locus $\Crit(f)$은 $df$의 유도 영점자리로 정의되었다. ([§Derived scheme과 derived stack, ⁋예시 17](/ko/math/derived_algebraic_geometry/derived_schemes#ex17)) 이 대상은 quasi-smooth이고 virtual 차원 $0$이며, 그 접복합체가 Hessian의 대칭성 때문에 여접 복합체와 자기쌍대적이라는 점을 우리는 이미 관찰하였다. 이 자기쌍대성이 정확히 $(-1)$-shifted symplectic 구조로 정착됨을 이제 밝힌다.
 
 ::: 정리 8
 $U$을 smooth $k$-scheme, $f:U\rightarrow\mathbb{A}^1$을 함수라 하자. Derived critical locus $\Crit(f)$은 canonically $(-1)$-shifted symplectic이다. 그 밑에 깔린 $2$-형식이 유도하는 nondegeneracy 동치
@@ -136,7 +136,7 @@ $$T_Z\simeq L_Z[-1]$$
 
 의 동치이며, degree를 대조하면 $n=-1$인 nondegeneracy 조건 $T_Z\simeq L_Z[n]$이다.
 
-closed $2$-형식 자체는 다음에서 온다. $\Crit(f)$은 cotangent bundle $T^\ast U$ 안에서 영절단 $U$과 $df$의 graph를 유도적으로 겹친 것이고, $T^\ast U$은 canonical 형식 $\omega_{\mathrm{can}}=d\lambda$으로 $0$-shifted symplectic이다. ([예시 6](#ex6)) 이 형식이 두 겹침 위에서 소멸하는 정합 자료가 $\Crit(f)$ 위의 degree $-1$의 closed $2$-형식을 낳으며, 위에서 계산한 $\omega_0^\flat$이 그 nondegeneracy를 준다. 이 구성이 뒤의 [정리 11](#thm11)에서 Lagrangian 교차의 특수한 경우로 다시 나타난다. 완전한 논증은 ([PTVV], [BBJ])에 있다.
+Closed $2$-형식 자체는 다음에서 온다. $\Crit(f)$은 cotangent bundle $T^\ast U$ 안에서 영절단 $U$과 $df$의 graph를 유도적으로 겹친 것이고, $T^\ast U$은 canonical 형식 $\omega_{\mathrm{can}}=d\lambda$으로 $0$-shifted symplectic이다. ([예시 6](#ex6)) 이 형식이 두 겹침 위에서 소멸하는 정합 자료가 $\Crit(f)$ 위의 degree $-1$의 closed $2$-형식을 낳으며, 위에서 계산한 $\omega_0^\flat$이 그 nondegeneracy를 준다. 이 구성이 뒤의 [정리 11](#thm11)에서 Lagrangian 교차의 특수한 경우로 다시 나타난다. 완전한 논증은 ([PTVV], [BBJ])에 있다.
 :::
 
 [정리 8](#thm8)의 핵심은 Hessian의 대칭성이라는 순전히 미적분적인 사실이 $(-1)$-shifted symplectic 구조라는 대역적 자료로 승격된다는 것이다. 고전적으로 $t_0(\Crit(f))=\Spec\bigl(k[U]/(\partial_1f,\ldots,\partial_nf)\bigr)$은 Jacobian ring의 spectrum일 뿐이지만, 유도 구조는 그 위에 자기쌍대적 obstruction 이론을 얹어 접방향과 여접방향을 한 번의 shift로 맞바꾼다. 이 국소 그림이 실은 모든 $(-1)$-shifted symplectic 대상의 보편적 모형이라는 것이 Brav–Bussi–Joyce의 Darboux 정리이다.
@@ -166,7 +166,7 @@ $$\Theta_\gamma:T_{L/X}\longrightarrow L_L[n-1]$$
 을 유도한다. Isotropic 구조 $\gamma$이 *Lagrangian 구조*라는 것은 $\Theta_\gamma$이 동치인 것을 뜻하고, 이때 $g:L\rightarrow X$을 *Lagrangian morphism<sub>Lagrangian 사상</sub>*이라 부른다.
 :::
 
-closed 형식이 자료였으므로, 그것을 $0$으로 축약하는 방법 또한 자료이다. Isotropic 구조는 바로 이 축약 자료이고, Lagrangian 구조는 그 축약이 상대 방향에서 비축퇴, 곧 $T_{L/X}\simeq L_L[n-1]$이 되도록 하는 것이다. 이 비축퇴 조건은 고전적으로 Lagrangian이 절반 차원을 갖는다는 조건의 유도 판본이다. $n=0$의 smooth 경우에 $T_{L/X}\simeq L_L[-1]$은 conormal exact sequence가 $L$을 $X$의 절반 차원 isotropic 부분다양체로 만든다는 것과 정확히 같다. Lagrangian이 두 개 있으면 그 교차에서 shift가 하나 내려간다.
+Closed 형식이 자료였으므로, 그것을 $0$으로 축약하는 방법 또한 자료이다. Isotropic 구조는 바로 이 축약 자료이고, Lagrangian 구조는 그 축약이 상대 방향에서 비축퇴, 곧 $T_{L/X}\simeq L_L[n-1]$이 되도록 하는 것이다. 이 비축퇴 조건은 고전적으로 Lagrangian이 절반 차원을 갖는다는 조건의 유도 판본이다. $n=0$의 smooth 경우에 $T_{L/X}\simeq L_L[-1]$은 conormal exact sequence가 $L$을 $X$의 절반 차원 isotropic 부분다양체로 만든다는 것과 정확히 같다. Lagrangian이 두 개 있으면 그 교차에서 shift가 하나 내려간다.
 
 ::: 정리 11 (Lagrangian 교차, PTVV)
 $(X,\omega)$을 $n$-shifted symplectic derived stack, $g_1:L_1\rightarrow X$과 $g_2:L_2\rightarrow X$을 Lagrangian morphism이라 하자. 그러면 유도 올곱
@@ -209,7 +209,7 @@ $$T_M\simeq p_\ast\operatorname{ev}^\ast T_X$$
 
 $$T_M\simeq p_\ast\operatorname{ev}^\ast L_X[n]\simeq(p_\ast\operatorname{ev}^\ast T_X)^\vee[n-d]\simeq L_M[n-d]$$
 
-을 얻어 nondegeneracy가 성립한다. closed 형식은 $\int_F\operatorname{ev}^\ast\omega$이 mapping space 수준에서 정합적 닫힘 자료를 상속함을 확인하여 나오며, 이 transgression이 자료를 보존함이 이 구성의 요체이다. 완전한 논증은 ([PTVV], [Cal])에 있다.
+을 얻어 nondegeneracy가 성립한다. Closed 형식은 $\int_F\operatorname{ev}^\ast\omega$이 mapping space 수준에서 정합적 닫힘 자료를 상속함을 확인하여 나오며, 이 transgression이 자료를 보존함이 이 구성의 요체이다. 완전한 논증은 ([PTVV], [Cal])에 있다.
 :::
 
 ::: 참고 13

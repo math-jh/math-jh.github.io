@@ -235,7 +235,7 @@ $$f(\mathbf{a}+\mathbf{h}) \approx f(\mathbf{a}) + \frac{1}{2}\bigl(f_{xx}(\math
 
 $$H = \begin{pmatrix} f_{xx} & f_{xy} \\ f_{yx} & f_{yy}\end{pmatrix}$$
 
-으로 주어진다. critical point의 증감은 이 이차형식의 부호가 정하며, 이를 우리 상황에 맞추어 판별식의 언어로 풀어 설명하면 다음과 같다. 
+으로 주어진다. Critical point의 증감은 이 이차형식의 부호가 정하며, 이를 우리 상황에 맞추어 판별식의 언어로 풀어 설명하면 다음과 같다. 
 
 ::: 명제 9 (이계도함수 판정)
 $f$가 $C^2$이고 $\mathbf{a}$가 critical point($\nabla f(\mathbf{a}) = 0$)이라 하고, 위 헤세 행렬의 판별식  $D = f_{xx}f_{yy} - f_{xy}^2 = \det H$을 생각하자.
@@ -246,7 +246,7 @@ $f$가 $C^2$이고 $\mathbf{a}$가 critical point($\nabla f(\mathbf{a}) = 0$)이
 :::
 
 ::: 증명
-critical point 근방 전개에서 남는 이차항 $f_{xx}h_1^2 + 2f_{xy}h_1 h_2 + f_{yy}h_2^2$을 보자. 우선 $f_{xx} \neq 0$일 때, 이를 $h_1$에 대해 완전제곱꼴로 바꾸면
+Critical point 근방 전개에서 남는 이차항 $f_{xx}h_1^2 + 2f_{xy}h_1 h_2 + f_{yy}h_2^2$을 보자. 우선 $f_{xx} \neq 0$일 때, 이를 $h_1$에 대해 완전제곱꼴로 바꾸면
 
 $$\begin{aligned}
 f_{xx}h_1^2 + 2f_{xy}h_1 h_2 + f_{yy}h_2^2

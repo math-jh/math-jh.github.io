@@ -393,7 +393,7 @@ $$h_k = \sum_{1 \leq i_1 \leq i_2 \leq \cdots \leq i_k \leq n} \x_{i_1} \x_{i_2}
 로 정의한다. 즉 $h_k$는 $k$차 monomial 전체의 합이며, $h_0 = 1$, 그리고 $k < 0$이면 $h_k = 0$으로 약속한다.
 :::
 
-elementary symmetric polynomial이 $\prod_{i=1}^n (1 + \x_i T) = \sum_{k=0}^n e_k T^k$로 생성되는 것과 짝을 이루어, complete homogeneous는 생성함수
+Elementary symmetric polynomial이 $\prod_{i=1}^n (1 + \x_i T) = \sum_{k=0}^n e_k T^k$로 생성되는 것과 짝을 이루어, complete homogeneous는 생성함수
 
 $$\prod_{i=1}^n \frac{1}{1 - \x_i T} = \sum_{k \geq 0} h_k T^k$$
 

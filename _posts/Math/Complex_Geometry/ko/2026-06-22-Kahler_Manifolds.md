@@ -14,16 +14,16 @@ weight: 4
 published: false
 ---
 
-complex manifold는 tangent space 수준에서 곱셈 $i$를 흉내내는 거의 복소구조 $J$를 표준적으로 갖추며, 그 적분가능성이 holomorphic 기하 전체를 떠받쳤다 ([§거의 복소구조, ⁋명제 3](/ko/math/complex_geometry/almost_complex_structures#prop3)). 한편 smooth manifold 위에 길이와 각을 재는 Riemannian metric을 얹으면 미분기하의 풍부한 도구가 따라온다 ([\[리만기하학\] §리만 계량, ⁋정의 1](/ko/math/riemannian_geometry/Riemannian_metric#def1)). complex manifold 위에서 이 두 구조, 곧 복소구조 $J$와 Riemannian metric $g$를 양립시키면 어떤 일이 일어나는가가 이 글의 출발점이다.
+Complex manifold는 tangent space 수준에서 곱셈 $i$를 흉내내는 거의 복소구조 $J$를 표준적으로 갖추며, 그 적분가능성이 holomorphic 기하 전체를 떠받쳤다 ([§거의 복소구조, ⁋명제 3](/ko/math/complex_geometry/almost_complex_structures#prop3)). 한편 smooth manifold 위에 길이와 각을 재는 Riemannian metric을 얹으면 미분기하의 풍부한 도구가 따라온다 ([\[리만기하학\] §리만 계량, ⁋정의 1](/ko/math/riemannian_geometry/Riemannian_metric#def1)). Complex manifold 위에서 이 두 구조, 곧 복소구조 $J$와 Riemannian metric $g$를 양립시키면 어떤 일이 일어나는가가 이 글의 출발점이다.
 
 양립의 가장 자연스러운 요구는 $J$가 $g$에 대한 등거리변환이 되는 것, 곧 $g(JX, JY) = g(X, Y)$이다. 이러한 계량을 Hermitian 계량이라 하며, 여기서 동반 $2$-형식 $\omega(X, Y) = g(JX, Y)$가 자연히 따라온다. 이 $\omega$가 닫힌형식일 때, 곧 $d\omega = 0$일 때 우리는 그 manifold를 Kähler manifold라 부른다. 이 한 줄의 닫힘조건이 복소기하·리만기하·사교기하 세 구조를 동시에 묶어내며, 그로부터 흘러나오는 강성이 콤팩트 복소다양체론의 중심을 이룬다. 이 글의 목표는 Hermitian 계량과 기본형식을 세우고, Kähler 조건의 여러 동치 특성화를 증명하며, $\mathbb{C}^n$과 $\mathbb{CP}^n$을 비롯한 표준 예시에서 Kähler 구조를 확인하고, Kähler manifold가 symplectic manifold임과 콤팩트 Kähler manifold의 위상적 귀결을 끌어내는 것이다.
 
 ## Hermitian 계량과 기본형식
 
-complex manifold $X$ 위의 Riemannian metric 가운데 복소구조와 어울리는 것을 골라낸다. 양립의 기준은 $J$가 각 tangent space에서 등거리변환이 되는 것이다.
+Complex manifold $X$ 위의 Riemannian metric 가운데 복소구조와 어울리는 것을 골라낸다. 양립의 기준은 $J$가 각 tangent space에서 등거리변환이 되는 것이다.
 
 ::: 정의 1
-complex manifold $(X, J)$ 위의 Riemannian metric $g$가 *Hermitian metric<sub>에르미트 계량</sub>*이라는 것은, 모든 점에서 모든 tangent vector $X, Y$에 대하여
+Complex manifold $(X, J)$ 위의 Riemannian metric $g$가 *Hermitian metric<sub>에르미트 계량</sub>*이라는 것은, 모든 점에서 모든 tangent vector $X, Y$에 대하여
 
 $$
 g(JX, JY) = g(X, Y)
@@ -48,7 +48,7 @@ $$
 
 기본형식이 반대칭임은 $J$-불변성에서 나온다. $\omega(Y, X) = g(JY, X) = g(J(JY), JX) = g(-Y, JX) = -g(JX, Y) = -\omega(X, Y)$이므로 $\omega$는 반대칭 $2$-형식, 곧 미분 $2$-형식이다. 더 나아가 $\omega$는 $J$-불변이다. $\omega(JX, JY) = g(J^2 X, JY) = g(-X, JY) = -g(JY, X) = -\omega(Y,X) = \omega(X,Y)$이기 때문이다. $J$-불변 $2$-형식은 $(1,1)$-형식이 되며 ([§거의 복소구조, ⁋정의 6](/ko/math/complex_geometry/almost_complex_structures#def6)의 차수분해에서 $J$-불변성이 $(2,0)$·$(0,2)$-성분의 소멸을 강제한다), 따라서 $\omega$는 실 $(1,1)$-형식이다. 한편 $h = g - i\omega$는 $T^{1,0}X$ 위에서 Hermitian 내적의 역할을 한다. 곧 $h(X, Y) = g(X,Y) - i\, g(JX, Y)$로서 첫 변수에 $\mathbb{C}$-선형, 둘째에 반선형인 양의 Hermitian 형식이 되며, 이 점이 "Hermitian"이라는 이름의 근거이다.
 
-기본형식을 국소좌표로 적으면 계량의 성분이 직접 드러난다. holomorphic coordinates $z_1, \ldots, z_n$에서 Hermitian 계량의 $T^{1,0}X$-성분을
+기본형식을 국소좌표로 적으면 계량의 성분이 직접 드러난다. Holomorphic coordinates $z_1, \ldots, z_n$에서 Hermitian 계량의 $T^{1,0}X$-성분을
 
 $$
 g_{j\bar{k}} = h\!\left( \frac{\partial}{\partial z_j}, \frac{\partial}{\partial z_k} \right) = 2\, g\!\left( \frac{\partial}{\partial z_j}, \frac{\partial}{\partial \bar{z}_k} \right)
@@ -153,7 +153,7 @@ $$
 다음으로 lattice quotient에서 평탄한 콤팩트 예시가 나온다.
 
 ::: 예시 7 (복소토러스)
-lattice $\Lambda \subseteq \mathbb{C}^n$에 의한 복소토러스 $T = \mathbb{C}^n/\Lambda$는 Kähler manifold이다 ([§복소다양체, ⁋예시 7](/ko/math/complex_geometry/complex_manifolds#ex7)). $\mathbb{C}^n$의 표준 Kähler 형식 $\omega_0 = \frac{i}{2}\sum dz_j \wedge d\bar{z}_j$가 평행이동 $z \mapsto z + \lambda$에 대해 불변이므로 (계수가 상수이고 $dz_j$가 평행이동 불변), $\omega_0$는 quotient $T$ 위의 잘 정의된 $2$-형식으로 내려가고, 상수계수라 여전히 닫힌형식이다. 따라서 모든 복소토러스는 평탄한 Kähler 계량을 가진다. 차원 $1$에서는 이것이 타원곡선의 평탄 계량이고, 높은 차원에서는 복소토러스가 사영적이지 않을 수 있음에도 ([§복소다양체, ⁋예시 7](/ko/math/complex_geometry/complex_manifolds#ex7)) Kähler 계량은 언제나 존재한다. 곧 Kähler는 사영성보다 약한 조건이다.
+Lattice $\Lambda \subseteq \mathbb{C}^n$에 의한 복소토러스 $T = \mathbb{C}^n/\Lambda$는 Kähler manifold이다 ([§복소다양체, ⁋예시 7](/ko/math/complex_geometry/complex_manifolds#ex7)). $\mathbb{C}^n$의 표준 Kähler 형식 $\omega_0 = \frac{i}{2}\sum dz_j \wedge d\bar{z}_j$가 평행이동 $z \mapsto z + \lambda$에 대해 불변이므로 (계수가 상수이고 $dz_j$가 평행이동 불변), $\omega_0$는 quotient $T$ 위의 잘 정의된 $2$-형식으로 내려가고, 상수계수라 여전히 닫힌형식이다. 따라서 모든 복소토러스는 평탄한 Kähler 계량을 가진다. 차원 $1$에서는 이것이 타원곡선의 평탄 계량이고, 높은 차원에서는 복소토러스가 사영적이지 않을 수 있음에도 ([§복소다양체, ⁋예시 7](/ko/math/complex_geometry/complex_manifolds#ex7)) Kähler 계량은 언제나 존재한다. 곧 Kähler는 사영성보다 약한 조건이다.
 :::
 
 가장 중요한 콤팩트 예시는 Fubini–Study 계량을 갖춘 복소사영공간이다.
@@ -191,7 +191,7 @@ Kähler manifold $(X, J, g)$의 복소 부분다양체 $Y \subseteq X$는 유도
 :::
 
 ::: 증명
-$\iota : Y \hookrightarrow X$를 포함사상이라 하자. $Y$가 복소 부분다양체이므로 그 복소구조 $J_Y$는 $J$의 restriction이고, $Y$ 위의 유도 계량 $g_Y = \iota^\ast g$는 $g$가 $J$-불변이므로 $J_Y$-불변이다. 곧 $g_Y$는 $Y$ 위의 Hermitian 계량이다. $Y$의 기본형식 $\omega_Y$는 $\omega_Y(U, V) = g_Y(J_Y U, V) = g(JU, V) = \omega(U, V)$ ($U, V \in TY$)이므로, $\omega_Y = \iota^\ast\omega$, 곧 $X$의 Kähler 형식의 pullback이다. exterior derivative는 pullback과 교환하므로
+$\iota : Y \hookrightarrow X$를 포함사상이라 하자. $Y$가 복소 부분다양체이므로 그 복소구조 $J_Y$는 $J$의 restriction이고, $Y$ 위의 유도 계량 $g_Y = \iota^\ast g$는 $g$가 $J$-불변이므로 $J_Y$-불변이다. 곧 $g_Y$는 $Y$ 위의 Hermitian 계량이다. $Y$의 기본형식 $\omega_Y$는 $\omega_Y(U, V) = g_Y(J_Y U, V) = g(JU, V) = \omega(U, V)$ ($U, V \in TY$)이므로, $\omega_Y = \iota^\ast\omega$, 곧 $X$의 Kähler 형식의 pullback이다. Exterior derivative는 pullback과 교환하므로
 
 $$
 d\omega_Y = d(\iota^\ast\omega) = \iota^\ast(d\omega) = \iota^\ast 0 = 0
@@ -213,7 +213,7 @@ Kähler manifold $(X, J, g)$의 Kähler 형식 $\omega$는 symplectic form이다
 :::
 
 ::: 증명
-symplectic form이려면 $\omega$가 닫혀 있고 각 점에서 비퇴화여야 한다 ([\[사교기하학\] §사교다양체, ⁋정의 1](/ko/math/symplectic_geometry/symplectic_manifold#def1)). 닫힘은 Kähler 조건 그 자체이다. 비퇴화는 점별 계산이다. 점 $p$에서 정규좌표 ([정리 5](#thm5)의 (3))를 택하면 $\omega_p = \frac{i}{2}\sum_j dz_j \wedge d\bar{z}_j = \sum_j dx_j \wedge dy_j$로 표준 symplectic form과 일치하고, 이는 nondegenerate하다. 정규좌표를 쓰지 않더라도, $\omega_p(X, Y) = g_p(JX, Y)$에서 $g_p$가 양의 정부호이고 $J$가 가역이므로, $\omega_p(X, \cdot) = 0$이면 $g_p(JX, \cdot) = 0$, 곧 $JX = 0$, 곧 $X = 0$이다. 따라서 $\omega_p$는 nondegenerate하다.
+Symplectic form이려면 $\omega$가 닫혀 있고 각 점에서 비퇴화여야 한다 ([\[사교기하학\] §사교다양체, ⁋정의 1](/ko/math/symplectic_geometry/symplectic_manifold#def1)). 닫힘은 Kähler 조건 그 자체이다. 비퇴화는 점별 계산이다. 점 $p$에서 정규좌표 ([정리 5](#thm5)의 (3))를 택하면 $\omega_p = \frac{i}{2}\sum_j dz_j \wedge d\bar{z}_j = \sum_j dx_j \wedge dy_j$로 표준 symplectic form과 일치하고, 이는 nondegenerate하다. 정규좌표를 쓰지 않더라도, $\omega_p(X, Y) = g_p(JX, Y)$에서 $g_p$가 양의 정부호이고 $J$가 가역이므로, $\omega_p(X, \cdot) = 0$이면 $g_p(JX, \cdot) = 0$, 곧 $JX = 0$, 곧 $X = 0$이다. 따라서 $\omega_p$는 nondegenerate하다.
 
 부피형식과의 일치를 본다. 점 $p$의 정규좌표 $z_j = x_j + iy_j$에서 $\omega_p = \sum_j dx_j \wedge dy_j$이므로
 

@@ -57,7 +57,7 @@ $$\frac{(f+g)(z_0+h) - (f+g)(z_0)}{h} = \frac{f(z_0+h)-f(z_0)}{h} + \frac{g(z_0+
 
 $$\frac{f(z_0+h)g(z_0+h) - f(z_0)g(z_0)}{h} = \frac{f(z_0+h)-f(z_0)}{h}\,g(z_0+h) + f(z_0)\,\frac{g(z_0+h)-g(z_0)}{h}$$
 
-으로 쪼개고, $g$가 $z_0$에서 복소미분가능하면 연속이므로 $h \rightarrow 0$일 때 $g(z_0+h) \rightarrow g(z_0)$임을 쓰면 우변이 $f'(z_0)g(z_0) + f(z_0)g'(z_0)$으로 수렴한다. quotient의 경우 먼저 $g(z_0)\neq 0$이고 $g$가 연속이므로 $z_0$의 작은 근방에서 $g$가 $0$이 아니어서 $f/g$가 정의되며,
+으로 쪼개고, $g$가 $z_0$에서 복소미분가능하면 연속이므로 $h \rightarrow 0$일 때 $g(z_0+h) \rightarrow g(z_0)$임을 쓰면 우변이 $f'(z_0)g(z_0) + f(z_0)g'(z_0)$으로 수렴한다. Quotient의 경우 먼저 $g(z_0)\neq 0$이고 $g$가 연속이므로 $z_0$의 작은 근방에서 $g$가 $0$이 아니어서 $f/g$가 정의되며,
 
 $$\frac{1}{h}\left(\frac{1}{g(z_0+h)} - \frac{1}{g(z_0)}\right) = -\frac{1}{g(z_0+h)g(z_0)}\cdot\frac{g(z_0+h)-g(z_0)}{h} \rightarrow -\frac{g'(z_0)}{g(z_0)^2}$$
 
@@ -72,7 +72,7 @@ $$\frac{g(f(z_0+h)) - g(f(z_0))}{h} = \psi(f(z_0+h))\,\frac{f(z_0+h)-f(z_0)}{h}$
 이고, $f$의 연속성으로 $f(z_0+h) \rightarrow w_0$이므로 $\psi(f(z_0+h)) \rightarrow \psi(w_0) = g'(w_0)$이며 우변이 $g'(f(z_0))f'(z_0)$으로 수렴한다.
 :::
 
-명제 3은 복소미분이 실미분과 동일한 형식 규칙을 따름을 말한다. 상수함수의 도함수가 $0$이고 항등함수 $z \mapsto z$의 도함수가 $1$임은 정의에서 즉시 나오므로, 곱셈규칙을 반복하면 $z^n$ ($n \geq 0$)의 도함수가 $nz^{n-1}$이고, 따라서 모든 다항식 $p(z) = \sum_{k=0}^n a_k z^k$이 전해석함수이며 $p'(z) = \sum_{k=1}^n k a_k z^{k-1}$이다. quotient 공식에 의해 유리함수 $p(z)/q(z)$는 분모가 $0$이 되지 않는 영역에서 holomorphic이다. 반면 다음 예시가 보이듯, 평면 위의 매우 smooth한 실함수조차 복소미분가능하지 않을 수 있다.
+명제 3은 복소미분이 실미분과 동일한 형식 규칙을 따름을 말한다. 상수함수의 도함수가 $0$이고 항등함수 $z \mapsto z$의 도함수가 $1$임은 정의에서 즉시 나오므로, 곱셈규칙을 반복하면 $z^n$ ($n \geq 0$)의 도함수가 $nz^{n-1}$이고, 따라서 모든 다항식 $p(z) = \sum_{k=0}^n a_k z^k$이 전해석함수이며 $p'(z) = \sum_{k=1}^n k a_k z^{k-1}$이다. Quotient 공식에 의해 유리함수 $p(z)/q(z)$는 분모가 $0$이 되지 않는 영역에서 holomorphic이다. 반면 다음 예시가 보이듯, 평면 위의 매우 smooth한 실함수조차 복소미분가능하지 않을 수 있다.
 
 ::: 예시 4 (켤레함수는 holomorphic이 아니다)
 함수 $f(z) = \bar{z}$를 생각하자. $z_0$에서의 차분비는
@@ -237,7 +237,7 @@ $$e^{iz} = \cos z + i\sin z$$
 
 ## 조화함수
 
-holomorphic function의 실수부와 허수부는 단지 smooth한 실함수가 아니라, 평면의 Laplace 방정식을 만족하는 조화함수라는 더 강한 구조를 가진다. 이 사실은 복소해석학과 평면의 potential 이론을 잇는 다리가 된다. 이 절에서는 holomorphic function이 두 번 복소미분가능하다는 사실, 곧 $u, v$가 $C^2$급이라는 사실을 받아들이고 출발한다. 이는 적분 이론에서 증명되는 holomorphic function의 무한미분가능성의 한 귀결이다.
+Holomorphic function의 실수부와 허수부는 단지 smooth한 실함수가 아니라, 평면의 Laplace 방정식을 만족하는 조화함수라는 더 강한 구조를 가진다. 이 사실은 복소해석학과 평면의 potential 이론을 잇는 다리가 된다. 이 절에서는 holomorphic function이 두 번 복소미분가능하다는 사실, 곧 $u, v$가 $C^2$급이라는 사실을 받아들이고 출발한다. 이는 적분 이론에서 증명되는 holomorphic function의 무한미분가능성의 한 귀결이다.
 
 ::: 정의 11
 열린집합 $\Omega \subseteq \mathbb{R}^2$ 위의 $C^2$급 실숫값 함수 $u$가 *조화함수<sub>harmonic function</sub>*라는 것은 $\Omega$에서 *Laplace 방정식*

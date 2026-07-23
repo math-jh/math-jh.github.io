@@ -85,7 +85,7 @@ $$\langle R(e_1, e_2) e_2, e_1\rangle = \langle \mathrm{II}(e_1, e_1), \mathrm{I
 
 $$\langle \mathrm{II}(e_1, e_1), \mathrm{II}(e_2, e_2)\rangle - \lvert \mathrm{II}(e_1, e_2)\rvert^2 = h_{11} h_{22} - h_{12}^2 = \det[h_{ij}]$$
 
-이다. orthonormal basis $\{e_1, e_2\}$에서 $[h_{ij}] = [\langle S(e_i), e_j\rangle]$는 $S$의 행렬 그 자체이므로 $\det[h_{ij}] = \det S = K$이다 ([정의 1](#def1)). 따라서
+이다. Orthonormal basis $\{e_1, e_2\}$에서 $[h_{ij}] = [\langle S(e_i), e_j\rangle]$는 $S$의 행렬 그 자체이므로 $\det[h_{ij}] = \det S = K$이다 ([정의 1](#def1)). 따라서
 
 $$\langle R(e_1, e_2) e_2, e_1\rangle = K$$
 

@@ -37,7 +37,7 @@ $$\langle d\mu_p(v),X\rangle=d\mu_p^X(v)=\omega_p(X_M(p),v)$$
 
 이다. 따라서 $v\in\ker d\mu_p$일 필요충분조건은 모든 $X\in\mathfrak{g}$에 대해 $\omega_p(X_M(p),v)=0$, 즉 $v$가 모든 orbit tangent vector $X_M(p)$와 $\omega_p$-직교하는 것이다. 이것이 정확히 $v\in(\mathfrak{g}\cdot p)^{\omega}$이므로 $\ker d\mu_p=(\mathfrak{g}\cdot p)^{\omega}$이다.
 
-image에 대해서는, 위 식이 말하는 바를 $X$에 대한 linear functional로 보면 $d\mu_p(v)$는 $X\mapsto\omega_p(X_M(p),v)$이다. 한 원소 $\xi=d\mu_p(v)$가 어떤 $X\in\mathfrak{g}_p$, 즉 $X_M(p)=0$인 $X$에서 소멸함은 자명하므로 $\im d\mu_p\subseteq(\mathfrak{g}_p)^{\circ}$이다. 역포함은 차원 계산으로 따라온다. symplectic form의 nondegeneracy로부터 부분공간 $U=\mathfrak{g}\cdot p$에 대해 $\dim U+\dim U^{\omega}=\dim T_pM$이므로
+Image에 대해서는, 위 식이 말하는 바를 $X$에 대한 linear functional로 보면 $d\mu_p(v)$는 $X\mapsto\omega_p(X_M(p),v)$이다. 한 원소 $\xi=d\mu_p(v)$가 어떤 $X\in\mathfrak{g}_p$, 즉 $X_M(p)=0$인 $X$에서 소멸함은 자명하므로 $\im d\mu_p\subseteq(\mathfrak{g}_p)^{\circ}$이다. 역포함은 차원 계산으로 따라온다. Symplectic form의 nondegeneracy로부터 부분공간 $U=\mathfrak{g}\cdot p$에 대해 $\dim U+\dim U^{\omega}=\dim T_pM$이므로
 
 $$\dim\ker d\mu_p=\dim(\mathfrak{g}\cdot p)^{\omega}=\dim T_pM-\dim(\mathfrak{g}\cdot p)$$
 
@@ -133,7 +133,7 @@ $$M /\!\!/_{\!\xi}\, G\cong\mu^{-1}(\mathcal{O}_\xi)/G$$
 이다.
 :::
 ::: 증명
-subgroup $G_\xi\subseteq G$은 Lie subgroup이고 그 Lie algebra는 $\mathfrak{g}_\xi=\{X\in\mathfrak{g}:\ad_X^\ast\xi=0\}$이다. $\mu$을 $\mu^{-1}(\xi)$의 근방에서 affine 평행이동하여 생각하면 $\xi$을 regular value로 갖는 상황은 국소적으로 $0$을 regular value로 갖는 상황과 같으므로, $\mu^{-1}(\xi)$은 codimension $\dim G$의 smooth 부분다양체이다.
+Subgroup $G_\xi\subseteq G$은 Lie subgroup이고 그 Lie algebra는 $\mathfrak{g}_\xi=\{X\in\mathfrak{g}:\ad_X^\ast\xi=0\}$이다. $\mu$을 $\mu^{-1}(\xi)$의 근방에서 affine 평행이동하여 생각하면 $\xi$을 regular value로 갖는 상황은 국소적으로 $0$을 regular value로 갖는 상황과 같으므로, $\mu^{-1}(\xi)$은 codimension $\dim G$의 smooth 부분다양체이다.
 
 이제 $G_\xi$-작용에 대한 운동량 사상을 만든다. 포함 $\mathfrak{g}_\xi\hookrightarrow\mathfrak{g}$의 dual restriction $r:\mathfrak{g}^\ast\rightarrow\mathfrak{g}_\xi^\ast$을 합성한 $\mu_\xi:=r\circ(\mu-\xi):M\rightarrow\mathfrak{g}_\xi^\ast$은 $G_\xi$-작용의 운동량 사상이고, $\mu^{-1}(\xi)\subseteq\mu_\xi^{-1}(0)$이다. $\mu^{-1}(\xi)$ 위에서 $G_\xi$이 자유롭고 proper하게 작용하므로 [정리 2](#thm2)의 증명과 동일한 논법이 적용되어, $T_p(\mu^{-1}(\xi))$의 $\omega_p$에 대한 퇴화방향이 정확히 $\mathfrak{g}_\xi\cdot p$임을 확인하면 symplectic form이 quotient $\mu^{-1}(\xi)/G_\xi$으로 내려온다. 차원은
 

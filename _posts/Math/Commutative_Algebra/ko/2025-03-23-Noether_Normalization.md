@@ -93,7 +93,7 @@ $$\dim A/\mathfrak{p}+\operatorname{ht}\mathfrak{p}=\dim A$$
 ::: 증명
 부등식 $\dim A/\mathfrak{p}+\operatorname{ht}\mathfrak{p}\leq\dim A$는 임의의 ring에 대하여 성립하므로 ([§차원, ⁋정의 2](/ko/math/commutative_algebra/Krull_dimension#def2)), 반대 부등식만 보이면 된다. $n=\dim A$, $d=\dim A/\mathfrak{p}=\dim\mathfrak{p}$라 두자. [정리 1](#thm1)을 $A$의 ideal $\mathfrak{a}_1=\mathfrak{p}$ 하나로 이루어진 chain에 적용하면, $A$의 subring $B\cong\mathbb{K}[\x_1,\ldots, \x_n]$이 존재하여 $A$가 finitely generated $B$-module이고 $\mathfrak{p}\cap B=(\x_{d+1},\ldots, \x_n)$을 만족한다. 그럼 $B\hookrightarrow A$가 integral extension이므로 [\[가환대수학\] §정수적 확장과 아이디얼, ⁋명제 1](/ko/math/commutative_algebra/lying_over_and_going_up#prop1)과 [따름정리 4](/ko/math/commutative_algebra/lying_over_and_going_up#cor4)에 의하여 $\operatorname{ht}_A\mathfrak{p}=\operatorname{ht}_B(\mathfrak{p}\cap B)$이다.
 
-이제 polynomial ring $B=\mathbb{K}[\x_1,\ldots, \x_n]$에서 ideal $(\x_{d+1},\ldots, \x_n)$의 height를 계산하자. chain
+이제 polynomial ring $B=\mathbb{K}[\x_1,\ldots, \x_n]$에서 ideal $(\x_{d+1},\ldots, \x_n)$의 height를 계산하자. Chain
 
 $$(0)\subset(\x_n)\subset(\x_{n-1},\x_n)\subset\cdots\subset(\x_{d+1},\ldots, \x_n)$$
 

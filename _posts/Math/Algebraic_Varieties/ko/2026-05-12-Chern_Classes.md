@@ -14,7 +14,7 @@ published: false
 
 ---
 
-vector bundle은 대수기하학에서 기하적 대상을 다루는 핵심 도구이며, 이번 글에서는 주어진 vector bundle이 얼마나 뒤틀려 있는지를 재는 *Chern class*를 정의한다. 이는 complex vector bundle에 대해 정의되는 위상적·기하학적 불변량으로, 우리는 대수위상에서는 이를 Gysin sequence를 타고 내려오는 방식을 취했지만 ([\[대수적 위상수학\] §벡터다발의 특성류, ⁋정의 6](/ko/math/algebraic_topology/characteristic_classes#def6)) 이번 글에서는 공리적인 접근으로 시작한다. 모든 논의는 적당한 base space $X$ 위의 complex vector bundle에 대해 이루어지며, cohomology는 $H^\bullet(X, \mathbb{Z})$를 사용한다. Cohomology convention상 $k$차 Chern class가 $2k$차 cohomology에 들어감을 기억하자.
+Vector bundle은 대수기하학에서 기하적 대상을 다루는 핵심 도구이며, 이번 글에서는 주어진 vector bundle이 얼마나 뒤틀려 있는지를 재는 *Chern class*를 정의한다. 이는 complex vector bundle에 대해 정의되는 위상적·기하학적 불변량으로, 우리는 대수위상에서는 이를 Gysin sequence를 타고 내려오는 방식을 취했지만 ([\[대수적 위상수학\] §벡터다발의 특성류, ⁋정의 6](/ko/math/algebraic_topology/characteristic_classes#def6)) 이번 글에서는 공리적인 접근으로 시작한다. 모든 논의는 적당한 base space $X$ 위의 complex vector bundle에 대해 이루어지며, cohomology는 $H^\bullet(X, \mathbb{Z})$를 사용한다. Cohomology convention상 $k$차 Chern class가 $2k$차 cohomology에 들어감을 기억하자.
 
 ## 천 특성류의 공리
 
@@ -50,7 +50,7 @@ $$0 \rightarrow \mathbb{Z} \rightarrow \mathcal{O}_X \xrightarrow{f\mapsto e^{2\
 
 즉 line bundle의 $c_1$은 임의의 section의 영점 자리이며 그 class는 section 선택에 무관한데, 이것이 Chern class의 기하학적 원형이다. 대수적으로는 이 등식이 $\CH^1(X) = \mathrm{Pic}(X)$에서 성립하고, cycle class map을 거쳐 $H^2(X, \mathbb{Z})$로 보내진 것이 위의 명제이다. 같은 그림이 높은 rank로도 이어진다. Globally generated rank $r$ 다발 $\mathcal{E}$의 generic section $s$는 codimension $r$의 영점자리 $Z(s)$를 가지며 그 class가 top Chern class $c_r(\mathcal{E})$이다. 더 일반적으로 generic section $s_1, \ldots, s_{r-p+1}$을 택하면, 이들이 fiber에서 일차종속이 되는 점들의 자리인 *degeneracy locus*는 codimension $p$의 cycle이고 그 class가 $c_p(\mathcal{E})$이다 ([Ful]). 요컨대 $c_p(\mathcal{E})$는 "$\mathcal{E}$가 $r-p+1$개의 독립 section을 갖지 못하게 하는 obstruction"을 재는 cycle이다.
 
-line bundle의 tensor product·쌍대는 $c_1$과 다음과 같이 잘 맞물린다.
+Line bundle의 tensor product·쌍대는 $c_1$과 다음과 같이 잘 맞물린다.
 
 ::: 명제 3
 같은 base $X$ 위의 line bundle $\mathcal{L}, \mathcal{M}$에 대하여 다음이 성립한다.
@@ -82,7 +82,7 @@ $$H^{\ast}(\mathbb{P}(\mathcal{E})) \cong H^{\ast}(X)[\xi] / \bigl(\xi^r + \pi^{
 :::
 
 ::: 명제 5 (Splitting principle)
-rank $r$ vector bundle $\mathcal{E} \rightarrow X$에 대하여, 연속사상 $f: Y \rightarrow X$가 존재하여 다음 두 조건을 만족한다.
+Rank $r$ vector bundle $\mathcal{E} \rightarrow X$에 대하여, 연속사상 $f: Y \rightarrow X$가 존재하여 다음 두 조건을 만족한다.
 
 1. $f^{\ast}: H^{\ast}(X, \mathbb{Z}) \rightarrow H^{\ast}(Y, \mathbb{Z})$는 단사이다.
 2. $f^{\ast}\mathcal{E}$는 line bundle들의 direct sum $\mathcal{L}_1 \oplus \cdots \oplus \mathcal{L}_r$로 분해된다.
@@ -113,7 +113,7 @@ $$f^{\ast}c(\mathcal{E}) = \prod_i \bigl(1 + c_1(\mathcal{L}_i)\bigr) = f^{\ast}
 Splitting principle 덕분에 우리는 임의의 다발을 마치 line bundle들의 direct sum인 것처럼 다룰 수 있다. 이를 형식화하자.
 
 ::: 정의 7
-rank $r$ vector bundle $\mathcal{E}$를 splitting principle로 $f^{\ast}\mathcal{E} = \mathcal{L}_1 \oplus \cdots \oplus \mathcal{L}_r$로 분해하고 $x_i = c_1(\mathcal{L}_i) \in H^2(Y)$로 둔다. 이 $x_1, \ldots, x_r$을 $\mathcal{E}$의 *Chern root<sub>천 근</sub>*이라 부른다. Whitney 공식에 의해 형식변수 $\t$에 대한 *Chern polynomial<sub>천 다항식</sub>*은
+Rank $r$ vector bundle $\mathcal{E}$를 splitting principle로 $f^{\ast}\mathcal{E} = \mathcal{L}_1 \oplus \cdots \oplus \mathcal{L}_r$로 분해하고 $x_i = c_1(\mathcal{L}_i) \in H^2(Y)$로 둔다. 이 $x_1, \ldots, x_r$을 $\mathcal{E}$의 *Chern root<sub>천 근</sub>*이라 부른다. Whitney 공식에 의해 형식변수 $\t$에 대한 *Chern polynomial<sub>천 다항식</sub>*은
 
 $$c_\t(\mathcal{E}) = \prod_{i=1}^r (1 + x_i\t)$$
 
@@ -140,7 +140,7 @@ Chern character는 다음 성질을 만족한다.
 :::
 
 ::: 증명
-splitting principle로 $\mathcal{E} = \bigoplus_i \mathcal{L}_i$ (Chern root $x_i$), $\mathcal{F} = \bigoplus_j \mathcal{M}_j$ (Chern root $y_j$)로 가정한다. Direct sum의 Chern root는 $\{x_i\} \cup \{y_j\}$이므로
+Splitting principle로 $\mathcal{E} = \bigoplus_i \mathcal{L}_i$ (Chern root $x_i$), $\mathcal{F} = \bigoplus_j \mathcal{M}_j$ (Chern root $y_j$)로 가정한다. Direct sum의 Chern root는 $\{x_i\} \cup \{y_j\}$이므로
 
 $$\chern(\mathcal{E} \oplus \mathcal{F}) = \sum_i e^{x_i} + \sum_j e^{y_j} = \chern(\mathcal{E}) + \chern(\mathcal{F})$$
 
@@ -166,7 +166,7 @@ $$\rchi_{\mathrm{top}}(X) = \int_X c_n(T_X)$$
 :::
 
 ::: 증명
-top Chern class $c_n(T_X)$는 복소 rank $n$ 다발 $T_X$를 실 rank $2n$의 oriented 다발로 보았을 때의 Euler class $e(T_X)$와 일치한다. Euler class의 적분은 generic section의 영점 수를 부호와 함께 센 것이고, $T_X$의 generic section은 generic 벡터 field이므로 그 영점 수는 Poincaré–Hopf 정리에 의해 $\rchi_{\mathrm{top}}(X)$와 같다. 따라서 $\int_X c_n(T_X) = \int_X e(T_X) = \rchi_{\mathrm{top}}(X)$이다. 위상적 논증의 자세한 내용은 [BT]로 미룬다.
+Top Chern class $c_n(T_X)$는 복소 rank $n$ 다발 $T_X$를 실 rank $2n$의 oriented 다발로 보았을 때의 Euler class $e(T_X)$와 일치한다. Euler class의 적분은 generic section의 영점 수를 부호와 함께 센 것이고, $T_X$의 generic section은 generic 벡터 field이므로 그 영점 수는 Poincaré–Hopf 정리에 의해 $\rchi_{\mathrm{top}}(X)$와 같다. 따라서 $\int_X c_n(T_X) = \int_X e(T_X) = \rchi_{\mathrm{top}}(X)$이다. 위상적 논증의 자세한 내용은 [BT]로 미룬다.
 :::
 
 ::: 예시 11

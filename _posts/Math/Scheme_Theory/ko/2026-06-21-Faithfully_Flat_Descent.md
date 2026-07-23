@@ -19,7 +19,7 @@ drift_needed: true
 
 ## 충실평탄 사상
 
-faithful flatness는 flatness에 전사성을 더한 조건이다. 가군 수준에서 ring homomorphism $\varphi: A \rightarrow B$가 faithfully flat이라 함은 $B$가 flat $A$-가군이면서 ([\[가환대수학\] §평탄성, ⁋명제 1](/ko/math/commutative_algebra/flatness#prop1)) 다음 명제가 보여주듯 정확성을 단순히 보존할 뿐 아니라 반영하는 것이다. morphism 수준에서는 이를 [§평탄사상, ⁋정의 1](/ko/math/scheme_theory/flat_morphisms#def1)에서 flat이면서 surjective인 morphism으로 정의하였다.
+Faithful flatness는 flatness에 전사성을 더한 조건이다. 가군 수준에서 ring homomorphism $\varphi: A \rightarrow B$가 faithfully flat이라 함은 $B$가 flat $A$-가군이면서 ([\[가환대수학\] §평탄성, ⁋명제 1](/ko/math/commutative_algebra/flatness#prop1)) 다음 명제가 보여주듯 정확성을 단순히 보존할 뿐 아니라 반영하는 것이다. Morphism 수준에서는 이를 [§평탄사상, ⁋정의 1](/ko/math/scheme_theory/flat_morphisms#def1)에서 flat이면서 surjective인 morphism으로 정의하였다.
 
 ::: 정의 1
 Ring homomorphism $\varphi: A \rightarrow B$가 *faithfully flat<sub>충실평탄</sub>*하다는 것은, $B$가 flat $A$-가군이고, 동시에 임의의 $A$-가군 $M$에 대하여 $M\otimes_A B=0$이면 $M=0$인 것이다.
@@ -143,7 +143,7 @@ $$M=\{n\in N\mid \varphi_N(n\otimes 1)=1\otimes n\}$$
 으로 주어진다.
 :::
 ::: 증명
-두 functor가 서로 quasi-inverse임을 보인다. inverse functor를 $(N, \varphi_N)\mapsto N^{\varphi}$로 적자. 여기에서 $N^\varphi=\{n\in N\mid \varphi_N(n\otimes 1)=1\otimes n\}$이며, 이는 $N\otimes_A B \rightrightarrows B\otimes_A N$의 두 morphism $n\mapsto \varphi_N(n\otimes 1)$과 $n\mapsto 1\otimes n$의 equalizer이므로 $A$-submodule이다.
+두 functor가 서로 quasi-inverse임을 보인다. Inverse functor를 $(N, \varphi_N)\mapsto N^{\varphi}$로 적자. 여기에서 $N^\varphi=\{n\in N\mid \varphi_N(n\otimes 1)=1\otimes n\}$이며, 이는 $N\otimes_A B \rightrightarrows B\otimes_A N$의 두 morphism $n\mapsto \varphi_N(n\otimes 1)$과 $n\mapsto 1\otimes n$의 equalizer이므로 $A$-submodule이다.
 
 먼저 canonical descent datum $(M\otimes_A B, \id)$에서 출발하면, $N=M\otimes_A B$ 위에서 $\varphi_N=\id$이므로 $N^\varphi$는 $\{x\in M\otimes_A B\mid x\otimes 1=1\otimes x\}$이다. [보조정리 3](#lem3)에 $-\otimes_A M$의 정확성 대신 $M$을 계수로 한 형태를 적용하면, 즉 sequence $0 \rightarrow M \rightarrow M\otimes_A B \rightarrow M\otimes_A B\otimes_A B$가 정확하므로 (이는 [보조정리 3](#lem3)의 정확한 sequence에 flat한 $-\otimes_A M$ 대신 faithfully flat $B$로의 base change 논증을 그대로 반복하여 얻는다) $N^\varphi=M$이고, 따라서 한 합성은 항등과 natural isomorphism이다.
 
@@ -168,11 +168,11 @@ $$N^\varphi\otimes_A B\xrightarrow{\ \sim\ }\{x\in N\otimes_A B\mid p_1^\ast\var
 $\varphi: A \rightarrow B$가 faithfully flat이고 $M$이 $A$-가군이라 하자. 그럼 $M$이 finitely generated(각각 finitely presented, flat, locally free of finite rank)인 것은 $M\otimes_A B$가 $B$-가군으로서 finitely generated(각각 finitely presented, flat, locally free of finite rank)인 것과 동치이다.
 :::
 ::: 증명
-각 성질은 한쪽 방향이 base change에 대한 보존이므로 자명하고, 내려오는 방향만 본다. finitely generated의 경우, $M\otimes_A B$가 $y_1,\ldots, y_n$으로 생성된다 하면 각 $y_i$는 유한히 많은 $m_{ij}\otimes b_{ij}$의 합이므로, 그 $m_{ij}$들이 생성하는 finitely generated submodule $M_0\subseteq M$에 대해 $M_0\otimes_A B \rightarrow M\otimes_A B$가 전사이다. 그럼 $(M/M_0)\otimes_A B=0$이고 충실성에 의해 $M/M_0=0$이므로 $M=M_0$은 finitely generated이다.
+각 성질은 한쪽 방향이 base change에 대한 보존이므로 자명하고, 내려오는 방향만 본다. Finitely generated의 경우, $M\otimes_A B$가 $y_1,\ldots, y_n$으로 생성된다 하면 각 $y_i$는 유한히 많은 $m_{ij}\otimes b_{ij}$의 합이므로, 그 $m_{ij}$들이 생성하는 finitely generated submodule $M_0\subseteq M$에 대해 $M_0\otimes_A B \rightarrow M\otimes_A B$가 전사이다. 그럼 $(M/M_0)\otimes_A B=0$이고 충실성에 의해 $M/M_0=0$이므로 $M=M_0$은 finitely generated이다.
 
 Finitely presented의 경우, $M$이 finitely generated임은 위에서 얻었으므로 $A^n \twoheadrightarrow M$의 kernel $K$가 finitely generated임을 보이면 된다. $0 \rightarrow K \rightarrow A^n \rightarrow M \rightarrow 0$을 base change하면 ($B$가 flat) $0 \rightarrow K\otimes_A B \rightarrow B^n \rightarrow M\otimes_A B \rightarrow 0$이 정확하고, $M\otimes_A B$가 finitely presented이므로 $K\otimes_A B$는 finitely generated이다. ([\[가환대수학\] §평탄성, ⁋따름정리 6](/ko/math/commutative_algebra/flatness#cor6) 이후의 finitely presented 논의) 따라서 위 finitely generated 판정을 $K$에 적용하면 $K$도 finitely generated이고 $M$은 finitely presented이다.
 
-flat의 경우, $M$이 flat임을 보이려면 임의의 단사 $A$-가군 morphism $M' \hookrightarrow M''$에 대해 $M'\otimes_A M \rightarrow M''\otimes_A M$이 단사임을 보이면 된다. 이를 $-\otimes_A B$하면 ([명제 2](#prop2)로 단사성을 검사) $M'\otimes_A M\otimes_A B \rightarrow M''\otimes_A M\otimes_A B$인데, 이는 $M\otimes_A B$가 flat $B$-가군이고 $M'\otimes_A B \rightarrow M''\otimes_A B$가 단사이므로 ($B$ flat) 단사이다. 따라서 원래 morphism도 단사이고 $M$은 flat이다. Locally free of finite rank는 finitely presented이면서 flat인 것과 동치이므로 ([\[가환대수학\] §평탄성, ⁋따름정리 6](/ko/math/commutative_algebra/flatness#cor6)) 앞의 두 경우로부터 따라온다.
+Flat의 경우, $M$이 flat임을 보이려면 임의의 단사 $A$-가군 morphism $M' \hookrightarrow M''$에 대해 $M'\otimes_A M \rightarrow M''\otimes_A M$이 단사임을 보이면 된다. 이를 $-\otimes_A B$하면 ([명제 2](#prop2)로 단사성을 검사) $M'\otimes_A M\otimes_A B \rightarrow M''\otimes_A M\otimes_A B$인데, 이는 $M\otimes_A B$가 flat $B$-가군이고 $M'\otimes_A B \rightarrow M''\otimes_A B$가 단사이므로 ($B$ flat) 단사이다. 따라서 원래 morphism도 단사이고 $M$은 flat이다. Locally free of finite rank는 finitely presented이면서 flat인 것과 동치이므로 ([\[가환대수학\] §평탄성, ⁋따름정리 6](/ko/math/commutative_algebra/flatness#cor6)) 앞의 두 경우로부터 따라온다.
 :::
 
 ## Fpqc 위상과 quasi-coherent sheaf의 하강
@@ -208,7 +208,7 @@ $$0 \rightarrow M \rightarrow M\otimes_A B \rightarrow M\otimes_A B\otimes_A B$$
 의 정확성, 즉 [정리 6](#thm6)의 증명에서 사용한 사실에 다름 아니다. 두 morphism $d^0, d^1$의 equalizer가 $M$임이 곧 위 sheaf 조건이므로 결론을 얻는다.
 :::
 
-[정리 9](#thm9)는 quasi-coherent sheaf의 global section을 faithfully flat covering 위에서 계산할 수 있게 해준다. covering 위의 section이 두 겹 겹침에서 일치하면 그것은 밑공간 위의 section에서 유일하게 온다는 것이다. 이로부터 quasi-coherent sheaf 자체의 하강, 즉 정의 4의 sheaf 버전이 따라온다.
+[정리 9](#thm9)는 quasi-coherent sheaf의 global section을 faithfully flat covering 위에서 계산할 수 있게 해준다. Covering 위의 section이 두 겹 겹침에서 일치하면 그것은 밑공간 위의 section에서 유일하게 온다는 것이다. 이로부터 quasi-coherent sheaf 자체의 하강, 즉 정의 4의 sheaf 버전이 따라온다.
 
 ::: 정리 10
 $\{f_i: U_i \rightarrow X\}$가 fpqc cover라 하자. 그럼 $X$ 위의 quasi-coherent sheaf를 주는 것은, 각 $U_i$ 위의 quasi-coherent sheaf $\mathcal{F}_i$들과, $U_i\times_X U_j$ 위에서 cocycle 조건을 만족하는 isomorphism $\varphi_{ij}: \operatorname{pr}_2^\ast \mathcal{F}_j\cong \operatorname{pr}_1^\ast \mathcal{F}_i$들의 데이터를 주는 것과 동치이다. 즉 quasi-coherent sheaf는 fpqc 위상에 대하여 *effective descent*를 가진다.
@@ -242,7 +242,7 @@ $\{Y_i \rightarrow Y\}$를 fpqc cover라 하고 $f: X \rightarrow Y$를 scheme m
 ::: 증명
 각 성질이 base change에 대해 보존됨은 표준적이므로 (flatness의 경우 [§평탄사상, ⁋명제 3](/ko/math/scheme_theory/flat_morphisms#prop3)), fpqc cover 위에서 성립하면 원래 morphism에서도 성립함만 보이면 된다. 문제가 $Y$ 위에서 국소적이고 quasi-compact 조건으로 유한 covering으로 환원되므로, $Y=\Spec A$, covering이 단일 faithfully flat $\Spec A' \rightarrow \Spec A$인 경우만 본다.
 
-flatness의 경우, 이는 affine 위에서 $X$를 덮는 각 $\Spec B \rightarrow \Spec A$에 대한 $B$의 $A$-flatness로 판정된다. $B\otimes_A A'$가 $A'$-flat이라 가정하면, $A \rightarrow A'$가 faithfully flat이므로 임의의 단사 $A$-가군 morphism $M' \hookrightarrow M''$에 대하여 $(M'\otimes_A B \rightarrow M''\otimes_A B)\otimes_A A'$이 단사이고 ($B\otimes_A A'$ flat), [명제 2](#prop2)로 단사성을 $A$ 위로 반영하면 $M'\otimes_A B \rightarrow M''\otimes_A B$가 단사이므로 $B$는 $A$-flat이다. faithful flatness는 flatness에 surjective를 더한 것이고, surjective는 $\coprod (X\times_Y Y_i) \rightarrow \coprod Y_i \rightarrow Y$의 합성이 전사임과 $\coprod Y_i \rightarrow Y$가 전사임으로부터 $X \rightarrow Y$의 전사가 따라오므로 성립한다.
+Flatness의 경우, 이는 affine 위에서 $X$를 덮는 각 $\Spec B \rightarrow \Spec A$에 대한 $B$의 $A$-flatness로 판정된다. $B\otimes_A A'$가 $A'$-flat이라 가정하면, $A \rightarrow A'$가 faithfully flat이므로 임의의 단사 $A$-가군 morphism $M' \hookrightarrow M''$에 대하여 $(M'\otimes_A B \rightarrow M''\otimes_A B)\otimes_A A'$이 단사이고 ($B\otimes_A A'$ flat), [명제 2](#prop2)로 단사성을 $A$ 위로 반영하면 $M'\otimes_A B \rightarrow M''\otimes_A B$가 단사이므로 $B$는 $A$-flat이다. Faithful flatness는 flatness에 surjective를 더한 것이고, surjective는 $\coprod (X\times_Y Y_i) \rightarrow \coprod Y_i \rightarrow Y$의 합성이 전사임과 $\coprod Y_i \rightarrow Y$가 전사임으로부터 $X \rightarrow Y$의 전사가 따라오므로 성립한다.
 
 Affine의 경우, $X\times_A A'=\Spec C'$가 affine이라 하자. 그럼 $\mathcal{O}_X$의 pushforward가 준연접 대수층임을 [정리 10](#thm10)으로 $A'$에서 $A$로 하강시켜 얻으며, [정리 11](#thm11)의 논증으로 $X=\operatorname{\mathbf{Spec}}$ of 어떤 준연접 $A$-algebra, 즉 affine임을 안다. Locally of finite type과 locally of finite presentation은 affine 위에서 각각 $B$가 $A$ 위에서 finitely generated algebra, finitely presented algebra인 조건이며, [명제 7](#prop7)의 finitely generated·finitely presented 하강을 algebra generator와 관계식에 적용하여 $A'$에서 $A$로 내려온다.
 :::

@@ -18,7 +18,7 @@ Cauchy 정리는 holomorphic function의 closed 경로 적분이 소멸함을 �
 
 ## 유수와 유수정리
 
-isolated singularity $z_0$ 근방에서 holomorphic인 함수 $f$는 구멍 뚫린 원판 $0 < \lvert z - z_0\rvert < R$에서 Laurent 전개 $f(z) = \sum_{n=-\infty}^{\infty} a_n (z - z_0)^n$을 가진다. 이 전개의 계수 가운데 음의 일차 계수 $a_{-1}$이 특별한 지위를 가지는데, 작은 원을 따라 항별로 적분하면 정수 멱 $(z - z_0)^n$의 적분이 $n = -1$일 때만 $2\pi i$이고 나머지는 모두 $0$이기 때문이다. 따라서 $a_{-1}$만이 적분에 흔적을 남긴다.
+Isolated singularity $z_0$ 근방에서 holomorphic인 함수 $f$는 구멍 뚫린 원판 $0 < \lvert z - z_0\rvert < R$에서 Laurent 전개 $f(z) = \sum_{n=-\infty}^{\infty} a_n (z - z_0)^n$을 가진다. 이 전개의 계수 가운데 음의 일차 계수 $a_{-1}$이 특별한 지위를 가지는데, 작은 원을 따라 항별로 적분하면 정수 멱 $(z - z_0)^n$의 적분이 $n = -1$일 때만 $2\pi i$이고 나머지는 모두 $0$이기 때문이다. 따라서 $a_{-1}$만이 적분에 흔적을 남긴다.
 
 ::: 정의 1 (유수)
 $f$가 $z_0$에서 isolated singularity를 가지고 $0 < \lvert z - z_0\rvert < R$에서의 Laurent 전개가 $f(z) = \sum_{n=-\infty}^{\infty} a_n (z - z_0)^n$이라 하자. 이때 음의 일차 계수 $a_{-1}$을 $f$의 $z_0$에서의 *residue<sub>유수</sub>*라 하고
@@ -127,7 +127,7 @@ $$\operatorname{Res}_{z = -2} f = \lim_{z \rightarrow -2}\frac{z}{z - 1} = \frac
 
 이다.
 
-다음으로 $g(z) = \dfrac{e^z}{(z - 1)^2}$의 $z = 1$에서의 이차극을 본다. order $m = 2$이므로 명제 3에서 $(z - 1)^2 g(z) = e^z$을 한 번 미분하고 극한을 취해
+다음으로 $g(z) = \dfrac{e^z}{(z - 1)^2}$의 $z = 1$에서의 이차극을 본다. Order $m = 2$이므로 명제 3에서 $(z - 1)^2 g(z) = e^z$을 한 번 미분하고 극한을 취해
 
 $$\operatorname{Res}_{z = 1} g = \frac{1}{(2 - 1)!}\lim_{z \rightarrow 1}\frac{d}{dz}\Bigl[(z - 1)^2 \frac{e^z}{(z - 1)^2}\Bigr] = \lim_{z \rightarrow 1}\frac{d}{dz}e^z = e$$
 
@@ -265,7 +265,7 @@ $$\operatorname{Res}_{z = n} g_f = f(n)\operatorname{Res}_{z = n}\pi\cot\pi z = 
 
 $$\frac{1}{2\pi i}\oint_{\Gamma_N} \pi\cot(\pi z)f(z)\,dz = \sum_{n = -N}^{N} f(n) + \sum_{j}\operatorname{Res}_{z = z_j}\Bigl[\pi\cot(\pi z)f(z)\Bigr]$$
 
-이다. 왼쪽 적분을 어림한다. degree 조건에서 큰 $\lvert z\rvert$에 대해 $\lvert f(z)\rvert \leq A/\lvert z\rvert^2$이고 $\Gamma_N$ 위에서 $\lvert z\rvert \geq N + \tfrac12$이므로, $\Gamma_N$의 둘레가 $4(2N + 1)$임과 함께 ML 부등식 ([§복소적분, ⁋명제 6](/ko/math/complex_analysis/complex_integration#prop6)) 으로
+이다. 왼쪽 적분을 어림한다. Degree 조건에서 큰 $\lvert z\rvert$에 대해 $\lvert f(z)\rvert \leq A/\lvert z\rvert^2$이고 $\Gamma_N$ 위에서 $\lvert z\rvert \geq N + \tfrac12$이므로, $\Gamma_N$의 둘레가 $4(2N + 1)$임과 함께 ML 부등식 ([§복소적분, ⁋명제 6](/ko/math/complex_analysis/complex_integration#prop6)) 으로
 
 $$\left\lvert\oint_{\Gamma_N}\pi\cot(\pi z)f(z)\,dz\right\rvert \leq \pi C\cdot\frac{A}{(N + \frac12)^2}\cdot 4(2N + 1) \xrightarrow[N \rightarrow \infty]{} 0$$
 

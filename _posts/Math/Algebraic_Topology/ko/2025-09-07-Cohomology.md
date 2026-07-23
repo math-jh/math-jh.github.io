@@ -13,7 +13,7 @@ weight: 6
 
 ---
 
-cohomology는, 그 이름에서 알 수 있듯, homology의 dual에 해당하는 개념이라 할 수 있다. 그러나 단순히 공간 $X$의 $k$번째 cohomology $H^k(X)$가 $k$번째 homology $H_k(X)$의 dual이었다면 이를 별도로 생각할 필요가 없을 것이다.
+Cohomology는, 그 이름에서 알 수 있듯, homology의 dual에 해당하는 개념이라 할 수 있다. 그러나 단순히 공간 $X$의 $k$번째 cohomology $H^k(X)$가 $k$번째 homology $H_k(X)$의 dual이었다면 이를 별도로 생각할 필요가 없을 것이다.
 
 실제로 cohomology는 homology보다 더 정교한 불변량을 주는데, 가령 cohomology 위에는 자연스러운 곱셈 구조가 정의되며, 같은 homology를 갖는 공간이라 하더라도 이 곱셈구조가 다르다면 homtopic하지 않다. 이번 글에서는 cohomology의 정의와 기본적인 성질들에 대해 살펴본다. 
 
@@ -140,7 +140,7 @@ $$H^k(X;A)\cong \Hom_\mathbb{Z}(H_k(X),A)\oplus \Ext^1_\mathbb{Z}(H_{k-1}(X),A)$
 
 ## 드람 코호몰로지
 
-위상공간 $X$에 chain complex $C_\bullet(X)$를 대응시키는 것은 $X$의 부분공간들에 대한 정보를 대수적으로 옮기는 것이라 할 수 있다. cohomology를 정의할 때 우리는 $C_\bullet(X)$에 $\Hom_\mathbb{Z}(-,A)$를 취한 후 이 cochain complex의 homology를 정의하며, 이 때 
+위상공간 $X$에 chain complex $C_\bullet(X)$를 대응시키는 것은 $X$의 부분공간들에 대한 정보를 대수적으로 옮기는 것이라 할 수 있다. Cohomology를 정의할 때 우리는 $C_\bullet(X)$에 $\Hom_\mathbb{Z}(-,A)$를 취한 후 이 cochain complex의 homology를 정의하며, 이 때 
 
 $$C^k(X;A)=\Hom_\mathbb{Z}(C_k(X), A)$$
 

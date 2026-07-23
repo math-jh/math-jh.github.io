@@ -30,7 +30,7 @@ $$N_{\mathrm{loc}}:=N\otimes_R\mathrm{Frac}(R)$$
 
 ## 고정점 성분과 그 normal bundle
 
-localization 정리의 무대는 fixed locus $M^T=\{x\in M\mid g\cdot x=x\text{ for all }g\in T\}$이다. Torus 작용의 fixed locus는 variety로서 잘 행동하며, 각 성분 주위에서 작용이 normal 방향으로 어떻게 보이는지가 정리의 핵심 데이터가 된다.
+Localization 정리의 무대는 fixed locus $M^T=\{x\in M\mid g\cdot x=x\text{ for all }g\in T\}$이다. Torus 작용의 fixed locus는 variety로서 잘 행동하며, 각 성분 주위에서 작용이 normal 방향으로 어떻게 보이는지가 정리의 핵심 데이터가 된다.
 
 ::: 명제 1
 $T$가 콤팩트 variety $M$ 위에 매끄럽게 작용할 때, fixed locus $M^T$은 closed smooth 부분다양체이며 유한히 많은 connected 성분 $F$의 disjoint union이다. 각 성분 $F$는 $T$-불변이고 그 위에서 $T$가 자명하게 작용한다. 더 나아가 $F$의 normal bundle $N_F=TM\vert_F/TF$은 fiber마다 $T$-작용을 가지며, 이 작용의 weight들은 모두 $0$이 아니다.
@@ -104,7 +104,7 @@ $j_F:F\hookrightarrow M$을 fixed component의 포함, $\pi_M:M\rightarrow\mathr
 3. (함자성) $\pi_{M\ast}\circ j_{F\ast}=\pi_{F\ast}$, 곧 $\int_M j_{F\ast}\beta=\int_F\beta$이다.
 :::
 ::: 증명
-(1) 동변 Thom class를 통한 자기교차 공식이다. closed 부분다양체 $F$의 동변 tubular neighborhood는 $N_F$의 disk bundle과 동일시되고 (명제 1), 그 동변 Thom class $u\in H_T^{\mathrm{codim}F}(N_F,N_F^\circ)$의 zero section으로의 restriction이 동변 Euler class $e_T(N_F)$이다. ([\[대수적 위상수학\] §벡터다발의 특성류, ⁋정리 2](/ko/math/algebraic_topology/characteristic_classes#thm2)의 동변 판본) Pushforward $j_{F\ast}$은 Thom class와의 곱 뒤 확장으로 정의되므로, 그 즉시 되돌려 제한하면 $j_F^\ast j_{F\ast}\beta=e_T(N_F)\smile\beta$를 얻는다.
+(1) 동변 Thom class를 통한 자기교차 공식이다. Closed 부분다양체 $F$의 동변 tubular neighborhood는 $N_F$의 disk bundle과 동일시되고 (명제 1), 그 동변 Thom class $u\in H_T^{\mathrm{codim}F}(N_F,N_F^\circ)$의 zero section으로의 restriction이 동변 Euler class $e_T(N_F)$이다. ([\[대수적 위상수학\] §벡터다발의 특성류, ⁋정리 2](/ko/math/algebraic_topology/characteristic_classes#thm2)의 동변 판본) Pushforward $j_{F\ast}$은 Thom class와의 곱 뒤 확장으로 정의되므로, 그 즉시 되돌려 제한하면 $j_F^\ast j_{F\ast}\beta=e_T(N_F)\smile\beta$를 얻는다.
 
 (2) $F$와 $G$가 서로소이므로 $j_{G\ast}\beta$는 $G$의 한 근방에 support를 갖는 class로 표현되고, 그것을 $F$로 제한하면 $0$이다.
 
@@ -169,7 +169,7 @@ $$\alpha=\sum_F j_{F\ast}\left(\frac{i_F^\ast\alpha}{e_T(N_F)}\right)\quad\text{
 
 ## Atiyah–Bott–Berline–Vergne 적분 공식
 
-localization 정리에 동변 적분을 결합하면, $M$ 전체에서의 적분이 fixed component 각각에서의 국소 적분의 합으로 분해된다.
+Localization 정리에 동변 적분을 결합하면, $M$ 전체에서의 적분이 fixed component 각각에서의 국소 적분의 합으로 분해된다.
 
 ::: 정리 8 (ABBV 적분 공식)
 $\alpha\in H_T^\bullet(M)$에 대하여

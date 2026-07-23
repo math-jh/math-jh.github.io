@@ -24,7 +24,7 @@ published: false
 방정식 $x^2 - Dy^2 = 1$을 *펠 방정식<sub>Pell's equation</sub>*이라 한다. $x = \pm 1, y = 0$인 해를 *자명한 해*라 한다.
 :::
 
-수 $\alpha = x + y\sqrt{D}$ ($x, y \in \mathbb{Z}$) 들이 이루는 ring $\mathbb{Z}[\sqrt D]$에서 *norm*을 $N(\alpha) = (x + y\sqrt D)(x - y\sqrt D) = x^2 - Dy^2$으로 정의하면, 펠 방정식의 해는 정확히 $N(\alpha) = 1$인 원소이다. norm은 곱셈적이므로 — $N(\alpha\beta) = N(\alpha)N(\beta)$ — 해들의 곱도 다시 해이다. 이것이 해의 구조를 지배한다.
+수 $\alpha = x + y\sqrt{D}$ ($x, y \in \mathbb{Z}$) 들이 이루는 ring $\mathbb{Z}[\sqrt D]$에서 *norm*을 $N(\alpha) = (x + y\sqrt D)(x - y\sqrt D) = x^2 - Dy^2$으로 정의하면, 펠 방정식의 해는 정확히 $N(\alpha) = 1$인 원소이다. Norm은 곱셈적이므로 — $N(\alpha\beta) = N(\alpha)N(\beta)$ — 해들의 곱도 다시 해이다. 이것이 해의 구조를 지배한다.
 
 ## 기본해의 존재
 
@@ -51,7 +51,7 @@ $$x_n + y_n\sqrt D = (x_1 + y_1\sqrt D)^n \qquad (n = 1, 2, 3, \ldots)$$
 :::
 
 ::: 증명
-norm의 곱셈성으로 $N(\varepsilon_1^n) = N(\varepsilon_1)^n = 1$이므로 각 $\varepsilon_1^n$은 해이다. 거꾸로 $\beta = x + y\sqrt D > 1$이 어떤 해인데 $\varepsilon_1^n$ 꼴이 아니라면, $\varepsilon_1^n \leq \beta < \varepsilon_1^{n+1}$인 $n$을 잡을 수 있고 $1 \leq \beta\varepsilon_1^{-n} < \varepsilon_1$이다. $\beta\varepsilon_1^{-n}$도 norm $1$의 해인데 $1$보다 작은 자명하지 않은 해가 되어 기본해의 최소성에 모순이다 (또는 $1$이어서 $\beta = \varepsilon_1^n$). 따라서 모든 양의 해가 거듭제곱으로 소진된다.
+Norm의 곱셈성으로 $N(\varepsilon_1^n) = N(\varepsilon_1)^n = 1$이므로 각 $\varepsilon_1^n$은 해이다. 거꾸로 $\beta = x + y\sqrt D > 1$이 어떤 해인데 $\varepsilon_1^n$ 꼴이 아니라면, $\varepsilon_1^n \leq \beta < \varepsilon_1^{n+1}$인 $n$을 잡을 수 있고 $1 \leq \beta\varepsilon_1^{-n} < \varepsilon_1$이다. $\beta\varepsilon_1^{-n}$도 norm $1$의 해인데 $1$보다 작은 자명하지 않은 해가 되어 기본해의 최소성에 모순이다 (또는 $1$이어서 $\beta = \varepsilon_1^n$). 따라서 모든 양의 해가 거듭제곱으로 소진된다.
 :::
 
 ::: 예시 4
@@ -119,7 +119,7 @@ $D = 61$의 사례는 인도 수학자 바스카라 2세와 브라마굽타가 �
 
 ## 음의 펠 방정식
 
-norm이 $-1$인 방정식 $x^2 - Dy^2 = -1$은 *음의 펠 방정식<sub>negative Pell equation</sub>*이라 불리며, 보통의 펠 방정식과 달리 항상 풀리지는 않는다. 그 해법 가능성은 $\sqrt D$ 연분수의 주기 길이의 홀짝성에 달려 있다.
+Norm이 $-1$인 방정식 $x^2 - Dy^2 = -1$은 *음의 펠 방정식<sub>negative Pell equation</sub>*이라 불리며, 보통의 펠 방정식과 달리 항상 풀리지는 않는다. 그 해법 가능성은 $\sqrt D$ 연분수의 주기 길이의 홀짝성에 달려 있다.
 
 ::: 명제 8
 $x^2 - Dy^2 = -1$이 정수해를 가지면 $D$는 두 제곱수의 합으로 표현되며, 특히 $4$로 나눈 나머지가 $3$인 소인수를 갖지 않는다. 따라서 $D \equiv 3 \pmod 4$이거나 $D$가 그런 소인수를 가지면 음의 펠 방정식은 풀리지 않는다.

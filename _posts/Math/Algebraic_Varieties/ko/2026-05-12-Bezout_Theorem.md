@@ -72,7 +72,7 @@ $$\frac{(t+2)(t+1)}{2} - \frac{(t-d+2)(t-d+1)}{2} = dt + \frac{d(3-d)}{2}$$
 $\mathbb{P}^2$ 안의 degree $d$ 곡선 $C = Z(F)$에 대하여, 임의의 일반적인 직선 $L$과의 교차 $C \cap L$은 정확히 $d$개의 점(중복도 포함)으로 이루어진다.
 :::
 
-이 명제는 Bézout 정리의 가장 단순한 특수 경우이다. degree $d$ 곡선이 일반적인 직선과 $d$점에서 만난다는 기하학적 직관을 제공한다.
+이 명제는 Bézout 정리의 가장 단순한 특수 경우이다. Degree $d$ 곡선이 일반적인 직선과 $d$점에서 만난다는 기하학적 직관을 제공한다.
 
 ::: 증명
 일반성을 잃지 않고 $L = Z(\x_2)$라 하자. $C$가 degree $d$ homogeneous polynomial $F(\x_0, \x_1, \x_2)$로 정의되므로, $L \cap C$에서 $\x_2 = 0$을 대입하면 $F(\x_0, \x_1, 0)$을 얻는다. 이는 $\x_0, \x_1$에 관한 degree $d$ homogeneous polynomial이며, algebraically closed field 위에서 정확히 $d$개의 근을 갖는다(중복도 포함). $L$이 일반적이므로 $F(\x_0, \x_1, 0)$은 영다항식이 아니며, 만일 그렇다면 $\x_2$가 $F$의 인수가 되어 $C$가 $L$을 성분으로 갖게 되어 가정에 모순된다.
@@ -184,11 +184,11 @@ $X \cap Y$는 $A, B, C, D, E, F$와 $P, Q, R$을 모두 포함하므로 적어�
 Bézout 정리로 평면곡선의 singular point 개수에 대한 상한을 얻을 수 있다.
 
 ::: 명제 10
-degree $d$ irreducible plane curve가 가질 수 있는 최대 ordinary double point의 개수는 $\binom{d-1}{2} = \frac{(d-1)(d-2)}{2}$이다.
+Degree $d$ irreducible plane curve가 가질 수 있는 최대 ordinary double point의 개수는 $\binom{d-1}{2} = \frac{(d-1)(d-2)}{2}$이다.
 :::
 
 ::: 증명
-degree $d$ irreducible curve $C$ 위에 $n$개의 ordinary double point $p_1, \ldots, p_n$이 있다고 하자. 곡선의 *genus*(기하학적 종수) $g$는 normalization으로 얻는 smooth 곡선의 genus이다. smooth projective 평면 곡선의 genus는 *genus-degree 공식*에 의해 $(d-1)(d-2)/2$이며, singular point가 있는 경우 각 singular point $p$의 *$\delta$-invariant* $\delta_p$만큼 genus가 감소한다. Ordinary double point의 $\delta$-invariant는 $\delta_{p_i} = 1$이다. 따라서
+Degree $d$ irreducible curve $C$ 위에 $n$개의 ordinary double point $p_1, \ldots, p_n$이 있다고 하자. 곡선의 *genus*(기하학적 종수) $g$는 normalization으로 얻는 smooth 곡선의 genus이다. Smooth projective 평면 곡선의 genus는 *genus-degree 공식*에 의해 $(d-1)(d-2)/2$이며, singular point가 있는 경우 각 singular point $p$의 *$\delta$-invariant* $\delta_p$만큼 genus가 감소한다. Ordinary double point의 $\delta$-invariant는 $\delta_{p_i} = 1$이다. 따라서
 
 $$g = \frac{(d-1)(d-2)}{2} - \sum_{i=1}^n \delta_{p_i} = \frac{(d-1)(d-2)}{2} - n$$
 

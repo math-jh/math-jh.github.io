@@ -31,7 +31,7 @@ $$P=\{\lambda\in\mathfrak{h}^\ast\mid\lambda(h_i)\in\mathbb{Z}\ \text{ for all s
 은 $\mathfrak{h}^\ast$ 안의 lattice를 이룬다. 유한차원 representation의 모든 weight는 각 $\sl_{2,\alpha_i}$-방향에서 정수 고윳값을 가지므로 ([§최고 무게 가군, ⁋정리 12](/ko/math/lie_theory/highest_weight_modules#thm12)의 증명) $P$ 안에 놓이고, 따라서 $P$가 formal character의 자연스러운 무대가 된다. 이 lattice 위에 group ring을 얹는다.
 
 ::: 정의 1
-weight lattice $P$의 *group ring<sub>군환</sub>* $\mathbb{Z}[P]$는 형식기호 $\{e^\mu\mid\mu\in P\}$를 $\mathbb{Z}$-basis로 갖는 자유가군이며, 곱셈을
+Weight lattice $P$의 *group ring<sub>군환</sub>* $\mathbb{Z}[P]$는 형식기호 $\{e^\mu\mid\mu\in P\}$를 $\mathbb{Z}$-basis로 갖는 자유가군이며, 곱셈을
 
 $$e^\mu\cdot e^\nu=e^{\mu+\nu},\qquad e^0=1$$
 
@@ -162,7 +162,7 @@ $$\Omega=\sum_i H_i^2+\text{(lower terms)}+2\sum_{\alpha\in\Phi^+}f_\alpha e_\al
 이제 central character가 같은 Verma module만이 한 블록에 묶인다는 사실과 Verma character가 $\widehat{\mathbb{Z}[P]}$에서 가역 분모를 갖는다는 사실을 결합하여, character 공식을 끌어낸다.
 
 ::: 정리 9 (Weyl 지표 공식)
-dominant integral weight $\lambda$에 대하여, 기약 representation $L(\lambda)$의 formal character는
+Dominant integral weight $\lambda$에 대하여, 기약 representation $L(\lambda)$의 formal character는
 
 $$\mathrm{ch}\,L(\lambda)=\frac{\sum_{w\in W}(-1)^{\ell(w)}\,e^{w(\lambda+\rho)}}{\sum_{w\in W}(-1)^{\ell(w)}\,e^{w\rho}}=\frac{\sum_{w\in W}(-1)^{\ell(w)}\,e^{w(\lambda+\rho)}}{\prod_{\alpha\in\Phi^+}\bigl(e^{\alpha/2}-e^{-\alpha/2}\bigr)}$$
 
@@ -199,7 +199,7 @@ $$\Delta\cdot\mathrm{ch}\,L(\lambda)=\sum_{w\in W}(-1)^{\ell(w)}e^{w(\lambda+\rh
 Character 공식의 양변을 차원으로 평가하면 닫힌 차원 공식이 따라온다. 차원은 모든 형식기호를 $1$로 보내는 평가 $\varepsilon$로 얻어지지만 ([정의 2](#def2) 이후의 논의), 분자와 분모가 $\varepsilon$에서 모두 $0$이 되므로 곧바로 대입할 수는 없다. 대신 $e^\mu\mapsto e^{t\langle\mu,\rho^\vee\rangle}$ 류의 일변수 변형을 거쳐 극한을 취하는 방식으로 부정형을 해소한다.
 
 ::: 따름정리 10 (Weyl 차원 공식)
-dominant integral weight $\lambda$에 대하여
+Dominant integral weight $\lambda$에 대하여
 
 $$\dim L(\lambda)=\prod_{\alpha\in\Phi^+}\frac{\langle\lambda+\rho,\alpha\rangle}{\langle\rho,\alpha\rangle}$$
 
@@ -244,7 +244,7 @@ $\sl_2$에서는 분자의 등비급수가 그대로 weight 사슬을 내어주�
 ::: 예시 12
 $\mathfrak{g}=\sl_3$에서 simple root는 $\alpha_1,\alpha_2$이고 positive root는 $\alpha_1,\alpha_2,\alpha_1+\alpha_2$의 셋이다. Weyl group은 $W\cong S_3$으로 $\lvert W\rvert=6$이며, $\rho=\alpha_1+\alpha_2$ (곧 두 fundamental weight의 합 $\varpi_1+\varpi_2$)이다. 내적을 $\langle\alpha_i,\alpha_i\rangle=2$, $\langle\alpha_1,\alpha_2\rangle=-1$로 normalize한다.
 
-adjoint representation은 highest weight $\theta=\alpha_1+\alpha_2$ (최고 root)를 갖는 $L(\theta)$이다. 차원을 계산하면 $\theta+\rho=2(\alpha_1+\alpha_2)$이고
+Adjoint representation은 highest weight $\theta=\alpha_1+\alpha_2$ (최고 root)를 갖는 $L(\theta)$이다. 차원을 계산하면 $\theta+\rho=2(\alpha_1+\alpha_2)$이고
 
 $$\langle\theta+\rho,\alpha_1\rangle=\langle 2\alpha_1+2\alpha_2,\alpha_1\rangle=2\cdot 2+2\cdot(-1)=2,$$
 

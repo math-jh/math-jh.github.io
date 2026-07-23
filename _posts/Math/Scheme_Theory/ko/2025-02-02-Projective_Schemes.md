@@ -375,7 +375,7 @@ $$\mathcal{O}_{\Proj A_\bullet,\mathfrak{p}}\cong A_{(\mathfrak{p})}$$
 이 존재한다. 
 :::
 ::: 증명
-$\mathfrak{p}\in \Proj A_\bullet$이므로 $A_+\not\subseteq \mathfrak{p}$이고, 따라서 $\mathfrak{p}$에 속하지 않는 $A_+$의 homogeneous element $f$가 존재한다. $d=\deg f\geq 1$이라 두자. 그럼 $\mathfrak{p}\in D_+(f)$이고, [정리 10](#thm10)에 의하여 $D_+(f)$는 $\Spec A_{(f)}$와 isomorphic한 $\Proj A_\bullet$의 open subscheme이다. open subscheme의 stalk은 원래 scheme의 stalk과 같으므로, [보조정리 8](#lem8)이 $\mathfrak{p}$를 옮기는 점 $\mathfrak{q}=\mathfrak{p}A_f\cap A_{(f)}$에 대하여 [§아핀스킴, ⁋보조정리 8](/ko/math/scheme_theory/affine_schemes#lem8)로부터
+$\mathfrak{p}\in \Proj A_\bullet$이므로 $A_+\not\subseteq \mathfrak{p}$이고, 따라서 $\mathfrak{p}$에 속하지 않는 $A_+$의 homogeneous element $f$가 존재한다. $d=\deg f\geq 1$이라 두자. 그럼 $\mathfrak{p}\in D_+(f)$이고, [정리 10](#thm10)에 의하여 $D_+(f)$는 $\Spec A_{(f)}$와 isomorphic한 $\Proj A_\bullet$의 open subscheme이다. Open subscheme의 stalk은 원래 scheme의 stalk과 같으므로, [보조정리 8](#lem8)이 $\mathfrak{p}$를 옮기는 점 $\mathfrak{q}=\mathfrak{p}A_f\cap A_{(f)}$에 대하여 [§아핀스킴, ⁋보조정리 8](/ko/math/scheme_theory/affine_schemes#lem8)로부터
 
 $$\mathcal{O}_{\Proj A_\bullet,\mathfrak{p}}\cong \mathcal{O}_{\Spec A_{(f)},\mathfrak{q}}\cong (A_{(f)})_\mathfrak{q}$$
 

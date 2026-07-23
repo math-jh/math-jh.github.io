@@ -38,7 +38,7 @@ $$Rf_! := Rp_\ast \circ j_!$$
 
 여기서 $j_!$은 exact이므로 derived할 필요가 없고 $Rp_\ast$만 $p$의 properness를 통해 통제되므로, $Rf_!$은 잘 정의된 functor이다. 우리가 다루는 locally compact Hausdorff 공간 사이의 separated map은 항상 compactifiable한데, 가장 기본적인 예로 $f = a_X: X \rightarrow \{\ast\}$의 경우 $X$의 one-point compactification $\overline{X} = X \cup \{\infty\}$을 택하면 $j: X \hookrightarrow \overline{X}$는 open embedding이고 $\overline{X}$가 compact이므로 $p: \overline{X} \rightarrow \{\ast\}$는 proper이다. 일반적인 $f$에 대해서도 fiber별 one-point compactification을 이어 붙여 compactification을 얻는다. 정의가 의미를 가지려면 $Rp_\ast \circ j_!$이 compactification의 선택에 의존하지 않음을 보여야 하는데, 이는 proper map에 대한 base change 정리로부터 따라 나온다. 따라서 먼저 그 정리를 진술한다.
 
-proper base change는 $Rp_\ast$를 fiber별로 계산할 수 있게 해 주는 정리로, 그 핵심은 proper map의 higher direct image의 stalk가 fiber 위의 cohomology로 주어진다는 사실이다. 다음 형태의 cartesian square를 생각하자. $g: Y' \rightarrow Y$가 임의의 연속함수이고 $f: X \rightarrow Y$가 주어졌을 때, fiber product $X' = X \times_Y Y'$와 사영 $g': X' \rightarrow X$, $f': X' \rightarrow Y'$를 둔다.
+Proper base change는 $Rp_\ast$를 fiber별로 계산할 수 있게 해 주는 정리로, 그 핵심은 proper map의 higher direct image의 stalk가 fiber 위의 cohomology로 주어진다는 사실이다. 다음 형태의 cartesian square를 생각하자. $g: Y' \rightarrow Y$가 임의의 연속함수이고 $f: X \rightarrow Y$가 주어졌을 때, fiber product $X' = X \times_Y Y'$와 사영 $g': X' \rightarrow X$, $f': X' \rightarrow Y'$를 둔다.
 
 ![고유 받음의 base change를 정의하는 cartesian square](/assets/images/Math/Sheaf_Theory/Six_Functors-1.svg){:style="width:6.59em" class="invert" .align-center}
 
@@ -57,7 +57,7 @@ $$\varinjlim_V H^q(f^{-1}(V), \mathcal{F}) \cong H^q(f^{-1}(y), \mathcal{F}\vert
 일반적인 cartesian square에 대해서는 양변에 $y' \in Y'$에서 stalk를 취한다. 우변 $Rf'_\ast (g')^{-1}\mathcal{F}$의 stalk는 방금의 공식에 의해 $f'^{-1}(y') = f^{-1}(g(y'))$ 위의 cohomology이고, 좌변 $g^{-1}Rf_\ast \mathcal{F}$의 stalk는 $(Rf_\ast \mathcal{F})_{g(y')}$이므로 다시 같은 fiber 위의 cohomology이다. Fiber product의 정의에 의해 두 fiber가 위상동형이므로 두 stalk가 일치하고, 이 동형이 자연스러움을 확인하면 된다. 자세한 논증은 [KS]의 Proposition 2.6.7을 따른다.
 :::
 
-stalk 공식은 proper map에 대해서는 $Rf_\ast$를 fiber 위의 통상적 cohomology로 점별로 읽을 수 있음을 말한다. 이는 비proper map에서는 성립하지 않으며, 바로 이 fiber별 읽기 가능성이 고유 받음을 base change에 대해 잘 행동하게 만드는 근원이다. 이제 이 정리를 이용해 [정의 1](#def1)이 compactification의 선택에 무관함을 본다.
+Stalk 공식은 proper map에 대해서는 $Rf_\ast$를 fiber 위의 통상적 cohomology로 점별로 읽을 수 있음을 말한다. 이는 비proper map에서는 성립하지 않으며, 바로 이 fiber별 읽기 가능성이 고유 받음을 base change에 대해 잘 행동하게 만드는 근원이다. 이제 이 정리를 이용해 [정의 1](#def1)이 compactification의 선택에 무관함을 본다.
 
 ::: 명제 3
 Compactifiable map $f: X \rightarrow Y$의 고유 받음 $Rf_!$은 compactification $(j, p)$의 선택에 의존하지 않는다.
@@ -115,7 +115,7 @@ $$f^! \mathcal{G}^\bullet \cong f^{-1}\mathcal{G}^\bullet \otimes \operatorname{
 
 $Y = \{\ast\}$이고 $X$가 $d$차원 manifold인 특수한 경우, $\omega_X := a_X^! \mathbb{Z} \cong \operatorname{or}_X[d]$를 $X$의 *dualizing complex*라 부른다. $X$가 orientable하면 $\omega_X \cong \mathbb{Z}_X[d]$이며, 이 동형이 곧 manifold의 Poincaré duality를 sheaf 차원에서 진술하는 형태이다. 일반적인 (manifold가 아닐 수 있는) 공간에 대해서도 $\omega_X = a_X^! \mathbb{Z}$가 정의되어 dualizing complex의 역할을 하며, 이를 이용한 $R\Hom(-, \omega_X)$ 형태의 duality가 Verdier duality이다.
 
-complex manifold의 경우를 별도로 언급할 필요가 있다. $f$가 복소 상대 차원 $m$인 정칙 submersion이면 실 차원으로는 $d = 2m$이고, complex manifold는 표준적으로 방향지어지므로 $\operatorname{or}_{X/Y} \cong \mathbb{Z}_X$이며 $f^! \mathcal{G}^\bullet \cong f^{-1}\mathcal{G}^\bullet[2m]$이 된다. degree 이동이 복소 차원의 두 배인 것은 이 글에서 다루는 cohomology가 실 위상 cohomology이기 때문이다.
+Complex manifold의 경우를 별도로 언급할 필요가 있다. $f$가 복소 상대 차원 $m$인 정칙 submersion이면 실 차원으로는 $d = 2m$이고, complex manifold는 표준적으로 방향지어지므로 $\operatorname{or}_{X/Y} \cong \mathbb{Z}_X$이며 $f^! \mathcal{G}^\bullet \cong f^{-1}\mathcal{G}^\bullet[2m]$이 된다. Degree 이동이 복소 차원의 두 배인 것은 이 글에서 다루는 cohomology가 실 위상 cohomology이기 때문이다.
 
 ## 여섯 함자 형식
 
@@ -136,7 +136,7 @@ $$g^{-1} Rf_! = g^{-1} Rp_\ast j_! \cong Rp'_\ast (g'')^{-1} j_! \cong Rp'_\ast 
 을 얻는다. 여기서 $g''$은 $\overline{X}' \rightarrow \overline{X}$이다. Stalk 공식은 $Y' = \{y\}$로 둔 특수한 경우이며, 이때 $Rf'_!$은 fiber $f^{-1}(y)$의 구조 morphism $a: f^{-1}(y) \rightarrow \{y\}$에 대한 $Ra_! = R\Gamma_c(f^{-1}(y), -)$이다.
 :::
 
-stalk 공식 $(Rf_! \mathcal{F})_y \cong R\Gamma_c(f^{-1}(y), \mathcal{F}\vert)$은 고유 받음의 본질을 가장 직접적으로 드러낸다. 통상적 받음의 stalk가 작은 근방 위의 cohomology의 colimit이었던 데 반해, 고유 받음의 stalk는 fiber 위의 compactly supported cohomology 그 자체이며 근방으로 새어 나가는 정보가 없다. Base change 동형은 이 fiber별 묘사가 fiber product 아래에서 fiber가 보존된다는 위상적 사실의 직접적 귀결일 뿐이다. 이 점에서 $Rf_!$은 $Rf_\ast$보다 기하학적으로 다루기 쉽다.
+Stalk 공식 $(Rf_! \mathcal{F})_y \cong R\Gamma_c(f^{-1}(y), \mathcal{F}\vert)$은 고유 받음의 본질을 가장 직접적으로 드러낸다. 통상적 받음의 stalk가 작은 근방 위의 cohomology의 colimit이었던 데 반해, 고유 받음의 stalk는 fiber 위의 compactly supported cohomology 그 자체이며 근방으로 새어 나가는 정보가 없다. Base change 동형은 이 fiber별 묘사가 fiber product 아래에서 fiber가 보존된다는 위상적 사실의 직접적 귀결일 뿐이다. 이 점에서 $Rf_!$은 $Rf_\ast$보다 기하학적으로 다루기 쉽다.
 
 다음으로 고유 받음과 tensor product 사이의 호환을 진술하는 projection formula를 본다. 이는 $Rf_!$이 $Y$ 위의 대상에 의한 tensor를 "통과시킨다"는 것으로, $Rf_!$이 $D(\Sh(Y))$-가군 functor임을 표현한다.
 
@@ -151,7 +151,7 @@ $$\big(Rf_!(\mathcal{F} \otimes^L f^{-1}\mathcal{G})\big)_y \cong R\Gamma_c\big(
 인데, $f^{-1}\mathcal{G}$를 fiber로 제한하면 상수 계열, 즉 $\mathcal{G}_y$로 만들어진 상수 sheaf의 pullback이 되므로 이는 $R\Gamma_c(f^{-1}(y), \mathcal{F}\vert) \otimes^L \mathcal{G}_y$와 동형이다. 여기서 compactly supported cohomology가 고정된 계수 complex $\mathcal{G}_y$에 대한 tensor를 통과시킨다는 사실을 썼다. 우변의 stalk는 $\otimes^L$이 stalk와 교환하므로 $(Rf_! \mathcal{F})_y \otimes^L \mathcal{G}_y \cong R\Gamma_c(f^{-1}(y), \mathcal{F}\vert) \otimes^L \mathcal{G}_y$이다. 두 stalk가 자연스럽게 일치하므로 [§층의 유도 범주와 유도 함자, ⁋명제 1](/ko/math/sheaf_theory/derived_category_of_sheaves#prop1)의 stalk 판정에 의해 동형이 성립한다. 자세히는 [KS]의 Proposition 2.5.13을 따른다.
 :::
 
-projection formula는 $f^!$에 대한 형태로도 옮겨 쓸 수 있다. 두 adjunction $(Rf_!, f^!)$과 tensor-hom adjunction을 결합하면 $R\Hom(Rf_! \mathcal{F}, \mathcal{G}) \cong Rf_\ast R\Hom(\mathcal{F}, f^! \mathcal{G})$이라는 대역적 Verdier duality가 나오는데, 이는 projection formula와 base change, 그리고 두 adjunction이 함께 작동하는 형식의 정점이다. 그 일반론은 이 글의 범위를 넘으므로 [KS]의 §3.1을 참조한다.
+Projection formula는 $f^!$에 대한 형태로도 옮겨 쓸 수 있다. 두 adjunction $(Rf_!, f^!)$과 tensor-hom adjunction을 결합하면 $R\Hom(Rf_! \mathcal{F}, \mathcal{G}) \cong Rf_\ast R\Hom(\mathcal{F}, f^! \mathcal{G})$이라는 대역적 Verdier duality가 나오는데, 이는 projection formula와 base change, 그리고 두 adjunction이 함께 작동하는 형식의 정점이다. 그 일반론은 이 글의 범위를 넘으므로 [KS]의 §3.1을 참조한다.
 
 ## 열린-닫힌 분해와 recollement
 
@@ -194,7 +194,7 @@ $$\cdots \rightarrow H^k_c(X, \mathcal{F}) \rightarrow H^k(\overline{X}, \overli
 열린 구간 $U = (0, 1)$, affine line $\mathbb{A}^1 = \mathbb{C}$, 사영 직선 $\mathbb{P}^1$ 위의 상수 sheaf의 compactly supported cohomology를 계산하고, 통상적 cohomology와 대조한다. 일반화로 $\mathbb{R}^n$에 대한 $R\Gamma_c(\mathbb{R}^n, \mathbb{Z}) \cong \mathbb{Z}[-n]$을 얻는다.
 :::
 
-먼저 열린 구간 $U = (0, 1)$을 다룬다. 통상적 cohomology는 $U$가 가축이므로 $H^0(U, \mathbb{Z}) = \mathbb{Z}$, $H^k(U, \mathbb{Z}) = 0$ ($k \geq 1$)으로 degree $0$에 집중된다. compactly supported cohomology를 계산하기 위해 compactification $j: (0,1) \hookrightarrow [0,1]$을 택하자. 이는 open embedding이고 닫힌 보충집합은 두 끝점 $\partial = \{0, 1\}$, 곧 closed embedding $i: \{0,1\} \hookrightarrow [0,1]$이다. 상수 sheaf $\mathbb{Z}_{[0,1]}$에 대한 첫째 recollement triangle ([정리 10](#thm10))
+먼저 열린 구간 $U = (0, 1)$을 다룬다. 통상적 cohomology는 $U$가 가축이므로 $H^0(U, \mathbb{Z}) = \mathbb{Z}$, $H^k(U, \mathbb{Z}) = 0$ ($k \geq 1$)으로 degree $0$에 집중된다. Compactly supported cohomology를 계산하기 위해 compactification $j: (0,1) \hookrightarrow [0,1]$을 택하자. 이는 open embedding이고 닫힌 보충집합은 두 끝점 $\partial = \{0, 1\}$, 곧 closed embedding $i: \{0,1\} \hookrightarrow [0,1]$이다. 상수 sheaf $\mathbb{Z}_{[0,1]}$에 대한 첫째 recollement triangle ([정리 10](#thm10))
 $$j_! \mathbb{Z}_U \longrightarrow \mathbb{Z}_{[0,1]} \longrightarrow i_\ast \mathbb{Z}_\partial \xrightarrow{+1}$$
 에 $R\Gamma([0,1], -)$을 적용한다. $[0,1]$이 가축이므로 $R\Gamma([0,1], \mathbb{Z}) = \mathbb{Z}$ (degree $0$)이고, $R\Gamma([0,1], i_\ast \mathbb{Z}_\partial) = R\Gamma(\partial, \mathbb{Z}) = \mathbb{Z}^2$ (degree $0$)이다. 또 $R\Gamma([0,1], j_! \mathbb{Z}_U) = R\Gamma_c(U, \mathbb{Z})$이다. 따라서 long exact sequence는
 $$0 \rightarrow H^0_c(U) \rightarrow H^0([0,1]) = \mathbb{Z} \xrightarrow{\rho} H^0(\partial) = \mathbb{Z}^2 \rightarrow H^1_c(U) \rightarrow H^1([0,1]) = 0$$

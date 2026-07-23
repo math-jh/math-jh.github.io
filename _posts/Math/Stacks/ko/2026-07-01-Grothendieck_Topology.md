@@ -25,7 +25,7 @@ published: false
 이하에서 $\mathcal{C}$는 고정된 범주이고, $U$는 그 대상이다.
 
 ::: 정의 1
-대상 $U\in \mathcal{C}$ 위의 *sieve<sub>체</sub>*란, 공역이 $U$인 morphism들의 모임 $S$로서 합성에 대해 닫혀 있는 것이다. 즉 $(f: V \rightarrow U)\in S$이고 $g: W \rightarrow V$가 임의의 morphism이면 $(f\circ g: W \rightarrow U)\in S$이다. morphism $g: V \rightarrow U$와 $U$ 위의 sieve $S$에 대하여, $V$ 위의 *pullback sieve<sub>당김 체</sub>*를
+대상 $U\in \mathcal{C}$ 위의 *sieve<sub>체</sub>*란, 공역이 $U$인 morphism들의 모임 $S$로서 합성에 대해 닫혀 있는 것이다. 즉 $(f: V \rightarrow U)\in S$이고 $g: W \rightarrow V$가 임의의 morphism이면 $(f\circ g: W \rightarrow U)\in S$이다. Morphism $g: V \rightarrow U$와 $U$ 위의 sieve $S$에 대하여, $V$ 위의 *pullback sieve<sub>당김 체</sub>*를
 
 $$g^\ast S=\{h: W \rightarrow V\mid g\circ h\in S\}$$
 
@@ -160,7 +160,7 @@ $$F(\operatorname{pr}_1)(s_i)=x_{f_i\circ \operatorname{pr}_1}=x_{f_j\circ \oper
 이제 presheaf가 sheaf가 아닌 전형적인 예를 보고, 이를 통해 sheafification의 필요를 동기화한다.
 
 ::: 예시 12 (sheaf가 아닌 separated presheaf)
-$X$가 두 열린집합 $X=U_1\sqcup U_2$의 disjoint union인 위상공간이라 하고, 원소가 둘 이상인 집합 $A$에 대하여 상수 presheaf $\underline{A}^{\mathrm{pre}}$를 비어 있지 않은 열린집합 $V$에는 $\underline{A}^{\mathrm{pre}}(V)=A$로, 빈 열린집합에는 $\underline{A}^{\mathrm{pre}}(\varnothing)=\{\ast\}$ (한원소 집합)으로 두고, 비어 있지 않은 열린집합 사이의 restriction을 항등으로 정의하자. covering $\{U_1, U_2\}$를 생각하면 $U_1\cap U_2=\varnothing$이고 [명제 11](#prop11)의 equalizer에서 겹침을 담는 항이 $\underline{A}^{\mathrm{pre}}(\varnothing)=\{\ast\}$이라 한원소 집합이므로 겹침 조건이 공허하고, 따라서 서로 다른 $a_1, a_2\in A$를 각각 $U_1, U_2$ 위의 자료로 택한 것이 matching family를 이룬다. 그러나 이를 붙인 $X$ 위의 원소는 $\underline{A}^{\mathrm{pre}}(X)=A$의 한 원소여야 하는데 그것이 $U_1$과 $U_2$ 위에서 동시에 $a_1, a_2$로 restrict될 수는 없으므로 amalgamation이 존재하지 않는다. 한편 두 원소가 모든 $U_i$ 위에서 일치하면 같으므로 이 presheaf는 separated이다. 그 sheafification은 locally constant 함수의 sheaf $\underline{A}$로, $\underline{A}(X)=A\times A$이다.
+$X$가 두 열린집합 $X=U_1\sqcup U_2$의 disjoint union인 위상공간이라 하고, 원소가 둘 이상인 집합 $A$에 대하여 상수 presheaf $\underline{A}^{\mathrm{pre}}$를 비어 있지 않은 열린집합 $V$에는 $\underline{A}^{\mathrm{pre}}(V)=A$로, 빈 열린집합에는 $\underline{A}^{\mathrm{pre}}(\varnothing)=\{\ast\}$ (한원소 집합)으로 두고, 비어 있지 않은 열린집합 사이의 restriction을 항등으로 정의하자. Covering $\{U_1, U_2\}$를 생각하면 $U_1\cap U_2=\varnothing$이고 [명제 11](#prop11)의 equalizer에서 겹침을 담는 항이 $\underline{A}^{\mathrm{pre}}(\varnothing)=\{\ast\}$이라 한원소 집합이므로 겹침 조건이 공허하고, 따라서 서로 다른 $a_1, a_2\in A$를 각각 $U_1, U_2$ 위의 자료로 택한 것이 matching family를 이룬다. 그러나 이를 붙인 $X$ 위의 원소는 $\underline{A}^{\mathrm{pre}}(X)=A$의 한 원소여야 하는데 그것이 $U_1$과 $U_2$ 위에서 동시에 $a_1, a_2$로 restrict될 수는 없으므로 amalgamation이 존재하지 않는다. 한편 두 원소가 모든 $U_i$ 위에서 일치하면 같으므로 이 presheaf는 separated이다. 그 sheafification은 locally constant 함수의 sheaf $\underline{A}$로, $\underline{A}(X)=A\times A$이다.
 :::
 
 [예시 12](#ex12)는 separated와 sheaf의 차이를 분명히 보여준다. 자료를 비정합적으로 붙이려는 시도가 실패하는 것이 아니라, 정합적인 국소 자료조차 붙일 대역 자료가 presheaf 안에 없는 것이다. Sheafification은 이러한 결손을 보편적인 방식으로 보충하여 presheaf에 가장 가까운 sheaf를 부여하는 조작이며, site 위에서는 plus construction으로 구성된다.
@@ -238,12 +238,12 @@ $$\Hom(\Spec A, X) \rightarrow \Hom(\Spec B, X)\rightrightarrows \Hom(\Spec(B\ot
 
 $$\Hom_{\Ring}(R, A) \rightarrow \Hom_{\Ring}(R, B)\rightrightarrows \Hom_{\Ring}(R, B\otimes_A B)$$
 
-이다. faithful flatness로 sequence $0 \rightarrow A \rightarrow B \rightrightarrows B\otimes_A B$이 정확하므로 ([\[스킴\] §충실평탄 하강, ⁋보조정리 3](/ko/math/scheme_theory/faithfully_flat_descent#lem3)), 즉 $A$가 $d^0, d^1: B \rightrightarrows B\otimes_A B$의 equalizer이므로, $\Hom_{\Ring}(R, -)$을 적용하면 $\varphi: R \rightarrow B$가 $d^0\circ \varphi=d^1\circ \varphi$를 만족하는 것과 $\varphi$가 유일하게 $R \rightarrow A$를 거쳐 인수분해되는 것이 동치임을 얻는다. 이것이 곧 위 equalizer이다. 이는 structure sheaf $\mathcal{O}$이 fpqc sheaf임을 보이는 [\[스킴\] §충실평탄 하강, ⁋정리 9](/ko/math/scheme_theory/faithfully_flat_descent#thm9)과 평행한 논증으로, $\Hom_{\Ring}(R, -)$이 같은 Amitsur equalizer를 보존한다는 데에서 따른다.
+이다. Faithful flatness로 sequence $0 \rightarrow A \rightarrow B \rightrightarrows B\otimes_A B$이 정확하므로 ([\[스킴\] §충실평탄 하강, ⁋보조정리 3](/ko/math/scheme_theory/faithfully_flat_descent#lem3)), 즉 $A$가 $d^0, d^1: B \rightrightarrows B\otimes_A B$의 equalizer이므로, $\Hom_{\Ring}(R, -)$을 적용하면 $\varphi: R \rightarrow B$가 $d^0\circ \varphi=d^1\circ \varphi$를 만족하는 것과 $\varphi$가 유일하게 $R \rightarrow A$를 거쳐 인수분해되는 것이 동치임을 얻는다. 이것이 곧 위 equalizer이다. 이는 structure sheaf $\mathcal{O}$이 fpqc sheaf임을 보이는 [\[스킴\] §충실평탄 하강, ⁋정리 9](/ko/math/scheme_theory/faithfully_flat_descent#thm9)과 평행한 논증으로, $\Hom_{\Ring}(R, -)$이 같은 Amitsur equalizer를 보존한다는 데에서 따른다.
 
 일반적인 $X$에 대해서는 다음과 같이 붙인다. 두 morphism $g_1, g_2:\Spec B \rightarrow X$이 $\Spec(B\otimes_A B)$ 위에서 일치한다 하자. 위 affine 경우를 $X$의 affine open들에 적용하면 우선 두 morphism이 위상공간 사이의 연속함수로서 일치하고, 이어 각 affine open 위에서 structure sheaf에 대한 위 equalizer로부터 $g_1=g_2$임과, 정합적으로 주어진 morphism이 $\Spec A \rightarrow X$로 유일하게 내려옴을 얻는다. 여기에서 morphism의 상이 faithfully flat base change에 대해 잘 행동함과 quasi-compact 조건이 유한 affine covering으로의 환원을 가능하게 함을 사용한다. 따라서 $h_X$은 fpqc sheaf이다. Fpqc보다 거친 위상의 covering은 fpqc covering이므로 이들에 대해서도 sheaf 조건이 따라온다.
 :::
 
-[정리 17](#thm17)이 stack 이론으로 가는 길을 연다. Scheme $X$를 그 functor of points $h_X:\Sch^\op \rightarrow \Set$과 동일시하면 ([\[스킴\] §점함자, ⁋정리 3](/ko/math/scheme_theory/functor_of_points#thm3)), scheme은 fpqc site $\Sch$ 위의 sheaf 가운데 특별한 것, 즉 적절한 표현가능성 조건을 만족하는 sheaf로 자리매김한다. functorially 정의된 moduli 문제 $F:\Sch^\op \rightarrow \Set$이 scheme을 표현하는지를 묻는 일은, 먼저 $F$가 fpqc sheaf인지를 확인하고 ([\[스킴\] §충실평탄 하강, ⁋정리 9](/ko/math/scheme_theory/faithfully_flat_descent#thm9)의 하강 논증과 같은 방식으로) 이어 그것이 국소적으로 표현가능한지를 보는 두 단계로 나뉜다. Stack은 이 그림에서 sheaf의 값을 집합 대신 groupoid로 확장하여, 점들이 비자명한 automorphism을 가지는 moduli 문제까지 포착하는 일반화이다. 그 정의와 전개는 이후의 글로 미룬다.
+[정리 17](#thm17)이 stack 이론으로 가는 길을 연다. Scheme $X$를 그 functor of points $h_X:\Sch^\op \rightarrow \Set$과 동일시하면 ([\[스킴\] §점함자, ⁋정리 3](/ko/math/scheme_theory/functor_of_points#thm3)), scheme은 fpqc site $\Sch$ 위의 sheaf 가운데 특별한 것, 즉 적절한 표현가능성 조건을 만족하는 sheaf로 자리매김한다. Functorially 정의된 moduli 문제 $F:\Sch^\op \rightarrow \Set$이 scheme을 표현하는지를 묻는 일은, 먼저 $F$가 fpqc sheaf인지를 확인하고 ([\[스킴\] §충실평탄 하강, ⁋정리 9](/ko/math/scheme_theory/faithfully_flat_descent#thm9)의 하강 논증과 같은 방식으로) 이어 그것이 국소적으로 표현가능한지를 보는 두 단계로 나뉜다. Stack은 이 그림에서 sheaf의 값을 집합 대신 groupoid로 확장하여, 점들이 비자명한 automorphism을 가지는 moduli 문제까지 포착하는 일반화이다. 그 정의와 전개는 이후의 글로 미룬다.
 
 ## $\mathbb{G}_a$의 sheaf 성질
 
@@ -256,13 +256,13 @@ $$\mathbb{G}_a(T)=\Hom_{\Sch}(T, \mathbb{A}^1)=\Gamma(T, \mathcal{O}_T)$$
 
 을 대응시킨다. ([\[스킴\] §점함자, ⁋명제 7](/ko/math/scheme_theory/functor_of_points#prop7)) 이를 $\Sch$ 위의 presheaf로 본다.
 
-먼저 Zariski 위상에 대해 $\mathbb{G}_a$가 sheaf임은 고전적이다. open cover $T=\bigcup T_i$ 위에서 정합적인 대역 절단 $s_i\in \mathcal{O}_T(T_i)$들은 structure sheaf $\mathcal{O}_T$ 자체가 sheaf이므로 유일한 $s\in \mathcal{O}_T(T)$로 붙는다. 즉 [명제 11](#prop11)의 equalizer 조건이 정확히 $\mathcal{O}_T$의 sheaf 조건이다.
+먼저 Zariski 위상에 대해 $\mathbb{G}_a$가 sheaf임은 고전적이다. Open cover $T=\bigcup T_i$ 위에서 정합적인 대역 절단 $s_i\in \mathcal{O}_T(T_i)$들은 structure sheaf $\mathcal{O}_T$ 자체가 sheaf이므로 유일한 $s\in \mathcal{O}_T(T)$로 붙는다. 즉 [명제 11](#prop11)의 equalizer 조건이 정확히 $\mathcal{O}_T$의 sheaf 조건이다.
 
 fpqc 위상에 대해서는 [정리 17](#thm17)에 의해 $\mathbb{G}_a=h_{\mathbb{A}^1}$이 곧바로 sheaf이지만, 단일 covering $\{\Spec B \rightarrow \Spec A\}$에서 이를 직접 확인하자. 이 경우 검사할 도식은
 
 $$A \rightarrow B \rightrightarrows B\otimes_A B$$
 
-이며, 두 morphism은 $b\mapsto b\otimes 1$과 $b\mapsto 1\otimes b$이다. faithful flatness로 sequence $0 \rightarrow A \rightarrow B \xrightarrow{d^1-d^0} B\otimes_A B$가 정확하므로 ([\[스킴\] §충실평탄 하강, ⁋보조정리 3](/ko/math/scheme_theory/faithfully_flat_descent#lem3)), 두 morphism이 일치하는 원소 $\{b\in B\mid b\otimes 1=1\otimes b\}$은 정확히 $A$의 상이다. 즉 $A$가 위 두 morphism의 equalizer이고, 이것이 곧 $\mathbb{G}_a(\Spec A)=A$가 covering 위의 정합 자료로부터 복원된다는 sheaf 조건이다.
+이며, 두 morphism은 $b\mapsto b\otimes 1$과 $b\mapsto 1\otimes b$이다. Faithful flatness로 sequence $0 \rightarrow A \rightarrow B \xrightarrow{d^1-d^0} B\otimes_A B$가 정확하므로 ([\[스킴\] §충실평탄 하강, ⁋보조정리 3](/ko/math/scheme_theory/faithfully_flat_descent#lem3)), 두 morphism이 일치하는 원소 $\{b\in B\mid b\otimes 1=1\otimes b\}$은 정확히 $A$의 상이다. 즉 $A$가 위 두 morphism의 equalizer이고, 이것이 곧 $\mathbb{G}_a(\Spec A)=A$가 covering 위의 정합 자료로부터 복원된다는 sheaf 조건이다.
 :::
 
 [예시 18](#ex18)의 fpqc 경우가 비자명한 까닭은, fpqc covering이 단사가 아닌 데다 위상적으로도 거칠기 때문이다. 가령 체확대 $\Spec L \rightarrow \Spec K$는 fpqc covering인데, 이 위에서 $\mathbb{G}_a$의 절단은 $L$의 원소이고 두 겹 겹침은 $\Spec(L\otimes_K L)$이다. $L\otimes_K L$에서 $\ell\otimes 1=1\otimes \ell$을 만족하는 원소가 정확히 $K$의 상이라는 사실, 즉 $K=\{\ell\in L\mid \ell\otimes 1=1\otimes \ell\}$이 sheaf 조건의 실질이며, 이는 $L/K$의 faithful flatness가 보장하는 비자명한 정보이다. 반면 같은 자료를 Zariski 위상에서는 $\Spec K$가 한 점이라 covering이 자명해져 아무것도 말해주지 않는다. 이처럼 같은 functor라도 위상이 미세해질수록 더 강한 정합성을 요구받으며, $\mathbb{G}_a$를 비롯한 representable presheaf가 그 강한 조건을 모두 통과한다는 것이 [정리 17](#thm17)의 내용이다.

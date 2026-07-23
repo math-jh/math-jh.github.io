@@ -123,7 +123,7 @@ $\mathbb{R}^2$에서 닫힌 단위원판 $A = \{ (x, y) : x^2 + y^2 \leq 1 \}$�
 
 $$A^\circ = \{ (x, y) : x^2 + y^2 < 1 \}, \qquad \overline{A} = A, \qquad \partial A = \{ (x, y) : x^2 + y^2 = 1 \}$$
 
-이다. interior는 열린 원판이다: 경계원 위의 점 $p$에서는 아무리 작은 공도 원 밖으로 새어나가 $A$에 담기지 못하므로 $p \notin A^\circ$이지만, $\lVert p\rVert < 1$인 점에서는 $r = 1 - \lVert p\rVert > 0$짜리 공이 $A$에 들어간다. $A$가 이미 닫혀 있으므로 closure는 자기 자신이고, boundary는 정의에 따라 단위원이 된다. 같은 집합을 부분공간 $X = A$ 자체에서 보면 사정이 달라진다. $X$ 안에서는 $A$ 전체가 $X$이므로 clopen set이고 $A^\circ = A$, $\partial A = \varnothing$이 된다. 열림·닫힘·boundary는 모두 그 집합이 놓인 주위 공간에 상대적인 개념임을 보여 준다.
+이다. Interior는 열린 원판이다: 경계원 위의 점 $p$에서는 아무리 작은 공도 원 밖으로 새어나가 $A$에 담기지 못하므로 $p \notin A^\circ$이지만, $\lVert p\rVert < 1$인 점에서는 $r = 1 - \lVert p\rVert > 0$짜리 공이 $A$에 들어간다. $A$가 이미 닫혀 있으므로 closure는 자기 자신이고, boundary는 정의에 따라 단위원이 된다. 같은 집합을 부분공간 $X = A$ 자체에서 보면 사정이 달라진다. $X$ 안에서는 $A$ 전체가 $X$이므로 clopen set이고 $A^\circ = A$, $\partial A = \varnothing$이 된다. 열림·닫힘·boundary는 모두 그 집합이 놓인 주위 공간에 상대적인 개념임을 보여 준다.
 :::
 
 열림과 닫힘이 거리 자체가 아니라 거리가 유도하는 열린집합들의 모임에만 의존한다는 점은, 거리를 바꾸어 보면 분명해진다. 같은 바탕집합 위에 서로 다른 거리를 주더라도 두 거리가 같은 열린집합들을 낳으면 (이를 *동치인 거리<sub>equivalent metrics</sub>*라 한다) 열린·닫힌집합의 개념은 완전히 일치한다.

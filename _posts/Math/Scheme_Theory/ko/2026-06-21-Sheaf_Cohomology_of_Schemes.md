@@ -74,7 +74,7 @@ $$H^i(\Spec A, \widetilde M)\cong H^i\bigl(\Gamma(\Spec A, \widetilde{I^\bullet}
 
 을 얻는다. 그런데 $I^\bullet$은 $M$의 injective resolution이므로 $\Gamma(\Spec A, \widetilde{I^k})=I^k$이고, $M \rightarrow I^\bullet$은 quasi-isomorphism이므로 우변의 cohomology는 $i>0$에서 모두 소멸한다. 따라서 $H^i(\Spec A, \widetilde M)=0$ ($i>0$)이다.
 
-남은 것은 injective $A$-가군 $I$의 연관층 $\widetilde I$이 acyclic이라는 것이다. 이를 위해 우리는 $\widetilde I$이 flasque임을 보이며, flasque sheaf가 $\Gamma(X, -)$-acyclic이라는 것은 이미 알고 있다. ([\[대수다양체\] §층 코호몰로지, ⁋명제 16](/ko/math/algebraic_varieties/sheaf_cohomology#prop16)) Flasque임을 보이는 것은 Noetherian 가정 아래에서 가장 명료하므로 그 경우를 먼저 다룬다. $A$가 Noetherian ring이라 하자. 임의의 principal open set $D(f)\subseteq \Spec A$에 대하여, restriction map은 [§준연접층, ⁋명제 5](/ko/math/scheme_theory/quasicoherent_sheaves#prop5)에 의하여 localization $I \rightarrow I_f$이다. 그런데 Noetherian ring 위에서 injective 가군의 localization은 다시 injective이며, 더 일반적으로 임의의 열린집합 $U=\Spec A\setminus V(\mathfrak{a})$에 대하여 restriction $\widetilde I(\Spec A)=I\rightarrow\widetilde I(U)$이 surjective임을 본다. quasi-coherent sheaf의 section을 local cohomology와 잇는 exact sequence
+남은 것은 injective $A$-가군 $I$의 연관층 $\widetilde I$이 acyclic이라는 것이다. 이를 위해 우리는 $\widetilde I$이 flasque임을 보이며, flasque sheaf가 $\Gamma(X, -)$-acyclic이라는 것은 이미 알고 있다. ([\[대수다양체\] §층 코호몰로지, ⁋명제 16](/ko/math/algebraic_varieties/sheaf_cohomology#prop16)) Flasque임을 보이는 것은 Noetherian 가정 아래에서 가장 명료하므로 그 경우를 먼저 다룬다. $A$가 Noetherian ring이라 하자. 임의의 principal open set $D(f)\subseteq \Spec A$에 대하여, restriction map은 [§준연접층, ⁋명제 5](/ko/math/scheme_theory/quasicoherent_sheaves#prop5)에 의하여 localization $I \rightarrow I_f$이다. 그런데 Noetherian ring 위에서 injective 가군의 localization은 다시 injective이며, 더 일반적으로 임의의 열린집합 $U=\Spec A\setminus V(\mathfrak{a})$에 대하여 restriction $\widetilde I(\Spec A)=I\rightarrow\widetilde I(U)$이 surjective임을 본다. Quasi-coherent sheaf의 section을 local cohomology와 잇는 exact sequence
 $$I\longrightarrow\widetilde I(U)\longrightarrow H^1_{\mathfrak{a}}(I)\longrightarrow 0$$
 이 성립하는데, 여기서 $H^i_{\mathfrak{a}}(M)=\varinjlim_n\Ext^i_A(A/\mathfrak{a}^n,M)$이다. $I$가 injective이므로 모든 $n$에서 $\Ext^1_A(A/\mathfrak{a}^n,I)=0$이어서 $H^1_{\mathfrak{a}}(I)=0$이고, 따라서 위 restriction이 surjective이다. 같은 논증이 임의의 열린집합에 적용되므로 $\widetilde I$은 flasque이다 (Hartshorne III.3.4).
 
@@ -100,7 +100,7 @@ $$\check H^p(\mathcal{U}, \mathcal{F})\cong H^p(X, \mathcal{F})$$
 
 ## 사영공간 위의 line bundle
 
-이제 affine covering에 대한 Čech 계산을 사용하여 사영공간 위의 line bundle $\mathcal{O}(d)$의 cohomology를 scheme 수준에서 다룬다. 우선 $\mathcal{O}(d)$를 graded 가군의 언어로 정의한다. ring $A$ 위의 사영공간은 $\mathbb{P}^n_A=\Proj A[\x_0,\ldots, \x_n]$이며 ([§사영스킴, ⁋정의 1](/ko/math/scheme_theory/projective_schemes#def1)), 이는 standard affine cover $\mathcal{U}=\{D_+(\x_i)\}_{i=0}^n$을 가진다.
+이제 affine covering에 대한 Čech 계산을 사용하여 사영공간 위의 line bundle $\mathcal{O}(d)$의 cohomology를 scheme 수준에서 다룬다. 우선 $\mathcal{O}(d)$를 graded 가군의 언어로 정의한다. Ring $A$ 위의 사영공간은 $\mathbb{P}^n_A=\Proj A[\x_0,\ldots, \x_n]$이며 ([§사영스킴, ⁋정의 1](/ko/math/scheme_theory/projective_schemes#def1)), 이는 standard affine cover $\mathcal{U}=\{D_+(\x_i)\}_{i=0}^n$을 가진다.
 
 ::: 정의 5
 $S=A[\x_0,\ldots, \x_n]$을 standard grading을 가진 graded ring이라 하고, $S(d)$를 $S(d)_m=S_{d+m}$으로 grading을 옮긴 graded $S$-가군이라 하자. 그럼 standard affine cover $\mathcal{U}=\{D_+(\x_i)\}$ 위에서 각각의 $D_+(\x_i)=\Spec S_{(\x_i)}$에
@@ -115,7 +115,7 @@ $$\mathcal{O}(d)(D_+(\x_i))=\bigl(S(d)_{\x_i}\bigr)_0=\x_i^d\cdot S_{(\x_i)}$$
 이제 cohomology를 계산한다. $\mathbb{P}^n_A$은 separated이므로 [따름정리 4](#cor4)에 의해 standard affine cover에 대한 Čech complex를 계산하면 충분하다. 그 결과는 variety의 경우와 형태가 동일하다.
 
 ::: 정리 6 (Bott)
-ring $A$ 위의 사영공간 $\mathbb{P}^n_A$의 line bundle $\mathcal{O}(d)$의 cohomology는
+Ring $A$ 위의 사영공간 $\mathbb{P}^n_A$의 line bundle $\mathcal{O}(d)$의 cohomology는
 
 $$H^q(\mathbb{P}^n_A, \mathcal{O}(d))=\begin{cases}A[\x_0,\ldots, \x_n]_d & q=0,\ d\geq 0 \\ A[\x_0^{-1},\ldots, \x_n^{-1}]_{-d-n-1} & q=n,\ d\leq -n-1 \\ 0 & \text{otherwise}\end{cases}$$
 
@@ -143,7 +143,7 @@ $$H^n(\mathbb{P}^n_A, \mathcal{O}(d))\cong H^0(\mathbb{P}^n_A, \mathcal{O}(-d-n-
 
 ## Noetherian projective scheme 위의 연접층
 
-이제 임의의 Noetherian projective scheme $X$와 그 위의 coherent sheaf ([§준연접층, ⁋정의 11](/ko/math/scheme_theory/quasicoherent_sheaves#def11)) $\mathcal{F}$에 대하여, cohomology의 두 가지 근본적 성질을 다룬다. 하나는 각 $H^i(X, \mathcal{F})$이 유한차원이라는 것이고, 다른 하나는 충분히 twist하면 higher cohomology가 소멸한다는 Serre vanishing이다. Projective scheme $X$는 어떤 사영공간 $\mathbb{P}^n_{\mathbb{K}}$의 closed subscheme이며, 그 위에 $\mathcal{O}_X(1)=\mathcal{O}_{\mathbb{P}^n}(1)\vert_X$을 twisting을 위한 ample line bundle로 사용한다. coherent sheaf $\mathcal{F}$에 대해 $\mathcal{F}(d)=\mathcal{F}\otimes_{\mathcal{O}_X}\mathcal{O}_X(d)$로 적는다.
+이제 임의의 Noetherian projective scheme $X$와 그 위의 coherent sheaf ([§준연접층, ⁋정의 11](/ko/math/scheme_theory/quasicoherent_sheaves#def11)) $\mathcal{F}$에 대하여, cohomology의 두 가지 근본적 성질을 다룬다. 하나는 각 $H^i(X, \mathcal{F})$이 유한차원이라는 것이고, 다른 하나는 충분히 twist하면 higher cohomology가 소멸한다는 Serre vanishing이다. Projective scheme $X$는 어떤 사영공간 $\mathbb{P}^n_{\mathbb{K}}$의 closed subscheme이며, 그 위에 $\mathcal{O}_X(1)=\mathcal{O}_{\mathbb{P}^n}(1)\vert_X$을 twisting을 위한 ample line bundle로 사용한다. Coherent sheaf $\mathcal{F}$에 대해 $\mathcal{F}(d)=\mathcal{F}\otimes_{\mathcal{O}_X}\mathcal{O}_X(d)$로 적는다.
 
 먼저 closed immersion을 따라 cohomology가 보존된다는 관찰이 핵심이다. Closed embedding $\iota:X\hookrightarrow\mathbb{P}^n_{\mathbb{K}}$은 affine 사상이므로, pushforward $\iota_\ast$가 affine 위에서 정확하고 higher direct image를 만들지 않아 $H^i(X, \mathcal{F})\cong H^i(\mathbb{P}^n, \iota_\ast\mathcal{F})$이 성립한다. 따라서 두 성질 모두 $X=\mathbb{P}^n_{\mathbb{K}}$인 경우로 환원된다.
 

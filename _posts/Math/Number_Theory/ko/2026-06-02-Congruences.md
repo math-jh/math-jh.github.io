@@ -72,7 +72,7 @@ $$2^1 \equiv 2,\quad 2^2 \equiv 4,\quad 2^3 \equiv 3,\quad 2^4 \equiv 1 \pmod 5$
 정수 $a$의 법 $n$에 대한 *residue class<sub>잉여류</sub>*는 $a$와 합동인 모든 정수의 집합 $[a] = \{a + kn \mid k \in \mathbb{Z}\}$이다. 서로 다른 residue class는 정확히 $[0], [1], \ldots, [n-1]$의 $n$개이며, 이들의 집합을 $\mathbb{Z}/n\mathbb{Z}$로 적는다.
 :::
 
-residue class는 정수 전체를 $n$개의 줄로 나눈 것으로 볼 수 있다. 정수 $a$를 $n$으로 나눈 나머지를 $r$이라 하면 $a \equiv r \pmod n$이므로 $[a] = [r]$이고, $0 \le r \le n-1$인 $r$이 유일하게 결정되므로 $[0], [1], \ldots, [n-1]$은 서로 다르고 모든 residue class를 빠짐없이 준다. 한 residue class에서 아무 정수나 골라 그 류를 대표시킬 수 있는데, 이렇게 고른 수를 그 residue class의 *대표원<sub>representative</sub>*이라 한다. 예컨대 법 $5$에서 $[2] = [7] = [-3] = [12]$이며, 이 중 어느 것을 써도 같은 류를 가리킨다.
+Residue class는 정수 전체를 $n$개의 줄로 나눈 것으로 볼 수 있다. 정수 $a$를 $n$으로 나눈 나머지를 $r$이라 하면 $a \equiv r \pmod n$이므로 $[a] = [r]$이고, $0 \le r \le n-1$인 $r$이 유일하게 결정되므로 $[0], [1], \ldots, [n-1]$은 서로 다르고 모든 residue class를 빠짐없이 준다. 한 residue class에서 아무 정수나 골라 그 류를 대표시킬 수 있는데, 이렇게 고른 수를 그 residue class의 *대표원<sub>representative</sub>*이라 한다. 예컨대 법 $5$에서 $[2] = [7] = [-3] = [12]$이며, 이 중 어느 것을 써도 같은 류를 가리킨다.
 
 명제 3은 residue class 위에 $[a] + [b] = [a + b]$, $[a][b] = [ab]$로 덧셈과 곱셈이 잘 정의됨을 뜻한다. 여기서 "잘 정의됨"이란 결과가 대표원의 선택에 의존하지 않음을 말한다. 만약 $[a] = [a']$이고 $[b] = [b']$이면 $a \equiv a'$, $b \equiv b' \pmod n$이고, 명제 3에 의해
 

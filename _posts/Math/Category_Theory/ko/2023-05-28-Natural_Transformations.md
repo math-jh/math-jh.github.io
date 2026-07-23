@@ -35,16 +35,16 @@ $$\bigl(\alpha_A:F(A)\rightarrow G(A)\bigr)_{A\in\obj(\mathcal{A})}$$
 
 ## 동등한 카테고리들
 
-category 사이에서 자주 사용하는 <em-ko>동등하다</em-ko>는 개념은 $\Cat$에서의 isomorphism으로 주어지지 않는다. 이는 category들 사이의 isomorphism은 너무 강한 조건이어서, 충분히 비슷해보이는 두 category도 다른 것으로 취급되기 때문이다. 
+Category 사이에서 자주 사용하는 <em-ko>동등하다</em-ko>는 개념은 $\Cat$에서의 isomorphism으로 주어지지 않는다. 이는 category들 사이의 isomorphism은 너무 강한 조건이어서, 충분히 비슷해보이는 두 category도 다른 것으로 취급되기 때문이다. 
 
 ::: 정의 2
-category $\mathcal{A}$에서 $\mathcal{B}$로의 functor $F$가 *equivalence of category<sub>동등함자</sub>*라는 것은 적당한 functor $G:\mathcal{B}\rightarrow \mathcal{A}$가 존재하여 $\id_\mathcal{A}\simeq G\circ F$이고 $\id_\mathcal{B}\simeq F\circ G$인 것이다. 만일 $\mathcal{A}$에서 $\mathcal{B}$로의 equivalence가 존재한다면 이들 두 category가 *equivalent<sub>동등</sub>*하다고 하고 $\mathcal{A}\simeq\mathcal{B}$으로 표기한다.
+Category $\mathcal{A}$에서 $\mathcal{B}$로의 functor $F$가 *equivalence of category<sub>동등함자</sub>*라는 것은 적당한 functor $G:\mathcal{B}\rightarrow \mathcal{A}$가 존재하여 $\id_\mathcal{A}\simeq G\circ F$이고 $\id_\mathcal{B}\simeq F\circ G$인 것이다. 만일 $\mathcal{A}$에서 $\mathcal{B}$로의 equivalence가 존재한다면 이들 두 category가 *equivalent<sub>동등</sub>*하다고 하고 $\mathcal{A}\simeq\mathcal{B}$으로 표기한다.
 :::
 
 이렇게 정의한 category들 사이의 equivalence라는 개념이 어떤 의미에서 충분히 좋은 <em-ko>같다</em-ko>는 개념을 주는지 살펴보자. 이를 위해서는 우선 다음을 정의해야 한다.
 
 ::: 정의 3
-category $\mathcal{A}$가 *skeletal category<sub>뼈대 카테고리</sub>*라는 것은 임의의 $A\in\obj(\mathcal{A})$에 대하여, $A$와 isomorphic한 $\mathcal{A}$의 object가 자기 자신뿐인 것이다.
+Category $\mathcal{A}$가 *skeletal category<sub>뼈대 카테고리</sub>*라는 것은 임의의 $A\in\obj(\mathcal{A})$에 대하여, $A$와 isomorphic한 $\mathcal{A}$의 object가 자기 자신뿐인 것이다.
 :::
 
 $\mathcal{A}$가 small category라 하자. 그럼 집합 $\obj(\mathcal{A})$에서 서로 isomorphic한 대상들을 같은 것으로 본 후, 서로 다른 것들만을 뽑아 $\obj(\mathcal{A})$의 부분집합 $\mathcal{S}$를 만들 수 있다. 임의의 $S_1,S_2\in\mathcal{S}$에 대하여, $\Hom_\mathcal{S}(S_1,S_2)=\Hom_\mathcal{A}(S_1,S_2)$로 두자. 정의로부터 $\mathcal{S}$가 $\mathcal{A}$의 subcategory라면, 자명하게 정의되는 inclusion functor $\mathcal{S}\hookrightarrow\mathcal{A}$가 faithful functor가 된다. 만일 이 functor가 full이기도 하다면 $\mathcal{S}$를 *full subcategory<sub>충만한 부분카테고리</sub>*라 부른다.
@@ -54,7 +54,7 @@ $\mathcal{A}$가 small category라 하자. 그럼 집합 $\obj(\mathcal{A})$에�
 이러한 관점에서 위에서 만들어낸 category $\mathcal{S}$는 본질적으로 $\mathcal{A}$의 모든 정보를 담고 있는 것으로 생각할 수 있다. 물론 isomorphic한 대상들 중 어떤 것을 뽑는지에 따라 $\mathcal{S}$ 자체는 달라지겠지만, 다른 선택으로 얻어지는 category도 반드시 $\mathcal{S}$와 isomorphic하다는 것은 쉽게 증명할 수 있다. 
 
 ::: 정의 4
-category $\mathcal{A}$의 *skeleton<sub>뼈대</sub>*은 $\mathcal{A}$의 full subcategory 중 skeletal category인 것을 의미한다. 이를 $\sk(\mathcal{A})$으로 적는다.
+Category $\mathcal{A}$의 *skeleton<sub>뼈대</sub>*은 $\mathcal{A}$의 full subcategory 중 skeletal category인 것을 의미한다. 이를 $\sk(\mathcal{A})$으로 적는다.
 :::
 
 다음 정리의 증명은 길고 지루하여 별도로 적어두지 않는다. 그러나 조금만 생각을 해 보면 이 증명에 별도의 아이디어는 필요가 없으며, 꽤나 자명하기까지 하다. 많은 경우에는 equivalence의 정의를 아예 이것으로 받아들이기도 한다.

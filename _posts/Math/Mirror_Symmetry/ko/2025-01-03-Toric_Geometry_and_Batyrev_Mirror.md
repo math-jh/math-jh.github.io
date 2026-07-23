@@ -41,7 +41,7 @@ $$h^{1,1}_{\mathrm{st}}(Y_\Delta) = h^{n-2,1}_{\mathrm{st}}(Y_{\Delta^\circ}), \
 :::
 
 ::: 증명
-face $\Theta$ 위의 lattice points 개수를 $l(\Theta)$, relative interior lattice points 개수를 $l^\ast(\Theta)$라 표기하자. Batyrev는 toric variety의 조합론적 성질을 이용하여 stringy Hodge number를 lattice point count로 직접 표현하였다:
+Face $\Theta$ 위의 lattice points 개수를 $l(\Theta)$, relative interior lattice points 개수를 $l^\ast(\Theta)$라 표기하자. Batyrev는 toric variety의 조합론적 성질을 이용하여 stringy Hodge number를 lattice point count로 직접 표현하였다:
 
 $$h^{1,1}_{\mathrm{st}}(Y_\Delta) = l(\Delta^\circ) - 1 - n - \sum_{\operatorname{codim} \Theta^\circ = 1} l^\ast(\Theta^\circ) + \sum_{\operatorname{codim} \Theta^\circ = 2} l^\ast(\Theta^\circ) l^\ast(\Theta),$$
 

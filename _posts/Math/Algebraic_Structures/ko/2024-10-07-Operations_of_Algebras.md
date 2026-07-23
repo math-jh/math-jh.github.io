@@ -117,7 +117,7 @@ $$\mu(s,t)=\tilde{m}(t)(s)$$
 두 $A$-algebra $E,E'$에 대하여, [명제 6](#prop6)의 곱셈이 주어진 $A$-algebra $E\otimes_AE'$을 $E$와 $E'$의 *tensor product<sub>텐서곱</sub>*이라 부른다.
 :::
 
-direct product에서와 마찬가지로, tensor product는 두 대수의 성질을 그대로 물려받는다. 가령 $E,E'$이 모두 associative라면 generator들 위에서
+Direct product에서와 마찬가지로, tensor product는 두 대수의 성질을 그대로 물려받는다. 가령 $E,E'$이 모두 associative라면 generator들 위에서
 
 $$\bigl((x\otimes x')(y\otimes y')\bigr)(z\otimes z')=(xy)z\otimes (x'y')z'=x(yz)\otimes x'(y'z')=(x\otimes x')\bigl((y\otimes y')(z\otimes z')\bigr)$$
 

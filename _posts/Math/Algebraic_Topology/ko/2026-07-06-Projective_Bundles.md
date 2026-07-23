@@ -73,7 +73,7 @@ $$\mathbb{P}(E)=\{(x,\ell):x\in B,\ \ell\subseteq E_x\text{ 는 1차원 부분�
 이고 projection $\pi:\mathbb{P}(E)\rightarrow B$는 $(x,\ell)\mapsto x$이며, fiber는 $\CP^{n-1}$이다.
 :::
 
-$E$가 $U$ 위에서 $U\times\mathbb{C}^n$으로 자명해지면 $\mathbb{P}(E)$는 $U$ 위에서 $U\times\CP^{n-1}$이 되므로, $\mathbb{P}(E)$는 fiber $\CP^{n-1}$을 갖는 fiber bundle이다. projective bundle 위에는 표준적인 line bundle이 하나 살고 있다. 각 점 $(x,\ell)\in\mathbb{P}(E)$에 그 점이 지정하는 직선 $\ell\subseteq E_x$ 자체를 fiber로 붙이면 $\mathbb{P}(E)$ 위의 line bundle $\gamma_E$가 얻어지며, 이는 정의상 pullback $\pi^\ast E$의 부분다발 $\gamma_E\subseteq\pi^\ast E$이다. 이를 projective bundle의 *tautological line bundle*이라 부른다. $E$에 Hermitian 내적을 주면 각 $\ell$의 직교여를 취하여
+$E$가 $U$ 위에서 $U\times\mathbb{C}^n$으로 자명해지면 $\mathbb{P}(E)$는 $U$ 위에서 $U\times\CP^{n-1}$이 되므로, $\mathbb{P}(E)$는 fiber $\CP^{n-1}$을 갖는 fiber bundle이다. Projective bundle 위에는 표준적인 line bundle이 하나 살고 있다. 각 점 $(x,\ell)\in\mathbb{P}(E)$에 그 점이 지정하는 직선 $\ell\subseteq E_x$ 자체를 fiber로 붙이면 $\mathbb{P}(E)$ 위의 line bundle $\gamma_E$가 얻어지며, 이는 정의상 pullback $\pi^\ast E$의 부분다발 $\gamma_E\subseteq\pi^\ast E$이다. 이를 projective bundle의 *tautological line bundle*이라 부른다. $E$에 Hermitian 내적을 주면 각 $\ell$의 직교여를 취하여
 
 $$\pi^\ast E\cong\gamma_E\oplus\gamma_E^\perp$$
 
@@ -115,7 +115,7 @@ Paracompact 밑공간 $B$ 위의 complex rank $n$ vector bundle $E\rightarrow B$
 ::: 증명
 Rank $n$에 대한 귀납으로 보인다. $n=1$이면 $E$ 자체가 line bundle이므로 $F(E)=B$와 $\rho=\mathrm{id}$로 두면 된다.
 
-$n\geq 2$라 하고, rank $n-1$까지 명제가 성립한다 가정하자. projective bundle $\pi:\mathbb{P}(E)\rightarrow B$를 잡으면 [정리 3](#thm3)에 의하여 $\pi^\ast$은 단사이고, tautological line bundle에 대하여
+$n\geq 2$라 하고, rank $n-1$까지 명제가 성립한다 가정하자. Projective bundle $\pi:\mathbb{P}(E)\rightarrow B$를 잡으면 [정리 3](#thm3)에 의하여 $\pi^\ast$은 단사이고, tautological line bundle에 대하여
 
 $$\pi^\ast E\cong\gamma_E\oplus\gamma_E^\perp$$
 

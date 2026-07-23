@@ -137,7 +137,7 @@ $2n$차원 symplectic manifold $(M,\omega)$의 부분다양체 $L\subseteq M$이
 Cotangent bundle에서는 base $Q$ 방향으로 누운 Lagrangian 부분다양체들이 $1$-form과 정확히 대응하며, 그 가운데 Lagrangian이 되는 것은 closed form뿐이다.
 
 ::: 명제 11
-manifold $Q$ 위의 $1$-form $\alpha$에 대하여, 그 graph
+Manifold $Q$ 위의 $1$-form $\alpha$에 대하여, 그 graph
 
 $$\Gamma_\alpha=\{(q,\alpha_q)\mid q\in Q\}\subseteq T^\ast Q$$
 

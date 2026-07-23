@@ -28,7 +28,7 @@ $$D(z_0, \varepsilon) \cap S = \{z_0\}$$
 인 $\varepsilon > 0$이 존재하는 것을 뜻한다. $S$의 모든 점이 isolated point이면 $S$를 *discrete set<sub>이산집합</sub>*이라 한다.
 :::
 
-isolated point라는 개념은 영점이 모여 있지 않고 흩어져 있다는 상황을 정확히 포착한다. Holomorphic function $f$의 영점집합을 $Z(f) = \{z : f(z) = 0\}$이라 적으면, 다음 명제는 $f$가 항등적으로 $0$이 아닌 한 $Z(f)$의 모든 점이 isolated point임을 말한다.
+Isolated point라는 개념은 영점이 모여 있지 않고 흩어져 있다는 상황을 정확히 포착한다. Holomorphic function $f$의 영점집합을 $Z(f) = \{z : f(z) = 0\}$이라 적으면, 다음 명제는 $f$가 항등적으로 $0$이 아닌 한 $Z(f)$의 모든 점이 isolated point임을 말한다.
 
 ::: 명제 2 (영점의 고립성)
 $f$가 점 $z_0$의 한 근방에서 holomorphic이고 $f(z_0) = 0$이라 하자. 그러면 다음 둘 중 정확히 하나가 성립한다.
@@ -79,7 +79,7 @@ $A$가 닫혀 있음을 보이기 위해 $\Omega$ 안의 점 $w$가 $A$의 closu
 연결성에 의해 $A = \Omega$이므로 $h$가 $\Omega$ 전체에서 항등적으로 $0$이고, 곧 $\Omega$에서 $f = g$이다.
 :::
 
-일치정리는 holomorphic function이 그래프의 한 조각으로 전체가 정해지는 대상임을 말한다. connected 영역 위의 holomorphic function은 집적점을 갖는 임의의 집합, 가령 한 점에 모여드는 수열이나 아무리 짧은 곡선 조각 위에서의 값만으로 영역 전체에서 유일하게 결정된다. 실변수의 smooth 함수와의 차이는 여기서 극명하다. 실축의 한 구간에서 $0$이면서 다른 구간에서는 $0$이 아닌 smooth 함수는 얼마든지 있지만, 그러한 함수는 결코 holomorphic일 수 없다.
+일치정리는 holomorphic function이 그래프의 한 조각으로 전체가 정해지는 대상임을 말한다. Connected 영역 위의 holomorphic function은 집적점을 갖는 임의의 집합, 가령 한 점에 모여드는 수열이나 아무리 짧은 곡선 조각 위에서의 값만으로 영역 전체에서 유일하게 결정된다. 실변수의 smooth 함수와의 차이는 여기서 극명하다. 실축의 한 구간에서 $0$이면서 다른 구간에서는 $0$이 아닌 smooth 함수는 얼마든지 있지만, 그러한 함수는 결코 holomorphic일 수 없다.
 
 집적점이 $\Omega$ *안*에 있어야 한다는 조건은 본질적이다. 가령 $\sin(\pi/z)$는 $\Omega = \mathbb{C} \setminus \{0\}$에서 holomorphic이고 그 영점 $1/k$ ($k \in \mathbb{Z} \setminus \{0\}$) 이 $0$으로 집적하지만, 집적점 $0$은 $\Omega$에 속하지 않으므로 함수가 항등적으로 $0$일 필요가 없다. 일치정리의 가장 흔한 쓰임 가운데 하나는 실축에서 알려진 항등식을 복소영역으로 끌어올리는 것이다. 두 holomorphic function이 실축의 한 구간에서 일치하면, 그 구간이 집적점을 가지므로 두 함수가 공통 holomorphic 영역 전체에서 일치한다. 실변수의 항등식 $\sin^2 x + \cos^2 x = 1$이나 $e^{x+y} = e^x e^y$이 곧장 복소변수로 넘어가는 것이 이 원리의 사례이다.
 

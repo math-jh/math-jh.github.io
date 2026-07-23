@@ -26,7 +26,7 @@ published: false
 
 이 글에서 $X$는 위상공간이고, $\Sh(X) = \Sh(X; \Ab)$는 $X$ 위의 abelian group들의 sheaf로 이루어진 category를 뜻한다. 더 일반적으로 $\mathcal{O}_X$가 $X$ 위의 ring들의 sheaf일 때 ([\[위상수학\] §준층, ⁋예시 14](/ko/math/topology/presheaves#ex14)), $\mathcal{O}_X$-module들의 category를 $\operatorname{Mod}(\mathcal{O}_X)$로 적는다. $\mathcal{O}_X = \mathbb{Z}_X$, 즉 $\mathbb{Z}$를 stalk로 갖는 constant sheaf로 두면 $\operatorname{Mod}(\mathbb{Z}_X) = \Sh(X; \Ab)$이므로, abelian group의 sheaf는 ringed space $(X, \mathbb{Z}_X)$ 위의 module의 특수한 경우이다.
 
-derived category를 세우기 위해서는 우선 작업 대상이 abelian category여야 한다. Sheaf morphism의 kernel은 presheaf 차원의 kernel이 곧바로 sheaf가 되어 별다른 조작 없이 정의되지만 ([\[위상수학\] §준층, ⁋정의 16](/ko/math/topology/presheaves#def16)), image와 cokernel은 presheaf 단계에서 sheaf 조건을 만족하지 않아 sheafification을 거쳐야 한다는 점이 핵심이다. ([\[위상수학\] §층, ⁋정의 5](/ko/math/topology/sheaves#def5))
+Derived category를 세우기 위해서는 우선 작업 대상이 abelian category여야 한다. Sheaf morphism의 kernel은 presheaf 차원의 kernel이 곧바로 sheaf가 되어 별다른 조작 없이 정의되지만 ([\[위상수학\] §준층, ⁋정의 16](/ko/math/topology/presheaves#def16)), image와 cokernel은 presheaf 단계에서 sheaf 조건을 만족하지 않아 sheafification을 거쳐야 한다는 점이 핵심이다. ([\[위상수학\] §층, ⁋정의 5](/ko/math/topology/sheaves#def5))
 
 ::: 명제 1
 $\Sh(X; \Ab)$와 $\operatorname{Mod}(\mathcal{O}_X)$는 abelian category이다. 이때 sheaf morphism $\phi: \mathcal{F} \rightarrow \mathcal{G}$의 kernel, cokernel, image는 stalk 차원에서
@@ -113,7 +113,7 @@ $$f^\ast \mathcal{G} = \mathcal{O}_X \otimes_{f^{-1}\mathcal{O}_Y} f^{-1}\mathca
 
 $f^\ast$는 right exact functor $\mathcal{O}_X \otimes_{f^{-1}\mathcal{O}_Y} (-)$와 exact functor $f^{-1}$의 합성이므로 right exact이며, $(f^\ast, f_\ast)$는 $\operatorname{Mod}(\mathcal{O}_Y)$와 $\operatorname{Mod}(\mathcal{O}_X)$ 사이의 adjoint pair를 이룬다. $Lf^\ast$를 정의할 때의 미묘함은 $\operatorname{Mod}(\mathcal{O}_X)$가 일반적으로 충분한 projective를 갖지 않는다는 데 있다. 그 대신 충분한 flat object를 가지며, derived tensor의 계산에는 flat resolution이면 충분하다. 따라서 $Lf^\ast$는 $f^\ast$를 $f^{-1}\mathcal{O}_Y$-flat한 항으로 이루어진 resolution 위에서 계산하여 정의하고, bounded가 아닌 complex의 경우에는 Spaltenstein의 $K$-flat resolution을 사용한다. 이렇게 정의한 $Lf^\ast$는 $D^-(\operatorname{Mod}(\mathcal{O}_Y)) \rightarrow D^-(\operatorname{Mod}(\mathcal{O}_X))$로 잘 정의되며, 그 cohomology $H^{-i}(Lf^\ast \mathcal{G})$는 module 차원의 higher Tor sheaf로 해석된다.
 
-abelian group sheaf만 다룰 때, 즉 $\mathcal{O}_X = \mathbb{Z}_X$, $\mathcal{O}_Y = \mathbb{Z}_Y$이고 $f^{-1}\mathbb{Z}_Y = \mathbb{Z}_X$인 경우에는 $f^\ast = f^{-1}$이 되어 [명제 5](#prop5)에 의해 $Lf^\ast = f^{-1}$로 환원되며 별도의 derivation이 필요 없다. Module pullback의 비자명한 derived 구조는 ring sheaf가 점마다 비자명하게 변할 때, 즉 scheme이나 complex manifold 위의 coherent sheaf를 다룰 때에 본격적으로 나타난다.
+Abelian group sheaf만 다룰 때, 즉 $\mathcal{O}_X = \mathbb{Z}_X$, $\mathcal{O}_Y = \mathbb{Z}_Y$이고 $f^{-1}\mathbb{Z}_Y = \mathbb{Z}_X$인 경우에는 $f^\ast = f^{-1}$이 되어 [명제 5](#prop5)에 의해 $Lf^\ast = f^{-1}$로 환원되며 별도의 derivation이 필요 없다. Module pullback의 비자명한 derived 구조는 ring sheaf가 점마다 비자명하게 변할 때, 즉 scheme이나 complex manifold 위의 coherent sheaf를 다룰 때에 본격적으로 나타난다.
 
 ## 유도 텐서곱과 유도 Hom
 
@@ -161,7 +161,7 @@ $$\Hom_{D(\operatorname{Mod}(\mathcal{O}_X))}(Lf^\ast \mathcal{G}^\bullet, \math
 
 이 adjunction은 sheaf 이론의 기본적인 functoriality를 derived 차원에서 한 줄로 정리한다. 특히 $f: X \rightarrow \{\ast\}$의 경우 [따름정리 3](#cor3)에 의해 $Rf_\ast = R\Gamma(X, -)$이고, $f^{-1}$은 abelian group $A$를 constant sheaf $A_X$로 보내므로, adjunction의 첫 부분은 $\Hom_{D(\Ab)}(A, R\Gamma(X, \mathcal{F}^\bullet)) \cong \Hom_{D(\Sh(X))}(A_X, \mathcal{F}^\bullet)$의 형태가 되어, constant sheaf로부터의 morphism이 cohomology를 계산하는 통로임을 derived 차원에서 보여 준다.
 
-derived category로 옮긴 가장 큰 이득은 합성에서 드러난다. 미유도 차원에서 $(gf)_\ast = g_\ast f_\ast$는 자명하지만, 그 유도 버전의 관계는 spectral sequence를 거쳐야만 기술된다. Derived category에서는 이것이 단일한 동형으로 정리된다.
+Derived category로 옮긴 가장 큰 이득은 합성에서 드러난다. 미유도 차원에서 $(gf)_\ast = g_\ast f_\ast$는 자명하지만, 그 유도 버전의 관계는 spectral sequence를 거쳐야만 기술된다. Derived category에서는 이것이 단일한 동형으로 정리된다.
 
 ::: 정리 10 (Grothendieck composite functor 정리)
 Continuous map $f: X \rightarrow Y$, $g: Y \rightarrow Z$에 대해 $D^+(\Sh(X))$ 위에서 자연스러운 동형
@@ -208,7 +208,7 @@ $$R^0 p_\ast \mathbb{Z}_{T^2} \cong \mathbb{Z}_{S^1}, \qquad R^1 p_\ast \mathbb{
 $$E_2^{0,0} = H^0(S^1, \mathbb{Z}_{S^1}) = \mathbb{Z}, \quad E_2^{1,0} = H^1(S^1, \mathbb{Z}_{S^1}) = \mathbb{Z}, \quad E_2^{0,1} = H^0(S^1, \mathbb{Z}_{S^1}) = \mathbb{Z}, \quad E_2^{1,1} = H^1(S^1, \mathbb{Z}_{S^1}) = \mathbb{Z}$$
 의 네 개이고 나머지는 모두 $0$이다. $E_2$ page가 $p, q \in \{0, 1\}$의 정사각형에 집중되어 있으므로 degree 차이가 $2$ 이상인 미분 $d_2: E_2^{p,q} \rightarrow E_2^{p+2, q-1}$은 시작 항이나 도착 항 중 하나가 항상 $0$이라 모두 zero map이다. 따라서 spectral sequence는 $E_2$에서 degenerate하고 $E_\infty = E_2$이다. 각 전체 degree $n = p + q$별로 항들을 모으면
 $$H^0(T^2, \mathbb{Z}) = E_\infty^{0,0} = \mathbb{Z}, \qquad H^1(T^2, \mathbb{Z}) = E_\infty^{1,0} \oplus E_\infty^{0,1} = \mathbb{Z}^2, \qquad H^2(T^2, \mathbb{Z}) = E_\infty^{1,1} = \mathbb{Z}$$
-를 얻는다. graded group의 extension이 자유 $\mathbb{Z}$-module 사이의 것이라 분열되므로 $H^1$이 두 항의 direct sum이 된다. 이는 torus의 well-known한 cohomology $H^\ast(T^2, \mathbb{Z}) = (\mathbb{Z}, \mathbb{Z}^2, \mathbb{Z})$와 일치하며, derived pushforward $Rp_\ast \mathbb{Z}_{T^2}$가 fiber와 base의 cohomology를 어떻게 결합하는지를 명시적으로 보여 준다.
+를 얻는다. Graded group의 extension이 자유 $\mathbb{Z}$-module 사이의 것이라 분열되므로 $H^1$이 두 항의 direct sum이 된다. 이는 torus의 well-known한 cohomology $H^\ast(T^2, \mathbb{Z}) = (\mathbb{Z}, \mathbb{Z}^2, \mathbb{Z})$와 일치하며, derived pushforward $Rp_\ast \mathbb{Z}_{T^2}$가 fiber와 base의 cohomology를 어떻게 결합하는지를 명시적으로 보여 준다.
 
 이 계산에서 fibration이 곱구조라 monodromy가 없었기에 $R^1 p_\ast$가 constant sheaf가 되었지만, Klein bottle처럼 fiber가 부호를 바꾸며 붙는 비자명한 $S^1$-bundle에서는 $R^1 p_\ast$가 비자명한 monodromy를 갖는 rank $1$ local system이 되어 $H^1$의 계산이 달라진다. Derived pushforward $Rp_\ast$는 이러한 fiber 위의 비틀림 정보를 base 위의 sheaf로 충실히 기록한다.
 

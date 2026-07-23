@@ -23,7 +23,7 @@ published: false
 먼저 반사의 대상이 되는 vertex를 정의하고, 그러한 vertex에서 quiver를 어떻게 바꾸는지를 기술한다.
 
 ::: 정의 1
-Quiver $Q$의 vertex $k\in Q_0$가 *sink<sub>들임 꼭짓점</sub>*이라는 것은 $s(\alpha)=k$인 arrow $\alpha\in Q_1$이 하나도 없는 것이다. 곧 $k$에 인접한 모든 arrow가 $k$를 target으로 가진다. symmetric으로 $k$가 *source<sub>냄 꼭짓점</sub>*라는 것은 $t(\alpha)=k$인 arrow가 하나도 없는 것이다. 곧 $k$에 인접한 모든 arrow가 $k$를 source로 가진다.
+Quiver $Q$의 vertex $k\in Q_0$가 *sink<sub>들임 꼭짓점</sub>*이라는 것은 $s(\alpha)=k$인 arrow $\alpha\in Q_1$이 하나도 없는 것이다. 곧 $k$에 인접한 모든 arrow가 $k$를 target으로 가진다. Symmetric으로 $k$가 *source<sub>냄 꼭짓점</sub>*라는 것은 $t(\alpha)=k$인 arrow가 하나도 없는 것이다. 곧 $k$에 인접한 모든 arrow가 $k$를 source로 가진다.
 :::
 
 Vertex $k$가 sink이면 $k$로 들어오는 arrow들만 있고, source이면 $k$에서 나가는 arrow들만 있다. $Q$에 oriented cycle이 없으므로 적어도 하나의 sink와 하나의 source가 항상 존재한다. 임의의 vertex가 sink일 필요는 없으나, 반사 functor는 sink 또는 source인 vertex에서만 정의된다. 이제 그러한 vertex에서 인접한 화살표를 모두 뒤집는 조작을 정의한다.
@@ -32,7 +32,7 @@ Vertex $k$가 sink이면 $k$로 들어오는 arrow들만 있고, source이면 $k
 Quiver $Q$와 vertex $k\in Q_0$에 대하여, $k$에서의 *반사<sub>reflection</sub>* $\sigma_k Q$는 같은 vertex 집합 $Q_0$를 가지며, arrow 집합은 $k$에 인접하지 않은 arrow는 그대로 두고 $k$에 인접한 각 arrow $\alpha$의 방향만 뒤집어 얻는 quiver이다. 곧 $\alpha:i\rightarrow k$는 $\bar\alpha:k\rightarrow i$로, $\alpha:k\rightarrow j$는 $\bar\alpha:j\rightarrow k$로 바꾼다.
 :::
 
-$k$가 $Q$에서 sink이면, $k$에 인접한 arrow는 모두 $k$로 들어오므로 반사 후에는 모두 $k$에서 나가게 되어 $k$는 $\sigma_k Q$에서 source가 된다. symmetric으로 $k$가 $Q$에서 source이면 $\sigma_k Q$에서는 sink가 된다. $Q$에 oriented cycle이 없고 $k$가 sink 또는 source인 한, 한 vertex의 인접 화살표만 뒤집는 이 조작은 oriented cycle을 만들지 않으므로 $\sigma_k Q$도 다시 oriented cycle을 가지지 않는다.
+$k$가 $Q$에서 sink이면, $k$에 인접한 arrow는 모두 $k$로 들어오므로 반사 후에는 모두 $k$에서 나가게 되어 $k$는 $\sigma_k Q$에서 source가 된다. Symmetric으로 $k$가 $Q$에서 source이면 $\sigma_k Q$에서는 sink가 된다. $Q$에 oriented cycle이 없고 $k$가 sink 또는 source인 한, 한 vertex의 인접 화살표만 뒤집는 이 조작은 oriented cycle을 만들지 않으므로 $\sigma_k Q$도 다시 oriented cycle을 가지지 않는다.
 
 ## Sink에서의 reflection functor
 
@@ -113,7 +113,7 @@ $k$가 $Q$의 sink이고 $V$가 $Q$의 indecomposable representation으로서 ve
 
 $$\underline\dim(S_k^+ V)=s_k(\underline\dim V)$$
 
-가 성립한다. symmetric으로 $k$가 source이고 $V$가 simple representation $S_k$와 isomorphic하지 않은 indecomposable이면 $V_{\mathrm{out}}$이 단사이고 $\underline\dim(S_k^- V)=s_k(\underline\dim V)$이다.
+가 성립한다. Symmetric으로 $k$가 source이고 $V$가 simple representation $S_k$와 isomorphic하지 않은 indecomposable이면 $V_{\mathrm{out}}$이 단사이고 $\underline\dim(S_k^- V)=s_k(\underline\dim V)$이다.
 :::
 ::: 증명
 Sink의 경우를 보이고 source의 경우는 쌍대적으로 따라온다. $k$가 sink이므로 $V$에서 vertex $k$ 위의 공간 $V_k$로 들어오는 정보는 morphism $V_{\mathrm{in}}:\bigoplus_{\alpha:i\rightarrow k}V_{s(\alpha)}\rightarrow V_k$로 전부 모인다. 먼저 $V_{\mathrm{in}}$이 전사임을 보인다. $U=\im V_{\mathrm{in}}\subseteq V_k$라 하고, $V_k$의 부분공간 $U$의 한 보충공간 $C$를 택해 $V_k=U\oplus C$로 적자. 그럼 vertex $k$에만 $C$를 얹고 나머지 vertex에는 $0$을 얹은 representation $V'=(C\text{ at }k)$는 $V$의 subrepresentation이다. 실제로 $k$가 sink이므로 $k$에서 나가는 arrow가 없어 $C$가 arrow를 따라 옮겨질 곳이 없고, 따라서 부분공간 조건이 자명하게 성립한다 ([§Quiver와 경로대수, ⁋정의 11](/ko/math/representation_theory/path_algebras#def11)). 더 나아가 $C$ 위의 공간은 다른 vertex로부터 들어오는 morphism의 image $U$와 direct sum을 이루므로, $V'$는 $V$의 direct summand이다. 곧 $V\cong V''\oplus V'$이고 $V'$는 vertex $k$ 위의 simple representation들의 direct sum, 곧 $S_k^{\oplus\dim C}$이다. $V$가 indecomposable이고 $S_k$와 isomorphic하지 않다고 가정하였으므로 $V'=0$, 곧 $C=0$이어야 한다. 따라서 $U=V_k$이고 $V_{\mathrm{in}}$은 전사이다.
@@ -144,7 +144,7 @@ $k$가 $Q$의 sink라 하자. $V$가 simple representation $S_k$를 direct summa
 
 $$S_k^- S_k^+ V\cong V$$
 
-가 자연스럽게 성립한다. symmetric으로 $k$가 source이고 $V$가 $S_k$를 direct summand로 가지지 않으면 $S_k^+ S_k^- V\cong V$이다. 특히 $S_k^+$와 $S_k^-$는 simple representation $S_k$만 제외한 indecomposable들의 isomorphism class 위에서 서로 역인 전단사를 주며, 두 functor는 이들 사이의 quasi-inverse equivalence로 제한된다.
+가 자연스럽게 성립한다. Symmetric으로 $k$가 source이고 $V$가 $S_k$를 direct summand로 가지지 않으면 $S_k^+ S_k^- V\cong V$이다. 특히 $S_k^+$와 $S_k^-$는 simple representation $S_k$만 제외한 indecomposable들의 isomorphism class 위에서 서로 역인 전단사를 주며, 두 functor는 이들 사이의 quasi-inverse equivalence로 제한된다.
 :::
 ::: 증명
 $k$가 sink인 경우를 보인다. $V$가 $S_k$를 direct summand로 가지지 않으므로, 명제 7의 증명에서 본 것과 같이 morphism $V_{\mathrm{in}}:\bigoplus_{\alpha:i\rightarrow k}V_{s(\alpha)}\rightarrow V_k$이 전사이다. (그 논증은 $V$가 indecomposable이라는 것보다 약한, $S_k$를 summand로 가지지 않는다는 조건만 사용한다. $\im V_{\mathrm{in}}$의 보충공간이 vertex $k$ 위의 $S_k$-summand를 주기 때문이다.) 따라서
@@ -171,7 +171,7 @@ Oriented cycle이 없는 quiver $Q$의 vertex들을 모두 한 번씩 나열한 
 
 $$C^+=S_{k_n}^+\cdots S_{k_2}^+ S_{k_1}^+:\Rep(Q)\longrightarrow\Rep(Q)$$
 
-로 정의한다. symmetric으로 admissible source sequence를 따라 $S^-$들을 합성하여 $C^-:\Rep(Q)\rightarrow\Rep(Q)$를 정의한다.
+로 정의한다. Symmetric으로 admissible source sequence를 따라 $S^-$들을 합성하여 $C^-:\Rep(Q)\rightarrow\Rep(Q)$를 정의한다.
 :::
 
 각 vertex를 정확히 한 번씩 sink로 만들어 모든 인접 화살표를 뒤집으므로, 모든 vertex를 거치고 나면 $\sigma_{k_n}\cdots\sigma_{k_1}Q=Q$가 되어 $C^+$는 $\Rep(Q)$를 자기 자신으로 보낸다. Admissible sink sequence는 $Q$에 oriented cycle이 없으므로 항상 존재한다. 매 단계에서 sink를 하나 골라 제거하는 방식으로 위상정렬을 하면 되기 때문이다. 서로 다른 admissible sink sequence는 다른 functor를 줄 수 있으나, dimension vector 위에서는 모두 같은 변환, 곧 Weyl group의 ([\[리 이론\] §근계, ⁋정의 17](/ko/math/lie_theory/root_systems#def17)) *Coxeter element* $c=s_{k_n}\cdots s_{k_1}$로 작용한다.
@@ -200,7 +200,7 @@ $$\underline\dim(C^+ V)=s_{k_n}\cdots s_{k_1}(\underline\dim V)=c\,(\underline\d
 Coxeter functor를 거듭 적용하면 어떤 indecomposable은 유한 번 만에 $0$으로 사라지고, 어떤 것은 결코 사라지지 않는다. 사라지는 쪽이 projective의 orbit에서 나오는 것들이며, 이로부터 preprojective와 preinjective module을 정의한다.
 
 ::: 정의 11
-$Q$의 indecomposable representation $V$가 *preprojective<sub>전사영적</sub>*라는 것은 어떤 $m\geq 0$에 대하여 $(C^+)^m V=0$인 것이다. symmetric으로 $V$가 *preinjective<sub>전입사적</sub>*라는 것은 어떤 $m\geq 0$에 대하여 $(C^-)^m V=0$인 것이다.
+$Q$의 indecomposable representation $V$가 *preprojective<sub>전사영적</sub>*라는 것은 어떤 $m\geq 0$에 대하여 $(C^+)^m V=0$인 것이다. Symmetric으로 $V$가 *preinjective<sub>전입사적</sub>*라는 것은 어떤 $m\geq 0$에 대하여 $(C^-)^m V=0$인 것이다.
 :::
 
 Preprojective indecomposable은 $C^+$를 거듭하면 결국 $0$이 되므로, $C^-$로 거슬러 올라가면 모두 어떤 indecomposable projective $P$로부터 $(C^-)^m P$의 꼴로 얻어진다. 곧 preprojective module들은 indecomposable projective들의 $C^-$-orbit을 모두 합한 것이며, symmetric으로 preinjective module들은 indecomposable injective들의 $C^+$-orbit을 모두 합한 것이다. 이 orbit들은 명제 10에 의하여 dimension vector 위에서 Coxeter element $c$의 거듭제곱에 의한 orbit으로 나타나므로, root system의 조합론으로 완전히 통제된다. Dynkin quiver의 경우에는 모든 indecomposable이 preprojective이며, 따라서 다음 절의 Gabriel 정리가 성립한다.

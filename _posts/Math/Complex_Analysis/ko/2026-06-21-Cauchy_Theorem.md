@@ -87,7 +87,7 @@ $$F(z) = \int_{[z_\ast, z]} f(\zeta)\,d\zeta$$
 
 로 정의한다. $F$가 $z$에서 복소미분가능하고 $F'(z) = f(z)$임을 보이면 된다.
 
-점 $z \in \Omega$를 고정한다. $\Omega$가 열려 있으므로 작은 원판 $B(z, \rho) \subseteq \Omega$이 있고, $\lvert h\rvert < \rho$인 $h$에 대해 $z + h \in \Omega$이다. 세 점 $z_\ast, z, z+h$를 꼭짓점으로 하는 삼각형 $T$를 생각하자. 별중심의 성질로 변 $[z_\ast, z]$와 $[z_\ast, z+h]$가 $\Omega$에 들어 있고, 나머지 변 $[z, z+h]$는 $B(z,\rho)$ 안에 있어 역시 $\Omega$에 들어 있다. 더 나아가 별중심에서 이 삼각형의 각 변 위의 점으로 가는 선분이 모두 $\Omega$에 있으므로 삼각형의 interior도 $\Omega$에 포함되며, 따라서 Goursat 정리 (정리 1) 를 이 삼각형에 적용할 수 있다. boundary $z_\ast \rightarrow z \rightarrow z+h \rightarrow z_\ast$를 따른 적분이 $0$이므로
+점 $z \in \Omega$를 고정한다. $\Omega$가 열려 있으므로 작은 원판 $B(z, \rho) \subseteq \Omega$이 있고, $\lvert h\rvert < \rho$인 $h$에 대해 $z + h \in \Omega$이다. 세 점 $z_\ast, z, z+h$를 꼭짓점으로 하는 삼각형 $T$를 생각하자. 별중심의 성질로 변 $[z_\ast, z]$와 $[z_\ast, z+h]$가 $\Omega$에 들어 있고, 나머지 변 $[z, z+h]$는 $B(z,\rho)$ 안에 있어 역시 $\Omega$에 들어 있다. 더 나아가 별중심에서 이 삼각형의 각 변 위의 점으로 가는 선분이 모두 $\Omega$에 있으므로 삼각형의 interior도 $\Omega$에 포함되며, 따라서 Goursat 정리 (정리 1) 를 이 삼각형에 적용할 수 있다. Boundary $z_\ast \rightarrow z \rightarrow z+h \rightarrow z_\ast$를 따른 적분이 $0$이므로
 
 $$\int_{[z_\ast, z]} f\,d\zeta + \int_{[z, z+h]} f\,d\zeta + \int_{[z+h, z_\ast]} f\,d\zeta = 0$$
 
@@ -138,7 +138,7 @@ $$H(t, 0) = \gamma_0(t), \quad H(t, 1) = \gamma_1(t), \quad H(a, s) = p, \quad H
 를 만족하는 것이다. 각 $s$에 대해 곡선 $\gamma_s(t) = H(t, s)$는 $\gamma_0$에서 $\gamma_1$로 이어지는 중간 경로이다.
 :::
 
-homotopy $H$는 한 곡선을 다른 곡선으로 끌고 가는 연속적인 변형을 매개변수 $s$로 기술한 것으로, $s = 0$에서 $\gamma_0$, $s = 1$에서 $\gamma_1$이며 변형 내내 양 끝점이 $p, q$에 고정된다. closed 곡선의 경우에는 끝점 고정 대신 각 중간 곡선이 닫혀 있을 것을 요구하며 ($H(a, s) = H(b, s)$), closed 곡선이 한 점으로 수축될 수 있을 때, 곧 어떤 상수 곡선과 homotopic할 때 그 곡선을 *null-homotopic<sub>영호모토픽</sub>*하다고 한다. 다음 정리가 적분 이론에서 homotopy가 가지는 의미를 밝힌다.
+Homotopy $H$는 한 곡선을 다른 곡선으로 끌고 가는 연속적인 변형을 매개변수 $s$로 기술한 것으로, $s = 0$에서 $\gamma_0$, $s = 1$에서 $\gamma_1$이며 변형 내내 양 끝점이 $p, q$에 고정된다. Closed 곡선의 경우에는 끝점 고정 대신 각 중간 곡선이 닫혀 있을 것을 요구하며 ($H(a, s) = H(b, s)$), closed 곡선이 한 점으로 수축될 수 있을 때, 곧 어떤 상수 곡선과 homotopic할 때 그 곡선을 *null-homotopic<sub>영호모토픽</sub>*하다고 한다. 다음 정리가 적분 이론에서 homotopy가 가지는 의미를 밝힌다.
 
 ::: 정리 6 (Cauchy의 homotopy 정리)
 $\Omega \subseteq \mathbb{C}$가 영역이고 $f$가 $\Omega$에서 holomorphic이라 하자. $\gamma_0, \gamma_1$이 $\Omega$ 안에서 끝점을 고정하여 homotopic한 두 piecewise $C^1$ 곡선이면

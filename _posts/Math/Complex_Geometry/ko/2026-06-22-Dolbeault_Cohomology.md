@@ -14,13 +14,13 @@ weight: 3
 published: false
 ---
 
-거의 복소구조의 언어로 복소화 differential form이 차수별로 $(p,q)$-형식으로 갈라짐을 보았다 ([§거의 복소구조, ⁋명제 7](/ko/math/complex_geometry/almost_complex_structures#prop7)). 그러나 이 분해는 형식 자체의 정적인 분류일 뿐, 그 위에서 작동하는 미분연산자 $d$가 이 분해와 어떻게 어울리는지는 아직 묻지 않았다. smooth manifold에서 $d$와 그로부터 얻는 de Rham cohomology가 위상을 읽어냈듯이 ([\[미분다양체\] §미분형식, ⁋정리 2](/ko/math/manifolds/differential_forms#thm2)), complex manifold에서는 $d$가 $(p,q)$-분해와 맞물려 두 연산자 $\partial$와 $\bar\partial$로 갈라지고, 그중 $\bar\partial$가 holomorphicity를 측정하는 복합체를 만든다.
+거의 복소구조의 언어로 복소화 differential form이 차수별로 $(p,q)$-형식으로 갈라짐을 보았다 ([§거의 복소구조, ⁋명제 7](/ko/math/complex_geometry/almost_complex_structures#prop7)). 그러나 이 분해는 형식 자체의 정적인 분류일 뿐, 그 위에서 작동하는 미분연산자 $d$가 이 분해와 어떻게 어울리는지는 아직 묻지 않았다. Smooth manifold에서 $d$와 그로부터 얻는 de Rham cohomology가 위상을 읽어냈듯이 ([\[미분다양체\] §미분형식, ⁋정리 2](/ko/math/manifolds/differential_forms#thm2)), complex manifold에서는 $d$가 $(p,q)$-분해와 맞물려 두 연산자 $\partial$와 $\bar\partial$로 갈라지고, 그중 $\bar\partial$가 holomorphicity를 측정하는 복합체를 만든다.
 
 이 글의 목표는 적분가능한 거의 복소구조, 곧 complex manifold 위에서 $d = \partial + \bar\partial$ 분해를 세우고, $\bar\partial$로부터 Dolbeault cohomology $H^{p,q}_{\bar\partial}(X)$를 정의하며, 그것이 holomorphic $p$-형식의 sheaf $\Omega^p$의 sheaf cohomology $H^q(X, \Omega^p)$와 일치한다는 Dolbeault 정리를 증명하는 것이다. 핵심 도구는 폴리디스크에서 $\bar\partial$-closed 형식이 항상 $\bar\partial$-완전하다는 $\bar\partial$-Poincaré 보조정리이며, 이것이 Dolbeault 복합체를 holomorphic 형식 sheaf의 fine resolution으로 바꿔준다.
 
 ## $\partial$와 $\bar\partial$ 연산자
 
-complex manifold $X$ 위에서 exterior derivative $d$는 복소화 형식에도 $\mathbb{C}$-선형으로 확장된다. 국소 holomorphic 좌표 $z_1, \ldots, z_n$에서 $(p,q)$-형식은
+Complex manifold $X$ 위에서 exterior derivative $d$는 복소화 형식에도 $\mathbb{C}$-선형으로 확장된다. 국소 holomorphic 좌표 $z_1, \ldots, z_n$에서 $(p,q)$-형식은
 
 $$
 \omega = \sum_{\lvert I \rvert = p,\ \lvert J \rvert = q} f_{IJ}\, dz_I \wedge d\bar{z}_J, \qquad
@@ -36,7 +36,7 @@ $$
 로 $(1,0)$-부분과 $(0,1)$-부분으로 자연히 갈라진다. 앞항을 wedge하면 형식의 degree가 $(p+1,q)$로, 뒷항을 wedge하면 $(p,q+1)$로 올라간다. 이 갈림이 $\partial$와 $\bar\partial$의 정의를 준다.
 
 ::: 정의 1
-complex manifold $X$ 위의 $(p,q)$-형식 $\omega = \sum_{I,J} f_{IJ}\, dz_I \wedge d\bar{z}_J$에 대하여 *del 연산자<sub>del operator</sub>* $\partial$와 *del-bar 연산자<sub>del-bar operator</sub>* $\bar\partial$를 국소좌표에서
+Complex manifold $X$ 위의 $(p,q)$-형식 $\omega = \sum_{I,J} f_{IJ}\, dz_I \wedge d\bar{z}_J$에 대하여 *del 연산자<sub>del operator</sub>* $\partial$와 *del-bar 연산자<sub>del-bar operator</sub>* $\bar\partial$를 국소좌표에서
 
 $$
 \partial \omega = \sum_{I,J} \sum_{k} \frac{\partial f_{IJ}}{\partial z_k}\, dz_k \wedge dz_I \wedge d\bar{z}_J, \qquad
@@ -49,7 +49,7 @@ $$
 위 정의는 좌표 표현으로 주어졌지만 좌표에 무관하게 잘 정의된다. 이를 보는 가장 깔끔한 방법은 $\partial$와 $\bar\partial$를 exterior derivative $d$의 성분으로 규정하는 것이다. $(p,q)$-형식에 $d$를 작용시키면 그 값은 $(p+1,q)$-형식과 $(p,q+1)$-형식의 합이며, $\partial \omega$와 $\bar\partial \omega$는 각각 그 두 성분이다. $d$가 좌표 무관이고 $(p,q)$-분해가 좌표 무관이므로 ([§거의 복소구조, ⁋명제 7](/ko/math/complex_geometry/almost_complex_structures#prop7)), 두 성분으로 추출한 $\partial$와 $\bar\partial$도 좌표에 무관하다. 다음 명제가 이 관점을 정식화한다.
 
 ::: 명제 2
-complex manifold $X$ 위에서 exterior derivative는 $\Omega^{p,q}(X)$ 위에서
+Complex manifold $X$ 위에서 exterior derivative는 $\Omega^{p,q}(X)$ 위에서
 
 $$
 d = \partial + \bar\partial
@@ -70,14 +70,14 @@ $$
 이다. 함수 $f_{IJ}$에 대하여 $df_{IJ} = \partial f_{IJ} + \bar\partial f_{IJ}$이고, 여기서 $\partial f_{IJ} = \sum_k (\partial f_{IJ}/\partial z_k)\, dz_k$는 $(1,0)$-형식, $\bar\partial f_{IJ} = \sum_k (\partial f_{IJ}/\partial \bar{z}_k)\, d\bar{z}_k$는 $(0,1)$-형식이다. 위 표현에서 $dz_I \wedge d\bar z_J$가 degree $(p,q)$이므로, $\partial f_{IJ}$를 wedge한 항은 정확히 $(p+1,q)$-형식이고 이들의 합이 [정의 1](#def1)의 $\partial\omega$이다. 마찬가지로 $\bar\partial f_{IJ}$를 wedge한 항은 $(p,q+1)$-형식이고 그 합이 $\bar\partial\omega$이다. 다른 degree의 항은 나타나지 않으므로 $d\omega = \partial\omega + \bar\partial\omega$이고 분해가 차수별로 성립한다.
 :::
 
-이 분해는 본질적으로 $X$의 적분가능성에 의존한다. 적분가능하지 않은 거의 complex manifold에서는 $d$가 $(p,q)$-형식을 네 개의 degree $(p+2,q-1), (p+1,q), (p,q+1), (p-1,q+2)$로 흩뜨려 $d = \mu + \partial + \bar\partial + \bar\mu$ 꼴이 되며, 두 여분의 항 $\mu, \bar\mu$가 정확히 Nijenhuis 텐서를 담는다. complex manifold에서는 이 여분 항이 소멸하여 깔끔한 두 항 분해가 살아남고, 비로소 $\bar\partial$만으로 닫힌 복합체를 세울 수 있다.
+이 분해는 본질적으로 $X$의 적분가능성에 의존한다. 적분가능하지 않은 거의 complex manifold에서는 $d$가 $(p,q)$-형식을 네 개의 degree $(p+2,q-1), (p+1,q), (p,q+1), (p-1,q+2)$로 흩뜨려 $d = \mu + \partial + \bar\partial + \bar\mu$ 꼴이 되며, 두 여분의 항 $\mu, \bar\mu$가 정확히 Nijenhuis 텐서를 담는다. Complex manifold에서는 이 여분 항이 소멸하여 깔끔한 두 항 분해가 살아남고, 비로소 $\bar\partial$만으로 닫힌 복합체를 세울 수 있다.
 
 ## $\partial$와 $\bar\partial$의 멱영성
 
 $d = \partial + \bar\partial$ 분해에 $d^2 = 0$을 대입하면 세 항이 차수별로 갈라져 각각 소멸해야 한다. 이것이 Dolbeault 복합체의 토대이다.
 
 ::: 명제 3
-complex manifold $X$ 위에서 다음이 성립한다.
+Complex manifold $X$ 위에서 다음이 성립한다.
 
 $$
 \partial^2 = 0, \qquad \bar\partial^2 = 0, \qquad \partial \bar\partial + \bar\partial \partial = 0.
@@ -85,7 +85,7 @@ $$
 :::
 
 ::: 증명
-exterior derivative는 $d^2 = 0$을 만족한다 ([\[미분다양체\] §미분형식, ⁋정리 2](/ko/math/manifolds/differential_forms#thm2)). [명제 2](#prop2)에 의해 $(p,q)$-형식 $\omega$에 대하여 $d = \partial + \bar\partial$이므로
+Exterior derivative는 $d^2 = 0$을 만족한다 ([\[미분다양체\] §미분형식, ⁋정리 2](/ko/math/manifolds/differential_forms#thm2)). [명제 2](#prop2)에 의해 $(p,q)$-형식 $\omega$에 대하여 $d = \partial + \bar\partial$이므로
 
 $$
 0 = d^2 \omega = (\partial + \bar\partial)(\partial + \bar\partial)\omega = \partial^2 \omega + (\partial\bar\partial + \bar\partial\partial)\omega + \bar\partial^2 \omega
@@ -111,7 +111,7 @@ $$
 고정된 $p$에 대하여 $\bar\partial$는 $\Omega^{p,q}$들을 $q$에 대해 한 칸씩 밀어 올리며 $\bar\partial^2 = 0$을 만족하므로, 이들은 cochain complex를 이룬다.
 
 ::: 정의 4
-complex manifold $X$와 고정된 정수 $p \geq 0$에 대하여, $\bar\partial$를 미분으로 갖는 cochain complex
+Complex manifold $X$와 고정된 정수 $p \geq 0$에 대하여, $\bar\partial$를 미분으로 갖는 cochain complex
 
 $$
 0 \longrightarrow \Omega^{p,0}(X) \xrightarrow{\ \bar\partial\ } \Omega^{p,1}(X) \xrightarrow{\ \bar\partial\ } \Omega^{p,2}(X) \xrightarrow{\ \bar\partial\ } \cdots
@@ -169,7 +169,7 @@ $$
 \frac{\partial u}{\partial \bar{\zeta}}(\zeta) = \frac{1}{2\pi i} \int \frac{1}{s}\, \frac{\partial f}{\partial \bar{\zeta}}(\zeta + s)\, ds \wedge d\bar{s} = \frac{1}{2\pi i} \int_{D} \frac{1}{w - \zeta}\, \frac{\partial f}{\partial \bar{w}}(w)\, dw \wedge d\bar{w}
 $$
 
-이다 (다시 $s = w - \zeta$로 되돌리고 $\partial f(\zeta+s)/\partial\bar\zeta = (\partial f/\partial\bar w)(\zeta+s)$를 썼다). 이제 일반화된 Cauchy 적분공식을 적용한다. smooth 함수 $g$와 영역 $D$에 대하여 Cauchy–Pompeiu 공식
+이다 (다시 $s = w - \zeta$로 되돌리고 $\partial f(\zeta+s)/\partial\bar\zeta = (\partial f/\partial\bar w)(\zeta+s)$를 썼다). 이제 일반화된 Cauchy 적분공식을 적용한다. Smooth 함수 $g$와 영역 $D$에 대하여 Cauchy–Pompeiu 공식
 
 $$
 g(\zeta) = \frac{1}{2\pi i} \int_{\partial D} \frac{g(w)}{w - \zeta}\, dw + \frac{1}{2\pi i} \int_{D} \frac{1}{w - \zeta}\, \frac{\partial g}{\partial \bar{w}}\, dw \wedge d\bar{w}
@@ -222,10 +222,10 @@ $q \geq 2$의 일반 경우도 같은 귀납이 작동한다. $\omega$를 $\omeg
 
 ## Dolbeault 정리
 
-smooth manifold에서 de Rham 정리는 de Rham 복합체가 constant sheaf $\underline{\mathbb{R}}$의 acyclic resolution임을 써서 de Rham cohomology를 sheaf cohomology와 동일시했다. complex manifold에서는 같은 추상 de Rham 논법이 $\bar\partial$-복합체에 적용되어, holomorphic $p$-형식의 sheaf를 분해한다. 먼저 분해할 sheaf를 정한다.
+Smooth manifold에서 de Rham 정리는 de Rham 복합체가 constant sheaf $\underline{\mathbb{R}}$의 acyclic resolution임을 써서 de Rham cohomology를 sheaf cohomology와 동일시했다. Complex manifold에서는 같은 추상 de Rham 논법이 $\bar\partial$-복합체에 적용되어, holomorphic $p$-형식의 sheaf를 분해한다. 먼저 분해할 sheaf를 정한다.
 
 ::: 정의 7
-complex manifold $X$ 위의 *holomorphic $p$-form<sub>정칙 $p$-형식</sub>*의 sheaf $\Omega^p$를, 각 열린집합 $U \subseteq X$에 대하여 $U$ 위의 holomorphic $(p,0)$-형식
+Complex manifold $X$ 위의 *holomorphic $p$-form<sub>정칙 $p$-형식</sub>*의 sheaf $\Omega^p$를, 각 열린집합 $U \subseteq X$에 대하여 $U$ 위의 holomorphic $(p,0)$-형식
 
 $$
 \Omega^p(U) = \{ \omega \in \Omega^{p,0}(U) \mid \bar\partial\omega = 0 \}
@@ -236,10 +236,10 @@ $$
 
 $p = 0$일 때 $\Omega^0$은 holomorphic function의 structure sheaf $\mathcal{O}_X$이다. $p = 1$일 때 $\Omega^1$은 holomorphic 1-형식의 sheaf로, holomorphic cotangent bundle의 holomorphic section들이 이루는 sheaf이다 ([§복소다양체, ⁋정의 11](/ko/math/complex_geometry/complex_manifolds#def11)). 조건 $\bar\partial\omega = 0$은 $(p,0)$-형식의 계수에 대한 Cauchy–Riemann 방정식이며, 정의에 의해 $\Omega^p = \ker(\bar\partial : \Omega^{p,0} \rightarrow \Omega^{p,1})$로 $\bar\partial$-closed $(p,0)$-형식들의 sheaf이다. 이 sheaf의 sheaf cohomology ([\[대수다양체\] §층 코호몰로지, ⁋정의 1](/ko/math/algebraic_varieties/sheaf_cohomology#def1)) $H^q(X, \Omega^p)$가 Dolbeault cohomology의 정체임을 보이려 한다.
 
-추상 de Rham 논법의 핵심은 smooth 형식의 sheaf $\mathcal{A}^{p,q}$ (각 $U$에 $\Omega^{p,q}(U)$를 대응시키는 sheaf)가 *fine sheaf<sub>미세층</sub>* 라는 점이다. Fine sheaf는 임의의 open covering에 종속된 partition of unity를 가지는 sheaf로, 그러한 partition of unity가 존재하면 그 sheaf는 sheaf cohomology에서 acyclic하다. smooth 함수의 partition of unity가 $\mathcal{A}^{p,q}$의 section에 그대로 곱해지므로 $\mathcal{A}^{p,q}$는 fine sheaf이고, 따라서 모든 $q' > 0$에 대하여 $H^{q'}(X, \mathcal{A}^{p,q}) = 0$이다. 이제 $\bar\partial$-복합체가 $\Omega^p$의 분해임을 확인한다.
+추상 de Rham 논법의 핵심은 smooth 형식의 sheaf $\mathcal{A}^{p,q}$ (각 $U$에 $\Omega^{p,q}(U)$를 대응시키는 sheaf)가 *fine sheaf<sub>미세층</sub>* 라는 점이다. Fine sheaf는 임의의 open covering에 종속된 partition of unity를 가지는 sheaf로, 그러한 partition of unity가 존재하면 그 sheaf는 sheaf cohomology에서 acyclic하다. Smooth 함수의 partition of unity가 $\mathcal{A}^{p,q}$의 section에 그대로 곱해지므로 $\mathcal{A}^{p,q}$는 fine sheaf이고, 따라서 모든 $q' > 0$에 대하여 $H^{q'}(X, \mathcal{A}^{p,q}) = 0$이다. 이제 $\bar\partial$-복합체가 $\Omega^p$의 분해임을 확인한다.
 
 ::: 명제 8
-complex manifold $X$와 고정된 $p \geq 0$에 대하여, sheaf의 sequence
+Complex manifold $X$와 고정된 $p \geq 0$에 대하여, sheaf의 sequence
 
 $$
 0 \longrightarrow \Omega^p \longrightarrow \mathcal{A}^{p,0} \xrightarrow{\ \bar\partial\ } \mathcal{A}^{p,1} \xrightarrow{\ \bar\partial\ } \mathcal{A}^{p,2} \xrightarrow{\ \bar\partial\ } \cdots
@@ -261,7 +261,7 @@ $$
 Fine sheaf는 sheaf cohomology에서 acyclic하므로, 이 fine resolution으로부터 추상 de Rham 정리를 적용할 수 있다. Sheaf cohomology에서 acyclic resolution은 그 global section 복합체의 cohomology로 원래 sheaf의 cohomology를 계산해 준다 ([\[대수다양체\] §층 코호몰로지, ⁋명제 17](/ko/math/algebraic_varieties/sheaf_cohomology#prop17)). 이를 위 분해에 적용하면 Dolbeault 정리가 나온다.
 
 ::: 정리 9 (Dolbeault)
-complex manifold $X$와 정수 $p, q \geq 0$에 대하여, 표준적인 isomorphism
+Complex manifold $X$와 정수 $p, q \geq 0$에 대하여, 표준적인 isomorphism
 
 $$
 H^{p,q}_{\bar\partial}(X) \cong H^q(X, \Omega^p)
@@ -279,7 +279,7 @@ $$
 
 는 $\Omega^p$의 분해이고, 각 $\mathcal{A}^{p,q}$는 fine sheaf라 $\Gamma(X, -)$-acyclic하다 (fine sheaf는 모든 양의 degree sheaf cohomology가 소멸한다). 따라서 이는 acyclic resolution이다.
 
-acyclic resolution에 대한 추상 de Rham 정리는, $0 \rightarrow \mathcal{F} \rightarrow \mathcal{A}^0 \rightarrow \mathcal{A}^1 \rightarrow \cdots$이 $\Gamma(X,-)$-acyclic resolution이면
+Acyclic resolution에 대한 추상 de Rham 정리는, $0 \rightarrow \mathcal{F} \rightarrow \mathcal{A}^0 \rightarrow \mathcal{A}^1 \rightarrow \cdots$이 $\Gamma(X,-)$-acyclic resolution이면
 
 $$
 H^q(X, \mathcal{F}) \cong \frac{\ker\left( \Gamma(X, \mathcal{A}^q) \rightarrow \Gamma(X, \mathcal{A}^{q+1}) \right)}{\Img\left( \Gamma(X, \mathcal{A}^{q-1}) \rightarrow \Gamma(X, \mathcal{A}^q) \right)}
@@ -298,7 +298,7 @@ Dolbeault 정리는 해석적으로 정의된 $\bar\partial$-cohomology를 층�
 
 ## de Rham 코호몰로지와의 비교
 
-complex manifold는 동시에 smooth manifold이므로 복소계수 de Rham cohomology $H^k_{\mathrm{dR}}(X, \mathbb{C})$도 가진다. $\Omega^k(X) \otimes \mathbb{C} = \bigoplus_{p+q=k} \Omega^{p,q}(X)$라는 형식 수준의 분해가 있으므로, cohomology 수준에서도
+Complex manifold는 동시에 smooth manifold이므로 복소계수 de Rham cohomology $H^k_{\mathrm{dR}}(X, \mathbb{C})$도 가진다. $\Omega^k(X) \otimes \mathbb{C} = \bigoplus_{p+q=k} \Omega^{p,q}(X)$라는 형식 수준의 분해가 있으므로, cohomology 수준에서도
 
 $$
 H^k_{\mathrm{dR}}(X, \mathbb{C}) \cong \bigoplus_{p+q=k} H^{p,q}_{\bar\partial}(X)

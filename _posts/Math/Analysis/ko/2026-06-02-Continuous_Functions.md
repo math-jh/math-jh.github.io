@@ -45,7 +45,7 @@ $K$가 점렬컴팩트이고 $f : K \rightarrow \mathbb{R}$가 연속이면, $f$
 :::
 
 ::: 증명
-[정리 1](#thm1)에 의해 $f(K) \subseteq \mathbb{R}$는 점렬컴팩트이고, [§컴팩트성, ⁋정리 2](/ko/math/analysis/compactness#thm2)에 의해 닫혀 있고 bounded이다. bounded이므로
+[정리 1](#thm1)에 의해 $f(K) \subseteq \mathbb{R}$는 점렬컴팩트이고, [§컴팩트성, ⁋정리 2](/ko/math/analysis/compactness#thm2)에 의해 닫혀 있고 bounded이다. Bounded이므로
 
 $$M = \sup f(K)$$
 

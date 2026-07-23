@@ -221,7 +221,7 @@ $$\partial:H_k(X,A)\rightarrow H_{k-1}(A,\emptyset):=H_{k-1}(A)$$
     에 들어간다. 
 :::
 
-그럼 Eilenberg와 Steenrod의 결과는 이러한 방식으로 정의된 homology theory들은, 만일 *coefficient group* $H_0(\ast)$가 고정된다면 이들은 모두 naturally isomorphic하다는 것을 보여준다. 예를 들어 우리는 앞서 simplicial homology와 singular homology가 $\Delta$-complex 위에서는 일치한다는 것을 증명하였으며, 그 증명을 하나하나 분리해보면 본질적으로 우리가 사용한 것은 위의 [정의 6](#def6)의 공리들임을 확인할 수 있다. homology의 실용적인 계산을 위해서는 *CW complex* 위에 정의된 *cellular homology*를 도입하는 것이 좋은데, 마찬가지로 이 homology 또한 위의 공리들을 만족하고 따라서 이 또한 simplicial homology, singular homology와 같은 계산을 준다. 
+그럼 Eilenberg와 Steenrod의 결과는 이러한 방식으로 정의된 homology theory들은, 만일 *coefficient group* $H_0(\ast)$가 고정된다면 이들은 모두 naturally isomorphic하다는 것을 보여준다. 예를 들어 우리는 앞서 simplicial homology와 singular homology가 $\Delta$-complex 위에서는 일치한다는 것을 증명하였으며, 그 증명을 하나하나 분리해보면 본질적으로 우리가 사용한 것은 위의 [정의 6](#def6)의 공리들임을 확인할 수 있다. Homology의 실용적인 계산을 위해서는 *CW complex* 위에 정의된 *cellular homology*를 도입하는 것이 좋은데, 마찬가지로 이 homology 또한 위의 공리들을 만족하고 따라서 이 또한 simplicial homology, singular homology와 같은 계산을 준다. 
 
 한편 이들 homology theory들은 모두 coefficient group이 $\mathbb{Z}$로 고정되어 있는 상태인데, 이를 임의의 abelian group $A$로 바꾸어도 [정의 6](#def6)의 모든 공리는 변함없이 성립한다. 실제로 singular homology 혹은 simplicial homology를 정의할 때, chain group들
 
@@ -233,7 +233,7 @@ $$C^\Delta_\bullet(X;A):=C^\Delta_\bullet(X)\otimes_\mathbb{Z}A,\qquad C_\bullet
 
 로 잡았더라면 이러한 종류의 homology를 얻었을 것이다. 
 
-homology의 대부분의 성질들은 [정의 6](#def6)의 공리들로부터 나온다. 예를 들어, 이 글의 목표인 식 (1)의 일반화를 이로브터 유도할 수 있다. 위상공간 $X$가 두 열린집합들의 합집합 $X=U\cup V$로 나타난다 하자. 그럼 다음의 inclusion
+Homology의 대부분의 성질들은 [정의 6](#def6)의 공리들로부터 나온다. 예를 들어, 이 글의 목표인 식 (1)의 일반화를 이로브터 유도할 수 있다. 위상공간 $X$가 두 열린집합들의 합집합 $X=U\cup V$로 나타난다 하자. 그럼 다음의 inclusion
 
 ![inclusions](/assets/images/Math/Algebraic_Topology/Computation_of_Homology-7.svg){:style="width:7.54em" class="invert" .align-center}
 

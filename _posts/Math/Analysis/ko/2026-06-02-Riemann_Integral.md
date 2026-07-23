@@ -21,7 +21,7 @@ published: false
 극한을 직접 다루는 대신, 위와 아래에서 죄어 오는 두 합을 쓴다.
 
 ::: 정의 1
-bounded function $f : [a,b] \rightarrow \mathbb{R}$와 분할 $P : a = x_0 < \cdots < x_n = b$에 대하여, 각 부분구간에서 $m_i = \inf_{[x_{i-1}, x_i]} f$, $M_i = \sup_{[x_{i-1}, x_i]} f$로 두고
+Bounded function $f : [a,b] \rightarrow \mathbb{R}$와 분할 $P : a = x_0 < \cdots < x_n = b$에 대하여, 각 부분구간에서 $m_i = \inf_{[x_{i-1}, x_i]} f$, $M_i = \sup_{[x_{i-1}, x_i]} f$로 두고
 
 $$L(P, f) = \sum_{i=1}^n m_i \Delta x_i, \qquad U(P, f) = \sum_{i=1}^n M_i \Delta x_i$$
 
@@ -56,7 +56,7 @@ $\underline{\int} f = \overline{\int} f$일 때 $f$가 $[a,b]$에서 *Riemann �
 상합과 하합의 차를 임의로 작게 만들 수 있는지가 적분가능성을 결정한다.
 
 ::: 정리 3 (Riemann 판정법)
-bounded function $f$가 적분가능한 것은, 임의의 $\varepsilon > 0$에 대하여 $U(P, f) - L(P, f) < \varepsilon$인 분할 $P$가 존재하는 것과 동치이다.
+Bounded function $f$가 적분가능한 것은, 임의의 $\varepsilon > 0$에 대하여 $U(P, f) - L(P, f) < \varepsilon$인 분할 $P$가 존재하는 것과 동치이다.
 :::
 
 ::: 증명
@@ -70,7 +70,7 @@ $[a,b]$에서 연속인 함수는 Riemann 적분가능하다.
 :::
 
 ::: 증명
-$f$는 컴팩트구간 $[a,b]$에서 연속이므로 균등연속이다 ([§연속함수의 성질, ⁋정리 4](/ko/math/analysis/continuous_functions#thm4)). 임의의 $\varepsilon > 0$에 대해, 균등연속성으로 $\lvert x - y\rvert < \delta$이면 $\lvert f(x) - f(y)\rvert < \varepsilon/(b - a)$이게 하는 $\delta$가 있다. mesh가 $\delta$ 미만인 분할 $P$를 잡으면, 각 부분구간에서 $f$가 (컴팩트성으로) 최댓값과 최솟값을 가지므로 $M_i - m_i \leq \varepsilon/(b-a)$이고
+$f$는 컴팩트구간 $[a,b]$에서 연속이므로 균등연속이다 ([§연속함수의 성질, ⁋정리 4](/ko/math/analysis/continuous_functions#thm4)). 임의의 $\varepsilon > 0$에 대해, 균등연속성으로 $\lvert x - y\rvert < \delta$이면 $\lvert f(x) - f(y)\rvert < \varepsilon/(b - a)$이게 하는 $\delta$가 있다. Mesh가 $\delta$ 미만인 분할 $P$를 잡으면, 각 부분구간에서 $f$가 (컴팩트성으로) 최댓값과 최솟값을 가지므로 $M_i - m_i \leq \varepsilon/(b-a)$이고
 
 $$U(P, f) - L(P, f) = \sum_i (M_i - m_i)\Delta x_i \leq \frac{\varepsilon}{b-a}\sum_i \Delta x_i = \varepsilon$$
 

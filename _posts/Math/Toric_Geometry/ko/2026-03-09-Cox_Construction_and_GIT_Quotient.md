@@ -81,7 +81,7 @@ $G = \mathbb{C}^\ast$가 $X = \mathbb{C}^2$ 위에 scaling
 
 $$t \cdot (z_1, z_2) = (tz_1, tz_2)$$
 
-으로 작용한다고 하자. 우선 자명한 linearization, 즉 character $\chi = 1$의 경우 affine GIT을 본다. coordinate ring $A = \mathbb{C}[\z_1, \z_2]$ 위의 $G$-action은 (이 글에서는 자매 글인 [§아핀 토릭 다양체](/ko/math/toric_geometry/affine_toric_varieties)의 *inverse 없는* convention $t \cdot f = f \circ t$와는 반대로, 표준 GIT 컨벤션을 따라 $(t \cdot f)(x) = f(t^{-1} x)$를 채택한다) $\z_i$를 $t^{-1}\z_i$로 보내며, 임의의 monomial $\z_1^a \z_2^b$는 $t^{-(a+b)}$ 배가 된다. 따라서
+으로 작용한다고 하자. 우선 자명한 linearization, 즉 character $\chi = 1$의 경우 affine GIT을 본다. Coordinate ring $A = \mathbb{C}[\z_1, \z_2]$ 위의 $G$-action은 (이 글에서는 자매 글인 [§아핀 토릭 다양체](/ko/math/toric_geometry/affine_toric_varieties)의 *inverse 없는* convention $t \cdot f = f \circ t$와는 반대로, 표준 GIT 컨벤션을 따라 $(t \cdot f)(x) = f(t^{-1} x)$를 채택한다) $\z_i$를 $t^{-1}\z_i$로 보내며, 임의의 monomial $\z_1^a \z_2^b$는 $t^{-(a+b)}$ 배가 된다. 따라서
 
 $$A^G = \mathbb{C}$$
 
@@ -236,7 +236,7 @@ $$\mathbb{P}^1 \times \mathbb{P}^1 = (\mathbb{C}^4 \setminus Z(\Sigma)) / (\math
 
 ## Cox ring과 line bundle의 대응
 
-projective space에서 homogeneous coordinate ring의 graded component가 twisted structure sheaf의 global section과 대응했듯, Cox ring에서도 같은 대응이 성립한다.
+Projective space에서 homogeneous coordinate ring의 graded component가 twisted structure sheaf의 global section과 대응했듯, Cox ring에서도 같은 대응이 성립한다.
 
 ::: 명제 12
 Toric variety $X_\Sigma$가 simplicial이라고 하자. $\beta \in \Cl(X_\Sigma)$에 대해 $S$의 $\beta$차 성분 $S_\beta$는 다음과 같은 isomorphism을 갖는다:

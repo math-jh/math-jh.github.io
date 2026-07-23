@@ -55,7 +55,7 @@ Bolzano–Weierstrass의 핵심은 다음의 조합론적 보조정리이다.
 ## Bolzano–Weierstrass 정리
 
 ::: 정리 4 (Bolzano–Weierstrass)
-bounded인 실수열은 수렴하는 부분수열을 가진다.
+Bounded인 실수열은 수렴하는 부분수열을 가진다.
 :::
 
 ::: 증명
@@ -79,7 +79,7 @@ $$\lvert r_{n_k} - x\rvert < \frac{1}{k} \qquad (n_1 < n_2 < n_3 < \cdots).$$
 반대로, 수렴하는 수열에서는 모든 부분수열이 같은 극한을 공유하므로 집적점이 단 하나뿐이다. 그 역으로, bounded sequence에서 집적점이 유일하면 그 수열은 그 점으로 수렴한다.
 
 ::: 명제 6
-bounded sequence $(a_n)$이 단 하나의 집적점 $L$만을 가지면 $a_n \rightarrow L$이다.
+Bounded sequence $(a_n)$이 단 하나의 집적점 $L$만을 가지면 $a_n \rightarrow L$이다.
 :::
 
 ::: 증명
@@ -96,10 +96,10 @@ $$\begin{aligned}
 
 ## 구간 이분법에 의한 증명
 
-[보조정리 3](#lem3)을 거치지 않고 [정리 4](#thm4)를 직접 증명하는 또 하나의 표준적 방법이 *구간 이분법<sub>bisection</sub>*이다. bounded sequence를 가두는 구간을 반씩 잘라 가며 항이 무한히 많은 쪽을 택하는 이 방법은 컴팩트성 증명에서 되풀이되는 기법이므로 따로 정리해 둔다.
+[보조정리 3](#lem3)을 거치지 않고 [정리 4](#thm4)를 직접 증명하는 또 하나의 표준적 방법이 *구간 이분법<sub>bisection</sub>*이다. Bounded sequence를 가두는 구간을 반씩 잘라 가며 항이 무한히 많은 쪽을 택하는 이 방법은 컴팩트성 증명에서 되풀이되는 기법이므로 따로 정리해 둔다.
 
 ::: 명제 7 (Bolzano–Weierstrass의 이분법 증명)
-bounded인 실수열은 수렴하는 부분수열을 가진다 ([정리 4](#thm4)의 다른 증명).
+Bounded인 실수열은 수렴하는 부분수열을 가진다 ([정리 4](#thm4)의 다른 증명).
 :::
 
 ::: 증명
@@ -140,6 +140,6 @@ $$\begin{aligned}
 이므로 $a_n \rightarrow L$이다. 부분수열의 극한 하나가 전체 수열을 끌어당기는 것이다.
 :::
 
-같은 발상이 연속함수 이론의 [§연속함수의 성질, ⁋따름정리 2](/ko/math/analysis/continuous_functions#cor2)에서도 작동한다. closed bounded 구간 위의 연속함수 $f$가 상한 $S = \sup f$에 임의로 가까운 값을 취하는 점들의 수열 $(x_n)$을 잡으면, 이 수열은 bounded이므로 [정리 4](#thm4)에 의해 수렴하는 부분수열 $x_{n_k} \rightarrow c$를 가진다. 구간이 닫혀 있어 limit point $c$도 구간 안에 있고, $f$의 연속성으로 $f(x_{n_k}) \rightarrow f(c)$이므로 $f(c) = S$가 되어, 상한이 실제로 달성된다. 이처럼 "bounded sequence에서 극한을 추출한다"는 [정리 4](#thm4)의 한 문장이 존재 정리의 골격을 이룬다.
+같은 발상이 연속함수 이론의 [§연속함수의 성질, ⁋따름정리 2](/ko/math/analysis/continuous_functions#cor2)에서도 작동한다. Closed bounded 구간 위의 연속함수 $f$가 상한 $S = \sup f$에 임의로 가까운 값을 취하는 점들의 수열 $(x_n)$을 잡으면, 이 수열은 bounded이므로 [정리 4](#thm4)에 의해 수렴하는 부분수열 $x_{n_k} \rightarrow c$를 가진다. 구간이 닫혀 있어 limit point $c$도 구간 안에 있고, $f$의 연속성으로 $f(x_{n_k}) \rightarrow f(c)$이므로 $f(c) = S$가 되어, 상한이 실제로 달성된다. 이처럼 "bounded sequence에서 극한을 추출한다"는 [정리 4](#thm4)의 한 문장이 존재 정리의 골격을 이룬다.
 
 앞서 자유로이 쓴 용어를 정리해 두면, 수렴하는 부분수열의 극한을 *부분수열극한<sub>subsequential limit</sub>* 또는 *집적점<sub>cluster point</sub>*이라 한다.

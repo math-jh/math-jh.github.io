@@ -130,7 +130,7 @@ $$ef\cdot v_j=(j+1)\,e\cdot v_{j+1}=(j+1)(n-j)v_j,\qquad fe\cdot v_j=(n-j+1)\,f\
 
 ## 완전가약성
 
-irreducible representation의 분류는 임의의 representation을 irreducible representation들로 분해할 수 있을 때에 비로소 완결된 그림을 준다. $\SL(2;\mathbb{C})$는 compact가 아니므로 invariant inner product를 적분으로 평균내는 unitarian trick을 직접 쓸 수 없고, 따라서 완전가약성은 별도의 논증을 요구한다. 우리는 [§보편 포락 대수, ⁋예시 12](/ko/math/lie_theory/universal_enveloping_algebra#ex12)에서 정의된 Casimir element를 사용한다.
+Irreducible representation의 분류는 임의의 representation을 irreducible representation들로 분해할 수 있을 때에 비로소 완결된 그림을 준다. $\SL(2;\mathbb{C})$는 compact가 아니므로 invariant inner product를 적분으로 평균내는 unitarian trick을 직접 쓸 수 없고, 따라서 완전가약성은 별도의 논증을 요구한다. 우리는 [§보편 포락 대수, ⁋예시 12](/ko/math/lie_theory/universal_enveloping_algebra#ex12)에서 정의된 Casimir element를 사용한다.
 
 ::: 정의 7
 $\sl_2$-representation $V$ 위에서, [§보편 포락 대수, ⁋예시 12](/ko/math/lie_theory/universal_enveloping_algebra#ex12)의 Casimir element $\Omega=ef+fe+\tfrac{1}{2}h^2$가 정의하는 연산자
@@ -154,7 +154,7 @@ $0\rightarrow W\rightarrow V\rightarrow\mathbb{C}\rightarrow 0$이 $\sl_2$-repre
 ::: 증명
 $\dim W$에 대한 귀납법으로 보인다. $W$가 $0$이 아닌 진부분 subrepresentation $W'$을 가지면, 몫 $V/W'$은 $0\rightarrow W/W'\rightarrow V/W'\rightarrow\mathbb{C}\rightarrow 0$을 이루고 $\dim(W/W')<\dim W$이므로 귀납 가정에 의해 분리되어, $V/W'$ 안에 $\mathbb{C}$로 사상되는 $1$차원 subrepresentation $\widetilde U/W'$이 있다. 이제 $0\rightarrow W'\rightarrow\widetilde U\rightarrow\mathbb{C}\rightarrow 0$은 $\dim W'<\dim W$이므로 다시 귀납 가정으로 분리되어, $\widetilde U$ 안에 $\mathbb{C}$로 사상되는 $1$차원 subrepresentation $L$이 있다. $L$은 $V\rightarrow\mathbb{C}$로 동형으로 사상되므로 $V=W\oplus L$이다.
 
-따라서 $W$가 기약인 경우만 보이면 된다. $W=V(0)$이 자명한 representation이면 $V$는 $2$차원이고 $\sl_2$가 $V$ 위에서 nilpotent하게만 작용하므로 ($h,e,f$의 모든 commutator가 자명한 $1$차원 몫과 부분 위에서 $0$이 되어 작용 전체가 strictly upper-triangular), $[e,f]=h$의 trace를 비교하면 $h$의 작용이 $0$이고 작용이 분리되어 $V\cong W\oplus\mathbb{C}$이다. $W=V(n)$이 $n\geq 1$인 기약인 경우, $V$ 위의 Casimir operator $C$를 생각한다. $C$는 자명한 representation $\mathbb{C}=V(0)$ 위에서 $\tfrac{1}{2}\cdot0\cdot2=0$으로, $W=V(n)$ 위에서 $\tfrac{1}{2}n(n+2)\neq 0$으로 작용한다. $C$가 $\sl_2$의 작용과 가환이므로 $\ker C$는 $V$의 subrepresentation이다. exact sequence에서 $V/W\cong\mathbb{C}$ 위에서 $C$가 $0$이므로 $C(V)\subseteq W$이고, $W$ 위에서 $C$가 가역 스칼라이므로 $C\colon V\rightarrow W$는 전사이며 $\ker C$는 $1$차원이다. $\ker C\cap W=0$이므로 $V=W\oplus\ker C$가 $\sl_2$-불변 분해이다.
+따라서 $W$가 기약인 경우만 보이면 된다. $W=V(0)$이 자명한 representation이면 $V$는 $2$차원이고 $\sl_2$가 $V$ 위에서 nilpotent하게만 작용하므로 ($h,e,f$의 모든 commutator가 자명한 $1$차원 몫과 부분 위에서 $0$이 되어 작용 전체가 strictly upper-triangular), $[e,f]=h$의 trace를 비교하면 $h$의 작용이 $0$이고 작용이 분리되어 $V\cong W\oplus\mathbb{C}$이다. $W=V(n)$이 $n\geq 1$인 기약인 경우, $V$ 위의 Casimir operator $C$를 생각한다. $C$는 자명한 representation $\mathbb{C}=V(0)$ 위에서 $\tfrac{1}{2}\cdot0\cdot2=0$으로, $W=V(n)$ 위에서 $\tfrac{1}{2}n(n+2)\neq 0$으로 작용한다. $C$가 $\sl_2$의 작용과 가환이므로 $\ker C$는 $V$의 subrepresentation이다. Exact sequence에서 $V/W\cong\mathbb{C}$ 위에서 $C$가 $0$이므로 $C(V)\subseteq W$이고, $W$ 위에서 $C$가 가역 스칼라이므로 $C\colon V\rightarrow W$는 전사이며 $\ker C$는 $1$차원이다. $\ker C\cap W=0$이므로 $V=W\oplus\ker C$가 $\sl_2$-불변 분해이다.
 :::
 
 이제 일반적인 short exact sequence로 넘어간다. 보조정리 8의 자명한 몫이라는 제약을 $\Hom$ 공간을 도입하여 제거한다.
@@ -178,7 +178,7 @@ $$A=\{\varphi\in\Hom_{\mathbb{C}}(U,V)\mid \pi\circ\varphi=\lambda\cdot\id_U\ \t
 
 ## Clebsch–Gordan 분해
 
-완전가약성에 의해 두 irreducible representation의 tensor product $V(m)\otimes V(n)$도 irreducible representation들의 직합으로 분해된다. tensor product 위의 $\sl_2$-작용은 Lie algebra의 표준적인 작용, 곧 $x\cdot(u\otimes w)=(x\cdot u)\otimes w+u\otimes(x\cdot w)$로 주어진다. 이 작용에서 $h$의 고윳값은 두 인자의 weight의 합이므로, tensor product의 weight들과 그 multiplicity를 먼저 세는 것으로 분해를 결정할 수 있다.
+완전가약성에 의해 두 irreducible representation의 tensor product $V(m)\otimes V(n)$도 irreducible representation들의 직합으로 분해된다. Tensor product 위의 $\sl_2$-작용은 Lie algebra의 표준적인 작용, 곧 $x\cdot(u\otimes w)=(x\cdot u)\otimes w+u\otimes(x\cdot w)$로 주어진다. 이 작용에서 $h$의 고윳값은 두 인자의 weight의 합이므로, tensor product의 weight들과 그 multiplicity를 먼저 세는 것으로 분해를 결정할 수 있다.
 
 ::: 정리 10 (Clebsch–Gordan)
 정수 $m,n\geq 0$에 대하여 $\sl_2$-representation의 동형
@@ -190,7 +190,7 @@ $$V(m)\otimes V(n)\cong\bigoplus_{k=0}^{\min(m,n)}V(m+n-2k)$$
 ::: 증명
 [정리 9](#thm9)에 의해 좌변은 irreducible representation들의 직합 $\bigoplus_{r}V(r)^{\oplus c_r}$로 분해되며, 분해를 결정하기 위해서는 각 multiplicity $c_r$를 정하면 된다. 이를 weight의 개수를 세어 얻는다.
 
-$V(m)$의 weight은 $m,m-2,\dots,-m$이고 $V(n)$의 weight은 $n,n-2,\dots,-n$이며 모두 multiplicity $1$이다. tensor product 위에서 $h$의 작용이 $h\otimes\id+\id\otimes h$이므로, weight space의 기저 $\{v_i\otimes w_j\}$에 대하여 $v_i\otimes w_j$의 weight은 두 인자의 weight의 합이다. 따라서 $V(m)\otimes V(n)$의 weight $\lambda$의 multiplicity $d_\lambda$는 $a\in\{m,m-2,\dots,-m\}$과 $b\in\{n,n-2,\dots,-n\}$ 중 $a+b=\lambda$인 쌍 $(a,b)$의 개수와 같다.
+$V(m)$의 weight은 $m,m-2,\dots,-m$이고 $V(n)$의 weight은 $n,n-2,\dots,-n$이며 모두 multiplicity $1$이다. Tensor product 위에서 $h$의 작용이 $h\otimes\id+\id\otimes h$이므로, weight space의 기저 $\{v_i\otimes w_j\}$에 대하여 $v_i\otimes w_j$의 weight은 두 인자의 weight의 합이다. 따라서 $V(m)\otimes V(n)$의 weight $\lambda$의 multiplicity $d_\lambda$는 $a\in\{m,m-2,\dots,-m\}$과 $b\in\{n,n-2,\dots,-n\}$ 중 $a+b=\lambda$인 쌍 $(a,b)$의 개수와 같다.
 
 이제 $m\geq n$이라 두어도 일반성을 잃지 않는다. 가능한 weight들은 $m+n$부터 $-(m+n)$까지 $2$씩 줄어드는 값들이며, multiplicity $d_\lambda$는 $\lambda=m+n$에서 $1$로 시작하여 $\lambda$가 $2$씩 줄어들 때마다 $1$씩 늘다가, $\lambda=m-n$에서 최댓값 $n+1$에 이른 뒤 $\lvert\lambda\rvert\leq m-n$인 구간에서 $n+1$로 일정하고, 다시 $\lambda<-(m-n)$에서 $1$씩 줄어 $\lambda=-(m+n)$에서 $1$이 된다. 곧 $d_\lambda$는 $\lambda$에 대해 우함수이며 정점이 평평한 사다리꼴 모양이다.
 

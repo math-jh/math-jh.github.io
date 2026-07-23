@@ -79,7 +79,7 @@ $$a_n + b_n \rightarrow A + B, \qquad a_n b_n \rightarrow AB, \qquad \frac{a_n}{
 :::
 
 ::: 정리 7 (단조수렴정리)
-bounded above인 증가수열은 수렴하며, 그 극한은 $\sup\{a_n \mid n \in \mathbb{N}\}$이다. symmetric하게 bounded below인 감소수열은 하한으로 수렴한다.
+Bounded above인 증가수열은 수렴하며, 그 극한은 $\sup\{a_n \mid n \in \mathbb{N}\}$이다. Symmetric하게 bounded below인 감소수열은 하한으로 수렴한다.
 :::
 
 ::: 증명
@@ -128,6 +128,6 @@ $$2 = \lvert a_n - a_{n+1}\rvert \leq \lvert a_n - L\rvert + \lvert L - a_{n+1}\
 가 되어 $2 < 2$라는 모순이 나온다. 따라서 어떤 $L$도 극한이 될 수 없다.
 :::
 
-이 예시는 boundedness가 수렴의 필요조건이지 충분조건이 아님을 보여 준다. bounded sequence에서 수렴을 끌어내려면 단조성 같은 추가 구조가 필요하다.
+이 예시는 boundedness가 수렴의 필요조건이지 충분조건이 아님을 보여 준다. Bounded sequence에서 수렴을 끌어내려면 단조성 같은 추가 구조가 필요하다.
 
 이 정리는 [\[미적분학\] §수열의 극한](/ko/math/calculus/sequences)에서 계산적으로 다룬 극한들의 존재를 비로소 정당화한다.

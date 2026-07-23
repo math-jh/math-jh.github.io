@@ -14,7 +14,7 @@ weight: 6
 published: false
 ---
 
-Cauchy 적분공식은 ([§Cauchy 적분공식, ⁋정리 1](/ko/math/complex_analysis/cauchy_integral_formula#thm1)) holomorphic function의 내부값을 경계적분 한 번으로 복원해 주었고, 그 적분기호 안에서 미분을 반복할 수 있어 holomorphic function이 무한히 미분가능함을 ([§Cauchy 적분공식, ⁋따름정리 3](/ko/math/complex_analysis/cauchy_integral_formula#cor3)) 끌어냈다. 무한미분가능성이 확보되면 자연스럽게 떠오르는 물음은, holomorphic function이 각 점에서 자신의 Taylor 급수와 실제로 일치하느냐는 것이다. 실변수에서는 무한히 미분가능해도 Taylor 급수가 함수로 수렴하지 않을 수 있어 이 일치는 결코 자동이 아니다 ([\[해석학\] §멱급수와 해석함수, ⁋정의 4](/ko/math/analysis/power_series#def4) 뒤에 든 $e^{-1/x^2}$의 예). 그러나 복소변수에서는 사정이 완전히 다르다. Cauchy 적분공식의 kernel $1/(w-z)$를 기하급수로 펼치기만 하면 holomorphic function이 언제나 자신의 Taylor 급수로 전개됨이 곧장 따라 나오며, 그 수렴반지름은 중심에서 가장 가까운 singular point까지의 거리 이상으로 보장된다. 역으로 수렴하는 멱급수의 합은 holomorphic이므로 ([§복소정칙함수, ⁋정리 9](/ko/math/complex_analysis/holomorphic_functions#thm9)), holomorphicity와 한 점 근방에서의 멱급수 전개 가능성은 서로 완전히 같은 조건이 된다. holomorphic function을 가리키는 *해석함수<sub>analytic function</sub>*라는 또 하나의 이름은 바로 이 동치에서 비롯한다.
+Cauchy 적분공식은 ([§Cauchy 적분공식, ⁋정리 1](/ko/math/complex_analysis/cauchy_integral_formula#thm1)) holomorphic function의 내부값을 경계적분 한 번으로 복원해 주었고, 그 적분기호 안에서 미분을 반복할 수 있어 holomorphic function이 무한히 미분가능함을 ([§Cauchy 적분공식, ⁋따름정리 3](/ko/math/complex_analysis/cauchy_integral_formula#cor3)) 끌어냈다. 무한미분가능성이 확보되면 자연스럽게 떠오르는 물음은, holomorphic function이 각 점에서 자신의 Taylor 급수와 실제로 일치하느냐는 것이다. 실변수에서는 무한히 미분가능해도 Taylor 급수가 함수로 수렴하지 않을 수 있어 이 일치는 결코 자동이 아니다 ([\[해석학\] §멱급수와 해석함수, ⁋정의 4](/ko/math/analysis/power_series#def4) 뒤에 든 $e^{-1/x^2}$의 예). 그러나 복소변수에서는 사정이 완전히 다르다. Cauchy 적분공식의 kernel $1/(w-z)$를 기하급수로 펼치기만 하면 holomorphic function이 언제나 자신의 Taylor 급수로 전개됨이 곧장 따라 나오며, 그 수렴반지름은 중심에서 가장 가까운 singular point까지의 거리 이상으로 보장된다. 역으로 수렴하는 멱급수의 합은 holomorphic이므로 ([§복소정칙함수, ⁋정리 9](/ko/math/complex_analysis/holomorphic_functions#thm9)), holomorphicity와 한 점 근방에서의 멱급수 전개 가능성은 서로 완전히 같은 조건이 된다. Holomorphic function을 가리키는 *해석함수<sub>analytic function</sub>*라는 또 하나의 이름은 바로 이 동치에서 비롯한다.
 
 ## Holomorphic function의 Taylor 전개
 
@@ -33,7 +33,7 @@ $$f(z) = \sum_{n=0}^{\infty} \frac{f^{(n)}(z_0)}{n!}\,(z - z_0)^n$$
 :::
 
 ::: 증명
-$z \in D(z_0, R)$을 고정하고, $\lvert z - z_0\rvert < r < R$이 되도록 반지름 $r$을 잡는다. closed 원판 $\overline{D(z_0, r)}$이 holomorphic인 영역에 들어 있으므로 Cauchy 적분공식 ([§Cauchy 적분공식, ⁋정리 1](/ko/math/complex_analysis/cauchy_integral_formula#thm1)) 에 의해
+$z \in D(z_0, R)$을 고정하고, $\lvert z - z_0\rvert < r < R$이 되도록 반지름 $r$을 잡는다. Closed 원판 $\overline{D(z_0, r)}$이 holomorphic인 영역에 들어 있으므로 Cauchy 적분공식 ([§Cauchy 적분공식, ⁋정리 1](/ko/math/complex_analysis/cauchy_integral_formula#thm1)) 에 의해
 
 $$f(z) = \frac{1}{2\pi i}\oint_{\lvert w - z_0\rvert = r} \frac{f(w)}{w - z}\,dw$$
 
@@ -177,7 +177,7 @@ $$f(z) = z^2(e^z - 1) = z^3\left(1 + \frac{z}{2!} + \frac{z^2}{3!} + \cdots\righ
 
 ## Cauchy 곱
 
-두 holomorphic function의 곱도 holomorphic이므로 다시 멱급수로 전개되며, 그 계수는 두 인수의 계수로부터 유한 합으로 표현된다. 이것이 멱급수의 Cauchy 곱으로, 두 급수의 항을 형식적으로 모두 곱한 뒤 같은 degree끼리 묶어 얻는다. holomorphic function의 곱셈을 계수 수준에서 명시적으로 수행하게 해 주어, 전개를 도함수 계산 없이 대수적으로 결합하는 데 쓰인다.
+두 holomorphic function의 곱도 holomorphic이므로 다시 멱급수로 전개되며, 그 계수는 두 인수의 계수로부터 유한 합으로 표현된다. 이것이 멱급수의 Cauchy 곱으로, 두 급수의 항을 형식적으로 모두 곱한 뒤 같은 degree끼리 묶어 얻는다. Holomorphic function의 곱셈을 계수 수준에서 명시적으로 수행하게 해 주어, 전개를 도함수 계산 없이 대수적으로 결합하는 데 쓰인다.
 
 ::: 명제 8 (Cauchy 곱)
 두 멱급수 $f(z) = \sum_{n=0}^{\infty} a_n (z - z_0)^n$과 $g(z) = \sum_{n=0}^{\infty} b_n (z - z_0)^n$이 각각 수렴반지름 $\rho_f, \rho_g > 0$을 가진다고 하자. 그러면 곱 $fg$은 $\rho = \min(\rho_f, \rho_g)$ 이상의 수렴반지름을 가지는 멱급수

@@ -59,7 +59,7 @@ $$g(f(x)) - g(f(a)) = \psi(f(x)) \bigl(f(x) - f(a)\bigr) = \psi(f(x)) \varphi(x)
 이다. $f$가 $a$에서 연속이고 $\psi$가 $b = f(a)$에서 연속이므로 $x \mapsto \psi(f(x))\varphi(x)$는 $a$에서 연속이고, [명제 1](#prop1)에 의해 $g\circ f$가 $a$에서 미분가능하며 그 derivative는 $\psi(f(a))\varphi(a) = g'(b)f'(a)$이다.
 :::
 
-difference quotient를 직접 다룰 때 생기던 "$f(x) - f(a) = 0$일 때 0으로 나누는" 문제가 이 증명에는 전혀 나타나지 않는다. 같은 방식으로 합·곱·quotient의 미분법도 엄밀하게 재현된다 ([\[미적분학\] §미분법](/ko/math/calculus/differentiation_rules)).
+Difference quotient를 직접 다룰 때 생기던 "$f(x) - f(a) = 0$일 때 0으로 나누는" 문제가 이 증명에는 전혀 나타나지 않는다. 같은 방식으로 합·곱·quotient의 미분법도 엄밀하게 재현된다 ([\[미적분학\] §미분법](/ko/math/calculus/differentiation_rules)).
 
 ## 사칙연산의 미분법
 

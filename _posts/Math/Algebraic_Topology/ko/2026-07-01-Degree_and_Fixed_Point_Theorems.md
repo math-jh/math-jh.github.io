@@ -61,7 +61,7 @@ $$f_\ast(\alpha)=d\cdot\alpha\qquad(\alpha\in H_n(S^n))$$
 
 ## 차수의 기본 성질
 
-degree가 유용한 불변량이 되는 것은 그것이 함수의 연속적 변형에 둔감하면서도 합성과는 잘 맞물리기 때문이다. 다음 명제는 degree의 대수적 성질들을 모은 것이다.
+Degree가 유용한 불변량이 되는 것은 그것이 함수의 연속적 변형에 둔감하면서도 합성과는 잘 맞물리기 때문이다. 다음 명제는 degree의 대수적 성질들을 모은 것이다.
 
 ::: 명제 3
 $n\geq 1$에 대한 연속함수들 $f,g:S^n\rightarrow S^n$에 대하여 다음이 성립한다.
@@ -113,7 +113,7 @@ $$\deg a=(\deg r)^{n+1}=(-1)^{n+1}$$
 
 ## No-retraction 보조정리와 Brouwer 고정점 정리
 
-homology가 fixed point 문제에 개입하는 첫 통로는 원판을 그 boundary로 밀어내는 연속함수, 곧 retraction이 존재할 수 없다는 사실이다. $(n+1)$-공 $D^{n+1}=\{x\in\mathbb{R}^{n+1}\mid\lvert x\rvert\leq 1\}$의 boundary가 $S^n$임을 상기하자. Retraction이란 이 포함관계를 되돌리는 morphism이다.
+Homology가 fixed point 문제에 개입하는 첫 통로는 원판을 그 boundary로 밀어내는 연속함수, 곧 retraction이 존재할 수 없다는 사실이다. $(n+1)$-공 $D^{n+1}=\{x\in\mathbb{R}^{n+1}\mid\lvert x\rvert\leq 1\}$의 boundary가 $S^n$임을 상기하자. Retraction이란 이 포함관계를 되돌리는 morphism이다.
 
 ::: 보조정리 6 (No-retraction)
 $n\geq 0$에 대하여, 포함사상 $\iota:S^n\hookrightarrow D^{n+1}$의 retraction, 곧 $r\circ\iota=\operatorname{id}_{S^n}$을 만족하는 연속함수 $r:D^{n+1}\rightarrow S^n$은 존재하지 않는다.
@@ -149,7 +149,7 @@ Brouwer 정리는 $D^{n+1}$이 convex하고 콤팩트하다는 위상적 성질�
 $S^n$ 위에 어디서도 $0$이 아닌 연속 tangent vector field가 존재할 필요충분조건은 $n$이 홀수인 것이다.
 :::
 ::: 증명
-먼저 그러한 벡터장 $v$가 존재한다고 가정하자. 각 점에서 $v(x)\neq 0$이므로 $v(x)/\lvert v(x)\rvert$로 normalize하여 처음부터 $\lvert v(x)\rvert=1$이라 두어도 무방하다. tangent vector field라는 조건은 모든 $x$에 대하여 $x\cdot v(x)=0$을 뜻한다. 이제 함수
+먼저 그러한 벡터장 $v$가 존재한다고 가정하자. 각 점에서 $v(x)\neq 0$이므로 $v(x)/\lvert v(x)\rvert$로 normalize하여 처음부터 $\lvert v(x)\rvert=1$이라 두어도 무방하다. Tangent vector field라는 조건은 모든 $x$에 대하여 $x\cdot v(x)=0$을 뜻한다. 이제 함수
 
 $$H:S^n\times[0,1]\rightarrow S^n;\qquad H(x,t)=(\cos\pi t)x+(\sin\pi t)v(x)$$
 
@@ -211,7 +211,7 @@ $$L(g)=\sum_i(-1)^i\operatorname{tr}(g_\ast:H_i\rightarrow H_i)=\sum_i(-1)^i\ope
 을 얻는다. 그런데 $g$는 $f$와 homotopic하므로 $L$의 homotopy 불변성에 의하여 $L(f)=L(g)=0$이다. 이로써 대우가 증명된다.
 :::
 
-증명에서 두 개의 trace, 곧 눈에 보이지 않는 homology 준위의 trace와 조합적으로 계산 가능한 chain 준위의 trace를 이어붙이는 Hopf trace formula가 결정적 역할을 한다. fixed point의 부재를 chain 준위의 trace가 $0$이라는 조합적 진술로 번역하고, 그것을 다시 homology 준위의 정보인 $L(f)$로 되돌리는 것이 논증의 전부이다. 이제 이 정리로부터 Brouwer 정리가 특수한 경우로 따라 나옴을 확인한다.
+증명에서 두 개의 trace, 곧 눈에 보이지 않는 homology 준위의 trace와 조합적으로 계산 가능한 chain 준위의 trace를 이어붙이는 Hopf trace formula가 결정적 역할을 한다. Fixed point의 부재를 chain 준위의 trace가 $0$이라는 조합적 진술로 번역하고, 그것을 다시 homology 준위의 정보인 $L(f)$로 되돌리는 것이 논증의 전부이다. 이제 이 정리로부터 Brouwer 정리가 특수한 경우로 따라 나옴을 확인한다.
 
 ::: 따름정리 11
 $X$가 삼각화가능한 콤팩트 공간이면서 contractible하면, 임의의 연속함수 $f:X\rightarrow X$는 fixed point를 갖는다. 특히 [정리 7](#thm7)의 Brouwer 정리가 성립한다.
@@ -227,7 +227,7 @@ $$L(f)=(-1)^0\cdot 1=1\neq 0$$
 ## 예시
 
 ::: 예시 12
-degree와 Lefschetz 수의 상호작용을 구면 위에서 구체적으로 살펴본다.
+Degree와 Lefschetz 수의 상호작용을 구면 위에서 구체적으로 살펴본다.
 
 1. **degree의 실현.** $S^1$을 복소평면의 단위원 $\{z\in\mathbb{C}\mid\lvert z\rvert=1\}$으로 보면, 각 정수 $k$에 대하여 $f_k(z)=z^k$은 연속 자기사상이다. $H_1(S^1)\cong\mathbb{Z}$의 generator를 원을 한 바퀴 도는 loop로 볼 때 $f_k$은 이를 $k$바퀴 도는 loop로 보내므로 $\deg f_k=k$이다. 곧 $S^1$의 자기사상은 모든 정수 degree를 실현한다. 더 높은 차원에서도, $S^{n-1}$의 degree $k$ morphism을 $S^n$으로 매다는 suspension을 취하면 degree가 보존되어 ($\operatorname{id}$과 반사사상의 관계가 [명제 4](#prop4)에서 한 차원씩 옮겨간 것과 같은 이유로) 모든 정수 degree의 $S^n$ 자기사상을 얻는다.
 
@@ -242,7 +242,7 @@ degree와 Lefschetz 수의 상호작용을 구면 위에서 구체적으로 살�
 4. **역방향의 결론.** 위 관계를 뒤집으면, $\deg f\neq(-1)^{n+1}$인 $S^n$ 자기사상은 반드시 fixed point를 가진다. 예컨대 $n=2$인 경우 $L(f)=1+\deg f$이므로, $S^2$의 자기사상 중 degree가 $-1$이 아닌 것은 모두 fixed point를 가진다. 특히 degree $0$인 상수함수나 degree $1$인 항등사상은 물론이고, 앞서 만든 degree $k\neq-1$의 어떤 morphism도 fixed point를 피할 수 없다.
 :::
 
-이 예시들은 하나의 정수 불변량인 degree가 구면 자기사상의 위상적 행동을 얼마나 촘촘히 통제하는지를 보여준다. degree는 morphism이 실현할 수 있는 값 전체를 훑고, Lefschetz 수는 그 degree를 fixed point의 존재 여부와 직접 연결한다. 두 불변량이 맞물려, 예컨대 짝수 차원 구에서는 antipodal morphism만이 유일하게 degree를 통해 fixed point를 피할 자격을 얻는다는 섬세한 결론에 이른다.
+이 예시들은 하나의 정수 불변량인 degree가 구면 자기사상의 위상적 행동을 얼마나 촘촘히 통제하는지를 보여준다. Degree는 morphism이 실현할 수 있는 값 전체를 훑고, Lefschetz 수는 그 degree를 fixed point의 존재 여부와 직접 연결한다. 두 불변량이 맞물려, 예컨대 짝수 차원 구에서는 antipodal morphism만이 유일하게 degree를 통해 fixed point를 피할 자격을 얻는다는 섬세한 결론에 이른다.
 
 --- 
 

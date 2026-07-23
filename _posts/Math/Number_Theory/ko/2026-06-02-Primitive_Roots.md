@@ -22,7 +22,7 @@ published: false
 $\gcd(a, n) = 1$일 때, $a^k \equiv 1 \pmod n$을 만족하는 가장 작은 양의 정수 $k$를 $a$의 법 $n$에 대한 *order<sub>위수</sub>*라 하고 $\ord_n(a)$로 적는다.
 :::
 
-오일러 정리에 의해 order는 항상 존재하며 $\varphi(n)$ 이하이다. order는 다음의 나눗셈 성질로 통제된다.
+오일러 정리에 의해 order는 항상 존재하며 $\varphi(n)$ 이하이다. Order는 다음의 나눗셈 성질로 통제된다.
 
 ::: 명제 2
 $a^k \equiv 1 \pmod n$인 것은 $\ord_n(a) \mid k$인 것과 동치이다. 특히 $\ord_n(a) \mid \varphi(n)$이다.
@@ -45,7 +45,7 @@ $p$가 소수이면 법 $p$의 원시근이 존재한다. 즉 $\mathbb{Z}/p\math
 :::
 
 ::: 증명
-order $d$인 원소의 개수를 $\psi(d)$라 하자. 각 order는 $p - 1$의 약수이므로 $\sum_{d \mid p-1}\psi(d) = p - 1$이다. order가 $d$인 원소가 하나라도 있으면, 그것이 생성하는 $d$개의 원소 $1, a, \ldots, a^{d-1}$이 모두 $x^d \equiv 1 \pmod p$의 해이다. 이 합동식은 field $\mathbb{Z}/p\mathbb{Z}$에서 degree $d$의 다항식이므로 해가 많아야 $d$개이고, 따라서 그 $d$개가 해 전부이다. 그중 order가 정확히 $d$인 것은 $\varphi(d)$개이므로, $\psi(d)$는 $0$ 또는 $\varphi(d)$이다. 한편 $\sum_{d\mid p-1}\varphi(d) = p - 1$이므로 ([§산술적 함수와 뫼비우스 반전, ⁋예시 7](/ko/math/number_theory/arithmetic_functions#ex7)), $\sum_d \psi(d) = \sum_d \varphi(d)$에서 모든 약수 $d$에 대해 $\psi(d) = \varphi(d)$이어야 한다. 특히 $\psi(p-1) = \varphi(p-1) \geq 1$이므로 order $p - 1$인 원소, 곧 원시근이 존재한다.
+Order $d$인 원소의 개수를 $\psi(d)$라 하자. 각 order는 $p - 1$의 약수이므로 $\sum_{d \mid p-1}\psi(d) = p - 1$이다. Order가 $d$인 원소가 하나라도 있으면, 그것이 생성하는 $d$개의 원소 $1, a, \ldots, a^{d-1}$이 모두 $x^d \equiv 1 \pmod p$의 해이다. 이 합동식은 field $\mathbb{Z}/p\mathbb{Z}$에서 degree $d$의 다항식이므로 해가 많아야 $d$개이고, 따라서 그 $d$개가 해 전부이다. 그중 order가 정확히 $d$인 것은 $\varphi(d)$개이므로, $\psi(d)$는 $0$ 또는 $\varphi(d)$이다. 한편 $\sum_{d\mid p-1}\varphi(d) = p - 1$이므로 ([§산술적 함수와 뫼비우스 반전, ⁋예시 7](/ko/math/number_theory/arithmetic_functions#ex7)), $\sum_d \psi(d) = \sum_d \varphi(d)$에서 모든 약수 $d$에 대해 $\psi(d) = \varphi(d)$이어야 한다. 특히 $\psi(p-1) = \varphi(p-1) \geq 1$이므로 order $p - 1$인 원소, 곧 원시근이 존재한다.
 :::
 
 ::: 참고 5
@@ -54,7 +54,7 @@ order $d$인 원소의 개수를 $\psi(d)$라 하자. 각 order는 $p - 1$의 �
 
 ## 위수의 성질과 계산
 
-order는 거듭제곱과 곱에 대해 규칙적으로 변한다. 우선 한 원소를 거듭제곱했을 때 order가 어떻게 바뀌는지를 본다. 이 공식은 원시근으로부터 임의의 order를 가진 원소를 만들어 내는 핵심 도구이다.
+Order는 거듭제곱과 곱에 대해 규칙적으로 변한다. 우선 한 원소를 거듭제곱했을 때 order가 어떻게 바뀌는지를 본다. 이 공식은 원시근으로부터 임의의 order를 가진 원소를 만들어 내는 핵심 도구이다.
 
 ::: 명제 6
 $\gcd(a, n) = 1$이고 $d = \ord_n(a)$이면, 임의의 양의 정수 $k$에 대해
@@ -86,7 +86,7 @@ d \mid km &\iff g d' \mid g k' m \\
 원시근 $g$를 고정하면 모든 reduced residue class는 $g^k$ ($1 \leq k \leq \varphi(n)$) 꼴로 유일하게 적힌다. 명제 6에 의해 $g^k$가 원시근, 곧 $\ord_n(g^k) = \varphi(n)$인 것은 $\gcd(k, \varphi(n)) = 1$인 것과 동치이다. $1 \leq k \leq \varphi(n)$ 중 $\varphi(n)$과 서로소인 $k$의 개수가 바로 $\varphi(\varphi(n))$이므로, 원시근은 $\varphi(\varphi(n))$개이다.
 :::
 
-명제 6은 또한 정리 4의 증명을 거꾸로 읽는 방법을 준다. order가 $d$인 원소가 하나 있으면, 그것을 $\gcd(k,d)=1$인 $k$로 거듭제곱한 $\varphi(d)$개가 정확히 order $d$를 가지므로, order $d$인 원소의 개수 $\psi(d)$는 $0$이거나 $\varphi(d)$이다.
+명제 6은 또한 정리 4의 증명을 거꾸로 읽는 방법을 준다. Order가 $d$인 원소가 하나 있으면, 그것을 $\gcd(k,d)=1$인 $k$로 거듭제곱한 $\varphi(d)$개가 정확히 order $d$를 가지므로, order $d$인 원소의 개수 $\psi(d)$는 $0$이거나 $\varphi(d)$이다.
 
 ## 예시와 계산
 
@@ -142,14 +142,14 @@ $$x \equiv 3^1 \equiv 3, \qquad x \equiv 3^4 \equiv 4 \pmod 7$$
 마지막으로 합성수 법에서 곱셈군이 순환하지 않는 경우를 참고 5의 법 $8$에서 구체적으로 본다.
 
 ::: 예시 11 (법 8에는 원시근이 없음)
-$\varphi(8) = 4$이므로 원시근이 있으려면 order $4$인 원소가 있어야 한다. reduced residue class $1, 3, 5, 7$의 제곱을 계산하면
+$\varphi(8) = 4$이므로 원시근이 있으려면 order $4$인 원소가 있어야 한다. Reduced residue class $1, 3, 5, 7$의 제곱을 계산하면
 
 $$\begin{aligned}
 1^2 &\equiv 1, & 3^2 &= 9 \equiv 1, \\
 5^2 &= 25 \equiv 1, & 7^2 &= 49 \equiv 1 \pmod 8
 \end{aligned}$$
 
-이어서 $1$을 뺀 세 원소가 모두 order $2$이다. order $4$인 원소가 없으므로 원시근이 존재하지 않으며, 곱셈군은 순환군이 아니라 $\mathbb{Z}/2 \times \mathbb{Z}/2$ 구조를 가진다. 이는 참고 5의 예외 목록 $n = 1, 2, 4, p^k, 2p^k$에 $8$이 들지 않음과 부합한다.
+이어서 $1$을 뺀 세 원소가 모두 order $2$이다. Order $4$인 원소가 없으므로 원시근이 존재하지 않으며, 곱셈군은 순환군이 아니라 $\mathbb{Z}/2 \times \mathbb{Z}/2$ 구조를 가진다. 이는 참고 5의 예외 목록 $n = 1, 2, 4, p^k, 2p^k$에 $8$이 들지 않음과 부합한다.
 :::
 
 원시근 $g$가 있으면 모든 reduced residue class가 $g$의 거듭제곱으로 적히므로, 곱셈이 지수의 덧셈으로 바뀌어 — 마치 로그처럼 — 계산이 단순해진다.

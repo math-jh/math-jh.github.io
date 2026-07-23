@@ -36,7 +36,7 @@ $$\mathbf{N} = \mathbf{r}_u \times \mathbf{r}_v$$
 곡면을 매개변수 영역의 작은 직사각형들로 쪼개면, 각 조각은 접평면 위의 작은 평행사변형, 더 구체적으로는 $\mathbf{r}_u\Delta u$와 $\mathbf{r}_v\Delta v$가 만드는 평행사변형으로 근사된다. 이 넓이가 $\lvert \mathbf{r}_u \times \mathbf{r}_v\rvert\Delta u\Delta v$이므로, 이를 모아 극한을 취한 것이 곡면넓이이다.
 
 ::: 정의 2
-regular 매개곡면 $\mathbf{r}\colon D \rightarrow \mathbb{R}^3$의 *곡면넓이<sub>surface area</sub>*는
+Regular 매개곡면 $\mathbf{r}\colon D \rightarrow \mathbb{R}^3$의 *곡면넓이<sub>surface area</sub>*는
 
 $$\iint_D \lvert \mathbf{r}_u \times \mathbf{r}_v\rvert \mathop{du}\mathop{dv}$$
 

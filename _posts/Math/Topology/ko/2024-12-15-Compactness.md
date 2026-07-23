@@ -153,7 +153,7 @@ $X^+$의 임의의 open covering $(O_i)_{i\in I}$이 주어졌다 하자. $\inft
 [정리 10](#thm10)과 [정리 11](#thm11)를 합치면, $X$가 LCH space일 때 $X^+$는 compact Hausdorff space가 되고 [명제 9](#prop9)에 의해 $X$는 그 안에 열린 부분공간으로 매장된다. 특히 $X$가 compact가 아니라면 이 embedding은 조밀하다. 이것이 Alexandroff 정리의 존재 부분, 곧 임의의 LCH space가 어떤 compact Hausdorff space에 조밀한 열린 부분공간으로 매장된다는 사실이다. 남은 것은 이러한 옹골화가 본질적으로 유일하다는 사실이며, 이는 다음의 보편성으로 정식화된다.
 
 ::: 정리 12
-LCH space $X$가 주어졌다 하자. compact Hausdorff space $Y$와 점 $p\in Y$, 그리고 homeomorphism $\varphi:X\rightarrow Y\setminus\{p\}$이 주어졌다 하면, 유일한 homeomorphism $h:X^+\rightarrow Y$가 존재하여 $X$ 위에서 $h=\varphi$이고 $h(\infty)=p$이다.
+LCH space $X$가 주어졌다 하자. Compact Hausdorff space $Y$와 점 $p\in Y$, 그리고 homeomorphism $\varphi:X\rightarrow Y\setminus\{p\}$이 주어졌다 하면, 유일한 homeomorphism $h:X^+\rightarrow Y$가 존재하여 $X$ 위에서 $h=\varphi$이고 $h(\infty)=p$이다.
 :::
 ::: 증명
 $\varphi$를 통해 $X$와 $Y\setminus\{p\}$을 동일시하고, $X$를 $Y$의 부분집합으로 본다. $Y$가 Hausdorff이므로 $\{p\}$는 $Y$의 닫힌집합이고, 따라서 $X=Y\setminus\{p\}$는 $Y$의 열린 부분공간이다. 즉 $X$의 위상은 $Y$로부터 유도된 부분공간 위상과 일치한다.

@@ -21,7 +21,7 @@ Lie group의 국소 구조는 그 Lie algebra에 담겨 있으며 ([§리 군, �
 
 ## Subalgebra, ideal, quotient
 
-Lie algebra의 구조를 다루기 위해 우선 부분대상과 quotient object를 정비한다. ring의 subring과 ideal이 그러하듯, Lie algebra에서도 단순히 bracket에 대해 닫힌 부분공간과 더 강한 흡수 조건을 만족하는 부분공간을 구별한다.
+Lie algebra의 구조를 다루기 위해 우선 부분대상과 quotient object를 정비한다. Ring의 subring과 ideal이 그러하듯, Lie algebra에서도 단순히 bracket에 대해 닫힌 부분공간과 더 강한 흡수 조건을 만족하는 부분공간을 구별한다.
 
 ::: 정의 1
 Lie algebra $\mathfrak{g}$의 부분공간 $\mathfrak{h}\subseteq\mathfrak{g}$가 *Lie subalgebra<sub>부분대수</sub>*라는 것은 임의의 $x,y\in\mathfrak{h}$에 대하여 $[x,y]\in\mathfrak{h}$가 성립하는 것이다.
@@ -148,7 +148,7 @@ Lie algebra $\mathfrak{g}$가 *nilpotent*라는 것은 어떤 $n\geq 1$에 대�
 $\mathfrak{gl}(n;k)$의 두 subalgebra를 살펴본다.
 
 1. 상삼각행렬 전체로 이루어진 Lie algebra $\mathfrak{b}=\mathfrak{t}(n;k)$는 solvable이다. 두 상삼각행렬의 commutator는 대각성분이 모두 $0$인 상삼각행렬, 곧 strictly 상삼각행렬이 되므로 $[\mathfrak{b},\mathfrak{b}]\subseteq\mathfrak{n}$이고, 여기에서 $\mathfrak{n}$은 strictly 상삼각행렬들의 집합이다. 더 나아가 strictly 상삼각행렬들끼리의 곱은 윗쪽으로 한 칸 더 밀리므로, derived series가 유한 단계 안에 $0$이 됨을 확인할 수 있다.
-2. strictly 상삼각행렬 전체로 이루어진 $\mathfrak{n}=\mathfrak{n}(n;k)$는 nilpotent이다. $\mathfrak{n}$의 원소를 곱할 때마다 $0$이 아닌 성분이 대각선에서 한 칸씩 멀어지므로, $\mathfrak{n}^{n}=0$이다.
+2. Strictly 상삼각행렬 전체로 이루어진 $\mathfrak{n}=\mathfrak{n}(n;k)$는 nilpotent이다. $\mathfrak{n}$의 원소를 곱할 때마다 $0$이 아닌 성분이 대각선에서 한 칸씩 멀어지므로, $\mathfrak{n}^{n}=0$이다.
 3. 임의의 abelian Lie algebra는 $[\mathfrak{g},\mathfrak{g}]=0$이므로 $\mathfrak{g}^{2}=0$, 곧 nilpotent이다.
 
 특히 $n\geq 2$이면 $\mathfrak{b}$는 solvable이지만 nilpotent가 아니다. 가령 $n=2$에서 $h=\begin{pmatrix}1&0\\0&0\end{pmatrix}$, $e=\begin{pmatrix}0&1\\0&0\end{pmatrix}$에 대하여 $[h,e]=e$이므로 $(\ad h)^m e=e$가 모든 $m$에 대해 성립하여 $\mathfrak{b}^{n}$이 결코 $0$이 되지 않는다.
@@ -187,9 +187,9 @@ Lie algebra $\mathfrak{g}$에 대하여 다음이 성립한다.
 
 $$\phi(\mathfrak{g}^{(n+1)})=\phi([\mathfrak{g}^{(n)},\mathfrak{g}^{(n)}])=[\phi(\mathfrak{g}^{(n)}),\phi(\mathfrak{g}^{(n)})]=[\mathfrak{h}^{(n)},\mathfrak{h}^{(n)}]=\mathfrak{h}^{(n+1)}$$
 
-이다. $\mathfrak{g}^{(n)}=0$이면 $\mathfrak{h}^{(n)}=\phi(0)=0$이다. quotient의 경우는 $\phi=\pi$인 특수한 경우이다.
+이다. $\mathfrak{g}^{(n)}=0$이면 $\mathfrak{h}^{(n)}=\phi(0)=0$이다. Quotient의 경우는 $\phi=\pi$인 특수한 경우이다.
 
-(3) $\mathfrak{g}/\mathfrak{a}$가 solvable이므로 어떤 $m$에 대하여 $(\mathfrak{g}/\mathfrak{a})^{(m)}=0$이다. quotient map $\pi:\mathfrak{g}\rightarrow\mathfrak{g}/\mathfrak{a}$에 대하여 $\pi(\mathfrak{g}^{(m)})=(\mathfrak{g}/\mathfrak{a})^{(m)}=0$이므로 $\mathfrak{g}^{(m)}\subseteq\ker\pi=\mathfrak{a}$이다. 한편 $\mathfrak{a}$가 solvable이므로 어떤 $l$에 대하여 $\mathfrak{a}^{(l)}=0$이다. Derived series는 부분공간을 포함관계에 따라 보내므로 $\mathfrak{g}^{(m)}\subseteq\mathfrak{a}$에서 $\mathfrak{g}^{(m+l)}=(\mathfrak{g}^{(m)})^{(l)}\subseteq\mathfrak{a}^{(l)}=0$을 얻는다. 여기에서 $(\mathfrak{g}^{(m)})^{(l)}$은 $\mathfrak{g}^{(m)}$을 출발점으로 한 derived series의 $l$번째 항이며, 일반적으로 $\mathfrak{g}^{(m+l)}=(\mathfrak{g}^{(m)})^{(l)}$임은 정의에서 직접 따라온다. 따라서 $\mathfrak{g}$는 solvable이다.
+(3) $\mathfrak{g}/\mathfrak{a}$가 solvable이므로 어떤 $m$에 대하여 $(\mathfrak{g}/\mathfrak{a})^{(m)}=0$이다. Quotient map $\pi:\mathfrak{g}\rightarrow\mathfrak{g}/\mathfrak{a}$에 대하여 $\pi(\mathfrak{g}^{(m)})=(\mathfrak{g}/\mathfrak{a})^{(m)}=0$이므로 $\mathfrak{g}^{(m)}\subseteq\ker\pi=\mathfrak{a}$이다. 한편 $\mathfrak{a}$가 solvable이므로 어떤 $l$에 대하여 $\mathfrak{a}^{(l)}=0$이다. Derived series는 부분공간을 포함관계에 따라 보내므로 $\mathfrak{g}^{(m)}\subseteq\mathfrak{a}$에서 $\mathfrak{g}^{(m+l)}=(\mathfrak{g}^{(m)})^{(l)}\subseteq\mathfrak{a}^{(l)}=0$을 얻는다. 여기에서 $(\mathfrak{g}^{(m)})^{(l)}$은 $\mathfrak{g}^{(m)}$을 출발점으로 한 derived series의 $l$번째 항이며, 일반적으로 $\mathfrak{g}^{(m+l)}=(\mathfrak{g}^{(m)})^{(l)}$임은 정의에서 직접 따라온다. 따라서 $\mathfrak{g}$는 solvable이다.
 :::
 
 (3)의 직접적인 귀결로, 두 solvable ideal의 합도 solvable이다. 실제로 $\mathfrak{a},\mathfrak{b}$가 solvable ideal이면 $\mathfrak{a}+\mathfrak{b}$도 ideal이고, second isomorphism theorem에 의한 동형
@@ -202,7 +202,7 @@ $$(\mathfrak{a}+\mathfrak{b})/\mathfrak{b}\cong\mathfrak{a}/(\mathfrak{a}\cap\ma
 유한차원 Lie algebra $\mathfrak{g}$의 *radical<sub>근기</sub>* $\rad\mathfrak{g}$은 $\mathfrak{g}$의 solvable ideal 가운데 포함관계에 대하여 가장 큰 것이다.
 :::
 
-이러한 가장 큰 solvable ideal이 유일하게 존재함을 확인해 둔다. $\mathfrak{g}$가 유한차원이므로, 차원이 최대인 solvable ideal $\mathfrak{r}$을 택할 수 있다. 만일 $\mathfrak{a}$가 임의의 solvable ideal이면 위에서 본 대로 $\mathfrak{r}+\mathfrak{a}$도 solvable ideal이고 $\mathfrak{r}\subseteq\mathfrak{r}+\mathfrak{a}$이다. $\mathfrak{r}$의 차원이 최대이므로 $\mathfrak{r}+\mathfrak{a}=\mathfrak{r}$, 곧 $\mathfrak{a}\subseteq\mathfrak{r}$이다. 따라서 $\mathfrak{r}$은 모든 solvable ideal을 포함하는 유일한 가장 큰 solvable ideal이다. quotient $\mathfrak{g}/\rad\mathfrak{g}$은 자명하지 않은 solvable ideal을 갖지 않으며, 이러한 Lie algebra를 *semisimple*이라 부른다. 임의의 유한차원 Lie algebra는 이렇게 solvable 부분과 semisimple 부분으로 나뉘어 분석된다.
+이러한 가장 큰 solvable ideal이 유일하게 존재함을 확인해 둔다. $\mathfrak{g}$가 유한차원이므로, 차원이 최대인 solvable ideal $\mathfrak{r}$을 택할 수 있다. 만일 $\mathfrak{a}$가 임의의 solvable ideal이면 위에서 본 대로 $\mathfrak{r}+\mathfrak{a}$도 solvable ideal이고 $\mathfrak{r}\subseteq\mathfrak{r}+\mathfrak{a}$이다. $\mathfrak{r}$의 차원이 최대이므로 $\mathfrak{r}+\mathfrak{a}=\mathfrak{r}$, 곧 $\mathfrak{a}\subseteq\mathfrak{r}$이다. 따라서 $\mathfrak{r}$은 모든 solvable ideal을 포함하는 유일한 가장 큰 solvable ideal이다. Quotient $\mathfrak{g}/\rad\mathfrak{g}$은 자명하지 않은 solvable ideal을 갖지 않으며, 이러한 Lie algebra를 *semisimple*이라 부른다. 임의의 유한차원 Lie algebra는 이렇게 solvable 부분과 semisimple 부분으로 나뉘어 분석된다.
 
 ## Engel의 정리
 
@@ -237,11 +237,11 @@ $$0=V_0\subsetneq V_1\subsetneq\cdots\subsetneq V_n=V,\qquad \dim V_i=i$$
 이 존재하여 모든 $x\in\mathfrak{g}$에 대하여 $xV_i\subseteq V_{i-1}$이다.
 :::
 ::: 증명
-$\dim V=n$에 대한 귀납법으로 위 flag를 구성한다. $n=0$이면 자명하다. $n\geq 1$일 때, [보조정리 16](#lem16)에 의해 $0\neq v_1\in V$가 존재하여 모든 $x\in\mathfrak{g}$에 대하여 $xv_1=0$이다. $V_1=kv_1$로 두면 $\mathfrak{g}V_1=0\subseteq V_0$이다. quotient space $\bar V=V/V_1$ 위에서 각 $x\in\mathfrak{g}$는 $\bar x:\bar V\rightarrow\bar V$를 유도하며, $x$가 nilpotent endomorphism이므로 $\bar x$도 그러하다. 따라서 $\bar{\mathfrak{g}}=\{\bar x\mid x\in\mathfrak{g}\}\subseteq\mathfrak{gl}(\bar V)$는 nilpotent endomorphism들로 이루어진 subalgebra이고, $\dim\bar V=n-1$이므로 귀납 가정에 의해 flag
+$\dim V=n$에 대한 귀납법으로 위 flag를 구성한다. $n=0$이면 자명하다. $n\geq 1$일 때, [보조정리 16](#lem16)에 의해 $0\neq v_1\in V$가 존재하여 모든 $x\in\mathfrak{g}$에 대하여 $xv_1=0$이다. $V_1=kv_1$로 두면 $\mathfrak{g}V_1=0\subseteq V_0$이다. Quotient space $\bar V=V/V_1$ 위에서 각 $x\in\mathfrak{g}$는 $\bar x:\bar V\rightarrow\bar V$를 유도하며, $x$가 nilpotent endomorphism이므로 $\bar x$도 그러하다. 따라서 $\bar{\mathfrak{g}}=\{\bar x\mid x\in\mathfrak{g}\}\subseteq\mathfrak{gl}(\bar V)$는 nilpotent endomorphism들로 이루어진 subalgebra이고, $\dim\bar V=n-1$이므로 귀납 가정에 의해 flag
 
 $$0=\bar V_0\subsetneq\bar V_1\subsetneq\cdots\subsetneq\bar V_{n-1}=\bar V$$
 
-이 존재하여 모든 $\bar x$에 대하여 $\bar x\bar V_i\subseteq\bar V_{i-1}$이다. quotient map $V\rightarrow\bar V$에 의한 $\bar V_i$의 preimage를 $V_{i+1}$로 두면, $V_1\subsetneq V_2\subsetneq\cdots\subsetneq V_n=V$이고 $\dim V_{i+1}=i+1$이며, $xV_{i+1}\subseteq V_i$가 성립한다. 이 기저에서 $\mathfrak{g}$의 원소는 모두 strictly 상삼각행렬이다.
+이 존재하여 모든 $\bar x$에 대하여 $\bar x\bar V_i\subseteq\bar V_{i-1}$이다. Quotient map $V\rightarrow\bar V$에 의한 $\bar V_i$의 preimage를 $V_{i+1}$로 두면, $V_1\subsetneq V_2\subsetneq\cdots\subsetneq V_n=V$이고 $\dim V_{i+1}=i+1$이며, $xV_{i+1}\subseteq V_i$가 성립한다. 이 기저에서 $\mathfrak{g}$의 원소는 모두 strictly 상삼각행렬이다.
 :::
 
 이제 추상적 형태의 Engel의 정리를 서술한다. 핵심은 $\ad:\mathfrak{g}\rightarrow\mathfrak{gl}(\mathfrak{g})$를 통해 위의 선형대수적 결과를 적용하는 것이다.
@@ -252,7 +252,7 @@ $$0=\bar V_0\subsetneq\bar V_1\subsetneq\cdots\subsetneq\bar V_{n-1}=\bar V$$
 ::: 증명
 $\dim\mathfrak{g}$에 대한 귀납법으로 증명한다. $\mathfrak{g}=0$이면 자명하다. $\mathfrak{g}\neq 0$이라 하자. $\ad\mathfrak{g}=\{\ad x\mid x\in\mathfrak{g}\}$는 $\mathfrak{gl}(\mathfrak{g})$의 subalgebra이고 ([명제 7](#prop7)), 가정에 의해 그 모든 원소가 nilpotent endomorphism이다. 만일 $\ad\mathfrak{g}=0$이면 $\mathfrak{g}=Z(\mathfrak{g})$이므로 $\mathfrak{g}$는 abelian, 따라서 nilpotent이다. $\ad\mathfrak{g}\neq 0$인 경우, $\mathfrak{g}=\ker(\ad)$가 아니므로 [보조정리 16](#lem16)을 $V=\mathfrak{g}$, $\ad\mathfrak{g}\subseteq\mathfrak{gl}(\mathfrak{g})$에 적용하면 어떤 $0\neq z\in\mathfrak{g}$가 존재하여 모든 $x\in\mathfrak{g}$에 대하여 $(\ad x)(z)=[x,z]=0$이다. 곧 $z\in Z(\mathfrak{g})$이고 $z\neq 0$이므로 $Z(\mathfrak{g})\neq 0$이다.
 
-quotient $\bar{\mathfrak{g}}=\mathfrak{g}/Z(\mathfrak{g})$를 생각하면 $\dim\bar{\mathfrak{g}}<\dim\mathfrak{g}$이다. quotient map $\pi$에 대하여 $\overline{\ad}\,\pi(x)=\ad x$가 $\bar{\mathfrak{g}}$ 위에 유도하는 morphism은 $\ad x$의 quotient이므로 nilpotent endomorphism이다. 따라서 $\bar{\mathfrak{g}}$의 모든 원소도 ad-nilpotent이고, 귀납 가정에 의해 $\bar{\mathfrak{g}}$는 nilpotent이다. 곧 어떤 $m$에 대하여 $\bar{\mathfrak{g}}^{m}=0$이며, 이는 $\mathfrak{g}^{m}\subseteq Z(\mathfrak{g})$를 뜻한다. 그럼
+Quotient $\bar{\mathfrak{g}}=\mathfrak{g}/Z(\mathfrak{g})$를 생각하면 $\dim\bar{\mathfrak{g}}<\dim\mathfrak{g}$이다. Quotient map $\pi$에 대하여 $\overline{\ad}\,\pi(x)=\ad x$가 $\bar{\mathfrak{g}}$ 위에 유도하는 morphism은 $\ad x$의 quotient이므로 nilpotent endomorphism이다. 따라서 $\bar{\mathfrak{g}}$의 모든 원소도 ad-nilpotent이고, 귀납 가정에 의해 $\bar{\mathfrak{g}}$는 nilpotent이다. 곧 어떤 $m$에 대하여 $\bar{\mathfrak{g}}^{m}=0$이며, 이는 $\mathfrak{g}^{m}\subseteq Z(\mathfrak{g})$를 뜻한다. 그럼
 
 $$\mathfrak{g}^{m+1}=[\mathfrak{g},\mathfrak{g}^{m}]\subseteq[\mathfrak{g},Z(\mathfrak{g})]=0$$
 
@@ -327,11 +327,11 @@ $$0=V_0\subsetneq V_1\subsetneq\cdots\subsetneq V_n=V,\qquad \dim V_i=i$$
 이 존재하여 모든 $x\in\mathfrak{g}$에 대하여 $xV_i\subseteq V_i$이다.
 :::
 ::: 증명
-$\dim V=n$에 대한 귀납법으로 flag를 구성한다. $n=0$이면 자명하다. $n\geq 1$일 때, [정리 20](#thm20)에 의해 $\mathfrak{g}$의 공통 eigenvector $0\neq v_1\in V$가 존재한다. $V_1=kv_1$로 두면 모든 $x\in\mathfrak{g}$에 대하여 $xV_1\subseteq V_1$이다. quotient space $\bar V=V/V_1$ 위에서 각 $x\in\mathfrak{g}$는 $\bar x:\bar V\rightarrow\bar V$를 유도하며, 대응 $x\mapsto\bar x$는 Lie algebra homomorphism이므로 그 상 $\bar{\mathfrak{g}}\subseteq\mathfrak{gl}(\bar V)$는 solvable Lie algebra $\mathfrak{g}$의 준동형상으로서 solvable이다. ([명제 14](#prop14)) $\dim\bar V=n-1$이므로 귀납 가정에 의해 flag
+$\dim V=n$에 대한 귀납법으로 flag를 구성한다. $n=0$이면 자명하다. $n\geq 1$일 때, [정리 20](#thm20)에 의해 $\mathfrak{g}$의 공통 eigenvector $0\neq v_1\in V$가 존재한다. $V_1=kv_1$로 두면 모든 $x\in\mathfrak{g}$에 대하여 $xV_1\subseteq V_1$이다. Quotient space $\bar V=V/V_1$ 위에서 각 $x\in\mathfrak{g}$는 $\bar x:\bar V\rightarrow\bar V$를 유도하며, 대응 $x\mapsto\bar x$는 Lie algebra homomorphism이므로 그 상 $\bar{\mathfrak{g}}\subseteq\mathfrak{gl}(\bar V)$는 solvable Lie algebra $\mathfrak{g}$의 준동형상으로서 solvable이다. ([명제 14](#prop14)) $\dim\bar V=n-1$이므로 귀납 가정에 의해 flag
 
 $$0=\bar V_0\subsetneq\bar V_1\subsetneq\cdots\subsetneq\bar V_{n-1}=\bar V$$
 
-이 존재하여 모든 $\bar x$에 대하여 $\bar x\bar V_i\subseteq\bar V_i$이다. quotient map에 의한 $\bar V_i$의 preimage를 $V_{i+1}$로 두면 $V_1\subsetneq V_2\subsetneq\cdots\subsetneq V_n=V$이고 $\dim V_{i+1}=i+1$이며 $xV_{i+1}\subseteq V_{i+1}$이다. 이 flag에 맞춘 기저에서 $\mathfrak{g}$의 원소는 모두 상삼각행렬이다.
+이 존재하여 모든 $\bar x$에 대하여 $\bar x\bar V_i\subseteq\bar V_i$이다. Quotient map에 의한 $\bar V_i$의 preimage를 $V_{i+1}$로 두면 $V_1\subsetneq V_2\subsetneq\cdots\subsetneq V_n=V$이고 $\dim V_{i+1}=i+1$이며 $xV_{i+1}\subseteq V_{i+1}$이다. 이 flag에 맞춘 기저에서 $\mathfrak{g}$의 원소는 모두 상삼각행렬이다.
 :::
 
 추상적 형태로 다시 쓰면, $k$가 대수적으로 닫힌 characteristic $0$의 체이고 $\mathfrak{g}$가 유한차원 solvable Lie algebra이면, [따름정리 21](#cor21)를 adjoint representation $\ad:\mathfrak{g}\rightarrow\mathfrak{gl}(\mathfrak{g})$의 상에 적용하여 $\ad\mathfrak{g}$가 동시 상삼각화됨을 알 수 있다. 그 직접적인 귀결로 $[\mathfrak{g},\mathfrak{g}]$의 원소들은 모두 strictly 상삼각인 $\ad$로 작용하므로, $x\in[\mathfrak{g},\mathfrak{g}]$에 대하여 $\ad x$가 nilpotent endomorphism이 된다. 따라서 [정리 18](#thm18)에 의해 $[\mathfrak{g},\mathfrak{g}]$는 nilpotent이다. 즉 characteristic $0$의 algebraically closed field 위에서 solvable Lie algebra의 derived algebra는 항상 nilpotent이며, 이는 Cartan의 판정법과 더불어 semisimple Lie algebra의 구조 이론으로 이어지는 출발점이 된다.

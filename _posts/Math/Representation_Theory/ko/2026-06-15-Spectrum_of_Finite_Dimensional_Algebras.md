@@ -188,7 +188,7 @@ $$\dim A=\sum_\chi \dim A_\chi$$
 ::: 증명
 각 $A_\chi$가 ideal임을 보이자. $x\in A_\chi$이고 $b\in A$라 하자. $M_b$는 다른 모든 $M_a$와 commute하므로 $A_\chi$를 보존한다. 즉 $bx=M_b(x)\in A_\chi$이며, 따라서 $A_\chi$는 ideal이다.
 
-[정리 8](#thm8)의 direct sum 분해 $A=\bigoplus_\chi A_\chi$에서 $1\in A$를 성분별로 분해하여 $1=\sum_\chi e_\chi$라 쓰자. 여기서 $e_\chi\in A_\chi$이다. 임의의 $x\in A_{\chi'}$에 대하여 $x=1\cdot x=\sum_\chi e_\chi x$인데, $A_\chi$가 ideal이므로 $e_\chi x\in A_\chi\cap A_{\chi'}$이고, direct sum이므로 $\chi\neq\chi'$이면 $A_\chi\cap A_{\chi'}=0$이다. 따라서 $e_\chi x=0$ ($\chi\neq\chi'$) 이고 $e_{\chi'}x=x$이다. 특히 $x=e_{\chi'}$로 두면 $e_{\chi'}e_{\chi'}=e_{\chi'}$, $x=e_\chi$ ($\chi\neq \chi'$) 로 두면 $e_{\chi'}e_\chi=0$을 얻으므로 $e_\chi e_{\chi'}=\delta_{\chi\chi'}e_\chi$이다. 또 위 계산은 $e_{\chi'}$이 $A_{\chi'}$ 위에서 항등원처럼 작용함을 보이므로 $A_{\chi'}=e_{\chi'}A$이고, 각 $A_\chi$는 항등원 $e_\chi$를 갖는 unital algebra이다. morphism
+[정리 8](#thm8)의 direct sum 분해 $A=\bigoplus_\chi A_\chi$에서 $1\in A$를 성분별로 분해하여 $1=\sum_\chi e_\chi$라 쓰자. 여기서 $e_\chi\in A_\chi$이다. 임의의 $x\in A_{\chi'}$에 대하여 $x=1\cdot x=\sum_\chi e_\chi x$인데, $A_\chi$가 ideal이므로 $e_\chi x\in A_\chi\cap A_{\chi'}$이고, direct sum이므로 $\chi\neq\chi'$이면 $A_\chi\cap A_{\chi'}=0$이다. 따라서 $e_\chi x=0$ ($\chi\neq\chi'$) 이고 $e_{\chi'}x=x$이다. 특히 $x=e_{\chi'}$로 두면 $e_{\chi'}e_{\chi'}=e_{\chi'}$, $x=e_\chi$ ($\chi\neq \chi'$) 로 두면 $e_{\chi'}e_\chi=0$을 얻으므로 $e_\chi e_{\chi'}=\delta_{\chi\chi'}e_\chi$이다. 또 위 계산은 $e_{\chi'}$이 $A_{\chi'}$ 위에서 항등원처럼 작용함을 보이므로 $A_{\chi'}=e_{\chi'}A$이고, 각 $A_\chi$는 항등원 $e_\chi$를 갖는 unital algebra이다. Morphism
 
 $$A\longrightarrow \prod_\chi A_\chi;\qquad x\longmapsto (e_\chi x)_\chi$$
 
@@ -212,7 +212,7 @@ $k$가 algebraically closed이고 $A$가 유한차원 commutative $k$-algebra이
 
 1. $A$는 reduced이다.
 2. 모든 character $\chi$에 대하여 $A_\chi=k\,e_\chi$, 곧 $\mathfrak{n}_\chi=0$이다.
-3. character의 개수가 정확히 $N$이며, $A\cong k^N$이다.
+3. Character의 개수가 정확히 $N$이며, $A\cong k^N$이다.
 4. 정규표현 $\{M_a\}_{a\in A}$이 동시대각화 가능하다.
 
 이 때 각 idempotent $e_\chi$는 모든 $M_a$의 공통 고유벡터이며 $M_a e_\chi=\chi(a)e_\chi$를 만족한다.
@@ -251,7 +251,7 @@ $$\ev:A\longrightarrow k^{\MaxSpec A};\qquad a\longmapsto (\chi(a))_{\chi\in\Max
 ::: 증명
 $\ev$은 각 성분이 character $\chi$이므로 algebra homomorphism들의 곱이고, 따라서 그 자체로 algebra homomorphism이다. ([\[대수적 구조\] §대수의 직접곱, 직합, 텐서곱, ⁋명제 3](/ko/math/algebraic_structures/operations_of_algebras#prop3)) 또 각 $\chi(1)=1$이므로 $\ev(1)=(1,\ldots,1)$은 $k^{\MaxSpec A}$의 항등원이고 $\ev$은 unital이다.
 
-kernel을 계산하자. $\ev(a)=0$인 것은 모든 character $\chi$에 대하여 $\chi(a)=0$, 곧 $a\in\bigcap_\chi\ker\chi=\bigcap_\chi\mathfrak{m}_\chi$인 것과 같다. 이제 이 교집합이 정확히 nilpotent 원소들의 집합임을 보이자. [따름정리 9](#cor9)의 isomorphism $A\cong\prod_\chi A_\chi$에서 $a=(a_\chi)_\chi$로 쓰면, $\chi'(a)$는 $a_{\chi'}$의 $A_{\chi'}\rightarrow A_{\chi'}/\mathfrak{n}_{\chi'}\cong k$에서의 image이다. 따라서 모든 $\chi$에 대하여 $\chi(a)=0$인 것은 각 성분 $a_\chi$가 $\mathfrak{n}_\chi$에 속하는 것과 같다. 그런데 [따름정리 9](#cor9)에 의하여 $\mathfrak{n}_\chi$의 원소는 모두 nilpotent이고, 곱이 성분별이므로 $(a_\chi)_\chi$이 nilpotent인 것은 각 $a_\chi$가 nilpotent인 것, 곧 각 $a_\chi\in\mathfrak{n}_\chi$인 것과 동치이다. 따라서 $\ker\ev$은 정확히 $A$의 nilpotent 원소들의 집합이다.
+Kernel을 계산하자. $\ev(a)=0$인 것은 모든 character $\chi$에 대하여 $\chi(a)=0$, 곧 $a\in\bigcap_\chi\ker\chi=\bigcap_\chi\mathfrak{m}_\chi$인 것과 같다. 이제 이 교집합이 정확히 nilpotent 원소들의 집합임을 보이자. [따름정리 9](#cor9)의 isomorphism $A\cong\prod_\chi A_\chi$에서 $a=(a_\chi)_\chi$로 쓰면, $\chi'(a)$는 $a_{\chi'}$의 $A_{\chi'}\rightarrow A_{\chi'}/\mathfrak{n}_{\chi'}\cong k$에서의 image이다. 따라서 모든 $\chi$에 대하여 $\chi(a)=0$인 것은 각 성분 $a_\chi$가 $\mathfrak{n}_\chi$에 속하는 것과 같다. 그런데 [따름정리 9](#cor9)에 의하여 $\mathfrak{n}_\chi$의 원소는 모두 nilpotent이고, 곱이 성분별이므로 $(a_\chi)_\chi$이 nilpotent인 것은 각 $a_\chi$가 nilpotent인 것, 곧 각 $a_\chi\in\mathfrak{n}_\chi$인 것과 동치이다. 따라서 $\ker\ev$은 정확히 $A$의 nilpotent 원소들의 집합이다.
 
 그러므로 $\ev$이 injective인 것은 $A$에 nonzero nilpotent가 없는 것, 곧 $A$가 reduced인 것과 동치이다. 마지막으로 $A$가 reduced이면 [명제 11](#prop11)에 의하여 character의 개수가 $\dim A$와 같으므로 $\dim k^{\MaxSpec A}=\dim A$이고, injective인 $\ev$은 차원 비교에 의하여 isomorphism이다.
 :::
@@ -295,7 +295,7 @@ $$A\cong k\times k$$
 마지막으로 첫 두 글에서 다룬 유한군의 표현론과의 다리를 놓는 예시를 본다.
 
 ::: 예시 16
-유한 abelian group $\mathbb{Z}/n$의 group algebra를 $k=\mathbb{C}$ 위에서 생각하자. generator $\sigma$가 만족하는 유일한 관계는 $\sigma^n=1$이므로
+유한 abelian group $\mathbb{Z}/n$의 group algebra를 $k=\mathbb{C}$ 위에서 생각하자. Generator $\sigma$가 만족하는 유일한 관계는 $\sigma^n=1$이므로
 
 $$\mathbb{C}[\mathbb{Z}/n]\cong\mathbb{C}[\sigma]/(\sigma^n-1)$$
 

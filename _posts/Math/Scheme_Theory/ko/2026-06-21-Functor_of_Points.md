@@ -187,7 +187,7 @@ $\mathbb{Z}[\x, \x^{-1}]=\mathbb{Z}[\x]_\x$이므로, ring homomorphism $\mathbb
 Scheme $T$ 위의 *line bundle<sub>직선다발</sub>* $\mathcal{L}$은 rank $1$의 locally free $\mathcal{O}_T$-module이다. Line bundle $\mathcal{L}$의 절단 $s_0,\ldots, s_n\in \Gamma(T, \mathcal{L})$이 $\mathcal{L}$을 *globally generate<sub>전역생성</sub>*한다는 것은, 각각의 점 $t\in T$에서 stalk $\mathcal{L}_t$이 germ $(s_0)_t,\ldots, (s_n)_t$로 $\mathcal{O}_{T,t}$-module로서 생성되는 것이다. 두 데이터 $(\mathcal{L}, s_0,\ldots, s_n)$과 $(\mathcal{L}', s_0',\ldots, s_n')$이 *isomorphic*하다는 것은, $\mathcal{O}_T$-module isomorphism $\psi:\mathcal{L} \rightarrow \mathcal{L}'$이 존재하여 각각의 $i$에 대하여 $\psi(s_i)=s_i'$인 것이다. 
 :::
 
-line bundle과 그 생성절단의 isomorphism 개념을 위와 같이 약속하면, $\mathbb{P}^n$의 functor of points는 다음과 같이 깔끔하게 기술된다. 
+Line bundle과 그 생성절단의 isomorphism 개념을 위와 같이 약속하면, $\mathbb{P}^n$의 functor of points는 다음과 같이 깔끔하게 기술된다. 
 
 ::: 정리 11
 $\mathbb{Z}$ 위의 projective space $\mathbb{P}^n=\Proj \mathbb{Z}[\x_0,\ldots, \x_n]$에 대하여, $\mathbb{P}^n(T)$는 $T$ 위의 line bundle $\mathcal{L}$과 이를 globally generate하는 절단 $s_0,\ldots, s_n\in \Gamma(T, \mathcal{L})$의 데이터 $(\mathcal{L}, s_0,\ldots, s_n)$들의 isomorphism class와 자연스럽게 일대일대응한다. 

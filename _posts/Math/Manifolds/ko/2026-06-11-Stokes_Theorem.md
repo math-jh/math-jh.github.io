@@ -60,7 +60,7 @@ $$\sum_id(\phi_i\,\omega)=\sum_i\bigl(d\phi_i\wedge\omega+\phi_i\,d\omega\bigr)=
 
 $$\eta=\sum_{i=1}^mf_i\;dr^1\wedge\cdots\wedge\widehat{dr^i}\wedge\cdots\wedge dr^m$$
 
-여기서 $\widehat{dr^i}$는 해당 항을 생략한다는 뜻이고, $f_i$들은 compactly supported인 $C^\infty$ 함수들로 $V$ 바깥에서 $0$으로 확장한다. exterior derivative를 계산하면 $dr^j\wedge dr^1\wedge\cdots\wedge\widehat{dr^i}\wedge\cdots\wedge dr^m$은 $j=i$가 아니면 $0$이고 $j=i$일 때 $(-1)^{i-1}dr^1\wedge\cdots\wedge dr^m$이므로
+여기서 $\widehat{dr^i}$는 해당 항을 생략한다는 뜻이고, $f_i$들은 compactly supported인 $C^\infty$ 함수들로 $V$ 바깥에서 $0$으로 확장한다. Exterior derivative를 계산하면 $dr^j\wedge dr^1\wedge\cdots\wedge\widehat{dr^i}\wedge\cdots\wedge dr^m$은 $j=i$가 아니면 $0$이고 $j=i$일 때 $(-1)^{i-1}dr^1\wedge\cdots\wedge dr^m$이므로
 
 $$d\eta=\sum_{i=1}^m(-1)^{i-1}\frac{\partial f_i}{\partial r^i}\;dr^1\wedge\cdots\wedge dr^m$$
 

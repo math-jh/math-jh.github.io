@@ -157,7 +157,7 @@ $$H_\tau(x,x)=-\kappa(u+iv,\,u-iv)=-\kappa(u,u)-\kappa(v,v)+i\bigl(\kappa(u,v)-\
 
 인데 $\kappa$가 symmetric이라 허수부가 사라지고, $\kappa_{\mathfrak{u}}$가 음의 정부호이므로 $-\kappa(u,u)-\kappa(v,v)\geq0$이며 $x\neq0$이면 $u,v$ 중 하나가 $0$이 아니어서 양수이다.
 
-skew-Hermitian성은 $\kappa$의 invariance에서 ([§Killing 형식과 Cartan 판정법, ⁋명제 2](/ko/math/lie_theory/killing_form_and_cartan_criterion#prop2)) 따른다. $x\in\mathfrak{u}$이면 $\tau x=x$이고 $\tau$가 bracket을 보존하므로 $\tau([x,y])=[x,\tau y]$이다. 따라서
+Skew-Hermitian성은 $\kappa$의 invariance에서 ([§Killing 형식과 Cartan 판정법, ⁋명제 2](/ko/math/lie_theory/killing_form_and_cartan_criterion#prop2)) 따른다. $x\in\mathfrak{u}$이면 $\tau x=x$이고 $\tau$가 bracket을 보존하므로 $\tau([x,y])=[x,\tau y]$이다. 따라서
 
 $$H_\tau([x,y],z)=-\kappa([x,y],\tau z)=-\kappa(y,[\,\tau z,x\,])=\kappa(y,[x,\tau z])=\kappa(y,\tau[x,z])=-H_\tau(y,[x,z])$$
 
@@ -172,7 +172,7 @@ $$H_\tau([x,y],z)=-\kappa([x,y],\tau z)=-\kappa(y,[\,\tau z,x\,])=\kappa(y,[x,\t
 ::: 증명
 $\tau_1,\tau_2$를 각각 $\mathfrak{u}_1,\mathfrak{u}_2$에 대응하는 conjugation이라 하고, $H=H_{\tau_1}$을 [명제 8](#prop8)의 양의 정부호 Hermitian form이라 하자. $\theta=\tau_1\tau_2$는 두 conjugate-linear involution의 합성이므로 $\mathfrak{g}$의 ($\mathbb{C}$-선형) automorphism이다. $\theta$가 $H$에 대해 양의 정부호 자기수반임을 보인다. $\tau_1$이 $H$에 대해 등거리적 conjugate-linear involution이라는 데에서 $\tau_1^\ast=\tau_1$ 꼴의 관계가 성립하고, $\theta$의 자기수반성은 $N=\theta^\ast\theta$가 양의 정부호 자기수반 automorphism임을 준다. 실제로는 $\theta$ 자신이 $H$에 대해 양의 정부호 자기수반이 되도록 $\tau_1,\tau_2$를 잡을 수 있으며, 이는 표준적 계산이다.
 
-$\theta$가 양의 정부호 자기수반 automorphism이므로, spectrum 분해를 통해 실수 $t$에 대한 거듭제곱 $\theta^t$가 잘 정의되고 각 $\theta^t$ 역시 $\mathfrak{g}$의 automorphism이다 ($\theta$가 automorphism이고 그 고유공간 분해가 bracket과 호환되기 때문이다). $\varphi=\theta^{-1/2}$로 두면, $\theta\tau_1=\tau_1\theta^{-1}$ (따라서 실수 거듭제곱에 대해 $\theta^t\tau_1=\tau_1\theta^{-t}$) 이라는 관계로부터 $\varphi\tau_1\varphi^{-1}=\theta^{-1/2}\tau_1\theta^{1/2}=\tau_1\theta=\tau_2$임이 따른다 ($\theta=\tau_1\tau_2$에서 $\tau_1\theta=\tau_2$이므로). conjugation을 옮기는 automorphism은 그 fixed point set인 real form을 옮기므로
+$\theta$가 양의 정부호 자기수반 automorphism이므로, spectrum 분해를 통해 실수 $t$에 대한 거듭제곱 $\theta^t$가 잘 정의되고 각 $\theta^t$ 역시 $\mathfrak{g}$의 automorphism이다 ($\theta$가 automorphism이고 그 고유공간 분해가 bracket과 호환되기 때문이다). $\varphi=\theta^{-1/2}$로 두면, $\theta\tau_1=\tau_1\theta^{-1}$ (따라서 실수 거듭제곱에 대해 $\theta^t\tau_1=\tau_1\theta^{-t}$) 이라는 관계로부터 $\varphi\tau_1\varphi^{-1}=\theta^{-1/2}\tau_1\theta^{1/2}=\tau_1\theta=\tau_2$임이 따른다 ($\theta=\tau_1\tau_2$에서 $\tau_1\theta=\tau_2$이므로). Conjugation을 옮기는 automorphism은 그 fixed point set인 real form을 옮기므로
 
 $$\varphi(\mathfrak{u}_1)=\varphi(\mathfrak{g}^{\tau_1})=\mathfrak{g}^{\varphi\tau_1\varphi^{-1}}=\mathfrak{g}^{\tau_2}=\mathfrak{u}_2$$
 

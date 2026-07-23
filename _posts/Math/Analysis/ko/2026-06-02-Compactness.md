@@ -153,7 +153,7 @@ $$d(p, K) = \inf_{y \in K} \lVert p - y \rVert$$
 
 $$\lVert p - y_m \rVert \rightarrow d(p, K) \qquad (y_m \in K)$$
 
-인 점열 $(y_m)$을 잡을 수 있고, $K$가 점렬컴팩트이므로 $y_{m_k} \rightarrow y_0 \in K$인 부분수열을 뽑는다. norm이 연속이므로
+인 점열 $(y_m)$을 잡을 수 있고, $K$가 점렬컴팩트이므로 $y_{m_k} \rightarrow y_0 \in K$인 부분수열을 뽑는다. Norm이 연속이므로
 
 $$\lVert p - y_0 \rVert = \lim_k \lVert p - y_{m_k} \rVert = d(p, K)$$
 

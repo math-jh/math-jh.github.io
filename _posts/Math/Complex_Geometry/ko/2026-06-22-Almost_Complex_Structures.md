@@ -14,7 +14,7 @@ weight: 2
 published: false
 ---
 
-complex manifold는 holomorphic transition function을 갖는 좌표계로 정의되었고, 그 강성의 거의 모든 출처가 이 holomorphicity였다 ([§복소다양체, ⁋정의 3](/ko/math/complex_geometry/complex_manifolds#def3)). 그러나 복소구조가 tangent space 수준에서 무엇을 하는지는 좌표계의 언어만으로는 잘 보이지 않는다. 각 점에서 holomorphic 좌표 $z_j = x_j + i y_j$의 곱셈 $i$는 실 tangent space $T_p M$ 위의 한 선형사상, 곧 $\partial/\partial x_j$를 $\partial/\partial y_j$로, $\partial/\partial y_j$를 $-\partial/\partial x_j$로 보내는 morphism으로 나타난다. 이 morphism을 $J_p$라 하면 $J_p^2 = -\id$이고, 점이 변할 때 $J_p$는 매끄럽게 변한다. 이렇게 추출된 자료 $J$가 거의 복소구조이다.
+Complex manifold는 holomorphic transition function을 갖는 좌표계로 정의되었고, 그 강성의 거의 모든 출처가 이 holomorphicity였다 ([§복소다양체, ⁋정의 3](/ko/math/complex_geometry/complex_manifolds#def3)). 그러나 복소구조가 tangent space 수준에서 무엇을 하는지는 좌표계의 언어만으로는 잘 보이지 않는다. 각 점에서 holomorphic 좌표 $z_j = x_j + i y_j$의 곱셈 $i$는 실 tangent space $T_p M$ 위의 한 선형사상, 곧 $\partial/\partial x_j$를 $\partial/\partial y_j$로, $\partial/\partial y_j$를 $-\partial/\partial x_j$로 보내는 morphism으로 나타난다. 이 morphism을 $J_p$라 하면 $J_p^2 = -\id$이고, 점이 변할 때 $J_p$는 매끄럽게 변한다. 이렇게 추출된 자료 $J$가 거의 복소구조이다.
 
 이 글의 목표는 거의 복소구조를 복소구조와 독립적으로 정의하고, 복소구조에서 오는 $J$가 이를 만족함을 보인 뒤, 거꾸로 어떤 $J$가 복소구조에서 오는가 하는 *적분가능성* 물음에 답하는 것이다. 답의 핵심은 Nijenhuis 텐서의 소멸이며, 이것이 복소구조의 존재와 동치라는 Newlander–Nirenberg 정리가 이 글의 정점이다. 거의 복소구조는 복소구조보다 약하므로 위상적 제약만으로 존재 여부가 갈리는 일도 있으며, 짝수차원이라도 거의 복소구조를 전혀 갖지 못하는 manifold가 있다는 사실도 함께 다룬다.
 
@@ -23,7 +23,7 @@ complex manifold는 holomorphic transition function을 갖는 좌표계로 정�
 거의 복소구조는 tangent bundle 위에서 곱셈 $i$를 흉내내는 다발 morphism이다. 어떤 좌표계도 전제하지 않고, 오직 $J^2 = -\id$이라는 대수적 조건만으로 규정된다.
 
 ::: 정의 1
-smooth manifold $M$ 위의 *almost complex structure<sub>거의 복소구조</sub>*란 실 vector bundle endomorphism $J : TM \rightarrow TM$로서, 각 점 $p$에서의 restriction $J_p : T_p M \rightarrow T_p M$이 모두
+Smooth manifold $M$ 위의 *almost complex structure<sub>거의 복소구조</sub>*란 실 vector bundle endomorphism $J : TM \rightarrow TM$로서, 각 점 $p$에서의 restriction $J_p : T_p M \rightarrow T_p M$이 모두
 
 $$
 J_p^2 = -\id_{T_p M}
@@ -52,7 +52,7 @@ $$
 
 ## 복소다양체의 표준 거의 복소구조
 
-complex manifold $M$은 실차원 $2n$의 smooth manifold이기도 하다. holomorphic 좌표 $z_j = x_j + i y_j$가 주는 실좌표 $(x_1, y_1, \ldots, x_n, y_n)$에서, 곱셈 $i$를 tangent space 위의 선형사상으로 옮긴 것이 표준 거의 복소구조이다.
+Complex manifold $M$은 실차원 $2n$의 smooth manifold이기도 하다. Holomorphic 좌표 $z_j = x_j + i y_j$가 주는 실좌표 $(x_1, y_1, \ldots, x_n, y_n)$에서, 곱셈 $i$를 tangent space 위의 선형사상으로 옮긴 것이 표준 거의 복소구조이다.
 
 ::: 명제 3
 $M$을 complex manifold라 하고, 각 점 $p$에서 holomorphic 좌표 $z_j = x_j + i y_j$에 대하여 $T_p M$ 위의 선형사상 $J_p$를
@@ -82,14 +82,14 @@ J_p\!\left( \frac{\partial}{\partial z_j} \right) = i\, \frac{\partial}{\partial
 J_p\!\left( \frac{\partial}{\partial \bar{z}_j} \right) = -i\, \frac{\partial}{\partial \bar{z}_j}
 $$
 
-으로 작용한다. 실제로 $J_p(\partial/\partial z_j) = \frac{1}{2}(J_p \partial/\partial x_j - i J_p \partial/\partial y_j) = \frac{1}{2}(\partial/\partial y_j + i\, \partial/\partial x_j) = i \cdot \frac{1}{2}(\partial/\partial x_j - i\, \partial/\partial y_j)$이다. transition function $w = w(z)$가 holomorphic이므로 Cauchy–Riemann 조건 $\partial w_k / \partial \bar{z}_j = 0$이 성립하고, 연쇄법칙에 의해 $\partial/\partial z_j = \sum_k (\partial w_k/\partial z_j)\, \partial/\partial w_k$로서 $\partial/\partial w_k$들만의 일차결합이 된다. 곧 $J_p$가 곱셈 $i$로 작용하는 부분공간 $\span_{\mathbb{C}}\{\partial/\partial z_j\}$은 좌표에 무관하게 같은 부분공간이고, 그 켤레도 마찬가지다. 따라서 $J_p$는 두 좌표계에서 같은 선형사상이다.
+으로 작용한다. 실제로 $J_p(\partial/\partial z_j) = \frac{1}{2}(J_p \partial/\partial x_j - i J_p \partial/\partial y_j) = \frac{1}{2}(\partial/\partial y_j + i\, \partial/\partial x_j) = i \cdot \frac{1}{2}(\partial/\partial x_j - i\, \partial/\partial y_j)$이다. Transition function $w = w(z)$가 holomorphic이므로 Cauchy–Riemann 조건 $\partial w_k / \partial \bar{z}_j = 0$이 성립하고, 연쇄법칙에 의해 $\partial/\partial z_j = \sum_k (\partial w_k/\partial z_j)\, \partial/\partial w_k$로서 $\partial/\partial w_k$들만의 일차결합이 된다. 곧 $J_p$가 곱셈 $i$로 작용하는 부분공간 $\span_{\mathbb{C}}\{\partial/\partial z_j\}$은 좌표에 무관하게 같은 부분공간이고, 그 켤레도 마찬가지다. 따라서 $J_p$는 두 좌표계에서 같은 선형사상이다.
 :::
 
 이 $J$가 곱셈 $i$를 그대로 옮긴 것임은 작용 $J_p(\partial/\partial z_j) = i\, \partial/\partial z_j$에서 분명하다. 거의 복소구조는 이렇게 complex manifold마다 표준적으로 따라오는 자료이지만, 그 역은 자명하지 않다. 임의로 주어진 거의 복소구조 $J$가 어떤 complex manifold의 표준 거의 복소구조와 일치하는가 하는 물음이 적분가능성 문제이며, 이를 정식화하려면 $J$의 고유공간 분해를 먼저 손에 쥐어야 한다.
 
 ## 복소화 접다발의 분해
 
-거의 복소구조 $J$는 실 tangent space 위의 morphism이라 $\pm i$ 같은 복소 고유값을 직접 다룰 수 없다. tangent space를 복소화하면 $J$가 대각화되어 $\pm i$ 고유공간으로 갈라지고, 이 분해가 (p,q)-형식 분해의 출발점이 된다.
+거의 복소구조 $J$는 실 tangent space 위의 morphism이라 $\pm i$ 같은 복소 고유값을 직접 다룰 수 없다. Tangent space를 복소화하면 $J$가 대각화되어 $\pm i$ 고유공간으로 갈라지고, 이 분해가 (p,q)-형식 분해의 출발점이 된다.
 
 ::: 정의 4
 거의 complex manifold $(M, J)$의 점 $p$에서 *complexified tangent space<sub>복소화 접공간</sub>*를 $T_p^{\mathbb{C}} M = T_p M \otimes_{\mathbb{R}} \mathbb{C}$라 하고, $J_p$를 $\mathbb{C}$-선형으로 확장한 morphism (여전히 $J_p$로 적는다) 의 $+i$ 고유공간과 $-i$ 고유공간을 각각
@@ -118,7 +118,7 @@ $$
 $v \in T_p^{1,0} M$이면 $J_p v = i v$이다. $J_p$는 실 morphism의 복소선형 확장이므로 켤레와 교환한다는 의미에서 $J_p \bar{v} = \overline{J_p v} = \overline{i v} = -i \bar{v}$이다. 따라서 $\bar{v} \in T_p^{0,1} M$이고 $\overline{T_p^{1,0} M} \subseteq T_p^{0,1} M$이다. 켤레는 대합($\bar{\bar{v}} = v$)이므로 반대 포함도 같은 논법으로 성립하여 $\overline{T_p^{1,0} M} = T_p^{0,1} M$이다. 켤레는 $\mathbb{R}$-선형 동형이므로 두 부분공간의 복소차원이 같고, 그 합이 $\dim_{\mathbb{C}} T_p^{\mathbb{C}} M = 2n$이므로 각각 $n$이다.
 :::
 
-complex manifold의 표준 거의 복소구조에 대해서는 이 추상적 분해가 holomorphic tangent space와 정확히 일치한다. 명제 3의 증명에서 $J_p(\partial/\partial z_j) = i\, \partial/\partial z_j$이고 $J_p(\partial/\partial \bar{z}_j) = -i\, \partial/\partial \bar{z}_j$임을 보았으므로,
+Complex manifold의 표준 거의 복소구조에 대해서는 이 추상적 분해가 holomorphic tangent space와 정확히 일치한다. 명제 3의 증명에서 $J_p(\partial/\partial z_j) = i\, \partial/\partial z_j$이고 $J_p(\partial/\partial \bar{z}_j) = -i\, \partial/\partial \bar{z}_j$임을 보았으므로,
 
 $$
 T_p^{1,0} M = \span_{\mathbb{C}}\left\{ \frac{\partial}{\partial z_1}, \ldots, \frac{\partial}{\partial z_n} \right\}, \qquad
@@ -131,7 +131,7 @@ $$
 
 ## (p,q)-형식
 
-cotangent space의 분해를 exterior algebra로 끌어올리면 복소화 differential form이 차수별로 정밀하게 갈라진다. 이 (p,q)-분해는 적분가능성을 differential form의 언어로 옮기는 데 쓰이며, 더 나아가 Dolbeault 이론 전체의 무대가 된다.
+Cotangent space의 분해를 exterior algebra로 끌어올리면 복소화 differential form이 차수별로 정밀하게 갈라진다. 이 (p,q)-분해는 적분가능성을 differential form의 언어로 옮기는 데 쓰이며, 더 나아가 Dolbeault 이론 전체의 무대가 된다.
 
 ::: 정의 6
 거의 complex manifold $(M, J)$ 위의 복소화 differential form의 다발을 $\Lambda^k_{\mathbb{C}} = \bigwedge^k (T^\ast M) \otimes_{\mathbb{R}} \mathbb{C}$라 하자. 음이 아닌 정수 $p, q$에 대하여 *(p,q)-form<sub>(p,q)-형식</sub>*의 다발 $\Lambda^{p,q}$을 각 점에서
@@ -177,7 +177,7 @@ $$
 
 ## 적분가능성과 Nijenhuis 텐서
 
-complex manifold의 표준 거의 복소구조 $J$에 대해서는 $T^{1,0} M$이 좌표 벡터장 $\partial/\partial z_j$들로 생성되고, 이들의 Lie bracket이 다시 $\partial/\partial z_k$들의 결합이므로 $T^{1,0} M$이 Lie bracket에 대해 닫힌다. 거꾸로 이 닫힘성이 $J$가 복소구조에서 옴을 보장하는가 하는 물음이 적분가능성이다. 먼저 적분가능성을 정의하고, 그것을 Lie bracket 닫힘성과 동치인 텐서 조건으로 옮긴다.
+Complex manifold의 표준 거의 복소구조 $J$에 대해서는 $T^{1,0} M$이 좌표 벡터장 $\partial/\partial z_j$들로 생성되고, 이들의 Lie bracket이 다시 $\partial/\partial z_k$들의 결합이므로 $T^{1,0} M$이 Lie bracket에 대해 닫힌다. 거꾸로 이 닫힘성이 $J$가 복소구조에서 옴을 보장하는가 하는 물음이 적분가능성이다. 먼저 적분가능성을 정의하고, 그것을 Lie bracket 닫힘성과 동치인 텐서 조건으로 옮긴다.
 
 ::: 정의 8
 거의 complex manifold $(M, J)$의 거의 복소구조 $J$가 *integrable<sub>적분가능</sub>*하다는 것은, $M$ 위에 complex manifold 구조가 존재하여 그 표준 거의 복소구조 ([명제 3](#prop3)) 가 $J$와 일치하는 것이다.
@@ -279,7 +279,7 @@ $d\alpha$의 (0,2)-성분이 $0$이라는 것은 모든 (1,0)-형식 $\alpha$와
 
 실해석적($C^\omega$) 경우에는 이것이 복소화 Frobenius 정리로 곧장 따라온다. 계수를 복소수로 확장한 holomorphic 영역에서 involutive 복소 분포는 integral manifold를 가지며, 이 integral manifold들의 횡단 좌표가 바라던 $z_j$를 준다. 이 논법은 Cauchy–Kovalevskaya 정리에 기대므로 해석성을 본질적으로 쓴다.
 
-smooth($C^\infty$) 경우에는 해석성이 없어 위 논법이 작동하지 않으며, 이것이 Newlander–Nirenberg의 진짜 기여이다. 차원에 대한 귀납과 편미분방정식계의 풀이를 결합하여, $N_J = 0$이라는 적분가능성 조건이 보장하는 상삼각 구조 아래에서 비선형 $\bar\partial$-형 방정식 $\bar{Z} z_j = 0$의 충분히 많은 해를 국소적으로 구성한다. 원논문은 비선형 타원계의 linearization과 Newlander–Nirenberg 추정으로 이 해의 존재와 holomorphic 의존성을 얻는다. 이렇게 얻은 좌표 $z_j$들의 transition function은 $\bar\partial z_j = 0$을 만족하므로 holomorphic이고, 따라서 이 좌표들이 $M$ 위에 complex manifold 구조를 정의한다. 구성에서 $d z_j$가 $\Lambda^{1,0}$을 생성하므로 그 표준 거의 복소구조는 $J$와 일치한다.
+Smooth($C^\infty$) 경우에는 해석성이 없어 위 논법이 작동하지 않으며, 이것이 Newlander–Nirenberg의 진짜 기여이다. 차원에 대한 귀납과 편미분방정식계의 풀이를 결합하여, $N_J = 0$이라는 적분가능성 조건이 보장하는 상삼각 구조 아래에서 비선형 $\bar\partial$-형 방정식 $\bar{Z} z_j = 0$의 충분히 많은 해를 국소적으로 구성한다. 원논문은 비선형 타원계의 linearization과 Newlander–Nirenberg 추정으로 이 해의 존재와 holomorphic 의존성을 얻는다. 이렇게 얻은 좌표 $z_j$들의 transition function은 $\bar\partial z_j = 0$을 만족하므로 holomorphic이고, 따라서 이 좌표들이 $M$ 위에 complex manifold 구조를 정의한다. 구성에서 $d z_j$가 $\Lambda^{1,0}$을 생성하므로 그 표준 거의 복소구조는 $J$와 일치한다.
 
 유일성은 두 복소구조가 같은 $J$를 주면 두 좌표계의 transition function이 양쪽 모두에서 $\bar\partial$를 죽여 holomorphic이 되고, 따라서 두 복소구조가 양립가능하다는 데서 따라온다.
 :::

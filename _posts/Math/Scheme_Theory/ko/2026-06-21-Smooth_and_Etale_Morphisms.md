@@ -55,7 +55,7 @@ $\Delta_f$는 항상 immersion, 즉 어떤 열린 부분scheme 위로의 closed 
 
 ## Smooth 사상
 
-Unramified morphism이 fiber의 무한소 방향을 모두 죽인다면, smooth morphism은 fiber가 base 위에서 균일하게 regular family를 이루도록 한다. regularity는 ([\[가환대수학\] §정칙국소환](/ko/math/commutative_algebra/regular_local_rings)) local ring에 대한 절대적 조건이므로, 이를 상대적 상황으로 옮기려면 base의 각 점 위 fiber를 그 residue field의 algebraic closure 위로 끌어올린 *geometric fiber*에서 regularity를 요구해야 한다.
+Unramified morphism이 fiber의 무한소 방향을 모두 죽인다면, smooth morphism은 fiber가 base 위에서 균일하게 regular family를 이루도록 한다. Regularity는 ([\[가환대수학\] §정칙국소환](/ko/math/commutative_algebra/regular_local_rings)) local ring에 대한 절대적 조건이므로, 이를 상대적 상황으로 옮기려면 base의 각 점 위 fiber를 그 residue field의 algebraic closure 위로 끌어올린 *geometric fiber*에서 regularity를 요구해야 한다.
 
 ::: 정의 3
 Locally of finite presentation인 scheme morphism $f:X \rightarrow S$가 *smooth<sub>매끄러운</sub>*하다는 것은 다음 두 조건이 성립하는 것이다.
@@ -68,7 +68,7 @@ Locally of finite presentation인 scheme morphism $f:X \rightarrow S$가 *smooth
    는 regular scheme이다. 즉 그 모든 local ring이 regular local ring이다.
 :::
 
-이 정의에서 두 조건은 서로 다른 방향을 통제한다. flatness는 fiber들이 base를 따라 차원 도약 없이 연속적으로 변함을 보장하고 ([§평탄사상, ⁋명제 15](/ko/math/scheme_theory/flat_morphisms#prop15)), geometric fiber의 regularity는 각 fiber 자체가 singular point를 가지지 않음을 보장한다. residue field가 완전하지 않을 때 fiber $X_s$가 regular이더라도 base change 후 singular point가 생길 수 있으므로, algebraic closure 위의 geometric fiber에서 regularity를 요구하는 것이 본질적이다.
+이 정의에서 두 조건은 서로 다른 방향을 통제한다. Flatness는 fiber들이 base를 따라 차원 도약 없이 연속적으로 변함을 보장하고 ([§평탄사상, ⁋명제 15](/ko/math/scheme_theory/flat_morphisms#prop15)), geometric fiber의 regularity는 각 fiber 자체가 singular point를 가지지 않음을 보장한다. Residue field가 완전하지 않을 때 fiber $X_s$가 regular이더라도 base change 후 singular point가 생길 수 있으므로, algebraic closure 위의 geometric fiber에서 regularity를 요구하는 것이 본질적이다.
 
 Smooth morphism은 cotangent sheaf의 국소자유성으로 동치적으로 특징지어진다. 이것이 미분기하의 submersion과의 직접적 연결을 준다.
 
@@ -110,7 +110,7 @@ $$J=\Bigl(\frac{\partial f_i}{\partial \x_j}\Bigr)_{\substack{1\leq i\leq r\\ 1\
 의 $\kappa(x)$ 위에서의 rank가 $r$이면, $f:X \rightarrow S$는 $x$의 어떤 열린 근방에서 상대차원 $n-r$의 smooth morphism이다.
 :::
 ::: 증명
-$B=A[\x_1,\ldots, \x_n]/(f_1,\ldots, f_r)$, $P=A[\x_1,\ldots, \x_n]$이라 하고 $\mathfrak{a}=(f_1,\ldots, f_r)$라 하자. closed immersion $X\hookrightarrow \mathbb{A}^n_S$의 conormal exact sequence는 ([§Kähler 미분과 여접층, ⁋명제 2](/ko/math/scheme_theory/sheaf_of_differentials#prop2))
+$B=A[\x_1,\ldots, \x_n]/(f_1,\ldots, f_r)$, $P=A[\x_1,\ldots, \x_n]$이라 하고 $\mathfrak{a}=(f_1,\ldots, f_r)$라 하자. Closed immersion $X\hookrightarrow \mathbb{A}^n_S$의 conormal exact sequence는 ([§Kähler 미분과 여접층, ⁋명제 2](/ko/math/scheme_theory/sheaf_of_differentials#prop2))
 
 $$\mathfrak{a}/\mathfrak{a}^2 \overset{\bar d}{\longrightarrow} \Omega_{P/A}\otimes_PB \longrightarrow \Omega_{B/A} \longrightarrow 0$$
 
@@ -210,7 +210,7 @@ $$D(bb')=g(b)g(b')-g'(b)g'(b')=g(b)D(b')+D(b)g'(b')\equiv g_0(b)D(b')+D(b)g_0(b'
 
 이로부터 (2)를 얻는다. $f$가 unramified하면 $\Omega_{B/A}=0$이므로 $\Hom_B(\Omega_{B/A}, \mathfrak{b})=0$이고, 따라서 두 lifting의 차이가 항상 영, 곧 lifting은 많아야 하나이다. 역으로 lifting이 항상 많아야 하나이면, $T_0=X$, $T=X[\epsilon]$를 $\Omega_{X/S}$의 dual로 만든 표준 square-zero 확대로 택하여 두 자명한 lifting이 일치해야 함을 보이면 $\Der_A(B, \Omega_{B/A})$의 항등원이 영이 되어 $\Omega_{B/A}=0$이 강제된다. 따라서 $f$는 unramified하다.
 
-(1)을 보인다. $f$가 smooth하다 하자. lifting의 obstruction은 다음과 같이 분석된다. $g_0^\sharp:B \rightarrow R_0$이 주어졌을 때 이를 $B \rightarrow R$로 들어올리려면, $B$의 generator의 image를 $R$로 임의로 올린 뒤 그것이 $B$의 relation을 만족하도록 $\mathfrak{b}$ 안에서 수정해야 한다. 이 수정의 가능 여부가 $\Omega_{B/A}$의 국소자유성으로 통제된다. $B$를 $P=A[\x_i]$의 quotient $P/\mathfrak{a}$로 표시하면, $P \rightarrow R$로의 lifting은 자유 다항식환이므로 항상 존재하고, 그것이 $\mathfrak{a}$를 $0$으로 보내도록 $\Hom(\mathfrak{a}/\mathfrak{a}^2, \mathfrak{b})$ 안에서 수정 가능한지가 문제이다. Smooth 가정에서 conormal exact sequence
+(1)을 보인다. $f$가 smooth하다 하자. Lifting의 obstruction은 다음과 같이 분석된다. $g_0^\sharp:B \rightarrow R_0$이 주어졌을 때 이를 $B \rightarrow R$로 들어올리려면, $B$의 generator의 image를 $R$로 임의로 올린 뒤 그것이 $B$의 relation을 만족하도록 $\mathfrak{b}$ 안에서 수정해야 한다. 이 수정의 가능 여부가 $\Omega_{B/A}$의 국소자유성으로 통제된다. $B$를 $P=A[\x_i]$의 quotient $P/\mathfrak{a}$로 표시하면, $P \rightarrow R$로의 lifting은 자유 다항식환이므로 항상 존재하고, 그것이 $\mathfrak{a}$를 $0$으로 보내도록 $\Hom(\mathfrak{a}/\mathfrak{a}^2, \mathfrak{b})$ 안에서 수정 가능한지가 문제이다. Smooth 가정에서 conormal exact sequence
 
 $$\mathfrak{a}/\mathfrak{a}^2 \rightarrow \Omega_{P/A}\otimes B \rightarrow \Omega_{B/A} \rightarrow 0$$
 

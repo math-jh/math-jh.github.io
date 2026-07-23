@@ -115,7 +115,7 @@ $$\varphi := E^{-1} \circ (\exp_p\vert_V)^{-1} : U \rightarrow \mathbb{R}^n$$
 $p$를 중심으로 하는 normal coordinate $(x^i)$에서 다음이 성립한다.
 
 1. 각 $v = \sum_i v^i E_i \in V$에 대해, 측지선 $\gamma_v$는 좌표상에서 원점을 지나는 직선 $t \mapsto (t v^1, \ldots, t v^n)$으로 표현된다 (이것이 정의되는 $t$에 대해).
-2. metric의 성분은 $p$에서 $g_{ij}(p) = \delta_{ij}$이다.
+2. Metric의 성분은 $p$에서 $g_{ij}(p) = \delta_{ij}$이다.
 3. Christoffel 기호는 $p$에서 모두 소멸한다. 즉 $\Gamma_{ij}^k(p) = 0$이다.
 :::
 

@@ -78,7 +78,7 @@ $af\in\mathbb{Z}[\x]$이도록 하는 최소의 양의 정수를 $a$, $bg\in\mat
 임의의 자연수 $n\geq1$에 대하여 $\Phi_n$은 $\mathbb{Q}[\x]$에서 irreducible이다.
 :::
 ::: 증명
-Primitive $n$-th root of unity $\zeta\in\overline{\mathbb{Q}}$를 하나 고정하고, $f\in\mathbb{Q}[\x]$를 $\zeta$의 minimal polynomial이라 하자. $\Phi_n(\zeta)=0$과 $\zeta^n-1=0$이므로 [§대수적 확장, ⁋정리 15](/ko/math/field_theory/algebraic_extensions#thm15)에 의하여 $f$는 $\Phi_n$과 $\x^n-1$을 모두 나눈다. quotient를 $g$라 하여 $\x^n-1=fg$로 쓰면 $f,g$가 모두 monic이므로 [보조정리 3](#lem3)에 의해 $f,g\in\mathbb{Z}[\x]$이다.
+Primitive $n$-th root of unity $\zeta\in\overline{\mathbb{Q}}$를 하나 고정하고, $f\in\mathbb{Q}[\x]$를 $\zeta$의 minimal polynomial이라 하자. $\Phi_n(\zeta)=0$과 $\zeta^n-1=0$이므로 [§대수적 확장, ⁋정리 15](/ko/math/field_theory/algebraic_extensions#thm15)에 의하여 $f$는 $\Phi_n$과 $\x^n-1$을 모두 나눈다. Quotient를 $g$라 하여 $\x^n-1=fg$로 쓰면 $f,g$가 모두 monic이므로 [보조정리 3](#lem3)에 의해 $f,g\in\mathbb{Z}[\x]$이다.
 
 증명의 핵심은 $n$을 나누지 않는 임의의 소수 $p$와 $f$의 임의의 root $\omega$에 대하여 $\omega^p$ 또한 $f$의 root라는 주장이다. 이를 보이기 위해 $f(\omega^p)\neq0$이라 가정하자. $\omega^n=1$이므로 $\omega^p$는 $\x^n-1$의 root이고, 따라서 $g(\omega^p)=0$이다. 즉 $\omega$는 $g(\x^p)\in\mathbb{Z}[\x]$의 root이다. 한편 $f$는 minimal polynomial이므로 monic irreducible이고, $f(\omega)=0$이므로 [§대수적 확장, ⁋정리 15](/ko/math/field_theory/algebraic_extensions#thm15)에 의해 $f$는 $\omega$의 minimal polynomial이며 따라서 $f$는 $g(\x^p)$를 나눈다. $f$가 monic이므로 그 quotient 또한 $\mathbb{Z}[\x]$에 속한다. ([\[환론\] §다항식환, ⁋명제 5](/ko/math/ring_theory/polynomial_rings#prop5))
 

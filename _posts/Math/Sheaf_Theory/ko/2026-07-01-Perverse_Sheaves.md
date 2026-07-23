@@ -77,7 +77,7 @@ $$\ker f := H^{-1}(C) = \tau_{\leq 0}(C[-1]), \qquad \operatorname{coker} f := H
 t-structure가 추상적으로 무엇을 포착하는지는 가장 기본적인 예에서 분명해진다. 유도 범주 $D(\mathcal{A})$에는 원래의 abelian 범주 $\mathcal{A}$를 heart로 회복하는 t-structure가 있다.
 
 ::: 예시 5
-abelian 범주 $\mathcal{A}$의 유도 범주 $D(\mathcal{A})$ 위에서
+Abelian 범주 $\mathcal{A}$의 유도 범주 $D(\mathcal{A})$ 위에서
 $$D^{\leq 0}(\mathcal{A}) := \{ C^\bullet : H^i(C^\bullet) = 0 \text{ for } i > 0 \}, \qquad D^{\geq 0}(\mathcal{A}) := \{ C^\bullet : H^i(C^\bullet) = 0 \text{ for } i < 0 \}$$
 으로 두면 $(D^{\leq 0}, D^{\geq 0})$은 t-structure이며, 이를 *standard t-structure*라 부른다. 그 heart는 $\mathcal{A}$ (정확히는 $A \mapsto A[0]$로 박힌 충만한 부분범주)이고, cohomology functor $H^0$은 complex의 통상적 $0$차 cohomology object이다.
 :::
@@ -103,7 +103,7 @@ $$\operatorname{Perv}(X) := {}^{p}D^{\leq 0}(X) \cap {}^{p}D^{\geq 0}(X)$$
 의 대상을 $X$ 위의 *perverse sheaf<sub>perverse 층</sub>*라 부른다.
 :::
 
-support 조건은 degree $i$가 커질수록 support의 차원이 $-i$ 이하로 줄어들기를 요구하며, 특히 $i > 0$이면 $\dim \operatorname{supp}\mathcal{H}^i \leq -i < 0$이므로 $\mathcal{H}^i = 0$이다. 따라서 ${}^{p}D^{\leq 0}$의 대상은 degree $\leq 0$에 집중되고, support가 $d$차원인 곳에서는 degree $-d$까지만 cohomology를 가질 수 있다. Cosupport 조건은 이 제약을 $\mathbf{D}_X$로 옮긴 것으로, biduality $\mathbf{D}_X^2 \cong \id$ ([§Verdier 쌍대성, ⁋정리 7](/ko/math/sheaf_theory/verdier_duality#thm7)) 덕분에 두 조건이 $\mathbf{D}_X$ 아래에서 정확히 맞교환된다. smooth connected $n$차원 variety $X$ 위의 rank 유한 local system $L$에 대해 $L[n]$을 보면, $\mathcal{H}^{-n}(L[n]) = L$의 support가 $X$ 전체이므로 $\dim X = n \leq -(-n) = n$이 등호로 성립하고 다른 degree의 cohomology가 없어 support 조건을 만족하며, $\mathbf{D}_X(L[n]) \cong L^\vee[n]$ 역시 같은 이유로 support 조건을 만족하므로 $L[n] \in \operatorname{Perv}(X)$이다. 이것이 이름의 "middle"이 가리키는 normalization이다.
+Support 조건은 degree $i$가 커질수록 support의 차원이 $-i$ 이하로 줄어들기를 요구하며, 특히 $i > 0$이면 $\dim \operatorname{supp}\mathcal{H}^i \leq -i < 0$이므로 $\mathcal{H}^i = 0$이다. 따라서 ${}^{p}D^{\leq 0}$의 대상은 degree $\leq 0$에 집중되고, support가 $d$차원인 곳에서는 degree $-d$까지만 cohomology를 가질 수 있다. Cosupport 조건은 이 제약을 $\mathbf{D}_X$로 옮긴 것으로, biduality $\mathbf{D}_X^2 \cong \id$ ([§Verdier 쌍대성, ⁋정리 7](/ko/math/sheaf_theory/verdier_duality#thm7)) 덕분에 두 조건이 $\mathbf{D}_X$ 아래에서 정확히 맞교환된다. Smooth connected $n$차원 variety $X$ 위의 rank 유한 local system $L$에 대해 $L[n]$을 보면, $\mathcal{H}^{-n}(L[n]) = L$의 support가 $X$ 전체이므로 $\dim X = n \leq -(-n) = n$이 등호로 성립하고 다른 degree의 cohomology가 없어 support 조건을 만족하며, $\mathbf{D}_X(L[n]) \cong L^\vee[n]$ 역시 같은 이유로 support 조건을 만족하므로 $L[n] \in \operatorname{Perv}(X)$이다. 이것이 이름의 "middle"이 가리키는 normalization이다.
 
 ::: 정리 7
 $({}^{p}D^{\leq 0}(X), {}^{p}D^{\geq 0}(X))$은 $D^b_c(X)$ 위의 bounded t-structure이다. 따라서 $\operatorname{Perv}(X)$은 abelian 범주이고, 그 위의 cohomology functor ${}^{p}\mathcal{H}^i: D^b_c(X) \rightarrow \operatorname{Perv}(X)$이 정의된다. 또한 Verdier 쌍대 functor는 $\mathbf{D}_X({}^{p}D^{\leq 0}) = {}^{p}D^{\geq 0}$, $\mathbf{D}_X({}^{p}D^{\geq 0}) = {}^{p}D^{\leq 0}$을 만족하므로 $\operatorname{Perv}(X)$을 자기 자신으로 보내며, $\operatorname{Perv}(X)$은 Noetherian이자 Artinian, 즉 모든 대상이 유한 길이를 가진다.
@@ -138,7 +138,7 @@ $$\operatorname{IC}_Z(L) := (i_Z)_\ast j_{!\ast}(L[d]) \in \operatorname{Perv}(X
 을 $(Z, L)$의 *intersection cohomology sheaf* 또는 *IC sheaf*라 부른다.
 :::
 
-정의에서 $L[d]$는 smooth $d$차원 variety $U_Z$ 위의 perverse sheaf이고 ([예시 8](#ex8)), closed embedding에 대한 $(i_Z)_\ast$은 perverse sheaf를 perverse sheaf로 보내는 t-exact functor이므로 $\operatorname{IC}_Z(L)$은 $X$ 위의 perverse sheaf이다. support는 $Z$이며, $Z$의 smooth한 부분으로 제한하면 $L[d]$로 돌아온다. $X$ 자신이 irreducible이고 $L$이 자명한 rank $1$ local system이면 $\operatorname{IC}_X := \operatorname{IC}_X(k_{U})$로 적고, 이것이 $X$의 intersection cohomology를 계산하는 complex이다. smooth한 $X$에서는 $U = X$, $j = \id$이므로 $\operatorname{IC}_X = k_X[\dim X]$이 되어 [예시 8](#ex8)의 상수 sheaf shift로 환원된다.
+정의에서 $L[d]$는 smooth $d$차원 variety $U_Z$ 위의 perverse sheaf이고 ([예시 8](#ex8)), closed embedding에 대한 $(i_Z)_\ast$은 perverse sheaf를 perverse sheaf로 보내는 t-exact functor이므로 $\operatorname{IC}_Z(L)$은 $X$ 위의 perverse sheaf이다. Support는 $Z$이며, $Z$의 smooth한 부분으로 제한하면 $L[d]$로 돌아온다. $X$ 자신이 irreducible이고 $L$이 자명한 rank $1$ local system이면 $\operatorname{IC}_X := \operatorname{IC}_X(k_{U})$로 적고, 이것이 $X$의 intersection cohomology를 계산하는 complex이다. Smooth한 $X$에서는 $U = X$, $j = \id$이므로 $\operatorname{IC}_X = k_X[\dim X]$이 되어 [예시 8](#ex8)의 상수 sheaf shift로 환원된다.
 
 Intermediate extension의 결정적 성질은 그것이 열린 부분 위의 자료를 closed 부분으로 "과잉도 부족도 없이" 연장한다는 것이며, 이를 부분대상과 quotient object의 support로 특징짓는다.
 
@@ -151,7 +151,7 @@ Open embedding $j: U \hookrightarrow X$, closed 보충 $i: Z = X \setminus U \ho
 ::: 증명
 (1) $j_{!\ast}\mathcal{F}$를 image로 정의했으므로 $j_!$ 쪽에서 오는 표준 morphism은 전사, $Rj_\ast$ 쪽으로 가는 morphism은 단사이다. 만약 $j_{!\ast}\mathcal{F}$가 $Z$에 support를 가진 $0$ 아닌 부분대상 $\mathcal{S}$를 가진다면, $\mathcal{S} = i_\ast i^{-1}\mathcal{S}$이고 이는 ${}^{p}\mathcal{H}^0(Rj_\ast\mathcal{F})$로 가는 단사를 통해 살아남아야 하는데, [§고유 받음과 여섯 함자, ⁋정리 10](/ko/math/sheaf_theory/six_functors#thm10)이 주는 recollement의 t-완전성 분석에서 $Rj_\ast$로의 단사가 $Z$에 support를 가진 부분대상을 죽이므로 모순이다. Quotient object에 대해서는 $j_!$로부터의 전사와 같은 논증을 쌍대로 적용한다. 유일성은 두 조건 (부분대상·quotient object의 부재)을 동시에 만족하는 연장이 표준 morphism의 image와 일치할 수밖에 없음을 보여 얻는다.
 
-(2) Verdier duality는 [§Verdier 쌍대성, ⁋명제 8](/ko/math/sheaf_theory/verdier_duality#prop8)에 의해 $j_!$과 $Rj_\ast$을 맞교환하고 $j^{-1}$을 보존하므로, morphism $j_!\mathcal{F} \rightarrow Rj_\ast\mathcal{F}$에 $\mathbf{D}_X$를 적용하면 $\mathbf{D}_U\mathcal{F}$에 대한 같은 종류의 morphism $j_!(\mathbf{D}_U\mathcal{F}) \rightarrow Rj_\ast(\mathbf{D}_U\mathcal{F})$이 (방향을 보존한 채) 나온다. $\mathbf{D}_X$가 anti-equivalence이므로 image의 $\mathbf{D}_X$는 $\mathbf{D}_X$의 image이고, 따라서 $\mathbf{D}_X(j_{!\ast}\mathcal{F}) \cong j_{!\ast}(\mathbf{D}_U\mathcal{F})$이다. smooth $d$차원 $U_Z$ 위에서 $\mathbf{D}_{U_Z}(L[d]) \cong L^\vee[d]$이므로, $L \cong L^\vee$이면 $\operatorname{IC}_Z(L)$이 자기쌍대이다. 자세한 논증은 [BBD]의 §2.1.9–2.1.11을 따른다.
+(2) Verdier duality는 [§Verdier 쌍대성, ⁋명제 8](/ko/math/sheaf_theory/verdier_duality#prop8)에 의해 $j_!$과 $Rj_\ast$을 맞교환하고 $j^{-1}$을 보존하므로, morphism $j_!\mathcal{F} \rightarrow Rj_\ast\mathcal{F}$에 $\mathbf{D}_X$를 적용하면 $\mathbf{D}_U\mathcal{F}$에 대한 같은 종류의 morphism $j_!(\mathbf{D}_U\mathcal{F}) \rightarrow Rj_\ast(\mathbf{D}_U\mathcal{F})$이 (방향을 보존한 채) 나온다. $\mathbf{D}_X$가 anti-equivalence이므로 image의 $\mathbf{D}_X$는 $\mathbf{D}_X$의 image이고, 따라서 $\mathbf{D}_X(j_{!\ast}\mathcal{F}) \cong j_{!\ast}(\mathbf{D}_U\mathcal{F})$이다. Smooth $d$차원 $U_Z$ 위에서 $\mathbf{D}_{U_Z}(L[d]) \cong L^\vee[d]$이므로, $L \cong L^\vee$이면 $\operatorname{IC}_Z(L)$이 자기쌍대이다. 자세한 논증은 [BBD]의 §2.1.9–2.1.11을 따른다.
 :::
 
 [명제 11](#prop11)의 첫째 성질이 단순성을 함의한다. $Z$에 support를 가진 부분대상도 quotient object도 없는 perverse sheaf는, local system $L$이 irreducible이면 더 쪼갤 수 없다. 이로부터 $\operatorname{Perv}(X)$의 simple 대상이 완전히 분류된다.
@@ -220,7 +220,7 @@ $\Delta^\ast$ 위의 rank $r$ local system $L$의 monodromy를 $T: V \rightarrow
 $$\big(V,\ \operatorname{im}(T - \id),\ \operatorname{can} = (T - \id)\ \text{(전사)},\ \operatorname{var} = \text{포함}\big)$$
 으로, 곧 $\operatorname{can}$이 전사이고 $\operatorname{var}$이 단사인 intermediate extension이다. 이는 [명제 11](#prop11)이 추상적으로 기술한 "$Z = \{0\}$에 support를 가진 부분대상·quotient object의 부재"를 선형대수로 본 것인데, $\{0\}$에 support를 가진 자료는 $\Psi = 0$인 것 ($\Phi$만 있는 skyscraper)이고, $\operatorname{can}$ 전사성이 그러한 quotient object를, $\operatorname{var}$ 단사성이 그러한 부분대상을 배제한다. 실제로 stalk와 costalk는 $i^{-1}M$이 complex $[\Psi \xrightarrow{\operatorname{can}} \Phi]$로, $i^! M$이 $[\Phi \xrightarrow{\operatorname{var}} \Psi]$로 계산되므로, $\operatorname{can}$이 isomorphic하면 $i^{-1} = 0$ (extension by zero, 곧 $j_!$)이고 $\operatorname{var}$이 isomorphic하면 $i^! = 0$ (곧 $Rj_\ast$)임이 위 자료와 일관된다.
 
-monodromy가 자명한 특수한 경우 $T = \id$ (상수 sheaf $k_{\Delta^\ast}$)에서는 $T - \id = 0$이므로 $\operatorname{im}(T - \id) = 0$이고, 따라서 $\operatorname{IC}_\Delta(k) \leftrightarrow (V, 0, 0, 0)$, 곧 소멸 cycle이 없는 자료가 되어 $j_{!\ast}(k_{\Delta^\ast}[1]) = k_\Delta[1]$이 [예시 8](#ex8)의 smooth한 경우로 환원된다. 반면 $j_!$과 $Rj_\ast$은 이때 $\Phi = V \neq 0$인 자료를 주어, 원점에서 $V$만큼의 잉여를 가진 채 perverse sheaf로 남는다. 이 잉여가 [참고 9](#rmk9)에서 본 특이공간의 잉여 stalk와 같은 종류의 현상이며, intermediate extension이 그것을 정확히 깎아 내어 자기쌍대 대상을 만든다.
+Monodromy가 자명한 특수한 경우 $T = \id$ (상수 sheaf $k_{\Delta^\ast}$)에서는 $T - \id = 0$이므로 $\operatorname{im}(T - \id) = 0$이고, 따라서 $\operatorname{IC}_\Delta(k) \leftrightarrow (V, 0, 0, 0)$, 곧 소멸 cycle이 없는 자료가 되어 $j_{!\ast}(k_{\Delta^\ast}[1]) = k_\Delta[1]$이 [예시 8](#ex8)의 smooth한 경우로 환원된다. 반면 $j_!$과 $Rj_\ast$은 이때 $\Phi = V \neq 0$인 자료를 주어, 원점에서 $V$만큼의 잉여를 가진 채 perverse sheaf로 남는다. 이 잉여가 [참고 9](#rmk9)에서 본 특이공간의 잉여 stalk와 같은 종류의 현상이며, intermediate extension이 그것을 정확히 깎아 내어 자기쌍대 대상을 만든다.
 
 ---
 

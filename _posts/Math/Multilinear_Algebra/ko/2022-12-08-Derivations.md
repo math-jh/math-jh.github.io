@@ -145,7 +145,7 @@ $\Delta = \mathbb{Z}$라 하자. 이때 다음이 성립한다.
 
 1. Antiderivation의 제곱은 derivation이다.  
 2. 두 derivation의 bracket은 derivation이다.  
-3. antiderivation과 짝수 degree derivation의 bracket은 antiderivation이다.  
+3. Antiderivation과 짝수 degree derivation의 bracket은 antiderivation이다.  
 4. $d_1$, $d_2$가 antiderivation이면, $d_1 d_2 + d_2 d_1$은 derivation이다.
 :::
 

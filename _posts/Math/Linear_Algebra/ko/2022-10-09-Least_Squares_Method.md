@@ -194,7 +194,7 @@ $$AA^+ A=A,\quad A^+ AA^+=A^+,\quad (AA^+)^t=AA^+,\quad (A^+ A)^t=A^+ A$$
 $A$가 가역인 정사각행렬이라면 $A^+=A^{-1}$이 성립한다. 이는 $A^tA$과 $AA^t$이 모두 가역이어서 $A^+=(A^tA)^{-1}A^t=A^{-1}(A^t)^{-1}A^t=A^{-1}$이 되기 때문이다. 이러한 의미에서 pseudoinverse는 역행렬의 개념을 일반화한다.
 :::
 
-pseudoinverse를 도입하면 앞 절의 최소제곱과 이 절의 최소노름이 하나의 공식으로 통합된다. $A$가 full column rank인 경우 $x=A^+ y=(A^tA)^{-1}A^ty$는 $\lVert Ax-y\rVert$을 최소로 하는 유일한 최소제곱해이고, $A$가 full row rank인 경우 $x=A^+ y=A^t(AA^t)^{-1}y$는 $Ax=y$의 최소노름해이다. 일반적인 행렬에 대해서도 $x=A^+ y$는 $\lVert Ax-y\rVert$을 최소로 하는 해들 중 다시 norm이 최소인 유일한 해를 주며, 이로써 두 절에서 따로 다룬 문제가 pseudoinverse라는 하나의 대상으로 자연스럽게 통합된다.
+Pseudoinverse를 도입하면 앞 절의 최소제곱과 이 절의 최소노름이 하나의 공식으로 통합된다. $A$가 full column rank인 경우 $x=A^+ y=(A^tA)^{-1}A^ty$는 $\lVert Ax-y\rVert$을 최소로 하는 유일한 최소제곱해이고, $A$가 full row rank인 경우 $x=A^+ y=A^t(AA^t)^{-1}y$는 $Ax=y$의 최소노름해이다. 일반적인 행렬에 대해서도 $x=A^+ y$는 $\lVert Ax-y\rVert$을 최소로 하는 해들 중 다시 norm이 최소인 유일한 해를 주며, 이로써 두 절에서 따로 다룬 문제가 pseudoinverse라는 하나의 대상으로 자연스럽게 통합된다.
 
 ---
 

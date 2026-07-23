@@ -145,7 +145,7 @@ $$\mu_i(H)=\mu_i(H')=\frac12\mu_i(\mathbb{R}^n)$$
 이 성립한다.
 :::
 ::: 증명
-hyperplane 전체를 구 $S^n$으로 매개변수화한다. $u=(u_0,u_1,\ldots,u_n)\in S^n\subseteq\mathbb{R}^{n+1}$에 대하여 closed 반공간
+Hyperplane 전체를 구 $S^n$으로 매개변수화한다. $u=(u_0,u_1,\ldots,u_n)\in S^n\subseteq\mathbb{R}^{n+1}$에 대하여 closed 반공간
 
 $$H_u=\{x\in\mathbb{R}^n\mid u_1x_1+\cdots+u_nx_n\leq u_0\}$$
 
@@ -207,7 +207,7 @@ $$\pi:\partial\Delta\rightarrow S^n;\qquad\pi(y)=\frac{y}{\lvert y\rvert}$$
 
 ## 구의 embedding 불가능성
 
-마지막으로, Borsuk–Ulam 정리는 구가 한 차원 낮아 보이는 유클리드 공간에 들어갈 수 없다는 사실을 즉시 준다. embedding이 있다면 그것은 특히 단사인 연속함수를 낳는데, Borsuk–Ulam 정리는 그러한 단사성을 대척쌍에서 곧바로 무너뜨린다.
+마지막으로, Borsuk–Ulam 정리는 구가 한 차원 낮아 보이는 유클리드 공간에 들어갈 수 없다는 사실을 즉시 준다. Embedding이 있다면 그것은 특히 단사인 연속함수를 낳는데, Borsuk–Ulam 정리는 그러한 단사성을 대척쌍에서 곧바로 무너뜨린다.
 
 ::: 따름정리 11
 $n\geq 1$에 대하여, $S^n$은 $\mathbb{R}^n$에 위상적으로 embedding되지 않는다. 곧 image 위로의 homeomorphism이 되는 연속 단사함수 $e:S^n\rightarrow\mathbb{R}^n$은 존재하지 않는다.

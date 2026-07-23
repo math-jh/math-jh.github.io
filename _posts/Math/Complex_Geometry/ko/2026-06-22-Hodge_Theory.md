@@ -14,7 +14,7 @@ weight: 5
 published: false
 ---
 
-complex manifold에서 exterior derivative가 $d = \partial + \bar\partial$로 갈라지고, 그로부터 regularity를 재는 Dolbeault cohomology $H^{p,q}_{\bar\partial}(X)$가 나옴을 보았다 ([§Dolbeault 코호몰로지, ⁋정의 4](/ko/math/complex_geometry/dolbeault_cohomology#def4)). 같은 글에서 우리는 de Rham cohomology의 $(p,q)$-분해
+Complex manifold에서 exterior derivative가 $d = \partial + \bar\partial$로 갈라지고, 그로부터 regularity를 재는 Dolbeault cohomology $H^{p,q}_{\bar\partial}(X)$가 나옴을 보았다 ([§Dolbeault 코호몰로지, ⁋정의 4](/ko/math/complex_geometry/dolbeault_cohomology#def4)). 같은 글에서 우리는 de Rham cohomology의 $(p,q)$-분해
 
 $$
 H^k_{\mathrm{dR}}(X, \mathbb{C}) \overset{?}{\cong} \bigoplus_{p+q=k} H^{p,q}_{\bar\partial}(X)
@@ -64,7 +64,7 @@ $$
 가 성립하는 작용소로 정의한다. 명시적으로, $p$-형식 위에서 $d^\ast = (-1)^{m(p+1)+1} \ast d\, \ast$이며, 이는 degree를 하나 내린다.
 :::
 
-수반작용소가 존재하고 유일함은 Stokes 정리에서 나온다. $M$이 boundary 없는 콤팩트 manifold이므로 $\int_M d(\alpha \wedge \ast\beta) = 0$이고, $d(\alpha \wedge \ast\beta) = d\alpha \wedge \ast\beta + (-1)^k \alpha \wedge d(\ast\beta)$를 전개하여 $\ast\ast$의 부호를 정리하면 위 명시 공식이 $(d\alpha, \beta) = (\alpha, d^\ast\beta)$를 만족함을 직접 확인할 수 있다. 작용소 $d$가 degree를 하나 올리는 반면 $d^\ast$는 하나 내리며, $d^2 = 0$에서 $(d^\ast)^2 = 0$이 따라온다. complex manifold에서는 같은 방식으로 $\partial$과 $\bar\partial$의 수반작용소 $\partial^\ast$, $\bar\partial^\ast$를 $L^2$-내적에 대해 정의하며 ([§Kähler 다양체, ⁋정리 12](/ko/math/complex_geometry/kahler_manifolds#thm12)에서 이미 도입), $\partial^\ast = -\ast\bar\partial\ast$, $\bar\partial^\ast = -\ast\partial\ast$ 꼴이다 (Hodge star가 $\partial$과 $\bar\partial$를 맞바꾸므로 수반에 켤레 작용소가 나타난다).
+수반작용소가 존재하고 유일함은 Stokes 정리에서 나온다. $M$이 boundary 없는 콤팩트 manifold이므로 $\int_M d(\alpha \wedge \ast\beta) = 0$이고, $d(\alpha \wedge \ast\beta) = d\alpha \wedge \ast\beta + (-1)^k \alpha \wedge d(\ast\beta)$를 전개하여 $\ast\ast$의 부호를 정리하면 위 명시 공식이 $(d\alpha, \beta) = (\alpha, d^\ast\beta)$를 만족함을 직접 확인할 수 있다. 작용소 $d$가 degree를 하나 올리는 반면 $d^\ast$는 하나 내리며, $d^2 = 0$에서 $(d^\ast)^2 = 0$이 따라온다. Complex manifold에서는 같은 방식으로 $\partial$과 $\bar\partial$의 수반작용소 $\partial^\ast$, $\bar\partial^\ast$를 $L^2$-내적에 대해 정의하며 ([§Kähler 다양체, ⁋정리 12](/ko/math/complex_geometry/kahler_manifolds#thm12)에서 이미 도입), $\partial^\ast = -\ast\bar\partial\ast$, $\bar\partial^\ast = -\ast\partial\ast$ 꼴이다 (Hodge star가 $\partial$과 $\bar\partial$를 맞바꾸므로 수반에 켤레 작용소가 나타난다).
 
 ## Laplace 작용소와 조화형식
 
@@ -132,7 +132,7 @@ $$
 ::: 증명
 분해 자체는 타원작용소 이론의 결과이므로 그 핵심 입력만 인용하고, 거기서 cohomology와의 동형을 끌어내는 부분을 증명한다.
 
-작용소 $\Delta_d$는 콤팩트 manifold 위의 자기수반 이차 타원작용소이다. 타원성은 그 주표상 $\sigma(\Delta_d)(\xi) = -\lvert \xi \rvert^2 \cdot \mathrm{id}$이 $\xi \neq 0$에서 가역이라는 데서 나오며, 콤팩트 manifold 위 자기수반 타원작용소에 대한 일반론(Fredholm 이론과 elliptic regularity)이 다음을 준다. kernel $\mathcal{H}^k = \ker\Delta_d$는 유한차원이고, $L^2$-직교분해 $\Omega^k = \ker\Delta_d \oplus \Img\Delta_d$가 성립하며, $\Img\Delta_d = \Img(d d^\ast + d^\ast d)$이다. 여기까지가 인용하는 해석적 사실이다.
+작용소 $\Delta_d$는 콤팩트 manifold 위의 자기수반 이차 타원작용소이다. 타원성은 그 주표상 $\sigma(\Delta_d)(\xi) = -\lvert \xi \rvert^2 \cdot \mathrm{id}$이 $\xi \neq 0$에서 가역이라는 데서 나오며, 콤팩트 manifold 위 자기수반 타원작용소에 대한 일반론(Fredholm 이론과 elliptic regularity)이 다음을 준다. Kernel $\mathcal{H}^k = \ker\Delta_d$는 유한차원이고, $L^2$-직교분해 $\Omega^k = \ker\Delta_d \oplus \Img\Delta_d$가 성립하며, $\Img\Delta_d = \Img(d d^\ast + d^\ast d)$이다. 여기까지가 인용하는 해석적 사실이다.
 
 이제 $\Img\Delta_d = d\,\Omega^{k-1} \oplus d^\ast\,\Omega^{k+1}$임을 본다. 포함 $\supseteq$의 직교성부터 본다. $d\eta$와 $d^\ast\zeta$의 내적은 $(d\eta, d^\ast\zeta) = (d d\eta, \zeta) = 0$이므로 두 부분공간은 직교한다. 또 $\Delta_d\gamma = d(d^\ast\gamma) + d^\ast(d\gamma) \in d\,\Omega^{k-1} + d^\ast\,\Omega^{k+1}$이므로 $\Img\Delta_d \subseteq d\,\Omega^{k-1} \oplus d^\ast\,\Omega^{k+1}$이다. 역으로 $d\eta$를 분해의 셋째 직교성으로 본다. $d\eta$는 $\mathcal{H}^k$와 직교한다 (조화 $\alpha$에 대해 $(d\eta, \alpha) = (\eta, d^\ast\alpha) = 0$, [명제 5](#prop5)). 마찬가지로 $d^\ast\zeta$도 $\mathcal{H}^k$와 직교한다 ($(d^\ast\zeta, \alpha) = (\zeta, d\alpha) = 0$). 따라서 $d\,\Omega^{k-1} \oplus d^\ast\,\Omega^{k+1} \subseteq (\mathcal{H}^k)^\perp = \Img\Delta_d$이고, 위 포함과 합쳐 등식이 성립한다. 이로써
 
@@ -145,11 +145,11 @@ $$
 이 분해로부터 cohomology와의 동형을 끌어낸다. 닫힌 $k$-형식 $\alpha$를 위 분해로 $\alpha = h + d\eta + d^\ast\zeta$로 쓰면, $d\alpha = 0$이고 $dh = 0$ (조화는 닫힘), $d(d\eta) = 0$이므로 $d(d^\ast\zeta) = 0$이다. 그러면 $0 = (d d^\ast\zeta, \zeta) = (d^\ast\zeta, d^\ast\zeta) = \lVert d^\ast\zeta \rVert^2$이 되어 $d^\ast\zeta = 0$이다. 따라서 닫힌형식은 $\alpha = h + d\eta$ 꼴, 곧 조화 부분과 완전 부분의 합으로만 쓰인다. 이는 cohomology class $[\alpha] = [h]$가 유일한 조화 대표 $h$를 가짐을 뜻한다. 존재는 방금 보인 분해가 주고, 유일성은 두 조화형식이 cohomology에서 같으면 그 차 $h_1 - h_2 = d\beta$가 조화이자 완전형식인데, $(d\beta, d\beta) = (\beta, d^\ast d\beta)$에서 $d^\ast(d\beta) = \Delta_d(d\beta) - d d^\ast d\beta$를 따져 $\Delta_d(d\beta)=0$이고 $d^\ast(d\beta)=0$이면 $(d\beta,d\beta)=(\beta, d^\ast d \beta)=0$, 곧 $d\beta = 0$이 되어 두 대표가 같음에서 나온다. 따라서 $[\alpha] \mapsto h$가 잘 정의된 선형동형 $H^k_{\mathrm{dR}}(M, \mathbb{R}) \cong \mathcal{H}^k(M)$을 준다.
 :::
 
-Hodge 정리는 위상적 불변량인 de Rham cohomology를 해석적·계량적 대상인 조화형식으로 실현한다. Cohomology class라는 형식들의 무한차원 affine 공간이, 계량을 하나 정하는 순간 유한차원의 유일한 점 $\mathcal{H}^k$로 응축되는 것이다. 이 정리는 임의의 콤팩트 지향 Riemannian manifold에서 성립하며, 복소구조나 Kähler 조건을 전혀 요구하지 않는다. complex manifold에서는 같은 논법이 $\bar\partial$에 대해서도 작동하여, $\Delta_{\bar\partial} = \bar\partial\bar\partial^\ast + \bar\partial^\ast\bar\partial$의 kernel $\mathcal{H}^{p,q}_{\bar\partial}$가 Dolbeault cohomology를 실현한다. 곧 콤팩트 Hermitian manifold에서 $H^{p,q}_{\bar\partial}(X) \cong \mathcal{H}^{p,q}_{\bar\partial}(X)$가 성립한다. 여기서 $\Delta_d$와 $\Delta_{\bar\partial}$는 서로 무관한 작용소이며, 이 둘을 묶는 것이 바로 Kähler 조건이다.
+Hodge 정리는 위상적 불변량인 de Rham cohomology를 해석적·계량적 대상인 조화형식으로 실현한다. Cohomology class라는 형식들의 무한차원 affine 공간이, 계량을 하나 정하는 순간 유한차원의 유일한 점 $\mathcal{H}^k$로 응축되는 것이다. 이 정리는 임의의 콤팩트 지향 Riemannian manifold에서 성립하며, 복소구조나 Kähler 조건을 전혀 요구하지 않는다. Complex manifold에서는 같은 논법이 $\bar\partial$에 대해서도 작동하여, $\Delta_{\bar\partial} = \bar\partial\bar\partial^\ast + \bar\partial^\ast\bar\partial$의 kernel $\mathcal{H}^{p,q}_{\bar\partial}$가 Dolbeault cohomology를 실현한다. 곧 콤팩트 Hermitian manifold에서 $H^{p,q}_{\bar\partial}(X) \cong \mathcal{H}^{p,q}_{\bar\partial}(X)$가 성립한다. 여기서 $\Delta_d$와 $\Delta_{\bar\partial}$는 서로 무관한 작용소이며, 이 둘을 묶는 것이 바로 Kähler 조건이다.
 
 ## Kähler 조건과 Laplace 작용소
 
-콤팩트 Hermitian manifold에는 세 종류의 Laplace 작용소가 산다. exterior derivative에서 온 $\Delta_d = d d^\ast + d^\ast d$, 그리고 $\partial$·$\bar\partial$에서 온
+콤팩트 Hermitian manifold에는 세 종류의 Laplace 작용소가 산다. Exterior derivative에서 온 $\Delta_d = d d^\ast + d^\ast d$, 그리고 $\partial$·$\bar\partial$에서 온
 
 $$
 \Delta_\partial = \partial\partial^\ast + \partial^\ast\partial, \qquad \Delta_{\bar\partial} = \bar\partial\bar\partial^\ast + \bar\partial^\ast\bar\partial

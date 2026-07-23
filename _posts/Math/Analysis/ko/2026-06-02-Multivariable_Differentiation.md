@@ -183,7 +183,7 @@ $$\varphi(1) - \varphi(0) = \varphi'(\theta)$$
 벡터값 함수($m \ge 2$)에서는 이 등식이 성립하지 않음에 유의한다. 가령 $\gamma(t) = (\cos t, \sin t)$는 $\gamma(2\pi) - \gamma(0) = 0$이지만 $\gamma'(t) = (-\sin t, \cos t)$는 결코 $0$이 아니어서, 좌변을 한 점에서의 미분으로 표현할 수 없다. 대신 norm에 대한 부등식 형태가 살아남는데, 이로부터 다음 따름정리를 얻는다.
 
 ::: 따름정리 7
-convex 집합 $U$ 위에서 $f : U \rightarrow \mathbb{R}$가 미분가능하고 $\nabla f \equiv 0$이면, $f$는 $U$에서 상수이다.
+Convex 집합 $U$ 위에서 $f : U \rightarrow \mathbb{R}$가 미분가능하고 $\nabla f \equiv 0$이면, $f$는 $U$에서 상수이다.
 :::
 
 ::: 증명
