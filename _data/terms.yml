@@ -2901,6 +2901,8 @@ D:
     url: /ko/math/linear_algebra/eigenspace_decomposition
   - label: '[선형대수학] §고유공간분해'
     url: /ko/math/linear_algebra/eigenspace_decomposition
+  - label: '[체론] §에탈대수'
+    url: /ko/math/field_theory/etale_algebras#def5
 - id: diagonalization
   en: diagonalization
   ko: 대각화
