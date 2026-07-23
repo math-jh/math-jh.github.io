@@ -2583,6 +2583,27 @@ C:
   defs:
   - label: '[호몰로지 대수학] §호몰로지'
     url: /ko/math/homological_algebra/homology
+- id: cyclotomic_extension
+  en: cyclotomic extension
+  ko: 원분확대
+  primary: en
+  defs:
+  - label: '[체론] §원분확대'
+    url: /ko/math/field_theory/cyclotomic_extensions
+- id: cyclotomic_field
+  en: cyclotomic field
+  ko: 원분체
+  primary: en
+  defs:
+  - label: '[체론] §원분확대'
+    url: /ko/math/field_theory/cyclotomic_extensions
+- id: cyclotomic_polynomial
+  en: cyclotomic polynomial
+  ko: 원분다항식
+  primary: en
+  defs:
+  - label: '[체론] §원분확대'
+    url: /ko/math/field_theory/cyclotomic_extensions
 - id: cylindrical_coordinates
   en: cylindrical coordinates
   ko: 원기둥좌표
@@ -9057,6 +9078,13 @@ R:
   defs:
   - label: '[다중선형대수학] §대칭텐서'
     url: /ko/math/multilinear_algebra/symmetric_tensors
+- id: relative_virtual_cycle
+  en: relative virtual cycle
+  ko: 상대 가상류
+  primary: ko
+  defs:
+  - label: '[그로모프-위튼 이론] §Very ample hypersurface의 상대 GW 불변량: Gathmann의 정리'
+    url: /ko/math/gromov-witten_theory/gathmann_relative_gw
 - id: relatively_algebraically_closed_field
   en: relatively algebraically closed field
   ko: 상대적으로 대수적으로 닫힌 체

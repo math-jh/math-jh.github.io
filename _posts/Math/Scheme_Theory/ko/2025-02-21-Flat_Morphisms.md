@@ -185,26 +185,24 @@ $$X=\Proj A_\bullet/(\x\z-t\y^2)$$
 Fiber를 보면, $t=a\neq 0$ 위에서는 $\mathbb{P}^2$의 원뿔곡선 $\x\z=a\y^2$이 되어 smooth하고 $\mathbb{P}^1$과 isomorphic이다. 반면 $t=0$ 위에서는 $\x\z=0$, 즉 두 직선 $\{\x=0\}$과 $\{\z=0\}$이 점 $[0:1:0]$에서 만나는 곡선이 된다. 즉 이것은 smooth한 원뿔곡선이 두 직선으로 퇴화하는 상수 아닌 곡선들의 family이며, 그럼에도 모든 fiber가 $1$차원으로 남는다.
 :::
 
-## Generic flatness
+## Generic flatness와 Chevalley의 정리
 
-이제부터 flat morphism의 기하학적 성질들을 살펴볼 것인데, 그 증명들은 예외 없이 두 가지 준비물 위에 놓인다. 하나는 flatness가 base의 조밀한 열린집합 위에서는 언제나 성립한다는 사실이고, 다른 하나는 finite type morphism의 image가 언제나 constructible이라는 Chevalley의 정리이다. 그런데 이 둘은 모두 Grothendieck의 generic freeness라는 대수적 정리 하나에서 나온다. ([\[가환대수학\] §뇌터 정규화, ⁋정리 5](/ko/math/commutative_algebra/noether_normalization#thm5)) 곧 Noetherian integral domain $A$와 finite type $A$-algebra $B$, 그리고 finitely generated $B$-module $M$에 대하여 $0$이 아닌 $a\in A$가 존재하여 $M_a$가 free $A_a$-module이 된다는 것이며, 아래의 두 증명은 모두 이를 base의 affine chart에서 적용하는 형태이다.
+이제 우리는 글의 남은 부분에서 flat morphism의 기하학적 성질들을 더 살펴본다. 이를 위해서는 두 가지의 준비가 필요하며, 이 섹션은 이들을 위한 것이다. 이 두 준비물은 모두 [가환대수학\] §뇌터 정규화, ⁋정리 5](/ko/math/commutative_algebra/noether_normalization#thm5)를 사용하여 증명할 수 있다.
 
 ::: 명제 9 (Generic flatness)
-Noetherian integral scheme $Y$와 finite type morphism $f: X \rightarrow Y$가 주어졌다 하자. 그럼 $Y$의 조밀한 열린집합 $U$가 존재하여 $f\rvert_{f^{-1}(U)}: f^{-1}(U) \rightarrow U$가 flat이다.
+Noetherian integral scheme $Y$와 finite type morphism $f: X \rightarrow Y$가 주어졌다 하자. 그럼 $Y$의 dense open subset $U$가 존재하여 $f\rvert^U: f^{-1}(U) \rightarrow U$가 flat이다.
 :::
 ::: 증명
-$Y$가 irreducible이므로 $Y$의 공집합이 아닌 열린집합은 모두 조밀하다. 따라서 $Y$의 affine open $V=\Spec A$를 하나 고정하고 그 안에서 $U$를 찾으면 충분하다. $Y$가 Noetherian integral이므로 $A$는 Noetherian integral domain이다.
+$Y$가 irreducible이므로 $Y$의 공집합이 아닌 열린집합은 모두 dense이다. 따라서 $Y$의 affine open $V=\Spec A$를 하나 고정하고 그 안에서 $U$를 찾으면 충분하다. $Y$가 integral scheme이므로 $A=\mathcal{O}_Y(V)$는 integral domain이고, Noetherian scheme의 affine open은 Noetherian ring의 spectrum이므로 $A$는 Noetherian ring이기도 하다. ([§스킴의 위상구조, ⁋보조정리 13](/ko/math/scheme_theory/topology_of_schemes#lem13))
 
-$f$가 finite type이므로 $f^{-1}(V)$는 유한개의 affine open $\Spec B_1,\ldots, \Spec B_k$로 덮이고, 각 $B_i$는 finite type $A$-algebra이다. [\[가환대수학\] §뇌터 정규화, ⁋정리 5](/ko/math/commutative_algebra/noether_normalization#thm5)를 $M=B_i$에 적용하면 $0\neq a_i\in A$가 존재하여 $(B_i)_{a_i}$가 free $A_{a_i}$-module이다. $a=a_1\cdots a_k$로 두면 각 $(B_i)_a$는 free module $(B_i)_{a_i}$의 localization이므로 여전히 free $A_a$-module이고, free module은 flat하므로 [보조정리 2](#lem2)에 의하여
+한편, $f$가 finite type이므로 $f^{-1}(V)$는 유한개의 affine open $\Spec B_1,\ldots, \Spec B_k$로 덮이고, 각 $B_i$는 finite type $A$-algebra이다. [\[가환대수학\] §뇌터 정규화, ⁋정리 5](/ko/math/commutative_algebra/noether_normalization#thm5)를 $M=B_i$에 적용하면 $0\neq a_i\in A$가 존재하여 $(B_i)_{a_i}$가 free $A_{a_i}$-module이다. $a=a_1\cdots a_k$로 두면 각 $(B_i)_a$는 free module $(B_i)_{a_i}$의 localization이므로 여전히 free $A_a$-module이고, free module은 flat하므로 [보조정리 2](#lem2)에 의하여
 
 $$\Spec (B_i)_a \longrightarrow \Spec A_a=D(a)$$
 
-는 flat이다. flatness는 $X$ 위에서 국소적인 조건이고 $\Spec (B_i)_a$들이 $f^{-1}(D(a))$를 덮으므로 $f^{-1}(D(a)) \rightarrow D(a)$는 flat이다. $A$가 integral domain이고 $a\neq 0$이므로 $D(a)$는 공집합이 아니며, 따라서 $U=D(a)$가 원하는 열린집합이다.
+는 flat이다. Flatness는 $X$ 위에서 국소적인 조건이고 $\Spec (B_i)_a$들이 $f^{-1}(D(a))$를 덮으므로 $f^{-1}(D(a)) \rightarrow D(a)$는 flat이다. $A$가 integral domain이고 $a\neq 0$이므로 $D(a)$는 공집합이 아니며, 따라서 $U=D(a)$를 열린집합으로 택하면 된다.
 :::
 
-## Chevalley 정리
-
-두 번째 준비물은 image의 모양에 대한 것이다. 일반적인 morphism의 image는 열린집합도 닫힌집합도 아니지만, finite type morphism의 image는 언제나 다음의 의미에서 좋은 집합이다.
+두 번째 명제는 image의 모양에 대한 것이다. 일반적인 morphism의 image는 열린집합도 닫힌집합도 아니지만, finite type morphism의 image는 언제나 다음의 의미에서 좋은 집합이다.
 
 ::: 정의 10
 위상공간 $T$의 부분집합이 *constructible<sub>구성가능</sub>*이라는 것은 그것이 유한개의 locally closed subset들의 합집합으로 쓰일 수 있는 것이다. ([\[위상수학\] §몫공간, ⁋정의 1](/ko/math/topology/quotient_spaces#def1))
