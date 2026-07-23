@@ -88,7 +88,7 @@ the value would have become $0$, which is problematic.
 
 ## Convergence Tests for Improper Integrals
 
-Many improper integrals cannot be evaluated explicitly because an antiderivative is unavailable. However, convergence alone can be decided by comparison with a more manageable function. When the integrand is non-negative the integral is monotone in the interval of integration, so a comparison test analogous to that for series holds.
+Many improper integrals cannot be evaluated explicitly because an antiderivative is unavailable. However, convergence alone can be decided by comparison with a more manageable function. When the integrand is non-negative the integral is monotonically increasing in the interval of integration, so a comparison test analogous to that for series holds.
 
 ::: Proposition 3 (Comparison Test)
 Suppose $0 \leq f(x) \leq g(x)$ for $x \geq a$. If $\int_a^\infty g(x) \mathop{dx}$ converges then $\int_a^\infty f(x) \mathop{dx}$ also converges, and if $\int_a^\infty f(x) \mathop{dx}$ diverges then $\int_a^\infty g(x) \mathop{dx}$ also diverges.
@@ -133,7 +133,7 @@ and for the left improper integral $t^{1-p} \rightarrow 0$ as $t \rightarrow \in
 
 $$\int_1^\infty x^{-p} \mathop{dx} = \frac{1}{p - 1} \quad (p > 1), \qquad \int_0^1 x^{-p} \mathop{dx} = \frac{1}{1 - p} \quad (p < 1)$$
 
-Intuitively, on an infinite interval a large $p$ causes rapid decrease and helps convergence, whereas near a singularity a large $p$ causes more rapid increase and leads to divergence; this can be seen clearly by plotting $1/x$ and $1/x^2$.
+Intuitively, on an infinite interval a large $p$ causes rapid decrease and helps convergence, whereas near a singularity a large $p$ causes more rapid increase and leads to divergence; this can be seen clearly in the following figure, which plots $1/x$ and $1/x^2$.
 
 ![Graphs of 1/x and 1/x²](/assets/images/Math/Calculus/Improper_Integrals-1.svg){:style="width:12.69em" class="invert" .align-center}
 :::

@@ -67,7 +67,7 @@ $$\omega_{\mathbb{P}^n} \cong \mathcal{O}(-n-1)$$
 
 $$H^p(\mathbb{P}^n, \mathcal{O}(d - n - 1)) = 0$$
 
-이 모든 $d>0$과 모든 $i>0$에 대해 성립함을 주장한다. 
+이 모든 $d>0$과 모든 $p>0$에 대해 성립함을 주장한다. 
 
 우리는 [§사영공간의 코호몰로지, ⁋명제 1](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop1)를 통해 모든 line bundle의 cohomology를 알고 있으므로 이를 직접 검증할 수 있다. 이에 따르면
 
@@ -77,7 +77,7 @@ $$H^q(\mathbb{P}^n, \mathcal{O}(k)) = \begin{cases}
 0 & \text{otherwise}
 \end{cases}$$
 
-이며, 이로부터 자동으로 $q\neq 0$에 대해서는 모든 cohomology가 사라지므로 우리의 관심사는 $q=n$일 때 뿐이다. 이제 위의 식에 따르면 이것이 nonzero가 되기 위해서는 $k\leq -n-1$이 성립해야 한다. 그런데 우리 상황에서는 $k=d-n-1$이고 $d>0$이므로 이는 불가능하고, 따라서 Kodaira vanishing theorem을 다시 검증할 수 있다. 
+이며, 이로부터 자동으로 $q\neq 0, n$에 대해서는 모든 cohomology가 사라지므로 우리의 관심사는 $q=n$일 때 뿐이다. 이제 위의 식에 따르면 이것이 nonzero가 되기 위해서는 $k\leq -n-1$이 성립해야 한다. 그런데 우리 상황에서는 $k=d-n-1$이고 $d>0$이므로 이는 불가능하고, 따라서 Kodaira vanishing theorem을 다시 검증할 수 있다. 
 :::
 
 ## 고다이라 소멸정리의 응용
@@ -128,7 +128,7 @@ $$\kappa(X) = \limsup_{m \rightarrow \infty} \frac{\log P_m(X)}{\log m}$$
 
 우리는 위의 계산으로부터, surface의 경우 $\kappa \in \{-\infty, 0, 1, 2\}$인 것을 안다. [Enriques–Kodaira classification](https://en.wikipedia.org/wiki/Enriques-Kodaira_classification)은 surface를 크게는 Kodaira dimension에 의해 분류하고, 여기에 $\kappa=0$과 $\kappa=-\infty$인 경우는 geometric genus $p_g$와 irregularity $q$를 사용하여 추가적인 세부 분류를 해 준다. 
 
-우리는 [§선형계, ⁋정의 9](/ko/math/algebraic_varieties/linear_systems#def9)에서 line bundle $\mathcal{L}$이 very ample이라는 것은 complete linear system $\lvert \mathcal{L} \rvert$가 정의하는 사상 $\varphi_{\mathcal{L}}: X \rightarrow \mathbb{P}(\Gamma(X, \mathcal{L}))$이 closed embedding인 것으로 정의하였다. 당시에는 sheaf cohomology의 언어가 없었으나, 지금은 sheaf cohomology를 도입하였으므로 이를 조금 더 잘 사용할 수 있다. 
+우리는 [§선형계, ⁋정의 9](/ko/math/algebraic_varieties/linear_systems#def9)에서 line bundle $\mathcal{L}$이 very ample이라는 것은 complete linear system $\lvert \mathcal{L} \rvert$가 정의하는 morphism $\varphi_{\mathcal{L}}: X \rightarrow \mathbb{P}(\Gamma(X, \mathcal{L}))$이 closed embedding인 것으로 정의하였다. 당시에는 sheaf cohomology의 언어가 없었으나, 지금은 sheaf cohomology를 도입하였으므로 이를 조금 더 잘 사용할 수 있다. 
 
 우선 very ample line bundle $\mathcal{L}$이 주어졌다 하고, 이로부터 정의되는 closed embedding $\varphi_\mathcal{L}: X\rightarrow \mathbb{P}^N$을 생각하자. 그럼 $\varphi$가 embedding인 것으로부터 $\varphi_\mathcal{L}(p)\neq \varphi_\mathcal{L}(q)$가 성립하는 것을 알고, 뿐만 아니라 $\varphi_\mathcal{L}$이 closed embedding이므로 $d\varphi_\mathcal{L}$이 injective이고, 따라서 cotangent space에서의 dual map $\mathfrak{m}_{\varphi_{\mathcal{L}}(p)}/\mathfrak{m}_{\varphi_{\mathcal{L}}(p)}^2 \longrightarrow \mathfrak{m}_p/\mathfrak{m}_p^2$은 surjective이다. 이로부터 다음의 두 결과가 성립함을 안다. 
 
@@ -169,7 +169,7 @@ $$0 \longrightarrow \mathcal{I}_p^2 \otimes \mathcal{L}^{\otimes m} \longrightar
 
 에서 유도되는 long exact sequence
 
-$$H^0(X, \mathcal{L}^{\otimes m}) \longrightarrow H^0(Z, \mathcal{L}^{\otimes m}\rvert_Z) \longrightarrow H^1(X, \mathcal{I}_p^2 \otimes \mathcal{L}^{\otimes m})$$
+$$H^0(X, \mathcal{L}^{\otimes m}) \longrightarrow H^0(X, \mathcal{L}^{\otimes m} \otimes (\mathcal{O}_X / \mathcal{I}_p^2)) \longrightarrow H^1(X, \mathcal{I}_p^2 \otimes \mathcal{L}^{\otimes m})$$
 
 를 고려하면, $H^1(X, \mathcal{I}_p^2 \otimes \mathcal{L}^{\otimes m}) = 0$이면 separation of tangent vectors가 성립한다.
 

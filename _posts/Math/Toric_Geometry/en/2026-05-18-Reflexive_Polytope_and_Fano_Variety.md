@@ -1,6 +1,6 @@
 ---
 title: "Fano Varieties"
-description: "We examine the definition of reflection polytopes and properties of dual polytopes, and explore how to understand the geometric structure of toric varieties through the bipolar theorem."
+description: "We examine the definition of reflexive polytopes and properties of dual polytopes, and explore how to understand the geometric structure of Fano varieties through the bipolar theorem."
 excerpt: "Reflexive polytopes and the corresponding Gorenstein Fano toric varieties"
 
 categories: [Math / Toric Geometry]
@@ -46,7 +46,7 @@ Since $\Delta$ is reflexive, $\Delta^\circ$ is a lattice polytope by definition.
 For the reverse inclusion, let $w \in (\Delta^\circ)^\circ$. Then $w$ satisfies $\langle w, v \rangle \ge -1$ for all $v \in \Delta^\circ$. Consider any facet $\Theta$ of $\Delta$. Then $\Theta$ is a $(d-1)$-dimensional face on the boundary of $\Delta$, and by the definition of a reflexive polytope, $\Theta$ is given by the equation $\langle u, v_\Theta \rangle = -1$. Here $v_\Theta \in N$ is the primitive inner normal vector corresponding to $\Theta$. Since $v_\Theta$ is a vertex of $\Delta^\circ$, we have $\langle w, v_\Theta \rangle \ge -1$. This means that $w$ lies in the intersection of the half-spaces defining all facets of $\Delta$, and therefore $w \in \Delta$. Hence $(\Delta^\circ)^\circ = \Delta$. Finally, since $(\Delta^\circ)^\circ = \Delta$ is a lattice polytope, $\Delta^\circ$ is also reflexive.
 :::
 
-This proposition exhibits the symmetry of reflexive polytopes. Although $\Delta$ and $\Delta^\circ$ lie in different vector spaces $M_{\mathbb{R}}$ and $N_{\mathbb{R}}$, they provide two facets of the same combinatorial object.
+This proposition exhibits the symmetry of reflexive polytopes. Although $\Delta$ and $\Delta^\circ$ lie in different vector spaces $M_{\mathbb{R}}$ and $N_{\mathbb{R}}$, they provide two aspects of the same combinatorial object.
 
 ## Fano Varieties
 
@@ -152,7 +152,7 @@ for a total of $10$ points, and this coincides with $h^0(\mathbb{P}^2, \mathcal{
 
 ## Mirror Symmetry
 
-If we look again at [Example 6](#ex6) above, an interesting phenomenon appears: although $\Delta$ and $\Delta^\circ$ are two facets of the same reflexive data, the toric varieties $X_\Delta$ and $X_{\Delta^\circ}$ constructed from them are generally very different. For example, in the case of the modified standard simplex with $n=2$, we have $X_\Delta \cong \mathbb{P}^2$, whereas for $\Delta^\circ = \mathrm{conv}\{(1,0), (0,1), (-1,-1)\}$, computing the determinants of adjacent rays in its normal fan gives values of $\pm 3$, so it is not even a smooth variety. ([§Definition of Toric Varieties, ⁋Proposition 11](/en/math/toric_geometry/toric_varieties#prop11)) In fact, $X_{\Delta^\circ}$ is the singular Gorenstein Fano surface $\mathbb{P}^2/(\mathbb{Z}/3)$, with a $\mathbb{Z}/3$ quotient singularity in each of its three maximal cones.
+If we look again at [Example 6](#ex6) above, an interesting phenomenon appears: although $\Delta$ and $\Delta^\circ$ are two aspects of the same reflexive data, the toric varieties $X_\Delta$ and $X_{\Delta^\circ}$ constructed from them are generally very different. For example, in the case of the modified standard simplex with $n=2$, we have $X_\Delta \cong \mathbb{P}^2$, whereas for $\Delta^\circ = \mathrm{conv}\{(1,0), (0,1), (-1,-1)\}$, computing the determinants of adjacent rays in its normal fan gives values of $\pm3$, so it is not even a smooth variety. ([§Definition of Toric Varieties, ⁋Proposition 11](/en/math/toric_geometry/toric_varieties#prop11)) In fact, $X_{\Delta^\circ}$ is the singular Gorenstein Fano surface $\mathbb{P}^2/(\mathbb{Z}/3)$, with a $\mathbb{Z}/3$ quotient singularity in each of its three maximal cones.
 
 A natural question is whether there is a geometric relationship between these two varieties $X_\Delta$ and $X_{\Delta^\circ}$. As we saw in the simple example above, in general there is no direct morphism or birational isomorphism between them. Instead, the true connection is revealed through anticanonical hypersurfaces. The starting point is the following classical adjunction result.
 

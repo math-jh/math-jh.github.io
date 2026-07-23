@@ -41,8 +41,8 @@ Much of what we have known so far can be written in this language. For instance,
 
 - The objects of $\Set$ are sets.
 - For two objects $A_1,A_2\in\obj(\mathcal{A})$, a morphism from $A_1$ to $A_2$ is a function from the set $A_1$ to $A_2$. ([[Set Theory] §Functions, ⁋Definition 1](/en/math/set_theory/functions#def1))
-- Composition of two morphisms is defined as composition of functions. ([[Set Theory] §Operations of Functions, ⁋Proposition 1](/en/math/set_theory/operation_of_functions#prop1)) That this composition is associative was seen in [[Set Theory] §Operations of Binary Relations, ⁋Proposition 5](/en/math/set_theory/operation_of_binary_relations#prop5).
-- For any object $A\in\obj(\mathcal{A})$, $\id_A\in\Hom_\Set(A,A)$ is the identity function $\id_A$. ([[Set Theory] §Functions, ⁋Definition 2](/en/math/set_theory/functions#def2)) That the identity function satisfies the two conditions of [Definition 1](#def1) was seen after [[Set Theory] §Operations of Binary Relations, ⁋Definition 9](/en/math/set_theory/operation_of_binary_relations#def9).
+- Composition of two morphisms is defined as composition of functions. ([[Set Theory] §Operations on Functions, ⁋Proposition 1](/en/math/set_theory/operation_of_functions#prop1)) That this composition is associative was seen in [[Set Theory] §Operations on Binary Relations, ⁋Proposition 5](/en/math/set_theory/operation_of_binary_relations#prop5).
+- For any object $A\in\obj(\mathcal{A})$, $\id_A\in\Hom_\Set(A,A)$ is the identity function $\id_A$. ([[Set Theory] §Functions, ⁋Definition 2](/en/math/set_theory/functions#def2)) That the identity function satisfies the two conditions of [Definition 1](#def1) was seen after [[Set Theory] §Operations on Binary Relations, ⁋Definition 9](/en/math/set_theory/operation_of_binary_relations#def9).
 
 In a similar manner, the following can all be seen to be examples of categories.
 
@@ -78,7 +78,7 @@ Any preordered set $(S,\preceq)$ can be regarded as a category through the follo
 
 The composition of two morphisms $x \rightarrow y$ and $y \rightarrow z$ is given by the morphism $x \rightarrow z$. The existence of the morphism $x \rightarrow z$ comes from the transitivity of $\preceq$. Then associativity follows from
 
-$$((x \rightarrow y) \rightarrow z)\rightarrow w=x \rightarrow y \rightarrow z \rightarrow y=x \rightarrow (y \rightarrow (z \rightarrow w))$$
+$$((x \rightarrow y) \rightarrow z)\rightarrow w=x \rightarrow y \rightarrow z \rightarrow w=x \rightarrow (y \rightarrow (z \rightarrow w))$$
 
 Also, by the reflexivity of $\preceq$, for any $x\in S$, $\Hom_\mathcal{S}(x,x)$ contains the unique morphism $x \rightarrow x$, and one can verify that this plays the role of $\id_x$.
 :::
@@ -156,7 +156,7 @@ Fix an arbitrary category $\mathcal{A}$ and an object $A\in\obj(\mathcal{A})$.
 - The *automorphism group* of $A$ is the data consisting of the set $\Aut_\mathcal{A}(A)$, which collects only the isomorphisms among the elements of $\End_\mathcal{A}(A)$, and the composition $\circ$.
 :::
 
-It is not difficult to see that $\End(A)$ and $\Aut(A)$ satisfy the conditions of the algebraically defined monoid and group. ([[Algebraic Structures] §Semigroups, Monoids, Groups, ⁋Definition 3](/en/math/algebraic_structures/groups#def3) and [Semigroups, Monoids, and Groups, ⁋Definition 11](/en/math/algebraic_structures/groups#def11)) In category theory, monoids and groups can be defined as follows.
+It is not difficult to see that $\End(A)$ and $\Aut(A)$ satisfy the conditions of the algebraically defined monoid and group. ([[Algebraic Structures] §Semigroups, Monoids, and Groups, ⁋Definition 3](/en/math/algebraic_structures/groups#def3) and [Semigroups, Monoids, and Groups, ⁋Definition 11](/en/math/algebraic_structures/groups#def11)) In category theory, monoids and groups can be defined as follows.
 
 ::: Definition 10
 A category with only one object is called a *monoid*. A monoid in which every morphism is an isomorphism is called a *group*.
@@ -188,7 +188,7 @@ Let a category $\mathcal{A}$ be given, and fix $A\in\obj(\mathcal{A})$.
 
 - The *slice category over $A$* $\mathcal{A}_{/A}$ of $\mathcal{A}$ is given by the following data.
   - The objects of $\mathcal{A}_{/A}$ are morphisms $f:A_1\rightarrow A$ in $\mathcal{A}$.
-  - For any $(A_1\overset{f_1}{\longrightarrow}A)\in\obj(\mathcal{A}_{/A})$ and $(A_2\overset{f_2}{\longrightarrow}A)\in\obj(\mathcal{A}_{/A})$, a morphism from $f_1$ to $f_2$ is a morphism $g:A_1\rightarrow A_2$ such that $f_1=g\circ f_2$ holds.
+  - For any $(A_1\overset{f_1}{\longrightarrow}A)\in\obj(\mathcal{A}_{/A})$ and $(A_2\overset{f_2}{\longrightarrow}A)\in\obj(\mathcal{A}_{/A})$, a morphism from $f_1$ to $f_2$ is a morphism $g:A_1\rightarrow A_2$ such that $f_1=f_2\circ g$ holds.
 - The *slice category under $A$* ${}_{A/}\mathcal{A}$ of $\mathcal{A}$ is given by the following data.
   - The objects of ${}_{A/}\mathcal{A}$ are morphisms $f:A\rightarrow A_1$ in $\mathcal{A}$.
   - For any $(A\overset{f_1}{\longrightarrow}A_1)\in\obj({}_{A/}\mathcal{A})$ and $(A\overset{f_2}{\longrightarrow}A_2)\in\obj({}_{A/}\mathcal{A})$, a morphism from $f_1$ to $f_2$ is a morphism $g:A_1\rightarrow A_2$ such that $f_2=g\circ f_1$ holds.

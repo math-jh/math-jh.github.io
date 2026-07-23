@@ -15,14 +15,14 @@ weight: 120
 
 ## 미분의 정의
 
-우리는 이제 미분의 개념을 도입한다. 더 정확히 말하자면 우리가 생각할 것은 differential form의 개념으로, 이를 다루기 위해서는 graded algebra가 필요하다. 앞으로 graded algebra의 구조를 주는 abelian group을 $\Delta$로 표기하기로 한다. 
+우리는 이제 derivation의 개념을 도입한다. 더 정확히 말하자면 우리가 생각할 것은 differential form의 개념으로, 이를 다루기 위해서는 graded algebra가 필요하다. 앞으로 graded algebra의 구조를 주는 abelian group을 $\Delta$로 표기하기로 한다. 
 
 ::: 정의 1
 Abelian group $(\Delta, +, 0)$에 대하여, 함수 $\varepsilon : \Delta \times \Delta \rightarrow \{ \pm 1 \}$가 다음의 세 조건을 만족한다 하자. 
 
-- $$\varepsilon(\alpha + \alpha', \beta) = \varepsilon(\alpha, \beta)\varepsilon(\alpha', \beta)$$  
-- $$\varepsilon(\alpha, \beta + \beta') = \varepsilon(\alpha, \beta)\varepsilon(\alpha, \beta')$$  
-- $$\varepsilon(\beta, \alpha) = \varepsilon(\alpha, \beta)$$
+- $\varepsilon(\alpha + \alpha', \beta) = \varepsilon(\alpha, \beta)\varepsilon(\alpha', \beta)$  
+- $\varepsilon(\alpha, \beta + \beta') = \varepsilon(\alpha, \beta)\varepsilon(\alpha, \beta')$  
+- $\varepsilon(\beta, \alpha) = \varepsilon(\alpha, \beta)$
 
 이 때, $\varepsilon$을 *commutation factor*라 부른다. 
 :::
@@ -70,13 +70,13 @@ $$d''(xx') = (dx)x' + \varepsilon(\delta, \deg(x))x(d'x')$$
 
 두 번째 경우를 motivation 삼아 우리는 표기의 편의상 $d, d', d''$를 모두 같은 문자 $d$로 통일하여 쓰기도 하며, 그럼 [정의 2](#def2)의 식은
 
-$$d(xx')=(dx)x'+\varepsilon(\delta,\deg(x))x (dx)$$
+$$d(xx')=(dx)x'+\varepsilon(\delta,\deg(x))x (dx')$$
 
 로 쓸 수 있으며, 우리가 다루는 대부분의 경우에서는 이 정도 표기법의 남용은 혼동을 주지 않을 것이다. 
 
 만일 위의 두 경우가 모두 성립하여 $E=E'=E''=F=F'=F''$이고 $\lambda_1, \lambda_2$가 $E$에서의 곱셈이며, derivation이 단일한 graded endomorphism $d: E \rightarrow E$인 경우가 가장 많이 등장한다. 그럼 $\varepsilon$-derivation은 $A$에서 $A$로 가는 함수로 생각할 수 있으므로 이 경우 우리는 $\varepsilon$-derivation을 간단히 $A$의 $\varepsilon$-derivation이라 부른다. 
 
-한편 우리는 앞에서 $\Delta=\mathbb{Z}$인 경우가 우리의 주된 관심사라 하였는데, 이 경우 non-trivial한 commutation factor $\varepsilon(p,q)=(-1)^{pq}$를 생각하면, 이 $\varepsilon$에 대하여 임의의 짝수 차수 $\varepsilon$-derivation은 항상 $\varepsilon$의 영향을 무시할 수 있다는 것을 안다. 홀수 차수의 경우, 임의의 homogeneous element $x\in E$에 대하여 다음의 식
+한편 우리는 앞에서 $\Delta=\mathbb{Z}$인 경우가 우리의 주된 관심사라 하였는데, 이 경우 non-trivial한 commutation factor $\varepsilon(p,q)=(-1)^{pq}$를 생각하면, 이 $\varepsilon$에 대하여 임의의 짝수 degree $\varepsilon$-derivation은 항상 $\varepsilon$의 영향을 무시할 수 있다는 것을 안다. 홀수 degree의 경우, 임의의 homogeneous element $x\in E$에 대하여 다음의 식
 
 $$d(xx')=(dx)x'+(-1)^{\deg x}x(dx')$$
 
@@ -88,7 +88,7 @@ $$d(xx')=(dx)x'+(-1)^{\deg x}x(dx')$$
 
 우선 degree $0$ derivation은 항상 commutation factor를 무시할 수 있으므로, $E$를 non-graded $\mathbb{K}$-algebra로 본 후 $E$에서 $E$로의 derivation을 생각하면 $\varepsilon$은 등장하지 않는다. 이제 각각의 $i$에 대하여, $\partial_i:E \rightarrow E$를 편미분 $\partial/\partial \x_i$로 정의하면 Leibniz rule에 의해 [정의 2](#def2)의 등식이 만족된다. 
 
-이번에는 graded algebra의 예시를 보자. 위와 같이 정의된 polynomial algebra $E$에 대하여, free $A$-module $M$을 다음의 원소들 
+이번에는 graded algebra의 예시를 보자. 위와 같이 정의된 polynomial algebra $E$에 대하여, free $E$-module $M$을 다음의 원소들 
 
 $$d\x_1,d\x_2,\ldots, d\x_n$$
 
@@ -96,13 +96,13 @@ $$d\x_1,d\x_2,\ldots, d\x_n$$
 
 $$\bigwedge(M)=\bigoplus_{d=0}^n{\bigwedge}^d(M)$$
 
-으로 주어지며, 이 때 $\bigwedge^0(M)=A$이고 각각의 $k$에 대하여 $\bigwedge^k(M)$은 
+으로 주어지며, 이 때 $\bigwedge^0(M)=E$이고 각각의 $k$에 대하여 $\bigwedge^k(M)$은 
 
 $$d\x_J=d\x_{j_1}\wedge d\x_{j_2}\wedge\cdots\wedge d\x_{j_k},\qquad j_1<\cdots< j_k$$
 
 의 꼴로 생성되는 free $E$-module이다. ([§텐서대수, ⁋명제 13](/ko/math/multilinear_algebra/tensor_algebras#prop13)) 이제 각각의 basis
 
-$$f\; d\x_{j_1}\wedge d\x_{j_2}\wedge\cdots\wedge d\x_{j_d}\in {\bigwedge}^k(M)$$
+$$f\; d\x_{j_1}\wedge d\x_{j_2}\wedge\cdots\wedge d\x_{j_k}\in {\bigwedge}^k(M)$$
 
 에 대하여 다음의 식
 
@@ -145,7 +145,7 @@ $\Delta = \mathbb{Z}$라 하자. 이때 다음이 성립한다.
 
 1. Antiderivation의 제곱은 derivation이다.  
 2. 두 derivation의 bracket은 derivation이다.  
-3. antiderivation과 짝수 차수 derivation의 bracket은 antiderivation이다.  
+3. antiderivation과 짝수 degree derivation의 bracket은 antiderivation이다.  
 4. $d_1$, $d_2$가 antiderivation이면, $d_1 d_2 + d_2 d_1$은 derivation이다.
 :::
 
@@ -161,7 +161,7 @@ $$D^2=\partial_i^2+2\partial_i\partial_j+\partial_j^2$$
 
 ::: 명제 5
 위 가정과 표기 아래에서, 미지수 $T_1, \dots, T_n, T_1', \dots, T_n'$에 대한 다항식 
-$F \in A[\x_1, \dots, \x_k]$가 주어졌다고 하자. 즉 $F(T)$, $F(T')$는 각각
+$F \in A[\x_1, \dots, \x_n]$가 주어졌다고 하자. 즉 $F(T)$, $F(T')$는 각각
 
 $$F(T) = F(T_1, \dots, T_n), \qquad F(T') = F(T_1', \dots, T_n')$$
 
@@ -171,13 +171,13 @@ $$F(T + T') = F(T_1 + T_1', \dots, T_n + T_n')$$
 
 라고 정의하자. 
 
-이제 만일 다항식 $P$가 다음의 식
+이제 만일 다항식 $F$가 다음의 식
 
-$$P(T + T') = \sum_i Q_i(T) R_i(T')$$
+$$F(T + T') = \sum_i Q_i(T) R_i(T')$$
 
-을 만족한다면, 임의의 $x\in E$, $x\'\in E'$에 대하여 다음의 식
+을 만족한다면, 임의의 $x\in E$, $x'\in E'$에 대하여 다음의 식
 
-$$P(D)(x x') = \sum_i (Q_i(D) x)(R_i(D) x')$$
+$$F(D)(x x') = \sum_i (Q_i(D) x)(R_i(D) x')$$
 
 이 성립한다. 
 :::
@@ -216,7 +216,7 @@ $$d(x^{-1}) = -\varepsilon_{\delta, \deg(x)} x^{-1}(d(x))x^{-1}
 ::: 증명
 [명제 6](#prop6)에 의해 $d(1) = 0$이므로,
 
-$$0 = d(xx^{-1}) = d(x))x^{-1} + \varepsilon_{\delta, \deg(x)}x(d(x^{-1})$$
+$$0 = d(xx^{-1}) = (d(x))x^{-1} + \varepsilon_{\delta, \deg(x)}x(d(x^{-1}))$$
 
 이다. 양변의 왼쪽에 $x^{-1}$를 곱하면
 
@@ -227,7 +227,7 @@ $$0 = x^{-1}(d(x))x^{-1} + \varepsilon_{\delta, \deg(x)} d(x^{-1})$$
 $$d(x^{-1}) = -\varepsilon_{\delta, \deg(x)} x^{-1}(d(x))x^{-1}.
 $$
 
-을 얻는다. 또한 $x^{-1}$의 차수는 $-\deg(x)$인 것을 이용하여 $d(x^{-1}x)$를 계산하면 둘째 등식을 얻는다. 
+을 얻는다. 또한 $x^{-1}$의 degree는 $-\deg(x)$인 것을 이용하여 $d(x^{-1}x)$를 계산하면 둘째 등식을 얻는다. 
 :::
 
 ::: 명제 8
@@ -235,13 +235,13 @@ $$
 :::
 
 ::: 증명
-임의의 derivation $d:E \rightarrow f$가 주어졌다 하고, $d$를 $K$ 위로 확장한 $\bar{d}$가 존재한다면, [명제 7](#prop7)을 적용하여 다음의 식
+임의의 derivation $d:E \rightarrow F$가 주어졌다 하고, $d$를 $K$ 위로 확장한 $\bar{d}$가 존재한다면, [명제 7](#prop7)을 적용하여 다음의 식
 
 $$\bar{d}(u/v) = v^{-1} d(u) - v^{-2} u\, d(v)$$
 
 이 성립해야 한다는 것을 알고, 따라서 $\bar{d}$가 만일 존재한다면 그 표현은 유일하다.
 
-이 정의가 $B$의 원소 표기 $u/v$의 선택에 의존하지 않음을 보이자. 즉, $u/v = u'/v'$일 때도
+이 정의가 $K$의 원소 표기 $u/v$의 선택에 의존하지 않음을 보이자. 즉, $u/v = u'/v'$일 때도
 
 $$v^{-1} d(u) - v^{-2} u\, d(v) = v'^{-1} d(u') - v'^{-2} u'\, d(v')$$
 
@@ -253,30 +253,30 @@ $$v' d(u) + u\, d(v') = v\, d(u') + u'\, d(v)$$
 
 이므로 양변에 $vv'$를 곱하면
 
-$$v v' d(u) - u\, v\, d(v') = v v' d(u') - u'\, v'\, d(v)$$
+$$v v'^2 d(u) + u v v' d(v') = v^2 v' d(u') + u' v v' d(v)$$
 
-이고, 이를 정리하면
+이고, $uv' = u'v$를 이용해 정리한 뒤 양변을 $v^2 v'^2$으로 나누면
 
-$$v' d(u) - v^{-1} u\, d(v) = v' d(u') - v'^{-1} u'\, d(v')$$
+$$v^{-1} d(u) - v^{-2} u d(v) = v'^{-1} d(u') - v'^{-2} u' d(v')$$
 
-이다. 따라서 정의는 $F$의 원소 $u/v$의 표현에 무관하게 잘 정의되어 있다. 이제 $\bar{d}$가 실제로 $K$에서 $F$로의 $A$-derivation의 조건을 ㅁ낮곻나다는 것은 단순한 계산이다. 
+이다. 따라서 정의는 $K$의 원소 $u/v$의 표현에 무관하게 잘 정의되어 있다. 이제 $\bar{d}$가 실제로 $K$에서 $F$로의 $A$-derivation의 조건을 만족한다는 것은 단순한 계산이다. 
 :::
 
-다음 명제에서, 표기의 편의를 위해 임의의 degree $\delta$ $\varepsilon$-derivation $d:A \rightarrow E$에 대하여 
+다음 명제에서, 표기의 편의를 위해 임의의 degree $\delta$ $\varepsilon$-derivation $d:E \rightarrow F$에 대하여 
 
-$$Z_\varepsilon=\{a\in A\mid \text{$xa_d=\varepsilon(\deg(a),\deg(x))a_dx$ for all homogeneous component $a_d$ of $a$ and for all homogeneous $x\in E$.}\}$$
+$$Z_\varepsilon=\{a\in E\mid \text{$xa_d=\varepsilon(\deg(a),\deg(x))a_dx$ for all homogeneous component $a_d$ of $a$ and for all homogeneous $x\in F$.}\}$$
 
 으로 정의하자. 
 
 ::: 명제 9
- $A$가 unital graded associative $A$-algebra이고 $E$가 graded $(A, A)$-bimodule이라 하자. 이제 $d: A \rightarrow E$가 degree $\delta$의 $\varepsilon$-derivation이고, $a$가 degree $\alpha$의 $Z_\varepsilon$의 homogeneous element라 하자. 그러면 morphism
+ $E$가 unital graded associative $A$-algebra이고 $F$가 graded $(E, E)$-bimodule이라 하자. 이제 $d: E \rightarrow F$가 degree $\delta$의 $\varepsilon$-derivation이고, $a$가 degree $\alpha$의 $Z_\varepsilon$의 homogeneous element라 하자. 그러면 morphism
 
 $$x \mapsto a (d x)$$
 
 는 degree $\delta + \alpha$의 $\varepsilon$-derivation이다.
 :::
 ::: 증명
-주어진 morphism을 $d'$로 적으면 이 morphism은 자명하게 $A$-linear이다. 이제 $d'$가 $\varepsilon$-derivation임을 보이기 위해 임의의 degree $\delta'$ homogeneous element $x$와 임의의 $y\in A$에 대하여 
+주어진 morphism을 $d'$로 적으면 이 morphism은 자명하게 $A$-linear이다. 이제 $d'$가 $\varepsilon$-derivation임을 보이기 위해 임의의 degree $\delta'$ homogeneous element $x$와 임의의 $y\in E$에 대하여 
 
 $$\begin{aligned}d'(xy)&=a(dx)y+\varepsilon(\delta, \delta')a(x(dy))\\&=a(dx)y+\varepsilon(\delta, \delta')\varepsilon(\alpha,\delta')xa(dy)\\&=(d'x)y+\varepsilon(\delta+\alpha,\delta')x(d'y)\end{aligned}$$
 
@@ -298,24 +298,24 @@ $$x\mapsto [z,x]_\varepsilon$$
 ::: 명제 11
  $E$가 graded $A$-algebra라 하자. 
 
-1. 임의의 $\varepsilon$-derivation $d : E \rightarrow E$와 $E$의 모든 homogeneous 원소 $z$에 대하여 ${[d, \ad(a)]_\varepsilon = \ad(dz)}$이 성립한다. 
-2. 만일 $A$가 associative라면, $\ad(z)$는 $A$의 $\varepsilon$-derivation이며, 그 degree는 $\deg(z)$이다.
+1. 임의의 $\varepsilon$-derivation $d : E \rightarrow E$와 $E$의 모든 homogeneous 원소 $z$에 대하여 ${[d, \ad(z)]_\varepsilon = \ad(dz)}$이 성립한다. 
+2. 만일 $E$가 associative라면, $\ad(z)$는 $E$의 $\varepsilon$-derivation이며, 그 degree는 $\deg(z)$이다.
 :::
 
 ::: 증명
-1. $d$가 degree $\delta$ $\varepsilon$-derivation이라 하고, $\zeta = \deg(z)$라고 하자. 이제 $f = [d, \ad(z)]_\varepsilon$라 하면, 모든 degree $\xi$ homogeneous element $x \in A$에 대해, 
+1. $d$가 degree $\delta$ $\varepsilon$-derivation이라 하고, $\zeta = \deg(z)$라고 하자. 이제 $f = [d, \ad(z)]_\varepsilon$라 하면, 모든 degree $\xi$ homogeneous element $x \in E$에 대해, 
 
     $$\begin{aligned}f(x)&=d(z x - \varepsilon(\zeta, \xi) x z) - \varepsilon(\delta, \zeta) (z (dx) - \varepsilon(\zeta, \delta+\xi) (dx) z) \\&= d(z x) - \varepsilon(\zeta, \xi) d(x z) - \varepsilon(\delta, \zeta) z (dx) + \varepsilon(\zeta,2.\delta+\xi) d(x) z \\&=(dz)x+\varepsilon(\delta, \zeta)z(dx)-\varepsilon(\zeta,\xi)((dx)z+\varepsilon(\delta, \xi)x(dz))- \varepsilon(\delta, \zeta) z (dx) + \varepsilon(\zeta,2.\delta+\xi) (dx) z\\&=(dz)x+\varepsilon(\delta,\zeta)z(dx)-\varepsilon(\zeta,\xi)(dx)z-\varepsilon(\delta+\zeta,\xi)x(dz)-\varepsilon(\delta,\zeta)z (dx)+\varepsilon(\zeta,\xi)(dx)z\\&=(dz)x-\varepsilon(\delta+\zeta,\xi)x(dz)=[dz,x]_\varepsilon=\ad_\varepsilon(dz)(x)\end{aligned}$$
 
     이므로 원하는 결과를 얻는다. 
-2. 모든 degree $\xi$ homogeneous element $x \in A$와 degree $\eta$ homogeneous element $y \in A$에 대해,  
+2. 모든 degree $\xi$ homogeneous element $x \in E$와 degree $\eta$ homogeneous element $y \in E$에 대해,  
     
-    $$\begin{aligned}\ad(z)(x y) &= z(x y) - \varepsilon(\zeta, \xi + \eta)(x y) z \\&= (z x) y - \varepsilon(\zeta, \xi) x z y + \varepsilon(\zeta, \xi) x z y - \varepsilon(\zeta, \xi + \eta) x y z \\&= (ax-\varepsilon(\zeta,\xi xz)y+\varepsilon(zeta,\xi)x(ay-\varepsilon(\zeta,\eta)ya)\\&=\ad(z)(x) \cdot y + \varepsilon(\zeta, \xi) x \cdot \ad(z)(y)\end{aligned}$$
+    $$\begin{aligned}\ad(z)(x y) &= z(x y) - \varepsilon(\zeta, \xi + \eta)(x y) z \\&= (z x) y - \varepsilon(\zeta, \xi) x z y + \varepsilon(\zeta, \xi) x z y - \varepsilon(\zeta, \xi + \eta) x y z \\&= (z x-\varepsilon(\zeta,\xi)x z)y+\varepsilon(\zeta,\xi)x(z y-\varepsilon(\zeta,\eta)y z)\\&=\ad(z)(x) \cdot y + \varepsilon(\zeta, \xi) x \cdot \ad(z)(y)\end{aligned}$$
 
     이다.
 :::
 
-따라서, $E$가 associative graded $A$-algebra라면 [정의 10](#def10)을 통해 $E$의 임의의 homogeneous가 $E$에서 자기 자신으로의 $\varepsilon$-derivation을 정의하며, 우리는 이를 *inner $\varepsilon$-derivation*이라 부른다. 
+따라서, $E$가 associative graded $A$-algebra라면 [정의 10](#def10)을 통해 $E$의 임의의 homogeneous element가 $E$에서 자기 자신으로의 $\varepsilon$-derivation을 정의하며, 우리는 이를 *inner $\varepsilon$-derivation*이라 부른다. 
 
 이것이 성립할 경우, 위의 식에서 $d$를 inner $\varepsilon$-derivation으로 대체해주면 다음 따름정리를 얻는다. 
 
@@ -329,7 +329,7 @@ $${[\ad_\varepsilon(x), \ad_\varepsilon(y)]_\varepsilon = \ad_\varepsilon([x,y]_
 
 또한, 위의 따름정리의 등식은 임의의 homogeneous $z\in E$에 대해 확인함으로써 얻을 수 있으므로, $x,y,z$가 각각 degree $\xi,\eta,\zeta$의 homogeneous element라 하면 다음의 식
 
-$${\varepsilon}_{\xi, \zeta} [[x, [y,z]_{\varepsilon}]_{\varepsilon} + \varepsilon_{\eta,\xi} [y, [z,x]_{\varepsilon}]_{\varepsilon} + \varepsilon_{\zeta,\eta} [z, [x,y]_{\varepsilon}]_{\varepsilon} = 0$$
+$${\varepsilon}_{\xi, \zeta} [x, [y,z]_{\varepsilon}]_{\varepsilon} + \varepsilon_{\eta,\xi} [y, [z,x]_{\varepsilon}]_{\varepsilon} + \varepsilon_{\zeta,\eta} [z, [x,y]_{\varepsilon}]_{\varepsilon} = 0$$
 
 이 성립하며, 우리는 이를 *Jacobi identity*라 부른다. 
 

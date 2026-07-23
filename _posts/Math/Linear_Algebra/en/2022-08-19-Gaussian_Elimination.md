@@ -42,7 +42,7 @@ First, assume that there exists a suitable $B\in\Mat_n(\mathbb{K})$ such that $A
 
 $$L_A\circ L_B=\id_{\mathbb{K}^n}$$
 
-holds. Since $\id_{\mathbb{K}^n}$ is bijective, we know that $L_A:\mathbb{K}^n\rightarrow \mathbb{K}^n$ is surjective. ([\[Set Theory\] §Retractions and Sections, ⁋Proposition 3](/en/math/set_theory/retraction_and_section#prop3)) Therefore, from the equation ([§Isomorphisms, ⁋Theorem 7](/en/math/linear_algebra/isomorphic_vector_spaces#thm7))
+holds. Since $\id_{\mathbb{K}^n}$ is bijective, we know that $L_A:\mathbb{K}^n\rightarrow \mathbb{K}^n$ is surjective. ([\[Set Theory\] §Retraction and Section, ⁋Proposition 3](/en/math/set_theory/retraction_and_section#prop3)) Therefore, from the equation ([§Isomorphisms, ⁋Theorem 7](/en/math/linear_algebra/isomorphic_vector_spaces#thm7))
 
 $$\rank L_A+\nullity L_A=\dim \mathbb{K}^n=n$$
 
@@ -53,7 +53,7 @@ Similarly, one can prove that the third condition implies the first.
 
 Of course, thinking again that matrices and linear maps are the same, this is obvious because the inverse of a function satisfies the same property.
 
-Now, let an arbitrary $n\times n$ invertible matrix $B$ be given. Thinking of $B$ as a linear map from $\mathbb{K}^n$ to $\mathbb{K}^n$, $B$ is completely determined by where it sends the basis $e_1,\ldots, e_n$ of $\mathbb{K}^n$. Therefore, to compute the matrix $A^{-1}$, it suffices to know where $A^{-1}$ sends each basis element $e_i$. If we denote this value by the vector $v_i$, then the matrix $A$ is given by $(v_1\mid v_2\mid\cdots\mid v_n)$, and each $v_i$ is defined by the following equation:
+Now, let an arbitrary $n\times n$ invertible matrix $B$ be given. Thinking of $B$ as a linear map from $\mathbb{K}^n$ to $\mathbb{K}^n$, $B$ is completely determined by where it sends the basis $e_1,\ldots, e_n$ of $\mathbb{K}^n$. Therefore, to compute the matrix $A^{-1}$, it suffices to know where $A^{-1}$ sends each basis element $e_i$. If we denote this value by the vector $v_i$, then the matrix $A^{-1}$ is given by $(v_1\mid v_2\mid\cdots\mid v_n)$, and each $v_i$ is defined by the following equation:
 
 $$v_i=A^{-1}e_i\iff Av_i=e_i\tag{2}$$
 
@@ -61,7 +61,7 @@ $$v_i=A^{-1}e_i\iff Av_i=e_i\tag{2}$$
 
 Now, consider the following system of linear equations:
 
-$$\begin{aligned}a_{11}x_{1}+a_{12}x_2+\cdots+a_{1n}x_n&=b_1\\a_{21}x_1+a_{22}x_2+\cdots+a_{2n}x_n&=b_2\\\hspace{10pt}\vdots&\\a_{mn}x_1+a_{m2}x_2+\cdots+a_{mn}x_n&=b_m\end{aligned}\tag{3}$$
+$$\begin{aligned}a_{11}x_{1}+a_{12}x_2+\cdots+a_{1n}x_n&=b_1\\a_{21}x_1+a_{22}x_2+\cdots+a_{2n}x_n&=b_2\\\hspace{10pt}\vdots&\\a_{m1}x_1+a_{m2}x_2+\cdots+a_{mn}x_n&=b_m\end{aligned}\tag{3}$$
 
 By [§Matrices, ⁋Definition 1](/en/math/linear_algebra/matrices#def1), the above system can be written as $Ax=b$ for the following matrices:
 
@@ -83,13 +83,13 @@ $$x_1=c_1,\quad x_2=c_2,\quad\ldots,\quad x_i=d_i,\quad\ldots,\quad x_n=c_n$$
 
 is also a solution to equation (3). Therefore, if all $a_{ij}$ are $0$, then if $b$ is the zero vector, equation (3) has every tuple in $\mathbb{K}^n$ as a solution, and otherwise no solution exists. To avoid such trivial cases, we assume that at least one $a_{ij}$ is not zero.
 
-Now, define the integer $k$ as <phrase>the smallest integer among those for which there exists $$1\leq j\leq m$$ such that $$a_{jk}\neq 0$$</phrase>, and for this fixed $k$, choose the smallest integer $j$ satisfying $a_{jk}\neq 0$. Now, move the $j$-th equation
+Now, define the integer $k$ as <phrase>the smallest integer among those for which there exists $1\leq j\leq m$ such that $a_{jk}\neq 0$</phrase>, and for this fixed $k$, choose the smallest integer $j$ satisfying $a_{jk}\neq 0$. Now, move the $j$-th equation
 
-$$a_{j1}x_1+a_{j2}x_2+\cdots+a_{jk}x_k+\cdots+a_{nk}x_n=b_j$$
+$$a_{j1}x_1+a_{j2}x_2+\cdots+a_{jk}x_k+\cdots+a_{jn}x_n=b_j$$
 
 to the top of the system:
 
-$$\begin{aligned}a_{j1}x_{1}+a_{j2}x_2+\cdots+a_{jn}x_n&=b_j\\a_{11}x_1+a_{12}x_2+\cdots+a_{1n}x_n&=b_1\\\hspace{10pt}\vdots&\\a_{mn}x_1+a_{m2}x_2+\cdots+a_{mn}x_n&=b_m\end{aligned}$$
+$$\begin{aligned}a_{j1}x_{1}+a_{j2}x_2+\cdots+a_{jn}x_n&=b_j\\a_{11}x_1+a_{12}x_2+\cdots+a_{1n}x_n&=b_1\\\hspace{10pt}\vdots&\\a_{m1}x_1+a_{m2}x_2+\cdots+a_{mn}x_n&=b_m\end{aligned}$$
 
 Then by the definition of $a_{jk}$, the coefficients $a_{j1},a_{j2},\ldots, a_{j,(k-1)}$ and the coefficients below them must all be zero. Now, for each equation
 
@@ -97,7 +97,7 @@ $$a_{i1}x_1+a_{i2}x_2+\cdots+a_{in}x_n=b_i$$
 
 multiply the first equation by $-a_{ik}/a_{jk}$ and add it to obtain:
 
-$$\left(a_{i1}-\frac{a_{ik}}{a_{jk}}a_{j1}\right)x_1+\left(a_{i2}-\frac{a_{ik}}{a_{jk}}a_{j2}\right)x_2+\cdots+\left(a_{ik}-\frac{a_{ik}}{a_{jk}}a_{jk}\right)x_k+\cdots+\left(a_{in}-\frac{a_{ik}}{a_{jk}}a_{jn}\right)x_n=b_i-\frac{a_{ik}}{a_{jk}}b_k$$
+$$\left(a_{i1}-\frac{a_{ik}}{a_{jk}}a_{j1}\right)x_1+\left(a_{i2}-\frac{a_{ik}}{a_{jk}}a_{j2}\right)x_2+\cdots+\left(a_{ik}-\frac{a_{ik}}{a_{jk}}a_{jk}\right)x_k+\cdots+\left(a_{in}-\frac{a_{ik}}{a_{jk}}a_{jn}\right)x_n=b_i-\frac{a_{ik}}{a_{jk}}b_j$$
 
 In the above equation, the coefficients of $x_1,\ldots, x_{k-1}$ were already all zero, and by the operation just performed, the coefficient of $x_k$ also becomes zero. That is, after this process, the coefficients of $x_1,\ldots, x_{k-1}$ are all zero, and among the coefficients of $x_k$, the only nonzero one is in the first row.
 
@@ -183,7 +183,7 @@ All elementary matrices $E$ are invertible. This is obvious from the fact that w
 
 ## Augmented Matrix
 
-Now, when an arbitrary system of linear equations is given, we can manipulate the system to find its solution. As we saw at the beginning of this post, finding the inverse of an arbitrary $n\times n$ invertible matrix is nothing more than solving $n$ systems of linear equations, so by repeating the above method $n$ times for equation (1) needed to find the inverse matrix, we can also find the inverse matrix. The augmented matrix introduced from now on is needed only for notational convenience and the computational convenience that follows from it.
+Now, when an arbitrary system of linear equations is given, we can manipulate the system to find its solution. As we saw at the beginning of this post, finding the inverse of an arbitrary $n\times n$ invertible matrix is nothing more than solving $n$ systems of linear equations, so by repeating the above method $n$ times for equation (2) needed to find the inverse matrix, we can also find the inverse matrix. The augmented matrix introduced from now on is needed only for notational convenience and the computational convenience that follows from it.
 
 The basic idea is that when performing Gaussian elimination, the columns do not mix with each other, which can also be said to be obvious from the definition of matrix multiplication if we think of elementary row operations as multiplication by the elementary matrices examined above. Moreover, when performing Gaussian elimination, since the right-hand side containing constants is subjected to the same operations as the left-hand side, we can add the components of the right-hand side to the matrix and compute them all at once.
 
@@ -219,9 +219,9 @@ The example just examined is essentially no different from the calculation of [E
 Any $n\times n$ reduced row echelon matrix is either the identity matrix or has a column consisting only of $0$s.
 :::
 
-As mentioned earlier, all elementary matrices are invertible, and we can restore the original matrix by multiplying the inverses of the elementary row operations we performed on the reduced row echelon form of the given matrix in order. That is, if some $n\times n$ matrix has a column consisting only of $0$s, then this matrix is not invertible, and therefore the original matrix cannot be invertible. In other words, the reduced row echelon form of an $n\times n$ matrix is the identity matrix.
+As mentioned earlier, all elementary matrices are invertible, and we can restore the original matrix by multiplying the inverses of the elementary row operations we performed on the reduced row echelon form of the given matrix in order. That is, if some $n\times n$ matrix has a column consisting only of $0$s, then this matrix is not invertible, and therefore the original matrix cannot be invertible. In other words, the reduced row echelon form of an invertible $n\times n$ matrix is the identity matrix.
 
-Now, when an arbitrary $n\times n$ invertible matrix is given, we can solve the $n$ systems of equations $Av_i=e_i$ all at once using the augmented matrix. That is, by appending $e_1,\ldots, e_n$ all at once to form the $2n\times n$ matrix $(A\mid I_n)$, and converting this to reduced row echelon form, the rear $n\times n$ matrix becomes the inverse of the original matrix.
+Now, when an arbitrary $n\times n$ invertible matrix is given, we can solve the $n$ systems of equations $Av_i=e_i$ all at once using the augmented matrix. That is, by appending $e_1,\ldots, e_n$ all at once to form the $n\times 2n$ matrix $(A\mid I_n)$, and converting this to reduced row echelon form, the rear $n\times n$ matrix becomes the inverse of the original matrix.
 
 ::: Example 7
 Let us find the inverse of the following matrix:

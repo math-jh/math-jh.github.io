@@ -66,7 +66,7 @@ $$L^{-1}(\alpha w)=L^{-1}(L(\alpha v))=\alpha v=\alpha L^{-1}(w).$$
 물론 이 역 또한 성립하며, 따라서 유한차원 벡터공간의 구조를 결정하는 유일한 불변량은 벡터공간의 차원임을 알 수 있다.
 
 ::: 명제 5
-두 isomorphic한 $\mathbb{K}$-벡터공간 $V,W$와 isomorphism $L:V\rightarrow W$가 주어졌다 하자. 만약 $\mathcal{B}$가 $V$의 basis라면, $L(\mathcal{B})$도 $V$의 basis가 된다.
+두 isomorphic한 $\mathbb{K}$-벡터공간 $V,W$와 isomorphism $L:V\rightarrow W$가 주어졌다 하자. 만약 $\mathcal{B}$가 $V$의 basis라면, $L(\mathcal{B})$도 $W$의 basis가 된다.
 :::
 ::: 증명
 [§선형사상, ⁋따름정리 9](/ko/math/linear_algebra/linear_map#cor9).
@@ -121,7 +121,7 @@ $$\alpha_1x_1+\alpha_2x_2+\cdots+\alpha_kx_k-\alpha_{k+1}x_{k+1}-\cdots-\alpha_n
 
 또, 이 집합은 $\im L$을 span한다. 임의의 $w\in \im L$이 주어졌다고 하자. 그럼 $L(v)=w$인 $v\in V$가 존재한다. $v=\sum_{i=1}^n \alpha_ix_i$라 하면, 
 
-$$u=L\left(\sum_{i=1}^n\alpha_ix_i\right)=L\left(\sum_{i=1}^k\alpha_ix_i\right)+L\left(\sum_{i=k+1}^n\alpha_i x_i\right)=\sum_{i=k+1}^n\alpha_i L(x_i)$$
+$$w=L\left(\sum_{i=1}^n\alpha_ix_i\right)=L\left(\sum_{i=1}^k\alpha_ix_i\right)+L\left(\sum_{i=k+1}^n\alpha_i x_i\right)=\sum_{i=k+1}^n\alpha_i L(x_i)$$
 
 가 성립하기 때문이다.
 

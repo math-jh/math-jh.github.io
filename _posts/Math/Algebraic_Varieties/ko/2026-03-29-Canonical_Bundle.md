@@ -87,7 +87,7 @@ Affine variety $X$와 $X$의 coordinate ring $A$에 대하여, $\Omega_X^1$은 $
 
 $$\Der_\mathbb{K}(A,N)\cong\Hom_A(\Omega_{A/\mathbb{K}},N)$$
 
-을 사용하자. 그럼 $\widetilde{(-)}$이 categorical equivalence라는 사실과 위의 natural isomorphicm에 의하여 
+을 사용하자. 그럼 $\widetilde{(-)}$이 categorical equivalence라는 사실과 위의 natural isomorphism에 의하여 
 
 $$\Hom_{\mathcal{O}_X}(\widetilde{\Omega_{A/\mathbb{K}}},\widetilde{N})\cong\Hom_A(\Omega_{A/\mathbb{K}},N)\cong\Der_\mathbb{K}(A,N)$$
 
@@ -109,7 +109,7 @@ $$\widetilde{\Omega_{A/\mathbb{K}}}^\vee\cong \widetilde{\Omega_{A/\mathbb{K}}^\
 이 결과는 cotangent bundle이 우리가 상상하는 것처럼 differential $1$-form들로 나타난다는 것을 보여준다. 
 
 ::: 예시 4
-$\mathbb{A}^n$의 cotangent bundle은 $\Omega_{\mathbb{A}^n}^1 \cong \mathcal{O}_{\mathbb{A}^n}^{\oplus n}$이다. 대수적으로, 만일 $\mathbb{A}^n$의 coordinate ring $\mathbb{K}[\x_1, \ldots, \x_n]$을 고정하면 이 $\mathbb{K}$-algebra의 Kähler differentials은 free module $\bigoplus_{i=1}^n \mathbb{K}[\x_1, \ldots, \x_n]  d\x_i$이므로, 이 결과는 우리의 직관과 잘 맞아떨어진다.
+$\mathbb{A}^n$의 cotangent bundle은 $\Omega_{\mathbb{A}^n}^1 \cong \mathcal{O}_{\mathbb{A}^n}^{\oplus n}$이다. 대수적으로, 만일 $\mathbb{A}^n$의 coordinate ring $\mathbb{K}[\x_1, \ldots, \x_n]$을 고정하면 이 $\mathbb{K}$-algebra의 Kähler differentials는 free module $\bigoplus_{i=1}^n \mathbb{K}[\x_1, \ldots, \x_n]  d\x_i$이므로, 이 결과는 우리의 직관과 잘 맞아떨어진다.
 :::
 
 한편 우리는 임의의 smooth variety $X$ of dimension $n$과 그 위의 cotangent bundle $\Omega_X^1$에 대하여, $\Omega_X^1$의 각 fiber는 $n$차원이므로 이를 $n$번 exterior product한 것은 line bundle이 되는 것을 안다.
@@ -168,10 +168,10 @@ $$\det(\mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)})\cong \det(\Omega_{\mathbb{P
 
 $$\omega_{\mathbb{P}^n}=\det(\Omega_{\mathbb{P}^n}^1)\cong \mathcal{O}_{\mathbb{P}^n}(-n-1)$$
 
-을 얻는다. 이 때 canonical divisor는 $K_{\mathbb{P}^n}=-(n+1)H$로 주어진다. 이 계산과 [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16)부터 $\omega_{\mathbb{P}^n}$은 regular section을 갖지 않는다는 것을 안다. 
+을 얻는다. 이 때 canonical divisor는 $K_{\mathbb{P}^n}=-(n+1)H$로 주어진다. 이 계산과 [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16)으로부터 $\omega_{\mathbb{P}^n}$은 regular section을 갖지 않는다는 것을 안다. 
 
 ::: 예시 8
-위의 계산을 $n$-form의 transition function 관점에서도 확인할 수 있다. $\mathbb{P}^n$의 standard open cover $U_i = \{\x_i \neq 0\}$ 위에서 affine coordinate을 $\y_j^{(i)} = \x_j / \x_i$ ($j \neq i$)로 놓으면, $U_i$ 위의 $n$-form 
+위의 계산을 $n$-form의 transition function 관점에서도 확인할 수 있다. $\mathbb{P}^n$의 standard open cover $U_i = \{\x_i \neq 0\}$ 위에서 affine coordinate를 $\y_j^{(i)} = \x_j / \x_i$ ($j \neq i$)로 놓으면, $U_i$ 위의 $n$-form 
 
 $$d \y_1^{(i)} \wedge \cdots \wedge \widehat{d \y_i^{(i)}} \wedge \cdots \wedge d \y_n^{(i)}$$
 
@@ -188,7 +188,7 @@ $$\bigwedge_{k \neq j} d \y_k^{(j)} = (\y_j^{(i)})^{-(n+1)} \cdot \bigwedge_{k \
 
 ## Adjunction Formula
 
-많은 경우, 우리는 $\mathbb{P}^n$으로부터 적당히 많은 다항식들을 통해 얻어지는 variety들에 관심이 있다. 직관적으로 이는 smooth variety $X$의 smooth divisor $D$들을 계속하여 생각하여 얻아지는 것이다. 다음의 *adjunction formula*는 이러한 경우 $X$의 canonical line bundle로부터 $D$의 canonical line bundle을 계산하는 방법을 알려준다. 
+많은 경우, 우리는 $\mathbb{P}^n$으로부터 적당히 많은 다항식들을 통해 얻어지는 variety들에 관심이 있다. 직관적으로 이는 smooth variety $X$의 smooth divisor $D$들을 계속하여 생각하여 얻어지는 것이다. 다음의 *adjunction formula*는 이러한 경우 $X$의 canonical line bundle로부터 $D$의 canonical line bundle을 계산하는 방법을 알려준다. 
 
 이를 위해, smooth variety $X$와 smooth divisor $D$에 대하여 다음의 short exact sequence
 
@@ -204,7 +204,7 @@ $$0\rightarrow \mathcal{T}_D\rightarrow \mathcal{T}_X\vert_D\rightarrow \mathcal
 
 이 존재한다. 그럼 우리는 이 normal bundle $\mathcal{N}_{D/X}$의 dual이 곧 $\mathcal{I}_D/\mathcal{I}_D^2$가 된다는 것을 확인할 수 있다. 이러한 이유로 우리는 이를 *conormal sheaf*라 부르며, 구체적으로 이는 위의 short exact sequence의 dual에 해당하는
 
-$$0 \rightarrow \mathcal{I}_D/\mathcal{I}_D^2\rightarrow \Omega_X^1\lvert D\rightarrow \Omega_D^1\rightarrow 0$$
+$$0 \rightarrow \mathcal{I}_D/\mathcal{I}_D^2\rightarrow \Omega_X^1\vert_D\rightarrow \Omega_D^1\rightarrow 0$$
 
 을 확인하여 얻어진다. 여기서 첫째 화살표는 $f\mapsto df$로 주어진다. 이 short exact sequence에 top exterior power를 취하면 다음을 얻는다.
 
@@ -258,7 +258,7 @@ $$E=\mathbb{P}(\mathcal{N}_{Z/X})$$
 
 $$\pi\vert_E: E\rightarrow Z$$
 
-를 생각하자. 이제 $E$의 tangent bundle을 생각하면, 우리는 이를 base space $Z$로부터 오는 수평 방향 $(\pi\vert_E)^\ast T_Z$과 그에 수직인 relative tangenb bundle 방향 $T_{E/Z}$으로 나눌 수 있다. 즉 다음의 short exact sequence
+를 생각하자. 이제 $E$의 tangent bundle을 생각하면, 우리는 이를 base space $Z$로부터 오는 수평 방향 $(\pi\vert_E)^\ast T_Z$과 그에 수직인 relative tangent bundle 방향 $T_{E/Z}$으로 나눌 수 있다. 즉 다음의 short exact sequence
 
 $$0 \rightarrow T_{E/Z} \rightarrow T_E \rightarrow \pi_E^\ast T_Z \rightarrow 0\tag{$\ast$}$$
 

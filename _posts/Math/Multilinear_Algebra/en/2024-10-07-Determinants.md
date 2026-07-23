@@ -39,7 +39,7 @@ The following hold.
 :::
 
 ::: Corollary 3
-For a finite free $A$-module $M$ and $u\in\End_\rMod{A}(M)$, the following are equivalent.
+For a finite-dimensional free $A$-module $M$ and $u\in\End_\rMod{A}(M)$, the following are equivalent.
 
 1. $u$ is bijective.
 2. $\det u$ is invertible in $A$.
@@ -111,7 +111,7 @@ $$P=\{i_1< i_2<\cdots< i_p\},\qquad Q=\{j_1< j_2<\cdots < j_{n-p}\}.$$
 
 Then by reordering the factors we can write
 
-$$x_P=\gamma_{P,Q}e_{j_1}\wedge\cdots\wedge e_{j_{n-p}}\wedge u(e_{i_1})\wedge\cdots u(e_{i_{n-p}}).$$
+$$x_P=\gamma_{P,Q}e_{j_1}\wedge\cdots\wedge e_{j_{n-p}}\wedge u(e_{i_1})\wedge\cdots\wedge u(e_{i_p}).$$
 
 Here $\gamma_{P,Q}$ is the sign arising from this reordering, given concretely by the formula
 

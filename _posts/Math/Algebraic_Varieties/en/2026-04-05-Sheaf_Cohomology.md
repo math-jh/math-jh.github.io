@@ -198,21 +198,21 @@ $$0 \rightarrow \mathcal{F}(U) \xrightarrow{\epsilon} \check{C}^0(\mathcal{U}, \
 
 What we need to show is that this is exact for $p>0$, so it suffices to show that the identity chain map is nullhomotopic. To do this, for each $p\geq 1$ we need to explicitly construct a homotopy operator $s^p : \check{C}^p(\mathcal{U}, \mathcal{F}) \rightarrow \check{C}^{p-1}(\mathcal{U}, \mathcal{F})$.
 
-To define this function, we need to explain how each component
-
-$$s^p(t)_{j_0<\cdots< j_{p-1}}$$
-
-is defined when given
+To define this function, we need to explain, for each given
 
 $$t=(t_{j_0<\cdots< j_p})\in \check{C}^p(\mathcal{U}, \mathcal{F})$$
 
-Essentially, what we want to do is, as is always the case when defining a chain homotopy, fix an index $i_0$ and insert it into $j_0<\cdots< j_{p-1}$ (for convenience, assume $i_0< j_0<\cdots< j_{p-1}$), defining
+how each component of $s^p(t)$
+
+$$s^p(t)_{j_0<\cdots< j_{p-1}}$$
+
+is defined. Essentially, what we want to do is, as is always the case when defining a chain homotopy, fix an index $i_0$ and insert it into $j_0<\cdots< j_{p-1}$ (for convenience, assume $i_0< j_0<\cdots< j_{p-1}$), defining
 
 $$s^p(t)_{j_0<\cdots< j_{p-1}}=t_{i_0< j_0<\cdots < j_{p-1}}\tag{$\ast$}$$
 
 Now, $s^p(t)_{j_0<\cdots< j_{p-1}}$ is by definition a section over $U_{j_0}\cap\cdots\cap U_{j_{p-1}}$, but note that the right-hand side $t_{i_0< j_0<\cdots < j_{p-1}}$ is a section over the smaller set $U_{i_0}\cap U_{j_0}\cap\cdots\cap U_{j_{p-1}}$. For a general $\mathcal{F}$ this would be impossible to define in this way, but since we are assuming $\mathcal{F}$ is flasque, we can always extend this function to make it a section over $U_{j_0}\cap\cdots\cap U_{j_{p-1}}$, and equation ($\ast$) should be understood in this manner. Then the fact that $s^p$ defined this way is actually a chain homotopy can be verified by direct calculation: in $d^{p-1}s^p$ the term omitting $i_0$ and in $s^{p+1}d^p$ the term inserting $i_0$ cancel each other out with opposite signs.
 
-A slight technical issue is that the fixed index $i_0$ may be contained in $j_0<\cdots< j_{p-1}$. To handle this, instead of the usual Čech complex we use the *non-alternating* Čech complex, which uses coordinates given by $p+1$ elements $i_0,\ldots, i_{p+1}\in I$. This is quasi-isomorphic to the original Čech complex, so this detour is justified.
+A slight technical issue is that the fixed index $i_0$ may be contained in $j_0<\cdots< j_{p-1}$. To handle this, instead of the usual Čech complex we use the *non-alternating* Čech complex, which uses coordinates given by $p+1$ elements $i_0,\ldots, i_p\in I$. This is quasi-isomorphic to the original Čech complex, so this detour is justified.
 :::
 
 ::: Theorem 11 (Leray)
@@ -236,7 +236,7 @@ $$F_v^p\Tot(K)^\bullet,\qquad F_h^p\Tot(K)^\bullet$$
 
 defined on the total complex $\Tot(K)^\bullet$ of this double complex converge to the same filtered homology $H^\bullet(\Tot(K))$.
 
-Therefore, consider the spectral sequences given by each filtered complex. First, for the vertical filtration, on the $E_1$ page we have $E_1^{p,q} = H^q(K^{p,\bullet})$, and $K^{p,\bullet} = \check{C}^p(\mathcal{U}, \mathcal{I}^\bullet)$. Now, looking at each component, $\check{C}^p(\mathcal{U}, \mathcal{I}^\bullet)$ is obtained by restricting the injective resolution to each intersection $U_{i_0 \cdots i_p}$ and then taking cohomology, so it equals the $q$th sheaf cohomology of $\mathcal{F}$ on $U_{i_0\cdots i_p}$, and thus by the assumption that $\mathcal{F}$ is acyclic we have $E_1^{p,q}=0$ for all $q>0$. Also, by definition $E_1=\check{C}^p(\mathcal{U}, \mathcal{F})$. Now the $E_2$ page is given by the cohomology of $E_1^{p,0}$ with respect to the horizontal differential $d_h$, so
+Therefore, consider the spectral sequences given by each filtered complex. First, for the vertical filtration, on the $E_1$ page we have $E_1^{p,q} = H^q(K^{p,\bullet})$, and $K^{p,\bullet} = \check{C}^p(\mathcal{U}, \mathcal{I}^\bullet)$. Now, looking at each component, $\check{C}^p(\mathcal{U}, \mathcal{I}^\bullet)$ is obtained by restricting the injective resolution to each intersection $U_{i_0 \cdots i_p}$ and then taking cohomology, so it equals the $q$th sheaf cohomology of $\mathcal{F}$ on $U_{i_0\cdots i_p}$, and thus by the assumption that $\mathcal{F}$ is acyclic we have $E_1^{p,q}=0$ for all $q>0$. Also, by definition $E_1^{p,0}=\check{C}^p(\mathcal{U}, \mathcal{F})$. Now the $E_2$ page is given by the cohomology of $E_1^{p,0}$ with respect to the horizontal differential $d_h$, so
 
 $$E_2^{p,q}=\begin{cases}\check{H}^p(\mathcal{U}, \mathcal{F})&\text{$q=0$}\\0&\text{otherwise}\end{cases}$$
 
@@ -259,7 +259,7 @@ For a quasi-coherent sheaf $\mathcal{F} = \widetilde{M}$ on an affine variety $X
 
 The proof of this is that if we let $A$ be the coordinate ring of $X$ and find an injective resolution $I^\bullet$ of $M$ in the category $\lMod{A}$, this gives $\widetilde{I^\bullet}$ (which is a resolution in $\QCoh(X)$), and the sheaf given by an injective module is always flasque and hence acyclic.
 
-Now consider an arbitrary variety $X$ and a quasi-coherent sheaf $\mathcal{F}$ defined on it, and suppose an affine open cover $\mathcal{U}$ of $\mathcal{F}$ is given. Then for these data to satisfy the hypotheses of [Theorem 11](#thm11), every finite intersection of $\mathcal{U}$ must again be affine. If the diagonal
+Now consider an arbitrary variety $X$ and a quasi-coherent sheaf $\mathcal{F}$ defined on it, and suppose an affine open cover $\mathcal{U}$ of $X$ is given. Then for these data to satisfy the hypotheses of [Theorem 11](#thm11), every finite intersection of $\mathcal{U}$ must again be affine. If the diagonal
 
 $$\Delta_X\hookrightarrow X\times X$$
 
@@ -332,7 +332,7 @@ Our claim is that $\mathcal{Q}$ is flasque, which can be shown by a diagram chas
 
 ![Commutative diagram](/assets/images/Math/Algebraic_Varieties/Sheaf_Cohomology-1.svg){:style="width:23.07em" class="invert" .align-center}
 
-Here $\mathcal{F}$ is flasque by assumption and $\mathcal{I}$ is injective and hence flasque. Now for any $s\in \mathcal{Q}(V)$, since $\mathcal{I}(V)\rightarrow \mathcal{Q}(V)$ is surjective we can lift $s$ to $t\in \mathcal{I}(V)$, and then using that $\mathcal{I}$ is flasque we can lift $t$ to $\overline{t}\in\mathcal{I}(U)$ and push this down to $\mathcal{Q}$ to define $\overline{s}\in \mathcal{Q}(U)$. Now the element $\overline{s}\vert_V-s$ in $\mathcal{Q}(U)$ is an element of $\mathcal{F}(V)$, and again by the flasqueness of $\mathcal{F}$ there exists an appropriate $h\in \mathcal{F}(U)$ such that $h\vert_V=\overline{s}\vert_V-s$. From this, $\overline{s}-h$ restricts exactly to $s\in \mathcal{Q}(V)$, and we obtain the flasqueness of $\mathcal{Q}$.
+Here $\mathcal{F}$ is flasque by assumption and $\mathcal{I}$ is injective and hence flasque. Now for any $s\in \mathcal{Q}(V)$, since $\mathcal{I}(V)\rightarrow \mathcal{Q}(V)$ is surjective we can lift $s$ to $t\in \mathcal{I}(V)$, and then using that $\mathcal{I}$ is flasque we can lift $t$ to $\overline{t}\in\mathcal{I}(U)$ and push this down to $\mathcal{Q}$ to define $\overline{s}\in \mathcal{Q}(U)$. Since $\overline{t}$ is an extension of $t$, we have $\overline{t}\vert_V=t$, so $\overline{s}\vert_V$ equals the image of $t$ in $\mathcal{Q}(V)$, namely $s$. Therefore $\overline{s}$ restricts exactly to $s\in \mathcal{Q}(V)$, and we obtain the flasqueness of $\mathcal{Q}$.
 
 Now applying $\Gamma(X, -)$ gives the long exact sequence
 
@@ -342,7 +342,7 @@ Here $H^1(X, \mathcal{I}) = 0$ because $\mathcal{I}$ is injective. Thus
 
 $$H^1(X, \mathcal{F}) \cong \coker(\Gamma(X, \mathcal{I}) \rightarrow \Gamma(X, \mathcal{Q}))$$
 
-and to show that this is $0$ we need to show that $\Gamma(X, \mathcal{I})\rightarrow \Gamma(X, \mathcal{Q})$ is surjective. To this end, let $s\in \Gamma(X, \mathcal{Q})$ be given. Then for any $x\in X$, since $\mathcal{I}\rightarrow \mathcal{Q}$ is surjective at the stalk level, for each $x\in X$ there exists an appropriate $t_x\in \mathcal{I}_x$ such that $t_x$ maps to $s_x\in \mathcal{Q}_x$. Now choose a representative of $t_x$ and think of $t_x$ as an element of $\mathcal{I}(U_x)$; since $\mathcal{I}$ is flasque we can extend each of these to global sections $T_x$ on $X$, and then $T_x\mid_{U_x}=s\mid_{U_x}$.
+and to show that this is $0$ we need to show that $\Gamma(X, \mathcal{I})\rightarrow \Gamma(X, \mathcal{Q})$ is surjective. To this end, let $s\in \Gamma(X, \mathcal{Q})$ be given. Then for any $x\in X$, since $\mathcal{I}\rightarrow \mathcal{Q}$ is surjective at the stalk level, for each $x\in X$ there exists an appropriate $t_x\in \mathcal{I}_x$ such that $t_x$ maps to $s_x\in \mathcal{Q}_x$. Now choose a representative of $t_x$ on a suitable neighborhood $U_x$ of $x$ and think of $t_x$ as an element of $\mathcal{I}(U_x)$; since $\mathcal{I}$ is flasque we can extend each of these to global sections $T_x$ on $X$, and then $T_x\mid_{U_x}=s\mid_{U_x}$.
 
 Now let $S_x$ be the image of $T_x$ in $\Gamma(X,\mathcal{Q})$. Then $S_x-S_y$ is identically zero on $U_x\cap U_y$, so we can lift this to a section $f_{xy}$ of $\mathcal{F}$ on $U_x\cap U_y$. Using the flasqueness of $\mathcal{F}$ again, we can extend this to $f_x\in \mathcal{F}(U_x)$ and $f_y\in \mathcal{F}(U_y)$ respectively, and then replacing $T_x$ by $T'_x=T_x-f_x$ in this situation satisfies the compatibility condition, so we know that gluing these gives a preimage of $s$.
 
@@ -460,7 +460,7 @@ $$E_1^{p,0}=\Gamma(Y, f_\ast \mathcal{G}^p (\mathcal{F}))=\Gamma(X, \mathcal{G}^
 
 with the Godement differential. Therefore the $E_2$ page is
 
-$$E_2^{n,0}=H^n(\Gamma(X, \mathcal{G}^\bullet(\mathcal{F}))=H^n(X, \mathcal{F})$$
+$$E_2^{n,0}=H^n(\Gamma(X, \mathcal{G}^\bullet(\mathcal{F})))=H^n(X, \mathcal{F})$$
 
 and thus we obtain the following.
 
@@ -511,7 +511,7 @@ exists, and from the above computation,
 
 $$E_\infty^{2,0} = E_3^{2,0} = \operatorname{coker}(d_2: E_2^{0,1} \rightarrow E_2^{2,0})$$
 
-so inserting this into $H^2(X, \mathcal{F})$ via the filtration gives that
+so inserting via the filtration $F^2 H^2 \hookrightarrow H^2(X, \mathcal{F})$ gives that
 
 $$E_2^{0,1} \overset{d_2}{\rightarrow} E_2^{2,0} \rightarrow H^2(X, \mathcal{F})$$
 
@@ -571,4 +571,4 @@ This proposition shows that the classification of line bundles reduces to a coho
 
 ---
 
-[^1]: More generally, as we saw in [[Topology] §Sheaves, §§The Abelian Category of Sheaves](/en/math/topology/sheaves#the-abelian-category-of-sheaves), the category $$\Sh(X)$$ of sheaves defined on an arbitrary topological space $$X$$ forms an abelian category.
+[^1]: More generally, as we saw in [[Topology] §Sheaves, §§The Abelian Category of Sheaves](/en/math/topology/sheaves#the-abelian-category-of-sheaves), the category $\Sh(X)$ of sheaves defined on an arbitrary topological space $X$ forms an abelian category.

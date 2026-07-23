@@ -61,7 +61,7 @@ $$\mathbb{K}(x)\cong \mathbb{K}[\x]/(f)\cong \mathbb{K}(y)$$
 so it is obvious that the third condition implies the second. Finally, assuming the second condition, [Proposition 1](#prop1) yields a $\mathbb{K}$-isomorphism $u:\overline{\mathbb{K}}\rightarrow\overline{\mathbb{K}}$ extending $v$, and therefore $x$ and $y$ are conjugate.
 :::
 
-From this, if an algebraic element $x\in \overline{\mathbb{K}}$ of degree $n$ is given, we know that elements conjugate to $x$ must be roots of the minimal polynomial of $x$, and hence there are at most $n$ such elements. Moreover, having *fewer* than $n$ elements conjugate to $x$ is exactly equivalent to the minimal polynomial of $x$ not being separable. That is, denoting the group of $\mathbb{K}$-automorphisms of $\overline{\mathbb{K}}$ by $\Aut_\mathbb{K}(\overline{\mathbb{K}})$, and letting $\Aut_{\mathbb{K}}\overline{\mathbb{K}}$ act on $\overline{\mathbb{K}}$ in the obvious way, the set of elements fixed by this action $\overline{\mathbb{K}}^{\Aut_{\mathbb{K}}(\overline{\mathbb{K}})}$ is exactly $\mathbb{K}^{p^{-\infty}}$.
+From this, if an algebraic element $x\in \overline{\mathbb{K}}$ of degree $n$ is given, we know that elements conjugate to $x$ must be roots of the minimal polynomial of $x$, and hence there are at most $n$ such elements. Moreover, having *fewer* than $n$ elements conjugate to $x$ is exactly equivalent to the minimal polynomial of $x$ not being separable. That is, denoting the group of $\mathbb{K}$-automorphisms of $\overline{\mathbb{K}}$ by $\Aut_\mathbb{K}(\overline{\mathbb{K}})$, and letting $\Aut_\mathbb{K}\overline{\mathbb{K}}$ act on $\overline{\mathbb{K}}$ in the obvious way, the set of elements fixed by this action $\overline{\mathbb{K}}^{\Aut_{\mathbb{K}}(\overline{\mathbb{K}})}$ is exactly $\mathbb{K}^{p^{-\infty}}$.
 
 ## Galois Extensions
 
@@ -98,7 +98,7 @@ From this the following holds.
 The following hold.
 
 1. An algebraic extension $\mathbb{L}/\mathbb{K}$ is quasi-Galois if and only if every conjugate of $\mathbb{L}$ is itself.
-2. For an algebraic extension $\mathbb{K}\subseteq \mathbb{L}\subseteq \mathbb{M}$, if $\mathbb{M}/\mathbb{K}$ is quasi-Galois then so is $\mathbb{L}/\mathbb{K}$.
+2. For an algebraic extension $\mathbb{K}\subseteq \mathbb{L}\subseteq \mathbb{M}$, if $\mathbb{M}/\mathbb{K}$ is quasi-Galois then so is $\mathbb{M}/\mathbb{L}$.
 3. Let a quasi-Galois extension $\mathbb{M}/\mathbb{K}$ and its subextension $\mathbb{L}/\mathbb{K}$ be given. Then for any $\mathbb{K}$-homomorphism $u: \mathbb{L}\rightarrow \overline{\mathbb{K}}$ we have $u(\mathbb{L})\subseteq \mathbb{M}$, and there exists a $\mathbb{K}$-automorphism $v$ of $\mathbb{M}$ extending this.
 4. For any field extension $\mathbb{K}'/\mathbb{K}$ and quasi-Galois extension $\mathbb{L}/\mathbb{K}$, the composite $\mathbb{K}'(\mathbb{L})$ is quasi-Galois over $\mathbb{K}'$.
 :::

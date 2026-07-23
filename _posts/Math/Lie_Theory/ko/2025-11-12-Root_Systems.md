@@ -41,7 +41,7 @@ $$K(\Ad_g(X), \Ad_g(Y))=K(X,Y)$$
 
 이 성립하며, 이를 $g=e$에서 $Z$ 방향으로 미분하면 다음의 $\ad$-invariance
 
-$$0=\frac{d}{dt}\bigg\vert_{t=0}K(\Ad_{\exp(tZ)}X, \Ad_{\exp(tZ)},Y)=K([Z,X],Y)+K(X,[Z,Y])$$
+$$0=\frac{d}{dt}\bigg\vert_{t=0}K(\Ad_{\exp(tZ)}X, \Ad_{\exp(tZ)}Y)=K([Z,X],Y)+K(X,[Z,Y])$$
 
 을 얻는다. 남아있는 것은 이것이 non-degenerate인 조건이다. 
 
@@ -114,7 +114,7 @@ $$\mathfrak{g}=\mathfrak{h}\oplus\bigoplus_{\alpha\in\Phi}\mathfrak{g}_\alpha$$
     이 성립한다. 
 2. 임의의 $X\in \mathfrak{g}_\alpha, Y\in \mathfrak{g}_\beta$, $H\in \mathfrak{h}$에 대하여, $K$의 $\ad$-invariance로부터
     
-    $$0=K([H,X],Y)+K(X,[H,Y])=K(\alpha(H),X)+K(X,\beta(H)Y)=(\alpha+\beta)(H)K(X,Y)$$
+    $$0=K([H,X],Y)+K(X,[H,Y])=K(\alpha(H)X,Y)+K(X,\beta(H)Y)=(\alpha+\beta)(H)K(X,Y)$$
 
     을 얻는다. 만일 $\alpha+\beta\neq 0$이라면 이 식이 항상 성립하기 위해서는 $K(X,Y)=0$이 항상 성립해야 한다.
 3. Killing form은 $\mathfrak{g}$에서는 non-degenerate이므로, 임의의 $X\in \mathfrak{g}_\alpha$가 주어졌을 때마다 $K(X,Z)\neq 0$이도록 하는 $Z\in \mathfrak{g}$가 존재한다. 보여야 할 것은 $Z\in \mathfrak{g}_{-\alpha}$이도록 할 수 있다는 것이다. 이는 $Z$를 root decompose한 후 둘째 결과에 의해 $-\alpha$가 아닌 나머지 부분에 해당하는 성분들은 어차피 $X$와 pairing해봤자 $0$이 되기 때문에 자명하다.
@@ -153,7 +153,7 @@ $$H\cdot v=\mu v,\qquad E\cdot v=0$$
 이 성립하는 것을 안다.
 
 ::: 명제 7
-임의의 highest weight $v_0\in V_\mu$에 대하여, 
+임의의 highest weight vector $v_0\in V_\mu$에 대하여, 
 
 $$v_j=\frac{1}{j!}F^j v_0$$
 
@@ -177,7 +177,7 @@ $$E\cdot v_j=(\mu-j+1)v_{j-1}$$
 
 $$0=E\cdot v_{m+1}=(\mu-m)v_m$$
 
-과 $m$의 최소성으로부터 $\mu=m$이어야 한다는 것을 안다. 즉 highest weight는 반드시 양의 정수이다. 
+과 $m$의 최소성으로부터 $\mu=m$이어야 한다는 것을 안다. 즉 highest weight는 반드시 음이 아닌 정수이다. 
 
 ::: 정의 8
 고정된 정수 $m\geq 0$에 대하여, $\sl_2$의 representation $V(m)$을 $m+1$개의 vector들 $v_0,\ldots, v_m$과, [명제 7](#prop7)의 action 
@@ -198,7 +198,7 @@ $$H\cdot v_j=(m-2j)v_j,\quad F\cdot v_j=(j+1)v_{j+1},\quad E\cdot v_j=(m-j+1)v_{
 
 1. $\Phi$의 원소들이 $V$를 span한다. 
 2. 만일 $\alpha\in \Phi$이고 $c\in \mathbb{R}$이라면 $c\alpha\in \Phi$이기 위해서는 $c=\pm 1$이어야 한다. 
-3. 각각의 root $\alpha\in\Phi$에 대하여, $\Phi$는 $\alpha$에 수직인 초평면에 대한 대칭이동 $s_\alpha$에 대해 닫혀있다. 즉, 임의의 $\alpha,\beta\in \Phi$에 대하여
+3. 각각의 root $\alpha\in\Phi$에 대하여, $\Phi$는 $\alpha$에 수직인 hyperplane에 대한 대칭이동 $s_\alpha$에 대해 닫혀있다. 즉, 임의의 $\alpha,\beta\in \Phi$에 대하여
     
     $$s_\alpha(\beta):=\beta-2\frac{(\beta,\alpha)}{(\alpha,\alpha)}\alpha\in \Phi$$
 
@@ -240,7 +240,7 @@ $$0=K([H,X_\alpha],X_\beta)+K(X_\alpha, [H,X_\beta])=K(\alpha(H)X_\alpha, X_\bet
 
 $$\mathfrak{h}\rightarrow \mathfrak{h}^\ast;\qquad H\mapsto K(H, -)$$
 
-이 존재한다. 그럼 $\Phi\subseteq \mathfrak{h}^\ast$는 $\mathfrak{h}^\ast$의 spanning set이다. $\Phi$의 원소들의 일차결합으로 나타나지 않는 $\mathfrak{h}^\ast$의 원소가 있다 하면, 이에 해당하는 $\mathfrak{h}$의 원소는 모든 $\alpha\in H$에 대하여 $\alpha(H)$를 만족하여야 한다. 이제 임의의 root space $\mathfrak{g}_\alpha$에 대하여, $H$는
+이 존재한다. 그럼 $\Phi\subseteq \mathfrak{h}^\ast$는 $\mathfrak{h}^\ast$의 spanning set이다. $\Phi$의 원소들의 일차결합으로 나타나지 않는 $\mathfrak{h}^\ast$의 원소가 있다 하면, 이에 해당하는 $\mathfrak{h}$의 원소는 모든 $\alpha\in \Phi$에 대하여 $\alpha(H)=0$을 만족하여야 한다. 이제 임의의 root space $\mathfrak{g}_\alpha$에 대하여, $H$는
 
 $$[H,X]=\alpha(H)X=0\qquad\text{for all $X\in \mathfrak{g}_\alpha$}$$
 
@@ -324,7 +324,7 @@ $$\frac{2K(\alpha,\beta)}{K(\alpha,\alpha)}=2c,\quad \frac{2K(\alpha,\beta)}{K(\
 가 모두 정수이기 위해서는 $c$는 $\pm 1$, $\pm 2$, $\pm 1/2$ 중 하나여야 하고, 다시 이를 $\sl_2$-representation theory로 옮긴 후 integrality를 적용하면 원하는 결과를 얻는다. 즉 우리는 다음을 증명하였다. 
 
 ::: 명제 12
-[정의 4](#def4)에서 정의한 root들의 모임 $\Phi$는 $\mathfrak{h}^\ast$의 root system이다. 
+[정의 5](#def5)에서 정의한 root들의 모임 $\Phi$는 $\mathfrak{h}^\ast$의 root system이다. 
 :::
 
 ## 예시들
@@ -334,17 +334,17 @@ $$\frac{2K(\alpha,\beta)}{K(\alpha,\alpha)}=2c,\quad \frac{2K(\alpha,\beta)}{K(\
 ::: 예시 13
 우선 standard Euclidean space $\mathbb{R}^{n+1}$을 생각하고, $\mathbb{R}^{n+1}$의 subspace
 
-$$V_n=\left\{(x_1,\ldots, x_{n+1}\mid x_1+\cdots+x_{n+1}=0\right\}$$
+$$V_n=\left\{(x_1,\ldots, x_{n+1})\mid x_1+\cdots+x_{n+1}=0\right\}$$
 
 을 생각하자. 우리는 이 벡터공간의 부분집합
 
 $$\Phi(A_n)=\left\{e_i-e_j\mid 1\leq i\neq j\leq n+1\right\}$$
 
-을 생각한다. 그럼 이 집합이 [정의 5](#def5)의 조건을 모두 만족하는 것을 안다. 첫째 조건인 $\Phi(A_n)$이 $V_n$을 span하는 것과, 둘째 조건이 성립하는 것은 자명하다. 셋째 조건의 경우, 임의의 벡터 $\mathbf{x}=(x_1,\ldots, x_{n+1})$와 임의의 $\mathbf{e}_{ij}=e_i-e_j$에 대하여 다음 식
+을 생각한다. 그럼 이 집합이 [정의 9](#def9)의 조건을 모두 만족하는 것을 안다. 첫째 조건인 $\Phi(A_n)$이 $V_n$을 span하는 것과, 둘째 조건이 성립하는 것은 자명하다. 셋째 조건의 경우, 임의의 벡터 $\mathbf{x}=(x_1,\ldots, x_{n+1})$와 임의의 $\mathbf{e}_{ij}=e_i-e_j$에 대하여 다음 식
 
 $$s_{ij}(\mathbf{x})=\mathbf{x}-\langle \mathbf{x}, \mathbf{e}_{ij}\rangle\mathbf{e}_{ij}=(x_1,\ldots, x_{n+1})-(x_i-x_j)\mathbf{e}_{ij}$$
 
-이고 이는 $\mathbf{x}$의 $i$번째와 $j$번째의 성분을 바꾼 것으로 주어진다. 따라서 이로부터 [정의 5](#def5)의 셋째 조건이 성립하는 것을 알고 넷째 조건은 자명하다. 
+이고 이는 $\mathbf{x}$의 $i$번째와 $j$번째의 성분을 바꾼 것으로 주어진다. 따라서 이로부터 [정의 9](#def9)의 셋째 조건이 성립하는 것을 알고 넷째 조건은 자명하다. 
 :::
 
 비슷하게 다음의 예시를 생각할 수 있다. 
@@ -354,9 +354,9 @@ $$s_{ij}(\mathbf{x})=\mathbf{x}-\langle \mathbf{x}, \mathbf{e}_{ij}\rangle\mathb
 
 $$\Phi(D_n)=\left\{\pm e_i\pm e_j\mid 1\leq i \neq j\leq n\right\}$$
 
-을 생각한다. 이들 벡터들이 $\mathbb{R}^n$을 span하는 것은 자명하다. 이번에는 임의의 $\mathbf{e}_{ij}^\pm =e_i\pm e_j$들이 어떠한 reflection을 정의하는지를 살펴보아야 한다. 우리는 $e_i-e_j$들이 벡터 $\mathbf{x}$의 $i$번째와 $j$번째 성분을 바꿔주는 것을 알고 있으며 따라서 $e_i+e_j$가 어떠한 reflection을 정의하는지를 알뗜 충분하다. 즉 다음의 계산
+을 생각한다. 이들 벡터들이 $\mathbb{R}^n$을 span하는 것은 자명하다. 이번에는 임의의 $\mathbf{e}_{ij}^\pm =e_i\pm e_j$들이 어떠한 reflection을 정의하는지를 살펴보아야 한다. 우리는 $e_i-e_j$들이 벡터 $\mathbf{x}$의 $i$번째와 $j$번째 성분을 바꿔주는 것을 알고 있으며 따라서 $e_i+e_j$가 어떠한 reflection을 정의하는지를 알면 충분하다. 즉 다음의 계산
 
-$$s_{ij}^+(\mathbf{x})=\mathbf{x}-\langle\mathbf{x}, \mathbf{e}_{ij}^+\rangle\mathbf{e}_{ij}^+=(x_1,\ldots, x_n)-(x_i+x_j)\mathbf{e}_{ij}$$
+$$s_{ij}^+(\mathbf{x})=\mathbf{x}-\langle\mathbf{x}, \mathbf{e}_{ij}^+\rangle\mathbf{e}_{ij}^+=(x_1,\ldots, x_n)-(x_i+x_j)\mathbf{e}_{ij}^+$$
 
 을 생각하면, $s_{ij}^+$는 주어진 벡터의 $i$번째 성분과 $j$번째 성분을 바꾼 후 부호까지 반대로 바꾸어주는 것이다. 
 :::
@@ -368,7 +368,7 @@ $$e_i-e_k=(e_i-e_j)+(e_j-e_k)$$
 이 성립하며 이로부터 $\Phi(A_n)$을 묘사하기 위해서는 $e_i-e_{i+1}$ 꼴의 원소들만 필요함을 안다. 이와 비슷한 방식으로 우리는 다음을 정의한다. 
 
 ::: 정의 15
-Root system $\Phi$에 대하여, 우리는 $\Phi$의 부분집합 $\Phi^+$가 *positive root<sub>양의 근</sub>*들의 부분집합이라는 것은 각각의 root $\alpha\in \Phi$에 대하여, $\alpha$와 $-\alpha$ 중 정확하게 하나만이 $\Phi$에 속하며, 임의의 두 $\alpha,\beta\in \Phi^+$가 주어질 때마다 $\alpha+\beta\in \Phi^+$ 또한 성립하는 것이다. Simple root들의 모임 $\Phi^+$을 고정하였을 때, $\Phi^+$의 원소 $\alpha$가 *simple root<sub>단순근</sub>*라는 것은 $\alpha$를 $\Phi^+$의 두 원소들의 합으로 나타낼 수 없는 것이다. 
+Root system $\Phi$에 대하여, 우리는 $\Phi$의 부분집합 $\Phi^+$가 *positive root<sub>양의 근</sub>*들의 부분집합이라는 것은 각각의 root $\alpha\in \Phi$에 대하여, $\alpha$와 $-\alpha$ 중 정확하게 하나만이 $\Phi^+$에 속하며, 임의의 두 $\alpha,\beta\in \Phi^+$가 주어질 때마다 $\alpha+\beta\in \Phi^+$ 또한 성립하는 것이다. Positive root들의 모임 $\Phi^+$을 고정하였을 때, $\Phi^+$의 원소 $\alpha$가 *simple root<sub>단순근</sub>*라는 것은 $\alpha$를 $\Phi^+$의 두 원소들의 합으로 나타낼 수 없는 것이다. 
 :::
 
 따라서 simple root들 사이의 정수값들 
@@ -393,11 +393,11 @@ Root system의 정의에 의하여 각각의 성분 $a_{ij}$는 정수이다. �
 
 $$\langle\alpha,\beta\rangle \langle\beta,\alpha\rangle=4\frac{(\alpha,\beta)^2}{\lvert\alpha\rvert^2\lvert\beta\rvert^2}=4(\cos\theta)^2$$
 
-과, 좌변이 정수라는 사실로부터 임의의 두 root $\alpha,\beta$에 대해 $\langle\alpha,\beta\rangle$이 취할 수 있는 값은 $0, \pm 1, \pm 2$ 뿐인 것을 안다. 여기서 $\cos\theta$는 두 root $\alpha,\beta$가 이루는 사잇각이며 이것이 취할 수 있는 값은
+과, 좌변이 정수라는 사실로부터 임의의 두 root $\alpha,\beta$에 대해 $\langle\alpha,\beta\rangle$이 취할 수 있는 값은 $0, \pm 1, \pm 2, \pm 3$ 뿐인 것을 안다. 여기서 $\cos\theta$는 두 root $\alpha,\beta$가 이루는 사잇각이며 이것이 취할 수 있는 값은
 
 $$0, \pm \frac{1}{2}, \pm \frac{\sqrt{2}}{2}, \pm \frac{\sqrt{3}}{2}, \pm 1$$
 
-이 된다. 여기서 $\pm 1$의 경우는 [정의 5](#def5)의 둘째 조건에 의해 배제되므로 root들은 각각 $30$도 (혹은 $150$도), $45$도 (혹은 $135$도), $60$도 (혹은 $120$도)의 각도만 이룰 수 있다. 
+이 된다. 여기서 $\pm 1$의 경우는 [정의 9](#def9)의 둘째 조건에 의해 배제되므로 root들은 각각 $30$도 (혹은 $150$도), $45$도 (혹은 $135$도), $60$도 (혹은 $120$도)의 각도만 이룰 수 있다. 
 
 예시를 위해 만일 두 root $\alpha,\beta$가 이루는 각이 $30$도이거나 $150$도라 하자. 그럼
 
@@ -411,15 +411,15 @@ $$\langle \alpha,\beta\rangle =2\frac{(\alpha,\beta)}{\lvert\beta\rvert^2}=\frac
 
 ## Weyl group
 
-Root system $\Phi$의 각 root $\alpha$에 대하여 reflection $s_\alpha$는 $\Phi$의 automorphism을 정의한다. 이들 reflection들로 생성되는 군을 생각하자.
+Root system $\Phi$의 각 root $\alpha$에 대하여 reflection $s_\alpha$는 $\Phi$의 automorphism을 정의한다. 이들 reflection들로 생성되는 group을 생각하자.
 
 ::: 정의 17
-Root system $\Phi$의 *Weyl group*은 reflection들 $s_\alpha$ ($\alpha\in\Phi$)로 생성되는 $\Aut(\Phi)$의 부분군이다.
+Root system $\Phi$의 *Weyl group*은 reflection들 $s_\alpha$ ($\alpha\in\Phi$)로 생성되는 $\Aut(\Phi)$의 subgroup이다.
 
 $$W(\Phi)=\langle s_\alpha\mid \alpha\in\Phi\rangle$$
 :::
 
-Weyl group은 유한군이다. 실제로 $W$는 $\Phi$가 속한 Euclidean space의 orthogonal group의 부분군이고, $\Phi$가 유한집합이므로 $W$ 역시 유한하다. 또한 [명제 12](#prop12)에서 확인한 것과 같이 reflection $s_\alpha$가 $\alpha$에 수직인 초평면에 대한 대칭이동이므로, $W$는 Coxeter group의 구조를 갖는다.
+Weyl group은 유한군이다. 실제로 $W$는 $\Phi$가 속한 Euclidean space의 orthogonal group의 subgroup이고, $\Phi$가 유한집합이므로 $W$ 역시 유한하다. 또한 [명제 12](#prop12)에서 확인한 것과 같이 reflection $s_\alpha$가 $\alpha$에 수직인 hyperplane에 대한 대칭이동이므로, $W$는 Coxeter group의 구조를 갖는다.
 
 ::: 예시 18
 [예시 13](#ex13)에서 살펴본 $\Phi(A_n)$의 경우, reflection $s_{ij}$는 $i$번째와 $j$번째 좌표를 교환하는 transposition에 해당한다. 따라서 $W(\Phi(A_n))\cong S_{n+1}$이다. [예시 14](#ex14)의 $\Phi(D_n)$의 경우, reflection들은 좌표의 교환과 부호 변화를 모두 포함하므로 $W(\Phi(D_n))\cong(\mathbb{Z}/2\mathbb{Z})^{n-1}\rtimes S_n$이다.

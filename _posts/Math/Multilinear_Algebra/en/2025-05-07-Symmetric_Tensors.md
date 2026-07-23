@@ -219,7 +219,7 @@ For an $A$-module homomorphism $u: M \rightarrow N$,
 
 $$\T(u)\vert_{\Sym(M)}:\Sym(M) \rightarrow \Sym(N)$$
 
-is well-defined. We write $\T(u)\vert_{\Sym(M)}$ simply as $\Sym(u)$. Then we know that $\Sym$ becomes a functor, and moreover from the corresponding properties in [[Tensor Algebras] §Tensor Algebras](/en/math/multilinear_algebra/tensor_algebras) we know that the natural isomorphism
+is well-defined. We write $\T(u)\vert_{\Sym(M)}$ simply as $\Sym(u)$. Then we know that $\Sym$ becomes a functor, and moreover from the corresponding properties in [§Tensor Algebra](/en/math/multilinear_algebra/tensor_algebras) we know that the natural isomorphism
 
 $$\bigotimes_{i\in I}\Sym(M_i)\rightarrow \Sym\left(\bigoplus_{i\in I} M_i\right)$$
 
@@ -231,7 +231,7 @@ sends $x\otimes y$ to $xy$.
 
 ## Symmetric Algebra and Symmetric Tensors
 
-Consider the canonical injections $i: M \rightarrow \T(M)$ and $j: M \rightarrow \Sym(M)$. Then by [[Tensor Algebras] §Tensor Algebras, ⁋Proposition 2](/en/math/multilinear_algebra/tensor_algebras#prop2), there exists a unique $\mathbb{N}$-graded $A$-algebra homomorphism $s: \T(M)\rightarrow \Sym(M)$ such that $j=s\circ i$. This is the identity on $\T^0(M)=\Sym^0(M)$, and considering how multiplication is defined in $\T(M)$ and $\Sym(M)$ respectively, we know that $s:\T(M) \rightarrow \Sym(M)$ is exactly the *symmetrization*
+Consider the canonical injections $i: M \rightarrow \T(M)$ and $j: M \rightarrow \Sym(M)$. Then by [§Tensor Algebra, ⁋Proposition 2](/en/math/multilinear_algebra/tensor_algebras#prop2), there exists a unique $\mathbb{N}$-graded $A$-algebra homomorphism $s: \T(M)\rightarrow \Sym(M)$ such that $j=s\circ i$. This is the identity on $\T^0(M)=\Sym^0(M)$, and considering how multiplication is defined in $\T(M)$ and $\Sym(M)$ respectively, we know that $s:\T(M) \rightarrow \Sym(M)$ is exactly the *symmetrization*
 
 $$s:\T(M)\rightarrow \Sym(M);\qquad x\mapsto \sum_{\sigma\in S_n}\sigma x.$$
 
@@ -247,7 +247,7 @@ The advantage of doing so is that one no longer needs to worry about such coeffi
 In general, any $A$-module has a $\mathbb{Z}$-module structure (so expressions like $k!.x$ are well-defined regardless of $A$), but a natural $\mathbb{Q}$-action does not exist, so we will stick to the original definition.
 :::
 
-For the symmetrization map $s:\T(M) \rightarrow \Sym(M)$ obtained in this way, by [[Tensor Algebras] §Tensor Algebras, ⁋Proposition 6](/en/math/multilinear_algebra/tensor_algebras#prop6) we obtain $\bar{s}: \S(M) \rightarrow \Sym(M)$ satisfying
+For the symmetrization map $s:\T(M) \rightarrow \Sym(M)$ obtained in this way, by [§Tensor Algebra, ⁋Proposition 6](/en/math/multilinear_algebra/tensor_algebras#prop6) we obtain $\bar{s}: \S(M) \rightarrow \Sym(M)$ satisfying
 
 $$s=\bar{s}\circ p,$$
 
@@ -350,11 +350,11 @@ $$\x^\nu=\x_1^{\nu(1)}\cdots\x_n^{\nu(n)},\qquad 0\leq\nu(i)< i$$
 
 generate $A[\x_1,\ldots, \x_n]$ as an $A[\x_1,\ldots, \x_n]^{S_n}$-module. A useful identity in this process is the following identity that holds in the polynomial ring $A[\x_1,\ldots, \x_n, T_1, T_2]$:
 
-$$\prod_{i=1}^n(T_1+\x_iT_2)=\sum_{k=0}^n T_1^{n-k}T_2\x_k,$$
+$$\prod_{i=1}^n(T_1+\x_iT_2)=\sum_{k=0}^n T_1^{n-k}T_2^ks_k,$$
 
 which in particular gives the two identities
 
-$$\prod_{i=1}^n(1+\x_iT)=\sum_{k=0}^n s_kT^k,\qquad \prod_{i=1}(\x-\x_i)=\sum_{k=0}^n(-1)^{n-k}s_{n-k}\x^k.$$
+$$\prod_{i=1}^n(1+\x_iT)=\sum_{k=0}^n s_kT^k,\qquad \prod_{i=1}^n(\x-\x_i)=\sum_{k=0}^n(-1)^{n-k}s_{n-k}\x^k.$$
 
 Thinking of the second identity as a property similar to the relationship between roots and coefficients, for any polynomial
 

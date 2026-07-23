@@ -13,7 +13,7 @@ weight: 15
 
 ---
 
-우리는 앞서 differential form들의 모임이 $C^\infty(M)$-algebra가 된다는 것을 확인했다. 대수적으로 이 모임의 아이디얼을 생각할 수 있으며, 뿐만 아니라 이 모임 $\Omega^\ast(M)$은 dg-algebra였으므로 정확한 맥락에서는 지금 정의할 *differential ideal*을 생각하는 것이 더 자연스럽다.
+우리는 앞서 differential form들의 모임이 $C^\infty(M)$-algebra가 된다는 것을 확인했다. 대수적으로 이 모임의 ideal을 생각할 수 있으며, 뿐만 아니라 이 모임 $\Omega^\ast(M)$은 dg-algebra였으므로 정확한 맥락에서는 지금 정의할 *differential ideal*을 생각하는 것이 더 자연스럽다.
 
 ## 미분 아이디얼의 정의
 
@@ -78,7 +78,7 @@ $m$차원 manifold $M$과, $m-k$개의 independent 1-form들로 생성된 differ
 
 ## 그래프와 differential form
 
-다음 정리는 리 군과 리 대수 사이의 관계를 탐구하는 데에 중요하게 사용된다.
+다음 정리는 Lie group과 Lie algebra 사이의 관계를 탐구하는 데에 중요하게 사용된다.
 
 ::: 정리 7
 두 manifold $M^m,N^n$이 주어졌다 하고, $\pi_1:N\times M\rightarrow N$과 $\pi_2:N\times M\rightarrow M$이 각각 canonical projection이라 하자. 또, $M$에서 정의된 1-form들의 모임이 basis $\{\omega_1,\ldots,\omega_m\}$을 갖는다 가정하자. 
@@ -119,7 +119,7 @@ $m$차원 manifold $M$과, $m-k$개의 independent 1-form들로 생성된 differ
 
     으로부터 분명하다.
 
-2. 주어진 form들의 집합으로 생성되는 ideal을 $\mathcal{I}$라 하자. 그럼 프로베니우스 정리에 의하여, $\mathcal{I}$는 $(m+n)-m=c$차원의 integral manifold $I$를 갖는다. 이후, 임의의 점 $q\in I$에 대하여, $d\pi_1$을 $I_q$로 제한한 것이 전단사함수임을 보이면 된다. 
+2. 주어진 form들의 집합으로 생성되는 ideal을 $\mathcal{I}$라 하자. 그럼 프로베니우스 정리에 의하여, $\mathcal{I}$는 $(m+n)-m=n$차원의 integral manifold $I$를 갖는다. 이후, 임의의 점 $q\in I$에 대하여, $d\pi_1$을 $I_q$로 제한한 것이 전단사함수임을 보이면 된다. 
 :::
 
 ---

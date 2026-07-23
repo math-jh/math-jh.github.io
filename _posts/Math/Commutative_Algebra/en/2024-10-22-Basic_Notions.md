@@ -80,9 +80,9 @@ For any $A$-module $M$, the following are all equivalent.
 3. Any collection of submodules of $M$ always has a maximal element with respect to inclusion.
 :::
 ::: Proof
-First assume condition 1 and show condition 2. Suppose for contradiction that $M$ has a submodule $N$ that is not finitely generated. Then we can choose an arbitrary element $x_0\neq 0$ of $N$, and since $N$ is not finitely generated we have $N\neq \langle x_1\rangle$, so we can choose $x_2\in N\setminus \langle x_1\rangle$. Repeating this, we obtain an increasing sequence of submodules of $N$
+First assume condition 1 and show condition 2. Suppose for contradiction that $M$ has a submodule $N$ that is not finitely generated. Then we can choose an arbitrary element $x_1\neq 0$ of $N$, and since $N$ is not finitely generated we have $N\neq \langle x_1\rangle$, so we can choose $x_2\in N\setminus \langle x_1\rangle$. Repeating this, we obtain an increasing sequence of submodules of $N$
 
-$$\langle x_1\rangle\subsetneq \langle x_2\rangle\subsetneq\cdots$$
+$$\langle x_1\rangle\subsetneq \langle x_1,x_2\rangle\subsetneq\cdots$$
 
 which are also submodules of $M$, contradicting the assumption that $M$ is noetherian.
 
@@ -90,7 +90,7 @@ Now assume condition 2 and show condition 1. Given an ascending chain of submodu
 
 $$M_0\subseteq M_1\subseteq M_2\subseteq\cdots$$
 
-let $M'=\bigcup M_k$; then $M'$ is finitely generated, so write $M'=\langle x_1,\ldots, x_n\rangle$. Now for each $i$, we can choose $k_i$ such that $x_i\in N_{k_i}$ holds, and the largest of these $k_i$ must then equal $M'$.
+let $M'=\bigcup M_k$; then $M'$ is finitely generated, so write $M'=\langle x_1,\ldots, x_n\rangle$. Now for each $i$, we can choose $k_i$ such that $x_i\in M_{k_i}$ holds, and if $k$ is the largest of these $k_i$ then $M_k$ must equal $M'$.
 
 Now we show that conditions 1 and 3 are equivalent. First, if condition 1 is satisfied, then for any collection of submodules of $M$ the premise of [\[Set Theory\] §Axiom of Choice, ⁋Theorem 4](/en/math/set_theory/axiom_of_choice#thm4) is satisfied by the ACC, so condition 3 obviously holds. Conversely, if condition 3 is satisfied, then given an ascending chain of submodules of $M$
 
@@ -156,7 +156,7 @@ and on the other hand $A^{\oplus n}$ is noetherian by [Corollary 6](#cor6), so i
 
 $$A^{\oplus m} \rightarrow \ker u \rightarrow 0$$
 
-and composing $A^{\oplus m} \rightarrow \ker \rightarrow A^{\oplus n}$, we obtain the exact sequence
+and composing $A^{\oplus m} \rightarrow \ker u \rightarrow A^{\oplus n}$, we obtain the exact sequence
 
 $$A^{\oplus m} \rightarrow A^{\oplus n} \rightarrow M \rightarrow 0$$
 

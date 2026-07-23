@@ -13,7 +13,7 @@ weight: 10
 
 ---
 
-이제 우리는 행렬식을 정의할 것인데, 이를 위해 우선 tensor algebra와 대칭대수, 외대수를 정의한다. 이 과정에서 $A$는 항상 commutative ring인 것으로 생각한다. 그럼 특히 $A$는 IBN property를 갖는다. ([§기저, ⁋명제 6](/ko/math/multilinear_algebra/basis_of_free_modules#prop6))
+이제 우리는 행렬식을 정의할 것인데, 이를 위해 우선 tensor algebra와 symmetric algebra, exterior algebra를 정의한다. 이 과정에서 $A$는 항상 commutative ring인 것으로 생각한다. 그럼 특히 $A$는 IBN property를 갖는다. ([§기저, ⁋명제 6](/ko/math/multilinear_algebra/basis_of_free_modules#prop6))
 
 ## 텐서대수의 정의
 
@@ -36,7 +36,7 @@ $$\Hom_{\Alg{A}}(\T(M), \T(M))\cong \Hom_{\rMod{A}}(M, U\T(M))$$
 에 의한 $\id_{\T(M)}$의 image이고, $\T(M)$을 $\mathbb{N}$-graded associative unital algebra로 보면 좌변을 적절한 category로 바꿔주면 된다. 이 adjoint를 universal property로 풀어쓰면 다음과 같다.  
 
 ::: 명제 2
-임의의 $A$-algebra $E$와 $A$-linear map $u:M \rightarrow E$가 주어졌다 하자. 그럼 유일한 $A$-algebra homomorphism $g: \T(M) \rightarrow E$가 존재하여 $f=g \circ\iota$이도록 할 수 있다. 
+임의의 $A$-algebra $E$와 $A$-linear map $u:M \rightarrow E$가 주어졌다 하자. 그럼 유일한 $A$-algebra homomorphism $g: \T(M) \rightarrow E$가 존재하여 $u=g \circ\iota$이도록 할 수 있다. 
 
 추가로, 만일 $E$가 $\mathbb{N}$-graded $A$-algebra이고, $u(M)\subseteq E_1$이 성립한다면 위에서 얻어지는 $A$-algebra homomorphism $g$는 $\mathbb{N}$-graded $A$-algebra homomorphism이 된다.
 :::
@@ -172,7 +172,7 @@ $$\mathfrak{I}=\langle x\otimes y-y\otimes x\mid x,y\in M\rangle$$
 을 생각하자. 그럼 quotient algebra $\T(M)/\mathfrak{I}$를 $M$의 *symmetric algebra<sub>대칭대수</sub>*라 부르고 $\S(M)$으로 적는다. 
 :::
 
-정의로부터 $\mathfrak{I}$는 homogeneous ideal이므로 $\T(M)/\mathfrak{I}$가 $\mathbb{Z}_{\geq 0}$-graded ideal이 되는 것은 자명하다. 또, 각각의 generator들 $x\otimes y-y\otimes x$는 모두 degree $2$의 원소이므로, $\mathfrak{I}$로 quotient를 취하는 것은 $\T^0(M)$과 $\T^1(M)$에는 아무런 영향을 미치지 않는다. 즉, $\S^0(M)\cong A$이고 $\S^1(M)\cong M$이다. 
+정의로부터 $\mathfrak{I}$는 homogeneous ideal이므로 $\T(M)/\mathfrak{I}$가 $\mathbb{Z}_{\geq 0}$-graded algebra가 되는 것은 자명하다. 또, 각각의 generator들 $x\otimes y-y\otimes x$는 모두 degree $2$의 원소이므로, $\mathfrak{I}$로 quotient를 취하는 것은 $\T^0(M)$과 $\T^1(M)$에는 아무런 영향을 미치지 않는다. 즉, $\S^0(M)\cong A$이고 $\S^1(M)\cong M$이다. 
 
 정의로부터 $\S(M)$이 commutative unital associative algebra인 것은 자명하다. 이는 $\S(M)$이 $\S^1(M)$의 원소들로 생성되는데, 임의의 $x,y\in \S^1(M)\cong M$에 대해서는
 
@@ -187,7 +187,7 @@ $$x\otimes y\equiv y\otimes x\pmod{\mathfrak{I}}$$
 
 $$u(x)u(y)=u(y)u(x)\qquad\text{for all $x,y\in M$}$$
 
-주어졌다 하자. 그럼 유일한 $A$-algebra homomorphism $g: \S(M) \rightarrow E$가 존재하여 $f=g \circ\iota$이도록 할 수 있다. 
+주어졌다 하자. 그럼 유일한 $A$-algebra homomorphism $g: \S(M) \rightarrow E$가 존재하여 $u=g \circ\iota$이도록 할 수 있다. 
 :::
 
 더 일반적으로, 임의의 $A$-module $M,N$과 자연수 $n\geq 1$를 고정하자. $M^n$에서 $N$로의 *symmetric linear map*은 다음 조건
@@ -214,7 +214,7 @@ $$(x_1,x_2,\ldots, x_n) \mapsto g(x_1x_2\cdots x_n)$$
 
 $$\S(M)\cong \bigotimes_{i\in I} \S(M_i)$$
 
-를 얻는다. 이는 $S$가 forgetful functor $U:\cAlg{A}\rightarrow \rMod{M}$의 left adjoint이므로 colimit을 보존하고, $\cAlg{A}$에서의 colimit은 ($\cRing$에서의 coproduct가 tensor product이듯) $\otimes_A$로 주어지기 때문이다. 특히 [명제 3](#prop3)과 같이 free $A$-module의 basis $(e_i)$를 고정해두고 나면 다음의 명제를 얻는다.
+를 얻는다. 이는 $S$가 forgetful functor $U:\cAlg{A}\rightarrow \rMod{A}$의 left adjoint이므로 colimit을 보존하고, $\cAlg{A}$에서의 colimit은 ($\cRing$에서의 coproduct가 tensor product이듯) $\otimes_A$로 주어지기 때문이다. 특히 [명제 3](#prop3)과 같이 free $A$-module의 basis $(e_i)$를 고정해두고 나면 다음의 명제를 얻는다.
 
 ::: 명제 8
 Free $A$-module $M$과 그 basis $(e_i)_{i\in I}$에 대하여, $\alpha:I \rightarrow \mathbb{N}$을 finitely supported function이라 하자. 
@@ -239,7 +239,7 @@ $\S_{B}(B\otimes_AM)\rightarrow B\otimes_A\S_A(M)$은 isomorphism이다.
 
 $$\mathfrak{J}=\langle x\otimes x\mid x\in M\rangle$$
 
-을 생각하자. 그럼 quotient algbera $\T(M)/\mathfrak{J}$를 $M$의 *exterior algebra<sub>외대수</sub>*라 부르고 $\bigwedge(M)$으로 적는다. 
+을 생각하자. 그럼 quotient algebra $\T(M)/\mathfrak{J}$를 $M$의 *exterior algebra<sub>외대수</sub>*라 부르고 $\bigwedge(M)$으로 적는다. 
 :::
 
 $\bigwedge(M)$에서의 원소들의 곱셈은 $\wedge$로 적는 것이 관례이다. 한편 [정의 5](#def5) 이후의 논의와 마찬가지로, $\mathfrak{J}$는 homogeneous ideal이고 canonical inclusion $\iota:M \hookrightarrow\bigwedge(M)$이 존재한다는 것이 자명하다. 또, [명제 6](#prop6)과 마찬가지 이유에서 다음의 universal property가 성립한다.
@@ -249,10 +249,10 @@ $\bigwedge(M)$에서의 원소들의 곱셈은 $\wedge$로 적는 것이 관례�
 
 $$u(x)^2=0\qquad\text{for all $x\in M$}$$
 
-주어졌다 하자. 그럼 유일한 $A$-algebra homomorphism $g: \bigwedge(M) \rightarrow E$가 존재하여 $f=g \circ\iota$이도록 할 수 있다. 
+주어졌다 하자. 그럼 유일한 $A$-algebra homomorphism $g: \bigwedge(M) \rightarrow E$가 존재하여 $u=g \circ\iota$이도록 할 수 있다. 
 :::
 
-[명제 7](#prop7)과 비슷한 성질이 exterior algebra에서도 성립한다. 임의의 $A$-module $M,N$과 정수 $n\geq 1$에 대하여, $f$가 $M^n$에서 $N$로의 *alternating linear map*이라는 것은 다음 조건
+[명제 7](#prop7)과 비슷한 성질이 exterior algebra에서도 성립한다. 이하 $A$의 표수는 $2$가 아니라고 가정한다. 임의의 $A$-module $M,N$과 정수 $n\geq 1$에 대하여, $f$가 $M^n$에서 $N$로의 *alternating linear map*이라는 것은 다음 조건
 
 $$f(x_{\sigma(1)},x_{\sigma(2)},\ldots, x_{\sigma(n)})=\epsilon(\sigma)f(x_1,x_2,\ldots, x_n),\qquad \sigma\in S_n$$
 
@@ -263,16 +263,16 @@ $$f(x_1,\ldots, x_i, x,x,x_{i+1},\ldots, x_{n-1})=0$$
 이 성립하는 것과 동치이다. 
 
 ::: 명제 12
-두 $A$-module $M,N$에 대하여, 임의의 $A$-linear map $g:\S^n(M) \rightarrow N$에 대하여 다음의 식
+두 $A$-module $M,N$에 대하여, 임의의 $A$-linear map $g:\bigwedge^n(M) \rightarrow N$에 대하여 다음의 식
 
 $$(x_1,x_2,\ldots, x_n) \mapsto g(x_1\wedge x_2\wedge\cdots\wedge x_n)$$
 
-으로 정의되는 함수는 $n$-linear이고, 이 대응을 통해 $\Hom_{\lMod{A}}(\bigwedge^n(M), N)$에서, symmetric $n$-linear map $M^n \rightarrow N$들의 $A$-module로의 bijective $A$-module homomorphism이 정의된다. 
+으로 정의되는 함수는 $n$-linear이고, 이 대응을 통해 $\Hom_{\lMod{A}}(\bigwedge^n(M), N)$에서, alternating $n$-linear map $M^n \rightarrow N$들의 $A$-module로의 bijective $A$-module homomorphism이 정의된다. 
 :::
 
 ## 외대수의 성질들
 
-마찬가지로 $M=\bigoplus_{i\in I} M_i$가 $A$-module들 $M_i$들의 direct sum이라 하였을 때, $\bigwedge$가 left adjoint인 것으로부터 $\bigwedge(M)$이 $\bigwedge(M_i)$들의 colimit이 되어야 한다는 것을 안다. 이를 엄밀히 하기 위해서는 alternating algebra들의 category에서의 colimit을 정의해야 한다. 이는 $\cAlg{A}$와 유사하게 tensor product로 나오지만, Koszul sign convention이 붙어있다. 이는 별다른 것은 아니고, 정의로부터 exterior algbebra의 degree $m,n$의 원소를 곱하면 $(-1)^{mn}$의 부호가 생기게 되므로 이를 반영해주는 것이다. 당장은 이를 엄밀하게 쓸 이유는 없으니 다음 명제만 소개한다. 
+마찬가지로 $M=\bigoplus_{i\in I} M_i$가 $A$-module들 $M_i$들의 direct sum이라 하였을 때, $\bigwedge$가 left adjoint인 것으로부터 $\bigwedge(M)$이 $\bigwedge(M_i)$들의 colimit이 되어야 한다는 것을 안다. 이를 엄밀히 하기 위해서는 alternating algebra들의 category에서의 colimit을 정의해야 한다. 이는 $\cAlg{A}$와 유사하게 tensor product로 나오지만, Koszul sign convention이 붙어있다. 이는 별다른 것은 아니고, 정의로부터 exterior algebra의 degree $m,n$의 원소를 곱하면 $(-1)^{mn}$의 부호가 생기게 되므로 이를 반영해주는 것이다. 당장은 이를 엄밀하게 쓸 이유는 없으니 다음 명제만 소개한다. 
 
 ::: 명제 13
 Free $A$-module $M$과 그 basis $(e_i)_{i\in I}$에 대하여, $I$의 total ordering을 하나 고정하자. 임의의 유한한 부분집합 $J\subseteq I$에 대하여
@@ -297,4 +297,4 @@ $\bigwedge_{B}(B\otimes_AM)\rightarrow B\otimes_A\bigwedge_A(M)$은 isomorphism�
 
 ---
 
-[^1]: Category $$\Ring$$에서의 coproduct는 free product와 비슷한 식으로 정의되었던 것을 기억하자. ([§환의 곱, 쌍대곱, 텐서곱, ⁋명제 4](/ko/math/algebraic_structures/operations_of_rings#prop4)) 반면, 같은 글에서 우리는 category $$\cRing$$의 coproduct는 tensor product $$\otimes$$로 주어진다는 것 또한 확인하였다.
+[^1]: Category $\Ring$에서의 coproduct는 free product와 비슷한 식으로 정의되었던 것을 기억하자. ([§환의 곱, 쌍대곱, 텐서곱, ⁋명제 4](/ko/math/algebraic_structures/operations_of_rings#prop4)) 반면, 같은 글에서 우리는 category $\cRing$의 coproduct는 tensor product $\otimes$로 주어진다는 것 또한 확인하였다.

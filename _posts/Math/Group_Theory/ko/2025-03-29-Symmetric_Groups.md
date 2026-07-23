@@ -13,7 +13,7 @@ weight: 1
 
 ---
 
-[대수적 구조](/ko/algebraic_structures) 카테고리에서 우리는 다양한 대수적인 구조들이 갖는 공통적인 성질에 관심이 있었는데, 이러한 방식은 대수적인 이론들이 어떻게 전개되는지를 전체적인 관점에서 조망하기에는 좋지만 실제로 특정한 군을 계산하거나 하는 등의 세부적인 부분을 살펴볼 때에는 좋지 않다. 때문에 이 카테고리의 글에서 우리는 [대수적 구조](/ko/algebraic_structures) 카테고리에서 다루지 않은 group의 성질들에 대해 살펴본다. 
+[대수적 구조](/ko/algebraic_structures) 카테고리에서 우리는 다양한 대수적인 구조들이 갖는 공통적인 성질에 관심이 있었는데, 이러한 방식은 대수적인 이론들이 어떻게 전개되는지를 전체적인 관점에서 조망하기에는 좋지만 실제로 특정한 group을 계산하거나 하는 등의 세부적인 부분을 살펴볼 때에는 좋지 않다. 때문에 이 카테고리의 글에서 우리는 [대수적 구조](/ko/algebraic_structures) 카테고리에서 다루지 않은 group의 성질들에 대해 살펴본다. 
 
 ## 대칭군
 
@@ -29,7 +29,7 @@ Permutation $\sigma: [n] \rightarrow [n]$이 주어졌다 하고, 집합 $[n]$�
 
 $$1=\sigma^0(1), \quad\sigma(1)=\sigma^1(1),\quad\sigma^2(1),\quad\cdots, \quad\sigma^n(1)\tag{$\ast$}$$
 
-을 생각하자. 비둘기집 원리에 의하여 서로 다른 적당한 두 정수 $0\leq k_1,k_2\leq n$가 존재하여 $\sigma^{k_1}(1)=\sigma^{k_2}(1)$이 성립하고, 편의상 $k_1< k_2$라 하면 이로부터 $\sigma^{k_2-k_1}(1)=0$임을 안다. 뿐만 아니라, $\sigma^k(1)=1$을 만족하는 가장 작은 자연수 $k$를 생각하면, 위의 결과로부터 $k\leq n$이며, 이를 바탕으로 다음의 표기
+을 생각하자. 비둘기집 원리에 의하여 서로 다른 적당한 두 정수 $0\leq k_1,k_2\leq n$가 존재하여 $\sigma^{k_1}(1)=\sigma^{k_2}(1)$이 성립하고, 편의상 $k_1< k_2$라 하면 이로부터 $\sigma^{k_2-k_1}(1)=1$임을 안다. 뿐만 아니라, $\sigma^k(1)=1$을 만족하는 가장 작은 자연수 $k$를 생각하면, 위의 결과로부터 $k\leq n$이며, 이를 바탕으로 다음의 표기
 
 $$(1\quad \sigma(1)\quad \sigma^2(1)\quad\cdots\quad\sigma^{k-1}(1))$$
 
@@ -54,16 +54,16 @@ $$\tau_2\tau_1=(1\;3)(2\;3)$$
 $S_n$의 원소들의 합성은 함수의 합성이고, 일반적으로 함수의 합성은 교환법칙을 만족하지 않으므로 위의 예시는 예상했던 것이다. 그러나 특수한 경우, 어떠한 두 함수들은 commute할 수도 있다. 
 
 ::: 정의 3
-Permutation $\sigma_1,\ldots\sigma_r\in S_n$가 *disjoint<sub>서로소</sub>*라는 것은 만일 어떠한 $i$가 $\sigma_i(k)\neq k$를 만족한다면, 다른 모든 $j\neq i$에 대하여는 $\sigma_j(k)=k$인 것이다. 
+Permutation $\sigma_1,\ldots,\sigma_r\in S_n$가 *disjoint<sub>서로소</sub>*라는 것은 만일 어떠한 $i$가 $\sigma_i(k)\neq k$를 만족한다면, 다른 모든 $j\neq i$에 대하여는 $\sigma_j(k)=k$인 것이다. 
 :::
 
-그럼 임의의 disjoint permutation들 $\sigma_1,\ldots\sigma_r\in S_n$의 곱은 이들의 순서에 의존하지 않음이 자명하다. 뿐만 아니라 다음이 성립한다. 
+그럼 임의의 disjoint permutation들 $\sigma_1,\ldots,\sigma_r\in S_n$의 곱은 이들의 순서에 의존하지 않음이 자명하다. 뿐만 아니라 다음이 성립한다. 
 
 ::: 명제 4
 $S_n$의 임의의 non-identity permutation은 disjoint cycle들의 곱으로 나타낼 수 있다. 
 :::
 ::: 증명
-집합 $[n]$ 위의 equivalence realtion $\sim$을
+집합 $[n]$ 위의 equivalence relation $\sim$을
 
 $$i\sim j\iff \sigma^m(i)=j\text{ for some $m$}$$
 
@@ -73,7 +73,7 @@ $$[n]/{\sim}=\{C_1, \ldots, C_r\}$$
 
 이라 하자. 이제 각각의 $1\leq k\leq r$에 대하여 다음의 식
 
-$$\sigma_k(i)=\begin{cases}\sigma(x)&\text{if $x\in C_k$}\\x&\text{otherwise}\end{cases}$$
+$$\sigma_k(x)=\begin{cases}\sigma(x)&\text{if $x\in C_k$}\\x&\text{otherwise}\end{cases}$$
 
 으로 정의하면 이들은 disjoint cycle이며 그 곱이 $\sigma$가 된다. 
 :::
@@ -161,7 +161,7 @@ $S_n$의 각 원소 $\sigma$에 대하여, $i<j$이지만 $\sigma(i)>\sigma(j)$�
 
 > 짝수 개의 transposition들의 곱으로 표현할 수 있는 permutation
 
-으로 정의한다. 방금 우리의 정의에 비해 이 정의가 강점을 갖는 것은, 예를 들어 even permutation과 even permutation의 곱이 even이고 odd permutation과 even permutation의 곱이 odd인 성질 등등이 더 직관적으로 보인다는 것이다. 하지만 방금 우리의 정의와는 다르게 parity (즉, $\sigma$가 even인지 odd인지)가 잘 정의된다는 것이 명백하지 않다. 때문에 이 두 정의를 모두 들고 가는 것이 편리하다. 이들 책에서는 그래서 다음 보조정리를 통해, 해당 정의가 방금 우리가 정의한 [정의 9](#def9)과 동일하다는 것을 보인다. 
+으로 정의한다. 방금 우리의 정의에 비해 이 정의가 강점을 갖는 것은, 예를 들어 even permutation과 even permutation의 곱이 even이고 odd permutation과 even permutation의 곱이 odd인 성질 등등이 더 직관적으로 보인다는 것이다. 하지만 방금 우리의 정의와는 다르게 parity (즉, $\sigma$가 even인지 odd인지)가 잘 정의된다는 것이 명백하지 않다. 때문에 이 두 정의를 모두 들고 가는 것이 편리하다. 이들 책에서는 그래서 다음 보조정리를 통해, 해당 정의가 방금 우리가 정의한 [정의 9](#def9)와 동일하다는 것을 보인다. 
 
 ::: 보조정리 10
 $\sigma$가 even permutation인 것은 $\sigma$가 짝수개의 transposition들의 곱으로 나타날 수 있는 것과 동치이다.
@@ -183,7 +183,7 @@ $$(x_{\sigma(i)}-x_{\sigma(j)})=\begin{cases}(x_{\sigma(i)}-x_{\sigma(j)})&\text
 
 정의로부터, $\sigma$가 transposition이라면 $\sgn(\sigma)=-1$인 것은 자명하다. 따라서 만일 $\sgn$이 multiplicative하다는 것만 보인다면, 
 
-$$\text{$\sigma$ odd}\iff\text{$\sgn(\sigma)=-1$}\iff\text{$\sigma$ is a product of odd number of permutation}$$ 
+$$\text{$\sigma$ odd}\iff\text{$\sgn(\sigma)=-1$}\iff\text{$\sigma$ is a product of odd number of transpositions}$$ 
 
 이 되므로 원하는 결과를 얻을 것이다. 두 permutation $\sigma$, $\tau$가 주어졌다 하자. $\sgn(\sigma\tau)$의 값을 계산해야 한다. $\tau$가 $k$개의 inversion을 갖는다 가정하자. 즉, $\sgn(\tau)=(-1)^k$이고, 이 $k$개의 $-1$들은 모두 식 (1)에서 나오는 factor들이다. 이제 $\sgn(\sigma\tau)$의 값을 계산하기 위해서는 우선
 
@@ -218,7 +218,7 @@ $A_5$는 simple이다. 이는 Sylow theorem을 사용하여 조금 더 고상하
 
 이들 네 종류의 permutation이 서로 다르다는 것은 각 원소들의 order를 보면 되고, 각 종류에 속하는 원소들이 서로 다른 것은 함수값을 직접 보면 된다. 
 
-한편, 일반적으로 group $G$의 subgroup $N$이 normal subgroup이기 위해서는, 정확하게 정의에 의해 $N$이 inner automorphism에 의한 conjugacy class들의 합집합으로 나타나야 한다. 그런데 [보조정리 7](#lem7)을 사용하면, 위에서 3-cycle, 두 disjoint 2-cycle의 곱은 각각 conjugacy class들이 되며, $5$-cycle은 각각 원소 12개를 갖는 두 개의 conjugacy class들로 나뉜다는 것을 알 수 있다. 이제 $A_5$의 normal subgroup의 크기 $A_5$의 크기 $60$을 나눠야 하는데, 항등원을 포함하며 non-trivial한 conjugacy class들의 합집합으로는 $60$의 약수를 만들 수 없으므로 $A_5$는 non-trivial한 normal subgroup을 갖지 않는다. 
+한편, 일반적으로 group $G$의 subgroup $N$이 normal subgroup이기 위해서는, 정확하게 정의에 의해 $N$이 inner automorphism에 의한 conjugacy class들의 합집합으로 나타나야 한다. 그런데 [보조정리 7](#lem7)을 사용하면, 위에서 3-cycle, 두 disjoint 2-cycle의 곱은 각각 conjugacy class들이 되며, $5$-cycle은 각각 원소 12개를 갖는 두 개의 conjugacy class들로 나뉜다는 것을 알 수 있다. 이제 $A_5$의 normal subgroup의 크기가 $A_5$의 크기 $60$을 나눠야 하는데, 항등원을 포함하며 non-trivial한 conjugacy class들의 합집합으로는 $60$의 약수를 만들 수 없으므로 $A_5$는 non-trivial한 normal subgroup을 갖지 않는다. 
 :::
 
 ---

@@ -18,7 +18,7 @@ In [§Affine Varieties](/en/math/algebraic_varieties/affine_varieties) and [§Pr
 
 ## Definition of a Quasi-Projective Variety
 
-Open subsets of projective space are natural geometric objects. For example, the standard affine cover $U_0$ obtained by removing the line $x_0=0$ from $\mathbb{P}^2$ is not a projective variety, yet it is still an object defined by polynomials—in fact, it is an affine variety.
+Open subsets of projective space are natural geometric objects. For example, the standard affine cover $U_0$ obtained by removing the line $\x_0=0$ from $\mathbb{P}^2$ is not a projective variety, yet it is still an object defined by polynomials—in fact, it is an affine variety.
 
 ::: Definition 1
 An open subset $X \subseteq Y$ of a projective variety $Y \subseteq \mathbb{P}^n$ is called a *quasi-projective variety*.
@@ -87,7 +87,7 @@ The following are examples of regular functions.
 Let us examine some examples of regular functions.
 
 1. For an affine variety $X$, we have $\mathcal{O}(X) = \mathbb{K}[X]$.
-2. For $\mathbb{P}^n$, we have $\mathcal{O}(\mathbb{P}^n) = \mathbb{K}$. To verify this, consider the standard open cover $U_i = \{x_i \ne 0\}$. In particular, a regular function on $U_0$ is an element of $\mathbb{K}[x_1/x_0, \ldots, x_n/x_0]$, and a regular function on $U_1$ is an element of $\mathbb{K}[x_0/x_1, x_2/x_1, \ldots, x_n/x_1]$. Hence if a function $f$ is regular on all of $\mathbb{P}^n$, then on $U_0$ it is a polynomial in the variables $\mathrm{s}_i=x_i/x_0$, and on $U_1$ it is a polynomial in $\mathrm{t}_i=x_i/x_1$. But on $U_0\cap U_1$ we know these coordinate functions satisfy
+2. For $\mathbb{P}^n$, we have $\mathcal{O}(\mathbb{P}^n) = \mathbb{K}$. To verify this, consider the standard open cover $U_i = \{x_i \ne 0\}$. In particular, a regular function on $U_0$ is an element of $\mathbb{K}[\x_1/\x_0, \ldots, \x_n/\x_0]$, and a regular function on $U_1$ is an element of $\mathbb{K}[\x_0/\x_1, \x_2/\x_1, \ldots, \x_n/\x_1]$. Hence if a function $f$ is regular on all of $\mathbb{P}^n$, then on $U_0$ it is a polynomial in the variables $\mathrm{s}_i=\x_i/\x_0$, and on $U_1$ it is a polynomial in $\mathrm{t}_i=\x_i/\x_1$. But on $U_0\cap U_1$ we know these coordinate functions satisfy
     
     $$\mathrm{t}_0=\frac{1}{\mathrm{s}_1},\qquad \mathrm{t}_j=\frac{\mathrm{s}_j}{\mathrm{s}_1}.$$
 

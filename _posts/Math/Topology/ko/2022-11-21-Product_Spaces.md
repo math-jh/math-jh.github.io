@@ -29,7 +29,7 @@ $$\prod_{i\in I} U_i,\qquad \text{$U_i$ open in $X_i$, $U_i=X_i$ for all but fin
 
 들의 모임이다. 
 
-[\[집합론\] §곱집합의 성질, ⁋명제 3](/ko/math/set_theory/property_of_products#prop3)과 마찬가지 이유에 의하여 공간들의 곱을 취하는 것은 결합법칙을 만족한다는 것을 알 수 있으며, 비슷하게 교환법칙에 대한 명제 또한 존재한다. 이들은 꽤나 자명한 명제이므로 별도로 언급하고 넘어가지 않는다.
+[\[집합론\] §곱집합의 성질, ⁋명제 3](/ko/math/set_theory/property_of_products#prop3)과 마찬가지 이유에 의하여 공간들의 곱을 취하는 것은 associative하다는 것을 알 수 있으며, 비슷하게 교환법칙에 대한 명제 또한 존재한다. 이들은 꽤나 자명한 명제이므로 별도로 언급하고 넘어가지 않는다.
 
 한편 [§Initial topology와 final topology, ⁋명제 3](/ko/math/topology/initial_and_final_topology#prop3)을 적용하면 다음을 얻는다.
 
@@ -45,7 +45,7 @@ Index set $I$를 공유하는 두 곱공간 $X=\prod_{i\in I}X_i$, $Y=\prod_{i\i
 
 임의의 집합 $X, Y$와 함수 $f:X \rightarrow Y$에 대하여, $f$의 *graph* $\Gamma(f)$는 $X\times Y$의 부분집합
 
-$$\Gamma(f)=\{(x,f(x)\mid x\in X\}\subseteq X\times Y$$
+$$\Gamma(f)=\{(x,f(x))\mid x\in X\}\subseteq X\times Y$$
 
 으로 주어진다. 만일 $X, Y$가 모두 위상공간이었다면 $\Gamma(f)$는 product space $X\times Y$로부터 subspace topology를 물려받는다.
 
@@ -94,7 +94,7 @@ $$x_1\mapsto f(x_1, a_2),\qquad x_2\mapsto f(a_1,x_2)$$
 
 ## 내부와 폐포
 
-이제 우리는 곱집합과 내부, 폐포의 관계를 알아본다. 우선 폐포를 취하는 것은 곱집합에 대해 잘 행동한다. 즉 다음이 성립한다. 
+이제 우리는 곱집합과 interior, closure의 관계를 알아본다. 우선 closure를 취하는 것은 곱집합에 대해 잘 행동한다. 즉 다음이 성립한다. 
 
 ::: 명제 7
 Product space $X=\prod_{i\in I} X_i$와, $X_i$의 임의의 부분집합 $A_i$들이 주어졌다 하자. 그럼 다음 식

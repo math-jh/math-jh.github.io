@@ -26,7 +26,7 @@ A topological space $X$ is compact if and only if every ultrafilter converges.
 ::: Proof
 First, assume $X$ is compact and let an arbitrary ultrafilter $\mathcal{F}$ be given. Suppose for contradiction that $\mathcal{F}$ has no limit point. Then for every $x\in X$, there exists an open neighborhood $U_x$ such that $U_x\not\in \mathcal{F}$. By compactness of $X$, there exists a finite subcover $U_{x_1},\ldots, U_{x_n}$ of $X$.
 
-On the other hand, by [\[Set Theory\] §Filters and Ideals, Galois Correspondence, ⁋Proposition 5](/en/math/set_theory/filter_and_ideal#prop5), $\mathcal{F}$ is prime. That is, for any subset $A\subseteq X$, exactly one of $A\in \mathcal{F}$ or $X\setminus A\in \mathcal{F}$ holds. Then for any $A\in \mathcal{F}$,
+On the other hand, by [\[Set Theory\] §Filters, Ideals, and Galois Connections, ⁋Proposition 5](/en/math/set_theory/filter_and_ideal#prop5), $\mathcal{F}$ is prime. That is, for any subset $A\subseteq X$, exactly one of $A\in \mathcal{F}$ or $X\setminus A\in \mathcal{F}$ holds. Then for any $A\in \mathcal{F}$,
 
 $$A=A\cap X=(A\cap U_{x_1})\cup \cdots\cup (A\cap U_{x_n})\in \mathcal{F}$$
 
@@ -121,7 +121,7 @@ We must verify that this declaration actually satisfies the axioms of a topology
 We first organize how $X$ sits inside $X^+$ under this topology.
 
 ::: Proposition 9
-The inclusion map $X\hookrightarrow X^+$ is an open embedding, that is, it places $X$ as an open subspace of $X^+$. Moreover, $X$ is dense in $X^+$ if and only if $X$ is not compact.
+The inclusion map $X\hookrightarrow X^+$ is an open embedding, that is, a homeomorphism placing $X$ as an open subspace of $X^+$. Moreover, $X$ is dense in $X^+$ if and only if $X$ is not compact.
 :::
 ::: Proof
 $X$ is an open set of $X$, so it is an open set of $X^+$ by the first kind. Intersecting an open set of $X^+$ with $X$, for a set $U$ of the first kind we have $U\cap X=U$, and for a set $X^+\setminus C$ of the second kind we have $(X^+\setminus C)\cap X=X\setminus C$; both are open sets of $X$, and conversely any open set of $X$ is an open set of $X^+$ as a set of the first kind. Therefore the subspace topology on $X$ coincides with the original topology, and the inclusion map is a homeomorphism onto an open subspace.
@@ -239,7 +239,7 @@ We first name the operation of slicing an open cover into finer pieces so that e
 Let two covers $(U_i)_{i\in I}$ and $(V_j)_{j\in J}$ of a topological space $X$ be given. The latter is called a *refinement* of the former if for every $j\in J$ there exists $i\in I$ such that $V_j\subseteq U_i$. When all elements of a refinement $(V_j)_{j\in J}$ are open sets, we call it an *open refinement*.
 :::
 
-A refinement is a much more flexible notion than a subcover. While a subcover merely selects some of the original pieces as they are, a refinement allows freely cutting each piece into smaller ones as long as each resulting piece remains contained in some original piece. Combining this with local finiteness yields a new finiteness condition that can replace compactness. Recall that a family $(A_i)_{i\in I}$ is *locally finite* if every point has a neighborhood meeting only finitely many $A_i$. ([§Interior, Closure, and Boundary of Sets, ⁋Definition 3](/en/math/topology/other_concepts#def3))
+A refinement is a much more flexible notion than a subcover. While a subcover merely selects some of the original pieces as they are, a refinement allows freely cutting each piece into smaller ones as long as each resulting piece remains contained in some original piece. Combining this with local finiteness yields a new finiteness condition that can replace compactness. Recall that a family $(A_i)_{i\in I}$ is *locally finite* if every point has a neighborhood meeting only finitely many $A_i$. ([§Interior, Closure, and Boundary, ⁋Definition 3](/en/math/topology/other_concepts#def3))
 
 ::: Definition 18
 A topological space $X$ is *paracompact* if every open cover of $X$ has a locally finite open refinement.
@@ -251,7 +251,7 @@ The definition demands that for any open cover, there exists a locally finite op
 Any compact space is paracompact.
 :::
 ::: Proof
-Let $X$ be a compact space and let an open cover $(U_i)_{i\in I}$ be given. By compactness there exists a finite $J\subseteq I$ such that $(U_j)_{j\in J}$ still covers $X$. ([§Compact Spaces, ⁋Definition 1](/en/math/topology/compact_spaces#def1)) This finite subcover is an open refinement of the original cover, and a finite family is always locally finite, so ([§Interior, Closure, and Boundary of Sets, ⁋Definition 3](/en/math/topology/other_concepts#def3)) it is a locally finite open refinement of $(U_i)_{i\in I}$. Therefore $X$ is paracompact.
+Let $X$ be a compact space and let an open cover $(U_i)_{i\in I}$ be given. By compactness there exists a finite $J\subseteq I$ such that $(U_j)_{j\in J}$ still covers $X$. ([§Compact Spaces, ⁋Definition 1](/en/math/topology/compact_spaces#def1)) This finite subcover is an open refinement of the original cover, and a finite family is always locally finite, so ([§Interior, Closure, and Boundary, ⁋Definition 3](/en/math/topology/other_concepts#def3)) it is a locally finite open refinement of $(U_i)_{i\in I}$. Therefore $X$ is paracompact.
 :::
 
 That paracompactness is substantially broader than compactness must be verified on non-compact spaces. The following is a representative case, showing that even in Euclidean space, which has no finiteness at all, we can explicitly construct a locally finite refinement.
@@ -294,7 +294,7 @@ holds.
 ::: Proof
 For each $i$, since $A_i\subseteq\bigcup_j A_j$, we have $\cl(A_i)\subseteq\cl(\bigcup_j A_j)$, and therefore $\bigcup_i\cl(A_i)\subseteq\cl(\bigcup_j A_j)$.
 
-For the reverse inclusion, it suffices to show that $\bigcup_i\cl(A_i)$ is a closed set, for then the closure of $\bigcup_i A_i\subseteq\bigcup_i\cl(A_i)$ is also contained in $\bigcup_i\cl(A_i)$. We first observe that the family $(\cl(A_i))_{i\in I}$ is also locally finite. We can choose a neighborhood $V$ of a point $x$ such that $V$ meets only finitely many $A_i$; if we choose $V$ to be open, then whenever $V\cap\cl(A_i)\neq\emptyset$, since $V$ is a neighborhood of a point of $\cl(A_i)$ we have $V\cap A_i\neq\emptyset$. Therefore $V$ meets only finitely many $\cl(A_i)$, and $(\cl(A_i))_{i\in I}$ is also locally finite. This is a locally finite family of closed sets, so their union $\bigcup_i\cl(A_i)$ is closed. ([§Interior, Closure, and Boundary of Sets, ⁋Proposition 4](/en/math/topology/other_concepts#prop4))
+For the reverse inclusion, it suffices to show that $\bigcup_i\cl(A_i)$ is a closed set, for then the closure of $\bigcup_i A_i\subseteq\bigcup_i\cl(A_i)$ is also contained in $\bigcup_i\cl(A_i)$. We first observe that the family $(\cl(A_i))_{i\in I}$ is also locally finite. We can choose a neighborhood $V$ of a point $x$ such that $V$ meets only finitely many $A_i$; if we choose $V$ to be open, then whenever $V\cap\cl(A_i)\neq\emptyset$, since $V$ is a neighborhood of a point of $\cl(A_i)$ we have $V\cap A_i\neq\emptyset$. Therefore $V$ meets only finitely many $\cl(A_i)$, and $(\cl(A_i))_{i\in I}$ is also locally finite. This is a locally finite family of closed sets, so their union $\bigcup_i\cl(A_i)$ is closed. ([§Interior, Closure, and Boundary, ⁋Proposition 4](/en/math/topology/other_concepts#prop4))
 :::
 
 We first show that a paracompact Hausdorff space is regular. The skeleton of the argument is as follows: to separate a point and a closed set, we use the Hausdorff property to obtain, for each point of the closed set, an open set whose closure avoids the point in question; then we form an open cover from these together with the complement of the closed set, refine it to be locally finite using paracompactness, and control the closure using [Lemma 21](#lem21).

@@ -80,10 +80,10 @@ $$x_1\wedge x_2\wedge\cdots\wedge x_p=\sum_{\lvert J\rvert=p}\det X_{I,J}e_J$$
 :::
 
 ::: 명제 5
-두 free $A$-moduile $M,N$과 이들의 유한한 basis $(e_i)_{1\leq i\leq m}$, $(f_j)_{1\leq j\leq n}$가 각각 주어졌다 하자. 이제 $\min(m,n)$보다 작은 자연수 $p$에 대하여, $\bigwedge^p(u):\bigwedge^p(M) \rightarrow\bigwedge^p(N)$을 basis $(e_I)_{\lvert I\rvert=p}$, $(f_J)_{\lvert J\rvert=p}$에 대하여 행렬로 표현한 것은 $(\det(X_{J,I}))$로 주어진다.
+두 free $A$-module $M,N$과 이들의 유한한 basis $(e_i)_{1\leq i\leq m}$, $(f_j)_{1\leq j\leq n}$가 각각 주어졌다 하자. 이제 $\min(m,n)$보다 작은 자연수 $p$에 대하여, $\bigwedge^p(u):\bigwedge^p(M) \rightarrow\bigwedge^p(N)$을 basis $(e_I)_{\lvert I\rvert=p}$, $(f_J)_{\lvert J\rvert=p}$에 대하여 행렬로 표현한 것은 $(\det(X_{J,I}))$로 주어진다.
 :::
 ::: 증명
-주어진 상황에서 $I$의 원소들을 $i_1<\cdots i_p$로 크기 순으로 나열하자. 그럼 $\bigwedge^p(u)$의 정의에 의하여
+주어진 상황에서 $I$의 원소들을 $i_1<\cdots< i_p$로 크기 순으로 나열하자. 그럼 $\bigwedge^p(u)$의 정의에 의하여
 
 $${\bigwedge}^p(u)=u(e_{i_1})\wedge\cdots\wedge u(e_{i_p})$$
 
@@ -114,7 +114,7 @@ $$P=\{i_1< i_2<\cdots< i_p\},\qquad Q=\{j_1< j_2<\cdots < j_{n-p}\}$$
 
 라 하자. 그럼 $P$의 원소들과 $Q$의 원소들의 순서를 각각 바꾸어
 
-$$x_P=\gamma_{P,Q}e_{j_1}\wedge\cdots\wedge e_{j_{n-p}}\wedge u(e_{i_1})\wedge\cdots u(e_{i_{n-p}})$$
+$$x_P=\gamma_{P,Q}e_{j_1}\wedge\cdots\wedge e_{j_{n-p}}\wedge u(e_{i_1})\wedge\cdots\wedge u(e_{i_p})$$
 
 로 쓸 수 있다. 여기서 $\gamma_{P,Q}$는 이들의 순서를 바꾸며 생기는 부호이며, 구체적으로는 다음 식
 
@@ -193,7 +193,7 @@ $$z=\sum_k \x^k\otimes_A x_k,\qquad x_k\in M$$
 
 으로 적어줄 수 있다. 그럼 $z\in\ker\rho$라는 조건으로부터,
 
-$$\rho(z)=\sum_k u^k(\x_k)=0$$
+$$\rho(z)=\sum_k u^k(x_k)=0$$
 
 을 얻는다. 이제 $\sum 1\otimes u^k(x_k)=0$이므로, 이로부터
 

@@ -168,5 +168,5 @@ That is, $a_{n_k} \rightarrow L$.
 This proposition is more useful when showing that a sequence does *not* converge than when showing that it does. By its contrapositive, if there exist two subsequences with different limits, then the original sequence $(a_n)$ does not converge.
 
 ::: Example 11 (A divergent sequence)
-Consider the sequence $a_n = (-1)^n$. The even subsequence $a_{2k} = 1 \rightarrow 1$ and the odd subsequence $a_{2k-1} = -1 \rightarrow -1$ have different limits, so by Proposition 10, $(a_n)$ diverges.
+Consider the sequence $a_n = (-1)^n$. The even subsequence $a_{2k} = 1 \rightarrow 1$ and the odd subsequence $a_{2k-1} = -1 \rightarrow -1$ have different limits, so by [Proposition 10](#prop10), $(a_n)$ diverges.
 :::

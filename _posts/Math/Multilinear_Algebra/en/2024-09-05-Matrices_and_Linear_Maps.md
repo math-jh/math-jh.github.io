@@ -35,7 +35,8 @@ For the remainder of this post, we assume that two free $A$-modules $M,N$ are gi
 ::: Definition 1
 In the above situation, suppose an arbitrary $A$-linear map $u:M \rightarrow N$ is given. Then the *matrix representation* of $u$ is the matrix
 
-$[u]_\mathcal{C}^\mathcal{B}=(f_j^\ast(u(e_i)))_{(j,i)\in J\times I}=(\langle u(e_i), f_j^\ast\rangle)_{(j,i)\in J\times I}$.
+$$[u]_\mathcal{C}^\mathcal{B}=(f_j^\ast(u(e_i)))_{(j,i)\in J\times I}=(\langle u(e_i), f_j^\ast\rangle)_{(j,i)\in J\times I}$$
+
 :::
 
 We first note the following.
@@ -46,7 +47,7 @@ The $i$-th column of the matrix representation $[u]_\mathcal{C}^\mathcal{B}$ of 
 ::: Proof
 By definition, the $i$-th column of $[u]_\mathcal{C}^\mathcal{B}$ is given by
 
-$(f_j^\ast(u(e_i)))_{j\in J}=(\langle u(e_i), f_j^\ast\rangle)_{j\in J}$.
+$$(f_j^\ast(u(e_i)))_{j\in J}=(\langle u(e_i), f_j^\ast\rangle)_{j\in J}$$
 
 The $j$-th component of this column vector is, by the preceding formula (1), precisely the coefficient of $f_j$ when $u(e_i)$ is expressed as a linear combination with respect to the basis $\mathcal{C}$.
 :::
@@ -57,7 +58,7 @@ $$[u+v]_\mathcal{C}^\mathcal{B}=[u]_\mathcal{C}^\mathcal{B}+[v]_\mathcal{C}^\mat
 
 holds. Moreover, if $\alpha$ lies in the center of $A$, then $\alpha u$ is an $A$-linear map, and the matrix representation of this $A$-linear map is given by
 
-$[\alpha u]_\mathcal{C}^\mathcal{B}=\alpha[u]_\mathcal{C}^\mathcal{B}$.
+$$[\alpha u]_\mathcal{C}^\mathcal{B}=\alpha[u]_\mathcal{C}^\mathcal{B}$$
 
 In summary, $u\mapsto [u]_\mathcal{C}^\mathcal{B}$ is a $Z(A)$-module homomorphism from $\Hom_{\lMod{A}}(M,N)$ to $\Mat_{J\times I}(A)$. This $Z(A)$-linear map is injective, since $u=0$ is equivalent to $u(e_i)=0$ for all $i\in I$. On the other hand, if $J$ is finite, then for any element $(x_{ji})$ of $\Mat_{J\times I}(A)$, we can define $u\in\Hom_\lMod{A}$ by the formula
 
@@ -79,7 +80,7 @@ holds.
 ::: Proof
 We can verify that the right-hand side yields a column vector, and by formula (2) of [§Matrices, §§Matrix Multiplication](/en/math/multilinear_algebra/matrices#matrix-multiplication), its $j$-th component is
 
-$\left([u]_\mathcal{C}^\mathcal{B}[x]_\mathcal{B}\right)_{j0}=\sum_{i\in I}\left([u]_\mathcal{C}^\mathcal{B}\right)_{ji}\left([x]_\mathcal{B}\right)_{i0}=\sum_{i\in I}\left\langle u(e_i),f_j^\ast\right\rangle \left\langle x,e_i^\ast\right\rangle$.
+$$\left([u]_\mathcal{C}^\mathcal{B}[x]_\mathcal{B}\right)_{j0}=\sum_{i\in I}\left([u]_\mathcal{C}^\mathcal{B}\right)_{ji}\left([x]_\mathcal{B}\right)_{i0}=\sum_{i\in I}\left\langle u(e_i),f_j^\ast\right\rangle \left\langle x,e_i^\ast\right\rangle$$
 
 On the other hand, since $x=\sum_{i\in I}x_i e_i$, the $j$-th component of $[u(x)]_\mathcal{C}$ is
 
@@ -100,7 +101,7 @@ holds.
 ::: Proof
 For any $x\in M$,
 
-$$[v \circ u]_\mathcal{D}^\mathcal{B}[x]_\mathcal{B}=[(v \circ u)(x)]_\mathcal{D}=[(v(u(x))]_\mathcal{D}=[v]_\mathcal{D}^\mathcal{C}[u(x)]_\mathcal{C}=[v]_\mathcal{D}^\mathcal{C}[u]_\mathcal{C}^\mathcal{B}[x]_\mathcal{B}$$
+$$[v \circ u]_\mathcal{D}^\mathcal{B}[x]_\mathcal{B}=[(v \circ u)(x)]_\mathcal{D}=[v(u(x))]_\mathcal{D}=[v]_\mathcal{D}^\mathcal{C}[u(x)]_\mathcal{C}=[v]_\mathcal{D}^\mathcal{C}[u]_\mathcal{C}^\mathcal{B}[x]_\mathcal{B}$$
 
 so from the $Z(A)$-isomorphism $\Mat_{K\times I}(A)\cong\Hom_\lMod{A}(M,L)$ we obtain the desired result.
 :::
@@ -119,7 +120,7 @@ holds. Here $\mathcal{B}^\ast$ and $\mathcal{C}^\ast$ are the dual bases of $\ma
 ::: Proof
 By [§Dual Spaces, ⁋Proposition 8](/en/math/multilinear_algebra/dual_spaces#prop8), we may identify $M$ with $M^{\ast\ast}$, and then $\mathcal{B}$ corresponds to the dual basis $\mathcal{B}^{\ast\ast}$ of $\mathcal{B}^\ast$. Now
 
-$$\left(\left[u^\ast\right]_{\mathcal{B}^\ast}^{\mathcal{C}^\ast}\right)_{ji}=\langle u^\ast(f_j^\ast), e_i^{\ast\ast}\rangle=\langle e_i, u^\ast(f^\ast)\rangle=\langle u(e_i), f_j^\ast\rangle=\left([u]_\mathcal{C}^\mathcal{B}\right)_{ij}=\left(\left([u]_\mathcal{C}^\mathcal{B}\right)^t\right)_{ji} $$
+$$\left(\left[u^\ast\right]_{\mathcal{B}^\ast}^{\mathcal{C}^\ast}\right)_{ji}=\langle u^\ast(f_j^\ast), e_i^{\ast\ast}\rangle=\langle e_i, u^\ast(f_j^\ast)\rangle=\langle u(e_i), f_j^\ast\rangle=\left([u]_\mathcal{C}^\mathcal{B}\right)_{ij}=\left(\left([u]_\mathcal{C}^\mathcal{B}\right)^t\right)_{ji} $$
 
 so we obtain the desired result.
 :::
@@ -128,11 +129,11 @@ so we obtain the desired result.
 
 Previously we defined the trace of a linear map in [§Hom and Tensor Products, ⁋Definition 6](/en/math/multilinear_algebra/hom_and_tensor#def6). Now, for any $n\times n$ matrix $X$, we define the trace of $X$ by
 
-$\tr(X)=\sum_{i=1}^n x_{ii}$.
+$$\tr(X)=\sum_{i=1}^n x_{ii}$$
 
 Then for any $u\in\End_\rMod{A}(M)$, fixing a basis $\mathcal{B}=(e_i)_{1\leq i\leq n}$ and considering $[u]_\mathcal{B}^\mathcal{B}$, we have
 
-$\tr([u]_\mathcal{B}^\mathcal{B})=\sum_{i=1}^n ([u]_\mathcal{B}^\mathcal{B})_{ii}=\sum_{i=1}^n\langle u(e_i), e_i^\ast\rangle$.
+$$\tr([u]_\mathcal{B}^\mathcal{B})=\sum_{i=1}^n ([u]_\mathcal{B}^\mathcal{B})_{ii}=\sum_{i=1}^n\langle u(e_i), e_i^\ast\rangle$$
 
 On the other hand, for obvious reasons
 
@@ -148,7 +149,7 @@ holds.
 
 Finally, we consider the more general situation in which two free $A$-modules $M,N$ are each written as a direct sum of submodules
 
-$M=\bigoplus_{i\in I}M_i,\qquad N=\bigoplus_{j\in J} N_j$.
+$$M=\bigoplus_{i\in I}M_i,\qquad N=\bigoplus_{j\in J} N_j$$
 
 In the special case where all the $M_i$ and $N_j$ are equal to $A$, this reduces to the situation above. Then any $x$ can be written uniquely as
 
@@ -156,7 +157,7 @@ $$x=\sum_{i\in I} x_i,\qquad x_i\in M_i$$
 
 and we define the coordinate representation of $x$ with respect to this decomposition as
 
-$[x]_I=(x_{i0})_{i\in I}$.
+$$[x]_I=(x_{i0})_{i\in I}$$
 
 Also, for any $A$-linear map $u: M \rightarrow N$, writing
 
@@ -168,8 +169,8 @@ $$[u]^I_J=(u_{ji})_{(j,i)\in J\times I}$$
 
 is well-defined. This matrix can be regarded as a $J\times I$ matrix over the ring
 
-$H=\bigoplus_{(j,i)\in J\times I}\Hom_{\lMod{A}}(M_i,N_j)$.
+$$H=\bigoplus_{(j,i)\in J\times I}\Hom_{\lMod{A}}(M_i,N_j)$$
 
 Even with this generalization, all the propositions examined above remain valid. In particular, the product of matrices is noteworthy: suppose $I,J$ are both finite, and moreover each $M_i$ and $N_j$ has finite bases $\mathcal{B}_i$, $\mathcal{C}_j$. Then the unions of these bases form bases $\mathcal{B},\mathcal{C}$ of $M$ and $N$ respectively. The matrix representing a linear map $u:M \rightarrow N$ with respect to these bases can be verified to equal the matrix obtained by substituting, for each entry $u_{ji}$ in the above $[u]_J^I$, its matrix representation with respect to the bases $\mathcal{B}_i$, $\mathcal{C}_j$; and this behaves meaningfully under matrix multiplication. That is, for another direct sum $L=\bigoplus_{k\in K} L_k$ and basis $\mathcal{D}=\bigcup \mathcal{D}_k$, writing $v:N \rightarrow L$ in the same manner, the matrix representation of $v\circ u$ with respect to the bases $\mathcal{B}, \mathcal{D}$ is the matrix whose $(k,i)$-entry is the matrix
 
-$\sum_{j\in J}[v_{kj}]_{\mathcal{D}_k}^{\mathcal{C}_j}[u_{ji}]_{\mathcal{C}_j}^{\mathcal{B}_i}$.
+$$\sum_{j\in J}[v_{kj}]_{\mathcal{D}_k}^{\mathcal{C}_j}[u_{ji}]_{\mathcal{C}_j}^{\mathcal{B}_i}$$

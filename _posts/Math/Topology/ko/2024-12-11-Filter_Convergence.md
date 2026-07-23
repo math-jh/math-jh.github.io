@@ -118,7 +118,7 @@ $X$가 [보조정리 7](#lem7)의 역이 성립한다는 공간이라 하자. �
 $X$가 first countable $T_1$이고 limit point compact라면 $X$는 sequentially compact이다. 
 :::
 ::: 증명
-앞서 언급한 것과 같이 임의의 점열 $(x_n)$이 주어졌을 때, 집합 $A=\{x_n\mid n\geq 1\}$는 유한집합이 되어 자명한 이유로 수렴하는 부분점열을 갖거나, 혹은 무한집합이 되어 limit point $x$를 갖는다. 만일 $x=x_n$가 무한히 많은 $n$에 대해 성립한다면 또 다시 자명한 이유로 $x$에 수렴하는 부분점열을 잡을 수 있으므로, $x_n=x$를 만족하는 $n$아 오직 유한 개밖에 없다고 가정할 수 있고 이는 점열의 수렴에 영향을 주지 않으므로 일반성을 잃지 않고 $x_n\neq x$가 모든 $n$에 대해 성립한다고 가정할 수 있다. 
+앞서 언급한 것과 같이 임의의 점열 $(x_n)$이 주어졌을 때, 집합 $A=\{x_n\mid n\geq 1\}$는 유한집합이 되어 자명한 이유로 수렴하는 부분점열을 갖거나, 혹은 무한집합이 되어 limit point $x$를 갖는다. 만일 $x=x_n$가 무한히 많은 $n$에 대해 성립한다면 또 다시 자명한 이유로 $x$에 수렴하는 부분점열을 잡을 수 있으므로, $x_n=x$를 만족하는 $n$이 오직 유한 개밖에 없다고 가정할 수 있고 이는 점열의 수렴에 영향을 주지 않으므로 일반성을 잃지 않고 $x_n\neq x$가 모든 $n$에 대해 성립한다고 가정할 수 있다. 
 
 한편 $X$는 first countable이므로, $x$의 countable local base $\mathcal{B}(x)$를 생각할 수 있다. $\mathcal{B}(x)$의 원소를 $B_1,B_2,\ldots$와 같이 적는다면, $B_n$을 $B_1\cap\cdots\cap B_n$으로 바꾸어 $B_{n+1}\subseteq B_n$이 모든 $n$에 대해 성립하도록 할 수 있다. 
 
@@ -128,10 +128,10 @@ $X$가 first countable $T_1$이고 limit point compact라면 $X$는 sequentially
 뿐만 아니라 first countable space는 sequential space라는 것을 쉽게 보일 수 있다. 
 
 ::: 명제 12
-임의의 second countable space $X$는 *Lindelöf<sub>린델뢰프</sub>*이다. 즉, $X$의 임의의 open cover는 가산 부분덮개를 갖는다.
+임의의 second countable space $X$는 *Lindelöf<sub>린델뢰프</sub>*이다. 즉, $X$의 임의의 open cover는 countable subcover를 갖는다.
 :::
 ::: 증명
-$X$의 countable base $\mathcal{B}=\{B_1, B_2, \ldots\}$를 고정하고, $X$의 임의의 open cover $(U_\alpha)_{\alpha\in A}$가 주어졌다 하자. 각 점 $x\in X$에 대하여 $x\in U_\alpha$인 $\alpha$가 존재하고, base의 정의에 의하여 $x\in B_n\subseteq U_\alpha$인 $B_n\in\mathcal{B}$이 존재한다. 이러한 $B_n$들을 모두 모으면 $X$를 덮는 $\mathcal{B}$의 가산 부분모임 $\{B_{n_1}, B_{n_2}, \ldots\}$을 얻는다. 이제 각 $k$에 대하여 $B_{n_k}\subseteq U_{\alpha_k}$인 $\alpha_k$를 하나씩 택하면, $(U_{\alpha_k})_{k\geq 1}$은 $(U_\alpha)_{\alpha\in A}$의 가산 부분덮개가 된다.
+$X$의 countable base $\mathcal{B}=\{B_1, B_2, \ldots\}$를 고정하고, $X$의 임의의 open cover $(U_\alpha)_{\alpha\in A}$가 주어졌다 하자. 각 점 $x\in X$에 대하여 $x\in U_\alpha$인 $\alpha$가 존재하고, base의 정의에 의하여 $x\in B_n\subseteq U_\alpha$인 $B_n\in\mathcal{B}$이 존재한다. 이러한 $B_n$들을 모두 모으면 $X$를 덮는 $\mathcal{B}$의 countable subcollection $\{B_{n_1}, B_{n_2}, \ldots\}$을 얻는다. 이제 각 $k$에 대하여 $B_{n_k}\subseteq U_{\alpha_k}$인 $\alpha_k$를 하나씩 택하면, $(U_{\alpha_k})_{k\geq 1}$은 $(U_\alpha)_{\alpha\in A}$의 countable subcover가 된다.
 :::
 
 ## 필터의 수렴
@@ -149,7 +149,7 @@ $$B_1\supseteq B_2\supseteq\cdots$$
 [정의 13](#def13)는 점열의 수렴을 일반화한 것이다. 이를 확인하기 위해서는 우선 다음을 정의해야 한다.
 
 ::: 정의 14
-집합 $X$ 위에 정의된 filter $\mathcal{F}$, 그리고 위상공간 $X$가 주어졌다 하자. 함수 $f:X \rightarrow Y$에 대하여, $y\in Y$가 $\mathcal{F}$에 대한 $f$의 *limit point*라는 것은 $y$가 filter ${\uparrow}f(\mathcal{F})$의 limit point인 것이다. ([§위상공간의 다른 정의들, ⁋명제 7](/ko/math/topology/equivalent_formulations_of_topology#prop7))
+집합 $X$ 위에 정의된 filter $\mathcal{F}$, 그리고 위상공간 $Y$가 주어졌다 하자. 함수 $f:X \rightarrow Y$에 대하여, $y\in Y$가 $\mathcal{F}$에 대한 $f$의 *limit point*라는 것은 $y$가 filter ${\uparrow}f(\mathcal{F})$의 limit point인 것이다. ([§위상공간의 다른 정의들, ⁋명제 7](/ko/math/topology/equivalent_formulations_of_topology#prop7))
 :::
 
 그럼 정의에 의하여, $y\in Y$가 $\mathcal{F}$에 대한 $f$의 limit point인 것은 $y$의 임의의 근방 $V$가 주어질 때마다, 적당한 $F\in \mathcal{F}$가 존재하여 $f(F)\subseteq V$인 것이다. 특히 다음이 성립한다.
@@ -158,7 +158,7 @@ $$B_1\supseteq B_2\supseteq\cdots$$
 위상공간 $X$의 점열 $(x_n)_{n\geq 1}$에 대하여, $(x_n)_{n\geq 1}$이 $x\in X$로 수렴하는 것과 $\mathbb{N}$ 위에 정의된 Fréchet filter $\mathcal{F}$의 $n\mapsto x_n$에 의한 image로 생성되는 filter가 $x$로 수렴하는 것이 동치이다. ([§위상공간의 다른 정의들, ⁋예시 4](/ko/math/topology/equivalent_formulations_of_topology#ex4))
 :::
 
-따라서 필터의 수렴은 점열의 수렴을 일반화한 것임을 안다. 뿐만 아니라 이 개념을 통해 다음과 같은 명제를 증명할 수 있다. 
+따라서 filter의 수렴은 점열의 수렴을 일반화한 것임을 안다. 뿐만 아니라 이 개념을 통해 다음과 같은 명제를 증명할 수 있다. 
 
 ::: 명제 16
 위상공간 $X$와 임의의 부분집합 $A\subseteq X$에 대하여, $x\in\cl(A)$인 것과, $x$로 수렴하는 $A$의 filter $\mathcal{F}$가 존재하는 것이 동치이다.

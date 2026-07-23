@@ -79,7 +79,7 @@ $$\gr_\mathcal{J}A\cong\gr_{\widehat{\mathcal{J}}}\widehat{A}$$
 
 ## $\mathfrak{a}$진 위상
 
-한편, $A$로부터 $\widehat{A}$를 만드는 과정은 특수한 종류의 위상을 부여하여 살펴볼 수도 있다. 우선 topological abelian group $G$가 주어졌다 하자. 그럼 $G$의 한 원소 $g$를 고정한 후, 이를 사용해 정의하는 translation map $T_g$는 연속이므로 $G$의 각 점에서의 neighborhood filter는 정확히 $0\in G$에서의 neighoborhood filter에 의해 모두 결정된다. 이 과정은 당연히 거꾸로 해낼 수도 있다.
+한편, $A$로부터 $\widehat{A}$를 만드는 과정은 특수한 종류의 위상을 부여하여 살펴볼 수도 있다. 우선 topological abelian group $G$가 주어졌다 하자. 그럼 $G$의 한 원소 $g$를 고정한 후, 이를 사용해 정의하는 translation map $T_g$는 연속이므로 $G$의 각 점에서의 neighborhood filter는 정확히 $0\in G$에서의 neighborhood filter에 의해 모두 결정된다. 이 과정은 당연히 거꾸로 해낼 수도 있다.
 
 앞선 절과 같이, $G$의 subgroup들의 decreasing sequence
 
@@ -87,7 +87,7 @@ $$G=H_0\supseteq H_1\supseteq\cdots$$
 
 가 주어졌다 하자. 그럼 
 
-$$\mathcal{N}(0)=\{U\subseteq G\mid\text{$G_n\subseteq U$ for some $n$}\}$$
+$$\mathcal{N}(0)=\{U\subseteq G\mid\text{$H_n\subseteq U$ for some $n$}\}$$
 
 으로 정의하면 이것이 [\[위상수학\] §열린집합, ⁋명제 6](/ko/math/topology/open_sets#prop6)의 모든 조건을 만족한다는 것을 안다. 이제 임의의 $g\in G$와 $U\in \mathcal{N}(0)$에 대하여, $g+U\in \mathcal{N}(g)$이도록 하면 이것이 $G$ 위에 위상구조를 준다. 
 
@@ -107,7 +107,7 @@ $$m,n>N \implies x_m-x_n\in U$$
 가 참이도록 할 수 있는 것을 말한다. 
 :::
 
-그럼 일반적인 topological group에서 Cauchy filter들의 equivalence class들의 모임으로 completion을 정의하는 것과 마찬가지로, 우리는 두 Cauchy sequence $(x_m)$, $(y_n)$이 주어졌을 때 이들을 언제 같은 것으로 볼지를 정하고, 그를 통해 (위상적인) completion을 정의할 수 있다. 다만 우리가 관심있는 것은 위의 filtration (2)에 의해 정의되는 first countable topological group $A$이며, first countable space는 sequentual이므로 다음 정의에서는 편의를 위해 $G$가 first countable space라 가정하고, Cauchy filter 대신 Cauchy sequence를 사용한다.
+그럼 일반적인 topological group에서 Cauchy filter들의 equivalence class들의 모임으로 completion을 정의하는 것과 마찬가지로, 우리는 두 Cauchy sequence $(x_m)$, $(y_n)$이 주어졌을 때 이들을 언제 같은 것으로 볼지를 정하고, 그를 통해 (위상적인) completion을 정의할 수 있다. 다만 우리가 관심있는 것은 위의 filtration (2)에 의해 정의되는 first countable topological group $A$이며, first countable space는 sequential이므로 다음 정의에서는 편의를 위해 $G$가 first countable space라 가정하고, Cauchy filter 대신 Cauchy sequence를 사용한다.
 
 ::: 정의 3
 Topological group $(G, +, 0)$의 두 Cauchy sequence $(x_m)$, $(y_n)$이 *equivalent<sub>동등</sub>*하다는 것은 $0$의 임의의 근방 $U$가 주어질 때마다 적당한 자연수 $N$이 존재하여, 다음 명제
@@ -121,7 +121,7 @@ $$m,n>N \implies x_m-y_n\in U$$
 
 $$\widehat{U}=\{[(x_n)]\in \widehat{G}:\text{for any $(y_n)\in [(x_n)]$, $y_n\in U$ for all but finitely many $n$}\}$$
 
-으로 정의하자. 그럼 약간의 계산을 통해, $\widehat{H}_i$들을 coninitial subset으로 갖는 $\widehat{G}$의 집합들의 모임 $\mathcal{N}(0)$이 [\[위상수학\] §열린집합, ⁋명제 6](/ko/math/topology/open_sets#prop6)의 모든 조건을 만족한다는 것을 확인할 수 있고, 따라서 $\widehat{G}$에 위상구조를 정의할 수 있다. 정의에 의해 $\widehat{G}$ 또한 first countable이며, $x\in G$를 받아 상수수열 $(x_i=x)$를 내놓는 함수 $G \rightarrow \widehat{G}$가 연속임을 알 수 있다. 뿐만 아니라, 이 함수는 앞선 절에서 정의한 $G \rightarrow \widehat{G}$와 완전히 같은 것이다. 
+으로 정의하자. 그럼 약간의 계산을 통해, $\widehat{H}_i$들을 coinitial subset으로 갖는 $\widehat{G}$의 집합들의 모임 $\mathcal{N}(0)$이 [\[위상수학\] §열린집합, ⁋명제 6](/ko/math/topology/open_sets#prop6)의 모든 조건을 만족한다는 것을 확인할 수 있고, 따라서 $\widehat{G}$에 위상구조를 정의할 수 있다. 정의에 의해 $\widehat{G}$ 또한 first countable이며, $x\in G$를 받아 상수수열 $(x_i=x)$를 내놓는 함수 $G \rightarrow \widehat{G}$가 연속임을 알 수 있다. 뿐만 아니라, 이 함수는 앞선 절에서 정의한 $G \rightarrow \widehat{G}$와 완전히 같은 것이다. 
 
 ## 완비화의 기본적인 성질들
 
@@ -147,7 +147,7 @@ $$\frac{1}{1+\x}=1-\x+\x^2-\cdots$$
 
 $$(1+\x)(1-\x+\x^2-\cdots)=1$$
 
-은 위의 논의와 같이, $1-\x+\x^2-\cdots$의 차수 $i$까지의 부분합
+은 위의 논의와 같이, $1-\x+\x^2-\cdots$의 degree $i$까지의 부분합
 
 $$1-\x+\x^2-\cdots+(-1)^i\x^i$$
 
@@ -193,17 +193,17 @@ $$A=\mathfrak{a}_0\supseteq \mathfrak{a}_1\supseteq\cdots$$
 
 $$\initial(a)=\sum_{k=1}^n \beta_k\initial(a_k)\tag{4}$$
 
-를 만족하는 $\beta_k\in \gr_\mathfrak{a}A$들이 존재하며, 위의 식에서 차수를 고려하면 $\beta_k$들은 homogeneous이고 그 차수는
+를 만족하는 $\beta_k\in \gr_\mathfrak{a}A$들이 존재하며, 위의 식에서 degree를 고려하면 $\beta_k$들은 homogeneous이고 그 degree는
 
 $$\degree(\beta_k)=\degree (\initial(a))-\degree(\initial(a_k))>\degree(\initial(a))-d$$
 
-여야 함을 안다. 따라서 $\initial(b_k)=\beta_k$를 만족하는 $b_k\in A$들에 대하여 $a-\sum_k b_k a_k$는 $\mathfrak{m}_{\degree(\initial(a))+1}$에 속하게 된다. 이 과정을 반복하여, 
+여야 함을 안다. 따라서 $\initial(b_k)=\beta_k$를 만족하는 $b_k\in A$들에 대하여 $a-\sum_k b_k a_k$는 $\mathfrak{a}_{\degree(\initial(a))+1}$에 속하게 된다. 이 과정을 반복하여, 
 
 $$a-\underbrace{\sum_k b_k a_k-\cdots}_{=a'} \in \mathfrak{a}_{d+1}$$
 
 이도록 하는 $a'\in \mathfrak{a}'$를 택할 수 있다. 이 때, $a'$는 어차피 $a_k$들로 생성되므로 $a$가 $a_k$들로 생성되는 것은 $a-a'$가 $a_k$들로 생성되는 것을 보이는 것과 같다. 즉, 우리는 일반성을 잃지 않고 $a$가 $\mathfrak{a}_{d+1}$에 속해있다고 가정할 수 있다.
 
-이제 이와 같은 가정에서 위의 식 (4)를 다시 살펴보자. $\degree(\initial(a))=e$라 하면, $\beta_k$의 차수는 $e-d$ 이상이어야 함을 앞에서 살펴보았다. 따라서 $b_k$들을 $\mathfrak{a}_{e-d}$에서 택할 수 있으며, 이제 위에서와 마찬가지 논리를 통해
+이제 이와 같은 가정에서 위의 식 (4)를 다시 살펴보자. $\degree(\initial(a))=e$라 하면, $\beta_k$의 degree는 $e-d$ 이상이어야 함을 앞에서 살펴보았다. 따라서 $b_k$들을 $\mathfrak{a}_{e-d}$에서 택할 수 있으며, 이제 위에서와 마찬가지 논리를 통해
 
 $$a-\sum_{k=1}^n b_ka_k$$
 

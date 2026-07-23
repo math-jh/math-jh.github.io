@@ -38,7 +38,7 @@ $$\begin{aligned}(G-G')\left(\sum_{x\in \mathcal{B}}v_xx\right)&=\sum_{x\in\math
 
 $$G(v)=\sum_{x\in\mathcal{B}} v_xg(x)$$
 
-로 *정의*하는 것이 자연스럽다. $v$를 $B$의 원소들의 일차결합으로 쓰는 방법은 유일하므로, $G$는 잘 정의되었으며 어렵지 않게 $G$가 linear map이 된다는 것을 증명할 수 있다.
+로 *정의*하는 것이 자연스럽다. $v$를 $\mathcal{B}$의 원소들의 일차결합으로 쓰는 방법은 유일하므로, $G$는 잘 정의되었으며 어렵지 않게 $G$가 linear map이 된다는 것을 증명할 수 있다.
 :::
 
 즉, 다음의 diagram이 항상 commute하도록 하는 $G:V\rightarrow W$를 찾을 수 있다.
@@ -51,7 +51,7 @@ $$\{\text{functions from $\mathcal{B}$ to $W$}\}\longleftrightarrow\{\text{linea
 
 즉 $V$에서 $W$로의 linear map은 $L$이 basis $\mathcal{B}$ 위에서 어떻게 행동하는지에 의해 완벽하게 결정되며, 만일 $V$가 유한차원이었다면 이는 linear map $L$이 오직 <em-ko>유한 개</em-ko>의 원소에서의 함수값에 의해서만 결정된다는 의미가 된다.
 
-특별히 공역 $W$ 또한 유한차원 $\mathbb{K}$-벡터공간이라 가정하고, $V$의 기저 $\mathcal{B}=\{x_1,\ldots, x_n\}$, 그리고 $W$의 기저 $\mathcal{C}=\{y_1,\ldots,y_m\}$를 고정하자. 그럼 앞선 논증에 의해 $V$에서 $W$로의 linear map $L$은 $W$의 $n$개의 벡터들
+특별히 공역 $W$ 또한 유한차원 $\mathbb{K}$-벡터공간이라 가정하고, $V$의 basis $\mathcal{B}=\{x_1,\ldots, x_n\}$, 그리고 $W$의 basis $\mathcal{C}=\{y_1,\ldots,y_m\}$를 고정하자. 그럼 앞선 논증에 의해 $V$에서 $W$로의 linear map $L$은 $W$의 $n$개의 벡터들
 
 $$L(x_1),L(x_2)\ldots, L(x_n)$$
 
@@ -165,9 +165,9 @@ $$\alpha_{11}B_1^1(x_k)+\alpha_{12}B_2^1(x_k)+\cdots+\alpha_{mn}B_n^m(x_k)=0$$
 
 이다. 그런데 $B_i^j$의 정의에 의하여, $B_i^j(x_k)$는 오직 $i=k$일 때만 값 $y_j$가 나오므로 위의 식은
 
-$$\alpha_{1k}y_1+\alpha_{2k}y_2+\cdots+\alpha_{mk}y_k=0$$
+$$\alpha_{1k}y_1+\alpha_{2k}y_2+\cdots+\alpha_{mk}y_m=0$$
 
-이 된다. 이제 $y_1,\ldots,y_k$는 일차독립이므로 $\alpha_{1k},\ldots,\alpha_{mk}$는 모두 $0$이다. $k$는 임의로 택할 수 있으므로 $\alpha_{11},\ldots,\alpha_{mn}$는 모두 0이고 $B_i^j$는 일차독립이다.
+이 된다. 이제 $y_1,\ldots,y_m$는 일차독립이므로 $\alpha_{1k},\ldots,\alpha_{mk}$는 모두 $0$이다. $k$는 임의로 택할 수 있으므로 $\alpha_{11},\ldots,\alpha_{mn}$는 모두 0이고 $B_i^j$는 일차독립이다.
 
 한편 이들 $B_i^j$는 $\Hom(V,W)$를 span한다. 임의의 $L\in\Hom(V,W)$가 주어졌다 하자. 그럼 도입부의 식 (1)을 만족하는 스칼라들 $\alpha_{11},\ldots,\alpha_{mn}$을 찾을 수 있다. 이제 다음의 식
 

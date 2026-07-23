@@ -16,7 +16,7 @@ last_polished_at: 2026-05-30T14:30:04+00:00
 ---
 Posts in the category theory category are written so that they can basically be understood by reading only the posts in the [\[Set Theory\]](/en/set_theory/) category, and although the monoidal categories covered in this post could have been written in that way as well, the first part of this post in particular draws on posts from the [\[Algebraic Structures\]](/en/algebraic_structures) category to aid understanding.
 
-In this post and the next, we examine monoidal categories and monoidal objects defined within them. Roughly speaking, a monoid object is an object in some category that has properties similar to those of an algebraically defined monoid; to say that it has properties similar to a monoid, that category must be a monoidal category. Therefore, we first briefly review what a monoid was algebraically, and then consider how this story can be rewritten in the language of categories.
+In this post and the next, we examine monoidal categories and monoid objects defined within them. Roughly speaking, a monoid object is an object in some category that has properties similar to those of an algebraically defined monoid; to say that it has properties similar to a monoid, that category must be a monoidal category. Therefore, we first briefly review what a monoid was algebraically, and then consider how this story can be rewritten in the language of categories.
 
 ## Monoid
 
@@ -67,7 +67,7 @@ A *monoidal category* consists of data $(\mathcal{A},\otimes, I)$. Here $\mathca
 
     $$\lambda_A:I\otimes A\rightarrow A,\qquad \rho_A:A\otimes I\rightarrow A$$
 
-    They are called the *left unitor* and *right unitor*, respectively.
+    $\lambda$ and $\rho$ are called the *left unitor* and *right unitor*, respectively.
 3. (Coherence condition) The following two diagrams both commute.
 
 - (Associator)

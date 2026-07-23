@@ -47,7 +47,7 @@ $$\mathfrak{m}^{m+i}\cap \mathfrak{a}=\mathfrak{m}^i(\mathfrak{m}^m\cap \mathfra
 
 $$\mathfrak{m}^t\cap \mathfrak{a}=\mathfrak{m}^n(\mathfrak{m}^{t-n}\cap \mathfrak{a})\subseteq \mathfrak{m}^n \mathfrak{a}$$
 
-이 되고, 우리는 $x\in (\mathfrak{m}^na)\otimes_AM$가 임의의 $n$에 성립하는 것을 보이는 대신, 임의의 $t$에 대해 $x\in (\mathfrak{m}^t\cap \mathfrak{a})\otimes_AM$가 성립하는 것을 보여도 된다. 
+이 되고, 우리는 $x\in (\mathfrak{m}^n\mathfrak{a})\otimes_AM$가 임의의 $n$에 성립하는 것을 보이는 대신, 임의의 $t$에 대해 $x\in (\mathfrak{m}^t\cap \mathfrak{a})\otimes_AM$가 성립하는 것을 보여도 된다. 
 
 이제 다음의 short exact sequence
 
@@ -65,7 +65,7 @@ $$(\mathfrak{m}^t\cap \mathfrak{a})\otimes_AM \rightarrow \mathfrak{a}\otimes_AM
 
 ![trick](/assets/images/Math/Commutative_Algebra/Local_Criterion_for_Flatness-2.svg){:style="width:16.39em" class="invert" .align-center}
 
-을 생각하면, 왼쪽 $\mathfrak{a}\otimes_AM \rightarrow M$은 multiplication map $m$이고, 따라서 $x\in\ker m$는 $\llcorner$ 방향으로의 합성을 통해 $0$으로 옮겨진다. 따라서 오른쪽 $(\mathfrak{a}/(\mathfrak{m}^t\cap I))\otimes_AM \rightarrow (A/\mathfrak{m}^t)\otimes_AM$이 injective인 것만 보이면 충분하다. 다음의 isomorphism
+을 생각하면, 왼쪽 $\mathfrak{a}\otimes_AM \rightarrow M$은 multiplication map $m$이고, 따라서 $x\in\ker m$는 $\llcorner$ 방향으로의 합성을 통해 $0$으로 옮겨진다. 따라서 오른쪽 $(\mathfrak{a}/(\mathfrak{m}^t\cap \mathfrak{a}))\otimes_AM \rightarrow (A/\mathfrak{m}^t)\otimes_AM$이 injective인 것만 보이면 충분하다. 다음의 isomorphism
 
 $$\frac{\mathfrak{a}}{\mathfrak{m}^t\cap \mathfrak{a}}\cong \frac{\mathfrak{a}+\mathfrak{m}^t}{\mathfrak{m}^t}$$
 
@@ -81,7 +81,7 @@ $$\cdots \Tor_1^A(A/(\mathfrak{a}+\mathfrak{m}^t), M) \rightarrow \frac{\mathfra
 
 그런데 $A/(\mathfrak{a}+\mathfrak{m}^t)$는 $\mathfrak{m}^t$로 annihilate되고, $\mathfrak{m}^t$는 finitely generated이므로, 이를 통해 $A/(\mathfrak{a}+\mathfrak{m}^t)$이 finite length를 갖는다는 것을 안다. 따라서, 더 일반적으로 유한한 길이를 갖는 임의의 $A$-module $N$이 주어질 때마다 $\Tor_1^A(N, M)=0$이 성립한다는 것을 보이면 원하는 바를 얻는다.
 
-귀납법으로 진행한다. 만일 $N$이 length $1$이라면 [§조르단-횔더 정리, ⁋정의 1](/ko/math/commutative_algebra/Jordan-Holder_theorem#def1) 이후의 논중으로부터 $N=A/\mathfrak{m}$이어야 하고, 따라서 $\Tor_1^A(N, M)=0$인 것은 정확히 정리의 가정과 일치한다.  유한한 length의 $A$-module $N$과, $N$의 임의의 proper submodule $N'$을 택하자. 그럼 다음의 exact sequence
+귀납법으로 진행한다. 만일 $N$이 length $1$이라면 [§조르단-횔더 정리, ⁋정의 1](/ko/math/commutative_algebra/Jordan-Holder_theorem#def1) 이후의 논증으로부터 $N=A/\mathfrak{m}$이어야 하고, 따라서 $\Tor_1^A(N, M)=0$인 것은 정확히 정리의 가정과 일치한다.  유한한 length의 $A$-module $N$과, $N$의 임의의 proper submodule $N'$을 택하자. 그럼 다음의 exact sequence
 
 $$0 \rightarrow N' \rightarrow N \rightarrow N/N' \rightarrow 0$$
 
@@ -94,7 +94,7 @@ $$\cdots \rightarrow\Tor_1^A(N', M) \rightarrow \Tor_1^A(N, M) \rightarrow \Tor_
 
 한편, $M$이 flat $A$-module이라면 임의의 $A/(a)$-module $N$에 대하여 
 
-$$(M/aM)\otimes_{A/(a)}N=(A/(x)\otimes_A M)\otimes_{A/(a)} N\cong M\otimes_AN$$
+$$(M/aM)\otimes_{A/(a)}N=(A/(a)\otimes_A M)\otimes_{A/(a)} N\cong M\otimes_AN$$
 
 이므로 $M/aM$은 아무런 조건 없이도 flat $A/(a)$-module이다. 우리는 [따름정리 3](#cor3)에서 [정리 1](#thm1)의 조건을 가정하고 이 주장의 역을 보인다. 이를 위해서는 우선 다음 보조정리가 필요하다.
 
@@ -122,7 +122,7 @@ $$\cdots \rightarrow F_2/aF_2 \rightarrow F_1/aF_1 \rightarrow F_0/aF_0 \rightar
 
 $$\Tor_i^A(A/(a), M)=\begin{cases} M/aM&\text{if $i=0$}\\ 0&\text{otherwise}\end{cases}$$
 
-로 주어지므로, 이는 $M/aM$의 free resolution이 된다. 따라서 $\Tor_i^{A/(a)}(N, M/aM)$을 예산하기 위해서 (2)를 사용하면 다음의 isomorphism
+로 주어지므로, 이는 $M/aM$의 free resolution이 된다. 따라서 $\Tor_i^{A/(a)}(N, M/aM)$을 계산하기 위해서 (2)를 사용하면 다음의 isomorphism
 
 $$N\otimes_{A/(a)} F_i/aF_i=N\otimes_{A/(a)} ((A/(a))\otimes_A F_i)\cong N\otimes_A F_i$$
 
@@ -132,7 +132,7 @@ $$N\otimes_{A/(a)} F_i/aF_i=N\otimes_{A/(a)} ((A/(a))\otimes_A F_i)\cong N\otime
 이를 사용하여 다음을 보일 수 있다.
 
 ::: 따름정리 3
-Noetherian local ring $(A, \mathfrak{m})$을 고정하고, $(E, \mathfrak{n})$가 $\mathfrak{m}E\subseteq \mathfrak{n}$를 만족하는 local Noetherian $A$-algebra라 가정하자. 만일 $a\in \mathfrak{m}$이 $A$의 non-zerodivisor인 동시에 finitely generated $E$-module $M$의 zerodivisor라면, $M$이 flat $A$-module인 것과 $M/aM$이 flat $A/(a)$-module인 것이 동치이다. 
+Noetherian local ring $(A, \mathfrak{m})$을 고정하고, $(E, \mathfrak{n})$가 $\mathfrak{m}E\subseteq \mathfrak{n}$를 만족하는 local Noetherian $A$-algebra라 가정하자. 만일 $a\in \mathfrak{m}$이 $A$의 non-zerodivisor인 동시에 finitely generated $E$-module $M$의 non-zerodivisor라면, $M$이 flat $A$-module인 것과 $M/aM$이 flat $A/(a)$-module인 것이 동치이다. 
 :::
 ::: 증명
 $M/aM$이 flat $A/(a)$-module이라 하자. $A$의 residue field를 $A/\mathfrak{m}$에 대하여, 가정으로부터

@@ -49,9 +49,9 @@ $\mathbb{R}$-벡터공간 $V$ 위에 정의된 *norm<sub>노름</sub>*은 다음
 다음 명제는 이미 고등학교 때부터 익숙했던 것이다.
 
 ::: 명제 3 (Cauchy-Schwarz)
-$\mathbb{R}$-내적공간 $V$의 임의의 벡터 $v,w$에 대하여 다음의 식
+$\mathbb{R}$-내적공간 $V$의 임의의 벡터 $u,v$에 대하여 다음의 식
 
-$$\lvert \langle v,w\rangle\rvert\leq\sqrt{\langle u,u\rangle}\sqrt{\langle v,v\rangle}$$
+$$\lvert \langle u,v\rangle\rvert\leq\sqrt{\langle u,u\rangle}\sqrt{\langle v,v\rangle}$$
 
 이 성립한다. 등호는 $u=\lambda v$를 만족하는 적당한 상수 $\lambda$가 존재할 때 성립한다. 
 :::
@@ -80,13 +80,13 @@ $$\lVert v\rVert:=\sqrt{\langle v,v\rangle}$$
 으로 정의된 함수 $\lVert-\rVert:V\rightarrow \mathbb{R}$은 norm이 된다. 
 :::
 ::: 증명
-우선 위의 식 $\lVert v\rVert$는 $\mathbb{R}$로의 함수이다. 이는 $(v,v)\geq 0$이 항상 성립하기 때문이다.
+우선 위의 식 $\lVert v\rVert$는 $\mathbb{R}$로의 함수이다. 이는 $\langle v,v\rangle\geq 0$이 항상 성립하기 때문이다.
 
 Norm의 조건 중 첫째 조건과 둘째 조건은 자명하고, 오직 삼각부등식만 보이면 충분하다. 임의의 $u,v\in V$에 대하여, 
 
 $$\lVert u+v\rVert=\sqrt{\langle u+v,u+v\rangle}=\sqrt{\langle u,u\rangle+2\langle u,v\rangle+\langle v,v\rangle}$$
 
-이고, 코시-슈바르츠 부등식을 적용하면
+이고, Cauchy-Schwarz 부등식을 적용하면
 
 $$\langle u,u\rangle+2\langle u,v\rangle+\langle v,v\rangle\leq \lVert u\rVert^2+2\lVert u\rVert\lVert v\rVert+\lVert v\rVert^2=(\lVert u\rVert+\lVert v\rVert)^2$$
 
@@ -197,9 +197,9 @@ $$[\id]_\mathcal{C}^\mathcal{B}=\begin{pmatrix}\langle x_1,x'_1\rangle&\langle x
 
 이 된다. $\mathcal{B}$와 $\mathcal{C}$의 역할을 바꾸면
 
-$$[\id]_\mathcal{B}^\mathcal{C}=\begin{pmatrix}\langle x'_1,x_1\rangle&\langle x'_2, x_1\rangle&\cdots&\langle x'_n,x_1\rangle\\ \langle x'_1,x_2\rangle&\langle x'_2,x_2\rangle&\cdots&\langle x'_n,x_2\rangle\\ \vdots&\vdots&\ddots&\vdots\\ \langle x'_1, x_n\rangle&\langle x'_2, x_n\rangle&\cdots&\langle x'_n,n\rangle\end{pmatrix}$$
+$$[\id]_\mathcal{B}^\mathcal{C}=\begin{pmatrix}\langle x'_1,x_1\rangle&\langle x'_2, x_1\rangle&\cdots&\langle x'_n,x_1\rangle\\ \langle x'_1,x_2\rangle&\langle x'_2,x_2\rangle&\cdots&\langle x'_n,x_2\rangle\\ \vdots&\vdots&\ddots&\vdots\\ \langle x'_1, x_n\rangle&\langle x'_2, x_n\rangle&\cdots&\langle x'_n,x_n\rangle\end{pmatrix}$$
 
-이므로, $\langle-,-\rangle$이 symmetric이라는 조건으로부터 두 orthonormal basis들 간의 기저변환행렬은 항상 orthogonal matrix가 된다는 것을 확인할 수 있다. 거꾸로 임의의 orthogonal matrix는 항상 orthonormal basis 사이의 기저변환행렬로 해석할 수 있다.
+이므로, $\langle-,-\rangle$이 symmetric이라는 조건으로부터 두 orthonormal basis들 간의 change-of-basis matrix는 항상 orthogonal matrix가 된다는 것을 확인할 수 있다. 거꾸로 임의의 orthogonal matrix는 항상 orthonormal basis 사이의 change-of-basis matrix로 해석할 수 있다.
 
 ## Projection theorem
 
@@ -256,7 +256,7 @@ $$(1-\lambda)v=u-\lambda u'\in U$$
 
 이제 실제로 $\proj_Uv$가 실제로 $\lVert v-w\rVert$를 최소로 만드는 벡터임을 보여야 한다. $U$의 basis $\{x_1,\ldots, x_k\}$를 하나 택하고, 이를 포함하는 $V$의 orthonormal basis를 $\{x_1,\ldots, x_n\}$이라 하자. 그럼 $v=\sum_{i=1}^n v_i x_i$, $w=\sum_{i=1}^k w_i x_i$로부터
 
-$$\lVert v-w\rVert=\left\lVert\sum_{i=1}^k(v_i-w_i)x_i+\sum_{i=k+1}^n v_ix_i\right\rVert=\sum_{i=1}^k (v_i-w_i)^2+\sum_{i=k+1}^n v_i^2\geq \sum_{i=k+1}^n v_i^2$$
+$$\lVert v-w\rVert^2=\left\lVert\sum_{i=1}^k(v_i-w_i)x_i+\sum_{i=k+1}^n v_ix_i\right\rVert^2=\sum_{i=1}^k (v_i-w_i)^2+\sum_{i=k+1}^n v_i^2\geq \sum_{i=k+1}^n v_i^2$$
 
 이고, 등호는 모든 $1\leq i\leq k$에 대하여 $v_i=w_i$일 때 성립한다. 그럼 
 

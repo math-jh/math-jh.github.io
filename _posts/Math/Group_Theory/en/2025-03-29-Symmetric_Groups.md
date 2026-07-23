@@ -74,7 +74,7 @@ $$[n]/{\sim}=\{C_1, \ldots, C_r\}$$
 
 Now for each $1\leq k\leq r$ define by the following formula
 
-$$\sigma_k(i)=\begin{cases}\sigma(x)&\text{if $x\in C_k$}\\x&\text{otherwise}\end{cases}$$
+$$\sigma_k(x)=\begin{cases}\sigma(x)&\text{if $x\in C_k$}\\x&\text{otherwise}\end{cases}$$
 
 Then these are disjoint cycles and their product is $\sigma$.
 :::
@@ -184,7 +184,7 @@ Moreover, since $\sigma$ is a bijection, if we rewrite all terms in this way we 
 
 From the definition, it is obvious that if $\sigma$ is a transposition then $\sgn(\sigma)=-1$. Therefore, if we can only show that $\sgn$ is multiplicative,
 
-$$\text{$\sigma$ odd}\iff\text{$\sgn(\sigma)=-1$}\iff\text{$\sigma$ is a product of odd number of permutations}$$
+$$\text{$\sigma$ odd}\iff\text{$\sgn(\sigma)=-1$}\iff\text{$\sigma$ is a product of odd number of transpositions}$$
 
 will hold, so we will obtain the desired result. Let two permutations $\sigma$, $\tau$ be given. We must compute the value of $\sgn(\sigma\tau)$. Suppose $\tau$ has $k$ inversions. That is, $\sgn(\tau)=(-1)^k$, and these $k$ copies of $-1$ all come from factors in equation (1). To compute the value of $\sgn(\sigma\tau)$ we first multiply both sides of
 
@@ -219,7 +219,7 @@ First, the permutations inside $A_5$ can be classified into the following types:
 
 That these four types of permutations are mutually distinct can be seen by looking at the orders of the individual elements, and that elements belonging to the same type are distinct from one another can be seen directly by looking at function values.
 
-In general, for a subgroup $N$ of a group $G$ to be a normal subgroup, by definition $N$ must be expressible as a union of conjugacy classes under inner automorphisms. Now using [Lemma 7](#lem7), we can see that the 3-cycles and the products of two disjoint 2-cycles each form single conjugacy classes, while the 5-cycles split into two conjugacy classes each containing 12 elements. The size of a normal subgroup of $A_5$ must divide the size of $A_5$, which is 60, but no union of non-trivial conjugacy classes containing the identity can produce a divisor of 60, so $A_5$ has no non-trivial normal subgroup.
+In general, for a subgroup $N$ of a group $G$ to be a normal subgroup, by definition $N$ must be expressible as a union of conjugacy classes under inner automorphisms. Now using [Lemma 7](#lem7), we can see that the 3-cycles and the products of two disjoint 2-cycles each form single conjugacy classes, while the $5$-cycles split into two conjugacy classes each containing 12 elements. The size of a normal subgroup of $A_5$ must divide the size of $A_5$, which is $60$, but no union of non-trivial conjugacy classes containing the identity can produce a divisor of $60$, so $A_5$ has no non-trivial normal subgroup.
 :::
 
 ---

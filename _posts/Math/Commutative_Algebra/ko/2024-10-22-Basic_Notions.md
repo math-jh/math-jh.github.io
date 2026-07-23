@@ -81,9 +81,9 @@ $$M_0\supseteq M_1\supseteq M_2\supseteq\cdots$$
 3. 임의의 $M$의 submodule들의 모임은 항상 포함관계에 대한 maximal element를 갖는다.
 :::
 ::: 증명
-우선 1번 조건을 가정하고 2번 조건을 보인다. 결론에 반하여 $M$이 finitely generated가 아닌 submodule $N$을 갖는다 가정하자. 그럼 $N$의 임의의 원소 $x_0\neq 0$을 택할 수 있으며, $N$이 finitely generated가 아니라는 사실로부터 $N\neq \langle x_1\rangle$이므로 $x_2\in N\setminus \langle x_1\rangle$을 택할 수 있다. 이를 계속 반복하여 $N$의 submodule들의 increasing sequence
+우선 1번 조건을 가정하고 2번 조건을 보인다. 결론에 반하여 $M$이 finitely generated가 아닌 submodule $N$을 갖는다 가정하자. 그럼 $N$의 임의의 원소 $x_1\neq 0$을 택할 수 있으며, $N$이 finitely generated가 아니라는 사실로부터 $N\neq \langle x_1\rangle$이므로 $x_2\in N\setminus \langle x_1\rangle$을 택할 수 있다. 이를 계속 반복하여 $N$의 submodule들의 increasing sequence
   
-$$\langle x_1\rangle\subsetneq \langle x_2\rangle\subsetneq\cdots$$
+$$\langle x_1\rangle\subsetneq \langle x_1,x_2\rangle\subsetneq\cdots$$
 
 를 얻으며, 이들은 $M$의 submodule이기도 하므로 $M$이 noetherian이라는 가정에 모순이다.
 
@@ -91,7 +91,7 @@ $$\langle x_1\rangle\subsetneq \langle x_2\rangle\subsetneq\cdots$$
 
 $$M_0\subseteq M_1\subseteq M_2\subseteq\cdots$$
 
-이 주어졌다 하고 $M'=\bigcup M_k$라 하면 $M'$은 finitely generated이므로 $M'=\langle x_1,\ldots, x_n\rangle$이라 하자. 그럼 이제 각각의 $i$에 대하여, $k_i$를 $x_i\in N_{k_i}$가 성립하도록 잡을 수 있고 이제 이러한 $k_i$들 중 가장 큰 것은 반드시 $M'$과 같게 된다.
+이 주어졌다 하고 $M'=\bigcup M_k$라 하면 $M'$은 finitely generated이므로 $M'=\langle x_1,\ldots, x_n\rangle$이라 하자. 그럼 이제 각각의 $i$에 대하여, $k_i$를 $x_i\in M_{k_i}$가 성립하도록 잡을 수 있고 이제 이러한 $k_i$들 중 가장 큰 것을 $k$라 하면 $M_k$는 반드시 $M'$과 같게 된다.
 
 이제 1번 조건과 3번 조건이 동치임을 보인다. 우선 1번 조건이 만족된다면 이는 $M$의 임의의 submodule들의 모임이 주어질 때마다 ACC에 의하여 [\[집합론\] §선택공리, ⁋정리 4](/ko/math/set_theory/axiom_of_choice#thm4)의 전제조건이 만족되므로 3번이 성립하는 것이 자명하다. 거꾸로 3번 조건을 만족할 경우, $M$의 submodule들의 ascending chain
 
@@ -113,7 +113,7 @@ $M/N$의 임의의 submodule은 $M$의 적당한 submodule $L$에 대하여 $L/N
 임의의 $A$-module $M$과 임의의 submodule $N$에 대하여, $M$이 noetherian인 것과 $N,M/N$이 모두 noetherian인 것이 동치이다.
 :::
 ::: 증명
-한쪽 방향은 이미 증명하였다. 따라서 $N, M/N$이 noetherian이라 가정하고 $M$이 noetherian임을 보이면 충분하다. $M$의 임의의 submodule $L$을 고정하자. 그럼 $L$의 $M/N$에서의 image $L/N$은 finitely generated이며, $L\cap N$ 또한 $N$의 submodul이므로 finitely generated이다. 이제 $x_1,\ldots, x_m\in L$을 $L/N$으로 보낸 것이 $L/N$의 generator가 된다 하고, $y_1,\ldots, y_n\in L\cap N$이 $L\cap N$의 generator라 하자. 그럼 임의의 $x\in L$에 대하여 
+한쪽 방향은 이미 증명하였다. 따라서 $N, M/N$이 noetherian이라 가정하고 $M$이 noetherian임을 보이면 충분하다. $M$의 임의의 submodule $L$을 고정하자. 그럼 $L$의 $M/N$에서의 image $L/N$은 finitely generated이며, $L\cap N$ 또한 $N$의 submodule이므로 finitely generated이다. 이제 $x_1,\ldots, x_m\in L$을 $L/N$으로 보낸 것이 $L/N$의 generator가 된다 하고, $y_1,\ldots, y_n\in L\cap N$이 $L\cap N$의 generator라 하자. 그럼 임의의 $x\in L$에 대하여 
 
 $$x\equiv \alpha_1x_1+\cdots+\alpha_m x_m\pmod{N}$$
 
@@ -159,7 +159,7 @@ $$0\longrightarrow\ker u \longrightarrow A^{\oplus n} \overset{u}{\longrightarro
 
 $$A^{\oplus m} \rightarrow \ker u \rightarrow 0$$
 
-을 생각한 후, 합성 $A^{\oplus m} \rightarrow \ker \rightarrow A^{\oplus n}$을 사용하면 다음의 exact sequence
+을 생각한 후, 합성 $A^{\oplus m} \rightarrow \ker u \rightarrow A^{\oplus n}$을 사용하면 다음의 exact sequence
 
 $$A^{\oplus m} \rightarrow A^{\oplus n} \rightarrow M \rightarrow 0$$
 
@@ -215,7 +215,7 @@ Noetherian ring $A$에 대하여, 다항식환 $A[\x]$ 또한 noetherian이다.
 
 우선 $\mathfrak{a}_n$이 $A$의 ideal임을 확인한다. 두 degree $n$의 다항식 $f,g\in I$의 leading coefficient를 각각 $a,b$라 하면, $f+g\in I$는 degree $n$이면서 leading coefficient가 $a+b$이거나, 또는 $a+b=0$이라면 degree가 $n$보다 작으므로, 어느 경우건 $a+b\in \mathfrak{a}_n$이다. 또 임의의 $\lambda\in A$에 대하여 $\lambda f\in I$의 leading coefficient는 $\lambda a$이거나 $0$이므로 $\lambda a\in \mathfrak{a}_n$이다. 한편 $f\in I$가 degree $n$이면 $\x f\in I$는 degree $n+1$이고 leading coefficient가 같으므로, $\mathfrak{a}_n\subseteq \mathfrak{a}_{n+1}$이 성립한다.
 
-이렇게 얻은 ascending chain $\mathfrak{a}_0\subseteq \mathfrak{a}_1\subseteq \cdots$은 $A$가 noetherian이므로 적당한 $N$에서 안정화되어, 모든 $n\geq N$에 대하여 $\mathfrak{a}_n=\mathfrak{a}_N$이다. 또한 각 $n\leq N$에 대하여 $\mathfrak{a}_n$ 역시 finitely generated이므로, 그 생성원을 $a_{n,1},\ldots,a_{n,k_n}$이라 하고, 각 $a_{n,j}$를 leading coefficient로 갖는 degree $n$의 다항식 $f_{n,j}\in I$을 하나씩 택하자.
+이렇게 얻은 ascending chain $\mathfrak{a}_0\subseteq \mathfrak{a}_1\subseteq \cdots$은 $A$가 noetherian이므로 적당한 $N$에서 안정화되어, 모든 $n\geq N$에 대하여 $\mathfrak{a}_n=\mathfrak{a}_N$이다. 또한 각 $n\leq N$에 대하여 $\mathfrak{a}_n$ 역시 finitely generated이므로, 그 generator를 $a_{n,1},\ldots,a_{n,k_n}$이라 하고, 각 $a_{n,j}$를 leading coefficient로 갖는 degree $n$의 다항식 $f_{n,j}\in I$을 하나씩 택하자.
 
 이제 유한집합 $\{f_{n,j}\mid 0\leq n\leq N,\ 1\leq j\leq k_n\}$이 $I$를 생성함을, $I$의 원소의 degree에 대한 induction으로 보인다. $I$의 다항식 $f$의 degree를 $d$, leading coefficient를 $c$라 하자. 만일 $d\leq N$이라면 $c\in \mathfrak{a}_d$이므로 적당한 $\lambda_j\in A$에 대하여 $c=\sum_j \lambda_j a_{d,j}$이고,
 

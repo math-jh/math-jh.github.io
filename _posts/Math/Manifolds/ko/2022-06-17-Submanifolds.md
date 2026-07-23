@@ -23,7 +23,7 @@ weight: 7
 3. 만일 $F$가 $M$의 submanifold일 뿐만 아니라, subspace topology가 주어진 $F(N)\subseteq M$과 $N$ 사이의 homeomorphism을 정의하기도 하다면 $F$를 *embedding<sub>매장</sub>*, 혹은 2번의 정의와 맞추어 *embedded submanifold<sub>매장된 부분다양체</sub>*라 부른다.
 :::
 
-3번의 embedded submanifold와 더 명확하게 구별하기 위해 2번을 *immersed submanifold*라 부르기도 한다. 우리는 위의 정의 그대로, 수식어 없는 submanifold를 immersed manifold의 뜻으로 사용하고, embedded submanifold는 축약하지 않고 그대로 사용한다.
+3번의 embedded submanifold와 더 명확하게 구별하기 위해 2번을 *immersed submanifold*라 부르기도 한다. 우리는 위의 정의 그대로, 수식어 없는 submanifold를 immersed submanifold의 뜻으로 사용하고, embedded submanifold는 축약하지 않고 그대로 사용한다.
 
 함수 $F:N\rightarrow M$이 submanifold라는 것은 직관적으로 $F$가 inclusion $N\hookrightarrow M$의 역할을 하는 것으로 생각할 수 있다. 이 때, $F$의 image $F(N)\subseteq M$에 위상구조를 주는 방법은 두 가지가 있는데, 하나는 전단사함수 $F:N\rightarrow F(N)$을 통해 $N$의 위상을 옮겨오는 것이고, 다른 하나는 $M$에 주어진 위상구조를 subspace topology를 통해 가져오는 것이다. 만일 이 두 위상이 서로 동일하다면 $F$를 *embedded* submanifold라 부르는 것이고, 그렇지 않다면 이를 단순히 submanifold라 부른다.
 
@@ -77,18 +77,18 @@ $$\tau^{-1}\circ\bigl((\tau\circ F\circ\varphi^{-1})\vert_{U'}\bigr)\circ\varphi
 Manifold $M$과 $p\in M$에 대하여, $C_p^\infty(M)$의 원소들 $y^1, \ldots, y^k$가 주어졌다 하자. 만일 이들의 differential $dy^i$들이 $T_p^\ast M$의 linearly independent인 부분집합이 된다면 이들을 점 $p$에서 independent한 함수들이라 한다. 
 
 ::: 따름정리 6
-$m$차원 manifold $M$을 생각하자. 만일 $y^1, \ldots, y^m$들이 점 $p_0\in M$에서 independent라면, $(y^1, \ldots, y^m)$은 $p$ 근방에서 coordinate system이 된다.
+$m$차원 manifold $M$을 생각하자. 만일 $y^1, \ldots, y^m$들이 점 $p_0\in M$에서 independent라면, $(y^1, \ldots, y^m)$은 $p_0$ 근방에서 coordinate system이 된다.
 :::
 ::: 증명
-우선 $T_p^\ast M$의 차원을 생각하면 주어진 함수들의 differential이 $T_p^\ast M$의 basis가 된다는 것을 알 수 있다.
+우선 $T_{p_0}^\ast M$의 차원을 생각하면 주어진 함수들의 differential이 $T_{p_0}^\ast M$의 basis가 된다는 것을 알 수 있다.
 
-$m$개의 함수 $y^i$들이 모두 $p_0$의 열린근방 $U$에서 정의되었다 하자.[^1] 주어진 것와 같이 $\varphi:U\rightarrow\mathbb{R}^m$을
+$m$개의 함수 $y^i$들이 모두 $p_0$의 열린근방 $U$에서 정의되었다 하자.[^1] 주어진 것과 같이 $\varphi:U\rightarrow\mathbb{R}^m$을
 
 $$\varphi(p)=(y^1(p),\ldots, y^m(p))$$
 
 으로 정의하면, 각각의 성분함수 $y^i$들이 모두 $C^\infty$이므로 $\varphi$도 $C^\infty$이다. 이제 $(d\varphi_{p_0})^\ast:T_{\varphi(p_0)}^\ast\mathbb{R}^m\rightarrow T_{p_0}^\ast M$을 생각하자. $(d\varphi_{p_0})^\ast$에 $dr^i\vert_{\varphi(p_0)}$들을 대입하면, 
 
-$$d\varphi_{p_0}\left(dr^i\vert_{\varphi(p_0)}\right)=\left(dr^i\vert_{\varphi(p_0)}\right)\circ\left(d\varphi_{p_0}\right)=d(r^i\circ\varphi)_{p_0}=dy^i\vert_{p_0}$$
+$$\left(d\varphi_{p_0}\right)^\ast\left(dr^i\vert_{\varphi(p_0)}\right)=\left(dr^i\vert_{\varphi(p_0)}\right)\circ\left(d\varphi_{p_0}\right)=d(r^i\circ\varphi)_{p_0}=dy^i\vert_{p_0}$$
 
 이므로, $T_{\varphi(p_0)}^\ast\mathbb{R}^m$에서의 basis $dr^i\vert_{\varphi(p_0)}$들이 모두 $T_{p_0}^\ast M$의 basis로 각각 옮겨지고 따라서 $(d\varphi_{p_0})^\ast$는 isomorphism이다. 따라서 $d\varphi_{p_0}$도 isomorphism이며, 따라서 [따름정리 5](#cor5)를 적용하면 $p_0\in V\subseteq U$를 만족하는 적당한 $V$가 존재하여 $\varphi\vert_V:V\rightarrow\varphi(V)$가 coordinate system이 된다는 것을 알 수 있다.
 :::
@@ -103,7 +103,7 @@ $m$차원 manifold $M$과 $p_0\in M$, 정수 $0<k<m$에 대하여, $\mathcal{C}_
 :::
 
 ::: 따름정리 8
-$m$차원 manifold $M$과 점 $p_0\in M$에 대하여, $\mathcal{C}_{M,p_0}^\infty$의 원소들 $y^1,\ldots, y^k$들이 주어졌다 하자. 만일 $dy^i$들이 $T_{p_0}^\ast M$을 span한다면 집합 $\{y_1,\ldots, y_k\}$의 적절한 부분집합이 $p_0$ 근방의 coordinate system을 이룬다.
+$m$차원 manifold $M$과 점 $p_0\in M$에 대하여, $\mathcal{C}_{M,p_0}^\infty$의 원소들 $y^1,\ldots, y^k$들이 주어졌다 하자. 만일 $dy^i$들이 $T_{p_0}^\ast M$을 span한다면 집합 $\{y^1,\ldots, y^k\}$의 적절한 부분집합이 $p_0$ 근방의 coordinate system을 이룬다.
 :::
 ::: 증명
 $T_{p_0}^\ast M$의 basis를 이루는 집합 $\{dy^1,\ldots, dy^k\}$의 적절한 부분집합을 찾으면 이 부분집합은 반드시 $m$개의 원소로 이루어져 있다. 따라서 [따름정리 6](#cor6)을 적용하면 된다.
@@ -121,7 +121,7 @@ $$x^1=y^1\circ F,\quad x^2=y^2\circ F,\quad\ldots,\quad x^n=y^n\circ F,\qquad x^
 ::: 증명
 $dF_p$가 surjective이므로, 그 dual $(dF_p)^\ast:T_{F(p)}^\ast N\rightarrow T_p^\ast M$은 injective이다. 즉, 다음의 원소들
 
-$$(dF_p)^\ast(dy^i\vert_{F(p)})=dy^i\vert_{F(p)}\circ dF_p=d(y^i\circ F)_p=dx^j\vert_p$$
+$$(dF_p)^\ast(dy^j\vert_{F(p)})=dy^j\vert_{F(p)}\circ dF_p=d(y^j\circ F)_p=dx^j\vert_p$$
 
 이 $T_p^\ast M$에서 linearly independent하다. 따라서 [따름정리 7](#cor7)에 의하여 원하는 결과를 얻는다. 
 :::
@@ -136,7 +136,7 @@ $$\{x^j=y^j\circ F\mid j=1,\ldots, n\}$$
 ::: 증명
 $dF_p$가 injective이므로, 그 dual $(dF_p)^\ast:T_{F(p)}^\ast N\rightarrow T_p^\ast M$은 surjective이다. 즉, 다음의 원소들
 
-$$(dF_p)^\ast(dy^i\vert_{F(p)})=dy^i\vert_{F(p)}\circ dF_p=d(y^i\circ F)_p=dx^j\vert_p$$
+$$(dF_p)^\ast(dy^j\vert_{F(p)})=dy^j\vert_{F(p)}\circ dF_p=d(y^j\circ F)_p=dx^j\vert_p$$
 
 들이 $T_p^\ast M$을 span해야 하고, 따라서 [따름정리 8](#cor8)에 의해 주어진 집합의 부분집합이 $p$ 근방에서 $M$의 coordinate system을 이룬다. 
 :::
@@ -151,4 +151,4 @@ $$(dF_p)^\ast(dy^i\vert_{F(p)})=dy^i\vert_{F(p)}\circ dF_p=d(y^i\circ F)_p=dx^j\
 
 ---
 
-[^1]: 이는 $$y^i$$들이 유한 개이기 때문에 가능하다. 즉, $$y^i$$들이 각각 $$U^i$$에서 정의되었다면, $$U=\bigcap U^i$$로 잡으면 된다.
+[^1]: 이는 $y^i$들이 유한 개이기 때문에 가능하다. 즉, $y^i$들이 각각 $U^i$에서 정의되었다면, $U=\bigcap U^i$로 잡으면 된다.

@@ -49,9 +49,9 @@ A *norm* on an $\mathbb{R}$-vector space $V$ is a function $\lVert -\rVert:V\rig
 The following proposition is something we have been familiar with since high school.
 
 ::: Proposition 3 (Cauchy–Schwarz)
-For any vectors $v,w$ of an $\mathbb{R}$-inner product space $V$, the inequality
+For any vectors $u,v$ of an $\mathbb{R}$-inner product space $V$, the inequality
 
-$$\lvert \langle v,w\rangle\rvert\leq\sqrt{\langle u,u\rangle}\sqrt{\langle v,v\rangle}$$
+$$\lvert \langle u,v\rangle\rvert\leq\sqrt{\langle u,u\rangle}\sqrt{\langle v,v\rangle}$$
 
 holds. Equality holds when there exists a constant $\lambda$ satisfying $u=\lambda v$.
 :::
@@ -80,7 +80,7 @@ $$\lVert v\rVert:=\sqrt{\langle v,v\rangle}$$
 is a norm.
 :::
 ::: Proof
-First, the expression $\lVert v\rVert$ defines a function into $\mathbb{R}$, because $(v,v)\geq 0$ always holds.
+First, the expression $\lVert v\rVert$ defines a function into $\mathbb{R}$, because $\langle v,v\rangle\geq 0$ always holds.
 
 The first and second conditions for a norm are obvious, so it suffices to verify only the triangle inequality. For any $u,v\in V$,
 
@@ -151,11 +151,11 @@ always holds. If $\mathcal{B}$ were merely an orthogonal basis, we would have ha
 
 ## Orthogonal Matrices
 
-Let $V$ be an $\mathbb{R}$-inner product space and consider a linear operator $L:V\rightarrow V$ on it. In [§Dual Spaces](/en/math/linear_algebra/dual_space) we defined the dual $L^\ast:V^\ast\rightarrow V^\ast$ of $L$ as the linear operator satisfying
+Let $V$ be an $\mathbb{R}$-inner product space and consider a linear operator $L:V\rightarrow V$ on it. In [§Dual Space](/en/math/linear_algebra/dual_space) we defined the dual $L^\ast:V^\ast\rightarrow V^\ast$ of $L$ as the linear operator satisfying
 
 $$(Lv,f)=(v,L^\ast f)\qquad\text{for all $v\in V$, $f\in V^\ast$}$$
 
-with respect to the canonical pairing $(-,-)$. On the other hand, if an inner product is given on $V$, then for any $0\neq v\in V$ we have $\langle v,v\rangle>0$, so the inner product is non-degenerate; therefore by [§Dual Spaces, ⁋Proposition 4](/en/math/linear_algebra/dual_space#prop4),
+with respect to the canonical pairing $(-,-)$. On the other hand, if an inner product is given on $V$, then for any $0\neq v\in V$ we have $\langle v,v\rangle>0$, so the inner product is non-degenerate; therefore by [§Dual Space, ⁋Proposition 4](/en/math/linear_algebra/dual_space#prop4),
 
 $$v\mapsto\langle v,-\rangle$$
 
@@ -169,7 +169,7 @@ $$\langle v,Lw\rangle=\langle L^t v,w\rangle$$
 
 holding for all $v,w\in V$.
 
-In particular, if we choose an orthonormal basis $\mathcal{B}=\{x_1,\ldots, x_n\}$ of $V$, then since $\langle x_i,x_j\rangle=\delta_{ij}$, the set $\{\langle x_1,-\rangle,\ldots,\langle x_n,-\rangle\}$ is exactly the dual basis of $\mathcal{B}$. Thus the above isomorphism sends an orthonormal basis to its dual basis, so the matrix representation of $L^t$ with respect to $\mathcal{B}$ coincides with the matrix representation of $L^\ast$ with respect to the dual basis. As we saw in [§Dual Spaces](/en/math/linear_algebra/dual_space), the latter is the transpose of $[L]_\mathcal{B}^\mathcal{B}$; hence for an orthonormal basis, the matrix of the adjoint $L^t$ is the transpose of the matrix of $L$. The notation $L^t$ originates from this.
+In particular, if we choose an orthonormal basis $\mathcal{B}=\{x_1,\ldots, x_n\}$ of $V$, then since $\langle x_i,x_j\rangle=\delta_{ij}$, the set $\{\langle x_1,-\rangle,\ldots,\langle x_n,-\rangle\}$ is exactly the dual basis of $\mathcal{B}$. Thus the above isomorphism sends an orthonormal basis to its dual basis, so the matrix representation of $L^t$ with respect to $\mathcal{B}$ coincides with the matrix representation of $L^\ast$ with respect to the dual basis. As we saw in [§Dual Space](/en/math/linear_algebra/dual_space), the latter is the transpose of $[L]_\mathcal{B}^\mathcal{B}$; hence for an orthonormal basis, the matrix of the adjoint $L^t$ is the transpose of the matrix of $L$. The notation $L^t$ originates from this.
 
 Now if an arbitrary linear map $L$ preserves $\langle-,-\rangle$, then for any $v,w$,
 
@@ -197,7 +197,7 @@ $$[\id]_\mathcal{C}^\mathcal{B}=\begin{pmatrix}\langle x_1,x'_1\rangle&\langle x
 
 Interchanging the roles of $\mathcal{B}$ and $\mathcal{C}$,
 
-$$[\id]_\mathcal{B}^\mathcal{C}=\begin{pmatrix}\langle x'_1,x_1\rangle&\langle x'_2, x_1\rangle&\cdots&\langle x'_n,x_1\rangle\\ \langle x'_1,x_2\rangle&\langle x'_2,x_2\rangle&\cdots&\langle x'_n,x_2\rangle\\ \vdots&\vdots&\ddots&\vdots\\ \langle x'_1, x_n\rangle&\langle x'_2, x_n\rangle&\cdots&\langle x'_n,n\rangle\end{pmatrix}$$
+$$[\id]_\mathcal{B}^\mathcal{C}=\begin{pmatrix}\langle x'_1,x_1\rangle&\langle x'_2, x_1\rangle&\cdots&\langle x'_n,x_1\rangle\\ \langle x'_1,x_2\rangle&\langle x'_2,x_2\rangle&\cdots&\langle x'_n,x_2\rangle\\ \vdots&\vdots&\ddots&\vdots\\ \langle x'_1, x_n\rangle&\langle x'_2, x_n\rangle&\cdots&\langle x'_n,x_n\rangle\end{pmatrix}$$
 
 so from the symmetry of $\langle-,-\rangle$ we can verify that the change-of-basis matrix between two orthonormal bases is always an orthogonal matrix. Conversely, any orthogonal matrix can always be interpreted as a change-of-basis matrix between orthonormal bases.
 
@@ -254,7 +254,7 @@ holds. From this, either $\lambda=1$ or $v\in U$. If $\lambda=1$, then from $v-u
 
 Now we must show that $\proj_Uv$ actually minimizes $\lVert v-w\rVert$. Choose a basis $\{x_1,\ldots, x_k\}$ of $U$, and let $\{x_1,\ldots, x_n\}$ be an orthonormal basis of $V$ containing it. Then from $v=\sum_{i=1}^n v_i x_i$ and $w=\sum_{i=1}^k w_i x_i$,
 
-$$\lVert v-w\rVert=\left\lVert\sum_{i=1}^k(v_i-w_i)x_i+\sum_{i=k+1}^n v_ix_i\right\rVert=\sum_{i=1}^k (v_i-w_i)^2+\sum_{i=k+1}^n v_i^2\geq \sum_{i=k+1}^n v_i^2$$
+$$\lVert v-w\rVert^2=\left\lVert\sum_{i=1}^k(v_i-w_i)x_i+\sum_{i=k+1}^n v_ix_i\right\rVert^2=\sum_{i=1}^k (v_i-w_i)^2+\sum_{i=k+1}^n v_i^2\geq \sum_{i=k+1}^n v_i^2$$
 
 and equality holds when $v_i=w_i$ for all $1\leq i\leq k$. Then
 

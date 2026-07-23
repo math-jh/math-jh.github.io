@@ -116,7 +116,7 @@ $$\binom{n}{p^r} = \text{Card}(E) \equiv \text{Card}(E^G) = m \not\equiv 0 \pmod
 $G$는 Sylow $p$-subgroup을 가진다. 
 :::
 ::: 증명
-$G$의 부분집합 중 원소 개수가 $p^r$인 것들의 집합을 $E$라 하자. 그러면[보조정리 6](#lem6)에 의하여
+$G$의 부분집합 중 원소 개수가 $p^r$인 것들의 집합을 $E$라 하자. 그러면 [보조정리 6](#lem6)에 의하여
 
 $$\lvert E\rvert = \binom{n}{p^r}\not\equiv 0\pmod{p}$$
 
@@ -154,7 +154,7 @@ $$\lvert \Stab(X)\rvert\leq\lvert Xx^{-1}\rvert=\lvert X\rvert=p^r$$
 2. $G$의 모든 $p$-group은 어떤 Sylow $p$-subgroup에 포함된다.
 :::
 ::: 증명
-$P$를 $G$의 Sylow $p$-subgroup이라 하고, $H$를 $G$의 $p$-subgroup이라 하자. 집합 $E = G/P$위의 $H$의 left translation action을 생각하면, [보조정리 6](#lem6)에 의해 $\lvert E^H\rvert\neq 0$이므로 $Hx=x$인 $x\in G/P$가 존재한다. 이제 $G/P$의 원소 $x$의 representative를 $g\in G$를 택하자. 그러면 임의의 $h \in H$에 대해 $h(gP) = gP$이므로 $g^{-1} h g \in P$이다. 따라서 $H \subseteq gPg^{-1}$이고, 이로써 둘째 주장이 증명된다.
+$P$를 $G$의 Sylow $p$-subgroup이라 하고, $H$를 $G$의 $p$-subgroup이라 하자. 집합 $E = G/P$위의 $H$의 left translation action을 생각하면, [보조정리 2](#lem2)에 의해 $\lvert E^H\rvert\neq 0$이므로 $Hx=x$인 $x\in G/P$가 존재한다. 이제 $G/P$의 원소 $x$의 representative를 $g\in G$를 택하자. 그러면 임의의 $h \in H$에 대해 $h(gP) = gP$이므로 $g^{-1} h g \in P$이다. 따라서 $H \subseteq gPg^{-1}$이고, 이로써 둘째 주장이 증명된다.
 
 이제 $H$가 Sylow $p$-subgroup이라 하자. 그러면
 
@@ -168,7 +168,7 @@ $$\lvert H \rvert = \lvert P \rvert = \lvert gPg^{-1} \rvert$$
 
 $$P = nQn^{-1} = Q$$
 
-가 성립한다. 따라서 [보조정리 6](#lem6)로부터 $\lvert \Syl_p(G) \rvert = \lvert \Syl_p(G)^P \rvert \equiv 1 \pmod{p}$임을 안다. 
+가 성립한다. 따라서 [보조정리 2](#lem2)로부터 $\lvert \Syl_p(G) \rvert \equiv \lvert \Syl_p(G)^P \rvert = 1 \pmod{p}$임을 안다. 
 :::
 
 ::: 따름정리 9
@@ -176,7 +176,7 @@ $P\in\Syl_p(G)$와 normalizer $N_G(P)$를 생각하자. $N_G(P)$을 포함하는
 :::
 
 ::: 증명
-$M=gMg^{-1}$을 만족하는 $g\in G$를 택하자. 그럼 $gPg^{-1}$는 $M$의 Sylow $p$-subgroup이다. 따라서 적당한 $h \in M$가 존재하여 $gPg^{-1} = hPh^{-1}$가 된다. 이제 $h^{-1}g \in N$이고, 따라서 $g \in hN \subset M$이다.
+$M=gMg^{-1}$을 만족하는 $g\in G$를 택하자. 그럼 $gPg^{-1}$는 $M$의 Sylow $p$-subgroup이다. 따라서 적당한 $h \in M$가 존재하여 $gPg^{-1} = hPh^{-1}$가 된다. 이제 $h^{-1}g \in N_G(P)$이고, 따라서 $g \in hN_G(P) \subset M$이다.
 :::
 
 ::: 따름정리 10
@@ -247,14 +247,14 @@ $$\frac{P_3P_5}{P_3}\cong P_5/\{e\}\implies \lvert P_3P_5\rvert=\lvert P_3\rvert
 이므로 결국 $G\cong \mathbb{Z}/3\mathbb{Z}\times \mathbb{Z}/5\mathbb{Z}$여야 한다. 
 :::
 
-Sylow 정리의 또 다른 강력한 응용으로, 교대군 $A_5$가 simple group이라는 사실을 보이자. 이는 [§대칭군, ⁋예시 13](/ko/math/group_theory/symmetric_groups#ex13)에서 이미 conjugacy class의 구조를 직접 조사하여 증명하였다. 거기서는 $A_5$가 그다지 큰 group이 아니라는 점을 이용하여 원소의 종류를 일일이 분류하였는데, 여기서는 동일한 결론을 normal subgroup이 반드시 포함해야 하는 Sylow subgroup들을 세는 방식으로 다시 도출한다.
+Sylow 정리의 또 다른 강력한 응용으로, alternating group $A_5$가 simple group이라는 사실을 보이자. 이는 [§대칭군, ⁋예시 13](/ko/math/group_theory/symmetric_groups#ex13)에서 이미 conjugacy class의 구조를 직접 조사하여 증명하였다. 거기서는 $A_5$가 그다지 큰 group이 아니라는 점을 이용하여 원소의 종류를 일일이 분류하였는데, 여기서는 동일한 결론을 normal subgroup이 반드시 포함해야 하는 Sylow subgroup들을 세는 방식으로 다시 도출한다.
 
 ::: 명제 14
-교대군 $A_5$는 simple group이다.
+Alternating group $A_5$는 simple group이다.
 :::
 
 ::: 증명
-교대군의 크기는
+Alternating group의 크기는
 
 $$\lvert A_5\rvert=\frac{5!}{2}=60=2^2\cdot 3\cdot 5$$
 

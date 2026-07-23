@@ -95,7 +95,7 @@ $$\frac{\partial}{\partial r^1}\bigg\vert_x,\cdots,\frac{\partial}{\partial r^m}
 
 of $T_x\mathbb{R}^m$ are essentially the same. In fact, this isomorphism does not depend on the choice of basis: for any $v\in\mathbb{R}^m$, the correspondence with the directional derivative
 
-$$D_v\vert_x: f\mapsto \lim_{h\rightarrow 0}\frac{f(x+tv)-f(x)}{t}$$
+$$D_v\vert_x: f\mapsto \lim_{t\rightarrow 0}\frac{f(x+tv)-f(x)}{t}$$
 
 gives this isomorphism.
 
@@ -205,5 +205,5 @@ $$T_p^\ast M\cong (\mathfrak{m}_p/\mathfrak{m}_p^2)^{\ast\ast}\cong\mathfrak{m}_
 
 ---
 
-[^1]: More precisely, we must impose an equivalence relation by treating curves having the same velocity vector at the point $$p$$ as identical.
+[^1]: More precisely, we must impose an equivalence relation by treating curves having the same velocity vector at the point $p$ as identical.
 [^2]: By [Proposition 2](#prop2), at least one such curve exists.

@@ -40,7 +40,7 @@ $$K(\Ad_g(X), \Ad_g(Y))=K(X,Y)$$
 
 holds, and differentiating this at $g=e$ in the direction of $Z$ yields the following $\ad$-invariance:
 
-$$0=\frac{d}{dt}\bigg\vert_{t=0}K(\Ad_{\exp(tZ)}X, \Ad_{\exp(tZ)},Y)=K([Z,X],Y)+K(X,[Z,Y]).$$
+$$0=\frac{d}{dt}\bigg\vert_{t=0}K(\Ad_{\exp(tZ)}X, \Ad_{\exp(tZ)}Y)=K([Z,X],Y)+K(X,[Z,Y]).$$
 
 What remains is the condition for this form to be non-degenerate.
 
@@ -113,7 +113,7 @@ and let $K(-,-)$ be the Killing form on $\mathfrak{g}$. The following hold.
     holds.
 2. For any $X\in \mathfrak{g}_\alpha, Y\in \mathfrak{g}_\beta$, and $H\in \mathfrak{h}$, by the $\ad$-invariance of $K$ we obtain
     
-    $$0=K([H,X],Y)+K(X,[H,Y])=K(\alpha(H),X)+K(X,\beta(H)Y)=(\alpha+\beta)(H)K(X,Y).$$
+    $$0=K([H,X],Y)+K(X,[H,Y])=K(\alpha(H)X,Y)+K(X,\beta(H)Y)=(\alpha+\beta)(H)K(X,Y).$$
 
     If $\alpha+\beta\neq 0$, then for this identity to hold for all $H$ we must have $K(X,Y)=0$.
 3. Since the Killing form is non-degenerate on $\mathfrak{g}$, for any given $X\in \mathfrak{g}_\alpha$ there exists $Z\in \mathfrak{g}$ such that $K(X,Z)\neq 0$. What we need to show is that we can choose $Z\in \mathfrak{g}_{-\alpha}$. This is clear because if we decompose $Z$ according to the root decomposition, then by the second result the components corresponding to roots other than $-\alpha$ pair trivially with $X$ anyway.
@@ -318,7 +318,7 @@ $$\frac{2K(\alpha,\beta)}{K(\alpha,\alpha)}=2c,\quad \frac{2K(\alpha,\beta)}{K(\
 must both be integers, so $c$ must be one of $\pm 1$, $\pm 2$, $\pm 1/2$, and applying $\sl_2$-representation theory and integrality again yields the desired result. That is, we have proved the following.
 
 ::: Proposition 12
-The set $\Phi$ of roots defined in [Definition 4](#def4) is a root system in $\mathfrak{h}^\ast$.
+The set $\Phi$ of roots defined in [Definition 5](#def5) is a root system in $\mathfrak{h}^\ast$.
 :::
 
 ## Examples
@@ -328,17 +328,17 @@ Now let us examine the following examples.
 ::: Example 13
 First consider the standard Euclidean space $\mathbb{R}^{n+1}$ and the subspace
 
-$$V_n=\left\{(x_1,\ldots, x_{n+1}\mid x_1+\cdots+x_{n+1}=0\right\}.$$
+$$V_n=\left\{(x_1,\ldots, x_{n+1})\mid x_1+\cdots+x_{n+1}=0\right\}.$$
 
 We consider the subset of this vector space
 
 $$\Phi(A_n)=\left\{e_i-e_j\mid 1\leq i\neq j\leq n+1\right\}.$$
 
-Then we know that this set satisfies all the conditions of [Definition 5](#def5). That $\Phi(A_n)$ spans $V_n$, and that the second condition holds, are obvious. For the third condition, for any vector $\mathbf{x}=(x_1,\ldots, x_{n+1})$ and any $\mathbf{e}_{ij}=e_i-e_j$, the formula
+Then we know that this set satisfies all the conditions of [Definition 9](#def9). That $\Phi(A_n)$ spans $V_n$, and that the second condition holds, are obvious. For the third condition, for any vector $\mathbf{x}=(x_1,\ldots, x_{n+1})$ and any $\mathbf{e}_{ij}=e_i-e_j$, the formula
 
 $$s_{ij}(\mathbf{x})=\mathbf{x}-\langle \mathbf{x}, \mathbf{e}_{ij}\rangle\mathbf{e}_{ij}=(x_1,\ldots, x_{n+1})-(x_i-x_j)\mathbf{e}_{ij}$$
 
-and this is given by swapping the $i$th and $j$th components of $\mathbf{x}$. Hence from this we know that the third condition of [Definition 5](#def5) holds, and the fourth condition is obvious.
+and this is given by swapping the $i$th and $j$th components of $\mathbf{x}$. Hence from this we know that the third condition of [Definition 9](#def9) holds, and the fourth condition is obvious.
 :::
 
 Similarly we can consider the following example.
@@ -350,7 +350,7 @@ $$\Phi(D_n)=\left\{\pm e_i\pm e_j\mid 1\leq i \neq j\leq n\right\}.$$
 
 That these vectors span $\mathbb{R}^n$ is obvious. This time we need to examine what reflections the $\mathbf{e}_{ij}^\pm =e_i\pm e_j$ define. We know that the $e_i-e_j$ swap the $i$th and $j$th components of a vector $\mathbf{x}$, and therefore it suffices to know what reflection $e_i+e_j$ defines. That is, considering the computation
 
-$$s_{ij}^+(\mathbf{x})=\mathbf{x}-\langle\mathbf{x}, \mathbf{e}_{ij}^+\rangle\mathbf{e}_{ij}^+=(x_1,\ldots, x_n)-(x_i+x_j)\mathbf{e}_{ij}$$
+$$s_{ij}^+(\mathbf{x})=\mathbf{x}-\langle\mathbf{x}, \mathbf{e}_{ij}^+\rangle\mathbf{e}_{ij}^+=(x_1,\ldots, x_n)-(x_i+x_j)\mathbf{e}_{ij}^+$$
 
 we see that $s_{ij}^+$ swaps the $i$th and $j$th components of the given vector and then flips their signs.
 :::
@@ -387,11 +387,11 @@ On the other hand, from the identity
 
 $$\langle\alpha,\beta\rangle \langle\beta,\alpha\rangle=4\frac{(\alpha,\beta)^2}{\lvert\alpha\rvert^2\lvert\beta\rvert^2}=4(\cos\theta)^2$$
 
-and the fact that the left-hand side is an integer, we know that for any two roots $\alpha,\beta$ the possible values of $\langle\alpha,\beta\rangle$ are only $0, \pm 1, \pm 2$. Here $\cos\theta$ is the angle between the two roots $\alpha,\beta$, and the possible values it can take are
+and the fact that the left-hand side is an integer, we know that for any two roots $\alpha,\beta$ the possible values of $\langle\alpha,\beta\rangle$ are only $0, \pm 1, \pm 2, \pm 3$. Here $\cos\theta$ is the angle between the two roots $\alpha,\beta$, and the possible values it can take are
 
 $$0, \pm \frac{1}{2}, \pm \frac{\sqrt{2}}{2}, \pm \frac{\sqrt{3}}{2}, \pm 1.$$
 
-The cases $\pm 1$ are excluded by the second condition of [Definition 5](#def5), so roots can only form angles of $30$ degrees (or $150$ degrees), $45$ degrees (or $135$ degrees), or $60$ degrees (or $120$ degrees).
+The cases $\pm 1$ are excluded by the second condition of [Definition 9](#def9), so roots can only form angles of $30$ degrees (or $150$ degrees), $45$ degrees (or $135$ degrees), or $60$ degrees (or $120$ degrees).
 
 For example, suppose two roots $\alpha,\beta$ form an angle of $30$ or $150$ degrees. Then from
 

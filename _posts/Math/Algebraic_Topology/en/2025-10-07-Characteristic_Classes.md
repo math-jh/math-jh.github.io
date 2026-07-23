@@ -30,9 +30,9 @@ $$H^n(p^{-1}(x), p^{-1}(x)\setminus 0;\mathbb{Z})\cong \widetilde{H}^{n-1}(S^{n-
 
 In differential geometry, the top-dimensional cohomology of a manifold contains the volume form, and this is regarded as determining the orientation, so we can think of orienting a vector bundle as using the orientation of $S^{n-1}$, a space we already understand well.
 
-However, the most familiar way to orient a vector space is to choose a reference ordered basis and declare that another ordered basis is negatively oriented if the change-of-basis matrix to the reference basis has negative determinant. The problem with such a definition is that it contains too much information; what we actually care about is only the sign of the change-of-basis determinant. This viewpoint is closely connected to the Čech cohomology explained earlier in [§Stiefel-Whitney Classes, §§Čech Cohomology](/en/math/algebraic_topology/stiefel_whitney_classes#체흐-코호몰로지). That is, we defined an arbitrary vector bundle by a trivializing open cover $\{U_i\}$ and transition functions $g_{ij}: U_{ij}\rightarrow \GL(n;\mathbb{R})$ over $U_{ij}$; choosing one of the signs of $\det$ is then the same as reducing the structure group from $\GL(n;\mathbb{R})$ to $\GL^+(n;\mathbb{R})$. In other words, when passing from one chart to another via the transition functions, determinants that are negative—that is, orientations that are reversed—are no longer allowed, and this restriction filters out the non-orientable vector bundles.
+However, the most familiar way to orient a vector space is to choose a reference ordered basis and declare that another ordered basis is negatively oriented if the change-of-basis matrix to the reference basis has negative determinant. The problem with such a definition is that it contains too much information; what we actually care about is only the sign of the change-of-basis determinant. This viewpoint is closely connected to the Čech cohomology explained earlier in [§Stiefel-Whitney Characteristic Classes, §§Čech Cohomology](/en/math/algebraic_topology/stiefel_whitney_classes#체흐-코호몰로지). That is, we defined an arbitrary vector bundle by a trivializing open cover $\{U_i\}$ and transition functions $g_{ij}: U_{ij}\rightarrow \GL(n;\mathbb{R})$ over $U_{ij}$; choosing one of the signs of $\det$ is then the same as reducing the structure group from $\GL(n;\mathbb{R})$ to $\GL^+(n;\mathbb{R})$. In other words, when passing from one chart to another via the transition functions, determinants that are negative—that is, orientations that are reversed—are no longer allowed, and this restriction filters out the non-orientable vector bundles.
 
-Whether this is possible is determined by $\pi_0(\GL(n;\mathbb{R}))\cong \mathbb{Z}/2$ that we saw earlier. That is, the only information remaining in each transition function related to orientation is the sign $\varepsilon_{ij}=\operatorname{sgn}\det g_{ij}:U_{ij}\rightarrow \{\pm 1\}$ of $\det g_{ij}$, and the class $[\varepsilon_{ij}]\in H^1(B;\mathbb{Z}/2)$ obtained by gluing these together becomes the obstruction to reducing to $\GL^+$. This class is exactly $w_1(E)$ ([§Stiefel-Whitney Classes, ⁋Definition 5](/en/math/algebraic_topology/stiefel_whitney_classes#def5)), and we can think of this as the rank-$n$ version of the fact that $H^1(M;\mathbb{Z}/2)$ contained the orientation information of covering spaces. That is, $E$ being orientable is equivalent to $w_1(E)=0$.
+Whether this is possible is determined by $\pi_0(\GL(n;\mathbb{R}))\cong \mathbb{Z}/2$ that we saw earlier. That is, the only information remaining in each transition function related to orientation is the sign $\varepsilon_{ij}=\operatorname{sgn}\det g_{ij}:U_{ij}\rightarrow \{\pm 1\}$ of $\det g_{ij}$, and the class $[\varepsilon_{ij}]\in H^1(B;\mathbb{Z}/2)$ obtained by gluing these together becomes the obstruction to reducing to $\GL^+$. This class is exactly $w_1(E)$ ([§Stiefel-Whitney Characteristic Classes, ⁋Definition 5](/en/math/algebraic_topology/stiefel_whitney_classes#def5)), and we can think of this as the rank-$n$ version of the fact that $H^1(M;\mathbb{Z}/2)$ contained the orientation information of covering spaces. That is, $E$ being orientable is equivalent to $w_1(E)=0$.
 
 Henceforth we assume that all bundles discussed in this section are oriented. Once an orientation is given, the generators $u_x$ scattered over each fiber are assembled into a single cohomology class.
 
@@ -74,7 +74,7 @@ The Euler class satisfies the following.
 1. (Naturality) For any $f:B'\rightarrow B$, $e(f^\ast E)=f^\ast e(E)$.
 2. (Whitney) For two oriented bundles, $e(E\oplus F)=e(E)\smile e(F)$.
 3. (Vanishing) If $E$ admits a nowhere-vanishing section then $e(E)=0$. In particular, trivial bundles have $e=0$.
-4. (Mod 2 reduction) The $\mathbb{Z}/2$-reduction of $e(E)$ is the top Stiefel-Whitney class $w_n(E)$ of [§Stiefel-Whitney Classes, ⁋Definition 5](/en/math/algebraic_topology/stiefel_whitney_classes#def5).
+4. (Mod 2 reduction) The $\mathbb{Z}/2$-reduction of $e(E)$ is the top Stiefel-Whitney class $w_n(E)$ of [§Stiefel-Whitney Characteristic Classes, ⁋Definition 5](/en/math/algebraic_topology/stiefel_whitney_classes#def5).
 5. (Orientation reversal) Reversing the orientation changes the sign of $e(E)$. Hence if $n$ is odd then $2e(E)=0$.
 :::
 
@@ -167,11 +167,15 @@ Consider the cohomology long exact sequence of the pair $(D(E), S(E))$
 
 $$\cdots\rightarrow H^k(D(E), S(E))\rightarrow H^k(D(E))\rightarrow H^k(S(E))\xrightarrow{\ \delta\ }H^{k+1}(D(E), S(E))\rightarrow\cdots$$
 
-First, the first term is $H^k(D(E), S(E))\cong H^k(E, E_0)\cong H^{k-n}(B)$ by [Theorem 2](#thm2), and for the second term we obtain $H^k(D(E))\cong H^k(B)$ via the retraction. Through these identifications we obtain the following commutative diagram
+First, by [Theorem 2](#thm2), the first term is
+
+$$H^k(D(E), S(E))\cong H^k(E, E_0)\cong H^{k-n}(B)$$
+
+and for the second term we obtain $H^k(D(E))\cong H^k(B)$ via the retraction. Through these identifications we obtain the following commutative diagram
 
 ![pair cohomology long exact sequence and Gysin exact sequence](/assets/images/Math/Algebraic_Topology/Characteristic_Classes-1.svg){:style="width:40.87em" class="invert" .align-center}
 
-and the maps in the second column are those of the upper exact sequence transported along the vertical isomorphisms. Concretely, let us follow the first map $H^{k-n}(B)\rightarrow H^k(B)$. Lift $\alpha\in H^{k-n}(B)$ to $H^k(E, E_0)$ via the Thom isomorphism $\Phi:\alpha\mapsto p^\ast\alpha\smile u$, and then compose with the first map $j^\ast$ of the upper row to get
+and the maps in the second row are those of the upper exact sequence transported along the vertical isomorphisms. Concretely, let us follow the first map $H^{k-n}(B)\rightarrow H^k(B)$. Lift $\alpha\in H^{k-n}(B)$ to $H^k(E, E_0)$ via the Thom isomorphism $\Phi:\alpha\mapsto p^\ast\alpha\smile u$, and then compose with the first map $j^\ast$ of the upper row to get
 
 $$j^\ast\Phi(\alpha)=j^\ast(p^\ast\alpha\smile u)=p^\ast\alpha\smile j^\ast u$$
 
@@ -202,7 +206,7 @@ so $\pi^\ast:H^k(B)\rightarrow H^k(S(E))$ is an isomorphism. That is, the cohomo
 
 Consider the deleted total space $E_0=E\setminus 0(B)$ that we have been looking at. A point of $E_0$ is an ordered pair of a point $x\in B$ of the base and a *nonzero* vector $v\in E_x$ in the fiber of $E$ at that point. Now define the *tautological bundle* $\pi_0^\ast E$ on $E_0$. This is the vector bundle obtained by pulling back the vector bundle $E\rightarrow B$ along the projection map $\pi_0:E_0\rightarrow B$, and its substance is the vector bundle having fiber $(\pi_0^\ast E)_{(x,v)}= E_x$ at each point $(x,v)\in E_0$. That is, $v$ is also an element of the vector space attached to the point $(x,v)$, and since it is nonzero it defines a $1$-dimensional subspace $\langle v\rangle$ inside this vector space. Now attaching a line in this way at every point of $E_0$ gives a line bundle $L\rightarrow E_0$, and we can consider the quotient $(\pi_0^\ast E)/L\rightarrow E_0$ that this defines inside $\pi_0^\ast E$. This is a canonical complex rank $(n-1)$ bundle over $E_0$ having fiber $E_x/\langle v\rangle$ at each point $(x,v)$, and if we put a Hermitian inner product on each fiber it is also realized as the orthogonal complement $v^\perp\subseteq E_x$ of $v$. ([\[Linear Algebra\] §Complex Inner Product Spaces, ⁋Proposition 4](/en/math/linear_algebra/complex_inner_product_spaces#prop4)) Since the two realizations are canonically isomorphic, we will denote this rank $(n-1)$ bundle by $L^\perp$ for convenience.
 
-Now let a <em>complex</em> vector bundle $E$ be given, and denote by $E_\mathbb{R}$ its underlying (oriented) real vector bundle. If $E$ has complex dimension $n$ then $E_\mathbb{R}$ has real dimension $2n$. Then $E_0$ is homotopy equivalent to the sphere bundle $S(E_{\mathbb{R}})$ of $E_{\mathbb{R}}$, so by [Theorem 5](#thm5)
+Now let a *complex* vector bundle $E$ be given, and denote by $E_\mathbb{R}$ its underlying (oriented) real vector bundle. If $E$ has complex dimension $n$ then $E_\mathbb{R}$ has real dimension $2n$. Then $E_0$ is homotopy equivalent to the sphere bundle $S(E_{\mathbb{R}})$ of $E_{\mathbb{R}}$, so by [Theorem 5](#thm5)
 
 $$\cdots\rightarrow H^{k-2n}(B)\xrightarrow{\ \smile e\ }H^k(B)\xrightarrow{\ \pi_0^\ast\ }H^k(E_0)\rightarrow H^{k-2n+1}(B)\rightarrow\cdots$$
 
@@ -238,10 +242,10 @@ The second and third conditions follow immediately from the definition using the
 The first condition is proved by induction on $n$. The naturality of $c_n$ comes from the naturality of the Euler class. (First condition of [Proposition 4](#prop4)) For $0<i<n$, $f$ induces a bundle map $E_0'\rightarrow E_0$ compatible with the deleted space, the complement bundle, and the entire Gysin sequence, and on it $f^\ast(L^\perp)\cong(f^\ast L)^\perp$, so the naturality of $c_i$ follows from the inductive hypothesis and the naturality of $\pi_0^\ast$.
 :::
 
-That is, the Chern class satisfies axiomatic properties of a similar kind to the Stiefel-Whitney class. ([§Stiefel-Whitney Classes, ⁋Definition 5](/en/math/algebraic_topology/stiefel_whitney_classes#def5)) We showed the existence of Stiefel-Whitney classes by considering the real infinite Grassmannian $\Gr(k,\mathbb{R}^\infty)$, pulling back cohomology classes from there to the original space, and showing that they satisfy the axiomatic conditions for Stiefel-Whitney classes; a similar construction is possible for Chern classes.
+That is, the Chern class satisfies axiomatic properties of a similar kind to the Stiefel-Whitney class. ([§Stiefel-Whitney Characteristic Classes, ⁋Definition 5](/en/math/algebraic_topology/stiefel_whitney_classes#def5)) We showed the existence of Stiefel-Whitney classes by considering the real infinite Grassmannian $\Gr(k,\mathbb{R}^\infty)$, pulling back cohomology classes from there to the original space, and showing that they satisfy the axiomatic conditions for Stiefel-Whitney classes; a similar construction is possible for Chern classes.
 
 ::: Example 8
-As the complex analogue of the real tautological line bundle of [§Stiefel-Whitney Classes, ⁋Example 3](/en/math/algebraic_topology/stiefel_whitney_classes#ex3), consider the tautological complex line bundle $\gamma$ over $\CP^\infty=\Gr(1,\mathbb{C}^\infty)$. Then the sphere bundle of $\gamma$ is the unit sphere $S^\infty$ in $\mathbb{C}^\infty$, which is contractible[^1] so $H^k(S^\infty)=0$ for all $k>0$. Therefore, by [Theorem 5](#thm5), $H^1(\CP^\infty)=0$ and
+As the complex analogue of the real tautological line bundle of [§Stiefel-Whitney Characteristic Classes, ⁋Example 3](/en/math/algebraic_topology/stiefel_whitney_classes#ex3), consider the tautological complex line bundle $\gamma$ over $\CP^\infty=\Gr(1,\mathbb{C}^\infty)$. Then the sphere bundle of $\gamma$ is the unit sphere $S^\infty$ in $\mathbb{C}^\infty$, which is contractible[^1] so $H^k(S^\infty)=0$ for all $k>0$. Therefore, by [Theorem 5](#thm5), $H^1(\CP^\infty)=0$ and
 
 $$\smile c_1(\gamma):H^{k-2}(\CP^\infty)\rightarrow H^k(\CP^\infty)$$
 
@@ -249,9 +253,9 @@ is an isomorphism for $k\geq 2$. Starting from $H^0(\CP^\infty)=\mathbb{Z}$, we 
 
 $$H^\bullet(\CP^\infty;\mathbb{Z})=\mathbb{Z}[c_1(\gamma)]$$
 
-This is, as we saw for real bundles in [§Stiefel-Whitney Classes, §§Grassmann Varieties](/en/math/algebraic_topology/stiefel_whitney_classes#그라스만-다양체), the *universal family* for complex line bundles. That is, any complex line bundle is obtained uniquely as a pullback of $\gamma$, so the first Chern class gives a bijection
+This is, as we saw for real bundles in [§Stiefel-Whitney Characteristic Classes, §§Grassmannians](/en/math/algebraic_topology/stiefel_whitney_classes#그라스만-다양체), the *universal family* for complex line bundles. That is, any complex line bundle is obtained uniquely as a pullback of $\gamma$, so the first Chern class gives a bijection
 
-$$\{B\text{ 위의 complex line bundle}\}/\cong\ \xrightarrow{\ c_1\ }\ H^2(B;\mathbb{Z})$$
+$$\{\text{complex line bundles over }B\}/\cong\ \xrightarrow{\ c_1\ }\ H^2(B;\mathbb{Z})$$
 
 which is a group isomorphism sending tensor product to addition. Thus all information about a complex line bundle is contained in $c_1$.
 :::
@@ -421,4 +425,4 @@ Only (3) requires a small calculation. When we complexify $E_{\mathbb{R}}\otimes
 **[Hat]** A. Hatcher, *Vector Bundles and K-Theory*, online notes, 2017.
 
 ---
-[^1]: View $$S^\infty$$ as the unit sphere in $$\mathbb{C}^\infty=\bigcup_n\mathbb{C}^n$$. For the shift map $$T(x_1,x_2,\ldots)=(0,x_1,x_2,\ldots)$$, normalize vectors by $$v\mapsto v/\lvert v\rvert$$; the two straight-line homotopies $$x\mapsto\bigl((1-t)x+tT(x)\bigr)/\lvert(1-t)x+tT(x)\rvert$$ and $$x\mapsto\bigl((1-t)T(x)+te_1\bigr)/\lvert(1-t)T(x)+te_1\rvert$$ connect the identity to $$T$$, and $$T$$ to the constant map $$x\mapsto e_1=(1,0,\ldots)$$, respectively. Neither denominator vanishes: for the first, the coordinates of $$x$$ and $$T(x)$$ are shifted by one so $$(1-t)x+tT(x)=0$$ forces $$x=0$$; for the second, the first coordinate of the sum is $$t$$, so for it to be $$0$$ we need $$t=0$$, but then $$T(x)=0$$, hence $$x=0$$. Joining these two, $$S^\infty$$ contracts to a point.
+[^1]: View $S^\infty$ as the unit sphere in $\mathbb{C}^\infty=\bigcup_n\mathbb{C}^n$. For the shift map $T(x_1,x_2,\ldots)=(0,x_1,x_2,\ldots)$, normalize vectors by $v\mapsto v/\lvert v\rvert$; the two straight-line homotopies $x\mapsto\bigl((1-t)x+tT(x)\bigr)/\lvert(1-t)x+tT(x)\rvert$ and $x\mapsto\bigl((1-t)T(x)+te_1\bigr)/\lvert(1-t)T(x)+te_1\rvert$ connect the identity to $T$, and $T$ to the constant map $x\mapsto e_1=(1,0,\ldots)$, respectively. Neither denominator vanishes: for the first, the coordinates of $x$ and $T(x)$ are shifted by one so $(1-t)x+tT(x)=0$ forces $x=0$; for the second, the first coordinate of the sum is $t$, so for it to be $0$ we need $t=0$, but then $T(x)=0$, hence $x=0$. Joining these two, $S^\infty$ contracts to a point.

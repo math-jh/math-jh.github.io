@@ -131,7 +131,7 @@ $$N\otimes_{A/(a)} F_i/aF_i=N\otimes_{A/(a)} ((A/(a))\otimes_A F_i)\cong N\otime
 Using this we can prove the following.
 
 ::: Corollary 3
-Fix a Noetherian local ring $(A, \mathfrak{m})$, and assume that $(E, \mathfrak{n})$ is a local Noetherian $A$-algebra satisfying $\mathfrak{m}E\subseteq \mathfrak{n}$. If $a\in \mathfrak{m}$ is a non-zerodivisor in $A$ and simultaneously a zerodivisor on the finitely generated $E$-module $M$, then $M$ is a flat $A$-module if and only if $M/aM$ is a flat $A/(a)$-module.
+Fix a Noetherian local ring $(A, \mathfrak{m})$, and assume that $(E, \mathfrak{n})$ is a local Noetherian $A$-algebra satisfying $\mathfrak{m}E\subseteq \mathfrak{n}$. If $a\in \mathfrak{m}$ is a non-zerodivisor in $A$ and simultaneously a non-zerodivisor on the finitely generated $E$-module $M$, then $M$ is a flat $A$-module if and only if $M/aM$ is a flat $A/(a)$-module.
 :::
 ::: Proof
 Assume that $M/aM$ is a flat $A/(a)$-module. For the residue field $A/\mathfrak{m}$ of $A$, the assumption gives

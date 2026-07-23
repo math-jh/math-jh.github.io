@@ -106,7 +106,7 @@ holds, or more explicitly, for any $p\in G$,
 
 $$\left(d(L_g)\right)(X_p)=X_{gp}$$
 
-always holds. From the above equation, we can see that to specify a left invariant vector field $X$ defined on $G$, it suffices to know its value $X_p$ at *only a single point* $p\in G$, and of course the most natural choice of $p$ is the identity element $e$ of $G$. Also, since the values of $X$ at each point are defined in this way, one can guess that the fact that $X$ is left-invariant does not reduce its smoothness.
+always holds. From the above equation, we can see that to specify a left invariant vector field $X$ defined on $G$, it suffices to know its value $X_p$ at *only a single point* $p\in G$, and of course the most natural choice of $p$ is the identity element $e$ of $G$. Also, since the values of $X$ at each point are defined in this way, one can guess that the fact that $X$ is left-invariant will yield the smoothness of $X$.
 
 In other words, left-invariant vector fields defined on $G$ are exactly the same as the tangent space $T_eG$ at the identity of $G$. On the other hand, in [[Differential Manifolds] §Lie Derivative, ⁋Definition 5](/en/math/manifolds/Lie_derivative#def5) we defined an operation $[-,-]$ that makes $\mathfrak{X}(G)$ a $C^\infty(G)$-algebra, so one of our questions is whether the collection of left-invariant vector fields forms a subalgebra under this operation. Let us first consider the following definition generalizing $[-,-]$.
 
@@ -144,7 +144,7 @@ Let a Lie group $G$ be given, and let $\mathfrak{g}$ be the collection of all le
 
     $$\iota_1^p: x\mapsto (x,p),\qquad \iota_2^p:x\mapsto (p,x)$$
 
-    choose a $C^\infty$ vector field $Y_e=X_e$ and consider the new vector field $(0,Y)$ defined on $G\times G$. Then $f\circ m$ is a $C^\infty$ function and $(0,Y)$ is a $C^\infty$ vector field, so $(0,Y)(f\circ m)$ is a $C^\infty$ function, and therefore the composition $\bigl((0,Y)(f\circ m)\bigr)\circ\iota_1^e$ is also $C^\infty$. However, for any $p\in G$, through the isomorphism
+    choose a $C^\infty$ vector field satisfying $Y_e=X_e$ and consider the new vector field $(0,Y)$ defined on $G\times G$. Then $f\circ m$ is a $C^\infty$ function and $(0,Y)$ is a $C^\infty$ vector field, so $(0,Y)(f\circ m)$ is a $C^\infty$ function, and therefore the composition $\bigl((0,Y)(f\circ m)\bigr)\circ\iota_1^e$ is also $C^\infty$. However, for any $p\in G$, through the isomorphism
 
     $$T_{(x,y)}(M\times N)\cong T_xM\oplus T_yN$$
 
@@ -328,8 +328,8 @@ holds. Moreover, the following holds.
 ::: Theorem 20
 For a connected compact Lie group $G$, the following hold.
 
-1. $$d(\exp(e))=\id_\mathfrak{g}$$
-2. $$\Ad\circ\exp=\exp_{\GL(\mathfrak{g})}\circ \ad$$
+1. $d(\exp(e))=\id_\mathfrak{g}$
+2. $\Ad\circ\exp=\exp_{\GL(\mathfrak{g})}\circ \ad$
 3. $\rho_x\circ\exp=\exp\circ\Ad(x)$
 :::
 

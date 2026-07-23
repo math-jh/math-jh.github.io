@@ -90,7 +90,7 @@ $$\frac{d}{\mathop{dx}}F(g(x)) = F'(g(x))g'(x) = f(g(x))g'(x),$$
 so $F(g(x))$ is an antiderivative of the left-hand integrand. Therefore $\int f(g(x))g'(x)\mathop{dx} = F(g(x)) + C = F(u) + C = \int f(u)\mathop{du}$.
 :::
 
-In practice, one sets $u = g(x)$ and $du = g'(x) \mathop{dx}$, rewrites the expression entirely in terms of $u$, integrates, and then substitutes back. For example, with $u = \cos x$ we get 
+In practice, one sets $u = g(x)$ and $\mathop{du} = g'(x) \mathop{dx}$, rewrites the expression entirely in terms of $u$, integrates, and then substitutes back. For example, with $u = \cos x$ we get 
 
 $$\int \tan x \mathop{dx} = -\int \frac{du}{u} = -\ln\lvert\cos x\rvert + C,$$
 
@@ -265,7 +265,7 @@ If one wants the *actual* area enclosed by the curve and the $x$-axis, one must 
 
 $$\int_{-1}^{1} \lvert x\rvert \mathop{dx} = \int_{-1}^{0} (-x)\mathop{dx} + \int_{0}^{1} x\mathop{dx} = \frac{1}{2} + \frac{1}{2} = 1.$$
 
-This is a concrete instance where the integral triangle inequality $\bigl\lvert\int f\bigr\rvert \leq \int \lvert f\rvert$ holds as a strict inequality $0 < 1$, and each piece is immediately verified by the triangle area formula. This calculation also agrees with the earlier computation of the triangle area via Riemann sums.
+This is a concrete instance where the integral triangle inequality $\bigl\lvert\int_a^b f(x) \mathop{dx}\bigr\rvert \leq \int_a^b \lvert f(x)\rvert \mathop{dx}$ holds as a strict inequality $0 < 1$, and each piece is immediately verified by the triangle area formula. This calculation also agrees with the earlier computation of the triangle area via Riemann sums.
 :::
 
 Because the mean value theorem converts an integral into a function value at a single point, it is frequently used in dealing with inequalities or in inferring average behavior. The same theorem holds for weighted integrals, provided the weight has a fixed sign.

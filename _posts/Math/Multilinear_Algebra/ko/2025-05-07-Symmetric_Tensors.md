@@ -54,7 +54,7 @@ $$\tr_{H/G}(x)=\sum_{\bar{h}\in H/G} \bar{h}x$$
 다음이 성립한다.
 
 1. 임의의 $x\in M^G$와 $h\in H$에 대하여, $hx\in M^{hGh^{-1}}$이고 식 $\tr_{H/hGh^{-1}}(hx)=\tr_{H/G}(x)$이 성립한다. 
-2. Subgroup들 $F\leq G\leq H$에 대하여, $\tr_{H/G}\circ\tr_{G/F}=tr_{H/F}$가 성립한다. 
+2. Subgroup들 $F\leq G\leq H$에 대하여, $\tr_{H/G}\circ\tr_{G/F}=\tr_{H/F}$가 성립한다. 
 3. 임의의 $x\in M^H$에 대하여, $\tr_{H/G}(x)=[H:G].x$가 성립한다. 
 :::
 
@@ -88,7 +88,7 @@ $$x=x_1\otimes x_2\otimes \cdots \otimes x_p,\qquad y=y_1\otimes y_2\otimes \cdo
 
 $$x\otimes y=x_1\otimes x_2\otimes \cdots \otimes x_p\otimes y_1\otimes y_2\otimes \cdots \otimes y_q$$
 
-이 symmetric tensor가 될 것이라는 보장은 없다. 간단히 위의 꼴에서 $x_i$와 $y_j$의 위치를 서로 바꾸는 원소를 생각하면 이것이 symmetric tensor의 조건을 만족하지 않을 수도 있기 대문이다. 
+이 symmetric tensor가 될 것이라는 보장은 없다. 간단히 위의 꼴에서 $x_i$와 $y_j$의 위치를 서로 바꾸는 원소를 생각하면 이것이 symmetric tensor의 조건을 만족하지 않을 수도 있기 때문이다. 
 
 대신 위의 형태의 곱은 $S_{p+q}$의 subgroup $S_p\times S_q$의 action에 대해서는 invariant하다. 따라서 
 
@@ -218,7 +218,7 @@ $M$이 free $A$-module이고, $(e_i)_{i \in I}$가 $M$의 basis라고 하자.
 :::
 ::: 증명
 1. [따름정리 5](#cor5)의 둘째 식을 사용하면 된다.
-2. 각각의 $k$에 대하여, $H=S_k$, $N=\T^KM$으로 두고 [보조정리 6](#lem6)을 적용하면 된다. 
+2. 각각의 $k$에 대하여, $H=S_k$, $N=\T^kM$으로 두고 [보조정리 6](#lem6)을 적용하면 된다. 
 :::
 
 ## Functoriality
@@ -239,7 +239,7 @@ $$\Sym(M)\otimes\Sym(M) \rightarrow \Sym(M\oplus M)\overset{\Sym(u)}{\longrighta
 
 ## 대칭대수와 대칭텐서
 
-Canonical injection $i: M \rightarrow \T(M)$과 $j: M \rightarrow \Sym(M)$을 생각하자. 그럼 [§텐서대수, ⁋명제 2](/ko/math/multilinear_algebra/tensor_algebras#prop2)에 의하여, 유일한 $\mathbb{N}$-graded $A$-algebra homomorphism $s: \T(M)\mapsto \Sym(M)$이 존재하여 $j=s\circ i$이도록 할 수 있다. 그럼 이는 $\T^0(M)=\Sym^0(M)$에서는 identity이며, $\T(M)$과 $\Sym(M)$ 각각에서 곱셈이 어떻게 정의되었는지를 생각하면 $s:\T(M) \rightarrow \Sym(M)$은 정확히 *symmetrization* 
+Canonical injection $i: M \rightarrow \T(M)$과 $j: M \rightarrow \Sym(M)$을 생각하자. 그럼 [§텐서대수, ⁋명제 2](/ko/math/multilinear_algebra/tensor_algebras#prop2)에 의하여, 유일한 $\mathbb{N}$-graded $A$-algebra homomorphism $s: \T(M)\rightarrow \Sym(M)$이 존재하여 $j=s\circ i$이도록 할 수 있다. 그럼 이는 $\T^0(M)=\Sym^0(M)$에서는 identity이며, $\T(M)$과 $\Sym(M)$ 각각에서 곱셈이 어떻게 정의되었는지를 생각하면 $s:\T(M) \rightarrow \Sym(M)$은 정확히 *symmetrization* 
 
 $$s:\T(M)\rightarrow \Sym(M);\qquad x\mapsto \sum_{\sigma\in S_n}\sigma x$$
 
@@ -302,7 +302,7 @@ $A$-module $N$에 대하여, free $A$-module $A^{(I)}$이 주어졌다 하고 �
 
 $$(x_i)_{i\in I} \mapsto u(x_i)\in N$$
 
-은 $A$-module들 사이의 hoomgeneous polynomial mapping이며 그 degree는 $n$이다. 
+은 $A$-module들 사이의 homogeneous polynomial mapping이며 그 degree는 $n$이다. 
 :::
 
 어렵지 않게 두 polynomial mapping의 합성은 다시 homogeneous mapping이라는 것을 보일 수 있다. 
@@ -330,7 +330,7 @@ $$v(x_1,\ldots, x_n)=\frac{1}{n!}\sum_{H\subseteq \{1,\ldots, n\}}(-1)^{\lvert H
 
 ## 대칭함수
 
-한편, $M$이 fintely generated free $A$-module일 경우 $\S(M)$은 polynomial algebra $A[\x_1,\ldots, \x_n]$과 isomorphic하다는 것을 알고 있다. 이 상황을 조금 더 자세히 살펴보자. 
+한편, $M$이 finitely generated free $A$-module일 경우 $\S(M)$은 polynomial algebra $A[\x_1,\ldots, \x_n]$과 isomorphic하다는 것을 알고 있다. 이 상황을 조금 더 자세히 살펴보자. 
 
 우선 자연수 $n$과 $\sigma\in S_n$에 대하여, 우리는 다음의 식
 
@@ -359,13 +359,13 @@ $$\x^\nu=\x_1^{\nu(1)}\cdots\x_n^{\nu(n)},\qquad 0\leq\nu(i)< i$$
 
 을 만족하는 monomial들 $\x^\nu$들이 $A[\x_1,\ldots, \x_n]^{S_n}$-module로서 $A[\x_1,\ldots, \x_n]$을 생성한다는 것 또한 확인할 수 있다. 이 과정에서 유용한 식은 polynomial ring $A[\x_1,\ldots, \x_n, T_1, T_2]$에서 성립하는 다음의 식
 
-$$\prod_{i=1}^n(T_1+\x_iT_2)=\sum_{k=0}^n T_1^{n-k}T_2\x_k$$
+$$\prod_{i=1}^n(T_1+\x_iT_2)=\sum_{k=0}^n T_1^{n-k}T_2^ks_k$$
 
 으로, 이 식은 특히 다음의 두 식
 
-$$\prod_{i=1}^n(1+\x_iT)=\sum_{k=0}^n s_kT^k,\qquad \prod_{i=1}(\x-\x_i)=\sum_{k=0}^n(-1)^{n-k}s_{n-k}\x^k$$
+$$\prod_{i=1}^n(1+\x_iT)=\sum_{k=0}^n s_kT^k,\qquad \prod_{i=1}^n(\x-\x_i)=\sum_{k=0}^n(-1)^{n-k}s_{n-k}\x^k$$
 
-을 준다. 여기서 둘째 식을 근과 계수의 관계와 비슷한 성질 것으로 생각하면 임의의 다항식
+을 준다. 여기서 둘째 식을 root와 계수의 관계와 비슷한 성질로 생각하면 임의의 다항식
 
 $$f(\x)=\x^n+a_{n-1}\x^{n-1}+\cdots +a_1\x +a_0$$
 
@@ -383,7 +383,7 @@ $$\rho(f)(\x)=\prod_{i=1}^n (\x-\xi_i)$$
 이 성립한다면, 유일한 ring homomorphism $u: E_f \rightarrow B$가 존재하여 $\rho(a)=u(a.1)$이고 $u(\x_i)=\xi_i$이도록 할 수 있다. 
 :::
 
-지금까지 생성원으로 다룬 $s_k$는 표준적으로 *elementary symmetric polynomial<sub>기본대칭다항식</sub>* $e_k$라 부른다. 이와 짝을 이루는 다른 대칭다항식들을 함께 정의해 두면 대칭함수 환의 구조가 한결 선명해지고, 이들은 Grassmannian의 Schubert calculus 등에서 핵심적으로 쓰인다.
+지금까지 generator로 다룬 $s_k$는 표준적으로 *elementary symmetric polynomial<sub>기본대칭다항식</sub>* $e_k$라 부른다. 이와 짝을 이루는 다른 대칭다항식들을 함께 정의해 두면 대칭함수 ring의 구조가 한결 선명해지고, 이들은 Grassmannian의 Schubert calculus 등에서 핵심적으로 쓰인다.
 
 ::: 정의 15
 자연수 $k$에 대하여, $k$차 *complete homogeneous symmetric polynomial<sub>완전동차대칭다항식</sub>* $h_k$를
@@ -397,14 +397,14 @@ elementary symmetric polynomial이 $\prod_{i=1}^n (1 + \x_i T) = \sum_{k=0}^n e_
 
 $$\prod_{i=1}^n \frac{1}{1 - \x_i T} = \sum_{k \geq 0} h_k T^k$$
 
-로 나타난다. 두 생성함수의 곱이 $1$이라는 사실에서 $e$와 $h$를 잇는 관계 $\sum_{j=0}^k (-1)^j e_j\, h_{k-j} = 0$ ($k \geq 1$) 이 따라오며, $h_1, \ldots, h_n$ 또한 $e_1, \ldots, e_n$과 마찬가지로 대칭다항식 환 $A[\x_1, \ldots, \x_n]^{S_n}$을 생성한다.
+로 나타난다. 두 생성함수의 곱이 $1$이라는 사실에서 $e$와 $h$를 잇는 관계 $\sum_{j=0}^k (-1)^j e_j\, h_{k-j} = 0$ ($k \geq 1$) 이 따라오며, $h_1, \ldots, h_n$ 또한 $e_1, \ldots, e_n$과 마찬가지로 대칭다항식 ring $A[\x_1, \ldots, \x_n]^{S_n}$을 생성한다.
 
 ::: 정의 16
 약감소하는 음 아닌 정수열 $\lambda = (\lambda_1 \geq \lambda_2 \geq \cdots \geq \lambda_n \geq 0)$ — 이를 *partition<sub>분할</sub>*이라 한다 — 에 대하여, *Schur polynomial<sub>슈어 다항식</sub>* $s_\lambda$를 두 교대다항식의 비
 
 $$s_\lambda(\x_1, \ldots, \x_n) = \frac{\det\bigl(\x_i^{\lambda_j + n - j}\bigr)_{1 \leq i, j \leq n}}{\det\bigl(\x_i^{n - j}\bigr)_{1 \leq i, j \leq n}}$$
 
-로 정의한다. 분모는 Vandermonde 행렬식 $\prod_{i < j} (\x_i - \x_j)$이고 분자도 같은 인자들로 나누어떨어지므로, $s_\lambda$는 잘 정의된 다항식이며 변수의 치환에 불변인 대칭다항식이다.
+로 정의한다. 분모는 Vandermonde 행렬식 $\prod_{i < j} (\x_i - \x_j)$이고 분자도 같은 인자들로 나누어떨어지므로, $s_\lambda$는 잘 정의된 다항식이며 변수의 permutation에 불변인 대칭다항식이다.
 :::
 
 예를 들어 $\lambda = (0, \ldots, 0)$이면 $s_\lambda = 1$이고, 변수가 $n = 2$개일 때 $\lambda = (2,1)$이면 분자 $\det\begin{pmatrix} \x_1^3 & \x_1 \\ \x_2^3 & \x_2 \end{pmatrix} = \x_1 \x_2 (\x_1^2 - \x_2^2)$를 Vandermonde $\x_1 - \x_2$로 나누어 $s_{(2,1)} = \x_1 \x_2 (\x_1 + \x_2)$를 얻는다.
@@ -418,7 +418,7 @@ $$s_\lambda = \det\bigl(h_{\lambda_i - i + j}\bigr)_{1 \leq i, j \leq \ell}$$
 
 $$s_\lambda = \sum_T \x_1^{m_1(T)} \cdots \x_n^{m_n(T)}$$
 
-로도 쓴다 (여기서 $m_i(T)$는 $T$에 채워진 값 $i$의 개수이다). 특수한 경우로 한 행짜리 $\lambda = (k)$이면 $s_{(k)} = h_k$, 한 열짜리 $\lambda = (1^k)$이면 $s_{(1^k)} = e_k$이다. 나아가 $\ell(\lambda) \leq n$인 $s_\lambda$ 전체가 대칭다항식 환의 $A$-기저를 이루며, 그 곱을 이 기저로 전개한 구조상수
+로도 쓴다 (여기서 $m_i(T)$는 $T$에 채워진 값 $i$의 개수이다). 특수한 경우로 한 행짜리 $\lambda = (k)$이면 $s_{(k)} = h_k$, 한 열짜리 $\lambda = (1^k)$이면 $s_{(1^k)} = e_k$이다. 나아가 $\ell(\lambda) \leq n$인 $s_\lambda$ 전체가 대칭다항식 ring의 $A$-기저를 이루며, 그 곱을 이 기저로 전개한 structure constant
 
 $$s_\lambda\, s_\mu = \sum_\nu c_{\lambda\mu}^\nu\, s_\nu$$
 

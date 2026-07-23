@@ -28,7 +28,7 @@ From the formula
 
 $$\det(\x I-A)=\sum_{\tau\in S_n}\sgn(\tau)(\x I-A)_{\tau(1),1}\cdots(\x I-A)_{\tau(n),n}\tag{1}$$
 
-we see that the degree of the characteristic polynomial of $A$ is at most $n$. Each summand on the right-hand side is a product of $n$ factors, and each factor $(\x I-A)_{\tau(k),k}$ is linear in $x$ only when $\tau(k)=k$ and constant otherwise. Hence, if the characteristic polynomial actually has degree $n$, the degree-$n$ term must appear only for the permutation $\tau$ satisfying $\tau(k)=k$ for all $k$, that is, for $\tau=\id_{S_n}$. In this case, the corresponding term is
+we see that the degree of the characteristic polynomial of $A$ is at most $n$. Each summand on the right-hand side is a product of $n$ factors, and each factor $(\x I-A)_{\tau(k),k}$ is linear in $\x$ only when $\tau(k)=k$ and constant otherwise. Hence, if the characteristic polynomial actually has degree $n$, the degree-$n$ term must appear only for the permutation $\tau$ satisfying $\tau(k)=k$ for all $k$, that is, for $\tau=\id_{S_n}$. In this case, the corresponding term is
 
 $$(\x I-A)_{1,1}\cdots(\x I-A)_{n,n}=(\x-A_{11})\cdots(\x-A_{nn})\tag{2}$$
 
@@ -61,7 +61,7 @@ $$\det(\x I-A)=\det(\x I-PBP^{-1})=\det(P(\x I-B)P^{-1})=\det P\det(\x I-B)\det 
 Hence $A$ and $B$ have the same characteristic polynomial. From this we obtain the following corollaries.
 
 ::: Corollary 4
-For any linear map $L:V\rightarrow V$, defining the characteristic polynomial of $L$ as the characteristic polynomial of the matrix $[L]_\mathcal{B}^\mathcal{B}$ is well-defined.
+For any linear map $L:V\rightarrow V$, defining the characteristic polynomial of $L$ as <phrase>the characteristic polynomial of the matrix $[L]_\mathcal{B}^\mathcal{B}$</phrase> is well-defined.
 :::
 ::: Proof
 That is, we must show that the characteristic polynomial of $L$ does not change if we choose a basis $\mathcal{C}$ of $V$ instead of $\mathcal{B}$. By the preceding argument, it suffices to observe from the formula after [§Change of Basis, ⁋Proposition 5](/en/math/multilinear_algebra/change_of_basis#prop5) that the two matrix representations $[L]_\mathcal{B}^\mathcal{B}$ and $[L]_\mathcal{C}^\mathcal{C}$ are similar matrices.
@@ -91,7 +91,7 @@ Let $p_A(\x)$ be the characteristic polynomial of an $n\times n$ matrix $A$, and
 Let $p(\x)$ be an arbitrary element of $\mathbb{K}[\x]$. If $p$ is a polynomial of degree $n$, then $p$ has at most $n$ roots. However, it need not have exactly $n$ roots.
 
 ::: Example 7
-For example, let $\mathbb{K}=\mathbb{R}$ and consider the $2\times 2$ matrix
+For example, let $\mathbb{K}=\mathbb{R}$ and consider the $2\times 2$ square matrix
 
 $$J=\begin{pmatrix}0&-1\\1&0\end{pmatrix}.$$
 

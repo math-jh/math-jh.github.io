@@ -282,7 +282,6 @@ The *$m$-th plurigenus* of a surface $S$ is
 
 $$P_m(S) = h^0(S, \omega_S^{\otimes m})$$
 
-.
 :::
 
 Here $\omega_S$ is the canonical bundle defined in [§Canonical Bundle, ⁋Definition 5](/en/math/algebraic_varieties/canonical_bundle#def5). In particular, when $m = 1$, we have $P_1(S) = h^0(\omega_S) = p_g(S)$, the geometric genus; the sequence of plurigenera $\{P_m(S)\}_{m \ge 1}$ can be thought of as an extension of this in a certain sense. It is an important invariant that determines the birational equivalence class of a surface.

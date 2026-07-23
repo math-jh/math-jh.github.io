@@ -213,7 +213,7 @@ $$0 \rightarrow \mathbb{Z}\rightarrow \mathbb{Z}\rightarrow \mathbb{Z}/n\mathbb{
 
 $$0 \rightarrow A \xrightarrow{\cdot n} A \rightarrow 0$$
 
-를 얻는다. 이 때, 첫 번째 함수는 $a \mapsto na$이며, 따라서 첫 번째 homology는
+를 얻는다. 이 때, 첫 번째 함수는 $a \mapsto na$이며, 따라서 첫 번째 cohomology는
 
 $$\Ext^1_\mathbb{Z}(\mathbb{Z}/n\mathbb{Z}, A) \cong \coker(\cdot n ) = A/nA$$
 
@@ -267,4 +267,4 @@ $$\Tor_i^A(\mathbb{K}, \mathbb{K}) = H_i(K_\bullet \otimes_A \mathbb{K}) = K_i \
 
 을 얻는다.
 
-이 계산은 나중에 다항식 환 $\mathbb{K}[\x_1, \ldots, \x_n]$의 global dimension이 $n$임을 보여주는 데 사용된다.
+이 계산은 나중에 polynomial ring $\mathbb{K}[\x_1, \ldots, \x_n]$의 global dimension이 $n$임을 보여주는 데 사용된다.

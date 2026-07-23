@@ -144,9 +144,9 @@ $$i_C\circ g^\sharp\circ f^\sharp=g\circ i_B\circ f^\sharp=g\circ f\circ i_A=0$$
 
 and since $i_C$ is injective we verify that $g^\sharp\circ f^\sharp=0$. Similarly, letting $p_A,p_B,p_C$ be the canonical maps from $A,B,C$ to the cokernels respectively,
 
-$$(g')^\ast\circ(f')^\ast\circ p_C=(g')^\ast\circ p_B\circ f=p_A\circ g'\circ f'=0$$
+$$(g')^\ast\circ(f')^\ast\circ p_A=(g')^\ast\circ p_B\circ f'=p_C\circ g'\circ f'=0$$
 
-and since $p_C$ is surjective we verify that $(g')^\ast\circ(f')^\ast=0$. Therefore, to prove the statement it suffices to show that if $f':A'\rightarrow B'$ is injective then $\ker(g^\sharp)\subset\im(f^\sharp)$, and if $g:B\rightarrow C$ is surjective then $\ker((g')^\ast)\subset\im((f')^\ast)$.
+and since $p_A$ is surjective we verify that $(g')^\ast\circ(f')^\ast=0$. Therefore, to prove the statement it suffices to show that if $f':A'\rightarrow B'$ is injective then $\ker(g^\sharp)\subset\im(f^\sharp)$, and if $g:B\rightarrow C$ is surjective then $\ker((g')^\ast)\subset\im((f')^\ast)$.
 
 First assume that $f'$ is injective. If $g^\sharp(b)=0$ for some $b\in\ker(\beta)$, then by the definition of $g^\sharp$ we have $g(b)=0$ and therefore $b\in\ker(g)=\im(f)$. Thus there exists some $a\in A$ such that $f(a)=b$. But
 
@@ -197,7 +197,7 @@ That is, $\beta(b)\in\ker(g')=\im(f')$. Hence there exists a unique $a'$ such th
 
 For the map $\delta$ to be well-defined, the above value must not depend on the choice of $b$. Pick another $b_1\in B$ satisfying $g(b_1)=c$, and in the same way pick $a_1'\in A'$ satisfying $f'(a_1')=\beta(b_1)$. Then
 
-$$0=(g'\circ f')(a_1'-a_1)=(g'\circ \beta)(b_1-b)=(\gamma\circ g)(b_1-b)$$
+$$0=(g'\circ f')(a_1'-a')=(g'\circ \beta)(b_1-b)=(\gamma\circ g)(b_1-b)$$
 
 so $b_1-b\in\ker(g)=\im(f)$ holds. Now finding $a\in A$ such that $f(a)=b_1-b$, we have
 

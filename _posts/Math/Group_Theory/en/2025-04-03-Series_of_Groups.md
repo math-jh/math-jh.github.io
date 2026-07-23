@@ -130,7 +130,7 @@ hold by definition, so by induction we know this inequality holds for all $m, n$
 We now define the following.
 
 ::: Definition 6
-A group $G$ is called a *nilpotent group* if there exists a natural number $n$ such that $C_{n+1}(G) = \{e\}$. The largest such $n$ is called the *nilpotency class* of $G$.
+A group $G$ is called a *nilpotent group* if there exists a natural number $n$ such that $C_{n+1}(G) = \{e\}$. The smallest such $n$ is called the *nilpotency class* of $G$.
 :::
 
 Then the following holds.
@@ -184,7 +184,7 @@ For a group homomorphism $f: G \rightarrow G'$, $f(D_n(G)) \subseteq D_n(G')$ al
 The proof of this is the same as for [Proposition 4](#prop4), using induction. Just as nilpotent groups were defined by the stability condition of the lower central series, solvable groups are defined by the stability condition of the derived series.
 
 ::: Definition 11
-A group $G$ is called *solvable* if there exists a natural number $n$ such that $D_{n+1}(G) = \{e\}$. The largest such $n$ is called the *solvability class* of $G$.
+A group $G$ is called *solvable* if there exists a natural number $n$ such that $D_{n+1}(G) = \{e\}$. The smallest such $n$ is called the *solvability class* of $G$.
 :::
 
 By definition $D_0(G) = C_1(G) = G$ and $D_1(G) = [G, G] = C_2(G)$ hold. From this fact and [Proposition 5](#prop5), by induction we know the inclusion
@@ -216,7 +216,7 @@ A sequence of subgroups of a group $G$
 
 $$G = G_0 \supset G_1 \supset \cdots \supset G_n = \{e\}$$
 
-is called a *subnormal series* if for each $k$, $G_{k+1}$ is a normal subgroup of $G_k$; in this case $G_k/G_{k+1}$ is called a *quotient* of this series. If no subnormal series finer than a composition series $G_\bullet$ exists, we call it a *composition series* of $G$.
+is called a *subnormal series* if for each $k$, $G_{k+1}$ is a normal subgroup of $G_k$; in this case $G_k/G_{k+1}$ is called a *quotient* of this series. If no subnormal series finer than a subnormal series $G_\bullet$ exists, we call it a *composition series* of $G$.
 :::
 
 Then for any group $G$ and any normal subgroup $N$, since there is a one-to-one correspondence between normal subgroups of $G/N$ and normal subgroups of $G$ containing $N$, the condition that $G_\bullet$ is a composition series is equivalent to $G_k/G_{k+1}$ being simple for each $k$. ([§Symmetric Groups, ⁋Definition 12](/en/math/group_theory/symmetric_groups#def12))
@@ -239,7 +239,7 @@ This proof can be summarized roughly by the following lattice:
 
 ![Zassenhaus](/assets/images/Math/Group_Theory/Series_of_Groups-1.svg){:style="width:44.91em" class="invert" .align-center}
 
-First, $H' \cap K = H' \cap (H \cap K)$ and $K' \cap H = K' \cap (K \cap H)$ are each normal subgroups of $H \cap K$ by the result of [\[Algebraic Structures\] §Isomorphism Theorems, ⁋Lemma 4](/en/math/algebraic_structures/isomorphism_theorems#lem4). Therefore their intersection $(H' \cap K)(K' \cap H)$ is also a normal subgroup of $H \cap K$. Now looking at the left-hand side of the claimed isomorphism, from [\[Algebraic Structures\] §Isomorphism Theorems, ⁋Theorem 5](/en/math/algebraic_structures/isomorphism_theorems#thm5) we know that
+First, $H' \cap K = H' \cap (H \cap K)$ and $K' \cap H = K' \cap (K \cap H)$ are each normal subgroups of $H \cap K$ by the result of [\[Algebraic Structures\] §Isomorphism Theorems, ⁋Lemma 4](/en/math/algebraic_structures/isomorphism_theorems#lem4). Therefore their product $(H' \cap K)(K' \cap H)$ is also a normal subgroup of $H \cap K$. Now looking at the left-hand side of the claimed isomorphism, from [\[Algebraic Structures\] §Isomorphism Theorems, ⁋Theorem 5](/en/math/algebraic_structures/isomorphism_theorems#thm5) we know that
 
 $$H'(H' \cap K)(K' \cap H) = H'(H \cap K')$$
 
@@ -275,7 +275,7 @@ The *length* of a group $G$ is defined as the upper bound of the lengths of stri
 
 Then if $G$ has a composition series, we know that the length of its composition series is exactly the length of $G$. Therefore the equality
 
-$$\operatorname{length}(G) = \operatorname{length}(G/N) + \operatorname{length}(N)$$
+$$\length(G) = \length(G/N) + \length(N)$$
 
 is a consequence of [\[Algebraic Structures\] §Isomorphism Theorems, ⁋Theorem 7](/en/math/algebraic_structures/isomorphism_theorems#thm7) and [Theorem 16](#thm16).
 

@@ -107,7 +107,7 @@ $$0 \rightarrow \mathcal{O}_C \rightarrow \mathcal{O}_C(D) \rightarrow \mathcal{
 
 이 존재하며, 그럼 Euler characteristic의 additivity에 의해 $\rchi(\mathcal{O}_C(D)) = \rchi(\mathcal{O}_C) + \rchi(\mathcal{O}_D)$이다. 
 
-여기서 $\mathcal{O}_D$는 차수 $\deg D$의 skyscraper sheaf이므로 $\rchi(\mathcal{O}_D) = \deg D$이고, 위에서 살펴본 것과 같이 $\rchi(\mathcal{O}_C)=1-g$이므로 이를 앞선 식과 결합하면 원하는 결과를 얻는다. 일반적인 (effective가 아닌) divisor에 대해서는 $D$를 effective divisor $D'$과의 차이로 표현한 후 동일한 additivity 논증을 적용하면 된다. 
+여기서 $\mathcal{O}_D$는 degree $\deg D$의 skyscraper sheaf이므로 $\rchi(\mathcal{O}_D) = \deg D$이고, 위에서 살펴본 것과 같이 $\rchi(\mathcal{O}_C)=1-g$이므로 이를 앞선 식과 결합하면 원하는 결과를 얻는다. 일반적인 (effective가 아닌) divisor에 대해서는 $D$를 effective divisor $D'$과의 차이로 표현한 후 동일한 additivity 논증을 적용하면 된다. 
 :::
 
 위의 증명은 깔끔하지만 그 기하학적 내용이 Euler characterstic 안에 압축되어 있어 직관적으로 잘 와닿지 않을 수 있다. 이를 보완하기 위해 등식을 항별로 읽어보자. 우선 정의에 의해 
@@ -130,7 +130,7 @@ $$H^0(C, \mathcal{O}_C(D)) \longrightarrow \bigoplus_i \mathbb{K}^{n_i}\tag{$4$}
 
 을 생각할 수 있다. 직관적으로, 이는 $f$가 점 $p_i$에서의 Laurent polynomial의 principal part를 다음의 식
 
-$$\frac{a_{-n_i}}{(x-p_i)^{n_i}}+\frac{a_{-n_i-1}}{(x-p_i)^{n_i-1}}+\cdots +\frac{a_{-1}}{x-p_i}$$
+$$\frac{a_{-n_i}}{(x-p_i)^{n_i}}+\frac{a_{-n_i+1}}{(x-p_i)^{n_i-1}}+\cdots +\frac{a_{-1}}{x-p_i}$$
 
 과 같이 나타냈을 때, 
 
@@ -146,7 +146,7 @@ $$0\longrightarrow \mathcal{O}_C\overset{i}{\longrightarrow} \mathcal{O}_C(D)\ov
 
 $$0\longrightarrow H^0(C,\mathcal{O}_C)\overset{i^\ast}{\longrightarrow} H^0(C,\mathcal{O}_C(D)) \overset{p^\ast}{\longrightarrow} H^0(C,\mathcal{O}_D) \overset{\delta}{\longrightarrow} H^1(C,\mathcal{O}_C)\overset{i^\ast}{\longrightarrow} H^1(C,\mathcal{O}_C(D))\rightarrow 0$$
 
-를 생각하자. 여기서 $C$는 curve이고 $D=\sum n_i p_i$이므로, $\mathcal{O}_D$는 support $\lvert D\rvert$를 갖는 degree $D$의 skyscraper sheaf이며 이로부터 $H^0(C, \mathcal{O}_C)=\bigoplus_i \mathbb{K}^{n_i}$임을 안다. 뿐만 아니라 위에서 살펴본 linear map ($4$)이 실제로 이 long exact sequence에서의 $p^\ast$와 맞아떨어진다는 것을 알고 이로부터 $p^\ast$의 cokernel은 다음 isomorphism들의 chain
+를 생각하자. 여기서 $C$는 curve이고 $D=\sum n_i p_i$이므로, $\mathcal{O}_D$는 support $\lvert D\rvert$를 갖는 degree $D$의 skyscraper sheaf이며 이로부터 $H^0(C, \mathcal{O}_D)=\bigoplus_i \mathbb{K}^{n_i}$임을 안다. 뿐만 아니라 위에서 살펴본 linear map ($4$)이 실제로 이 long exact sequence에서의 $p^\ast$와 맞아떨어진다는 것을 알고 이로부터 $p^\ast$의 cokernel은 다음 isomorphism들의 chain
 
 $$\coker p^\ast=\frac{H^0(C, \mathcal{O}_D)}{\im p^\ast}=\frac{H^0(C, \mathcal{O}_D)}{\ker\delta}\cong \im\delta\cong\ker i^\ast$$
 
@@ -179,7 +179,7 @@ $$\ell(K_C)-\ell(0)=\deg K_C +1-g$$
 어쨌든 지금까지의 계산을 정리하면 $\ell(D)$는 $D$의 complete linear system의 차원, $\ell(K_C - D)$는 $K_C$가 $D$ 위에 부과하는 수정항이며, 큰 degree에서는 이 수정항이 사라지고 작은 degree에서는 $K_C$의 기하학적 정보를 반영한다는 것으로 생각할 수 있다.
 
 ::: 예시 4
-**$\mathbb{P}^1$**: $\mathbb{P}^1$의 genus는 $g = 0$이고, canonical divisor는 $K_{\mathbb{P}^1} = -2H$이다 ([§표준선다발, ⁋예시 8](/ko/math/algebraic_varieties/canonical_bundle#ex8)). 한편, 우리는 [§선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_varieties/line_bundles#ex12)에서 $\mathcal{O}_{\mathbb{P}^1}(d)$의 global section이 차수 $d$의 동차다항식들임을 보였으므로,
+**$\mathbb{P}^1$**: $\mathbb{P}^1$의 genus는 $g = 0$이고, canonical divisor는 $K_{\mathbb{P}^1} = -2H$이다 ([§표준선다발, ⁋예시 8](/ko/math/algebraic_varieties/canonical_bundle#ex8)). 한편, 우리는 [§선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_varieties/line_bundles#ex12)에서 $\mathcal{O}_{\mathbb{P}^1}(d)$의 global section이 degree $d$의 homogeneous polynomial들임을 보였으므로,
 
 $$\ell(dH) = d+1 \quad (d \ge 0), \qquad \ell(dH) = 0 \quad (d < 0)$$
 
@@ -215,7 +215,7 @@ $$\varphi_{K_C}:C\rightarrow \mathbb{P}^1$$
 
 이제 한 점 $p$의 배수 $D=d\cdot p$에 Riemann-Roch를 적용하여 $\ell(D)$가 $d$에 따라 어떻게 변하는지 살펴 보자. 작은 $d$, 즉 $\ell(K_C-D)$가 살아있는 곳에서는 특수한 현상이 나타나지만, $d$가 커지면 $\ell(D)$는 선형적으로 안정화된다.
 
-1. $d=1$의 경우, $\ell(p)\ge 2$라면 degree 1 사상 $C\rightarrow\mathbb{P}^1$이 존재하여 $C\cong\mathbb{P}^1$이 되지만 $g=2$와 모순이므로 $\ell(p)=1$이다. Riemann-Roch에 의해 $\ell(K_C-p)=1$이다.
+1. $d=1$의 경우, $\ell(p)\ge 2$라면 degree 1 morphism $C\rightarrow\mathbb{P}^1$이 존재하여 $C\cong\mathbb{P}^1$이 되지만 $g=2$와 모순이므로 $\ell(p)=1$이다. Riemann-Roch에 의해 $\ell(K_C-p)=1$이다.
 2. $d=2$의 경우, 만약 $2p\sim K_C$이면 $\ell(2p)=2$이다. 이 경우 $p$를 *Weierstrass point*라 부르는데, 이 조건은 정확히 위의 canonical map $\varphi_{K_C}$에 대한 어떤 점의 preimage가 $p$로 겹쳐있는 상황에 해당한다. 일반적인 점에서는 $2p\not\sim K_C$이므로 $\ell(2p)=1$이다.
 3. $d\ge 3$이면 $\deg(K_C-D)=2-d<0$이므로 $\ell(K_C-D)=0$이고, 따라서 $\ell(D)=d-1$이다.
 :::
@@ -247,7 +247,7 @@ $$d(d-3) = 2g - 2 \implies g = \frac{d(d-3) + 2}{2} = \frac{(d-1)(d-2)}{2}$$
 이 공식은 평면곡선의 기하학적 성질을 직접적으로 계산해준다. 예를 들어 smooth plane cubic의 genus는 1이므로, 이는 [예시 5](#ex5)에서 다룬 elliptic curve와 같다. 반면 $d = 1, 2$인 경우에는 $g = 0$으로, 직선과 원뿔곡선이 모두 $\mathbb{P}^1$과 birationally equivalent임을 반영한다 ([§유리사상, ⁋명제 10](/ko/math/algebraic_varieties/rational_maps#prop10)).
 
 ::: 예시 8
-Degree $d$에 따른 genus를 계산해보면, degree 3 (cubic)의 경우 $g = \frac{2 \cdot 1}{2} = 1$로 elliptic curve이고, degree 4 (quartic)의 경우 $g = \frac{3 \cdot 2}{2} = 3$, degree 5 (quintic)의 경우 $g = \frac{4 \cdot 3}{2} = 6$이다. Genus가 degree에 따라 빠르게 증가하므로, 고차원의 smooth plane curve는 점점 더 복잡한 위상적 구조를 갖는다.
+Degree $d$에 따른 genus를 계산해보면, degree 3 (cubic)의 경우 $g = \frac{2 \cdot 1}{2} = 1$로 elliptic curve이고, degree 4 (quartic)의 경우 $g = \frac{3 \cdot 2}{2} = 3$, degree 5 (quintic)의 경우 $g = \frac{4 \cdot 3}{2} = 6$이다. Genus가 degree에 따라 빠르게 증가하므로, 높은 degree의 smooth plane curve는 점점 더 복잡한 위상적 구조를 갖는다.
 :::
 ---
 

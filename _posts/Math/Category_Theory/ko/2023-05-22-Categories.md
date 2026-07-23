@@ -28,7 +28,7 @@ weight: 1
 
 추가적으로, 이들은 다음의 조건을 만족한다.
 
-- Morphism들의 합성은 결합법칙을 만족한다. 즉, $(f\circ g)\circ h=f\circ(g\circ h)$가 성립한다.
+- Morphism들의 합성은 associative하다. 즉, $(f\circ g)\circ h=f\circ(g\circ h)$가 성립한다.
 - 각각의 $A\in\obj(\mathcal{A})$마다 $\id_A\in\Hom_\mathcal{A}(A,A)$가 존재하여, 모든 $f\in\Hom_\mathcal{A}(A,A_1)$ 그리고 모든 $g\in\Hom_\mathcal{A}(A_2,A)$에 대하여
   
   $$f\circ{\id_A}=f,\qquad {\id_A}\circ g=g$$
@@ -40,7 +40,7 @@ weight: 1
 
 - $\Set$의 대상들은 집합들이다.
 - 두 대상 $A_1,A_2\in\obj(\mathcal{A})$에 대하여, $A_1$에서 $A_2$로의 morphism은 집합 $A_1$에서 $A_2$로의 함수이다. ([\[집합론\] §함수, ⁋정의 1](/ko/math/set_theory/functions#def1))
-- 두 morphism의 합성은 함수의 합성으로 정의한다. ([\[집합론\] §함수들 사이의 연산, ⁋명제 1](/ko/math/set_theory/operation_of_functions#prop1)) 이 합성이 결합법칙을 만족하는 것은 [\[집합론\] §이항관계들 사이의 연산, ⁋명제 5](/ko/math/set_theory/operation_of_binary_relations#prop5)에서 살펴보았다.
+- 두 morphism의 합성은 함수의 합성으로 정의한다. ([\[집합론\] §함수들 사이의 연산, ⁋명제 1](/ko/math/set_theory/operation_of_functions#prop1)) 이 합성이 associative한 것은 [\[집합론\] §이항관계들 사이의 연산, ⁋명제 5](/ko/math/set_theory/operation_of_binary_relations#prop5)에서 살펴보았다.
 - 임의의 대상 $A\in\obj(\mathcal{A})$에 대하여, $\id_A\in\Hom_\Set(A,A)$는 항등함수 $\id_A$이다. ([\[집합론\] §함수, ⁋정의 2](/ko/math/set_theory/functions#def2)) 항등함수가 위의 [정의 1](#def1)의 두 조건을 만족하는 것은 [\[집합론\] §이항관계들 사이의 연산, ⁋정의 9](/ko/math/set_theory/operation_of_binary_relations#def9) 이후에 살펴보았다.
 
 비슷한 방식으로 다음이 모두 category의 예시가 되는 것을 볼 수 있다.
@@ -77,7 +77,7 @@ weight: 1
 
 두 morphism $x \rightarrow y$와 $y \rightarrow z$의 합성은 morphism $x \rightarrow z$로 주어진다. 이 때 morphism $x \rightarrow z$가 존재한다는 것은 $\preceq$의 transitivity로부터 나온다. 그럼
 
-$$((x \rightarrow y) \rightarrow z)\rightarrow w=x \rightarrow y \rightarrow z \rightarrow y=x \rightarrow (y \rightarrow (z \rightarrow w))$$
+$$((x \rightarrow y) \rightarrow z)\rightarrow w=x \rightarrow y \rightarrow z \rightarrow w=x \rightarrow (y \rightarrow (z \rightarrow w))$$
 
 으로부터 결합법칙이 나온다. 또, $\preceq$의 reflexivity에 의하여 임의의 $x\in S$에 대해 $\Hom_\mathcal{S}(x,x)$는 유일한 morphism $x \rightarrow x$를 가지며 이것이 $\id_x$의 역할을 하는 것을 확인할 수 있다.
 :::
@@ -188,7 +188,7 @@ Category $\mathcal{A}$가 주어졌다 하고, $A\in\obj(\mathcal{A})$를 고정
 
 - $\mathcal{A}$의 *slice category over $A$<sub>$A$ 위에서의 조각 범주</sub>* $\mathcal{A}_{/A}$는 다음과 같은 데이터로 주어진다.
   - $\mathcal{A}_{/A}$의 object들은 $\mathcal{A}$의 morphism들 $f:A_1\rightarrow A$이다.
-  - 임의의 $(A_1\overset{f_1}{\longrightarrow}A)\in\obj(\mathcal{A}_{/A})$와 $(A_2\overset{f_2}{\longrightarrow}A)\in\obj(\mathcal{A}_{/A})$에 대하여, $f_1$에서 $f_2$로의 morphism은 $f_1=g\circ f_2$가 성립하도록 하는 $g:A_1\rightarrow A_2$이다.
+  - 임의의 $(A_1\overset{f_1}{\longrightarrow}A)\in\obj(\mathcal{A}_{/A})$와 $(A_2\overset{f_2}{\longrightarrow}A)\in\obj(\mathcal{A}_{/A})$에 대하여, $f_1$에서 $f_2$로의 morphism은 $f_1=f_2\circ g$가 성립하도록 하는 $g:A_1\rightarrow A_2$이다.
 - $\mathcal{A}$의 *slice category under $A$<sub>$A$ 위에서의 쌍대 조각 범주</sub>* ${}_{A/}\mathcal{A}$는 다음과 같은 데이터로 주어진다.
   - ${}_{A/}\mathcal{A}$의 object들은 $\mathcal{A}$의 morphism들 $f:A\rightarrow A_1$이다.
   - 임의의 $(A\overset{f_1}{\longrightarrow}A_1)\in\obj({}_{A/}\mathcal{A})$와 $(A\overset{f_2}{\longrightarrow}A_2)\in\obj({}_{A/}\mathcal{A})$에 대하여, $f_1$에서 $f_2$로의 morphism은 $f_2=g\circ f_1$가 성립하도록 하는 $g:A_1\rightarrow A_2$이다.

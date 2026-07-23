@@ -14,7 +14,7 @@ translated_at: 2026-07-13T22:00:03+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-07-13T22:00:03+00:00
 ---
-In the previous post, we dealt with functions that raise the dimension of the codomain, sending one real number to several real numbers—that is, parameterized curves $\mathbf{r}:\mathbb{R}\rightarrow\mathbb{R}^n$. Now we go the other way, raising the dimension of the domain, and deal with multivariable functions $f:\mathbb{R}^m\rightarrow\mathbb{R}$ that send several real numbers to one real number. Differentiation still retains its essence as a linear approximation near a point, but because the domain becomes a vector space, there are infinitely many directions from which one can approach, so direction becomes important, and the linear approximation is given not by a single number but by a linear map. Since vector spaces, inner products, and norms were covered in [§Curves and Vector Functions](/en/math/calculus/vector_functions), in this post we briefly review linear maps, matrices, and determinants—the core tools of multivariable differentiation—and then treat partial derivatives and the gradient, differentiability, the multivariable chain rule, and extrema.
+In the previous post, we dealt with functions that raise the dimension of the codomain, sending one real number to several real numbers—that is, parameterized curves $\mathbf{r}:\mathbb{R}\rightarrow\mathbb{R}^n$. Now we go the other way, raising the dimension of the domain, and deal with multivariable functions $f:\mathbb{R}^m\rightarrow\mathbb{R}$ that send several real numbers to one real number. Differentiation still retains its essence as a linear approximation near a point, but because the domain becomes a vector space, there are infinitely many directions from which one can approach, so direction becomes important, and the linear approximation is given not by a single number but by a linear map. Since vector spaces, inner products, and norms were covered in [§Curves and Vector-Valued Functions](/en/math/calculus/vector_functions), in this post we briefly review linear maps, matrices, and determinants—the core tools of multivariable differentiation—and then treat partial derivatives and the gradient, differentiability, the multivariable chain rule, and extrema.
 
 ## Linear Maps and Matrices
 
@@ -52,7 +52,7 @@ The form of this definition is essentially the same as for single-variable funct
 
 $$\lim_{t\rightarrow 0}f(\mathbf{a}+t\mathbf{v})=L$$
 
-holds for every direction $\mathbb{v}=(v_1, \ldots, v_m)$. For instance, if we define $f:\mathbb{R}^2\rightarrow \mathbb{R}$ by
+holds for every direction $\mathbf{v}=(v_1, \ldots, v_m)$. For instance, if we define $f:\mathbb{R}^2\rightarrow \mathbb{R}$ by
 
 $$f(\mathbf{x})=\begin{cases}1&\text{if $y=x^2$,}\\ 0&\text{otherwise}\end{cases}$$
 
@@ -94,7 +94,7 @@ and substituting everything in gives
 
 $$n_1(x-a_1)+n_2(y-a_2)=0,$$
 
-which is the familiar equation of a line. Similarly, for a *hypersurface* in $\mathbb{R}^m$ passing through a point $\mathbf{a}=(a_1,\ldots, a_m)$ and perpendicular to a vector $\mathbf{n}=(n_1,\ldots, n_m)$, a point $\mathbf{x}=(x_1,\ldots, x_m)$ on it satisfies the same equation
+which is the familiar equation of a line. Similarly, for a *hyperplane* in $\mathbb{R}^m$ passing through a point $\mathbf{a}=(a_1,\ldots, a_m)$ and perpendicular to a vector $\mathbf{n}=(n_1,\ldots, n_m)$, a point $\mathbf{x}=(x_1,\ldots, x_m)$ on it satisfies the same equation
 
 $$\mathbf{n}\cdot(\mathbf{x}-\mathbf{a})=0,$$
 
@@ -159,7 +159,7 @@ Since $f_x, f_y$ are continuous at $(a,b)$, both brackets go to $0$ as $(h,k)\ri
 
 Now we examine the chain rule for multivariable functions. If only one of the variables input to a multivariable function is given as a composition with another function, then the chain rule can be applied in the same way as in single-variable differentiation using the partial derivative with respect to that variable; the problem arises when several variables input to the multivariable function are defined through other functions.
 
-For this we need a curve $\mathbf{x}(t) = (x_1(t), \ldots, x_n(t))$ parameterized by a single parameter $t$; as defined in [§Curves and Vector Functions, ⁋Proposition 2](/en/math/calculus/vector_functions#prop2), this is differentiable when each component $x_i(t)$ is differentiable as a single-variable function, and its tangent vector $\mathbf{x}'(t) = (x_1'(t), \ldots, x_n'(t))$ is well defined. Under this, the following holds.
+For this we need a curve $\mathbf{x}(t) = (x_1(t), \ldots, x_n(t))$ parameterized by a single parameter $t$; as defined in [§Curves and Vector-Valued Functions, ⁋Proposition 2](/en/math/calculus/vector_functions#prop2), this is differentiable when each component $x_i(t)$ is differentiable as a single-variable function, and its tangent vector $\mathbf{x}'(t) = (x_1'(t), \ldots, x_n'(t))$ is well defined. Under this, the following holds.
 
 ::: Theorem 6 (Multivariable Chain Rule)
 If $f$ is differentiable and $\mathbf{x}(t) = (x_1(t), \ldots, x_n(t))$ is a differentiable curve, then the composition $t \mapsto f(\mathbf{x}(t))$ is also differentiable and
@@ -277,7 +277,7 @@ $$\nabla f(\mathbf{a}) = \lambda \nabla g(\mathbf{a})$$
 holds.
 :::
 ::: Proof
-Pick any smooth curve $\mathbf{x}(t)$ on the constraint surface $\{g = c\}$ passing through $\mathbf{a}$ ($\mathbf{x}(0) = \mathbf{a}$). Since $g(\mathbf{x}(t)) = c$ is constant, differentiating by [Theorem 6](#thm6) gives $\nabla g(\mathbf{a}) \cdot \mathbf{x}'(0) = 0$, and on the other hand, since $\mathbf{a}$ gives an extremum of $f$ under the constraint, $t \mapsto f(\mathbf{x}(t))$ also has an extremum at $t = 0$, and therefore $\nabla f(\mathbf{a}) \cdot \mathbf{x}'(0) = 0$. That is, both vectors $\nabla f(\mathbf{a})$ and $\nabla g(\mathbf{a})$ are orthogonal to the tangent space of the constraint surface. But if the whole space is $3$-dimensional and the tangent space of the constraint surface is $2$-dimensional, there is only one such direction, and therefore there exists a real number $\lambda$ such that $\nabla f(\mathbf{a}) = \lambda \nabla g(\mathbf{a})$.
+Pick any smooth curve $\mathbf{x}(t)$ on the constraint surface $\{g = c\}$ passing through $\mathbf{a}$ ($\mathbf{x}(0) = \mathbf{a}$). Since $g(\mathbf{x}(t)) = c$ is constant, differentiating by [Theorem 6](#thm6) gives $\nabla g(\mathbf{a}) \cdot \mathbf{x}'(0) = 0$, and on the other hand, since $\mathbf{a}$ gives an extremum of $f$ under the constraint, $t \mapsto f(\mathbf{x}(t))$ also has an extremum at $t = 0$, and therefore $\nabla f(\mathbf{a}) \cdot \mathbf{x}'(0) = 0$. That is, both vectors $\nabla f(\mathbf{a})$ and $\nabla g(\mathbf{a})$ are orthogonal to the tangent space of the constraint surface. But since the whole space is $n$-dimensional and the tangent space of the constraint surface is $n-1$-dimensional, there is only one such direction, and therefore there exists a real number $\lambda$ such that $\nabla f(\mathbf{a}) = \lambda \nabla g(\mathbf{a})$.
 :::
 
 In actual computation, the newly introduced real number $\lambda$ is added as an unknown and the system consisting of $\nabla f = \lambda \nabla g$ together with the constraint equation $g = c$ is solved simultaneously; this $\lambda$ is called the *Lagrange multiplier*.

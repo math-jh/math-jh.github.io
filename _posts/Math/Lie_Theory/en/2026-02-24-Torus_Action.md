@@ -20,7 +20,7 @@ $$\rho:G\rightarrow \Aut(V)$$
 
 Once we choose a basis for $V$, analyzing the image of $G$ under $\rho$ becomes purely a matter of linear algebra, allowing us to discern the structure of $G$ much more easily.
 
-For Lie groups, this representation-theoretic perspective is even more useful, because Lie groups inherently act on other objects such as $\GL(n;\mathbb{R})$ or $\Diff(M)$.
+For Lie groups, this representation-theoretic perspective is even more useful, because Lie groups such as $\GL(n;\mathbb{R})$ or $\Diff(M)$ are inherently things that act on other objects.
 
 However, as in [\[Representation Theory\] §Representation Theory of Finite Groups, ⁋Definition 1](/en/math/representation_theory/representations_of_finite_groups#def1), if we define the representation theory of $G$ in this way, we lose the smooth structure on the Lie group $G$. Thus we must modify the definition as follows.
 
@@ -30,7 +30,7 @@ For a Lie group $G$, a *representation* of $G$ consists of a finite-dimensional 
 $$\rho:G\rightarrow \Aut(V)$$
 :::
 
-If we regard $G$ as a Lie group equipped with the discrete topology and the trivial smooth structure, then this definition can be viewed as a generalization of [\[Representation Theory\] §Representation Theory of Finite Groups, ⁋Definition 1](/en/math/representation_theory/representations_of_finite_groups#def1). Similarly, all definitions in [\[Representation Theory\] §Representation Theory of Finite Groups, §§Basic Concepts of Representation Theory](/en/math/representation_theory/representations_of_finite_groups#basic-concepts-of-representation-theory) can be carried over to Lie groups.
+If we regard $G$ as a Lie group equipped with the discrete topology and the trivial smooth structure, then this definition can be viewed as a generalization of [\[Representation Theory\] §Representation Theory of Finite Groups, ⁋Definition 1](/en/math/representation_theory/representations_of_finite_groups#def1). Similarly, all definitions in [\[Representation Theory\] §Representation Theory of Finite Groups, §§Basic Notions of Representation Theory](/en/math/representation_theory/representations_of_finite_groups#basic-notions-of-representation-theory) can be carried over to Lie groups.
 
 What played a crucial role in the preceding discussion was the fact that $G$ is a finite group. For instance, the idea of averaging over all elements of $G$ relied on this. To generalize this to Lie groups, we must impose some kind of finiteness condition on $G$.
 
@@ -378,13 +378,13 @@ $$g=\begin{pmatrix}a&b\\c&d\end{pmatrix}$$
 
 we have
 
-$$g \begin{pmatrix}e^{i\theta}&0\\0&e^{-i\theta}\end{pmatrix}g^{-1} = \begin{pmatrix} a & b \\ c & d \end{pmatrix} \begin{pmatrix} e^{i\theta} & 0 \\ 0 & e^{-i\theta} \end{pmatrix} \begin{pmatrix} \overline{a} & \overline{c} \\ \overline{b} & \overline{d} \end{pmatrix} = \begin{pmatrix} \lvert\alpha\rvert^2 e^{i\theta} + \lvert b\rvert^2 e^{-i\theta} & a\overline{c}e^{i\theta} + b\overline{d}e^{-i\theta} \\ c\overline{a}e^{i\theta} + d\overline{b}e^{-i\theta} & \lvert c\rvert^2 e^{i\theta} + \lvert d\rvert^2 e^{-i\theta} \end{pmatrix}$$
+$$g \begin{pmatrix}e^{i\theta}&0\\0&e^{-i\theta}\end{pmatrix}g^{-1} = \begin{pmatrix} a & b \\ c & d \end{pmatrix} \begin{pmatrix} e^{i\theta} & 0 \\ 0 & e^{-i\theta} \end{pmatrix} \begin{pmatrix} \overline{a} & \overline{c} \\ \overline{b} & \overline{d} \end{pmatrix} = \begin{pmatrix} \lvert a\rvert^2 e^{i\theta} + \lvert b\rvert^2 e^{-i\theta} & a\overline{c}e^{i\theta} + b\overline{d}e^{-i\theta} \\ c\overline{a}e^{i\theta} + d\overline{b}e^{-i\theta} & \lvert c\rvert^2 e^{i\theta} + \lvert d\rvert^2 e^{-i\theta} \end{pmatrix}$$
 
 so for this to belong to $T$, for all $\theta$ we must have
 
 $$a\overline{c}e^{i\theta}+b\overline{d}e^{-i\theta}=0$$
 
-so $a\overline{c}=0$ and $b\overline{d}=0$. If $a\neq 0$, then $\overline{c}=0$ so $c=0$, and from $ad-bc=1$ we get $d=\overline{a}$, and thus from $b\overline{d}=0$ we must have $b=0$. That is, in this case $g\in T$. If $a=0$, then since $\lvert a\rvert^2+\lvert b\rvert^2=1$ we have $\lvert b\rvert=1$, and from $ad-bc=1$ we must have $c=\overline{b}$, and similarly $d=0$. From this we know that $g$ must be of the form
+so $a\overline{c}=0$ and $b\overline{d}=0$. If $a\neq 0$, then $\overline{c}=0$ so $c=0$, and from $ad-bc=1$ we get $d=\overline{a}$, and thus from $b\overline{d}=0$ we must have $b=0$. That is, in this case $g\in T$. If $a=0$, then since $\lvert a\rvert^2+\lvert b\rvert^2=1$ we have $\lvert b\rvert=1$, and from $ad-bc=1$ we must have $c=-\overline{b}$, and similarly $d=0$. From this we know that $g$ must be of the form
 
 $$\begin{pmatrix}0&e^{i\alpha}\\ -e^{-i\alpha}&0\end{pmatrix}$$
 

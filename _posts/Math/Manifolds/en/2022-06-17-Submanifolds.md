@@ -30,11 +30,11 @@ Intuitively, to say that a function $F:N\rightarrow M$ is a submanifold means th
 
 ![Immersion, submanifold, immersion](/assets/images/Math/Manifolds/Submanifolds-1.svg){:style="width:30.02em" class="invert" .align-center}
 
-For example, in the figure above, $N=\mathbb{R}$, $M=\mathbb{R}^2$, (a) is an immersion but not a submanifold, (b) is a submanifold but not an embedded submanifold, and (c) is an embedded submanifold. For convenience, in (b), let $F(0)$ denote the point that $F(t)$ approaches as $t\rightarrow\infty$; then $(-1,1)$ is open in $\mathbb{R}$, but $F\bigl((-1,1)\bigr)$ cannot be open in the subspace topology on $N$.
+For example, in the figure above, $N=\mathbb{R}$, $M=\mathbb{R}^2$, (a) is an immersion but not a submanifold, (b) is a submanifold but not an embedded submanifold, and (c) is an embedded submanifold. For convenience, in (b), let $F(0)$ denote the point that $F(t)$ approaches as $t\rightarrow \infty$; then $(-1,1)$ is open in $\mathbb{R}$, but $F\bigl((-1,1)\bigr)$ cannot be open in the subspace topology on $N$.
 
 
 ::: Example 2
-For a manifold $M$ and its open submanifold $U$, the inclusion $\iota:U\hookrightarrow M$ is an embedded submanifold of $M$. That $d\iota_p$ is injective for every $p\in U$ is clear from the fact that $T_pU$ and $T_{\iota(p)}M$ are isomorphic, and by the definition of an open submanifold, $\iota(U)$ carries the subspace topology.
+For a manifold $M$ and its open submanifold $U$, the inclusion $\iota:U\hookrightarrow M$ is an embedded submanifold of $M$. That $d\iota_p$ is injective for every $p\in U$ is clear from the fact that it is an isomorphism between $T_pU$ and $T_{\iota(p)}M$, and by the definition of an open submanifold, $\iota(U)$ carries the subspace topology.
 :::
 
 ::: Example 3
@@ -81,7 +81,7 @@ Let elements $y^1, \ldots, y^k$ of $C_p^\infty(M)$ be given for a manifold $M$ a
 Consider an $m$-dimensional manifold $M$. If $y^1, \ldots, y^m$ are independent at a point $p_0\in M$, then $(y^1, \ldots, y^m)$ forms a coordinate system in a neighborhood of $p_0$.
 :::
 ::: Proof
-First, considering the dimension of $T_p^\ast M$, we see that the differentials of the given functions form a basis of $T_p^\ast M$.
+First, considering the dimension of $T_{p_0}^\ast M$, we see that the differentials of the given functions form a basis of $T_{p_0}^\ast M$.
 
 Suppose the $m$ functions $y^i$ are all defined on an open neighborhood $U$ of $p_0$.[^1] As given, define $\varphi:U\rightarrow\mathbb{R}^m$ by
 
@@ -89,7 +89,7 @@ $$\varphi(p)=(y^1(p),\ldots, y^m(p))$$
 
 Then since each component function $y^i$ is $C^\infty$, $\varphi$ is also $C^\infty$. Now consider $(d\varphi_{p_0})^\ast:T_{\varphi(p_0)}^\ast\mathbb{R}^m\rightarrow T_{p_0}^\ast M$. Applying $(d\varphi_{p_0})^\ast$ to $dr^i\vert_{\varphi(p_0)}$, we have
 
-$$d\varphi_{p_0}\left(dr^i\vert_{\varphi(p_0)}\right)=\left(dr^i\vert_{\varphi(p_0)}\right)\circ\left(d\varphi_{p_0}\right)=d(r^i\circ\varphi)_{p_0}=dy^i\vert_{p_0}$$
+$$\left(d\varphi_{p_0}\right)^\ast\left(dr^i\vert_{\varphi(p_0)}\right)=\left(dr^i\vert_{\varphi(p_0)}\right)\circ\left(d\varphi_{p_0}\right)=d(r^i\circ\varphi)_{p_0}=dy^i\vert_{p_0}$$
 
 Thus the basis elements $dr^i\vert_{\varphi(p_0)}$ of $T_{\varphi(p_0)}^\ast\mathbb{R}^m$ are mapped to a basis of $T_{p_0}^\ast M$, and therefore $(d\varphi_{p_0})^\ast$ is an isomorphism. Hence $d\varphi_{p_0}$ is also an isomorphism, and applying [Corollary 5](#cor5), we see that there exists a suitable $V$ with $p_0\in V\subseteq U$ such that $\varphi\vert_V:V\rightarrow\varphi(V)$ is a coordinate system.
 :::
@@ -122,7 +122,7 @@ form a coordinate system in a neighborhood of $p$.
 ::: Proof
 Since $dF_p$ is surjective, its dual $(dF_p)^\ast:T_{F(p)}^\ast N\rightarrow T_p^\ast M$ is injective. That is, the elements
 
-$$(dF_p)^\ast(dy^i\vert_{F(p)})=dy^i\vert_{F(p)}\circ dF_p=d(y^i\circ F)_p=dx^j\vert_p$$
+$$(dF_p)^\ast(dy^j\vert_{F(p)})=dy^j\vert_{F(p)}\circ dF_p=d(y^j\circ F)_p=dx^j\vert_p$$
 
 are linearly independent in $T_p^\ast M$. Therefore, we obtain the desired result by [Corollary 7](#cor7).
 :::
@@ -137,7 +137,7 @@ forms a coordinate system of $M$ in a neighborhood of $p$.
 ::: Proof
 Since $dF_p$ is injective, its dual $(dF_p)^\ast:T_{F(p)}^\ast N\rightarrow T_p^\ast M$ is surjective. That is, the elements
 
-$$(dF_p)^\ast(dy^i\vert_{F(p)})=dy^i\vert_{F(p)}\circ dF_p=d(y^i\circ F)_p=dx^j\vert_p$$
+$$(dF_p)^\ast(dy^j\vert_{F(p)})=dy^j\vert_{F(p)}\circ dF_p=d(y^j\circ F)_p=dx^j\vert_p$$
 
 must span $T_p^\ast M$, and therefore by [Corollary 8](#cor8) a subset of the given set forms a coordinate system of $M$ in a neighborhood of $p$.
 :::
@@ -152,4 +152,4 @@ must span $T_p^\ast M$, and therefore by [Corollary 8](#cor8) a subset of the gi
 
 ---
 
-[^1]: This is possible because the $$y^i$$ are finite in number. That is, if the $$y^i$$ are each defined on $$U^i$$, we may take $$U=\bigcap U^i$$.
+[^1]: This is possible because the $y^i$ are finite in number. That is, if the $y^i$ are each defined on $U^i$, we may take $U=\bigcap U^i$.

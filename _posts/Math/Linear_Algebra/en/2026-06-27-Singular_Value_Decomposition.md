@@ -16,7 +16,7 @@ translated_at: 2026-06-27T20:00:01+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-06-27T20:00:01+00:00
 ---
-The tools discussed so far all apply to $n\times n$ matrices, i.e., linear operators. A general $m\times n$ matrix is not square, so we cannot directly speak of eigenvalues or diagonalization. In this post, we cover the singular value decomposition, which decomposes an arbitrary rectangular matrix into a product of two orthogonal matrices and one diagonal matrix. The starting point is the observation that for any $A$, the matrix $A^tA$ is always a real symmetric matrix, so the spectral theorem applies.
+The tools discussed so far all apply to $n\times n$ matrices, i.e., linear operators. A general $m\times n$ matrix is not square, so we cannot directly speak of eigenvalues or diagonalization. In this post, we cover the singular value decomposition, which decomposes an arbitrary real matrix into a product of two orthogonal matrices and one diagonal matrix. The starting point is the observation that for any $A$, the matrix $A^tA$ is always a real symmetric matrix, so the spectral theorem applies.
 
 ## Singular Value Decomposition
 

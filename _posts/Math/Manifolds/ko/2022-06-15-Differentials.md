@@ -60,7 +60,7 @@ $\id_M:M\rightarrow M$은 당연하게 $C^\infty$ 함수이다. 더 일반적으
 만일 두 manifold $M,N$에 대하여, $F:M\rightarrow N$과 $G:N\rightarrow M$이 각각 존재하여 $G\circ F=\id_M$이고 $F\circ G=\id_N$이라면 $F$와 $G$ 각각을 *diffeomorphism<sub>미분동형사상</sub>*이라 부르고, $F$와 $G$가 *diffeomorphic<sub>미분동형</sub>*이라 말한다.
 :::
 
-따라서, manifold들과 smooth function들은 카테고리 $\Man$을 이룬다.
+따라서, manifold들과 smooth function들은 category $\Man$을 이룬다.
 
 ::: remark 참고 {#rmk}
 동일한 topological manifold $M$ 위에 diffeomorphic하지만 서로 같지는 않은 미분구조를 줄 수 있다. 두 미분구조 $\mathcal{A}_1$, $\mathcal{A}_2$를 각각 single chart들 $(\mathbb{R},\id_\mathbb{R})$, $(\mathbb{R}, x\mapsto x^{3})$을 통해 정의하자. 그럼 $\mathcal{A}_1$과 $\mathcal{A}_2$는 서로 다른 미분구조를 정의한다. ([§미분다양체, ⁋예시 4](/ko/math/manifolds/smooth_manifolds#ex4))  
@@ -70,23 +70,23 @@ $\id_M:M\rightarrow M$은 당연하게 $C^\infty$ 함수이다. 더 일반적으
 
 $$(\psi\circ F\circ \varphi^{-1})(t)=t$$
 
-을 만족하므로 $\psi\circ\varphi^{-1}$이 $C^\infty$이기 때문이다.  
+을 만족하므로 $\psi\circ F\circ\varphi^{-1}$이 $C^\infty$이기 때문이다.  
 뿐만 아니라 $F^{-1}$ 또한 $C^\infty$가 되는데, 이는 마찬가지로 임의의 점 $q\in M_2$에 대해 위와 동일한 coordinate system을 잡으면 $q\in\mathbb{R}$이고 $F^{-1}(\mathbb{R})\subset\mathbb{R}$이 성립하며, 또
 
-$$(\psi^{-1}\circ F^{-1}\circ \varphi)(s)=s$$
+$$(\varphi\circ F^{-1}\circ \psi^{-1})(s)=s$$
 
 이 성립하기 때문이다. 
 :::
 
 ## 미분사상
 
-Manifold는 기본적으로 미분을 할 수 있는 공간이며, 때문에 manifold 사이의 함수를 알기 위해서는 이 함수가 미분들, 즉 tangent space의 원소들을 어떠한 방식으로 변환시키는지를 알아야 한다. 
+Manifold는 기본적으로 미분을 할 수 있는 공간이며, 때문에 manifold 사이의 함수를 알기 위해서는 이 함수가 derivation들, 즉 tangent space의 원소들을 어떠한 방식으로 변환시키는지를 알아야 한다. 
 
 두 manifold 사이의 $C^\infty$ 함수 $F:M\rightarrow N$이 주어졌다 하자. 함수 $F$는 자연스럽게 다음의 식
 
 $$g\mapsto g\circ F$$
 
-으로 정의된 함수 $F^\ast:\mathcal{C}_{N,F(p)}^\infty\rightarrow \mathcal{C}_{M,p}^\infty$을 유도한다. 뿐만 아니라, 임의의 $f,g,\in \mathcal{C}_{N,F(p)}^\infty$ 그리고 실수 $\alpha\in\mathbb{R}$에 대하여
+으로 정의된 함수 $F^\ast:\mathcal{C}_{N,F(p)}^\infty\rightarrow \mathcal{C}_{M,p}^\infty$을 유도한다. 뿐만 아니라, 임의의 $f,g\in \mathcal{C}_{N,F(p)}^\infty$ 그리고 실수 $\alpha\in\mathbb{R}$에 대하여
 
 $$F^\ast(f+g)=(f+g)\circ F=f\circ F+g\circ F=F^\ast(f)+F^\ast(g),\quad F^\ast(\alpha f)=(\alpha f)\circ F=\alpha(f\circ F)=\alpha F^\ast(f)$$
 
@@ -153,7 +153,7 @@ $$\frac{\partial}{\partial x^i}\bigg\vert_pf=\frac{\partial}{\partial r^i}\bigg\
 
 이다. 그런데 [정의 7](#def7)을 염두에 두고 이 식을 다시 살펴보면, 이는 $\varphi^{-1}:\varphi(U)\rightarrow U$의 differential과 동일한 모양임을 알 수 있다.[^1] 즉 tangent space의 basis는 다른 것이 아니라, 단지 $\mathbb{R}^m$의 tangent space $T_{\varphi(p)}\mathbb{R}^m$의 $m$개의 basis들을 differential $d\varphi^{-1}_{\varphi(p)}$를 통해 옮겨온 것일 뿐이다.
 
-이를 좀 더 선형대수학적인 관점에서 보자면, $\mathcal{B}$를 $\mathbb{R}^m$의 standard basis, $\mathcal{C}$를 $\partial/\partial x^i$들로 이루어진 $T_pM$의 basis라 하면 $(T_{\varphi(p)}\mathbb{R}^n, \mathcal{B})$에서 $(T_pM, \mathcal{C})$로의 linear map $d\varphi^{-1}_{\varphi(p)}$의 행렬표현이 정확히 항등행렬이 된다고 할 수 있다.
+이를 좀 더 선형대수학적인 관점에서 보자면, $\mathcal{B}$를 $\mathbb{R}^m$의 standard basis, $\mathcal{C}$를 $\partial/\partial x^i$들로 이루어진 $T_pM$의 basis라 하면 $(T_{\varphi(p)}\mathbb{R}^m, \mathcal{B})$에서 $(T_pM, \mathcal{C})$로의 linear map $d\varphi^{-1}_{\varphi(p)}$의 행렬표현이 정확히 항등행렬이 된다고 할 수 있다.
 
 더 일반적으로, $M,N$이 각각 $m,n$차원의 manifold이고 $F:M\rightarrow N$이 임의의 $C^\infty$ 함수라 하자. 그럼 고정된 $p\in M$에 대하여, $p$를 포함하는 coordinate system $(U,\varphi)$, 그리고 $F(U)$를 포함하는 coordinate system $(V,\psi)$가 존재하여 $\psi\circ F\circ\varphi^{-1}$이 $C^\infty$이다. 이제 $\varphi=(x^i)_{i=1}^{m}$, $\psi=(y^j)_{j=1}^n$이라 하자. 그럼 마찬가지로 tangent space $T_pM$, $T_{F(p)}N$의 basis는 각각
 
@@ -189,5 +189,5 @@ $$\begin{pmatrix}\partial(y^1\circ F)/\partial x^1&\partial(y^1\circ F)/\partial
 
 ---
 
-[^1]: 물론 이를 위해서는 $$\varphi^{-1}$$가 $$C^\infty$$여야 하지만, 애초부터 $$U$$에서의 미분구조 자체가 $$\varphi(U)$$의 미분구조를 옮겨놓은 것이기 때문에 $$\varphi^{-1}$$는 심지어 diffeomorphism이다.
-[^2]: 편의상 $$\psi(F(p))=0$$이라 가정하였다.
+[^1]: 물론 이를 위해서는 $\varphi^{-1}$가 $C^\infty$여야 하지만, 애초부터 $U$에서의 미분구조 자체가 $\varphi(U)$의 미분구조를 옮겨놓은 것이기 때문에 $\varphi^{-1}$는 심지어 diffeomorphism이다.
+[^2]: 편의상 $\psi(F(p))=0$이라 가정하였다.

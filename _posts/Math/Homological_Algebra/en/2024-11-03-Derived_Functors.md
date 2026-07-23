@@ -108,7 +108,7 @@ $$F(P_1) \overset{Fd_1}{\longrightarrow} F(P_0) \overset{F\epsilon_0}{\longright
 
 is exact. Therefore, we obtain
 
-$$L_0F(A)=H_i(F(P))=\frac{F(P_0)}{\im Fd_1}=\frac{F(P_0)}{\ker F\epsilon_0}\cong F(A)$$
+$$L_0F(A)=H_0(F(P))=\frac{F(P_0)}{\im Fd_1}=\frac{F(P_0)}{\ker F\epsilon_0}\cong F(A)$$
 
 To show that the $L_\bullet F$ form a homological $\delta$-functor, we must first show that they are additive functors, and then construct the connecting maps $\delta$. We divide this into two steps.
 
@@ -137,7 +137,7 @@ $$0 \rightarrow F(P_\bullet) \rightarrow F(Q_\bullet) \rightarrow F(R_\bullet) \
 
 is also a short exact sequence ([\[Multilinear Algebra\] §Hom and the Tensor Product, ⁋Proposition 1](/en/math/multilinear_algebra/hom_and_tensor#prop1)), and considering the homology sequence here, we obtain the desired connecting maps and the long exact sequence of left derived functors
 
-$$\cdots\overset{\partial}{\longrightarrow}L_iF(A')\longrightarrow L_iF(A)\longrightarrow L_iF(A'')\overset{\partial}{\longrightarrow}L_{i-1}F(A')\longrightarrow L_{i-1}F(A)\longrightarrow L_iF(A'')\overset{\partial}{\longrightarrow}\cdots$$
+$$\cdots\overset{\partial}{\longrightarrow}L_iF(A)\longrightarrow L_iF(B)\longrightarrow L_iF(C)\overset{\partial}{\longrightarrow}L_{i-1}F(A)\longrightarrow L_{i-1}F(B)\longrightarrow L_{i-1}F(C)\overset{\partial}{\longrightarrow}\cdots$$
 
 That the information thus obtained satisfies the second condition of [Definition 1](#def1) follows from [§Resolutions, ⁋Theorem 6](/en/math/homological_algebra/resolutions#thm6).
 :::

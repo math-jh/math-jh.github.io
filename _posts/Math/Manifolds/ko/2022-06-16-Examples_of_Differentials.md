@@ -45,7 +45,7 @@ $$v=d\varphi^{-1}_{\varphi(p)}\left(\frac{\partial}{\partial r^1}\bigg\vert_0\ri
 
 $$\gamma: t\mapsto \varphi^{-1}(t, 0,\cdots, 0)$$
 
-의 $t=0$에서의 속도벡터가 되기 때문이다. 참고로 위의 조건을 만족하는 coordinate system을 찾는 것은 아주 쉬운데, 임의의 coordinate system $(U,\psi)$를 하나 고른 후, $d\psi_p(v)$가 옮겨진 벡터를 포함하는 $\mathbb{R}^n$의 새로운 기저를 만든 후, 원래의 $\psi$와 이렇게 얻어진 change of basis를 합성하면 된다.
+의 $t=0$에서의 속도벡터가 되기 때문이다. 참고로 위의 조건을 만족하는 coordinate system을 찾는 것은 아주 쉬운데, 임의의 coordinate system $(U,\psi)$를 하나 고른 후, $d\psi_p(v)$가 옮겨진 벡터를 포함하는 $\mathbb{R}^n$의 새로운 basis를 만든 후, 원래의 $\psi$와 이렇게 얻어진 change of basis를 합성하면 된다.
 :::
 
 특별히 $M=\mathbb{R}^m$인 경우, $T_{\gamma(t)}M$의 basis는
@@ -100,7 +100,7 @@ $$\frac{\partial}{\partial r^1}\bigg\vert_x,\cdots,\frac{\partial}{\partial r^m}
 
 이 동일한 것임을 이용하면 보일 수 있다. 사실 이 isomorphism은 basis의 선택에 의존하지 않는데, 임의의 $v\in\mathbb{R}^m$에 대하여
 
-$$D_v\vert_x: f\mapsto \lim_{h\rightarrow 0}\frac{f(x+tv)-f(x)}{t}$$
+$$D_v\vert_x: f\mapsto \lim_{t\rightarrow 0}\frac{f(x+tv)-f(x)}{t}$$
 
 로 정의된 방향미분을 대응시키는 것이 이 isomorphism이기 때문이다. 
 
@@ -133,7 +133,7 @@ $$(D_{\alpha v}\vert_x)f=\lim_{t\rightarrow 0}\frac{f(x+t\alpha v)-f(x)}{t}=\alp
 
 $$v\mapsto L(v)\mapsto D_{L(v)}\vert_{L(x)}$$
 
-로 옮겨진다. 한편 $V\mapsto T_xV\mapsto T_{L(x)}W$를 따르면 우선 $V\mapsto T_xV$에 의하여
+로 옮겨진다. 한편 $V\rightarrow T_xV\rightarrow T_{L(x)}W$를 따르면 우선 $V\rightarrow T_xV$에 의하여
 
 $$v\mapsto D_v\vert_x$$
 
@@ -217,5 +217,5 @@ $$T_p^\ast M\cong (\mathfrak{m}_p/\mathfrak{m}_p^2)^{\ast\ast}\cong\mathfrak{m}_
 
 ---
 
-[^1]: 더 정확하게는 점 $$p$$에서 같은 속도벡터를 갖는 곡선들은 동일하게 취급하여 equivalence relation을 주어야 한다.
+[^1]: 더 정확하게는 점 $p$에서 같은 속도벡터를 갖는 곡선들은 동일하게 취급하여 equivalence relation을 주어야 한다.
 [^2]: [명제 2](#prop2)에 의해 이러한 곡선은 적어도 하나 존재한다.

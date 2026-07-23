@@ -99,7 +99,7 @@ $$Z_n=\ker(d_{n-1}),\qquad B_n=\im(d_n)$$
 
 으로 표기하며, 이들의 원소들은 각각 *$n$-cycle*과 *$n$-boundary*라 부른다. $C_n$의 원소는 *$n$-chain*이라 부른다. 어렵지 않게 다음의 monomorphism들
 
-$$Z_n \hookrightarrow B_n \hookrightarrow C_n$$
+$$B_n \hookrightarrow Z_n \hookrightarrow C_n$$
 
 이 존재함을 확인할 수 있으며, 이 때 cokernel $Z_n/B_n$을 $A_\bullet$의 *$n$-th homology*라 부르고 $H_n(A_\bullet)$ 혹은 간단히 $H_n(A)$로 적는다. 
 
@@ -176,4 +176,4 @@ $F$가 contravariant였더라도 위의 정의와 마찬가지로 left exactness
 
 ---
 
-[^1]: 이들이 실제로 집합이라는 것은 $$B^A$$가 집합이라는 사실로부터 자명하다. 따라서, 해당 예시에서 다룬 대수적 구조들의 카테고리는 모두 국소적으로 작은 카테고리이다. 
+[^1]: 이들이 실제로 집합이라는 것은 $B^A$가 집합이라는 사실로부터 자명하다. 따라서, 해당 예시에서 다룬 algebraic structure들의 category는 모두 locally small category이다. 

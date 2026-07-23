@@ -13,7 +13,7 @@ weight: 3
 
 ---
 
-이제 우리는 국소화의 추가적인 성질들에 대해 살펴본다. 이 글의 첫 번째 목표는 앞선 글에서 살펴본 가군의 국소화와 환의 국소화 사이에 밀접한 관계가 있다는 것을 증명하는 것이다. 이 글에서 ring $A$, $A$의 multiplicative subset $S$와 $A$-module $M$을 고정한다. 
+이제 우리는 localization의 추가적인 성질들에 대해 살펴본다. 이 글의 첫 번째 목표는 앞선 글에서 살펴본 가군의 localization과 ring의 localization 사이에 밀접한 관계가 있다는 것을 증명하는 것이다. 이 글에서 ring $A$, $A$의 multiplicative subset $S$와 $A$-module $M$을 고정한다. 
 
 ## 국소화와 Hom, tensor
 
@@ -40,7 +40,7 @@ $$\frac{1}{s}\otimes x=\frac{1}{s'}\otimes x'$$
 
 특히 이를 이용하여 module의 localization의 functoriality 또한 보일 수 있다. 임의의 $u: M \rightarrow M'$에 대하여 $S^{-1}M \rightarrow S^{-1}M'$을 다음 함수
 
-$$S^{-1}\otimes_A u: S^{-1}\otimes_AM \rightarrow S^{-1}\otimes_AM'$$
+$$S^{-1}A\otimes_A u: S^{-1}A\otimes_AM \rightarrow S^{-1}A\otimes_AM'$$
 
 의 양 변을 localization과 동일시하여 정의하면 되기 때문이다. 일반적으로 tensor product는 right exact이지만, 이 경우에는 exact functor가 된다.
 
@@ -98,7 +98,7 @@ $$\alpha: E\otimes_A\Hom_A(A, N) \rightarrow\Hom_E(E\otimes_AM, E\otimes_AN)$$
 
 에 넣을 수 있으므로 주어진 명제가 성립한다. 여기서 수직 방향 함수는 각각 isomorphism 
 
-$$\Hom_A(A,N)\cong N,\qquad \Hom_E(E\otimes_A,E\otimes_AN)\cong\Hom_E(E,E\otimes_AN)\cong E\otimes_AN$$
+$$\Hom_A(A,N)\cong N,\qquad \Hom_E(E\otimes_AM,E\otimes_AN)\cong\Hom_E(E,E\otimes_AN)\cong E\otimes_AN$$
 
 에서 온 것들이다. 그 후, $\Hom$과 $\otimes$는 유한한 direct sum과 commute하므로 이 명제는 flat $A$-module $E$와 임의의 finitely generated free $A$-module $M$에 대해서도 성립하며, 마지막으로 $M$이 finitely presented인 경우는 다음의 free presentation
 

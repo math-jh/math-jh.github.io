@@ -24,12 +24,12 @@ In this post we examine Serre duality, the algebraic-geometry version of duality
 
 ## Serre Duality on Projective Space
 
-We first look carefully at the case $X=\mathbb{P}^n$. We know that every line bundle on $\mathbb{P}^n$ is of the form $\mathcal{O}(d)$, and in particular we saw in [[§Canonical Bundle, ⁋Proposition 7](/en/math/algebraic_varieties/canonical_bundle#prop7) that this is $\mathcal{O}(-n-1)$. Then from [[§Cohomology of Projective Spaces, ⁋Proposition 1](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1) we obtain the following.
+We first look carefully at the case $X=\mathbb{P}^n$. We know that every line bundle on $\mathbb{P}^n$ is of the form $\mathcal{O}(d)$, and in particular we saw in [§Canonical Bundle, ⁋Proposition 7](/en/math/algebraic_varieties/canonical_bundle#prop7) that this is $\mathcal{O}(-n-1)$. Then from [§Cohomology of Projective Spaces, ⁋Proposition 1](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1) we obtain the following.
 
 ::: Proposition 1
 For the canonical line bundle $\omega_X$ on projective space $X=\mathbb{P}^n$, there exists an isomorphism
 
-$H^n(X, \omega_X)\cong \mathbb{K}$.
+$$H^n(X, \omega_X)\cong \mathbb{K}$$
 :::
 
 In general this is understood as the isomorphism explicitly taking $\x_0^{-1}\cdots\x_n^{-1}$ as a basis, but it is determined only up to scalar multiplication. Choosing such a normalization is the same as concretely choosing a *trace map* $\tr:H^n(\mathbb{P}^n, \omega_{\mathbb{P}^n}) \rightarrow \mathbb{K}$.
@@ -52,7 +52,7 @@ and then, using the isomorphism $\mathcal{E}\otimes \mathcal{E}^\vee\rightarrow 
 
 $$H^k(\mathbb{P}^n, \mathcal{E})\times H^{n-k}(\mathbb{P}^n, \omega_{\mathbb{P}^n}\otimes\mathcal{E}^\vee)\rightarrow \mathbb{K}$$
 
-We show non-degeneracy for the case of $\mathcal{O}(d)$ by direct computation in [[§Cohomology of Projective Spaces, ⁋Proposition 1](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1), and we can extend this non-degeneracy to general locally free sheaves $\mathcal{E}$ using the syzygy theorem.
+We show non-degeneracy for the case of $\mathcal{O}(d)$ by direct computation in [§Cohomology of Projective Spaces, ⁋Proposition 1](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1), and we can extend this non-degeneracy to general locally free sheaves $\mathcal{E}$ using the syzygy theorem.
 
 From the discussion so far we obtain the following.
 
@@ -75,7 +75,7 @@ $$H^i(X, \mathcal{E}) \cong H^{n-i}(X, \omega_X \otimes \mathcal{E}^\vee)^\ast$$
 ::: Example 3
 Let us look concretely at [Proposition 2](#prop2) on $\mathbb{P}^2$. Here $\omega_{\mathbb{P}^2} \cong \mathcal{O}(-3)$, so what Serre duality asserts is the isomorphism $H^k(\mathbb{P}^2, \mathcal{O}(d)) \cong H^{2-k}(\mathbb{P}^2, \mathcal{O}(-d-3))^\ast$.
 
-First for the case $d=0$, by [[§Cohomology of Projective Spaces, ⁋Proposition 1](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1) we have
+First for the case $d=0$, by [§Cohomology of Projective Spaces, ⁋Proposition 1](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1) we have
 
 $$H^0(\mathbb{P}^2, \mathcal{O}) = \mathbb{K},\qquad H^1(\mathbb{P}^2, \mathcal{O}) = 0, \qquad H^2(\mathbb{P}^2, \mathcal{O}) = 0$$
 
@@ -87,7 +87,7 @@ so we can see that Serre duality holds. Similarly for the case $d=1$, the only n
 
 $$H^0(\mathbb{P}^2, \mathcal{O}(1)) = \mathbb{K}^3$$
 
-and by Serre duality we must have $H^0(\mathcal{O}(1)) \cong H^2(\mathcal{O}(-4))^\ast$, so $\dim H^2(\mathcal{O}(-4)) = 3$ should hold. Applying [[§Cohomology of Projective Spaces, ⁋Proposition 1](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1) again, the $H^2$ of $\mathcal{O}(-4)$ actually has dimension
+and by Serre duality we must have $H^0(\mathcal{O}(1)) \cong H^2(\mathcal{O}(-4))^\ast$, so $\dim H^2(\mathcal{O}(-4)) = 3$ should hold. Applying [§Cohomology of Projective Spaces, ⁋Proposition 1](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1) again, the $H^2$ of $\mathcal{O}(-4)$ actually has dimension
 
 $$\binom{2+(-4)}{2}=\binom{-2}{2} = 3$$
 

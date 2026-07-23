@@ -33,7 +33,7 @@ $A$-module $M$의 submodule들의 family $(N_i)_{i\in I}$에 대하여, 교집�
 :::
 
 ::: 정의 2
-$A$-module $M$의 부분집합 $X$가 주어졌다 하자. 그럼 $X$를 포함하는 $M$의 submodule 중 가장 작은 것을 $\langle X\rangle$로 적고, 이를 $X$에 의해 생성되는 submodule이라 부른다. 이 경우 $X$를 $\langle X\rangle$의 *생성집합<sub>generating set</sub>*이라 부른다. 
+$A$-module $M$의 부분집합 $X$가 주어졌다 하자. 그럼 $X$를 포함하는 $M$의 submodule 중 가장 작은 것을 $\langle X\rangle$로 적고, 이를 $X$에 의해 생성되는 submodule이라 부른다. 이 경우 $X$를 $\langle X\rangle$의 *generating set<sub>생성집합</sub>*이라 부른다. 
 
 만일 $M$의 어떤 submodule $N$에 대하여, $N=\langle X\rangle$이도록 하는 유한집합 $X$를 찾을 수 있다면 $N$이 *finitely generated<sub>유한생성</sub>*이라 부른다. 
 :::
@@ -51,7 +51,7 @@ $A$-module $M$의 임의의 부분집합 $X$에 대하여, $\langle X\rangle$은
 
 $$\bigoplus_{i\in I} N_i \rightarrow M$$
 
-이 존재한다. 한편 $\bigoplus N_i$는 canonical inclusion들 $N_i\hookrightarrow\bigoplus_{i\in I}N_i$의 합집합에 의해 생성되고, 위의 canonical morphism에 의한 이 합집합의 image가 $\bigoplus N_i$이므로 다음이 성립한다. 
+이 존재한다. 한편 $\bigoplus N_i$는 canonical inclusion들 $N_i\hookrightarrow\bigoplus_{i\in I}N_i$의 합집합에 의해 생성되고, 위의 canonical morphism에 의한 이 합집합의 image가 $\sum N_i$이므로 다음이 성립한다. 
 
 ::: 명제 4
 위에서 정의한 canonical morphism $\bigoplus N_i \rightarrow M$의 image가 $\sum N_i$이다. 
@@ -177,7 +177,7 @@ $$0\longrightarrow M \overset{u}{\longrightarrow}L \overset{v}{\longrightarrow}N
     을 commute하도록 하는 isomorphism $\alpha: L \rightarrow M\oplus N$이 존재한다. 
 :::
 ::: 증명
-우선 3번 조건을 가정하자. 그럼 $r=\pr_M\circ\alpha$로 두면 1번 조건을 얻으며, 비슷하게 canonical inclusion $i_N: N \rightarrow M\oplus N$과 $\alpha$를 합성하여 $s=\alpha^{-1}\circ i_N$으로 두면 2번 조건을 얻는다.
+우선 3번 조건을 가정하자. 그럼 $r=\pr_M\circ\alpha$로 두면 1번 조건을 얻으며, 비슷하게 canonical inclusion $i_N: N \rightarrow M\oplus N$과 $\alpha^{-1}$를 합성하여 $s=\alpha^{-1}\circ i_N$으로 두면 2번 조건을 얻는다.
 
-나머지 방향은 1번과 2번 조건을 각각 가정하고 3번 조건을 보인다. 만일 1번 조건이 성립한다면 $\beta: M\oplus N \rightarrow L$을 $(x,y)\mapsto u(x)+s(y)$로 정의하고, 2번 조건이 성립한다면 $\alpha:L \rightarrow M\oplus N$을 $z\mapsto (r(z), v(z))$로 정의한다. 그럼 [보조정리 9](#lem9)에 의하여 $\alpha,\beta^{-1}$가 3번 조건에서 요구하는 isomorphism을 정의한다는 것을 알 수 있다. 
+나머지 방향은 1번과 2번 조건을 각각 가정하고 3번 조건을 보인다. 만일 1번 조건이 성립한다면 $\alpha:L \rightarrow M\oplus N$을 $z\mapsto (r(z), v(z))$로 정의하고, 2번 조건이 성립한다면 $\beta: M\oplus N \rightarrow L$을 $(x,y)\mapsto u(x)+s(y)$로 정의한다. 그럼 [보조정리 9](#lem9)에 의하여 $\alpha,\beta^{-1}$가 3번 조건에서 요구하는 isomorphism을 정의한다는 것을 알 수 있다. 
 :::

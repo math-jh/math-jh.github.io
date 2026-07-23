@@ -30,7 +30,7 @@ $$\Hom_{K(\mathcal{A})}(A^\bullet, B^\bullet) = \Hom_{\Ch(\mathcal{A})}(A^\bulle
 .
 :::
 
-We can verify that $K(\mathcal{A})$ is an additive category. On the other hand, we already observed in [§The Long Exact Sequence, ⁋Definition 4](/en/math/homological_algebra/long_exact_sequence#def4) that a quasi-isomorphism is generally not an isomorphism in $K(\mathcal{A})$. Therefore, in order to regard quasi-isomorphic chain complexes (up to chain homotopy) as the same, we must forcibly adjoin inverses for quasi-isomorphisms.
+We can verify that $K(\mathcal{A})$ is an additive category. On the other hand, we already observed in [§Long Exact Sequence, ⁋Definition 4](/en/math/homological_algebra/long_exact_sequence#def4) that a quasi-isomorphism is generally not an isomorphism in $K(\mathcal{A})$. Therefore, in order to regard quasi-isomorphic chain complexes (up to chain homotopy) as the same, we must forcibly adjoin inverses for quasi-isomorphisms.
 
 ::: Definition 2
 The *derived category* $D(\mathcal{A})$ of an abelian category $\mathcal{A}$ is the Verdier quotient $K(\mathcal{A})/S$ of the homotopy category $K(\mathcal{A})$ by the class $S$ of quasi-isomorphisms.
@@ -54,7 +54,7 @@ $$X\overset{s}{\longleftarrow} A\overset{f}{\longrightarrow}Y,\qquad X\overset{t
 
 . They are equivalent if there exists another object $C$ and a roof
 
-$$A\overset{u}{\longleftarrow} C\overset{h}B$$
+$$A\overset{u}{\longleftarrow} C\overset{h}{\longrightarrow}B$$
 
 such that
 
@@ -185,7 +185,7 @@ $$A \overset{f}{\rightarrow} B \overset{g}{\rightarrow} C \overset{h}{\rightarro
 - (TR4) Octahedral axiom: Given a composition $B \overset{g}{\longrightarrow} C \overset{h}{\longrightarrow} D$, there exist three distinguished triangles forming the associated octahedron.
 :::
 
-The intuition behind a distinguished triangle is that it is the "derived version" of a short exact sequence. In an abelian category, given a short exact sequence $0 \rightarrow A' \overset{f}{\longrightarrow} A \overset{g}{\longrightarrow} A'' \rightarrow 0$, we can view $f$ as a map of complexes $A'[0] \rightarrow A[0]$, and then the mapping cone $C(f)$ is quasi-isomorphic to $A''[0]$. ([§The Long Exact Sequence, ⁋Definition 8](/en/math/homological_algebra/long_exact_sequence#def8)) In other words, a short exact sequence becomes a distinguished triangle in the derived category
+The intuition behind a distinguished triangle is that it is the "derived version" of a short exact sequence. In an abelian category, given a short exact sequence $0 \rightarrow A' \overset{f}{\longrightarrow} A \overset{g}{\longrightarrow} A'' \rightarrow 0$, we can view $f$ as a map of complexes $A'[0] \rightarrow A[0]$, and then the mapping cone $C(f)$ is quasi-isomorphic to $A''[0]$. ([§Long Exact Sequence, ⁋Definition 8](/en/math/homological_algebra/long_exact_sequence#def8)) In other words, a short exact sequence becomes a distinguished triangle in the derived category
 
 $$A'[0] \overset{f}{\rightarrow} A[0] \rightarrow A''[0] \rightarrow A'[1]$$
 
@@ -214,9 +214,7 @@ View $A \rightarrow B$ as a map and let $I_A^\bullet$ and $I_B^\bullet$ be their
 
 ## Derived Adjunction
 
-In category theory, adjunction is one of the most important relationships between two functors. Adjunction also holds in the derived category, and is called *derived adjunction*.
-
-Derived adjunction $L F \dashv R G$ lifts an ordinary adjoint relationship to the derived category; even when $F$ and $G$ are not exact, the correctly computed results via resolutions still form an adjoint pair. Naively applying $F$ or $G$ may break exactness and produce incorrect homology, but using the derived version resolves this problem while preserving the original adjoint structure.
+In category theory, adjunction is one of the most important relationships between two functors. Adjunction also holds in the derived category, and is called *derived adjunction*. Derived adjunction $L F \dashv R G$ lifts an ordinary adjoint relationship to the derived category; even when $F$ and $G$ are not exact, the correctly computed results via resolutions still form an adjoint pair. Naively applying $F$ or $G$ may break exactness and produce incorrect homology, but using the derived version resolves this problem while preserving the original adjoint structure.
 
 ::: Proposition 13
 Let additive functors $F : \mathcal{A} \rightarrow \mathcal{B}$ (right exact) and $G : \mathcal{B} \rightarrow \mathcal{A}$ (left exact) between abelian categories $\mathcal{A}, \mathcal{B}$ form an adjoint pair $F \dashv G$. Then in the derived category
@@ -237,7 +235,7 @@ $$\Hom_{\Ch(\mathcal{B})}(F(P_\bullet), I^\bullet) \cong \Hom_{\Ch(\mathcal{A})}
 . This isomorphism is obtained by assembling the degree-wise adjunctions $\Hom_\mathcal{B}(F(P^n), I^m) \cong \Hom_\mathcal{A}(P^n, G(I^m))$ to the complex level. Since $P_\bullet$ is $K$-projective and $I^\bullet$ is $K$-injective, the left-hand side reduces to $\Hom_{K(\mathcal{B})}(F(P_\bullet), I^\bullet) = \Hom_{D(\mathcal{B})}(L F(A^\bullet), B^\bullet)$, and the right-hand side reduces to $\Hom_{K(\mathcal{A})}(P_\bullet, G(I^\bullet)) = \Hom_{D(\mathcal{A})}(A^\bullet, R G(B^\bullet))$.
 :::
 
-The most representative example is the adjunction between tensor product and Hom. The tensor-Hom adjunction on an abelian category $\mathcal{A}$ seen in [[Multilinear Algebra] §Hom and Tensor Products](/en/math/multilinear_algebra/hom_and_tensor)
+The most representative example is the adjunction between tensor product and Hom. The tensor-Hom adjunction on an abelian category $\mathcal{A}$ seen in [[Multilinear Algebra] §Hom and the Tensor Product](/en/math/multilinear_algebra/hom_and_tensor)
 
 $$\Hom(A \otimes B, C) \cong \Hom(A, \Hom(B, C))$$
 

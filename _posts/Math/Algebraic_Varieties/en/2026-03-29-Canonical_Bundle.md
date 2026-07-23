@@ -20,7 +20,7 @@ Despite the considerable influence that line bundles exert on our geometry, we h
 
 ## Vector Bundles and Quasi-Coherent Sheaves
 
-As mentioned above, to define $\omega_X$ we start from the cotangent bundle $\Omega_X^1$. We have already seen that this is the bundle of differential forms on $X$. Let us verify that this aligns with differentiation in the algebraic setting. ([\[Commutative Algebra\] §Differentials, ⁋Definition 3](/en/math/commutative_algebra/differentials#def3)) To do this, we need to examine the process of transporting an $A$-module $M$ to a vector bundle over $X$ when an affine variety $X$ with its coordinate ring $A$ and an $A$-module $M$ are given. 
+As mentioned above, to define $\omega_X$ we start from the cotangent bundle $\Omega_X^1$. We have already seen that this is the bundle of differential forms on $X$. Let us verify that this aligns with differentials in the algebraic setting. ([\[Commutative Algebra\] §Differentials, ⁋Definition 3](/en/math/commutative_algebra/differentials#def3)) To do this, we need to examine the process of transporting an $A$-module $M$ to a vector bundle over $X$ when an affine variety $X$ with its coordinate ring $A$ and an $A$-module $M$ are given. 
 
 Our basic philosophy is that using [§Affine Varieties](/en/math/algebraic_varieties/affine_varieties), we can translate a homomorphism between coordinate *rings* into a morphism between varieties in the opposite direction, and thus obtain a bundle defined on $X$. However, the problem is that $M$ is not a ring: multiplication is not defined on $M$. Yet according to [\[Multilinear Algebra\] §Tensor Algebras, ⁋Definition 5](/en/math/multilinear_algebra/tensor_algebras#def5), we can consider the symmetric algebra $\S(M)$, which forcibly defines a (commutative) multiplication on $M$. 
 
@@ -200,7 +200,7 @@ $$0\rightarrow \mathcal{T}_D\rightarrow \mathcal{T}_X\vert_D\rightarrow \mathcal
 
 exists. Then we can verify that the dual of this normal bundle $\mathcal{N}_{D/X}$ is precisely $\mathcal{I}_D/\mathcal{I}_D^2$. For this reason we call this the *conormal sheaf*, and specifically this is obtained by verifying
 
-$$0 \rightarrow \mathcal{I}_D/\mathcal{I}_D^2\rightarrow \Omega_X^1\lvert D\rightarrow \Omega_D^1\rightarrow 0$$
+$$0 \rightarrow \mathcal{I}_D/\mathcal{I}_D^2\rightarrow \Omega_X^1\vert_D\rightarrow \Omega_D^1\rightarrow 0$$
 
 which corresponds to the dual of the above short exact sequence. Here the first arrow is given by $f\mapsto df$. Taking the top exterior power of this short exact sequence yields the following.
 

@@ -150,7 +150,7 @@ Consider a topological space $X$ and a filter $\mathcal{F}$ defined on it. ([§E
 [Definition 13](#def13) generalizes the convergence of sequences. To verify this, we first need to define the following.
 
 ::: Definition 14
-Let a filter $\mathcal{F}$ be defined on a set $X$, and let $X$ be a topological space. For a function $f:X \rightarrow Y$, we say that $y\in Y$ is a *limit point* of $f$ with respect to $\mathcal{F}$ if $y$ is a limit point of the filter ${\uparrow}f(\mathcal{F})$. ([§Equivalent Definitions of Topological Spaces, ⁋Proposition 7](/en/math/topology/equivalent_formulations_of_topology#prop7))
+Let a filter $\mathcal{F}$ be defined on a set $X$, and let $Y$ be a topological space. For a function $f:X \rightarrow Y$, we say that $y\in Y$ is a *limit point* of $f$ with respect to $\mathcal{F}$ if $y$ is a limit point of the filter ${\uparrow}f(\mathcal{F})$. ([§Equivalent Definitions of Topological Spaces, ⁋Proposition 7](/en/math/topology/equivalent_formulations_of_topology#prop7))
 :::
 
 Then by definition, $y\in Y$ being a limit point of $f$ with respect to $\mathcal{F}$ means that for every neighborhood $V$ of $y$, there exists $F\in \mathcal{F}$ such that $f(F)\subseteq V$. In particular, the following holds.
@@ -165,7 +165,7 @@ Thus we see that convergence of filters generalizes convergence of sequences. Mo
 For a topological space $X$ and an arbitrary subset $A\subseteq X$, the following are equivalent: $x\in\cl(A)$, and there exists a filter $\mathcal{F}$ on $A$ converging to $x$.
 :::
 ::: Proof
-First, suppose there exists a filter $\mathcal{F}$ on $A$ converging to $x$. That is, $\mathcal{F}$ contains the element $A$ and the collection of subsets $\mathcal{N}(x)$. Hence by the definition of a filter, for every neighborhood $U\in \mathcal{N}(x)$ we have $U\cap A\neq\emptyset$.
+First, suppose there exists a filter $\mathcal{F}$ on $A$ converging to $x$. That is, $\mathcal{F}$ contains $A$ as an element and contains $\mathcal{N}(x)$ as a subset. Hence by the definition of a filter, for every neighborhood $U\in \mathcal{N}(x)$ we have $U\cap A\neq\emptyset$.
 
 Conversely, suppose $x\in \cl(A)$. Then for every neighborhood $U$ of $x$ we have $U\cap A\neq\emptyset$, so the following expression
 

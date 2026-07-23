@@ -33,7 +33,7 @@ If we visualize the elements of the $E_r$ page as points $(p,q)$ in the plane, t
 
 Drawing on our experience, if we view a spectral sequence as arising from the total complex of some double complex, then the differentials on each page can be thought of as a careful analysis of the components of the differential on the total complex, namely
 
-$$d^n:\bigoplus_{p+q=n}C^{p,q}\rightarrow \bigoplus_{p+q=n+1}C^{p+q}$$
+$$d^n:\bigoplus_{p+q=n}C^{p,q}\rightarrow \bigoplus_{p+q=n+1}C^{p,q}$$
 
 We analyzed this, and our main goal was ultimately to compute the homology of this total complex. Toward this end, in the proof of [§Ext and Tor, ⁋Proposition 3](/en/math/homological_algebra/ext_and_tor#prop3) we defined a filtration using the horizontal and vertical degrees of the total complex $A^\bullet=\Tot(K)^\bullet$. Thus we need to introduce the notion of a *filtered complex* in greater generality.
 
@@ -49,7 +49,7 @@ $$\cdots \supset F^{p-1}A^\bullet \supset F^pA^\bullet \supset F^{p+1}A^\bullet 
 A cochain complex equipped with a (decreasing) filtration is called a *filtered complex*, denoted $(A^\bullet, F)$.
 :::
 
-In particular, since each $F^p A^\bullet$ is a subcomplex of $A^\bullet$, the differential of $A^\bullet$ restricts to $F^pA^\bullet$ and the cohomology with respect to this restricted differential is well defined. Intuitively, as $p$ increases, $F^p A^\bullet$ becomes smaller, and one can understand that new information is added at each stage. In the proof of [§Ext and Tor, ⁋Proposition 3](/en/math/homological_algebra/ext_and_tor#prop3) above, we considered $F^{p+1}A^\bullet/F^pA^\bullet$ in order to apply induction and identified this with the original double complex $K^{p, \bullet-p}$; in the general case too, this information is important in that it *exactly* captures the $p$-th filtration step. The cochain complex obtained in this way,
+In particular, since each $F^p A^\bullet$ is a subcomplex of $A^\bullet$, the differential of $A^\bullet$ restricts to $F^pA^\bullet$ and the cohomology with respect to this restricted differential is well defined. Intuitively, as $p$ increases, $F^p A^\bullet$ becomes smaller, and one can understand that new information is added at each stage. In the proof of [§Ext and Tor, ⁋Proposition 3](/en/math/homological_algebra/ext_and_tor#prop3) above, we considered $F^pA^\bullet/F^{p+1}A^\bullet$ in order to apply induction and identified this with the original double complex $K^{p, \bullet-p}$; in the general case too, this information is important in that it *exactly* captures the $p$-th filtration step. The cochain complex obtained in this way,
 
 $$\gr^p A^\bullet = F^p A^\bullet / F^{p+1} A^\bullet$$
 
@@ -122,7 +122,7 @@ $$d_r^{p,q}([x])=[dx]\in E_r^{p+r, q-r+1}\tag{$\ast$}$$
 Of course, verifying that this correspondence is well defined and actually defines a differential requires somewhat involved calculations ([link](https://stacks.math.columbia.edu/tag/012K)), but what matters is that the elements of $E_r^{p,q}$ can be characterized by the following two conditions:
 
 - $dx\in F^{p+r}C^{p+q+1}$, and
-- If $x,y\in F^{p+r}C^{p+q}$ differ only by a boundary of the $(r-1)$-th stage, then $x$ and $y$ are identified.
+- If $x,y\in F^{p}C^{p+q}$ differ only by a boundary of the $(r-1)$-th stage, then $x$ and $y$ are identified.
 
 In particular, what ($\ast$) reveals is that all the $d_r$ are essentially the same map as $d$, and the index $r$ serves only to measure how far across the filtration one jumps. That is, the following holds.
 
@@ -141,7 +141,7 @@ Let $f : (A^\bullet, F) \rightarrow (B^\bullet, G)$ be a chain map between filte
 
 $$f(F^p A^\bullet) \subset G^p B^\bullet$$
 
-holds. Then $f$ induces a well-defined map $f_r : E_r(A) \rightarrow E_r(B)$ for each $r$.
+holds. Then $f$ induces a well-defined morphism $f_r : E_r(A) \rightarrow E_r(B)$ for each $r$.
 :::
 ::: Proof
 Since $f$ is a chain map, it sends cocycles to cocycles and boundaries to boundaries. Also, since $f(F^p) \subset G^p$, we have $f(Z_r^{p,q}(A)) \subset Z_r^{p,q}(B)$ and $f(B_r^{p,q}(A)) \subset B_r^{p,q}(B)$. Therefore $f$ induces a well-defined map on each $E_r$.

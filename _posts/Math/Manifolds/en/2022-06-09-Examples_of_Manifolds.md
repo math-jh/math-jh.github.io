@@ -91,7 +91,7 @@ Then $f$ is $C^\infty$ on $D^n$, and moreover it defines a homeomorphism between
 
 Furthermore, the following collection of these $U_i^\pm$ and the projections $\varphi_i^\pm$ onto the $n$ coordinates omitting the $i$-th coordinate
 
-$$\mathcal{A}=\{(U_i^\pm, \varphi_i^\pm\mid i=1,2,\ldots, n+1\}$$
+$$\mathcal{A}=\{(U_i^\pm, \varphi_i^\pm)\mid i=1,2,\ldots, n+1\}$$
 
 forms an atlas. To verify this, we must show that the charts constituting this atlas are pairwise $C^\infty$-compatible. $U_i^+$ and $U_i^-$ do not meet, so they are trivially $C^\infty$-compatible with each other. Let two charts $(U_i^\pm, \varphi_i^\pm)$ and $(U_j^\pm,\varphi_j^\pm)$ with distinct indices $i,j$ be given. Then first, under $(\varphi_i^\pm)^{-1}$,
 
@@ -109,9 +109,9 @@ The differentiable structure defined on $S^n$ is a typical example of a manifold
 ::: Example 7
 Let $U$ be a subset of $\mathbb{R}^n$ and let $F$ be a $C^\infty$ function defined on $U$. Then the *level set* $M=F^{-1}(c)$ is well defined. If in addition the following *Jacobian matrix* 
 
-$$\begin{pmatrix}\frac{\partial F^1}{\partial x^1}&\frac{\partial F^1}{\partial x^2}&\cdots&\frac{\partial F^1}{\partial x^n}\\\frac{\partial F^2}{\partial x^1}&\frac{\partial F^2}{\partial x^2}&\cdots&\frac{\partial F^2}{\partial x^n}\\\vdots&\vdots&\ddots&\vdots\\\frac{\partial F^n}{\partial x^1}&\frac{\partial F^n}{\partial x^2}&\cdots&\frac{\partial F^n}{\partial x^n}\end{pmatrix}$$
+$$\begin{pmatrix}\frac{\partial F}{\partial x^1}&\frac{\partial F}{\partial x^2}&\cdots&\frac{\partial F}{\partial x^n}\end{pmatrix}$$
 
-is never zero; that is, for each point $a\in M$ there exists some $i$ such that the column vector $dF/dx^i$ is not the zero vector. Then by the implicit function theorem, in a suitable open neighborhood of the point $a$, $M$ is the graph of a function $f$ of the form
+is never zero; that is, for each point $a\in M$ there exists some $i$ such that $\frac{\partial F}{\partial x^i}$ is nonzero. Then by the implicit function theorem, in a suitable open neighborhood $U$ of the point $a$, $M$ is the graph of a function $f$ of the form
 
 $$x^i=f(x^1,\ldots, \hat{x}^i,\ldots, x^n)$$
 
@@ -125,7 +125,7 @@ $$F(x^1,\ldots, x^{n+1})=(x^1)^2+(x^2)^2+\cdots+(x^{n+1})^2-1$$
 defined on $\mathbb{R}^{n+1}$; hence [Example 6](#ex6) can be seen as a special case of the above example.
 
 ::: Example 8
-Suppose a relation on the set $\mathbb{R}^{n+1}\setminus\{0\}$ is defined by $x\sim y\iff \exists\lambda(x=\lambda y)$. It is not hard to check that $\sim$ is an equivalence relation. Now consider the quotient set $\RP^n=\RP^n/\sim$ with the quotient topology defined via the canonical projection $\pi:\mathbb{R}^{n+1}\setminus\{0\}\rightarrow \RP^n$, and let $[x]$ be the representative of $x\in\mathbb{R}^{n+1}\setminus\{0\}$. 
+Suppose a relation on the set $\mathbb{R}^{n+1}\setminus\{0\}$ is defined by $x\sim y\iff \exists\lambda(x=\lambda y)$. It is not hard to check that $\sim$ is an equivalence relation. Now consider the quotient set $\RP^n=(\mathbb{R}^{n+1}\setminus\{0\})/\sim$ with the quotient topology defined via the canonical projection $\pi:\mathbb{R}^{n+1}\setminus\{0\}\rightarrow \RP^n$, and let $[x]$ be the representative of $x\in\mathbb{R}^{n+1}\setminus\{0\}$. 
 
 For each $i=1,\ldots, n+1$, consider the open subset
 
@@ -149,11 +149,15 @@ On the other hand, considering the transition maps between these $(U_i,\varphi_i
 
 $$(u^1, \ldots, u^n)\mapsto [u^1, \ldots, u^{j-1}, 1, u^j,\ldots, u^n]$$
 
-and then applying $\varphi_i$,
+and then applying $\varphi_i$, the result depends on whether $i<j$ or $i>j$. If $i<j$,
 
-$$[u^1, \ldots, u^{j-1}, 1, u^j,\ldots, u^n]\mapsto \left(\frac{u^1}{u^i},\ldots,\frac{u^{j-1}}{u^i}, \frac{1}{u^i}, \frac{u^j}{u^i},\ldots, \frac{u^{i-1}}{u^i},\frac{u^{i+1}}{u^i},\ldots, \frac{u^{n+1}}{u^i}\right)$$
+$$[u^1, \ldots, u^{j-1}, 1, u^j,\ldots, u^n]\mapsto \left(\frac{u^1}{u^i},\ldots,\frac{u^{i-1}}{u^i},\frac{u^{i+1}}{u^i},\ldots,\frac{u^{j-1}}{u^i}, \frac{1}{u^i}, \frac{u^j}{u^i},\ldots, \frac{u^n}{u^i}\right)$$
 
-so they are $C^\infty$-compatible.
+while if $i>j$,
+
+$$[u^1, \ldots, u^{j-1}, 1, u^j,\ldots, u^n]\mapsto \left(\frac{u^1}{u^{i-1}},\ldots,\frac{u^{j-1}}{u^{i-1}}, \frac{1}{u^{i-1}}, \frac{u^j}{u^{i-1}},\ldots, \frac{u^{i-2}}{u^{i-1}},\frac{u^i}{u^{i-1}},\ldots, \frac{u^n}{u^{i-1}}\right)$$
+
+so in either case they are $C^\infty$-compatible.
 :::
 
 Finally, let us look at a slightly more general example.
@@ -174,4 +178,4 @@ $$\mathcal{A}=\{(U_\alpha\times V_\beta,\varphi_\alpha\times\psi_\beta)\mid (U_\
 
 ---
 
-[^1]: In fact, since this function is a map from a subset of $$\RP^n$$ to $$\mathbb{R}^n$$, we must show that the right-hand side does not depend on the choice of representative. That is, even if we choose $$[\lambda x^1,\ldots, \lambda x^{n+1}]$$ as the representative, the same result must come out, and this is clear from the formula.
+[^1]: In fact, since this function is a map from a subset of $\RP^n$ to $\mathbb{R}^n$, we must show that the right-hand side does not depend on the choice of representative. That is, even if we choose $[\lambda x^1,\ldots, \lambda x^{n+1}]$ as the representative, the same result must come out, and this is clear from the formula.

@@ -35,7 +35,7 @@ $$\rho:G\rightarrow \Aut(V)$$
 
 이 글에서 중요한 역할을 했던 것은 group $G$가 유한군이라는 사실이었다. 가령 $G$의 모든 원소에 대해 평균을 내는 아이디어는 이러한 사실을 바탕으로 했다. 이를 Lie group으로 일반화하기 위해서는 $G$에 어떠한 종류의 유한성을 강제해야 한다. 
 
-우리는 따라서 $G$가 *compact* Lie group인 경우를 종종 다루게 된다. 이 경우, locally compact Hausdorff space로서 $G$ 위에는 Haar measure가 존재하며 따라서 $G$의 원소들에 대한 합을 $G$ 전체에 대한 적분으로 바꿔 쓸 수 있다. 물론 이를 위해서는 $\delta_x$ 함수를 잘 정의하고, 함수공간을 적당한 공간으로 일반화하는 작업을 거쳐야 하지만 이러한 작업은 우리의 현재 목적이 아니므로 생략하기로 혼다. 중요한 것은 리 군의 표현론 또한 유한군의 표현론과 같은 방법론을 통해 접근할 수 있다는 것이다. 특히 임의의 finite-dimensional representation은 irreducible decomposition들의 direct sum으로 나타낼 수 있다. 
+우리는 따라서 $G$가 *compact* Lie group인 경우를 종종 다루게 된다. 이 경우, locally compact Hausdorff space로서 $G$ 위에는 Haar measure가 존재하며 따라서 $G$의 원소들에 대한 합을 $G$ 전체에 대한 적분으로 바꿔 쓸 수 있다. 물론 이를 위해서는 $\delta_x$ 함수를 잘 정의하고, 함수공간을 적당한 공간으로 일반화하는 작업을 거쳐야 하지만 이러한 작업은 우리의 현재 목적이 아니므로 생략하기로 한다. 중요한 것은 Lie group의 표현론 또한 유한군의 표현론과 같은 방법론을 통해 접근할 수 있다는 것이다. 특히 임의의 finite-dimensional representation은 irreducible decomposition들의 direct sum으로 나타낼 수 있다. 
 
 한편, 유한차원 representation $G\rightarrow\Aut(V)$가 주어졌다 할 때, 가장 좋은 점은 이들의 image $\rho(g)$들을 (basis의 선택을 통해) 행렬로 생각할 수 있다는 것이다. 따라서 이를 통해 우리는 행렬과 선형사상에 대한 우리의 도구들을 사용하여 이를 탐구할 수 있다. 
 
@@ -65,7 +65,7 @@ $$T=\overline{\langle t\rangle}$$
 
 $$V=\bigoplus_i V_i$$
 
-을 생각할 수 있다. 여기에서 각각의 $V_\lambda$는 irreducible $T$-representation들이다. 한편, $T$가 abelian이므로 임의의 $t\in T$에 대하여, $\rho(t)$은 $T$-action과 모두 commute하고, 따라서 각각의 $V_i$로 제한하였을 때 $\rho(t)$는 $T$-automorphism이다. 이제 [\[표현론\] §유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)의 두 번째 결과에 의하여 $\rho(t)$는 상수배
+을 생각할 수 있다. 여기에서 각각의 $V_i$는 irreducible $T$-representation들이다. 한편, $T$가 abelian이므로 임의의 $t\in T$에 대하여, $\rho(t)$은 $T$-action과 모두 commute하고, 따라서 각각의 $V_i$로 제한하였을 때 $\rho(t)$는 $T$-automorphism이다. 이제 [\[표현론\] §유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)의 두 번째 결과에 의하여 $\rho(t)$는 상수배
 
 $$\rho(t)(v)=\lambda_i(t)v\qquad \lambda_i(t)\in \mathbb{C}^\times$$
 
@@ -145,7 +145,7 @@ $$q: G/T\times T\rightarrow G; \qquad (g,t)\mapsto gtg^{-1}$$
 
 이 surjective라는 것이다. 그럼 특히 임의의 다른 torus $T'$와 그 generator $t'$에 대하여 $gtg^{-1}=t'$을 만족하는 $t\in T$를 찾을 수 있을 것이고, $T$와 $T'$의 maximality를 각각 사용하면 위에서 언급한 두 주장이 증명될 것이다. 
 
-우리는 이 map이 surjective라는 것 뿐만 아니라, 명시적인 mappuing degree까지 구해줄 수 있다. 이를 위해 다음을 정의하자. 
+우리는 이 map이 surjective라는 것 뿐만 아니라, 명시적인 mapping degree까지 구해줄 수 있다. 이를 위해 다음을 정의하자. 
 
 ::: 정의 5
 Compact, connected Lie group $G$와 maximal torus $T$, 그리고 $T$의 normalizer
@@ -335,7 +335,7 @@ $$h\cdot[(gT,t)]=[(hgT,t)]$$
 
 한편, 우리는 [명제 10](#prop10)에 의하여 $T/W$와 $\Conj(G)$ 사이에 일대일대응이 존재함을 안다. $c_h$는, 정의에 의해, $G$의 conjugacy class를 변화시키지 않으며 이것이 위의 명제에서 $T$ 방향의 변화가 없는 것으로 반영된 것을 확인할 수 있다. 그 대신 conjugation action은 정확하게 $G/T$ 위에 작용하는 것으로 생각할 수 있다.
 
-이제 $G/T$ 위에서의 $G$-action을 더 자세히 이해하기 위해, 우리는 이 공간을 Weyl group을 이용히여 다시 쓸 것이다. 우선 $N=N(T)$에 대하여, 다음의 projection map
+이제 $G/T$ 위에서의 $G$-action을 더 자세히 이해하기 위해, 우리는 이 공간을 Weyl group을 이용하여 다시 쓸 것이다. 우선 $N=N(T)$에 대하여, 다음의 projection map
 
 $$\pi: G/T\rightarrow G/N;\qquad gT\mapsto gN$$
 
@@ -355,7 +355,7 @@ $$\SU(2)=\{A\in\GL(2;\mathbb{C})\mid A^\dagger A=I,\det A=1\}=\left\{\begin{pmat
 
 $$T=\left\{\begin{pmatrix}e^{i\theta}&0\\0&e^{-i\theta}\end{pmatrix}\,\middle\vert \;\theta\in\mathbb{R}/2\pi\mathbb{Z}\right\}$$
 
-이 $\SU(2)$의 (한) maximal torus라는 것이다. $T$가 $1$차원 torus인 것은 자명하므로, maximalilty만 보이면 충분하다. 이를 위해 $T$를 포함하는 $\SU(2)$의 abelian subgroup $A$가 주어졌다 하면, 임의의 원소
+이 $\SU(2)$의 (한) maximal torus라는 것이다. $T$가 $1$차원 torus인 것은 자명하므로, maximality만 보이면 충분하다. 이를 위해 $T$를 포함하는 $\SU(2)$의 abelian subgroup $A$가 주어졌다 하면, 임의의 원소
 
 $$\begin{pmatrix}a&b\\c&d\end{pmatrix}\in A$$
 
@@ -379,13 +379,13 @@ $$g=\begin{pmatrix}a&b\\c&d\end{pmatrix}$$
 
 라 적으면
 
-$$g \begin{pmatrix}e^{i\theta}&0\\0&e^{-i\theta}\end{pmatrix}g^{-1} = \begin{pmatrix} a & b \\ c & d \end{pmatrix} \begin{pmatrix} e^{i\theta} & 0 \\ 0 & e^{-i\theta} \end{pmatrix} \begin{pmatrix} \overline{a} & \overline{c} \\ \overline{b} & \overline{d} \end{pmatrix} = \begin{pmatrix} \lvert\alpha\rvert^2 e^{i\theta} + \lvert b\rvert^2 e^{-i\theta} & a\overline{c}e^{i\theta} + b\overline{d}e^{-i\theta} \\ c\overline{a}e^{i\theta} + d\overline{b}e^{-i\theta} & \lvert c\rvert^2 e^{i\theta} + \lvert d\rvert^2 e^{-i\theta} \end{pmatrix}$$
+$$g \begin{pmatrix}e^{i\theta}&0\\0&e^{-i\theta}\end{pmatrix}g^{-1} = \begin{pmatrix} a & b \\ c & d \end{pmatrix} \begin{pmatrix} e^{i\theta} & 0 \\ 0 & e^{-i\theta} \end{pmatrix} \begin{pmatrix} \overline{a} & \overline{c} \\ \overline{b} & \overline{d} \end{pmatrix} = \begin{pmatrix} \lvert a\rvert^2 e^{i\theta} + \lvert b\rvert^2 e^{-i\theta} & a\overline{c}e^{i\theta} + b\overline{d}e^{-i\theta} \\ c\overline{a}e^{i\theta} + d\overline{b}e^{-i\theta} & \lvert c\rvert^2 e^{i\theta} + \lvert d\rvert^2 e^{-i\theta} \end{pmatrix}$$
 
 이므로 이것이 $T$에 속하기 위해서는 모든 $\theta$에 대해
 
 $$a\overline{c}e^{i\theta}+b\overline{d}e^{-i\theta}=0$$
 
-이 성립해야 하므로, $a\overline{c}=0$이고 $b\overline{d}=0$이어야 한다. 만일 $a\neq 0$이라면, $\overline{c}=0$이므로 $c=0$이어야 하고, $ad-bc=1$로부터 $d=\overline{a}$이고 따라서 $b\overline{d}=0$으로부터 $b=0$이어야 한다. 즉 이 경우 $g\in T$이다. 만일 $a=0$이라면, $\lvert a\rvert^2+\lvert b\rvert^2=1$이므로 $\lvert b\rvert=1$이고, $ad-bc=1$로부터 $c=\overline{b}$여야 하고 비슷하게 $d=0$이어야 함을 안다. 이로부터 $g$가
+이 성립해야 하므로, $a\overline{c}=0$이고 $b\overline{d}=0$이어야 한다. 만일 $a\neq 0$이라면, $\overline{c}=0$이므로 $c=0$이어야 하고, $ad-bc=1$로부터 $d=\overline{a}$이고 따라서 $b\overline{d}=0$으로부터 $b=0$이어야 한다. 즉 이 경우 $g\in T$이다. 만일 $a=0$이라면, $\lvert a\rvert^2+\lvert b\rvert^2=1$이므로 $\lvert b\rvert=1$이고, $ad-bc=1$로부터 $c=-\overline{b}$여야 하고 비슷하게 $d=0$이어야 함을 안다. 이로부터 $g$가
 
 $$\begin{pmatrix}0&e^{i\alpha}\\ -e^{-i\alpha}&0\end{pmatrix}$$
 

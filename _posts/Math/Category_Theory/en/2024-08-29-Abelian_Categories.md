@@ -96,7 +96,7 @@ $$Z_n=\ker(d_{n-1}),\qquad B_n=\im(d_n)$$
 
 and their elements are called *$n$-cycles* and *$n$-boundaries*, respectively. The elements of $C_n$ are called *$n$-chains*. It is not difficult to verify that the monomorphisms
 
-$$Z_n \hookrightarrow B_n \hookrightarrow C_n$$
+$$B_n \hookrightarrow Z_n \hookrightarrow C_n$$
 
 exist, and in this case we call the cokernel $Z_n/B_n$ the *$n$-th homology* of $A_\bullet$ and write it as $H_n(A_\bullet)$ or simply $H_n(A)$.
 
@@ -171,4 +171,4 @@ Therefore, we may just as well think of the objects of an arbitrary abelian cate
 
 ---
 
-[^1]: That these are actually sets is obvious from the fact that $$B^A$$ is a set. Therefore, the categories of algebraic structures discussed in the corresponding example are all locally small.
+[^1]: That these are actually sets is obvious from the fact that $B^A$ is a set. Therefore, the categories of algebraic structures discussed in the corresponding example are all locally small.

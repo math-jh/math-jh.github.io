@@ -71,17 +71,17 @@ These two manifolds $M_1, M_2$ are diffeomorphic to each other. Define the funct
 
 $$(\psi\circ F\circ \varphi^{-1})(t)=t$$
 
-we have that $\psi\circ\varphi^{-1}$ is $C^\infty$.  
+we have that $\psi\circ F\circ\varphi^{-1}$ is $C^\infty$.  
 Moreover, $F^{-1}$ is also $C^\infty$, because similarly for any point $q\in M_2$, taking the same coordinate systems as above, we have $q\in\mathbb{R}$ and $F^{-1}(\mathbb{R})\subset\mathbb{R}$, and moreover
 
-$$(\psi^{-1}\circ F^{-1}\circ \varphi)(s)=s$$
+$$(\varphi\circ F^{-1}\circ \psi^{-1})(s)=s$$
 
 holds.
 :::
 
 ## Differentials
 
-A manifold is, fundamentally, a space in which differentiation is possible; hence to understand a function between manifolds we must know how it transforms differentials, that is, elements of the tangent space.
+A manifold is, fundamentally, a space in which differentiation is possible; hence to understand a function between manifolds we must know how it transforms derivations, that is, elements of the tangent space.
 
 Let a $C^\infty$ function $F:M\rightarrow N$ between two manifolds be given. The function $F$ naturally induces the function $F^\ast:\mathcal{C}_{N,F(p)}^\infty\rightarrow \mathcal{C}_{M,p}^\infty$ defined by the formula
 
@@ -150,9 +150,9 @@ Then, for any $f\in C^\infty_p(M)$,
 
 $$\frac{\partial}{\partial x^i}\bigg\vert_pf=\frac{\partial}{\partial r^i}\bigg\vert_p (f\circ\varphi^{-1})$$
 
-holds. However, keeping [Definition 7](#def7) in mind and examining this formula again, we see that it has exactly the same form as the differential of $\varphi^{-1}:\varphi(U)\rightarrow U$.[^1] In other words, the basis of the tangent space is nothing other than the $m$ bases of the tangent space $T_{\varphi(p)}\mathbb{R}^m$ of $\mathbb{R}^m$ pulled back via the differential $d\varphi^{-1}_{\varphi(p)}$.
+holds. However, keeping [Definition 7](#def7) in mind and examining this formula again, we see that it has exactly the same form as the differential of $\varphi^{-1}:\varphi(U)\rightarrow U$.[^1] In other words, the basis of the tangent space is nothing other than the $m$ bases of the tangent space $T_{\varphi(p)}\mathbb{R}^m$ of $\mathbb{R}^m$ carried over via the differential $d\varphi^{-1}_{\varphi(p)}$.
 
-From a more linear-algebraic point of view, if $\mathcal{B}$ is the standard basis of $\mathbb{R}^m$ and $\mathcal{C}$ is the basis of $T_pM$ consisting of the $\partial/\partial x^i$, then the matrix representation of the linear map $d\varphi^{-1}_{\varphi(p)}$ from $(T_{\varphi(p)}\mathbb{R}^n, \mathcal{B})$ to $(T_pM, \mathcal{C})$ is precisely the identity matrix.
+From a more linear-algebraic point of view, if $\mathcal{B}$ is the standard basis of $\mathbb{R}^m$ and $\mathcal{C}$ is the basis of $T_pM$ consisting of the $\partial/\partial x^i$, then the matrix representation of the linear map $d\varphi^{-1}_{\varphi(p)}$ from $(T_{\varphi(p)}\mathbb{R}^m, \mathcal{B})$ to $(T_pM, \mathcal{C})$ is precisely the identity matrix.
 
 More generally, let $M,N$ be manifolds of dimensions $m,n$ respectively, and let $F:M\rightarrow N$ be any $C^\infty$ function. Then for a fixed $p\in M$, there exist a coordinate system $(U,\varphi)$ containing $p$ and a coordinate system $(V,\psi)$ containing $F(U)$ such that $\psi\circ F\circ\varphi^{-1}$ is $C^\infty$. Now let $\varphi=(x^i)_{i=1}^{m}$ and $\psi=(y^j)_{j=1}^n$. Then the bases of the tangent spaces $T_pM$ and $T_{F(p)}N$ are given respectively by
 
@@ -188,5 +188,5 @@ In particular, if $M=N$ and $F=\id_M$ but we choose different coordinate systems
 
 ---
 
-[^1]: Of course, for this $$\varphi^{-1}$$ must be $$C^\infty$$, but since the smooth structure on $$U$$ was transferred from that on $$\varphi(U)$$ from the beginning, $$\varphi^{-1}$$ is in fact a diffeomorphism.
-[^2]: For convenience we have assumed $$\psi(F(p))=0$$.
+[^1]: Of course, for this $\varphi^{-1}$ must be $C^\infty$, but since the smooth structure on $U$ was transferred from that on $\varphi(U)$ from the beginning, $\varphi^{-1}$ is in fact a diffeomorphism.
+[^2]: For convenience we have assumed $\psi(F(p))=0$.

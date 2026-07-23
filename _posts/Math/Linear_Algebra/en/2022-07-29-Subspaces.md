@@ -104,11 +104,11 @@ $$\sum_{i=0}^na_i\x^i+\sum_{i=0}^mb_i\x^i=\sum_{i=0}^m c_i\x^i,\qquad c_i=\begin
 
 and in the opposite case
 
-$$\sum_{i=0}^na_i\x^i+\sum_{i=0}^mb_i\x^i=\sum_{i=0}^m c_i'\x^i,\qquad c_i'=\begin{cases}a_i+\beta_i&\text{if $0\leq i\leq m$}\\ a_i&\text{if $m < i\leq n$}\end{cases}.$$
+$$\sum_{i=0}^na_i\x^i+\sum_{i=0}^mb_i\x^i=\sum_{i=0}^n c_i'\x^i,\qquad c_i'=\begin{cases}a_i+b_i&\text{if $0\leq i\leq m$}\\ a_i&\text{if $m < i\leq n$}\end{cases}.$$
 
 Also, for any scalar $\gamma\in\mathbb{K}$,
 
-$$\gamma p(\x)=\gamma\alpha_n\x^n+\gamma\alpha_{n-1}\x^{n-1}+\cdots+\gamma\alpha_1\x+\alpha_0$$
+$$\gamma p(\x)=\gamma\alpha_n\x^n+\gamma\alpha_{n-1}\x^{n-1}+\cdots+\gamma\alpha_1\x+\gamma\alpha_0$$
 
 It is not difficult to verify that these definitions give $\mathbb{K}[\x]$ the structure of a $\mathbb{K}$-vector space.
 

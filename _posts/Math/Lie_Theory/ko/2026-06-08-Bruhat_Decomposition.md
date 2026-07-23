@@ -31,9 +31,9 @@ $$W=\left\langle s_1,\ldots,s_r\;\middle\vert\;(s_is_j)^{m_{ij}}=e\right\rangle$
 여기서 $m_{ii}=1$이고, $i\neq j$에 대하여 $m_{ij}=m_{ji}\in\{2,3,\ldots,\infty\}$이다. 이 때 group $W$ 자체를 *Coxeter group<sub>콕세터 군</sub>*이라 부른다.
 :::
 
-조건 $m_{ii}=1$은 각 generator가 $s_i^2=e$를 만족하는 involution임을 뜻하고, $i\neq j$에 대한 관계 $(s_is_j)^{m_{ij}}=e$는 *braid relation*이라 불린다. 가령 $m_{ij}=2$이면 $s_is_j=s_js_i$, 즉 두 생성원이 commute하며, $m_{ij}=3$이면 $s_is_js_i=s_js_is_j$가 된다. $m_{ij}=\infty$인 경우는 $s_i$와 $s_j$ 사이에 아무런 관계도 부과하지 않음을 의미한다. 
+조건 $m_{ii}=1$은 각 generator가 $s_i^2=e$를 만족하는 involution임을 뜻하고, $i\neq j$에 대한 관계 $(s_is_j)^{m_{ij}}=e$는 *braid relation*이라 불린다. 가령 $m_{ij}=2$이면 $s_is_j=s_js_i$, 즉 두 generator가 commute하며, $m_{ij}=3$이면 $s_is_js_i=s_js_is_j$가 된다. $m_{ij}=\infty$인 경우는 $s_i$와 $s_j$ 사이에 아무런 관계도 부과하지 않음을 의미한다. 
 
-가장 작은 비자명한 경우는 생성원이 둘인 경우다. $S=\{s_1,s_2\}$이고 $m_{12}=m$이면 $(W,S)$는 정확히 order $2m$의 dihedral group이며 ([\[대수적 구조\] §반군, 모노이드, 군, ⁋예시 16](/ko/math/algebraic_structures/groups#ex16)), 두 생성원은 정$m$각형의 인접한 두 대칭축에 대한 reflection으로, 그 곱 $s_1s_2$는 order $m$의 회전으로 실현된다. 일반적인 Coxeter group은 이러한 dihedral 조각들을 생성원을 공유하며 이어붙인 것으로 이해할 수 있다. 실제로 임의의 두 generator $s_i,s_j$가 만드는 부분군 $\langle s_i,s_j\rangle$는 언제나 위수 $2m_{ij}$의 dihedral group이고, [정의 1](#def1)의 presentation이 말하는 핵심은 이러한 pairwise relation 외에 셋 이상의 generator가 얽히는 새로운 relation이 없다는 것이다.
+가장 작은 비자명한 경우는 generator가 둘인 경우다. $S=\{s_1,s_2\}$이고 $m_{12}=m$이면 $(W,S)$는 정확히 order $2m$의 dihedral group이며 ([\[대수적 구조\] §반군, 모노이드, 군, ⁋예시 16](/ko/math/algebraic_structures/groups#ex16)), 두 generator는 정$m$각형의 인접한 두 대칭축에 대한 reflection으로, 그 곱 $s_1s_2$는 order $m$의 회전으로 실현된다. 일반적인 Coxeter group은 이러한 dihedral 조각들을 generator를 공유하며 이어붙인 것으로 이해할 수 있다. 실제로 임의의 두 generator $s_i,s_j$가 만드는 subgroup $\langle s_i,s_j\rangle$는 언제나 order $2m_{ij}$의 dihedral group이고, [정의 1](#def1)의 presentation이 말하는 핵심은 이러한 pairwise relation 외에 셋 이상의 generator가 얽히는 새로운 relation이 없다는 것이다.
 
 이 정수들 $m_{ij}$를 모은 대칭행렬이 Coxeter system의 모든 정보를 담으며, 유한 reflection group은 정확히 유한 Coxeter group으로 특징지어진다.
 
@@ -41,12 +41,12 @@ $$W=\left\langle s_1,\ldots,s_r\;\middle\vert\;(s_is_j)^{m_{ij}}=e\right\rangle$
 Weyl group $W$는 simple reflection들의 집합 $S=\{s_1,\ldots,s_r\}$에 의해 생성되며, $(W,S)$는 Coxeter system을 이룬다. 더욱이 각 $m_{ij}$ ($i\neq j$)는 $2,3,4,6$ 중 하나이다.
 :::
 ::: 증명
-$W$가 reflection들로 생성된다는 것은 [§근계, ⁋정의 17](/ko/math/lie_theory/root_systems#def17)의 정의이다. 두 simple reflection $s_i,s_j$의 곱 $s_is_j$는 $\alpha_i$와 $\alpha_j$가 생성하는 2차원 평면 위에서의 rotation이며, 그 rotation 각도는 두 simple root가 이루는 각의 두 배이다. [§근계](/ko/math/lie_theory/root_systems)에서 확인한 것과 같이 서로 다른 두 simple root가 이룰 수 있는 각은 $90^\circ,120^\circ,135^\circ,150^\circ$ 중 하나이므로, $s_is_j$의 위수 $m_{ij}$는 각각 $2,3,4,6$이 된다. 이들 braid relation만으로 $W$가 완전히 결정된다는 것이 가장 비자명한 부분으로, 이것이 바로 Coxeter의 정리에 해당하는 부분이다.
+$W$가 reflection들로 생성된다는 것은 [§근계, ⁋정의 17](/ko/math/lie_theory/root_systems#def17)의 정의이다. 두 simple reflection $s_i,s_j$의 곱 $s_is_j$는 $\alpha_i$와 $\alpha_j$가 생성하는 2차원 평면 위에서의 rotation이며, 그 rotation 각도는 두 simple root가 이루는 각의 두 배이다. [§근계](/ko/math/lie_theory/root_systems)에서 확인한 것과 같이 서로 다른 두 simple root가 이룰 수 있는 각은 $90^\circ,120^\circ,135^\circ,150^\circ$ 중 하나이므로, $s_is_j$의 order $m_{ij}$는 각각 $2,3,4,6$이 된다. 이들 braid relation만으로 $W$가 완전히 결정된다는 것이 가장 비자명한 부분으로, 이것이 바로 Coxeter의 정리에 해당하는 부분이다.
 :::
 
 우리 경우에 이 정수 $m_{ij}$들은 [§Borel subgroup, ⁋정의 1](/ko/math/lie_theory/borel_subgroup#def1)의 Dynkin diagram에서 곧바로 읽힌다. 두 vertex가 연결되지 않았으면 $m_{ij}=2$, single edge면 $3$, double edge면 $4$, triple edge면 $6$이다. 예컨대 [§Borel subgroup, ⁋정의 8](/ko/math/lie_theory/borel_subgroup#def8)의 그림에서 type $A_{n-1}$의 Weyl group $W=S_n$에서 인접한 두 simple reflection은 $m=3$을 가지므로 익숙한 braid relation $s_is_{i+1}s_i=s_{i+1}s_is_{i+1}$을 만족한다.
 
-Coxeter system $(W,S)$가 주어지면 각 원소를 생성원의 곱으로 표현하는 데 드는 "비용"을 잴 수 있다.
+Coxeter system $(W,S)$가 주어지면 각 원소를 generator의 곱으로 표현하는 데 드는 "비용"을 잴 수 있다.
 
 ::: 정의 3
 Coxeter system $(W,S)$의 원소 $w$에 대하여, $w$의 *length<sub>길이</sub>* $\ell(w)$는 $w$를 simple reflection들의 곱 $w=s_{i_1}\cdots s_{i_k}$로 나타낼 때 필요한 가장 작은 $k$이다. 길이가 $\ell(w)$인 표현을 $w$의 *reduced expression<sub>기약 표현</sub>*이라 한다.
@@ -96,7 +96,7 @@ $$(b_1,b_2)\cdot g=b_1gb_2^{-1}$$
 
 을 생각하는 것이다. 이 action의 orbit이 바로 double coset $BwB$이며, 위의 정리는 이 orbit이 $W$로 index된다는 뜻이다. 
 
-이것이 담고있는 기하학적 의미를 살펴보기 위해 $G=\GL_n(\mathbb{C})$에서의 예시를 살펴보자. 여기서 reference flag $E_i=\span\{e_1,\ldots,e_i\}$를 고정하면, 임의의 flag $V_\bullet$는 $gB$에 대응하는 $V_i=\span\{ge_1,\ldots,ge_i\}$인 것을 살펴보았다. ([§Borel subgroup, ⁋예시 13](/ko/math/lie_theory/borel_subgroup#ex13)) 일반적으로 reference flag $E_\bullet$과 $V_i$가 이루는 위치는 다음의 intersection
+이것이 담고있는 기하학적 의미를 살펴보기 위해 $G=\GL_n(\mathbb{C})$에서의 예시를 살펴보자. 여기서 reference flag $E_i=\span\{e_1,\ldots,e_i\}$를 고정하면, 임의의 flag $V_\bullet$는 $gB$에 대응하는 $V_i=\span\{ge_1,\ldots,ge_i\}$인 것을 살펴보았다. ([§Borel subgroup, ⁋예시 13](/ko/math/lie_theory/borel_subgroup#ex13)) 일반적으로 reference flag $E_\bullet$과 $V_\bullet$가 이루는 위치는 다음의 intersection
 
 $$d_{ij}=\dim(V_i\cap E_j)$$
 
@@ -159,7 +159,7 @@ $$\begin{pmatrix}a&b\\c&d\end{pmatrix}=\begin{pmatrix}1&a/c\\0&1\end{pmatrix}\be
 이제 [명제 6](#prop6)을 따라 이들을 $\GL_2(\mathbb{C})/B\cong \mathbb{P}^1$으로 내리자. 위에서 보았듯 $c=0$에 해당하는 부분은 $B$ 그 자체이므로 이들은 한 점으로 떨어지며, 이는 명제의 $\ell(w)=0$에 해당하는 부분이다. 한편 $c\neq 0$인 부분에서는 위에서 살펴본 것과 같이 하나의 좌표 $a/c$로 매개되는 $\mathbb{P}^1$의 점 $[a:c]\in \mathbb{P}^1$이 나온다. 즉, $c=0$에 해당하는 flag variety의 점은 $[1:0]$이며, 나머지는 $\mathbb{A}^1$의 형태로 여기에 붙어있는 것이다. 
 :::
 
-위의 $\GL_n(\mathbb{C})$의 Bruhat decomposition에서 우리는 Borel subalgebra $B$가 upper triangular matrix라는 것을 활용하여 선형대수학의 언어로 살펴볼 수 있었다. 한편 opposite Bruhat cell은 lower triangular matrix들의 모임이므로, 이들을 활용해도 비슷한 분해를 얻어낼 수 있으며 뿐만 아니라 다음과 같이 mixed decomposition을 생각할 수도 있다.  
+위의 $\GL_n(\mathbb{C})$의 Bruhat decomposition에서 우리는 Borel subgroup $B$가 upper triangular matrix라는 것을 활용하여 선형대수학의 언어로 살펴볼 수 있었다. 한편 opposite Bruhat cell은 lower triangular matrix들의 모임이므로, 이들을 활용해도 비슷한 분해를 얻어낼 수 있으며 뿐만 아니라 다음과 같이 mixed decomposition을 생각할 수도 있다.  
 
 ::: 정리 8 (Birkhoff decomposition)
 $B^-$를 $B$에 대응하는 opposite Borel subgroup이라 하면 다음이 성립한다.
@@ -180,7 +180,7 @@ $$G=w_0Gw_0^{-1}=\bigsqcup_{w\in W}(w_0Bw_0^{-1})(w_0ww_0^{-1})(w_0Bw_0^{-1})=\b
 
 이는 $\GL_n(\mathbb{C})$에서는 그 의미가 명확한데, identity cell $B^-B$는 lower triangular matrix와 upper triangular matrix의 곱으로 나타나는 행렬들, 곧 *LU decomposition*을 갖는 행렬들의 모임이다. 선형대수에서 잘 알려져 있듯 이는 모든 leading principal minor가 $0$이 아닌 행렬들과 정확히 일치하며, 그러한 행렬들은 $\GL_n$ 안에서 open dense이다. 
 
-앞서 [예시 7](#ex7)의 $n=2$ 상황을 생각하면, $2\times2$ 행렬의 leading principal minor는 첫 행 $g_{11}$, 그리고 전체 determinant $\det g$ 둘이다. 그런데 $\GL_2(\mathbb{C})$에서는 $\det g\neq0$이 자동이므로 LU 조건은 $g_{11}\neq0$ 하나로 줄어들게 되므로, $B^-B$의 원소는 정확히 $(1,1)$-성분이 $0$이 아닌 행렬들이며 이는 정확히 첫 pivot이 살아 있어 행 교환 없이 Gauss elimination이 진행되는 성분들이다. 이와 같이, 일반적으로 leading principal minor들은 Gauss elimination의 pivot에 대응하여, 어느 단계에서 minor가 $0$이 되면 그 자리의 pivot이 사라져 행 교환이 불가피해진다. 이 행 교환의 패턴을 기록하는 것이 permutation $w$이며, Birkhoff가 보인 것은 임의의 $g$가
+앞서 [예시 7](#ex7)의 $n=2$ 상황을 생각하면, $2\times2$ 행렬의 leading principal minor는 첫 성분 $g_{11}$, 그리고 전체 determinant $\det g$ 둘이다. 그런데 $\GL_2(\mathbb{C})$에서는 $\det g\neq0$이 자동이므로 LU 조건은 $g_{11}\neq0$ 하나로 줄어들게 되므로, $B^-B$의 원소는 정확히 $(1,1)$-성분이 $0$이 아닌 행렬들이며 이는 정확히 첫 pivot이 살아 있어 행 교환 없이 Gauss elimination이 진행되는 성분들이다. 이와 같이, 일반적으로 leading principal minor들은 Gauss elimination의 pivot에 대응하여, 어느 단계에서 minor가 $0$이 되면 그 자리의 pivot이 사라져 행 교환이 불가피해진다. 이 행 교환의 패턴을 기록하는 것이 permutation $w$이며, Birkhoff가 보인 것은 임의의 $g$가
 
 $$g=LwU\qquad(L\in B^-,\ U\in B,\ w\in W)$$
 
@@ -209,7 +209,7 @@ $P_I=BW_IB$는 $G$의 connected closed subgroup이며, Levi decomposition $P_I=L
 $B=U\rtimes T$이고 $W_I\subseteq W$이므로 $P_I$는 $B$와 $W_I$의 대표원소들로 생성되는 subgroup이다. $W_I$의 각 원소 $w$에 대해 $BwB$는 locally closed이고, 정리 5의 disjointness로부터 이들의 union $P_I$는 well-defined subgroup이자 closed subset이다. Root space 차원에서 보면 $\mathfrak{p}_I$는 $\mathfrak{b}$에 $I$가 생성하는 negative root들의 root space를 더한 것으로, 이를 reductive part $\mathfrak{l}_I$ (양·음 root가 짝지어진 부분)와 nilpotent part $\mathfrak{u}_I$ (나머지 positive root)로 가르면 위의 Levi decomposition을 얻는다. 따라서 $P_I$는 connected closed subgroup이다.
 :::
 
-[명제 10](#prop10)의 Levi decomposition은 Borel subgroup의 분해 $B=U\rtimes T$를 한 단계 키운 것으로 보면 자연스럽다. 즉, $B$가 torus $T$와 위쪽 unipotent $U$의 두 정보로 구성되었듯, $P_I$는 더 큰 reductive part $L_I$와 그 위의 unipotent $U_I$의 semidirect product이다. $I$에 속한 root들은 positive root와 negative root가 짝을 이뤄 살아남아 ($T$를 maximal torus로 갖는) reductive group $L_I$를 이루고, $I$ 밖의 positive root들은 짝이 없어 nilpotent radical $U_I$를 이룬다. 특히 $L_I$의 Weyl group은 정확히 $W_I$로, 바로 아래에서 $W$를 quotient하게 될 그 부분군이다.
+[명제 10](#prop10)의 Levi decomposition은 Borel subgroup의 분해 $B=U\rtimes T$를 한 단계 키운 것으로 보면 자연스럽다. 즉, $B$가 torus $T$와 위쪽 unipotent $U$의 두 정보로 구성되었듯, $P_I$는 더 큰 reductive part $L_I$와 그 위의 unipotent $U_I$의 semidirect product이다. $I$에 속한 root들은 positive root와 negative root가 짝을 이뤄 살아남아 ($T$를 maximal torus로 갖는) reductive group $L_I$를 이루고, $I$ 밖의 positive root들은 짝이 없어 nilpotent radical $U_I$를 이룬다. 특히 $L_I$의 Weyl group은 정확히 $W_I$로, 바로 아래에서 $W$를 quotient하게 될 그 subgroup이다.
 
 $G=\GL_n(\mathbb{C})$에서는 이 분해가 block 행렬로 곧장 드러난다. $I$에서 빠진 simple root $\alpha_k$마다 $k$와 $k+1$ 사이가 끊겨 $\{1,\ldots,n\}$이 토막으로 나뉘고, $P_I$는 그 토막들을 대각 block으로 갖는 block upper triangular matrix들의 모임이다. 이 때 대각 block들이 reductive Levi $L_I\cong\GL_{k_1}\times\cdots\times\GL_{k_r}$를, 대각 위쪽 block들이 unipotent radical $U_I$를 이룬다. 이제 parabolic subgroup $P=P_I$에 대한 $G/P$의 cell decomposition을 얻으려면 Weyl group $W$를 $W_I$로 quotient해야 한다. 이 때 각 coset을 대표하는 표준적인 방법은 minimal length 원소를 고르는 것이다.
 
@@ -219,7 +219,7 @@ Parabolic subgroup $W_I\subseteq W$에 대하여, *minimal length coset represen
 $$W^I=\{w\in W\mid\ell(ws_i)>\ell(w)\text{ for all }\alpha_i\in I\}$$
 :::
 
-조건 $\ell(ws_i)>\ell(w)$는 $w$를 오른쪽에서 $W_I$의 생성원으로 곱해도 더 이상 길이를 줄일 수 없다는 뜻이며, 따라서 $W^I$는 각 left coset $wW_I$ 안에서 길이가 최소인 원소들을 모은 것이다. 앞서 Weyl group element의 length가 Bruhat cell의 차원을 주듯, 이들은 곧 partial flag variety를 분해했을 때 각 cell의 차원이 될 것이다. 이를 위해서는 다음의 다리가 필요하다. 
+조건 $\ell(ws_i)>\ell(w)$는 $w$를 오른쪽에서 $W_I$의 generator로 곱해도 더 이상 길이를 줄일 수 없다는 뜻이며, 따라서 $W^I$는 각 left coset $wW_I$ 안에서 길이가 최소인 원소들을 모은 것이다. 앞서 Weyl group element의 length가 Bruhat cell의 차원을 주듯, 이들은 곧 partial flag variety를 분해했을 때 각 cell의 차원이 될 것이다. 이를 위해서는 다음의 다리가 필요하다. 
 
 ::: 명제 12
 각 $w\in W$는 $w=w^I w_I$ ($w^I\in W^I$, $w_I\in W_I$)로 유일하게 분해되며, 이 때 $\ell(w)=\ell(w^I)+\ell(w_I)$이다. 특히 각 coset $wW_I$는 정확히 하나의 minimal length 원소를 가지므로, projection $W^I\rightarrow W/W_I$는 bijection이다.

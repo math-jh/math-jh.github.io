@@ -213,7 +213,7 @@ $$\det \begin{pmatrix}A&O\\O&I\end{pmatrix}=\sum_{\tau\in S_{k+l}}\sgn(\tau)A_{\
 
 Here $B_{k+i}$ is the element of $\mathbb{K}^{k+l}$ whose $(k+i)$-th component is 1 and all other components are 0. Then unless
 
-$$\tau(k+1)=k+1,\ldots,\tau(k+l)=k+1$$
+$$\tau(k+1)=k+1,\ldots,\tau(k+l)=k+l$$
 
 the terms summed on the right-hand side are always 0, so we only need to sum over those $\tau$ for which the last $l$ entries are fixed. That is, the determinant of the given matrix becomes exactly the same as formula (2), so the given proposition holds.
 :::

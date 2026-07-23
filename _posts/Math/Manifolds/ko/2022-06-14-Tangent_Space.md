@@ -13,19 +13,19 @@ weight: 3
 
 ---
 
-이제 우리는 manifold의 접벡터와, 이들에 의해 생성되는 공간인 접공간을 정의한다.
+이제 우리는 manifold의 tangent vector와, 이들에 의해 생성되는 공간인 tangent space를 정의한다.
 
 ## Motivation
 
 **[Lee]**에서는 3단원의 앞부분을 꽤 길게 할애하여 앞으로 할 정의를 정당화하고 있는데, 이를 우선 간략하게 살펴보자. 
 
-Manifold의 가장 단순한 예시는 $\mathbb{R}^m$이고, 이보다 조금 더 복잡한 예시는 $\mathbb{R}^m$에 들어있는 곡면이다. 이 곡면의 한 점 $p$에서의 접벡터는 말 그대로 곡면과 점 $p$에서 접하는 벡터들을 의미한다. 이 곡면이 $\mathbb{R}^3$에 들어있는 2차원 곡면이라 하면, 이러한 벡터들을 모아두면 정확히 점 $p$에서의 접평면이 될 것이다. 하지만 이를 manifold에서의 접벡터의 정의로 일반화하는 것은 쉽지 않다. 이 정의에서는 곡면을 포함하는 외부공간 $\mathbb{R}^m$의 존재성이 필수적인데, 우리가 manifold를 정의할 때에는 순수하게 intrinsic한 방식으로 정의했기 때문이다. 
+Manifold의 가장 단순한 예시는 $\mathbb{R}^m$이고, 이보다 조금 더 복잡한 예시는 $\mathbb{R}^m$에 들어있는 곡면이다. 이 곡면의 한 점 $p$에서의 tangent vector는 말 그대로 곡면과 점 $p$에서 접하는 벡터들을 의미한다. 이 곡면이 $\mathbb{R}^3$에 들어있는 2차원 곡면이라 하면, 이러한 벡터들을 모아두면 정확히 점 $p$에서의 접평면이 될 것이다. 하지만 이를 manifold에서의 tangent vector의 정의로 일반화하는 것은 쉽지 않다. 이 정의에서는 곡면을 포함하는 외부공간 $\mathbb{R}^m$의 존재성이 필수적인데, 우리가 manifold를 정의할 때에는 순수하게 intrinsic한 방식으로 정의했기 때문이다. 
 
-대신 위와 같은 상황에서 우리는 접벡터들이 주어질 때마다 방향미분이 생긴다는 것을 관찰할 수 있다. 즉, 어떠한 접벡터 $v$가 주어진다면, 이 벡터는 점 $p$ 근방에서 정의된 임의의 함수 $f$마다 $v$-방향의 방향미분
+대신 위와 같은 상황에서 우리는 tangent vector들이 주어질 때마다 방향미분이 생긴다는 것을 관찰할 수 있다. 즉, 어떠한 tangent vector $v$가 주어진다면, 이 벡터는 점 $p$ 근방에서 정의된 임의의 함수 $f$마다 $v$-방향의 방향미분
 
 $$\lim_{t\rightarrow 0}\frac{f(p+tv)-f(p)}{t}$$
 
-을 잘 정의해준다. 우리의 아이디어는 이 <em-ko>방향미분</em-ko>이라는 연산자를 접벡터로 정의하는 것이다.
+을 잘 정의해준다. 우리의 아이디어는 이 <em-ko>방향미분</em-ko>이라는 연산자를 tangent vector로 정의하는 것이다.
 
 ## 미분가능한 함수들의 층
 
@@ -77,9 +77,9 @@ $$0\longrightarrow \mathfrak{m}_p\longrightarrow \mathcal{C}^\infty_p\overset{\e
 
 $$\mathcal{C}^\infty_p=\{(f,U)\mid f\in C^\infty(U)\}\big/{\sim},\qquad (f,U)\sim (g,V)\iff f\vert_W=g\vert_W\text{ for some $W\subseteq U\cap V$ open}$$
 
-$f$의 equivalence class를 $\mathbf{f}$로 적자. 그럼 $\mathbf{f}\mathbf{g},\mathbf{f}+\mathbf{g}$와 같이 $\mathcal{C}^\infty$ 위에 스칼라곱과 덧셈, 더 나아가 곱셈까지 잘 정의된다는 것이 [명제 1](#prop1)의 내용이다.
+$f$의 equivalence class를 $\mathbf{f}$로 적자. 그럼 $\mathbf{f}\mathbf{g},\mathbf{f}+\mathbf{g}$와 같이 $\mathcal{C}^\infty_p$ 위에 스칼라곱과 덧셈, 더 나아가 곱셈까지 잘 정의된다는 것이 [명제 1](#prop1)의 내용이다.
 
-이제 접벡터라는 것은 $\mathcal{C}^\infty_p$의 각 원소마다 실수값을 대응시키는 방향미분이다. 여기에서 미분은 라이프니츠 법칙을 만족하는 linear map으로 정의된다.
+이제 tangent vector라는 것은 $\mathcal{C}^\infty_p$의 각 원소마다 실수값을 대응시키는 방향미분이다. 여기에서 미분은 라이프니츠 법칙을 만족하는 linear map으로 정의된다.
 
 ::: 정의 3
 Manifold $M$과 한 점 $p\in M$을 생각하자. 다음의 라이프니츠 법칙
@@ -128,4 +128,4 @@ $$v(\mathbf{1})=v(\mathbf{1}\cdot\mathbf{1})=\mathbf{1}(p)v(\mathbf{1})+\mathbf{
 
 ---
 
-[^1]: $$U$$ 위에서만 정의된 함수도 partition of unity를 통해 $$M$$ 전체로 확장할 수 있으므로 현재 상황에서는 이 둘을 구별하지 않아도 된다.
+[^1]: $U$ 위에서만 정의된 함수도 partition of unity를 통해 $M$ 전체로 확장할 수 있으므로 현재 상황에서는 이 둘을 구별하지 않아도 된다.

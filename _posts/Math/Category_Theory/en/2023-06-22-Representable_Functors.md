@@ -83,7 +83,7 @@ For ease of exposition, in the remainder of this post we treat only the covarian
 Looking at [Definition 1](#def1), we agreed to call the choice of an object $A$ together with a natural isomorphism $F\cong\Hom_\mathcal{A}(A,-)$ a *representation*. Yet by [Theorem 3](#thm3), choosing a natural isomorphism is equivalent to selecting a suitable element of $F(A)$. We formalize this as follows.
 
 ::: Definition 5
-Let a representable functor $F:\mathcal{A}\rightarrow\Set$ be given. For a natural isomorphism $\Hom_\mathcal{A}(-,A)\cong F$, we call an element $x\in F(A)$ a *universal element*, and we call the pair $(A,x)$ a *universal property*. 
+Let a representable functor $F:\mathcal{A}\rightarrow\Set$ be given. For a natural isomorphism $\Hom_\mathcal{A}(A,-)\cong F$, we call an element $x\in F(A)$ a *universal element*, and we call the pair $(A,x)$ a *universal property*. 
 :::
 
 The following example makes this more intuitive.

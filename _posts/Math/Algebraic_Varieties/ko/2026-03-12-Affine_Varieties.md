@@ -17,7 +17,7 @@ weight: 1
 
 $$Z(f)= \{(x_1, \ldots, x_n) \in \mathbb{A}^n \mid f(x_1, \ldots, x_n) = 0\},\qquad f\in \mathbb{K}[\x_1,\ldots, \x_n]$$
 
-으로 주어지는 집합들에 관심이 있다. 이는 $\mathbb{K}^n$에서 다항식 $f$의 근들의 모임이다. 일반적으로 $\mathbb{K}=\mathbb{C}$로 두며, 이러한 가정에서 특히 좋은 것은 $\mathbb{C}$이 algebraically closed라는 사실이다. 그러나, 대부분의 경우 이렇게 가정하는 것이 큰 도움이 되지는 않으므로 우리는 더 일반적인 세팅을 사용하기로 한다. 또, 혼동을 방지하기 위하여 다항식 $f$의 변수는 정자 $\x$와 같은 식으로 표기할 것이다.
+으로 주어지는 집합들에 관심이 있다. 이는 $\mathbb{K}^n$에서 다항식 $f$의 root들의 모임이다. 일반적으로 $\mathbb{K}=\mathbb{C}$로 두며, 이러한 가정에서 특히 좋은 것은 $\mathbb{C}$이 algebraically closed라는 사실이다. 그러나, 대부분의 경우 이렇게 가정하는 것이 큰 도움이 되지는 않으므로 우리는 더 일반적인 세팅을 사용하기로 한다. 또, 혼동을 방지하기 위하여 다항식 $f$의 변수는 정자 $\x$와 같은 식으로 표기할 것이다.
 
 ## 아핀다양체의 정의
 
@@ -51,7 +51,7 @@ $$Z(S)=Z((S))$$
 우리가 아는 대다수의 기하학적인 대상들은 다항식으로 나타나므로, 이들이 모두 affine variety의 예시가 된다.
 
 1. $\mathbb{A}^2$ 안에서 정의된 affine variety $Z(\x^2+\y^2-1)$을 생각하자. 정의에 의해, 이 집합은 식 $\x^2+\y^2-1=0$을 만족하는 $\mathbb{A}^2$의 점들의 모임이므로, 단위원을 나타낸다.
-2. 일반적으로, 임의의 affine space $\mathbb{A}^n$와 임의의 다항식 $f\in \mathbb{K}[\x_1,\ldots, \x_n]$에 대하여, $Z(f)$는 *초곡면<sub>hypersurface</sub>*을 정의한다.
+2. 일반적으로, 임의의 affine space $\mathbb{A}^n$와 임의의 다항식 $f\in \mathbb{K}[\x_1,\ldots, \x_n]$에 대하여, $Z(f)$는 *hypersurface<sub>초곡면</sub>*를 정의한다.
 3. 또 다른 중요한 예시로, $\mathbb{A}^3$ 위에 정의된 *twisted cubic*이 있다. 이는 $\mathbb{A}^3$ 위에 정의된 두 다항식 $\y-\x^2$, $\z-\x^3$으로 정의되는 곡선으로, 매개화 $(t,t^2,t^3)$을 통해 $\mathbb{A}^1$과 일대일로 대응된다.
 4. Affine space $\mathbb{A}^n$ 자기자신과 공집합은 affine variety이다. 이는 $Z(0)=\mathbb{A}^n$, $Z(1)=\emptyset$으로부터 자명하다. 이는 [명제 4](#prop4)에서 Zariski topology를 정의할 때 중요하게 사용된다.
 :::
@@ -83,11 +83,11 @@ $$f_1g_1+\cdots+ f_kg_k,\qquad f_i\in \mathfrak{a}, g_i\in \mathfrak{b}$$
 마지막으로 $x\in Z(\mathfrak{a}\mathfrak{b})$라 하자. 만일 결론에 반하여 $x\not\in Z(\mathfrak{a})\cup Z(\mathfrak{b})$라면, 적당한 $f\in \mathfrak{a}$와 적당한 $g\in \mathfrak{b}$가 존재하여 $f(x),g(x)\neq 0$이다. 그런데, 만일 이것이 성립한다면 $f(x)g(x)\neq 0$이므로 $x\in Z(\mathfrak{a}\mathfrak{b})$라는 가정에 모순이다. 
 :::
 
-우선 위 명제의 마지막 결과는 $Z(\mathfrak{a}\mathfrak{b})$가 algebraic variety이기 위해서는 반드시 $\mathfrak{a}=1$이거나 $\mathfrak{b}=1$이어야 함을 보여준다. 이는 algebraic variety가 무엇인지를 대수적으로 살펴보는데 좋은 직관 중 하나가 된다.
+우선 위 명제의 마지막 결과는 $Z(\mathfrak{a}\mathfrak{b})$가 algebraic variety이기 위해서는 반드시 $\mathfrak{a}=(1)$이거나 $\mathfrak{b}=(1)$이어야 함을 보여준다. 이는 algebraic variety가 무엇인지를 대수적으로 살펴보는데 좋은 직관 중 하나가 된다.
 
 그보다 중요한 것은 위의 명제에 의해, 만일 $\mathbb{A}^n$ 위에서 정의된 affine algebraic set들을 닫힌집합이라고 선언한다면, [\[위상수학\] §집합의 내부, 폐포, 경계, ⁋명제 2](/ko/math/topology/other_concepts#prop2)의 조건들이 모두 만족되고 따라서 $\mathbb{A}^n$ 위의 위상구조가 유일하게 결정된다는 것이다. 이를 *Zariski topology<sub>자리스키 위상</sub>*이라 부른다. 정의에 의해 임의의 affine variety $X$는 적당한 affine space $\mathbb{A}^n$의 닫힌 부분집합이며, 우리는 $\mathbb{A}^n$에서 정의된 위상의 subspace topology를 통해 $X$에서의 위상을 정의할 수 있다. 
 
-특별한 예시로 $\mathbb{A}^1$에서의 Zariski topology를 보면, $\mathbb{K}$의 임의의 원소는 일차식 $\x-x$의 zero set이므로 임의의 singleton은 닫힌집합이고, 따라서 임의의 유한집합은 닫힌집합이다. 그러나 $\mathbb{K}[\x]$의 임의의 원소는 많아야 유한 개의 근만을 가지므로, 이 위상구조 상에서는 ($\mathbb{K}$가 유한집합이 아닌 한) 무한한 원소를 가진 닫힌집합은 오직 $\mathbb{K}$ 자기자신 뿐이다. 즉 $\mathbb{A}^1$의 Zariski topology는 cofinite topology이며, 이로부터 우리는 Zariski topology가 Hausdorff일 필요가 없다는 것을 관찰할 수 있다. 더 일반적으로 irreducible space는 Hausdorff가 될 수 없고, 우리의 정의에서 affine variety들은 모두 irreducible이므로 임의의 affine variety는 Hausdorff space가 아니다. ([\[위상수학\] §차원, ⁋명제 7](/ko/math/topology/dimension#prop7))
+특별한 예시로 $\mathbb{A}^1$에서의 Zariski topology를 보면, $\mathbb{K}$의 임의의 원소는 일차식 $\x-x$의 zero set이므로 임의의 singleton은 닫힌집합이고, 따라서 임의의 유한집합은 닫힌집합이다. 그러나 $\mathbb{K}[\x]$의 $0$이 아닌 임의의 원소는 많아야 유한 개의 root만을 가지므로, 이 위상구조 상에서는 ($\mathbb{K}$가 유한집합이 아닌 한) 무한한 원소를 가진 닫힌집합은 오직 $\mathbb{K}$ 자기자신 뿐이다. 즉 $\mathbb{A}^1$의 Zariski topology는 cofinite topology이며, 이로부터 우리는 Zariski topology가 Hausdorff일 필요가 없다는 것을 관찰할 수 있다. 더 일반적으로 irreducible space는 Hausdorff가 될 수 없고, 우리의 정의에서 affine variety들은 모두 irreducible이므로 임의의 affine variety는 Hausdorff space가 아니다. ([\[위상수학\] §차원, ⁋명제 7](/ko/math/topology/dimension#prop7))
 
 이제 우리는 Zariski topology의 열린집합들을 살펴보자.
 
@@ -207,9 +207,9 @@ $$Z(\mathfrak{a}^k)=Z(\mathfrak{a}\cap\cdots\cap \mathfrak{a})=Z(\mathfrak{a})$$
 
 이므로, 어느정도 예견된 결과라고 할 수도 있다.
 
-한편, $\mathfrak{a}\subseteq \sqrt{\mathfrak{a}}$가 임의의 ideal $\mathfrak{a}$에 대해 성립하므로 [명제 4](#prop4)의 셋째 조건으로부터 $Z(\sqrt{\mathfrak{a}})\subseteq Z(\mathfrak{a})$임을 안다. 그런데 정의에 의하여 임의의 $f\in \sqrt{\mathfrak{a}}$가 주어졌을 때, 적당한 $r$이 존재하여 $f^r\in \mathfrak{a}$이다. 따라서 $x\in Z(\mathfrak{a})$라면 $Z(\sqrt{\mathfrak{a}})$여야 하고 이로부터 $Z(\mathfrak{a})=Z(\sqrt{\mathfrak{a}})$임을 안다. 즉 ideal의 radical은 affine algebraic set을 ideal의 zero set으로 나타낼 때, 이 ideal을 얻어내는 표준적인 방법을 주는 것으로 생각할 수 있으며, 이들 사이의 차이를 구별하기 위해서는 *scheme*을 정의하면 된다. 
+한편, $\mathfrak{a}\subseteq \sqrt{\mathfrak{a}}$가 임의의 ideal $\mathfrak{a}$에 대해 성립하므로 [명제 4](#prop4)의 셋째 조건으로부터 $Z(\sqrt{\mathfrak{a}})\subseteq Z(\mathfrak{a})$임을 안다. 그런데 정의에 의하여 임의의 $f\in \sqrt{\mathfrak{a}}$가 주어졌을 때, 적당한 $r$이 존재하여 $f^r\in \mathfrak{a}$이다. 따라서 $x\in Z(\mathfrak{a})$라면 $x\in Z(\sqrt{\mathfrak{a}})$여야 하고 이로부터 $Z(\mathfrak{a})=Z(\sqrt{\mathfrak{a}})$임을 안다. 즉 ideal의 radical은 affine algebraic set을 ideal의 zero set으로 나타낼 때, 이 ideal을 얻어내는 표준적인 방법을 주는 것으로 생각할 수 있으며, 이들 사이의 차이를 구별하기 위해서는 *scheme*을 정의하면 된다. 
 
-이제 [명제 4](#prop4)의 다섯번째 결과와 위의 결과를 종합하면, 우리는 $Z(\mathfrak{a})$가 algebraic variety이기 위해서는 $\sqrt{\mathfrak{a}}$가 prime ideal이어야 함을 알 수 있다. ([\[가환대수학\] §기본 개념들, ⁋정의 10](/ko/math/commutative_algebra/basic_notions#def10)) 즉, $\mathbb{A}^n$의 irreducible closed algebraic set들과 $\mathbb{K}[\x_1,\ldots, \x_n]$ 사이의 Galois correspondence가 존재한다. 
+이제 [명제 4](#prop4)의 다섯번째 결과와 위의 결과를 종합하면, 우리는 $Z(\mathfrak{a})$가 algebraic variety이기 위해서는 $\sqrt{\mathfrak{a}}$가 prime ideal이어야 함을 알 수 있다. ([\[가환대수학\] §기본 개념들, ⁋정의 10](/ko/math/commutative_algebra/basic_notions#def10)) 즉, $\mathbb{A}^n$의 irreducible closed algebraic set들과 $\mathbb{K}[\x_1,\ldots, \x_n]$의 prime ideal들 사이의 Galois correspondence가 존재한다. 
 
 ## 좌표환과 정칙성
 
@@ -249,7 +249,7 @@ Affine variety $X \subseteq \mathbb{A}^n$이 주어졌다 하자. 그럼 coordin
 ::: 예시 13
 [예시 3](#ex3)에서 살펴본 affine variety들의 경우, ideal들 $(\x^2+\y^2-1)$ 그리고 $(\y-\x^2,\z-\x^3)$은 radical임을 보일 수 있다. 따라서 단위원 $X = Z(\x^2+\y^2-1)$의 coordinate ring은 $\mathbb{K}[X] = \mathbb{K}[\x, \y]/(\x^2+\y^2-1)$이고 twisted cubic $C$의 coordinate ring은 $\mathbb{K}[C] = \mathbb{K}[\x, \y, \z]/(\y-\x^2, \z-\x^3) \cong \mathbb{K}[\x]$이다.
 
-그러나 일반적으로 초곡면 $Z(f)$의 coordinate ring은 $\mathbb{K}[Z(f)] = \mathbb{K}[\x_1, \ldots, \x_n]/I(Z(f)) = \mathbb{K}[\x_1, \ldots, \x_n]/\sqrt{(f)}$이므로, coordinate ring을 계산할 때는 주어진 ideal이 radical인지를 판단하여야 한다.
+그러나 일반적으로 hypersurface $Z(f)$의 coordinate ring은 $\mathbb{K}[Z(f)] = \mathbb{K}[\x_1, \ldots, \x_n]/I(Z(f)) = \mathbb{K}[\x_1, \ldots, \x_n]/\sqrt{(f)}$이므로, coordinate ring을 계산할 때는 주어진 ideal이 radical인지를 판단하여야 한다.
 :::
 
 한편, 우리는 앞서 affine variety의 정의가 실은 (closed) embedding $X\subseteq \mathbb{A}^n$에 의존한다는 것을 지적하였는데, 그로 인한 문제가 여기에서도 발생한다. 해당 부분에서 사용한 $\mathbb{A}^1$의 principal open set $X=D(\x)$의 예시를 살펴보면, 이 affine variety의 올바른 coordinate ring은 $\mathbb{A}^1$의 부분집합으로서 계산하는 것이 아닌, $\mathbb{A}^2$의 부분집합 $Z(\x\y-1)$으로서 계산하여야 하고 그럼
@@ -278,7 +278,7 @@ $$\varphi(a_1, \ldots, a_n) = (f_1(a), \ldots, f_m(a))$$
 
 예를 들어, 우리는 [예시 3](#ex3)에서 twisted cubic이 $t\mapsto (t,t^2,t^3)$을 통해 $\mathbb{A}^1$과 대응됨을 보였는데, 위의 정의는 이것이 affine variety들 사이의 morphism이라는 것을 보여준다.
 
-직관적으로 $\mathbb{K}[X]$들은 $X$ 위에 정의된 함수이므로, 만일 morphism $X\rightarrow Y$가 주어졌다면 이 morphism과의 합성을 통해 $Y$의 regular function들을 $X$로 옮겨올 수 있을 것이다. 이는 기하학적 사상에서 대수적 사상으로 가는 한 방향이다. 더 중요한 것은 그 역방향, 즉 coordinate ring homomorphism $\mathbb{K}[Y]\rightarrow \mathbb{K}[X]$가 주어졌을 때 이를 기하학적 morphism $X\rightarrow Y$로 복원할 수 있다는 사실이다.
+직관적으로 $\mathbb{K}[X]$들은 $X$ 위에 정의된 함수이므로, 만일 morphism $X\rightarrow Y$가 주어졌다면 이 morphism과의 합성을 통해 $Y$의 regular function들을 $X$로 옮겨올 수 있을 것이다. 이는 기하학적 morphism에서 대수적 morphism으로 가는 한 방향이다. 더 중요한 것은 그 역방향, 즉 coordinate ring homomorphism $\mathbb{K}[Y]\rightarrow \mathbb{K}[X]$가 주어졌을 때 이를 기하학적 morphism $X\rightarrow Y$로 복원할 수 있다는 사실이다.
 
 ::: 명제 16
 Morphism $\varphi: X \rightarrow Y$는 coordinate ring homomorphism $\varphi^\ast: \mathbb{K}[Y] \rightarrow \mathbb{K}[X]$를 유도한다. 구체적으로, $\bar{g} \in \mathbb{K}[Y]$에 대하여

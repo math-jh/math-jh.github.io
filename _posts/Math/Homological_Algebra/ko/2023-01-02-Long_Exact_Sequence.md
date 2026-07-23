@@ -27,7 +27,7 @@ $$0\rightarrow A_n\rightarrow B_n\rightarrow C_n\rightarrow 0$$
 
 이 short exact sequence라는 것과 동치라는 것을 확인할 수 있다. 
 
-이번 글의 가장 큰 정리는 다음의 [정리 1](#thm1)이다. 이 때 증명에서 snake lemma가 중요한 역할을 하며, 또 카테고리가 $\lMod{A}$인 경우에 명시적으로 얻어지는 connecting map을 이용하면 증명을 쉽게 마칠 수 있으므로, [§Diagram chasing](/ko/math/homological_algebra/diagram_chasing)에서와 마찬가지로 Freyd-Mitchell embedding theorem을 적극적으로 이용하여 $\lMod{A}$에서 다음 정리에 대한 증명을 진행한다.
+이번 글의 가장 큰 정리는 다음의 [정리 1](#thm1)이다. 이 때 증명에서 snake lemma가 중요한 역할을 하며, 또 category가 $\lMod{A}$인 경우에 명시적으로 얻어지는 connecting map을 이용하면 증명을 쉽게 마칠 수 있으므로, [§Diagram chasing](/ko/math/homological_algebra/diagram_chasing)에서와 마찬가지로 Freyd-Mitchell embedding theorem을 적극적으로 이용하여 $\lMod{A}$에서 다음 정리에 대한 증명을 진행한다.
 
 ::: 정리 1 (The long exact sequence)
 다음의 short exact sequence
@@ -149,7 +149,7 @@ $$\cdots\rightarrow 0\rightarrow 0\rightarrow 0\rightarrow\cdots$$
 ::: 증명
 임의의 $[a]\in H_n(C)=\ker(d^C_{n})/\im(d^C_{n+1})$을 택하고, $a\in\ker(d_{n}^C)$가 representative라 하자. 우리는 
 
-$$f_n(a)-g_n(b)\in\im(d_{n+1}^D)$$
+$$f_n(a)-g_n(a)\in\im(d_{n+1}^D)$$
 
 을 보여야 한다. 그런데 다음의 식
 
@@ -157,7 +157,7 @@ $$(d_{n+1}^D\circ h_n)(a)+(h_{n-1}\circ d_n^C)(a)=f_n(a)-g_n(a)$$
 
 으로부터, $a\in \ker(d_n^C)$이므로 
 
-$$f_n(a)-g_n(b)=d_{n+1}^D(h_n(a))\in\im(d_{n+1}^D)$$
+$$f_n(a)-g_n(a)=d_{n+1}^D(h_n(a))\in\im(d_{n+1}^D)$$
 
 을 얻는다.
 :::

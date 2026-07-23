@@ -114,7 +114,7 @@ Suppose for contradiction that the set $\{x_1,x_2,\ldots, x_m\}$ is linearly dep
 
 $$\alpha_1x_1+\alpha_2x_2+\cdots+\alpha_mx_m=0\tag{1}$$
 
-Among the $(\alpha_i)_{1\leq i\leq m}$ satisfying this, choose one with the smallest support and call it $(\beta_i)_{1\leq i\leq m}$. That is, if the number of $i$ with $\beta_i\neq0$ is $k$, then no $(\alpha_i)_{1\leq i\leq m}$ with fewer than $k$ nonzero entries satisfies equation (1).
+Among the $(\alpha_i)_{1\leq i\leq m}$ satisfying this, choose the family for which $\supp(\alpha_i)$ is smallest and call it $(\beta_i)_{1\leq i\leq m}$. That is, if the number of $i$ with $\beta_i\neq0$ is $k$, then no $(\alpha_i)_{1\leq i\leq m}$ with fewer than $k$ nonzero entries satisfies equation (1).
 
 Since at least two of the $\beta_i$ are nonzero, we may assume without loss of generality that $\beta_m\neq 0$. Then
 
@@ -163,15 +163,15 @@ The following proposition shows that the geometric multiplicity of an eigenvalue
 For an eigenvalue $\lambda\in\mathbb{K}$ of an $n\times n$ matrix $A$, the geometric multiplicity of $\lambda$ never exceeds its algebraic multiplicity.
 :::
 ::: Proof
-Let the geometric multiplicity of $$\lambda$be$k$, and consider$k$linearly independent vectors$x_1,\ldots, x_k$spanning$E_\lambda(A)$. We can add$(n-k)$vectors$x_{k+1},\ldots, x_n$to form a new basis$\{x_1,\ldots, x_n\}$of$\mathbb{K}^n$. Now define the matrix$X$$ by
+Let the geometric multiplicity of $\lambda$ be $k$, and consider $k$ linearly independent vectors $x_1,\ldots, x_k$ spanning $E_\lambda(A)$. We can add $(n-k)$ vectors $x_{k+1},\ldots, x_n$ to form a new basis $\{x_1,\ldots, x_n\}$ of $\mathbb{K}^n$. Now define the matrix $X$ by
 
 $$X=(x_1\vert x_2\vert \cdots\vert x_n)$$
 
-Since the columns of $$X$$ are linearly independent, $$X^{-1}$$ exists. Let the rows of $$X^{-1}$$ be $$y_i$$. From $$X^{-1}X=XX^{-1}=I$$,
+Since the columns of $X$ are linearly independent, $X^{-1}$ exists. Let the rows of $X^{-1}$ be $y_i$. From $X^{-1}X=XX^{-1}=I$,
 
 $$y_i\cdot x_j=\begin{cases}1&i=j\\ 0&i\neq j\end{cases}$$
 
-holds. Therefore, setting $$A'=X^{-1}AX$$,
+holds. Therefore, setting $A'=X^{-1}AX$,
 
 $$\begin{aligned}A'&=X^{-1}(AX)=\begin{pmatrix}y_1\\ y_2\\ \vdots\\ y_n\end{pmatrix}(Ax_1\vert Ax_2\vert \cdots\vert Ax_n)\\
 &=\begin{pmatrix}y_1\cdot Ax_1&y_1\cdot Ax_2&\cdots& y_1\cdot Ax_k&\cdots&y_1\cdot Ax_n\\ y_2\cdot Ax_1&y_2\cdot Ax_2&\cdots &y_2\cdot Ax_k&\cdots &y_2\cdot Ax_n\\ \vdots&\vdots&\ddots&\vdots&\ddots&\vdots\\ y_k\cdot Ax_1&y_k\cdot Ax_2&\cdots&y_k\cdot Ax_k&\cdots&y_k\cdot Ax_n\\ \vdots&\vdots&\ddots&\vdots&\ddots&\vdots\\ y_n\cdot Ax_1&y_n\cdot Ax_2&\cdots &y_n\cdot Ax_k&\cdots&y_n\cdot Ax_n \end{pmatrix}\\
@@ -179,57 +179,57 @@ $$\begin{aligned}A'&=X^{-1}(AX)=\begin{pmatrix}y_1\\ y_2\\ \vdots\\ y_n\end{pmat
 &=\begin{pmatrix}\lambda&0&\cdots& 0&\cdots&y_1\cdot Ax_n\\ 0&\lambda&\cdots &0&\cdots &y_2\cdot Ax_n\\ \vdots&\vdots&\ddots&\vdots&\ddots&\vdots\\ 0&0&\cdots&\lambda&\cdots&y_k\cdot Ax_n\\ \vdots&\vdots&\ddots&\vdots&\ddots&\vdots\\ 0&0&\cdots &0&\cdots&y_n\cdot Ax_n \end{pmatrix}\\
 &=\begin{pmatrix}\lambda I_k&B\\ 0&C\end{pmatrix}\end{aligned}$$
 
-Thus, writing the characteristic polynomial of $$A$$ as $$p_A(\mathbf{x})$$, by [§Characteristic Polynomial, ⁋Corollary 4](/en/math/linear_algebra/characteristic_polynomial#cor4) we have $$p_A(\mathbf{x})=p_{A'}(\mathbf{x})$$, and therefore
+Thus, writing the characteristic polynomial of $A$ as $p_A(\mathbf{x})$, by [§Characteristic Polynomial, ⁋Corollary 4](/en/math/linear_algebra/characteristic_polynomial#cor4) we have $p_A(\mathbf{x})=p_{A'}(\mathbf{x})$, and therefore
 
 $$p_A(\mathbf{x})=p_{A'}(\mathbf{x})=\det(\mathbf{x}I-A')=(\mathbf{x}-\lambda)^k\det(\mathbf{x}I_{n-k}-C)$$
 
-That is, the algebraic multiplicity of $$\lambda$$ in $$p_A$$ is at least $$k$$.
+That is, the algebraic multiplicity of $\lambda$ in $p_A$ is at least $k$.
 :::
 
-Given an $$n\times n$$ matrix $$A$$ with characteristic polynomial $$p_A$$, the sum of the algebraic multiplicities of the eigenvalues $$\lambda$$ cannot exceed $$n$$, the degree of $$p_A$$. Also, for a fixed eigenvalue $$\lambda$$, the above proposition shows that the geometric multiplicity of $$\lambda$$ cannot exceed its algebraic multiplicity. Finally, from the argument after [Proposition 4](#prop4), we see that in order to decompose $$\mathbb{K}^n$$ into eigenspaces, the sum of the geometric multiplicities of the $$\lambda$$ must equal $$n$$. Putting all this together, we obtain the following proposition.
+Given an $n\times n$ matrix $A$ with characteristic polynomial $p_A$, the sum of the algebraic multiplicities of the eigenvalues $\lambda$ cannot exceed $n$, the degree of $p_A$. Also, for a fixed eigenvalue $\lambda$, the above proposition shows that the geometric multiplicity of $\lambda$ cannot exceed its algebraic multiplicity. Finally, from the argument after [Proposition 4](#prop4), we see that in order to decompose $\mathbb{K}^n$ into eigenspaces, the sum of the geometric multiplicities of the $\lambda$ must equal $n$. Putting all this together, we obtain the following proposition.
 
 ::: Proposition 6
-For any $$n\times n$$ matrix $$A$$, the necessary and sufficient condition for $$\mathbb{K}^n$$ to be expressible as a direct sum of the eigenspaces of $$A$$ is:
+For any $n\times n$ matrix $A$, the necessary and sufficient condition for $\mathbb{K}^n$ to be expressible as a direct sum of the eigenspaces of $A$ is:
 
-1. The characteristic polynomial of $$A$$ has $$n$$ roots counting multiplicity, and
+1. The characteristic polynomial of $A$ has $n$ roots counting multiplicity, and
 2. For each eigenvalue, the geometric multiplicity equals the algebraic multiplicity.
 :::
 
-In particular, if $$\mathbb{K}$$ is algebraically closed, the first condition is always satisfied, so only the second condition need be considered.
+In particular, if $\mathbb{K}$ is algebraically closed, the first condition is always satisfied, so only the second condition need be considered.
 
-We assume that the field $$\mathbb{K}$$ is algebraically closed while dealing with diagonalization of matrices. This is purely for convenience; if $$\mathbb{K}$$ is not algebraically closed, we simply consider a field extension obtained by adjoining the roots of the characteristic polynomial of the matrix of interest. ([\[Field Theory\] §Algebraic Extensions](/en/math/field_theory/algebraic_extensions)) This is exactly the same as obtaining $$\mathbb{C}$$ from $$\mathbb{R}$$ by adjoining the imaginary root $$i$$ of the equation $$\x^2+1=0$$, for example.
+We assume that the field $\mathbb{K}$ is algebraically closed while dealing with diagonalization of matrices. This is purely for convenience; if $\mathbb{K}$ is not algebraically closed, we simply consider a field extension obtained by adjoining the roots of the characteristic polynomial of the matrix of interest. ([\[Field Theory\] §Algebraic Extensions](/en/math/field_theory/algebraic_extensions)) This is exactly the same as obtaining $\mathbb{C}$ from $\mathbb{R}$ by adjoining the imaginary root $i$ of the equation $\x^2+1=0$, for example.
 
 ## Diagonalization of Matrices
 
-We have previously examined how to decompose $$\mathbb{R}^n$$ through the eigenvalues and eigenspaces of an arbitrary $$n\times n$$ matrix $$A$$, and from [Proposition 6](#prop6) we have also learned when such a decomposition is possible. Let us look again at the proof of [Proposition 5](#prop5) that we used to establish this. We added $$n-k$$ arbitrary vectors to a basis $$x_1,\ldots, x_k$$ of $$E_\lambda$$, then defined the matrix $$X=(x_1\mid\cdots\mid x_n)$$ through these, and showed by calculation that
+We have previously examined how to decompose $\mathbb{R}^n$ through the eigenvalues and eigenspaces of an arbitrary $n\times n$ matrix $A$, and from [Proposition 6](#prop6) we have also learned when such a decomposition is possible. Let us look again at the proof of [Proposition 5](#prop5) that we used to establish this. We added $n-k$ arbitrary vectors to a basis $x_1,\ldots, x_k$ of $E_\lambda$, then defined the matrix $X=(x_1\mid\cdots\mid x_n)$ through these, and showed by calculation that
 
-$$XAX^{-1}=\begin{pmatrix}\lambda I_k&B\\0&C\end{pmatrix}$$
+$$X^{-1}AX=\begin{pmatrix}\lambda I_k&B\\0&C\end{pmatrix}$$
 
-has the upper left $$k\times k$$ block equal to the diagonal matrix $$\lambda I_k$$. However, if $$A$$ satisfies all the conditions of [Proposition 6](#prop6), instead of adding the $$n-k$$ vectors $$x_{k+1},\ldots, x_n$$ arbitrarily, we can choose them so that all $$n$$ vectors $$x_1,\ldots, x_n$$ form a basis of eigenspaces of $$A$$. Then from
+has the upper left $k\times k$ block equal to the diagonal matrix $\lambda I_k$. However, if $A$ satisfies all the conditions of [Proposition 6](#prop6), instead of adding the $n-k$ vectors $x_{k+1},\ldots, x_n$ arbitrarily, we can choose them so that all $n$ vectors $x_1,\ldots, x_n$ form a basis of eigenspaces of $A$. Then from
 
 $$y_i\cdot x_j=\begin{cases}1&i=j\\0&i\neq j\end{cases}$$
 
-in the proof of [Proposition 5](#prop5), we see that $$C$$ also becomes a diagonal matrix and $$B$$ becomes the zero matrix. Therefore the following holds.
+in the proof of [Proposition 5](#prop5), we see that $C$ also becomes a diagonal matrix and $B$ becomes the zero matrix. Therefore the following holds.
 
 ::: Proposition 7
-Consider an $$n\times n$$ matrix $$A$$ satisfying all the conditions of [Proposition 6](#prop6), and let $$x_1,\ldots, x_n$$ be a basis of $$\mathbb{R}^n$$ consisting of eigenvectors of $$A$$. Let $$Ax_i=\lambda_ix_i$$ and $$X=(x_1\mid\cdots\mid x_n)$$. Then for the diagonal matrix
+Consider an $n\times n$ matrix $A$ satisfying all the conditions of [Proposition 6](#prop6), and let $x_1,\ldots, x_n$ be a basis of $\mathbb{R}^n$ consisting of eigenvectors of $A$. Let $Ax_i=\lambda_ix_i$ and $X=(x_1\mid\cdots\mid x_n)$. Then for the diagonal matrix
 
 $$D=\begin{pmatrix}\lambda_1&0&\cdots&0\\ 0&\lambda_2&\cdots&0\\ \vdots&\vdots&\ddots&\vdots\\0&0&\cdots&\lambda_n\end{pmatrix}$$
 
-we have $$A=XDX^{-1}$$.
+we have $A=XDX^{-1}$.
 :::
 
-Thus we can give a suitable name to a matrix $$A$$ satisfying this condition.
+Thus we can give a suitable name to a matrix $A$ satisfying this condition.
 
 ::: Definition 8
-An $$n\times n$$ matrix $$A$$ satisfying all the conditions of [Proposition 6](#prop6) is called *diagonalizable*.
+An $n\times n$ matrix $A$ satisfying all the conditions of [Proposition 6](#prop6) is called *diagonalizable*.
 :::
 
-Alternatively, since [Proposition 6](#prop6) gives a necessary and sufficient condition, there is no problem in calling a matrix similar to a diagonal matrix diagonalizable. In other words, any diagonalizable matrix is completely determined by its eigenvalues.
+Alternatively, since [Proposition 6](#prop6) gives a necessary and sufficient condition, there is no problem in calling a matrix similar to a diagonal matrix diagonalizable. In other words, the similarity class of any diagonalizable matrix is completely determined by its eigenvalues.
 
-That diagonalizable matrices are conceptually important has been sufficiently examined above. Moreover, diagonalizable matrices are also of great computational utility. For example, if a matrix $$A$$ is diagonalizable with $$A=XDX^{-1}$$, then the powers of $$A$$ are given by $$A^k=XD^kX^{-1}$$, and since the power of a diagonal matrix is merely the diagonal matrix formed from the powers of each diagonal entry, computing powers of $$A$$ becomes a very easy task.
+That diagonalizable matrices are conceptually important has been sufficiently examined above. Moreover, diagonalizable matrices are also of great computational utility. For example, if a matrix $A$ is diagonalizable with $A=XDX^{-1}$, then the powers of $A$ are given by $A^k=XD^kX^{-1}$, and since the power of a diagonal matrix is merely the diagonal matrix formed from the powers of each diagonal entry, computing powers of $A$ becomes a very easy task.
 
-More generally, if matrices $$A_1,\ldots, A_k$$ are diagonalizable through the same matrix $$X$$, that is, if
+More generally, if matrices $A_1,\ldots, A_k$ are diagonalizable through the same matrix $X$, that is, if
 
 $$A_i=XD_iX^{-1}$$
 
@@ -237,101 +237,101 @@ then
 
 $$A_1A_2\cdots A_k =XD_1D_2\cdots D_kX^{-1}$$
 
-and since the product of diagonal matrices is merely the diagonal matrix consisting of the products of the diagonal entries, computing $$A_1A_2\cdots A_k$$ may also not be very difficult. We give such a case the following name.
+and since the product of diagonal matrices is merely the diagonal matrix consisting of the products of the diagonal entries, computing $A_1A_2\cdots A_k$ may also not be very difficult. We give such a case the following name.
 
 ::: Definition 9
-A family of matrices $$\{A_i\}$$ is called *simultaneously diagonalizable* if there exists an invertible matrix $$X$$ such that $$X^{-1}A_iX$$ is a diagonal matrix for every $$i$$.
+A family of matrices $\{A_i\}$ is called *simultaneously diagonalizable* if there exists an invertible matrix $X$ such that $X^{-1}A_iX$ is a diagonal matrix for every $i$.
 :::
 
-If two matrices $$A,B$$ are simultaneously diagonalizable through a fixed matrix $$X$$, then from
+If two matrices $A,B$ are simultaneously diagonalizable through a fixed matrix $X$, then from
 
 $$AB=XD_AX^{-1}XD_BX^{-1}=XD_AD_BX^{-1}=XD_BD_AX^{-1}=BA$$
 
-we know that the two matrices $$A, B$$ commute. The following proposition shows that the converse also holds (for diagonalizable matrices).
+we know that the two matrices $A, B$ commute. The following proposition shows that the converse also holds (for diagonalizable matrices).
 
 ::: Proposition 10
-If two diagonalizable matrices $$A,B$$ satisfy $$AB=BA$$, then $$A, B$$ are simultaneously diagonalizable.
+If two diagonalizable matrices $A,B$ satisfy $AB=BA$, then $A, B$ are simultaneously diagonalizable.
 :::
 ::: Proof
-Essentially, it suffices to show that the two matrices $$A,B$$ admit the same eigenspace decomposition. Consider the eigenspace decomposition using $$A$$:
+Essentially, it suffices to show that the two matrices $A,B$ admit the same eigenspace decomposition. Consider the eigenspace decomposition using $A$:
 
 $$V=\bigoplus_{\lambda}E_\lambda(A)$$
 
-Then for any $$v\in E_\lambda(A)$$, from
+Then for any $v\in E_\lambda(A)$, from
 
 $$A(Bv)=ABv=BAv=B(\lambda v)=\lambda(Bv)$$
 
-we know that $$Bv\in E_\lambda(A)$$. Now viewing $$B$$ as a linear operator on the vector space $$E_\lambda(A)$$, since the original linear operator $$B$$ was diagonalizable, $$B$$ is also diagonalizable on $$E_\lambda(A)$$, and therefore there exists a basis of $$E_\lambda(A)$$ consisting of eigenvectors of $$B$$. Any element of $$E_\lambda(A)$$ is an eigenvector of $$A$$ (corresponding to eigenvalue $$\lambda$$), so these are also eigenvectors of $$A$$.
+we know that $Bv\in E_\lambda(A)$. Now viewing $B$ as a linear operator on the vector space $E_\lambda(A)$, since the original linear operator $B$ was diagonalizable, $B$ is also diagonalizable on $E_\lambda(A)$, and therefore there exists a basis of $E_\lambda(A)$ consisting of eigenvectors of $B$. Any element of $E_\lambda(A)$ is an eigenvector of $A$ (corresponding to eigenvalue $\lambda$), so these are also eigenvectors of $A$.
 :::
 
 ## Eigenspace Decomposition of Linear Operators
 
 So far we have examined the process of diagonalizing a given matrix, and fundamentally this is the same as decomposing a vector space into eigenspaces when a (diagonalizable) linear operator is given. To prove this we actively used bases of eigenspaces. Describing this without the choice of a basis will be helpful when we examine the Jordan canonical form in the next post.
 
-For a finite-dimensional vector space $$V$$ and a linear operator $$L:V\rightarrow V$$, we have seen that
+For a finite-dimensional vector space $V$ and a linear operator $L:V\rightarrow V$, we have seen that
 
 $$\rank L +\nullity L=\dim V$$
 
-holds. ([§Isomorphic Vector Spaces, ⁋Theorem 7](/en/math/linear_algebra/isomorphic_vector_spaces#thm7)) Here $$\rank L=\dim\im L$$ and $$\nullity L=\dim\ker L$$. However, this does not mean that $$V$$ can be expressed as a direct sum of $$\im L$$ and $$\ker L$$. For example, for the matrix $$A$$ that was the non-diagonalizable example after [Proposition 4](#prop4),
+holds. ([§Isomorphisms, ⁋Theorem 7](/en/math/linear_algebra/isomorphic_vector_spaces#thm7)) Here $\rank L=\dim\im L$ and $\nullity L=\dim\ker L$. However, this does not mean that $V$ can be expressed as a direct sum of $\im L$ and $\ker L$. For example, for the matrix $A$ that was the non-diagonalizable example after [Proposition 4](#prop4),
 
 $$A-I=\begin{pmatrix}0&1&1\\0&0&1\\0&0&0\end{pmatrix}$$
 
-the operator defined by this satisfies $$\ker (A-I)\cap \im(A-I)\neq \{0\}$$. However, if $$\ker L\cap \im L=\{0\}$$ holds, then from [§Dimension of Vector Spaces, ⁋Example 8](/en/math/linear_algebra/dimension#ex8) and [Proposition 2](#prop2) we know that necessarily $$V=\ker L\oplus \im L$$. The following lemma gives a condition equivalent to this.
+the operator defined by this satisfies $\ker (A-I)\cap \im(A-I)\neq \{0\}$. However, if $\ker L\cap \im L=\{0\}$ holds, then from [§Dimension of Vector Spaces, ⁋Example 8](/en/math/linear_algebra/dimension#ex8) and [Proposition 2](#prop2) we know that necessarily $V=\ker L\oplus \im L$. The following lemma gives a condition equivalent to this.
 
 ::: Lemma 11
-In the above situation, the condition $$\ker L\cap \im L=\{0\}$$ is equivalent to $$\ker L^2=\ker L$$.
+In the above situation, the condition $\ker L\cap \im L=\{0\}$ is equivalent to $\ker L^2=\ker L$.
 :::
 ::: Proof
-With a little thought, we see that $$\ker L^2=\ker L$$ is equivalent to $$\ker L^2\subset \ker L$$. Therefore what we need to show is the equivalence
+With a little thought, we see that $\ker L^2=\ker L$ is equivalent to $\ker L^2\subset \ker L$. Therefore what we need to show is the equivalence
 
 $$\ker L\cap \im L=\{0\}\iff \ker L^2\subset\ker L$$
 
-First, assume $$\ker L\cap \im L=\{0\}$$ and let $$v\in\ker L^2$$. Then $$0=L^2 v=L(Lv)$$, so $$Lv\in\ker L$$, and therefore by assumption we must have $$Lv=0$$. That is, $$v\in\ker L$$. Conversely, assume $$\ker L^2\subset \ker L$$ and let $$v\in \ker L\cap \im L$$. Then since $$v\in \im L$$, there exists $$w\in V$$ such that $$v=Lw$$. But since $$v\in\ker L$$ as well,
+First, assume $\ker L\cap \im L=\{0\}$ and let $v\in\ker L^2$. Then $0=L^2 v=L(Lv)$, so $Lv\in\ker L$, and therefore by assumption we must have $Lv=0$. That is, $v\in\ker L$. Conversely, assume $\ker L^2\subset \ker L$ and let $v\in \ker L\cap \im L$. Then since $v\in \im L$, there exists $w\in V$ such that $v=Lw$. But since $v\in\ker L$ as well,
 
 $$0=Lv=L(Lw)=L^2w\implies w\in\ker(L^2)\subset \ker L$$
 
-so $$w\in \ker L$$. That is, $$v=Lw=0$$.
+so $w\in \ker L$. That is, $v=Lw=0$.
 :::
 
-Returning to the original story, we are particularly interested in the case where $$L$$ is of the form $$A-\lambda I$$ for some linear operator and its eigenvalue. The following proposition uses [Lemma 11](#lem11) to characterize diagonalizability concisely.
+Returning to the original story, we are particularly interested in the case where $L$ is of the form $A-\lambda I$ for some linear operator and its eigenvalue. The following proposition uses [Lemma 11](#lem11) to characterize diagonalizability concisely.
 
 ::: Proposition 12
-A linear operator $$A:V\rightarrow V$$ is diagonalizable if and only if for every eigenvalue $$\lambda\in\sigma(A)$$,
+A linear operator $A:V\rightarrow V$ is diagonalizable if and only if for every eigenvalue $\lambda\in\sigma(A)$,
 
 $$\ker(A-\lambda I)^2=\ker(A-\lambda I)$$
 
 holds.
 :::
 ::: Proof
-First, suppose $$A$$ is diagonalizable. Then $$V=\bigoplus_{\mu\in\sigma(A)} E_\mu(A)$$. For any $$v\in\ker(A-\lambda I)^2$$, we can uniquely write $$v=\sum_{\mu\in\sigma(A)}v_\mu$$, and
+First, suppose $A$ is diagonalizable. Then $V=\bigoplus_{\mu\in\sigma(A)} E_\mu(A)$. For any $v\in\ker(A-\lambda I)^2$, we can uniquely write $v=\sum_{\mu\in\sigma(A)}v_\mu$, and
 
 $$(A-\lambda I)^2v=\sum_{\mu\in\sigma(A)}(A-\lambda I)^2v_\mu=\sum_{\mu\in\sigma(A)}(\mu-\lambda)^2v_\mu=0$$
 
-By the uniqueness of the eigenspace decomposition, $$(\mu-\lambda)^2v_\mu=0$$ must hold for all $$\mu$$, and when $$\mu\neq\lambda$$ we have $$v_\mu=0$$, so
+By the uniqueness of the eigenspace decomposition, $(\mu-\lambda)^2v_\mu=0$ must hold for all $\mu$, and when $\mu\neq\lambda$ we have $v_\mu=0$, so
 
 $$v=v_\lambda\in E_\lambda(A)=\ker(A-\lambda I)$$
 
-Conversely, suppose that for every eigenvalue $$\lambda$$, we have $$\ker(A-\lambda I)^2=\ker(A-\lambda I)$$. From [Lemma 11](#lem11), for each $$\lambda$$,
+Conversely, suppose that for every eigenvalue $\lambda$, we have $\ker(A-\lambda I)^2=\ker(A-\lambda I)$. From [Lemma 11](#lem11), for each $\lambda$,
 
 $$\ker(A-\lambda I)\cap\im(A-\lambda I)=\{0\}$$
 
-and by [§Isomorphic Vector Spaces, ⁋Theorem 7](/en/math/linear_algebra/isomorphic_vector_spaces#thm7),
+and by [§Isomorphisms, ⁋Theorem 7](/en/math/linear_algebra/isomorphic_vector_spaces#thm7),
 
 $$\dim\ker(A-\lambda I)+\dim\im(A-\lambda I)=\dim V$$
 
-so $$V=\ker(A-\lambda I)\oplus\im(A-\lambda I)$$. For convenience, write $$\ker(A-\lambda I)=E_\lambda(A)$$ and $$\im (A-\lambda I)=W_\lambda(A)$$. We first know that for any $$v\in W_\lambda(A)$$, if we write $$v=(A-\lambda I)w$$, then from
+so $V=\ker(A-\lambda I)\oplus\im(A-\lambda I)$. For convenience, write $\ker(A-\lambda I)=E_\lambda(A)$ and $\im (A-\lambda I)=W_\lambda(A)$. We first know that for any $v\in W_\lambda(A)$, if we write $v=(A-\lambda I)w$, then from
 
 $$Av=A(A-\lambda I)w=(A-\lambda I)Aw\in W_\lambda(A)$$
 
-we see that $$W_\lambda(A)$$ is an $$A$$-invariant subspace. That is,
+we see that $W_\lambda(A)$ is an $A$-invariant subspace. That is,
 
 $$A\vert_{W_\lambda(A)}: W_\lambda(A) \rightarrow W_\lambda(A)$$
 
-is well-defined. Then from [Proposition 4](#prop4), if $$w\in W_\lambda(A)$$ is an eigenvector of $$A\vert_{W_\lambda(A)}$$ with eigenvalue $$\mu$$, then viewing $$w$$ as an element of $$V$$, it is also an eigenvector of $$A$$ (corresponding to eigenvalue $$\mu$$), and conversely, if an eigenvalue $$\mu\neq \lambda$$ of $$A$$ and its corresponding eigenvector are given, this can be viewed as an eigenvalue-eigenvector pair of $$A\vert_{W_\lambda(A)}$$. Also, for any eigenvalue $$\mu$$ of $$A\vert_{W_\lambda(A)}$$,
+is well-defined. Then from [Proposition 4](#prop4), if $w\in W_\lambda(A)$ is an eigenvector of $A\vert_{W_\lambda(A)}$ with eigenvalue $\mu$, then viewing $w$ as an element of $V$, it is also an eigenvector of $A$ (corresponding to eigenvalue $\mu$), and conversely, if an eigenvalue $\mu\neq \lambda$ of $A$ and its corresponding eigenvector are given, this can be viewed as an eigenvalue-eigenvector pair of $A\vert_{W_\lambda(A)}$. Also, for any eigenvalue $\mu$ of $A\vert_{W_\lambda(A)}$,
 
 $$\ker (A_{W_\lambda(A)}-\mu I)=\ker (A_{W_\lambda(A)}-\mu I)^2$$
 
-also holds on $$W_\lambda(A)$$ for a similar reason. That is, we can repeat this process inductively. On the other hand, since we are assuming that $$\mathbb{K}$$ is algebraically closed, we know that any linear operator $$W \rightarrow W$$ always has an eigenvalue as long as $$W$$ is not $$0$$-dimensional, and from this we know that this induction exactly gives the eigenspace decomposition of $$A$$.
+also holds on $W_\lambda(A)$ for a similar reason. That is, we can repeat this process inductively. On the other hand, since we are assuming that $\mathbb{K}$ is algebraically closed, we know that any linear operator $W \rightarrow W$ always has an eigenvalue as long as $W$ is not $0$-dimensional, and from this we know that this induction exactly gives the eigenspace decomposition of $A$.
 :::
 
 ---
@@ -341,4 +341,4 @@ also holds on $$W_\lambda(A)$$ for a similar reason. That is, we can repeat this
 
 ---
 
-[^1]: Of course, as always, this sum is in fact assumed to be a finite sum. That is, we assume that $$(v_i)_{i\in I}$$ is finitely supported.
+[^1]: Of course, as always, this sum is in fact assumed to be a finite sum. That is, we assume that $(v_i)_{i\in I}$ is finitely supported.

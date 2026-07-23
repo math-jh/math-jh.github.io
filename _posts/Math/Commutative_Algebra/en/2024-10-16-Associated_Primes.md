@@ -1,6 +1,6 @@
 ---
 title: "Associated Primes"
-description: "We define the notion of comaximal ideals in a commutative ring and examine their main properties, including the prime avoidance lemma."
+description: "We define the notion of associated primes in a commutative ring and examine their main properties, including the prime avoidance lemma."
 excerpt: "The prime avoidance lemma and the definition and properties of associated primes"
 
 categories: [Math / Commutative Algebra]
@@ -27,12 +27,12 @@ By definition, $\mathfrak{p}$ being an associated prime of $M$ is equivalent to 
 In this post we study various properties of associated prime ideals. The following lemma plays an important role in this process.
 
 ::: Lemma 2 (Prime avoidance lemma)
-Let $\mathfrak{a}_1,\ldots, \mathfrak{a}_n, \mathfrak{b}$ be ideals of $A$, and suppose $\mathfrak{b}\subseteq \mathfrak{a}_1\cup\cdots\cup \mathfrak{a}_n$. If $R$ contains an infinite field, or at most two of the $\mathfrak{a}_i$ are not prime ideals, then $\mathfrak{b}$ is contained in one of $\mathfrak{a}_1,\ldots, \mathfrak{a}_n$.
+Let $\mathfrak{a}_1,\ldots, \mathfrak{a}_n, \mathfrak{b}$ be ideals of $A$, and suppose $\mathfrak{b}\subseteq \mathfrak{a}_1\cup\cdots\cup \mathfrak{a}_n$. If $A$ contains an infinite field, or at most two of the $\mathfrak{a}_i$ are not prime ideals, then $\mathfrak{b}$ is contained in one of $\mathfrak{a}_1,\ldots, \mathfrak{a}_n$.
 
 In addition, if $A$ is graded and $\mathfrak{b}$ is a homogeneous ideal and all the $\mathfrak{a}_i$ are prime ideals, then the conclusion still holds under the assumption that the homogeneous elements of $\mathfrak{b}$ belong to $\mathfrak{a}_1\cup\cdots\cup \mathfrak{a}_n$.
 :::
 ::: Proof
-If $R$ contains an infinite field $\mathbb{K}$, then viewing each ideal as a $\mathbb{K}$-vector space, we have
+If $A$ contains an infinite field $\mathbb{K}$, then viewing each ideal as a $\mathbb{K}$-vector space, we have
 
 $$\mathfrak{b}=\bigcup_{i=1}^n (\mathfrak{b}\cap \mathfrak{a}_i),$$
 
@@ -44,7 +44,7 @@ For larger $n$, if the inclusion in the hypothesis still holds when we omit one 
 
 Now consider the case $n=2$, and look at the element $x_1+x_2\in \mathfrak{b}$. If $x_1+x_2\in \mathfrak{a}_1$, then $x_2=(x_1+x_2)-x_1\in \mathfrak{a}_1$, which is a contradiction; similarly $x_1+x_2$ cannot be an element of $\mathfrak{a}_2$. This contradicts the assumption that $\mathfrak{b}\subseteq \mathfrak{a}_1\cup \mathfrak{a}_2$.
 
-For $n>3$ we use a similar idea. By the given condition, at least one of $\mathfrak{a}_1,\ldots, \mathfrak{a}_n$ is a prime ideal, so without loss of generality we may assume that $\mathfrak{a}_1$ is a prime ideal. Then consider the element $x_1+x_2x_3\cdots x_n$, and using the assumption that $\mathfrak{a}_1$ is prime we obtain a contradiction.
+For $n\geq 3$ we use a similar idea. By the given condition, at least one of $\mathfrak{a}_1,\ldots, \mathfrak{a}_n$ is a prime ideal, so without loss of generality we may assume that $\mathfrak{a}_1$ is a prime ideal. Then consider the element $x_1+x_2x_3\cdots x_n$, and using the assumption that $\mathfrak{a}_1$ is prime we obtain a contradiction.
 
 In the graded case, it suffices to multiply $x_i$ repeatedly so that it has the same degree as $x_2x_3\cdots$.
 :::
@@ -103,7 +103,7 @@ so that $\ann(ax)=\mathfrak{p}$. Here the last equivalence uses the fact that $a
 ::: Lemma 6
 For a finitely generated module $M$ over a Noetherian ring $A$, there exists a filtration
 
-$$0=M_0\subseteq M_1\subseteq\cdots\subseteq M_n=M,\qquad \text{$M_{k+1}/M_k\cong A/\mathfrak{p}_k$ for some prime $\mathfrak{p}_k$, for all $k$}$$
+$$0=M_0\subseteq M_1\subseteq\cdots\subseteq M_n=M,\qquad \text{$M_k/M_{k-1}\cong A/\mathfrak{p}_k$ for some prime $\mathfrak{p}_k$, for all $k$}$$
 :::
 ::: Proof
 First, using [Proposition 3](#prop3) we can find an associated prime $\mathfrak{p}_1\in\Ass M$ of $M$, and thus there exists a submodule $M_1$ satisfying $M_1\cong A/\mathfrak{p}_1$. Applying the same argument to $M/M_1$ we obtain $M_2$, and repeating this process yields the desired conclusion because $M$ is Noetherian.
@@ -137,7 +137,7 @@ we see that $qx\in \mathfrak{p}$, and since $q\not\in \mathfrak{p}$ we must have
 
 Therefore, repeating
 
-$$\Ass M \Ass M_{n-1}\cup \{ \mathfrak{p}_{n-1}\}\subseteq \Ass M_{n-2}\cup \{\mathfrak{p}_{n-1},\mathfrak{p}_{n-2}\}\cdots$$
+$$\Ass M \subseteq \Ass M_{n-1}\cup \{ \mathfrak{p}_{n-1}\}\subseteq \Ass M_{n-2}\cup \{\mathfrak{p}_{n-1},\mathfrak{p}_{n-2}\}\cdots$$
 
 in this way, we obtain the finiteness in the first statement.
 

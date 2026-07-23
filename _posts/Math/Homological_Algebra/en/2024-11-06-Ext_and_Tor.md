@@ -71,7 +71,7 @@ $$\cdots\rightarrow P_1\otimes_AN \rightarrow P_0\otimes_AN \rightarrow M\otimes
 
 and
 
-$\cdots \rightarrow M\otimes_AN_1\rightarrow M\otimes_AN_0\rightarrow M\otimes_A N\rightarrow0$.
+$$\cdots \rightarrow M\otimes_AN_1\rightarrow M\otimes_AN_0\rightarrow M\otimes_A N\rightarrow0$$
 
 We must therefore compare the cohomologies they yield. The proof strategy is to consider a double complex whose $(p,q)$-entry is $\Hom_{\lMod{A}}(P_q, I^p)$ (or, in the tensor case, $P_p\otimes P'_q$). ([§Homology, ⁋Definition 4](/en/math/homological_algebra/homology#def4))
 
@@ -231,7 +231,7 @@ Let a commutative ring $A$, a free $A$-module $F$ of rank $n$, and an $A$-linear
 1. For each $i$, $K_i = \bigwedge\nolimits^i F$.
 2. For each $i$, $d_i: K_i \rightarrow K_{i-1}$ is a graded derivation of degree $-1$ uniquely determined by the formula $d(f) = \varphi(f)$ and the Leibniz rule
 
-    $d(\xi \wedge \eta) = d(\xi) \wedge \eta + (-1)^{\degree(\xi)} \, \xi \wedge d(\eta)$.
+    $$d(\xi \wedge \eta) = d(\xi) \wedge \eta + (-1)^{\degree(\xi)} \, \xi \wedge d(\eta)$$
 :::
 
 Defining the augmentation map $\epsilon: K_0=A\rightarrow A/\im\varphi$ as the canonical projection, we can regard $K(\varphi)_\bullet$ as a resolution of $A/\im\varphi$. For convenience, fix a basis $e_1, \ldots, e_n$ of $F$ and set $\x_i = \varphi(e_i)$; then $\im\varphi = (\x_1, \ldots, \x_n)$, so we also write this as $K_\bullet(\x_1, \ldots, \x_n)$.

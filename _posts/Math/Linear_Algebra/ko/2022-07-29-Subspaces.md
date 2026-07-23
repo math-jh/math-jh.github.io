@@ -34,7 +34,7 @@ $$w_1+w_2=w_2+w_1$$
 이 성립하는지는 굳이 따져볼 필요가 없다. 두 원소 $w_1,w_2$는 $W$의 원소이기 이전에 $V$의 원소이기도 한데, $W$에서의 덧셈 $+$는 $V$에서의 덧셈을 $W$로 제한한 것이기 때문이다. 이를 바탕으로 우리가 체크해봐야 할 성질들을 따져보면 다음과 같다.
 
 1. $W$가 덧셈에 대해 닫혀있는지의 여부는 따로 체크해봐야 한다. 
-2. 이와 비슷하게, $V$가 덧셈에 대한 항등원과 역원을 갖는지도 체크해봐야 한다. 물론 $V$는 $0$과 $-w$를 포함하지만, 이들이 $W$에 포함되리라는 보장은 없기 때문이다.
+2. 이와 비슷하게, $W$가 덧셈에 대한 항등원과 역원을 갖는지도 체크해봐야 한다. 물론 $V$는 $0$과 $-w$를 포함하지만, 이들이 $W$에 포함되리라는 보장은 없기 때문이다.
 3. 또, 임의의 스칼라 $\alpha\in\mathbb{K}$와 $w\in W$에 대하여, $\alpha w\in W$인지의 여부도 체크해봐야 한다.
 
 하지만 여기에서 조금 더 조건을 간추릴 수도 있다. 만일 $W$가 스칼라곱에 대해 닫혀있기만 하다면, [§벡터공간, ⁋명제 2](/ko/math/linear_algebra/vector_spaces#prop2)와 [벡터공간, ⁋따름정리 3](/ko/math/linear_algebra/vector_spaces#cor3)에 의해 두 번째 조건은 통째로 생략할 수 있다. $W$가 스칼라곱에 대해 닫혀있으므로, $0w\in W$이고 $(-1)w\in W$여야 하는데, 이들이 각각 $0$과 $-w$이기 때문이다. 따라서 방금 우리는 다음 명제를 증명했다.
@@ -95,7 +95,7 @@ $$0.1,\quad 0.01,\quad0.001,\quad\cdots$$
 
 $$p(\x)=\alpha_n\x^n+\alpha_{n-1}\x^{n-1}+\cdots+\alpha_1\x+\alpha_0$$
 
-의 꼴이다. 이 때 자연수 $\max\supp(\alpha_i)=n$은 $p(\x)$의 *차수<sub>degree</sub>*라 부르고, 이 때 $\alpha_n\x^n$을 *최고차항<sub>leading term</sub>*이라 부른다. 최고차항의 계수가 1인 다항식은 *monic polynomial*이라 부른다. 한편 또 다른 $\mathbb{K}[\x]$의 원소 
+의 꼴이다. 이 때 자연수 $\max\supp(\alpha_i)=n$은 $p(\x)$의 *degree<sub>차수</sub>*라 부르고, 이 때 $\alpha_n\x^n$을 *최고차항<sub>leading term</sub>*이라 부른다. 최고차항의 계수가 1인 다항식은 *monic polynomial*이라 부른다. 한편 또 다른 $\mathbb{K}[\x]$의 원소 
 
 $$q(\x)=\beta_m\x^m+\beta_{m-1}\x^{m-1}+\cdots+\beta_1\x+\beta_0$$
 
@@ -105,15 +105,15 @@ $$\sum_{i=0}^na_i\x^i+\sum_{i=0}^mb_i\x^i=\sum_{i=0}^m c_i\x^i,\qquad c_i=\begin
 
 그리고 반대의 경우
 
-$$\sum_{i=0}^na_i\x^i+\sum_{i=0}^mb_i\x^i=\sum_{i=0}^m c_i'\x^i,\qquad c_i'=\begin{cases}a_i+\beta_i&\text{if $0\leq i\leq m$}\\ a_i&\text{if $m < i\leq n$}\end{cases}.$$
+$$\sum_{i=0}^na_i\x^i+\sum_{i=0}^mb_i\x^i=\sum_{i=0}^n c_i'\x^i,\qquad c_i'=\begin{cases}a_i+b_i&\text{if $0\leq i\leq m$}\\ a_i&\text{if $m < i\leq n$}\end{cases}.$$
 
 으로 정의되며, 임의의 스칼라 $\gamma\in\mathbb{K}$에 대하여
 
-$$\gamma p(\x)=\gamma\alpha_n\x^n+\gamma\alpha_{n-1}\x^{n-1}+\cdots+\gamma\alpha_1\x+\alpha_0$$
+$$\gamma p(\x)=\gamma\alpha_n\x^n+\gamma\alpha_{n-1}\x^{n-1}+\cdots+\gamma\alpha_1\x+\gamma\alpha_0$$
 
 으로 정의된다. 어렵지 않게 이들 정의가 $\mathbb{K}[\x]$에 $\mathbb{K}$-벡터공간 구조를 부여한다는 것을 확인할 수 있다.
 
-이제 $n$차 이하의 차수를 갖는 다항식들의 집합 $$\mathbb{K}[\x]_\text{degree\scriptsize$\leq n$}$$는 $\mathbb{K}[\x]$의 부분공간이라는 것을 확인할 수 있다. 반면, <em-ko>정확히</em-ko> 차수 $n$을 갖는 다항식들의 집합은 $0$을 포함하지 않으므로 부분공간은 되지 않지만, $0$만 넣어주면 부분공간이 된다. 
+이제 $n$차 이하의 degree를 갖는 다항식들의 집합 $$\mathbb{K}[\x]_\text{degree\scriptsize$\leq n$}$$는 $\mathbb{K}[\x]$의 부분공간이라는 것을 확인할 수 있다. 반면, <em-ko>정확히</em-ko> degree $n$을 갖는 다항식들의 집합은 $0$을 포함하지 않으므로 부분공간은 되지 않지만, $0$만 넣어주면 부분공간이 된다. 
 :::
 
 ::: 예시 6

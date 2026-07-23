@@ -105,11 +105,11 @@ $$H^i(\mathbb{P}^n, \mathcal{O}(d))=0$$
 
 $$\cdots\rightarrow H^{n-1}(\mathbb{P}^{n-1}, \mathcal{O}(d))\rightarrow H^n(\mathbb{P}^n, \mathcal{O}(d-1))\rightarrow H^n(\mathbb{P}^n, \mathcal{O}(d))\rightarrow H^n(\mathbb{P}^{n-1}, \mathcal{O}(d))=0$$
 
-을 보자. 만일 $d\geq -n$이라면, 다시 귀납적 가정으로부터 $H^{n-1}(\mathbb{P}^{n-1}, \mathcal{O}(d))=0$이므로 위와 마찬가지 논증으로 $H^n(\mathbb{P}^n, \mathcal{O}(d))$가 모든 $d>-n-1$에 대해 성립하는 것을 보일 수 있다. $d\leq -n-1$인 경우, $H^n$은 Čech complex로부터 직접 계산해야 하는데, 이를 위해 $\check{C}^n(\mathbb{P}^n, \mathcal{O}(d))$를 직접 계산하면 $n$-cochain은
+을 보자. 만일 $d\geq -n$이라면, 다시 귀납적 가정으로부터 $H^{n-1}(\mathbb{P}^{n-1}, \mathcal{O}(d))=0$이므로 위와 마찬가지 논증으로 $H^n(\mathbb{P}^n, \mathcal{O}(d))=0$이 모든 $d>-n-1$에 대해 성립하는 것을 보일 수 있다. $d\leq -n-1$인 경우, $H^n$은 Čech complex로부터 직접 계산해야 하는데, 이를 위해 $\check{C}^n(\mathbb{P}^n, \mathcal{O}(d))$를 직접 계산하면 $n$-cochain은
 
 $$\mathbb{K}[\x_0^{\pm 1}, \ldots, \x_n^{\pm 1}]_d$$
 
-의 원소임을 알고, $n-1$-cochain의 image로 나타나지 않는 monomial들은 앞선 $\mathbb{P}^1$에서의 계산과 유사하게 <em-ko>모든</em-ko> 지수가 $-1$보다 작은 $d$차식이며 이로부터 원하는 결과를 얻는다. $H^0$의 경우는, 위에서는 직접 계산해보았지만, 이미 언급했듯 이는 [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16)의 재확인에 불과하므로 여기서는 굳이 반복하지 않기로 한다.
+의 원소임을 알고, $n-1$-cochain의 image로 나타나지 않는 monomial들은 앞선 $\mathbb{P}^1$에서의 계산과 유사하게 <em-ko>모든</em-ko> 지수가 $0$보다 작은 $d$차식이며 이로부터 원하는 결과를 얻는다. $H^0$의 경우는, 위에서는 직접 계산해보았지만, 이미 언급했듯 이는 [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16)의 재확인에 불과하므로 여기서는 굳이 반복하지 않기로 한다.
 :::
 
 위 증명에서 우리는 각 변수 $\x_0,\cdots, \x_n$ 그리고 $d\leq -n-1$에 대하여, $H^n(\mathbb{P}^n, \mathcal{O}(d))$가 다음의 monomial들
@@ -122,7 +122,7 @@ $$\y_0^{\lvert a_0\rvert},\cdots \y_n^{\lvert a_n\rvert}\qquad \lvert a_i\rvert\
 
 들로 생성되는 공간이라 하여도 된다. 여기서 각각의 $a_i$와 $d$는 모두 음수이므로 $\lvert a_i\rvert=-a_i$, $\lvert d\rvert=-d$이다. 위의 공간은 거의 degree $\lvert d\rvert$ homogeneous polynomial들의 공간과 유사하지만, $\lvert a_i\rvert$들이 $0$이 될 수 없다는 차이점이 있다. 따라서 $b_i=\lvert a_i\rvert-1$으로 치환하면, 우리는 이 공간을
 
-$$\y_0^{b_i}\cdots \y_n^{b_n},\qquad b_i\geq 0,\quad \sum b_i=\lvert d\rvert-(n+1)$$
+$$\y_0^{b_0}\cdots \y_n^{b_n},\qquad b_i\geq 0,\quad \sum b_i=\lvert d\rvert-(n+1)$$
 
 들의 공간으로 생각할 수 있다. 즉, 이 공간은 degree $-d-n-1$ "negative degree" monomial들의 공간으로 생각할 수 있고, 이러한 이유로 이 공간을
 
@@ -204,11 +204,11 @@ $$\check{H}^i(\{X \cap U_j\}, \mathcal{F}) = \check{H}^i(\{U_j\}, i_\ast\mathcal
 
 이 성립한다. $X$와 $\mathbb{P}^N$은 separated scheme이므로 ([§층 코호몰로지, ⁋정리 11](/ko/math/algebraic_varieties/sheaf_cohomology#thm11)), quasi-coherent sheaf에 대해 Čech cohomology = sheaf cohomology:
 
-$H^i(X, \mathcal{F}) = \check{H}^i(\{X \cap U_j\}, \mathcal{F}) = \check{H}^i(\{U_j\}, i_\ast\mathcal{G}) = H^i(\mathbb{P}^N, i_\ast\mathcal{G})$ 따라서 다음을 보이면 충분하다: $\mathbb{P}^N$ 위의 coherent sheaf $\mathcal{G}$에 대해, 충분히 큰 $n$에 대해 $H^i(\mathbb{P}^N, \mathcal{G}(n)) = 0$ ($i > 0$). 여기서 $\mathcal{G}(n) = \mathcal{G} \otimes \mathcal{O}_{\mathbb{P}^N}(n)$이다.
+$H^i(X, \mathcal{F}) = \check{H}^i(\{X \cap U_j\}, \mathcal{F}) = \check{H}^i(\{U_j\}, i_\ast\mathcal{F}) = H^i(\mathbb{P}^N, i_\ast\mathcal{F})$ 따라서 다음을 보이면 충분하다: $\mathbb{P}^N$ 위의 coherent sheaf $\mathcal{G}$에 대해, 충분히 큰 $n$에 대해 $H^i(\mathbb{P}^N, \mathcal{G}(n)) = 0$ ($i > 0$). 여기서 $\mathcal{G}(n) = \mathcal{G} \otimes \mathcal{O}_{\mathbb{P}^N}(n)$이다.
 
 **핵심 보조정리**. $\mathcal{G}(n)$이 충분히 큰 $n$에 대해 globally generated임을 보인다. (아래 [정의 6](#def6) 참조.)
 
-$S = \mathbb{K}[\x_0, \ldots, \x_N]$로 하고, $M = \bigoplus_{n \in \mathbb{Z}} \Gamma(\mathbb{P}^N, \mathcal{G}(n))$을 연결 graded $S$-module이라 하자. 각 표준 affine 열린집합 $D_+(\x_j)$ 위에서, $\Gamma(D_+(\x_j), \mathcal{G})$는 degree-0 localisation $M_{(\x_j)}$이고, 이는 $S_{(\x_j)}$ 위의 finitely generated module이다. Generator들 $\bar{m}_1, \ldots, \bar{m}_{r_j} \in M_{(\x_j)}$을 택하자. 각 $\bar{m}_k$는 $m_k / \x_j^{d_k}$ 꼴로 쓸 수 있으며, 여기서 $m_k \in M$은 homogeneous element이다. $d_0 = \max_j \max_k d_k$로 하면, 각 generator에 $\x_j^{d_0 - d_k}$를 곱하여 homogeneous element $m_k \cdot \x_j^{d_0 - d_k} \in M_{d_0}$를 얻는다. 이는 $\Gamma(\mathbb{P}^N, \mathcal{G}(d_0))$의 원소이며, $D_+(\x_j)$ 위에서 $\mathcal{G}$의 stalk를 생성함을 알 수 있다. $j$에 대한 최대값을 취하면, $\mathcal{G}(d_0)$이 globally generated임을 얻는다.
+$S = \mathbb{K}[\x_0, \ldots, \x_N]$로 하고, $M = \bigoplus_{n \in \mathbb{Z}} \Gamma(\mathbb{P}^N, \mathcal{G}(n))$을 graded $S$-module이라 하자. 각 표준 affine 열린집합 $D_+(\x_j)$ 위에서, $\Gamma(D_+(\x_j), \mathcal{G})$는 degree-0 localisation $M_{(\x_j)}$이고, 이는 $S_{(\x_j)}$ 위의 finitely generated module이다. Generator들 $\bar{m}_1, \ldots, \bar{m}_{r_j} \in M_{(\x_j)}$을 택하자. 각 $\bar{m}_k$는 $m_k / \x_j^{d_k}$ 꼴로 쓸 수 있으며, 여기서 $m_k \in M$은 homogeneous element이다. $d_0 = \max_j \max_k d_k$로 하면, 각 generator에 $\x_j^{d_0 - d_k}$를 곱하여 homogeneous element $m_k \cdot \x_j^{d_0 - d_k} \in M_{d_0}$를 얻는다. 이는 $\Gamma(\mathbb{P}^N, \mathcal{G}(d_0))$의 원소이며, $D_+(\x_j)$ 위에서 $\mathcal{G}$의 stalk를 생성함을 알 수 있다. $j$에 대한 최대값을 취하면, $\mathcal{G}(d_0)$이 globally generated임을 얻는다.
 
 **Vanishing**. 이제 $H^i(\mathbb{P}^N, \mathcal{G}(n)) = 0$ ($i > 0$, $n \gg 0$)을 보인다.
 
@@ -249,7 +249,7 @@ $$H^j(\mathcal{G}(n_0)) \cong H^{j+N}(\mathcal{K}_{N-1})$$
 
 [명제 4](#prop4)는 higher cohomology가 충분히 큰 twisting 후 vanish한다는 qualitative한 결과를 주었다. Regularity는 이를 정량화하여, 구체적으로 얼마만큼의 twisting이 필요한지를 측정하는 개념이다.
 
-직관적으로 higher cohomology는 낮은 degree cohomology에서의 실패로 인해 생기는 것이므로, 이 twisting은 높은 차수에서는 "덜" 필요하다. 이를 염두에 두면 다음의 정의가 자연스럽다.
+직관적으로 higher cohomology는 낮은 degree cohomology에서의 실패로 인해 생기는 것이므로, 이 twisting은 높은 degree에서는 "덜" 필요하다. 이를 염두에 두면 다음의 정의가 자연스럽다.
 
 ::: 정의 5
 Projective variety $X$와 그 위의 ample line bundle $\mathcal{L}$이 고정되었다고 하자. 그럼 $X$ 위의 coherent sheaf $\mathcal{F}$가 *$m$-regular*라는 것은 모든 $i>0$에 대하여
@@ -322,7 +322,7 @@ $$H^i(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m-i}) = 0$$
 
 **2단계: $\mathcal{F} \otimes \mathcal{L}^{\otimes m}$이 globally generated.** 귀납적 가정을 $D$에 적용한다. $D$는 projective variety이고 $\dim D < \dim X$이며, $\mathcal{L}\vert_D$는 ample line bundle이다. $\mathcal{F}\vert_D$가 $m$-regular이므로 귀납적 가정에 의해 $\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m}$은 $D$ 위에서 globally generated이다.
 
-이제 $\mathcal{F} \otimes \mathcal{L}^{\otimes m}$이 globally generated임을 보이자. 임의의 점 $p \in X$에서 fiber $(\mathcal{F} \otimes \mathcal{L}^{\otimes m})_p$가 global section들의 상으로 생성됨을 확인하면 충분하다. $p$를 지나는 일반적인 divisor $D$를 택하고, restriction sequence에서 $k = m$을 대입하면
+이제 $\mathcal{F} \otimes \mathcal{L}^{\otimes m}$이 globally generated임을 보이자. 임의의 점 $p \in X$에서 fiber $(\mathcal{F} \otimes \mathcal{L}^{\otimes m})_p$가 global section들의 image로 생성됨을 확인하면 충분하다. $p$를 지나는 일반적인 divisor $D$를 택하고, restriction sequence에서 $k = m$을 대입하면
 
 $$0 \rightarrow \mathcal{F} \otimes \mathcal{L}^{\otimes m-1} \rightarrow \mathcal{F} \otimes \mathcal{L}^{\otimes m} \rightarrow \mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m} \rightarrow 0$$
 
@@ -330,7 +330,7 @@ $$0 \rightarrow \mathcal{F} \otimes \mathcal{L}^{\otimes m-1} \rightarrow \mathc
 
 $$H^0(\mathcal{F} \otimes \mathcal{L}^{\otimes m}) \rightarrow H^0(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m})$$
 
-는 surjective이다. 귀납적 가정에 의해 $\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m}$은 $D$ 위에서 globally generated이므로, 이 fiber at $p$는 $H^0(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m})$의 상으로 생성된다. Restriction map이 surjective이므로 $\mathcal{F} \otimes \mathcal{L}^{\otimes m}$의 global section들도 $p$에서의 fiber를 생성한다. 따라서 $\mathcal{F} \otimes \mathcal{L}^{\otimes m}$은 globally generated이다.
+는 surjective이다. 귀납적 가정에 의해 $\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m}$은 $D$ 위에서 globally generated이므로, 이 fiber at $p$는 $H^0(\mathcal{F}\vert_D \otimes (\mathcal{L}\vert_D)^{\otimes m})$의 image로 생성된다. Restriction map이 surjective이므로 $\mathcal{F} \otimes \mathcal{L}^{\otimes m}$의 global section들도 $p$에서의 fiber를 생성한다. 따라서 $\mathcal{F} \otimes \mathcal{L}^{\otimes m}$은 globally generated이다.
 
 **3단계: $\mathcal{F} \otimes \mathcal{L}^{\otimes p}$가 $(m+p)$-regular.** $\mathcal{F} \otimes \mathcal{L}^{\otimes m}$이 globally generated이므로, 적당한 $r_0$에 대하여 다음의 surjection이 존재한다.
 
@@ -338,7 +338,7 @@ $$\mathcal{O}_X^{\oplus r_0} \twoheadrightarrow \mathcal{F} \otimes \mathcal{L}^
 
 이것에 $\mathcal{L}^{\otimes p}$를 tensor하면
 
-$$\mathcal{L}^{\oplus r_0} \twoheadrightarrow \mathcal{F} \otimes \mathcal{L}^{\otimes m+p}$$
+$$(\mathcal{L}^{\otimes p})^{\oplus r_0} \twoheadrightarrow \mathcal{F} \otimes \mathcal{L}^{\otimes m+p}$$
 
 을 얻는다. 따라서 임의의 $i > 0$과 $p \geq 0$에 대해 $H^i(X, \mathcal{L}^{\otimes p}) = 0$이면 $H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m+p}) = 0$이 성립한다. $p = 0$인 경우 $H^i(\mathcal{F} \otimes \mathcal{L}^{\otimes m}) = 0$ ($i > 0$)은 $\mathcal{F}$의 $m$-regularity 정의 자체에 해당한다. $p \geq 1$인 경우, $\mathcal{L}$이 ample이므로 [명제 4](#prop4)에 의해 충분히 큰 $p$에 대해 $H^i(\mathcal{L}^{\otimes p}) = 0$이지만, $p$가 작은 경우에는 이 인자가 vanish하지 않을 수 있다.
 

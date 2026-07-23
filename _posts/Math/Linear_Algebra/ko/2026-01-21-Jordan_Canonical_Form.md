@@ -154,7 +154,7 @@ $$(L-\lambda_iI)^{p_i}v=0\implies L(L-\lambda_iI)^{p_i-1}v=\lambda_i(L-\lambda_i
 
 으로부터 $w=(L-\lambda_iI)^{p_i-1}v\neq 0$는 $L$의 고유값 $\lambda_i$에 해당하는 고유벡터임을 안다. 한편 $v\in G_{\lambda_j}(L)$이므로 $(L-\lambda_j I)^{k_j}v=0$이고, $(L-\lambda_i I)$와 $(L-\lambda_j I)$는 commute하므로
 
-$$(L-\lambda_j I)^{k_j}w=(L-\lambda_j I)^{k_j}(L-\lambda_i I)^{p_i}v=(L-\lambda_i I)^{p_i}(L-\lambda_j I)^{k_j}v=0$$
+$$(L-\lambda_j I)^{k_j}w=(L-\lambda_j I)^{k_j}(L-\lambda_i I)^{p_i-1}v=(L-\lambda_i I)^{p_i-1}(L-\lambda_j I)^{k_j}v=0$$
 
 이다. 즉 $w\in G_{\lambda_j}(L)$이므로, $w$는 고유값 $\lambda_i$에 해당하는 고유벡터인 동시에 $G_{\lambda_j}(L)$에 속하는 벡터가 된다. 
 
@@ -164,7 +164,7 @@ $$0=(L-\lambda_jI)^{p_j}w=(L-\lambda_jI)w'$$
 
 이므로 $w'$는 고유값 $\lambda_j$에 해당하는 고유벡터이다. 한편 $w$가 고유값 $\lambda_i$에 해당하는 고유벡터이므로, 다음 식
 
-$$Lw'=L(L-\lambda_jI)^{p_j-1}w=(L-\lambda_jI)^{p_j-1}Lw=(L-\lambda_jI)^{p_j-1}\lambda_iw=\lambda_i (L-\lambda_jI)^{p_j-1}w_\lambda w'$$
+$$Lw'=L(L-\lambda_jI)^{p_j-1}w=(L-\lambda_jI)^{p_j-1}Lw=(L-\lambda_jI)^{p_j-1}\lambda_iw=\lambda_i (L-\lambda_jI)^{p_j-1}w=\lambda_i w'$$
 
 으로부터 $w'$ 또한 $\lambda_i$에 해당하는 고유벡터임을 안다. 이는 [§고유공간분해, ⁋명제 4](/ko/math/linear_algebra/eigenspace_decomposition#prop4)에 모순이므로 귀류법에 의하여 $i\neq j$일 때 $G_{\lambda_i}(L)\cap G_{\lambda_j}(L)=\{0\}$임을 안다. 
 :::
@@ -189,7 +189,7 @@ $$V=G_{\lambda_1}(A)\oplus G_{\lambda_2}(A)\oplus\cdots\oplus G_{\lambda_m}(A)$$
 
 $$p_A(\x)=\prod_{\lambda\in\sigma(A)}(\x-\lambda)^{d_\lambda}$$
 
-가 주어졌다 하자. 여기서 $d_\lambda$는 $\lambda$의 algebraic multiplicity이고, $\sum d_\lambda$는 $p_A$의 차수인 $\dim V$와 같다. 그런데 우리는 위의 분해로부터 다음의 식
+가 주어졌다 하자. 여기서 $d_\lambda$는 $\lambda$의 algebraic multiplicity이고, $\sum d_\lambda$는 $p_A$의 degree인 $\dim V$와 같다. 그런데 우리는 위의 분해로부터 다음의 식
 
 $$p_A(\x)=\prod_{\lambda\in\sigma(A)} p_{G_\lambda(A)}(\x)$$
 
@@ -217,7 +217,7 @@ $$N_\lambda:=(A-\lambda I)\vert_{G_\lambda(A)}: G_\lambda(A)\rightarrow G_\lambd
 
 즉, 만일 우리가 임의의 nilpotent operator의 표준형을 구할 수 있다면 우리는 전체 행렬 $A$ 또한 표준형으로 나타낼 수 있게 된다. 
 
-Index $k$의 nilpotent operator $N: V\rightarrow V$가 주어졌다 하자. 그럼 적당한 $v\in V$가 존재하여 $N^{k-1}v\neq 0$이다. 이 벡터를 이용하면 우리는 [보조정리 1](#lem1)에서 포함관계가 strict하다는 것도 보일 수 있는데, $N^{k-i}v\in \ker N^i$이지만 $N^{k-1}v\not\in\ker N^{i-1}$이기 때문이다. 바꾸어 말하자면 $v, Nv, \ldots, N^{k-1}v$는 모두 다른 원소들이다. 더 일반적으로 다음이 성립한다. 
+Index $k$의 nilpotent operator $N: V\rightarrow V$가 주어졌다 하자. 그럼 적당한 $v\in V$가 존재하여 $N^{k-1}v\neq 0$이다. 이 벡터를 이용하면 우리는 [보조정리 1](#lem1)에서 포함관계가 strict하다는 것도 보일 수 있는데, $N^{k-i}v\in \ker N^i$이지만 $N^{k-i}v\not\in\ker N^{i-1}$이기 때문이다. 바꾸어 말하자면 $v, Nv, \ldots, N^{k-1}v$는 모두 다른 원소들이다. 더 일반적으로 다음이 성립한다. 
 
 ::: 보조정리 8
 벡터공간 $V$ 위에 정의된 linear operator $N: V\rightarrow V$와 벡터 $v$가 $N^kv=0$과 $N^{k-1}v\neq 0$을 만족한다 하자. 그럼 다음의 벡터들
@@ -260,7 +260,7 @@ $$U_1=\span (N^{k_1-1}v_1, \cdots, Nv_1, v_1)$$
 
 을 생각하자. 만일 $U_1=V$라면 더 이상 증명할 것이 없다. 그렇지 않다면 우리는 $V=U_1\oplus W_1$이도록 하는 *$T$-invariant* subspace $W_1$을 찾는다. $N$이 $W_1$ 위에서도 nilpotent인 것은 자명하므로, $N\vert_{W_1}$의 nilpotency index $k_2$를 잡고, $N^{k_2}v_2=0$이지만 $N^{k_2-1}v_2\neq 0$이도록 하는 $v_2$를 잡을 수 있다. 이제 다시 다음의 cyclic subspace
 
-$$U_2=\span (N^{k-2-1}v_2, \cdots, Nv_2, v_2)$$
+$$U_2=\span (N^{k_2-1}v_2, \cdots, Nv_2, v_2)$$
 
 를 얻고, 다시 $U_2$의 $T$-invariant complement를 얻는 과정을 반복해나가다 보면 원하는 decomposition을 얻는다. 
 
@@ -347,19 +347,19 @@ $$C(p)=\begin{pmatrix}0&0&\cdots&0&-c_0\\1&0&\cdots&0&-c_1\\0&1&\cdots&0&-c_2\\\
 Operator $T:V\rightarrow V$가 *cyclic*이라는 것은 적당한 $v\in V$가 존재하여 $\{v,Tv,\ldots,T^{d-1}v\}$ ($d=\dim V$)가 $V$의 기저가 되는 것이며, 이러한 $v$를 cyclic vector라 부른다. 
 
 ::: 명제 15
-Cyclic vector $v$를 갖는 차원 $d$의 operator $T:V\rightarrow V$의 minimal polynomial $p$는 차수가 $d$이고, cyclic basis $\{v,Tv,\ldots,T^{d-1}v\}$에 대한 $T$의 행렬표현은 $C(p)$이다. 특히 [정의 11](#def11)의 Jordan block $J_k(\lambda)$는 $(\x-\lambda)^k$의 companion matrix와 닮음이다.
+Cyclic vector $v$를 갖는 차원 $d$의 operator $T:V\rightarrow V$의 minimal polynomial $p$는 degree가 $d$이고, cyclic basis $\{v,Tv,\ldots,T^{d-1}v\}$에 대한 $T$의 행렬표현은 $C(p)$이다. 특히 [정의 11](#def11)의 Jordan block $J_k(\lambda)$는 $(\x-\lambda)^k$의 companion matrix와 닮음이다.
 :::
 ::: 증명
 $\{v,Tv,\ldots,T^{d-1}v\}$가 일차독립이므로 $T^dv$를 이들의 일차결합으로 나타낸
 
 $$T^dv=-(c_0v+c_1Tv+\cdots+c_{d-1}T^{d-1}v)$$
 
-의 계수로 $p(\x)=\x^d+c_{d-1}\x^{d-1}+\cdots+c_0$을 정의하면 $p(T)v=0$이다. 그럼 임의의 $T^iv$에 대해서도 $p(T)T^iv=T^ip(T)v=0$이고 이들이 $V$를 생성하므로 $p(T)=0$이다. 한편 차수가 $d$보다 작은 $0$ 아닌 다항식 $q$에 대해서는 $q(T)v$가 $\{v,\ldots,T^{d-1}v\}$의 자명하지 않은 일차결합이라 $0$이 아니므로, $p$가 $T$의 minimal polynomial이다. 이 기저에서 $T$는 $T^iv\mapsto T^{i+1}v$ ($i<d-1$)로, 그리고 $T^{d-1}v$는 위의 식으로 작용하므로 그 행렬표현은 정확히 $C(p)$이다.
+의 계수로 $p(\x)=\x^d+c_{d-1}\x^{d-1}+\cdots+c_0$을 정의하면 $p(T)v=0$이다. 그럼 임의의 $T^iv$에 대해서도 $p(T)T^iv=T^ip(T)v=0$이고 이들이 $V$를 생성하므로 $p(T)=0$이다. 한편 degree가 $d$보다 작은 $0$ 아닌 다항식 $q$에 대해서는 $q(T)v$가 $\{v,\ldots,T^{d-1}v\}$의 자명하지 않은 일차결합이라 $0$이 아니므로, $p$가 $T$의 minimal polynomial이다. 이 기저에서 $T$는 $T^iv\mapsto T^{i+1}v$ ($i<d-1$)로, 그리고 $T^{d-1}v$는 위의 식으로 작용하므로 그 행렬표현은 정확히 $C(p)$이다.
 
 $J_k(\lambda)$의 경우, $N=J_k(\lambda)-\lambda I$가 index $k$의 nilpotent이므로 $N^{k-1}v\neq 0$인 $v$를 택하면 [보조정리 8](#lem8)에 의하여 $\{v,Nv,\ldots,N^{k-1}v\}$이 기저이다. $J_k(\lambda)=\lambda I+N$이라 $\{v,J_k(\lambda)v,\ldots,J_k(\lambda)^{k-1}v\}$도 같은 공간을 생성하므로 $v$는 cyclic vector이고, $J_k(\lambda)$의 minimal polynomial이 $(\x-\lambda)^k$이므로 위의 결과에 의해 $J_k(\lambda)$는 $(\x-\lambda)^k$의 companion matrix와 닮음이다.
 :::
 
-이것이 실제로 같은 행렬이 되지 않는 이유는 순전히 관례적인 것으로, [정의 14](#def14)의 companion matrix는 basis를 낮은 차수에서 높은 차수로 정렬한 반면 Jordan block은 높은 차수에서 낮은 차수로 정렬했기 때문이다. 그러나 이 두 표준형 모두 뿌리를 깊이 내린 형태들이고, 어느 하나를 다른 하나와 맞추면 이 표준이 깨지므로 이렇게 간략한 remark로만 대체한다. 그럼 더 일반적으로 다음을 얻는다. 
+이것이 실제로 같은 행렬이 되지 않는 이유는 순전히 관례적인 것으로, [정의 14](#def14)의 companion matrix는 basis를 낮은 degree에서 높은 degree로 정렬한 반면 Jordan block은 높은 degree에서 낮은 degree로 정렬했기 때문이다. 그러나 이 두 표준형 모두 뿌리를 깊이 내린 형태들이고, 어느 하나를 다른 하나와 맞추면 이 표준이 깨지므로 이렇게 간략한 remark로만 대체한다. 그럼 더 일반적으로 다음을 얻는다. 
 
 ::: 정리 16 (유리표준형)
 Algebraically closed field 위의 유한차원 벡터공간에 정의된 임의의 linear operator $A$에 대하여, $V$의 적당한 기저를 택하면 $A$의 행렬표현이 companion matrix들의 block diagonal
@@ -381,4 +381,4 @@ $$\begin{pmatrix}C(p_1)&&\\&\ddots&\\&&C(p_r)\end{pmatrix},\qquad p_i=(\x-\lambd
 
 ---
 
-[^1]: $$V_1$$의 complement $$W_1$$을 $$T$$-invariant가 되도록 할 수 있다는 것이 이 증명에서 가장 비자명한 부분이며 이는 귀납법을 통해 직접 보여야 한다. 
+[^1]: $U_1$의 complement $W_1$을 $T$-invariant가 되도록 할 수 있다는 것이 이 증명에서 가장 비자명한 부분이며 이는 귀납법을 통해 직접 보여야 한다. 

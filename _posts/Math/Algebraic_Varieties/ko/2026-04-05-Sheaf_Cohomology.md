@@ -144,7 +144,7 @@ $$s_{ij} + s_{jk} = s_{ik} \qquad\text{on}\quad U_i \cap U_j \cap U_k$$
 따라서 $\check{H}^1(\mathcal{U}, \mathcal{F})$의 nontrivial한 원소는 이들 세 데이터 $s_{ij}, s_{jk}, s_{ik}$를 붙이려 할 때 나타나는 차이를 반영하는 것이며, 이것이 위에서 언급한 gluing의 failure라 할 수 있다.
 :::
 
-지금까지 우리는 하나의 open cover $\mathcal{U}$에 대하여 Čech cohomology $\check{H}^p(\mathcal{U}, \mathcal{F})$를 정의하였다. 그러나 일반적으로 서로 다른 open cover는 서로 다른 Čech cohomology를 줄 수 있다. 가령 하나의 열린집합 $U_0 = X$으로 이루어진 cover에서는 모든 교집합이 $X$이므로 $\check{H}^p$가 $p = 0$에서만 0이 아닌 값을 갖는다. 더 조밀한 cover를 사용할수록 더 많은 위상적 정보를 포착할 수 있으므로, 우리는 open cover들 사이의 관계를 규명하고 모든 open cover에 대한 정보를 종합할 필요가 있다. 즉, <em-ko>모든</em-ko> open cover들에, refinement를 사용하여 순서관계를 주자. 그럼 refinement $\mathcal{V} \preceq \mathcal{U}$에 대하여 natural map $\check{H}^p(\mathcal{U}, \mathcal{F}) \rightarrow \check{H}^p(\mathcal{V}, \mathcal{F})$가 존재한다는 것이 자명하며, 따라서 모든 open cover들을 index set 삼아 direct system $\check{H}^p(\mathcal{U}, \mathcal{F})$을 정의할 수 있다. 이로부터 다음을 정의한다.
+지금까지 우리는 하나의 open cover $\mathcal{U}$에 대하여 Čech cohomology $\check{H}^p(\mathcal{U}, \mathcal{F})$를 정의하였다. 그러나 일반적으로 서로 다른 open cover는 서로 다른 Čech cohomology를 줄 수 있다. 가령 하나의 열린집합 $U_0 = X$으로 이루어진 cover에서는 모든 교집합이 $X$이므로 $\check{H}^p$가 $p = 0$에서만 0이 아닌 값을 갖는다. 더 조밀한 cover를 사용할수록 더 많은 위상적 정보를 포착할 수 있으므로, 우리는 open cover들 사이의 관계를 규명하고 모든 open cover에 대한 정보를 종합할 필요가 있다. 즉, <em-ko>모든</em-ko> open cover들에, refinement를 사용하여 order relation을 주자. 그럼 refinement $\mathcal{V} \preceq \mathcal{U}$에 대하여 natural map $\check{H}^p(\mathcal{U}, \mathcal{F}) \rightarrow \check{H}^p(\mathcal{V}, \mathcal{F})$가 존재한다는 것이 자명하며, 따라서 모든 open cover들을 index set 삼아 direct system $\check{H}^p(\mathcal{U}, \mathcal{F})$을 정의할 수 있다. 이로부터 다음을 정의한다.
 
 ::: 정의 7
 $X$의 *Čech cohomology*를 모든 open cover에 대한 direct limit
@@ -218,7 +218,7 @@ $$s^p(t)_{j_0<\cdots< j_{p-1}}=t_{i_0< j_0<\cdots < j_{p-1}}\tag{$\ast$}$$
 
 으로 정의하는 것이다. 이 때, $s^p(t)_{j_0<\cdots< j_{p-1}}$는 그 정의에 의해 $U_{j_0}\cap\cdots\cap U_{j_{p-1}}$ 위에서의 section이지만, 우변의 $t_{i_0< j_0<\cdots < j_{p-1}}$는 그보다 작은 집합 $U_{i_0}\cap U_{j_0}\cap\cdots\cap U_{j_{p-1}}$에서의 section임을 주목하자. 일반적인 $\mathcal{F}$에 대해서는 이렇게 정의하는 것이 불가능하겠지만, 우리는 $\mathcal{F}$가 flasque임을 가정하고 있으므로 항상 이 함수를 extension하여 $U_{j_0}\cap\cdots\cap U_{j_{p-1}}$의 section이도록 해줄 수 있으며 식 ($\ast$) 또한 이러한 방식으로 이해해야 한다. 그럼 이렇게 정의한 $s^p$가 실제로 chain homotopy가 된다는 것은 직접 계산을 해 보면 $d^{p-1}s^p$에서 $i_0$을 생략해주는 항과, $s^{p+1}d^p$에서 $i_0$을 넣어주는 항이 부호가 상쇄되어 사라지는 것을 통해 확인할 수 있다.
 
-약간의 기술적인 문제는 우리가 고정한 index $i_0$이 $j_0<\cdots< j_{p-1}$에 포함되는 경우가 존재할 수 있다는 것이다. 이를 위해 우리는 보편적인 Čech complex 대신 그냥 $I$의 $p+1$개의 원소 $i_0,\ldots, i_{p+1}\in I$로 좌표를 주는 *non-alternating* Čech complex를 사용한다. 이는 원래의 Čech complex와 quasi-isomorphic하며 따라서 이렇게 우회하는 것이 정당화된다.
+약간의 기술적인 문제는 우리가 고정한 index $i_0$이 $j_0<\cdots< j_{p-1}$에 포함되는 경우가 존재할 수 있다는 것이다. 이를 위해 우리는 보편적인 Čech complex 대신 그냥 $I$의 $p+1$개의 원소 $i_0,\ldots, i_p\in I$로 좌표를 주는 *non-alternating* Čech complex를 사용한다. 이는 원래의 Čech complex와 quasi-isomorphic하며 따라서 이렇게 우회하는 것이 정당화된다.
 :::
 
 ::: 정리 11 (Leray)
@@ -244,7 +244,7 @@ $$F_v^p\Tot(K)^\bullet,\qquad F_h^p\Tot(K)^\bullet$$
 
 은 같은 filtered homology $H^\bullet(\Tot(K))$로 수렴한다는 것을 안다.
 
-따라서 각각의 filtered complex가 주는 spectral sequence들을 생각하자. 우선 vertical filtration의 경우, $E_1$ page에서 $E_1^{p,q} = H^q(K^{p,\bullet})$이며, $K^{p,\bullet} = \check{C}^p(\mathcal{U}, \mathcal{I}^\bullet)$이다. 그런데 $\check{C}^p(\mathcal{U}, \mathcal{I}^\bullet)$는, 각 성분을 보면, 각각의 교집합 $U_{i_0 \cdots i_p}$로 injective resolution을 제한한 후 cohomology를 취하는 것이므로 $U_{i_0\cdots i_p}$에서 $\mathcal{F}$의 $q$번째 sheaf cohomology와 같고, 따라서 $\mathcal{F}$가 acyclic이라는 가정으로부터 모든 $q>0$에 대하여 $E_1^{p,q}=0$이다. 또, 정의에 의해 $E_1=\check{C}^p(\mathcal{U}, \mathcal{F})$이다. 이제 $E_2$ page는 $E_1^{p,0}$의 horizontal differential $d_h$에 의한 cohomology로 주어지므로
+따라서 각각의 filtered complex가 주는 spectral sequence들을 생각하자. 우선 vertical filtration의 경우, $E_1$ page에서 $E_1^{p,q} = H^q(K^{p,\bullet})$이며, $K^{p,\bullet} = \check{C}^p(\mathcal{U}, \mathcal{I}^\bullet)$이다. 그런데 $\check{C}^p(\mathcal{U}, \mathcal{I}^\bullet)$는, 각 성분을 보면, 각각의 교집합 $U_{i_0 \cdots i_p}$로 injective resolution을 제한한 후 cohomology를 취하는 것이므로 $U_{i_0\cdots i_p}$에서 $\mathcal{F}$의 $q$번째 sheaf cohomology와 같고, 따라서 $\mathcal{F}$가 acyclic이라는 가정으로부터 모든 $q>0$에 대하여 $E_1^{p,q}=0$이다. 또, 정의에 의해 $E_1^{p,0}=\check{C}^p(\mathcal{U}, \mathcal{F})$이다. 이제 $E_2$ page는 $E_1^{p,0}$의 horizontal differential $d_h$에 의한 cohomology로 주어지므로
 
 $$E_2^{p,q}=\begin{cases}\check{H}^p(\mathcal{U}, \mathcal{F})&\text{$q=0$}\\0&\text{otherwise}\end{cases}$$
 
@@ -267,9 +267,9 @@ $$\check{H}^n(\mathcal{U}, \mathcal{F}) \cong H^n(X, \mathcal{F})$$
 Affine variety $X$ 위의 quasi-coherent sheaf $\mathcal{F} = \widetilde{M}$에 대하여, $H^i(X, \mathcal{F}) = 0$이 모든 $i > 0$에 대해 성립한다.
 :::
 
-이에 대한 증명은, $X$의 coordinate ring을 $A$라 할 때, $\lMod{A}$ 카테고리에서 $M$의 injective resolution $I^\bullet$을 찾으면 이것이 ($\QCoh(X)$에서의 resolution인) $\widetilde{I^\bullet}$을 주며, 이 때 injective module이 주는 sheaf는 항상 flasque이고, 따라서 acyclic이기 때문이다.
+이에 대한 증명은, $X$의 coordinate ring을 $A$라 할 때, $\lMod{A}$ category에서 $M$의 injective resolution $I^\bullet$을 찾으면 이것이 ($\QCoh(X)$에서의 resolution인) $\widetilde{I^\bullet}$을 주며, 이 때 injective module이 주는 sheaf는 항상 flasque이고, 따라서 acyclic이기 때문이다.
 
-이제 임의의 variety $X$와 그 위에 정의된 quasi-coherent sheaf $\mathcal{F}$를 생각하고, $\mathcal{F}$의 affine open cover $\mathcal{U}$가 주어졌다 하자. 그럼 이들 데이터가 [정리 11](#thm11)의 전제조건을 만족하기 위해서는 $\mathcal{U}$의 임의의 유한한 교집합이 다시 affine이어야 하는 것이다. 만일, diagonal
+이제 임의의 variety $X$와 그 위에 정의된 quasi-coherent sheaf $\mathcal{F}$를 생각하고, $X$의 affine open cover $\mathcal{U}$가 주어졌다 하자. 그럼 이들 데이터가 [정리 11](#thm11)의 전제조건을 만족하기 위해서는 $\mathcal{U}$의 임의의 유한한 교집합이 다시 affine이어야 하는 것이다. 만일, diagonal
 
 $$\Delta_X\hookrightarrow X\times X$$
 
@@ -307,7 +307,7 @@ Exactness는 stalk functor $\mathcal{F} \mapsto \mathcal{F}_x$가 exact이고 $C
 
 $$0\rightarrow \mathcal{F}\rightarrow C^0(\mathcal{F})\rightarrow \mathcal{Q}^1\rightarrow 0$$
 
-을 생각하자. 직관적으로 $\mathcal{Q}^1$은 순수하게 discontinuous한 부분들을 모아둔 것이며, 이러한 관점에서이 construction을 계속 반복할수록 discontinuity에 대한 더 미세한 정보가 담기게 된다. 즉, sheaf $\mathcal{Q}^1$에 $C^0$을 적용하여 다음의 cokernel exact sequence
+을 생각하자. 직관적으로 $\mathcal{Q}^1$은 순수하게 discontinuous한 부분들을 모아둔 것이며, 이러한 관점에서 이 construction을 계속 반복할수록 discontinuity에 대한 더 미세한 정보가 담기게 된다. 즉, sheaf $\mathcal{Q}^1$에 $C^0$을 적용하여 다음의 cokernel exact sequence
 
 $$0 \rightarrow \mathcal{Q}^1\rightarrow C^0(\mathcal{Q}^1)\rightarrow\mathcal{Q}^2\rightarrow 0$$
 
@@ -342,7 +342,7 @@ $$0 \rightarrow \mathcal{F}\rightarrow\mathcal{I}\rightarrow\mathcal{Q}\rightarr
 
 ![Commutative diagram](/assets/images/Math/Algebraic_Varieties/Sheaf_Cohomology-1.svg){:style="width:23.07em" class="invert" .align-center}
 
-에서 diagram chase를 하면 된다. 여기서 $\mathcal{F}$는 가정에 의해 flasque이며 $\mathcal{I}$는 injective이므로 flasque이다. 이제 임의의 $s\in \mathcal{Q}(V)$에 대하여, $\mathcal{I}(V)\rightarrow \mathcal{Q}(V)$가 surjective이므로 $s$를 $t\in \mathcal{I}(V)$로 lift할 수 있으며, 다시 $\mathcal{I}$가 flasque임을 이용하여 $t$를 $\overline{t}\in\mathcal{I}(U)$로 올린 후 이를 $\mathcal{Q}$로 옮겨주어 $\overline{s}\in \mathcal{Q}(U)$를 정의하면 된다. 이제 $\mathcal{Q}(U)$에서의 원소 $\overline{s}\vert_V-s$는 $\mathcal{F}(V)$의 원소이고, 다시 $\mathcal{F}$의 flasqueness로부터 적당한 $h\in \mathcal{F}(U)$가 존재하여 $h\vert_V=\overline{s}\vert_V-s$이다. 이제 이로부터 $\overline{s}-h$는 정확히 $s\in \mathcal{Q}(V)$로 restrict하며 이로부터 $\mathcal{Q}$의 flasqueness를 얻는다.
+에서 diagram chase를 하면 된다. 여기서 $\mathcal{F}$는 가정에 의해 flasque이며 $\mathcal{I}$는 injective이므로 flasque이다. 이제 임의의 $s\in \mathcal{Q}(V)$에 대하여, $\mathcal{I}(V)\rightarrow \mathcal{Q}(V)$가 surjective이므로 $s$를 $t\in \mathcal{I}(V)$로 lift할 수 있으며, 다시 $\mathcal{I}$가 flasque임을 이용하여 $t$를 $\overline{t}\in\mathcal{I}(U)$로 올린 후 이를 $\mathcal{Q}$로 옮겨주어 $\overline{s}\in \mathcal{Q}(U)$를 정의하면 된다. $\overline{t}$가 $t$의 확장이므로 $\overline{t}\vert_V=t$이고, 따라서 $\overline{s}\vert_V$는 $t$가 $\mathcal{Q}(V)$로 옮겨간 것, 곧 $s$와 같다. 그러므로 $\overline{s}$가 정확히 $s\in \mathcal{Q}(V)$로 restrict하며 이로부터 $\mathcal{Q}$의 flasqueness를 얻는다.
 
 이제 $\Gamma(X, -)$를 적용하여 long exact sequence
 
@@ -352,7 +352,7 @@ $$0 \rightarrow \Gamma(X, \mathcal{F}) \rightarrow \Gamma(X, \mathcal{I}) \right
 
 $$H^1(X, \mathcal{F}) \cong \coker(\Gamma(X, \mathcal{I}) \rightarrow \Gamma(X, \mathcal{Q}))$$
 
-이며, 이것이 $0$이 된다는 것을 보이기 위해 우리는 $\Gamma(X, \mathcal{I})\rightarrow \Gamma(X, \mathcal{Q})$가 surjective임을 보여야 한다. 이를 위해 임의의 $s\in \Gamma(X, \mathcal{Q})$가 주어졌다 하자. 그럼 임의의 $x\in X$에 대하여, stalk 레벨에서는 $\mathcal{I}\rightarrow \mathcal{Q}$가 surjective하므로 각각의 $x\in X$마다 적당한 $t_x\in \mathcal{I}_x$가 존재하여 $t_x$가 $s_x\in \mathcal{Q}_x$로 가도록 할 수 있다. 이제 $t_x$의 한 representative를 택하여, $t_x$가 $\mathcal{I}(U_x)$의 원소
+이며, 이것이 $0$이 된다는 것을 보이기 위해 우리는 $\Gamma(X, \mathcal{I})\rightarrow \Gamma(X, \mathcal{Q})$가 surjective임을 보여야 한다. 이를 위해 임의의 $s\in \Gamma(X, \mathcal{Q})$가 주어졌다 하자. 그럼 임의의 $x\in X$에 대하여, stalk 레벨에서는 $\mathcal{I}\rightarrow \mathcal{Q}$가 surjective하므로 각각의 $x\in X$마다 적당한 $t_x\in \mathcal{I}_x$가 존재하여 $t_x$가 $s_x\in \mathcal{Q}_x$로 가도록 할 수 있다. 이제 $x$의 적당한 근방 $U_x$ 위에서 $t_x$의 한 representative를 택하여, $t_x$가 $\mathcal{I}(U_x)$의 원소
 인 것으로 생각하면 $\mathcal{I}$가 flasque이므로 이들 각각을 $X$에서의 global section $T_x$들로 확장할 수 있으며, 그럼 $T_x\mid_{U_x}=s\mid_{U_x}$이다.
 
 이제 $T_x$들의 $\Gamma(X,\mathcal{Q})$에서의 image를 $S_x$라 하자. 그럼 $S_x-S_y$는 $U_x\cap U_y$에서 identically zero이며, 따라서 이를 $U_x\cap U_y$ 위에서 $\mathcal{F}$의 section $f_{xy}$로 lift할 수 있다. 다시 $\mathcal{F}$의 flasqueness를 사용하면 이를 $f_x\in \mathcal{F}(U_x)$와 $f_y\in \mathcal{F}(U_y)$ 각각으로 확장할 수 있고, 그럼 이 상황에서 $T_x$를 $T'_x=T_x-f_x$들로 대체하면 이것이 compatibility condition을 만족하고 따라서 이들을 붙인 것이 $s$의 preimage인 것을 안다.
@@ -375,7 +375,7 @@ $$H^q(\Gamma(X, \mathcal{A}^\bullet)) \cong H^q(X, \mathcal{F})$$
 :::
 
 ::: 증명
-$\mathcal{F}$의 injective resolution $0 \rightarrow \mathcal{F} \rightarrow \mathcal{I}^\bullet$을 고정하자. [\[호몰로지 대수학\] §분해, ⁋정리 6](/ko/math/homological_algebra/resolutions#thm6)에 의해 acyclic resolution과 injective resolution 사이에 chain map $f\colon \mathcal{A}^\bullet \rightarrow \mathcal{I}^\bullet$이 존재한다. $f$의 *mapping cone* $C(f)^\bullet$을 생각하자. 각 차수에서
+$\mathcal{F}$의 injective resolution $0 \rightarrow \mathcal{F} \rightarrow \mathcal{I}^\bullet$을 고정하자. [\[호몰로지 대수학\] §분해, ⁋정리 6](/ko/math/homological_algebra/resolutions#thm6)에 의해 acyclic resolution과 injective resolution 사이에 chain map $f\colon \mathcal{A}^\bullet \rightarrow \mathcal{I}^\bullet$이 존재한다. $f$의 *mapping cone* $C(f)^\bullet$을 생각하자. 각 degree에서
 
 $$C(f)^n = \mathcal{A}^{n+1} \oplus \mathcal{I}^n$$
 
@@ -429,7 +429,7 @@ Abelian category에서 cochain complex $K^\bullet$의 *Cartan-Eilenberg resoluti
 
 $$\mathcal{H}^{p,q} := H^p(\mathcal{I}^{\bullet, q})$$
 
-로 쓸 수 있다. 이 때 vertical differential은 injective resolution의 differential이 cohomology level로 내려와서 유도하는 사상 $\mathcal{H}^{p,q}\rightarrow \mathcal{H}^{p,q+1}$이며, $E_2$ page는 이 vertical complex의 cohomology sheaf
+로 쓸 수 있다. 이 때 vertical differential은 injective resolution의 differential이 cohomology level로 내려와서 유도하는 morphism $\mathcal{H}^{p,q}\rightarrow \mathcal{H}^{p,q+1}$이며, $E_2$ page는 이 vertical complex의 cohomology sheaf
 
 $$E_2^{p,q} = H^q(\mathcal{H}^{p,\bullet})$$
 
@@ -443,7 +443,7 @@ $$E_1^{p,q} = H^q(\mathcal{I}^{p,\bullet})$$
 
 $$E_1^{p,q} = \begin{cases} f_\ast \mathcal{G}^p(\mathcal{F}) & \text{if $q = 0$} \\ 0 & \text{if $q > 0$} \end{cases}$$
 
-이며 $d_1$-differential은 $E_1^{p,0} = f_\ast \mathcal{G}^p(\mathcal{F})$에서 $E_1^{p+1,0} = f_\ast \mathcal{G}^{p+1}(\mathcal{F})$로 가는 사상으로, Godement resolution의 differential $f_\ast \mathcal{G}^p(\mathcal{F}) \rightarrow f_\ast \mathcal{G}^{p+1}(\mathcal{F})$에 해당한다. 즉, $E_2$ page는 complex
+이며 $d_1$-differential은 $E_1^{p,0} = f_\ast \mathcal{G}^p(\mathcal{F})$에서 $E_1^{p+1,0} = f_\ast \mathcal{G}^{p+1}(\mathcal{F})$로 가는 morphism으로, Godement resolution의 differential $f_\ast \mathcal{G}^p(\mathcal{F}) \rightarrow f_\ast \mathcal{G}^{p+1}(\mathcal{F})$에 해당한다. 즉, $E_2$ page는 complex
 
 $$0 \rightarrow f_\ast \mathcal{F} \rightarrow f_\ast \mathcal{G}^0(\mathcal{F}) \rightarrow f_\ast \mathcal{G}^1(\mathcal{F}) \rightarrow \cdots$$
 
@@ -473,7 +473,7 @@ $$E_1^{p,0}=\Gamma(Y, f_\ast \mathcal{G}^p (\mathcal{F}))=\Gamma(X, \mathcal{G}^
 
 이며 여기서의 differential은 Godement differential이다. 따라서 $E_2$ page는
 
-$$E_2^{n,0}=H^n(\Gamma(X, \mathcal{G}^\bullet(\mathcal{F}))=H^n(X, \mathcal{F})$$
+$$E_2^{n,0}=H^n(\Gamma(X, \mathcal{G}^\bullet(\mathcal{F})))=H^n(X, \mathcal{F})$$
 
 가 되며, 따라서 다음을 얻는다.
 
@@ -502,7 +502,7 @@ $$E_\infty^{p,q} \cong \gr^p H^{p+q} = F^p H^{p+q}/F^{p+1}H^{p+q}$$
 
 임을 안다. 특히, 이는 first quadrant spectral sequence이므로 충분히 큰 $r$에서 $E_r^{p,q} = E_\infty^{p,q}$이다. ([\[호몰로지 대수학\] §스펙트럼 열, ⁋명제 6](/ko/math/homological_algebra/spectral_sequences#prop6))
 
-우선 $p+q = 1$인 성분들을 보면, 오직 두 개의 항 $E_2^{1,0}$와 $E_2^{0,1}$만이 존재한다. 그런데 차수를 고려하면 $E_2^{1,0}$로 들어오거나 나가는 differential은 모두 0이므로 $E_2^{1,0} = E_\infty^{1,0}$이다. 반면, $E_2^{0,1}$에서 $E_2^{2,0}$으로 가는 $d_2$가 비자명할 수 있으므로 $E_\infty^{0,1} = \ker(d_2: E_2^{0,1} \rightarrow E_2^{2,0})$이다. 그럼 filtration에 의하여
+우선 $p+q = 1$인 성분들을 보면, 오직 두 개의 항 $E_2^{1,0}$와 $E_2^{0,1}$만이 존재한다. 그런데 degree를 고려하면 $E_2^{1,0}$로 들어오거나 나가는 differential은 모두 0이므로 $E_2^{1,0} = E_\infty^{1,0}$이다. 반면, $E_2^{0,1}$에서 $E_2^{2,0}$으로 가는 $d_2$가 비자명할 수 있으므로 $E_\infty^{0,1} = \ker(d_2: E_2^{0,1} \rightarrow E_2^{2,0})$이다. 그럼 filtration에 의하여
 
 $$0 \rightarrow E_\infty^{1,0} \rightarrow H^1(X, \mathcal{F}) \rightarrow E_\infty^{0,1} \rightarrow 0$$
 
@@ -516,7 +516,7 @@ $$0 \rightarrow E_2^{1,0} \rightarrow H^1(X, \mathcal{F}) \rightarrow E_2^{0,1} 
 
 $$E_3^{0,2} = \ker(d_2 : E_2^{0,2} \rightarrow E_2^{2,1}), \qquad E_3^{2,0} = \operatorname{coker}(d_2 : E_2^{0,1} \rightarrow E_2^{2,0})$$
 
-이고, 다시 차수를 분석하면 $E_3^{p,q} = E_\infty^{p,q}$이므로
+이고, 다시 degree를 분석하면 $E_3^{p,q} = E_\infty^{p,q}$이므로
 
 $$E_\infty^{2,0} = E_3^{2,0} = \operatorname{coker}(d_2 : E_2^{0,1} \rightarrow E_2^{2,0})$$
 
@@ -588,4 +588,4 @@ $$g_{ij}^{\mathcal{M}} \cdot \varphi_j(v) = g_{ij}^{\mathcal{M}} h_j^{-1} v = h_
 
 ---
 
-[^1]: 더 일반적으로, [[\[위상수학\] §층, §§층들의 가환범주](/ko/math/topology/sheaves#층들의-가환범주)에서 살펴보았듯 임의의 위상공간 $$X$$ 위에 정의된 sheaf들의 category $$\Sh(X)$$는 abelian category를 이룬다.
+[^1]: 더 일반적으로, [\[위상수학\] §층, §§층들의 가환범주](/ko/math/topology/sheaves#층들의-가환범주)에서 살펴보았듯 임의의 위상공간 $X$ 위에 정의된 sheaf들의 category $\Sh(X)$는 abelian category를 이룬다.

@@ -26,12 +26,12 @@ Ring $A$와 $A$-module $M$에 대하여, $A$의 prime ideal $\mathfrak{p}$가 $M
 이번 글에서 우리는 associated prime ideal에 대한 다양한 성질들을 살펴본다. 그 과정에서 중요한 역할을 하는 것은 다음의 보조정리이다.
 
 ::: 보조정리 2 (Prime avoidance lemma)
-$A$의 ideal들 $\mathfrak{a}_1,\ldots, \mathfrak{a}_n, \mathfrak{b}$가 주어졌다 하고, $\mathfrak{b}\subseteq \mathfrak{a}_1\cup\cdots\cup \mathfrak{a}_n$이라 하자. 만일 $R$이 무한한 field를 포함하거나, 많아야 두 개의 $\mathfrak{a}_i$만이 prime ideal이 아니라면 $\mathfrak{b}$는 $\mathfrak{a}_1,\ldots, \mathfrak{a}_n$ 중 하나에 속한다. 
+$A$의 ideal들 $\mathfrak{a}_1,\ldots, \mathfrak{a}_n, \mathfrak{b}$가 주어졌다 하고, $\mathfrak{b}\subseteq \mathfrak{a}_1\cup\cdots\cup \mathfrak{a}_n$이라 하자. 만일 $A$가 무한한 field를 포함하거나, 많아야 두 개의 $\mathfrak{a}_i$만이 prime ideal이 아니라면 $\mathfrak{b}$는 $\mathfrak{a}_1,\ldots, \mathfrak{a}_n$ 중 하나에 속한다. 
 
 추가로, 만일 $A$가 graded이고 $\mathfrak{b}$가 homogeneous ideal이며 모든 $\mathfrak{a}_i$가 prime ideal이라면, $\mathfrak{b}$의 homogeneous element들이 $\mathfrak{a}_1\cup\cdots\cup \mathfrak{a}_n$에 속하는 것으로 가정해도 결론이 성립한다.
 :::
 ::: 증명
-만일 $R$이 무한한 field $\mathbb{K}$를 포함한다면, ideal들 각각을 $\mathbb{K}$-벡터공간으로 본다면 
+만일 $A$가 무한한 field $\mathbb{K}$를 포함한다면, ideal들 각각을 $\mathbb{K}$-벡터공간으로 본다면 
 
 $$\mathfrak{b}=\bigcup_{i=1}^n (\mathfrak{b}\cap \mathfrak{a}_i)$$
 
@@ -43,9 +43,9 @@ $$\mathfrak{b}=\bigcup_{i=1}^n (\mathfrak{b}\cap \mathfrak{a}_i)$$
 
 이제 $n=2$인 경우, $\mathfrak{b}$의 원소 $x_1+x_2$를 생각하자. 만일 $x_1+x_2\in \mathfrak{a}_1$이라면, $x_2=(x_1+x_2)-x_1\in \mathfrak{a}_1$이므로 모순이고, 비슷하게 $x_1+x_2$는 $\mathfrak{a}_2$의 원소일 수도 없다. 이는 $\mathfrak{b}\subseteq \mathfrak{a}_1\cup \mathfrak{a}_2$라는 가정에 모순이다. 
 
-$n>3$인 경우도 비슷한 아이디어를 사용한다. 주어진 조건으로부터 $\mathfrak{a}_1,\ldots \mathfrak{a}_n$ 중 적어도 하나는 prime ideal이므로, 일반성을 잃지 않고 $\mathfrak{a}_1$이 prime ideal이라 가정할 수 있다. 그럼 원소 $x_1+x_2x_3\cdots x_n$을 생각하고, $\mathfrak{a}_1$이 prime ideal이라는 가정을 잘 사용하면 모순을 얻는다. 
+$n\geq 3$인 경우도 비슷한 아이디어를 사용한다. 주어진 조건으로부터 $\mathfrak{a}_1,\ldots, \mathfrak{a}_n$ 중 적어도 하나는 prime ideal이므로, 일반성을 잃지 않고 $\mathfrak{a}_1$이 prime ideal이라 가정할 수 있다. 그럼 원소 $x_1+x_2x_3\cdots x_n$을 생각하고, $\mathfrak{a}_1$이 prime ideal이라는 가정을 잘 사용하면 모순을 얻는다. 
 
-Graded ring의 경우는 $x_i$를 $x_2x_3\cdots$과 같은 degree를 갖도록 여러번 곱해서 차수만 맞춰주면 된다. 
+Graded ring의 경우는 $x_i$를 $x_2x_3\cdots$과 같은 degree를 갖도록 여러번 곱해서 degree만 맞춰주면 된다. 
 :::
 
 특히 위의 보조정리는 앞의 전제조건보다는 나중 전제조건을 만족하고 많이 사용하게 된다. 
@@ -55,7 +55,7 @@ Graded ring의 경우는 $x_i$를 $x_2x_3\cdots$과 같은 degree를 갖도록 �
 이제 우리는 $\Ass M$에 대해 조금 더 자세히 살펴본다.
 
 ::: 명제 3
-$A$-module $M$을 하나 고정하고, $\mathfrak{a}$가 $\ann(x)$ 꼴의 아이디얼들 중 maximal이라 가정하자. 그럼 $\mathfrak{a}$는 prime ideal이다. 
+$A$-module $M$을 하나 고정하고, $\mathfrak{a}$가 $\ann(x)$ 꼴의 ideal들 중 maximal이라 가정하자. 그럼 $\mathfrak{a}$는 prime ideal이다. 
 :::
 ::: 증명
 $ab\in \mathfrak{a}$라 하고 $b\not\in \mathfrak{a}$라 한 후, $a\in \mathfrak{a}$임을 보여야 한다. $\mathfrak{a}=\ann(x)$라 하자. 그럼 가정에 의해 $abx=0$이고 $bx\neq 0$이다. 이제 $\mathfrak{a}\subseteq\ann(bx)$이므로 $\mathfrak{a}$의 maximality에 의하여 $\mathfrak{a}=\ann(bx)$이다. 이로부터 
@@ -98,13 +98,13 @@ $$\Ass M'\subset \Ass M\subset (\Ass M')\cup (\Ass M'')$$
 
 $$a'\in\ann(ax)\iff a'ax=0\iff a'a\in \mathfrak{p}\iff a'\in \mathfrak{p}$$
 
-가 되어 $\ann(ax)=\mathfrak{p}$이다. 여기서 마지막 동치는 $ax\neq 0$이라는 사실과 $Ax\cong A/\mathfrak{p}$인 것으로부터 $a\not\in \mathfrak{p}$를 사용하여 얻어졌다. 이제 이 등식은 특시 $Ax$의 임의의 $0$이 아닌 submodule은 annihilator로서 $\mathfrak{p}$를 가져야 한다는 것을 보여주는데, $\mathfrak{p}\not\in \Ass M'$인 사실과 종합하면 $Ax\cap M'=0$이어야 함을 안다. 따라서 $Ax$의 $M''$에서의 image는 $Ax$와 isomorphic하고, 이로부터 $\mathfrak{p}\in \Ass M''$임을 안다. 
+가 되어 $\ann(ax)=\mathfrak{p}$이다. 여기서 마지막 동치는 $ax\neq 0$이라는 사실과 $Ax\cong A/\mathfrak{p}$인 것으로부터 $a\not\in \mathfrak{p}$를 사용하여 얻어졌다. 이제 이 등식은 특히 $Ax$의 임의의 $0$이 아닌 submodule은 annihilator로서 $\mathfrak{p}$를 가져야 한다는 것을 보여주는데, $\mathfrak{p}\not\in \Ass M'$인 사실과 종합하면 $Ax\cap M'=0$이어야 함을 안다. 따라서 $Ax$의 $M''$에서의 image는 $Ax$와 isomorphic하고, 이로부터 $\mathfrak{p}\in \Ass M''$임을 안다. 
 :::
 
 ::: 보조정리 6
 Noetherian ring $A$ 위에 정의된 finitely generated module $M$에 대하여, 다음 조건을 만족하는 filtration
 
-$$0=M_0\subseteq M_1\subseteq\cdots\subseteq M_n=M,\qquad \text{$M_{k+1}/M_k\cong A/\mathfrak{p}_k$ for some prime $\mathfrak{p}_k$, for all $k$}$$
+$$0=M_0\subseteq M_1\subseteq\cdots\subseteq M_n=M,\qquad \text{$M_k/M_{k-1}\cong A/\mathfrak{p}_k$ for some prime $\mathfrak{p}_k$, for all $k$}$$
 
 을 찾을 수 있다.
 :::
@@ -142,7 +142,7 @@ $$0=q(x+\mathfrak{p})=qx+\mathfrak{p}$$
 
 따라서, 위와 같은 방식으로
 
-$$\Ass M \Ass M_{n-1}\cup \{ \mathfrak{p}_{n-1}\}\subseteq \Ass M_{n-2}\cup \{\mathfrak{p}_{n-1},\mathfrak{p}_{n-2}\}\cdots$$
+$$\Ass M \subseteq \Ass M_{n-1}\cup \{ \mathfrak{p}_{n-1}\}\subseteq \Ass M_{n-2}\cup \{\mathfrak{p}_{n-1},\mathfrak{p}_{n-2}\}\cdots$$
 
 를 반복하면 첫 번째 결과의 유한성을 얻는다. 
 
@@ -154,7 +154,7 @@ $$\Ass M \Ass M_{n-1}\cup \{ \mathfrak{p}_{n-1}\}\subseteq \Ass M_{n-2}\cup \{\m
 이를 통해 $M$에 대한 많은 정보를 얻어올 수 있다. 가령 $M=A$이고 $A$가 reduced인 경우 다음 따름정리를 얻는다.
 
 ::: 따름정리 8
-Reduced noetherian ring $A$에 대하여, $A$의 total ring of fraction을 $K$라 하자. 그럼 $K$는 field들의 유한한 product이다. 
+Reduced noetherian ring $A$에 대하여, $A$의 total ring of fractions를 $K$라 하자. 그럼 $K$는 field들의 유한한 product이다. 
 :::
 ::: 증명
 우선 $M=A$로 두면 $\ann(A)=\{0\}$이다. 따라서, $A$의 minimal prime ideal $\mathfrak{p}_1,\ldots, \mathfrak{p}_k$들은 모두 $\Ass M$에 포함되며, 이들의 합집합은 $A$의 zero-divisor로 이루어져 있다. 

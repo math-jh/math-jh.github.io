@@ -110,7 +110,7 @@ $$0\longrightarrow\Omega^0(M)\overset{d}{\longrightarrow}\Omega^1(M)\overset{d}{
 
 ![Chain_map_in_dR](/assets/images/Math/Manifolds/Differential_Forms-1.svg){:style="width:26.08em" class="invert" .align-center}
 
-우리는 (2)의 cochain complex에 해당하는 homology group을 *de Rham cohomology group<sub>드람 코호몰로지 군</sub>*이라 부르고 $H^\ast_\text{dR}(M)$으로 적는다. 드람 정리는 이렇게 얻어진 $H_\text{dR}^\ast(M)$이 위상적으로 정의한 다른 cohomology group들과 동일한 정보를 담고 있다는 것을 보여준다.
+우리는 (2)의 cochain complex에 해당하는 cohomology group을 *de Rham cohomology group<sub>드람 코호몰로지 군</sub>*이라 부르고 $H^\ast_\text{dR}(M)$으로 적는다. 드람 정리는 이렇게 얻어진 $H_\text{dR}^\ast(M)$이 위상적으로 정의한 다른 cohomology group들과 동일한 정보를 담고 있다는 것을 보여준다.
 
 ## Interior multiplication
 

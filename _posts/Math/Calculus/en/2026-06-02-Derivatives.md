@@ -14,7 +14,7 @@ translated_at: 2026-07-11T10:00:02+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-07-11T10:00:02+00:00
 ---
-We previously reformulated the notion of a function being continuous in the language of $\epsilon$–$\delta$ introduced in [§Continuous Functions](/en/math/calculus/continuity). The natural next step is to define the derivative of a function.
+In [§Continuous Functions](/en/math/calculus/continuity) we reformulated the notion of a function being continuous in the language of $\epsilon-\delta$ introduced earlier. The natural next step is to define the derivative of a function.
 
 ## Definition of the Derivative
 

@@ -29,13 +29,13 @@ holds.
 :::
 
 ::: Proof
-First, we show the identity
+First, when $D$ is a region simple with respect to $y$, i.e.,
 
-$$\oint_C P\mathop{dx} = -\iint_D \partial P/\partial y\mathop{dA}$$
+$$D = \{(x,y) \mid a \leq x \leq b,\ g_1(x) \leq y \leq g_2(x)\},$$
 
-when $D$ is a region simple with respect to $y$, i.e.,
+we show the identity
 
-$$D = \{(x,y) \mid a \leq x \leq b,\ g_1(x) \leq y \leq g_2(x)\}.$$
+$$\oint_C P\mathop{dx} = -\iint_D \partial P/\partial y\mathop{dA}.$$
 
 For the double integral, integrating the inner integral first by [§Multiple Integrals, ⁋Theorem 2](/en/math/calculus/multiple_integrals#thm2) gives
 
@@ -81,7 +81,7 @@ Meanwhile, Green's theorem can be rewritten in two forms that interpret the two 
 ::: Proposition 3
 If the boundary $C$ of $D$ is positively oriented and $\mathbf{F} = (P, Q)$ is $C^1$, then for the unit tangent $\mathbf{T}$ and the outward unit normal $\mathbf{n}$,
 
-$$\oint_C \mathbf{F} \cdot \mathbf{T}\mathop{ds} = \iint_D \left(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\right)\mathop{dA}, \qquad \oint_C \mathbf{F} \cdot \mathbf{n}\mathop{ds} = \iint_D \divergence F\mathop{dA}$$
+$$\oint_C \mathbf{F} \cdot \mathbf{T}\mathop{ds} = \iint_D \left(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\right)\mathop{dA}, \qquad \oint_C \mathbf{F} \cdot \mathbf{n}\mathop{ds} = \iint_D \divergence \mathbf{F}\mathop{dA}$$
 
 hold.
 :::
@@ -99,7 +99,7 @@ $$\oint_C \mathbf{F}\cdot \mathbf{n}\mathop{ds} = \oint_C P\mathop{dy} - Q\matho
 
 and applying [Theorem 1](#thm1) to $(P, Q) \mapsto (-Q, P)$ shows this equals
 
-$$\iint_D (P_x + Q_y)\mathop{dA} = \iint_D \divergence F\mathop{dA}.$$
+$$\iint_D (P_x + Q_y)\mathop{dA} = \iint_D \divergence \mathbf{F}\mathop{dA}.$$
 :::
 
 The first equality is exactly Green's theorem itself, and only the second equality is new, but its intuitive meaning is clear. Namely, if we integrate the function $\mathbf{F}$ along the boundary in the *outward* direction, this is precisely captured by the divergence. On the other hand, we already saw in [§Line Integrals, ⁋Example 6](/en/math/calculus/line_integrals#ex6) that if a region has a hole, the field may fail to be conservative even when the curl vanishes; this can be written rigorously as follows.

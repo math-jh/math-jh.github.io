@@ -55,13 +55,13 @@ $$v=\sum_{i\in I} v_i$$
 $\mathbb{K}$-벡터공간 $V$의 두 부분공간 $W_1,W_2$에 대하여, $V=W_1\oplus W_2$인 것은 $V=W_1+W_2$이고 $W_1\cap W_2=\{0\}$인 것과 동치이다.
 :::
 ::: 증명
-우선 $V=W_1\oplus W_2$라 가정하자. 정의에 의해 $W_1+W_2\subseteq V$인 것은 자명하다. 거꾸로 임의의 $v\in V$를 택하면, $v=w_1+w_2$이도록 하는 $w_i\in W_i$가 존재하므로 $V\subseteq W_1+W_2$ 또한 성립한다. 이로부터 $V=W_1+W_2$임을 안다. 한편, 만일 $W_1\cap W_2\neq \{0\}$이라면, 영이 아닌 $w\in W_1+W_2$에 대하여
+우선 $V=W_1\oplus W_2$라 가정하자. 정의에 의해 $W_1+W_2\subseteq V$인 것은 자명하다. 거꾸로 임의의 $v\in V$를 택하면, $v=w_1+w_2$이도록 하는 $w_i\in W_i$가 존재하므로 $V\subseteq W_1+W_2$ 또한 성립한다. 이로부터 $V=W_1+W_2$임을 안다. 한편, 만일 $W_1\cap W_2\neq \{0\}$이라면, 영이 아닌 $w\in W_1\cap W_2$에 대하여
 
 $$w=0+w=w+0$$
 
 이므로 [정의 1](#def1)에서의 유일성에 모순이 된다. 
 
-거꾸로 $V=W_1+W_2$이고 $W_1\cap W_2=\{0\}$이라 하자. 임의의 $v\in V$에 대하여, $V=W_1+W_2$이므로 $v=w_1+w_2$이도록 하는 $w_1\in W_i$가 반드시 존재한다. 또, 이와 같은 표현은 유일하다. 만일
+거꾸로 $V=W_1+W_2$이고 $W_1\cap W_2=\{0\}$이라 하자. 임의의 $v\in V$에 대하여, $V=W_1+W_2$이므로 $v=w_1+w_2$이도록 하는 $w_i\in W_i$가 반드시 존재한다. 또, 이와 같은 표현은 유일하다. 만일
 
 $$v=w_1+w_2=w_1'+w_2'$$
 
@@ -74,7 +74,7 @@ $$w_1-w_1'=w_2-w_2'$$
 
 위 명제의 한 쪽 방향은 $I$가 셋 이상의 원소를 가지고 있어도 성립한다. 즉, 만일 $V=\bigoplus_{i\in I}W_i$라면, $V=\sum_{i\in I}W_i$이고, $i\neq j$일 때마다 $W_i\cap W_j=\{0\}$이 성립하며, 그 증명 또한 위와 같다. 그러나 일반적으로 반대방향은 성립하지는 않는다. 
 
-가령 $V=\mathbb{R}^2$로 두고, $V$의 두 standard basis $e_1,e_2$를 잡자. $W_1=\mathbb{R}e_1$, $W_2=\mathbb{R}e_2$, $W_3=\mathbb{R}(e_1+e_2)$으로 잡으면 $V=W_1+W_2+W_3$, 그리고 $i\neq j$일 때마다 $W_i\cap W_j$지만 $V\neq W_1\oplus W_2\oplus W_3$이다. 
+가령 $V=\mathbb{R}^2$로 두고, $V$의 두 standard basis $e_1,e_2$를 잡자. $W_1=\mathbb{R}e_1$, $W_2=\mathbb{R}e_2$, $W_3=\mathbb{R}(e_1+e_2)$으로 잡으면 $V=W_1+W_2+W_3$, 그리고 $i\neq j$일 때마다 $W_i\cap W_j=\{0\}$이지만 $V\neq W_1\oplus W_2\oplus W_3$이다. 
 
 $$e_1+e_2=e_1+e_2+0=0+0+(e_1+e_2)$$
 
@@ -163,7 +163,7 @@ $$A=\begin{pmatrix}1&1&1\\0&1&1\\0&0&1\end{pmatrix}$$
 $n\times n$ 행렬 $A$의 고윳값 $\lambda\in\mathbb{K}$에 대하여, $\lambda$의 기하적 중복도는 항상 $\lambda$의 대수적 중복도를 넘지 못한다.
 :::
 ::: 증명
-$\lambda$의 기하적 중복도가 $k$라 하고, $E_\lambda(A)$를 span하는 $k$개의 일차독립인 벡터들 $x_1,\ldots, x_k$를 생각하자. 여기에 $(n-k)$개의 벡터 $x_{k+1},\ldots, x_k$를 추가하여 $\mathbb{K}^n$의 새로운 basis $\{x_1,\ldots, x_n\}$을 만들 수 있다. 이제 행렬 $X$를
+$\lambda$의 기하적 중복도가 $k$라 하고, $E_\lambda(A)$를 span하는 $k$개의 일차독립인 벡터들 $x_1,\ldots, x_k$를 생각하자. 여기에 $(n-k)$개의 벡터 $x_{k+1},\ldots, x_n$을 추가하여 $\mathbb{K}^n$의 새로운 basis $\{x_1,\ldots, x_n\}$을 만들 수 있다. 이제 행렬 $X$를
 
 $$X=(x_1\vert x_2\vert \cdots\vert x_n)$$
 
@@ -181,17 +181,17 @@ $$\begin{aligned}A'&=X^{-1}(AX)=\begin{pmatrix}y_1\\ y_2\\ \vdots\\ y_n\end{pmat
 
 이 된다. 따라서 $A$의 특성다항식을 $p_A(\mathbf{x})$라 적으면, [§특성다항식, ⁋따름정리 4](/ko/math/linear_algebra/characteristic_polynomial#cor4)으로부터 $p_A(\mathbf{x})=p_{A'}(\mathbf{x})$이고 따라서
 
-$$p_A(\mathbf{x}=p_{A'}(\mathbf{x})=\det(\mathbf{x}I-A')=(\mathbf{x}-\lambda)^k\det(\mathbf{x}I_{n-k}-C)$$
+$$p_A(\mathbf{x})=p_{A'}(\mathbf{x})=\det(\mathbf{x}I-A')=(\mathbf{x}-\lambda)^k\det(\mathbf{x}I_{n-k}-C)$$
 
 임을 안다. 즉, $p_A$에서 $\lambda$의 대수적 중복도는 최소 $k$이다. 
 :::
 
-$n\times n$ 행렬 $A$가 주어졌다 하고, $A$의 특성다항식을 $p_A$라 하면, 고윳값 $\lambda$들의 대수적 중복도의 합은 $p_A$의 차수인 $n$을 넘지 못한다. 또, 고정된 고윳값 $\lambda$에 대해, 위 명제는 $\lambda$의 기하적 중복도가 대수적 중복도를 넘지 못한다는 것을 보여준다. 마지막으로 [명제 4](#prop4) 이후의 논증으로부터, $\mathbb{K}^n$을 고유공간으로 분해하기 위해서는 $\lambda$들의 기하적 중복도를 모두 합쳤을 때 $n$이 되어야 한다는 사실을 알 수 있다. 이를 모두 정리하면 다음 명제를 얻는다.
+$n\times n$ 행렬 $A$가 주어졌다 하고, $A$의 특성다항식을 $p_A$라 하면, 고윳값 $\lambda$들의 대수적 중복도의 합은 $p_A$의 degree인 $n$을 넘지 못한다. 또, 고정된 고윳값 $\lambda$에 대해, 위 명제는 $\lambda$의 기하적 중복도가 대수적 중복도를 넘지 못한다는 것을 보여준다. 마지막으로 [명제 4](#prop4) 이후의 논증으로부터, $\mathbb{K}^n$을 고유공간으로 분해하기 위해서는 $\lambda$들의 기하적 중복도를 모두 합쳤을 때 $n$이 되어야 한다는 사실을 알 수 있다. 이를 모두 정리하면 다음 명제를 얻는다.
 
 ::: 명제 6
 임의의 $n\times n$ 행렬 $A$에 대하여, $\mathbb{K}^n$이 $A$의 고유공간들의 direct sum으로 표현가능할 필요충분조건은 
 
-1. $A$의 특성다항식이 중복도를 고려하였을 때 $n$개의 근을 가지며,
+1. $A$의 특성다항식이 중복도를 고려하였을 때 $n$개의 root를 가지며,
 2. 이 때 각각의 고윳값의 기하적 중복도와 대수적 중복도가 같은 것이다.
 :::
 
@@ -203,7 +203,7 @@ $n\times n$ 행렬 $A$가 주어졌다 하고, $A$의 특성다항식을 $p_A$�
 
 우리는 앞서 임의의 $n\times n$ 행렬 $A$가 주어졌을 때, $A$의 고윳값과 고유공간을 통해 $\mathbb{R}^n$을 분해하는 방법을 살펴보았고, [명제 6](#prop6)으로부터 이러한 분해가 언제 가능한지 또한 알게 되었다. 이를 증명하기 위해 사용했던 [명제 5](#prop5)의 증명을 다시 한 번 살펴보자. 우리는 $E_\lambda$의 basis $x_1,\ldots, x_k$에 $n-k$개의 임의의 벡터를 추가한 후, 이를 통해 행렬 $X=(x_1\mid\cdots\mid x_n)$을 정의한 후 계산을 통해
 
-$$XAX^{-1}=\begin{pmatrix}\lambda I_k&B\\0&C\end{pmatrix}$$
+$$X^{-1}AX=\begin{pmatrix}\lambda I_k&B\\0&C\end{pmatrix}$$
 
 의 왼쪽 위 $k\times k$ 블록행렬이 대각행렬 $\lambda I_k$가 된다는 것을 보았다. 그런데 만일 $A$가 [명제 6](#prop6)의 조건을 모두 만족한다면, $n-k$개의 벡터들 $x_{k+1},\ldots, x_n$을 마구잡이로 추가할 것이 아니라, $n$개의 벡터들 $x_1,\ldots, x_n$이 모두 $A$의 고유공간의 basis가 되도록 잡을 수 있다. 그럼 [명제 5](#prop5)의 증명 중
 
@@ -225,7 +225,7 @@ $$D=\begin{pmatrix}\lambda_1&0&\cdots&0\\ 0&\lambda_2&\cdots&0\\ \vdots&\vdots&\
 [명제 6](#prop6)의 조건을 모두 만족하는 $n\times n$ 행렬 $A$를 *diagonalizable<sub>대각화가능</sub>*이라 한다.
 :::
 
-혹은, [명제 6](#prop6)은 필요충분조건이었으므로, 대각행렬과 similar를 diagonalizable한 행렬이라 불러도 아무런 문제가 없다. 바꾸어 말하자면 임의의 diagonalizable matrix의 eigenvalue에 의해 완전하게 결정된다. 
+혹은, [명제 6](#prop6)은 필요충분조건이었으므로, 대각행렬과 similar를 diagonalizable한 행렬이라 불러도 아무런 문제가 없다. 바꾸어 말하자면 임의의 diagonalizable matrix의 similarity class는 eigenvalue에 의해 완전하게 결정된다. 
 
 Diagonalizable matrix들이 개념적으로 중요하다는 것은 위에서 충분히 살펴보았다. 이 뿐만 아니라 diagonalizable matrix들은 계산의 편의성 측면에서도 크게 도움이 된다. 가령 행렬 $A$가 대각화 가능하여 $A=XDX^{-1}$이라면, $A$의 거듭제곱은 $A^k=XD^kX^{-1}$로 주어지며 대각행렬의 거듭제곱은 각 성분의 거듭제곱으로 만들어진 대각행렬에 불과하므로 $A$의 거듭제곱을 계산하는 것은 아주 쉬운 일이 된다. 
 
@@ -261,12 +261,12 @@ $$V=\bigoplus_{\lambda}E_\lambda(A)$$
 
 $$A(Bv)=ABv=BAv=B(\lambda v)=\lambda(Bv)$$
 
-인 것으로부터 $Bv\in E_\lambda(A)$임을 안다. 이제 $B$를 벡터공간 $E_\lambda(A)$ 위에서의 linear operator로 보면, 원래의 linear operator $B$가 diabonalizable이었으므로 $B$는 $E_\lambda(A)$ 위에서도 diagonalizable이고 따라서 $B$의 eigenvector들로 이루어진 $E_\lambda(A)$의 basis가 존재한다. 이제 $E_\lambda(A)$의 임의의 원소는 $A$의 (eigenvalue $\lambda$에 해당하는) eigenvector들이므로, 이들은 $A$의 eigenvector이기도 하다. 
+인 것으로부터 $Bv\in E_\lambda(A)$임을 안다. 이제 $B$를 벡터공간 $E_\lambda(A)$ 위에서의 linear operator로 보면, 원래의 linear operator $B$가 diagonalizable이었으므로 $B$는 $E_\lambda(A)$ 위에서도 diagonalizable이고 따라서 $B$의 eigenvector들로 이루어진 $E_\lambda(A)$의 basis가 존재한다. 이제 $E_\lambda(A)$의 임의의 원소는 $A$의 (eigenvalue $\lambda$에 해당하는) eigenvector들이므로, 이들은 $A$의 eigenvector이기도 하다. 
 :::
 
 ## 선형연산자의 고유공간분해
 
-지금까지 우리는 주어진 행렬을 대각화하는 과정을 살펴보았고, 기본적으로 이는 (대각화가능한) 선형연산자가 주어졌을 때 벡터공간을 고유공간들로 분해하는 것과 같다. 이에 대한 증명을 위해 우리는 고유공간의 기저를 적극적으로 활용했다. 이를 기저의 선택없이 설명하는 것은 다음 글에서 다룰 Jordan canonical form을 살펴볼 때 도움이 될 것이다. 
+지금까지 우리는 주어진 행렬을 대각화하는 과정을 살펴보았고, 기본적으로 이는 (대각화가능한) 선형연산자가 주어졌을 때 벡터공간을 고유공간들로 분해하는 것과 같다. 이에 대한 증명을 위해 우리는 고유공간의 basis를 적극적으로 활용했다. 이를 basis의 선택없이 설명하는 것은 다음 글에서 다룰 Jordan canonical form을 살펴볼 때 도움이 될 것이다. 
 
 유한차원 벡터공간 $V$와 linear operator $L:V\rightarrow V$에 대하여, 우리는 다음의 식
 
@@ -345,4 +345,4 @@ $$\ker (A_{W_\lambda(A)}-\mu I)=\ker (A_{W_\lambda(A)}-\mu I)^2$$
 
 ---
 
-[^1]: 물론, 언제나와 같이 이 합은 사실은 유한합인 것으로 가정한다. 즉 $$(v_i)_{i\in I}$$는 finitely supported인 것으로 가정한다.
+[^1]: 물론, 언제나와 같이 이 합은 사실은 유한합인 것으로 가정한다. 즉 $(v_i)_{i\in I}$는 finitely supported인 것으로 가정한다.

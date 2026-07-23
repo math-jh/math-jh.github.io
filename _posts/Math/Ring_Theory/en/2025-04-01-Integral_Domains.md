@@ -57,14 +57,14 @@ Let $A$ be a commutative ring and let $a, b \in A$ ($b \neq 0$). We define the f
 1. We say $a$ is a *multiple* of $b$ if there exists $x \in A$ such that $a = bx$. In this case we say $b$ *divides* $a$, and write $b \mid a$. 
 2. A *greatest common divisor* of $a$ and $b$ is a nonzero element $d$ satisfying the following conditions.
    - $d \mid a$ and $d \mid b$, and
-   - if $d'$ satisfies $a \mid d'$ and $b \mid d'$, then always $d \mid d'$
+   - if $d'$ satisfies $d' \mid a$ and $d' \mid b$, then always $d' \mid d$
 
 The greatest common divisor of $a$ and $b$ is denoted $\gcd(a, b)$ or simply $(a, b)$.
 :::
 
-By definition, $b \mid a$ holding in the ring $A$ is equivalent to $(a) \subset (b)$. In particular, if $d$ is a common divisor of $a$ and $b$, then $(d)$ must contain $(a, b)$. Thus the above two conditions can be translated into the language of ideals as follows:
+By definition, $b \mid a$ holding in the ring $A$ is equivalent to $(a) \subseteq (b)$. In particular, if $d$ is a common divisor of $a$ and $b$, then $(d)$ must contain $(a, b)$. Thus the above two conditions can be translated into the language of ideals as follows:
 
-- $$\mathfrak{a} \subseteq (d)$$
+- $\mathfrak{a} \subseteq (d)$
 - $(d) \subseteq (d')$ for any principal ideal $(d')$ such that $a, b \in (d')$
 
 That is, the greatest common divisor of $a$ and $b$ (if it exists) is an element generating the smallest principal ideal containing $a$ and $b$. An integral domain in which this is always possible is called a *GCD domain*, but this definition will not appear separately in our discussion. 
@@ -78,7 +78,7 @@ Let $a, b \in A$ in a commutative ring $A$ be nonzero. If the ideal $(a, b)$ gen
 Then a greatest common divisor is uniquely determined. We must be somewhat careful in speaking of this uniqueness, because for example in the integers $(2)$ and $(-2)$ are the same ideal. 
 
 ::: Proposition 6
-Let $A$ be an integral domain. Suppose two elements $d, d' \in A$ generate the same principal ideal, i.e., $(d) = (d')$. Then there exists a unit $u \in A$ such that $d' = ud$.
+Let $A$ be an integral domain. Suppose two elements $d, d' \in A$ generate the same principal ideal, i.e., $(d) = (d')$. Then there exists a unit $u \in A$ such that $d' = ud$. ([§Invertible Elements and Zero Divisors, ⁋Definition 1](/en/math/ring_theory/units_and_zero_divisors#def1))
 :::
 
 ::: Proof
@@ -109,7 +109,7 @@ $$r_{k-2}=q_{k}r_{k-1}+r_{k}$$
 
 where we set $r_{-2}=a$, $r_{-1}=b$. Our claim is that every remainder $r_k$ is divisible by $r_n$. To show this, we use induction working backwards through the equations.
 
-First, $r_n\mid r_{n-1}$ is obvious. Thus, assuming $r_n \mid r_k$ and $r_n \mid r_{k-1}$, we see from the above equation that $r_n$ also divides $r_{k-2}$, and hence by induction $r_n$ divides both $a$ and $b$. That is, $(a), (b)\subset (r_n)$, so $(a,b)\subset (r_n)$. On the other hand, for $r_n$ to be the greatest common divisor of $a$ and $b$, we must have $(a,b)=(r_n)$, and this is immediate because the above equations allow us to express $r_n$ as an $A$-linear combination of $a$ and $b$. 
+First, $r_n\mid r_{n-1}$ is obvious. Thus, assuming $r_n \mid r_k$ and $r_n \mid r_{k-1}$, we see from the above equation that $r_n$ also divides $r_{k-2}$, and hence by induction $r_n$ divides both $a$ and $b$. That is, $(a), (b)\subseteq (r_n)$, so $(a,b)\subseteq (r_n)$. On the other hand, for $r_n$ to be the greatest common divisor of $a$ and $b$, we must have $(a,b)=(r_n)$, and this is immediate because the above equations allow us to express $r_n$ as an $A$-linear combination of $a$ and $b$. 
 :::
 
 

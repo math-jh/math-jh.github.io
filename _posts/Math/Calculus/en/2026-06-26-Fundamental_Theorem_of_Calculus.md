@@ -95,7 +95,7 @@ Pick an arbitrary fixed point $c$ and split the integral into two parts using th
 
 $$\int_{h(x)}^{g(x)} f(t)\mathop{dt} = \int_c^{g(x)} f(t)\mathop{dt} - \int_c^{h(x)} f(t)\mathop{dt}$$
 
-Letting $F(u) = \int_c^v f(v)\mathop{dv}$, by [Theorem 1](#thm1) we have $F'(u) = f(u)$, and the right-hand side is $F(g(x)) - F(h(x))$. Applying the chain rule to each term gives
+Letting $F(u) = \int_c^u f(v)\mathop{dv}$, by [Theorem 1](#thm1) we have $F'(u) = f(u)$, and the right-hand side is $F(g(x)) - F(h(x))$. Applying the chain rule to each term gives
 
 $$\begin{aligned}
 \frac{d}{dx}\bigl[F(g(x)) - F(h(x))\bigr] &= F'(g(x))g'(x) - F'(h(x))h'(x) \\[2pt]
@@ -108,7 +108,7 @@ However, care must be taken when the integrand is undefined or discontinuous on 
 ::: Example 6
 For the integral
 
-$$\int_{-1}^{1} \frac{dx}{x^2}$$
+$$\int_{-1}^{1} \frac{\mathop{dx}}{x^2}$$
 
 formally substituting
 

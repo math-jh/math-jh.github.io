@@ -109,12 +109,12 @@ The classical Lie algebras corresponding to each type are as follows.
 
 | Type | Lie algebra | Dimension |
 |------|-------------|-----------|
-| $$A_n$$ | $$\mathfrak{sl}(n+1,\mathbb{C})$$ | $$n(n+2)$$ |
-| $$B_n$$ | $$\mathfrak{so}(2n+1,\mathbb{C})$$ | $$n(2n+1)$$ |
-| $$C_n$$ | $$\mathfrak{sp}(2n,\mathbb{C})$$ | $$n(2n+1)$$ |
-| $$D_n$$ | $$\mathfrak{so}(2n,\mathbb{C})$$ | $$n(2n-1)$$ |
+| $A_n$ | $\mathfrak{sl}(n+1,\mathbb{C})$ | $n(n+2)$ |
+| $B_n$ | $\mathfrak{so}(2n+1,\mathbb{C})$ | $n(2n+1)$ |
+| $C_n$ | $\mathfrak{sp}(2n,\mathbb{C})$ | $n(2n+1)$ |
+| $D_n$ | $\mathfrak{so}(2n,\mathbb{C})$ | $n(2n-1)$ |
 
-The Lie algebras corresponding to the exceptional types $$E_6, E_7, E_8, F_4, G_2$$ cannot be realized as classical matrix algebras. Their dimensions are $$78, 133, 248, 52, 14$$, respectively.
+The Lie algebras corresponding to the exceptional types $E_6, E_7, E_8, F_4, G_2$ cannot be realized as classical matrix algebras. Their dimensions are $78, 133, 248, 52, 14$, respectively.
 :::
 
 ### Simply-Laced Root Systems
@@ -122,141 +122,145 @@ The Lie algebras corresponding to the exceptional types $$E_6, E_7, E_8, F_4, G_
 A root system in which all roots have the same length is called *simply-laced*. Such root systems enjoy special properties.
 
 ::: Definition 8
-A root system $$\Phi$$ is *simply-laced* if $$\lvert\alpha\rvert=\lvert\beta\rvert$$ for all $$\alpha,\beta\in\Phi$$. Equivalently, its Dynkin diagram contains no double or triple edges.
+A root system $\Phi$ is *simply-laced* if $\lvert\alpha\rvert=\lvert\beta\rvert$ for all $\alpha,\beta\in\Phi$. Equivalently, its Dynkin diagram contains no double or triple edges.
 :::
 
-The simply-laced root systems are exactly those of type $$A_n$$, $$D_n$$, $$E_6$$, $$E_7$$, $$E_8$$; these are collectively called *ADE type*. ADE types appear in a wide variety of mathematical contexts: for instance, the classification of du Val singularities, the symmetry groups of Platonic solids, and two-dimensional conformal field theory all exhibit ADE patterns.
+The simply-laced root systems are exactly those of type $A_n$, $D_n$, $E_6$, $E_7$, $E_8$; these are collectively called *ADE type*. ADE types appear in a wide variety of mathematical contexts: for instance, the classification of du Val singularities, the symmetry groups of Platonic solids, and two-dimensional conformal field theory all exhibit ADE patterns.
+
+Their Dynkin diagrams are as follows. All of them consist of single edges only, with $A_n$ a chain, $D_n$ a fork branching at one end, and $E_6,E_7,E_8$ having three branches meeting at a single vertex.
+
+![ADE type Dynkin diagram](/assets/images/Math/Lie_Theory/Borel_Subgroup-1.svg){:style="width:25.06em" class="invert" .align-center}
 
 ## Borel Subalgebra
 
-We now turn to subalgebras of a Lie algebra that are defined naturally from a root system. In [§Root Systems, ⁋Definition 15](/en/math/lie_theory/root_systems#def15) we defined the set $$\Phi^+$$ of positive roots. Choosing $$\Phi^+$$ amounts to selecting a Weyl chamber, and from this choice we can define a distinguished subalgebra.
+We now turn to subalgebras of a Lie algebra that are defined naturally from a root system. In [§Root Systems, ⁋Definition 15](/en/math/lie_theory/root_systems#def15) we defined the set $\Phi^+$ of positive roots. Choosing $\Phi^+$ amounts to selecting a Weyl chamber, and from this choice we can define a distinguished subalgebra.
 
 ::: Definition 9
-For a semisimple Lie algebra $$\mathfrak{g}$$, a Cartan subalgebra $$\mathfrak{h}$$, and a set of positive roots $$\Phi^+$$, the *Borel subalgebra* is the subalgebra
+For a semisimple Lie algebra $\mathfrak{g}$, a Cartan subalgebra $\mathfrak{h}$, and a set of positive roots $\Phi^+$, the *Borel subalgebra* is the subalgebra
 
 $$\mathfrak{b}=\mathfrak{h}\oplus\bigoplus_{\alpha\in\Phi^+}\mathfrak{g}_\alpha.$$
 
-Here $$\mathfrak{n}=\bigoplus_{\alpha>0}\mathfrak{g}_\alpha$$ is called the *nilradical* of $$\mathfrak{b}$$.
+Here $\mathfrak{n}=\bigoplus_{\alpha>0}\mathfrak{g}_\alpha$ is called the *nilradical* of $\mathfrak{b}$.
 :::
 
 A Borel subalgebra contains all root spaces corresponding to positive roots, and may be regarded as the largest "upper triangular" subalgebra containing the Cartan subalgebra.
 
 ::: Proposition 10
-For a Borel subalgebra $$\mathfrak{b}$$, the following hold.
+For a Borel subalgebra $\mathfrak{b}$, the following hold.
 
-1. $$\mathfrak{b}$$ is solvable.
-2. $$\mathfrak{b}$$ is a maximal solvable subalgebra of $$\mathfrak{g}$$.
-3. Every conjugate of $$\mathfrak{b}$$ is again a Borel subalgebra. That is, for any $$g\in G$$, $$\Ad(g)\mathfrak{b}$$ is the Borel subalgebra associated to some positive system $$\Phi'^+$$.
+1. $\mathfrak{b}$ is solvable.
+2. $\mathfrak{b}$ is a maximal solvable subalgebra of $\mathfrak{g}$.
+3. Every conjugate of $\mathfrak{b}$ is again a Borel subalgebra. That is, for any $g\in G$, $\Ad(g)\mathfrak{b}$ is the Borel subalgebra associated to some positive system $\Phi'^+$.
 :::
 ::: Proof
-(1) Consider the derived series of $$\mathfrak{b}$$. We have $$\mathfrak{b}^{(1)}=[\mathfrak{b},\mathfrak{b}]=\mathfrak{n}$$, and since $$\mathfrak{n}$$ is nilpotent, $$\mathfrak{b}$$ is solvable. Concretely, $$\mathfrak{n}$$ has a structure analogous to the algebra of strictly upper triangular matrices.
+(1) Consider the derived series of $\mathfrak{b}$. We have $\mathfrak{b}^{(1)}=[\mathfrak{b},\mathfrak{b}]=\mathfrak{n}$, and since $\mathfrak{n}$ is nilpotent, $\mathfrak{b}$ is solvable. Concretely, $\mathfrak{n}$ has a structure analogous to the algebra of strictly upper triangular matrices.
 
-(2) Suppose $$\mathfrak{s}$$ is a solvable subalgebra containing $$\mathfrak{b}$$. By the root decomposition it must be of the form $$\mathfrak{s}=\mathfrak{h}\oplus\bigoplus_{\alpha\in S}\mathfrak{g}_\alpha$$. If $$S$$ omits some positive root then $$\mathfrak{s}\subset\mathfrak{b}$$; if $$S$$ contains a negative root then $$\mathfrak{s}$$ is no longer solvable. Hence $$\mathfrak{s}=\mathfrak{b}$$.
+(2) Suppose $\mathfrak{s}$ is a solvable subalgebra containing $\mathfrak{b}$. By the root decomposition it must be of the form $\mathfrak{s}=\mathfrak{h}\oplus\bigoplus_{\alpha\in S}\mathfrak{g}_\alpha$. If $S$ omits some positive root then $\mathfrak{s}\subset\mathfrak{b}$; if $S$ contains a negative root then $\mathfrak{s}$ is no longer solvable. Hence $\mathfrak{s}=\mathfrak{b}$.
 
-(3) Since $$\Ad(g)\mathfrak{b}$$ is again a maximal solvable subalgebra, by (2) it is the Borel subalgebra for some positive system.
+(3) Since $\Ad(g)\mathfrak{b}$ is again a maximal solvable subalgebra, by (2) it is the Borel subalgebra for some positive system.
 :::
 
 ## Borel Subgroup and Flag Variety
 
-We now adopt the Lie group perspective. For a complex semisimple Lie group $$G_\mathbb{C}$$, we may consider the Lie subgroup corresponding to a Borel subalgebra $$\mathfrak{b}$$.
+We now adopt the Lie group perspective. For a complex semisimple Lie group $G_\mathbb{C}$, we may consider the Lie subgroup corresponding to a Borel subalgebra $\mathfrak{b}$.
 
 ::: Definition 11
-The *Borel subgroup* $$B$$ of a complex semisimple Lie group $$G_\mathbb{C}$$ is the connected Lie subgroup corresponding to a Borel subalgebra $$\mathfrak{b}$$.
+The *Borel subgroup* $B$ of a complex semisimple Lie group $G_\mathbb{C}$ is the connected Lie subgroup corresponding to a Borel subalgebra $\mathfrak{b}$.
 
 $$\mathfrak{b}=\Lie(B)$$
 :::
 
-A Borel subgroup $$B$$ is a maximal connected solvable subgroup of $$G_\mathbb{C}$$. We now define the associated quotient space.
+A Borel subgroup $B$ is a maximal connected solvable subgroup of $G_\mathbb{C}$. We now define the associated quotient space.
 
 ::: Definition 12
-For a complex semisimple Lie group $$G_\mathbb{C}$$ and a Borel subgroup $$B$$, the *flag variety* is the homogeneous space
+For a complex semisimple Lie group $G_\mathbb{C}$ and a Borel subgroup $B$, the *flag variety* is the homogeneous space
 
 $$\mathcal{F}=G_\mathbb{C}/B.$$
 :::
 
-The term *flag variety* arises because for $$\GL(n,\mathbb{C})$$, the space $$\mathcal{F}$$ coincides with the space of complete flags in $$\mathbb{C}^n$$. In general the flag variety is a projective variety, and it is deeply connected to the representation theory of $$G_\mathbb{C}$$.
+The term *flag variety* arises because for $\GL(n,\mathbb{C})$, the space $\mathcal{F}$ coincides with the space of complete flags in $\mathbb{C}^n$. In general the flag variety is a projective variety, and it is deeply connected to the representation theory of $G_\mathbb{C}$.
 
 ::: Example 13
-Consider the case $$G_\mathbb{C}=\GL(n,\mathbb{C})$$. The Borel subgroup $$B$$ is the group of upper triangular matrices, and the flag variety $$\GL(n,\mathbb{C})/B$$ is in bijection with the space of complete flags in $$\mathbb{C}^n$$,
+Consider the case $G_\mathbb{C}=\GL(n,\mathbb{C})$. The Borel subgroup $B$ is the group of upper triangular matrices, and the flag variety $\GL(n,\mathbb{C})/B$ is in bijection with the space of complete flags in $\mathbb{C}^n$,
 
 $$0=V_0\subset V_1\subset V_2\subset\cdots\subset V_n=\mathbb{C}^n,\qquad \dim V_i=i.$$
 
-Specifically, the coset $$gB\in\GL(n,\mathbb{C})/B$$ corresponds to the flag $$V_i=\span\{ge_1,\ldots,ge_i\}$$. This space is realized as a projective variety via the embedding
+Specifically, the coset $gB\in\GL(n,\mathbb{C})/B$ corresponds to the flag $V_i=\span\{ge_1,\ldots,ge_i\}$. This space is realized as a projective variety via the embedding
 
 $$\GL(n,\mathbb{C})/B\hookrightarrow\mathbb{P}(\wedge^1\mathbb{C}^n)\times\mathbb{P}(\wedge^2\mathbb{C}^n)\times\cdots\times\mathbb{P}(\wedge^{n-1}\mathbb{C}^n).$$
 :::
 
 ## Connection with the Compact Form
 
-We now examine the relationship between a compact Lie group $$G$$ and its complexification $$G_\mathbb{C}$$. This connection furnishes a bridge between the two perspectives: $$G/T$$ for compact groups and $$G_\mathbb{C}/B$$ for complex groups.
+We now examine the relationship between a compact Lie group $G$ and its complexification $G_\mathbb{C}$. This connection furnishes a bridge between the two perspectives: $G/T$ for compact groups and $G_\mathbb{C}/B$ for complex groups.
 
 ::: Definition 14
-A *compact form* of a complex Lie group $$G_\mathbb{C}$$ is a compact Lie group $$G$$ satisfying the following conditions.
+A *compact form* of a complex Lie group $G_\mathbb{C}$ is a compact Lie group $G$ satisfying the following conditions.
 
-1. $$G$$ is a Lie subgroup of $$G_\mathbb{C}$$.
-2. The Lie algebra $$\mathfrak{g}_0$$ of $$G$$ is a real form of $$\mathfrak{g}$$; that is, $$\mathfrak{g}=\mathfrak{g}_0\otimes_\mathbb{R}\mathbb{C}$$.
-3. The Killing form is negative definite on $$\mathfrak{g}_0$$.
+1. $G$ is a Lie subgroup of $G_\mathbb{C}$.
+2. The Lie algebra $\mathfrak{g}_0$ of $G$ is a real form of $\mathfrak{g}$; that is, $\mathfrak{g}=\mathfrak{g}_0\otimes_\mathbb{R}\mathbb{C}$.
+3. The Killing form is negative definite on $\mathfrak{g}_0$.
 :::
 
-Every complex semisimple Lie group admits a compact form. For example, the compact form of $$\SL(n,\mathbb{C})$$ is $$\SU(n)$$, that of $$\SO(n,\mathbb{C})$$ is $$\SO(n)$$, and that of $$\Sp(2n,\mathbb{C})$$ is $$\Sp(n)=\Sp(2n,\mathbb{C})\cap\operatorname{U}(2n)$$.
+Every complex semisimple Lie group admits a compact form. For example, the compact form of $\SL(n,\mathbb{C})$ is $\SU(n)$, that of $\SO(n,\mathbb{C})$ is $\SO(n)$, and that of $\Sp(2n,\mathbb{C})$ is $\Sp(n)=\Sp(2n,\mathbb{C})\cap\operatorname{U}(2n)$.
 
 We now state the central result.
 
 ::: Proposition 15
-Let $$G$$ be a compact connected Lie group, $$G_\mathbb{C}$$ its complexification, $$T\subset G$$ a maximal torus, and $$B\subset G_\mathbb{C}$$ the corresponding Borel subgroup. Then the inclusion
+Let $G$ be a compact connected Lie group, $G_\mathbb{C}$ its complexification, $T\subset G$ a maximal torus, and $B\subset G_\mathbb{C}$ the corresponding Borel subgroup. Then the inclusion
 
 $$G/T\hookrightarrow G_\mathbb{C}/B$$
 
-is a homotopy equivalence. In particular, $$G/T$$ and $$G_\mathbb{C}/B$$ have the same cohomology.
+is a homotopy equivalence. In particular, $G/T$ and $G_\mathbb{C}/B$ have the same cohomology.
 :::
 ::: Proof
-Consider the Iwasawa decomposition $$G_\mathbb{C}=G\cdot A\cdot N$$, where
+Consider the Iwasawa decomposition $G_\mathbb{C}=G\cdot A\cdot N$, where
 
-- $$A=\exp(i\mathfrak{t})$$ is the abelian subgroup corresponding to the split real form of $$T$$, and
-- $$N=\exp(\mathfrak{n})$$ is the unipotent subgroup corresponding to $$\mathfrak{n}=\bigoplus_{\alpha>0}\mathfrak{g}_\alpha$$.
+- $A=\exp(i\mathfrak{t})$ is the abelian subgroup corresponding to the split real form of $T$, and
+- $N=\exp(\mathfrak{n})$ is the unipotent subgroup corresponding to $\mathfrak{n}=\bigoplus_{\alpha>0}\mathfrak{g}_\alpha$.
 
-The Iwasawa decomposition implies $$G\cap (A\cdot N)=\{e\}$$ (the decomposition of each element is unique). The Borel subgroup $$B$$ contains the complex maximal torus $$T_\mathbb{C}=T\cdot A$$ and decomposes as $$B=T\cdot A\cdot N$$, so $$G\cap B = T\cdot(G\cap A\cdot N)=T$$. Now consider the chain
+The Iwasawa decomposition implies $G\cap (A\cdot N)=\{e\}$ (the decomposition of each element is unique). The Borel subgroup $B$ contains the complex maximal torus $T_\mathbb{C}=T\cdot A$ and decomposes as $B=T\cdot A\cdot N$, so $G\cap B = T\cdot(G\cap A\cdot N)=T$. Now consider the chain
 
 $$G/T\hookrightarrow G_\mathbb{C}/B=(G\cdot A\cdot N)/(T\cdot A\cdot N)\cong G/(G\cap T\cdot A\cdot N)=G/T.$$
 
-The first inclusion is induced by $$G\hookrightarrow G_\mathbb{C}$$; since the composition is the identity map on $$G/T$$, this inclusion is a homotopy equivalence.
+The first inclusion is induced by $G\hookrightarrow G_\mathbb{C}$; since the composition is the identity map on $G/T$, this inclusion is a homotopy equivalence.
 
-More precisely, because $$A\cdot N\cong\mathbb{R}^n$$ is contractible (being Euclidean space), the projection $$G_\mathbb{C}/B\rightarrow G/T$$ induces a deformation retraction.
+More precisely, because $A\cdot N\cong\mathbb{R}^n$ is contractible (being Euclidean space), the projection $G_\mathbb{C}/B\rightarrow G/T$ induces a deformation retraction.
 :::
 
-This result means that $$G/T$$, from the compact Lie group viewpoint, and the flag variety $$G_\mathbb{C}/B$$, from the complex Lie group viewpoint, are essentially the same object. In particular, one may study the topological properties of $$G/T$$—its cohomology, homotopy groups, and so on—by exploiting the algebro-geometric properties of the flag variety.
+This result means that $G/T$, from the compact Lie group viewpoint, and the flag variety $G_\mathbb{C}/B$, from the complex Lie group viewpoint, are essentially the same object. In particular, one may study the topological properties of $G/T$—its cohomology, homotopy groups, and so on—by exploiting the algebro-geometric properties of the flag variety.
 
 ## Bruhat Decomposition
 
-Finally, we introduce an important decomposition of $$G_\mathbb{C}$$. This decomposition is essential for understanding the cell structure of the flag variety.
+Finally, we introduce an important decomposition of $G_\mathbb{C}$. This decomposition is essential for understanding the cell structure of the flag variety.
 
 ::: Proposition 16
-Let $$G_\mathbb{C}$$ be a complex semisimple Lie group, $$B$$ a Borel subgroup, and $$W$$ the Weyl group. Then the following decomposition holds:
+Let $G_\mathbb{C}$ be a complex semisimple Lie group, $B$ a Borel subgroup, and $W$ the Weyl group. Then the following decomposition holds:
 
 $$G_\mathbb{C}=\bigsqcup_{w\in W}BwB.$$
 
-This is called the *Bruhat decomposition*. A more detailed discussion, together with its generalization to parabolic subgroups, is given in [§Bruhat Decomposition and Parabolic Subgroups, ⁋Theorem 4](/en/math/lie_theory/bruhat_decomposition#thm4). Each double coset $$BwB$$ is a locally closed subset of $$G_\mathbb{C}$$, and its closure is given by
+This is called the *Bruhat decomposition*. A more detailed discussion, together with its generalization to parabolic subgroups, is given in [§Bruhat Decomposition, ⁋Theorem 5](/en/math/lie_theory/bruhat_decomposition#thm5). Each double coset $BwB$ is a locally closed subset of $G_\mathbb{C}$, and its closure is given by
 
 $$\overline{BwB}=\bigcup_{v\leq w}BvB,$$
 
-where $$\leq$$ denotes the Bruhat order on the Weyl group.
+where $\leq$ denotes the Bruhat order on the Weyl group.
 :::
 ::: Proof
-First we show that $$G_\mathbb{C}=\bigcup_{w\in W}BwB$$. For any $$g\in G_\mathbb{C}$$, one checks that $$g^{-1}B\cap T\neq\emptyset$$, and then uses elements of the Weyl group to move $$g$$ into the appropriate double coset.
+First we show that $G_\mathbb{C}=\bigcup_{w\in W}BwB$. For any $g\in G_\mathbb{C}$, one checks that $g^{-1}B\cap T\neq\emptyset$, and then uses elements of the Weyl group to move $g$ into the appropriate double coset.
 
-For disjointness, suppose $$BwB=BvB$$. Then $$wBw^{-1}=vBv^{-1}$$, whence $$w^{-1}v\in N(T)$$ and $$w^{-1}v$$ normalizes $$B$$. But since $$B\cap N(T)=T$$, we have $$w^{-1}v\in T$$, and therefore $$w=v$$ in $$W$$.
+For disjointness, suppose $BwB=BvB$. Then $wBw^{-1}=vBv^{-1}$, whence $w^{-1}v\in N(T)$ and $w^{-1}v$ normalizes $B$. But since $B\cap N(T)=T$, we have $w^{-1}v\in T$, and therefore $w=v$ in $W$.
 
 The statement concerning closures follows from the definition of the Bruhat order.
 :::
 
-The Bruhat decomposition provides a cell decomposition of the flag variety $$G_\mathbb{C}/B$$. For each $$w\in W$$, the Schubert cell $$X_w=BwB/B$$ is isomorphic to an affine space of dimension $$\ell(w)$$, and these cells together cover all of $$G_\mathbb{C}/B$$. Here $$\ell(w)$$ is the *length* of $$w$$, i.e. the minimal number of simple reflections needed to express $$w$$.
+The Bruhat decomposition provides a cell decomposition of the flag variety $G_\mathbb{C}/B$. For each $w\in W$, the Schubert cell $X_w=BwB/B$ is isomorphic to an affine space of dimension $\ell(w)$, and these cells together cover all of $G_\mathbb{C}/B$. Here $\ell(w)$ is the *length* of $w$, i.e. the minimal number of simple reflections needed to express $w$.
 
 ::: Example 17
-When $$G_\mathbb{C}=\GL(n,\mathbb{C})$$, the Weyl group is $$W\cong S_n$$, and for each permutation $$\sigma\in S_n$$ the length $$\ell(\sigma)$$ equals the number of inversions. The concrete form of this decomposition and its relation to Gaussian elimination are discussed in [§Bruhat Decomposition and Parabolic Subgroups, ⁋Example 6](/en/math/lie_theory/bruhat_decomposition#ex6).
+When $G_\mathbb{C}=\GL(n,\mathbb{C})$, the Weyl group is $W\cong S_n$, and for each permutation $\sigma\in S_n$ the length $\ell(\sigma)$ equals the number of inversions. The concrete form of this decomposition and its relation to Gaussian elimination are discussed in [§Bruhat Decomposition, ⁋Example 7](/en/math/lie_theory/bruhat_decomposition#ex7).
 
-Specifically, an inversion of $$\sigma$$ is a pair $$(i,j)$$ with $$i<j$$ and $$\sigma(i)>\sigma(j)$$. By the Bruhat decomposition, $$\GL(n,\mathbb{C})/B$$ admits a cell decomposition ranging from a $$0$$-dimensional cell (the identity permutation, with $$0$$ inversions) up to an $$n(n-1)/2$$-dimensional cell (the reverse permutation, with the maximum number of inversions).
+Specifically, an inversion of $\sigma$ is a pair $(i,j)$ with $i<j$ and $\sigma(i)>\sigma(j)$. By the Bruhat decomposition, $\GL(n,\mathbb{C})/B$ admits a cell decomposition ranging from a $0$-dimensional cell (the identity permutation, with $0$ inversions) up to an $n(n-1)/2$-dimensional cell (the reverse permutation, with the maximum number of inversions).
 
-From this cell decomposition one can compute the cohomology of $$\GL(n,\mathbb{C})/B$$; its Betti numbers are determined by the Bruhat order on the Weyl group.
+From this cell decomposition one can compute the cohomology of $\GL(n,\mathbb{C})/B$; its Betti numbers are determined by the Bruhat order on the Weyl group.
 :::
 
 ---

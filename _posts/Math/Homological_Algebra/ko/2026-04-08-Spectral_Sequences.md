@@ -34,7 +34,7 @@ $E_r$ page의 원소들을 평면 상의 점 $(p,q)$로 시각화한다면, $d_r
 
 우리의 경험을 바탕으로 spectral sequence를 어떠한 double complex의 total complex라 본다면, 이들 각각의 page들의 differential은 total complex에서의 differential, 즉
 
-$$d^n:\bigoplus_{p+q=n}C^{p,q}\rightarrow \bigoplus_{p+q=n+1}C^{p+q}$$
+$$d^n:\bigoplus_{p+q=n}C^{p,q}\rightarrow \bigoplus_{p+q=n+1}C^{p,q}$$
 
 의 각 성분을 세밀하게 분석하는 것처럼 생각할 수 있다. 우리는 이를 분석하여, 최종적으로는 이 total complex의 homology를 계산하는 것이 주된 목적이었는데, 이를 위해 우리는 앞서 [§Ext와 Tor, ⁋명제 3](/ko/math/homological_algebra/ext_and_tor#prop3)의 증명에서 total complex $A^\bullet=\Tot(K)^\bullet$의 horizontal/vertical degree를 이용하여 filtration을 정의했었다. 따라서 우리는 더 일반적으로 *filtered complex*의 개념을 도입해야 한다.
 
@@ -50,7 +50,7 @@ $$\cdots \supset F^{p-1}A^\bullet \supset F^pA^\bullet \supset F^{p+1}A^\bullet 
 을 만족하는 subcomplex들의 열 $(F^p A^\bullet)_p$이다. 이 때, (decreasing) filtration이 주어진 cochain complex를 *filtered complex<sub>여과 복합체</sub>*라 부르고, $(A^\bullet, F)$로 표기한다.
 :::
 
-특히 $F^p A^\bullet$이 $A^\bullet$의 subcomplex라는 가정으로부터 $F^pA^\bullet$은 $A^\bullet$으로부터 differential을 잘 물려받고 이에 대한 cohomology 또한 잘 정의된다. 어쨌든 직관적으로 $p$가 증가함에 따라 $F^p A^\bullet$은 점점 더 작아지며, 각 단계에서 새로운 정보가 추가되는 것으로 이해할 수 있다. 우리는 위의 [§Ext와 Tor, ⁋명제 3](/ko/math/homological_algebra/ext_and_tor#prop3)의 증명에서 귀납법을 적용하기 위해 $F^{p+1}A^\bullet/F^pA^\bullet$을 생각하여 이를 원래의 double complex $K^{p, \bullet-p}$로 생각하였는데, 일반적인 경우에도 이 정보는 <em-ko>정확히</em-ko> $p$번째 filtration을 담는다는 점에서 중요하다. 이렇게 얻어진 cochain complex
+특히 $F^p A^\bullet$이 $A^\bullet$의 subcomplex라는 가정으로부터 $F^pA^\bullet$은 $A^\bullet$으로부터 differential을 잘 물려받고 이에 대한 cohomology 또한 잘 정의된다. 어쨌든 직관적으로 $p$가 증가함에 따라 $F^p A^\bullet$은 점점 더 작아지며, 각 단계에서 새로운 정보가 추가되는 것으로 이해할 수 있다. 우리는 위의 [§Ext와 Tor, ⁋명제 3](/ko/math/homological_algebra/ext_and_tor#prop3)의 증명에서 귀납법을 적용하기 위해 $F^pA^\bullet/F^{p+1}A^\bullet$을 생각하여 이를 원래의 double complex $K^{p, \bullet-p}$로 생각하였는데, 일반적인 경우에도 이 정보는 <em-ko>정확히</em-ko> $p$번째 filtration을 담는다는 점에서 중요하다. 이렇게 얻어진 cochain complex
 
 $$\gr^p A^\bullet = F^p A^\bullet / F^{p+1} A^\bullet$$
 
@@ -116,7 +116,7 @@ $$F^pA^{p+q+1}\rightarrow F^pA^{p+q+1}/F^{p+1}A^{p+q+1}$$
 
 $$F^p A^{p+q}/F^{p+1}A^{p+q}\rightarrow F^pA^{p+q+1}/F^{p+1}A^{p+q+1}$$
 
-로 factor through하여 얻어진다. 이 때, first isomorphism theorem이 잘 적용된다: $a \in F^{p+1}A^{p+q}$이면 $d(a) \in F^{p+1}A^{p+q+1}$이므로 공역 몫 $F^p A^{p+q+1}/F^{p+1}A^{p+q+1}$에서 $0$으로 간다.
+로 factor through하여 얻어진다. 이 때, first isomorphism theorem이 잘 적용된다: $a \in F^{p+1}A^{p+q}$이면 $d(a) \in F^{p+1}A^{p+q+1}$이므로 공역 quotient $F^p A^{p+q+1}/F^{p+1}A^{p+q+1}$에서 $0$으로 간다.
 
 더 일반적으로, $E_r$페이지에서의 미분 $d_r$ 또한 비슷한 방식으로 정의된다. 본질적으로 $E_r^{p,q}$는 $F^pC^{p+q}$에 여러 단계의 quotient를 취하여 만들어지는 것이므로, $E_r^{p,q}$의 원소는 어떠한 원소 $x\in F^pC^{p+q}$의 적당한 equivalence class $[x]$로 생각할 수 있다. 이제 $d_r^{p,q}: E_r^{p,q}\rightarrow E_r^{p+r, q-r+1}$은 다음의 식
 
@@ -125,7 +125,7 @@ $$d_r^{p,q}([x])=[dx]\in E_r^{p+r, q-r+1}\tag{$\ast$}$$
 로 주어진다. 물론 이 대응이 잘 정의되며 differential을 정의하는 것은 다소 복잡한 계산을 통해 보여야 하지만 ([링크](https://stacks.math.columbia.edu/tag/012K)) 중요한 것은 $E_r^{p,q}$의 원소는 다음의 두 조건
 
 - $dx\in F^{p+r}C^{p+q+1}$이며,
-- 만일 $x,y\in F^{p+r}C^{p+q}$들이 $r-1$번째 단계의 boundary만큼만 차이난다면, $x,y$는 같은 것으로 취급한다.
+- 만일 $x,y\in F^{p}C^{p+q}$들이 $r-1$번째 단계의 boundary만큼만 차이난다면, $x,y$는 같은 것으로 취급한다.
 
 에 의해 정의될 수 있다는 것이다. 특히 ($\ast$)가 알려주는 것은 $d_r$들이 모두 본질적으로는 $d$와 같은 것이며, 그 index $r$은 filtration을 건너뛰는 정도를 측정해주는 데에만 쓰인다는 것이다. 즉 다음이 성립한다.
 
@@ -144,7 +144,7 @@ $f : (A^\bullet, F) \rightarrow (B^\bullet, G)$가 filtered complex 사이의 ch
 
 $$f(F^p A^\bullet) \subset G^p B^\bullet$$
 
-이 성립한다. 그럼 $f$는 각 $r$에 대해 well-defined된 사상 $f_r : E_r(A) \rightarrow E_r(B)$를 유도한다.
+이 성립한다. 그럼 $f$는 각 $r$에 대해 well-defined된 morphism $f_r : E_r(A) \rightarrow E_r(B)$를 유도한다.
 :::
 ::: 증명
 $f$가 chain map이므로 cocycle을 cocycle으로, boundary를 boundary로 보낸다. 또한 $f(F^p) \subset G^p$이므로 $f(Z_r^{p,q}(A)) \subset Z_r^{p,q}(B)$이고 $f(B_r^{p,q}(A)) \subset B_r^{p,q}(B)$이다. 따라서 $f$는 각 $r$에 대해 $E_r$ 상에서 well-defined map을 유도한다.

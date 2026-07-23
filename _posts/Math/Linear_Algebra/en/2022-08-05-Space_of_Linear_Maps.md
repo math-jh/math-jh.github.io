@@ -50,7 +50,7 @@ Conversely, given any linear map $G:V\rightarrow W$, we may restrict it to $\mat
 
 $$\{\text{functions from $\mathcal{B}$ to $W$}\}\longleftrightarrow\{\text{linear maps from $V$ to $W$}\}$$
 
-In other words, a linear map from $V$ to $W$ is completely determined by how it acts on the basis $\mathcal{B}$, and if $V$ is finite-dimensional, this means that the linear map is determined solely by its values at finitely many elements.
+In other words, a linear map $L$ from $V$ to $W$ is completely determined by how it acts on the basis $\mathcal{B}$, and if $V$ is finite-dimensional, this means that the linear map $L$ is determined solely by its values at finitely many elements.
 
 In particular, assume that the codomain $W$ is also a finite-dimensional $\mathbb{K}$-vector space, and fix a basis $\mathcal{B}=\{x_1,\ldots, x_n\}$ of $V$ and a basis $\mathcal{C}=\{y_1,\ldots,y_m\}$ of $W$. Then by the preceding argument, a linear map $L$ from $V$ to $W$ is completely determined by the $n$ vectors in $W$
 
@@ -164,9 +164,9 @@ $$\alpha_{11}B_1^1(x_k)+\alpha_{12}B_2^1(x_k)+\cdots+\alpha_{mn}B_n^m(x_k)=0$$
 
 But by the definition of $B_i^j$, the value $B_i^j(x_k)$ is $y_j$ only when $i=k$, so the above equation becomes
 
-$$\alpha_{1k}y_1+\alpha_{2k}y_2+\cdots+\alpha_{mk}y_k=0$$
+$$\alpha_{1k}y_1+\alpha_{2k}y_2+\cdots+\alpha_{mk}y_m=0$$
 
-Now $y_1,\ldots,y_k$ are linearly independent, so $\alpha_{1k},\ldots,\alpha_{mk}$ are all $0$. Since $k$ was arbitrary, $\alpha_{11},\ldots,\alpha_{mn}$ are all 0, and the $B_i^j$ are linearly independent.
+Now $y_1,\ldots,y_m$ are linearly independent, so $\alpha_{1k},\ldots,\alpha_{mk}$ are all $0$. Since $k$ was arbitrary, $\alpha_{11},\ldots,\alpha_{mn}$ are all 0, and the $B_i^j$ are linearly independent.
 
 On the other hand, these $B_i^j$ span $\Hom(V,W)$. Given an arbitrary $L\in\Hom(V,W)$, we can find scalars $\alpha_{11},\ldots,\alpha_{mn}$ satisfying equation (1) from the introduction. Now the map defined by
 

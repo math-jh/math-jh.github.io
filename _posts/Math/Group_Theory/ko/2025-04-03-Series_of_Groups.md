@@ -20,7 +20,7 @@ weight: 3
 
 우선 $[h,h']^{-1}=[h',h]$인 것으로부터 $[H,H']=[H',H]$이 항상 성립한다. 만일 $[H,H']=\{e\}$라면, 모든 $h,h'$에 대하여 $hh'=h'h$이므로 $C_G(H)\subseteq H'$이고 $C_G(H')\subseteq H$이며 이들 두 조건 중 하나가 성립하면 $[H,H']=\{e\}$가 성립하는 것 또한 자명하다. 비슷하게, 만일 $[H,H']\subseteq H$라 하면 임의의 $h,h'$에 대하여
 
-$$h^{-1}h'^{-1}hh'\in H\implies h'^{-1}hh'^{-1}\in H$$
+$$h^{-1}h'^{-1}hh'\in H\implies h'^{-1}hh'\in H$$
 
 이므로 $H'\subseteq N_G(H)$이며, 마찬가지로 그 역 또한 자명하다. 마지막으로 만일 $H,H'$가 모두 $G$의 *normal* subgroup이었다면, $[H,H']$의 임의의 generator $[h,h']=h^{-1}h'^{-1}hh'$와 $G$의 임의의 원소 $x$에 대하여
 
@@ -133,7 +133,7 @@ $$[C_m(G), C_1(G)]\subseteq C_{m+1}(G),\qquad [C_1(G), C_n(G)]\subseteq C_{n+1}(
 이제 다음을 정의한다. 
 
 ::: 정의 6
-Group $G$가 *nilpotent group<sub>멱영군</sub>*이라는 것은 적당한 자연수 $n$이 존재하여 $C_{n+1}(G)=\{e\}$인 것이다. 이 조건을 만족하는 자연수 중 가장 큰 $n$을 $G$의 *nilpotency class*라 부른다. 
+Group $G$가 *nilpotent group<sub>멱영군</sub>*이라는 것은 적당한 자연수 $n$이 존재하여 $C_{n+1}(G)=\{e\}$인 것이다. 이 조건을 만족하는 자연수 중 가장 작은 $n$을 $G$의 *nilpotency class*라 부른다. 
 :::
 
 그럼 다음이 성립한다. 
@@ -190,7 +190,7 @@ Group homomorphism $f:G \rightarrow G'$에 대하여, $f(D_n(G))\subseteq D_n(G'
 이에 대한 증명은 [명제 4](#prop4)와 마찬가지로 귀납법을 사용하면 된다. Lower central series의 stability condition으로 nilpotent group을 정의한 것과 같이, solvable group은 derived series의 stability condition으로 정의된다. 
 
 ::: 정의 11
-Group $G$가 *solvable<sub>가해</sub>*이라는 것은 적당한 자연수 $n$이 존재하여 $D_{n+1}(G)=\{e\}$인 것이다. 이 조건을 만족하는 자연수 중 가장 큰 $n$을 $G$의 *solvability class*라 부른다.
+Group $G$가 *solvable<sub>가해</sub>*이라는 것은 적당한 자연수 $n$이 존재하여 $D_{n+1}(G)=\{e\}$인 것이다. 이 조건을 만족하는 자연수 중 가장 작은 $n$을 $G$의 *solvability class*라 부른다.
 :::
 
 정의에 의하여 $D_0(G)=C_1(G)=G$이고 $D_1(G)=[G,G]=C_2(G)$가 성립한다. 그럼 이 사실과 [명제 5](#prop5)로부터, 귀납적으로 다음의 포함관계
@@ -222,7 +222,7 @@ Group $G$의 subgroup들의 sequence
 
 $$G=G_0\supset G_1\supset \cdots\supset G_n=\{e\}$$
 
-가 *subnormal series<sub>부분정규열</sub>*이라는 것은 각 $k$에 $G_{k+1}$이 $G_k$의 normal subgroup인 것이며, 이 때 $G_k/G_{k+1}$을 이 series의 *quotient*라 부른다. Composition series $G_\bullet$보다 finer한 subnormal series가 존재하지 않는다면, 이를 $G$의 *composition series*라 부른다. 
+가 *subnormal series<sub>부분정규열</sub>*이라는 것은 각 $k$에 $G_{k+1}$이 $G_k$의 normal subgroup인 것이며, 이 때 $G_k/G_{k+1}$을 이 series의 *quotient*라 부른다. Subnormal series $G_\bullet$보다 finer한 subnormal series가 존재하지 않는다면, 이를 $G$의 *composition series*라 부른다. 
 :::
 
 그럼 임의의 group $G$와 normal subgroup $N$에 대하여, $G/N$의 normal subgroup과, $G$의 normal subgroup 중 $N$을 포함하는 것들 사이의 일대일대응이 존재하므로, $G_\bullet$이 composition series인 것은 각각의 $k$에 대하여 $G_k/G_{k+1}$이 simple인 것과 같은 말이다. ([§대칭군, ⁋정의 12](/ko/math/group_theory/symmetric_groups#def12))
@@ -247,7 +247,7 @@ $$\frac{H'(H\cap K)}{H'(H\cap K')}\cong \frac{K'(K\cap H)}{K'(K\cap H')}$$
 
 로 요약할 수 있다. 
 
-우선 $H'\cap K=H'\cap (H\cap K)$와 $K'\cap H=K'\cap (K\cap H)$가 각각 $H\cap K$의 normal subgroup인 것은 [\[대수적 구조\] §군 동형사상, ⁋보조정리 4](/ko/math/algebraic_structures/isomorphism_theorems#lem4)의 결과이다. 따라서 이들의 교집합인 $(H'\cap K)(K'\cap H)$ 또한 $H\cap K$의 normal subgroup이라는 것을 안다. 이제 주장의 isomorphism의 좌변을 보면, [\[대수적 구조\] §군 동형사상, ⁋정리 5](/ko/math/algebraic_structures/isomorphism_theorems#thm5)로부터
+우선 $H'\cap K=H'\cap (H\cap K)$와 $K'\cap H=K'\cap (K\cap H)$가 각각 $H\cap K$의 normal subgroup인 것은 [\[대수적 구조\] §군 동형사상, ⁋보조정리 4](/ko/math/algebraic_structures/isomorphism_theorems#lem4)의 결과이다. 따라서 이들의 곱인 $(H'\cap K)(K'\cap H)$ 또한 $H\cap K$의 normal subgroup이라는 것을 안다. 이제 주장의 isomorphism의 좌변을 보면, [\[대수적 구조\] §군 동형사상, ⁋정리 5](/ko/math/algebraic_structures/isomorphism_theorems#thm5)로부터
 
 $$H'(H'\cap K)(K'\cap H)=H'(H\cap K')$$
 
@@ -289,26 +289,26 @@ $$\length(G)=\length(G/N)+\length(N)$$
 
 ## 대칭군의 가해성
 
-가해성의 가장 고전적인 응용은 symmetric group이 언제부터 가해가 아닌지를 가르는 것이며, 그 분기점은 $A_5$의 단순성에 있다 ([§대칭군, ⁋예시 13](/ko/math/group_theory/symmetric_groups#ex13)).
+Solvability의 가장 고전적인 응용은 symmetric group이 언제부터 solvable이 아닌지를 가르는 것이며, 그 분기점은 $A_5$의 단순성에 있다 ([§대칭군, ⁋예시 13](/ko/math/group_theory/symmetric_groups#ex13)).
 
 ::: 명제 18
-$A_5$는 가해군이 아니다.
+$A_5$는 solvable group이 아니다.
 :::
 ::: 증명
-먼저 $A_5$가 non-abelian임을 본다. 만일 $A_5$가 abelian이라면 임의의 $g\neq e$에 대하여 cyclic subgroup $\langle g\rangle$이 (abelian group의 모든 subgroup이 그러하듯) normal subgroup이고 $\{e\}$가 아니므로, [§대칭군, ⁋예시 13](/ko/math/group_theory/symmetric_groups#ex13)의 simple성에 의해 $\langle g\rangle=A_5$, 곧 $A_5$가 위수 $60$의 cyclic group이 된다. 그러나 그렇다면 $\langle g^{30}\rangle$이 위수 $2$의 자명하지 않은 proper normal subgroup을 이루어 simple성에 모순이다. 따라서 $A_5$는 non-abelian이다.
+먼저 $A_5$가 non-abelian임을 본다. 만일 $A_5$가 abelian이라면 임의의 $g\neq e$에 대하여 cyclic subgroup $\langle g\rangle$이 (abelian group의 모든 subgroup이 그러하듯) normal subgroup이고 $\{e\}$가 아니므로, [§대칭군, ⁋예시 13](/ko/math/group_theory/symmetric_groups#ex13)의 simple성에 의해 $\langle g\rangle=A_5$, 곧 $A_5$가 order $60$의 cyclic group이 된다. 그러나 그렇다면 $\langle g^{30}\rangle$이 order $2$의 자명하지 않은 proper normal subgroup을 이루어 simple성에 모순이다. 따라서 $A_5$는 non-abelian이다.
 
-이제 [정의 9](#def9)의 derived series를 본다. 교환자부분군 $D_1(A_5)=[A_5,A_5]$는 언제나 normal subgroup이며, $A_5$가 non-abelian이므로 $D_1(A_5)\neq\{e\}$이다. $A_5$가 simple이므로 $D_1(A_5)=A_5$일 수밖에 없고, 따라서 귀납적으로 모든 $n$에 대하여 $D_n(A_5)=A_5\neq\{e\}$이다. 어떤 $n$에서도 $D_{n+1}(A_5)=\{e\}$가 성립할 수 없으므로, [정의 11](#def11)에 의해 $A_5$는 가해군이 아니다.
+이제 [정의 9](#def9)의 derived series를 본다. Commutator subgroup $D_1(A_5)=[A_5,A_5]$는 언제나 normal subgroup이며, $A_5$가 non-abelian이므로 $D_1(A_5)\neq\{e\}$이다. $A_5$가 simple이므로 $D_1(A_5)=A_5$일 수밖에 없고, 따라서 귀납적으로 모든 $n$에 대하여 $D_n(A_5)=A_5\neq\{e\}$이다. 어떤 $n$에서도 $D_{n+1}(A_5)=\{e\}$가 성립할 수 없으므로, [정의 11](#def11)에 의해 $A_5$는 solvable group이 아니다.
 :::
 
-가해성이 subgroup으로 유전된다는 사실과 결합하면, symmetric group의 가해성에 대한 결론이 곧바로 따라온다.
+Solvability가 subgroup으로 유전된다는 사실과 결합하면, symmetric group의 solvability에 대한 결론이 곧바로 따라온다.
 
 ::: 따름정리 19
-$n\geq 5$이면 symmetric group $S_n$은 가해군이 아니다.
+$n\geq 5$이면 symmetric group $S_n$은 solvable group이 아니다.
 :::
 ::: 증명
-먼저 가해군의 subgroup이 다시 가해임을 본다. Subgroup $H\subseteq G$의 포함사상 $\iota:H\hookrightarrow G$에 [명제 10](#prop10)을 적용하면 $D_n(H)\subseteq D_n(G)$이므로, $G$가 가해여서 어떤 $n$에 $D_n(G)=\{e\}$이면 $D_n(H)=\{e\}$가 되어 $H$도 가해이다.
+먼저 solvable group의 subgroup이 다시 solvable임을 본다. Subgroup $H\subseteq G$의 포함사상 $\iota:H\hookrightarrow G$에 [명제 10](#prop10)을 적용하면 $D_n(H)\subseteq D_n(G)$이므로, $G$가 solvable이어서 어떤 $n$에 $D_n(G)=\{e\}$이면 $D_n(H)=\{e\}$가 되어 $H$도 solvable이다.
 
-이제 $n\geq 5$이면 $\{6,\ldots,n\}$의 원소들을 고정하는 치환들이 $S_5$의 복제를 이루므로 $A_5\subseteq S_5\subseteq S_n$이다. 만일 $S_n$이 가해라면 그 subgroup인 $A_5$도 가해여야 하는데, 이는 [명제 18](#prop18)에 모순이다. 따라서 $S_n$은 가해군이 아니다.
+이제 $n\geq 5$이면 $\{6,\ldots,n\}$의 원소들을 고정하는 permutation들이 $S_5$의 복제를 이루므로 $A_5\subseteq S_5\subseteq S_n$이다. 만일 $S_n$이 solvable이라면 그 subgroup인 $A_5$도 solvable이어야 하는데, 이는 [명제 18](#prop18)에 모순이다. 따라서 $S_n$은 solvable group이 아니다.
 :::
 
-이 따름정리는 순수하게 군론적인 사실이지만, 그 가장 유명한 귀결은 체론에 있다. $n \geq 5$차 일반 다항식의 Galois 군이 $S_n$이고 그 $S_n$이 가해가 아니라는 사실이, 일반 5차 이상 방정식이 거듭제곱근으로 풀리지 않는다는 정리의 군론적 핵심을 이룬다 ([\[체론\] §거듭제곱근 가해성](/ko/math/field_theory/solvability_by_radicals)).
+이 따름정리는 순수하게 군론적인 사실이지만, 그 가장 유명한 귀결은 체론에 있다. $n \geq 5$차 일반 다항식의 Galois group이 $S_n$이고 그 $S_n$이 solvable이 아니라는 사실이, 일반 5차 이상 방정식이 거듭제곱근으로 풀리지 않는다는 정리의 군론적 핵심을 이룬다 ([\[체론\] §거듭제곱근 가해성](/ko/math/field_theory/solvability_by_radicals)).

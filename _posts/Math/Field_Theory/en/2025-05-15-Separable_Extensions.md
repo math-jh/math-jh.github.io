@@ -45,7 +45,7 @@ $$NM=(\det M) I_r$$
 
 holds. Now computing where the column vector corresponding to $a_j$ goes on both sides, we see that $(\det M)a_j=0$ must hold for all $j$, and therefore $(\det M)\mathfrak{a}=0$.
 
-On the other hand, by its definition the matrix $M$ becomes $I_r$ after reduction modulo $\mathfrak{a}$, so its determinant $\det M$ is also $1$ modulo $\mathfrak{a}$. Setting $e=1-D$ then gives the desired idempotent $e$.
+On the other hand, by its definition the matrix $M$ becomes $I_r$ after reduction modulo $\mathfrak{a}$, so its determinant $\det M$ is also $1$ modulo $\mathfrak{a}$. Setting $e=1-\det M$ then gives the desired idempotent $e$.
 :::
 
 The differential characterization of étale algebras is then given as follows.
@@ -154,7 +154,7 @@ Any algebraic extension $\mathbb{L}/\mathbb{K}$ is itself a finite degree reduce
 
 Suppose for contradiction that $\mathbb{K}$ is not perfect, so it has characteristic $p\neq 0$. Then from the assumption that $\mathbb{K}$ is not perfect, we can consider a (relative) $p$-radical extension $\mathbb{K}(a)/\mathbb{K}$ (inside an algebraic closure $\overline{\mathbb{K}}/\mathbb{K}$). On the other hand, the homomorphism $\mathbb{K}(a)\rightarrow\overline{\mathbb{K}}$ obtained from the embedding $\mathbb{K}\hookrightarrow\overline{\mathbb{K}}$ is unique by [§Radical Extensions, ⁋Proposition 6](/en/math/field_theory/radical_extensions#prop6). In other words, the set $\Hom_{\Alg{\mathbb{K}}}(\mathbb{K}(a), \overline{\mathbb{K}})$ is a singleton, and therefore
 
-$$1=[\mathbb{K}(a):\mathbb{K}]_s\nleq [\mathbb{K}(a):\mathbb{K}]=p^e$$
+$$1=[\mathbb{K}(a):\mathbb{K}]_s\lneq [\mathbb{K}(a):\mathbb{K}]=p^e$$
 
 so $\mathbb{K}(a)$ is not étale and hence not separable.
 :::

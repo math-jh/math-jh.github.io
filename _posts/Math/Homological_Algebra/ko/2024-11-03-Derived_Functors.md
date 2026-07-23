@@ -76,7 +76,7 @@ $$0\longrightarrow A\longrightarrow B\longrightarrow C\longrightarrow 0$$
 
 ## 유도함자
 
-두 abelian category $\mathcal{A},\mathcal{B}$ 사이의 right exact functor $F: \mathcal{A}\rightarrow \mathcal{B}$를 생각하자. 그럼 $\mathcal{A}$는 left exactness를 보존하지 않는다. 가령 $F$가 covariant functor였다 하면, 다음의 short exact sequence
+두 abelian category $\mathcal{A},\mathcal{B}$ 사이의 right exact functor $F: \mathcal{A}\rightarrow \mathcal{B}$를 생각하자. 그럼 $F$는 left exactness를 보존하지 않는다. 가령 $F$가 covariant functor였다 하면, 다음의 short exact sequence
 
 $$0 \rightarrow A_1 \rightarrow A_2 \rightarrow A_3 \rightarrow 0$$
 
@@ -111,7 +111,7 @@ $$F(P_1) \overset{Fd_1}{\longrightarrow} F(P_0) \overset{F\epsilon_0}{\longright
 
 가 exact임을 안다. 따라서 
 
-$$L_0F(A)=H_i(F(P))=\frac{F(P_0)}{\im Fd_1}=\frac{F(P_0)}{\ker F\epsilon_0}\cong F(A)$$
+$$L_0F(A)=H_0(F(P))=\frac{F(P_0)}{\im Fd_1}=\frac{F(P_0)}{\ker F\epsilon_0}\cong F(A)$$
 
 을 얻는다. 
 
@@ -140,9 +140,9 @@ $$0 \rightarrow P_n \rightarrow Q_n \rightarrow R_n \rightarrow 0$$
 
 $$0 \rightarrow F(P_\bullet) \rightarrow F(Q_\bullet) \rightarrow F(R_\bullet) \rightarrow 0$$
 
-또한 short exact sequence이며 ([\[다중선형대수학\] §Hom과 텐서곱, ⁋명제 1](/ko/math/multilinear_algebra/hom_and_tensor#prop1), 여기에서 homology sequence를 생각하면 원하는 connecting map들과, left derived functor들의 long exact sequence
+또한 short exact sequence이며 ([\[다중선형대수학\] §Hom과 텐서곱, ⁋명제 1](/ko/math/multilinear_algebra/hom_and_tensor#prop1)), 여기에서 homology sequence를 생각하면 원하는 connecting map들과, left derived functor들의 long exact sequence
 
-$$\cdots\overset{\partial}{\longrightarrow}L_iF(A')\longrightarrow L_iF(A)\longrightarrow L_iF(A'')\overset{\partial}{\longrightarrow}L_{i-1}F(A')\longrightarrow L_{i-1}F(A)\longrightarrow L_iF(A'')\overset{\partial}{\longrightarrow}\cdots$$
+$$\cdots\overset{\partial}{\longrightarrow}L_iF(A)\longrightarrow L_iF(B)\longrightarrow L_iF(C)\overset{\partial}{\longrightarrow}L_{i-1}F(A)\longrightarrow L_{i-1}F(B)\longrightarrow L_{i-1}F(C)\overset{\partial}{\longrightarrow}\cdots$$
 
 를 얻는다. 이렇게 얻어진 정보가 [정의 1](#def1)의 두 번째 조건을 만족한다는 것은 [§분해, ⁋정리 6](/ko/math/homological_algebra/resolutions#thm6)을 사용하면 된다.
 :::
@@ -156,7 +156,7 @@ Enough projective를 갖는 abelian category $\mathcal{A}$와, 임의의 right e
 위에서의 논의와 마찬가지로, 우리는 left exact functor에 대해서도 right derived functor를 정의할 수 있다. 그 정의는 [정의 4](#def4)의 "dual"이다.
 
 ::: 정의 9
-Left exact functor $F:\mathcal{A}\rightarrow \mathcal{B}$가 주어졌다 하고, $\mathcal{A}$가 enough injective를 갖난다 하자. 그럼 $F$의 *right derived functor<sub>오른쪽 유도함자</sub>*들 $R^i F$를 다음의 식
+Left exact functor $F:\mathcal{A}\rightarrow \mathcal{B}$가 주어졌다 하고, $\mathcal{A}$가 enough injective를 갖는다 하자. 그럼 $F$의 *right derived functor<sub>오른쪽 유도함자</sub>*들 $R^i F$를 다음의 식
 
 $$(R^iF)(A)=H_i(F(I^\bullet)),\qquad\text{$I^\bullet$ an injective resolution of $A$}$$
 

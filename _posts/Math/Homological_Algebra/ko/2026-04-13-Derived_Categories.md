@@ -53,7 +53,7 @@ $$X\overset{s}{\longleftarrow} A\overset{f}{\longrightarrow}Y,\qquad X\overset{t
 
 이 주어졌다고 할 때, 이들 둘이 equivalent하다는 것은 또 다른 object $C$와 roof
 
-$$A\overset{u}{\longleftarrow} C\overset{h}B$$
+$$A\overset{u}{\longleftarrow} C\overset{h}{\longrightarrow}B$$
 
 이 존재하여
 
@@ -82,13 +82,13 @@ Derived category $D(\mathcal{A})$의 subcategory들을 정의한다.
 한편 우리는 다음을 공식적으로 정의한다.
 
 ::: 정의 4
-$D(\mathcal{A})$ 위의 *shift functor<sub>이동 함자</sub>* $[n]: D(\mathcal{A}) \rightarrow D(\mathcal{A})$는 complex $A^\bullet$을 $n$칸 이동시키는 것이다. 구체적으로 $(A[n])^i = A^{i+n}$이고, 미분 map은 $(d_{A[n]})^i = (-1)^n d_A^{i+n}$으로 정의한다.
+$D(\mathcal{A})$ 위의 *shift functor<sub>이동 함자</sub>* $[n]: D(\mathcal{A}) \rightarrow D(\mathcal{A})$는 complex $A^\bullet$을 $n$칸 이동시키는 것이다. 구체적으로 $(A[n])^i = A^{i+n}$이고, differential map은 $(d_{A[n]})^i = (-1)^n d_A^{i+n}$으로 정의한다.
 :::
 이 때 differential의 sign convention은 [§호몰로지, ⁋정의 5](/ko/math/homological_algebra/homology#def5) 이후에 이미 설명한 바 있다. 그러나 sign이 바뀐 것은 (co)homology에 어떠한 영향도 주지 않으므로 가령 다음의 식
 
 $$H^i(A[n]) = H^{i+n}(A)$$
 
-이 성립한다. 구체적인 예시로, abelian category의 object $A$를 $A[0]$으로 볼 때, $A[n]$은 $-n$번째 차수에 $A$가 있고 나머지는 $0$인 complex이며, 따라서 $H^{-n}(A[n]) = A$이고 다른 차수에서의 cohomology는 $0$이다.
+이 성립한다. 구체적인 예시로, abelian category의 object $A$를 $A[0]$으로 볼 때, $A[n]$은 degree $-n$에 $A$가 있고 나머지는 $0$인 complex이며, 따라서 $H^{-n}(A[n]) = A$이고 다른 degree에서의 cohomology는 $0$이다.
 
 ## Derived Functor
 
@@ -179,7 +179,7 @@ $$A \overset{f}{\rightarrow} B \overset{g}{\rightarrow} C \overset{h}{\rightarro
 의 형태를 갖는다. 이 모임은 다음 공리를 만족한다.
 - (TR1) 모든 morphism $f : A \rightarrow B$에 대해 distinguished triangle $A \rightarrow B \rightarrow C \rightarrow A[1]$가 존재한다. 또한 $A \overset{\id}{\rightarrow} A \rightarrow 0 \rightarrow A[1]$은 distinguished triangle이다.
 - (TR2) $A \rightarrow B \rightarrow C \rightarrow A[1]$이 distinguished triangle이면 $B \rightarrow C \rightarrow A[1] \rightarrow B[1]$도 distinguished triangle이다.
-- (TR3) 두 distinguished triangle이 주어졌을 때, map들 $(u, v, w)$에 의한 morphism이 commute하면, $w$를 포함하는 확장이 존재한다.
+- (TR3) 두 distinguished triangle이 주어졌을 때, map들 $(u, v)$가 diagram을 commute하게 하면, 이를 triangle 사이의 morphism으로 완성하는 map $w$가 존재한다.
 - (TR4) Octahedral axiom: 합성 $B \overset{g}{\longrightarrow} C \overset{h}{\longrightarrow} D$이 주어졌을 때, 이와 연관된 octahedron을 이루는 세 개의 distinguished triangle이 존재한다.
 :::
 

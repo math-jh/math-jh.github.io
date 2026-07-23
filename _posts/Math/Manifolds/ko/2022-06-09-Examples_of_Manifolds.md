@@ -70,7 +70,7 @@ $$\graph(f)=\{(x,y)\in\mathbb{R}^m\times\mathbb{R}^n\mid \text{$x\in U$, $y=f(x)
 지금까지의 예시에서는 모두 하나의 chart만을 갖는 atlas를 통해 미분구조를 주었는데, 이는 곧 manifold가 국소적으로 $\mathbb{R}^m$과 닮아있을 뿐만 아니라, 전체적으로도 $\mathbb{R}^m$과 닮아있다는 뜻이므로 사실 그렇게 흥미로운 상황이 아니다. 
 
 ::: 예시 6
-$\mathbb{R}^{n+1}$에 들어있는 $n$차원 구면 $S^n$을 생각하자. $S^n$에 subspace topology를 주면 Hausdorff, second coutability 조건이 모두 만족된다. 하지만 $S^n$은 열린집합이 아니므로, locally Euclidean 조건을 보이는 것이 open submanifold의 경우보다 더 까다롭다. 
+$\mathbb{R}^{n+1}$에 들어있는 $n$차원 구면 $S^n$을 생각하자. $S^n$에 subspace topology를 주면 Hausdorff, second countability 조건이 모두 만족된다. 하지만 $S^n$은 열린집합이 아니므로, locally Euclidean 조건을 보이는 것이 open submanifold의 경우보다 더 까다롭다. 
 
 임의의 $p\in S^n$을 고르자. $0\not\in S^n$이므로, $p$의 어떤 좌표는 반드시 0이 아니다. 일반성을 잃지 않고, 이 좌표가 $n+1$ 번째 좌표라 하고, 또 양수라 하자. 즉 $p$는 다음의 집합
 
@@ -92,7 +92,7 @@ $$f(x)=\sqrt{1-\lvert x\rvert^2}$$
 
 뿐만 아니라 이들 $U_i^\pm$들과, $i$번째 좌표를 제외한 $n$개의 좌표로의 projection $\varphi_i^\pm$들을 모은 다음의 집합
 
-$$\mathcal{A}=\{(U_i^\pm, \varphi_i^\pm\mid i=1,2,\ldots, n+1\}$$
+$$\mathcal{A}=\{(U_i^\pm, \varphi_i^\pm)\mid i=1,2,\ldots, n+1\}$$
 
 이 atlas가 된다. 이를 위해서는 위 atlas를 구성하는 chart들이 모두 $C^\infty$-compatible이라는 것을 보여야 한다. $U_i^+$와 $U_i^-$는 만나지 않으므로 자명하게 서로 $C^\infty$-compatible하다. 서로 다른 index $i,j$를 갖는 두 chart $(U_i^\pm, \varphi_i^\pm)$와 $(U_j^\pm,\varphi_j^\pm)$가 주어졌다 하자. 그럼 우선 $(\varphi_i^\pm)^{-1}$에 의하여
 
@@ -110,9 +110,9 @@ $S^n$ 위에 정의된 미분구조는 manifold의 전형적인 예시이다. �
 ::: 예시 7
 $\mathbb{R}^n$의 부분집합 $U$와, $U$ 위에서 정의된 $C^\infty$ 함수 $F$가 주어졌다 하자. 그럼 *level set* $M=F^{-1}(c)$가 잘 정의된다. 만일 여기에 더하여, 다음의 *Jacobian matrix* 
 
-$$\begin{pmatrix}\frac{\partial F^1}{\partial x^1}&\frac{\partial F^1}{\partial x^2}&\cdots&\frac{\partial F^1}{\partial x^n}\\\frac{\partial F^2}{\partial x^1}&\frac{\partial F^2}{\partial x^2}&\cdots&\frac{\partial F^2}{\partial x^n}\\\vdots&\vdots&\ddots&\vdots\\\frac{\partial F^n}{\partial x^1}&\frac{\partial F^n}{\partial x^2}&\cdots&\frac{\partial F^n}{\partial x^n}\end{pmatrix}$$
+$$\begin{pmatrix}\frac{\partial F}{\partial x^1}&\frac{\partial F}{\partial x^2}&\cdots&\frac{\partial F}{\partial x^n}\end{pmatrix}$$
 
-가 항상 0이 아니라 하자. 즉, 각 점 $a\in M$마다 어떠한 $i$가 존재하여, 열벡터 $dF/dx^i$가 영벡터가 아니도록 할 수 있다. 그럼 음함수 정리에 의하여, 점 $a$의 적당한 열린근방 $U$에서는 $M$이 
+가 항상 0이 아니라 하자. 즉, 각 점 $a\in M$마다 어떠한 $i$가 존재하여, $\frac{\partial F}{\partial x^i}$가 $0$이 아니도록 할 수 있다. 그럼 음함수 정리에 의하여, 점 $a$의 적당한 열린근방 $U$에서는 $M$이 
 
 $$x^i=f(x^1,\ldots, \hat{x}^i,\ldots, x^n)$$
 
@@ -128,7 +128,7 @@ $$F(x^1,\ldots, x^{n+1})=(x^1)^2+(x^2)^2+\cdots+(x^{n+1})^2-1$$
 의 zero set으로 볼 수 있으므로 [예시 6](#ex6)은 위 예시의 특별한 경우로 볼 수 있다.
 
 ::: 예시 8
-집합 $\mathbb{R}^{n+1}\setminus\{0\}$에 $x\sim y\iff \exists\lambda(x=\lambda y)$으로 정의된 relation이 주어졌다 하자. 어렵지 않게 $\sim$이 equivalence relation임을 확인할 수 있다. 이제 quotient set $\RP^n=\RP^n/\sim$을 canonical projection $\pi:\mathbb{R}^{n+1}\setminus\{0\}\rightarrow \RP^n$을 통해 정의된 quotient topology로 생각하고, $[x]$가 $x\in\mathbb{R}^{n+1}\setminus\{0\}$의 representative라 하자. 
+집합 $\mathbb{R}^{n+1}\setminus\{0\}$에 $x\sim y\iff \exists\lambda(x=\lambda y)$으로 정의된 relation이 주어졌다 하자. 어렵지 않게 $\sim$이 equivalence relation임을 확인할 수 있다. 이제 quotient set $\RP^n=(\mathbb{R}^{n+1}\setminus\{0\})/\sim$을 canonical projection $\pi:\mathbb{R}^{n+1}\setminus\{0\}\rightarrow \RP^n$을 통해 정의된 quotient topology로 생각하고, $[x]$가 $x\in\mathbb{R}^{n+1}\setminus\{0\}$의 representative라 하자. 
 
 각각의 $i=1,\ldots, n+1$에 대하여, $\mathbb{R}^{n+1}\setminus\{0\}$의 열린집합 
 
@@ -152,11 +152,15 @@ $$\psi_i:(u^1, \ldots, u^n)\mapsto [u^1, \ldots, u^{i-1}, 1, u^i,\ldots, u^n]$$
 
 $$(u^1, \ldots, u^n)\mapsto [u^1, \ldots, u^{j-1}, 1, u^j,\ldots, u^n]$$
 
-이고, 이후 $\varphi_i$를 타고 가면
+이고, 이후 $\varphi_i$를 타고 가는데, 그 결과는 $i$와 $j$의 대소에 따라 갈린다. $i<j$인 경우
 
-$$[u^1, \ldots, u^{j-1}, 1, u^j,\ldots, u^n]\mapsto \left(\frac{u^1}{u^i},\ldots,\frac{u^{j-1}}{u^i}, \frac{1}{u^i}, \frac{u^j}{u^i},\ldots, \frac{u^{i-1}}{u^i},\frac{u^{i+1}}{u^i},\ldots, \frac{u^{n+1}}{u^i}\right)$$
+$$[u^1, \ldots, u^{j-1}, 1, u^j,\ldots, u^n]\mapsto \left(\frac{u^1}{u^i},\ldots,\frac{u^{i-1}}{u^i},\frac{u^{i+1}}{u^i},\ldots,\frac{u^{j-1}}{u^i}, \frac{1}{u^i}, \frac{u^j}{u^i},\ldots, \frac{u^n}{u^i}\right)$$
 
-이므로 $C^\infty$-compatible하다.
+이고, $i>j$인 경우
+
+$$[u^1, \ldots, u^{j-1}, 1, u^j,\ldots, u^n]\mapsto \left(\frac{u^1}{u^{i-1}},\ldots,\frac{u^{j-1}}{u^{i-1}}, \frac{1}{u^{i-1}}, \frac{u^j}{u^{i-1}},\ldots, \frac{u^{i-2}}{u^{i-1}},\frac{u^i}{u^{i-1}},\ldots, \frac{u^n}{u^{i-1}}\right)$$
+
+이므로 어느 경우에나 $C^\infty$-compatible하다.
 :::
 
 마지막으로 약간 일반적인 예시를 살펴보자.
@@ -179,4 +183,4 @@ $$\mathcal{A}=\{(U_\alpha\times V_\beta,\varphi_\alpha\times\psi_\beta)\mid (U_\
 
 ---
 
-[^1]: 사실은 이 함수는 $$\RP^n$$의 부분집합에서 $$\mathbb{R}^n$$으로의 함수이므로, 우변의 결과가 representative의 선택에 의존하지 않는 것을 보여야 한다. 즉 만일 $$[\lambda x^1,\ldots, \lambda x^{n+1}]$$을 representative로 택했어도 같은 결과가 나와야 하는데, 이는 식으로부터 명확하다.
+[^1]: 사실은 이 함수는 $\RP^n$의 부분집합에서 $\mathbb{R}^n$으로의 함수이므로, 우변의 결과가 representative의 선택에 의존하지 않는 것을 보여야 한다. 즉 만일 $[\lambda x^1,\ldots, \lambda x^{n+1}]$을 representative로 택했어도 같은 결과가 나와야 하는데, 이는 식으로부터 명확하다.

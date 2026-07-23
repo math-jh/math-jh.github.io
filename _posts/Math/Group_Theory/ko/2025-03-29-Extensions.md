@@ -100,12 +100,12 @@ $$G\cong (G/N)\oplus N$$
 ::: 정의 6
 두 group $N,H$와 group homomorphism $\tau:H \rightarrow \Aut(N)$이 주어졌다 하자. 그럼 $N$과 $H$의 $\tau$에 대한 *semi-direct product<sub>반직접곱</sub>* $N\rtimes_\tau H$는 집합 $N\times H$ 위에 다음의 연산
 
-$$(x_1,y_1)(x_2,y_2)=(x_1\tau(y_1)(x_1), y_1y_2)$$
+$$(x_1,y_1)(x_2,y_2)=(x_1\tau(y_1)(x_2), y_1y_2)$$
 
 이 주어진 group이다. 
 :::
 
-그럼 $N\rtimes_\tau H$가 위의 연산에 대하여 group의 구조를 가진다는 것을 보일 수 있으며, 이 때 $N\rtimes_\tau H$의 항등원은 $(e_N, e_H)$이며 $(x,y)$의 역원은 $\tau(y^{-1})(x^{-1}), y^{-1})$이다. 뿐만 아니라 다음이 성립한다.
+그럼 $N\rtimes_\tau H$가 위의 연산에 대하여 group의 구조를 가진다는 것을 보일 수 있으며, 이 때 $N\rtimes_\tau H$의 항등원은 $(e_N, e_H)$이며 $(x,y)$의 역원은 $(\tau(y^{-1})(x^{-1}), y^{-1})$이다. 뿐만 아니라 다음이 성립한다.
 
 ::: 명제 7
 두 함수 $i: N \rightarrow N\rtimes_\tau H$와 $p: N\rtimes_\tau H\rightarrow H$를 다음의 식

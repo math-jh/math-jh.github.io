@@ -59,7 +59,7 @@ Jacobson ring $A$와, finitely generated $A$-algebra $E$가 주어졌다 하자.
 ::: 증명
 세 단계로 나누어 증명한다.
 
-1. 우선 $A=\mathbb{K}$이고 $E=\mathbb{K}[\x]$인 경우를 보자. 그럼 $E$는 principal ideal domain이고, 특히 $E$의 임의의 prime ideal은 irreducible monic polynomial로 생성된다. 이로부터 임의의 prime ideal은 다른 prime ideal에 포함될 수 없다는 것을 알 수 있으므로, $E$의 임의의 prime ideal이 maximal인 것을 알고, 이러한 ideal은 $1\in \mathbb{K}$를 포함할 수 없으므로 $A=\mathbb{K}$와 교집합하였을 때 반드시 $(0)$이 되어야 한다. 이 때, $E/\mathfrak{n}$은 $\mathfrak{n}$을 정의하는 irreducible polynomial의 차수만큼의 차원을 갖는 $\mathbb{K}$-벡터공간이 된다. 마지막으로 $(0)$이 maximal ideal들의 곱이라는 것을 보이기 위해서는, $E=\mathbb{K}[\x]$가 무한히 많은 irreducible polynomial들을 가지고 있고, 다항식의 차수는 반드시 유한이므로 이들 모두를 인수로 갖는 다항식은 $0$뿐이라는 논증을 사용하면 된다. 이 때 $E$에서의 irreducible polynomial의 무한성은 유클리드의 소수의 무한성 증명을 그대로 따라하면 된다.
+1. 우선 $A=\mathbb{K}$이고 $E=\mathbb{K}[\x]$인 경우를 보자. 그럼 $E$는 principal ideal domain이고, 특히 $E$의 임의의 prime ideal은 irreducible monic polynomial로 생성된다. 이로부터 임의의 prime ideal은 다른 prime ideal에 포함될 수 없다는 것을 알 수 있으므로, $E$의 임의의 prime ideal이 maximal인 것을 알고, 이러한 ideal은 $1\in \mathbb{K}$를 포함할 수 없으므로 $A=\mathbb{K}$와 교집합하였을 때 반드시 $(0)$이 되어야 한다. 이 때, $E/\mathfrak{n}$은 $\mathfrak{n}$을 정의하는 irreducible polynomial의 degree만큼의 차원을 갖는 $\mathbb{K}$-벡터공간이 된다. 마지막으로 $(0)$이 maximal ideal들의 교집합이라는 것을 보이기 위해서는, $E=\mathbb{K}[\x]$가 무한히 많은 irreducible polynomial들을 가지고 있고, 다항식의 degree는 반드시 유한이므로 이들 모두를 인수로 갖는 다항식은 $0$뿐이라는 논증을 사용하면 된다. 이 때 $E$에서의 irreducible polynomial의 무한성은 유클리드의 소수의 무한성 증명을 그대로 따라하면 된다.
 2. 다음 단계로, 임의의 Jacobson ring $A$와, 하나의 원소로 생성되는 $A$-algebra $E$를 생각하고 $E$가 Jacobson임을 보이기 위해 [보조정리 3](#lem3)의 둘째 조건이 성립함을 보이자. 즉 이번 단계에서 우리의 목표는 다음 명제를 증명하는 것이다.
     > Jacobson ring $A$가 주어졌다 하고, 하나의 원소로 생성되는 $A$-algebra $E$가 주어졌다 하자. 만일 고정된 prime ideal $\mathfrak{q}\subseteq E$에 대하여, $E/\mathfrak{q}$가 영이 아닌 $x\in E/\mathfrak{q}$를 포함하여 $(E/\mathfrak{q})[x^{-1}]$이 field이도록 할 수 있다면, $E/\mathfrak{q}$ 또한 field이다.
 
@@ -69,7 +69,7 @@ Jacobson ring $A$와, finitely generated $A$-algebra $E$가 주어졌다 하자.
     이렇게 quotient를 취하는 과정에서, $A$는 $A'=A/(A\cap \mathfrak{q})$로 바뀌게 되며 이 또한 Jacobson ring이므로, 결과적으로 우리가 보여야 하는 것은 다음 명제이다.
     > Integral domain $A'$가 Jacobson이라 하고, 하나의 원소로 생성되는 $A'$-algebra $E'$가 integral domain이며 $A'$를 포함한다 하자. 만일 $E'$가 영이 아닌 $x\in E'$를 포함하여 $E'[x^{-1}]$이 field이도록 할 수 있다면, $E'$ 또한 field이다.
 
-    이를 위해 우리는 위의 가정 하에서 $A'$가 field가 되어야 하고, $E'$는 $A$의 유한한 extension이 됨을 보인다. 위의 명제에서 $E'$는 하나의 원소로 생성되는 $A'$-algebra이므로, $E'=A'[\x]/\mathfrak{q}$라 쓸 수 있다. 우선 $\mathfrak{q}\neq 0$임을 보이자. 결론에 반하여 $\mathfrak{q}=0$이라 하고, 적당한 $x\in E'/(0)=A'[\x]$가 존재하여 $E'[x^{-1}]=A'[\x][x^{-1}]$이 field라 가정하자. $K'=\Frac(A')$라 하면, 이 가정에 의해 $K'[\x][x^{-1}]$ 또한 field이다. 그런데 $K'[\x]$는 첫째 결과에 의해 Jacobson이므로 $K'[\x]$가 field가 되어야 하고 이는 모순이다. 따라서 $\mathfrak{q}\neq 0$이어야 하고, $E'[x^{-1}]=K'[\x]/\mathfrak{q}K'[\x]$는 $K'$의 finite dimensional extension이다.  
+    이를 위해 우리는 위의 가정 하에서 $A'$가 field가 되어야 하고, $E'$는 $A'$의 유한한 extension이 됨을 보인다. 위의 명제에서 $E'$는 하나의 원소로 생성되는 $A'$-algebra이므로, $E'=A'[\x]/\mathfrak{q}$라 쓸 수 있다. 우선 $\mathfrak{q}\neq 0$임을 보이자. 결론에 반하여 $\mathfrak{q}=0$이라 하고, 적당한 $x\in E'/(0)=A'[\x]$가 존재하여 $E'[x^{-1}]=A'[\x][x^{-1}]$이 field라 가정하자. $K'=\Frac(A')$라 하면, 이 가정에 의해 $K'[\x][x^{-1}]$ 또한 field이다. 그런데 $K'[\x]$는 첫째 결과에 의해 Jacobson이므로 $K'[\x]$가 field가 되어야 하고 이는 모순이다. 따라서 $\mathfrak{q}\neq 0$이어야 하고, $E'[x^{-1}]=K'[\x]/\mathfrak{q}K'[\x]$는 $K'$의 finite dimensional extension이다.  
     이제 $p(x)\in \mathfrak{q}$가 $E'$에서 다음의 식
 
     $$p(\alpha)=p_n\alpha^n+\cdots+p_0=0$$

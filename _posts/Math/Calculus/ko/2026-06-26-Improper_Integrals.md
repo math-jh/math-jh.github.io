@@ -23,7 +23,7 @@ $f$가 모든 $t > a$에서 $[a, t]$에서 적분가능할 때, 무한구간 *�
 
 $$\int_a^{\infty} f(x) \mathop{dx} = \lim_{t \rightarrow \infty}\int_a^t f(x) \mathop{dx}$$
 
-으로 정의하고, 이 극한이 유한한 값으로 존재하면 이상적분이 *수렴*한다고 한다. 마찬가지로, 만일 $f$가 모든 $t<b$에서 $[t,a]$에서 적분가능할 때, 다음의 식
+으로 정의하고, 이 극한이 유한한 값으로 존재하면 이상적분이 *수렴*한다고 한다. 마찬가지로, 만일 $f$가 모든 $t<b$에서 $[t,b]$에서 적분가능할 때, 다음의 식
 
 $$\int_{-\infty}^b f(x)\mathop{dx}=\lim_{t \rightarrow -\infty}\int_t^b f(x) \mathop{dx}$$
 

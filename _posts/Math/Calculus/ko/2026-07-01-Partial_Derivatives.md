@@ -12,7 +12,7 @@ date: 2026-07-01
 weight: 14
 ---
 
-앞선 글에서 우리는 공역의 차원을 올려 한 실수를 여러 실수로 보내는 함수, 곧 매개변수로 매개화된 곡선 $\mathbf{r}:\mathbb{R}\rightarrow\mathbb{R}^n$을 다루었다. 이제 거꾸로 정의역의 차원을 올려, 여러 실수를 한 실수로 보내는 다변수함수 $f:\mathbb{R}^m\rightarrow\mathbb{R}$을 다룬다. 미분은 여전히 한 점 근방에서의 일차 근사라는 본질을 갖지만, 정의역이 벡터공간이 되면서 다가오는 방향이 무수히 많아져 방향이 중요해지고, 일차 근사가 숫자 하나가 아닌 선형사상으로 주어진다. 벡터공간과 내적·노름은 [§곡선과 벡터함수](/ko/math/calculus/vector_functions)에서 다루었으므로, 이 글에서는 다변수 미분의 핵심 도구인 선형사상과 행렬, 행렬식을 간략히 정리한 뒤 편미분과 기울기, 미분가능성, 다변수 연쇄법칙, 극값을 다룬다.
+앞선 글에서 우리는 공역의 차원을 올려 한 실수를 여러 실수로 보내는 함수, 곧 매개변수로 매개화된 곡선 $\mathbf{r}:\mathbb{R}\rightarrow\mathbb{R}^n$을 다루었다. 이제 거꾸로 정의역의 차원을 올려, 여러 실수를 한 실수로 보내는 다변수함수 $f:\mathbb{R}^m\rightarrow\mathbb{R}$을 다룬다. 미분은 여전히 한 점 근방에서의 일차 근사라는 본질을 갖지만, 정의역이 벡터공간이 되면서 다가오는 방향이 무수히 많아져 방향이 중요해지고, 일차 근사가 숫자 하나가 아닌 선형사상으로 주어진다. 벡터공간과 내적·norm은 [§곡선과 벡터함수](/ko/math/calculus/vector_functions)에서 다루었으므로, 이 글에서는 다변수 미분의 핵심 도구인 선형사상과 행렬, 행렬식을 간략히 정리한 뒤 편미분과 기울기, 미분가능성, 다변수 연쇄법칙, 극값을 다룬다.
 
 ## 선형사상과 행렬
 
@@ -48,7 +48,7 @@ $$0 < \lVert \mathbf{x} - \mathbf{a}\rVert < \delta \quad\Rightarrow\quad \lvert
 가 $0 < \lVert \mathbf{x} - \mathbf{a}\rVert < \delta$를 만족하는 모든 $\mathbf{x}$에 대해 성립하는 것이다. 이를 $\lim_{\mathbf{x}\rightarrow\mathbf{a}} f(\mathbf{x}) = L$로 쓰며, 특히 $\lim_{\mathbf{x}\rightarrow\mathbf{a}} f(\mathbf{x}) = f(\mathbf{a})$일 때 $f$는 $\mathbf{a}$에서 *연속<sub>continuous</sub>*이라 한다.
 :::
 
-이 정의의 형식은 일변수와 본질적으로 같으며, 차이는 $1$차원에서의 거리 $\lvert x - a\rvert$가 $m$차원에서의 거리 $\lVert\mathbf{x} - \mathbf{a}\rVert$로 바뀐 것이 전부다. 그러나, 예를 들어, 주어진 함수의 극한값이 $L$임을 확인하기 위해서는 임의의 방향 $\mathbb{v}=(v_1, \ldots, v_m)$에 대하여 다음 극한
+이 정의의 형식은 일변수와 본질적으로 같으며, 차이는 $1$차원에서의 거리 $\lvert x - a\rvert$가 $m$차원에서의 거리 $\lVert\mathbf{x} - \mathbf{a}\rVert$로 바뀐 것이 전부다. 그러나, 예를 들어, 주어진 함수의 극한값이 $L$임을 확인하기 위해서는 임의의 방향 $\mathbf{v}=(v_1, \ldots, v_m)$에 대하여 다음 극한
 
 $$\lim_{t\rightarrow 0}f(\mathbf{a}+t\mathbf{v})=L$$
 
@@ -94,7 +94,7 @@ $$\mathbf{n}\cdot(\mathbf{x}-\mathbf{a})=0$$
 
 $$n_1(x-a_1)+n_2(y-a_2)=0,$$
 
-즉 우리에게 익숙한 직선의 방정식이 나온다. 비슷하게, $\mathbb{R}^m$에서의 한 점 $\mathbf{a}=(a_1,\ldots, a_m)$를 지나며 벡터 $\mathbf{n}=(n_1,\ldots, n_m)$에 수직인 *초평면<sub>hypersurface</sub>* 위의 점 $\mathbf{x}=(x_1,\ldots, x_m)$은 같은 방정식
+즉 우리에게 익숙한 직선의 방정식이 나온다. 비슷하게, $\mathbb{R}^m$에서의 한 점 $\mathbf{a}=(a_1,\ldots, a_m)$를 지나며 벡터 $\mathbf{n}=(n_1,\ldots, n_m)$에 수직인 *초평면<sub>hyperplane</sub>* 위의 점 $\mathbf{x}=(x_1,\ldots, x_m)$은 같은 방정식
 
 $$\mathbf{n}\cdot(\mathbf{x}-\mathbf{a})=0$$
 
@@ -209,7 +209,7 @@ $f$가 $\mathbf{a}$에서 미분가능하고 $\nabla f(\mathbf{a}) \neq 0$이면
 :::
 
 ::: 증명
-미분가능성에 의해 임의의 단위벡터 $\mathbf{u}$에 대해 $D_{\mathbf{u}} f(\mathbf{a}) = \nabla f(\mathbf{a})\cdot \mathbf{u}$이다. 코시–슈바르츠 부등식으로
+미분가능성에 의해 임의의 단위벡터 $\mathbf{u}$에 대해 $D_{\mathbf{u}} f(\mathbf{a}) = \nabla f(\mathbf{a})\cdot \mathbf{u}$이다. Cauchy–Schwarz 부등식으로
 
 $$\begin{aligned}
 D_{\mathbf{u}} f(\mathbf{a}) = \nabla f(\mathbf{a})\cdot \mathbf{u} &\leq \lVert\nabla f(\mathbf{a})\rVert \lVert \mathbf{u}\rVert \\
@@ -223,22 +223,22 @@ D_{\mathbf{u}} f(\mathbf{a}) = \nabla f(\mathbf{a})\cdot \mathbf{u} &\leq \lVert
 
 ## 극값과 헤세 행렬
 
-한 변수에서 극값이 임계점에서 일어났듯, 다변수에서도 미분가능한 함수의 극값은 각 편미분이 $0$이 되어야 하므로 $\nabla f = 0$인 *임계점*에서만 일어난다. 일변수함수의 경우 우리는 이 임계점이 극대인지, 극소인지를 이계도함수를 사용하여 판단할 수 있었는데 ([§평균값 정리, ⁋명제 17](/ko/math/calculus/mean_value_theorem#prop17)), 비슷한 상황이 다변수함수에서도 일어난다. 
+한 변수에서 극값이 critical point에서 일어났듯, 다변수에서도 미분가능한 함수의 극값은 각 편미분이 $0$이 되어야 하므로 $\nabla f = 0$인 *critical point*에서만 일어난다. 일변수함수의 경우 우리는 이 critical point가 극대인지, 극소인지를 이계도함수를 사용하여 판단할 수 있었는데 ([§평균값 정리, ⁋명제 17](/ko/math/calculus/mean_value_theorem#prop17)), 비슷한 상황이 다변수함수에서도 일어난다. 
 
-다만 주의할 것은, 이제 미분을 취할 수 있는 방향이 여럿이므로 한 방향에서는 극소, 다른 한 방향에서는 극대인 점이 존재할 수 있다는 것이다. 이러한 점을 *안장점<sub>saddle point</sub>*이라 부른다. 이 섹션에서 우리는 임계점이 언제 극대, 극소, 안장점인지를 판별할 것인데, 계산의 편의상 $\mathbb{R}^2$에서 정의된 다변수함수로 우리 관심을 제한한다. 
+다만 주의할 것은, 이제 미분을 취할 수 있는 방향이 여럿이므로 한 방향에서는 극소, 다른 한 방향에서는 극대인 점이 존재할 수 있다는 것이다. 이러한 점을 *안장점<sub>saddle point</sub>*이라 부른다. 이 섹션에서 우리는 critical point가 언제 극대, 극소, 안장점인지를 판별할 것인데, 계산의 편의상 $\mathbb{R}^2$에서 정의된 다변수함수로 우리 관심을 제한한다. 
 
-미분가능한 이변수함수의 임계점 근방에서 테일러 전개하면, 일차항이 $\nabla f(\mathbf{a}) = 0$으로 사라지고 남는 이차항은
+미분가능한 이변수함수의 critical point 근방에서 테일러 전개하면, 일차항이 $\nabla f(\mathbf{a}) = 0$으로 사라지고 남는 이차항은
 
 $$f(\mathbf{a}+\mathbf{h}) \approx f(\mathbf{a}) + \frac{1}{2}\bigl(f_{xx}(\mathbf{a})h_1^2 + 2f_{xy}(\mathbf{a})h_1 h_2 + f_{yy}(\mathbf{a})h_2^2\bigr)$$
 
-이다. 이 이차형식의 계수들을 사각 행렬로 모은 것이 임계점 $\mathbf{a}$에서의 *헤세 행렬<sub>Hessian</sub>*로, 이는 다음의 식
+이다. 이 이차형식의 계수들을 정사각행렬로 모은 것이 critical point $\mathbf{a}$에서의 *헤세 행렬<sub>Hessian</sub>*로, 이는 다음의 식
 
 $$H = \begin{pmatrix} f_{xx} & f_{xy} \\ f_{yx} & f_{yy}\end{pmatrix}$$
 
-으로 주어진다. 임계점의 증감은 이 이차형식의 부호가 정하며, 이를 우리 상황에 맞추어 판별식의 언어로 풀어 설명하면 다음과 같다. 
+으로 주어진다. critical point의 증감은 이 이차형식의 부호가 정하며, 이를 우리 상황에 맞추어 판별식의 언어로 풀어 설명하면 다음과 같다. 
 
 ::: 명제 9 (이계도함수 판정)
-$f$가 $C^2$이고 $\mathbf{a}$가 임계점($\nabla f(\mathbf{a}) = 0$)이라 하고, 위 헤세 행렬의 판별식  $D = f_{xx}f_{yy} - f_{xy}^2 = \det H$을 생각하자.
+$f$가 $C^2$이고 $\mathbf{a}$가 critical point($\nabla f(\mathbf{a}) = 0$)이라 하고, 위 헤세 행렬의 판별식  $D = f_{xx}f_{yy} - f_{xy}^2 = \det H$을 생각하자.
 
 1. $D > 0$이고 $f_{xx} > 0$이면 $\mathbf{a}$는 극소이다. 
 2. $D > 0$이고 $f_{xx} < 0$이면 이 점은 극대이다. 
@@ -246,7 +246,7 @@ $f$가 $C^2$이고 $\mathbf{a}$가 임계점($\nabla f(\mathbf{a}) = 0$)이라 �
 :::
 
 ::: 증명
-임계점 근방 전개에서 남는 이차항 $f_{xx}h_1^2 + 2f_{xy}h_1 h_2 + f_{yy}h_2^2$을 보자.우선 $f_{xx} \neq 0$일 때, 이를 $h_1$에 대해 완전제곱꼴로 바꾸면
+critical point 근방 전개에서 남는 이차항 $f_{xx}h_1^2 + 2f_{xy}h_1 h_2 + f_{yy}h_2^2$을 보자. 우선 $f_{xx} \neq 0$일 때, 이를 $h_1$에 대해 완전제곱꼴로 바꾸면
 
 $$\begin{aligned}
 f_{xx}h_1^2 + 2f_{xy}h_1 h_2 + f_{yy}h_2^2
@@ -257,10 +257,10 @@ f_{xx}h_1^2 + 2f_{xy}h_1 h_2 + f_{yy}h_2^2
 이며, 따라서 첫째 항의 부호는 $f_{xx}$를 따르고, 둘째 항의 부호는 $D/f_{xx}$를 따른다. 특히 $D > 0$이면 $D/f_{xx}$가 $f_{xx}$와 같은 부호여서 두 항의 부호가 일치한다. 추가적으로 $f_{xx} > 0$이면, 이차항들이 $0$이 아닌 한 항상 양수라 $\mathbf{a}$ 근방에서 함숫값이 더 커져 이 점이 극소점이 되며, 반대로 $f_{xx} < 0$이면 항상 음수라 극대이다. 반면 $D < 0$이면 두 항의 부호가 반대이므로 $h_1, h_2$의 비율에 따라 이차항이 양과 음 양쪽 값을 모두 가지며, $\mathbf{a}$는 안장점이다.
 :::
 
-판별식이 음일 때 나타나는 안장점은 방향에 따라 함수가 오르내리는 가장 단순한 임계점이라 할 수 있다.
+판별식이 음일 때 나타나는 안장점은 방향에 따라 함수가 오르내리는 가장 단순한 critical point라 할 수 있다.
 
 ::: 예시 10 (안장점)
-$f(x,y) = x^2 - y^2$은 $\nabla f = (2x, -2y) = 0$에서 임계점 $(0,0)$을 가진다. 헤세 행렬은 $\begin{pmatrix} 2 & 0 \\ 0 & -2\end{pmatrix}$로 $\det H = -4 < 0$이므로 안장점이다. 실제로 $x$축을 따라가면 $f = x^2$로 극소, $y$축을 따라가면 $f = -y^2$로 극대라, 방향에 따라 오르내리는 말안장 모양이다. 아래 그림은 이 곡면 $z = x^2 - y^2$의 모습으로, 원점(검은 점)이 안장점이다.
+$f(x,y) = x^2 - y^2$은 $\nabla f = (2x, -2y) = 0$에서 critical point $(0,0)$을 가진다. 헤세 행렬은 $\begin{pmatrix} 2 & 0 \\ 0 & -2\end{pmatrix}$로 $\det H = -4 < 0$이므로 안장점이다. 실제로 $x$축을 따라가면 $f = x^2$로 극소, $y$축을 따라가면 $f = -y^2$로 극대라, 방향에 따라 오르내리는 말안장 모양이다. 아래 그림은 이 곡면 $z = x^2 - y^2$의 모습으로, 원점(검은 점)이 안장점이다.
 
 ![saddle_surface](/assets/images/Math/Calculus/Partial_Derivatives-1.svg){:style="width:21.37em" class="invert" .align-center}
 :::
@@ -269,17 +269,17 @@ $f(x,y) = x^2 - y^2$은 $\nabla f = (2x, -2y) = 0$에서 임계점 $(0,0)$을 �
 
 ## 라그랑주 승수법
 
-미분법의 좋은 응용 중 하나는 주어진 구간 $[a,b]$ 안에서 함수의 극값을 찾는 것이었다. 우리는 이를 다변수함수에서 다룬다. 차이점은 이제 변수가 단순한 구간이 아니라는 것이며, 예를 들어 변수가 어떤 제약 $g(\mathbf{x}) = c$를 만족해야 하는 상황 또한 생각하게 된마. 이를테면 주어진 곡면 위에서 원점에 가장 가까운 점을 찾거나 고정된 자원 안에서 비용을 최소화하는 문제가 그렇다. 이러한 *제약극값<sub>constrained extremum</sub>*을 찾는 표준 도구가 라그랑주 승수법이다.
+미분법의 좋은 응용 중 하나는 주어진 구간 $[a,b]$ 안에서 함수의 극값을 찾는 것이었다. 우리는 이를 다변수함수에서 다룬다. 차이점은 이제 변수가 단순한 구간이 아니라는 것이며, 예를 들어 변수가 어떤 제약 $g(\mathbf{x}) = c$를 만족해야 하는 상황 또한 생각하게 된다. 이를테면 주어진 곡면 위에서 원점에 가장 가까운 점을 찾거나 고정된 자원 안에서 비용을 최소화하는 문제가 그렇다. 이러한 *제약극값<sub>constrained extremum</sub>*을 찾는 표준 도구가 라그랑주 승수법이다.
 
 ::: 명제 11 (라그랑주 승수)
-$f, g:\mathbb{R}^n\rightarrow\mathbb{R}$가 $C^1$이고, 점 $\mathbf{a}$가 제약 $g(\mathbf{x}) = c$를 만족하는 점들 위에서 $f$의 local extrema이며 $\nabla g(\mathbf{a}) \neq 0$이라 하자. 그러면 어떤 실수 $\lambda$에 대해
+$f, g:\mathbb{R}^n\rightarrow\mathbb{R}$가 $C^1$이고, 점 $\mathbf{a}$가 제약 $g(\mathbf{x}) = c$를 만족하는 점들 위에서 $f$의 극값이며 $\nabla g(\mathbf{a}) \neq 0$이라 하자. 그러면 어떤 실수 $\lambda$에 대해
 
 $$\nabla f(\mathbf{a}) = \lambda \nabla g(\mathbf{a})$$
 
 가 성립한다.
 :::
 ::: 증명
-제약면 $\{g = c\}$ 위에서 $\mathbf{a}$를 지나는 임의의 매끄러운 곡선 $\mathbf{x}(t)$ ($\mathbf{x}(0) = \mathbf{a}$)를 잡자. $g(\mathbf{x}(t)) = c$가 상수이므로 [정리 6](#thm6)으로 미분하면 $\nabla g(\mathbf{a}) \cdot \mathbf{x}'(0) = 0$이고, 한편 $\mathbf{a}$가 제약 아래에서 $f$의 극값을 주므로 $t \mapsto f(\mathbf{x}(t))$도 $t = 0$에서 극값을 가지고, 따라서 $\nabla f(\mathbf{a}) \cdot \mathbf{x}'(0) = 0$이다. 즉, 두 벡터 $\nabla f(\mathbf{a})$와 $\nabla g(\mathbf{a})$ 모두가 제약면의 접공간에 직교한다. 그런데 전체 공간이 $3$차원이고, 제약면의 접공간이 $2$차원이므로 이러한 방향은 하나 뿐이고, 따라서 $\nabla f(\mathbf{a}) = \lambda \nabla g(\mathbf{a})$인 실수 $\lambda$가 존재한다.
+제약면 $\{g = c\}$ 위에서 $\mathbf{a}$를 지나는 임의의 smooth 곡선 $\mathbf{x}(t)$ ($\mathbf{x}(0) = \mathbf{a}$)를 잡자. $g(\mathbf{x}(t)) = c$가 상수이므로 [정리 6](#thm6)으로 미분하면 $\nabla g(\mathbf{a}) \cdot \mathbf{x}'(0) = 0$이고, 한편 $\mathbf{a}$가 제약 아래에서 $f$의 극값을 주므로 $t \mapsto f(\mathbf{x}(t))$도 $t = 0$에서 극값을 가지고, 따라서 $\nabla f(\mathbf{a}) \cdot \mathbf{x}'(0) = 0$이다. 즉, 두 벡터 $\nabla f(\mathbf{a})$와 $\nabla g(\mathbf{a})$ 모두가 제약면의 tangent space에 직교한다. 그런데 전체 공간이 $n$차원이고, 제약면의 tangent space가 $n-1$차원이므로 이러한 방향은 하나 뿐이고, 따라서 $\nabla f(\mathbf{a}) = \lambda \nabla g(\mathbf{a})$인 실수 $\lambda$가 존재한다.
 :::
 
 실제 계산에서는 새로 도입된 실수 $\lambda$를 미지수로 추가하여 $\nabla f = \lambda \nabla g$와 제약식 $g = c$를 함께 연립하여 푸는데, 이 $\lambda$를 *라그랑주 승수<sub>Lagrange multiplier</sub>*라 부른다.

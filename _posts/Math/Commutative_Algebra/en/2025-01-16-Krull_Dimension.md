@@ -81,7 +81,7 @@ For a prime ideal $\mathfrak{p}\subseteq A$, we define the *$n$th symbolic power
 $$\mathfrak{p}^{(n)}=\{a\in A\mid\text{$ba\in \mathfrak{p}^n$ for some $b\in A\setminus \mathfrak{p}$}\}$$
 :::
 
-By definition, $\mathfrak{p}^{(n)}$ is the inverse image in $A$ of the ideal $(\mathfrak{p}A_\mathfrak{p})^n$ under the localization $A \rightarrow A_\mathfrak{p}$. Then elements outside $\mathfrak{p}$ become non-zerodivisors modulo $\mathfrak{p}^({n})$, and it is clear that $\mathfrak{p}^{(n)}A_\mathfrak{p}=(\mathfrak{p}A_\mathfrak{p})^n$. Moreover, there is a descending chain of symbolic powers
+By definition, $\mathfrak{p}^{(n)}$ is the inverse image in $A$ of the ideal $(\mathfrak{p}A_\mathfrak{p})^n$ under the localization $A \rightarrow A_\mathfrak{p}$. Then elements outside $\mathfrak{p}$ become non-zerodivisors modulo $\mathfrak{p}^{(n)}$, and it is clear that $\mathfrak{p}^{(n)}A_\mathfrak{p}=(\mathfrak{p}A_\mathfrak{p})^n$. Moreover, there is a descending chain of symbolic powers
 
 $$A=\mathfrak{p}^{(0)}\supseteq \mathfrak{p}=\mathfrak{p}^{(1)}\supseteq \mathfrak{p}^{(2)}\supseteq \mathfrak{p}^{(3)}\supseteq\cdots$$
 
@@ -131,7 +131,7 @@ Now using this, we can inductively prove the following.
 Let $A$ be a noetherian ring and let $a_1,\ldots, a_c\in A$ be arbitrary. Let $\mathfrak{p}$ be minimal among the prime ideals containing $a_1,\ldots, a_c$. Then $\codim \mathfrak{p}\leq c$.
 :::
 
-That is, in a noetherian ring any prime ideal satisfies the descending chain condition, and the length of a chain starting from $\mathfrak{p}$ is at most the number of generators of the ideal it minimally contains. Nevertheless, there exist noetherian rings of infinite dimension. (**[Nag, Appendix, Example 1]**)
+That is, in a noetherian ring any prime ideal satisfies the descending chain condition, and the length of a chain starting from $\mathfrak{p}$ is at most the number of generators of $\mathfrak{p}$. Nevertheless, there exist noetherian rings of infinite dimension. (**[Nag, Appendix, Example 1]**)
 
 On the other hand, [Theorem 7](#thm7) also admits the following converse.
 

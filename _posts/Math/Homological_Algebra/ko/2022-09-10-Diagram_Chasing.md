@@ -143,9 +143,9 @@ $$i_C\circ g^\sharp\circ f^\sharp=g\circ i_B\circ f^\sharp=g\circ f\circ i_A=0$$
 
 이고, $i_C$가 단사인 것으로부터 $g^\sharp\circ f^\sharp=0$임을 확인할 수 있다. 비슷하게 $p_A,p_B,p_C$를 각각 $A,B,C$에서 cokernel들로의 자명한 함수들이라 하면, 
 
-$$(g')^\ast\circ(f')^\ast\circ p_C=(g')^\ast\circ p_B\circ f=p_A\circ g'\circ f'=0$$
+$$(g')^\ast\circ(f')^\ast\circ p_A=(g')^\ast\circ p_B\circ f'=p_C\circ g'\circ f'=0$$
 
-이고, $p_C$가 전사인 것으로부터 $(g')^\ast\circ(f')^\ast=0$임을 확인할 수 있다. 따라서 주어진 명제를 보이기 위해서는 $f':A'\rightarrow B'$가 단사라면 $\ker(g^\sharp)\subset\im(f^\sharp)$이고, $g:B\rightarrow C$가 전사라면 $\ker((g')^\ast)\subset\im((f')^\ast)$임을 보이면 충분하다. 
+이고, $p_A$가 전사인 것으로부터 $(g')^\ast\circ(f')^\ast=0$임을 확인할 수 있다. 따라서 주어진 명제를 보이기 위해서는 $f':A'\rightarrow B'$가 단사라면 $\ker(g^\sharp)\subset\im(f^\sharp)$이고, $g:B\rightarrow C$가 전사라면 $\ker((g')^\ast)\subset\im((f')^\ast)$임을 보이면 충분하다. 
 
 우선 $f'$가 단사라고 가정하자. 만일 어떤 $b\in\ker(\beta)$에 대하여 $g^\sharp(b)=0$이라면, $g^\sharp$의 정의에 의해 $g(b)=0$이고 따라서 $b\in\ker(g)=\im(f)$이다. 따라서 어떤 $a\in A$가 존재하여 $f(a)=b$가 성립한다. 그런데
 
@@ -194,9 +194,9 @@ $$0=\gamma(c)=\gamma(g(b))=(\gamma\circ g)(b)=(g'\circ\beta)(b)=g'(\beta(b))$$
 
 을 만족한다. 즉 $\beta(b)\in\ker(g')=\im(f')$이다. 따라서 $f'(a')=\beta(b)$이도록 하는 $a'$가 유일하게 존재한다. 이러한 $a'$에 대하여 $\delta(c)=a'+\im(\alpha)\in \coker(\alpha)$라 하자. 
 
-함수 $delta$가 잘 정의되기 위해서는 위의 함수값이 $b$의 선택에 의존하지 않아야 한다. $g(b_1)=c$를 만족하는 또다른 $b_1\in B$를 택하고, 위와 같은 방식으로 $f'(a_1')=\beta(b_1)$을 만족하는 $a_1'\in A'$를 택하자. 그럼 
+함수 $\delta$가 잘 정의되기 위해서는 위의 함수값이 $b$의 선택에 의존하지 않아야 한다. $g(b_1)=c$를 만족하는 또다른 $b_1\in B$를 택하고, 위와 같은 방식으로 $f'(a_1')=\beta(b_1)$을 만족하는 $a_1'\in A'$를 택하자. 그럼 
 
-$$0=(g'\circ f')(a_1'-a_1)=(g'\circ \beta)(b_1-b)=(\gamma\circ g)(b_1-b)$$
+$$0=(g'\circ f')(a_1'-a')=(g'\circ \beta)(b_1-b)=(\gamma\circ g)(b_1-b)$$
 
 이므로 $b_1-b\in\ker(g)=\im(f)$이 성립한다. 이제 $f(a)=b_1-b$이도록 하는 $a\in A$를 찾으면, 
 

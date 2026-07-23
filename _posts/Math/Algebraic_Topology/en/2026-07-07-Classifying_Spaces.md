@@ -18,7 +18,7 @@ In previous posts, we introduced characteristic classes to classify vector bundl
 
 $$E(\gamma^k_\infty)\rightarrow \Gr(k, \mathbb{R}^\infty)$$
 
-played this role ([§Stiefel–Whitney Classes, §§Grassmann Manifolds](/en/math/algebraic_topology/stiefel_whitney_classes#그라스만-다양체)), and a similar construction existed for complex vector bundles as well. ([§Characteristic Classes of Vector Bundles, ⁋Example 8](/en/math/algebraic_topology/characteristic_classes#ex8)) On the other hand, since the pullback of a vector bundle depends only on the homotopy class of the map, the isomorphism class of a rank $k$ vector bundle over a fixed space $B$ becomes the collection of homotopy classes of maps from these spaces $[B, \Gr(k, \mathbb{R}^\infty)]$ (or $[B, \Gr(k, \mathbb{C}^\infty)]$).
+played this role ([§Stiefel-Whitney Characteristic Classes, §§Grassmannians](/en/math/algebraic_topology/stiefel_whitney_classes#grassmannians)), and a similar construction existed for complex vector bundles as well. ([§Characteristic Classes of Vector Bundles, ⁋Example 8](/en/math/algebraic_topology/characteristic_classes#ex8)) On the other hand, since the pullback of a vector bundle depends only on the homotopy class of the map, the isomorphism class of a rank $k$ vector bundle over a fixed space $B$ becomes the collection of homotopy classes of maps into these spaces $[B, \Gr(k, \mathbb{R}^\infty)]$ (or $[B, \Gr(k, \mathbb{C}^\infty)]$).
 
 Another perspective on vector bundles was to regard them as a collection of transition functions. For example, any vector bundle could be specified by giving
 
@@ -75,7 +75,7 @@ and write its orbit space as $P\times_G F=(P\times F)/G$. Then the map $P\times_
 
 Intuitively, this attaches the fiber $F$ along the *twisted* structure of the principal $G$-bundle; for example, applying this to the trivial $G$-bundle $X\times G$ and fiber $F$ yields the trivial fiber bundle $X\times F$, and similarly, applying it to a slightly twisted (that is, non-trivial) principal $G$-bundle $P$ and fiber $F$ gives a fiber bundle with fiber $F$ that inherits the twisting data from $P$.
 
-The most transparent example is a vector bundle, so let us follow the definition step by step here. The topological group $G=\GL(k;, \mathbb{R})$ acts on the left on the dimension $k$ real vector space $F=V$. Also, for convenience, suppose the trivial $G$-bundle $P=X\times G$ is given. Then the $G$-action defined on the product space $P\times F=(X\times G)\times V$ is
+The most transparent example is a vector bundle, so let us follow the definition step by step here. The topological group $G=\GL(k;\mathbb{R})$ acts on the left on the dimension $k$ real vector space $F=V$. Also, for convenience, suppose the trivial $G$-bundle $P=X\times G$ is given. Then the $G$-action defined on the product space $P\times F=(X\times G)\times V$ is
 
 $$\bigl((x,g),v\bigr)\cdot h=\bigl((x, gh),h^{-1}v\bigr)$$
 
@@ -252,9 +252,9 @@ Looking at the fiber over a point $[V]$, for $z=(z_1,\ldots,z_n)\in\mathbb{C}^n$
 
 $$\B\Umat(n)=\Gr(n,\mathbb{C}^\infty)$$
 
-and the universal bundle over it is the tautological line bundle.
+and the universal bundle over it is the tautological $n$-plane bundle.
 
-On the other hand, [Proposition 4](#prop4), or more precisely its complex version, corresponds rank $n$ complex vector bundles to a process that strictly speaking uses the associated bundle via a principal $\GL(n;\mathbb{C})$-bundle. That is, for the above calculation to lead to the classification of arbitrary complex vector bundles, $\B\GL(n;\mathbb{C})$ and $\B\Umat(n)$ must be the same, and indeed they are. This is by [\[Linear Algebra\] §Complex Inner Product Spaces, ⁋Proposition 7](/en/math/linear_algebra/complex_inner_product_spaces#prop7): any element of $\GL(n;\mathbb{C})$ decomposes uniquely as a product of a unitary matrix and an upper-triangular matrix with positive diagonal entries, and this decomposition can be shown to be continuous. Now contracting the upper-triangular component toward the identity gives exactly the deformation retract of $\GL(n;\mathbb{C})$ to $\Umat(n)$. That is, the inclusion $\Umat(n)\hookrightarrow\GL(n;\mathbb{C})$ is a homotopy equivalence, and by the functoriality of classifying spaces [Lemma 9](#lem9),
+On the other hand, the process by which [Proposition 4](#prop4), or more precisely its complex version, assigns a rank $n$ complex vector bundle must, strictly speaking, use the associated bundle via a principal $\GL(n;\mathbb{C})$-bundle. That is, for the above calculation to lead to the classification of arbitrary complex vector bundles, $\B\GL(n;\mathbb{C})$ and $\B\Umat(n)$ must be the same, and indeed they are. This is by [\[Linear Algebra\] §Complex Inner Product Spaces, ⁋Proposition 7](/en/math/linear_algebra/complex_inner_product_spaces#prop7): any element of $\GL(n;\mathbb{C})$ decomposes uniquely as a product of a unitary matrix and an upper-triangular matrix with positive diagonal entries, and this decomposition can be shown to be continuous. Now contracting the upper-triangular component toward the identity gives exactly the deformation retract of $\GL(n;\mathbb{C})$ to $\Umat(n)$. That is, the inclusion $\Umat(n)\hookrightarrow\GL(n;\mathbb{C})$ is a homotopy equivalence, and by the functoriality of classifying spaces [Lemma 9](#lem9),
 
 $$\B\GL(n;\mathbb{C})\simeq \B\Umat(n)=\Gr(n,\mathbb{C}^\infty).$$
 
@@ -289,13 +289,13 @@ Since $\B T=(\CP^\infty)^n$, let $\pi_i:\B T\rightarrow\CP^\infty$ be the projec
 
 $$H^\bullet(\B T;\mathbb{Z})\cong\bigotimes_{i=1}^n \mathbb{Z}[t_i]=\mathbb{Z}[t_1,\ldots,t_n]$$
 
-([§Cup Products, ⁋Proposition 3](/en/math/algebraic_topology/cup_products#prop3)), where the generator $t_i$ is the pullback of the generator $t$ of the $i$-th factor by $\pi_i$, that is, $t_i=\pi_i^\ast t$.
+([§Cup Product, ⁋Proposition 3](/en/math/algebraic_topology/cup_products#prop3)), where the generator $t_i$ is the pullback of the generator $t$ of the $i$-th factor by $\pi_i$, that is, $t_i=\pi_i^\ast t$.
 
 Now let us look at the degree $2$ part. A *character* $\rchi:T\rightarrow S^1$ induces
 
 $$\B\rchi:\B T\rightarrow \B S^1=\CP^\infty$$
 
-by functoriality, so $(\B\rchi)^\ast t\in H^2(\B T;\mathbb{Z})$ is determined. One can check that this correspondence $\rchi\mapsto(\B\rchi)^\ast t$ gives a homomorphism $\Hom(T,S^1)\rightarrow H^2(\B T;\mathbb{Z})$, and what is decisive is that, as we saw above, the $i$-th coordinate projection $\pr_i:T\rightarrow S^1$ goes exactly to $t_i$. That is, $\B\pr_i$ is exactly the same as the $i$-th projection $\pi_i$, and therefore
+by functoriality, so the pullbacks $(\B\rchi)^\ast t\in H^2(\B T;\mathbb{Z})$ of the generator $t$ are determined. One can check that this correspondence $\rchi\mapsto(\B\rchi)^\ast t$ gives a homomorphism $\Hom(T,S^1)\rightarrow H^2(\B T;\mathbb{Z})$, and what is decisive is that, as we saw above, the $i$-th coordinate projection $\pr_i:T\rightarrow S^1$ goes exactly to $t_i$. That is, $\B\pr_i$ is exactly the same as the $i$-th projection $\pi_i$, and therefore
 
 $$(\B\pr_i)^\ast t=\pi_i^\ast t=t_i.$$
 

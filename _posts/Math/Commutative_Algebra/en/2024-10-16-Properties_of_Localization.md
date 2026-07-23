@@ -41,7 +41,7 @@ That this function is an $A$-linear map and is the inverse of the $S^{-1}A\otime
 
 In particular, this allows us to establish the functoriality of module localization. For any $u: M \rightarrow M'$, we define $S^{-1}M \rightarrow S^{-1}M'$ by identifying both sides with localization via the map
 
-$$S^{-1}\otimes_A u: S^{-1}\otimes_AM \rightarrow S^{-1}\otimes_AM'$$
+$$S^{-1}A\otimes_A u: S^{-1}A\otimes_AM \rightarrow S^{-1}A\otimes_AM'$$
 
 In general, tensor products are right exact, but in this case the functor is exact.
 
@@ -99,7 +99,7 @@ fits into the following commutative diagram
 
 so the proposition holds in this case. Here the vertical maps come from the isomorphisms
 
-$$\Hom_A(A,N)\cong N,\qquad \Hom_E(E\otimes_A,E\otimes_AN)\cong\Hom_E(E,E\otimes_AN)\cong E\otimes_AN$$
+$$\Hom_A(A,N)\cong N,\qquad \Hom_E(E\otimes_AM,E\otimes_AN)\cong\Hom_E(E,E\otimes_AN)\cong E\otimes_AN$$
 
 Next, since $\Hom$ and $\otimes$ commute with finite direct sums, the proposition also holds for any flat $A$-module $E$ and any finitely generated free $A$-module $M$. Finally, for the case where $M$ is finitely presented, take a free presentation
 

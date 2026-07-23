@@ -38,13 +38,13 @@ Ring $A$에 대하여, ideal $\mathfrak{a}\subseteq A[\x]$이 주어졌다 하�
 :::
 ::: 증명
 1. 한쪽 방향은 자명하다. 거꾸로 $B$가 $A$-module로서 $n$개의 원소로 생성된다 하자. 이제 $B$의 원소에 $b$를 곱하여 얻어지는 $A$-module endomorphism $b:B \rightarrow B$를 생각하자. Ideal $A$에 대해 [정리 1](#thm1)을 적용하면 이 endomorphism이 $n$차 monic polynomial $p(x)$를 만족한다는 것을 알고, 이것은 원소로서 $b$를 대입해도 $0$이 되어야 한다. 따라서 $b$의 정의에 의하여 $p(\x)\in \mathfrak{a}$임을 안다.
-2. 우선 $\mathfrak{a}$가 차수 $n$의 monic polynomial로 생성된다 하자. 그럼 방금 전의 결과에 의해 $B$가 $1,b,\ldots, b^{n-1}$에 의해 생성된다는 것을 안다. 이제 이들이 일차독립임을 보이면 충분하다. $A$-module $B$에서 $\sum_{i=0}^{n-1} a_i b^i=0$이라 하면, $q(\x)=\sum_{i=0}^{n-1}a_i\x^i$가 $\mathfrak{a}$에 석해야 하고, 차수 때문에 $q=0$이어야 한다.  
+2. 우선 $\mathfrak{a}$가 degree $n$의 monic polynomial로 생성된다 하자. 그럼 방금 전의 결과에 의해 $B$가 $1,b,\ldots, b^{n-1}$에 의해 생성된다는 것을 안다. 이제 이들이 일차독립임을 보이면 충분하다. $A$-module $B$에서 $\sum_{i=0}^{n-1} a_i b^i=0$이라 하면, $q(\x)=\sum_{i=0}^{n-1}a_i\x^i$가 $\mathfrak{a}$에 속해야 하고, degree 때문에 $q=0$이어야 한다.  
 반대로 $B$가 rank $n$의 free $A$-module이라 하면 $B$를 $n$개의 원소로 생성할 수 있으며, 다시 방금 전의 결과로부터 $\mathfrak{a}$가 $n$차 monic polynomial $p$를 포함하며, 이로부터 $1,b,\ldots, b^{n-1}$이 $B$의 basis가 되는 것까지 유도할 수 있다. 남은 것은 $p$가 $\mathfrak{a}$를 생성하는 것을 보이는 것인데, 이는 임의의 $f\in \mathfrak{a}$가 주어졌다 하고 이를 $p$로 나눈 나머지 $r$을 생각하면 된다. 두 다항식 $f$와 $p$가 모두 $\mathfrak{a}$에 속하므로, 이 나머지 또한 $B$로 보내면 $0$이 되어야 한다. 그런데 이는 다항식 $r(\x)$에 $\x=b$를 대입한 것과 같고, 이는 $B$의 basis $1,\ldots, b^{n-1}$의 일차결합이라 생각하면 $r$의 계수들이 모두 $0$이어야 한다는 것을 안다. 
 :::
 
 ## 정수적 확장
 
-앞서 우리는 $A$-algebra $E$는 ring homomorphism $\phi:A \rightarrow E$와 동일한 데이터로 구성되어 있는 것을 살펴보았다. 더 정확히는 ring homomorphism $\phi:A \rightarrow E$는 restriction of scalar를 통해 $E$-module $E$ 위에 $A$-module 구조 $\phi^\ast E$를 주는 것이며, 이 때의 $A$-module 구조가 ($E$의 곱셈에 commutativity에 의하여) $E$의 곱셈구조를 보존하여 이를 $A$-algebra로도 볼 수 있는 것이다. 
+앞서 우리는 $A$-algebra $E$는 ring homomorphism $\phi:A \rightarrow E$와 동일한 데이터로 구성되어 있는 것을 살펴보았다. 더 정확히는 ring homomorphism $\phi:A \rightarrow E$는 restriction of scalar를 통해 $E$-module $E$ 위에 $A$-module 구조 $\phi^\ast E$를 주는 것이며, 이 때의 $A$-module 구조가 ($E$의 곱셈의 commutativity에 의하여) $E$의 곱셈구조를 보존하여 이를 $A$-algebra로도 볼 수 있는 것이다. 
 
 한편 임의의 ring homomorphism의 합성은 ring homomorphism으로, 우리는 $A$-algebra $E$에 대해 다음의 식
 
@@ -98,14 +98,14 @@ $A$-algebra $E$에 대하여, $E$ 안에서 $A$의 integral closure는 다시 $A
 ::: 증명
 두 원소 $x,y\in E$가 $A$에 대하여 integral이라 하자. 그럼 $x+y$와 $xy$가 $A$에 대하여 integral임을 보여야 한다. 이제 $M=A[x]$, $M'=A[y]$이 $E$의 두 submodule이라 하고, 이들의 원소들의 곱 $xx'$들로 생성되는 $E$의 subalgebra를 $MM'$을 생각하면 $M,M'$ 각각이 finitely generated이므로 $MM'$ 또한 finitely generated이다. 이제
 
-$$(xx')MM'=(xM)(x'M)\subseteq MM',\qquad (x+x')MM'\subseteq xMM'+M(x'M')\subseteq MM'$$
+$$(xx')MM'=(xM)(x'M')\subseteq MM',\qquad (x+x')MM'\subseteq xMM'+M(x'M')\subseteq MM'$$
 
 이므로 [보조정리 5](#lem5)를 이용하면 원하는 결과를 얻는다. 
 :::
 
 ## 나카야마 보조정리
 
-이제 우리는 아주 유용한 보조정리를 증명한다. 우선 ring $A$의 임의의 ideal $\mathfrak{a}$에 대하여, $\mathfrak{a}$의 *nilradical<sub>영근기</sub>* $\sqrt{(0)}$은 다음 식
+이제 우리는 아주 유용한 보조정리를 증명한다. 우선 ring $A$의 *nilradical<sub>영근기</sub>* $\sqrt{(0)}$은 다음 식
 
 $$\sqrt{(0)}=\bigcap_\text{\scriptsize$\mathfrak{p}$ prime} \mathfrak{p}$$
 
@@ -141,7 +141,7 @@ $A$의 Jacobson radical $J(A)$에 속하는 ideal $\mathfrak{a}$가 주어졌다
 2. 만일 $x_1,\ldots, x_n$의 $M/\mathfrak{a}M$에서의 image가 $M/\mathfrak{a}M$을 $A$-module로써 생성한다면, $x_1,\ldots, x_n$들은 $M$을 $A$-module로써 생성한다.
 :::
 ::: 증명
-1번 겷과의 경우 [보조정리 7](#lem7)으로부터 얻어지는 $a\in \mathfrak{a}$가 가정에 의하여 모든 maximal ideal에 속한다는 사실을 안다. 바꾸어 말하면 $1-a$는 어떠한 maximal ideal에도 속할 수 없으므로 $1-a$는 unit이다. 따라서 원하는 결과를 얻는다.
+1번 결과의 경우 [보조정리 7](#lem7)으로부터 얻어지는 $a\in \mathfrak{a}$가 가정에 의하여 모든 maximal ideal에 속한다는 사실을 안다. 바꾸어 말하면 $1-a$는 어떠한 maximal ideal에도 속할 수 없으므로 $1-a$는 unit이다. 따라서 원하는 결과를 얻는다.
 
 2번 결과의 경우, $N=M/\sum_i Ax_i$라 하자. 그럼 $N/\mathfrak{a}N=0$임을 보일 수 있고 1번 결과로부터 $N=0$임을 안다.
 :::
@@ -158,7 +158,7 @@ Unique factorization domain은 normal domain이다.
 
 $$\left(\frac{a}{b}\right)^n+a_{n-1}\left(\frac{a}{b}\right)^{n-1}+\cdots+a_1\left(\frac{a}{b}\right)+a_0=0$$
 
-이도록 할 수 있디. 이제 이로부터
+이도록 할 수 있다. 이제 이로부터
 
 $$\x^n+a_{n-1}b \x^{n-1}+\cdots+a_1b^{n-1}\x+a_0b^n\in A[\x]$$
 
@@ -186,7 +186,7 @@ Normal domain $A$에 대하여, 임의의 monic irreducible polynomial은 prime�
 Ring $A\subseteq B$와 $A$의 multiplicative subset $S$를 고정하자. 그럼 $A$의 $B$에서의 integral closure $A'$에 대하여, $S^{-1}A'$는 $S^{-1}A$의 $S^{-1}B$ 안에서의 integral closure이다.
 :::
 
-국소화와 관련된 또 다른 결과 중 하나는 [§국소화의 성질들, ⁋명제 4](/ko/math/commutative_algebra/properties_of_localization#prop4)를 다소 강화한 것이다. 우선 ring $A$가 *semilocal ring<sub>반국소환</sub>*이라는 것은 $A$가 유한히 많은 maximal ideal만을 갖는 것이다. 그럼 다음이 성립한다.
+localization과 관련된 또 다른 결과 중 하나는 [§국소화의 성질들, ⁋명제 4](/ko/math/commutative_algebra/properties_of_localization#prop4)를 다소 강화한 것이다. 우선 ring $A$가 *semilocal ring<sub>반국소환</sub>*이라는 것은 $A$가 유한히 많은 maximal ideal만을 갖는 것이다. 그럼 다음이 성립한다.
 
 ::: 명제 13
 Semilocal ring $A$와 finitely presented $A$-module $M,N$에 대하여, 만일 $M_\mathfrak{m}\cong N_\mathfrak{m}$이 모든 maximal ideal $\mathfrak{m}$에 대해 성립한다면 $M\cong N$이 성립한다. 
@@ -206,7 +206,7 @@ $$\bigcap_{l\neq k} \mathfrak{m}_l\not\subseteq \mathfrak{m}_k$$
 
 더 일반적으로 우리는 임의의 local ring $(B, \mathfrak{n})$과 finitely generated $B$-module 사이의 map들 $s,t:K \rightarrow L$에 대하여, 만일 $s$가 isomorphism이고 $t(K)\subseteq \mathfrak{n}L$이라면 $s+t$도 isomorphism인 것을 보인다. 그럼 이 결과를 local ring $(A_{\mathfrak{m}_k}, \mathfrak{m}_kA_{\mathfrak{m}_k})$, 그리고 $M_{\mathfrak{m}_k}$에서 $N_{\mathfrak{m}_k}$로의 함수들 $s=a_k v_k$와 $t=\sum_{l\neq k} a_lv_l$에 적용하면 증명이 완료될 것이다. 
 
-이 주장을 증명하자. 우선 $t$는 $K$에서 $L/\mathfrak{n}L$로의 zero map으로 볼 수 있고, $s$는 $K$에서 $L/\mathfrak{n}L$로의 epimorphism으로 볼 수 있므로 $s+t$ 또한 $K$에서 $L/\mathfrak{n}L$로의 epimorphism으로 볼 수 있다. 그럼 [보조정리 8](#lem8)에 의해 $K$에서 $L$로의 morphism $s+t$도 epimorphism이다. 이제 isomorphism $s$의 inverse $s^{-1}$을 취하여 surjective endomorphism $s^{-1}(s+t): K \rightarrow K$를 생각하자. 그럼 [정리 1](#thm1)에 의하여 $s^{-1}(s+t)$는 isomorphism이기도 하고, 따라서 $s+t$는 monomorphism이므로 원하는 결과를 얻는다. 
+이 주장을 증명하자. 우선 $t$는 $K$에서 $L/\mathfrak{n}L$로의 zero map으로 볼 수 있고, $s$는 $K$에서 $L/\mathfrak{n}L$로의 epimorphism으로 볼 수 있으므로 $s+t$ 또한 $K$에서 $L/\mathfrak{n}L$로의 epimorphism으로 볼 수 있다. 그럼 [보조정리 8](#lem8)에 의해 $K$에서 $L$로의 morphism $s+t$도 epimorphism이다. 이제 isomorphism $s$의 inverse $s^{-1}$을 취하여 surjective endomorphism $s^{-1}(s+t): K \rightarrow K$를 생각하자. 그럼 [정리 1](#thm1)에 의하여 $s^{-1}(s+t)$는 isomorphism이기도 하고, 따라서 $s+t$는 monomorphism이므로 원하는 결과를 얻는다. 
 :::
 
 이제 [정의 3](#def3)에서의 ring homomorphism들에 대한 성질들을 조금 더 살펴보자. 우선 다음의 명제부터 시작한다.
@@ -230,7 +230,7 @@ Ring homomorphism $\phi:A \rightarrow E$가 주어졌다 하자. $(a_1, \ldots, 
 2. 만일 각각의 $A_{a_i} \rightarrow E_{a_i}$가 finite이라면, $A \rightarrow E$도 그러하다. 
 :::
 ::: 증명
-위와 마찬가지로, 두 주장의 증명이 유사하므로 첫 번쨰 주장만 증명한다. 임의의 $x\in E$에 대하여, $A[\x]$의 원소들 중 $p(x)=0$을 만족하는 다항식들의 ideal을 $\mathfrak{A}$라 하자. 그럼 이 다항식들의 leading coefficient들을 모은 $A$의 부분집합 $\mathfrak{a}$가 $A$의 ideal이 되는 것을 확인할 수 있다. 
+위와 마찬가지로, 두 주장의 증명이 유사하므로 첫 번째 주장만 증명한다. 임의의 $x\in E$에 대하여, $A[\x]$의 원소들 중 $p(x)=0$을 만족하는 다항식들의 ideal을 $\mathfrak{A}$라 하자. 그럼 이 다항식들의 leading coefficient들을 모은 $A$의 부분집합 $\mathfrak{a}$가 $A$의 ideal이 되는 것을 확인할 수 있다. 
 
 한편, 각각의 $A_{a_i} \rightarrow E_{a_i}$가 integral이라는 가정으로부터, $x$의 $E_{a_i}$에서의 image는 $A_{a_i}$에 대해 integral이고, 따라서 이 원소의 integral equation을 쓴 후, 분모에 있는 $a_i$의 거듭제곱들을 모두 곱해주면 우리는 임의의 $i$가 주어질 때마다, 적절한 $n_i$가 존재하여 $a_i^{n_i}\in \mathfrak{a}$가 성립함을 안다. 한편 식
 

@@ -14,13 +14,13 @@ translated_at: 2026-07-11T08:30:02+00:00
 translation_source: kimi-cli
 last_polished_at: 2026-07-11T08:30:02+00:00
 ---
-[§Cohomology of Projective Spaces, ⁋Proposition 4](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop4)'s Serre vanishing theorem guarantees that for an ample line bundle $\mathcal{L}$ and a coherent sheaf $\mathcal{F}$ on a projective variety, we have $H^i(X, \mathcal{F} \otimes \mathcal{L}^{\otimes m}) = 0$ ($i > 0$) for sufficiently large $m$. However, this result is merely an asymptotic property and gives no information whatsoever about the specific value of $m$ at which vanishing begins.
+[§Cohomology of Projective Space, ⁋Proposition 4](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop4)'s Serre vanishing theorem guarantees that for an ample line bundle $\mathcal{L}$ and a coherent sheaf $\mathcal{F}$ on a projective variety, we have $H^i(X, \mathcal{F} \otimes \mathcal{L}^{\otimes m}) = 0$ ($i > 0$) for sufficiently large $m$. However, this result is merely an asymptotic property and gives no information whatsoever about the specific value of $m$ at which vanishing begins.
 
 The Kodaira vanishing theorem is a far more refined result, guaranteeing that the higher cohomology of the tensor product $\omega_X \otimes \mathcal{L}$ of the canonical bundle $\omega_X$ and an ample line bundle $\mathcal{L}$ *always* vanishes. In this article, we examine the Kodaira vanishing theorem, its applications, and how this theorem is used in algebraic geometry.
 
 ## Kodaira Vanishing Theorem
 
-The basic setup we consider is as follows. Let $X$ be an $n$-dimensional smooth projective variety, $\mathcal{L}$ an ample line bundle on $X$, and $\omega_X = \det \Omega_X^1 = \Omega_X^n$ the canonical line bundle. ([§Canonical Bundle, ⁋Definition 5](/en/math/algebraic_varieties/canonical_bundle#def5)) The Kodaira vanishing theorem can then be stated as follows.
+The basic setup we consider is as follows. Let $X$ be an $n$-dimensional smooth projective variety, $\mathcal{L}$ an ample line bundle on $X$, and $\omega_X = \det \Omega_X^1 = \Omega_X^n$ the canonical line bundle. ([§Canonical Line Bundle, ⁋Definition 5](/en/math/algebraic_varieties/canonical_bundle#def5)) The Kodaira vanishing theorem can then be stated as follows.
 
 ::: Proposition 1 (Kodaira vanishing)
 Let $X$ be an $n$-dimensional smooth projective variety and let $\mathcal{L}$ be an ample line bundle. Then for every $p > 0$,
@@ -59,7 +59,7 @@ These two formulations are completely equivalent via Serre duality, as we saw in
 The simplest nontrivial example where Kodaira vanishing applies is projective space $X = \mathbb{P}^n$.
 
 ::: Example 3
-We verified in [§Standard Line Bundles, ⁋Proposition 7](/en/math/algebraic_varieties/canonical_bundle#prop7) that
+We verified in [§Canonical Line Bundle, ⁋Proposition 7](/en/math/algebraic_varieties/canonical_bundle#prop7) that
 
 $$\omega_{\mathbb{P}^n} \cong \mathcal{O}(-n-1)$$
 
@@ -67,9 +67,9 @@ and in [§Line Bundles and Vector Bundles, ⁋Example 12](/en/math/algebraic_var
 
 $$H^p(\mathbb{P}^n, \mathcal{O}(d - n - 1)) = 0$$
 
-holds for all $d>0$ and all $i>0$.
+holds for all $d>0$ and all $p>0$.
 
-Since we know the cohomology of every line bundle from [§Cohomology of Projective Spaces, ⁋Proposition 1](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1), we can verify this directly. According to it,
+Since we know the cohomology of every line bundle from [§Cohomology of Projective Space, ⁋Proposition 1](/en/math/algebraic_varieties/cohomology_of_projective_spaces#prop1), we can verify this directly. According to it,
 
 $$H^q(\mathbb{P}^n, \mathcal{O}(k)) = \begin{cases}
 \mathbb{K}[\x_0, \ldots, \x_n]_k & q = 0, k \geq 0 \\
@@ -77,7 +77,7 @@ $$H^q(\mathbb{P}^n, \mathcal{O}(k)) = \begin{cases}
 0 & \text{otherwise}
 \end{cases}$$
 
-and from this, all cohomology automatically vanishes for $q\neq 0$, so our concern is only when $q=n$. Now, according to the formula above, for this to be nonzero we must have $k\leq -n-1$. But in our situation $k=d-n-1$ and $d>0$, so this is impossible, and hence we can verify the Kodaira vanishing theorem again.
+and from this, all cohomology automatically vanishes for $q\neq 0, n$, so our concern is only when $q=n$. Now, according to the formula above, for this to be nonzero we must have $k\leq -n-1$. But in our situation $k=d-n-1$ and $d>0$, so this is impossible, and hence we can verify the Kodaira vanishing theorem again.
 :::
 
 ## Applications of the Kodaira Vanishing Theorem
@@ -86,7 +86,7 @@ Now we examine the applications of the Kodaira vanishing theorem as previewed ea
 
 $$\rchi(\mathcal{O}_S(D)) = \frac{1}{2} D \cdot (D - K_S) + \rchi(\mathcal{O}_S)$$
 
-([§Riemann–Roch Theorem for Surfaces, ⁋Proposition 4](/en/math/algebraic_varieties/riemann_roch_surfaces#prop4)). The power of this formula lies in the fact that $\rchi$ can be computed purely from algebraic and topological data, but the problem is that $\rchi$ is the alternating sum of $h^0, h^1, h^2$. Thus, when we simply want to know $h^0(S, \mathcal{O}_S(D))$, we must determine the values of the higher cohomologies separately, so the Riemann–Roch formula alone is insufficient to obtain a direct answer.
+([§The Riemann–Roch Theorem for Surfaces, ⁋Proposition 4](/en/math/algebraic_varieties/riemann_roch_surfaces#prop4)). The power of this formula lies in the fact that $\rchi$ can be computed purely from algebraic and topological data, but the problem is that $\rchi$ is the alternating sum of $h^0, h^1, h^2$. Thus, when we simply want to know $h^0(S, \mathcal{O}_S(D))$, we must determine the values of the higher cohomologies separately, so the Riemann–Roch formula alone is insufficient to obtain a direct answer.
 
 In such a situation, to use the Kodaira vanishing theorem, suppose $\mathcal{L}\cong \mathcal{O}_S(L)$ is an ample line bundle. Then we know
 
@@ -98,11 +98,11 @@ $$\rchi(S, \omega_S \otimes \mathcal{L}) = h^0(S, \omega_S \otimes \mathcal{L})$
 
 so by computing only the right-hand side of the Riemann–Roch formula we immediately obtain $h^0(S, \omega_S \otimes \mathcal{L})$.
 
-Another application is the computation of plurigenera. The plurigenus $P_m(X)$ of a smooth projective variety $X$ is a generalization of the geometric genus $p_g(X)$, and is a birational invariant of surfaces. ([§Riemann–Roch Theorem for Surfaces, ⁋Definition 12](/en/math/algebraic_varieties/riemann_roch_surfaces#def12)) Kodaira vanishing can be used directly in computing these invariants.
+Another application is the computation of plurigenera. The plurigenus $P_m(X)$ of a smooth projective variety $X$ is a generalization of the geometric genus $p_g(X)$, and is a birational invariant of surfaces. ([§The Riemann–Roch Theorem for Surfaces, ⁋Definition 12](/en/math/algebraic_varieties/riemann_roch_surfaces#def12)) Kodaira vanishing can be used directly in computing these invariants.
 
 For instance, in the case of a curve $C$, we know that its birational class is determined by the genus, and the plurigenus $P_m(g)$ is given as a function of $g$ (and $m$). That is, for a curve $C$ the plurigenus is not a particularly interesting invariant. The interesting case is for higher-dimensional objects such as surfaces, where the birational invariant is not determined by a single number and all the plurigenera become genuinely necessary.
 
-As seen in [§Riemann–Roch Theorem for Surfaces](/en/math/algebraic_varieties/riemann_roch_surfaces), for a divisor $D$ on a surface $S$ the Riemann–Roch formula is
+As seen in [§The Riemann–Roch Theorem for Surfaces](/en/math/algebraic_varieties/riemann_roch_surfaces), for a divisor $D$ on a surface $S$ the Riemann–Roch formula is
 
 $$\rchi(\mathcal{O}_S(D)) = \frac{1}{2} D \cdot (D - K_S) + \rchi(\mathcal{O}_S)$$
 
@@ -168,7 +168,7 @@ $$0 \longrightarrow \mathcal{I}_p^2 \otimes \mathcal{L}^{\otimes m} \longrightar
 
 the induced long exact sequence
 
-$$H^0(X, \mathcal{L}^{\otimes m}) \longrightarrow H^0(Z, \mathcal{L}^{\otimes m}\rvert_Z) \longrightarrow H^1(X, \mathcal{I}_p^2 \otimes \mathcal{L}^{\otimes m})$$
+$$H^0(X, \mathcal{L}^{\otimes m}) \longrightarrow H^0(X, \mathcal{L}^{\otimes m} \otimes (\mathcal{O}_X / \mathcal{I}_p^2)) \longrightarrow H^1(X, \mathcal{I}_p^2 \otimes \mathcal{L}^{\otimes m})$$
 
 shows that if $H^1(X, \mathcal{I}_p^2 \otimes \mathcal{L}^{\otimes m}) = 0$, then separation of tangent vectors holds.
 

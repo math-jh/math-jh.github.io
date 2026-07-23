@@ -16,7 +16,7 @@ last_polished_at: 2026-06-01T12:00:04+00:00
 ---
 ## Historical Background
 
-Mirror symmetry is not a field that arose naturally within the mathematical framework, but is grounded in string theory. According to string theory, the world we live in rests on a single assumption: its fundamental degrees of freedom are not *point particles* but *one-dimensional strings*. Then the trajectory in spacetime of a particle moving along the time axis is no longer a $1$-dimensional worldline but a $2$-dimensional worldsheet, and its equation of motion is determined as a specific action-minimizing solution, just as in [\[Symplectic Geometry\] §Classical Mechanics, §§Principle of Least Action](/en/math/symplectic_geometry/classical_mechanics#principle-of-least-action). To reconcile this description with the framework of existing quantum mechanics, spacetime is forced to be $10$-dimensional; thus physicists regard this 10-dimensional spacetime as the product of $4$-dimensional Minkowski spacetime and a compact manifold $M$ that accounts for the remaining $6$ dimensions. Writing out the conditions that this space $X$ must satisfy physically, one finds that $X$ must be a *Calabi-Yau threefold*.
+Mirror symmetry is not a field that arose naturally within the mathematical framework, but is grounded in string theory. According to string theory, the world we live in rests on a single assumption: its fundamental degrees of freedom are not *point particles* but *one-dimensional strings*. Then the trajectory in spacetime of a particle moving along the time axis is no longer a $1$-dimensional worldline but a $2$-dimensional worldsheet, and its equation of motion is determined as a specific action-minimizing solution, just as in [\[Symplectic Geometry\] §Classical Mechanics, §§Principle of Least Action](/en/math/symplectic_geometry/classical_mechanics#principle-of-least-action). To reconcile this description with the framework of existing quantum mechanics, spacetime is forced to be $10$-dimensional; thus physicists regard this 10-dimensional spacetime as the product of $4$-dimensional Minkowski spacetime and a compact manifold $X$ that accounts for the remaining $6$ dimensions. Writing out the conditions that this space $X$ must satisfy physically, one finds that $X$ must be a *Calabi-Yau threefold*.
 
 Meanwhile, 10-dimensional superstring theory is divided into five types according to the choice of boundary conditions and quantum conditions that the worldsheet must satisfy. Among these, the direct stage for mirror symmetry is Type IIA and Type IIB superstring theory, which, as their names suggest, are closely related to each other. Type IIA string theory furnishes a Kähler structure and a complex structure on a Calabi-Yau threefold $X$, while Type IIB string theory interchanges these two structures and defines a new Calabi-Yau threefold $\check{X}$. 
 
@@ -32,21 +32,21 @@ In the posts in this category we will explain these A-model and B-model separate
 
 In the case of toric varieties ([\[Toric Geometry\] §Definition of Toric Varieties, ⁋Definition 3](/en/math/toric_geometry/toric_varieties#def3)), mirror symmetry takes a very concrete form, so before starting the main discussion we examine how mirror symmetry works in this setting. 
 
-Let $\Sigma$ be the fan of a smooth projective toric variety $X=X_\Sigma$, and let $v_1, \ldots, v_N \in N \cong \mathbb{Z}^n$ be the primitive generators of its one-dimensional cones. If $\Sigma$ is a complete fan, the $v_i$ span $N_\mathbb{R}$. However, since $N>n$, they are $\mathbb{Z}$-linearly dependent, and thus there exist $r=N-n$ integral relations among them. 
+Let $\Sigma$ be the fan of a smooth projective toric variety $X=X_\Sigma$, and let $v_1, \ldots, v_m \in \mathbb{Z}^n$ be the primitive generators of its one-dimensional cones. If $\Sigma$ is a complete fan, the $v_i$ span $\mathbb{R}^n$. However, since $m>n$, they are $\mathbb{Z}$-linearly dependent, and thus there exist $r=m-n$ integral relations among them. 
 
 ::: Definition 1
 The *charge matrix* of $X_\Sigma$ is the integer matrix
 
-$$Q = (Q_{ji}) \in \Mat_{r \times N}(\mathbb{Z})$$
+$$Q = (Q_{ji}) \in \Mat_{r \times m}(\mathbb{Z})$$
 
 consisting of the coefficients of the integral relations among the above rays
 
-$$\sum_{i=1}^N Q_{ji}\, v_i = 0,\qquad j = 1, \ldots, r.$$
+$$\sum_{i=1}^m Q_{ji}\, v_i = 0,\qquad j = 1, \ldots, r.$$
 :::
 
 Although the charge matrix is simply the matrix collecting the coefficients of the ray relations, if one writes $X_\Sigma$ as the GIT quotient via the Cox construction
 
-$$X_\Sigma \;=\; \big(\mathbb{C}^N \setminus Z\big) \,\big/\!/\, (\mathbb{C}^\ast)^r$$
+$$X_\Sigma \;=\; \big(\mathbb{C}^m \setminus Z\big) \,\big/\!/\, (\mathbb{C}^\ast)^r$$
 
 then the $j$-th $(\mathbb{C}^\ast)$ factor acts on the Cox ring variables $\x_i$ with weight $Q_{ji}$, and these become important numbers determining the geometry of the toric variety.
 
@@ -85,13 +85,13 @@ Here $\x_1, \ldots, \x_n$ are local coordinates on $\check{X}$, and the $\partia
 ::: Definition 4
 For a smooth projective toric Fano variety $X_\Sigma$ and additional data $q=(q_1,\ldots, q_r)\in \mathbb{C}^r$, the *Hori-Vafa mirror* defined by this is the following Landau-Ginzburg model.
 
-1. The *mirror domain* $\check{X}$ is the submanifold of the algebraic torus $(\mathbb{C}^\ast)^N$ defined as the set of points satisfying the $r$ restrictions imposed by the charge matrix $Q$:
+1. The *mirror domain* $\check{X}$ is the submanifold of the algebraic torus $(\mathbb{C}^\ast)^m$ defined as the set of points satisfying the $r$ restrictions imposed by the charge matrix $Q$:
     
-    $$\x_1^{Q_{j1}} \cdots \x_N^{Q_{jN}} = q_j\in \mathbb{C}^\ast \qquad (j = 1, \ldots, r).$$
+    $$\x_1^{Q_{j1}} \cdots \x_m^{Q_{jm}} = q_j\in \mathbb{C}^\ast \qquad (j = 1, \ldots, r).$$
  
 2. The *superpotential* on $\check{X}$ is defined as the sum of local coordinates
     
-    $$W_q : \check{X} \rightarrow \mathbb{C}, \qquad W_q(\x_1, \ldots, \x_N) = \x_1 + \x_2 + \cdots + \x_N.$$
+    $$W_q : \check{X} \rightarrow \mathbb{C}, \qquad W_q(\x_1, \ldots, \x_m) = \x_1 + \x_2 + \cdots + \x_m.$$
 :::
 
 Here $q = (q_1, \ldots, q_r) \in (\mathbb{C}^\ast)^r$ is the variable carrying the complex structure of the mirror LG model. The complex structure of the mirror domain $\check{X}$ itself is always the same affine torus $(\mathbb{C}^\ast)^n$, but the superpotential $W_q$ placed on it is determined by $q$. In other words, for each value of $q$ a unique LG model $(\check{X}, W_q)$ is determined, and it is more accurate to say that the whole family $\{(\check{X}, W_q)\}_q$ appears as the mirror of $X_\Sigma$. At this point, the complex structure $q$ appears as the Novikov parameter $q$ in the A-model.

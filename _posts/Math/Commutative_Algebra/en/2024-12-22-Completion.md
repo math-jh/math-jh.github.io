@@ -86,7 +86,7 @@ $$G=H_0\supseteq H_1\supseteq\cdots$$
 
 is given. Then defining
 
-$$\mathcal{N}(0)=\{U\subseteq G\mid\text{$G_n\subseteq U$ for some $n$}\}$$
+$$\mathcal{N}(0)=\{U\subseteq G\mid\text{$H_n\subseteq U$ for some $n$}\}$$
 
 we know that this satisfies all the conditions of [\[Topology\] §Open Sets, ⁋Proposition 6](/en/math/topology/open_sets#prop6). Now for arbitrary $g\in G$ and $U\in \mathcal{N}(0)$, declaring $g+U\in \mathcal{N}(g)$ gives a topology on $G$.
 
@@ -196,7 +196,7 @@ and considering degrees in the above formula, we know that the $\beta_k$ are hom
 
 $$\degree(\beta_k)=\degree (\initial(a))-\degree(\initial(a_k))>\degree(\initial(a))-d.$$
 
-Therefore for $b_k\in A$ satisfying $\initial(b_k)=\beta_k$, the element $a-\sum_k b_k a_k$ lies in $\mathfrak{m}_{\degree(\initial(a))+1}$. Repeating this process, we can choose $a'\in \mathfrak{a}'$ such that
+Therefore for $b_k\in A$ satisfying $\initial(b_k)=\beta_k$, the element $a-\sum_k b_k a_k$ lies in $\mathfrak{a}_{\degree(\initial(a))+1}$. Repeating this process, we can choose $a'\in \mathfrak{a}'$ such that
 
 $$a-\underbrace{\sum_k b_k a_k-\cdots}_{=a'} \in \mathfrak{a}_{d+1}.$$
 

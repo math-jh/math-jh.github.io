@@ -137,11 +137,15 @@ $$f\mapsto (a_{-n_i}, \ldots, a_{-1})$$
 
 considered simultaneously for all $p_i$. Then the dimension of the target of the above linear map is $\sum n_i = \deg D$, and the kernel of this map is the global sections without poles, i.e. $H^0(C, \mathcal{O}_C) = \mathbb{K}$, from which we obtain $\ell(D) \leq 1 + \deg D$. If $D$ is not effective but $\ell(D) > 0$, then $D$ is linearly equivalent to some effective divisor, so the same inequality holds.
 
-In general, for this inequality to become an equality the linear map must be surjective, but this does not always hold. To see this, consider the long exact sequence obtained from the short exact sequence examined in the proof of [Proposition 3](#prop3):
+In general, for this inequality to become an equality the linear map must be surjective, but this does not always hold. To see this, consider the short exact sequence examined in the proof of [Proposition 3](#prop3),
+
+$$0\longrightarrow \mathcal{O}_C\overset{i}{\longrightarrow} \mathcal{O}_C(D)\overset{p}{\longrightarrow} \mathcal{O}_D\longrightarrow 0,$$
+
+and the long exact sequence obtained from it:
 
 $$0\longrightarrow H^0(C,\mathcal{O}_C)\overset{i^\ast}{\longrightarrow} H^0(C,\mathcal{O}_C(D)) \overset{p^\ast}{\longrightarrow} H^0(C,\mathcal{O}_D) \overset{\delta}{\longrightarrow} H^1(C,\mathcal{O}_C)\overset{i^\ast}{\longrightarrow} H^1(C,\mathcal{O}_C(D))\rightarrow 0.$$
 
-Here $C$ is a curve and $D=\sum n_i p_i$, so $\mathcal{O}_D$ is a skyscraper sheaf of degree $D$ with support $\lvert D\rvert$, whence $H^0(C, \mathcal{O}_C)=\bigoplus_i \mathbb{K}^{n_i}$. Moreover, the linear map ($4$) examined above actually coincides with $p^\ast$ in this long exact sequence, and from this the cokernel of $p^\ast$ can be computed via the following chain of isomorphisms:
+Here $C$ is a curve and $D=\sum n_i p_i$, so $\mathcal{O}_D$ is a skyscraper sheaf of degree $D$ with support $\lvert D\rvert$, whence $H^0(C, \mathcal{O}_D)=\bigoplus_i \mathbb{K}^{n_i}$. Moreover, the linear map ($4$) examined above actually coincides with $p^\ast$ in this long exact sequence, and from this the cokernel of $p^\ast$ can be computed via the following chain of isomorphisms:
 
 $$\coker p^\ast=\frac{H^0(C, \mathcal{O}_D)}{\im p^\ast}=\frac{H^0(C, \mathcal{O}_D)}{\ker\delta}\cong \im\delta\cong\ker i^\ast,$$
 
@@ -174,7 +178,7 @@ from which we recover the computation $\deg(K_C)=2g-2$ from [§Canonical Bundle,
 In any case, summarizing the computations so far, we may think of $\ell(D)$ as the dimension of the complete linear system of $D$, and $\ell(K_C - D)$ as a correction term that $K_C$ imposes on $D$, which disappears for large degree and reflects geometric information of $K_C$ for small degree.
 
 ::: Example 4
-**$\mathbb{P}^1$**: The genus of $\mathbb{P}^1$ is $g = 0$, and the canonical divisor is $K_{\mathbb{P}^1} = -2H$ ([§Canonical Bundle, ⁋Example 8](/en/math/algebraic_varieties/canonical_bundle#ex8)). On the other hand, in ([§Line Bundles and Vector Bundles, ⁋Example 12](/en/math/algebraic_varieties/line_bundles#ex12)) we showed that the global sections of $\mathcal{O}_{\mathbb{P}^1}(d)$ are the homogeneous polynomials of degree $d$, so we know that
+**$\mathbb{P}^1$**: The genus of $\mathbb{P}^1$ is $g = 0$, and the canonical divisor is $K_{\mathbb{P}^1} = -2H$ ([§Canonical Bundle, ⁋Example 8](/en/math/algebraic_varieties/canonical_bundle#ex8)). On the other hand, in [§Line Bundles and Vector Bundles, ⁋Example 12](/en/math/algebraic_varieties/line_bundles#ex12) we showed that the global sections of $\mathcal{O}_{\mathbb{P}^1}(d)$ are the homogeneous polynomials of degree $d$, so we know that
 
 $$\ell(dH) = d+1 \quad (d \ge 0), \qquad \ell(dH) = 0 \quad (d < 0)$$
 
