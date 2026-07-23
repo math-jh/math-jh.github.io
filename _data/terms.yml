@@ -828,6 +828,13 @@ B:
   defs:
   - label: '[대수다양체] §선형계'
     url: /ko/math/algebraic_varieties/linear_systems
+- id: basic
+  en: basic
+  ko: 기본
+  primary: ko
+  defs:
+  - label: '[그로모프-위튼 이론] §Log stable map과 상대 불변량의 비교'
+    url: /ko/math/gromov-witten_theory/log_stable_maps
 - id: basic_monoid
   en: basic monoid
   ko: 기본 모노이드
@@ -1412,6 +1419,13 @@ C:
   defs:
   - label: '[거울대칭] §거울대칭 개요'
     url: /ko/math/mirror_symmetry/overview
+- id: chart
+  en: chart
+  ko: 차트
+  primary: en
+  defs:
+  - label: '[그로모프-위튼 이론] §Log structure와 log smooth curve'
+    url: /ko/math/gromov-witten_theory/log_structures
 - id: chern_character
   en: Chern character
   ko: 천 지표
@@ -2268,6 +2282,13 @@ C:
   defs:
   - label: '[미적분학] §다변수함수와 편미분'
     url: /ko/math/calculus/partial_derivatives
+- id: contact_order
+  en: contact order
+  ko: 접촉 차수
+  primary: ko
+  defs:
+  - label: '[그로모프-위튼 이론] §Log stable map과 상대 불변량의 비교'
+    url: /ko/math/gromov-witten_theory/log_stable_maps
 - id: continuous
   en: continuous
   ko: 연속
@@ -2368,6 +2389,8 @@ C:
     url: /ko/math/calculus/mean_value_theorem
   - label: '[복소해석학] §Cauchy 정리'
     url: /ko/math/complex_analysis/cauchy_theorem
+  - label: '[그로모프-위튼 이론] §안정사상 moduli의 대수적 구성'
+    url: /ko/math/gromov-witten_theory/moduli_of_stable_maps
 - id: coordinate_form
   en: coordinate form
   ko: 좌표 형식
@@ -4455,6 +4478,13 @@ G:
   defs:
   - label: '[위상수학] §준층'
     url: /ko/math/topology/presheaves
+- id: ghost_sheaf
+  en: ghost sheaf
+  ko: 고스트 층
+  primary: en
+  defs:
+  - label: '[그로모프-위튼 이론] §Log structure와 log smooth curve'
+    url: /ko/math/gromov-witten_theory/log_structures
 - id: git_quotient
   en: GIT quotient
   ko: GIT 몫
@@ -6740,6 +6770,27 @@ L:
   defs:
   - label: '[그로모프-위튼 이론] §Log structure와 log smooth curve'
     url: /ko/math/gromov-witten_theory/log_structures
+- id: log_smooth_curve
+  en: log smooth curve
+  ko: 로그 매끄러운 곡선
+  primary: en
+  defs:
+  - label: '[그로모프-위튼 이론] §Log structure와 log smooth curve'
+    url: /ko/math/gromov-witten_theory/log_structures
+- id: log_stable_map
+  en: log stable map
+  ko: 로그 안정사상
+  primary: en
+  defs:
+  - label: '[그로모프-위튼 이론] §Log stable map과 상대 불변량의 비교'
+    url: /ko/math/gromov-witten_theory/log_stable_maps
+- id: log_structure
+  en: log structure
+  ko: 로그 구조
+  primary: en
+  defs:
+  - label: '[그로모프-위튼 이론] §Log structure와 log smooth curve'
+    url: /ko/math/gromov-witten_theory/log_structures
 - id: logarithmic_differentiation
   en: logarithmic differentiation
   ko: 로그 미분법
@@ -8033,6 +8084,13 @@ P:
   see:
   - label: Imperfect field
     id: imperfect_field
+- id: perfect_obstruction_theory
+  en: perfect obstruction theory
+  ko: 완전 장애 이론
+  primary: en
+  defs:
+  - label: '[그로모프-위튼 이론] §Perfect obstruction theory와 virtual fundamental class'
+    url: /ko/math/gromov-witten_theory/perfect_obstruction_theory
 - id: perfect_ring
   en: perfect ring
   ko: 완전환
@@ -8285,6 +8343,13 @@ P:
   defs:
   - label: '[위상수학] §준층'
     url: /ko/math/topology/presheaves
+- id: prestable_curve
+  en: prestable curve
+  ko: 준안정 곡선
+  primary: en
+  defs:
+  - label: '[그로모프-위튼 이론] §안정사상 moduli의 대수적 구성'
+    url: /ko/math/gromov-witten_theory/moduli_of_stable_maps
 - id: primary_decomposition
   en: primary decomposition
   ko: 으뜸분해
@@ -10209,6 +10274,13 @@ S:
   defs:
   - label: '[대수적 구조] §군의 작용'
     url: /ko/math/algebraic_structures/group_actions
+- id: stable_map
+  en: stable map
+  ko: 안정사상
+  primary: en
+  defs:
+  - label: '[그로모프-위튼 이론] §안정사상 moduli의 대수적 구성'
+    url: /ko/math/gromov-witten_theory/moduli_of_stable_maps
 - id: stalk
   en: stalk
   ko: 줄기
@@ -10237,6 +10309,13 @@ S:
   defs:
   - label: '[스킴] §매끄러운 사상과 étale 사상'
     url: /ko/math/scheme_theory/smooth_and_etale_morphisms
+- id: standard_log_point
+  en: standard log point
+  ko: 표준 로그 점
+  primary: en
+  defs:
+  - label: '[그로모프-위튼 이론] §Log structure와 log smooth curve'
+    url: /ko/math/gromov-witten_theory/log_structures
 - id: star_center
   en: star center
   ko: 별중심

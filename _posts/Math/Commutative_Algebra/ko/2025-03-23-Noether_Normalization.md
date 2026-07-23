@@ -110,7 +110,7 @@ Noetherian integral domain $A$와 finite type $A$-algebra $B$, 그리고 finitel
 ::: 증명
 $B$는 Noetherian integral domain $A$ 위의 finite type 대수이므로 [§기본 개념들, ⁋정리 12](/ko/math/commutative_algebra/basic_notions#thm12)에 의하여 Noetherian ring이다.
 
-**Dévissage.** [§동반소아이디얼, ⁋보조정리 6](/ko/math/commutative_algebra/associated_primes#lem6)을 $B$와 $M$에 적용하면 filtration
+먼저 [§동반소아이디얼, ⁋보조정리 6](/ko/math/commutative_algebra/associated_primes#lem6)을 $B$와 $M$에 적용하는 dévissage로 문제를 줄인다. 이를 적용하면 filtration
 
 $$0=M_0\subseteq M_1\subseteq\cdots\subseteq M_n=M,\qquad M_i/M_{i-1}\cong B/\mathfrak{q}_i$$
 
@@ -120,9 +120,9 @@ $$0 \longrightarrow (M_{i-1})_a \longrightarrow (M_i)_a \longrightarrow (B/\math
 
 의 오른쪽 항이 free module이므로 이 exact sequence는 split하고, $i$에 대한 귀납법으로 $(M_i)_a$가 모두 free $A_a$-module이 된다. 따라서 $M=B/\mathfrak{q}$인 경우, 즉 $B$를 $B/\mathfrak{q}$로 바꾸어 $B$가 integral domain이고 $M=B$인 경우만 보이면 충분하다.
 
-**환원.** $\varphi: A \rightarrow B$의 kernel이 $0$이 아니라면 $0\neq a\in \ker \varphi$를 택하자. $B_a=B\otimes_AA_a$에서 $\varphi(a)=0$이면서 $a$가 unit이므로 $B_a=0$이고, 이는 rank $0$의 free module이다. 따라서 $A\subseteq B$라 가정해도 좋다.
+$\varphi: A \rightarrow B$의 kernel이 $0$이 아닌 경우는 곧바로 처리된다. 이때 $0\neq a\in \ker \varphi$를 택하면 $B_a=B\otimes_AA_a$에서 $\varphi(a)=0$이면서 $a$가 unit이므로 $B_a=0$이고, 이는 rank $0$의 free module이다. 따라서 $A\subseteq B$라 가정해도 좋다.
 
-**귀납.** $K=\Frac(A)$라 하자. $B\otimes_AK$는 $A\setminus\{0\}$에서의 $B$의 localization이므로 $0$이 아닌 integral domain이며, $K$ 위의 finite type 대수이다. $d=\dim (B\otimes_AK)$에 대한 귀납법을 쓴다.
+이제 $K=\Frac(A)$라 하면 $B\otimes_AK$는 $A\setminus\{0\}$에서의 $B$의 localization이므로 $0$이 아닌 integral domain이며, $K$ 위의 finite type 대수이다. 남은 주장을 $d=\dim (B\otimes_AK)$에 대한 귀납법으로 보인다.
 
 [정리 1](#thm1)을 ideal의 chain 없이 적용하면 algebraically independent한 원소들 $y_1,\ldots, y_d\in B\otimes_AK$가 존재하여 $B\otimes_AK$가 $K[y_1,\ldots,y_d]$ 위의 finite module이다. 각 $y_i$에 $A$의 $0$이 아닌 원소를 곱해도 대수적 독립성과 유한성은 유지되므로, 처음부터 $y_i\in B$라 가정해도 좋다.
 

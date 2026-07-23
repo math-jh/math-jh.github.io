@@ -195,7 +195,7 @@ Noetherian integral scheme $Y$와 finite type morphism $f: X \rightarrow Y$가 �
 ::: 증명
 $Y$가 irreducible이므로 $Y$의 공집합이 아닌 열린집합은 모두 dense이다. 따라서 $Y$의 affine open $V=\Spec A$를 하나 고정하고 그 안에서 $U$를 찾으면 충분하다. $Y$가 integral scheme이므로 $A=\mathcal{O}_Y(V)$는 integral domain이고, Noetherian scheme의 affine open은 Noetherian ring의 spectrum이므로 $A$는 Noetherian ring이기도 하다. ([§스킴의 위상구조, ⁋보조정리 13](/ko/math/scheme_theory/topology_of_schemes#lem13))
 
-한편, $f$가 finite type이므로 $f^{-1}(V)$는 유한개의 affine open $\Spec B_1,\ldots, \Spec B_k$로 덮이고, 각 $B_i$는 finite type $A$-algebra이다. [\[가환대수학\] §뇌터 정규화, ⁋정리 5](/ko/math/commutative_algebra/noether_normalization#thm5)를 $M=B_i$에 적용하면 $0\neq a_i\in A$가 존재하여 $(B_i)_{a_i}$가 free $A_{a_i}$-module이다. $a=a_1\cdots a_k$로 두면 각 $(B_i)_a$는 free module $(B_i)_{a_i}$의 localization이므로 여전히 free $A_a$-module이고, free module은 flat하므로 [보조정리 2](#lem2)에 의하여
+한편, $f$가 finite type이므로 $f^{-1}(V)$는 유한개의 affine open $\Spec B_1,\ldots, \Spec B_k$로 덮이고 ([§스킴 사상의 성질들, ⁋정의 13](/ko/math/scheme_theory/properties_of_scheme_morphisms#def13)), 각 $B_i$는 finite type $A$-algebra이다. [\[가환대수학\] §뇌터 정규화, ⁋정리 5](/ko/math/commutative_algebra/noether_normalization#thm5)를 $M=B_i$에 적용하면 $0\neq a_i\in A$가 존재하여 $(B_i)_{a_i}$가 free $A_{a_i}$-module이다. $a=a_1\cdots a_k$로 두면 각 $(B_i)_a$는 free module $(B_i)_{a_i}$의 localization이므로 여전히 free $A_a$-module이고, free module은 flat하므로 [보조정리 2](#lem2)에 의하여
 
 $$\Spec (B_i)_a \longrightarrow \Spec A_a=D(a)$$
 
@@ -208,25 +208,29 @@ $$\Spec (B_i)_a \longrightarrow \Spec A_a=D(a)$$
 위상공간 $T$의 부분집합이 *constructible<sub>구성가능</sub>*이라는 것은 그것이 유한개의 locally closed subset들의 합집합으로 쓰일 수 있는 것이다. ([\[위상수학\] §몫공간, ⁋정의 1](/ko/math/topology/quotient_spaces#def1))
 :::
 
-Locally closed subset은 열린집합과 닫힌집합의 교집합 $U\cap Z$로 쓸 수 있으므로 ([\[위상수학\] §몫공간, ⁋명제 2](/ko/math/topology/quotient_spaces#prop2)), constructible subset들의 모임은 유한합집합, 유한교집합, 여집합에 대하여 닫혀 있다. 유한합집합은 정의에 의하여 자명하고, 두 locally closed subset의 교집합 $(U_1\cap Z_1)\cap (U_2\cap Z_2)=(U_1\cap U_2)\cap (Z_1\cap Z_2)$이 다시 locally closed이므로 교집합에 대한 닫힘은 분배법칙으로부터 나오며, locally closed subset $U\cap Z$의 여집합은 $(T\setminus U)\cup (T\setminus Z)$로 두 locally closed subset의 합집합이므로 여집합에 대해서도 닫혀 있다.
+직관적으로 constructible subset은 유한개의 방정식의 zero locus와, 그 여집합으로 잘라낼 수 있는 집합으로, 우리가 생각하는 기하적인 대상들에 부합하는 조각들이다. 더 엄밀하게는 locally closed subset이 열린집합과 닫힌집합의 교집합 $U\cap Z$로 쓰이고 그 여집합이 다시 두 locally closed subset의 합집합 $(T\setminus U)\cup(T\setminus Z)$이므로 ([\[위상수학\] §몫공간, ⁋명제 2](/ko/math/topology/quotient_spaces#prop2)), constructible subset들의 모임은 유한한 합집합, 유한한 교집합, 여집합에 대하여 닫혀 있다는 것을 안다. 
 
 ::: 정리 11 (Chevalley)
 Noetherian scheme $Y$와 finite type morphism $f: X \rightarrow Y$에 대하여, $f(X)$는 $Y$의 constructible subset이다.
 :::
 ::: 증명
-**Affine으로의 환원.** $Y$가 Noetherian이므로 유한개의 affine open $V_j$로 덮이고, $f$가 finite type이므로 각 $f^{-1}(V_j)$ 또한 유한개의 affine open으로 덮인다. 따라서 $f(X)$는 유한개의 $\Spec B \rightarrow \Spec A$ 꼴 morphism의 image들의 합집합이다. 열린집합 $V_j$의 constructible subset은 $Y$의 constructible subset이고 constructible subset들의 유한합집합은 constructible이므로, 처음부터 $Y=\Spec A$, $X=\Spec B$이고 $B$가 finite type $A$-algebra인 경우만 보이면 충분하다.
+$Y$가 Noetherian이므로 유한개의 affine open $V_j$로 덮이고, $f$가 finite type이므로 각 $f^{-1}(V_j)$ 또한 유한개의 affine open으로 덮인다. 따라서 $f(X)$는 유한개의 $\Spec B \rightarrow \Spec A$ 꼴 morphism의 image들의 합집합이다. 열린집합 $V_j$의 constructible subset은 $Y$의 constructible subset이고 constructible subset들의 유한합집합은 constructible이므로, 처음부터 $Y=\Spec A$, $X=\Spec B$이고 $B$가 finite type $A$-algebra인 경우만 보이면 충분하다.
 
-**Noetherian 귀납법.** 이제 $Y=\Spec A$의 closed subset $Z$에 대하여, "$Z$ 위의 임의의 finite type morphism의 image는 $Z$의 constructible subset이다"라는 명제를 $P(Z)$라 하자. $A$가 Noetherian이므로 $Y$의 closed subset들의 모임은 descending chain condition을 만족하고, 따라서 Noetherian 귀납법을 쓸 수 있다. 즉 $Y$의 모든 진부분 닫힌집합 $Z\subsetneq Y$에 대하여 $P(Z)$가 성립한다고 가정하고 $P(Y)$를 보이면 된다. 또 $Z$의 constructible subset은 $Z$가 닫힌집합이므로 $Y$의 constructible subset이기도 하여, 결론을 $Y$ 안에서 읽어도 좋다.
+이 affine case는 $Y$의 closed subset에 대한 Noetherian induction으로 해결한다. $Y=\Spec A$의 closed subset $Z$에 대하여, 명제 $P$를
 
-**Reduced로의 환원.** $\mathfrak{N}=\mathfrak{N}(A)$를 $A$의 nilradical이라 하면 $\mathfrak{N}B$는 $B$의 nilpotent ideal이므로 $\Spec B/\mathfrak{N}B$와 $\Spec B$는 같은 위상공간이고, $\Spec A/\mathfrak{N}$과 $\Spec A$도 그러하다. 따라서 $A$를 $A/\mathfrak{N}$으로, $B$를 $B/\mathfrak{N}B$로 바꾸어도 $f(X)$는 바뀌지 않으므로 $A$가 reduced라 가정해도 좋다.
+> $Z$ 위의 임의의 finite type morphism의 image는 $Y$의 constructible subset이다.
 
-**integral domain으로의 환원.** $A$의 minimal prime을 $\mathfrak{p}_1,\ldots, \mathfrak{p}_k$라 하면 $A$가 reduced이므로 $Y=\bigcup_j V(\mathfrak{p}_j)$이다. 만일 $k\geq 2$라면 각 $V(\mathfrak{p}_j)$는 $Y$의 진부분 닫힌집합이고
+이라 하자. $A$가 Noetherian이므로 $Y=\Spec A$는 Noetherian space이고 ([§스킴의 위상구조, ⁋명제 7](/ko/math/scheme_theory/topology_of_schemes#prop7)), 곧 그 closed subset들이 descending chain condition을 만족하므로 ([\[위상수학\] §차원, ⁋정의 11](/ko/math/topology/dimension#def11)) Noetherian induction을 쓸 수 있다. 즉 $Y$의 모든 진부분 닫힌집합 $Z\subsetneq Y$에 대하여 $P(Z)$가 성립한다고 가정하고 $P(Y)$를 보이면 된다.
+
+먼저 $\mathfrak{N}=\mathfrak{N}(A)$를 $A$의 nilradical이라 하면 $\mathfrak{N}B$는 $B$의 nilpotent ideal이므로 $\Spec B/\mathfrak{N}B$와 $\Spec B$는 같은 위상공간이고, $\Spec A/\mathfrak{N}$과 $\Spec A$도 그러하다. 따라서 $A$를 $A/\mathfrak{N}$으로, $B$를 $B/\mathfrak{N}B$로 바꾸어도 $f(X)$는 바뀌지 않으므로 $A$가 reduced라 가정해도 좋다.
+
+이제 $A$의 minimal prime을 $\mathfrak{p}_1,\ldots, \mathfrak{p}_k$라 하면 $A$가 reduced이므로 $Y=\bigcup_j V(\mathfrak{p}_j)$이다. 만일 $k\geq 2$라면 각 $V(\mathfrak{p}_j)$는 $Y$의 진부분 닫힌집합이고
 
 $$f(X)=\bigcup_{j=1}^k f\big(X\times_Y V(\mathfrak{p}_j)\big)$$
 
 인데, 각 base change $X\times_YV(\mathfrak{p}_j) \rightarrow V(\mathfrak{p}_j)$는 여전히 finite type이므로 귀납가정 $P(V(\mathfrak{p}_j))$에 의하여 각 항이 constructible이고 따라서 $f(X)$도 constructible이다. 그러므로 $k=1$, 즉 $A$가 integral domain인 경우만 남는다.
 
-**integral domain인 경우.** $B=0$이면 $f(X)=\emptyset$이므로 자명하다. $B\neq 0$이라 하고 [\[가환대수학\] §뇌터 정규화, ⁋정리 5](/ko/math/commutative_algebra/noether_normalization#thm5)를 $M=B$에 적용하면 $0\neq a\in A$가 존재하여 $B_a$가 free $A_a$-module이다. $a$가 unit이면 $D(a)=Y$이므로 $a$를 unit이 아닌 것으로 택했다고 가정해도 좋고 (unit이라면 아래 논증에서 $V(a)=\emptyset$이 되어 결론이 더 간단해진다), 이 경우 $A$가 integral domain이므로 $V(a)$는 $Y$의 진부분 닫힌집합이다.
+그럼 $B=0$이면 $f(X)=\emptyset$이므로 자명하다. $B\neq 0$이라 하고 [\[가환대수학\] §뇌터 정규화, ⁋정리 5](/ko/math/commutative_algebra/noether_normalization#thm5)를 $M=B$에 적용하면 $0\neq a\in A$가 존재하여 $B_a$가 free $A_a$-module이다. $a$가 unit이면 $D(a)=Y$이므로 $a$를 unit이 아닌 것으로 택했다고 가정해도 좋고 (unit이라면 아래 논증에서 $V(a)=\emptyset$이 되어 결론이 더 간단해진다), 이 경우 $A$가 integral domain이므로 $V(a)$는 $Y$의 진부분 닫힌집합이다.
 
 $B_a=0$인 경우, 이는 $\varphi(a)$가 $B$에서 nilpotent라는 뜻이므로 $\varphi(a)$는 $B$의 모든 prime ideal에 속한다. 따라서 $f(X)\subseteq V(a)$이고, $f(X)$는 base change $X\times_YV(a) \rightarrow V(a)$의 image와 같으므로 귀납가정 $P(V(a))$에 의하여 constructible이다.
 
