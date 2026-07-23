@@ -25,10 +25,14 @@
       body::-webkit-scrollbar-thumb:hover {background: #a9874a;}
       /* Left nav + right TOC: hover-reveal. The 6px gutter is always reserved
          (no layout shift) but the thumb is transparent at rest and only gets a
-         colour on hover. The hover colour is mode-adaptive — see the skins. */
-      .sidebar.sticky, .toc__menu, .sidebar__right.sticky > .toc {
-        scrollbar-width: thin;      /* Firefox */
-        -ms-overflow-style: none;
+         colour on hover. The hover colour is mode-adaptive — see the skins.
+         scrollbar-width 는 Firefox 전용 격리 필수 — Chromium(121+)은 표준
+         scrollbar-* 속성이 걸린 요소의 ::-webkit-scrollbar 커스텀을 통째로
+         무시해서, 가드 없이 두면 아래 hover-reveal 이 죽는다. */
+      @supports not selector(::-webkit-scrollbar) {
+        .sidebar.sticky, .toc__menu, .sidebar__right.sticky > .toc {
+          scrollbar-width: thin;
+        }
       }
       .sidebar.sticky::-webkit-scrollbar,
       .toc__menu::-webkit-scrollbar,
