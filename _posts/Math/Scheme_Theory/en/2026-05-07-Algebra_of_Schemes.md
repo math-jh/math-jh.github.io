@@ -80,13 +80,13 @@ and the right-hand side is not an integral domain, which contradicts the assumpt
 Conversely, suppose we are given an irreducible reduced scheme $X$, and let us show that $X$ is integral. That is, given any open set $U$ of $X$, we must show that $\mathcal{O}_X(U)$ is an integral domain. First, we prove the following claim.
 
 > **Claim.** For any affine open subset $\Spec A\cong V\subseteq X$, the ring $\mathcal{O}_X(V)\cong A$ is always an integral domain.  
-> **Proof.** From the assumption that $X$ is reduced, we know that $A$ must be a reduced ring. On the other hand, since $X$ is an irreducible closed subset of itself, $V$ is also irreducible and ([\[Topology\] §Dimension, ⁋Proposition 14](/en/math/topology/dimension#prop14)) therefore by [Lemma 3](#lem3), $\mathfrak{N}(A)=0$ is a prime ideal, so $A$ is an integral domain.
+> **Proof.** From the assumption that $X$ is reduced, we know that $A$ must be a reduced ring. On the other hand, since $X$ is an irreducible closed subset of itself, $V$ is also irreducible and ([\[Topology\] §Dimension, ⁋Proposition 15](/en/math/topology/dimension#prop15)) therefore by [Lemma 3](#lem3), $\mathfrak{N}(A)=0$ is a prime ideal, so $A$ is an integral domain.
 
 Now we show that for any open set $U$ of $X$, $\mathcal{O}_X(U)$ is an integral domain. To this end, suppose two elements $f,g\in \mathcal{O}_X(U)$ satisfy $fg=0$. Then for the two open sets of $U$
 
 $$D_U(f)=\{x\in U\mid f_x\not\in \mathfrak{m}_x\},\qquad D_U(g)=\{x\in U\mid g_x\not\in \mathfrak{m}_x\}$$
 
-and their complements $Z_U(f), Z_U(g)$, we have $U=Z_U(f)\cup Z_U(g)$. Now since $X$ is irreducible, by [\[Topology\] §Dimension, ⁋Proposition 14](/en/math/topology/dimension#prop14) we know that its open subset $U$ is likewise irreducible, and therefore either $Z_U(f)=U$ or $Z_U(g)=U$. Without loss of generality, suppose $Z_U(f)=U$. Then for any open affine subset $V$ of $U$, if we define
+and their complements $Z_U(f), Z_U(g)$, we have $U=Z_U(f)\cup Z_U(g)$. Now since $X$ is irreducible, by [\[Topology\] §Dimension, ⁋Proposition 15](/en/math/topology/dimension#prop15) we know that its open subset $U$ is likewise irreducible, and therefore either $Z_U(f)=U$ or $Z_U(g)=U$. Without loss of generality, suppose $Z_U(f)=U$. Then for any open affine subset $V$ of $U$, if we define
 
 $$D_V(f)=\{x\in V\mid f_x\not\in \mathfrak{m}_x\}$$
 

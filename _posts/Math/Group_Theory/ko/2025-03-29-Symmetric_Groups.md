@@ -154,7 +154,7 @@ $$T(gh)(x)=L_{gh}(x)=(gh)x=g(h(x))=(T_g\circ T_h)(x)$$
 ## 교대군
 
 ::: 정의 9
-$S_n$의 각 원소 $\sigma$에 대하여, $i<j$이지만 $\sigma(i)>\sigma(j)$인 pair $(i,j)$들을 *inversion<sub>반전</sub>*이라 부른다. 만약 inversion의 갯수가 홀수개라면, $\sigma$를 *odd permutation*이라 부르고, inversion의 갯수가 짝수개라면 $\sigma$를 *even permutation*이라 부른다. 
+$S_n$의 각 원소 $\sigma$에 대하여, $i<j$이지만 $\sigma(i)>\sigma(j)$인 pair $(i,j)$들을 *inversion<sub>반전</sub>*이라 부른다. 만약 inversion의 갯수가 홀수개라면, $\sigma$를 *odd permutation<sub>홀치환</sub>*이라 부르고, inversion의 갯수가 짝수개라면 $\sigma$를 *even permutation<sub>짝치환</sub>*이라 부른다. 
 :::
 
 예를 들어, identity permutation은 inversion의 갯수가 0개이므로 even permutation이고, $(1\;2)$는 해당 조건을 만족하는 pair가 $(1,2)$밖에 없으므로 odd permutation이다. Dummit과 Hungerford 등을 포함한 많은 대수 책들은 이 정의 대신, even permutation을 

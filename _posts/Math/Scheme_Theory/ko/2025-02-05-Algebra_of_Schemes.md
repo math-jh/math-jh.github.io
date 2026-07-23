@@ -80,13 +80,13 @@ $$\mathcal{O}_X(U_1\cup U_2)=\mathcal{O}_X(U_1)\times \mathcal{O}_X(U_2)$$
 거꾸로 irreducible reduced scheme $X$가 주어졌다 하고, $X$가 integral scheme임을 보이자. 즉, $X$의 임의의 열린집합 $U$가 주어졌을 때, $\mathcal{O}_X(U)$가 integral domain임을 보여야 한다. 우선 다음 주장을 보이자.
 
 > **주장.** 임의의 affine open subset $\Spec A\cong V\subseteq X$에 대하여, $\mathcal{O}_X(V)\cong A$는 항상 integral domain이다.  
-> **증명.** $X$가 reduced라는 가정으로부터 $A$가 reduced ring이어야 하는 것을 안다. 한편, $X$는 $X$의 irreducible closed subset이므로 $V$도 irreducible이고 ([\[위상수학\] §차원, ⁋명제 14](/ko/math/topology/dimension#prop14)) 따라서 [보조정리 3](#lem3)으로부터 $\mathfrak{N}(A)=0$는 prime ideal이 되어 $A$가 integral domain이다. 
+> **증명.** $X$가 reduced라는 가정으로부터 $A$가 reduced ring이어야 하는 것을 안다. 한편, $X$는 $X$의 irreducible closed subset이므로 $V$도 irreducible이고 ([\[위상수학\] §차원, ⁋명제 15](/ko/math/topology/dimension#prop15)) 따라서 [보조정리 3](#lem3)으로부터 $\mathfrak{N}(A)=0$는 prime ideal이 되어 $A$가 integral domain이다. 
 
 이제 일반적으로 $X$의 임의의 열린집합 $U$에 대하여 $\mathcal{O}_X(U)$가 integral domain임을 보인다. 이를 위해 두 원소 $f,g\in \mathcal{O}_X(U)$가 $fg=0$을 만족한다고 하자. 그럼 $U$의 두 열린집합
 
 $$D_U(f)=\{x\in U\mid f_x\not\in \mathfrak{m}_x\},\qquad D_U(g)=\{x\in U\mid g_x\not\in \mathfrak{m}_x\}$$
 
-와 이들의 여집합 $Z_U(f), Z_U(g)$에 대하여 $U=Z_U(f)\cup Z_U(g)$가 성립한다. 이제 $X$가 irreducible이므로, [\[위상수학\] §차원, ⁋명제 14](/ko/math/topology/dimension#prop14)으로부터 그 열린집합 $U$ 또한 마찬가지라는 것을 알고 따라서 $Z_U(f)=U$이거나 $Z_U(g)=U$여야 한다. 일반성을 잃지 않고 $Z_U(f)=U$라 하자. 그럼 $U$의 임의의 open affine subset $V$에 대하여, $V$에서
+와 이들의 여집합 $Z_U(f), Z_U(g)$에 대하여 $U=Z_U(f)\cup Z_U(g)$가 성립한다. 이제 $X$가 irreducible이므로, [\[위상수학\] §차원, ⁋명제 15](/ko/math/topology/dimension#prop15)으로부터 그 열린집합 $U$ 또한 마찬가지라는 것을 알고 따라서 $Z_U(f)=U$이거나 $Z_U(g)=U$여야 한다. 일반성을 잃지 않고 $Z_U(f)=U$라 하자. 그럼 $U$의 임의의 open affine subset $V$에 대하여, $V$에서
 
 $$D_V(f)=\{x\in V\mid f_x\not\in \mathfrak{m}_x\}$$
 

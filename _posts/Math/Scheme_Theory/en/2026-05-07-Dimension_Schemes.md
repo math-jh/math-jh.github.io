@@ -24,7 +24,7 @@ The *dimension* of a scheme $X$ is defined as the Krull dimension of the topolog
 
 Then from the Galois correspondence of [[Spectrums] ⁋Proposition 16](/en/math/scheme_theory/spectrums#prop16), we know that the dimension of $\Spec A$ as a scheme equals the dimension of $A$ as a ring. ([[Commutative Algebra] §Dimension, ⁋Definition 1](/en/math/commutative_algebra/Krull_dimension#def1)) Moreover, by definition one can show that $\Spec A$ and $\Spec A/\mathfrak{N}(A)$ are homeomorphic, so $\dim A=\dim A/\mathfrak{N}(A)$. That is, reducedness does not affect dimension.
 
-On the other hand, by the same reasoning as [[Topology] §Dimension, ⁋Proposition 14](/en/math/topology/dimension#prop14), the following holds.
+On the other hand, by the same reasoning as [[Topology] §Dimension, ⁋Proposition 15](/en/math/topology/dimension#prop15), the following holds.
 
 ::: Proposition 2
 For any scheme $X$, the condition $\dim X=n$ is equivalent to the existence of an affine open covering $(U_i)$ of $X$ such that $\dim U_i\leq n$ for all $i$, with equality for at least one $i$.
@@ -34,7 +34,7 @@ Given any chain of irreducible closed subsets of $X$
 
 $$Y_0\subsetneq Y_1\subsetneq\cdots\subsetneq Y_r$$
 
-the generic point $y_0$ of the smallest term $Y_0$ is a point of $X$, so it belongs to some $U_i$ in the covering $(U_i)$. Then every term of the chain meets $U_i$, so by the inclusion-preserving bijection of [[Topology] §Dimension, ⁋Proposition 14](/en/math/topology/dimension#prop14), it corresponds to a chain of the same length inside $U_i$. Conversely, any chain in $U_i$ lifts to $X$ by taking closures, so $\dim X\geq\dim U_i$, and therefore $\dim X=\sup_i\dim U_i$, which is equivalent to the condition in the proposition.
+the generic point $y_0$ of the smallest term $Y_0$ is a point of $X$, so it belongs to some $U_i$ in the covering $(U_i)$. Then every term of the chain meets $U_i$, so by the inclusion-preserving bijection of [[Topology] §Dimension, ⁋Proposition 15](/en/math/topology/dimension#prop15), it corresponds to a chain of the same length inside $U_i$. Conversely, any chain in $U_i$ lifts to $X$ by taking closures, so $\dim X\geq\dim U_i$, and therefore $\dim X=\sup_i\dim U_i$, which is equivalent to the condition in the proposition.
 :::
 
 On the other hand, we saw in [[Properties of Scheme Morphisms] ⁋Proposition 14](/en/math/scheme_theory/properties_of_scheme_morphisms#prop14) that a finite morphism is an integral morphism of finite type, and in [[Fiber Products] ⁋Proposition 14](/en/math/scheme_theory/fiber_products#prop14) that any finite morphism is quasi-finite. In general, there exist morphisms that are integral but not of finite type, so we have not yet been able to say anything about the fibers of integral morphisms.
@@ -166,14 +166,14 @@ Then one can check that the codimension of a prime ideal $\mathfrak{p}$ of a rin
 For an irreducible closed subset $Y$ of $X$ and its generic point $y$, $\codim_X Y=\dim \mathcal{O}_{X,y}$ holds.
 :::
 ::: Proof
-Since $Y$ has generic point $y$, by definition $\codim_XY$ equals $\codim_X\{y\}$. Now choose any affine open subset $U\cong\Spec A$ containing $y$, and suppose that under this isomorphism $y\in U$ corresponds to $\mathfrak{p}_y\in \Spec A$. Then from [[Topology] §Dimension, ⁋Proposition 14](/en/math/topology/dimension#prop14) we know that there is a one-to-one correspondence between irreducible closed subsets of $X$ meeting $U$ and irreducible closed subsets of $U$. That is, $\codim_X\{y\}=\codim_U \mathfrak{p}_y$. Now we obtain the desired result from [[Spectrums] ⁋Proposition 16](/en/math/scheme_theory/spectrums#prop16).
+Since $Y$ has generic point $y$, by definition $\codim_XY$ equals $\codim_X\{y\}$. Now choose any affine open subset $U\cong\Spec A$ containing $y$, and suppose that under this isomorphism $y\in U$ corresponds to $\mathfrak{p}_y\in \Spec A$. Then from [[Topology] §Dimension, ⁋Proposition 15](/en/math/topology/dimension#prop15) we know that there is a one-to-one correspondence between irreducible closed subsets of $X$ meeting $U$ and irreducible closed subsets of $U$. That is, $\codim_X\{y\}=\codim_U \mathfrak{p}_y$. Now we obtain the desired result from [[Spectrums] ⁋Proposition 16](/en/math/scheme_theory/spectrums#prop16).
 :::
 
 More generally, in [[Commutative Algebra] §Dimension, ⁋Definition 2](/en/math/commutative_algebra/Krull_dimension#def2) we defined codimension and then proved the inequality
 
 $$\dim \mathfrak{a}+\codim \mathfrak{a}\leq \dim A$$
 
-and using [[Topology] §Dimension, ⁋Proposition 14](/en/math/topology/dimension#prop14) in place of [[Commutative Algebra] §Localization, ⁋Proposition 8](/en/math/commutative_algebra/localization#prop8) used there, one can check that for a scheme $X$ and an irreducible closed subset $Y$ of $X$, the inequality
+and using [[Topology] §Dimension, ⁋Proposition 15](/en/math/topology/dimension#prop15) in place of [[Commutative Algebra] §Localization, ⁋Proposition 8](/en/math/commutative_algebra/localization#prop8) used there, one can check that for a scheme $X$ and an irreducible closed subset $Y$ of $X$, the inequality
 
 $$\dim Y+\codim_XY\leq \dim X$$
 
@@ -253,7 +253,7 @@ Earlier we saw that for a finite type affine integral $\mathbb{K}$-scheme $X=\Sp
 For a locally Noetherian scheme $X$ and a function $f$ on $X$, every irreducible component of $Z(f)$ has codimension $0$ or $1$.
 :::
 ::: Proof
-Let $W$ be an irreducible component of $Z(f)$ and $w$ the generic point of $W$. Choose an affine open subset $U\cong\Spec A$ containing $w$; since $X$ is locally Noetherian we may take $A$ to be a Noetherian ring, and suppose that under this isomorphism $w$ corresponds to $\mathfrak{p}\in\Spec A$. By the correspondence of [[Topology] §Dimension, ⁋Proposition 14](/en/math/topology/dimension#prop14), $W\cap U$ is an irreducible component of $Z(f\vert_U)$, so $\mathfrak{p}$ is a minimal prime ideal containing the principal ideal generated by $f\vert_U\in A$. Therefore by [[Commutative Algebra] §Dimension, ⁋Theorem 6](/en/math/commutative_algebra/Krull_dimension#thm6) we have $\codim\mathfrak{p}\leq 1$.
+Let $W$ be an irreducible component of $Z(f)$ and $w$ the generic point of $W$. Choose an affine open subset $U\cong\Spec A$ containing $w$; since $X$ is locally Noetherian we may take $A$ to be a Noetherian ring, and suppose that under this isomorphism $w$ corresponds to $\mathfrak{p}\in\Spec A$. By the correspondence of [[Topology] §Dimension, ⁋Proposition 15](/en/math/topology/dimension#prop15), $W\cap U$ is an irreducible component of $Z(f\vert_U)$, so $\mathfrak{p}$ is a minimal prime ideal containing the principal ideal generated by $f\vert_U\in A$. Therefore by [[Commutative Algebra] §Dimension, ⁋Theorem 6](/en/math/commutative_algebra/Krull_dimension#thm6) we have $\codim\mathfrak{p}\leq 1$.
 
 On the other hand, since the stalk depends only on an open neighborhood of $w$, we have $\mathcal{O}_{U,w}=\mathcal{O}_{X,w}$, and since $W$ and $W\cap U$ are irreducible closed subsets of $X$ and $U$ respectively both having $w$ as generic point, applying [Proposition 8](#prop8) twice gives
 

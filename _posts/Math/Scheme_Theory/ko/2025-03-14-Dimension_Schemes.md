@@ -24,7 +24,7 @@ Scheme $X$의 *dimension<sub>차원</sub>*은 위상공간 $X$의 Krull dimensio
 
 그럼 [§스펙트럼, ⁋명제 16](/ko/math/scheme_theory/spectrums#prop16)의 Galois correspondence로부터 우리는 $\Spec A$의 scheme으로서의 차원과 $A$의 ring으로서의 차원이 같다는 것을 안다. ([\[가환대수학\] §차원, ⁋정의 1](/ko/math/commutative_algebra/Krull_dimension#def1)) 뿐만 아니라, 정의에 의하여 $\Spec A$와 $\Spec A/\mathfrak{N}(A)$가 homeomorphic하다는 것을 보일 수 있으므로 $\dim A=\dim A/\mathfrak{N}(A)$가 성립한다. 즉 reducedness는 차원에 영향을 주지 않는다. 
 
-한편 [\[위상수학\] §차원, ⁋명제 14](/ko/math/topology/dimension#prop14)와 마찬가지 이유로 다음이 성립한다. 
+한편 [\[위상수학\] §차원, ⁋명제 15](/ko/math/topology/dimension#prop15)와 마찬가지 이유로 다음이 성립한다. 
 
 ::: 명제 2
 임의의 scheme $X$에 대하여, $\dim X=n$인 것은 $X$의 affine open covering $(U_i)$가 존재하여, 모든 $U_i$에 대하여 $\dim U_i\leq n$이고, 적어도 하나의 $i$에 대해서는 등호가 성립하는 것과 동치이다. 
@@ -34,7 +34,7 @@ $X$의 임의의 irreducible closed subset들의 chain
 
 $$Y_0\subsetneq Y_1\subsetneq\cdots\subsetneq Y_r$$
 
-에서 가장 작은 항 $Y_0$의 generic point $y_0$는 $X$의 점이므로 covering $(U_i)$에 의해 어떤 $U_i$에 속한다. 그러면 chain의 모든 항이 $U_i$와 만나므로, [\[위상수학\] §차원, ⁋명제 14](/ko/math/topology/dimension#prop14)의 inclusion-preserving bijection을 생각하면 $U_i$ 안의 같은 길이의 chain으로 대응된다. 거꾸로 $U_i$의 임의의 chain은 $X$ 안에서 closure를 취해 올려지므로 $\dim X\geq\dim U_i$이고, 따라서 $\dim X=\sup_i\dim U_i$이며 이는 명제의 조건과 동치이다.
+에서 가장 작은 항 $Y_0$의 generic point $y_0$는 $X$의 점이므로 covering $(U_i)$에 의해 어떤 $U_i$에 속한다. 그러면 chain의 모든 항이 $U_i$와 만나므로, [\[위상수학\] §차원, ⁋명제 15](/ko/math/topology/dimension#prop15)의 inclusion-preserving bijection을 생각하면 $U_i$ 안의 같은 길이의 chain으로 대응된다. 거꾸로 $U_i$의 임의의 chain은 $X$ 안에서 closure를 취해 올려지므로 $\dim X\geq\dim U_i$이고, 따라서 $\dim X=\sup_i\dim U_i$이며 이는 명제의 조건과 동치이다.
 :::
 
 한편 우리는 [§스킴 사상의 성질들, ⁋명제 14](/ko/math/scheme_theory/properties_of_scheme_morphisms#prop14)에서 finite morphism은 integral morphism of finite type인 것을 살펴보았으며, [§올곱, ⁋명제 14](/ko/math/scheme_theory/fiber_products#prop14)에서 임의의 finite morphism은 quasi-finite인 것을 살펴보았다. 일반적으로 integral morphism이지만 finite type은 아닌 morphism이 존재하며, 따라서 아직까지는 integral morphism의 fiber에 대한 이야기를 할 수가 없다.
@@ -168,14 +168,14 @@ $$Z_n\supsetneq Z_{n-1}\supsetneq\cdots\supsetneq Z_0=\cl_X(Y)$$
 $X$의 irreducible closed subset $Y$와 $Y$의 generic point $y$에 대하여, $\codim_X Y=\dim \mathcal{O}_{X,y}$이 성립한다.
 :::
 ::: 증명
-$Y$가 generic point $y$를 가지므로, 정의에 의해 $\codim_XY$와 $\codim_X\{y\}$가 같다. 이제 $y$를 포함하는 임의의 affine open subset $U\cong\Spec A$를 택하고, 이 isomorphism에 의해 $y\in U$가 $\mathfrak{p}_y\in \Spec A$에 대응된다 하자. 그럼 [\[위상수학\] §차원, ⁋명제 14](/ko/math/topology/dimension#prop14)로부터 우리는 $U$와 만나는 $X$의 irreducible closed subset들과 $U$의 irreducible closed subset들 사이의 일대일 대응이 존재한다는 것을 안다. 즉, $\codim_X\{y\}=\codim_U \mathfrak{p}_y$이다. 이제 [§스펙트럼, ⁋명제 16](/ko/math/scheme_theory/spectrums#prop16)으로부터 원하는 결과를 얻는다. 
+$Y$가 generic point $y$를 가지므로, 정의에 의해 $\codim_XY$와 $\codim_X\{y\}$가 같다. 이제 $y$를 포함하는 임의의 affine open subset $U\cong\Spec A$를 택하고, 이 isomorphism에 의해 $y\in U$가 $\mathfrak{p}_y\in \Spec A$에 대응된다 하자. 그럼 [\[위상수학\] §차원, ⁋명제 15](/ko/math/topology/dimension#prop15)로부터 우리는 $U$와 만나는 $X$의 irreducible closed subset들과 $U$의 irreducible closed subset들 사이의 일대일 대응이 존재한다는 것을 안다. 즉, $\codim_X\{y\}=\codim_U \mathfrak{p}_y$이다. 이제 [§스펙트럼, ⁋명제 16](/ko/math/scheme_theory/spectrums#prop16)으로부터 원하는 결과를 얻는다. 
 :::
 
 더 일반적으로 우리는 [\[가환대수학\] §차원, ⁋정의 2](/ko/math/commutative_algebra/Krull_dimension#def2)에서 codimension을 정의한 후 다음의 부등식
 
 $$\dim \mathfrak{a}+\codim \mathfrak{a}\leq \dim A$$
 
-를 증명하였는데, 여기에서 사용한 [\[가환대수학\] §국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8) 대신 [\[위상수학\] §차원, ⁋명제 14](/ko/math/topology/dimension#prop14)를 사용하면 scheme $X$와 $X$의 irreducible closed subset $Y$에 대하여 다음의 부등식
+를 증명하였는데, 여기에서 사용한 [\[가환대수학\] §국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8) 대신 [\[위상수학\] §차원, ⁋명제 15](/ko/math/topology/dimension#prop15)를 사용하면 scheme $X$와 $X$의 irreducible closed subset $Y$에 대하여 다음의 부등식
 
 $$\dim Y+\codim_XY\leq \dim X$$
 
@@ -255,7 +255,7 @@ $(f)$를 포함하는 $A$의 minimal prime $\mathfrak{p}$를 택하자. [\[가�
 Locally Noetherian scheme $X$와 $X$ 위의 함수 $f$에 대하여, $Z(f)$의 irreducible component는 codimension $0$이거나 codimension $1$이다.
 :::
 ::: 증명
-$W$를 $Z(f)$의 irreducible component라 하고 $w$를 $W$의 generic point라 하자. 이제 $w$를 포함하는 affine open subset $U\cong\Spec A$를 택하면, $X$가 locally Noetherian이므로 $A$를 Noetherian ring으로 잡을 수 있으며, 이 isomorphism에 의해 $w$가 $\mathfrak{p}\in\Spec A$에 대응된다 하자. [\[위상수학\] §차원, ⁋명제 14](/ko/math/topology/dimension#prop14)의 대응에 의하여 $W\cap U$는 $Z(f\vert_U)$의 irreducible component이므로, $\mathfrak{p}$는 $f\vert_U\in A$가 생성하는 principal ideal을 포함하는 minimal prime ideal이다. 따라서 [\[가환대수학\] §차원, ⁋정리 6](/ko/math/commutative_algebra/Krull_dimension#thm6)에 의하여 $\codim\mathfrak{p}\leq 1$이다.
+$W$를 $Z(f)$의 irreducible component라 하고 $w$를 $W$의 generic point라 하자. 이제 $w$를 포함하는 affine open subset $U\cong\Spec A$를 택하면, $X$가 locally Noetherian이므로 $A$를 Noetherian ring으로 잡을 수 있으며, 이 isomorphism에 의해 $w$가 $\mathfrak{p}\in\Spec A$에 대응된다 하자. [\[위상수학\] §차원, ⁋명제 15](/ko/math/topology/dimension#prop15)의 대응에 의하여 $W\cap U$는 $Z(f\vert_U)$의 irreducible component이므로, $\mathfrak{p}$는 $f\vert_U\in A$가 생성하는 principal ideal을 포함하는 minimal prime ideal이다. 따라서 [\[가환대수학\] §차원, ⁋정리 6](/ko/math/commutative_algebra/Krull_dimension#thm6)에 의하여 $\codim\mathfrak{p}\leq 1$이다.
 
 한편 stalk은 $w$의 열린근방에만 의존하므로 $\mathcal{O}_{U,w}=\mathcal{O}_{X,w}$이고, $W$와 $W\cap U$는 각각 $X$와 $U$의 irreducible closed subset으로서 모두 $w$를 generic point로 가지므로 [명제 8](#prop8)을 두 번 적용하면
 
