@@ -377,6 +377,13 @@ A:
   defs:
   - label: '[해석학] §멱급수와 해석함수'
     url: /ko/math/analysis/power_series
+- id: analytic_function
+  en: analytic function
+  ko: 해석함수
+  primary: ko
+  defs:
+  - label: '[복소해석학] §멱급수와 해석성'
+    url: /ko/math/complex_analysis/power_series_and_analyticity
 - id: annihilator
   en: annihilator
   ko: 소멸자
@@ -386,6 +393,13 @@ A:
     url: /ko/math/linear_algebra/dual_space
   - label: '[가환대수학] §기본 개념들'
     url: /ko/math/commutative_algebra/basic_notions
+- id: annulus
+  en: annulus
+  ko: 환형 영역
+  primary: ko
+  defs:
+  - label: '[복소해석학] §고립특이점과 Laurent 급수'
+    url: /ko/math/complex_analysis/isolated_singularities
 - id: antiderivative
   en: antiderivative
   ko: 원시함수
@@ -3358,6 +3372,13 @@ E:
   defs:
   - label: '[미적분학] §연속함수'
     url: /ko/math/calculus/continuity
+- id: essential_singularity
+  en: essential singularity
+  ko: 본질적 특이점
+  primary: en
+  defs:
+  - label: '[복소해석학] §고립특이점과 Laurent 급수'
+    url: /ko/math/complex_analysis/isolated_singularities
 - id: essentially_surjective
   en: essentially surjective
   ko: 본질적 전사 함자
@@ -5531,6 +5552,8 @@ L:
   defs:
   - label: '[대수다양체] §사영공간의 코호몰로지'
     url: /ko/math/algebraic_varieties/cohomology_of_projective_spaces
+  - label: '[복소해석학] §고립특이점과 Laurent 급수'
+    url: /ko/math/complex_analysis/isolated_singularities
 - id: leading_coefficient
   en: leading coefficient
   ko: 선행계수
@@ -7100,6 +7123,13 @@ O:
   defs:
   - label: '[집합론] §순서관계의 정의'
     url: /ko/math/set_theory/order_relations
+- id: order_of_the_zero
+  en: order of the zero
+  ko: 영점의 위수
+  primary: ko
+  defs:
+  - label: '[복소해석학] §멱급수와 해석성'
+    url: /ko/math/complex_analysis/power_series_and_analyticity
 - id: order_relation
   en: order relation
   ko: 순서관계
@@ -7508,6 +7538,13 @@ P:
   defs:
   - label: '[복소해석학] §복소수와 복소평면'
     url: /ko/math/complex_analysis/complex_numbers
+- id: pole
+  en: pole
+  ko: 극
+  primary: ko
+  defs:
+  - label: '[복소해석학] §고립특이점과 Laurent 급수'
+    url: /ko/math/complex_analysis/isolated_singularities
 - id: polynomial_algebra
   en: polynomial algebra
   ko: 다항식 대수
@@ -7728,6 +7765,13 @@ P:
   defs:
   - label: '[대수다양체] §아핀다양체'
     url: /ko/math/algebraic_varieties/affine_varieties
+- id: principal_part
+  en: principal part
+  ko: 주부
+  primary: ko
+  defs:
+  - label: '[복소해석학] §고립특이점과 Laurent 급수'
+    url: /ko/math/complex_analysis/isolated_singularities
 - id: product
   en: product
   ko: 곱
@@ -8325,6 +8369,13 @@ R:
   see:
   - label: Rational map
     id: rational_map
+- id: regular_part
+  en: regular part
+  ko: 정칙부
+  primary: en
+  defs:
+  - label: '[복소해석학] §고립특이점과 Laurent 급수'
+    url: /ko/math/complex_analysis/isolated_singularities
 - id: regular_sequence
   en: regular sequence
   ko: 정칙렬
@@ -8397,6 +8448,13 @@ R:
   defs:
   - label: '[미적분학] §연속함수'
     url: /ko/math/calculus/continuity
+- id: removable_singularity
+  en: removable singularity
+  ko: 가제거 특이점
+  primary: en
+  defs:
+  - label: '[복소해석학] §고립특이점과 Laurent 급수'
+    url: /ko/math/complex_analysis/isolated_singularities
 - id: representable_functor
   en: representable functor
   ko: 표현 가능한 함자
@@ -9095,6 +9153,13 @@ S:
   defs:
   - label: '[토릭 기하학] §토릭 다양체 위의 로그 미분형식'
     url: /ko/math/toric_geometry/logarithmic_differentials
+- id: simple_pole
+  en: simple pole
+  ko: 단순극
+  primary: ko
+  defs:
+  - label: '[복소해석학] §고립특이점과 Laurent 급수'
+    url: /ko/math/complex_analysis/isolated_singularities
 - id: simple_root
   en: simple root
   ko: 단순근
@@ -9102,6 +9167,13 @@ S:
   defs:
   - label: '[리 이론] §근계'
     url: /ko/math/lie_theory/root_systems
+- id: simple_zero
+  en: simple zero
+  ko: 단순영점
+  primary: ko
+  defs:
+  - label: '[복소해석학] §멱급수와 해석성'
+    url: /ko/math/complex_analysis/power_series_and_analyticity
 - id: simplicial_homology
   en: simplicial homology
   ko: ''
