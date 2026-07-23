@@ -5051,3 +5051,10 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 ## term_extract_worker 2026-07-23 12:30
 
 - _posts/Math/Complex_Geometry/ko/2026-06-22-Complex_Manifolds.md: 병기 필요 'biholomorphism' — 게이트 no: KMS 단일 후보 '쌍준동형' 자동 적용 보류
+
+## term_extract_worker 2026-07-23 14:30
+
+- _posts/Math/Complex_Geometry/ko/2026-06-22-Kodaira_Embedding_Theorem.md: 상한 초과 신규 후보 'Hodge manifold' — 보류
+- _posts/Math/Complex_Geometry/ko/2026-06-22-Kodaira_Embedding_Theorem.md: 상한 초과 신규 후보 'Riemann bilinear relations' — 보류
+- _posts/Math/Complex_Geometry/ko/2026-06-22-Kodaira_Embedding_Theorem.md: 상한 초과 신규 후보 'abelian variety' — 보류
+- _posts/Math/Complex_Geometry/ko/2026-06-22-Kodaira_Embedding_Theorem.md: 상한 초과 신규 후보 'k3 surface' — 보류

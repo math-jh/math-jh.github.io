@@ -398,6 +398,13 @@ A:
   defs:
   - label: '[복소해석학] §멱급수와 해석성'
     url: /ko/math/complex_analysis/power_series_and_analyticity
+- id: animated_commutative_ring
+  en: animated commutative ring
+  ko: 애니메이트 가환환
+  primary: en
+  defs:
+  - label: '[유도대수기하학] §Simplicial 가환환과 animation'
+    url: /ko/math/derived_algebraic_geometry/animated_rings
 - id: annihilator
   en: annihilator
   ko: 소멸자
@@ -798,6 +805,13 @@ B:
   defs:
   - label: '[대수다양체] §선형계'
     url: /ko/math/algebraic_varieties/linear_systems
+- id: base-point_freeness
+  en: base-point freeness
+  ko: 기저점 없음
+  primary: ko
+  defs:
+  - label: '[복소기하학] §Kodaira 매장정리'
+    url: /ko/math/complex_geometry/kodaira_embedding_theorem
 - id: base_space
   en: base space
   ko: 기저공간
@@ -1396,6 +1410,13 @@ C:
   defs:
   - label: '[대수적 위상수학] §벡터다발의 특성류'
     url: /ko/math/algebraic_topology/characteristic_classes
+- id: chern_connection
+  en: Chern connection
+  ko: Chern 접속
+  primary: ko
+  defs:
+  - label: '[복소기하학] §Kodaira 매장정리'
+    url: /ko/math/complex_geometry/kodaira_embedding_theorem
 - id: chern_polynomial
   en: Chern polynomial
   ko: 천 다항식
@@ -1473,6 +1494,13 @@ C:
   defs:
   - label: '[가환대수학] §인자'
     url: /ko/math/commutative_algebra/divisors
+- id: classical_truncation
+  en: classical truncation
+  ko: 고전적 절단
+  primary: en
+  defs:
+  - label: '[유도대수기하학] §Derived scheme과 derived stack'
+    url: /ko/math/derived_algebraic_geometry/derived_schemes
 - id: classifying_space
   en: classifying space
   ko: 분류공간
@@ -2361,6 +2389,13 @@ C:
     url: /ko/math/manifolds/tangent_and_cotangent_bundles
   - label: '[대수다양체] §표준선다발'
     url: /ko/math/algebraic_varieties/canonical_bundle
+- id: cotangent_complex
+  en: cotangent complex
+  ko: 여접 복합체
+  primary: ko
+  defs:
+  - label: '[유도대수기하학] §Simplicial 가환환과 animation'
+    url: /ko/math/derived_algebraic_geometry/animated_rings
 - id: cotangent_space
   en: cotangent space
   ko: 여접공간
@@ -2497,6 +2532,13 @@ C:
   defs:
   - label: '[미적분학] §곡선과 벡터함수'
     url: /ko/math/calculus/vector_functions
+- id: curvature_form
+  en: curvature form
+  ko: 곡률 형식
+  primary: ko
+  defs:
+  - label: '[복소기하학] §Kodaira 매장정리'
+    url: /ko/math/complex_geometry/kodaira_embedding_theorem
 - id: cusp
   en: cusp
   ko: 첨점
@@ -2577,6 +2619,13 @@ D:
   defs:
   - label: '[해석학] §선형 미분방정식계'
     url: /ko/math/analysis/linear_ode
+- id: deformation
+  en: deformation
+  ko: 변형
+  primary: ko
+  defs:
+  - label: '[유도대수기하학] §변형이론과 여접 복합체'
+    url: /ko/math/derived_algebraic_geometry/deformation_theory
 - id: deformation_retract
   en: deformation retract
   ko: 변형 수축
@@ -2683,6 +2732,13 @@ D:
   defs:
   - label: '[미적분학] §미분과 도함수'
     url: /ko/math/calculus/derivatives
+- id: derived_artin_stack
+  en: derived artin stack
+  ko: 유도 아틴 스택
+  primary: en
+  defs:
+  - label: '[유도대수기하학] §Derived scheme과 derived stack'
+    url: /ko/math/derived_algebraic_geometry/derived_schemes
 - id: derived_category
   en: derived category
   ko: 유도카테고리
@@ -2690,10 +2746,24 @@ D:
   defs:
   - label: '[호몰로지 대수학] §유도카테고리'
     url: /ko/math/homological_algebra/derived_categories
+- id: derived_critical_locus
+  en: derived critical locus
+  ko: 유도 임계점 자리
+  primary: en
+  defs:
+  - label: '[유도대수기하학] §Derived scheme과 derived stack'
+    url: /ko/math/derived_algebraic_geometry/derived_schemes
 - id: derived_deligne_mumford_stack
   en: derived Deligne–Mumford stack
   ko: ''
   primary: en
+  defs:
+  - label: '[유도대수기하학] §Derived scheme과 derived stack'
+    url: /ko/math/derived_algebraic_geometry/derived_schemes
+- id: derived_fiber_product
+  en: derived fiber product
+  ko: 유도 올곱
+  primary: ko
   defs:
   - label: '[유도대수기하학] §Derived scheme과 derived stack'
     url: /ko/math/derived_algebraic_geometry/derived_schemes
@@ -2718,6 +2788,13 @@ D:
   defs:
   - label: '[층론] §층의 유도 범주와 유도 functor'
     url: /ko/math/sheaf_theory/derived_category_of_sheaves
+- id: derived_scheme
+  en: derived scheme
+  ko: 유도 스킴
+  primary: en
+  defs:
+  - label: '[유도대수기하학] §Derived scheme과 derived stack'
+    url: /ko/math/derived_algebraic_geometry/derived_schemes
 - id: derived_series
   en: derived series
   ko: 유도열
@@ -2735,6 +2812,20 @@ D:
   defs:
   - label: '[층론] §층의 유도 범주와 유도 functor'
     url: /ko/math/sheaf_theory/derived_category_of_sheaves
+- id: derived_stack
+  en: derived stack
+  ko: 유도 스택
+  primary: en
+  defs:
+  - label: '[유도대수기하학] §Derived scheme과 derived stack'
+    url: /ko/math/derived_algebraic_geometry/derived_schemes
+- id: derived_tensor_product
+  en: derived tensor product
+  ko: 유도 tensor product
+  primary: ko
+  defs:
+  - label: '[유도대수기하학] §Simplicial 가환환과 animation'
+    url: /ko/math/derived_algebraic_geometry/animated_rings
 - id: descendant_gromov-witten_invariant
   en: descendant Gromov-Witten invariant
   ko: ''
@@ -3227,6 +3318,13 @@ D:
   defs:
   - label: '[다중선형대수학] §쌍대공간'
     url: /ko/math/multilinear_algebra/dual_spaces
+- id: dual_numbers
+  en: dual numbers
+  ko: 이중수
+  primary: en
+  defs:
+  - label: '[유도대수기하학] §변형이론과 여접 복합체'
+    url: /ko/math/derived_algebraic_geometry/deformation_theory
 - id: dual_pairing
   en: dual pairing
   ko: 쌍대 페어링
@@ -3886,6 +3984,13 @@ F:
   defs:
   - label: '[가환대수학] §기본 개념들'
     url: /ko/math/commutative_algebra/basic_notions
+- id: first_chern_form
+  en: first Chern form
+  ko: 제1 Chern 형식
+  primary: en
+  defs:
+  - label: '[복소기하학] §Kodaira 매장정리'
+    url: /ko/math/complex_geometry/kodaira_embedding_theorem
 - id: first_countable
   en: first countable
   ko: 제1 가산
@@ -3893,6 +3998,13 @@ F:
   defs:
   - label: '[위상수학] §옹골성과 필터의 수렴'
     url: /ko/math/topology/filter_convergence
+- id: first-order_deformation
+  en: first-order deformation
+  ko: 일차 변형
+  primary: en
+  defs:
+  - label: '[유도대수기하학] §변형이론과 여접 복합체'
+    url: /ko/math/derived_algebraic_geometry/deformation_theory
 - id: fixed_point
   en: fixed point
   ko: 고정점
@@ -4593,6 +4705,13 @@ H:
   defs:
   - label: '[복소기하학] §Kähler 다양체'
     url: /ko/math/complex_geometry/kahler_manifolds
+- id: hermitian_line_bundle
+  en: hermitian line bundle
+  ko: 에르미트 선다발
+  primary: en
+  defs:
+  - label: '[복소기하학] §Kodaira 매장정리'
+    url: /ko/math/complex_geometry/kodaira_embedding_theorem
 - id: hermitian_manifold
   en: Hermitian manifold
   ko: 에르미트 다양체
@@ -5086,6 +5205,13 @@ I:
   defs:
   - label: '[해석학] §무한급수'
     url: /ko/math/analysis/series
+- id: infinitesimal_deformation
+  en: infinitesimal deformation
+  ko: 무한소 변형
+  primary: ko
+  defs:
+  - label: '[유도대수기하학] §변형이론과 여접 복합체'
+    url: /ko/math/derived_algebraic_geometry/deformation_theory
 - id: inflection_point
   en: inflection point
   ko: 변곡점
@@ -5282,6 +5408,20 @@ I:
   defs:
   - label: '[가환대수학] §정수적 확장'
     url: /ko/math/commutative_algebra/integral_extension
+- id: integral_kähler_class
+  en: integral Kähler class
+  ko: 정수 켈러 류
+  primary: en
+  defs:
+  - label: '[복소기하학] §Kodaira 매장정리'
+    url: /ko/math/complex_geometry/kodaira_embedding_theorem
+- id: integral_kähler_form
+  en: integral Kähler form
+  ko: 정수 켈러 형식
+  primary: en
+  defs:
+  - label: '[복소기하학] §Kodaira 매장정리'
+    url: /ko/math/complex_geometry/kodaira_embedding_theorem
 - id: integral_manifold
   en: integral manifold
   ko: 적분다양체
@@ -7131,6 +7271,13 @@ N:
   defs:
   - label: '[선형대수학] §쌍선형형식'
     url: /ko/math/linear_algebra/bilinear_form
+- id: nonabelian_derived_functor
+  en: nonabelian derived functor
+  ko: 비아벨 유도 함자
+  primary: ko
+  defs:
+  - label: '[유도대수기하학] §Simplicial 가환환과 animation'
+    url: /ko/math/derived_algebraic_geometry/animated_rings
 - id: nondegeneracy
   en: nondegeneracy
   ko: 비퇴화성
@@ -7269,6 +7416,13 @@ N:
     url: /ko/math/commutative_algebra/regular_local_rings
   - label: '[가환대수학] §인자'
     url: /ko/math/commutative_algebra/divisors
+- id: normalized_chain_complex
+  en: normalized chain complex
+  ko: normalization 사슬 복합체
+  primary: ko
+  defs:
+  - label: '[유도대수기하학] §Simplicial 가환환과 animation'
+    url: /ko/math/derived_algebraic_geometry/animated_rings
 - id: novikov_variable
   en: Novikov variable
   ko: 노비코프 변수
@@ -7305,6 +7459,13 @@ O:
   defs:
   - label: '[범주론] §범주'
     url: /ko/math/category_theory/categories
+- id: obstruction
+  en: obstruction
+  ko: 장애
+  primary: en
+  defs:
+  - label: '[유도대수기하학] §변형이론과 여접 복합체'
+    url: /ko/math/derived_algebraic_geometry/deformation_theory
 - id: odd_map
   en: odd map
   ko: 기함수형 사상
@@ -7917,6 +8078,20 @@ P:
   defs:
   - label: '[대수적 위상수학] §벡터다발의 특성류'
     url: /ko/math/algebraic_topology/characteristic_classes
+- id: positive
+  en: positive
+  ko: 양의
+  primary: en
+  defs:
+  - label: '[복소기하학] §Kodaira 매장정리'
+    url: /ko/math/complex_geometry/kodaira_embedding_theorem
+- id: positive_class
+  en: positive class
+  ko: 양의 류
+  primary: en
+  defs:
+  - label: '[복소기하학] §Kodaira 매장정리'
+    url: /ko/math/complex_geometry/kodaira_embedding_theorem
 - id: positive_nilpotent_subalgebra
   en: positive nilpotent subalgebra
   ko: 양의 멱영 부분대수
@@ -8427,6 +8602,13 @@ Q:
   defs:
   - label: '[스킴] §스킴 사상의 성질들'
     url: /ko/math/scheme_theory/properties_of_scheme_morphisms
+- id: quasi-smooth
+  en: quasi-smooth
+  ko: 유사매끄러움
+  primary: en
+  defs:
+  - label: '[유도대수기하학] §Derived scheme과 derived stack'
+    url: /ko/math/derived_algebraic_geometry/derived_schemes
 - id: quotient
   en: quotient
   ko: 몫
@@ -8757,6 +8939,13 @@ R:
     url: /ko/math/set_theory/binary_relation
   - label: '[대수적 구조] §반군, 모노이드, 군'
     url: /ko/math/algebraic_structures/groups
+- id: relative_cotangent_complex
+  en: relative cotangent complex
+  ko: 상대 여접 복합체
+  primary: ko
+  defs:
+  - label: '[유도대수기하학] §Derived scheme과 derived stack'
+    url: /ko/math/derived_algebraic_geometry/derived_schemes
 - id: relative_homology
   en: relative homology
   ko: 상대 호몰로지
@@ -9371,6 +9560,20 @@ S:
   defs:
   - label: '[위상수학] §하우스도르프 공간'
     url: /ko/math/topology/Hausdorff_spaces
+- id: separation_of_points
+  en: separation of points
+  ko: 점 분리
+  primary: ko
+  defs:
+  - label: '[복소기하학] §Kodaira 매장정리'
+    url: /ko/math/complex_geometry/kodaira_embedding_theorem
+- id: separation_of_tangent_vectors
+  en: separation of tangent vectors
+  ko: 접벡터 분리
+  primary: en
+  defs:
+  - label: '[복소기하학] §Kodaira 매장정리'
+    url: /ko/math/complex_geometry/kodaira_embedding_theorem
 - id: sequence
   en: sequence
   ko: 점열
@@ -9557,6 +9760,13 @@ S:
   en: simplicial identity
   ko: 단체 항등식
   primary: en
+  defs:
+  - label: '[유도대수기하학] §Simplicial 가환환과 animation'
+    url: /ko/math/derived_algebraic_geometry/animated_rings
+- id: simplicial_index_category
+  en: simplicial index category
+  ko: 단체 첨자 범주
+  primary: ko
   defs:
   - label: '[유도대수기하학] §Simplicial 가환환과 animation'
     url: /ko/math/derived_algebraic_geometry/animated_rings
@@ -9860,6 +10070,13 @@ S:
   defs:
   - label: '[다중선형대수학] §기저변환'
     url: /ko/math/multilinear_algebra/change_of_basis
+- id: square-zero_extension
+  en: square-zero extension
+  ko: 제곱영 확대
+  primary: en
+  defs:
+  - label: '[유도대수기하학] §변형이론과 여접 복합체'
+    url: /ko/math/derived_algebraic_geometry/deformation_theory
 - id: stability
   en: Stability
   ko: 안정성
@@ -10435,6 +10652,13 @@ T:
   see:
   - label: Cotangent bundle
     id: cotangent_bundle
+- id: tangent_complex
+  en: tangent complex
+  ko: 접복합체
+  primary: ko
+  defs:
+  - label: '[유도대수기하학] §Derived scheme과 derived stack'
+    url: /ko/math/derived_algebraic_geometry/derived_schemes
 - id: tangent_cone
   en: tangent cone
   ko: 접뿔
@@ -11007,6 +11231,13 @@ U:
   defs:
   - label: '[위상수학] §고유함수'
     url: /ko/math/topology/proper_maps
+- id: unobstructed
+  en: unobstructed
+  ko: 장애 없음
+  primary: en
+  defs:
+  - label: '[유도대수기하학] §변형이론과 여접 복합체'
+    url: /ko/math/derived_algebraic_geometry/deformation_theory
 - id: upper_adjoint
   en: upper adjoint
   ko: 위 수반
@@ -11171,6 +11402,20 @@ V:
   defs:
   - label: '[미적분학] §미분과 도함수'
     url: /ko/math/calculus/derivatives
+- id: very_ample
+  en: very ample
+  ko: 매우 풍부한
+  primary: en
+  defs:
+  - label: '[복소기하학] §Kodaira 매장정리'
+    url: /ko/math/complex_geometry/kodaira_embedding_theorem
+- id: virtual_relative_dimension
+  en: virtual relative dimension
+  ko: virtual 상대차원
+  primary: ko
+  defs:
+  - label: '[유도대수기하학] §Derived scheme과 derived stack'
+    url: /ko/math/derived_algebraic_geometry/derived_schemes
 W:
 - id: weak_direct_product
   en: weak direct product
@@ -11179,6 +11424,13 @@ W:
   defs:
   - label: '[대수적 구조] §제한합'
     url: /ko/math/algebraic_structures/restricted_sums
+- id: weak_equivalence
+  en: weak equivalence
+  ko: 약한 동치
+  primary: ko
+  defs:
+  - label: '[유도대수기하학] §Simplicial 가환환과 animation'
+    url: /ko/math/derived_algebraic_geometry/animated_rings
 - id: weaker_topology
   en: weaker topology
   ko: 약한 위상
