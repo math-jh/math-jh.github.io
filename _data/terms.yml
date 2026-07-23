@@ -326,6 +326,20 @@ A:
     url: /ko/math/linear_algebra/characteristic_polynomial
   - label: '[체론] §대수적 폐포'
     url: /ko/math/field_theory/algebraically_closed_extensions
+- id: almost_complex_manifold
+  en: almost complex manifold
+  ko: 거의 복소다양체
+  primary: en
+  defs:
+  - label: '[복소기하학] §거의 복소구조'
+    url: /ko/math/complex_geometry/almost_complex_structures
+- id: almost_complex_structure
+  en: almost complex structure
+  ko: 거의 복소구조
+  primary: ko
+  defs:
+  - label: '[복소기하학] §거의 복소구조'
+    url: /ko/math/complex_geometry/almost_complex_structures
 - id: almost_split_sequence
   en: almost split sequence
   ko: 거의 분할 수열
@@ -2002,6 +2016,13 @@ C:
   defs:
   - label: '[복소해석학] §복소수와 복소평면'
     url: /ko/math/complex_analysis/complex_numbers
+- id: complexified_tangent_space
+  en: complexified tangent space
+  ko: 복소화 접공간
+  primary: en
+  defs:
+  - label: '[복소기하학] §거의 복소구조'
+    url: /ko/math/complex_geometry/almost_complex_structures
 - id: composition
   en: composition
   ko: 합성
@@ -2914,6 +2935,13 @@ D:
   defs:
   - label: '[해석학] §열린집합과 닫힌집합'
     url: /ko/math/analysis/open_and_closed_sets
+- id: discrete_set
+  en: discrete set
+  ko: 이산집합
+  primary: en
+  defs:
+  - label: '[복소해석학] §영점과 일치정리'
+    url: /ko/math/complex_analysis/zeros_and_identity_theorem
 - id: discrete_topology
   en: discrete topology
   ko: 이산위상
@@ -4986,6 +5014,8 @@ I:
   defs:
   - label: '[미적분학] §적분'
     url: /ko/math/calculus/integration
+  - label: '[복소기하학] §거의 복소구조'
+    url: /ko/math/complex_geometry/almost_complex_structures
 - id: integral
   en: integral
   ko: 정수적
@@ -5204,6 +5234,13 @@ I:
   defs:
   - label: '[스킴] §준연접층'
     url: /ko/math/scheme_theory/quasicoherent_sheaves
+- id: involutive
+  en: involutive
+  ko: 대합적
+  primary: en
+  defs:
+  - label: '[복소기하학] §거의 복소구조'
+    url: /ko/math/complex_geometry/almost_complex_structures
 - id: irreducible
   en: irreducible
   ko: 기약
@@ -6073,6 +6110,13 @@ L:
     url: /ko/math/algebraic_structures/field_of_fractions
   - label: '[가환대수학] §국소화'
     url: /ko/math/commutative_algebra/localization
+- id: locally_bounded
+  en: locally bounded
+  ko: 국소유계
+  primary: ko
+  defs:
+  - label: '[복소해석학] §Riemann 사상정리'
+    url: /ko/math/complex_analysis/riemann_mapping_theorem
 - id: locally_closed
   en: locally closed
   ko: 국소적으로 닫힌
@@ -6182,6 +6226,13 @@ L:
   defs:
   - label: '[범주론] §범주'
     url: /ko/math/category_theory/categories
+- id: locally_uniform_convergence
+  en: locally uniform convergence
+  ko: 국소균등수렴
+  primary: ko
+  defs:
+  - label: '[복소해석학] §Riemann 사상정리'
+    url: /ko/math/complex_analysis/riemann_mapping_theorem
 - id: log_calabi-yau_pair
   en: log Calabi-Yau pair
   ko: 로그 칼라비-야우 쌍
@@ -6721,6 +6772,13 @@ N:
   defs:
   - label: '[위상수학] §위상공간의 다른 정의들'
     url: /ko/math/topology/equivalent_formulations_of_topology
+- id: nijenhuis_tensor
+  en: nijenhuis tensor
+  ko: 네이엔하위스 텐서
+  primary: en
+  defs:
+  - label: '[복소기하학] §거의 복소구조'
+    url: /ko/math/complex_geometry/almost_complex_structures
 - id: nilpotency_index
   en: (nilpotency) index
   ko: 멱영지수
@@ -6865,6 +6923,13 @@ N:
   see:
   - label: Separable extension
     id: separable_extension
+- id: normal_family
+  en: normal family
+  ko: 정규족
+  primary: ko
+  defs:
+  - label: '[복소해석학] §Riemann 사상정리'
+    url: /ko/math/complex_analysis/riemann_mapping_theorem
 - id: normal_fan
   en: normal fan
   ko: ''
@@ -7253,6 +7318,13 @@ O:
   - label: '[선형대수학] §내적공간'
     url: /ko/math/linear_algebra/inner_product_spaces
 P:
+- id: p_q_-form
+  en: (p,q)-form
+  ko: (p,q)-형식
+  primary: en
+  defs:
+  - label: '[복소기하학] §거의 복소구조'
+    url: /ko/math/complex_geometry/almost_complex_structures
 - id: pairing
   en: pairing
   ko: 짝지음
@@ -8485,6 +8557,13 @@ R:
   defs:
   - label: '[스킴] §점함자'
     url: /ko/math/scheme_theory/functor_of_points
+- id: residue
+  en: residue
+  ko: 유수
+  primary: en
+  defs:
+  - label: '[복소해석학] §유수정리'
+    url: /ko/math/complex_analysis/residue_theorem
 - id: residue_field
   en: residue field
   ko: 잉여류체
@@ -9516,6 +9595,13 @@ S:
   defs:
   - label: '[스킴] §스킴의 위상구조'
     url: /ko/math/scheme_theory/topology_of_schemes
+- id: standard_almost_complex_structure
+  en: standard almost complex structure
+  ko: 표준 거의 복소구조
+  primary: ko
+  defs:
+  - label: '[복소기하학] §거의 복소구조'
+    url: /ko/math/complex_geometry/almost_complex_structures
 - id: standard_étale
   en: standard étale
   ko: 표준 에탈
