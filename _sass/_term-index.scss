@@ -277,3 +277,40 @@
     font-family: $sans-serif;
   }
 }
+
+// 기호 찾아보기(/ko/notations) 변주 — 여백 글자 대신 카테고리 헤딩, sticky 바는
+// 카테고리 점프로 재사용. 절 안은 "관례 문자"/"표기법" 라벨 행으로 나뉜다.
+// 엔트리 조판(term·alt·lead·defs)은 위 규칙을 그대로 재사용한다.
+.term-index--notation {
+  .term-index__heading {
+    margin: 1.6em 0 0.35em;
+    padding-bottom: 0.2em;
+    font-size: 1.4em; // 과목 제목 — h1(1.563)과 h2(1.25) 사이
+    border-bottom: 3px double $border-color; // 용어 색인 상단 바의 이중선 모티프
+  }
+
+  // 절 내부 구분 라벨 행 ("관례 문자" / "표기법") — 엔트리 본문과 같은 크기, 볼드로 구분
+  .term-index__sublabel {
+    margin: 1em 0 0.2em;
+    font-family: $sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+
+  // 카테고리 링크는 글자보다 길다 — 낱말 단위로만 줄을 접는다
+  .term-index__letters a {
+    word-break: keep-all;
+  }
+
+  @include breakpoint($large) {
+    .term-index__section {
+      border-top: 0; // 절 구분은 헤딩이 담당
+      padding-top: 0;
+    }
+
+    .term-index__list {
+      margin-left: 0; // 글자 열이 없으므로 들여쓰기 해제
+    }
+  }
+}

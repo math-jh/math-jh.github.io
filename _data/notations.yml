@@ -1,0 +1,4687 @@
+# 기호 찾아보기 데이터 — /ko/notations 가 Liquid 로 조판한다.
+# 생성: notation-index-sweep workflow (2026-07-24) + build_notations.py v2 결정론 조립.
+# 항목: category(폴더 슬러그)/title/conventions[]/items[] — 각 행 {symbol(KaTeX, $ 없이)·
+#       meaning(terms.yml primary 우선)·defs[{label("§글제목"),url}]}. 카테고리 순서는
+#       _data/categories.yml subjects 순서. 수동 편집 가능 — 재생성 시 병합 주의.
+- category: calculus
+  title: 미적분학
+  items:
+  - symbol: '[a,b]'
+    meaning: 닫힌구간
+    defs:
+    - label: §연속함수
+      url: /ko/math/calculus/continuity
+    - label: §유향집합
+      url: /ko/math/set_theory/directed_set
+  - symbol: (a_n)
+    meaning: 점열
+    defs:
+    - label: §수열의 극한
+      url: /ko/math/calculus/sequences
+  - symbol: \approx
+    meaning: 근사
+    defs:
+    - label: §미분과 도함수
+      url: /ko/math/calculus/derivatives
+  - symbol: \arcsin
+    meaning: 아크사인
+    defs:
+    - label: §미분법
+      url: /ko/math/calculus/differentiation_rules
+  - symbol: \arctan
+    meaning: 아크탄젠트
+    defs:
+    - label: §미분법
+      url: /ko/math/calculus/differentiation_rules
+  - symbol: \area(D)
+    meaning: 평면 영역의 넓이
+    defs:
+    - label: §그린 정리
+      url: /ko/math/calculus/greens_theorem
+  - symbol: C^1
+    meaning: 일급
+    defs:
+    - label: §곡선과 벡터함수
+      url: /ko/math/calculus/vector_functions
+  - symbol: C^\infty
+    meaning: smooth
+    defs:
+    - label: §미분과 도함수
+      url: /ko/math/calculus/derivatives
+    - label: §미분다양체
+      url: /ko/math/manifolds/smooth_manifolds
+  - symbol: \curl \mathbf{F}
+    meaning: 회전
+    defs:
+    - label: §벡터장
+      url: /ko/math/calculus/vector_fields
+  - symbol: \det
+    meaning: 행렬식
+    defs:
+    - label: §다변수함수와 편미분
+      url: /ko/math/calculus/partial_derivatives
+    - label: §리 군
+      url: /ko/math/lie_theory/Lie_groups
+    - label: §행렬식의 존재성과 유일성
+      url: /ko/math/linear_algebra/existence_and_uniqueness_of_determinant
+  - symbol: \divergence \mathbf{F}
+    meaning: 발산
+    defs:
+    - label: §벡터장
+      url: /ko/math/calculus/vector_fields
+  - symbol: dS
+    meaning: 곡면의 면적원소
+    defs:
+    - label: §면적분과 선속
+      url: /ko/math/calculus/surface_integrals
+  - symbol: e
+    meaning: 자연상수
+    defs:
+    - label: §수열의 극한
+      url: /ko/math/calculus/sequences
+  - symbol: \mathbf{e}_i
+    meaning: $i$번째 표준기저벡터
+    defs:
+    - label: §곡선과 벡터함수
+      url: /ko/math/calculus/vector_functions
+  - symbol: \erf(x)
+    meaning: 오차함수
+    defs:
+    - label: §미적분의 기본정리
+      url: /ko/math/calculus/fundamental_theorem_of_calculus
+  - symbol: f'
+    meaning: 도함수
+    defs:
+    - label: §미분과 도함수
+      url: /ko/math/calculus/derivatives
+  - symbol: \mathbf{F}
+    meaning: 벡터장
+    defs:
+    - label: §벡터장
+      url: /ko/math/calculus/vector_fields
+  - symbol: f^{-1}
+    meaning: 역함수
+    defs:
+    - label: §연속함수
+      url: /ko/math/calculus/continuity
+    - label: §함수들 사이의 연산
+      url: /ko/math/set_theory/operation_of_functions
+  - symbol: f'(a)
+    meaning: derivative
+    defs:
+    - label: §미분과 도함수
+      url: /ko/math/calculus/derivatives
+  - symbol: f^{(n)}
+    meaning: $n$계도함수
+    defs:
+    - label: §미분과 도함수
+      url: /ko/math/calculus/derivatives
+  - symbol: \frac{\partial^2 f}{\partial x \partial y}
+    meaning: 혼합 이계편미분
+    defs:
+    - label: §다변수함수와 편미분
+      url: /ko/math/calculus/partial_derivatives
+  - symbol: f_x
+    meaning: 편미분
+    defs:
+    - label: §다변수함수와 편미분
+      url: /ko/math/calculus/partial_derivatives
+  - symbol: g \circ f
+    meaning: 합성함수
+    defs:
+    - label: §연속함수
+      url: /ko/math/calculus/continuity
+  - symbol: H
+    meaning: 헤세 행렬
+    defs:
+    - label: §다변수함수와 편미분
+      url: /ko/math/calculus/partial_derivatives
+  - symbol: \implies
+    meaning: 함의
+    defs:
+    - label: §함수의 극한
+      url: /ko/math/calculus/functions_and_limits
+  - symbol: \int_a^b f(x)\mathop{dx}
+    meaning: 정적분
+    defs:
+    - label: §적분
+      url: /ko/math/calculus/integration
+  - symbol: \kappa
+    meaning: 곡률
+    defs:
+    - label: §곡선과 벡터함수
+      url: /ko/math/calculus/vector_functions
+  - symbol: \lambda
+    meaning: 라그랑주 승수
+    defs:
+    - label: §다변수함수와 편미분
+      url: /ko/math/calculus/partial_derivatives
+  - symbol: \li(x)
+    meaning: 적분로그
+    defs:
+    - label: §미적분의 기본정리
+      url: /ko/math/calculus/fundamental_theorem_of_calculus
+  - symbol: \ln
+    meaning: 자연로그
+    defs:
+    - label: §미분법
+      url: /ko/math/calculus/differentiation_rules
+  - symbol: \mathop{dx}
+    meaning: differential
+    defs:
+    - label: §적분
+      url: /ko/math/calculus/integration
+  - symbol: \mathbf{N}
+    meaning: 단위법선벡터
+    defs:
+    - label: §곡선과 벡터함수
+      url: /ko/math/calculus/vector_functions
+  - symbol: \nabla
+    meaning: del 연산자
+    defs:
+    - label: §벡터장
+      url: /ko/math/calculus/vector_fields
+  - symbol: \oint_C
+    meaning: 경로적분
+    defs:
+    - label: §선적분
+      url: /ko/math/calculus/line_integrals
+  - symbol: \partial_x
+    meaning: 편미분
+    defs:
+    - label: §벡터장
+      url: /ko/math/calculus/vector_fields
+  - symbol: \perp
+    meaning: 수직
+    defs:
+    - label: §곡선과 벡터함수
+      url: /ko/math/calculus/vector_functions
+  - symbol: R
+    meaning: 수렴반경
+    defs:
+    - label: §멱급수
+      url: /ko/math/calculus/power_series
+  - symbol: \mathbf{r}(t)
+    meaning: 벡터값 함수
+    defs:
+    - label: §곡선과 벡터함수
+      url: /ko/math/calculus/vector_functions
+  - symbol: \sgn(x)
+    meaning: 부호함수
+    defs:
+    - label: §이상적분
+      url: /ko/math/calculus/improper_integrals
+  - symbol: \sum a_n
+    meaning: 무한급수
+    defs:
+    - label: §무한급수
+      url: /ko/math/calculus/series
+- category: linear_algebra
+  title: 선형대수학
+  conventions:
+  - symbol: \mathbb{K}
+    meaning: field
+    defs:
+    - label: §가환군과 체
+      url: /ko/math/linear_algebra/fields
+    - label: §분수체
+      url: /ko/math/algebraic_structures/field_of_fractions
+  - symbol: V, W
+    meaning: 벡터공간
+    defs:
+    - label: §벡터공간
+      url: /ko/math/linear_algebra/vector_spaces
+  - symbol: u, v
+    meaning: 벡터
+    defs:
+    - label: §벡터공간
+      url: /ko/math/linear_algebra/vector_spaces
+  - symbol: \alpha, \beta
+    meaning: 스칼라
+    defs:
+    - label: §벡터공간
+      url: /ko/math/linear_algebra/vector_spaces
+  items:
+  - symbol: '0'
+    meaning: 덧셈에 대한 항등원
+    defs:
+    - label: §가환군과 체
+      url: /ko/math/linear_algebra/fields
+  - symbol: \{0\}
+    meaning: trivial vector space
+    defs:
+    - label: §벡터공간
+      url: /ko/math/linear_algebra/vector_spaces
+  - symbol: -a
+    meaning: 덧셈에 대한 역원
+    defs:
+    - label: §가환군과 체
+      url: /ko/math/linear_algebra/fields
+  - symbol: a^{-1}
+    meaning: 곱셈에 대한 역원
+    defs:
+    - label: §가환군과 체
+      url: /ko/math/linear_algebra/fields
+  - symbol: A^{-1}
+    meaning: 역행렬
+    defs:
+    - label: §행렬
+      url: /ko/math/linear_algebra/matrices
+  - symbol: A^\ast=\bar A^t
+    meaning: 켤레전치
+    defs:
+    - label: §복소내적공간
+      url: /ko/math/linear_algebra/complex_inner_product_spaces#prop5
+  - symbol: A^{(i,j)}
+    meaning: $A$의 $i$행 $j$열을 없앤 ($n$-1)차 소행렬
+    defs:
+    - label: §행렬식의 존재성과 유일성
+      url: /ko/math/linear_algebra/existence_and_uniqueness_of_determinant
+  - symbol: A_{ij}
+    meaning: 행렬의 $i$번째 행, $j$번째 열 성분
+    defs:
+    - label: §행렬
+      url: /ko/math/linear_algebra/matrices
+  - symbol: \alpha u
+    meaning: 스칼라곱
+    defs:
+    - label: §벡터공간
+      url: /ko/math/linear_algebra/vector_spaces
+  - symbol: A^+
+    meaning: Moore-Penrose pseudoinverse
+    defs:
+    - label: §최소제곱법
+      url: /ko/math/linear_algebra/least_squares_method#def7
+    - label: §특이값 분해
+      url: /ko/math/linear_algebra/singular_value_decomposition#def5
+  - symbol: A_n
+    meaning: 조르당-슈발레 분해의 nilpotent 부분
+    defs:
+    - label: §최소다항식
+      url: /ko/math/linear_algebra/minimal_polynomial#thm11
+  - symbol: A_s
+    meaning: 조르당-슈발레 분해의 diagonalizable 부분
+    defs:
+    - label: §최소다항식
+      url: /ko/math/linear_algebra/minimal_polynomial#thm11
+  - symbol: A^t
+    meaning: 전치행렬
+    defs:
+    - label: §행렬
+      url: /ko/math/linear_algebra/matrices
+  - symbol: Ax
+    meaning: 행렬과 벡터의 곱
+    defs:
+    - label: §행렬
+      url: /ko/math/linear_algebra/matrices
+  - symbol: BA
+    meaning: 행렬의 곱
+    defs:
+    - label: §행렬
+      url: /ko/math/linear_algebra/matrices
+  - symbol: \mathcal{B}^\ast
+    meaning: dual basis
+    defs:
+    - label: §쌍대공간
+      url: /ko/math/linear_algebra/dual_space
+  - symbol: \mathcal{B}
+    meaning: basis
+    defs:
+    - label: §벡터공간의 기저
+      url: /ko/math/linear_algebra/basis
+  - symbol: \mathbb{C}
+    meaning: 복소수 집합
+    defs:
+    - label: §가환군과 체
+      url: /ko/math/linear_algebra/fields
+  - symbol: \ch\mathbb{K}
+    meaning: characteristic
+    defs:
+    - label: §쌍선형형식
+      url: /ko/math/linear_algebra/bilinear_form#def11
+  - symbol: C(I)
+    meaning: $I$ 위의 연속함수들의 공간
+    defs:
+    - label: §벡터공간
+      url: /ko/math/linear_algebra/vector_spaces
+  - symbol: C^k(I)
+    meaning: $k$번째 도함수가 연속인 함수들의 공간
+    defs:
+    - label: §벡터공간
+      url: /ko/math/linear_algebra/vector_spaces
+  - symbol: \col A
+    meaning: 행렬의 열공간
+    defs:
+    - label: §행렬
+      url: /ko/math/linear_algebra/matrices
+  - symbol: D
+    meaning: 행렬식
+    defs:
+    - label: §행렬식
+      url: /ko/math/linear_algebra/determinant
+  - symbol: \det A
+    meaning: 행렬식
+    defs:
+    - label: §행렬식
+      url: /ko/math/linear_algebra/determinant
+  - symbol: \diag(\lambda_1,\ldots,\lambda_n)
+    meaning: 대각행렬
+    defs:
+    - label: §복소 스펙트럼 정리
+      url: /ko/math/linear_algebra/complex_spectral_theorem
+  - symbol: \dim V
+    meaning: 차원
+    defs:
+    - label: §벡터공간의 차원
+      url: /ko/math/linear_algebra/dimension
+  - symbol: e_1,\ldots,e_n
+    meaning: 표준 기저
+    defs:
+    - label: §벡터공간의 기저
+      url: /ko/math/linear_algebra/basis
+  - symbol: E_{i,j}
+    meaning: 두 행을 교환하는 기본행렬
+    defs:
+    - label: §가우스 소거법
+      url: /ko/math/linear_algebra/Gaussian_elimination
+  - symbol: E''_{i,j,r}
+    meaning: 한 행의 배수를 다른 행에 더하는 기본행렬
+    defs:
+    - label: §가우스 소거법
+      url: /ko/math/linear_algebra/Gaussian_elimination
+  - symbol: E'_{i,r}
+    meaning: 한 행에 상수 $r$을 곱하는 기본행렬
+    defs:
+    - label: §가우스 소거법
+      url: /ko/math/linear_algebra/Gaussian_elimination
+  - symbol: E_\lambda
+    meaning: 고유공간
+    defs:
+    - label: §특성다항식
+      url: /ko/math/linear_algebra/characteristic_polynomial
+  - symbol: \ev_v
+    meaning: evaluation map
+    defs:
+    - label: §쌍대공간
+      url: /ko/math/linear_algebra/dual_space
+  - symbol: \Fun(I,\mathbb{R})
+    meaning: $I$에서 $R$로의 함수들이 이루는 벡터공간
+    defs:
+    - label: §벡터공간
+      url: /ko/math/linear_algebra/vector_spaces
+  - symbol: G
+    meaning: Gram matrix
+    defs:
+    - label: §쌍선형형식
+      url: /ko/math/linear_algebra/bilinear_form
+  - symbol: G_\lambda(A)
+    meaning: generalized eigenspace
+    defs:
+    - label: §조르당 표준형
+      url: /ko/math/linear_algebra/Jordan_canonical_form#def3
+  - symbol: \Hom_\mathbb{K}(V,W)
+    meaning: $V$에서 $W$로의 선형사상들의 벡터공간
+    defs:
+    - label: §선형사상들의 공간
+      url: /ko/math/linear_algebra/space_of_linear_maps
+  - symbol: I
+    meaning: 항등행렬
+    defs:
+    - label: §행렬
+      url: /ko/math/linear_algebra/matrices
+  - symbol: \id_V
+    meaning: 항등사상
+    defs:
+    - label: §선형사상
+      url: /ko/math/linear_algebra/linear_map
+  - symbol: \im L
+    meaning: image
+    defs:
+    - label: §선형사상
+      url: /ko/math/linear_algebra/linear_map
+  - symbol: \iota
+    meaning: 포함사상
+    defs:
+    - label: §선형사상
+      url: /ko/math/linear_algebra/linear_map
+    - label: §선형사상들의 공간
+      url: /ko/math/linear_algebra/space_of_linear_maps
+    - label: §부분공간
+      url: /ko/math/topology/subspaces
+  - symbol: \ker L
+    meaning: kernel
+    defs:
+    - label: §선형사상
+      url: /ko/math/linear_algebra/linear_map
+  - symbol: \mathbb{K}^n
+    meaning: 유클리드 공간
+    defs:
+    - label: §벡터공간
+      url: /ko/math/linear_algebra/vector_spaces
+  - symbol: \mathbb{K}^\times
+    meaning: 0을 뺀 체의 곱셈군
+    defs:
+    - label: §가환군과 체
+      url: /ko/math/linear_algebra/fields
+  - symbol: \mathbb{K}[\x]
+    meaning: (유한차수) 다항식들의 공간/다항식환
+    defs:
+    - label: §최소다항식
+      url: /ko/math/linear_algebra/minimal_polynomial
+  - symbol: \mathbb{K}[[\x]]
+    meaning: $K$ 계수 형식적 멱급수들의 집합
+    defs:
+    - label: §부분공간
+      url: /ko/math/linear_algebra/subspaces
+  - symbol: \mathbb{K}[\x]
+    meaning: $K$ 계수 $x$에 대한 다항식들의 집합
+    defs:
+    - label: §부분공간
+      url: /ko/math/linear_algebra/subspaces
+  - symbol: \mathbb{K}x
+    meaning: 한 벡터 $x$가 생성하는 부분공간
+    defs:
+    - label: §벡터공간의 기저
+      url: /ko/math/linear_algebra/basis
+  - symbol: L_A
+    meaning: 행렬 $A$가 정의하는 선형사상
+    defs:
+    - label: §선형대수학의 기본정리
+      url: /ko/math/linear_algebra/ftla
+  - symbol: \langle-,-\rangle
+    meaning: 내적
+    defs:
+    - label: §내적공간
+      url: /ko/math/linear_algebra/inner_product_spaces#def1
+    - label: §복소내적공간
+      url: /ko/math/linear_algebra/complex_inner_product_spaces#def1
+  - symbol: \langle-,-\rangle
+    meaning: bilinear form
+    defs:
+    - label: §쌍선형형식
+      url: /ko/math/linear_algebra/bilinear_form#def1
+  - symbol: \langle S\rangle
+    meaning: $S$가 생성하는 가장 작은 subgroup
+    defs:
+    - label: §벡터공간의 기저
+      url: /ko/math/linear_algebra/basis
+    - label: §반군, 모노이드, 군
+      url: /ko/math/algebraic_structures/groups
+  - symbol: L^\ast
+    meaning: 복소내적공간 작용소의 adjoint
+    defs:
+    - label: §복소내적공간
+      url: /ko/math/linear_algebra/complex_inner_product_spaces
+  - symbol: L^\ast
+    meaning: dual map
+    defs:
+    - label: §쌍대공간
+      url: /ko/math/linear_algebra/dual_space
+  - symbol: L^\ast
+    meaning: linear map $L$의 adjoint
+    defs:
+    - label: §쌍선형형식
+      url: /ko/math/linear_algebra/bilinear_form
+  - symbol: \leq
+    meaning: subgroup 관계
+    defs:
+    - label: §벡터공간의 기저
+      url: /ko/math/linear_algebra/basis
+    - label: §군의 직접곱
+      url: /ko/math/algebraic_structures/direct_products
+  - symbol: L^t
+    meaning: 실내적공간 위 작용소 $L$의 adjoint
+    defs:
+    - label: §내적공간
+      url: /ko/math/linear_algebra/inner_product_spaces
+  - symbol: \lVert-\rVert
+    meaning: norm
+    defs:
+    - label: §내적공간
+      url: /ko/math/linear_algebra/inner_product_spaces#def2
+    - label: §복소내적공간
+      url: /ko/math/linear_algebra/complex_inner_product_spaces#def2
+  - symbol: L:V\rightarrow W
+    meaning: 선형사상
+    defs:
+    - label: §선형사상
+      url: /ko/math/linear_algebra/linear_map
+  - symbol: m_A
+    meaning: minimal polynomial
+    defs:
+    - label: §최소다항식
+      url: /ko/math/linear_algebra/minimal_polynomial#def5
+  - symbol: \Mat_m(\mathbb{K})
+    meaning: $n$차 정사각행렬 전체 집합
+    defs:
+    - label: §행렬
+      url: /ko/math/linear_algebra/matrices
+  - symbol: \Mat_{m\times n}(\mathbb{K})
+    meaning: $K$를 성분으로 갖는 모든 m×$n$ 행렬들의 집합
+    defs:
+    - label: §행렬
+      url: /ko/math/linear_algebra/matrices
+  - symbol: \nullity L
+    meaning: nullity
+    defs:
+    - label: §동형사상
+      url: /ko/math/linear_algebra/isomorphic_vector_spaces
+  - symbol: O
+    meaning: 영행렬
+    defs:
+    - label: §행렬
+      url: /ko/math/linear_algebra/matrices
+  - symbol: p(A)
+    meaning: 다항식 $p$에 행렬 $A$를 대입한 행렬
+    defs:
+    - label: §최소다항식
+      url: /ko/math/linear_algebra/minimal_polynomial#def1
+  - symbol: \proj_U v
+    meaning: $v$의 부분공간 $U$로의 정사영
+    defs:
+    - label: §내적공간
+      url: /ko/math/linear_algebra/inner_product_spaces
+  - symbol: p:V\rightarrow V/W
+    meaning: 자연스러운 사영
+    defs:
+    - label: §몫공간
+      url: /ko/math/linear_algebra/quotient_space#def3
+  - symbol: \mathbb{R}
+    meaning: 실수 집합
+    defs:
+    - label: §가환군과 체
+      url: /ko/math/linear_algebra/fields
+  - symbol: \rank L
+    meaning: rank
+    defs:
+    - label: §동형사상
+      url: /ko/math/linear_algebra/isomorphic_vector_spaces
+  - symbol: \mathbb{R}^\times
+    meaning: 0이 아닌 실수의 곱셈군
+    defs:
+    - label: §가환군과 체
+      url: /ko/math/linear_algebra/fields
+  - symbol: \sgn(\tau)
+    meaning: 치환의 부호
+    defs:
+    - label: §행렬식의 존재성과 유일성
+      url: /ko/math/linear_algebra/existence_and_uniqueness_of_determinant
+  - symbol: \Sigma
+    meaning: 특이값 분해 $A=U\Sigma V^t$에 나타나는 특이값 대각행렬
+    defs:
+    - label: §특이값 분해
+      url: /ko/math/linear_algebra/singular_value_decomposition#thm3
+  - symbol: \sigma_i
+    meaning: 행렬의 특이값
+    defs:
+    - label: §특이값 분해
+      url: /ko/math/linear_algebra/singular_value_decomposition#def2
+  - symbol: S_n
+    meaning: symmetric group
+    defs:
+    - label: §행렬식의 존재성과 유일성
+      url: /ko/math/linear_algebra/existence_and_uniqueness_of_determinant
+    - label: §대칭군
+      url: /ko/math/group_theory/symmetric_groups#def1
+  - symbol: \span S
+    meaning: span
+    defs:
+    - label: §벡터공간의 기저
+      url: /ko/math/linear_algebra/basis
+  - symbol: \Spec(A)
+    meaning: $A$의 고윳값들의 집합
+    defs:
+    - label: §특성다항식
+      url: /ko/math/linear_algebra/characteristic_polynomial#def3
+  - symbol: S^\perp
+    meaning: orthogonal complement
+    defs:
+    - label: §쌍대공간
+      url: /ko/math/linear_algebra/dual_space
+    - label: §쌍대공간
+      url: /ko/math/multilinear_algebra/dual_spaces#def3
+  - symbol: \tr(A)
+    meaning: trace
+    defs:
+    - label: §행렬
+      url: /ko/math/linear_algebra/matrices
+  - symbol: V^{\ast\ast}
+    meaning: double dual
+    defs:
+    - label: §쌍대공간
+      url: /ko/math/linear_algebra/dual_space
+  - symbol: V^\ast
+    meaning: dual space
+    defs:
+    - label: §선형사상들의 공간
+      url: /ko/math/linear_algebra/space_of_linear_maps
+  - symbol: '[v]_\mathcal{B}'
+    meaning: 기저 $B$에 대한 좌표 표현
+    defs:
+    - label: §벡터공간의 기저
+      url: /ko/math/linear_algebra/basis
+  - symbol: V\cong W
+    meaning: isomorphic
+    defs:
+    - label: §동형사상
+      url: /ko/math/linear_algebra/isomorphic_vector_spaces
+  - symbol: v^\perp
+    meaning: orthogonal complement
+    defs:
+    - label: §쌍선형형식
+      url: /ko/math/linear_algebra/bilinear_form#def4
+  - symbol: V\times W
+    meaning: 두 벡터공간의 곱
+    defs:
+    - label: §벡터공간의 차원
+      url: /ko/math/linear_algebra/dimension
+  - symbol: v+W
+    meaning: coset
+    defs:
+    - label: §몫공간
+      url: /ko/math/linear_algebra/quotient_space#def1
+  - symbol: V/W
+    meaning: quotient space
+    defs:
+    - label: §몫공간
+      url: /ko/math/linear_algebra/quotient_space#def3
+  - symbol: W_1+W_2
+    meaning: 두 부분공간의 합
+    defs:
+    - label: §벡터공간의 차원
+      url: /ko/math/linear_algebra/dimension
+  - symbol: W\leq V
+    meaning: 부분공간
+    defs:
+    - label: §부분공간
+      url: /ko/math/linear_algebra/subspaces
+- category: set_theory
+  title: 집합론
+  conventions:
+  - symbol: X, Y
+    meaning: 집합
+    defs:
+    - label: §ZFC 공리계
+      url: /ko/math/set_theory/zfc_axioms
+  - symbol: f, g
+    meaning: 함수
+    defs:
+    - label: §함수
+      url: /ko/math/set_theory/functions
+  - symbol: m, n
+    meaning: 자연수
+    defs:
+    - label: §자연수와 무한집합
+      url: /ko/math/set_theory/natural_numbers
+  - symbol: \alpha, \beta
+    meaning: ordinal
+    defs:
+    - label: §정렬집합의 성질들
+      url: /ko/math/set_theory/well_ordering
+  - symbol: \mathfrak{a}, \mathfrak{b}
+    meaning: cardinal
+    defs:
+    - label: §기수
+      url: /ko/math/set_theory/cardinals
+  items:
+  - symbol: \mathbf{0}
+    meaning: cardinal
+    defs:
+    - label: §기수
+      url: /ko/math/set_theory/cardinals
+  - symbol: \mathbf{1}
+    meaning: cardinal
+    defs:
+    - label: §기수
+      url: /ko/math/set_theory/cardinals
+  - symbol: A^\ast
+    meaning: 정렬집합 $A$의 initial segment들의 집합
+    defs:
+    - label: §정렬집합의 성질들
+      url: /ko/math/set_theory/well_ordering
+  - symbol: \{A,B\}
+    meaning: axiom of pair로 얻는 두 원소 집합
+    defs:
+    - label: §ZFC 공리계
+      url: /ko/math/set_theory/zfc_axioms
+  - symbol: A\cap B
+    meaning: 교집합
+    defs:
+    - label: §ZFC 공리계
+      url: /ko/math/set_theory/zfc_axioms
+  - symbol: A\cup B
+    meaning: 합집합
+    defs:
+    - label: §ZFC 공리계
+      url: /ko/math/set_theory/zfc_axioms
+  - symbol: \aleph_\alpha
+    meaning: 알레프, α번째 무한 기수
+    defs:
+    - label: §서수들 사이의 순서관계
+      url: /ko/math/set_theory/order_relations_between_ordinals
+  - symbol: A/R
+    meaning: quotient set
+    defs:
+    - label: §동치관계
+      url: /ko/math/set_theory/equivalence_relations
+    - label: §대수적 구조
+      url: /ko/math/algebraic_structures/algebraic_structures
+  - symbol: A\setminus B
+    meaning: 차집합
+    defs:
+    - label: §ZFC 공리계
+      url: /ko/math/set_theory/zfc_axioms
+  - symbol: A\subseteq B
+    meaning: 부분집합 포함관계
+    defs:
+    - label: §순서쌍
+      url: /ko/math/set_theory/ordered_pair
+  - symbol: A\times B
+    meaning: cartesian product
+    defs:
+    - label: §순서쌍
+      url: /ko/math/set_theory/ordered_pair
+  - symbol: B^A
+    meaning: $A$에서 $B$로의 함수(그래프)들의 집합, 𝒫(A×$B$)의 부분집합
+    defs:
+    - label: §집합의 곱
+      url: /ko/math/set_theory/product_of_sets
+    - label: §단조함수
+      url: /ko/math/set_theory/monotone_functions#ex3
+  - symbol: \bigcap_{i\in I}A_i
+    meaning: family of sets의 교집합
+    defs:
+    - label: §합집합과 교집합
+      url: /ko/math/set_theory/union_and_intersection
+  - symbol: \bigcup_{i\in I}A_i
+    meaning: family of sets의 합집합
+    defs:
+    - label: §합집합과 교집합
+      url: /ko/math/set_theory/union_and_intersection
+  - symbol: \card A
+    meaning: cardinal
+    defs:
+    - label: §기수
+      url: /ko/math/set_theory/cardinals
+  - symbol: \card E
+    meaning: 집합의 크기
+    defs:
+    - label: §자연수와 무한집합
+      url: /ko/math/set_theory/natural_numbers#def1
+  - symbol: \Delta_A
+    meaning: diagonal
+    defs:
+    - label: §이항관계들 사이의 연산
+      url: /ko/math/set_theory/operation_of_binary_relations#def9
+  - symbol: \emptyset
+    meaning: 공집합
+    defs:
+    - label: §ZFC 공리계
+      url: /ko/math/set_theory/zfc_axioms
+  - symbol: f^{-1}(Y)
+    meaning: preimage
+    defs:
+    - label: §함수
+      url: /ko/math/set_theory/functions
+  - symbol: f:A\rightarrow B
+    meaning: 함수
+    defs:
+    - label: §함수
+      url: /ko/math/set_theory/functions
+  - symbol: (f_i)_{i\in I}
+    meaning: family(첨수족) 표기; index set $I$
+    defs:
+    - label: §함수
+      url: /ko/math/set_theory/functions
+  - symbol: \Fun(A,B)
+    meaning: $A$에서 $B$로의 함수들의 집합
+    defs:
+    - label: §집합의 곱
+      url: /ko/math/set_theory/product_of_sets
+  - symbol: f(x)
+    meaning: 함수 $f$의 $x$에서의 함숫값
+    defs:
+    - label: §함수
+      url: /ko/math/set_theory/functions
+  - symbol: f(X)
+    meaning: 함수에 의한 부분집합 $X$의 상
+    defs:
+    - label: §함수
+      url: /ko/math/set_theory/functions
+  - symbol: h(A)
+    meaning: Hartogs number
+    defs:
+    - label: §서수들 사이의 순서관계
+      url: /ko/math/set_theory/order_relations_between_ordinals
+  - symbol: \id_A
+    meaning: 항등함수
+    defs:
+    - label: §함수
+      url: /ko/math/set_theory/functions
+  - symbol: \in
+    meaning: 원소 관계
+    defs:
+    - label: §ZFC 공리계
+      url: /ko/math/set_theory/zfc_axioms
+  - symbol: (-\infty, a]
+    meaning: 무한(반)구간
+    defs:
+    - label: §유향집합
+      url: /ko/math/set_theory/directed_set
+  - symbol: \mathbb{N}
+    meaning: 자연수 집합
+    defs:
+    - label: §서수와 정렬집합
+      url: /ko/math/set_theory/ordinals#peano-axioms
+  - symbol: \omega
+    meaning: 자연수 집합을 서수로 본 것
+    defs:
+    - label: §서수와 정렬집합
+      url: /ko/math/set_theory/ordinals
+  - symbol: \pm\infty
+    meaning: ordered set에 덧붙이는 가상의 최대/최소 원소
+    defs:
+    - label: §순서집합의 원소들
+      url: /ko/math/set_theory/elements_in_ordered_set
+  - symbol: \pr_1 R
+    meaning: 이항관계의 첫 번째 projection
+    defs:
+    - label: §이항관계
+      url: /ko/math/set_theory/binary_relation
+  - symbol: \pr_1 z
+    meaning: 순서쌍의 첫 번째 성분
+    defs:
+    - label: §순서쌍
+      url: /ko/math/set_theory/ordered_pair
+  - symbol: \pr_2 R
+    meaning: 이항관계의 두 번째 projection
+    defs:
+    - label: §이항관계
+      url: /ko/math/set_theory/binary_relation
+  - symbol: \pr_2 z
+    meaning: 순서쌍의 두 번째 성분
+    defs:
+    - label: §순서쌍
+      url: /ko/math/set_theory/ordered_pair
+  - symbol: \pr_i
+    meaning: $i$번째 성분함수
+    defs:
+    - label: §집합의 곱
+      url: /ko/math/set_theory/product_of_sets
+    - label: §곱공간
+      url: /ko/math/topology/product_spaces#def1
+  - symbol: \pr_J
+    meaning: projection
+    defs:
+    - label: §곱집합의 성질
+      url: /ko/math/set_theory/property_of_products
+  - symbol: \prod_{i\in I}\mathfrak{a}_i
+    meaning: cardinal product
+    defs:
+    - label: §기수들 사이의 연산
+      url: /ko/math/set_theory/operation_of_cardinals#def1
+  - symbol: \prod_{i\in I}A_i
+    meaning: family of sets의 곱
+    defs:
+    - label: §집합의 곱
+      url: /ko/math/set_theory/product_of_sets
+  - symbol: \mathcal{P}(S)
+    meaning: 멱집합
+    defs:
+    - label: §ZFC 공리계
+      url: /ko/math/set_theory/zfc_axioms
+  - symbol: R^{-1}
+    meaning: 이항관계의 역
+    defs:
+    - label: §이항관계들 사이의 연산
+      url: /ko/math/set_theory/operation_of_binary_relations#def1
+  - symbol: R/S
+    meaning: $R$의 $S$에 의한 몫
+    defs:
+    - label: §동치관계의 예시들
+      url: /ko/math/set_theory/examples_of_equivalence
+  - symbol: S_a
+    meaning: initial segment
+    defs:
+    - label: §서수와 정렬집합
+      url: /ko/math/set_theory/ordinals
+  - symbol: S
+    meaning: successor function(따름수 함수)
+    defs:
+    - label: §서수와 정렬집합
+      url: /ko/math/set_theory/ordinals#peano-axioms
+  - symbol: u\times v
+    meaning: 두 함수의 곱
+    defs:
+    - label: §함수들 사이의 연산
+      url: /ko/math/set_theory/operation_of_functions
+  - symbol: x\leq_{\tiny R} y
+    meaning: order relation
+    defs:
+    - label: §순서관계의 정의
+      url: /ko/math/set_theory/order_relations
+  - symbol: x\sim_{\tiny R} y
+    meaning: 동치관계
+    defs:
+    - label: §동치관계
+      url: /ko/math/set_theory/equivalence_relations
+  - symbol: x<_{\tiny S} y
+    meaning: strict order
+    defs:
+    - label: §순서관계의 정의
+      url: /ko/math/set_theory/order_relations
+  - symbol: x\vee y
+    meaning: join
+    defs:
+    - label: §유향집합
+      url: /ko/math/set_theory/directed_set#def4
+  - symbol: x\wedge y
+    meaning: meet
+    defs:
+    - label: §유향집합
+      url: /ko/math/set_theory/directed_set#def4
+- category: category_theory
+  title: 범주론
+  conventions:
+  - symbol: \mathcal{A}, \mathcal{B}
+    meaning: category
+    defs:
+    - label: §범주
+      url: /ko/math/category_theory/categories
+  - symbol: F, G
+    meaning: functor
+    defs:
+    - label: §함자
+      url: /ko/math/category_theory/functors
+  items:
+  - symbol: '{}_{A/}\mathcal{A}'
+    meaning: $A$ 위에서의 쌍대 조각 범주
+    defs:
+    - label: §범주
+      url: /ko/math/category_theory/categories
+  - symbol: A_\bullet
+    meaning: chain complex
+    defs:
+    - label: §아벨 카테고리
+      url: /ko/math/category_theory/abelian_categories
+  - symbol: \mathcal{A}^\op
+    meaning: opposite category
+    defs:
+    - label: §함자
+      url: /ko/math/category_theory/functors
+  - symbol: \ast
+    meaning: singleton
+    defs:
+    - label: §표현가능한 함자
+      url: /ko/math/category_theory/representable_functors
+  - symbol: \mathcal{A}\times \mathcal{B}
+    meaning: product category
+    defs:
+    - label: §범주
+      url: /ko/math/category_theory/categories
+  - symbol: \Aut_\mathcal{A}(A)
+    meaning: automorphism group
+    defs:
+    - label: §범주
+      url: /ko/math/category_theory/categories
+  - symbol: B_n
+    meaning: $n$-boundary들의 모임
+    defs:
+    - label: §아벨 카테고리
+      url: /ko/math/category_theory/abelian_categories
+  - symbol: \CAT
+    meaning: locally small category들의 category
+    defs:
+    - label: §함자
+      url: /ko/math/category_theory/functors
+  - symbol: \Cat
+    meaning: small category들의 category
+    defs:
+    - label: §함자
+      url: /ko/math/category_theory/functors
+  - symbol: \Ch(R)
+    meaning: $R$-가군 chain complex의 category
+    defs:
+    - label: §범주
+      url: /ko/math/category_theory/categories
+  - symbol: \circ
+    meaning: 사상의 합성
+    defs:
+    - label: §범주
+      url: /ko/math/category_theory/categories
+  - symbol: \CoEq(f,0)
+    meaning: $f$와 0의 coequalizer
+    defs:
+    - label: §아벨 카테고리
+      url: /ko/math/category_theory/abelian_categories
+  - symbol: \coim(f)
+    meaning: 사상 $f$의 coimage
+    defs:
+    - label: §아벨 카테고리
+      url: /ko/math/category_theory/abelian_categories
+  - symbol: \coker f
+    meaning: cokernel
+    defs:
+    - label: §아벨 카테고리
+      url: /ko/math/category_theory/abelian_categories
+  - symbol: \colim
+    meaning: 여극한
+    defs:
+    - label: §극한
+      url: /ko/math/category_theory/limits
+  - symbol: \Cone(A, F)
+    meaning: 꼭짓점 $A$를 갖는 $F$ 위에서의 cone들의 집합
+    defs:
+    - label: §극한
+      url: /ko/math/category_theory/limits
+  - symbol: \coprod
+    meaning: coproduct
+    defs:
+    - label: §극한
+      url: /ko/math/category_theory/limits
+  - symbol: \Delta_X
+    meaning: diagonal morphism
+    defs:
+    - label: §모노이드 범주
+      url: /ko/math/category_theory/monoidal_categories
+    - label: §하우스도르프 공간
+      url: /ko/math/topology/Hausdorff_spaces#lem5
+  - symbol: \End_\mathcal{A}(A)
+    meaning: endomorphism monoid
+    defs:
+    - label: §범주
+      url: /ko/math/category_theory/categories
+  - symbol: \Eq(f,0)
+    meaning: $f$와 0의 equalizer
+    defs:
+    - label: §아벨 카테고리
+      url: /ko/math/category_theory/abelian_categories
+  - symbol: f^{-1}
+    meaning: isomorphism의 역사상
+    defs:
+    - label: §범주
+      url: /ko/math/category_theory/categories
+  - symbol: F:\mathcal{A}\rightarrow\mathcal{B}
+    meaning: functor
+    defs:
+    - label: §함자
+      url: /ko/math/category_theory/functors
+  - symbol: F\dashv G
+    meaning: adjunction
+    defs:
+    - label: §수반함자
+      url: /ko/math/category_theory/adjoints
+  - symbol: \Field
+    meaning: 체의 category
+    defs:
+    - label: §범주
+      url: /ko/math/category_theory/categories
+    - label: §체
+      url: /ko/math/field_theory/fields
+  - symbol: \Fun(\mathcal{A},\mathcal{B})
+    meaning: functor category
+    defs:
+    - label: §자연변환
+      url: /ko/math/category_theory/natural_transformations
+  - symbol: \FVect_k
+    meaning: 유한차원 $k$-벡터공간의 category
+    defs:
+    - label: §범주
+      url: /ko/math/category_theory/categories
+  - symbol: \Hom_\mathcal{A}(A_1,A_2)
+    meaning: 두 대상 사이의 사상들의 모임
+    defs:
+    - label: §범주
+      url: /ko/math/category_theory/categories
+  - symbol: \Hom_\mathcal{A}(A,-)
+    meaning: 공변 hom 함자
+    defs:
+    - label: §함자
+      url: /ko/math/category_theory/functors
+  - symbol: \Hom_\mathcal{A}(-,A)
+    meaning: 반변 hom 함자
+    defs:
+    - label: §함자
+      url: /ko/math/category_theory/functors
+  - symbol: \Hom(\mathcal{A})
+    meaning: category의 모든 사상들의 모임
+    defs:
+    - label: §범주
+      url: /ko/math/category_theory/categories
+  - symbol: \Hom_\mathcal{A}(-,-)
+    meaning: hom bifunctor
+    defs:
+    - label: §함자
+      url: /ko/math/category_theory/functors
+  - symbol: \Hom_\mathcal{C}(A,B)
+    meaning: 두 대상 사이의 사상 모임
+    defs:
+    - label: §아벨 카테고리
+      url: /ko/math/category_theory/abelian_categories
+  - symbol: \id_A
+    meaning: 항등사상
+    defs:
+    - label: §범주
+      url: /ko/math/category_theory/categories
+    - label: §대수적 구조
+      url: /ko/math/algebraic_structures/algebraic_structures
+  - symbol: \ker f
+    meaning: homomorphism의 핵
+    defs:
+    - label: §아벨 카테고리
+      url: /ko/math/category_theory/abelian_categories
+    - label: §군 준동형사상
+      url: /ko/math/algebraic_structures/group_homomorphisms
+  - symbol: \lMod{R}
+    meaning: 왼쪽 $R$-가군의 category
+    defs:
+    - label: §범주
+      url: /ko/math/category_theory/categories
+  - symbol: \lset{G}
+    meaning: 왼쪽 $G$-집합의 category
+    defs:
+    - label: §범주
+      url: /ko/math/category_theory/categories
+  - symbol: \Man^k
+    meaning: $C^k-$다양체의 category
+    defs:
+    - label: §범주
+      url: /ko/math/category_theory/categories
+  - symbol: \Mon
+    meaning: monoid의 범주
+    defs:
+    - label: §범주
+      url: /ko/math/category_theory/categories
+    - label: §반군, 모노이드, 군
+      url: /ko/math/algebraic_structures/groups
+  - symbol: \obj(\mathcal{A})
+    meaning: category의 대상들의 모임
+    defs:
+    - label: §범주
+      url: /ko/math/category_theory/categories
+  - symbol: \otimes
+    meaning: monoid 곱
+    defs:
+    - label: §모노이드 범주
+      url: /ko/math/category_theory/monoidal_categories
+  - symbol: \Ring
+    meaning: 환의 범주
+    defs:
+    - label: §범주
+      url: /ko/math/category_theory/categories
+    - label: §환의 정의
+      url: /ko/math/algebraic_structures/rings
+    - label: §아핀다양체
+      url: /ko/math/algebraic_varieties/affine_varieties
+  - symbol: \Set_\ast
+    meaning: 점붙은 집합의 category
+    defs:
+    - label: §범주
+      url: /ko/math/category_theory/categories
+  - symbol: \Set
+    meaning: 집합과 함수의 category
+    defs:
+    - label: §범주
+      url: /ko/math/category_theory/categories
+  - symbol: \sk(\mathcal{A})
+    meaning: category의 뼈대
+    defs:
+    - label: §자연변환
+      url: /ko/math/category_theory/natural_transformations
+  - symbol: \Top_\ast
+    meaning: 점붙은 위상공간의 category
+    defs:
+    - label: §범주
+      url: /ko/math/category_theory/categories
+  - symbol: \Top
+    meaning: 위상공간의 category
+    defs:
+    - label: §범주
+      url: /ko/math/category_theory/categories
+  - symbol: \Vect_k
+    meaning: $k$-벡터공간의 category
+    defs:
+    - label: §범주
+      url: /ko/math/category_theory/categories
+  - symbol: V\otimes W
+    meaning: tensor product
+    defs:
+    - label: §표현가능한 함자
+      url: /ko/math/category_theory/representable_functors
+    - label: §유한군의 표현론
+      url: /ko/math/representation_theory/representations_of_finite_groups#def3
+  - symbol: Z_n
+    meaning: $n$-cycle들의 모임
+    defs:
+    - label: §아벨 카테고리
+      url: /ko/math/category_theory/abelian_categories
+  - symbol: '[-,-]'
+    meaning: 내부 Hom(internal Hom) bifunctor
+    defs:
+    - label: §수반함자
+      url: /ko/math/category_theory/adjoints
+- category: algebraic_structures
+  title: 대수적 구조
+  conventions:
+  - symbol: G, H
+    meaning: 군
+    defs:
+    - label: §반군, 모노이드, 군
+      url: /ko/math/algebraic_structures/groups
+  - symbol: A, B
+    meaning: ring
+    defs:
+    - label: §환의 정의
+      url: /ko/math/algebraic_structures/rings
+  - symbol: M, N
+    meaning: 가군
+    defs:
+    - label: §가군
+      url: /ko/math/algebraic_structures/modules
+  - symbol: \mathfrak{a}, \mathfrak{b}
+    meaning: ideal
+    defs:
+    - label: §환의 정의
+      url: /ko/math/algebraic_structures/rings
+  items:
+  - symbol: A_0
+    meaning: graded ring의 0차 성분
+    defs:
+    - label: §등급환
+      url: /ko/math/algebraic_structures/graded_rings
+  - symbol: A/\mathfrak{a}
+    meaning: two-sided ideal에 의한 몫환
+    defs:
+    - label: §몫환, 환 동형사상
+      url: /ko/math/algebraic_structures/quotient_rings#def1
+  - symbol: \Ab
+    meaning: 아벨군의 범주
+    defs:
+    - label: §Grothendieck 군
+      url: /ko/math/algebraic_structures/Grothendieck_groups
+    - label: §반군, 모노이드, 군
+      url: /ko/math/algebraic_structures/groups
+    - label: §범주
+      url: /ko/math/category_theory/categories
+  - symbol: \ab
+    meaning: abelianization 함자
+    defs:
+    - label: §가환군
+      url: /ko/math/algebraic_structures/abelian_groups
+  - symbol: \mathfrak{a}+\mathfrak{b}
+    meaning: ideal들의 합
+    defs:
+    - label: §환의 정의
+      url: /ko/math/algebraic_structures/rings
+  - symbol: AG
+    meaning: group ring
+    defs:
+    - label: §대수
+      url: /ko/math/algebraic_structures/algebras#def5
+  - symbol: aH
+    meaning: left coset
+    defs:
+    - label: §몫군
+      url: /ko/math/algebraic_structures/quotient_groups
+  - symbol: \mathfrak{a}
+    meaning: ideal
+    defs:
+    - label: §환의 정의
+      url: /ko/math/algebraic_structures/rings
+  - symbol: (a_i)_{i\in I}
+    meaning: 곱집합의 원소를 순서쌍으로 표기
+    defs:
+    - label: §군의 직접곱
+      url: /ko/math/algebraic_structures/direct_products
+  - symbol: \Alg{A}
+    meaning: 결합·단위 $A$-대수들의 범주
+    defs:
+    - label: §대수
+      url: /ko/math/algebraic_structures/algebras
+  - symbol: A\otimes B
+    meaning: tensor product
+    defs:
+    - label: §가환군
+      url: /ko/math/algebraic_structures/abelian_groups#def13
+    - label: §환의 곱, 쌍대곱, 텐서곱
+      url: /ko/math/algebraic_structures/operations_of_rings#def7
+  - symbol: A_\mathfrak{p}
+    meaning: localization
+    defs:
+    - label: §분수체
+      url: /ko/math/algebraic_structures/field_of_fractions#def10
+    - label: §국소화
+      url: /ko/math/commutative_algebra/localization
+  - symbol: A[\x]
+    meaning: $A$ 계수 다항식환
+    defs:
+    - label: §등급환
+      url: /ko/math/algebraic_structures/graded_rings
+    - label: §정수적 확장
+      url: /ko/math/commutative_algebra/integral_extension
+  - symbol: A[\x]
+    meaning: polynomial algebra
+    defs:
+    - label: §대수
+      url: /ko/math/algebraic_structures/algebras#def7
+  - symbol: Ax
+    meaning: $x$가 생성하는 주 left ideal
+    defs:
+    - label: §환의 정의
+      url: /ko/math/algebraic_structures/rings
+  - symbol: \Balan_A(M,N;L)
+    meaning: $A$-balanced 사상들의 집합
+    defs:
+    - label: §가군의 직접곱과 직합, 텐서곱
+      url: /ko/math/algebraic_structures/operations_of_modules
+  - symbol: \bar{f}
+    meaning: universal property로 유도된 사상
+    defs:
+    - label: §Grothendieck 군
+      url: /ko/math/algebraic_structures/Grothendieck_groups
+  - symbol: \bgr_I\lMod{A}
+    meaning: $I$-등급 왼쪽 $A$-가군들의 범주
+    defs:
+    - label: §등급가군
+      url: /ko/math/algebraic_structures/graded_modules
+  - symbol: \bgr_I\Ring
+    meaning: $I$-graded ring과 등급 준동형들의 범주
+    defs:
+    - label: §등급환
+      url: /ko/math/algebraic_structures/graded_rings
+  - symbol: \bigoplus_{i\in I} A_i
+    meaning: direct sum
+    defs:
+    - label: §환의 곱, 쌍대곱, 텐서곱
+      url: /ko/math/algebraic_structures/operations_of_rings#def3
+  - symbol: \Bilin(A,A;A)
+    meaning: 쌍선형사상 집합
+    defs:
+    - label: §환의 정의
+      url: /ko/math/algebraic_structures/rings
+  - symbol: \Bilin_A(M,N;L)
+    meaning: $A$-쌍선형 사상들의 집합
+    defs:
+    - label: §가군의 직접곱과 직합, 텐서곱
+      url: /ko/math/algebraic_structures/operations_of_modules
+  - symbol: \Bilin(G,H;A)
+    meaning: 쌍선형사상들의 집합
+    defs:
+    - label: §가환군
+      url: /ko/math/algebraic_structures/abelian_groups
+  - symbol: \cAlg{A}
+    meaning: 가환 $A$-대수들의 범주
+    defs:
+    - label: §대수
+      url: /ko/math/algebraic_structures/algebras
+  - symbol: \cdot_A
+    meaning: $A$-작용(스칼라곱), 혼동 방지 첨자 표기
+    defs:
+    - label: §스칼라의 변환
+      url: /ko/math/algebraic_structures/change_of_base_ring
+  - symbol: \cMon
+    meaning: 가환 monoid의 범주
+    defs:
+    - label: §Grothendieck 군
+      url: /ko/math/algebraic_structures/Grothendieck_groups
+  - symbol: \CoEq(f,g)
+    meaning: 두 homomorphism의 coequalizer
+    defs:
+    - label: §군 동형사상
+      url: /ko/math/algebraic_structures/isomorphism_theorems
+  - symbol: \CoEq(\phi,\psi)
+    meaning: 두 환 준동형의 코이퀄라이저
+    defs:
+    - label: §환의 곱, 쌍대곱, 텐서곱
+      url: /ko/math/algebraic_structures/operations_of_rings
+  - symbol: \CoEq(u,v)
+    meaning: 두 선형사상의 코이퀄라이저
+    defs:
+    - label: §가군의 직접곱과 직합, 텐서곱
+      url: /ko/math/algebraic_structures/operations_of_modules
+  - symbol: \cong
+    meaning: isomorphic
+    defs:
+    - label: §대수적 구조
+      url: /ko/math/algebraic_structures/algebraic_structures
+  - symbol: \coprod G_i
+    meaning: 분리합집합/coproduct
+    defs:
+    - label: §자유곱
+      url: /ko/math/algebraic_structures/free_products
+  - symbol: \cRing
+    meaning: 가환환의 범주
+    defs:
+    - label: §환의 정의
+      url: /ko/math/algebraic_structures/rings
+    - label: §슈티펠-휘트니 특성류
+      url: /ko/math/algebraic_topology/stiefel_whitney_classes
+    - label: §스펙트럼
+      url: /ko/math/scheme_theory/spectrums
+  - symbol: D_n
+    meaning: dihedral group
+    defs:
+    - label: §반군, 모노이드, 군
+      url: /ko/math/algebraic_structures/groups
+  - symbol: E/\mathfrak{a}
+    meaning: quotient algebra
+    defs:
+    - label: §대수
+      url: /ko/math/algebraic_structures/algebras#def11
+  - symbol: E\otimes_AE'
+    meaning: tensor product
+    defs:
+    - label: §대수의 직접곱, 직합, 텐서곱
+      url: /ko/math/algebraic_structures/operations_of_algebras#def7
+  - symbol: \Eq(f,g)
+    meaning: 두 homomorphism의 equalizer
+    defs:
+    - label: §군 준동형사상
+      url: /ko/math/algebraic_structures/group_homomorphisms
+  - symbol: \Eq(\phi,\psi)
+    meaning: 두 환 준동형의 이퀄라이저
+    defs:
+    - label: §환의 곱, 쌍대곱, 텐서곱
+      url: /ko/math/algebraic_structures/operations_of_rings
+  - symbol: \Eq(u,v)
+    meaning: 두 선형사상의 이퀄라이저
+    defs:
+    - label: §가군의 직접곱과 직합, 텐서곱
+      url: /ko/math/algebraic_structures/operations_of_modules
+  - symbol: F\dashv U
+    meaning: adjunction
+    defs:
+    - label: §환의 정의
+      url: /ko/math/algebraic_structures/rings
+  - symbol: \Fix(A)
+    meaning: fixer
+    defs:
+    - label: §군의 작용
+      url: /ko/math/algebraic_structures/group_actions#def6
+  - symbol: F(M)
+    meaning: $A$-가군 $M$ 위의 자유대수
+    defs:
+    - label: §대수
+      url: /ko/math/algebraic_structures/algebras#prop4
+  - symbol: \Frac(A)
+    meaning: field of fractions
+    defs:
+    - label: §분수체
+      url: /ko/math/algebraic_structures/field_of_fractions#def7
+  - symbol: F(X)
+    meaning: free $A$-module
+    defs:
+    - label: §가군의 직접곱과 직합, 텐서곱
+      url: /ko/math/algebraic_structures/operations_of_modules
+  - symbol: F(X)
+    meaning: free group
+    defs:
+    - label: §자유곱
+      url: /ko/math/algebraic_structures/free_products
+  - symbol: G/H
+    meaning: quotient group
+    defs:
+    - label: §몫군
+      url: /ko/math/algebraic_structures/quotient_groups
+  - symbol: \Grp
+    meaning: 군의 범주
+    defs:
+    - label: §군 준동형사상
+      url: /ko/math/algebraic_structures/group_homomorphisms
+    - label: §반군, 모노이드, 군
+      url: /ko/math/algebraic_structures/groups
+    - label: §범주
+      url: /ko/math/category_theory/categories
+  - symbol: '[H_1,H_2]'
+    meaning: 두 subgroup의 commutator subgroup
+    defs:
+    - label: §가환군
+      url: /ko/math/algebraic_structures/abelian_groups#def3
+  - symbol: Ha
+    meaning: right coset
+    defs:
+    - label: §몫군
+      url: /ko/math/algebraic_structures/quotient_groups
+  - symbol: \hat{f}
+    meaning: universal property로 유도된 homomorphism
+    defs:
+    - label: §자유곱
+      url: /ko/math/algebraic_structures/free_products
+  - symbol: \Hom_\Ab(G,H)
+    meaning: 가환군 준동형들의 아벨군
+    defs:
+    - label: §가환군
+      url: /ko/math/algebraic_structures/abelian_groups
+  - symbol: \Hom_\Ab(-,-)
+    meaning: 아벨군 사이 homomorphism 집합
+    defs:
+    - label: §Grothendieck 군
+      url: /ko/math/algebraic_structures/Grothendieck_groups
+  - symbol: \Hom_A(M,N)
+    meaning: $A$-가군 준동형들의 아벨군
+    defs:
+    - label: §가군
+      url: /ko/math/algebraic_structures/modules
+  - symbol: \hookrightarrow
+    meaning: 포함 사상
+    defs:
+    - label: §군의 직접곱
+      url: /ko/math/algebraic_structures/direct_products
+    - label: §부분다양체의 유일성
+      url: /ko/math/manifolds/uniqueness_of_submanifold
+  - symbol: \im f
+    meaning: homomorphism의 상
+    defs:
+    - label: §대수적 구조
+      url: /ko/math/algebraic_structures/algebraic_structures
+    - label: §군 준동형사상
+      url: /ko/math/algebraic_structures/group_homomorphisms
+    - label: §아벨 카테고리
+      url: /ko/math/category_theory/abelian_categories
+  - symbol: \im u
+    meaning: homomorphism의 상
+    defs:
+    - label: §대수
+      url: /ko/math/algebraic_structures/algebras
+  - symbol: \im u
+    meaning: image
+    defs:
+    - label: §가군
+      url: /ko/math/algebraic_structures/modules#def9
+  - symbol: \im(u)
+    meaning: image
+    defs:
+    - label: §등급가군
+      url: /ko/math/algebraic_structures/graded_modules
+  - symbol: \Inn(G)
+    meaning: inner automorphism들의 모임
+    defs:
+    - label: §군의 작용
+      url: /ko/math/algebraic_structures/group_actions#def10
+  - symbol: \iota_i
+    meaning: 포함 사상
+    defs:
+    - label: §제한합
+      url: /ko/math/algebraic_structures/restricted_sums
+  - symbol: \iota
+    meaning: tensor product으로의 표준 포함사상 $x\mapsto x\otimes 1$
+    defs:
+    - label: §대수의 직접곱, 직합, 텐서곱
+      url: /ko/math/algebraic_structures/operations_of_algebras
+  - symbol: \ker\phi
+    meaning: ring homomorphism의 핵
+    defs:
+    - label: §환의 정의
+      url: /ko/math/algebraic_structures/rings
+  - symbol: \ker u
+    meaning: homomorphism의 핵
+    defs:
+    - label: §대수
+      url: /ko/math/algebraic_structures/algebras
+  - symbol: \ker u
+    meaning: kernel
+    defs:
+    - label: §가군
+      url: /ko/math/algebraic_structures/modules#def9
+  - symbol: K(S)
+    meaning: Grothendieck group
+    defs:
+    - label: §Grothendieck 군
+      url: /ko/math/algebraic_structures/Grothendieck_groups
+  - symbol: \lMod{A}
+    meaning: 왼쪽 $A$-가군들의 범주
+    defs:
+    - label: §가군
+      url: /ko/math/algebraic_structures/modules
+    - label: §표준선다발
+      url: /ko/math/algebraic_varieties/canonical_bundle
+  - symbol: \lmod{A}
+    meaning: finitely generated 왼쪽 $A$-가군들의 full subcategory
+    defs:
+    - label: §가군
+      url: /ko/math/algebraic_structures/modules
+  - symbol: \lset{M}
+    meaning: 왼쪽 $M$-집합들의 범주
+    defs:
+    - label: §군의 작용
+      url: /ko/math/algebraic_structures/group_actions
+  - symbol: \lvert\alpha\rvert
+    meaning: degree
+    defs:
+    - label: §대수
+      url: /ko/math/algebraic_structures/algebras
+  - symbol: \lvert G\rvert
+    meaning: order
+    defs:
+    - label: §몫군
+      url: /ko/math/algebraic_structures/quotient_groups
+  - symbol: \Magma
+    meaning: 마그마의 범주
+    defs:
+    - label: §대수적 구조
+      url: /ko/math/algebraic_structures/algebraic_structures
+  - symbol: \mathbin{\tiny\char"2606}
+    meaning: quotient magma의 연산
+    defs:
+    - label: §대수적 구조
+      url: /ko/math/algebraic_structures/algebraic_structures
+  - symbol: \mathfrak{m}
+    meaning: maximal ideal
+    defs:
+    - label: §환의 정의
+      url: /ko/math/algebraic_structures/rings
+  - symbol: M/N
+    meaning: quotient module
+    defs:
+    - label: §가군
+      url: /ko/math/algebraic_structures/modules#def4
+  - symbol: M\otimes_A N
+    meaning: tensor product
+    defs:
+    - label: §가군의 직접곱과 직합, 텐서곱
+      url: /ko/math/algebraic_structures/operations_of_modules
+  - symbol: \mathfrak{N}
+    meaning: nilradical
+    defs:
+    - label: §분수체
+      url: /ko/math/algebraic_structures/field_of_fractions#def13
+  - symbol: \phi^\ast
+    meaning: restriction of scalar 함자
+    defs:
+    - label: §스칼라의 변환
+      url: /ko/math/algebraic_structures/change_of_base_ring#def1
+  - symbol: \phi^\ast\rho
+    meaning: 준동형을 따라 당긴 작용
+    defs:
+    - label: §군의 작용
+      url: /ko/math/algebraic_structures/group_actions
+  - symbol: \phi_!
+    meaning: extension of scalar 함자
+    defs:
+    - label: §스칼라의 변환
+      url: /ko/math/algebraic_structures/change_of_base_ring#def3
+  - symbol: \pr_i
+    meaning: projection
+    defs:
+    - label: §군의 직접곱
+      url: /ko/math/algebraic_structures/direct_products
+    - label: §제한합
+      url: /ko/math/algebraic_structures/restricted_sums
+    - label: §대수의 직접곱, 직합, 텐서곱
+      url: /ko/math/algebraic_structures/operations_of_algebras#def2
+    - label: §선형사상
+      url: /ko/math/linear_algebra/linear_map
+  - symbol: \prod_{i\in I} G_i
+    meaning: direct product
+    defs:
+    - label: §군의 직접곱
+      url: /ko/math/algebraic_structures/direct_products
+  - symbol: \prod^w G_i
+    meaning: weak direct product
+    defs:
+    - label: §제한합
+      url: /ko/math/algebraic_structures/restricted_sums
+  - symbol: \rho^\ast
+    meaning: 환 준동형 $\rho$에 따른 스칼라 제한
+    defs:
+    - label: §대수
+      url: /ko/math/algebraic_structures/algebras
+  - symbol: \rMod{A}
+    meaning: 오른쪽 $A$-가군들의 범주
+    defs:
+    - label: §가군
+      url: /ko/math/algebraic_structures/modules
+  - symbol: \rmod{A}
+    meaning: finitely generated 오른쪽 $A$-가군들의 full subcategory
+    defs:
+    - label: §가군
+      url: /ko/math/algebraic_structures/modules
+  - symbol: \Rng
+    meaning: rng(단위원 없는 환)의 범주
+    defs:
+    - label: §환의 정의
+      url: /ko/math/algebraic_structures/rings
+  - symbol: S^{-1}A
+    meaning: ring of fractions
+    defs:
+    - label: §분수체
+      url: /ko/math/algebraic_structures/field_of_fractions#def2
+    - label: §국소화
+      url: /ko/math/commutative_algebra/localization
+  - symbol: \stab(A)
+    meaning: stabilizer
+    defs:
+    - label: §군의 작용
+      url: /ko/math/algebraic_structures/group_actions#def6
+  - symbol: \Stab(A)
+    meaning: strict stabilizer
+    defs:
+    - label: §군의 작용
+      url: /ko/math/algebraic_structures/group_actions#def6
+  - symbol: \star
+    meaning: 이항연산
+    defs:
+    - label: §대수적 구조
+      url: /ko/math/algebraic_structures/algebraic_structures
+  - symbol: \supp(h_i)
+    meaning: support
+    defs:
+    - label: §제한합
+      url: /ko/math/algebraic_structures/restricted_sums
+  - symbol: \supp(x)
+    meaning: support
+    defs:
+    - label: §가환군
+      url: /ko/math/algebraic_structures/abelian_groups
+  - symbol: \twoheadrightarrow
+    meaning: 전사 사상
+    defs:
+    - label: §군 동형사상
+      url: /ko/math/algebraic_structures/isomorphism_theorems
+    - label: §사영공간의 코호몰로지
+      url: /ko/math/algebraic_varieties/cohomology_of_projective_spaces
+  - symbol: x^{-1}
+    meaning: 역원
+    defs:
+    - label: §반군, 모노이드, 군
+      url: /ko/math/algebraic_structures/groups
+  - symbol: X^{-1}
+    meaning: 역원들의 집합
+    defs:
+    - label: §자유곱
+      url: /ko/math/algebraic_structures/free_products
+  - symbol: \x^\alpha
+    meaning: 다중지표 단항식
+    defs:
+    - label: §대수
+      url: /ko/math/algebraic_structures/algebras
+  - symbol: \mathbb{Z}
+    meaning: 정수
+    defs:
+    - label: §Grothendieck 군
+      url: /ko/math/algebraic_structures/Grothendieck_groups
+  - symbol: Z(A)
+    meaning: center
+    defs:
+    - label: §환의 정의
+      url: /ko/math/algebraic_structures/rings
+    - label: §쌍대공간
+      url: /ko/math/multilinear_algebra/dual_spaces
+    - label: §중국인의 나머지정리
+      url: /ko/math/ring_theory/chinese_remainder_theorem#prop7
+  - symbol: Z(E)
+    meaning: center
+    defs:
+    - label: §대수
+      url: /ko/math/algebraic_structures/algebras
+    - label: §기본 개념들
+      url: /ko/math/commutative_algebra/basic_notions
+    - label: §군의 확장
+      url: /ko/math/group_theory/extensions
+  - symbol: Z(G)
+    meaning: center
+    defs:
+    - label: §군의 작용
+      url: /ko/math/algebraic_structures/group_actions#def12
+- category: group_theory
+  title: 군론
+  conventions:
+  - symbol: G, H
+    meaning: 군
+    defs:
+    - label: §반군, 모노이드, 군
+      url: /ko/math/algebraic_structures/groups
+  - symbol: p
+    meaning: 소수
+    defs: []
+  items:
+  - symbol: A_n
+    meaning: alternating group
+    defs:
+    - label: §대칭군
+      url: /ko/math/group_theory/symmetric_groups#def11
+  - symbol: G_\bullet
+    meaning: subnormal series
+    defs:
+    - label: §군의 열
+      url: /ko/math/group_theory/series_of_groups#def13
+  - symbol: \length(G)
+    meaning: 군의 길이
+    defs:
+    - label: §군의 열
+      url: /ko/math/group_theory/series_of_groups#def17
+  - symbol: '[n]'
+    meaning: $\{1,\ldots,n\}$
+    defs:
+    - label: §대칭군
+      url: /ko/math/group_theory/symmetric_groups#def1
+  - symbol: n_p
+    meaning: 실로우 $p$-subgroup의 개수
+    defs:
+    - label: §실로우 정리
+      url: /ko/math/group_theory/Sylow_theorems
+  - symbol: \sgn(\sigma)
+    meaning: 치환의 부호
+    defs:
+    - label: §대칭군
+      url: /ko/math/group_theory/symmetric_groups#lem10
+  - symbol: \sigma\tau
+    meaning: 치환의 합성
+    defs:
+    - label: §대칭군
+      url: /ko/math/group_theory/symmetric_groups
+  - symbol: \Syl_p(G)
+    meaning: 실로우 $p$-subgroup들의 모임
+    defs:
+    - label: §실로우 정리
+      url: /ko/math/group_theory/Sylow_theorems#def5
+- category: ring_theory
+  title: 환론
+  conventions:
+  - symbol: A, B
+    meaning: ring
+    defs:
+    - label: §환의 정의
+      url: /ko/math/algebraic_structures/rings
+  items:
+  - symbol: \mathfrak{a}\mathfrak{b}
+    meaning: 두 two-sided ideal의 곱
+    defs:
+    - label: §중국인의 나머지정리
+      url: /ko/math/ring_theory/chinese_remainder_theorem#def1
+  - symbol: A^\times
+    meaning: 환의 unit 전체의 모임
+    defs:
+    - label: §가역원과 영인자
+      url: /ko/math/ring_theory/units_and_zero_divisors#def1
+  - symbol: A[[\x_i]]_{i\in I}
+    meaning: 형식적 멱급수환
+    defs:
+    - label: §다항식환
+      url: /ko/math/ring_theory/polynomial_rings
+  - symbol: A[\x_i]_{i\in I}
+    meaning: $A$ 위의 다항식환
+    defs:
+    - label: §다항식환
+      url: /ko/math/ring_theory/polynomial_rings
+  - symbol: D
+    meaning: 형식적 미분
+    defs:
+    - label: §다항식환
+      url: /ko/math/ring_theory/polynomial_rings
+  - symbol: \mathbb{F}_p
+    meaning: $p$개 원소의 유한체
+    defs:
+    - label: §가역원과 영인자
+      url: /ko/math/ring_theory/units_and_zero_divisors#ex7
+    - label: §체
+      url: /ko/math/field_theory/fields#ex3
+  - symbol: \GL(n;R)
+    meaning: general linear group
+    defs:
+    - label: §가역원과 영인자
+      url: /ko/math/ring_theory/units_and_zero_divisors#ex9
+  - symbol: \lvert\nu\rvert
+    meaning: multi-index의 총 차수(길이)
+    defs:
+    - label: §다항식환
+      url: /ko/math/ring_theory/polynomial_rings
+  - symbol: \Mat_n(R)
+    meaning: $R$ 성분 $n\times n$ 행렬환
+    defs:
+    - label: §가역원과 영인자
+      url: /ko/math/ring_theory/units_and_zero_divisors#ex9
+  - symbol: N
+    meaning: 정역 위의 노름
+    defs:
+    - label: §정역
+      url: /ko/math/ring_theory/integral_domains#def1
+  - symbol: \mathbb{N}^{(I)}
+    meaning: $I$에서 $\mathbb{N}$으로 가는 finitely supported function들의 모임
+    defs:
+    - label: §다항식환
+      url: /ko/math/ring_theory/polynomial_rings
+  - symbol: u^{-1}
+    meaning: unit의 역원
+    defs:
+    - label: §가역원과 영인자
+      url: /ko/math/ring_theory/units_and_zero_divisors#def1
+  - symbol: \x^\nu
+    meaning: multi-index $\nu$에 대한 단항식
+    defs:
+    - label: §다항식환
+      url: /ko/math/ring_theory/polynomial_rings
+- category: multilinear_algebra
+  title: 다중선형대수학
+  conventions:
+  - symbol: A
+    meaning: 가환환
+    defs:
+    - label: §환의 정의
+      url: /ko/math/algebraic_structures/rings
+  - symbol: E, F
+    meaning: 대수
+    defs:
+    - label: §대수
+      url: /ko/math/algebraic_structures/algebras
+  items:
+  - symbol: \ad_\varepsilon(z)
+    meaning: 수반작용
+    defs:
+    - label: §미분
+      url: /ko/math/multilinear_algebra/derivations#def10
+  - symbol: \bigoplus_{i\in I} N_i
+    meaning: direct sum
+    defs:
+    - label: §완전열
+      url: /ko/math/multilinear_algebra/exact_sequences
+  - symbol: \bigwedge(M)
+    meaning: exterior algebra
+    defs:
+    - label: §텐서대수
+      url: /ko/math/multilinear_algebra/tensor_algebras#def10
+  - symbol: \bigwedge^n(M)
+    meaning: $n$번째 외곱
+    defs:
+    - label: §텐서대수
+      url: /ko/math/multilinear_algebra/tensor_algebras
+  - symbol: \Der_A(E,M)
+    meaning: $E$에서 $M$으로 가는 $A$-derivation들의 module
+    defs:
+    - label: §미분가군
+      url: /ko/math/multilinear_algebra/differential_modules
+  - symbol: \Der_E(F,N)
+    meaning: $E$-linear한 (상대) derivation들의 submodule
+    defs:
+    - label: §미분가군
+      url: /ko/math/multilinear_algebra/differential_modules
+  - symbol: E_f
+    meaning: 다항식 $f$가 일차식들로 분해되게 하는 universal $A$-algebra
+    defs:
+    - label: §대칭텐서
+      url: /ko/math/multilinear_algebra/symmetric_tensors
+  - symbol: E_{ij}
+    meaning: 행렬 단위
+    defs:
+    - label: §행렬
+      url: /ko/math/multilinear_algebra/matrices
+    - label: §기저변환
+      url: /ko/math/multilinear_algebra/change_of_basis
+  - symbol: e_k
+    meaning: elementary symmetric polynomial
+    defs:
+    - label: §대칭텐서
+      url: /ko/math/multilinear_algebra/symmetric_tensors
+  - symbol: \GL_n(A)
+    meaning: general linear group
+    defs:
+    - label: §기저변환
+      url: /ko/math/multilinear_algebra/change_of_basis#def3
+  - symbol: h_k
+    meaning: complete homogeneous symmetric polynomial
+    defs:
+    - label: §대칭텐서
+      url: /ko/math/multilinear_algebra/symmetric_tensors#def15
+  - symbol: \mathfrak{I}
+    meaning: 곱셈사상 $m$의 kernel
+    defs:
+    - label: §미분가군
+      url: /ko/math/multilinear_algebra/differential_modules
+  - symbol: I_n
+    meaning: $n\times n$ 항등행렬
+    defs:
+    - label: §기저변환
+      url: /ko/math/multilinear_algebra/change_of_basis
+  - symbol: \langle x,\xi\rangle
+    meaning: Kronecker pairing
+    defs:
+    - label: §쌍대공간
+      url: /ko/math/multilinear_algebra/dual_spaces
+  - symbol: M^{\ast\ast}
+    meaning: double dual
+    defs:
+    - label: §쌍대공간
+      url: /ko/math/multilinear_algebra/dual_spaces
+  - symbol: M^\ast
+    meaning: dual module
+    defs:
+    - label: §쌍대공간
+      url: /ko/math/multilinear_algebra/dual_spaces#def1
+    - label: §분수아이디얼
+      url: /ko/math/commutative_algebra/fractional_ideals
+  - symbol: \Mat_I(A)
+    meaning: $A$ 성분의 $I\times I$ 정사각행렬들의 모임
+    defs:
+    - label: §기저변환
+      url: /ko/math/multilinear_algebra/change_of_basis#def1
+  - symbol: \Mat_{I\times J}(A)
+    meaning: $A$ 위 $I\times J$ 행렬 전체 집합
+    defs:
+    - label: §행렬
+      url: /ko/math/multilinear_algebra/matrices#def1
+  - symbol: \nu
+    meaning: $\Hom(M,L)\otimes_AN\to\Hom(M,L\otimes_AN)$ 자연사상
+    defs:
+    - label: §Hom과 텐서곱
+      url: /ko/math/multilinear_algebra/hom_and_tensor
+  - symbol: \Omega_{E/A}
+    meaning: $A$-differential들의 $E$-module (Kähler 미분가군), $\Omega_A(E)$로도 씀
+    defs:
+    - label: §미분가군
+      url: /ko/math/multilinear_algebra/differential_modules#def9
+  - symbol: \Poly^n(M,N)
+    meaning: degree $n$ 동차 다항식 사상들의 모임
+    defs:
+    - label: §대칭텐서
+      url: /ko/math/multilinear_algebra/symmetric_tensors
+  - symbol: s_\lambda
+    meaning: Schur polynomial
+    defs:
+    - label: §대칭텐서
+      url: /ko/math/multilinear_algebra/symmetric_tensors#def16
+  - symbol: \S(M)
+    meaning: symmetric algebra
+    defs:
+    - label: §텐서대수
+      url: /ko/math/multilinear_algebra/tensor_algebras#def5
+  - symbol: \S^n(M)
+    meaning: $n$번째 대칭곱
+    defs:
+    - label: §텐서대수
+      url: /ko/math/multilinear_algebra/tensor_algebras
+  - symbol: \Sym(M)
+    meaning: symmetric tensor들의 graded direct sum
+    defs:
+    - label: §대칭텐서
+      url: /ko/math/multilinear_algebra/symmetric_tensors#def3
+  - symbol: \Sym^n(M)
+    meaning: $n$차 symmetric tensor들의 모임
+    defs:
+    - label: §대칭텐서
+      url: /ko/math/multilinear_algebra/symmetric_tensors#def3
+  - symbol: \Sym(u)
+    meaning: symmetric power
+    defs:
+    - label: §대칭텐서
+      url: /ko/math/multilinear_algebra/symmetric_tensors
+  - symbol: \tau
+    meaning: 평가짝 사상 $M^\ast\otimes_AM\to A$
+    defs:
+    - label: §Hom과 텐서곱
+      url: /ko/math/multilinear_algebra/hom_and_tensor
+  - symbol: \T(M)
+    meaning: tensor algebra
+    defs:
+    - label: §텐서대수
+      url: /ko/math/multilinear_algebra/tensor_algebras#def1
+  - symbol: \T^n(M)
+    meaning: $n$차 tensor product 성분
+    defs:
+    - label: §텐서대수
+      url: /ko/math/multilinear_algebra/tensor_algebras
+  - symbol: \T^p_q(M)
+    meaning: type $(p,q)$ 혼합텐서 공간
+    defs:
+    - label: §텐서대수
+      url: /ko/math/multilinear_algebra/tensor_algebras
+  - symbol: \tr_{H/G}
+    meaning: relative trace
+    defs:
+    - label: §대칭텐서
+      url: /ko/math/multilinear_algebra/symmetric_tensors#def1
+  - symbol: \tr_{M/A}(\alpha)
+    meaning: algebra 원소 $\alpha$의 (상대) trace
+    defs:
+    - label: §노름과 대각합
+      url: /ko/math/multilinear_algebra/norms_and_traces#def1
+  - symbol: \tr
+    meaning: trace map
+    defs:
+    - label: §Hom과 텐서곱
+      url: /ko/math/multilinear_algebra/hom_and_tensor#def6
+    - label: §세르 쌍대성
+      url: /ko/math/algebraic_varieties/serre_duality
+    - label: §리 군
+      url: /ko/math/lie_theory/Lie_groups
+  - symbol: \tr(X)
+    meaning: 행렬의 trace
+    defs:
+    - label: §행렬과 선형사상
+      url: /ko/math/multilinear_algebra/matrices_and_linear_maps
+  - symbol: u^\ast
+    meaning: 선형사상 $u$의 전치
+    defs:
+    - label: §쌍대공간
+      url: /ko/math/multilinear_algebra/dual_spaces#def4
+  - symbol: \varepsilon
+    meaning: commutation factor
+    defs:
+    - label: §미분
+      url: /ko/math/multilinear_algebra/derivations#def1
+  - symbol: \wedge
+    meaning: 쐐기곱
+    defs:
+    - label: §텐서대수
+      url: /ko/math/multilinear_algebra/tensor_algebras
+- category: field_theory
+  title: 체론
+  conventions:
+  - symbol: \mathbb{K}, \mathbb{L}
+    meaning: field
+    defs:
+    - label: §가환군과 체
+      url: /ko/math/linear_algebra/fields
+    - label: §분수체
+      url: /ko/math/algebraic_structures/field_of_fractions
+  - symbol: \mathbb{P}
+    meaning: prime field
+    defs:
+    - label: §체
+      url: /ko/math/field_theory/fields
+  - symbol: \Omega
+    meaning: 고정된 큰 확장
+    defs:
+    - label: §대수적 확장
+      url: /ko/math/field_theory/algebraic_extensions
+  items:
+  - symbol: '[A:\mathbb{K}]'
+    meaning: $\mathbb{K}-$대수 $A$의 차수
+    defs:
+    - label: §대수적 확장
+      url: /ko/math/field_theory/algebraic_extensions#def1
+  - symbol: '[A:\mathbb{K}]_s'
+    meaning: separable degree
+    defs:
+    - label: §에탈대수
+      url: /ko/math/field_theory/etale_algebras#def10
+  - symbol: A_{(\mathbb{L})}
+    meaning: 스칼라 확장
+    defs:
+    - label: §에탈대수
+      url: /ko/math/field_theory/etale_algebras
+  - symbol: \Alg{\mathbb{K}}
+    meaning: $\mathbb{K}$ 위 unital associative 대수들의 category
+    defs:
+    - label: §대수적 확장
+      url: /ko/math/field_theory/algebraic_extensions#rmk
+  - symbol: \Aut_\mathbb{K}(\overline{\mathbb{K}})
+    meaning: $\overline{\mathbb{K}}$의 $\mathbb{K}-$automorphism들의 군
+    defs:
+    - label: §갈루아 확장
+      url: /ko/math/field_theory/galois_extension
+  - symbol: \ch(A)
+    meaning: characteristic
+    defs:
+    - label: §체
+      url: /ko/math/field_theory/fields#def7
+  - symbol: f'
+    meaning: 다항식의 형식적 도함수
+    defs:
+    - label: §분리가능확대체
+      url: /ko/math/field_theory/separable_extensions#prop10
+  - symbol: \Frob_p
+    meaning: 프로베니우스 자기준동형
+    defs:
+    - label: §체
+      url: /ko/math/field_theory/fields#def11
+  - symbol: \Fun(\mathbb{L},\mathbb{L})
+    meaning: $\mathbb{L}$에서 $\mathbb{L}$로의 함수들의 모임
+    defs:
+    - label: §갈루아 군의 성질들
+      url: /ko/math/field_theory/properties_of_galois_extensions
+  - symbol: \Gal(\mathbb{L}/\mathbb{K})
+    meaning: Galois group
+    defs:
+    - label: §갈루아 확장
+      url: /ko/math/field_theory/galois_extension#def12
+  - symbol: \mathbb{K}(A)
+    meaning: $A$를 포함하는 최소 subextension
+    defs:
+    - label: §대수적 확장
+      url: /ko/math/field_theory/algebraic_extensions#def4
+  - symbol: \mathbb{K}^{p^{-\infty}}
+    meaning: perfect closure
+    defs:
+    - label: §분리가능차수
+      url: /ko/math/field_theory/separable_degree#cor4
+  - symbol: K(S)
+    meaning: $K\cup$ $S$로 생성되는 $A$의 최소 부분체
+    defs:
+    - label: §체
+      url: /ko/math/field_theory/fields
+  - symbol: \mathbb{L}/\mathbb{K}
+    meaning: 체 확장 (field extension)
+    defs:
+    - label: §대수적 확장
+      url: /ko/math/field_theory/algebraic_extensions
+  - symbol: \overline{\mathbb{K}}
+    meaning: algebraic closure
+    defs:
+    - label: §대수적 폐포
+      url: /ko/math/field_theory/algebraically_closed_extensions
+  - symbol: \sigma\vert_\mathbb{M}
+    meaning: restriction
+    defs:
+    - label: §갈루아 확장
+      url: /ko/math/field_theory/galois_extension#prop13
+- category: homological_algebra
+  title: 호몰로지 대수학
+  conventions:
+  - symbol: \mathcal{A}
+    meaning: abelian category
+    defs:
+    - label: §아벨 카테고리
+      url: /ko/math/category_theory/abelian_categories
+  items:
+  - symbol: A[n]
+    meaning: $n$-torsion subgroup
+    defs:
+    - label: §Ext와 Tor
+      url: /ko/math/homological_algebra/ext_and_tor#prop6
+  - symbol: B_n(C)
+    meaning: $n$-경계
+    defs:
+    - label: §호몰로지
+      url: /ko/math/homological_algebra/homology#def2
+    - label: §호몰로지
+      url: /ko/math/algebraic_topology/homology
+  - symbol: C_\bullet
+    meaning: chain complex
+    defs:
+    - label: §호몰로지
+      url: /ko/math/homological_algebra/homology
+  - symbol: \Ch(\mathcal{A})
+    meaning: $\mathcal{A}$에서의 chain complex들의 범주
+    defs:
+    - label: §호몰로지
+      url: /ko/math/homological_algebra/homology
+    - label: §유도카테고리
+      url: /ko/math/homological_algebra/derived_categories
+    - label: §아벨 카테고리
+      url: /ko/math/category_theory/abelian_categories
+  - symbol: \cone(f)
+    meaning: mapping cone
+    defs:
+    - label: §긴 완전열
+      url: /ko/math/homological_algebra/long_exact_sequence#def8
+  - symbol: \delta
+    meaning: 연결 사상
+    defs:
+    - label: §Diagram chasing
+      url: /ko/math/homological_algebra/diagram_chasing#thm6
+  - symbol: \delta_n
+    meaning: homology $\delta$-함자의 연결 사상
+    defs:
+    - label: §유도함자
+      url: /ko/math/homological_algebra/derived_functors#def1
+  - symbol: d_r
+    meaning: $r$번째 page의 미분
+    defs:
+    - label: §스펙트럼 열
+      url: /ko/math/homological_algebra/spectral_sequences#def1
+  - symbol: E_\infty^{p,q}
+    meaning: 안정화된 (극한) page 항
+    defs:
+    - label: §스펙트럼 열
+      url: /ko/math/homological_algebra/spectral_sequences#def4
+  - symbol: \epsilon
+    meaning: augmentation map
+    defs:
+    - label: §분해
+      url: /ko/math/homological_algebra/resolutions#def2
+  - symbol: E_r^{p,q}
+    meaning: spectral sequence의 $r$번째 page의 $(p,q)$항
+    defs:
+    - label: §스펙트럼 열
+      url: /ko/math/homological_algebra/spectral_sequences#def1
+  - symbol: \eta
+    meaning: augmentation map
+    defs:
+    - label: §분해
+      url: /ko/math/homological_algebra/resolutions#def2
+  - symbol: \Ext_A^i(M,N)
+    meaning: Ext 군
+    defs:
+    - label: §Ext와 Tor
+      url: /ko/math/homological_algebra/ext_and_tor#def1
+  - symbol: f^\ast
+    meaning: cokernel(또는 몫)에 유도된 사상
+    defs:
+    - label: §Diagram chasing
+      url: /ko/math/homological_algebra/diagram_chasing#lem4
+  - symbol: f_\bullet
+    meaning: chain map
+    defs:
+    - label: §호몰로지
+      url: /ko/math/homological_algebra/homology#def1
+  - symbol: \gr^p A^\bullet
+    meaning: 연관 graded 복합체
+    defs:
+    - label: §스펙트럼 열
+      url: /ko/math/homological_algebra/spectral_sequences
+  - symbol: h_n
+    meaning: chain homotopy
+    defs:
+    - label: §긴 완전열
+      url: /ko/math/homological_algebra/long_exact_sequence#def5
+  - symbol: H_n(C)
+    meaning: $n$번째 homology
+    defs:
+    - label: §호몰로지
+      url: /ko/math/homological_algebra/homology#def2
+  - symbol: H_n(f)
+    meaning: 사슬 사상이 유도하는 homology 사상
+    defs:
+    - label: §호몰로지
+      url: /ko/math/homological_algebra/homology#prop3
+  - symbol: \Hom_{K(\mathcal{A})}(A^\bullet,B^\bullet)
+    meaning: homotopy category에서의 hom 집합
+    defs:
+    - label: §유도카테고리
+      url: /ko/math/homological_algebra/derived_categories
+  - symbol: L_iF
+    meaning: left derived functor
+    defs:
+    - label: §유도함자
+      url: /ko/math/homological_algebra/derived_functors#def4
+  - symbol: '[n]'
+    meaning: $\{1,\ldots,n\}$
+    defs:
+    - label: §유도카테고리
+      url: /ko/math/homological_algebra/derived_categories
+  - symbol: \partial
+    meaning: connecting homomorphism
+    defs:
+    - label: §긴 완전열
+      url: /ko/math/homological_algebra/long_exact_sequence#thm1
+  - symbol: R^iF
+    meaning: right derived functor
+    defs:
+    - label: §유도함자
+      url: /ko/math/homological_algebra/derived_functors#def9
+  - symbol: \Rightarrow
+    meaning: spectral sequence의 수렴
+    defs:
+    - label: §스펙트럼 열
+      url: /ko/math/homological_algebra/spectral_sequences#def5
+  - symbol: \Tor_i^A(M,N)
+    meaning: Tor 군
+    defs:
+    - label: §Ext와 Tor
+      url: /ko/math/homological_algebra/ext_and_tor#def2
+  - symbol: \Tot(C)_\bullet
+    meaning: total complex
+    defs:
+    - label: §호몰로지
+      url: /ko/math/homological_algebra/homology#def5
+  - symbol: Z_n(C)
+    meaning: $n$-cycle
+    defs:
+    - label: §호몰로지
+      url: /ko/math/homological_algebra/homology#def2
+    - label: §호몰로지
+      url: /ko/math/algebraic_topology/homology
+- category: commutative_algebra
+  title: 가환대수학
+  conventions:
+  - symbol: A, B
+    meaning: 가환환
+    defs:
+    - label: §환의 정의
+      url: /ko/math/algebraic_structures/rings
+  - symbol: \mathfrak{p}, \mathfrak{q}
+    meaning: prime ideal
+    defs:
+    - label: §분수체
+      url: /ko/math/algebraic_structures/field_of_fractions
+  - symbol: \mathfrak{m}
+    meaning: maximal ideal
+    defs:
+    - label: §환의 정의
+      url: /ko/math/algebraic_structures/rings
+  items:
+  - symbol: (\mathfrak{a}:\mathfrak{b})
+    meaning: 두 ideal의 ideal quotient
+    defs:
+    - label: §기본 개념들
+      url: /ko/math/commutative_algebra/basic_notions
+    - label: §등급환의 국소화
+      url: /ko/math/commutative_algebra/localization_of_graded_rings
+  - symbol: A\hookrightarrow B
+    meaning: integral extension을 나타내는 포함사상
+    defs:
+    - label: §정수적 확장과 아이디얼
+      url: /ko/math/commutative_algebra/lying_over_and_going_up
+  - symbol: \ann(M)
+    meaning: annihilator
+    defs:
+    - label: §기본 개념들
+      url: /ko/math/commutative_algebra/basic_notions
+  - symbol: \ann(x)
+    meaning: 원소 $x$의 annihilator
+    defs:
+    - label: §동반소아이디얼
+      url: /ko/math/commutative_algebra/associated_primes
+  - symbol: \Ass M
+    meaning: 가군 $M$의 associated prime ideal들의 모임
+    defs:
+    - label: §동반소아이디얼
+      url: /ko/math/commutative_algebra/associated_primes
+  - symbol: \Bl_\mathfrak{a}A
+    meaning: $\mathfrak{a}$의 $A$에서의 blowup algebra
+    defs:
+    - label: §부풀림 대수
+      url: /ko/math/commutative_algebra/blowup_algebra
+  - symbol: \Bl_\mathcal{J}M
+    meaning: 여과 $\mathcal{J}$에 대한 부풀림 가군
+    defs:
+    - label: §부풀림 대수
+      url: /ko/math/commutative_algebra/blowup_algebra
+  - symbol: \CaDiv(A)
+    meaning: Cartier divisor들의 군
+    defs:
+    - label: §분수아이디얼
+      url: /ko/math/commutative_algebra/fractional_ideals
+  - symbol: \Chow(A)
+    meaning: Chow group
+    defs:
+    - label: §인자
+      url: /ko/math/commutative_algebra/divisors
+  - symbol: \codim \mathfrak{p}
+    meaning: codimension
+    defs:
+    - label: §차원
+      url: /ko/math/commutative_algebra/Krull_dimension
+  - symbol: \dim \mathfrak{a}
+    meaning: ideal의 차원
+    defs:
+    - label: §차원
+      url: /ko/math/commutative_algebra/Krull_dimension
+  - symbol: \dim A
+    meaning: Krull dimension
+    defs:
+    - label: §차원
+      url: /ko/math/commutative_algebra/Krull_dimension
+  - symbol: \Div(A)
+    meaning: Weil divisor군
+    defs:
+    - label: §인자
+      url: /ko/math/commutative_algebra/divisors
+  - symbol: \End_\rMod{A}(M)
+    meaning: $A$-가군 $M$의 endomorphism들의 모임
+    defs:
+    - label: §정수적 확장
+      url: /ko/math/commutative_algebra/integral_extension
+  - symbol: \ev_a
+    meaning: evaluation map
+    defs:
+    - label: §영점정리
+      url: /ko/math/commutative_algebra/nullstellensatz
+  - symbol: \gr_\mathfrak{a}A
+    meaning: associated graded ring
+    defs:
+    - label: §부풀림 대수
+      url: /ko/math/commutative_algebra/blowup_algebra
+  - symbol: \gr_\mathcal{J}M
+    meaning: associated graded module
+    defs:
+    - label: §부풀림 대수
+      url: /ko/math/commutative_algebra/blowup_algebra
+  - symbol: \Hom_\rMod{A}(K,M)
+    meaning: $A$-가군 범주에서의 hom-set
+    defs:
+    - label: §국소화의 성질들
+      url: /ko/math/commutative_algebra/properties_of_localization
+  - symbol: \initial(x)
+    meaning: 원소 $x$의 initial form
+    defs:
+    - label: §부풀림 대수
+      url: /ko/math/commutative_algebra/blowup_algebra
+  - symbol: \kappa(\mathfrak{p})
+    meaning: residue field
+    defs:
+    - label: §국소화
+      url: /ko/math/commutative_algebra/localization
+  - symbol: \mathbb{K}^n
+    meaning: 체 $\mathbb{K}$ 위의 $n$차원 affine 공간
+    defs:
+    - label: §영점정리
+      url: /ko/math/commutative_algebra/nullstellensatz
+  - symbol: \length(M)
+    meaning: 가군 $M$의 길이
+    defs:
+    - label: §조르단-횔더 정리
+      url: /ko/math/commutative_algebra/Jordan-Holder_theorem
+  - symbol: M_\mathfrak{p}
+    meaning: localization
+    defs:
+    - label: §국소화
+      url: /ko/math/commutative_algebra/localization
+  - symbol: \mathfrak{N}(A)
+    meaning: nilradical
+    defs:
+    - label: §동반소아이디얼
+      url: /ko/math/commutative_algebra/associated_primes
+    - label: §스킴의 대수구조
+      url: /ko/math/scheme_theory/algebra_of_schemes
+  - symbol: \nu
+    meaning: valuation
+    defs:
+    - label: §정칙국소환
+      url: /ko/math/commutative_algebra/regular_local_rings#def7
+  - symbol: \mathfrak{p}^{-1}
+    meaning: ideal의 역
+    defs:
+    - label: §정칙국소환
+      url: /ko/math/commutative_algebra/regular_local_rings#thm9
+  - symbol: \mathfrak{p}^\ast
+    meaning: prime ideal의 동차화
+    defs:
+    - label: §차원
+      url: /ko/math/commutative_algebra/Krull_dimension
+  - symbol: \Phi
+    meaning: Cartier divisor에서 Weil divisor로의 사상
+    defs:
+    - label: §인자
+      url: /ko/math/commutative_algebra/divisors
+  - symbol: \Pic(A)
+    meaning: Picard group
+    defs:
+    - label: §분수아이디얼
+      url: /ko/math/commutative_algebra/fractional_ideals
+  - symbol: \Prin(A)
+    meaning: principal divisor들의 군
+    defs:
+    - label: §인자
+      url: /ko/math/commutative_algebra/divisors
+  - symbol: S^{-1}M
+    meaning: localization
+    defs:
+    - label: §국소화
+      url: /ko/math/commutative_algebra/localization
+  - symbol: \sqrt{\mathfrak{a}}
+    meaning: radical
+    defs:
+    - label: §국소화의 성질들
+      url: /ko/math/commutative_algebra/properties_of_localization
+    - label: §아핀다양체
+      url: /ko/math/algebraic_varieties/affine_varieties
+    - label: §스펙트럼
+      url: /ko/math/scheme_theory/spectrums
+  - symbol: \widehat{A}
+    meaning: completion
+    defs:
+    - label: §완비화
+      url: /ko/math/commutative_algebra/completion
+  - symbol: x/s
+    meaning: localization의 원소 ($x$,$s$)의 representative 표기
+    defs:
+    - label: §국소화
+      url: /ko/math/commutative_algebra/localization
+  - symbol: Z(\mathfrak{a})
+    meaning: ideal $\mathfrak{a}$의 공통 영점집합
+    defs:
+    - label: §영점정리
+      url: /ko/math/commutative_algebra/nullstellensatz
+- category: representation_theory
+  title: 표현론
+  items:
+  - symbol: \mathbb{C}[G]
+    meaning: group algebra
+    defs:
+    - label: §유한군의 표현론
+      url: /ko/math/representation_theory/representations_of_finite_groups
+  - symbol: \delta_x
+    meaning: $x$에서만 $1$인 delta function, $\mathbb{C}[G]$의 basis
+    defs:
+    - label: §유한군의 표현론
+      url: /ko/math/representation_theory/representations_of_finite_groups
+  - symbol: \Hom_G(V,W)
+    meaning: $G$-equivariant 사상들의 모임
+    defs:
+    - label: §유한군의 표현론
+      url: /ko/math/representation_theory/representations_of_finite_groups
+  - symbol: \Irr(G,\mathbb{C})
+    meaning: irreducible representation들의 (isomorphism class) 집합
+    defs:
+    - label: §유한군의 표현론
+      url: /ko/math/representation_theory/representations_of_finite_groups
+  - symbol: \lMod{\mathbb{C}[G]}
+    meaning: 왼쪽 $\mathbb{C}[G]$-module들의 category
+    defs:
+    - label: §유한군의 표현론
+      url: /ko/math/representation_theory/representations_of_finite_groups
+  - symbol: \rchi_\rho
+    meaning: 표현 $\rho$의 지표
+    defs:
+    - label: §표현의 지표
+      url: /ko/math/representation_theory/character_theory#def1
+  - symbol: \Rep_\mathbb{C}(G)
+    meaning: $G$의 복소 표현들의 category
+    defs:
+    - label: §유한군의 표현론
+      url: /ko/math/representation_theory/representations_of_finite_groups
+  - symbol: V^\ast
+    meaning: dual representation
+    defs:
+    - label: §유한군의 표현론
+      url: /ko/math/representation_theory/representations_of_finite_groups#def3
+  - symbol: V\oplus W
+    meaning: direct sum
+    defs:
+    - label: §유한군의 표현론
+      url: /ko/math/representation_theory/representations_of_finite_groups#def3
+- category: topology
+  title: 위상수학
+  conventions:
+  - symbol: X, Y
+    meaning: 위상공간
+    defs:
+    - label: §열린집합
+      url: /ko/math/topology/open_sets
+  - symbol: f, g
+    meaning: 연속함수
+    defs:
+    - label: §연속함수
+      url: /ko/math/topology/continuous_functions
+  - symbol: \mathcal{F}, \mathcal{G}
+    meaning: sheaf
+    defs:
+    - label: §층
+      url: /ko/math/topology/sheaves
+  items:
+  - symbol: A^c
+    meaning: 집합 $A$의 여집합
+    defs:
+    - label: §집합의 내부, 폐포, 경계
+      url: /ko/math/topology/other_concepts
+  - symbol: \mathcal{B}
+    meaning: 위상의 기저
+    defs:
+    - label: §위상공간의 기저
+      url: /ko/math/topology/topological_bases
+  - symbol: \card
+    meaning: 집합의 크기
+    defs:
+    - label: §집합의 내부, 폐포, 경계
+      url: /ko/math/topology/other_concepts
+  - symbol: \cl_A
+    meaning: 부분공간 $A$에서 취한 폐포
+    defs:
+    - label: §Compactness와 paracompactness
+      url: /ko/math/topology/compactness
+  - symbol: \cl(A)
+    meaning: closure
+    defs:
+    - label: §집합의 내부, 폐포, 경계
+      url: /ko/math/topology/other_concepts
+  - symbol: \cl_B A
+    meaning: closure
+    defs:
+    - label: §부분공간
+      url: /ko/math/topology/subspaces
+  - symbol: \cl
+    meaning: closure operator
+    defs:
+    - label: §위상공간의 다른 정의들
+      url: /ko/math/topology/equivalent_formulations_of_topology
+  - symbol: \cl\Delta
+    meaning: closure
+    defs:
+    - label: §고유함수
+      url: /ko/math/topology/proper_maps
+  - symbol: \ext A
+    meaning: exterior
+    defs:
+    - label: §집합의 내부, 폐포, 경계
+      url: /ko/math/topology/other_concepts
+  - symbol: f^{-1}
+    meaning: inverse image sheaf
+    defs:
+    - label: §층
+      url: /ko/math/topology/sheaves#def10
+  - symbol: f_\ast\mathcal{F}
+    meaning: 준층의 밂
+    defs:
+    - label: §준층
+      url: /ko/math/topology/presheaves#ex8
+  - symbol: f(\mathcal{F})
+    meaning: 함수 $f$에 의한 필터의 상
+    defs:
+    - label: §위상공간의 다른 정의들
+      url: /ko/math/topology/equivalent_formulations_of_topology
+  - symbol: \mathcal{F}
+    meaning: filter
+    defs:
+    - label: §위상공간의 다른 정의들
+      url: /ko/math/topology/equivalent_formulations_of_topology
+  - symbol: f^\mathcal{T}
+    meaning: 연속함수 $f$가 유도하는 열린집합 사이의 함수
+    defs:
+    - label: §연속함수
+      url: /ko/math/topology/continuous_functions
+  - symbol: f\vert_{f^{-1}(A)}
+    meaning: 부분공간으로의 함수 제한
+    defs:
+    - label: §고유함수
+      url: /ko/math/topology/proper_maps
+  - symbol: \mathcal{F}\vert_U
+    meaning: restriction
+    defs:
+    - label: §준층
+      url: /ko/math/topology/presheaves#ex7
+  - symbol: \mathcal{F}_x
+    meaning: stalk
+    defs:
+    - label: §준층
+      url: /ko/math/topology/presheaves#def9
+    - label: §층 코호몰로지
+      url: /ko/math/algebraic_varieties/sheaf_cohomology
+  - symbol: \im\phi
+    meaning: 층 사상의 상
+    defs:
+    - label: §층
+      url: /ko/math/topology/sheaves#def7
+  - symbol: \infty
+    meaning: 무한원점
+    defs:
+    - label: §Compactness와 paracompactness
+      url: /ko/math/topology/compactness#def8
+  - symbol: \interior
+    meaning: 내부 연산자
+    defs:
+    - label: §위상공간의 다른 정의들
+      url: /ko/math/topology/equivalent_formulations_of_topology#interior-axiom
+  - symbol: \interior(A)
+    meaning: interior
+    defs:
+    - label: §집합의 내부, 폐포, 경계
+      url: /ko/math/topology/other_concepts
+  - symbol: (i_x)_\ast A
+    meaning: 마천루층
+    defs:
+    - label: §준층
+      url: /ko/math/topology/presheaves#ex5
+  - symbol: \ker\phi
+    meaning: presheaf kernel
+    defs:
+    - label: §준층
+      url: /ko/math/topology/presheaves#def16
+  - symbol: \mathcal{N}(x)
+    meaning: neighborhood filter
+    defs:
+    - label: §열린집합
+      url: /ko/math/topology/open_sets
+  - symbol: \Open(X)
+    meaning: 열린집합들의 순서범주
+    defs:
+    - label: §준층
+      url: /ko/math/topology/presheaves
+  - symbol: ^\op
+    meaning: opposite category
+    defs:
+    - label: §준층
+      url: /ko/math/topology/presheaves
+  - symbol: \mathcal{O}_X
+    meaning: 환 준층
+    defs:
+    - label: §준층
+      url: /ko/math/topology/presheaves#ex14
+  - symbol: \prod_{i\in I} X_i
+    meaning: 위상공간들의 곱
+    defs:
+    - label: §곱공간
+      url: /ko/math/topology/product_spaces#def1
+  - symbol: \PSh(X;\mathcal{A})
+    meaning: 준층들의 범주
+    defs:
+    - label: §준층
+      url: /ko/math/topology/presheaves
+  - symbol: R_1
+    meaning: $R_1-$공간
+    defs:
+    - label: §하우스도르프 공간
+      url: /ko/math/topology/Hausdorff_spaces#def3
+  - symbol: \rho_{VU}
+    meaning: restriction map
+    defs:
+    - label: §준층
+      url: /ko/math/topology/presheaves#def4
+  - symbol: \scl(A)
+    meaning: 점열 폐포
+    defs:
+    - label: §옹골성과 필터의 수렴
+      url: /ko/math/topology/filter_convergence
+  - symbol: \Sh(X;\mathcal{A})
+    meaning: 층의 범주
+    defs:
+    - label: §층
+      url: /ko/math/topology/sheaves
+    - label: §푸앵카레 쌍대성
+      url: /ko/math/algebraic_topology/Poincare_duality
+  - symbol: S^n
+    meaning: $\mathbb{R}^{n+1}$ 안의 $n$차원 구면
+    defs:
+    - label: §Compactness와 paracompactness
+      url: /ko/math/topology/compactness#ex14
+    - label: §미분다양체의 예시들
+      url: /ko/math/manifolds/examples_of_manifolds#ex6
+  - symbol: \Spe(\mathcal{F})
+    meaning: étalé 공간
+    defs:
+    - label: §준층
+      url: /ko/math/topology/presheaves
+  - symbol: \mathcal{S}
+    meaning: subbase
+    defs:
+    - label: §위상공간의 기저
+      url: /ko/math/topology/topological_bases
+  - symbol: \supp\phi
+    meaning: support
+    defs:
+    - label: §Compactness와 paracompactness
+      url: /ko/math/topology/compactness
+  - symbol: s\vert_U
+    meaning: restriction
+    defs:
+    - label: §준층
+      url: /ko/math/topology/presheaves#def4
+  - symbol: s_x
+    meaning: germ
+    defs:
+    - label: §준층
+      url: /ko/math/topology/presheaves
+  - symbol: \mathcal{T}
+    meaning: 위상
+    defs:
+    - label: §열린집합
+      url: /ko/math/topology/open_sets
+  - symbol: T_0
+    meaning: Kolmogorov space
+    defs:
+    - label: §하우스도르프 공간
+      url: /ko/math/topology/Hausdorff_spaces#def3
+  - symbol: T_1
+    meaning: $T_1-$공간
+    defs:
+    - label: §하우스도르프 공간
+      url: /ko/math/topology/Hausdorff_spaces#def3
+  - symbol: T_2
+    meaning: Hausdorff space
+    defs:
+    - label: §하우스도르프 공간
+      url: /ko/math/topology/Hausdorff_spaces#def3
+  - symbol: \underline{A}
+    meaning: constant sheaf
+    defs:
+    - label: §층
+      url: /ko/math/topology/sheaves#ex9
+    - label: §푸앵카레 쌍대성
+      url: /ko/math/algebraic_topology/Poincare_duality
+  - symbol: (x_n)_{n\geq 1}
+    meaning: 점열
+    defs:
+    - label: §하우스도르프 공간
+      url: /ko/math/topology/Hausdorff_spaces#def1
+  - symbol: X/R
+    meaning: quotient space
+    defs:
+    - label: §몫공간
+      url: /ko/math/topology/quotient_spaces#def3
+- category: algebraic_topology
+  title: 대수적 위상수학
+  conventions:
+  - symbol: \mathscr{L}
+    meaning: local coefficient system
+    defs:
+    - label: §푸앵카레 쌍대성
+      url: /ko/math/algebraic_topology/Poincare_duality
+  items:
+  - symbol: '[\alpha]'
+    meaning: 경로의 homotopy 류
+    defs:
+    - label: §호모토피
+      url: /ko/math/algebraic_topology/homotopy
+  - symbol: \ast
+    meaning: 두 경로의 곱
+    defs:
+    - label: §호모토피
+      url: /ko/math/algebraic_topology/homotopy
+  - symbol: \Aut(E_H/B)
+    meaning: 데크 변환군
+    defs:
+    - label: §피복공간
+      url: /ko/math/algebraic_topology/covering_spaces
+  - symbol: \AW
+    meaning: 알렉산더-휘트니 사상
+    defs:
+    - label: §코호몰로지
+      url: /ko/math/algebraic_topology/cohomology
+  - symbol: \B G
+    meaning: classifying space
+    defs:
+    - label: §분류공간
+      url: /ko/math/algebraic_topology/classifying_spaces
+  - symbol: \B\phi
+    meaning: classifying space 함자가 유도하는 사상
+    defs:
+    - label: §분류공간
+      url: /ko/math/algebraic_topology/classifying_spaces
+  - symbol: c(E)
+    meaning: total Chern class
+    defs:
+    - label: §벡터다발의 특성류
+      url: /ko/math/algebraic_topology/characteristic_classes
+  - symbol: \check{H}^p(\mathcal{U},\mathcal{F})
+    meaning: Čech cohomology
+    defs:
+    - label: §슈티펠-휘트니 특성류
+      url: /ko/math/algebraic_topology/stiefel_whitney_classes
+    - label: §층 코호몰로지
+      url: /ko/math/algebraic_varieties/sheaf_cohomology
+  - symbol: C_k(X)
+    meaning: 특이 $k$-심플렉스들로 생성된 자유 아벨군
+    defs:
+    - label: §호몰로지
+      url: /ko/math/algebraic_topology/homology
+  - symbol: (C\otimes D)_\bullet
+    meaning: tensor product
+    defs:
+    - label: §코호몰로지
+      url: /ko/math/algebraic_topology/cohomology#def7
+  - symbol: \Cov(B)
+    meaning: $B$의 covering space들의 범주
+    defs:
+    - label: §피복공간
+      url: /ko/math/algebraic_topology/covering_spaces
+  - symbol: \CP^n
+    meaning: 복소사영공간
+    defs:
+    - label: §벡터다발의 특성류
+      url: /ko/math/algebraic_topology/characteristic_classes
+  - symbol: C^\vee
+    meaning: chain complex의 쌍대
+    defs:
+    - label: §코호몰로지
+      url: /ko/math/algebraic_topology/cohomology
+  - symbol: \delta
+    meaning: coboundary map
+    defs:
+    - label: §코호몰로지
+      url: /ko/math/algebraic_topology/cohomology
+  - symbol: \Delta^n
+    meaning: 표준 $n$-심플렉스
+    defs:
+    - label: §호몰로지
+      url: /ko/math/algebraic_topology/homology
+  - symbol: \Delta
+    meaning: 대각 사상 $X\to X\times X$
+    defs:
+    - label: §합곱
+      url: /ko/math/algebraic_topology/cup_products
+  - symbol: E_0
+    meaning: zero section을 제거한 total space
+    defs:
+    - label: §벡터다발의 특성류
+      url: /ko/math/algebraic_topology/characteristic_classes
+  - symbol: E_1\oplus E_2
+    meaning: Whitney 합
+    defs:
+    - label: §슈티펠-휘트니 특성류
+      url: /ko/math/algebraic_topology/stiefel_whitney_classes
+  - symbol: \E G
+    meaning: total space
+    defs:
+    - label: §분류공간
+      url: /ko/math/algebraic_topology/classifying_spaces
+  - symbol: \EZ
+    meaning: 아일렌베르크-질버 사상
+    defs:
+    - label: §코호몰로지
+      url: /ko/math/algebraic_topology/cohomology
+  - symbol: f^\ast E
+    meaning: 당김다발
+    defs:
+    - label: §슈티펠-휘트니 특성류
+      url: /ko/math/algebraic_topology/stiefel_whitney_classes
+  - symbol: f^\ast
+    meaning: 연속함수 $f$가 cohomology에서 유도하는 당김 사상
+    defs:
+    - label: §합곱
+      url: /ko/math/algebraic_topology/cup_products
+    - label: §저우 군
+      url: /ko/math/algebraic_varieties/chow_groups
+  - symbol: F_\bullet
+    meaning: 완전 깃발
+    defs:
+    - label: §슈티펠-휘트니 특성류
+      url: /ko/math/algebraic_topology/stiefel_whitney_classes
+    - label: §그라스만 다양체
+      url: /ko/math/algebraic_varieties/grassmannians
+  - symbol: \Fr(E)
+    meaning: 틀다발
+    defs:
+    - label: §분류공간
+      url: /ko/math/algebraic_topology/classifying_spaces
+  - symbol: \frown
+    meaning: cap product
+    defs:
+    - label: §합곱
+      url: /ko/math/algebraic_topology/cup_products#def5
+    - label: §푸앵카레 쌍대성
+      url: /ko/math/algebraic_topology/Poincare_duality
+  - symbol: \gamma^k_\infty
+    meaning: universal bundle
+    defs:
+    - label: §슈티펠-휘트니 특성류
+      url: /ko/math/algebraic_topology/stiefel_whitney_classes
+  - symbol: \gamma
+    meaning: tautological line bundle
+    defs:
+    - label: §벡터다발의 특성류
+      url: /ko/math/algebraic_topology/characteristic_classes
+  - symbol: \Gamma(X,-)
+    meaning: global section functor
+    defs:
+    - label: §푸앵카레 쌍대성
+      url: /ko/math/algebraic_topology/Poincare_duality
+    - label: §층 코호몰로지
+      url: /ko/math/algebraic_varieties/sheaf_cohomology
+  - symbol: g_{ij}
+    meaning: transition function
+    defs:
+    - label: §슈티펠-휘트니 특성류
+      url: /ko/math/algebraic_topology/stiefel_whitney_classes
+    - label: §선다발과 벡터다발
+      url: /ko/math/algebraic_varieties/line_bundles
+  - symbol: \GL^+(n;\mathbb{R})
+    meaning: 방향보존 general linear group
+    defs:
+    - label: §벡터다발의 특성류
+      url: /ko/math/algebraic_topology/characteristic_classes
+  - symbol: \Gr(k,\mathbb{R}^\infty)
+    meaning: 무한 그라스만 다양체
+    defs:
+    - label: §슈티펠-휘트니 특성류
+      url: /ko/math/algebraic_topology/stiefel_whitney_classes
+  - symbol: \Gr(k,\mathbb{R}^n)
+    meaning: Grassmannian
+    defs:
+    - label: §슈티펠-휘트니 특성류
+      url: /ko/math/algebraic_topology/stiefel_whitney_classes
+  - symbol: \gr_{\mathbb{N}}\Alg{A}
+    meaning: $\mathbb{N}$-등급 $A$-대수들의 범주
+    defs:
+    - label: §합곱
+      url: /ko/math/algebraic_topology/cup_products
+  - symbol: H_n(X)
+    meaning: $n$번째 특이 homology
+    defs:
+    - label: §호몰로지
+      url: /ko/math/algebraic_topology/homology
+  - symbol: \langle-,-\rangle
+    meaning: 사슬과 코사슬의 표준 쌍
+    defs:
+    - label: §코호몰로지
+      url: /ko/math/algebraic_topology/cohomology
+  - symbol: \langle-,-\rangle
+    meaning: Kronecker pairing
+    defs:
+    - label: §합곱
+      url: /ko/math/algebraic_topology/cup_products
+  - symbol: '[M]'
+    meaning: fundamental class
+    defs:
+    - label: §푸앵카레 쌍대성
+      url: /ko/math/algebraic_topology/Poincare_duality
+  - symbol: \Omat(n)
+    meaning: 직교군
+    defs:
+    - label: §분류공간
+      url: /ko/math/algebraic_topology/classifying_spaces
+  - symbol: \Omega_\lambda(F_\bullet)
+    meaning: 슈베르트 순환
+    defs:
+    - label: §슈티펠-휘트니 특성류
+      url: /ko/math/algebraic_topology/stiefel_whitney_classes
+  - symbol: \or_M
+    meaning: orientation sheaf
+    defs:
+    - label: §푸앵카레 쌍대성
+      url: /ko/math/algebraic_topology/Poincare_duality
+  - symbol: \partial_k
+    meaning: 경계 사상
+    defs:
+    - label: §호몰로지
+      url: /ko/math/algebraic_topology/homology
+  - symbol: \Pi_1(X)
+    meaning: fundamental groupoid
+    defs:
+    - label: §호모토피
+      url: /ko/math/algebraic_topology/homotopy#def11
+  - symbol: \pi_1(X,x)
+    meaning: 밑점 $x$에서의 기본군
+    defs:
+    - label: §호모토피
+      url: /ko/math/algebraic_topology/homotopy
+  - symbol: \rchi(M)
+    meaning: Euler characteristic
+    defs:
+    - label: §벡터다발의 특성류
+      url: /ko/math/algebraic_topology/characteristic_classes
+  - symbol: \RP^n
+    meaning: 실사영공간
+    defs:
+    - label: §슈티펠-휘트니 특성류
+      url: /ko/math/algebraic_topology/stiefel_whitney_classes
+    - label: §미분다양체의 예시들
+      url: /ko/math/manifolds/examples_of_manifolds#ex8
+  - symbol: \simeq
+    meaning: homotopic
+    defs:
+    - label: §호모토피
+      url: /ko/math/algebraic_topology/homotopy#def2
+  - symbol: \sim
+    meaning: path homotopic
+    defs:
+    - label: §호모토피
+      url: /ko/math/algebraic_topology/homotopy#def10
+  - symbol: \smile
+    meaning: cup product
+    defs:
+    - label: §합곱
+      url: /ko/math/algebraic_topology/cup_products#def1
+    - label: §세르 쌍대성
+      url: /ko/math/algebraic_varieties/serre_duality
+    - label: §거울대칭 개요
+      url: /ko/math/mirror_symmetry/overview
+  - symbol: \SO(n)
+    meaning: 특수직교군
+    defs:
+    - label: §분류공간
+      url: /ko/math/algebraic_topology/classifying_spaces
+  - symbol: \span(x)
+    meaning: 선형생성
+    defs:
+    - label: §슈티펠-휘트니 특성류
+      url: /ko/math/algebraic_topology/stiefel_whitney_classes
+  - symbol: \Spe(\omega_M)
+    meaning: orientation double cover
+    defs:
+    - label: §푸앵카레 쌍대성
+      url: /ko/math/algebraic_topology/Poincare_duality
+  - symbol: \times
+    meaning: 외적
+    defs:
+    - label: §합곱
+      url: /ko/math/algebraic_topology/cup_products
+  - symbol: \Top^2
+    meaning: 위상공간 쌍들의 범주
+    defs:
+    - label: §Acyclic models theorem
+      url: /ko/math/algebraic_topology/acyclic_models_theorem
+  - symbol: \Umat(n)
+    meaning: 유니터리군
+    defs:
+    - label: §분류공간
+      url: /ko/math/algebraic_topology/classifying_spaces
+  - symbol: u
+    meaning: Thom class
+    defs:
+    - label: §벡터다발의 특성류
+      url: /ko/math/algebraic_topology/characteristic_classes
+  - symbol: '[v_0,\ldots,\hat{v}_i,\ldots,v_k]'
+    meaning: $i$번째 꼭짓점을 생략한 face
+    defs:
+    - label: §호몰로지
+      url: /ko/math/algebraic_topology/homology
+  - symbol: \widetilde{f}
+    meaning: $f$의 $p$에 대한 올림
+    defs:
+    - label: §피복공간
+      url: /ko/math/algebraic_topology/covering_spaces#def5
+- category: manifolds
+  title: 미분다양체
+  conventions:
+  - symbol: M, N
+    meaning: 매끄러운 다양체
+    defs:
+    - label: §미분다양체
+      url: /ko/math/manifolds/smooth_manifolds
+  - symbol: x^i
+    meaning: 국소좌표
+    defs:
+    - label: §미분다양체
+      url: /ko/math/manifolds/smooth_manifolds
+  items:
+  - symbol: \mathcal{C}^\infty_M
+    meaning: $M$ 위 smooth 함수들의 (환의) 층
+    defs:
+    - label: §접공간
+      url: /ko/math/manifolds/tangent_space
+  - symbol: \mathcal{C}^\infty_{M,p}
+    meaning: 점 $p$에서의 stalk (germ들의 환), 혼동 없을 때
+    defs:
+    - label: §접공간
+      url: /ko/math/manifolds/tangent_space
+  - symbol: C^\infty(U)
+    meaning: 열린집합 $U$ 위 $C^\infty$ 함수들의 모임
+    defs:
+    - label: §접공간
+      url: /ko/math/manifolds/tangent_space
+  - symbol: C^k
+    meaning: 성분함수가 $k$번 미분가능하고 그 결과가 연속인 함수
+    defs:
+    - label: §미분다양체
+      url: /ko/math/manifolds/smooth_manifolds
+  - symbol: \delta_{ij}
+    meaning: 크로네커 델타
+    defs:
+    - label: §미분사상의 예시들
+      url: /ko/math/manifolds/examples_of_differentials
+    - label: §여접공간
+      url: /ko/math/manifolds/cotangent_space
+  - symbol: d
+    meaning: exterior derivative
+    defs:
+    - label: §미분형식
+      url: /ko/math/manifolds/differential_forms
+  - symbol: dF_p
+    meaning: $F$의 점 $p$에서의 differential
+    defs:
+    - label: §미분사상
+      url: /ko/math/manifolds/differentials#def7
+  - symbol: \mathcal{D}
+    meaning: $k$차원 분포
+    defs:
+    - label: §Distribution
+      url: /ko/math/manifolds/distribution
+  - symbol: dx^i\vert_p
+    meaning: 좌표함수 $x^i$의 점 $p$에서의 미분
+    defs:
+    - label: §미분사상의 예시들
+      url: /ko/math/manifolds/examples_of_differentials#prop7
+  - symbol: \ev_p
+    meaning: evaluation map
+    defs:
+    - label: §접공간
+      url: /ko/math/manifolds/tangent_space
+  - symbol: F^\ast
+    meaning: $C^\infty$ 함수 $F$가 유도하는 함수 당김 $g\mapsto g\circ F$
+    defs:
+    - label: §미분사상
+      url: /ko/math/manifolds/differentials
+    - label: §미분형식
+      url: /ko/math/manifolds/differential_forms
+  - symbol: \mathbf{f}
+    meaning: 함수 $f$의 germ(equivalence class)을 굵은 글씨로 표기
+    defs:
+    - label: §접공간
+      url: /ko/math/manifolds/tangent_space
+    - label: §여접공간
+      url: /ko/math/manifolds/cotangent_space
+  - symbol: \frac{\partial}{\partial x^i}\bigg\vert_p
+    meaning: $x^i$ 방향 방향도함수
+    defs:
+    - label: §여접공간
+      url: /ko/math/manifolds/cotangent_space
+  - symbol: \Gamma(E)
+    meaning: vector bundle의 smooth 단면들의 모임
+    defs:
+    - label: §벡터장
+      url: /ko/math/manifolds/vector_fields
+  - symbol: \graph(f)
+    meaning: 함수 $f$의 그래프
+    defs:
+    - label: §미분다양체의 예시들
+      url: /ko/math/manifolds/examples_of_manifolds#ex5
+    - label: §미분 아이디얼
+      url: /ko/math/manifolds/differential_ideal
+  - symbol: \Hom(-,-)
+    meaning: 선형사상 공간
+    defs:
+    - label: §접다발과 여접다발
+      url: /ko/math/manifolds/tangent_and_cotangent_bundles
+  - symbol: \mathcal{I}
+    meaning: differential ideal
+    defs:
+    - label: §미분 아이디얼
+      url: /ko/math/manifolds/differential_ideal
+  - symbol: \iota_X
+    meaning: interior multiplication
+    defs:
+    - label: §미분형식
+      url: /ko/math/manifolds/differential_forms
+  - symbol: \mathcal{L}_XY
+    meaning: Lie derivative
+    defs:
+    - label: §리 미분
+      url: /ko/math/manifolds/Lie_derivative
+  - symbol: \Man
+    meaning: smooth manifold와 smooth function들의 범주
+    defs:
+    - label: §미분사상
+      url: /ko/math/manifolds/differentials
+  - symbol: \Mat_n(\mathbb{R})
+    meaning: $n\times n$ 실행렬들의 집합
+    defs:
+    - label: §미분다양체의 예시들
+      url: /ko/math/manifolds/examples_of_manifolds#ex2
+  - symbol: \mathfrak{m}_p
+    meaning: maximal ideal
+    defs:
+    - label: §접공간
+      url: /ko/math/manifolds/tangent_space#prop2
+    - label: §여접공간
+      url: /ko/math/manifolds/cotangent_space
+  - symbol: \mathfrak{m}_p/\mathfrak{m}_p^2
+    meaning: cotangent space
+    defs:
+    - label: §여접공간
+      url: /ko/math/manifolds/cotangent_space
+  - symbol: M\times N
+    meaning: 두 manifold의 곱다양체
+    defs:
+    - label: §미분다양체의 예시들
+      url: /ko/math/manifolds/examples_of_manifolds#ex9
+  - symbol: \Omega^\ast(M)
+    meaning: differential form들의 모임
+    defs:
+    - label: §미분형식
+      url: /ko/math/manifolds/differential_forms
+  - symbol: \Omega^k(M)
+    meaning: $k$차 differential form들의 모임
+    defs:
+    - label: §미분형식
+      url: /ko/math/manifolds/differential_forms
+  - symbol: \phi^t
+    meaning: 벡터장의 (시간 $t$) 흐름
+    defs:
+    - label: §벡터장
+      url: /ko/math/manifolds/vector_fields
+  - symbol: \psi\circ\varphi^{-1}
+    meaning: transition map
+    defs:
+    - label: §미분다양체
+      url: /ko/math/manifolds/smooth_manifolds#def1
+  - symbol: r^i
+    meaning: $\mathbb{R}^m$의 $i$번째 좌표함수
+    defs:
+    - label: §미분다양체
+      url: /ko/math/manifolds/smooth_manifolds
+  - symbol: \span
+    meaning: span
+    defs:
+    - label: §Distribution
+      url: /ko/math/manifolds/distribution
+  - symbol: T^\ast M
+    meaning: cotangent bundle
+    defs:
+    - label: §접다발과 여접다발
+      url: /ko/math/manifolds/tangent_and_cotangent_bundles
+  - symbol: TM
+    meaning: tangent bundle
+    defs:
+    - label: §접다발과 여접다발
+      url: /ko/math/manifolds/tangent_and_cotangent_bundles
+  - symbol: T_p^\ast M
+    meaning: cotangent space
+    defs:
+    - label: §미분사상의 예시들
+      url: /ko/math/manifolds/examples_of_differentials#def6
+  - symbol: T_pM
+    meaning: tangent space
+    defs:
+    - label: §접공간
+      url: /ko/math/manifolds/tangent_space#def3
+  - symbol: \mathcal{T}^{r,s}(M)
+    meaning: $(r,s)$-tensor bundle
+    defs:
+    - label: §미분형식
+      url: /ko/math/manifolds/differential_forms
+  - symbol: X(f)
+    meaning: 벡터장 $X$를 함수 $f$에 적용해 얻는 함수
+    defs:
+    - label: §벡터장
+      url: /ko/math/manifolds/vector_fields
+  - symbol: \mathfrak{X}(M)
+    meaning: $M$ 위의 $C^\infty$ 벡터장들의 모임
+    defs:
+    - label: §벡터장
+      url: /ko/math/manifolds/vector_fields
+  - symbol: X_p
+    meaning: 점 $p$에서의 벡터장 값
+    defs:
+    - label: §벡터장
+      url: /ko/math/manifolds/vector_fields
+  - symbol: '[X,Y]'
+    meaning: Lie bracket
+    defs:
+    - label: §리 미분
+      url: /ko/math/manifolds/Lie_derivative
+- category: lie_theory
+  title: 리 이론
+  conventions:
+  - symbol: G, H
+    meaning: Lie group
+    defs:
+    - label: §리 군
+      url: /ko/math/lie_theory/Lie_groups
+  - symbol: \mathfrak{g}
+    meaning: Lie algebra
+    defs:
+    - label: §리 군
+      url: /ko/math/lie_theory/Lie_groups
+  - symbol: \mathfrak{h}
+    meaning: Cartan subalgebra
+    defs:
+    - label: §근계
+      url: /ko/math/lie_theory/root_systems
+  - symbol: T
+    meaning: maximal torus
+    defs:
+    - label: §원환면의 작용
+      url: /ko/math/lie_theory/torus_action
+  - symbol: B
+    meaning: Borel subgroup
+    defs:
+    - label: §Borel subgroup
+      url: /ko/math/lie_theory/borel_subgroup
+  items:
+  - symbol: A=(a_{ij})
+    meaning: Cartan matrix
+    defs:
+    - label: §근계
+      url: /ko/math/lie_theory/root_systems
+  - symbol: \ad
+    meaning: Lie algebra의 딸림표현
+    defs:
+    - label: §리 군
+      url: /ko/math/lie_theory/Lie_groups
+  - symbol: \Ad
+    meaning: Lie group의 딸림표현
+    defs:
+    - label: §리 군
+      url: /ko/math/lie_theory/Lie_groups
+  - symbol: \mathfrak{b}
+    meaning: Borel subalgebra
+    defs:
+    - label: §Borel subgroup
+      url: /ko/math/lie_theory/borel_subgroup
+  - symbol: B^-
+    meaning: 반대 Borel subgroup
+    defs:
+    - label: §Bruhat decomposition
+      url: /ko/math/lie_theory/bruhat_decomposition
+  - symbol: \Conj(G)
+    meaning: 켤레류들의 공간
+    defs:
+    - label: §원환면의 작용
+      url: /ko/math/lie_theory/torus_action
+  - symbol: \mathbb{C}^\times
+    meaning: 0이 아닌 복소수의 곱셈군
+    defs:
+    - label: §원환면의 작용
+      url: /ko/math/lie_theory/torus_action
+  - symbol: \Delta
+    meaning: simple root들의 모임
+    defs:
+    - label: §근계
+      url: /ko/math/lie_theory/root_systems
+  - symbol: \Diff(M)
+    meaning: diffeomorphism군
+    defs:
+    - label: §리 군
+      url: /ko/math/lie_theory/Lie_groups
+  - symbol: \ell(w)
+    meaning: Weyl group 원소의 길이
+    defs:
+    - label: §Borel subgroup
+      url: /ko/math/lie_theory/borel_subgroup
+    - label: §Bruhat decomposition
+      url: /ko/math/lie_theory/bruhat_decomposition
+  - symbol: \exp(X)
+    meaning: 행렬지수
+    defs:
+    - label: §리 군
+      url: /ko/math/lie_theory/Lie_groups
+  - symbol: \Fl(d_1,d_2,\ldots,d_m;n)
+    meaning: flag variety
+    defs:
+    - label: §Bruhat decomposition
+      url: /ko/math/lie_theory/bruhat_decomposition
+  - symbol: \mathfrak{g}_\alpha
+    meaning: 근 공간
+    defs:
+    - label: §근계
+      url: /ko/math/lie_theory/root_systems
+  - symbol: \GL_n(\mathbb{C})
+    meaning: general linear group
+    defs:
+    - label: §Bruhat decomposition
+      url: /ko/math/lie_theory/bruhat_decomposition
+  - symbol: \GL(n; \mathbb{R})
+    meaning: general linear group
+    defs:
+    - label: §리 군
+      url: /ko/math/lie_theory/Lie_groups
+  - symbol: \Gr(k,n)
+    meaning: Grassmannian
+    defs:
+    - label: §Bruhat decomposition
+      url: /ko/math/lie_theory/bruhat_decomposition
+  - symbol: \leq
+    meaning: Weyl group 위의 브루하 순서
+    defs:
+    - label: §Bruhat decomposition
+      url: /ko/math/lie_theory/bruhat_decomposition
+  - symbol: L_g
+    meaning: left translation
+    defs:
+    - label: §리 군
+      url: /ko/math/lie_theory/Lie_groups
+  - symbol: \Lie
+    meaning: 리 함자
+    defs:
+    - label: §리 군
+      url: /ko/math/lie_theory/Lie_groups
+  - symbol: \Lie(B)
+    meaning: Lie algebra
+    defs:
+    - label: §Borel subgroup
+      url: /ko/math/lie_theory/borel_subgroup
+  - symbol: \LieGrp
+    meaning: Lie group의 범주
+    defs:
+    - label: §리 군
+      url: /ko/math/lie_theory/Lie_groups
+  - symbol: \Mat_{n\times k}(\mathbb{R})
+    meaning: n×$k$ 행렬들의 공간
+    defs:
+    - label: §리 군
+      url: /ko/math/lie_theory/Lie_groups
+  - symbol: \mathfrak{n}
+    meaning: nilradical
+    defs:
+    - label: §Borel subgroup
+      url: /ko/math/lie_theory/borel_subgroup
+  - symbol: \Pet_n
+    meaning: Peterson variety
+    defs:
+    - label: §Richardson variety와 Peterson variety
+      url: /ko/math/lie_theory/richardson_peterson_variety
+  - symbol: \Phi
+    meaning: 근들의 집합 / 근계
+    defs:
+    - label: §근계
+      url: /ko/math/lie_theory/root_systems
+  - symbol: \Phi^+
+    meaning: positive root들의 부분집합
+    defs:
+    - label: §근계
+      url: /ko/math/lie_theory/root_systems
+  - symbol: P
+    meaning: parabolic subgroup
+    defs:
+    - label: §Bruhat decomposition
+      url: /ko/math/lie_theory/bruhat_decomposition
+  - symbol: \qtimes
+    meaning: 양자곱
+    defs:
+    - label: §Richardson variety와 Peterson variety
+      url: /ko/math/lie_theory/richardson_peterson_variety
+  - symbol: \rank(\mathfrak{g})
+    meaning: rank
+    defs:
+    - label: §Richardson variety와 Peterson variety
+      url: /ko/math/lie_theory/richardson_peterson_variety
+  - symbol: \rchi_\lambda
+    meaning: 기약 지표
+    defs:
+    - label: §원환면의 작용
+      url: /ko/math/lie_theory/torus_action
+  - symbol: R_g
+    meaning: 우평행이동
+    defs:
+    - label: §리 군
+      url: /ko/math/lie_theory/Lie_groups
+  - symbol: \rho:G\rightarrow \Aut(V)
+    meaning: representation
+    defs:
+    - label: §원환면의 작용
+      url: /ko/math/lie_theory/torus_action
+  - symbol: s_\alpha
+    meaning: 근 α에 수직인 초평면에 대한 반사
+    defs:
+    - label: §근계
+      url: /ko/math/lie_theory/root_systems
+  - symbol: \sl(2;\mathbb{C})
+    meaning: 특수선형 Lie algebra
+    defs:
+    - label: §근계
+      url: /ko/math/lie_theory/root_systems
+  - symbol: \SL(n;\mathbb{R})
+    meaning: 특수선형군
+    defs:
+    - label: §리 군
+      url: /ko/math/lie_theory/Lie_groups
+  - symbol: \Spec
+    meaning: spectrum
+    defs:
+    - label: §Richardson variety와 Peterson variety
+      url: /ko/math/lie_theory/richardson_peterson_variety
+    - label: §아핀 토릭 다양체
+      url: /ko/math/toric_geometry/affine_toric_varieties
+  - symbol: \SU(2)
+    meaning: 특수 유니터리 군
+    defs:
+    - label: §원환면의 작용
+      url: /ko/math/lie_theory/torus_action
+  - symbol: V_\lambda
+    meaning: weight space
+    defs:
+    - label: §원환면의 작용
+      url: /ko/math/lie_theory/torus_action
+  - symbol: w_0
+    meaning: 최장 원소
+    defs:
+    - label: §Bruhat decomposition
+      url: /ko/math/lie_theory/bruhat_decomposition
+  - symbol: '[X_w]'
+    meaning: 슈베르트 (cohomology) 류
+    defs:
+    - label: §Bruhat decomposition
+      url: /ko/math/lie_theory/bruhat_decomposition
+  - symbol: '[-,-]'
+    meaning: Lie bracket
+    defs:
+    - label: §리 군
+      url: /ko/math/lie_theory/Lie_groups
+- category: riemannian_geometry
+  title: 리만기하학
+  conventions:
+  - symbol: g
+    meaning: Riemannian metric
+    defs:
+    - label: §리만 계량
+      url: /ko/math/riemannian_geometry/Riemannian_metric
+    - label: §리만 계량
+      url: /ko/math/riemannian_geometry/Riemannian_metric#def1
+  items:
+  - symbol: \length(\gamma)
+    meaning: 곡선 $\gamma$의 길이
+    defs:
+    - label: §리만 계량
+      url: /ko/math/riemannian_geometry/Riemannian_metric#def2
+  - symbol: \lVert v\rVert
+    meaning: 내적이 주는 노름
+    defs:
+    - label: §리만 계량
+      url: /ko/math/riemannian_geometry/Riemannian_metric
+  - symbol: NS
+    meaning: normal bundle
+    defs:
+    - label: §리만 계량
+      url: /ko/math/riemannian_geometry/Riemannian_metric
+  - symbol: \tilde{g}
+    meaning: 계량이 유도하는 $TM\to T^\ast M$ 동형
+    defs:
+    - label: §리만 계량
+      url: /ko/math/riemannian_geometry/Riemannian_metric
+- category: algebraic_varieties
+  title: 대수다양체
+  conventions:
+  - symbol: \mathbb{K}
+    meaning: 바탕체
+    defs:
+    - label: §아핀다양체
+      url: /ko/math/algebraic_varieties/affine_varieties
+  - symbol: X, Y
+    meaning: variety
+    defs:
+    - label: §아핀다양체
+      url: /ko/math/algebraic_varieties/affine_varieties
+  - symbol: \mathcal{L}
+    meaning: line bundle
+    defs:
+    - label: §선다발과 벡터다발
+      url: /ko/math/algebraic_varieties/line_bundles
+  items:
+  - symbol: \mathbb{A}^1_\mathbb{K}
+    meaning: $K$ 위의 아핀직선
+    defs:
+    - label: §세르 쌍대성
+      url: /ko/math/algebraic_varieties/serre_duality
+  - symbol: \Bl_{(0,0)}\mathbb{A}^2
+    meaning: 블로업
+    defs:
+    - label: §유리사상
+      url: /ko/math/algebraic_varieties/rational_maps
+  - symbol: \Bun(X)
+    meaning: vector bundle들의 범주
+    defs:
+    - label: §층 코호몰로지
+      url: /ko/math/algebraic_varieties/sheaf_cohomology
+  - symbol: \CaCl(X)
+    meaning: Cartier divisor class group
+    defs:
+    - label: §인자
+      url: /ko/math/algebraic_varieties/divisors
+  - symbol: \CaDiv(X)
+    meaning: Cartier divisor들의 군
+    defs:
+    - label: §인자
+      url: /ko/math/algebraic_varieties/divisors
+  - symbol: C \cdot D
+    meaning: intersection number
+    defs:
+    - label: §곡면에서의 리만-로흐 정리
+      url: /ko/math/algebraic_varieties/riemann_roch_surfaces
+  - symbol: \CH^\ast(X)
+    meaning: 전체 Chow group
+    defs:
+    - label: §저우 군
+      url: /ko/math/algebraic_varieties/chow_groups
+  - symbol: \CH^\ast(X)
+    meaning: Chow ring
+    defs:
+    - label: §교차곱
+      url: /ko/math/algebraic_varieties/intersection_product
+  - symbol: \check{C}^p(\mathcal{U}, \mathcal{F})
+    meaning: Čech complex
+    defs:
+    - label: §층 코호몰로지
+      url: /ko/math/algebraic_varieties/sheaf_cohomology
+  - symbol: \CH_k(X)
+    meaning: Chow group
+    defs:
+    - label: §저우 군
+      url: /ko/math/algebraic_varieties/chow_groups
+  - symbol: \CH^k(X)
+    meaning: codimension $k$ Chow group
+    defs:
+    - label: §저우 군
+      url: /ko/math/algebraic_varieties/chow_groups
+  - symbol: \cl
+    meaning: 순환 특성류 사상
+    defs:
+    - label: §저우 군
+      url: /ko/math/algebraic_varieties/chow_groups
+  - symbol: \Cl(X)
+    meaning: divisor class group
+    defs:
+    - label: §인자
+      url: /ko/math/algebraic_varieties/divisors
+  - symbol: \codim
+    meaning: codimension
+    defs:
+    - label: §차원
+      url: /ko/math/algebraic_varieties/dimension
+    - label: §교차곱
+      url: /ko/math/algebraic_varieties/intersection_product
+  - symbol: C(X)
+    meaning: affine cone
+    defs:
+    - label: §사영다양체
+      url: /ko/math/algebraic_varieties/projective_varieties
+  - symbol: D^2
+    meaning: self-intersection number
+    defs:
+    - label: §곡면에서의 리만-로흐 정리
+      url: /ko/math/algebraic_varieties/riemann_roch_surfaces
+  - symbol: \dashrightarrow
+    meaning: rational map
+    defs:
+    - label: §유리사상
+      url: /ko/math/algebraic_varieties/rational_maps
+  - symbol: \Der_\mathbb{K}(A, N)
+    meaning: $K$-미분들의 모임
+    defs:
+    - label: §표준선다발
+      url: /ko/math/algebraic_varieties/canonical_bundle
+  - symbol: D(f)
+    meaning: principal open set
+    defs:
+    - label: §아핀다양체
+      url: /ko/math/algebraic_varieties/affine_varieties
+    - label: §스펙트럼
+      url: /ko/math/scheme_theory/spectrums#def10
+  - symbol: D \ge 0
+    meaning: 유효 인자임을 나타내는 표기
+    defs:
+    - label: §인자
+      url: /ko/math/algebraic_varieties/divisors
+  - symbol: \dim
+    meaning: 차원
+    defs:
+    - label: §차원
+      url: /ko/math/algebraic_varieties/dimension
+  - symbol: \divisor(f)
+    meaning: principal cycle
+    defs:
+    - label: §저우 군
+      url: /ko/math/algebraic_varieties/chow_groups
+  - symbol: \divisor(f)
+    meaning: principal divisor
+    defs:
+    - label: §인자
+      url: /ko/math/algebraic_varieties/divisors
+  - symbol: \Div(X)
+    meaning: Weil divisor들의 군
+    defs:
+    - label: §인자
+      url: /ko/math/algebraic_varieties/divisors
+  - symbol: \dom(\varphi)
+    meaning: rational map의 정의역
+    defs:
+    - label: §유리사상
+      url: /ko/math/algebraic_varieties/rational_maps
+  - symbol: E
+    meaning: 예외 인자
+    defs:
+    - label: §표준선다발
+      url: /ko/math/algebraic_varieties/canonical_bundle
+  - symbol: \ell(D)
+    meaning: Riemann–Roch dimension
+    defs:
+    - label: §곡선에서의 리만-로흐 정리
+      url: /ko/math/algebraic_varieties/riemann_roch_theorem
+  - symbol: \equiv
+    meaning: 수치적 동치
+    defs:
+    - label: §곡면에서의 리만-로흐 정리
+      url: /ko/math/algebraic_varieties/riemann_roch_surfaces
+  - symbol: \Ext^i_X
+    meaning: Ext 함자
+    defs:
+    - label: §세르 쌍대성
+      url: /ko/math/algebraic_varieties/serre_duality
+  - symbol: f_\ast
+    meaning: pushforward
+    defs:
+    - label: §저우 군
+      url: /ko/math/algebraic_varieties/chow_groups
+  - symbol: \Frac
+    meaning: field of fractions
+    defs:
+    - label: §유리사상
+      url: /ko/math/algebraic_varieties/rational_maps
+  - symbol: \Gamma(X, \mathcal{L})
+    meaning: 전역 단면들의 공간
+    defs:
+    - label: §선다발과 벡터다발
+      url: /ko/math/algebraic_varieties/line_bundles
+  - symbol: \Gr(k, V)
+    meaning: Grassmannian
+    defs:
+    - label: §그라스만 다양체
+      url: /ko/math/algebraic_varieties/grassmannians
+  - symbol: \gr^p
+    meaning: associated graded
+    defs:
+    - label: §층 코호몰로지
+      url: /ko/math/algebraic_varieties/sheaf_cohomology
+  - symbol: H^i(X, \mathcal{F})
+    meaning: sheaf cohomology
+    defs:
+    - label: §층 코호몰로지
+      url: /ko/math/algebraic_varieties/sheaf_cohomology
+  - symbol: i_!
+    meaning: 영에 의한 확장
+    defs:
+    - label: §층 코호몰로지
+      url: /ko/math/algebraic_varieties/sheaf_cohomology
+  - symbol: \mathcal{I}_D
+    meaning: $D$의 ideal 층
+    defs:
+    - label: §선다발과 벡터다발
+      url: /ko/math/algebraic_varieties/line_bundles
+  - symbol: \initial(f)
+    meaning: 처음항/처음 ideal
+    defs:
+    - label: §접공간과 매끄러움
+      url: /ko/math/algebraic_varieties/tangent_spaces_and_smoothness
+  - symbol: \iota_i
+    meaning: 표준 매입
+    defs:
+    - label: §준사영다양체
+      url: /ko/math/algebraic_varieties/quasi_projective_varieties
+  - symbol: \iota
+    meaning: Plücker embedding
+    defs:
+    - label: §그라스만 다양체
+      url: /ko/math/algebraic_varieties/grassmannians
+  - symbol: I(X)
+    meaning: 소멸 ideal
+    defs:
+    - label: §아핀다양체
+      url: /ko/math/algebraic_varieties/affine_varieties
+    - label: §사영다양체
+      url: /ko/math/algebraic_varieties/projective_varieties
+  - symbol: \kappa(x)
+    meaning: residue field
+    defs:
+    - label: §표준선다발
+      url: /ko/math/algebraic_varieties/canonical_bundle
+    - label: §스킴
+      url: /ko/math/scheme_theory/schemes#def5
+  - symbol: \mathbb{K}(X)
+    meaning: 함수체
+    defs:
+    - label: §유리사상
+      url: /ko/math/algebraic_varieties/rational_maps
+    - label: §인자
+      url: /ko/math/algebraic_varieties/divisors
+  - symbol: \mathbb{K}[\x_0, \ldots, \x_n]_d
+    meaning: 차수 $d$ homogeneous polynomial들의 공간
+    defs:
+    - label: §사영공간의 코호몰로지
+      url: /ko/math/algebraic_varieties/cohomology_of_projective_spaces
+  - symbol: K_X
+    meaning: canonical divisor
+    defs:
+    - label: §표준선다발
+      url: /ko/math/algebraic_varieties/canonical_bundle
+    - label: §파노 다양체
+      url: /ko/math/toric_geometry/reflexive_polytope_fano
+  - symbol: \mathbb{K}[X]
+    meaning: coordinate ring
+    defs:
+    - label: §아핀다양체
+      url: /ko/math/algebraic_varieties/affine_varieties
+  - symbol: \mathcal{L}^{\otimes m}
+    meaning: line bundle의 $m$번 텐서거듭제곱
+    defs:
+    - label: §선형계
+      url: /ko/math/algebraic_varieties/linear_systems
+  - symbol: \mathcal{L} \otimes \mathcal{M}
+    meaning: tensor product
+    defs:
+    - label: §선다발과 벡터다발
+      url: /ko/math/algebraic_varieties/line_bundles
+  - symbol: \lvert \lambda \rvert
+    meaning: 분할의 크기
+    defs:
+    - label: §그라스만 다양체
+      url: /ko/math/algebraic_varieties/grassmannians
+  - symbol: \lvert \mathcal{L} \rvert
+    meaning: complete linear system
+    defs:
+    - label: §선형계
+      url: /ko/math/algebraic_varieties/linear_systems
+  - symbol: \mathfrak{m}_x
+    meaning: maximal ideal
+    defs:
+    - label: §접공간과 매끄러움
+      url: /ko/math/algebraic_varieties/tangent_spaces_and_smoothness
+  - symbol: \Num(S)
+    meaning: numerical equivalence class들의 군
+    defs:
+    - label: §곡면에서의 리만-로흐 정리
+      url: /ko/math/algebraic_varieties/riemann_roch_surfaces
+  - symbol: \mathcal{O}_D
+    meaning: 스카이스크래퍼 층
+    defs:
+    - label: §곡선에서의 리만-로흐 정리
+      url: /ko/math/algebraic_varieties/riemann_roch_theorem
+  - symbol: \Omega_{A/\mathbb{K}}
+    meaning: 쾰러 미분
+    defs:
+    - label: §표준선다발
+      url: /ko/math/algebraic_varieties/canonical_bundle
+  - symbol: \Omega_\lambda^\circ(F_\bullet)
+    meaning: Schubert cell
+    defs:
+    - label: §그라스만 다양체
+      url: /ko/math/algebraic_varieties/grassmannians
+  - symbol: \Omega_\lambda(F_\bullet)
+    meaning: Schubert variety
+    defs:
+    - label: §그라스만 다양체
+      url: /ko/math/algebraic_varieties/grassmannians
+  - symbol: \omega_X
+    meaning: 쌍대화 층
+    defs:
+    - label: §세르 쌍대성
+      url: /ko/math/algebraic_varieties/serre_duality
+  - symbol: \Omega_X^1
+    meaning: cotangent bundle
+    defs:
+    - label: §선다발과 벡터다발
+      url: /ko/math/algebraic_varieties/line_bundles
+  - symbol: \omega_X
+    meaning: canonical bundle
+    defs:
+    - label: §선다발과 벡터다발
+      url: /ko/math/algebraic_varieties/line_bundles
+    - label: §표준선다발
+      url: /ko/math/algebraic_varieties/canonical_bundle
+    - label: §고다이라 소멸정리
+      url: /ko/math/algebraic_varieties/kodaira_vanishing
+  - symbol: \mathcal{O}_{\mathbb{P}^n}(-1)
+    meaning: tautological line bundle
+    defs:
+    - label: §선다발과 벡터다발
+      url: /ko/math/algebraic_varieties/line_bundles
+  - symbol: \mathcal{O}_{\mathbb{P}^n}(d)
+    meaning: 사영공간 위의 차수 $d$ line bundle
+    defs:
+    - label: §선다발과 벡터다발
+      url: /ko/math/algebraic_varieties/line_bundles
+  - symbol: \mathcal{O}_X(D)
+    meaning: 인자 $D$가 정의하는 line bundle
+    defs:
+    - label: §선다발과 벡터다발
+      url: /ko/math/algebraic_varieties/line_bundles
+  - symbol: \mathcal{O}_X
+    meaning: regular function들의 층
+    defs:
+    - label: §준사영다양체
+      url: /ko/math/algebraic_varieties/quasi_projective_varieties
+    - label: §아핀스킴
+      url: /ko/math/scheme_theory/affine_schemes#def1
+  - symbol: \mathcal{O}_{X,x}
+    meaning: local ring
+    defs:
+    - label: §접공간과 매끄러움
+      url: /ko/math/algebraic_varieties/tangent_spaces_and_smoothness
+    - label: §아핀스킴
+      url: /ko/math/scheme_theory/affine_schemes#def1
+  - symbol: \Pic(X)
+    meaning: Picard group
+    defs:
+    - label: §선다발과 벡터다발
+      url: /ko/math/algebraic_varieties/line_bundles
+  - symbol: P_m(S)
+    meaning: $m$차 다중종수
+    defs:
+    - label: §곡면에서의 리만-로흐 정리
+      url: /ko/math/algebraic_varieties/riemann_roch_surfaces
+  - symbol: \mathbb{P}^n_{\mathbb{K}}
+    meaning: $n$차원 사영공간
+    defs:
+    - label: §사영다양체
+      url: /ko/math/algebraic_varieties/projective_varieties
+  - symbol: \Prin(X)
+    meaning: principal divisor들의 subgroup
+    defs:
+    - label: §인자
+      url: /ko/math/algebraic_varieties/divisors
+  - symbol: \QCoh(X)
+    meaning: quasi-coherent sheaf들의 범주
+    defs:
+    - label: §표준선다발
+      url: /ko/math/algebraic_varieties/canonical_bundle
+  - symbol: Q
+    meaning: Quotient bundle
+    defs:
+    - label: §선다발과 벡터다발
+      url: /ko/math/algebraic_varieties/line_bundles
+  - symbol: \rchi(X, \mathcal{F})
+    meaning: Euler characteristic
+    defs:
+    - label: §사영공간의 코호몰로지
+      url: /ko/math/algebraic_varieties/cohomology_of_projective_spaces
+  - symbol: S
+    meaning: 그라스만 다양체의 보편(부분)다발
+    defs:
+    - label: §선다발과 벡터다발
+      url: /ko/math/algebraic_varieties/line_bundles
+  - symbol: \S_A(M)
+    meaning: symmetric algebra
+    defs:
+    - label: §표준선다발
+      url: /ko/math/algebraic_varieties/canonical_bundle
+  - symbol: \sHom_{\mathcal{O}_X}
+    meaning: sheaf Hom
+    defs:
+    - label: §선다발과 벡터다발
+      url: /ko/math/algebraic_varieties/line_bundles
+  - symbol: \Sh(X)
+    meaning: 층들의 범주
+    defs:
+    - label: §층 코호몰로지
+      url: /ko/math/algebraic_varieties/sheaf_cohomology
+  - symbol: \sim
+    meaning: linearly equivalent
+    defs:
+    - label: §인자
+      url: /ko/math/algebraic_varieties/divisors
+  - symbol: \sim_{\text{rat}}
+    meaning: rationally equivalent
+    defs:
+    - label: §저우 군
+      url: /ko/math/algebraic_varieties/chow_groups
+  - symbol: (S)
+    meaning: $S$가 생성하는 ideal
+    defs:
+    - label: §아핀다양체
+      url: /ko/math/algebraic_varieties/affine_varieties
+    - label: §스펙트럼
+      url: /ko/math/scheme_theory/spectrums
+  - symbol: \Tor_i^{R}
+    meaning: Tor 함자
+    defs:
+    - label: §교차곱
+      url: /ko/math/algebraic_varieties/intersection_product
+  - symbol: \Tot(K)^\bullet
+    meaning: total complex
+    defs:
+    - label: §층 코호몰로지
+      url: /ko/math/algebraic_varieties/sheaf_cohomology
+  - symbol: \mathcal{T}_X
+    meaning: 접층
+    defs:
+    - label: §표준선다발
+      url: /ko/math/algebraic_varieties/canonical_bundle
+  - symbol: \mathcal{T}_X
+    meaning: tangent bundle
+    defs:
+    - label: §선다발과 벡터다발
+      url: /ko/math/algebraic_varieties/line_bundles
+  - symbol: U_i
+    meaning: $i$번째 표준 아핀 열린집합
+    defs:
+    - label: §사영다양체
+      url: /ko/math/algebraic_varieties/projective_varieties
+  - symbol: \varinjlim
+    meaning: 직접극한
+    defs:
+    - label: §층 코호몰로지
+      url: /ko/math/algebraic_varieties/sheaf_cohomology
+  - symbol: \varphi^\ast
+    meaning: 당김 준동형
+    defs:
+    - label: §아핀다양체
+      url: /ko/math/algebraic_varieties/affine_varieties
+  - symbol: \Vect_\mathbb{K}
+    meaning: $K$-벡터공간들의 범주
+    defs:
+    - label: §층 코호몰로지
+      url: /ko/math/algebraic_varieties/sheaf_cohomology
+  - symbol: \widetilde{M}
+    meaning: $A$-가군 $M$에 대응하는 층
+    defs:
+    - label: §표준선다발
+      url: /ko/math/algebraic_varieties/canonical_bundle
+  - symbol: '[x_0:\cdots:x_n]'
+    meaning: homogeneous coordinates
+    defs:
+    - label: §사영다양체
+      url: /ko/math/algebraic_varieties/projective_varieties
+  - symbol: Z(f_1,\ldots,f_k)
+    meaning: affine algebraic set
+    defs:
+    - label: §아핀다양체
+      url: /ko/math/algebraic_varieties/affine_varieties
+- category: scheme_theory
+  title: 스킴
+  conventions:
+  - symbol: X, Y
+    meaning: scheme
+    defs:
+    - label: §스킴
+      url: /ko/math/scheme_theory/schemes
+  items:
+  - symbol: A_\bullet
+    meaning: graded ring
+    defs:
+    - label: §사영스킴
+      url: /ko/math/scheme_theory/projective_schemes#rmk
+  - symbol: \AffSch
+    meaning: affine scheme들의 category
+    defs:
+    - label: §아핀스킴
+      url: /ko/math/scheme_theory/affine_schemes
+  - symbol: A_f
+    meaning: localization
+    defs:
+    - label: §아핀스킴
+      url: /ko/math/scheme_theory/affine_schemes
+    - label: §스펙트럼
+      url: /ko/math/scheme_theory/spectrums
+  - symbol: \mathbb{A}_\mathbb{K}^n
+    meaning: $\mathbb{K}$ 위의 affine $n$-space
+    defs:
+    - label: §스킴
+      url: /ko/math/scheme_theory/schemes#ex7
+  - symbol: \ann(f)
+    meaning: annihilator
+    defs:
+    - label: §스킴의 대수구조
+      url: /ko/math/scheme_theory/algebra_of_schemes
+  - symbol: A_{(\mathfrak{p})}
+    meaning: 동차 prime에서의 동차 localization
+    defs:
+    - label: §사영스킴
+      url: /ko/math/scheme_theory/projective_schemes#lem11
+  - symbol: \Ass(A)
+    meaning: $A$-module의 associated prime들의 모임
+    defs:
+    - label: §스킴의 대수구조
+      url: /ko/math/scheme_theory/algebra_of_schemes
+  - symbol: \cl(T)
+    meaning: closure
+    defs:
+    - label: §스펙트럼
+      url: /ko/math/scheme_theory/spectrums
+  - symbol: \codim_X Y
+    meaning: codimension
+    defs:
+    - label: §차원
+      url: /ko/math/scheme_theory/dimension
+  - symbol: \dim X
+    meaning: 차원
+    defs:
+    - label: §차원
+      url: /ko/math/scheme_theory/dimension
+  - symbol: \Gamma(X,\mathcal{O}_X)
+    meaning: global section functor
+    defs:
+    - label: §아핀스킴
+      url: /ko/math/scheme_theory/affine_schemes#def12
+  - symbol: \Hom_\Sch(-,X)
+    meaning: $X$의 점 함자
+    defs:
+    - label: §스킴 사이의 사상
+      url: /ko/math/scheme_theory/morphism_of_schemes
+  - symbol: \mathcal{I}
+    meaning: $\mathcal{O}_Z$의 subsheaf, ideal sheaf
+    defs:
+    - label: §닫힌 부분스킴
+      url: /ko/math/scheme_theory/closed_subschemes#def5
+  - symbol: \kappa(y)
+    meaning: 점 $y$에서의 잉여체
+    defs:
+    - label: §올곱
+      url: /ko/math/scheme_theory/fiber_products
+  - symbol: K(X)
+    meaning: integral 스킴 $X$의 함수체
+    defs:
+    - label: §차원
+      url: /ko/math/scheme_theory/dimension
+  - symbol: K(X)
+    meaning: scheme의 total quotient ring
+    defs:
+    - label: §스킴의 대수구조
+      url: /ko/math/scheme_theory/algebra_of_schemes
+  - symbol: \LRS
+    meaning: locally ringed space들의 category
+    defs:
+    - label: §아핀스킴
+      url: /ko/math/scheme_theory/affine_schemes
+  - symbol: \MaxSpec A
+    meaning: maximal spectrum
+    defs:
+    - label: §스킴
+      url: /ko/math/scheme_theory/schemes#ex7
+  - symbol: \mathcal{O}_{\Spec A}
+    meaning: structure sheaf
+    defs:
+    - label: §아핀스킴
+      url: /ko/math/scheme_theory/affine_schemes#def7
+  - symbol: \mathbb{P}^n_\mathbb{K}
+    meaning: $\mathbb{K}$ 위의 사영 $n$-공간
+    defs:
+    - label: §사영스킴
+      url: /ko/math/scheme_theory/projective_schemes#ex12
+  - symbol: \mathbb{P}^n
+    meaning: projective $n$-space
+    defs:
+    - label: §사영스킴
+      url: /ko/math/scheme_theory/projective_schemes
+  - symbol: \Proj A_\bullet
+    meaning: graded ring의 Proj
+    defs:
+    - label: §사영스킴
+      url: /ko/math/scheme_theory/projective_schemes#def1
+  - symbol: \Sch_{/S}
+    meaning: $S$ 위의 스킴들의 슬라이스 범주
+    defs:
+    - label: §스킴 사이의 사상
+      url: /ko/math/scheme_theory/morphism_of_schemes
+  - symbol: \Spec A
+    meaning: 환의 모든 prime ideal들의 모임
+    defs:
+    - label: §스펙트럼
+      url: /ko/math/scheme_theory/spectrums#def1
+  - symbol: \supp(f)
+    meaning: section의 support
+    defs:
+    - label: §스킴
+      url: /ko/math/scheme_theory/schemes#def6
+  - symbol: \varphi^{-1}(y)
+    meaning: fiber
+    defs:
+    - label: §올곱
+      url: /ko/math/scheme_theory/fiber_products
+  - symbol: \varphi^\sharp
+    meaning: 사상의 sheaf 성분
+    defs:
+    - label: §아핀스킴
+      url: /ko/math/scheme_theory/affine_schemes#def2
+    - label: §스킴 사이의 사상
+      url: /ko/math/scheme_theory/morphism_of_schemes
+  - symbol: \varphi^\sharp(V)
+    meaning: 층 사상 $\varphi^\sharp$의 열린집합 $V$에서의 성분
+    defs:
+    - label: §스킴 사상의 성질들
+      url: /ko/math/scheme_theory/properties_of_scheme_morphisms
+  - symbol: '[x_0:x_1:\cdots:x_n]'
+    meaning: homogeneous coordinates
+    defs:
+    - label: §사영스킴
+      url: /ko/math/scheme_theory/projective_schemes
+  - symbol: X_f
+    meaning: $f_x\neq0$인 점들의 열린집합
+    defs:
+    - label: §스킴
+      url: /ko/math/scheme_theory/schemes
+  - symbol: X\times_SY
+    meaning: $S$ 위에서의 $X$와 $Y$의 올곱
+    defs:
+    - label: §올곱
+      url: /ko/math/scheme_theory/fiber_products
+  - symbol: Z(S)
+    meaning: $S\subseteq\mathfrak{p}$인 prime들의 모임
+    defs:
+    - label: §스펙트럼
+      url: /ko/math/scheme_theory/spectrums#def3
+- category: toric_geometry
+  title: 토릭 기하학
+  conventions:
+  - symbol: N
+    meaning: 격자
+    defs:
+    - label: §아핀 토릭 다양체
+      url: /ko/math/toric_geometry/affine_toric_varieties
+  - symbol: M
+    meaning: 쌍대 격자
+    defs:
+    - label: §아핀 토릭 다양체
+      url: /ko/math/toric_geometry/affine_toric_varieties
+  items:
+  - symbol: \CaDiv_T(X_\Sigma)
+    meaning: 토러스 불변 Cartier divisor들의 군
+    defs:
+    - label: §토러스 인자와 선다발
+      url: /ko/math/toric_geometry/toric_divisors
+  - symbol: \Cl(X_\Sigma)
+    meaning: divisor class group
+    defs:
+    - label: §토러스 인자와 선다발
+      url: /ko/math/toric_geometry/toric_divisors
+  - symbol: \Delta_n
+    meaning: 표준 단체
+    defs:
+    - label: §토릭 다양체의 정의
+      url: /ko/math/toric_geometry/toric_varieties
+  - symbol: \dim \sigma
+    meaning: 콘의 차원
+    defs:
+    - label: §아핀 토릭 다양체
+      url: /ko/math/toric_geometry/affine_toric_varieties
+  - symbol: \divisor(\omega)
+    meaning: 유리형식/함수의 인자
+    defs:
+    - label: §파노 다양체
+      url: /ko/math/toric_geometry/reflexive_polytope_fano
+  - symbol: \divisor(\rchi^m)
+    meaning: principal divisor
+    defs:
+    - label: §토러스 인자와 선다발
+      url: /ko/math/toric_geometry/toric_divisors
+  - symbol: \Div_T(X_\Sigma)
+    meaning: 토러스 불변 Weil divisor들의 군
+    defs:
+    - label: §토러스 인자와 선다발
+      url: /ko/math/toric_geometry/toric_divisors
+  - symbol: D_\rho
+    meaning: torus-invariant prime divisor
+    defs:
+    - label: §토릭 다양체의 정의
+      url: /ko/math/toric_geometry/toric_varieties
+    - label: §토러스 인자와 선다발
+      url: /ko/math/toric_geometry/toric_divisors
+  - symbol: -K_X
+    meaning: anticanonical divisor
+    defs:
+    - label: §파노 다양체
+      url: /ko/math/toric_geometry/reflexive_polytope_fano
+  - symbol: \langle u, v \rangle
+    meaning: dual pairing
+    defs:
+    - label: §아핀 토릭 다양체
+      url: /ko/math/toric_geometry/affine_toric_varieties
+  - symbol: N_{\mathbb{R}}
+    meaning: $N\otimes_{\mathbb{Z}}\mathbb{R}$, 실수 계수 확장
+    defs:
+    - label: §아핀 토릭 다양체
+      url: /ko/math/toric_geometry/affine_toric_varieties
+  - symbol: \mathcal{O}_{X_\Sigma}(D)
+    meaning: line bundle
+    defs:
+    - label: §토러스 인자와 선다발
+      url: /ko/math/toric_geometry/toric_divisors
+  - symbol: P_D
+    meaning: Cartier divisor $D$에 대응하는 다면체
+    defs:
+    - label: §토릭 다양체의 정의
+      url: /ko/math/toric_geometry/toric_varieties
+  - symbol: \pi^\ast K_X
+    meaning: pullback
+    defs:
+    - label: §파노 다양체
+      url: /ko/math/toric_geometry/reflexive_polytope_fano
+  - symbol: \Pic(X_\Sigma)
+    meaning: Picard group
+    defs:
+    - label: §토러스 인자와 선다발
+      url: /ko/math/toric_geometry/toric_divisors
+  - symbol: \PL(\Sigma, M)
+    meaning: 정수형 piecewise linear function들
+    defs:
+    - label: §파노 다양체
+      url: /ko/math/toric_geometry/reflexive_polytope_fano
+  - symbol: \PL(\Sigma, M_\mathbb{R})
+    meaning: piecewise linear function들의 모임
+    defs:
+    - label: §토러스 인자와 선다발
+      url: /ko/math/toric_geometry/toric_divisors
+  - symbol: \psi_D
+    meaning: piecewise linear function
+    defs:
+    - label: §토러스 인자와 선다발
+      url: /ko/math/toric_geometry/toric_divisors
+  - symbol: \rchi^m
+    meaning: character
+    defs:
+    - label: §토러스 인자와 선다발
+      url: /ko/math/toric_geometry/toric_divisors
+  - symbol: \rchi^u
+    meaning: character
+    defs:
+    - label: §아핀 토릭 다양체
+      url: /ko/math/toric_geometry/affine_toric_varieties
+  - symbol: \mathbb{R}_{\ge 0}
+    meaning: 음이 아닌 실수
+    defs:
+    - label: §아핀 토릭 다양체
+      url: /ko/math/toric_geometry/affine_toric_varieties
+  - symbol: \sigma(1)
+    meaning: 뿔의 1차원 면(ray)들
+    defs:
+    - label: §아핀 토릭 다양체
+      url: /ko/math/toric_geometry/affine_toric_varieties
+  - symbol: \Sigma(1)
+    meaning: $\Sigma$의 1차원 cone들의 집합
+    defs:
+    - label: §토릭 다양체의 정의
+      url: /ko/math/toric_geometry/toric_varieties
+  - symbol: \Sigma
+    meaning: fan
+    defs:
+    - label: §토릭 다양체의 정의
+      url: /ko/math/toric_geometry/toric_varieties
+  - symbol: \Sigma_P
+    meaning: normal fan
+    defs:
+    - label: §토릭 다양체의 정의
+      url: /ko/math/toric_geometry/toric_varieties
+  - symbol: \sigma^\vee
+    meaning: dual cone
+    defs:
+    - label: §아핀 토릭 다양체
+      url: /ko/math/toric_geometry/affine_toric_varieties
+  - symbol: X_P
+    meaning: 다면체 $P$를 강조한 projective toric variety 표기
+    defs:
+    - label: §토릭 다양체의 정의
+      url: /ko/math/toric_geometry/toric_varieties
+  - symbol: X_\Sigma
+    meaning: toric variety
+    defs:
+    - label: §토릭 다양체의 정의
+      url: /ko/math/toric_geometry/toric_varieties
+- category: symplectic_geometry
+  title: 사교기하학
+  conventions:
+  - symbol: H
+    meaning: Hamiltonian
+    defs:
+    - label: §고전역학
+      url: /ko/math/symplectic_geometry/classical_mechanics
+  items:
+  - symbol: J_0
+    meaning: $R^{2n}$ 위의 표준 복소구조
+    defs:
+    - label: §고전역학
+      url: /ko/math/symplectic_geometry/classical_mechanics
+  - symbol: \omega_0
+    meaning: $R^{2n}$ 위의 표준 symplectic form
+    defs:
+    - label: §고전역학
+      url: /ko/math/symplectic_geometry/classical_mechanics
+  - symbol: \omega
+    meaning: symplectic form
+    defs:
+    - label: §사교벡터공간
+      url: /ko/math/symplectic_geometry/linear_symplectic_geometry
+- category: mirror_symmetry
+  title: 거울대칭
+  items:
+  - symbol: \mathcal{C}_\alpha
+    meaning: 곱셈 자기준동형
+    defs:
+    - label: §두브로빈 접속
+      url: /ko/math/mirror_symmetry/dubrovin_connection#def1
+  - symbol: \check{X}
+    meaning: 거울 짝
+    defs:
+    - label: §거울대칭 개요
+      url: /ko/math/mirror_symmetry/overview
+  - symbol: \circ
+    meaning: 각 tangent space의 프로베니우스 곱
+    defs:
+    - label: §프로베니우스 다양체
+      url: /ko/math/mirror_symmetry/frobenius_manifold
+  - symbol: \Crit(f)
+    meaning: critical point 집합
+    defs:
+    - label: §프로베니우스 다양체
+      url: /ko/math/mirror_symmetry/frobenius_manifold
+  - symbol: \Crit(W)
+    meaning: 임계 스킴
+    defs:
+    - label: §거울대칭 개요
+      url: /ko/math/mirror_symmetry/overview
+  - symbol: E
+    meaning: 오일러 벡터장
+    defs:
+    - label: §프로베니우스 다양체
+      url: /ko/math/mirror_symmetry/frobenius_manifold
+  - symbol: \eta
+    meaning: 비퇴화 대칭 bilinear form
+    defs:
+    - label: §프로베니우스 다양체
+      url: /ko/math/mirror_symmetry/frobenius_manifold
+  - symbol: \ev_i
+    meaning: evaluation map
+    defs:
+    - label: §Givental J-function과 Mirror Theorem
+      url: /ko/math/mirror_symmetry/givental_j_function
+  - symbol: \Hess_p(f)
+    meaning: Hessian
+    defs:
+    - label: §프로베니우스 다양체
+      url: /ko/math/mirror_symmetry/frobenius_manifold
+  - symbol: \Jac(f)
+    meaning: 야코비 환 $\mathbb{C}[\x_1,\ldots,\x_n]/(\partial_1 f,\ldots,\partial_n f)$
+    defs:
+    - label: §프로베니우스 다양체
+      url: /ko/math/mirror_symmetry/frobenius_manifold
+  - symbol: \Jac(W)
+    meaning: 야코비 환
+    defs:
+    - label: §거울대칭 개요
+      url: /ko/math/mirror_symmetry/overview
+  - symbol: \mathbb{L}_i
+    meaning: 보편 여접선 다발
+    defs:
+    - label: §Givental J-function과 Mirror Theorem
+      url: /ko/math/mirror_symmetry/givental_j_function
+  - symbol: M_A
+    meaning: $A$-쪽 유효 밑공간
+    defs:
+    - label: §두브로빈 접속
+      url: /ko/math/mirror_symmetry/dubrovin_connection
+  - symbol: \Mat_{r\times m}(\mathbb{Z})
+    meaning: 정수 성분 $r\times m$ 행렬들의 공간
+    defs:
+    - label: §거울대칭 개요
+      url: /ko/math/mirror_symmetry/overview
+  - symbol: \mu
+    meaning: grading operator
+    defs:
+    - label: §두브로빈 접속
+      url: /ko/math/mirror_symmetry/dubrovin_connection#def1
+  - symbol: \nabla^z
+    meaning: Dubrovin connection
+    defs:
+    - label: §두브로빈 접속
+      url: /ko/math/mirror_symmetry/dubrovin_connection#def1
+  - symbol: \Phi
+    meaning: 거울 isomorphism
+    defs:
+    - label: §두브로빈 접속
+      url: /ko/math/mirror_symmetry/dubrovin_connection#conj4
+  - symbol: \psi_i
+    meaning: $\psi$-class, $c_1(\mathbb{L}_i)$
+    defs:
+    - label: §Givental J-function과 Mirror Theorem
+      url: /ko/math/mirror_symmetry/givental_j_function
+  - symbol: q_a
+    meaning: Novikov variable
+    defs:
+    - label: §Givental J-function과 Mirror Theorem
+      url: /ko/math/mirror_symmetry/givental_j_function
+  - symbol: QH^\ast(X)
+    meaning: (소형) 양자 cohomology
+    defs:
+    - label: §거울대칭 개요
+      url: /ko/math/mirror_symmetry/overview
+  - symbol: Q=(Q_{ji})
+    meaning: charge matrix
+    defs:
+    - label: §거울대칭 개요
+      url: /ko/math/mirror_symmetry/overview
+  - symbol: r_X
+    meaning: 파노 지표
+    defs:
+    - label: §Givental J-function과 Mirror Theorem
+      url: /ko/math/mirror_symmetry/givental_j_function
+  - symbol: W_q
+    meaning: superpotential
+    defs:
+    - label: §거울대칭 개요
+      url: /ko/math/mirror_symmetry/overview
