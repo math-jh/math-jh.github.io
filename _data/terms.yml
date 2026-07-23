@@ -2130,10 +2130,10 @@ C:
   ko: 복소화 접공간
   primary: en
   defs:
-  - label: '[복소기하학] §거의 복소구조'
-    url: /ko/math/complex_geometry/almost_complex_structures
   - label: '[복소기하학] §복소다양체'
     url: /ko/math/complex_geometry/complex_manifolds
+  - label: '[복소기하학] §거의 복소구조'
+    url: /ko/math/complex_geometry/almost_complex_structures
 - id: composition
   en: composition
   ko: 합성
@@ -6089,10 +6089,10 @@ L:
   defs:
   - label: '[집합론] §유향집합'
     url: /ko/math/set_theory/directed_set
-  - label: '[토릭 기하학] §아핀 토릭 다양체'
-    url: /ko/math/toric_geometry/affine_toric_varieties
   - label: '[복소기하학] §복소다양체'
     url: /ko/math/complex_geometry/complex_manifolds
+  - label: '[토릭 기하학] §아핀 토릭 다양체'
+    url: /ko/math/toric_geometry/affine_toric_varieties
 - id: lattice_polytope
   en: lattice polytope
   ko: 격자 다면체
@@ -6105,10 +6105,10 @@ L:
   ko: 로랑 급수
   primary: en
   defs:
-  - label: '[대수다양체] §사영공간의 코호몰로지'
-    url: /ko/math/algebraic_varieties/cohomology_of_projective_spaces
   - label: '[복소해석학] §고립특이점과 Laurent 급수'
     url: /ko/math/complex_analysis/isolated_singularities
+  - label: '[대수다양체] §사영공간의 코호몰로지'
+    url: /ko/math/algebraic_varieties/cohomology_of_projective_spaces
 - id: leading_coefficient
   en: leading coefficient
   ko: 선행계수
@@ -6331,12 +6331,12 @@ L:
     url: /ko/math/group_theory/series_of_groups
   - label: '[가환대수학] §조르단-횔더 정리'
     url: /ko/math/commutative_algebra/Jordan-Holder_theorem
+  - label: '[복소해석학] §복소적분'
+    url: /ko/math/complex_analysis/complex_integration
   - label: '[위상수학] §차원'
     url: /ko/math/topology/dimension
   - label: '[리만기하학] §리만 계량'
     url: /ko/math/riemannian_geometry/Riemannian_metric
-  - label: '[복소해석학] §복소적분'
-    url: /ko/math/complex_analysis/complex_integration
 - id: Leray_theorem
   en: Leray theorem
   ko: 르레 정리

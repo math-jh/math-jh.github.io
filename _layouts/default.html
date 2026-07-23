@@ -20,9 +20,9 @@
     {% include head.html %}
     {% include head/custom.html %}
     <style>
-      body::-webkit-scrollbar{width: 16px;}
-      body::-webkit-scrollbar-track {background-color:{{ site.data.brand.chrome_dark }};}
-      body::-webkit-scrollbar-thumb:hover {background: #a9874a; background-clip: padding-box; border: 2px solid transparent}
+      body::-webkit-scrollbar{width: 10px;}
+      body::-webkit-scrollbar-track {background: transparent;}
+      body::-webkit-scrollbar-thumb:hover {background: #a9874a;}
       /* Left nav + right TOC: hover-reveal. The 6px gutter is always reserved
          (no layout shift) but the thumb is transparent at rest and only gets a
          colour on hover. The hover colour is mode-adaptive — see the skins. */
@@ -41,7 +41,7 @@
       .sidebar__right.sticky > .toc::-webkit-scrollbar-thumb { background: transparent; }
       pre::-webkit-scrollbar{height: 8px}
       pre::-webkit-scrollbar-track{display: none}
-      pre::-webkit-scrollbar-thumb:hover {background: #a9874a; background-clip: padding-box; border: 1px solid transparent}
+      pre::-webkit-scrollbar-thumb:hover {background: #a9874a}
     </style>
     
   </head>
@@ -133,7 +133,7 @@
         <h2 class="terms-content__title">찾아보기</h2>
         <label class="terms-content__search">
           <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="4.2" fill="none" stroke="currentColor" stroke-width="1.4"/><line x1="10.2" y1="10.2" x2="14" y2="14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
-          <input id="terms-overlay-input" class="terms-content__input" type="search" placeholder="용어 검색 (한글/영어)" aria-label="용어 검색" autocomplete="off">
+          <input id="terms-overlay-input" class="terms-content__input" type="search" name="search" placeholder="용어 검색 (한글/영어)" aria-label="용어 검색" readonly autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" data-1p-ignore data-lpignore="true" data-bwignore data-form-type="other">
         </label>
         <ul class="terms-content__list" id="terms-overlay-list"></ul>
         <p class="terms-content__foot"><a href="/ko/terms">전체 색인 보기 →</a></p>

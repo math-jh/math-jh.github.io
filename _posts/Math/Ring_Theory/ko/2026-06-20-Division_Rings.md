@@ -108,13 +108,13 @@ $$\lvert\Phi_n(q)\rvert=\prod_{\substack{1\leq m\leq n\\ \gcd(m,n)=1}}\lvert q-\
 ::: 증명
 $D$를 finite division ring, $Z=Z(D)$를 그 center라 하자. 앞서 보았듯 $Z$는 finite field이고, 그 원소의 개수를 $q\geq 2$라 하면 $D$는 $Z$ 위의 유한차원 vector space로서 그 원소의 개수는 $\lvert D\rvert=q^n$의 꼴이다. 우리 주장은 $n=1$이어서 $D=Z$가 commutative하다는 것이다.
 
-이를 위해 multiplicative group $D^\times=D\setminus\{0\}$의 class equation을 만들자. ([\[대수적 구조\] §군의 작용, ⁋정리 14](/ko/math/algebraic_structures/group_actions#thm14)) $D^\times$의 [\[대수적 구조\] §군의 작용, ⁋명제 9](/ko/math/algebraic_structures/group_actions#prop9)에 의한 conjugation action에 대한 class equation은
+이를 위해 multiplicative group $D^\times=D\setminus\{0\}$의 class equation을 만들자. ([\[대수적 구조\] §군의 작용, ⁋정리 14](/ko/math/algebraic_structures/group_actions#thm14)) $D^\times$의 conjugation action ([\[대수적 구조\] §군의 작용, ⁋명제 9](/ko/math/algebraic_structures/group_actions#prop9))에 대한 class equation은
 
 $$\lvert D^\times\rvert=\lvert Z(D^\times)\rvert+\sum_{x}\bigl[D^\times:C_{D^\times}(x)\bigr]$$
 
-이며, 합은 center에 속하지 않는 원소들의 켤레류 대표 $x$에 대한 것이다. 여기서 $Z(D^\times)=Z^\times=Z\setminus\{0\}$이므로 $\lvert Z(D^\times)\rvert=q-1$이다.
+이며, 여기서 $C_{D^\times}(x)$는 [\[대수적 구조\] §군의 작용, ⁋정의 12](/ko/math/algebraic_structures/group_actions#def12) 직후에 정의한 $x$의 centralizer이고 합은 $Z(D^\times)$에 속하지 않는 모든 representative에 대한 것이다. 또, $Z(D^\times)=Z^\times=Z\setminus\{0\}$이므로 $\lvert Z(D^\times)\rvert=q-1$이다.
 
-각 $x\in D^\times$에 대하여 $C_D(x)=\{y\in D: xy=yx\}$는 $D$의 부분 division ring이고 $Z$를 포함한다. 따라서 $\lvert C_D(x)\rvert=q^{d(x)}$ 꼴이며, $D$가 $C_D(x)$ 위의 vector space이므로 $d(x)\mid n$이다. $C_{D^\times}(x)=C_D(x)\setminus\{0\}$이므로
+이제 각 $x\in D^\times$에 대하여 $C_D(x)=\{y\in D: xy=yx\}$는 $D$의 부분 division ring이고 $Z$를 포함한다. 따라서 $C_D(x)$는 $Z$ 위의 vector space이며, $\lvert Z\rvert=q$이므로 $\lvert C_D(x)\rvert=q^{d(x)}$ 꼴이다. 또한 $D$가 $C_D(x)$ 위의 vector space이므로 $d(x)\mid n$이다. $C_{D^\times}(x)=C_D(x)\setminus\{0\}$이므로
 
 $$\bigl[D^\times:C_{D^\times}(x)\bigr]=\frac{q^n-1}{q^{d(x)}-1}$$
 
@@ -140,7 +140,7 @@ $0\neq 1$인 finite ring $A$가 nonzero zero divisor를 갖지 않으면 $A$는 
 $A$가 finite ring이고 $0$ 이외의 zero divisor가 없다고 하자. 임의의 nonzero $a\in A$에 대해 left multiplication morphism $\lambda_a:A\rightarrow A$, $\lambda_a(x)=ax$를 생각하면, $ax=ay$일 때 $a(x-y)=0$이고 $a$가 zero divisor가 아니므로 $x=y$, 즉 $\lambda_a$가 단사이다. $A$가 유한집합이므로 $\lambda_a$는 전사이고, $av=1$인 $v$가 존재한다. 같은 논법을 right multiplication에 적용하면 $wa=1$인 $w$가 존재하며, $w=w(av)=(wa)v=v$이므로 $v$는 $a$의 양쪽 역원이다. 따라서 모든 nonzero 원소가 unit이고 $A$는 division ring이다. 유한 division ring은 [정리 5](#thm5)에 의해 field이다.
 :::
 
-여기서는 commutativity를 가정하지 않고 출발하여 division ring임을 먼저 얻은 뒤 Wedderburn 정리로 commutativity를 결론지었다. commutativity를 처음부터 가정하면 [정리 5](#thm5) 없이도 곱셈사상의 단사성만으로 field임을 얻으며, 이것이 "유한 integral domain은 field"라는 앞선 결과였다 ([§가역원과 영인자, ⁋따름정리 6](/ko/math/ring_theory/units_and_zero_divisors#cor6)). Wedderburn 정리의 힘은 commutativity 가정 없이 zero divisor의 부재만으로 같은 결론에 이른다는 데에 있다.
+여기서는 commutativity를 가정하지 않고 출발하여 division ring임을 먼저 얻은 뒤 Wedderburn 정리로 commutativity를 결론지었다. Commutativity를 처음부터 가정하면 [정리 5](#thm5) 없이도 곱셈사상의 단사성만으로 field임을 얻으며, 이것이 "유한 integral domain은 field"라는 앞선 결과였다 ([§가역원과 영인자, ⁋따름정리 6](/ko/math/ring_theory/units_and_zero_divisors#cor6)). Wedderburn 정리의 힘은 commutativity 가정 없이 zero divisor의 부재만으로 같은 결론에 이른다는 데에 있다.
 
 ## 사원수
 
@@ -217,10 +217,10 @@ $\mathbb{H}$가 무한 noncommutative division ring으로 존재할 수 있는 �
 
 ## 단순 가군의 자기사상환
 
-Division ring이 자연스럽게 등장하는 또 하나의 맥락은 module 이론이다. ring $R$ 위의 *simple module*은 nonzero이며 $0$과 자기 자신 외의 submodule을 갖지 않는 left $R$-module이다 ([\[가환대수학\] §조르단-횔더 정리, ⁋정의 1](/ko/math/commutative_algebra/Jordan-Holder_theorem#def1)). Simple module 사이의 homomorphism은 매우 제한되어 있으며, 이를 기술하는 것이 Schur의 보조정리이다.
+Division ring이 자연스럽게 등장하는 또 하나의 맥락은 module 이론이다. Ring $R$ 위의 *simple module*은 nonzero이며 $0$과 자기 자신 외의 submodule을 갖지 않는 left $R$-module이다 ([\[가환대수학\] §조르단-횔더 정리, ⁋정의 1](/ko/math/commutative_algebra/Jordan-Holder_theorem#def1)). Simple module 사이의 homomorphism은 매우 제한되어 있으며, 이를 기술하는 것이 Schur의 보조정리이다.
 
 ::: 보조정리 10 (Schur)
-ring $R$ 위의 simple module $M,N$에 대하여 다음이 성립한다.
+Ring $R$ 위의 simple module $M,N$에 대하여 다음이 성립한다.
 
 1. 임의의 $R$-module homomorphism $f:M\rightarrow N$은 zero map이거나 isomorphism이다.
 2. 특히 simple module $M$의 endomorphism ring $\End_R(M)$은 division ring이다.

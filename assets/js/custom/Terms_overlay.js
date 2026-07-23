@@ -52,7 +52,14 @@
     overlay.classList.remove('is--visible');
     overlay.setAttribute('aria-hidden', 'true');
     document.body.classList.remove('overflow--hidden');
+    input.setAttribute('readonly', '');
   }
+
+  // 암호 관리자 억제 (iCloud 암호 확장 등은 autocomplete=off 를 무시한다):
+  // 확장이 필드를 평가하는 포커스 시점에는 readonly(채울 수 없는 필드)로 보이게
+  // 하고 직후에만 편집을 허용한다. keydown 은 문자 삽입 전에 발생하므로 해제가
+  // 즉시면 첫 글자(한글 조합 포함)를 잃지 않는다. blur 시 재잠금.
+  function unlock() { input.removeAttribute('readonly'); }
 
   function load() {
     if (terms || loading) return;
@@ -196,6 +203,10 @@
         triggers[i].addEventListener('click', function (e) { e.preventDefault(); open(); });
       }
     }
+
+    input.addEventListener('focus', function () { setTimeout(unlock, 120); });
+    input.addEventListener('keydown', unlock);
+    input.addEventListener('blur', function () { input.setAttribute('readonly', ''); });
 
     input.addEventListener('input', render);
     input.addEventListener('keydown', function (e) {

@@ -230,26 +230,28 @@ $$f(X)=\bigcup_{j=1}^k f\big(X\times_Y V(\mathfrak{p}_j)\big)$$
 
 인데, 각 base change $X\times_YV(\mathfrak{p}_j) \rightarrow V(\mathfrak{p}_j)$는 여전히 finite type이므로 Noetherian induction의 귀납가정 $P(V(\mathfrak{p}_j))$에 의하여 각 항이 constructible이고 따라서 $f(X)$도 constructible이다. 그러므로 $k=1$, 즉 $A$가 integral domain인 경우만 고려해도 충분하다.
 
-$B=0$인 경우는 자명하므로 $B\neq 0$이라 하자. 그럼 [\[가환대수학\] §뇌터 정규화, ⁋정리 5](/ko/math/commutative_algebra/noether_normalization#thm5)에 의해 $0\neq a\in A$가 존재하여 $B_a$가 free $A_a$-module이다. $a$가 unit이면 $D(a)=Y$이므로 $a$를 unit이 아닌 것으로 택했다고 가정해도 좋고 (unit이라면 아래 논증에서 $V(a)=\emptyset$이 되어 결론이 더 간단해진다), 이 경우 $A$가 integral domain이므로 $V(a)$는 $Y$의 진부분 닫힌집합이다. $B_a=0$인 경우, 이는 $\varphi(a)$가 $B$에서 nilpotent라는 뜻이므로 $\varphi(a)$는 $B$의 모든 prime ideal에 속한다. 따라서 $f(X)\subseteq V(a)$이고, $f(X)$는 base change $X\times_YV(a) \rightarrow V(a)$의 image와 같으므로 귀납가정 $P(V(a))$에 의하여 constructible이다.
+$B=0$인 경우는 자명하므로 $B\neq 0$이라 하자. 그럼 [\[가환대수학\] §뇌터 정규화, ⁋정리 5](/ko/math/commutative_algebra/noether_normalization#thm5)에 의해 $0\neq a\in A$가 존재하여 $B_a$가 free $A_a$-module이다. $a$가 unit인 경우는 마찬가지로 자명하므로,  $a$가 non-unit이라 하자. 이 경우 $A$가 integral domain이므로 $V(a)$는 $Y$의 진부분 닫힌집합이다. 
 
-$B_a\neq 0$인 경우, $B_a$는 $0$이 아닌 free $A_a$-module이다. 임의의 $\mathfrak{p}\in D(a)$에 대하여
+우선 만일 $B_a=0$인 경우, 이는 $\varphi(a)$가 $B$에서 nilpotent라는 뜻이므로 $\varphi(a)$는 $B$의 모든 prime ideal에 속한다. 따라서 $f(X)\subseteq V(a)$이고, $f(X)$는 base change $X\times_YV(a) \rightarrow V(a)$의 image와 같으므로 귀납가정 $P(V(a))$에 의하여 constructible이다.
 
-$$B_a\otimes_{A_a}\kappa(\mathfrak{p})\cong \kappa(\mathfrak{p})^{(r)}\neq 0$$
+마지막으로 $B_a\neq 0$이어서 $B_a$가 $0$이 아닌 free $A_a$-module인 경우를 보자. 임의의 $\mathfrak{p}\in D(a)$에 대하여, $B_a$의 rank를 $r$이라 하면
 
-이므로 ($r\geq 1$은 $B_a$의 rank이다) $\mathfrak{p}$ 위의 fiber는 공집합이 아니고, 따라서 $D(a)\subseteq f(X)$이다. 그럼
+$$B_a\otimes_{A_a}\kappa(\mathfrak{p})\cong \kappa(\mathfrak{p})^{\oplus r}\neq 0$$
+
+이므로 $\mathfrak{p}$ 위의 fiber는 공집합이 아니고, 따라서 $D(a)\subseteq f(X)$이다. 그럼
 
 $$f(X)=D(a)\cup \big(f(X)\cap V(a)\big)$$
 
 이고, $f(X)\cap V(a)$는 base change $X\times_YV(a) \rightarrow V(a)$의 image이므로 귀납가정 $P(V(a))$에 의하여 constructible이다. $D(a)$는 열린집합이므로 constructible이고, 따라서 $f(X)$는 constructible이다.
 :::
 
-Constructible한 집합이 언제 열린집합이 되는지도 함께 정리해둔다. 이것이 flatness와 만나는 지점은 다음 절에서 드러난다.
+마지막으로 우리는 constructible set이 언제 열린집합이 되는지도 함께 정리해둔다.
 
 ::: 보조정리 12
 Noetherian scheme $Y$의 constructible subset $E$가 generization에 대하여 닫혀 있다면, 즉 $y\in E$이고 $y\in \overline{\{y'\}}$일 때마다 $y'\in E$라면, $E$는 $Y$의 열린집합이다.
 :::
 ::: 증명
-여집합 $F=Y\setminus E$는 constructible이며 specialization에 대하여 닫혀 있다. $F$가 닫힌집합임을 보이면 된다. $F=\emptyset$인 경우는 자명하므로 $F\neq \emptyset$이라 하고, $Z=\overline{F}$의 irreducible component들을 $Z_1,\ldots, Z_k$라 하자. $Y$가 Noetherian이므로 이들은 유한개이다.
+여집합 $F=Y\setminus E$는 constructible이며 specialization에 대하여 닫혀 있다. 이를 이용하여 $F$가 닫힌집합임을 보이자. $F=\emptyset$인 경우는 자명하므로 $F\neq \emptyset$이라 하고, $Z=\overline{F}$의 irreducible component들을 $Z_1,\ldots, Z_k$라 하자. $Y$가 Noetherian이므로 이들은 유한개이다.
 
 먼저 각 $j$에 대하여 $\overline{F\cap Z_j}=Z_j$임을 보인다. 만일 $W=\overline{F\cap Z_j}\subsetneq Z_j$라면 $F\subseteq W\cup \bigcup_{i\neq j}Z_i$이고 우변이 닫힌집합이므로 $Z=\overline{F}\subseteq W\cup \bigcup_{i\neq j}Z_i$인데, 이는 $Z_j$가 $Z$의 irreducible component라는 것에 모순이다.
 
@@ -268,26 +270,26 @@ $F$가 specialization에 대하여 닫혀 있으므로 $Z_j=\overline{\{z_j\}}\s
 
 ## 평탄 사상의 기하학적 성질
 
-준비를 마쳤으므로 이제 flatness가 기하학적으로 무엇을 뜻하는지를 본다. flatness의 내용은 fiber들이 서로 이어지는 방식을 통제한다는 데에 있으며, 그 출발점은 flat한 국소사상이 자동으로 faithfully flat이 된다는 다음 관찰이다.
+이제 모든 준비를 마쳤으므로 flatness의 기하학적 의미를 살펴보자. Flatness의 내용은 fiber들이 서로 이어지는 방식을 통제한다는 데에 있으며, 그 출발점은 flat local homomorphism이 자동으로 faithfully flat이 된다는 다음 관찰이다.
 
 ::: 보조정리 13
-local ring 사이의 국소사상 $\varphi: (A,\mathfrak{m}) \rightarrow (B,\mathfrak{n})$이 $B$를 flat $A$-module로 만든다 하자. 그럼 $0$이 아닌 임의의 $A$-module $M$에 대하여 $M\otimes_AB\neq 0$이며, 특히 $\Spec B \rightarrow \Spec A$는 전사이다.
+Local ring 사이의 local homomorphism $\varphi: (A,\mathfrak{m}) \rightarrow (B,\mathfrak{n})$이 $B$를 flat $A$-module로 만든다 하자. 그럼 $0$이 아닌 임의의 $A$-module $M$에 대하여 $M\otimes_AB\neq 0$이며, 특히 $\Spec B \rightarrow \Spec A$는 전사이다.
 :::
 ::: 증명
-$0\neq \xi\in M$을 택하자. $\ann(\xi)$는 $A$의 진 ideal이므로 $\ann(\xi)\subseteq \mathfrak{m}$이고, $A/\ann(\xi)\cong A\xi$는 $M$의 submodule이다. 여기에 flat한 functor $-\otimes_AB$를 적용하면 단사사상
+$0\neq \xi\in M$을 택하자. $\ann(\xi)$는 $A$의 proper ideal이므로 $\ann(\xi)\subseteq \mathfrak{m}$이고, $A/\ann(\xi)\cong A\xi$는 $M$의 submodule이다. 여기에 flat functor $-\otimes_AB$를 적용하면 단사사상
 
 $$B/\ann(\xi)B\cong (A/\ann(\xi))\otimes_AB\hookrightarrow M\otimes_AB$$
 
-를 얻는다. 그런데 $\varphi$가 국소사상이므로 $\ann(\xi)B\subseteq \mathfrak{m}B\subseteq \mathfrak{n}\subsetneq B$이고, 따라서 $B/\ann(\xi)B\neq 0$이다. 즉 $M\otimes_AB\neq 0$이다.
+를 얻는다. 그런데 $\varphi$가 local homomorphism이므로 $\ann(\xi)B\subseteq \mathfrak{m}B\subseteq \mathfrak{n}\subsetneq B$이고, 따라서 $B/\ann(\xi)B\neq 0$이다. 즉 $M\otimes_AB\neq 0$이다.
 
-이제 임의의 $\mathfrak{p}\in \Spec A$에 대하여 $M=\kappa(\mathfrak{p})$로 두면 $\kappa(\mathfrak{p})\neq 0$이므로 fiber ring
+이제 임의의 $\mathfrak{p}\in \Spec A$에 대하여 $M=\kappa(\mathfrak{p})$로 두면 $\kappa(\mathfrak{p})\neq 0$이므로 fiber를 나타내는 ring
 
 $$B\otimes_A\kappa(\mathfrak{p})$$
 
-은 $0$이 아닌 ring이고, 따라서 prime ideal을 갖는다. 그러한 prime ideal에 대응하는 $\Spec B$의 점은 $\mathfrak{p}$ 위에 놓이므로 $\Spec B \rightarrow \Spec A$는 전사이다.
+은 $0$이 아니고, 따라서 prime ideal을 갖는다. 그러한 prime ideal에 대응하는 $\Spec B$의 점은 $\mathfrak{p}$ 위에 놓이므로 $\Spec B \rightarrow \Spec A$는 전사이다.
 :::
 
-이로부터 flat morphism이 generization을 들어올린다는 것, 곧 going-down 성질을 얻는다. 같은 결과가 가환대수학의 언어로 이미 서술된 바 있다. ([\[가환대수학\] §매개계, ⁋보조정리 8](/ko/math/commutative_algebra/system_of_parameters#lem8))
+이로부터 flat morphism이 generization을 들어올린다는 *going-down* 성질을 얻는다. ([\[가환대수학\] §매개계, ⁋보조정리 8](/ko/math/commutative_algebra/system_of_parameters#lem8))
 
 ::: 명제 14
 Flat morphism $f: X \rightarrow Y$와 점 $x \in X$가 주어졌다 하고, $y=f(x)$의 generization $y'$, 즉 $y \in \overline{\{y'\}}$인 점 $y'$가 주어졌다 하자. 그럼 $x$의 generization $x'$가 존재하여 $f(x')=y'$이다.
@@ -295,12 +297,13 @@ Flat morphism $f: X \rightarrow Y$와 점 $x \in X$가 주어졌다 하고, $y=f
 ::: 증명
 $y$의 affine open neighborhood $V=\Spec A$를 택하고, 그 다음 $f^{-1}(V)$ 안에서 $x$의 affine open neighborhood $U=\Spec B$를 택하자. $y'$이 $y$의 generization이므로 $y'\in V$이다. 따라서 $X=\Spec B$, $Y=\Spec A$이고 $x=\mathfrak{q}$, $y=\mathfrak{p}=\varphi^{-1}(\mathfrak{q})$, $y'=\mathfrak{p}'\subseteq \mathfrak{p}$인 경우만 보이면 충분하다.
 
-[보조정리 2](#lem2)에 의하여 $A_\mathfrak{p} \rightarrow B_\mathfrak{q}$는 flat한 국소사상이므로, [보조정리 13](#lem13)에 의하여 $\Spec B_\mathfrak{q} \rightarrow \Spec A_\mathfrak{p}$는 전사이다. 특히 $\mathfrak{p}'A_\mathfrak{p}\in \Spec A_\mathfrak{p}$ 위에 놓인 $\Spec B_\mathfrak{q}$의 점이 존재하며, 이를 $B$의 prime ideal로 되돌리면 $\mathfrak{q}'\subseteq \mathfrak{q}$이면서 $\varphi^{-1}(\mathfrak{q}')=\mathfrak{p}'$인 $\mathfrak{q}'$를 얻는다. $\mathfrak{q}'\subseteq \mathfrak{q}$는 곧 $x\in \overline{\{x'\}}$을 뜻하므로 $x'=\mathfrak{q}'$가 원하는 점이다.
+[보조정리 2](#lem2)에 의하여 $A_\mathfrak{p} \rightarrow B_\mathfrak{q}$는 flat한 local homomorphism이므로, [보조정리 13](#lem13)에 의하여 $\Spec B_\mathfrak{q} \rightarrow \Spec A_\mathfrak{p}$는 전사이다. 특히 $\mathfrak{p}'A_\mathfrak{p}\in \Spec A_\mathfrak{p}$ 위에 놓인 $\Spec B_\mathfrak{q}$의 점이 존재하며, 이를 $B$의 prime ideal로 되돌리면 $\mathfrak{q}'\subseteq \mathfrak{q}$이면서 $\varphi^{-1}(\mathfrak{q}')=\mathfrak{p}'$인 $\mathfrak{q}'$를 얻는다. $\mathfrak{q}'\subseteq \mathfrak{q}$는 곧 $x\in \overline{\{x'\}}$을 뜻하므로 $x'=\mathfrak{q}'$가 원하는 점이다.
 :::
 
 즉 flat morphism은 base에서의 generization을 언제나 위로 들어올린다. 특히 $Y$가 irreducible이고 그 generic point가 $y$라면 $X$의 임의의 점은 generic fiber $X_y$의 어떤 점의 specialization이며, 따라서 $X$의 어떤 성분도 fiber 하나에 갇혀 있을 수 없다. [따름정리 6](#cor6)에서 곡선 위의 family에 대하여 관찰한 것이 일반적으로도 성립하는 것이다.
 
-Going-down의 첫 번째 대가는 차원에 대한 정확한 등식이다. Flat morphism에서 $X$의 국소차원은 base의 국소차원과 fiber의 국소차원으로 정확히 분해된다.
+Going-down의 첫 번째 결과는
+ 차원에 대한 정확한 등식이다. Flat morphism에서 $X$의 local dimension은 base의 local dimension과 fiber의 local dimension으로 정확히 분해된다.
 
 ::: 명제 15
 Locally Noetherian scheme 사이의 flat morphism $f: X \rightarrow Y$와 점 $x\in X$, $y=f(x)$에 대하여
@@ -316,24 +319,22 @@ $$\mathcal{O}_{X_y,x}=(B\otimes_A\kappa(\mathfrak{p}))_\mathfrak{q}\cong B_\math
 
 이다. 즉 fiber의 local ring은 $\mathcal{O}_{X,x}$를 $\mathcal{O}_{Y,y}$의 maximal ideal로 나눈 것이다.
 
-한편 $X$와 $Y$가 locally Noetherian이므로 $\mathcal{O}_{X,x}$와 $\mathcal{O}_{Y,y}$는 Noetherian local ring이고, [보조정리 2](#lem2)에 의하여 $\mathcal{O}_{Y,y} \rightarrow \mathcal{O}_{X,x}$는 flat한 국소사상이다. 따라서 [\[가환대수학\] §매개계, ⁋정리 9](/ko/math/commutative_algebra/system_of_parameters#thm9)를 적용하면 원하는 등식을 얻는다.
+한편 $X$와 $Y$가 locally Noetherian이므로 $\mathcal{O}_{X,x}$와 $\mathcal{O}_{Y,y}$는 Noetherian local ring이고, [보조정리 2](#lem2)에 의하여 $\mathcal{O}_{Y,y} \rightarrow \mathcal{O}_{X,x}$는 flat local homomorphism이다. 따라서 [\[가환대수학\] §매개계, ⁋정리 9](/ko/math/commutative_algebra/system_of_parameters#thm9)를 적용하면 원하는 등식을 얻는다.
 :::
 
-이 등식이 도입에서 본 family의 non-flatness를 다시 한 번 설명해준다. 거기에서 $X=\Spec \mathbb{K}[t,\x]/(t\x)$의 원점 $x$를 생각하면 $X$의 두 성분이 모두 원점을 지나고 각각 $1$차원이므로 $\dim \mathcal{O}_{X,x}=1$이다. 또 $y=f(x)$는 $\mathbb{A}^1_\mathbb{K}$의 원점이므로 $\dim \mathcal{O}_{Y,y}=1$이고, fiber $X_y=\mathbb{A}^1_\mathbb{K}$의 원점에서의 local ring도 $1$차원이다. 등식이 요구하는 것은 $1=1+1$이므로 이 morphism은 flat일 수 없다. 반대로 [예시 8](#ex8)의 $X$는 $2$차원이고 base는 $1$차원이므로, flatness로부터 모든 fiber가 $1$차원이어야 한다는 것이 자동으로 따라 나온다.
+이 등식이 이 글의 도입에서 본 family의 non-flatness를 다시 한 번 설명해준다. 해당 예시에서 $X=\Spec \mathbb{K}[t,\x]/(t\x)$의 원점 $x$를 생각하면 $X$의 두 성분이 모두 원점을 지나고 각각 $1$차원이므로 $\dim \mathcal{O}_{X,x}=1$이다. 또 $y=f(x)$는 $\mathbb{A}^1_\mathbb{K}$의 원점이므로 $\dim \mathcal{O}_{Y,y}=1$이고, fiber $X_y=\mathbb{A}^1_\mathbb{K}$의 원점에서의 local ring도 $1$차원이다. 등식이 요구하는 것은 $1=1+1$이므로 이 morphism은 flat일 수 없다. [명제 14](#prop14)의 언어로 하면 이는 $x$를 지나는 $\x$-축 성분이 $t=0$ 위의 fiber에 통째로 갇혀 base 방향으로 뻗지 못하기 때문이며, 이렇게 한 fiber에 갇힌 성분은 fiber 방향 차원 $1$은 우변에 보태주지만 그 위에 얹힐 base 방향을 $X$ 안에 남기지 않으므로 좌변 $\dim \mathcal{O}_{X,x}$가 $2$에 이르지 못한다. 
 
-$X$와 $Y$가 field $\mathbb{K}$ 위의 finite type integral scheme인 경우에는 closed point에서 $\dim \mathcal{O}_{X,x}=\dim X$가 성립하므로 ([\[Har\] I.1.8A](https://link.springer.com/book/10.1007/978-1-4757-3849-0)의 등차원성), [명제 15](#prop15)는 익숙한 형태
+$X$와 $Y$가 field $\mathbb{K}$ 위의 finite type integral scheme인 경우에는 closed point에서 $\dim \mathcal{O}_{X,x}=\dim X$가 성립하므로, [명제 15](#prop15)는 익숙한 형태
 
 $$\dim X_y=\dim X-\dim Y$$
 
-가 된다. 이 등차원성 자체는 우리가 확립한 결과가 아니므로 여기에서는 인용에 그친다.
-
-Flat morphism의 또 다른 기하학적 성질은 열린집합을 열린집합으로 본다는 것이다. 앞서 마련해둔 Chevalley의 정리와 going-down이 여기에서 정확히 맞물린다.
+가 된다. Flat morphism의 또 다른 기하학적 성질은 열린집합을 열린집합으로 보낸다는 것으로, 이는 [정리 11](#thm11)과 [보조정리 12](#lem12)의 결과이다. 
 
 ::: 명제 16
 Noetherian scheme 사이의 flat하고 finite type인 morphism $f: X \rightarrow Y$는 열린 사상이다. 즉 임의의 열린집합 $U\subseteq X$에 대하여 $f(U)$는 $Y$의 열린집합이다.
 :::
 ::: 증명
-$Y$가 Noetherian이고 $f$가 finite type이므로 $X$ 또한 Noetherian scheme이다. 따라서 열린집합 $U\subseteq X$는 quasi-compact이며, open subscheme의 포함사상은 flat이므로 ([예시 4](#ex4)) [명제 3](#prop3)에 의하여 합성 $f\vert_U: U \rightarrow Y$ 또한 flat하고 finite type이다. 그러므로 처음부터 $U=X$인 경우, 즉 $f(X)$가 열린집합임을 보이면 충분하다.
+$Y$가 Noetherian이고 $f$가 finite type이므로 $X$ 또한 Noetherian scheme이다. 따라서 열린집합 $U\subseteq X$는 quasi-compact이며, open subscheme의 포함사상은 flat이므로 [명제 3](#prop3)에 의하여 합성 $f\vert_U: U \rightarrow Y$ 또한 flat하고 finite type이다. 그러므로 처음부터 $U=X$인 경우, 즉 $f(X)$가 열린집합임을 보이면 충분하다.
 
 [정리 11](#thm11)에 의하여 $f(X)$는 constructible이다. 또 $y\in f(X)$와 그 generization $y'$이 주어지면, $f(x)=y$인 $x$를 택하고 [명제 14](#prop14)를 적용하여 $f(x')=y'$인 $x'$를 얻으므로 $y'\in f(X)$이다. 즉 $f(X)$는 generization에 대하여 닫혀 있다. 이제 [보조정리 12](#lem12)로부터 $f(X)$가 열린집합임을 얻는다.
 :::
@@ -353,14 +354,17 @@ $$\Tor_1^{\mathcal{O}_{Y,y}}(\kappa(y), \mathcal{O}_{X,x})=0$$
 $Y$가 locally Noetherian이므로 $A=\mathcal{O}_{Y,y}$는 Noetherian local ring이고, $f$가 locally of finite type이므로 $X$ 또한 locally Noetherian이어서 $E=\mathcal{O}_{X,x}$도 Noetherian local ring이다. $f$가 유도하는 $A \rightarrow E$는 국소사상이므로 $\mathfrak{m}_yE\subseteq \mathfrak{m}_x$를 만족한다. 이제 $M=E$로 두면 $M$은 finitely generated $E$-module이므로 [\[가환대수학\] §평탄성과 국소화, ⁋정리 1](/ko/math/commutative_algebra/local_criterion_for_flatness#thm1)의 가정이 모두 충족되며, 그 결론이 정확히 주장하는 동치이다.
 :::
 
-Flat한 점들의 집합이 $X$의 열린집합을 이룬다는 사실 또한 성립한다. 곧 $f$가 locally of finite presentation이면 $\mathcal{O}_{X,x}$가 $\mathcal{O}_{Y,f(x)}$-flat인 $x$들의 모임은 $X$에서 열려 있다. ([\[Stacks\] Tag 00RC](https://stacks.math.columbia.edu/tag/00RC)) [명제 9](#prop9)가 base에서 좋은 열린집합을 하나 찾아준 것이라면 이쪽은 $X$ 위에서의 열림을 주장하는 것이며, 그 증명에 필요한 도구는 우리가 갖춘 것과 다르므로 논증의 얼개만 적어두고 인용에 그친다. 먼저 Noetherian 근사로 $A$와 $B$가 $\mathbb{Z}$ 위의 finite type인 경우로 환원하고, $B$를 다항식환으로 바꾸어 모든 fiber ring이 유한한 global dimension을 갖도록 만든다. 그럼 문제의 module이 finite free module들의 유한 복합체 $F_\bullet$로 분해되어, flatness는 $F_\bullet$이 각 fiber 위에서 exact인지의 문제가 된다. 마지막 단계는 Buchsbaum과 Eisenbud의 exactness 판정법으로, 각 morphism $\varphi_i$의 rank와 그 행렬의 $r_i\times r_i$ minor들이 생성하는 ideal $I(\varphi_i)$의 depth 조건으로 exactness를 읽어내는 것이다. 이 $I(\varphi_i)$는 $\coker \varphi_i$의 Fitting ideal이며, minor라는 명시적인 $B$의 원소들로 주어지므로 그것이 정의하는 집합이 열려 있음을 직접 확인할 수 있다.
+[명제 17](#prop17)이 한 점에서의 flatness를 판정한다면, 그 판정을 통과하는 점들이 $X$ 안에서 어떻게 놓이는지 물을 수 있다. [명제 9](#prop9)가 base $Y$에서 flatness가 성립하는 좋은 열린집합을 하나 찾아준 것이었다면, 다음은 flatness 자체가 $X$ 위에서 열린 조건임을 말해준다.
+
+::: 명제 18
+Morphism $f: X \rightarrow Y$가 locally of finite presentation이면, $\mathcal{O}_{X,x}$가 $\mathcal{O}_{Y,f(x)}$-flat인 점 $x\in X$들의 집합은 $X$의 열린집합이다.
+:::
+::: 증명
+이 결과의 증명에 필요한 도구는 우리가 지금까지 갖춘 것과 다르므로, 논증의 얼개만 적는다. 먼저 Noetherian 근사로 $A$와 $B$가 $\mathbb{Z}$ 위의 finite type인 경우로 환원하고, $B$를 다항식환으로 바꾸어 모든 fiber ring이 유한한 global dimension을 갖도록 만든다. 그럼 문제의 module이 finite free module들의 유한 복합체 $F_\bullet$로 분해되어, flatness는 $F_\bullet$이 각 fiber 위에서 exact인지의 문제가 된다. 마지막 단계는 Buchsbaum과 Eisenbud의 exactness 판정법으로, 각 morphism $\varphi_i$의 rank와 그 행렬의 $r_i\times r_i$ minor들이 생성하는 ideal $I(\varphi_i)$의 depth 조건으로 exactness를 읽어내는 것이다. 이 $I(\varphi_i)$는 $\coker \varphi_i$의 Fitting ideal이며, minor라는 명시적인 $B$의 원소들로 주어지므로 그것이 정의하는 집합이 열려 있음을 직접 확인할 수 있다.
+:::
 
 ---
 
 **참고문헌**
 
-**[Har]** R. Hartshorne, *Algebraic geometry*, Springer, 1977.
-
-**[Stacks]** The Stacks Project Authors, *Stacks Project*, https://stacks.math.columbia.edu.
-
-**[EGA]** A. Grothendieck, *Éléments de géométrie algébrique*, IHES, 1960–1967.
+**[Vak]** R. Vakil, *The rising sea: Foundation of algebraic geometry*. Available [online](https://math.stanford.edu/~vakil/216blog/).

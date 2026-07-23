@@ -19,7 +19,7 @@ close_button: false
     </nav>
     <label class="term-index__search">
       <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><circle cx="7" cy="7" r="4.2" fill="none" stroke="currentColor" stroke-width="1.4"/><line x1="10.2" y1="10.2" x2="14" y2="14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
-      <input class="term-index__filter" type="search" placeholder="용어 검색 (한글/영어)" aria-label="용어 검색">
+      <input class="term-index__filter" type="search" name="search" placeholder="용어 검색 (한글/영어)" aria-label="용어 검색" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" data-1p-ignore data-lpignore="true" data-bwignore data-form-type="other">
     </label>
   </div>
 
