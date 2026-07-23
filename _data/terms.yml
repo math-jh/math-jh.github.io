@@ -1373,6 +1373,8 @@ C:
   defs:
   - label: '[선형대수학] §쌍선형형식'
     url: /ko/math/linear_algebra/bilinear_form
+  - label: '[체론] §체'
+    url: /ko/math/field_theory/fields
 - id: characteristic_function
   en: characteristic function
   ko: 특성함수
@@ -1561,6 +1563,13 @@ C:
   defs:
   - label: '[위상수학] §열린사상과 닫힌사상'
     url: /ko/math/topology/open_mappings_and_closed_mappings
+- id: closed_p_-form_of_degree_n
+  en: closed $p$-form of degree $n$
+  ko: degree $n$의 closed $p$-형식
+  primary: ko
+  defs:
+  - label: '[유도대수기하학] §Shifted symplectic 구조'
+    url: /ko/math/derived_algebraic_geometry/shifted_symplectic_structures
 - id: closed_point
   en: closed point
   ko: 닫힌점
@@ -2578,6 +2587,13 @@ D:
   see:
   - label: Cohomology group
     id: cohomology_group
+- id: de_rham_complex
+  en: de Rham complex
+  ko: de Rham 복합체
+  primary: ko
+  defs:
+  - label: '[유도대수기하학] §Shifted symplectic 구조'
+    url: /ko/math/derived_algebraic_geometry/shifted_symplectic_structures
 - id: decreasing
   en: decreasing
   ko: 감소
@@ -5955,6 +5971,13 @@ L:
   defs:
   - label: '[미적분학] §다변수함수와 편미분'
     url: /ko/math/calculus/partial_derivatives
+- id: lagrangian_morphism
+  en: Lagrangian morphism
+  ko: Lagrangian 사상
+  primary: en
+  defs:
+  - label: '[유도대수기하학] §Shifted symplectic 구조'
+    url: /ko/math/derived_algebraic_geometry/shifted_symplectic_structures
 - id: lagrangian_subspace
   en: Lagrangian subspace
   ko: 라그랑지안 부분공간
@@ -7118,6 +7141,13 @@ M:
   - label: '[범주론] §수반함자'
     url: /ko/math/category_theory/adjoints
 N:
+- id: n_-shifted_symplectic_structure
+  en: $n$-shifted symplectic structure
+  ko: $n$-shifted symplectic 구조
+  primary: ko
+  defs:
+  - label: '[유도대수기하학] §Shifted symplectic 구조'
+    url: /ko/math/derived_algebraic_geometry/shifted_symplectic_structures
 - id: n_-th_homology
   en: $n$-th homology
   ko: $n$번째 호몰로지
@@ -7295,6 +7325,8 @@ N:
     url: /ko/math/linear_algebra/dual_space
   - label: '[선형대수학] §쌍선형형식'
     url: /ko/math/linear_algebra/bilinear_form
+  - label: '[유도대수기하학] §Shifted symplectic 구조'
+    url: /ko/math/derived_algebraic_geometry/shifted_symplectic_structures#def4
 - id: nonexpansive_map
   en: nonexpansive map
   ko: 비확장사상
@@ -7765,6 +7797,13 @@ O:
   - label: '[선형대수학] §내적공간'
     url: /ko/math/linear_algebra/inner_product_spaces
 P:
+- id: p_-form_of_degree_n
+  en: $p$-form of degree $n$
+  ko: degree $n$의 $p$-형식
+  primary: ko
+  defs:
+  - label: '[유도대수기하학] §Shifted symplectic 구조'
+    url: /ko/math/derived_algebraic_geometry/shifted_symplectic_structures
 - id: p_q_-form
   en: (p,q)-form
   ko: (p,q)-형식

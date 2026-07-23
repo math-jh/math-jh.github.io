@@ -5058,3 +5058,17 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 - _posts/Math/Complex_Geometry/ko/2026-06-22-Kodaira_Embedding_Theorem.md: 상한 초과 신규 후보 'Riemann bilinear relations' — 보류
 - _posts/Math/Complex_Geometry/ko/2026-06-22-Kodaira_Embedding_Theorem.md: 상한 초과 신규 후보 'abelian variety' — 보류
 - _posts/Math/Complex_Geometry/ko/2026-06-22-Kodaira_Embedding_Theorem.md: 상한 초과 신규 후보 'k3 surface' — 보류
+
+## term_extract_worker 2026-07-23 16:30
+
+- _posts/Math/Derived_Algebraic_Geometry/ko/2026-07-01-Shifted_Symplectic_Structures.md: 병기 필요 'flat 사상' — 위키 ko 문서 '집게손가락 음모론' — 병기형 도출 필요
+- _posts/Math/Derived_Algebraic_Geometry/ko/2026-07-01-Shifted_Symplectic_Structures.md: 병기 필요 'isotropic 구조' — 소스 없음 (KMS exact ✗, 위키 ko ✗)
+- _posts/Math/Derived_Algebraic_Geometry/ko/2026-07-01-Shifted_Symplectic_Structures.md: 병기 필요 'Lagrangian 구조' — 소스 없음 (KMS exact ✗, 위키 ko ✗)
+
+## term_extract_worker 2026-07-23 17:00
+
+- _posts/Math/Field_Theory/ko/2025-04-11-Fields.md: 병기 필요 'Frobenius endomorphism' — 위키 ko 문서 '프로베니우스 사상' — 병기형 도출 필요
+
+## term_extract_worker 2026-07-23 17:30
+
+- _posts/Math/Field_Theory/ko/2025-04-26-Algebraic_Extensions.md: 병기 필요 'composite' — 위키 ko 문서 '컴포지트' — 병기형 도출 필요

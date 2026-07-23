@@ -77,7 +77,7 @@ $k$ 위의 유한차원 vector space $V$에 대하여, *alternating $2$-form<sub
 
 $$\omega^\flat:V\longrightarrow V^\ast,\qquad \omega^\flat(v)=\omega(v,-)$$
 
-으로 둔다. $\omega$이 *nondegenerate*하다는 것은 $\omega^\flat$이 동형인 것을 뜻하며, 이때 쌍 $(V,\omega)$을 *symplectic vector space*라 부른다.
+으로 둔다. $\omega$이 *nondegenerate<sub>비퇴화</sub>*하다는 것은 $\omega^\flat$이 동형인 것을 뜻하며, 이때 쌍 $(V,\omega)$을 *symplectic vector space*라 부른다.
 :::
 
 Alternating 조건은 characteristic $0$에서 반대칭 $\omega(v,w)=-\omega(w,v)$과 동치이고, nondegeneracy는 $\omega^\flat$이 동형이라는 것이므로 $\dim V$이 짝수임을 강제한다. 이 그림에서 우리가 shifted symplectic 기하로 옮겨 갈 때 바꾸는 것은 단 하나이다. Vector space $V$을 접복합체 $T_X$로, 그 쌍대 $V^\ast$을 여접 복합체 $L_X$로 대체하되, 동형을 요구하던 자리에서 shift $[n]$을 허용한 동치를 요구한다. 여기서 $T_X=L_X^\vee$은 $L_X$의 쌍대이며 ([§Derived scheme과 derived stack, ⁋정의 10](/ko/math/derived_algebraic_geometry/derived_schemes#def10)), $L_X$이 perfect이므로 이 쌍대는 잘 정의된다.
