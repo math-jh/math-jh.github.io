@@ -56,12 +56,12 @@ On the other hand, for a local ring $(A, \mathfrak{m})$, we can always prepend $
 
 ## Computation of Dimension
 
-In general, when we treat dimension we mainly consider the case where the ring $A$ is noetherian. One of the principal reasons is that [Theorem 7](#thm7) holds only for noetherian rings. Before computing dimensions in earnest, let us first look at a simple example.
+In general, when we treat dimension we mainly consider the case where the ring $A$ is Noetherian. One of the principal reasons is that [Theorem 7](#thm7) holds only for Noetherian rings. Before computing dimensions in earnest, let us first look at a simple example.
 
-First, through the equivalence between the first and third conditions of [§The Jordan-Hölder Theorem, ⁋Theorem 4](/en/math/commutative_algebra/Jordan-Holder_theorem#thm4), we know exactly what $0$-dimensional noetherian rings are.
+First, through the equivalence between the first and third conditions of [§The Jordan-Hölder Theorem, ⁋Theorem 4](/en/math/commutative_algebra/Jordan-Holder_theorem#thm4), we know exactly what $0$-dimensional Noetherian rings are.
 
 ::: Corollary 3
-For a noetherian ring $A$, $\dim A =0$ is equivalent to $A$ being artinian.
+For a Noetherian ring $A$, $\dim A =0$ is equivalent to $A$ being Artinian.
 :::
 
 On the other hand, by the following proposition we know that in general, if $\phi:A \rightarrow B$ is integral, then dimension does not change.
@@ -88,7 +88,7 @@ $$A=\mathfrak{p}^{(0)}\supseteq \mathfrak{p}=\mathfrak{p}^{(1)}\supseteq \mathfr
 Now we can prove the following theorem.
 
 ::: Theorem 6 (Codimension one Principal Ideal Theorem)
-Let $A$ be a noetherian ring and let $a\in A$ be arbitrary. Let $\mathfrak{p}$ be minimal among the prime ideals containing the principal ideal $\mathfrak{a}=(a)$. Then $\codim \mathfrak{p}\leq 1$.
+Let $A$ be a Noetherian ring and let $a\in A$ be arbitrary. Let $\mathfrak{p}$ be minimal among the prime ideals containing the principal ideal $\mathfrak{a}=(a)$. Then $\codim \mathfrak{p}\leq 1$.
 :::
 
 ::: Proof
@@ -98,7 +98,7 @@ Now in $A_\mathfrak{p}$, $\mathfrak{p}A_\mathfrak{p}$ is the unique maximal idea
 
 $$\mathfrak{a}A_\mathfrak{p}\subseteq (\mathfrak{q}A_\mathfrak{p})^{(n)}+\mathfrak{a}A_\mathfrak{p}\subseteq \mathfrak{p}A_\mathfrak{p},\qquad \mathfrak{q}A_\mathfrak{p}\subseteq \mathfrak{p}A_\mathfrak{p}$$
 
-On the other hand, since $\mathfrak{p}A_\mathfrak{p}$ is minimal among prime ideals containing $\mathfrak{a}A_\mathfrak{p}$, by [§The Jordan-Hölder Theorem, ⁋Corollary 8](/en/math/commutative_algebra/Jordan-Holder_theorem#cor8) the quotient $A_\mathfrak{p}/\mathfrak{a}A_\mathfrak{p}$ is artinian. Hence the descending chain of symbolic powers
+On the other hand, since $\mathfrak{p}A_\mathfrak{p}$ is minimal among prime ideals containing $\mathfrak{a}A_\mathfrak{p}$, by [§The Jordan-Hölder Theorem, ⁋Corollary 8](/en/math/commutative_algebra/Jordan-Holder_theorem#cor8) the quotient $A_\mathfrak{p}/\mathfrak{a}A_\mathfrak{p}$ is Artinian. Hence the descending chain of symbolic powers
 
 $$(\mathfrak{q}A_\mathfrak{p})^{(1)}+\mathfrak{a}A_\mathfrak{p}\supseteq (\mathfrak{q}A_\mathfrak{p})^{(2)}+\mathfrak{a}A_\mathfrak{p}\supseteq\cdots $$
 
@@ -122,21 +122,21 @@ and since $a\in \mathfrak{p}A_\mathfrak{p}=J(A_\mathfrak{p})$, by [§Integral Ex
 
 $$(\mathfrak{q}A_\mathfrak{q})^{n+1}=(\mathfrak{q}A_\mathfrak{q})^{n}$$
 
-and since $\mathfrak{q}A_\mathfrak{q}=J(A_\mathfrak{q})$, we have $(\mathfrak{q}A_\mathfrak{q})^{n}=0$. From the equivalence of the second and third conditions of [§The Jordan-Hölder Theorem, ⁋Corollary 8](/en/math/commutative_algebra/Jordan-Holder_theorem#cor8), $A_\mathfrak{q}=A_\mathfrak{q}/(0)$ is artinian, and therefore by [Corollary 3](#cor3) we know that $\dim A_\mathfrak{q}=0$.
+and since $\mathfrak{q}A_\mathfrak{q}=J(A_\mathfrak{q})$, we have $(\mathfrak{q}A_\mathfrak{q})^{n}=0$. From the equivalence of the second and third conditions of [§The Jordan-Hölder Theorem, ⁋Corollary 8](/en/math/commutative_algebra/Jordan-Holder_theorem#cor8), $A_\mathfrak{q}=A_\mathfrak{q}/(0)$ is Artinian, and therefore by [Corollary 3](#cor3) we know that $\dim A_\mathfrak{q}=0$.
 :::
 
 Now using this, we can inductively prove the following.
 
 ::: Theorem 7 (Principal Ideal Theorem)
-Let $A$ be a noetherian ring and let $a_1,\ldots, a_c\in A$ be arbitrary. Let $\mathfrak{p}$ be minimal among the prime ideals containing $a_1,\ldots, a_c$. Then $\codim \mathfrak{p}\leq c$.
+Let $A$ be a Noetherian ring and let $a_1,\ldots, a_c\in A$ be arbitrary. Let $\mathfrak{p}$ be minimal among the prime ideals containing $a_1,\ldots, a_c$. Then $\codim \mathfrak{p}\leq c$.
 :::
 
-That is, in a noetherian ring any prime ideal satisfies the descending chain condition, and the length of a chain starting from $\mathfrak{p}$ is at most the number of generators of $\mathfrak{p}$. Nevertheless, there exist noetherian rings of infinite dimension. (**[Nag, Appendix, Example 1]**)
+That is, in a Noetherian ring any prime ideal satisfies the descending chain condition, and the length of a chain starting from $\mathfrak{p}$ is at most the number of generators of $\mathfrak{p}$. Nevertheless, there exist Noetherian rings of infinite dimension. (**[Nag, Appendix, Example 1]**)
 
 On the other hand, [Theorem 7](#thm7) also admits the following converse.
 
 ::: Corollary 8
-In a noetherian ring $A$, a prime ideal $\mathfrak{p}$ of codimension $c$ is minimal among the prime ideals containing some ideal generated by $c$ elements.
+In a Noetherian ring $A$, a prime ideal $\mathfrak{p}$ of codimension $c$ is minimal among the prime ideals containing some ideal generated by $c$ elements.
 :::
 ::: Proof
 Suppose that $\mathfrak{p}$ has codimension $c$, as claimed. We will construct the desired ideal by inductively choosing elements $x_1,\ldots, x_r$, starting from the zero ideal $(0)$ (generated by $0$ elements). Now suppose that for some $r$ satisfying $0\leq r< c$, we have constructed the ideal generated by $x_1,\ldots, x_r$. Then we must choose a suitable $x_{r+1}\in \mathfrak{p}$ not belonging to any of the prime ideals containing the ideal $(x_1,\ldots, x_r)$.
@@ -158,7 +158,7 @@ $$\dim A/\mathfrak{p}A\leq\dim A-1$$
 
 holds.
 
-In particular, we have seen that for a noetherian local ring $(A, \mathfrak{m})$, $\dim A=\codim \mathfrak{m}$ holds. Therefore, since $\codim \mathfrak{m}=d$, by [Corollary 8](#cor8) the maximal ideal $\mathfrak{m}$ must be generated by at least $d$ elements.
+In particular, we have seen that for a Noetherian local ring $(A, \mathfrak{m})$, $\dim A=\codim \mathfrak{m}$ holds. Therefore, since $\codim \mathfrak{m}=d$, by [Corollary 8](#cor8) the maximal ideal $\mathfrak{m}$ must be generated by at least $d$ elements.
 
 ## Dimension in Graded Rings
 
@@ -203,7 +203,7 @@ Consequently, $\mathfrak{p}_0^\ast \supsetneq \mathfrak{p}_1^\ast \supsetneq \cd
 ## Regular Local Rings
 
 ::: Definition 12
-A noetherian local ring $(A, \mathfrak{m})$ is called a *regular local ring* if $\mathfrak{m}$ can be generated by exactly $d$ elements.
+A Noetherian local ring $(A, \mathfrak{m})$ is called a *regular local ring* if $\mathfrak{m}$ can be generated by exactly $d$ elements.
 :::
 
 Then by [§Integral Extensions, ⁋Lemma 8](/en/math/commutative_algebra/integral_extension#lem8), for $a_1,\ldots, a_d\in \mathfrak{m}$, their images in $\mathfrak{m}/\mathfrak{m}^2$ generate $\mathfrak{m}/\mathfrak{m}^2$ as an $A/\mathfrak{m}$-vector space if and only if $a_1,\ldots, a_d$ generate $\mathfrak{m}$ as an $A$-module. We will examine further properties of these at the end of the next post.

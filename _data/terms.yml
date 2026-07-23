@@ -481,7 +481,7 @@ A:
   - label: '[복소해석학] §복소수와 복소평면'
     url: /ko/math/complex_analysis/complex_numbers
 - id: artinian
-  en: artinian
+  en: Artinian
   ko: 아틴가군
   primary: en
   defs:
@@ -1160,7 +1160,7 @@ C:
   - label: '[집합론] §기수들 사이의 연산'
     url: /ko/math/set_theory/operation_of_cardinals
 - id: cartan-eilenberg_resolution
-  en: Cartan-eilenberg resolution
+  en: Cartan-Eilenberg resolution
   ko: 카르탕-아일렌베르크 분해
   primary: en
   defs:
@@ -1257,7 +1257,7 @@ C:
   - label: '[해석학] §거리공간'
     url: /ko/math/analysis/metric_spaces
 - id: cauchy_product
-  en: cauchy product
+  en: Cauchy product
   ko: 코시 곱
   primary: ko
   defs:
@@ -3128,14 +3128,14 @@ D:
   - label: Principal divisor
     id: principal_divisor
 - id: dolbeault_cohomology
-  en: dolbeault cohomology
+  en: Dolbeault cohomology
   ko: Dolbeault 코호몰로지
   primary: en
   defs:
   - label: '[복소기하학] §Dolbeault 코호몰로지'
     url: /ko/math/complex_geometry/dolbeault_cohomology
 - id: dolbeault_complex
-  en: dolbeault complex
+  en: Dolbeault complex
   ko: Dolbeault 복합체
   primary: en
   defs:
@@ -3534,7 +3534,7 @@ E:
   - label: '[대수적 위상수학] §벡터다발의 특성류'
     url: /ko/math/algebraic_topology/characteristic_classes
 - id: euler_s_formula
-  en: 'euler''s formula'
+  en: 'Euler''s formula'
   ko: Euler 공식
   primary: ko
   defs:
@@ -4050,14 +4050,14 @@ F:
   - label: '[거울대칭] §프로베니우스 다양체'
     url: /ko/math/mirror_symmetry/frobenius_manifold
 - id: fubini_study_form
-  en: fubini–study form
+  en: Fubini–Study form
   ko: Fubini–Study 형식
   primary: en
   defs:
   - label: '[복소기하학] §Kähler 다양체'
     url: /ko/math/complex_geometry/kahler_manifolds
 - id: fubini_study_metric
-  en: fubini–study metric
+  en: Fubini–Study metric
   ko: Fubini–Study 계량
   primary: ko
   defs:
@@ -4587,21 +4587,21 @@ H:
   - label: '[체론] §제곱근확대체'
     url: /ko/math/field_theory/radical_extensions
 - id: hermitian_form
-  en: hermitian form
+  en: Hermitian form
   ko: 에르미트 형식
   primary: en
   defs:
   - label: '[복소기하학] §Kähler 다양체'
     url: /ko/math/complex_geometry/kahler_manifolds
 - id: hermitian_manifold
-  en: hermitian manifold
+  en: Hermitian manifold
   ko: 에르미트 다양체
   primary: en
   defs:
   - label: '[복소기하학] §Kähler 다양체'
     url: /ko/math/complex_geometry/kahler_manifolds
 - id: hermitian_metric
-  en: hermitian metric
+  en: Hermitian metric
   ko: 에르미트 계량
   primary: en
   defs:
@@ -4624,7 +4624,7 @@ H:
   - label: '[리만기하학] §접속'
     url: /ko/math/riemannian_geometry/connection
 - id: hodge_de_rham_laplacian
-  en: hodge–de rham laplacian
+  en: Hodge–de Rham Laplacian
   ko: 호지-드람 라플라스 작용소
   primary: en
   defs:
@@ -5830,7 +5830,7 @@ L:
   - label: '[거울대칭] §거울대칭 개요'
     url: /ko/math/mirror_symmetry/overview
 - id: laplacian
-  en: laplacian
+  en: Laplacian
   ko: Laplace 연산자
   primary: ko
   defs:
@@ -6296,14 +6296,14 @@ L:
   - label: '[미분다양체] §벡터장'
     url: /ko/math/manifolds/vector_fields
 - id: lipschitz_condition
-  en: lipschitz condition
+  en: Lipschitz condition
   ko: 립시츠 조건
   primary: ko
   defs:
   - label: '[해석학] §미분방정식의 존재성과 유일성'
     url: /ko/math/analysis/existence_uniqueness_ode
 - id: lipschitz_constant
-  en: lipschitz constant
+  en: Lipschitz constant
   ko: 립시츠 상수
   primary: ko
   defs:
@@ -6475,7 +6475,7 @@ L:
   - label: '[스킴] §준연접층'
     url: /ko/math/scheme_theory/quasicoherent_sheaves
 - id: locally_noetherian_scheme
-  en: locally noetherian scheme
+  en: locally Noetherian scheme
   ko: 국소뇌터스킴
   primary: en
   defs:
@@ -6591,7 +6591,7 @@ L:
     url: /ko/math/linear_algebra/existence_and_uniqueness_of_determinant
 M:
 - id: maclaurin_polynomial
-  en: maclaurin polynomial
+  en: Maclaurin polynomial
   ko: 매클로린 다항식
   primary: ko
   defs:
@@ -7106,7 +7106,7 @@ N:
   - label: '[사교기하학] §Stable maps의 moduli space'
     url: /ko/math/symplectic_geometry/stable_maps
 - id: noetherian
-  en: noetherian
+  en: Noetherian
   ko: 뇌터가군
   primary: en
   defs:
@@ -7118,7 +7118,7 @@ N:
   - label: Artinian
     id: artinian
 - id: noetherian_scheme
-  en: noetherian scheme
+  en: Noetherian scheme
   ko: 뇌터스킴
   primary: en
   defs:
@@ -7224,7 +7224,7 @@ N:
   - label: '[토릭 기하학] §토릭 다양체의 정의'
     url: /ko/math/toric_geometry/toric_varieties
 - id: normal_hausdorff_space
-  en: normal hausdorff space
+  en: normal Hausdorff space
   ko: 정규 하우스도르프 공간
   primary: en
   defs:
@@ -8306,7 +8306,7 @@ P:
   - label: '[복소해석학] §등각사상과 Möbius 변환'
     url: /ko/math/complex_analysis/conformal_maps
 - id: pseudo-riemannian_metric
-  en: pseudo-riemannian metric
+  en: pseudo-Riemannian metric
   ko: 준-리만 계량
   primary: en
   defs:
@@ -8702,7 +8702,7 @@ R:
   - label: '[대수다양체] §아핀다양체'
     url: /ko/math/algebraic_varieties/affine_varieties
 - id: regular_hausdorff_space
-  en: regular hausdorff space
+  en: regular Hausdorff space
   ko: 정칙 하우스도르프 공간
   primary: en
   defs:
@@ -9917,7 +9917,7 @@ S:
   - label: '[복소해석학] §Cauchy 정리'
     url: /ko/math/complex_analysis/cauchy_theorem
 - id: stiefel-whitney_class
-  en: Stiefel-whitney class
+  en: Stiefel-Whitney class
   ko: 슈티펠-휘트니 특성류
   primary: en
   defs:
@@ -10495,7 +10495,7 @@ T:
   - label: '[대수다양체] §선다발과 벡터다발'
     url: /ko/math/algebraic_varieties/line_bundles
 - id: taylor_polynomial
-  en: taylor polynomial
+  en: Taylor polynomial
   ko: $n$차 테일러 다항식
   primary: ko
   defs:
@@ -10831,7 +10831,7 @@ T:
   - label: '[범주론] §수반함자'
     url: /ko/math/category_theory/adjoints
 - id: tychonoff_space
-  en: tychonoff space
+  en: Tychonoff space
   ko: 티코노프 공간
   primary: en
   defs:
@@ -10881,7 +10881,7 @@ U:
   - label: '[해석학] §함수열과 점별수렴'
     url: /ko/math/analysis/sequences_of_functions
 - id: uniformly_cauchy
-  en: uniformly cauchy
+  en: uniformly Cauchy
   ko: 균등 Cauchy
   primary: ko
   defs:
@@ -11244,7 +11244,7 @@ W:
   - label: '[복소해석학] §Cauchy 정리'
     url: /ko/math/complex_analysis/cauchy_theorem
 - id: wirtinger_derivative
-  en: wirtinger derivative
+  en: Wirtinger derivative
   ko: Wirtinger 미분
   primary: ko
   defs:

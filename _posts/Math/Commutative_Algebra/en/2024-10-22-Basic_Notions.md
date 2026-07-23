@@ -67,7 +67,7 @@ of submodules of $M$ is given, there exists a suitable $k$ such that $M_k=M_{k+1
 
 $$M_0\supseteq M_1\supseteq M_2\supseteq\cdots$$
 
-of submodules of $M$ is given, there exists a suitable $k$ such that $M_k=M_{k+1}=\cdots$. An $A$-module $M$ satisfying the ascending chain condition is called *noetherian*. An $A$-module $M$ satisfying the descending chain condition is called *artinian*. A ring $A$ being noetherian or artinian means that $A$ is noetherian or artinian as a module over itself.
+of submodules of $M$ is given, there exists a suitable $k$ such that $M_k=M_{k+1}=\cdots$. An $A$-module $M$ satisfying the ascending chain condition is called *Noetherian*. An $A$-module $M$ satisfying the descending chain condition is called *Artinian*. A ring $A$ being Noetherian or Artinian means that $A$ is Noetherian or Artinian as a module over itself.
 :::
 
 Then the following holds.
@@ -75,7 +75,7 @@ Then the following holds.
 ::: Theorem 3
 For any $A$-module $M$, the following are all equivalent.
 
-1. $M$ is noetherian.
+1. $M$ is Noetherian.
 2. Every submodule of $M$ is finitely generated.
 3. Any collection of submodules of $M$ always has a maximal element with respect to inclusion.
 :::
@@ -84,7 +84,7 @@ First assume condition 1 and show condition 2. Suppose for contradiction that $M
 
 $$\langle x_1\rangle\subsetneq \langle x_1,x_2\rangle\subsetneq\cdots$$
 
-which are also submodules of $M$, contradicting the assumption that $M$ is noetherian.
+which are also submodules of $M$, contradicting the assumption that $M$ is Noetherian.
 
 Now assume condition 2 and show condition 1. Given an ascending chain of submodules of $M$
 
@@ -99,20 +99,20 @@ $$M_0\subseteq M_1\subseteq M_2\subseteq\cdots$$
 the collection of these must have a maximal element, so condition 1 holds.
 :::
 
-Thus it is obvious that any submodule of a noetherian module is again noetherian. Moreover, the following holds.
+Thus it is obvious that any submodule of a Noetherian module is again Noetherian. Moreover, the following holds.
 
 ::: Proposition 4
-For a noetherian $A$-module $M$, any quotient $M/N$ is also noetherian.
+For a Noetherian $A$-module $M$, any quotient $M/N$ is also Noetherian.
 :::
 ::: Proof
 Any submodule of $M/N$ is of the form $L/N$ for a suitable submodule $L$ of $M$, and now $L$ is finitely generated and the generators of $L$ generate $L/N$ under the canonical surjection, so this is obvious.
 :::
 
 ::: Proposition 5
-For any $A$-module $M$ and any submodule $N$, $M$ being noetherian is equivalent to both $N$ and $M/N$ being noetherian.
+For any $A$-module $M$ and any submodule $N$, $M$ being Noetherian is equivalent to both $N$ and $M/N$ being Noetherian.
 :::
 ::: Proof
-One direction has already been proved. Thus it suffices to show that $M$ is noetherian assuming that $N$ and $M/N$ are noetherian. Fix an arbitrary submodule $L$ of $M$. Then the image $L/N$ of $L$ in $M/N$ is finitely generated, and $L\cap N$ is also a submodule of $N$ so it is finitely generated. Now let $x_1,\ldots, x_m\in L$ be elements whose images in $L/N$ generate $L/N$, and let $y_1,\ldots, y_n\in L\cap N$ generate $L\cap N$. Then for any $x\in L$ there exist $\alpha_i\in A$ such that
+One direction has already been proved. Thus it suffices to show that $M$ is Noetherian assuming that $N$ and $M/N$ are Noetherian. Fix an arbitrary submodule $L$ of $M$. Then the image $L/N$ of $L$ in $M/N$ is finitely generated, and $L\cap N$ is also a submodule of $N$ so it is finitely generated. Now let $x_1,\ldots, x_m\in L$ be elements whose images in $L/N$ generate $L/N$, and let $y_1,\ldots, y_n\in L\cap N$ generate $L\cap N$. Then for any $x\in L$ there exist $\alpha_i\in A$ such that
 
 $$x\equiv \alpha_1x_1+\cdots+\alpha_m x_m\pmod{N}$$
 
@@ -126,7 +126,7 @@ and rewriting this using the generators of $L\cap N$ gives the desired result.
 Hence the following holds.
 
 ::: Corollary 6
-For a ring $A$ and two noetherian $A$-modules $M,N$, the direct sum $M\oplus N$ is a noetherian $A$-module.
+For a ring $A$ and two Noetherian $A$-modules $M,N$, the direct sum $M\oplus N$ is a Noetherian $A$-module.
 :::
 ::: Proof
 Apply [Proposition 5](#prop5) to $M\oplus N$ and its submodule $M\oplus 0\cong M$.
@@ -148,11 +148,11 @@ An $A$-module $M$ is called *finitely presented* if there exist suitable $m,n$ s
 $$A^{\oplus m} \rightarrow A^{\oplus n} \rightarrow M \rightarrow 0$$
 :::
 
-In general a finitely presented module is finitely generated, but the converse does not hold. However, for any noetherian ring $A$ the two notions coincide. This is because if $M$ is a finitely generated $A$-module, then we obtain the exact sequence
+In general a finitely presented module is finitely generated, but the converse does not hold. However, for any Noetherian ring $A$ the two notions coincide. This is because if $M$ is a finitely generated $A$-module, then we obtain the exact sequence
 
 $$0\longrightarrow\ker u \longrightarrow A^{\oplus n} \overset{u}{\longrightarrow} M \longrightarrow 0$$
 
-and on the other hand $A^{\oplus n}$ is noetherian by [Corollary 6](#cor6), so its submodule $\ker u$ is finitely generated. Now considering
+and on the other hand $A^{\oplus n}$ is Noetherian by [Corollary 6](#cor6), so its submodule $\ker u$ is finitely generated. Now considering
 
 $$A^{\oplus m} \rightarrow \ker u \rightarrow 0$$
 
@@ -169,7 +169,7 @@ An $A$-module $M$ is called a *coherent module* if $M$ is finitely generated and
 Then the following proposition is obvious.
 
 ::: Proposition 9
-For a noetherian ring $A$ and an $A$-module $M$, the following are all equivalent.
+For a Noetherian ring $A$ and an $A$-module $M$, the following are all equivalent.
 
 1. $M$ is finitely generated.
 2. $M$ is finitely presented.
@@ -202,17 +202,17 @@ and then using the equivalence condition of [\[Algebraic Structures\] §Field of
 
 ## Hilbert Basis Theorem
 
-So far we have examined the basic properties of noetherian modules. The rings we will deal with are mostly polynomial rings or quotients thereof, so it is important to know whether noetherianness is preserved under operations involving polynomial rings. This is a classical result proved by Hilbert.
+So far we have examined the basic properties of Noetherian modules. The rings we will deal with are mostly polynomial rings or quotients thereof, so it is important to know whether noetherianness is preserved under operations involving polynomial rings. This is a classical result proved by Hilbert.
 
 ::: Theorem 12 (Hilbert basis theorem)
-For a noetherian ring $A$, the polynomial ring $A[\x]$ is also noetherian.
+For a Noetherian ring $A$, the polynomial ring $A[\x]$ is also Noetherian.
 :::
 ::: Proof
 By [Theorem 3](#thm3) it suffices to show that any ideal $I$ of $A[\x]$ is finitely generated. For each integer $n\geq 0$, let $\mathfrak{a}_n$ be the set of leading coefficients of polynomials of degree $n$ belonging to $I$, together with $0$.
 
 First we check that $\mathfrak{a}_n$ is an ideal of $A$. Let $a,b$ be the leading coefficients of two polynomials $f,g\in I$ of degree $n$. Then $f+g\in I$ has degree $n$ and leading coefficient $a+b$, or if $a+b=0$ then its degree is less than $n$; in either case $a+b\in \mathfrak{a}_n$. Also, for any $\lambda\in A$ the leading coefficient of $\lambda f\in I$ is $\lambda a$ or $0$, so $\lambda a\in \mathfrak{a}_n$. On the other hand, if $f\in I$ has degree $n$ then $\x f\in I$ has degree $n+1$ and the same leading coefficient, so $\mathfrak{a}_n\subseteq \mathfrak{a}_{n+1}$ holds.
 
-The ascending chain $\mathfrak{a}_0\subseteq \mathfrak{a}_1\subseteq \cdots$ obtained in this way stabilizes at some $N$ because $A$ is noetherian, so $\mathfrak{a}_n=\mathfrak{a}_N$ for all $n\geq N$. Also, for each $n\leq N$ the ideal $\mathfrak{a}_n$ is finitely generated; let its generators be $a_{n,1},\ldots,a_{n,k_n}$ and for each $a_{n,j}$ choose one polynomial $f_{n,j}\in I$ of degree $n$ having $a_{n,j}$ as its leading coefficient.
+The ascending chain $\mathfrak{a}_0\subseteq \mathfrak{a}_1\subseteq \cdots$ obtained in this way stabilizes at some $N$ because $A$ is Noetherian, so $\mathfrak{a}_n=\mathfrak{a}_N$ for all $n\geq N$. Also, for each $n\leq N$ the ideal $\mathfrak{a}_n$ is finitely generated; let its generators be $a_{n,1},\ldots,a_{n,k_n}$ and for each $a_{n,j}$ choose one polynomial $f_{n,j}\in I$ of degree $n$ having $a_{n,j}$ as its leading coefficient.
 
 Now we show by induction on the degree of elements of $I$ that the finite set $\{f_{n,j}\mid 0\leq n\leq N,\ 1\leq j\leq k_n\}$ generates $I$. Let $f$ be a polynomial in $I$ of degree $d$ with leading coefficient $c$. If $d\leq N$, then $c\in \mathfrak{a}_d$ so there exist suitable $\lambda_j\in A$ with $c=\sum_j \lambda_j a_{d,j}$, and
 
@@ -225,15 +225,15 @@ $$f-\sum_j \lambda_j \x^{d-N} f_{N,j}\in I$$
 also has degree less than $d$. In both cases the subtracted polynomial is an $A[\x]$-linear combination of the $\{f_{n,j}\}$, so by the induction hypothesis the above difference is generated by the $\{f_{n,j}\}$, and hence $f$ itself is as well. (The case $f=0$ is obvious.) Therefore $I$ is finitely generated.
 :::
 
-In particular, by applying this repeatedly we see that the polynomial ring $A[\x_1,\ldots,\x_n]=A[\x_1,\ldots,\x_{n-1}][\x_n]$ is also noetherian, and from this we obtain the following.
+In particular, by applying this repeatedly we see that the polynomial ring $A[\x_1,\ldots,\x_n]=A[\x_1,\ldots,\x_{n-1}][\x_n]$ is also Noetherian, and from this we obtain the following.
 
 ::: Corollary 13
-A finitely generated $A$-algebra $B$ over a noetherian ring $A$ is noetherian.
+A finitely generated $A$-algebra $B$ over a Noetherian ring $A$ is Noetherian.
 :::
 ::: Proof
-Since $B$ is a finitely generated $A$-algebra, there exists a surjective ring homomorphism $A[\x_1,\ldots,\x_n]\rightarrow B$ for a suitable $n$. That is, $B\cong A[\x_1,\ldots,\x_n]/I$ for some ideal $I$. Applying [Theorem 12](#thm12) repeatedly, we know that $A[\x_1,\ldots,\x_n]$ is noetherian.
+Since $B$ is a finitely generated $A$-algebra, there exists a surjective ring homomorphism $A[\x_1,\ldots,\x_n]\rightarrow B$ for a suitable $n$. That is, $B\cong A[\x_1,\ldots,\x_n]/I$ for some ideal $I$. Applying [Theorem 12](#thm12) repeatedly, we know that $A[\x_1,\ldots,\x_n]$ is Noetherian.
 
-Now it suffices to show that a quotient of a noetherian ring is noetherian. By [\[Algebraic Structures\] §Quotient Rings, Ring Homomorphisms, ⁋Theorem 3](/en/math/algebraic_structures/quotient_rings#thm3), the ideals of $B$ are in one-to-one correspondence with the ideals of $A[\x_1,\ldots,\x_n]$ containing $I$, preserving inclusion. Thus any ascending chain of ideals of $B$ gives an ascending chain of ideals of $A[\x_1,\ldots,\x_n]$, and the latter stabilizes by the noetherianness of $A[\x_1,\ldots,\x_n]$, so the former also stabilizes. Regarding the ring $B$ as a $B$-module over itself, its submodules are exactly the ideals of $B$, so by [Theorem 3](#thm3) the ring $B$ is noetherian.
+Now it suffices to show that a quotient of a Noetherian ring is Noetherian. By [\[Algebraic Structures\] §Quotient Rings, Ring Homomorphisms, ⁋Theorem 3](/en/math/algebraic_structures/quotient_rings#thm3), the ideals of $B$ are in one-to-one correspondence with the ideals of $A[\x_1,\ldots,\x_n]$ containing $I$, preserving inclusion. Thus any ascending chain of ideals of $B$ gives an ascending chain of ideals of $A[\x_1,\ldots,\x_n]$, and the latter stabilizes by the noetherianness of $A[\x_1,\ldots,\x_n]$, so the former also stabilizes. Regarding the ring $B$ as a $B$-module over itself, its submodules are exactly the ideals of $B$, so by [Theorem 3](#thm3) the ring $B$ is Noetherian.
 :::
 
 ---

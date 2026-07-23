@@ -252,10 +252,10 @@ $(f)$를 포함하는 $A$의 minimal prime $\mathfrak{p}$를 택하자. [\[가�
 앞서 우리는 finite type인 affine integral $\mathbb{K}$-scheme $X=\Spec A$에 대하여, $A$의 nonzero non-unit $f$를 통해 정의된 closed subscheme $Z(f)$는 $X$보다 하나 적은 차원을 갖는다는 것을 살펴보았다. 이는 분명 유용한 결과이지만, 다음과 같이 더 일반적인 경우에도 그 결과를 살펴볼 수 있다.
 
 ::: 명제 12
-Locally noetherian scheme $X$와 $X$ 위의 함수 $f$에 대하여, $Z(f)$의 irreducible component는 codimension $0$이거나 codimension $1$이다.
+Locally Noetherian scheme $X$와 $X$ 위의 함수 $f$에 대하여, $Z(f)$의 irreducible component는 codimension $0$이거나 codimension $1$이다.
 :::
 ::: 증명
-$W$를 $Z(f)$의 irreducible component라 하고 $w$를 $W$의 generic point라 하자. 이제 $w$를 포함하는 affine open subset $U\cong\Spec A$를 택하면, $X$가 locally noetherian이므로 $A$를 noetherian ring으로 잡을 수 있으며, 이 isomorphism에 의해 $w$가 $\mathfrak{p}\in\Spec A$에 대응된다 하자. [\[위상수학\] §차원, ⁋명제 14](/ko/math/topology/dimension#prop14)의 대응에 의하여 $W\cap U$는 $Z(f\vert_U)$의 irreducible component이므로, $\mathfrak{p}$는 $f\vert_U\in A$가 생성하는 principal ideal을 포함하는 minimal prime ideal이다. 따라서 [\[가환대수학\] §차원, ⁋정리 6](/ko/math/commutative_algebra/Krull_dimension#thm6)에 의하여 $\codim\mathfrak{p}\leq 1$이다.
+$W$를 $Z(f)$의 irreducible component라 하고 $w$를 $W$의 generic point라 하자. 이제 $w$를 포함하는 affine open subset $U\cong\Spec A$를 택하면, $X$가 locally Noetherian이므로 $A$를 Noetherian ring으로 잡을 수 있으며, 이 isomorphism에 의해 $w$가 $\mathfrak{p}\in\Spec A$에 대응된다 하자. [\[위상수학\] §차원, ⁋명제 14](/ko/math/topology/dimension#prop14)의 대응에 의하여 $W\cap U$는 $Z(f\vert_U)$의 irreducible component이므로, $\mathfrak{p}$는 $f\vert_U\in A$가 생성하는 principal ideal을 포함하는 minimal prime ideal이다. 따라서 [\[가환대수학\] §차원, ⁋정리 6](/ko/math/commutative_algebra/Krull_dimension#thm6)에 의하여 $\codim\mathfrak{p}\leq 1$이다.
 
 한편 stalk은 $w$의 열린근방에만 의존하므로 $\mathcal{O}_{U,w}=\mathcal{O}_{X,w}$이고, $W$와 $W\cap U$는 각각 $X$와 $U$의 irreducible closed subset으로서 모두 $w$를 generic point로 가지므로 [명제 8](#prop8)을 두 번 적용하면
 

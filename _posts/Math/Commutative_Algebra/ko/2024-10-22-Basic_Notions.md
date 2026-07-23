@@ -68,7 +68,7 @@ $$M_0\subseteq M_1\subseteq M_2\subseteq\cdots$$
 
 $$M_0\supseteq M_1\supseteq M_2\supseteq\cdots$$
 
-가 주어질 때마다, 적당한 $k$가 존재하여 $M_k=M_{k+1}=\cdots$인 것이다. Ascending chain condition을 만족하는 $A$-module $M$을 *noetherian<sub>뇌터가군</sub>*이라 부른다. Descending chain condition을 만족하는 $A$-module $M$을 *artinian<sub>아틴가군</sub>*이라 부른다. 임의의 ring $A$가 noetherian 혹은 artinian인 것은 $A$가 자기 자신 위에서의 module로서 noetherian 혹은 artinian인 것이다.
+가 주어질 때마다, 적당한 $k$가 존재하여 $M_k=M_{k+1}=\cdots$인 것이다. Ascending chain condition을 만족하는 $A$-module $M$을 *Noetherian<sub>뇌터가군</sub>*이라 부른다. Descending chain condition을 만족하는 $A$-module $M$을 *Artinian<sub>아틴가군</sub>*이라 부른다. 임의의 ring $A$가 Noetherian 혹은 Artinian인 것은 $A$가 자기 자신 위에서의 module로서 Noetherian 혹은 Artinian인 것이다.
 :::
 
 그럼 다음이 성립한다.
@@ -76,7 +76,7 @@ $$M_0\supseteq M_1\supseteq M_2\supseteq\cdots$$
 ::: 정리 3
 임의의 $A$-module $M$에 대하여 다음이 모두 동치이다.
 
-1. $M$이 noetherian이다.
+1. $M$이 Noetherian이다.
 2. $M$의 임의의 submodule이 finitely generated이다.
 3. 임의의 $M$의 submodule들의 모임은 항상 포함관계에 대한 maximal element를 갖는다.
 :::
@@ -85,7 +85,7 @@ $$M_0\supseteq M_1\supseteq M_2\supseteq\cdots$$
   
 $$\langle x_1\rangle\subsetneq \langle x_1,x_2\rangle\subsetneq\cdots$$
 
-를 얻으며, 이들은 $M$의 submodule이기도 하므로 $M$이 noetherian이라는 가정에 모순이다.
+를 얻으며, 이들은 $M$의 submodule이기도 하므로 $M$이 Noetherian이라는 가정에 모순이다.
 
 이제 2번 조건을 가정하고 1번 조건을 보인다. $M$의 submodule들의 ascending chain
 
@@ -100,20 +100,20 @@ $$M_0\subseteq M_1\subseteq M_2\subseteq\cdots$$
 이 주어졌을 때 이들 모임의 maximal element가 존재해야 하므로 1번 조건이 성립한다. 
 :::
 
-따라서 noetherian module의 임의의 submodule 또한 noetherian임이 자명하다. 뿐만 아니라 다음이 성립한다.
+따라서 Noetherian module의 임의의 submodule 또한 Noetherian임이 자명하다. 뿐만 아니라 다음이 성립한다.
 
 ::: 명제 4
-Noetherian $A$-module $M$에 대하여, 임의의 quotient $M/N$ 또한 noetherian이다.
+Noetherian $A$-module $M$에 대하여, 임의의 quotient $M/N$ 또한 Noetherian이다.
 :::
 ::: 증명
 $M/N$의 임의의 submodule은 $M$의 적당한 submodule $L$에 대하여 $L/N$의 꼴이고, 이제 $L$이 finitely generated이며 canonical surjection에 의하여 $L$의 generator들이 $L/N$을 generate하므로 자명하다.
 :::
 
 ::: 명제 5
-임의의 $A$-module $M$과 임의의 submodule $N$에 대하여, $M$이 noetherian인 것과 $N,M/N$이 모두 noetherian인 것이 동치이다.
+임의의 $A$-module $M$과 임의의 submodule $N$에 대하여, $M$이 Noetherian인 것과 $N,M/N$이 모두 Noetherian인 것이 동치이다.
 :::
 ::: 증명
-한쪽 방향은 이미 증명하였다. 따라서 $N, M/N$이 noetherian이라 가정하고 $M$이 noetherian임을 보이면 충분하다. $M$의 임의의 submodule $L$을 고정하자. 그럼 $L$의 $M/N$에서의 image $L/N$은 finitely generated이며, $L\cap N$ 또한 $N$의 submodule이므로 finitely generated이다. 이제 $x_1,\ldots, x_m\in L$을 $L/N$으로 보낸 것이 $L/N$의 generator가 된다 하고, $y_1,\ldots, y_n\in L\cap N$이 $L\cap N$의 generator라 하자. 그럼 임의의 $x\in L$에 대하여 
+한쪽 방향은 이미 증명하였다. 따라서 $N, M/N$이 Noetherian이라 가정하고 $M$이 Noetherian임을 보이면 충분하다. $M$의 임의의 submodule $L$을 고정하자. 그럼 $L$의 $M/N$에서의 image $L/N$은 finitely generated이며, $L\cap N$ 또한 $N$의 submodule이므로 finitely generated이다. 이제 $x_1,\ldots, x_m\in L$을 $L/N$으로 보낸 것이 $L/N$의 generator가 된다 하고, $y_1,\ldots, y_n\in L\cap N$이 $L\cap N$의 generator라 하자. 그럼 임의의 $x\in L$에 대하여 
 
 $$x\equiv \alpha_1x_1+\cdots+\alpha_m x_m\pmod{N}$$
 
@@ -127,7 +127,7 @@ $$x-\sum \alpha_i x_i\in L\cap N$$
 따라서 다음이 성립한다.
 
 ::: 따름정리 6
-Ring $A$와 두 noetherian $A$-module $M,N$에 대하여, $M\oplus N$은 noetherian $A$-module이다.
+Ring $A$와 두 Noetherian $A$-module $M,N$에 대하여, $M\oplus N$은 Noetherian $A$-module이다.
 :::
 ::: 증명
 [명제 5](#prop5)를 $M\oplus N$과 그 submodule $M\oplus 0\cong M$에 대해 적용하면 된다.
@@ -151,11 +151,11 @@ $$A^{\oplus m} \rightarrow A^{\oplus n} \rightarrow M \rightarrow 0$$
 이 존재하는 것이다. 
 :::
 
-일반적으로 finitely presented module은 finitely generated이지만, 그 역은 성립하지 않는다. 하지만 임의의 noetherian ring $A$에 대해서는 두 개념이 일치한다. 이는 만일 $M$이 finitely generated $A$-module이라면, 다음의 exact sequence
+일반적으로 finitely presented module은 finitely generated이지만, 그 역은 성립하지 않는다. 하지만 임의의 Noetherian ring $A$에 대해서는 두 개념이 일치한다. 이는 만일 $M$이 finitely generated $A$-module이라면, 다음의 exact sequence
 
 $$0\longrightarrow\ker u \longrightarrow A^{\oplus n} \overset{u}{\longrightarrow} M \longrightarrow 0$$
 
-를 얻고, 한편 $A^{\oplus n}$은 [따름정리 6](#cor6)에 의하여 noetherian이며 따라서 그 submodule $\ker u$는 finitely generated이다. 이제
+를 얻고, 한편 $A^{\oplus n}$은 [따름정리 6](#cor6)에 의하여 Noetherian이며 따라서 그 submodule $\ker u$는 finitely generated이다. 이제
 
 $$A^{\oplus m} \rightarrow \ker u \rightarrow 0$$
 
@@ -205,17 +205,17 @@ $$A/\mathfrak{p}\cong \frac{A/\mathfrak{a}}{\mathfrak{p}/\mathfrak{a}}$$
 
 ## Hilbert 기저 정리
 
-지금까지 우리는 noetherian module의 기본 성질을 살펴보았다. 우리가 다루게 될 ring들은 대개 다항식환이나 그 quotient의 꼴이므로, noetherian성이 다항식환을 취하는 연산에 대해 보존되는지를 아는 것이 중요하다. 이는 Hilbert가 증명한 고전적인 결과이다.
+지금까지 우리는 Noetherian module의 기본 성질을 살펴보았다. 우리가 다루게 될 ring들은 대개 다항식환이나 그 quotient의 꼴이므로, Noetherian성이 다항식환을 취하는 연산에 대해 보존되는지를 아는 것이 중요하다. 이는 Hilbert가 증명한 고전적인 결과이다.
 
 ::: 정리 12 (Hilbert basis theorem)
-Noetherian ring $A$에 대하여, 다항식환 $A[\x]$ 또한 noetherian이다.
+Noetherian ring $A$에 대하여, 다항식환 $A[\x]$ 또한 Noetherian이다.
 :::
 ::: 증명
 [정리 3](#thm3)에 의하여 $A[\x]$의 임의의 ideal $I$가 finitely generated임을 보이면 충분하다. 각 정수 $n\geq 0$에 대하여, $I$에 속하는 degree $n$의 다항식들의 leading coefficient들과 $0$을 모은 집합을 $\mathfrak{a}_n$이라 하자.
 
 우선 $\mathfrak{a}_n$이 $A$의 ideal임을 확인한다. 두 degree $n$의 다항식 $f,g\in I$의 leading coefficient를 각각 $a,b$라 하면, $f+g\in I$는 degree $n$이면서 leading coefficient가 $a+b$이거나, 또는 $a+b=0$이라면 degree가 $n$보다 작으므로, 어느 경우건 $a+b\in \mathfrak{a}_n$이다. 또 임의의 $\lambda\in A$에 대하여 $\lambda f\in I$의 leading coefficient는 $\lambda a$이거나 $0$이므로 $\lambda a\in \mathfrak{a}_n$이다. 한편 $f\in I$가 degree $n$이면 $\x f\in I$는 degree $n+1$이고 leading coefficient가 같으므로, $\mathfrak{a}_n\subseteq \mathfrak{a}_{n+1}$이 성립한다.
 
-이렇게 얻은 ascending chain $\mathfrak{a}_0\subseteq \mathfrak{a}_1\subseteq \cdots$은 $A$가 noetherian이므로 적당한 $N$에서 안정화되어, 모든 $n\geq N$에 대하여 $\mathfrak{a}_n=\mathfrak{a}_N$이다. 또한 각 $n\leq N$에 대하여 $\mathfrak{a}_n$ 역시 finitely generated이므로, 그 generator를 $a_{n,1},\ldots,a_{n,k_n}$이라 하고, 각 $a_{n,j}$를 leading coefficient로 갖는 degree $n$의 다항식 $f_{n,j}\in I$을 하나씩 택하자.
+이렇게 얻은 ascending chain $\mathfrak{a}_0\subseteq \mathfrak{a}_1\subseteq \cdots$은 $A$가 Noetherian이므로 적당한 $N$에서 안정화되어, 모든 $n\geq N$에 대하여 $\mathfrak{a}_n=\mathfrak{a}_N$이다. 또한 각 $n\leq N$에 대하여 $\mathfrak{a}_n$ 역시 finitely generated이므로, 그 generator를 $a_{n,1},\ldots,a_{n,k_n}$이라 하고, 각 $a_{n,j}$를 leading coefficient로 갖는 degree $n$의 다항식 $f_{n,j}\in I$을 하나씩 택하자.
 
 이제 유한집합 $\{f_{n,j}\mid 0\leq n\leq N,\ 1\leq j\leq k_n\}$이 $I$를 생성함을, $I$의 원소의 degree에 대한 induction으로 보인다. $I$의 다항식 $f$의 degree를 $d$, leading coefficient를 $c$라 하자. 만일 $d\leq N$이라면 $c\in \mathfrak{a}_d$이므로 적당한 $\lambda_j\in A$에 대하여 $c=\sum_j \lambda_j a_{d,j}$이고,
 
@@ -228,15 +228,15 @@ $$f-\sum_j \lambda_j \x^{d-N} f_{N,j}\in I$$
 또한 degree가 $d$보다 작다. 두 경우 모두 빼낸 다항식은 $\{f_{n,j}\}$들의 $A[\x]$-linear combination이므로, induction 가정에 의해 위의 차가 $\{f_{n,j}\}$들로 생성되고, 따라서 $f$ 자신도 그러하다. ($f=0$인 경우는 자명하다.) 그러므로 $I$는 finitely generated이다.
 :::
 
-특히 이를 반복하여 적용하면 다항식환 $A[\x_1,\ldots,\x_n]=A[\x_1,\ldots,\x_{n-1}][\x_n]$ 또한 noetherian임을 알 수 있고, 이로부터 다음을 얻는다.
+특히 이를 반복하여 적용하면 다항식환 $A[\x_1,\ldots,\x_n]=A[\x_1,\ldots,\x_{n-1}][\x_n]$ 또한 Noetherian임을 알 수 있고, 이로부터 다음을 얻는다.
 
 ::: 따름정리 13
-Noetherian ring $A$ 위의 finitely generated $A$-algebra $B$는 noetherian이다.
+Noetherian ring $A$ 위의 finitely generated $A$-algebra $B$는 Noetherian이다.
 :::
 ::: 증명
-$B$가 finitely generated $A$-algebra이므로, 적당한 $n$에 대하여 surjective ring homomorphism $A[\x_1,\ldots,\x_n]\rightarrow B$이 존재한다. 즉 어떠한 ideal $I$에 대하여 $B\cong A[\x_1,\ldots,\x_n]/I$이다. [정리 12](#thm12)를 반복하여 적용하면 $A[\x_1,\ldots,\x_n]$이 noetherian임을 안다.
+$B$가 finitely generated $A$-algebra이므로, 적당한 $n$에 대하여 surjective ring homomorphism $A[\x_1,\ldots,\x_n]\rightarrow B$이 존재한다. 즉 어떠한 ideal $I$에 대하여 $B\cong A[\x_1,\ldots,\x_n]/I$이다. [정리 12](#thm12)를 반복하여 적용하면 $A[\x_1,\ldots,\x_n]$이 Noetherian임을 안다.
 
-이제 noetherian ring의 quotient가 noetherian임을 보이면 충분하다. [\[대수적 구조\] §몫환, 환 동형사상, ⁋정리 3](/ko/math/algebraic_structures/quotient_rings#thm3)에 의하여 $B$의 ideal들은 $I$를 포함하는 $A[\x_1,\ldots,\x_n]$의 ideal들과 포함관계를 보존하는 일대일대응을 이룬다. 따라서 $B$의 ideal들의 임의의 ascending chain은 $A[\x_1,\ldots,\x_n]$의 ideal들의 ascending chain을 주고, 후자는 $A[\x_1,\ldots,\x_n]$의 noetherian성에 의하여 안정화되므로 전자 또한 안정화된다. Ring $B$를 자기 자신 위의 $B$-module로 보면 그 submodule이 정확히 $B$의 ideal이므로, [정리 3](#thm3)에 의하여 $B$는 noetherian이다.
+이제 Noetherian ring의 quotient가 Noetherian임을 보이면 충분하다. [\[대수적 구조\] §몫환, 환 동형사상, ⁋정리 3](/ko/math/algebraic_structures/quotient_rings#thm3)에 의하여 $B$의 ideal들은 $I$를 포함하는 $A[\x_1,\ldots,\x_n]$의 ideal들과 포함관계를 보존하는 일대일대응을 이룬다. 따라서 $B$의 ideal들의 임의의 ascending chain은 $A[\x_1,\ldots,\x_n]$의 ideal들의 ascending chain을 주고, 후자는 $A[\x_1,\ldots,\x_n]$의 Noetherian성에 의하여 안정화되므로 전자 또한 안정화된다. Ring $B$를 자기 자신 위의 $B$-module로 보면 그 submodule이 정확히 $B$의 ideal이므로, [정리 3](#thm3)에 의하여 $B$는 Noetherian이다.
 :::
 
 ---

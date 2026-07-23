@@ -150,7 +150,7 @@ $$\eta=q(\mathfrak{m}_A)=\Delta(g_1(\mathfrak{m}_A))\in \Delta(X)$$
 이고, $\Delta(X)$는 specialization에 대해 닫혀 있다. 앞의 관찰과 결합하면 $\Delta(X)=\cl(\Delta(X))$이므로 $\Delta(X)$는 닫힌집합이고, [명제 4](#prop4)에 의하여 $f$는 separated이다.
 :::
 
-한편 만일 $Y$가 noetherian이고 $f$가 finite type morphism이라면 위의 정리를 임의의 valuation ring이 아니라, 임의의 discrete valuation ring으로 대체해도 된다는 것이 알려져 있다. 이렇게 바꿔두고 나면 기하학적 직관을 이용해 정리를 설명하기가 쉬워지는데, $\Spec A$를 smooth curve의 germ을 나타내는 것으로 생각하고 $\Spec K$는 여기에서 한 점이 빠져있는 것으로 생각하면 위의 정리는 이러한 $\Spec K\hookrightarrow \Spec A$를 넣는 방법이 하나 뿐이라는 것을 말해준다. 
+한편 만일 $Y$가 Noetherian이고 $f$가 finite type morphism이라면 위의 정리를 임의의 valuation ring이 아니라, 임의의 discrete valuation ring으로 대체해도 된다는 것이 알려져 있다. 이렇게 바꿔두고 나면 기하학적 직관을 이용해 정리를 설명하기가 쉬워지는데, $\Spec A$를 smooth curve의 germ을 나타내는 것으로 생각하고 $\Spec K$는 여기에서 한 점이 빠져있는 것으로 생각하면 위의 정리는 이러한 $\Spec K\hookrightarrow \Spec A$를 넣는 방법이 하나 뿐이라는 것을 말해준다. 
 
 그럼 이로부터 다음을 얻는다.
 

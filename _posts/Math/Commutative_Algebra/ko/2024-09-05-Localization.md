@@ -158,7 +158,7 @@ Ring homomorphism $f:A \rightarrow B$와 $A$의 ideal $\mathfrak{a}$, $B$의 ide
 위의 명제로부터 다음이 자명하다.
 
 ::: 따름정리 9
-Noetherian ring의 localization은 noetherian이다. 
+Noetherian ring의 localization은 Noetherian이다. 
 :::
 ::: 증명
 $S^{-1}A$의 ideal들의 ascending chain
@@ -169,7 +169,7 @@ $$\mathfrak{b}_0\subseteq \mathfrak{b}_1\subseteq\cdots$$
 
 $$\mathfrak{b}_0^c\subseteq \mathfrak{b}_1^c\subseteq\cdots$$
 
-는 noetherian ring $A$의 ideal들의 ascending chain이므로 적당한 $N$이 존재하여, $n>N$일 때마다 $\mathfrak{b}_n^c=\mathfrak{b}_{n+1}^c$이다. 이제 그러한 $n$에 대하여
+는 Noetherian ring $A$의 ideal들의 ascending chain이므로 적당한 $N$이 존재하여, $n>N$일 때마다 $\mathfrak{b}_n^c=\mathfrak{b}_{n+1}^c$이다. 이제 그러한 $n$에 대하여
 
 $$\mathfrak{b}_n=\mathfrak{b}_n^{ce}=\mathfrak{b}_{n+1}^{ce}=\mathfrak{b}_{n+1}$$
 

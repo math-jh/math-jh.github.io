@@ -51,7 +51,7 @@ $$\varphi^{-1}(V)=\varphi^{-1}\left(\bigcup_{j\in J} V_j\right)=\bigcup_{j\in J}
 Noetherian scheme $X$에 대하여, scheme morphism $\varphi: X \rightarrow Y$는 항상 quasi-compact이다. 
 :::
 ::: 증명
-임의의 affine open subset $V\subseteq Y$가 주어졌다 하고, $\varphi^{-1}(V)$가 quasi-compact임을 보여야 한다. 그런데 [\[위상수학\] §차원, ⁋명제 12](/ko/math/topology/dimension#prop12)와 [\[위상수학\] §차원, ⁋명제 13](/ko/math/topology/dimension#prop13)의 첫째 결과로부터 noetherian인 위상공간의 임의의 부분공간은 quasi-compact이다.
+임의의 affine open subset $V\subseteq Y$가 주어졌다 하고, $\varphi^{-1}(V)$가 quasi-compact임을 보여야 한다. 그런데 [\[위상수학\] §차원, ⁋명제 12](/ko/math/topology/dimension#prop12)와 [\[위상수학\] §차원, ⁋명제 13](/ko/math/topology/dimension#prop13)의 첫째 결과로부터 Noetherian인 위상공간의 임의의 부분공간은 quasi-compact이다.
 :::
 
 비슷하게 우리는 quasi-separated morphism을 정의한다. 이를 위해서는 quasi-separated scheme을 먼저 정의해야 한다.
@@ -63,12 +63,12 @@ Scheme $X$가 *quasi-separated<sub>준분리</sub>*인 것은 $X$의 임의의 �
 그럼 다음이 성립한다.
 
 ::: 명제 6
-Locally noetherian scheme은 항상 quasi-separated이다. 
+Locally Noetherian scheme은 항상 quasi-separated이다. 
 :::
 ::: 증명
-Locally noetherian scheme $X$의 임의의 두 affine open subset $V_1=\Spec B_1, V_2=\Spec B_2$가 주어졌다 하고 $V_1\cap V_2$가 quasi-compact임을 보여야 한다. 
+Locally Noetherian scheme $X$의 임의의 두 affine open subset $V_1=\Spec B_1, V_2=\Spec B_2$가 주어졌다 하고 $V_1\cap V_2$가 quasi-compact임을 보여야 한다. 
 
-우선 $X$가 locally noetherian이므로, $X$를 noetherian ring들의 spectrum $U_i=\Spec A_i$들로 덮을 수 있다. 이제 각각의 $i$에 대하여, [§스킴의 위상구조, ⁋보조정리 11](/ko/math/scheme_theory/topology_of_schemes#lem11)에 의하여 $U_i\cap V_1$을 noetherian ring들의 spectrum $\Spec (A_i)_g$들로 덮을 수 있다. 이들을 모두 모으면 $V_1$을 noetherian ring들의 spectrum들로 덮을 수 있으며, [§스펙트럼, ⁋보조정리 12](/ko/math/scheme_theory/spectrums#lem12)에 의해 $V_1=\Spec B_1$은 유한히 많은 noetherian ring들의 spectrum으로 덮인다. 따라서 [§스킴의 위상구조, ⁋보조정리 13](/ko/math/scheme_theory/topology_of_schemes#lem13)에 의해 $B_1$은 noetherian ring이고 따라서 $V_1=\Spec B_1$은 noetherian이다. 다시  [\[위상수학\] §차원, ⁋명제 12](/ko/math/topology/dimension#prop12)와 [\[위상수학\] §차원, ⁋명제 13](/ko/math/topology/dimension#prop13)의 첫째 결과로부터 noetherian인 위상공간의 임의의 부분공간은 quasi-compact이므로, 특히 $V_1\cap V_2$ 또한 quasi-compact이다. 같은 논리로 $X$의 임의의 affine open은 noetherian이며, quasi-compact open은 유한 개의 affine open의 합집합이므로 역시 noetherian이다. noetherian 위상공간의 부분공간은 quasi-compact이므로 임의의 두 quasi-compact open의 교집합 또한 quasi-compact이고, 따라서 [정의 5](#def5)에 의하여 $X$는 quasi-separated이다. 
+우선 $X$가 locally Noetherian이므로, $X$를 Noetherian ring들의 spectrum $U_i=\Spec A_i$들로 덮을 수 있다. 이제 각각의 $i$에 대하여, [§스킴의 위상구조, ⁋보조정리 11](/ko/math/scheme_theory/topology_of_schemes#lem11)에 의하여 $U_i\cap V_1$을 Noetherian ring들의 spectrum $\Spec (A_i)_g$들로 덮을 수 있다. 이들을 모두 모으면 $V_1$을 Noetherian ring들의 spectrum들로 덮을 수 있으며, [§스펙트럼, ⁋보조정리 12](/ko/math/scheme_theory/spectrums#lem12)에 의해 $V_1=\Spec B_1$은 유한히 많은 Noetherian ring들의 spectrum으로 덮인다. 따라서 [§스킴의 위상구조, ⁋보조정리 13](/ko/math/scheme_theory/topology_of_schemes#lem13)에 의해 $B_1$은 Noetherian ring이고 따라서 $V_1=\Spec B_1$은 Noetherian이다. 다시  [\[위상수학\] §차원, ⁋명제 12](/ko/math/topology/dimension#prop12)와 [\[위상수학\] §차원, ⁋명제 13](/ko/math/topology/dimension#prop13)의 첫째 결과로부터 Noetherian인 위상공간의 임의의 부분공간은 quasi-compact이므로, 특히 $V_1\cap V_2$ 또한 quasi-compact이다. 같은 논리로 $X$의 임의의 affine open은 Noetherian이며, quasi-compact open은 유한 개의 affine open의 합집합이므로 역시 Noetherian이다. Noetherian 위상공간의 부분공간은 quasi-compact이므로 임의의 두 quasi-compact open의 교집합 또한 quasi-compact이고, 따라서 [정의 5](#def5)에 의하여 $X$는 quasi-separated이다. 
 :::
 
 그럼 quasi-compactness와 quasi-separatedness는 [정의 1](#def1)의 성질을 만족할 뿐만 아니라, 다음 명제에서 확인할 수 있듯이 *affine-local on target*이다. ([§스킴의 위상구조, ⁋정의 9](/ko/math/scheme_theory/topology_of_schemes#def9))
@@ -241,4 +241,4 @@ Scheme morphism $\varphi: X \rightarrow Y$가 *quasi-finite<sub>준유한</sub>*
 Scheme morphism $\varphi: X \rightarrow Y$가 *locally of finite presentation<sub>국소유한표시사상</sub>*이라는 것은 $Y$의 임의의 affine open subset $V\cong \Spec B$가 주어질 때마다, $\varphi^{-1}(V)$의 covering $\varphi^{-1}(V)=\bigcup \Spec A_i$가 존재하여 $B \rightarrow A_i$가 모두 finitely presented인 것이다. 만일 scheme morphism $\varphi:X \rightarrow Y$가 quasi-compact, quasi-separated, locally of finite presentation이라면 $\varphi$가 *morphism of finite presentation<sub>유한표시사상</sub>*이라 부른다. 
 :::
 
-대부분의 경우 우리는 모든 scheme들이 locally noetherian인 경우를 생각하고, 이 경우 [\[가환대수학\] §기본 개념들, ⁋명제 9](/ko/math/commutative_algebra/basic_notions#prop9)에 의하여 이 개념은 새로운 것이 아니다. 
+대부분의 경우 우리는 모든 scheme들이 locally Noetherian인 경우를 생각하고, 이 경우 [\[가환대수학\] §기본 개념들, ⁋명제 9](/ko/math/commutative_algebra/basic_notions#prop9)에 의하여 이 개념은 새로운 것이 아니다. 

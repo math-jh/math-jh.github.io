@@ -106,7 +106,7 @@ Noetherian scheme $X$가 integral인 것과, $X$가 nonempty, connected이고 �
 
 반대쪽 방향의 경우, scheme $X$가 reduced인 것은 임의의 integral domain이 reduced이고, reducedness가 stalk-local property이기 때문에 자명하다. 따라서 주어진 조건을 사용하여 $X$가 irreducible이라는 것을 보이면 나머지는 [명제 4](#prop4)로부터 자명하다.
 
-우선 $X$가 noetherian scheme이므로 적당한 noetherian ring들 $A_1,\ldots, A_r$이 존재하여 $X=\bigcup \Spec A_i$라 할 수 있다. 또, $X$는 위상공간으로서 noetherian이고, 따라서 [\[위상수학\] §차원, ⁋명제 13](/ko/math/topology/dimension#prop13)에 의하여 $X$는 유한히 많은 irreducible component를 갖는다. 이제
+우선 $X$가 Noetherian scheme이므로 적당한 Noetherian ring들 $A_1,\ldots, A_r$이 존재하여 $X=\bigcup \Spec A_i$라 할 수 있다. 또, $X$는 위상공간으로서 Noetherian이고, 따라서 [\[위상수학\] §차원, ⁋명제 13](/ko/math/topology/dimension#prop13)에 의하여 $X$는 유한히 많은 irreducible component를 갖는다. 이제
 
 $$X=\bigcup_{j=1}^s X_j\tag{$\ast$}$$
 
@@ -164,16 +164,16 @@ Scheme $X$가 *factorial<sub>인수분해스킴</sub>*인 것은 임의의 $x\in
 그러나 associated prime ideal은 minimal prime보다 더 많은 것을 담고 있다. [\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 둘째 결과에 의하면 $A$의 associated prime들의 합집합은 정확히 $0$과 $A$의 zero-divisor들의 모임과 같다. 가령 [§스킴의 위상구조, ⁋예시 6](/ko/math/scheme_theory/topology_of_schemes#ex6)에서 본 $Z(\x\y)$의 경우, zero-divisor $\x,\y$는 각각 서로 다른 irreducible component에서 $0$이 되는 함수였으며, 그 zero-divisor 관계는 두 component의 generic point인 minimal prime $(\x),(\y)$만으로 이미 완전히 설명된다. 그러나 뒤의 [예시 11](#ex11)에서 보듯 이것이 항상 그런 것은 아니며, minimal prime, 다시 말해 irreducible component의 generic point만으로는 놓치는 zero-divisor의 위치까지도 associated point는 전부 포착한다. 
 
 ::: 정의 8
-Locally noetherian scheme $X$의 한 점 $x$와 $x$의 affine open neighborhood $U\cong \Spec A$에 대하여, $x$가 $X$의 *associated point<sub>동반점</sub>*이라는 것은 $x$에 대응되는 prime ideal $\mathfrak{p}_x\subset A$가 $A$의 associated prime ideal인 것이다. 
+Locally Noetherian scheme $X$의 한 점 $x$와 $x$의 affine open neighborhood $U\cong \Spec A$에 대하여, $x$가 $X$의 *associated point<sub>동반점</sub>*이라는 것은 $x$에 대응되는 prime ideal $\mathfrak{p}_x\subset A$가 $A$의 associated prime ideal인 것이다. 
 :::
 
-그럼 이 정의는 $U$의 선택에 의존하지 않으며, 뿐만 아니라 stalk-local하게 쓸 수도 있다. 이는 우선 $x$를 포함하는 affine open neighborhood $\Spec A$에 대하여, $X$가 locally noetherian scheme이라는 조건으로부터 $A$가 noetherian ring이라 가정하면 [\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 셋째 조건으로부터 $\mathfrak{p}_x$에 포함된 $A$의 associated prime ideal들의 모임과 $A_{\mathfrak{p}_x}$의 associated prime ideal들 사이의 일대일대응이 존재하는 것을 알고, 이 일대일대응으로부터 [정의 8](#def8)을
+그럼 이 정의는 $U$의 선택에 의존하지 않으며, 뿐만 아니라 stalk-local하게 쓸 수도 있다. 이는 우선 $x$를 포함하는 affine open neighborhood $\Spec A$에 대하여, $X$가 locally Noetherian scheme이라는 조건으로부터 $A$가 Noetherian ring이라 가정하면 [\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 셋째 조건으로부터 $\mathfrak{p}_x$에 포함된 $A$의 associated prime ideal들의 모임과 $A_{\mathfrak{p}_x}$의 associated prime ideal들 사이의 일대일대응이 존재하는 것을 알고, 이 일대일대응으로부터 [정의 8](#def8)을
 
-> Locally noetherian scheme $X$의 한 점 $x$에 대하여, $x$가 $X$의 *associated point<sub>동반점</sub>*이라는 것은 $\mathfrak{m}_x$가 $\mathcal{O}_{X,x}$의 associated prime ideal인 것이다.
+> Locally Noetherian scheme $X$의 한 점 $x$에 대하여, $x$가 $X$의 *associated point<sub>동반점</sub>*이라는 것은 $\mathfrak{m}_x$가 $\mathcal{O}_{X,x}$의 associated prime ideal인 것이다.
 
 으로 바꾸어 쓸 수 있기 때문이다. 
 
-이제 [\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 첫째 조건은 만일 $X$가 quasicompact locally noetherian scheme일 경우, 즉 $X$가 noetherian scheme일 경우 associated point들의 유한성 또한 보장해준다. 이제 [정의 8](#def8)이 앞서 본 것처럼 $U$의 선택과 무관하게 stalk만으로 재서술되므로, 우리는 우리의 관심사를 noetherian ring의 spectrum $\Spec A$로 한정할 수 있다. 
+이제 [\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 첫째 조건은 만일 $X$가 quasicompact locally Noetherian scheme일 경우, 즉 $X$가 Noetherian scheme일 경우 associated point들의 유한성 또한 보장해준다. 이제 [정의 8](#def8)이 앞서 본 것처럼 $U$의 선택과 무관하게 stalk만으로 재서술되므로, 우리는 우리의 관심사를 Noetherian ring의 spectrum $\Spec A$로 한정할 수 있다. 
 
 ::: 정의 9
 Noetherian ring의 spectrum $\Spec A$의 associated point들 중, $\Spec A$의 irreducible component들의 generic point에 해당하지 않는 것들을 *embedded point<sub>매장점</sub>*라 부른다. 
@@ -246,14 +246,14 @@ $$\x_2\cdot(p(\x_1)+c\x_2)=p(0)\x_2$$
 
 $$A \rightarrow \prod_\text{\scriptsize $\mathfrak{p}$ associated prime} A_\mathfrak{p}$$
 
-는 injective인 것을 안다. 따라서 locally noetherian scheme $X$의 임의의 열린집합 $U$에 대하여 다음의 함수
+는 injective인 것을 안다. 따라서 locally Noetherian scheme $X$의 임의의 열린집합 $U$에 대하여 다음의 함수
 
 $$\Gamma(U, \mathcal{O}_X) \rightarrow \prod_\text{\scriptsize $x$ associated in $U$} \mathcal{O}_{X,x}\tag{$\ast$}$$
 
 가 injective이다. 
 
 ::: 정의 12
-Locally noetherian scheme $X$와, $X$의 associated point들을 모두 포함하는 열린집합 $U$에 대하여, $\Gamma(U, \mathcal{O}_X)$의 ($\ast$)에 의한 image를 $X$ 위에 정의된 *rational function<sub>유리함수</sub>*라 부른다. 
+Locally Noetherian scheme $X$와, $X$의 associated point들을 모두 포함하는 열린집합 $U$에 대하여, $\Gamma(U, \mathcal{O}_X)$의 ($\ast$)에 의한 image를 $X$ 위에 정의된 *rational function<sub>유리함수</sub>*라 부른다. 
 :::
 
 따라서, 정의에 의해 $X$ 위에 정의된 rational function은 (1) $X$의 모든 associated point들을 포함하는 *정의역* $U$와, (2) 그 위의 함수 $f\in \Gamma(U, \mathcal{O}_X)$의 데이터로 이루어지며, 이러한 pair $(U, f)$와 $(U',f')$는 만일 $U\cap U'$에서 $f$와 $f'$가 같은 함수를 정의하면 같은 함수가 된다. 이러한 pair와 동치관계의 구조는 [\[대수다양체\] §유리사상, ⁋정의 1](/ko/math/algebraic_varieties/rational_maps#def1)에서의 variety 위의 rational function 정의와 정확히 같은 꼴이다. 유일한 차이는 이제 정의역 $U$가 associated point들을 모두 포함해야 한다는 조건이며, associated point들은 classical algebraic geometry에서는 보이지 않던 점들이므로 이는 그리 놀랄 일은 아니다. 
@@ -292,7 +292,7 @@ $$K(X)=\left\{\frac{p(\x_1)+c\x_2}{q(\x_1)+c'\x_2} : q(0)\neq0\right\}$$
 이것이 고전적인 function field와 다른 점은, 위의 $K(X)$는 nonzero nilpotent을 담는다는 것이며 이것이 정확히 embedded point 때문이다. 구체적으로, $\x_2$는 $\x_2^2=0$을 만족하는 nilpotent element이면서도 $K(X)$에서 nonzero function이 된다. 만일 [정의 12](#def12)가 이 embedded point를 정의역에 담을 것을 요구하지 않았다면 원점을 뺀 $D(\x_1)$ 또한 정의역으로 허용되었을 것이고, [예시 11](#ex11)에서 보았듯 그 위에서 $\x_2$는 이미 $0$이므로 $\x_2$는 $K(X)$에서 사라졌을 것이며 따라서 $X$의 nilpotent 방향의 thickening이 $K(X)$에서 감지되지 않았을 것이다. 
 :::
 
-더 일반적으로, locally noetherian scheme $X$ 위에 정의된 rational function들의 모임은 위의 construction과 마찬가지 방식으로 *total quotient ring* $K(X)$를 정의한다. 만일 $X$가 integral scheme이라면 $X$는 특히 irreducible이므로 유일한 generic point $x$를 가지며, 이 점은 임의의 affine open subset $U\cong\Spec A$에 대하여 integral domain $A$의 유일한 minimal prime ideal $(0)$에 대응되어야 한다. 그럼 이 점에서의 localization은 $A$의 nonzero element들을 모두 분모로 추가해 준 것, 즉 $\Frac(A)$와 같으므로 $K(X)\cong \mathcal{O}_{X,x}\cong \Frac(A)$이며, 이는 $X$가 하나의 affine open $\Spec A$로 이루어진 경우 이미 알고 있던 $A$의 fraction field가 일반적인 integral scheme에서도 그대로 field of rational functions의 역할을 한다는 것을 보여준다. 
+더 일반적으로, locally Noetherian scheme $X$ 위에 정의된 rational function들의 모임은 위의 construction과 마찬가지 방식으로 *total quotient ring* $K(X)$를 정의한다. 만일 $X$가 integral scheme이라면 $X$는 특히 irreducible이므로 유일한 generic point $x$를 가지며, 이 점은 임의의 affine open subset $U\cong\Spec A$에 대하여 integral domain $A$의 유일한 minimal prime ideal $(0)$에 대응되어야 한다. 그럼 이 점에서의 localization은 $A$의 nonzero element들을 모두 분모로 추가해 준 것, 즉 $\Frac(A)$와 같으므로 $K(X)\cong \mathcal{O}_{X,x}\cong \Frac(A)$이며, 이는 $X$가 하나의 affine open $\Spec A$로 이루어진 경우 이미 알고 있던 $A$의 fraction field가 일반적인 integral scheme에서도 그대로 field of rational functions의 역할을 한다는 것을 보여준다. 
 
 
 ---

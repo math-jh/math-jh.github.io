@@ -77,7 +77,7 @@ Noetherian ring $A$ 위에서 정의된 module $M$을 생각하자. 그럼 다�
 3. $A$-linear map $u:M \rightarrow N$이 injective인 것은 임의의 $\mathfrak{p}\in \Ass M$에 대하여 $u_\mathfrak{p}$가 injective인 것과 동치이다.
 :::
 ::: 증명
-우선 1번 결과의 경우, $A$가 noetherian이라는 가정으로부터 임의의 $x\in M$이 주어질 때마다 $\ann(x)$를 포함하는 annihilator ideal들 가운데 maximal인 ideal $\mathfrak{p}$를 하나 택할 수 있으며, [명제 3](#prop3)에 의해 $\mathfrak{p}\in \Ass M$이다. 따라서 $M_\mathfrak{p}$에서 $x/1$은 $0$이 되지 않는다. 2번 결과는 1번 결과에 의해 자명하며, 3번 결과는 2번 결과에서 $L=\ker u$로 두면 된다.
+우선 1번 결과의 경우, $A$가 Noetherian이라는 가정으로부터 임의의 $x\in M$이 주어질 때마다 $\ann(x)$를 포함하는 annihilator ideal들 가운데 maximal인 ideal $\mathfrak{p}$를 하나 택할 수 있으며, [명제 3](#prop3)에 의해 $\mathfrak{p}\in \Ass M$이다. 따라서 $M_\mathfrak{p}$에서 $x/1$은 $0$이 되지 않는다. 2번 결과는 1번 결과에 의해 자명하며, 3번 결과는 2번 결과에서 $L=\ker u$로 두면 된다.
 :::
 
 이번 글의 목표는 [정리 7](#thm7)을 증명하는 것이다. 이를 위해 다음의 두 보조정리가 필요하다. 
@@ -109,7 +109,7 @@ $$0=M_0\subseteq M_1\subseteq\cdots\subseteq M_n=M,\qquad \text{$M_k/M_{k-1}\con
 을 찾을 수 있다.
 :::
 ::: 증명
-우선 [명제 3](#prop3)을 이용해 $M$의 associated prime $\mathfrak{p}_1\in\Ass M$을 찾을 수 있고, 따라서 $M_1\cong A/\mathfrak{p}_1$을 만족하는 submodule $M_1$이 존재한다. 똑같은 논리를 $M/M_1$에 적용하여 $M_2$를 얻을 수 있으며, 이러한 과정을 반복하다보면 $M$이 noetherian인 것으로부터 원하는 결론을 얻는다.
+우선 [명제 3](#prop3)을 이용해 $M$의 associated prime $\mathfrak{p}_1\in\Ass M$을 찾을 수 있고, 따라서 $M_1\cong A/\mathfrak{p}_1$을 만족하는 submodule $M_1$이 존재한다. 똑같은 논리를 $M/M_1$에 적용하여 $M_2$를 얻을 수 있으며, 이러한 과정을 반복하다보면 $M$이 Noetherian인 것으로부터 원하는 결론을 얻는다.
 :::
 
 ::: 정리 7
@@ -154,7 +154,7 @@ $$\Ass M \subseteq \Ass M_{n-1}\cup \{ \mathfrak{p}_{n-1}\}\subseteq \Ass M_{n-2
 이를 통해 $M$에 대한 많은 정보를 얻어올 수 있다. 가령 $M=A$이고 $A$가 reduced인 경우 다음 따름정리를 얻는다.
 
 ::: 따름정리 8
-Reduced noetherian ring $A$에 대하여, $A$의 total ring of fractions를 $K$라 하자. 그럼 $K$는 field들의 유한한 product이다. 
+Reduced Noetherian ring $A$에 대하여, $A$의 total ring of fractions를 $K$라 하자. 그럼 $K$는 field들의 유한한 product이다. 
 :::
 ::: 증명
 우선 $M=A$로 두면 $\ann(A)=\{0\}$이다. 따라서, $A$의 minimal prime ideal $\mathfrak{p}_1,\ldots, \mathfrak{p}_k$들은 모두 $\Ass M$에 포함되며, 이들의 합집합은 $A$의 zero-divisor로 이루어져 있다. 

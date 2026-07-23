@@ -57,12 +57,12 @@ $$\dim \mathfrak{a}+\codim \mathfrak{a}\leq \dim A$$
 
 ## 차원의 계산
 
-일반적으로 차원을 다룰 때에는 ring $A$가 noetherian인 경우를 주로 다루게 된다. 가장 큰 이유 중 하나는 [정리 7](#thm7)이 noetherian ring에서만 성립하기 때문이다. 본격적으로 차원을 계산하기 전에, 간단한 예시를 먼저 살펴보자. 
+일반적으로 차원을 다룰 때에는 ring $A$가 Noetherian인 경우를 주로 다루게 된다. 가장 큰 이유 중 하나는 [정리 7](#thm7)이 Noetherian ring에서만 성립하기 때문이다. 본격적으로 차원을 계산하기 전에, 간단한 예시를 먼저 살펴보자. 
 
-우선 우리는 [§조르단-횔더 정리, ⁋정리 4](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm4)의 첫째 조건과 셋째 조건 사이의 동치를 통해 $0$차원의 noetherian ring들이 어떠한 것인지는 정확히 알고 있다. 
+우선 우리는 [§조르단-횔더 정리, ⁋정리 4](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm4)의 첫째 조건과 셋째 조건 사이의 동치를 통해 $0$차원의 Noetherian ring들이 어떠한 것인지는 정확히 알고 있다. 
 
 ::: 따름정리 3
-Noetherian ring $A$에 대하여, $\dim A =0$인 것과 $A$가 artinian인 것이 동치이다. 
+Noetherian ring $A$에 대하여, $\dim A =0$인 것과 $A$가 Artinian인 것이 동치이다. 
 :::
 
 한편, 우리는 다음 명제에 의하여, 일반적으로 $\phi:A \rightarrow B$가 integral이면 dimension이 변하지 않는다는 것을 안다.
@@ -103,7 +103,7 @@ Noetherian ring $A$와 임의의 $a\in A$에 대하여, $\mathfrak{p}$가 princi
 
 $$\mathfrak{a}A_\mathfrak{p}\subseteq (\mathfrak{q}A_\mathfrak{p})^{(n)}+\mathfrak{a}A_\mathfrak{p}\subseteq \mathfrak{p}A_\mathfrak{p},\qquad \mathfrak{q}A_\mathfrak{p}\subseteq \mathfrak{p}A_\mathfrak{p}$$
 
-을 얻는다. 한편 $\mathfrak{p}A_\mathfrak{p}$가 $\mathfrak{a}A_\mathfrak{p}$를 포함하는 prime ideal들 중 minimal하므로, [§조르단-횔더 정리, ⁋따름정리 8](/ko/math/commutative_algebra/Jordan-Holder_theorem#cor8)에 의하여 $A_\mathfrak{p}/\mathfrak{a}A_\mathfrak{p}$는 artinian이다. 이로부터 symbolic power들로 이루어진 descending chain
+을 얻는다. 한편 $\mathfrak{p}A_\mathfrak{p}$가 $\mathfrak{a}A_\mathfrak{p}$를 포함하는 prime ideal들 중 minimal하므로, [§조르단-횔더 정리, ⁋따름정리 8](/ko/math/commutative_algebra/Jordan-Holder_theorem#cor8)에 의하여 $A_\mathfrak{p}/\mathfrak{a}A_\mathfrak{p}$는 Artinian이다. 이로부터 symbolic power들로 이루어진 descending chain
 
 $$(\mathfrak{q}A_\mathfrak{p})^{(1)}+\mathfrak{a}A_\mathfrak{p}\supseteq (\mathfrak{q}A_\mathfrak{p})^{(2)}+\mathfrak{a}A_\mathfrak{p}\supseteq\cdots $$
 
@@ -127,7 +127,7 @@ $$(\mathfrak{q}A_\mathfrak{p})^{(n)}=\mathfrak{a}(\mathfrak{q}A_\mathfrak{p})^{(
 
 $$(\mathfrak{q}A_\mathfrak{q})^{n+1}=(\mathfrak{q}A_\mathfrak{q})^{n}$$
 
-이고, $\mathfrak{q}A_\mathfrak{q}=J(A_\mathfrak{q})$이므로 $(\mathfrak{q}A_\mathfrak{q})^{n}=0$이다. 이제 [§조르단-횔더 정리, ⁋따름정리 8](/ko/math/commutative_algebra/Jordan-Holder_theorem#cor8)의 둘째 조건과 셋째 조건의 동치로부터 $A_\mathfrak{q}=A_\mathfrak{q}/(0)$가 artinian이고, 따라서 [따름정리 3](#cor3)으로부터 $\dim A_\mathfrak{q}=0$임을 안다. 
+이고, $\mathfrak{q}A_\mathfrak{q}=J(A_\mathfrak{q})$이므로 $(\mathfrak{q}A_\mathfrak{q})^{n}=0$이다. 이제 [§조르단-횔더 정리, ⁋따름정리 8](/ko/math/commutative_algebra/Jordan-Holder_theorem#cor8)의 둘째 조건과 셋째 조건의 동치로부터 $A_\mathfrak{q}=A_\mathfrak{q}/(0)$가 Artinian이고, 따라서 [따름정리 3](#cor3)으로부터 $\dim A_\mathfrak{q}=0$임을 안다. 
 :::
 
 이제 이를 이용해서 귀납적으로 다음을 보일 수 있다.
@@ -136,7 +136,7 @@ $$(\mathfrak{q}A_\mathfrak{q})^{n+1}=(\mathfrak{q}A_\mathfrak{q})^{n}$$
 Noetherian ring $A$와 임의의 $a_1,\ldots, a_c\in A$에 대하여, $\mathfrak{p}$가 $a_1,\ldots, a_c$를 포함하는 prime ideal들 중 minimal인 것이라 하자. 그럼 $\codim \mathfrak{p}\leq c$이다. 
 :::
 
-즉, noetherian ring의 임의의 prime ideal은 descending chain condition을 만족하며, 이 때 $\mathfrak{p}$에서 시작하는 chain의 길이는 $\mathfrak{p}$의 generator의 개수보다 작거나 같다. 그럼에도 불구하고 무한한 차원을 갖는 noetherian ring이 존재한다. (**[Nag, Appendix, Example 1]**)
+즉, Noetherian ring의 임의의 prime ideal은 descending chain condition을 만족하며, 이 때 $\mathfrak{p}$에서 시작하는 chain의 길이는 $\mathfrak{p}$의 generator의 개수보다 작거나 같다. 그럼에도 불구하고 무한한 차원을 갖는 Noetherian ring이 존재한다. (**[Nag, Appendix, Example 1]**)
 
 한편 [정리 7](#thm7)은 다음과 같은 역 또한 존재한다.
 
@@ -163,7 +163,7 @@ $$\dim A/\mathfrak{p}A\leq\dim A-1$$
 
 이 성립한다. 
 
-특별히 noetherian local ring $(A, \mathfrak{m})$에 대하여는 $\dim A=\codim \mathfrak{m}$이 성립함을 살펴보았다. 따라서 $\codim \mathfrak{m}=d$이므로, [따름정리 8](#cor8)에 의해 $\mathfrak{m}$은 $d$개 이상의 원소로 생성되어야 한다. 
+특별히 Noetherian local ring $(A, \mathfrak{m})$에 대하여는 $\dim A=\codim \mathfrak{m}$이 성립함을 살펴보았다. 따라서 $\codim \mathfrak{m}=d$이므로, [따름정리 8](#cor8)에 의해 $\mathfrak{m}$은 $d$개 이상의 원소로 생성되어야 한다. 
 
 ## 등급환에서의 차원
 

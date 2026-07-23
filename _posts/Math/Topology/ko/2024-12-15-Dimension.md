@@ -172,7 +172,7 @@ $$\dim X=\sup\{\text{length of strictly descending chains of irreducible closed 
 그럼 다음과 같은 상황에서는 $X$의 Krull dimension은 항상 유한하다. 특히 Hausdorff space에서는 오직 singleton만이 irreducible subset이므로 Hausdorff space의 Krull dimension은 $0$이다. 
 
 ::: 정의 11
-위상공간 $X$가 *noetherian<sub>뇌터 공간</sub>*이라는 것은 임의의 닫힌집합들의 chain
+위상공간 $X$가 *Noetherian<sub>뇌터 공간</sub>*이라는 것은 임의의 닫힌집합들의 chain
 
 $$A_1\supseteq A_2\supseteq\cdots$$
 
@@ -189,15 +189,15 @@ Noetherian space $X$와 $X$의 open covering $\{U_i\}_{i\in I}$가 주어졌다 
 
 $$\mathcal{C}=\left\{\bigcup_{j\in J} U_j:\text{$J$ finite subset of $I$}\right\}$$
 
-라 정의할 수 있다. 이제 $\mathcal{C}$의 임의의 totally ordered subset을 생각하면, 이는 그 여집합들로 이루어진 닫힌집합들의 descending chain과 동치이고 따라서 $X$가 noetherian이라는 가정으로부터 이는 언젠가 멈춰야 한다. 즉, $\mathcal{C}$는 [\[집합론\] §선택공리, ⁋정리 4](/ko/math/set_theory/axiom_of_choice#thm4)의 조건을 만족하고 따라서 $\mathcal{C}$는 maximal element $U\in \mathcal{C}$를 갖는다. 만일 $X\neq U$라면, $x\in X\setminus U$를 포함하는 $U_j$를 택할 수 있고 그럼 $U\cap U_j$는 $U$를 strict하게 포함하는 $\mathcal{C}$의 원소이므로 $U$의 maximality에 모순이다. 따라서 $U=X$이고 우리는 원하는 결과를 얻는다. 
+라 정의할 수 있다. 이제 $\mathcal{C}$의 임의의 totally ordered subset을 생각하면, 이는 그 여집합들로 이루어진 닫힌집합들의 descending chain과 동치이고 따라서 $X$가 Noetherian이라는 가정으로부터 이는 언젠가 멈춰야 한다. 즉, $\mathcal{C}$는 [\[집합론\] §선택공리, ⁋정리 4](/ko/math/set_theory/axiom_of_choice#thm4)의 조건을 만족하고 따라서 $\mathcal{C}$는 maximal element $U\in \mathcal{C}$를 갖는다. 만일 $X\neq U$라면, $x\in X\setminus U$를 포함하는 $U_j$를 택할 수 있고 그럼 $U\cap U_j$는 $U$를 strict하게 포함하는 $\mathcal{C}$의 원소이므로 $U$의 maximality에 모순이다. 따라서 $U=X$이고 우리는 원하는 결과를 얻는다. 
 :::
 
-추가적으로 noetherian space에 대해 다음이 성립한다.
+추가적으로 Noetherian space에 대해 다음이 성립한다.
 
 ::: 명제 13
 Noetherian topological space $X$에 대하여, 다음이 성립한다.
 
-1. $X$의 임의의 부분공간은 noetherian이다.
+1. $X$의 임의의 부분공간은 Noetherian이다.
 2. $X$는 유한히 많은 irreducible component를 가진다. 
 3. $X$의 각각의 irreducible component는 공집합이 아닌 $X$의 열린집합을 포함한다.
 :::
@@ -211,7 +211,7 @@ Noetherian topological space $X$에 대하여, 다음이 성립한다.
 3. $X=A_1\cup\cdots\cup A_n$이 irreducible decomposition이라 하고, $X\setminus (A_2\cup\cdots\cup A_n)$을 생각하면 이 집합이 $A_1$에 포함되는 공집합이 아닌 $X$의 열린집합이다. 
 :::
 
-그럼 만일 $X$가 noetherian이라면, $X$의 irreducible decomposition
+그럼 만일 $X$가 Noetherian이라면, $X$의 irreducible decomposition
 
 $$X=\bigcup_{i=1}^r X_i$$
 

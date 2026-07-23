@@ -47,14 +47,14 @@ Ring $A$의 원소들 $a_1,\ldots, a_d$가 *$A$-regular sequence* 혹은 간단�
 :::
 
 ::: 따름정리 3
-Regular local noetherian ring의 regular system of parameters는 $A$-sequence를 이룬다.
+Regular local Noetherian ring의 regular system of parameters는 $A$-sequence를 이룬다.
 :::
 ::: 증명
 각각의 $i$에 대하여 $A/(a_1,\ldots, a_i)$도 regular local ring이고, [따름정리 1](#cor1)에 의해 이는 integral domain이며 $x_{i+1}$은 이 ring의 $0$이 아닌 원소가 된다.
 :::
 
 ::: 명제 4
-Regular local noetherian ring $(A, \mathfrak{m})$과 그 prime ideal $\mathfrak{p}$에 대하여,
+Regular local Noetherian ring $(A, \mathfrak{m})$과 그 prime ideal $\mathfrak{p}$에 대하여,
 
 $$\dim A/\mathfrak{p} + \codim \mathfrak{p} = \dim A$$
 
@@ -94,7 +94,7 @@ $$\dim A/\mathfrak{p}+(h-1)=d-1$$
 :::
 
 ::: 명제 5
-Complete regular local noetherian ring $(A, \mathfrak{m})$의 차원이 $d$이고, residue field $\kappa=A/\mathfrak{m}$라 하자. 만일 $A$가 어떠한 field를 포함한다면 $A\cong \kappa[[\x_1,\ldots, \x_d]]$이며, 이 isomorphism은 각각의 변수 $\x_i$들과 $A$의 regular system of parameters를 대응시킨다.
+Complete regular local Noetherian ring $(A, \mathfrak{m})$의 차원이 $d$이고, residue field $\kappa=A/\mathfrak{m}$라 하자. 만일 $A$가 어떠한 field를 포함한다면 $A\cong \kappa[[\x_1,\ldots, \x_d]]$이며, 이 isomorphism은 각각의 변수 $\x_i$들과 $A$의 regular system of parameters를 대응시킨다.
 :::
 ::: 증명
 [§완비화의 성질들, ⁋정리 8](/ko/math/commutative_algebra/properties_of_completion#thm8)에 의하여, 주어진 가정으로부터 $A$가 $\kappa$를 포함해야 한다는 것을 안다. 이제 [§완비화의 성질들, ⁋정리 5](/ko/math/commutative_algebra/properties_of_completion#thm5)의 첫째 결과에 의하여 $\kappa$-algebra homomorphism $\phi:\kappa[[\x_1,\ldots, \x_d]]\rightarrow A$를 얻으며, 둘째 결과에 의하여 $\phi$는 surjective이다. 한편 $\kappa[[\x_1,\ldots, \x_d]]$는 [따름정리 1](#cor1)에 의하여 $d$차원이므로 
@@ -156,7 +156,7 @@ $$am^k+bm^l=(am^{k-\min(k,l)}+bm^{l-\min(k,l)})m^{\min(k,l)}$$
 우선 편의를 위해, ring $A$의 non-zerodivisor $u$에 대하여, $A/(u)$의 associated prime ideal $\mathfrak{p}$를 *associated to a non-zerodivisor $u$*라 부르기로 하자. 이는 [§동반소아이디얼, ⁋정의 1](/ko/math/commutative_algebra/associated_primes#def1)에서와 마찬가지 예외이다. 
 
 ::: 명제 8
-Reduced noetherian ring $A$와 $A$의 total ring of fractions $K$가 주어졌다 하자. 그럼 원소 $x\in K$가 $A$에 속하는 것은 임의의 prime ideal $\mathfrak{p}$ associated to a non-zerodivisor에 대하여 $x$의 $K_\mathfrak{p}$에서의 image가 $A_\mathfrak{p}$에 속하는 것과 동치이다. 
+Reduced Noetherian ring $A$와 $A$의 total ring of fractions $K$가 주어졌다 하자. 그럼 원소 $x\in K$가 $A$에 속하는 것은 임의의 prime ideal $\mathfrak{p}$ associated to a non-zerodivisor에 대하여 $x$의 $K_\mathfrak{p}$에서의 image가 $A_\mathfrak{p}$에 속하는 것과 동치이다. 
 :::
 ::: 증명
 정의에 의해 $K$의 원소는 임의의 $a\in A$와 non-zerodivisor $u\in A$에 대하여 $a/u$의 꼴이다. 이제
@@ -215,7 +215,7 @@ Noetherian ring $A$가 normal domain들의 (유한한) direct product인 것은 
 (S2) $A$의 non-zerodivisor로 생성되는 principal ideal의 associated prime은 codimension $1$이다. 또, $0$의 associated prime은 모두 codimension $0$이다. 
 :::
 ::: 증명
-우선 일반적으로, noetherian ring $A$가 다른 ring들의 direct product
+우선 일반적으로, Noetherian ring $A$가 다른 ring들의 direct product
 
 $$A=A_1\times\cdots A_n$$
 

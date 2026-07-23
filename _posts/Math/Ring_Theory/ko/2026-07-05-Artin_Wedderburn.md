@@ -44,7 +44,7 @@ $R$이 semisimple ring이면 $R$은 유한개의 simple left ideal의 직합이�
 $R=\bigoplus_{i\in I}L_i$를 simple left ideal들의 직합이라 하자. 항등원을 이 분해에 따라 $1=\sum_{i\in F}x_i$로 쓰면 $F$는 유한집합이다. 그럼 임의의 $r\in R$에 대하여 $r=r\cdot 1\in\sum_{i\in F}L_i$이므로 $R=\bigoplus_{i\in F}L_i$이다.
 :::
 
-따라서 semisimple ring은 left module로서 유한한 composition series를 갖는다 ([\[가환대수학\] §조르단-횔더 정리, ⁋정의 2](/ko/math/commutative_algebra/Jordan-Holder_theorem#def2)). 직합 인자를 하나씩 쌓은 chain이 그것이며, 특히 semisimple ring은 left artinian이자 left noetherian이다.
+따라서 semisimple ring은 left module로서 유한한 composition series를 갖는다 ([\[가환대수학\] §조르단-횔더 정리, ⁋정의 2](/ko/math/commutative_algebra/Jordan-Holder_theorem#def2)). 직합 인자를 하나씩 쌓은 chain이 그것이며, 특히 semisimple ring은 left Artinian이자 left Noetherian이다.
 
 ## Division ring 위의 행렬환
 

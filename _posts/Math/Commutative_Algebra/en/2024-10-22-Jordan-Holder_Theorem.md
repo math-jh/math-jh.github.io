@@ -39,7 +39,7 @@ is called a chain of length $n$. This chain is called a *composition series* if 
 The following theorem is the module version of the Jordan-Hölder theorem.
 
 ::: Theorem 3
-An $A$-module $M$ has a finite composition series if and only if $M$ is both artinian and noetherian. Assume that this condition holds and that a composition series of length $n$
+An $A$-module $M$ has a finite composition series if and only if $M$ is both Artinian and Noetherian. Assume that this condition holds and that a composition series of length $n$
 
 $$M=M_0\supsetneq M_1\supsetneq \cdots\supsetneq M_n=0$$
 
@@ -50,11 +50,11 @@ is given. Then the following hold.
 3. If $\mathfrak{p}^k$ annihilates $M$ for some $k$, then $M=M_\mathfrak{p}$.
 :::
 ::: Proof
-First, suppose that $M$ is both artinian and noetherian. Since $M$ is noetherian, we can find a maximal proper submodule $M_1$ of $M$. Since a submodule of a noetherian module is again noetherian, we may repeat this process to obtain a maximal proper submodule $M_{k+1}$ of $M_k$. The chain thus constructed,
+First, suppose that $M$ is both Artinian and Noetherian. Since $M$ is Noetherian, we can find a maximal proper submodule $M_1$ of $M$. Since a submodule of a Noetherian module is again Noetherian, we may repeat this process to obtain a maximal proper submodule $M_{k+1}$ of $M_k$. The chain thus constructed,
 
 $$M=M_0\supsetneq M_1\supsetneq \cdots$$
 
-has finite length by the artinian condition, and since each $M_{k+1}$ is a maximal proper submodule of $M_k$, this chain is a composition series.
+has finite length by the Artinian condition, and since each $M_{k+1}$ is a maximal proper submodule of $M_k$, this chain is a composition series.
 
 The first result is proved in the same way as the Jordan-Hölder theorem, so we omit it. Accepting this, we can refine any given chain to a composition series, and the converse implication of the equivalence follows.
 
@@ -84,9 +84,9 @@ From this we obtain the second result, and the third result can be proved simila
 ::: Theorem 4
 The following conditions on a ring $A$ are equivalent.
 
-1. $A$ is noetherian and every prime ideal is maximal.
+1. $A$ is Noetherian and every prime ideal is maximal.
 2. $A$ has finite length as an $A$-module.
-3. $A$ is artinian.
+3. $A$ is Artinian.
 :::
 ::: Proof
 First, assume the first condition and prove the second. Suppose for contradiction that $A$ satisfies the first condition but does not have finite length. Let $\mathfrak{a}$ be maximal among the ideals of $A$ such that $A/\mathfrak{a}$ does not have finite length. Then if $ab\in \mathfrak{a}$ and $a\not\in \mathfrak{a}$, we have the short exact sequence
@@ -95,9 +95,9 @@ $$0\longrightarrow A/(\mathfrak{a}:a)\overset{a}{\longrightarrow}A/\mathfrak{a}\
 
 ([§Basic Notions, §§Basic Definitions](/en/math/commutative_algebra/basic_notions#basic-definitions)). Since $\mathfrak{a}+(a)$ strictly contains $\mathfrak{a}$, by definition $A/(\mathfrak{a}+(a))$ has finite length. On the other hand, $\mathfrak{a}\subseteq (\mathfrak{a}:(a))$ by definition, and if $b\not\in \mathfrak{a}$ then $\mathfrak{a}\subsetneq (\mathfrak{a}:(a))$, so again by the definition of $\mathfrak{a}$, the module $A/(\mathfrak{a}:a)$ has finite length. Hence, by combining these composition series we obtain a composition series for $A/\mathfrak{a}$, contradicting the assumption that $A$ does not have finite length; therefore $b\in \mathfrak{a}$. Thus $\mathfrak{a}$ is a prime ideal. By condition 1, $\mathfrak{a}$ is maximal, so $A/\mathfrak{a}$ is a field, which again contradicts the assumption that $A/\mathfrak{a}$ does not have finite length. This establishes the desired result.
 
-Now if we assume the second condition, the third follows immediately from [Theorem 3](#thm3). Thus it suffices to assume the third condition and prove the first. To this end, consider the collection of ideals that are products of maximal ideals of $A$. Since $A$ is artinian, there exists a minimal ideal $\mathfrak{a}$ in this collection. Then $\mathfrak{a}=0$, and therefore the zero ideal can be written as a product of maximal ideals $0=\mathfrak{m}_1\cdots\mathfrak{m}_k$.
+Now if we assume the second condition, the third follows immediately from [Theorem 3](#thm3). Thus it suffices to assume the third condition and prove the first. To this end, consider the collection of ideals that are products of maximal ideals of $A$. Since $A$ is Artinian, there exists a minimal ideal $\mathfrak{a}$ in this collection. Then $\mathfrak{a}=0$, and therefore the zero ideal can be written as a product of maximal ideals $0=\mathfrak{m}_1\cdots\mathfrak{m}_k$.
 
-To prove this claim, we first observe that the minimality of $\mathfrak{a}$ means that $\mathfrak{m}\mathfrak{a}=\mathfrak{a}$ for every maximal ideal $\mathfrak{m}$; that is, $\mathfrak{a}\subseteq \mathfrak{m}$. By the same logic, $\mathfrak{a}^2$ is also a product of maximal ideals, so $\mathfrak{a}^2=\mathfrak{a}$ holds. Now assume for contradiction that $\mathfrak{a}\neq 0$. Then there exists an ideal $\mathfrak{b}$ such that $\mathfrak{a}\mathfrak{b}\neq 0$, and again by the artinian hypothesis we can choose $\mathfrak{b}$ minimal among ideals satisfying this property. Then
+To prove this claim, we first observe that the minimality of $\mathfrak{a}$ means that $\mathfrak{m}\mathfrak{a}=\mathfrak{a}$ for every maximal ideal $\mathfrak{m}$; that is, $\mathfrak{a}\subseteq \mathfrak{m}$. By the same logic, $\mathfrak{a}^2$ is also a product of maximal ideals, so $\mathfrak{a}^2=\mathfrak{a}$ holds. Now assume for contradiction that $\mathfrak{a}\neq 0$. Then there exists an ideal $\mathfrak{b}$ such that $\mathfrak{a}\mathfrak{b}\neq 0$, and again by the Artinian hypothesis we can choose $\mathfrak{b}$ minimal among ideals satisfying this property. Then
 
 $$(\mathfrak{b}\mathfrak{a})\mathfrak{a}=\mathfrak{b}\mathfrak{a}^2=\mathfrak{b}\mathfrak{a}\neq 0,$$
 
@@ -105,7 +105,7 @@ so by the minimality of $\mathfrak{b}$ we must have $\mathfrak{b}\mathfrak{a}=\m
 
 By the definition of $\mathfrak{b}$, there exists some $y\in \mathfrak{b}$ with $y \mathfrak{a}\neq 0$, and by the minimality of $\mathfrak{b}$ we must have $\mathfrak{b}=(y)$. From the equality $\mathfrak{b}\mathfrak{a}=\mathfrak{b}$ above, there exists some $x\in \mathfrak{a}$ such that $xy=y$. That is, $(1-x)y=0$. But since $x\in \mathfrak{a}$ and $\mathfrak{a}$ is contained in every maximal ideal, $1-x$ is not contained in any maximal ideal. Hence $1-x$ is a unit, which implies $y=0$, contradicting the definition of $\mathfrak{b}$. Therefore $\mathfrak{a}=0$, and the zero ideal can be written as a product of maximal ideals $0=\mathfrak{m}_1\cdots\mathfrak{m}_k$.
 
-Now for each $l=1,\ldots, k-1$, viewing $\mathfrak{m}_1\cdots\mathfrak{m}_l/\mathfrak{m}_1\cdots\mathfrak{m}_{l+1}$ as an $A/\mathfrak{m}_{l+1}$-vector space, its submodules are of the form $\mathfrak{a}/\mathfrak{m}_1\cdots\mathfrak{m}_{l+1}$; that is, they correspond to ideals of $A$ containing $\mathfrak{m}_1\cdots\mathfrak{m}_{l+1}$. Since $A$ is artinian, this implies that $\mathfrak{m}_1\cdots\mathfrak{m}_l/\mathfrak{m}_1\cdots\mathfrak{m}_{l+1}$ is finite-dimensional. Collecting all of these yields a composition series for $A$, and therefore by [Theorem 3](#thm3), $A$ is noetherian.
+Now for each $l=1,\ldots, k-1$, viewing $\mathfrak{m}_1\cdots\mathfrak{m}_l/\mathfrak{m}_1\cdots\mathfrak{m}_{l+1}$ as an $A/\mathfrak{m}_{l+1}$-vector space, its submodules are of the form $\mathfrak{a}/\mathfrak{m}_1\cdots\mathfrak{m}_{l+1}$; that is, they correspond to ideals of $A$ containing $\mathfrak{m}_1\cdots\mathfrak{m}_{l+1}$. Since $A$ is Artinian, this implies that $\mathfrak{m}_1\cdots\mathfrak{m}_l/\mathfrak{m}_1\cdots\mathfrak{m}_{l+1}$ is finite-dimensional. Collecting all of these yields a composition series for $A$, and therefore by [Theorem 3](#thm3), $A$ is Noetherian.
 
 To show the remaining condition, take any prime ideal $\mathfrak{p}$ of $A$. From
 
@@ -114,10 +114,10 @@ $$\mathfrak{m}_1\cdots\mathfrak{m}_k=0\subseteq \mathfrak{p}$$
 we know that $\mathfrak{m}_l\subseteq \mathfrak{p}$ for some $l$, and hence $\mathfrak{m}_l=\mathfrak{p}$. Thus the first condition holds.
 :::
 
-From this one can show that any artinian ring is a finite product of local artinian rings. For noetherian rings, the following holds.
+From this one can show that any Artinian ring is a finite product of local Artinian rings. For Noetherian rings, the following holds.
 
 ::: Theorem 5
-For a noetherian ring $A$, the following are equivalent: $A$ is a finite product of domains if and only if $A_\mathfrak{m}$ is a domain for every maximal ideal $\mathfrak{m}$.
+For a Noetherian ring $A$, the following are equivalent: $A$ is a finite product of domains if and only if $A_\mathfrak{m}$ is a domain for every maximal ideal $\mathfrak{m}$.
 :::
 ::: Proof
 First, suppose that $A$ is a finite product of domains, say $A=\prod A_i$. Then any prime ideal of $A$ cannot contain the unit $e_i$ of $A_i$, so it is disjoint from the corresponding multiplicative subset, and since this element $e_i$ annihilates $A_j$ for $i\neq j$, we have $A=(A_i)_\mathfrak{p}$. ([§Localization, ⁋Proposition 5](/en/math/commutative_algebra/localization#prop5))
@@ -138,12 +138,12 @@ so the above map is an isomorphism.
 :::
 
 ::: Corollary 6
-For a noetherian ring $A$ and a finitely generated $A$-module $M$, the following are equivalent.
+For a Noetherian ring $A$ and a finitely generated $A$-module $M$, the following are equivalent.
 
 1. $M$ has finite length.
 2. Some product of maximal ideals $\prod_{i=1}^n \mathfrak{m}_i$ annihilates $M$.
 3. Every prime ideal containing $\ann(M)$ is maximal.
-4. $A/\ann(M)$ is artinian.
+4. $A/\ann(M)$ is Artinian.
 :::
 ::: Proof
 First, assuming condition 1, condition 2 follows immediately from the second and third parts of [Theorem 3](#thm3). Now assume condition 2. Then for any prime ideal $\mathfrak{p}$ containing $\ann(M)$, we have $\mathfrak{p}\supseteq\prod \mathfrak{m}_i$, so $\mathfrak{p}\supseteq \mathfrak{m}_i$ for some $i$, and hence $\mathfrak{p}=\mathfrak{m}_i$. That condition 3 implies condition 4 follows from the equivalence of conditions 1 and 3 in [Theorem 4](#thm4). Finally, assuming condition 4, the ring $A/\ann(M)$ has finite length as an $A/\ann(M)$-module by condition 2 of [Theorem 4](#thm4), and since $M$ is a finitely generated $A/\ann(M)$-module, we obtain the desired result.
@@ -152,7 +152,7 @@ First, assuming condition 1, condition 2 follows immediately from the second and
 Then the following holds.
 
 ::: Corollary 7
-Fix a noetherian ring $A$, a finitely generated $A$-module $M$, and a prime ideal $\mathfrak{p}$ containing $\ann(M)$. Then $M_\mathfrak{p}$ has finite length as an $A_\mathfrak{p}$-module if and only if $\mathfrak{p}$ is minimal among the primes containing $\ann(M)$.
+Fix a Noetherian ring $A$, a finitely generated $A$-module $M$, and a prime ideal $\mathfrak{p}$ containing $\ann(M)$. Then $M_\mathfrak{p}$ has finite length as an $A_\mathfrak{p}$-module if and only if $\mathfrak{p}$ is minimal among the primes containing $\ann(M)$.
 :::
 ::: Proof
 If $\mathfrak{p}$ is a minimal prime ideal containing $\ann(M)$, then the $A_\mathfrak{p}$-module $M_\mathfrak{p}$ has finite length. Indeed, the prime ideals of the localization $A_\mathfrak{p}$ correspond by [§Localization, ⁋Proposition 8](/en/math/commutative_algebra/localization#prop8) to the prime ideals of $A$ contained in $\mathfrak{p}$; by the minimality of $\mathfrak{p}$, the only prime ideal containing $\ann(M)A_\mathfrak{p}$ is $\mathfrak{p}A_\mathfrak{p}$, which is the (unique) maximal ideal of the local ring $A_\mathfrak{p}$.
@@ -163,10 +163,10 @@ Conversely, suppose that $M_\mathfrak{p}$ has finite length as an $A_\mathfrak{p
 In particular, for any ideal $\mathfrak{a}$ of $A$, considering the $A$-module $A/\mathfrak{a}$ we have $\ann(A/\mathfrak{a})=\mathfrak{a}$, and from this we obtain the following.
 
 ::: Corollary 8
-For a noetherian ring $A$, an arbitrary ideal $\mathfrak{a}$, and a prime ideal $\mathfrak{p}$ containing $\mathfrak{a}$, the following are equivalent.
+For a Noetherian ring $A$, an arbitrary ideal $\mathfrak{a}$, and a prime ideal $\mathfrak{p}$ containing $\mathfrak{a}$, the following are equivalent.
 
 1. $\mathfrak{p}$ is minimal among the prime ideals containing $\mathfrak{a}$.
-2. $A_\mathfrak{p}/\mathfrak{a}A_\mathfrak{p}$ is artinian.
+2. $A_\mathfrak{p}/\mathfrak{a}A_\mathfrak{p}$ is Artinian.
 3. In the localization $A_\mathfrak{p}$, we have $(\mathfrak{p}A_\mathfrak{p})^n\subseteq \mathfrak{a}A_\mathfrak{p}$ for all sufficiently large $n$.
 :::
 

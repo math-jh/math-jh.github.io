@@ -55,8 +55,9 @@ sys.path.insert(0, str(SCRIPT_DIR))
 
 from terms_common import (  # noqa: E402
     GEN_ED_CATS, TERMS_PATH, category_ko_maps, chunk_field, chunk_id,
-    dedup_key, insert_sorted, join_file, letter_of, permalink_map,
-    semantic_checks, slugify_id, split_file, url_slug, yaml_quote,
+    dedup_key, insert_sorted, join_file, letter_of, normalize_proper_case,
+    permalink_map, semantic_checks, slugify_id, split_file, url_slug,
+    yaml_quote,
 )
 from extract_terms import (  # noqa: E402
     classify_definitions, add_def_to_chunk, parse_frontmatter,
@@ -280,6 +281,7 @@ def decide_primary(en: str, ko: str, marker_primary: str | None) -> str:
 def build_entry(en: str, ko: str, primary: str, label: str, url: str,
                 see_ids: list[tuple[str, str, str]]) -> str:
     """see_ids: (id, label, primary) — 대상 항목에서 파생."""
+    en = normalize_proper_case(en)  # 인명 파생 고유명사 대문자 교정 (id 는 소문자 유지)
     lines = [f"- id: {slugify_id(en)}",
              f"  en: {yaml_quote(en)}",
              f"  ko: {yaml_quote(ko)}",
@@ -343,7 +345,9 @@ MAJOR_PROMPT = """수학 블로그 찾아보기 색인 관리 작업이다. 도�
 아래 글에서 **주요하게 사용되는 수학 용어**를 최대 10개 추출하라. 이 글에서
 정의했는지는 무관하다. 찾아보기 색인에 실릴 가치가 있는 개념어만 — 일반어·
 조사·인명 단독은 제외. 각 용어의 영어형과 한국어형을 함께 적되, 한국어형을
-모르면 ko 를 "" 로 두라.
+모르면 ko 를 "" 로 두라. 인명 파생 형용사·고유명사(Hermitian, Noetherian,
+Gaussian, Euler, Cauchy, Möbius 등)는 반드시 대문자로 표기하라 — 단
+abelian 처럼 관용적으로 소문자인 형용사는 소문자 그대로 둔다.
 
 출력: [{"en": "...", "ko": "..."}] 만.
 

@@ -136,7 +136,7 @@ Moduli stack 위에는 언제나 보편 족이 존재한다. Set-값 functor에�
 Coarse moduli space의 존재는 자명하지 않다. 그 일반적 존재를 보장하는 것이 Keel–Mori 정리로, moduli stack의 언어로 가장 깔끔하게 서술된다.
 
 ::: 정리 9 (Keel–Mori)
-$\mathcal{M}$이 noetherian base 위에서 locally of finite type인 대수적 stack이고, 그 inertia stack $I_\mathcal{M}=\mathcal{M}\times_{\mathcal{M}\times\mathcal{M}}\mathcal{M} \rightarrow \mathcal{M}$이 유한이라 하자. 그럼 $\mathcal{M}$의 coarse moduli space $\pi:\mathcal{M} \rightarrow M$이 존재한다. 여기에서 $M$은 algebraic space이고, $\pi$은 proper이며 기하적 점들의 isomorphism class 집합과 $M$의 기하적 점들 사이의 전단사를 유도한다. 특히 분리된 finite type Deligne–Mumford stack은 coarse moduli space를 가진다.
+$\mathcal{M}$이 Noetherian base 위에서 locally of finite type인 대수적 stack이고, 그 inertia stack $I_\mathcal{M}=\mathcal{M}\times_{\mathcal{M}\times\mathcal{M}}\mathcal{M} \rightarrow \mathcal{M}$이 유한이라 하자. 그럼 $\mathcal{M}$의 coarse moduli space $\pi:\mathcal{M} \rightarrow M$이 존재한다. 여기에서 $M$은 algebraic space이고, $\pi$은 proper이며 기하적 점들의 isomorphism class 집합과 $M$의 기하적 점들 사이의 전단사를 유도한다. 특히 분리된 finite type Deligne–Mumford stack은 coarse moduli space를 가진다.
 :::
 ::: 증명
 완전한 증명은 이 글의 범위를 넘으므로 핵심 착상만 적는다. Inertia stack $I_\mathcal{M} \rightarrow \mathcal{M}$은 각 점에 그 automorphism group을 fiber로 붙이는 stack이며, 이것이 유한하다는 것이 정확히 stabilizer들이 유한군이라는 조건이다. 이 조건 아래에서 stack을 국소적으로 유한군 $G$에 의한 quotient stack $[U/G]$으로 표현할 수 있고 ([§대수적 stack과 quotient stack, ⁋정의 8](/ko/math/stacks/algebraic_stacks#def8)), 국소적인 후보 coarse space로 invariant ring의 spectrum $U/G=\Spec \Gamma(U, \mathcal{O}_U)^G$을 취한다. 핵심은 이 국소적 quotient들이 étale 위상에 대하여 정합적으로 이어 붙어 algebraic space $M$을 이루고, 그 위에서 [정의 8](#def8)의 두 조건이 성립함을 보이는 것이다. Inertia의 유한성은 이 접합을 가능케 하는 본질적 가정으로, 실제로 separated classifying morphism을 갖는 coarse moduli space가 존재하는 것은 inertia가 유한한 것과 동치이다. 자세한 논증은 Keel–Mori의 원논문과 [Stacks]를 참조하라.

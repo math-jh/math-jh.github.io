@@ -128,32 +128,32 @@ If there exists a strictly descending chain of infinite length, we define $\dim 
 Then in the following situation the Krull dimension of $X$ is always finite. In particular, in a Hausdorff space only singletons are irreducible subsets, so the Krull dimension of a Hausdorff space is $0$.
 
 ::: Definition 11
-A topological space $X$ is *noetherian* if whenever a chain of closed subsets
+A topological space $X$ is *Noetherian* if whenever a chain of closed subsets
 
 $$A_1\supseteq A_2\supseteq\cdots$$
 
 is given, there exists some $n$ such that $A_n=A_{n+1}=\cdots$.
 :::
 
-The noetherian condition gives a strong finiteness condition. For example, the following holds.
+The Noetherian condition gives a strong finiteness condition. For example, the following holds.
 
 ::: Proposition 12
-A noetherian space is compact.
+A Noetherian space is compact.
 :::
 ::: Proof
-Suppose a noetherian space $X$ and an open covering $\{U_i\}_{i\in I}$ of $X$ are given. Then we can define
+Suppose a Noetherian space $X$ and an open covering $\{U_i\}_{i\in I}$ of $X$ are given. Then we can define
 
 $$\mathcal{C}=\left\{\bigcup_{j\in J} U_j:\text{$J$ finite subset of $I$}\right\}$$
 
-Now considering an arbitrary totally ordered subset of $\mathcal{C}$, this is equivalent to a descending chain of closed sets given by their complements, and therefore by the assumption that $X$ is noetherian this must eventually stop. That is, $\mathcal{C}$ satisfies the condition of [\[Set Theory\] §Axiom of Choice, ⁋Theorem 4](/en/math/set_theory/axiom_of_choice#thm4) and therefore $\mathcal{C}$ has a maximal element $U\in \mathcal{C}$. If $X\neq U$, then we can choose some $U_j$ containing $x\in X\setminus U$, and then $U\cap U_j$ is an element of $\mathcal{C}$ that strictly contains $U$, contradicting the maximality of $U$. Therefore $U=X$ and we obtain the desired result.
+Now considering an arbitrary totally ordered subset of $\mathcal{C}$, this is equivalent to a descending chain of closed sets given by their complements, and therefore by the assumption that $X$ is Noetherian this must eventually stop. That is, $\mathcal{C}$ satisfies the condition of [\[Set Theory\] §Axiom of Choice, ⁋Theorem 4](/en/math/set_theory/axiom_of_choice#thm4) and therefore $\mathcal{C}$ has a maximal element $U\in \mathcal{C}$. If $X\neq U$, then we can choose some $U_j$ containing $x\in X\setminus U$, and then $U\cap U_j$ is an element of $\mathcal{C}$ that strictly contains $U$, contradicting the maximality of $U$. Therefore $U=X$ and we obtain the desired result.
 :::
 
-Additionally, the following holds for noetherian spaces.
+Additionally, the following holds for Noetherian spaces.
 
 ::: Proposition 13
-For a noetherian topological space $X$, the following hold.
+For a Noetherian topological space $X$, the following hold.
 
-1. Any subspace of $X$ is noetherian.
+1. Any subspace of $X$ is Noetherian.
 2. $X$ has finitely many irreducible components.
 3. Each irreducible component of $X$ contains a nonempty open subset of $X$.
 :::
@@ -167,7 +167,7 @@ For a noetherian topological space $X$, the following hold.
 3. Suppose $X=A_1\cup\cdots\cup A_n$ is an irreducible decomposition; then considering $X\setminus (A_2\cup\cdots\cup A_n)$, this is a nonempty open subset of $X$ contained in $A_1$.
 :::
 
-Then if $X$ is noetherian, there exists an irreducible decomposition
+Then if $X$ is Noetherian, there exists an irreducible decomposition
 
 $$X=\bigcup_{i=1}^r X_i$$
 

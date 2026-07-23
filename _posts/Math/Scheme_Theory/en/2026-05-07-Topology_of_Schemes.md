@@ -87,10 +87,10 @@ These can also be explained from the perspective of generic points. Earlier, we 
 
 :::
 
-We defined the notion of a noetherian topological space in [\[Topology\] §Dimension, ⁋Definition 11](/en/math/topology/dimension#def11). When translating this into the language of schemes, a little care is needed; first, for affine schemes, the following proposition holds.
+We defined the notion of a Noetherian topological space in [\[Topology\] §Dimension, ⁋Definition 11](/en/math/topology/dimension#def11). When translating this into the language of schemes, a little care is needed; first, for affine schemes, the following proposition holds.
 
 ::: Proposition 7
-For a noetherian ring $A$, the spectrum $\Spec A$ is always a noetherian topological space.
+For a Noetherian ring $A$, the spectrum $\Spec A$ is always a Noetherian topological space.
 :::
 ::: Proof
 Given a chain of closed subsets of $\Spec A$
@@ -105,7 +105,7 @@ which coincides with
 
 $$\sqrt{\mathfrak{a}_1}\subseteq \sqrt{\mathfrak{a}_2}\subseteq\cdots$$
 
-Now from the assumption that $A$ is a noetherian ring, there exists a suitable $k$ such that
+Now from the assumption that $A$ is a Noetherian ring, there exists a suitable $k$ such that
 
 $$\sqrt{\mathfrak{a}_k}=\sqrt{\mathfrak{a}_{k+1}}=\cdots$$
 
@@ -116,15 +116,15 @@ $$Z(\sqrt{\mathfrak{a}_k})=Z(\sqrt{\mathfrak{a}_{k+1}})=\cdots$$
 From [§Spectra, ⁋Proposition 5](/en/math/scheme_theory/spectrums#prop5) we obtain the desired result.
 :::
 
-However, the converse does not hold in general. That is, given an affine scheme, even if this scheme is noetherian as a topological space, the ring defining it may not be noetherian.
+However, the converse does not hold in general. That is, given an affine scheme, even if this scheme is Noetherian as a topological space, the ring defining it may not be Noetherian.
 
 ## Locality
 
 By definition, a scheme is an object obtained by gluing affine schemes together, so one strategy for investigating its properties is to examine certain properties locally. Indeed, as many of the examples above were affine schemes, the key to this strategy is dealing with general scheme properties by gluing affine pieces. Moreover, the advantage of this approach is that our understanding of affine schemes is *not* limited to the topological realm. That is, in addition to the topological data introduced in this post, the affine scheme $\Spec A$ also carries the algebraic properties of $A$ as a ring, and this locality will help us glue such algebraic properties globally as well.
 
-In this situation, one concept that behaves interestingly is the noetherian property, because the condition of being noetherian is defined separately in topology and in algebra, and this is the source of the ambiguity pointed out before introducing [Proposition 7](#prop7).
+In this situation, one concept that behaves interestingly is the Noetherian property, because the condition of being Noetherian is defined separately in topology and in algebra, and this is the source of the ambiguity pointed out before introducing [Proposition 7](#prop7).
 
-In this post, we define the notion of a local property, apply it to the noetherian property, and conclude. First, let us examine what it means for a property of rings to be local.
+In this post, we define the notion of a local property, apply it to the Noetherian property, and conclude. First, let us examine what it means for a property of rings to be local.
 
 ::: Definition 8
 A property $P_\alg$ of rings is called *local* if the following two conditions hold.
@@ -200,17 +200,17 @@ From the above, we know that the first through third conditions are all equivale
 Now let $X$ be locally $P$, and let $U$ be any open subscheme of $X$. Then for any $x\in U$, from [§Spectra, ⁋Lemma 11](/en/math/scheme_theory/spectrums#lem11) we can take an affine open subset $D(f)$ of $X$ satisfying $x\in D(f)\subseteq U$, and now from the second condition we know that $D(f)$ is an affine scheme satisfying $P$. Therefore the scheme $U$ is also locally $P$, obtaining the final claim. Finally, the equivalence of the fourth condition with the remaining conditions is obtained by using this claim and removing only the affine assumption from the second and third conditions.
 :::
 
-Meanwhile, we saw in [Proposition 7](#prop7) that for a noetherian ring $A$, the spectrum $\Spec A$ is a noetherian space. Now let us define what it means for an arbitrary scheme $X$ to be noetherian.
+Meanwhile, we saw in [Proposition 7](#prop7) that for a Noetherian ring $A$, the spectrum $\Spec A$ is a Noetherian space. Now let us define what it means for an arbitrary scheme $X$ to be Noetherian.
 
 ::: Lemma 13
-A ring $A$ being noetherian is a local property, and thus defines an affine-local property $P$.
+A ring $A$ being Noetherian is a local property, and thus defines an affine-local property $P$.
 :::
 ::: Proof
 We must prove the two conditions of [Definition 8](#def8).
 
 The first condition follows from [\[Commutative Algebra\] §Localization, ⁋Corollary 9](/en/math/commutative_algebra/localization#cor9), or alternatively, it suffices to use the first result of [\[Topology\] §Dimension, ⁋Proposition 13](/en/math/topology/dimension#prop13).
 
-For the second condition, assume $A=(f_1,\ldots, f_r)$ and each $A_{f_i}$ is noetherian; then we need to show that any ideal $\mathfrak{a}$ of $A$ is finitely generated. Since each $A_{f_i}$ is noetherian, the ideal $\mathfrak{a}A_{f_i}$ is finitely generated, and clearing denominators of the generators, there exist elements $a_{i1},\ldots, a_{in_i}$ of $\mathfrak{a}$ whose images generate $\mathfrak{a}A_{f_i}$. Now let $\mathfrak{b}\subseteq \mathfrak{a}$ be the ideal generated by all these finitely many elements; then by construction, for all $i$ we have $\mathfrak{b}A_{f_i}=\mathfrak{a}A_{f_i}$.
+For the second condition, assume $A=(f_1,\ldots, f_r)$ and each $A_{f_i}$ is Noetherian; then we need to show that any ideal $\mathfrak{a}$ of $A$ is finitely generated. Since each $A_{f_i}$ is Noetherian, the ideal $\mathfrak{a}A_{f_i}$ is finitely generated, and clearing denominators of the generators, there exist elements $a_{i1},\ldots, a_{in_i}$ of $\mathfrak{a}$ whose images generate $\mathfrak{a}A_{f_i}$. Now let $\mathfrak{b}\subseteq \mathfrak{a}$ be the ideal generated by all these finitely many elements; then by construction, for all $i$ we have $\mathfrak{b}A_{f_i}=\mathfrak{a}A_{f_i}$.
 
 We now show that $\mathfrak{a}=\mathfrak{b}$. Since localization is exact, $M=\mathfrak{a}/\mathfrak{b}$ satisfies $M_{f_i}=0$ for all $i$. Taking any $m\in M$, for each $i$ there exists $n$ such that $f_i^{n}m=0$, and since there are finitely many $i$, we can take a single sufficiently large $n$ common to all. Meanwhile, since $D(f_i)=D(f_i^n)$, the $D(f_i^n)$ also cover $\Spec A$, so the elements $f_1^n,\ldots, f_r^n$ generate the unit ideal and there exist $g_i\in A$ such that $1=\sum_{i=1}^r g_if_i^n$. Then
 
@@ -220,10 +220,10 @@ so $M=0$, that is, $\mathfrak{a}=\mathfrak{b}$ is finitely generated.
 :::
 
 ::: Definition 14
-A scheme $X$ is called a *locally noetherian scheme* if there exists an affine open covering $\{U_i=\Spec A_i\}$ of $X$ such that all $A_i$ are noetherian. If $X$ is a quasi-compact locally noetherian scheme, we call it a *noetherian scheme*.
+A scheme $X$ is called a *locally Noetherian scheme* if there exists an affine open covering $\{U_i=\Spec A_i\}$ of $X$ such that all $A_i$ are Noetherian. If $X$ is a quasi-compact locally Noetherian scheme, we call it a *Noetherian scheme*.
 :::
 
-Then if $A$ is noetherian, that $\Spec A$ is a noetherian scheme is obvious from the definition and [§Spectra, ⁋Lemma 12](/en/math/scheme_theory/spectrums#lem12). Also, as in [Proposition 7](#prop7), any noetherian scheme is noetherian as a topological space. However, as pointed out after [Proposition 7](#prop7), we must be careful that even if a scheme $X$ is noetherian as a topological space, the above condition need not hold.
+Then if $A$ is Noetherian, that $\Spec A$ is a Noetherian scheme is obvious from the definition and [§Spectra, ⁋Lemma 12](/en/math/scheme_theory/spectrums#lem12). Also, as in [Proposition 7](#prop7), any Noetherian scheme is Noetherian as a topological space. However, as pointed out after [Proposition 7](#prop7), we must be careful that even if a scheme $X$ is Noetherian as a topological space, the above condition need not hold.
 
 Finally, we define a notion of locality slightly different from [Definition 9](#def9), namely the notion of *stalk-local*.
 
@@ -259,11 +259,11 @@ For example, consider the following affine scheme
 
 $$X=\Spec A=\Spec\left(\prod_{i=1}^\infty \mathbb{Z}/2\mathbb{Z}\right)$$
 
-Any element $x$ of $A$ satisfies $x^2=x$, and thus any element of an arbitrary localization $A_\mathfrak{p}$ also does. Now from $x(1-x)=0$ holding in $A_{\mathfrak{p}}$, we know that either $x\in \mathfrak{p}A_\mathfrak{p}$ or $1-x\in \mathfrak{p}A_\mathfrak{p}$, and we know that elements not in $\mathfrak{p}A_\mathfrak{p}$ are units. ([\[Commutative Algebra\] §Localization, ⁋Proposition 2](/en/math/commutative_algebra/localization#prop2)) Therefore $x=0$ or $x=1$, so the chain of ideals of $A_\mathfrak{p}$ is only $(0)\subseteq (1)=A_\mathfrak{p}$. From this, each $A_\mathfrak{p}$ is noetherian, but considering
+Any element $x$ of $A$ satisfies $x^2=x$, and thus any element of an arbitrary localization $A_\mathfrak{p}$ also does. Now from $x(1-x)=0$ holding in $A_{\mathfrak{p}}$, we know that either $x\in \mathfrak{p}A_\mathfrak{p}$ or $1-x\in \mathfrak{p}A_\mathfrak{p}$, and we know that elements not in $\mathfrak{p}A_\mathfrak{p}$ are units. ([\[Commutative Algebra\] §Localization, ⁋Proposition 2](/en/math/commutative_algebra/localization#prop2)) Therefore $x=0$ or $x=1$, so the chain of ideals of $A_\mathfrak{p}$ is only $(0)\subseteq (1)=A_\mathfrak{p}$. From this, each $A_\mathfrak{p}$ is Noetherian, but considering
 
 $$\mathbb{Z}/2\mathbb{Z}\times \{0\}\times\{0\}\times\cdots\subseteq \mathbb{Z}/2\mathbb{Z}\times \mathbb{Z}/2\mathbb{Z}\times\{0\}\subseteq\cdots$$
 
-we can see that $A$ is not noetherian.
+we can see that $A$ is not Noetherian.
 
 ---
 **References**

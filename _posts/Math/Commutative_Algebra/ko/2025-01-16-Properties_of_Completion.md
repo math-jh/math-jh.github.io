@@ -20,11 +20,11 @@ weight: 15
 ::: 정리 1
 Noetherian ring $A$와 ideal $\mathfrak{a}$를 고정하고, $\widehat{A}$가 $\mathfrak{a}$에 대한 $A$의 completion이라 하자. 그럼 다음이 성립한다.
 
-1. $\widehat{A}$는 noetherian이다.
+1. $\widehat{A}$는 Noetherian이다.
 2. $\widehat{A}/\mathfrak{a}^i\widehat{A}=A/\mathfrak{a}^i$가 모든 $i$에 대해 성립한다. 
 :::
 ::: 증명
-우선 $A$가 noetherian이므로, $A/\mathfrak{a}$ 또한 noetherian이고 $\mathfrak{a}/\mathfrak{a}^2$은 finitely generated $A/\mathfrak{a}$-module이다. 이에 $\gr_\mathfrak{a}A$는 $A/\mathfrak{a}$-algebra로서, $\mathfrak{a}/\mathfrak{a}^2$에 의해 생성되고, 따라서 [§기본 개념들, ⁋정리 12](/ko/math/commutative_algebra/basic_notions#thm12)에 의하여 $\gr_\mathfrak{a}A$는 Noetherian이다. 이제 $\gr_{\widehat{\mathfrak{a}}}\widehat{A}=\gr_\mathfrak{a}A$이므로 $\gr_{\widehat{\mathfrak{a}}}\widehat{A}$ 또한 noetherian임을 안다. 한편, 임의의 ideal $\widehat{\mathfrak{a}}\subseteq \widehat{A}$에 대하여, initial ideal $\initial(\widehat{\mathfrak{a}})$은 위의 논증에 의해 유한히 많은 원소들로 생성되므로 [§완비화, ⁋명제 7](/ko/math/commutative_algebra/completion#prop7)에 의해 첫 번째 결과를 얻는다.
+우선 $A$가 Noetherian이므로, $A/\mathfrak{a}$ 또한 Noetherian이고 $\mathfrak{a}/\mathfrak{a}^2$은 finitely generated $A/\mathfrak{a}$-module이다. 이에 $\gr_\mathfrak{a}A$는 $A/\mathfrak{a}$-algebra로서, $\mathfrak{a}/\mathfrak{a}^2$에 의해 생성되고, 따라서 [§기본 개념들, ⁋정리 12](/ko/math/commutative_algebra/basic_notions#thm12)에 의하여 $\gr_\mathfrak{a}A$는 Noetherian이다. 이제 $\gr_{\widehat{\mathfrak{a}}}\widehat{A}=\gr_\mathfrak{a}A$이므로 $\gr_{\widehat{\mathfrak{a}}}\widehat{A}$ 또한 Noetherian임을 안다. 한편, 임의의 ideal $\widehat{\mathfrak{a}}\subseteq \widehat{A}$에 대하여, initial ideal $\initial(\widehat{\mathfrak{a}})$은 위의 논증에 의해 유한히 많은 원소들로 생성되므로 [§완비화, ⁋명제 7](/ko/math/commutative_algebra/completion#prop7)에 의해 첫 번째 결과를 얻는다.
 
 한편 두 번째 결과의 경우 우리는 다시 [§완비화, ⁋명제 7](/ko/math/commutative_algebra/completion#prop7)에 의해 $\widehat{\mathfrak{a}}^i$와 $\mathfrak{a}^i \widehat{A}$가 같다는 것은 곧 이들의 initial ideal이 같다는 것임을 알고, 따라서 원하는 결과를 얻는다.
 :::
@@ -191,7 +191,7 @@ $$f(a)+e^2(r+r^2h(r))=f(a+er)=0=f(a+er')=f(a)+e^2(r'+(r')^2h(r'))$$
 마지막으로 다음 정리를 언급하고 마친다.
 
 ::: 정리 8 (Cohen structure theorem)
-Complete local noetherian ring $(A, \mathfrak{m})$과 residue field $\kappa$에 대하여, 만일 $A$가 어떠한 field를 포함한다면 $A\cong\kappa[[\x_1,\ldots, \x_n]]/\mathfrak{a}$를 만족하는 적당한 $n$과 ideal $\mathfrak{a}$가 존재한다. 
+Complete local Noetherian ring $(A, \mathfrak{m})$과 residue field $\kappa$에 대하여, 만일 $A$가 어떠한 field를 포함한다면 $A\cong\kappa[[\x_1,\ldots, \x_n]]/\mathfrak{a}$를 만족하는 적당한 $n$과 ideal $\mathfrak{a}$가 존재한다. 
 :::
 
 ---

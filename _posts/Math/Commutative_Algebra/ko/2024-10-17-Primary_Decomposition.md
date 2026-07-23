@@ -15,7 +15,7 @@ published: false
 
 ---
 
-이번 글에서 $A$는 noetherian이고 $M$이 finitely generated $A$-module임을 가정한다. 
+이번 글에서 $A$는 Noetherian이고 $M$이 finitely generated $A$-module임을 가정한다. 
 
 ## 으뜸부분가군
 
@@ -73,7 +73,7 @@ $A$-module $M$의 임의의 submodule $N$이 *irreducible<sub>기약</sub>*이�
 $M$의 임의의 submodule은 irreducible submodule들의 교집합으로 나타난다. 
 :::
 ::: 증명
-귀류법을 사용하자. 그럼 $M$이 noetherian이므로, irreducible submodule들의 교집합으로 나타나지 않는 submodule들 중 maximal한 것을 택할 수 있다. 이를 $N$이라 하자. 그럼 $N$은 irreducible submodule이 아니므로, $N=N_1\cap N_2$이도록 하는 $N_1,N_2\supsetneq N$이 존재한다. 그런데 $N$의 maximality에 의하여 $N_1,N_2$는 모두 irreducible submodule의 교집합으로 나타나고, 따라서 $N$도 그러하므로 모순이다. 
+귀류법을 사용하자. 그럼 $M$이 Noetherian이므로, irreducible submodule들의 교집합으로 나타나지 않는 submodule들 중 maximal한 것을 택할 수 있다. 이를 $N$이라 하자. 그럼 $N$은 irreducible submodule이 아니므로, $N=N_1\cap N_2$이도록 하는 $N_1,N_2\supsetneq N$이 존재한다. 그런데 $N$의 maximality에 의하여 $N_1,N_2$는 모두 irreducible submodule의 교집합으로 나타나고, 따라서 $N$도 그러하므로 모순이다. 
 :::
 
 이로부터 우리는 $M$의 임의의 submodule $M'$에 대하여, $M'$의 *irreducible decomposition<sub>기약분해</sub>*
@@ -150,9 +150,9 @@ Noetherian domain $A$에 대해 다음이 성립한다.
 
 이제 둘째 주장을 보이자. 우선 $A$가 UFD라 하고, principal ideal $(f)$와 $(f)$를 포함하는 prime ideal들 중 minimal한 $\mathfrak{p}$가 주어졌다 하자. 만일 $f=0$이라면 $A$가 domain이므로 $(0)$이 prime이고 따라서 $\mathfrak{p}=(0)$은 principal이다. $f$가 unit이라면 $(f)=A$를 포함하는 prime ideal이 없으므로 따질 것이 없다. 이제 $f$가 nonzero, non-unit이라 하고 $f=up_1^{e_1}\cdots p_n^{e_n}$으로 인수분해하자. 그럼 $f\in\mathfrak{p}$이고 $\mathfrak{p}$가 prime이므로 적당한 $i$에 대해 $p_i\in \mathfrak{p}$이다. 즉 $(f)\subseteq (p_i)\subseteq \mathfrak{p}$인데, $(p_i)$가 prime이므로 $\mathfrak{p}$의 minimality에 의하여 $\mathfrak{p}=(p_i)$는 principal이다.
 
-거꾸로 principal ideal에 대해 minimal한 prime ideal들이 모두 principal이라 가정하자. 우선 $A$가 noetherian이므로 임의의 nonzero, non-unit 원소는 irreducible element들의 곱으로 표현된다. 그렇지 않다 가정하면, irreducible element들의 곱으로 표현되지 않는 nonzero, non-unit 원소 $a$들이 만드는 principal ideal $(a)$들의 모임이 공집합이 아니므로 noetherian 조건에 의해 이 모임의 maximal element $(a)$를 택할 수 있다. 그럼 $a$는 irreducible이 아니므로 non-unit $b,c$에 대해 $a=bc$로 쓸 수 있는데, 만일 $(a)=(b)$라면 적당한 $d$에 대해 $b=ad$이고 $a=adc$가 되어 $A$가 domain이라는 것으로부터 $c$가 unit이 되어 모순이므로 $(a)\subsetneq (b)$이고, 같은 이유로 $(a)\subsetneq(c)$이다. 그럼 $(a)$의 maximality에 의해 $b,c$는 모두 irreducible element들의 곱으로 표현되고, 따라서 $a=bc$도 그러하므로 모순이다.
+거꾸로 principal ideal에 대해 minimal한 prime ideal들이 모두 principal이라 가정하자. 우선 $A$가 Noetherian이므로 임의의 nonzero, non-unit 원소는 irreducible element들의 곱으로 표현된다. 그렇지 않다 가정하면, irreducible element들의 곱으로 표현되지 않는 nonzero, non-unit 원소 $a$들이 만드는 principal ideal $(a)$들의 모임이 공집합이 아니므로 Noetherian 조건에 의해 이 모임의 maximal element $(a)$를 택할 수 있다. 그럼 $a$는 irreducible이 아니므로 non-unit $b,c$에 대해 $a=bc$로 쓸 수 있는데, 만일 $(a)=(b)$라면 적당한 $d$에 대해 $b=ad$이고 $a=adc$가 되어 $A$가 domain이라는 것으로부터 $c$가 unit이 되어 모순이므로 $(a)\subsetneq (b)$이고, 같은 이유로 $(a)\subsetneq(c)$이다. 그럼 $(a)$의 maximality에 의해 $b,c$는 모두 irreducible element들의 곱으로 표현되고, 따라서 $a=bc$도 그러하므로 모순이다.
 
-다음으로 임의의 irreducible element $p$가 prime임을 보이자. $A$가 noetherian이므로 $(p)$를 포함하는 prime ideal들 중 minimal한 것이 존재하며 ([§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)), 이를 $\mathfrak{p}$라 하면 가정에 의해 $\mathfrak{p}=(q)$는 principal이다. 그럼 $p\in (q)$로부터 $p=qc$로 쓸 수 있는데, $p$가 irreducible이고 $q$가 non-unit이므로 $c$는 unit이고 따라서 $(p)=(q)=\mathfrak{p}$가 prime ideal이다. 즉 $p$는 prime element이다.
+다음으로 임의의 irreducible element $p$가 prime임을 보이자. $A$가 Noetherian이므로 $(p)$를 포함하는 prime ideal들 중 minimal한 것이 존재하며 ([§동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)), 이를 $\mathfrak{p}$라 하면 가정에 의해 $\mathfrak{p}=(q)$는 principal이다. 그럼 $p\in (q)$로부터 $p=qc$로 쓸 수 있는데, $p$가 irreducible이고 $q$가 non-unit이므로 $c$는 unit이고 따라서 $(p)=(q)=\mathfrak{p}$가 prime ideal이다. 즉 $p$는 prime element이다.
 
 마지막으로 인수분해의 유일성을 보이자. $up_1\cdots p_m=vq_1\cdots q_k$가 irreducible element들의 곱이고 $u,v$가 unit이라 하면, $m$에 대한 귀납법을 사용한다. $m=0$이면 좌변이 unit이므로 $k=0$이어야 한다. $m\geq 1$이면 $p_m$이 prime이므로 적당한 $j$에 대하여 $p_m\mid q_j$이고, $q_j$가 irreducible이며 $p_m$이 non-unit이므로 $q_j=wp_m$이도록 하는 unit $w$가 존재한다. 그럼 $A$가 domain이므로 양변에서 $p_m$을 소거하여 귀납가정을 적용하면 적절한 재배열 하에서 각 $p_i$와 $q_i$가 associate임을 얻는다. 따라서 $A$는 UFD이다. ([\[환론\] §정역, ⁋정의 16](/ko/math/ring_theory/integral_domains#def16))
 :::

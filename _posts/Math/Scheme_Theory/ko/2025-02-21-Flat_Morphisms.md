@@ -138,7 +138,7 @@ Noetherian $\mathbb{K}[t]$-algebra $B$에 대하여 $X=\Spec B$가 reduced라 �
 ::: 증명
 [명제 5](#prop5)에 의하여 flatness는 $\mathbb{K}[t]$의 $0$이 아닌 모든 원소가 $B$에서 zerodivisor가 아닌 것과 동치이다.
 
-$B$가 noetherian이므로 $B$의 zerodivisor 전체는 $\Ass B$의 원소들의 합집합이다. ([\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)) 여기에 $B$가 reduced라는 가정을 더하면 이 합집합은 정확히 $B$의 minimal prime ideal $\mathfrak{p}_1,\ldots, \mathfrak{p}_k$들의 합집합이 된다. 실제로 minimal prime들이 언제나 $\Ass B$에 속한다는 것이 이 정리의 첫째 결과이고, 역으로 $B$가 reduced이면
+$B$가 Noetherian이므로 $B$의 zerodivisor 전체는 $\Ass B$의 원소들의 합집합이다. ([\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)) 여기에 $B$가 reduced라는 가정을 더하면 이 합집합은 정확히 $B$의 minimal prime ideal $\mathfrak{p}_1,\ldots, \mathfrak{p}_k$들의 합집합이 된다. 실제로 minimal prime들이 언제나 $\Ass B$에 속한다는 것이 이 정리의 첫째 결과이고, 역으로 $B$가 reduced이면
 
 $$(0)=\mathfrak{N}(B)=\bigcap_{i=1}^k \mathfrak{p}_i$$
 

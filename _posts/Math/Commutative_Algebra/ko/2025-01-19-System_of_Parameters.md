@@ -44,7 +44,7 @@ $\dim A = d$라 하자. 그럼 system of parameters $x_1, \ldots, x_d \in \mathf
 이제 다음을 정의한다. 
 
 ::: definition 명제--정의 3 {#prop-def3}
-$(A,\mathfrak{m})$이 Krull dimension $d$의 local noetherian ring이라 하자. 그럼 $A$의 원소들의 family $a_1,\ldots, a_d$, 그리고 $\mathfrak{a}=(a_1,\ldots, a_d)$에 대하여, 다음이 모두 동치이다.
+$(A,\mathfrak{m})$이 Krull dimension $d$의 local Noetherian ring이라 하자. 그럼 $A$의 원소들의 family $a_1,\ldots, a_d$, 그리고 $\mathfrak{a}=(a_1,\ldots, a_d)$에 대하여, 다음이 모두 동치이다.
 
 1. $\mathfrak{m}$이 $\mathfrak{a}$를 포함하는 prime ideal들 중 minimal하다.
 2. $\mathfrak{m}=\sqrt{\mathfrak{a}}$이 성립한다.

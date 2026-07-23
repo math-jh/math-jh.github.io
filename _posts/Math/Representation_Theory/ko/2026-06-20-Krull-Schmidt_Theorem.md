@@ -57,7 +57,7 @@ Image들의 사슬과 kernel들의 사슬
 
 $$\im\varphi\supseteq\im\varphi^2\supseteq\im\varphi^3\supseteq\cdots,\qquad \ker\varphi\subseteq\ker\varphi^2\subseteq\ker\varphi^3\subseteq\cdots$$
 
-을 생각하자. $M$이 유한 길이를 가지므로 artinian인 동시에 noetherian이고 ([\[가환대수학\] §조르단-횔더 정리, ⁋정리 3](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm3)), 따라서 첫째 내림사슬과 둘째 오름사슬은 모두 어느 단계에서 멈춘다. 곧 적당한 $n$이 있어 $m\geq n$이면
+을 생각하자. $M$이 유한 길이를 가지므로 Artinian인 동시에 Noetherian이고 ([\[가환대수학\] §조르단-횔더 정리, ⁋정리 3](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm3)), 따라서 첫째 내림사슬과 둘째 오름사슬은 모두 어느 단계에서 멈춘다. 곧 적당한 $n$이 있어 $m\geq n$이면
 
 $$\im\varphi^m=\im\varphi^n,\qquad \ker\varphi^m=\ker\varphi^n$$
 

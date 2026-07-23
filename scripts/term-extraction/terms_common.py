@@ -105,6 +105,70 @@ def slugify_id(en: str) -> str:
 
 
 # ---------------------------------------------------------------------------
+# 인명 파생 고유명사 대문자 정규화
+# ---------------------------------------------------------------------------
+# 용어 추출 LLM 이 인명 파생 형용사를 자주 소문자로 낸다(hermitian form…).
+# 색인 en 표기는 저장 직전 이 표로 강제 교정한다. 관용적으로 소문자인 형용사
+# (abelian·cartesian·boolean)는 표에 넣지 않아 그대로 둔다 — 코퍼스·표준 관례.
+# 키는 발음기호 접은 소문자, 값은 정본 표기(악센트 포함).
+_PROPER_FORMS = {
+    "hermitian": "Hermitian", "noetherian": "Noetherian", "artinian": "Artinian",
+    "gaussian": "Gaussian", "hamiltonian": "Hamiltonian", "lagrangian": "Lagrangian",
+    "jacobian": "Jacobian", "laplacian": "Laplacian", "lipschitz": "Lipschitz",
+    "taylor": "Taylor", "maclaurin": "Maclaurin", "euler": "Euler", "cauchy": "Cauchy",
+    "riemann": "Riemann", "riemannian": "Riemannian", "hausdorff": "Hausdorff",
+    "dolbeault": "Dolbeault", "fubini": "Fubini", "study": "Study", "hodge": "Hodge",
+    "rham": "Rham", "eilenberg": "Eilenberg", "whitney": "Whitney", "cartan": "Cartan",
+    "tychonoff": "Tychonoff", "wirtinger": "Wirtinger", "galois": "Galois",
+    "frobenius": "Frobenius", "grothendieck": "Grothendieck", "serre": "Serre",
+    "zariski": "Zariski", "krull": "Krull", "dedekind": "Dedekind", "sylow": "Sylow",
+    "fourier": "Fourier", "legendre": "Legendre", "bernoulli": "Bernoulli",
+    "hilbert": "Hilbert", "banach": "Banach", "lebesgue": "Lebesgue", "weil": "Weil",
+    "hopf": "Hopf", "poincare": "Poincaré", "betti": "Betti", "weyl": "Weyl",
+    "weierstrass": "Weierstrass", "stokes": "Stokes", "newton": "Newton",
+    "leibniz": "Leibniz", "kahler": "Kähler", "chern": "Chern", "ricci": "Ricci",
+    "pontryagin": "Pontryagin", "stiefel": "Stiefel", "chevalley": "Chevalley",
+    "bruhat": "Bruhat", "schubert": "Schubert", "plucker": "Plücker",
+    "grassmann": "Grassmann", "grassmannian": "Grassmannian", "veronese": "Veronese",
+    "segre": "Segre", "nakayama": "Nakayama", "yoneda": "Yoneda", "quillen": "Quillen",
+    "postnikov": "Postnikov", "steenrod": "Steenrod", "morse": "Morse", "bott": "Bott",
+    "cartier": "Cartier", "picard": "Picard", "jacobi": "Jacobi", "cayley": "Cayley",
+    "sylvester": "Sylvester", "jordan": "Jordan", "schur": "Schur", "koszul": "Koszul",
+    "wedderburn": "Wedderburn", "maschke": "Maschke", "burnside": "Burnside",
+    "leray": "Leray", "thom": "Thom", "noether": "Noether", "artin": "Artin",
+    "gauss": "Gauss", "laplace": "Laplace", "hensel": "Hensel", "witt": "Witt",
+    "clifford": "Clifford", "minkowski": "Minkowski", "lorentz": "Lorentz",
+    "dirichlet": "Dirichlet", "neumann": "Neumann", "sobolev": "Sobolev",
+    "borel": "Borel", "baire": "Baire", "urysohn": "Urysohn", "zorn": "Zorn",
+    "kronecker": "Kronecker", "wronskian": "Wronskian", "hessian": "Hessian",
+    "green": "Green", "beltrami": "Beltrami", "riesz": "Riesz", "fatou": "Fatou",
+}
+_PROPER_LOOKUP = {
+    "".join(c for c in unicodedata.normalize("NFD", k)
+            if not unicodedata.combining(c)).lower(): v
+    for k, v in _PROPER_FORMS.items()
+}
+_PROPER_TOKEN_RE = re.compile(r"[A-Za-zÀ-ÿ]+")
+
+
+def _proper_sub(m: "re.Match") -> str:
+    tok = m.group(0)
+    key = "".join(c for c in unicodedata.normalize("NFD", tok)
+                  if not unicodedata.combining(c)).lower()
+    return _PROPER_LOOKUP.get(key, tok)
+
+
+def normalize_proper_case(en: str) -> str:
+    """en 표기의 인명 파생 고유명사를 정본 대문자형으로 교정한다.
+    수식($...$) 구간은 건드리지 않고, 표에 없는 관용 소문자 형용사(abelian…)도
+    그대로 둔다. 이미 올바른 표기는 멱등(idempotent)."""
+    parts = re.split(r"(\$[^$]*\$)", en)
+    for i in range(0, len(parts), 2):       # 짝수 인덱스 = 비수식 구간
+        parts[i] = _PROPER_TOKEN_RE.sub(_proper_sub, parts[i])
+    return "".join(parts)
+
+
+# ---------------------------------------------------------------------------
 # 레포 조회 (정본 소스)
 # ---------------------------------------------------------------------------
 
