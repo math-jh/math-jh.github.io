@@ -5047,3 +5047,7 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 - _posts/Math/Complex_Analysis/ko/2026-06-20-Complex_Numbers.md: 상한 초과 신규 후보 'stereographic projection' — 보류
 - _posts/Math/Complex_Analysis/ko/2026-06-20-Complex_Numbers.md: 상한 초과 신규 후보 'chordal metric' — 보류
 - _posts/Math/Complex_Analysis/ko/2026-06-20-Complex_Numbers.md: 상한 초과 신규 후보 'one-point compactification' — 보류
+
+## term_extract_worker 2026-07-23 12:30
+
+- _posts/Math/Complex_Geometry/ko/2026-06-22-Complex_Manifolds.md: 병기 필요 'biholomorphism' — 게이트 no: KMS 단일 후보 '쌍준동형' 자동 적용 보류

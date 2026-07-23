@@ -423,6 +423,13 @@ A:
     url: /ko/math/calculus/integration
   - label: '[복소해석학] §복소적분'
     url: /ko/math/complex_analysis/complex_integration
+- id: antiholomorphic_tangent_space
+  en: antiholomorphic tangent space
+  ko: 반정칙접공간
+  primary: en
+  defs:
+  - label: '[복소기하학] §복소다양체'
+    url: /ko/math/complex_geometry/complex_manifolds
 - id: antipodal_map
   en: antipodal map
   ko: 대척사상
@@ -763,6 +770,20 @@ B:
   defs:
   - label: '[리 이론] §Kazhdan–Lusztig polynomial'
     url: /ko/math/lie_theory/kazhdan_lusztig
+- id: bar_partial_-closed
+  en: $\bar\partial$-closed
+  ko: $\bar\partial$-닫힌
+  primary: ko
+  defs:
+  - label: '[복소기하학] §Dolbeault 코호몰로지'
+    url: /ko/math/complex_geometry/dolbeault_cohomology
+- id: bar_partial_-exact
+  en: $\bar\partial$-exact
+  ko: $\bar\partial$-완전
+  primary: ko
+  defs:
+  - label: '[복소기하학] §Dolbeault 코호몰로지'
+    url: /ko/math/complex_geometry/dolbeault_cohomology
 - id: base
   en: base
   ko: 기저 (위상수학)
@@ -833,6 +854,13 @@ B:
 - id: biholomorphic
   en: biholomorphic
   ko: 쌍정칙
+  primary: en
+  defs:
+  - label: '[복소기하학] §복소다양체'
+    url: /ko/math/complex_geometry/complex_manifolds
+- id: biholomorphism
+  en: biholomorphism
+  ko: 쌍정칙사상
   primary: en
   defs:
   - label: '[복소기하학] §복소다양체'
@@ -1855,6 +1883,8 @@ C:
     url: /ko/math/set_theory/examples_of_equivalence
   - label: '[대수적 구조] §대수적 구조'
     url: /ko/math/algebraic_structures/algebraic_structures
+  - label: '[복소기하학] §복소다양체'
+    url: /ko/math/complex_geometry/complex_manifolds
 - id: complement_set
   en: complement set
   ko: 여집합
@@ -1995,6 +2025,13 @@ C:
   defs:
   - label: '[복소해석학] §복소정칙함수'
     url: /ko/math/complex_analysis/holomorphic_functions
+- id: complex_dimension
+  en: complex dimension
+  ko: 복소차원
+  primary: ko
+  defs:
+  - label: '[복소기하학] §복소다양체'
+    url: /ko/math/complex_geometry/complex_manifolds
 - id: complex_manifold
   en: complex manifold
   ko: 복소다양체
@@ -2016,6 +2053,13 @@ C:
   defs:
   - label: '[복소해석학] §복소수와 복소평면'
     url: /ko/math/complex_analysis/complex_numbers
+- id: complex_structure
+  en: complex structure
+  ko: 복소구조
+  primary: ko
+  defs:
+  - label: '[복소기하학] §복소다양체'
+    url: /ko/math/complex_geometry/complex_manifolds
 - id: complexified_tangent_space
   en: complexified tangent space
   ko: 복소화 접공간
@@ -2023,6 +2067,8 @@ C:
   defs:
   - label: '[복소기하학] §거의 복소구조'
     url: /ko/math/complex_geometry/almost_complex_structures
+  - label: '[복소기하학] §복소다양체'
+    url: /ko/math/complex_geometry/complex_manifolds
 - id: composition
   en: composition
   ko: 합성
@@ -2216,6 +2262,13 @@ C:
   defs:
   - label: '[해석학] §미분방정식의 존재성과 유일성'
     url: /ko/math/analysis/existence_uniqueness_ode
+- id: contraction_operator
+  en: contraction operator
+  ko: 축약 연산자
+  primary: en
+  defs:
+  - label: '[복소기하학] §Hodge 이론'
+    url: /ko/math/complex_geometry/hodge_theory
 - id: contractive
   en: contractive
   ko: 수축
@@ -2558,6 +2611,20 @@ D:
     url: /ko/math/field_theory/algebraic_extensions
   - label: '[대수적 위상수학] §사상의 차수와 Brouwer·Lefschetz 고정점 정리'
     url: /ko/math/algebraic_topology/degree_and_fixed_point_theorems
+- id: del-bar_operator
+  en: del-bar operator
+  ko: del-bar 연산자
+  primary: ko
+  defs:
+  - label: '[복소기하학] §Dolbeault 코호몰로지'
+    url: /ko/math/complex_geometry/dolbeault_cohomology
+- id: del_operator
+  en: del operator
+  ko: del 연산자
+  primary: ko
+  defs:
+  - label: '[복소기하학] §Dolbeault 코호몰로지'
+    url: /ko/math/complex_geometry/dolbeault_cohomology
 - id: deleted_neighborhood
   en: deleted neighborhood
   ko: 삭제된 근방
@@ -3060,6 +3127,20 @@ D:
     id: Picard_group
   - label: Principal divisor
     id: principal_divisor
+- id: dolbeault_cohomology
+  en: dolbeault cohomology
+  ko: Dolbeault 코호몰로지
+  primary: en
+  defs:
+  - label: '[복소기하학] §Dolbeault 코호몰로지'
+    url: /ko/math/complex_geometry/dolbeault_cohomology
+- id: dolbeault_complex
+  en: dolbeault complex
+  ko: Dolbeault 복합체
+  primary: en
+  defs:
+  - label: '[복소기하학] §Dolbeault 코호몰로지'
+    url: /ko/math/complex_geometry/dolbeault_cohomology
 - id: domain
   en: domain
   ko: 정의역
@@ -3252,6 +3333,13 @@ E:
   defs:
   - label: '[다중선형대수학] §대칭텐서'
     url: /ko/math/multilinear_algebra/symmetric_tensors
+- id: elliptic_curve
+  en: elliptic curve
+  ko: 타원곡선
+  primary: ko
+  defs:
+  - label: '[복소기하학] §복소다양체'
+    url: /ko/math/complex_geometry/complex_manifolds
 - id: embedded_point
   en: embedded point
   ko: 매장점
@@ -3705,6 +3793,13 @@ F:
   defs:
   - label: '[위상수학] §Initial topology와 final topology'
     url: /ko/math/topology/initial_and_final_topology
+- id: fine_sheaf
+  en: fine sheaf
+  ko: 미세층
+  primary: ko
+  defs:
+  - label: '[복소기하학] §Dolbeault 코호몰로지'
+    url: /ko/math/complex_geometry/dolbeault_cohomology
 - id: finer
   en: finer
   ko: 더 섬세한
@@ -3857,6 +3952,13 @@ F:
   defs:
   - label: '[미적분학] §면적분과 선속'
     url: /ko/math/calculus/surface_integrals
+- id: formal_adjoint
+  en: formal adjoint
+  ko: 형식 수반작용소
+  primary: ko
+  defs:
+  - label: '[복소기하학] §Hodge 이론'
+    url: /ko/math/complex_geometry/hodge_theory
 - id: four_fundamental_subspaces
   en: four fundamental subspaces
   ko: 네 개의 기본공간들
@@ -3947,6 +4049,20 @@ F:
   defs:
   - label: '[거울대칭] §프로베니우스 다양체'
     url: /ko/math/mirror_symmetry/frobenius_manifold
+- id: fubini_study_form
+  en: fubini–study form
+  ko: Fubini–Study 형식
+  primary: en
+  defs:
+  - label: '[복소기하학] §Kähler 다양체'
+    url: /ko/math/complex_geometry/kahler_manifolds
+- id: fubini_study_metric
+  en: fubini–study metric
+  ko: Fubini–Study 계량
+  primary: ko
+  defs:
+  - label: '[복소기하학] §Kähler 다양체'
+    url: /ko/math/complex_geometry/kahler_manifolds
 - id: full
   en: full
   ko: 충만
@@ -4003,6 +4119,13 @@ F:
   defs:
   - label: '[대수적 위상수학] §푸앵카레 쌍대성'
     url: /ko/math/algebraic_topology/Poincare_duality
+- id: fundamental_form
+  en: fundamental form
+  ko: 기본형식
+  primary: ko
+  defs:
+  - label: '[복소기하학] §Kähler 다양체'
+    url: /ko/math/complex_geometry/kahler_manifolds
 - id: fundamental_groupoid
   en: fundamental groupoid
   ko: 기본 준군
@@ -4428,6 +4551,13 @@ H:
   defs:
   - label: '[복소해석학] §복소정칙함수'
     url: /ko/math/complex_analysis/holomorphic_functions
+- id: harmonic_form
+  en: harmonic form
+  ko: 조화형식
+  primary: ko
+  defs:
+  - label: '[복소기하학] §Hodge 이론'
+    url: /ko/math/complex_geometry/hodge_theory
 - id: harmonic_function
   en: harmonic function
   ko: 조화함수
@@ -4456,6 +4586,27 @@ H:
   defs:
   - label: '[체론] §제곱근확대체'
     url: /ko/math/field_theory/radical_extensions
+- id: hermitian_form
+  en: hermitian form
+  ko: 에르미트 형식
+  primary: en
+  defs:
+  - label: '[복소기하학] §Kähler 다양체'
+    url: /ko/math/complex_geometry/kahler_manifolds
+- id: hermitian_manifold
+  en: hermitian manifold
+  ko: 에르미트 다양체
+  primary: en
+  defs:
+  - label: '[복소기하학] §Kähler 다양체'
+    url: /ko/math/complex_geometry/kahler_manifolds
+- id: hermitian_metric
+  en: hermitian metric
+  ko: 에르미트 계량
+  primary: en
+  defs:
+  - label: '[복소기하학] §Kähler 다양체'
+    url: /ko/math/complex_geometry/kahler_manifolds
 - id: hessenberg_variety
   en: Hessenberg variety
   ko: 헤센베르크 다양체
@@ -4472,6 +4623,34 @@ H:
     url: /ko/math/calculus/partial_derivatives
   - label: '[리만기하학] §접속'
     url: /ko/math/riemannian_geometry/connection
+- id: hodge_de_rham_laplacian
+  en: hodge–de rham laplacian
+  ko: 호지-드람 라플라스 작용소
+  primary: en
+  defs:
+  - label: '[복소기하학] §Hodge 이론'
+    url: /ko/math/complex_geometry/hodge_theory
+- id: hodge_number
+  en: Hodge number
+  ko: 호지 수
+  primary: en
+  defs:
+  - label: '[복소기하학] §Dolbeault 코호몰로지'
+    url: /ko/math/complex_geometry/dolbeault_cohomology
+- id: hodge_star_operator
+  en: Hodge star operator
+  ko: 호지 별작용소
+  primary: en
+  defs:
+  - label: '[복소기하학] §Hodge 이론'
+    url: /ko/math/complex_geometry/hodge_theory
+- id: hodge_subspace
+  en: Hodge subspace
+  ko: Hodge 부분공간
+  primary: ko
+  defs:
+  - label: '[복소기하학] §Hodge 이론'
+    url: /ko/math/complex_geometry/hodge_theory
 - id: holomorphic
   en: holomorphic
   ko: 복소정칙
@@ -4479,6 +4658,27 @@ H:
   defs:
   - label: '[복소해석학] §복소정칙함수'
     url: /ko/math/complex_analysis/holomorphic_functions
+- id: holomorphic_1-form
+  en: holomorphic 1-form
+  ko: 정칙 1-형식
+  primary: en
+  defs:
+  - label: '[복소기하학] §복소다양체'
+    url: /ko/math/complex_geometry/complex_manifolds
+- id: holomorphic_atlas
+  en: holomorphic atlas
+  ko: 정칙 좌표계 모임
+  primary: en
+  defs:
+  - label: '[복소기하학] §복소다양체'
+    url: /ko/math/complex_geometry/complex_manifolds
+- id: holomorphic_cotangent_bundle
+  en: holomorphic cotangent bundle
+  ko: 정칙여접다발
+  primary: en
+  defs:
+  - label: '[복소기하학] §복소다양체'
+    url: /ko/math/complex_geometry/complex_manifolds
 - id: holomorphic_function
   en: holomorphic function
   ko: 복소정칙함수
@@ -4486,6 +4686,27 @@ H:
   defs:
   - label: '[복소해석학] §복소정칙함수'
     url: /ko/math/complex_analysis/holomorphic_functions
+- id: holomorphic_p_-form
+  en: holomorphic $p$-form
+  ko: 정칙 $p$-형식
+  primary: en
+  defs:
+  - label: '[복소기하학] §Dolbeault 코호몰로지'
+    url: /ko/math/complex_geometry/dolbeault_cohomology
+- id: holomorphic_tangent_bundle
+  en: holomorphic tangent bundle
+  ko: 정칙접다발
+  primary: en
+  defs:
+  - label: '[복소기하학] §복소다양체'
+    url: /ko/math/complex_geometry/complex_manifolds
+- id: holomorphic_tangent_space
+  en: holomorphic tangent space
+  ko: 정칙접공간
+  primary: en
+  defs:
+  - label: '[복소기하학] §복소다양체'
+    url: /ko/math/complex_geometry/complex_manifolds
 - id: homeomorphism
   en: homeomorphism
   ko: 위상동형사상
@@ -5390,6 +5611,13 @@ J:
   defs:
   - label: '[사교기하학] §J-holomorphic curves'
     url: /ko/math/symplectic_geometry/j_holomorphic_curves
+- id: j_-invariance
+  en: $j$-invariance
+  ko: $J$-불변성
+  primary: en
+  defs:
+  - label: '[복소기하학] §Kähler 다양체'
+    url: /ko/math/complex_geometry/kahler_manifolds
 - id: jacobi_matrix
   en: Jacobi matrix
   ko: 야코비 행렬
@@ -5472,6 +5700,13 @@ K:
   defs:
   - label: '[선형대수학] §벡터공간'
     url: /ko/math/linear_algebra/vector_spaces
+- id: kähler_class
+  en: Kähler class
+  ko: 켈러 류
+  primary: en
+  defs:
+  - label: '[복소기하학] §Kähler 다양체'
+    url: /ko/math/complex_geometry/kahler_manifolds
 - id: kähler_differential_module
   en: Kähler differential module
   ko: 캘러 미분가군
@@ -5479,6 +5714,34 @@ K:
   defs:
   - label: '[가환대수학] §미분'
     url: /ko/math/commutative_algebra/differentials
+- id: kähler_form
+  en: Kähler form
+  ko: 켈러 형식
+  primary: en
+  defs:
+  - label: '[복소기하학] §Kähler 다양체'
+    url: /ko/math/complex_geometry/kahler_manifolds
+- id: kähler_manifold
+  en: Kähler manifold
+  ko: 켈러 다양체
+  primary: en
+  defs:
+  - label: '[복소기하학] §Kähler 다양체'
+    url: /ko/math/complex_geometry/kahler_manifolds
+- id: kähler_metric
+  en: Kähler metric
+  ko: 켈러 계량
+  primary: en
+  defs:
+  - label: '[복소기하학] §Kähler 다양체'
+    url: /ko/math/complex_geometry/kahler_manifolds
+- id: kähler_potential
+  en: Kähler potential
+  ko: 켈러 퍼텐셜
+  primary: en
+  defs:
+  - label: '[복소기하학] §Kähler 다양체'
+    url: /ko/math/complex_geometry/kahler_manifolds
 - id: kernel
   en: kernel
   ko: 핵
@@ -5538,6 +5801,13 @@ K:
   - label: '[위상수학] §차원'
     url: /ko/math/topology/dimension
 L:
+- id: l_2_-inner_product
+  en: $l^2$-inner product
+  ko: $L^2$-내적
+  primary: en
+  defs:
+  - label: '[복소기하학] §Hodge 이론'
+    url: /ko/math/complex_geometry/hodge_theory
 - id: lagrange_multiplier
   en: Lagrange multiplier
   ko: 라그랑주 승수
@@ -5575,6 +5845,8 @@ L:
     url: /ko/math/set_theory/directed_set
   - label: '[토릭 기하학] §아핀 토릭 다양체'
     url: /ko/math/toric_geometry/affine_toric_varieties
+  - label: '[복소기하학] §복소다양체'
+    url: /ko/math/complex_geometry/complex_manifolds
 - id: lattice_polytope
   en: lattice polytope
   ko: 격자 다면체
@@ -5643,6 +5915,13 @@ L:
   defs:
   - label: '[해석학] §실수의 완비성'
     url: /ko/math/analysis/completeness_of_reals
+- id: lefschetz_decomposition
+  en: Lefschetz decomposition
+  ko: Lefschetz 분해
+  primary: ko
+  defs:
+  - label: '[복소기하학] §Hodge 이론'
+    url: /ko/math/complex_geometry/hodge_theory
 - id: lefschetz_number
   en: Lefschetz number
   ko: 레프셰츠 수
@@ -5650,6 +5929,13 @@ L:
   defs:
   - label: '[대수적 위상수학] §사상의 차수와 Brouwer·Lefschetz 고정점 정리'
     url: /ko/math/algebraic_topology/degree_and_fixed_point_theorems
+- id: lefschetz_operator
+  en: Lefschetz operator
+  ko: 렙셰츠 연산자
+  primary: en
+  defs:
+  - label: '[복소기하학] §Hodge 이론'
+    url: /ko/math/complex_geometry/hodge_theory
 - id: left_a_-module
   en: left $A$-module
   ko: 왼쪽 $A$-가군
@@ -8650,6 +8936,13 @@ R:
   defs:
   - label: '[미적분학] §적분'
     url: /ko/math/calculus/integration
+- id: riemann_surface
+  en: Riemann surface
+  ko: 리만 곡면
+  primary: en
+  defs:
+  - label: '[복소기하학] §복소다양체'
+    url: /ko/math/complex_geometry/complex_manifolds
 - id: riemannian_manifold
   en: Riemannian manifold
   ko: 리만다양체

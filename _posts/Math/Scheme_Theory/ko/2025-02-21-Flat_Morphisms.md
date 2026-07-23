@@ -185,7 +185,7 @@ $$X=\Proj A_\bullet/(\x\z-t\y^2)$$
 Fiber를 보면, $t=a\neq 0$ 위에서는 $\mathbb{P}^2$의 원뿔곡선 $\x\z=a\y^2$이 되어 smooth하고 $\mathbb{P}^1$과 isomorphic이다. 반면 $t=0$ 위에서는 $\x\z=0$, 즉 두 직선 $\{\x=0\}$과 $\{\z=0\}$이 점 $[0:1:0]$에서 만나는 곡선이 된다. 즉 이것은 smooth한 원뿔곡선이 두 직선으로 퇴화하는 상수 아닌 곡선들의 family이며, 그럼에도 모든 fiber가 $1$차원으로 남는다.
 :::
 
-## 제네릭 평탄성
+## Generic flatness
 
 이제부터 flat morphism의 기하학적 성질들을 살펴볼 것인데, 그 증명들은 예외 없이 두 가지 준비물 위에 놓인다. 하나는 flatness가 base의 조밀한 열린집합 위에서는 언제나 성립한다는 사실이고, 다른 하나는 finite type 사상의 상이 언제나 constructible이라는 Chevalley의 정리이다. 그런데 이 둘은 모두 Grothendieck의 generic freeness라는 대수적 정리 하나에서 나온다. ([\[가환대수학\] §뇌터 정규화, ⁋정리 5](/ko/math/commutative_algebra/noether_normalization#thm5)) 곧 Noetherian integral domain $A$와 finite type $A$-algebra $B$, 그리고 finitely generated $B$-module $M$에 대하여 $0$이 아닌 $a\in A$가 존재하여 $M_a$가 free $A_a$-module이 된다는 것이며, 아래의 두 증명은 모두 이를 base의 affine chart에서 적용하는 형태이다.
 
