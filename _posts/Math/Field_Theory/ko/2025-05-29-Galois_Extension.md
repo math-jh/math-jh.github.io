@@ -34,7 +34,7 @@ Algebraic extension $\mathbb{L}$과 inclusion $u:\mathbb{L}\rightarrow \overline
 우리의 목적은 고정된 field $\mathbb{K}$의 algebraic extension들을 모두 살펴보는 것이며, 더 정확히는 algebraic extension들의 equivalence class들을 보는 것이다.  
 
 ::: 정의 2
-Field $\mathbb{K}$의 두 algebraic extension $\mathbb{L}$, $\mathbb{M}$에 대하여, $u(\mathbb{L})=\mathbb{M}$이도록 하는 $\mathbb{K}$-automorphism $u:\overline{\mathbb{K}}\rightarrow \overline{\mathbb{K}}$이 존재한다면 이들이 *conjugate*한다고 말한다. 특히 두 원소 $x,y\in\overline{\mathbb{K}}$이 *conjugate*이라는 것은 적당한 $\mathbb{K}$-automorphism $u: \overline{\mathbb{K}}\rightarrow \overline{\mathbb{K}}$이 존재하여 $u(x)=y$인 것이다. 
+Field $\mathbb{K}$의 두 algebraic extension $\mathbb{L}$, $\mathbb{M}$에 대하여, $u(\mathbb{L})=\mathbb{M}$이도록 하는 $\mathbb{K}$-automorphism $u:\overline{\mathbb{K}}\rightarrow \overline{\mathbb{K}}$이 존재한다면 이들이 *conjugate<sub>켤레</sub>*한다고 말한다. 특히 두 원소 $x,y\in\overline{\mathbb{K}}$이 *conjugate*이라는 것은 적당한 $\mathbb{K}$-automorphism $u: \overline{\mathbb{K}}\rightarrow \overline{\mathbb{K}}$이 존재하여 $u(x)=y$인 것이다. 
 :::
 
 [명제 1](#prop1)에 의하여, 만일 $\mathbb{M}$과 $\mathbb{L}$이 isomorphic한 $\mathbb{K}$의 extension이라면 이들은 conjugate extension들이며, 정의에 의해 conjugate extension들은 isomorphic하다. 뿐만 아니라 다음이 성립한다. 

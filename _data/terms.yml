@@ -1060,6 +1060,20 @@ B:
   - label: '[미분다양체] §접다발과 여접다발'
     url: /ko/math/manifolds/tangent_and_cotangent_bundles
 C:
+- id: 1-coboundary
+  en: 1-coboundary
+  ko: 1-코바운더리
+  primary: en
+  defs:
+  - label: '[체론] §갈루아 군의 성질들'
+    url: /ko/math/field_theory/properties_of_galois_extensions
+- id: 1-cocycle
+  en: 1-cocycle
+  ko: 1-코사이클
+  primary: en
+  defs:
+  - label: '[체론] §갈루아 군의 성질들'
+    url: /ko/math/field_theory/properties_of_galois_extensions
 - id: c_1
   en: $c^1$
   ko: 일급
@@ -2165,6 +2179,13 @@ C:
   defs:
   - label: '[복소해석학] §등각사상과 Möbius 변환'
     url: /ko/math/complex_analysis/conformal_maps
+- id: conjugate
+  en: conjugate
+  ko: 켤레
+  primary: en
+  defs:
+  - label: '[체론] §갈루아 확장'
+    url: /ko/math/field_theory/galois_extension#def2
 - id: conjugate_representation
   en: conjugate representation
   ko: 켤레표현
@@ -7164,6 +7185,13 @@ N:
   defs:
   - label: '[대수적 위상수학] §호모토피의 계산'
     url: /ko/math/algebraic_topology/fibrations
+- id: n_-th_root_of_unity
+  en: $n$-th root of unity
+  ko: 1의 $n$제곱근
+  primary: ko
+  defs:
+  - label: '[체론] §거듭제곱근 가해성'
+    url: /ko/math/field_theory/solvability_by_radicals
 - id: naive_cotangent_complex
   en: naive cotangent complex
   ko: ''
@@ -8285,6 +8313,13 @@ P:
   defs:
   - label: '[복소기하학] §Hodge 이론'
     url: /ko/math/complex_geometry/hodge_theory
+- id: primitive_n_-th_root_of_unity
+  en: primitive $n$-th root of unity
+  ko: 1의 원시 $n$제곱근
+  primary: en
+  defs:
+  - label: '[체론] §거듭제곱근 가해성'
+    url: /ko/math/field_theory/solvability_by_radicals
 - id: principal_cartier_divisor
   en: principal Cartier divisor
   ko: 주 카르티에 인자
@@ -8755,6 +8790,13 @@ R:
   defs:
   - label: '[가환대수학] §영점정리'
     url: /ko/math/commutative_algebra/nullstellensatz
+- id: radical_tower
+  en: radical tower
+  ko: 거듭제곱근 탑
+  primary: ko
+  defs:
+  - label: '[체론] §거듭제곱근 가해성'
+    url: /ko/math/field_theory/solvability_by_radicals
 - id: radius_of_convergence
   en: radius of convergence
   ko: 수렴반경
@@ -10017,6 +10059,13 @@ S:
   see:
   - label: Nilpotent group
     id: nilpotent_group
+- id: solvable_by_radicals
+  en: solvable by radicals
+  ko: 거듭제곱근으로 풀린다
+  primary: ko
+  defs:
+  - label: '[체론] §거듭제곱근 가해성'
+    url: /ko/math/field_theory/solvability_by_radicals
 - id: source
   en: source
   ko: 소스
