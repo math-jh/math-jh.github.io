@@ -216,23 +216,21 @@ Noetherian scheme $Y$와 finite type morphism $f: X \rightarrow Y$에 대하여,
 ::: 증명
 $Y$가 Noetherian이므로 유한개의 affine open $V_j$로 덮이고, $f$가 finite type이므로 각 $f^{-1}(V_j)$ 또한 유한개의 affine open으로 덮인다. 따라서 $f(X)$는 유한개의 $\Spec B \rightarrow \Spec A$ 꼴 morphism의 image들의 합집합이다. 열린집합 $V_j$의 constructible subset은 $Y$의 constructible subset이고 constructible subset들의 유한합집합은 constructible이므로, 처음부터 $Y=\Spec A$, $X=\Spec B$이고 $B$가 finite type $A$-algebra인 경우만 보이면 충분하다.
 
-이 affine case는 $Y$의 closed subset에 대한 Noetherian induction으로 해결한다. $Y=\Spec A$의 closed subset $Z$에 대하여, 명제 $P$를
+이 affine case는 $Y$의 closed subset에 대한 Noetherian induction으로 해결한다. $Y=\Spec A$의 closed subset $Z$에 대하여, 명제 $P(Z)$를
 
 > $Z$ 위의 임의의 finite type morphism의 image는 $Y$의 constructible subset이다.
 
-이라 하자. $A$가 Noetherian이므로 $Y=\Spec A$는 Noetherian space이고 ([§스킴의 위상구조, ⁋명제 7](/ko/math/scheme_theory/topology_of_schemes#prop7)), 곧 그 closed subset들이 descending chain condition을 만족하므로 ([\[위상수학\] §차원, ⁋정의 11](/ko/math/topology/dimension#def11)) Noetherian induction을 쓸 수 있다. 즉 $Y$의 모든 진부분 닫힌집합 $Z\subsetneq Y$에 대하여 $P(Z)$가 성립한다고 가정하고 $P(Y)$를 보이면 된다.
+이라 하자. $A$가 Noetherian이므로 $Y=\Spec A$는 Noetherian space이고 ([§스킴의 위상구조, ⁋명제 7](/ko/math/scheme_theory/topology_of_schemes#prop7)), 그 위에서 Noetherian induction을 쓸 수 있다. ([\[위상수학\] §차원, ⁋명제 14](/ko/math/topology/dimension#prop14)) 즉 $Y$의 모든 진부분 닫힌집합 $Z\subsetneq Y$에 대하여 $P(Z)$가 성립한다고 가정하고 $P(Y)$를 보이면 된다.
 
-먼저 $\mathfrak{N}=\mathfrak{N}(A)$를 $A$의 nilradical이라 하면 $\mathfrak{N}B$는 $B$의 nilpotent ideal이므로 $\Spec B/\mathfrak{N}B$와 $\Spec B$는 같은 위상공간이고, $\Spec A/\mathfrak{N}$과 $\Spec A$도 그러하다. 따라서 $A$를 $A/\mathfrak{N}$으로, $B$를 $B/\mathfrak{N}B$로 바꾸어도 $f(X)$는 바뀌지 않으므로 $A$가 reduced라 가정해도 좋다.
+먼저 $A$의 nilradical $\mathfrak{N}=\mathfrak{N}(A)$에 대하여 $\mathfrak{N}B$는 $B$의 nilpotent ideal이므로 $\Spec B/\mathfrak{N}B$와 $\Spec B$는 같은 위상공간이고, $\Spec A/\mathfrak{N}$과 $\Spec A$도 그러하다. ([§차원, §§스킴의 차원](/ko/math/scheme_theory/dimension#스킴의-차원)) 따라서, 필요하다면 $A$를 $A/\mathfrak{N}$으로, $B$를 $B/\mathfrak{N}B$로 바꾸어 $A$가 reduced라 가정해도 좋다.
 
-이제 $A$의 minimal prime을 $\mathfrak{p}_1,\ldots, \mathfrak{p}_k$라 하면 $A$가 reduced이므로 $Y=\bigcup_j V(\mathfrak{p}_j)$이다. 만일 $k\geq 2$라면 각 $V(\mathfrak{p}_j)$는 $Y$의 진부분 닫힌집합이고
+이제 $A$의 minimal prime을 $\mathfrak{p}_1,\ldots, \mathfrak{p}_k$라 하자. 그럼 임의의 prime ideal은 항상 적당한 minimal prime을 포함하므로 $Y=\bigcup_j V(\mathfrak{p}_j)$이다. 만일 $k\geq 2$라면 각 $V(\mathfrak{p}_j)$는 $Y$의 진부분 닫힌집합이고
 
 $$f(X)=\bigcup_{j=1}^k f\big(X\times_Y V(\mathfrak{p}_j)\big)$$
 
-인데, 각 base change $X\times_YV(\mathfrak{p}_j) \rightarrow V(\mathfrak{p}_j)$는 여전히 finite type이므로 귀납가정 $P(V(\mathfrak{p}_j))$에 의하여 각 항이 constructible이고 따라서 $f(X)$도 constructible이다. 그러므로 $k=1$, 즉 $A$가 integral domain인 경우만 남는다.
+인데, 각 base change $X\times_YV(\mathfrak{p}_j) \rightarrow V(\mathfrak{p}_j)$는 여전히 finite type이므로 Noetherian induction의 귀납가정 $P(V(\mathfrak{p}_j))$에 의하여 각 항이 constructible이고 따라서 $f(X)$도 constructible이다. 그러므로 $k=1$, 즉 $A$가 integral domain인 경우만 고려해도 충분하다.
 
-그럼 $B=0$이면 $f(X)=\emptyset$이므로 자명하다. $B\neq 0$이라 하고 [\[가환대수학\] §뇌터 정규화, ⁋정리 5](/ko/math/commutative_algebra/noether_normalization#thm5)를 $M=B$에 적용하면 $0\neq a\in A$가 존재하여 $B_a$가 free $A_a$-module이다. $a$가 unit이면 $D(a)=Y$이므로 $a$를 unit이 아닌 것으로 택했다고 가정해도 좋고 (unit이라면 아래 논증에서 $V(a)=\emptyset$이 되어 결론이 더 간단해진다), 이 경우 $A$가 integral domain이므로 $V(a)$는 $Y$의 진부분 닫힌집합이다.
-
-$B_a=0$인 경우, 이는 $\varphi(a)$가 $B$에서 nilpotent라는 뜻이므로 $\varphi(a)$는 $B$의 모든 prime ideal에 속한다. 따라서 $f(X)\subseteq V(a)$이고, $f(X)$는 base change $X\times_YV(a) \rightarrow V(a)$의 image와 같으므로 귀납가정 $P(V(a))$에 의하여 constructible이다.
+$B=0$인 경우는 자명하므로 $B\neq 0$이라 하자. 그럼 [\[가환대수학\] §뇌터 정규화, ⁋정리 5](/ko/math/commutative_algebra/noether_normalization#thm5)에 의해 $0\neq a\in A$가 존재하여 $B_a$가 free $A_a$-module이다. $a$가 unit이면 $D(a)=Y$이므로 $a$를 unit이 아닌 것으로 택했다고 가정해도 좋고 (unit이라면 아래 논증에서 $V(a)=\emptyset$이 되어 결론이 더 간단해진다), 이 경우 $A$가 integral domain이므로 $V(a)$는 $Y$의 진부분 닫힌집합이다. $B_a=0$인 경우, 이는 $\varphi(a)$가 $B$에서 nilpotent라는 뜻이므로 $\varphi(a)$는 $B$의 모든 prime ideal에 속한다. 따라서 $f(X)\subseteq V(a)$이고, $f(X)$는 base change $X\times_YV(a) \rightarrow V(a)$의 image와 같으므로 귀납가정 $P(V(a))$에 의하여 constructible이다.
 
 $B_a\neq 0$인 경우, $B_a$는 $0$이 아닌 free $A_a$-module이다. 임의의 $\mathfrak{p}\in D(a)$에 대하여
 

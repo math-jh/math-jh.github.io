@@ -217,7 +217,18 @@ $$X=\bigcup_{i=1}^r X_i$$
 
 이 존재하며, $X_i$들은 모두 닫힌집합이고, $X_i$의 여집합도 닫힌집합들의 유한한 합집합이므로 $X_i$는 열린집합이기도 하다. 
 
-::: 명제 14
+명제 12와 명제 13의 증명에서 우리는 닫힌집합들의 공집합이 아닌 모임이 언제나 minimal element를 가진다는 사실을 사용하였다. 이를 하나의 귀납 원리로 정리하면, Noetherian 공간 위에서 닫힌집합에 대한 성질을 증명하는 표준적인 도구를 얻는다.
+
+::: 명제 14 (Noetherian induction)
+Noetherian topological space $X$와, $X$의 닫힌집합에 대한 성질 $P$가 주어졌다 하자. 만일 임의의 닫힌집합 $Z\subseteq X$에 대하여, 모든 진부분 닫힌집합 $Z'\subsetneq Z$에서 $P(Z')$가 성립할 때마다 $P(Z)$ 또한 성립한다면, $P$는 $X$의 모든 닫힌집합에서 성립한다.
+:::
+::: 증명
+$P$가 성립하지 않는 닫힌집합들의 모임을 $\mathcal{S}$라 하고, 결론에 반하여 $\mathcal{S}\neq\emptyset$이라 하자. [명제 12](#prop12)의 증명에서와 같은 방법으로 $\mathcal{S}$는 minimal element $Z_0$을 가진다. 그럼 $Z_0$이 minimal이므로 임의의 진부분 닫힌집합 $Z'\subsetneq Z_0$은 $\mathcal{S}$에 속하지 않아 $P(Z')$가 성립하고, 따라서 가정에 의하여 $P(Z_0)$이 성립한다. 이는 $Z_0\in\mathcal{S}$에 모순이므로 $\mathcal{S}=\emptyset$이며, 곧 $P$는 $X$의 모든 닫힌집합에서 성립한다.
+:::
+
+이는 자연수에 대한 강한 귀납법의 위상적 유비로, 닫힌집합들이 descending chain condition을 만족한다는 Noetherian 조건이 귀납을 가능하게 한다. 실제 사용에서는 임의의 닫힌집합 $Z$에 대해 그 진부분 닫힌집합들에서 성질이 성립한다고 가정하고 $Z$에서 성립함을 보이며, 특히 $Z=X$의 경우가 결론에 포함된다.
+
+::: 명제 15
 위상공간 $X$와 열린집합 $U$에 대하여, $U$와 만나는 $X$의 irreducible closed subset과, $U$의 irreducible closed subset 사이의 일대일대응이 존재한다.
 :::
 ::: 증명
@@ -242,6 +253,6 @@ $$\{\text{irreducible closed subset of $U$}\} \rightarrow \{\text{irreducible cl
 
 이제 다음 명제를 보이자.
 
-::: 명제 15
+::: 명제 16
 만일 위상공간 $X$의 두 유한차원 closed subspace $Y,Z$가 존재하여 $X=Y\cup Z$라면, 이들의 Krull dimension 또한 식 $\dim X=\max(\dim Y,\dim Z)$을 만족한다.
 :::

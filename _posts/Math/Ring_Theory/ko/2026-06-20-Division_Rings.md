@@ -55,7 +55,7 @@ $$z^{-1}x=z^{-1}xzz^{-1}=z^{-1}zxz^{-1}=xz^{-1}$$
 
 이므로 $z^{-1}\in Z(D)$이기 때문이다. 따라서 $D$가 유한하면 $Z(D)$는 finite field이고, 그 원소의 개수를 $q$라 하면 $q\geq 2$이다.
 
-여전히 위의 유한성을 가정한채로 $D$를 $Z(D)$ 위의 vector space로 보면 $n=\dim_{Z(D)} D$에 대하여 $\lvert D\rvert=q^n$이다. 더 일반적으로 $Z(D)$를 포함하는 $D$의 부분 division ring $D'$ 또한 $Z(D)$ 위의 vector space이므로 그 원소 개수는 $q^d$ 꼴이고, $D$가 $D'$ 위의 $m$차원 vector space이면 $q^n=(q^d)^m$에서 $d\mid n$을 얻는다. 이 정수론적 제약과 맞물려 증명에 쓰이는 것이 cyclotomic polynomial이다.
+여전히 위의 유한성을 가정한채로 $D$를 $Z(D)$ 위의 vector space로 보면 $n=\dim_{Z(D)} D$에 대하여 $\lvert D\rvert=q^n$이다. 더 일반적으로 $Z(D)$를 포함하는 $D$의 부분 division ring $D'$ 또한 $Z(D)$ 위의 vector space이므로 그 원소 개수는 $q^d$ 꼴이고, $D$가 $D'$ 위의 $m$차원 vector space이면 $q^n=(q^d)^m$에서 $d\mid n$을 얻는다. 비슷한 결에서, 우리는 이 절의 핵심 결과를 증명하기 위해 다음의 cyclotomic polynomial이 필요하다.
 
 ::: 정의 3
 양의 정수 $n$에 대하여 *$n$번째 cyclotomic polynomial<sub>원분다항식</sub>* $\Phi_n(\x)$를
@@ -69,42 +69,46 @@ Cyclotomic polynomial의 기본 성질로 우리는 두 가지를 사용한다. 
 
 $$\x^n-1=\prod_{d\mid n}\Phi_d(\x)$$
 
-이 성립하고, $n$의 진약수 $d$에 대한 $\Phi_d$들의 곱이 monic이므로 [§다항식환, ⁋명제 5](/ko/math/ring_theory/polynomial_rings#prop5)의 나눗셈을 $\mathbb{Z}[\x]$ 안에서 수행하여 귀납적으로 각 $\Phi_d(\x)$가 정수 계수를 가짐을 안다. 둘째, $d\mid n$이고 $d<n$이면
+이 성립하고, 따라서 여기에 [§다항식환, ⁋명제 5](/ko/math/ring_theory/polynomial_rings#prop5)의 나눗셈을 $\mathbb{Z}[\x]$ 안에서 수행하여 귀납적으로 각 $\Phi_d(\x)$가 정수 계수를 가짐을 안다. 둘째, $n$의 진약수 $d$에 대하여
 
-$$\x^n-1=(\x^d-1)\cdot\prod_{\substack{e\mid n\\ e\nmid d}}\Phi_e(\x)$$
+$$\x^n-1=(\x^d-1)\cdot\prod_{e\mid n\text{ but }e\nmid d}\Phi_e(\x)$$
 
-의 우변에 인수 $\Phi_n(\x)$가 들어 있으므로, $\Phi_n(\x)$는 $\mathbb{Z}[\x]$ 안에서 $\frac{\x^n-1}{\x^d-1}$을 나눈다. 이 정수 다항식들에 정수 $q$를 대입하면, $\Phi_n(q)$가 $q^n-1$과 $\frac{q^n-1}{q^d-1}$ (각 $d\mid n$, $d<n$)을 모두 정수로서 나눈다.
+의 우변에 인수 $\Phi_n(\x)$가 들어 있으므로, $\Phi_n(\x)$는 $\mathbb{Z}[\x]$ 안에서 $(\x^n-1)/(\x^d-1)$을 나눈다. 특히 이 정수 다항식들에 정수 $q$를 대입하면, $\Phi_n(q)$가 $q^n-1$과 $(q^n-1)/(q^d-1)$를 모두 정수로서 나눈다는 것을 안다.
 
-마지막으로 필요한 해석적 부등식 하나를 따로 떼어 둔다.
+마지막으로 필요한 해석적인 부등식 하나를 따로 떼어 둔다.
 
 ::: 명제 4
 정수 $q\geq 2$와 $n\geq 2$에 대하여 $\lvert\Phi_n(q)\rvert>q-1$이다.
 :::
 ::: 증명
-$\Phi_n(q)=\prod_\zeta(q-\zeta)$의 곱은 $n$번째 primitive root of unity $\zeta$들에 대한 것이다. $n\geq 2$이면 $\zeta\neq 1$이므로, 각 인수의 절댓값을 아래에서 평가한다. $\zeta=\cos\theta+i\sin\theta$ ($\theta\neq 0$)이라 하면
+Cyclotomic polynomial에 $q$를 대입하면 정의 3에 의해
 
-$$\lvert q-\zeta\rvert^2=(q-\cos\theta)^2+\sin^2\theta=q^2-2q\cos\theta+1$$
+$$\Phi_n(q)=\prod_{\substack{1\leq m\leq n\\ \gcd(m,n)=1}}(q-\zeta^m)$$
 
-이고, $\cos\theta<1$이므로
+이다. 각 인수의 절댓값을 아래에서 평가한다. $\zeta=\cos\theta+i\sin\theta$ ($\theta\neq 0$)이라 하면
 
-$$\lvert q-\zeta\rvert^2-(q-1)^2=q^2-2q\cos\theta+1-(q^2-2q+1)=2q(1-\cos\theta)>0$$
+$$\lvert q-\zeta^m\rvert^2=(q-\cos m\theta)^2+\sin^2 m\theta=q^2-2q\cos m\theta+1$$
 
-이다. 따라서 모든 primitive root $\zeta$에 대해 $\lvert q-\zeta\rvert>q-1\geq 1$이고, primitive root가 적어도 하나 존재하므로
+이고, 따라서
 
-$$\lvert\Phi_n(q)\rvert=\prod_\zeta\lvert q-\zeta\rvert\geq\lvert q-\zeta_0\rvert>q-1$$
+$$\lvert q-\zeta^m\rvert^2-(q-1)^2=q^2-2q\cos m\theta+1-(q^2-2q+1)=2q(1-\cos m\theta)\geq 0$$
 
-을 얻는다.
+이다. 모든 primitive root $\zeta^m$에 대해 $\lvert q-\zeta^m\rvert\geq q-1\geq 1$이고, 특히
+
+$$\lvert\Phi_n(q)\rvert=\prod_{\substack{1\leq m\leq n\\ \gcd(m,n)=1}}\lvert q-\zeta^m\rvert\geq\lvert q-\zeta\rvert\geq q-1$$
+
+인데, 마지막 부등식의 경우 $\cos\theta\neq 0$임을 이용하면 이 부등식이 strict하므로 명제의 strict한 부등식을 얻는다.
 :::
 
 이제 정리를 증명한다.
 
 ::: 정리 5 (Wedderburn)
-모든 유한 division ring은 field이다. 즉 유한 division ring은 commutative하다.
+모든 finite division ring은 field이다. 즉 finite division ring은 commutative하다.
 :::
 ::: 증명
-$D$를 유한 division ring, $Z=Z(D)$를 그 center라 하자. 앞서 보았듯 $Z$는 유한 field이고, 그 원소의 개수를 $q\geq 2$라 하면 $D$는 $Z$ 위의 유한차원 vector space로서 $\lvert D\rvert=q^n$의 꼴이다. 보일 것은 $n=1$, 즉 $D=Z$가 commutative하다는 것이다.
+$D$를 finite division ring, $Z=Z(D)$를 그 center라 하자. 앞서 보았듯 $Z$는 finite field이고, 그 원소의 개수를 $q\geq 2$라 하면 $D$는 $Z$ 위의 유한차원 vector space로서 그 원소의 개수는 $\lvert D\rvert=q^n$의 꼴이다. 우리 주장은 $n=1$이어서 $D=Z$가 commutative하다는 것이다.
 
-이를 위해 multiplicative group $D^\times=D\setminus\{0\}$의 class equation을 세운다. $D^\times$의 켤레작용에 대한 class equation은
+이를 위해 multiplicative group $D^\times=D\setminus\{0\}$의 class equation을 만들자. ([\[대수적 구조\] §군의 작용, ⁋정리 14](/ko/math/algebraic_structures/group_actions#thm14)) $D^\times$의 [\[대수적 구조\] §군의 작용, ⁋명제 9](/ko/math/algebraic_structures/group_actions#prop9)에 의한 conjugation action에 대한 class equation은
 
 $$\lvert D^\times\rvert=\lvert Z(D^\times)\rvert+\sum_{x}\bigl[D^\times:C_{D^\times}(x)\bigr]$$
 

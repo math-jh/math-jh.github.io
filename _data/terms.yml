@@ -3737,6 +3737,8 @@ E:
   defs:
   - label: '[선형대수학] §행렬식의 존재성과 유일성'
     url: /ko/math/linear_algebra/existence_and_uniqueness_of_determinant
+  - label: '[군론] §대칭군'
+    url: /ko/math/group_theory/symmetric_groups#def9
   see:
   - label: Odd permutation
     id: odd_permutation
@@ -4731,6 +4733,13 @@ G:
   see:
   - label: Group
     id: group
+- id: gysin_homomorphism
+  en: gysin homomorphism
+  ko: 귀진 사상
+  primary: en
+  defs:
+  - label: '[그로모프-위튼 이론] §Refined Gysin 사상과 moduli의 교차이론'
+    url: /ko/math/gromov-witten_theory/refined_gysin
 H:
 - id: hamiltonian
   en: Hamiltonian
@@ -7473,6 +7482,8 @@ N:
   defs:
   - label: '[리만기하학] §리만 계량'
     url: /ko/math/riemannian_geometry/Riemannian_metric
+  - label: '[그로모프-위튼 이론] §Refined Gysin 사상과 moduli의 교차이론'
+    url: /ko/math/gromov-witten_theory/refined_gysin
 - id: normal_domain
   en: normal domain
   ko: 정규정역
@@ -7614,6 +7625,8 @@ O:
   defs:
   - label: '[선형대수학] §행렬식의 존재성과 유일성'
     url: /ko/math/linear_algebra/existence_and_uniqueness_of_determinant
+  - label: '[군론] §대칭군'
+    url: /ko/math/group_theory/symmetric_groups#def9
   see:
   - label: Even permutation
     id: even_permutation
@@ -9004,6 +9017,13 @@ R:
   defs:
   - label: '[가환대수학] §평탄성과 국소화'
     url: /ko/math/commutative_algebra/local_criterion_for_flatness
+- id: refined_gysin_homomorphism
+  en: refined gysin homomorphism
+  ko: 정련된 귀진 사상
+  primary: en
+  defs:
+  - label: '[그로모프-위튼 이론] §Refined Gysin 사상과 moduli의 교차이론'
+    url: /ko/math/gromov-witten_theory/refined_gysin
 - id: refinement
   en: refinement
   ko: 세분화
@@ -9045,6 +9065,13 @@ R:
   see:
   - label: Singular point
     id: singular_point
+- id: regular_embedding
+  en: regular embedding
+  ko: 정칙 매입
+  primary: en
+  defs:
+  - label: '[그로모프-위튼 이론] §Refined Gysin 사상과 moduli의 교차이론'
+    url: /ko/math/gromov-witten_theory/refined_gysin
 - id: regular_function
   en: regular function
   ko: 정칙함수
