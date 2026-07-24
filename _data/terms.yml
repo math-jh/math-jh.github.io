@@ -2188,6 +2188,13 @@ C:
   defs:
   - label: '[복소기하학] §복소다양체'
     url: /ko/math/complex_geometry/complex_manifolds
+- id: complex_inner_product_space
+  en: complex inner product space
+  ko: 복소내적공간
+  primary: ko
+  defs:
+  - label: '[선형대수학] §복소내적공간'
+    url: /ko/math/linear_algebra/complex_inner_product_spaces
 - id: complex_manifold
   en: complex manifold
   ko: 복소다양체
@@ -2305,6 +2312,13 @@ C:
   defs:
   - label: '[표현론] §유한군의 표현론'
     url: /ko/math/representation_theory/representations_of_finite_groups
+- id: conjugate_transpose
+  en: conjugate transpose
+  ko: 켤레전치
+  primary: en
+  defs:
+  - label: '[선형대수학] §복소내적공간'
+    url: /ko/math/linear_algebra/complex_inner_product_spaces
 - id: conjugation
   en: conjugation
   ko: 켤레
@@ -4998,6 +5012,13 @@ H:
   defs:
   - label: '[복소기하학] §Kähler 다양체'
     url: /ko/math/complex_geometry/kahler_manifolds
+- id: hermitian_inner_product
+  en: Hermitian inner product
+  ko: 에르미트 내적
+  primary: en
+  defs:
+  - label: '[선형대수학] §복소내적공간'
+    url: /ko/math/linear_algebra/complex_inner_product_spaces
 - id: hermitian_line_bundle
   en: hermitian line bundle
   ko: 에르미트 선다발
@@ -5300,6 +5321,13 @@ H:
   defs:
   - label: '[미적분학] §함수의 극한'
     url: /ko/math/calculus/functions_and_limits
+- id: householder_reflection
+  en: householder reflection
+  ko: 하우스홀더 반사
+  primary: en
+  defs:
+  - label: '[선형대수학] §복소내적공간'
+    url: /ko/math/linear_algebra/complex_inner_product_spaces
 - id: hurewicz_fibration
   en: Hurewicz fibration
   ko: 후레비치 올뭉치
@@ -7454,6 +7482,8 @@ M:
   defs:
   - label: '[선형대수학] §최소제곱법'
     url: /ko/math/linear_algebra/least_squares_method
+  - label: '[선형대수학] §특이값 분해'
+    url: /ko/math/linear_algebra/singular_value_decomposition
   see:
   - label: Pseudoinverse
     id: pseudoinverse
@@ -7780,6 +7810,8 @@ N:
     url: /ko/math/linear_algebra/inner_product_spaces
   - label: '[환론] §정역'
     url: /ko/math/ring_theory/integral_domains
+  - label: '[선형대수학] §복소내적공간'
+    url: /ko/math/linear_algebra/complex_inner_product_spaces
 - id: normal
   en: normal
   ko: 정규스킴
@@ -9013,6 +9045,13 @@ P:
   - label: '[위상수학] §준층'
     url: /ko/math/topology/presheaves
 Q:
+- id: qr_decomposition
+  en: qr decomposition
+  ko: QR 분해
+  primary: ko
+  defs:
+  - label: '[선형대수학] §복소내적공간'
+    url: /ko/math/linear_algebra/complex_inner_product_spaces
 - id: quadratic_relation
   en: Quadratic relation
   ko: 이차 관계식
@@ -9987,6 +10026,13 @@ S:
   defs:
   - label: '[집합론] §서수와 정렬집합'
     url: /ko/math/set_theory/ordinals
+- id: self-adjoint
+  en: self-adjoint
+  ko: 자기수반
+  primary: en
+  defs:
+  - label: '[선형대수학] §스펙트럼 정리'
+    url: /ko/math/linear_algebra/spectral_theorem
 - id: semi-direct_product
   en: semi-direct product
   ko: 반직접곱
@@ -10429,6 +10475,13 @@ S:
   see:
   - label: Smooth point
     id: smooth_point
+- id: singular_value
+  en: singular value
+  ko: 특이값
+  primary: ko
+  defs:
+  - label: '[선형대수학] §특이값 분해'
+    url: /ko/math/linear_algebra/singular_value_decomposition
 - id: skeletal_category
   en: skeletal category
   ko: 뼈대 카테고리
