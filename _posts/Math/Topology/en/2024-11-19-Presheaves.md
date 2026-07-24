@@ -194,7 +194,7 @@ The $\ker\phi$ defined above is an (abelian) presheaf on $X$.
 ::: Proof
 This is immediate from the following diagram and the universal property of kernels:
 
-![presheaf_kernel-2](/assets/images/Math/Topology/Presheaves-2.png){:style="width:22.77em" class="invert" .align-center}
+![presheaf_kernel-2](/assets/images/Math/Topology/Presheaves-2.svg){:style="width:21.30em" class="invert" .align-center}
 :::
 
 In the same way, one can define *presheaf cokernel*, *presheaf image*, *presheaf coimage*, *presheaf quotient*, and so on. Therefore, the category $\PSh(X;\Ab)$ of abelian presheaves on a given topological space $X$ is an abelian category.

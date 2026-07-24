@@ -118,7 +118,7 @@ and since $S(g)\subseteq S(f)\iff D(f)\subseteq D(g)$, from the equivalence ($\a
 
 That the diagram in the claim commutes is then obvious from considering the following diagram
 
-![universal_property-5](/assets/images/Math/Scheme_Theory/Affine_Schemes-6.png){:style="width:18.59em" class="invert" .align-center}
+![universal_property-5](/assets/images/Math/Scheme_Theory/Affine_Schemes-6.svg){:style="width:17.14em" class="invert" .align-center}
 
 namely, from
 
@@ -246,7 +246,7 @@ $$\mathcal{O}_{\Spec A, \mathfrak{p}}=\varinjlim_{D(f)\ni\mathfrak{p}} \mathcal{
 
 On the other hand, since $\mathfrak{p}\in D(f)\iff f\not\in \mathfrak{p}$, we obtain the following diagram
 
-![stalk_and_localization-2](/assets/images/Math/Scheme_Theory/Affine_Schemes-8.png){:style="width:38.50em" class="invert" .align-center}
+![stalk_and_localization-2](/assets/images/Math/Scheme_Theory/Affine_Schemes-8.svg){:style="width:37.01em" class="invert" .align-center}
 
 and therefore showing the given isomorphism is the same as showing the following algebraic isomorphism
 
@@ -328,7 +328,7 @@ $$(\Spec \phi)(\mathfrak{q})=\phi^{-1}(\mathfrak{q})=\varphi(\mathfrak{q})$$
 
 First, taking $f=1$ in [Lemma 8](#lem8), we obtain the following diagram
 
-![faithful](/assets/images/Math/Scheme_Theory/Affine_Schemes-9.png){:style="width:40.92em" class="invert" .align-center}
+![faithful](/assets/images/Math/Scheme_Theory/Affine_Schemes-9.svg){:style="width:39.41em" class="invert" .align-center}
 
 In this diagram, the vertical maps are all isomorphisms, and we know that all faces except the following face
 
@@ -351,7 +351,7 @@ For any locally ringed space $(X, \mathcal{O}_X)$, we define the *global section
 
 A notable fact from the proof of [Proposition 11](#prop11) is that the assumption that $(X, \mathcal{O}_X)$ is an affine scheme was unnecessary. That is, even if we drop the assumption $(X, \mathcal{O}_X)\cong(\Spec B, \mathcal{O}_{\Spec B})$ and use the following diagram instead of the diagram in [Proposition 11](#prop11)
 
-![adjoint](/assets/images/Math/Scheme_Theory/Affine_Schemes-11.png){:style="width:36.41em" class="invert" .align-center}
+![adjoint](/assets/images/Math/Scheme_Theory/Affine_Schemes-11.svg){:style="width:34.92em" class="invert" .align-center}
 
 we can carry out a similar argument, and in this case the $B$ in the conclusion is replaced by $\Gamma(X, \mathcal{O}_X)$. Since $\mathcal{O}_X$ is data determined by $X$ anyway, abbreviating this as $\Gamma(X)$, we obtain the following theorem.
 

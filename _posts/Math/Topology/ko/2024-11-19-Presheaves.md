@@ -203,7 +203,7 @@ $$\left(\prod_{i\in I} \mathcal{F}_i\right)(U)=\prod_{i\in I} \mathcal{F}_i(U)$$
 ::: 증명
 다음의 diagram
 
-![presheaf_kernel-2](/assets/images/Math/Topology/Presheaves-2.png){:style="width:22.77em" class="invert" .align-center}
+![presheaf_kernel-2](/assets/images/Math/Topology/Presheaves-2.svg){:style="width:21.30em" class="invert" .align-center}
 
 와 kernel의 universal property에 의해 자명하다. 
 :::

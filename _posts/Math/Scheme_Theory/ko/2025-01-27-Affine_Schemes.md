@@ -120,7 +120,7 @@ $$\frac{g}{1}\frac{a}{f^n}=1\qquad\text{in $S_f^{-1}A$}$$
 
 이 존재한다. 그럼 주장의 diagram이 commute한다는 것은 다음 diagram
 
-![universal_property-5](/assets/images/Math/Scheme_Theory/Affine_Schemes-6.png){:style="width:18.59em" class="invert" .align-center}
+![universal_property-5](/assets/images/Math/Scheme_Theory/Affine_Schemes-6.svg){:style="width:17.14em" class="invert" .align-center}
 
 을 생각하면 자명한데, 즉
 
@@ -248,7 +248,7 @@ $$\mathcal{O}_{\Spec A, \mathfrak{p}}=\varinjlim_{D(f)\ni\mathfrak{p}} \mathcal{
 
 이 성립한다. 한편 $\mathfrak{p}\in D(f)\iff f\not\in \mathfrak{p}$이므로, 우리는 다음의 diagram
 
-![stalk_and_localization-2](/assets/images/Math/Scheme_Theory/Affine_Schemes-8.png){:style="width:38.50em" class="invert" .align-center}
+![stalk_and_localization-2](/assets/images/Math/Scheme_Theory/Affine_Schemes-8.svg){:style="width:37.01em" class="invert" .align-center}
 
 을 얻고, 따라서 주어진 isomorphism을 보이는 것은 단순히 다음의 대수적인 isomorphism
 
@@ -332,7 +332,7 @@ $$(\Spec \phi)(\mathfrak{q})=\phi^{-1}(\mathfrak{q})=\varphi(\mathfrak{q})$$
 
 임을 보이자. 우선 [보조정리 8](#lem8)에서 $f=1$로 두면 우리는 다음의 diagram
 
-![faithful](/assets/images/Math/Scheme_Theory/Affine_Schemes-9.png){:style="width:40.92em" class="invert" .align-center}
+![faithful](/assets/images/Math/Scheme_Theory/Affine_Schemes-9.svg){:style="width:39.41em" class="invert" .align-center}
 
 을 얻는다. 이 diagram에서 수직방향 함수들은 모두 isomorphism들이고, 다음의 면
 
@@ -355,7 +355,7 @@ $$\mathcal{O}_{\Spec A}(A)=\mathcal{O}_{\Spec A}(D(1))\cong A$$
 
 [명제 11](#prop11)의 증명에서 주목할 만한 사실은 $(X, \mathcal{O}_X)$가 affine scheme이라는 가정은 필요가 없다는 사실이다. 즉, $(X, \mathcal{O}_X)\cong(\Spec B, \mathcal{O}_{\Spec B})$라는 가정을 버리고 [명제 11](#prop11)의 diagram 대신 다음의 diagram
 
-![adjoint](/assets/images/Math/Scheme_Theory/Affine_Schemes-11.png){:style="width:36.41em" class="invert" .align-center}
+![adjoint](/assets/images/Math/Scheme_Theory/Affine_Schemes-11.svg){:style="width:34.92em" class="invert" .align-center}
 
 을 사용하여도 비슷한 논증을 해 나갈 수 있으며, 이 때 결론의 $B$는 $\Gamma(X, \mathcal{O}_X)$로 바뀌게 된다. 어차피 $\mathcal{O}_X$는 $X$에 의해 결정되는 데이터이므로, 이를 간략히 $\Gamma(X)$로만 표기하면 이로부터 다음의 정리를 얻는다.
 
