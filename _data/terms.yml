@@ -1003,6 +1003,13 @@ B:
   see:
   - label: Rees algebra
     id: rees_algebra
+- id: borel_subalgebra
+  en: Borel subalgebra
+  ko: 보렐 부분대수
+  primary: en
+  defs:
+  - label: '[리 이론] §최고 무게 가군'
+    url: /ko/math/lie_theory/highest_weight_modules
 - id: borel_subgroup
   en: Borel subgroup
   ko: 보렐 부분군
@@ -1145,6 +1152,13 @@ C:
   defs:
   - label: '[대수다양체] §표준선다발'
     url: /ko/math/algebraic_varieties/canonical_bundle
+- id: canonical_filtration
+  en: canonical filtration
+  ko: 표준 여과
+  primary: en
+  defs:
+  - label: '[리 이론] §보편 포락 대수'
+    url: /ko/math/lie_theory/universal_enveloping_algebra
 - id: canonical_holomorphic_volume_form
   en: canonical holomorphic volume form
   ko: 표준 정칙 부피 형식
@@ -1476,6 +1490,13 @@ C:
   defs:
   - label: '[대수다양체] §천 특성류'
     url: /ko/math/algebraic_varieties/chern_classes
+- id: chevalley_basis
+  en: Chevalley basis
+  ko: 슈발레 기저
+  primary: en
+  defs:
+  - label: '[리 이론] §콤팩트 실형식'
+    url: /ko/math/lie_theory/compact_real_form
 - id: chevalley_serre_presentation
   en: Chevalley–Serre presentation
   ko: 슈발레-세르 표시
@@ -1884,6 +1905,8 @@ C:
   defs:
   - label: '[대수적 구조] §가환군'
     url: /ko/math/algebraic_structures/abelian_groups
+  - label: '[리 이론] §보편 포락 대수'
+    url: /ko/math/lie_theory/universal_enveloping_algebra
 - id: commute
   en: commute
   ko: 가환
@@ -1924,6 +1947,13 @@ C:
   defs:
   - label: '[리 이론] §Borel subgroup'
     url: /ko/math/lie_theory/borel_subgroup
+- id: compact_real_form
+  en: compact real form
+  ko: 콤팩트 실형식
+  primary: en
+  defs:
+  - label: '[리 이론] §콤팩트 실형식'
+    url: /ko/math/lie_theory/compact_real_form
 - id: compactifiable
   en: compactifiable
   ko: 옹골화 가능
@@ -2140,6 +2170,13 @@ C:
   defs:
   - label: '[복소기하학] §복소다양체'
     url: /ko/math/complex_geometry/complex_manifolds
+- id: complexification
+  en: complexification
+  ko: 복소화
+  primary: ko
+  defs:
+  - label: '[리 이론] §콤팩트 실형식'
+    url: /ko/math/lie_theory/compact_real_form
 - id: complexified_tangent_space
   en: complexified tangent space
   ko: 복소화 접공간
@@ -2222,6 +2259,13 @@ C:
   defs:
   - label: '[표현론] §유한군의 표현론'
     url: /ko/math/representation_theory/representations_of_finite_groups
+- id: conjugation
+  en: conjugation
+  ko: 켤레
+  primary: ko
+  defs:
+  - label: '[리 이론] §콤팩트 실형식'
+    url: /ko/math/lie_theory/compact_real_form
 - id: connected
   en: connected
   ko: 연결
@@ -3378,6 +3422,13 @@ D:
   defs:
   - label: '[미적분학] §멱급수'
     url: /ko/math/calculus/power_series
+- id: dominant_integral
+  en: dominant integral
+  ko: 지배적 정수
+  primary: en
+  defs:
+  - label: '[리 이론] §최고 무게 가군'
+    url: /ko/math/lie_theory/highest_weight_modules
 - id: double_complex
   en: double complex
   ko: 이중사슬복합체
@@ -4908,6 +4959,20 @@ H:
     url: /ko/math/calculus/partial_derivatives
   - label: '[리만기하학] §접속'
     url: /ko/math/riemannian_geometry/connection
+- id: highest_weight
+  en: highest weight
+  ko: 최고무게
+  primary: en
+  defs:
+  - label: '[리 이론] §최고 무게 가군'
+    url: /ko/math/lie_theory/highest_weight_modules
+- id: highest_weight_vector
+  en: highest weight vector
+  ko: 최고무게 벡터
+  primary: en
+  defs:
+  - label: '[리 이론] §최고 무게 가군'
+    url: /ko/math/lie_theory/highest_weight_modules
 - id: hodge_de_rham_laplacian
   en: Hodge–de Rham Laplacian
   ko: 호지-드람 라플라스 작용소
@@ -5806,6 +5871,13 @@ I:
   defs:
   - label: '[가환대수학] §으뜸분해'
     url: /ko/math/commutative_algebra/primary_decomposition
+- id: irreducible_highest_weight_module
+  en: irreducible highest weight module
+  ko: 기약 최고무게 가군
+  primary: en
+  defs:
+  - label: '[리 이론] §최고 무게 가군'
+    url: /ko/math/lie_theory/highest_weight_modules
 - id: irreducible_representation
   en: irreducible representation
   ko: 기약표현
@@ -7325,6 +7397,8 @@ M:
   defs:
   - label: '[선형대수학] §특성다항식'
     url: /ko/math/linear_algebra/characteristic_polynomial
+  - label: '[리 이론] §최고 무게 가군'
+    url: /ko/math/lie_theory/highest_weight_modules
 - id: musical_isomorphism
   en: musical isomorphism
   ko: 음악 동형사상
@@ -9058,6 +9132,13 @@ R:
   defs:
   - label: '[대수다양체] §저우 군'
     url: /ko/math/algebraic_varieties/chow_groups
+- id: real_form
+  en: real form
+  ko: 실형식
+  primary: en
+  defs:
+  - label: '[리 이론] §콤팩트 실형식'
+    url: /ko/math/lie_theory/compact_real_form
 - id: real_part
   en: real part
   ko: 실수부
@@ -11119,6 +11200,13 @@ T:
   defs:
   - label: '[복소해석학] §복소적분'
     url: /ko/math/complex_analysis/complex_integration
+- id: theorem_of_the_highest_weight
+  en: theorem of the highest weight
+  ko: 최고 무게 정리
+  primary: ko
+  defs:
+  - label: '[리 이론] §최고 무게 가군'
+    url: /ko/math/lie_theory/highest_weight_modules
 - id: topological_manifold
   en: topological manifold
   ko: 위상다양체
@@ -11555,6 +11643,13 @@ U:
   defs:
   - label: '[범주론] §표현가능한 함자'
     url: /ko/math/category_theory/representable_functors
+- id: universal_enveloping_algebra
+  en: universal enveloping algebra
+  ko: 보편 포락 대수
+  primary: ko
+  defs:
+  - label: '[리 이론] §보편 포락 대수'
+    url: /ko/math/lie_theory/universal_enveloping_algebra
 - id: universal_property
   en: universal property
   ko: 보편성질
@@ -11726,6 +11821,13 @@ V:
   defs:
   - label: '[층론] §Verdier 쌍대성'
     url: /ko/math/sheaf_theory/verdier_duality
+- id: verma_module
+  en: Verma module
+  ko: 베르마 가군
+  primary: en
+  defs:
+  - label: '[리 이론] §최고 무게 가군'
+    url: /ko/math/lie_theory/highest_weight_modules
 - id: vertical_asymptote
   en: vertical asymptote
   ko: 수직점근선
@@ -11793,6 +11895,13 @@ W:
   defs:
   - label: '[리 이론] §원환면의 작용'
     url: /ko/math/lie_theory/torus_action
+- id: weight_module
+  en: weight module
+  ko: 무게 가군
+  primary: en
+  defs:
+  - label: '[리 이론] §최고 무게 가군'
+    url: /ko/math/lie_theory/highest_weight_modules
 - id: weight_space
   en: weight space
   ko: 무게 공간

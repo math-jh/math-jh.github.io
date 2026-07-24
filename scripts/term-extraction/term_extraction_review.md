@@ -5080,3 +5080,7 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 ## term_extract_worker 2026-07-24 12:00
 
 - _posts/Math/Lie_Theory/ko/2026-02-28-Borel_Subgroup.md: 병기 필요 'Borel subalgebra' — 소스 없음 (KMS exact ✗, 위키 ko ✗)
+
+## term_extract_worker 2026-07-24 16:00
+
+- _posts/Math/Lie_Theory/ko/2026-06-21-Highest_Weight_Modules.md: 병기 필요 'weight          의 weight space' — 위키 ko 문서 'P의 거짓' — 병기형 도출 필요
