@@ -114,17 +114,17 @@ $$\lvert D^\times\rvert=\lvert Z(D^\times)\rvert+\sum_{x}\bigl[D^\times:C_{D^\ti
 
 이며, 여기서 $C_{D^\times}(x)$는 [\[대수적 구조\] §군의 작용, ⁋정의 12](/ko/math/algebraic_structures/group_actions#def12) 직후에 정의한 $x$의 centralizer이고 합은 $Z(D^\times)$에 속하지 않는 모든 representative에 대한 것이다. 또, $Z(D^\times)=Z^\times=Z\setminus\{0\}$이므로 $\lvert Z(D^\times)\rvert=q-1$이다.
 
-이제 각 $x\in D^\times$에 대하여 $C_D(x)=\{y\in D: xy=yx\}$는 $D$의 부분 division ring이고 $Z$를 포함한다. 따라서 $C_D(x)$는 $Z$ 위의 vector space이며, $\lvert Z\rvert=q$이므로 $\lvert C_D(x)\rvert=q^{d(x)}$ 꼴이다. 또한 $D$가 $C_D(x)$ 위의 vector space이므로 $d(x)\mid n$이다. $C_{D^\times}(x)=C_D(x)\setminus\{0\}$이므로
+이제 각 $x\in D^\times$에 대하여 $C_D(x)=\{y\in D: xy=yx\}$는 $D$의 부분 division ring이고 $Z$를 포함한다. 이러한 경우 우리는 $C_D(x)$가 $Z$-vector space라는 것을 보았으며, $\lvert Z\rvert=q$이므로 $\lvert C_D(x)\rvert=q^{d(x)}$ 꼴이다. 또한 $D$가 $C_D(x)$ 위의 vector space이므로 $d(x)\mid n$이다. $C_{D^\times}(x)=C_D(x)\setminus\{0\}$이므로
 
 $$\bigl[D^\times:C_{D^\times}(x)\bigr]=\frac{q^n-1}{q^{d(x)}-1}$$
 
-이고, 이 수가 정수이려면 (그리고 실제로 정수이다) $d(x)\mid n$이어야 한다. $x$가 center에 속하지 않으면 $C_D(x)\neq D$이므로 $d(x)<n$이다. 따라서 class equation은
+이고, 이 수가 정수이려면 $d(x)\mid n$이어야 한다. 이제 $x$가 center에 속하지 않으면 $C_D(x)\neq D$이므로 $d(x)<n$이다. 따라서 class equation은
 
 $$q^n-1=(q-1)+\sum_{x}\frac{q^n-1}{q^{d(x)}-1}\tag{$\ast$}$$
 
-의 형태가 되며, 합의 각 $d(x)$는 $n$의 진약수이다.
+의 형태가 되며, 여기서 합의 각 $d(x)$는 $n$의 진약수이다.
 
-이제 $n\geq 2$라 가정하고 모순을 끌어낸다. Cyclotomic polynomial $\Phi_n(\x)$는 $q^n-1$을 나누며, 각 진약수 $d=d(x)<n$에 대해 $\frac{q^n-1}{q^d-1}$도 나눈다. 따라서 $(\ast)$에서 $\Phi_n(q)$는 좌변 $q^n-1$과 우변의 합 부분을 모두 나누므로, 그 차인 $q-1$도 나눈다. 즉 $\Phi_n(q)\mid q-1$이고 $q-1\geq 1$이므로 $\lvert\Phi_n(q)\rvert\leq q-1$이다. 그러나 [명제 4](#prop4)에 의해 $n\geq 2$이면 $\lvert\Phi_n(q)\rvert>q-1$이므로 모순이다.
+이제 $n\geq 2$라 가정하고 모순을 얻자. Cyclotomic polynomial $\Phi_n(\x)$는 $q^n-1$을 나누며, 각 진약수 $d=d(x)<n$에 대해 $\frac{q^n-1}{q^d-1}$도 나눈다. 따라서 $(\ast)$에서 $\Phi_n(q)$는 좌변 $q^n-1$과 우변의 합 부분을 모두 나누므로, 그 차인 $q-1$도 나눈다. 즉 $\Phi_n(q)\mid q-1$이고 $q-1\geq 1$이므로 $\lvert\Phi_n(q)\rvert\leq q-1$이다. 그러나 [명제 4](#prop4)에 의해 $n\geq 2$이면 $\lvert\Phi_n(q)\rvert>q-1$이므로 모순이다.
 
 따라서 $n=1$이고 $D=Z$이다. $Z$는 commutative하므로 $D$는 field이다.
 :::

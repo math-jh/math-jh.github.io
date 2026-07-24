@@ -324,6 +324,8 @@ $$\mathcal{O}_{X_y,x}=(B\otimes_A\kappa(\mathfrak{p}))_\mathfrak{q}\cong B_\math
 
 이 등식이 이 글의 도입에서 본 family의 non-flatness를 다시 한 번 설명해준다. 해당 예시에서 $X=\Spec \mathbb{K}[t,\x]/(t\x)$의 원점 $x$를 생각하면 $X$의 두 성분이 모두 원점을 지나고 각각 $1$차원이므로 $\dim \mathcal{O}_{X,x}=1$이다. 또 $y=f(x)$는 $\mathbb{A}^1_\mathbb{K}$의 원점이므로 $\dim \mathcal{O}_{Y,y}=1$이고, fiber $X_y=\mathbb{A}^1_\mathbb{K}$의 원점에서의 local ring도 $1$차원이다. 등식이 요구하는 것은 $1=1+1$이므로 이 morphism은 flat일 수 없다. [명제 14](#prop14)의 언어로 하면 이는 $x$를 지나는 $\x$-축 성분이 $t=0$ 위의 fiber에 통째로 갇혀 base 방향으로 뻗지 못하기 때문이며, 이렇게 한 fiber에 갇힌 성분은 fiber 방향 차원 $1$은 우변에 보태주지만 그 위에 얹힐 base 방향을 $X$ 안에 남기지 않으므로 좌변 $\dim \mathcal{O}_{X,x}$가 $2$에 이르지 못한다. 
 
+같은 예시를 fiber 쪽에서 보면 차원이 어떻게 변하는지가 드러난다. $t=a\neq 0$ 위에서는 $t$가 가역이므로 $t\x=0$이 $\x=0$을 강제하여 fiber가 한 점이고 그 차원은 $0$인 반면, $t=0$ 위의 fiber는 $\Spec \mathbb{K}[\x]$ 전체이므로 차원이 $1$이다. 곧 fiber의 차원이 $\mathbb{A}^1_\mathbb{K}$의 닫힌집합 $\{t=0\}$ 위에서 $0$으로부터 $1$로 튀어오른다. [명제 15](#prop15)가 flat morphism에 대하여 요구하는 것은 이러한 초과분이 없다는 것이므로, 차원이 튀어오르는 자리에서 flatness가 깨지는 것은 우연이 아니다.
+
 $X$와 $Y$가 field $\mathbb{K}$ 위의 finite type integral scheme인 경우에는 closed point에서 $\dim \mathcal{O}_{X,x}=\dim X$가 성립하므로, [명제 15](#prop15)는 익숙한 형태
 
 $$\dim X_y=\dim X-\dim Y$$
@@ -354,9 +356,42 @@ $$\Tor_1^{\mathcal{O}_{Y,y}}(\kappa(y), \mathcal{O}_{X,x})=0$$
 $Y$가 locally Noetherian이므로 $A=\mathcal{O}_{Y,y}$는 Noetherian local ring이고, $f$가 locally of finite type이므로 $X$ 또한 locally Noetherian이어서 $E=\mathcal{O}_{X,x}$도 Noetherian local ring이다. $f$가 유도하는 $A \rightarrow E$는 국소사상이므로 $\mathfrak{m}_yE\subseteq \mathfrak{m}_x$를 만족한다. 이제 $M=E$로 두면 $M$은 finitely generated $E$-module이므로 [\[가환대수학\] §평탄성과 국소화, ⁋정리 1](/ko/math/commutative_algebra/local_criterion_for_flatness#thm1)의 가정이 모두 충족되며, 그 결론이 정확히 주장하는 동치이다.
 :::
 
-[명제 17](#prop17)이 한 점에서의 flatness를 판정한다면, 그 판정을 통과하는 점들이 $X$ 안에서 어떻게 놓이는지 물을 수 있다. [명제 9](#prop9)가 base $Y$에서 flatness가 성립하는 좋은 열린집합을 하나 찾아준 것이었다면, 다음은 flatness 자체가 $X$ 위에서 열린 조건임을 말해준다.
+[명제 17](#prop17)이 한 점에서의 flatness를 판정한다면, 그 판정을 통과하는 점들이 $X$ 안에서 어떻게 놓이는지가 다음 문제이다. 이를 위상적으로 다루려면 정수값을 갖는 불변량이 공간 위에서 어떻게 변하는지를 재는 언어가 먼저 필요하다.
 
-::: 명제 18
+::: 정의 18
+Topological space $X$ 위의 함수 $f: X \rightarrow \mathbb{Z}$가 *upper semicontinuous*라는 것은 임의의 $i\in \mathbb{Z}$에 대하여 집합
+
+$$\{x\in X: f(x)\leq i\}$$
+
+가 $X$의 열린집합인 것이다. 마찬가지로 $f$가 *lower semicontinuous*라는 것은 임의의 $i\in \mathbb{Z}$에 대하여 $\{x\in X: f(x)\geq i\}$가 $X$의 열린집합인 것이다.
+:::
+
+$\mathbb{Z}$는 이산공간이므로 정수값 함수에 통상적인 의미의 연속성을 요구하면 국소상수라는 지나치게 강한 조건이 된다. 그런데 우리가 다루는 불변량들은 rank나 차원처럼 정수값이면서도 국소상수이지 않은 것들이므로, 이들을 재려면 연속성을 한쪽 방향으로만 요구해야 한다. Zariski topology에서 닫힌집합이 특수한 자리이고 열린집합이 일반적인 자리이므로, upper semicontinuous라는 조건은 불변량이 일반적인 자리에서 작고 특수한 자리로 갈수록 튀어오르기만 한다는 것을 뜻한다. Lower semicontinuous는 그 반대로 특수한 자리에서 떨어지기만 한다는 것이다. 도입에서 본 family의 fiber 차원이 $t=0$ 위에서 튀어오르는 것을 [명제 15](#prop15) 뒤에서 이미 관찰하였는데, 그것이 이러한 거동의 전형적인 예이다.
+
+Finitely generated module을 생성하는 데 필요한 원소의 개수가 이러한 불변량의 첫 예시이다.
+
+::: 명제 19
+Ring $A$와 finitely generated $A$-module $M$에 대하여 함수 $\mu:\Spec A \rightarrow \mathbb{Z}$를
+
+$$\mu(\mathfrak{p})=\dim_{\kappa(\mathfrak{p})}M\otimes_A\kappa(\mathfrak{p})$$
+
+로 두면 $\mu$는 upper semicontinuous이다.
+:::
+::: 증명
+$M\otimes_A\kappa(\mathfrak{p})=M_\mathfrak{p}/\mathfrak{p}M_\mathfrak{p}$이고 $\mathfrak{p}A_\mathfrak{p}$가 $A_\mathfrak{p}$의 Jacobson radical이므로, [\[가환대수학\] §정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8)에 의하여 $\mu(\mathfrak{p})$는 $M_\mathfrak{p}$를 생성하는 원소의 최소 개수와 같다.
+
+$\mathfrak{p}\in \Spec A$를 고정하고 $r=\mu(\mathfrak{p})$라 하자. $M_\mathfrak{p}$를 생성하는 $r$개의 원소에 분모를 곱하면 $M$의 원소 $m_1,\ldots, m_r$으로서 그 image가 $M_\mathfrak{p}$를 생성하는 것들을 얻는다. 이들이 정의하는 $\varphi: A^r \rightarrow M$의 cokernel을 $N$이라 하면 $N$은 $M$의 quotient이므로 finitely generated이고, $\varphi_\mathfrak{p}$가 surjective이므로 $N_\mathfrak{p}=0$이다.
+
+$N$의 generator $n_1,\ldots, n_k$ 각각에 대하여 $s_jn_j=0$을 만족하는 $s_j\notin \mathfrak{p}$가 존재하며, $\mathfrak{p}$가 prime이므로 $f=s_1\cdots s_k$ 또한 $\mathfrak{p}$에 속하지 않는다. 그럼 $fN=0$이므로 임의의 $\mathfrak{q}\in D(f)$에 대하여 $N_\mathfrak{q}=0$이고, 곧 $m_1,\ldots, m_r$의 image가 $M_\mathfrak{q}$를 생성하여 $\mu(\mathfrak{q})\leq r$이다.
+
+따라서 $\mu(\mathfrak{p})\leq i$인 임의의 $\mathfrak{p}$에 대하여 $\mathfrak{p}\in D(f)\subseteq \{\mu\leq r\}\subseteq \{\mu\leq i\}$이므로, $\{\mu\leq i\}$는 열린집합이다.
+:::
+
+이 서술의 앞뒤를 뒤집으면 lower semicontinuity가 나온다. $A$가 Noetherian이면 $M$은 유한한 presentation $A^m\overset{\psi}{\rightarrow}A^n \rightarrow M \rightarrow 0$을 가지며, tensor product가 right exact이므로 각 점에서 $\mu(\mathfrak{p})=n-\rank(\psi\otimes\kappa(\mathfrak{p}))$이고, 따라서 [명제 19](#prop19)는 행렬 $\psi$의 rank가 lower semicontinuous라는 것과 같은 내용이다. Rank가 $r$ 이상인 자리는 $\psi$의 $r\times r$ minor 가운데 하나가 소멸하지 않는 자리이므로 명시적으로 열려 있고, 이 minor들이 생성하는 ideal이 곧 $M$의 Fitting ideal이다. 곧 $\mu$가 튀어오르는 닫힌집합은 minor의 소멸이 정의하는 집합이며, upper와 lower 어느 쪽으로 부르든 밑에 깔린 것은 이 하나의 determinantal 자료이다.
+
+이 그림이 flatness와 만나는 지점이 아래의 [명제 20](#prop20)이다. $A$가 Noetherian이고 $M$이 finitely generated이면 $M_\mathfrak{p}$가 free인 자리에서 $\mu$가 국소상수가 되므로, 자유로운 자리의 열림은 [명제 19](#prop19)가 주는 닫힌 jumping locus의 여집합으로 읽힌다. 그런데 [명제 20](#prop20)의 $f$는 finite가 아니라 locally of finite presentation일 뿐이어서 $\mathcal{O}_{X,x}$는 $\mathcal{O}_{Y,f(x)}$ 위의 finitely generated module이 아니고, 그래서 presentation 하나에 위 논법을 먹이는 것으로 끝나지 않는다. 판정이 module의 자유성에서 complex의 exactness로 한 층 올라가며, 그것을 다시 minor들이 생성하는 ideal의 조건으로 읽어내는 것이 아래 증명의 얼개이다.
+
+::: 명제 20
 Morphism $f: X \rightarrow Y$가 locally of finite presentation이면, $\mathcal{O}_{X,x}$가 $\mathcal{O}_{Y,f(x)}$-flat인 점 $x\in X$들의 집합은 $X$의 열린집합이다.
 :::
 ::: 증명
