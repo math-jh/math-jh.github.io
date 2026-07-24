@@ -165,6 +165,13 @@ A:
   defs:
   - label: '[범주론] §아벨 카테고리'
     url: /ko/math/category_theory/abelian_categories
+- id: adjoint
+  en: adjoint
+  ko: 수반
+  primary: en
+  defs:
+  - label: '[선형대수학] §내적공간'
+    url: /ko/math/linear_algebra/inner_product_spaces
 - id: adjoint_representation
   en: adjoint representation
   ko: 수반 표현
@@ -1857,6 +1864,13 @@ C:
   see:
   - label: Homology
     id: homology
+- id: coisotropic
+  en: coisotropic
+  ko: 여등방적
+  primary: en
+  defs:
+  - label: '[선형대수학] §쌍선형형식'
+    url: /ko/math/linear_algebra/bilinear_form
 - id: coisotropic_subspace
   en: coisotropic subspace
   ko: 여등방 부분공간
@@ -6039,6 +6053,13 @@ I:
   defs:
   - label: '[대수적 위상수학] §피복공간'
     url: /ko/math/algebraic_topology/covering_spaces
+- id: isotropic
+  en: isotropic
+  ko: 등방적
+  primary: en
+  defs:
+  - label: '[선형대수학] §쌍선형형식'
+    url: /ko/math/linear_algebra/bilinear_form
 - id: isotropic_subspace
   en: isotropic subspace
   ko: 등방 부분공간
@@ -6293,6 +6314,8 @@ L:
   defs:
   - label: '[유도대수기하학] §Shifted symplectic 구조'
     url: /ko/math/derived_algebraic_geometry/shifted_symplectic_structures
+  - label: '[선형대수학] §쌍선형형식'
+    url: /ko/math/linear_algebra/bilinear_form
 - id: lagrangian_subspace
   en: Lagrangian subspace
   ko: 라그랑지안 부분공간
@@ -9152,6 +9175,8 @@ R:
     url: /ko/math/commutative_algebra/properties_of_localization
   - label: '[리 이론] §가해 Lie algebra와 nilpotent Lie algebra'
     url: /ko/math/lie_theory/solvable_nilpotent_lie_algebras
+  - label: '[선형대수학] §쌍선형형식'
+    url: /ko/math/linear_algebra/bilinear_form
   see:
   - label: Nilradical
     id: nilradical
@@ -9337,6 +9362,8 @@ R:
   defs:
   - label: '[집합론] §동치관계'
     url: /ko/math/set_theory/equivalence_relations
+  - label: '[선형대수학] §쌍선형형식'
+    url: /ko/math/linear_algebra/bilinear_form
   see:
   - label: Binary relation
     id: binary_relation
