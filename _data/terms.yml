@@ -1278,6 +1278,13 @@ C:
   see:
   - label: Weil divisor
     id: weil_divisor
+- id: casimir_element
+  en: casimir element
+  ko: 카시미르 원소
+  primary: en
+  defs:
+  - label: '[리 이론] §Weyl 완전가약성 정리'
+    url: /ko/math/lie_theory/weyl_complete_reducibility
 - id: casimir_operator
   en: Casimir operator
   ko: 카시미르 연산자
@@ -2081,6 +2088,13 @@ C:
   defs:
   - label: '[위상수학] §하우스도르프 공간'
     url: /ko/math/topology/Hausdorff_spaces
+- id: completely_reducible
+  en: completely reducible
+  ko: 완전가약
+  primary: ko
+  defs:
+  - label: '[리 이론] §Weyl 완전가약성 정리'
+    url: /ko/math/lie_theory/weyl_complete_reducibility
 - id: completely_regular_hausdorff_space
   en: completely regular Hausdorff space
   ko: 완전 정칙 하우스도르프 공간
@@ -5783,6 +5797,13 @@ I:
   defs:
   - label: '[리 이론] §Killing 형식과 Cartan 판정법'
     url: /ko/math/lie_theory/killing_form_and_cartan_criterion
+- id: invariant
+  en: invariant
+  ko: 불변
+  primary: en
+  defs:
+  - label: '[리 이론] §Weyl 완전가약성 정리'
+    url: /ko/math/lie_theory/weyl_complete_reducibility
 - id: invariant_basis_number_property
   en: invariant basis number property
   ko: 불변 기저수 성질
