@@ -11697,6 +11697,13 @@ W:
   see:
   - label: Stronger topology
     id: stronger_topology
+- id: weight
+  en: weight
+  ko: 무게
+  primary: en
+  defs:
+  - label: '[리 이론] §원환면의 작용'
+    url: /ko/math/lie_theory/torus_action#def4
 - id: weight_decomposition
   en: weight decomposition
   ko: 무게 분해

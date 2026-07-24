@@ -5072,3 +5072,11 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 ## term_extract_worker 2026-07-23 17:30
 
 - _posts/Math/Field_Theory/ko/2025-04-26-Algebraic_Extensions.md: 병기 필요 'composite' — 위키 ko 문서 '컴포지트' — 병기형 도출 필요
+
+## term_extract_worker 2026-07-24 10:00
+
+- _posts/Math/Lie_Theory/ko/2023-01-23-Lie_Groups.md: 병기 필요 'adjoint representation' — 위키 ko 문서 '딸림표현' — 병기형 도출 필요
+
+## term_extract_worker 2026-07-24 12:00
+
+- _posts/Math/Lie_Theory/ko/2026-02-28-Borel_Subgroup.md: 병기 필요 'Borel subalgebra' — 소스 없음 (KMS exact ✗, 위키 ko ✗)
