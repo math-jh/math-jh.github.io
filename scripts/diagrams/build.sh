@@ -19,7 +19,9 @@
 # multi mode, which splits tikz-cd's inner tikzpicture and collapses arrow labels).
 # Output is transparent vector; the script prints the markdown width so node text
 # == blog body text:  width_em = intrinsic_pt / BASEFONT   (BASEFONT = 10pt base).
-# Crossing-over diagrams: --png (raster, white halo flattened to transparent).
+# White eraser paint (double-line cores, crossing-over halos, label white-out)
+# becomes mask cutouts via white_eraser_to_mask.py — truly transparent, so
+# crossing-over diagrams can stay SVG; --png remains for raster-only cases.
 #
 # Usage:
 #   scripts/diagrams/build.sh <Category>/<Article> [...]   # assets/diagrams/Math/<Category>/<Article>.tex
@@ -39,7 +41,7 @@ GLYPH_BOLD=0.20    # pt of stroke added to glyphs so thin CM hairlines don't go 
                    # (0 = off; --bold overrides). Stroke color = the glyph's own fill color.
 DENSITY=1024
 MODE=svg
-STRIP=1            # white-fill -> transparent. --no-strip keeps white (illustrations w/ white markers)
+STRIP=1            # white eraser paint -> mask cutout (transparent). --no-strip keeps white as real paint
 LUAMODE=0          # --lua: compile via dvilualatex (luaTeX dynamic memory) for pgfplots surf shading
                    #        that OOMs plain latex; still DVI so dvisvgm keeps fill-opacity (the --pdf route drops it)
 OUT=""
@@ -141,16 +143,17 @@ for i in $(seq 1 "$NFIG"); do
     dvisvgm --no-fonts --bbox=preview "$W/fig-$i.dvi" -o "$OUTDIR/$NAME.svg" >/dev/null 2>"$W/d-$i.log" \
       || { echo "dvisvgm FAILED (fig $i):" >&2; cat "$W/d-$i.log" >&2; exit 1; }
     f="$OUTDIR/$NAME.svg"
-    python3 - "$f" "$GLYPH_BOLD" "$STRIP" <<'PY'
+    # White eraser paint (double-line cores, crossing halos, label boxes) -> mask
+    # cutouts, so the erased region is truly transparent on any page background.
+    # Skipped with --no-strip (illustrations whose white is real paint).
+    if [ "$STRIP" = 1 ]; then
+      python3 "$ROOT/scripts/diagrams/white_eraser_to_mask.py" "$f" >/dev/null \
+        || { echo "white_eraser_to_mask FAILED (fig $i)" >&2; exit 1; }
+    fi
+    python3 - "$f" "$GLYPH_BOLD" <<'PY'
 import re, sys
-p, bold, strip = sys.argv[1], sys.argv[2], sys.argv[3]
+p, bold = sys.argv[1], sys.argv[2]
 s = open(p, encoding='utf-8').read()
-# White halo / label fill -> transparent (item 2); dvisvgm bg already transparent.
-# Skipped with --no-strip (illustrations whose white is meaningful, e.g. puncture markers).
-if strip == '1':
-    s = re.sub(r"(fill=['\"])#f{3}(?:f{3})?(['\"])", r"\1none\2", s)
-    s = re.sub(r"(fill:)#f{3}(?:f{3})?", r"\1none", s)
-    s = re.sub(r"(fill=['\"])white(['\"])", r"\1none\2", s)
 # Embolden glyphs: dvisvgm --no-fonts renders text as filled paths via <use>; thin
 # Computer Modern hairlines fade to subpixel at body size. Each <use> gets a stroke
 # in its inherited fill color (own fill attr, else nearest ancestor <g fill=...>,
