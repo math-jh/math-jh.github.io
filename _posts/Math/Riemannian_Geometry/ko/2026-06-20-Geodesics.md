@@ -203,7 +203,7 @@ $$\ddot\gamma(t) = -(\cos t)\, p - (\sin t)\, v = -\gamma(t)$$
 [예시 9](#ex9)에서 사용한 "주변 공간의 가속도를 tangent space로 정사영한 것이 곡선 위의 covariant derivative"라는 사실은 [§리만 계량, §§Normal bundle](/ko/math/riemannian_geometry/Riemannian_metric#normal-bundle)에서 도입한 tangential-normal 분해를 곡선의 가속도에 적용한 것이다. 이 관찰은 일반적인 매장된 submanifold의 측지선을 다룰 때 핵심적인 도구가 된다.
 
 ::: 참고 10
-[정리 7](#thm7)은 각 $(p, v) \in TM$마다 그 점에서 출발하는 유일한 측지선 $\gamma_v$를 대응시킨다. $v$를 적절히 줄여 측지선이 $t = 1$까지 정의되도록 하면, 대응 $v \mapsto \gamma_v(1)$은 $T_p M$의 한 근방에서 $M$으로의 smooth 함수를 정의하는데, 이를 점 $p$에서의 *exponential map*이라 부른다. Exponential map은 측지선의 자료를 한 점의 tangent space 위로 모아 manifold의 국소 구조를 선형화하는 도구이다.
+[정리 7](#thm7)은 각 $(p, v) \in TM$마다 그 점에서 출발하는 유일한 측지선 $\gamma_v$를 대응시킨다. $v$를 적절히 줄여 측지선이 $t = 1$까지 정의되도록 하면, 대응 $v \mapsto \gamma_v(1)$은 $T_p M$의 한 근방에서 $M$으로의 smooth 함수를 정의하는데, 이를 점 $p$에서의 *exponential map*이라 부른다. Exponential map은 측지선의 자료를 한 점의 tangent space 위로 모아 manifold의 국소 구조를 linearize하는 도구이다.
 :::
 
 ---

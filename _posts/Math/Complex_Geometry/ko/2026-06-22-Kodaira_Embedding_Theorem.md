@@ -107,7 +107,7 @@ $$
 가 양정치인 것이다. 곧 국소 holomorphic frame에서 $\Theta = \partial\bar\partial\varphi = \sum_{j,k} \varphi_{j\bar{k}}\, dz_j \wedge d\bar{z}_k$로 쓸 때, 각 점에서 Hermitian 행렬 $(\varphi_{j\bar{k}})$가 양의 정부호인 것이다. 이때 $c_1(L)$을 *positive class<sub>양의 류</sub>*라 부른다.
 :::
 
-양의 line bundle의 정의는 곧 곡률 형식이 Kähler 형식이라는 조건이다. $\omega_L = \frac{i}{2\pi}\Theta$는 closed 실 $(1,1)$-형식이고, 양정치성은 그것이 비퇴화일 뿐 아니라 양의 Hermitian 계량 $g_{j\bar{k}} = \varphi_{j\bar{k}}$를 정의함을 뜻한다. 따라서 $L$이 양의 line bundle이면 $\omega_L$은 $X$ 위의 Kähler 형식이 되고, 그 Kähler 류 $[\omega_L] = c_1(L)$은 양의 류이자 정수류이다. 역으로 어떤 Kähler 형식 $\omega$가 $c_1(L)$을 대표하면, $\partial\bar\partial$-보조정리로 그 류 안에서 곡률 형식과 일치하는 대표를 골라 양의 계량을 구성할 수 있다. 곧 양의 line bundle의 존재는 다음 세 조건의 동치로 정리된다.
+양의 line bundle의 정의는 곧 곡률 형식이 Kähler 형식이라는 조건이다. $\omega_L = \frac{i}{2\pi}\Theta$는 closed 실 $(1,1)$-형식이고, 양정치성은 그것이 비퇴화일 뿐 아니라 양의 Hermitian 계량 $g_{j\bar{k}} = \varphi_{j\bar{k}}$를 정의함을 뜻한다. 따라서 $L$이 양의 line bundle이면 $\omega_L$은 $X$ 위의 Kähler 형식이 되고, 그 Kähler 류 $[\omega_L] = c_1(L)$은 positive class이자 정수류이다. 역으로 어떤 Kähler 형식 $\omega$가 $c_1(L)$을 대표하면, $\partial\bar\partial$-보조정리로 그 류 안에서 곡률 형식과 일치하는 대표를 골라 양의 계량을 구성할 수 있다. 곧 양의 line bundle의 존재는 다음 세 조건의 동치로 정리된다.
 
 ::: 명제 5
 콤팩트 complex manifold $X$ 위의 holomorphic line bundle $L$에 대하여 다음이 동치이다.
@@ -198,7 +198,7 @@ $X$를 콤팩트 complex manifold라 하자. $X$ 위에 양의 line bundle $L$�
 
 정방향이 본질적인 내용이며, 핵심 단계만 제시한다. 목표는 충분히 큰 $k$에서 $L^{\otimes k}$이 [정의 8](#def8)의 세 조건을 만족함을 보이는 것이고, 세 조건 모두 적절한 전역 section의 존재로 환원된 뒤 [정리 7](#thm7)의 소멸로 해결된다.
 
-*점 분리.* 서로 다른 두 점 $x, y \in X$를 분리하려면, $s(x) = 0$이고 $s(y) \neq 0$인 section $s \in \Gamma(X, L^{\otimes k})$를 찾으면 된다. 두 점에서 동시에 소멸하는 section들의 부분공간을 보기 위해, $x, y$를 blow up한 $\pi : \widetilde{X} \rightarrow X$를 도입하고 그 예외인자를 $E_x, E_y$라 하자. Blow-up의 canonical line bundle 변화 공식 ([\[대수다양체\] §표준선다발, ⁋명제 12](/ko/math/algebraic_varieties/canonical_bundle#prop12)) 에 의해, $\pi^\ast L^{\otimes k} \otimes \mathcal{O}(-E_x - E_y) \otimes K_{\widetilde{X}}^{-1}$이 $k \gg 0$에서 여전히 양이 되도록 할 수 있다. 그러면 [정리 7](#thm7)을 $\widetilde{X}$ 위에서 적용하여 $H^1(\widetilde{X}, \pi^\ast L^{\otimes k} \otimes \mathcal{O}(-E_x - E_y)) = 0$을 얻고, 이 $H^1$의 소멸이 제한사상
+*점 분리.* 서로 다른 두 점 $x, y \in X$를 분리하려면, $s(x) = 0$이고 $s(y) \neq 0$인 section $s \in \Gamma(X, L^{\otimes k})$를 찾으면 된다. 두 점에서 동시에 소멸하는 section들의 부분공간을 보기 위해, $x, y$를 blow up한 $\pi : \widetilde{X} \rightarrow X$를 도입하고 그 예외인자를 $E_x, E_y$라 하자. Blow-up의 canonical line bundle 변화 공식 ([\[대수다양체\] §표준선다발, ⁋명제 12](/ko/math/algebraic_varieties/canonical_bundle#prop12)) 에 의해, $\pi^\ast L^{\otimes k} \otimes \mathcal{O}(-E_x - E_y) \otimes K_{\widetilde{X}}^{-1}$이 $k \gg 0$에서 여전히 양이 되도록 할 수 있다. 그러면 [정리 7](#thm7)을 $\widetilde{X}$ 위에서 적용하여 $H^1(\widetilde{X}, \pi^\ast L^{\otimes k} \otimes \mathcal{O}(-E_x - E_y)) = 0$을 얻고, 이 $H^1$의 소멸이 restriction map
 
 $$
 \Gamma(X, L^{\otimes k}) \longrightarrow L^{\otimes k}_x \oplus L^{\otimes k}_y
@@ -206,7 +206,7 @@ $$
 
 의 전사성을 준다. 곧 두 fiber에서의 값을 독립적으로 처방하는 section이 존재하여 $x, y$가 분리된다. 같은 논법에서 한 점 $x$만 처방하면 *basepoint-free*가 따라온다.
 
-*tangent vector 분리.* 한 점 $x$에서 $\Phi_{L^{\otimes k}}$의 미분이 단사이려면, $x$에서 $1$차까지 소멸하는 section(곧 $s(x) = 0$이고 $ds(x) = 0$) 과 $0$차에서만 소멸하는 section($s(x) = 0$, $ds(x) \neq 0$) 을 구별할 수 있어야 한다. 이는 $x$를 blow up하여 예외인자 $E$ 위에서 $\mathcal{O}(-2E)$ 류를 비트는 같은 소멸 논법으로, 제한사상 $\Gamma(X, L^{\otimes k}) \rightarrow L^{\otimes k}_x \otimes (\mathcal{O}_X / \mathfrak{m}_x^2)$ ($\mathfrak{m}_x$는 $x$의 maximal ideal) 의 전사성으로 환원되고, 다시 $H^1$의 소멸이 이를 보장한다.
+*tangent vector 분리.* 한 점 $x$에서 $\Phi_{L^{\otimes k}}$의 미분이 단사이려면, $x$에서 $1$차까지 소멸하는 section(곧 $s(x) = 0$이고 $ds(x) = 0$) 과 $0$차에서만 소멸하는 section($s(x) = 0$, $ds(x) \neq 0$) 을 구별할 수 있어야 한다. 이는 $x$를 blow up하여 예외인자 $E$ 위에서 $\mathcal{O}(-2E)$ 류를 비트는 같은 소멸 논법으로, restriction map $\Gamma(X, L^{\otimes k}) \rightarrow L^{\otimes k}_x \otimes (\mathcal{O}_X / \mathfrak{m}_x^2)$ ($\mathfrak{m}_x$는 $x$의 maximal ideal) 의 전사성으로 환원되고, 다시 $H^1$의 소멸이 이를 보장한다.
 
 세 조건이 모두 충분히 큰 $k$에서 성립하고, 콤팩트성으로 그 $k$를 $x, y$에 무관하게 한꺼번에 택할 수 있으므로, $L^{\otimes k}$은 very ample이다. 따라서 $\Phi_{L^{\otimes k}} : X \hookrightarrow \mathbb{CP}^N$이 holomorphic embedding이고 $X$는 projective variety이다. 기술적 세부, 특히 blow-up 위에서 양성을 유지하는 $k$의 존재와 $H^1$-소멸에서 전사성으로 가는 정확한 long exact sequence 논증은 인용에 맡긴다.
 :::
@@ -270,7 +270,7 @@ Lattice $\Lambda \subseteq \mathbb{C}^n$에 의한 복소토러스 $T = \mathbb{
 마지막으로 사영성과 비사영성이 한 부류 안에서 갈리는 더 미묘한 예가 K3 곡면이다.
 
 ::: 예시 15 (K3 곡면)
-복소차원 $2$의 콤팩트 complex manifold 가운데 canonical line bundle이 자명하고($K_X \cong \mathcal{O}_X$) 첫 Betti 수가 $0$인 단일연결 곡면을 *K3 surface<sub>K3 곡면</sub>*라 한다 (사영적인 경우의 정의는 [\[대수다양체\] §K3 Surfaces, ⁋정의 1](/ko/math/algebraic_varieties/k3_surfaces#def1)). 모든 K3 곡면은 Kähler manifold이지만, 모든 K3 곡면이 사영적인 것은 아니다. K3 곡면 위에는 $H^2(X, \mathbb{Z})$ 안에 $(1,1)$-류로 놓이는 정수류, 곧 Néron–Severi lattice가 있고, 그 안에 양의 자기교차를 갖는 류가 존재할 때 [따름정리 11](#cor11)에 의해 그 곡면이 사영적이 된다. Generic K3 곡면은 $H^{1,1}$과 $H^2(X, \mathbb{Z})$의 교집합이 자명하여 정수 Kähler 류를 갖지 못해 비사영이고, 주기를 특수화하면 정수 $(1,1)$-류가 나타나 사영 K3 곡면이 된다. 곧 K3 곡면의 사영성은 주기에 대한 가산개 조건으로, 사영 K3는 비사영 K3로 이루어진 연속체 안에서 조밀하지만 측도 $0$인 부분을 이룬다. 이는 Kodaira 판정이 한 변형족 안에서 사영성을 정밀하게 가려내는 방식을 보여 주는 예이다.
+복소차원 $2$의 콤팩트 complex manifold 가운데 canonical line bundle이 자명하고($K_X \cong \mathcal{O}_X$) 첫 Betti 수가 $0$인 단일연결 곡면을 *K3 surface<sub>K3 곡면</sub>*라 한다 (사영적인 경우의 정의는 [\[대수다양체\] §K3 Surfaces, ⁋정의 1](/ko/math/algebraic_varieties/k3_surfaces#def1)). 모든 K3 곡면은 Kähler manifold이지만, 모든 K3 곡면이 사영적인 것은 아니다. K3 곡면 위에는 $H^2(X, \mathbb{Z})$ 안에 $(1,1)$-류로 놓이는 정수류, 곧 Néron–Severi lattice가 있고, 그 안에 양의 자기교차를 갖는 류가 존재할 때 [따름정리 11](#cor11)에 의해 그 곡면이 사영적이 된다. Generic K3 곡면은 $H^{1,1}$과 $H^2(X, \mathbb{Z})$의 교집합이 자명하여 정수 Kähler 류를 갖지 못해 비사영이고, 주기를 specialize하면 정수 $(1,1)$-류가 나타나 사영 K3 곡면이 된다. 곧 K3 곡면의 사영성은 주기에 대한 가산개 조건으로, 사영 K3는 비사영 K3로 이루어진 연속체 안에서 조밀하지만 측도 $0$인 부분을 이룬다. 이는 Kodaira 판정이 한 변형족 안에서 사영성을 정밀하게 가려내는 방식을 보여 주는 예이다.
 :::
 
 세 예시는 Kodaira 정리의 내용을 단계적으로 드러낸다. $\mathbb{CP}^n$과 그 부분다양체는 정리의 충분성을 자명하게 실현하고, 복소토러스는 Kähler와 사영 사이의 진정한 간격을 양의 line bundle의 부재로 설명하며, K3 곡면은 그 간격이 한 다양체족 안에서 주기의 산술로 갈린다는 것을 보여 준다. 이들을 관통하는 원리는 한결같다. 콤팩트 complex manifold의 사영성은 곡률이 Kähler가 되는 양의 line bundle, 동치로 정수 Kähler 류의 존재로 완전히 결정된다.

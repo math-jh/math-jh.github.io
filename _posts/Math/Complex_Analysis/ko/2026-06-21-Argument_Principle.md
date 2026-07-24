@@ -85,7 +85,7 @@ $$\frac{1}{2\pi i}\oint_\gamma\frac{f'(z)}{f(z)}\,dz = n(f \circ \gamma,\, 0)$$
 정리 3의 이름은 그 마지막 등식에서 온다. $\oint_\gamma f'/f\,dz$은 곧 $\oint_\sigma dw/w = \oint_\sigma d(\log w)$이고, $\log w = \log\lvert w\rvert + i\arg w$의 실수부는 closed 곡선을 한 바퀴 돌면 제자리로 돌아와 기여가 $0$이므로, 살아남는 것은 편각 $\arg w$의 총 변화량이다. 곧 적분의 값은 $z$이 $\gamma$을 한 바퀴 도는 동안 $f(z)$의 편각이 $2\pi$의 몇 배만큼 증가했는가를 센다. 이 편각의 총 증가량이 상곡선이 원점을 감는 횟수이고, 동시에 그것이 안쪽 영점 수에서 극 수를 뺀 값과 같다는 것이 편각원리의 내용이다. Holomorphic function의 경우 극이 없어 $P = 0$이므로, 적분은 곧 안쪽 영점의 개수를 order까지 세어 준다.
 
 ::: 예시 4 (다항식의 영점 수)
-$p(z) = z^4 - 5z + 1$의 영점 가운데 단위원판 $\lvert z\rvert < 1$ 안에 있는 것의 개수를 편각원리로 센다. $p$은 다항식이라 전해석함수이고 극이 없으므로 ($P = 0$), 단위원 $\gamma(\theta) = e^{i\theta}$ ($0 \leq \theta \leq 2\pi$) 위에 영점이 없는 한 안쪽 영점 수 $Z$은 상곡선 $p \circ \gamma$의 원점에 대한 회전수와 같다. 먼저 단위원 위에 영점이 없음을 확인한다. $\lvert z\rvert = 1$이면 삼각부등식으로
+$p(z) = z^4 - 5z + 1$의 영점 가운데 단위원판 $\lvert z\rvert < 1$ 안에 있는 것의 개수를 편각원리로 센다. $p$은 다항식이라 entire function이고 극이 없으므로 ($P = 0$), 단위원 $\gamma(\theta) = e^{i\theta}$ ($0 \leq \theta \leq 2\pi$) 위에 영점이 없는 한 안쪽 영점 수 $Z$은 상곡선 $p \circ \gamma$의 원점에 대한 회전수와 같다. 먼저 단위원 위에 영점이 없음을 확인한다. $\lvert z\rvert = 1$이면 삼각부등식으로
 
 $$\lvert p(z)\rvert = \lvert {-5z} + (z^4 + 1)\rvert \geq \lvert 5z\rvert - \lvert z^4 + 1\rvert \geq 5 - (\lvert z\rvert^4 + 1) = 5 - 2 = 3 > 0$$
 

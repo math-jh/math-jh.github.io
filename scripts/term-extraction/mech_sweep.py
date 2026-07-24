@@ -52,6 +52,7 @@ OVERRIDE = {
     "series": "V", "condition": "C", "unity": "V", "element": "V",
     "subset": "C", "manifold": "V", "polytope": "C",
     "scheme": "C", "subscheme": "C", "counit": "C", "unit": "C",
+    "split": "C",  # 스플릿 (받침 ㅅ)
     "coordinates": "V", "constant": "V", "axiom": "C", "flow": "V",
     "number": "V", "multiplicity": "V", "operator": "V", "reflexive": "V",
     "transcendental": "L", "finer": "V", "diagonalizable": "L",
@@ -106,7 +107,8 @@ COP2HADA = {"이다": "하다", "인": "한", "이고": "하고", "이며": "하
             "이므로": "하므로", "이면": "하면", "이지만": "하지만"}
 # 하다-동사 활용 (사용자 룰 D): "정규화하면" → "normalize하면"
 VERB_MAP = {"정규화": "normalize", "국소화": "localize",
-            "대각화": "diagonalize"}
+            "대각화": "diagonalize", "선형화": "linearize",
+            "콤팩트화": "compactify", "특수화": "specialize"}
 NO_AUTO = set(ADJ_MAP)
 
 # 카테고리 다의어: bare '다양체'는 AG 계열에선 variety, 미분기하 계열에선
@@ -293,7 +295,7 @@ def sweep_line(line, stats, ambig, path, ln):
                             stats["repl"] += 2; continue
             ambig.append((path, ln, f"관형 보류: {w}"))
             out.append(text[pos:m.end()]); pos = m.end(); continue
-        if w in VERB_MAP and re.match(r"^(하|한|할|함|했)", run):
+        if w in VERB_MAP and re.match(r"^(하|한|할|함|했|되|된|될|됨|됐)", run):
             out.append(text[pos:m.start()])       # 룰 D: "normalize하면" 허용
             out.append(VERB_MAP[w] + run)
             pos = m.end() + len(run); stats["repl"] += 1; continue
@@ -393,6 +395,8 @@ def process(path, stats, ambig):
         if raw.count("$$") % 2 == 1:       # 여는 줄
             in_math = True; continue
         if re.match(r"^#{1,6}\s", s):             # 헤딩 보호
+            continue
+        if s.startswith(":::"):                   # 라벨 정의 여는 줄 보호 — 손 수정 대상
             continue
         st = []
         new = sweep_line(raw, stats, ambig, path, j + 1)

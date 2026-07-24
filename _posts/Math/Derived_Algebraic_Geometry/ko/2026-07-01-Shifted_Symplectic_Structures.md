@@ -112,7 +112,7 @@ $0$-shifted 구조가 고전적 symplectic 기하를 그대로 담고 $2$-shifte
 
 ## Derived critical locus의 (-1)-shifted 구조
 
-Smooth variety $U$ 위의 함수 $f:U\rightarrow\mathbb{A}^1$에 대하여, 그 미분 $df$은 cotangent bundle $\Omega_U$의 절단이고, derived critical locus $\Crit(f)$은 $df$의 유도 영점자리로 정의되었다. ([§Derived scheme과 derived stack, ⁋예시 17](/ko/math/derived_algebraic_geometry/derived_schemes#ex17)) 이 대상은 quasi-smooth이고 virtual 차원 $0$이며, 그 접복합체가 Hessian의 대칭성 때문에 여접 복합체와 자기쌍대적이라는 점을 우리는 이미 관찰하였다. 이 자기쌍대성이 정확히 $(-1)$-shifted symplectic 구조로 정착됨을 이제 밝힌다.
+Smooth variety $U$ 위의 함수 $f:U\rightarrow\mathbb{A}^1$에 대하여, 그 미분 $df$은 cotangent bundle $\Omega_U$의 절단이고, derived critical locus $\Crit(f)$은 $df$의 유도 영점자리로 정의되었다. ([§Derived scheme과 derived stack, ⁋예시 17](/ko/math/derived_algebraic_geometry/derived_schemes#ex17)) 이 대상은 quasi-smooth이고 virtual 차원 $0$이며, 그 접복합체가 Hessian의 대칭성 때문에 여접 복합체와 자기쌍대적이라는 점을 우리는 이미 관찰하였다. 이 self-duality가 정확히 $(-1)$-shifted symplectic 구조로 정착됨을 이제 밝힌다.
 
 ::: 정리 8
 $U$을 smooth $k$-scheme, $f:U\rightarrow\mathbb{A}^1$을 함수라 하자. Derived critical locus $\Crit(f)$은 canonically $(-1)$-shifted symplectic이다. 그 밑에 깔린 $2$-형식이 유도하는 nondegeneracy 동치
@@ -149,7 +149,7 @@ $$X\vert_{\text{국소}}\simeq\Crit(f)$$
 와 그 표준적 $(-1)$-shifted symplectic 구조에 동치이다. 그 결과 고전적 truncation $t_0(X)$은 자연스럽게 algebraic d-critical locus의 구조를 물려받는다.
 :::
 ::: 증명
-증명은 $X$을 국소적으로 표준 좌표를 갖는 affine derived scheme $\Spec A$으로 실현하는 데 있다. $A$을 smooth 대수 위의 free graded-commutative cdga로 cofibrant하게 놓으면, degree $-1$의 symplectic 형식은 Poincaré 보조정리의 shifted 판본에 의하여 국소적으로 $\omega=d\lambda$의 형태로 정규화되어 Darboux 좌표에서 표준형이 되고, 이때 $A$의 미분이 어떤 degree $0$의 Hamiltonian $\Phi$과의 Poisson bracket $\{\Phi,-\}$으로 주어짐을 보인다. 이 $\Phi$이 곧 smooth 국소 모형 $U$ 위의 함수 $f$이며, 표준형 cdga가 정확히 $\Crit(\Phi)$의 Koszul 복합체와 일치한다. Truncation이 d-critical 구조를 얻는 것은, 서로 다른 국소 표현에서 나온 함수 $f$들의 critical value가 정합적으로 접착되어 $t_0(X)$ 위의 하나의 canonical section을 이루기 때문이다. 완전한 논증은 ([BBJ])에 있다.
+증명은 $X$을 국소적으로 표준 좌표를 갖는 affine derived scheme $\Spec A$으로 실현하는 데 있다. $A$을 smooth 대수 위의 free graded-commutative cdga로 cofibrant하게 놓으면, degree $-1$의 symplectic 형식은 Poincaré 보조정리의 shifted 판본에 의하여 국소적으로 $\omega=d\lambda$의 형태로 normalize되어 Darboux 좌표에서 표준형이 되고, 이때 $A$의 미분이 어떤 degree $0$의 Hamiltonian $\Phi$과의 Poisson bracket $\{\Phi,-\}$으로 주어짐을 보인다. 이 $\Phi$이 곧 smooth 국소 모형 $U$ 위의 함수 $f$이며, 표준형 cdga가 정확히 $\Crit(\Phi)$의 Koszul 복합체와 일치한다. Truncation이 d-critical 구조를 얻는 것은, 서로 다른 국소 표현에서 나온 함수 $f$들의 critical value가 정합적으로 접착되어 $t_0(X)$ 위의 하나의 canonical section을 이루기 때문이다. 완전한 논증은 ([BBJ])에 있다.
 :::
 
 Darboux 정리는 $(-1)$-shifted symplectic 기하가 왜 열거기하와 맞닿는지를 설명한다. Calabi–Yau 3-fold 위의 안정층의 moduli는 PTVV에 의하여 $(-1)$-shifted symplectic이고 ([정리 12](#thm12) 뒤의 논의), [정리 9](#thm9)에 의하여 국소적으로 $\Crit(f)$이므로, 그 위에서 Jacobian ring이 정의하는 vanishing cycle sheaf이나 Behrend 함수가 대역적으로 접착되어 Donaldson–Thomas 불변량의 categorified·motivic 판본을 낳는다. 곧 $(-1)$-shifted 구조는 DT 이론의 국소 재료인 critical point 자료를 기하적으로 조직하는 언어이다.

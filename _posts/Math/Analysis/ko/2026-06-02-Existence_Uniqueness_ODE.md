@@ -30,7 +30,7 @@ published: false
 
 상수 $\lambda$를 *축약상수<sub>contraction constant</sub>*라 부른다. 부등식이 모든 점에서 같은 $\lambda$로 성립해야 한다는 점, 그리고 $\lambda$가 $1$보다 *진성으로* 작아야 한다는 점이 핵심이다. 만약 $\lambda = 1$만 보장된다면, 즉 $d(Tx, Ty) \leq d(x, y)$인 경우에는 $T$를 *비확장사상<sub>nonexpansive map</sub>*이라 부르며, 이때는 fixed point가 존재하지 않거나 유일하지 않을 수 있다. 예컨대 실직선 위의 평행이동 $Tx = x + 1$은 거리를 정확히 보존하지만 fixed point가 없다.
 
-::: 정리 2 (바나흐 고정점 정리)
+::: 정리 2 (Banach fixed point 정리)
 완비 거리공간 위의 contraction $T$는 유일한 fixed point $x^\ast = T x^\ast$를 가지며, 임의의 출발점 $x_0$에서 시작한 반복 $x_{n+1} = T x_n$이 그 fixed point로 수렴한다.
 :::
 

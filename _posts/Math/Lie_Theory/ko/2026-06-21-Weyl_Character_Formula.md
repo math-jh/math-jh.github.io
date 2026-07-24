@@ -255,7 +255,7 @@ $$\dim L(\theta)=\frac{2}{1}\cdot\frac{2}{1}\cdot\frac{4}{2}=8$$
 로, $\sl_3$ 자신의 차원 $3^2-1=8$과 일치한다. 이 $8$차원 representation에서 weight $0$은 Cartan subalgebra에 대응하여 중복도 $2$로 나타나는데, character 공식 [정리 9](#thm9)에서 분자 $\sum_w(-1)^{\ell(w)}e^{w(\theta+\rho)}$를 분모로 나누어 $e^0$의 계수를 추출하면 정확히 이 중복도 $2$가 나온다. 이는 차원 합 $6\cdot 1+1\cdot 2=8$로도 맞아떨어진다 (영이 아닌 여섯 root weight가 각 중복도 $1$, weight $0$이 중복도 $2$).
 :::
 
-$\sl_3$의 adjoint representation은 weight $0$의 중복도가 $1$을 넘는 첫 예로, character 공식이 단순한 weight 나열을 넘어 중복도까지 정확히 산출함을 보여준다. 일반적으로 $\mathfrak{g}$의 rank가 커질수록 weight 중복도는 Kostant partition function이 정하는 복잡한 양이 되며, Weyl character 공식의 분자를 분모로 나누는 형식 계산이 이 모든 중복도를 한꺼번에 결정한다. 차원 공식은 그 가운데 전체 차원이라는 한 정보만을 root 데이터에서 곧바로 읽어내는 특수화이다.
+$\sl_3$의 adjoint representation은 weight $0$의 중복도가 $1$을 넘는 첫 예로, character 공식이 단순한 weight 나열을 넘어 중복도까지 정확히 산출함을 보여준다. 일반적으로 $\mathfrak{g}$의 rank가 커질수록 weight 중복도는 Kostant partition function이 정하는 복잡한 양이 되며, Weyl character 공식의 분자를 분모로 나누는 형식 계산이 이 모든 중복도를 한꺼번에 결정한다. 차원 공식은 그 가운데 전체 차원이라는 한 정보만을 root 데이터에서 곧바로 읽어내는 specialization이다.
 
 ---
 

@@ -26,7 +26,7 @@ published: false
 
 ## 고유 받음의 정의
 
-직접상 $f_\ast \mathcal{F}$의 열린집합 $V \subseteq Y$ 위의 단면은 $\mathcal{F}(f^{-1}(V))$의 단면, 즉 $f^{-1}(V)$ 전체에서 정의된 단면이다. 고유 받음은 이 가운데 support가 $f$에 대해 proper한 것만을 추려 내는 subfunctor로 정의되며, support의 proper성은 [§고유함수](/ko/math/topology/proper_maps)에서 다룬 universally closed morphism의 언어로 표현된다. 그러나 derived 차원에서 이 functor를 직접 다루기보다는, Deligne을 따라 morphism을 콤팩트화하여 이미 가진 두 functor $j_!$과 $Rp_\ast$의 합성으로 정의하는 편이 깔끔하다.
+직접상 $f_\ast \mathcal{F}$의 열린집합 $V \subseteq Y$ 위의 단면은 $\mathcal{F}(f^{-1}(V))$의 단면, 즉 $f^{-1}(V)$ 전체에서 정의된 단면이다. 고유 받음은 이 가운데 support가 $f$에 대해 proper한 것만을 추려 내는 subfunctor로 정의되며, support의 proper성은 [§고유함수](/ko/math/topology/proper_maps)에서 다룬 universally closed morphism의 언어로 표현된다. 그러나 derived 차원에서 이 functor를 직접 다루기보다는, Deligne을 따라 morphism을 compactify하여 이미 가진 두 functor $j_!$과 $Rp_\ast$의 합성으로 정의하는 편이 깔끔하다.
 
 Open embedding $j: U \hookrightarrow X$에 대한 extension by zero $j_!: \Sh(U) \rightarrow \Sh(X)$를 떠올리자. 이는 $U$ 위의 sheaf $\mathcal{F}$를 $X \setminus U$ 위에서 stalk $0$이 되도록 연장하는 functor로, $j^{-1}$의 왼쪽 수반이다. ([\[위상수학\] §층, ⁋예시 14](/ko/math/topology/sheaves#ex14)) $j_!$은 stalk를 보존하는 exact functor이므로 $D(\Sh(U)) \rightarrow D(\Sh(X))$로 곧바로 내려간다. 한편 proper map $p$, 즉 closed이며 모든 fiber가 compact인 morphism에 대해서는 ([\[위상수학\] §고유함수, ⁋정리 6](/ko/math/topology/proper_maps#thm6)) $Rp_\ast$가 이미 정의되어 있다.
 

@@ -110,7 +110,7 @@ $$g(z) = f(z) - c$$
 
 ## Riemann 사상정리
 
-정리의 진술부터 정확히 한다. $\mathbb{C}$ 전체는 단위원판과 등각동형일 수 없는데, $\mathbb{C}$ 위의 bounded 전해석함수가 상수뿐이라는 Liouville 정리가 단위원판으로 가는 비상수 사상의 존재를 막기 때문이다. 따라서 영역이 $\mathbb{C}$의 진부분집합이라는 조건이 필수적이며, 단순연결성과 함께 이 둘이 정확히 충분조건이 됨이 정리의 내용이다. 사상의 유일성을 위해 한 점에서의 normalization을 덧붙인다.
+정리의 진술부터 정확히 한다. $\mathbb{C}$ 전체는 단위원판과 등각동형일 수 없는데, $\mathbb{C}$ 위의 bounded entire function이 상수뿐이라는 Liouville 정리가 단위원판으로 가는 비상수 사상의 존재를 막기 때문이다. 따라서 영역이 $\mathbb{C}$의 진부분집합이라는 조건이 필수적이며, 단순연결성과 함께 이 둘이 정확히 충분조건이 됨이 정리의 내용이다. 사상의 유일성을 위해 한 점에서의 normalization을 덧붙인다.
 
 ::: 정리 6 (Riemann 사상정리)
 $\Omega \subsetneq \mathbb{C}$가 공집합이 아닌 단순연결 열린집합이라 하자. 그러면 임의로 고정한 점 $z_0 \in \Omega$에 대하여, $\Omega$를 단위원판 $\mathbb{D} = \{z : \lvert z\rvert < 1\}$ 위로 보내는 holomorphic 전단사사상 $f : \Omega \rightarrow \mathbb{D}$이 존재하며, 그 가운데

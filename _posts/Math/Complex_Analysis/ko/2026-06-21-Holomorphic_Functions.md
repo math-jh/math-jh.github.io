@@ -72,7 +72,7 @@ $$\frac{g(f(z_0+h)) - g(f(z_0))}{h} = \psi(f(z_0+h))\,\frac{f(z_0+h)-f(z_0)}{h}$
 이고, $f$의 연속성으로 $f(z_0+h) \rightarrow w_0$이므로 $\psi(f(z_0+h)) \rightarrow \psi(w_0) = g'(w_0)$이며 우변이 $g'(f(z_0))f'(z_0)$으로 수렴한다.
 :::
 
-명제 3은 복소미분이 실미분과 동일한 형식 규칙을 따름을 말한다. 상수함수의 도함수가 $0$이고 항등함수 $z \mapsto z$의 도함수가 $1$임은 정의에서 즉시 나오므로, 곱셈규칙을 반복하면 $z^n$ ($n \geq 0$)의 도함수가 $nz^{n-1}$이고, 따라서 모든 다항식 $p(z) = \sum_{k=0}^n a_k z^k$이 전해석함수이며 $p'(z) = \sum_{k=1}^n k a_k z^{k-1}$이다. Quotient 공식에 의해 유리함수 $p(z)/q(z)$는 분모가 $0$이 되지 않는 영역에서 holomorphic이다. 반면 다음 예시가 보이듯, 평면 위의 매우 smooth한 실함수조차 복소미분가능하지 않을 수 있다.
+명제 3은 복소미분이 실미분과 동일한 형식 규칙을 따름을 말한다. 상수함수의 도함수가 $0$이고 항등함수 $z \mapsto z$의 도함수가 $1$임은 정의에서 즉시 나오므로, 곱셈규칙을 반복하면 $z^n$ ($n \geq 0$)의 도함수가 $nz^{n-1}$이고, 따라서 모든 다항식 $p(z) = \sum_{k=0}^n a_k z^k$이 entire function이며 $p'(z) = \sum_{k=1}^n k a_k z^{k-1}$이다. Quotient 공식에 의해 유리함수 $p(z)/q(z)$는 분모가 $0$이 되지 않는 영역에서 holomorphic이다. 반면 다음 예시가 보이듯, 평면 위의 매우 smooth한 실함수조차 복소미분가능하지 않을 수 있다.
 
 ::: 예시 4 (켤레함수는 holomorphic이 아니다)
 함수 $f(z) = \bar{z}$를 생각하자. $z_0$에서의 차분비는
@@ -225,7 +225,7 @@ $$e^z = \sum_{n=0}^{\infty} \frac{z^n}{n!}, \qquad \cos z = \sum_{n=0}^{\infty} 
 으로 정의한다.
 :::
 
-세 급수는 모두 수렴반지름이 $\infty$이다. 가령 $e^z$의 계수는 $a_n = 1/n!$이고 $\lvert a_n\rvert^{1/n} = (n!)^{-1/n} \rightarrow 0$이므로 수렴반지름이 $\infty$이며, 따라서 $e^z$는 전해석함수이다. 같은 이유로 $\cos z$, $\sin z$도 전해석함수이다. 정리 9의 항별미분을 적용하면 익숙한 도함수 공식이 그대로 따라 나온다. 곧
+세 급수는 모두 수렴반지름이 $\infty$이다. 가령 $e^z$의 계수는 $a_n = 1/n!$이고 $\lvert a_n\rvert^{1/n} = (n!)^{-1/n} \rightarrow 0$이므로 수렴반지름이 $\infty$이며, 따라서 $e^z$는 entire function이다. 같은 이유로 $\cos z$, $\sin z$도 entire function이다. 정리 9의 항별미분을 적용하면 익숙한 도함수 공식이 그대로 따라 나온다. 곧
 
 $$\frac{d}{dz}e^z = \sum_{n=1}^{\infty} \frac{n z^{n-1}}{n!} = \sum_{n=1}^{\infty} \frac{z^{n-1}}{(n-1)!} = e^z$$
 
@@ -272,7 +272,7 @@ $$\Delta u = u_{xx} + u_{yy} = v_{yx} - v_{xy} = 0$$
 조화켤레는 정의 13의 비대칭성이 시사하듯 $u$에서 $v$로의 일방적 관계이며, 실제로 $v$가 $u$의 조화켤레이면 $-u$가 $v$의 조화켤레가 된다 (Cauchy–Riemann 방정식의 두 등식을 $(v, -u)$에 대해 다시 쓰면 확인된다). 주어진 조화함수 $u$에 대해 그 조화켤레 $v$가 (적절한 영역에서) 존재하면, $f = u + iv$가 holomorphic function이 되어 임의의 조화함수를 holomorphic function의 실수부로 실현할 수 있다. 가장 단순한 예로 $u(x, y) = x^2 - y^2$를 보면 $u_{xx} + u_{yy} = 2 - 2 = 0$이라 조화이고, $v(x, y) = 2xy$가 $v_y = 2x = u_x$, $v_x = 2y = -u_y$로 조화켤레이며, 둘을 합치면 $f(z) = (x^2 - y^2) + i\,2xy = z^2$으로 holomorphic function을 회복한다.
 
 ::: 예시 14 (지수함수의 실허부와 조화성)
-전해석함수 $e^z = e^x(\cos y + i\sin y)$의 실수부와 허수부는
+Entire function $e^z = e^x(\cos y + i\sin y)$의 실수부와 허수부는
 
 $$u(x, y) = e^x \cos y, \qquad v(x, y) = e^x \sin y$$
 

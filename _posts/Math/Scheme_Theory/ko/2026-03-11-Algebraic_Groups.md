@@ -41,7 +41,7 @@ Lie group에서와 마찬가지로, 가장 중요한 예시들은 보통 matrix 
 Algebraic group 중에서 특히 중요한 역할을 하는 것은 당연히 *affine algebraic group*이다.
 
 ::: 정의 3
-Algebraic group $G$가 *affine algebraic group<sub>아핀 대수적 군</sub>*라는 것은 $G$가 affine variety인 것이다. 
+Algebraic group $G$가 *affine algebraic group<sub>아핀 대수적 군</sub>*이라는 것은 $G$가 affine variety인 것이다. 
 :::
 
 ## 대수적 군의 action

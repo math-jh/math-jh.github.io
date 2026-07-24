@@ -381,6 +381,7 @@ A:
   en: ample
   ko: 풍부한
   primary: en
+  note: 'ample (divisor·line bundle) 의미일 때만 영어. 일상 형용사(풍부한 예시·구조·대칭성 등)는 한글 유지'
   defs:
   - label: '[대수다양체] §선형계'
     url: /ko/math/algebraic_varieties/linear_systems
@@ -1082,14 +1083,14 @@ C:
   - label: '[체론] §갈루아 군의 성질들'
     url: /ko/math/field_theory/properties_of_galois_extensions
 - id: c_1
-  en: $c^1$
+  en: $C^1$
   ko: 일급
   primary: ko
   defs:
   - label: '[미적분학] §곡선과 벡터함수'
     url: /ko/math/calculus/vector_functions
 - id: c_1_-regular_curve
-  en: $c^1$-regular curve
+  en: $C^1$-regular curve
   ko: 일급정칙곡선
   primary: ko
   defs:
@@ -2564,6 +2565,13 @@ C:
   defs:
   - label: '[복소해석학] §등각사상과 Möbius 변환'
     url: /ko/math/complex_analysis/conformal_maps
+- id: crossed_homomorphism
+  en: crossed homomorphism
+  ko: 꼬인 준동형사상
+  primary: en
+  defs:
+  - label: '[호몰로지 대수학] §군 코호몰로지'
+    url: /ko/math/homological_algebra/group_cohomology
 - id: cup_product
   en: cup product
   ko: 합곱
@@ -3875,6 +3883,7 @@ F:
   en: face map
   ko: 면 사상
   primary: en
+  note: 'simplicial face map 문맥만 해당. 어미 연쇄 "…(이)면 사상…"과 오매치하므로 자동 검사 제외'
   defs:
   - label: '[유도대수기하학] §Simplicial 가환환과 animation'
     url: /ko/math/derived_algebraic_geometry/animated_rings
@@ -4345,6 +4354,13 @@ G:
   defs:
   - label: '[표현론] §유한군의 표현론'
     url: /ko/math/representation_theory/representations_of_finite_groups
+- id: g_-module
+  en: $G$-module
+  ko: $G$-가군
+  primary: en
+  defs:
+  - label: '[호몰로지 대수학] §군 코호몰로지'
+    url: /ko/math/homological_algebra/group_cohomology
 - id: galois
   en: Galois
   ko: 갈루아
@@ -4709,6 +4725,13 @@ G:
   defs:
   - label: '[대수적 구조] §대수'
     url: /ko/math/algebraic_structures/algebras
+- id: group_cohomology
+  en: group cohomology
+  ko: 군 코호몰로지
+  primary: en
+  defs:
+  - label: '[호몰로지 대수학] §군 코호몰로지'
+    url: /ko/math/homological_algebra/group_cohomology
 - id: group_object
   en: group object
   ko: 군 대상
@@ -5610,6 +5633,13 @@ I:
   defs:
   - label: '[다중선형대수학] §기저'
     url: /ko/math/multilinear_algebra/basis_of_free_modules
+- id: invariant_submodule
+  en: invariant submodule
+  ko: 불변 부분가군
+  primary: en
+  defs:
+  - label: '[호몰로지 대수학] §군 코호몰로지'
+    url: /ko/math/homological_algebra/group_cohomology
 - id: inverse
   en: inverse
   ko: 역
@@ -5748,6 +5778,7 @@ I:
   en: isolated
   ko: 고립된
   primary: en
+  note: '관형 용법(isolated singularity 등)만 영어. 동사 ''고립되다'' 활용(영점이 고립된다 등)은 한글 유지'
   defs:
   - label: '[거울대칭] §프로베니우스 다양체'
     url: /ko/math/mirror_symmetry/frobenius_manifold
@@ -5851,7 +5882,7 @@ J:
   - label: '[사교기하학] §J-holomorphic curves'
     url: /ko/math/symplectic_geometry/j_holomorphic_curves
 - id: j_-invariance
-  en: $j$-invariance
+  en: $J$-invariance
   ko: $J$-불변성
   primary: en
   defs:
@@ -6041,7 +6072,7 @@ K:
     url: /ko/math/topology/dimension
 L:
 - id: l_2_-inner_product
-  en: $l^2$-inner product
+  en: $L^2$-inner product
   ko: $L^2$-내적
   primary: en
   defs:
@@ -8443,7 +8474,7 @@ P:
   - label: '[대수다양체] §인자'
     url: /ko/math/algebraic_varieties/divisors
 - id: principal_g_-bundle
-  en: principal $g$-bundle
+  en: principal $G$-bundle
   ko: 주다발
   primary: en
   defs:
@@ -10288,9 +10319,10 @@ S:
   - label: '[유도대수기하학] §변형이론과 여접 복합체'
     url: /ko/math/derived_algebraic_geometry/deformation_theory
 - id: stability
-  en: Stability
+  en: stability
   ko: 안정성
   primary: en
+  note: 'stable map 등 전문 용어의 명사형만 영어. 복합어(점근적 안정성·Moser 안정성·base change 안정성)와 일반 서술은 문맥 판단'
   defs:
   - label: '[사교기하학] §Stable maps의 moduli space'
     url: /ko/math/symplectic_geometry/stable_maps

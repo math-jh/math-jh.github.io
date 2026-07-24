@@ -28,7 +28,7 @@ $(M,\omega,G,\mu)$가 Hamiltonian $G$-공간이고 $p\in\mu^{-1}(0)$이라 하�
 
 $$\ker d\mu_p=(\mathfrak{g}\cdot p)^{\omega},\qquad \im d\mu_p=(\mathfrak{g}_p)^{\circ}$$
 
-여기서 $\mathfrak{g}\cdot p=\{X_M(p):X\in\mathfrak{g}\}\subseteq T_pM$은 orbit의 tangent space, $(\,\cdot\,)^{\omega}$은 $\omega_p$에 대한 사교여공간 ([§사교벡터공간, ⁋정의 3](/ko/math/symplectic_geometry/linear_symplectic_geometry#def3)), $\mathfrak{g}_p=\{X\in\mathfrak{g}:X_M(p)=0\}$은 stabilizer의 Lie algebra, $(\mathfrak{g}_p)^{\circ}\subseteq\mathfrak{g}^\ast$은 그 annihilator이다. 특히 $0$이 regular value일 필요충분조건은 모든 $p\in\mu^{-1}(0)$에서 $\mathfrak{g}_p=0$, 즉 작용이 $\mu^{-1}(0)$ 위에서 locally free인 것이다.
+여기서 $\mathfrak{g}\cdot p=\{X_M(p):X\in\mathfrak{g}\}\subseteq T_pM$은 orbit의 tangent space, $(\,\cdot\,)^{\omega}$은 $\omega_p$에 대한 symplectic complement ([§사교벡터공간, ⁋정의 3](/ko/math/symplectic_geometry/linear_symplectic_geometry#def3)), $\mathfrak{g}_p=\{X\in\mathfrak{g}:X_M(p)=0\}$은 stabilizer의 Lie algebra, $(\mathfrak{g}_p)^{\circ}\subseteq\mathfrak{g}^\ast$은 그 annihilator이다. 특히 $0$이 regular value일 필요충분조건은 모든 $p\in\mu^{-1}(0)$에서 $\mathfrak{g}_p=0$, 즉 작용이 $\mu^{-1}(0)$ 위에서 locally free인 것이다.
 :::
 ::: 증명
 각 $X\in\mathfrak{g}$에 대하여, [§운동량 사상, ⁋정의 2](/ko/math/symplectic_geometry/moment_map#def2)의 조건 1은 $d\mu^X=\iota_{X_M}\omega$이다. 점 $p$와 tangent vector $v\in T_pM$에서 이를 평가하면
@@ -50,7 +50,7 @@ $$\dim\im d\mu_p=\dim T_pM-\dim\ker d\mu_p=\dim(\mathfrak{g}\cdot p)=\dim\mathfr
 마지막 주장은 즉시 따라온다. $d\mu_p$가 surjective, 즉 $0$이 $p$에서 regular일 필요충분조건은 $\im d\mu_p=\mathfrak{g}^\ast$, 곧 $(\mathfrak{g}_p)^{\circ}=\mathfrak{g}^\ast$이고 이는 $\mathfrak{g}_p=0$과 동치이다. $\mathfrak{g}_p=0$은 stabilizer $G_p$가 discrete임, 즉 작용이 $p$에서 locally free임을 뜻한다.
 :::
 
-이 보조정리는 영점집합의 두 가지 기하학적 사실을 한꺼번에 준다. 첫째, $0$이 regular value이면 $\mu^{-1}(0)$은 codimension $\dim G$의 smooth 부분다양체이고 $T_p(\mu^{-1}(0))=\ker d\mu_p=(\mathfrak{g}\cdot p)^{\omega}$이다. 둘째, 이 tangent space가 orbit tangent space $\mathfrak{g}\cdot p$의 사교여공간이라는 등식 $T_p(\mu^{-1}(0))=(\mathfrak{g}\cdot p)^{\omega}$이 다음 절에서 symplectic form을 내릴 때 결정적으로 쓰인다. 작용이 ($\mu^{-1}(0)$ 위에서) 자유로우면 $\mathfrak{g}_p=0$이므로 regularity는 자동이며, 우리는 앞으로 이 강한 가정 아래에서 작업한다.
+이 보조정리는 영점집합의 두 가지 기하학적 사실을 한꺼번에 준다. 첫째, $0$이 regular value이면 $\mu^{-1}(0)$은 codimension $\dim G$의 smooth 부분다양체이고 $T_p(\mu^{-1}(0))=\ker d\mu_p=(\mathfrak{g}\cdot p)^{\omega}$이다. 둘째, 이 tangent space가 orbit tangent space $\mathfrak{g}\cdot p$의 symplectic complement라는 등식 $T_p(\mu^{-1}(0))=(\mathfrak{g}\cdot p)^{\omega}$이 다음 절에서 symplectic form을 내릴 때 결정적으로 쓰인다. 작용이 ($\mu^{-1}(0)$ 위에서) 자유로우면 $\mathfrak{g}_p=0$이므로 regularity는 자동이며, 우리는 앞으로 이 강한 가정 아래에서 작업한다.
 
 등식 $T_p(\mu^{-1}(0))=(\mathfrak{g}\cdot p)^{\omega}$을 symplectic vector space의 언어로 다시 읽으면, $\mu^{-1}(0)$이 *coisotropic* 부분다양체임을 뜻한다. 부분공간 $W\subseteq T_pM$이 coisotropic이라는 것은 $W^{\omega}\subseteq W$인 것인데 ([§사교벡터공간, ⁋정의 3](/ko/math/symplectic_geometry/linear_symplectic_geometry#def3)), $W=T_p(\mu^{-1}(0))$에 대하여 $W^{\omega}=\bigl((\mathfrak{g}\cdot p)^{\omega}\bigr)^{\omega}=\mathfrak{g}\cdot p$이고, $p\in\mu^{-1}(0)$에서 각 $X_M(p)$이 $\mu^{-1}(0)$에 접하므로 ($G$가 $\mu^{-1}(0)$을 보존하기 때문) $\mathfrak{g}\cdot p\subseteq T_p(\mu^{-1}(0))=W$이다. 즉 영점집합의 사교수직방향이 정확히 orbit 방향이며, 이것이 quotient를 취해 symplectic form을 회복할 수 있게 하는 구조적 이유이다.
 

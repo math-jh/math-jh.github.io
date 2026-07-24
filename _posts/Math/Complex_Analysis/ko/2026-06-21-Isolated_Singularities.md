@@ -142,7 +142,7 @@ $$f(z) = \frac{h(z)}{(z - z_0)^2} = \sum_{n=2}^{\infty} c_n (z - z_0)^{n-2} = \s
 끝으로 extension의 holomorphicity와 유일성을 본다. 주부 없는 전개 $f(z) = \sum_{k=0}^{\infty} c_{k+2}(z - z_0)^k$의 우변은 $z_0$에서도 holomorphic function을 정의하므로, $f(z_0) = c_2$로 두면 $f$가 $D(z_0, R)$ 전체에서 holomorphic이 된다. 유일성은 일치정리에서 나온다 ([§영점과 일치정리, ⁋정리 3](/ko/math/complex_analysis/zeros_and_identity_theorem#thm3)). 두 holomorphic extension은 구멍 뚫린 원판에서 일치하고 그 영역이 집적점을 가지므로 $z_0$에서도 같은 값을 가져야 한다.
 :::
 
-정리 5의 가장 강력한 점은 (2)이다. Holomorphic function이 한 점 근방에서 bounded이기만 하면 그 점의 특이성은 환상에 지나지 않으며, 함수를 holomorphic하게 메울 수 있다. 실변수에서는 bounded인 smooth function이 한 점에서 진동하며 holomorphic으로 확장되지 못하는 경우가 흔하지만, 복소변수에서는 boundedness 하나가 singular point를 완전히 무력화한다. 전형적인 쓰임은 quotient function의 singular point 해소이다. 가령 $\dfrac{\sin z}{z}$은 원점에서 정의되지 않지만, $\sin z = z - z^3/6 + \cdots$이므로 원점 근방에서 $\lvert \sin z/z\rvert$이 bounded이고, 따라서 원점은 removable singularity이어서 $\sin z/z$에 $z = 0$에서 값 $1$을 주면 전해석함수가 된다.
+정리 5의 가장 강력한 점은 (2)이다. Holomorphic function이 한 점 근방에서 bounded이기만 하면 그 점의 특이성은 환상에 지나지 않으며, 함수를 holomorphic하게 메울 수 있다. 실변수에서는 bounded인 smooth function이 한 점에서 진동하며 holomorphic으로 확장되지 못하는 경우가 흔하지만, 복소변수에서는 boundedness 하나가 singular point를 완전히 무력화한다. 전형적인 쓰임은 quotient function의 singular point 해소이다. 가령 $\dfrac{\sin z}{z}$은 원점에서 정의되지 않지만, $\sin z = z - z^3/6 + \cdots$이므로 원점 근방에서 $\lvert \sin z/z\rvert$이 bounded이고, 따라서 원점은 removable singularity이어서 $\sin z/z$에 $z = 0$에서 값 $1$을 주면 entire function이 된다.
 
 ## Pole에서의 거동
 
@@ -222,9 +222,9 @@ $f$가 어떤 $\rho > 0$에 대해 $\lvert z\rvert > \rho$에서 holomorphic이�
 
 치환 $z = 1/\zeta$에서 $\lvert z\rvert > \rho$가 $0 < \lvert\zeta\rvert < 1/\rho$로 옮겨지므로, $\lvert z\rvert > \rho$에서의 $f$의 Laurent 전개 $f(z) = \sum_{n} a_n z^n$은 $\tilde{f}(\zeta) = \sum_n a_n \zeta^{-n}$이 되어 두 전개의 지수 부호가 뒤집힌다. 따라서 무한대에서의 분류는 $f$의 전개에서 *양의* 멱의 거동으로 읽힌다. $f$의 전개에 양의 멱이 없으면 ($a_n = 0$ for $n > 0$) $\infty$이 removable singularity이고, 양의 멱이 유한 개로 가장 높은 것이 $z^m$이면 ($a_m \neq 0$, $a_n = 0$ for $n > m$) $\infty$이 order $m$인 극이며, 양의 멱이 무한히 많으면 essential singularity이다. Degree $m$인 다항식 $p(z) = a_m z^m + \cdots + a_0$은 양의 멱이 $z^m$까지 정확히 유한 개이므로 $\infty$에서 order $m$인 극을 가지고, $e^z = \sum_{n \geq 0} z^n/n!$은 양의 멱이 무한히 많으므로 ([§복소정칙함수, ⁋정의 10](/ko/math/complex_analysis/holomorphic_functions#def10)) $\infty$에서 essential singularity를 가진다.
 
-이 관점이 곧장 주는 깔끔한 결과 하나는 전해석함수의 분류이다. 전해석함수가 무한대에서 길들기만 하면 그 모양이 다항식으로 강제된다.
+이 관점이 곧장 주는 깔끔한 결과 하나는 entire function의 분류이다. Entire function이 무한대에서 길들기만 하면 그 모양이 다항식으로 강제된다.
 
-::: 명제 10 (무한대에서 극을 가지는 전해석함수)
+::: 명제 10 (무한대에서 극을 가지는 entire function)
 $f$가 entire function이고 $\infty$에서 removable singularity 또는 극을 가진다고 하자. 그러면 $f$는 다항식이다. 특히 $\infty$이 removable singularity이면 $f$는 상수이고, $\infty$이 order $m$인 극이면 $f$는 degree $m$인 다항식이다.
 :::
 
@@ -238,7 +238,7 @@ $$f(z) = \sum_{n=0}^{m} a_n z^n$$
 이 degree $m$인 다항식이다. 두 경우 모두 $f$가 다항식이다.
 :::
 
-명제 10은 다항식을 무한대에서의 거동으로 특징짓는다. 전해석함수 가운데 무한대에서 가장 거칠지 않게, 곧 essential singularity 없이 행동하는 것은 정확히 다항식뿐이며, essential singularity를 가지는 전해석함수는 $e^z$이나 $\sin z$처럼 다항식이 아닌 transcendental entire function이다. Removable singularity인 경우가 상수라는 결론은 Liouville 정리 ([§Cauchy 적분공식, ⁋따름정리 5](/ko/math/complex_analysis/cauchy_integral_formula#cor5)) 와도 맞물린다. $\infty$에서 removable singularity를 가지는 전해석함수는 큰 $\lvert z\rvert$에서 bounded이고 평면의 나머지에서도 연속이므로 평면 전체에서 bounded여서, Liouville 정리로 곧장 상수임이 따른다.
+명제 10은 다항식을 무한대에서의 거동으로 특징짓는다. Entire function 가운데 무한대에서 가장 거칠지 않게, 곧 essential singularity 없이 행동하는 것은 정확히 다항식뿐이며, essential singularity를 가지는 entire function은 $e^z$이나 $\sin z$처럼 다항식이 아닌 transcendental entire function이다. Removable singularity인 경우가 상수라는 결론은 Liouville 정리 ([§Cauchy 적분공식, ⁋따름정리 5](/ko/math/complex_analysis/cauchy_integral_formula#cor5)) 와도 맞물린다. $\infty$에서 removable singularity를 가지는 entire function은 큰 $\lvert z\rvert$에서 bounded이고 평면의 나머지에서도 연속이므로 평면 전체에서 bounded여서, Liouville 정리로 곧장 상수임이 따른다.
 
 ---
 

@@ -161,7 +161,7 @@ $$
 복소차원 $1$의 connected complex manifold를 *Riemann surface<sub>리만 곡면</sub>*라 한다.
 :::
 
-리만 곡면은 실차원 $2$의 smooth 곡면 위에 holomorphic transition function을 얹은 것이다. 차원이 가장 낮은 만큼 복소기하학의 거의 모든 현상이 처음 나타나는 시험장이며, 앞서의 타원곡선 $\mathbb{C}/\Lambda$도 그 한 예이다. 가장 단순한 콤팩트 리만 곡면은 $\mathbb{CP}^1$이다.
+Riemann surface는 실차원 $2$의 smooth 곡면 위에 holomorphic transition function을 얹은 것이다. 차원이 가장 낮은 만큼 복소기하학의 거의 모든 현상이 처음 나타나는 시험장이며, 앞서의 타원곡선 $\mathbb{C}/\Lambda$도 그 한 예이다. 가장 단순한 콤팩트 Riemann surface는 $\mathbb{CP}^1$이다.
 
 ::: 예시 9 (Riemann 구면 $\mathbb{CP}^1$)
 [예시 6](#ex6)에서 $n = 1$인 경우 $\mathbb{CP}^1$은 두 차트

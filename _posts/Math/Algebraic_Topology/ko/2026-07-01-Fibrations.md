@@ -56,7 +56,7 @@ Hurewicz homomorphism $h_n$은 임의의 $f:S^n \rightarrow X$가 주어졌을 �
 
 ## 호모토피 올림 성질과 fibration
 
-Covering space에 대한 우리의 논의에서 가장 핵심적인 성질은 path와 그 homotopy를 위로 들어올릴 수 있다는 것이었다. ([§피복공간, ⁋보조정리 6](/ko/math/algebraic_topology/covering_spaces#lem6), [§피복공간, ⁋보조정리 7](/ko/math/algebraic_topology/covering_spaces#lem7)) 이 lifting property를 임의의 공간에 대한 homotopy로 일반화한 것이 fibration의 정의이며, 피복사상은 그 특수한 경우에 해당한다.
+Covering space에 대한 우리의 논의에서 가장 핵심적인 성질은 path와 그 homotopy를 위로 들어올릴 수 있다는 것이었다. ([§피복공간, ⁋보조정리 6](/ko/math/algebraic_topology/covering_spaces#lem6), [§피복공간, ⁋보조정리 7](/ko/math/algebraic_topology/covering_spaces#lem7)) 이 lifting property를 임의의 공간에 대한 homotopy로 일반화한 것이 fibration의 정의이며, covering map은 그 특수한 경우에 해당한다.
 
 ::: 정의 3
 연속함수 $p:E\rightarrow B$가 공간 $X$에 대하여 *homotopy lifting property<sub>호모토피 올림 성질</sub>* (줄여서 HLP) 를 갖는다는 것은, 다음의 조건이 성립하는 것이다. 임의의 homotopy $g:X\times I\rightarrow B$와, $g_0=g\vert_{X\times\{0\}}$의 lifting $\widetilde{g}_0:X\rightarrow E$ (즉 $p\circ\widetilde{g}_0=g_0$) 가 주어질 때마다, $g$ 전체의 lifting $\widetilde{G}:X\times I\rightarrow E$가 존재하여 $p\circ\widetilde{G}=g$이고 $\widetilde{G}\vert_{X\times\{0\}}=\widetilde{g}_0$이도록 할 수 있다.
@@ -83,7 +83,7 @@ Hurewicz fibration은 정의상 임의의 공간 $X$에 대하여 HLP를 가지�
 Fibration의 가장 풍부한 공급원은 locally trivial fiber bundle, 곧 밑공간이 열린집합들로 덮여 각 열린집합 $U$ 위에서 $p^{-1}(U)$가 $U\times F$와 자연스럽게 homeomorphic한 경우이다. 이러한 fiber bundle은 항상 Serre fibration이며, 밑공간이 paracompact이면 Hurewicz fibration이기도 하다. 이는 [Hat]의 §4.2에 상세히 다루어져 있다.
 :::
 
-이제 피복사상이 fibration의 특수한 경우임을 확인한다.
+이제 covering map이 fibration의 특수한 경우임을 확인한다.
 
 ::: 명제 6
 임의의 covering map $p:E\rightarrow B$ ([§피복공간, ⁋정의 3](/ko/math/algebraic_topology/covering_spaces#def3)) 는 Hurewicz fibration이며, 그 각각의 fiber $p^{-1}(b)$는 discrete space이다.

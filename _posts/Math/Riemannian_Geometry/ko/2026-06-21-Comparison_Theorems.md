@@ -14,7 +14,7 @@ weight: 9
 published: false
 ---
 
-[§리만 곡률, ⁋정의 2](/ko/math/riemannian_geometry/curvature#def2)에서 우리는 Riemannian manifold $(M, g)$의 곡률 텐서 $R$을 정의했고, [§지수사상, ⁋정리 9](/ko/math/riemannian_geometry/exponential_map#thm9)에 이르기까지 한 점 근방의 측지선이 exponential map을 통해 tangent space 위로 선형화됨을 보았다. 곡률은 정의상 한 점에서의 무한소 자료이지만, 그것의 부호를 manifold 전체에서 통제하면 manifold의 *전역* 위상과 거리에 강한 제약이 걸린다. 이 글에서 다루는 두 정리가 그 전형이다. Ricci curvature가 양의 하한을 가지면 manifold는 콤팩트이고 fundamental group이 유한해지며 (Bonnet–Myers), sectional curvature가 어디서도 양이 아니면 단순연결 완비 manifold는 통째로 유클리드 공간과 diffeomorphism이 된다 (Cartan–Hadamard). 두 정리 모두 곡률이 측지선 다발의 퍼짐을 어떻게 지배하는지를 측정하는 도구, 즉 Jacobi field와 에너지의 제2변분에서 나온다.
+[§리만 곡률, ⁋정의 2](/ko/math/riemannian_geometry/curvature#def2)에서 우리는 Riemannian manifold $(M, g)$의 곡률 텐서 $R$을 정의했고, [§지수사상, ⁋정리 9](/ko/math/riemannian_geometry/exponential_map#thm9)에 이르기까지 한 점 근방의 측지선이 exponential map을 통해 tangent space 위로 linearize됨을 보았다. 곡률은 정의상 한 점에서의 무한소 자료이지만, 그것의 부호를 manifold 전체에서 통제하면 manifold의 *전역* 위상과 거리에 강한 제약이 걸린다. 이 글에서 다루는 두 정리가 그 전형이다. Ricci curvature가 양의 하한을 가지면 manifold는 콤팩트이고 fundamental group이 유한해지며 (Bonnet–Myers), sectional curvature가 어디서도 양이 아니면 단순연결 완비 manifold는 통째로 유클리드 공간과 diffeomorphism이 된다 (Cartan–Hadamard). 두 정리 모두 곡률이 측지선 다발의 퍼짐을 어떻게 지배하는지를 측정하는 도구, 즉 Jacobi field와 에너지의 제2변분에서 나온다.
 
 ## 단면곡률과 Ricci curvature
 
@@ -200,7 +200,7 @@ Bonnet–Myers 정리에서 직경의 상한 $\pi/\sqrt{k}$는 sharp이다. 반�
 ::: 증명
 $M$의 universal cover $\pi : \tilde M \rightarrow M$를 생각하자. $\tilde M$에 $g$를 끌어올린 metric $\tilde g = \pi^\ast g$를 주면 $\pi$는 국소등거리사상이고, 따라서 $(\tilde M, \tilde g)$의 곡률은 $(M, g)$의 곡률을 국소적으로 그대로 가지므로 $\tilde M$도 같은 Ricci 하한 $\operatorname{Ric} \ge (n-1)k$를 만족한다. 또한 콤팩트 manifold $M$은 complete이고, 그 universal cover $\tilde M$ 역시 끌어올린 metric에 대해 complete이다 (covering map을 따라 측지선이 들어올려지므로). 그럼 [정리 8](#thm8)을 $(\tilde M, \tilde g)$에 적용하여 $\tilde M$도 콤팩트하다.
 
-한편 $\pi : \tilde M \rightarrow M$의 각 fiber $\pi^{-1}(p)$는 deck transformation group과 전단사이고, universal cover의 경우 이 group이 $\pi_1(M)$과 isomorphic이다. $\tilde M$이 콤팩트하고 $\pi$가 covering map이므로 fiber $\pi^{-1}(p)$는 이산이며 콤팩트집합 $\tilde M$ 안에서 closed 이산집합, 즉 유한집합이다. 따라서 $\pi_1(M) \cong \pi^{-1}(p)$는 유한군이다.
+한편 $\pi : \tilde M \rightarrow M$의 각 fiber $\pi^{-1}(p)$는 deck transformation group과 전단사이고, universal cover의 경우 이 group이 $\pi_1(M)$과 isomorphic이다. $\tilde M$이 콤팩트하고 $\pi$가 covering map이므로 fiber $\pi^{-1}(p)$는 이산이며 콤팩트집합 $\tilde M$ 안에서 closed discrete set, 즉 유한집합이다. 따라서 $\pi_1(M) \cong \pi^{-1}(p)$는 유한군이다.
 :::
 
 [따름정리 9](#cor9)는 양의 Ricci curvature가 위상에 거는 제약을 잘 보여준다. 예컨대 $\mathbb{R}^n$이나 평탄 토러스 $T^n$, 또는 무한 fundamental group을 가진 어떤 manifold도 양의 하한을 갖는 Ricci curvature를 허용할 수 없다. 특히 $\pi_1$이 무한인 콤팩트 manifold는 양의 Ricci metric을 가질 수 없다.

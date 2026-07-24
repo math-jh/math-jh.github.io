@@ -104,9 +104,9 @@ $[a,b]$가 구간이므로 connected이고 ([정리 2](#thm2)), [정리 5](#thm5
 
 중간값 정리의 가장 직접적인 쓰임은 방정식의 근이 존재함을 보이는 것이다. 양 끝에서 부호가 바뀌는 연속함수는 그 사이에서 반드시 $0$을 지나므로, $f(a)$와 $f(b)$의 부호가 다른 연속함수는 $(a, b)$에서 근을 가진다. 이를 일반화하면, degree가 홀수인 임의의 실계수 다항식은 적어도 하나의 실근을 가진다. 최고차항이 거동을 지배하여 $x \rightarrow +\infty$와 $x \rightarrow -\infty$에서 부호가 반대이므로, 충분히 큰 구간의 양 끝에서 부호가 바뀌어 [따름정리 6](#cor6)가 근을 보장하기 때문이다.
 
-또 하나의 전형적 응용은 구간을 자기 자신으로 보내는 연속함수가 fixed point를 가진다는 사실이다. 이는 일차원에서의 Brouwer 고정점 정리에 해당한다.
+또 하나의 전형적 응용은 구간을 자기 자신으로 보내는 연속함수가 fixed point를 가진다는 사실이다. 이는 일차원에서의 Brouwer fixed point 정리에 해당한다.
 
-::: 명제 7 (일차원 고정점 정리)
+::: 명제 7 (일차원 fixed point 정리)
 $f : [0, 1] \rightarrow [0, 1]$이 연속이면, $f(c) = c$인 $c \in [0, 1]$이 존재한다.
 :::
 
@@ -121,7 +121,7 @@ g(1) &= f(1) - 1 \leq 0
 인데, 이는 $f$의 치역이 $[0,1]$에 들어 있기 때문이다. 만약 $g(0) = 0$이면 $c = 0$이, $g(1) = 0$이면 $c = 1$이 곧 fixed point이다. 그렇지 않으면 $g(0) > 0 > g(1)$이므로 [따름정리 6](#cor6)를 $y = 0$에 적용하여 $g(c) = 0$, 곧 $f(c) = c$인 $c \in (0, 1)$를 얻는다.
 :::
 
-연결성은 부호의 변화뿐 아니라 두 값을 잇는 연속적 경로의 존재와도 관련된다. 이 관점에서 자연스러운 변형이 경로연결성이다.
+연결성은 부호의 변화뿐 아니라 두 값을 잇는 연속적 경로의 존재와도 관련된다. 이 관점에서 자연스러운 변형이 path-connectedness이다.
 
 ::: 정의 8
 거리공간 $X$의 부분집합 $E$가 *path-connected<sub>경로연결</sub>*라는 것은, 임의의 두 점 $x, y \in E$에 대하여 연속함수 $\gamma : [0, 1] \rightarrow E$가 존재하여 $\gamma(0) = x$, $\gamma(1) = y$인 것이다.
@@ -134,7 +134,7 @@ Path-connected인 집합은 connected이다.
 :::
 
 ::: 증명
-$E$가 path-connected인데 connected가 아니라고 가정하고, 열린집합 $U, V$가 $E$를 분할한다고 하자. $x \in U \cap E$, $y \in V \cap E$를 택하고, 경로연결성으로 연속함수 $\gamma : [0,1] \rightarrow E$를 $\gamma(0) = x$, $\gamma(1) = y$가 되도록 잡는다. 그러면 정의역 $[0,1]$은 connected이므로([정리 2](#thm2)) [정리 5](#thm5)에 의해 상 $\gamma([0,1])$도 connected이다. 그런데
+$E$가 path-connected인데 connected가 아니라고 가정하고, 열린집합 $U, V$가 $E$를 분할한다고 하자. $x \in U \cap E$, $y \in V \cap E$를 택하고, path-connectedness로 연속함수 $\gamma : [0,1] \rightarrow E$를 $\gamma(0) = x$, $\gamma(1) = y$가 되도록 잡는다. 그러면 정의역 $[0,1]$은 connected이므로([정리 2](#thm2)) [정리 5](#thm5)에 의해 상 $\gamma([0,1])$도 connected이다. 그런데
 
 $$\begin{aligned}
 \gamma([0,1]) &\subseteq E \subseteq U \cup V, \\

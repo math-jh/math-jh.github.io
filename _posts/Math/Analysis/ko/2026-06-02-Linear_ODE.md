@@ -155,7 +155,7 @@ e^{tA} &= \sum_{k=0}^\infty \frac{t^k A^k}{k!} = \left(\sum_{m=0}^\infty \frac{(
 
 대각화되지 않는 경우, 즉 고유벡터가 기저를 이루지 못하는 *결손<sub>defective</sub>* 행렬에서는 Jordan canonical form을 써야 하고, 그 결과 $t^j e^{\lambda t}$ 꼴의 다항식 인자가 등장한다.
 
-::: 예시 7 (결손 행렬과 조르당 블록)
+::: 예시 7 (결손 행렬과 Jordan block)
 $A = \begin{pmatrix} \lambda & 1 \\ 0 & \lambda \end{pmatrix}$는 고윳값 $\lambda$를 중복으로 가지나 고유벡터가 일차원뿐이라 대각화되지 않는다. $A = \lambda I + N$, $N = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}$로 쓰면 $\lambda I$와 $N$이 교환하고 $N^2 = 0$이므로
 
 $$\begin{aligned}

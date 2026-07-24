@@ -44,7 +44,7 @@ $$A[\epsilon]=A[t]/(t^2),\qquad \epsilon=\overline{t},\quad \epsilon^2=0$$
 이다. 이를 $A$ 위의 *dual numbers<sub>이중수</sub>*의 ring이라 부르며, projection $\pi:A[\epsilon]\rightarrow A$, $\epsilon\mapsto0$의 kernel은 $\epsilon A\cong A$이다. 이 확대는 $A'=A\oplus M$에 곱을 $(a,m)(a',m')=(aa', am'+a'm)$으로 준 split 확대이며, 따라서 항상 $A \rightarrow A[\epsilon]$이라는 section을 가진다.
 :::
 
-이중수 위에서의 변형은 변형이론의 "일차 항"에 해당한다. $\epsilon$을 무한소 매개변수로 보면, $A[\epsilon]$-algebra는 $A$-algebra를 $\epsilon$의 일차까지 흔든 것이고, $\epsilon^2=0$이라는 조건이 이차 이상의 항을 잘라낸다. 이제 변형 자체를 정의한다.
+dual numbers 위에서의 변형은 변형이론의 "일차 항"에 해당한다. $\epsilon$을 무한소 매개변수로 보면, $A[\epsilon]$-algebra는 $A$-algebra를 $\epsilon$의 일차까지 흔든 것이고, $\epsilon^2=0$이라는 조건이 이차 이상의 항을 잘라낸다. 이제 변형 자체를 정의한다.
 
 ## 평탄 변형과 일차 변형
 
@@ -176,7 +176,7 @@ $$\sum_jc_j^{(r)}g_j\equiv\sum_ja_j^{(r)}h_j\pmod I$$
 이다. 곧 각 syzygy $r$마다 $\overline{\sum_jc_j^{(r)}g_j}\in B$가 정해지고, 이 데이터가 Koszul syzygy 위에서 자동으로 소멸하므로 ([명제 4](#prop4)에서 $g_j$가 만족하는 flatness 조건에 의한다) $\Hom_B(L_2,B)$의 한 cocycle을 이루며, 그 cohomology class가 $\operatorname{ob}(\xi)\in T^2(B/k,B)$이다. $\operatorname{ob}(\xi)=0$이라는 것은 위 합동식을 푸는 $h_j$가 존재한다는 것, 곧 이차 연장이 존재한다는 것과 정확히 같다. Torsor 구조는 두 연장의 차이가 [정리 7](#thm7)에서와 같이 $T^1$의 원소를 줌으로부터 따른다. 더 두꺼운 base와 일반적인 $M$에 대한 진술은 ([Ill], [Har], [Ser])에 있다.
 :::
 
-장애의 정체는 이렇게 명료하다. 일차 변형은 syzygy를 일차까지 들어올린 뒤 남는 이차 잔여항 $-t^2\sum c_jg_j$를 만들고, 이 잔여항을 $h_j$의 선택으로 흡수할 수 있는지가 연장 가능성이며, 흡수의 실패를 $T^2$가 잰다. 여기서 잔여항이 syzygy의 데이터로 표현되고, 그것이 Koszul 관계를 넘어서는 부분에서만 의미를 가지므로 $L_2=\operatorname{Syz}/\operatorname{Kos}$가 등장한 것이다. 이 장애를 반복적으로 소거하며 더 높은 차수로 변형을 쌓아 올리면, 그 limit으로 complete local ring 위의 formal deformation을 얻는다 ([Ser]).
+장애의 정체는 이렇게 명료하다. First-order deformation은 syzygy를 일차까지 들어올린 뒤 남는 이차 잔여항 $-t^2\sum c_jg_j$를 만들고, 이 잔여항을 $h_j$의 선택으로 흡수할 수 있는지가 연장 가능성이며, 흡수의 실패를 $T^2$가 잰다. 여기서 잔여항이 syzygy의 데이터로 표현되고, 그것이 Koszul 관계를 넘어서는 부분에서만 의미를 가지므로 $L_2=\operatorname{Syz}/\operatorname{Kos}$가 등장한 것이다. 이 장애를 반복적으로 소거하며 더 높은 차수로 변형을 쌓아 올리면, 그 limit으로 complete local ring 위의 formal deformation을 얻는다 ([Ser]).
 
 ## Smooth한 경우와 국소 완전교차
 
@@ -196,7 +196,7 @@ $$0\longrightarrow I/I^2\overset{\overline{d}}{\longrightarrow}\Omega_{P/k}\otim
 
 이 왼쪽에서도 split되는 short exact sequence가 되어 $\overline{d}$가 injective이고 그 cokernel $\Omega_{B/k}$이 projective이다. 따라서 $H_1(\operatorname{NL}_{B/k})=\ker\overline{d}=0$이고 $\operatorname{NL}_{B/k}$은 projective module $\Omega_{B/k}$ 하나에 quasi-isomorphic하다. 그럼 $\Hom_B(\operatorname{NL}_{B/k},M)$이 $\Hom_B(\Omega_{B/k},M)$ 한 항에 집중되어 $T^1=0$이다. $T^2=0$도 split된 exact sequence로부터 $L_2$가 소멸하여 따른다. 무한소 automorphism에 관한 주장은 [정리 7](#thm7)의 일반 형태이다.
 
-이 결론은 [\[스킴\] §매끄러운 사상과 étale 사상, ⁋정리 11](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm11)과 정확히 일치한다. Smooth는 모든 square-zero 확대에 대한 lifting의 존재($T^2=0$, 장애 없음)와 그 lifting의 일대일적 통제($T^1=0$, 동형 유일)에 해당하기 때문이다.
+이 결론은 [\[스킴\] §매끄러운 사상과 étale 사상, ⁋정리 11](/ko/math/scheme_theory/smooth_and_etale_morphisms#thm11)과 정확히 일치한다. Smooth는 모든 square-zero 확대에 대한 lifting의 존재($T^2=0$, unobstructed)와 그 lifting의 일대일적 통제($T^1=0$, 동형 유일)에 해당하기 때문이다.
 :::
 
 조금 더 약한 가정인 *local complete intersection* (국소 완전교차)에서도 장애는 사라진다. $B=P/I$에서 $I$가 국소적으로 regular sequence로 생성되면 완전한 여접 복합체 $L_{B/k}$가 $[0,1]$ 두 degree에 projective module로 집중되어, 그 dual의 둘째 cohomology가 자동으로 $0$이 되기 때문이다. 곧 $T^2(B/k,M)=0$이고 lci singular point는 항상 *unobstructed<sub>장애 없음</sub>*이다. 다만 lci라고 해서 $H_1(\operatorname{NL}_{B/k})$이 소멸하는 것은 아니며, 반대로 아래 [예시 11](#ex11)처럼 singular한 lci가 $H_1(\operatorname{NL}_{B/k})=0$을 만족하기도 한다. 곧 $H_1(\operatorname{NL})$의 소멸만으로는 lci 여부가 판정되지 않으며, smoothness는 $H_1(\operatorname{NL}_{B/k})=0$과 $\Omega_{B/k}$의 국소자유성이 함께 성립하는 것으로 특징지어진다.
@@ -214,7 +214,7 @@ $$\operatorname{NL}_{B/k}=\Bigl[B\overline{f}\overset{\overline{d}}{\longrightar
 
 $$T^1(B/k,B)=\coker\overline{d}^\ast=B/(\x,\y)=k[\x,\y]/(\x\y,\x,\y)\cong k$$
 
-이다. 이 $1$차원 $T^1$의 generator는 $f=\x\y$를 $\x\y-\epsilon$로 흔드는 first-order deformation에 대응하며, 이것이 *Tjurina algebra* $k[\x,\y]/(\x\y,\partial_\x f,\partial_\y f)$의 정체이다. lci이므로 $T^2=0$이고 ([명제 10](#prop10) 뒤의 논의), 이 일차 변형은 장애 없이
+이다. 이 $1$차원 $T^1$의 generator는 $f=\x\y$를 $\x\y-\epsilon$로 흔드는 first-order deformation에 대응하며, 이것이 *Tjurina algebra* $k[\x,\y]/(\x\y,\partial_\x f,\partial_\y f)$의 정체이다. lci이므로 $T^2=0$이고 ([명제 10](#prop10) 뒤의 논의), 이 first-order deformation은 장애 없이
 
 $$\x\y=t$$
 

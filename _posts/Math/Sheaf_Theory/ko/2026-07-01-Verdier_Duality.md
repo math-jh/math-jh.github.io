@@ -59,7 +59,7 @@ $a_U = a_X \circ j$이므로 [§고유 받음과 여섯 함자, ⁋명제 5](/ko
 
 이제 이 글의 중심 정리를 진술한다. Verdier duality는 [§고유 받음과 여섯 함자, ⁋정의 6](/ko/math/sheaf_theory/six_functors#def6)의 $(Rf_!, f^!)$ 수반을 내부 Hom의 차원으로 끌어올린 것으로, 앞 글에서 확보한 모든 형식, 즉 두 adjunction과 projection formula가 한 줄의 동형으로 결집하는 지점이다. 진술은 두 층위로 주어진다. 먼저 $Y$ 위의 sheaf complex로서의 동형을 주는 국소적 형태이고, 거기에 전역 단면을 취해 얻는 대역적 형태이다.
 
-::: 정리 4 (Verdier 쌍대성)
+::: 정리 4 (Verdier duality)
 Compactifiable map $f: X \rightarrow Y$와 $\mathcal{F}^\bullet \in D(\Sh(X))$, $\mathcal{G}^\bullet \in D(\Sh(Y))$에 대해 $Y$ 위의 자연스러운 동형
 $$Rf_\ast R\mathcal{H}om(\mathcal{F}^\bullet, f^! \mathcal{G}^\bullet) \cong R\mathcal{H}om(Rf_! \mathcal{F}^\bullet, \mathcal{G}^\bullet)$$
 이 성립한다. 전역 단면 $R\Gamma(Y, -)$을 취하면 대역적 형태
@@ -81,7 +81,7 @@ $$\begin{aligned}
 대역적 형태는 국소적 형태에 $R\Gamma(Y, -)$을 적용하여 얻는다. $a_Y \circ f = a_X$이므로 [§층의 유도 범주와 유도 함자, ⁋정리 10](/ko/math/sheaf_theory/derived_category_of_sheaves#thm10)의 합성 동형에 의해 $R\Gamma(Y, Rf_\ast(-)) = R\Gamma(X, -)$이고, [§층의 유도 범주와 유도 함자, ⁋명제 8](/ko/math/sheaf_theory/derived_category_of_sheaves#prop8) 직후의 서술에 따라 $R\Hom = R\Gamma \circ R\mathcal{H}om$이므로, 좌변은 $R\Gamma(X, R\mathcal{H}om(\mathcal{F}^\bullet, f^!\mathcal{G}^\bullet)) = R\Hom_X(\mathcal{F}^\bullet, f^!\mathcal{G}^\bullet)$이고 우변은 $R\Hom_Y(Rf_!\mathcal{F}^\bullet, \mathcal{G}^\bullet)$이다.
 :::
 
-대역적 형태에서 $f = a_X: X \rightarrow \{\ast\}$, $\mathcal{G}^\bullet = k$로 특수화하면 dualizing complex의 정의가 곧바로 작동하여, $\mathbf{D}_X$의 전역 cohomology가 compactly supported cohomology의 dual임을 얻는다. 이것이 Verdier duality의 가장 자주 인용되는 형태이다.
+대역적 형태에서 $f = a_X: X \rightarrow \{\ast\}$, $\mathcal{G}^\bullet = k$로 specialize하면 dualizing complex의 정의가 곧바로 작동하여, $\mathbf{D}_X$의 전역 cohomology가 compactly supported cohomology의 dual임을 얻는다. 이것이 Verdier duality의 가장 자주 인용되는 형태이다.
 
 ::: 따름정리 5
 임의의 $\mathcal{F}^\bullet \in D(\Sh(X))$에 대해 자연스러운 동형
@@ -147,7 +147,7 @@ $$\begin{aligned}
 
 이제 가장 고전적인 경우로 돌아가, Verdier duality가 manifold의 Poincaré duality를 특수한 경우로 포함함을 확인한다. 관건은 manifold에서 dualizing complex가 shift된 상수 sheaf로 단순화된다는 [정의 1](#def1) 직후의 관찰이다.
 
-::: 정리 9 (Poincaré 쌍대성)
+::: 정리 9 (Poincaré duality)
 $X$가 connected oriented $n$차원 topological manifold이면 $\omega_X \cong k_X[n]$이고, 각 $p$에 대해 자연스러운 동형
 $$H^p(X, k) \cong H^{n-p}_c(X, k)^\vee$$
 이 성립한다.

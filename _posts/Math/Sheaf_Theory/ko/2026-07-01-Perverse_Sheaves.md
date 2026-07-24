@@ -120,10 +120,10 @@ $$\operatorname{Perv}(\{\ast\}) \cong \operatorname{Vec}^{fd}_k$$
 이며, perverse sheaf는 한 degree $0$에 놓인 유한차원 벡터공간이다. 한편 smooth connected $n$차원 variety $X$ 위에서는, [정의 6](#def6) 직후에 보았듯 local system의 shift $L[n]$이 perverse sheaf이며, $L$이 자기쌍대 ($L \cong L^\vee$)이면 $\mathbf{D}_X(L[n]) \cong L^\vee[n] \cong L[n]$이 자기쌍대 perverse sheaf이다.
 :::
 
-[예시 8](#ex8)의 smooth한 경우와 대조적으로, 특이공간에서는 상수 sheaf의 shift가 자기쌍대성을 잃는다.
+[예시 8](#ex8)의 smooth한 경우와 대조적으로, 특이공간에서는 상수 sheaf의 shift가 self-duality를 잃는다.
 
 ::: 참고 9
-[§Verdier 쌍대성, ⁋예시 10](/ko/math/sheaf_theory/verdier_duality#ex10)의 node $X = \{xy = 0\}$ (복소 $1$차원)에서 $k_X[1]$을 생각하면, $\mathbf{D}_X(k_X[1]) \cong \omega_X[-1]$인데 $\omega_X$가 원점에서 두 degree에 퍼진 잉여 stalk를 가지므로 $\mathbf{D}_X(k_X[1]) \not\cong k_X[1]$이다. 즉 smooth variety였다면 자기쌍대였을 $k_X[\dim]$이 singular point 때문에 자기쌍대성을 잃는다. 이 결함을 메우는 자기쌍대 perverse sheaf가 다음 절의 IC sheaf이며, node의 경우 그것은 두 분지 각각의 $k[1]$의 direct sum으로 분해되어 $k_X[1]$과는 원점 stalk가 다르다.
+[§Verdier 쌍대성, ⁋예시 10](/ko/math/sheaf_theory/verdier_duality#ex10)의 node $X = \{xy = 0\}$ (복소 $1$차원)에서 $k_X[1]$을 생각하면, $\mathbf{D}_X(k_X[1]) \cong \omega_X[-1]$인데 $\omega_X$가 원점에서 두 degree에 퍼진 잉여 stalk를 가지므로 $\mathbf{D}_X(k_X[1]) \not\cong k_X[1]$이다. 즉 smooth variety였다면 자기쌍대였을 $k_X[\dim]$이 singular point 때문에 self-duality를 잃는다. 이 결함을 메우는 자기쌍대 perverse sheaf가 다음 절의 IC sheaf이며, node의 경우 그것은 두 분지 각각의 $k[1]$의 direct sum으로 분해되어 $k_X[1]$과는 원점 stalk가 다르다.
 :::
 
 ## IC 층과 intermediate extension
@@ -163,7 +163,7 @@ $\operatorname{Perv}(X)$의 simple 대상은 정확히, irreducible closed 부�
 $L$이 irreducible이면 $\operatorname{IC}_Z(L)$이 단순함을 보인다. $0 \neq \mathcal{G} \subsetneq \operatorname{IC}_Z(L)$인 부분대상이 있다면, support가 $Z$이므로 smooth한 열린 부분 $U_Z$로 제한한 $j^{-1}\mathcal{G}$는 $L[d]$의 부분대상이고 $L$의 irreducibility에 의해 $0$ 또는 $L[d]$이다. $j^{-1}\mathcal{G} = 0$이면 $\mathcal{G}$가 $Z$의 더 작은 closed 부분에 support를 가지므로 [명제 11](#prop11)의 첫째 성질에 어긋나고, $j^{-1}\mathcal{G} = L[d]$이면 quotient $\operatorname{IC}_Z(L)/\mathcal{G}$가 그 작은 closed 부분에 support를 가져 다시 어긋난다. 따라서 $\operatorname{IC}_Z(L)$은 단순하다. 역으로 임의의 simple perverse sheaf $\mathcal{S}$를 잡아 그 support $Z = \operatorname{supp}\mathcal{S}$ (irreducible임을 보일 수 있다)와 smooth한 dense 열린 부분 $U_Z$ 위로의 restriction을 보면, 그 restriction이 어떤 irreducible local system $L$의 shift $L[d]$이고 $\mathcal{S} = \operatorname{IC}_Z(L)$임이 [명제 11](#prop11)의 유일성에서 따라 나온다. 완전한 논증은 [BBD]의 Théorème 4.3.1을 따른다.
 :::
 
-[정리 12](#thm12)와 [정리 7](#thm7)의 유한 길이성을 결합하면, $X$ 위의 모든 perverse sheaf는 IC sheaf들의 유한 번 반복된 extension으로 얻어진다. 즉 IC sheaf가 perverse sheaf의 범주의 simple 대상 전체를 이룬다. 이 사실이 perverse sheaf를 특이공간의 cohomology 이론의 자연스러운 계수로 만든다. $\operatorname{IC}_X$의 hypercohomology $H^k(X, \operatorname{IC}_X)$이 곧 $X$의 intersection cohomology이며, [명제 11](#prop11)의 자기쌍대성에 의해 ($k_{U}$가 자기쌍대이므로) [§Verdier 쌍대성, ⁋따름정리 5](/ko/math/sheaf_theory/verdier_duality#cor5)를 통해 singular $X$에서도 Poincaré duality를 회복한다.
+[정리 12](#thm12)와 [정리 7](#thm7)의 유한 길이성을 결합하면, $X$ 위의 모든 perverse sheaf는 IC sheaf들의 유한 번 반복된 extension으로 얻어진다. 즉 IC sheaf가 perverse sheaf의 범주의 simple 대상 전체를 이룬다. 이 사실이 perverse sheaf를 특이공간의 cohomology 이론의 자연스러운 계수로 만든다. $\operatorname{IC}_X$의 hypercohomology $H^k(X, \operatorname{IC}_X)$이 곧 $X$의 intersection cohomology이며, [명제 11](#prop11)의 self-duality에 의해 ($k_{U}$가 자기쌍대이므로) [§Verdier 쌍대성, ⁋따름정리 5](/ko/math/sheaf_theory/verdier_duality#cor5)를 통해 singular $X$에서도 Poincaré duality를 회복한다.
 
 ## 분해정리
 

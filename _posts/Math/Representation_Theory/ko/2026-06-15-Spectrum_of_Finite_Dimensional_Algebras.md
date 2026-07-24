@@ -108,17 +108,17 @@ $$\chi:A\xrightarrow{\ \pi\ } A/\mathfrak{m}\xrightarrow{\ \cong\ } k$$
 
 이제 우리는 commutative한 경우의 주된 정리로 향한다. $A$가 commutative이면 $\{M_a\}_{a\in A}$는 가환 연산자족이고, $k$가 algebraically closed이면 이 족은 동시에 삼각화될 수 있어 좋은 분해를 가진다. 그 분해의 색인이 정확히 character임을 보이는 것이 목표이다.
 
-준비로 한 가지 선형대수학적 사실을 정리한다. 유한차원 벡터공간 위의 가환 연산자족이 algebraically closed field 위에서 *동시 삼각화 가능*, 곧 적당한 basis에 대하여 모든 연산자가 동시에 상삼각행렬로 표현된다는 것은 표준적인 결과이다. 단일 연산자의 경우 algebraically closed field 위에서 고유값이 존재하여 삼각화가 가능하고, 가환족의 경우 공통 고유벡터의 존재로부터 차원에 대한 귀납법으로 동시 삼각화가 따라온다. 동시 삼각화가 주어지면, 각 연산자 $M_a$의 대각성분들은 그 고유값들이며, 가환성으로 인해 같은 대각위치에 놓이는 고유값들의 모임은 $a$에 대한 함수 $\lambda:A\rightarrow k$를 정의한다. 이러한 함수 $\lambda$로 색인되는 부분공간이 다음의 동시 일반화고유공간이다.
+준비로 한 가지 선형대수학적 사실을 정리한다. 유한차원 벡터공간 위의 가환 연산자족이 algebraically closed field 위에서 *동시 삼각화 가능*, 곧 적당한 basis에 대하여 모든 연산자가 동시에 상삼각행렬로 표현된다는 것은 표준적인 결과이다. 단일 연산자의 경우 algebraically closed field 위에서 고유값이 존재하여 삼각화가 가능하고, 가환족의 경우 공통 고유벡터의 존재로부터 차원에 대한 귀납법으로 동시 삼각화가 따라온다. 동시 삼각화가 주어지면, 각 연산자 $M_a$의 대각성분들은 그 고유값들이며, 가환성으로 인해 같은 대각위치에 놓이는 고유값들의 모임은 $a$에 대한 함수 $\lambda:A\rightarrow k$를 정의한다. 이러한 함수 $\lambda$로 색인되는 부분공간이 다음의 simultaneous generalized eigenspace이다.
 
 ::: 정의 7
 유한차원 commutative $k$-algebra $A$와 함수 $\lambda:A\rightarrow k$에 대하여,
 
 $$A_\lambda=\{x\in A\mid (M_a-\lambda(a)\id_A)^{\dim A}x=0\ \text{ for all }a\in A\}$$
 
-을 $\lambda$에 대응하는 *동시 일반화고유공간<sub>simultaneous generalized eigenspace</sub>*이라 부른다.
+을 $\lambda$에 대응하는 *simultaneous generalized eigenspace<sub>동시 일반화고유공간</sub>*라 부른다.
 :::
 
-각각의 $a$에 대하여 $\ker(M_a-\lambda(a)\id_A)^{\dim A}$은 연산자 $M_a$의 고유값 $\lambda(a)$에 대한 일반화고유공간이고, $A_\lambda$는 이들을 모든 $a\in A$에 대하여 교집합한 것이다. 지수 $\dim A$를 택한 이유는, 유한차원 벡터공간 위의 연산자에 대하여 일반화고유공간은 충분히 큰 거듭제곱의 kernel로 안정되며 그 안정점이 차원에 의해 위에서 제한되기 때문이다. $A_\lambda$가 $0$이 아닌 함수 $\lambda$들만이 의미를 가지며, 우리는 이들이 정확히 character임을 보인다.
+각각의 $a$에 대하여 $\ker(M_a-\lambda(a)\id_A)^{\dim A}$은 연산자 $M_a$의 고유값 $\lambda(a)$에 대한 generalized eigenspace이고, $A_\lambda$는 이들을 모든 $a\in A$에 대하여 교집합한 것이다. 지수 $\dim A$를 택한 이유는, 유한차원 벡터공간 위의 연산자에 대하여 generalized eigenspace는 충분히 큰 거듭제곱의 kernel로 안정되며 그 안정점이 차원에 의해 위에서 제한되기 때문이다. $A_\lambda$가 $0$이 아닌 함수 $\lambda$들만이 의미를 가지며, 우리는 이들이 정확히 character임을 보인다.
 
 ::: 정리 8
 $k$가 algebraically closed이고 $A$가 유한차원 commutative $k$-algebra라 하자. 그럼
@@ -130,7 +130,7 @@ $$A=\bigoplus_{\lambda} A_\lambda$$
 ::: 증명
 **분해의 존재.** $\{M_a\}_{a\in A}$는 [명제 2](#prop2)의 논의에 의하여 서로 commute하는 연산자족이다. $k$가 algebraically closed이므로 이 족은 동시 삼각화 가능하다. 동시 삼각화 basis를 택하여 각 $M_a$를 상삼각행렬로 보면, 그 대각성분들이 $M_a$의 고유값이다. 같은 대각위치 $i$에 대응하는 고유값을 $a$에 대한 함수로 모으면 함수 $\lambda_i:A\rightarrow k$를 얻는다. 서로 다른 $\lambda_i$들을 $\lambda^{(1)},\ldots,\lambda^{(r)}$이라 하자.
 
-각 $\lambda^{(s)}$에 대하여 $A_{\lambda^{(s)}}$가 $A$의 부분공간임은 정의로부터 명백하다. 또한 단일 연산자에 대한 일반화고유공간 분해를 가환족에 적용하면 (각 $M_a$가 다른 모든 $M_b$와 commute하므로 서로의 일반화고유공간을 보존한다), 벡터공간 $A$는 동시 일반화고유공간들의 direct sum
+각 $\lambda^{(s)}$에 대하여 $A_{\lambda^{(s)}}$가 $A$의 부분공간임은 정의로부터 명백하다. 또한 단일 연산자에 대한 generalized eigenspace 분해를 가환족에 적용하면 (각 $M_a$가 다른 모든 $M_b$와 commute하므로 서로의 generalized eigenspace를 보존한다), 벡터공간 $A$는 simultaneous generalized eigenspace들의 direct sum
 
 $$A=\bigoplus_{s=1}^r A_{\lambda^{(s)}}$$
 
@@ -308,9 +308,9 @@ $$\mathbb{C}[\mathbb{Z}/n]\cong\mathbb{C}^n$$
 
 ## 비가환 방향과 응용
 
-지금까지 우리는 commutativity를 본질적으로 사용하여, 정규표현의 모든 블록이 하나의 character로 색인되는 동시 일반화고유공간으로 떨어진다는 것을 보았다. Commutativity를 떼면 그림은 더 풍부해진다. Semisimple algebra의 일반론에 따르면, algebraically closed field 위의 유한차원 semisimple algebra는 matrix algebra들의 곱 $\prod_i\Mat_{n_i}(k)$으로 분해된다. 우리가 다룬 commutative reduced인 경우는 모든 $n_i=1$인, 곧 모든 블록이 $1\times 1$인 가장 단순한 구석에 해당한다. 한편 $\operatorname{char}k\nmid\lvert G\rvert$인 경우 Maschke의 정리에 의해 group algebra $k[G]$가 semisimple이 되고 ([§유한군의 표현론, ⁋따름정리 7](/ko/math/representation_theory/representations_of_finite_groups#cor7)), 이로부터 유한군의 표현론이 회복된다. $G$가 abelian이면 $k[G]$가 commutative이므로 모든 irreducible representation이 $1$차원이고, 이는 [예시 16](#ex16)에서 본 것처럼 우리의 commutative 이론으로 완전히 설명된다.
+지금까지 우리는 commutativity를 본질적으로 사용하여, 정규표현의 모든 블록이 하나의 character로 색인되는 simultaneous generalized eigenspace로 떨어진다는 것을 보았다. Commutativity를 떼면 그림은 더 풍부해진다. Semisimple algebra의 일반론에 따르면, algebraically closed field 위의 유한차원 semisimple algebra는 matrix algebra들의 곱 $\prod_i\Mat_{n_i}(k)$으로 분해된다. 우리가 다룬 commutative reduced인 경우는 모든 $n_i=1$인, 곧 모든 블록이 $1\times 1$인 가장 단순한 구석에 해당한다. 한편 $\operatorname{char}k\nmid\lvert G\rvert$인 경우 Maschke의 정리에 의해 group algebra $k[G]$가 semisimple이 되고 ([§유한군의 표현론, ⁋따름정리 7](/ko/math/representation_theory/representations_of_finite_groups#cor7)), 이로부터 유한군의 표현론이 회복된다. $G$가 abelian이면 $k[G]$가 commutative이므로 모든 irreducible representation이 $1$차원이고, 이는 [예시 16](#ex16)에서 본 것처럼 우리의 commutative 이론으로 완전히 설명된다.
 
-이 사전은 표현론 바깥에서도 같은 모습으로 나타난다. 예컨대 적당히 localize한 유한차원 가환 양자 cohomology ring의 maximal spectrum은 유한개의 점으로 이루어지며, 그 점들은 양자 곱셈 연산자들의 동시 고유값에 해당한다. 이는 정규표현의 동시 일반화고유공간 분해라는 우리의 이야기가 그대로 적용되는 한 사례이다.
+이 사전은 표현론 바깥에서도 같은 모습으로 나타난다. 예컨대 적당히 localize한 유한차원 가환 양자 cohomology ring의 maximal spectrum은 유한개의 점으로 이루어지며, 그 점들은 양자 곱셈 연산자들의 동시 고유값에 해당한다. 이는 정규표현의 simultaneous generalized eigenspace 분해라는 우리의 이야기가 그대로 적용되는 한 사례이다.
 
 ---
 

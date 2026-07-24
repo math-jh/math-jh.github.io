@@ -15,7 +15,7 @@ published: false
 
 ---
 
-[§측지선, ⁋정리 7](/ko/math/riemannian_geometry/geodesics#thm7)에서 우리는 Riemannian manifold $(M, g)$의 각 점 $p$와 vector $v \in T_p M$마다 초기조건 $\gamma(0) = p$, $\dot\gamma(0) = v$를 만족하는 측지선이 국소적으로 유일하게 존재함을 보았다. 이 측지선을 $\gamma_v$로 적기로 하자. 같은 글의 [§측지선, ⁋참고 10](/ko/math/riemannian_geometry/geodesics#rmk10)에서 예고했듯, 대응 $v \mapsto \gamma_v(1)$은 한 점의 tangent space 위로 측지선의 자료를 모아 manifold의 국소 구조를 선형화하는 도구가 된다. 이 글에서는 이 대응, 즉 *exponential map*을 정식으로 도입하고, 그것이 smooth 국소 diffeomorphism임을 보인 뒤, 이로부터 얻는 normal coordinate와 Gauss lemma를 다룬다.
+[§측지선, ⁋정리 7](/ko/math/riemannian_geometry/geodesics#thm7)에서 우리는 Riemannian manifold $(M, g)$의 각 점 $p$와 vector $v \in T_p M$마다 초기조건 $\gamma(0) = p$, $\dot\gamma(0) = v$를 만족하는 측지선이 국소적으로 유일하게 존재함을 보았다. 이 측지선을 $\gamma_v$로 적기로 하자. 같은 글의 [§측지선, ⁋참고 10](/ko/math/riemannian_geometry/geodesics#rmk10)에서 예고했듯, 대응 $v \mapsto \gamma_v(1)$은 한 점의 tangent space 위로 측지선의 자료를 모아 manifold의 국소 구조를 linearize하는 도구가 된다. 이 글에서는 이 대응, 즉 *exponential map*을 정식으로 도입하고, 그것이 smooth 국소 diffeomorphism임을 보인 뒤, 이로부터 얻는 normal coordinate와 Gauss lemma를 다룬다.
 
 ## Exponential map의 정의
 

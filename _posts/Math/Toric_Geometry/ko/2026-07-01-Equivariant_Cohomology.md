@@ -121,7 +121,7 @@ $H^\bullet(BT;\mathbb{Z})=\mathbb{Z}[t_1,\ldots,t_n]$이며 degree $2$ 부분 $H
 
 뒤따르는 두 계산은 모두 projective space를 fiber로 갖는 bundle의 cohomology를 구하는 일로 환원된다. 이를 위해 vector bundle의 projectivization에 대한 표준적인 결과를 line bundle들의 직합인 경우에 한해 정리해 둔다.
 
-::: 명제 5 (사영다발 정리)
+::: 명제 5 (projective bundle 정리)
 Paracompact 공간 $B$ 위의 복소 line bundle들 $L_1,\ldots,L_r$과 그 직합 $E=L_1\oplus\cdots\oplus L_r$에 대하여, fiberwise 일차원 부분공간들의 공간 $\mathbb{P}(E)\xrightarrow{\pi}B$를 생각하자. Tautological subbundle $\mathcal{O}_{\mathbb{P}(E)}(-1)\subseteq\pi^\ast E$의 first Chern class를 $h=c_1(\mathcal{O}_{\mathbb{P}(E)}(-1))$라 하면, $H^\bullet(\mathbb{P}(E))$은 $1,h,\ldots,h^{r-1}$을 기저로 갖는 free $H^\bullet(B)$-가군이며 단 하나의 관계식
 
 $$\prod_{i=1}^r\big(h-\pi^\ast c_1(L_i)\big)=0$$

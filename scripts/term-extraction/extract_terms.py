@@ -270,6 +270,9 @@ def _normalize_english(s: str) -> str:
         if not tok[0].isascii():
             out.append(tok)
             continue
+        if "$" in tok:                    # 수식 구간($G$-module 등) 케이스 보존
+            out.append(tok)
+            continue
         if tok.lower() in _PROPER_NOUNS:
             out.append(tok)
             continue

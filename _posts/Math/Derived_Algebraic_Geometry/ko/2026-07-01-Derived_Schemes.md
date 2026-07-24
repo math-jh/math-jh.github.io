@@ -265,8 +265,8 @@ $$\operatorname{vdim}(Z)=0+0-1=-1$$
 
 의 quasi-smooth derived scheme이다. $t_0(Z)$은 한 점이지만, $\pi_1\mathcal{O}_Z=k\neq0$이 이 음의 virtual 차원을 실현한다. 곧 두 점이 직선 위에서 일반적으로 만나지 않아 기대 intersection number가 $0$이라는 사실이, Serre 공식 $\operatorname{length}\pi_0-\operatorname{length}\pi_1=1-1=0$으로 정확히 나온다. 고전적 올곱이 이를 "한 점"으로 뭉갠 자리에서, 유도 올곱은 $-1$차원의 virtual 구조를 붙든다.
 
-::: 예시 17 (유도 임계점 자리)
-Smooth variety $U=\mathbb{A}^n=\Spec k[\x_1,\ldots,\x_n]$ 위의 함수 $f\in \mathcal{O}(U)$에 대하여, 그 미분 $df$은 cotangent 다발 $\Omega_U\cong \mathcal{O}_U^n$의 절단 $(\partial f/\partial \x_1,\ldots,\partial f/\partial \x_n)$이다. $f$의 *유도 임계점 자리<sub>derived critical locus</sub>* $\operatorname{Crit}(f)$을 $df$의 유도 영점자리로 정의한다.
+::: 예시 17 (derived critical locus)
+Smooth variety $U=\mathbb{A}^n=\Spec k[\x_1,\ldots,\x_n]$ 위의 함수 $f\in \mathcal{O}(U)$에 대하여, 그 미분 $df$은 cotangent 다발 $\Omega_U\cong \mathcal{O}_U^n$의 절단 $(\partial f/\partial \x_1,\ldots,\partial f/\partial \x_n)$이다. $f$의 *derived critical locus<sub>유도 임계점 자리</sub>* $\operatorname{Crit}(f)$을 $df$의 유도 영점자리로 정의한다.
 
 $$\operatorname{Crit}(f)=Z(df)=U\times_{\Omega_U}^hU$$
 
@@ -274,7 +274,7 @@ $$\operatorname{Crit}(f)=Z(df)=U\times_{\Omega_U}^hU$$
 
 $$\mathcal{O}_{\operatorname{Crit}(f)}=\operatorname{Kos}\bigl(k[\x_1,\ldots,\x_n];\partial_1f,\ldots,\partial_nf\bigr)$$
 
-이다. $t_0(\operatorname{Crit}(f))=\Spec k[\x]/(\partial_1f,\ldots,\partial_nf)$은 고전적 임계점 scheme, 곧 Jacobian ring의 spectrum이다. 편미분들이 regular sequence를 이루면 (가령 isolated 비축퇴 critical point) Koszul 복합체가 $\pi_0$에 집중되어 유도 구조가 고전적 구조와 같지만, regular sequence가 아니면 higher homotopy가 살아난다. 예컨대 $n=2$, $f=\x_1^2\x_2$이면 $\partial_1f=2\x_1\x_2$, $\partial_2f=\x_1^2$이 공통 인수 $\x_1$을 가져 regular sequence가 아니므로, Koszul homology $\pi_1\mathcal{O}_{\operatorname{Crit}(f)}\neq0$이 임계점 자리의 비축소성을 유도적으로 검출한다. $\operatorname{Crit}(f)$의 접복합체 $T_{\operatorname{Crit}(f)}$은 Hessian이 대칭이라는 사실 때문에 여접 복합체와 자기쌍대적이며, 이 자기쌍대성이 유도 임계점 자리 위의 $(-1)$-shifted symplectic 구조로 정착된다.
+이다. $t_0(\operatorname{Crit}(f))=\Spec k[\x]/(\partial_1f,\ldots,\partial_nf)$은 고전적 critical point scheme, 곧 Jacobian ring의 spectrum이다. 편미분들이 regular sequence를 이루면 (가령 isolated 비축퇴 critical point) Koszul 복합체가 $\pi_0$에 집중되어 유도 구조가 고전적 구조와 같지만, regular sequence가 아니면 higher homotopy가 살아난다. 예컨대 $n=2$, $f=\x_1^2\x_2$이면 $\partial_1f=2\x_1\x_2$, $\partial_2f=\x_1^2$이 공통 인수 $\x_1$을 가져 regular sequence가 아니므로, Koszul homology $\pi_1\mathcal{O}_{\operatorname{Crit}(f)}\neq0$이 critical point 자리의 비축소성을 유도적으로 검출한다. $\operatorname{Crit}(f)$의 접복합체 $T_{\operatorname{Crit}(f)}$은 Hessian이 대칭이라는 사실 때문에 여접 복합체와 자기쌍대적이며, 이 self-duality가 derived critical locus 위의 $(-1)$-shifted symplectic 구조로 정착된다.
 :::
 
 ::: 예시 18 (평면 위 두 곡선의 비횡단 교차)

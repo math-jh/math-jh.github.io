@@ -71,7 +71,7 @@ $$g(-x)=\frac{f(-x)-f(x)}{\lvert f(-x)-f(x)\rvert}=-g(x)$$
 임의의 antipodal 연속 자기사상 $f:S^1\rightarrow S^1$의 degree $\deg f$는 홀수이다.
 :::
 ::: 증명
-$S^1=\{e^{2\pi i\theta}\mid\theta\in\mathbb{R}\}$으로 보고, 피복사상 $p:\mathbb{R}\rightarrow S^1$, $p(\theta)=e^{2\pi i\theta}$을 생각하자. 이때 대척점 $-e^{2\pi i\theta}=e^{2\pi i(\theta+1/2)}$은 $\theta\mapsto\theta+1/2$에 대응한다.
+$S^1=\{e^{2\pi i\theta}\mid\theta\in\mathbb{R}\}$으로 보고, covering map $p:\mathbb{R}\rightarrow S^1$, $p(\theta)=e^{2\pi i\theta}$을 생각하자. 이때 대척점 $-e^{2\pi i\theta}=e^{2\pi i(\theta+1/2)}$은 $\theta\mapsto\theta+1/2$에 대응한다.
 
 주어진 연속함수 $f:S^1\rightarrow S^1$에 대하여 합성 $\theta\mapsto f(e^{2\pi i\theta})$은 $\mathbb{R}$에서 $S^1$로 가는 연속함수이다. 정의역 $\mathbb{R}$의 각 구간 위에서 이 morphism을 경로로 보고 [§피복공간, ⁋보조정리 6](/ko/math/algebraic_topology/covering_spaces#lem6)의 유일한 경로 들어올림을 이어붙이면, $F(0)$의 값을 한 번 고정할 때
 

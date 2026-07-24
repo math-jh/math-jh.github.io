@@ -21,7 +21,7 @@ Holomorphic function의 미분 이론을 ([§복소정칙함수](/ko/math/comple
 적분의 정의역이 될 곡선을 먼저 정비한다. 곡선은 실구간을 평면으로 보내는 연속사상으로 보되, 적분에서 곡선의 *속도* $\gamma'(t)$가 필요하므로 미분가능성을 요구한다. 다만 꺾인 점을 가지는 곡선(가령 사각형의 boundary)을 다루기 위해, 유한히 많은 점을 빼고 미분가능한 *조각마다 smooth* 곡선까지 허용한다.
 
 ::: 정의 1
-연속사상 $\gamma : [a, b] \rightarrow \mathbb{C}$가 *piecewise $C^1$ 곡선<sub>조각마다 C¹인 곡선</sub>*이라는 것은, 구간의 분할 $a = t_0 < t_1 < \cdots < t_n = b$이 있어 각 부분구간 $[t_{k-1}, t_k]$ 위에서 $\gamma$가 $C^1$급(곧 도함수 $\gamma'$이 존재하고 연속)인 것이다. 점 $\gamma(a)$를 곡선의 *시점<sub>initial point</sub>*, $\gamma(b)$를 *종점<sub>terminal point</sub>*이라 하고, $\gamma(a) = \gamma(b)$이면 $\gamma$를 *closed curve<sub>닫힌 곡선</sub>*이라 한다.
+연속사상 $\gamma : [a, b] \rightarrow \mathbb{C}$가 *piecewise $C^1$ 곡선<sub>조각마다 C¹인 곡선</sub>*이라는 것은, 구간의 분할 $a = t_0 < t_1 < \cdots < t_n = b$이 있어 각 부분구간 $[t_{k-1}, t_k]$ 위에서 $\gamma$가 $C^1$급(곧 도함수 $\gamma'$이 존재하고 연속)인 것이다. 점 $\gamma(a)$를 곡선의 *시점<sub>initial point</sub>*, $\gamma(b)$를 *종점<sub>terminal point</sub>*이라 하고, $\gamma(a) = \gamma(b)$이면 $\gamma$를 *closed curve<sub>닫힌 곡선</sub>*라 한다.
 :::
 
 여기서 $\gamma$를 실수부와 허수부로 갈라 $\gamma(t) = x(t) + i\,y(t)$로 적으면, 그 도함수는 $\gamma'(t) = x'(t) + i\,y'(t)$로 정의되는 복소숫값 함수이다. 곧 복소숫값 함수의 미분은 실허 두 성분을 각각 미분한 것이며, 각 부분구간 위에서 $x, y$가 $C^1$이라는 뜻이다. 분할의 끝점 $t_k$에서는 좌·우 도함수가 다를 수 있어 $\gamma'$이 불연속일 수 있지만, 그런 점은 유한 개뿐이므로 아래 적분에는 영향을 주지 않는다. 같은 자취를 그리는 곡선이라도 매개변수 $t$를 어떻게 잡느냐에 따라 사상 $\gamma$ 자체는 달라지는데, 적분값이 이 선택에 무관함은 [명제 4](#prop4)에서 확인한다.

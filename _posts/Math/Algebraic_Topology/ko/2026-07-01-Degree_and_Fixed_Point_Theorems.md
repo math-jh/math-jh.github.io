@@ -130,7 +130,7 @@ $n=0$인 경우, $S^0$은 두 점, $D^1=[-1,1]$은 connected인 구간이다. $r
 
 No-retraction 보조정리는 그 자체로도 흥미롭지만, 그 진정한 쓰임은 fixed point 정리로의 환원에 있다. 만일 어떤 자기사상이 fixed point를 갖지 않는다면, 각 점을 그 상으로부터 멀어지는 방향으로 밀어 boundary에 닿게 하는 방식으로 retraction을 만들 수 있고, 이는 보조정리에 어긋난다. 이 착상을 엄밀히 하면 다음의 고전적 정리가 얻어진다.
 
-::: 정리 7 (Brouwer 고정점 정리)
+::: 정리 7 (Brouwer fixed point 정리)
 $n\geq 0$에 대하여, 임의의 연속함수 $f:D^{n+1}\rightarrow D^{n+1}$은 fixed point를 갖는다. 곧 $f(x)=x$인 점 $x\in D^{n+1}$이 존재한다.
 :::
 ::: 증명
@@ -190,7 +190,7 @@ $$L(f)=\sum_{i\geq 0}(-1)^i\operatorname{tr}\bigl(f_\ast:H_i(X;\mathbb{Q})\right
 
 정의의 합은 유한합이다. $X$가 위의 조건을 만족하면 유한개의 $i$에 대해서만 $H_i(X;\mathbb{Q})\neq 0$이기 때문이다. 또한 $L(f)$는 각 trace가 정수가 아닐 수도 있지만 그 교대합은 항상 정수가 되는데, 이는 $f_\ast$가 실제로는 정수계수 homology 위의 준동형에서 유래하기 때문이다. Lefschetz 수는 명백히 homotopy 불변량이다. Homotopic한 두 morphism은 각 $H_i(X;\mathbb{Q})$ 위에서 같은 선형사상을 유도하므로 trace가 일치한다. 특별히 $f=\id_X$이면 각 $f_\ast$가 항등사상이고 그 trace는 $\dim_\mathbb{Q}H_i(X;\mathbb{Q})$, 곧 $i$번째 Betti 수이므로 $L(\id_X)=\sum_i(-1)^i\dim_\mathbb{Q}H_i(X;\mathbb{Q})$은 $X$의 Euler characteristic과 같다.
 
-::: 정리 10 (Lefschetz 고정점 정리)
+::: 정리 10 (Lefschetz fixed point 정리)
 $X$를 유한 CW complex이거나 삼각화가능한 콤팩트 공간이라 하고, $f:X\rightarrow X$를 연속함수라 하자. 만일 $L(f)\neq 0$이면 $f$는 fixed point를 갖는다.
 :::
 ::: 증명

@@ -14,7 +14,7 @@ weight: 3.6
 published: false
 ---
 
-Solvability와 nilpotency를 derived series와 lower central series로 정의하고 Engel·Lie의 정리를 증명한 뒤 ([§가해 Lie algebra와 nilpotent Lie algebra, ⁋정의 10](/ko/math/lie_theory/solvable_nilpotent_lie_algebras#def10)), 우리는 임의의 유한차원 Lie algebra가 가장 큰 solvable ideal인 radical과 그 몫인 semisimple 부분으로 나뉜다는 것을 보았다. 그러나 그 정의만으로는 주어진 Lie algebra가 solvable인지, 혹은 semisimple인지를 직접 판정하기 어렵다. Cartan은 이 두 물음을 모두 하나의 bilinear form, 곧 Killing form의 trace 조건으로 환원하였다. 이 글에서 우리는 Killing form $\kappa(x,y)=\tr(\ad x\,\ad y)$를 정의하고 그 invariance와 ideal에 대한 restriction 성질을 정리한 뒤, 임의의 $\mathfrak{g}\subseteq\gl(V)$의 solvability가 trace form의 소멸로 판정된다는 Cartan의 가해성 판정법과, $\mathfrak{g}$의 semisimplicity가 Killing form의 nondegeneracy로 판정된다는 Cartan의 반단순성 판정법을 증명한다.
+Solvability와 nilpotency를 derived series와 lower central series로 정의하고 Engel·Lie의 정리를 증명한 뒤 ([§가해 Lie algebra와 nilpotent Lie algebra, ⁋정의 10](/ko/math/lie_theory/solvable_nilpotent_lie_algebras#def10)), 우리는 임의의 유한차원 Lie algebra가 가장 큰 solvable ideal인 radical과 그 몫인 semisimple 부분으로 나뉜다는 것을 보았다. 그러나 그 정의만으로는 주어진 Lie algebra가 solvable인지, 혹은 semisimple인지를 직접 판정하기 어렵다. Cartan은 이 두 물음을 모두 하나의 bilinear form, 곧 Killing form의 trace 조건으로 환원하였다. 이 글에서 우리는 Killing form $\kappa(x,y)=\tr(\ad x\,\ad y)$를 정의하고 그 invariance와 ideal에 대한 restriction 성질을 정리한 뒤, 임의의 $\mathfrak{g}\subseteq\gl(V)$의 solvability가 trace form의 소멸로 판정된다는 Cartan의 가해성 판정법과, $\mathfrak{g}$의 semisimplicity가 Killing form의 nondegeneracy로 판정된다는 Cartan의 semisimplicity 판정법을 증명한다.
 
 이 글 전체에서 $k$는 대수적으로 닫힌 characteristic $0$의 체이고, 별다른 언급이 없는 한 $\mathfrak{g}$는 $k$ 위의 유한차원 Lie algebra이다. $\ad:\mathfrak{g}\rightarrow\gl(\mathfrak{g})$는 [§가해 Lie algebra와 nilpotent Lie algebra, ⁋정의 6](/ko/math/lie_theory/solvable_nilpotent_lie_algebras#def6)의 adjoint representation을 가리키며, $\rad\mathfrak{g}$는 [§가해 Lie algebra와 nilpotent Lie algebra, ⁋정의 15](/ko/math/lie_theory/solvable_nilpotent_lie_algebras#def15)의 radical을 가리킨다.
 
@@ -188,7 +188,7 @@ $\ad:\mathfrak{g}\rightarrow\gl(\mathfrak{g})$를 생각하면 $\ker(\ad)=Z(\mat
 
 이제 semisimplicity를 다룬다. $\mathfrak{g}$가 *semisimple*이라는 것은 그 radical이 $0$인 것, 곧 $\mathfrak{g}$가 $0$이 아닌 solvable ideal을 갖지 않는 것이었다 ([§가해 Lie algebra와 nilpotent Lie algebra, ⁋정의 15](/ko/math/lie_theory/solvable_nilpotent_lie_algebras#def15) 이후의 논의). 가해성 판정법의 따름으로, semisimplicity는 Killing form의 nondegeneracy와 정확히 일치한다.
 
-::: 정리 9 (Cartan의 반단순성 판정법)
+::: 정리 9 (Cartan의 semisimplicity 판정법)
 유한차원 Lie algebra $\mathfrak{g}$가 semisimple인 것과 그 Killing form $\kappa$가 nondegenerate인 것이 동치이다.
 :::
 ::: 증명

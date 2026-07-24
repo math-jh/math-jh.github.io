@@ -98,7 +98,7 @@ $$C_s := q^{-1/2}(T_s - q) = q^{-1/2} T_s - q^{1/2}$$
 
 를 도입하면, $\overline{C_s} = q^{1/2} T_s^{-1} - q^{-1/2} = q^{1/2}(q^{-1} T_s + q^{-1} - 1) - q^{-1/2} = q^{-1/2} T_s - q^{1/2} = C_s$이므로 $C_s$는 bar-invariant이며, 실제로 $C_s$는 정리 4가 보장하는 $w = s$에 대응하는 원소이다.
 
-이제 곱 $C_s \cdot C_{sw}$를 생각하면 이는 bar-invariant이며, standard basis의 전개에서 $T_w$의 계수가 $q^{-\ell(w)/2}$가 되도록 정규화되어 있다. 그러나 일반적으로 이 곱은 정리 4의 조건 2에 명시된 degree bound를 위배할 수 있으므로, 다음의 보정 항을 빼주어야 한다. 구체적으로
+이제 곱 $C_s \cdot C_{sw}$를 생각하면 이는 bar-invariant이며, standard basis의 전개에서 $T_w$의 계수가 $q^{-\ell(w)/2}$가 되도록 normalize되어 있다. 그러나 일반적으로 이 곱은 정리 4의 조건 2에 명시된 degree bound를 위배할 수 있으므로, 다음의 보정 항을 빼주어야 한다. 구체적으로
 
 $$C_s \cdot C_{sw} = C_w + \sum_{\substack{z < w \\ sz < z}} \mu(z, sw)\, C_z$$
 

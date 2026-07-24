@@ -74,7 +74,7 @@ $$e_T(N_p)=\prod_{j=1}^m w_j\in R$$
 다음 명제가 localization에서 결정적이다. $e_T(N_F)$은 $F$ 위에서 일반적으로 $0$이 아닌 nilpotent 보정항을 갖지만, localize하면 가역이 된다.
 
 ::: 명제 3
-명제 1의 fixed component $F$에 대하여, $e_T(N_F)$은 국소화된 ring $H_T^\bullet(F)_{\mathrm{loc}}=H^\bullet(F)\otimes_{\mathbb{Q}}\mathrm{Frac}(R)$ 안에서 가역이다.
+명제 1의 fixed component $F$에 대하여, $e_T(N_F)$은 localize된 ring $H_T^\bullet(F)_{\mathrm{loc}}=H^\bullet(F)\otimes_{\mathbb{Q}}\mathrm{Frac}(R)$ 안에서 가역이다.
 :::
 ::: 증명
 위 분해식에서 $e_T(N_F)=\prod_\chi\prod_j(x_{\chi,j}+\chi)$이다. $x_{\chi,j}\in H^{>0}(F)$이고 $F$가 콤팩트 variety이므로 $H^{>0}(F;\mathbb{Q})$의 원소는 모두 nilpotent이다. 한 인수를 $x_{\chi,j}+\chi=\chi(1+\chi^{-1}x_{\chi,j})$로 쓰면, $\chi\neq 0$이라 $\chi$는 $\mathrm{Frac}(R)$에서 가역이고 $\chi^{-1}x_{\chi,j}$은 nilpotent이므로 $1+\chi^{-1}x_{\chi,j}$은 가역이다 (그 역은 유한 geometric series이다). 따라서 각 인수가 $H^\bullet(F)\otimes\mathrm{Frac}(R)$에서 가역이고 그 곱 $e_T(N_F)$도 가역이다. 동치로, $e_T(N_F)$을 degree에 따라 분해하면 그 최저차 항은 $\prod_\chi\chi^{\mathrm{rank}(N_F)_\chi}\in R$이라는 $R$의 $0$이 아닌 원소이고, 나머지는 $H^{>0}(F)$에서 온 nilpotent 보정이다.
@@ -125,7 +125,7 @@ $U$의 한 점 $x$를 보자. $x$는 fixed point가 아니므로 그 stabilizer 
 
 $$H_T^\bullet(T\times_{T_x}S_x)=H_{T_x}^\bullet(S_x)$$
 
-이다. 이 가군 위의 $R=H_T^\bullet(\mathrm{pt})$-작용은 제한사상 $R=H_T^\bullet(\mathrm{pt})\rightarrow H_{T_x}^\bullet(\mathrm{pt})$을 거친다. $T_x$가 진부분 subgroup이므로 그 항등성분 $T_x^0$의 차원은 $n$보다 작거나, $T_x$가 유한군이다. $\mathbb{Q}$-계수에서 $H_{T_x}^\bullet(\mathrm{pt};\mathbb{Q})=H^\bullet(BT_x^0;\mathbb{Q})=\mathrm{Sym}_{\mathbb{Q}}\big(\mathrm{Hom}(T_x^0,S^1)\otimes\mathbb{Q}\big)$이고, 제한사상 $M_T\otimes\mathbb{Q}\rightarrow\mathrm{Hom}(T_x^0,S^1)\otimes\mathbb{Q}$은 차원이 떨어지므로 kernel이 $0$이 아니다. 그 kernel의 $0$이 아닌 원소 $\chi\in R$을 고르면, $\chi$는 $H_{T_x}^\bullet(S_x)$ 위에서 $0$으로 작용한다. 곧 $\chi$가 이 국소 가군을 소멸시킨다.
+이다. 이 가군 위의 $R=H_T^\bullet(\mathrm{pt})$-작용은 restriction map $R=H_T^\bullet(\mathrm{pt})\rightarrow H_{T_x}^\bullet(\mathrm{pt})$을 거친다. $T_x$가 진부분 subgroup이므로 그 항등성분 $T_x^0$의 차원은 $n$보다 작거나, $T_x$가 유한군이다. $\mathbb{Q}$-계수에서 $H_{T_x}^\bullet(\mathrm{pt};\mathbb{Q})=H^\bullet(BT_x^0;\mathbb{Q})=\mathrm{Sym}_{\mathbb{Q}}\big(\mathrm{Hom}(T_x^0,S^1)\otimes\mathbb{Q}\big)$이고, restriction map $M_T\otimes\mathbb{Q}\rightarrow\mathrm{Hom}(T_x^0,S^1)\otimes\mathbb{Q}$은 차원이 떨어지므로 kernel이 $0$이 아니다. 그 kernel의 $0$이 아닌 원소 $\chi\in R$을 고르면, $\chi$는 $H_{T_x}^\bullet(S_x)$ 위에서 $0$으로 작용한다. 곧 $\chi$가 이 국소 가군을 소멸시킨다.
 
 $M^T$이 콤팩트이고 그 보충 $U$를 위와 같은 유한 개의 $T$-불변 열린집합으로 덮을 수 있다. ($M$이 콤팩트이므로 임의의 콤팩트 부분집합이 유한 개로 덮이고, Mayer–Vietoris로 이어붙인다.) 각 조각을 소멸시키는 character들의 곱 $\chi=\chi_1\cdots\chi_r\in R$은 $0$이 아니며, Mayer–Vietoris exact sequence를 따라 귀납하면 $\chi$가 $H_T^\bullet(U)$ 전체를 소멸시킨다. 따라서 $H_T^\bullet(U)$은 torsion이다. $H_T^\bullet(M,M^T)$의 torsion성은 pair $(M,M^T)$의 동변 tubular neighborhood를 통한 excision으로 $U$의 (compactly supported) equivariant cohomology와 같은 orbit-type 조각들로 환원되어 같은 방식으로 따라온다. 전면적인 Mayer–Vietoris 논증은 [AB]의 §3과 [AF]의 §7을 따른다.
 :::
@@ -133,7 +133,7 @@ $M^T$이 콤팩트이고 그 보충 $U$를 위와 같은 유한 개의 $T$-불�
 이 torsion 현상이 의미하는 바는 직관적으로 명료하다. $\mathrm{Spec}R$을 좌표공간으로 볼 때, equivariant cohomology는 그 위의 가군으로서 작용의 stabilizer가 비자명한 자리에 support를 가지며, 작용이 거의 자유로운 $U$ 위에서는 support가 원점 주변의 진부분 자취로 밀려나 field of fractions로 넘어가면 사라진다. 이제 본 정리를 증명한다.
 
 ::: 정리 7 (Atiyah–Bott, Berline–Vergne localization 정리)
-포함 $i:M^T\hookrightarrow M$이 유도하는 제한사상은 localization 후 동형
+포함 $i:M^T\hookrightarrow M$이 유도하는 restriction map은 localization 후 동형
 
 $$i^\ast:H_T^\bullet(M)_{\mathrm{loc}}\xrightarrow{\ \cong\ }H_T^\bullet(M^T)_{\mathrm{loc}}=\bigoplus_F H_T^\bullet(F)_{\mathrm{loc}}$$
 
@@ -165,7 +165,7 @@ $$j_G^\ast J(\beta)=j_G^\ast j_{G\ast}\left(\frac{\beta_G}{e_T(N_G)}\right)=e_T(
 
 $$\alpha=\sum_F j_{F\ast}\left(\frac{i_F^\ast\alpha}{e_T(N_F)}\right)\quad\text{in }H_T^\bullet(M)_{\mathrm{loc}}$$
 
-이 항상 성립한다. 이는 [§동변 코호몰로지, ⁋예시 6](/ko/math/toric_geometry/equivariant_cohomology#ex6)에서 관찰한 "fixed point로의 restriction이 거의 단사"라는 현상의 정확한 형태이다. Equivariantly formal한 경우 ([§동변 코호몰로지, ⁋정의 8](/ko/math/toric_geometry/equivariant_cohomology#def8)) 에는 제한사상이 localization 이전에도 단사이므로, localization은 단사성을 전사성까지 끌어올리는 역할만 한다.
+이 항상 성립한다. 이는 [§동변 코호몰로지, ⁋예시 6](/ko/math/toric_geometry/equivariant_cohomology#ex6)에서 관찰한 "fixed point로의 restriction이 거의 단사"라는 현상의 정확한 형태이다. Equivariantly formal한 경우 ([§동변 코호몰로지, ⁋정의 8](/ko/math/toric_geometry/equivariant_cohomology#def8)) 에는 restriction map이 localization 이전에도 단사이므로, localization은 단사성을 전사성까지 끌어올리는 역할만 한다.
 
 ## Atiyah–Bott–Berline–Vergne 적분 공식
 
