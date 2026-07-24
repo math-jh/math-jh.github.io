@@ -124,23 +124,22 @@ $$q^n-1=(q-1)+\sum_{x}\frac{q^n-1}{q^{d(x)}-1}\tag{$\ast$}$$
 
 의 형태가 되며, 여기서 합의 각 $d(x)$는 $n$의 진약수이다.
 
-이제 $n\geq 2$라 가정하고 모순을 얻자. Cyclotomic polynomial $\Phi_n(\x)$는 $q^n-1$을 나누며, 각 진약수 $d=d(x)<n$에 대해 $\frac{q^n-1}{q^d-1}$도 나눈다. 따라서 $(\ast)$에서 $\Phi_n(q)$는 좌변 $q^n-1$과 우변의 합 부분을 모두 나누므로, 그 차인 $q-1$도 나눈다. 즉 $\Phi_n(q)\mid q-1$이고 $q-1\geq 1$이므로 $\lvert\Phi_n(q)\rvert\leq q-1$이다. 그러나 [명제 4](#prop4)에 의해 $n\geq 2$이면 $\lvert\Phi_n(q)\rvert>q-1$이므로 모순이다.
-
-따라서 $n=1$이고 $D=Z$이다. $Z$는 commutative하므로 $D$는 field이다.
+이제 $n\geq 2$라 가정하고 모순을 얻자. Cyclotomic polynomial $\Phi_n(\x)$는 $q^n-1$을 나누며, 각 진약수 $d=d(x)<n$에 대해 $\frac{q^n-1}{q^d-1}$도 나눈다. 따라서, 위의 $(\ast)$에서 $\Phi_n(q)$는 반드시 $q-1$도 나눠야 한다. 즉 $\Phi_n(q)\mid q-1$이고 $q-1\geq 1$이므로 $\lvert\Phi_n(q)\rvert\leq q-1$이다. 그러나 [명제 4](#prop4)에 의해 $n\geq 2$이면 $\lvert\Phi_n(q)\rvert>q-1$이므로 모순이다.
 :::
 
-증명에서 유한성은 두 곳에서 결정적으로 쓰였다. 하나는 $D$가 center $Z$ 위의 유한차원 vector space가 되어 order가 $q^n$ 꼴로 표현된 것이고, 다른 하나는 class equation의 항들이 cyclotomic polynomial이라는 강한 정수론적 정보를 갖게 된 것이다. Cyclotomic polynomial의 약수 관계와 [명제 4](#prop4)의 부등식만이 본질이며, 그 둘은 위 증명에서 자체적으로 확립하였다. Cyclotomic polynomial의 더 깊은 이론은 별도의 표준 문헌에 미룬다.
-
-이 정리의 첫 번째 귀결은 유한 integral domain에 대한 결과를 다시 준다. 유한 division ring과 유한 integral domain은 commutative하다는 결론을 공유하는데, 후자는 곱셈의 단사성에서 직접 따라온 결과였고 ([§가역원과 영인자, ⁋따름정리 6](/ko/math/ring_theory/units_and_zero_divisors#cor6)), 전자는 그보다 강한 주장이다.
+이 정리의 첫 번째 귀결은 finite integral domain에 대한 결과를 다시 준다.
 
 ::: 따름정리 6
-$0\neq 1$인 finite ring $A$가 nonzero zero divisor를 갖지 않으면 $A$는 field이다.
+$0\neq 1$인 finite ring $A$가 nonzero zero-divisor를 갖지 않으면 $A$는 field이다.
 :::
 ::: 증명
 $A$가 finite ring이고 $0$ 이외의 zero divisor가 없다고 하자. 임의의 nonzero $a\in A$에 대해 left multiplication morphism $\lambda_a:A\rightarrow A$, $\lambda_a(x)=ax$를 생각하면, $ax=ay$일 때 $a(x-y)=0$이고 $a$가 zero divisor가 아니므로 $x=y$, 즉 $\lambda_a$가 단사이다. $A$가 유한집합이므로 $\lambda_a$는 전사이고, $av=1$인 $v$가 존재한다. 같은 논법을 right multiplication에 적용하면 $wa=1$인 $w$가 존재하며, $w=w(av)=(wa)v=v$이므로 $v$는 $a$의 양쪽 역원이다. 따라서 모든 nonzero 원소가 unit이고 $A$는 division ring이다. 유한 division ring은 [정리 5](#thm5)에 의해 field이다.
 :::
 
-여기서는 commutativity를 가정하지 않고 출발하여 division ring임을 먼저 얻은 뒤 Wedderburn 정리로 commutativity를 결론지었다. Commutativity를 처음부터 가정하면 [정리 5](#thm5) 없이도 곱셈사상의 단사성만으로 field임을 얻으며, 이것이 "유한 integral domain은 field"라는 앞선 결과였다 ([§가역원과 영인자, ⁋따름정리 6](/ko/math/ring_theory/units_and_zero_divisors#cor6)). Wedderburn 정리의 힘은 commutativity 가정 없이 zero divisor의 부재만으로 같은 결론에 이른다는 데에 있다.
+이것이 [§가역원과 영인자, ⁋따름정리 6](/ko/math/ring_theory/units_and_zero_divisors#cor6)과 본질적으로 다른 것은 $A$의 commutativity를 가정하지 않았다는 것이다. 
+
+
+여기서는 commutativity를 가정하지 않고 출발하여 division ring임을 먼저 얻은 뒤 Wedderburn 정리로 commutativity를 결론지었다. Commutativity를 처음부터 가정하면 [정리 5](#thm5) 없이도 곱셈사상의 단사성만으로 field임을 얻으며, 이것이 "유한 integral domain은 field"라는 앞선 결과였다 (). Wedderburn 정리의 힘은 commutativity 가정 없이 zero divisor의 부재만으로 같은 결론에 이른다는 데에 있다.
 
 ## 사원수
 

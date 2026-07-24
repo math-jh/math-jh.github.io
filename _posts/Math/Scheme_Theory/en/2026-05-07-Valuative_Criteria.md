@@ -26,7 +26,7 @@ Let a scheme morphism $f: X \rightarrow Y$ be given.
 3. $f$ is called *quasi-projective* if it can be factored as a composition of a suitable open immersion $X \rightarrow X'$ and a projective morphism $X' \rightarrow Y$.
 :::
 
-All three concepts prescribe a way of placing $X$ inside a standard space over $Y$. An open immersion identifies $X$ with an open subscheme of $Y$, while a projective morphism realizes $X$ as a closed subscheme of $\mathbb{P}^n_Y$, so that for $n=0$ it is a closed embedding itself. A quasi-projective morphism relaxes the closedness in this realization by an open part. At the end of this post we show with [Theorem 15](#thm15) that the latter two concepts imply, respectively, the properness and separatedness that we are about to define.
+The first definition is trivial, and the second and third are also [\[Algebraic Varieties\] §Projective Varieties, ⁋Definition 3](/en/math/algebraic_varieties/projective_varieties#def3) and [\[Algebraic Varieties\] §Quasi-Projective Varieties, ⁋Definition 1](/en/math/algebraic_varieties/quasi_projective_varieties#def1) treated in their relative version, that is, in $\Sch_{/Y}$.
 
 Before starting the main discussion, it is helpful to examine the following example.
 
@@ -56,9 +56,15 @@ we obtain
 $$\kappa((0))=K, \qquad \kappa(\mathfrak{m})=A_\mathfrak{m}/\mathfrak{m}A_\mathfrak{m}\cong A/\mathfrak{m}.$$
 :::
 
-Let us take note of what this example means. Since $Z((0))=\Spec A$, the closure of $(0)$ is all of $\Spec A$, so $(0)$ is the generic point and the unique closed point $\mathfrak{m}$ is a specialization of $(0)$. Removing the closed point yields the only nontrivial open subset $D(\pi)=\{(0)\}$, and the functions on it were $K$; thus the canonical morphism $\Spec K \rightarrow \Spec A$ is exactly this "punctured" inclusion. Geometrically, one may think of $\Spec A$ as a germ of a curve at a point, and $\Spec K$ as that germ with the point removed.
+Let us examine the example a little more geometrically. Since $Z((0))=\Spec A$, the closure of $(0)$ is all of $\Spec A$, so $(0)$ becomes the generic point of this space. Such a situation is seen especially intuitively when $\mathcal{O}_{C,p}$ is a discrete valuation ring for a curve $C$ and a point $p$ on it. Concretely, the stalk
 
-Then a morphism $\Spec K \rightarrow X$ is a punctured curve germ mapping into $X$, and extending it to $\Spec A \rightarrow X$ amounts to recovering the missing point inside $X$ and gluing the curve back together, i.e., finding the limit of the curve. The statement that there is at most one such extension is separatedness, and that there is exactly one is properness; this is the content of the two criteria we will see below. This exactly mirrors the topological picture: limits are unique in a Hausdorff space, and limits always exist in a compact space.
+$$\mathcal{O}_{C,p}=\varprojlim_{U\supset p} \mathcal{O}(U)$$
+
+may be viewed as the germ at the point $p$, and the generic point $(0)$ of $\Spec \mathcal{O}_{C,p}$ is precisely what carries this data. Then the remaining (unique) point $\mathfrak{m}$ corresponds exactly to the point $p$, and the fact that it is a specialization of $(0)$ reflects that in defining a germ we look at neighborhoods arbitrarily close to $p$.
+
+The role of $\Spec K$ in this picture is revealed by looking at the side of functions. The functions on $\Spec A$ are $A$ itself, that is, the germs regular at $p$, while the elements of $K\cong A_\pi$, the functions on the only nontrivial open subset $D(\pi)=\{(0)\}$, are those obtained by allowing the form $f=\pi^nu$ down to negative degrees $n$. ([[Commutative Algebra] §Divisors, ⁋Proposition 8](/en/math/commutative_algebra/divisors#prop8), item 2) That is, these are the functions having a pole at $p$ of finite order, in other words those regular on the whole neighborhood once $p$ alone is removed; hence $\Spec K$ is this germ with its center $p$ removed, a space that has lost the information at $p$ and retains only the information about a neighborhood of $p$, and the canonical morphism $\Spec K \rightarrow \Spec A$ is exactly the inclusion that this picture defines.
+
+Then a morphism $\Spec K \rightarrow X$ is a punctured curve germ mapping into $X$, and extending it to $\Spec A \rightarrow X$ amounts to recovering the missing point inside $X$ and gluing the curve back together, i.e., finding the limit of the curve. The statement that there is at most one such extension is separatedness, and that there is exactly one is properness; this is the content of the two criteria we will see below. Topologically this corresponds exactly to the fact that limits are unique in a Hausdorff space ([[Topology] §Hausdorff Spaces, ⁋Proposition 4](/en/math/topology/Hausdorff_spaces#prop4)) and that limits always exist in a compact space. ([[Topology] §Compactness and Paracompactness, ⁋Lemma 1](/en/math/topology/compactness#lem1))
 
 ## Separated Morphisms
 
@@ -161,7 +167,7 @@ $$\eta=q(\mathfrak{m}_A)=\Delta(g_1(\mathfrak{m}_A))\in \Delta(X)$$
 and $\Delta(X)$ is closed under specialization. Combined with the previous observation, $\Delta(X)=\cl(\Delta(X))$, so $\Delta(X)$ is a closed set, and by [Proposition 4](#prop4) $f$ is separated.
 :::
 
-On the other hand, if $Y$ is Noetherian and $f$ is a finite type morphism, then in the above theorem one may replace arbitrary valuation rings by arbitrary discrete valuation rings. This requires a limit argument handling an arbitrary valuation ring by Noetherian approximation and lies beyond the scope of this post, so we accept the fact without proof and defer it to **[Stacks]**. With this change, it becomes easier to explain the theorem using geometric intuition: thinking of $\Spec A$ as a germ of a smooth curve and $\Spec K$ as that germ with one point removed, the theorem says that there is only one way to embed such $\Spec K\hookrightarrow \Spec A$.
+On the other hand, if $Y$ is Noetherian and $f$ is a finite type morphism, then in the above theorem one may replace arbitrary valuation rings by arbitrary discrete valuation rings. This requires a limit argument handling an arbitrary valuation ring by Noetherian approximation and lies beyond the scope of this post, so we accept the fact without proof and defer it to **[Stacks]**. The $\Spec$ of a general valuation ring has its prime ideals forming a longer chain and so escapes the two-point picture of [Example 2](#ex2), but once we pass to discrete valuation rings that picture survives intact and the theorem can be read in terms of curve germs. That is, the theorem above says that given a way of placing the punctured germ $\Spec K$ inside $X$, there is at most one way of filling it up to the whole germ $\Spec A$.
 
 Let us confirm this picture in practice.
 

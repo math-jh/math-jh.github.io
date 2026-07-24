@@ -596,6 +596,13 @@ A:
   defs:
   - label: '[대수적 구조] §대수적 구조'
     url: /ko/math/algebraic_structures/algebraic_structures
+- id: associativity
+  en: associativity
+  ko: 결합성
+  primary: en
+  defs:
+  - label: '[리 이론] §Killing 형식과 Cartan 판정법'
+    url: /ko/math/lie_theory/killing_form_and_cartan_criterion
 - id: associator
   en: associator
   ko: 결합자
@@ -1497,6 +1504,8 @@ C:
   defs:
   - label: '[리 이론] §콤팩트 실형식'
     url: /ko/math/lie_theory/compact_real_form
+  - label: '[리 이론] §Serre 관계식'
+    url: /ko/math/lie_theory/serre_relations
 - id: chevalley_serre_presentation
   en: Chevalley–Serre presentation
   ko: 슈발레-세르 표시
@@ -2114,6 +2123,8 @@ C:
   defs:
   - label: '[가환대수학] §완비화'
     url: /ko/math/commutative_algebra/completion
+  - label: '[리 이론] §Weyl 지표 공식'
+    url: /ko/math/lie_theory/weyl_character_formula
 - id: complex_algebraic_variety
   en: complex algebraic variety
   ko: 복소대수다양체
@@ -4133,6 +4144,13 @@ F:
   defs:
   - label: '[선형대수학] §부분공간'
     url: /ko/math/linear_algebra/subspaces
+- id: finite_type
+  en: finite type
+  ko: 유한형
+  primary: en
+  defs:
+  - label: '[리 이론] §Serre 관계식'
+    url: /ko/math/lie_theory/serre_relations
 - id: finite_type_homomorphism
   en: finite type homomorphism
   ko: 유한형 준동형사상
@@ -4253,6 +4271,13 @@ F:
   defs:
   - label: '[복소기하학] §Hodge 이론'
     url: /ko/math/complex_geometry/hodge_theory
+- id: formal_character
+  en: formal character
+  ko: 형식 지표
+  primary: en
+  defs:
+  - label: '[리 이론] §Weyl 지표 공식'
+    url: /ko/math/lie_theory/weyl_character_formula
 - id: four_fundamental_subspaces
   en: four fundamental subspaces
   ko: 네 개의 기본공간들
@@ -4322,6 +4347,13 @@ F:
     url: /ko/math/category_theory/adjoints
   - label: '[대수적 구조] §자유곱'
     url: /ko/math/algebraic_structures/free_products
+- id: free_lie_algebra
+  en: free Lie algebra
+  ko: 자유 리 대수
+  primary: en
+  defs:
+  - label: '[리 이론] §Serre 관계식'
+    url: /ko/math/lie_theory/serre_relations
 - id: free_on_mathcal_m
   en: free on $\mathcal{M}$
   ko: $\mathcal{M}$ 위에서 자유
@@ -4498,6 +4530,13 @@ G:
   defs:
   - label: '[선형대수학] §행렬'
     url: /ko/math/linear_algebra/matrices
+- id: generalized_cartan_matrix
+  en: generalized Cartan matrix
+  ko: 일반화 카르탕 행렬
+  primary: en
+  defs:
+  - label: '[리 이론] §Serre 관계식'
+    url: /ko/math/lie_theory/serre_relations
 - id: generalized_eigenspace
   en: generalized eigenspace
   ko: 일반화 고유공간
@@ -5737,6 +5776,13 @@ I:
   defs:
   - label: '[집합론] §유향집합'
     url: /ko/math/set_theory/directed_set
+- id: invariance
+  en: invariance
+  ko: 불변성
+  primary: en
+  defs:
+  - label: '[리 이론] §Killing 형식과 Cartan 판정법'
+    url: /ko/math/lie_theory/killing_form_and_cartan_criterion
 - id: invariant_basis_number_property
   en: invariant basis number property
   ko: 불변 기저수 성질
@@ -5885,6 +5931,8 @@ I:
   defs:
   - label: '[표현론] §유한군의 표현론'
     url: /ko/math/representation_theory/representations_of_finite_groups
+  - label: '[리 이론] §sl₂의 표현론'
+    url: /ko/math/lie_theory/representations_of_sl2
 - id: irrelevant_ideal
   en: Irrelevant ideal
   ko: 무관 아이디얼
@@ -6165,6 +6213,13 @@ K:
   defs:
   - label: '[위상수학] §하우스도르프 공간'
     url: /ko/math/topology/Hausdorff_spaces
+- id: kostant_partition_function
+  en: kostant partition function
+  ko: 코스탄트 분할 함수
+  primary: en
+  defs:
+  - label: '[리 이론] §Weyl 지표 공식'
+    url: /ko/math/lie_theory/weyl_character_formula
 - id: koszul_complex
   en: Koszul complex
   ko: 코쥴 복합체
@@ -7548,6 +7603,13 @@ N:
   see:
   - label: Solvable
     id: solvable
+- id: nilpotent_part
+  en: nilpotent part
+  ko: 멱영 부분
+  primary: en
+  defs:
+  - label: '[리 이론] §Killing 형식과 Cartan 판정법'
+    url: /ko/math/lie_theory/killing_form_and_cartan_criterion
 - id: nilradical
   en: nilradical
   ko: 영근기
@@ -9876,6 +9938,13 @@ S:
   defs:
   - label: '[리 이론] §근계'
     url: /ko/math/lie_theory/root_systems
+- id: semisimple_part
+  en: semisimple part
+  ko: 반단순 부분
+  primary: en
+  defs:
+  - label: '[리 이론] §Killing 형식과 Cartan 판정법'
+    url: /ko/math/lie_theory/killing_form_and_cartan_criterion
 - id: semistable
   en: semistable
   ko: 반안정
@@ -10003,6 +10072,13 @@ S:
   en: Serre relation
   ko: 세르 관계식
   primary: en
+  defs:
+  - label: '[리 이론] §Serre 관계식'
+    url: /ko/math/lie_theory/serre_relations
+- id: serre_relations
+  en: Serre relations
+  ko: Serre 관계식
+  primary: ko
   defs:
   - label: '[리 이론] §Serre 관계식'
     url: /ko/math/lie_theory/serre_relations
@@ -10524,6 +10600,13 @@ S:
   defs:
   - label: '[복소기하학] §거의 복소구조'
     url: /ko/math/complex_geometry/almost_complex_structures
+- id: standard_basis
+  en: standard basis
+  ko: 표준 기저
+  primary: en
+  defs:
+  - label: '[리 이론] §sl₂의 표현론'
+    url: /ko/math/lie_theory/representations_of_sl2
 - id: standard_étale
   en: standard étale
   ko: 표준 에탈
@@ -11400,6 +11483,13 @@ T:
   defs:
   - label: '[군론] §대칭군'
     url: /ko/math/group_theory/symmetric_groups
+- id: triangular_decomposition
+  en: triangular decomposition
+  ko: 삼각 분해
+  primary: ko
+  defs:
+  - label: '[리 이론] §Serre 관계식'
+    url: /ko/math/lie_theory/serre_relations
 - id: triangular_matrix
   en: triangular matrix
   ko: 삼각행렬
@@ -11909,6 +11999,13 @@ W:
   defs:
   - label: '[리 이론] §원환면의 작용'
     url: /ko/math/lie_theory/torus_action
+- id: weight_string
+  en: weight string
+  ko: 무게 사슬
+  primary: en
+  defs:
+  - label: '[리 이론] §sl₂의 표현론'
+    url: /ko/math/lie_theory/representations_of_sl2
 - id: weil_divisor
   en: Weil divisor
   ko: 베유 인자
@@ -11928,6 +12025,13 @@ W:
   defs:
   - label: '[집합론] §서수와 정렬집합'
     url: /ko/math/set_theory/ordinals
+- id: weyl_denominator
+  en: Weyl denominator
+  ko: 바일 분모
+  primary: en
+  defs:
+  - label: '[리 이론] §Weyl 지표 공식'
+    url: /ko/math/lie_theory/weyl_character_formula
 - id: weyl_group
   en: Weyl group
   ko: 바일 군
@@ -11935,6 +12039,13 @@ W:
   defs:
   - label: '[리 이론] §원환면의 작용'
     url: /ko/math/lie_theory/torus_action
+- id: weyl_vector
+  en: Weyl vector
+  ko: 바일 벡터
+  primary: en
+  defs:
+  - label: '[리 이론] §Weyl 지표 공식'
+    url: /ko/math/lie_theory/weyl_character_formula
 - id: whitney_sum_formula
   en: Whitney sum formula
   ko: 휘트니 합 공식

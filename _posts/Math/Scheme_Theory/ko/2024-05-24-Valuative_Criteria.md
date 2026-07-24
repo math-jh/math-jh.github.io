@@ -26,12 +26,12 @@ Scheme morphism $f: X \rightarrow Y$가 주어졌다 하자.
 3. $f$가 *quasi-projective<sub>준사영사상</sub>*라는 것은 이를 적당한 open immersion $X \rightarrow X'$와 projective morphism $X' \rightarrow Y$의 합성으로 분해할 수 있는 것이다. 
 :::
 
-세 개념 모두 $X$를 $Y$ 위의 표준적인 공간 안에 앉히는 방식을 규정한다. Open immersion은 $X$를 $Y$의 open subscheme과 동일시하는 것이고, projective morphism은 $X$를 $\mathbb{P}^n_Y$의 closed subscheme으로 실현하는 것이므로 $n=0$인 경우 closed embedding 자체가 된다. Quasi-projective morphism은 이 실현에서 닫힌 조건을 열린 부분만큼 완화한 것이다. 이 글의 마지막에서 우리는 [정리 11](#thm11)로 뒤의 두 개념이 각각 이제부터 정의할 properness와 separatedness를 함의함을 본다.
+첫째 정의는 자명한 것이며, 둘째와 셋째 정의 또한 [\[대수다양체\] §사영다양체, ⁋정의 3](/ko/math/algebraic_varieties/projective_varieties#def3)과 [\[대수다양체\] §준사영다양체, ⁋정의 1](/ko/math/algebraic_varieties/quasi_projective_varieties#def1)을 relative 버전, 즉 $\Sch_{/Y}$에서 다룬 것이다. 
 
 본격적인 이야기를 시작하기 전에 다음 예시를 살펴보는 것이 좋다. 
 
 ::: 예시 2
-Ring $A$가 field $K$의 subring으로서 discrete valuation ring이라 하자. 곧 임의의 $x\in K^\times$에 대해 $x\in A$이거나 $x^{-1}\in A$이며, $A$는 Noetherian이고 그 maximal ideal $\mathfrak{m}$은 principal이다. ([\[가환대수학\] §인자, ⁋정의 5](/ko/math/commutative_algebra/divisors#def5)) 임의의 $x\in K^\times$가 $x$ 또는 $x^{-1}$을 통해 $A$의 원소들의 비로 표현되므로 $K=\Frac(A)$이다. 또 $A$는 $\mathfrak{m}$을 유일한 maximal ideal로 갖는 local ring이고 ([\[가환대수학\] §인자, ⁋명제 6](/ko/math/commutative_algebra/divisors#prop6)), uniformizer $\pi$를 하나 잡으면 임의의 $f\in K^\times$가 정수 $n$과 unit $u$에 대해 $f=\pi^nu$로 유일하게 표현되므로 ([\[가환대수학\] §인자, ⁋명제 8](/ko/math/commutative_algebra/divisors#prop8)) $A$의 nonzero ideal은 모두 $(\pi^n)$ 꼴이다. 특히 $A$는 principal ideal domain이며 그 prime ideal은 $(0)$과 $\mathfrak{m}=(\pi)$ 둘 뿐이다.
+Ring $A$가 field $K$의 subring으로서 discrete valuation ring이라 하자. 즉 임의의 $x\in K^\times$에 대해 $x\in A$이거나 $x^{-1}\in A$이며, $A$는 Noetherian이고 그 maximal ideal $\mathfrak{m}$은 principal이다. ([\[가환대수학\] §인자, ⁋정의 5](/ko/math/commutative_algebra/divisors#def5)) 임의의 $x\in K^\times$가 $x$ 또는 $x^{-1}$을 통해 $A$의 원소들의 비로 표현되므로 $K=\Frac(A)$이다. 또 $A$는 $\mathfrak{m}$을 유일한 maximal ideal로 갖는 local ring이고 ([\[가환대수학\] §인자, ⁋명제 6](/ko/math/commutative_algebra/divisors#prop6)), uniformizer $\pi$를 하나 잡으면 임의의 $f\in K^\times$가 정수 $n$과 unit $u$에 대해 $f=\pi^nu$로 유일하게 표현되므로 ([\[가환대수학\] §인자, ⁋명제 8](/ko/math/commutative_algebra/divisors#prop8)) $A$의 nonzero ideal은 모두 $(\pi^n)$ 꼴이다. 특히 $A$는 principal ideal domain이며 그 prime ideal은 $(0)$과 $\mathfrak{m}=(\pi)$ 둘 뿐이다.
 
 이로부터 $\Spec A$는 두 개의 점 $(0)$, $\mathfrak{m}$으로 이루어져 있으며,
 
@@ -58,11 +58,19 @@ $$\kappa((0))=K, \qquad \kappa(\mathfrak{m})=A_\mathfrak{m}/\mathfrak{m}A_\mathf
 을 얻는다. 
 :::
 
-이 예시가 뜻하는 바를 짚어 두자. $Z((0))=\Spec A$이므로 $(0)$의 closure는 $\Spec A$ 전체이고, 곧 $(0)$은 generic point이며 유일한 closed point $\mathfrak{m}$은 $(0)$의 specialization이다. 여기에서 closed point를 빼낸 것이 자명하지 않은 유일한 열린집합 $D(\pi)=\{(0)\}$이고 그 위의 함수들이 $K$였으므로, canonical morphism $\Spec K \rightarrow \Spec A$는 정확히 이 "점 하나를 빼는" 포함사상이다. 기하적으로는 $\Spec A$를 곡선의 한 점에서의 germ으로, $\Spec K$를 그 germ에서 점 하나를 빼낸 것으로 생각하면 된다.
+예시를 조금 더 기하적으로 살펴보자. $Z((0))=\Spec A$이므로 $(0)$의 closure는 $\Spec A$ 전체가 되고, 곧 $(0)$은 이 공간의 generic point가 된다. 이와 같은 상황은 곡선 $C$와 그 위의 점 $p$에 대해 $\mathcal{O}_{C,p}$가 discrete valuation ring일 때 특히 직관적으로 보여진다. 구체적으로 stalk
 
-그럼 morphism $\Spec K \rightarrow X$는 $X$ 안으로 들어가는, 점이 빠진 곡선의 germ이고, 이를 $\Spec A \rightarrow X$로 확장하는 것은 빠져 있던 그 점을 $X$ 안에서 되찾아 곡선을 이어 붙이는 것, 곧 곡선의 극한을 찾는 것이 된다. 이 extension이 많아야 하나 존재한다는 것이 separatedness이고 정확히 하나 존재한다는 것이 properness이며, 이것이 앞으로 볼 두 판정법의 내용이다. Hausdorff 공간에서 극한이 유일하고 compact 공간에서 극한이 항상 존재하는 것에 정확히 대응하는 구도이다.
+$$\mathcal{O}_{C,p}=\varprojlim_{U\supset p} \mathcal{O}(U)$$
+
+은 점 $p$에서의 germ으로 볼 수 있으며, $\Spec \mathcal{O}_{C,p}$의 generic point $(0)$은 바로 이 데이터를 담고 있는 것이다. 그럼 남아있는 (유일한) 점 $\mathfrak{m}$은 정확하게 점 $p$에 해당하는 것으로, 이것이 $(0)$의 specialization이라는 사실이 바로 germ을 정의할 때 $p$에 한없이 가까운 근방을 살펴본다는 것을 반영한다. 
+
+이 그림에서 $\Spec K$의 역할은 함수 쪽을 살펴보면 드러난다. $\Spec A$ 위의 함수들은 $A$ 자신, 곧 $p$에서 regular한 germ들이고, 자명하지 않은 유일한 열린집합 $D(\pi)=\{(0)\}$ 위의 함수들인 $K\cong A_\pi$의 원소는 $f=\pi^nu$의 꼴을 음의 차수 $n$까지 허용한 것이다. ([\[가환대수학\] §인자, ⁋명제 8](/ko/math/commutative_algebra/divisors#prop8)의 2번) 즉, 이는 $p$에서 pole을 갖되 그 차수가 유한한 함수, 곧 $p$ 하나만 빼면 근방 전체에서 regular한 함수를 뜻하며, 따라서 $\Spec K$는 이 germ에서 중심 $p$를 빼내어, $p$의 정보는 잃어버린 채 $p$의 근방에 대한 정보만 가지고 있는 공간이며, canonical morphism $\Spec K \rightarrow \Spec A$는 정확히 이 그림이 정의하는 포함사상이다. 
+
+그럼 morphism $\Spec K \rightarrow X$는 $X$ 안으로 들어가는, 점이 빠진 곡선의 germ이고, 이를 $\Spec A \rightarrow X$로 확장하는 것은 빠져 있던 그 점을 $X$ 안에서 되찾아 곡선을 이어 붙이는 것, 곧 곡선의 극한을 찾는 것이 된다. 이 extension이 많아야 하나 존재한다는 것이 separatedness이고 정확히 하나 존재한다는 것이 properness이며, 이것이 앞으로 볼 두 판정법의 내용이다. 이는 위상적으로는 Hausdorff 공간에서 극한이 유일하고 ([\[위상수학\] §하우스도르프 공간, ⁋명제 4](/ko/math/topology/Hausdorff_spaces#prop4)), compact 공간에서 극한이 항상 존재한다는 것에 정확히 대응하는 구도이다. ([\[위상수학\] §Compactness와 paracompactness, ⁋보조정리 1](/ko/math/topology/compactness#lem1))
 
 ## 분리사상
+
+위에서 살펴본 것과 같이, 주어진 곡선의 germ이 주어졌을 때, 그 중심 점 $p$를 채우는 방법이 많아야 하나 존재한다는 것이 separated morphism의 아이디어이다. 이를 서술하기 위해서는 다음 정의가 필요하다. 
 
 ::: 정의 3
 Scheme morphism $f:X \rightarrow Y$에 대하여, 두 개의 $\id_X$가 fiber product의 universal property에 의해 유도하는 유일한 morphism, 곧 다음 diagram
@@ -72,9 +80,8 @@ Scheme morphism $f:X \rightarrow Y$에 대하여, 두 개의 $\id_X$가 fiber pr
 의 점선 화살표 $\Delta: X \rightarrow X \times_Y X$를 $f$의 *diagonal morphism<sub>대각사상</sub>*이라 부른다. ([§올곱, ⁋정의 1](/ko/math/scheme_theory/fiber_products#def1)) 만일 $\Delta$가 closed embedding이라면 $f$를 *separated<sub>분리사상</sub>*라 부르고, $X$가 $Y$에 대해 *separated*라 부른다. 만일 $X$가 $\Spec \mathbb{Z}$에 대해 separated이면, $X$를 간단히 *separated* scheme이라 부른다.
 :::
 
-어느 morphism의 diagonal인지를 밝혀야 할 때에는 $\Delta$ 대신 $\Delta_{X/Y}$로 적는다. 정의로부터 두 projection $p_1,p_2: X\times_YX \rightarrow X$에 대해 $p_1\circ\Delta=p_2\circ\Delta=\id_X$이며, 이는 앞으로 반복해서 쓰인다. 특히 $\Delta$는 단사이고 $p_1$을 $\Delta(X)$로 제한한 것이 그 연속인 역함수를 주므로, $\Delta$는 언제나 $\Delta(X)$ 위로의 homeomorphism이다. 따라서 $\Delta$가 closed embedding인지를 묻는 것은, $\Delta(X)$가 닫혀 있는지와 $X$의 함수들이 모두 $X\times_YX$의 함수를 제한하여 얻어지는지를 묻는 것이 된다. ([§닫힌 부분스킴, ⁋정의 2](/ko/math/scheme_theory/closed_subschemes#def2))
-
-대수기하학에서는 separatedness가 Hausdorff를 대체하는 성질이라 생각한다. 위상공간 $T$가 Hausdorff인 것이 $T\times T$ 안에서 대각선이 닫혀 있는 것과 동치였음을 떠올리면 ([\[위상수학\] §하우스도르프 공간, ⁋보조정리 5](/ko/math/topology/Hausdorff_spaces#lem5)), 그 이유는 다음 명제에서 분명해진다.
+어느 morphism의 diagonal인지를 밝혀야 할 때에는 $\Delta$ 대신 $\Delta_{X/Y}$로 적는다. 정의로부터 두 projection $p_1,p_2: X\times_YX \rightarrow X$에 대해 $p_1\circ\Delta=p_2\circ\Delta=\id_X$인 것을 자명하다. 또, $\Delta$는 단사이고 $p_1$을 $\Delta(X)$로 제한한 것이 $\Delta$의 연속인 역함수를 주므로, $\Delta$는 언제나 $\Delta(X)$ 위로의 homeomorphism이다. 따라서 $\Delta$가 closed embedding인지를 묻는 것은, $\Delta(X)$가 닫혀 있는지와 $X$의 함수들이 모두 $X\times_YX$의 함수를 제한하여 얻어지는지를 묻는 것이 된다. ([§닫힌 부분스킴, ⁋정의 2](/ko/math/scheme_theory/closed_subschemes#def2))
+대수기하학에서는 separatedness가 Hausdorff를 대체하는 성질이라 생각한다. 위상공간 $T$가 Hausdorff인 것이 $T\times T$ 안에서 대각선이 닫혀 있는 것과 동치였음을 떠올리면 ([\[위상수학\] §하우스도르프 공간, ⁋보조정리 5](/ko/math/topology/Hausdorff_spaces#lem5)) 다음 명제를 기대하는 것이 자연스럽다. 
 
 ::: 명제 4
 $f:X \rightarrow Y$가 separated인 것과, diagonal morphism $\Delta: X \rightarrow X\times_YX$에 의한 $X$의 image가 닫힌집합인 것이 동치이다.
@@ -163,7 +170,7 @@ $$\eta=q(\mathfrak{m}_A)=\Delta(g_1(\mathfrak{m}_A))\in \Delta(X)$$
 이고, $\Delta(X)$는 specialization에 대해 닫혀 있다. 앞의 관찰과 결합하면 $\Delta(X)=\cl(\Delta(X))$이므로 $\Delta(X)$는 닫힌집합이고, [명제 4](#prop4)에 의하여 $f$는 separated이다.
 :::
 
-한편 만일 $Y$가 Noetherian이고 $f$가 finite type morphism이라면 위의 정리를 임의의 valuation ring이 아니라, 임의의 discrete valuation ring으로 대체해도 된다. 이는 임의의 valuation ring을 Noetherian 근사로 다루는 극한 논법을 요구하여 이 글의 범위를 벗어나므로, 우리는 이 사실을 증명 없이 받아들이고 **[Stacks]**에 위임한다. 이렇게 바꿔두고 나면 기하학적 직관을 이용해 정리를 설명하기가 쉬워지는데, $\Spec A$를 smooth curve의 germ을 나타내는 것으로 생각하고 $\Spec K$는 여기에서 한 점이 빠져있는 것으로 생각하면 위의 정리는 이러한 $\Spec K\hookrightarrow \Spec A$를 넣는 방법이 하나 뿐이라는 것을 말해준다. 
+한편 만일 $Y$가 Noetherian이고 $f$가 finite type morphism이라면 위의 정리를 임의의 valuation ring이 아니라, 임의의 discrete valuation ring으로 대체해도 된다. 이는 임의의 valuation ring을 Noetherian 근사로 다루는 극한 논법을 요구하여 이 글의 범위를 벗어나므로, 우리는 이 사실을 증명 없이 받아들이고 **[Stacks]**에 위임한다. 일반적인 valuation ring의 $\Spec$은 prime ideal들이 더 긴 사슬을 이루어 [예시 2](#ex2)의 두 점짜리 그림에서 벗어나지만, discrete valuation ring으로 바꿔두고 나면 그 그림이 그대로 살아나 정리를 곡선의 germ으로 읽을 수 있다. 곧 위의 정리는 점이 빠진 germ $\Spec K$를 $X$ 안에 넣는 방법이 주어졌을 때 이를 germ 전체 $\Spec A$로 채우는 방법이 많아야 하나임을 말해준다. 
 
 이 그림을 실제로 확인해 보자.
 
