@@ -2005,6 +2005,13 @@ C:
   defs:
   - label: '[대수적 위상수학] §푸앵카레 쌍대성'
     url: /ko/math/algebraic_topology/Poincare_duality
+- id: companion_matrix
+  en: companion matrix
+  ko: 동반행렬
+  primary: en
+  defs:
+  - label: '[선형대수학] §조르당 표준형'
+    url: /ko/math/linear_algebra/Jordan_canonical_form
 - id: comparable
   en: comparable
   ko: 비교가능한
@@ -2524,6 +2531,8 @@ C:
   defs:
   - label: '[대수적 구조] §몫군'
     url: /ko/math/algebraic_structures/quotient_groups
+  - label: '[선형대수학] §몫공간'
+    url: /ko/math/linear_algebra/quotient_space
 - id: cosine
   en: cosine
   ko: 코사인
@@ -6312,10 +6321,10 @@ L:
   ko: Lagrangian 사상
   primary: en
   defs:
-  - label: '[유도대수기하학] §Shifted symplectic 구조'
-    url: /ko/math/derived_algebraic_geometry/shifted_symplectic_structures
   - label: '[선형대수학] §쌍선형형식'
     url: /ko/math/linear_algebra/bilinear_form
+  - label: '[유도대수기하학] §Shifted symplectic 구조'
+    url: /ko/math/derived_algebraic_geometry/shifted_symplectic_structures
 - id: lagrangian_subspace
   en: Lagrangian subspace
   ko: 라그랑지안 부분공간
@@ -6597,10 +6606,10 @@ L:
     url: /ko/math/complex_analysis/complex_integration
   - label: '[위상수학] §차원'
     url: /ko/math/topology/dimension
-  - label: '[리만기하학] §리만 계량'
-    url: /ko/math/riemannian_geometry/Riemannian_metric
   - label: '[리 이론] §Bruhat decomposition'
     url: /ko/math/lie_theory/bruhat_decomposition
+  - label: '[리만기하학] §리만 계량'
+    url: /ko/math/riemannian_geometry/Riemannian_metric
 - id: Leray_theorem
   en: Leray theorem
   ko: 르레 정리
@@ -7584,6 +7593,13 @@ N:
   defs:
   - label: '[집합론] §자연수와 무한집합'
     url: /ko/math/set_theory/natural_numbers
+- id: natural_projection
+  en: natural projection
+  ko: 자연스러운 사영
+  primary: en
+  defs:
+  - label: '[선형대수학] §몫공간'
+    url: /ko/math/linear_algebra/quotient_space
 - id: natural_transformation
   en: natural transformation
   ko: 자연변환
@@ -9144,6 +9160,8 @@ Q:
   defs:
   - label: '[위상수학] §몫공간'
     url: /ko/math/topology/quotient_spaces
+  - label: '[선형대수학] §몫공간'
+    url: /ko/math/linear_algebra/quotient_space
 R:
 - id: r_0_-space
   en: $R_0$-space
@@ -9360,10 +9378,10 @@ R:
   primary: en
   note: '관형 용법: 뒤 명사까지 표준 영어 용어면 구 전체 영어(algebraic extension 등), 아니면 한글 유지. 서술형은 ''<en>한/하다'' 꼴'
   defs:
-  - label: '[집합론] §동치관계'
-    url: /ko/math/set_theory/equivalence_relations
   - label: '[선형대수학] §쌍선형형식'
     url: /ko/math/linear_algebra/bilinear_form
+  - label: '[집합론] §동치관계'
+    url: /ko/math/set_theory/equivalence_relations
   see:
   - label: Binary relation
     id: binary_relation
