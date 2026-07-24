@@ -67,6 +67,13 @@ A:
   defs:
   - label: '[다중선형대수학] §미분'
     url: /ko/math/multilinear_algebra/derivations
+- id: abelian
+  en: abelian
+  ko: 가환
+  primary: en
+  defs:
+  - label: '[리 이론] §가해 Lie algebra와 nilpotent Lie algebra'
+    url: /ko/math/lie_theory/solvable_nilpotent_lie_algebras
 - id: abelian_category
   en: abelian category
   ko: 아벨 카테고리
@@ -158,6 +165,13 @@ A:
   defs:
   - label: '[범주론] §아벨 카테고리'
     url: /ko/math/category_theory/abelian_categories
+- id: adjoint_representation
+  en: adjoint representation
+  ko: 수반 표현
+  primary: en
+  defs:
+  - label: '[리 이론] §가해 Lie algebra와 nilpotent Lie algebra'
+    url: /ko/math/lie_theory/solvable_nilpotent_lie_algebras
 - id: adjunction
   en: adjunction
   ko: 수반쌍
@@ -2535,6 +2549,20 @@ C:
   defs:
   - label: '[표현론] §반사 함자'
     url: /ko/math/representation_theory/reflection_functors
+- id: coxeter_group
+  en: coxeter group
+  ko: 콕세터 군
+  primary: en
+  defs:
+  - label: '[리 이론] §Bruhat decomposition'
+    url: /ko/math/lie_theory/bruhat_decomposition
+- id: coxeter_system
+  en: coxeter system
+  ko: 콕세터 계
+  primary: en
+  defs:
+  - label: '[리 이론] §Bruhat decomposition'
+    url: /ko/math/lie_theory/bruhat_decomposition
 - id: crepant_resolution
   en: crepant resolution
   ko: 크레펀트 분해
@@ -2821,6 +2849,13 @@ D:
   defs:
   - label: '[미적분학] §미분과 도함수'
     url: /ko/math/calculus/derivatives
+- id: derived_algebra
+  en: derived algebra
+  ko: 유도대수
+  primary: en
+  defs:
+  - label: '[리 이론] §가해 Lie algebra와 nilpotent Lie algebra'
+    url: /ko/math/lie_theory/solvable_nilpotent_lie_algebras
 - id: derived_artin_stack
   en: derived artin stack
   ko: 유도 아틴 스택
@@ -2891,6 +2926,8 @@ D:
   defs:
   - label: '[군론] §군의 열'
     url: /ko/math/group_theory/series_of_groups
+  - label: '[리 이론] §가해 Lie algebra와 nilpotent Lie algebra'
+    url: /ko/math/lie_theory/solvable_nilpotent_lie_algebras
   see:
   - label: Lower central series
     id: lower_central_series
@@ -4848,6 +4885,13 @@ H:
   defs:
   - label: '[복소기하학] §Kähler 다양체'
     url: /ko/math/complex_geometry/kahler_manifolds
+- id: hessenberg_function
+  en: hessenberg function
+  ko: Hessenberg 함수
+  primary: ko
+  defs:
+  - label: '[리 이론] §Richardson variety와 Peterson variety'
+    url: /ko/math/lie_theory/richardson_peterson_variety
 - id: hessenberg_variety
   en: Hessenberg variety
   ko: 헤센베르크 다양체
@@ -5166,6 +5210,8 @@ I:
     url: /ko/math/set_theory/filter_and_ideal
   - label: '[대수적 구조] §환의 정의'
     url: /ko/math/algebraic_structures/rings
+  - label: '[리 이론] §가해 Lie algebra와 nilpotent Lie algebra'
+    url: /ko/math/lie_theory/solvable_nilpotent_lie_algebras
   see:
   - label: Subring
     id: subring
@@ -6106,6 +6152,13 @@ L:
   defs:
   - label: '[거울대칭] §거울대칭 개요'
     url: /ko/math/mirror_symmetry/overview
+- id: langlands_dual_group
+  en: langlands dual group
+  ko: 랭글랜즈 쌍대군
+  primary: en
+  defs:
+  - label: '[리 이론] §Richardson variety와 Peterson variety'
+    url: /ko/math/lie_theory/richardson_peterson_variety
 - id: laplacian
   en: Laplacian
   ko: Laplace 연산자
@@ -6368,6 +6421,8 @@ L:
     url: /ko/math/topology/dimension
   - label: '[리만기하학] §리만 계량'
     url: /ko/math/riemannian_geometry/Riemannian_metric
+  - label: '[리 이론] §Bruhat decomposition'
+    url: /ko/math/lie_theory/bruhat_decomposition
 - id: Leray_theorem
   en: Leray theorem
   ko: 르레 정리
@@ -6389,6 +6444,13 @@ L:
   defs:
   - label: '[리 이론] §리 군'
     url: /ko/math/lie_theory/Lie_groups
+- id: lie_algebra_homomorphism
+  en: Lie algebra homomorphism
+  ko: 준동형
+  primary: ko
+  defs:
+  - label: '[리 이론] §가해 Lie algebra와 nilpotent Lie algebra'
+    url: /ko/math/lie_theory/solvable_nilpotent_lie_algebras
 - id: Lie_bracket
   en: Lie bracket
   ko: 리 브라켓
@@ -6415,6 +6477,13 @@ L:
   defs:
   - label: '[리 이론] §리 군'
     url: /ko/math/lie_theory/Lie_groups
+- id: lie_subalgebra
+  en: Lie subalgebra
+  ko: 부분대수
+  primary: en
+  defs:
+  - label: '[리 이론] §가해 Lie algebra와 nilpotent Lie algebra'
+    url: /ko/math/lie_theory/solvable_nilpotent_lie_algebras
 - id: lifting
   en: lifting
   ko: 올림
@@ -6866,6 +6935,8 @@ L:
   defs:
   - label: '[군론] §군의 열'
     url: /ko/math/group_theory/series_of_groups
+  - label: '[리 이론] §가해 Lie algebra와 nilpotent Lie algebra'
+    url: /ko/math/lie_theory/solvable_nilpotent_lie_algebras
 - id: lower_set
   en: lower set
   ko: 하집합
@@ -8908,6 +8979,8 @@ R:
   defs:
   - label: '[가환대수학] §국소화의 성질들'
     url: /ko/math/commutative_algebra/properties_of_localization
+  - label: '[리 이론] §가해 Lie algebra와 nilpotent Lie algebra'
+    url: /ko/math/lie_theory/solvable_nilpotent_lie_algebras
   see:
   - label: Nilradical
     id: nilradical
@@ -9010,6 +9083,13 @@ R:
   see:
   - label: Irreducible
     id: irreducible
+- id: reduced_expression
+  en: reduced expression
+  ko: 기약 표현
+  primary: en
+  defs:
+  - label: '[리 이론] §Bruhat decomposition'
+    url: /ko/math/lie_theory/bruhat_decomposition
 - id: reduced_residue_class
   en: reduced residue class
   ko: 기약잉여류
@@ -10207,6 +10287,8 @@ S:
   defs:
   - label: '[군론] §군의 열'
     url: /ko/math/group_theory/series_of_groups
+  - label: '[리 이론] §가해 Lie algebra와 nilpotent Lie algebra'
+    url: /ko/math/lie_theory/solvable_nilpotent_lie_algebras
   see:
   - label: Nilpotent group
     id: nilpotent_group
