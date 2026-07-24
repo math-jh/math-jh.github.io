@@ -3628,6 +3628,13 @@ E:
   defs:
   - label: '[선형대수학] §가우스 소거법'
     url: /ko/math/linear_algebra/Gaussian_elimination
+- id: elementary_row_operation_ero
+  en: elementary row operation, ero
+  ko: 기본행연산
+  primary: ko
+  defs:
+  - label: '[선형대수학] §가우스 소거법'
+    url: /ko/math/linear_algebra/Gaussian_elimination
 - id: elementary_symmetric_polynomial
   en: elementary symmetric polynomial
   ko: 기본대칭다항식
@@ -7106,6 +7113,13 @@ L:
   defs:
   - label: '[선형대수학] §행렬식의 존재성과 유일성'
     url: /ko/math/linear_algebra/existence_and_uniqueness_of_determinant
+- id: lu_decomposition
+  en: lu decomposition
+  ko: LU 분해
+  primary: ko
+  defs:
+  - label: '[선형대수학] §가우스 소거법'
+    url: /ko/math/linear_algebra/Gaussian_elimination
 M:
 - id: maclaurin_polynomial
   en: Maclaurin polynomial
@@ -9271,6 +9285,13 @@ R:
   see:
   - label: Row échelon matrix
     id: row_echelon_matrix
+- id: reduced_row_échelon_matrix_rref
+  en: reduced row échelon matrix, rref
+  ko: 기약행사다리꼴행렬
+  primary: ko
+  defs:
+  - label: '[선형대수학] §가우스 소거법'
+    url: /ko/math/linear_algebra/Gaussian_elimination
 - id: reduced_scheme
   en: reduced scheme
   ko: 축소스킴
@@ -9796,6 +9817,13 @@ R:
     url: /ko/math/lie_theory/root_systems
 - id: row_echelon_matrix
   en: row échelon matrix
+  ko: 행사다리꼴행렬
+  primary: ko
+  defs:
+  - label: '[선형대수학] §가우스 소거법'
+    url: /ko/math/linear_algebra/Gaussian_elimination
+- id: row_échelon_matrix_ref
+  en: row échelon matrix, ref
   ko: 행사다리꼴행렬
   primary: ko
   defs:
