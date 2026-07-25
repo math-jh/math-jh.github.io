@@ -1378,6 +1378,8 @@ C:
   defs:
   - label: '[대수다양체] §층 코호몰로지'
     url: /ko/math/algebraic_varieties/sheaf_cohomology
+  - label: '[가환대수학] §국소 코호몰로지'
+    url: /ko/math/commutative_algebra/local_cohomology
 - id: center
   en: center
   ko: 중심
@@ -6962,6 +6964,13 @@ L:
   defs:
   - label: '[대수적 위상수학] §푸앵카레 쌍대성'
     url: /ko/math/algebraic_topology/Poincare_duality
+- id: local_cohomology
+  en: local cohomology
+  ko: 국소 코호몰로지
+  primary: en
+  defs:
+  - label: '[가환대수학] §국소 코호몰로지'
+    url: /ko/math/commutative_algebra/local_cohomology
 - id: local_extremum
   en: local extremum
   ko: 극값

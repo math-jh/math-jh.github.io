@@ -5106,3 +5106,8 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 ## term_extract_worker 2026-07-25 16:30
 
 - _posts/Math/Commutative_Algebra/ko/2026-07-24-Hilbert-Samuel_Function.md: 병기 필요 'numerical polynomial' — 위키 ko 문서 '정수 값 다항식' — 병기형 도출 필요
+
+## term_extract_worker 2026-07-25 19:00
+
+- _posts/Math/Commutative_Algebra/ko/2026-07-24-Matlis_Duality.md: 병기 필요 'essential submodule' — 위키 ko 문서 '본질적 단사 사상' — 병기형 도출 필요
+- _posts/Math/Commutative_Algebra/ko/2026-07-24-Matlis_Duality.md: 병기 필요 'essential extension' — 위키 ko 문서 '본질적 단사 사상' — 병기형 도출 필요
