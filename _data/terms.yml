@@ -1050,6 +1050,13 @@ B:
   see:
   - label: Interior
     id: interior
+- id: boundary_point
+  en: boundary point
+  ko: 경계점
+  primary: ko
+  defs:
+  - label: '[미분다양체] §경계가 있는 다양체'
+    url: /ko/math/manifolds/manifolds_with_boundary
 - id: bounded
   en: bounded
   ko: 유계
@@ -1145,6 +1152,13 @@ C:
   defs:
   - label: '[미분다양체] §미분다양체'
     url: /ko/math/manifolds/smooth_manifolds
+- id: calabi-yau_variety
+  en: Calabi-yau variety
+  ko: 칼라비-야우 다양체
+  primary: en
+  defs:
+  - label: '[거울대칭] §Reflexive Polytope과 Batyrev Mirror'
+    url: /ko/math/mirror_symmetry/toric_geometry_batyrev
 - id: canonical_bundle
   en: canonical bundle
   ko: 표준다발
@@ -4979,6 +4993,13 @@ G:
   - label: '[그로모프-위튼 이론] §Refined Gysin 사상과 moduli의 교차이론'
     url: /ko/math/gromov-witten_theory/refined_gysin
 H:
+- id: half-space
+  en: half-space
+  ko: 반공간
+  primary: ko
+  defs:
+  - label: '[미분다양체] §경계가 있는 다양체'
+    url: /ko/math/manifolds/manifolds_with_boundary
 - id: hamiltonian
   en: Hamiltonian
   ko: 해밀토니안
@@ -5575,6 +5596,13 @@ I:
     id: function
   - label: Family of sets
     id: family_of_sets
+- id: induced_orientation
+  en: induced orientation
+  ko: 유도된 향
+  primary: en
+  defs:
+  - label: '[미분다양체] §경계가 있는 다양체'
+    url: /ko/math/manifolds/manifolds_with_boundary
 - id: inductive
   en: inductive
   ko: 귀납적
@@ -5864,6 +5892,13 @@ I:
   defs:
   - label: '[미분다양체] §미분형식'
     url: /ko/math/manifolds/differential_forms
+- id: interior_point
+  en: interior point
+  ko: 내부점
+  primary: en
+  defs:
+  - label: '[미분다양체] §경계가 있는 다양체'
+    url: /ko/math/manifolds/manifolds_with_boundary
 - id: internal_hom
   en: internal $\Hom$
   ko: 내부 $\Hom$
@@ -6034,6 +6069,13 @@ I:
   defs:
   - label: '[복소기하학] §거의 복소구조'
     url: /ko/math/complex_geometry/almost_complex_structures
+- id: inward
+  en: inward
+  ko: 안쪽 방향
+  primary: en
+  defs:
+  - label: '[미분다양체] §경계가 있는 다양체'
+    url: /ko/math/manifolds/manifolds_with_boundary
 - id: irreducible
   en: irreducible
   ko: 기약
@@ -7276,6 +7318,13 @@ M:
   defs:
   - label: '[대수적 구조] §대수적 구조'
     url: /ko/math/algebraic_structures/algebraic_structures
+- id: manifold_with_boundary
+  en: manifold with boundary
+  ko: $m$차원의 경계가 있는 manifold
+  primary: en
+  defs:
+  - label: '[미분다양체] §경계가 있는 다양체'
+    url: /ko/math/manifolds/manifolds_with_boundary
 - id: mapping_cone
   en: mapping cone
   ko: 사상뿔
@@ -8331,6 +8380,13 @@ O:
   defs:
   - label: '[선형대수학] §내적공간'
     url: /ko/math/linear_algebra/inner_product_spaces
+- id: outward
+  en: outward
+  ko: 바깥 방향
+  primary: en
+  defs:
+  - label: '[미분다양체] §경계가 있는 다양체'
+    url: /ko/math/manifolds/manifolds_with_boundary
 P:
 - id: p_-form_of_degree_n
   en: $p$-form of degree $n$
