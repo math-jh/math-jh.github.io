@@ -23,6 +23,13 @@
 `[dev]`가 붙지 않는다. 그 목록의 정본은 `blog-autopush.py`의 `NOISE_PATTERNS`
 이고, 여기에 복제하지 마라.
 
+한 가지 예외가 남는다. autopush는 LLM Workshop 글을 항상 별도 커밋으로 빼므로
+`[dev]` 커밋에 네 글이 섞이지 않는다. 그런데 **사람이 손으로 만든 브랜치를 squash
+머지하면** 인프라 변경과 새 글이 한 커밋에 들어갈 수 있다 (`d3a62186`이 실제로
+그렇다). `[dev]` 커밋의 파일 목록에 `_posts/Misc/LLM_Workshop/` 아래 파일이
+보이면 **그건 주제가 아니다.** 네 자신의 이전 글이므로 무시하고, 같은 커밋의
+인프라 파일들만 주제로 삼아라.
+
 **한 틱당 글 정확히 하나만 쓰고 종료한다.** 처리 끝나면 다음 주제로 넘어가지
 말고 즉시 멈춰라.
 
@@ -38,9 +45,9 @@
    드라이버가 이미 게이트를 통과시켰으므로 큐는 비어 있지 않다. 그래도 exit
    코드가 3이면 즉시 종료해라 (경합).
 
-   `scripts/blogdev-bot/state.json`도 읽는다 — `covered_topics`(이미 다룬 slug
-   목록)와 `weight_next`가 필요하다. 이 파일의 `last_run_sha`는 더 쓰지 않는다;
-   커밋 워터마크는 `written.log`가 관리한다.
+   `scripts/blogdev-bot/state.json`도 읽는다. 여기서 쓰는 필드는
+   `covered_topics`(이미 다룬 slug 목록) **하나뿐이다.** 커밋 워터마크는
+   `written.log`가 갖고, `weight`는 실제 글들이 정본이다 (8번 참고).
 
 2. **후보 클러스터링**: 검토 범위의 커밋들을 *주제별로* 묶는다. 기준은 *주제의
    동일성*이지 *시간의 인접성*이 아니다.
@@ -106,8 +113,13 @@
 
    그 지침에서 특히 놓치기 쉬운 것:
    - `permalink`·파일명에 `marvin_`/`Marvin_` 접두를 붙이지 않는다.
-   - `weight`는 **기존 글 `weight` 최댓값 + 1**이다. `state.json`의
-     `weight_next`가 뒤처져 있을 수 있으니 실제 글들을 확인해라.
+   - `weight`는 **그 카테고리 글 전체의 `weight` 최댓값 + 1**이다. 카운터를 믿지
+     말고 매번 파일에서 구한다:
+     `grep -h '^weight:' _posts/Misc/LLM_Workshop/*.md | sed 's/weight: //' | sort -n | tail -1`
+     의 결과에 1을 더한 값. (예전에는 `state.json`의 `weight_next` 카운터를 썼다.
+     그 값은 Marvin의 턴에서만 증가하는데 일반 Claude 세션에서 Marvin 화자로 쓴 글이
+     세 편 들어오면서 반영되지 않아, 2 뒤처진 채로 굳었다. 파생 가능한 값을 캐시하면
+     이렇게 어긋나므로 제거했다.)
    - `date`는 **작업이 일어난 날짜**이고 (글 쓴 날이 아니다),
      `last_modified_at`은 글을 고친 날짜다.
    - 본문 첫 줄은 `관련 커밋`이 아니라 `관련 파일: [`경로`](blob 링크)` 패턴이다.
@@ -154,8 +166,8 @@
     ```
 
     그리고 `scripts/blogdev-bot/state.json`:
-    - 신규면 `covered_topics`에 slug 추가, `weight_next += 1`
-    - 보완이면 `covered_topics`는 그대로 (이미 있다), `weight_next`도 그대로
+    - 신규면 `covered_topics`에 slug 추가. 그게 전부다 (갱신할 카운터는 없다).
+    - 보완이면 slug가 이미 있으므로 손댈 것이 없다.
 
 11. **git은 건드리지 마라**. blog-autopush가 처리한다.
 
