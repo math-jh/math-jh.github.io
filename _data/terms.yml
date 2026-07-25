@@ -4723,6 +4723,13 @@ G:
   defs:
   - label: '[거울대칭] §Givental J-function과 Mirror Theorem'
     url: /ko/math/mirror_symmetry/givental_j_function
+- id: global_dimension
+  en: global dimension
+  ko: 대역차원
+  primary: en
+  defs:
+  - label: '[가환대수학] §호몰로지 차원'
+    url: /ko/math/commutative_algebra/homological_dimension
 - id: global_orientation
   en: global orientation
   ko: 전역 방향
@@ -5098,6 +5105,34 @@ H:
   defs:
   - label: '[리 이론] §최고 무게 가군'
     url: /ko/math/lie_theory/highest_weight_modules
+- id: hilbert_function
+  en: Hilbert function
+  ko: 힐베르트 함수
+  primary: en
+  defs:
+  - label: '[가환대수학] §힐베르트-사무엘 함수'
+    url: /ko/math/commutative_algebra/hilbert-samuel_function
+- id: hilbert_polynomial
+  en: Hilbert polynomial
+  ko: 힐베르트 다항식
+  primary: en
+  defs:
+  - label: '[가환대수학] §힐베르트-사무엘 함수'
+    url: /ko/math/commutative_algebra/hilbert-samuel_function
+- id: hilbert-samuel_function
+  en: Hilbert-samuel function
+  ko: 힐베르트-사무엘 함수
+  primary: en
+  defs:
+  - label: '[가환대수학] §힐베르트-사무엘 함수'
+    url: /ko/math/commutative_algebra/hilbert-samuel_function
+- id: hilbert-samuel_polynomial
+  en: Hilbert-samuel polynomial
+  ko: 힐베르트-사무엘 다항식
+  primary: en
+  defs:
+  - label: '[가환대수학] §힐베르트-사무엘 함수'
+    url: /ko/math/commutative_algebra/hilbert-samuel_function
 - id: hodge_de_rham_laplacian
   en: Hodge–de Rham Laplacian
   ko: 호지-드람 라플라스 작용소
@@ -5646,6 +5681,13 @@ I:
     id: function
   - label: Surjective
     id: surjective
+- id: injective_dimension
+  en: injective dimension
+  ko: 단사차원
+  primary: en
+  defs:
+  - label: '[가환대수학] §호몰로지 차원'
+    url: /ko/math/commutative_algebra/homological_dimension
 - id: injective_limit
   en: injective limit
   ko: 귀납적 극한
@@ -7572,6 +7614,8 @@ M:
     url: /ko/math/linear_algebra/characteristic_polynomial
   - label: '[리 이론] §최고 무게 가군'
     url: /ko/math/lie_theory/highest_weight_modules
+  - label: '[가환대수학] §힐베르트-사무엘 함수'
+    url: /ko/math/commutative_algebra/hilbert-samuel_function
 - id: musical_isomorphism
   en: musical isomorphism
   ko: 음악 동형사상
@@ -8931,6 +8975,13 @@ P:
   defs:
   - label: '[대수적 위상수학] §사영다발과 Leray–Hirsch 정리'
     url: /ko/math/algebraic_topology/projective_bundles
+- id: projective_dimension
+  en: projective dimension
+  ko: 사영차원
+  primary: en
+  defs:
+  - label: '[가환대수학] §호몰로지 차원'
+    url: /ko/math/commutative_algebra/homological_dimension
 - id: projective_limit
   en: projective limit
   ko: 사영극한
@@ -9527,6 +9578,13 @@ R:
   defs:
   - label: '[복소해석학] §고립특이점과 Laurent 급수'
     url: /ko/math/complex_analysis/isolated_singularities
+- id: regular_ring
+  en: regular ring
+  ko: 정칙환
+  primary: en
+  defs:
+  - label: '[가환대수학] §정칙성의 호몰로지 판정'
+    url: /ko/math/commutative_algebra/homological_criterion_for_regularity#def5
 - id: regular_sequence
   en: regular sequence
   ko: 정칙렬

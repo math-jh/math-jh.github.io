@@ -138,7 +138,7 @@ $$\pd_{A_\mathfrak{p}}\kappa(\mathfrak{p})=\pd_{A_\mathfrak{p}}\big(A_\mathfrak{
 이 따름정리 덕분에 regular라는 성질을 국소적 조건으로 놓는 다음의 정의가 의미를 가진다.
 
 ::: 정의 5
-Noetherian ring $A$가 *regular ring*이라는 것은 $A$의 임의의 prime ideal $\mathfrak{p}$에 대하여 $A_\mathfrak{p}$가 regular local ring인 것이다.
+Noetherian ring $A$가 *regular ring<sub>정칙환</sub>*이라는 것은 $A$의 임의의 prime ideal $\mathfrak{p}$에 대하여 $A_\mathfrak{p}$가 regular local ring인 것이다.
 :::
 
 [따름정리 4](#cor4)에 의하여 regular local ring은 regular ring이며, 특히 field는 regular ring이다. 이 정의의 조건은 실은 maximal ideal에서만 확인해도 충분하다. 이를 살펴보기 위해 localization의 합성에 대한 일반적인 관찰 하나를 짚고 넘어간다. Multiplicative subset $S\subseteq A$와 $S\cap\mathfrak{q}=\emptyset$을 만족하는 prime ideal $\mathfrak{q}$에 대하여, canonical isomorphism
