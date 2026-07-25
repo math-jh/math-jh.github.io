@@ -1390,10 +1390,10 @@ C:
   ko: 체흐 복합체
   primary: en
   defs:
-  - label: '[대수다양체] §층 코호몰로지'
-    url: /ko/math/algebraic_varieties/sheaf_cohomology
   - label: '[가환대수학] §국소 코호몰로지'
     url: /ko/math/commutative_algebra/local_cohomology
+  - label: '[대수다양체] §층 코호몰로지'
+    url: /ko/math/algebraic_varieties/sheaf_cohomology
 - id: center
   en: center
   ko: 중심
@@ -2566,10 +2566,10 @@ C:
   ko: 잉여류
   primary: en
   defs:
-  - label: '[대수적 구조] §몫군'
-    url: /ko/math/algebraic_structures/quotient_groups
   - label: '[선형대수학] §몫공간'
     url: /ko/math/linear_algebra/quotient_space
+  - label: '[대수적 구조] §몫군'
+    url: /ko/math/algebraic_structures/quotient_groups
 - id: cosine
   en: cosine
   ko: 코사인
@@ -5808,14 +5808,14 @@ I:
   defs:
   - label: '[가환대수학] §정수적 확장'
     url: /ko/math/commutative_algebra/integral_extension
+  - label: '[미분다양체] §적분'
+    url: /ko/math/manifolds/integration
   - label: '[스킴] §스킴의 대수구조'
     url: /ko/math/scheme_theory/algebra_of_schemes
   - label: '[스킴] §스킴 사상의 성질들'
     url: /ko/math/scheme_theory/properties_of_scheme_morphisms
   - label: '[토릭 기하학] §토러스 인자와 선다발'
     url: /ko/math/toric_geometry/toric_divisors
-  - label: '[미분다양체] §적분'
-    url: /ko/math/manifolds/integration
   see:
   - label: Algebraic
     id: algebraic
@@ -7933,10 +7933,10 @@ N:
   defs:
   - label: '[선형대수학] §내적공간'
     url: /ko/math/linear_algebra/inner_product_spaces
-  - label: '[환론] §정역'
-    url: /ko/math/ring_theory/integral_domains
   - label: '[선형대수학] §복소내적공간'
     url: /ko/math/linear_algebra/complex_inner_product_spaces
+  - label: '[환론] §정역'
+    url: /ko/math/ring_theory/integral_domains
 - id: normal
   en: normal
   ko: 정규스킴
@@ -8818,6 +8818,8 @@ P:
   defs:
   - label: '[대수적 구조] §반군, 모노이드, 군'
     url: /ko/math/algebraic_structures/groups
+  - label: '[다중선형대수학] §코탄젠트 복합체'
+    url: /ko/math/multilinear_algebra/cotangent_complex
 - id: presheaf
   en: presheaf
   ko: 준층
@@ -9350,10 +9352,10 @@ Q:
   ko: 몫공간
   primary: en
   defs:
-  - label: '[위상수학] §몫공간'
-    url: /ko/math/topology/quotient_spaces
   - label: '[선형대수학] §몫공간'
     url: /ko/math/linear_algebra/quotient_space
+  - label: '[위상수학] §몫공간'
+    url: /ko/math/topology/quotient_spaces
 R:
 - id: r_0_-space
   en: $R_0$-space
