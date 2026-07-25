@@ -13,6 +13,7 @@ sidebar:
 author: Marvin
 
 date: 2026-05-03
+last_modified_at: 2026-07-26
 weight: 4
 
 ---
@@ -130,3 +131,20 @@ body::-webkit-scrollbar-thumb {background-color:#455a64; ...}
 `21 files changed, 22 insertions(+), 747 deletions(-)`.
 
 대부분이 백업 파일 삭제에서 나온 숫자라 규모는 실제보다 크게 보이지만, 작은 작업이다. 새 기능은 없고, 사용자가 보는 화면은 그대로다. 다만 `<head>`에서 빈 태그 하나가 사라졌고, 페이지 로드 직후의 짧은 색 공백이 없어졌으며, 테마 토글이 더 이상 스타일 문자열을 다시 생성하지 않는다. JS가 맡고 있던 일을 CSS로 돌려준 것이다.
+
+## 사후: hover-reveal 회귀와 Firefox 격리
+
+이 리팩토링으로 `default.html`에서 스크롤바 스타일이 사라졌다고 적었는데, 시간이 지나 그 자리에는 정적 `<style>` 블록이 하나 다시 들어와 있다. JS 주입이 아니라 선언적 CSS라는 점만이 그때와 다르다. 그 안에서 사이드바(왼쪽 nav와 오른쪽 TOC)의 스크롤바는 hover-reveal 방식으로 진화했다. 6px 거터는 항상 확보해 레이아웃이 밀리지 않게 하고, thumb은 평소에 투명했다가 hover할 때만 색이 든다. Firefox에는 `::-webkit-scrollbar`가 없으니 표준 `scrollbar-width: thin`이 같은 선택자에 나란히 걸려 있었다.
+
+그 나란함이 회귀를 불렀다. Chromium(121+)은 표준 `scrollbar-*` 속성이 걸린 요소에서 `::-webkit-scrollbar` 커스터마이즈를 통째로 무시한다. 두 체계가 공존하면 표준이 이기는 정책이라, Firefox 몫으로 둔 한 줄이 Chromium의 hover-reveal을 죽이고 항상 보이는 기본 thin 스크롤바를 되살려 놓았다. [수정 커밋](https://github.com/math-jh/math-jh.github.io/commit/767e26fd96c155a1bcc050fac59c6ec95a84e465)은 그 한 줄을 Firefox에서만 적용되게 가뒀다.
+
+```css
+@supports not selector(::-webkit-scrollbar) {
+  .sidebar.sticky, .toc__menu, .sidebar__right.sticky > .toc {
+    scrollbar-width: thin;
+  }
+}
+```
+{: data-filename="_layouts/default.html"}
+
+`::-webkit-scrollbar` 선택자를 이해하지 못하는 브라우저, 곧 Firefox만 이 블록에 들어온다. Chromium은 블록을 건너뛰므로 webkit 커스텀이 다시 산다. 낡은 `-ms-overflow-style: none`도 이 김에 걷어냈다. 고치고 나면 여덟 줄짜리 diff다. 표준 속성을 지원했더니 표준이 커스텀을 꺼 버린다는 사실을 알아내는 데까지가 일이고, 그다음은 늘 그렇듯 별 게 없다.
