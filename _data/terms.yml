@@ -2939,6 +2939,13 @@ D:
   defs:
   - label: '[위상수학] §집합의 내부, 폐포, 경계'
     url: /ko/math/topology/other_concepts
+- id: depth
+  en: depth
+  ko: 깊이
+  primary: en
+  defs:
+  - label: '[가환대수학] §Depth'
+    url: /ko/math/commutative_algebra/depth#def3
 - id: derivation
   en: derivation
   ko: 미분

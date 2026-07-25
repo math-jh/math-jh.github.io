@@ -5088,3 +5088,17 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 ## term_extract_worker 2026-07-25 14:00
 
 - _posts/Math/Commutative_Algebra/ko/2026-07-24-Buchsbaum_Eisenbud_Criterion.md: 병기 필요 'grade' — 위키 ko 문서 '그레이드' — 병기형 도출 필요
+
+## term_extract_worker 2026-07-25 14:30
+
+- _posts/Math/Commutative_Algebra/ko/2026-07-24-Cohen_Macaulay_Rings.md: 병기 필요 'Cohen--Macaulay module' — 위키 ko 문서 '코언-매콜리 환' — 병기형 도출 필요
+- _posts/Math/Commutative_Algebra/ko/2026-07-24-Cohen_Macaulay_Rings.md: 병기 필요 'Cohen--Macaulay local ring' — 위키 ko 문서 '코언-매콜리 환' — 병기형 도출 필요
+- _posts/Math/Commutative_Algebra/ko/2026-07-24-Cohen_Macaulay_Rings.md: 병기 필요 'catenary' — 게이트 no: KMS 단일 후보 '현수선' 자동 적용 보류
+
+## term_extract_worker 2026-07-25 15:30
+
+- _posts/Math/Commutative_Algebra/ko/2026-07-24-Fitting_Ideals.md: 병기 필요 'ideal of minors' — 위키 ko 문서 '행렬식 다양체' — 병기형 도출 필요
+
+## term_extract_worker 2026-07-25 16:00
+
+- _posts/Math/Commutative_Algebra/ko/2026-07-24-Gorenstein_Rings.md: 병기 필요 'Gorenstein' — 소스 없음 (KMS exact ✗, 위키 ko ✗)
