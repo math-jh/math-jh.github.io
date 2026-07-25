@@ -2298,6 +2298,13 @@ C:
   defs:
   - label: '[복소해석학] §등각사상과 Möbius 변환'
     url: /ko/math/complex_analysis/conformal_maps
+- id: congruent
+  en: congruent
+  ko: 합동
+  primary: ko
+  defs:
+  - label: '[선형대수학] §이차형식과 실베스터 관성법칙'
+    url: /ko/math/linear_algebra/quadratic_forms
 - id: conjugate
   en: conjugate
   ko: 켤레
@@ -3886,6 +3893,13 @@ E:
   defs:
   - label: '[복소해석학] §복소수와 복소평면'
     url: /ko/math/complex_analysis/complex_numbers
+- id: evaluation
+  en: evaluation
+  ko: 대입
+  primary: ko
+  defs:
+  - label: '[선형대수학] §최소다항식'
+    url: /ko/math/linear_algebra/minimal_polynomial
 - id: evaluation_map
   en: evaluation map
   ko: 값매김사상
@@ -8562,6 +8576,13 @@ P:
   defs:
   - label: '[복소해석학] §복소수와 복소평면'
     url: /ko/math/complex_analysis/complex_numbers
+- id: polarization_identity
+  en: polarization identity
+  ko: 편극항등식
+  primary: en
+  defs:
+  - label: '[선형대수학] §이차형식과 실베스터 관성법칙'
+    url: /ko/math/linear_algebra/quadratic_forms
 - id: pole
   en: pole
   ko: 극
@@ -9052,6 +9073,13 @@ Q:
   defs:
   - label: '[선형대수학] §복소내적공간'
     url: /ko/math/linear_algebra/complex_inner_product_spaces
+- id: quadratic_form
+  en: quadratic form
+  ko: 이차형식
+  primary: ko
+  defs:
+  - label: '[선형대수학] §이차형식과 실베스터 관성법칙'
+    url: /ko/math/linear_algebra/quadratic_forms
 - id: quadratic_relation
   en: Quadratic relation
   ko: 이차 관계식
@@ -10307,6 +10335,13 @@ S:
   defs:
   - label: '[유도대수기하학] §Simplicial 가환환과 animation'
     url: /ko/math/derived_algebraic_geometry/animated_rings
+- id: signature
+  en: signature
+  ko: 부호수
+  primary: en
+  defs:
+  - label: '[선형대수학] §이차형식과 실베스터 관성법칙'
+    url: /ko/math/linear_algebra/quadratic_forms
 - id: similar
   en: similar
   ko: 닮은 행렬
