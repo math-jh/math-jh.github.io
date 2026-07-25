@@ -336,14 +336,16 @@ Flat morphism의 또 다른 기하학적 성질은 열린집합을 열린집합�
 Noetherian scheme 사이의 flat하고 finite type인 morphism $f: X \rightarrow Y$는 열린 사상이다. 즉 임의의 열린집합 $U\subseteq X$에 대하여 $f(U)$는 $Y$의 열린집합이다.
 :::
 ::: 증명
-$Y$가 Noetherian이고 $f$가 finite type이므로 $X$ 또한 Noetherian scheme이다. 따라서 열린집합 $U\subseteq X$는 quasi-compact이며, open subscheme의 포함사상은 flat이므로 [명제 3](#prop3)에 의하여 합성 $f\vert_U: U \rightarrow Y$ 또한 flat하고 finite type이다. 그러므로 처음부터 $U=X$인 경우, 즉 $f(X)$가 열린집합임을 보이면 충분하다.
+$Y$가 Noetherian이고 $f$가 finite type이므로, $X$를 덮는 각 affine open은 Noetherian ring 위의 finite type algebra의 spectrum이 되어 [\[가환대수학\] §기본 개념들, ⁋정리 12](/ko/math/commutative_algebra/basic_notions#thm12)에 의하여 Noetherian이고, $f$가 quasi-compact이므로 $X$ 또한 quasi-compact이다. 즉 $X$는 [§스킴의 위상구조, ⁋정의 14](/ko/math/scheme_theory/topology_of_schemes#def14)의 의미에서 Noetherian scheme이며, 특히 위상공간으로서 Noetherian이다. 그럼 열린집합 $U\subseteq X$는 [\[위상수학\] §차원, ⁋명제 13](/ko/math/topology/dimension#prop13)에 의하여 다시 Noetherian이므로 [\[위상수학\] §차원, ⁋명제 12](/ko/math/topology/dimension#prop12)에 의하여 quasi-compact이고, open subscheme의 포함사상은 flat이므로 ([예시 4](#ex4)) [명제 3](#prop3)에 의하여 합성 $f\vert_U: U \rightarrow Y$ 또한 flat하고 finite type이다. 그러므로 처음부터 $U=X$인 경우, 즉 $f(X)$가 열린집합임을 보이면 충분하다.
 
 [정리 11](#thm11)에 의하여 $f(X)$는 constructible이다. 또 $y\in f(X)$와 그 generization $y'$이 주어지면, $f(x)=y$인 $x$를 택하고 [명제 14](#prop14)를 적용하여 $f(x')=y'$인 $x'$를 얻으므로 $y'\in f(X)$이다. 즉 $f(X)$는 generization에 대하여 닫혀 있다. 이제 [보조정리 12](#lem12)로부터 $f(X)$가 열린집합임을 얻는다.
 :::
 
 ## 평탄성의 국소 판정법
 
-마지막으로 flatness를 각 점에서 검사하는 기준을 정리한다. Flatness는 본래 모든 ideal $I$에 대한 $\Tor_1^A(A/I, M)$의 소멸로 판정되는데, [명제 5](#prop5)의 torsion-free 판정법은 base가 PID라 모든 ideal이 principal이라는 점에 기대어 이 조건을 torsion의 부재 하나로 줄인 것이었다. 다음은 base에 PID라는 조건을 걸지 않는 대신 morphism에 유한성을 요구하여, 같은 조건을 residue field 하나에 대한 것으로 줄인다.
+마지막으로 flatness를 각 점에서 검사하는 기준을 정리한다. 대수적으로 $\otimes$가 left-exact로부터 멀어지는 정도를 측정하는 도구는 $\Tor$로, /
+
+Flatness는 본래 모든 ideal $I$에 대한 $\Tor_1^A(A/I, M)$의 소멸로 판정되는데, [명제 5](#prop5)의 torsion-free 판정법은 base가 PID라 모든 ideal이 principal이라는 점에 기대어 이 조건을 torsion의 부재 하나로 줄인 것이었다. 다음은 base에 PID라는 조건을 걸지 않는 대신 morphism에 유한성을 요구하여, 같은 조건을 residue field 하나에 대한 것으로 줄인다.
 
 ::: 명제 17
 Locally Noetherian scheme 사이의 locally of finite type인 morphism $f: X \rightarrow Y$와 점 $x\in X$, $y=f(x)$에 대하여, $\mathcal{O}_{X,x}$가 $\mathcal{O}_{Y,y}$-flat인 것과
