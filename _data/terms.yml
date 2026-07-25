@@ -5786,6 +5786,8 @@ I:
     url: /ko/math/scheme_theory/properties_of_scheme_morphisms
   - label: '[토릭 기하학] §토러스 인자와 선다발'
     url: /ko/math/toric_geometry/toric_divisors
+  - label: '[미분다양체] §적분'
+    url: /ko/math/manifolds/integration
   see:
   - label: Algebraic
     id: algebraic
