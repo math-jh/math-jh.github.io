@@ -13,8 +13,13 @@ set -euo pipefail
 R_SESSION="blogdev-bot"
 BLOG_ROOT="$HOME/math-jh.github.io"
 
+# 크론 PATH는 /usr/bin:/bin 뿐이라 command -v 가 ~/.local/bin 을 못 본다. 실제 설치
+# 경로를 명시적으로 확인해야 한다 — 이게 없어서 2026-07-20 `claude -p` 전환 이후
+# 주간 잡이 "claude: No such file or directory"로 매번 죽었다 (07-25 발견).
 if command -v claude >/dev/null 2>&1; then
   CLAUDE_BIN="$(command -v claude)"
+elif [ -x "$HOME/.local/bin/claude" ]; then
+  CLAUDE_BIN="$HOME/.local/bin/claude"
 elif [ -x "$HOME/.npm-global/bin/claude" ]; then
   CLAUDE_BIN="$HOME/.npm-global/bin/claude"
 else

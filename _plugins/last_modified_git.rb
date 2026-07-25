@@ -9,11 +9,23 @@ require "shellwords"
 #   (a) An explicit `last_modified_at` in a post's FRONTMATTER wins — a manual
 #       override for the rare case where git is wrong.
 #   (b) Otherwise the value is the file's most recent git commit time, EXCEPT
-#       commits whose message contains the skip marker `[lastmod-skip]`, or whose
-#       SHA is listed in `_config.yml` under `last-modified-at: ignore_commits`,
-#       are skipped. This keeps mechanical mass-edits — diagram batches, notation
-#       sweeps, link normalisation, the frontmatter-strip commit itself — from
-#       bumping every post's "real" modification date.
+#       commits carrying a skip marker in their message — `[lastmod-skip]` or
+#       `[dev]` — or whose SHA is listed in `_config.yml` under
+#       `last-modified-at: ignore_commits`. This keeps mechanical mass-edits —
+#       diagram batches, notation sweeps, link normalisation, the frontmatter-strip
+#       commit itself — from bumping every post's "real" modification date.
+#
+#       The two markers differ in intent, not in effect here:
+#         `[lastmod-skip]` — cosmetic sweep over post prose (notation, links,
+#                            glosses). Nothing for a reader to re-read.
+#         `[dev]`          — a blog-infrastructure change: layouts, sass, plugins,
+#                            scripts, config. Also used for a deliberate repo-wide
+#                            markup migration that touches post bodies mechanically
+#                            (e.g. the fenced-div migration), so such a migration can
+#                            be one reviewable commit without bumping 600 dates.
+#       `[dev]` is additionally the queue blogdev-bot (Marvin) reads to pick what to
+#       write up, so only substantive infra work should carry it — see
+#       scripts/blogdev-bot/dev_queue.py.
 #
 # Detecting (a) without re-reading files: the jekyll-last-modified-at gem seeds a
 # `Determinator` OBJECT at :post_init; YAML frontmatter (parsed afterwards) over-
@@ -30,7 +42,9 @@ require "shellwords"
 module Jekyll
   module LastModifiedAt
     GIT_TIME_CACHE = {}                       # path => Time, memoised per build
-    SKIP_MARKER = "[lastmod-skip]"            # commits whose message carries this are ignored
+    # Commits whose message carries any of these are ignored when deriving the date.
+    SKIP_MARKERS = ["[lastmod-skip]", "[dev]"].freeze
+    SKIP_MARKER = SKIP_MARKERS.first          # kept for anything referencing the old name
     MAX_WALK = 80                             # safety cap on history depth per file
 
     # Most recent commit time for `path`, skipping skip-marked / blacklisted
@@ -47,7 +61,7 @@ module Jekyll
         t = (Time.parse(iso) rescue nil)
         next if t.nil?
         newest ||= t                                          # remember newest for fallback
-        next if msg && msg.include?(SKIP_MARKER)              # skip mechanical commits
+        next if msg && SKIP_MARKERS.any? { |m| msg.include?(m) }  # skip mechanical / dev commits
         next if ignore_shas.any? { |s| !s.empty? && sha.start_with?(s) }
         return t                                              # newest non-skipped commit
       end
