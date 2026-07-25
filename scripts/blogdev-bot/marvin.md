@@ -93,33 +93,22 @@
 
 8. **집필** — 신규와 보완이 갈린다.
 
+   **먼저 `_posts/Misc/LLM_Workshop/CLAUDE.md`를 읽어라.** frontmatter 형식,
+   페르소나 톤, 섹션 헤더 규칙, 금지 표현, cross-link 정책의 **정본은 그 파일**
+   이다. 여기에 그 내용을 복제하지 않는다 (복제하면 어긋난다 — 실제로 예전
+   marvin.md가 `permalink`에 `marvin_` 접두를 지시했는데 실제 글 31편 중 그걸
+   쓴 글은 하나도 없었다. 2026-07-25 수정).
+
+   그 지침에서 특히 놓치기 쉬운 것:
+   - `permalink`·파일명에 `marvin_`/`Marvin_` 접두를 붙이지 않는다.
+   - `weight`는 **기존 글 `weight` 최댓값 + 1**이다. `state.json`의
+     `weight_next`가 뒤처져 있을 수 있으니 실제 글들을 확인해라.
+   - `date`는 **작업이 일어난 날짜**이고 (글 쓴 날이 아니다),
+     `last_modified_at`은 글을 고친 날짜다.
+   - 본문 첫 줄은 `관련 커밋`이 아니라 `관련 파일: [`경로`](blob 링크)` 패턴이다.
+
    **(a) 신규**: `_posts/Misc/LLM_Workshop/<YYYY-MM-DD>-<Title_Snake_Case>.md`
-   생성. Frontmatter:
-
-   ```yaml
-   ---
-   title: "<주제에 맞는 한국어 제목>"
-   excerpt: "<한 줄 요약>"
-
-   read_time: false
-
-   categories: [Misc / LLM Workshop]
-   permalink: /ko/llm_workshop/marvin_<topic_slug>
-
-   author: Marvin
-
-   date: <today YYYY-MM-DD>
-   last_modified_at: <today>
-   weight: <state.weight_next>
-
-   ---
-   ```
-
-   상단에 관련 커밋 링크:
-   ```
-   관련 커밋: [링크](https://github.com/math-jh/math-jh.github.io/commit/<sha>)
-   {: .notice--info}
-   ```
+   를 위 형식으로 생성한다.
 
    **(b) 보완**: 기존 글을 편집한다. 새 파일을 만들지 마라.
    - 새로 쌓인 변경을 다루는 **절을 덧붙인다** (`## <소제목>`). 기존 서술을
@@ -130,13 +119,13 @@
    - `permalink`·`weight`·`date`는 건드리지 않는다.
    - 덧붙인 절 안에 새 커밋 링크를 넣는다.
 
-9. **본문 규칙** (신규·보완 공통):
+9. **본문 규칙** (신규·보완 공통). 톤·문체·헤더·금지 표현은 위 CLAUDE.md가
+   정본이다. 그 위에 이 작업 특유의 것만 덧붙인다.
    - 본문은 **실제 코드 walkthrough** 중심. 변경 전후를 보여주고, 설계 결정과
      trade-off를 설명한다. 가설로 채우지 말고 코드를 인용하라.
-   - Marvin 톤은 *가볍게* — 도입부 한 문장, 중간 한두 군데, 결론 한두 문장
-     정도. role-playing이 과하면 안 된다. "행성만 한 뇌(brain the size of a
-     planet)" 같은 HHGTTG 원전 직역은 쓰지 마라. 같은 self-deprecating 톤은
-     유지하되 substrate를 LLM에 맞춰 변형한다.
+   - **커밋 메시지를 사실로 믿지 마라. diff가 사실이다.** 메시지가 실제 변경과
+     어긋난 사례가 있다 (4d156709는 "제목 self-link 제거"를 적었지만 그 anchor는
+     부모 커밋에 이미 없었다). 쓸 내용은 `git show`로 확인한 것에 한한다.
    - Liquid 태그(`{% %}`, `{{ }}`)가 code block 안에 들어가면 반드시
      `{% raw %}...{% endraw %}`로 감싼다. 안 그러면 Jekyll이 먹어버린다.
    - LaTeX 절대값/cardinality는 `\lvert\rvert` 또는 `\vert\vert` 사용.
