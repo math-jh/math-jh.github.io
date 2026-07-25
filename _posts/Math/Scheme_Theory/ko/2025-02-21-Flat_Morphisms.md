@@ -387,7 +387,9 @@ $N$의 generator $n_1,\ldots, n_k$ 각각에 대하여 $s_jn_j=0$을 만족하�
 따라서 $\mu(\mathfrak{p})\leq i$인 임의의 $\mathfrak{p}$에 대하여 $\mathfrak{p}\in D(f)\subseteq \{\mu\leq r\}\subseteq \{\mu\leq i\}$이므로, $\{\mu\leq i\}$는 열린집합이다.
 :::
 
-이 서술의 앞뒤를 뒤집으면 lower semicontinuity가 나온다. $A$가 Noetherian이면 $M$은 유한한 presentation $A^m\overset{\psi}{\rightarrow}A^n \rightarrow M \rightarrow 0$을 가지며, tensor product가 right exact이므로 각 점에서 $\mu(\mathfrak{p})=n-\rank(\psi\otimes\kappa(\mathfrak{p}))$이고, 따라서 [명제 19](#prop19)는 행렬 $\psi$의 rank가 lower semicontinuous라는 것과 같은 내용이다. Rank가 $r$ 이상인 자리는 $\psi$의 $r\times r$ minor 가운데 하나가 소멸하지 않는 자리이므로 명시적으로 열려 있고, 이 minor들이 생성하는 ideal이 곧 $M$의 Fitting ideal이다. 곧 $\mu$가 튀어오르는 닫힌집합은 minor의 소멸이 정의하는 집합이며, upper와 lower 어느 쪽으로 부르든 밑에 깔린 것은 이 하나의 determinantal 자료이다.
+이 서술의 앞뒤를 뒤집으면 lower semicontinuity가 나온다. $A$가 Noetherian이면 $M$은 유한한 presentation $A^m\overset{\psi}{\rightarrow}A^n \rightarrow M \rightarrow 0$을 가지며, tensor product가 right exact이므로 각 점에서 $\mu(\mathfrak{p})=n-\rank(\psi\otimes\kappa(\mathfrak{p}))$이고, 따라서 [명제 19](#prop19)는 행렬 $\psi$의 rank가 lower semicontinuous라는 것과 같은 내용이다. Rank가 $r$ 이상인 자리는 $\psi$의 $r\times r$ minor 가운데 하나가 소멸하지 않는 자리이므로 명시적으로 열려 있고, 이 minor들이 생성하는 ideal이 [\[가환대수학\] §Fitting 아이디얼, ⁋정의 2](/ko/math/commutative_algebra/fitting_ideals#def2)의 Fitting ideal $\operatorname{Fitt}_i(M)$이다. 곧 $\mu$가 튀어오르는 닫힌집합은 minor의 소멸이 정의하는 집합이며, upper와 lower 어느 쪽으로 부르든 밑에 깔린 것은 이 하나의 determinantal 자료이다.
+
+이 대응은 국소적인 판정으로도 적혀 있다. [\[가환대수학\] §Fitting 아이디얼, ⁋명제 7](/ko/math/commutative_algebra/fitting_ideals#prop7)에 의하여 $\mu(\mathfrak{p})$는 $\operatorname{Fitt}_i(M)$이 $\mathfrak{p}$에 포함되지 않는 가장 작은 $i$이므로, [명제 19](#prop19)의 열린집합 $\{\mu\leq i\}$는 정확히 $\operatorname{Fitt}_i(M)$이 정의하는 닫힌집합의 여집합이다. 대수적인 판정이 ideal의 포함관계로 적히는 것을 $\Spec A$의 위상으로 옮긴 것이 semicontinuity라는 서술인 셈이다.
 
 이 그림이 flatness와 만나는 지점이 아래의 [명제 20](#prop20)이다. $A$가 Noetherian이고 $M$이 finitely generated이면 $M_\mathfrak{p}$가 free인 자리에서 $\mu$가 국소상수가 되므로, 자유로운 자리의 열림은 [명제 19](#prop19)가 주는 닫힌 jumping locus의 여집합으로 읽힌다. 그런데 [명제 20](#prop20)의 $f$는 finite가 아니라 locally of finite presentation일 뿐이어서 $\mathcal{O}_{X,x}$는 $\mathcal{O}_{Y,f(x)}$ 위의 finitely generated module이 아니고, 그래서 presentation 하나에 위 논법을 먹이는 것으로 끝나지 않는다. 판정이 module의 자유성에서 complex의 exactness로 한 층 올라가며, 그것을 다시 minor들이 생성하는 ideal의 조건으로 읽어내는 것이 아래 증명의 얼개이다.
 
@@ -395,7 +397,9 @@ $N$의 generator $n_1,\ldots, n_k$ 각각에 대하여 $s_jn_j=0$을 만족하�
 Morphism $f: X \rightarrow Y$가 locally of finite presentation이면, $\mathcal{O}_{X,x}$가 $\mathcal{O}_{Y,f(x)}$-flat인 점 $x\in X$들의 집합은 $X$의 열린집합이다.
 :::
 ::: 증명
-이 결과의 증명에 필요한 도구는 우리가 지금까지 갖춘 것과 다르므로, 논증의 얼개만 적는다. 먼저 Noetherian 근사로 $A$와 $B$가 $\mathbb{Z}$ 위의 finite type인 경우로 환원하고, $B$를 다항식환으로 바꾸어 모든 fiber ring이 유한한 global dimension을 갖도록 만든다. 그럼 문제의 module이 finite free module들의 유한 복합체 $F_\bullet$로 분해되어, flatness는 $F_\bullet$이 각 fiber 위에서 exact인지의 문제가 된다. 마지막 단계는 Buchsbaum과 Eisenbud의 exactness 판정법으로, 각 morphism $\varphi_i$의 rank와 그 행렬의 $r_i\times r_i$ minor들이 생성하는 ideal $I(\varphi_i)$의 depth 조건으로 exactness를 읽어내는 것이다. 이 $I(\varphi_i)$는 $\coker \varphi_i$의 Fitting ideal이며, minor라는 명시적인 $B$의 원소들로 주어지므로 그것이 정의하는 집합이 열려 있음을 직접 확인할 수 있다.
+첫 환원 단계를 제외하면 필요한 도구가 모두 갖추어져 있으므로, 그 단계만 인용에 맡기고 논증의 얼개를 적는다. 문제가 $Y$ 위에서 국소적이므로 $Y=\Spec A$, $X=\Spec B$인 경우를 보면 되는데, 먼저 Noetherian 근사로 $A$와 $B$가 $\mathbb{Z}$ 위의 finite type인 경우로 환원한다. 유한 표시로 주어진 자료가 언제나 유한한 부분자료 위에서 이미 정의된다는 것이 이 환원의 내용이며, 우리는 이를 증명 없이 사용한다.
+
+이제 $B$는 $A$ 위의 다항식환의 quotient이고, [\[가환대수학\] §호몰로지 차원, ⁋정리 17](/ko/math/commutative_algebra/homological_dimension#thm17)에 의하여 각 fiber 위의 다항식환은 유한한 global dimension을 가지므로, 문제의 module은 finite free module들의 유한 복합체 $F_\bullet$로 분해된다. 그럼 flatness는 $F_\bullet$이 각 fiber 위에서 exact인지의 문제가 되고, 여기에 [\[가환대수학\] §Buchsbaum-Eisenbud 판정법, ⁋정리 10](/ko/math/commutative_algebra/buchsbaum_eisenbud_criterion#thm10)을 적용하면 그 exactness가 각 $\varphi_i$의 rank 등식과 $\operatorname{grade}I(\varphi_i)\geq i$라는 조건으로 번역된다. 이 $I(\varphi_i)$는 $\varphi_i$의 minor들이 생성하는 ideal이므로 ([\[가환대수학\] §Buchsbaum-Eisenbud 판정법, ⁋정의 1](/ko/math/commutative_algebra/buchsbaum_eisenbud_criterion#def1)), 조건이 규정하는 자리는 [명제 19](#prop19) 뒤에서 본 것과 같은 방식으로 $B$의 명시적인 원소들이 정의하는 집합이 되어 열려 있음을 직접 확인할 수 있다.
 :::
 
 ---
