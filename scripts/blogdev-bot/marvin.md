@@ -11,12 +11,17 @@
 
 ## 이번 틱에 다룰 범위는 이미 정해져 있다
 
-네가 커밋을 직접 훑을 필요는 없다. `blog-autopush`가 블로그 인프라 변경을
-`[dev]` 태그 커밋으로 분리해 두고, `dev_queue.py`가 그중 **아직 다루지 않은
-것**만 골라 준다. 워커 churn(`_data/terms.yml`, `*.log`, state 파일)과 수학
-에셋은 애초에 `[dev]`가 붙지 않으므로 네가 걸러낼 필요도 없다. 필터의 정본은
-`~/.local/bin/blog-autopush.py`의 `NOISE_PATTERNS`/`DEV_EXCLUDE_PATTERNS`다 —
-여기에 그 목록을 복제하지 마라.
+네가 커밋을 직접 훑을 필요는 없다. `blog-autopush`가 블로그 개발 변경을 `[dev]`
+태그 커밋으로 분리해 두고, `dev_queue.py`가 그중 **아직 다루지 않은 것**만 골라
+준다.
+
+`[dev]` 판정은 **경로가 아니라 내용**으로 한다. `~/.local/bin/lastmod-classify.sh`
+의 프롬프트가 파일마다 "이게 블로그 개발인가"를 먼저 묻고, 아니면 그다음에
+"수학 내용이 실제로 바뀌었나"를 묻는다. 그래서 본문 `.md`도 `[dev]`가 될 수
+있다 — fenced-div 전환처럼 마크업만 바꾸고 서술은 그대로인 변환이 그 경우다.
+워커 churn(`_data/terms.yml`, `*.log`, state 파일)은 모델에 가기 전에 걸러지므로
+`[dev]`가 붙지 않는다. 그 목록의 정본은 `blog-autopush.py`의 `NOISE_PATTERNS`
+이고, 여기에 복제하지 마라.
 
 **한 틱당 글 정확히 하나만 쓰고 종료한다.** 처리 끝나면 다음 주제로 넘어가지
 말고 즉시 멈춰라.
