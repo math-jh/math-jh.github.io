@@ -168,7 +168,7 @@ $$[X,\B G]\rightarrow\{\text{principal $G$-bundles over $X$}\}/{\cong};\qquad [f
 
 is a well-defined bijection, and it is natural in the sense that it is compatible with pullback along a map $X'\rightarrow X$.
 
-![Pullback square of the classifying map](/assets/images/Math/Algebraic_Topology/Classifying_Spaces-1.svg){:style="width:8.21em" class="invert" .align-center}
+{% diagram Math/Algebraic_Topology/Classifying_Spaces-1.svg width="8.21em" alt="Pullback square of the classifying map" %}
 
 :::
 ::: Proof

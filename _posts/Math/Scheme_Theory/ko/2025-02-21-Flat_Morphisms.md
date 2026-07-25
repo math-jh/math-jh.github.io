@@ -28,7 +28,7 @@ $$\Spec \kappa(t_0)\rightarrow \Spec A$$
 
 로 주어진다. 즉, 점 $t_0$ 위의 fiber $X_{t_0}$는 이 점을 $f$를 따라 끌어올린 것, 곧 다음의 diagram
 
-![fiber_as_pullback](/assets/images/Math/Scheme_Theory/Flat_Morphisms-1.svg){:style="width:11.64em" class="invert" .align-center}
+{% diagram Math/Scheme_Theory/Flat_Morphisms-1.svg width="11.64em" alt="fiber_as_pullback" %}
 
 으로 주어지며 이 경우 [§올곱, ⁋보조정리 2](/ko/math/scheme_theory/fiber_products#lem2)로부터 $X_{t_0}$은 다음의 tensor product
 
@@ -42,7 +42,7 @@ $$0 \longrightarrow A \xrightarrow{\ \times t\ } A \longrightarrow \kappa(0) \lo
 
 가 존재하는 것을 안다. 이제 fiber를 얻기 위해 여기에 $-\otimes_AB$를 적용하면 다음의 diagram
 
-![tensoring_kills_injectivity](/assets/images/Math/Scheme_Theory/Flat_Morphisms-2.svg){:style="width:19.88em" class="invert" .align-center}
+{% diagram Math/Scheme_Theory/Flat_Morphisms-2.svg width="19.88em" alt="tensoring_kills_injectivity" %}
 
 을 얻는데, tensor product는 right exact이므로 아랫줄에는 왼쪽 끝의 $0$이 남지 않는다. 이 때 $B$에서의 $\times t$의 단사성이 깨지는 부분이 정확하게 $\x\neq 0$이 $\times t$를 통해 $t\x=0$으로 가는 현상이며, 기하적으로는 정확히 이 현상이 $t_0=0$에서 모든 affine line이 살아있는 현상으로 나타났던 것이다. 
 

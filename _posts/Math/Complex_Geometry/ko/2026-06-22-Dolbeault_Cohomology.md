@@ -102,7 +102,7 @@ $$
 
 세 항등식 중 $\bar\partial^2 = 0$이 우리에게 직접 쓰이는 것으로, 이것이 $\bar\partial$를 미분으로 갖는 복합체를 가능하게 한다. 관계식 $\partial\bar\partial = -\bar\partial\partial$는 두 연산자가 반가환함을, 곧 $(p,q)$-형식의 lattice 위에서 $\partial$(가로 방향)와 $\bar\partial$(세로 방향)가 만드는 사각형이 부호를 바꿔 닫힘을 뜻한다. 아래 그림은 이 이중복합체(double complex) 구조의 한 조각을 보여준다.
 
-![Dolbeault 이중복합체의 (p,q) 격자 한 조각: 가로 del, 세로 del-bar 화살표와 반가환 사각형](/assets/images/Math/Complex_Geometry/Dolbeault_Cohomology-1.svg){:style="width:13.45em" class="invert" .align-center}
+{% diagram Math/Complex_Geometry/Dolbeault_Cohomology-1.svg width="13.45em" alt="Dolbeault 이중복합체의 (p,q) 격자 한 조각: 가로 del, 세로 del-bar 화살표와 반가환 사각형" %}
 
 각 $p$를 고정하고 $q$만 변화시키면, 세로 방향 화살표들만 모아 $\bar\partial^2 = 0$인 복합체를 얻는다. 이것이 Dolbeault 복합체이다.
 

@@ -75,7 +75,7 @@ $$\mathcal{O}_{C,p}=\varprojlim_{U\supset p} \mathcal{O}(U)$$
 ::: 정의 3
 Scheme morphism $f:X \rightarrow Y$에 대하여, 두 개의 $\id_X$가 fiber product의 universal property에 의해 유도하는 유일한 morphism, 곧 다음 diagram
 
-![diagonal_morphism](/assets/images/Math/Scheme_Theory/Valuative_Criteria-1.svg){:style="width:13.51em" class="invert" .align-center}
+{% diagram Math/Scheme_Theory/Valuative_Criteria-1.svg width="13.51em" alt="diagonal_morphism" %}
 
 의 점선 화살표 $\Delta: X \rightarrow X \times_Y X$를 $f$의 *diagonal morphism<sub>대각사상</sub>*이라 부른다. ([§올곱, ⁋정의 1](/ko/math/scheme_theory/fiber_products#def1)) 만일 $\Delta$가 closed embedding이라면 $f$를 *separated<sub>분리사상</sub>*라 부르고, $X$가 $Y$에 대해 *separated*라 부른다. 만일 $X$가 $\Spec \mathbb{Z}$에 대해 separated이면, $X$를 간단히 *separated* scheme이라 부른다.
 :::
@@ -116,7 +116,7 @@ Separated가 아닌 scheme의 예시는 [§스킴, ⁋예시 10](/ko/math/scheme
 ::: 정리 6
 Noetherian scheme $X$와 scheme morphism $f:X \rightarrow Y$에 대하여, $f$가 separated인 것은 임의의 valuation ring $A$와 그 quotient field $K=\Frac(A)$에 대하여, 임의의 scheme morphism $\Spec A \rightarrow Y$, $\Spec K \rightarrow X$와 다음 commutative diagram
 
-![valuative_criterion](/assets/images/Math/Scheme_Theory/Valuative_Criteria-2.svg){:style="width:8.27em" class="invert" .align-center}
+{% diagram Math/Scheme_Theory/Valuative_Criteria-2.svg width="8.27em" alt="valuative_criterion" %}
 
 의 바깥쪽 square가 주어질 때마다, 많아야 하나의 $\Spec A \rightarrow X$가 전체 diagram이 commute하도록 하는 것이 동치이다.
 :::
@@ -234,7 +234,7 @@ Proper morphism은 separated 조건과 universally closed 조건을 함께 요�
 ::: 명제 10
 Noetherian scheme들 사이의 finite type scheme morphism $f:X \rightarrow Y$에 대하여, $f$가 universally closed인 것은 임의의 valuation ring $A$와 그 quotient field $K=\Frac(A)$에 대하여, 임의의 scheme morphism $\Spec A \rightarrow Y$, $\Spec K \rightarrow X$와 다음 commutative diagram
 
-![valuative_criterion](/assets/images/Math/Scheme_Theory/Valuative_Criteria-2.svg){:style="width:8.27em" class="invert" .align-center}
+{% diagram Math/Scheme_Theory/Valuative_Criteria-2.svg width="8.27em" alt="valuative_criterion" %}
 
 의 바깥쪽 square가 주어질 때마다, 적어도 하나의 $\Spec A \rightarrow X$가 존재하여 전체 diagram이 commute하는 것과 동치이다.
 :::
@@ -283,7 +283,7 @@ $$\cl(f(X))=\bigcup_{i=1}^r\cl(\{f(\eta_i)\})$$
 ::: 정리 11
 Noetherian scheme들 사이의 finite type scheme morphism $f:X \rightarrow Y$에 대하여, $f$가 proper인 것은 임의의 valuation ring $A$와 그 quotient field $K=\Frac(A)$에 대하여, 임의의 scheme morphism $\Spec A \rightarrow Y$, $\Spec K \rightarrow X$와 다음 commutative diagram
 
-![valuative_criterion](/assets/images/Math/Scheme_Theory/Valuative_Criteria-2.svg){:style="width:8.27em" class="invert" .align-center}
+{% diagram Math/Scheme_Theory/Valuative_Criteria-2.svg width="8.27em" alt="valuative_criterion" %}
 
 의 바깥쪽 square가 주어질 때마다, 정확히 하나의 $\Spec A \rightarrow X$가 존재하여 전체 diagram이 commute하는 것이 동치이다.
 :::

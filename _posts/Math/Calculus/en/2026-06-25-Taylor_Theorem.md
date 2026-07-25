@@ -38,7 +38,7 @@ In practice, since we can always shift any function to the origin, compute there
 
 As claimed above, Taylor expansion is a method of approximating a given function by an $n$th-degree polynomial. Consider the following graph.
 
-![sin function and its Taylor polynomial approximations](/assets/images/Math/Calculus/Taylor_Theorem-1.svg){:style="width:23.68em" class="invert" .align-center}
+{% diagram Math/Calculus/Taylor_Theorem-1.svg width="23.68em" alt="sin function and its Taylor polynomial approximations" %}
 
 This graph shows the first few Taylor expansions of the sine function, and from the picture we can see that the approximation indeed gets closer to the $\sin$ function. However, to prove mathematically that this actually reduces the error, we need the following theorem.
 

@@ -34,7 +34,7 @@ The above definition can be thought of concisely as being given a homomorphism $
 
 Fix a finite group $G$, and let two representations $V,W$ be given. Then a *morphism* from $V$ to $W$ is given by the following diagram:
 
-![G-equivariant_maps](/assets/images/Math/Representation_Theory/Representations_of_Finite_Groups-1.svg){:style="width:10.05em" class="invert" .align-center}
+{% diagram Math/Representation_Theory/Representations_of_Finite_Groups-1.svg width="10.05em" alt="G-equivariant_maps" %}
 
 Expressed as an equation, this can simply be written as
 

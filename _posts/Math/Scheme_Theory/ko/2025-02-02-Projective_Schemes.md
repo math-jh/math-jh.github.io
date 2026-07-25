@@ -40,7 +40,7 @@ $$\mathbb{P}^n=\mathbb{R}^n\coprod \mathbb{P}^{n-1}$$
 
 을 얻는다. 이 과정은 $n=2$인 경우 다음 그림에 표현되어 있다. 
 
-![stereographic_projection](/assets/images/Math/Scheme_Theory/Projective_Schemes-1.svg){:style="width:31.18em" class="invert" .align-center}
+{% diagram Math/Scheme_Theory/Projective_Schemes-1.svg width="31.18em" alt="stereographic_projection" %}
 
 이를 식으로 적으면, $\mathbb{P}^n$의 한 점 $[x_0:\cdots:x_n]$에 대하여, 만일 $x_i\neq 0$이라면 $[x_0:\cdots:x_n]$의 equivalence class 안에서 $i$번째 좌표가 $1$이 되는 점을 (유일하게) 찾을 수 있으며, 이 점을 $P_i$의 점으로 보아 다음 부분집합
 

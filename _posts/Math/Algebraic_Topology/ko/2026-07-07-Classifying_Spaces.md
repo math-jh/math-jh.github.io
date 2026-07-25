@@ -167,7 +167,7 @@ $$[X,\B G]\rightarrow\{\text{principal $G$-bundles over $X$}\}/{\cong};\qquad [f
 
 은 잘 정의된 전단사이며, morphism $X'\rightarrow X$에 대한 pullback과 호환된다는 의미에서 자연스럽다.
 
-![분류사상의 pullback 사각형](/assets/images/Math/Algebraic_Topology/Classifying_Spaces-1.svg){:style="width:8.21em" class="invert" .align-center}
+{% diagram Math/Algebraic_Topology/Classifying_Spaces-1.svg width="8.21em" alt="분류사상의 pullback 사각형" %}
 
 :::
 ::: 증명

@@ -45,7 +45,7 @@ Now, for fixed $G$ and $F$, the collection of all extensions of $G$ by $F$ forms
 ::: Definition 2
 For two extensions $\mathcal{E}_1: F \rightarrow E_1 \rightarrow G$ and $\mathcal{E}_2:F \rightarrow E_2 \rightarrow G$, a *morphism* from $\mathcal{E}_1$ to $\mathcal{E}_2$ is a map $u:E_1 \rightarrow E_2$ making the following diagram commute:
 
-![morphism_of_extensions](/assets/images/Math/Group_Theory/Extensions-1.svg){:style="width:10.17em" class="invert" .align-center}
+{% diagram Math/Group_Theory/Extensions-1.svg width="10.17em" alt="morphism_of_extensions" %}
 :::
 
 Then if $u:E_1 \rightarrow E_2$ is an isomorphism of groups, its inverse $u^{-1}: E_2 \rightarrow E_1$ also satisfies the condition of [Definition 2](#def2), and hence $u$ is an isomorphism of extensions.
@@ -75,7 +75,7 @@ Of course, here retraction and section mean group homomorphisms, not merely func
 ::: Proof (Proposition 4)
 First, assume the first condition and consider the following diagram:
 
-![retraction_and_section](/assets/images/Math/Group_Theory/Extensions-2.svg){:style="width:11.92em" class="invert" .align-center}
+{% diagram Math/Group_Theory/Extensions-2.svg width="11.92em" alt="retraction_and_section" %}
 
 Then we define the retraction $r:E \rightarrow F$ as $\pr_1\circ u$, and $s:G \rightarrow E$ as $u^{-1}\circ\iota_2$.
 

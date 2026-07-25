@@ -27,11 +27,11 @@ weight: 12
 
 > 다음의 diagram
 > 
-> ![fiber_diagram](/assets/images/Math/Scheme_Theory/Fiber_Products-1.svg){:style="width:9.32em" class="invert" .align-center}
+> {% diagram Math/Scheme_Theory/Fiber_Products-1.svg width="9.32em" alt="fiber_diagram" %}
 > 
 > 이 commute한다. 뿐만 아니라, 식 $\varphi_Y\circ\psi_Y=\varphi_X\circ\psi_X$를 만족하는 임의의 $\psi_X:Z \rightarrow X$, $\psi_Y:Z \rightarrow Y$가 주어질 때마다 유일한 $\psi:Z \rightarrow X\times_SY$가 존재하여 $\psi_X=\rho_X\circ\psi$이고 $\psi_Y=\rho_Y\circ\psi$이다.
 > 
-> ![universal_product](/assets/images/Math/Scheme_Theory/Fiber_Products-2.svg){:style="width:13.72em" class="invert" .align-center}
+> {% diagram Math/Scheme_Theory/Fiber_Products-2.svg width="13.72em" alt="universal_product" %}
 
 따라서, $X\times_SY$에서 $S$로의 canonical morphism이 존재하며, 이로부터 우리는 $X\times_SY$를 $S$-scheme으로 볼 수 있다. 뿐만 아니라, 이 관점에서 $X\times_SY$는 $\Sch_{/S}$에서의 product이기도 하다는 것이 정의로부터 자명하다.
 
@@ -57,7 +57,7 @@ $\AffSch\cong\cRing^\op$를 통해 $\Spec A \rightarrow \Spec C$, $\Spec B \righ
 ::: 보조정리 3
 Scheme morphism $\varphi: Y \rightarrow Z$와 $Z$의 open subscheme $\iota: U \rightarrow Z$가 주어졌다 하자. 그럼 다음의 diagram
 
-![open_subscheme](/assets/images/Math/Scheme_Theory/Fiber_Products-3.svg){:style="width:8.22em" class="invert" .align-center}
+{% diagram Math/Scheme_Theory/Fiber_Products-3.svg width="8.22em" alt="open_subscheme" %}
 
 은 fiber diagram이다.
 :::
@@ -73,15 +73,15 @@ Affine scheme들 $X, Y, Z$가 주어졌다 하고, $Y$의 open subscheme $Y'\hoo
 ::: 증명
 우선 [보조정리 2](#lem2)로부터 다음의 fiber diagram 
 
-![open_fiber_product-1](/assets/images/Math/Scheme_Theory/Fiber_Products-4.svg){:style="width:9.32em" class="invert" .align-center}
+{% diagram Math/Scheme_Theory/Fiber_Products-4.svg width="9.32em" alt="open_fiber_product-1" %}
 
 이 존재하는 것을 안다. 이제 다음의 데이터
 
-![open_fiber_product-2](/assets/images/Math/Scheme_Theory/Fiber_Products-5.svg){:style="width:8.55em" class="invert" .align-center}
+{% diagram Math/Scheme_Theory/Fiber_Products-5.svg width="8.55em" alt="open_fiber_product-2" %}
 
 를 생각하면, 우리는 [보조정리 3](#lem3)으로부터 $X\times_ZY$의 open subscheme $\rho_Y^{-1}(Y')$가 fiber product가 되는 것을 확인할 수 있다. 이제 일반적으로 다음의 diagram
 
-![magic_square](/assets/images/Math/Scheme_Theory/Fiber_Products-6.svg){:style="width:8.55em" class="invert" .align-center}
+{% diagram Math/Scheme_Theory/Fiber_Products-6.svg width="8.55em" alt="magic_square" %}
 
 에서 작은 두 사각형이 fiber diagram이라면 외곽의 큰 사각형도 fiber diagram이므로 원하는 결과를 얻는다. 
 :::
@@ -142,7 +142,7 @@ $$A\otimes_BB[\x_1,\ldots,\x_n]\cong A[\x_1,\ldots, \x_n]$$
 
 이 성립하는 것으로부터 다음의 diagram
 
-![adding_extra_variables](/assets/images/Math/Scheme_Theory/Fiber_Products-7.svg){:style="width:20.67em" class="invert" .align-center}
+{% diagram Math/Scheme_Theory/Fiber_Products-7.svg width="20.67em" alt="adding_extra_variables" %}
 
 이 fiber diagram인 것을 안다. 
 

@@ -165,7 +165,7 @@ $\varphi$를 통해 $X$와 $Y\setminus\{p\}$을 동일시하고, $X$를 $Y$의 �
 
 [정리 12](#thm12)은 LCH space $X$에 한 점을 더해 compact Hausdorff space를 만드는 방법이 위상동형을 무시하면 오직 하나뿐임을 말한다. 이것이 Alexandroff 정리의 유일성 부분을 보편성의 언어로 서술한 것이다. 이 유일성 덕분에 우리는 이후 $X^+$를 그 구체적 구성과 무관하게 다룰 수 있고, 실제 계산에서는 임의의 편리한 compact Hausdorff model을 골라 $X^+$와 동일시하면 된다.
 
-![일점 옹골화의 보편성](/assets/images/Math/Topology/Locally_Compact_Spaces-1.svg){:style="width:6.23em" class="invert" .align-center}
+{% diagram Math/Topology/Locally_Compact_Spaces-1.svg width="6.23em" alt="일점 옹골화의 보편성" %}
 
 ::: 참고 13
 일점 옹골화는 Hausdorff 옹골화 가운데 가장 작은 것으로 특징지어진다. Compact가 아닌 LCH space $X$의 *Hausdorff 옹골화*란 $X$를 조밀한 부분공간으로 품는 compact Hausdorff space를 말하는데, 이러한 임의의 옹골화에서 출발하여 $X$ 바깥의 점들을 모두 하나로 뭉개면 $X^+$로 향하는 연속인 전사가 유일하게 얻어진다. 이 사실의 증명에는 LCH space가 Hausdorff space에 조밀하게 매장되면 항상 열린 부분공간이 된다는 관찰이 필요하며, 자세한 논증은 표준적인 문헌을 따른다. **[Mun]** 반대편 극단에는 완전정칙 공간이 가질 수 있는 가장 큰 Hausdorff 옹골화인 *Stone–Čech compactification*이 있으나, 이는 별도의 구성을 요구하므로 여기에서는 이름만 언급한다.

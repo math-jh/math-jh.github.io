@@ -349,7 +349,7 @@ $$1234\leq 1324\leq 1423\leq 2413\leq 3412$$
 
 $$1234\leq 1324\leq 2314\leq 2413\leq 3412$$
 
-![Hasse diagram of Bruhat order for Gr(2,4)](/assets/images/Math/Lie_Theory/Bruhat_Decomposition-1.svg){:style="width:14.89em" class="invert" .align-center}
+{% diagram Math/Lie_Theory/Bruhat_Decomposition-1.svg width="14.89em" alt="Hasse diagram of Bruhat order for Gr(2,4)" %}
 
 That is, below $1324$ there is only $1234$, and the two elements $1423$ and $2314$ of the same length are incomparable, both lying above $1324$ and below $2413$. This Hasse diagram has a diamond shape branching into two and then rejoining, directly showing the inclusion relations among the Schubert classes of $\Gr(2,4)$. For example, the Schubert variety $X_{2413}$ is a dimension $3$ subvariety containing $X_{1423}^\circ$, $X_{2314}^\circ$, $X_{1324}^\circ$, and $X_{1234}^\circ$.
 

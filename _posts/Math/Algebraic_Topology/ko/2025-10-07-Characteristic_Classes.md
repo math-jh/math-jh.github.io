@@ -172,7 +172,7 @@ $$H^k(D(E), S(E))\cong H^k(E, E_0)\cong H^{k-n}(B)$$
 
 이며, 둘째 항의 경우 retraction을 통해 $H^k(D(E))\cong H^k(B)$를 얻는다. 이와 같은 identification을 통해 다음의 commutative diagram
 
-![pair cohomology 완전열과 Gysin 완전열](/assets/images/Math/Algebraic_Topology/Characteristic_Classes-1.svg){:style="width:40.87em" class="invert" .align-center}
+{% diagram Math/Algebraic_Topology/Characteristic_Classes-1.svg width="40.87em" alt="pair cohomology 완전열과 Gysin 완전열" %}
 
 을 얻을 수 있으며, 이 때 둘째 열의 map들은 수직 방향의 isomorphism을 따라 위쪽 exact sequence의 map들을 옮겨온 것이다. 구체적으로, 첫째 morphism $H^{k-n}(B)\rightarrow H^k(B)$를 따라가 보자. Thom isomorphism $\Phi:\alpha\mapsto p^\ast\alpha\smile u$로 $\alpha\in H^{k-n}(B)$를 $H^k(E, E_0)$로 올린 뒤 위 행의 첫 morphism $j^\ast$를 합성하면
 
@@ -316,7 +316,7 @@ $$f=(f_1, f_2): B\rightarrow \CP^\infty\times\CP^\infty$$
 
 로 두면, 우리는 base들 사이에 다음의 commutative diagram
 
-![분류사상 분해](/assets/images/Math/Algebraic_Topology/Characteristic_Classes-2.svg){:style="width:20.62em" class="invert" .align-center}
+{% diagram Math/Algebraic_Topology/Characteristic_Classes-2.svg width="20.62em" alt="분류사상 분해" %}
 
 을 얻고, 따라서 $B$ 위의 $L, L'$에서의 식
 

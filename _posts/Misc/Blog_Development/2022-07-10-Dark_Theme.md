@@ -158,7 +158,7 @@ img.invert {
 {: data-filename="assets/css/main_dark.scss"}
 를 추가해주었다. 
 
-![octahedral axiom](/assets/images/Pages/Profile/Octahedral.png){:width="500px" class="invert" .align-center}
+{% diagram Pages/Profile/Octahedral.png width="500px" alt="octahedral axiom" %}
 
 잘 작동하는 것 같다. 
 

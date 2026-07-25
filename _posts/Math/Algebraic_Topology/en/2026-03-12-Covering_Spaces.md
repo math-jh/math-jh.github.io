@@ -48,7 +48,7 @@ For a continuous surjection $p:E \rightarrow B$, an open set $U$ of $B$ is *even
 
 The definition is somewhat involved, but it is convenient to keep the following picture in mind.
 
-![S1_covering](/assets/images/Math/Algebraic_Topology/Covering_Spaces-1.svg){:style="width:26em" class="invert" .align-center}
+{% diagram Math/Algebraic_Topology/Covering_Spaces-1.svg width="26em" alt="S1_covering" %}
 
 This depicts the covering map
 
@@ -120,7 +120,7 @@ We call the functor $\Pi_1(B) \rightarrow \Set$ defined above the *monodromy fun
 
 For a fixed base space $B$, we define the category $\Cov(B)$ of covering spaces of $B$ in the obvious way. Explicitly, the objects of this category are covering maps $p:E\rightarrow B$, and a morphism between them is the following commutative diagram
 
-![morphism_of_covering_spaces](/assets/images/Math/Algebraic_Topology/Covering_Spaces-2.svg){:style="width:6.75em" class="invert" .align-center}
+{% diagram Math/Algebraic_Topology/Covering_Spaces-2.svg width="6.75em" alt="morphism_of_covering_spaces" %}
 
 Through this, we see that assigning to each $p\in \Cov(B)$ its monodromy functor $M_p$ defines a functor
 
@@ -209,11 +209,11 @@ For nice spaces that we know, we can sometimes compute the fundamental group or 
 
 The simplest such method is the case where a space $X$ is expressed as the union of two open sets $X=U\cup V$. Then by [\[Topology\] §Presheaves, ⁋Lemma 1](/en/math/topology/presheaves#lem1), we know that the following diagram
 
-![union_as_colimit](/assets/images/Math/Algebraic_Topology/Covering_Spaces-3.svg){:style="width:7.54em" class="invert" .align-center}
+{% diagram Math/Algebraic_Topology/Covering_Spaces-3.svg width="7.54em" alt="union_as_colimit" %}
 
 is a colimit diagram. In this case, our goal is to represent $\Pi_1(X)$ using $\Pi_1(U)$, $\Pi_1(V)$, and $\Pi_1(U\cap V)$ by applying the fundamental groupoid functor $\Pi_1$ to this diagram. On the other hand, [\[Topology\] §Presheaves, ⁋Lemma 1](/en/math/topology/presheaves#lem1) tells us that for any open covering $(U_i)$, the following diagram
 
-![general_union_colimit](/assets/images/Math/Algebraic_Topology/Covering_Spaces-4.svg){:style="width:8.27em" class="invert" .align-center}
+{% diagram Math/Algebraic_Topology/Covering_Spaces-4.svg width="8.27em" alt="general_union_colimit" %}
 
 is a colimit diagram. Our claim is that if the fundamental groupoids of $(U_i)$ and their finite intersections are all known, then we can compute the fundamental groupoid of $\Pi_1(X)$ from them.
 
@@ -229,7 +229,7 @@ Now, just as when we obtained [Corollary 12](#cor12) above, applying this theore
 ::: Corollary 14 (Seifert-van Kampen theorem, classical version)
 Suppose a topological space $X$ is the union of two connected open subsets $U,V$, and $U\cap V$ is connected. Then the following diagram
 
-![van_Kampen](/assets/images/Math/Algebraic_Topology/Covering_Spaces-5.svg){:style="width:18.89em" class="invert" .align-center}
+{% diagram Math/Algebraic_Topology/Covering_Spaces-5.svg width="18.89em" alt="van_Kampen" %}
 
 is a pushout diagram, and the resulting map $\pi_1(U)\ast_{\pi_1(U\cap V)}\pi_1(V)\rightarrow \pi_1(X)$ is an isomorphism.
 :::

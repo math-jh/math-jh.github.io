@@ -123,7 +123,7 @@ $$\dim T_x X = \dim_{\mathbb{K}}(\mathfrak{m}_x/\mathfrak{m}_x^2) \ge \dim \math
 ::: 예시 7 (Singular points)
 1. (Node) $X = Z(\y^2 - \x^2(\x+1)) \subseteq \mathbb{A}^2$를 생각하자. 이 곡선은 원점에서 두 갈래로 갈라진다.
 
-    ![nodal_curve](/assets/images/Math/Algebraic_Varieties/Tangent_Spaces_and_Smoothness-1.svg){:style="width:23.17em" class="invert" .align-center}
+    {% diagram Math/Algebraic_Varieties/Tangent_Spaces_and_Smoothness-1.svg width="23.17em" alt="nodal_curve" %}
 
     이 곡선의 Jacobian은
 
@@ -132,7 +132,7 @@ $$\dim T_x X = \dim_{\mathbb{K}}(\mathfrak{m}_x/\mathfrak{m}_x^2) \ge \dim \math
     이므로, 원점에서 Jacobian은 $(0,0)$이고, 따라서 [명제 3](#prop3)에 의해 원점은 singular point이다. 기하학적으로, tangent space가 2차원이라는 것은 두 갈래의 접선 방향이 모두 포함된다는 것을 의미한다. 구체적으로, $\y^2 - \x^2(\x+1) \approx \y^2 - \x^2 = (\y-\x)(\y+\x)$이므로, 원점 근처에서 곡선은 $\y = \x$와 $\y = -\x$ 두 직선의 합집합처럼 보인다. Node는 "가장 온화한" singular point 중 하나이다.
 2. (Cusp) 이번에는 $Z(\y^2 - \x^3)\subseteq \mathbb{A}^2$를 생각하자.
 
-    ![cusp](/assets/images/Math/Algebraic_Varieties/Tangent_Spaces_and_Smoothness-2.svg){:style="width:18.80em" class="invert" .align-center}
+    {% diagram Math/Algebraic_Varieties/Tangent_Spaces_and_Smoothness-2.svg width="18.80em" alt="cusp" %}
 
     이 때, 이 곡선의 원점은 singular point이다. 이를 확인하기 위해 Jacobian을 계산하면,
 

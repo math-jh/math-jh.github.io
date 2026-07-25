@@ -1,0 +1,99 @@
+// 인라인 다이어그램 색 체계 (양 테마 공용 — 시트별로 $text-color/$background-color가
+// 다르게 컴파일되는 것으로 라이트/다크가 갈린다).
+//
+// 의미 계층: 잉크=currentColor · 회색=잉크틴트 mix($text,$bg,p) · 음영/연한 fill=
+// bg-mix mix(accent,$bg,K) · 유색 중간 명도=동일 유지 · 램프 역전은 다크 전용
+// (_diagram-colors-dark.scss). 값들은 SVG 실측 분해(accentN!K)에서 유도.
+//
+// accent 정본은 assets/diagrams/.preamble/palette.sty — 거기 바꾸면 여기도 같이.
+$diag-accent1: #a56f14; // 브래스
+$diag-accent2: #6b3a00; // 브론즈
+$diag-accent3: #3a1f0b; // 코코아
+
+figure.diagram {
+  display: block;
+  margin: 0 auto 1em;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    fill: currentColor; // 글리프(fill 무속성)가 본문 글자색을 상속
+  }
+
+  // 잉크 선화
+  [stroke='#000'] { stroke: currentColor; }
+
+  // 회색 = 잉크 틴트 (tex의 black!N). p = (255-g)/255
+  [stroke='#333'] { stroke: mix($text-color, $background-color, 80%); }
+  [fill='#333'] { fill: mix($text-color, $background-color, 80%); }
+  [stroke='#404040'] { stroke: mix($text-color, $background-color, 75%); }
+  [fill='#404040'] { fill: mix($text-color, $background-color, 75%); }
+  [stroke='#4d4d4d'] { stroke: mix($text-color, $background-color, 70%); }
+  [fill='#4d4d4d'] { fill: mix($text-color, $background-color, 70%); }
+  [stroke='#666'] { stroke: mix($text-color, $background-color, 60%); }
+  [fill='#666'] { fill: mix($text-color, $background-color, 60%); }
+  [stroke='#737373'] { stroke: mix($text-color, $background-color, 55%); }
+  [fill='#737373'] { fill: mix($text-color, $background-color, 55%); }
+  [stroke='#808080'] { stroke: mix($text-color, $background-color, 50%); }
+  [fill='#808080'] { fill: mix($text-color, $background-color, 50%); }
+  [stroke='#8c8c8c'] { stroke: mix($text-color, $background-color, 45%); }
+  [fill='#8c8c8c'] { fill: mix($text-color, $background-color, 45%); }
+  [stroke='#b3b3b3'] { stroke: mix($text-color, $background-color, 30%); }
+  [fill='#b3b3b3'] { fill: mix($text-color, $background-color, 30%); }
+  [stroke='#bfbfbf'] { stroke: mix($text-color, $background-color, 25%); }
+  [fill='#bfbfbf'] { fill: mix($text-color, $background-color, 25%); }
+  [stroke='#ccc'] { stroke: mix($text-color, $background-color, 20%); }
+  [fill='#ccc'] { fill: mix($text-color, $background-color, 20%); }
+
+  // 음영·연한 accent fill = bg-mix (tex의 accentN!K white-혼합, 종이→배경 앵커 전환)
+  [fill='#906b40'] { fill: mix($diag-accent2, $background-color, 75%); }
+  [stroke='#906b40'] { stroke: mix($diag-accent2, $background-color, 75%); }
+  [fill='#97754d'] { fill: mix($diag-accent2, $background-color, 70%); }
+  [stroke='#97754d'] { stroke: mix($diag-accent2, $background-color, 70%); }
+  [fill='#bb934f'] { fill: mix($diag-accent1, $background-color, 75%); }
+  [stroke='#bb934f'] { stroke: mix($diag-accent1, $background-color, 75%); }
+  [fill='#c09a5a'] { fill: mix($diag-accent1, $background-color, 70%); }
+  [stroke='#c09a5a'] { stroke: mix($diag-accent1, $background-color, 70%); }
+  [fill='#cdb07e'] { fill: mix($diag-accent1, $background-color, 55%); }
+  [stroke='#cdb07e'] { stroke: mix($diag-accent1, $background-color, 55%); }
+  [fill='#d3c4b3'] { fill: mix($diag-accent2, $background-color, 30%); }
+  [stroke='#d3c4b3'] { stroke: mix($diag-accent2, $background-color, 30%); }
+  [fill='#d4cec9'] { fill: mix($diag-accent3, $background-color, 22%); }
+  [stroke='#d4cec9'] { stroke: mix($diag-accent3, $background-color, 22%); }
+  [fill='#d7be95'] { fill: mix($diag-accent1, $background-color, 45%); }
+  [stroke='#d7be95'] { stroke: mix($diag-accent1, $background-color, 45%); }
+  [fill='#dacebf'] { fill: mix($diag-accent2, $background-color, 25%); }
+  [stroke='#dacebf'] { stroke: mix($diag-accent2, $background-color, 25%); }
+  [fill='#dbc5a1'] { fill: mix($diag-accent1, $background-color, 40%); }
+  [stroke='#dbc5a1'] { stroke: mix($diag-accent1, $background-color, 40%); }
+  [fill='#ded4c7'] { fill: mix($diag-accent2, $background-color, 22%); }
+  [stroke='#ded4c7'] { stroke: mix($diag-accent2, $background-color, 22%); }
+  [fill='#e4d4b9'] { fill: mix($diag-accent1, $background-color, 30%); }
+  [stroke='#e4d4b9'] { stroke: mix($diag-accent1, $background-color, 30%); }
+  [fill='#e4dcd1'] { fill: mix($diag-accent2, $background-color, 18%); }
+  [stroke='#e4dcd1'] { stroke: mix($diag-accent2, $background-color, 18%); }
+  [fill='#ede2d0'] { fill: mix($diag-accent1, $background-color, 20%); }
+  [stroke='#ede2d0'] { stroke: mix($diag-accent1, $background-color, 20%); }
+  [fill='#efe5d5'] { fill: mix($diag-accent1, $background-color, 18%); }
+  [stroke='#efe5d5'] { stroke: mix($diag-accent1, $background-color, 18%); }
+  [fill='#f2e9dc'] { fill: mix($diag-accent1, $background-color, 15%); }
+  [stroke='#f2e9dc'] { stroke: mix($diag-accent1, $background-color, 15%); }
+  [fill='#f6f1e7'] { fill: mix($diag-accent1, $background-color, 10%); }
+  [stroke='#f6f1e7'] { stroke: mix($diag-accent1, $background-color, 10%); }
+
+  // 흰 지우개 paint (이중선 심·crossing halo·white-out) = 배경색으로 불투명 덧칠.
+  // mask 절개는 경계 AA가 반투명 잔흔을 남겨 un-mask로 되돌렸다 (2026-07-26).
+  [stroke='#fff'] { stroke: $background-color; }
+  [fill='#fff'] { fill: $background-color; }
+
+  // #00008b(Partial_Derivatives 메쉬)·#008000은 규칙 없음 — 동일 유지 룰링.
+
+  // mask 재고정 — 절개 실루엣(#000)과 keep-rect(#fff)는 luminance 데이터라
+  // 위 규칙이 닿으면 절개가 깨진다. 속성 선택자보다 높은 특이도로 되돌린다.
+  mask { fill: #000; } // 무속성 자식 안전망
+  mask [stroke='#000'] { stroke: #000; }
+  mask [fill='#000'] { fill: #000; }
+  mask [fill='#fff'] { fill: #fff; }
+  mask [stroke='#fff'] { stroke: #fff; }
+}

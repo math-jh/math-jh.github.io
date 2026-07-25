@@ -38,11 +38,11 @@ so $y\in f(A)$, and hence $f$ is surjective.
 
 Thus a function $f:A\rightarrow B$ is injective if and only if there exists $r:B\rightarrow A$ making the diagram
 
-![injection](/assets/images/Math/Set_Theory/Retraction_and_Section-1.svg){:style="width:5.54em" class="invert" .align-center}
+{% diagram Math/Set_Theory/Retraction_and_Section-1.svg width="5.54em" alt="injection" %}
 
 commute. A function $f:A\rightarrow B$ is surjective if and only if there exists $s:B\rightarrow A$ making the diagram
 
-![surjection](/assets/images/Math/Set_Theory/Retraction_and_Section-2.svg){:style="width:5.59em" class="invert" .align-center}
+{% diagram Math/Set_Theory/Retraction_and_Section-2.svg width="5.59em" alt="surjection" %}
 
 commute. Such $r$ and $s$ have names.
 
@@ -114,11 +114,11 @@ Let $f:A\rightarrow B$ and $f':B\rightarrow C$ be functions, and set $f''=f'\cir
 
 The result in part 1 states that there exists $h$ making the diagram
 
-![surjection](/assets/images/Math/Set_Theory/Retraction_and_Section-3.svg){:style="width:5.94em"  class="invert" .align-center}
+{% diagram Math/Set_Theory/Retraction_and_Section-3.svg width="5.94em" alt="surjection" %}
 
 commute. Part 2 states that there exists $h$ making the diagram
 
-![injection](/assets/images/Math/Set_Theory/Retraction_and_Section-4.svg){:style="width:5.94em"  class="invert" .align-center}
+{% diagram Math/Set_Theory/Retraction_and_Section-4.svg width="5.94em" alt="injection" %}
 
 commute.
 

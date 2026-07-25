@@ -44,7 +44,7 @@ Since the expression of $v$ as a linear combination of elements of $\mathcal{B}$
 
 That is, we can always find $G:V\rightarrow W$ making the following diagram commute.
 
-![extend_by_linearity](/assets/images/Math/Linear_Algebra/Space_of_Linear_Maps-1.svg){:style="width:5.88em" class="invert" .align-center}
+{% diagram Math/Linear_Algebra/Space_of_Linear_Maps-1.svg width="5.88em" alt="extend_by_linearity" %}
 
 Conversely, given any linear map $G:V\rightarrow W$, we may restrict it to $\mathcal{B}$ to define a function $g=G\circ\iota$, and by the uniqueness part of the theorem above, $G$ is the only linear map satisfying this equation. Thus there is a bijection between the following two sets:
 

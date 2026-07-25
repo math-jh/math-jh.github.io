@@ -33,7 +33,7 @@ Let an immersion $F:M\rightarrow N$ between two manifolds be given. Then for any
 
 In the above lemma, one must take care to observe that for an open set $U$ in $M$, the statement concerns $F(U)$ being a slice of $(V,\varphi)$. For example, $F(M)\cap V$ is generally not a slice, and the same holds even when $F$ is a submanifold.
 
-![counterexample](/assets/images/Math/Manifolds/Implicit_Function_Theorem-1.png){:style="width:200px" class="invert" .align-center}
+{% diagram Math/Manifolds/Implicit_Function_Theorem-1.png width="200px" alt="counterexample" %}
 
 However, if $M$ is embedded, we may choose $(V,\varphi)$ appropriately so that $F(M)\cap V$ is a slice of $V$. From this perspective, the above lemma can be summarized as
 

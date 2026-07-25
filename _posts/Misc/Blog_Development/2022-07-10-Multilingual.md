@@ -36,7 +36,7 @@ Jekyll 블로그를 만들 때, 두 개의 base url을 지정하여 이들을 �
 
 같은 주제를 공유하지만 언어만 다른 두 포스트가 있다면, 이들 포스트 사이를 자유롭게 이동할 수 있는 버튼 또한 필요하다. 이를 도식으로 나타내면 다음과 같다.
 
-![sitemap](/assets/images/Misc/Blog_Development/Multilingual-1.png){:width="800px" class="invert" .align-center}
+{% diagram Misc/Blog_Development/Multilingual-1.png width="800px" alt="sitemap" %}
 
 서로 다른 언어의 두 포스트를 왔다갔다 하는 버튼은 다크모드를 적용할 때 만든 masthead 아이콘 옆에 두기로 하였으며, 이 버튼은 세 가지 조건
 

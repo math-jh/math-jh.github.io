@@ -174,7 +174,7 @@ $$S(P, f) = \sum_{i=1}^{n} f(c_i)\Delta x_i$$
 the *Riemann sum* of the function $f$.
 :::
 
-![Riemann sum](/assets/images/Math/Calculus/Integration-1.svg){:style="width:24.05em" class="invert" .align-center}
+{% diagram Math/Calculus/Integration-1.svg width="24.05em" alt="Riemann sum" %}
 
 A Riemann sum approximates the area under the curve by rectangles of width $\Delta x_i$ and height $f(c_i)$. Taking the sample points $c_i$ to be the left endpoint, right endpoint, or points giving the minimum or maximum of the function on each subinterval yields the left and right Riemann sums, or the lower and upper sums, respectively. Intuitively, we expect that as the partition is made arbitrarily fine, this approximation converges to a single value independent of the choice of sample points.
 

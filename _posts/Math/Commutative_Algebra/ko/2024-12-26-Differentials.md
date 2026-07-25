@@ -68,11 +68,11 @@ $$\text{$d(xy)=x\,dy+y\,dx$ for all $x,y\in E$},\qquad \text{$d(ax+by)=a\,dx+b\,
 ::: 명제 4
 다음의 ring homomorphism들의 commutative diagram
 
-![setup](/assets/images/Math/Commutative_Algebra/Differentials-1.svg){:style="width:6.30em" class="invert" .align-center}
+{% diagram Math/Commutative_Algebra/Differentials-1.svg width="6.30em" alt="setup" %}
 
 이 주어졌다 하고, $\rho$와 $\rho'$를 통해 $E, E'$를 각각 $A$-algebra와 $A'$-algebra로 보자. 그럼 다음의 diagram
 
-![functoriality](/assets/images/Math/Commutative_Algebra/Differentials-2.svg){:style="width:11.39em" class="invert" .align-center}
+{% diagram Math/Commutative_Algebra/Differentials-2.svg width="11.39em" alt="functoriality" %}
 
 을 commute하게 하는 유일한 $E$-linear map $\Omega_{\varphi/\phi}:\Omega_{E/A} \rightarrow \Omega_{E'/A'}$이 존재한다.
 :::

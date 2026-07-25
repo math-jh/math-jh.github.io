@@ -24,7 +24,7 @@ We now generalize this further and examine the case where $p^{-1}(x)$ carries ad
 ::: Definition 1
 For a continuous surjection $p:E \rightarrow B$ between topological spaces and a topological space $F$, a *fiber bundle* is a map such that for each $x\in B$ there exists an open set $U$ for which there is a homeomorphism $\phi:U\times F\rightarrow p^{-1}(U)$ making the following diagram commute:
 
-![fiber_bundle](/assets/images/Math/Algebraic_Topology/Stiefel_Whitney_Classes-1.svg){:style="width:10.09em" class="invert" .align-center}
+{% diagram Math/Algebraic_Topology/Stiefel_Whitney_Classes-1.svg width="10.09em" alt="fiber_bundle" %}
 
 :::
 
@@ -46,7 +46,7 @@ is an isomorphism of vector spaces.
 
 This endows each fiber $p^{-1}(x)$ with a vector space structure inherited from $F$. In general, given two vector bundles $p_1:E_1 \rightarrow B_1$ and $p_2:E_2\rightarrow B_2$, a *morphism* between them is a commutative diagram of continuous functions
 
-![morphism_of_bundles](/assets/images/Math/Algebraic_Topology/Stiefel_Whitney_Classes-2.svg){:style="width:7.15em" class="invert" .align-center}
+{% diagram Math/Algebraic_Topology/Stiefel_Whitney_Classes-2.svg width="7.15em" alt="morphism_of_bundles" %}
 
 where, for each $x\in B_1$, the restriction of $g$ to $p^{-1}(x)\rightarrow p_2^{-1}(f(x))$ is required to be a linear map between vector spaces. How to define isomorphisms between vector bundles is then obvious.
 
@@ -173,7 +173,7 @@ For two vector bundles $p_1:E_1\rightarrow B_1$ and $p_2:E_2\rightarrow B_2$, if
 
 The first claim is obvious. For the second claim, it suffices to check that a trivial bundle is given by the following pullback:
 
-![trivial_bundle](/assets/images/Math/Algebraic_Topology/Stiefel_Whitney_Classes-3.svg){:style="width:5.34em" class="invert" .align-center}
+{% diagram Math/Algebraic_Topology/Stiefel_Whitney_Classes-3.svg width="5.34em" alt="trivial_bundle" %}
 
 An interesting observation is that the isomorphism classes of line bundles over $S^1$ are only two: the trivial line bundle and the line bundle in [Example 3](#ex3). Indeed, one can check that among the line bundles defined over $S^1$, the line bundle obtained by "twisting twice" is isomorphic to the trivial line bundle. This is to some extent predictable from [Proposition 6](#prop6), because the Stiefel-Whitney class of a line bundle over $S^1$ must lie in $H^1(S^1;\mathbb{Z}/2)$, which is isomorphic to $\mathbb{Z}/2$.
 
@@ -183,11 +183,11 @@ These are pullbacks of the tautological line bundle over $\RP^1$. The trivial li
 
 More generally, any rank $k$ vector bundle over any space is obtained by pulling back the universal bundle $\gamma^k_\infty:E(\gamma_\infty^k)\rightarrow \Gr(k,\mathbb{R}^\infty)$ over the *infinite Grassmannian* $\Gr(k,\mathbb{R}^\infty)$. That is, given any vector bundle $p:E \rightarrow B$, there exists a unique bundle map from $p$ to $\gamma_k^\infty$ making the following diagram commute:
 
-![universality](/assets/images/Math/Algebraic_Topology/Stiefel_Whitney_Classes-4.svg){:style="width:8.86em" class="invert" .align-center}
+{% diagram Math/Algebraic_Topology/Stiefel_Whitney_Classes-4.svg width="8.86em" alt="universality" %}
 
 and this is isomorphic to the following pullback diagram:
 
-![universality-2](/assets/images/Math/Algebraic_Topology/Stiefel_Whitney_Classes-5.svg){:style="width:10.63em" class="invert" .align-center}
+{% diagram Math/Algebraic_Topology/Stiefel_Whitney_Classes-5.svg width="10.63em" alt="universality-2" %}
 
 Moreover, the Stiefel-Whitney class of the vector bundle $E$ is also obtained by pulling back the Stiefel-Whitney class $w(\gamma^k_\infty)$ of the universal bundle $\gamma^k_\infty$.
 

@@ -44,7 +44,7 @@ For example, consider an algebraic closure $\overline{\mathbb{Q}}$ of $\mathbb{Q
 
 Now base change $\varphi$ along $\Spec\overline{\mathbb{Q}}\rightarrow\Spec\mathbb{Q}$ to obtain the following pullback diagram
 
-![pullback](/assets/images/Math/Scheme_Theory/Dimension_Schemes-1.svg){:style="width:13.60em" class="invert" .align-center}
+{% diagram Math/Scheme_Theory/Dimension_Schemes-1.svg width="13.60em" alt="pullback" %}
 
 The left-hand vertical map
 
@@ -127,7 +127,7 @@ $$\Spec A[t]\rightarrow \Spec A$$
 
 Consider the origin $\mathfrak{m}=(t^2,t^3)\in\Spec A$, which is the singular point of the curve $\Spec A$. The fiber of the above map over this point is given by the following pullback diagram
 
-![cusp-fiber](/assets/images/Math/Scheme_Theory/Dimension_Schemes-2.svg){:style="width:17.35em" class="invert" .align-center}
+{% diagram Math/Scheme_Theory/Dimension_Schemes-2.svg width="17.35em" alt="cusp-fiber" %}
 
 that is, by the map
 

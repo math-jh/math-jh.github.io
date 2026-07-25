@@ -42,7 +42,7 @@ $$\mathbb{P}^n=\mathbb{R}^n\coprod \mathbb{P}^{n-1}$$
 
 This process is illustrated in the following figure for the case $n=2$.
 
-![stereographic_projection](/assets/images/Math/Scheme_Theory/Projective_Schemes-1.svg){:style="width:31.18em" class="invert" .align-center}
+{% diagram Math/Scheme_Theory/Projective_Schemes-1.svg width="31.18em" alt="stereographic_projection" %}
 
 Writing this in formulas, for a point $[x_0:\cdots:x_n]$ of $\mathbb{P}^n$, if $x_i\neq 0$ then we can (uniquely) find a point in the equivalence class of $[x_0:\cdots:x_n]$ whose $i$-th coordinate is $1$, and viewing this point as a point of $P_i$, we can identify the following subset
 

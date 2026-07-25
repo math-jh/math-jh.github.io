@@ -39,11 +39,11 @@ $$0\longrightarrow A\longrightarrow B\longrightarrow C\longrightarrow 0$$
     가 exact이다.
 2. (Naturality) Short exact sequence들 사이의 homomorphism
     
-    ![morphism_of_short_exact_sequence](/assets/images/Math/Homological_Algebra/Derived_Functors-1.svg){:style="width:19.34em" class="invert" .align-center}
+    {% diagram Math/Homological_Algebra/Derived_Functors-1.svg width="19.34em" alt="morphism_of_short_exact_sequence" %}
 
     이 주어졌을 때, 다음의 diagram
 
-    ![naturality_of_delta_functor](/assets/images/Math/Homological_Algebra/Derived_Functors-2.svg){:style="width:35.61em" class="invert" .align-center}
+    {% diagram Math/Homological_Algebra/Derived_Functors-2.svg width="35.61em" alt="naturality_of_delta_functor" %}
 
     이 commute한다.
 :::
@@ -68,7 +68,7 @@ $$0\longrightarrow A\longrightarrow B\longrightarrow C\longrightarrow 0$$
 
 마다 commute하도록 하는 $\alpha_n:S_n\Rightarrow T_n$들의 모임이다. 
 
-![morphism_of_delta_functor](/assets/images/Math/Homological_Algebra/Derived_Functors-3.svg){:style="width:41.13em" class="invert" .align-center}
+{% diagram Math/Homological_Algebra/Derived_Functors-3.svg width="41.13em" alt="morphism_of_delta_functor" %}
 
 ::: 정의 3
 임의의 $\delta$-functor $T$가 *universal $\delta$-functor<sub>보편 $\delta$-함자</sub>*라는 것은 임의의 $\delta$-functor $S$와 natural transformation $\alpha_0:S_0\rightarrow T_0$이 주어질 때마다, 이를 확장하는 유일한 $\delta$-functor들 사이의 morphism $(\alpha_n:S_n\Rightarrow T_n)$이 존재하는 것이다.

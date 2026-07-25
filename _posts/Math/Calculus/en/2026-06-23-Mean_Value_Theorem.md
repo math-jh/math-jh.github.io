@@ -132,7 +132,7 @@ and the middle term is $f(b) - f(a)$. The second claim follows by applying the s
 
 Meanwhile, [Theorem 3](#thm3) is also used to bound the number of zeros of a function from above by the number of zeros of its derivative. This is because between any two distinct zeros of the function there must lie at least one zero of the derivative.
 
-![Parabola and tangent for root separation](/assets/images/Math/Calculus/Mean_Value_Theorem-1.svg){:style="width:14.76em" class="invert" .align-center}
+{% diagram Math/Calculus/Mean_Value_Theorem-1.svg width="14.76em" alt="Parabola and tangent for root separation" %}
 
 Intuitively, after a function has a zero, in order to reach the next zero it must *turn around* so that the function value returns to $0$, and this turning point is where the derivative becomes $0$. Stating this more precisely:
 

@@ -68,7 +68,7 @@ Consider an equivalence relation $(R,A,A)$. For any $x\in A$, the section $R(x)$
 
 By definition, $R(x)$ is the set of elements that are regarded as equivalent to $x$ under the equivalence relation $R$. In many cases, the equivalence class containing $x$ is written as $[x]_R$. When there is no risk of confusion, the set of these classes $A/R$ is also written as $A/\mathord{\sim}$.
 
-![Quotient_set](/assets/images/Math/Set_Theory/Equivalence_Relations-1.png){:style="width:600px" class="invert" .align-center}
+{% diagram Math/Set_Theory/Equivalence_Relations-1.png width="600px" alt="Quotient_set" %}
 
 <cap>The set $A$ (left), the equivalence relation $R$ defined on it (center), and the quotient set $A/R$ (right). Each element of $A/R$ is the equivalence class $[x]_R$ in the middle diagram.</cap>
 

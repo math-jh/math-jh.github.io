@@ -42,13 +42,13 @@ $$\cdots\rightarrow H_n(A)\rightarrow H_n(B)\rightarrow H_n(C)\rightarrow H_{n-1
 ::: Proof
 It suffices to consider the following diagram
 
-![long_exact_sequence](/assets/images/Math/Homological_Algebra/Long_Exact_Sequence-1.svg){:style="width:32.84em" class="invert" .align-center}
+{% diagram Math/Homological_Algebra/Long_Exact_Sequence-1.svg width="32.84em" alt="long_exact_sequence" %}
 
 Here, the $\partial$'s are all functions defined by $\partial^A(a+\im d^A_{n+1})=d_n^Aa\in\ker d^A_{n-1}$. Then in the above diagram, one can easily verify that $\ker\partial^A$ is equal to $H_{n+1}(A)=\ker d_n^A/\im(d^A_{n+1})$, and $\coker\partial^A$ is equal to $H_{n-1}(A)=\ker d^A_{n-1}/\im d^A_n$.
 
 Therefore, it suffices to show that the top and bottom rows are exact; then the snake lemma yields the desired long exact sequence. To show this, consider again the following diagram
 
-![long_exact_sequence_exactness](/assets/images/Math/Homological_Algebra/Long_Exact_Sequence-2.svg){:style="width:22.98em" class="invert" .align-center}
+{% diagram Math/Homological_Algebra/Long_Exact_Sequence-2.svg width="22.98em" alt="long_exact_sequence_exactness" %}
 
 Applying the snake lemma (more precisely, [§Diagram Chasing, ⁋Lemma 5](/en/math/homological_algebra/diagram_chasing#lem5)) to this diagram once more, we obtain two exact sequences
 
@@ -64,11 +64,11 @@ The long exact sequence constructed above has functoriality in the following sen
 ::: Proposition 2
 Given a chain map between two short exact sequences
 
-![morphism_in_SES](/assets/images/Math/Homological_Algebra/Long_Exact_Sequence-3.svg){:style="width:19.34em" class="invert" .align-center}
+{% diagram Math/Homological_Algebra/Long_Exact_Sequence-3.svg width="19.34em" alt="morphism_in_SES" %}
 
 there exists a chain map between the corresponding long exact sequences
 
-![functoriality](/assets/images/Math/Homological_Algebra/Long_Exact_Sequence-4.svg){:style="width:35.61em" class="invert" .align-center}
+{% diagram Math/Homological_Algebra/Long_Exact_Sequence-4.svg width="35.61em" alt="functoriality" %}
 :::
 ::: Proof
 Write the two short exact sequences as
@@ -131,7 +131,7 @@ On the other hand, if we weaken the equivalence relation between two chain compl
 ::: Definition 5
 Given two chain complexes $C,D$ and chain maps $f,g:C\rightarrow D$, a *chain homotopy* between $f$ and $g$ is a collection of $h_n:C_n\rightarrow D_{n+1}$ in the following diagram
 
-![chain_homotopy](/assets/images/Math/Homological_Algebra/Long_Exact_Sequence-5.svg){:style="width:30.61em" class="invert" .align-center}
+{% diagram Math/Homological_Algebra/Long_Exact_Sequence-5.svg width="30.61em" alt="chain_homotopy" %}
 
 such that $f_n-g_n=d_{n+1}^Dh_n+h_{n-1}d_n^C$ holds. If a chain homotopy between $f,g$ exists, we say that $f$ and $g$ are *homotopic* chain maps.
 :::
@@ -171,7 +171,7 @@ $\mathbf{K}(\mathcal{C})$ has the same objects as $\mathbf{Ch}(\mathcal{C})$, th
 
 Given two homotopic chain maps $f,g:C\rightarrow D$, consider the two maps $vfu$ and $vgu$ for arbitrary $u:B\rightarrow C$, $v:D\rightarrow E$. Considering the following diagram
 
-![composition_in_homotopy_category](/assets/images/Math/Homological_Algebra/Long_Exact_Sequence-6.svg){:style="width:30.61em" class="invert" .align-center}
+{% diagram Math/Homological_Algebra/Long_Exact_Sequence-6.svg width="30.61em" alt="composition_in_homotopy_category" %}
 
 we have
 

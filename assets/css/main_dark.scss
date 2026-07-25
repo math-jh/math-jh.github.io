@@ -19,5 +19,36 @@ img.invert {
   // invert(1)로 명암(검정↔흰색)을 뒤집되, hue-rotate(180deg)로 색상은 제자리에 돌려
   // 둔다. 흑백 선화(채도 0)는 hue-rotate에 불변이라 그대로이고, 컬러 도형만 다크모드에서
   // hue를 보존한다. (CSS hue-rotate는 근사 회전이라 채도 높은 색은 약간 어긋날 수 있음.)
+  // 인라인 전환 후에는 green-ramp 예외 SVG 4개와 PNG만 이 필터를 쓴다.
   filter: invert(1) hue-rotate(180deg);
+}
+
+// 인라인 다이어그램 다크 전용 accent 램프. 라이트의 대비 사다리(accent1 3.6:1 <
+// accent2 7.8:1 < accent3 12.6:1)를 다크에서 같은 규모로 재현하되 순서만 역전한다.
+// 원값 역전(accent1↔3)은 코코아가 다크 배경에서 1.3:1로 묻혀 폐기(2026-07-26) —
+// brass hue를 텍스트색 쪽으로 끌어올린 사다리로 앵커한다. 라이트는 규칙 없음.
+$diag-dark1: $diag-accent1;                          // ≈4.5:1 — 주 강조, 라이트와 동일
+$diag-dark2: mix($diag-accent1, $text-color, 55%);   // ≈8:1
+$diag-dark3: mix($diag-accent1, $text-color, 25%);   // ≈12:1 — 최강 대비(라이트의 코코아 역할)
+
+figure.diagram {
+  // stop: accent1은 동일 유지라 규칙 없음
+  [stroke='#6b3a00'] { stroke: $diag-dark2; }
+  [fill='#6b3a00'] { fill: $diag-dark2; }
+  [stroke='#3a1f0b'] { stroke: $diag-dark3; }
+  [fill='#3a1f0b'] { fill: $diag-dark3; }
+
+  // black-mix: accentN!K!black(잉크 쪽으로 눌린 강조) ↦ mix(다크 stop, $text, K%)
+  [stroke='#1a0e05'] { stroke: mix($diag-dark2, $text-color, 24%); }
+  [fill='#1a0e05'] { fill: mix($diag-dark2, $text-color, 24%); }
+  [stroke='#201106'] { stroke: mix($diag-dark2, $text-color, 30%); }
+  [fill='#201106'] { fill: mix($diag-dark2, $text-color, 30%); }
+  [stroke='#4b2900'] { stroke: mix($diag-dark2, $text-color, 70%); }
+  [fill='#4b2900'] { fill: mix($diag-dark2, $text-color, 70%); }
+  [stroke='#7c530f'] { stroke: mix($diag-dark1, $text-color, 75%); }
+  [fill='#7c530f'] { fill: mix($diag-dark1, $text-color, 75%); }
+  [stroke='#845910'] { stroke: mix($diag-dark1, $text-color, 80%); }
+  [fill='#845910'] { fill: mix($diag-dark1, $text-color, 80%); }
+  [stroke='#946412'] { stroke: mix($diag-dark1, $text-color, 90%); }
+  [fill='#946412'] { fill: mix($diag-dark1, $text-color, 90%); }
 }

@@ -27,9 +27,9 @@ Monoidal category $(\mathcal{A},\otimes, I)$에서의 *monoid object<sub>모노�
 으로 주어진다. 이들은 다음 조건을 만족한다. 
 
 - (Associativity)[^1]
-![associativity](/assets/images/Math/Category_Theory/Monoid_Objects-1.svg){:style="width:29.37em" class="invert" .align-center}
+{% diagram Math/Category_Theory/Monoid_Objects-1.svg width="29.37em" alt="associativity" %}
 - (Unit)
-![unit](/assets/images/Math/Category_Theory/Monoid_Objects-2.svg){:style="width:17.03em" class="invert" .align-center}
+{% diagram Math/Category_Theory/Monoid_Objects-2.svg width="17.03em" alt="unit" %}
 :::
 
 임의의 monoidal category $(\mathcal{A},\otimes, I)$는 항상 monoid object $I$를 갖는다. 또, $M$이 symmetric monoidal category의 monoid object라면 $M\otimes M$ 또한 monoid object가 된다는 것을 쉽게 확인할 수 있다. 
@@ -76,7 +76,7 @@ $$\mu(\eta(1)\otimes m)=\mu((\eta\otimes\id_M)(1\otimes m))=\lambda_M(1\otimes m
 
 그런데 이를 monoidal category의 언어로 옮겨쓰려면 문제가 있다. 둘째 조건을 diagram으로 써 보면, 
 
-![group_axiom](/assets/images/Math/Category_Theory/Monoid_Objects-3.svg){:style="width:9.69em" class="invert" .align-center}
+{% diagram Math/Category_Theory/Monoid_Objects-3.svg width="9.69em" alt="group_axiom" %}
 
 가 되어야 할 것이다. 여기에서 $e_G$는 $G$의 모든 원소를 $G$의 항등원으로 보내는 group homomorphism이고, $(-)^{-1}\times \id_G$는 두 map $(-)^{-1}:G \rightarrow G$와 $\id_G:G \rightarrow G$의 곱이다. 물론 두 데이터를 전부 추가해서 이를 group object라 할 수도 있겠지만, 그렇게 한다면 예컨대 (monoid object로서의) unit $\eta:I \rightarrow G$와 새로 정의한 morphism $e_G$가 서로 아무런 관련이 없을 것이기 때문에 좋은 해결책이 아니다.
 
@@ -86,7 +86,7 @@ $$G\overset{\epsilon_G}{\longrightarrow}\{e\}\overset{\eta}{\longrightarrow}G$$
 
 으로 주어진다. 여기에서 $\epsilon_G$는 $G$에서 terminal object $\{e\}$로 가는 유일한 morphism이고 $\eta$는 monoid object로서의 $G$의 unit이다. 뿐만 아니라, cartesian monoidal category에서는 monoidal product가 categorical product이므로, 다음 diagram
 
-![inverse_morphism](/assets/images/Math/Category_Theory/Monoid_Objects-4.svg){:style="width:11.93em" class="invert" .align-center}
+{% diagram Math/Category_Theory/Monoid_Objects-4.svg width="11.93em" alt="inverse_morphism" %}
 
 을 통해 $(-)^{-1}\times \id_G$이 잘 정의된다. 
 
@@ -100,13 +100,13 @@ Cartesian monoidal category $(\mathcal{A},\times, I)$에 대하여, 이 category
 으로 주어진다. $e_G$를 합성 $G\rightarrow I\overset{\eta}{\rightarrow}G$라 하면, 이들은 다음 조건을 만족한다. 
 
 - (Associativity) 다음 diagram
-  ![associative_group_law](/assets/images/Math/Category_Theory/Monoid_Objects-5.svg){:style="width:12.13em" class="invert" .align-center}
+  {% diagram Math/Category_Theory/Monoid_Objects-5.svg width="12.13em" alt="associative_group_law" %}
   이 commute한다.
 - (Unit element) 다음 diagram
-  ![identity_element](/assets/images/Math/Category_Theory/Monoid_Objects-6.svg){:style="width:11.81em" class="invert" .align-center}
+  {% diagram Math/Category_Theory/Monoid_Objects-6.svg width="11.81em" alt="identity_element" %}
   이 commute한다. 
 - (Inverse element) 다음 diagram
-  ![inverse_element](/assets/images/Math/Category_Theory/Monoid_Objects-7.svg){:style="width:11.08em" class="invert" .align-center}
+  {% diagram Math/Category_Theory/Monoid_Objects-7.svg width="11.08em" alt="inverse_element" %}
   이 commute한다.
 :::
 
@@ -151,7 +151,7 @@ Symmetric monoidal category $(\mathcal{A},\otimes,I)$에서 $(H,\mu,\eta,\Delta,
 
 $\iota$에 대한 조건을 명시적으로 쓰기 위해서는 [정의 3](#def3)에서 주어졌던 diagram을 모두 Hopf monoid가 갖고 있는 정보로 옮겨야 하는데, 가령 한쪽 삼각형은 다음의 diagram
 
-![Hopf_inverse](/assets/images/Math/Category_Theory/Monoid_Objects-8.svg){:style="width:14.39em" class="invert" .align-center}
+{% diagram Math/Category_Theory/Monoid_Objects-8.svg width="14.39em" alt="Hopf_inverse" %}
 
 으로 풀어쓸 수 있고, 비슷하게 $\iota\otimes\id_H$을 쓰면 다른 쪽 삼각형을 얻는다.
 

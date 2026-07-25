@@ -40,7 +40,7 @@ $$Rf_! := Rp_\ast \circ j_!$$
 
 Proper base change는 $Rp_\ast$를 fiber별로 계산할 수 있게 해 주는 정리로, 그 핵심은 proper map의 higher direct image의 stalk가 fiber 위의 cohomology로 주어진다는 사실이다. 다음 형태의 cartesian square를 생각하자. $g: Y' \rightarrow Y$가 임의의 연속함수이고 $f: X \rightarrow Y$가 주어졌을 때, fiber product $X' = X \times_Y Y'$와 사영 $g': X' \rightarrow X$, $f': X' \rightarrow Y'$를 둔다.
 
-![고유 받음의 base change를 정의하는 cartesian square](/assets/images/Math/Sheaf_Theory/Six_Functors-1.svg){:style="width:6.59em" class="invert" .align-center}
+{% diagram Math/Sheaf_Theory/Six_Functors-1.svg width="6.59em" alt="고유 받음의 base change를 정의하는 cartesian square" %}
 
 ::: 정리 2 (proper base change)
 위의 cartesian square에서 $f$가 proper라 하자. 그럼 $\mathcal{F}^\bullet \in D^+(\Sh(X))$에 대해 자연스러운 동형

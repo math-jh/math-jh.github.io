@@ -18,7 +18,7 @@ In previous posts, we defined binary relations. Under this definition, the binar
 
 $${<}=\{(0,1),(0,2),\ldots, (1,2),(1,3),\ldots, \}$$
 
-![elements](/assets/images/Math/Set_Theory/Functions-1.svg){:style="width:12.56em" class="invert" .align-center}
+{% diagram Math/Set_Theory/Functions-1.svg width="12.56em" alt="elements" %}
 
 Following the notation of [§Binary Relations, ⁋Definition 6](/en/math/set_theory/binary_relation#def6), ${<}(1)$ is the collection of all $n\in\mathbb{N}$ such that $(1,n)\in\mathbb{N}$, hence
 
@@ -62,17 +62,17 @@ By definition, $\id_A$ fixes every element of $A$.
 
 When working with many functions at once, it is convenient to use *diagrams* such as the following.
 
-![commutative_diagram](/assets/images/Math/Set_Theory/Functions-2.svg){:style="width:14.24em"  class="invert" .align-center}
+{% diagram Math/Set_Theory/Functions-2.svg width="14.24em" alt="commutative_diagram" %}
 
 Here $A\overset{f}{\longrightarrow}B$ is a concise notation for $f:A\rightarrow B$.
 
 In the situation above, if $(i\circ g)(x)=(j\circ h)(x)$ for every $x\in B$, then the square
 
-![commuting_square](/assets/images/Math/Set_Theory/Functions-3.svg){:style="width:9.84em" class="invert" .align-center}
+{% diagram Math/Set_Theory/Functions-3.svg width="9.84em" alt="commuting_square" %}
 
 is said to *commute*. Similarly, we call the diagram
 
-![commuting_triangle](/assets/images/Math/Set_Theory/Functions-4.svg){:style="width:5.62em"  class="invert" .align-center}
+{% diagram Math/Set_Theory/Functions-4.svg width="5.62em" alt="commuting_triangle" %}
 
 a *commutative diagram* if $h(x)=(f\circ g)(x)$ for all $x$. This situation is sometimes expressed concisely as $h=f\circ g$, a notation which implies not only that $H=F\circ G$ holds but also that the sources and targets on both sides coincide.
 
@@ -82,7 +82,7 @@ $${\id_B}\circ h=f\circ g,\qquad h\circ{\id_C}=f\circ{\id_A}\circ g,\quad\cdots$
 
 However, by the identity function properties examined in [§Operations on Binary Relations, ⁋Definition 9](/en/math/set_theory/operation_of_binary_relations#def9), all the above equations are equivalent to $h=f\circ g$. On the other hand,
 
-![commuting_triangle_2](/assets/images/Math/Set_Theory/Functions-5.svg){:style="width:5.62em" class="invert" .align-center}
+{% diagram Math/Set_Theory/Functions-5.svg width="5.62em" alt="commuting_triangle_2" %}
 
 commuting means that all three conditions
 
@@ -90,7 +90,7 @@ $${\id_A}=g\circ h\circ f,\quad {\id_B}=f\circ g\circ h,\quad {\id_C}=h\circ f\c
 
 hold. In particular, the diagram
 
-![inverses](/assets/images/Math/Set_Theory/Functions-6.svg){:style="width:5.28em" class="invert" .align-center}
+{% diagram Math/Set_Theory/Functions-6.svg width="5.28em" alt="inverses" %}
 
 commuting means that $g\circ f=\id_A$ and $f\circ g=\id_B$.
 

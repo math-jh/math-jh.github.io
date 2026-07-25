@@ -20,8 +20,10 @@
 # Output is transparent vector; the script prints the markdown width so node text
 # == blog body text:  width_em = intrinsic_pt / BASEFONT   (BASEFONT = 10pt base).
 # White eraser paint (double-line cores, crossing-over halos, label white-out)
-# becomes mask cutouts via white_eraser_to_mask.py — truly transparent, so
-# crossing-over diagrams can stay SVG; --png remains for raster-only cases.
+# stays as real paint — the diagram tag inlines SVGs and CSS(_diagram-colors.scss)
+# repaints #fff to the page background, opaquely and theme-correctly (mask cutouts
+# left AA seams; un-masked 2026-07-26). --strip restores the old mask conversion
+# for img-rendered files. Colors outside the CSS rule inventory trigger a warning.
 #
 # Usage:
 #   scripts/diagrams/build.sh <Category>/<Article> [...]   # assets/diagrams/Math/<Category>/<Article>.tex
@@ -41,7 +43,7 @@ GLYPH_BOLD=0.20    # pt of stroke added to glyphs so thin CM hairlines don't go 
                    # (0 = off; --bold overrides). Stroke color = the glyph's own fill color.
 DENSITY=1024
 MODE=svg
-STRIP=1            # white eraser paint -> mask cutout (transparent). --no-strip keeps white as real paint
+STRIP=0            # white eraser stays as paint (inline CSS가 배경색으로 덧칠). --strip: 옛 mask 변환
 LUAMODE=0          # --lua: compile via dvilualatex (luaTeX dynamic memory) for pgfplots surf shading
                    #        that OOMs plain latex; still DVI so dvisvgm keeps fill-opacity (the --pdf route drops it)
 OUT=""
@@ -50,6 +52,7 @@ args=()
 while [ $# -gt 0 ]; do
   case "$1" in
     --png) MODE=png; shift;;
+    --strip) STRIP=1; shift;;
     --no-strip) STRIP=0; shift;;
     --lua) LUAMODE=1; shift;;
     --bold) GLYPH_BOLD="$2"; shift 2;;
@@ -143,9 +146,8 @@ for i in $(seq 1 "$NFIG"); do
     dvisvgm --no-fonts --bbox=preview "$W/fig-$i.dvi" -o "$OUTDIR/$NAME.svg" >/dev/null 2>"$W/d-$i.log" \
       || { echo "dvisvgm FAILED (fig $i):" >&2; cat "$W/d-$i.log" >&2; exit 1; }
     f="$OUTDIR/$NAME.svg"
-    # White eraser paint (double-line cores, crossing halos, label boxes) -> mask
-    # cutouts, so the erased region is truly transparent on any page background.
-    # Skipped with --no-strip (illustrations whose white is real paint).
+    # --strip일 때만 옛 mask 변환 (img.invert로 렌더될 파일 전용 — 인라인 경로는
+    # CSS가 #fff를 배경색으로 덧칠하므로 변환 불필요, mask는 AA 잔흔을 남긴다)
     if [ "$STRIP" = 1 ]; then
       python3 "$ROOT/scripts/diagrams/white_eraser_to_mask.py" "$f" >/dev/null \
         || { echo "white_eraser_to_mask FAILED (fig $i)" >&2; exit 1; }
@@ -180,6 +182,7 @@ if float(bold) > 0:
     s = ''.join(out)
 open(p, 'w', encoding='utf-8').write(s)
 PY
+    python3 "$ROOT/scripts/diagrams/check_diagram_colors.py" "$f"
     ptw="$(grep -oE "width='[0-9.]+pt'|width=\"[0-9.]+pt\"" "$f" | head -1 | grep -oE '[0-9.]+')"
     printf '  %-30s %s\n' "$NAME.svg" "$(emit "$ptw")"
   else

@@ -52,7 +52,7 @@ In any category, terminal objects are unique up to unique isomorphism.
 ::: Corollary 3
 Let $(G_i)$ and $(H_i)$ be families of groups indexed by the same set $I$, and suppose that for each $i$ a group homomorphism $f_i:G_i\rightarrow H_i$ is given. Then there exists a unique group homomorphism $f:\prod G_i\rightarrow\prod H_i$ making the following diagram
 
-![Product_of_map](/assets/images/Math/Algebraic_Structures/Direct_Products-1.svg){:style="width:13.07em" class="invert" .align-center}
+{% diagram Math/Algebraic_Structures/Direct_Products-1.svg width="13.07em" alt="Product_of_map" %}
 
 commute. Moreover, $\ker f=\prod\ker f_i$ and $\im f=\prod\im f_i$.
 :::
@@ -74,7 +74,7 @@ Let $(G_i)_{i\in I}$ be a family of groups. If each $H_i$ is a normal subgroup o
 ::: Proof
 Apply [Corollary 3](#cor3) to the canonical homomorphisms $p_i:G_i\rightarrow G_i/H_i$.
 
-![product_of_normal_subgroups](/assets/images/Math/Algebraic_Structures/Direct_Products-2.svg){:style="width:18.32em" class="invert" .align-center}
+{% diagram Math/Algebraic_Structures/Direct_Products-2.svg width="18.32em" alt="product_of_normal_subgroups" %}
 
 Each $p_i\circ\pr_i$ is surjective as a composition of surjective homomorphisms, so by the previous corollary $\im p$ equals $\prod(G_i/H_i)$. Furthermore, the kernel of each $p_i$ is $H_i$. Hence, by the first isomorphism theorem,
 

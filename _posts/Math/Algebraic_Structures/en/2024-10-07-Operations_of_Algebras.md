@@ -71,7 +71,7 @@ $$f_i: E_i\rightarrow A$$
 
 are each given as $\id_A$. For $E_1\oplus E_2$ to be a coproduct, there must exist $f: E_1\oplus E_2\rightarrow A$ making the following diagram commute:
 
-![coproduct](/assets/images/Math/Algebraic_Structures/Operations_of_Algebras-1.svg){:style="width:13.63em" class="invert" .align-center}
+{% diagram Math/Algebraic_Structures/Operations_of_Algebras-1.svg width="13.63em" alt="coproduct" %}
 
 However, for any $(a,b)\in E_1\oplus E_2$,
 

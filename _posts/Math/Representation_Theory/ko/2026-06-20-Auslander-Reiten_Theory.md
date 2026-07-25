@@ -67,7 +67,7 @@ $$0\longrightarrow A\xrightarrow{\ f\ }B\xrightarrow{\ g\ }C\longrightarrow 0$$
 ::: 명제 4
 $0\rightarrow A\xrightarrow{f}B\xrightarrow{g}C\rightarrow 0$이 almost split sequence이면 $A$와 $C$는 모두 indecomposable이며, $C$는 projective가 아니고 $A$는 injective가 아니다. 또한 이러한 almost split sequence는 $C$에 의하여 isomorphism을 무시하면 유일하게 결정된다. 곧 $0\rightarrow A'\xrightarrow{f'}B'\xrightarrow{g'}C\rightarrow 0$이 같은 끝점 $C$를 가지는 또 하나의 almost split sequence이면, 세 수직사상이 모두 isomorphism이고 두 사각형이 commute하는 exact sequence의 동형
 
-![두 almost split sequence 사이의 동형](/assets/images/Math/Representation_Theory/Auslander-Reiten_Theory-1.svg){:style="width:18.58em" class="invert" .align-center}
+{% diagram Math/Representation_Theory/Auslander-Reiten_Theory-1.svg width="18.58em" alt="두 almost split sequence 사이의 동형" %}
 
 이 존재한다.
 :::
@@ -177,7 +177,7 @@ $$0\rightarrow M_{[3,3]}\rightarrow M_{[2,3]}\rightarrow M_{[2,2]}\rightarrow 0.
 
 각 열이 dimension vector를 보존함을 확인할 수 있다. 가령 둘째 열에서 $(0,1,1)+(1,1,0)=(1,2,1)=(1,1,1)+(0,1,0)$이다. 이로부터 AR translate는 $\tau M_{[1,1]}=M_{[2,2]}$, $\tau M_{[1,2]}=M_{[2,3]}$, $\tau M_{[2,2]}=M_{[3,3]}$이다. 화살표를 모으면 Auslander–Reiten quiver $\Gamma_{kQ}$는 다음 모양이 된다.
 
-![A3 Auslander-Reiten quiver](/assets/images/Math/Representation_Theory/Auslander-Reiten_Theory-2.svg){:style="width:22.72em" class="invert" .align-center}
+{% diagram Math/Representation_Theory/Auslander-Reiten_Theory-2.svg width="22.72em" alt="A3 Auslander-Reiten quiver" %}
 
 여기서 각 화살표는 $M_{[i,j]}$에서 한 끝을 늘이거나 줄이는 inclusion·quotient에 해당하는 irreducible morphism이다. 가장 아래 행 $M_{[3,3]},M_{[2,2]},M_{[1,1]}$과 가운데 행 $M_{[2,3]},M_{[1,2]}$ 위에서 $\tau$는 각각 한 칸씩 왼쪽으로 옮기는 대응 $\tau M_{[2,2]}=M_{[3,3]}$, $\tau M_{[1,1]}=M_{[2,2]}$, $\tau M_{[1,2]}=M_{[2,3]}$으로 나타나고, 맨 위의 $M_{[1,3]}=I_3$은 injective이므로 $\tau$의 정의역에 들지 않는다. 이 quiver는 type $A_3$의 Dynkin diagram 모양을 따른다.
 :::

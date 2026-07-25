@@ -260,7 +260,7 @@ The saddle point that appears when the discriminant is negative can be said to b
 ::: Example 10 (Saddle point)
 $f(x,y) = x^2 - y^2$ has a critical point at $(0,0)$ where $\nabla f = (2x, -2y) = 0$. The Hessian matrix is $\begin{pmatrix} 2 & 0 \\ 0 & -2\end{pmatrix}$ with $\det H = -4 < 0$, so it is a saddle point. Indeed, along the $x$-axis we have $f = x^2$, a local minimum, and along the $y$-axis we have $f = -y^2$, a local maximum, forming a saddle shape that rises and falls depending on direction. The figure below shows the surface $z = x^2 - y^2$, with the origin (black dot) being the saddle point.
 
-![saddle_surface](/assets/images/Math/Calculus/Partial_Derivatives-1.svg){:style="width:21.37em" class="invert" .align-center}
+{% diagram Math/Calculus/Partial_Derivatives-1.svg width="21.37em" alt="saddle_surface" %}
 :::
 
 However, note that when $D=0$ the above test gives no information whatsoever. In such cases one must use an appropriate method suited to each situation.

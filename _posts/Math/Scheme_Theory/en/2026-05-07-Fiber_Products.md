@@ -28,11 +28,11 @@ Thus $X\times_SY$ satisfies the following property.
 
 > The diagram
 > 
-> ![fiber_diagram](/assets/images/Math/Scheme_Theory/Fiber_Products-1.svg){:style="width:9.32em" class="invert" .align-center}
+> {% diagram Math/Scheme_Theory/Fiber_Products-1.svg width="9.32em" alt="fiber_diagram" %}
 > 
 > commutes. Moreover, whenever any $\psi_X:Z \rightarrow X$, $\psi_Y:Z \rightarrow Y$ satisfying $\varphi_Y\circ\psi_Y=\varphi_X\circ\psi_X$ are given, there exists a unique $\psi:Z \rightarrow X\times_SY$ such that $\psi_X=\rho_X\circ\psi$ and $\psi_Y=\rho_Y\circ\psi$.
 > 
-> ![universal_product](/assets/images/Math/Scheme_Theory/Fiber_Products-2.svg){:style="width:13.72em" class="invert" .align-center}
+> {% diagram Math/Scheme_Theory/Fiber_Products-2.svg width="13.72em" alt="universal_product" %}
 
 Therefore, there is a canonical morphism from $X\times_SY$ to $S$, and from this we may view $X\times_SY$ as an $S$-scheme. Moreover, from this viewpoint it is obvious from the definition that $X\times_SY$ is also the product in $\Sch_{/S}$.
 
@@ -56,7 +56,7 @@ First, when an open subscheme $U$ of $Z$ is given, writing it in the form $\iota
 ::: Lemma 3
 Given a scheme morphism $\varphi: Y \rightarrow Z$ and an open subscheme $\iota: U \rightarrow Z$ of $Z$, the diagram
 
-![open_subscheme](/assets/images/Math/Scheme_Theory/Fiber_Products-3.svg){:style="width:8.22em" class="invert" .align-center}
+{% diagram Math/Scheme_Theory/Fiber_Products-3.svg width="8.22em" alt="open_subscheme" %}
 
 is a fiber diagram.
 :::
@@ -72,15 +72,15 @@ Given affine schemes $X, Y, Z$, and an open subscheme $Y'\hookrightarrow Y$ of $
 ::: Proof
 First, from [Lemma 2](#lem2) we know that the following fiber diagram
 
-![open_fiber_product-1](/assets/images/Math/Scheme_Theory/Fiber_Products-4.svg){:style="width:9.32em" class="invert" .align-center}
+{% diagram Math/Scheme_Theory/Fiber_Products-4.svg width="9.32em" alt="open_fiber_product-1" %}
 
 exists. Now consider the data
 
-![open_fiber_product-2](/assets/images/Math/Scheme_Theory/Fiber_Products-5.svg){:style="width:8.55em" class="invert" .align-center}
+{% diagram Math/Scheme_Theory/Fiber_Products-5.svg width="8.55em" alt="open_fiber_product-2" %}
 
 From [Lemma 3](#lem3) we can verify that the open subscheme $\rho_Y^{-1}(Y')$ of $X\times_ZY$ is the fiber product. Now, in general, if the two small squares in the diagram
 
-![magic_square](/assets/images/Math/Scheme_Theory/Fiber_Products-6.svg){:style="width:8.55em" class="invert" .align-center}
+{% diagram Math/Scheme_Theory/Fiber_Products-6.svg width="8.55em" alt="magic_square" %}
 
 are fiber diagrams, then the outer large square is also a fiber diagram, so we obtain the desired result.
 :::
@@ -141,7 +141,7 @@ $$A\otimes_BB[\x_1,\ldots,\x_n]\cong A[\x_1,\ldots, \x_n]$$
 
 we know that the following diagram
 
-![adding_extra_variables](/assets/images/Math/Scheme_Theory/Fiber_Products-7.svg){:style="width:20.67em" class="invert" .align-center}
+{% diagram Math/Scheme_Theory/Fiber_Products-7.svg width="20.67em" alt="adding_extra_variables" %}
 
 is a fiber diagram.
 

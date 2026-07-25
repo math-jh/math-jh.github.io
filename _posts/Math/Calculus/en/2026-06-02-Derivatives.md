@@ -62,7 +62,7 @@ Hence $f$ is continuous at $a$.
 
 However, the converse does not hold. A typical example is $f(x) = \lvert x\rvert$: this function is continuous at $0$ but not differentiable there.
 
-![Graph of the absolute value function](/assets/images/Math/Calculus/Derivatives-1.svg){:style="width:11.21em" class="invert" .align-center}
+{% diagram Math/Calculus/Derivatives-1.svg width="11.21em" alt="Graph of the absolute value function" %}
 
 Indeed,
 
@@ -72,11 +72,11 @@ so the derivative of this function is $1$ as $h \rightarrow 0^+$ and $-1$ as $h 
 
 As a similar example, $f(x) = \sqrt[3]{x}$ has a *vertical tangent* at $0$, where the average rate of change diverges as $h^{-2/3} \rightarrow \infty$.
 
-![Vertical tangent of the cube root function](/assets/images/Math/Calculus/Derivatives-2.svg){:style="width:12.46em" class="invert" .align-center}
+{% diagram Math/Calculus/Derivatives-2.svg width="12.46em" alt="Vertical tangent of the cube root function" %}
 
 On the other hand, $f(x) = x^{2/3}$ forms a *cusp* at $0$, where the left and right average rates of change diverge to $\mp\infty$.
 
-![Cusp of the 2/3-power function](/assets/images/Math/Calculus/Derivatives-3.svg){:style="width:13.17em" class="invert" .align-center}
+{% diagram Math/Calculus/Derivatives-3.svg width="13.17em" alt="Cusp of the 2/3-power function" %}
 
 These are examples of non-differentiability at only one or two points, but non-differentiability can be far worse: there even exist functions like Weierstrass's function $W(x) = \sum_{n=0}^\infty a^n\cos(b^n\pi x)$ that are continuous on all of $\mathbb{R}$ yet have no tangent at any point.
 

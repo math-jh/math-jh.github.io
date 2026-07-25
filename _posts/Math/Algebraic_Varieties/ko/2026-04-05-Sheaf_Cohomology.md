@@ -340,7 +340,7 @@ $$0 \rightarrow \mathcal{F}\rightarrow\mathcal{I}\rightarrow\mathcal{Q}\rightarr
 
 을 생각한다. 우리 주장은 $\mathcal{Q}$가 flasque라는 것이며, 이는 임의의 열린집합 $V\subseteq U$에 대하여 다음의 commutative diagram
 
-![Commutative diagram](/assets/images/Math/Algebraic_Varieties/Sheaf_Cohomology-1.svg){:style="width:23.07em" class="invert" .align-center}
+{% diagram Math/Algebraic_Varieties/Sheaf_Cohomology-1.svg width="23.07em" alt="Commutative diagram" %}
 
 에서 diagram chase를 하면 된다. 여기서 $\mathcal{F}$는 가정에 의해 flasque이며 $\mathcal{I}$는 injective이므로 flasque이다. 이제 임의의 $s\in \mathcal{Q}(V)$에 대하여, $\mathcal{I}(V)\rightarrow \mathcal{Q}(V)$가 surjective이므로 $s$를 $t\in \mathcal{I}(V)$로 lift할 수 있으며, 다시 $\mathcal{I}$가 flasque임을 이용하여 $t$를 $\overline{t}\in\mathcal{I}(U)$로 올린 후 이를 $\mathcal{Q}$로 옮겨주어 $\overline{s}\in \mathcal{Q}(U)$를 정의하면 된다. $\overline{t}$가 $t$의 확장이므로 $\overline{t}\vert_V=t$이고, 따라서 $\overline{s}\vert_V$는 $t$가 $\mathcal{Q}(V)$로 옮겨간 것, 곧 $s$와 같다. 그러므로 $\overline{s}$가 정확히 $s\in \mathcal{Q}(V)$로 restrict하며 이로부터 $\mathcal{Q}$의 flasqueness를 얻는다.
 

@@ -127,7 +127,7 @@ $$L^\ast(f)=f\circ L$$
 
 을 통해 정의할 수 있다. 이는 diagram으로 보면 다음과 같다.
 
-![dual_map](/assets/images/Math/Linear_Algebra/Dual_Space-1.svg){:style="width:5.84em" class="invert" .align-center}
+{% diagram Math/Linear_Algebra/Dual_Space-1.svg width="5.84em" alt="dual_map" %}
 
 혹은, 위에서 정의한 canonical pairing에 따르면 $L^\ast$는 다음의 식
 

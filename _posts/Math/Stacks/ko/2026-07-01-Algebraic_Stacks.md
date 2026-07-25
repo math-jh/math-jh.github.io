@@ -175,7 +175,7 @@ $$\varphi_b(hg, t)=hg\cdot b(t)\overset{!}{=}h\cdot a(t)=\varphi_a(h, t)$$
 이 동형 아래 $\operatorname{pr}_2(a, b, \psi)=b$은 $(g, b)\mapsto b$, 곧 사영이고, $\operatorname{pr}_1(a, b, \psi)=a=g\cdot b$은 $(g, b)\mapsto g\cdot b$, 곧 작용 $\sigma$이다. 두 morphism $\sigma, \operatorname{pr}_2: G\times_S X\rightrightarrows X$이 $[X/G]$의 groupoid presentation을 이룬다.
 :::
 
-![atlas의 base change](/assets/images/Math/Stacks/Algebraic_Stacks-1.svg){:style="width:10.32em" class="invert" .align-center}
+{% diagram Math/Stacks/Algebraic_Stacks-1.svg width="10.32em" alt="atlas의 base change" %}
 
 [명제 10](#prop10)은 $[X/G]$을 작용 groupoid의 stack quotient로 다시 보여준다. Scheme의 groupoid $G\times_S X\rightrightarrows X$ (source는 사영, target은 작용)은 작용의 "fiber"를 부호화하며, $[X/G]$은 이 groupoid를 stack 차원에서 나눈 것이다. 일반적으로 source·target이 smooth(각각 flat)한 groupoid object $R\rightrightarrows U$로부터 대수적 stack $[U/R]$을 얻는데, quotient stack은 $R=G\times_S X$, $U=X$인 특수한 경우이다. 이제 이 presentation으로부터 $[X/G]$의 대수성을 끌어낸다.
 

@@ -124,7 +124,7 @@ $$L^\ast(f)=f\circ L$$
 
 In diagram form, this is as follows.
 
-![dual_map](/assets/images/Math/Linear_Algebra/Dual_Space-1.svg){:style="width:5.84em" class="invert" .align-center}
+{% diagram Math/Linear_Algebra/Dual_Space-1.svg width="5.84em" alt="dual_map" %}
 
 Equivalently, by the canonical pairing defined above, $L^\ast$ can be characterized by
 

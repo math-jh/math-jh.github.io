@@ -73,7 +73,7 @@ $$\begin{pmatrix}a\\ b\end{pmatrix}=(A^tA)^{-1}A^ty=\frac{1}{6}\begin{pmatrix}3&
 
 That is, the straight line that best represents the given three points in the least-squares sense is $y=\frac{3}{2}x+\frac{7}{6}$.
 
-![linear least squares fit](/assets/images/Math/Linear_Algebra/Least_Squares_Method-1.svg){:style="width:11.95em" class="invert" .align-center}
+{% diagram Math/Linear_Algebra/Least_Squares_Method-1.svg width="11.95em" alt="linear least squares fit" %}
 :::
 
 More generally, even if we choose the inner product $\langle-,-\rangle$ to be the $L^2$-inner product on a space of functions instead of the dot product, we can repeat similar examples.
@@ -95,7 +95,7 @@ $$\begin{pmatrix}34&10\\ 10&4\end{pmatrix}\begin{pmatrix}a\\ c\end{pmatrix}=\beg
 
 The determinant of this coefficient matrix is $34\cdot 4-10\cdot 10=36$, so it is invertible, and solving gives $a=1$, $c=\frac{1}{2}$. Therefore the parabola that best represents these four points in the least-squares sense is $y=\x^2-\frac{3}{10}\x+\frac{1}{2}$.
 
-![quadratic least squares fit](/assets/images/Math/Linear_Algebra/Least_Squares_Method-2.svg){:style="width:19.74em" class="invert" .align-center}
+{% diagram Math/Linear_Algebra/Least_Squares_Method-2.svg width="19.74em" alt="quadratic least squares fit" %}
 :::
 
 Looking back at the derivation of [Proposition 1](#prop1), the $Ax$ produced by the least-squares solution $x$ was exactly equal to the vector $\proj_{\im A}y$ obtained by projecting $y$ onto $\im A$, and this was the starting point that led to the equation $A^tAx=A^ty$. That is, the approximation $\hat y=Ax$ is the foot of the perpendicular from $y$ to $\im A$, and the error $y-\hat y$ is perpendicular to $\im A$. In particular, if $A$ has full column rank so that $A^tA$ is invertible, then $x=(A^tA)^{-1}A^ty$, so the approximation is given by

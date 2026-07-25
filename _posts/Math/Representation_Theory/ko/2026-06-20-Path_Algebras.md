@@ -174,7 +174,7 @@ $$f_j\circ V_\alpha=W_\alpha\circ f_i$$
 
 를 만족하는 것이다. 즉 다음 diagram이 commute한다.
 
-![quiver representation 사상의 commutativity](/assets/images/Math/Representation_Theory/Path_Algebras-1.svg){:style="width:7.13em" class="invert" .align-center}
+{% diagram Math/Representation_Theory/Path_Algebras-1.svg width="7.13em" alt="quiver representation 사상의 commutativity" %}
 :::
 
 각 vertex에서 $f_i$가 모두 isomorphism이면 $f$를 *isomorphism*이라 부른다. Morphism의 합성은 vertex별 합성 $(g\circ f)_i=g_i\circ f_i$으로 정의하며, 이것이 다시 morphism의 조건을 만족함은 각 vertex에서의 commutativity를 이어붙이면 곧바로 따라온다. 이로써 $Q$의 representation들을 대상으로, 위의 morphism들을 morphism으로 하는 category를 얻으며, 이를 $\Rep(Q)$로 표기한다. 우리는 주로 유한차원 representation들이 이루는 full subcategory를 다룬다.

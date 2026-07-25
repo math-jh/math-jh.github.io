@@ -185,7 +185,7 @@ Of course, we could also have constructed $\mathbb{P}^2$ by radially projecting 
 
 From this perspective, viewing $X$ in $U_i$ corresponds to removing the line at infinity $\x_i=0$ from $\mathbb{P}^2$. If we look at $X$ in $U_2$, then as we saw above, $X$ does not meet the line at infinity $\x_2=0$, so removing this line leaves a complete circle. However, if for example we remove the line at infinity $\x_1=0$, then $X$ meets $\x_1$ at two points, and so removing these two points from the circle $X$ and "unfolding" it yields a hyperbola.
 
-![sketch](/assets/images/Math/Algebraic_Varieties/Projective_Varieties-1.png){:style="width:50em" class="invert" .align-center}
+{% diagram Math/Algebraic_Varieties/Projective_Varieties-1.png width="50em" alt="sketch" %}
 :::
 
 ## Affine Cone

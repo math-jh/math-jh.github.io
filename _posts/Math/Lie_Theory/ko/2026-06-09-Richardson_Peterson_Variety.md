@@ -275,11 +275,11 @@ $$\mathbb{C}[\mathcal{Y}^\vee_P]\cong QH^\ast(G/P)$$
 
 우리는 [§Borel subgroup, ⁋정의 12](/ko/math/lie_theory/borel_subgroup#def12)에서 flag variety를 도입한 후, 지금까지 대수기하의 언어를 아주 본격적으로 사용하지는 않았지만, 이 정리의 정신을 이해하기 위해서는 이를 더 이상 미룰 수 없다. 핵심적인 것은 대수기하학에서 ring $A$를 그 자체로 $\mathbb{C}$ 위의 기하적인 공간 $\Spec A$으로, $A$는 그 공간 위의 함수들의 ring으로 해석하는 방식이다. 이 사전에서, 공간 $\Spec A$의 각 점들은 $A$의 maximal ideal에 대응되며, ring homomorphism $A\rightarrow B$는 기하적인 함수 $\Spec B\rightarrow \Spec A$에 대응된다. 중요한 특수한 케이스는 $A=\mathbb{C}$와 $B=\mathbb{C}$일 때 각각으로, 우선 $A=\mathbb{C}$이면 대수적인 세계에서의 $\mathbb{C}\rightarrow B$는 ring $B$를 $\mathbb{C}$-algebra로 보게 하는 structure morphism이다. 이에 대응되는 기하적인 세상에서는 $\Spec \mathbb{C}$는 한 점이므로, 함수 $\Spec B\rightarrow \Spec A$는 한 점으로의 함수가 된다. 만일 $A,B$가 모두 $\mathbb{C}$-algebra가 되어 다음의 commutative diagram
 
-![$A, B$가 $\mathbb{C}$-algebra이면 unit이 주는 structure morphism $\mathbb{C}\rightarrow A$, $\mathbb{C}\rightarrow B$가 있고, ring homomorphism $\varphi\colon A\rightarrow B$가 이 둘과 commute하는 것(곧 $\mathbb{C}$를 고정하는 것)이 $\varphi$가 $\mathbb{C}$-algebra homomorphism이라는 조건이다.](/assets/images/Math/Lie_Theory/Richardson_Peterson_Variety-1.svg){:style="width:12em" class="invert" .align-center}
+{% diagram Math/Lie_Theory/Richardson_Peterson_Variety-1.svg width="12em" alt="$A, B$가 $\mathbb{C}$-algebra이면 unit이 주는 structure morphism $\mathbb{C}\rightarrow A$, $\mathbb{C}\rightarrow B$가 있고, ring homomorphism $\varphi\colon A\rightarrow B$가 이 둘과 commute하는 것(곧 $\mathbb{C}$를 고정하는 것)이 $\varphi$가 $\mathbb{C}$-algebra homomorphism이라는 조건이다." %}
 
 이 존재한다면, $\mathbb{C}$-algebra homomorphism $A\rightarrow B$는 이제 다음의 commutative diagram
 
-![위 삼각형에 $\Spec$을 먹이면 화살표가 모두 뒤집혀, $\Spec\varphi\colon\Spec B\rightarrow\Spec A$가 한 점 $\Spec\mathbb{C}$ 위에서의 morphism이 된다.](/assets/images/Math/Lie_Theory/Richardson_Peterson_Variety-2.svg){:style="width:18em" class="invert" .align-center}
+{% diagram Math/Lie_Theory/Richardson_Peterson_Variety-2.svg width="18em" alt="위 삼각형에 $\Spec$을 먹이면 화살표가 모두 뒤집혀, $\Spec\varphi\colon\Spec B\rightarrow\Spec A$가 한 점 $\Spec\mathbb{C}$ 위에서의 morphism이 된다." %}
 
 으로 번역된다. 한편 $B=\mathbb{C}$인 경우 ring homomorphism $A\rightarrow \mathbb{C}$는 기하적인 세계에서는 $\Spec \mathbb{C}\rightarrow\Spec A$로 번역되며, 즉 이 ring homomorphism은 그 자체로 하나의 점이 된다. 만일 $A$가 $\mathbb{C}$-algebra인 경우, 이 ring homomorphism을 우리는 보통 evaluation map으로 해석했던 것 또한 기억하자. 마지막으로, ring homomorphism $A\rightarrow B$로 $B$를 $A$-algebra로 보는 것은 위에서 보았듯 morphism $\Spec B\rightarrow\Spec A$, 곧 base $\Spec A$ 위에 놓인 상대적인 공간으로 해석되며, $A$-module은 $\Spec A$ 위의 sheaf(vector bundle에 준하는 대상)로 본다. 특히 rank $N$짜리 free module은 trivial rank $N$ bundle에 해당하여, 그런 $A$-algebra의 $\Spec$은 base로 보내는 fiber가 ($\dim$을 세면) $N$개인 finite morphism이 된다. 가장 기본적인 경우가 affine space로, polynomial algebra $\mathbb{C}[\x_1,\ldots,\x_n]$은 $\Spec$을 먹이면 affine $n$-space $\mathbb{A}^n$이며, 더 일반적으로 $A[\x_1,\ldots,\x_n]$은 base $\Spec A$ 위의 relative affine space에 대응한다.
 
@@ -287,7 +287,7 @@ $$\mathbb{C}[\mathcal{Y}^\vee_P]\cong QH^\ast(G/P)$$
 
 그럼 $\Spec \mathbb{C}[q]\cong\mathbb{A}^k$에서의 임의의 generic point $q_0$에서의 fiber를 생각하는 것은 다음의 diagram
 
-![$q=q_0$에서의 fiber에 대응하는 commutative square. 점 $y$의 character $\rchi_y$를 $\mathbb{C}[q]$로 제한하면 $q_0$에서의 evaluation $\operatorname{ev}_{q_0}$가 되어, $y$가 $q_0$ 위에 놓여 있음을 뜻한다.](/assets/images/Math/Lie_Theory/Richardson_Peterson_Variety-3.svg){:style="width:14em" class="invert" .align-center}
+{% diagram Math/Lie_Theory/Richardson_Peterson_Variety-3.svg width="14em" alt="$q=q_0$에서의 fiber에 대응하는 commutative square. 점 $y$의 character $\rchi_y$를 $\mathbb{C}[q]$로 제한하면 $q_0$에서의 evaluation $\operatorname{ev}_{q_0}$가 되어, $y$가 $q_0$ 위에 놓여 있음을 뜻한다." %}
 
 과 정확하게 같다. 대수적으로 이는 다음의 tensor product
 
@@ -295,7 +295,7 @@ $$QH^\ast(G/P)\otimes_{\mathbb{C}[q]}\mathbb{C}[q]/(q-q_0)\cong QH^\ast(G/P)/(q-
 
 이며, 이 때 fiber의 한 점은 다시 ring homomorphism $QH^\ast(G/P)/(q-q_0)\rightarrow \mathbb{C}$이 된다. 비슷하게, [정리 11](#thm11)의 isomorphism을 적용하면 다음의 commutative diagram
 
-![Peterson 동형이 quantum cohomology의 spectrum을 flag로 실현하는 그림. $\mathcal{Y}^\vee_P$의 한 점 $y$ (곧 $G^\vee/B^\vee$의 flag) 가 주는 evaluation $\operatorname{ev}_y$는 Peterson 동형 $\Phi\colon a\mapsto f_a$를 통해 character $\rchi_y=\operatorname{ev}_y\circ\Phi$ (오른쪽 사각형, $\rchi_y(a)=f_a(y)$) 로 끌어올려지고, $\mathbb{C}[q]$로 제한하면 $y$의 quantum parameter 값 $q_0$에서의 evaluation이 된다 (왼쪽 사각형). 곧 $q_0$ 위의 fiber 점 $=$ $q_0$ 위의 character $=$ flag.](/assets/images/Math/Lie_Theory/Richardson_Peterson_Variety-4.svg){:style="width:24em" class="invert" .align-center}
+{% diagram Math/Lie_Theory/Richardson_Peterson_Variety-4.svg width="24em" alt="Peterson 동형이 quantum cohomology의 spectrum을 flag로 실현하는 그림. $\mathcal{Y}^\vee_P$의 한 점 $y$ (곧 $G^\vee/B^\vee$의 flag) 가 주는 evaluation $\operatorname{ev}_y$는 Peterson 동형 $\Phi\colon a\mapsto f_a$를 통해 character $\rchi_y=\operatorname{ev}_y\circ\Phi$ (오른쪽 사각형, $\rchi_y(a)=f_a(y)$) 로 끌어올려지고, $\mathbb{C}[q]$로 제한하면 $y$의 quantum parameter 값 $q_0$에서의 evaluation이 된다 (왼쪽 사각형). 곧 $q_0$ 위의 fiber 점 $=$ $q_0$ 위의 character $=$ flag." %}
 
 을 생각할 수 있으며, 이 때 마지막 수직방향 $\ev_y$가 $\mathcal{Y}^\vee_P$ 위의 한 점을 정의하게 된다. 이제 이 점이 무엇을 담고 있는지를 사전을 따라 풀어 보자. 우선 $QH^\ast(G/P)/(q-q_0)$은 $\mathbb{C}$ 위의 finite-dimensional algebra이고, 그 위에서 각 cohomology class $a$는 quantum product로 곱하는 연산자 $a\qtimes-$를 준다. 위에서 얻은 점 $y$에 대응하는 character $\rchi_y\colon QH^\ast(G/P)/(q-q_0)\rightarrow\mathbb{C}$는 각 $a$에 스칼라 $\rchi_y(a)$를 배정하되, ring homomorphism이므로 $\rchi_y(a\qtimes b)=\rchi_y(a)\,\rchi_y(b)$와 $\rchi_y(1)=1$을 지킨다. 이는 $\rchi_y(a)$가 연산자 $a\qtimes-$의 고유값이고, 그 고유값들이 quantum product와 모순 없이 동시에 배정된다는 말과 같다. 곧 fiber의 한 점은 generic $q_0$에서 모든 quantum 곱셈 연산자에 동시 고유값 한 벌을 일관되게 주는 방법이다. 
 

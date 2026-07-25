@@ -74,7 +74,7 @@ Pseudofunctor가 정합성 자료를 명시하는 데 비해, fibered category�
 Functor $p:\mathcal{F} \rightarrow \mathcal{C}$가 주어졌다 하자. $\mathcal{F}$의 morphism $\varphi:\xi \rightarrow \eta$이 $f=p(\varphi): U \rightarrow V$ *위에 놓인다*고 하고, $\varphi$가 *cartesian<sub>데카르트</sub> 사상*이라는 것은 다음 보편성을 만족하는 것이다. $\mathcal{F}$의 임의의 대상 $\zeta$와 morphism $\psi:\zeta \rightarrow \eta$, 그리고 $p(\zeta)\xrightarrow{h}U$로서 $f\circ h=p(\psi)$인 임의의 $h$에 대하여, $p(\chi)=h$이고 $\varphi\circ \chi=\psi$인 morphism $\chi:\zeta \rightarrow \xi$이 유일하게 존재한다.
 :::
 
-![cartesian morphism의 보편성](/assets/images/Math/Stacks/Fibered_Categories_and_Stacks-1.svg){:style="width:7.32em" class="invert" .align-center}
+{% diagram Math/Stacks/Fibered_Categories_and_Stacks-1.svg width="7.32em" alt="cartesian morphism의 보편성" %}
 
 Cartesian morphism은 $\eta$의 $f$를 따른 "가장 효율적인 pullback"이다. 보편성은 $\eta$를 향한 모든 morphism이 $\varphi$를 유일하게 거쳐 인수분해됨을 말하므로, 그러한 $\xi$이 존재한다면 표준 동형을 제외하고 유일하다. 이 $\xi$을 $f^\ast \eta$로 적고 $\eta$의 $f$를 따른 *pullback*이라 부른다. 이제 모든 morphism이 이런 pullback으로 분해되고 각 fiber가 groupoid가 되도록 요구한다.
 

@@ -38,7 +38,7 @@ In books such as **[Mun]**, this is sometimes taken as the definition of a subsp
 
 One must be careful when dealing with subspaces: a set may be open in $\mathcal{T}_A$ without being open in $\mathcal{T}$.
 
-![open_in_subspace_but_not_in_whole](/assets/images/Math/Topology/Subspaces-1.svg){:style="width:27.83em"  class="invert" .align-center}
+{% diagram Math/Topology/Subspaces-1.svg width="27.83em" alt="open_in_subspace_but_not_in_whole" %}
 
 This situation is easily resolved if $A$ is an open set.
 

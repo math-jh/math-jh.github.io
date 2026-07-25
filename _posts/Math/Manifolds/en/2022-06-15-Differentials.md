@@ -21,7 +21,7 @@ We previously defined the tangent space $T_pM$ of a manifold $M$, showed that it
 ::: Definition 1
 Let two manifolds $M,N$ be given. A function $F:M\rightarrow N$ is said to be $C^\infty$ at a point $p\in M$ if there exist a coordinate system $(U,\varphi)$ containing $p$ and a coordinate system $(V,\psi)$ with $F(U)\subseteq V$ such that $\psi\circ F\circ\varphi^{-1}$ is $C^\infty$.
 
-![smooth_map](/assets/images/Math/Manifolds/Differentials-1.png){:style="width:500px" class="invert" .align-center}
+{% diagram Math/Manifolds/Differentials-1.png width="500px" alt="smooth_map" %}
 <cap>[Lee], p.34. Fig. 2.2</cap>
 
 If $F$ is $C^\infty$ at every point, we simply call it a $C^\infty$ function.
@@ -95,7 +95,7 @@ hold, so $F^\ast$ is a linear map between two $\mathbb{R}$-vector spaces.
 
 On the other hand, $T_pM$ and $T_{F(p)}N$ consist of those elements among linear maps from $\mathcal{C}^\infty_{M,p}$ and $\mathcal{C}^\infty_{N,F(p)}$ to $\mathbb{R}$ that satisfy the Leibniz rule; hence they are subspaces of the respective dual spaces $(\mathcal{C}^\infty_{M,p})^\ast$ and $(\mathcal{C}^\infty_{N,F(p)})^\ast$. Therefore, we can consider the dual map $(F^\ast)^\ast:(\mathcal{C}^\infty_{M,p})^\ast\rightarrow(\mathcal{C}^\infty_{N,F(p)})^\ast$ of the linear map $F^\ast:\mathcal{C}^\infty_{N,F(p)}\rightarrow \mathcal{C}^\infty_{M,p}$ obtained above.
 
-![differential](/assets/images/Math/Manifolds/Differentials-2.svg){:style="width:18.52em" class="invert" .align-center}
+{% diagram Math/Manifolds/Differentials-2.svg width="18.52em" alt="differential" %}
 
 Explicitly, this is the function defined for any linear map $L\in (\mathcal{C}^\infty_{M,p})^\ast$ by
 

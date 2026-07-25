@@ -29,7 +29,7 @@ We decided to call an associative unital magma a *monoid*. ([\[Algebraic Structu
 
 However, each of these conditions can be expressed as a commutative diagram. First, for associativity, the following diagram commuting means the same thing.
 
-![Associativity](/assets/images/Math/Category_Theory/Monoidal_Categories-1.svg){:style="width:13.51em" class="invert" .align-center}
+{% diagram Math/Category_Theory/Monoidal_Categories-1.svg width="13.51em" alt="Associativity" %}
 
 This is natural because if we pick an arbitrary element $(a,b,c)$ from the set in the upper left, proceeding in the $\urcorner$ direction gives
 
@@ -43,7 +43,7 @@ and the fact that this diagram commutes means precisely that these two elements 
 
 Similarly, for the identity element $e$, using the set $I=\{e\}$ and the inclusion $i:I\hookrightarrow M$, the following diagram
 
-![Unit_element](/assets/images/Math/Category_Theory/Monoidal_Categories-2.svg){:style="width:17.03em" class="invert" .align-center}
+{% diagram Math/Category_Theory/Monoidal_Categories-2.svg width="17.03em" alt="Unit_element" %}
 
 can be written as commuting.
 
@@ -71,18 +71,18 @@ A *monoidal category* consists of data $(\mathcal{A},\otimes, I)$. Here $\mathca
 3. (Coherence condition) The following two diagrams both commute.
 
 - (Associator)
-  ![Pentagon_identity](/assets/images/Math/Category_Theory/Monoidal_Categories-3.svg){:style="width:33.05em" class="invert" .align-center}
+  {% diagram Math/Category_Theory/Monoidal_Categories-3.svg width="33.05em" alt="Pentagon_identity" %}
 - (Unitor)
-  ![unitor_diagram](/assets/images/Math/Category_Theory/Monoidal_Categories-4.svg){:style="width:21.81em" class="invert" .align-center}
+  {% diagram Math/Category_Theory/Monoidal_Categories-4.svg width="21.81em" alt="unitor_diagram" %}
 
 If the symmetric condition on $\otimes$ is additionally imposed on a monoidal category $(\mathcal{A},\otimes,I)$, it is called a *symmetric monoidal category*. This is expressed by a natural isomorphism (*symmetor*) $\gamma_{AB}:A\otimes B \rightarrow B\otimes A$ and the following additional coherence conditions
 
 - (Associativity coherence)
-  ![associativity_coherence](/assets/images/Math/Category_Theory/Monoidal_Categories-5.svg){:style="width:26.70em" class="invert" .align-center}
+  {% diagram Math/Category_Theory/Monoidal_Categories-5.svg width="26.70em" alt="associativity_coherence" %}
 - (Unit coherence)
-  ![symmetor](/assets/images/Math/Category_Theory/Monoidal_Categories-6.svg){:style="width:13.43em" class="invert" .align-center}
+  {% diagram Math/Category_Theory/Monoidal_Categories-6.svg width="13.43em" alt="symmetor" %}
 - (Inverse law)
-  ![inverse](/assets/images/Math/Category_Theory/Monoidal_Categories-7.svg){:style="width:16.29em" class="invert" .align-center}
+  {% diagram Math/Category_Theory/Monoidal_Categories-7.svg width="16.29em" alt="inverse" %}
 :::
 
 If in a symmetric monoidal category, $\gamma_{A,B}:A\otimes B\rightarrow B\otimes A$ and $\gamma_{B,A}:B\otimes A \rightarrow A\otimes B$ are not inverses of each other, this is called a *braided monoidal category*.
@@ -117,7 +117,7 @@ Although quite a bit of elaboration is needed for the proof of this proposition,
 
 One difference between a cartesian monoidal category and a general monoidal category is that several natural morphisms are well defined. For instance, the diagonal morphism $\Delta_X:X \rightarrow X\times X$ and the augmentation morphism $\epsilon_X:X \rightarrow I$, which are not well defined in a general monoidal category, are well defined here. The morphism $\epsilon_X$ is defined naturally because $I$ is a terminal object, and $\Delta_X$ is obtained via the following diagram.
 
-![diagonal_morphism](/assets/images/Math/Category_Theory/Monoidal_Categories-8.svg){:style="width:12.46em" class="invert" .align-center}
+{% diagram Math/Category_Theory/Monoidal_Categories-8.svg width="12.46em" alt="diagonal_morphism" %}
 
 This will be used when we treat group objects in the next post.
 

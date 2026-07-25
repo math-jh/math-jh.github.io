@@ -19,11 +19,11 @@ weight: 203
 
 $B$-module $\rho_N:B\otimes N \rightarrow N$이 주어졌다 하자. 그럼 다음 합성
 
-![restriction_of_scalars](/assets/images/Math/Algebraic_Structures/Change_of_Base_Ring-1.svg){:style="width:14.53em" class="invert" .align-center}
+{% diagram Math/Algebraic_Structures/Change_of_Base_Ring-1.svg width="14.53em" alt="restriction_of_scalars" %}
 
 을 생각하면, $\phi^\ast\rho_N:A\otimes N \rightarrow N$은 action이 만족해야 하는 모든 조건들을 만족하고 따라서 $N$ 위에 $A$-module 구조를 정의한다. 뿐만 아니라, 다음의 diagram
 
-![restriction_of_scalars_functoriality](/assets/images/Math/Algebraic_Structures/Change_of_Base_Ring-2.svg){:style="width:16.59em" class="invert" .align-center}
+{% diagram Math/Algebraic_Structures/Change_of_Base_Ring-2.svg width="16.59em" alt="restriction_of_scalars_functoriality" %}
 
 을 생각하면 우리는 이렇게 $A$-module을 대응시키는 것이 functorial하다는 것을 안다.
 
@@ -106,7 +106,7 @@ Adjoint $\phi_!\dashv\phi^\ast$가 존재한다.
 ::: 증명
 임의의 $A$-module $M$, $B$-module $N$를 고정하자. 우선 임의의 $v\in\Hom_B(\phi_!M,N)$에 대하여, 함수들의 합성
 
-![Adjointness-1](/assets/images/Math/Algebraic_Structures/Change_of_Base_Ring-3.svg){:style="width:22.24em" class="invert" .align-center}
+{% diagram Math/Algebraic_Structures/Change_of_Base_Ring-3.svg width="22.24em" alt="Adjointness-1" %}
 
 을 통해 함수 $M \rightarrow N$을 얻는다. 이 때 $M \rightarrow A\otimes_AM \rightarrow \phi^\ast B\otimes_AM$은 $A$-linear map들의 합성이고, $v:\phi^\ast B\otimes M \rightarrow N$은 $B$-linear map이다. 우선 임의의 $\alpha\in A$와 $x\in M$에 대하여 앞의 $A$-linear map들의 합성을 보면
 
@@ -124,7 +124,7 @@ $$v(\phi(\alpha)\otimes_A x)=v(\phi(\alpha)\cdot_B(1\otimes_A x))=\phi(\alpha)\c
 
 거꾸로, 임의의 $u\in\Hom_A(M, \phi^\ast N)$이 주어졌다 하자. 그럼 이번엔 다음 합성
 
-![Adjointness-2](/assets/images/Math/Algebraic_Structures/Change_of_Base_Ring-4.svg){:style="width:30.40em" class="invert" .align-center}
+{% diagram Math/Algebraic_Structures/Change_of_Base_Ring-4.svg width="30.40em" alt="Adjointness-2" %}
 
 을 통해 함수 $\phi_!M \rightarrow N$을 얻는다. 그럼 임의의 $\beta'\in B$와 $\beta\otimes_A x\in \phi^\ast B\otimes_AM$에 대하여, 
 

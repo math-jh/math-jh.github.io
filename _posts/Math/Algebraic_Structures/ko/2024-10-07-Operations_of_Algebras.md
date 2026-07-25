@@ -72,7 +72,7 @@ $$f_i: E_i\rightarrow A$$
 
 각각이 $\id_A$로 주어진 상황을 생각해보자. $E_1\oplus E_2$가 coproduct이기 위해서는 다음의 diagram
 
-![coproduct](/assets/images/Math/Algebraic_Structures/Operations_of_Algebras-1.svg){:style="width:13.63em" class="invert" .align-center}
+{% diagram Math/Algebraic_Structures/Operations_of_Algebras-1.svg width="13.63em" alt="coproduct" %}
 
 을 commute하도록 하는 $f: E_1\oplus E_2\rightarrow A$가 존재해야 한다. 그런데 임의의 $(a,b)\in E_1\oplus E_2$에 대하여, 
 

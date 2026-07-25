@@ -42,7 +42,7 @@ $$0 \rightarrow Z_\bullet\otimes_\mathbb{Z}A \rightarrow C_\bullet\otimes_\mathb
 
 is also a split short exact sequence: the splitting amounts to a direct sum decomposition $C_\bullet\cong Z_\bullet\oplus B_{\bullet-1}$, and tensoring commutes with direct sums, so the decomposition survives $\otimes_\mathbb{Z}A$. Expanding these out gives a commutative diagram of the form
 
-![snake_lemma](/assets/images/Math/Algebraic_Topology/Cohomology-1.svg){:style="width:31.09em" class="invert" .align-center}
+{% diagram Math/Algebraic_Topology/Cohomology-1.svg width="31.09em" alt="snake_lemma" %}
 
 and thus by [[Homological Algebra] §Long Exact Sequences, ⁋Theorem 1](/en/math/homological_algebra/long_exact_sequence#thm1) we obtain the long exact sequence
 

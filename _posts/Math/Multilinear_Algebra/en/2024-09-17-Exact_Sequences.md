@@ -142,7 +142,7 @@ Finally, before defining a split exact sequence, we introduce the following lemm
 ::: Lemma 9 (Four lemma)
 Consider a commutative diagram whose rows are exact
 
-![Four_lemma](/assets/images/Math/Multilinear_Algebra/Exact_Sequences-1.svg){:style="width:15.54em" class="invert" .align-center}
+{% diagram Math/Multilinear_Algebra/Exact_Sequences-1.svg width="15.54em" alt="Four_lemma" %}
 
 and assume that $\alpha$ is surjective and $\delta$ is injective. Then
 
@@ -167,7 +167,7 @@ the following conditions are all equivalent.
 2. There exists a linear section $s:N \rightarrow L$ of $v$. ([[Set Theory] §Retraction and Section, ⁋Definition 2](/en/math/set_theory/retraction_and_section#def2))
 3. There exists an isomorphism $\alpha: L \rightarrow M\oplus N$ making the following diagram commute:
 
-    ![splitting_sequence](/assets/images/Math/Multilinear_Algebra/Exact_Sequences-2.svg){:style="width:21.10em" class="invert" .align-center}
+    {% diagram Math/Multilinear_Algebra/Exact_Sequences-2.svg width="21.10em" alt="splitting_sequence" %}
 :::
 ::: Proof
 First assume condition 3. Then setting $r=\pr_M\circ\alpha$ gives condition 1, and similarly, composing the canonical inclusion $i_N: N \rightarrow M\oplus N$ with $\alpha^{-1}$ and setting $s=\alpha^{-1}\circ i_N$ gives condition 2.

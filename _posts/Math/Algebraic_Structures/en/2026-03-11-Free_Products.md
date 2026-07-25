@@ -25,7 +25,7 @@ Since the index set $I=\{1,2\}$ is finite, the weak direct product of two copies
 
 However, no map $f:\mathbb{Z}\times\mathbb{Z}\rightarrow G$ makes the following diagram commute:
 
-![counterexample](/assets/images/Math/Algebraic_Structures/Free_Products-1.svg){:style="width:11.41em" class="invert" .align-center}
+{% diagram Math/Algebraic_Structures/Free_Products-1.svg width="11.41em" alt="counterexample" %}
 
 Indeed, if such an $f$ existed, we would have
 

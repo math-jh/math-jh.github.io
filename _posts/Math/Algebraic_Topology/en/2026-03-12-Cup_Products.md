@@ -107,7 +107,7 @@ is a graded $A$-algebra homomorphism.
 ::: Proof
 What we must show is the commutativity of the following diagram:
 
-![functoriality_of_cup_products](/assets/images/Math/Algebraic_Topology/Cup_Products-1.svg){:style="width:41.10em" class="invert" .align-center}
+{% diagram Math/Algebraic_Topology/Cup_Products-1.svg width="41.10em" alt="functoriality_of_cup_products" %}
 
 For any $\alpha_1,\alpha_2\in H^\ast(X;A)$ and any $\beta_1,\beta_2\in H^\ast(Y;A)$, we have
 
@@ -128,11 +128,11 @@ holds.
 
 The proof of this proposition is immediate: by [Proposition 3](#prop3) we already know that the following diagram
 
-![functoriality_1](/assets/images/Math/Algebraic_Topology/Cup_Products-2.svg){:style="width:21.22em" class="invert" .align-center}
+{% diagram Math/Algebraic_Topology/Cup_Products-2.svg width="21.22em" alt="functoriality_1" %}
 
 commutes, and it remains only to apply the cohomology functor to the following diagram
 
-![diagonals_and_f](/assets/images/Math/Algebraic_Topology/Cup_Products-3.svg){:style="width:8.72em" class="invert" .align-center}
+{% diagram Math/Algebraic_Topology/Cup_Products-3.svg width="8.72em" alt="diagonals_and_f" %}
 
 ## Cap Product
 

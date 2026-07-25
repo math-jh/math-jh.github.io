@@ -207,7 +207,7 @@ For a toric variety $X_\Sigma$, the following hold.
 1. The Picard group $\Pic(X_\Sigma)$ is isomorphic to the group of linear equivalence classes of torus-invariant Cartier divisors, $\CaDiv_T(X_\Sigma) / M$.
 2. $\Pic(X_\Sigma)$ is a subgroup of $\Cl(X_\Sigma)$, and the following commutative diagram holds:
 
-    ![Pic-to-cl-com.diag](/assets/images/Math/Toric_Geometry/Toric_Divisors_and_Line_Bundles-1.svg){:style="width:32.02em" class="invert" .align-center}
+    {% diagram Math/Toric_Geometry/Toric_Divisors_and_Line_Bundles-1.svg width="32.02em" alt="Pic-to-cl-com.diag" %}
 
     Here the vertical arrows represent inclusions.
 :::

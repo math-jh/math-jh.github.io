@@ -135,7 +135,7 @@ $$\int_1^\infty x^{-p} \mathop{dx} = \frac{1}{p - 1} \quad (p > 1), \qquad \int_
 
 Intuitively, on an infinite interval a large $p$ causes rapid decrease and helps convergence, whereas near a singularity a large $p$ causes more rapid increase and leads to divergence; this can be seen clearly in the following figure, which plots $1/x$ and $1/x^2$.
 
-![Graphs of 1/x and 1/x²](/assets/images/Math/Calculus/Improper_Integrals-1.svg){:style="width:12.69em" class="invert" .align-center}
+{% diagram Math/Calculus/Improper_Integrals-1.svg width="12.69em" alt="Graphs of 1/x and 1/x²" %}
 :::
 
 However, the boundary $p = 1$ is somewhat subtle. Since substitution remains valid for improper integrals, setting $u = \ln x$ gives

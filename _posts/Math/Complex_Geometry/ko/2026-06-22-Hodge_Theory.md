@@ -273,7 +273,7 @@ $$
 
 Hodge 수들을 degree에 따라 마름모꼴로 배열한 것을 Hodge 다이아몬드라 부르며, 이는 한 콤팩트 Kähler manifold의 cohomology 구조를 한눈에 담는다. $h^{p,q}$를 $(p,q)$ 위치에 두고 위에서 아래로 $k = p + q$가 커지도록 쌓으면, Hodge 대칭은 수직축에 대한 좌우 대칭으로, 복소차원 $n$의 [\[대수적 위상수학\] §푸앵카레 쌍대성, ⁋정리 11](/ko/math/algebraic_topology/Poincare_duality#thm11)에서 오는 $h^{p,q} = h^{n-p, n-q}$는 중심에 대한 점대칭으로 나타난다. 아래 그림은 복소곡면($n = 2$)의 Hodge 다이아몬드를 보여준다.
 
-![복소곡면 n=2의 Hodge 다이아몬드: h^{p,q}를 마름모꼴로 배열, 수직축 좌우대칭이 Hodge 대칭](/assets/images/Math/Complex_Geometry/Hodge_Theory-1.svg){:style="width:22.97em" class="invert" .align-center}
+{% diagram Math/Complex_Geometry/Hodge_Theory-1.svg width="22.97em" alt="복소곡면 n=2의 Hodge 다이아몬드: h^{p,q}를 마름모꼴로 배열, 수직축 좌우대칭이 Hodge 대칭" %}
 
 복소곡면의 경우 $h^{0,0} = h^{2,2} = 1$ (연결성과 Poincaré 쌍대), $h^{1,0} = h^{0,1} = h^{2,1} = h^{1,2}$ (Hodge 대칭과 Poincaré 쌍대로 모두 같은 값 $q$, 곧 irregularity), $h^{2,0} = h^{0,2}$ (geometric genus $p_g$), 그리고 가운데 $h^{1,1}$이 자리한다. 이로부터 $b_0 = b_4 = 1$, $b_1 = b_3 = 2q$, $b_2 = 2p_g + h^{1,1}$로 모든 Betti 수가 Hodge 수로 표현된다.
 

@@ -137,7 +137,7 @@ This set is a closed subvariety of $\mathbb{A}^2 \times \mathbb{P}^1$. The condi
 - For a point $(x,y)$ in $\mathbb{A}^2$ other than the origin, the condition $xv=yu$ determines a unique point $[u:v]$ in $\mathbb{P}^1$, and through this the point of $\Bl_{(0,0)}\mathbb{A}^2$ is uniquely determined.
 - At the origin $(0,0)$ of $\mathbb{A}^2$, every point of $\mathbb{P}^1$ is possible.
 
-![Blowup](/assets/images/Math/Algebraic_Varieties/Rational_Maps-1.png){:style="width:32em" class="invert" .align-center}
+{% diagram Math/Algebraic_Varieties/Rational_Maps-1.png width="32em" alt="Blowup" %}
 <cap markdown="1">[Har1] p.29. Fig. 3.</cap>
 
 Concretely, defining the projection $\pi_1: \Bl_{(0,0)} \mathbb{A}^2 \rightarrow \mathbb{A}^2$ by $\pi((x, y), [u : v]) = (x, y)$, the preimage of every point other than the origin is a single point, and the preimage of the origin is $\mathbb{P}^1$. This is called the *exceptional divisor*.

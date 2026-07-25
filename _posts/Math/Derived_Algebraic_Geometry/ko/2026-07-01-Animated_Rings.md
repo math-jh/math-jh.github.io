@@ -104,7 +104,7 @@ $$B\otimes_A^{\mathbb{L}}C=B\amalg_AC$$
 으로 정의되는 animated ring이다. 구체적으로 $B$를 free simplicial $A$-algebra $P_\bullet\overset{\sim}{\rightarrow}B$로 분해하면 $B\otimes_A^{\mathbb{L}}C$는 $P_\bullet\otimes_AC$로 실현된다.
 :::
 
-![유도 텐서곱의 homotopy pushout](/assets/images/Math/Derived_Algebraic_Geometry/Animated_Rings-1.svg){:style="width:8.24em" class="invert" .align-center}
+{% diagram Math/Derived_Algebraic_Geometry/Animated_Rings-1.svg width="8.24em" alt="유도 텐서곱의 homotopy pushout" %}
 
 위 사각형은 ordinary pushout 사각형과 형태가 같지만, 오른쪽 아래 모서리가 homotopy pushout이라는 점에서 다르다. Free 분해 $P_\bullet\rightarrow B$의 각 항이 polynomial $A$-algebra이므로 $P_n\otimes_AC$는 $C$ 위의 polynomial algebra이고, 따라서 $P_\bullet\otimes_AC$는 다시 free simplicial $C$-algebra가 되어 그 homotopy가 잘 정의된다. 이 유도된 연산이 classical tensor product와 어떻게 갈라지는지는 곧바로 homotopy group으로 읽힌다.
 

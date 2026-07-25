@@ -86,17 +86,17 @@ $$\pr_{ik}:\prod_{k\in K}\left(\prod_{j\in J_k}A_j\right)\overset{\pr_k}{\longri
 
 Then by the universal property of the product $\prod_{i\in I}A_i$, there exists a map $\phi:\prod_{k\in K}\left(\prod_{j\in J_k}A_j\right)\rightarrow\prod_{i\in I}A_i$ making the following diagram commute:
 
-![partial_product_pf_1](/assets/images/Math/Set_Theory/Property_of_Products-1.svg){:style="width:18.53em" class="invert" .align-center}
+{% diagram Math/Set_Theory/Property_of_Products-1.svg width="18.53em" alt="partial_product_pf_1" %}
 
 Similarly, by the universal property of the product $\prod_{k\in K}\left(\prod_{j\in J_k}A_j\right)$ with respect to the index set $K$, there exists a map $\psi:\prod_{i\in I}A_i\rightarrow\prod_{k\in K}\left(\prod_{j\in J_k}A_j\right)$ making the following diagram commute:
 
-![partial_product_pf_2](/assets/images/Math/Set_Theory/Property_of_Products-2.svg){:style="width:24.93em" class="invert" .align-center}
+{% diagram Math/Set_Theory/Property_of_Products-2.svg width="24.93em" alt="partial_product_pf_2" %}
 
 Then $\phi\circ\psi$ and $\psi\circ\phi$ are both identity functions, and thus they furnish the desired bijection.
 
 For instance, let us verify that $\phi\circ\psi$ is the identity on $\prod_{i\in I}A_i$. It suffices to show that for every $i\in I$ the following diagram commutes:
 
-![partial_product_pf_3](/assets/images/Math/Set_Theory/Property_of_Products-3.svg){:style="width:8.51em" class="invert" .align-center}
+{% diagram Math/Set_Theory/Property_of_Products-3.svg width="8.51em" alt="partial_product_pf_3" %}
 
 The universal property of the product asserts that there is a *unique* function $\prod_{i\in I}A_i\rightarrow \prod_{i\in I}A_i$ making the above diagram commute. Clearly the identity on $\prod_{i\in I}A_i$ also makes the diagram commute, so by uniqueness it must equal $\phi\circ\psi$.
 
@@ -106,7 +106,7 @@ $${\pr_i}\circ(\phi\circ\psi)=({\pr_i}\circ\phi)\circ\psi={\pr_{ik}}\circ\psi={\
 
 we obtain the desired conclusion. (The last equality regards $\pr_j$ as the projection onto $\{j\}\subseteq I$.) Although this equation appears complicated, it is merely the formulaic transcription of the statement that the following diagram commutes:
 
-![partial_product_pf_4](/assets/images/Math/Set_Theory/Property_of_Products-4.svg){:style="width:17.00em" class="invert" .align-center}
+{% diagram Math/Set_Theory/Property_of_Products-4.svg width="17.00em" alt="partial_product_pf_4" %}
 :::
 
 Let $(A_i)_{i\in I}$ and $(B_i)_{i\in I}$ be families with the same index set, and let a family of functions $(g_i:A_i\rightarrow B_i)_{i\in I}$ be given. Define $u_f:I\rightarrow\bigcup_{i\in I}B_i$ by $i\mapsto g_i(f(i))$; then $u_f(i)\in B_i$, and therefore $u_f\in\prod_{i\in I}B_i$.
@@ -125,11 +125,11 @@ holds.
 ::: Proof
 There is nothing to explain beyond the following two commutative diagrams:
 
-![composition_of_product_functions](/assets/images/Math/Set_Theory/Property_of_Products-5.svg){:style="width:14.31em" class="invert" .align-center}
+{% diagram Math/Set_Theory/Property_of_Products-5.svg width="14.31em" alt="composition_of_product_functions" %}
 
 and
 
-![composition_of_product_fuctions_2](/assets/images/Math/Set_Theory/Property_of_Products-6.svg){:style="width:16.81em" class="invert" .align-center}
+{% diagram Math/Set_Theory/Property_of_Products-6.svg width="16.81em" alt="composition_of_product_fuctions_2" %}
 :::
 
 Since it is obvious that the product of the $\id_{A_i}$ is $\id_{\prod A_i}$, the preceding proposition makes it clear that the product of injective functions is injective, and the product of surjective functions is surjective.

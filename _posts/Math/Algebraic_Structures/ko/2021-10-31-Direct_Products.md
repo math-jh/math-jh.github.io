@@ -52,7 +52,7 @@ Group들의 family $(G_i)$에 대하여, 이들 family의 product는 유일한 i
 ::: 따름정리 3
 $(G_i)$, $(H_i)$가 동일한 집합 $I$를 index set으로 갖는 group들의 family이고, 각각의 $i$마다 group homomorphism $f_i:G_i\rightarrow H_i$가 주어졌다 하자. 그럼 다음의 diagram
 
-![Product_of_map](/assets/images/Math/Algebraic_Structures/Direct_Products-1.svg){:style="width:13.07em" class="invert" .align-center}
+{% diagram Math/Algebraic_Structures/Direct_Products-1.svg width="13.07em" alt="Product_of_map" %}
 
 을 commute하도록 하는 유일한 group homomorphism $f:\prod G_i\rightarrow\prod H_i$이 존재한다. 이 때 $\ker f=\prod\ker f_i$이고, $\im f=\prod\im f_i$이다.
 :::
@@ -76,7 +76,7 @@ Group들의 family $(G_i)_{i\in I}$가 주어졌다 하자. 각각의 $i\in I$�
 ::: 증명
 Canonical homomorphism들 $p_i:G_i\rightarrow G_i/H_i$들에 [따름정리 3](#cor3)를 적용하면 된다.
 
-![product_of_normal_subgroups](/assets/images/Math/Algebraic_Structures/Direct_Products-2.svg){:style="width:18.32em" class="invert" .align-center}
+{% diagram Math/Algebraic_Structures/Direct_Products-2.svg width="18.32em" alt="product_of_normal_subgroups" %}
 
 $p_i\circ\pr_i$들 각각은 전사인 homomorphism들의 합성이므로 전사이고 따라서 앞선 따름정리에 의해 $\im p$는 $\prod(G_i/H_i)$와 같다. 또, $p_i$들 각각의 kernel은 $H_i$와 같다. 따라서 first isomorphism theorem에 의하여
 

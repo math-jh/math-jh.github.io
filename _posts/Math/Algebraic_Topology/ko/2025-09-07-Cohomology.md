@@ -41,7 +41,7 @@ $$0 \rightarrow Z_\bullet\otimes_\mathbb{Z}A \rightarrow C_\bullet\otimes_\mathb
 
 또한 split short exact sequence이다. Splitting은 direct sum 분해 $C_\bullet\cong Z_\bullet\oplus B_{\bullet-1}$을 주고 tensor는 direct sum과 교환하므로, 이 분해가 $\otimes_\mathbb{Z}A$ 이후에도 그대로 유지되기 때문이다. 이 때, 이들을 풀어쓰면 다음의 commutative diagram 
 
-![snake_lemma](/assets/images/Math/Algebraic_Topology/Cohomology-1.svg){:style="width:31.09em" class="invert" .align-center}
+{% diagram Math/Algebraic_Topology/Cohomology-1.svg width="31.09em" alt="snake_lemma" %}
 
 과 같은 꼴이고 따라서  [\[호몰로지 대수학\] §긴 완전열, ⁋정리 1](/ko/math/homological_algebra/long_exact_sequence#thm1)에 의해 다음의 long exact sequence
 

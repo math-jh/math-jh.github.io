@@ -166,7 +166,7 @@ Therefore the correspondence $h:X^+\rightarrow Y$ identifying $p$ with $\infty$ 
 
 [Theorem 12](#thm12) says that for an LCH space $X$, there is only one way to add a point to make a compact Hausdorff space, up to homeomorphism. This is the uniqueness part of Alexandroff's theorem expressed in the language of universality. Thanks to this uniqueness, we can treat $X^+$ independently of its concrete construction, and in actual calculations we may choose any convenient compact Hausdorff model and identify it with $X^+$.
 
-![Universality of the one-point compactification](/assets/images/Math/Topology/Locally_Compact_Spaces-1.svg){:style="width:6.23em" class="invert" .align-center}
+{% diagram Math/Topology/Locally_Compact_Spaces-1.svg width="6.23em" alt="Universality of the one-point compactification" %}
 
 ::: Remark 13
 The one-point compactification is characterized as the smallest among Hausdorff compactifications. A *Hausdorff compactification* of a non-compact LCH space $X$ is a compact Hausdorff space containing $X$ as a dense subspace; from any such compactification, collapsing all points outside $X$ into a single point yields a unique continuous surjection onto $X^+$. The proof of this fact requires the observation that if an LCH space is densely embedded in a Hausdorff space, it is always an open subspace; the detailed argument follows standard literature. **[Mun]** At the opposite extreme is the *Stone–Čech compactification*, the largest Hausdorff compactification that a completely regular space can have, but this requires a separate construction so we only mention its name here.

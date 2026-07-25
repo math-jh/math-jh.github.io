@@ -173,7 +173,7 @@ $$H^k(D(E), S(E))\cong H^k(E, E_0)\cong H^{k-n}(B)$$
 
 and for the second term we obtain $H^k(D(E))\cong H^k(B)$ via the retraction. Through these identifications we obtain the following commutative diagram
 
-![pair cohomology long exact sequence and Gysin exact sequence](/assets/images/Math/Algebraic_Topology/Characteristic_Classes-1.svg){:style="width:40.87em" class="invert" .align-center}
+{% diagram Math/Algebraic_Topology/Characteristic_Classes-1.svg width="40.87em" alt="pair cohomology long exact sequence and Gysin exact sequence" %}
 
 and the maps in the second row are those of the upper exact sequence transported along the vertical isomorphisms. Concretely, let us follow the first map $H^{k-n}(B)\rightarrow H^k(B)$. Lift $\alpha\in H^{k-n}(B)$ to $H^k(E, E_0)$ via the Thom isomorphism $\Phi:\alpha\mapsto p^\ast\alpha\smile u$, and then compose with the first map $j^\ast$ of the upper row to get
 
@@ -311,7 +311,7 @@ $$f=(f_1, f_2): B\rightarrow \CP^\infty\times\CP^\infty$$
 
 we obtain the following commutative diagram between bases
 
-![classifying map decomposition](/assets/images/Math/Algebraic_Topology/Characteristic_Classes-2.svg){:style="width:20.62em" class="invert" .align-center}
+{% diagram Math/Algebraic_Topology/Characteristic_Classes-2.svg width="20.62em" alt="classifying map decomposition" %}
 
 and therefore showing the formula
 

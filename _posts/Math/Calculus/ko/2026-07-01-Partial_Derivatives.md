@@ -262,7 +262,7 @@ f_{xx}h_1^2 + 2f_{xy}h_1 h_2 + f_{yy}h_2^2
 ::: 예시 10 (안장점)
 $f(x,y) = x^2 - y^2$은 $\nabla f = (2x, -2y) = 0$에서 critical point $(0,0)$을 가진다. 헤세 행렬은 $\begin{pmatrix} 2 & 0 \\ 0 & -2\end{pmatrix}$로 $\det H = -4 < 0$이므로 안장점이다. 실제로 $x$축을 따라가면 $f = x^2$로 극소, $y$축을 따라가면 $f = -y^2$로 극대라, 방향에 따라 오르내리는 말안장 모양이다. 아래 그림은 이 곡면 $z = x^2 - y^2$의 모습으로, 원점(검은 점)이 안장점이다.
 
-![saddle_surface](/assets/images/Math/Calculus/Partial_Derivatives-1.svg){:style="width:21.37em" class="invert" .align-center}
+{% diagram Math/Calculus/Partial_Derivatives-1.svg width="21.37em" alt="saddle_surface" %}
 :::
 
 다만, $D=0$인 경우에는 위의 판별법이 어떠한 정보도 주지 않는 것에 유의하자. 이러한 경우는 각각의 상황에 맞는 방식을 적절히 사용하여야 한다.

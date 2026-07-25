@@ -30,7 +30,7 @@ These can be viewed as categorical limits, as we saw in [\[Category Theory\] §L
 
 > Whenever maps $K \rightarrow G/H_i$ satisfying $\rho_{ji}\circ\pi_j=\pi_i$ are given, there exists a unique $\pi:K \rightarrow \widehat{G}$ making the following diagram
 > 
-> ![universal_property](/assets/images/Math/Commutative_Algebra/Completion-1.svg){:style="width:13.57em" class="invert" .align-center}
+> {% diagram Math/Commutative_Algebra/Completion-1.svg width="13.57em" alt="universal_property" %}
 > 
 > commute.
 

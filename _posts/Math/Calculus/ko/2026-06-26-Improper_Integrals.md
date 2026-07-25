@@ -137,7 +137,7 @@ $$\int_1^\infty x^{-p} \mathop{dx} = \frac{1}{p - 1} \quad (p > 1), \qquad \int_
 
 이다. 직관적으로 이는 무한구간에서는 큰 $p$가 빨리 감소해 수렴을 돕지만, singular point 근처에서는 큰 $p$가 더 빨리 증가해 발산이 일어나는 것으로 볼 수 있으며, 이는 $1/x$와 $1/x^2$를 그린 다음의 그림에서 명확하게 눈으로 볼 수 있다. 
 
-![1/x와 1/x²의 그래프](/assets/images/Math/Calculus/Improper_Integrals-1.svg){:style="width:12.69em" class="invert" .align-center}
+{% diagram Math/Calculus/Improper_Integrals-1.svg width="12.69em" alt="1/x와 1/x²의 그래프" %}
 :::
 
 단 이 경계 $p = 1$은 약간 미묘한 것이다. 치환적분은 이상적분에도 그대로 쓸 수 있으므로, $u = \ln x$로 두면

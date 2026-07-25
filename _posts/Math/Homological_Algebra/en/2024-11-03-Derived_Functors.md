@@ -40,11 +40,11 @@ For $n<0$, we regard all $T_n$ as zero. These satisfy the following conditions.
     is exact.
 2. (Naturality) Given a homomorphism between short exact sequences
 
-    ![morphism_of_short_exact_sequence](/assets/images/Math/Homological_Algebra/Derived_Functors-1.svg){:style="width:19.34em" class="invert" .align-center}
+    {% diagram Math/Homological_Algebra/Derived_Functors-1.svg width="19.34em" alt="morphism_of_short_exact_sequence" %}
 
     the following diagram
 
-    ![naturality_of_delta_functor](/assets/images/Math/Homological_Algebra/Derived_Functors-2.svg){:style="width:35.61em" class="invert" .align-center}
+    {% diagram Math/Homological_Algebra/Derived_Functors-2.svg width="35.61em" alt="naturality_of_delta_functor" %}
 
     commutes.
 :::
@@ -67,7 +67,7 @@ In other words, it is a collection of natural transformations $\alpha_n:S_n\Righ
 
 $$0\longrightarrow A\longrightarrow B\longrightarrow C\longrightarrow 0$$
 
-![morphism_of_delta_functor](/assets/images/Math/Homological_Algebra/Derived_Functors-3.svg){:style="width:41.13em" class="invert" .align-center}
+{% diagram Math/Homological_Algebra/Derived_Functors-3.svg width="41.13em" alt="morphism_of_delta_functor" %}
 
 ::: Definition 3
 A $\delta$-functor $T$ is called a *universal $\delta$-functor* if, whenever a $\delta$-functor $S$ and a natural transformation $\alpha_0:S_0\rightarrow T_0$ are given, there exists a unique morphism $(\alpha_n:S_n\Rightarrow T_n)$ of $\delta$-functors extending it.

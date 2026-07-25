@@ -64,7 +64,7 @@ Covering space에 대한 우리의 논의에서 가장 핵심적인 성질은 pa
 
 정의의 조건은 다음의 diagram에서 아래 삼각형을 채우는 점선 화살표 $\widetilde{G}$의 존재로 요약된다. 위쪽 삼각형은 초기 조건 $\widetilde{G}\vert_{X\times\{0\}}=\widetilde{g}_0$을, 아래쪽 삼각형은 lifting 조건 $p\circ\widetilde{G}=g$을 나타낸다.
 
-![lifting_square](/assets/images/Math/Algebraic_Topology/Fibrations-1.svg){:style="width:8.72em" class="invert" .align-center}
+{% diagram Math/Algebraic_Topology/Fibrations-1.svg width="8.72em" alt="lifting_square" %}
 
 이 성질을 어떤 공간들에 대하여 요구하느냐에 따라 서로 다른 fibration의 개념이 얻어진다.
 

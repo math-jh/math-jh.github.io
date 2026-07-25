@@ -115,7 +115,7 @@ A point $x \in X$ is a *smooth point* (or *nonsingular point*) if $\dim T_x X = 
 ::: Example 7 (Singular points)
 1. (Node) Consider $X = Z(\y^2 - \x^2(\x+1)) \subseteq \mathbb{A}^2$. This curve branches into two at the origin.
 
-    ![nodal_curve](/assets/images/Math/Algebraic_Varieties/Tangent_Spaces_and_Smoothness-1.svg){:style="width:23.17em" class="invert" .align-center}
+    {% diagram Math/Algebraic_Varieties/Tangent_Spaces_and_Smoothness-1.svg width="23.17em" alt="nodal_curve" %}
 
     The Jacobian of this curve is
 
@@ -124,7 +124,7 @@ A point $x \in X$ is a *smooth point* (or *nonsingular point*) if $\dim T_x X = 
     so at the origin the Jacobian is $(0,0)$, and by [Proposition 3](#prop3) the origin is a singular point. Geometrically, the tangent space being 2-dimensional means that both tangent directions of the two branches are included. Specifically, since $\y^2 - \x^2(\x+1) \approx \y^2 - \x^2 = (\y-\x)(\y+\x)$, near the origin the curve looks like the union of the two lines $\y = \x$ and $\y = -\x$. A node is one of the "mildest" singularities.
 2. (Cusp) Now consider $Z(\y^2 - \x^3)\subseteq \mathbb{A}^2$.
 
-    ![cusp](/assets/images/Math/Algebraic_Varieties/Tangent_Spaces_and_Smoothness-2.svg){:style="width:18.80em" class="invert" .align-center}
+    {% diagram Math/Algebraic_Varieties/Tangent_Spaces_and_Smoothness-2.svg width="18.80em" alt="cusp" %}
 
     In this case, the origin of this curve is a singular point. Computing the Jacobian,
 

@@ -138,7 +138,7 @@ $$\psi(\Spec A):\widetilde M(\Spec A)=M \rightarrow N=\widetilde N(\Spec A)$$
 
 우선 $\phi\in \Hom_A(M, N)$에서 출발하면 $\widetilde\phi$의 global section은 정의에 의해 다시 $\phi$이므로 한 방향은 자명하다. 거꾸로 $\psi:\widetilde M \rightarrow \widetilde N$이 주어졌다 하고 $\phi=\psi(\Spec A)$라 하자. 우리는 $\widetilde \phi=\psi$임을 보여야 하며, 두 morphism이 일치하는 것은 base $\{D(f)\}$ 위에서 일치하는 것으로 충분하다. 임의의 $f\in A$에 대하여, $\psi$가 sheaf morphism이므로 다음 diagram
 
-![localization square](/assets/images/Math/Scheme_Theory/Quasicoherent_Sheaves-1.svg){:style="width:6.60em" class="invert" .align-center}
+{% diagram Math/Scheme_Theory/Quasicoherent_Sheaves-1.svg width="6.60em" alt="localization square" %}
 
 이 commute하며, 여기에서 세로 morphism은 localization map이다. 한편 $\psi(D(f))$는 $A_f$-가군 homomorphism이므로 윗줄의 $\phi$와 commute한다는 조건과 $A_f$-선형성에 의해 임의의 $m/f^n\in M_f$에 대하여
 

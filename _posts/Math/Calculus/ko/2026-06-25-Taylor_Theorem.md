@@ -37,7 +37,7 @@ $$P_n(x) = \sum_{k=0}^{n} \frac{f^{(k)}(a)}{k!}(x - a)^k = f(a) + f'(a)(x-a) + \
 
 위에서 주장한 것과 같이, 테일러 전개는 주어진 함수를, $n$차다항식으로 근사하는 방식이다. 다음 그래프를 보자. 
 
-![sin 함수와 그 테일러 다항식 근사](/assets/images/Math/Calculus/Taylor_Theorem-1.svg){:style="width:23.68em" class="invert" .align-center}
+{% diagram Math/Calculus/Taylor_Theorem-1.svg width="23.68em" alt="sin 함수와 그 테일러 다항식 근사" %}
 
 이 그래프는 sin함수의 처음 몇 개의 테일러 전개를 그린 것으로, 위의 그림을 보면 실제로 이 근사가 점점 $\sin$ 함수에 가까워지는 것을 확인할 수 있다. 그러나 이것이 실제로 오차를 줄여나간다는 것을 수학적으로 증명하기 위해서는 다음 정리가 필요하다. 
 

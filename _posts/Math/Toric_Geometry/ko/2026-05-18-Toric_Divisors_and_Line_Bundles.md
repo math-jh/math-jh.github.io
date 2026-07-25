@@ -205,7 +205,7 @@ Toric variety $X_\Sigma$에 대해 다음이 성립한다.
 1. Picard group $\Pic(X_\Sigma)$는 torus-invariant Cartier divisor들의 linear equivalence class들의 group $\CaDiv_T(X_\Sigma) / M$과 동형이다.
 2. $\Pic(X_\Sigma)$는 $\Cl(X_\Sigma)$의 subgroup이며, 다음의 commutative diagram이 성립한다.
 
-    ![Pic-to-cl-com.diag](/assets/images/Math/Toric_Geometry/Toric_Divisors_and_Line_Bundles-1.svg){:style="width:32.02em" class="invert" .align-center}
+    {% diagram Math/Toric_Geometry/Toric_Divisors_and_Line_Bundles-1.svg width="32.02em" alt="Pic-to-cl-com.diag" %}
 
     여기서 세로 화살표들은 inclusion을 나타낸다.
 :::

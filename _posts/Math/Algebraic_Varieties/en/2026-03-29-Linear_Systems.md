@@ -85,7 +85,7 @@ $$0=F(1,-i,0)=a_{00}-a_{11}-ia_{01}$$
 
 force $a_{12}=0$, $a_{01}=0$, $5a_{11}=-a_{22}$, $a_{00}=a_{11}$, so the actual variables are the two $a_{00}$, $a_{02}$. That is, this family of conics forms a 2-dimensional subspace $V$ of $\Gamma(X,\mathcal{O}(2))$, and its projectivization is the $\mathbb{P}^1$ represented by $[\lambda:\mu]$.
 
-![pencil_of_circles](/assets/images/Math/Algebraic_Varieties/Linear_Systems-1.svg){:style="width:40em" class="invert" .align-center}
+{% diagram Math/Algebraic_Varieties/Linear_Systems-1.svg width="40em" alt="pencil_of_circles" %}
 :::
 
 Of course, [Definition 2](#def2) applies equally to any variety, whether $X$ is a projective space or a quasi-projective variety. However, the reason we took such pains to calculate [Example 3](#ex3) above is that for any quasi-projective variety $X\subseteq \mathbb{P}^n$, if $D$ comes from some $\mathcal{O}_{\mathbb{P}^n}(d)$, we can use the language of homogeneous polynomials directly. That is, in this case the restriction map

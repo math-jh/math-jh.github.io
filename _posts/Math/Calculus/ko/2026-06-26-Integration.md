@@ -188,7 +188,7 @@ $$S(P, f) = \sum_{i=1}^{n} f(c_i)\Delta x_i$$
 를 함수 $f$의 *리만 합<sub>Riemann sum</sub>*이라 한다.
 :::
 
-![리만 합](/assets/images/Math/Calculus/Integration-1.svg){:style="width:24.05em" class="invert" .align-center}
+{% diagram Math/Calculus/Integration-1.svg width="24.05em" alt="리만 합" %}
 
 리만 합은 곡선 아래 영역을 폭이 $\Delta x_i$, 높이가 $f(c_i)$인 직사각형들로 근사한 넓이이다. 표본점 $c_i$를 각 부분구간의 왼쪽 끝, 오른쪽 끝, 또는 함수의 최솟·최댓값을 주는 점으로 잡으면 각각 좌·우 리만 합, 하합·상합이 된다. 직관적으로, 우리는 분할을 한없이 잘게 하면 이 근사가 표본점 선택과 무관하게 한 값으로 수렴하기를 기대한다.
 

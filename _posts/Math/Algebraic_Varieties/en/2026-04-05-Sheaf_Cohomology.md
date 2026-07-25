@@ -330,7 +330,7 @@ $$0 \rightarrow \mathcal{F}\rightarrow\mathcal{I}\rightarrow\mathcal{Q}\rightarr
 
 Our claim is that $\mathcal{Q}$ is flasque, which can be shown by a diagram chase in the following commutative diagram for any open sets $V\subseteq U$
 
-![Commutative diagram](/assets/images/Math/Algebraic_Varieties/Sheaf_Cohomology-1.svg){:style="width:23.07em" class="invert" .align-center}
+{% diagram Math/Algebraic_Varieties/Sheaf_Cohomology-1.svg width="23.07em" alt="Commutative diagram" %}
 
 Here $\mathcal{F}$ is flasque by assumption and $\mathcal{I}$ is injective and hence flasque. Now for any $s\in \mathcal{Q}(V)$, since $\mathcal{I}(V)\rightarrow \mathcal{Q}(V)$ is surjective we can lift $s$ to $t\in \mathcal{I}(V)$, and then using that $\mathcal{I}$ is flasque we can lift $t$ to $\overline{t}\in\mathcal{I}(U)$ and push this down to $\mathcal{Q}$ to define $\overline{s}\in \mathcal{Q}(U)$. Since $\overline{t}$ is an extension of $t$, we have $\overline{t}\vert_V=t$, so $\overline{s}\vert_V$ equals the image of $t$ in $\mathcal{Q}(V)$, namely $s$. Therefore $\overline{s}$ restricts exactly to $s\in \mathcal{Q}(V)$, and we obtain the flasqueness of $\mathcal{Q}$.
 

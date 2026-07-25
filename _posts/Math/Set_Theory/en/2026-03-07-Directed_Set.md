@@ -16,7 +16,7 @@ last_polished_at: 2026-06-02T21:00:02+00:00
 ---
 For a preordered set $A$, a subset $X\subseteq A$ is *cofinal* (resp. *coinitial*) in $A$ if for any $x\in A$ there exists $y\in X$ such that $x\leq y$ (resp. $y\leq x$). For example, in the following diagram
 
-![cofinal_sequence](/assets/images/Math/Set_Theory/Directed_Set-1.svg){:style="width:20.75em" class="invert" .align-center}
+{% diagram Math/Set_Theory/Directed_Set-1.svg width="20.75em" alt="cofinal_sequence" %}
 
 the sets $\left\{a_{2n}\right\}_{n\in\mathbb{N}}$ and $\left\{a_{1000+n}\right\}_{n\in\mathbb{N}}$ are both cofinal.
 
@@ -30,7 +30,7 @@ In Hasse diagrams it is conventional to place larger elements toward the top, bu
 
 For example, for any set $A$, the ordered set $(\mathcal{P}(A),\subseteq)$ is right directed: for any $X, Y\in\mathcal{P}(A)$, the union $X\cup Y$ belongs to $\mathcal{P}(A)$ and is an upper bound of both $X$ and $Y$. This is illustrated by the following diagram.
 
-![directed_system](/assets/images/Math/Set_Theory/Directed_Set-2.png){:style="width:24em" class="invert" .align-center}
+{% diagram Math/Set_Theory/Directed_Set-2.png width="24em" alt="directed_system" %}
 
 ::: Proposition 2
  If an ordered set $A$ is right directed, then every maximal element of $A$ is also a greatest element.

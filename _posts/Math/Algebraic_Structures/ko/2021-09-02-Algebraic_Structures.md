@@ -55,7 +55,7 @@ $$(x\star y)\star z=x\star(y\star z)$$
 
 이므로 혼동의 여지 없이 $x\star y\star z$가 명확한 의미를 갖는다. 이는 diagram으로 나타내면 다음 diagram
 
-![associativity](/assets/images/Math/Algebraic_Structures/Algebraic_Structures-1.svg){:style="width:11.89em" class="invert" .align-center}
+{% diagram Math/Algebraic_Structures/Algebraic_Structures-1.svg width="11.89em" alt="associativity" %}
 
 이 commute한다는 의미이다. 한편, 앞선 연산들은 또 다른 차이점이 있다. 
 
@@ -69,7 +69,7 @@ $$x\star y=y\star x$$
 
 교환법칙은 다음의 diagram
 
-![commutativity](/assets/images/Math/Algebraic_Structures/Algebraic_Structures-2.svg){:style="width:13.94em" class="invert" .align-center}
+{% diagram Math/Algebraic_Structures/Algebraic_Structures-2.svg width="13.94em" alt="commutativity" %}
 
 이 commute한다는 의미이다. 여기서 $\sigma$는 $(x,y)\mapsto (y,x)$로 정의된 함수이다. 
 

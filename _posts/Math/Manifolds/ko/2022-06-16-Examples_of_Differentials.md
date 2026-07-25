@@ -107,7 +107,7 @@ $$D_v\vert_x: f\mapsto \lim_{t\rightarrow 0}\frac{f(x+tv)-f(x)}{t}$$
 ::: 명제 4
 Manifold 구조가 주어진 $m$차원 $\mathbb{R}$-벡터공간 $V$를 생각하자. $V$의 임의의 점 $x\in V$에 대하여, basis의 선택에 의존하지 않는 isomorphism $V\cong T_xV$가 존재한다. 뿐만 아니라 $V,W$가 두 $\mathbb{R}$-벡터공간이고, $L:V\rightarrow W$가 linear map이라면 다음의 diagram이 commute한다.
 
-![tangent_space_of_vector_space](/assets/images/Math/Manifolds/Examples_of_Differentials-1.svg){:style="width:9.31em" class="invert" .align-center}
+{% diagram Math/Manifolds/Examples_of_Differentials-1.svg width="9.31em" alt="tangent_space_of_vector_space" %}
 :::
 ::: 증명
 첫 번째 부분은 앞서 보인 방향미분의 식

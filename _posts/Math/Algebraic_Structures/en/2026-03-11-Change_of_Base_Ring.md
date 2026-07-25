@@ -19,11 +19,11 @@ In this article, we examine how to change an $A$-module into a $B$-module, or a 
 
 Let a $B$-module $\rho_N:B\otimes N \rightarrow N$ be given. Then, considering the composition
 
-![restriction_of_scalars](/assets/images/Math/Algebraic_Structures/Change_of_Base_Ring-1.svg){:style="width:14.53em" class="invert" .align-center}
+{% diagram Math/Algebraic_Structures/Change_of_Base_Ring-1.svg width="14.53em" alt="restriction_of_scalars" %}
 
 the map $\phi^\ast\rho_N:A\otimes N \rightarrow N$ satisfies all the conditions required of an action, and thus defines an $A$-module structure on $N$. Moreover, considering the diagram
 
-![restriction_of_scalars_functoriality](/assets/images/Math/Algebraic_Structures/Change_of_Base_Ring-2.svg){:style="width:16.59em" class="invert" .align-center}
+{% diagram Math/Algebraic_Structures/Change_of_Base_Ring-2.svg width="16.59em" alt="restriction_of_scalars_functoriality" %}
 
 we see that this assignment of an $A$-module is functorial.
 
@@ -102,7 +102,7 @@ An adjunction $\phi_!\dashv\phi^\ast$ exists.
 ::: Proof
 Fix arbitrary $A$-module $M$ and $B$-module $N$. First, for any $v\in\Hom_B(\phi_!M,N)$, consider the composition of maps
 
-![Adjointness-1](/assets/images/Math/Algebraic_Structures/Change_of_Base_Ring-3.svg){:style="width:22.24em" class="invert" .align-center}
+{% diagram Math/Algebraic_Structures/Change_of_Base_Ring-3.svg width="22.24em" alt="Adjointness-1" %}
 
 yields a map $M \rightarrow N$. Here $M \rightarrow A\otimes_AM \rightarrow \phi^\ast B\otimes_AM$ is a composite of $A$-linear maps, while $v:\phi^\ast B\otimes M \rightarrow N$ is a $B$-linear map.
 
@@ -122,7 +122,7 @@ Thus, viewing $N$ as an $A$-module via restriction of scalars, we see that the a
 
 Conversely, given any $u\in\Hom_A(M, \phi^\ast N)$, consider the composition
 
-![Adjointness-2](/assets/images/Math/Algebraic_Structures/Change_of_Base_Ring-4.svg){:style="width:30.40em" class="invert" .align-center}
+{% diagram Math/Algebraic_Structures/Change_of_Base_Ring-4.svg width="30.40em" alt="Adjointness-2" %}
 
 yields a map $\phi_!M \rightarrow N$. Then for any $\beta'\in B$ and $\beta\otimes_A x\in \phi^\ast B\otimes_AM$,
 

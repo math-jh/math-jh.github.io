@@ -62,7 +62,7 @@ $$\lim_{x\rightarrow a}\bigl(f(x)-f(a)\bigr) = f'(a)\cdot 0 = 0$$
 
 그러나 그 역은 성립하지 않는다. 대표적인 예가 $f(x) = \lvert x\rvert$로, 이 함수는 $0$에서 연속이지만 미분가능하지 않다. 
 
-![절댓값함수의 그래프](/assets/images/Math/Calculus/Derivatives-1.svg){:style="width:11.21em" class="invert" .align-center}
+{% diagram Math/Calculus/Derivatives-1.svg width="11.21em" alt="절댓값함수의 그래프" %}
 
 실제로 
 
@@ -72,11 +72,11 @@ $$\frac{f(h)-f(0)}{h} = \frac{\lvert h\rvert}{h}=\begin{cases}1&\text{if $h>0$}\
 
 비슷한 예시로, $f(x) = \sqrt[3]{x}$는 $0$에서 평균변화율이 $h^{-2/3} \rightarrow \infty$로 발산하는 *수직접선<sub>vertical tangent</sub>*을 갖는다.
 
-![세제곱근함수의 수직접선](/assets/images/Math/Calculus/Derivatives-2.svg){:style="width:12.46em" class="invert" .align-center}
+{% diagram Math/Calculus/Derivatives-2.svg width="12.46em" alt="세제곱근함수의 수직접선" %}
 
 반면 $f(x) = x^{2/3}$는 $0$에서 좌우 평균변화율이 $\mp\infty$로 갈라지는 *첨점<sub>cusp</sub>*을 이룬다.
 
-![2/3제곱함수의 첨점](/assets/images/Math/Calculus/Derivatives-3.svg){:style="width:13.17em" class="invert" .align-center}
+{% diagram Math/Calculus/Derivatives-3.svg width="13.17em" alt="2/3제곱함수의 첨점" %}
 
 이들은 한두 점에서만 미분 불가능한 예이지만, 미분 불가능성은 훨씬 더 심할 수도 있어서 바이어슈트라스의 함수 $W(x) = \sum_{n=0}^\infty a^n\cos(b^n\pi x)$처럼 $\mathbb{R}$ 전체에서 연속이면서 어느 점에서도 접선을 갖지 않는 함수마저 존재한다.
 

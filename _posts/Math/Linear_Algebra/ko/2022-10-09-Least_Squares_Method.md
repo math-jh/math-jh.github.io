@@ -75,7 +75,7 @@ $$\begin{pmatrix}a\\ b\end{pmatrix}=(A^tA)^{-1}A^ty=\frac{1}{6}\begin{pmatrix}3&
 
 을 얻는다. 즉, 주어진 세 점을 최소제곱의 의미에서 가장 잘 표현하는 직선은 $y=\frac{3}{2}x+\frac{7}{6}$이다.
 
-![linear least squares fit](/assets/images/Math/Linear_Algebra/Least_Squares_Method-1.svg){:style="width:11.95em" class="invert" .align-center}
+{% diagram Math/Linear_Algebra/Least_Squares_Method-1.svg width="11.95em" alt="linear least squares fit" %}
 :::
 
 더 일반적으로, 내적 $\langle-,-\rangle$을 dot product 대신 함수들의 공간에서의 $L^2$-내적 등으로 택하여도 이와 비슷한 예시를 반복할 수 있다. 
@@ -97,7 +97,7 @@ $$\begin{pmatrix}34&10\\ 10&4\end{pmatrix}\begin{pmatrix}a\\ c\end{pmatrix}=\beg
 
 을 푼다. 이 계수행렬의 행렬식은 $34\cdot 4-10\cdot 10=36$이므로 가역이고, 풀면 $a=1$, $c=\frac{1}{2}$을 얻는다. 따라서 최소제곱의 의미에서 이들 네 점을 가장 잘 표현하는 포물선은 $y=\x^2-\frac{3}{10}\x+\frac{1}{2}$이다.
 
-![quadratic least squares fit](/assets/images/Math/Linear_Algebra/Least_Squares_Method-2.svg){:style="width:19.74em" class="invert" .align-center}
+{% diagram Math/Linear_Algebra/Least_Squares_Method-2.svg width="19.74em" alt="quadratic least squares fit" %}
 :::
 
 [명제 1](#prop1)의 유도과정을 돌이켜보면, least-squares solution $x$가 만드는 $Ax$는 $y$를 $\im A$로 정사영한 벡터 $\proj_{\im A}y$와 정확히 같았으며, 이것이 애초에 방정식 $A^tAx=A^ty$을 이끌어낸 출발점이었다. 즉 근사값 $\hat y=Ax$는 $y$에서 $\im A$로 내린 수선의 발이고, 오차 $y-\hat y$는 $\im A$에 수직이다. 특히 $A$가 full column rank여서 $A^tA$이 가역이라면 $x=(A^tA)^{-1}A^ty$이므로 근사값은 

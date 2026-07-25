@@ -44,7 +44,7 @@ $$Y_0\subsetneq Y_1\subsetneq\cdots\subsetneq Y_r$$
 
 이제 $\varphi$를 $\Spec\overline{\mathbb{Q}}\rightarrow\Spec\mathbb{Q}$로 base change하면, 다음의 pullback diagram
 
-![pullback](/assets/images/Math/Scheme_Theory/Dimension_Schemes-1.svg){:style="width:13.60em" class="invert" .align-center}
+{% diagram Math/Scheme_Theory/Dimension_Schemes-1.svg width="13.60em" alt="pullback" %}
 
 을 얻으며, 이 때 좌측 수직방향의 map
 
@@ -127,7 +127,7 @@ $$\Spec A[t]\rightarrow \Spec A$$
 
 을 살펴보아야 한다. 우선 곡선 $\Spec A$의 singular point인 원점 $\mathfrak{m}=(t^2,t^3)\in\Spec A$을 보면, 이 점에서의 위의 map의 fiber는 다음의 pullback diagram
 
-![cusp-fiber](/assets/images/Math/Scheme_Theory/Dimension_Schemes-2.svg){:style="width:17.35em" class="invert" .align-center}
+{% diagram Math/Scheme_Theory/Dimension_Schemes-2.svg width="17.35em" alt="cusp-fiber" %}
 
 즉 다음의 map
 

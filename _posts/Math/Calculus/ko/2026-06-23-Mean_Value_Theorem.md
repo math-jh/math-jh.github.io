@@ -135,7 +135,7 @@ $$m(b-a) \leq f'(c)(b-a) \leq M(b-a)$$
 
 한편, [정리 3](#thm3)는 도함수의 근의 개수로 함수의 근의 개수를 위에서 묶는 데도 쓰인다. 이는 함수의 서로 다른 두 근 사이마다 도함수의 근이 적어도 하나 끼어 있어야 하기 때문이다.
 
-![근의 분리를 위한 포물선과 접선](/assets/images/Math/Calculus/Mean_Value_Theorem-1.svg){:style="width:14.76em" class="invert" .align-center}
+{% diagram Math/Calculus/Mean_Value_Theorem-1.svg width="14.76em" alt="근의 분리를 위한 포물선과 접선" %}
 
 즉, 직관적으로 함수가 근을 가진 후, 다음 근을 가지기 위해서는 진행하는 방향을 <em-ko>꺾어서</em-ko> 다시 함숫값이 $0$으로 돌아와야 하며, 이것이 도함수가 $0$이 되는 지점으로 계산되는 것이다. 이를 더 수학적으로 명확하게 적으면 다음과 같다. 
 

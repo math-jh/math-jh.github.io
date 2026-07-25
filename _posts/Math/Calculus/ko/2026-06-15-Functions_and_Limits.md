@@ -206,7 +206,7 @@ $$\frac{1}{2}\sin x \leq \frac{1}{2}x \leq \frac{1}{2}\tan x$$
 
 를 얻는다. 즉 $\sin x \leq x \leq \tan x$이다.
 
-![삼각형-부채꼴-직각삼각형 넓이 비교](/assets/images/Math/Calculus/functions_and_limits-1.svg){:style="width:33.66em" class="invert" .align-center}
+{% diagram Math/Calculus/functions_and_limits-1.svg width="33.66em" alt="삼각형-부채꼴-직각삼각형 넓이 비교" %}
 
 이제 위 부등식의 양변을 $\sin x > 0$으로 나누고 역수를 취하면
 

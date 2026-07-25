@@ -16,3 +16,4 @@
 @import "graph-page"; // global dependency graph page (index panel + Brass card)
 @import "term-index"; // 찾아보기(용어 색인) book-index layout
 @import "terms-overlay"; // 찾아보기 검색 팝업 (색인 페이지의 경량판)
+@import "diagram-colors"; // 인라인 다이어그램 색 체계 (다크 전용 역전 규칙은 main_dark.scss 인라인)

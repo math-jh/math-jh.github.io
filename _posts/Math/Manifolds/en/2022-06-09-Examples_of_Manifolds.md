@@ -79,7 +79,7 @@ $$U_{n+1}^+=\{(x^1, x^2, \ldots, x^{n+1})\in\mathbb{R}^{n+1}\mid x^{n+1}>0\}$$
 
 From the picture it is almost obvious that $U_{n+1}^+$ and $D^n$ are homeomorphic.
 
-![sphere_chart](/assets/images/Math/Manifolds/Examples_of_Manifolds-1.png){:style="width:300px" class="invert" .align-center}
+{% diagram Math/Manifolds/Examples_of_Manifolds-1.png width="300px" alt="sphere_chart" %}
 <cap markdown="1">[Lee], p.6. Fig. 1.3.</cap>
 
 
@@ -137,7 +137,7 @@ $$\varphi_i[x^1,\ldots, x^{n+1}]=\left(\frac{x^1}{x^i},\ldots,\frac{x^{i-1}}{x^i
 
 [^1] the function $\varphi_i\circ\pi\vert_{\tilde{U}_i}$ is continuous, and hence by [\[Topology\] §Quotient Spaces, ⁋Proposition 4](/en/math/topology/quotient_spaces#prop4) $\varphi_i$ is also continuous. 
 
-![quotient_map](/assets/images/Math/Manifolds/Examples_of_Manifolds-2.svg){:style="width:7.46em" class="invert" .align-center}
+{% diagram Math/Manifolds/Examples_of_Manifolds-2.svg width="7.46em" alt="quotient_map" %}
 
 Moreover, the following continuous function
 

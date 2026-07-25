@@ -66,11 +66,11 @@ Then one can easily verify that $\Omega_{E/A}$ satisfies the desired universal p
 ::: Proposition 4
 Suppose we are given the commutative diagram of ring homomorphisms
 
-![setup](/assets/images/Math/Commutative_Algebra/Differentials-1.svg){:style="width:6.30em" class="invert" .align-center}
+{% diagram Math/Commutative_Algebra/Differentials-1.svg width="6.30em" alt="setup" %}
 
 and regard $E$ and $E'$ as an $A$-algebra and an $A'$-algebra via $\rho$ and $\rho'$, respectively. Then there exists a unique $E$-linear map $\Omega_{\varphi/\phi}:\Omega_{E/A} \rightarrow \Omega_{E'/A'}$ making the following diagram
 
-![functoriality](/assets/images/Math/Commutative_Algebra/Differentials-2.svg){:style="width:11.39em" class="invert" .align-center}
+{% diagram Math/Commutative_Algebra/Differentials-2.svg width="11.39em" alt="functoriality" %}
 
 commute.
 :::

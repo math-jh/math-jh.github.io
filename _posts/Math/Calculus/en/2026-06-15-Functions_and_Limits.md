@@ -205,7 +205,7 @@ $$\frac{1}{2}\sin x \leq \frac{1}{2}x \leq \frac{1}{2}\tan x$$
 
 That is, $\sin x \leq x \leq \tan x$.
 
-![Comparison of triangle, sector, and right triangle areas](/assets/images/Math/Calculus/functions_and_limits-1.svg){:style="width:33.66em" class="invert" .align-center}
+{% diagram Math/Calculus/functions_and_limits-1.svg width="33.66em" alt="Comparison of triangle, sector, and right triangle areas" %}
 
 Now dividing both sides of the above inequality by $\sin x > 0$ and taking reciprocals, we obtain
 

@@ -23,21 +23,21 @@ Fix an abelian category $\mathcal{A}$.
 
 1. An object $P$ of $\mathcal{A}$ is called a *projective object* if whenever the following diagram is given
 
-    ![Projective_object-1](/assets/images/Math/Homological_Algebra/Resolutions-1.svg){:style="width:9.44em" class="invert" .align-center}
+    {% diagram Math/Homological_Algebra/Resolutions-1.svg width="9.44em" alt="Projective_object-1" %}
 
     there exists at least one morphism $P \rightarrow B$ making the following diagram
 
-    ![Projective_object-2](/assets/images/Math/Homological_Algebra/Resolutions-2.svg){:style="width:9.44em" class="invert" .align-center}
+    {% diagram Math/Homological_Algebra/Resolutions-2.svg width="9.44em" alt="Projective_object-2" %}
 
     commute.  
     If for every object $A$ of $\mathcal{A}$ there exists a suitable projective object $P$ such that $P \rightarrow A \rightarrow 0$ is exact, we say that $\mathcal{A}$ has *enough projectives*.
 2. An object $I$ of $\mathcal{A}$ is called an *injective object* if whenever the following diagram is given
 
-    ![Injective_object-1](/assets/images/Math/Homological_Algebra/Resolutions-3.svg){:style="width:9.40em" class="invert" .align-center}
+    {% diagram Math/Homological_Algebra/Resolutions-3.svg width="9.40em" alt="Injective_object-1" %}
 
     there exists at least one morphism $B \rightarrow I$ making the following diagram
 
-    ![Injective_object-2](/assets/images/Math/Homological_Algebra/Resolutions-4.svg){:style="width:9.40em" class="invert" .align-center}
+    {% diagram Math/Homological_Algebra/Resolutions-4.svg width="9.40em" alt="Injective_object-2" %}
 
     commute.  
     If for every object $A$ of $\mathcal{A}$ there exists a suitable injective object $I$ such that $0 \rightarrow A \rightarrow I$ is exact, we say that $\mathcal{A}$ has *enough injectives*.
@@ -68,11 +68,11 @@ If an abelian category $\mathcal{A}$ has enough projectives, then every object $
 ::: Proof
 First, since $\mathcal{A}$ has enough projectives, we can choose a suitable surjection $\epsilon_0:P_0 \rightarrow M$. Let $M_0=\ker \epsilon_0$. Then since $\mathcal{A}$ has enough projectives, we can choose a suitable surjection $\epsilon_1:P_1 \rightarrow M_0$. Drawing the composition of $\epsilon_1: P_1 \rightarrow M_0$ and the inclusion $\iota_0: M_0 \rightarrow P_0$ as $d_1=\iota_0\circ\epsilon_1$ in a diagram, we obtain the following.
 
-![splicing-1](/assets/images/Math/Homological_Algebra/Resolutions-5.svg){:style="width:19.97em" class="invert" .align-center}
+{% diagram Math/Homological_Algebra/Resolutions-5.svg width="19.97em" alt="splicing-1" %}
 
 Continuing in this way, whenever $\epsilon_n:P_n \rightarrow M_{n-1}$ is given we set $M_n=\ker \epsilon_n$ and obtain the following commutative diagram
 
-![splicing-2](/assets/images/Math/Homological_Algebra/Resolutions-6.svg){:style="width:39.85em" class="invert" .align-center}
+{% diagram Math/Homological_Algebra/Resolutions-6.svg width="39.85em" alt="splicing-2" %}
 
 Then looking at the complex obtained in the middle,
 
@@ -114,12 +114,12 @@ Meanwhile, the uniqueness of projective and injective resolutions follows from t
 ::: Theorem 6
 Given a projective resolution $P_\bullet \rightarrow M$ and any $u:M \rightarrow N$. Then for any left resolution $Q_\bullet \rightarrow N$, there exists a chain map $f:P_\bullet \rightarrow Q_\bullet$ making the following diagram
 
-![comparison_proj](/assets/images/Math/Homological_Algebra/Resolutions-7.svg){:style="width:20.02em" class="invert" .align-center}
+{% diagram Math/Homological_Algebra/Resolutions-7.svg width="20.02em" alt="comparison_proj" %}
 
 commute, uniquely up to homotopy.  
 Similarly, given an injective resolution $N \rightarrow I^\bullet$ and any $u: M \rightarrow N$, for any right resolution $M \rightarrow J^\bullet$ there exists a chain map $f:J^\bullet \rightarrow I^\bullet$ making the following diagram
 
-![comparison_inj](/assets/images/Math/Homological_Algebra/Resolutions-8.svg){:style="width:19.71em" class="invert" .align-center}
+{% diagram Math/Homological_Algebra/Resolutions-8.svg width="19.71em" alt="comparison_inj" %}
 
 commute.
 :::
@@ -157,15 +157,15 @@ $$0 \rightarrow P' \rightarrow P \rightarrow P'' \rightarrow 0.$$
 ::: Proof
 First, drawing the given situation in a diagram, we obtain the following.
 
-![horseshoe-initial](/assets/images/Math/Homological_Algebra/Resolutions-9.svg){:style="width:20.34em" class="invert" .align-center}
+{% diagram Math/Homological_Algebra/Resolutions-9.svg width="20.34em" alt="horseshoe-initial" %}
 
 Now from the condition that $P_0''$ is projective, we can define $P_0'' \rightarrow A$. On the other hand, $P_0' \rightarrow A$ is already given as the composition of $i_A$ and $\epsilon'$, so taking their direct sum we obtain $\epsilon:P_0 \rightarrow A$. Then from [§Diagram Chasing, ⁋Lemma 5](/en/math/homological_algebra/diagram_chasing#lem5) we obtain the following diagram
 
-![horseshoe-induction](/assets/images/Math/Homological_Algebra/Resolutions-10.svg){:style="width:20.84em" class="invert" .align-center}
+{% diagram Math/Homological_Algebra/Resolutions-10.svg width="20.84em" alt="horseshoe-induction" %}
 
 and in particular the following diagram
 
-![horseshoe-finish](/assets/images/Math/Homological_Algebra/Resolutions-11.svg){:style="width:21.61em" class="invert" .align-center}
+{% diagram Math/Homological_Algebra/Resolutions-11.svg width="21.61em" alt="horseshoe-finish" %}
 
 Repeating this process, we obtain $P_\bullet$.
 :::

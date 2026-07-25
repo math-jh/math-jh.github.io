@@ -56,7 +56,7 @@ $$(x\star y)\star z=x\star(y\star z)$$
 
 so $x\star y\star z$ has an unambiguous meaning. In terms of diagrams, this means the following diagram
 
-![associativity](/assets/images/Math/Algebraic_Structures/Algebraic_Structures-1.svg){:style="width:11.89em" class="invert" .align-center}
+{% diagram Math/Algebraic_Structures/Algebraic_Structures-1.svg width="11.89em" alt="associativity" %}
 
 commutes. Meanwhile, the preceding operations have another point of difference.
 
@@ -70,7 +70,7 @@ holds for all $x,y\in A$, then we say that $\star$ is *commutative*, and we call
 
 Commutativity means that the following diagram
 
-![commutativity](/assets/images/Math/Algebraic_Structures/Algebraic_Structures-2.svg){:style="width:13.94em" class="invert" .align-center}
+{% diagram Math/Algebraic_Structures/Algebraic_Structures-2.svg width="13.94em" alt="commutativity" %}
 
 commutes. Here, $\sigma$ is the function defined by $(x,y)\mapsto (y,x)$.
 

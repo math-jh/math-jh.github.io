@@ -44,7 +44,7 @@ $$E\cong (E/i(F))\oplus i(F)$$
 ::: 정의 2
 두 extension $\mathcal{E}_1: F \rightarrow E_1 \rightarrow G$과 $\mathcal{E}_2:F \rightarrow E_2 \rightarrow G$에 대하여, $\mathcal{E}_1$에서 $\mathcal{E}_2$로의 *morphism*은 다음의 diagram
 
-![morphism_of_extensions](/assets/images/Math/Group_Theory/Extensions-1.svg){:style="width:10.17em" class="invert" .align-center}
+{% diagram Math/Group_Theory/Extensions-1.svg width="10.17em" alt="morphism_of_extensions" %}
 
 을 commute하도록 하는 $u:E_1 \rightarrow E_2$를 의미한다.  
 :::
@@ -76,7 +76,7 @@ Extension $\mathcal{E}:F \rightarrow E \rightarrow G$에 대하여, 다음이 �
 ::: 증명 (명제 4)
 우선 첫째 조건을 가정하고 다음의 diagram
 
-![retraction_and_section](/assets/images/Math/Group_Theory/Extensions-2.svg){:style="width:11.92em" class="invert" .align-center}
+{% diagram Math/Group_Theory/Extensions-2.svg width="11.92em" alt="retraction_and_section" %}
 
 를 생각하자. 그럼 이로부터 retraction $r:E \rightarrow F$를 $\pr_1\circ u$로, $s:G \rightarrow E$를 $u^{-1}\circ\iota_2$로 정의하면 된다.
 

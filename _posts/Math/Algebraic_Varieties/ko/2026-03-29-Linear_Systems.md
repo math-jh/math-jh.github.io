@@ -84,7 +84,7 @@ $$0=F(1,-i,0)=a_{00}-a_{11}-ia_{01}$$
 
 이 $a_{12}=0$, $a_{01}=0$, $5a_{11}=-a_{22}$, $a_{00}=a_{11}$을 강제하므로 실질적인 변수는 $a_{00}$, $a_{02}$의 두 개이다. 즉, 이들 conic의 모임은 $\Gamma(X,\mathcal{O}(2))$의 2차원 부분공간 $V$를 이룰 것이며, 이를 projectivize한 것이 $[\lambda:\mu]$로 나타나는 $\mathbb{P}^1$이 된다. 
 
-![pencil_of_circles](/assets/images/Math/Algebraic_Varieties/Linear_Systems-1.svg){:style="width:40em" class="invert" .align-center}
+{% diagram Math/Algebraic_Varieties/Linear_Systems-1.svg width="40em" alt="pencil_of_circles" %}
 :::
 
 물론 [정의 2](#def2)는 $X$가 projective space이든 quasi-projective variety이든 임의의 variety에 동일하게 적용된다. 그러나 우리가 위의 [예시 3](#ex3)을 이렇게 공들여 계산한 이유는, 임의의 quasi-projective variety $X\subseteq \mathbb{P}^n$에 대해서도 $D$가 어떠한 $\mathcal{O}_{\mathbb{P}^n}(d)$에서 온다면 homogeneous polynomial의 언어를 그대로 사용할 수 있기 때문이다. 즉 이 경우 restriction map

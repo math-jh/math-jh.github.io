@@ -116,7 +116,7 @@ The *sum* of a given family of sets $(A_i)$ is a set $\sum A_i$ together with ma
  
 > Whenever a set $B$ and maps $f_i:A_i\rightarrow B$ are given, there exists a unique function $f:\sum A_i\rightarrow B$ such that $f_i=f\circ\iota_i$.
 
-![universal_property_of_sum](/assets/images/Math/Set_Theory/Sum_of_Sets-1.svg){:style="width:13.49em" class="invert" .align-center}
+{% diagram Math/Set_Theory/Sum_of_Sets-1.svg width="13.49em" alt="universal_property_of_sum" %}
 :::
 
 Of course, to use this as a definition we must show that at least one object satisfying the universal property exists. And [Theorem 8](#thm8) does exactly that. 

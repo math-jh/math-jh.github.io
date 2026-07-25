@@ -183,7 +183,7 @@ Let $\phi:\mathcal{F}\rightarrow\mathcal{G}$ be a morphism of abelian presheaves
 - For each open set $U\subseteq X$, the assignment $U\mapsto \ker(\phi(U))$;
 - For each inclusion $U\subseteq V$ of open sets, the restriction map $\rho_{VU}:\ker(\phi(V))\rightarrow\ker(\phi(U))$ uniquely determined by the following diagram:
   
-  ![presheaf_kernel-1](/assets/images/Math/Topology/Presheaves-1.svg){:style="width:20.39em" class="invert" .align-center}
+  {% diagram Math/Topology/Presheaves-1.svg width="20.39em" alt="presheaf_kernel-1" %}
 :::
 
 In this definition, $\rho_{VU}$ is the restriction map uniquely determined by the universal property of $\ker(\phi(U))$.
@@ -194,7 +194,7 @@ The $\ker\phi$ defined above is an (abelian) presheaf on $X$.
 ::: Proof
 This is immediate from the following diagram and the universal property of kernels:
 
-![presheaf_kernel-2](/assets/images/Math/Topology/Presheaves-2.svg){:style="width:21.30em" class="invert" .align-center}
+{% diagram Math/Topology/Presheaves-2.svg width="21.30em" alt="presheaf_kernel-2" %}
 :::
 
 In the same way, one can define *presheaf cokernel*, *presheaf image*, *presheaf coimage*, *presheaf quotient*, and so on. Therefore, the category $\PSh(X;\Ab)$ of abelian presheaves on a given topological space $X$ is an abelian category.

@@ -116,7 +116,7 @@ for all $p\in M$, then we say that $X$ and $Y$ are *$F$-related*.
 
 In other words, $X$ and $Y$ being $F$-related means that the following diagram commutes.
 
-![F-related](/assets/images/Math/Manifolds/Lie_Derivative-1.svg){:style="width:7.49em" class="invert" .align-center}
+{% diagram Math/Manifolds/Lie_Derivative-1.svg width="7.49em" alt="F-related" %}
 
 As we can see by applying the fact that $X$ is $C^\infty$ (from [§Vector Fields, ⁋Proposition 2](/en/math/manifolds/vector_fields#prop2)) to each function $f$, whether $X$ and $Y$ are $F$-related can also be tested by applying them to each function.
 

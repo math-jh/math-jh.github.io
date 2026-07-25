@@ -129,7 +129,7 @@ The simply-laced root systems are exactly those of type $A_n$, $D_n$, $E_6$, $E_
 
 Their Dynkin diagrams are as follows. All of them consist of single edges only, with $A_n$ a chain, $D_n$ a fork branching at one end, and $E_6,E_7,E_8$ having three branches meeting at a single vertex.
 
-![ADE type Dynkin diagram](/assets/images/Math/Lie_Theory/Borel_Subgroup-1.svg){:style="width:25.06em" class="invert" .align-center}
+{% diagram Math/Lie_Theory/Borel_Subgroup-1.svg width="25.06em" alt="ADE type Dynkin diagram" %}
 
 ## Borel Subalgebra
 

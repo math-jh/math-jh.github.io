@@ -102,7 +102,7 @@ gives this isomorphism.
 ::: Proposition 4
 Let $V$ be an $m$-dimensional $\mathbb{R}$-vector space equipped with a manifold structure. For any point $x\in V$, there exists an isomorphism $V\cong T_xV$ independent of the choice of basis. Moreover, if $V,W$ are two $\mathbb{R}$-vector spaces and $L:V\rightarrow W$ is a linear map, then the following diagram commutes.
 
-![tangent_space_of_vector_space](/assets/images/Math/Manifolds/Examples_of_Differentials-1.svg){:style="width:9.31em" class="invert" .align-center}
+{% diagram Math/Manifolds/Examples_of_Differentials-1.svg width="9.31em" alt="tangent_space_of_vector_space" %}
 :::
 ::: Proof
 For the first part, we use the directional derivative formula shown above,

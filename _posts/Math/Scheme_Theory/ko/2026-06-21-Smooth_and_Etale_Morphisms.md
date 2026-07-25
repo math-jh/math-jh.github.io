@@ -191,7 +191,7 @@ $$\Omega_{\mathbb{G}_m/\mathbb{G}_m}\cong k[t, t^{-1}]/(nt^{n-1})$$
 ::: 정리 11 (무한소 lifting 판정)
 Locally of finite presentation인 morphism $f:X \rightarrow S$가 주어졌다 하자. 임의의 affine $S$-scheme $T$와 그 안의 square-zero 닫힌 부분scheme $T_0\hookrightarrow T$, 그리고 $S$-morphism $g_0:T_0 \rightarrow X$에 대하여, $g_0$을 $T$ 위로 확장하는 $S$-morphism $g:T \rightarrow X$의 존재·유일성을 다음과 같이 부른다.
 
-![lifting diagram](/assets/images/Math/Scheme_Theory/Smooth_and_Etale_Morphisms-1.svg){:style="width:5.99em" class="invert" .align-center}
+{% diagram Math/Scheme_Theory/Smooth_and_Etale_Morphisms-1.svg width="5.99em" alt="lifting diagram" %}
 
 그럼 다음이 성립한다.
 

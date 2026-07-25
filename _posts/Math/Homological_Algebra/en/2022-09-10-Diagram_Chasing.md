@@ -23,7 +23,7 @@ In this post we prove the five lemma and the snake lemma, two essential lemmas i
 ::: Proposition 1 (The four lemma)
 Consider a commutative diagram whose rows are exact
 
-![Four_lemma](/assets/images/Math/Homological_Algebra/Diagram_Chasing-1.svg){:style="width:15.54em" class="invert" .align-center}
+{% diagram Math/Homological_Algebra/Diagram_Chasing-1.svg width="15.54em" alt="Four_lemma" %}
 
 and assume that $\alpha$ is surjective and $\delta$ is injective. Then
 
@@ -68,7 +68,7 @@ The above proposition has the following two immediate corollaries.
 ::: Corollary 2 (The five lemma)
 Consider a commutative diagram whose rows are exact
 
-![five_lemma](/assets/images/Math/Homological_Algebra/Diagram_Chasing-2.svg){:style="width:20.26em" class="invert" .align-center}
+{% diagram Math/Homological_Algebra/Diagram_Chasing-2.svg width="20.26em" alt="five_lemma" %}
 
 If $\alpha,\beta,\delta,\epsilon$ are all isomorphisms, then $\gamma$ is also an isomorphism.
 :::
@@ -76,7 +76,7 @@ If $\alpha,\beta,\delta,\epsilon$ are all isomorphisms, then $\gamma$ is also an
 ::: Corollary 3 (The short five lemma)
 Consider a commutative diagram whose rows are exact
 
-![short_five_lemma](/assets/images/Math/Homological_Algebra/Diagram_Chasing-3.svg){:style="width:18.88em" class="invert" .align-center}
+{% diagram Math/Homological_Algebra/Diagram_Chasing-3.svg width="18.88em" alt="short_five_lemma" %}
 
 If $\alpha,\gamma$ are both injective then $\beta$ is also injective, and if $\alpha,\gamma$ are both surjective then $\beta$ is also surjective.
 :::
@@ -88,7 +88,7 @@ The main goal of the remainder of this post is to prove the snake lemma, and for
 ::: Lemma 4
 Suppose a commutative square
 
-![induced_morphism](/assets/images/Math/Homological_Algebra/Diagram_Chasing-4.svg){:style="width:6.22em" class="invert" .align-center}
+{% diagram Math/Homological_Algebra/Diagram_Chasing-4.svg width="6.22em" alt="induced_morphism" %}
 
 is given. Then $\xi$ sends $\ker(h)$ to $\ker(h')$ and $\eta$ sends $\im(h)$ to $\im(h')$, and in particular the following maps
 
@@ -103,7 +103,7 @@ $$h'\circ(\xi\circ i)=(\eta\circ h)\circ i=\eta\circ 0=0$$
 
 so by the universal property of the kernel there exists a unique $\xi^\sharp:\ker(h)\rightarrow\ker(h')$.
 
-![induced_morphism_kernel](/assets/images/Math/Homological_Algebra/Diagram_Chasing-5.svg){:style="width:13.20em" class="invert" .align-center}
+{% diagram Math/Homological_Algebra/Diagram_Chasing-5.svg width="13.20em" alt="induced_morphism_kernel" %}
 
 Similarly, from $p'\circ\eta:Y\rightarrow \coker (h')$,
 
@@ -111,7 +111,7 @@ $$(p'\circ\eta)\circ h=p'\circ(h'\circ\xi)=(p'\circ h')\circ\xi=0\circ\xi=0$$
 
 and we can define $\eta^\ast$ from the universal property of $\coker(h)$.
 
-![induced_morphism_cokernel](/assets/images/Math/Homological_Algebra/Diagram_Chasing-6.svg){:style="width:14.23em" class="invert" .align-center}
+{% diagram Math/Homological_Algebra/Diagram_Chasing-6.svg width="14.23em" alt="induced_morphism_cokernel" %}
 
 By definition $\coker(h)=Y/\im(h)$ and $\coker(h')=Y'/\im(h')$, so since $\eta^\ast$ sends $0$ to $0$, $\eta^\sharp$ is also well-defined. Finally, for $\xi^\ast$, consider $p:X'\rightarrow X'/\ker(h')$; then
 
@@ -125,7 +125,7 @@ Using this we can prove the following lemma.
 ::: Lemma 5
 Suppose a commutative diagram whose rows are exact
 
-![induced_exact_sequence](/assets/images/Math/Homological_Algebra/Diagram_Chasing-7.svg){:style="width:10.84em" class="invert" .align-center}
+{% diagram Math/Homological_Algebra/Diagram_Chasing-7.svg width="10.84em" alt="induced_exact_sequence" %}
 
 is given. Then $f,g$ and $f',g'$ induce the two columns
 
@@ -174,7 +174,7 @@ Now we can finally prove the snake lemma.
 ::: Theorem 6 (The snake lemma)
 Consider a commutative diagram whose rows are exact
 
-![snake_diagram](/assets/images/Math/Homological_Algebra/Diagram_Chasing-8.svg){:style="width:18.88em" class="invert" .align-center}
+{% diagram Math/Homological_Algebra/Diagram_Chasing-8.svg width="18.88em" alt="snake_diagram" %}
 
 Here the top and bottom rows are each exact. Then there exists a map $\delta:\ker(\gamma)\rightarrow\coker(\alpha)$ connecting the two exact sequences obtained from [Lemma 5](#lem5)
 
@@ -234,14 +234,14 @@ holds, so $g(b)\in\ker(\gamma)$. Therefore $\delta(g(b))$ is well-defined, and s
 
 This theorem is called the snake lemma because when the connecting map $\delta$ is drawn, the following shape appears.
 
-![connecting_map_of_snake_diagram](/assets/images/Math/Homological_Algebra/Diagram_Chasing-9.svg){:style="width:27.46em" class="invert" .align-center}
+{% diagram Math/Homological_Algebra/Diagram_Chasing-9.svg width="27.46em" alt="connecting_map_of_snake_diagram" %}
 
 The snake lemma is usually used to draw long exact sequences as in the next post, but it also has the following additional corollary.
 
 ::: Corollary 7 (The 3×3 lemma)
 Consider a commutative diagram whose rows are exact
 
-![Nine_lemma](/assets/images/Math/Homological_Algebra/Diagram_Chasing-10.svg){:style="width:19.30em" class="invert" .align-center}
+{% diagram Math/Homological_Algebra/Diagram_Chasing-10.svg width="19.30em" alt="Nine_lemma" %}
 
 If the first two columns are both short exact sequences then the last column is also a short exact sequence, and if the last two columns are both short exact sequences then the first column is also a short exact sequence.
 :::

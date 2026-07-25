@@ -185,7 +185,7 @@ $$T_W\longrightarrow \pi_1^\ast T_{L_1}\oplus\pi_2^\ast T_{L_2}\longrightarrow T
 
 [정리 11](#thm11)은 [정리 8](#thm8)을 특수한 경우로 포함한다. $U$이 매끄러우면 cotangent bundle $T^\ast U$은 $0$-shifted symplectic이고, 영절단 $0:U\rightarrow T^\ast U$과 임의의 closed $1$-형식의 graph는 모두 Lagrangian morphism이다. 특히 $df$은 exact하므로 closed이고, 그 graph $\Gamma_{df}$은 Lagrangian이다. 두 Lagrangian $0$과 $\Gamma_{df}$의 유도 교차가 바로 $\Crit(f)$이므로, [정리 11](#thm11)이 $n=0$에서 $\Crit(f)$을 $(-1)$-shifted symplectic으로 만든다.
 
-![Crit(f)를 두 Lagrangian의 유도 교차로 본 pullback 사각형](/assets/images/Math/Derived_Algebraic_Geometry/Shifted_Symplectic_Structures-1.svg){:style="width:9.20em" class="invert" .align-center}
+{% diagram Math/Derived_Algebraic_Geometry/Shifted_Symplectic_Structures-1.svg width="9.20em" alt="Crit(f)를 두 Lagrangian의 유도 교차로 본 pullback 사각형" %}
 
 두 번째 보편적 조작은 mapping stack이다. 물리학의 AKSZ 구성을 derived 기하로 옮긴 PTVV의 정리는, source가 적당한 "적분" 자료를 가지면 target의 shifted symplectic 구조가 mapping stack으로 옮겨지되 source의 차원만큼 shift가 내려감을 말한다.
 

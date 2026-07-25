@@ -91,7 +91,7 @@ Originally, each time we define these we would have to show that they satisfy th
 ::: Definition 3
 Suppose two vector bundles $E\rightarrow B$, $E'\rightarrow B'$ are given. Then a *bundle map* from $E \rightarrow B$ to $E' \rightarrow B'$ means, among pairs $E\rightarrow E', B \rightarrow B'$ making the diagram
 
-![bundle_map](/assets/images/Math/Manifolds/Tangent_and_Cotangent_Bundles-1.svg){:style="width:5.60em" class="invert" .align-center}
+{% diagram Math/Manifolds/Tangent_and_Cotangent_Bundles-1.svg width="5.60em" alt="bundle_map" %}
 
 commute, those for which $E_b\rightarrow E'_{b'}$ is an isomorphism.
 :::
@@ -114,7 +114,7 @@ $$\mathbf{FVect}_\text{iso}\times\cdots\times\mathbf{FVect}_\text{iso}\rightarro
 ::: Example 5
 $\Hom(-,-)$ is a smooth functor. Suppose arbitrary isomorphisms $f:V\rightarrow V'$, $g:W\rightarrow W'$ are given. Then $\Hom(f,g)$ is a linear map from $\Hom(V,W)$ to $\Hom(V',W')$ making the diagram below
 
-![Hom_functor](/assets/images/Math/Manifolds/Tangent_and_Cotangent_Bundles-2.svg){:style="width:7.11em" class="invert" .align-center}
+{% diagram Math/Manifolds/Tangent_and_Cotangent_Bundles-2.svg width="7.11em" alt="Hom_functor" %}
 
 commute. In formula, we can write $\Hom(f,g)(u)=g\circ u\circ f^{-1}$. We can easily check that $\Hom(f,g)$ depends smoothly on $g$. Consider the correspondence $g\mapsto \Hom(f,g)$. Then for a basis $w_i^j$ of $\Hom(W,W')$,
 
