@@ -5111,3 +5111,7 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 
 - _posts/Math/Commutative_Algebra/ko/2026-07-24-Matlis_Duality.md: 병기 필요 'essential submodule' — 위키 ko 문서 '본질적 단사 사상' — 병기형 도출 필요
 - _posts/Math/Commutative_Algebra/ko/2026-07-24-Matlis_Duality.md: 병기 필요 'essential extension' — 위키 ko 문서 '본질적 단사 사상' — 병기형 도출 필요
+
+## term_extract_worker 2026-07-26 03:30
+
+- _posts/Math/Mirror_Symmetry/ko/2026-05-24-Gauss_Manin_Connection.md: 병기 필요 'oscillating integral' — 위키 ko 문서 'PID 제어기' — 병기형 도출 필요
