@@ -1,7 +1,7 @@
 ---
 title: "스킴 사상의 성질들"
-description: "스킴 사상의 주요 성질들을 정의하고, 준옹골사상과 준분리사상의 개념 및 기본 성질을 소개한다."
-excerpt: "Affine, finite, finite type 등 scheme morphism의 기본 성질"
+description: "스킴 사상의 주요 성질들을 정의하고, 준옹골사상과 준분리사상의 개념 및 기본 성질을 소개한 뒤 rational map과 birational map을 정의한다."
+excerpt: "Affine, finite, finite type 등 scheme morphism의 기본 성질과 rational map"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/properties_of_scheme_morphisms
@@ -11,6 +11,8 @@ sidebar:
 
 date: 2025-02-21
 weight: 9
+
+published: false
 ---
 
 앞선 글에서 우리는 scheme morphism을 이해하는 몇 가지 관점을 살펴보았다. 이번 글에서 우리는 본격적으로 scheme morphism이 갖는 성질들을 정의한다. 우선 이들이 공유하는 다음 성질을 정의한다.
@@ -269,3 +271,102 @@ Scheme morphism $\varphi: X \rightarrow Y$가 *locally of finite presentation<su
 :::
 
 대부분의 경우 우리는 모든 scheme들이 locally Noetherian인 경우를 생각하고, 이 경우 이 개념은 새로운 것이 아니다. 실제로 $B$가 Noetherian ring이고 $B \rightarrow A$가 finite type이면 $A\cong B[\x_1,\ldots, \x_n]/\mathfrak{a}$로 쓸 수 있는데, [\[가환대수학\] §기본 개념들, ⁋정리 12](/ko/math/commutative_algebra/basic_notions#thm12)에 의하여 $B[\x_1,\ldots, \x_n]$이 Noetherian이므로 $\mathfrak{a}$가 finitely generated이고 따라서 $B \rightarrow A$는 finitely presented이다. 또 locally Noetherian scheme은 quasi-separated이므로 ([명제 6](#prop6)), morphism of finite presentation을 요구하는 것과 morphism of finite type을 요구하는 것 사이의 차이 또한 사라진다. 
+
+## 유리사상
+
+[§스킴의 대수구조, ⁋정의 12](/ko/math/scheme_theory/algebra_of_schemes#def12)에서 우리는 scheme $X$ 위의 유리함수를 정의역 $U$와 그 위의 함수 $f\in \Gamma(U, \mathcal{O}_X)$가 이루는 pair의 equivalence class로 정의하였다. 여기에서 $f$가 하는 일은 [§아핀스킴, ⁋정리 13](/ko/math/scheme_theory/affine_schemes#thm13)의 adjunction을 통해 scheme morphism $U \rightarrow \Spec \mathbb{Z}[\x]$를 주는 것이므로, target을 임의의 scheme으로 바꾸어 같은 구성을 반복하면 $X$ 전체에서는 정의되지 않는 대응을 얻게 되며, 이것이 이 절의 주인공인 rational map이다. 이를 정확히 적기 위해서는 어떤 열린집합을 정의역으로 허용할 것인지와, 서로 다른 정의역 위의 두 morphism을 언제 같은 것으로 볼 것인지를 정해야 한다. 
+
+우선 image가 target 안의 작은 닫힌집합에 갇히지 않는 morphism에 이름을 붙인다.
+
+::: 정의 19
+Scheme morphism $\varphi: X \rightarrow Y$가 *dominant*라는 것은 $\varphi$의 image가 $Y$에서 dense인 것, 곧 $\cl(\varphi(X))=Y$인 것이다. 
+:::
+
+Surjective morphism은 언제나 dominant이지만 그 역은 성립하지 않는다. 가령 integral domain $A$에 대하여 $\Spec \Frac A \rightarrow \Spec A$의 image는 generic point $(0)$ 하나뿐이지만, [§스펙트럼, ⁋정의 7](/ko/math/scheme_theory/spectrums#def7) 직후에 살펴본 대로 $(0)$을 포함하는 $\Spec A$의 닫힌집합은 $\Spec A$ 자신뿐이므로 이 morphism은 dominant이다. Affine scheme들 사이에서 dominance는 다음과 같이 순수하게 대수적으로 읽힌다.
+
+::: 명제 20
+Ring homomorphism $\phi: B \rightarrow A$에 대하여 다음의 식
+
+$$\cl\left((\Spec\phi)(\Spec A)\right)=Z(\ker\phi)$$
+
+이 성립한다. 따라서 $\Spec\phi$가 dominant인 것은 $\ker\phi\subseteq \mathfrak{N}(B)$인 것과 동치이다.
+:::
+::: 증명
+[§스펙트럼, ⁋명제 14](/ko/math/scheme_theory/spectrums#prop14)의 둘째 결과에 의하여 임의의 $T\subseteq \Spec B$에 대하여 $\cl(T)=Z(I(T))$이므로, $T=(\Spec\phi)(\Spec A)$에 대하여 $I(T)$를 계산하면 충분하다. $T$의 원소는 정확히 $\phi^{-1}(\mathfrak{q})$의 꼴이므로 다음의 식
+
+$$I(T)=\bigcap_{\mathfrak{q}\in \Spec A}\phi^{-1}(\mathfrak{q})=\phi^{-1}\left(\bigcap_{\mathfrak{q}\in \Spec A}\mathfrak{q}\right)$$
+
+을 얻는다. 한편 [§스펙트럼, ⁋명제 14](/ko/math/scheme_theory/spectrums#prop14)의 첫째 결과를 $S=\{0\}$에 적용하면 $A$의 모든 prime ideal의 교집합이 $\sqrt{(0)}=\mathfrak{N}(A)$인 것을 알고, 임의의 $b\in B$에 대하여 $\phi(b)$가 nilpotent인 것과 $b^n\in\ker\phi$인 $n$이 존재하는 것이 동치이므로 
+
+$$I(T)=\phi^{-1}(\mathfrak{N}(A))=\sqrt{\ker\phi}$$
+
+이다. 이제 Galois connection의 항등식 $Z(I(Z(S)))=Z(S)$에 다시 [§스펙트럼, ⁋명제 14](/ko/math/scheme_theory/spectrums#prop14)의 첫째 결과를 적용하면 $Z(\sqrt{\ker\phi})=Z(\ker\phi)$이므로 원하는 식을 얻는다.
+
+마지막 주장은, $Z(\ker\phi)=\Spec B$인 것이 $\ker\phi$가 $B$의 모든 prime ideal에 포함되는 것, 곧 위와 같은 이유로 $\ker\phi\subseteq \mathfrak{N}(B)$인 것과 동치이기 때문에 성립한다.
+:::
+
+특히 $B$가 reduced ring이면 $\Spec\phi$가 dominant인 것은 $\phi$가 injective인 것과 같다. 가령 [예시 16](#ex16)에서 본 $\iota: \mathbb{K}[\x] \rightarrow \mathbb{K}[\x,\y]$는 injective이므로 $\Spec\iota$는 dominant이며, ideal $\mathfrak{a}\subseteq B$에 대한 quotient map이 정의하는 morphism $\Spec B/\mathfrak{a} \rightarrow \Spec B$가 dominant인 것은 $\mathfrak{a}\subseteq \mathfrak{N}(B)$인 것, 곧 $\mathfrak{a}$가 정의하는 닫힌집합이 $\Spec B$ 전체인 것이다.
+
+이제 정의역으로 삼을 열린집합을 정한다. 유리함수의 경우와 마찬가지로 정의역은 $X$ 안에서 충분히 커야 하며, 이를 위상적으로 적은 것이 dense라는 조건이다. Reduced scheme에서는 이 조건만으로 함수의 정보가 보존된다.
+
+::: 보조정리 21
+Reduced scheme $X$와 $X$에서 dense인 열린집합 $U$에 대하여, restriction map $\Gamma(X, \mathcal{O}_X) \rightarrow \Gamma(U, \mathcal{O}_X)$는 injective이다. 
+:::
+::: 증명
+$s\in \Gamma(X, \mathcal{O}_X)$가 $s\vert_U=0$을 만족한다 하고, $X$의 임의의 affine open subset $\Spec A$를 택한 후 편의상 $s$의 $\Spec A$로의 restriction을 다시 $s\in A$로 적자. 그럼 $X$가 reduced이므로 $A$는 reduced ring이고 ([§스킴의 대수구조, ⁋정의 1](/ko/math/scheme_theory/algebra_of_schemes#def1)), $\Spec A$의 공집합이 아닌 임의의 열린집합은 $X$의 열린집합이기도 하여 $U$와 만나므로 $U\cap \Spec A$는 $\Spec A$에서 dense이다. 
+
+이제 임의의 $\mathfrak{p}\in U\cap \Spec A$에 대하여 $s$의 stalk $\mathcal{O}_{X,\mathfrak{p}}=A_\mathfrak{p}$에서의 germ이 $0$이므로 $ts=0$인 $t\in A\setminus \mathfrak{p}$가 존재하고, $\mathfrak{p}$가 prime ideal이므로 이로부터 $s\in \mathfrak{p}$를 얻는다. 곧 $U\cap \Spec A\subseteq Z(s)$인데 $Z(s)$가 닫힌집합이고 $U\cap \Spec A$가 dense이므로 $Z(s)=\Spec A$, 즉 $s$는 $A$의 모든 prime ideal에 속한다. 따라서 [§스펙트럼, ⁋명제 14](/ko/math/scheme_theory/spectrums#prop14)의 첫째 결과에 의하여 $s\in \mathfrak{N}(A)=0$이다. 이것이 $X$의 임의의 affine open subset에 대하여 성립하므로 $s=0$이다. 
+:::
+
+Reduced라는 가정은 뺄 수 없다. [§스킴의 대수구조, ⁋예시 11](/ko/math/scheme_theory/algebra_of_schemes#ex11)의 $X=\Spec \mathbb{K}[\x_1,\x_2]/(\x_2^2,\x_1\x_2)$의 경우 nilradical이 prime ideal $(\x_2)$이므로 $X$는 irreducible이고 ([§스킴의 대수구조, ⁋보조정리 3](/ko/math/scheme_theory/algebra_of_schemes#lem3)), 따라서 공집합이 아닌 열린집합 $D(\x_1)$은 dense이다. 그러나 $\x_1\x_2=0$에서 $\x_1$을 가역으로 만들면 $\x_2\vert_{D(\x_1)}=0$이 되어, $0$이 아닌 함수가 dense open subset 위에서 사라진다. [§스킴의 대수구조, ⁋정의 12](/ko/math/scheme_theory/algebra_of_schemes#def12)가 유리함수의 정의역에 associated point를 <em-ko>모두</em-ko> 담을 것을 요구한 것이 정확히 이를 막기 위한 것이었다.
+
+거꾸로 $X$가 reduced이면 두 조건은 일치한다. 우선 $X$의 임의의 irreducible component $C$가 generic point를 가짐을 확인하자. $C$와 만나는 affine open subset $\Spec A$를 택하면 $C\cap \Spec A$는 $\Spec A$의 닫힌집합이면서 irreducible space $C$의 공집합이 아닌 열린집합이므로 irreducible이고, 따라서 [§스펙트럼, ⁋명제 16](/ko/math/scheme_theory/spectrums#prop16)에 의하여 $C\cap \Spec A$는 적당한 $\eta\in C\cap\Spec A$의 $\Spec A$ 안에서의 closure이다. 그런데 $C\cap \Spec A$는 $C$에서 dense이므로 $X$ 안에서 closure를 취하면 $\cl(\{\eta\})\supseteq \cl(C\cap \Spec A)=C$를 얻고, $\eta\in C$이며 $C$가 닫힌집합이므로 $C=\cl(\{\eta\})$이다. 그럼 $X$의 열린집합 $U$가 dense인 것은 $U$가 $X$의 모든 irreducible component의 generic point를 포함하는 것과 동치이다. 실제로 모든 $\eta$를 포함하는 $U$의 closure는 모든 component를 포함하여 $X$ 전체가 되며, 거꾸로 $U$가 dense인데 $U\cap C=\emptyset$이라면 $U$가 닫힌집합 $X\setminus C$에 포함되어 모순이므로 $U\cap C$는 $C$의 공집합이 아닌 열린집합이고, 만일 $\eta\not\in U$라면 $\eta$가 $C$의 닫힌집합 $C\setminus (U\cap C)$에 속하여 $C=\cl(\{\eta\})\subseteq C\setminus (U\cap C)$가 되어 다시 모순이다. 다음으로 reduced ring $A$에 대해서는 $\Spec A$의 associated point가 언제나 minimal prime ideal, 곧 [§스펙트럼, ⁋따름정리 17](/ko/math/scheme_theory/spectrums#cor17)에 의하여 irreducible component의 generic point이다. 이는 $\mathfrak{p}=\ann(x)$이고 $x\neq 0$이라 할 때 ([\[가환대수학\] §동반소아이디얼, ⁋정의 1](/ko/math/commutative_algebra/associated_primes#def1)), 임의의 prime ideal이 minimal prime ideal을 포함하므로 minimal prime ideal들의 교집합이 $\mathfrak{N}(A)=0$이 되어 $x\not\in\mathfrak{q}$인 minimal prime ideal $\mathfrak{q}$가 존재하고, 임의의 $z\in \mathfrak{p}$에 대하여 $zx=0\in \mathfrak{q}$로부터 $z\in \mathfrak{q}$를 얻어 $\mathfrak{p}\subseteq \mathfrak{q}$, 곧 $\mathfrak{p}=\mathfrak{q}$이기 때문이다. Noetherian ring의 minimal prime ideal이 언제나 associated prime ideal인 것은 이미 확인하였으므로 ([§스킴의 대수구조, §§동반소아이디얼](/ko/math/scheme_theory/algebra_of_schemes#동반소아이디얼)), locally Noetherian reduced scheme에 대해서는 유리함수의 정의역이 정확히 dense인 열린집합이 된다.
+
+::: 정의 22
+Scheme $X$에서 scheme $Y$로의 *rational map<sub>유리사상</sub>*은 $X$에서 dense인 열린집합 $U$와 scheme morphism $f: U \rightarrow Y$가 이루는 pair $(U,f)$들의 equivalence class이다. 여기에서 두 pair $(U,f)$와 $(V,g)$가 동치라는 것은 $U\cap V$에 포함되면서 $X$에서 dense인 열린집합 $W$가 존재하여 $f\vert_W=g\vert_W$인 것이다. 
+:::
+
+Rational map은 $\varphi: X \dashrightarrow Y$와 같이 점선 화살표로 적으며, 점선은 $\varphi$가 $X$의 모든 점에서 정의되지 않을 수 있음을 나타낸다. 위의 관계가 실제로 동치관계인 것은 dense인 두 열린집합의 교집합이 다시 dense이기 때문인데, $U_1,U_2$가 dense이고 $W$가 $X$의 공집합이 아닌 열린집합이면 $W\cap U_1$이 다시 공집합이 아닌 열린집합이 되어 $U_2$와 만나기 때문이다. 
+
+$X$가 reduced이고 $Y$가 affine이면 이 동치관계는 두 morphism이 $U\cap V$ 전체에서 일치한다는 조건과 같아진다. 실제로 $Y=\Spec B$라 하면 두 morphism $f,g: U\cap V \rightarrow Y$는 [§아핀스킴, ⁋정리 13](/ko/math/scheme_theory/affine_schemes#thm13)에 의하여 ring homomorphism $B \rightarrow \Gamma(U\cap V, \mathcal{O}_X)$에 대응되고, $U\cap V$는 reduced scheme이며 $W$는 그 안에서 dense이므로 [보조정리 21](#lem21)에 의하여 $\Gamma(U\cap V, \mathcal{O}_X) \rightarrow \Gamma(W, \mathcal{O}_X)$가 injective이기 때문이다.
+
+Rational map $\varphi: X \dashrightarrow Y$가 *dominant*라는 것은 그 representative $(U,f)$가 [정의 19](#def19)의 의미에서 dominant morphism인 것이다. 이는 representative의 선택에 의존하지 않는데, $W\subseteq U$가 $X$에서 dense인 열린집합이면 $W$는 $U$에서도 dense이고 $f$가 연속함수이므로 $f(U)\subseteq \cl(f(W))$, 곧 $\cl(f(U))=\cl(f(W))$가 성립하기 때문이다. 
+
+두 rational map $\varphi: X\dashrightarrow Y$와 $\psi: Y \dashrightarrow Z$를 합성하려면 각각의 representative $(U,f)$와 $(V,g)$에 대하여 $f^{-1}(V)$가 다시 $X$에서 dense여야 한다. $\varphi$가 dominant이면 $f(U)$가 dense이므로 $f^{-1}(V)$가 적어도 공집합은 아니지만, 이것만으로 dense가 되지는 않는다. 가령 $X$를 $\mathbb{A}^1_\mathbb{K}$와 $\Spec\mathbb{K}$의 disjoint union으로, $Y=\mathbb{A}^1_\mathbb{K}$로 두고 $f$를 첫째 성분에서는 항등사상, 둘째 성분에서는 closed point $p$로 보내는 morphism으로 두면 $f$는 dominant이지만, $V=Y\setminus \{p\}$에 대하여 $f^{-1}(V)$는 둘째 성분과 만나지 않는다.
+
+이 현상은 $X$가 irreducible이면 일어나지 않는다. Irreducible scheme에서는 공집합이 아닌 열린집합이 모두 dense이기 때문이다. 따라서 이하에서 우리는 $X$와 $Y$를 integral scheme으로 둔다. 이는 [§스킴의 대수구조, ⁋명제 4](/ko/math/scheme_theory/algebra_of_schemes#prop4)에 의하여 irreducibility와 reducedness를 동시에 요구하는 것이므로, 앞의 [보조정리 21](#lem21)까지 함께 쓸 수 있게 해 준다. 그럼 dominant rational map $\varphi: X\dashrightarrow Y$와 임의의 rational map $\psi: Y \dashrightarrow Z$의 합성 $\psi\circ\varphi$가 representative $(f^{-1}(V), g\circ f)$로 잘 정의된다. 이것이 representative의 선택에 의존하지 않는 것은, $(U,f)$와 $(U',f')$가 dense open subset $W$에서 일치하고 $(V,g)$와 $(V',g')$가 dense open subset $W'$에서 일치할 때 두 합성이 $W\cap f^{-1}(W')$에서 일치하며, $f(W)$가 dense이므로 이것이 다시 공집합이 아닌 열린집합이기 때문이다.
+
+::: 정의 23
+Integral scheme $X, Y$ 사이의 dominant rational map $\varphi: X \dashrightarrow Y$가 *birational map<sub>쌍유리 사상</sub>*이라는 것은 dominant rational map $\psi: Y \dashrightarrow X$가 존재하여 $\psi\circ\varphi$와 $\varphi\circ\psi$가 각각 $\id_X$와 $\id_Y$가 정의하는 rational map과 같은 것이다. 두 integral scheme $X, Y$가 *birationally equivalent<sub>쌍유리 동치</sub>*라는 것은 이러한 birational map $\varphi: X\dashrightarrow Y$가 존재하는 것이다. 
+:::
+
+Isomorphism이 두 scheme이 완전히 같은 구조를 갖는다는 뜻이라면, birational equivalence는 두 scheme이 dense인 열린집합 위에서 같은 구조를 갖는다는 뜻이다. 이를 정확히 적은 것이 다음 명제이다.
+
+::: 명제 24
+Integral scheme $X, Y$ 사이의 dominant rational map $\varphi: X \dashrightarrow Y$에 대하여 다음 두 조건이 동치이다.
+
+1. $\varphi$는 birational map이다. 
+2. $X$의 공집합이 아닌 열린집합 $\tilde U$와 $Y$의 공집합이 아닌 열린집합 $\tilde V$가 존재하여, isomorphism $\tilde U \rightarrow \tilde V$가 $\varphi$의 representative가 된다. 
+:::
+::: 증명
+우선 $\varphi$가 birational map이라 하고, $\varphi$의 representative $(U,f)$와 그 역할을 하는 $\psi$의 representative $(V,g)$를 택하자. 그럼 $\psi\circ\varphi=\id_X$로부터 $X$의 공집합이 아닌 열린집합 $W_1\subseteq f^{-1}(V)$가 존재하여 $(g\circ f)\vert_{W_1}=\id_{W_1}$이고, $\varphi\circ\psi=\id_Y$로부터 $Y$의 공집합이 아닌 열린집합 $W_2\subseteq g^{-1}(U)$가 존재하여 $(f\circ g)\vert_{W_2}=\id_{W_2}$이다. 이제
+
+$$\tilde U=W_1\cap f^{-1}(W_2),\qquad \tilde V=W_2\cap g^{-1}(W_1)$$
+
+으로 두자. $W_1$이 $U$에서 dense이고 $\varphi$가 dominant이므로 $\cl(f(W_1))=\cl(f(U))=Y$이고, 따라서 공집합이 아닌 열린집합 $W_2$는 $f(W_1)$과 만나 $\tilde U\neq\emptyset$이다. 
+
+$\tilde U$의 점 $x$에 대하여 $f(x)\in W_2$이고, $x\in W_1$이므로 $g(f(x))=x\in W_1$, 곧 $f(x)\in g^{-1}(W_1)$이다. 따라서 $f(\tilde U)\subseteq \tilde V$이며, 같은 방식으로 $\tilde V$의 점 $y$에 대하여 $g(y)\in W_1$이고 $f(g(y))=y\in W_2$이므로 $g(\tilde V)\subseteq \tilde U$이다. 이렇게 얻어진 두 morphism $f\vert_{\tilde U}: \tilde U \rightarrow \tilde V$와 $g\vert_{\tilde V}: \tilde V \rightarrow \tilde U$는 $\tilde U\subseteq W_1$과 $\tilde V\subseteq W_2$에 의하여 그 합성이 각각 항등사상이 되므로 $f\vert_{\tilde U}$는 isomorphism이고, $\tilde U$가 $X$에서 dense이므로 $(\tilde U, f\vert_{\tilde U})$는 $\varphi$의 representative이다. 
+
+거꾸로 isomorphism $f: \tilde U \rightarrow \tilde V$가 $\varphi$의 representative라 하고 그 역사상을 $h: \tilde V \rightarrow \tilde U$라 하자. 그럼 $\tilde V$가 $Y$에서 dense이므로 $h$와 open subset의 포함사상 $\tilde U \hookrightarrow X$의 합성은 rational map $\psi: Y \dashrightarrow X$를 정의하며, $h$가 surjective이므로 $\psi$는 dominant이다. 또 $\psi\circ\varphi$는 $\tilde U$ 위에서 $h\circ f=\id_{\tilde U}$이고 $\varphi\circ\psi$는 $\tilde V$ 위에서 $f\circ h=\id_{\tilde V}$이므로, 이 둘은 각각 $\id_X$와 $\id_Y$가 정의하는 rational map과 같다. 
+:::
+
+Integral scheme $X$가 locally Noetherian이면 [§스킴의 대수구조, ⁋정의 12](/ko/math/scheme_theory/algebra_of_schemes#def12)의 유리함수의 정의역은 정확히 $X$의 공집합이 아닌 열린집합이 된다. 실제로 $X$의 공집합이 아닌 affine open subset $\Spec A$에 대하여 $A$는 integral domain이므로 ([§스킴의 대수구조, ⁋정의 1](/ko/math/scheme_theory/algebra_of_schemes#def1)) $0$이 아닌 원소의 annihilator는 언제나 $(0)$이고, 따라서 $\Spec A$의 associated point는 $(0)$ 하나뿐이다. 곧 $X$의 associated point는 generic point $\eta$ 하나뿐이므로, 정의역이 모든 associated point를 담아야 한다는 조건은 정의역이 공집합이 아니라는 조건과 같아진다. 이렇게 얻어진 유리함수들의 모임 $K(X)$가 $\mathcal{O}_{X,\eta}\cong\Frac A$와 일치하여 field가 되는 것은 이미 확인하였으며 ([§스킴의 대수구조, §§유리함수](/ko/math/scheme_theory/algebra_of_schemes#유리함수)), 이를 $X$의 *function field*라 부른다.
+
+::: 따름정리 25
+Birationally equivalent한 두 integral locally Noetherian scheme $X, Y$에 대하여 $K(X)\cong K(Y)$가 성립한다. 
+:::
+::: 증명
+[명제 24](#prop24)에 의하여 isomorphism $f: \tilde U \rightarrow \tilde V$를 representative로 갖는 birational map이 존재한다. $X$의 generic point $\eta_X$는 공집합이 아닌 열린집합 $\tilde U$에 속하고 stalk은 open subscheme으로 제한하여도 변하지 않으므로 $K(X)=\mathcal{O}_{X,\eta_X}=\mathcal{O}_{\tilde U, \eta_X}$이고, 같은 이유로 $K(Y)=\mathcal{O}_{\tilde V, \eta_Y}$이다. 한편 $\tilde V$가 $Y$의 공집합이 아닌 열린집합이므로 그 generic point는 $\eta_Y$이고, $f$가 isomorphism이므로 $f(\eta_X)=\eta_Y$이다. 따라서 $f$가 유도하는 stalk 사이의 isomorphism이 $K(X)\cong K(Y)$를 준다. 
+:::
+
+즉 birational equivalence는 function field를 보존한다. Variety의 경우에는 그 역 또한 성립하는 것을 [\[대수다양체\] §유리사상, ⁋명제 10](/ko/math/algebraic_varieties/rational_maps#prop10)에서 확인하였다. 

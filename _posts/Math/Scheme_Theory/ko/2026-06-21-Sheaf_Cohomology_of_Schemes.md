@@ -1,7 +1,7 @@
 ---
 title: "스킴의 층 코호몰로지"
-description: '대수다양체 위에서 도입한 층 코호몰로지를 임의의 스킴 위의 준연접층으로 끌어올린다. Abelian sheaf 범주의 유도 함자로서의 정의와 affine 덮개에 대한 Čech 코호몰로지를 다루고, affine scheme 위 준연접층의 소멸 정리로부터 separated scheme 위에서 두 코호몰로지가 일치함을 보인다. 사영공간 위 $$\mathcal{O}(d)$$의 코호몰로지를 재계산하고, Noetherian projective scheme 위 연접층의 유한성과 Serre vanishing을 증명한다.'
-excerpt: "Cohomology of quasi-coherent sheaves, Serre's affine vanishing, and Serre vanishing on projective schemes"
+description: '대수다양체 위에서 도입한 층 코호몰로지를 임의의 스킴 위의 준연접층으로 끌어올린다. Abelian sheaf 범주의 유도 함자로서의 정의와 affine 덮개에 대한 Čech 코호몰로지를 다루고, affine scheme 위 준연접층의 소멸 정리로부터 separated scheme 위에서 두 코호몰로지가 일치함을 보인다. 사영공간 위 $$\mathcal{O}(d)$$의 코호몰로지를 재계산하고, Noetherian projective scheme 위 연접층의 유한성과 Serre vanishing을 증명한다. 이어 ample invertible sheaf를 higher cohomology의 소멸로 특징짓는 Serre의 판정법을 얻고, Euler characteristic과 Hilbert polynomial을 도입하여 사영 부분스킴의 degree를 정의한다.'
+excerpt: "Cohomology of quasi-coherent sheaves, Serre vanishing, the cohomological criterion for ampleness, and Hilbert polynomials"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/sheaf_cohomology_of_schemes
@@ -15,7 +15,7 @@ published: false
 drift_needed: true
 ---
 
-우리는 [\[대수다양체\] §층 코호몰로지](/ko/math/algebraic_varieties/sheaf_cohomology)에서 quasi-projective variety 위의 quasi-coherent sheaf에 대한 sheaf cohomology를 derived functor로 정의하고, Čech cohomology와의 비교 및 Leray 정리를 통해 이를 계산하는 방법을 살펴보았다. 그곳의 논증은 사실상 quasi-projective라는 가정을 거의 사용하지 않으며, separated 조건과 affine 위의 소멸 정리만으로 작동한다. 이제 우리는 [§준연접층](/ko/math/scheme_theory/quasicoherent_sheaves)에서 임의의 scheme 위로 끌어올린 quasi-coherent sheaf의 언어를 갖추었으므로, sheaf cohomology 또한 임의의 scheme 위로 옮겨 다시 정립할 수 있다. 이 글에서 우리는 그 정의를 scheme 수준에서 다시 적고, **Serre의 affine 소멸 정리**가 affine scheme 위에서 quasi-coherent sheaf의 higher cohomology를 죽인다는 것을 증명하며, 이를 토대로 사영공간 위의 line bundle $\mathcal{O}(d)$의 cohomology를 재계산한다. 마지막으로 Noetherian projective scheme 위에서 coherent sheaf의 cohomology가 유한차원이라는 것과, 충분히 twist하면 higher cohomology가 소멸한다는 Serre vanishing을 다룬다.
+우리는 [\[대수다양체\] §층 코호몰로지](/ko/math/algebraic_varieties/sheaf_cohomology)에서 quasi-projective variety 위의 quasi-coherent sheaf에 대한 sheaf cohomology를 derived functor로 정의하고, Čech cohomology와의 비교 및 Leray 정리를 통해 이를 계산하는 방법을 살펴보았다. 그곳의 논증은 사실상 quasi-projective라는 가정을 거의 사용하지 않으며, separated 조건과 affine 위의 소멸 정리만으로 작동한다. 이제 우리는 [§준연접층](/ko/math/scheme_theory/quasicoherent_sheaves)에서 임의의 scheme 위로 끌어올린 quasi-coherent sheaf의 언어를 갖추었으므로, sheaf cohomology 또한 임의의 scheme 위로 옮겨 다시 정립할 수 있다. 이 글에서 우리는 그 정의를 scheme 수준에서 다시 적고, **Serre의 affine 소멸 정리**가 affine scheme 위에서 quasi-coherent sheaf의 higher cohomology를 죽인다는 것을 증명하며, 이를 토대로 사영공간 위의 line bundle $\mathcal{O}(d)$의 cohomology를 재계산한다. 이어 Noetherian projective scheme 위에서 coherent sheaf의 cohomology가 유한차원이라는 것과, 충분히 twist하면 higher cohomology가 소멸한다는 Serre vanishing을 다룬다. 이로부터 ample invertible sheaf를 higher cohomology의 소멸로 특징짓는 Serre의 판정법을 얻고, 마지막으로 coherent sheaf의 Euler characteristic과 Hilbert polynomial을 도입하여 사영 부분스킴의 degree를 정의한다.
 
 ## 유도 함자로서의 코호몰로지
 
@@ -143,7 +143,7 @@ $$H^n(\mathbb{P}^n_A, \mathcal{O}(d))\cong H^0(\mathbb{P}^n_A, \mathcal{O}(-d-n-
 
 ## Noetherian projective scheme 위의 연접층
 
-이제 임의의 Noetherian projective scheme $X$와 그 위의 coherent sheaf ([§준연접층, ⁋정의 11](/ko/math/scheme_theory/quasicoherent_sheaves#def11)) $\mathcal{F}$에 대하여, cohomology의 두 가지 근본적 성질을 다룬다. 하나는 각 $H^i(X, \mathcal{F})$이 유한차원이라는 것이고, 다른 하나는 충분히 twist하면 higher cohomology가 소멸한다는 Serre vanishing이다. Projective scheme $X$는 어떤 사영공간 $\mathbb{P}^n_{\mathbb{K}}$의 closed subscheme이며, 그 위에 $\mathcal{O}_X(1)=\mathcal{O}_{\mathbb{P}^n}(1)\vert_X$을 twisting을 위한 ample line bundle로 사용한다. Coherent sheaf $\mathcal{F}$에 대해 $\mathcal{F}(d)=\mathcal{F}\otimes_{\mathcal{O}_X}\mathcal{O}_X(d)$로 적는다.
+이제 임의의 Noetherian projective scheme $X$와 그 위의 coherent sheaf ([§준연접층, ⁋정의 11](/ko/math/scheme_theory/quasicoherent_sheaves#def11)) $\mathcal{F}$에 대하여, cohomology의 두 가지 근본적 성질을 다룬다. 하나는 각 $H^i(X, \mathcal{F})$이 유한차원이라는 것이고, 다른 하나는 충분히 twist하면 higher cohomology가 소멸한다는 Serre vanishing이다. Projective scheme $X$는 어떤 사영공간 $\mathbb{P}^n_{\mathbb{K}}$의 closed subscheme이며, 그 위에 $\mathcal{O}_X(1)=\mathcal{O}_{\mathbb{P}^n}(1)\vert_X$을 twisting을 위한 line bundle로 사용한다. 좌표들의 restriction $\x_0\vert_X,\ldots, \x_n\vert_X$이 $\mathcal{O}_X(1)$을 globally generate하고 이들이 정의하는 morphism이 곧 포함사상 $X\hookrightarrow\mathbb{P}^n_\mathbb{K}$이므로, $\mathcal{O}_X(1)$은 very ample invertible sheaf이다. ([§인자와 선형계, ⁋정의 18](/ko/math/scheme_theory/divisors_and_linear_systems#def18)) Coherent sheaf $\mathcal{F}$에 대해 $\mathcal{F}(d)=\mathcal{F}\otimes_{\mathcal{O}_X}\mathcal{O}_X(d)$로 적는다.
 
 먼저 closed immersion을 따라 cohomology가 보존된다는 관찰이 핵심이다. Closed embedding $\iota:X\hookrightarrow\mathbb{P}^n_{\mathbb{K}}$은 affine 사상이므로, pushforward $\iota_\ast$가 affine 위에서 정확하고 higher direct image를 만들지 않아 $H^i(X, \mathcal{F})\cong H^i(\mathbb{P}^n, \iota_\ast\mathcal{F})$이 성립한다. 따라서 두 성질 모두 $X=\mathbb{P}^n_{\mathbb{K}}$인 경우로 환원된다.
 
@@ -173,7 +173,7 @@ $$H^i(\mathbb{P}^n, \mathcal{O}(-d)^{\oplus r}) \rightarrow H^i(\mathbb{P}^n, \m
 [정리 7](#thm7)은 projective scheme 위의 coherent sheaf가 좋은 유한성을 가짐을 보장한다. 이는 affine 위의 finitely generated 가군에 대한 유한성이 cohomology 수준에서 사영적 상황으로 옮겨진 것이며, [\[대수다양체\] §사영공간의 코호몰로지, ⁋정의 2](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#def2)의 Euler characteristic과 같은 불변량이 잘 정의되는 근거가 된다. 위 증명의 귀납에 사용한 globally generated 성질과 twist 후의 소멸은 다음 Serre vanishing에서 정량적으로 다시 등장한다.
 
 ::: 정리 8 (Serre Vanishing)
-Field $\mathbb{K}$ 위의 Noetherian projective scheme $X$와 ample line bundle $\mathcal{O}_X(1)$, 그리고 coherent sheaf $\mathcal{F}$에 대하여, 충분히 큰 $d\gg 0$에 대해
+Field $\mathbb{K}$ 위의 Noetherian projective scheme $X$와 closed immersion $X\hookrightarrow\mathbb{P}^n_\mathbb{K}$이 주는 very ample line bundle $\mathcal{O}_X(1)$ ([§인자와 선형계, ⁋정의 18](/ko/math/scheme_theory/divisors_and_linear_systems#def18)), 그리고 coherent sheaf $\mathcal{F}$에 대하여, 충분히 큰 $d\gg 0$에 대해
 
 $$H^i(X, \mathcal{F}(d))=0 \qquad (i>0)$$
 
@@ -200,6 +200,172 @@ $$H^i(\mathbb{P}^n, \mathcal{O}(d-d_0)^{\oplus r}) \rightarrow H^i(\mathbb{P}^n,
 :::
 
 [정리 8](#thm8)은 [\[대수다양체\] §사영공간의 코호몰로지, ⁋명제 4](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop4)의 Serre vanishing을 scheme 수준으로 옮긴 것으로, 그 증명의 골격은 line bundle의 cohomology를 아는 $\mathbb{P}^n$으로 환원한 뒤 coherent sheaf를 free sheaf의 quotient로 분해하여 dimension shifting을 반복하는 것이다. 정성적으로 이 정리는 임의의 coherent sheaf가 충분히 양의 방향으로 twist되면 사영공간 위의 line bundle처럼 "고차 정보가 사라지는" 단계에 도달함을 말해 준다. 함께 얻은 global generation은 twist된 sheaf가 global section만으로 완전히 생성됨을 뜻하며, 이는 coherent sheaf를 free sheaf의 resolution으로 표현하는 출발점이 되어 projective scheme 위의 homology적 대수의 토대를 이룬다.
+
+## Ampleness의 코호몰로지 판정
+
+[정리 8](#thm8)의 증명에서 실제로 사용한 것은 $\mathcal{O}_X(1)$이 $X$를 사영공간 안으로 넣는 embedding에서 온다는 것, 곧 very ample이라는 것뿐이었다. 반면 [§인자와 선형계](/ko/math/scheme_theory/divisors_and_linear_systems)에서 정의한 ampleness는 사영공간을 전혀 언급하지 않고 오직 twist 후의 global generation만을 요구하는 조건이었다. 이 절에서 우리는 두 조건이 거듭제곱을 허용하면 일치한다는 것과, ampleness가 higher cohomology의 소멸만으로 판정된다는 Serre의 결과를 다룬다.
+
+::: 따름정리 9
+Field $\mathbb{K}$ 위의 Noetherian projective scheme $X$ 위의 very ample invertible sheaf $\mathcal{L}$은 ample이다. ([§인자와 선형계, ⁋정의 19](/ko/math/scheme_theory/divisors_and_linear_systems#def19))
+:::
+::: 증명
+$\mathcal{L}$이 very ample이므로 이를 globally generate하는 유한 개의 절단이 locally closed embedding $\iota:X \rightarrow \mathbb{P}^N_\mathbb{K}$를 정의하고 $\mathcal{L}\cong\iota^\ast\mathcal{O}(1)$이다. $X$가 $\mathbb{K}$ 위에서 projective이므로 $\iota(X)$는 닫힌집합이며 ([§값매김환, ⁋따름정리 16](/ko/math/scheme_theory/valuative_criteria#cor16)), 따라서 $\iota$는 closed immersion이다. 그럼 $\mathcal{L}$은 [정리 8](#thm8)에서 $\mathcal{O}_X(1)$이 맡은 역할을 그대로 할 수 있으므로, 임의의 coherent sheaf $\mathcal{F}$에 대하여 충분히 큰 모든 $d$에서 $\mathcal{F}\otimes\mathcal{L}^{\otimes d}$은 globally generated이다. 이것이 ampleness의 정의이다.
+:::
+
+역방향은 그대로 성립하지 않는다. Ample invertible sheaf는 절단이 부족하여 embedding을 주지 못할 수 있고, 이를 해소하려면 여러 번 tensor하여 절단을 늘려야 한다. 다음 정리는 그것이 언제나 가능함을 말해준다.
+
+::: 정리 10
+Field $\mathbb{K}$ 위의 Noetherian projective scheme $X$ 위의 invertible sheaf $\mathcal{L}$에 대하여, $\mathcal{L}$이 ample인 것과 적당한 $m>0$에 대하여 $\mathcal{L}^{\otimes m}$이 very ample인 것은 서로 동치이다.
+:::
+::: 증명
+$\mathcal{L}^{\otimes m}$이 very ample이라 하자. [따름정리 9](#cor9)에 의하여 $\mathcal{L}^{\otimes m}$은 ample이고, [§인자와 선형계, ⁋명제 20](/ko/math/scheme_theory/divisors_and_linear_systems#prop20)의 2번에 의하여 $\mathcal{L}$ 또한 ample이다.
+
+거꾸로 $\mathcal{L}$이 ample이라 하자. Closed point $x\in X$를 고정하고, $\mathcal{L}$이 자명해지는 affine open neighborhood $U\ni x$를 잡자. $Y=X\setminus U$에 reduced closed subscheme 구조를 주어 그 ideal sheaf $\mathcal{I}_Y$를 생각하면 이는 coherent sheaf이므로, ampleness에 의하여 적당한 $n>0$에 대해 $\mathcal{I}_Y\otimes\mathcal{L}^{\otimes n}$은 globally generated이다. $x\notin Y$이므로 $(\mathcal{I}_Y)_x=\mathcal{O}_{X,x}$이고, 따라서 $x$에서 소멸하지 않는 절단 $s\in\Gamma(X, \mathcal{I}_Y\otimes\mathcal{L}^{\otimes n})\subseteq\Gamma(X, \mathcal{L}^{\otimes n})$이 존재한다. 이 $s$는 $Y$ 위에서 소멸하므로 $s$가 stalk를 생성하는 열린집합 $X_s$는 $U$에 포함되고, $U$ 위에서 $\mathcal{L}^{\otimes n}$을 자명화하면 $s$는 함수 $f\in\Gamma(U, \mathcal{O}_X)$에 대응하여 $X_s=D(f)$는 affine이다.
+
+$X$는 quasi-compact이므로 유한 개의 closed point에서 얻은 $X_{s_1},\ldots, X_{s_k}$가 $X$를 덮는다. $X_{s^e}=X_s$이므로 각각의 $s_i$를 적당한 거듭제곱으로 바꾸어 공통의 $m$에 대해 $s_i\in\Gamma(X, \mathcal{L}^{\otimes m})$이라 가정해도 된다. $X$가 $\mathbb{K}$ 위에서 finite type이므로 각각의 $B_i=\Gamma(X_{s_i}, \mathcal{O}_X)$는 finitely generated $\mathbb{K}$-대수이고, 그 generator $b_{i1},\ldots, b_{ir_i}$를 택하자. 그럼 충분히 큰 공통의 $N$에 대하여 $s_i^Nb_{ij}$가 $X$ 전체의 절단 $t_{ij}\in\Gamma(X, \mathcal{L}^{\otimes mN})$으로 연장된다. 이는 $X_{s_i}$ 위의 절단에 $s_i$의 거듭제곱을 곱해 분모를 없앤 뒤 유한 개의 affine chart 위에서 이어 붙이는 표준적인 논증이며, 자세한 내용은 [Har]의 II.5.14에 있다.
+
+이제 절단들 $s_1^N,\ldots, s_k^N$과 $t_{ij}$들을 함께 생각하자. $X_{s_i^N}=X_{s_i}$들이 $X$를 덮으므로 이들은 $\mathcal{L}^{\otimes mN}$을 globally generate하고, 따라서 morphism $\varphi:X \rightarrow \mathbb{P}^M_\mathbb{K}$를 정의한다. ([§인자와 선형계, §§Ample invertible sheaf](/ko/math/scheme_theory/divisors_and_linear_systems#ample-invertible-sheaf)) $s_i^N$에 대응하는 좌표가 소멸하지 않는 standard chart를 $V_i\subseteq\mathbb{P}^M_\mathbb{K}$라 하면 $\varphi^{-1}(V_i)=X_{s_i}$이고, $\varphi$의 구성에 의하여 $\varphi\vert_{X_{s_i}}:X_{s_i} \rightarrow V_i$는 좌표를 $t_{ij}/s_i^N=b_{ij}$로 보내는 ring homomorphism에 대응한다. $b_{ij}$들이 $B_i$를 생성하므로 이 homomorphism은 surjective이고, 따라서 $\varphi\vert_{X_{s_i}}$는 closed immersion이다. ([§아핀스킴, ⁋정리 13](/ko/math/scheme_theory/affine_schemes#thm13), [§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)) Closed immersion인 것은 target에 대해 국소적인 조건이므로 $\varphi$는 열린집합 $\bigcup_iV_i$ 위로의 closed immersion, 곧 locally closed embedding이며 $\mathcal{L}^{\otimes mN}\cong\varphi^\ast\mathcal{O}(1)$은 very ample이다.
+:::
+
+[정리 10](#thm10)은 ampleness가 $\mathcal{L}$ 하나가 아니라 그 거듭제곱들이 함께 결정하는 성질임을 다시 확인해 준다. 실제로 [§인자와 선형계, ⁋명제 20](/ko/math/scheme_theory/divisors_and_linear_systems#prop20)의 2번은 ampleness가 거듭제곱을 취하여도 변하지 않는다고 말하는데, very ampleness는 그렇지 않으므로 두 개념 사이의 간극은 정확히 이 거듭제곱만큼이다. 이제 [정리 8](#thm8)과 합치면 ampleness를 cohomology만으로 읽어낼 수 있다.
+
+::: 정리 11 (Serre의 판정법)
+Field $\mathbb{K}$ 위의 Noetherian projective scheme $X$ 위의 invertible sheaf $\mathcal{L}$에 대하여 다음 두 조건은 서로 동치이다.
+
+1. $\mathcal{L}$은 ample이다.
+2. 임의의 coherent sheaf $\mathcal{F}$에 대하여 적당한 $n_0$가 존재하여, 모든 $i>0$과 $n\geq n_0$에 대해 $H^i(X, \mathcal{F}\otimes_{\mathcal{O}_X}\mathcal{L}^{\otimes n})=0$이다.
+:::
+::: 증명
+1번을 가정하자. [정리 10](#thm10)에 의하여 적당한 $m>0$에 대해 $\mathcal{L}^{\otimes m}$이 very ample이므로, 이것이 주는 closed immersion을 통해 [정리 8](#thm8)을 $\mathcal{L}^{\otimes m}$을 twisting sheaf로 삼아 적용할 수 있다. 유한 개의 coherent sheaf $\mathcal{F}\otimes\mathcal{L}^{\otimes q}$ ($q=0,1,\ldots, m-1$) 각각에 이를 적용하면, $p\geq p_q$인 모든 $p$에 대해
+
+$$H^i\bigl(X, \mathcal{F}\otimes\mathcal{L}^{\otimes q}\otimes(\mathcal{L}^{\otimes m})^{\otimes p}\bigr)=0 \qquad (i>0)$$
+
+이도록 하는 $p_q$를 얻는다. $n_0=m(\max_qp_q+1)$로 두면 $n\geq n_0$인 임의의 $n$은 $n=q+mp$ ($0\leq q<m$, $p\geq p_q$)의 꼴로 적히므로 원하는 소멸을 얻는다.
+
+거꾸로 2번을 가정하고 coherent sheaf $\mathcal{F}$를 고정하자. Closed point $P\in X$의 ideal sheaf를 $\mathcal{I}_P$라 하고 $\mathcal{I}_P\mathcal{F}$를 $\mathcal{I}_P\otimes\mathcal{F} \rightarrow \mathcal{F}$의 image라 하면, quotient $\mathcal{F}/\mathcal{I}_P\mathcal{F}$은 $P$에 놓인 skyscraper sheaf로서 그 값이 $\mathcal{F}_P\otimes_{\mathcal{O}_{X,P}}\kappa(P)$이다. $\mathcal{L}^{\otimes n}$이 invertible이므로 이를 텐서하여도 exactness가 보존되고, 가정을 coherent sheaf $\mathcal{I}_P\mathcal{F}$에 적용하면 적당한 $n_1$이 존재하여 $n\geq n_1$마다 $H^1(X, \mathcal{I}_P\mathcal{F}\otimes\mathcal{L}^{\otimes n})=0$이다. 그럼 [명제 2](#prop2)의 long exact sequence에 의하여
+
+$$\Gamma(X, \mathcal{F}\otimes\mathcal{L}^{\otimes n}) \longrightarrow (\mathcal{F}\otimes\mathcal{L}^{\otimes n})_P\otimes_{\mathcal{O}_{X,P}}\kappa(P) \longrightarrow 0$$
+
+이 exact이다. Stalk $(\mathcal{F}\otimes\mathcal{L}^{\otimes n})_P$는 Noetherian local ring $\mathcal{O}_{X,P}$ 위의 finitely generated 가군이므로, [\[가환대수학\] §정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8)의 2번에 의하여 유한 개의 global section의 germ이 이 stalk를 생성한다. 그 절단들이 정의하는 $\mathcal{O}_X^{\oplus r} \rightarrow \mathcal{F}\otimes\mathcal{L}^{\otimes n}$의 cokernel은 coherent sheaf이고 그 stalk가 $P$에서 $0$이므로, coherent sheaf의 support가 닫혀 있다는 것에서 $P$의 어떤 열린근방 위에서 $\mathcal{F}\otimes\mathcal{L}^{\otimes n}$은 globally generated이다.
+
+이 논증은 $n\geq n_1$인 모든 $n$에서 성립하되 열린근방이 $n$에 따라 달라지므로, 이를 하나로 묶어야 한다. 위의 논증을 $\mathcal{F}=\mathcal{O}_X$에 적용하면 적당한 $m\geq1$이 존재하여 $\mathcal{L}^{\otimes m}$과 $\mathcal{L}^{\otimes(m+1)}$이 모두 $P$에서 global section들로 생성되므로, 두 열린근방의 교집합 $W$ 위에서 둘 다 globally generated이다. Globally generated인 두 가군층의 tensor product는 stalk의 generator들의 tensor를 보면 다시 globally generated이므로, $a,b\geq0$에 대하여 $\mathcal{L}^{\otimes(am+b(m+1))}$은 $W$ 위에서 globally generated이다. $m$과 $m+1$이 서로소이므로 $k\geq m^2$인 모든 정수 $k$가 $am+b(m+1)$의 꼴로 적히고, 곧 $W$ 위에서는 $k\geq m^2$인 모든 $k$에 대해 $\mathcal{L}^{\otimes k}$이 globally generated이다. 한편 $\mathcal{F}$ 자신에 대해 $n_2\geq n_1$을 하나 택하면 $\mathcal{F}\otimes\mathcal{L}^{\otimes n_2}$은 $P$의 어떤 열린근방 $V$ 위에서 globally generated이므로, $W\cap V$ 위에서는 $n\geq n_2+m^2$인 모든 $n$에 대해
+
+$$\mathcal{F}\otimes\mathcal{L}^{\otimes n}\cong(\mathcal{F}\otimes\mathcal{L}^{\otimes n_2})\otimes\mathcal{L}^{\otimes(n-n_2)}$$
+
+이 globally generated이다.
+
+마지막으로 $X$가 $\mathbb{K}$ 위에서 finite type이므로 각 affine chart의 coordinate ring은 Jacobson ring이고 ([\[가환대수학\] §영점정리, ⁋정리 4](/ko/math/commutative_algebra/nullstellensatz#thm4)), 따라서 $X$의 공집합 아닌 닫힌집합은 언제나 $X$의 closed point를 포함한다. 곧 closed point들에서 얻은 위의 열린근방들은 $X$ 전체를 덮으며, $X$가 quasi-compact이므로 유한 개 $P_1,\ldots, P_r$의 것만으로 덮인다. 각각에 대응하는 하한들의 최댓값을 $n_0$로 두면 $n\geq n_0$마다 $\mathcal{F}\otimes\mathcal{L}^{\otimes n}$은 $X$ 전체에서 globally generated이므로 $\mathcal{L}$은 ample이다.
+:::
+
+[정리 11](#thm11)의 2번은 사영공간으로의 embedding을 전혀 언급하지 않으므로, 구체적인 절단을 다루지 않고도 line bundle의 양성을 확인할 수 있는 도구가 된다. 소멸을 요구한 것은 $i>0$ 전체이지만 증명에서 실제로 쓰인 것은 $H^1$의 소멸뿐이며, 이는 $H^1$이 절단의 확장을 막는 유일한 장애물이라는 사실의 반영이다.
+
+## Euler characteristic과 Hilbert polynomial
+
+[정리 7](#thm7)에 의하여 projective scheme 위의 coherent sheaf는 유한 개의 유한차원 cohomology만을 가지므로, 그 차원들의 교대합을 취할 수 있다.
+
+::: 정의 12
+Field $\mathbb{K}$ 위의 Noetherian projective scheme $X$와 그 위의 coherent sheaf $\mathcal{F}$에 대하여, $\mathcal{F}$의 *Euler characteristic<sub>오일러 지표</sub>*을 다음의 식
+
+$$\rchi(X, \mathcal{F})=\sum_{i\geq 0}(-1)^i\dim_\mathbb{K}H^i(X, \mathcal{F})$$
+
+으로 정의한다.
+:::
+
+[정리 7](#thm7)에 의하여 우변은 유한합이고 각 항이 유한하므로 $\rchi(X, \mathcal{F})$는 정수이며, $X$가 문맥에서 분명할 때에는 $\rchi(\mathcal{F})$로 줄여 적는다. 이는 [\[대수다양체\] §사영공간의 코호몰로지, ⁋정의 2](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#def2)를 scheme 위로 옮긴 것이다. 개별 차원 $\dim_\mathbb{K}H^i(X, \mathcal{F})$는 sheaf를 조금만 움직여도 뛸 수 있지만 그 교대합은 훨씬 안정적인데, 그 근원은 다음의 가법성이다.
+
+::: 명제 13
+Field $\mathbb{K}$ 위의 Noetherian projective scheme $X$ 위의 coherent sheaf들에 대하여 다음이 성립한다.
+
+1. Short exact sequence $0 \rightarrow \mathcal{F}' \rightarrow \mathcal{F} \rightarrow \mathcal{F}'' \rightarrow 0$에 대하여 $\rchi(\mathcal{F})=\rchi(\mathcal{F}')+\rchi(\mathcal{F}'')$이다.
+2. 유한 exact sequence $0 \rightarrow \mathcal{F}_k \rightarrow \cdots \rightarrow \mathcal{F}_1 \rightarrow \mathcal{F}_0 \rightarrow 0$에 대하여 $\sum_{j=0}^k(-1)^j\rchi(\mathcal{F}_j)=0$이다.
+:::
+::: 증명
+먼저 유한차원 벡터공간들의 exact sequence $0 \rightarrow V_0 \rightarrow V_1 \rightarrow \cdots \rightarrow V_t \rightarrow 0$을 보자. $j$번째 선형사상의 rank를 $r_j$라 하면 ($r_{-1}=r_t=0$) exactness가 $\dim V_j=r_{j-1}+r_j$를 주므로, 교대합 $\sum_j(-1)^j\dim V_j$에서 이웃한 항들이 서로 소거되어 $0$이 된다.
+
+1번의 경우 [명제 2](#prop2)가 주는 long exact sequence
+
+$$0 \rightarrow H^0(X, \mathcal{F}') \rightarrow H^0(X, \mathcal{F}) \rightarrow H^0(X, \mathcal{F}'') \rightarrow H^1(X, \mathcal{F}') \rightarrow \cdots$$
+
+는 [정리 7](#thm7)에 의하여 유한차원 벡터공간들로 이루어져 있고 충분히 큰 차수에서 끊기므로 유한하다. 위의 관찰을 적용하면 세 sheaf의 cohomology 차원들의 교대합이 $0$이 되고, 부호를 정리하면 원하는 식이다.
+
+2번의 경우 $j\geq1$에 대하여 $\mathcal{Z}_j=\ker(\mathcal{F}_j \rightarrow \mathcal{F}_{j-1})$로 두고 $\mathcal{Z}_0=\mathcal{F}_0$이라 하자. Coherent sheaf들 사이의 morphism의 kernel은 다시 coherent sheaf이므로 각각의 $\mathcal{Z}_j$은 coherent sheaf이고, exactness에 의하여 $\mathcal{Z}_k=0$이며 각각의 $j\geq1$에 대해 short exact sequence
+
+$$0 \rightarrow \mathcal{Z}_j \rightarrow \mathcal{F}_j \rightarrow \mathcal{Z}_{j-1} \rightarrow 0$$
+
+을 얻는다. 여기에 1번을 적용하여 얻은 $\rchi(\mathcal{F}_j)=\rchi(\mathcal{Z}_j)+\rchi(\mathcal{Z}_{j-1})$을 부호를 번갈아 더하면 중간항이 모두 소거되어 $\sum_{j=1}^k(-1)^j\rchi(\mathcal{F}_j)=-\rchi(\mathcal{Z}_0)=-\rchi(\mathcal{F}_0)$을 얻는다.
+:::
+
+특히 coherent sheaf $\mathcal{F}$가 유한 resolution $0 \rightarrow \mathcal{E}_k \rightarrow \cdots \rightarrow \mathcal{E}_0 \rightarrow \mathcal{F} \rightarrow 0$을 가지면 [명제 13](#prop13)의 2번에서 $\rchi(\mathcal{F})=\sum_{j=0}^k(-1)^j\rchi(\mathcal{E}_j)$을 얻는다. 이것이 Euler characteristic을 실제로 계산하는 표준적인 경로이며, 그 출발점은 사영공간 위의 line bundle이다.
+
+::: 따름정리 14
+Field $\mathbb{K}$ 위의 사영공간 $\mathbb{P}^n_\mathbb{K}$와 임의의 정수 $d$에 대하여
+
+$$\rchi(\mathbb{P}^n_\mathbb{K}, \mathcal{O}(d))=\binom{n+d}{n}$$
+
+이 성립한다. 여기에서 $\binom{n+d}{n}$은 다항식 $t(t-1)\cdots(t-n+1)/n!$의 $t=n+d$에서의 값으로 읽는다.
+:::
+::: 증명
+[정리 6](#thm6)에서 $A=\mathbb{K}$로 두면 세 경우로 나뉜다. $d\geq0$이면 $H^0$만 남고 그 차원은 $n+1$개의 변수의 degree $d$ monomial의 개수 $\binom{n+d}{n}$이다. $-n\leq d\leq-1$이면 모든 cohomology가 소멸하며, 이 범위에서 $t=n+d$는 $0$과 $n-1$ 사이의 정수이므로 위의 다항식은 인수 $t-(n+d)$를 포함하여 $\binom{n+d}{n}=0$이다. $d\leq -n-1$이면 $H^n$만 남고 그 차원은 모든 지수가 음인 $d$차 monomial의 개수 $\binom{-d-1}{n}$이므로
+
+$$\rchi(\mathbb{P}^n_\mathbb{K}, \mathcal{O}(d))=(-1)^n\binom{-d-1}{n}=\binom{n+d}{n}$$
+
+이다. 마지막 등식은 $t=n+d$에 대해 $t(t-1)\cdots(t-n+1)=(-1)^n(n-t-1)(n-t-2)\cdots(-t)$인 것에서 얻어진다.
+:::
+
+이 값은 $d$에 대한 degree $n$의 다항식이며, [\[대수다양체\] §사영공간의 코호몰로지, ⁋따름정리 3](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#cor3)의 variety 판본과 일치한다. 곧 $\mathcal{O}(d)$를 twist해 나갈 때 cohomology의 교대합은 개별 cohomology가 겪는 세 국면과 무관하게 하나의 다항식을 따라간다. 이것이 일반적인 coherent sheaf에서도 성립한다는 것이 다음 정리이며, 이를 진술하기 위해 coherent sheaf $\mathcal{F}$의 *support*를 $\operatorname{Supp}\mathcal{F}=\{x\in X\mid \mathcal{F}_x\neq0\}$으로 정의한다. Affine chart 위에서 이는 대응하는 가군의 annihilator ideal의 zero set이므로 닫힌집합이다.
+
+::: 정리 15 (Hilbert)
+Field $\mathbb{K}$ 위의 사영공간 $\mathbb{P}^n_\mathbb{K}$의 closed subscheme $X$와 그 위의 coherent sheaf $\mathcal{F}$에 대하여, 유일한 numerical polynomial $P_\mathcal{F}$가 존재하여 ([\[가환대수학\] §힐베르트-사무엘 함수, ⁋정의 1](/ko/math/commutative_algebra/hilbert-samuel_function#def1)) 모든 정수 $d$에 대해
+
+$$\rchi(\mathcal{F}(d))=P_\mathcal{F}(d)$$
+
+이 성립한다. 뿐만 아니라 $\mathcal{F}\neq0$이면 $P_\mathcal{F}$의 degree는 $\dim\operatorname{Supp}\mathcal{F}$와 같고, 충분히 큰 $d$에 대해서는 $P_\mathcal{F}(d)=\dim_\mathbb{K}\Gamma(X, \mathcal{F}(d))$이다.
+:::
+::: 증명
+마지막 주장은 [정리 8](#thm8)에서 곧바로 얻어진다. 충분히 큰 $d$에서 $H^i(X, \mathcal{F}(d))=0$ ($i>0$)이므로 교대합에 $H^0$만 남기 때문이다. 유일성은 서로 다른 두 다항식이 무한히 많은 정수에서 일치할 수 없다는 것에서 따라온다.
+
+먼저 $X=\mathbb{P}^n_\mathbb{K}$인 경우로 환원한다. [정리 7](#thm7) 직전에 관찰한 대로 closed immersion $\iota:X\hookrightarrow\mathbb{P}^n_\mathbb{K}$에 대하여 $H^i(X, \mathcal{F}(d))\cong H^i(\mathbb{P}^n, (\iota_\ast\mathcal{F})(d))$이고 $\operatorname{Supp}\iota_\ast\mathcal{F}=\iota(\operatorname{Supp}\mathcal{F})$이므로, $\mathcal{F}$를 $\iota_\ast\mathcal{F}$로 바꾸어도 무방하다.
+
+다음으로 $\mathbb{K}$가 무한체라 가정하여도 됨을 본다. 무한체로의 확대 $\mathbb{L}\supseteq\mathbb{K}$를 잡고 $\mathbb{P}^n_\mathbb{L} \rightarrow \mathbb{P}^n_\mathbb{K}$를 따라 $\mathcal{F}$를 끌어올리자. Standard affine cover에 대한 Čech complex는 계수를 확대한 $\check C^\bullet(\mathcal{U}, \mathcal{F})\otimes_\mathbb{K}\mathbb{L}$이고 $-\otimes_\mathbb{K}\mathbb{L}$은 exact이므로, [따름정리 4](#cor4)에 의하여 $\dim_\mathbb{L}H^i(\mathbb{P}^n_\mathbb{L}, \mathcal{F}_\mathbb{L}(d))=\dim_\mathbb{K}H^i(\mathbb{P}^n_\mathbb{K}, \mathcal{F}(d))$이다. 또 finite type scheme의 차원은 계수를 확대하여도 변하지 않으므로 ([§차원, ⁋정리 9](/ko/math/scheme_theory/dimension#thm9)의 Noether normalization을 확대된 계수 위에서 그대로 읽으면 된다) support의 차원도 보존되며, 따라서 처음부터 $\mathbb{K}$가 무한체라 두어도 된다.
+
+이제 $r=\dim\operatorname{Supp}\mathcal{F}$에 대한 귀납법을 쓴다. $\mathcal{F}=0$이면 모든 cohomology가 소멸하므로 $P_\mathcal{F}=0$이다. $\mathcal{F}\neq0$이라 하고 $S=\mathbb{K}[\x_0,\ldots, \x_n]$이라 하자. 각각의 chart $D_+(\x_j)=\Spec S_{(\x_j)}$ 위에서 $\mathcal{F}$는 finitely generated 가군 $M_j$에 대응하며 ([§준연접층, ⁋정리 10](/ko/math/scheme_theory/quasicoherent_sheaves#thm10), [§준연접층, ⁋정의 11](/ko/math/scheme_theory/quasicoherent_sheaves#def11)), 각각의 $\Ass M_j$는 유한집합이다. ([\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 1번) 이들에 대응하는 $\mathbb{P}^n$의 점을 모두 모으면 유한 개이고, 각각은 irrelevant ideal을 포함하지 않는 homogeneous prime ideal $\mathfrak{p}_1,\ldots, \mathfrak{p}_t\subseteq S$를 준다. 그럼 각각의 $\mathfrak{p}_k\cap S_1$은 $S_1$의 진부분공간이며, $\mathbb{K}$가 무한체이므로 벡터공간 $S_1$은 유한 개의 진부분공간의 합집합이 될 수 없다. 실제로 그러한 덮개가 존재한다면 덮개가 최소인 것을 택하고 첫 번째 부분공간에만 속하는 $u$와 그 부분공간에 속하지 않는 $v$를 잡으면, 무한히 많은 $v+\lambda u$ 가운데 어느 것도 첫 번째 부분공간에 속하지 않으므로 그 중 둘이 같은 다른 부분공간에 들어가고, 그 차가 $u$의 배수이므로 $u$가 그 부분공간에 속하게 되어 모순이다. 따라서 어떠한 $\mathfrak{p}_k$에도 속하지 않는 $\ell\in S_1$이 존재한다.
+
+곱하기 $\ell$은 morphism $\mathcal{F}(-1) \rightarrow \mathcal{F}$을 주며, chart $D_+(\x_j)$ 위에서 이는 $M_j$ 위의 $\ell/\x_j$ 배이다. $\ell/\x_j$는 $M_j$의 어떠한 associated prime에도 속하지 않으므로 $M_j$의 zerodivisor가 아니고 ([\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 2번), 따라서 이 morphism은 injective이다. 그 cokernel을 $\mathcal{F}''$이라 하면 각각의 $d$에 대해 short exact sequence
+
+$$0 \rightarrow \mathcal{F}(d-1) \rightarrow \mathcal{F}(d) \rightarrow \mathcal{F}''(d) \rightarrow 0$$
+
+을 얻고, $\operatorname{Supp}\mathcal{F}''=\operatorname{Supp}\mathcal{F}\cap V_+(\ell)$이다. Minimal prime은 언제나 associated prime이므로 $\ell$은 $\operatorname{Supp}\mathcal{F}$의 어떠한 irreducible component 위에서도 항등적으로 소멸하지 않고, 따라서 각 component와의 교집합의 차원은 정확히 하나 줄어든다. 특히 $r=0$이면 $\mathcal{F}''=0$이고 $r\geq1$이면 $\dim\operatorname{Supp}\mathcal{F}''=r-1$인데, $r\geq1$일 때 교집합이 비지 않는다는 것은 다음과 같이 안다. 만일 어떤 component $Z$가 $V_+(\ell)$과 만나지 않는다면 $Z$는 affine scheme $D_+(\ell)$의 닫힌 부분스킴이 되어 affine이고, 그럼 $\Gamma(Z, \mathcal{O}_Z)$가 [정리 7](#thm7)에 의하여 유한차원 $\mathbb{K}$-벡터공간이므로 Artinian ring이 되어 $\dim Z=0$이다.
+
+귀납적 가정에 의하여 $\rchi(\mathcal{F}''(d))$는 모든 $d$에서 어떤 numerical polynomial $Q$와 일치하며, $r=0$이면 $Q=0$이고 $r\geq1$이면 $\deg Q=r-1$이다. [명제 13](#prop13)의 1번에 의하여 모든 정수 $d$에 대해 $\rchi(\mathcal{F}(d))-\rchi(\mathcal{F}(d-1))=Q(d)$이므로, $g(d)=\rchi(\mathcal{F}(d))$로 두면 $g(d+1)-g(d)=Q(d+1)$은 numerical polynomial이다. 그럼 [\[가환대수학\] §힐베르트-사무엘 함수, ⁋보조정리 2](/ko/math/commutative_algebra/hilbert-samuel_function#lem2)의 둘째 결과에 의하여 충분히 큰 $d$에서 $g$와 일치하는 numerical polynomial $P$가 존재하고, 그 구성에 의하여 $P(d+1)-P(d)=Q(d+1)$이 다항식으로서 성립하며, $Q\neq0$이면 $\deg P=\deg Q+1$이다. 다항식 등식이 성립하므로 $d$를 하나씩 내리며
+
+$$g(d)=g(d+1)-Q(d+1)=P(d+1)-Q(d+1)=P(d)$$
+
+를 얻어, $g$와 $P$는 모든 정수에서 일치한다.
+
+남은 것은 degree이다. $r\geq1$이면 $\deg P=\deg Q+1=r$이다. $r=0$이면 $Q=0$이므로 $P$는 상수이고, [정리 8](#thm8)에 의하여 충분히 큰 $d$에서 $\mathcal{F}(d)$이 globally generated이며 $\mathcal{F}\neq0$이므로 $\Gamma(X, \mathcal{F}(d))\neq0$이다. 곧 마지막 주장에 의하여 $P>0$이고 $\deg P=0=r$이다.
+:::
+
+이 다항식 $P_\mathcal{F}$를 $\mathcal{F}$의 *Hilbert polynomial<sub>힐베르트 다항식</sub>*이라 부른다. [따름정리 14](#cor14)는 $\mathcal{F}=\mathcal{O}_{\mathbb{P}^n}$인 경우로서 $P_{\mathcal{O}_{\mathbb{P}^n}}(t)=\binom{n+t}{n}$이고 그 degree는 $\dim\mathbb{P}^n=n$이다. [정리 15](#thm15)의 마지막 주장은 이 다항식이 충분히 큰 degree에서는 $\mathcal{F}(d)$의 global section이 이루는 공간의 차원을 재고 있음을 말해주며, 이것이 고전적으로 homogeneous coordinate ring의 Hilbert function을 통해 Hilbert polynomial을 도입하던 관점과 이어지는 지점이다. ([\[가환대수학\] §힐베르트-사무엘 함수, ⁋정의 4](/ko/math/commutative_algebra/hilbert-samuel_function#def4)) 특히 $\mathcal{F}=\mathcal{O}_X$인 경우 이 다항식은 $X$ 자신의 불변량이 된다.
+
+::: 정의 16
+Field $\mathbb{K}$ 위의 사영공간 $\mathbb{P}^n_\mathbb{K}$의 공집합이 아닌 $r$차원 closed subscheme $X$에 대하여, Hilbert polynomial $P_{\mathcal{O}_X}$의 최고차항 계수를 $a_r$이라 하자. 그럼 $X$의 *degree<sub>차수</sub>*를
+
+$$\deg X=r!\cdot a_r$$
+
+로 정의하고, $X$의 *arithmetic genus*를 $p_a(X)=(-1)^r\bigl(P_{\mathcal{O}_X}(0)-1\bigr)$로 정의한다.
+:::
+
+$\operatorname{Supp}\mathcal{O}_X=X$이므로 [정리 15](#thm15)에 의하여 $P_{\mathcal{O}_X}$의 degree는 정확히 $r$이고, 충분히 큰 $d$에서 $P_{\mathcal{O}_X}(d)=\dim_\mathbb{K}\Gamma(X, \mathcal{O}_X(d))>0$이므로 $a_r$은 양수이다. 또 numerical polynomial을 이항계수들의 정수계수 결합으로 적으면 ([\[가환대수학\] §힐베르트-사무엘 함수, ⁋보조정리 2](/ko/math/commutative_algebra/hilbert-samuel_function#lem2)의 첫째 결과) 최고차항 계수에 $r!$을 곱한 값이 정수임을 알 수 있다. 곧 $\deg X$는 양의 정수이다. 한편 $P_{\mathcal{O}_X}(0)=\rchi(\mathcal{O}_X)$이므로 arithmetic genus는 structure sheaf의 Euler characteristic을 다시 적은 것이며, 부호 $(-1)^r$은 곡선의 경우 $p_a=1-\rchi(\mathcal{O}_X)$가 되도록 맞춘 것이다.
+
+가장 단순한 예시는 사영공간 자신이다. [따름정리 14](#cor14)에서 $P_{\mathcal{O}_{\mathbb{P}^n}}(t)=\binom{n+t}{n}$이므로 최고차항 계수는 $1/n!$이고 따라서 $\deg\mathbb{P}^n_\mathbb{K}=1$이며, $P_{\mathcal{O}_{\mathbb{P}^n}}(0)=1$에서 $p_a(\mathbb{P}^n_\mathbb{K})=0$이다. 다음으로 degree $e$의 homogeneous polynomial $f$가 정의하는 hypersurface $X=V_+(f)\subseteq\mathbb{P}^n_\mathbb{K}$를 보자. $S$가 integral domain이므로 곱하기 $f$는 각 chart 위에서 injective이고, 따라서 short exact sequence
+
+$$0 \rightarrow \mathcal{O}_{\mathbb{P}^n}(-e)\overset{\times f}{\longrightarrow}\mathcal{O}_{\mathbb{P}^n} \rightarrow \mathcal{O}_X \rightarrow 0$$
+
+을 얻는다. 이를 $\mathcal{O}(d)$로 twist한 뒤 [명제 13](#prop13)의 1번과 [따름정리 14](#cor14)를 적용하면
+
+$$P_{\mathcal{O}_X}(t)=\binom{n+t}{n}-\binom{n+t-e}{n}$$
+
+이다. 우변에서 $t^n$의 항은 소거되고 $t^{n-1}$의 계수는 $e/(n-1)!$이 남으므로, $\dim X=n-1$과 함께 $\deg X=e$를 얻는다. 곧 hypersurface의 degree가 정의 다항식의 degree라는 고전적인 사실이 Hilbert polynomial의 언어로 다시 얻어진다.
 
 ---
 
