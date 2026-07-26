@@ -10,40 +10,41 @@ sidebar:
 
 date: 2025-01-27
 weight: 3
-translated_at: 2026-07-26T14:50:02+00:00
+translated_at: 2026-07-26T21:15:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-26T21:15:02+00:00
 ---
-The most basic example of a sheaf on a topological space is the collection of continuous functions defined on it, and the sheaf $\mathcal{O}_{\Spec A}$ we are about to define is similar: the difference is that we think of *regular functions* instead of continuous ones.
+The most basic example of a sheaf on a topological space is the sheaf of continuous functions, and the sheaf $\mathcal{O}_{\Spec A}$ we are about to define is analogous: the only difference is that we use *regular functions* in place of continuous ones.
 
 ## Locally ringed space
 
-We have already covered sheaves on topological spaces in [[Topology] §Sheaves](/en/math/topology/sheaves), but that definition is somewhat insufficient for describing the structure sheaf on $\Spec A$.
+Sheaves on topological spaces were already treated in [[Topology] §Sheaves](/en/math/topology/sheaves), but that definition is somewhat inadequate for describing the structure sheaf on $\Spec A$.
 
 ::: Definition 1
-A pair $(X,\mathcal{O}_X)$ of a topological space $X$ and a $\cRing$-valued sheaf $\mathcal{O}_X$ defined on it is called a *ringed space*. If for every point $x\in X$, the stalk $\mathcal{O}_{X,x}$ at $x$ is always a local ring, then this pair $(X, \mathcal{O}_X)$ is called a *locally ringed space*.
+A pair $(X,\mathcal{O}_X)$ consisting of a topological space $X$ and a $\cRing$-valued sheaf $\mathcal{O}_X$ on it is called a *ringed space*. If for every point $x\in X$, the stalk $\mathcal{O}_{X,x}$ at $x$ is a local ring, then this pair $(X, \mathcal{O}_X)$ is called a *locally ringed space*.
 :::
 
-Our claim is that we can define a suitable structure sheaf $\mathcal{O}_{\Spec A}$ on $\Spec A$ to make $(\Spec A, \mathcal{O}_{\Spec A})$ a locally ringed space, and that this $\Spec$ construction enjoys the same functoriality as in [[§Spectrums, ⁋Proposition 2]](/en/math/scheme_theory/spectrums#prop2) or [[§Spectrums, ⁋Proposition 8]](/en/math/scheme_theory/spectrums#prop8). To state this mathematically, we first need to define morphisms between locally ringed spaces.
+Our claim is that we can define a suitable structure sheaf $\mathcal{O}_{\Spec A}$ on $\Spec A$ so that $(\Spec A, \mathcal{O}_{\Spec A})$ becomes a locally ringed space, and that this $\Spec$ construction enjoys the same functoriality as in [[§Spectrums, ⁋Proposition 2]](/en/math/scheme_theory/spectrums#prop2) or [[§Spectrums, ⁋Proposition 8]](/en/math/scheme_theory/spectrums#prop8). To state this precisely, we first define morphisms between locally ringed spaces.
 
 ::: Definition 2
 For two ringed spaces $(X, \mathcal{O}_X)$ and $(Y, \mathcal{O}_Y)$, a morphism between them is a pair consisting of a continuous map $\varphi:X \rightarrow Y$ and a morphism $\varphi^\sharp:\mathcal{O}_Y \rightarrow \varphi_\ast \mathcal{O}_X$ in $\Sh(Y;\cRing)$.
 
-A morphism between two locally ringed spaces $(X, \mathcal{O}_X)$ and $(Y, \mathcal{O}_Y)$ is a morphism $(\varphi,\varphi^\sharp)$ of ringed spaces such that, additionally, for each $x\in X$ it induces a local homomorphism $\varphi_x^\sharp:\mathcal{O}_{Y,\varphi(x)} \rightarrow \mathcal{O}_{X,x}$.
+A morphism between two locally ringed spaces $(X, \mathcal{O}_X)$ and $(Y, \mathcal{O}_Y)$ is a morphism $(\varphi,\varphi^\sharp)$ of ringed spaces such that, for each $x\in X$, the induced map on stalks $\varphi_x^\sharp:\mathcal{O}_{Y,\varphi(x)} \rightarrow \mathcal{O}_{X,x}$ is a local homomorphism.
 :::
 
 ## Algebraic functions on $\Spec A$
 
-We now need to define $\mathcal{O}_{\Spec A}$. As mentioned at the beginning of this post, this is the sheaf of algebraic functions on $\Spec A$, and it is exactly a generalization of [[Algebraic Varieties] §Affine Varieties, ⁋Definition 14]](/en/math/algebraic_varieties/affine_varieties#def14).
+We now define $\mathcal{O}_{\Spec A}$. As mentioned at the outset, this is the sheaf of algebraic functions on $\Spec A$, and it is precisely the generalization of [[Algebraic Varieties] §Affine Varieties, ⁋Definition 14]](/en/math/algebraic_varieties/affine_varieties#def14).
 
-Let us generalize this discussion to schemes. First, as with algebraic varieties, we think of elements of $A$ as functions $f$. Then the *function value* of $f$ at a point $\mathfrak{p}\in\Spec A$ is the image of $f$ under the canonical projection $\pi: A \rightarrow A/\mathfrak{p}$. In particular, $f$ vanishing at $\mathfrak{p}$ means
+Let us carry this discussion over to schemes. First, as with algebraic varieties, we regard elements of $A$ as functions $f$. Then the *function value* of $f$ at a point $\mathfrak{p}\in\Spec A$ is the image of $f$ under the canonical projection $\pi: A \rightarrow A/\mathfrak{p}$. In particular, $f$ vanishing at $\mathfrak{p}$ means
 
 $$f\equiv 0\pmod{\mathfrak{p}}\iff f\in \mathfrak{p}\iff \mathfrak{p}\in Z(f)$$
 
-That is, $Z(f)$ can be understood as the locus where $f=0$, and its complement, the principal open set $D(f)$, as the locus where $f\neq 0$.
+Thus $Z(f)$ can be understood as the locus where $f=0$, and its complement, the principal open set $D(f)$, as the locus where $f\neq 0$.
 
-From this perspective we can describe what the *algebraic functions* on $\Spec A$ are. Just as in [[Algebraic Varieties] §Affine Varieties, ⁋Definition 14]](/en/math/algebraic_varieties/affine_varieties#def14), they are defined to be functions that can be represented, in a suitable neighborhood of each point, as rational functions with denominator nonvanishing on that neighborhood. Note that this condition is local: a single fractional expression valid on the whole open set does not generally exist, and as we shall see below, this is only guaranteed on principal open sets.
+From this perspective we can describe what the *algebraic functions* on $\Spec A$ are. Just as in [[Algebraic Varieties] §Affine Varieties, ⁋Definition 14]](/en/math/algebraic_varieties/affine_varieties#def14), they are defined to be functions that can be represented, in a suitable neighborhood of each point, as rational functions whose denominators do not vanish on that neighborhood. Note that this condition is local: a single fractional expression valid on the entire open set does not generally exist, and as we shall see below, this is guaranteed only on principal open sets.
 
-Now suppose a principal open set $D(f)$ is given. If we only consider functions representable as a single rational function $g/h$ on all of $D(f)$, then the possible denominators $h$ must satisfy $D(f)\subseteq D(h)$.
+Now suppose a principal open set $D(f)$ is given. If we consider only functions representable as a single rational function $g/h$ on all of $D(f)$, then the admissible denominators $h$ must satisfy $D(f)\subseteq D(h)$.
 
 ::: Lemma 3
 For a fixed element $f\in A$, define
@@ -60,7 +61,7 @@ $$D(h_1h_2)=\Spec A\setminus Z(h_1h_2)=\Spec A\setminus (Z(h_1)\cup Z(h_2))=(\Sp
 we see that $D(f)\subseteq D(h_1)\cap D(h_2)=D(h_1h_2)$. This identity is merely a geometric interpretation of [[Algebraic Structures] §Field of Fractions, ⁋Proposition 8]](/en/math/algebraic_structures/field_of_fractions#prop8).
 :::
 
-It is now intuitively clear, and indeed we shall define it so, that the collection of algebraic functions on the subset $D(f)$ of $\Spec A$ should be $S(f)^{-1}A$. Before that, we prove the following lemma.
+It is now intuitively clear, and indeed we shall define it so, that the collection of algebraic functions on the subset $D(f)$ of $\Spec A$ should be $S(f)^{-1}A$. Before doing so, we prove the following lemma.
 
 ::: Lemma 4
 $D(f)\subseteq D(h)$ holds if and only if there exists $n\geq 1$ such that $f^n\in (h)$.
@@ -68,15 +69,15 @@ $D(f)\subseteq D(h)$ holds if and only if there exists $n\geq 1$ such that $f^n\
 ::: Proof
 $D(f)\subseteq D(h)$ is equivalent to $Z(h)\subseteq Z(f)$, which by the third result of [[§Spectrums, ⁋Lemma 6]](/en/math/scheme_theory/spectrums#lem6) is equivalent to $\sqrt{(f)}\subseteq \sqrt{(h)}$.
 
-If $\sqrt{(f)}\subseteq \sqrt{(h)}$, then from $(f)\subseteq \sqrt{(f)}\subseteq \sqrt{(h)}$ we get $f\in \sqrt{(h)}$, so there exists $n\geq 1$ with $f^n\in (h)$. Conversely, if $f^n\in (h)$ for some $n\geq 1$, then from $f\in \sqrt{(h)}$ we obtain $(f)\subseteq \sqrt{(h)}$, and hence
+If $\sqrt{(f)}\subseteq \sqrt{(h)}$, then from $(f)\subseteq \sqrt{(f)}\subseteq \sqrt{(h)}$ we get $f\in \sqrt{(h)}$, so there exists $n\geq 1$ with $f^n\in (h)$. Conversely, if $f^n\in (h)$ for some $n\geq 1$, then $f\in \sqrt{(h)}$, whence $(f)\subseteq \sqrt{(h)}$, and therefore
 
 $$\sqrt{(f)}\subseteq\sqrt{\sqrt{(h)}}=\sqrt{(h)}$$
 :::
 
-Using this lemma, we can express $S(f)^{-1}A$ in a cleaner way.
+Using this lemma, we can express $S(f)^{-1}A$ in a cleaner form.
 
 ::: Lemma 5
-For any $f\in A$, there exists an isomorphism
+For any $f\in A$, there is an isomorphism
 
 $$S(f)^{-1}A\cong S_f^{-1}A$$
 
@@ -87,7 +88,7 @@ Moreover, if $S(g)\subseteq S(f)$, then the following diagram
 commutes.
 :::
 ::: Proof
-Let us write the canonical morphisms as $\epsilon(f): A \rightarrow S(f)^{-1}A$ and $\epsilon_f:A \rightarrow S_f^{-1}A$. Since $D(f)=D(f^n)$ for any $n\geq 1$, we have $S_f\subseteq S(f)$, so the image of $S_f$ under $\epsilon(f)$ consists entirely of units in $S(f)^{-1}A$. Conversely, for any $h\in S(f)$, [Lemma 4](#lem4) gives $n\geq 1$ and $a\in A$ with $f^n=ah$, so
+Write the canonical morphisms as $\epsilon(f): A \rightarrow S(f)^{-1}A$ and $\epsilon_f:A \rightarrow S_f^{-1}A$. Since $D(f)=D(f^n)$ for any $n\geq 1$, we have $S_f\subseteq S(f)$, so the image of $S_f$ under $\epsilon(f)$ consists entirely of units in $S(f)^{-1}A$. Conversely, for any $h\in S(f)$, [Lemma 4](#lem4) gives $n\geq 1$ and $a\in A$ with $f^n=ah$, so
 
 $$\frac{h}{1}\frac{a}{f^n}=1\qquad\text{in $S_f^{-1}A$}$$
 
@@ -104,7 +105,7 @@ $$\widehat{\epsilon(f)}:S(g)^{-1}A \rightarrow S(f)^{-1}A,\qquad \widecheck{\eps
 extending $\epsilon(f)$ and $\epsilon_f$ respectively, and these are the remaining two arrows of the claimed diagram. Now both composites $\widecheck{\epsilon_f}\circ\overline{\epsilon_g}$ and $\overline{\epsilon_f}\circ\widehat{\epsilon(f)}$ compose with $\epsilon(g)$ to give $\epsilon_f$, so by the same uniqueness they are equal.
 :::
 
-Thus, it suffices to think of algebraic functions on $D(f)$ as elements of $S_f^{-1}A$. For convenience, in the previous post we agreed to denote $S_f^{-1}A$ by $A_f$.
+Thus, it suffices to regard algebraic functions on $D(f)$ as elements of $S_f^{-1}A$. For convenience, in the previous post we agreed to denote $S_f^{-1}A$ by $A_f$.
 
 ::: Lemma 6
 For the base $\{D(f)\}_{f\in A}$ of $\Spec A$, define for each $f_i\in A$
@@ -118,7 +119,7 @@ $$\rho_{ji}: S(f_j)^{-1}(A) \rightarrow S(f_i)^{-1}(A)$$
 to be the map obtained by applying [[Commutative Algebra] §Localization, ⁋Proposition 6]](/en/math/commutative_algebra/localization#prop6) to the canonical morphism $A\rightarrow S(f_i)^{-1}(A)$. Then these data satisfy the two conditions of [[Topology] §Sheaves, ⁋Proposition 8]](/en/math/topology/sheaves#prop8), and therefore determine uniquely a ($\cRing$-valued) sheaf $\mathcal{F}$ on $\Spec A$ extending this assignment.
 :::
 ::: Proof
-That the $\rho_{ji}$ satisfy the conditions for restriction maps in [[Topology] §Presheaves, ⁋Definition 2]](/en/math/topology/presheaves#def2) is obvious from the universal property of [[Commutative Algebra] §Localization, ⁋Proposition 6]](/en/math/commutative_algebra/localization#prop6). Here, $\rho_{ji}: S(f_j)^{-1}(A) \rightarrow S(f_i)^{-1}(A)$ is, by [Lemma 5](#lem5), simply the map that understands an element of $S(f_j)^{-1}(A)$ written in the form
+That the $\rho_{ji}$ satisfy the conditions for restriction maps in [[Topology] §Presheaves, ⁋Definition 2]](/en/math/topology/presheaves#def2) is immediate from the universal property of [[Commutative Algebra] §Localization, ⁋Proposition 6]](/en/math/commutative_algebra/localization#prop6). Here, $\rho_{ji}: S(f_j)^{-1}(A) \rightarrow S(f_i)^{-1}(A)$ is, by [Lemma 5](#lem5), simply the map that regards an element of $S(f_j)^{-1}(A)$ written in the form
 
 $$g/h,\qquad\text{where $h\in S(f_j)$}\tag{$\ast$}$$
 
@@ -128,7 +129,7 @@ $$h\in S(f_j)\iff D(f_j)\subseteq D(h)\implies D(f_i)\subseteq D(h)\iff h\in S(f
 
 We now verify the two conditions of [[Topology] §Sheaves, ⁋Proposition 8]](/en/math/topology/sheaves#prop8). For notational convenience, since $D(f)=\Spec A_f$, it suffices to consider only the case $f=1$ after replacing $A$ by $A_f$. Fix $f_i\in A$ with $\Spec A=\bigcup_{i\in I}D(f_i)$.
 
-First, to verify the first condition, suppose an element $s\in A$ satisfies $s=0$ in $S(f_i)^{-1}A$ for all $i\in I$, and let us show that $s=0$ as an element of $A$. By [[§Spectrums, ⁋Lemma 12]](/en/math/scheme_theory/spectrums#lem12) we can choose $f_1,\ldots, f_n$ from among the $f_i$ such that $\Spec A=\bigcup_{i=1}^n D(f_i)$, and by assumption there exist $m_i\geq 1$ such that
+First, to verify the first condition, suppose an element $s\in A$ satisfies $s=0$ in $S(f_i)^{-1}A$ for all $i\in I$, and let us show that $s=0$ in $A$. By [[§Spectrums, ⁋Lemma 12]](/en/math/scheme_theory/spectrums#lem12) we can choose $f_1,\ldots, f_n$ from among the $f_i$ such that $\Spec A=\bigcup_{i=1}^n D(f_i)$, and by assumption there exist $m_i\geq 1$ such that
 
 $$f_i^{m_i}s=0$$
 
