@@ -343,9 +343,7 @@ $Y$가 Noetherian이고 $f$가 finite type이므로, $X$를 덮는 각 affine op
 
 ## 평탄성의 국소 판정법
 
-마지막으로 flatness를 각 점에서 검사하는 기준을 정리한다. 대수적으로 $\otimes$가 left-exact로부터 멀어지는 정도를 측정하는 도구는 $\Tor$로, /
-
-Flatness는 본래 모든 ideal $I$에 대한 $\Tor_1^A(A/I, M)$의 소멸로 판정되는데, [명제 5](#prop5)의 torsion-free 판정법은 base가 PID라 모든 ideal이 principal이라는 점에 기대어 이 조건을 torsion의 부재 하나로 줄인 것이었다. 다음은 base에 PID라는 조건을 걸지 않는 대신 morphism에 유한성을 요구하여, 같은 조건을 residue field 하나에 대한 것으로 줄인다.
+마지막으로 flatness를 각 점에서 검사하는 기준을 정리한다. 대수적으로 $\otimes$가 left-exact로부터 멀어지는 정도를 측정하는 도구는 $\otimes$의 right derived functor, 즉 $\Tor$였다. 특히 flatness는 모든 ideal $\mathfrak{a}$에 대한 $\Tor_1^A(A/\mathfrak{a}, M)$의 vanishing으로 나타났으므로 ([\[가환대수학\] §평탄성과 국소화, ⁋정리 1](/ko/math/commutative_algebra/local_criterion_for_flatness#thm1)), 이를 기하학의 언어로 옮기면 다음을 얻는다.
 
 ::: 명제 17
 Locally Noetherian scheme 사이의 locally of finite type인 morphism $f: X \rightarrow Y$와 점 $x\in X$, $y=f(x)$에 대하여, $\mathcal{O}_{X,x}$가 $\mathcal{O}_{Y,y}$-flat인 것과
