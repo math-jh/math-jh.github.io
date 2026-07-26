@@ -10,7 +10,6 @@ sidebar:
 
 date: 2025-02-21
 weight: 14
-published: false
 drift_needed: true
 ---
 
@@ -191,7 +190,7 @@ Fiber를 보면, $t=a\neq 0$ 위에서는 $\mathbb{P}^2$의 원뿔곡선 $\x\z=a
 
 첫째는 이 글의 도입에서 본 $\Spec \mathbb{K}[t,\x]/(t\x)$로, $\x$-축이 $t=0$ 위의 fiber에 통째로 들어앉아 fiber의 차원이 $0$에서 $1$로 뛰었다. 이는 [예시 4](#ex4)에서 이미 다룬 경우로, fiber 방향에 양의 차원 성분이 갇혀있는 경우에 해당한다.
 
-둘째 예시는 갇히는 것이 $0$차원인 경우이다. 이 경우에도 차원은 아무 데에서도 변하지 않지만, fiber의 점의 개수만 달라진다.
+둘째 예시는 갇히는 것이 $0$차원인 경우이다. 이 경우에는 차원은 아무 데에서도 변하지 않지만, fiber의 점의 개수만 달라진다.
 
 ::: 예시 9
 $X$를 affine line에 원점 위의 isolated point 하나를 더한 것으로 두자. 이를 나타내는 coordinate ring은
@@ -204,7 +203,7 @@ $$B=\mathbb{K}[t]\times \mathbb{K}$$
 
 $$\varphi^{-1}(\mathfrak{p}\times \mathbb{K})=\mathfrak{p},\qquad \varphi^{-1}(\mathbb{K}[t]\times 0)=(t)$$
 
-이 된다. 즉, $\Spec\varphi$의 target인 affine line의 원점을 제외한 모든 점은 정확히 $X$의 같은 점을 fiber의 유일한 점으로 가지지만, 원점에서의 fiber는 $X$의 원점과, 원점 위에 있는 한 점의 두 개의 fiber를 가진다. 즉, fiber의 차원은 어디에서나 $0$이지만, fiber를 이루는 점의 개수가 $1$에서 $2$로 뛴다.
+이 된다. 즉, $\Spec\varphi$의 target인 affine line의 원점을 제외한 모든 점은 정확히 $X$의 같은 점을 fiber의 유일한 점으로 가지지만, 원점에서의 fiber는 $X$의 원점과, 원점 위에 있는 한 점의 두 개의 점을 가진다. 즉, fiber의 차원은 어디에서나 $0$이지만, fiber를 이루는 점의 개수가 $1$에서 $2$로 뛴다.
 
 이것이 flat이 아닌 것은 $(0,1)\neq 0$이면서 $t\cdot (0,1)=0$이므로 $t$가 $B$에서 zerodivisor이기 때문이다. ([명제 5](#prop5)) $X$가 reduced이므로 [따름정리 6](#cor6)으로도 같은 결론을 얻는데, 두 성분 가운데 isolated point가 $\mathbb{A}^1_\mathbb{K}$를 dominate하지 못하기 때문이다.
 :::
@@ -383,7 +382,7 @@ $Y$가 Noetherian이고 $f$가 finite type이므로, $X$를 덮는 각 affine op
 
 ## 평탄성의 국소 판정법
 
-마지막으로 flatness를 각 점에서 검사하는 기준을 정리한다. 대수적으로 $\otimes$가 left-exact로부터 멀어지는 정도를 측정하는 도구는 $\otimes$의 right derived functor, 즉 $\Tor$였다. 특히 flatness는 모든 ideal $\mathfrak{a}$에 대한 $\Tor_1^A(A/\mathfrak{a}, M)$의 vanishing으로 나타났으므로 ([\[가환대수학\] §평탄성과 국소화, ⁋정리 1](/ko/math/commutative_algebra/local_criterion_for_flatness#thm1)), 이를 기하학의 언어로 옮기면 다음을 얻는다.
+마지막으로 flatness를 각 점에서 검사하는 기준을 정리한다. 대수적으로 $\otimes$가 left-exact로부터 멀어지는 정도를 측정하는 도구는 $\otimes$의 left derived functor, 즉 $\Tor$였다. 특히 flatness는 모든 finitely generated ideal $\mathfrak{a}$에 대한 $\Tor_1^A(A/\mathfrak{a}, M)$의 vanishing으로 나타났으므로 ([\[가환대수학\] §평탄성, ⁋명제 1](/ko/math/commutative_algebra/flatness#prop1)), 이를 기하학의 언어로 옮기면 다음을 얻는다.
 
 ::: 명제 19
 Locally Noetherian scheme $Y$와 locally of finite type인 morphism $f: X \rightarrow Y$, 그리고 점 $x\in X$, $y=f(x)$에 대하여, $\mathcal{O}_{X,x}$가 $\mathcal{O}_{Y,y}$-flat인 것과
@@ -399,12 +398,16 @@ $Y$가 locally Noetherian이므로 $A=\mathcal{O}_{Y,y}$는 Noetherian local rin
 Flatness는 본질적으로 family가 어떻게 <em-ko>움직이는가</em-ko>에 대한 정의이므로, 한 점에서 morphism이 flat하다는 사실만 아는 것은 기하적으로는 큰 의미가 없다. 이를 해결해주는 것이 다음의 정리이다.
 
 ::: 정리 20 (Openness of the flat locus)
-Locally Noetherian scheme $Y$와 locally of finite type인 morphism $f: X \rightarrow Y$에 대하여, $\mathcal{O}_{X,x}$가 $\mathcal{O}_{Y,f(x)}$-flat인 점 $x\in X$들의 집합은 $X$의 열린집합이다. 더 일반적으로 이는 $Y$에 아무런 Noetherian 조건 없이 $f$가 locally of finite presentation이기만 하여도 성립한다.
+Locally Noetherian scheme $Y$와 locally of finite type인 morphism $f: X \rightarrow Y$에 대하여, $\mathcal{O}_{X,x}$가 $\mathcal{O}_{Y,f(x)}$-flat인 점 $x\in X$들의 집합은 $X$의 열린집합이다. 
 :::
 
-우리는 이 정리의 증명을 다루지 않는다. Noetherian인 경우의 논증은 [명제 19](#prop19)가 지목한 $\Tor$가 $B$ 위에서 finitely generated라는 것으로부터 한 점에서의 소멸을 기본 열린근방으로 퍼뜨리고, [명제 11](#prop11)의 generic flatness를 $A/\mathfrak{p}$ 위에서 적용하여 그 근방을 $V(\mathfrak{q})$ 방향으로 넓힌 뒤, 국소 판정법을 $\mathfrak{m}$이 아닌 ideal에 대하여 적은 형태로 두 정보를 합치고, 마지막으로 generization에 대하여 닫혀 있는 집합이 각 $V(\mathfrak{q})$ 안에서 상대적으로 열린 부분을 포함하면 열려 있다는 위상적 판정을 적용하는 것으로 이루어진다. 뒤의 일반적인 경우는 유한 표시로 주어진 자료가 언제나 $\mathbb{Z}$ 위의 finite type ring에서 온 유한한 부분자료 위에 이미 정의되어 있다는 극한 논증으로 앞의 경우에 환원된다.
+더 일반적으로, 위의 정리는 $Y$에 아무런 Noetherian 조건 없이 $f$가 locally of finite presentation이기만 하여도 성립한다. 약간 무리하면 이 정리의 증명 또한 우리가 알고 있는 범위에서 어느정도 할 수는 있지만, 이 글 전체의 분량을 위해 생략하기로 한다. 
 
-[정리 20](#thm20)에 의하여 [명제 19](#prop19)로 한 점에서 $\Tor$의 소멸을 확인하면 그 점의 열린 근방 $U$ 위에서 $f\vert_U$가 flat morphism이 되므로, [명제 3](#prop3)이나 [명제 18](#prop18)처럼 morphism 전체의 flatness를 요구하는 결과들을 적용할 수 있게 된다. 바꾸어 말하면 flatness가 깨지는 지점들은 닫힌집합을 이루며, 도입에서 살펴본 예시의 원점과 같이 성분들이 부딪히거나 fiber에 갇히는 특수한 곳에 한정된다. 한편 앞에서 우리는 이 깨짐이 언제나 커지는 방향으로만 일어난다고 관찰하였는데, 이를 정확히 적으려면 정수값을 갖는 불변량이 공간 위에서 어떻게 변하는지를 재는 언어가 먼저 필요하다.
+이제 [정리 20](#thm20)에 의하여 [명제 19](#prop19)로 한 점에서 $\Tor$의 소멸을 확인하면 그 점의 열린 근방 $U$ 위에서 $f\vert_U$가 flat morphism이 되므로, [명제 3](#prop3)이나 [명제 18](#prop18)처럼 morphism 전체의 flatness를 요구하는 결과들을 적용할 수 있게 된다. 바꾸어 말하면 flatness가 깨지는 지점들은 닫힌집합을 이루며, 도입에서 살펴본 예시의 원점과 같이 성분들이 부딪히거나 fiber에 갇히는 특수한 곳에 한정된다. 
+
+## 평탄성과 반연속성
+
+앞에서 우리는 이 깨짐이 언제나 커지는 방향으로만 일어난다고 관찰하였는데, 이를 정확히 적으려면 정수값을 갖는 불변량이 공간 위에서 어떻게 변하는지를 재는 언어가 먼저 필요하다.
 
 ::: 정의 21
 Topological space $X$ 위의 함수 $f: X \rightarrow \mathbb{Z}$가 *upper semicontinuous*라는 것은 임의의 $i\in \mathbb{Z}$에 대하여 집합
@@ -414,7 +417,7 @@ $$\{x\in X\mid f(x)\leq i\}$$
 가 $X$의 열린집합인 것이다. 마찬가지로 $f$가 *lower semicontinuous*라는 것은 임의의 $i\in \mathbb{Z}$에 대하여 $\{x\in X\mid f(x)\geq i\}$가 $X$의 열린집합인 것이다.
 :::
 
-[예시 9](#ex9)와 [예시 10](#ex10), 그리고 도입부의 예시 모두에서 우리는 flatness의 실패를 축정하는 어떠한 양들이, flatness가 깨지는 점으로 가면서 커지기만 할 뿐 그 반대로는 움직이지 않는다는 것을 확인했는데, 이를 엄밀하게 정의한 것이 바로 이 upper semicontinuity이다.  이를 포괄하는 다음의 명제를 보자. 
+[예시 9](#ex9)와 [예시 10](#ex10), 그리고 도입부의 예시 모두에서 우리는 flatness의 실패를 측정하는 어떠한 양들이, flatness가 깨지는 점으로 가면서 커지기만 할 뿐 그 반대로는 움직이지 않는다는 것을 확인했는데, 이를 엄밀하게 정의한 것이 바로 이 upper semicontinuity이다. 이러한 양의 대표적인 예시로 다음의 명제를 보자.
 
 ::: 명제 22
 Ring $A$와 finitely generated $A$-module $M$에 대하여 함수 $\mu:\Spec A \rightarrow \mathbb{Z}$를
@@ -435,11 +438,13 @@ $\mu$가 무엇을 재는지는 family의 언어로 옮기면 분명해진다. M
 
 $$\mu(\mathfrak{p})=\sum_{x\in X_\mathfrak{p}}\length(\mathcal{O}_{X_\mathfrak{p},x})\cdot[\kappa(x):\kappa(\mathfrak{p})]$$
 
-가 성립한다. 곧 $\mu$는 fiber의 length에 residue field의 degree까지 실어서 잰 것이며, 만일 fiber의 점이 모두 $\kappa(\mathfrak{p})$-점이면 length 그 자체가 된다. 즉, [예시 9](#ex9)와 [예시 10](#ex10)에서 살펴본 flatness의 실패가 모두 [명제 22](#prop22)의 사례가 된다.
- 
-반면 이 글의 도입에서 본 예시는 [명제 22](#prop22)의 사정권 밖에 있다. $\mathbb{K}[t,\x]/(t\x)$는 $\mathbb{K}[t]$-module로서 finitely generated가 아니며, $t=0$ 위에서 $\mathbb{K}[\x]$가 되어 $\mu$가 무한이 되기 때문이다. Fiber가 부푸는 경우까지 함께 다루려면 length 대신 앞에서 언급한 Hilbert polynomial로 올라가야 하며, 그 판본은 이 글에서 다루지 않는다.
+가 성립한다. 곧 $\mu$는 fiber의 length에 residue field의 degree까지 실어서 잰 것이며, 만일 fiber의 점이 모두 $\kappa(\mathfrak{p})$-점이면 length 그 자체가 된다. 즉, [예시 9](#ex9)와 [예시 10](#ex10)에서 살펴본 flatness의 실패가 모두 [명제 22](#prop22)의 사례가 된다. 만일 이를 Hilbert polynomial까지 올리면 이 글의 도입에서 본 예시 또한 이 프레이밍을 통해 설명할 수 있으나, 우리는 아직 scheme 버전의 sheaf cohomology도 다루지 않았으므로 이는 우선 넘어가기로 한다. 
 
-한편 [명제 22](#prop22)의 앞뒤를 뒤집으면 lower semicontinuity가 나온다. $A$가 Noetherian이면 $M$은 유한한 presentation $A^m\overset{\psi}{\rightarrow}A^n \rightarrow M \rightarrow 0$을 가지고 tensor product가 right exact이므로 $\mu(\mathfrak{p})=n-\rank(\psi\otimes\kappa(\mathfrak{p}))$이며, 따라서 [명제 22](#prop22)은 행렬 $\psi$의 rank가 lower semicontinuous라는 것과 같은 내용이다. 곧 $\mu$가 튀어오르는 닫힌집합은 $\psi$의 minor가 소멸하는 자리로 명시되며, 이 minor들이 생성하는 ideal이 [\[가환대수학\] §Fitting 아이디얼, ⁋정의 2](/ko/math/commutative_algebra/fitting_ideals#def2)의 Fitting ideal이다.
+한편 [명제 22](#prop22)의 앞뒤를 뒤집으면 lower semicontinuity가 나온다. $A$가 Noetherian이면 $M$은 finite presentation 
+
+$$A^m\overset{\psi}{\rightarrow}A^n \rightarrow M \rightarrow 0$$
+
+을 가지고 tensor product가 right exact이므로 $\mu(\mathfrak{p})=n-\rank(\psi\otimes\kappa(\mathfrak{p}))$이며, 따라서 [명제 22](#prop22)는 행렬 $\psi$의 rank가 lower semicontinuous라는 것과 같은 내용이다. 곧 $\mu$가 튀어오르는 닫힌집합은 $\psi$의 minor가 소멸하는 자리로 명시되며, 이 minor들이 생성하는 ideal이 [\[가환대수학\] §Fitting 아이디얼, ⁋정의 2](/ko/math/commutative_algebra/fitting_ideals#def2)의 Fitting ideal이다.
 
 ---
 

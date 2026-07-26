@@ -10,7 +10,6 @@ sidebar:
 
 date: 2024-05-24
 weight: 15
-published: false
 drift_needed: true
 ---
 
@@ -60,11 +59,11 @@ $$\kappa((0))=K, \qquad \kappa(\mathfrak{m})=A_\mathfrak{m}/\mathfrak{m}A_\mathf
 
 예시를 조금 더 기하적으로 살펴보자. $Z((0))=\Spec A$이므로 $(0)$의 closure는 $\Spec A$ 전체가 되고, 곧 $(0)$은 이 공간의 generic point가 된다. 이와 같은 상황은 곡선 $C$와 그 위의 점 $p$에 대해 $\mathcal{O}_{C,p}$가 discrete valuation ring일 때 특히 직관적으로 보여진다. 구체적으로 stalk
 
-$$\mathcal{O}_{C,p}=\varprojlim_{U\supset p} \mathcal{O}(U)$$
+$$\mathcal{O}_{C,p}=\varinjlim_{U\supset p} \mathcal{O}(U)$$
 
 은 점 $p$에서의 germ으로 볼 수 있으며, $\Spec \mathcal{O}_{C,p}$의 generic point $(0)$은 바로 이 데이터를 담고 있는 것이다. 그럼 남아있는 (유일한) 점 $\mathfrak{m}$은 정확하게 점 $p$에 해당하는 것으로, 이것이 $(0)$의 specialization이라는 사실이 바로 germ을 정의할 때 $p$에 한없이 가까운 근방을 살펴본다는 것을 반영한다. 
 
-이 그림에서 $\Spec K$의 역할은 함수 쪽을 살펴보면 드러난다. $\Spec A$ 위의 함수들은 $A$ 자신, 곧 $p$에서 regular한 germ들이고, 자명하지 않은 유일한 열린집합 $D(\pi)=\{(0)\}$ 위의 함수들인 $K\cong A_\pi$의 원소는 $f=\pi^nu$의 꼴을 음의 차수 $n$까지 허용한 것이다. ([\[가환대수학\] §인자, ⁋명제 8](/ko/math/commutative_algebra/divisors#prop8)의 2번) 즉, 이는 $p$에서 pole을 갖되 그 차수가 유한한 함수, 곧 $p$ 하나만 빼면 근방 전체에서 regular한 함수를 뜻하며, 따라서 $\Spec K$는 이 germ에서 중심 $p$를 빼내어, $p$의 정보는 잃어버린 채 $p$의 근방에 대한 정보만 가지고 있는 공간이며, canonical morphism $\Spec K \rightarrow \Spec A$는 정확히 이 그림이 정의하는 포함사상이다. 
+이 그림에서 $\Spec K$의 역할은 함수 쪽을 살펴보면 드러난다. $\Spec A$ 위의 함수들은 $A$ 자신, 곧 $p$에서 regular한 germ들이고, 자명하지 않은 유일한 열린집합 $D(\pi)=\{(0)\}$ 위의 함수들인 $K\cong A_\pi$의 원소는 $f=\pi^nu$의 꼴을 음의 order $n$까지 허용한 것이다. ([\[가환대수학\] §인자, ⁋명제 8](/ko/math/commutative_algebra/divisors#prop8)의 2번) 즉, 이는 $p$에서 pole을 갖되 그 order가 유한한 함수, 곧 $p$ 하나만 빼면 근방 전체에서 regular한 함수를 뜻하며, 따라서 $\Spec K$는 이 germ에서 중심 $p$를 빼내어, $p$의 정보는 잃어버린 채 $p$의 근방에 대한 정보만 가지고 있는 공간이며, canonical morphism $\Spec K \rightarrow \Spec A$는 정확히 이 그림이 정의하는 포함사상이다. 
 
 그럼 morphism $\Spec K \rightarrow X$는 $X$ 안으로 들어가는, 점이 빠진 곡선의 germ이고, 이를 $\Spec A \rightarrow X$로 확장하는 것은 빠져 있던 그 점을 $X$ 안에서 되찾아 곡선을 이어 붙이는 것, 곧 곡선의 극한을 찾는 것이 된다. 이 extension이 많아야 하나 존재한다는 것이 separatedness이고 정확히 하나 존재한다는 것이 properness이며, 이것이 앞으로 볼 두 판정법의 내용이다. 이는 위상적으로는 Hausdorff 공간에서 극한이 유일하고 ([\[위상수학\] §하우스도르프 공간, ⁋명제 4](/ko/math/topology/Hausdorff_spaces#prop4)), compact 공간에서 극한이 항상 존재한다는 것에 정확히 대응하는 구도이다. ([\[위상수학\] §Compactness와 paracompactness, ⁋보조정리 1](/ko/math/topology/compactness#lem1))
 
@@ -80,7 +79,8 @@ Scheme morphism $f:X \rightarrow Y$에 대하여, 두 개의 $\id_X$가 fiber pr
 의 점선 화살표 $\Delta: X \rightarrow X \times_Y X$를 $f$의 *diagonal morphism<sub>대각사상</sub>*이라 부른다. ([§올곱, ⁋정의 1](/ko/math/scheme_theory/fiber_products#def1)) 만일 $\Delta$가 closed embedding이라면 $f$를 *separated<sub>분리사상</sub>*라 부르고, $X$가 $Y$에 대해 *separated*라 부른다. 만일 $X$가 $\Spec \mathbb{Z}$에 대해 separated이면, $X$를 간단히 *separated* scheme이라 부른다.
 :::
 
-어느 morphism의 diagonal인지를 밝혀야 할 때에는 $\Delta$ 대신 $\Delta_{X/Y}$로 적는다. 정의로부터 두 projection $p_1,p_2: X\times_YX \rightarrow X$에 대해 $p_1\circ\Delta=p_2\circ\Delta=\id_X$인 것을 자명하다. 또, $\Delta$는 단사이고 $p_1$을 $\Delta(X)$로 제한한 것이 $\Delta$의 연속인 역함수를 주므로, $\Delta$는 언제나 $\Delta(X)$ 위로의 homeomorphism이다. 따라서 $\Delta$가 closed embedding인지를 묻는 것은, $\Delta(X)$가 닫혀 있는지와 $X$의 함수들이 모두 $X\times_YX$의 함수를 제한하여 얻어지는지를 묻는 것이 된다. ([§닫힌 부분스킴, ⁋정의 2](/ko/math/scheme_theory/closed_subschemes#def2))
+어느 morphism의 diagonal인지를 밝혀야 할 때에는 $\Delta$ 대신 $\Delta_{X/Y}$로 적는다. 정의로부터 두 projection $p_1,p_2: X\times_YX \rightarrow X$에 대해 $p_1\circ\Delta=p_2\circ\Delta=\id_X$인 것은 자명하다. 또, $\Delta$는 단사이고 $p_1$을 $\Delta(X)$로 제한한 것이 $\Delta$의 연속인 역함수를 주므로, $\Delta$는 언제나 $\Delta(X)$ 위로의 homeomorphism이다. 따라서 $\Delta$가 closed embedding인지를 묻는 것은, $\Delta(X)$가 닫혀 있는지와 $X$의 함수들이 모두 $X\times_YX$의 함수를 제한하여 얻어지는지를 묻는 것이 된다. ([§닫힌 부분스킴, ⁋정의 2](/ko/math/scheme_theory/closed_subschemes#def2))
+
 대수기하학에서는 separatedness가 Hausdorff를 대체하는 성질이라 생각한다. 위상공간 $T$가 Hausdorff인 것이 $T\times T$ 안에서 대각선이 닫혀 있는 것과 동치였음을 떠올리면 ([\[위상수학\] §하우스도르프 공간, ⁋보조정리 5](/ko/math/topology/Hausdorff_spaces#lem5)) 다음 명제를 기대하는 것이 자연스럽다. 
 
 ::: 명제 4
@@ -123,7 +123,7 @@ Noetherian scheme $X$와 scheme morphism $f:X \rightarrow Y$에 대하여, $f$�
 ::: 증명
 바깥쪽 square가 주어졌다는 것은 morphism $u:\Spec K \rightarrow X$와 $v: \Spec A \rightarrow Y$가 주어져 $f\circ u=v\circ j$가 성립하는 것이며, 이 square의 lifting이란 $g\circ j=u$와 $f\circ g=v$를 만족하는 $g:\Spec A \rightarrow X$를 말한다.
 
-증명 전체에서 두 개의 표준적인 사실을 사용한다. 첫째는 valuation ring의 존재정리로, field $K$와 그 안의 local subring $\mathcal{O}$가 주어질 때마다 $\Frac(A)=K$이고 $\mathcal{O}\subseteq A$이며 $\mathfrak{m}_A\cap \mathcal{O}=\mathfrak{m}_\mathcal{O}$인 valuation ring $A$가 존재한다는 것이다. 이 때 $A$가 $\mathcal{O}$를 *dominate*한다고 하며, 이러한 $A$의 존재는 $\mathcal{O}$를 dominate하는 $K$의 local subring들의 모임에 Zorn's lemma를 적용하여 얻어진다. 이는 이 글에서 다루지 않는 가환대수학의 결과이므로 증명 없이 가져다 쓰고, 자세한 것은 **[AM]**에 위임한다. 둘째는 field $K$에 대하여 morphism $\Spec K \rightarrow X$가 점 $x\in X$와 field homomorphism $\kappa(x) \rightarrow K$의 쌍에 일대일로 대응한다는 것이다. 이는 $X=\Spec B$인 경우 ring homomorphism $B \rightarrow K$가 그 kernel인 prime ideal $\mathfrak{p}$와 $\kappa(\mathfrak{p}) \rightarrow K$의 쌍을 주는 것에서 따르고, 일반적인 경우는 $x$의 affine open neighborhood를 택하면 된다.
+증명 전체에서 두 개의 표준적인 사실을 사용한다. 첫째는 valuation ring의 존재정리로, field $K$와 그 안의 local subring $\mathcal{O}$가 주어질 때마다 $\Frac(A)=K$이고 $\mathcal{O}\subseteq A$이며 $\mathfrak{m}_A\cap \mathcal{O}=\mathfrak{m}_\mathcal{O}$인 valuation ring $A$가 존재한다는 것이다. 이 때 $A$가 $\mathcal{O}$를 *dominate*한다고 하며, 이러한 $A$의 존재는 $\mathcal{O}$를 dominate하는 $K$의 local subring들의 모임에 Zorn's lemma를 적용하여 얻어진다. 둘째는 field $K$에 대하여 morphism $\Spec K \rightarrow X$가 점 $x\in X$와 field homomorphism $\kappa(x) \rightarrow K$의 쌍에 일대일로 대응한다는 것이다. 이는 $X=\Spec B$인 경우 ring homomorphism $B \rightarrow K$가 그 kernel인 prime ideal $\mathfrak{p}$와 $\kappa(\mathfrak{p}) \rightarrow K$의 쌍을 주는 것에서 따르고, 일반적인 경우는 $x$의 affine open neighborhood를 택하면 된다.
 
 먼저 $f$가 separated라 가정하고, 위 square의 두 lifting $g_1, g_2$가 주어졌다 하자. $f\circ g_1=f\circ g_2=v$이므로 fiber product의 universal property에 의하여 유일한 $h:\Spec A \rightarrow X\times_YX$가 존재하여 $p_1\circ h=g_1$, $p_2\circ h=g_2$이다. 여기에서 $p_1,p_2$는 두 projection이다. 이제 $\Delta$가 closed embedding이므로 base change
 
@@ -170,7 +170,7 @@ $$\eta=q(\mathfrak{m}_A)=\Delta(g_1(\mathfrak{m}_A))\in \Delta(X)$$
 이고, $\Delta(X)$는 specialization에 대해 닫혀 있다. 앞의 관찰과 결합하면 $\Delta(X)=\cl(\Delta(X))$이므로 $\Delta(X)$는 닫힌집합이고, [명제 4](#prop4)에 의하여 $f$는 separated이다.
 :::
 
-한편 만일 $Y$가 Noetherian이고 $f$가 finite type morphism이라면 위의 정리를 임의의 valuation ring이 아니라, 임의의 discrete valuation ring으로 대체해도 된다. 이는 임의의 valuation ring을 Noetherian 근사로 다루는 극한 논법을 요구하여 이 글의 범위를 벗어나므로, 우리는 이 사실을 증명 없이 받아들이고 **[Stacks]**에 위임한다. 일반적인 valuation ring의 $\Spec$은 prime ideal들이 더 긴 사슬을 이루어 [예시 2](#ex2)의 두 점짜리 그림에서 벗어나지만, discrete valuation ring으로 바꿔두고 나면 그 그림이 그대로 살아나 정리를 곡선의 germ으로 읽을 수 있다. 곧 위의 정리는 점이 빠진 germ $\Spec K$를 $X$ 안에 넣는 방법이 주어졌을 때 이를 germ 전체 $\Spec A$로 채우는 방법이 많아야 하나임을 말해준다. 
+한편 만일 $Y$가 Noetherian이고 $f$가 finite type morphism이라면 위의 정리를 임의의 valuation ring이 아니라, 임의의 discrete valuation ring으로 대체해도 되지만, 이 사실에 대한 증명은 현재 우리 상태에서는 할 수 없으므로 넘기기로 한다. 위의 명제 상황과 같이 일반적인 valuation ring의 $\Spec$은 prime ideal들이 더 긴 사슬을 이루어 [예시 2](#ex2)의 두 점짜리 그림에서 벗어나지만, discrete valuation ring으로 바꿔두고 나면 그 그림이 그대로 살아나 정리를 곡선의 germ으로 읽을 수 있다. 즉, 위의 정리는 점이 빠진 germ $\Spec K$를 $X$ 안에 넣는 방법이 주어졌을 때 이를 germ 전체 $\Spec A$로 채우는 방법이 많아야 하나임을 말해주는 것이다. 
 
 이 그림을 실제로 확인해 보자.
 
@@ -328,7 +328,7 @@ $$X\times_ZZ' \longrightarrow Y\times_ZZ' \longrightarrow Z'$$
 끝으로 5번을 보자. $\id_X$와 $f$가 유도하는 graph morphism $\Gamma_f:X \rightarrow X\times_ZY$를 생각하면 $f=p_2\circ\Gamma_f$이다. 이 때 $\Gamma_f$와 $f\times\id_Y: X\times_ZY \rightarrow Y\times_ZY$가 이루는 square는 $\Delta_{Y/Z}:Y \rightarrow Y\times_ZY$를 밑변으로 하는 cartesian square이다. 실제로 임의의 $T$에 대하여 $Y\times_ZY$로 가는 두 morphism을 맞추는 것은 $a:T \rightarrow X$와 $b:T \rightarrow Y$의 쌍 가운데 $f\circ a=b$인 것을 고르는 일이고, 이러한 쌍은 $a$ 하나가 결정하기 때문이다. 그럼 $g$가 separated라는 가정에서 $\Delta_{Y/Z}$가 closed embedding이므로 $\Gamma_f$ 또한 closed embedding이고, 1번에 의하여 proper이다. 한편 $p_2:X\times_ZY \rightarrow Y$는 $g\circ f$를 $g$를 따라 base change한 것이므로 3번에 의하여 proper이다. 따라서 2번에 의하여 $f=p_2\circ\Gamma_f$는 proper이다.
 :::
 
-5번에서 $g$가 separated라는 가정이 붙는 것은, 증명에서 $\Gamma_f$가 closed embedding이 되는 근거가 정확히 $\Delta_{Y/Z}$가 closed embedding이라는 것이기 때문이다. 이 가정이 없으면 $\Gamma_f$는 immersion에 그치고 논증이 작동하지 않는다. [따름정리 8](#cor8)의 5번에는 이러한 가정이 필요하지 않았으므로, 두 항목의 모양이 서로 다르다는 점에 주의해야 한다.
+5번에서 $g$가 separated라는 가정이 붙는 것은, 증명에서 $\Gamma_f$가 closed embedding이 되는 근거가 정확히 $\Delta_{Y/Z}$가 closed embedding이라는 것이기 때문이다. 이 가정이 없으면 $\Gamma_f$가 closed embedding이라는 보장이 사라지고 논증이 작동하지 않는다. [따름정리 8](#cor8)의 5번에는 이러한 가정이 필요하지 않았으므로, 두 항목의 모양이 서로 다르다는 점에 주의해야 한다.
 
 한편 [따름정리 13](#cor13)의 1번은 다음의 특수한 경우이다. 이는 판정법이 실제로 어떻게 쓰이는지를 보여주는 가장 전형적인 예로, valuation ring이 integrally closed라는 사실 하나로 존재성이 나온다.
 
@@ -350,6 +350,8 @@ $$c^n+b_{n-1}c^{n-1}+\cdots+b_0=0$$
 
 을 만족한다. 이 식을 $C \rightarrow K$로 옮기면 $c$의 image는 $B$의 image 위에서 integral이고, $B$의 image는 $A$ 안에 들어가므로 $c$의 image는 $A$ 위에서 integral이다. 그런데 valuation ring은 언제나 integrally closed이므로 ([\[가환대수학\] §인자, ⁋명제 6](/ko/math/commutative_algebra/divisors#prop6)의 2번) $c$의 image는 $A$에 속한다. 곧 $C \rightarrow K$는 $A$를 경유하고, 이것이 원하는 lifting을 준다.
 :::
+
+같은 판정법이 훨씬 큰 결과를 준다. Projective morphism은 정의상 closed embedding과 projection $\mathbb{P}^n_Y \rightarrow Y$의 합성이고 ([정의 1](#def1)) closed embedding 쪽은 이미 [따름정리 13](#cor13)의 1번으로 처리되었으므로, 결국 확인할 것은 projective space가 base 위에서 proper라는 것 하나이다. 그리고 이는 base change를 따라 $\mathbb{P}^n_\mathbb{Z} \rightarrow \Spec\mathbb{Z}$ 하나로 환원된다.
 
 ::: 정리 15
 Noetherian scheme들 사이의 projective morphism은 proper morphism이고, quasi-projective morphism은 separated, finite type morphism이다. 
@@ -410,6 +412,4 @@ $\mathbb{K}$ 위의 projective scheme $X$와 separated finite type $\mathbb{K}$-
 **참고문헌**
 
 **[Har]** R. Hartshorne, *Algebraic geometry*. Graduate texts in mathematics. Springer, 1977.  
-**[Vak]** R. Vakil, *The rising sea: Foundation of algebraic geometry*. Available [online](https://math.stanford.edu/~vakil/216blog/).  
-**[AM]** M. F. Atiyah and I. G. Macdonald, *Introduction to commutative algebra*, Addison-Wesley, 1969.  
-**[Stacks]** The Stacks Project Authors, *The Stacks Project*. Available [online](https://stacks.math.columbia.edu/).
+**[Vak]** R. Vakil, *The rising sea: Foundation of algebraic geometry*. Available [online](https://math.stanford.edu/~vakil/216blog/). 
