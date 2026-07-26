@@ -1,6 +1,6 @@
 {% comment %}
-  헤더 리드용 날짜 블록: 작성일/수정일 두 줄. 아이콘·라벨·날짜 3열 그리드라
-  줄 수와 무관하게 날짜 열이 수직정렬된다 (스타일: _page.scss .page__dates).
+  헤더 리드용 날짜 블록: [아이콘 작성일 · 날짜]와 [아이콘 수정일 · 날짜]를
+  한 줄에 나란히 둔다 (스타일: _page.scss .page__dates).
   archive 카드·hero가 쓰는 page__meta.html과 별개다 (그쪽은 한 줄 요약용).
 {% endcomment %}
 {% assign date_format = site.date_format | default: "%B %-d, %Y" %}
@@ -20,6 +20,7 @@
     <span class="page__dates-row">
       <i class="material-icons md-14" aria-hidden="true">event_available</i>
       <span class="page__dates-label">{{ site.data.ui-text[lang].date_created_label | default: "Posted" }}</span>
+      <span class="page__dates-sep" aria-hidden="true">&middot;</span>
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: date_format }}</time>
     </span>
     {% endif %}
@@ -27,6 +28,7 @@
     <span class="page__dates-row">
       <i class="material-icons md-14" aria-hidden="true">update</i>
       <span class="page__dates-label">{{ site.data.ui-text[lang].date_updated_label | default: "Updated" }}</span>
+      <span class="page__dates-sep" aria-hidden="true">&middot;</span>
       <time class="dt-updated" datetime="{{ page.last_modified_at | date: "%Y-%m-%d" }}">{{ page.last_modified_at | date: date_format }}</time>
     </span>
     {% endif %}

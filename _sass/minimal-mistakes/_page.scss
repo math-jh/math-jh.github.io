@@ -393,8 +393,8 @@ body {
 }
 
 /* 헤더 리드의 작성일/수정일 블록 (_includes/page__dates.html).
-   아이콘·라벨·날짜 3열 grid: 행이 몇 개든 날짜 열의 시작점이 맞는다.
-   라벨-날짜 사이는 라벨 셀의 margin-right로 벌린다 (콜론 없이 거리로 구분).
+   항목(아이콘·라벨·중간점·날짜)을 한 줄에 나란히 두고, 항목 사이만 넓게 벌린다.
+   좁은 화면에서는 flex-wrap으로 항목 단위로만 접힌다.
    주의: page__meta 클래스를 얹지 말 것 — .page__inner-wrap의 float+clear 규칙에
    걸려 본문 clearance가 헤더 margin-bottom을 무시한다. 타이포는 여기서 직접. */
 .page__dates {
@@ -402,27 +402,30 @@ body {
   color: $muted-text-color;
   font-family: $sans-serif;
   font-size: $type-size-6;
-  display: grid;
-  grid-template-columns: repeat(3, max-content);
-  column-gap: 0.5em;
-  row-gap: 0.4em;
+  display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
+  column-gap: 1.6em;   /* 항목 사이 여백 */
+  row-gap: 0.4em;
 
   .page__dates-row {
-    display: contents;   /* 자식(아이콘·라벨·날짜)이 직접 grid 셀이 된다 */
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.32em;       /* 아이콘·라벨·중간점·날짜 사이 */
+    white-space: nowrap;
   }
 
   .material-icons {
     align-self: center;  /* 아이콘 폰트는 baseline이 어긋나므로 행 중앙 정렬 */
+    margin-right: 0.1em;
   }
 
   .page__dates-label {
-    margin-right: 0.9em;
     font-weight: 600;
   }
 
-  .page__dates-readtime {
-    grid-column: 2 / -1;
+  .page__dates-sep {
+    opacity: 0.65;
   }
 }
 
