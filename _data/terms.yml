@@ -2276,6 +2276,13 @@ C:
     url: /ko/math/complex_geometry/complex_manifolds
   - label: '[복소기하학] §거의 복소구조'
     url: /ko/math/complex_geometry/almost_complex_structures
+- id: composite
+  en: composite
+  ko: 합성수
+  primary: ko
+  defs:
+  - label: '[정수론] §소수와 산술의 기본정리'
+    url: /ko/math/number_theory/primes
 - id: composition
   en: composition
   ko: 합성
@@ -4647,6 +4654,13 @@ F:
   defs:
   - label: '[대수적 위상수학] §호모토피'
     url: /ko/math/algebraic_topology/homotopy
+- id: fundamental_solution
+  en: fundamental solution
+  ko: 기본해
+  primary: en
+  defs:
+  - label: '[정수론] §펠 방정식'
+    url: /ko/math/number_theory/pell_equation
 - id: fundamental_theorem_of_linear_algebra
   en: fundamental theorem of linear algebra
   ko: 선형대수학의 기본정리
@@ -5686,6 +5700,8 @@ I:
   defs:
   - label: '[대수적 구조] §몫군'
     url: /ko/math/algebraic_structures/quotient_groups
+  - label: '[정수론] §원시근'
+    url: /ko/math/number_theory/primitive_roots
 - id: index_set
   en: index set
   ko: 첨수집합
@@ -6358,6 +6374,13 @@ J:
   defs:
   - label: '[미적분학] §다중적분'
     url: /ko/math/calculus/multiple_integrals
+- id: jacobi_symbol
+  en: Jacobi symbol
+  ko: 야코비 기호
+  primary: ko
+  defs:
+  - label: '[정수론] §이차 상호법칙'
+    url: /ko/math/number_theory/quadratic_reciprocity
 - id: jacobson_radical
   en: Jacobson radical
   ko: 제이콥슨 근기
@@ -7943,6 +7966,13 @@ N:
   defs:
   - label: '[리 이론] §최고 무게 가군'
     url: /ko/math/lie_theory/highest_weight_modules
+- id: negative_pell_equation
+  en: negative pell equation
+  ko: 음의 펠 방정식
+  primary: ko
+  defs:
+  - label: '[정수론] §펠 방정식'
+    url: /ko/math/number_theory/pell_equation
 - id: neighborhood
   en: neighborhood
   ko: 근방
@@ -8406,6 +8436,8 @@ O:
   defs:
   - label: '[대수적 구조] §반군, 모노이드, 군'
     url: /ko/math/algebraic_structures/groups
+  - label: '[정수론] §원시근'
+    url: /ko/math/number_theory/primitive_roots
 - id: order_isomorphism
   en: order isomorphism
   ko: 순서동형사상
@@ -8718,6 +8750,13 @@ P:
   defs:
   - label: '[집합론] §서수와 정렬집합'
     url: /ko/math/set_theory/ordinals
+- id: pell_s_equation
+  en: 'pell''s equation'
+  ko: 펠 방정식
+  primary: ko
+  defs:
+  - label: '[정수론] §펠 방정식'
+    url: /ko/math/number_theory/pell_equation
 - id: perfect_closure
   en: perfect closure
   ko: 완전 폐포
@@ -9024,6 +9063,13 @@ P:
   defs:
   - label: '[가환대수학] §으뜸분해'
     url: /ko/math/commutative_algebra/primary_decomposition
+- id: prime
+  en: prime
+  ko: 소수
+  primary: en
+  defs:
+  - label: '[정수론] §소수와 산술의 기본정리'
+    url: /ko/math/number_theory/primes
 - id: prime_field
   en: prime field
   ko: 소체
@@ -9073,6 +9119,13 @@ P:
   defs:
   - label: '[체론] §거듭제곱근 가해성'
     url: /ko/math/field_theory/solvability_by_radicals
+- id: primitive_root
+  en: primitive root
+  ko: 원시근
+  primary: ko
+  defs:
+  - label: '[정수론] §원시근'
+    url: /ko/math/number_theory/primitive_roots
 - id: principal_cartier_divisor
   en: principal Cartier divisor
   ko: 주 카르티에 인자
@@ -12023,6 +12076,13 @@ T:
   defs:
   - label: '[선형대수학] §행렬식의 존재성과 유일성'
     url: /ko/math/linear_algebra/existence_and_uniqueness_of_determinant
+- id: triangular_number
+  en: triangular number
+  ko: 삼각수
+  primary: ko
+  defs:
+  - label: '[정수론] §펠 방정식'
+    url: /ko/math/number_theory/pell_equation
 - id: triangulated_category
   en: Triangulated category
   ko: 삼각 분할 범주
