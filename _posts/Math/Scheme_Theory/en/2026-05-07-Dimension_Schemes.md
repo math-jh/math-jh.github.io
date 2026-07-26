@@ -37,7 +37,7 @@ $$Y_0\subsetneq Y_1\subsetneq\cdots\subsetneq Y_r$$
 the generic point $y_0$ of the smallest term $Y_0$ is a point of $X$, so it belongs to some $U_i$ in the covering $(U_i)$. Then every term of the chain meets $U_i$, so by the inclusion-preserving bijection of [[Topology] §Dimension, ⁋Proposition 15](/en/math/topology/dimension#prop15), it corresponds to a chain of the same length inside $U_i$. Conversely, any chain in $U_i$ lifts to $X$ by taking closures, so $\dim X\geq\dim U_i$, and therefore $\dim X=\sup_i\dim U_i$, which is equivalent to the condition in the proposition.
 :::
 
-On the other hand, we saw in [[Properties of Scheme Morphisms] ⁋Proposition 14](/en/math/scheme_theory/properties_of_scheme_morphisms#prop14) that a finite morphism is an integral morphism of finite type, and in [[Fiber Products] ⁋Proposition 14](/en/math/scheme_theory/fiber_products#prop14) that any finite morphism is quasi-finite. In general, there exist morphisms that are integral but not of finite type, so we have not yet been able to say anything about the fibers of integral morphisms.
+On the other hand, we saw in [[Properties of Scheme Morphisms] ⁋Proposition 15](/en/math/scheme_theory/properties_of_scheme_morphisms#prop15) that a finite morphism is an integral morphism of finite type, and in [[Fiber Products] ⁋Proposition 15](/en/math/scheme_theory/fiber_products#prop15) that any finite morphism is quasi-finite. In general, there exist morphisms that are integral but not of finite type, so we have not yet been able to say anything about the fibers of integral morphisms.
 
 ::: Example 3
 For example, consider an algebraic closure $\overline{\mathbb{Q}}$ of $\mathbb{Q}$. Every element of $\overline{\mathbb{Q}}$ is algebraic over $\mathbb{Q}$, hence integral, and therefore $\mathbb{Q} \rightarrow \overline{\mathbb{Q}}$ is an integral extension; consequently the scheme morphism $\varphi:\Spec \overline{\mathbb{Q}} \rightarrow \Spec \mathbb{Q}$ is also an integral morphism.
@@ -50,7 +50,7 @@ The left-hand vertical map
 
 $$\Spec(\overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}})\rightarrow \Spec \overline{\mathbb{Q}}$$
 
-is also integral by [[Fiber Products] ⁋Proposition 15](/en/math/scheme_theory/fiber_products#prop15).
+is also integral by [[Fiber Products] ⁋Proposition 16](/en/math/scheme_theory/fiber_products#prop16).
 
 To examine this map, let us look concretely at the ring homomorphism $\overline{\mathbb{Q}}\rightarrow \overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}}$. Finding a section of the above map of schemes is the same as finding a retraction of this homomorphism, which arises from the following surjective ring homomorphism
 
@@ -83,7 +83,7 @@ By definition, the fiber over a point $y\in Y$ is given by the base change of $\
 
 $$\varphi^{-1}(y)=X\times_Y\Spec \kappa(y)$$
 
-Since integral morphisms are preserved under base change ([[Fiber Products] ⁋Proposition 15](/en/math/scheme_theory/fiber_products#prop15)),
+Since integral morphisms are preserved under base change ([[Fiber Products] ⁋Proposition 16](/en/math/scheme_theory/fiber_products#prop16)),
 
 $$\varphi^{-1}(y)=X\times_Y\Spec \kappa(y) \rightarrow \Spec \kappa(y)$$
 

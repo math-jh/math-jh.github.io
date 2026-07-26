@@ -336,7 +336,7 @@ $$X\times_ZZ' \longrightarrow Y\times_ZZ' \longrightarrow Z'$$
 Noetherian scheme들 사이의 finite morphism은 proper이다.
 :::
 ::: 증명
-Finite morphism $f:X \rightarrow Y$는 affine morphism이므로 임의의 affine open subset $V\subseteq Y$에 대하여 $f^{-1}(V)$가 affine이고, 따라서 [보조정리 5](#lem5)와 closed embedding의 affine-local 판정에 의하여 ([§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)) $f$는 separated이다. 또 finite morphism은 finite type이다. ([§스킴 사상의 성질들, ⁋명제 14](/ko/math/scheme_theory/properties_of_scheme_morphisms#prop14)) 그러므로 [정리 11](#thm11)에 의하여 lifting의 존재성만 확인하면 된다.
+Finite morphism $f:X \rightarrow Y$는 affine morphism이므로 임의의 affine open subset $V\subseteq Y$에 대하여 $f^{-1}(V)$가 affine이고, 따라서 [보조정리 5](#lem5)와 closed embedding의 affine-local 판정에 의하여 ([§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)) $f$는 separated이다. 또 finite morphism은 finite type이다. ([§스킴 사상의 성질들, ⁋명제 15](/ko/math/scheme_theory/properties_of_scheme_morphisms#prop15)) 그러므로 [정리 11](#thm11)에 의하여 lifting의 존재성만 확인하면 된다.
 
 바깥쪽 square $u:\Spec K \rightarrow X$, $v:\Spec A \rightarrow Y$가 주어졌다 하자. $\Spec A$의 모든 점은 generic point $(0)$의 specialization이고 morphism은 specialization을 보존하므로, $v(\mathfrak{m}_A)$를 포함하는 $Y$의 affine open subset $V=\Spec B$를 택하면 $V$는 $v((0))$ 또한 포함하고 따라서 $v$는 $V$를 경유한다. 그럼 $u$의 image는 $f^{-1}(V)=\Spec C$에 들어가며, $C$는 $B$-module로서 finitely generated이다. 이제 문제는 다음의 ring homomorphism들
 
@@ -359,7 +359,7 @@ Noetherian scheme들 사이의 projective morphism은 proper morphism이고, qua
 
 $$U_i=\Spec \mathbb{Z}[\x_0/\x_i,\ldots,\x_n/\x_i]\qquad (i=0,\ldots,n)$$
 
-을 $U_i\cap U_j=D(\x_j/\x_i)\subseteq U_i$를 따라 붙여 얻어진다. 여기에서 $\x_i/\x_i=1$이므로 각 $U_i$는 $\mathbb{Z}$ 위의 $n$변수 polynomial ring의 spectrum이다. 특히 각 $U_i$는 Noetherian ring의 spectrum이고 chart의 개수가 유한하므로 $\mathbb{P}^n_\mathbb{Z}$는 Noetherian scheme이며, $\pi$는 finite type이다. ([§스킴 사상의 성질들, ⁋정의 13](/ko/math/scheme_theory/properties_of_scheme_morphisms#def13))
+을 $U_i\cap U_j=D(\x_j/\x_i)\subseteq U_i$를 따라 붙여 얻어진다. 여기에서 $\x_i/\x_i=1$이므로 각 $U_i$는 $\mathbb{Z}$ 위의 $n$변수 polynomial ring의 spectrum이다. 특히 각 $U_i$는 Noetherian ring의 spectrum이고 chart의 개수가 유한하므로 $\mathbb{P}^n_\mathbb{Z}$는 Noetherian scheme이며, $\pi$는 finite type이다. ([§스킴 사상의 성질들, ⁋정의 14](/ko/math/scheme_theory/properties_of_scheme_morphisms#def14))
 
 $\pi$가 separated인 것은 chart 위에서 직접 확인된다. $\mathbb{P}^n_\mathbb{Z}\times_\mathbb{Z}\mathbb{P}^n_\mathbb{Z}$는 affine open subset들 $U_i\times_\mathbb{Z}U_j$로 덮이고 $p_1\circ\Delta=p_2\circ\Delta=\id$이므로 $\Delta^{-1}(U_i\times_\mathbb{Z}U_j)=U_i\cap U_j$이다. 이제 $\Delta$가 이 위에서 유도하는 ring homomorphism
 
@@ -389,7 +389,7 @@ $$\x_j/\x_k=(\x_j/\x_i)\cdot(\x_k/\x_i)^{-1}$$
 
 이제 $f:X \rightarrow Y$가 projective라 하면 $f$는 closed embedding $X\hookrightarrow \mathbb{P}^n_Y$와 projection $\mathbb{P}^n_Y \rightarrow Y$의 합성이다. ([정의 1](#def1)) Closed embedding은 proper이고 두 proper morphism의 합성은 proper이므로 ([따름정리 13](#cor13)), $f$는 proper이다.
 
-마지막으로 $f:X \rightarrow Y$가 quasi-projective라 하고, 이를 open immersion $\iota: X \rightarrow X'$와 projective morphism $g:X' \rightarrow Y$의 합성 $f=g\circ\iota$로 분해하자. ([정의 1](#def1)) 방금 보인 것에 의해 $g$는 proper이고, 따라서 separated이며 finite type이다. 한편 open immersion은 separated이고 두 separated morphism의 합성은 separated이므로 ([따름정리 8](#cor8)), $f$는 separated이다. 또 open immersion은 locally of finite type이며, $X$가 Noetherian이므로 $X'$의 임의의 affine open subset의 $\iota$에 의한 preimage는 Noetherian space의 열린집합으로서 quasi-compact이다. 곧 $\iota$는 finite type이고 ([§스킴 사상의 성질들, ⁋정의 13](/ko/math/scheme_theory/properties_of_scheme_morphisms#def13)), 두 finite type morphism의 합성은 finite type이므로 $f$ 또한 finite type이다.
+마지막으로 $f:X \rightarrow Y$가 quasi-projective라 하고, 이를 open immersion $\iota: X \rightarrow X'$와 projective morphism $g:X' \rightarrow Y$의 합성 $f=g\circ\iota$로 분해하자. ([정의 1](#def1)) 방금 보인 것에 의해 $g$는 proper이고, 따라서 separated이며 finite type이다. 한편 open immersion은 separated이고 두 separated morphism의 합성은 separated이므로 ([따름정리 8](#cor8)), $f$는 separated이다. 또 open immersion은 locally of finite type이며, $X$가 Noetherian이므로 $X'$의 임의의 affine open subset의 $\iota$에 의한 preimage는 Noetherian space의 열린집합으로서 quasi-compact이다. 곧 $\iota$는 finite type이고 ([§스킴 사상의 성질들, ⁋정의 14](/ko/math/scheme_theory/properties_of_scheme_morphisms#def14)), 두 finite type morphism의 합성은 finite type이므로 $f$ 또한 finite type이다.
 :::
 
 이로써 우리는 판정법의 고전적인 귀결을 얻는다. Proper morphism은 정의상 closed map이므로, projective scheme에서 나가는 morphism의 image는 언제나 닫혀 있다.
