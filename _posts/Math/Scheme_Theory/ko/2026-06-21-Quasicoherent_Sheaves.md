@@ -1,6 +1,6 @@
 ---
 title: "준연접층"
-description: "스킴의 구조층 위에 정의되는 가군층을 도입하고, affine scheme 위에서 가군의 연관층이 가군 범주와 준연접층 범주 사이의 동치를 주는 것을 보인다. 이를 통해 준연접성이 affine-local property임을 확인하고 ideal sheaf, locally free sheaf, pullback과 pushforward를 다룬다."
+description: "스킴의 구조층 위에 정의되는 가군층을 도입하고, affine scheme 위에서 가군의 연관층이 가군 범주와 준연접층 범주 사이의 동치를 주는 것을 보인다. 이를 통해 준연접성이 affine-local property임을 확인하고 locally free sheaf, pullback과 pushforward, 그리고 closed subscheme의 ideal sheaf를 다룬다."
 excerpt: "Sheaf of O_X-modules, the equivalence M↦M̃ on affine schemes, and quasi-coherence"
 
 categories: [Math / Scheme Theory]
@@ -9,7 +9,7 @@ sidebar:
     nav: "scheme_theory-ko"
 
 date: 2026-06-21
-weight: 18
+weight: 16
 
 published: false
 ---
@@ -208,46 +208,11 @@ Scheme $X$ 위의 quasi-coherent sheaf $\mathcal{F}$가 *finite type<sub>유한�
 
 Locally Noetherian scheme 위에서는 finitely generated와 finitely presented가 일치하므로, 이 경우 coherent sheaf는 곧 finite type quasi-coherent sheaf이다. $X$ 위의 coherent sheaves는 $\QCoh(X)$의 full subcategory $\Coh(X)$를 이룬다. 가장 단순한 예시는 $\mathcal{O}_X$ 자기 자신으로, 이는 affine 위에서 $\widetilde A$이고 $A$는 자기 자신 위의 free 가군이므로 coherent sheaf이다.
 
-## Ideal sheaf와 closed subscheme
-
-Quasi-coherent sheaf의 중요한 예시로 ideal sheaf가 있다. Affine scheme $\Spec A$에서 ideal $\mathfrak{a}\subseteq A$는 그 자체로 $A$-가군이므로 연관층 $\widetilde{\mathfrak{a}}$를 정의하며, 이는 $\mathcal{O}_{\Spec A}=\widetilde A$의 부분 sheaf이다. 일반적인 scheme 위에서는 이를 다음과 같이 정의한다.
-
-::: 정의 12
-Scheme $X$ 위의 quasi-coherent sheaf $\mathcal{I}$가 *ideal sheaf<sub>아이디얼층</sub>*라는 것은, $\mathcal{I}$가 $\mathcal{O}_X$의 부분 $\mathcal{O}_X$-가군층인 것이다. 즉 각각의 열린집합 $U$에 대하여 $\mathcal{I}(U)$가 ring $\mathcal{O}_X(U)$의 ideal이며, restriction map과 호환되는 것이다.
-:::
-
-Ideal sheaf는 자연스럽게 $X$의 닫힌 부분집합과 그 위의 scheme 구조를 결정한다. Affine 위에서 ideal $\mathfrak{a}\subseteq A$는 quotient ring $A/\mathfrak{a}$를 정의하며, $\Spec A/\mathfrak{a}$는 $Z(\mathfrak{a})\subseteq \Spec A$ 위의 affine scheme이다. ([§스펙트럼](/ko/math/scheme_theory/spectrums)) 이를 붙여 다음을 얻는다.
-
-::: 명제 13
-Scheme $X$ 위의 ideal sheaf $\mathcal{I}$에 대하여, quotient sheaf $\mathcal{O}_X/\mathcal{I}$의 support
-
-$$Y=\supp(\mathcal{O}_X/\mathcal{I})=\{x\in X\mid (\mathcal{O}_X/\mathcal{I})_x\neq 0\}$$
-
-는 $X$의 닫힌 부분집합이며, $(Y, (\mathcal{O}_X/\mathcal{I})\vert_Y)$는 scheme이다. 더욱이 inclusion $\iota:Y\hookrightarrow X$는 scheme들 사이의 morphism이다.
-:::
-::: 증명
-문제가 국소적이므로 $X=\Spec A$인 경우만 보이면 충분하다. [정리 9](#thm9)에 의하여 $\mathcal{I}=\widetilde{\mathfrak{a}}$인 ideal $\mathfrak{a}\subseteq A$가 존재한다. 그럼 [명제 6](#prop6)의 exactness로부터 short exact sequence
-
-$$0 \rightarrow \widetilde{\mathfrak{a}} \rightarrow \widetilde A \rightarrow \widetilde{A/\mathfrak{a}} \rightarrow 0$$
-
-를 얻으므로 $\mathcal{O}_X/\mathcal{I}\cong \widetilde{A/\mathfrak{a}}$이다. 이 sheaf의 stalk은 $\mathfrak{p}$에서 $(A/\mathfrak{a})_\mathfrak{p}$이며, 이것이 $0$이 아닌 것은 $\mathfrak{p}\supseteq \mathfrak{a}$인 것과 동치이므로 ([\[가환대수학\] §국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8))
-
-$$Y=\{\mathfrak{p}\mid \mathfrak{p}\supseteq \mathfrak{a}\}=Z(\mathfrak{a})$$
-
-이고, 이는 [§스펙트럼](/ko/math/scheme_theory/spectrums)에서 본 바와 같이 닫힌집합이다. 한편 canonical projection $A \rightarrow A/\mathfrak{a}$는 [§스펙트럼, ⁋명제 9](/ko/math/scheme_theory/spectrums#prop9)에 의하여 homeomorphism $\Spec A/\mathfrak{a}\cong Z(\mathfrak{a})$를 주며, 이 위에서 $(\mathcal{O}_X/\mathcal{I})\vert_Y\cong \mathcal{O}_{\Spec A/\mathfrak{a}}$이므로 $(Y, (\mathcal{O}_X/\mathcal{I})\vert_Y)\cong (\Spec A/\mathfrak{a}, \mathcal{O}_{\Spec A/\mathfrak{a}})$는 affine scheme이다. 마지막으로 ring homomorphism $A \rightarrow A/\mathfrak{a}$가 유도하는 ([§아핀스킴, ⁋명제 9](/ko/math/scheme_theory/affine_schemes#prop9)) scheme morphism이 곧 inclusion $\iota$이다.
-:::
-
-::: 정의 14
-[명제 13](#prop13)에서 얻어지는 scheme $(Y, \mathcal{O}_Y)$ (단, $\mathcal{O}_Y=(\mathcal{O}_X/\mathcal{I})\vert_Y$)와 inclusion morphism $\iota:Y\hookrightarrow X$를 ideal sheaf $\mathcal{I}$가 정의하는 *closed subscheme<sub>닫힌 부분스킴</sub>*이라 부른다.
-:::
-
-따라서 ideal sheaf와 closed subscheme은 서로 대응된다. Affine 위에서 이 대응은 ideal $\mathfrak{a}\subseteq A$와 quotient $A/\mathfrak{a}$ 사이의 대응에 다름 아니며, 특히 같은 닫힌 부분집합 $Z(\mathfrak{a})$ 위에 서로 다른 scheme 구조를 줄 수 있다는 점이 중요하다. 예를 들어 $\mathfrak{a}=(\x)$와 $\mathfrak{a}'=(\x^2)$는 $\mathbb{A}^1_\mathbb{K}$ 위에서 같은 닫힌집합 $\{0\}$을 정의하지만, $A/\mathfrak{a}=\mathbb{K}$와 $A/\mathfrak{a}'=\mathbb{K}[\x]/(\x^2)$는 서로 다른 scheme 구조를 주며 후자는 nilpotent를 가진다.
-
 ## Locally free sheaf와 invertible sheaf
 
 Quasi-coherent sheaf 가운데 국소적으로 free 가군에 대응하는 것들은 vector bundle의 대수기하학적 대응물로서 특히 중요하다.
 
-::: 정의 15
+::: 정의 12
 Scheme $X$ 위의 $\mathcal{O}_X$-가군층 $\mathcal{E}$가 *locally free sheaf of rank $r$<sub>랭크 $r$ 국소 자유층</sub>*라는 것은, 각 점 $x\in X$의 열린근방 $U$가 존재하여 $\mathcal{E}\vert_U\cong \mathcal{O}_U^{\oplus r}$인 것이다. Rank $1$인 locally free sheaf를 *invertible sheaf<sub>가역층</sub>*라 부른다.
 :::
 
@@ -255,7 +220,7 @@ Locally free sheaf는 항상 quasi-coherent sheaf이다. 실제로 각 점의 �
 
 [\[대수다양체\] §선다발과 벡터다발, ⁋정의 23](/ko/math/algebraic_varieties/line_bundles#def23)에서 우리는 variety 위의 rank $r$ vector bundle을 정의하고, 그 section sheaf가 국소적으로 $\mathcal{O}_X^{\oplus r}$과 동형임을 보았다. ([\[대수다양체\] §선다발과 벡터다발, ⁋명제 5](/ko/math/algebraic_varieties/line_bundles#prop5)) Scheme의 언어에서 locally free sheaf는 정확히 이 vector bundle의 section sheaf에 대응하며, 특히 invertible sheaf는 line bundle에 대응한다. ([\[대수다양체\] §선다발과 벡터다발, ⁋정의 4](/ko/math/algebraic_varieties/line_bundles#def4)) 이름이 알려주듯, invertible sheaf는 tensor product에 대한 역원을 가진다.
 
-::: 명제 16
+::: 명제 13
 Invertible sheaf $\mathcal{L}$에 대하여, $\mathcal{L}^\vee=\sHom_{\mathcal{O}_X}(\mathcal{L}, \mathcal{O}_X)$ 또한 invertible sheaf이며, $\mathcal{L}\otimes_{\mathcal{O}_X}\mathcal{L}^\vee\cong \mathcal{O}_X$이다.
 :::
 ::: 증명
@@ -274,9 +239,9 @@ $$(\mathcal{L}\otimes_{\mathcal{O}_X}\mathcal{L}^\vee)\vert_U\cong \mathcal{O}_U
 
 ## Pullback과 pushforward
 
-마지막으로 scheme morphism을 따라 quasi-coherent sheaf를 옮기는 두 연산을 살펴본다. Morphism $f:X \rightarrow Y$가 주어질 때, $Y$ 위의 sheaf를 $X$로 당기는 pullback과 $X$ 위의 sheaf를 $Y$로 미는 pushforward를 정의한다.
+이제 scheme morphism을 따라 quasi-coherent sheaf를 옮기는 두 연산을 살펴본다. Morphism $f:X \rightarrow Y$가 주어질 때, $Y$ 위의 sheaf를 $X$로 당기는 pullback과 $X$ 위의 sheaf를 $Y$로 미는 pushforward를 정의한다.
 
-::: 정의 17
+::: 정의 14
 Scheme morphism $f:X \rightarrow Y$가 주어졌다 하자.
 
 1. $X$ 위의 $\mathcal{O}_X$-가군층 $\mathcal{F}$에 대하여, *pushforward* $f_\ast \mathcal{F}$는 열린집합마다 $V\mapsto \mathcal{F}(f^{-1}(V))$로 주어지는 $Y$ 위의 $\mathcal{O}_Y$-가군층이다. 그 가군 구조는 morphism의 sheaf morphism $f^\sharp:\mathcal{O}_Y \rightarrow f_\ast \mathcal{O}_X$을 통해 주어진다.
@@ -291,7 +256,7 @@ Pushforward의 경우 $f_\ast \mathcal{F}(V)=\mathcal{F}(f^{-1}(V))$가 sheaf �
 
 이제 자연스러운 질문은 이 두 연산이 준연접성을 보존하는가이다. Pullback의 경우는 항상 보존되지만, pushforward의 경우는 추가 조건이 필요하다.
 
-::: 명제 18
+::: 명제 15
 Scheme morphism $f:X \rightarrow Y$와 $Y$ 위의 quasi-coherent sheaf $\mathcal{G}$에 대하여, pullback $f^\ast \mathcal{G}$는 $X$ 위의 quasi-coherent sheaf이다.
 :::
 ::: 증명
@@ -310,7 +275,7 @@ $$(\widetilde{M\otimes_A B})_\mathfrak{q}=(M\otimes_A B)_\mathfrak{q}\cong M\oti
 
 Pushforward의 경우 준연접성이 보존되려면 morphism이 quasi-compact이고 quasi-separated여야 한다. 이는 $f_\ast \mathcal{F}(V)=\mathcal{F}(f^{-1}(V))$를 affine 위에서 계산할 때, $f^{-1}(V)$를 유한히 많은 affine으로 덮고 그 교집합 또한 통제할 수 있어야 localization과 호환되는 가군 구조를 얻기 때문이다.
 
-::: 정리 19
+::: 정리 16
 Quasi-compact이고 quasi-separated인 scheme morphism $f:X \rightarrow Y$와 $X$ 위의 quasi-coherent sheaf $\mathcal{F}$에 대하여, pushforward $f_\ast \mathcal{F}$는 $Y$ 위의 quasi-coherent sheaf이다.
 :::
 ::: 증명
@@ -331,7 +296,28 @@ $$\mathcal{F}(f^{-1}(D(g)))\cong \ker\Bigl(\prod_i N_i \rightrightarrows \prod_{
 를 얻는다. 여기에서 유한성은 곱과 localization을 교환하는 데 본질적으로 사용되었으며, 이것이 quasi-compactness와 quasi-separatedness가 필요한 이유이다. 따라서 $f_\ast \mathcal{F}(D(g))\cong M_g$가 모든 $g$에 대해 성립하므로 $f_\ast \mathcal{F}\cong \widetilde M$이고, 이는 quasi-coherent sheaf이다.
 :::
 
-[정리 19](#thm19)의 quasi-compact, quasi-separated 조건은 본질적이다. 가령 무한히 많은 affine을 붙여야 하는 morphism에서는 $f^{-1}(D(g))$ 위의 section을 계산할 때 무한 곱이 등장하여 localization과의 교환이 깨질 수 있다. 한편 Noetherian scheme들 사이의 morphism이나, 특히 affine scheme들 사이의 morphism은 항상 이 조건을 만족하므로, 실용적으로 자주 마주치는 상황에서는 pushforward가 준연접성을 보존한다.
+[정리 16](#thm16)의 quasi-compact, quasi-separated 조건은 본질적이다. 가령 무한히 많은 affine을 붙여야 하는 morphism에서는 $f^{-1}(D(g))$ 위의 section을 계산할 때 무한 곱이 등장하여 localization과의 교환이 깨질 수 있다. 한편 Noetherian scheme들 사이의 morphism이나, 특히 affine scheme들 사이의 morphism은 항상 이 조건을 만족하므로, 실용적으로 자주 마주치는 상황에서는 pushforward가 준연접성을 보존한다.
+
+## Ideal sheaf와 closed subscheme
+
+Pushforward가 준연접성을 보존한다는 사실의 가장 중요한 응용은 closed subscheme이 결정하는 ideal sheaf이다. Affine scheme $\Spec A$의 ideal $\mathfrak{a}\subseteq A$는 그 자체로 $A$-가군이므로 연관층 $\widetilde{\mathfrak{a}}$를 정의하고, 이는 $\mathcal{O}_{\Spec A}=\widetilde A$의 부분 sheaf이다. 일반적인 scheme $X$의 closed embedding $\iota:Z \rightarrow X$가 정의하는 ideal sheaf $\mathcal{I}_{Z/X}=\ker\iota^\sharp$ 또한 각각의 affine open subset 위에서 ideal을 주지만 ([§닫힌 부분스킴, ⁋정의 5](/ko/math/scheme_theory/closed_subschemes#def5)), 이 ideal들이 localization과 호환되어 하나의 연관층으로 붙는지는 별개의 문제이다. [§닫힌 부분스킴, ⁋명제 6](/ko/math/scheme_theory/closed_subschemes#prop6)이 gluing을 위해 요구한 localization 조건이 바로 준연접성이며, 우리는 이제 이를 증명할 수 있다.
+
+::: 명제 17
+Closed embedding $\iota:Z \rightarrow X$에 대하여 ([§닫힌 부분스킴, ⁋정의 2](/ko/math/scheme_theory/closed_subschemes#def2)), $\iota_\ast \mathcal{O}_Z$와 ideal sheaf $\mathcal{I}_{Z/X}$는 모두 $X$ 위의 quasi-coherent sheaf이다.
+:::
+::: 증명
+[정리 16](#thm16)의 세 가설 가운데 $\mathcal{O}_Z$가 $Z$ 위의 quasi-coherent sheaf라는 것은, 각 affine open subset $\Spec B\subseteq Z$ 위에서 $\mathcal{O}_Z\vert_{\Spec B}=\widetilde B$인 데에서 곧바로 따라온다. 따라서 $\iota$가 quasi-compact이고 quasi-separated임만 확인하면 된다. $X$의 affine open subset $U\cong \Spec A$를 고정하고 $W=\iota^{-1}(U)$라 하자. $\iota$는 연속함수로서 $Z$와 $X$의 닫힌집합 사이의 homeomorphism이므로, $W$는 $U$의 닫힌 부분집합 $C=\iota(Z)\cap U$와 homeomorphic하다. 그런데 affine scheme은 quasi-compact이고 ([§스펙트럼, ⁋보조정리 12](/ko/math/scheme_theory/spectrums#lem12)) quasi-compact space의 닫힌 부분집합은 quasi-compact이므로 $W$ 또한 quasi-compact이다. 즉 $\iota$는 quasi-compact morphism이다. ([§스킴 사상의 성질들, ⁋정의 2](/ko/math/scheme_theory/properties_of_scheme_morphisms#def2))
+
+Quasi-separatedness도 $C$의 위상만으로 확인된다. $\{D(f)\}_{f\in A}$가 $U$의 base이므로 $C$의 임의의 열린집합은 $C\cap D(f)$들의 합집합이고, 각각의 $C\cap D(f)$는 quasi-compact space $D(f)\cong \Spec A_f$의 닫힌 부분집합이라 quasi-compact이다. 따라서 $C$의 quasi-compact 열린집합은 유한히 많은 $C\cap D(f)$의 합집합으로 쓸 수 있으며, 그러한 두 집합의 교집합은 $C\cap D(f)\cap D(g)=C\cap D(fg)$ 꼴들의 유한 합집합이 되어 다시 quasi-compact이다. 즉 $W$는 quasi-separated scheme이고, $U$가 임의의 affine open subset이었으므로 $\iota$는 quasi-separated morphism이다. ([§스킴 사상의 성질들, ⁋정의 5](/ko/math/scheme_theory/properties_of_scheme_morphisms#def5)) 이제 [정리 16](#thm16)에 의하여 $\iota_\ast \mathcal{O}_Z$는 $X$ 위의 quasi-coherent sheaf이다.
+
+남은 것은 $\mathcal{I}_{Z/X}=\ker\iota^\sharp$이다. 준연접성이 affine-local이므로 ([정리 10](#thm10)) 위에서 고정한 $U=\Spec A$ 위에서 보이면 충분하다. $N=(\iota_\ast \mathcal{O}_Z)(U)$라 하면 [정리 10](#thm10)에 의하여 $(\iota_\ast \mathcal{O}_Z)\vert_U\cong \widetilde N$이고, 따라서 $\iota^\sharp$을 $U$로 제한한 것은 $\widetilde A \rightarrow \widetilde N$ 꼴의 morphism이므로 [정리 7](#thm7)에 의하여 적당한 $A$-가군 homomorphism $\phi:A \rightarrow N$의 연관층 $\widetilde\phi$이다. 그럼 두 short exact sequence
+
+$$0 \rightarrow \ker\phi \rightarrow A \rightarrow \im\phi \rightarrow 0,\qquad 0 \rightarrow \im\phi \rightarrow N \rightarrow N/\im\phi \rightarrow 0$$
+
+에 [명제 6](#prop6)을 적용하면 $\widetilde{\im\phi} \rightarrow \widetilde N$이 injective이고 $\widetilde{\ker\phi}=\ker(\widetilde A \rightarrow \widetilde{\im\phi})$이므로, 결국 $\ker\widetilde\phi=\widetilde{\ker\phi}$를 얻는다. 즉 $\mathcal{I}_{Z/X}\vert_U\cong \widetilde{\ker\phi}$는 연관층이고, 이로부터 $\mathcal{I}_{Z/X}$는 quasi-coherent sheaf이다.
+:::
+
+이로써 $X$의 closed subscheme들은 $\mathcal{O}_X$의 quasi-coherent ideal sheaf, 곧 $\mathcal{O}_X$의 quasi-coherent 부분 $\mathcal{O}_X$-가군층과 정확히 대응한다. 한 방향은 [명제 17](#prop17)이 주며, 거꾸로 그러한 $\mathcal{I}$가 주어지면 각각의 affine open subset $\Spec A$에 대하여 $\mathcal{I}(\Spec A)$는 $A$의 ideal이고 [정리 10](#thm10)과 [보조정리 3](#lem3)에 의하여 $\mathcal{I}(D(f))\cong \mathcal{I}(\Spec A)_f$가 성립하므로, [§닫힌 부분스킴, ⁋명제 6](/ko/math/scheme_theory/closed_subschemes#prop6)에 의하여 $\mathcal{I}$는 $X$의 유일한 closed subscheme을 유도한다. 이 대응은 affine 위에서 ideal $\mathfrak{a}\subseteq A$와 quotient $A/\mathfrak{a}$ 사이의 대응에 다름 아니다. 또한 [명제 17](#prop17)은 [§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)의 증명에서 증명 없이 사용한 사실이기도 하며, 그 증명이 pushforward의 준연접성을 거치므로 quasi-coherent sheaf의 언어를 갖춘 지금에서야 정당화된다.
 
 ---
 
