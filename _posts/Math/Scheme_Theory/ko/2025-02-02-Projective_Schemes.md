@@ -1,7 +1,7 @@
 ---
 title: "사영스킴"
 description: "아핀 직선들을 적당한 방식으로 붙여서 사영공간을 만들고, 이를 일반화하여 사영스킴을 정의한다. 위상수학적 관점에서 사영공간을 이해하고, 스테레오 사영법과 콕사이클 조건을 통해 아핀 직선들을 접합하는 방법을 살펴본다."
-excerpt: "Graded ring으로부터의 Proj 구성과 projective scheme"
+excerpt: "Graded ring으로부터의 Proj 구성과 사영공간"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/projective_schemes
@@ -12,11 +12,11 @@ date: 2025-02-02
 weight: 5
 ---
 
-[§스킴, ⁋예시 10](/ko/math/scheme_theory/schemes#ex10)에서 우리는 두 개의 affine line $\mathbb{A}^1=\Spec \mathbb{K}[\x]$을 적당한 방식으로 붙여 projective space $\mathbb{P}^1$을 만들었다. 이번에는 이를 일반화하여 projective scheme을 정의한다. 
+[§스킴, ⁋예시 10](/ko/math/scheme_theory/schemes#ex10)에서 우리는 두 개의 affine line $\mathbb{A}^1=\Spec \mathbb{K}[\x]$을 적당한 방식으로 붙여 projective space $\mathbb{P}^1$을 만들었다. 이번에는 이를 일반화하여, graded ring $A_\bullet$으로부터 scheme $\Proj A_\bullet$을 얻어내는 $\Proj$ 구성을 다룬다. 
 
 ## 사영공간
 
-[§스킴, ⁋예시 10](/ko/math/scheme_theory/schemes#ex10)을 그대로 일반화하면 scheme으로서 $\mathbb{P}^n$을 정의하는 것 자체는 어렵지 않다. 하지만 이를 일반화하여 projective scheme을 정의하기 위해서는 $\mathbb{P}^n$을 직관적으로 이해하는 것이 도움이 되므로, 이를 조금 더 찬찬히 뜯어보자.
+[§스킴, ⁋예시 10](/ko/math/scheme_theory/schemes#ex10)을 그대로 일반화하면 scheme으로서 $\mathbb{P}^n$을 정의하는 것 자체는 어렵지 않다. 하지만 이를 일반화하여 $\Proj$ 구성에 이르기 위해서는 $\mathbb{P}^n$을 직관적으로 이해하는 것이 도움이 되므로, 이를 조금 더 찬찬히 뜯어보자.
 
 우선 우리는 기존에 위상수학에서 정의하던 projective space를 간단히 살펴본다. 위상공간 $\mathbb{P}^n$을 만들기 위해 우리는 위상공간 $\mathbb{R}^{n+1}\setminus \{0\}$을 생각했다. 그럼 이 위에 다음의 동치관계
 
@@ -74,11 +74,11 @@ $$x_{k/i}/x_{j/i}=x_{k/j}\quad\text{for all $k\neq i,j$},\qquad\text{and}\qquad 
 
 $$P_i=\Spec \mathbb{K}[\x_{0/i},\ldots, \x_{n/i}]/(\x_{i/i}-1)=\Spec A^i$$
 
-를 생각하자. 그럼 $P_i$의 open subscheme들 $P_{ij}=D(\x_{j/i})=(A^i)_{\x_{j/i}}$과, 다음의 ring homomorphism
+를 생각하자. 그럼 $P_i$의 open subscheme들 $P_{ij}=D(\x_{j/i})\cong \Spec (A^i)_{\x_{j/i}}$과, 다음의 ring homomorphism
 
-$$(A^i)_{\x_{j/i}} \rightarrow (A^j)_{\x_{i/j}};\qquad \x_{k/i}\mapsto \x_{k/j}/\x_{i/j}\quad\text{for all $k\neq i,j$},\qquad\text{and}\qquad \x_{j/i}\mapsto 1/\x_{i/j}$$
+$$(A^j)_{\x_{i/j}} \rightarrow (A^i)_{\x_{j/i}};\qquad \x_{k/j}\mapsto \x_{k/i}/\x_{j/i}\quad\text{for all $k\neq i,j$},\qquad\text{and}\qquad \x_{i/j}\mapsto 1/\x_{j/i}$$
 
-을 통해 정의되는 isomorphism $\varphi_{ij}:P_{ij} \rightarrow P_{ji}$들이 [§스킴, ⁋보조정리 9](/ko/math/scheme_theory/schemes#lem9)의 cocycle condition을 만족하는 것이 거의 자명하며 따라서 유일한 scheme $\mathbb{P}^n$이 정의되고, 이 때 $\mathbb{P}^n$의 원소들을 $[x_0:\ldots:x_n]$의 형태로 쓴다면 $U_i$는 정확히 $x_i\neq 0$인 조건을 만족하는 집합이다. 
+의 spectrum으로 정의되는 isomorphism $\varphi_{ij}:P_{ij} \rightarrow P_{ji}$들이 [§스킴, ⁋보조정리 9](/ko/math/scheme_theory/schemes#lem9)의 cocycle condition을 만족하는 것이 거의 자명하며 따라서 유일한 scheme $\mathbb{P}^n$이 정의된다. 이 때 $\mathbb{K}$의 원소들로 이루어진 좌표를 갖는 점들, 즉 앞의 위상수학적 논의에서와 같이 $[x_0:\ldots:x_n]$의 형태로 쓸 수 있는 점들에 한하여 $U_i$는 정확히 $x_i\neq 0$인 조건을 만족하는 집합이다. 물론 $\mathbb{A}^n$이 그러하였듯 $\mathbb{P}^n$에는 이러한 좌표로 쓰이지 않는 점들 또한 존재한다. 
 
 ## 사영스킴
 
@@ -98,7 +98,7 @@ $$f(\lambda x_0,\ldots, \lambda x_n)=\lambda^{\deg f} f(x_0,\ldots, x_n),\qquad 
 
 즉, $\mathbb{P}^n$을 spectrum과 비슷한 방식으로 설명하기 위해서는 $\mathbb{A}^{n+1}$을 단순한 ring $\mathbb{K}[\x_0,\ldots, \x_n]$의 spectrum으로 볼 것이 아니라, 여기에 degree에 대한 정보를 추가하여 이를 *graded* ring으로 보고, 임의의 원소들의 zero locus가 아닌 *homogeneous*한 원소들의 zero locus를 보아야 한다. 그럼 [\[대수적 구조\] §등급환, ⁋명제 6](/ko/math/algebraic_structures/graded_rings#prop6)를 생각하면 우리의 관심사 또한 *homogeneous* ideal들이 되어야 할 것이다. 
 
-이번 글의 남은 부분에서 우리는 graded ring에 $\Proj$를 취하여 projective scheme을 얻어내는 과정을 따라간다. 이를 위해 몇몇 표기를 고정한다. 
+이번 글의 남은 부분에서 우리는 graded ring에 $\Proj$를 취하여 scheme을 얻어내는 과정을 따라간다. 임의의 graded ring의 $\Proj$가 곧 projective scheme인 것은 아니다. 가령 $A_\bullet=\mathbb{K}[\x_1,\x_2,\ldots]$이라 두면 $\Proj A_\bullet$은 quasi-compact조차 아니므로, projective scheme이라는 이름은 finitely generated 조건과 함께 [§사영공간의 닫힌 부분스킴, ⁋정의 7](/ko/math/scheme_theory/closed_subschemes_of_projective_spaces#def7)에서 따로 정의한다. 이를 위해 몇몇 표기를 고정한다. 
 
 ::: remark 참고 {#rmk}
 Graded ring은 별 말이 없다면 항상 $\mathbb{N}_{\geq0}$-graded인 것으로 가정한다. 즉 우리의 관심이 되는 ring은 항상 다음의 꼴
@@ -205,7 +205,7 @@ $$D_+(\mathfrak{a})=\bigcup_{i\in I} D_+(f_i)$$
 한편, 우리는 ring $A$의 spectrum $\Spec A$에서, 임의의 원소 $f\in A$를 택하면 $D(f)$는 (scheme으로서) $\Spec A_f$와 isomorphic한 것을 살펴보았다. 비슷한 결과가 $D_+(f)$에 대해서도 성립한다.
 
 ::: 보조정리 8
-Graded ring $A_\bullet$과 임의의 homogeneous element $f\in A_\bullet$에 대하여, 함수 $D_+(f) \rightarrow \Spec A_{(f)}$를 다음의 식
+Graded ring $A_\bullet$과 $A_+$의 임의의 nonzero homogeneous element $f$에 대하여, 함수 $D_+(f) \rightarrow \Spec A_{(f)}$를 다음의 식
 
 $$\mathfrak{p}\mapsto \mathfrak{p}A_f\cap A_{(f)}$$
 
@@ -218,24 +218,26 @@ $$\mathfrak{p}\mapsto \mathfrak{p}A_f\cap A_{(f)}$$
 
 $$\frac{x^{\deg f}}{f^{\deg x}}\in \mathfrak{q}$$
 
-을 만족하는 $x$들을 모은 후, 이들에 의해 생성되는 $A$의 homogeneous ideal $\mathfrak{p}$를 생각하자. 그럼 임의의 homogeneous element $x,y\in A$에 대하여,
+을 만족하는 $x$들을 모은 후, 이들에 의해 생성되는 $A$의 homogeneous ideal $\mathfrak{p}$를 생각하자. 여기에서 확인해야 할 것은 위 조건을 만족하는 homogeneous element들의 집합이 이미 ideal을 이룬다는 것, 즉 같은 degree를 갖는 두 원소의 합과 임의의 homogeneous element와의 곱이 다시 그 조건을 만족한다는 것이다. 곱의 경우는 자명하고, 합의 경우는 $(x+y)^{\deg f}$를 이항전개했을 때 각 항 $x^ky^{\deg f-k}/f^{\deg x}$의 $\deg f$거듭제곱이 $x^{\deg f}/f^{\deg x}$와 $y^{\deg f}/f^{\deg y}$의 거듭제곱들의 곱이 되는 것과 $\mathfrak{q}$가 prime인 것을 함께 쓰면 된다.
+
+그럼 $\mathfrak{p}$의 homogeneous element들은 정확히 위 조건을 만족하는 것들이므로, 임의의 homogeneous element $x,y\in A$에 대하여
 
 $$xy\in \mathfrak{p}\iff \frac{x^{\deg f}}{f^{\deg x}}\frac{y^{\deg f}}{f^{\deg y}}\in \mathfrak{q}$$
 
-이므로 $\mathfrak{q}$가 prime ideal인 것으로부터 $\mathfrak{p}$가 prime ideal인 것을 안다. 이제 이 대응 $\mathfrak{p}\mapsto \mathfrak{p}A_f\cap A_{(f)}$과 $\mathfrak{q}\mapsto \mathfrak{p}$가 서로의 역함수인 것을 쉽게 확인할 수 있고, $A_\bullet$의 임의의 homogeneous ideal $\mathfrak{a}$에 대하여, $D_+(f)$의 닫힌집합 $Z_+(\mathfrak{a})\cap D_+(f)$는 이 함수에 의하여 $\Spec A_{(f)}$의 닫힌집합 $Z(\mathfrak{a}A_f\cap A_{(f)})$으로 옮기므로 이것이 homeomorphism이 되는 것을 안다.
+이고, $\mathfrak{q}$가 prime ideal인 것으로부터 $\mathfrak{p}$가 prime ideal인 것을 안다. 또 $f^{\deg f}/f^{\deg f}=1\not\in \mathfrak{q}$이므로 $f\not\in \mathfrak{p}$이고, 따라서 $\mathfrak{p}$는 $A_+$를 포함하지 않아 $\mathfrak{p}\in D_+(f)$이다. 이제 이 대응 $\mathfrak{p}\mapsto \mathfrak{p}A_f\cap A_{(f)}$과 $\mathfrak{q}\mapsto \mathfrak{p}$가 서로의 역함수인 것을 쉽게 확인할 수 있고, $A_\bullet$의 임의의 homogeneous ideal $\mathfrak{a}$에 대하여, $D_+(f)$의 닫힌집합 $Z_+(\mathfrak{a})\cap D_+(f)$는 이 함수에 의하여 $\Spec A_{(f)}$의 닫힌집합 $Z(\mathfrak{a}A_f\cap A_{(f)})$으로 옮기므로 이것이 homeomorphism이 되는 것을 안다.
 :::
 
 그럼 이제 $\Proj A_\bullet$에 scheme 구조를 주는 방법은 자명하다. 다음 보조정리의 증명은 [보조정리 8](#lem8)과 거의 유사하다. 
 
 ::: 보조정리 9
-Graded ring $A_\bullet$과 nonzero homogeneous element $f,g$에 대하여, isomorphism
+Graded ring $A_\bullet$과 $A_+$의 nonzero homogeneous element $f,g$에 대하여, isomorphism
 
 $$\Spec A_{(fg)}\cong D(g^{\deg f}/f^{\deg g})\subseteq \Spec A_{(f)}$$
 
 이 존재한다. 
 :::
 ::: 증명
-$\Proj A_\bullet$의 임의의 점 $\mathfrak{p}$는 $A_+\not\subseteq \mathfrak{p}$를 만족하므로 $\mathfrak{p}$에 속하지 않는 $A_+$의 homogeneous element를 갖는다. 즉 $\Proj A_\bullet$을 덮는 것은 양의 degree를 갖는 $f$들이 주는 $D_+(f)$들이므로, 이하에서 $f$와 $g$는 모두 양의 degree를 갖는 것으로 두고 $d=\deg f\geq 1$과 $e=\deg g\geq 1$로 적는다. 그럼 $\deg (g^d)=de=\deg (f^e)$이므로
+$\Proj A_\bullet$의 임의의 점 $\mathfrak{p}$는 $A_+\not\subseteq \mathfrak{p}$를 만족하므로 $\mathfrak{p}$에 속하지 않는 $A_+$의 homogeneous element를 갖는다. 즉 $\Proj A_\bullet$을 덮는 것은 $A_+$의 nonzero homogeneous element들이 주는 $D_+(f)$들이므로, 가정을 이러한 $f$들로 제한하는 것은 우리의 목적에 아무런 손실을 주지 않는다. 이제 $d=\deg f\geq 1$과 $e=\deg g\geq 1$로 적기로 하면 $\deg (g^d)=de=\deg (f^e)$이므로
 
 $$\theta=\frac{g^{\deg f}}{f^{\deg g}}=\frac{g^d}{f^e}$$
 
@@ -308,7 +310,7 @@ $$\Phi_{f,g}:(A_{(f)})_{\theta_{f,g}} \rightarrow A_{(fg)}$$
 
 $$\Phi_{f,g}^{-1}\circ \Phi_{g,f}:(A_{(g)})_{\theta_{g,f}} \rightarrow (A_{(f)})_{\theta_{f,g}}$$
 
-의 spectrum으로 정의한다. 우선 $f=g$인 경우 $\theta_{f,f}=1$이므로 $X_{ff}=X_f$이고, $A_{f\cdot f}=A_f$이므로 $\rho_{f,ff}$가 identity이며 따라서 $\varphi_{ff}=\id$이다.
+의 spectrum으로 정의한다. 여기에서 $fg=0$인 경우는 $\theta_{f,g}=0$과 $\theta_{g,f}=0$이 되어 $X_{fg}$와 $X_{gf}$가 모두 공집합이므로, 이 경우 $\varphi_{fg}$는 empty scheme의 identity로 둔다. 우선 $f=g$인 경우 $\theta_{f,f}=1$이므로 $X_{ff}=X_f$이고, $A_{f\cdot f}=A_f$이므로 $\rho_{f,ff}$가 identity이며 따라서 $\varphi_{ff}=\id$이다.
 
 이제 cocycle condition을 확인하자. Nonzero homogeneous element $f,g,h\in A_+$를 택하고 $d=\deg f$, $e=\deg g$, $m=\deg h$라 하자. 그럼 $A_{(f)}$에서
 
@@ -318,7 +320,7 @@ $$\theta_{f,g}\theta_{f,h}=\frac{g^d}{f^e}\cdot\frac{h^d}{f^m}=\frac{(gh)^d}{f^{
 
 $$X_{fg}\cap X_{fh}=D(\theta_{f,g})\cap D(\theta_{f,h})=D(\theta_{f,gh})$$
 
-이며, [보조정리 9](#lem9)를 $f$와 $gh$에 적용하면 isomorphism
+이다. 만일 $gh=0$이라면 $\theta_{f,gh}=0$이므로 이 삼중 교집합은 공집합이고 cocycle 조건은 공허하게 성립한다. $fg=0$ 혹은 $fh=0$인 경우도 $\theta_{f,g}=0$ 혹은 $\theta_{f,h}=0$이 되어 마찬가지이므로, 이하에서는 $fg$, $gh$, $fh$가 모두 nonzero인 경우만 다룬다. 그럼 [보조정리 9](#lem9)를 $f$와 $gh$에 적용하면 isomorphism
 
 $$\Psi_f=\Phi_{f,gh}:(A_{(f)})_{\theta_{f,gh}} \rightarrow A_{(fgh)}$$
 
@@ -334,9 +336,9 @@ $$u=\frac{h^d}{f^m},\qquad v=\frac{h^e}{g^m}$$
 
 으로 보내는데, $A_{(fg)}$에서
 
-$$\frac{u^e}{v^d}=\frac{h^{de}}{f^{me}}\cdot\frac{g^{md}}{h^{de}}=\left(\frac{g^d}{f^e}\right)^m$$
+$$u^e=\frac{h^{de}}{f^{me}}=\left(\frac{g^d}{f^e}\right)^m\cdot\frac{h^{de}}{g^{md}}=\rho_{f,fg}(\theta_{f,g})^mv^d$$
 
-이고 우변은 $\rho_{f,fg}(\theta_{f,g})^m$, 즉 unit이다. 따라서 $u^e$와 $v^d$는 unit 배만큼만 차이나고, $\Spec A_{(fg)}$에서 $D(u)=D(v)$이며 $A_{(fg)}$를 $u$에서 국소화한 것과 $v$에서 국소화한 것은 같은 ring이다. 즉 $\varphi_{fg}$는 $X_{fg}\cap X_{fh}$를 $X_{gf}\cap X_{gh}$ 위로 옮기며, 이 restriction은 ring homomorphism
+이고 $\rho_{f,fg}(\theta_{f,g})$는 unit이다. 따라서 $u^e$와 $v^d$는 unit 배만큼만 차이나고, $\Spec A_{(fg)}$에서 $D(u)=D(v)$이며 $A_{(fg)}$를 $u$에서 국소화한 것과 $v$에서 국소화한 것은 같은 ring이다. 즉 $\varphi_{fg}$는 $X_{fg}\cap X_{fh}$를 $X_{gf}\cap X_{gh}$ 위로 옮기며, 이 restriction은 ring homomorphism
 
 $$\alpha:(A_{(g)})_{\theta_{g,fh}} \rightarrow (A_{(f)})_{\theta_{f,gh}}$$
 
