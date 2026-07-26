@@ -353,22 +353,20 @@ $$\Tor_1^{\mathcal{O}_{Y,y}}(\kappa(y), \mathcal{O}_{X,x})=0$$
 인 것은 서로 동치이다.
 :::
 ::: 증명
-$Y$가 locally Noetherian이므로 $A=\mathcal{O}_{Y,y}$는 Noetherian local ring이고, $f$가 locally of finite type이므로 $X$ 또한 locally Noetherian이어서 $E=\mathcal{O}_{X,x}$도 Noetherian local ring이다. $f$가 유도하는 $A \rightarrow E$는 국소사상이므로 $\mathfrak{m}_yE\subseteq \mathfrak{m}_x$를 만족한다. 이제 $M=E$로 두면 $M$은 finitely generated $E$-module이므로 [\[가환대수학\] §평탄성과 국소화, ⁋정리 1](/ko/math/commutative_algebra/local_criterion_for_flatness#thm1)의 가정이 모두 충족되며, 그 결론이 정확히 주장하는 동치이다.
+$Y$가 locally Noetherian이므로 $A=\mathcal{O}_{Y,y}$는 Noetherian local ring이고, $f$가 locally of finite type이므로 $X$ 또한 locally Noetherian이어서 $E=\mathcal{O}_{X,x}$도 Noetherian local ring이다. $f$가 유도하는 $A \rightarrow E$는 local homomorphism이므로 $\mathfrak{m}_yE\subseteq \mathfrak{m}_x$를 만족한다. 이제 $M=E$로 두면 $M$은 finitely generated $E$-module이므로 [\[가환대수학\] §평탄성과 국소화, ⁋정리 1](/ko/math/commutative_algebra/local_criterion_for_flatness#thm1)의 가정이 모두 충족되며, 그 결론이 정확히 주장하는 동치이다.
 :::
 
-[명제 17](#prop17)이 한 점에서의 flatness를 판정한다면, 그 판정을 통과하는 점들이 $X$ 안에서 어떻게 놓이는지가 다음 문제이다. 이를 위상적으로 다루려면 정수값을 갖는 불변량이 공간 위에서 어떻게 변하는지를 재는 언어가 먼저 필요하다.
+Flatness는 본질적으로 family가 어떻게 <em-ko>움직이는가</em-ko>에 대한 정의이므로, 한 점에서 morphism이 flat하다는 사실만 아는 것은 기하적으로는 큰 의미가 없다. 이를 해결해주는 것은 곧 살펴볼 [명제 20](#prop20)으로, 우리는 morphism이 flat한 점들의 모임이 열린집합이라는 것을 보인다. 바꾸어 말하면 flatness가 깨지는 지점들은 닫힌집합을 이루며, 도입에서 살펴본 예시의 원점과 같이 성분들이 부딪히거나 fiber에 갇히는 특수한 곳에 한정된다. 이를 위상적으로 다루려면 정수값을 갖는 불변량이 공간 위에서 어떻게 변하는지를 재는 언어가 먼저 필요하다.
 
 ::: 정의 18
 Topological space $X$ 위의 함수 $f: X \rightarrow \mathbb{Z}$가 *upper semicontinuous*라는 것은 임의의 $i\in \mathbb{Z}$에 대하여 집합
 
-$$\{x\in X: f(x)\leq i\}$$
+$$\{x\in X\mid f(x)\leq i\}$$
 
-가 $X$의 열린집합인 것이다. 마찬가지로 $f$가 *lower semicontinuous*라는 것은 임의의 $i\in \mathbb{Z}$에 대하여 $\{x\in X: f(x)\geq i\}$가 $X$의 열린집합인 것이다.
+가 $X$의 열린집합인 것이다. 마찬가지로 $f$가 *lower semicontinuous*라는 것은 임의의 $i\in \mathbb{Z}$에 대하여 $\{x\in X\mid f(x)\geq i\}$가 $X$의 열린집합인 것이다.
 :::
 
-$\mathbb{Z}$는 이산공간이므로 정수값 함수에 통상적인 의미의 연속성을 요구하면 국소상수라는 지나치게 강한 조건이 된다. 그런데 우리가 다루는 불변량들은 rank나 차원처럼 정수값이면서도 국소상수이지 않은 것들이므로, 이들을 재려면 연속성을 한쪽 방향으로만 요구해야 한다. Zariski topology에서 닫힌집합이 특수한 자리이고 열린집합이 일반적인 자리이므로, upper semicontinuous라는 조건은 불변량이 일반적인 자리에서 작고 특수한 자리로 갈수록 튀어오르기만 한다는 것을 뜻한다. Lower semicontinuous는 그 반대로 특수한 자리에서 떨어지기만 한다는 것이다.
-
-이 글의 도입에서 본 예시의 fiber 차원이 이러한 거동의 전형이다. 그 예시에서 fiber의 차원은 $t\neq 0$ 위에서 $0$이고 $t=0$ 위에서 $1$이었으므로, 차원이 큰 자리가 $\mathbb{A}^1_\mathbb{K}$의 닫힌집합 $\{t=0\}$을 이룬다. 곧 fiber의 차원은 $\mathbb{A}^1_\mathbb{K}$ 위에서 upper semicontinuous하게 행동하며, [명제 15](#prop15)가 flat morphism에 대하여 요구한 것은 이러한 초과분이 아예 없다는 것이었다.
+이 글의 도입에서 본 예시의 fiber 차원이 이러한 거동의 전형이다. 그 예시에서 fiber의 차원은 $t\neq 0$ 위에서 $0$이고 $t=0$ 위에서 $1$이었으므로, 차원이 큰 자리가 $\mathbb{A}^1_\mathbb{K}$의 닫힌집합 $\{t=0\}$을 이룬다. 여기에서 결정적인 것은 차원이 변한다는 사실이 아니라 변하는 방향이 한쪽뿐이라는 사실이다. Zariski topology에서 열린집합이 일반적인 자리이고 닫힌집합이 특수한 자리이므로, upper semicontinuity가 규정하는 것은 값이 일반적인 자리에서 작게 유지되다가 특수한 자리로 가면서 튀어오르기만 할 뿐 그 반대로는 움직이지 않는다는 것이다. 실제로 위의 예시에서도 특수한 자리 $t=0$ 위에서 fiber는 한 점에서 직선으로 부풀 뿐이며, 어느 자리에서도 반대로 수축하지는 않는다. 곧 fiber의 차원은 $\mathbb{A}^1_\mathbb{K}$ 위에서 upper semicontinuous하게 행동하며, [명제 15](#prop15)가 flat morphism에 대하여 요구한 것은 이러한 초과분이 아예 없다는 것, 곧 허용되는 이 한 방향의 도약조차 일어나지 않는다는 것이었다.
 
 Finitely generated module을 생성하는 데 필요한 원소의 개수가 이러한 불변량의 첫 예시이다.
 
