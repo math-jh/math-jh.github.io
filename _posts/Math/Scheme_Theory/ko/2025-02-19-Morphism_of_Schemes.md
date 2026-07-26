@@ -5,7 +5,6 @@ excerpt: "Locally ringed space morphism으로서의 scheme morphism의 네 관�
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/morphism_of_schemes
-drift_needed: true
 sidebar: 
     nav: "scheme_theory-ko"
 
