@@ -3088,6 +3088,8 @@ D:
   defs:
   - label: '[유도대수기하학] §Simplicial 가환환과 animation'
     url: /ko/math/derived_algebraic_geometry/animated_rings
+  - label: '[다중선형대수학] §행렬의 텐서곱'
+    url: /ko/math/multilinear_algebra/tensor_product_of_matrices
 - id: descendant_gromov-witten_invariant
   en: descendant Gromov-Witten invariant
   ko: ''
@@ -6429,6 +6431,13 @@ K:
   defs:
   - label: '[다중선형대수학] §쌍대공간'
     url: /ko/math/multilinear_algebra/dual_spaces
+- id: kronecker_product
+  en: Kronecker product
+  ko: 크로네커 곱
+  primary: en
+  defs:
+  - label: '[다중선형대수학] §행렬의 텐서곱'
+    url: /ko/math/multilinear_algebra/tensor_product_of_matrices
 - id: krull_dimension
   en: Krull dimension
   ko: 크룰 차원
