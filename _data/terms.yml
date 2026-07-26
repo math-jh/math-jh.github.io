@@ -1472,10 +1472,10 @@ C:
   defs:
   - label: '[표현론] §표현의 지표'
     url: /ko/math/representation_theory/character_theory
-  - label: '[스킴] §대수적 군'
-    url: /ko/math/scheme_theory/algebraic_groups
   - label: '[표현론] §유한차원 가환대수의 표현과 spectrum'
     url: /ko/math/representation_theory/spectrum_of_finite_dimensional_algebras
+  - label: '[스킴] §대수적 군'
+    url: /ko/math/scheme_theory/algebraic_groups
 - id: characteristic
   en: characteristic
   ko: 표수
@@ -3144,10 +3144,10 @@ D:
   ko: 유도 tensor product
   primary: ko
   defs:
-  - label: '[유도대수기하학] §Simplicial 가환환과 animation'
-    url: /ko/math/derived_algebraic_geometry/animated_rings
   - label: '[다중선형대수학] §행렬의 텐서곱'
     url: /ko/math/multilinear_algebra/tensor_product_of_matrices
+  - label: '[유도대수기하학] §Simplicial 가환환과 animation'
+    url: /ko/math/derived_algebraic_geometry/animated_rings
 - id: descendant_gromov-witten_invariant
   en: descendant Gromov-Witten invariant
   ko: ''
@@ -6206,10 +6206,10 @@ I:
     url: /ko/math/ring_theory/integral_domains
   - label: '[가환대수학] §으뜸분해'
     url: /ko/math/commutative_algebra/primary_decomposition
-  - label: '[위상수학] §차원'
-    url: /ko/math/topology/dimension
   - label: '[표현론] §Auslander–Reiten 이론'
     url: /ko/math/representation_theory/auslander_reiten
+  - label: '[위상수학] §차원'
+    url: /ko/math/topology/dimension
   see:
   - label: Reduced
     id: reduced
@@ -7685,10 +7685,10 @@ M:
   ko: 절댓값
   primary: ko
   defs:
-  - label: '[복소해석학] §복소수와 복소평면'
-    url: /ko/math/complex_analysis/complex_numbers
   - label: '[정수론] §합동식'
     url: /ko/math/number_theory/congruences
+  - label: '[복소해석학] §복소수와 복소평면'
+    url: /ko/math/complex_analysis/complex_numbers
 - id: monodromy_functor
   en: monodromy functor
   ko: ''
