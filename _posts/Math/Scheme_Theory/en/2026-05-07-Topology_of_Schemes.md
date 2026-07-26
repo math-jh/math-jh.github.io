@@ -10,13 +10,13 @@ sidebar:
 
 date: 2025-02-03
 weight: 6
-translated_at: 2026-07-26T16:48:36+00:00
+translated_at: 2026-07-26T23:15:03+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-26T23:15:03+00:00
 ---
 ## Generic Points
 
-Now we examine the topological structure of a scheme. One of its most striking features is that a singleton set need not be closed.
-
+We now examine the topological structure of a scheme. One of its most striking features is that a singleton set need not be closed.
 
 ::: Definition 1
 A point $x$ of a topological space $X$ is a *closed point* if $\{x\}$ is a closed subset of $X$.
@@ -26,7 +26,7 @@ Thus $X$ is a $T_1$-space if and only if every point of $X$ is a closed point. (
 
 $$\cl(\{\mathfrak{m}\})=ZI(\{\mathfrak{m}\})=ZIZ(\mathfrak{m})=Z(\mathfrak{m})=\{\mathfrak{m}\}$$
 
-so every point became a closed point. However, if we consider the spectrum of an integral domain that is not a field, it has a maximal ideal $\mathfrak{m}\neq 0$ while $0$ is a prime ideal by definition of an integral domain; hence such a scheme possesses points that are not closed points.
+so every point became a closed point. However, if we consider the spectrum of an integral domain that is not a field, it has a maximal ideal $\mathfrak{m}\neq 0$ while $0$ is a prime ideal by the definition of an integral domain; hence such a scheme possesses points that are not closed points.
 
 Our first goal is to gain an intuitive understanding of these points.
 
@@ -119,7 +119,7 @@ However, the converse does not hold in general. That is, given an affine scheme,
 
 ## Locality
 
-A scheme is by definition an object obtained by gluing affine schemes together, so one strategy chosen to investigate its properties is to investigate certain properties locally. Indeed, just as many of the examples above were affine schemes, the key to this strategy is to treat properties of a general scheme by gluing affine pieces. Moreover, the advantage of this approach lies in the fact that our understanding of affine schemes is *not* confined to the topological realm. That is, in addition to the topological data introduced in this post, an affine scheme $\Spec A$ also carries algebraic properties of $A$ as a ring, and this locality will help us glue such algebraic properties globally as well.
+A scheme is by definition an object obtained by gluing affine schemes together, so one strategy for investigating its properties is to examine certain properties locally. Indeed, just as many of the examples above were affine schemes, the key to this strategy is to treat properties of a general scheme by gluing affine pieces. Moreover, the advantage of this approach lies in the fact that our understanding of affine schemes is *not* confined to the topological realm. That is, in addition to the topological data introduced in this post, an affine scheme $\Spec A$ also carries algebraic properties of $A$ as a ring, and this locality will help us glue such algebraic properties globally as well.
 
 In this situation, one concept that behaves interestingly is the Noetherian property, because the condition of being Noetherian is defined separately in topology and in algebra, and this is the source of the ambiguity pointed out before introducing [Proposition 7](#prop7).
 
