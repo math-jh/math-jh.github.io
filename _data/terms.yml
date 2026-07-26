@@ -6869,6 +6869,13 @@ L:
   defs:
   - label: '[범주론] §극한'
     url: /ko/math/category_theory/limits
+- id: legendre_symbol
+  en: Legendre symbol
+  ko: 르장드르 기호
+  primary: ko
+  defs:
+  - label: '[정수론] §이차 잉여'
+    url: /ko/math/number_theory/quadratic_residues
 - id: length
   en: length
   ko: 길이
@@ -9429,6 +9436,13 @@ Q:
   defs:
   - label: '[선형대수학] §이차형식과 실베스터 관성법칙'
     url: /ko/math/linear_algebra/quadratic_forms
+- id: quadratic_non-residue
+  en: quadratic non-residue
+  ko: 이차 비잉여
+  primary: ko
+  defs:
+  - label: '[정수론] §이차 잉여'
+    url: /ko/math/number_theory/quadratic_residues
 - id: quadratic_relation
   en: Quadratic relation
   ko: 이차 관계식
@@ -9436,6 +9450,13 @@ Q:
   defs:
   - label: '[리 이론] §Kazhdan–Lusztig polynomial'
     url: /ko/math/lie_theory/kazhdan_lusztig
+- id: quadratic_residue
+  en: quadratic residue
+  ko: 이차 잉여
+  primary: ko
+  defs:
+  - label: '[정수론] §이차 잉여'
+    url: /ko/math/number_theory/quadratic_residues
 - id: quasi-coherent_sheaf
   en: quasi-coherent sheaf
   ko: 준연접층
