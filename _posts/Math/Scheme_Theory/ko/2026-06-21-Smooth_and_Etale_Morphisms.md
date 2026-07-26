@@ -76,7 +76,7 @@ Smooth morphism은 cotangent sheaf의 국소자유성으로 동치적으로 특�
 Locally of finite presentation인 morphism $f:X \rightarrow S$에 대하여 다음이 동치이다.
 
 1. $f$는 smooth하다.
-2. $f$는 flat하고, $\Omega_{X/S}$는 locally free sheaf이며 ([§준연접층, ⁋정의 15](/ko/math/scheme_theory/quasicoherent_sheaves#def15)), 각 $x\in X$에서 그 rank가 $s=f(x)$ 위 fiber의 국소차원 $\dim_x X_s$와 같다.
+2. $f$는 flat하고, $\Omega_{X/S}$는 locally free sheaf이며 ([§준연접층, ⁋정의 12](/ko/math/scheme_theory/quasicoherent_sheaves#def12)), 각 $x\in X$에서 그 rank가 $s=f(x)$ 위 fiber의 국소차원 $\dim_x X_s$와 같다.
 
 이 때 $\Omega_{X/S}$의 rank를 $f$의 *상대차원<sub>relative dimension</sub>*이라 부른다.
 :::

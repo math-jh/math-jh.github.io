@@ -9,7 +9,7 @@ sidebar:
     nav: "scheme_theory-ko"
 
 date: 2026-06-21
-weight: 20
+weight: 19
 
 published: false
 drift_needed: true
@@ -68,7 +68,7 @@ Scheme morphism $f:X \rightarrow S$에 대하여, [§값매김환, ⁋정의 3](
 
 $$\Omega_{X/S}=\Delta^\ast\bigl(\mathcal{I}/\mathcal{I}^2\bigr)$$
 
-로 정의한다. 여기에서 $\Delta^\ast$는 pullback이다. ([§준연접층, ⁋정의 17](/ko/math/scheme_theory/quasicoherent_sheaves#def17))
+로 정의한다. 여기에서 $\Delta^\ast$는 pullback이다. ([§준연접층, ⁋정의 14](/ko/math/scheme_theory/quasicoherent_sheaves#def14))
 :::
 
 이 정의에서 $\mathcal{I}/\mathcal{I}^2$은 $\Delta(X)$ 위의 sheaf로 볼 수 있고, $\Delta$가 $X$를 그 image와 동일시하므로 $\Delta^\ast$를 통해 $X$ 위의 sheaf로 끌어온 것이다. 대각선의 ideal sheaf를 conormal로 취하는 것은 affine 수준에서 $B\otimes_AB \rightarrow B$의 kernel $\mathfrak{a}$를 $\mathfrak{a}/\mathfrak{a}^2$로 보는 것에 대응하며, 다음 명제가 이 좌표 독립적 정의와 앞서의 국소 모형이 일치함을 보장한다.
@@ -125,7 +125,7 @@ $$\mathcal{T}_{X/S}=\sHom_{\mathcal{O}_X}(\Omega_{X/S}, \mathcal{O}_X)$$
 로 정의한다. ([§준연접층, ⁋정의 2](/ko/math/scheme_theory/quasicoherent_sheaves#def2))
 :::
 
-$\Omega_{X/S}$가 affine open 위에서 $\widetilde{\Omega_{B/A}}$이므로, 같은 open 위에서 $\mathcal{T}_{X/S}$의 section은 $\Hom_B(\Omega_{B/A}, B)\cong \Der_A(B, B)$, 즉 $B$의 $A$-derivation들이다. 따라서 tangent sheaf의 section은 미분 연산자, 곧 벡터장에 해당한다. $\Omega_{X/S}$가 locally free일 때 $\mathcal{T}_{X/S}$는 그 dual locally free sheaf이지만 ([§준연접층, ⁋정의 15](/ko/math/scheme_theory/quasicoherent_sheaves#def15)), 일반적으로는 $\sHom$이 정확한 쌍대를 주지 않을 수 있으므로 두 sheaf가 서로의 dual이 되는 것은 locally free인 경우에 한한다.
+$\Omega_{X/S}$가 affine open 위에서 $\widetilde{\Omega_{B/A}}$이므로, 같은 open 위에서 $\mathcal{T}_{X/S}$의 section은 $\Hom_B(\Omega_{B/A}, B)\cong \Der_A(B, B)$, 즉 $B$의 $A$-derivation들이다. 따라서 tangent sheaf의 section은 미분 연산자, 곧 벡터장에 해당한다. $\Omega_{X/S}$가 locally free일 때 $\mathcal{T}_{X/S}$는 그 dual locally free sheaf이지만 ([§준연접층, ⁋정의 12](/ko/math/scheme_theory/quasicoherent_sheaves#def12)), 일반적으로는 $\sHom$이 정확한 쌍대를 주지 않을 수 있으므로 두 sheaf가 서로의 dual이 되는 것은 locally free인 경우에 한한다.
 
 한 점에서의 tangent space는 cotangent sheaf의 fiber를 residue field 위에서 쌍대화하여 얻는다. Field $k$ 위의 scheme $X$의 점 $x$에 대하여, residue field를 $\kappa(x)$라 하면 ([§스킴, ⁋정의 5](/ko/math/scheme_theory/schemes#def5)) cotangent sheaf의 fiber $\Omega_{X/k}\otimes_{\mathcal{O}_X}\kappa(x)$가 정의된다.
 
@@ -174,7 +174,7 @@ $$0 \longrightarrow \Omega_{\mathbb{P}^n/k} \longrightarrow \mathcal{O}_{\mathbb
 ::: 증명
 $\mathbb{P}^n=\Proj A_\bullet$, $A_\bullet=k[\x_0,\ldots, \x_n]$이라 하고 ([§사영스킴, ⁋예시 12](/ko/math/scheme_theory/projective_schemes#ex12)) 표준 affine open $U_i=D_+(\x_i)$ 위에서 작업한다. $U_i$ 위에서 좌표는 $y^{(i)}_j=\x_j/\x_i$ ($j\neq i$)이며, $\Omega_{\mathbb{P}^n/k}\vert_{U_i}$는 [명제 7](#prop7)에 의하여 $d y^{(i)}_j$ ($j\neq i$)를 자유 기저로 하는 rank $n$의 자유 sheaf이다.
 
-오른쪽 morphism $\mathcal{O}(-1)^{\oplus(n+1)} \rightarrow \mathcal{O}$를 정의하자. $\mathcal{O}(-1)^{\oplus(n+1)}$의 표준 기저를 $e_0,\ldots, e_n$이라 할 때, 이 morphism을 $e_j\mapsto \x_j$로 정의한다. 여기에서 $\x_j$는 $\mathcal{O}(-1) \rightarrow \mathcal{O}$, 곧 $\mathcal{O} \rightarrow \mathcal{O}(1)$의 전역 section으로서 $\mathcal{O}(-1)$을 $\mathcal{O}$로 보내는 곱이다. 각 $U_i$ 위에서 $\x_i$가 가역이므로 이 morphism은 surjective이다.
+오른쪽 morphism $\mathcal{O}(-1)^{\oplus(n+1)} \rightarrow \mathcal{O}$를 정의하자. $\mathcal{O}(-1)^{\oplus(n+1)}$의 standard basis를 $e_0,\ldots, e_n$이라 할 때, 이 morphism을 $e_j\mapsto \x_j$로 정의한다. 여기에서 $\x_j$는 $\mathcal{O}(-1) \rightarrow \mathcal{O}$, 곧 $\mathcal{O} \rightarrow \mathcal{O}(1)$의 전역 section으로서 $\mathcal{O}(-1)$을 $\mathcal{O}$로 보내는 곱이다. 각 $U_i$ 위에서 $\x_i$가 가역이므로 이 morphism은 surjective이다.
 
 이제 kernel을 계산하여 그것이 $\Omega_{\mathbb{P}^n/k}$임을 보인다. $U_i$ 위에서 $\mathcal{O}(-1)$을 $\x_i^{-1}$로 trivialize하면 위 morphism은 $(a_0,\ldots, a_n)\mapsto \sum_j a_j (\x_j/\x_i)$로 주어지고, 그 kernel은 $\sum_j a_j d(\x_j/\x_i)=0$를 만족하는 관계와 동일한 rank $n$의 자유 가군이 된다. 구체적으로 morphism $\Omega_{\mathbb{P}^n/k}\vert_{U_i} \rightarrow \mathcal{O}(-1)^{\oplus(n+1)}\vert_{U_i}$을
 

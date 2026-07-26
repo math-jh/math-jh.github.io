@@ -9,7 +9,7 @@ sidebar:
     nav: "algebraic_varieties-ko"
 
 date: 2026-04-05
-weight: 12
+weight: 13
 
 
 ---

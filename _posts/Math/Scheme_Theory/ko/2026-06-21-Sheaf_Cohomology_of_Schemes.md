@@ -9,7 +9,7 @@ sidebar:
     nav: "scheme_theory-ko"
 
 date: 2026-06-21
-weight: 19
+weight: 18
 
 published: false
 drift_needed: true
@@ -110,7 +110,7 @@ $$\mathcal{O}(d)(D_+(\x_i))=\bigl(S(d)_{\x_i}\bigr)_0=\x_i^d\cdot S_{(\x_i)}$$
 을 대응시키고, 겹치는 부분 위에서 자연스러운 동일시로 붙여 얻는 $\mathbb{P}^n_A$ 위의 invertible sheaf를 *twisting sheaf<sub>꼬임층</sub>* $\mathcal{O}(d)$라 부른다.
 :::
 
-여기에서 $S_{(\x_i)}$은 $S_{\x_i}$의 degree $0$ 부분이며, $\x_i^d\cdot S_{(\x_i)}$은 $S_{\x_i}$ 안에서 degree $d$인 원소들의 모임이다. 각 chart 위에서 $\mathcal{O}(d)\vert_{D_+(\x_i)}$은 $\x_i^d$를 generator로 하는 자유 $S_{(\x_i)}$-가군이므로 rank $1$ free이고, 따라서 $\mathcal{O}(d)$는 invertible sheaf이다. ([§준연접층, ⁋정의 15](/ko/math/scheme_theory/quasicoherent_sheaves#def15)) $d=0$인 경우 $\mathcal{O}(0)=\mathcal{O}_{\mathbb{P}^n_A}$이고, $\mathcal{O}(d)\otimes\mathcal{O}(e)\cong\mathcal{O}(d+e)$가 성립하므로 $\mathcal{O}(d)\cong\mathcal{O}(1)^{\otimes d}$이다. 이 정의는 [\[대수다양체\] §사영공간의 코호몰로지](/ko/math/algebraic_varieties/cohomology_of_projective_spaces)에서 variety 위의 $\mathcal{O}(d)$를 chart별 section으로 기술한 것과 정확히 일치한다.
+여기에서 $S_{(\x_i)}$은 $S_{\x_i}$의 degree $0$ 부분이며, $\x_i^d\cdot S_{(\x_i)}$은 $S_{\x_i}$ 안에서 degree $d$인 원소들의 모임이다. 각 chart 위에서 $\mathcal{O}(d)\vert_{D_+(\x_i)}$은 $\x_i^d$를 generator로 하는 자유 $S_{(\x_i)}$-가군이므로 rank $1$ free이고, 따라서 $\mathcal{O}(d)$는 invertible sheaf이다. ([§준연접층, ⁋정의 12](/ko/math/scheme_theory/quasicoherent_sheaves#def12)) $d=0$인 경우 $\mathcal{O}(0)=\mathcal{O}_{\mathbb{P}^n_A}$이고, $\mathcal{O}(d)\otimes\mathcal{O}(e)\cong\mathcal{O}(d+e)$가 성립하므로 $\mathcal{O}(d)\cong\mathcal{O}(1)^{\otimes d}$이다. 이 정의는 [\[대수다양체\] §사영공간의 코호몰로지](/ko/math/algebraic_varieties/cohomology_of_projective_spaces)에서 variety 위의 $\mathcal{O}(d)$를 chart별 section으로 기술한 것과 정확히 일치한다.
 
 이제 cohomology를 계산한다. $\mathbb{P}^n_A$은 separated이므로 [따름정리 4](#cor4)에 의해 standard affine cover에 대한 Čech complex를 계산하면 충분하다. 그 결과는 variety의 경우와 형태가 동일하다.
 
@@ -151,7 +151,7 @@ $$H^n(\mathbb{P}^n_A, \mathcal{O}(d))\cong H^0(\mathbb{P}^n_A, \mathcal{O}(-d-n-
 Field $\mathbb{K}$ 위의 Noetherian projective scheme $X$와 그 위의 coherent sheaf $\mathcal{F}$에 대하여, 각 $H^i(X, \mathcal{F})$은 유한차원 $\mathbb{K}$-벡터공간이며, 충분히 큰 $i$에 대해서는 $0$이다.
 :::
 ::: 증명
-위에서 관찰하였듯 closed immersion $\iota:X\hookrightarrow\mathbb{P}^n_{\mathbb{K}}$을 통해 $H^i(X, \mathcal{F})\cong H^i(\mathbb{P}^n, \iota_\ast\mathcal{F})$이고, $\iota_\ast\mathcal{F}$은 $\mathbb{P}^n$ 위의 coherent sheaf이므로 ([§준연접층, ⁋정리 19](/ko/math/scheme_theory/quasicoherent_sheaves#thm19)에 의해 준연접이고 finite type 또한 보존된다) $X=\mathbb{P}^n_{\mathbb{K}}$이라 가정해도 된다.
+위에서 관찰하였듯 closed immersion $\iota:X\hookrightarrow\mathbb{P}^n_{\mathbb{K}}$을 통해 $H^i(X, \mathcal{F})\cong H^i(\mathbb{P}^n, \iota_\ast\mathcal{F})$이고, $\iota_\ast\mathcal{F}$은 $\mathbb{P}^n$ 위의 coherent sheaf이므로 ([§준연접층, ⁋정리 16](/ko/math/scheme_theory/quasicoherent_sheaves#thm16)에 의해 준연접이고 finite type 또한 보존된다) $X=\mathbb{P}^n_{\mathbb{K}}$이라 가정해도 된다.
 
 이제 $\mathbb{P}^n$ 위의 coherent sheaf $\mathcal{F}$에 대하여 cohomological dimension $n$, 즉 $i>n$에서 $H^i=0$임을 먼저 본다. $\mathbb{P}^n$은 $n+1$개의 affine 열린집합 $D_+(\x_i)$로 덮이므로, 이 cover에 대한 Čech complex $\check C^\bullet$은 $p>n$에서 $\check C^p=0$이다. ([따름정리 4](#cor4)) 따라서 $H^i(\mathbb{P}^n, \mathcal{F})=\check H^i=0$ ($i>n$)이다.
 

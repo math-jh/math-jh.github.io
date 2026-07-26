@@ -33,7 +33,7 @@ Groupoid는 group과 set 양쪽을 동시에 일반화한다. 대상이 하나�
 ::: 예시 2
 다음은 분류 문제에서 자연히 나타나는 groupoid들이다.
 
-1. 고정된 scheme $T$에 대하여, $T$ 위의 line bundle들을 대상으로 하고 line bundle 사이의 $\mathcal{O}_T$-가군층 isomorphism을 morphism으로 하는 범주는 groupoid이다. ([\[스킴\] §준연접층, ⁋정의 15](/ko/math/scheme_theory/quasicoherent_sheaves#def15)) 각 대상 $\mathcal{L}$의 automorphism group은 $\Aut(\mathcal{L})=\Gamma(T, \mathcal{O}_T)^\ast=\mathbb{G}_m(T)$이다. 이 groupoid의 isomorphism class 집합이 Picard group $\Pic(T)$이지만, 그것만으로는 automorphism $\mathbb{G}_m(T)$을 보지 못한다.
+1. 고정된 scheme $T$에 대하여, $T$ 위의 line bundle들을 대상으로 하고 line bundle 사이의 $\mathcal{O}_T$-가군층 isomorphism을 morphism으로 하는 범주는 groupoid이다. ([\[스킴\] §준연접층, ⁋정의 12](/ko/math/scheme_theory/quasicoherent_sheaves#def12)) 각 대상 $\mathcal{L}$의 automorphism group은 $\Aut(\mathcal{L})=\Gamma(T, \mathcal{O}_T)^\ast=\mathbb{G}_m(T)$이다. 이 groupoid의 isomorphism class 집합이 Picard group $\Pic(T)$이지만, 그것만으로는 automorphism $\mathbb{G}_m(T)$을 보지 못한다.
 
 2. 위상공간 $X$의 *fundamental groupoid* $\Pi_1(X)$은 점을 대상으로, 경로의 homotopy class를 morphism으로 한다. 모든 경로가 가역이므로 groupoid이며, 한 점의 automorphism group은 기본군 $\pi_1(X, x)$이다.
 
@@ -127,7 +127,7 @@ CFG에서 pseudofunctor로 가는 방향은 [명제 7](#prop7)이다. Cleavage�
 
 1. (Representable CFG) 대상 $X\in \mathcal{C}$에 대하여 slice 범주 $\mathcal{C}/X$을 사영 $(T \rightarrow X)\mapsto T$과 함께 보면 CFG이다. $T$ 위의 fiber는 morphism 집합 $\Hom_\mathcal{C}(T, X)$을 이산 groupoid로 본 것이며, 이는 점함자 $h_X$에 대응하는 CFG이다. ([\[스킴\] §점함자, ⁋정리 3](/ko/math/scheme_theory/functor_of_points#thm3))
 
-2. (quasi-coherent sheaf의 CFG) 대상이 쌍 $(T, \mathcal{F})$ ($T\in \Sch$, $\mathcal{F}$은 $T$ 위의 quasi-coherent sheaf)이고, $(T, \mathcal{F})$에서 $(T', \mathcal{F}')$로의 morphism이 쌍 $(f, \alpha)$ ($f: T \rightarrow T'$, $\alpha: \mathcal{F}\xrightarrow{\sim}f^\ast \mathcal{F}'$은 isomorphism)인 범주를 $\mathcal{QC}$로 적는다. ([\[스킴\] §준연접층, ⁋정의 8](/ko/math/scheme_theory/quasicoherent_sheaves#def8)) 사영 $(T, \mathcal{F})\mapsto T$에 대하여 $T$ 위의 fiber는 $T$ 위의 quasi-coherent sheaf들의 groupoid $\QCoh(T)$ (isomorphism만 morphism으로 취한 것)이고, pullback functor는 $f^\ast$이다. ([\[스킴\] §준연접층, ⁋명제 18](/ko/math/scheme_theory/quasicoherent_sheaves#prop18))
+2. (quasi-coherent sheaf의 CFG) 대상이 쌍 $(T, \mathcal{F})$ ($T\in \Sch$, $\mathcal{F}$은 $T$ 위의 quasi-coherent sheaf)이고, $(T, \mathcal{F})$에서 $(T', \mathcal{F}')$로의 morphism이 쌍 $(f, \alpha)$ ($f: T \rightarrow T'$, $\alpha: \mathcal{F}\xrightarrow{\sim}f^\ast \mathcal{F}'$은 isomorphism)인 범주를 $\mathcal{QC}$로 적는다. ([\[스킴\] §준연접층, ⁋정의 8](/ko/math/scheme_theory/quasicoherent_sheaves#def8)) 사영 $(T, \mathcal{F})\mapsto T$에 대하여 $T$ 위의 fiber는 $T$ 위의 quasi-coherent sheaf들의 groupoid $\QCoh(T)$ (isomorphism만 morphism으로 취한 것)이고, pullback functor는 $f^\ast$이다. ([\[스킴\] §준연접층, ⁋명제 15](/ko/math/scheme_theory/quasicoherent_sheaves#prop15))
 
 3. (Moduli CFG) 어떤 기하학적 대상의 "$T$-족"을 대상으로, 족 사이의 동형을 morphism으로 하면 일반적으로 CFG를 얻는다. 가령 smooth 사영곡선의 $T$-족들과 그 동형이 이루는 CFG $\mathcal{M}_g$이 그러하다. 족의 pullback이 base change로 주어지므로 cartesian morphism이 자연히 정의된다.
 :::
@@ -240,15 +240,15 @@ Site $(\mathcal{C}, \tau)$ 위의 sheaf of group $G$에 대하여, 대상 $T\in 
 $\Sch$ (또는 $\Sch/S$) 위의 fpqc site에서, $\mathbb{G}_m$-torsor의 classifying stack $\mathbf{B}\mathbb{G}_m$은 $T$ 위의 line bundle들의 groupoid $\mathcal{L}(T)$을 fiber로 하는 CFG와 동치이며, 이 CFG는 stack이다.
 :::
 ::: 증명
-먼저 $\mathbb{G}_m$-torsor와 line bundle의 동치를 본다. $T$ 위의 [\[스킴\] §준연접층, ⁋정의 15](/ko/math/scheme_theory/quasicoherent_sheaves#def15)의 invertible sheaf $\mathcal{L}$에 대하여, 그 frame들의 sheaf
+먼저 $\mathbb{G}_m$-torsor와 line bundle의 동치를 본다. $T$ 위의 [\[스킴\] §준연접층, ⁋정의 12](/ko/math/scheme_theory/quasicoherent_sheaves#def12)의 invertible sheaf $\mathcal{L}$에 대하여, 그 frame들의 sheaf
 
 $$P_\mathcal{L}=\operatorname{\underline{Isom}}_{\mathcal{O}}(\mathcal{O}_T, \mathcal{L})$$
 
-을 두면, $\mathbb{G}_m=\operatorname{\underline{Aut}}(\mathcal{O}_T)$이 합성으로 $P_\mathcal{L}$에 단순추이적으로 작용한다. $\mathcal{L}$이 국소적으로 $\mathcal{O}_T$과 동형이므로 ([\[스킴\] §준연접층, ⁋정의 15](/ko/math/scheme_theory/quasicoherent_sheaves#def15)) $P_\mathcal{L} \rightarrow \ast$은 국소적으로 절단을 가져 [정의 18](#def18)의 두 조건을 만족하고, 따라서 $P_\mathcal{L}$은 $\mathbb{G}_m$-torsor이다. 역으로 $\mathbb{G}_m$-torsor $P$에 대하여 결합 line bundle $\mathcal{L}_P=(P\times \mathbb{A}^1)/\mathbb{G}_m$ (스칼라 작용에 대한 quotient)을 두면 invertible sheaf를 얻는다. 두 대응이 서로 quasi-inverse이며 isomorphism과 호환되므로 ([\[범주론\] §자연변환, ⁋정의 2](/ko/math/category_theory/natural_transformations#def2)), groupoid $\mathbf{B}\mathbb{G}_m(T)$과 $\mathcal{L}(T)$은 동치이고, 따라서 두 CFG가 동치이다.
+을 두면, $\mathbb{G}_m=\operatorname{\underline{Aut}}(\mathcal{O}_T)$이 합성으로 $P_\mathcal{L}$에 단순추이적으로 작용한다. $\mathcal{L}$이 국소적으로 $\mathcal{O}_T$과 동형이므로 ([\[스킴\] §준연접층, ⁋정의 12](/ko/math/scheme_theory/quasicoherent_sheaves#def12)) $P_\mathcal{L} \rightarrow \ast$은 국소적으로 절단을 가져 [정의 18](#def18)의 두 조건을 만족하고, 따라서 $P_\mathcal{L}$은 $\mathbb{G}_m$-torsor이다. 역으로 $\mathbb{G}_m$-torsor $P$에 대하여 결합 line bundle $\mathcal{L}_P=(P\times \mathbb{A}^1)/\mathbb{G}_m$ (스칼라 작용에 대한 quotient)을 두면 invertible sheaf를 얻는다. 두 대응이 서로 quasi-inverse이며 isomorphism과 호환되므로 ([\[범주론\] §자연변환, ⁋정의 2](/ko/math/category_theory/natural_transformations#def2)), groupoid $\mathbf{B}\mathbb{G}_m(T)$과 $\mathcal{L}(T)$은 동치이고, 따라서 두 CFG가 동치이다.
 
 이제 $\mathcal{L}$이 stack임을 본다. $\mathcal{L}$은 [정리 16](#thm16)의 quasi-coherent sheaf stack $\mathcal{QC}$의 충만한 부분 CFG로, invertible sheaf만을 대상으로 취한 것이다.
 
-Prestack. 두 invertible sheaf $\mathcal{L}, \mathcal{M}$에 대하여 $\operatorname{\underline{Isom}}_T(\mathcal{L}, \mathcal{M})$은 $\mathcal{QC}$의 $\operatorname{\underline{Isom}}$의 부분presheaf이고, 후자가 sheaf이므로 ([정리 16](#thm16)의 prestack 부분) 전자가 sheaf임을 보이려면 그것이 닫힌 부분sheaf 조건으로 잘라짐을 확인하면 된다. $\mathcal{O}_T$-가군층 morphism $\mathcal{L} \rightarrow \mathcal{M}$이 동형인지는 국소적으로 검사되는 조건이므로 ([\[스킴\] §준연접층, ⁋명제 16](/ko/math/scheme_theory/quasicoherent_sheaves#prop16)의 가역성), $\operatorname{\underline{Isom}}$은 $\operatorname{\underline{Hom}}$의 sheaf 부분대상이고 sheaf이다.
+Prestack. 두 invertible sheaf $\mathcal{L}, \mathcal{M}$에 대하여 $\operatorname{\underline{Isom}}_T(\mathcal{L}, \mathcal{M})$은 $\mathcal{QC}$의 $\operatorname{\underline{Isom}}$의 부분presheaf이고, 후자가 sheaf이므로 ([정리 16](#thm16)의 prestack 부분) 전자가 sheaf임을 보이려면 그것이 닫힌 부분sheaf 조건으로 잘라짐을 확인하면 된다. $\mathcal{O}_T$-가군층 morphism $\mathcal{L} \rightarrow \mathcal{M}$이 동형인지는 국소적으로 검사되는 조건이므로 ([\[스킴\] §준연접층, ⁋명제 13](/ko/math/scheme_theory/quasicoherent_sheaves#prop13)의 가역성), $\operatorname{\underline{Isom}}$은 $\operatorname{\underline{Hom}}$의 sheaf 부분대상이고 sheaf이다.
 
 Effective descent. Covering family $\{T_i \rightarrow T\}$ 위에 invertible sheaf $\mathcal{L}_i$들과 cocycle 동형 $\varphi_{ij}$의 descent datum이 주어졌다 하자. 이를 quasi-coherent sheaf의 descent datum으로 보면, $\mathcal{QC}$이 stack이므로 ([정리 16](#thm16)) $T$ 위의 quasi-coherent sheaf $\mathcal{L}$과 $\mathcal{L}\vert_{T_i}\cong \mathcal{L}_i$으로 유일하게 붙는다. 남은 것은 이 $\mathcal{L}$이 invertible임을 보이는 것이다. "Invertible" (rank 1 locally free)은 fpqc faithfully flat base change에 대하여 내려오는 성질이므로 ([\[스킴\] §충실평탄 하강, ⁋명제 7](/ko/math/scheme_theory/faithfully_flat_descent#prop7)의 locally free of finite rank 하강), $\mathcal{L}\vert_{T_i}=\mathcal{L}_i$이 각각 invertible이고 $\{T_i \rightarrow T\}$이 covering이므로 $\mathcal{L}$도 invertible이다. 따라서 descent datum이 $\mathcal{L}(T)$ 안에서 effective이고, prestack 조건과 합하여 $\mathcal{L}\cong \mathbf{B}\mathbb{G}_m$은 stack이다.
 :::

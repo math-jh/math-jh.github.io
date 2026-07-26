@@ -197,7 +197,7 @@ $$\Gamma(T, f^\ast\mathcal{F}) \rightarrow \prod_i \Gamma(T_i, f_i^\ast\mathcal{
 는 정확하다.
 :::
 ::: 증명
-문제가 국소적이고 quasi-compact 조건 덕분에 유한 covering으로 환원되므로, $T=\Spec A$가 affine이고 covering이 단일 faithfully flat morphism $\{\Spec B \rightarrow \Spec A\}$인 경우만 보이면 충분하다. 이 때 $\mathcal{F}=\widetilde M$인 $A$-가군 $M$이 있고 ([§준연접층, ⁋정리 9](/ko/math/scheme_theory/quasicoherent_sheaves#thm9)), pullback이 base change로 주어지므로 ([§준연접층, ⁋명제 18](/ko/math/scheme_theory/quasicoherent_sheaves#prop18)) 위 sequence는
+문제가 국소적이고 quasi-compact 조건 덕분에 유한 covering으로 환원되므로, $T=\Spec A$가 affine이고 covering이 단일 faithfully flat morphism $\{\Spec B \rightarrow \Spec A\}$인 경우만 보이면 충분하다. 이 때 $\mathcal{F}=\widetilde M$인 $A$-가군 $M$이 있고 ([§준연접층, ⁋정리 9](/ko/math/scheme_theory/quasicoherent_sheaves#thm9)), pullback이 base change로 주어지므로 ([§준연접층, ⁋명제 15](/ko/math/scheme_theory/quasicoherent_sheaves#prop15)) 위 sequence는
 
 $$M \rightarrow M\otimes_A B \rightrightarrows M\otimes_A B\otimes_A B$$
 
@@ -214,7 +214,7 @@ $$0 \rightarrow M \rightarrow M\otimes_A B \rightarrow M\otimes_A B\otimes_A B$$
 $\{f_i: U_i \rightarrow X\}$가 fpqc cover라 하자. 그럼 $X$ 위의 quasi-coherent sheaf를 주는 것은, 각 $U_i$ 위의 quasi-coherent sheaf $\mathcal{F}_i$들과, $U_i\times_X U_j$ 위에서 cocycle 조건을 만족하는 isomorphism $\varphi_{ij}: \operatorname{pr}_2^\ast \mathcal{F}_j\cong \operatorname{pr}_1^\ast \mathcal{F}_i$들의 데이터를 주는 것과 동치이다. 즉 quasi-coherent sheaf는 fpqc 위상에 대하여 *effective descent*를 가진다.
 :::
 ::: 증명
-문제가 국소적이므로 $X=\Spec A$이고 covering이 단일 faithfully flat morphism $\Spec B \rightarrow \Spec A$인 경우로 환원된다. 이 때 $U_i\times_X U_j$는 $\Spec(B\otimes_A B)$이고, 주어진 데이터는 정확히 $B$-가군 $N=\Gamma(\Spec B, \mathcal{F}_1)$과 $B\otimes_A B$-가군 동형 $\varphi_N$의 cocycle 쌍, 즉 [정의 4](#def4)의 descent datum이다. [§준연접층, ⁋정리 9](/ko/math/scheme_theory/quasicoherent_sheaves#thm9)의 quasi-coherent sheaf와 가군의 대응과 pullback의 base change 해석 ([§준연접층, ⁋명제 18](/ko/math/scheme_theory/quasicoherent_sheaves#prop18)) 아래에서, 이 데이터는 $\operatorname{Desc}(B/A)$의 대상에 정확히 대응한다. 따라서 [정리 6](#thm6)에 의해 이는 유일한 $A$-가군 $M$, 즉 유일한 quasi-coherent sheaf $\widetilde M$으로부터 오며, 그 morphism까지 동치이다.
+문제가 국소적이므로 $X=\Spec A$이고 covering이 단일 faithfully flat morphism $\Spec B \rightarrow \Spec A$인 경우로 환원된다. 이 때 $U_i\times_X U_j$는 $\Spec(B\otimes_A B)$이고, 주어진 데이터는 정확히 $B$-가군 $N=\Gamma(\Spec B, \mathcal{F}_1)$과 $B\otimes_A B$-가군 동형 $\varphi_N$의 cocycle 쌍, 즉 [정의 4](#def4)의 descent datum이다. [§준연접층, ⁋정리 9](/ko/math/scheme_theory/quasicoherent_sheaves#thm9)의 quasi-coherent sheaf와 가군의 대응과 pullback의 base change 해석 ([§준연접층, ⁋명제 15](/ko/math/scheme_theory/quasicoherent_sheaves#prop15)) 아래에서, 이 데이터는 $\operatorname{Desc}(B/A)$의 대상에 정확히 대응한다. 따라서 [정리 6](#thm6)에 의해 이는 유일한 $A$-가군 $M$, 즉 유일한 quasi-coherent sheaf $\widetilde M$으로부터 오며, 그 morphism까지 동치이다.
 
 일반적인 fpqc cover의 경우, quasi-compact 조건으로 유한 부분덮개를 잡고 그 disjoint union을 단일 affine faithfully flat morphism으로 만들어 위 affine 경우를 적용한 뒤, 결과들을 $X$의 affine open들 위에서 접합한다. 접합의 정합성은 [정리 9](#thm9)의 sheaf 성질이 보장한다.
 :::
