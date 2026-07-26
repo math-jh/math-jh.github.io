@@ -5,6 +5,7 @@ excerpt: "Category of S-schemes에서의 fiber product 정의와 존재성"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/fiber_products
+drift_needed: true
 sidebar: 
     nav: "scheme_theory-ko"
 
@@ -94,10 +95,10 @@ Affine scheme들 $X, Z$ 그리고 임의의 scheme $Y$에 대하여, $X\rightarr
 ::: 증명
 이를 위해 $Y$를 affine open subset들 $Y_i$들로 덮자. 그럼 우리는 [보조정리 2](#lem2)으로부터 $X\times_ZY_i$들이 존재함을 안다. 또, $Y_{ij}=Y_i\cap Y_j$는 affine scheme $Y_i$의 open subscheme이므로 역시 $X\times_Z Y_{ij}$가 [보조정리 4](#lem4)에 의하여 존재한다. 
 
-한편, [보조정리 4](#lem4)의 증명을 보면 $X\times_ZY_{ij}$는 각각 $X\times_ZY_i$와 $X\times_ZY_j$의 open subscheme인 것을 알 수 있다. 이들 데이터가 [§스킴, ⁋보조정리 9](/ko/math/scheme_theory/schemes#lem9)의 조건들을 만족하는 것을 쉽게 확인할 수 있으므로, 이들을 붙여 scheme $X\times_ZY$를 만들 수 있다. 이것이 fiber product의 universal property를 만족하는 것은 scheme morphism $W \rightarrow Y$의 공역을 $Y_i$들로 제한하여 $X\times_ZY_i$들 각각의 universal property를 사용한 후, [§스킴 사이의 사상, ⁋명제 1](/ko/math/scheme_theory/morphism_of_schemes#prop1)과 같이 scheme morphism을 붙여서 만들면 확인할 수 있다. 
+한편, [보조정리 4](#lem4)의 증명을 보면 $X\times_ZY_{ij}$는 각각 $X\times_ZY_i$와 $X\times_ZY_j$의 open subscheme인 것을 알 수 있다. 이들 데이터가 [§스킴, ⁋보조정리 9](/ko/math/scheme_theory/schemes#lem9)의 조건들을 만족하는 것을 쉽게 확인할 수 있으므로, 이들을 붙여 scheme $X\times_ZY$를 만들 수 있다. 이것이 fiber product의 universal property를 만족하는 것은 다음과 같이 확인한다. Scheme $W$와 morphism $a: W \rightarrow X$, $b: W \rightarrow Y$가 $Z$ 위에서 일치한다 하고 $W_i=b^{-1}(Y_i)$라 두자. 그럼 $b$를 $W_i$로 제한한 것은 $W_i \rightarrow Y_i$를 정의하므로, $X\times_ZY_i$의 universal property로부터 유일한 morphism $u_i: W_i \rightarrow X\times_ZY_i$를 얻는다. 이제 $W_i\cap W_j=b^{-1}(Y_{ij})$ 위에서 $u_i$와 $u_j$는 모두 $X\times_ZY_{ij}$의 universal property가 주는 유일한 morphism과 같으므로 서로 일치하며, 따라서 [§스킴 사이의 사상, ⁋명제 1](/ko/math/scheme_theory/morphism_of_schemes#prop1)에 의하여 이들은 유일한 morphism $u: W \rightarrow X\times_ZY$로 붙는다. 여기에서 공역을 $Y_i$로 제한하는 것이 아니라 정의역을 $W_i$로 제한한다는 것에 주의해야 하는데, $b$의 image가 $Y_i$에 들어갈 이유가 없기 때문이다. 
 :::
 
-이 보조정리에서 $X$가 affine scheme이라는 가정은 오직 $X\times_ZY_i$가 존재한다는 것을 보이기 위해서만 사용되었다. 따라서, 임의의 두 scheme $X,Y$와 affine scheme $Z$, 그리고 scheme morphism $X \rightarrow Z$와 $Y \rightarrow Z$가 주어졌다 하면 우리는 $Y$의 affine open cover $\{Y_i\}$를 택한 후, $X\times_ZY_i$가 [보조정리 5](#lem5)에 의해 존재하는 것을 알고 따라서 이들을 붙여서 $X\times_ZY$를 만들 수 있다. 즉 다음이 성립한다.
+이 보조정리에서 $X$가 affine scheme이라는 가정은 오직 $X\times_ZY_i$가 존재한다는 것을 보이기 위해서만 사용되었다. 따라서, 임의의 두 scheme $X,Y$와 affine scheme $Z$, 그리고 scheme morphism $X \rightarrow Z$와 $Y \rightarrow Z$가 주어졌다 하면 우리는 $Y$의 affine open cover $\{Y_i\}$를 택한 후 [보조정리 5](#lem5)에서 두 인자의 역할을 바꾸어 적용할 수 있다. 즉 $Y_i$와 $Z$가 affine이므로 $Y_i\times_ZX$가 존재하고, fiber product는 두 인자의 순서에 대해 대칭이므로 $X\times_ZY_i$가 존재한다. 또 $Y_{ij}$는 $Y_i$의 open subscheme이므로 [보조정리 4](#lem4)에 의하여 $X\times_ZY_{ij}$가 존재하며 이는 $X\times_ZY_i$와 $X\times_ZY_j$의 open subscheme이다. 따라서 [보조정리 5](#lem5)의 증명에서의 접합 논증을 그대로 반복하면 다음을 얻는다.
 
 ::: 보조정리 6
 Affine scheme $Z$, 임의의 scheme $X,Y$와 scheme morphism $X \rightarrow Z$, $Y \rightarrow Z$에 대하여, fiber product $X\times_ZY$가 존재한다. 
@@ -106,7 +107,7 @@ Affine scheme $Z$, 임의의 scheme $X,Y$와 scheme morphism $X \rightarrow Z$, 
 이제 마지막으로 $Z$를 임의의 scheme으로 확장해야 한다. 우선 다음이 성립한다.
 
 ::: 보조정리 7
-임의의 scheme $X,Y,Z$가 주어졌다 하고, scheme morphism $\varphi_X:X \rightarrow Z$, $\varphi_Y:Y \rightarrow Z$ 그리고 affine scheme $Z'$로의 monomorphism $\iota: Z \rightarrow Z'$가 주어졌다 하자. 가령 $\iota$가 open immersion이거나 closed embedding인 경우가 이에 해당한다. 그럼 $\iota\circ\varphi_X$와 $\iota\circ\varphi_Y$의 fiber product $X\times_{Z'}Y$는 $X\times_ZY$의 universal property를 만족하고, 따라서 $X\times_ZY$가 존재한다.  
+임의의 scheme $X,Y,Z$가 주어졌다 하고, scheme morphism $\varphi_X:X \rightarrow Z$, $\varphi_Y:Y \rightarrow Z$ 그리고 affine scheme $Z'$로의 monomorphism $\iota: Z \rightarrow Z'$가 주어졌다 하자. 가령 $\iota$가 open immersion이거나 closed embedding인 경우가 이에 해당한다. 후자의 경우, $\iota\circ a=\iota\circ b$인 두 morphism $a,b: T \rightarrow Z$가 주어졌다 하면 $\iota$가 단사이므로 연속함수로서 $a=b$이고, 각각의 $t\in T$에서 $\iota^\sharp$이 stalk 사이의 surjection $\mathcal{O}_{Z',\iota(a(t))} \rightarrow \mathcal{O}_{Z,a(t)}$을 유도하므로 ([§닫힌 부분스킴, ⁋정의 2](/ko/math/scheme_theory/closed_subschemes#def2)) $a^\sharp$와 $b^\sharp$는 그 합성에 의해 결정되어 서로 같다. 그럼 $\iota\circ\varphi_X$와 $\iota\circ\varphi_Y$의 fiber product $X\times_{Z'}Y$는 $X\times_ZY$의 universal property를 만족하고, 따라서 $X\times_ZY$가 존재한다.  
 :::
 ::: 증명
 $Z'$이 affine이므로 $X\times_{Z'}Y$는 존재한다. 이제 임의의 scheme $T$와 morphism $a:T \rightarrow X$, $b:T \rightarrow Y$가 주어졌다 하자. $X\times_ZY$의 universal property에서 요구하는 조건은 $\varphi_X\circ a=\varphi_Y\circ b$이고, $X\times_{Z'}Y$의 것은 $\iota\circ\varphi_X\circ a=\iota\circ\varphi_Y\circ b$인데, $\iota$가 monomorphism이므로 이 두 조건은 서로 동치이다. 따라서 두 fiber product는 같은 universal property를 만족하고, 유일성에 의하여 $X\times_{Z'}Y$가 $X\times_ZY$의 역할을 한다.
@@ -118,6 +119,11 @@ $Z'$이 affine이므로 $X\times_{Z'}Y$는 존재한다. 이제 임의의 scheme
 
 ::: 정리 8
 임의의 scheme $X,Y,Z$와 scheme morphism $X \rightarrow Z$, $Y \rightarrow Z$에 대하여, fiber product $X\times_ZY$가 존재한다.
+:::
+::: 증명
+Gluing에 필요한 것은 두 조각 $X_i\times_{Z_i}Y_i$와 $X_j\times_{Z_j}Y_j$ 안에서 $Z_{ij}$ 위의 fiber product에 해당하는 열린집합들이 canonical하게 identify되고, 이 identification들이 triple intersection 위에서 cocycle condition을 만족한다는 것이다. 그런데 두 열린집합은 모두 $\varphi_X\vert^{Z_{ij}}$와 $\varphi_Y\vert^{Z_{ij}}$의 fiber product의 universal property를 만족하므로 그 사이의 identification은 유일하게 결정되며, triple intersection 위에서 얻어지는 세 identification 또한 $Z_{ijk}=Z_i\cap Z_j\cap Z_k$ 위의 fiber product의 universal property가 주는 유일한 사상이므로, 그 가운데 두 개의 합성은 나머지 하나와 같아 cocycle condition이 성립한다. 따라서 [§스킴, ⁋보조정리 9](/ko/math/scheme_theory/schemes#lem9)에 의하여 이들은 하나의 scheme으로 붙는다.
+
+이렇게 얻어진 scheme이 universal property를 만족하는 것은 [보조정리 5](#lem5)의 증명에서와 같다. 즉 morphism $a: W \rightarrow X$, $b: W \rightarrow Y$가 $Z$ 위에서 일치한다 하면 $W_i=(\varphi_X\circ a)^{-1}(Z_i)$로 두고 각 $W_i$에서 $X_i\times_{Z_i}Y_i$로의 유일한 morphism을 얻은 후, 겹침에서의 일치를 위와 같이 universal property의 유일성으로 확인하여 붙이면 된다.
 :::
 
 ## Fiber product의 해석
@@ -199,9 +205,9 @@ $$\Spec\left(\frac{\mathbb{K}[\x,\y]}{(\y)}\otimes_{\mathbb{K}[\x,\y]}\frac{\mat
 이 된다. 
 :::
 
-이 관점에서 우리는 scheme morphism $\varphi:X \rightarrow Y$의 $y_0\in Y$에서의 fiber $\varphi^{-1}(y_0)$을 어떻게 정의해야 하는지도 알 수 있다. $y_0$가 closed point이든 아니든, 이를 $\iota:\{y_0\}\hookrightarrow Y$로 본 후, $\iota$와 $\varphi$의 fiber product를 취하면 된다. 이를 위해서는 $\iota$를 scheme morphism으로서 기술해야 한다. 
+이 관점에서 우리는 scheme morphism $\varphi:X \rightarrow Y$의 $y_0\in Y$에서의 fiber $\varphi^{-1}(y_0)$을 어떻게 정의해야 하는지도 알 수 있다. $y_0$ 하나만을 담는 scheme에서 $Y$로 가는 morphism을 만든 후, 이 morphism과 $\varphi$의 fiber product를 취하면 된다. 여기에서 한점집합 $\{y_0\}$을 $Y$의 부분공간으로 보아 embedding을 취할 수는 없다는 것에 주의해야 한다. $y_0$가 closed point가 아니면 $\{y_0\}$은 일반적으로 $Y$의 locally closed subset조차 아니기 때문이다. 가령 $\mathbb{A}^2$의 generic point가 그러하다. 
 
-이를 위해 $y$에서의 residue field $\kappa(y)$를 생각하자. 그럼 $\Spec\kappa(y)$는 항상 한점집합이다. 뿐만 아니라, $y$를 포함하는 $Y$의 affine open subset $V=\Spec B$를 생각하고, $y$가 prime ideal $\mathfrak{q}_y$에 대응된다 하면 canonical morphism
+이제 $\iota$를 만들기 위해 $y$에서의 residue field $\kappa(y)$를 생각하자. 그럼 $\Spec\kappa(y)$는 항상 한점집합이다. 뿐만 아니라, $y$를 포함하는 $Y$의 affine open subset $V=\Spec B$를 생각하고, $y$가 prime ideal $\mathfrak{q}_y$에 대응된다 하면 canonical morphism
 
 $$B \rightarrow B_{\mathfrak{q}_y} \rightarrow B_{\mathfrak{q}_y}/\mathfrak{q}_y B_{\mathfrak{q}_y} =\kappa(\mathfrak{q}_y)=\kappa(y)$$
 
@@ -215,7 +221,22 @@ $$\varphi^{-1}(y)=X\times_Y\Spec \kappa(y)$$
 으로 정의한다. 만일 $Y$가 irreducible이라면, $Y$의 generic point에서의 fiber를 *generic fiber<sub>일반 올</sub>*라 부른다. 
 :::
 
-::: 예시 13
+이 정의는 연속함수로서의 preimage와 같은 기호를 사용하고 있으며, 실제로 두 대상은 위상공간으로서 일치한다.
+
+::: 보조정리 13
+Scheme morphism $\varphi: X \rightarrow Y$와 $y\in Y$에 대하여, projection $X\times_Y\Spec\kappa(y) \rightarrow X$는 집합으로서의 preimage $\{x\in X\mid \varphi(x)=y\}$ 위로의 homeomorphism이다.
+:::
+::: 증명
+[보조정리 4](#lem4)에 의하여 fiber product를 만드는 것은 $X$와 $Y$를 열린집합으로 제한하는 것과 호환되므로, $y\in V=\Spec B$인 affine open subset $V$를 택하고 $\varphi^{-1}(V)$를 affine open subset $\Spec A$들로 덮어 $X=\Spec A$, $Y=\Spec B$인 경우만 보이면 충분하다. 이 때 $y$에 대응되는 prime ideal을 $\mathfrak{q}$, $\phi: B \rightarrow A$를 $\varphi$에 대응되는 ring homomorphism이라 하자.
+
+[보조정리 2](#lem2)에 의하여 $X\times_Y\Spec \kappa(\mathfrak{q})=\Spec (A\otimes_B\kappa(\mathfrak{q}))$이다. 한편 $\kappa(\mathfrak{q})=B_\mathfrak{q}/\mathfrak{q}B_\mathfrak{q}$이므로, $S=\phi(B\setminus \mathfrak{q})$라 두면
+
+$$A\otimes_B\kappa(\mathfrak{q})\cong (S^{-1}A)/\mathfrak{q}(S^{-1}A)$$
+
+이다. 그럼 [§스펙트럼, ⁋명제 9](/ko/math/scheme_theory/spectrums#prop9)를 두 번 적용하여, $\Spec (A\otimes_B\kappa(\mathfrak{q})) \rightarrow \Spec A$는 그 image 위로의 homeomorphism이며 그 image는 $S$와 만나지 않으면서 $\mathfrak{q}(S^{-1}A)$를 포함하는 prime ideal들, 곧 $\phi^{-1}(\mathfrak{p})\subseteq \mathfrak{q}$와 $\mathfrak{q}\subseteq \phi^{-1}(\mathfrak{p})$를 동시에 만족하는 $\mathfrak{p}\in \Spec A$들의 모임임을 안다. 이는 정확히 $(\Spec\phi)(\mathfrak{p})=\mathfrak{q}$인 점들의 모임이다.
+:::
+
+::: 예시 14
 Algebraically closed field $\mathbb{K}$에 대하여, ring homomorphism $\mathbb{K}[\x] \rightarrow \mathbb{K}[\y]$을 식 $\x \mapsto \y^2$으로 정의하고, 이로부터 얻어지는 scheme morphism $\varphi: \Spec \mathbb{K}[\y] \rightarrow \Spec \mathbb{K}[\x]$를 생각하자. 그럼 $\Spec\mathbb{K}[\x]$의 임의의 점 $(\x-a)$에서의 residue field는 
 
 $$\Frac(\mathbb{K}[\x]/(\x-a))=\mathbb{K}[\x]/(\x-a)$$
@@ -235,18 +256,18 @@ $$\varphi^{-1}((0))=\Spec \mathbb{K}[\y]\times_{\Spec \mathbb{K}[\x]}\Spec \math
 이 된다. 
 :::
 
-위의 예시는 이미 [§스킴 사상의 성질들, ⁋예시 15](/ko/math/scheme_theory/properties_of_scheme_morphisms#ex15)에서 살펴보았던 것이다. 해당 예시에서 우리는 finite morphism이 항상 quasi-finite라는 사실을 주장했는데, 이제 이를 증명할 수 있다. 
+위의 예시는 이미 [§스킴 사상의 성질들, ⁋예시 16](/ko/math/scheme_theory/properties_of_scheme_morphisms#ex16)에서 살펴보았던 것이다. 해당 예시에서 우리는 finite morphism이 항상 quasi-finite라는 사실을 주장했는데, 이제 이를 증명할 수 있다. 
 
-::: 명제 14
+::: 명제 15
 Finite morphism $\varphi: X \rightarrow Y$는 quasi-finite morphism이다. 
 :::
 ::: 증명
-Affine인 경우만 보이면 충분하다. 즉, 임의의 finite ring homomorphism $\phi: B \rightarrow A$와 $B$의 prime ideal $\mathfrak{q}$에 대하여 $A\otimes_B\kappa(\mathfrak{q})$가 유한히 많은 prime ideal을 갖는다는 것을 보이면 충분하다. 그런데 $\phi$가 finite이므로 $A\otimes_B\kappa(\mathfrak{q})$는 finite $\kappa(\mathfrak{q})$-algebra이고 따라서 Artinian이므로 이로부터 원하는 결과를 얻는다. ([\[가환대수학\] §조르단-횔더 정리, ⁋정리 4](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm4))
+[보조정리 13](#lem13)에 의하여 집합 $\varphi^{-1}(y)$의 점들은 scheme $X\times_Y\Spec\kappa(y)$의 점들과 일대일로 대응하므로, 후자의 점의 개수를 세면 된다. 그럼 affine인 경우만 보이면 충분하다. 즉, 임의의 finite ring homomorphism $\phi: B \rightarrow A$와 $B$의 prime ideal $\mathfrak{q}$에 대하여 $A\otimes_B\kappa(\mathfrak{q})$가 유한히 많은 prime ideal을 갖는다는 것을 보이면 충분하다. 그런데 $\phi$가 finite이므로 $A\otimes_B\kappa(\mathfrak{q})$는 finite $\kappa(\mathfrak{q})$-algebra이고 따라서 Artinian이므로 이로부터 원하는 결과를 얻는다. ([\[가환대수학\] §조르단-횔더 정리, ⁋정리 4](/ko/math/commutative_algebra/Jordan-Holder_theorem#thm4))
 :::
 
-위의 예시와 명제들에서 우리는 중요한 관찰을 할 수 있는데, 만일 $X \rightarrow S$가 scheme morphism의 어떠한 성질 $P$를 만족한다면, 임의의 $S' \rightarrow S$로의 base change $X\times_SS' \rightarrow S'$ 또한 그러하다는 것이다. 이는 우연이 아니며, 실제로 우리가 관심을 가지는 대부분의 성질은 base change에 대해 닫혀있다. 
+위의 예시와 명제들에서 우리는 중요한 관찰을 할 수 있는데, $X \rightarrow S$가 만족하는 성질이 임의의 $S' \rightarrow S$로의 base change $X\times_SS' \rightarrow S'$에도 이어지는 경우가 많다는 것이다. 물론 모든 성질이 그런 것은 아니다. 가령 dominant는 보존되지 않는데, $\Spec \mathbb{K}(\t) \rightarrow \Spec \mathbb{K}[\t]$는 generic point로의 dominant morphism이지만 $\t=0$을 따라 base change하면 공집합에서 한 점으로 가는 morphism이 된다. 그러나 우리가 관심을 가지는 대부분의 성질은 base change에 대해 닫혀있다. 
 
-::: 명제 15
+::: 명제 16
 만일 scheme morphism $\varphi:X \rightarrow Z$가 quasicompact (resp. quasiseparated, affine, finite, integral, locally of finite type, finite type, locally of finite presentation, finite presentation, quasi-finite, surjective) 라면, 임의의 scheme morphism $Y \rightarrow Z$를 통해 $\varphi$를 base change한 $X\times_ZY \rightarrow Y$ 또한 그러하다.
 :::
 ::: 증명
@@ -276,15 +297,9 @@ $$D(f)\cap D(g)=\bigcup_{t=1}^s\bigl(D(fh_t)\cap D(g)\bigr)$$
 
 $\varphi$가 integral (resp. finite)이라 하자. 그럼 $\varphi$는 affine이므로 $X_A=\Spec B$이고 $A \rightarrow B$가 integral (resp. finite)이다. 따라서 $\rho_Y^{-1}(\Spec C)=\Spec (B\otimes_AC)$이고 [\[가환대수학\] §정수적 확장, ⁋명제 14](/ko/math/commutative_algebra/integral_extension#prop14)에 의하여 $C \rightarrow B\otimes_AC$ 또한 integral (resp. finite)이다. 이 두 성질이 affine-local on target이라는 것은 [§스킴 사상의 성질들, ⁋정의 11](/ko/math/scheme_theory/properties_of_scheme_morphisms#def11) 직후에 살펴보았으므로, $Y$의 affine open covering $\{\Spec C\}$ 위에서 확인한 것으로 충분하다.
 
-$\varphi$가 locally of finite type이라 하자. $X_A$의 affine open covering $\{\Spec B_i\}$를 택하면 각각의 $A \rightarrow B_i$는 finite type이고, $B_i$를 $A$-algebra로서 생성하는 원소들을 $x_1,\ldots, x_n$이라 하면 $B_i\otimes_AC$는 $C$-algebra로서 $x_1\otimes 1,\ldots, x_n\otimes 1$에 의해 생성되므로 $C \rightarrow B_i\otimes_AC$ 또한 finite type이다. 이제 $W$의 <em-ko>모든</em-ko> affine open subset에 대하여 같은 결론을 얻어야 하는데, 이를 위해 $W$의 affine open subset $\Spec R$에 대한 성질 $Q$를 "$C \rightarrow R$이 finite type이다"로 정의하고 $Q$가 [§스킴의 위상구조, ⁋정의 9](/ko/math/scheme_theory/topology_of_schemes#def9)의 affine-local property임을 보이자. 그럼 방금 만든 affine open covering $\{\Spec (B_i\otimes_AC)\}$와 [§스킴의 위상구조, ⁋보조정리 12](/ko/math/scheme_theory/topology_of_schemes#lem12)로부터 원하는 결론을 얻는다.
+$\varphi$가 locally of finite type이라 하자. $X_A$의 affine open covering $\{\Spec B_i\}$를 택하면 각각의 $A \rightarrow B_i$는 finite type이고, $B_i$를 $A$-algebra로서 생성하는 원소들을 $x_1,\ldots, x_n$이라 하면 $B_i\otimes_AC$는 $C$-algebra로서 $x_1\otimes 1,\ldots, x_n\otimes 1$에 의해 생성되므로 $C \rightarrow B_i\otimes_AC$ 또한 finite type이다. 이제 $W$의 <em-ko>모든</em-ko> affine open subset에 대하여 같은 결론을 얻어야 하는데, 이는 방금 만든 affine open covering $\{\Spec (B_i\otimes_AC)\}$에 [§스킴 사상의 성질들, ⁋보조정리 13](/ko/math/scheme_theory/properties_of_scheme_morphisms#lem13)을 적용하면 얻어진다. 즉 $\rho_Y$는 locally of finite type이다. 또 morphism of finite type은 quasi-compact이면서 locally of finite type인 morphism이므로, 위의 quasi-compact인 경우와 종합하면 finite type 또한 base change에 대해 보존된다.
 
-첫째 조건은 $C \rightarrow R$이 finite type일 때 $R$의 generator들에 $1/h$를 추가하면 $R_h$가 $C$-algebra로서 finitely generated가 되므로 자명하다. 둘째 조건을 위해 $R=(h_1,\ldots, h_m)$이고 각각의 $C \rightarrow R_{h_t}$가 finite type이라 하자. 각각의 $t$에 대하여 $R_{h_t}$를 $C$-algebra로서 생성하는 유한집합을 택한 후 분모를 없애면, $R$의 원소들 $x_{t1},\ldots, x_{tn_t}$가 존재하여 $R_{h_t}$가 $x_{tk}/1$들과 $1/h_t$에 의해 $C$-algebra로서 생성되도록 할 수 있다. 또 $1=\sum_{t=1}^ma_th_t$인 $a_t\in R$을 택하자. 이제 유한집합 $\{h_t\}\cup\{a_t\}\cup\{x_{tk}\}$가 생성하는 $R$의 $C$-subalgebra를 $R'$이라 하면 $R'$은 finite type $C$-algebra이므로 $R'=R$임을 보이면 충분하다. 임의의 $x\in R$에 대하여, $R_{h_t}$에서 $x/1$은 $x_{tk}/1$들과 $1/h_t$의 $C$-계수 다항식이므로 적당한 $r_t\in R'$과 $n_t\geq 0$에 대하여 $x/1=r_t/h_t^{n_t}$이고, 따라서 적당한 $N_t$에 대하여 $R$에서 $h_t^{N_t}(h_t^{n_t}x-r_t)=0$, 곧 $h_t^{N_t+n_t}x=h_t^{N_t}r_t\in R'$이다. $t$가 유한개이므로 공통의 $M$을 택하여 모든 $t$에 대해 $h_t^Mx\in R'$이도록 할 수 있다. 한편 $1=\sum_ta_th_t$에서 $a_t,h_t\in R'$이므로 $h_1,\ldots, h_m$은 $R'$의 unit ideal을 생성하고, 이 식의 양변을 충분히 큰 거듭제곱하면 $h_1^M,\ldots, h_m^M$ 또한 $R'$의 unit ideal을 생성함을 안다. 즉 $1=\sum_tc_th_t^M$인 $c_t\in R'$이 존재하고 따라서
-
-$$x=\sum_{t=1}^mc_t(h_t^Mx)\in R'$$
-
-이다. 이상에서 $Q$는 affine-local property이고, locally of finite type이 affine-local on target이라는 것은 [§스킴 사상의 성질들, ⁋정의 13](/ko/math/scheme_theory/properties_of_scheme_morphisms#def13) 직후에 살펴보았으므로 $\rho_Y$는 locally of finite type이다. 또 morphism of finite type은 quasi-compact이면서 locally of finite type인 morphism이므로, 위의 quasi-compact인 경우와 종합하면 finite type 또한 base change에 대해 보존된다.
-
-$\varphi$가 locally of finite presentation이라 하자. [§스킴 사상의 성질들, ⁋정의 17](/ko/math/scheme_theory/properties_of_scheme_morphisms#def17)의 조건은 preimage의 <em-ko>어떤</em-ko> affine open covering에 대한 조건이므로 이 경우는 오히려 간단하다. 가정에 의하여 $X_A$의 affine open covering $\{\Spec B_i\}$가 존재하여 각각의 $B_i$가
+$\varphi$가 locally of finite presentation이라 하자. [§스킴 사상의 성질들, ⁋정의 18](/ko/math/scheme_theory/properties_of_scheme_morphisms#def18)의 조건은 preimage의 <em-ko>어떤</em-ko> affine open covering에 대한 조건이므로 이 경우는 오히려 간단하다. 가정에 의하여 $X_A$의 affine open covering $\{\Spec B_i\}$가 존재하여 각각의 $B_i$가
 
 $$B_i\cong A[\x_1,\ldots, \x_n]/(f_1,\ldots, f_m)$$
 

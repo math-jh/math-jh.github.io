@@ -5,6 +5,7 @@ excerpt: "Reduced scheme과 integral scheme의 정의와 성질"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/algebra_of_schemes
+drift_needed: true
 sidebar: 
     nav: "scheme_theory-ko"
 
@@ -17,7 +18,7 @@ Scheme은 기하적인 동시에 대수적인 대상이므로, 이를 잘 알기
 ## 축소스킴과 정역스킴
 
 ::: 정의 1
-Scheme $X$가 *reduced scheme<sub>축소스킴</sub>*인 것은 임의의 열린집합 $U$에 대하여 $\mathcal{O}_X(U)$가 reduced인 것이다. ([\[대수적 구조\] §분수체, ⁋정의 11](/ko/math/algebraic_structures/field_of_fractions#def11)) 비슷하게, $X$가 *integral<sub>정역스킴</sub>*인 것은 임의의 열린집합 $U$에 대하여 $\mathcal{O}_X(U)$가 integral domain인 것이다. ([\[대수적 구조\] §분수체, ⁋정의 5](/ko/math/algebraic_structures/field_of_fractions#def5))
+Scheme $X$가 *reduced scheme<sub>축소스킴</sub>*인 것은 임의의 열린집합 $U$에 대하여 $\mathcal{O}_X(U)$가 reduced인 것이다. ([\[대수적 구조\] §분수체, ⁋정의 11](/ko/math/algebraic_structures/field_of_fractions#def11)) 비슷하게, $X$가 *integral<sub>정역스킴</sub>*인 것은 공집합이 아닌 임의의 열린집합 $U$에 대하여 $\mathcal{O}_X(U)$가 integral domain인 것이다. ([\[대수적 구조\] §분수체, ⁋정의 5](/ko/math/algebraic_structures/field_of_fractions#def5))
 :::
 
 그럼 다음이 성립한다.
@@ -116,11 +117,11 @@ $$X_1\cap \Spec A_i,\quad X_2\cap \Spec A_i,\quad\ldots,\quad X_s\cap \Spec A_i$
 
 중 공집합이 아닌 것들은 $\Spec A_i$의 irreducible component들이 된다. 이제 [§스펙트럼, ⁋명제 16](/ko/math/scheme_theory/spectrums#prop16)에 의하여, 이들 각각은 minimal prime ideal $\mathfrak{q}_j=I(X_j)$를 정의하며 거꾸로 $A_i$의 임의의 minimal prime ideal은 irreducible component $X_j\cap \Spec A_i$를 유일하게 결정한다. 
 
-한편, $X$는 connected이므로, irreducible decomposition ($\ast$)에서 다음의 교집합
+한편 $s=1$이라면 $X$가 이미 irreducible이므로 보일 것이 없다. 따라서 $s\geq 2$라 하고 irreducible decomposition ($\ast$)에서 두 닫힌집합
 
-$$X_1\cap \bigcup_{j=2}^s X_j$$
+$$X_1,\qquad \bigcup_{j=2}^s X_j$$
 
-를 생각하면 이는 $X$의 공집합이 아닌 두 열린집합들의 교집합이고, $X$가 connected이므로 이들은 반드시 어떠한 점 $x$에서 만나야 한다. 즉, 적당한 $j$가 존재하여 $x\in X_1\cap X_j$이다. 이제 점 $x$를 포함하는 $X$의 affine cover를 $\Spec A_i$라 하고, 이 때 $x$가 prime ideal $\mathfrak{p}$에 대응된다 하자. 즉
+를 생각하자. Irreducible component는 항상 공집합이 아닌 닫힌집합이고 ([\[위상수학\] §차원, ⁋정의 9](/ko/math/topology/dimension#def9)), 유한히 많은 닫힌집합의 합집합은 다시 닫힌집합이므로 이들은 모두 공집합이 아닌 닫힌집합이다. 만일 이 두 집합이 서로 만나지 않는다면 $X$는 서로소인 두 닫힌집합의 합집합이 되어 이들 각각이 열린집합이기도 하므로, $X$가 connected라는 가정에 모순이다. 따라서 적당한 $j$와 점 $x$가 존재하여 $x\in X_1\cap X_j$이다. 이제 점 $x$를 포함하는 $X$의 affine cover를 $\Spec A_i$라 하고, 이 때 $x$가 prime ideal $\mathfrak{p}$에 대응된다 하자. 즉
 
 $$x\in \Spec A_i\cap X_1\cap X_j=(\Spec A_i\cap X_1)\cap (\Spec A_i\cap X_j)$$
 
@@ -159,9 +160,9 @@ Scheme $X$가 *factorial<sub>인수분해스킴</sub>*인 것은 임의의 $x\in
 
 우리는 [§스펙트럼, ⁋따름정리 17](/ko/math/scheme_theory/spectrums#cor17)에 의해, scheme $X=\Spec A$의 irreducible component와 ring $A$의 minimal prime ideal 사이의 일대일대응이 존재하는 것을 안다. 이는 위의 [명제 5](#prop5)에서 중요하게 사용되었다.
 
-한편 대수적으로 minimal prime ideal은 항상 associated prime ideal이 된다. 이는 ring $A$를 자기 자신 위의 module로 보면 $\ann A=\{0\}$이므로 [\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)를 적용하면 확인할 수 있다.
+한편 대수적으로, Noetherian ring $A$의 minimal prime ideal은 항상 associated prime ideal이 된다. 이는 $A$를 자기 자신 위의 module로 보면 $\ann A=\{0\}$이므로 [\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)를 적용하면 확인할 수 있다. Noetherian 가정이 필수적인데, 가령 $A=\mathbb{K}[\x_1,\x_2,\ldots]/(\x_1^2,\x_2^2,\ldots)$은 유일한 prime ideal $\mathfrak{m}=(\x_1,\x_2,\ldots)$를 갖지만, $A$의 임의의 nonzero element는 유한히 많은 변수만 사용하므로 사용되지 않은 $\x_j$에 대하여 $\x_jf\neq 0$이 되어 $\ann(f)=\mathfrak{m}$일 수 없고, 따라서 $\Ass(A)=\emptyset$이다.
 
-그러나 associated prime ideal은 minimal prime보다 더 많은 것을 담고 있다. [\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 둘째 결과에 의하면 $A$의 associated prime들의 합집합은 정확히 $0$과 $A$의 zero-divisor들의 모임과 같다. 가령 [§스킴의 위상구조, ⁋예시 6](/ko/math/scheme_theory/topology_of_schemes#ex6)에서 본 $Z(\x\y)$의 경우, zero-divisor $\x,\y$는 각각 서로 다른 irreducible component에서 $0$이 되는 함수였으며, 그 zero-divisor 관계는 두 component의 generic point인 minimal prime $(\x),(\y)$만으로 이미 완전히 설명된다. 그러나 뒤의 [예시 11](#ex11)에서 보듯 이것이 항상 그런 것은 아니며, minimal prime, 다시 말해 irreducible component의 generic point만으로는 놓치는 zero-divisor의 위치까지도 associated point는 전부 포착한다. 
+그러나 associated prime ideal은 minimal prime보다 더 많은 것을 담고 있다. Noetherian ring $A$에 대하여 [\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 둘째 결과에 의하면 $A$의 associated prime들의 합집합은 정확히 $0$과 $A$의 zero-divisor들의 모임과 같다. 가령 [§스킴의 위상구조, ⁋예시 6](/ko/math/scheme_theory/topology_of_schemes#ex6)에서 본 $Z(\x\y)$의 경우, zero-divisor $\x,\y$는 각각 서로 다른 irreducible component에서 $0$이 되는 함수였으며, 그 zero-divisor 관계는 두 component의 generic point인 minimal prime $(\x),(\y)$만으로 이미 완전히 설명된다. 그러나 뒤의 [예시 11](#ex11)에서 보듯 이것이 항상 그런 것은 아니며, minimal prime, 다시 말해 irreducible component의 generic point만으로는 놓치는 zero-divisor의 위치까지도 associated point는 전부 포착한다. 
 
 ::: 정의 8
 Locally Noetherian scheme $X$의 한 점 $x$와 $x$의 affine open neighborhood $U\cong \Spec A$에 대하여, $x$가 $X$의 *associated point<sub>동반점</sub>*이라는 것은 $x$에 대응되는 prime ideal $\mathfrak{p}_x\subseteq A$가 $A$의 associated prime ideal인 것이다. 
@@ -237,6 +238,12 @@ $$\x_2\cdot(p(\x_1)+c\x_2)=p(0)\x_2$$
 
 이므로 $\ann(\x_2)=(\x_1,\x_2)$이다. 이는 $\ann(\x_1)=(\x_2)$를 진부분집합으로 포함하는 ideal로, 기하적으로는 원점에 해당한다. 이는 위의 예시와 달리 $X$의 irreducible component의 generic point로 나타나지 않는 점, 즉 embedded point이다. 
 
+실제로 이 두 점이 $X$의 associated point 전부이다. $f=p(\x_1)+c\x_2$와 $g=q(\x_1)+d\x_2$에 대하여 $\x_1\x_2=\x_2^2=0$으로부터
+
+$$fg=p(\x_1)q(\x_1)+\bigl(dp(0)+cq(0)\bigr)\x_2$$
+
+이므로, $p=0$이고 $c\neq 0$인 경우 $\ann(f)$는 $q(0)=0$을 만족하는 $g$들의 모임, 즉 $(\x_1,\x_2)$이고, $p\neq 0$이고 $p(0)=0$인 경우에는 $q=0$이 강제되어 $\ann(f)=(\x_2)$이며, $p(0)\neq 0$인 경우에는 $q=0$과 $d=0$이 모두 강제되어 $\ann(f)=0$이다. 즉 nonzero element의 annihilator로 얻어지는 prime ideal은 $(\x_2)$와 $(\x_1,\x_2)$뿐이다. 
+
 [§스킴의 위상구조, ⁋예시 6](/ko/math/scheme_theory/topology_of_schemes#ex6)의 $Z(\x\y)$와 달리, 이 zero-divisor 관계는 두 irreducible component의 곱에서 나오는 것이 아님을 주목하자. 구체적으로, $\x_2\in \ann(\x_1)$ 쪽은 이미 generic point $(\x_2)$에서 보이는 데이터이지만, $\x_1\in \ann(\x_2)$ 쪽은 $\supp(\x_2)=Z(\ann(\x_2))=\{(\x_1,\x_2)\}$이 보여주듯, $\x_2$가 원점을 제외한 모든 곳에서 사라진다는 사실이므로, 오직 embedded point에서만 associated prime으로 포착된다. 
 :::
 
@@ -250,10 +257,10 @@ $$A \rightarrow \prod_\text{\scriptsize $\mathfrak{p}$ associated prime} A_\math
 
 $$\Gamma(U, \mathcal{O}_X) \rightarrow \prod_\text{\scriptsize $x$ associated in $U$} \mathcal{O}_{X,x}\tag{$\ast$}$$
 
-가 injective이다. 
+가 injective이다. $U$가 affine이 아닌 경우에도 이는 성립하는데, $U$를 Noetherian ring들의 spectrum인 affine open subset $V_k$들로 덮으면 [정의 8](#def8) 직후의 재서술로부터 $V_k$의 associated point들은 정확히 $V_k$에 속하는 $U$의 associated point들이므로, 위의 affine에서의 injectivity를 각각의 $V_k$에 적용하여 $f\vert_{V_k}=0$을 얻기 때문이다. 
 
 ::: 정의 12
-Locally Noetherian scheme $X$와, $X$의 associated point들을 모두 포함하는 열린집합 $U$에 대하여, $\Gamma(U, \mathcal{O}_X)$의 ($\ast$)에 의한 image를 $X$ 위에 정의된 *rational function<sub>유리함수</sub>*라 부른다. 
+Locally Noetherian scheme $X$와, $X$의 associated point들을 모두 포함하는 열린집합 $U$에 대하여, $\Gamma(U, \mathcal{O}_X)$의 원소의 ($\ast$)에 의한 image를 $X$ 위에 정의된 *rational function<sub>유리함수</sub>*라 부른다. 
 :::
 
 따라서, 정의에 의해 $X$ 위에 정의된 rational function은 (1) $X$의 모든 associated point들을 포함하는 *정의역* $U$와, (2) 그 위의 함수 $f\in \Gamma(U, \mathcal{O}_X)$의 데이터로 이루어지며, 이러한 pair $(U, f)$와 $(U',f')$는 만일 $U\cap U'$에서 $f$와 $f'$가 같은 함수를 정의하면 같은 함수가 된다. 이러한 pair와 동치관계의 구조는 [\[대수다양체\] §유리사상, ⁋정의 1](/ko/math/algebraic_varieties/rational_maps#def1)에서의 variety 위의 rational function 정의와 정확히 같은 꼴이다. 유일한 차이는 이제 정의역 $U$가 associated point들을 모두 포함해야 한다는 조건이며, associated point들은 classical algebraic geometry에서는 보이지 않던 점들이므로 이는 그리 놀랄 일은 아니다. 
@@ -302,4 +309,4 @@ $$K(X)=\left\{\frac{p(\x_1)+c\x_2}{q(\x_1)+c'\x_2} \mid q(0)\neq0\right\}$$
 **[Vak]** R. Vakil, *The rising sea: Foundation of algebraic geometry*. Available [online](https://math.stanford.edu/~vakil/216blog/).  
 
 ---
-[^1]: 이 과정에서 $X$의 irreducible component들이 유한히 많기 때문에 각각의 component들이 열린집합임을 사용하였다. 
+[^1]: 이 과정에서 $X$의 irreducible component들이 유한히 많다는 것을 사용하였다. 이는 나머지 component들의 합집합이 다시 닫힌집합이 되도록 해 주며, 따라서 두 닫힌집합이 서로 만나지 않는다면 이들이 동시에 열린집합이 되어 connectedness에 모순이 되기 때문이다. 

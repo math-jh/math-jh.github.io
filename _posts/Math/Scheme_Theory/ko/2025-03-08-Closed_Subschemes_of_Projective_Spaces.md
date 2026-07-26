@@ -41,15 +41,15 @@ $$A_{(\x_i)} \rightarrow (A_\bullet/\mathfrak{a})_{(\bar\x_i)};\qquad \frac{f}{\
 
 $$\mathfrak{a}_{(\x_i)}=\left\{\frac{a}{\x_i^d}\middle\vert\text{$a\in\mathfrak{a}$ homogeneous of degree $d$}\right\}$$
 
-이다. 즉 $\iota$는 각 chart 위에서 $\Spec\bigl(A_{(\x_i)}/\mathfrak{a}_{(\x_i)}\bigr) \rightarrow \Spec A_{(\x_i)}$ 꼴의 closed embedding이고, 이들이 $D_+(\x_i\x_j)$들 위에서 호환되는 것은 위의 식이 $\x_i$의 선택과 무관한 방식으로 정의되었기 때문이다. 따라서 $\iota$는 scheme morphism이며, sheaf morphism $\iota^\sharp:\mathcal{O}_{\mathbb{P}^n} \rightarrow \iota_\ast\mathcal{O}_{\Proj(A_\bullet/\mathfrak{a})}$가 cover $(D_+(\x_i))$ 위에서 surjective이므로 stalk들 위에서도 surjective이다. 즉 $\iota$는 closed embedding이다. ([§닫힌 부분스킴, ⁋정의 2](/ko/math/scheme_theory/closed_subschemes#def2))
+이다. 즉 $\iota$는 각 chart 위에서 $\Spec\bigl(A_{(\x_i)}/\mathfrak{a}_{(\x_i)}\bigr) \rightarrow \Spec A_{(\x_i)}$ 꼴의 closed embedding이고, 이들은 $D_+(\x_i\x_j)$들 위에서 호환된다. 실제로 [§사영스킴, ⁋보조정리 9](/ko/math/scheme_theory/projective_schemes#lem9)의 identification 하에서 $D_+(\x_i\x_j)$는 $\Spec A_{(\x_i\x_j)}$이고, 위의 ring homomorphism을 $A_{(\x_i)} \rightarrow A_{(\x_i\x_j)}$와 합성한 것은 $f/(\x_i\x_j)^d\mapsto \pi(f)/(\bar\x_i\bar\x_j)^d$로 주어져 $i$와 $j$의 역할에 대해 대칭이기 때문이다. 따라서 $\iota$는 scheme morphism이며, sheaf morphism $\iota^\sharp:\mathcal{O}_{\mathbb{P}^n} \rightarrow \iota_\ast\mathcal{O}_{\Proj(A_\bullet/\mathfrak{a})}$가 cover $(D_+(\x_i))$ 위에서 surjective이므로 stalk들 위에서도 surjective이다. 즉 $\iota$는 closed embedding이다. ([§닫힌 부분스킴, ⁋정의 2](/ko/math/scheme_theory/closed_subschemes#def2))
 :::
 
 이렇게 얻어진 closed subscheme을 $V_+(\mathfrak{a})$로 적는다. 즉 $V_+(\mathfrak{a})$는 위상공간으로서는 $Z_+(\mathfrak{a})$이고, scheme으로서는 $\Proj(A_\bullet/\mathfrak{a})$이다. 표기에서 짐작할 수 있듯 이는 affine scheme에서의 대응 $\mathfrak{a}\mapsto \Spec(B/\mathfrak{a})$의 projective 버전이다.
 
 ::: 예시 2
-하나의 homogeneous polynomial $f$가 생성하는 ideal $(f)$에 대하여 $V_+(f)=\Proj\bigl(\mathbb{K}[\x_0,\ldots,\x_n]/(f)\bigr)$를 degree $\deg f$의 *hypersurface*라 부른다. 가령 $\mathbb{P}^2$에서 $V_+(\x_0\x_2-\x_1^2)$은 conic이다.
+양의 degree를 갖는 nonzero homogeneous polynomial $f$가 생성하는 ideal $(f)$에 대하여 $V_+(f)=\Proj\bigl(\mathbb{K}[\x_0,\ldots,\x_n]/(f)\bigr)$를 degree $\deg f$의 *hypersurface*라 부른다. $f=0$이면 $V_+(0)=\mathbb{P}^n$이고 $f$가 nonzero 상수이면 $V_+(f)=\emptyset$이므로 이 조건이 필요하다. 가령 $\mathbb{P}^2$에서 $V_+(\x_0\x_2-\x_1^2)$은 conic이다.
 
-한편 $\mathbb{P}^2$의 두 closed subscheme $V_+(\x_0)$과 $V_+(\x_0^2)$을 비교하면, 이들의 underlying space는 $Z_+(\x_0)=Z_+(\x_0^2)$으로 동일하지만 scheme 구조는 다르다. 실제로 chart $D_+(\x_2)\cong\Spec\mathbb{K}[\x_0/\x_2,\x_1/\x_2]$ 위에서 전자는 ideal $(\x_0/\x_2)$로, 후자는 $(\x_0^2/\x_2^2)$로 주어지며 후자의 coordinate ring은 nilpotent element를 갖는다. 이는 [§닫힌 부분스킴, ⁋예시 1](/ko/math/scheme_theory/closed_subschemes#ex1)에서 살펴본 double point의 projective 버전이다.
+한편 $\mathbb{P}^2$의 두 closed subscheme $V_+(\x_0)$과 $V_+(\x_0^2)$을 비교하면, 이들의 underlying space는 $Z_+(\x_0)=Z_+(\x_0^2)$으로 동일하지만 scheme 구조는 다르다. 실제로 chart $D_+(\x_2)\cong\Spec\mathbb{K}[\x_0/\x_2,\x_1/\x_2]$ 위에서 전자는 ideal $(\x_0/\x_2)$로, 후자는 $(\x_0^2/\x_2^2)$로 주어지며 후자의 coordinate ring은 nilpotent element를 갖는다. 이는 [§닫힌 부분스킴, ⁋예시 1](/ko/math/scheme_theory/closed_subschemes#ex1)에서 살펴본 double point와 같은 종류의 non-reduced thickening이다. 다만 $V_+(\x_0^2)$의 ambient space는 $\mathbb{P}^1$이므로 이는 double point가 아니라 double line이다.
 :::
 
 ## 닫힌 부분스킴의 homogeneous ideal
@@ -125,6 +125,16 @@ $\mathbb{P}^1$에서 $\mathfrak{a}=(\x_0^2,\x_0\x_1)$을 생각하자. $D_+(\x_1
 
 이를 saturation으로 다시 읽으면, $\x_0^N\cdot \x_0\in (\x_0^2)$이고 $\x_1^N\cdot \x_0\in (\x_0\x_1)$이므로 $\x_0\in \mathfrak{a}^{\mathrm{sat}}$이다. 거꾸로 $f\in \mathfrak{a}^{\mathrm{sat}}$이면 $\x_1^Nf\in \mathfrak{a}\subseteq (\x_0)$인데 $(\x_0)$가 prime ideal이고 $\x_1\notin (\x_0)$이므로 $f\in (\x_0)$이다. 즉 $\mathfrak{a}^{\mathrm{sat}}=(\x_0)$이며, $\mathfrak{a}$는 이 점을 정의하지만 saturated는 아니다.
 :::
+
+## Projective scheme
+
+[§사영스킴](/ko/math/scheme_theory/projective_schemes)에서 우리는 임의의 graded ring $A_\bullet$에 $\Proj$를 취해 scheme을 얻는 방법을 살펴보았지만, 그렇게 얻어지는 scheme들은 우리가 사영공간에서 기대하는 성질을 공유하지 않는다. 가령 $A_\bullet=\mathbb{K}[\x_1,\x_2,\ldots]$이라 두면 $\Proj A_\bullet$은 quasi-compact조차 아니다. 우리가 실제로 다루고 싶은 대상은 사영공간 안에 들어앉는 scheme들이며, 이번 글의 결과는 그러한 scheme들이 정확히 homogeneous ideal로 잘려나오는 것들임을 말해준다. 이제 이를 이름으로 확정한다.
+
+::: 정의 7
+Field $\mathbb{K}$ 위의 scheme $X$가 *projective scheme<sub>사영스킴</sub>*이라는 것은 적당한 $n\geq 0$과 closed embedding $X \rightarrow \mathbb{P}^n_\mathbb{K}$이 존재한다는 것이다. ([§닫힌 부분스킴, ⁋정의 2](/ko/math/scheme_theory/closed_subschemes#def2))
+:::
+
+[정리 3](#thm3)과 [명제 5](#prop5)에 의하여, $\mathbb{K}$ 위의 projective scheme은 정확히 saturated homogeneous ideal $\mathfrak{a}\subseteq \mathbb{K}[\x_0,\ldots,\x_n]$에 대한 $\Proj\bigl(\mathbb{K}[\x_0,\ldots,\x_n]/\mathfrak{a}\bigr)$들이다. 뒤집어 말하면 projective scheme은 degree $1$의 원소들로 생성되는 finitely generated graded $\mathbb{K}$-algebra의 $\Proj$이다. 실제로 그러한 algebra $B_\bullet$의 degree $1$ 부분의 generator $n+1$개를 택하면 surjection $\mathbb{K}[\x_0,\ldots,\x_n] \rightarrow B_\bullet$을 얻고, [명제 1](#prop1)이 이를 closed embedding $\Proj B_\bullet \rightarrow \mathbb{P}^n_\mathbb{K}$으로 옮겨준다.
 
 ---
 

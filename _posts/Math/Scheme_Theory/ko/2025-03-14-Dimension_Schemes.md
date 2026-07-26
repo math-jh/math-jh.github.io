@@ -5,6 +5,7 @@ excerpt: "Scheme의 dimension 정의와 local ring의 Krull dimension과의 관�
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/dimension
+drift_needed: true
 sidebar: 
     nav: "scheme_theory-ko"
 
@@ -27,7 +28,7 @@ Scheme $X$의 *dimension<sub>차원</sub>*은 위상공간 $X$의 Krull dimensio
 한편 [\[위상수학\] §차원, ⁋명제 15](/ko/math/topology/dimension#prop15)와 마찬가지 이유로 다음이 성립한다. 
 
 ::: 명제 2
-임의의 scheme $X$에 대하여, $\dim X=n$인 것은 $X$의 affine open covering $(U_i)$가 존재하여, 모든 $U_i$에 대하여 $\dim U_i\leq n$이고, 적어도 하나의 $i$에 대해서는 등호가 성립하는 것과 동치이다. 
+임의의 scheme $X$와 정수 $n\geq 0$에 대하여, $\dim X=n$인 것은 $X$의 affine open covering $(U_i)$가 존재하여, 모든 $U_i$에 대하여 $\dim U_i\leq n$이고, 적어도 하나의 $i$에 대해서는 등호가 성립하는 것과 동치이다. 
 :::
 ::: 증명
 $X$의 임의의 irreducible closed subset들의 chain
@@ -37,7 +38,9 @@ $$Y_0\subsetneq Y_1\subsetneq\cdots\subsetneq Y_r$$
 에서 가장 작은 항 $Y_0$의 generic point $y_0$는 $X$의 점이므로 covering $(U_i)$에 의해 어떤 $U_i$에 속한다. 그러면 chain의 모든 항이 $U_i$와 만나므로, [\[위상수학\] §차원, ⁋명제 15](/ko/math/topology/dimension#prop15)의 inclusion-preserving bijection을 생각하면 $U_i$ 안의 같은 길이의 chain으로 대응된다. 거꾸로 $U_i$의 임의의 chain은 $X$ 안에서 closure를 취해 올려지므로 $\dim X\geq\dim U_i$이고, 따라서 $\dim X=\sup_i\dim U_i$이며 이는 명제의 조건과 동치이다.
 :::
 
-한편 우리는 [§스킴 사상의 성질들, ⁋명제 14](/ko/math/scheme_theory/properties_of_scheme_morphisms#prop14)에서 finite morphism은 integral morphism of finite type인 것을 살펴보았으며, [§올곱, ⁋명제 14](/ko/math/scheme_theory/fiber_products#prop14)에서 임의의 finite morphism은 quasi-finite인 것을 살펴보았다. 일반적으로 integral morphism이지만 finite type은 아닌 morphism이 존재하며, 따라서 아직까지는 integral morphism의 fiber에 대한 이야기를 할 수가 없다.
+증명이 실제로 준 것은 $\dim X=\sup_i\dim U_i$이며, $\dim X$가 유한하다는 가정이 없으면 등호가 성립하는 $i$가 존재하지 않을 수도 있다. 가령 $X=\coprod_{d\geq 0}\mathbb{A}^d_\mathbb{K}$는 무한차원이지만 각각의 affine open subset은 유한히 많은 성분만 만나므로 모두 유한차원이다.
+
+한편 우리는 [§스킴 사상의 성질들, ⁋명제 15](/ko/math/scheme_theory/properties_of_scheme_morphisms#prop15)에서 finite morphism은 integral morphism of finite type인 것을 살펴보았으며, [§올곱, ⁋명제 15](/ko/math/scheme_theory/fiber_products#prop15)에서 임의의 finite morphism은 quasi-finite인 것을 살펴보았다. 일반적으로 integral morphism이지만 finite type은 아닌 morphism이 존재하며, 따라서 아직까지는 integral morphism의 fiber에 대한 이야기를 할 수가 없다.
 
 ::: 예시 3
 예를 들어 $\mathbb{Q}$의 algebraic closure $\overline{\mathbb{Q}}$를 생각하자. $\overline{\mathbb{Q}}$의 임의의 원소는 $\mathbb{Q}$ 위에서 algebraic하므로 integral이고, 따라서 $\mathbb{Q} \rightarrow \overline{\mathbb{Q}}$는 integral extension이며 이로부터 scheme morphism $\varphi:\Spec \overline{\mathbb{Q}} \rightarrow \Spec \mathbb{Q}$도 integral morphism이다.
@@ -50,7 +53,7 @@ $$Y_0\subsetneq Y_1\subsetneq\cdots\subsetneq Y_r$$
 
 $$\Spec(\overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}})\rightarrow \Spec \overline{\mathbb{Q}}$$
 
-또한 [§올곱, ⁋명제 15](/ko/math/scheme_theory/fiber_products#prop15)에 의하여 integral이다. 
+또한 [§올곱, ⁋명제 16](/ko/math/scheme_theory/fiber_products#prop16)에 의하여 integral이다. 
 
 이 map을 살펴보기 위해, 구체적으로 ring homomorphism $\overline{\mathbb{Q}}\rightarrow \overline{\mathbb{Q}}\otimes_\mathbb{Q}\overline{\mathbb{Q}}$를 살펴보자. 위의 scheme 사이의 map의 section을 보는 것은 이 함수의 retraction을 보는 것과 같으며 이는 다음의 surjective ring homomorphism
 
@@ -76,14 +79,14 @@ $$\frac{\mathbb{C}[\x]}{((\x-i)(\x+i))}\cong\frac{\mathbb{C}[\x]}{(\x-i)}\times\
 그럼에도 이 예시는 integral morphism의 fiber에 대한 어떠한 종류의 finiteness를 암시하는데, 가령 $\Gal(\overline{\mathbb{Q}}/\mathbb{Q})$는 profinite group이므로 ([\[체론\] §갈루아 군의 성질들, ⁋명제 5](/ko/math/field_theory/properties_of_galois_extensions#prop5)) $0$차원이 된다. 이는 임의의 integral morphism에 대해서도 성립하는 사실이다. 
 
 ::: 명제 4
-Integral morphism $\varphi: X \rightarrow Y$의 임의의 fiber는 항상 $0$차원이다. 
+Integral morphism $\varphi: X \rightarrow Y$의 공집합이 아닌 임의의 fiber는 항상 $0$차원이다. 
 :::
 ::: 증명
 정의에 의해 $Y$의 한 점 $y$에서의 fiber는 [§스킴, ⁋정의 5](/ko/math/scheme_theory/schemes#def5)의 residue field $\kappa(y)$에 대한 inclusion map $\Spec \kappa(y) \rightarrow Y$에 의한 $\varphi$의 base change
 
 $$\varphi^{-1}(y)=X\times_Y\Spec \kappa(y)$$
 
-으로 주어지며, integral morphism은 base change에 의해 보존되므로 ([§올곱, ⁋명제 15](/ko/math/scheme_theory/fiber_products#prop15))
+으로 주어지며, integral morphism은 base change에 의해 보존되므로 ([§올곱, ⁋명제 16](/ko/math/scheme_theory/fiber_products#prop16))
 
 $$\varphi^{-1}(y)=X\times_Y\Spec \kappa(y) \rightarrow \Spec \kappa(y)$$
 
@@ -111,7 +114,7 @@ $$\dim\Spec A=\dim\Spec B$$
 ::: 예시 6
 위의 논의에서 우리는 normalization이 function field를 보존한다는 것을 살펴보았다. 기하적으로, $A$가 $\mathbb{K}$ 위의 affine variety의 coordinate ring인 경우 이는 normalization으로 얻어지는 두 공간이 birational하다는 것이다. ([\[대수다양체\] §유리사상, ⁋명제 10](/ko/math/algebraic_varieties/rational_maps#prop10)) 즉, normalization은 무시할만큼 작은 특정한 loci 바깥에서는 원래의 공간과 같다. 
 
-Normalization은 여기에 더해 이 특정한 locus가 정확히 singular point들이 되도록 한다. 대표적인 예로 [\[대수다양체\] §접공간과 매끄러움, ⁋예시 7](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#ex7)의 cusp
+Normalization이 실제로 달라지는 곳은 $A$가 integrally closed가 아닌 locus, 곧 non-normal locus이다. 이는 singular locus에 포함되지만 일반적으로 그와 같지는 않다. 가령 quadric cone $\mathbb{K}[\x,\y,\z]/(\x\y-\z^2)$는 원점에서 singular인 $2$차원 domain이지만 normal이므로 normalization이 항등사상이 되어 singular point가 그대로 남는다. 그러나 곡선의 경우, 곧 $1$차원에서는 normal인 local ring이 정확히 regular local ring이므로 non-normal locus가 singular locus와 일치한다. 대표적인 예로 [\[대수다양체\] §접공간과 매끄러움, ⁋예시 7](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#ex7)의 cusp
 
 $$A=\mathbb{K}[\x,\y]/(\y^2-\x^3)\cong\mathbb{K}[t^2,t^3]$$
 
@@ -199,7 +202,7 @@ $$A=\mathbb{K}[y_1,\ldots, y_m]/\mathfrak{p}$$
 
 로 적을 수 있다. 그럼 이들 $y_1,\ldots, y_m$의 $\Frac(A)$에서의 image가 $\mathbb{K}$의 field extension으로서 $\Frac(A)$를 생성하므로 반드시 $m\geq n$이어야 한다. 
 
-이제 만일 $m=n$이라면, $y_i$들이 정확히 원하는 원소가 되므로 더 이상 증명할 것이 없다. 이제 주어진 주장을 보이기 위해 $m>n$이라 하고, $n\leq k< m$을 만족하는 임의의 $k$에 대하여 정리가 성립한다 하자. 그럼 $m>n$이라는 가정으로부터 $y_1,\ldots, y_m$들은 algebraically dependent이다. 즉, 다음의 식
+이제 만일 $m=n$이라면, $y_i$들의 image가 $\Frac(A)$의 transcendence basis를 이루므로 특히 algebraically independent이고, 따라서 $\mathfrak{p}=0$, 곧 $A=\mathbb{K}[y_1,\ldots, y_n]$이다. 실제로 $\mathfrak{p}$의 nonzero element는 $y_i$들 사이의 nontrivial algebraic relation을 주므로 transcendence degree가 $n$보다 작아지게 된다. 즉 이 경우 $y_i$들이 정확히 원하는 원소가 되므로 더 이상 증명할 것이 없다. 이제 주어진 주장을 보이기 위해 $m>n$이라 하고, $n\leq k< m$을 만족하는 임의의 $k$에 대하여 정리가 성립한다 하자. 그럼 $m>n$이라는 가정으로부터 $y_1,\ldots, y_m$들은 algebraically dependent이다. 즉, 다음의 식
 
 $$f(y_1,\ldots, y_m)=0$$
 

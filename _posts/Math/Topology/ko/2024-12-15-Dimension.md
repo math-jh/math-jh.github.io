@@ -111,13 +111,13 @@ $$\operatorname{dist}(x,\sk_{d-1})\leq \lvert x-y\rvert+\lvert y-z\rvert\leq \lv
 한편 우리는 대수기하학에서 사용하는 차원의 개념을 정의할 것인데, 대수기하학에서 관심을 갖는 공간은 일반적으로 생각하는 위상구조와는 다른 위상구조가 주어져 있어서 이 정의는 다소 비직관적이다. 특히, 일상적인 위상구조가 주어진 $\mathbb{R}^n$은 항상 $0$차원이다. 그러나 어쨌든 이 정의를 위상수학의 언어로 할 수 있는 것은 사실이므로 이 페이지에 같이 적어두기로 한다.
 
 ::: 정의 6
-위상공간 $X$가 *irreducible<sub>기약</sub>*이라는 것은 $X=A\cup B$이도록 하는 $X$의 비자명한 닫힌집합이 존재하지 않는 것이다. 
+위상공간 $X$가 *irreducible<sub>기약</sub>*이라는 것은 $X$가 공집합이 아니고, $X=A\cup B$이도록 하는 $X$의 비자명한 닫힌집합 $A,B$가 존재하지 않는 것이다. 
 :::
 
 그럼 다음이 모두 동치이다.
 
 ::: 명제 7
-위상공간 $X$에 대하여 다음이 모두 동치이다.
+공집합이 아닌 위상공간 $X$에 대하여 다음이 모두 동치이다.
 
 1. $X$가 irreducible이다.
 2. 공집합이 아닌 $X$의 임의의 열린집합 $U,V$에 대하여, $U\cap V\neq\emptyset$이다.
@@ -131,7 +131,7 @@ $$\operatorname{dist}(x,\sk_{d-1})\leq \lvert x-y\rvert+\lvert y-z\rvert\leq \lv
 특히 irreducible space는 Hausdorff가 아니다. 위의 명제의 마지막 동치 때문에 irreducible space는 *hyperconnected space*라 부르기도 한다. 비슷한 맥락에서 다음이 성립한다. (참고: [§연결공간, ⁋명제 3](/ko/math/topology/connected_spaces#prop3))
 
 ::: 명제 8
-만일 $X$가 irreducible open subset들의 합집합
+만일 공집합이 아닌 $X$가 irreducible open subset들의 합집합
 
 $$X=\bigcup_{i\in I} U_i$$
 

@@ -5,6 +5,7 @@ excerpt: "Locally ringed space morphism으로서의 scheme morphism의 네 관�
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/morphism_of_schemes
+drift_needed: true
 sidebar: 
     nav: "scheme_theory-ko"
 
@@ -50,7 +51,7 @@ $$s_i:=\varphi_i^\sharp(W)(s)\in \mathcal{O}_X(\varphi^{-1}(W)\cap U_i)$$
 첫 주장은 [§아핀스킴, ⁋명제 11](/ko/math/scheme_theory/affine_schemes#prop11)의 $\AffSch$가 $\LRS$의 full subcategory라는 사실을 scheme morphism의 국소적인 모습에 그대로 적용한 것에 지나지 않는다. 다만 둘째 주장의 gluing condition은 ring homomorphism들 사이의 조건으로 적히지 않는다는 데 주의해야 한다. $V_i\neq V_k$인 경우 $\varphi_i$와 $\varphi_k$를 하나의 affine scheme 안에서 비교할 수 없어 이들을 $Y$ 안에서 비교해야 하고, 또 $U_i\cap U_k$는 일반적으로 affine scheme이 아니기 때문이다. 즉 scheme morphism을 붙이기 위해 주어지는 데이터는 ring homomorphism들이지만, 이들이 붙는지를 판정하는 조건은 그렇지 않다. 
 
 ::: 예시 2
-Affine scheme들 사이의 morphism이 아닌 scheme morphism의 예시로, [§사영스킴, §§사영공간](/ko/math/scheme_theory/projective_schemes#사영공간)에서 motivation을 위해 처음 등장했던 map
+Affine scheme들 사이의 morphism이 아닌 scheme morphism의 예시로, $n\geq 1$에 대하여 [§사영스킴, §§사영공간](/ko/math/scheme_theory/projective_schemes#사영공간)에서 motivation을 위해 처음 등장했던 map
 
 $$\varphi:\mathbb{A}_\mathbb{K}^{n+1}\setminus \{0\} \rightarrow \mathbb{P}^n_\mathbb{K}$$
 
@@ -156,7 +157,7 @@ Scheme morphism $f: X \rightarrow Y$를 $Y$의 *$X$-point*라 부른다.
 마찬가지로 $X$가 affine scheme인 경우를 살펴보는 것이 직관적으로 도움이 된다. 
 
 ::: 예시 7
-Algebraically closed field $\mathbb{K}$와 그 위에 정의된 affine $n$-space $Y=\mathbb{A}^n_\mathbb{K}=\Spec \mathbb{K}[\x_1,\ldots, \x_n]$를 생각하자. $Y$는 [예시 4](#ex4)에서 본 대로 $\Spec\mathbb{K}$-scheme이다. [정의 6](#def6)에 따르면 $Y$의 $\mathbb{K}$-point는 임의의 scheme morphism $\Spec\mathbb{K}\rightarrow Y$이지만, $Y$가 $\Spec\mathbb{K}$-scheme이므로 그 가운데서도 structure morphism $Y\rightarrow\Spec\mathbb{K}$의 section, 즉 $\Spec\mathbb{K}$ 위에서의 morphism $X=\Spec\mathbb{K}\rightarrow Y$에 관심을 둔다. 이는 affine scheme 사이의 $\mathbb{K}$-morphism
+Field $\mathbb{K}$와 그 위에 정의된 affine $n$-space $Y=\mathbb{A}^n_\mathbb{K}=\Spec \mathbb{K}[\x_1,\ldots, \x_n]$를 생각하자. $Y$는 [예시 4](#ex4)에서 본 대로 $\Spec\mathbb{K}$-scheme이다. [정의 6](#def6)에 따르면 $Y$의 $\mathbb{K}$-point는 임의의 scheme morphism $\Spec\mathbb{K}\rightarrow Y$이지만, $Y$가 $\Spec\mathbb{K}$-scheme이므로 그 가운데서도 structure morphism $Y\rightarrow\Spec\mathbb{K}$의 section, 즉 $\Spec\mathbb{K}$ 위에서의 morphism $X=\Spec\mathbb{K}\rightarrow Y$에 관심을 둔다. 이는 affine scheme 사이의 $\mathbb{K}$-morphism
 
 $$\Spec \mathbb{K} \rightarrow \Spec \mathbb{K}[\x_1,\ldots, \x_n]$$
 
@@ -164,21 +165,17 @@ $$\Spec \mathbb{K} \rightarrow \Spec \mathbb{K}[\x_1,\ldots, \x_n]$$
 
 $$\phi:\mathbb{K}[\x_1,\ldots, \x_n] \rightarrow \mathbb{K}$$
 
-에 대응되며, 이 $\phi$는 상수항들 위에서 항등사상, 곧 임의의 $c\in \mathbb{K}$에 대하여 $\phi(c)=c$이므로 특히 surjective이다. 따라서 first isomorphism theorem에 의하여
-
-$$\mathbb{K}[\x_1,\ldots, \x_n]/\ker\phi\cong \mathbb{K}$$
-
-이다. 그럼 [\[대수적 구조\] §몫환, 환 동형사상, ⁋정리 3](/ko/math/algebraic_structures/quotient_rings#thm3)의 넷째 결과에 의하여 $\ker\phi$는 $\mathbb{K}[\x_1,\ldots, \x_n]$의 maximal ideal이어야 하고, 따라서 [\[가환대수학\] §영점정리, ⁋보조정리 5](/ko/math/commutative_algebra/nullstellensatz#lem5)로부터
+에 대응된다. 그런데 $\mathbb{K}[\x_1,\ldots, \x_n]$은 $\mathbb{K}$ 위의 polynomial algebra이므로, [\[대수적 구조\] §대수, ⁋명제 8](/ko/math/algebraic_structures/algebras#prop8)의 universal property에 의하여 이러한 $\phi$는 각각의 변수의 image $x_i=\phi(\x_i)\in \mathbb{K}$에 의해 유일하게 결정되며, 거꾸로 임의의 $x=(x_1,\ldots, x_n)\in \mathbb{K}^n$은 evaluation homomorphism $\ev_x$를 준다. 즉 $\phi=\ev_x$이며, 특히
 
 $$\ker\phi=(\x_1-x_1,\ldots, \x_n-x_n)$$
 
-의 꼴이며 $\phi$는 점 $x=(x_1,\ldots, x_n)$에서의 evaluation homomorphism $\ev_x$가 된다. 뿐만 아니라 해당 보조정리의 증명을 생각하면 $x_i=\phi(\x_i)$인 것 또한 알 수 있다. 즉, 역함수 관계에 있는 다음의 두 일대일대응
+인데 이는 우변에 의한 quotient가 이미 $\mathbb{K}$이기 때문이다. 즉, 역함수 관계에 있는 다음의 두 일대일대응
 
-$$\begin{aligned}\{\text{$\mathbb{K}$-point $\Spec \phi:\Spec\mathbb{K}\rightarrow \mathbb{A}^n_\mathbb{K}$}\}&\rightarrow \{\text{points $(x_1,\ldots, x_n)\in \mathbb{A}^n_\mathbb{K}$}\}\\\Spec\phi&\mapsto (\phi(\x_1),\ldots,\phi(\x_n))\end{aligned}$$
+$$\begin{aligned}\{\text{$\mathbb{K}$-point $\Spec \phi:\Spec\mathbb{K}\rightarrow \mathbb{A}^n_\mathbb{K}$}\}&\rightarrow \{\text{points $(x_1,\ldots, x_n)\in \mathbb{K}^n$}\}\\\Spec\phi&\mapsto (\phi(\x_1),\ldots,\phi(\x_n))\end{aligned}$$
 
 그리고
 
-$$\begin{aligned}\{\text{points $(x_1,\ldots, x_n)\in \mathbb{A}^n_\mathbb{K}$}\}&\rightarrow \{\text{$\mathbb{K}$-point $\Spec \phi:\Spec\mathbb{K}\rightarrow \mathbb{A}^n_\mathbb{K}$}\}\\a=(a_1,\ldots, a_n)&\mapsto \Spec \ev_a\end{aligned}$$
+$$\begin{aligned}\{\text{points $(x_1,\ldots, x_n)\in \mathbb{K}^n$}\}&\rightarrow \{\text{$\mathbb{K}$-point $\Spec \phi:\Spec\mathbb{K}\rightarrow \mathbb{A}^n_\mathbb{K}$}\}\\a=(a_1,\ldots, a_n)&\mapsto \Spec \ev_a\end{aligned}$$
 
 이 존재한다. 
 :::
@@ -212,7 +209,7 @@ Functor $\Hom_\Sch(-,X): \Sch^\op \rightarrow \Set$을 *functor of points of $X$
 
 $$\pi^{-1}(x_0)=\{(x_0,y,z)\in \mathbb{R}^3\mid y^2+z^2=1-x_0^2\}$$
 
-이다. 이를 기하학적으로 표현하면, 각각의 $x_0\in \mathbb{R}_x$마다 원 $y^2+z^2=1-x_0^2$가 대응된 상황으로 볼 수 있으며, 따라서 $\pi$를 <em-ko>$x$축으로 parametrize된 원들의 family</em-ko>로 생각할 수 있다. 
+이다. 이를 기하학적으로 표현하면, 각각의 $x_0\in \mathbb{R}_x$마다 원 $y^2+z^2=1-x_0^2$가 대응된 상황으로 볼 수 있으며, 따라서 $\pi$를 <em-ko>$x$축으로 parametrize된 원들의 family</em-ko>로 생각할 수 있다. 물론 $\lvert x_0\rvert>1$이면 이 fiber는 공집합이고 $x_0=\pm 1$이면 한 점이므로, 원이 되는 것은 $\lvert x_0\rvert<1$인 경우뿐이다. 이렇게 family의 구성원이 퇴화하는 방식은 뒤에 flatness를 다룰 때 다시 문제가 된다. 
 :::
 
 이 예시를 scheme으로 바로 나타낼 수 없는 이유 중 덜 본질적인 것은 $S$가 $\mathbb{R}^3$의 닫힌집합이고, 우리는 닫힌집합 위에 scheme structure를 주는 방법을 모른다는 것이다. 이는 [§닫힌 부분스킴](/ko/math/scheme_theory/closed_subschemes)에서 해결하게 된다. 더 미묘하고 본질적인 부분은 함수 $\pi$의 점 $x_0$에서의 fiber $\pi^{-1}(x_0)$을 나타낼 방법이 없는 것이다. 물론 scheme morphism은 기본적으로 연속함수이므로 이를 연속함수의 fiber로 볼 수 있겠지만, 그렇게 하였을 경우 $\pi^{-1}(x_0)$에 scheme structure를 주는 방법이 ([§닫힌 부분스킴](/ko/math/scheme_theory/closed_subschemes)의 내용을 가정하더라도) 존재하지 않는다. 이를 설명하기 위해서 우리는 조금 더 기다려야 한다. 

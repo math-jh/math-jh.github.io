@@ -210,7 +210,22 @@ $$\varphi^{-1}(y)=X\times_Y\Spec \kappa(y).$$
 If $Y$ is irreducible, the fiber at the generic point of $Y$ is called the *generic fiber*.
 :::
 
-::: Example 13
+This definition uses the same notation as the preimage of a continuous map, and indeed the two objects agree as topological spaces.
+
+::: Lemma 13
+For a scheme morphism $\varphi: X \rightarrow Y$ and $y\in Y$, the projection $X\times_Y\Spec\kappa(y) \rightarrow X$ is a homeomorphism onto the set-theoretic preimage $\{x\in X\mid \varphi(x)=y\}$.
+:::
+::: Proof
+By [Lemma 4](#lem4), forming the fiber product is compatible with restricting $X$ and $Y$ to open subsets, so choosing an affine open subset $y\in V=\Spec B$ and covering $\varphi^{-1}(V)$ by affine open subsets $\Spec A$, it suffices to treat the case $X=\Spec A$ and $Y=\Spec B$. Let $\mathfrak{q}$ be the prime ideal corresponding to $y$ and let $\phi: B \rightarrow A$ be the ring homomorphism corresponding to $\varphi$.
+
+By [Lemma 2](#lem2) we have $X\times_Y\Spec \kappa(\mathfrak{q})=\Spec (A\otimes_B\kappa(\mathfrak{q}))$. On the other hand $\kappa(\mathfrak{q})=B_\mathfrak{q}/\mathfrak{q}B_\mathfrak{q}$, so putting $S=\phi(B\setminus \mathfrak{q})$ we obtain
+
+$$A\otimes_B\kappa(\mathfrak{q})\cong (S^{-1}A)/\mathfrak{q}(S^{-1}A).$$
+
+Applying [§Spectrums, ⁋Proposition 9](/en/math/scheme_theory/spectrums#prop9) twice, the map $\Spec (A\otimes_B\kappa(\mathfrak{q})) \rightarrow \Spec A$ is a homeomorphism onto its image, and that image consists of the prime ideals of $A$ disjoint from $S$ and containing $\mathfrak{q}(S^{-1}A)$, that is, those $\mathfrak{p}\in \Spec A$ satisfying both $\phi^{-1}(\mathfrak{p})\subseteq \mathfrak{q}$ and $\mathfrak{q}\subseteq \phi^{-1}(\mathfrak{p})$. These are precisely the points with $(\Spec\phi)(\mathfrak{p})=\mathfrak{q}$.
+:::
+
+::: Example 14
 For an algebraically closed field $\mathbb{K}$, define the ring homomorphism $\mathbb{K}[\x] \rightarrow \mathbb{K}[\y]$ by $\x \mapsto \y^2$, and consider the scheme morphism $\varphi: \Spec \mathbb{K}[\y] \rightarrow \Spec \mathbb{K}[\x]$ obtained from it. Then the residue field at any point $(\x-a)$ of $\Spec\mathbb{K}[\x]$ is
 
 $$\Frac(\mathbb{K}[\x]/(\x-a))=\mathbb{K}[\x]/(\x-a).$$
@@ -228,9 +243,9 @@ On the other hand, for the generic point $(0)$ of $\mathbb{K}[\x]$ we have $\kap
 $$\varphi^{-1}((0))=\Spec \mathbb{K}[\y]\times_{\Spec \mathbb{K}[\x]}\Spec \mathbb{K}(\x)\cong \Spec\mathbb{K}(\y).$$
 :::
 
-The above example is what we already examined in [§Properties of Scheme Morphisms, ⁋Example 15](/en/math/scheme_theory/properties_of_scheme_morphisms#ex15). In that example we claimed that a finite morphism is always quasi-finite, and now we can prove this.
+The above example is what we already examined in [§Properties of Scheme Morphisms, ⁋Example 16](/en/math/scheme_theory/properties_of_scheme_morphisms#ex16). In that example we claimed that a finite morphism is always quasi-finite, and now we can prove this.
 
-::: Proposition 14
+::: Proposition 15
 A finite morphism $\varphi: X \rightarrow Y$ is a quasi-finite morphism.
 :::
 ::: Proof
@@ -239,7 +254,7 @@ It suffices to show the affine case. That is, it suffices to show that for any f
 
 From the above examples and propositions we can make an important observation: if $X \rightarrow S$ satisfies some property $P$ of scheme morphisms, then the base change $X\times_SS' \rightarrow S'$ via any $S' \rightarrow S$ also satisfies it. This is not a coincidence; in fact, most properties we are interested in are closed under base change.
 
-::: Proposition 15
+::: Proposition 16
 If a scheme morphism $\varphi:X \rightarrow Z$ is quasicompact (resp. quasiseparated, affine, finite, integral, locally of finite type, finite type, locally of finite presentation, finite presentation, quasi-finite, surjective), then the base change $X\times_ZY \rightarrow Y$ of $\varphi$ via any scheme morphism $Y \rightarrow Z$ is also such.
 :::
 ::: Proof
@@ -275,9 +290,9 @@ The first condition is obvious: if $C \rightarrow R$ is of finite type, then add
 
 $$x=\sum_{t=1}^mc_t(h_t^Mx)\in R'.$$
 
-From the above, $Q$ is an affine-local property, and since locally of finite type is affine-local on target as examined right after [§Properties of Scheme Morphisms, ⁋Definition 13](/en/math/scheme_theory/properties_of_scheme_morphisms#def13), $\rho_Y$ is locally of finite type. Also, a morphism of finite type is a morphism that is quasi-compact and locally of finite type, so combining with the quasi-compact case above, finite type is also preserved under base change.
+From the above, $Q$ is an affine-local property, and since locally of finite type is affine-local on target as examined right after [§Properties of Scheme Morphisms, ⁋Definition 14](/en/math/scheme_theory/properties_of_scheme_morphisms#def14), $\rho_Y$ is locally of finite type. Also, a morphism of finite type is a morphism that is quasi-compact and locally of finite type, so combining with the quasi-compact case above, finite type is also preserved under base change.
 
-Suppose $\varphi$ is locally of finite presentation. The condition of [§Properties of Scheme Morphisms, ⁋Definition 17](/en/math/scheme_theory/properties_of_scheme_morphisms#def17) is a condition on *some* affine open covering of the preimage, so this case is rather simple. By assumption there exists an affine open covering $\{\Spec B_i\}$ of $X_A$ such that each $B_i$ is of the form
+Suppose $\varphi$ is locally of finite presentation. The condition of [§Properties of Scheme Morphisms, ⁋Definition 18](/en/math/scheme_theory/properties_of_scheme_morphisms#def18) is a condition on *some* affine open covering of the preimage, so this case is rather simple. By assumption there exists an affine open covering $\{\Spec B_i\}$ of $X_A$ such that each $B_i$ is of the form
 
 $$B_i\cong A[\x_1,\ldots, \x_n]/(f_1,\ldots, f_m)$$
 

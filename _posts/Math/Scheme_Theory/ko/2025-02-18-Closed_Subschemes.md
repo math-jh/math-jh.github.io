@@ -5,6 +5,7 @@ excerpt: "Ideal sheaf로부터 정의되는 closed subscheme과 vanishing scheme
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/closed_subschemes
+drift_needed: true
 sidebar: 
     nav: "scheme_theory-ko"
 
@@ -79,7 +80,7 @@ Scheme morphism $\iota: Z \rightarrow X$가 *closed embedding<sub>닫힌 몰입<
 $X$로의 두 closed embedding $\iota: Z \rightarrow X$와 $\iota': Z' \rightarrow X$에 대하여 isomorphism $i: Z' \rightarrow Z$가 존재하여 $\iota'=\iota\circ i$이도록 할 수 있다면 이 둘을 서로 equivalent하다 하고, 이 equivalence class를 $X$의 *closed subscheme<sub>닫힌 부분스킴</sub>*이라 부른다.
 :::
 
-연속함수 $\iota$에 대한 조건은 자명한 것이며, $\iota^\sharp$에 대한 직관 또한 기하적인 해석이 가능한데, 그것은 $Z$의 함수들, 더 정확하게는 $\iota(Z)$의 함수들은 모두 $X$의 함수를 $Z$로 제한하여 얻어진 것이어야 한다는 것이다. 혹은, 반대로 말하면 $Z$의 임의의 함수가 주어졌을 때 이를 $X$에서의 함수로 확장하는 것이 가능해야 한다는 것이다. 한편 $\iota$가 open embedding인 경우와 대조해 볼 만하다. 이 경우 $\iota^\sharp:\mathcal{O}_X \rightarrow \iota_\ast\mathcal{O}_Z$ 자체는 isomorphism이 아니다. 가령 $X=\mathbb{A}^1_k=\Spec k[t]$와 그 열린부분 $Z=D(t)=\Spec k[t,t^{-1}]$을 생각하면 $(\iota_\ast\mathcal{O}_Z)(X)=k[t,t^{-1}]$이라 $k[t] \rightarrow k[t,t^{-1}]$은 전사가 아니다. 올바른 진술은 $\iota$가 $Z$를 열린집합으로 옮기므로 $\iota^{-1}\mathcal{O}_X\cong\mathcal{O}_Z$, 곧 $\iota(Z)$의 각 점에서의 stalk 사이에 isomorphism이 유도된다는 것이다. 
+연속함수 $\iota$에 대한 조건은 자명한 것이며, $\iota^\sharp$에 대한 직관 또한 기하적인 해석이 가능한데, 그것은 $Z$의 함수들, 더 정확하게는 $\iota(Z)$의 함수들은 모두 $X$의 함수를 $Z$로 제한하여 얻어진 것이어야 한다는 것이다. 혹은, 반대로 말하면 $Z$의 임의의 함수가 주어졌을 때 이를 각 점의 근방에서 국소적으로 $X$의 함수로 확장하는 것이 가능해야 한다는 것이다. 여기서 sheaf의 전사성은 stalk에 대한 조건이므로 대역적인 확장을 뜻하지는 않는다. 가령 $X=\mathbb{P}^1$과 그 안의 두 점으로 이루어진 reduced closed subscheme $Z$를 생각하면 $\Gamma(X,\mathcal{O}_X)=\mathbb{K}$에서 $\Gamma(Z,\mathcal{O}_Z)=\mathbb{K}\times \mathbb{K}$로 가는 사상은 전사가 아니다. 한편 $\iota$가 open embedding인 경우와 대조해 볼 만하다. 이 경우 $\iota^\sharp:\mathcal{O}_X \rightarrow \iota_\ast\mathcal{O}_Z$ 자체는 isomorphism이 아니다. 가령 $X=\mathbb{A}^1_k=\Spec k[t]$와 그 열린부분 $Z=D(t)=\Spec k[t,t^{-1}]$을 생각하면 $(\iota_\ast\mathcal{O}_Z)(X)=k[t,t^{-1}]$이라 $k[t] \rightarrow k[t,t^{-1}]$은 전사가 아니다. 올바른 진술은 $\iota$가 $Z$를 열린집합으로 옮기므로 $\iota^{-1}\mathcal{O}_X\cong\mathcal{O}_Z$, 곧 $\iota(Z)$의 각 점에서의 stalk 사이에 isomorphism이 유도된다는 것이다. 
 
 이 정의는 자연스러운 것이지만, 우리가 앞선 글에서 정의한 scheme morphism의 성질들과는 약간 결이 다르다. 따라서 우리는 이와 동치인 다음 조건을 살펴본다. 
 
@@ -112,7 +113,7 @@ $$(B_i)_\mathfrak{q} \rightarrow (A_i)_\mathfrak{p}\cong (B_i/\mathfrak{b}_i)_\m
 
 $$\left((\varphi_\ast \mathcal{O}_X)(\Spec B)\right)_f \rightarrow (\varphi_\ast \mathcal{O}_X)(D(f))$$
 
-이 isomorphism이라는 사실이다. 이는 [명제 6](#prop6)에서 ideal들에 요구했던 localization 조건과 정확히 같은 형태의 조건이지만, 지금은 $\varphi$가 affine morphism인지조차 모르는 상황이므로 이를 우리가 가진 도구만으로 얻을 수는 없다. 따라서 우리는 이 사실만을 증명 없이 인용하고 (Stacks 01QO), 나머지 논증은 우리가 이미 가진 도구들로 완결한다.
+이 isomorphism이라는 사실이다. 이는 [명제 6](#prop6)에서 ideal들에 요구했던 localization 조건과 정확히 같은 형태의 조건이지만, 지금은 $\varphi$가 affine morphism인지조차 모르는 상황이므로 이를 우리가 가진 도구만으로 얻을 수는 없다. 따라서 우리는 이 사실을 증명 없이 주장하기만 하고, 나머지 논증은 우리가 이미 가진 도구들로 완결하기로 한다.
 
 $C=(\varphi_\ast \mathcal{O}_X)(V)=\Gamma(W, \mathcal{O}_W)$라 두고 $\beta=\varphi^\sharp(V): B \rightarrow C$라 하자. 그럼 $D(f)$들이 $V$의 base를 이루므로 [§아핀스킴, ⁋보조정리 8](/ko/math/scheme_theory/affine_schemes#lem8)의 논증을 그대로 반복하여, 위의 사실로부터 임의의 $\mathfrak{q}\in V$에 대하여
 
@@ -144,10 +145,10 @@ $$\varphi(X)\cap V=Z(\mathfrak{b})$$
 Closed embedding $\varphi: X \rightarrow Y$가 주어졌다 하자. [명제 3](#prop3)에 의하여 $\varphi$는 affine morphism이고, $Y$의 임의의 affine open subset $V\cong \Spec B$에 대하여 $\varphi^{-1}(V)\cong\Spec A$이며 이에 대응되는 ring homomorphism $\beta: B \rightarrow A$는 surjective이다. 그럼 임의의 $a\in A$는 적당한 $b\in B$에 대하여 $a=\beta(b)=b\cdot 1$이므로 $A$는 $B$-module로서 $1$에 의해 생성되고, 따라서 $\beta$는 finite ring homomorphism이다. ([\[가환대수학\] §정수적 확장, ⁋정의 3](/ko/math/commutative_algebra/integral_extension#def3)의 넷째 조건) 이제 [§스킴 사상의 성질들, ⁋정의 10](/ko/math/scheme_theory/properties_of_scheme_morphisms#def10)에 의하여 $\varphi$는 finite morphism이다. 
 :::
 
-[§스킴 사상의 성질들, ⁋예시 15](/ko/math/scheme_theory/properties_of_scheme_morphisms#ex15)에서 만든 (quasi-)finite morphism의 기하학적 직관에 비추어볼 때, 적어도 closed embedding은 항상 quasi-finite이어야 하는 것이 자명하고, 여기에서 더 나아가 finite이기도 하다는 기하적인 해석이 가능하다. 
+[§스킴 사상의 성질들, ⁋예시 16](/ko/math/scheme_theory/properties_of_scheme_morphisms#ex16)에서 만든 (quasi-)finite morphism의 기하학적 직관에 비추어볼 때, 적어도 closed embedding은 항상 quasi-finite이어야 하는 것이 자명하고, 여기에서 더 나아가 finite이기도 하다는 기하적인 해석이 가능하다. 
 
 ::: 정의 5
-임의의 scheme $Z$에 대하여, $\mathcal{O}_Z$의 subsheaf $\mathcal{I}$를 $Z$의 *ideal sheaf*라 부른다. 특별히 closed embedding $\iota: Z \rightarrow X$에 대하여, $\mathcal{O}_X$의 subsheaf $\ker\iota^\sharp$를 $\iota$에 의해 정의되는 ideal sheaf라 부르고, 이를 $\mathcal{I}_{Z/X}$로 표기한다. 
+임의의 scheme $Z$에 대하여, $\mathcal{O}_Z$의 subsheaf $\mathcal{I}$ 가운데 각각의 열린집합 $U$에서 $\mathcal{I}(U)$가 $\mathcal{O}_Z(U)$의 ideal을 이루는 것, 곧 $\mathcal{O}_Z$-module로서의 subsheaf를 $Z$의 *ideal sheaf*라 부른다. 특별히 closed embedding $\iota: Z \rightarrow X$에 대하여, $\mathcal{O}_X$의 subsheaf $\ker\iota^\sharp$를 $\iota$에 의해 정의되는 ideal sheaf라 부르고, 이를 $\mathcal{I}_{Z/X}$로 표기한다. 
 :::
 
 즉, 다음의 exact seqeunce
@@ -173,7 +174,9 @@ Scheme $X$의 임의의 affine open subset $\Spec A$마다, ideal $\mathcal{I}(A
 
 $$\Spec (A_i)_{f_i}\cong\Spec (A_j)_{f_j}$$
 
-들로 덮을 수 있다. 이제 $\Spec A_i$에서 $\mathcal{I}(A_i)$가 정의하는 closed subscheme을 $D(f_i)\cong\Spec (A_i)_{f_i}$로 제한하면 $\mathcal{I}(A_i)_{f_i}$이고, 주어진 가정에 의해 이는 $\mathcal{I}((A_i)_{f_i})$와 isomorphic하며 이것은 $\mathcal{I}((A_j)_{f_j})$와 같은 것이므로 이들을 붙여 closed subscheme $Z$를 만들 수 있다. 
+들로 덮을 수 있다. 이제 $\Spec A_i$에서 $\mathcal{I}(A_i)$가 정의하는 closed subscheme을 $D(f_i)\cong\Spec (A_i)_{f_i}$로 제한하면 이는 ideal $\mathcal{I}(A_i)_{f_i}$가 정의하는 closed subscheme이고, 주어진 가정에 의해 $\mathcal{I}(A_i)_{f_i}\cong \mathcal{I}((A_i)_{f_i})$이다. 여기에서 $\Spec (A_i)_{f_i}$와 $\Spec (A_j)_{f_j}$는 $X$의 <em-ko>같은</em-ko> 열린집합이므로 이 isomorphism을 통해 $\mathcal{I}((A_i)_{f_i})$와 $\mathcal{I}((A_j)_{f_j})$는 같은 ideal을 지칭하며, 따라서 두 closed subscheme은 이 열린집합 위에서 일치한다.
+
+이렇게 얻어진 국소적인 closed subscheme들은 잘 붙여진다. 실제로 서로 겹치는 두 조각은 위의 논증에 의하여 겹침을 덮는 principal open subset들 위에서 일치하고, 그 위에서의 identification은 모두 restriction map으로부터 오는 것이므로 겹침 위에서 하나의 사상으로 붙으며 ([\[위상수학\] §층, ⁋정의 1](/ko/math/topology/sheaves#def1)), 따라서 cocycle condition 또한 자동으로 성립한다. 그럼 [§스킴, ⁋보조정리 9](/ko/math/scheme_theory/schemes#lem9)에 의하여 이들은 하나의 scheme $Z$와 closed embedding $Z \rightarrow X$로 붙는다. 유일성은 [명제 3](#prop3)에 의하여 affine open subset 위의 closed subscheme이 그 위의 ideal에 의해 완전히 결정되기 때문이다. 즉 주어진 데이터를 실현하는 두 closed subscheme은 $X$의 affine open covering의 각 조각 위에서 같으며, 따라서 서로 equivalent하다. 
 :::
 
 이제 임의의 scheme $X$와 global section $s\in \Gamma(X, \mathcal{O}_X)$가 주어졌다 하자. 그럼 각각의 affine cover $U\cong\Spec A$에 대하여, $s\vert_U$는 $A$의 ideal $\mathcal{I}(A)=(s\vert_U)$를 정의하며 이렇게 정의된 $\mathcal{I}(A)$들은 [명제 6](#prop6)의 조건을 만족하는 것이 자명하다.
@@ -192,7 +195,7 @@ $$X\overset{\varphi\vert^Z}{\longrightarrow}Z\overset{\iota}{\longrightarrow} Y$
 을 통해 $\varphi\vert^Z$가 closed embedding인 것이다. 
 :::
 
-그럼 [명제 4](#prop4)에 의하여, 임의의 locally closed embedding은 항상 locally of finite type인 것을 안다. 
+그럼 임의의 locally closed embedding은 항상 locally of finite type이다. 이를 확인하기 위해 $Y$의 affine open subset $V=\Spec B$를 고정하자. 우선 $Z\cap V$는 $\Spec B$의 principal open subset $D(f)\cong \Spec B_f$들로 덮이고 ([§스펙트럼, ⁋보조정리 11](/ko/math/scheme_theory/spectrums#lem11)), $B \rightarrow B_f$는 $1/f$ 하나를 추가한 것이므로 finite type이다. 또 $\varphi\vert^Z$가 closed embedding이므로 [명제 3](#prop3)에 의하여 각각의 $D(f)$의 preimage는 affine이고 그 coordinate ring은 $B_f$의 quotient이므로, 합성 $B \rightarrow B_f \rightarrow B_f/\mathfrak{b}$ 또한 finite type이다. 즉 $\varphi^{-1}(V)$는 $B \rightarrow \mathcal{O}_X(-)$가 finite type인 affine open subset들로 덮이며, 따라서 [§스킴 사상의 성질들, ⁋보조정리 13](/ko/math/scheme_theory/properties_of_scheme_morphisms#lem13)에 의하여 $\varphi^{-1}(V)$의 임의의 affine open subset에 대해서도 같은 결론을 얻는다. 
 
 ## 스킴 사상의 상
 
@@ -243,7 +246,11 @@ $$(\Spec\phi)((\epsilon))=\phi^{-1}((\epsilon))=(\x_1-a_1,\ldots, \x_n-a_n)$$
 
 로 보낸다. 실제로 $\phi(\x_i-a_i)=b_i\epsilon\in(\epsilon)$이므로 $(\x_1-a_1,\ldots, \x_n-a_n)\subseteq\phi^{-1}((\epsilon))$이며, 좌변이 maximal ideal이고 우변이 proper ideal이므로 이 포함관계는 등식이 된다. 즉 연속함수로서 $\Spec\phi$는 한점공간 $\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$을 $\mathbb{A}^n$의 한 점 $(a_1,\ldots, a_n)$으로 보낸다.
 
-기하적으로 $\Spec\phi$는 $\mathbb{A}^n$의 한 점 $(a_1,\ldots, a_n)$에서의 tangent vector $(b_1,\ldots, b_n)$에 대응된다. 이는 $\mathbb{A}^n$의 임의의 함수 $f\in \mathbb{K}[\x_1,\ldots, \x_n]$의 점 $(a_1,\ldots, a_n)$에서 벡터 $(b_1,\ldots, b_n)$의 방향으로의 방향미분이 정확히 $\phi(f)$로 주어진다는 것으로부터 확인할 수 있다. 더 일반적으로 $\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$ 대신 $\Spec \mathbb{K}[\epsilon]/(\epsilon^k)$를 생각하면 우리는 $k-1$차 derivative까지 볼 수 있게 된다. 
+기하적으로 $\Spec\phi$는 $\mathbb{A}^n$의 한 점 $(a_1,\ldots, a_n)$에서의 tangent vector $(b_1,\ldots, b_n)$에 대응된다. 이는 임의의 $f\in \mathbb{K}[\x_1,\ldots, \x_n]$에 대하여
+
+$$\phi(f)=f(a)+\left(\sum_{i=1}^nb_i\frac{\partial f}{\partial \x_i}(a)\right)\epsilon$$
+
+이 성립하는 것, 즉 $\phi(f)$의 $\epsilon$-계수가 정확히 점 $(a_1,\ldots, a_n)$에서 벡터 $(b_1,\ldots, b_n)$ 방향으로의 방향미분이라는 것으로부터 확인할 수 있다. 더 일반적으로 $\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$ 대신 $\Spec \mathbb{K}[\epsilon]/(\epsilon^k)$를 생각하면 $\phi(f)$의 $\epsilon^j$-계수들이 $f$의 $j$차 Taylor 계수를 준다. 표수가 $0$인 경우 이는 $k-1$차 derivative까지 보는 것과 같지만, 양의 표수에서는 그렇지 않다는 것에 주의해야 한다.
 :::
 
 위의 예시에서 $X$가 affine scheme이라고 가정하기는 하였지만, $\varphi^\sharp:\mathcal{O}_Y \rightarrow \varphi_\ast \mathcal{O}_X$는 어차피 scheme morphism $\varphi$가 포함하고 있는 정보이므로 여기에는 새로울 것이 없다. 차이는 $Y$를 일반적인 scheme으로 일반화할 때 나오게 되는데, $Y$의 임의의 affine open subset $V=\Spec B$가 주어질 때마다 ideal
@@ -304,7 +311,7 @@ Scheme $Y$의 임의의 닫힌집합 $X$에 대하여, $X$ 위에 앞에서 정�
 
 $$\iota^{-1}\mathcal{O}_{\Spec A} \rightarrow (\Spec\pi\vert^{Z(\mathfrak{a})})_\ast \mathcal{O}_{\Spec A/\mathfrak{a}}$$
 
-은 단순히 [보조정리 9](#lem9)에서 얻어지는 canonical한 scheme morphism이다.
+은 restriction으로부터, 곧 adjunction $\iota^{-1}\dashv \iota_\ast$로부터 유도되는 canonical한 sheaf morphism이다. 단, 이를 [보조정리 9](#lem9)가 주는 scheme morphism과 혼동하지 않아야 하는데, $(Z(\mathfrak{a}),\iota^{-1}\mathcal{O}_{\Spec A})$는 일반적으로 scheme이 아니기 때문이다. 가령 $A=\mathbb{K}[\x]$이고 $\mathfrak{a}=(\x)$이면 $Z(\mathfrak{a})$는 한 점이고 그 위의 stalk은 $\mathbb{K}[\x]_{(\x)}$인데, 한 점으로 이루어진 affine scheme의 global section ring은 prime ideal을 하나만 가져야 하므로 이 locally ringed space는 어떤 scheme과도 isomorphic하지 않다. [보조정리 9](#lem9)가 실제로 주는 canonical morphism은 $\mathfrak{a}$의 radical이 정의하는 reduced 구조에서 주어진 구조로 가는 것, 곧 $\Spec (A/\sqrt{\mathfrak{a}}) \rightarrow \Spec (A/\mathfrak{a})$ 쪽이다.
 
 ---
 **참고문헌**

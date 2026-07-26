@@ -166,7 +166,7 @@ $$\Spec \mathbb{K}[t, \x, \y]/(\x\y - t) \longrightarrow \mathbb{A}^1_\mathbb{K}
 
 도 마찬가지이다. $t=\x\y$로 두면 coordinate ring은 integral domain $\mathbb{K}[\x,\y]$와 isomorphic하고 $\x\y$ 또한 상수가 아니므로 같은 이유로 flat이며, $t\neq 0$ 위의 fiber는 smooth한 쌍곡선 $\x\y=t$이지만 $t=0$ 위의 fiber는 두 직선이 만나 nodal singularity를 갖는 $\x\y=0$이다.
 
-요컨대 flatness가 통제하는 것은 fiber가 특이해지는지의 여부가 아니라, 각 점에서 fiber 방향의 차원이 base 방향의 차원과 어긋나지 않는지의 여부이다.
+요컨대 flatness가 통제하는 것은 fiber가 특이해지는지의 여부가 아니라, fiber가 크기를 유지한 채로 이어지는지의 여부이다.
 :::
 
 지금까지 본 family에서 fiber는 모두 $\mathbb{A}^2$ 안의 곡선이었고, 따라서 무한대에 놓인 점들이 빠져 있었다. 이들까지 함께 보려면 곡선을 $\mathbb{P}^2$ 안에서 자르는 것이 자연스럽다. ([§사영스킴](/ko/math/scheme_theory/projective_schemes)) 이 때 $X$는 더 이상 affine이 아니므로 flatness는 affine chart마다 확인하게 된다.
@@ -185,17 +185,57 @@ $$X=\Proj A_\bullet/(\x\z-t\y^2)$$
 Fiber를 보면, $t=a\neq 0$ 위에서는 $\mathbb{P}^2$의 원뿔곡선 $\x\z=a\y^2$이 되어 smooth하고 $\mathbb{P}^1$과 isomorphic이다. 반면 $t=0$ 위에서는 $\x\z=0$, 즉 두 직선 $\{\x=0\}$과 $\{\z=0\}$이 점 $[0:1:0]$에서 만나는 곡선이 된다. 즉 이것은 smooth한 원뿔곡선이 두 직선으로 퇴화하는 상수 아닌 곡선들의 family이며, 그럼에도 모든 fiber가 $1$차원으로 남는다.
 :::
 
+## 평탄성의 실패
+
+그렇다면 언제 morphism이 flat이 아니게 되는지를 살펴보자. 직관적으로 morphism이 flat이 아니게 되는 상황은 어떤 방식으로든 $X$의 어떤 부분이 base를 따라 퍼지지 못하고 fiber 하나에 통째로 얹혀 있는 것이다. [명제 5](#prop5)의 언어로는 이것이 base의 함수 하나에 죽는 원소, 곧 torsion으로 나타난다. 다만 갇히는 것이 무엇이냐에 따라 겉으로 드러나는 모습은 셋으로 갈린다.
+
+첫째는 이 글의 도입에서 본 $\Spec \mathbb{K}[t,\x]/(t\x)$로, $\x$-축이 $t=0$ 위의 fiber에 통째로 들어앉아 fiber의 차원이 $0$에서 $1$로 뛰었다. 이는 [예시 4](#ex4)에서 이미 다룬 경우로, fiber 방향에 양의 차원 성분이 갇혀있는 경우에 해당한다.
+
+둘째 예시는 갇히는 것이 $0$차원인 경우이다. 이 경우에도 차원은 아무 데에서도 변하지 않지만, fiber의 점의 개수만 달라진다.
+
+::: 예시 9
+$X$를 affine line에 원점 위의 isolated point 하나를 더한 것으로 두자. 이를 나타내는 coordinate ring은
+
+$$B=\mathbb{K}[t]\times \mathbb{K}$$
+
+으로, 실제로 $B$의 prime ideal을 직접 적으면 이 그림이 분명해진다. $e=(0,1)$은 $e(1-e)=0$을 만족하므로 $B$의 임의의 prime ideal은 $e$와 $1-e$ 가운데 정확히 하나를 포함한다는 것을 알 수 있으며, 이 때 $e$를 포함하는 것은 $B/(0\times \mathbb{K})=\mathbb{K}[t]$의 prime ideal에, $1-e$를 포함하는 것은 $B/(\mathbb{K}[t]\times 0)=\mathbb{K}$의 prime ideal에 각각 대응된다. 이는 $\mathbb{A}^2_\mathbb{K}$ 평면 안에서는 $X=Z(t\x, \x^2-\x)$로 나타낼 수 있다.
+
+이제 $\varphi:\mathbb{K}[t] \rightarrow B$를 $t\mapsto (t,0)$으로 정의하자. 그럼 $\varphi(f)=(f, f(0))$이므로
+
+$$\varphi^{-1}(\mathfrak{p}\times \mathbb{K})=\mathfrak{p},\qquad \varphi^{-1}(\mathbb{K}[t]\times 0)=(t)$$
+
+이 된다. 즉, $\Spec\varphi$의 target인 affine line의 원점을 제외한 모든 점은 정확히 $X$의 같은 점을 fiber의 유일한 점으로 가지지만, 원점에서의 fiber는 $X$의 원점과, 원점 위에 있는 한 점의 두 개의 fiber를 가진다. 즉, fiber의 차원은 어디에서나 $0$이지만, fiber를 이루는 점의 개수가 $1$에서 $2$로 뛴다.
+
+이것이 flat이 아닌 것은 $(0,1)\neq 0$이면서 $t\cdot (0,1)=0$이므로 $t$가 $B$에서 zerodivisor이기 때문이다. ([명제 5](#prop5)) $X$가 reduced이므로 [따름정리 6](#cor6)으로도 같은 결론을 얻는데, 두 성분 가운데 isolated point가 $\mathbb{A}^1_\mathbb{K}$를 dominate하지 못하기 때문이다.
+:::
+
+마지막 예시는 갇히는 것이 embedded point인 경우로 ([§스킴의 대수구조, ⁋정의 9](/ko/math/scheme_theory/algebra_of_schemes#def9)), 이번에는 차원도 점의 개수도 변하지 않지만, fiber의 length가 달라진다. ([\[가환대수학\] §조르단-횔더 정리, ⁋정의 2](/ko/math/commutative_algebra/Jordan-Holder_theorem#def2))
+
+::: 예시 10
+Scheme morphism
+
+$$X=\Spec \mathbb{K}[t,\x]/(\x^2, t\x) \longrightarrow \mathbb{A}^1_\mathbb{K}$$
+
+를 생각하자. Ideal이 $(\x^2, t\x)=(\x)\cap (t,\x^2)$로 분해되므로 $X$는 $t$-축이며, 원점이 embedded point가 된다.
+
+이 morphism의 fiber는 $t=a$ 위에서 $\mathbb{K}[\x]/(\x^2, a\x)$이다. 만일 $a\neq 0$이면 $a$가 unit이라 $\x=0$이 강제되므로 이 fiber는 $\mathbb{K}$가 되지만, $a=0$이면 $\mathbb{K}[\x]/(\x^2)$이 되어 길이 $2$의 한 점이 된다. 위상적으로는 $\Spec \mathbb{K}$도, $\Spec \mathbb{K}[\x]/(\x^2)$도 점 하나이므로 fiber의 차원도 개수도 그대로이지만, 여전히 length는 $1$에서 $2$로 뛴다.
+
+이 morphism은 실제로 $\x\neq 0$이면서 $t\x=0$이므로 [명제 5](#prop5)에 의하여 flat이 아니다. 다소 주의할 것은 이로부터 따라나오는 판정법인 [따름정리 6](#cor6)은 이 상황에서 적용할 수 없다는 것으로, 이는 $X$가 reduced가 아니기 때문이다. 실제로 $X$의 reduced structure인 $t$-축은 base와 isomorphic하여 flat이므로, 이 실패는 scheme 구조를 보아야만 드러난다.
+:::
+
+이 세 경우를 보면 흥미로운 것이 두 가지 있다. 우선, 우리는 서로 다른 세 가지 예시를 살펴보았으나 본질적으로는 [예시 10](#ex10)의 length가 [예시 9](#ex9)의 실패까지 포함한다. 뿐만 아니라, 이를 Hilbert polynomial로 한 층 올리면 도입에서 본 예시까지 함께 포괄된다. ([\[대수다양체\] §베주 정리, ⁋명제 3](/ko/math/algebraic_varieties/bezout_theorem#prop3)) 즉, 세 실패는 모두 하나의 다항식이 뛴 것이며, 실제로 Noetherian integral scheme 위의 projective family에 대하여 flat인 것과 fiber의 Hilbert polynomial이 일정한 것은 서로 동치이다. 이 예시들이 알려주는 흥미로운 점 중 다른 하나는 뛰는 방향으로, 세 경우 모두에서 값은 일반적인 열린집합에서는 작다가, flatness가 깨지는 곳으로 가면서 커졌을 뿐, 그 반대로 움직인 적이 없다. 이 글의 말미에서 우리는 이것이 우연이 아니라는 것을 살펴보게 될 것이다. 
+
 ## Generic flatness와 Chevalley의 정리
 
 이제 우리는 글의 남은 부분에서 flat morphism의 기하학적 성질들을 더 살펴본다. 이를 위해서는 두 가지의 준비가 필요하며, 이 섹션은 이들을 위한 것이다. 이 두 준비물은 모두 [\[가환대수학\] §뇌터 정규화, ⁋정리 5](/ko/math/commutative_algebra/noether_normalization#thm5)를 사용하여 증명할 수 있다.
 
-::: 명제 9 (Generic flatness)
+::: 명제 11 (Generic flatness)
 Noetherian integral scheme $Y$와 finite type morphism $f: X \rightarrow Y$가 주어졌다 하자. 그럼 $Y$의 dense open subset $U$가 존재하여 $f\rvert^U: f^{-1}(U) \rightarrow U$가 flat이다.
 :::
 ::: 증명
 $Y$가 irreducible이므로 $Y$의 공집합이 아닌 열린집합은 모두 dense이다. 따라서 $Y$의 affine open $V=\Spec A$를 하나 고정하고 그 안에서 $U$를 찾으면 충분하다. $Y$가 integral scheme이므로 $A=\mathcal{O}_Y(V)$는 integral domain이고, Noetherian scheme의 affine open은 Noetherian ring의 spectrum이므로 $A$는 Noetherian ring이기도 하다. ([§스킴의 위상구조, ⁋보조정리 13](/ko/math/scheme_theory/topology_of_schemes#lem13))
 
-한편, $f$가 finite type이므로 $f^{-1}(V)$는 유한개의 affine open $\Spec B_1,\ldots, \Spec B_k$로 덮이고 ([§스킴 사상의 성질들, ⁋정의 13](/ko/math/scheme_theory/properties_of_scheme_morphisms#def13)), 각 $B_i$는 finite type $A$-algebra이다. [\[가환대수학\] §뇌터 정규화, ⁋정리 5](/ko/math/commutative_algebra/noether_normalization#thm5)를 $M=B_i$에 적용하면 $0\neq a_i\in A$가 존재하여 $(B_i)_{a_i}$가 free $A_{a_i}$-module이다. $a=a_1\cdots a_k$로 두면 각 $(B_i)_a$는 free module $(B_i)_{a_i}$의 localization이므로 여전히 free $A_a$-module이고, free module은 flat하므로 [보조정리 2](#lem2)에 의하여
+한편, $f$가 finite type이므로 $f^{-1}(V)$는 유한개의 affine open $\Spec B_1,\ldots, \Spec B_k$로 덮이고 ([§스킴 사상의 성질들, ⁋정의 14](/ko/math/scheme_theory/properties_of_scheme_morphisms#def14)), 각 $B_i$는 finite type $A$-algebra이다. [\[가환대수학\] §뇌터 정규화, ⁋정리 5](/ko/math/commutative_algebra/noether_normalization#thm5)를 $M=B_i$에 적용하면 $0\neq a_i\in A$가 존재하여 $(B_i)_{a_i}$가 free $A_{a_i}$-module이다. $a=a_1\cdots a_k$로 두면 각 $(B_i)_a$는 free module $(B_i)_{a_i}$의 localization이므로 여전히 free $A_a$-module이고, free module은 flat하므로 [보조정리 2](#lem2)에 의하여
 
 $$\Spec (B_i)_a \longrightarrow \Spec A_a=D(a)$$
 
@@ -204,13 +244,13 @@ $$\Spec (B_i)_a \longrightarrow \Spec A_a=D(a)$$
 
 두 번째 명제는 image의 모양에 대한 것이다. 일반적인 morphism의 image는 열린집합도 닫힌집합도 아니지만, finite type morphism의 image는 언제나 다음의 의미에서 좋은 집합이다.
 
-::: 정의 10
+::: 정의 12
 위상공간 $T$의 부분집합이 *constructible<sub>구성가능</sub>*이라는 것은 그것이 유한개의 locally closed subset들의 합집합으로 쓰일 수 있는 것이다. ([\[위상수학\] §몫공간, ⁋정의 1](/ko/math/topology/quotient_spaces#def1))
 :::
 
 직관적으로 constructible subset은 유한개의 방정식의 zero locus와, 그 여집합으로 잘라낼 수 있는 집합으로, 우리가 생각하는 기하적인 대상들에 부합하는 조각들이다. 더 엄밀하게는 locally closed subset이 열린집합과 닫힌집합의 교집합 $U\cap Z$로 쓰이고 그 여집합이 다시 두 locally closed subset의 합집합 $(T\setminus U)\cup(T\setminus Z)$이므로 ([\[위상수학\] §몫공간, ⁋명제 2](/ko/math/topology/quotient_spaces#prop2)), constructible subset들의 모임은 유한한 합집합, 유한한 교집합, 여집합에 대하여 닫혀 있다는 것을 안다. 
 
-::: 정리 11 (Chevalley)
+::: 정리 13 (Chevalley)
 Noetherian scheme $Y$와 finite type morphism $f: X \rightarrow Y$에 대하여, $f(X)$는 $Y$의 constructible subset이다.
 :::
 ::: 증명
@@ -247,7 +287,7 @@ $$f(X)=D(a)\cup \big(f(X)\cap V(a)\big)$$
 
 마지막으로 우리는 constructible set이 언제 열린집합이 되는지도 함께 정리해둔다.
 
-::: 보조정리 12
+::: 보조정리 14
 Noetherian scheme $Y$의 constructible subset $E$가 generization에 대하여 닫혀 있다면, 즉 $y\in E$이고 $y\in \overline{\{y'\}}$일 때마다 $y'\in E$라면, $E$는 $Y$의 열린집합이다.
 :::
 ::: 증명
@@ -272,7 +312,7 @@ $F$가 specialization에 대하여 닫혀 있으므로 $Z_j=\overline{\{z_j\}}\s
 
 이제 모든 준비를 마쳤으므로 flatness의 기하학적 의미를 살펴보자. Flatness의 내용은 fiber들이 서로 이어지는 방식을 통제한다는 데에 있으며, 그 출발점은 flat local homomorphism이 자동으로 faithfully flat이 된다는 다음 관찰이다.
 
-::: 보조정리 13
+::: 보조정리 15
 Local ring 사이의 local homomorphism $\varphi: (A,\mathfrak{m}) \rightarrow (B,\mathfrak{n})$이 $B$를 flat $A$-module로 만든다 하자. 그럼 $0$이 아닌 임의의 $A$-module $M$에 대하여 $M\otimes_AB\neq 0$이며, 특히 $\Spec B \rightarrow \Spec A$는 전사이다.
 :::
 ::: 증명
@@ -291,13 +331,13 @@ $$B\otimes_A\kappa(\mathfrak{p})$$
 
 이로부터 flat morphism이 generization을 들어올린다는 *going-down* 성질을 얻는다. ([\[가환대수학\] §매개계, ⁋보조정리 8](/ko/math/commutative_algebra/system_of_parameters#lem8))
 
-::: 명제 14
+::: 명제 16
 Flat morphism $f: X \rightarrow Y$와 점 $x \in X$가 주어졌다 하고, $y=f(x)$의 generization $y'$, 즉 $y \in \overline{\{y'\}}$인 점 $y'$가 주어졌다 하자. 그럼 $x$의 generization $x'$가 존재하여 $f(x')=y'$이다.
 :::
 ::: 증명
 $y$의 affine open neighborhood $V=\Spec A$를 택하고, 그 다음 $f^{-1}(V)$ 안에서 $x$의 affine open neighborhood $U=\Spec B$를 택하자. $y'$이 $y$의 generization이므로 $y'\in V$이다. 따라서 $X=\Spec B$, $Y=\Spec A$이고 $x=\mathfrak{q}$, $y=\mathfrak{p}=\varphi^{-1}(\mathfrak{q})$, $y'=\mathfrak{p}'\subseteq \mathfrak{p}$인 경우만 보이면 충분하다.
 
-[보조정리 2](#lem2)에 의하여 $A_\mathfrak{p} \rightarrow B_\mathfrak{q}$는 flat한 local homomorphism이므로, [보조정리 13](#lem13)에 의하여 $\Spec B_\mathfrak{q} \rightarrow \Spec A_\mathfrak{p}$는 전사이다. 특히 $\mathfrak{p}'A_\mathfrak{p}\in \Spec A_\mathfrak{p}$ 위에 놓인 $\Spec B_\mathfrak{q}$의 점이 존재하며, 이를 $B$의 prime ideal로 되돌리면 $\mathfrak{q}'\subseteq \mathfrak{q}$이면서 $\varphi^{-1}(\mathfrak{q}')=\mathfrak{p}'$인 $\mathfrak{q}'$를 얻는다. $\mathfrak{q}'\subseteq \mathfrak{q}$는 곧 $x\in \overline{\{x'\}}$을 뜻하므로 $x'=\mathfrak{q}'$가 원하는 점이다.
+[보조정리 2](#lem2)에 의하여 $A_\mathfrak{p} \rightarrow B_\mathfrak{q}$는 flat한 local homomorphism이므로, [보조정리 15](#lem15)에 의하여 $\Spec B_\mathfrak{q} \rightarrow \Spec A_\mathfrak{p}$는 전사이다. 특히 $\mathfrak{p}'A_\mathfrak{p}\in \Spec A_\mathfrak{p}$ 위에 놓인 $\Spec B_\mathfrak{q}$의 점이 존재하며, 이를 $B$의 prime ideal로 되돌리면 $\mathfrak{q}'\subseteq \mathfrak{q}$이면서 $\varphi^{-1}(\mathfrak{q}')=\mathfrak{p}'$인 $\mathfrak{q}'$를 얻는다. $\mathfrak{q}'\subseteq \mathfrak{q}$는 곧 $x\in \overline{\{x'\}}$을 뜻하므로 $x'=\mathfrak{q}'$가 원하는 점이다.
 :::
 
 즉 flat morphism은 base에서의 generization을 언제나 위로 들어올린다. 특히 $Y$가 irreducible이고 그 generic point가 $y$라면 $X$의 임의의 점은 generic fiber $X_y$의 어떤 점의 specialization이며, 따라서 $X$의 어떤 성분도 fiber 하나에 갇혀 있을 수 없다. [따름정리 6](#cor6)에서 곡선 위의 family에 대하여 관찰한 것이 일반적으로도 성립하는 것이다.
@@ -305,7 +345,7 @@ $y$의 affine open neighborhood $V=\Spec A$를 택하고, 그 다음 $f^{-1}(V)$
 Going-down의 첫 번째 결과는
  차원에 대한 정확한 등식이다. Flat morphism에서 $X$의 local dimension은 base의 local dimension과 fiber의 local dimension으로 정확히 분해된다.
 
-::: 명제 15
+::: 명제 17
 Locally Noetherian scheme 사이의 flat morphism $f: X \rightarrow Y$와 점 $x\in X$, $y=f(x)$에 대하여
 
 $$\dim \mathcal{O}_{X,x}=\dim \mathcal{O}_{Y,y}+\dim \mathcal{O}_{X_y,x}$$
@@ -322,30 +362,30 @@ $$\mathcal{O}_{X_y,x}=(B\otimes_A\kappa(\mathfrak{p}))_\mathfrak{q}\cong B_\math
 한편 $X$와 $Y$가 locally Noetherian이므로 $\mathcal{O}_{X,x}$와 $\mathcal{O}_{Y,y}$는 Noetherian local ring이고, [보조정리 2](#lem2)에 의하여 $\mathcal{O}_{Y,y} \rightarrow \mathcal{O}_{X,x}$는 flat local homomorphism이다. 따라서 [\[가환대수학\] §매개계, ⁋정리 9](/ko/math/commutative_algebra/system_of_parameters#thm9)를 적용하면 원하는 등식을 얻는다.
 :::
 
-만일 $X$와 $Y$가 field $\mathbb{K}$ 위의 finite type integral scheme인 경우에는 closed point에서 $\dim \mathcal{O}_{X,x}=\dim X$가 성립하므로, $f$의 상에 속하는 closed point $y$에 대하여 [명제 15](#prop15)는 익숙한 형태
+만일 $X$와 $Y$가 field $\mathbb{K}$ 위의 finite type integral scheme인 경우에는 closed point에서 $\dim \mathcal{O}_{X,x}=\dim X$가 성립하므로, $f$의 상에 속하는 closed point $y$에 대하여 [명제 17](#prop17)는 익숙한 형태
 
 $$\dim X_y=\dim X-\dim Y$$
 
 가 된다. 
 
-이 등식은 이 글의 도입에서 본 예시의 non-flatness를 다시 한 번 설명해준다. 해당 예시에서 $X=\Spec \mathbb{K}[t,\x]/(t\x)$의 원점 $x$를 생각하면, [§차원, ⁋명제 8](/ko/math/scheme_theory/dimension#prop8)에 의하여 local ring의 차원은 원점에서 위로 올라가는 irreducible closed subset들의 chain의 maximal length로 주어진다. 문제는 원점을 포함하는 두 irreducible closed subset들 (즉 $t$축과 $\x$축)으로 올라가는 순간, 그것을 포함하는 irreducible closed subset은 존재하지 않으므로 $\dim \mathcal{O}_{X,x}=1$이 된다는 것이다. 반면 $Y=\mathbb{A}_\mathbb{K}^1$의 원점 $y$를 생각하면, 이 점의 $Y$에서의 차원 또한 같은 이유로 $\dim \mathcal{O}_{Y,y}=1$이고, fiber $X_y=\mathbb{A}^1_\mathbb{K}$의 원점에서의 local ring 또한 그러하다. 따라서 $1\neq 1+1$이므로 이 morphism은 flat이 아니다. [명제 14](#prop14)의 언어로 하면 이는 $x$를 지나는 $\x$-축 성분이 $t=0$ 위의 fiber에 통째로 갇혀 base 방향으로 뻗지 못하는 것이 $\dim \mathcal{O}_{X,x}=1\neq 2$인 것으로 나타나는 것으로, 이렇게 한 fiber에 갇힌 성분은 fiber 방향 차원 $1$은 우변에 보태주지만 base 방향이 없어 등식을 깨뜨리게 된다. 
+이 등식은 이 글의 도입에서 본 예시의 non-flatness를 다시 한 번 설명해준다. 해당 예시에서 $X=\Spec \mathbb{K}[t,\x]/(t\x)$의 원점 $x$를 생각하면, [§차원, ⁋명제 8](/ko/math/scheme_theory/dimension#prop8)에 의하여 local ring의 차원은 원점에서 위로 올라가는 irreducible closed subset들의 chain의 maximal length로 주어진다. 문제는 원점을 포함하는 두 irreducible closed subset들 (즉 $t$축과 $\x$축)으로 올라가는 순간, 그것을 포함하는 irreducible closed subset은 존재하지 않으므로 $\dim \mathcal{O}_{X,x}=1$이 된다는 것이다. 반면 $Y=\mathbb{A}_\mathbb{K}^1$의 원점 $y$를 생각하면, 이 점의 $Y$에서의 차원 또한 같은 이유로 $\dim \mathcal{O}_{Y,y}=1$이고, fiber $X_y=\mathbb{A}^1_\mathbb{K}$의 원점에서의 local ring 또한 그러하다. 따라서 $1\neq 1+1$이므로 이 morphism은 flat이 아니다. [명제 16](#prop16)의 언어로 하면 이는 $x$를 지나는 $\x$-축 성분이 $t=0$ 위의 fiber에 통째로 갇혀 base 방향으로 뻗지 못하는 것이 $\dim \mathcal{O}_{X,x}=1\neq 2$인 것으로 나타나는 것으로, 이렇게 한 fiber에 갇힌 성분은 fiber 방향 차원 $1$은 우변에 보태주지만 base 방향이 없어 등식을 깨뜨리게 된다. 
 
-Flat morphism의 또 다른 기하학적 성질은 열린집합을 열린집합으로 보낸다는 것으로, 이는 [정리 11](#thm11)과 [보조정리 12](#lem12)의 결과이다. 
+Flat morphism의 또 다른 기하학적 성질은 열린집합을 열린집합으로 보낸다는 것으로, 이는 [정리 13](#thm13)과 [보조정리 14](#lem14)의 결과이다. 
 
-::: 명제 16
+::: 명제 18
 Noetherian scheme $Y$와 flat하고 finite type인 morphism $f: X \rightarrow Y$에 대하여 $f$는 열린 사상이다. 즉 임의의 열린집합 $U\subseteq X$에 대하여 $f(U)$는 $Y$의 열린집합이다.
 :::
 ::: 증명
 $Y$가 Noetherian이고 $f$가 finite type이므로, $X$를 덮는 각 affine open은 Noetherian ring 위의 finite type algebra의 spectrum이 되어 [\[가환대수학\] §기본 개념들, ⁋정리 12](/ko/math/commutative_algebra/basic_notions#thm12)에 의하여 Noetherian이고, $f$가 quasi-compact이므로 $X$ 또한 quasi-compact이다. 즉 $X$는 [§스킴의 위상구조, ⁋정의 14](/ko/math/scheme_theory/topology_of_schemes#def14)의 의미에서 Noetherian scheme이며, 특히 위상공간으로서 Noetherian이다. 그럼 열린집합 $U\subseteq X$는 [\[위상수학\] §차원, ⁋명제 13](/ko/math/topology/dimension#prop13)에 의하여 다시 Noetherian이므로 [\[위상수학\] §차원, ⁋명제 12](/ko/math/topology/dimension#prop12)에 의하여 quasi-compact이고, open subscheme의 포함사상은 flat이므로 ([예시 4](#ex4)) [명제 3](#prop3)에 의하여 합성 $f\vert_U: U \rightarrow Y$ 또한 flat하고 finite type이다. 그러므로 처음부터 $U=X$인 경우, 즉 $f(X)$가 열린집합임을 보이면 충분하다.
 
-[정리 11](#thm11)에 의하여 $f(X)$는 constructible이다. 또 $y\in f(X)$와 그 generization $y'$이 주어지면, $f(x)=y$인 $x$를 택하고 [명제 14](#prop14)를 적용하여 $f(x')=y'$인 $x'$를 얻으므로 $y'\in f(X)$이다. 즉 $f(X)$는 generization에 대하여 닫혀 있다. 이제 [보조정리 12](#lem12)로부터 $f(X)$가 열린집합임을 얻는다.
+[정리 13](#thm13)에 의하여 $f(X)$는 constructible이다. 또 $y\in f(X)$와 그 generization $y'$이 주어지면, $f(x)=y$인 $x$를 택하고 [명제 16](#prop16)를 적용하여 $f(x')=y'$인 $x'$를 얻으므로 $y'\in f(X)$이다. 즉 $f(X)$는 generization에 대하여 닫혀 있다. 이제 [보조정리 14](#lem14)로부터 $f(X)$가 열린집합임을 얻는다.
 :::
 
 ## 평탄성의 국소 판정법
 
 마지막으로 flatness를 각 점에서 검사하는 기준을 정리한다. 대수적으로 $\otimes$가 left-exact로부터 멀어지는 정도를 측정하는 도구는 $\otimes$의 right derived functor, 즉 $\Tor$였다. 특히 flatness는 모든 ideal $\mathfrak{a}$에 대한 $\Tor_1^A(A/\mathfrak{a}, M)$의 vanishing으로 나타났으므로 ([\[가환대수학\] §평탄성과 국소화, ⁋정리 1](/ko/math/commutative_algebra/local_criterion_for_flatness#thm1)), 이를 기하학의 언어로 옮기면 다음을 얻는다.
 
-::: 명제 17
+::: 명제 19
 Locally Noetherian scheme $Y$와 locally of finite type인 morphism $f: X \rightarrow Y$, 그리고 점 $x\in X$, $y=f(x)$에 대하여, $\mathcal{O}_{X,x}$가 $\mathcal{O}_{Y,y}$-flat인 것과
 
 $$\Tor_1^{\mathcal{O}_{Y,y}}(\kappa(y), \mathcal{O}_{X,x})=0$$
@@ -356,9 +396,17 @@ $$\Tor_1^{\mathcal{O}_{Y,y}}(\kappa(y), \mathcal{O}_{X,x})=0$$
 $Y$가 locally Noetherian이므로 $A=\mathcal{O}_{Y,y}$는 Noetherian local ring이고, $f$가 locally of finite type이므로 $X$ 또한 locally Noetherian이어서 $E=\mathcal{O}_{X,x}$도 Noetherian local ring이다. $f$가 유도하는 $A \rightarrow E$는 local homomorphism이므로 $\mathfrak{m}_yE\subseteq \mathfrak{m}_x$를 만족한다. 이제 $M=E$로 두면 $M$은 finitely generated $E$-module이므로 [\[가환대수학\] §평탄성과 국소화, ⁋정리 1](/ko/math/commutative_algebra/local_criterion_for_flatness#thm1)의 가정이 모두 충족되며, 그 결론이 정확히 주장하는 동치이다.
 :::
 
-Flatness는 본질적으로 family가 어떻게 <em-ko>움직이는가</em-ko>에 대한 정의이므로, 한 점에서 morphism이 flat하다는 사실만 아는 것은 기하적으로는 큰 의미가 없다. 이를 해결해주는 것은 곧 살펴볼 [명제 22](#prop22)로, 우리는 morphism이 flat한 점들의 모임이 열린집합이라는 것을 보인다. 바꾸어 말하면 flatness가 깨지는 지점들은 닫힌집합을 이루며, 도입에서 살펴본 예시의 원점과 같이 성분들이 부딪히거나 fiber에 갇히는 특수한 곳에 한정된다. 이를 위상적으로 다루려면 정수값을 갖는 불변량이 공간 위에서 어떻게 변하는지를 재는 언어가 먼저 필요하다.
+Flatness는 본질적으로 family가 어떻게 <em-ko>움직이는가</em-ko>에 대한 정의이므로, 한 점에서 morphism이 flat하다는 사실만 아는 것은 기하적으로는 큰 의미가 없다. 이를 해결해주는 것이 다음의 정리이다.
 
-::: 정의 18
+::: 정리 20 (Openness of the flat locus)
+Locally Noetherian scheme $Y$와 locally of finite type인 morphism $f: X \rightarrow Y$에 대하여, $\mathcal{O}_{X,x}$가 $\mathcal{O}_{Y,f(x)}$-flat인 점 $x\in X$들의 집합은 $X$의 열린집합이다. 더 일반적으로 이는 $Y$에 아무런 Noetherian 조건 없이 $f$가 locally of finite presentation이기만 하여도 성립한다.
+:::
+
+우리는 이 정리의 증명을 다루지 않는다. Noetherian인 경우의 논증은 [명제 19](#prop19)가 지목한 $\Tor$가 $B$ 위에서 finitely generated라는 것으로부터 한 점에서의 소멸을 기본 열린근방으로 퍼뜨리고, [명제 11](#prop11)의 generic flatness를 $A/\mathfrak{p}$ 위에서 적용하여 그 근방을 $V(\mathfrak{q})$ 방향으로 넓힌 뒤, 국소 판정법을 $\mathfrak{m}$이 아닌 ideal에 대하여 적은 형태로 두 정보를 합치고, 마지막으로 generization에 대하여 닫혀 있는 집합이 각 $V(\mathfrak{q})$ 안에서 상대적으로 열린 부분을 포함하면 열려 있다는 위상적 판정을 적용하는 것으로 이루어진다. 뒤의 일반적인 경우는 유한 표시로 주어진 자료가 언제나 $\mathbb{Z}$ 위의 finite type ring에서 온 유한한 부분자료 위에 이미 정의되어 있다는 극한 논증으로 앞의 경우에 환원된다.
+
+[정리 20](#thm20)에 의하여 [명제 19](#prop19)로 한 점에서 $\Tor$의 소멸을 확인하면 그 점의 열린 근방 $U$ 위에서 $f\vert_U$가 flat morphism이 되므로, [명제 3](#prop3)이나 [명제 18](#prop18)처럼 morphism 전체의 flatness를 요구하는 결과들을 적용할 수 있게 된다. 바꾸어 말하면 flatness가 깨지는 지점들은 닫힌집합을 이루며, 도입에서 살펴본 예시의 원점과 같이 성분들이 부딪히거나 fiber에 갇히는 특수한 곳에 한정된다. 한편 앞에서 우리는 이 깨짐이 언제나 커지는 방향으로만 일어난다고 관찰하였는데, 이를 정확히 적으려면 정수값을 갖는 불변량이 공간 위에서 어떻게 변하는지를 재는 언어가 먼저 필요하다.
+
+::: 정의 21
 Topological space $X$ 위의 함수 $f: X \rightarrow \mathbb{Z}$가 *upper semicontinuous*라는 것은 임의의 $i\in \mathbb{Z}$에 대하여 집합
 
 $$\{x\in X\mid f(x)\leq i\}$$
@@ -366,13 +414,9 @@ $$\{x\in X\mid f(x)\leq i\}$$
 가 $X$의 열린집합인 것이다. 마찬가지로 $f$가 *lower semicontinuous*라는 것은 임의의 $i\in \mathbb{Z}$에 대하여 $\{x\in X\mid f(x)\geq i\}$가 $X$의 열린집합인 것이다.
 :::
 
-이 정의의 대표적인 예시는 fiber의 차원으로, 우리의 예시 $\Spec \mathbb{K}[t,\x]/(t\x)$에서 실제로 fiber 차원은 $t\neq 0$인 곳에서는 $0$이다가 $t=1$에서 뛰었으며, 위의 정의에서 $i=1$로 잡은 것 집합이 
+[예시 9](#ex9)와 [예시 10](#ex10), 그리고 도입부의 예시 모두에서 우리는 flatness의 실패를 축정하는 어떠한 양들이, flatness가 깨지는 점으로 가면서 커지기만 할 뿐 그 반대로는 움직이지 않는다는 것을 확인했는데, 이를 엄밀하게 정의한 것이 바로 이 upper semicontinuity이다.  이를 포괄하는 다음의 명제를 보자. 
 
-이 글의 도입에서 본 예시의 fiber 차원이 이러한 거동의 전형이다. 그 예시에서 fiber의 차원은 $t\neq 0$ 위에서 $0$이고 $t=0$ 위에서 $1$이었으므로, 차원이 큰 자리가 $\mathbb{A}^1_\mathbb{K}$의 닫힌집합 $\{t=0\}$을 이룬다. 여기에서 결정적인 것은 차원이 변한다는 사실이 아니라 변하는 방향이 한쪽뿐이라는 사실이다. Zariski topology에서 열린집합이 일반적인 자리이고 닫힌집합이 특수한 자리이므로, upper semicontinuity가 규정하는 것은 값이 일반적인 자리에서 작게 유지되다가 특수한 자리로 가면서 튀어오르기만 할 뿐 그 반대로는 움직이지 않는다는 것이다. 실제로 위의 예시에서도 특수한 자리 $t=0$ 위에서 fiber는 한 점에서 직선으로 부풀 뿐이며, 어느 자리에서도 반대로 수축하지는 않는다. 곧 fiber의 차원은 $\mathbb{A}^1_\mathbb{K}$ 위에서 upper semicontinuous하게 행동하며, [명제 15](#prop15)가 flat morphism에 대하여 요구한 것은 이러한 초과분이 아예 없다는 것, 곧 허용되는 이 한 방향의 도약조차 일어나지 않는다는 것이었다.
-
-Finitely generated module을 생성하는 데 필요한 원소의 개수가 이러한 불변량의 첫 예시이다.
-
-::: 명제 19
+::: 명제 22
 Ring $A$와 finitely generated $A$-module $M$에 대하여 함수 $\mu:\Spec A \rightarrow \mathbb{Z}$를
 
 $$\mu(\mathfrak{p})=\dim_{\kappa(\mathfrak{p})}M\otimes_A\kappa(\mathfrak{p})$$
@@ -384,109 +428,18 @@ $M\otimes_A\kappa(\mathfrak{p})=M_\mathfrak{p}/\mathfrak{p}M_\mathfrak{p}$이고
 
 $\mathfrak{p}\in \Spec A$를 고정하고 $r=\mu(\mathfrak{p})$라 하자. $M_\mathfrak{p}$를 생성하는 $r$개의 원소에 분모를 곱하면 $M$의 원소 $m_1,\ldots, m_r$으로서 그 image가 $M_\mathfrak{p}$를 생성하는 것들을 얻는다. 이들이 정의하는 $\varphi: A^r \rightarrow M$의 cokernel을 $N$이라 하면 $N$은 $M$의 quotient이므로 finitely generated이고, $\varphi_\mathfrak{p}$가 surjective이므로 $N_\mathfrak{p}=0$이다.
 
-$N$의 generator $n_1,\ldots, n_k$ 각각에 대하여 $s_jn_j=0$을 만족하는 $s_j\notin \mathfrak{p}$가 존재하며, $\mathfrak{p}$가 prime이므로 $f=s_1\cdots s_k$ 또한 $\mathfrak{p}$에 속하지 않는다. 그럼 $fN=0$이므로 임의의 $\mathfrak{q}\in D(f)$에 대하여 $N_\mathfrak{q}=0$이고, 곧 $m_1,\ldots, m_r$의 image가 $M_\mathfrak{q}$를 생성하여 $\mu(\mathfrak{q})\leq r$이다.
-
-따라서 $\mu(\mathfrak{p})\leq i$인 임의의 $\mathfrak{p}$에 대하여 $\mathfrak{p}\in D(f)\subseteq \{\mu\leq r\}\subseteq \{\mu\leq i\}$이므로, $\{\mu\leq i\}$는 열린집합이다.
+$N$의 generator $n_1,\ldots, n_k$ 각각에 대하여 $s_jn_j=0$을 만족하는 $s_j\notin \mathfrak{p}$가 존재하며, $\mathfrak{p}$가 prime이므로 $f=s_1\cdots s_k$ 또한 $\mathfrak{p}$에 속하지 않는다. 그럼 $fN=0$이므로 임의의 $\mathfrak{q}\in D(f)$에 대하여 $N_\mathfrak{q}=0$이고, 곧 $m_1,\ldots, m_r$의 image가 $M_\mathfrak{q}$를 생성하여 $\mu(\mathfrak{q})\leq r$이다. 따라서 $\mu(\mathfrak{p})\leq i$인 임의의 $\mathfrak{p}$에 대하여 $\mathfrak{p}\in D(f)\subseteq \{\mu\leq r\}\subseteq \{\mu\leq i\}$이므로, $\{\mu\leq i\}$는 열린집합이다.
 :::
 
-이 서술의 앞뒤를 뒤집으면 lower semicontinuity가 나온다. $A$가 Noetherian이면 $M$은 유한한 presentation $A^m\overset{\psi}{\rightarrow}A^n \rightarrow M \rightarrow 0$을 가지며, tensor product가 right exact이므로 각 점에서 $\mu(\mathfrak{p})=n-\rank(\psi\otimes\kappa(\mathfrak{p}))$이고, 따라서 [명제 19](#prop19)는 행렬 $\psi$의 rank가 lower semicontinuous라는 것과 같은 내용이다. Rank가 $r$ 이상인 자리는 $\psi$의 $r\times r$ minor 가운데 하나가 소멸하지 않는 자리이므로 명시적으로 열려 있고, 이 minor들이 생성하는 ideal이 [\[가환대수학\] §Fitting 아이디얼, ⁋정의 2](/ko/math/commutative_algebra/fitting_ideals#def2)의 Fitting ideal $\operatorname{Fitt}_i(M)$이다. 곧 $\mu$가 튀어오르는 닫힌집합은 minor의 소멸이 정의하는 집합이며, upper와 lower 어느 쪽으로 부르든 밑에 깔린 것은 이 하나의 determinantal 자료이다.
+$\mu$가 무엇을 재는지는 family의 언어로 옮기면 분명해진다. Morphism $\Spec B \rightarrow \Spec A$가 finite일 때 $M=B$로 두면 $\mu(\mathfrak{p})$는 fiber의 coordinate ring $B\otimes_A\kappa(\mathfrak{p})$를 $\kappa(\mathfrak{p})$ 위의 vector space로 보았을 때의 차원이다. 이 algebra는 Artinian이므로 local ring들의 곱으로 분해되고, 각 인자에서 composition series의 factor가 그 residue field이므로
 
-이 대응은 국소적인 판정으로도 적혀 있다. [\[가환대수학\] §Fitting 아이디얼, ⁋명제 7](/ko/math/commutative_algebra/fitting_ideals#prop7)에 의하여 $\mu(\mathfrak{p})$는 $\operatorname{Fitt}_i(M)$이 $\mathfrak{p}$에 포함되지 않는 가장 작은 $i$이므로, [명제 19](#prop19)의 열린집합 $\{\mu\leq i\}$는 정확히 $\operatorname{Fitt}_i(M)$이 정의하는 닫힌집합의 여집합이다. 대수적인 판정이 ideal의 포함관계로 적히는 것을 $\Spec A$의 위상으로 옮긴 것이 semicontinuity라는 서술인 셈이다.
+$$\mu(\mathfrak{p})=\sum_{x\in X_\mathfrak{p}}\length(\mathcal{O}_{X_\mathfrak{p},x})\cdot[\kappa(x):\kappa(\mathfrak{p})]$$
 
-이 그림이 flatness와 만나는 지점이 아래의 [명제 22](#prop22)이다. 다만 [명제 19](#prop19)가 재는 것은 $M$을 생성하는 데 필요한 원소의 최소 개수뿐이어서, $\mu$가 국소상수인 것만으로 $M_\mathfrak{p}$가 free가 되지는 않는다. 가령 $A=\mathbb{K}[\varepsilon]/(\varepsilon^2)$과 $M=A/(\varepsilon)$을 보면 $\Spec A$가 한 점이라 $\mu$가 국소상수이지만, $A$와 $M$의 길이가 다르므로 $M$은 free가 아니다. $M_\mathfrak{p}$가 rank $r$의 free module인 것은 $\operatorname{Fitt}_r(M)_\mathfrak{p}=A_\mathfrak{p}$이면서 $\operatorname{Fitt}_{r-1}(M)_\mathfrak{p}=0$인 것과 동치이고 ([\[가환대수학\] §Fitting 아이디얼, ⁋정리 8](/ko/math/commutative_algebra/fitting_ideals#thm8)), 자유로운 자리의 열림은 이 두 조건이 각각 명시적인 원소들로 규정된다는 데에서 나온다. 그런데 [명제 22](#prop22)의 $f$는 finite가 아니어서 $\mathcal{O}_{X,x}$는 $\mathcal{O}_{Y,f(x)}$ 위의 finitely generated module이 아니고, 그래서 presentation 하나에 위 논법을 먹이는 것으로 끝나지 않는다.
+가 성립한다. 곧 $\mu$는 fiber의 length에 residue field의 degree까지 실어서 잰 것이며, 만일 fiber의 점이 모두 $\kappa(\mathfrak{p})$-점이면 length 그 자체가 된다. 즉, [예시 9](#ex9)와 [예시 10](#ex10)에서 살펴본 flatness의 실패가 모두 [명제 22](#prop22)의 사례가 된다.
+ 
+반면 이 글의 도입에서 본 예시는 [명제 22](#prop22)의 사정권 밖에 있다. $\mathbb{K}[t,\x]/(t\x)$는 $\mathbb{K}[t]$-module로서 finitely generated가 아니며, $t=0$ 위에서 $\mathbb{K}[\x]$가 되어 $\mu$가 무한이 되기 때문이다. Fiber가 부푸는 경우까지 함께 다루려면 length 대신 앞에서 언급한 Hilbert polynomial로 올라가야 하며, 그 판본은 이 글에서 다루지 않는다.
 
-그러나 [명제 19](#prop19)의 증명이 실제로 사용한 것은 finitely generated module이 한 점에서 소멸하면 그 점의 기본 열린근방 전체에서 소멸한다는 사실 하나이다. 그러므로 $\mathcal{O}_{X,x}$ 자신이 아니라 flatness의 장애를 재는 $\Tor$를 이 논법의 대상으로 삼으면 된다. [명제 17](#prop17)이 그 장애를 $\Tor$ 하나로 지목해 주었고, 이것은 base 쪽 module이 finitely generated이기 때문에 $B$ 위에서 finitely generated이다. 남는 문제는 한 점에서 얻은 소멸을 근방 전체로 퍼뜨리는 일이며, 이를 위하여 열림을 확인하는 위상적 판정과 국소 판정법의 ideal 형태를 준비한다.
-
-::: 보조정리 20
-Noetherian ring $A$에 대하여, $\Spec A$의 부분집합 $U$가 다음 두 조건을 만족한다 하자.
-
-1. $U$는 generization에 대하여 닫혀 있다. 즉 $\mathfrak{q}\in U$이고 $\mathfrak{q}'\subseteq \mathfrak{q}$이면 $\mathfrak{q}'\in U$이다.
-2. 임의의 $\mathfrak{q}\in U$에 대하여, $U\cap V(\mathfrak{q})$는 $V(\mathfrak{q})$의 공집합이 아닌 열린집합을 포함한다.
-
-그럼 $U$는 $\Spec A$의 열린집합이다.
-:::
-::: 증명
-$Z=\Spec A\setminus U$가 닫혀 있음을 보이면 된다. $\Spec A$는 Noetherian이므로 ([§스킴의 위상구조, ⁋정의 14](/ko/math/scheme_theory/topology_of_schemes#def14)) [\[위상수학\] §차원, ⁋명제 13](/ko/math/topology/dimension#prop13)에 의하여 $\overline{Z}$ 또한 Noetherian이고 유한히 많은 irreducible component $Y_1,\ldots, Y_m$을 갖는다.
-
-우선 각각의 $i$에 대하여 $Y_i=\overline{Z\cap Y_i}$이다. 실제로 $Z\subseteq \overline{Z}=\bigcup_jY_j$로부터 $Z=\bigcup_j(Z\cap Y_j)$이고, 유한 합집합은 closure와 교환하므로 $\overline{Z}=\bigcup_j\overline{Z\cap Y_j}$이다. 그럼 $Y_i$가 irreducible이므로 어떤 $j$에 대하여 $Y_i\subseteq \overline{Z\cap Y_j}\subseteq Y_j$이고, component의 극대성으로 $i=j$이므로 원하는 등식을 얻는다.
-
-이제 $Y_i$는 $\Spec A$의 irreducible closed subset이므로 generic point $\eta_i$를 가지며 ([§스펙트럼, ⁋명제 16](/ko/math/scheme_theory/spectrums#prop16)), 따라서 $Y_i=V(\eta_i)$이다. 만일 $\eta_i\in U$라면 두 번째 조건에 의하여 $U\cap Y_i$가 $Y_i$의 공집합이 아닌 열린집합 $V$를 포함하고, 그럼 $Z\cap Y_i\subseteq Y_i\setminus V$이므로 $\overline{Z\cap Y_i}\subseteq Y_i\setminus V\subsetneq Y_i$가 되어 위의 등식에 모순이다. 따라서 $\eta_i\in Z$이다.
-
-한편 첫 번째 조건은 $Z$가 specialization에 대하여 닫혀 있다는 것과 같으므로 $Y_i=\overline{\{\eta_i\}}\subseteq Z$이고, 이것이 각각의 $i$에 대하여 성립하므로 $\overline{Z}=\bigcup_iY_i\subseteq Z$이다. 곧 $Z$는 닫혀 있다.
-:::
-
-::: 보조정리 21
-Noetherian local ring $(A,\mathfrak{m})$을 고정하고, $(E,\mathfrak{n})$이 $\mathfrak{m}E\subseteq \mathfrak{n}$를 만족하는 Noetherian local $A$-algebra, $M$이 finitely generated $E$-module이라 하자. 그럼 $\mathfrak{m}$에 포함되는 임의의 ideal $\mathfrak{a}$에 대하여, $M$이 flat $A$-module인 것과 다음 두 조건이 동시에 성립하는 것은 서로 동치이다.
-
-1. $M/\mathfrak{a}M$이 flat $A/\mathfrak{a}$-module이다.
-2. $\Tor_1^A(A/\mathfrak{a}, M)=0$이다.
-:::
-::: 증명
-$M$이 flat $A$-module이라 하자. 그럼 두 번째 조건은 [\[가환대수학\] §평탄성, ⁋명제 1](/ko/math/commutative_algebra/flatness#prop1)의 내용이고, 첫 번째 조건은 임의의 $A/\mathfrak{a}$-module $N$에 대하여
-
-$$(M/\mathfrak{a}M)\otimes_{A/\mathfrak{a}}N\cong (M\otimes_AA/\mathfrak{a})\otimes_{A/\mathfrak{a}}N\cong M\otimes_AN$$
-
-이 성립하는 것으로부터 나온다.
-
-역으로 두 조건을 가정하자. $F$가 free $A$-module이 되도록 exact sequence
-
-$$0 \longrightarrow K \longrightarrow F \longrightarrow M \longrightarrow 0$$
-
-을 택하면, 두 번째 조건과 $\Tor$의 long exact sequence로부터
-
-$$0 \longrightarrow K/\mathfrak{a}K \longrightarrow F/\mathfrak{a}F \longrightarrow M/\mathfrak{a}M \longrightarrow 0$$
-
-이 exact이다. 이는 $A/\mathfrak{a}$-module의 exact sequence이고 첫 번째 조건에 의하여 $M/\mathfrak{a}M$이 $A/\mathfrak{a}$-flat이므로, $\kappa=A/\mathfrak{m}$에 대하여 $-\otimes_{A/\mathfrak{a}}\kappa$를 적용하여도 왼쪽 끝의 단사성이 보존된다. 한편 $\mathfrak{a}\subseteq \mathfrak{m}$이므로 임의의 $A$-module $N$에 대하여 $(N/\mathfrak{a}N)\otimes_{A/\mathfrak{a}}\kappa\cong N\otimes_A\kappa$이고, 따라서
-
-$$K\otimes_A\kappa \longrightarrow F\otimes_A\kappa$$
-
-가 단사이다. 그런데 $F$가 free이므로 $\Tor_1^A(\kappa, F)=0$이고, 위의 short exact sequence가 주는 long exact sequence에서
-
-$$\Tor_1^A(\kappa, M)=\ker(K\otimes_A\kappa \rightarrow F\otimes_A\kappa)=0$$
-
-을 얻는다. 이제 [\[가환대수학\] §평탄성과 국소화, ⁋정리 1](/ko/math/commutative_algebra/local_criterion_for_flatness#thm1)에 의하여 $M$은 flat $A$-module이다.
-:::
-
-두 번째 조건만으로는 부족하고 fiber 위에서의 flatness를 함께 요구한다는 것이 [보조정리 21](#lem21)의 요점이며, $\mathfrak{a}=\mathfrak{m}$인 경우가 [명제 17](#prop17)이다. 이제 이를 $\mathfrak{a}$가 $\mathfrak{m}$보다 작은 자리에 쓰면 한 점의 정보를 그 점을 포함하는 닫힌집합 전체로 옮길 수 있다.
-
-::: 명제 22
-Locally Noetherian scheme $Y$와 locally of finite type인 morphism $f: X \rightarrow Y$에 대하여, $\mathcal{O}_{X,x}$가 $\mathcal{O}_{Y,f(x)}$-flat인 점 $x\in X$들의 집합은 $X$의 열린집합이다.
-:::
-::: 증명
-문제가 $X$ 위에서 국소적이므로, Noetherian ring $A$와 finite type $A$-algebra $B$에 대하여 $Y=\Spec A$, $X=\Spec B$인 경우만 보면 충분하다. 이 때 $B$ 또한 Noetherian이다. ([\[가환대수학\] §기본 개념들, ⁋정리 12](/ko/math/commutative_algebra/basic_notions#thm12)) 대응하는 ring homomorphism을 $\varphi: A \rightarrow B$라 적고, $B_\mathfrak{q}$가 flat $A$-module인 $\mathfrak{q}\in \Spec B$들의 집합을 $U$라 두자. [보조정리 2](#lem2)의 증명에서 보았듯 $B_\mathfrak{q}$가 $A_{\varphi^{-1}(\mathfrak{q})}$-flat인 것과 $A$-flat인 것은 서로 동치이므로, $U$가 정확히 명제에서 문제 삼는 집합이다.
-
-우선 $U$는 generization에 대하여 닫혀 있다. $\mathfrak{q}\in U$이고 $\mathfrak{q}'\subseteq \mathfrak{q}$라 하면 임의의 $A$-module $N$에 대하여
-
-$$N\otimes_AB_{\mathfrak{q}'}\cong (N\otimes_AB_\mathfrak{q})\otimes_{B_\mathfrak{q}}B_{\mathfrak{q}'}$$
-
-이고, $-\otimes_AB_\mathfrak{q}$와 localization이 모두 exact이므로 $B_{\mathfrak{q}'}$ 또한 $A$-flat이다.
-
-이제 $\mathfrak{q}\in U$를 고정하고 $\mathfrak{p}=\varphi^{-1}(\mathfrak{q})$라 하자. Exact sequence $0 \rightarrow \mathfrak{p} \rightarrow A \rightarrow A/\mathfrak{p} \rightarrow 0$에 $-\otimes_AB$를 적용하여 얻는 long exact sequence에서 $\Tor_1^A(A, B)=0$이므로
-
-$$T=\Tor_1^A(A/\mathfrak{p}, B)=\ker(\mathfrak{p}\otimes_AB \rightarrow B)$$
-
-이다. $A$가 Noetherian이므로 $\mathfrak{p}$는 finitely generated $A$-module이고 따라서 $\mathfrak{p}\otimes_AB$는 finitely generated $B$-module이며, $B$가 Noetherian이므로 그 submodule인 $T$ 또한 finitely generated이다. 한편 localization이 exact이므로
-
-$$T_\mathfrak{q}=\Tor_1^A(A/\mathfrak{p}, B_\mathfrak{q})=\Tor_1^{A_\mathfrak{p}}(\kappa(\mathfrak{p}), B_\mathfrak{q})$$
-
-이고 $\mathfrak{q}\in U$이므로 이는 $0$이다. 그럼 [명제 19](#prop19)의 증명에서와 같은 논법으로 $T$의 유한한 generator들을 각각 죽이는 원소들을 곱하여, $T_b=0$을 만족하는 $b\in B\setminus \mathfrak{q}$를 얻는다.
-
-다음으로 $\overline{A}=A/\mathfrak{p}$와 $\overline{B}=B/\mathfrak{p}B$를 생각하자. $\overline{A}$는 Noetherian integral domain이고 $\overline{B}$는 finite type $\overline{A}$-algebra이므로 [명제 9](#prop9)에 의하여 $\Spec \overline{A}$의 공집합이 아닌 열린집합 위에서 $\Spec \overline{B} \rightarrow \Spec \overline{A}$가 flat이고, 공집합이 아닌 열린집합은 기본 열린집합을 포함하므로 [보조정리 2](#lem2)와 합쳐 $\overline{B}_a$가 $\overline{A}_a$-flat이도록 하는 $a\in A\setminus \mathfrak{p}$를 얻는다.
-
-이제 $a$를 $\varphi$를 통해 $B$의 원소로 보고
-
-$$W=V(\mathfrak{q})\cap D(a)\cap D(b)$$
-
-라 두자. $a\notin \mathfrak{p}$와 $\mathfrak{p}=\varphi^{-1}(\mathfrak{q})$로부터 $a\notin \mathfrak{q}$이고 $b\notin \mathfrak{q}$이므로, $W$는 $\mathfrak{q}$를 포함하는 $V(\mathfrak{q})$의 공집합이 아닌 열린집합이다. 따라서 $W\subseteq U$임을 보이면 [보조정리 20](#lem20)으로부터 $U$가 열린집합임을 얻는다.
-
-$\mathfrak{Q}\in W$를 택하고 $\mathfrak{r}=\varphi^{-1}(\mathfrak{Q})$라 하자. $\mathfrak{Q}\supseteq \mathfrak{q}$이므로 $\mathfrak{r}\supseteq \mathfrak{p}$이다. 우선 $b\notin \mathfrak{Q}$이고 $T_b=0$이므로 $T_\mathfrak{Q}=0$, 곧
-
-$$\Tor_1^{A_\mathfrak{r}}(A_\mathfrak{r}/\mathfrak{p}A_\mathfrak{r}, B_\mathfrak{Q})=0$$
-
-이다. 또 $a\notin \mathfrak{Q}$이므로 $B_\mathfrak{Q}/\mathfrak{p}B_\mathfrak{Q}$는 $\overline{B}_a$의 localization이고, 따라서 generization에 대한 위의 논법으로 $\overline{A}_a$-flat이며, 이것이 $A_\mathfrak{r}/\mathfrak{p}A_\mathfrak{r}$-module이므로 그 위에서도 flat이다. 이제 [보조정리 21](#lem21)을 $A_\mathfrak{r}$과 $E=M=B_\mathfrak{Q}$, 그리고 $\mathfrak{a}=\mathfrak{p}A_\mathfrak{r}$에 적용하면 $B_\mathfrak{Q}$가 $A_\mathfrak{r}$-flat, 곧 $A$-flat이므로 $\mathfrak{Q}\in U$이다.
-:::
-
-[명제 22](#prop22)는 $Y$에 Noetherian 조건을 걸지 않고 $f$가 locally of finite presentation이기만 하여도 성립한다. 유한 표시로 주어진 자료는 언제나 $\mathbb{Z}$ 위의 finite type ring에서 온 유한한 부분자료 위에 이미 정의되어 있고 한 점에서의 flatness 또한 그러한 유한 단계로 내려오므로, 문제가 위의 Noetherian 상황으로 환원되기 때문이다. 이 환원에 필요한 극한 논증은 이 글에서 다루지 않는다.
+한편 [명제 22](#prop22)의 앞뒤를 뒤집으면 lower semicontinuity가 나온다. $A$가 Noetherian이면 $M$은 유한한 presentation $A^m\overset{\psi}{\rightarrow}A^n \rightarrow M \rightarrow 0$을 가지고 tensor product가 right exact이므로 $\mu(\mathfrak{p})=n-\rank(\psi\otimes\kappa(\mathfrak{p}))$이며, 따라서 [명제 22](#prop22)은 행렬 $\psi$의 rank가 lower semicontinuous라는 것과 같은 내용이다. 곧 $\mu$가 튀어오르는 닫힌집합은 $\psi$의 minor가 소멸하는 자리로 명시되며, 이 minor들이 생성하는 ideal이 [\[가환대수학\] §Fitting 아이디얼, ⁋정의 2](/ko/math/commutative_algebra/fitting_ideals#def2)의 Fitting ideal이다.
 
 ---
 

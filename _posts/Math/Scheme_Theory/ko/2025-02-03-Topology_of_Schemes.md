@@ -5,6 +5,7 @@ excerpt: "Generic point와 Zariski topology, irreducible component"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/topology_of_schemes
+drift_needed: true
 sidebar: 
     nav: "scheme_theory-ko"
 
@@ -39,7 +40,7 @@ $$\cl(\{\mathfrak{m}\})=ZI(\{\mathfrak{m}\})=ZIZ(\mathfrak{m})=Z(\mathfrak{m})=\
 
 논리 전개의 편의상 $f$가 prime element여서, $f$가 생성하는 ideal $\mathfrak{p}_f=(f)$가 prime ideal이라 하자. 그럼 $\mathfrak{p}_f$는 우선 정의에 의해 $\mathbb{A}^n$의 (closed일 필요는 없는) 점이며, 바로 이 점이 $f$가 정의하는 closed subscheme의 generic point이다. 이 점은 $Z(f)$의 대부분의 정보를 담고 있는데, 가령 $Z(f)$에 포함된 (classical한) 점들을 얻기 위해서는 $\mathfrak{p}_f$에 closure를 취하여 $Z(f)$를 얻은 후 maximal ideal들만 택하면 되고, 대수적으로는 $\mathfrak{p}_f$를 포함하는 maximal ideal들을 모두 가져오면 된다. 
 
-이 논증은 일반적인 $A$의 ideal $\mathfrak{a}$에 대해서도 확장된다. 즉, $Z(\mathfrak{a})$의 irreducible component들은 $\mathfrak{a}$를 포함하는 minimal prime ideal들에 일대일로 대응한다. ([\[가환대수학\] §으뜸분해, ⁋정리 3](/ko/math/commutative_algebra/primary_decomposition#thm3)) 이 때 각각의 minimal prime ideal들이 해당 component의 generic point에 대응되며 따라서 일반적인 경우도 component별로 위에서의 직관을 그대로 가져온 것이라 생각할 수 있다. 
+이 논증은 일반적인 $A$의 ideal $\mathfrak{a}$에 대해서도 확장된다. $Z(\mathfrak{a})$는 위상공간으로서 $\Spec (A/\mathfrak{a})$와 homeomorphic하므로 ([§스펙트럼, ⁋명제 9](/ko/math/scheme_theory/spectrums#prop9)), [§스펙트럼, ⁋따름정리 17](/ko/math/scheme_theory/spectrums#cor17)에 의하여 $Z(\mathfrak{a})$의 irreducible component들은 $\mathfrak{a}$를 포함하는 minimal prime ideal들에 일대일로 대응한다. 이 때 각각의 minimal prime ideal들이 해당 component의 generic point에 대응되며 따라서 일반적인 경우도 component별로 위에서의 직관을 그대로 가져온 것이라 생각할 수 있다. 
 
 ## 스킴의 위상적 성질들
 
@@ -58,7 +59,7 @@ Scheme $(X,\mathcal{O}_X)$가 주어졌다 하자. 만일 $X$가 위상공간으
 Irreducibility의 경우 다음 예시들을 보자. 
 
 ::: 예시 5
-임의의 integral domain $A$에 대하여, $\Spec A$는 항상 irreducible이다. Generic point $\{0\}$을 생각하면, $\{0\}$를 포함하는 닫힌집합은 오직 $\Spec A$ 자신뿐이어야 하므로, $\Spec A$를 두 개의 proper closed subset의 합집합으로 나타내는 것이 불가능하기 때문이다. 따라서 $A=\mathbb{K}[\x_0,\ldots, \x_n]$으로 두면 affine $n$-space $\mathbb{A}_\mathbb{K}^n$은 irreducible인 것을 안다. 그럼 projective space $\mathbb{P}^n_\mathbb{K}$는 irreducible open subset들 $D_+(\x_i)$을 가지므로 [\[위상수학\] §차원, ⁋명제 8](/ko/math/topology/dimension#prop8)에 의해 $\mathbb{P}^n_\mathbb{K}$ 또한 irreducible이다. 
+임의의 integral domain $A$에 대하여, $\Spec A$는 항상 irreducible이다. Generic point $\{0\}$을 생각하면, $\{0\}$를 포함하는 닫힌집합은 오직 $\Spec A$ 자신뿐이어야 하므로, $\Spec A$를 두 개의 proper closed subset의 합집합으로 나타내는 것이 불가능하기 때문이다. 따라서 $A=\mathbb{K}[\x_1,\ldots, \x_n]$으로 두면 affine $n$-space $\mathbb{A}_\mathbb{K}^n$은 irreducible인 것을 안다. 그럼 projective space $\mathbb{P}^n_\mathbb{K}$는 $\mathbb{A}^n_\mathbb{K}$와 isomorphic한 열린집합들 $D_+(\x_i)$로 덮이고, 임의의 $i,j$에 대하여 $D_+(\x_i)\cap D_+(\x_j)=D_+(\x_i\x_j)$는 가령 $\x_i\x_j$를 포함하지 않는 prime ideal $(0)$을 원소로 가져 공집합이 아니므로, [\[위상수학\] §차원, ⁋명제 8](/ko/math/topology/dimension#prop8)에 의해 $\mathbb{P}^n_\mathbb{K}$ 또한 irreducible이다. 
 
 거꾸로 affine scheme $\Spec A$의 임의의 irreducible closed set $Z$는 항상 generic point $I(Z)$를 갖는다. ([§스펙트럼, ⁋명제 16](/ko/math/scheme_theory/spectrums#prop16)) 
 :::
@@ -82,7 +83,7 @@ $$Z(\x\y)=\Spec \frac{\mathbb{K}[\x,\y]}{(\x\y)}$$
 
 {% diagram Math/Scheme_Theory/Topology_of_Schemes-1.svg width="21.87em" alt="counterexamples" %}
 
-이들은 generic point의 관점에서도 설명할 수 있다. 앞서 우리는 함수 $f$가 정의하는 generic point는 $f$가 정의하는 ideal 그 자체라고 하였으며, 따라서, 예를 들어 $y$축을 나타내는 ideal $(\x)$가 바로 $y$축의 generic point이며, 비슷하게 $(\y)$는 $x$축을 나타내는 generic point이다. 문제는 위에서 살펴본 $Z(\x\y)$를 나타내는 ideal이 없다는 것으로, 두 축을 합집합하여 얻어지는 대상에 해당하는 ideal은 이들 두 ideal의 교집합에 포함되어야 할테지만 이 두 ideal의 교집합은 $(0)$ 뿐이며, 이는 전체 ring $\mathbb{K}[\x,\y]/(\x\y)$의 prime ideal이 <em-ko>아니다</em-ko>, 즉, $\mathbb{K}[\x,\y]/(\x\y)$는 integral domain이 아니며, 이는 $\x\y=0$임에도 $\x,\y\neq 0$이기 때문이다. 이 때 zero-divisor의 역할을 해 주는 $\x,\y$들은 각각 서로 다른 component에서 $0$이 되는 함수들로, 더 복잡한 scheme의 경우에서도 약간의 계산은 추가되지만 그 정신은 같은 원리로 나타나게 된다. 
+이들은 generic point의 관점에서도 설명할 수 있다. 앞서 우리는 함수 $f$가 정의하는 generic point는 $f$가 정의하는 ideal 그 자체라고 하였으며, 따라서, 예를 들어 $y$축을 나타내는 ideal $(\x)$가 바로 $y$축의 generic point이며, 비슷하게 $(\y)$는 $x$축을 나타내는 generic point이다. 문제는 위에서 살펴본 $Z(\x\y)$를 generic point로 대표하는 prime ideal이 없다는 것으로, 두 축을 합집합하여 얻어지는 대상에 해당하는 ideal은 이들 두 ideal의 교집합에 포함되어야 할테지만 이 두 ideal의 교집합은 $(0)$ 뿐이며, 이는 전체 ring $\mathbb{K}[\x,\y]/(\x\y)$의 prime ideal이 <em-ko>아니다</em-ko>, 즉, $\mathbb{K}[\x,\y]/(\x\y)$는 integral domain이 아니며, 이는 $\x\y=0$임에도 $\x,\y\neq 0$이기 때문이다. 이 때 zero-divisor의 역할을 해 주는 $\x,\y$들은 각각 서로 다른 component에서 $0$이 되는 함수들로, 더 복잡한 scheme의 경우에서도 약간의 계산은 추가되지만 그 정신은 같은 원리로 나타나게 된다. 
 :::
 
 우리는 [\[위상수학\] §차원, ⁋정의 11](/ko/math/topology/dimension#def11)에서 위상공간이 Noetherian이라는 개념을 정의하였다. 이를 scheme의 언어로 옮겨올 때에는 약간의 주의가 필요한데, 우선 affine scheme에 대해서는 다음 명제가 성립한다.
@@ -114,7 +115,7 @@ $$Z(\sqrt{\mathfrak{a}_k})=Z(\sqrt{\mathfrak{a}_{k+1}})=\cdots$$
 이다. 이제 [§스펙트럼, ⁋명제 5](/ko/math/scheme_theory/spectrums#prop5)로부터 원하는 결과를 얻는다.
 :::
 
-그러나 일반적으로 그 역은 성립하지 않는다. 즉 어떠한 affine scheme이 주어졌을 때, 이 scheme이 위상공간으로서 Noetherian이더라도 이를 정의하는 ring은 Noetherian이 아닐 수 있다. 
+그러나 일반적으로 그 역은 성립하지 않는다. 즉 어떠한 affine scheme이 주어졌을 때, 이 scheme이 위상공간으로서 Noetherian이더라도 이를 정의하는 ring은 Noetherian이 아닐 수 있다. 가령 $\mathfrak{m}=(\x_1,\x_2,\ldots)$에 대하여 $A=\mathbb{K}[\x_1,\x_2,\ldots]/\mathfrak{m}^2$이라 두면, $A$의 임의의 prime ideal은 nilpotent element들을 모두 포함하므로 $\mathfrak{m}/\mathfrak{m}^2$을 포함하며, 이 ideal에 의한 quotient는 field $\mathbb{K}$이다. 즉 $\Spec A$는 한 점만을 갖는 Noetherian space이다. 그러나 $A$에서 $\mathfrak{m}/\mathfrak{m}^2$의 제곱은 $0$이므로 이 ideal을 생성하는 것은 $\mathbb{K}$-벡터공간으로서 생성하는 것과 같고, $\mathfrak{m}/\mathfrak{m}^2$은 무한차원이므로 이는 finitely generated ideal이 아니다. 따라서 $A$는 Noetherian ring이 아니다. 
 
 ## 국소성
 
@@ -171,7 +172,7 @@ $$\mathfrak{p}\in D(f)\subseteq U\cap V$$
 
 $$\mathfrak{q}\in D(g)\subseteq D(f)\cap V$$
 
-이도록 할 수 있다. 이제 $\Spec B$의 open subscheme $D(g)$와, $\Spec A$의 open subscheme $D(i(g))$이 서로 같다는 것을 확인하면 된다. 
+이도록 할 수 있다. 이제 $W=D(g)$가 $U$에서도 principal open subset임을 확인하면 된다. 우선 $D(g)\subseteq D(f)$이고 inclusion $D(f)\hookrightarrow V$가 $i$의 spectrum이므로, prime ideal의 preimage를 계산하면 $\Spec A_f$의 열린집합으로서 $D(g)=D(i(g))$이다. 이제 $a\in A$와 $m\geq 0$에 대하여 $i(g)=a/f^m$으로 쓰면, $f$가 $A_f$의 unit이므로 $D(i(g))=D(a)$이고, isomorphism $\Spec A_f\cong D(f)$는 $D(a)$를 $D_A(a)\cap D_A(f)=D_A(af)$로 옮긴다. 즉 $W=D_A(af)$는 $U$에서 principal이고 동시에 $V$에서 $D(g)$로서 principal이다. 
 :::
 
 ::: 보조정리 12
@@ -206,7 +207,7 @@ Ring $A$가 Noetherian인 것은 local property이고, 따라서 affine-local pr
 ::: 증명
 [정의 8](#def8)의 두 조건을 증명해야 한다. 
 
-첫째 조건은 [\[가환대수학\] §국소화, ⁋따름정리 9](/ko/math/commutative_algebra/localization#cor9)로부터 얻어지며, 혹은 [\[위상수학\] §차원, ⁋명제 13](/ko/math/topology/dimension#prop13)의 첫째 결과를 사용해도 충분하다.
+첫째 조건은 [\[가환대수학\] §국소화, ⁋따름정리 9](/ko/math/commutative_algebra/localization#cor9)로부터 얻어진다.
 
 둘째 조건을 보자. $A=(f_1,\ldots, f_r)$이고 각 $A_{f_i}$가 Noetherian이라 가정한 뒤, $A$의 임의의 ideal $\mathfrak{a}$가 finitely generated임을 보이면 된다. 각 $i$에 대하여 $A_{f_i}$가 Noetherian이므로 ideal $\mathfrak{a}A_{f_i}$는 finitely generated이며, generator들의 분모를 없애면 $\mathfrak{a}$의 원소 $a_{i1},\ldots, a_{in_i}$이 존재하여 이들의 상이 $\mathfrak{a}A_{f_i}$를 생성하게 할 수 있다. 이제 이 유한개의 원소들 전체가 생성하는 ideal을 $\mathfrak{b}\subseteq \mathfrak{a}$라 하면, 구성에 의하여 모든 $i$에 대해 $\mathfrak{b}A_{f_i}=\mathfrak{a}A_{f_i}$이다.
 

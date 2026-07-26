@@ -27,7 +27,7 @@ Scheme에서 이러한 교차점의 degree를 어떻게 담아내는지를 살�
 
 $$(\y-\x)+(\y)=(\x,\y),\qquad (\y-\x^2)+(\y)=(\x^2,\y)$$
 
-이므로, 첫 번째 경우와 달리 두 번째 경우에는 $\mathbb{A}_\mathbb{K}^2$의 coordinate ring $\mathbb{K}[\x,\y]$에 남는 nilpotent element $\bar{\x}$가 존재한다. 사실
+이므로, 첫 번째 경우와 달리 두 번째 경우에는 $\mathbb{K}[\x,\y]/(\x^2, \y)$에 남는 nilpotent element $\bar{\x}$가 존재한다. 사실
 
 $$\frac{\mathbb{K}[\x,\y]}{(\x^2,\y)} \cong \frac{\mathbb{K}[\epsilon]}{(\epsilon^2)}$$
 
@@ -44,7 +44,7 @@ $$\frac{\mathbb{K}[\x,\y]}{(\x^2,\y)} \cong \frac{\mathbb{K}[\epsilon]}{(\epsilo
 이 관점에서 regular function, 즉 $\mathbb{K}[\epsilon]/(\epsilon^2)$의 원소 $a+b\epsilon$은 두 정보를 동시에 담는다. $a$는 그 점에서의 (보통 의미의) 함숫값이고, $b$는 바로 그 tangent 방향을 따라 함수가 어떻게 변하는지를 나타내는 좌표, 다시 말해 그 점에서의 일차 미분 정보이다. 그래서 두 함수가 그 점에서 같은 값 $a$를 갖더라도 $b$가 다르면 서로 다른 함수이다. 예컨대 $a+b\epsilon$과 $a+b'\epsilon$( $b\ne b'$ )은 같은 점에서 같은 값을 갖지만 tangent 방향으로의 거동이 다르므로 이 공간 위에서는 구별되는 regular function이다. 두 함수가 비로소 같아지는 것은 값 $a$뿐 아니라 tangent 좌표 $b$까지 일치할 때, 곧 점에서의 값과 일차 미분값을 둘 다 공유할 때뿐이다. 이렇게 점에 tangent 방향의 두께를 붙여 보는 것이 *fat point*의 본질이며, 이 두께가 남아 있다는 사실이 교차 multiplicity를 비롯한 infinitesimal 정보를 담아내는 열쇠가 된다.
 :::
 
-Classical variety의 또 다른 근본적 제약은 base change 혹은 fiber product가 자연스럽지 않다는 것이다. 이는 사소해 보이는 곳에서부터 이미 드러나는데, 가령 두 projective space의 곱 $\mathbb{P}^n\times \mathbb{P}^m$이 projective variety가 된다는 것조차 우리는 Segre embedding 등을 사용해서 손수 (더 큰) projective space 안에 넣어주었어야만 하는 일이 일어났다. 이렇듯 가장 단순한 공간 두 개의 곱조차 정의하기 위해 추가적인 machinery가 필요하다는 점은 우리가 그 동안 그렇게 좋은 세상에서 작업을 하지 않았음을 보여주는 증거이다. 
+Classical variety의 또 다른 근본적 제약은 base change 혹은 fiber product가 자연스럽지 않다는 것이다. 이는 사소해 보이는 곳에서부터 이미 드러나는데, 가령 두 projective space의 곱 $\mathbb{P}^n\times \mathbb{P}^m$이 projective variety가 된다는 것조차 우리는 Segre embedding 등을 사용해서 손수 (더 큰) projective space 안에 넣어서 보여줬어야 했다. 이렇듯 가장 단순한 공간 두 개의 곱을 다루기 위해 추가적인 machinery가 필요하다는 점은 우리가 그 동안 그렇게 좋은 세상에서 작업을 하지 않았음을 보여주는 증거이다. 
 
 ## 스킴
 
@@ -52,10 +52,12 @@ Scheme theory는 이 모든 문제를 해결하기 위해 탄생했다. Scheme�
 
 구체적으로, 위에서 우리는 classical variety가 점을 maximal ideal로만 보고 radical ideal을 취해 nilpotent를 모두 버렸다는 한계를 살펴보고, 이들을 살려 fat point로 보면 손실되는 정보가 없어진다는 것을 보았다. Scheme은 이 수정을 전체에 걸쳐 체계화한 것으로, 여기에서 우리는 점을 maximal ideal이 아니라 <em-ko>모든 prime ideal</em-ko>로 삼고, 각 점 위에 local ring을 올려 함수를 그 section으로 정의한다. 
 
-그 결과로 나타나는 것 중 가장 비직관적인 것 중 하나는 generic point의 존재이다. 예를 들어 $\Spec \mathbb{K}[\x,\y]$에서는 closed point $(\x-a,\y-b)$ 외에도 $(\x)$, $(\y)$, 그리고 $(0)$와 같은 non-closed point들이 존재한다. 이 가운데 어떤 점 $\mathfrak{p}\in\Spec A$의 closure $\overline{\{\mathfrak{p}\}}=V(\mathfrak{p})$이 irreducible component가 될 때, $\mathfrak{p}$를 그 component의 *generic point*라 부르며, $A$가 integral domain이면 $(0)$이 $\Spec A$ 전체의 generic point가 된다. 
+그 결과로 나타나는 것 중 가장 비직관적인 것 중 하나는 generic point의 존재이다. 예를 들어 $\Spec \mathbb{K}[\x,\y]$에서는 closed point $(\x-a,\y-b)$ 외에도 $(\x)$, $(\y)$, 그리고 $(0)$와 같은 non-closed point들이 존재한다. 이 가운데 어떤 점 $\mathfrak{p}\in\Spec A$의 closure $\overline{\{\mathfrak{p}\}}=V(\mathfrak{p})$이 irreducible closed subset이 될 때, $\mathfrak{p}$를 그 irreducible closed subset의 *generic point*라 부르며, $A$가 integral domain이면 $(0)$이 $\Spec A$ 전체의 generic point가 된다. 
 
 ::: 예시 3
-$\Spec \mathbb{Z}[\x]$를 생각하자. 이 scheme은 $\mathbb{Z}$ 위에서 정의되는 직선 $\mathbb{A}_{\mathbb{Z}}^1$에 해당한다. 이 공간의 점들은 다음과 같이 분류된다. 먼저 $(0)$는 전체 공간의 generic point이다. $(\x)$는 $x$-축 위의 generic point로, 모든 fiber 위에서 $x=0$인 직선의 보편적인 성질을 담고 있다. $(p)$는 소수 $p$에 해당하는 vertical fiber의 generic point이며, $(p,\x)$는 그 fiber 위의 원점이라는 closed point이다. 이처럼 non-closed point들은 geometric object의 보편적이고 relative한 성질을 포착하는 데 필수적이다.
+$\Spec \mathbb{Z}[\x]$를 생각하자. 이 scheme은 $\mathbb{Z}$ 위에서 정의되는 직선 $\mathbb{A}_{\mathbb{Z}}^1$에 해당한다. 이 예시에서 우리는 이 공간의 몇몇 점들을 살펴본다. 
+
+먼저 $(0)$는 전체 공간의 generic point이다. $(\x)$는 $x$-축 위의 generic point로, 모든 fiber 위에서 $x=0$인 직선의 보편적인 성질을 담고 있다. $(p)$는 소수 $p$에 해당하는 vertical fiber의 generic point이며, $(p,\x)$는 그 fiber 위의 원점이라는 closed point이다. 이처럼 non-closed point들은 geometric object의 보편적이고 relative한 성질을 포착하는 데 필수적이다.
 :::
 
 즉, 직관적으로 generic point는 classical에서 prime ideal이 정의하던 irreducible subvariety를 **하나의 점으로 대표**시킨 것으로, 그 점의 닫힘이 바로 원래의 subvariety를 복원한다.
@@ -68,7 +70,7 @@ Scheme이 nilpotent를 허용한다는 점은 이미 [예시 2](#ex2)의 fat poi
 
 Scheme의 세계에서는 이 base $\Spec\mathbb{K}$를 임의의 scheme $S$로 바꾸어, structure morphism $X\rightarrow S$를 갖는 *$S$-scheme*을 자연스럽게 다룬다. 이 *relative viewpoint* 아래에서는 임의의 base 위에서 family를 논할 수 있으며, 위에서 만만치 않았던 곱조차 base 위에서의 fiber product $X\times_S Y$로 깔끔하게 정의되며, 위에서의 product는 $S=\Spec \mathbb{K}$인 경우에 불과하다. 
 
-한편 이 관점은 [\[범주론\] §표현가능한 함자, ⁋정리 3](/ko/math/category_theory/representable_functors#thm3)와도 맞아떨어지는데, scheme $X$를 점들의 집합 대신, *functor of points* $h_X$로 보아, scheme을 다른 모든 scheme으로부터 morphism을 받는 functor
+한편 이 관점은 [\[범주론\] §표현가능한 함자, ⁋정리 4](/ko/math/category_theory/representable_functors#thm4)와도 맞아떨어지는데, scheme $X$를 점들의 집합 대신, *functor of points* $h_X$로 보아, scheme을 다른 모든 scheme으로부터 morphism을 받는 functor
 
 $$h_X:(\Sch_{/S})^{\op}\rightarrow\Set,\qquad h_X(T)=\Hom_S(T,X)$$
 
@@ -77,7 +79,7 @@ $$h_X:(\Sch_{/S})^{\op}\rightarrow\Set,\qquad h_X(T)=\Hom_S(T,X)$$
 Classical variety $V$ 위의 $\mathbb{K}$-rational point는 단순히 $\mathbb{K}$-값을 갖는 좌표 $(a_1,\dotsc,a_n)$의 집합으로 이해되었다. 이는 scheme의 언어로는 morphism $\Spec \mathbb{K}\rightarrow V$에 해당한다. Functor of points는 이 관점을 확장하여, $V$의 $T$-valued point를 임의의 scheme $T$로부터의 morphism으로 정의한다.
 
 ::: 예시 4
-Classical variety $V\subseteq\mathbb{A}_\mathbb{K}^n$의 $\mathbb{K}$-rational points의 집합은 $V(\mathbb{K})=\Hom_\mathbb{K}(\Spec \mathbb{K},V)$이다. 이는 functor of points $h_V$를 base scheme $T=\Spec \mathbb{K}$에 대하여 평가한 값 $h_V(\Spec \mathbb{K})$에 해당한다. 그러나 $T=\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$를 대입하면, $h_V(T)$는 $V$의 tangent bundle 위의 점들을 parameterize하며, 이는 classical $\mathbb{K}$-rational points만으로는 볼 수 없는 풍부한 geometric information을 제공한다.
+Classical variety $V\subseteq\mathbb{A}_\mathbb{K}^n$의 $\mathbb{K}$-rational points의 집합은 $V(\mathbb{K})=\Hom_\mathbb{K}(\Spec \mathbb{K},V)$이다. 이는 functor of points $h_V$를 base scheme $T=\Spec \mathbb{K}$에 대하여 평가한 값 $h_V(\Spec \mathbb{K})$에 해당한다. 그러나 $T=\Spec \mathbb{K}[\epsilon]/(\epsilon^2)$를 대입하면, $h_V(T)$는 $V$의 $\mathbb{K}$-point에서의 tangent vector들을 parameterize하게 된다.
 :::
 
 특히 projective line $\mathbb{P}_\mathbb{K}^1$의 경우, functor of points를 통해 infinitesimal structure가 어떻게 드러나는지 명확히 볼 수 있다. $\mathbb{P}_\mathbb{K}^1$은 그 자체로 homogeneous coordinate를 갖는 scheme이므로, 임의의 $\mathbb{K}$-algebra $R$에 대하여 $\mathbb{P}_\mathbb{K}^1(R)$는 $R$ 위의 projective line 위의 점들로 정의된다.

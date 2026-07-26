@@ -5,6 +5,7 @@ excerpt: "Affine, finite, finite type 등 scheme morphism의 기본 성질"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/properties_of_scheme_morphisms
+drift_needed: true
 sidebar: 
     nav: "scheme_theory-ko"
 
@@ -24,7 +25,7 @@ Scheme은 affine scheme으로부터 만들어진다. Scheme morphism의 성질 $
 
 $$\Hom_\Sch(X, \Spec B)\cong \Hom_\cRing(B, \Gamma(X, \mathcal{O}_X))$$
 
-를 통해 우리는 scheme morphism $X \rightarrow \Spec B$의 성질을 ring homomorphism $B \rightarrow \Gamma(X, \mathcal{O}_X)$의 성질을 통해 정의할 수 있다. 
+를 통해 우리는 언제나 target이 affine인 경우로 환원할 수 있다. 
 
 ## 준옹골사상과 준분리사상
 
@@ -82,7 +83,12 @@ Scheme morphism $\varphi: X \rightarrow Y$에 대하여 다음이 성립한다.
 ::: 증명
 1. $Y$의 임의의 affine open subset $V$가 주어졌다 하자. 그럼 [§스킴의 위상구조, ⁋보조정리 11](/ko/math/scheme_theory/topology_of_schemes#lem11)에 의하여 $V$와 $V_j$ 각각에서 principal open set이 되는 열린집합들로 $V\cap V_j$를 덮을 수 있고, 이를 모든 $j$에 대해 고려한 후 $V$의 quasi-compactness를 사용하면 이러한 것들 중 유한히 많은 것만 택할 수 있다. 이를 $V=\bigcup W_l$이라 하자.   
     한편 각각의 $j$에 대하여, $\varphi^{-1}(V_j)$는 quasi-compact이므로, 이를 유한히 많은 affine open subset들 $U_{jk}$들로 덮을 수 있고, 이제 $\varphi^{-1}(W_l)\cap U_{jk}$는 [§스펙트럼, ⁋명제 8](/ko/math/scheme_theory/spectrums#prop8)에 의해 $U_{jk}$의 principal open set이므로 $\varphi^{-1}(W_l)$ 각각을 affine open set들의 유한한 합집합으로 표현할 수 있고, 따라서 $\varphi^{-1}(V)$도 affine open set들의 유한한 합집합으로 표현할 수 있다. 이제 quasi-compact space의 유한한 합집합은 quasi-compact이므로 원하는 결과를 얻는다.
-2. 이 또한 첫째 결과와 마찬가지 방식으로, [§스킴의 위상구조, ⁋보조정리 11](/ko/math/scheme_theory/topology_of_schemes#lem11)를 사용하여 임의의 affine open subset $V=\Spec B$를 그 preimage가 quasi-separated인 principal open subset들로 덮은 후 증명을 하면 된다. 
+2. 우선 scheme $Z$가 quasi-separated인 것은 $Z$의 임의의 두 affine open subset의 교집합이 quasi-compact인 것과 동치이다. Affine scheme은 quasi-compact이므로 한쪽 방향은 자명하고, 거꾸로 $Z$의 임의의 quasi-compact open subset은 유한히 많은 affine open subset의 합집합이므로 두 quasi-compact open subset의 교집합은 유한히 많은 affine끼리의 교집합의 합집합이 되어 quasi-compact이기 때문이다.     
+    이제 첫째 결과의 증명에서와 같이 $V$의 유한한 covering $V=\bigcup_{l=1}^n W_l$을 택하여 각각의 $W_l$이 $V$에서도, 적당한 $V_{j(l)}$에서도 principal open subset이 되도록 하자. $\varphi^{-1}(V)$의 두 affine open subset $U_1,U_2$가 주어졌다 하면
+    
+    $$U_1\cap U_2=\bigcup_{l=1}^n\left(U_1\cap \varphi^{-1}(W_l)\right)\cap\left(U_2\cap \varphi^{-1}(W_l)\right)$$
+    
+    이다. 여기에서 $W_l$이 $V$의 principal open subset이므로 $U_1\cap \varphi^{-1}(W_l)$은 affine scheme $U_1$ 위에서 $W_l$을 정의하는 함수의 pullback이 정의하는 principal open set이고 ([§스펙트럼, ⁋명제 8](/ko/math/scheme_theory/spectrums#prop8)) 따라서 affine이며, $U_2$에 대해서도 마찬가지이다. 그런데 이들은 모두 $\varphi^{-1}(W_l)\subseteq \varphi^{-1}(V_{j(l)})$의 affine open subset이고 $\varphi^{-1}(V_{j(l)})$이 quasi-separated이므로, 위의 판정법에 의하여 각각의 교집합은 quasi-compact이다. 이상에서 $U_1\cap U_2$는 유한히 많은 quasi-compact set의 합집합이므로 quasi-compact이고, 다시 위의 판정법에 의하여 $\varphi^{-1}(V)$는 quasi-separated이다. 
 :::
 
 ## 아핀사상
@@ -180,9 +186,30 @@ $$(\varphi\vert_{U})^\sharp(V): \mathcal{O}_V(V) \rightarrow \mathcal{O}_U(U)$$
 이 finite type인 것이다. ([\[가환대수학\] §정수적 확장, ⁋정의 3](/ko/math/commutative_algebra/integral_extension#def3)) 
 :::
 
-역시 위와 마찬가지로, $V\cong \Spec B$라 하고 $U\cong\Spec A\subseteq \varphi^{-1}(V)$라 하자. 그럼 scheme morphism $\varphi\vert_U: U \rightarrow V$를 $\Spec A \rightarrow \Spec B$로 볼 수 있고, 이에 대응하는 ring homomorphism $B \rightarrow A$가 finite type일 것을 요구하는 것이다. 그럼 finite type morphism은 다음과 같이 정의된다.
+역시 위와 마찬가지로, $V\cong \Spec B$라 하고 $U\cong\Spec A\subseteq \varphi^{-1}(V)$라 하자. 그럼 scheme morphism $\varphi\vert_U: U \rightarrow V$를 $\Spec A \rightarrow \Spec B$로 볼 수 있고, 이에 대응하는 ring homomorphism $B \rightarrow A$가 finite type일 것을 요구하는 것이다.
 
-::: 정의 13
+[정의 12](#def12)는 $\varphi^{-1}(V)$의 <em-ko>모든</em-ko> affine open subset을 양화하므로, 이를 확인하기 위해서는 하나의 affine open covering만으로 충분해야 한다는 것을 따로 보여야 한다. 이는 다음 보조정리의 내용이다.
+
+::: 보조정리 13
+Scheme morphism $\varphi: W \rightarrow \Spec B$가 주어졌다 하고, $W$의 affine open covering $\{\Spec A_i\}$가 존재하여 각각의 $B \rightarrow A_i$가 finite type이라 하자. 그럼 $W$의 <em-ko>임의의</em-ko> affine open subset $U$에 대하여 $B \rightarrow \mathcal{O}_W(U)$ 또한 finite type이다. 
+:::
+::: 증명
+$W$의 affine open subset $\Spec R$에 대한 성질 $Q$를 
+
+> $B \rightarrow R$이 finite type이다.
+
+로 정의하고, $Q$가 [§스킴의 위상구조, ⁋정의 9](/ko/math/scheme_theory/topology_of_schemes#def9)의 affine-local property임을 보이자. 그럼 주어진 covering $\{\Spec A_i\}$가 $Q$를 만족하므로 [§스킴의 위상구조, ⁋보조정리 12](/ko/math/scheme_theory/topology_of_schemes#lem12)의 둘째 조건으로부터 원하는 결과를 얻는다.
+
+첫째 조건은 $B \rightarrow R$이 finite type일 때 $R$의 generator들에 $1/h$를 추가하면 $R_h$가 $B$-algebra로서 finitely generated가 되므로 자명하다. 둘째 조건을 위해 $R=(h_1,\ldots, h_m)$이고 각각의 $B \rightarrow R_{h_t}$가 finite type이라 하자. 각각의 $t$에 대하여 $R_{h_t}$를 $B$-algebra로서 생성하는 유한집합을 택한 후 분모를 없애면, $R$의 원소들 $x_{t1},\ldots, x_{tn_t}$가 존재하여 $R_{h_t}$가 $x_{tk}/1$들과 $1/h_t$에 의해 $B$-algebra로서 생성되도록 할 수 있다. 또 $1=\sum_{t=1}^ma_th_t$인 $a_t\in R$을 택하자. 이제 유한집합 $\{h_t\}\cup\{a_t\}\cup\{x_{tk}\}$가 생성하는 $R$의 $B$-subalgebra를 $R'$이라 하면 $R'$은 finite type $B$-algebra이므로 $R'=R$임을 보이면 충분하다. 임의의 $x\in R$에 대하여, $R_{h_t}$에서 $x/1$은 $x_{tk}/1$들과 $1/h_t$의 $B$-계수 다항식이므로 적당한 $r_t\in R'$과 $n_t\geq 0$에 대하여 $x/1=r_t/h_t^{n_t}$이고, 따라서 적당한 $N_t$에 대하여 $R$에서 $h_t^{N_t}(h_t^{n_t}x-r_t)=0$, 곧 $h_t^{N_t+n_t}x=h_t^{N_t}r_t\in R'$이다. $t$가 유한개이므로 공통의 $M$을 택하여 모든 $t$에 대해 $h_t^Mx\in R'$이도록 할 수 있다. 한편 $1=\sum_ta_th_t$에서 $a_t,h_t\in R'$이므로 $h_1,\ldots, h_m$은 $R'$의 unit ideal을 생성하고, 이 식의 양변을 충분히 큰 거듭제곱하면 $h_1^M,\ldots, h_m^M$ 또한 $R'$의 unit ideal을 생성함을 안다. 즉 $1=\sum_tc_th_t^M$인 $c_t\in R'$이 존재하고 따라서
+
+$$x=\sum_{t=1}^mc_t(h_t^Mx)\in R'$$
+
+이다. 
+:::
+
+그럼 finite type morphism은 다음과 같이 정의된다.
+
+::: 정의 14
 Scheme morphism $\varphi:X \rightarrow Y$가 *morphism of finite type<sub>유한형사상</sub>*이라는 것은 $\varphi$가 quasi-compact morphism locally of finite type인 것이다. 
 :::
 
@@ -190,16 +217,16 @@ Scheme morphism $\varphi:X \rightarrow Y$가 *morphism of finite type<sub>유한
 
 그럼 [\[가환대수학\] §정수적 확장, ⁋보조정리 4](/ko/math/commutative_algebra/integral_extension#lem4)에 의해 다음이 성립한다.
 
-::: 명제 14
+::: 명제 15
 Scheme morphism $\varphi:X \rightarrow Y$가 finite인 것은 $\varphi$가 integral morphism (locally) of finite type인 것과 동치이다. 
 :::
 ::: 증명
-한쪽 방향은 자명하다. 반대쪽 방향은 우선 $\varphi$가 integral이라는 가정으로부터 임의의 affine open subset $V\subseteq Y$에 대하여 $\varphi^{-1}(V)$가 $X$의 affine open subset임을 알고, 이렇게 얻어진 ring map에 [\[가환대수학\] §정수적 확장, ⁋보조정리 4](/ko/math/commutative_algebra/integral_extension#lem4)를 적용하면 된다. 
+우선 $\varphi$가 finite이라 하자. 임의의 affine open subset $V=\Spec B\subseteq Y$에 대하여 $\varphi^{-1}(V)=\Spec A$이고 $B \rightarrow A$가 finite이므로, [\[가환대수학\] §정수적 확장, ⁋보조정리 4](/ko/math/commutative_algebra/integral_extension#lem4)에 의하여 이는 integral이고 특히 finite type이다. 즉 $\varphi$는 integral이며, $\{\varphi^{-1}(V)\}$ 자신을 affine open covering으로 삼아 [보조정리 13](#lem13)을 적용하면 $\varphi^{-1}(V)$의 <em-ko>모든</em-ko> affine open subset $U$에 대해서도 $B \rightarrow \mathcal{O}_X(U)$가 finite type이므로 $\varphi$는 locally of finite type이다. 반대쪽 방향은 우선 $\varphi$가 integral이라는 가정으로부터 임의의 affine open subset $V\subseteq Y$에 대하여 $\varphi^{-1}(V)$가 $X$의 affine open subset임을 알고, 이렇게 얻어진 ring map에 [\[가환대수학\] §정수적 확장, ⁋보조정리 4](/ko/math/commutative_algebra/integral_extension#lem4)를 적용하면 된다. 
 :::
 
 위의 명제에서 $\varphi$는 integral morphism이므로 affine morphism이고, 따라서 quasi-compact morphism이므로 ([§스펙트럼, ⁋보조정리 12](/ko/math/scheme_theory/spectrums#lem12)) $\varphi$가 finite type이든, locally finite type이든 똑같은 가정이 된다. 
 
-::: 예시 15
+::: 예시 16
 이번 절에서 살펴본 morphism들의 예시를 살펴보자. Affine scheme들의 세상에서 이는 그저 [\[가환대수학\] §정수적 확장, ⁋정의 3](/ko/math/commutative_algebra/integral_extension#def3)의 예시들을 보는 것에 지나지 않는다. 이번 예시의 목적은 이들에 기하학적인 직관을 부여하는 것이다.
 
 우선 algebraically closed field $\mathbb{K}$에 대하여, ring map $\iota:\mathbb{K}[\x] \rightarrow \mathbb{K}[\x,\y]$를 생각하면 $\mathbb{K}[\x,\y]$는 $\mathbb{K}[\x]$-algebra로서 하나의 원소 $\y$에 의해 생성되므로 finite type ring homomorphism이지만, $\mathbb{K}[\x]$-module로서는 유한하게 생성되지 않으므로 finite ring homomorphism은 아니다. 
@@ -222,23 +249,23 @@ $$\Spec\phi: \Spec \frac{\mathbb{K}[\x,\y]}{(\x-\y^2)}\rightarrow \Spec \mathbb{
 
 {% diagram Math/Scheme_Theory/Properties_of_Scheme_Morphisms-2.svg width="25.48em" alt="finite_morphism" %}
 
-이 두 예시의 기하학적인 차이는 꽤나 명확하다. 첫 번째 예시의 경우, target의 한 점에서의 fiber가 무한집합인 반면 두 번째 예시의 경우 한 점에서의 fiber가 유한집합이다. 대수적으로 이는 target $\mathbb{A}_\mathbb{K}^1$의 임의의 점 $\mathfrak{p}=(\x-a)$를 가져왔을 때, 임의의 $\mathfrak{q}_b=(\x-a, \y-b)\in \mathbb{A}_\mathbb{K}^2$는 $(\Spec\iota)(\mathfrak{q}_b)=\mathfrak{p}$를 만족하는 반면, 두 번째 예시에서는 오직 두 개의 점 $\mathfrak{q}_+=(\x-a, \y-\sqrt{a})$와 $\mathfrak{q}_-=(\x-a, \y+\sqrt{a})$만이 $(\Spec\phi)(\mathfrak{q}_\pm)=\mathfrak{p}$를 만족하는 것으로 확인할 수 있다. 
+이 두 예시의 기하학적인 차이는 꽤나 명확하다. 첫 번째 예시의 경우, target의 한 점에서의 fiber가 무한집합인 반면 두 번째 예시의 경우 한 점에서의 fiber가 유한집합이다. 대수적으로 이는 target $\mathbb{A}_\mathbb{K}^1$의 임의의 점 $\mathfrak{p}=(\x-a)$를 가져왔을 때, 임의의 $\mathfrak{q}_b=(\x-a, \y-b)\in \mathbb{A}_\mathbb{K}^2$는 $(\Spec\iota)(\mathfrak{q}_b)=\mathfrak{p}$를 만족하는 반면, 두 번째 예시에서는 $\y^2=\x$가 성립해야 하므로 $b^2=a$인 $b$만이 가능하고, 따라서 $(\Spec\phi)(\mathfrak{q})=\mathfrak{p}$를 만족하는 점은 많아야 두 개, 즉 $\mathfrak{q}_+=(\x-a, \y-\sqrt{a})$와 $\mathfrak{q}_-=(\x-a, \y+\sqrt{a})$뿐이다. 이들이 서로 다른 두 점이 되는 것은 $\operatorname{char}\mathbb{K}\neq 2$이고 $a\neq 0$일 때인데, $a=0$이면 두 점이 하나로 겹치고, $\operatorname{char}\mathbb{K}=2$일 때는 $\y^2-a=(\y-\sqrt{a})^2$이므로 모든 $a$에 대하여 fiber가 한 점이기 때문이다. 
 
 이와 같이, finite type morphism은 기하적으로는 fiber가 유한차원인 것과 관련이 있고, finite morphism은 fiber가 유한집합인 것과 관련이 있다. 
 :::
 
-아직은 위의 [예시 15](#ex15)과 같은 상황에서 scheme morphism의 fiber를 계산하기 위해서는 그때그때 상황에 맞추어 우직하게 계산을 해 나가는 수밖에 없지만, 나중에 fiber product를 계산하고 나면 조금 더 정형화된 방식을 사용할 수 있게 된다. 그 때를 위해 다음을 정의한다.
+아직은 위의 [예시 16](#ex16)과 같은 상황에서 scheme morphism의 fiber를 계산하기 위해서는 그때그때 상황에 맞추어 우직하게 계산을 해 나가는 수밖에 없지만, 나중에 fiber product를 계산하고 나면 조금 더 정형화된 방식을 사용할 수 있게 된다. 그 때를 위해 다음을 정의한다.
 
-::: 정의 16
+::: 정의 17
 Scheme morphism $\varphi: X \rightarrow Y$가 *quasi-finite<sub>준유한</sub>*인 것은 $\varphi$가 morphism of finite type이고 임의의 $y\in Y$에 대하여 집합 $\varphi^{-1}(y)$가 항상 유한집합인 것이다. 
 :::
 
-그럼 [예시 15](#ex15)에서의 finite morphism에 대한 기하학적 직관은 항상 참이다. 즉, 임의의 finite morphism은 항상 quasi-finite이다. 이는 지금 당장 증명하는 것도 가능하지만, fiber product를 정의하고 난 후로 미룬다. 
+그럼 [예시 16](#ex16)에서의 finite morphism에 대한 기하학적 직관은 항상 참이다. 즉, 임의의 finite morphism은 항상 quasi-finite이다. 이는 지금 당장 증명하는 것도 가능하지만, fiber product를 정의하고 난 후로 미룬다. 
 
 마지막으로 다음을 정의한다. 
 
-::: 정의 17
+::: 정의 18
 Scheme morphism $\varphi: X \rightarrow Y$가 *locally of finite presentation<sub>국소유한표시사상</sub>*이라는 것은 $Y$의 임의의 affine open subset $V\cong \Spec B$가 주어질 때마다, $\varphi^{-1}(V)$의 covering $\varphi^{-1}(V)=\bigcup \Spec A_i$가 존재하여 $B \rightarrow A_i$가 모두 finitely presented인 것이다. 만일 scheme morphism $\varphi:X \rightarrow Y$가 quasi-compact, quasi-separated, locally of finite presentation이라면 $\varphi$가 *morphism of finite presentation<sub>유한표시사상</sub>*이라 부른다. 
 :::
 
-대부분의 경우 우리는 모든 scheme들이 locally Noetherian인 경우를 생각하고, 이 경우 [\[가환대수학\] §기본 개념들, ⁋명제 9](/ko/math/commutative_algebra/basic_notions#prop9)에 의하여 이 개념은 새로운 것이 아니다. 
+대부분의 경우 우리는 모든 scheme들이 locally Noetherian인 경우를 생각하고, 이 경우 이 개념은 새로운 것이 아니다. 실제로 $B$가 Noetherian ring이고 $B \rightarrow A$가 finite type이면 $A\cong B[\x_1,\ldots, \x_n]/\mathfrak{a}$로 쓸 수 있는데, [\[가환대수학\] §기본 개념들, ⁋정리 12](/ko/math/commutative_algebra/basic_notions#thm12)에 의하여 $B[\x_1,\ldots, \x_n]$이 Noetherian이므로 $\mathfrak{a}$가 finitely generated이고 따라서 $B \rightarrow A$는 finitely presented이다. 또 locally Noetherian scheme은 quasi-separated이므로 ([명제 6](#prop6)), morphism of finite presentation을 요구하는 것과 morphism of finite type을 요구하는 것 사이의 차이 또한 사라진다. 
