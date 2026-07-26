@@ -42,9 +42,9 @@ $$f\equiv 0\pmod{\mathfrak{p}}\iff f\in \mathfrak{p}\iff \mathfrak{p}\in Z(f)$$
 
 이다. 즉 $Z(f)$는 $f=0$인 점들의 모임으로 이해할 수 있으며, 그 여집합인 principal open set $D(f)$는 $f\neq 0$인 점들의 모임으로 이해할 수 있다. 
 
-이러한 관점에서 우리는 $\Spec A$의 <em-ko>대수적인 함수들</em-ko>이 무엇인지 묘사할 수 있다. [\[대수다양체\] §아핀다양체, ⁋정의 14](/ko/math/algebraic_varieties/affine_varieties#def14)와 마찬가지로, 이들은 각각의 열린집합이 주어질 때마다, 해당 열린집합에서 $0$이 되지 않는 함수들을 분모로 가질 수 있는 유리함수의 꼴로 나타날 수 있는 함수들이라 정의하면 된다. 
+이러한 관점에서 우리는 $\Spec A$의 <em-ko>대수적인 함수들</em-ko>이 무엇인지 묘사할 수 있다. [\[대수다양체\] §아핀다양체, ⁋정의 14](/ko/math/algebraic_varieties/affine_varieties#def14)와 마찬가지로, 이들은 각 점의 적당한 근방에서 그 근방에서 $0$이 되지 않는 함수를 분모로 갖는 유리함수의 꼴로 나타나는 함수들이라 정의하면 된다. 여기에서 이 조건이 국소적인 것임에 주의해야 한다. 열린집합 전체를 정의역으로 하는 하나의 분수 표현은 일반적으로 존재하지 않으며, 이는 아래에서 실제로 정의를 내리는 principal open set에서만 보장된다.
 
-이제 principal open set $D(f)$가 주어졌다 하자. 그럼 정의에 의해, $D(f)$ 위의 대수적인 함수를 유리함수 $g/h$의 형태로 나타냈을 때, 그 분모에 들어갈 수 있는 함수 $h$들은 $D(f)\subseteq D(h)$를 만족해야 한다. 
+이제 principal open set $D(f)$가 주어졌다 하자. 그럼 $D(f)$ 전체에서 하나의 유리함수 $g/h$의 꼴로 나타나는 함수들만 생각하면, 그 분모에 들어갈 수 있는 함수 $h$들은 $D(f)\subseteq D(h)$를 만족해야 한다. 
 
 ::: 보조정리 3
 고정된 원소 $f\in A$에 대하여, 
@@ -90,47 +90,21 @@ $$S(f)^{-1}A\cong S_f^{-1}A$$
 이 commute한다.
 :::
 ::: 증명
-우선 canonical morphism들을 $\epsilon(f): A \rightarrow S(f)^{-1}A$, $\epsilon_f:A \rightarrow S_f^{-1}A$으로 표기하기로 하자. 그럼 임의의 $n\geq 1$에 대하여 $D(f)=D(f^n)$이므로, $f^n\in S(f)$가 성립하고 따라서 $S_f$의 $\epsilon(f)$에 의한 image는 모두 $S(f)^{-1}A$의 unit이다. 따라서 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)로부터 다음의 commutative diagram
+우선 canonical morphism들을 $\epsilon(f): A \rightarrow S(f)^{-1}A$, $\epsilon_f:A \rightarrow S_f^{-1}A$으로 표기하기로 하자. 그럼 임의의 $n\geq 1$에 대하여 $D(f)=D(f^n)$이므로 $S_f\subseteq S(f)$이고, 따라서 $S_f$의 $\epsilon(f)$에 의한 image는 모두 $S(f)^{-1}A$의 unit이다. 거꾸로 임의의 $h\in S(f)$에 대하여, [보조정리 4](#lem4)에 의하여 $f^n=ah$를 만족하는 $n\geq 1$과 $a\in A$가 존재하므로
 
-{% diagram Math/Scheme_Theory/Affine_Schemes-2.svg width="8.64em" alt="universal_property-1" %}
+$$\frac{h}{1}\frac{a}{f^n}=1\qquad\text{in $S_f^{-1}A$}$$
 
-을 얻는다. 
+이고, 즉 $S(f)$의 $\epsilon_f$에 의한 image 또한 모두 $S_f^{-1}A$의 unit이다. 따라서 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)에 의하여 두 사상
 
-이제 다음의 동치관계
+$$\overline{\epsilon_f}: S(f)^{-1}A \rightarrow S_f^{-1}A,\qquad \overline{\epsilon(f)}: S_f^{-1}A \rightarrow S(f)^{-1}A$$
 
-$$D(f)\subseteq D(g)\iff f^n\in (g)\text{ for some $n\geq 1$}\iff f^n=ag\text{ for some $n\geq 1$ and $a\in A$}\tag{$\ast$}$$
+이 각각 $\overline{\epsilon_f}\circ\epsilon(f)=\epsilon_f$와 $\overline{\epsilon(f)}\circ\epsilon_f=\epsilon(f)$를 만족하도록 유일하게 존재한다. 그럼 두 합성 $\overline{\epsilon(f)}\circ\overline{\epsilon_f}$와 $\overline{\epsilon_f}\circ\overline{\epsilon(f)}$는 각각 $\epsilon(f)$와 $\epsilon_f$를 연장하므로, 같은 유일성에 의하여 항등사상이다. 즉 이 둘은 서로의 역함수이며, 이로부터 주장의 isomorphism을 얻는다. 
 
-를 관찰하자. 그럼 $D(f)\subseteq D(g)$를 만족하는 임의의 $g$에 대하여, 우리는 $f^n=ag$를 만족하는 적당한 $n\geq 1$과 $a\in A$를 찾을 수 있으므로, 
+이제 $S(g)\subseteq S(f)$라 하자. 그럼 $S(g)$의 원소들은 $\epsilon(f)$와 $\epsilon_f$ 모두에 의하여 unit으로 옮겨지고, $S_g\subseteq S(g)$이므로 다시 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)에 의하여 $\epsilon(f)$와 $\epsilon_f$를 각각 연장하는 두 사상
 
-$$\frac{g}{1}\frac{a}{f^n}=1\qquad\text{in $S_f^{-1}A$}$$
+$$\widehat{\epsilon(f)}:S(g)^{-1}A \rightarrow S(f)^{-1}A,\qquad \widecheck{\epsilon_f}: S_g^{-1}A \rightarrow S_f^{-1}A$$
 
-로부터 $g$는 $S_f^{-1}A$의 unit임을 안다. 따라서 다시 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)로부터 다음의 commutative diagram
-
-{% diagram Math/Scheme_Theory/Affine_Schemes-3.svg width="8.64em" alt="universal_property-2" %}
-
-을 얻는다. 이제 $\overline{\epsilon(f)}$와 $\overline{\epsilon_f}$가 서로의 역함수임은 유일성으로부터 자명하다.
-
-이제 $S(g)\subseteq S(f)$라 하자. 그럼 $\widehat{\epsilon(f)}:S(g)^{-1}A \rightarrow S(f)^{-1}A$는 마찬가지로 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)을 통해 다음의 diagram
-
-{% diagram Math/Scheme_Theory/Affine_Schemes-4.svg width="8.64em" alt="universal_property-3" %}
-
-으로 자명하게 정의되는 것이며, 또 $S(g)\subseteq S(f)\iff D(f)\subseteq D(g)$이므로 위의 동치관계 ($\ast$)로부터 $g$는 $S_f^{-1}A$의 unit이며, 따라서 $g^k$들도 모두 마찬가지이다. 이로부터 $\widecheck{\epsilon_f}: S_g^{-1}A \rightarrow S_f^{-1}$를 포함하는 다음의 commutative diagram
-
-{% diagram Math/Scheme_Theory/Affine_Schemes-5.svg width="7.13em" alt="universal_property-4" %}
-
-이 존재한다. 그럼 주장의 diagram이 commute한다는 것은 다음 diagram
-
-{% diagram Math/Scheme_Theory/Affine_Schemes-6.svg width="17.14em" alt="universal_property-5" %}
-
-을 생각하면 자명한데, 즉
-
-$$\epsilon_f=\widecheck{\epsilon_f}\circ\epsilon_g=\widecheck{\epsilon_f}\circ\overline{\epsilon_g}\circ\epsilon(g)$$
-
-그리고
-
-$$\epsilon_f=\overline{\epsilon_f}\circ\epsilon(f)=\overline{\epsilon_f}\circ\widehat{\epsilon(f)}\circ\epsilon(g)$$
-
-으로부터 $\epsilon_f$는 $S(g)$의 원소들을 $S_f^{-1}A$의 unit으로 보내는 것을 알고, 뿐만 아니라 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)을 통해 $\epsilon_f=\widetilde{\epsilon_f}\circ\epsilon(g)$를 만족하도록 정의되는 $\widetilde{\epsilon_f}$의 유일성으로부터 $\widecheck{\epsilon_f}\circ\overline{\epsilon_g}=\overline{\epsilon_f}\circ\widehat{\epsilon(f)}$임을 얻는다. 
+이 유일하게 존재하며, 이들이 주장의 diagram의 나머지 두 변이다. 이제 두 합성 $\widecheck{\epsilon_f}\circ\overline{\epsilon_g}$와 $\overline{\epsilon_f}\circ\widehat{\epsilon(f)}$는 모두 $\epsilon(g)$와 합성하면 $\epsilon_f$가 되므로, 같은 유일성에 의하여 서로 같다. 
 :::
 
 따라서, $D(f)$ 위에 정의된 대수적인 함수들은 $S_f^{-1}A$의 원소인 것으로 생각하여도 충분하다. 앞선 글에서 우리는 편의상 $S_f^{-1}A$를 $A_f$로 표기하기로 하였다.
@@ -163,7 +137,7 @@ $$h\in S(f_j)\iff D(f_j)\subseteq D(h)\implies D(f_i)\subseteq D(h)\iff h\in S(f
 
 $$f_i^{m_i}s=0$$
 
-을 만족하는 $m_i$들이 존재한다. 한편 [§스펙트럼, ⁋보조정리 11](/ko/math/scheme_theory/spectrums#lem11) 이후의 계산으로부터 $D(f_i^{m_i})=D(f_i)$가 모든 $i$에 대해 성립하므로,
+을 만족하는 $m_i\geq 1$들이 존재한다. 한편 [§스펙트럼, ⁋보조정리 11](/ko/math/scheme_theory/spectrums#lem11) 이후의 계산으로부터 $D(f_i^{m_i})=D(f_i)$가 모든 $i$에 대해 성립하므로,
 
 $$\Spec A=\bigcup_{i=1}^n D(f_i^{m_i})$$
 
@@ -179,7 +153,7 @@ $$s=1s=\left(\sum_{i=1}^n a_i f_i^{m_i}\right)s=\sum_{i=1}^n a_i (f_i^{m_i}s)=0$
 
 $$\frac{a_i}{f_i^{m_i}}=\frac{a_j}{f_j^{m_j}}\quad\text{ in $D(f_i)\cap D(f_j)=D(f_if_j)$}$$
 
-이도록 할 수 있다. 그런데 $D(f_i)=D(f_i^{m_i})$이고 $D(f_j)=D(f_j^{m_j})$이므로
+이도록 할 수 있다. 여기에서 $a/1=af_i/f_i$이므로 모든 $i$에 대하여 $m_i\geq 1$이도록 택할 수 있다. 그런데 $D(f_i)=D(f_i^{m_i})$이고 $D(f_j)=D(f_j^{m_j})$이므로
 
 $$D(f_if_j)=D(f_i)\cap D(f_j)=D(f_i^{m_i})\cap D(f_j^{m_j})=D(f_i^{m_i}f_j^{m_j})$$
 
@@ -227,6 +201,8 @@ $$s\vert_{D(f_\alpha)}=s'\vert_{D(f_\alpha)}=s_\alpha$$
 ::: 정의 7
 [보조정리 6](#lem6)에 의해 정의되는 $\Spec A$ 위의 sheaf를 $\mathcal{O}_{\Spec A}$로 쓰고, 이를 *structure sheaf<sub>구조층</sub>*라 부른다. 
 :::
+
+이 정의는 principal open set에서만 이루어졌지만, $D(f)$들이 $\Spec A$의 base이므로 임의의 열린집합 $U$에서의 section들은 [\[위상수학\] §층, ⁋명제 8](/ko/math/topology/sheaves#prop8)의 확장을 통해 결정된다. 즉 $\mathcal{O}_{\Spec A}(U)$의 원소는 $U$를 덮는 $D(f)$들 위에서 $g/h$의 꼴로 주어지고 교집합에서 서로 일치하는 데이터들이며, 이것이 앞서 말한 국소적인 정의에 해당한다. 
 
 그럼 $(\Spec A,\mathcal{O}_{\Spec A})$는 locally ringed space 이다. 
 
@@ -287,13 +263,21 @@ $$A_f \rightarrow B_{\phi(f)}$$
 
 $$A \overset{\phi}{\longrightarrow}B \overset{\epsilon}{\longrightarrow} B_{\phi(f)}$$
 
-에 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)을 적용하여 얻어진다. 물론 이렇게 정의된 $(\Spec\phi)^\sharp$이 교집합 $D(f)\cap D(g)$에서 같은 함수를 정의함을 보여야 하지만, 이는 $D(f)\cap D(g)$임을 이용해서 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)에 유일성 결과를 사용하면 된다.
+에 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)을 적용하여 얻어진다. 물론 이렇게 정의된 사상들이 restriction map과 가환함을 보여야 한다. $D(g)\subseteq D(f)$라 하면 $D(\phi(g))\subseteq D(\phi(f))$이고, 두 합성
+
+$$A_f \longrightarrow B_{\phi(f)} \longrightarrow B_{\phi(g)},\qquad A_f \longrightarrow A_g \longrightarrow B_{\phi(g)}$$
+
+은 모두 $\epsilon_f$와 합성하면 $A \rightarrow B \rightarrow B_{\phi(g)}$가 되므로, 위의 유일성에 의하여 서로 같다.
+
+이제 임의의 열린집합 $U\subseteq \Spec A$와 $s\in \mathcal{O}_{\Spec A}(U)$에 대하여, $U$에 포함되는 principal open set $D(f)$들마다 section $(\Spec\phi)^\sharp(D(f))(s\vert_{D(f)})$을 생각하자. 두 principal open set의 교집합 $D(f)\cap D(g)=D(fg)$ 또한 principal open set이므로, 위의 가환성으로부터 이 section들은 교집합 위에서 서로 일치하고, 따라서 sheaf $(\Spec\phi)_\ast\mathcal{O}_{\Spec B}$의 gluability axiom과 identity axiom에 의하여 이들은 유일한 $(\Spec\phi)^\sharp(U)(s)$로 붙는다. 이렇게 정의된 $(\Spec\phi)^\sharp(U)$가 ring homomorphism이며 restriction map과 가환하는 것 또한 identity axiom으로부터 얻어지고, 따라서 우리는 sheaf morphism $(\Spec\phi)^\sharp$을 얻는다.
 
 이상에서 $(\Spec\phi, (\Spec\phi)^\sharp): (\Spec B, \mathcal{O}_{\Spec B}) \rightarrow (\Spec A, \mathcal{O}_{\Spec A})$가 ringed space들 사이의 morphism인 것을 안다. 이제 이것이 locally ringed space들 사이의 morphism임을 보이기 위해서는 임의의 $\mathfrak{q}\in \Spec B$에 대하여
 
 $$(\Spec\phi)^\sharp_\mathfrak{q}:\mathcal{O}_{\Spec A, (\Spec \phi)(\mathfrak{q})} \rightarrow\mathcal{O}_{\Spec B, \mathfrak{q}}$$
 
 이 local homomorphism이면 된다. 그런데 $(\Spec \phi)(\mathfrak{q})=\phi^{-1}(\mathfrak{q})$이고, 따라서 [보조정리 8](#lem8)에 의하여 $(\Spec\phi)^\sharp_\mathfrak{q}$는 $A_{\phi^{-1}(\mathfrak{q})}$에서 $B_{\mathfrak{q}}$로의 ring homomorphism이며 이는 $A_{\phi^{-1}(\mathfrak{q})}$의 유일한 maximal ideal $\phi^{-1}(\mathfrak{q})A_{\phi^{-1}(\mathfrak{q})}$를 $B_\mathfrak{q}$의 유일한 maximal ideal $\mathfrak{q}B_\mathfrak{q}$로 보낸다. 
+
+마지막으로 functoriality를 확인하자. 점 사이의 사상에 대해서는 이미 [§스펙트럼, ⁋명제 2](/ko/math/scheme_theory/spectrums#prop2)에서 확인하였으므로 structure sheaf 쪽만 보면 된다. $\phi=\id_A$인 경우 위의 구성은 각각의 $D(f)$마다 $\epsilon_f$를 연장하는 유일한 사상 $A_f \rightarrow A_f$를 주고 이는 항등사상이므로, $\Spec(\id_A)=\id$이다. 또 두 ring homomorphism $\phi: A \rightarrow B$와 $\psi: B \rightarrow C$에 대하여, $\Spec(\psi\circ\phi)^\sharp(D(f))$는 합성 $A \rightarrow C \rightarrow C_{\psi(\phi(f))}$를 확장하는 유일한 사상이고 합성 $A_f \rightarrow B_{\phi(f)} \rightarrow C_{\psi(\phi(f))}$ 또한 같은 사상을 확장하므로, 유일성에 의하여 이 둘은 같다. 두 sheaf morphism이 base 위에서 일치하므로 $\Spec(\psi\circ\phi)=(\Spec\phi)\circ(\Spec\psi)$이다. 
 :::
 
 ## 아핀스킴
@@ -324,9 +308,7 @@ $$(\varphi, \varphi^\sharp): (\Spec B, \mathcal{O}_{\Spec B}) \rightarrow (\Spec
 
 $$\phi=\varphi^\sharp(D(1)):A \rightarrow B$$
 
-를 통해 ring homomorphism $\phi:A \rightarrow B$를 정의하면 이제 주장을 완성하기 위해서는 $\Spec\phi=(\varphi,\varphi^\sharp)$임을 보여야 한다. 이는 
-
-임의의 $\mathfrak{q}\in \Spec B$에 대하여
+를 통해 ring homomorphism $\phi:A \rightarrow B$를 정의하면 이제 주장을 완성하기 위해서는 $\Spec\phi=(\varphi,\varphi^\sharp)$임을 보여야 한다. 우선 임의의 $\mathfrak{q}\in \Spec B$에 대하여
 
 $$(\Spec \phi)(\mathfrak{q})=\phi^{-1}(\mathfrak{q})=\varphi(\mathfrak{q})$$
 
@@ -338,22 +320,38 @@ $$(\Spec \phi)(\mathfrak{q})=\phi^{-1}(\mathfrak{q})=\varphi(\mathfrak{q})$$
 
 {% diagram Math/Scheme_Theory/Affine_Schemes-10.svg width="13.26em" alt="commuting_square" %}
 
-을 제외한 모든 면들은 commuting square임을 알고 있다. 따라서 위의 diagram에서 $A \rightarrow \mathcal{O}_{\Spec B, \mathfrak{q}}$는 어떤 함수를 타고 가도 동일하게 결정되며, 이 함수에 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)를 적용하면 $A_{\varphi(\mathfrak{q})} \rightarrow \mathcal{O}_{\Spec B, \mathfrak{q}}$가 유일하게 결정된다. 이로부터 위의 diagram의 <em-ko>모든</em-ko> 면들이 commuting square인 것을 안다. 즉, $\phi_\mathfrak{q}:A_{\varphi(\mathfrak{q})}\rightarrow B_\mathfrak{q}$도 local homomorphism이고, 따라서 $\phi^{-1}(\mathfrak{q})=\varphi(\mathfrak{q})$임을 안다. 이제 structure sheaf에서 $\phi$가 $\varphi^\sharp$과 같다는 것은 restriction map만 생각하면 충분하므로, 이상에서 원하는 주장이 증명된다. 
+을 제외한 모든 면들은 commuting square임을 알고 있다. 따라서 위의 diagram에서 $A \rightarrow \mathcal{O}_{\Spec B, \mathfrak{q}}$는 어떤 함수를 타고 가도 동일하게 결정되며, 이 함수에 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)를 적용하면 $A_{\varphi(\mathfrak{q})} \rightarrow \mathcal{O}_{\Spec B, \mathfrak{q}}$가 유일하게 결정된다. 이로부터 위의 diagram의 <em-ko>모든</em-ko> 면들이 commuting square인 것을 안다. 즉, $\phi_\mathfrak{q}:A_{\varphi(\mathfrak{q})}\rightarrow B_\mathfrak{q}$도 local homomorphism이고, 따라서 $\phi^{-1}(\mathfrak{q})=\varphi(\mathfrak{q})$임을 안다. 
+
+이제 두 sheaf morphism이 같다는 것을 보이자. $\varphi^\sharp$이 restriction map과 commute하므로 임의의 $f\in A$에 대하여
+
+$$\varphi^\sharp(D(f))\circ\epsilon_f=\epsilon_{\phi(f)}\circ\phi$$
+
+가 성립한다. 그런데 [명제 9](#prop9)의 구성에서 $(\Spec\phi)^\sharp(D(f))$는 정확히 이 식을 만족하는 유일한 사상이었으므로, [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)의 유일성에 의하여 $\varphi^\sharp(D(f))=(\Spec\phi)^\sharp(D(f))$이다. 두 sheaf morphism이 base $\{D(f)\}_{f\in A}$ 위에서 일치하므로, $\varphi_\ast\mathcal{O}_{\Spec B}$의 identity axiom에 의하여 $\varphi^\sharp=(\Spec\phi)^\sharp$이다. 
 :::
 
 따라서 $\Spec$을 $\cRing$에서 $\AffSch$로의 contravariant functor로 보면 $\Spec$은 두 category $\cRing^\op$와 $\AffSch$ 사이의 categorical equivalence이다. 뿐만 아니라, [명제 11](#prop11)에 의해 $\AffSch$는 $\LRS$의 full subcategory이다. 
 
 한편 임의의 spectrum $(\Spec A, \mathcal{O}_{\Spec A})$에 대하여, 우리는 정의에 의해 
 
-$$\mathcal{O}_{\Spec A}(A)=\mathcal{O}_{\Spec A}(D(1))\cong A$$
+$$\mathcal{O}_{\Spec A}(\Spec A)=\mathcal{O}_{\Spec A}(D(1))\cong A$$
 
 임을 안다. 만일 locally ringed space $(X, \mathcal{O}_X)$가 affine scheme이었다면, 마찬가지 방식으로 $\mathcal{O}_X(X)$를 살펴보아 $(X, \mathcal{O}_X)$가 어떠한 ring의 spectrum과 isomorphic한지 알 수 있다. 즉, affine scheme $(X, \mathcal{O}_X)$에 대하여 $A=\mathcal{O}_X(X)$라 하면 $(X, \mathcal{O}_X)\cong (\Spec A, \mathcal{O}_{\Spec A})$가 성립한다. 더 일반적으로 다음을 정의한다.
 
 ::: 정의 12
-임의의 locally ringed space $(X, \mathcal{O}_X)$에 대하여, *global section functor<sub>전역 단면 함자</sub>* $\Gamma:\LRS \rightarrow \cRing^\op$를 $X\mapsto \Gamma(X, \mathcal{O}_X)=\mathcal{O}_X(X)$로 정의한다.[^1] 
+*Global section functor<sub>전역 단면 함자</sub>* $\Gamma:\LRS \rightarrow \cRing^\op$를, 임의의 locally ringed space $(X, \mathcal{O}_X)$에 대하여 대응
+
+$$X\mapsto \Gamma(X, \mathcal{O}_X)=\mathcal{O}_X(X)$$
+
+로, 그리고 임의의 morphism $(\varphi,\varphi^\sharp):(X,\mathcal{O}_X) \rightarrow (Y, \mathcal{O}_Y)$에 대하여
+
+$$\Gamma(\varphi,\varphi^\sharp)=\varphi^\sharp(Y):\Gamma(Y, \mathcal{O}_Y) \rightarrow (\varphi_\ast\mathcal{O}_X)(Y)=\Gamma(X, \mathcal{O}_X)$$
+
+로 정의한다.[^1] 
 :::
 
-[명제 11](#prop11)의 증명에서 주목할 만한 사실은 $(X, \mathcal{O}_X)$가 affine scheme이라는 가정은 필요가 없다는 사실이다. 즉, $(X, \mathcal{O}_X)\cong(\Spec B, \mathcal{O}_{\Spec B})$라는 가정을 버리고 [명제 11](#prop11)의 diagram 대신 다음의 diagram
+여기에서 $\varphi^\sharp(Y)$는 $\cRing$에서 $\Gamma(Y)$로부터 $\Gamma(X)$로 가는 사상이므로, 우리는 이를 $\cRing^\op$에서의 사상 $\Gamma(X) \rightarrow \Gamma(Y)$로 읽을 수 있다. 이 대응이 항등사상과 합성을 보존하는 것은 ringed space들 사이의 morphism의 합성이 $\varphi^\sharp$들의 합성으로 주어지는 것에서 따라오므로, 이는 실제로 functor가 된다.
+
+한편 [명제 11](#prop11)의 증명에서 주목할 만한 사실은 $(X, \mathcal{O}_X)$가 affine scheme이라는 가정은 필요가 없다는 사실이다. 즉, $(X, \mathcal{O}_X)\cong(\Spec B, \mathcal{O}_{\Spec B})$라는 가정을 버리고 [명제 11](#prop11)의 diagram 대신 다음의 diagram
 
 {% diagram Math/Scheme_Theory/Affine_Schemes-11.svg width="34.92em" alt="adjoint" %}
 
@@ -413,11 +411,7 @@ $$A_f \overset{\varphi^\sharp(D(f))}{\longrightarrow} \mathcal{O}_X(V_f) \longri
 
 은 모두 $\epsilon_f$와 합성하면 $\theta_g$가 되므로, 다시 [\[가환대수학\] §국소화, ⁋명제 6](/ko/math/commutative_algebra/localization#prop6)의 유일성에 의하여 서로 같다. 즉 $\varphi^\sharp(D(f))$들은 restriction map과 가환한다. 
 
-이제 임의의 열린집합 $U\subseteq \Spec A$와 $s\in \mathcal{O}_{\Spec A}(U)$에 대하여, $U$에 포함되는 principal open set $D(f)$들마다 section
-
-$$\varphi^\sharp(D(f))(s\vert_{D(f)})\in (\varphi_\ast\mathcal{O}_X)(D(f))$$
-
-을 생각하자. 두 principal open set의 교집합 $D(f)\cap D(g)=D(fg)$ 또한 principal open set이므로, 위의 가환성으로부터 이 section들은 교집합 위에서 서로 일치하고, 따라서 sheaf $\varphi_\ast\mathcal{O}_X$의 gluability axiom과 identity axiom에 의하여 이들은 유일한 $\varphi^\sharp(U)(s)\in (\varphi_\ast\mathcal{O}_X)(U)$로 붙는다. 이렇게 정의된 $\varphi^\sharp(U)$가 ring homomorphism이며 restriction map과 가환한다는 것은 다시 identity axiom으로부터 얻어지고, 따라서 우리는 sheaf morphism $\varphi^\sharp$을 얻는다. 
+그럼 [명제 9](#prop9)의 증명에서와 같이, base 위에서 이렇게 주어진 사상들은 $\varphi_\ast\mathcal{O}_X$의 gluability axiom과 identity axiom에 의하여 sheaf morphism $\varphi^\sharp$으로 유일하게 확장된다. 
 
 마지막으로 $(\varphi,\varphi^\sharp)$가 locally ringed space들 사이의 morphism임을 보이자. 임의의 $x\in X$와 $\mathfrak{p}=\varphi(x)$에 대하여, [보조정리 8](#lem8)에 의하여 $\mathcal{O}_{\Spec A,\mathfrak{p}}\cong A_\mathfrak{p}$이며 이 동일시 하에서 $\varphi^\sharp$이 유도하는 stalk 사이의 morphism $\varphi_x^\sharp: A_\mathfrak{p} \rightarrow \mathcal{O}_{X,x}$는, 식 $\varphi^\sharp(D(f))\circ\epsilon_f=\theta_f$의 양변에 $x$에서의 germ을 취하면
 
