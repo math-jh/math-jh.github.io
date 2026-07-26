@@ -39,6 +39,13 @@ A:
   defs:
   - label: '[대수적 구조] §대수'
     url: /ko/math/algebraic_structures/algebras
+- id: a_divides_b
+  en: $a$ divides $b$
+  ko: $a$가 $b$를 나눈다
+  primary: ko
+  defs:
+  - label: '[정수론] §나눗셈과 최대공약수'
+    url: /ko/math/number_theory/divisibility
 - id: mathfrak_a_-filtration
   en: $\mathfrak{a}$-filtration
   ko: $\mathfrak{a}$-여과
@@ -2589,6 +2596,13 @@ C:
   defs:
   - label: '[가환대수학] §으뜸분해'
     url: /ko/math/commutative_algebra/primary_decomposition
+- id: coprime
+  en: coprime
+  ko: 서로소
+  primary: ko
+  defs:
+  - label: '[정수론] §나눗셈과 최대공약수'
+    url: /ko/math/number_theory/divisibility
 - id: coset
   en: coset
   ko: 잉여류
@@ -3507,6 +3521,13 @@ D:
   see:
   - label: Field
     id: field
+- id: divisor
+  en: divisor
+  ko: 약수
+  primary: en
+  defs:
+  - label: '[정수론] §나눗셈과 최대공약수'
+    url: /ko/math/number_theory/divisibility
 - id: divisor_class_group
   en: divisor class group
   ko: 인자류군
@@ -3915,6 +3936,13 @@ E:
   defs:
   - label: '[범주론] §자연변환'
     url: /ko/math/category_theory/natural_transformations
+- id: euclidean_algorithm
+  en: euclidean algorithm
+  ko: 유클리드 호제법
+  primary: ko
+  defs:
+  - label: '[정수론] §유클리드 호제법과 Bézout 항등식'
+    url: /ko/math/number_theory/euclidean_algorithm
 - id: euclidean_domain
   en: Euclidean domain
   ko: 유클리드 정역
@@ -3953,6 +3981,13 @@ E:
   defs:
   - label: '[복소해석학] §복소수와 복소평면'
     url: /ko/math/complex_analysis/complex_numbers
+- id: euler_s_totient
+  en: 'Euler''s totient'
+  ko: 오일러 phi 함수
+  primary: ko
+  defs:
+  - label: '[정수론] §오일러 정리와 phi 함수'
+    url: /ko/math/number_theory/euler_theorem
 - id: evaluation
   en: evaluation
   ko: 대입
@@ -4028,6 +4063,13 @@ E:
   defs:
   - label: '[복소해석학] §복소정칙함수'
     url: /ko/math/complex_analysis/holomorphic_functions
+- id: extended_euclidean_algorithm
+  en: extended euclidean algorithm
+  ko: 확장 유클리드 호제법
+  primary: ko
+  defs:
+  - label: '[정수론] §유클리드 호제법과 Bézout 항등식'
+    url: /ko/math/number_theory/euclidean_algorithm
 - id: extended_rees_algebra
   en: extended Rees algebra
   ko: 확장된 리스 대수
@@ -4937,6 +4979,8 @@ G:
   defs:
   - label: '[환론] §정역'
     url: /ko/math/ring_theory/integral_domains
+  - label: '[정수론] §나눗셈과 최대공약수'
+    url: /ko/math/number_theory/divisibility
 - id: greatest_element
   en: greatest element
   ko: 최대원소
@@ -6582,6 +6626,13 @@ L:
   defs:
   - label: '[집합론] §순서집합의 원소들'
     url: /ko/math/set_theory/elements_in_ordered_set
+- id: least_common_multiple
+  en: least common multiple
+  ko: 최소공배수
+  primary: ko
+  defs:
+  - label: '[정수론] §나눗셈과 최대공약수'
+    url: /ko/math/number_theory/divisibility
 - id: least_element
   en: least element
   ko: 최소원소
@@ -7282,6 +7333,13 @@ L:
   defs:
   - label: '[미적분학] §미분법'
     url: /ko/math/calculus/differentiation_rules
+- id: logarithmic_integral
+  en: logarithmic integral
+  ko: 로그적분
+  primary: ko
+  defs:
+  - label: '[정수론] §소수의 무한성과 분포'
+    url: /ko/math/number_theory/distribution_of_primes
 - id: long_exact_sequence
   en: long exact sequence
   ko: 긴 완전열
@@ -7452,6 +7510,13 @@ M:
   defs:
   - label: '[복소해석학] §편각원리와 Rouché 정리'
     url: /ko/math/complex_analysis/argument_principle
+- id: mertens_constant
+  en: mertens constant
+  ko: 메르텐스 상수
+  primary: ko
+  defs:
+  - label: '[정수론] §소수의 무한성과 분포'
+    url: /ko/math/number_theory/distribution_of_primes
 - id: mertens_function
   en: mertens function
   ko: 메르텐스 함수
@@ -7704,6 +7769,13 @@ M:
   defs:
   - label: '[선형대수학] §행렬식'
     url: /ko/math/linear_algebra/determinant
+- id: multiple
+  en: multiple
+  ko: 배수
+  primary: ko
+  defs:
+  - label: '[정수론] §나눗셈과 최대공약수'
+    url: /ko/math/number_theory/divisibility
 - id: multiple_integral
   en: multiple integral
   ko: 다중적분
@@ -8950,6 +9022,13 @@ P:
   defs:
   - label: '[대수적 구조] §분수체'
     url: /ko/math/algebraic_structures/field_of_fractions
+- id: prime_number_theorem
+  en: prime number theorem
+  ko: 소수 정리
+  primary: ko
+  defs:
+  - label: '[정수론] §소수의 무한성과 분포'
+    url: /ko/math/number_theory/distribution_of_primes
 - id: primitive
   en: primitive
   ko: 원시함수
@@ -9366,6 +9445,8 @@ Q:
     url: /ko/math/set_theory/examples_of_equivalence
   - label: '[환론] §정역'
     url: /ko/math/ring_theory/integral_domains
+  - label: '[정수론] §나눗셈과 최대공약수'
+    url: /ko/math/number_theory/divisibility
 - id: quotient_algebra
   en: quotient algebra
   ko: 몫대수
@@ -9579,6 +9660,13 @@ R:
   defs:
   - label: '[정수론] §원시근'
     url: /ko/math/number_theory/primitive_roots
+- id: reduced_residue_system
+  en: reduced residue system
+  ko: 기약잉여계
+  primary: ko
+  defs:
+  - label: '[정수론] §오일러 정리와 phi 함수'
+    url: /ko/math/number_theory/euler_theorem
 - id: reduced_row_echelon_matrix
   en: reduced row échelon matrix
   ko: 기약행사다리꼴행렬
@@ -9800,6 +9888,8 @@ R:
   defs:
   - label: '[환론] §정역'
     url: /ko/math/ring_theory/integral_domains
+  - label: '[정수론] §나눗셈과 최대공약수'
+    url: /ko/math/number_theory/divisibility
 - id: removable
   en: removable
   ko: 제거가능 불연속
@@ -10543,6 +10633,13 @@ S:
   see:
   - label: Long exact sequence
     id: long_exact_sequence
+- id: sieve_of_eratosthenes
+  en: sieve of eratosthenes
+  ko: 에라토스테네스의 체
+  primary: ko
+  defs:
+  - label: '[정수론] §소수의 무한성과 분포'
+    url: /ko/math/number_theory/distribution_of_primes
 - id: sifted_colimit_completion
   en: sifted colimit completion
   ko: ''
