@@ -5,11 +5,14 @@ excerpt: "Flat morphisms in algebraic geometry"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/flat_morphisms
+drift_needed: true
 sidebar: 
     nav: "scheme_theory-ko"
 
 date: 2025-02-21
 weight: 14
+
+published: false
 ---
 
 우리는 scheme morphism $f: X \rightarrow S$를 $S$로 parametrize된 family로 읽기로 하였으며 ([§스킴 사이의 사상, ⁋예시 10](/ko/math/scheme_theory/morphism_of_schemes#ex10)), 이 family의 $s\in S$에서의 member를 fiber $X_s=X\times_S\Spec \kappa(s)$로 정의하였다. ([§올곱, ⁋정의 12](/ko/math/scheme_theory/fiber_products#def12)) 그러나 이 family가 얼마나 좋게 행동할지는 현재로서 우리가 확인할 수 없는 정보이다. 
@@ -128,7 +131,7 @@ $A$가 PID이고 $B$가 $A$-algebra라 하자. 그럼 $\Spec B \rightarrow \Spec
 
 즉, $\mathbb{K}[t]$ 위의 family가 flat인 것은 그 coordinate ring이 $\mathbb{K}[t]$-module로서 torsion을 갖지 않는 것과 같다. Torsion 원소란 base의 함수 하나에 의해 죽는 원소이며, 기하학적으로는 fiber 하나에 갇힌 성분이 그러한 원소를 낳는다.
 
-이를 정확히 적기 위해 용어를 하나 마련해둔다. Morphism $g: Z \rightarrow Y$가 *dominant*라는 것은 그 image가 $Y$에서 조밀한 것, 곧 $\overline{g(Z)}=Y$인 것이다. Variety 사이의 rational map에 대하여 같은 조건을 이미 다룬 바 있다. ([\[대수다양체\] §유리사상, ⁋정의 8](/ko/math/algebraic_varieties/rational_maps#def8)) 아래에서 $X$의 irreducible component $Z$가 base를 dominate한다는 것은, $Z$에 reduced closed subscheme 구조를 준 뒤 포함사상과 $f$를 합성한 것이 dominant라는 뜻이다.
+이를 정확히 적기 위해서는 [§스킴 사상의 성질들, ⁋정의 19](/ko/math/scheme_theory/properties_of_scheme_morphisms#def19)의 dominant morphism이 필요하다. 아래에서 $X$의 irreducible component $Z$가 base를 dominate한다는 것은, $Z$에 reduced closed subscheme 구조를 준 뒤 포함사상과 $f$를 합성한 것이 dominant라는 뜻이다.
 
 ::: 따름정리 6
 Noetherian $\mathbb{K}[t]$-algebra $B$에 대하여 $X=\Spec B$가 reduced라 하자. 그럼 $X \rightarrow \mathbb{A}^1_\mathbb{K}$가 flat인 것과, $X$의 모든 irreducible component가 $\mathbb{A}^1_\mathbb{K}$를 dominate하는 것은 서로 동치이다.
