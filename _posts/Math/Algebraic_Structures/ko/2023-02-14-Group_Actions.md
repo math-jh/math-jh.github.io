@@ -271,7 +271,7 @@ $$E^g=\{x\in E\mid g\cdot x=x\}$$
 
 로 정의하면
 
-$$\sum_{g\in G}\lvert E^g\rvert=\# \{(g, x)\in G\times E: g\cdot x=x\}=\sum_{x\in X}\lvert \Stab(x)\rvert$$
+$$\sum_{g\in G}\lvert E^g\rvert=\# \{(g, x)\in G\times E\mid g\cdot x=x\}=\sum_{x\in X}\lvert \Stab(x)\rvert$$
 
 이 성립한다. 이제 ($\ast\ast$)로부터 
 

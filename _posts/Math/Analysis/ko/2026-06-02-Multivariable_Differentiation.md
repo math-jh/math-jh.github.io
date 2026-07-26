@@ -161,7 +161,7 @@ $$f'(0) = \lim_{t\rightarrow 0}\frac{t^2\sin(1/t)}{t} = \lim_{t\rightarrow 0} t\
 일변수에서 평균값 정리는 $f(b) - f(a) = f'(\xi)(b-a)$라는 등식이었다. 다변수 실숫값 함수에서도 같은 형태가 살아남으며, 이것이 [명제 4](#prop4)의 증명에서 본 분해의 일반적 형태이다.
 
 ::: 명제 6 (다변수 평균값 정리)
-$f : \mathbb{R}^n \rightarrow \mathbb{R}$이 선분 $[a, a+h] = \{a + th : 0 \le t \le 1\}$ 위의 모든 점에서 미분가능하면, 어떤 $\theta \in (0,1)$가 존재하여
+$f : \mathbb{R}^n \rightarrow \mathbb{R}$이 선분 $[a, a+h] = \{a + th \mid 0 \le t \le 1\}$ 위의 모든 점에서 미분가능하면, 어떤 $\theta \in (0,1)$가 존재하여
 
 $$f(a + h) - f(a) = \nabla f(a + \theta h)\cdot h$$
 

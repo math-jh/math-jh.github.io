@@ -114,7 +114,7 @@ $$\lvert D^\times\rvert=\lvert Z(D^\times)\rvert+\sum_{x}\bigl[D^\times:C_{D^\ti
 
 이며, 여기서 $C_{D^\times}(x)$는 [\[대수적 구조\] §군의 작용, ⁋정의 12](/ko/math/algebraic_structures/group_actions#def12) 직후에 정의한 $x$의 centralizer이고 합은 $Z(D^\times)$에 속하지 않는 모든 representative에 대한 것이다. 또, $Z(D^\times)=Z^\times=Z\setminus\{0\}$이므로 $\lvert Z(D^\times)\rvert=q-1$이다.
 
-이제 각 $x\in D^\times$에 대하여 $C_D(x)=\{y\in D: xy=yx\}$는 $D$의 부분 division ring이고 $Z$를 포함한다. 이러한 경우 우리는 $C_D(x)$가 $Z$-vector space라는 것을 보았으며, $\lvert Z\rvert=q$이므로 $\lvert C_D(x)\rvert=q^{d(x)}$ 꼴이다. 또한 $D$가 $C_D(x)$ 위의 vector space이므로 $d(x)\mid n$이다. $C_{D^\times}(x)=C_D(x)\setminus\{0\}$이므로
+이제 각 $x\in D^\times$에 대하여 $C_D(x)=\{y\in D\mid xy=yx\}$는 $D$의 부분 division ring이고 $Z$를 포함한다. 이러한 경우 우리는 $C_D(x)$가 $Z$-vector space라는 것을 보았으며, $\lvert Z\rvert=q$이므로 $\lvert C_D(x)\rvert=q^{d(x)}$ 꼴이다. 또한 $D$가 $C_D(x)$ 위의 vector space이므로 $d(x)\mid n$이다. $C_{D^\times}(x)=C_D(x)\setminus\{0\}$이므로
 
 $$\bigl[D^\times:C_{D^\times}(x)\bigr]=\frac{q^n-1}{q^{d(x)}-1}$$
 

@@ -90,7 +90,7 @@ $$((g\circ f)\times\id_Y)\circ\Gamma_f=\Gamma_g\circ f$$
 
 임의의 위상공간 $X$와 그 위의 임의의 filter $\mathcal{F}$가 주어졌다 하자. $X$에 한 점을 추가하여 만든 집합 $X'=X\cup \{\ast_X\}$을 생각하고, 이 위의 filter
 
-$$\mathcal{F}'=\{F\cup\{\ast_X\}: F\in \mathcal{F}\}$$
+$$\mathcal{F}'=\{F\cup\{\ast_X\}\mid F\in \mathcal{F}\}$$
 
 를 생각하자. 이제 $\ast_X$를 제외한 임의의 $x\in X'$에 대하여는 $\mathcal{N}(x)=\uparrow\{x\}$으로 정의하고, $\mathcal{N}(\ast_X)=\mathcal{F}'$로 정의하면 이는 [§열린집합, ⁋명제 6](/ko/math/topology/open_sets#prop6)의 네 가지 조건을 모두 만족하며 따라서 $X'$ 위에서의 위상구조가 정의된다. 이 위상공간 $X'$에서, $\ast_X$는 $X$의 closure에 포함되며, $\mathcal{F}=\mathcal{F}'\vert_X=\mathcal{N}(\ast_X)\vert_X$임이 자명하다. 
 

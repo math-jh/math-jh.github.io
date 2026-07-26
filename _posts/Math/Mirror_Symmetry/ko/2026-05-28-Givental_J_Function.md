@@ -254,7 +254,7 @@ $$0 \longrightarrow H_2(X, \mathbb{Z}) \xrightarrow{\ \iota\ } \mathbb{Z}^m \xri
 
 를 생각할 수 있다. 여기서 $m$은 ray의 개수이며, $\mathbb{Z}^n$은 cocharacter lattice이다. 즉, $H_2$는 ray의 관계식들이 이루는 집합
 
-$$\{(a_i)_i \in \mathbb{Z}^m : \sum_i a_i v_i = 0\}$$
+$$\{(a_i)_i \in \mathbb{Z}^m \mid \sum_i a_i v_i = 0\}$$
 
 과 동일하다. 이 때 charge matrix는 정의상 이 $r$개의 관계식을 행으로 모은 것이며, 따라서 $H_2(X, \mathbb{Z})$의 basis에 대한 정보를 정확하게 가지고 있다. 즉, $\mathbb{Z}^m$의 각 행 $(Q_{j\bullet})$의 preimage $\beta_j=\iota^{-1}(Q_{j\bullet})$이 $H_2(X, \mathbb{Z})$의 basis를 이루며, 이 세팅에서 toric divisor $D_i$와의 intersection은 $\beta=(a_i)_i$의 $i$번째 좌표를 읽는 것에 불과하므로 $D_i\cdot\beta_j=Q_{ji}$이다. 
 

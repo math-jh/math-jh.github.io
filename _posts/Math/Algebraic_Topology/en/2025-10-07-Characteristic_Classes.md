@@ -102,7 +102,7 @@ That is, the Euler class is an obstruction measuring whether this bundle admits 
 
 Let us verify this concretely on $S^2$. For example, from [§Degree of a Map and Brouwer·Lefschetz Fixed Point Theorem, ⁋Theorem 8](/en/math/algebraic_topology/degree_and_fixed_point_theorems#thm8) we know that any section of $TS^2$ must have a zero somewhere. For instance, suppose $S^2$ is embedded in $\mathbb{R}^3$ by
 
-$$S^2=\{(x,y,z): x^2+y^2+z^2=1\}$$
+$$S^2=\{(x,y,z)\mid x^2+y^2+z^2=1\}$$
 
 and consider the height function $z$ defined on it. Then the gradient vector $\nabla z$ of this $z$ is the section of the tangent bundle given by
 

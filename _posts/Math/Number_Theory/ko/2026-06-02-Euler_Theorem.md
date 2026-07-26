@@ -143,7 +143,7 @@ $1$부터 $n$까지의 정수를 분모를 $n$으로 한 분수 $\frac{1}{n}, \f
 
 $$\begin{aligned}
 n &= \#\left\{\tfrac{1}{n}, \tfrac{2}{n}, \ldots, \tfrac{n}{n}\right\} \\
-&= \sum_{d \mid n} \#\left\{\tfrac{a}{d} : 1 \leq a \leq d,\ \gcd(a, d) = 1\right\} \\
+&= \sum_{d \mid n} \#\left\{\tfrac{a}{d} \mid 1 \leq a \leq d,\ \gcd(a, d) = 1\right\} \\
 &= \sum_{d \mid n} \varphi(d)
 \end{aligned}$$
 

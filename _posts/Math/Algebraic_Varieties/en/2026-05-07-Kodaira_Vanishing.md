@@ -117,7 +117,7 @@ On the other hand, in such cases the expression for plurigenera can be thought o
 ::: Definition 4
 The *Kodaira dimension* $\kappa(X)$ of a smooth projective variety $X$ is defined as follows. If $P_m(X) = 0$ for all $m \geq 1$, then $\kappa(X) = -\infty$. Otherwise, $\kappa(X)$ is defined as the smallest integer $\kappa \geq 0$ satisfying $P_m(X) = O(m^\kappa)$. That is,
 
-$$\kappa(X) = \min\{k \in \mathbb{Z}_{\geq 0} : P_m(X) = O(m^k)\}$$
+$$\kappa(X) = \min\{k \in \mathbb{Z}_{\geq 0} \mid P_m(X) = O(m^k)\}$$
 
 Equivalently, it can also be written as
 
@@ -132,7 +132,7 @@ In [§Linear Systems, ⁋Definition 9](/en/math/algebraic_varieties/linear_syste
 First, suppose a very ample line bundle $\mathcal{L}$ is given, and consider the closed embedding $\varphi_\mathcal{L}: X\rightarrow \mathbb{P}^N$ defined by it. Then from the fact that $\varphi$ is an embedding, we know that $\varphi_\mathcal{L}(p)\neq \varphi_\mathcal{L}(q)$ holds, and moreover, since $\varphi_\mathcal{L}$ is a closed embedding, $d\varphi_\mathcal{L}$ is injective, and thus the dual map on cotangent spaces $\mathfrak{m}_{\varphi_{\mathcal{L}}(p)}/\mathfrak{m}_{\varphi_{\mathcal{L}}(p)}^2 \longrightarrow \mathfrak{m}_p/\mathfrak{m}_p^2$ is surjective. From this, we know that the following two results hold.
 
 1. *$\varphi_\mathcal{L}$ separates points.* That is, for any two distinct closed points $p, q \in X$, there exists a global section $s \in H^0(X, \mathcal{L})$ such that $s(p) = 0$ and $s(q) \neq 0$.
-2. *$\varphi_\mathcal{L}$ separates tangent vectors.* That is, for any closed point $p \in X$, the collection of sections vanishing at $p$, $\{ s \in H^0(X, \mathcal{L}) : s(p) = 0 \}$, spans the vector space $\mathfrak{m}_p\mathcal{L}_p / \mathfrak{m}_p^2\mathcal{L}_p$ corresponding to the cotangent space.
+2. *$\varphi_\mathcal{L}$ separates tangent vectors.* That is, for any closed point $p \in X$, the collection of sections vanishing at $p$, $\{ s \in H^0(X, \mathcal{L}) \mid s(p) = 0 \}$, spans the vector space $\mathfrak{m}_p\mathcal{L}_p / \mathfrak{m}_p^2\mathcal{L}_p$ corresponding to the cotangent space.
 
 The first condition means that the evaluation map
 
@@ -140,7 +140,7 @@ $$H^0(X, \mathcal{L}) \longrightarrow \mathcal{L}_p \oplus \mathcal{L}_q$$
 
 is surjective, and the second condition means that the image of the restriction map by sections vanishing at $p$,
 
-$$\{s \in H^0(X, \mathcal{L}) : s(p) = 0\} \longrightarrow \mathfrak{m}_p\mathcal{L}_p / \mathfrak{m}_p^2\mathcal{L}_p$$
+$$\{s \in H^0(X, \mathcal{L}) \mid s(p) = 0\} \longrightarrow \mathfrak{m}_p\mathcal{L}_p / \mathfrak{m}_p^2\mathcal{L}_p$$
 
 spans the entire $\mathfrak{m}_p\mathcal{L}_p / \mathfrak{m}_p^2\mathcal{L}_p$. It is not difficult to verify that the converses of these also hold. That is, the following holds.
 

@@ -223,7 +223,7 @@ $\mathbb{C}$의 부분집합 $K$가 점렬컴팩트인 것은 $K$가 닫혀 있�
 뒷부분은 다음과 같이도 직접 볼 수 있다. $(z_n)$이 bounded, 곧 모든 $n$에서 $\lvert z_n\rvert \leq M$이라 하자. $z_n = a_n + b_n i$로 적으면 $\lvert a_n\rvert, \lvert b_n\rvert \leq \lvert z_n\rvert \leq M$이므로 두 실수열이 bounded이다. 먼저 $(a_n)$에 [\[해석학\] §부분수열과 Bolzano–Weierstrass 정리, ⁋정리 4](/ko/math/analysis/bolzano_weierstrass#thm4)를 적용하여 $a_{n_k} \rightarrow a$인 부분수열을 뽑고, 그 부분수열 위에서 $(b_{n_k})$가 여전히 bounded이므로 다시 Bolzano–Weierstrass를 적용하여 $b_{n_{k_j}} \rightarrow b$인 부분수열을 뽑는다. 이 부분수열 위에서 두 좌표가 동시에 수렴하므로 명제 9에 의해 $z_{n_{k_j}} \rightarrow a + bi$이다.
 :::
 
-따라서 닫힌 원판 $\overline{B}(z_0, R) = \{z \in \mathbb{C} \mid \lvert z - z_0\rvert \leq R\}$이나 원 $\{z \mid \lvert z\rvert = 1\}$ 같은 집합은 컴팩트이고, 반면 열린 원판이나 $\mathbb{C}$ 전체는 컴팩트가 아니다. 이 컴팩트성은 곧 연속함수가 컴팩트집합 위에서 최댓값을 가진다는 결과로 이어져, 최대절댓값원리나 Liouville 정리 같은 복소해석학의 정리들이 서는 발판이 된다.
+따라서 닫힌 원판 $\overline{B}(z_0, R) = \{z \in \mathbb{C} : \lvert z - z_0\rvert \leq R\}$이나 원 $\{z : \lvert z\rvert = 1\}$ 같은 집합은 컴팩트이고, 반면 열린 원판이나 $\mathbb{C}$ 전체는 컴팩트가 아니다. 이 컴팩트성은 곧 연속함수가 컴팩트집합 위에서 최댓값을 가진다는 결과로 이어져, 최대절댓값원리나 Liouville 정리 같은 복소해석학의 정리들이 서는 발판이 된다.
 
 ::: 예시 12 (등비점열의 수렴과 발산)
 복소수 $z$에 대해 점열 $(z^n)$의 거동은 절댓값 $\lvert z\rvert$로 완전히 결정된다. 명제 4에 의해 $\lvert z^n\rvert = \lvert z\rvert^n$이므로, $\lvert z\rvert < 1$이면

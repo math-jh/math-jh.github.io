@@ -62,9 +62,9 @@ $$(M,\omega,\mathbb{T}^n,\mu)\longmapsto\mu(M)$$
 
 ## Facet 데이터와 부분 torus
 
-Delzant 다면체 $\Delta\subseteq\mathbb{R}^n$이 $d$개의 facet을 갖는다고 하자. 각 facet $F_i$는 안쪽을 향하는 primitive 법선 벡터 $u_i\in\mathbb{Z}^n$과 실수 $\lambda_i\in\mathbb{R}$로 결정되는 반공간 $\{x\in\mathbb{R}^n:\langle x,u_i\rangle\geq-\lambda_i\}$의 boundary에 놓이며, 따라서 다면체는
+Delzant 다면체 $\Delta\subseteq\mathbb{R}^n$이 $d$개의 facet을 갖는다고 하자. 각 facet $F_i$는 안쪽을 향하는 primitive 법선 벡터 $u_i\in\mathbb{Z}^n$과 실수 $\lambda_i\in\mathbb{R}$로 결정되는 반공간 $\{x\in\mathbb{R}^n\mid\langle x,u_i\rangle\geq-\lambda_i\}$의 boundary에 놓이며, 따라서 다면체는
 
-$$\Delta=\{x\in\mathbb{R}^n:\langle x,u_i\rangle\geq-\lambda_i,\ i=1,\ldots,d\}$$
+$$\Delta=\{x\in\mathbb{R}^n\mid\langle x,u_i\rangle\geq-\lambda_i,\ i=1,\ldots,d\}$$
 
 로 적힌다. 이 facet 법선들이 구성의 모든 선형 데이터를 담는다. 법선 벡터들을 모아 morphism
 
@@ -112,22 +112,22 @@ $$\phi_N:=\iota^\ast\circ\phi:\mathbb{C}^d\rightarrow\mathfrak{n}^\ast$$
 을 얻는다. 우리는 적절한 값에서 이 사상의 영점집합을 잘라 $N$으로 나눌 것이다. 그 값을 정하는 것이 다면체의 상수 $\lambda=(\lambda_1,\ldots,\lambda_d)$이다.
 
 ::: 정리 6 (Delzant 구성)
-$\Delta=\{x\in\mathbb{R}^n:\langle x,u_i\rangle\geq-\lambda_i\}$을 $d$개 facet을 갖는 Delzant 다면체라 하고, [보조정리 5](#lem5)의 exact sequence $0\rightarrow N\rightarrow\mathbb{T}^d\rightarrow\mathbb{T}^n\rightarrow0$과 위의 $\phi_N=\iota^\ast\circ\phi$을 택하자. $\lambda\in\mathbb{R}^d$의 image $\iota^\ast(\pi\lambda)\in\mathfrak{n}^\ast$을 $c$라 두면, $c$은 $\phi_N$의 regular value이고 $N$은 영점집합 $\phi_N^{-1}(c)$ 위에 자유롭고 proper하게 작용한다. 따라서 사교 축약 ([\[사교기하학\] §사교 축약, ⁋정리 2](/ko/math/symplectic_geometry/symplectic_reduction#thm2))
+$\Delta=\{x\in\mathbb{R}^n\mid\langle x,u_i\rangle\geq-\lambda_i\}$을 $d$개 facet을 갖는 Delzant 다면체라 하고, [보조정리 5](#lem5)의 exact sequence $0\rightarrow N\rightarrow\mathbb{T}^d\rightarrow\mathbb{T}^n\rightarrow0$과 위의 $\phi_N=\iota^\ast\circ\phi$을 택하자. $\lambda\in\mathbb{R}^d$의 image $\iota^\ast(\pi\lambda)\in\mathfrak{n}^\ast$을 $c$라 두면, $c$은 $\phi_N$의 regular value이고 $N$은 영점집합 $\phi_N^{-1}(c)$ 위에 자유롭고 proper하게 작용한다. 따라서 사교 축약 ([\[사교기하학\] §사교 축약, ⁋정리 2](/ko/math/symplectic_geometry/symplectic_reduction#thm2))
 
 $$M_\Delta:=\phi_N^{-1}(c)/N=\mathbb{C}^d /\!\!/_{\!c}\, N$$
 
 은 차원 $2n$의 compact connected symplectic manifold이고, 그 위에는 quotient $\mathbb{T}^n=\mathbb{T}^d/N$의 효과적 Hamiltonian action이 잔여 action으로 내려와 $(M_\Delta,\omega_\Delta,\mathbb{T}^n,\mu_\Delta)$을 symplectic toric manifold로 만든다. 그 운동량 다면체는 정확히 $\mu_\Delta(M_\Delta)=\Delta$이다.
 :::
 ::: 증명
-먼저 $c$이 regular value이고 action이 자유로움을 본다. 점 $z\in\mathbb{C}^d$에서 좌표가 영이 되는 첨자의 집합을 $I(z)=\{k:z_k=0\}$이라 하자. $\mathbb{T}^d$의 점 $z$에서의 stabilizer는 정확히 $I(z)$가 지표하는 좌표 부분 torus $\mathbb{T}^{I(z)}=\{t:t_k=0\text{ for }k\notin I(z)\}$이다. 따라서 $N$이 $z$에서 자유롭게 작용할 필요충분조건은 $N\cap\mathbb{T}^{I(z)}=\{1\}$, 즉 Lie algebra 수준에서 $\mathfrak{n}\cap\mathbb{R}^{I(z)}=0$이다.
+먼저 $c$이 regular value이고 action이 자유로움을 본다. 점 $z\in\mathbb{C}^d$에서 좌표가 영이 되는 첨자의 집합을 $I(z)=\{k\mid z_k=0\}$이라 하자. $\mathbb{T}^d$의 점 $z$에서의 stabilizer는 정확히 $I(z)$가 지표하는 좌표 부분 torus $\mathbb{T}^{I(z)}=\{t\mid t_k=0\text{ for }k\notin I(z)\}$이다. 따라서 $N$이 $z$에서 자유롭게 작용할 필요충분조건은 $N\cap\mathbb{T}^{I(z)}=\{1\}$, 즉 Lie algebra 수준에서 $\mathfrak{n}\cap\mathbb{R}^{I(z)}=0$이다.
 
-이제 $\phi_N(z)=c$인 점, 즉 $\iota^\ast\bigl(\pi(\lvert z_1\rvert^2,\ldots,\lvert z_d\rvert^2)-\pi\lambda\bigr)=0$인 점을 보자. 이 조건은 벡터 $\pi(\lvert z_k\rvert^2)_k-\pi\lambda$가 $\iota^\ast$의 kernel, 곧 $\mathfrak{n}^\perp=\im\beta^\ast=\{(\langle x,u_k\rangle)_k:x\in\mathbb{R}^n\}$에 속함을 뜻한다. 따라서 어떤 $x\in\mathbb{R}^n$이 존재하여 모든 $k$에 대해
+이제 $\phi_N(z)=c$인 점, 즉 $\iota^\ast\bigl(\pi(\lvert z_1\rvert^2,\ldots,\lvert z_d\rvert^2)-\pi\lambda\bigr)=0$인 점을 보자. 이 조건은 벡터 $\pi(\lvert z_k\rvert^2)_k-\pi\lambda$가 $\iota^\ast$의 kernel, 곧 $\mathfrak{n}^\perp=\im\beta^\ast=\{(\langle x,u_k\rangle)_k\mid x\in\mathbb{R}^n\}$에 속함을 뜻한다. 따라서 어떤 $x\in\mathbb{R}^n$이 존재하여 모든 $k$에 대해
 
 $$\pi\lvert z_k\rvert^2-\pi\lambda_k=\langle x,u_k\rangle,\qquad\text{즉}\qquad \lvert z_k\rvert^2=\langle x,u_k\rangle+\lambda_k\geq0$$
 
-이 성립한다. 마지막 부등식은 정확히 $x\in\Delta$임을 말한다. 이 $x=\mu_\Delta(z)$이 곧 잔여 운동량 사상의 값이 되며, 따라서 $\phi_N^{-1}(c)$의 점은 다면체의 점 $x\in\Delta$로 사영된다. $z_k=0$인 첨자는 정확히 $x$이 facet $F_k$ 위에 놓이는, 즉 $\langle x,u_k\rangle+\lambda_k=0$인 첨자이므로 $I(z)=\{k:x\in F_k\}$이다.
+이 성립한다. 마지막 부등식은 정확히 $x\in\Delta$임을 말한다. 이 $x=\mu_\Delta(z)$이 곧 잔여 운동량 사상의 값이 되며, 따라서 $\phi_N^{-1}(c)$의 점은 다면체의 점 $x\in\Delta$로 사영된다. $z_k=0$인 첨자는 정확히 $x$이 facet $F_k$ 위에 놓이는, 즉 $\langle x,u_k\rangle+\lambda_k=0$인 첨자이므로 $I(z)=\{k\mid x\in F_k\}$이다.
 
-$x$이 $\Delta$의 점일 때 그것이 놓이는 facet들의 집합 $I(z)=\{k:x\in F_k\}$을 보면, simple 조건에 의해 그 개수는 많아야 $n$이고 해당 법선 $\{u_k:k\in I(z)\}$은 일차독립이다. Smooth 조건에 의해 이들은 $\mathbb{Z}^n$의 basis의 일부로 확장되므로, $\beta$을 $\mathbb{R}^{I(z)}$로 제한한 morphism은 단사이다. 그런데 $\mathfrak{n}=\ker\beta$이므로 $\mathfrak{n}\cap\mathbb{R}^{I(z)}=\ker(\beta\rvert_{\mathbb{R}^{I(z)}})=0$이고, 따라서 위 판정에 의해 $N$은 $\phi_N^{-1}(c)$의 모든 점에서 자유롭게 작용한다. 자유로운 action은 $N$이 compact이므로 proper하며, [\[사교기하학\] §사교 축약, ⁋보조정리 1](/ko/math/symplectic_geometry/symplectic_reduction#lem1)에 의해 stabilizer의 Lie algebra가 영이라는 것은 $c$이 $\phi_N$의 regular value임과 동치이다.
+$x$이 $\Delta$의 점일 때 그것이 놓이는 facet들의 집합 $I(z)=\{k\mid x\in F_k\}$을 보면, simple 조건에 의해 그 개수는 많아야 $n$이고 해당 법선 $\{u_k\mid k\in I(z)\}$은 일차독립이다. Smooth 조건에 의해 이들은 $\mathbb{Z}^n$의 basis의 일부로 확장되므로, $\beta$을 $\mathbb{R}^{I(z)}$로 제한한 morphism은 단사이다. 그런데 $\mathfrak{n}=\ker\beta$이므로 $\mathfrak{n}\cap\mathbb{R}^{I(z)}=\ker(\beta\rvert_{\mathbb{R}^{I(z)}})=0$이고, 따라서 위 판정에 의해 $N$은 $\phi_N^{-1}(c)$의 모든 점에서 자유롭게 작용한다. 자유로운 action은 $N$이 compact이므로 proper하며, [\[사교기하학\] §사교 축약, ⁋보조정리 1](/ko/math/symplectic_geometry/symplectic_reduction#lem1)에 의해 stabilizer의 Lie algebra가 영이라는 것은 $c$이 $\phi_N$의 regular value임과 동치이다.
 
 이제 [\[사교기하학\] §사교 축약, ⁋정리 2](/ko/math/symplectic_geometry/symplectic_reduction#thm2)의 모든 가정이 충족되었다. $N$은 compact torus이고 $c$은 regular value이며 action은 자유롭고 proper하므로, 축약공간 $M_\Delta=\phi_N^{-1}(c)/N$은 smooth variety이고 유일한 symplectic form $\omega_\Delta$을 가지며 그 차원은
 
@@ -137,7 +137,7 @@ $$\dim M_\Delta=\dim\mathbb{C}^d-2\dim N=2d-2(d-n)=2n$$
 
 잔여 action은 다음과 같이 내려온다. $\mathbb{T}^d$이 $\mathbb{C}^d$ 위에 작용하고 그 subgroup $N$의 action으로 나누었으므로, quotient group $\mathbb{T}^n=\mathbb{T}^d/N$이 $M_\Delta$ 위에 작용한다. 이 action은 $\omega_\Delta$을 보존하며 그 운동량 사상은 $\phi$이 $\phi_N^{-1}(c)$ 위에서 유도하는 사상이 $\mathbb{T}^n$ 방향으로 내려온 것, 즉 위에서 정의한 $\mu_\Delta(z)=x$이다. Action의 효과성은 다음에서 나온다. $\mathbb{T}^n$의 한 원소가 $M_\Delta$의 모든 점을 고정하면, 그것을 $\mathbb{T}^d$로 들어 올린 action은 $\phi_N^{-1}(c)$을 $N$-orbit 안에서 보존하는데, 내부점 $x\in\Delta^\circ$ 위의 fiber에서는 $I(z)=\emptyset$이라 $\mathbb{T}^d$ 전체가 자유롭게 작용하므로 그 원소는 $N$에 속해야 하고, 따라서 $\mathbb{T}^n$에서는 항등원이다.
 
-끝으로 운동량 다면체가 $\Delta$임은 위 projection에서 직접 읽힌다. $\mu_\Delta(z)=x$이 가능한 값의 집합은 정확히 $\{x\in\mathbb{R}^n:\langle x,u_k\rangle+\lambda_k\geq0\text{ for all }k\}=\Delta$이므로 $\mu_\Delta(M_\Delta)=\Delta$이다.
+끝으로 운동량 다면체가 $\Delta$임은 위 projection에서 직접 읽힌다. $\mu_\Delta(z)=x$이 가능한 값의 집합은 정확히 $\{x\in\mathbb{R}^n\mid\langle x,u_k\rangle+\lambda_k\geq0\text{ for all }k\}=\Delta$이므로 $\mu_\Delta(M_\Delta)=\Delta$이다.
 :::
 
 이 구성은 Delzant 정리의 존재성 부분, 즉 [정리 4](#thm4)의 3을 증명한다. 상수 $\lambda_i$들이 비로소 여기서 쓰였는데, 이들은 축약을 취하는 운동량 값 $c=\iota^\ast(\pi\lambda)$을 정하여 다면체의 facet들이 놓이는 위치, 곧 다면체의 크기와 모양을 결정한다. 법선 $u_i$들이 작용하는 부분 torus $N$을 통해 variety의 *위상*과 action을 빚는다면, 상수 $\lambda_i$들은 그 위에 얹히는 symplectic form의 *부피*를 조절하는 셈이다. 두 다면체가 평행이동으로만 다르면 $u_i$이 같고 $\lambda_i$만 일제히 바뀌는데, 이는 운동량 사상에 상수를 더하는 자유도에 흡수되어 같은 symplectic toric manifold를 준다. 이것이 [정리 4](#thm4)의 유일성 2에서 평행이동을 합동으로 허용하는 이유이다.
@@ -154,7 +154,7 @@ $\Delta\subseteq\mathbb{R}^n$을 Delzant 다면체라 하자. [정리 6](#thm6)�
 ::: 증명
 $\Delta$의 simple 조건은 $\Sigma_\Delta$의 모든 maximal cone이 simplicial임을, smooth 조건은 그 generator들이 $\mathbb{Z}^n$의 basis를 이룸을 준다. 따라서 [§토릭 다양체의 정의, ⁋명제 11](/ko/math/toric_geometry/toric_varieties#prop11)에 의해 $X_{\Sigma_\Delta}$은 smooth이고, $\Delta$이 full-dimensional lattice polytope의 normal fan이므로 [§토릭 다양체의 정의, ⁋명제 8](/ko/math/toric_geometry/toric_varieties#prop8)에 의해 projective이다.
 
-Diffeomorphism은 양쪽 모두의 stratification이 $\Delta$의 face lattice와 같은 조합론으로 색인된다는 데에서 나온다. [정리 6](#thm6)의 증명에서 본 대로 $M_\Delta$의 점은 좌표 소멸 패턴 $I(z)=\{k:x\in F_k\}$으로 층화되며, 다면체의 face $F$마다 그 상대 내부 위에 놓이는 점들이 한 $\mathbb{T}^n$-orbit을 이룬다. 한편 $X_{\Sigma_\Delta}$의 orbit은 [§토릭 다양체의 정의, ⁋명제 5](/ko/math/toric_geometry/toric_varieties#prop5)에 의해 $\Sigma_\Delta$의 cone, 곧 $\Delta$의 face로 색인된다. 두 층화가 같은 색인 위에서 국소적으로 표준 모형 (꼭짓점 근방에서 $\mathbb{C}^n$의 표준 toric chart)으로 일치하므로, 이를 붙여 $\mathbb{T}^n$-동변 diffeomorphism $M_\Delta\cong X_{\Sigma_\Delta}$을 얻는다.
+Diffeomorphism은 양쪽 모두의 stratification이 $\Delta$의 face lattice와 같은 조합론으로 색인된다는 데에서 나온다. [정리 6](#thm6)의 증명에서 본 대로 $M_\Delta$의 점은 좌표 소멸 패턴 $I(z)=\{k\mid x\in F_k\}$으로 층화되며, 다면체의 face $F$마다 그 상대 내부 위에 놓이는 점들이 한 $\mathbb{T}^n$-orbit을 이룬다. 한편 $X_{\Sigma_\Delta}$의 orbit은 [§토릭 다양체의 정의, ⁋명제 5](/ko/math/toric_geometry/toric_varieties#prop5)에 의해 $\Sigma_\Delta$의 cone, 곧 $\Delta$의 face로 색인된다. 두 층화가 같은 색인 위에서 국소적으로 표준 모형 (꼭짓점 근방에서 $\mathbb{C}^n$의 표준 toric chart)으로 일치하므로, 이를 붙여 $\mathbb{T}^n$-동변 diffeomorphism $M_\Delta\cong X_{\Sigma_\Delta}$을 얻는다.
 
 마지막 주장은 사교 축약이 주는 형식과 toric divisor가 주는 형식이 같은 부류임을 말한다. $\Delta$의 facet 데이터 $\langle x,u_k\rangle\geq-\lambda_k$은 [§토러스 인자와 선다발, ⁋명제 9](/ko/math/toric_geometry/toric_divisors#prop9)의 strictly convex piecewise linear 함수, 곧 ample divisor $D=\sum_k\lambda_k D_{\rho_k}$을 정의하며, 그 polytope $\Delta_D$이 정확히 $\Delta$이다. 축약으로 얻은 $\omega_\Delta$의 운동량 다면체가 $\Delta$이라는 [정리 6](#thm6)의 결론은, Atiyah-Guillemin-Sternberg 그림에서 $[\omega_\Delta]$이 이 ample 부류와 같은 $\mathbb{T}^n$-equivariant cohomology류로 표현됨과 동치이다. 따라서 $\omega_\Delta$은 $\mathcal{O}(D)$의 Chern 형식을 대표하는 Kähler 형식과 같은 부류이다.
 :::
@@ -168,7 +168,7 @@ Diffeomorphism은 양쪽 모두의 stratification이 $\Delta$의 face lattice와
 ::: 예시 8
 $\mathbb{R}^n$의 표준 단체 ([§토릭 다양체의 정의, ⁋예시 10](/ko/math/toric_geometry/toric_varieties#ex10))
 
-$$\Delta=\{x\in\mathbb{R}^n:x_i\geq0\ (i=1,\ldots,n),\ x_1+\cdots+x_n\leq1\}$$
+$$\Delta=\{x\in\mathbb{R}^n\mid x_i\geq0\ (i=1,\ldots,n),\ x_1+\cdots+x_n\leq1\}$$
 
 을 생각하자. 이는 $d=n+1$개의 facet을 가지며, 안쪽 법선은 $u_i=e_i$ ($i=1,\ldots,n$)와 $u_{n+1}=-e_1-\cdots-e_n$이고 상수는 $\lambda_i=0$, $\lambda_{n+1}=1$이다. 각 꼭짓점에서 만나는 $n$개의 법선이 $\mathbb{Z}^n$의 basis를 이루므로 $\Delta$은 Delzant 다면체이다.
 
@@ -184,7 +184,7 @@ $$M_\Delta=\mathbb{C}^{n+1}/\!\!/_{\!c}\,S^1=\mathbb{CP}^n$$
 ::: 예시 9
 $\mathbb{R}^2$의 단위 정사각형
 
-$$\Delta=[0,1]\times[0,1]=\{x\in\mathbb{R}^2:x_1\geq0,\ x_2\geq0,\ x_1\leq1,\ x_2\leq1\}$$
+$$\Delta=[0,1]\times[0,1]=\{x\in\mathbb{R}^2\mid x_1\geq0,\ x_2\geq0,\ x_1\leq1,\ x_2\leq1\}$$
 
 을 생각하자. 네 facet의 안쪽 법선은 $u_1=e_1$, $u_2=e_2$, $u_3=-e_1$, $u_4=-e_2$이고 상수는 $\lambda_1=\lambda_2=0$, $\lambda_3=\lambda_4=1$이다. 각 꼭짓점에서 만나는 두 법선, 가령 $(0,0)$에서 $\{e_1,e_2\}$과 $(1,1)$에서 $\{-e_1,-e_2\}$은 모두 $\mathbb{Z}^2$의 basis이므로 정사각형은 Delzant 다면체이다.
 
@@ -200,7 +200,7 @@ $$M_\Delta=(\mathbb{C}^2/\!\!/_{\!c_1}S^1)\times(\mathbb{C}^2/\!\!/_{\!c_2}S^1)=
 ::: 예시 10
 정수 $a\geq0$과 양의 실수 $h$에 대하여 $\mathbb{R}^2$의 사다리꼴
 
-$$\Delta_a=\{x\in\mathbb{R}^2:x_1\geq0,\ x_2\geq0,\ x_1\leq1,\ x_2\leq h-a x_1\}$$
+$$\Delta_a=\{x\in\mathbb{R}^2\mid x_1\geq0,\ x_2\geq0,\ x_1\leq1,\ x_2\leq h-a x_1\}$$
 
 을 생각하자 (여기서 $h>a$로 두어 다면체가 비지 않게 한다). 네 facet의 안쪽 법선은 $u_1=e_1$, $u_2=e_2$, $u_3=-e_1$, $u_4=(-a,-1)$이고, 위쪽 모서리의 기울기가 $-a$이다. 각 꼭짓점에서 만나는 두 법선의 행렬식을 보면, 가령 $(1,h-a)$에서 $\{-e_1,(-a,-1)\}$의 행렬식은 $\det\begin{pmatrix}-1&-a\\0&-1\end{pmatrix}=1$이고 나머지 꼭짓점에서도 $\pm1$이므로 $\Delta_a$은 Delzant 다면체이다.
 

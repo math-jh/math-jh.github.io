@@ -81,7 +81,7 @@ Now let $W=P\cap U$. $P$ is open in $K$ and $U$ is open in $X$ with $U\subseteq 
 
 The second condition of [Proposition 4](#prop4) can be read as saying that in an LCH space, each point has a neighborhood basis consisting of open sets with compact closure. This will be used repeatedly whenever we unfold local arguments, and it also plays a key role in determining the Hausdorff property of the one-point compactification. Moreover, from this property it follows immediately that any LCH space is regular: given a point $x$ and a closed set $C$ not containing $x$, applying the second condition to $V=X\setminus C$ yields $W$ and $X\setminus\cl(W)$ separating $x$ and $C$.
 
-The most basic example is that Euclidean space $\mathbb{R}^n$ is LCH. For any point $x$, the closed ball $\{y\mid\lVert y-x\rVert\leq 1\}$ is compact by the Heine–Borel theorem and contains the open ball, so it forms a compact neighborhood of $x$, and we already know that $\mathbb{R}^n$ is Hausdorff. Similarly, any discrete space is also LCH, since for each point $x$ the singleton $\{x\}$ is an open finite set and hence a compact neighborhood, and a discrete space is Hausdorff. A slightly less obvious example is a topological manifold.
+The most basic example is that Euclidean space $\mathbb{R}^n$ is LCH. For any point $x$, the closed ball $\{y:\lVert y-x\rVert\leq 1\}$ is compact by the Heine–Borel theorem and contains the open ball, so it forms a compact neighborhood of $x$, and we already know that $\mathbb{R}^n$ is Hausdorff. Similarly, any discrete space is also LCH, since for each point $x$ the singleton $\{x\}$ is an open finite set and hence a compact neighborhood, and a discrete space is Hausdorff. A slightly less obvious example is a topological manifold.
 
 ::: Example 5
 A Hausdorff space in which each point has an open neighborhood homeomorphic to an open subset of $\mathbb{R}^n$ is an LCH space. A topological manifold, which we will define later, is precisely such a space. Indeed, for each point $x$ of such a space $M$, take an open neighborhood $U$ homeomorphic to an open subset of $\mathbb{R}^n$; then since the point corresponding to $x$ under this homeomorphism has a compact neighborhood in $\mathbb{R}^n$ (because $\mathbb{R}^n$ is LCH), pulling this back to $U$ gives a compact neighborhood of $x$.
@@ -177,7 +177,7 @@ The one-point compactification is characterized as the smallest among Hausdorff 
 The most familiar example is that the one-point compactification of Euclidean space becomes a sphere.
 
 ::: Example 14
-Consider the north pole $N=(0,\ldots,0,1)$ of the $n$-sphere $S^n=\{x\in\mathbb{R}^{n+1}\mid\lVert x\rVert=1\}$. The stereographic projection
+Consider the north pole $N=(0,\ldots,0,1)$ of the $n$-sphere $S^n=\{x\in\mathbb{R}^{n+1}:\lVert x\rVert=1\}$. The stereographic projection
 
 $$\sigma:S^n\setminus\{N\}\rightarrow\mathbb{R}^n,\qquad \sigma(x_1,\ldots,x_{n+1})=\frac{1}{1-x_{n+1}}(x_1,\ldots,x_n)$$
 
@@ -259,21 +259,21 @@ That paracompactness is substantially broader than compactness must be verified 
 ::: Example 20
 Euclidean space $\mathbb{R}^n$ is paracompact. $\mathbb{R}^n$ is not compact because it is unbounded, but we can exhaust the space by open balls centered at the origin with increasing radii and obtain a locally finite refinement.
 
-Let an arbitrary open cover $\mathcal{U}=(U_i)_{i\in I}$ be given. For each integer $k\geq 1$, let $B_k=\{x\mid\lVert x\rVert<k\}$ be the open ball of radius $k$, and agree that $B_0=B_{-1}=\emptyset$. Then the shells
+Let an arbitrary open cover $\mathcal{U}=(U_i)_{i\in I}$ be given. For each integer $k\geq 1$, let $B_k=\{x:\lVert x\rVert<k\}$ be the open ball of radius $k$, and agree that $B_0=B_{-1}=\emptyset$. Then the shells
 
-$$A_k=\cl(B_k)\setminus B_{k-1}=\{x\mid k-1\leq\lVert x\rVert\leq k\}$$
+$$A_k=\cl(B_k)\setminus B_{k-1}=\{x: k-1\leq\lVert x\rVert\leq k\}$$
 
 are closed bounded subsets of $\mathbb{R}^n$ and hence compact by the Heine–Borel theorem, and their union is all of $\mathbb{R}^n$. Meanwhile,
 
 $$O_k=B_{k+1}\setminus\cl(B_{k-2})$$
 
-is an open set satisfying $A_k\subseteq O_k$. Here for $k\geq 3$ we have $O_k=\{x\mid k-2<\lVert x\rVert<k+1\}$, and for $k=1,2$ since $B_{k-2}=\emptyset$ we have $\cl(B_{k-2})=\emptyset$ so $O_k=B_{k+1}$.
+is an open set satisfying $A_k\subseteq O_k$. Here for $k\geq 3$ we have $O_k=\{x: k-2<\lVert x\rVert<k+1\}$, and for $k=1,2$ since $B_{k-2}=\emptyset$ we have $\cl(B_{k-2})=\emptyset$ so $O_k=B_{k+1}$.
 
 We now treat each compact set $A_k$. Each $x\in A_k$ belongs to some $U_i$, so $x\in U_i\cap O_k$, and such open sets cover $A_k$. Since $A_k$ is compact, we can choose finitely many indices, that is, a finite set $F_k\subseteq I$, such that $(U_i\cap O_k)_{i\in F_k}$ covers $A_k$. ([§Compact Spaces, ⁋Proposition 2](/en/math/topology/compact_spaces#prop2)) Consider the family gathered over all $k\geq 1$:
 
 $$\mathcal{V}=(U_i\cap O_k)_{k\geq 1,i\in F_k}$$
 
-Each element is an open set contained in $U_i$, so $\mathcal{V}$ is an open refinement of $\mathcal{U}$; and since the $A_k$ cover $\mathbb{R}^n$, $\mathcal{V}$ also covers $\mathbb{R}^n$. Finally, we verify that $\mathcal{V}$ is locally finite. For a point $x$, letting $r=\lVert x\rVert$, the neighborhood $B_{r+1}=\{y\mid\lVert y\rVert<r+1\}$ meets $O_k$ only when $k-2<r+1$, that is, $k<r+3$, so it meets only finitely many $O_k$. For each $k$, the elements of $\mathcal{V}$ are only finitely many ($\lvert F_k\rvert$ many), so $B_{r+1}$ meets only finitely many elements of $\mathcal{V}$. Therefore $\mathcal{V}$ is a locally finite open refinement and $\mathbb{R}^n$ is paracompact.
+Each element is an open set contained in $U_i$, so $\mathcal{V}$ is an open refinement of $\mathcal{U}$; and since the $A_k$ cover $\mathbb{R}^n$, $\mathcal{V}$ also covers $\mathbb{R}^n$. Finally, we verify that $\mathcal{V}$ is locally finite. For a point $x$, letting $r=\lVert x\rVert$, the neighborhood $B_{r+1}=\{y:\lVert y\rVert<r+1\}$ meets $O_k$ only when $k-2<r+1$, that is, $k<r+3$, so it meets only finitely many $O_k$. For each $k$, the elements of $\mathcal{V}$ are only finitely many ($\lvert F_k\rvert$ many), so $B_{r+1}$ meets only finitely many elements of $\mathcal{V}$. Therefore $\mathcal{V}$ is a locally finite open refinement and $\mathbb{R}^n$ is paracompact.
 :::
 
 The argument of this example relies not on any special property of $\mathbb{R}^n$ but only on two properties: local compactness and exhaustion by countably many compact sets. Indeed, the same method shows that any second countable LCH space, and more generally any $\sigma$-compact LCH space, is paracompact. This forms the basis for the paracompactness of topological manifolds, which we will discuss later.

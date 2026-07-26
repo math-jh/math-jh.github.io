@@ -105,7 +105,7 @@ $$v=\sum_{i=1}^n\langle x_i,v\rangle x_i$$
 
 이다. 둘째 변수가 linear이므로 계수를 뽑을 때 $\langle x_i,v\rangle$의 순서가 중요하며, $\langle v,x_i\rangle$을 쓰면 그 켤레가 나온다.
 
-부분공간으로의 직교분해 또한 그대로 성립한다. 복소내적공간 $V$의 부분공간 $U\leq V$에 대하여, 내적을 $U$로 제한한 것이 다시 Hermitian 내적이므로 $U$는 orthonormal basis $\{x_1,\ldots,x_k\}$를 가지며, 이를 포함하는 $V$의 orthonormal basis로 확장할 수 있다. $U^\perp=\{v\in V:\langle u,v\rangle=0\text{ for all }u\in U\}$로 두자.
+부분공간으로의 직교분해 또한 그대로 성립한다. 복소내적공간 $V$의 부분공간 $U\leq V$에 대하여, 내적을 $U$로 제한한 것이 다시 Hermitian 내적이므로 $U$는 orthonormal basis $\{x_1,\ldots,x_k\}$를 가지며, 이를 포함하는 $V$의 orthonormal basis로 확장할 수 있다. $U^\perp=\{v\in V\mid\langle u,v\rangle=0\text{ for all }u\in U\}$로 두자.
 
 ::: 명제 4
 복소내적공간 $V$의 임의의 부분공간 $U\leq V$에 대하여

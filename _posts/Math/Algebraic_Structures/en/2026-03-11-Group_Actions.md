@@ -266,7 +266,7 @@ $$E^g=\{x\in E\mid g\cdot x=x\}$$
 
 Then
 
-$$\sum_{g\in G}\lvert E^g\rvert=\# \{(g, x)\in G\times E: g\cdot x=x\}=\sum_{x\in X}\lvert \Stab(x)\rvert$$
+$$\sum_{g\in G}\lvert E^g\rvert=\# \{(g, x)\in G\times E\mid g\cdot x=x\}=\sum_{x\in X}\lvert \Stab(x)\rvert$$
 
 holds. From $(\ast\ast)$ we have
 

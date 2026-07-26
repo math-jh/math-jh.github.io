@@ -348,7 +348,7 @@ and since $g$ is fixed, this fiber is essentially $\{xT\mid x\in N\}$, that is, 
 
 Let us verify the discussion so far in the compact connected Lie group
 
-$$\SU(2)=\{A\in\GL(2;\mathbb{C})\mid A^\dagger A=I,\det A=1\}=\left\{\begin{pmatrix}\alpha&-\overline{\beta}\\\beta&\overline{\alpha}\end{pmatrix}\,\middle\vert\;\alpha,\beta\in \mathbb{C},\lvert\alpha\rvert^2+\lvert\beta\rvert^2=1\right\}$$
+$$\SU(2)=\{A\in\GL(2;\mathbb{C})\mid A^\dagger A=I,\det A=1\}=\left\{\begin{pmatrix}\alpha&-\overline{\beta}\\\beta&\overline{\alpha}\end{pmatrix} : \alpha,\beta\in \mathbb{C},\lvert\alpha\rvert^2+\lvert\beta\rvert^2=1\right\}$$
 
 First, we need to find a maximal torus of $\SU(2)$. Our claim is that the set
 
@@ -425,7 +425,7 @@ For a maximal torus $T$ of a compact connected Lie group $G$:
 3. The set of singular elements is a union of finitely many subgroups.
 :::
 ::: Proof
-(1) and (2): For each $w\in W$, $w\neq e$, the fixed point set $\{t\in T: wtw^{-1}=t\}$ is a proper closed subgroup of $T$. The set of singular elements is the finite union of these, so it is closed, and its complement (the regular elements) is dense open.
+(1) and (2): For each $w\in W$, $w\neq e$, the fixed point set $\{t\in T\mid wtw^{-1}=t\}$ is a proper closed subgroup of $T$. The set of singular elements is the finite union of these, so it is closed, and its complement (the regular elements) is dense open.
 
 (3): The fixed point set for each $w\neq e$ is a closed subgroup of $T$, and since $W$ is finite, it is a union of finitely many subgroups.
 :::

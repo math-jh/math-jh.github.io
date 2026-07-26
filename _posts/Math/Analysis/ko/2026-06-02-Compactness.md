@@ -75,7 +75,7 @@ $$\lVert x_m \rVert > m$$
 ::: 예시 5 (수렴점열과 그 극한)
 집합
 
-$$A = \Bigl\{  \frac{1}{m} : m \in \mathbb{N}  \Bigr\}$$
+$$A = \Bigl\{  \frac{1}{m} \mid m \in \mathbb{N}  \Bigr\}$$
 
 는 bounded이지만 닫혀 있지 않다. 점열 $x_m = 1/m$이 $A$ 안에 있으면서 $0 \notin A$로 수렴하기 때문이다. 따라서 $A$는 점렬컴팩트가 아니다. 그러나 여기에 limit point $0$을 더한
 
@@ -129,7 +129,7 @@ $$x_{m_k} \rightarrow x \in K$$
 ::: 명제 8
 $\mathbb{R}^n$에서 $x_m \rightarrow x$이면, 집합
 
-$$C = \{x\} \cup \{x_m : m \in \mathbb{N}\}$$
+$$C = \{x\} \cup \{x_m \mid m \in \mathbb{N}\}$$
 
 은 점렬컴팩트이다.
 :::

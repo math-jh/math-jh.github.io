@@ -119,7 +119,7 @@ $$m,n>N \implies x_m-y_n\in U$$
 
 이제 $0\in G$의 열린근방 $U$에 대하여, 
 
-$$\widehat{U}=\{[(x_n)]\in \widehat{G}:\text{for any $(y_n)\in [(x_n)]$, $y_n\in U$ for all but finitely many $n$}\}$$
+$$\widehat{U}=\{[(x_n)]\in \widehat{G}\mid\text{for any $(y_n)\in [(x_n)]$, $y_n\in U$ for all but finitely many $n$}\}$$
 
 으로 정의하자. 그럼 약간의 계산을 통해, $\widehat{H}_i$들을 coinitial subset으로 갖는 $\widehat{G}$의 집합들의 모임 $\mathcal{N}(0)$이 [\[위상수학\] §열린집합, ⁋명제 6](/ko/math/topology/open_sets#prop6)의 모든 조건을 만족한다는 것을 확인할 수 있고, 따라서 $\widehat{G}$에 위상구조를 정의할 수 있다. 정의에 의해 $\widehat{G}$ 또한 first countable이며, $x\in G$를 받아 상수수열 $(x_i=x)$를 내놓는 함수 $G \rightarrow \widehat{G}$가 연속임을 알 수 있다. 뿐만 아니라, 이 함수는 앞선 절에서 정의한 $G \rightarrow \widehat{G}$와 완전히 같은 것이다. 
 

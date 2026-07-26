@@ -285,7 +285,7 @@ $$(\x_2)\cup(\x_1,\x_2)=(\x_1,\x_2)$$
 
 이상에서 $X$의 rational function 전체가 이루는 total quotient ring $K(X)$는, [예시 11](#ex11)에서 본 원소의 표기를 그대로 쓰면
 
-$$K(X)=\left\{\frac{p(\x_1)+c\x_2}{q(\x_1)+c'\x_2} : q(0)\neq0\right\}$$
+$$K(X)=\left\{\frac{p(\x_1)+c\x_2}{q(\x_1)+c'\x_2} \mid q(0)\neq0\right\}$$
 
 의 꼴이 된다. 이는 고전적인 경우 fraction field가 분모가 $0$이 아닌 유리식들의 모임이었던 것과 나란한 모습이되, 분모가 (generic point뿐 아니라) 원점에서까지 사라지지 않아야 한다는 조건으로 바뀐 것이다. 
 

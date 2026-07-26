@@ -101,7 +101,7 @@ $$\rchi(M)=\int_{[M]} e(TM)$$
 
 이를 $S^2$에서 구체적으로 확인해 보자. 가령 [§사상의 차수와 Brouwer·Lefschetz 고정점 정리, ⁋정리 8](/ko/math/algebraic_topology/degree_and_fixed_point_theorems#thm8)으로부터 우리는 $TS^2$의 임의의 section은 항상 $0$이 되는 곳이 있다는 것을 안다. 예를 들어, $S^2$이 다음의 식
 
-$$S^2=\{(x,y,z): x^2+y^2+z^2=1\}$$
+$$S^2=\{(x,y,z)\mid x^2+y^2+z^2=1\}$$
 
 으로 $\mathbb{R}^3$에 들어있다 하고, 이 위에 정의된 높이함수 $z$를 생각하자. 그럼 이 $z$의 gradient vector $\nabla z$는 tangent bundle로의 section
 

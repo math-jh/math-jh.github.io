@@ -33,7 +33,7 @@ $\mathcal{F}$가 열린집합 $\Omega \subseteq \mathbb{C}$ 위의 holomorphic f
 ::: 증명
 콤팩트 집합 $K \subseteq \Omega$을 고정한다. $K$이 $\Omega$의 콤팩트 부분집합이므로 그것과 $\partial\Omega$ 사이의 거리 $3r = \operatorname{dist}(K, \partial\Omega) > 0$이 양수이다 ($\Omega = \mathbb{C}$이면 $r$을 임의의 양수로 둔다). $K$의 각 점을 중심으로 반지름 $2r$인 closed 원판들의 합집합
 
-$$L = \{\,z \in \mathbb{C} : \operatorname{dist}(z, K) \leq 2r\,\}$$
+$$L = \{\,z \in \mathbb{C} \mid \operatorname{dist}(z, K) \leq 2r\,\}$$
 
 은 $\Omega$에 포함되는 콤팩트 집합이므로, 가정에 의해 어떤 상수 $M = M_L$이 있어 모든 $f \in \mathcal{F}$과 $\zeta \in L$에서 $\lvert f(\zeta)\rvert \leq M$이다.
 
@@ -59,7 +59,7 @@ $\mathcal{F}$의 임의의 함수열 $(f_n)$을 잡아, $\Omega$의 모든 콤�
 
 먼저 $\Omega$ 안의 가산조밀집합 $E = \{w_1, w_2, \dots\}$을 택한다 (가령 $\Omega$에 속하는 유리좌표점 전체). 수열 $(f_n(w_1))$은 가정의 국소유계성에서 ($\{w_1\}$이 콤팩트이므로) bounded인 복소수열이고, Bolzano–Weierstrass 정리에 의해 수렴 부분열 $(f_{n}^{(1)})$을 가진다. 이 부분열에서 다시 점 $w_2$에서의 값이 수렴하도록 부분열 $(f_n^{(2)})$을 뽑고, 이를 거듭하면 부분열의 사슬 $(f_n^{(1)}) \supseteq (f_n^{(2)}) \supseteq \cdots$을 얻는데, $(f_n^{(k)})$은 $w_1, \dots, w_k$ 모두에서 수렴한다. 대각선열 $g_n = f_n^{(n)}$을 잡으면, 각 $j$에 대해 $(g_n)$은 $n \geq j$부터 $(f_n^{(j)})$의 부분열이므로 $w_j$에서 수렴한다. 곧 $(g_n)$은 $E$의 모든 점에서 수렴하는 $(f_n)$의 부분열이다.
 
-이제 $(g_n)$이 $\Omega$의 임의의 콤팩트 집합 $K$ 위에서 균등수렴함을 보인다. 콤팩트성을 다루기 위해 $K$을 조금 부풀린 콤팩트 집합 $K' = \{z : \operatorname{dist}(z, K) \leq \rho\} \subseteq \Omega$ ($\rho > 0$ 충분히 작게) 위에서 작업한다. $\varepsilon > 0$이 주어졌을 때, 보조정리 2에 의해 $K'$ 위에서 $\mathcal{F}$이 동등연속이므로 어떤 $\delta \in (0, \rho)$이 있어 $z, w \in K'$, $\lvert z - w\rvert < \delta$이면 모든 $n$에서 $\lvert g_n(z) - g_n(w)\rvert < \varepsilon/3$이다. $K$이 콤팩트이므로 반지름 $\delta$인 원판들로 유한 covering을 이루고, 각 원판의 중심을 $E$의 점으로 잡을 수 있다 ($E$이 조밀하므로). 이렇게 얻은 유한 개의 점 $w_{j_1}, \dots, w_{j_p} \in E \cap K'$은 $K$의 각 점이 그 가운데 적어도 하나와 거리 $\delta$ 안에 있도록 한다.
+이제 $(g_n)$이 $\Omega$의 임의의 콤팩트 집합 $K$ 위에서 균등수렴함을 보인다. 콤팩트성을 다루기 위해 $K$을 조금 부풀린 콤팩트 집합 $K' = \{z \mid \operatorname{dist}(z, K) \leq \rho\} \subseteq \Omega$ ($\rho > 0$ 충분히 작게) 위에서 작업한다. $\varepsilon > 0$이 주어졌을 때, 보조정리 2에 의해 $K'$ 위에서 $\mathcal{F}$이 동등연속이므로 어떤 $\delta \in (0, \rho)$이 있어 $z, w \in K'$, $\lvert z - w\rvert < \delta$이면 모든 $n$에서 $\lvert g_n(z) - g_n(w)\rvert < \varepsilon/3$이다. $K$이 콤팩트이므로 반지름 $\delta$인 원판들로 유한 covering을 이루고, 각 원판의 중심을 $E$의 점으로 잡을 수 있다 ($E$이 조밀하므로). 이렇게 얻은 유한 개의 점 $w_{j_1}, \dots, w_{j_p} \in E \cap K'$은 $K$의 각 점이 그 가운데 적어도 하나와 거리 $\delta$ 안에 있도록 한다.
 
 유한 개의 점 $w_{j_1}, \dots, w_{j_p}$ 각각에서 $(g_n)$이 수렴하므로 Cauchy 수열이고, 따라서 어떤 $N$이 있어 $m, n \geq N$이면 모든 $i = 1, \dots, p$에서 $\lvert g_n(w_{j_i}) - g_m(w_{j_i})\rvert < \varepsilon/3$이다. 이제 임의의 $z \in K$을 잡고, $\lvert z - w_{j_i}\rvert < \delta$인 중심 $w_{j_i}$을 고른다. $m, n \geq N$에 대해 삼각부등식으로
 

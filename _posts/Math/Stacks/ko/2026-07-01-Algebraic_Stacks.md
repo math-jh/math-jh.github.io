@@ -190,7 +190,7 @@ $G$이 base scheme $S$ 위의 flat·분리·smooth group scheme이고 $X$이 $S$
 ::: 증명
 **대각선의 표현가능성.** [명제 5](#prop5)에 의해 임의의 scheme $T$과 두 점 $(P, \varphi), (P', \varphi')\in [X/G](T)$에 대하여 $\operatorname{\underline{Isom}}_T((P, \varphi), (P', \varphi'))$이 표현가능함을 보이면 된다. 이 sheaf는 $T'\mapsto \{\psi: P\vert_{T'}\xrightarrow{\sim}P'\vert_{T'}\ G\text{-torsor 동형},\ \varphi'\circ \psi=\varphi\}$이다. 표현가능성은 fppf covering에 대해 국소적이므로 ([\[스킴\] §충실평탄 하강, ⁋정리 10](/ko/math/scheme_theory/faithfully_flat_descent#thm10)), $P, P'$이 자명해지는 fppf covering으로 옮겨 $P=P'=G_T$으로 두어도 좋다. 그러면 위에서처럼 $\psi$은 $g\in G(T')$으로 표시되고, 두 equivariant morphism은 점 $a, a'\in X(T)$으로 결정되며, 조건 $\varphi'\circ \psi_g=\varphi$은 $g\cdot a'=a$, 곧
 
-$$\operatorname{\underline{Isom}}_T((G_T, \varphi_a), (G_T, \varphi_{a'}))(T')=\{g\in G(T'): g\cdot a'\vert_{T'}=a\vert_{T'}\}$$
+$$\operatorname{\underline{Isom}}_T((G_T, \varphi_a), (G_T, \varphi_{a'}))(T')=\{g\in G(T')\mid g\cdot a'\vert_{T'}=a\vert_{T'}\}$$
 
 이 된다. 이는 morphism $(g\mapsto(g\cdot a', a')): G_T \rightarrow X\times_S X$과 $X$의 대각선 $X \rightarrow X\times_S X$의 fiber product이다. Scheme의 대각선은 항상 immersion이므로 (따라서 표현가능) 그 base change인 위 sheaf는 $G_T$의 locally closed 부분scheme으로 표현가능하다. fppf covering 위에서 표현가능한 algebraic space는 하강하여 표현가능하므로, $G$의 affine·분리 가정 없이도 $\operatorname{\underline{Isom}}$이 algebraic space로 표현가능하고, [명제 5](#prop5)에 의해 대각선이 표현가능하다. 나아가 $X$이 $S$ 위에서 분리하면 $X$의 대각선이 closed immersion이라 위 fiber가 $G_T$의 closed 부분scheme이 되고, $G$이 분리하므로 $\operatorname{\underline{Isom}} \rightarrow T$은 closed immersion에 이어 분리 morphism $G_T \rightarrow T$을 합성한 분리 morphism이 된다. 하강으로 $[X/G]$의 대각선이 분리 morphism으로 표현가능하다. 다만 $G_T \rightarrow T$이 일반적으로 proper가 아니어서 이 대각선은 closed immersion이 되지는 않으며 (가령 아래 $\mathbf{B}\mathbb{G}_m$에서 $\operatorname{\underline{Isom}}$은 비proper인 $\mathbb{G}_{m,T}$이다), $[X/G]$의 분리성은 대각선의 properness, 곧 작용 morphism $G\times_S X \rightarrow X\times_S X$, $(g, x)\mapsto(g\cdot x, x)$의 properness와 동치이다.
 
@@ -234,7 +234,7 @@ Quotient stack $[\mathbb{A}^1/\mathbb{G}_m]$은 이 두 orbit의 서로 다른 s
 ::: 예시 14 (타원곡선의 moduli $\mathcal{M}_{1, 1}$)
 Base에 따라, $T$ 위의 *타원곡선*(절단을 가진 종수 $1$의 smooth 사영곡선)들의 $T$-족과 그 isomorphism이 이루는 CFG를 $\mathcal{M}_{1, 1}$로 적는다. 이는 stack이며, characteristic $0$(또는 $2, 3$을 뒤집은 base) 위에서 Weierstrass 방정식 $y^2=x^3+ax+b$의 계수 $(a, b)$ ($\Delta=-16(4a^3+27b^2)\neq 0$)에 좌표변환군이 작용하는 quotient
 
-$$\mathcal{M}_{1, 1}\cong \bigl[\{(a, b):\Delta\neq 0\}\big/\mathbb{G}_m\bigr]$$
+$$\mathcal{M}_{1, 1}\cong \bigl[\{(a, b)\mid\Delta\neq 0\}\big/\mathbb{G}_m\bigr]$$
 
 으로 실현된다. 여기에서 $\mathbb{G}_m$은 $\lambda\cdot(a, b)=(\lambda^4 a, \lambda^6 b)$으로 작용하며 (Weierstrass 다항식에서 $a, b$에 각각 weight $4, 6$을 부여), 이 작용은 유한 stabilizer를 가진다. 일반적인 점의 stabilizer는 $\{\pm 1\}=\mathbb{Z}/2$ ($(x, y)\mapsto(x, -y)$, 곧 $[-1]$ automorphism)이고, $j=0$과 $j=1728$의 특수 타원곡선에서 각각 $\mathbb{Z}/6$, $\mathbb{Z}/4$으로 도약한다. Stabilizer가 모두 유한하므로 [정리 11](#thm11)에 의해 $\mathcal{M}_{1, 1}$은 DM stack이며, 그 coarse moduli space는 $j$-불변량이 주는 affine line $\mathbb{A}^1_j$이다. Stack $\mathcal{M}_{1, 1}$이 coarse 공간 $\mathbb{A}^1_j$과 다른 까닭은 정확히 모든 타원곡선이 적어도 $\mathbb{Z}/2$의 automorphism을 가져, 점마다 비자명한 stabilizer가 붙기 때문이다. 이 stack의 정밀한 구성과 그 automorphism 구조는 다음 글에서 다룬다.
 :::

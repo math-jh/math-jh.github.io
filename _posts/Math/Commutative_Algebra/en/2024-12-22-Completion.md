@@ -118,7 +118,7 @@ holds. We call the set of equivalence classes of all Cauchy sequences of a first
 
 Now for an open neighborhood $U$ of $0\in G$, define
 
-$$\widehat{U}=\{[(x_n)]\in \widehat{G}:\text{for any $(y_n)\in [(x_n)]$, $y_n\in U$ for all but finitely many $n$}\}.$$
+$$\widehat{U}=\{[(x_n)]\in \widehat{G}\mid\text{for any $(y_n)\in [(x_n)]$, $y_n\in U$ for all but finitely many $n$}\}.$$
 
 Then by a short calculation, one can verify that the collection $\mathcal{N}(0)$ of subsets of $\widehat{G}$ having the $\widehat{H}_i$ as a coinitial subset satisfies all the conditions of [\[Topology\] §Open Sets, ⁋Proposition 6](/en/math/topology/open_sets#prop6), and therefore we can define a topology on $\widehat{G}$. By definition $\widehat{G}$ is also first countable, and the function $G \rightarrow \widehat{G}$ sending $x\in G$ to the constant sequence $(x_i=x)$ is continuous. Moreover, this function coincides exactly with the $G \rightarrow \widehat{G}$ defined in the previous section.
 

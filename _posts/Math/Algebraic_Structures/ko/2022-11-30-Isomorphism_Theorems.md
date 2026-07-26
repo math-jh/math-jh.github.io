@@ -122,7 +122,7 @@ $$f(x)\sim g(x)\qquad\text{for all $x\in G$}$$
 
 에 의해 생성되는 relation으로 준 후, projection $H\rightarrow H/{\sim}$을 생각하면 이것이 coequalizer가 될 것이나 $\Grp$에서는 위에서 정의한 $\sim$이 $H$의 group operation과 compatible한지를 알 수 없다. 즉 다음 subset
 
-$$S=\{f(x)g(x)^{-1}:x\in X\}$$
+$$S=\{f(x)g(x)^{-1}\mid x\in X\}$$
 
 이 normal subgroup이 아니므로, $H/S$가 정의되지 않는다. 
 

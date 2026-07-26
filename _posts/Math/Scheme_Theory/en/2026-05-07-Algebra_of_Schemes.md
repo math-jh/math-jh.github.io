@@ -282,7 +282,7 @@ Our claim is that the rational functions defined on this domain $D(s)$ alone alr
 
 From the above, the total quotient ring $K(X)$ formed by all rational functions on $X$ is, using the same notation for elements as in [Example 11](#ex11),
 
-$$K(X)=\left\{\frac{p(\x_1)+c\x_2}{q(\x_1)+c'\x_2} : q(0)\neq0\right\}.$$
+$$K(X)=\left\{\frac{p(\x_1)+c\x_2}{q(\x_1)+c'\x_2} \mid q(0)\neq0\right\}.$$
 
 This is a parallel form to the classical case where the fraction field was the set of rational expressions with nonzero denominator, but now the condition has changed to that the denominator must not vanish at the origin (as well as at the generic point).
 

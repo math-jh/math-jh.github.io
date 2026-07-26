@@ -120,7 +120,7 @@ $$f(x)\sim g(x)\qquad\text{for all $x\in G$}$$
 
 and then the projection $H\rightarrow H/{\sim}$ would be the coequalizer. However, in $\Grp$, we do not know whether $\sim$ defined above is compatible with the group operation of $H$. That is, the subset
 
-$$S=\{f(x)g(x)^{-1}:x\in X\}$$
+$$S=\{f(x)g(x)^{-1}\mid x\in X\}$$
 
 is not a normal subgroup, so $H/S$ is not defined.
 

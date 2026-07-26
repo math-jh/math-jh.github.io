@@ -366,7 +366,7 @@ Since $\Spec \mathbb{Z}$ is a terminal object in the category of schemes, giving
 
 $$\mathbb{Z}[\x_0/\x_i,\ldots,\x_n/\x_i] \longrightarrow K.$$
 
-Let the image of $\x_j/\x_i$ be $a_j\in K$; then $a_i=1$. Now define $s\preceq t$ on $K^\times$ by $t/s\in A$; then by the definition of a valuation ring, for any $s,t$ either $s\preceq t$ or $t\preceq s$, and if $t/s\in A$ and $r/t\in A$ then $r/s=(r/t)(t/s)\in A$, so $\preceq$ is a total preorder on $K^\times$. Since $a_i=1\neq 0$, the finite set $\{a_j : a_j\neq 0\}$ is nonempty, and thus we can choose a minimal element $a_k$ of this set. That is, for every $j$
+Let the image of $\x_j/\x_i$ be $a_j\in K$; then $a_i=1$. Now define $s\preceq t$ on $K^\times$ by $t/s\in A$; then by the definition of a valuation ring, for any $s,t$ either $s\preceq t$ or $t\preceq s$, and if $t/s\in A$ and $r/t\in A$ then $r/s=(r/t)(t/s)\in A$, so $\preceq$ is a total preorder on $K^\times$. Since $a_i=1\neq 0$, the finite set $\{a_j \mid a_j\neq 0\}$ is nonempty, and thus we can choose a minimal element $a_k$ of this set. That is, for every $j$
 
 $$b_j:=a_j/a_k\in A.$$
 

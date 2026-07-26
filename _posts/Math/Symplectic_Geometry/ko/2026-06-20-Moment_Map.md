@@ -147,7 +147,7 @@ $$\mu(z_1,\ldots,z_n)=-\pi\bigl(\lvert z_1\rvert^2,\ldots,\lvert z_n\rvert^2\big
 
 로 두면 조건 1이 성립한다. 즉 운동량 사상의 각 성분은 정확히 $-\pi\lvert z_j\rvert^2$, 즉 상수배를 무시하면 *반지름 제곱의 음수*이다. $T^n$이 abelian이므로 equivariance는 자동이다. 이 action의 image는 음의 사분면 전체
 
-$$\mu(\mathbb{C}^n)=\mathbb{R}_{\leq0}^n=\{(a_1,\ldots,a_n):a_j\leq0\}$$
+$$\mu(\mathbb{C}^n)=\mathbb{R}_{\leq0}^n=\{(a_1,\ldots,a_n)\mid a_j\leq0\}$$
 
 이며, 이것이 affine toric manifold $\mathbb{C}^n$에 대응하는 운동량 다면체이다.
 :::

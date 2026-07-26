@@ -109,7 +109,7 @@ $$(a+n\mathbb{Z})(x+n\mathbb{Z})=1+n\mathbb{Z}$$
 
 that is, when there exist integers $x,k$ satisfying $ax-kn=1$. By [\[Number Theory\] §Euclidean Algorithm and Bézout's Identity, ⁋Theorem 3](/en/math/number_theory/euclidean_algorithm#thm3), the existence of such $x,k$ is equivalent to $\gcd(a,n)=1$, i.e. to $a$ being coprime to $n$. Consequently,
 
-$$(\mathbb{Z}/n\mathbb{Z})^\times=\{a+n\mathbb{Z}:\gcd(a,n)=1\}$$
+$$(\mathbb{Z}/n\mathbb{Z})^\times=\{a+n\mathbb{Z}\mid\gcd(a,n)=1\}$$
 
 and the order of this group is $\varphi(n)$, the number of integers between $1$ and $n$ coprime to $n$ ([\[Number Theory\] §Euler's Theorem and the Phi Function, ⁋Definition 1](/en/math/number_theory/euler_theorem#def1)).
 
@@ -150,7 +150,7 @@ $$\Mat_n(R)^\times=\GL(n;R)$$
 
 ([\[Multilinear Algebra\] §Matrices, ⁋Definition 1](/en/math/multilinear_algebra/matrices#def1)). It is known that when $R$ is a commutative ring, a matrix $M\in \Mat_n(R)$ is invertible if and only if its determinant $\det M$ lies in $R^\times$. ([\[Multilinear Algebra\] §Determinants, ⁋Corollary 3](/en/math/multilinear_algebra/determinants#cor3)) Hence in this case
 
-$$\GL(n;R)=\{M\in \Mat_n(R):\det M\in R^\times\}$$
+$$\GL(n;R)=\{M\in \Mat_n(R)\mid\det M\in R^\times\}$$
 
 For example, if $R=\mathbb{Z}$, then $\mathbb{Z}^\times=\{1,-1\}$, so $\GL(n;\mathbb{Z})$ consists of the integer matrices with determinant $\pm 1$.
 

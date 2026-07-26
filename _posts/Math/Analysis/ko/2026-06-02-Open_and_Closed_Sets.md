@@ -96,11 +96,11 @@ $$\mathbb{R} \setminus \{0\} = (-\infty, 0) \cup (0, \infty)$$
 
 Closure는 점열의 극한을 모두 더해 집합을 닫는 연산이다. 정의로 직접 계산하기보다 [명제 4](#prop4)의 [§함수의 극한과 연속, ⁋명제 2](/ko/math/analysis/limits_and_continuity#prop2)를 쓰면 closure를 손쉽게 결정할 수 있다. 가령 $\overline{(a, b)} = [a, b]$인데 끝점 $a, b$가 각각 $a + 1/n$, $b - 1/n$의 극한으로 도달되기 때문이고, $\overline{\mathbb{Q}} = \mathbb{R}$인데 [§실수의 완비성, ⁋정리 5](/ko/math/analysis/completeness_of_reals#thm5)에 의해 임의의 실수가 유리수열의 극한이기 때문이다.
 
-Closure가 점열의 극한을 더하는 연산임을 가장 또렷이 보여 주는 것은 집합 $\{1/n : n \in \mathbb{N}\}$이다. 이 집합 자체는 닫혀 있지 않다. 점열
+Closure가 점열의 극한을 더하는 연산임을 가장 또렷이 보여 주는 것은 집합 $\{1/n \mid n \in \mathbb{N}\}$이다. 이 집합 자체는 닫혀 있지 않다. 점열
 
 $$x_n = \frac1n \longrightarrow 0$$
 
-의 극한 $0$이 집합 밖에 있어 [명제 4](#prop4)의 판정에 걸리기 때문이다. 이 한 점을 더한 $\{1/n : n \in \mathbb{N}\} \cup \{0\}$은 더 이상 빠져나갈 극한이 없어 닫히며, 그것이 곧 closure이다.
+의 극한 $0$이 집합 밖에 있어 [명제 4](#prop4)의 판정에 걸리기 때문이다. 이 한 점을 더한 $\{1/n \mid n \in \mathbb{N}\} \cup \{0\}$은 더 이상 빠져나갈 극한이 없어 닫히며, 그것이 곧 closure이다.
 
 Closure는 닫힘 연산으로서 깔끔한 대수적 성질을 가진다. 특히 합집합과는 잘 어울리지만 교집합과는 그렇지 않다.
 
@@ -119,9 +119,9 @@ $$\overline{A} \cup \overline{B} \subseteq \overline{A \cup B}$$
 마지막으로 closure·interior·boundary가 점의 위치를 어떻게 분류하는지 한 예에서 종합한다. 집합 $A$의 *interior<sub>내부</sub>* $A^\circ$는 $A$에 포함되는 가장 큰 열린집합이고, *boundary<sub>경계</sub>* $\partial A$는 $\overline{A} \setminus A^\circ$로 정의된다.
 
 ::: 예시 8 (내부·폐포·경계)
-$\mathbb{R}^2$에서 닫힌 단위원판 $A = \{ (x, y) : x^2 + y^2 \leq 1 \}$을 보자. 표준거리에서
+$\mathbb{R}^2$에서 닫힌 단위원판 $A = \{ (x, y) \mid x^2 + y^2 \leq 1 \}$을 보자. 표준거리에서
 
-$$A^\circ = \{ (x, y) : x^2 + y^2 < 1 \}, \qquad \overline{A} = A, \qquad \partial A = \{ (x, y) : x^2 + y^2 = 1 \}$$
+$$A^\circ = \{ (x, y) \mid x^2 + y^2 < 1 \}, \qquad \overline{A} = A, \qquad \partial A = \{ (x, y) \mid x^2 + y^2 = 1 \}$$
 
 이다. Interior는 열린 원판이다: 경계원 위의 점 $p$에서는 아무리 작은 공도 원 밖으로 새어나가 $A$에 담기지 못하므로 $p \notin A^\circ$이지만, $\lVert p\rVert < 1$인 점에서는 $r = 1 - \lVert p\rVert > 0$짜리 공이 $A$에 들어간다. $A$가 이미 닫혀 있으므로 closure는 자기 자신이고, boundary는 정의에 따라 단위원이 된다. 같은 집합을 부분공간 $X = A$ 자체에서 보면 사정이 달라진다. $X$ 안에서는 $A$ 전체가 $X$이므로 clopen set이고 $A^\circ = A$, $\partial A = \emptyset$이 된다. 열림·닫힘·boundary는 모두 그 집합이 놓인 주위 공간에 상대적인 개념임을 보여 준다.
 :::

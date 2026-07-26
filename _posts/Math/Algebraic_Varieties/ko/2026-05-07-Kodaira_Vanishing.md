@@ -117,7 +117,7 @@ $$\rchi(\mathcal{O}_S(mK_S)) = \frac{m(m-1)}{2} K_S^2 + \rchi(\mathcal{O}_S)$$
 ::: 정의 4
 Smooth projective variety $X$의 *Kodaira dimension<sub>고다이라 차원</sub>* $\kappa(X)$는 다음과 같이 정의된다. 모든 $m \geq 1$에 대해 $P_m(X) = 0$이면 $\kappa(X) = -\infty$이다. 그렇지 않은 경우, $\kappa(X)$는 $P_m(X) = O(m^\kappa)$를 만족하는 최소의 정수 $\kappa \geq 0$로 정의된다. 즉
 
-$$\kappa(X) = \min\{k \in \mathbb{Z}_{\geq 0} : P_m(X) = O(m^k)\}$$
+$$\kappa(X) = \min\{k \in \mathbb{Z}_{\geq 0} \mid P_m(X) = O(m^k)\}$$
 
 이다. 동등하게,
 
@@ -133,7 +133,7 @@ $$\kappa(X) = \limsup_{m \rightarrow \infty} \frac{\log P_m(X)}{\log m}$$
 우선 very ample line bundle $\mathcal{L}$이 주어졌다 하고, 이로부터 정의되는 closed embedding $\varphi_\mathcal{L}: X\rightarrow \mathbb{P}^N$을 생각하자. 그럼 $\varphi$가 embedding인 것으로부터 $\varphi_\mathcal{L}(p)\neq \varphi_\mathcal{L}(q)$가 성립하는 것을 알고, 뿐만 아니라 $\varphi_\mathcal{L}$이 closed embedding이므로 $d\varphi_\mathcal{L}$이 injective이고, 따라서 cotangent space에서의 dual map $\mathfrak{m}_{\varphi_{\mathcal{L}}(p)}/\mathfrak{m}_{\varphi_{\mathcal{L}}(p)}^2 \longrightarrow \mathfrak{m}_p/\mathfrak{m}_p^2$은 surjective이다. 이로부터 다음의 두 결과가 성립함을 안다. 
 
 1. *$\varphi_\mathcal{L}$ separates points.* 즉, 임의의 두 서로 다른 closed point $p, q \in X$에 대하여, $s(p) = 0$이고 $s(q) \neq 0$인 global section $s \in H^0(X, \mathcal{L})$가 존재한다.
-2. *$\varphi_\mathcal{L}$ separates tangent vectors.* 즉, 임의의 closed point $p \in X$에 대하여, $p$에서 vanish하는 sections의 모음 $\{ s \in H^0(X, \mathcal{L}) : s(p) = 0 \}$가 cotangent space에 대응하는 벡터공간 $\mathfrak{m}_p\mathcal{L}_p / \mathfrak{m}_p^2\mathcal{L}_p$를 span한다.
+2. *$\varphi_\mathcal{L}$ separates tangent vectors.* 즉, 임의의 closed point $p \in X$에 대하여, $p$에서 vanish하는 sections의 모음 $\{ s \in H^0(X, \mathcal{L}) \mid s(p) = 0 \}$가 cotangent space에 대응하는 벡터공간 $\mathfrak{m}_p\mathcal{L}_p / \mathfrak{m}_p^2\mathcal{L}_p$를 span한다.
 
 첫 번째 조건은 evaluation map
 
@@ -141,7 +141,7 @@ $$H^0(X, \mathcal{L}) \longrightarrow \mathcal{L}_p \oplus \mathcal{L}_q$$
 
 이 surjective임을 의미하고, 두 번째 조건은 $p$에서 vanish하는 sections들에 의한 restriction map
 
-$$\{s \in H^0(X, \mathcal{L}) : s(p) = 0\} \longrightarrow \mathfrak{m}_p\mathcal{L}_p / \mathfrak{m}_p^2\mathcal{L}_p$$
+$$\{s \in H^0(X, \mathcal{L}) \mid s(p) = 0\} \longrightarrow \mathfrak{m}_p\mathcal{L}_p / \mathfrak{m}_p^2\mathcal{L}_p$$
 
 의 image가 전체 $\mathfrak{m}_p\mathcal{L}_p / \mathfrak{m}_p^2\mathcal{L}_p$를 span함을 의미한다. 어렵지 않게 이들의 반대방향 또한 성립한다는 것을 확인할 수 있다. 즉 다음이 성립한다. 
 

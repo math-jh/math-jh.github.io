@@ -70,7 +70,7 @@ $X_\Sigma$가 normal이므로 ([§토릭 다양체의 정의, ⁋명제 4](/ko/m
 
 $$\divisor(\rchi^m) = \sum_{\rho \in \Sigma(1)} v_{D_\rho}(\rchi^m) D_\rho$$
 
-이므로 각 $\rho \in \Sigma(1)$에 대해 $v_{D_\rho}(\rchi^m) = \langle m, v_\rho \rangle$임을 보이면 충분하다. 이를 확인하기 위해 ray $\rho$에 해당하는 affine chart $U_\rho = \Spec\mathbb{C}[\rho^\vee \cap M]$를 생각한다. $U_\rho$ 위에서 $D_\rho$의 generic point에 대응하는 prime ideal은 $\{u \in \rho^\vee \cap M : \langle u, v_\rho \rangle > 0\}$이 생성하며, 이 prime에서 localize하면 character가 $\rchi^u \mapsto \langle u, v_\rho \rangle$로 매겨지는 DVR을 얻는다. 따라서 임의의 $m \in M$에 대해 $v_{D_\rho}(\rchi^m) = \langle m, v_\rho \rangle$이 성립한다.
+이므로 각 $\rho \in \Sigma(1)$에 대해 $v_{D_\rho}(\rchi^m) = \langle m, v_\rho \rangle$임을 보이면 충분하다. 이를 확인하기 위해 ray $\rho$에 해당하는 affine chart $U_\rho = \Spec\mathbb{C}[\rho^\vee \cap M]$를 생각한다. $U_\rho$ 위에서 $D_\rho$의 generic point에 대응하는 prime ideal은 $\{u \in \rho^\vee \cap M \mid \langle u, v_\rho \rangle > 0\}$이 생성하며, 이 prime에서 localize하면 character가 $\rchi^u \mapsto \langle u, v_\rho \rangle$로 매겨지는 DVR을 얻는다. 따라서 임의의 $m \in M$에 대해 $v_{D_\rho}(\rchi^m) = \langle m, v_\rho \rangle$이 성립한다.
 :::
 
 이로부터 우리는 자연스러운 group homomorphism 

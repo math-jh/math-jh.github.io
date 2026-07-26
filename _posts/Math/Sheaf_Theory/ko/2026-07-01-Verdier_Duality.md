@@ -169,7 +169,7 @@ $$H^j(X, \mathbf{D}_X k_X) \cong H^{-j}_c(X, k)^\vee$$
 Verdier duality 자체는 [정리 4](#thm4)에서 보았듯 manifold 가정 없이 성립한다. 그러나 [정리 9](#thm9)의 결정적 단순화, 곧 $\omega_X \cong k_X[n]$은 manifold에서만 성립한다. Singular point가 있는 공간에서는 dualizing complex가 shift된 상수 sheaf가 아니며, 바로 이 사실이 특이공간의 cohomology가 Poincaré duality를 만족하지 못하는 근원이자 intersection cohomology가 필요해지는 출발점이다. 가장 기본적인 singular point인 node에서 이를 구체적으로 계산한다.
 
 ::: 예시 10
-복소 평면곡선의 node $X = \{(x, y) \in \mathbb{C}^2 : xy = 0\}$를 생각하자. 이는 두 복소직선 $\{x = 0\}$과 $\{y = 0\}$이 원점 $0$에서 만나는 공간으로, 실 $2$차원이며 $0$을 제외하면 매끄럽다. 우리는 dualizing complex $\omega_X$의 원점에서의 stalk cohomology가
+복소 평면곡선의 node $X = \{(x, y) \in \mathbb{C}^2 \mid xy = 0\}$를 생각하자. 이는 두 복소직선 $\{x = 0\}$과 $\{y = 0\}$이 원점 $0$에서 만나는 공간으로, 실 $2$차원이며 $0$을 제외하면 매끄럽다. 우리는 dualizing complex $\omega_X$의 원점에서의 stalk cohomology가
 $$\mathcal{H}^{-2}(\omega_X)_0 \cong k^2, \qquad \mathcal{H}^{-1}(\omega_X)_0 \cong k$$
 임을 보인다. 이는 $2$차원 다양체라면 가졌을 $\omega \cong k_X[2]$의 stalk, 즉 $\mathcal{H}^{-2} \cong k$, $\mathcal{H}^{-1} \cong 0$과 다르다.
 :::

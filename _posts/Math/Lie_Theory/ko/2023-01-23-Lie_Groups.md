@@ -40,7 +40,7 @@ $$\mathbb{R}^n \times \mathbb{R}^n\rightarrow \mathbb{R}^n;\quad (\mathbf{x},\ma
 ::: 예시 3
 $1$-torus $S^1$은 이를 $\mathbb{C}$의 multiplicative subgroup
 
-$$S^1=\left\{z\in \mathbb{C}\mid \lvert z\rvert=1\right\}$$
+$$S^1=\left\{z\in \mathbb{C}: \lvert z\rvert=1\right\}$$
 
 으로 보면 Lie group이 된다. 더 일반적으로 임의의 Lie group $G, H$에 대하여 $G\times H$ 또한 Lie group이 되는 것을 쉽게 보일 수 있으므로, 임의의 $n$-torus
 

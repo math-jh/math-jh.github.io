@@ -41,7 +41,7 @@ is smooth.
 ::: Example 3
 The $1$-torus $S^1$ becomes a Lie group when viewed as the multiplicative subgroup of $\mathbb{C}$
 
-$$S^1=\left\{z\in \mathbb{C}\mid \lvert z\rvert=1\right\}$$
+$$S^1=\left\{z\in \mathbb{C}: \lvert z\rvert=1\right\}$$
 
 More generally, for any Lie groups $G, H$, the product $G\times H$ is also easily seen to be a Lie group, so any $n$-torus
 

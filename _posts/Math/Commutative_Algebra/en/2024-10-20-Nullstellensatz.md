@@ -113,11 +113,11 @@ $$f_1(x_1,\ldots, x_n)=\cdots=f_r(x_1,\ldots, x_n)=0$$
 
 A slightly more traditional version of the Nullstellensatz also follows from this. To state it, consider the function $Z$ that sends an ideal $\mathfrak{a}$ of $\mathbb{K}[\x_1,\ldots, \x_n]$ to the subset $Z(\mathfrak{a})$ of $\mathbb{K}^n$
 
-$$Z(\mathfrak{a})=\{(a_1,\ldots, a_n)\in \mathbb{K}^n: \text{$f(a_1,\ldots, a_n)=0$ for all $f\in \mathfrak{a}$}\}$$
+$$Z(\mathfrak{a})=\{(a_1,\ldots, a_n)\in \mathbb{K}^n\mid \text{$f(a_1,\ldots, a_n)=0$ for all $f\in \mathfrak{a}$}\}$$
 
 and the function $I$ that sends a subset $S$ of $\mathbb{K}^n$ to the subset
 
-$$I(S)=\{f\in \mathbb{K}[\x_1,\ldots, \x_n]:\text{$f(a_1,\ldots, a_n)=0$ for all $(a_1,\ldots, a_n)\in S$}\}$$
+$$I(S)=\{f\in \mathbb{K}[\x_1,\ldots, \x_n]\mid\text{$f(a_1,\ldots, a_n)=0$ for all $(a_1,\ldots, a_n)\in S$}\}$$
 
 of $\mathbb{K}[\x_1,\ldots, \x_n]$.
 

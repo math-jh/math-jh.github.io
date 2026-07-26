@@ -68,7 +68,7 @@ Trivializing open들의 교집합은 다시 trivializing open이므로, $B$가 �
 ::: 정의 2
 Complex rank $n$ vector bundle $E\rightarrow B$의 *projective bundle<sub>사영다발</sub>* $\mathbb{P}(E)$는 각 점 $x\in B$ 위의 fiber가 $E_x$의 원점을 지나는 complex 직선들의 projective space $\mathbb{P}(E_x)$인 fiber bundle이다. 곧 그 전공간은
 
-$$\mathbb{P}(E)=\{(x,\ell):x\in B,\ \ell\subseteq E_x\text{ 는 1차원 부분공간}\}$$
+$$\mathbb{P}(E)=\{(x,\ell)\mid x\in B,\ \ell\subseteq E_x\text{ 는 1차원 부분공간}\}$$
 
 이고 projection $\pi:\mathbb{P}(E)\rightarrow B$는 $(x,\ell)\mapsto x$이며, fiber는 $\CP^{n-1}$이다.
 :::

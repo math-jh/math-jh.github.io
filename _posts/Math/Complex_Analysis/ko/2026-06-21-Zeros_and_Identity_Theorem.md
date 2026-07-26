@@ -28,7 +28,7 @@ $$D(z_0, \varepsilon) \cap S = \{z_0\}$$
 인 $\varepsilon > 0$이 존재하는 것을 뜻한다. $S$의 모든 점이 isolated point이면 $S$를 *discrete set<sub>이산집합</sub>*이라 한다.
 :::
 
-Isolated point라는 개념은 영점이 모여 있지 않고 흩어져 있다는 상황을 정확히 포착한다. Holomorphic function $f$의 영점집합을 $Z(f) = \{z : f(z) = 0\}$이라 적으면, 다음 명제는 $f$가 항등적으로 $0$이 아닌 한 $Z(f)$의 모든 점이 isolated point임을 말한다.
+Isolated point라는 개념은 영점이 모여 있지 않고 흩어져 있다는 상황을 정확히 포착한다. Holomorphic function $f$의 영점집합을 $Z(f) = \{z \mid f(z) = 0\}$이라 적으면, 다음 명제는 $f$가 항등적으로 $0$이 아닌 한 $Z(f)$의 모든 점이 isolated point임을 말한다.
 
 ::: 명제 2 (영점의 고립성)
 $f$가 점 $z_0$의 한 근방에서 holomorphic이고 $f(z_0) = 0$이라 하자. 그러면 다음 둘 중 정확히 하나가 성립한다.
@@ -42,7 +42,7 @@ $z_0$의 한 원판 $D(z_0, R)$에서 $f$가 holomorphic이므로 정리에 의�
 
 만일 모든 $n$에 대해 $a_n = 0$이면 Taylor 급수가 항등적으로 $0$이므로 $f$가 $D(z_0, R)$에서 항등적으로 $0$이 되어 경우 (1)이 성립한다.
 
-그렇지 않으면 $a_n \neq 0$인 $n$이 존재하므로 $m = \min\{n : a_n \neq 0\}$이 잘 정의되고, $a_0 = f(z_0) = 0$이므로 $m \geq 1$이다. 곧 $f$는 $z_0$에서 order $m$인 영점을 가져 ([§멱급수와 해석성, ⁋정의 5](/ko/math/complex_analysis/power_series_and_analyticity#def5)), 인수분해 ([§멱급수와 해석성, ⁋명제 6](/ko/math/complex_analysis/power_series_and_analyticity#prop6)) 에 의해 $z_0$의 어떤 근방에서 holomorphic이고 $g(z_0) \neq 0$인 $g$가 있어
+그렇지 않으면 $a_n \neq 0$인 $n$이 존재하므로 $m = \min\{n \mid a_n \neq 0\}$이 잘 정의되고, $a_0 = f(z_0) = 0$이므로 $m \geq 1$이다. 곧 $f$는 $z_0$에서 order $m$인 영점을 가져 ([§멱급수와 해석성, ⁋정의 5](/ko/math/complex_analysis/power_series_and_analyticity#def5)), 인수분해 ([§멱급수와 해석성, ⁋명제 6](/ko/math/complex_analysis/power_series_and_analyticity#prop6)) 에 의해 $z_0$의 어떤 근방에서 holomorphic이고 $g(z_0) \neq 0$인 $g$가 있어
 
 $$f(z) = (z - z_0)^m\,g(z)$$
 
@@ -60,17 +60,17 @@ Holomorphic function이 적은 자료로 결정된다는 강직성이 가장 선
 ::: 정리 3 (일치정리)
 $\Omega \subseteq \mathbb{C}$가 connected 열린집합이고 $f, g$가 $\Omega$에서 holomorphic이라 하자. 만일 두 함수가 일치하는 집합
 
-$$S = \{z \in \Omega : f(z) = g(z)\}$$
+$$S = \{z \in \Omega \mid f(z) = g(z)\}$$
 
 이 $\Omega$ 안에 집적점을 가지면, 곧 어떤 점 $z_\ast \in \Omega$과 $S$의 서로 다른 점들의 수열 $z_k \rightarrow z_\ast$이 존재하면, $\Omega$ 전체에서 $f = g$이다.
 :::
 
 ::: 증명
-$h = f - g$로 두면 $h$는 $\Omega$에서 holomorphic이고 ([§복소정칙함수, ⁋명제 3](/ko/math/complex_analysis/holomorphic_functions#prop3)) $S = Z(h) = \{z : h(z) = 0\}$이다. $S$가 $\Omega$ 안에 집적점 $z_\ast$을 가진다고 가정한다. $h$가 연속이고 $z_k \rightarrow z_\ast$, $h(z_k) = 0$이므로 $h(z_\ast) = \lim_k h(z_k) = 0$이다. 또 $z_k$들이 서로 다르므로 $z_\ast$의 임의의 근방에 $z_\ast$ 아닌 영점 $z_k$이 무한히 들어 있어, $z_\ast$은 $Z(h)$의 isolated point가 아니다. 명제 2에 의해 그렇다면 $h$가 $z_\ast$의 어떤 근방에서 항등적으로 $0$이어야 한다.
+$h = f - g$로 두면 $h$는 $\Omega$에서 holomorphic이고 ([§복소정칙함수, ⁋명제 3](/ko/math/complex_analysis/holomorphic_functions#prop3)) $S = Z(h) = \{z \mid h(z) = 0\}$이다. $S$가 $\Omega$ 안에 집적점 $z_\ast$을 가진다고 가정한다. $h$가 연속이고 $z_k \rightarrow z_\ast$, $h(z_k) = 0$이므로 $h(z_\ast) = \lim_k h(z_k) = 0$이다. 또 $z_k$들이 서로 다르므로 $z_\ast$의 임의의 근방에 $z_\ast$ 아닌 영점 $z_k$이 무한히 들어 있어, $z_\ast$은 $Z(h)$의 isolated point가 아니다. 명제 2에 의해 그렇다면 $h$가 $z_\ast$의 어떤 근방에서 항등적으로 $0$이어야 한다.
 
 이제 이 국소적 소멸을 $\Omega$ 전체로 확장한다.
 
-$$A = \{z \in \Omega : h \text{가 } z \text{의 어떤 근방에서 항등적으로 } 0\}$$
+$$A = \{z \in \Omega \mid h \text{가 } z \text{의 어떤 근방에서 항등적으로 } 0\}$$
 
 이라 두자. 방금 본 대로 $z_\ast \in A$이므로 $A \neq \emptyset$이다. 정의상 $A$는 열려 있다. $A$가 $\Omega$에서 닫혀 있음을 보이면, $\Omega$가 connected이고 $A$가 공집합 아닌 열린·닫힌 부분집합이므로 $A = \Omega$이 된다.
 

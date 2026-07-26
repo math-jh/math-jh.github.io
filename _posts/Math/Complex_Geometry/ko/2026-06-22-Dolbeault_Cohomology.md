@@ -141,7 +141,7 @@ $$
 de Rham 이론에서 Poincaré 보조정리는 볼록영역에서 closed 형식이 완전함을 말하며, 이로부터 de Rham 복합체가 constant sheaf의 fine resolution이 된다. $\bar\partial$에 대한 대응물은 폴리디스크에서 $\bar\partial$-closed 형식($q \geq 1$)이 $\bar\partial$-완전하다는 것으로, 이를 Dolbeault–Grothendieck 보조정리라 한다. 그 핵심은 한 변수 $\bar\partial$-방정식 $\partial u/\partial\bar{z} = f$를 Cauchy 적분으로 푸는 것이며, 변수 개수에 대한 귀납으로 일반 차원에 도달한다. 우선 한 변수의 비균질 Cauchy–Riemann 방정식을 다룬다.
 
 ::: 보조정리 5 (한 변수 $\bar\partial$-문제)
-$f$가 닫힌원판 $\overline{D} = \{ \zeta \in \mathbb{C} \mid \lvert \zeta \rvert \leq r \}$의 근방에서 정의된 smooth 복소함수라 하자. 그러면
+$f$가 닫힌원판 $\overline{D} = \{ \zeta \in \mathbb{C} : \lvert \zeta \rvert \leq r \}$의 근방에서 정의된 smooth 복소함수라 하자. 그러면
 
 $$
 u(\zeta) = \frac{1}{2\pi i} \int_{D} \frac{f(w)}{w - \zeta}\, dw \wedge d\bar{w}
@@ -178,7 +178,7 @@ $$
 가 성립한다 (이는 Stokes 정리를 $g(w)/(w-\zeta)$의 differential form에 적용해 얻는다). 이 공식을 $g = f$에 쓰면 우변 둘째 항이 위에서 계산한 $\partial u/\partial\bar\zeta$와 정확히 같다. 한편 $D$를 충분히 키워 $f$의 지지를 포함하는 더 큰 원판으로 두거나, 국소적으로 $f$에 차단함수를 곱해 컴팩트 지지로 만들면 경계적분 $\int_{\partial D} f(w)/(w-\zeta)\, dw$가 사라지도록 할 수 있고, 이때 $\partial u/\partial\bar\zeta = f$가 따라온다. 차단으로 바뀐 부분은 $\zeta$가 차단 영역 안쪽에 있는 한 $f$를 바꾸지 않으므로 국소적으로 원하는 등식이 성립한다.
 :::
 
-이 한 변수 풀이를 변수 개수에 대한 귀납으로 끌어올리면 폴리디스크 전체에서의 결과를 얻는다. 표기를 위해 폴리디스크를 $\Delta = \{ z \in \mathbb{C}^n \mid \lvert z_j \rvert < r_j \}$로 적는다.
+이 한 변수 풀이를 변수 개수에 대한 귀납으로 끌어올리면 폴리디스크 전체에서의 결과를 얻는다. 표기를 위해 폴리디스크를 $\Delta = \{ z \in \mathbb{C}^n : \lvert z_j \rvert < r_j \}$로 적는다.
 
 ::: 보조정리 6 ($\bar\partial$-Poincaré 보조정리, Dolbeault–Grothendieck)
 폴리디스크 $\Delta \subseteq \mathbb{C}^n$ 위에서 $q \geq 1$이고 $\omega \in \Omega^{p,q}(\Delta)$가 $\bar\partial\omega = 0$이면, $\eta \in \Omega^{p,q-1}(\Delta)$가 존재하여 $\omega = \bar\partial\eta$이다. 따라서 $q \geq 1$에 대하여 $H^{p,q}_{\bar\partial}(\Delta) = 0$이다.

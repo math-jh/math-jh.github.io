@@ -248,7 +248,7 @@ $$0 \longrightarrow H_2(X, \mathbb{Z}) \xrightarrow{\ \iota\ } \mathbb{Z}^m \xri
 
 Here $m$ is the number of rays, and $\mathbb{Z}^n$ is the cocharacter lattice. That is, $H_2$ is identified with the set of relations among rays
 
-$$\{(a_i)_i \in \mathbb{Z}^m : \sum_i a_i v_i = 0\}$$
+$$\{(a_i)_i \in \mathbb{Z}^m \mid \sum_i a_i v_i = 0\}$$
 
 By definition, the charge matrix is the matrix whose rows are these $r$ relations, so it exactly encodes the information about the basis of $H_2(X, \mathbb{Z})$. That is, the preimage $\beta_j=\iota^{-1}(Q_{j\bullet})$ of each row $(Q_{j\bullet})$ of $\mathbb{Z}^m$ forms a basis of $H_2(X, \mathbb{Z})$, and in this setting the intersection with the toric divisor $D_i$ is merely reading the $i$-th coordinate of $\beta=(a_i)_i$, so $D_i\cdot\beta_j=Q_{ji}$.
 

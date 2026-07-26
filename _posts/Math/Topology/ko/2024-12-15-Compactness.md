@@ -80,7 +80,7 @@ $K$는 compact Hausdorff space이므로 regular space이다. ([§옹골공간, �
 
 [명제 4](#prop4)의 둘째 조건은 LCH space에서 각 점이 compact closure를 갖는 열린집합들로 이루어진 neighborhood basis를 가진다는 것으로 읽을 수 있다. 이는 앞으로 국소적 논증을 펼칠 때마다 반복적으로 사용되며, 일점 옹골화의 Hausdorff성을 판정할 때에도 핵심적인 역할을 한다. 또한 이 성질로부터 임의의 LCH space가 regular임이 곧바로 따르는데, 점 $x$와 이를 포함하지 않는 닫힌집합 $C$가 주어지면 $V=X\setminus C$에 둘째 조건을 적용하여 얻은 $W$와 $X\setminus\cl(W)$가 $x$와 $C$를 분리하기 때문이다.
 
-가장 기본적인 예로 Euclidean space $\mathbb{R}^n$이 LCH임을 들 수 있다. 임의의 점 $x$에 대하여 닫힌 공 $\{y\mid\lVert y-x\rVert\leq 1\}$은 Heine–Borel 정리에 의해 compact이고 열린 공을 품으므로 $x$의 compact neighborhood를 이루며, $\mathbb{R}^n$이 Hausdorff임은 이미 알고 있다. 마찬가지로 임의의 discrete space도 LCH인데, 각 점 $x$에 대하여 한원소집합 $\{x\}$이 열린 유한집합으로서 compact neighborhood가 되고 discrete space는 Hausdorff이기 때문이다. 조금 덜 자명한 예는 topological manifold이다.
+가장 기본적인 예로 Euclidean space $\mathbb{R}^n$이 LCH임을 들 수 있다. 임의의 점 $x$에 대하여 닫힌 공 $\{y:\lVert y-x\rVert\leq 1\}$은 Heine–Borel 정리에 의해 compact이고 열린 공을 품으므로 $x$의 compact neighborhood를 이루며, $\mathbb{R}^n$이 Hausdorff임은 이미 알고 있다. 마찬가지로 임의의 discrete space도 LCH인데, 각 점 $x$에 대하여 한원소집합 $\{x\}$이 열린 유한집합으로서 compact neighborhood가 되고 discrete space는 Hausdorff이기 때문이다. 조금 덜 자명한 예는 topological manifold이다.
 
 ::: 예시 5
 각 점이 $\mathbb{R}^n$의 열린집합과 homeomorphic한 열린근방을 갖는 Hausdorff 공간은 LCH space이다. 뒤에서 정의할 topological manifold가 바로 이러한 공간이다. 실제로 그러한 공간 $M$의 각 점 $x$에 대하여 $\mathbb{R}^n$의 열린집합과 homeomorphic한 열린근방 $U$를 잡으면, 그 homeomorphism 아래에서 $x$에 대응하는 점이 $\mathbb{R}^n$에서 compact neighborhood를 가지므로 ($\mathbb{R}^n$이 LCH이기 때문이다) 이를 $U$로 되끌어 오면 $x$의 compact neighborhood를 얻는다.
@@ -176,7 +176,7 @@ $\varphi$를 통해 $X$와 $Y\setminus\{p\}$을 동일시하고, $X$를 $Y$의 �
 가장 익숙한 예는 Euclidean space의 일점 옹골화가 구면이 된다는 사실이다.
 
 ::: 예시 14
-$n$-구면 $S^n=\{x\in\mathbb{R}^{n+1}\mid\lVert x\rVert=1\}$의 북극 $N=(0,\ldots,0,1)$을 생각하자. Stereographic projection
+$n$-구면 $S^n=\{x\in\mathbb{R}^{n+1}:\lVert x\rVert=1\}$의 북극 $N=(0,\ldots,0,1)$을 생각하자. Stereographic projection
 
 $$\sigma:S^n\setminus\{N\}\rightarrow\mathbb{R}^n,\qquad \sigma(x_1,\ldots,x_{n+1})=\frac{1}{1-x_{n+1}}(x_1,\ldots,x_n)$$
 
@@ -258,21 +258,21 @@ Paracompactness가 compactness보다 실질적으로 넓은 조건임은 compact
 ::: 예시 20
 Euclidean space $\mathbb{R}^n$은 paracompact이다. $\mathbb{R}^n$은 유계가 아니어서 compact가 아니지만, 원점을 중심으로 반경이 커지는 열린 공들로 공간을 소진시켜 국소유한 세분을 얻을 수 있다.
 
-임의의 open covering $\mathcal{U}=(U_i)_{i\in I}$가 주어졌다 하자. 각 정수 $k\geq 1$에 대하여 반경 $k$인 열린 공 $B_k=\{x\mid\lVert x\rVert<k\}$을 두고, $B_0=B_{-1}=\emptyset$이라 약속한다. 그럼 껍질
+임의의 open covering $\mathcal{U}=(U_i)_{i\in I}$가 주어졌다 하자. 각 정수 $k\geq 1$에 대하여 반경 $k$인 열린 공 $B_k=\{x:\lVert x\rVert<k\}$을 두고, $B_0=B_{-1}=\emptyset$이라 약속한다. 그럼 껍질
 
-$$A_k=\cl(B_k)\setminus B_{k-1}=\{x\mid k-1\leq\lVert x\rVert\leq k\}$$
+$$A_k=\cl(B_k)\setminus B_{k-1}=\{x: k-1\leq\lVert x\rVert\leq k\}$$
 
 은 $\mathbb{R}^n$의 닫힌 유계 부분집합이므로 Heine–Borel 정리에 의해 compact이고, 이들의 합집합은 $\mathbb{R}^n$ 전체이다. 한편
 
 $$O_k=B_{k+1}\setminus\cl(B_{k-2})$$
 
-은 열린집합으로 $A_k\subseteq O_k$를 만족한다. 여기서 $k\geq 3$이면 $O_k=\{x\mid k-2<\lVert x\rVert<k+1\}$이고, $k=1,2$일 때는 $B_{k-2}=\emptyset$이라 $\cl(B_{k-2})=\emptyset$이므로 $O_k=B_{k+1}$이다.
+은 열린집합으로 $A_k\subseteq O_k$를 만족한다. 여기서 $k\geq 3$이면 $O_k=\{x: k-2<\lVert x\rVert<k+1\}$이고, $k=1,2$일 때는 $B_{k-2}=\emptyset$이라 $\cl(B_{k-2})=\emptyset$이므로 $O_k=B_{k+1}$이다.
 
 이제 각 $k$에 대하여 compact 집합 $A_k$를 다룬다. 각 $x\in A_k$는 어떤 $U_{i}$에 속하므로 $x\in U_i\cap O_k$이며, 이러한 열린집합들이 $A_k$를 덮는다. $A_k$가 compact이므로 유한 개의 $i$, 곧 유한집합 $F_k\subseteq I$를 택하여 $(U_i\cap O_k)_{i\in F_k}$이 $A_k$를 덮도록 할 수 있다. ([§옹골공간, ⁋명제 2](/ko/math/topology/compact_spaces#prop2)) 모든 $k\geq 1$에 걸쳐 모은 family
 
 $$\mathcal{V}=(U_i\cap O_k)_{k\geq 1,i\in F_k}$$
 
-를 생각하자. 각 원소는 열린집합이며 $U_i$에 포함되므로 $\mathcal{V}$는 $\mathcal{U}$의 open refinement이고, $A_k$들이 $\mathbb{R}^n$을 덮으므로 $\mathcal{V}$도 $\mathbb{R}^n$을 덮는다. 끝으로 $\mathcal{V}$가 locally finite임을 본다. 점 $x$에 대하여 $r=\lVert x\rVert$이라 두면 근방 $B_{r+1}=\{y\mid\lVert y\rVert<r+1\}$은 $O_k$와 만나는 경우 $k-2<r+1$, 곧 $k<r+3$일 때뿐이므로 유한 개의 $k$에 대해서만 $O_k$와 만난다. 각 $k$마다 $\mathcal{V}$의 원소는 유한 개($\lvert F_k\rvert$개)뿐이므로, $B_{r+1}$은 $\mathcal{V}$의 유한히 많은 원소만을 만난다. 따라서 $\mathcal{V}$는 locally finite open refinement이고 $\mathbb{R}^n$은 paracompact이다.
+를 생각하자. 각 원소는 열린집합이며 $U_i$에 포함되므로 $\mathcal{V}$는 $\mathcal{U}$의 open refinement이고, $A_k$들이 $\mathbb{R}^n$을 덮으므로 $\mathcal{V}$도 $\mathbb{R}^n$을 덮는다. 끝으로 $\mathcal{V}$가 locally finite임을 본다. 점 $x$에 대하여 $r=\lVert x\rVert$이라 두면 근방 $B_{r+1}=\{y:\lVert y\rVert<r+1\}$은 $O_k$와 만나는 경우 $k-2<r+1$, 곧 $k<r+3$일 때뿐이므로 유한 개의 $k$에 대해서만 $O_k$와 만난다. 각 $k$마다 $\mathcal{V}$의 원소는 유한 개($\lvert F_k\rvert$개)뿐이므로, $B_{r+1}$은 $\mathcal{V}$의 유한히 많은 원소만을 만난다. 따라서 $\mathcal{V}$는 locally finite open refinement이고 $\mathbb{R}^n$은 paracompact이다.
 :::
 
 이 예시의 논증은 $\mathbb{R}^n$의 특수성보다는 두 가지 성질, 곧 국소적 옹골성과 가산 개의 compact 집합으로의 소진에만 의존한다. 실제로 같은 방법으로 임의의 second countable LCH space, 나아가 임의의 $\sigma$-compact LCH space가 paracompact임을 보일 수 있다. 이는 뒤에서 다룰 topological manifold의 paracompactness의 바탕이 된다.

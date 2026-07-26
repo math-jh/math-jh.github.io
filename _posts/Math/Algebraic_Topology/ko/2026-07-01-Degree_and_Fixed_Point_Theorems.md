@@ -113,7 +113,7 @@ $$\deg a=(\deg r)^{n+1}=(-1)^{n+1}$$
 
 ## No-retraction 보조정리와 Brouwer 고정점 정리
 
-Homology가 fixed point 문제에 개입하는 첫 통로는 원판을 그 boundary로 밀어내는 연속함수, 곧 retraction이 존재할 수 없다는 사실이다. $(n+1)$-공 $D^{n+1}=\{x\in\mathbb{R}^{n+1}\mid\lvert x\rvert\leq 1\}$의 boundary가 $S^n$임을 상기하자. Retraction이란 이 포함관계를 되돌리는 morphism이다.
+Homology가 fixed point 문제에 개입하는 첫 통로는 원판을 그 boundary로 밀어내는 연속함수, 곧 retraction이 존재할 수 없다는 사실이다. $(n+1)$-공 $D^{n+1}=\{x\in\mathbb{R}^{n+1}:\lvert x\rvert\leq 1\}$의 boundary가 $S^n$임을 상기하자. Retraction이란 이 포함관계를 되돌리는 morphism이다.
 
 ::: 보조정리 6 (No-retraction)
 $n\geq 0$에 대하여, 포함사상 $\iota:S^n\hookrightarrow D^{n+1}$의 retraction, 곧 $r\circ\iota=\id_{S^n}$을 만족하는 연속함수 $r:D^{n+1}\rightarrow S^n$은 존재하지 않는다.
@@ -229,7 +229,7 @@ $$L(f)=(-1)^0\cdot 1=1\neq 0$$
 ::: 예시 12
 Degree와 Lefschetz 수의 상호작용을 구면 위에서 구체적으로 살펴본다.
 
-1. **degree의 실현.** $S^1$을 복소평면의 단위원 $\{z\in\mathbb{C}\mid\lvert z\rvert=1\}$으로 보면, 각 정수 $k$에 대하여 $f_k(z)=z^k$은 연속 자기사상이다. $H_1(S^1)\cong\mathbb{Z}$의 generator를 원을 한 바퀴 도는 loop로 볼 때 $f_k$은 이를 $k$바퀴 도는 loop로 보내므로 $\deg f_k=k$이다. 곧 $S^1$의 자기사상은 모든 정수 degree를 실현한다. 더 높은 차원에서도, $S^{n-1}$의 degree $k$ morphism을 $S^n$으로 매다는 suspension을 취하면 degree가 보존되어 ($\id$과 반사사상의 관계가 [명제 4](#prop4)에서 한 차원씩 옮겨간 것과 같은 이유로) 모든 정수 degree의 $S^n$ 자기사상을 얻는다.
+1. **degree의 실현.** $S^1$을 복소평면의 단위원 $\{z\in\mathbb{C}:\lvert z\rvert=1\}$으로 보면, 각 정수 $k$에 대하여 $f_k(z)=z^k$은 연속 자기사상이다. $H_1(S^1)\cong\mathbb{Z}$의 generator를 원을 한 바퀴 도는 loop로 볼 때 $f_k$은 이를 $k$바퀴 도는 loop로 보내므로 $\deg f_k=k$이다. 곧 $S^1$의 자기사상은 모든 정수 degree를 실현한다. 더 높은 차원에서도, $S^{n-1}$의 degree $k$ morphism을 $S^n$으로 매다는 suspension을 취하면 degree가 보존되어 ($\id$과 반사사상의 관계가 [명제 4](#prop4)에서 한 차원씩 옮겨간 것과 같은 이유로) 모든 정수 degree의 $S^n$ 자기사상을 얻는다.
 
 2. **구면 위의 Lefschetz 수.** $n\geq 1$에 대하여 $f:S^n\rightarrow S^n$을 생각하자. [명제 1](#prop1)에 의하여 $H_0(S^n;\mathbb{Q})\cong\mathbb{Q}$, $H_n(S^n;\mathbb{Q})\cong\mathbb{Q}$이고 그 밖의 homology는 $0$이다. $S^n$이 path-connected이므로 $f_\ast$는 $H_0$ 위에서 항등사상이어서 trace가 $1$이고, $H_n$ 위에서는 $\deg f$를 곱하는 morphism이어서 trace가 $\deg f$이다. 따라서
 

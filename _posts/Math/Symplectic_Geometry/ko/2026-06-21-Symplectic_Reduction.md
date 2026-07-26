@@ -28,7 +28,7 @@ $(M,\omega,G,\mu)$가 Hamiltonian $G$-공간이고 $p\in\mu^{-1}(0)$이라 하�
 
 $$\ker d\mu_p=(\mathfrak{g}\cdot p)^{\omega},\qquad \im d\mu_p=(\mathfrak{g}_p)^{\circ}$$
 
-여기서 $\mathfrak{g}\cdot p=\{X_M(p):X\in\mathfrak{g}\}\subseteq T_pM$은 orbit의 tangent space, $(\,\cdot\,)^{\omega}$은 $\omega_p$에 대한 symplectic complement ([§사교벡터공간, ⁋정의 3](/ko/math/symplectic_geometry/linear_symplectic_geometry#def3)), $\mathfrak{g}_p=\{X\in\mathfrak{g}:X_M(p)=0\}$은 stabilizer의 Lie algebra, $(\mathfrak{g}_p)^{\circ}\subseteq\mathfrak{g}^\ast$은 그 annihilator이다. 특히 $0$이 regular value일 필요충분조건은 모든 $p\in\mu^{-1}(0)$에서 $\mathfrak{g}_p=0$, 즉 작용이 $\mu^{-1}(0)$ 위에서 locally free인 것이다.
+여기서 $\mathfrak{g}\cdot p=\{X_M(p)\mid X\in\mathfrak{g}\}\subseteq T_pM$은 orbit의 tangent space, $(\,\cdot\,)^{\omega}$은 $\omega_p$에 대한 symplectic complement ([§사교벡터공간, ⁋정의 3](/ko/math/symplectic_geometry/linear_symplectic_geometry#def3)), $\mathfrak{g}_p=\{X\in\mathfrak{g}\mid X_M(p)=0\}$은 stabilizer의 Lie algebra, $(\mathfrak{g}_p)^{\circ}\subseteq\mathfrak{g}^\ast$은 그 annihilator이다. 특히 $0$이 regular value일 필요충분조건은 모든 $p\in\mu^{-1}(0)$에서 $\mathfrak{g}_p=0$, 즉 작용이 $\mu^{-1}(0)$ 위에서 locally free인 것이다.
 :::
 ::: 증명
 각 $X\in\mathfrak{g}$에 대하여, [§운동량 사상, ⁋정의 2](/ko/math/symplectic_geometry/moment_map#def2)의 조건 1은 $d\mu^X=\iota_{X_M}\omega$이다. 점 $p$와 tangent vector $v\in T_pM$에서 이를 평가하면
@@ -112,7 +112,7 @@ $$\omega_p(X_M(p),v)=\langle d\mu_p(v),X\rangle=0$$
 운동량 사상의 값으로 $0$이 아니라 임의의 $\xi\in\mathfrak{g}^\ast$을 고를 수도 있다. 그러나 $G$가 nonabelian이면 fiber $\mu^{-1}(\xi)$은 일반적으로 $G$-불변이 아니다. Equivariance ([§운동량 사상, ⁋정의 2](/ko/math/symplectic_geometry/moment_map#def2)의 조건 2)에 의해 $\mu(g\cdot p)=\Ad_g^\ast\mu(p)$이므로, $g\cdot p$이 다시 $\mu^{-1}(\xi)$에 들려면 $\Ad_g^\ast\xi=\xi$, 즉 $g$이 $\xi$의 stabilizer $G_\xi$에 속해야 한다. 따라서 $\mu^{-1}(\xi)$을 보존하는 것은 전체 $G$이 아니라 subgroup $G_\xi$이다.
 
 ::: 정의 4
-$(M,\omega,G,\mu)$를 Hamiltonian $G$-공간, $\xi\in\mathfrak{g}^\ast$을 $\mu$의 regular value라 하고, $G_\xi=\{g\in G:\Ad_g^\ast\xi=\xi\}$을 $\xi$의 coadjoint stabilizer라 하자. $G_\xi$이 $\mu^{-1}(\xi)$ 위에 자유롭고 proper하게 작용할 때, $\xi$에서의 *축약공간*을
+$(M,\omega,G,\mu)$를 Hamiltonian $G$-공간, $\xi\in\mathfrak{g}^\ast$을 $\mu$의 regular value라 하고, $G_\xi=\{g\in G\mid\Ad_g^\ast\xi=\xi\}$을 $\xi$의 coadjoint stabilizer라 하자. $G_\xi$이 $\mu^{-1}(\xi)$ 위에 자유롭고 proper하게 작용할 때, $\xi$에서의 *축약공간*을
 
 $$M /\!\!/_{\!\xi}\, G:=\mu^{-1}(\xi)/G_\xi$$
 
@@ -126,14 +126,14 @@ $$M /\!\!/_{\!\xi}\, G:=\mu^{-1}(\xi)/G_\xi$$
 
 $$\dim M /\!\!/_{\!\xi}\, G=\dim M-\dim G-\dim G_\xi$$
 
-이다. 더 나아가, $\mathcal{O}_\xi=\{\Ad_g^\ast\xi:g\in G\}\subseteq\mathfrak{g}^\ast$을 $\xi$을 지나는 coadjoint orbit이라 하면
+이다. 더 나아가, $\mathcal{O}_\xi=\{\Ad_g^\ast\xi\mid g\in G\}\subseteq\mathfrak{g}^\ast$을 $\xi$을 지나는 coadjoint orbit이라 하면
 
 $$M /\!\!/_{\!\xi}\, G\cong\mu^{-1}(\mathcal{O}_\xi)/G$$
 
 이다.
 :::
 ::: 증명
-Subgroup $G_\xi\subseteq G$은 Lie subgroup이고 그 Lie algebra는 $\mathfrak{g}_\xi=\{X\in\mathfrak{g}:\ad_X^\ast\xi=0\}$이다. $\mu$을 $\mu^{-1}(\xi)$의 근방에서 affine 평행이동하여 생각하면 $\xi$을 regular value로 갖는 상황은 국소적으로 $0$을 regular value로 갖는 상황과 같으므로, $\mu^{-1}(\xi)$은 codimension $\dim G$의 smooth 부분다양체이다.
+Subgroup $G_\xi\subseteq G$은 Lie subgroup이고 그 Lie algebra는 $\mathfrak{g}_\xi=\{X\in\mathfrak{g}\mid\ad_X^\ast\xi=0\}$이다. $\mu$을 $\mu^{-1}(\xi)$의 근방에서 affine 평행이동하여 생각하면 $\xi$을 regular value로 갖는 상황은 국소적으로 $0$을 regular value로 갖는 상황과 같으므로, $\mu^{-1}(\xi)$은 codimension $\dim G$의 smooth 부분다양체이다.
 
 이제 $G_\xi$-작용에 대한 운동량 사상을 만든다. 포함 $\mathfrak{g}_\xi\hookrightarrow\mathfrak{g}$의 dual restriction $r:\mathfrak{g}^\ast\rightarrow\mathfrak{g}_\xi^\ast$을 합성한 $\mu_\xi:=r\circ(\mu-\xi):M\rightarrow\mathfrak{g}_\xi^\ast$은 $G_\xi$-작용의 운동량 사상이고, $\mu^{-1}(\xi)\subseteq\mu_\xi^{-1}(0)$이다. $\mu^{-1}(\xi)$ 위에서 $G_\xi$이 자유롭고 proper하게 작용하므로 [정리 2](#thm2)의 증명과 동일한 논법이 적용되어, $T_p(\mu^{-1}(\xi))$의 $\omega_p$에 대한 퇴화방향이 정확히 $\mathfrak{g}_\xi\cdot p$임을 확인하면 symplectic form이 quotient $\mu^{-1}(\xi)/G_\xi$으로 내려온다. 차원은
 

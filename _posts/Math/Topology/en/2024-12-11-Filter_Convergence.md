@@ -84,7 +84,7 @@ then it is clear that $\scl(A)\subseteq \cl(A)$.
 ::: Example 8
 Consider the uncountable product $\mathbb{R}^J$ of copies of $\mathbb{R}$, equipped with the product topology. Define the set $A$ by
 
-$$A=\{(x_j)\in \mathbb{R}^J: x_j=1\text{ for all but finitely many $j$}\}$$
+$$A=\{(x_j)\in \mathbb{R}^J\mid x_j=1\text{ for all but finitely many $j$}\}$$
 
 Then the origin of $\mathbb{R}^J$ belongs to the closure of $A$. This is because any basic open set containing the origin has all but finitely many coordinates equal to $\mathbb{R}$, and by setting those finitely many coordinates to $0$ and the remaining coordinates to $1$, we obtain a point lying in the intersection of this basic open set with $A$. However, no sequence in $A$ converges to the origin. Indeed, given any sequence in $A$, since $J$ is uncountable one can show that there exists $j\in J$ such that the $j$th coordinate of every term of the sequence is $1$; then the open neighborhood of the origin whose $j$th coordinate is $(-1,1)$ and whose remaining coordinates are $\mathbb{R}$ contains no term of the sequence.
 :::

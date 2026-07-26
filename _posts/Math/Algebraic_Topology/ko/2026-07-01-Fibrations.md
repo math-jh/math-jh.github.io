@@ -251,13 +251,13 @@ $$S^n\setminus\{q\}\cong\mathbb{R}^n$$
 ::: 예시 14 (Hopf fibration)
 $S^3$을 $\mathbb{C}^2$의 단위구
 
-$$S^3=\{(z_0,z_1)\in\mathbb{C}^2\mid \lvert z_0\rvert^2+\lvert z_1\rvert^2=1\}$$
+$$S^3=\{(z_0,z_1)\in\mathbb{C}^2: \lvert z_0\rvert^2+\lvert z_1\rvert^2=1\}$$
 
 로 보고, 각 점을 그것이 정하는 복소 직선으로 보내는 함수
 
 $$p:S^3\rightarrow\mathbb{CP}^1\cong S^2;\qquad (z_0,z_1)\mapsto[z_0:z_1]$$
 
-를 생각하자. 이를 *Hopf fibration*이라 부른다. 한 점 $[z_0:z_1]$ 위의 fiber는 $\{(\lambda z_0,\lambda z_1)\mid \lambda\in\mathbb{C}, \lvert\lambda\rvert=1\}$이며 이는 $S^1$과 homeomorphic하다. $p$는 locally trivial fiber bundle이므로 Serre fibration이고 ([참고 5](#rmk5)), 따라서 우리는 fibration $S^1\rightarrow S^3\rightarrow S^2$을 얻는다.
+를 생각하자. 이를 *Hopf fibration*이라 부른다. 한 점 $[z_0:z_1]$ 위의 fiber는 $\{(\lambda z_0,\lambda z_1): \lambda\in\mathbb{C}, \lvert\lambda\rvert=1\}$이며 이는 $S^1$과 homeomorphic하다. $p$는 locally trivial fiber bundle이므로 Serre fibration이고 ([참고 5](#rmk5)), 따라서 우리는 fibration $S^1\rightarrow S^3\rightarrow S^2$을 얻는다.
 
 [정리 10](#thm10)의 exact sequence에서 $n=3$ 주변을 보면
 

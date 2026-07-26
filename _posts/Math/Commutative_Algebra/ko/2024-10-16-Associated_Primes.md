@@ -119,7 +119,7 @@ Noetherian ring $A$ 위에 정의된 finitely generated module $M$에 대하여 
 2. Associated prime들의 합집합은 $0$과, $M$의 어떤 zero-divisor들의 모임들로 이루어진다.
 3. 다음의 식
     
-    $$\Ass_{S^{-1}A}S^{-1}M=\{\mathfrak{p}S^{-1}A: \mathfrak{p}\in\Ass M, \mathfrak{p}\cap S=\emptyset\}$$
+    $$\Ass_{S^{-1}A}S^{-1}M=\{\mathfrak{p}S^{-1}A\mid \mathfrak{p}\in\Ass M, \mathfrak{p}\cap S=\emptyset\}$$
 
     이 성립한다. 
 :::

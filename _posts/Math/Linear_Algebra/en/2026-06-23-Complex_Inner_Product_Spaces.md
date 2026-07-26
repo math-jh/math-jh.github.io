@@ -103,7 +103,7 @@ $$v=\sum_{i=1}^n\langle x_i,v\rangle x_i.$$
 
 Since the second variable is linear, the order $\langle x_i,v\rangle$ matters when extracting coefficients; using $\langle v,x_i\rangle$ would yield the conjugate.
 
-Orthogonal decomposition into subspaces also holds as before. For a subspace $U\leq V$ of a complex inner product space $V$, the restriction of the inner product to $U$ is again Hermitian, so $U$ has an orthonormal basis $\{x_1,\ldots,x_k\}$, which can be extended to an orthonormal basis of $V$. Set $U^\perp=\{v\in V:\langle u,v\rangle=0\text{ for all }u\in U\}$.
+Orthogonal decomposition into subspaces also holds as before. For a subspace $U\leq V$ of a complex inner product space $V$, the restriction of the inner product to $U$ is again Hermitian, so $U$ has an orthonormal basis $\{x_1,\ldots,x_k\}$, which can be extended to an orthonormal basis of $V$. Set $U^\perp=\{v\in V\mid\langle u,v\rangle=0\text{ for all }u\in U\}$.
 
 ::: Proposition 4
 For any subspace $U\leq V$ of a complex inner product space $V$,

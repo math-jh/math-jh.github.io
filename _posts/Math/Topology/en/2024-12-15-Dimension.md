@@ -143,7 +143,7 @@ A Noetherian space is compact.
 ::: Proof
 Suppose a Noetherian space $X$ and an open covering $\{U_i\}_{i\in I}$ of $X$ are given. Then we can define
 
-$$\mathcal{C}=\left\{\bigcup_{j\in J} U_j:\text{$J$ finite subset of $I$}\right\}$$
+$$\mathcal{C}=\left\{\bigcup_{j\in J} U_j\mid\text{$J$ finite subset of $I$}\right\}$$
 
 Now considering an arbitrary totally ordered subset of $\mathcal{C}$, this is equivalent to a descending chain of closed sets given by their complements, and therefore by the assumption that $X$ is Noetherian this must eventually stop. That is, $\mathcal{C}$ satisfies the condition of [\[Set Theory\] §Axiom of Choice, ⁋Theorem 4](/en/math/set_theory/axiom_of_choice#thm4) and therefore $\mathcal{C}$ has a maximal element $U\in \mathcal{C}$. If $X\neq U$, then we can choose some $U_j$ containing $x\in X\setminus U$, and then $U\cap U_j$ is an element of $\mathcal{C}$ that strictly contains $U$, contradicting the maximality of $U$. Therefore $U=X$ and we obtain the desired result.
 :::

@@ -22,7 +22,7 @@ published: false
 ## Idempotent
 
 ::: 정의 1
-Ring $A$의 원소 $e\in A$가 $e^2=e$를 만족하면 이를 *idempotent<sub>멱등원</sub>*라 한다. 두 idempotent $e,f$가 $ef=fe=0$을 만족하면 이들이 *orthogonal<sub>직교</sub>*하다고 한다. 또, idempotent $e$가 $A$의 center $Z(A)=\{c\in A: cx=xc\text{ for all }x\in A\}$에 속하면 이를 *central idempotent<sub>중심 멱등원</sub>*라 한다.
+Ring $A$의 원소 $e\in A$가 $e^2=e$를 만족하면 이를 *idempotent<sub>멱등원</sub>*라 한다. 두 idempotent $e,f$가 $ef=fe=0$을 만족하면 이들이 *orthogonal<sub>직교</sub>*하다고 한다. 또, idempotent $e$가 $A$의 center $Z(A)=\{c\in A\mid cx=xc\text{ for all }x\in A\}$에 속하면 이를 *central idempotent<sub>중심 멱등원</sub>*라 한다.
 :::
 
 임의의 ring은 두 idempotent $0$과 $1$을 가지며, 이 둘은 항상 central이다. 이들을 *trivial<sub>자명한</sub>* idempotent이라 부른다. Idempotent $e$가 주어지면 $1-e$ 또한 idempotent인데, 이는
@@ -143,7 +143,7 @@ $$M_n(R)=M_n(R)E_{11}\oplus\cdots\oplus M_n(R)E_{nn}$$
 
 진짜 곱분해는 block 구조에서 나온다. $n=n_1+\cdots+n_r$로 분할하고, 대각선을 따라 처음 $n_1\times n_1$ block, 다음 $n_2\times n_2$ block 식으로 놓인 block-diagonal 행렬들만 모은 subring
 
-$$B=\left\{\diag(M_1,\ldots, M_r):M_k\in M_{n_k}(R)\right\}\cong\prod_{k=1}^r M_{n_k}(R)$$
+$$B=\left\{\diag(M_1,\ldots, M_r)\mid M_k\in M_{n_k}(R)\right\}\cong\prod_{k=1}^r M_{n_k}(R)$$
 
 을 보자. $B$ 안에서 $k$번째 block에만 항등행렬을 놓은 원소 $P_k$는 $B$의 central idempotent이며, $\{P_1,\ldots, P_r\}$은 [정리 5](#thm5)의 의미에서 곱분해 $B\cong\prod M_{n_k}(R)$에 대응하는 central complete set이다. $P_k$들은 $B$ 안에서는 central이지만 더 큰 ring $M_n(R)$ 안에서는 그렇지 않다.
 :::

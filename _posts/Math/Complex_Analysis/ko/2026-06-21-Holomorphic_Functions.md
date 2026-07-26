@@ -190,7 +190,7 @@ $$\frac{\partial f}{\partial z} = \frac{1}{2}\left( (u_x + i v_x) - i(u_y + i v_
 
 $$f(z) = \sum_{n=0}^{\infty} a_n (z - z_0)^n$$
 
-은 열린 원판 $B(z_0, R) = \{z \mid \lvert z - z_0\rvert < R\}$에서 holomorphic이고, 그 도함수는 항별미분으로 얻어지는 급수
+은 열린 원판 $B(z_0, R) = \{z : \lvert z - z_0\rvert < R\}$에서 holomorphic이고, 그 도함수는 항별미분으로 얻어지는 급수
 
 $$f'(z) = \sum_{n=1}^{\infty} n\,a_n (z - z_0)^{n-1}$$
 

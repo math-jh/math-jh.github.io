@@ -103,7 +103,7 @@ Conversely, if $\Delta_X$ is a closed subset of $X\times X$, then for any $x,y\i
 
 More generally, by the same argument one can show that $X$ is Hausdorff if and only if, for any index set $I$, the diagonal
 
-$$\Delta_X=\{(x_i)_{i\in I}:\text{$x_i=x$ for all $i$, where $x\in X$}\}$$
+$$\Delta_X=\{(x_i)_{i\in I}\mid\text{$x_i=x$ for all $i$, where $x\in X$}\}$$
 
 in $X^I=\prod_{i\in I}X$ is closed. From [Lemma 5](#lem5) we obtain the following.
 

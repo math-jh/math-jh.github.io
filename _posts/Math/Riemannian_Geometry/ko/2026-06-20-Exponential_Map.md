@@ -66,7 +66,7 @@ Riemannian manifold $(M, g)$의 점 $p$에 대해, $0 \in T_p M$의 적당한 �
 ::: 증명
 측지선 방정식의 흐름을 생각하자. [§측지선, ⁋정리 7](/ko/math/riemannian_geometry/geodesics#thm7)의 증명에서 보았듯, $(p, v) \in TM$을 초기조건 $\gamma(0) = p$, $\dot\gamma(0) = v$로 하는 측지선 $\gamma_{(p, v)}(t)$는 $TM$ 위의 일계 상미분방정식 시스템의 해이며, 그 우변은 매끄럽다. 상미분방정식 흐름의 초기조건과 시간에 대한 smooth 의존성에 의해, 점 $(p, 0) \in TM$의 적당한 열린근방 $\mathcal{O} \subseteq TM$과 $\varepsilon > 0$이 존재하여, $(q, w) \in \mathcal{O}$이면 측지선 $\gamma_{(q, w)}(t)$가 $t \in (-\varepsilon, \varepsilon)$에서 정의되고 $(t, q, w)$에 매끄럽게 의존한다.
 
-이제 $\delta > 0$을 충분히 작게 잡아 집합 $W := \{w \in T_p M \mid \lVert w \rVert_g < \delta\}$이 $\mathcal{O} \cap T_p M$에 포함되고 $\delta < \varepsilon$이도록 하자. 그럼 각 $w \in W$에 대해 $\gamma_w$는 $(-\varepsilon, \varepsilon) \supseteq [0, 1]$ 위에서 정의되므로 $W \subseteq \mathcal{E}_p$이고, $\exp_p(w) = \gamma_w(1)$은 $\gamma_{(p, w)}(1)$이 $w$에 매끄럽게 의존하는 데서 $W$ 위에서 매끄럽다. 마지막으로 $W$는 $\lVert \cdot \rVert_g$에 대한 원점 중심의 열린 공이므로 $0$에 대해 star-shaped이다. 따라서 $V := W$로 두면 된다.
+이제 $\delta > 0$을 충분히 작게 잡아 집합 $W := \{w \in T_p M : \lVert w \rVert_g < \delta\}$이 $\mathcal{O} \cap T_p M$에 포함되고 $\delta < \varepsilon$이도록 하자. 그럼 각 $w \in W$에 대해 $\gamma_w$는 $(-\varepsilon, \varepsilon) \supseteq [0, 1]$ 위에서 정의되므로 $W \subseteq \mathcal{E}_p$이고, $\exp_p(w) = \gamma_w(1)$은 $\gamma_{(p, w)}(1)$이 $w$에 매끄럽게 의존하는 데서 $W$ 위에서 매끄럽다. 마지막으로 $W$는 $\lVert \cdot \rVert_g$에 대한 원점 중심의 열린 공이므로 $0$에 대해 star-shaped이다. 따라서 $V := W$로 두면 된다.
 :::
 
 [보조정리 2](#lem2)는 $V$가 star-shaped이어야 하는 이유를 설명한다. $v \in V$가 $\exp_p(v) = \gamma_v(1)$이 정의되도록 한다면, 같은 측지선의 자취 위의 점 $\gamma_v(s) = \exp_p(sv)$ ($0 \le s \le 1$)도 정의되어야 자연스러우며, 이는 정확히 $sv \in V$를 요구하는 조건이다. 이제 exponential map의 핵심 성질, 즉 $0$에서의 미분을 계산한다. 여기서 우리는 vector space $T_p M$의 한 점 $0$에서의 tangent space $T_0(T_p M)$을 vector space 자신 $T_p M$과 표준적으로 동일시한다. 구체적으로, $v \in T_p M$을 곡선 $t \mapsto tv$의 $t = 0$에서의 속도벡터로 보는 동일시이다.
@@ -147,7 +147,7 @@ $$\sum_{i, j} \Gamma_{ij}^k(p)\, v^i v^j = 0$$
 
 ## Gauss lemma
 
-Normal coordinate는 $p$를 지나는 측지선을 원점을 지나는 직선으로 펴므로, $T_p M$의 동심 구면이 normal neighborhood 안에서 어떤 자취로 보이는지를 물을 수 있다. Gauss lemma는 이 측지구면이 방사방향 측지선과 직교함을 말한다. 먼저 그 자취들에 이름을 붙인다. 반지름 $r > 0$에 대해, exponential map의 정의역 안의 구면 $S_r := \{v \in V \mid \lVert v \rVert_g = r\}$의 image $\exp_p(S_r)$을 반지름 $r$의 *geodesic sphere<sub>측지구면</sub>*라 부른다.
+Normal coordinate는 $p$를 지나는 측지선을 원점을 지나는 직선으로 펴므로, $T_p M$의 동심 구면이 normal neighborhood 안에서 어떤 자취로 보이는지를 물을 수 있다. Gauss lemma는 이 측지구면이 방사방향 측지선과 직교함을 말한다. 먼저 그 자취들에 이름을 붙인다. 반지름 $r > 0$에 대해, exponential map의 정의역 안의 구면 $S_r := \{v \in V : \lVert v \rVert_g = r\}$의 image $\exp_p(S_r)$을 반지름 $r$의 *geodesic sphere<sub>측지구면</sub>*라 부른다.
 
 Gauss lemma를 깔끔하게 진술하기 위해, exponential map의 미분이 방사벡터와 그에 수직인 벡터에 대해 어떻게 작용하는지를 비교한다. 다음 보조정리가 핵심 계산이다.
 
@@ -202,7 +202,7 @@ Normal neighborhood $U = \exp_p(V)$ 안에서, $p$를 지나는 방사 측지선
 :::
 
 ::: 증명
-측지구면 $\exp_p(S_r)$의 $q = \exp_p(v)$에서의 tangent space는, $S_r = \{u \in V \mid \lVert u \rVert = r\}$이 $v$에서 가지는 tangent space를 $(d\exp_p)_v$로 보낸 것이다. $S_r$의 $v$에서의 tangent space는 $v$에 수직인 vector들 $\{w \in T_p M \mid \langle v, w \rangle_p = 0\}$로 이루어지므로, $\exp_p(S_r)$의 $q$에서의 tangent vector는 $\langle v, w \rangle_p = 0$인 $w$에 대한 $(d\exp_p)_v(w)$ 꼴이다.
+측지구면 $\exp_p(S_r)$의 $q = \exp_p(v)$에서의 tangent space는, $S_r = \{u \in V : \lVert u \rVert = r\}$이 $v$에서 가지는 tangent space를 $(d\exp_p)_v$로 보낸 것이다. $S_r$의 $v$에서의 tangent space는 $v$에 수직인 vector들 $\{w \in T_p M \mid \langle v, w \rangle_p = 0\}$로 이루어지므로, $\exp_p(S_r)$의 $q$에서의 tangent vector는 $\langle v, w \rangle_p = 0$인 $w$에 대한 $(d\exp_p)_v(w)$ 꼴이다.
 
 한편 [보조정리 8](#lem8)의 증명에서 $\dot\gamma_v(1) = (d\exp_p)_v(v)$임을 보였다. 따라서 임의의 그러한 tangent vector $(d\exp_p)_v(w)$에 대해, [보조정리 8](#lem8)에 의해
 
@@ -238,7 +238,7 @@ $$\gamma_v(t) = (\cos rt)\, p + \frac{\sin rt}{r}\, v$$
 
 $$\exp_p(v) = \gamma_v(1) = (\cos r)\, p + \frac{\sin r}{r}\, v, \qquad r = \lVert v \rVert$$
 
-이다. 기하적으로 $\exp_p$는 접평면 $T_p S^2$의 vector $v$를, $v$ 방향의 대원을 따라 arc length $r = \lVert v \rVert$만큼 나아간 점으로 보내는 *방사사상*이다. 이 사상은 $r < \pi$인 영역, 즉 열린 공 $\{v \mid \lVert v \rVert < \pi\}$ 위에서 diffeomorphism이며, 그 image는 $p$의 대척점 $-p$를 제외한 $S^2 \setminus \{-p\}$로서 $p$의 normal neighborhood이다. 반지름 $r$의 측지구면 $\exp_p(S_r)$은 $p$로부터 측지거리 $r$만큼 떨어진 위도원이며, [정리 9](#thm9)가 말하듯 $p$에서 나오는 대원들(경도선)이 이 위도원들과 직교한다. $r = \pi$에서 $\exp_p$가 구면 $S_\pi$ 전체를 한 점 $-p$로 보내 diffeomorphism이 깨지는 것은, normal neighborhood가 일반적으로 $T_p M$ 전체로 확장되지 않는 전형적인 예이다.
+이다. 기하적으로 $\exp_p$는 접평면 $T_p S^2$의 vector $v$를, $v$ 방향의 대원을 따라 arc length $r = \lVert v \rVert$만큼 나아간 점으로 보내는 *방사사상*이다. 이 사상은 $r < \pi$인 영역, 즉 열린 공 $\{v : \lVert v \rVert < \pi\}$ 위에서 diffeomorphism이며, 그 image는 $p$의 대척점 $-p$를 제외한 $S^2 \setminus \{-p\}$로서 $p$의 normal neighborhood이다. 반지름 $r$의 측지구면 $\exp_p(S_r)$은 $p$로부터 측지거리 $r$만큼 떨어진 위도원이며, [정리 9](#thm9)가 말하듯 $p$에서 나오는 대원들(경도선)이 이 위도원들과 직교한다. $r = \pi$에서 $\exp_p$가 구면 $S_\pi$ 전체를 한 점 $-p$로 보내 diffeomorphism이 깨지는 것은, normal neighborhood가 일반적으로 $T_p M$ 전체로 확장되지 않는 전형적인 예이다.
 :::
 
 [예시 11](#ex11)에서 보듯 $S^2$의 exponential map은 한 점의 접평면에서 측지거리를 따라 구면을 펴는 사상이며, 이는 지도제작에서 한 점을 중심으로 한 *방위투영*의 기하적 모형이기도 하다. 일반의 Riemannian manifold에서도 exponential map은 같은 방식으로 tangent space의 평탄한 기하를 측지선을 따라 manifold 위로 옮기며, 이로써 우리는 한 점 근방의 곡률 정보를 tangent space 위의 좌표로 환원해 분석할 수 있다.

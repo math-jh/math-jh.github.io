@@ -371,7 +371,7 @@ $\Spec \mathbb{Z}$는 scheme들의 category에서 terminal object이므로, valu
 
 $$\mathbb{Z}[\x_0/\x_i,\ldots,\x_n/\x_i] \longrightarrow K$$
 
-에 대응한다. $\x_j/\x_i$의 image를 $a_j\in K$라 하면 $a_i=1$이다. 이제 $K^\times$ 위에서 $s\preceq t$를 $t/s\in A$로 정의하면, valuation ring의 정의에 의하여 임의의 $s,t$에 대해 $s\preceq t$이거나 $t\preceq s$이고, $t/s\in A$이고 $r/t\in A$일 때 $r/s=(r/t)(t/s)\in A$이므로 $\preceq$는 $K^\times$ 위의 total preorder이다. $a_i=1\neq 0$이므로 유한집합 $\{a_j : a_j\neq 0\}$은 공집합이 아니고, 따라서 이 집합의 최소원 $a_k$를 택할 수 있다. 곧 모든 $j$에 대하여
+에 대응한다. $\x_j/\x_i$의 image를 $a_j\in K$라 하면 $a_i=1$이다. 이제 $K^\times$ 위에서 $s\preceq t$를 $t/s\in A$로 정의하면, valuation ring의 정의에 의하여 임의의 $s,t$에 대해 $s\preceq t$이거나 $t\preceq s$이고, $t/s\in A$이고 $r/t\in A$일 때 $r/s=(r/t)(t/s)\in A$이므로 $\preceq$는 $K^\times$ 위의 total preorder이다. $a_i=1\neq 0$이므로 유한집합 $\{a_j \mid a_j\neq 0\}$은 공집합이 아니고, 따라서 이 집합의 최소원 $a_k$를 택할 수 있다. 곧 모든 $j$에 대하여
 
 $$b_j:=a_j/a_k\in A$$
 

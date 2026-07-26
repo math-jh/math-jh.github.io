@@ -116,7 +116,7 @@ Let $M$ be a finitely generated module over a Noetherian ring $A$. Then the foll
 2. The union of the associated primes consists of $0$ and the zero-divisors on $M$.
 3. The following formula holds:
 
-    $$\Ass_{S^{-1}A}S^{-1}M=\{\mathfrak{p}S^{-1}A: \mathfrak{p}\in\Ass M, \mathfrak{p}\cap S=\emptyset\}$$
+    $$\Ass_{S^{-1}A}S^{-1}M=\{\mathfrak{p}S^{-1}A\mid \mathfrak{p}\in\Ass M, \mathfrak{p}\cap S=\emptyset\}$$
 :::
 ::: Proof
 First, for the first statement, that $\Ass M$ is nonempty follows from [Proposition 3](#prop3), and that every element of $\Ass M$ contains $\ann M$ is obvious. Meanwhile, by [Lemma 5](#lem5), considering the short exact sequence

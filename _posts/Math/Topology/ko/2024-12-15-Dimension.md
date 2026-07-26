@@ -187,7 +187,7 @@ Noetherian space는 compact이다.
 ::: 증명
 Noetherian space $X$와 $X$의 open covering $\{U_i\}_{i\in I}$가 주어졌다 가정하자. 그럼
 
-$$\mathcal{C}=\left\{\bigcup_{j\in J} U_j:\text{$J$ finite subset of $I$}\right\}$$
+$$\mathcal{C}=\left\{\bigcup_{j\in J} U_j\mid\text{$J$ finite subset of $I$}\right\}$$
 
 라 정의할 수 있다. 이제 $\mathcal{C}$의 임의의 totally ordered subset을 생각하면, 이는 그 여집합들로 이루어진 닫힌집합들의 descending chain과 동치이고 따라서 $X$가 Noetherian이라는 가정으로부터 이는 언젠가 멈춰야 한다. 즉, $\mathcal{C}$는 [\[집합론\] §선택공리, ⁋정리 4](/ko/math/set_theory/axiom_of_choice#thm4)의 조건을 만족하고 따라서 $\mathcal{C}$는 maximal element $U\in \mathcal{C}$를 갖는다. 만일 $X\neq U$라면, $x\in X\setminus U$를 포함하는 $U_j$를 택할 수 있고 그럼 $U\cap U_j$는 $U$를 strict하게 포함하는 $\mathcal{C}$의 원소이므로 $U$의 maximality에 모순이다. 따라서 $U=X$이고 우리는 원하는 결과를 얻는다. 
 :::

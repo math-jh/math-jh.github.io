@@ -37,7 +37,7 @@ $$\left(\frac{a_1}{s_1},\ldots, \frac{a_n}{s_n}\right)A$$
 
 은 원소 $s_1\cdots s_n\in A$에 의해 항상 fractional ideal이 되고, $A$가 Noetherian이라면 그 역 또한 성립한다. 일반적인 ideal과 같이, fractional ideal들의 곱 또한
 
-$$\mathfrak{A}\mathfrak{B}=\left\{\sum_{i=1}^n a_ib_i: a_i\in \mathfrak{A}, b_i\in \mathfrak{B}\right\}$$
+$$\mathfrak{A}\mathfrak{B}=\left\{\sum_{i=1}^n a_ib_i\mid a_i\in \mathfrak{A}, b_i\in \mathfrak{B}\right\}$$
 
 으로 정의한다. 
 

@@ -148,7 +148,7 @@ U \cap V \cap \gamma([0,1]) &\subseteq U \cap V \cap E = \emptyset
 
 [명제 9](#prop9)는 연결성을 보이는 실용적인 방법을 준다. 어떤 집합이 connected임을 직접 보이려면 분할이 없음을 보여야 하지만, 두 점을 잇는 경로를 명시적으로 구성하는 편이 종종 더 쉽다. 가령 $\mathbb{R}^n$의 볼록집합 $E$는 임의의 두 점 $x, y$에 대해 선분 $\gamma(t) = (1-t)x + ty$가 $E$ 안에 있어 path-connected이고, 따라서 connected이다. 한편 그 역이 성립하지 않는 고전적 예는 위상수학자의 사인곡선
 
-$$S = \{(x, \sin(1/x)) : 0 < x \leq 1\} \cup \{(0, y) : -1 \leq y \leq 1\}$$
+$$S = \{(x, \sin(1/x)) \mid 0 < x \leq 1\} \cup \{(0, y) \mid -1 \leq y \leq 1\}$$
 
 으로, $S$는 connected이지만 path-connected는 아니다. 원점 부근의 진동이 점점 빨라져, 세로 선분 위의 점과 곡선 위의 점을 잇는 연속 경로를 만들 수 없기 때문이다.
 

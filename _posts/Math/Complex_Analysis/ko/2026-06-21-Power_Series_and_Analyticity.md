@@ -128,7 +128,7 @@ $$G'(z) = \sum_{n=0}^{\infty} \frac{a_n}{n+1}\cdot(n+1)(z - z_0)^n = \sum_{n=0}^
 ::: 정의 5 (영점의 위수)
 $f$가 $z_0$에서 holomorphic이고 $f(z_0) = 0$이며 $z_0$의 어떤 근방에서 $f$가 항등적으로 $0$은 아니라 하자. $z_0$에서의 Taylor 계수 $a_n = f^{(n)}(z_0)/n!$ 가운데 $0$이 아닌 것이 처음 나타나는 지수, 곧
 
-$$m = \min\{\,n \geq 0 : a_n \neq 0\,\}$$
+$$m = \min\{\,n \geq 0 \mid a_n \neq 0\,\}$$
 
 을 $z_0$에서 $f$의 *order of the zero<sub>영점의 위수</sub>*라 한다.
 :::

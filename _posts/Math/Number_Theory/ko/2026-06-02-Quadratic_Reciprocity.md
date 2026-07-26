@@ -33,7 +33,7 @@ $$\left(\frac{a}{p}\right) = (-1)^{\mu}$$
 ::: 증명
 각 $ja$ ($1 \leq j \leq \tfrac{p-1}{2}$) 의 최소 양의 나머지를 $r_j$라 하자. $r_j > p/2$인 것들은 $p - r_j < p/2$로 바꾸어 두면, 얻어진 수들
 
-$$\{\, r_j : r_j < p/2 \,\} \cup \{\, p - r_j : r_j > p/2 \,\}$$
+$$\{\, r_j \mid r_j < p/2 \,\} \cup \{\, p - r_j \mid r_j > p/2 \,\}$$
 
 이 정확히 $1, 2, \ldots, \tfrac{p-1}{2}$의 재배열임을 보일 수 있다. 실제로 이들은 모두 $1$과 $\tfrac{p-1}{2}$ 사이에 있고 그 개수가 $\tfrac{p-1}{2}$로 같으므로, 서로 다름만 보이면 된다. 만약 두 수가 같다면 $r_i = r_j$ 또는 $r_i = p - r_j$인데, 앞의 경우는 $ia \equiv ja \pmod p$에서 $i = j$를 주고, 뒤의 경우는 $ia \equiv -ja \pmod p$에서 $(i+j)a \equiv 0$, 곧 $p \mid i + j$를 주지만 $2 \leq i + j \leq p-1$이라 불가능하다. 따라서 재배열이다. 이제 양변을 모두 곱하면
 

@@ -31,7 +31,7 @@ $$H_2(X, \mathbb{Z})_{\mathrm{eff}} := \{ \beta \in H_2(X, \mathbb{Z}) \mid \ove
 ::: 정의 1
 $X$의 *Novikov ring<sub>노비코프 환</sub>*
 
-$$\Lambda := \left\{ \sum_{\beta \in H_2(X, \mathbb{Z})_{\mathrm{eff}}} a_\beta\, q^\beta\ \middle\vert\ a_\beta \in \mathbb{C},\ \#\{\beta : a_\beta \neq 0,\, \omega(\beta) \leq C\} < \infty \text{ for all } C > 0 \right\}$$
+$$\Lambda := \left\{ \sum_{\beta \in H_2(X, \mathbb{Z})_{\mathrm{eff}}} a_\beta\, q^\beta\ \middle\vert\ a_\beta \in \mathbb{C},\ \#\{\beta \mid a_\beta \neq 0,\, \omega(\beta) \leq C\} < \infty \text{ for all } C > 0 \right\}$$
 
 는 effective curve class를 지수로 하는 formal symbol $q^\beta$들의 형식적 power series ring으로 정의된다. 덧셈과 곱셈은 $q^\beta \cdot q^{\beta'} = q^{\beta + \beta'}$로 주어진다.
 :::

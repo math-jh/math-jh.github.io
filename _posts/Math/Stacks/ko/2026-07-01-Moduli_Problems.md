@@ -154,7 +154,7 @@ $$y^2=x^3+ax+b,\qquad \Delta=-16(4a^3+27b^2)\neq 0$$
 
 으로 주어지고, 두 방정식이 같은 타원곡선을 정의하는 것은 좌표변환 $(x, y)\mapsto(\lambda^2 x, \lambda^3 y)$ ($\lambda\in \mathbb{G}_m$)으로 옮겨지는 것과 같다. 이 변환은 계수에 $\lambda\cdot(a, b)=(\lambda^4 a, \lambda^6 b)$으로 작용하므로, $\mathcal{M}_{1, 1}$은 quotient stack
 
-$$\mathcal{M}_{1, 1}\cong \bigl[\{(a, b):\Delta\neq 0\}\big/\mathbb{G}_m\bigr]$$
+$$\mathcal{M}_{1, 1}\cong \bigl[\{(a, b)\mid\Delta\neq 0\}\big/\mathbb{G}_m\bigr]$$
 
 으로 실현된다. 한 점 $(a, b)$의 stabilizer는 $\lambda^4 a=a$, $\lambda^6 b=b$을 만족하는 $\lambda$들의 group이며, 이는 정확히 그 점이 나타내는 타원곡선 $(E, 0)$의 automorphism group $\Aut(E, 0)$과 일치한다.
 

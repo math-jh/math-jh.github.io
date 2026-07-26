@@ -78,7 +78,7 @@ t-structure가 추상적으로 무엇을 포착하는지는 가장 기본적인 
 
 ::: 예시 5
 Abelian 범주 $\mathcal{A}$의 유도 범주 $D(\mathcal{A})$ 위에서
-$$D^{\leq 0}(\mathcal{A}) := \{ C^\bullet : H^i(C^\bullet) = 0 \text{ for } i > 0 \}, \qquad D^{\geq 0}(\mathcal{A}) := \{ C^\bullet : H^i(C^\bullet) = 0 \text{ for } i < 0 \}$$
+$$D^{\leq 0}(\mathcal{A}) := \{ C^\bullet \mid H^i(C^\bullet) = 0 \text{ for } i > 0 \}, \qquad D^{\geq 0}(\mathcal{A}) := \{ C^\bullet \mid H^i(C^\bullet) = 0 \text{ for } i < 0 \}$$
 으로 두면 $(D^{\leq 0}, D^{\geq 0})$은 t-structure이며, 이를 *standard t-structure*라 부른다. 그 heart는 $\mathcal{A}$ (정확히는 $A \mapsto A[0]$로 박힌 충만한 부분범주)이고, cohomology functor $H^0$은 complex의 통상적 $0$차 cohomology object이다.
 :::
 
@@ -91,12 +91,12 @@ $$\tau_{\leq 0} C^\bullet = (\cdots \rightarrow C^{-1} \rightarrow \ker d^0 \rig
 이제 무대를 constructible 유도 범주로 옮긴다. $X$ 위의 bounded constructible complex들이 이루는 충만한 삼각부분범주 $D^b_c(X)$는 [§Verdier 쌍대성, ⁋정의 6](/ko/math/sheaf_theory/verdier_duality#def6)에서 정의하였고, 그것이 여섯 functor와 Verdier 쌍대 functor $\mathbf{D}_X$ 모두에 대해 닫혀 있음을 그 글에서 확인하였다. Standard t-structure의 support는 cohomology sheaf $\mathcal{H}^i(\mathcal{F})$가 어느 degree에서 살아 있는지만 보지만, constructible 세계에서는 각 $\mathcal{H}^i$가 support를 갖는 부분다양체의 *차원*이라는 추가 정보가 있다. Middle perversity t-structure는 degree와 차원을 한꺼번에 묶어, "cohomology가 높은 degree로 갈수록 support가 그만큼 작아질 것"을 요구한다.
 
 ::: 정의 6
-$\mathcal{F}^\bullet \in D^b_c(X)$의 cohomology sheaf의 support를 $\operatorname{supp}\mathcal{H}^i(\mathcal{F}^\bullet) := \overline{\{x \in X : \mathcal{H}^i(\mathcal{F}^\bullet)_x \neq 0\}}$로 적는다. *perverse t-structure* (middle perversity)를 다음 충만한 부분범주들로 정의한다.
+$\mathcal{F}^\bullet \in D^b_c(X)$의 cohomology sheaf의 support를 $\operatorname{supp}\mathcal{H}^i(\mathcal{F}^\bullet) := \overline{\{x \in X \mid \mathcal{H}^i(\mathcal{F}^\bullet)_x \neq 0\}}$로 적는다. *perverse t-structure* (middle perversity)를 다음 충만한 부분범주들로 정의한다.
 $$
-{}^{p}D^{\leq 0}(X) := \{ \mathcal{F}^\bullet : \dim \operatorname{supp}\mathcal{H}^i(\mathcal{F}^\bullet) \leq -i \text{ for all } i \},
+{}^{p}D^{\leq 0}(X) := \{ \mathcal{F}^\bullet \mid \dim \operatorname{supp}\mathcal{H}^i(\mathcal{F}^\bullet) \leq -i \text{ for all } i \},
 $$
 $$
-{}^{p}D^{\geq 0}(X) := \{ \mathcal{F}^\bullet : \mathbf{D}_X \mathcal{F}^\bullet \in {}^{p}D^{\leq 0}(X) \}.
+{}^{p}D^{\geq 0}(X) := \{ \mathcal{F}^\bullet \mid \mathbf{D}_X \mathcal{F}^\bullet \in {}^{p}D^{\leq 0}(X) \}.
 $$
 첫째 조건을 *support 조건*, 둘째를 정의하는 $\dim \operatorname{supp}\mathcal{H}^i(\mathbf{D}_X \mathcal{F}^\bullet) \leq -i$를 *cosupport 조건*이라 부른다. 이 t-structure의 heart
 $$\operatorname{Perv}(X) := {}^{p}D^{\leq 0}(X) \cap {}^{p}D^{\geq 0}(X)$$

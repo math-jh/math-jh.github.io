@@ -147,7 +147,7 @@ $$\int_{-\infty}^{\infty} f(x)\,dx = 2\pi i \sum_{\Img z_j > 0} \operatorname{Re
 :::
 
 ::: 증명
-반지름 $R$인 상반평면 반원 boundary $\gamma_R$을, 실축 위의 선분 $[-R, R]$과 그 위를 잇는 반원호 $C_R = \{Re^{i\theta} : 0 \leq \theta \leq \pi\}$를 이어붙인 closed 경로로 잡는다. $R$을 모든 극의 절댓값보다 크게 잡으면 상반평면의 극이 모두 $\gamma_R$ 안에 들고 각각 회전수가 $1$이므로, 유수정리 (정리 2) 에 의해
+반지름 $R$인 상반평면 반원 boundary $\gamma_R$을, 실축 위의 선분 $[-R, R]$과 그 위를 잇는 반원호 $C_R = \{Re^{i\theta} \mid 0 \leq \theta \leq \pi\}$를 이어붙인 closed 경로로 잡는다. $R$을 모든 극의 절댓값보다 크게 잡으면 상반평면의 극이 모두 $\gamma_R$ 안에 들고 각각 회전수가 $1$이므로, 유수정리 (정리 2) 에 의해
 
 $$\int_{-R}^{R} f(x)\,dx + \int_{C_R} f(z)\,dz = 2\pi i \sum_{\Img z_j > 0}\operatorname{Res}_{z = z_j} f$$
 
@@ -161,7 +161,7 @@ $$\left\lvert \int_{C_R} f(z)\,dz\right\rvert \leq \frac{M}{R^2}\cdot \pi R = \f
 명제 5의 증명에서 결정적인 단계는 반원호 위 적분의 소멸이며, 이것이 degree 조건 $\deg Q \geq \deg P + 2$의 존재 이유이다. 차이가 정확히 $1$뿐이면 $\lvert f\rvert \sim 1/R$이라 ML 어림이 $\pi M$이라는 상수로만 유계여서 소멸을 보장하지 못한다. 같은 반원 기법은 분자에 $e^{iax}$ 같은 진동인자가 붙은 경우에도 통하지만, 이때는 $C_R$ 위에서 $\lvert e^{iaz}\rvert = e^{-a\Img z}$이 상반평면에서 감소함을 활용하는 더 섬세한 어림이 필요하며, 이를 정리한 것이 Jordan 보조정리이다.
 
 ::: 보조정리 6 (Jordan)
-$a > 0$이라 하자. $f$가 상반평면의 반원호 $C_R = \{Re^{i\theta} : 0 \leq \theta \leq \pi\}$ 위에서 연속이고, $M(R) = \max_{z \in C_R}\lvert f(z)\rvert \rightarrow 0$ ($R \rightarrow \infty$) 이면
+$a > 0$이라 하자. $f$가 상반평면의 반원호 $C_R = \{Re^{i\theta} \mid 0 \leq \theta \leq \pi\}$ 위에서 연속이고, $M(R) = \max_{z \in C_R}\lvert f(z)\rvert \rightarrow 0$ ($R \rightarrow \infty$) 이면
 
 $$\lim_{R \rightarrow \infty}\int_{C_R} f(z)\,e^{iaz}\,dz = 0$$
 

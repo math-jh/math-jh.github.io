@@ -79,7 +79,7 @@ $$T'(z) = \frac{a(cz + d) - c(az + b)}{(cz + d)^2} = \frac{ad - bc}{(cz + d)^2}$
 이므로, $ad - bc \neq 0$인 한 $T'$는 분모가 정의되는 모든 점에서 $0$이 아니다. 따라서 Möbius 변환은 그 holomorphic한 영역에서 명제 2에 의해 등각사상이다. $\infty$를 포함한 거동까지 합쳐 보면 Möbius 변환은 $\widehat{\mathbb{C}}$ 전체의 automorphism이 되며, 이들이 group을 이룸을 행렬과의 대응으로 가장 깔끔하게 본다.
 
 ::: 명제 5
-Möbius 변환 전체의 모임은 사상의 합성에 대하여 group을 이룬다. 행렬 $\begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \mathrm{GL}(2, \mathbb{C})$에 Möbius 변환 $z \mapsto (az+b)/(cz+d)$를 대응시키는 사상은 group의 homomorphism이며, 그 kernel은 $0$이 아닌 스칼라배의 항등행렬들 $\{\lambda I : \lambda \in \mathbb{C}^\times\}$이다. 따라서 Möbius 변환군은
+Möbius 변환 전체의 모임은 사상의 합성에 대하여 group을 이룬다. 행렬 $\begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \mathrm{GL}(2, \mathbb{C})$에 Möbius 변환 $z \mapsto (az+b)/(cz+d)$를 대응시키는 사상은 group의 homomorphism이며, 그 kernel은 $0$이 아닌 스칼라배의 항등행렬들 $\{\lambda I \mid \lambda \in \mathbb{C}^\times\}$이다. 따라서 Möbius 변환군은
 
 $$\mathrm{PGL}(2, \mathbb{C}) = \mathrm{GL}(2, \mathbb{C}) / \{\lambda I\} \cong \mathrm{PSL}(2, \mathbb{C})$$
 
@@ -97,7 +97,7 @@ $$AA' = \begin{pmatrix} aa' + bc' & ab' + bd' \\ ca' + dc' & cb' + dd' \end{pmat
 
 의 성분이다. 따라서 $T_A \circ T_{A'} = T_{AA'}$이고, 이는 행렬곱이 사상합성과 어울림을 뜻한다 (이 계산은 $\infty$를 포함한 점들에서도 극한으로 정합적이다). 특히 합성이 다시 Möbius 변환이고, $\det(AA') = \det A \det A' \neq 0$으로 비퇴화 조건이 보존된다. 항등행렬 $I$는 항등사상 $T_I(z) = z$를 주고, $A$의 역행렬 $A^{-1}$이 $T_A$의 역사상을 주므로 ($T_A \circ T_{A^{-1}} = T_I$) Möbius 변환 전체가 group을 이룬다.
 
-대응 $A \mapsto T_A$이 homomorphism임은 위에서 보았다. 그 kernel을 구한다. $T_A(z) = z$이 모든 $z$에서 성립하려면 $az + b = z(cz + d)$, 곧 $cz^2 + (d - a)z - b = 0$이 모든 $z$에서 성립해야 하므로 $c = 0$, $b = 0$, $a = d$이다. 곧 $A = aI$ ($a \neq 0$) 꼴이다. 역으로 그러한 $A$는 항등사상을 준다. 따라서 kernel은 $\{\lambda I : \lambda \in \mathbb{C}^\times\}$이고, 준동형정리에 의해 Möbius 변환군은 $\mathrm{GL}(2, \mathbb{C})/\{\lambda I\} = \mathrm{PGL}(2, \mathbb{C})$와 isomorphic하다. 한편 임의의 $A \in \mathrm{GL}(2, \mathbb{C})$는 $\mu^2 = \det A$인 $\mu$로 나누어 $A/\mu \in \mathrm{SL}(2, \mathbb{C})$로 만들 수 있고 이것이 같은 Möbius 변환을 주므로, $\mathrm{PGL}(2, \mathbb{C})$는 $\mathrm{SL}(2, \mathbb{C})$을 그 중심 $\{\pm I\}$로 나눈 $\mathrm{PSL}(2, \mathbb{C})$와 isomorphic하다.
+대응 $A \mapsto T_A$이 homomorphism임은 위에서 보았다. 그 kernel을 구한다. $T_A(z) = z$이 모든 $z$에서 성립하려면 $az + b = z(cz + d)$, 곧 $cz^2 + (d - a)z - b = 0$이 모든 $z$에서 성립해야 하므로 $c = 0$, $b = 0$, $a = d$이다. 곧 $A = aI$ ($a \neq 0$) 꼴이다. 역으로 그러한 $A$는 항등사상을 준다. 따라서 kernel은 $\{\lambda I \mid \lambda \in \mathbb{C}^\times\}$이고, 준동형정리에 의해 Möbius 변환군은 $\mathrm{GL}(2, \mathbb{C})/\{\lambda I\} = \mathrm{PGL}(2, \mathbb{C})$와 isomorphic하다. 한편 임의의 $A \in \mathrm{GL}(2, \mathbb{C})$는 $\mu^2 = \det A$인 $\mu$로 나누어 $A/\mu \in \mathrm{SL}(2, \mathbb{C})$로 만들 수 있고 이것이 같은 Möbius 변환을 주므로, $\mathrm{PGL}(2, \mathbb{C})$는 $\mathrm{SL}(2, \mathbb{C})$을 그 중심 $\{\pm I\}$로 나눈 $\mathrm{PSL}(2, \mathbb{C})$와 isomorphic하다.
 :::
 
 명제 5는 Möbius 변환의 합성이 행렬곱으로 번역됨을 말하며, 이로써 일차분수변환의 대수가 $2 \times 2$ 가역행렬의 대수로 환원된다. 행렬과 그 스칼라배가 같은 변환을 주므로, 변환을 행렬로 다룰 때는 언제든 $\det A = 1$이 되도록 normalize할 수 있다. Group $\mathrm{PSL}(2, \mathbb{C})$이 정확히 $\widehat{\mathbb{C}}$의 모든 holomorphic automorphism을 이룬다는 사실까지 알려져 있는데, 그 증명은 무한대에서의 거동 분석을 요구하므로 여기서는 Möbius 변환이 automorphism임을 확인하는 데 그친다. Möbius 변환의 구조를 더 들여다보기 위해, 임의의 변환이 몇 가지 기본 변환의 합성으로 쪼개짐을 본다.
@@ -296,7 +296,7 @@ $$\rho(z, w) = \left\lvert \frac{z - w}{1 - \bar w z} \right\rvert$$
 
 ## 상반평면과 Cayley 변환
 
-단위원판과 더불어 자주 등장하는 표준영역이 상반평면이다. 이 둘은 한 Möbius 변환으로 등각동형이며, 그 변환을 Cayley 변환이라 한다. 상반평면을 $\mathbb{H} = \{z \in \mathbb{C} : \Img z > 0\}$으로 적는다.
+단위원판과 더불어 자주 등장하는 표준영역이 상반평면이다. 이 둘은 한 Möbius 변환으로 등각동형이며, 그 변환을 Cayley 변환이라 한다. 상반평면을 $\mathbb{H} = \{z \in \mathbb{C} \mid \Img z > 0\}$으로 적는다.
 
 ::: 정리 14 (Cayley 변환)
 Möbius 변환

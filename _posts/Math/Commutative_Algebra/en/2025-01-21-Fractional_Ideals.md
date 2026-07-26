@@ -38,7 +38,7 @@ $$\left(\frac{a_1}{s_1},\ldots, \frac{a_n}{s_n}\right)A$$
 
 is always a fractional ideal via the element $s_1\cdots s_n\in A$, and if $A$ is Noetherian then the converse also holds. As with ordinary ideals, the product of fractional ideals is defined by
 
-$$\mathfrak{A}\mathfrak{B}=\left\{\sum_{i=1}^n a_ib_i: a_i\in \mathfrak{A}, b_i\in \mathfrak{B}\right\}.$$
+$$\mathfrak{A}\mathfrak{B}=\left\{\sum_{i=1}^n a_ib_i\mid a_i\in \mathfrak{A}, b_i\in \mathfrak{B}\right\}.$$
 
 In the following theorem, for any subset $X$ of $K$,
 

@@ -91,7 +91,7 @@ So far, it is not apparent how this definition is related to compactness; in thi
 
 Let an arbitrary topological space $X$ and an arbitrary filter $\mathcal{F}$ on it be given. Consider the set $X'=X\cup \{\ast_X\}$ obtained by adjoining one point to $X$, and the filter
 
-$$\mathcal{F}'=\{F\cup\{\ast_X\}: F\in \mathcal{F}\}$$
+$$\mathcal{F}'=\{F\cup\{\ast_X\}\mid F\in \mathcal{F}\}$$
 
 on it. Now define $\mathcal{N}(x)=\uparrow\{x\}$ for any $x\in X'$ other than $\ast_X$, and $\mathcal{N}(\ast_X)=\mathcal{F}'$. Then this satisfies all four conditions of [§Open Sets, ⁋Proposition 6](/en/math/topology/open_sets#prop6), and thus defines a topology on $X'$. In this topological space $X'$, the point $\ast_X$ lies in the closure of $X$, and it is obvious that $\mathcal{F}=\mathcal{F}'\vert_X=\mathcal{N}(\ast_X)\vert_X$.
 

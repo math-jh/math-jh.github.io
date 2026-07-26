@@ -349,7 +349,7 @@ $$\pi^{-1}(gN)=\{hT\mid h\in gN\}=\{gxT\mid x\in N\}$$
 
 지금까지의 논의를 compact connected Lie group
 
-$$\SU(2)=\{A\in\GL(2;\mathbb{C})\mid A^\dagger A=I,\det A=1\}=\left\{\begin{pmatrix}\alpha&-\overline{\beta}\\\beta&\overline{\alpha}\end{pmatrix}\,\middle\vert\;\alpha,\beta\in \mathbb{C},\lvert\alpha\rvert^2+\lvert\beta\rvert^2=1\right\}$$
+$$\SU(2)=\{A\in\GL(2;\mathbb{C})\mid A^\dagger A=I,\det A=1\}=\left\{\begin{pmatrix}\alpha&-\overline{\beta}\\\beta&\overline{\alpha}\end{pmatrix} : \alpha,\beta\in \mathbb{C},\lvert\alpha\rvert^2+\lvert\beta\rvert^2=1\right\}$$
 
 에서 확인해보자. 우선 $\SU(2)$의 maximal torus를 구해야 한다. 우리의 주장은 다음 집합
 
@@ -426,7 +426,7 @@ Compact connected Lie group $G$의 maximal torus $T$에 대하여:
 3. Singular 원소들의 집합은 유한 개의 subgroup들의 합집합이다.
 :::
 ::: 증명
-(1)과 (2): 각 $w\in W$, $w\neq e$에 대하여, fixed point set $\{t\in T: wtw^{-1}=t\}$는 $T$의 proper closed subgroup이다. Singular 원소들의 집합은 이들의 유한 합집합이므로 closed이고, 그 여집합(regular 원소들)은 dense open이다.
+(1)과 (2): 각 $w\in W$, $w\neq e$에 대하여, fixed point set $\{t\in T\mid wtw^{-1}=t\}$는 $T$의 proper closed subgroup이다. Singular 원소들의 집합은 이들의 유한 합집합이므로 closed이고, 그 여집합(regular 원소들)은 dense open이다.
 
 (3): 각 $w\neq e$에 대한 fixed point set이 $T$의 closed subgroup이고, $W$가 유한이므로 유한 개의 subgroup들의 합집합이다.
 :::
