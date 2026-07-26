@@ -1265,6 +1265,13 @@ C:
   defs:
   - label: '[집합론] §기수들 사이의 연산'
     url: /ko/math/set_theory/operation_of_cardinals
+- id: carmichael_number
+  en: carmichael number
+  ko: 카마이클 수
+  primary: ko
+  defs:
+  - label: '[정수론] §페르마 소정리'
+    url: /ko/math/number_theory/fermat_little_theorem
 - id: cartan-eilenberg_resolution
   en: Cartan-Eilenberg resolution
   ko: 카르탕-아일렌베르크 분해
@@ -4542,6 +4549,13 @@ F:
   defs:
   - label: '[거울대칭] §프로베니우스 다양체'
     url: /ko/math/mirror_symmetry/frobenius_manifold
+- id: frobenius_endomorphism
+  en: Frobenius endomorphism
+  ko: 프로베니우스 자기준동형
+  primary: en
+  defs:
+  - label: '[정수론] §페르마 소정리'
+    url: /ko/math/number_theory/fermat_little_theorem
 - id: frobenius_manifold
   en: Frobenius manifold
   ko: 프로베니우스 다양체
@@ -4697,6 +4711,13 @@ G:
   defs:
   - label: '[선형대수학] §가우스 소거법'
     url: /ko/math/linear_algebra/Gaussian_elimination
+- id: gaussian_integer
+  en: Gaussian integer
+  ko: 가우스 정수
+  primary: ko
+  defs:
+  - label: '[정수론] §가우스 정수와 두 제곱수의 합'
+    url: /ko/math/number_theory/gaussian_integers
 - id: general_linear_group
   en: general linear group
   ko: 일반선형군
@@ -8076,6 +8097,8 @@ N:
     url: /ko/math/linear_algebra/complex_inner_product_spaces
   - label: '[환론] §정역'
     url: /ko/math/ring_theory/integral_domains
+  - label: '[정수론] §가우스 정수와 두 제곱수의 합'
+    url: /ko/math/number_theory/gaussian_integers
 - id: normal
   en: normal
   ko: 정규스킴
@@ -9563,6 +9586,13 @@ R:
   defs:
   - label: '[미적분학] §멱급수'
     url: /ko/math/calculus/power_series
+- id: ramification
+  en: ramification
+  ko: 분기
+  primary: ko
+  defs:
+  - label: '[정수론] §가우스 정수와 두 제곱수의 합'
+    url: /ko/math/number_theory/gaussian_integers
 - id: rank
   en: rank
   ko: 랭크
