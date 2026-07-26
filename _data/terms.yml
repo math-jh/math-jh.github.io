@@ -509,6 +509,13 @@ A:
   defs:
   - label: '[복소해석학] §복소수와 복소평면'
     url: /ko/math/complex_analysis/complex_numbers
+- id: arithmetic_function
+  en: arithmetic function
+  ko: 산술적 함수
+  primary: ko
+  defs:
+  - label: '[정수론] §산술적 함수와 뫼비우스 반전'
+    url: /ko/math/number_theory/arithmetic_functions
 - id: artinian
   en: Artinian
   ko: 아틴가군
@@ -2321,6 +2328,13 @@ C:
   defs:
   - label: '[선형대수학] §이차형식과 실베스터 관성법칙'
     url: /ko/math/linear_algebra/quadratic_forms
+- id: congruent_modulo_n
+  en: congruent modulo n
+  ko: $a$와 $b$가 법 $n$에 대해 합동
+  primary: ko
+  defs:
+  - label: '[정수론] §합동식'
+    url: /ko/math/number_theory/congruences
 - id: conjugate
   en: conjugate
   ko: 켤레
@@ -2431,6 +2445,13 @@ C:
   defs:
   - label: '[그로모프-위튼 이론] §Log stable map과 상대 불변량의 비교'
     url: /ko/math/gromov-witten_theory/log_stable_maps
+- id: continued_fraction
+  en: continued fraction
+  ko: 연분수
+  primary: ko
+  defs:
+  - label: '[정수론] §연분수'
+    url: /ko/math/number_theory/continued_fractions
 - id: continuous
   en: continuous
   ko: 연속
@@ -2515,6 +2536,13 @@ C:
     url: /ko/math/topology/Hausdorff_spaces
   - label: '[위상수학] §옹골성과 필터의 수렴'
     url: /ko/math/topology/filter_convergence
+- id: convergent
+  en: convergent
+  ko: 점근분수
+  primary: ko
+  defs:
+  - label: '[정수론] §연분수'
+    url: /ko/math/number_theory/continued_fractions
 - id: converges
   en: converges
   ko: 수렴
@@ -3338,6 +3366,13 @@ D:
   defs:
   - label: '[미분다양체] §여접공간'
     url: /ko/math/manifolds/cotangent_space
+- id: dirichlet_convolution
+  en: Dirichlet convolution
+  ko: 디리클레 합성곱
+  primary: ko
+  defs:
+  - label: '[정수론] §산술적 함수와 뫼비우스 반전'
+    url: /ko/math/number_theory/arithmetic_functions
 - id: dirichlet_function
   en: Dirichlet function
   ko: 디리클레 함수
@@ -7417,6 +7452,13 @@ M:
   defs:
   - label: '[복소해석학] §편각원리와 Rouché 정리'
     url: /ko/math/complex_analysis/argument_principle
+- id: mertens_function
+  en: mertens function
+  ko: 메르텐스 함수
+  primary: ko
+  defs:
+  - label: '[정수론] §산술적 함수와 뫼비우스 반전'
+    url: /ko/math/number_theory/arithmetic_functions
 - id: mesh
   en: mesh
   ko: 너비
@@ -7490,6 +7532,13 @@ M:
   defs:
   - label: '[선형대수학] §최소제곱법'
     url: /ko/math/linear_algebra/least_squares_method
+- id: möbius_function
+  en: möbius function
+  ko: 뫼비우스 함수
+  primary: ko
+  defs:
+  - label: '[정수론] §산술적 함수와 뫼비우스 반전'
+    url: /ko/math/number_theory/arithmetic_functions
 - id: möbius_transformation
   en: möbius transformation
   ko: 뫼비우스 변환
@@ -7518,6 +7567,8 @@ M:
   defs:
   - label: '[복소해석학] §복소수와 복소평면'
     url: /ko/math/complex_analysis/complex_numbers
+  - label: '[정수론] §합동식'
+    url: /ko/math/number_theory/congruences
 - id: monodromy_functor
   en: monodromy functor
   ko: ''
@@ -7667,6 +7718,13 @@ M:
   defs:
   - label: '[범주론] §모노이드 대상'
     url: /ko/math/category_theory/monoid_objects
+- id: multiplicative
+  en: multiplicative
+  ko: 곱셈적
+  primary: en
+  defs:
+  - label: '[정수론] §산술적 함수와 뫼비우스 반전'
+    url: /ko/math/number_theory/arithmetic_functions
 - id: multiplicatively_closed
   en: multiplicatively closed
   ko: 곱셈에 대하여 닫혀있다
@@ -9779,6 +9837,13 @@ R:
   see:
   - label: Irreducible representation
     id: irreducible_representation
+- id: representative
+  en: representative
+  ko: 대표원
+  primary: en
+  defs:
+  - label: '[정수론] §합동식'
+    url: /ko/math/number_theory/congruences
 - id: representing_object
   en: representing object
   ko: 표현 대상
@@ -9793,6 +9858,13 @@ R:
   defs:
   - label: '[복소해석학] §유수정리'
     url: /ko/math/complex_analysis/residue_theorem
+- id: residue_class
+  en: residue class
+  ko: 잉여류
+  primary: en
+  defs:
+  - label: '[정수론] §합동식'
+    url: /ko/math/number_theory/congruences
 - id: residue_field
   en: residue field
   ko: 잉여류체
