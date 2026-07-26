@@ -10,32 +10,33 @@ sidebar:
 
 date: 2025-02-02
 weight: 5
-translated_at: 2026-07-26T15:49:52+00:00
+translated_at: 2026-07-26T22:15:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-26T22:15:02+00:00
 ---
-In [§Schemes, ⁋Example 10](/en/math/scheme_theory/schemes#ex10) we glued two copies of the affine line $\mathbb{A}^1=\Spec \mathbb{K}[\x]$ in a suitable way to produce the projective space $\mathbb{P}^1$. This time we generalize this and discuss the $\Proj$ construction, which produces a scheme $\Proj A_\bullet$ from a graded ring $A_\bullet$.
+In [§Schemes, ⁋Example 10](/en/math/scheme_theory/schemes#ex10) we glued two copies of the affine line $\mathbb{A}^1=\Spec \mathbb{K}[\x]$ in a suitable way to produce the projective space $\mathbb{P}^1$. This time we generalize this construction and discuss the $\Proj$ construction, which produces a scheme $\Proj A_\bullet$ from a graded ring $A_\bullet$.
 
 ## Projective Space
 
-Generalizing [§Schemes, ⁋Example 10](/en/math/scheme_theory/schemes#ex10) directly, it is not difficult to define $\mathbb{P}^n$ as a scheme. However, in order to generalize this to the $\Proj$ construction, it is helpful to understand $\mathbb{P}^n$ intuitively, so let us examine it a bit more carefully.
+Generalizing [§Schemes, ⁋Example 10](/en/math/scheme_theory/schemes#ex10) directly, it is not difficult to define $\mathbb{P}^n$ as a scheme. However, in order to generalize this to the $\Proj$ construction, it is helpful to understand $\mathbb{P}^n$ intuitively first, so let us examine it more carefully.
 
-First, we briefly review the projective space defined in topology. To construct the topological space $\mathbb{P}^n$, we considered the topological space $\mathbb{R}^{n+1}\setminus \{0\}$. Then, defining the following equivalence relation on it
+We begin by briefly reviewing the projective space defined in topology. To construct the topological space $\mathbb{P}^n$, we start with the space $\mathbb{R}^{n+1}\setminus \{0\}$. Defining the equivalence relation
 
 $$(x_0,\ldots, x_n)\sim (y_0,\ldots, y_n)\iff\text{$x_i=\lambda y_i$ for some $\lambda\neq 0$, for all $i$}$$
 
-the projective space $\mathbb{P}^n$ is the topological space defined as the quotient space $(\mathbb{R}^{n+1}\setminus \{0\})/{\sim}$, and for convenience we denote the equivalence class containing $(x_0,\ldots, x_n)$ by $[x_0:x_1:\cdots:x_n]$.
+the projective space $\mathbb{P}^n$ is the quotient space $(\mathbb{R}^{n+1}\setminus \{0\})/{\sim}$, and for convenience we denote the equivalence class containing $(x_0,\ldots, x_n)$ by $[x_0:x_1:\cdots:x_n]$.
 
-Now, consider the canonical projection $\pi:\mathbb{R}^{n+1}\setminus\{0\}\rightarrow \mathbb{P}^n$. Then the fiber of a point $[x_0:x_1:\cdots:x_n]$ in $\mathbb{P}^n$ is, by definition,
+Now consider the canonical projection $\pi:\mathbb{R}^{n+1}\setminus\{0\}\rightarrow \mathbb{P}^n$. Then the fiber over a point $[x_0:x_1:\cdots:x_n]$ in $\mathbb{P}^n$ is, by definition,
 
 $$\{(y_0,\ldots, y_n)\mid\text{$x_i=\lambda y_i$ for some $\lambda\neq 0$, for all $i$}\}$$
 
-that is, the set of points on the line passing through the origin and $(x_0,\ldots, x_n)$, excluding the origin itself. For this reason, $\mathbb{P}^n$ is often thought of as the space of lines in $\mathbb{R}^{n+1}$.
+that is, the set of points on the line through the origin and $(x_0,\ldots, x_n)$, excluding the origin itself. For this reason, $\mathbb{P}^n$ is often thought of as the space of lines in $\mathbb{R}^{n+1}$.
 
-On the other hand, in $\mathbb{R}^{n+1}$, any line not parallel to a given plane $P$ must meet $P$ at exactly one point. Thus, if we define the plane $P_i$ by
+On the other hand, in $\mathbb{R}^{n+1}$, any line not parallel to a given plane $P$ meets $P$ at exactly one point. Thus, if we define the plane $P_i$ by
 
 $$P_i=\{\x_i=1\}=\{(x_0,\ldots, x_n)\mid x_i=1\}$$
 
-then among the points of $\mathbb{P}^n$, all points except those corresponding to lines perpendicular to the $\x_i$-axis are in one-to-one correspondence with points of $P_i$, and the remaining points are lines in the $\x_0\x_1\cdots\x_{i-1}\x_{i+1}\cdots\x_n$-plane, that is, lines in $\mathbb{R}^n$, so we obtain the decomposition
+then among the points of $\mathbb{P}^n$, all except those corresponding to lines perpendicular to the $\x_i$-axis are in one-to-one correspondence with points of $P_i$, and the remaining points are lines in the $\x_0\x_1\cdots\x_{i-1}\x_{i+1}\cdots\x_n$-plane, that is, lines in $\mathbb{R}^n$, so we obtain the decomposition
 
 $$\mathbb{P}^n=\mathbb{R}^n\coprod \mathbb{P}^{n-1}$$
 
@@ -47,7 +48,7 @@ Writing this in formulas, for a point $[x_0:\cdots:x_n]$ in $\mathbb{P}^n$, if $
 
 $$U_i=\{[x_0:\cdots:x_n]\in \mathbb{P}^n\mid x_i\neq 0\}$$
 
-with $P_i\cong \mathbb{R}^n$. On the other hand, points in the complement of $U_i$ are exactly those with $x_i=0$, so simply omitting the $i$-th coordinate allows us to understand them as points of $\mathbb{P}^{n-1}$.
+with $P_i\cong \mathbb{R}^n$. On the other hand, points in the complement of $U_i$ are exactly those with $x_i=0$, so simply omitting the $i$-th coordinate allows us to regard them as points of $\mathbb{P}^{n-1}$.
 
 Explicitly, the above identification $U_i\cong P_i$ is expressed by the formula
 
@@ -79,11 +80,11 @@ Then the open subschemes $P_{ij}=D(\x_{j/i})\cong \Spec (A^i)_{\x_{j/i}}$ of $P_
 
 $$(A^j)_{\x_{i/j}} \rightarrow (A^i)_{\x_{j/i}};\qquad \x_{k/j}\mapsto \x_{k/i}/\x_{j/i}\quad\text{for all $k\neq i,j$},\qquad\text{and}\qquad \x_{i/j}\mapsto 1/\x_{j/i}$$
 
-almost trivially satisfy the cocycle condition of [§Schemes, ⁋Lemma 9](/en/math/scheme_theory/schemes#lem9), and hence a unique scheme $\mathbb{P}^n$ is defined. In this case, for points having coordinates consisting of elements of $\mathbb{K}$, that is, points that can be written in the form $[x_0:\ldots:x_n]$ as in the topological discussion above, $U_i$ is exactly the set of points satisfying $x_i\neq 0$. Of course, just as for $\mathbb{A}^n$, there also exist points of $\mathbb{P}^n$ that cannot be written in such coordinates.
+almost trivially satisfy the cocycle condition of [§Schemes, ⁋Lemma 9](/en/math/scheme_theory/schemes#lem9), and hence define a unique scheme $\mathbb{P}^n$. In this case, for points having coordinates consisting of elements of $\mathbb{K}$, that is, points that can be written in the form $[x_0:\ldots:x_n]$ as in the topological discussion above, $U_i$ is exactly the set of points satisfying $x_i\neq 0$. Of course, just as for $\mathbb{A}^n$, there also exist points of $\mathbb{P}^n$ that cannot be written in such coordinates.
 
 ## Projective Schemes
 
-As it stands, the above explanation has some incomplete parts. For example, although the fact that the $U_i$ are open subschemes of $\mathbb{P}^n$ is a consequence of [§Schemes, ⁋Lemma 9](/en/math/scheme_theory/schemes#lem9), it seems that by their very definition they should be open sets, being the set where the function $\x_i$ is nonzero. However, the problem is that $\x_i$ is not a function on $\mathbb{P}^n$. Indeed, even looking at the case $n=1$, we have checked that $\mathcal{O}_{\mathbb{P}^1}(\mathbb{P}^1)\cong \mathbb{K}$. This can also be seen from the topological construction: the function $\x_i: \mathbb{R}^{n+1}\setminus\{0\} \rightarrow \mathbb{R}$ that takes a point $(x_0,\ldots, x_n)$ of $\mathbb{R}^{n+1}\setminus \{0\}$ and returns $x_i$ is not compatible with $\sim$, and hence does not define a function on $\mathbb{P}^n$. As another example, if a function $f: \mathbb{R}^2\setminus\{0\} \rightarrow \mathbb{R}$ on $\mathbb{R}^2\setminus\{0\}$ is given by the formula
+As it stands, the above explanation has some incomplete parts. For example, although the fact that the $U_i$ are open subschemes of $\mathbb{P}^n$ is a consequence of [§Schemes, ⁋Lemma 9](/en/math/scheme_theory/schemes#lem9), it seems that by their very definition they should be open sets, being the set where the function $\x_i$ is nonzero. However, the problem is that $\x_i$ is not a function on $\mathbb{P}^n$. Indeed, even in the case $n=1$, we have checked that $\mathcal{O}_{\mathbb{P}^1}(\mathbb{P}^1)\cong \mathbb{K}$. This can also be seen from the topological construction: the function $\x_i: \mathbb{R}^{n+1}\setminus\{0\} \rightarrow \mathbb{R}$ that takes a point $(x_0,\ldots, x_n)$ of $\mathbb{R}^{n+1}\setminus \{0\}$ and returns $x_i$ is not compatible with $\sim$, and hence does not define a function on $\mathbb{P}^n$. As another example, if a function $f: \mathbb{R}^2\setminus\{0\} \rightarrow \mathbb{R}$ on $\mathbb{R}^2\setminus\{0\}$ is given by the formula
 
 $$f(x_0,x_1)=x_0^2-x_1$$
 
@@ -97,7 +98,7 @@ $$f(\lambda x_0,\ldots, \lambda x_n)=\lambda^{\deg f} f(x_0,\ldots, x_n),\qquad 
 
 holds.
 
-That is, in order to describe $\mathbb{P}^n$ in a manner similar to the spectrum, we should not view $\mathbb{A}^{n+1}$ simply as the spectrum of the ring $\mathbb{K}[\x_0,\ldots, \x_n]$, but rather add degree information to make it a *graded* ring, and look at the zero loci not of arbitrary elements but of *homogeneous* elements. Then, thinking of [[Algebraic Structures] §Graded Rings, ⁋Proposition 6](/en/math/algebraic_structures/graded_rings#prop6), our interest should also be in *homogeneous* ideals.
+That is, in order to describe $\mathbb{P}^n$ in a manner similar to the spectrum, we should not view $\mathbb{A}^{n+1}$ simply as the spectrum of the ring $\mathbb{K}[\x_0,\ldots, \x_n]$, but rather add degree information to make it a *graded* ring, and look at the zero loci not of arbitrary elements but of *homogeneous* elements. Then, thinking of [[Algebraic Structures] §Graded Rings, ⁋Proposition 6](/en/math/algebraic_structures/graded_rings#prop6), our interest should also lie in *homogeneous* ideals.
 
 In the remainder of this post, we follow the process of taking $\Proj$ of a graded ring to obtain a scheme. The $\Proj$ of an arbitrary graded ring is not necessarily a projective scheme. For example, if we let $A_\bullet=\mathbb{K}[\x_1,\x_2,\ldots]$, then $\Proj A_\bullet$ is not even quasi-compact, so the name projective scheme is defined separately under a finite generation condition in [§Closed Subschemes of Projective Spaces, ⁋Definition 7](/en/math/scheme_theory/closed_subschemes_of_projective_spaces#def7). For this purpose, we fix some notation.
 
