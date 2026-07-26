@@ -10,7 +10,6 @@ sidebar:
 
 date: 2024-05-24
 weight: 15
-drift_needed: true
 ---
 
 이번 글에서 우리는 separated morphism과 proper morphism을 정의한다. 이들은 위상수학에서 Hausdorff 조건과 compact 조건을 대수기하로 옮겨온 것이라고 생각하면 편하다. 
@@ -227,7 +226,7 @@ $$X\times_SX' \longrightarrow Y\times_SX' \longrightarrow Y\times_SY'$$
 $f:X \rightarrow Y$가 *universally closed<sub>보편닫힌사상</sub>*라는 것은 $f$가 closed map이고, 임의의 $Y' \rightarrow Y$에 대해서도 $X\times_Y Y' \rightarrow Y'$가 closed인 것이다. Separated, universally closed인 finite type morphism을 *proper morphism<sub>고유사상</sub>*이라 부른다. 
 :::
 
-$Y'=Y$로 두면 두 번째 조건이 첫 번째 조건을 포함하므로, 실질적인 조건은 모든 base change가 closed map이라는 것 하나이다. 한편 우리는 이 절에서 Noetherian scheme들의 범주 안에서 작업하므로, 앞으로 universally closed를 확인할 때 base change $Y' \rightarrow Y$는 Noetherian scheme에 대한 것만 생각한다. 임의의 $Y'$에 대한 조건이 이로부터 따라온다는 것은 $Y'$를 affine으로 제한한 뒤 그 coordinate ring을 finitely generated subalgebra들의 filtered colimit으로 쓰는 극한 논법에서 얻어지며, 이는 이 글의 범위를 벗어나므로 **[Stacks]**에 위임한다.
+$Y'=Y$로 두면 두 번째 조건이 첫 번째 조건을 포함하므로, 실질적인 조건은 모든 base change가 closed map이라는 것 하나이다. 한편 우리는 이 절에서 Noetherian scheme들의 범주 안에서 작업하므로, 앞으로 universally closed를 확인할 때 base change $Y' \rightarrow Y$는 Noetherian scheme에 대한 것만 생각한다. 임의의 $Y'$에 대한 조건이 이로부터 따라온다는 것은 $Y'$를 affine으로 제한한 뒤 그 coordinate ring을 finitely generated subalgebra들의 filtered colimit으로 쓰는 극한 논법에서 얻어지며, 이는 이 글의 범위를 벗어나므로 생략하기로 한다.
 
 Proper morphism은 separated 조건과 universally closed 조건을 함께 요구하므로, 판정법 또한 두 조각으로 나뉜다. [정리 6](#thm6)이 lifting의 유일성으로 separatedness를 판정했으니, 남은 것은 lifting의 존재성이 universal closedness를 판정한다는 것이다.
 
