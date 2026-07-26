@@ -10,8 +10,9 @@ sidebar:
 
 date: 2025-01-27
 weight: 2
-translated_at: 2026-07-26T15:17:29+00:00
+translated_at: 2026-07-26T21:45:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-26T21:45:02+00:00
 ---
 ::: remark Remark {#rmk}
 In every post in this category, a ring means a commutative ring (with unity).
