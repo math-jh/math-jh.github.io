@@ -1474,6 +1474,8 @@ C:
     url: /ko/math/representation_theory/character_theory
   - label: '[스킴] §대수적 군'
     url: /ko/math/scheme_theory/algebraic_groups
+  - label: '[표현론] §유한차원 가환대수의 표현과 spectrum'
+    url: /ko/math/representation_theory/spectrum_of_finite_dimensional_algebras
 - id: characteristic
   en: characteristic
   ko: 표수
@@ -6206,6 +6208,8 @@ I:
     url: /ko/math/commutative_algebra/primary_decomposition
   - label: '[위상수학] §차원'
     url: /ko/math/topology/dimension
+  - label: '[표현론] §Auslander–Reiten 이론'
+    url: /ko/math/representation_theory/auslander_reiten
   see:
   - label: Reduced
     id: reduced
@@ -7841,6 +7845,13 @@ M:
   defs:
   - label: '[범주론] §모노이드 대상'
     url: /ko/math/category_theory/monoid_objects
+- id: multiplication_operator
+  en: multiplication operator
+  ko: 곱셈연산자
+  primary: ko
+  defs:
+  - label: '[표현론] §유한차원 가환대수의 표현과 spectrum'
+    url: /ko/math/representation_theory/spectrum_of_finite_dimensional_algebras
 - id: multiplicative
   en: multiplicative
   ko: 곱셈적
@@ -9747,6 +9758,8 @@ R:
   defs:
   - label: '[대수적 구조] §분수체'
     url: /ko/math/algebraic_structures/field_of_fractions
+  - label: '[표현론] §유한차원 가환대수의 표현과 spectrum'
+    url: /ko/math/representation_theory/spectrum_of_finite_dimensional_algebras
   see:
   - label: Irreducible
     id: irreducible
@@ -9906,6 +9919,13 @@ R:
   defs:
   - label: '[복소해석학] §고립특이점과 Laurent 급수'
     url: /ko/math/complex_analysis/isolated_singularities
+- id: regular_representation
+  en: regular representation
+  ko: 정규표현
+  primary: en
+  defs:
+  - label: '[표현론] §유한차원 가환대수의 표현과 spectrum'
+    url: /ko/math/representation_theory/spectrum_of_finite_dimensional_algebras
 - id: regular_ring
   en: regular ring
   ko: 정칙환
@@ -10876,6 +10896,13 @@ S:
   defs:
   - label: '[리 이론] §Borel subgroup'
     url: /ko/math/lie_theory/borel_subgroup
+- id: simultaneous_generalized_eigenspace
+  en: simultaneous generalized eigenspace
+  ko: 동시 일반화고유공간
+  primary: en
+  defs:
+  - label: '[표현론] §유한차원 가환대수의 표현과 spectrum'
+    url: /ko/math/representation_theory/spectrum_of_finite_dimensional_algebras
 - id: simultaneously_diagonalizable
   en: simultaneously diagonalizable
   ko: 동시대각화가능
@@ -12069,6 +12096,8 @@ T:
     url: /ko/math/multilinear_algebra/dual_spaces
   - label: '[다중선형대수학] §행렬'
     url: /ko/math/multilinear_algebra/matrices
+  - label: '[표현론] §Auslander–Reiten 이론'
+    url: /ko/math/representation_theory/auslander_reiten
 - id: transpose_matrix
   en: transpose matrix
   ko: 전치행렬
