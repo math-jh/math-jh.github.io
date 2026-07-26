@@ -11723,6 +11723,8 @@ T:
   defs:
   - label: '[선형대수학] §행렬'
     url: /ko/math/linear_algebra/matrices
+  - label: '[다중선형대수학] §노름과 대각합'
+    url: /ko/math/multilinear_algebra/norms_and_traces#def1
 - id: trace_map
   en: trace map
   ko: 대각합 사상

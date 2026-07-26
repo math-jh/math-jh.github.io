@@ -22,7 +22,7 @@ $E$-module $M$이 주어졌다 하고, $M$이 $A$-module로서 유한한 basis�
 
 $$\alpha_M: x\mapsto \alpha x$$
 
-이 주어졌다 하자. 그럼 $\alpha_M$의 trace, determinant, characteristic polynomial을 각각 $\alpha$의 *trace*, *norm*, *characteristic polynomial*이라 부르고,
+이 주어졌다 하자. 그럼 $\alpha_M$의 trace, determinant, characteristic polynomial을 각각 $\alpha$의 *trace<sub>대각합</sub>*, *norm*, *characteristic polynomial*이라 부르고,
 
 $$\tr_{M/A}(\alpha)=\tr(\alpha_M),\qquad N_{M/A}(\alpha)=\det(\alpha_M),\qquad \chi_{M/A,\alpha}(\x)=\chi_{\alpha_M}(\x)$$
 
