@@ -42,7 +42,7 @@ $$\Spec\phi: \Spec B \rightarrow \Spec A;\qquad \mathfrak{q}\mapsto \phi^{-1}(\m
 이제 우리는 $\Spec A$ 위에 적절한 위상구조를 정의하자.
 
 ::: 정의 3
-Ring $A$와 그 spectrum $\Spec A$를 고정하자. $A$의 공집합이 아닌 임의의 부분집합 $S$에 대하여, $\Spec A$의 부분집합 $Z(S)$을 다음 식
+Ring $A$와 그 spectrum $\Spec A$를 고정하자. $A$의임의의 부분집합 $S$에 대하여, $\Spec A$의 부분집합 $Z(S)$을 다음 식
 
 $$Z(S)=\{\mathfrak{p}\in\Spec A\mid S\subseteq \mathfrak{p}\}$$
 
@@ -135,7 +135,11 @@ $$\mathfrak{a}\subseteq \phi^{-1}(\phi(\mathfrak{a}))\subseteq\phi^{-1}(\mathfra
 3. 만일 어떠한 $f\in A$에 대하여 $S=\{1,f,f^2,\ldots\}$라면, $\Spec \epsilon$의 $\Spec A$에서의 image는 열린집합이다.
 :::
 ::: 증명
-첫 번째 결과는 앞서 언급한 두 명제 [\[가환대수학\] §기본 개념들, ⁋명제 11](/ko/math/commutative_algebra/basic_notions#prop11) 그리고 [\[가환대수학\] §국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8)의 결과이다. 두 번째 결과의 경우, $\Spec\pi$의 $\Spec A$에서의 image는 정확히 $Z(\mathfrak{a})$이다. 마지막으로 셋째 결과의 경우, $\Spec\epsilon$의 원소들은 $f$를 포함하지 않는 prime ideal들의 모임이고 이들은 $\Spec A\setminus Z(f)$으로 쓸 수 있다. 
+첫 번째 결과에서 $\Spec\pi$와 $\Spec\epsilon$이 injective인 것은 앞서 언급한 두 명제 [\[가환대수학\] §기본 개념들, ⁋명제 11](/ko/math/commutative_algebra/basic_notions#prop11) 그리고 [\[가환대수학\] §국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8)의 결과이다. 두 사상은 [명제 8](#prop8)에 의하여 연속이므로, 남은 것은 이들의 역함수가 연속이라는 것, 즉 두 사상이 각자의 image 위로 닫힌집합을 닫힌집합으로 옮긴다는 것이다. 이는 임의의 ideal $\mathfrak{b}\supseteq \mathfrak{a}$와 $S^{-1}A$의 임의의 ideal $J$에 대한 다음의 두 식
+
+$$(\Spec\pi)\left(Z_{A/\mathfrak{a}}(\mathfrak{b}/\mathfrak{a})\right)=Z_A(\mathfrak{b}),\qquad (\Spec\epsilon)\left(Z_{S^{-1}A}(J)\right)=Z_A(\epsilon^{-1}J)\cap \im(\Spec\epsilon)$$
+
+으로부터 얻어지는데, 첫째 식은 $\mathfrak{q}\supseteq \mathfrak{b}/\mathfrak{a}$와 $\pi^{-1}(\mathfrak{q})\supseteq \mathfrak{b}$가 동치인 것에서, 둘째 식은 $S^{-1}A$의 모든 ideal이 $J=\epsilon(\epsilon^{-1}J)\cdot S^{-1}A$를 만족하는 것에서 따라온다. 두 번째 결과의 경우, $\Spec\pi$의 $\Spec A$에서의 image는 정확히 $Z(\mathfrak{a})$이다. 마지막으로 셋째 결과의 경우, $\Spec\epsilon$의 원소들은 $f$를 포함하지 않는 prime ideal들의 모임이고 이들은 $\Spec A\setminus Z(f)$으로 쓸 수 있다. 
 :::
 
 위상공간으로서 $\Spec A$의 base가 존재하는 것은 당연하지만, 우리는 이 base 또한 $A$의 대수적인 구조와 모종의 관계가 있기를 바란다. 다음을 정의하자.
@@ -148,7 +152,7 @@ Ring $A$의 임의의 원소 $f\in A$에 대하여, $Z(f)$의 $\Spec A$에서의
 
 $$\mathfrak{p}\not\in Z(f)\iff (f)\not\subseteq \mathfrak{p} \iff f\not\in \mathfrak{p}\iff f^k\not\in \mathfrak{p}\text{ for all $k\geq 0$}\iff S_f\cap \mathfrak{p}=\emptyset$$
 
-와 [\[가환대수학\] §국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8)에 의해 자명하다. 뿐만 아니라, $D(f)$가 $\Spec A_f$와 같은 위상구조를 갖는다는 것 또한 [\[가환대수학\] §국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8)의 대응관계가 포함관계를 보존한다는 것으로부터 얻어진다. 
+와 [\[가환대수학\] §국소화, ⁋명제 8](/ko/math/commutative_algebra/localization#prop8)에 의해 자명하다. 뿐만 아니라, $D(f)$가 $\Spec A_f$와 같은 위상구조를 갖는다는 것 또한 [명제 9](#prop9)의 첫 번째 결과로부터 얻어진다. 
 
 ::: 보조정리 11
 Principal open set들의 모임은 $\Spec A$의 base를 이룬다. ([\[위상수학\] §위상공간의 기저, ⁋정의 1](/ko/math/topology/topological_bases#def1))
@@ -254,26 +258,22 @@ Ring $A$의 prime ideal들과, $\Spec A$의 irreducible closed subset들 사이�
 ::: 증명
 즉 임의의 prime ideal $\mathfrak{p}$에 대하여 $Z(\mathfrak{p})$가 irreducible인 것과, 임의의 irreducible closed subset $Y$에 대하여 $I(Y)$가 prime ideal인 것을 보여야 한다.
 
-우선 $Z(\mathfrak{p})$가 irreducible이 아니라 가정하면, $Z(\mathfrak{p})$의 두 비자명한 닫힌집합 $Z(\mathfrak{a}), Z(\mathfrak{b})$가 존재하여 $Z(\mathfrak{p})=Z(\mathfrak{a})\cup Z(\mathfrak{b})$이다. ([\[위상수학\] §차원, ⁋정의 6](/ko/math/topology/dimension#def6)) 이제 
+우선 $I(\{\mathfrak{p}\})=\mathfrak{p}$이므로 [명제 14](#prop14)의 둘째 결과는 다음의 식
 
-$$Z(\mathfrak{p})=Z(\mathfrak{a})\cup Z(\mathfrak{b})=Z(\mathfrak{ab})\iff \mathfrak{p}=\sqrt{\mathfrak{p}}=\sqrt{\mathfrak{ab}}=\sqrt{\mathfrak{a}\cap \mathfrak{b}}$$
+$$Z(\mathfrak{p})=Z(I(\{\mathfrak{p}\}))=\cl(\{\mathfrak{p}\})$$
 
-이다. 한편
+을 준다. 그런데 한점집합은 항상 irreducible이고 irreducible subset의 closure 또한 irreducible이므로, $Z(\mathfrak{p})$는 irreducible이다. 즉 $\mathfrak{p}$는 $Z(\mathfrak{p})$의 generic point이다.
 
-$$\sqrt{\mathfrak{a}\cap \mathfrak{b}}\supseteq \mathfrak{a}\cap \mathfrak{b}\supseteq \mathfrak{a}\mathfrak{b}$$
+거꾸로 임의의 irreducible closed subset $Y$에 대하여, $I(Y)$가 prime ideal이라는 것을 보여야 한다. 우선 $Y$가 닫힌집합이므로 [정리 15](#thm15)와 [명제 5](#prop5)에 의하여 $Y=Z(\mathfrak{a})$이도록 하는 radical ideal $\mathfrak{a}$가 존재한다. 그럼 $\mathfrak{a}=IZ(\mathfrak{a})=I(Y)$가 prime인 것을 보이면 충분하다. 이 때 $Y$는 irreducible이므로 공집합이 아니고, 따라서 $\mathfrak{a}=I(Y)$는 $Y$의 원소인 prime ideal에 포함되어 proper ideal이다. ([\[위상수학\] §차원, ⁋정의 6](/ko/math/topology/dimension#def6)) 
 
-이므로 위의 두 식을 종합하면 $\mathfrak{p}\supseteq \mathfrak{a}$ 혹은 $\mathfrak{p}\supseteq \mathfrak{b}$가 성립해야 하는 것을 알고 따라서 $Z(\mathfrak{p})=Z(\mathfrak{a})$ 혹은 $Z(\mathfrak{p})=Z(\mathfrak{b})$가 되어 모순이다.
-
-거꾸로 임의의 irreducible closed subset $Y$에 대하여, $I(Y)$가 prime ideal이라는 것을 보여야 한다. 우선 $Y$가 닫힌집합이므로 [정리 15](#thm15)와 [명제 5](#prop5)에 의하여 $Y=Z(\mathfrak{a})$이도록 하는 radical ideal $\mathfrak{a}$가 존재한다. 그럼 $\mathfrak{a}=IZ(\mathfrak{a})=I(Y)$가 prime인 것을 보이면 충분하다. 
-
-이를 위해 $fg\in \mathfrak{a}$라 하고, 동시에 공집합은 아닌 $\Spec A$의 두 열린집합 $D(f), D(g)$를 생각하면 
+이를 위해 $fg\in \mathfrak{a}$라 하고, $\Spec A$의 두 열린집합 $D(f), D(g)$를 생각하면 
 
 $$(D(f)\cap Y)\cap (D(g)\cap Y)=D(f)\cap D(g)\cap Y=D(fg)\cap Y$$
 
-가 공집합이어야 함을 안다. 그런데 $D(f)\cap Y$와 $D(g)\cap Y$는 irreducible closed set $Y$의 두 열린집합이므로, 이것이 성립하기 위해서는 둘 중 하나가 공집합이어야 한다. ([\[위상수학\] §차원, ⁋명제 7](/ko/math/topology/dimension#prop7)) 이로부터 $f\in \mathfrak{a}$ 혹은 $g\in \mathfrak{a}$가 성립해야 함을 알고, 따라서 $\mathfrak{a}$는 prime ideal이다. 
+가 공집합이어야 함을 안다. 그런데 $D(f)\cap Y$와 $D(g)\cap Y$는 irreducible closed set $Y$의 두 열린집합이므로, 이것이 성립하기 위해서는 둘 중 하나가 공집합이어야 한다. ([\[위상수학\] §차원, ⁋명제 7](/ko/math/topology/dimension#prop7)) 한편 임의의 $h\in A$에 대하여 $D(h)\cap Y=\emptyset$인 것은 $Y$의 모든 원소가 $h$를 포함한다는 것, 즉 $h\in I(Y)=\mathfrak{a}$인 것과 동치이다. 이로부터 $f\in \mathfrak{a}$ 혹은 $g\in \mathfrak{a}$가 성립해야 함을 알고, 따라서 $\mathfrak{a}$는 prime ideal이다. 
 :::
 
-특히, prime ideal $\mathfrak{p}$에 대하여 $\mathfrak{q}\subsetneq \mathfrak{p}$를 만족하는 prime ideal이 없다면, 즉 $\mathfrak{p}$가 *minimal* prime ideal이라면 $Z(\mathfrak{p})$는 irreducible component 중 가장 큰 것, 즉 irreducible component가 된다. 이로부터 다음을 얻는다.
+특히, prime ideal $\mathfrak{p}$에 대하여 $\mathfrak{q}\subsetneq \mathfrak{p}$를 만족하는 prime ideal이 없다면, 즉 $\mathfrak{p}$가 *minimal* prime ideal이라면 $Z(\mathfrak{p})$는 irreducible closed subset들 가운데 포함관계에 대해 maximal인 것, 즉 irreducible component가 된다. 이로부터 다음을 얻는다.
 
 ::: 따름정리 17
 Ring $A$의 minimal prime ideal들과 $\Spec A$의 irreducible component 사이의 Galois correspondence가 존재한다. 
