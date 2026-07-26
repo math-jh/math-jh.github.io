@@ -10,8 +10,9 @@ sidebar:
 
 date: 2025-02-05
 weight: 7
-translated_at: 2026-07-26T17:48:31+00:00
+translated_at: 2026-07-26T23:45:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-26T23:45:02+00:00
 ---
 Since a scheme is simultaneously a geometric and an algebraic object, understanding it well requires considering not only the topological structure of schemes examined in the previous post but also the algebraic structure at the same time, and we briefly saw in the previous post how this philosophy is reflected. In this post, we develop this philosophy further.
 
