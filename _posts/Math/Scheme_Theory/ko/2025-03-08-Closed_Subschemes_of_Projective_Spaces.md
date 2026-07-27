@@ -15,13 +15,18 @@ published: false
 
 ---
 
-이제 우리는 closed subscheme의 예시로 $\mathbb{P}_\mathbb{K}^n$의 closed subscheme들을 살펴본다. $\mathbb{P}^n$은 affine scheme보다는 약간 복잡하지만 그래도 일반적인 scheme보다는 다루기가 편한 대상인데, [§사영스킴, ⁋정의 4](/ko/math/scheme_theory/projective_schemes#def4)에 의하여 $\mathbb{P}^n$의 임의의 닫힌집합은 항상 $\mathbb{K}[\x_0,\ldots, \x_n]$의 homogeneous polynomial들의 zero set으로 쓸 수 있기 때문이다. 즉, 이들 homogeneous polynomial들은, 비록 $\mathbb{P}^n$에서 정의된 함수는 아니지만 적어도 닫힌집합을 표현할 때는 affine scheme과 거의 유사한 방식을 사용할 수 있다.
+이제 우리는 closed subscheme의 예시로 $\mathbb{P}^n=\mathbb{P}_\mathbb{K}^n$의 closed subscheme들을 살펴본다. $\mathbb{P}^n$은 affine scheme보다는 약간 복잡하지만 그래도 일반적인 scheme보다는 다루기가 편한 대상인데, [§사영스킴, ⁋정의 4](/ko/math/scheme_theory/projective_schemes#def4)에 의하여 $\mathbb{P}^n$의 임의의 닫힌집합은 항상 $\mathbb{K}[\x_0,\ldots, \x_n]$의 homogeneous polynomial들의 zero set으로 쓸 수 있기 때문이다. 즉, 이들 homogeneous polynomial들은, 비록 $\mathbb{P}^n$에서 정의된 함수는 아니지만 적어도 닫힌집합을 표현할 때는 affine scheme과 거의 유사한 방식을 사용할 수 있다.
 
 이번 글에서 우리는 이 대응을 scheme의 단계로 끌어올린다. 즉 homogeneous ideal이 $\mathbb{P}^n$의 closed subscheme을 정의하고, 거꾸로 $\mathbb{P}^n$의 임의의 closed subscheme이 이러한 방식으로 얻어진다는 것을 살펴본다. 이번 글에서 $A_\bullet=\mathbb{K}[\x_0,\ldots,\x_n]$은 표준적인 grading이 주어진 graded ring이고, $\mathbb{P}^n=\Proj A_\bullet$이다.
 
 ## $V_+(\mathfrak{a})$의 구성
 
-Affine scheme의 경우 closed subscheme은 정확히 surjection $B \rightarrow B/\mathfrak{a}$들로부터 얻어졌다. ([§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3) 이후의 논의) 비록 $\Proj$는 functor가 아니지만 ([§사영스킴](/ko/math/scheme_theory/projective_schemes)), graded ring의 *surjection*은 언제나 $\Proj$들 사이의 morphism을 유도하며, 이것이 위 이야기의 projective 버전이 된다.
+우리는 이미 $\Proj$가 functor가 아닌 것을 알고 있다. 이는 graded ring homomorphism $\phi_\bullet:A_\bullet \rightarrow B_\bullet$과 $B_+$를 포함하지 않는 homogeneous prime ideal $\mathfrak{q}$에 대하여 그 inverse image $\phi^{-1}(\mathfrak{q})$ 가 $A_+$를 포함할 수 있어, $\mathfrak{q}$가 $\Proj B_\bullet$의 점이더라도 $\phi^{-1}(\mathfrak{q})$는 $\Proj A_\bullet$의 점이 아닐 수 있기 때문이었으며, 직관적으로 $A_+$가 정의하는  
+
+Affine scheme의 경우 closed subscheme은 정확히 surjection $B \rightarrow B/\mathfrak{a}$들로부터 얻어졌다. ([§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3) 이후의 논의) 
+
+
+$\Proj$가 functor가 아니었던 것은기 때문이었다. ([§사영스킴](/ko/math/scheme_theory/projective_schemes)) 그런데 $\phi_\bullet$이 surjective라면 $\phi(A_+)=B_+$이므로 $\phi^{-1}(\mathfrak{q})\supseteq A_+$인 것은 $\mathfrak{q}\supseteq B_+$인 것을 뜻하고, 따라서 그러한 일은 일어나지 않는다. 즉 graded ring의 *surjection*은 언제나 $\Proj$들 사이의 morphism을 유도하며, 이것이 위 이야기의 projective 버전이 된다.
 
 ::: 명제 1
 Homogeneous ideal $\mathfrak{a}\subseteq A_\bullet$과 canonical projection $\pi:A_\bullet \rightarrow A_\bullet/\mathfrak{a}$가 주어졌다 하자. 그럼 $\pi$는 closed embedding
@@ -31,7 +36,7 @@ $$\iota:\Proj (A_\bullet/\mathfrak{a}) \rightarrow \Proj A_\bullet=\mathbb{P}^n$
 을 유도하며, 그 image는 $Z_+(\mathfrak{a})$이다.
 :::
 ::: 증명
-[\[대수적 구조\] §등급환](/ko/math/algebraic_structures/graded_rings)에서 살펴본 것과 같이 $A_\bullet/\mathfrak{a}$는 graded ring이고, quotient ring의 ideal correspondence는 homogeneous ideal들을 homogeneous ideal들로 대응시킨다. 특히 $\mathfrak{q}\mapsto \pi^{-1}(\mathfrak{q})$는 $\Proj(A_\bullet/\mathfrak{a})$의 점들, 즉 $(A_\bullet/\mathfrak{a})_+$를 포함하지 않는 homogeneous prime ideal들을, $\mathfrak{a}$를 포함하고 $A_+$를 포함하지 않는 $A_\bullet$의 homogeneous prime ideal들로 보내는 bijection이며, 후자는 정확히 $Z_+(\mathfrak{a})$이다. ([§사영스킴, ⁋정의 2](/ko/math/scheme_theory/projective_schemes#def2)) 또, 이 대응 하에서 $Z_+(\bar{\mathfrak{b}})$ 꼴의 닫힌집합은 $Z_+(\pi^{-1}(\bar{\mathfrak{b}}))\cap Z_+(\mathfrak{a})$와 대응되므로 $\iota$는 그 image $Z_+(\mathfrak{a})$로의 homeomorphism이다.
+[\[대수적 구조\] §등급환](/ko/math/algebraic_structures/graded_rings)에서 살펴본 것과 같이 $A_\bullet/\mathfrak{a}$는 graded ring이고, quotient ring의 ideal correspondence는 homogeneous ideal들을 homogeneous ideal들로 대응시킨다. 여기에 $\pi$가 surjective이므로 $\pi(A_+)=(A_\bullet/\mathfrak{a})_+$이고, 따라서 $\mathfrak{q}$가 $(A_\bullet/\mathfrak{a})_+$를 포함하지 않는 것과 $\pi^{-1}(\mathfrak{q})$가 $A_+$를 포함하지 않는 것이 서로 동치이다. 특히 $\mathfrak{q}\mapsto \pi^{-1}(\mathfrak{q})$는 $\Proj(A_\bullet/\mathfrak{a})$의 점들, 즉 $(A_\bullet/\mathfrak{a})_+$를 포함하지 않는 homogeneous prime ideal들을, $\mathfrak{a}$를 포함하고 $A_+$를 포함하지 않는 $A_\bullet$의 homogeneous prime ideal들로 보내는 bijection이며, 후자는 정확히 $Z_+(\mathfrak{a})$이다. ([§사영스킴, ⁋정의 2](/ko/math/scheme_theory/projective_schemes#def2)) 또, 이 대응 하에서 $Z_+(\bar{\mathfrak{b}})$ 꼴의 닫힌집합은 $Z_+(\pi^{-1}(\bar{\mathfrak{b}}))\cap Z_+(\mathfrak{a})$와 대응되므로 $\iota$는 그 image $Z_+(\mathfrak{a})$로의 homeomorphism이다.
 
 이제 scheme morphism의 구조와 sheaf morphism의 surjectivity를 표준적인 affine cover 위에서 확인하자. 각각의 $i$에 대하여 $\bar{\x}_i=\pi(\x_i)$라 하면, 위의 대응에 의해 $\iota^{-1}(D_+(\x_i))=D_+(\bar{\x}_i)$이다. [§사영스킴, ⁋보조정리 8](/ko/math/scheme_theory/projective_schemes#lem8)의 identification $D_+(\x_i)\cong\Spec A_{(\x_i)}$, $D_+(\bar\x_i)\cong \Spec (A_\bullet/\mathfrak{a})_{(\bar\x_i)}$ 하에서, $\iota$의 restriction은 ring homomorphism
 

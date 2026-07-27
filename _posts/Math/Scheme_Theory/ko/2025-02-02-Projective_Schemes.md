@@ -5,11 +5,13 @@ excerpt: "Graded ring으로부터의 Proj 구성과 사영공간"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/projective_schemes
+drift_needed: true
 sidebar: 
     nav: "scheme_theory-ko"
 
 date: 2025-02-02
 weight: 5
+published: false
 ---
 
 [§스킴, ⁋예시 10](/ko/math/scheme_theory/schemes#ex10)에서 우리는 두 개의 affine line $\mathbb{A}^1=\Spec \mathbb{K}[\x]$을 적당한 방식으로 붙여 projective space $\mathbb{P}^1$을 만들었다. 이번에는 이를 일반화하여, graded ring $A_\bullet$으로부터 scheme $\Proj A_\bullet$을 얻어내는 $\Proj$ 구성을 다룬다. 
@@ -113,6 +115,8 @@ Graded ring $A_\bullet$이 주어졌다 하자. 그럼 다음의 부분집합
 $$A_+=\bigoplus_{i=1}^\infty A_i=A_1\oplus A_2\oplus\cdots$$
 
 은 $A_\bullet$의 homogeneous ideal이 되는 것이 자명하다. 그런데 $A_\bullet=\mathbb{K}[\x_0,\ldots, \x_n]$인 경우를 생각하면, $A_+$의 모든 원소들에 대해 함숫값이 $0$이 되는 점, 즉 모든 다항식에 대해 항등적으로 $0$이 되는 점은 오직 원점 뿐이다. 원점은 $\mathbb{P}^n$을 만들 때 빠지는 점이므로 ideal $A_+$를 포함하는 ideal은 우리의 논의의 대상에서 제외하는 것이 옳을 것이다. 이러한 관점에서 $A_+$를 *irrelevant ideal*이라 부른다. 
+
+이를 조금 더 기하학적으로 읽을 수도 있다. 위의 등식 $f(\lambda x_0,\ldots,\lambda x_n)=\lambda^{\deg f}f(x_0,\ldots,x_n)$에 의하여 homogeneous polynomial들이 $\mathbb{A}^{n+1}$에서 자르는 닫힌집합은 언제나 상수배에 닫혀 있으므로, 이는 원점을 지나는 직선들을 모아 놓은 것, 곧 affine cone이다. ([\[대수다양체\] §사영다양체, ⁋정의 12](/ko/math/algebraic_varieties/projective_varieties#def12)) 그런데 직선은 원점을 지나므로 비어 있지 않은 cone은 언제나 원점을 포함하고, 따라서 원점을 제거하고 나면 아무것도 남지 않는 cone은 원점 하나만으로 이루어진 것, 곧 $A_+$가 자르는 cone뿐이다. Homogeneous prime ideal $\mathfrak{p}$에 대하여 $A_+\subseteq \mathfrak{p}$인 것은 $\mathfrak{p}$가 자르는 cone이 이것에 포함되는 것과 동치이므로, 아래에서 $A_+$를 포함하는 ideal을 제외하는 것은 원점만을 담은 cone을 버리는 일에 해당한다. 
 
 이제 집합으로서 $\Proj A_\bullet$은 다음과 같이 정의된다.
 
