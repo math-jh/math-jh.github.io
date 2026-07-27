@@ -21,7 +21,7 @@ $$\mathbb{P}^n = (\mathbb{C}^{n+1} \setminus \{0\}) / \mathbb{C}^\ast$$
 
 로 나타낼 수 있다. 이 구성은 projective space 위의 대수적 구조를 다루는 데 매우 유용하며, 가령 closed subvariety는 homogeneous ideal에 의해 정의되고 coherent sheaf는 graded module에 대응한다. Cox는 이러한 구성을 임의의 toric variety로 일반화하였다. 본 글에서는 fan $\Sigma$로부터 toric variety $X_\Sigma$를 homogeneous coordinate ring과 *GIT quotient*로 재구성하는 Cox의 방법을 설명한다. 이 구성은 toric variety 위의 line bundle이나 coherent sheaf를 다루는 데 필수적인 도구이며, 마지막에 짧게 짚을 secondary fan을 통한 birational geometry의 이해에도 직결된다. 
 
-GIT의 기초 — reductive group, invariant ring, affine GIT quotient $X/\!/G = \Spec A^G$, linearization, (semi)stable 점, projective GIT quotient — 는 이미 [§대수적 군](/ko/math/scheme_theory/algebraic_groups)에서 다루었다. 본 글은 그 결과를 자유롭게 사용하며, 추가로 Cox 구성에 본질적으로 필요한 *categorical quotient vs geometric quotient*의 구분만 한 절 분량으로 정리한 뒤 본 주제로 들어간다. 이하에서 $N \cong \mathbb{Z}^n$은 rank $n$의 free abelian group, $M = \Hom_\mathbb{Z}(N, \mathbb{Z})$는 그 dual lattice, $\Sigma$는 $N_\mathbb{R}$ 위의 rational polyhedral fan으로 $N_\mathbb{R}$를 span한다고 가정한다. 각 $\rho \in \Sigma(1)$에 대해 $u_\rho \in N$은 $\rho$의 primitive generator이다.
+Algebraic group의 action과 orbit, orbit closure에 관한 기본 사항은 [\[대수다양체\] §대수적 군](/ko/math/algebraic_varieties/algebraic_groups)에 있다. GIT 고유의 개념인 reductive group, invariant ring, affine GIT quotient $X/\!/G = \Spec A^G$, linearization, (semi)stable 점, projective GIT quotient는 이 글에서 쓰이는 자리마다 그 자리에서 규정하며, 첫 절에서는 Cox 구성에 본질적으로 필요한 *categorical quotient vs geometric quotient*의 구분을 정리한 뒤 본 주제로 들어간다. 이하에서 $N \cong \mathbb{Z}^n$은 rank $n$의 free abelian group, $M = \Hom_\mathbb{Z}(N, \mathbb{Z})$는 그 dual lattice, $\Sigma$는 $N_\mathbb{R}$ 위의 rational polyhedral fan으로 $N_\mathbb{R}$를 span한다고 가정한다. 각 $\rho \in \Sigma(1)$에 대해 $u_\rho \in N$은 $\rho$의 primitive generator이다.
 
 ## Categorical quotient와 geometric quotient
 
@@ -47,15 +47,19 @@ Categorical quotient $\varphi: X \rightarrow Y$가 *geometric quotient<sub>기�
 Geometric quotient는 통상 $Y = X/G$로 표기하며, $Y$의 점은 정확히 $X$의 $G$-orbit과 일대일 대응한다. Categorical quotient는 closed orbit들을 한 점으로 묶을 뿐이지만 ([명제 3](#prop3)), geometric quotient는 모든 orbit을 분리한다. 직관적으로 두 개념 사이의 간극은 $X$ 안에 *다른 orbit의 closure에 포함되는 orbit*이 있을 때 발생한다.
 
 ::: 명제 3
-Reductive group $G$가 affine variety $X = \Spec A$ 위에 작용한다고 하자. 그러면 [\[스킴\] §대수적 군, ⁋정의 14](/ko/math/scheme_theory/algebraic_groups#def14)의 invariant subring $A^G \subseteq A$는 finitely generated이며, 자연스러운 morphism
+Reductive group $G$가 affine variety $X = \Spec A$ 위에 작용한다고 하자. 그러면 invariant subring
+
+$$A^G = \{a \in A \mid g \cdot a = a \text{ for all } g \in G\} \subseteq A$$
+
+는 finitely generated이며, 자연스러운 morphism
 
 $$\varphi : X \longrightarrow X /\!/ G := \Spec(A^G)$$
 
-는 categorical quotient이다 ([\[스킴\] §대수적 군, ⁋정의 17](/ko/math/scheme_theory/algebraic_groups#def17)). 더욱이 두 점 $x, x' \in X$가 $\varphi$에 의해 같은 image를 가질 필요충분조건은 두 orbit closure $\overline{G\cdot x}$와 $\overline{G\cdot x'}$가 교차하는 것이다.
+는 categorical quotient이다. 더욱이 두 점 $x, x' \in X$가 $\varphi$에 의해 같은 image를 가질 필요충분조건은 두 orbit closure $\overline{G\cdot x}$와 $\overline{G\cdot x'}$가 교차하는 것이다.
 :::
 
 ::: 증명
-$A^G$의 finite generation은 *Hilbert finiteness theorem*의 결과이다. $G$가 reductive이므로 모든 rational $G$-module은 완전가약(completely reducible)이고 ([\[스킴\] §대수적 군, ⁋정의 15](/ko/math/scheme_theory/algebraic_groups#def15)), 그 결과 $A$는 trivial한 invariant 성분과 그 보충 $G$-불변 부분공간 $A_0$로 분해된다:
+$A^G$의 finite generation은 *Hilbert finiteness theorem*의 결과이다. $G$가 reductive, 곧 모든 유한차원 representation이 완전가약(completely reducible)인 group이므로 모든 rational $G$-module 또한 완전가약이고, 그 결과 $A$는 trivial한 invariant 성분과 그 보충 $G$-불변 부분공간 $A_0$로 분해된다:
 
 $$A = A^G \oplus A_0.$$
 
@@ -66,7 +70,7 @@ $$A = A^G \oplus A_0.$$
 두 점이 같은 image를 가질 조건을 보인다. 두 orbit closure가 교차하면 그 교집합 위에서 모든 $G$-invariant 함수는 두 점에서 같은 값을 가지므로, 임의의 $f \in A^G$에 대해 $f(x) = f(x')$이다. 역으로 $\overline{G \cdot x} \cap \overline{G \cdot x'} = \emptyset$이라 가정하자. 두 closed $G$-불변 부분집합이 disjoint이므로 그 ideal들 $I_x, I_{x'} \subseteq A$에 대해 $I_x + I_{x'} = A$이다. Reductivity로부터 $I_x^G + I_{x'}^G = A^G$가 성립하며, 이로부터 $f(x) = 0$, $f(x') = 1$인 $f \in A^G$가 존재한다. 따라서 $\varphi(x) \ne \varphi(x')$이다.
 :::
 
-위 명제의 두 번째 부분이 categorical quotient와 geometric quotient의 차이를 정량화한다. 즉 $X/\!/G$의 한 점은 $X$의 *$G$-orbit들의 equivalence class*에 대응하되, 그 동치관계는 *orbit closure가 사슬로 연결됨*이다. 모든 orbit이 이미 닫혀 있다면 이 equivalence class는 곧 orbit 자체이고 이 경우 categorical quotient는 geometric quotient가 된다.
+여기서 얻은 $\Spec(A^G)$를 $G$-action의 *affine GIT quotient*라 부른다. 위 명제의 두 번째 부분이 categorical quotient와 geometric quotient의 차이를 정량화한다. 즉 $X/\!/G$의 한 점은 $X$의 *$G$-orbit들의 equivalence class*에 대응하되, 그 동치관계는 *orbit closure가 사슬로 연결됨*이다. 모든 orbit이 이미 닫혀 있다면 이 equivalence class는 곧 orbit 자체이고 이 경우 categorical quotient는 geometric quotient가 된다.
 
 ::: 참고 4
 명제의 finite generation 부분은 $G$가 reductive라는 가정을 본질적으로 사용한다. Nagata는 unipotent group의 action에 대해 invariant ring이 finitely generated가 아닐 수 있음을 보여 Hilbert의 14번째 문제의 반례를 제시하였다. 본 글에서 $G$를 reductive로 제한하는 것은 단순한 편의가 아니라 GIT가 성립하기 위한 핵심 가정이다.
@@ -91,7 +95,7 @@ $$\mathbb{C}^2 /\!/ \mathbb{C}^\ast = \Spec \mathbb{C} = \{\mathrm{pt}\}$$
 
 으로 한 점으로 붕괴한다. 모든 비원점 orbit의 closure가 원점을 포함하여 [명제 3](#prop3)에 의해 모든 점이 같은 equivalence class에 속한 결과이다.
 
-이제 비자명 character $\chi(t) = t$로 자명 line bundle $L = X \times \mathbb{C}$를 linearize하면 ([\[스킴\] §대수적 군, ⁋정의 18](/ko/math/scheme_theory/algebraic_groups#def18)) invariant section은
+이제 비자명 character $\chi(t) = t$를 써서 자명 line bundle $L = X \times \mathbb{C}$ 위에 $t \cdot (x, v) = (t \cdot x, \chi(t)v)$로 $G$-action을 얹자. 이렇게 $X$ 위의 action을 line bundle 위의 action으로 들어올리는 것을 *linearization*이라 부른다. 그럼 invariant section은
 
 $$H^0(X, L^{\otimes n})^{G, \chi^n} = \{f \in \mathbb{C}[\z_1, \z_2] \mid f(tz_1, tz_2) = t^n f(z_1, z_2)\} = \mathbb{C}[\z_1, \z_2]_n,$$
 
@@ -99,11 +103,11 @@ $$H^0(X, L^{\otimes n})^{G, \chi^n} = \{f \in \mathbb{C}[\z_1, \z_2] \mid f(tz_1
 
 $$\bigoplus_{n \ge 0} H^0(X, L^{\otimes n})^{G, \chi^n} = \mathbb{C}[\z_1, \z_2]$$
 
-이고, [\[스킴\] §대수적 군, ⁋정의 20](/ko/math/scheme_theory/algebraic_groups#def20)의 projective GIT quotient는
+이고, projective GIT quotient는
 
 $$\mathbb{C}^2 /\!/_\chi \mathbb{C}^\ast = \Proj \mathbb{C}[\z_1, \z_2] = \mathbb{P}^1$$
 
-이다. Semistable 집합을 직접 확인하면 $(z_1, z_2) \ne (0, 0)$인 모든 점이 semistable이며 (양의 degree homogeneous polynomial 중 0이 아닌 값을 주는 것이 존재), 원점은 unstable이다. 즉
+이다. 주어진 linearization $L_\chi$에 대해 점 $x \in X$가 *semistable*이라는 것은 양의 degree의 invariant section 가운데 $x$에서 $0$이 아닌 값을 갖는 것이 존재한다는 뜻이고, 여기에 orbit $G \cdot x$가 닫혀 있고 stabilizer $G_x$가 유한하다는 조건까지 붙은 것이 *stable*이며, semistable이 아닌 점을 *unstable*이라 부른다. 이 예시에서 직접 확인하면 $(z_1, z_2) \ne (0, 0)$인 모든 점이 semistable이고 원점은 unstable이다. 즉
 
 $$X^{\mathrm{ss}}(L_\chi) = X^{\mathrm{s}}(L_\chi) = \mathbb{C}^2 \setminus \{0\}$$
 

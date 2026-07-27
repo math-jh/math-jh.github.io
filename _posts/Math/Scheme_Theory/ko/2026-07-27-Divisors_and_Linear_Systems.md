@@ -103,7 +103,7 @@ $\mathfrak{p}A_\mathfrak{q}=(t)$라 하고, $\mathfrak{q}$ 바깥의 원소는 $
 그럼 $D(g)$는 $z$의 affine open neighborhood로서 그 위에서 $Z$는 $Z(f)$이며, $A_g$가 domain이고 $f\neq 0$이므로 $f$는 non-zerodivisor이다. 이렇게 얻은 열린집합들이 $X$를 덮으므로 [정의 2](#def2)에 의하여 $\iota$는 effective Cartier divisor이다.
 :::
 
-이 가정은 공허하지 않다. 모든 local ring이 regular local ring인 scheme이 그러한데, regular local ring이 UFD라는 것은 Auslander-Buchsbaum의 정리로 이 글에서 증명하지 않고 [\[가환대수학\] §정칙성의 호몰로지 판정](/ko/math/commutative_algebra/homological_criterion_for_regularity)에 위임한다. 곧 smooth한 대상 위에서는 codimension $1$이라는 위상적인 조건만으로 방정식 하나를 되찾을 수 있다.
+이 가정은 공허하지 않다. 모든 local ring이 regular local ring인 scheme이 그러한데, regular local ring이 UFD라는 것은 Auslander-Buchsbaum의 정리로 이 글에서 증명하지 않고 [\[가환대수학\] §정칙성의 호몰로지 판정](/ko/math/commutative_algebra/homological_criterion_for_regularity)에 위임한다. 곧 regular한 대상 위에서는 codimension $1$이라는 위상적인 조건만으로 방정식 하나를 되찾을 수 있다.
 
 이제 effective Cartier divisor들을 한데 모으면 group이 얻어진다. 이는 국소적인 방정식 자료만으로 서술되며, 방정식이 regular일 것을 요구하지 않고 그 비율만을 통제한다. 아래에서 $K(U)$는 [§스킴의 대수구조, ⁋정의 12](/ko/math/scheme_theory/algebra_of_schemes#def12)의 total quotient ring이다.
 
@@ -176,7 +176,7 @@ $$\Cl(X)=\Div(X)/\{\divisor(f)\mid f\in K(X)^\times\}$$
 를 $X$의 *divisor class group<sub>인자류군</sub>*이라 부른다.
 :::
 
-[보조정리 9](#lem9)의 2번이 이 합이 유한합임을 보장하고, 각각의 $\ord_Y$가 group homomorphism이므로 $\divisor:K(X)^\times \rightarrow \Div(X)$ 또한 group homomorphism이다. 따라서 principal divisor들은 $\Div(X)$의 subgroup을 이루고 $\Cl(X)$가 잘 정의된다. 여기에서 $\Cl(X)$가 $\Div(X)$보다 작으면서도 $X$의 정보를 잃지 않는다는 것, 그리고 $\Cl(\mathbb{A}^n)=0$이나 $\Cl(\mathbb{P}^n)\cong\mathbb{Z}$와 같은 구체적인 계산은 [\[대수다양체\] §인자](/ko/math/algebraic_varieties/divisors)에서 다루었으며, 그곳의 논증은 scheme 위에서 글자 그대로 작동한다.
+[보조정리 9](#lem9)의 2번이 이 합이 유한합임을 보장하고, 각각의 $\ord_Y$가 group homomorphism이므로 $\divisor:K(X)^\times \rightarrow \Div(X)$ 또한 group homomorphism이다. 따라서 principal divisor들은 $\Div(X)$의 subgroup을 이루고 $\Cl(X)$가 잘 정의된다. 여기에서 $\Cl(X)$가 $\Div(X)$보다 작으면서도 $X$의 정보를 잃지 않는다는 것, 그리고 field $\mathbb{K}$ 위에서 $\Cl(\mathbb{A}^n_\mathbb{K})=0$이나 $\Cl(\mathbb{P}^n_\mathbb{K})\cong\mathbb{Z}$와 같은 구체적인 계산은 [\[대수다양체\] §인자](/ko/math/algebraic_varieties/divisors)에서 다루었으며, 그곳의 논증은 scheme 위에서 글자 그대로 작동한다.
 
 Principal divisor와 linearly equivalent라는 이름, 그리고 표기 $\divisor(f)$는 [정의 7](#def7) 다음에서 Cartier divisor에 대해 쓴 것을 그대로 옮긴 것이며, 두 용법이 어긋나지 않는다는 것은 [명제 12](#prop12)에서 확인한다. 이 절 바깥에서는 $X$가 normal이라는 가정을 두지 않아 Weil divisor 자체가 정의되지 않으므로, 아래에서 $\divisor(-)$는 언제나 Cartier divisor를 뜻한다.
 
@@ -214,11 +214,11 @@ $f_x=\prod_Y g_Y^{n_Y}\in K(X)^\times$로 두자. 곱은 $x$를 지나는 유한
 Cartier divisor의 자료 $\{(U_i,f_i)\}$는 각 조각 위에서 하나의 함수를 지정하고 겹침 위에서 그 비율만을 통제한다. 이는 정확히 invertible sheaf를 국소적인 자명화와 transition function으로 기술하는 방식이므로, 인자에 invertible sheaf를 대응시킬 수 있다. 이 절에서도 $X$는 integral Noetherian scheme으로 둔다.
 
 ::: 정의 13
-Integral Noetherian scheme $X$와 Cartier divisor $D=\{(U_i,f_i)\}$에 대하여, $X$ 위의 $\mathcal{O}_X$-가군층 $\mathcal{O}_X(D)$를 각각의 열린집합 $V$마다
+Integral Noetherian scheme $X$와 Cartier divisor $D=\{(U_i,f_i)\}$에 대하여, $X$ 위의 $\mathcal{O}_X$-가군층 $\mathcal{O}_X(D)$를 각각의 공집합이 아닌 열린집합 $V$마다
 
 $$\Gamma(V,\mathcal{O}_X(D))=\{g\in K(X)\mid \text{모든 $i$에 대하여 } gf_i\in \Gamma(V\cap U_i,\mathcal{O}_X)\}$$
 
-로 정의한다. 여기에서 restriction map은 $K(X)$의 원소를 그대로 보내는 것이다.
+로 정의하고, $\Gamma(\emptyset,\mathcal{O}_X(D))=0$으로 둔다. 여기에서 공집합이 아닌 열린집합들 사이의 restriction map은 $K(X)$의 원소를 그대로 보내는 것이다.
 :::
 
 정의의 조건은 각 점의 근방에서 확인되는 조건이므로 $\mathcal{O}_X(D)$는 실제로 $\mathcal{O}_X$의 곱셈에 대해 닫힌 sheaf이다. 또 이 sheaf는 $D$를 나타내는 자료의 선택에 무관하다. 다른 자료 $\{(V_j,g_j)\}$가 같은 Cartier divisor를 준다면 겹침 위에서 $f_i/g_j$가 invertible section이므로, $gf_i$가 $\mathcal{O}_X$의 section인 것과 $gg_j$가 그러한 것이 각각의 $V\cap U_i\cap V_j$ 위에서 같은 조건이기 때문이다. 직관적으로 $\Gamma(V,\mathcal{O}_X(D))$는 $D$가 지정하는 만큼의 pole만을 허용하는 rational function들의 모임이며, $D$가 effective이면 $\mathcal{O}_X\subseteq \mathcal{O}_X(D)$이고 $-D$에 대해서는 거꾸로 $D$ 위에서 소멸하는 함수들의 sheaf, 곧 [명제 8](#prop8)이 주는 closed subscheme의 ideal sheaf가 된다.

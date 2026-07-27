@@ -27,7 +27,7 @@ Variety 위에 group 구조를 얹되 두 구조가 서로 어긋나지 않기�
 
 $$s: \mathbb{P}^n \times \mathbb{P}^m \rightarrow \mathbb{P}^{(n+1)(m+1)-1};\qquad ([x_0 : \cdots : x_n], [y_0 : \cdots : y_m]) \mapsto [\cdots : x_iy_j : \cdots]$$
 
-는 단사이고, 그 image는 $\z_{ij}\z_{kl} - \z_{il}\z_{kj}$들의 zero set이므로 닫힌집합이다. 또 projective algebraic set $P \subseteq \mathbb{P}^n$과 $Q \subseteq \mathbb{P}^m$에 대하여 $s(P \times Q)$도 닫힌집합인데, $P$를 정의하는 각 homogeneous polynomial $F$에 대하여 $\y$의 $\deg F$차 monomial $\y^\alpha$를 곱한 $F(\x)\y^\alpha$가 $\z_{ij}$들의 homogeneous polynomial로 표현되고 $Q$ 쪽도 마찬가지이기 때문이다. 이로부터 열린집합 $U \subseteq \mathbb{P}^n$과 $V \subseteq \mathbb{P}^m$에 대해 $s(U \times V)$는 image 안에서 열린집합이므로, $X = P \cap U$와 $Y = Q \cap V$가 quasi-projective algebraic set이면
+는 단사이고, 그 image는 $\z_{ij}\z_{kl} - \z_{il}\z_{kj}$들의 zero set이므로 닫힌집합이다. 또 projective algebraic set $P \subseteq \mathbb{P}^n$과 $Q \subseteq \mathbb{P}^m$에 대하여 $s(P \times Q)$도 닫힌집합인데, $P$를 정의하는 각 homogeneous polynomial $F$에 대하여 $\y$의 $\deg F$차 monomial $\y^\alpha$를 곱한 $F(\x)\y^\alpha$가 $\z_{ij}$들의 homogeneous polynomial로 표현되고 $Q$ 쪽도 마찬가지이기 때문이다. 이로부터 열린집합 $U \subseteq \mathbb{P}^n$과 $V \subseteq \mathbb{P}^m$에 대해 $s(U \times V)$는 image 안에서 열린집합이다. Image 안에서의 여집합이 $s((\mathbb{P}^n \setminus U) \times \mathbb{P}^m)$과 $s(\mathbb{P}^n \times (\mathbb{P}^m \setminus V))$의 합집합, 곧 닫힌집합이기 때문이다. 따라서 $X = P \cap U$와 $Y = Q \cap V$가 quasi-projective algebraic set이면
 
 $$s(X \times Y) = s(P \times Q) \cap s(U \times V)$$
 
@@ -102,7 +102,7 @@ $G^\circ$를 identity $e$를 포함하는 $G$의 irreducible component라 하자
 마지막으로 [명제 4](#prop4)에 의해 각 component가 열린 닫힌집합이므로 $G$의 connected component와 irreducible component가 일치한다. 따라서 $G$가 connected인 것은 component가 하나뿐인 것, 곧 $G$가 irreducible인 것과 동치이다.
 :::
 
-$G^\circ$를 $G$의 *identity component*라 부른다. [명제 5](#prop5)는 algebraic group의 연구를 두 층으로 나누어 준다. 하나는 connected algebraic group $G^\circ$이고 다른 하나는 유한군 $G/G^\circ$이며, 앞으로 다룰 결과들은 대부분 앞쪽에 관한 것이다. 또 이 명제 덕분에 connected와 irreducible을 구별할 필요가 없어지므로, 이하에서 두 표현을 자유롭게 바꾸어 쓴다.
+$G^\circ$를 $G$의 *identity component*라 부른다. [명제 5](#prop5)는 algebraic group의 연구를 두 층으로 나누어 준다. 하나는 connected algebraic group $G^\circ$이고 다른 하나는 유한군 $G/G^\circ$이며, 앞으로 다룰 결과들은 대부분 앞쪽에 관한 것이다. 또 이 명제 덕분에 connected와 irreducible을 구별할 필요가 없어지므로, 이하에서 둘을 구별 없이 쓴다.
 
 ::: 예시 6
 [예시 2](#ex2)의 대상들에서 identity component를 확인해 보자.
@@ -146,11 +146,17 @@ Algebraic group이 affine일 때에는 group 구조 전체가 coordinate ring �
 Algebraic group $G$가 affine algebraic set일 때, $G$를 *affine algebraic group<sub>아핀 대수적 군</sub>*이라 부른다.
 :::
 
-[예시 2](#ex2)의 $\mathbb{G}_a$, $\mathbb{G}_m$, $\GL(n;\mathbb{K})$, $\SL(n;\mathbb{K})$와 유한군은 모두 affine algebraic group이고, 타원곡선은 그렇지 않다. 두 affine algebraic set $X \subseteq \mathbb{A}^n$과 $Y \subseteq \mathbb{A}^m$에 대하여 곱 $X \times Y \subseteq \mathbb{A}^{n+m}$도 affine algebraic set이며, 그 위의 regular function이 $f(x)g(y)$ 꼴들의 합으로 쓰인다는 것을 정리하면
+[예시 2](#ex2)의 $\mathbb{G}_a$, $\mathbb{G}_m$, $\GL(n;\mathbb{K})$, $\SL(n;\mathbb{K})$와 유한군은 모두 affine algebraic group이고, 타원곡선은 그렇지 않다. 두 affine algebraic set $X \subseteq \mathbb{A}^n$과 $Y \subseteq \mathbb{A}^m$에 대하여 곱 $X \times Y \subseteq \mathbb{A}^{n+m}$도 affine algebraic set이며, 이는 앞에서 정한 Segre 구성과 일치한다. Segre embedding을 $\mathbb{A}^n \times \mathbb{A}^m$에 제한하면 점 $(x, y)$를 좌표가 $x_i$, $y_j$, $x_iy_j$인 점으로 보내는 morphism이 되는데, 처음 $n + m$개의 좌표로의 projection이 그 역사상이기 때문이다.
+
+이 곱의 coordinate ring은 두 인자의 coordinate ring으로부터 결정된다. 우선 $f \otimes g$를 함수 $(x, y) \mapsto f(x)g(y)$로 보내는 대응은 algebra homomorphism
+
+$$\mathbb{K}[X] \otimes_\mathbb{K} \mathbb{K}[Y] \rightarrow \mathbb{K}[X \times Y]$$
+
+를 정의한다. $X \times Y$의 좌표함수는 모두 $\x_i \otimes 1$ 또는 $1 \otimes \y_j$의 image이고 이들이 $\mathbb{K}[X \times Y]$를 생성하므로 이 homomorphism은 전사이다. 단사임을 보기 위해 $\sum_i f_i \otimes g_i$가 $0$으로 간다 하고, 일반성을 잃지 않고 $g_i$들이 $\mathbb{K}[Y]$에서 일차독립이라 하자. 각 $x \in X$를 고정하면 $\sum_i f_i(x) g_i$는 $Y$ 위에서 항등적으로 $0$인 함수이므로 모든 $i$에 대하여 $f_i(x) = 0$이고, $x$가 임의였으므로 $f_i = 0$이다. 따라서
 
 $$\mathbb{K}[X \times Y] \cong \mathbb{K}[X] \otimes_\mathbb{K} \mathbb{K}[Y]$$
 
-를 얻는다.
+이다.
 
 이제 $A = \mathbb{K}[G]$라 두자. Multiplication, inversion, 그리고 identity는 각각 algebra homomorphism
 
@@ -262,6 +268,8 @@ $$\Delta_V(w_\nu) = \sum_{\lambda, \mu} c^\lambda_{\mu\nu} w_\lambda \otimes a_\
 를 얻는다. $W'$의 generator들이 모두 이 꼴이므로 $\Delta_V(W') \subseteq W' \otimes_\mathbb{K} A$이다.
 :::
 
+즉 comodule은 언제나 유한차원 subcomodule들의 합집합이며, [명제 14](#prop14)에 의해 각 subcomodule은 $G$의 representation이다. 이 관찰을 $A$ 자신에 적용하면, $A$의 임의의 유한개의 원소를 담는 유한차원 representation을 얻는다. $A$가 finitely generated algebra라는 사실을 여기에 얹으면 다음을 얻는다.
+
 ::: 정리 16
 모든 affine algebraic group $G$는 적당한 $n$에 대하여 $\GL(n;\mathbb{K})$의 closed subgroup과 isomorphic하다. 이 때문에 affine algebraic group을 *linear algebraic group*이라 부르기도 한다.
 :::
@@ -283,7 +291,7 @@ $J = \ker\rho^\ast$라 하면 $\mathbb{K}[\GL(n;\mathbb{K})]/J \cong A$가 reduc
 Affine algebraic group 가운데 가장 단순하면서도 가장 자주 등장하는 것은 torus이다. Torus의 representation은 전부 $1$차원 조각으로 쪼개지며, 그 조각들을 기록하는 것이 character이다.
 
 ::: 정의 17
-Algebraic group $G$의 *character<sub>지표</sub>*란 algebraic group들 사이의 homomorphism $\rchi: G \rightarrow \mathbb{G}_m$이다. Character들은 점별 곱셈 $(\rchi\rchi')(g) = \rchi(g)\rchi'(g)$에 대하여 abelian group을 이루며, 이를 $G$의 *character group* $X^\ast(G)$라 부른다.
+Algebraic group $G$의 *character<sub>지표</sub>*란 algebraic group들 사이의 homomorphism $\rchi: G \rightarrow \mathbb{G}_m$이다. Character들은 점별 multiplication $(\rchi\rchi')(g) = \rchi(g)\rchi'(g)$에 대하여 abelian group을 이루며, 이를 $G$의 *character group* $X^\ast(G)$라 부른다.
 :::
 
 두 character의 곱과 역이 다시 regular function이므로 $X^\ast(G)$가 group이라는 것은 곧바로 확인된다. 유한군의 표현론에서 쓰는 $1$차원 representation의 character가 정확히 이 개념이며, [정의 13](#def13)의 뒤에서 언급한 $\tr(\rho(g))$는 $\dim V = 1$일 때 이것과 일치한다.
@@ -329,7 +337,7 @@ $$\sum_a c_a \x^a \y^a = \left(\sum_a c_a \x^a\right)\left(\sum_b c_b \y^b\right
 Torus가 affine algebraic set 위에 작용하면 coordinate ring이 character를 따라 쪼개진다. 이는 [명제 12](#prop12)의 comodule 언어에서 곧바로 나온다.
 
 ::: 명제 20
-Torus $T$가 affine algebraic set $X$ 위에 작용한다 하고 $B = \mathbb{K}[X]$라 하자. 각 character $\rchi \in X^\ast(T)$에 대하여
+Torus $T$가 affine algebraic set $Y$ 위에 작용한다 하고 $B = \mathbb{K}[Y]$라 하자. 각 character $\rchi \in X^\ast(T)$에 대하여
 
 $$B_\rchi = \{f \in B \mid t \cdot f = \rchi(t) f \text{ for all } t \in T\}$$
 
@@ -351,14 +359,16 @@ $$(\id_B \otimes \Delta)\Delta_B(f) = \sum_\rchi f_\rchi \otimes \rchi \otimes \
 
 이고, 두 식을 비교하며 $X^\ast(T)$가 basis임을 쓰면 $\Delta_B(f_\rchi) = f_\rchi \otimes \rchi$, 곧 $t \cdot f_\rchi = \rchi(t) f_\rchi$를 얻는다. 즉 $f_\rchi \in B_\rchi$이며, counit 조건은 $f = \sum_\rchi f_\rchi$를 주므로 $B = \sum_\rchi B_\rchi$이다.
 
-합이 직합임을 보이자. 우선 $f \in B_\rchi$이면 $\Delta_B(f) - f \otimes \rchi$는 $B \otimes_\mathbb{K} A = \mathbb{K}[X \times T]$의 원소로서 모든 점 $(x,t)$에서 값이 $0$이므로 $\Delta_B(f) = f \otimes \rchi$이다. 따라서 $f_\rchi \in B_\rchi$들에 대해 $\sum_\rchi f_\rchi = 0$이라 하면
+합이 직합임을 보이자. 우선 $f \in B_\rchi$이면 $\Delta_B(f) - f \otimes \rchi$는 $B \otimes_\mathbb{K} A = \mathbb{K}[Y \times T]$의 원소로서 모든 점 $(x,t)$에서 값이 $0$이므로 $\Delta_B(f) = f \otimes \rchi$이다. 따라서 $f_\rchi \in B_\rchi$들에 대해 $\sum_\rchi f_\rchi = 0$이라 하면
 
 $$0 = \Delta_B\left(\sum_\rchi f_\rchi\right) = \sum_\rchi f_\rchi \otimes \rchi$$
 
 이고, $X^\ast(T)$가 basis이므로 모든 $f_\rchi$가 $0$이다.
 :::
 
-$T = (\mathbb{G}_m)^n$이 $\mathbb{A}^n$ 위에 좌표별 곱셈으로 작용하는 경우 $B = \mathbb{K}[\x_1, \ldots, \x_n]$이고, monomial $\x^b$에 대해 $(t \cdot \x^b)(x) = (t^{-1}x)^b = t^{-b} x^b$이므로 $t \cdot \x^b = \rchi^{-b}(t) \x^b$이며 $\x^b$는 weight $\rchi^{-b}$를 갖는다. 따라서 이 경우 [명제 20](#prop20)의 분해는 다항식을 monomial들의 합으로 적는 것에 지나지 않는다. 반면 $T_n$이 $\GL(n;\mathbb{K})$ 위에 conjugation으로 작용하면 좌표함수 $\x_{ij}$에 대하여
+$B_\rchi$의 $0$이 아닌 원소가 *weight* $\rchi$를 갖는다고 말하고, $B_\rchi$를 $\rchi$의 *weight space*, [명제 20](#prop20)의 분해를 $B$의 *weight decomposition*이라 부른다. $B$가 유한차원이 아니어도 분해가 성립한다는 점과 각 조각이 character 하나로 기술된다는 점이 torus에 특유한 것이며, 이 때문에 torus의 action은 계산 가능한 대상이 된다.
+
+$T = (\mathbb{G}_m)^n$이 $\mathbb{A}^n$ 위에 좌표별 multiplication으로 작용하는 경우 $B = \mathbb{K}[\x_1, \ldots, \x_n]$이고, monomial $\x^b$에 대해 $(t \cdot \x^b)(x) = (t^{-1}x)^b = t^{-b} x^b$이므로 $t \cdot \x^b = \rchi^{-b}(t) \x^b$이며 $\x^b$는 weight $\rchi^{-b}$를 갖는다. 따라서 이 경우 [명제 20](#prop20)의 분해는 다항식을 monomial들의 합으로 적는 것에 지나지 않는다. 반면 $T_n$이 $\GL(n;\mathbb{K})$ 위에 conjugation으로 작용하면 좌표함수 $\x_{ij}$에 대하여
 
 $$(t \cdot \x_{ij})(x) = \x_{ij}(t^{-1}xt) = t_i^{-1} t_j x_{ij}$$
 
@@ -403,16 +413,26 @@ $G$가 connected이므로 [명제 5](#prop5)에 의해 irreducible이고, 따라
 Connected가 아닌 $G$에 대해서는 $G^\circ$로 바꾸어 생각하면 된다. [명제 5](#prop5)에 의해 $G$의 orbit은 $G^\circ$의 orbit 유한개의 합집합이고, 이들은 서로 isomorphic하므로 차원이 같기 때문이다.
 
 ::: 예시 23
-1. $\mathbb{G}_m$이 $\mathbb{A}^1$ 위에 곱셈으로 작용하면 orbit은 $\{0\}$과 $\mathbb{A}^1 \setminus \{0\}$ 둘뿐이다. 후자는 열린집합이고 그 closure가 $\mathbb{A}^1$이며 그 boundary가 closed orbit $\{0\}$이므로, 이는 [명제 22](#prop22)가 기술하는 상황의 가장 단순한 예이다. 한편 모든 $t$에 대해 $t \cdot f = f$를 만족하는 $f \in \mathbb{K}[\x]$는 상수뿐이므로, invariant function으로 두 orbit을 구별할 수 없다. 이처럼 orbit들의 집합은 일반적으로 variety 구조를 자연스럽게 물려받지 못한다.
-2. $\GL(2;\mathbb{K})$가 $2 \times 2$ 행렬들의 공간 $\mathbb{A}^4$ 위에 conjugation으로 작용한다 하자. $a \ne b$일 때 $\operatorname{diag}(a,b)$의 orbit은 characteristic polynomial이 $(\lambda - a)(\lambda - b)$인 행렬들 전체와 같고, 이는 $\tr = a + b$와 $\det = ab$가 정의하는 닫힌집합이므로 closed orbit이며 그 차원은 $2$이다. 반면
+1. $\mathbb{G}_m$이 $\mathbb{A}^1$ 위에 multiplication으로 작용하면 orbit은 $\{0\}$과 $\mathbb{A}^1 \setminus \{0\}$ 둘뿐이다. 후자는 열린집합이고 그 closure가 $\mathbb{A}^1$이며 그 boundary가 closed orbit $\{0\}$이므로, 이는 [명제 22](#prop22)가 기술하는 상황의 가장 단순한 예이다. 한편 모든 $t$에 대해 $t \cdot f = f$를 만족하는 $f \in \mathbb{K}[\x]$는 상수뿐이므로, invariant function으로 두 orbit을 구별할 수 없다. 이처럼 orbit들의 집합은 일반적으로 variety 구조를 자연스럽게 물려받지 못한다.
+2. $\GL(2;\mathbb{K})$가 $2 \times 2$ 행렬들의 공간 $\mathbb{A}^4$ 위에 conjugation으로 작용한다 하자. 좌표를 $\x_{11}, \x_{12}, \x_{21}, \x_{22}$로 적는다. $a \ne b$일 때 $\operatorname{diag}(a,b)$의 orbit은 characteristic polynomial이 $(\lambda - a)(\lambda - b)$인 행렬들 전체와 같은데, 그러한 행렬은 서로 다른 두 eigenvalue를 가져 모두 대각화되기 때문이다. 이 집합은 $\tr = a + b$와 $\det = ab$가 정의하는 닫힌집합이므로 closed orbit이다. 또 $\x_{22} = a + b - \x_{11}$을 대입하면 이 집합은 $\mathbb{A}^3$ 안의 hypersurface
+
+    $$\x_{12}\x_{21} + (\x_{11} - a)(\x_{11} - b) = 0$$
+
+    과 isomorphic한데, 좌변은 $\x_{12}$에 대하여 일차이고 그 두 계수 $\x_{21}$과 $(\x_{11} - a)(\x_{11} - b)$가 서로소이므로 irreducible이다. 따라서 이 orbit의 차원은 $2$이다. ([§차원, ⁋명제 6](/ko/math/algebraic_varieties/dimension#prop6))
+
+    반면
 
     $$J = \begin{pmatrix} a & 1 \\ 0 & a \end{pmatrix}$$
 
-    의 stabilizer는 $J$와 commute하는 가역행렬들, 곧 $c \ne 0$인 $cI + d(J - aI)$들이므로 $G \cdot J$의 차원도 $2$이다. 그런데
+    의 orbit은 eigenvalue가 $a$뿐이면서 대각화되지 않는 행렬들, 곧 $(A - aI)^2 = 0$이고 $A \ne aI$인 $A$들 전체이다. Cayley–Hamilton 정리에 의해 $N = A - aI$에 대한 조건 $N^2 = 0$은 $\tr N = \det N = 0$과 동치이므로, $\x_{22} = -\x_{11}$을 대입하면 이 orbit은 $\mathbb{A}^3$ 안의 quadric cone
+
+    $$\x_{11}^2 + \x_{12}\x_{21} = 0$$
+
+    에서 꼭짓점 하나를 뺀 것과 isomorphic하다. 좌변도 위와 같은 이유로 irreducible이므로 이 cone은 차원 $2$의 irreducible hypersurface이고, orbit은 그 안의 공집합이 아닌 열린집합이므로 $\overline{G \cdot J}$는 cone 전체이며 $G \cdot J$의 차원은 $2$이다. 실제로
 
     $$\begin{pmatrix} t & 0 \\ 0 & 1 \end{pmatrix} J \begin{pmatrix} t & 0 \\ 0 & 1 \end{pmatrix}^{-1} = \begin{pmatrix} a & t \\ 0 & a \end{pmatrix}$$
 
-    이므로 $t$가 $\mathbb{G}_m$ 위를 움직일 때 얻어지는 이 행렬들의 closure는 $t = 0$에 해당하는 $aI$를 포함한다. 즉 $G \cdot J$는 닫혀 있지 않으며, 그 boundary는 차원 $0$인 closed orbit $\{aI\}$를 포함한다.
+    이므로 $t$가 $\mathbb{G}_m$ 위를 움직일 때 얻어지는 행렬들의 closure는 $t = 0$에 해당하는 $aI$를 포함한다. 즉 $G \cdot J$는 닫혀 있지 않으며, 그 boundary는 차원 $0$인 closed orbit $\{aI\}$이다.
 :::
 
 Orbit들의 집합 자체에 기하학적 구조를 주는 일반론은 geometric invariant theory에서 다룬다. 여기서는 그 대신 orbit 하나가 variety로서 어떻게 생겼는지만 살펴본다. Orbit $G \cdot x$는 집합으로서 coset space $G/G_x$와 같으므로, 자연스러운 질문은 임의의 closed subgroup $H \subseteq G$에 대하여 $G/H$가 variety 구조를 갖는지의 여부일 것이다.
@@ -436,11 +456,11 @@ $$H = \{g \in G \mid \rho(g)L = L\}$$
 $\operatorname{char}\mathbb{K} = 0$일 때에는 더 나아가, $G$가 $X$ 위에 transitive하게 작용하면 $x \in X$에 대해 $gG_x \mapsto g \cdot x$가 유도하는 morphism $G/G_x \rightarrow X$가 isomorphism이 된다. 양의 characteristic에서는 이것이 bijective morphism이기는 하나 isomorphism이 아닐 수 있다. Transitive한 action이 주어진 variety를 *homogeneous space*라 부르며, 위의 사실은 homogeneous space가 언제나 $G/H$ 꼴로 나타남을 말해준다.
 
 ::: 예시 25
-$\GL(n;\mathbb{K})$는 Grassmannian $\Gr(k, n)$ 위에 $g \cdot W = g(W)$로 작용한다. ([§그라스만 다양체, ⁋정의 1](/ko/math/algebraic_varieties/grassmannians#def1)) 임의의 $k$차원 부분공간의 basis를 전체 공간의 basis로 확장할 수 있으므로 이 action은 transitive하다. Standard subspace $W_0 = \operatorname{span}(e_1, \ldots, e_k)$의 stabilizer는 $W_0$을 보존하는 가역행렬들, 곧 왼쪽 아래 $(n-k) \times k$ block이 $0$인 행렬들의 집합
+이 예시에서는 $\operatorname{char}\mathbb{K} = 0$을 가정한다. $\GL(n;\mathbb{K})$는 Grassmannian $\Gr(k, n)$ 위에 $g \cdot W = g(W)$로 작용한다. ([§그라스만 다양체, ⁋정의 1](/ko/math/algebraic_varieties/grassmannians#def1)) 임의의 $k$차원 부분공간의 basis를 전체 공간의 basis로 확장할 수 있으므로 이 action은 transitive하다. Standard subspace $W_0 = \operatorname{span}(e_1, \ldots, e_k)$의 stabilizer는 $W_0$을 보존하는 가역행렬들, 곧 왼쪽 아래 $(n-k) \times k$ block이 $0$인 행렬들의 집합
 
 $$P = \left\{ \begin{pmatrix} A & B \\ 0 & D \end{pmatrix} \in \GL(n;\mathbb{K}) \right\}$$
 
-이며 이는 closed subgroup이다. 따라서
+이며 이는 closed subgroup이다. 따라서 앞 문단에 의해
 
 $$\Gr(k, n) \cong \GL(n;\mathbb{K})/P$$
 
@@ -448,7 +468,7 @@ $$\Gr(k, n) \cong \GL(n;\mathbb{K})/P$$
 
 $$\dim \Gr(k, n) = n^2 - \dim P = k(n-k)$$
 
-이고, 이는 [§그라스만 다양체, ⁋명제 5](/ko/math/algebraic_varieties/grassmannians#prop5)와 일치한다. $k = 1$인 경우가 $\mathbb{P}^{n-1} \cong \GL(n;\mathbb{K})/P$이다.
+이고, 이는 [§그라스만 다양체, ⁋명제 5](/ko/math/algebraic_varieties/grassmannians#prop5)와 일치한다. $k = 1$인 경우가 $\mathbb{P}^{n-1} \cong \GL(n;\mathbb{K})/P$이다. 양의 characteristic에서도 같은 isomorphism이 성립하지만, 그것을 확인하려면 orbit map $\GL(n;\mathbb{K}) \rightarrow \Gr(k, n)$이 separable이라는 사실이 필요하므로 여기서는 [Spr]에 맡긴다.
 :::
 
 ---
