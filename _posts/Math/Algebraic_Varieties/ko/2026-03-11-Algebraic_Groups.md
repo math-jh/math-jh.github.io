@@ -291,7 +291,7 @@ $J = \ker\rho^\ast$라 하면 $\mathbb{K}[\GL(n;\mathbb{K})]/J \cong A$가 reduc
 Affine algebraic group 가운데 가장 단순하면서도 가장 자주 등장하는 것은 torus이다. Torus의 representation은 전부 $1$차원 조각으로 쪼개지며, 그 조각들을 기록하는 것이 character이다.
 
 ::: 정의 17
-Algebraic group $G$의 *character<sub>지표</sub>*란 algebraic group들 사이의 homomorphism $\rchi: G \rightarrow \mathbb{G}_m$이다. Character들은 점별 multiplication $(\rchi\rchi')(g) = \rchi(g)\rchi'(g)$에 대하여 abelian group을 이루며, 이를 $G$의 *character group* $X^\ast(G)$라 부른다.
+Algebraic group $G$의 *character<sub>지표</sub>*란 algebraic group들 사이의 homomorphism $\rchi: G \rightarrow \mathbb{G}_m$이다. Character들은 점별 multiplication $(\rchi\rchi')(g) = \rchi(g)\rchi'(g)$에 대하여 abelian group을 이루며, 이를 $G$의 *character group<sub>지표군</sub>* $X^\ast(G)$라 부른다.
 :::
 
 두 character의 곱과 역이 다시 regular function이므로 $X^\ast(G)$가 group이라는 것은 곧바로 확인된다. 유한군의 표현론에서 쓰는 $1$차원 representation의 character가 정확히 이 개념이며, [정의 13](#def13)의 뒤에서 언급한 $\tr(\rho(g))$는 $\dim V = 1$일 때 이것과 일치한다.

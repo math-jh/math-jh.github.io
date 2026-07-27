@@ -1476,6 +1476,13 @@ C:
     url: /ko/math/representation_theory/spectrum_of_finite_dimensional_algebras
   - label: '[대수다양체] §대수적 군'
     url: /ko/math/algebraic_varieties/algebraic_groups
+- id: character_group
+  en: character group
+  ko: 지표군
+  primary: en
+  defs:
+  - label: '[대수다양체] §대수적 군'
+    url: /ko/math/algebraic_varieties/algebraic_groups#def17
 - id: characteristic
   en: characteristic
   ko: 표수
@@ -3790,6 +3797,8 @@ E:
   defs:
   - label: '[복소기하학] §복소다양체'
     url: /ko/math/complex_geometry/complex_manifolds
+  - label: '[대수다양체] §대수적 군'
+    url: /ko/math/algebraic_varieties/algebraic_groups
 - id: embedded_point
   en: embedded point
   ko: 매장점
