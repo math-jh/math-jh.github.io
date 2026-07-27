@@ -12,19 +12,16 @@ sidebar:
 date: 2024-05-24
 weight: 15
 
-published: false
 ---
 
-이번 글에서 우리는 separated morphism과 proper morphism을 정의한다. 이들은 위상수학에서 Hausdorff 조건과 compact 조건을 대수기하로 옮겨온 것이라고 생각하면 편하다. 
-
-우리는 앞선 글들에서 open subscheme을 정의하였고 ([§스킴, ⁋정의 4](/ko/math/scheme_theory/schemes#def4)), closed embedding과 그로부터 얻어지는 closed subscheme, 그리고 ideal sheaf를 살펴보았다. ([§닫힌 부분스킴, ⁋정의 2](/ko/math/scheme_theory/closed_subschemes#def2), [⁋정의 5](/ko/math/scheme_theory/closed_subschemes#def5)) 여기에 다음의 개념들을 더한다.
+이번 글에서 우리는 separated morphism과 proper morphism을 정의한다. 우리는 앞선 글들에서 open subscheme을 정의하였고 ([§스킴, ⁋정의 4](/ko/math/scheme_theory/schemes#def4)), closed embedding과 그로부터 얻어지는 closed subscheme, 그리고 ideal sheaf를 살펴보았다. ([§닫힌 부분스킴, ⁋정의 2](/ko/math/scheme_theory/closed_subschemes#def2), [⁋정의 5](/ko/math/scheme_theory/closed_subschemes#def5)) 여기에 다음의 개념들을 더한다.
 
 ::: 정의 1
-Scheme morphism $f: X \rightarrow Y$가 주어졌다 하자.
+Scheme morphism $\varphi: X \rightarrow Y$가 주어졌다 하자.
 
-1. $f$가 $X$와 $Y$의 open subscheme 사이의 isomorphism을 유도하면 $f$를 *open immersion<sub>열린 몰입</sub>*이라 부른다.
-2. $f$가 *projective<sub>사영사상</sub>*라는 것은 적당한 $n$에 대하여, $f$를 closed embedding과 projection의 합성 $X\hookrightarrow \mathbb{P}^n_Y \rightarrow Y$의 꼴로 분해할 수 있는 것이다. ([§사영공간과 Proj 구성](/ko/math/scheme_theory/projective_schemes))
-3. $f$가 *quasi-projective<sub>준사영사상</sub>*라는 것은 이를 적당한 open immersion $X \rightarrow X'$와 projective morphism $X' \rightarrow Y$의 합성으로 분해할 수 있는 것이다. 
+1. $\varphi$가 $X$와 $Y$의 open subscheme 사이의 isomorphism을 유도하면 $\varphi$를 *open immersion<sub>열린 몰입</sub>*이라 부른다.
+2. $\varphi$가 *projective<sub>사영사상</sub>*라는 것은 적당한 $n$에 대하여, $\varphi$를 closed embedding과 projection의 합성 $X\hookrightarrow \mathbb{P}^n_Y \rightarrow Y$의 꼴로 분해할 수 있는 것이다. ([§사영공간과 Proj 구성](/ko/math/scheme_theory/projective_schemes))
+3. $\varphi$가 *quasi-projective<sub>준사영사상</sub>*라는 것은 이를 적당한 open immersion $X \rightarrow X'$와 projective morphism $X' \rightarrow Y$의 합성으로 분해할 수 있는 것이다. 
 :::
 
 첫째 정의는 자명한 것이며, 둘째와 셋째 정의 또한 [\[대수다양체\] §사영다양체, ⁋정의 3](/ko/math/algebraic_varieties/projective_varieties#def3)과 [\[대수다양체\] §준사영다양체, ⁋정의 1](/ko/math/algebraic_varieties/quasi_projective_varieties#def1)을 relative 버전, 즉 $\Sch_{/Y}$에서 다룬 것이다. 
@@ -61,35 +58,35 @@ $$\kappa((0))=K, \qquad \kappa(\mathfrak{m})=A_\mathfrak{m}/\mathfrak{m}A_\mathf
 
 예시를 조금 더 기하적으로 살펴보자. $Z((0))=\Spec A$이므로 $(0)$의 closure는 $\Spec A$ 전체가 되고, 곧 $(0)$은 이 공간의 generic point가 된다. 이와 같은 상황은 곡선 $C$와 그 위의 점 $p$에 대해 $\mathcal{O}_{C,p}$가 discrete valuation ring일 때 특히 직관적으로 보여진다. 구체적으로 stalk
 
-$$\mathcal{O}_{C,p}=\varinjlim_{U\supset p} \mathcal{O}(U)$$
+$$\mathcal{O}_{C,p}=\varinjlim_{U\ni p} \mathcal{O}(U)$$
 
 은 점 $p$에서의 germ으로 볼 수 있으며, $\Spec \mathcal{O}_{C,p}$의 generic point $(0)$은 바로 이 데이터를 담고 있는 것이다. 그럼 남아있는 (유일한) 점 $\mathfrak{m}$은 정확하게 점 $p$에 해당하는 것으로, 이것이 $(0)$의 specialization이라는 사실이 바로 germ을 정의할 때 $p$에 한없이 가까운 근방을 살펴본다는 것을 반영한다. 
 
 이 그림에서 $\Spec K$의 역할은 함수 쪽을 살펴보면 드러난다. $\Spec A$ 위의 함수들은 $A$ 자신, 곧 $p$에서 regular한 germ들이고, 자명하지 않은 유일한 열린집합 $D(\pi)=\{(0)\}$ 위의 함수들인 $K\cong A_\pi$의 원소는 $f=\pi^nu$의 꼴을 음의 order $n$까지 허용한 것이다. ([\[가환대수학\] §인자, ⁋명제 8](/ko/math/commutative_algebra/divisors#prop8)의 2번) 즉, 이는 $p$에서 pole을 갖되 그 order가 유한한 함수, 곧 $p$ 하나만 빼면 근방 전체에서 regular한 함수를 뜻하며, 따라서 $\Spec K$는 이 germ에서 중심 $p$를 빼내어, $p$의 정보는 잃어버린 채 $p$의 근방에 대한 정보만 가지고 있는 공간이며, canonical morphism $\Spec K \rightarrow \Spec A$는 정확히 이 그림이 정의하는 포함사상이다. 
 
-그럼 morphism $\Spec K \rightarrow X$는 $X$ 안으로 들어가는, 점이 빠진 곡선의 germ이고, 이를 $\Spec A \rightarrow X$로 확장하는 것은 빠져 있던 그 점을 $X$ 안에서 되찾아 곡선을 이어 붙이는 것, 곧 곡선의 극한을 찾는 것이 된다. 이 extension이 많아야 하나 존재한다는 것이 separatedness이고 정확히 하나 존재한다는 것이 properness이며, 이것이 앞으로 볼 두 판정법의 내용이다. 이는 위상적으로는 Hausdorff 공간에서 극한이 유일하고 ([\[위상수학\] §하우스도르프 공간, ⁋명제 4](/ko/math/topology/Hausdorff_spaces#prop4)), compact 공간에서 극한이 항상 존재한다는 것에 정확히 대응하는 구도이다. ([\[위상수학\] §Compactness와 paracompactness, ⁋보조정리 1](/ko/math/topology/compactness#lem1))
+그럼 morphism $\Spec K \rightarrow X$는 $X$ 안으로 들어가는, 점이 빠진 곡선의 germ이고, 이를 $\Spec A \rightarrow X$로 확장하는 것은 빠져 있던 그 점을 $X$ 안에서 되찾아 곡선을 이어 붙이는 것, 곧 곡선의 극한을 찾는 것이 된다. 이 extension이 많아야 하나 존재한다는 것이 separatedness이고 정확히 하나 존재한다는 것이 properness이며, 이것이 앞으로 볼 두 판정법의 내용이다. 이는 위상적으로는 Hausdorff 공간에서 극한이 유일하고 ([\[위상수학\] §하우스도르프 공간, ⁋명제 4](/ko/math/topology/Hausdorff_spaces#prop4)), compact 공간에서 극한이 항상 존재한다는 사실에 대한 대수기하 analogue이다. ([\[위상수학\] §Compactness와 paracompactness, ⁋보조정리 1](/ko/math/topology/compactness#lem1))
 
 ## 분리사상
 
 위에서 살펴본 것과 같이, 주어진 곡선의 germ이 주어졌을 때, 그 중심 점 $p$를 채우는 방법이 많아야 하나 존재한다는 것이 separated morphism의 아이디어이다. 이를 서술하기 위해서는 다음 정의가 필요하다. 
 
 ::: 정의 3
-Scheme morphism $f:X \rightarrow Y$에 대하여, 두 개의 $\id_X$가 fiber product의 universal property에 의해 유도하는 유일한 morphism, 곧 다음 diagram
+Scheme morphism $\varphi:X \rightarrow Y$에 대하여, 두 개의 $\id_X$가 fiber product의 universal property에 의해 유도하는 유일한 morphism, 곧 다음 diagram
 
-{% diagram Math/Scheme_Theory/Valuative_Criteria-1.svg width="13.51em" alt="diagonal_morphism" %}
+{% diagram Math/Scheme_Theory/Valuative_Criteria-1.svg width="13.58em" alt="diagonal_morphism" %}
 
-의 점선 화살표 $\Delta: X \rightarrow X \times_Y X$를 $f$의 *diagonal morphism<sub>대각사상</sub>*이라 부른다. ([§올곱, ⁋정의 1](/ko/math/scheme_theory/fiber_products#def1)) 만일 $\Delta$가 closed embedding이라면 $f$를 *separated<sub>분리사상</sub>*라 부르고, $X$가 $Y$에 대해 *separated*라 부른다. 만일 $X$가 $\Spec \mathbb{Z}$에 대해 separated이면, $X$를 간단히 *separated* scheme이라 부른다.
+의 점선 화살표 $\Delta: X \rightarrow X \times_Y X$를 $\varphi$의 *diagonal morphism<sub>대각사상</sub>*이라 부른다. ([§올곱, ⁋정의 1](/ko/math/scheme_theory/fiber_products#def1)) 만일 $\Delta$가 closed embedding이라면 $\varphi$를 *separated<sub>분리사상</sub>*라 부르고, $X$가 $Y$에 대해 *separated*라 부른다. 만일 $X$가 $\Spec \mathbb{Z}$에 대해 separated이면, $X$를 간단히 *separated* scheme이라 부른다.
 :::
 
 어느 morphism의 diagonal인지를 밝혀야 할 때에는 $\Delta$ 대신 $\Delta_{X/Y}$로 적는다. 정의로부터 두 projection $p_1,p_2: X\times_YX \rightarrow X$에 대해 $p_1\circ\Delta=p_2\circ\Delta=\id_X$인 것은 자명하다. 또, $\Delta$는 단사이고 $p_1$을 $\Delta(X)$로 제한한 것이 $\Delta$의 연속인 역함수를 주므로, $\Delta$는 언제나 $\Delta(X)$ 위로의 homeomorphism이다. 따라서 $\Delta$가 closed embedding인지를 묻는 것은, $\Delta(X)$가 닫혀 있는지와 $X$의 함수들이 모두 $X\times_YX$의 함수를 제한하여 얻어지는지를 묻는 것이 된다. ([§닫힌 부분스킴, ⁋정의 2](/ko/math/scheme_theory/closed_subschemes#def2))
 
-대수기하학에서는 separatedness가 Hausdorff를 대체하는 성질이라 생각한다. 위상공간 $T$가 Hausdorff인 것이 $T\times T$ 안에서 대각선이 닫혀 있는 것과 동치였음을 떠올리면 ([\[위상수학\] §하우스도르프 공간, ⁋보조정리 5](/ko/math/topology/Hausdorff_spaces#lem5)) 다음 명제를 기대하는 것이 자연스럽다. 
+위에서 설명한 것과 같이 대수기하학에서는 separatedness가 Hausdorff를 대체하는 성질이라 생각한다. 위상공간 $T$가 Hausdorff인 것이 $T\times T$ 안에서 대각선이 닫혀 있는 것과 동치였음을 떠올리면 ([\[위상수학\] §하우스도르프 공간, ⁋보조정리 5](/ko/math/topology/Hausdorff_spaces#lem5)) 다음 명제를 기대하는 것이 자연스럽다. 
 
 ::: 명제 4
-$f:X \rightarrow Y$가 separated인 것과, diagonal morphism $\Delta: X \rightarrow X\times_YX$에 의한 $X$의 image가 닫힌집합인 것이 동치이다.
+$\varphi:X \rightarrow Y$가 separated인 것과, diagonal morphism $\Delta: X \rightarrow X\times_YX$에 의한 $X$의 image가 닫힌집합인 것이 동치이다.
 :::
 ::: 증명
-정의에 의하여 $f$가 separated라면 $\Delta(X)$가 닫혀있음은 자명하다. 따라서 $\Delta(X)$가 closed임을 가정하고, $\Delta$가 closed embedding임을 보여야 한다. 앞에서 보았듯 $\Delta$는 언제나 $\Delta(X)$ 위로의 homeomorphism이므로, 가정과 함께 위상적인 조건은 이미 확보되었고 $\mathcal{O}_{X\times_YX} \rightarrow \Delta_\ast \mathcal{O}_X$가 surjective임만 보이면 된다. 이는 stalk 위에서 체크할 수 있다.
+정의에 의하여 $\varphi$가 separated라면 $\Delta(X)$가 닫혀있음은 자명하다. 따라서 $\Delta(X)$가 closed임을 가정하고, $\Delta$가 closed embedding임을 보여야 한다. 앞에서 보았듯 $\Delta$는 언제나 $\Delta(X)$ 위로의 homeomorphism이므로, 가정과 함께 위상적인 조건은 이미 확보되었고 $\mathcal{O}_{X\times_YX} \rightarrow \Delta_\ast \mathcal{O}_X$가 surjective임만 보이면 된다. 이는 stalk 위에서 체크할 수 있다.
 
 우선 $q\notin \Delta(X)$인 점에서는 볼 것이 없다. $\Delta(X)$가 닫혀 있다는 가정으로부터 $q$의 열린근방 $W$가 존재하여 $W\cap\Delta(X)=\emptyset$이고, 그럼 $\Delta^{-1}(W)=\emptyset$이므로
 
@@ -97,11 +94,13 @@ $$(\Delta_\ast\mathcal{O}_X)(W)=\mathcal{O}_X(\emptyset)=0$$
 
 이 되어 $(\Delta_\ast\mathcal{O}_X)_q=0$이기 때문이다. 아래에서 택할 열린근방들은 $\Delta(X)$ 바깥의 점을 덮지 못하므로, 가정이 실제로 쓰이는 곳은 정확히 여기이다.
 
-이제 $\Delta(p)$ 꼴의 점을 보자. 임의의 $p\in X$에 대하여 $p$의 open affine subset $U$를 택할 수 있으며, 필요하다면 $U$를 제한하여 $f(U)$가 $Y$의 어떠한 open affine subset $V$에 속하도록 할 수 있다. 그럼 $U\times_VU$는 $X\times_YX$의 열린집합으로서 $\Delta(p)$의 open neighborhood이고, $p_1\circ\Delta=p_2\circ\Delta=\id_X$이므로 $\Delta^{-1}(U\times_VU)=U$이다. 이 위에서 $\Delta: U \rightarrow U\times_VU$는 다음의 [보조정리 5](#lem5)에 의하여 closed embedding이므로 $\mathcal{O}_{U\times_VU} \rightarrow \Delta_\ast\mathcal{O}_U$가 surjective이고, 특히 $\Delta(p)$에서의 stalk 사이의 morphism이 surjective이다.
+이제 $\Delta(p)$ 꼴의 점을 보자. 임의의 $p\in X$에 대하여 $p$의 open affine subset $U$를 택할 수 있으며, 필요하다면 $U$를 제한하여 $\varphi(U)$가 $Y$의 어떠한 open affine subset $V$에 속하도록 할 수 있다. 그럼 $U\times_VU$는 $X\times_YX$의 열린집합으로서 $\Delta(p)$의 open neighborhood이고, $p_1\circ\Delta=p_2\circ\Delta=\id_X$이므로 $\Delta^{-1}(U\times_VU)=U$이다. 이 위에서 $\Delta: U \rightarrow U\times_VU$는 다음의 [보조정리 5](#lem5)에 의하여 closed embedding이므로 $\mathcal{O}_{U\times_VU} \rightarrow \Delta_\ast\mathcal{O}_U$가 surjective이고, 특히 $\Delta(p)$에서의 stalk 사이의 morphism이 surjective이다.
 :::
 
+그럼 이로부터 다음을 얻는다.
+
 ::: 보조정리 5
-Affine scheme 사이의 임의의 morphism $f:X \rightarrow Y$는 항상 separated이다.
+Affine scheme 사이의 임의의 morphism $\varphi:X \rightarrow Y$는 항상 separated이다.
 :::
 ::: 증명
 $X=\Spec A$, $Y=\Spec B$라 하면 $X\times_YX=\Spec(A\otimes_BA)$이고 ([§올곱, ⁋보조정리 2](/ko/math/scheme_theory/fiber_products#lem2)), $\Delta$는 ring homomorphism 
@@ -111,23 +110,37 @@ $$A\otimes_BA \rightarrow A;\quad a\otimes a'\mapsto aa'$$
 으로부터 유도된다. 이 ring homomorphism은 $a\otimes 1$을 $a$로 보내므로 surjective이고, 따라서 $\Delta$는 closed embedding이다. ([§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3))
 :::
 
-Separated가 아닌 scheme의 예시는 [§스킴, ⁋예시 10](/ko/math/scheme_theory/schemes#ex10)에서 만든 line with double origin이 있다. 편의상 이 scheme을 $X$라 하자. 이는 $\mathbb{K}$ 위의 scheme이므로 우리가 볼 것은 $X\times_\mathbb{K}X$이다. $X$가 두 개의 $\mathbb{A}^1_\mathbb{K}$를 원점 바깥에서 붙여 얻어졌으므로 $X\times_\mathbb{K}X$는 네 개의 $\mathbb{A}^2_\mathbb{K}$를 붙여 얻어지고, 따라서 두 좌표가 모두 $0$이 아닌 점은 한 번, 한 좌표만 $0$인 점은 두 번, 두 좌표가 모두 $0$인 원점은 네 번 나타난다. 이제 $\Delta$의 image는 원점 바깥에서는 일반적인 대각선이며, $X$의 두 원점 $0_1,0_2$는 네 개의 원점 가운데 $(0_1,0_1)$과 $(0_2,0_2)$로 간다. 곧 나머지 두 원점 $(0_1,0_2)$, $(0_2,0_1)$은 $\Delta(X)$에 속하지 않는다. 그러나 이들을 담는 chart $\mathbb{A}^2_\mathbb{K}$ 안에서 $\Delta(X)$는 원점을 뺀 대각선이고 그 closure는 대각선 전체이므로, 이 두 점은 $\Delta(X)$의 closure에는 속한다. 따라서 $\Delta(X)$는 닫혀 있지 않고 [명제 4](#prop4)에 의하여 $X$는 separated가 아니다. 역시, 위상수학에서 이 공간은 Hausdorff가 아닌 공간의 예시였다. 
+Separated가 아닌 scheme의 예시는 [§스킴, ⁋예시 10](/ko/math/scheme_theory/schemes#ex10)에서 만든 line with double origin이 있다. 편의상 이 scheme을 $X$라 하고 이를 이루는 두 chart를 $X_1=\Spec\mathbb{K}[\x_1]$, $X_2=\Spec\mathbb{K}[\x_2]$라 하자. 이들은 $\x_1$과 $\x_2$를 동일시하여 $D(\x_1)$과 $D(\x_2)$를 따라 붙여진 것이므로, 두 chart의 교집합은 원점 두 개를 뺀
+
+$$X_1\cap X_2=X\setminus \{0_1,0_2\}=\Spec\mathbb{K}[t,1/t]$$
+
+이다. 여기에서 $t$는 이 gluing 아래에서 $\x_1$과 $\x_2$가 공통적으로 대응되는 좌표이다. $X$는 $\mathbb{K}$ 위의 scheme이므로 우리가 볼 것은 $X\times_\mathbb{K}X$이며, fiber product는 각 인자를 열린집합으로 제한하여 계산할 수 있으므로 ([§올곱, ⁋보조정리 4](/ko/math/scheme_theory/fiber_products#lem4)) 이는 네 개의 chart
+
+$$X_a\times_\mathbb{K}X_b=\Spec\bigl(\mathbb{K}[\x_a]\otimes_\mathbb{K}\mathbb{K}[\x_b]\bigr)=\Spec\mathbb{K}[\x_a,\x_b]\cong \mathbb{A}^2_\mathbb{K}\qquad (a,b\in \{1,2\})$$
+
+를 붙여 얻어진다. 이 과정에서 두 좌표가 모두 $0$이 아닌 점은 네 chart에서 모두 같은 점이 되어 한 번씩 나오며, 한 좌표만 $0$인 점은 두 번, 두 좌표가 모두 $0$인 원점은 네 번 나타난다.
+
+이제 $p_1\circ\Delta=p_2\circ\Delta=\id_X$이므로 $\Delta^{-1}(X_a\times_\mathbb{K}X_b)=X_a\cap X_b$이다. 곧 $a=b$이면 이는 $X_a$ 전체이고 [보조정리 5](#lem5)에 의하여 그 위에서 $\Delta$는 closed embedding이며, 특히 $X$의 두 원점은 네 개의 원점 가운데 $(0_1,0_1)$과 $(0_2,0_2)$로 간다. 반면 $a\neq b$이면 $\Delta$는 $X_1\cap X_2=\Spec\mathbb{K}[t,1/t]$ 위에서 ring homomorphism
+
+$$\mathbb{K}[\x_1,\x_2] \longrightarrow \mathbb{K}[t,1/t];\qquad \x_1,\x_2\mapsto t$$
+
+가 유도하는 morphism이므로, chart $X_1\times_\mathbb{K}X_2\cong \mathbb{A}^2_\mathbb{K}$ 안에서 $\Delta(X)$는 대각선에서 원점을 뺀 것 $Z(\x_1-\x_2)\cap D(\x_1)$이다. 이 집합의 closure는 대각선 $Z(\x_1-\x_2)$ 전체이고 그 원점이 정확히 $(0_1,0_2)$이므로, $(0_1,0_2)$는 $\Delta(X)$에 속하지 않으면서 그 closure에는 속한다. 따라서 $\Delta(X)$는 닫혀 있지 않고 [명제 4](#prop4)에 의하여 $X$는 separated가 아니다. 이 공간은 위상적으로도 Hausdorff가 아닌 공간의 표준적인 예이다. 
 
 이제 separatedness의 판정법을 보자. [예시 2](#ex2)에서와 달리 판정법은 discrete일 필요가 없는 valuation ring 전체, 곧 임의의 $x\in K^\times$에 대해 $x\in A$이거나 $x^{-1}\in A$라는 조건만을 만족하는 field $K$의 subring $A$ 전부에 대해 요구된다. ([\[가환대수학\] §인자, ⁋정의 5](/ko/math/commutative_algebra/divisors#def5)) 또 아래에서 $j:\Spec K \rightarrow \Spec A$는 언제나 inclusion $A\hookrightarrow K$가 유도하는 morphism을 가리킨다.
 
 ::: 정리 6
-Noetherian scheme $X$와 scheme morphism $f:X \rightarrow Y$에 대하여, $f$가 separated인 것은 임의의 valuation ring $A$와 그 quotient field $K=\Frac(A)$에 대하여, 임의의 scheme morphism $\Spec A \rightarrow Y$, $\Spec K \rightarrow X$와 다음 commutative diagram
+Noetherian scheme $X$와 scheme morphism $\varphi:X \rightarrow Y$에 대하여, $\varphi$가 separated인 것은 임의의 valuation ring $A$와 그 quotient field $K=\Frac(A)$에 대하여, 임의의 scheme morphism $\Spec A \rightarrow Y$, $\Spec K \rightarrow X$와 다음 commutative diagram
 
-{% diagram Math/Scheme_Theory/Valuative_Criteria-2.svg width="8.27em" alt="valuative_criterion" %}
+{% diagram Math/Scheme_Theory/Valuative_Criteria-2.svg width="8.34em" alt="valuative_criterion" %}
 
 의 바깥쪽 square가 주어질 때마다, 많아야 하나의 $\Spec A \rightarrow X$가 전체 diagram이 commute하도록 하는 것이 동치이다.
 :::
 ::: 증명
-바깥쪽 square가 주어졌다는 것은 morphism $u:\Spec K \rightarrow X$와 $v: \Spec A \rightarrow Y$가 주어져 $f\circ u=v\circ j$가 성립하는 것이며, 이 square의 lifting이란 $g\circ j=u$와 $f\circ g=v$를 만족하는 $g:\Spec A \rightarrow X$를 말한다.
+바깥쪽 square가 주어졌다는 것은 morphism $u:\Spec K \rightarrow X$와 $v: \Spec A \rightarrow Y$가 주어져 $\varphi\circ u=v\circ j$가 성립하는 것이며, 이 square의 lifting이란 $g\circ j=u$와 $\varphi\circ g=v$를 만족하는 $g:\Spec A \rightarrow X$를 말한다.
 
 증명 전체에서 두 개의 표준적인 사실을 사용한다. 첫째는 valuation ring의 존재정리로, field $K$와 그 안의 local subring $\mathcal{O}$가 주어질 때마다 $\Frac(A)=K$이고 $\mathcal{O}\subseteq A$이며 $\mathfrak{m}_A\cap \mathcal{O}=\mathfrak{m}_\mathcal{O}$인 valuation ring $A$가 존재한다는 것이다. 이 때 $A$가 $\mathcal{O}$를 *dominate*한다고 하며, 이러한 $A$의 존재는 $\mathcal{O}$를 dominate하는 $K$의 local subring들의 모임에 Zorn's lemma를 적용하여 얻어진다. 둘째는 field $K$에 대하여 morphism $\Spec K \rightarrow X$가 점 $x\in X$와 field homomorphism $\kappa(x) \rightarrow K$의 쌍에 일대일로 대응한다는 것이다. 이는 $X=\Spec B$인 경우 ring homomorphism $B \rightarrow K$가 그 kernel인 prime ideal $\mathfrak{p}$와 $\kappa(\mathfrak{p}) \rightarrow K$의 쌍을 주는 것에서 따르고, 일반적인 경우는 $x$의 affine open neighborhood를 택하면 된다.
 
-먼저 $f$가 separated라 가정하고, 위 square의 두 lifting $g_1, g_2$가 주어졌다 하자. $f\circ g_1=f\circ g_2=v$이므로 fiber product의 universal property에 의하여 유일한 $h:\Spec A \rightarrow X\times_YX$가 존재하여 $p_1\circ h=g_1$, $p_2\circ h=g_2$이다. 여기에서 $p_1,p_2$는 두 projection이다. 이제 $\Delta$가 closed embedding이므로 base change
+먼저 $\varphi$가 separated라 가정하고, 위 square의 두 lifting $g_1, g_2$가 주어졌다 하자. $\varphi\circ g_1=\varphi\circ g_2=v$이므로 fiber product의 universal property에 의하여 유일한 $h:\Spec A \rightarrow X\times_YX$가 존재하여 $p_1\circ h=g_1$, $p_2\circ h=g_2$이다. 여기에서 $p_1,p_2$는 두 projection이다. 이제 $\Delta$가 closed embedding이므로 base change
 
 $$Z=\Spec A\times_{X\times_YX}X \longrightarrow \Spec A$$
 
@@ -161,29 +174,29 @@ $$q:\Spec A \longrightarrow \Spec \mathcal{O} \longrightarrow T \hookrightarrow 
 
 는 $\Spec A$의 generic point $(0)$을 $\xi$로, closed point $\mathfrak{m}_A$를 $\eta$로 보낸다.
 
-이제 $g_1=p_1\circ q$, $g_2=p_2\circ q$라 하고, $f\circ p_1=f\circ p_2$이므로 잘 정의되는 $w=f\circ g_1=f\circ g_2:\Spec A \rightarrow Y$를 생각하자. [명제 4](#prop4)의 증명에서 보았듯 $x$의 affine open neighborhood $U$와 $f(U)$를 포함하는 $Y$의 affine open subset $V$를 택하면 $U\times_VU$는 $X\times_YX$에서 $\xi$의 open neighborhood이고 그 위에서 $\Delta$는 closed embedding이므로 ([보조정리 5](#lem5)), stalk 사이의 morphism $\mathcal{O}_{X\times_YX,\xi} \rightarrow \mathcal{O}_{X,x}$는 surjective이고 따라서 $\kappa(\xi) \rightarrow \kappa(x)$ 또한 surjective이다. 한편 $p_1\circ\Delta=\id_X$이므로 합성 $\kappa(x) \rightarrow \kappa(\xi) \rightarrow \kappa(x)$는 항등사상이고, 그러므로 두 morphism은 서로의 역이 되는 isomorphism이다. 곧 $K=\kappa(\xi)\cong\kappa(x)$이다. 이 동일시 아래에서 점 $x$와 $\kappa(x)\cong K$가 정의하는 canonical morphism을 $u:\Spec K \rightarrow X$라 하면, $\Delta\circ u$는 점 $\xi$와 $\kappa(\xi)\cong K$가 정의하는 canonical morphism이고 이는 $q\circ j$와 같다. 실제로 $q\circ j$는 $\xi$를 image로 갖고 residue field 위에서 $\kappa(\xi)=\Frac(\mathcal{O})=K$의 항등사상을 유도하기 때문이다. 따라서
+이제 $g_1=p_1\circ q$, $g_2=p_2\circ q$라 하고, $\varphi\circ p_1=\varphi\circ p_2$이므로 잘 정의되는 $w=\varphi\circ g_1=\varphi\circ g_2:\Spec A \rightarrow Y$를 생각하자. [명제 4](#prop4)의 증명에서 보았듯 $x$의 affine open neighborhood $U$와 $\varphi(U)$를 포함하는 $Y$의 affine open subset $V$를 택하면 $U\times_VU$는 $X\times_YX$에서 $\xi$의 open neighborhood이고 그 위에서 $\Delta$는 closed embedding이므로 ([보조정리 5](#lem5)), stalk 사이의 morphism $\mathcal{O}_{X\times_YX,\xi} \rightarrow \mathcal{O}_{X,x}$는 surjective이고 따라서 $\kappa(\xi) \rightarrow \kappa(x)$ 또한 surjective이다. 한편 $p_1\circ\Delta=\id_X$이므로 합성 $\kappa(x) \rightarrow \kappa(\xi) \rightarrow \kappa(x)$는 항등사상이고, 그러므로 두 morphism은 서로의 역이 되는 isomorphism이다. 곧 $K=\kappa(\xi)\cong\kappa(x)$이다. 이 동일시 아래에서 점 $x$와 $\kappa(x)\cong K$가 정의하는 canonical morphism을 $u:\Spec K \rightarrow X$라 하면, $\Delta\circ u$는 점 $\xi$와 $\kappa(\xi)\cong K$가 정의하는 canonical morphism이고 이는 $q\circ j$와 같다. 실제로 $q\circ j$는 $\xi$를 image로 갖고 residue field 위에서 $\kappa(\xi)=\Frac(\mathcal{O})=K$의 항등사상을 유도하기 때문이다. 따라서
 
 $$g_1\circ j=p_1\circ q\circ j=p_1\circ \Delta\circ u=u,\qquad g_2\circ j=p_2\circ q\circ j=p_2\circ\Delta\circ u=u$$
 
-이고 $f\circ g_1=f\circ g_2=w$이므로, $g_1$과 $g_2$는 $u$와 $w$가 주는 square의 두 lifting이다. 가정에 의하여 $g_1=g_2$이고, 그럼 $\Delta\circ g_1$과 $q$는 $p_1$, $p_2$와 합성했을 때 각각 $g_1$과 $g_2=g_1$을 주므로 fiber product의 universal property에 의해 $q=\Delta\circ g_1$이다. 그러므로
+이고 $\varphi\circ g_1=\varphi\circ g_2=w$이므로, $g_1$과 $g_2$는 $u$와 $w$가 주는 square의 두 lifting이다. 가정에 의하여 $g_1=g_2$이고, 그럼 $\Delta\circ g_1$과 $q$는 $p_1$, $p_2$와 합성했을 때 각각 $g_1$과 $g_2=g_1$을 주므로 fiber product의 universal property에 의해 $q=\Delta\circ g_1$이다. 그러므로
 
 $$\eta=q(\mathfrak{m}_A)=\Delta(g_1(\mathfrak{m}_A))\in \Delta(X)$$
 
-이고, $\Delta(X)$는 specialization에 대해 닫혀 있다. 앞의 관찰과 결합하면 $\Delta(X)=\cl(\Delta(X))$이므로 $\Delta(X)$는 닫힌집합이고, [명제 4](#prop4)에 의하여 $f$는 separated이다.
+이고, $\Delta(X)$는 specialization에 대해 닫혀 있다. 앞의 관찰과 결합하면 $\Delta(X)=\cl(\Delta(X))$이므로 $\Delta(X)$는 닫힌집합이고, [명제 4](#prop4)에 의하여 $\varphi$는 separated이다.
 :::
 
-한편 만일 $Y$가 Noetherian이고 $f$가 finite type morphism이라면 위의 정리를 임의의 valuation ring이 아니라, 임의의 discrete valuation ring으로 대체해도 되지만, 이 사실에 대한 증명은 현재 우리 상태에서는 할 수 없으므로 넘기기로 한다. 위의 명제 상황과 같이 일반적인 valuation ring의 $\Spec$은 prime ideal들이 더 긴 사슬을 이루어 [예시 2](#ex2)의 두 점짜리 그림에서 벗어나지만, discrete valuation ring으로 바꿔두고 나면 그 그림이 그대로 살아나 정리를 곡선의 germ으로 읽을 수 있다. 즉, 위의 정리는 점이 빠진 germ $\Spec K$를 $X$ 안에 넣는 방법이 주어졌을 때 이를 germ 전체 $\Spec A$로 채우는 방법이 많아야 하나임을 말해주는 것이다. 
+직관적으로 $\Spec A$는 generic point $(0)$과 그것이 specialize되는 closed point $\mathfrak{m}_A$로 이루어져 있으며, 그 중 generic point는 조건 $g\circ j=u$에 의해 $u$의 image $\xi$로 가야 하므로, lifting $g:\Spec A \rightarrow X$를 준다는 것은 $\eta\in \cl(\{\xi\})$인 점 $\eta=g(\mathfrak{m}_A)$를 하나 지정하는 것, 곧 주어진 germ의 극한을 $X$ 안에서 고르는 것이다. 그러므로 lifting이 많아야 하나라는 것은 하나의 germ이 서로 다른 두 극한으로 갈라지지 않는다는 뜻이며, 증명이 보여주듯 이것이 정확히 $\Delta(X)$가 specialization에 대해 닫혀 있다는 위상적 조건이 된다. 거꾸로 $X$ 안의 임의의 specialization을 이러한 germ으로 실현해 주는 것이 증명에서 쓴 valuation ring의 존재정리이고, 판정법이 discrete인 것뿐 아니라 임의의 valuation ring에 대하여 요구되는 것도 이 때문이다. 다만 일반적인 valuation ring의 $\Spec$은 prime ideal들이 더 긴 사슬을 이루어 [예시 2](#ex2)의 두 점짜리 그림에서 벗어나는데, $Y$가 Noetherian이고 $\varphi$가 finite type morphism이라면 위의 정리를 임의의 discrete valuation ring에 대한 것으로 대체해도 되므로 그 그림이 그대로 살아난다. 이 사실에 대한 증명은 현재 우리 상태에서는 할 수 없으므로 넘기기로 한다. 
 
 이 그림을 실제로 확인해 보자.
 
 ::: 예시 7
-앞에서 우리는 line with double origin $X$가 separated가 아님을 [명제 4](#prop4)로 확인했지만, [정리 6](#thm6)을 쓰면 같은 사실이 곡선의 극한이라는 말로 그대로 드러난다. $A=\mathbb{K}[t]_{(t)}$는 uniformizer $t$를 갖는 discrete valuation ring이고 $K=\Frac(A)=\mathbb{K}(t)$이며, $Y=\Spec\mathbb{K}$로 둔다. 이제 ring homomorphism $\mathbb{K}[\x_0] \rightarrow K$, $\x_0\mapsto t$가 정의하는 morphism $u:\Spec K \rightarrow X$를 생각하자. $t$는 $K$의 unit이므로 $u$의 image는 두 chart가 겹치는 열린집합에 들어간다. 모든 것이 $\mathbb{K}$ 위에 있으므로 $u$와 구조사상 $\Spec A \rightarrow \Spec\mathbb{K}$는 바깥쪽 square를 이룬다.
+앞에서 우리는 line with double origin $X$가 separated가 아님을 [명제 4](#prop4)로 확인했지만, [정리 6](#thm6)을 쓰면 같은 사실이 곡선의 극한이라는 말로 그대로 드러난다. $A=\mathbb{K}[t]_{(t)}$는 uniformizer $t$를 갖는 discrete valuation ring이고 $K=\Frac(A)=\mathbb{K}(t)$이며, $Y=\Spec\mathbb{K}$로 둔다. 이제 ring homomorphism $\mathbb{K}[\x_1] \rightarrow K$, $\x_1\mapsto t$가 정의하는 morphism $u:\Spec K \rightarrow X$를 생각하자. $t$는 $K$의 unit이므로 $u$의 image는 두 chart가 겹치는 열린집합에 들어간다. 모든 것이 $\mathbb{K}$ 위에 있으므로 $u$와 구조사상 $\Spec A \rightarrow \Spec\mathbb{K}$는 바깥쪽 square를 이룬다.
 
-이제 두 chart $X_0=\Spec\mathbb{K}[\x_0]$, $X_1=\Spec\mathbb{K}[\x_1]$로 들어가는 두 morphism
+이제 앞에서와 같이 두 chart를 $X_1=\Spec\mathbb{K}[\x_1]$, $X_2=\Spec\mathbb{K}[\x_2]$라 하고, 이들로 들어가는 두 morphism
 
-$$g_0:\Spec A \longrightarrow X_0\subseteq X,\qquad g_1:\Spec A \longrightarrow X_1\subseteq X$$
+$$g_1:\Spec A \longrightarrow X_1\subseteq X,\qquad g_2:\Spec A \longrightarrow X_2\subseteq X$$
 
-를 각각 $\x_0\mapsto t$와 $\x_1\mapsto t$로 정의하면 둘 다 $t\in A$이므로 잘 정의된다. 두 chart는 원점 바깥에서 $\x_0$와 $\x_1$을 동일시하여 붙여졌으므로 $g_0\circ j=g_1\circ j=u$이고, 따라서 둘 다 이 square의 lifting이다. 그러나 $g_0$는 $\mathfrak{m}_A=(t)$를 첫 번째 chart의 원점 $0_1$로, $g_1$은 두 번째 chart의 원점 $0_2$로 보내므로 $g_0\neq g_1$이다. 곧 점이 빠진 곡선의 germ이 두 개의 극한을 가지며, 이것이 $X$가 separated가 아닌 이유이다.
+를 각각 $\x_1\mapsto t$와 $\x_2\mapsto t$로 정의하면 둘 다 $t\in A$이므로 잘 정의된다. 두 chart는 원점 바깥에서 $\x_1$과 $\x_2$를 동일시하여 붙여졌으므로 $g_1\circ j=g_2\circ j=u$이고, 따라서 둘 다 이 square의 lifting이다. 그러나 $g_1$은 $\mathfrak{m}_A=(t)$를 첫 번째 chart의 원점 $0_1$로, $g_2$는 두 번째 chart의 원점 $0_2$로 보내므로 $g_1\neq g_2$이다. 곧 점이 빠진 곡선의 germ이 두 개의 극한을 가지며, 이것이 $X$가 separated가 아닌 이유이다.
 :::
 
 한편 [정리 6](#thm6)으로부터 다음을 얻는다.
@@ -195,10 +208,10 @@ Noetherian scheme들에 대하여,
 2. 두 separated morphism의 합성은 separated이다.
 3. Separated morphism은 base change에 의해 보존된다.
 4. Separated morphism은 fiber product에 의해 보존된다.
-5. 만일 $f:X \rightarrow Y$, $g:Y \rightarrow Z$가 scheme morphism들이고 $g\circ f$가 separated morphism이라면 $f$ 또한 separated morphism이다.
+5. 만일 $\varphi:X \rightarrow Y$, $\psi:Y \rightarrow Z$가 scheme morphism들이고 $\psi\circ \varphi$가 separated morphism이라면 $\varphi$ 또한 separated morphism이다.
 :::
 ::: 증명
-1번은 정의에서 직접 확인한다. $f$가 closed embedding이라면 $Y$의 affine open subset $V=\Spec B$마다 $f^{-1}(V)=\Spec A$이고 $B \rightarrow A$가 surjective이며 ([§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)), 이러한 $V$를 모두 모으면 $f^{-1}(V)\times_Vf^{-1}(V)$들이 $X\times_YX$를 덮는다. 각각의 위에서 $\Delta$는 [보조정리 5](#lem5)의 계산에 의하여 closed embedding이고, closed embedding은 target에 대해 affine-local하므로 $\Delta$ 자체가 closed embedding이다. $f$가 open immersion이라면 $X$를 $Y$의 open subscheme으로 보고 $Y$의 affine open subset $V=\Spec B$들과 그 안에 들어가는 $X$의 basic open subset $\Spec B_b$들을 생각하자. 그럼 $\Spec B_b\times_V\Spec B_{b'}$들이 $X\times_YX$를 덮으며, 
+1번은 정의에서 직접 확인한다. $\varphi$가 closed embedding이라면 $Y$의 affine open subset $V=\Spec B$마다 $\varphi^{-1}(V)=\Spec A$이고 $B \rightarrow A$가 surjective이며 ([§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)), 이러한 $V$를 모두 모으면 $\varphi^{-1}(V)\times_Vf^{-1}(V)$들이 $X\times_YX$를 덮는다. 각각의 위에서 $\Delta$는 [보조정리 5](#lem5)의 계산에 의하여 closed embedding이고, closed embedding은 target에 대해 affine-local하므로 $\Delta$ 자체가 closed embedding이다. $\varphi$가 open immersion이라면 $X$를 $Y$의 open subscheme으로 보고 $Y$의 affine open subset $V=\Spec B$들과 그 안에 들어가는 $X$의 basic open subset $\Spec B_b$들을 생각하자. 그럼 $\Spec B_b\times_V\Spec B_{b'}$들이 $X\times_YX$를 덮으며, 
 
 $$B_b\otimes_BB_{b'}\cong B_{bb'}=\mathcal{O}(\Spec B_b\cap \Spec B_{b'})$$
 
@@ -206,29 +219,29 @@ $$B_b\otimes_BB_{b'}\cong B_{bb'}=\mathcal{O}(\Spec B_b\cap \Spec B_{b'})$$
 
 나머지는 [정리 6](#thm6)의 판정법으로 얻어진다. 곧 lifting의 유일성이 물려받아진다는 것만 확인하면 된다.
 
-2번의 경우 $g\circ f$에 대한 바깥쪽 square $u:\Spec K \rightarrow X$, $v:\Spec A \rightarrow Z$와 두 lifting $h_1,h_2:\Spec A \rightarrow X$가 주어졌다 하자. 그럼 $f\circ h_1$과 $f\circ h_2$는 $u' = f\circ u$와 $v$가 주는 $g$에 대한 square의 두 lifting이므로 $f\circ h_1=f\circ h_2$이고, 그럼 $h_1,h_2$는 $u$와 $f\circ h_1$이 주는 $f$에 대한 square의 두 lifting이므로 $h_1=h_2$이다.
+2번의 경우 $\psi\circ \varphi$에 대한 바깥쪽 square $u:\Spec K \rightarrow X$, $v:\Spec A \rightarrow Z$와 두 lifting $h_1,h_2:\Spec A \rightarrow X$가 주어졌다 하자. 그럼 $\varphi\circ h_1$과 $\varphi\circ h_2$는 $u' = \varphi\circ u$와 $v$가 주는 $\psi$에 대한 square의 두 lifting이므로 $\varphi\circ h_1=\varphi\circ h_2$이고, 그럼 $h_1,h_2$는 $u$와 $\varphi\circ h_1$이 주는 $\varphi$에 대한 square의 두 lifting이므로 $h_1=h_2$이다.
 
-3번의 경우 $Y' \rightarrow Y$와 $X'=X\times_YY'$, $f':X' \rightarrow Y'$에 대하여 $f'$에 대한 square와 그 두 lifting $g_1',g_2':\Spec A \rightarrow X'$가 주어졌다 하자. 이들을 $X' \rightarrow X$와 합성한 것은 $f$에 대한 square의 두 lifting이므로 서로 같고, $Y'$로 가는 두 합성 또한 square가 주는 같은 morphism이므로, fiber product의 universal property의 유일성에서 $g_1'=g_2'$이다.
+3번의 경우 $Y' \rightarrow Y$와 $X'=X\times_YY'$, $\varphi':X' \rightarrow Y'$에 대하여 $\varphi'$에 대한 square와 그 두 lifting $g_1',g_2':\Spec A \rightarrow X'$가 주어졌다 하자. 이들을 $X' \rightarrow X$와 합성한 것은 $\varphi$에 대한 square의 두 lifting이므로 서로 같고, $Y'$로 가는 두 합성 또한 square가 주는 같은 morphism이므로, fiber product의 universal property의 유일성에서 $g_1'=g_2'$이다.
 
-5번의 경우 $f$에 대한 square와 두 lifting $g_1,g_2$가 주어지면, $\Spec A \rightarrow Y$를 $g$와 합성하여 $g\circ f$에 대한 square를 얻고 $g_1,g_2$는 그 두 lifting이므로 $g_1=g_2$이다.
+5번의 경우 $\varphi$에 대한 square와 두 lifting $g_1,g_2$가 주어지면, $\Spec A \rightarrow Y$를 $\psi$와 합성하여 $\psi\circ \varphi$에 대한 square를 얻고 $g_1,g_2$는 그 두 lifting이므로 $g_1=g_2$이다.
 
-끝으로 4번은 $S$-scheme들 사이의 separated morphism $f:X \rightarrow Y$, $f':X' \rightarrow Y'$에 대하여 $f\times f'$가 합성
+끝으로 4번은 $S$-scheme들 사이의 separated morphism $\varphi:X \rightarrow Y$, $\varphi':X' \rightarrow Y'$에 대하여 $\varphi\times \varphi'$가 합성
 
 $$X\times_SX' \longrightarrow Y\times_SX' \longrightarrow Y\times_SY'$$
 
-으로 분해되고 두 morphism이 각각 $f$와 $f'$의 base change이므로, 3번과 2번에서 따라온다. 
+으로 분해되고 두 morphism이 각각 $\varphi$와 $\varphi'$의 base change이므로, 3번과 2번에서 따라온다. 
 :::
 
 특히 2번과 5번을 함께 쓰면, $Y$가 separated scheme일 때 $Y$-scheme $X$가 separated scheme인 것과 그 구조사상 $X \rightarrow Y$가 separated인 것이 동치임을 안다. Affine scheme은 [보조정리 5](#lem5)에 의하여 언제나 separated scheme이므로, 가령 affine scheme 위의 scheme에 대해서는 separatedness를 구조사상만 보고 판정할 수 있다.
 
-Separatedness는 두 morphism이 언제 같은지를 판정하는 데에도 쓰인다. Reduced scheme $X$와 separated scheme $Y$, 그리고 $X$의 dense open subset $W$ 위에서 일치하는 두 morphism $f,g: X \rightarrow Y$가 주어졌다 하자. 그럼 $f$와 $g$가 유도하는 morphism $h: X \rightarrow Y\times_{\Spec \mathbb{Z}}Y$에 대하여 $f$와 $g$가 일치하는 자리는 $\Delta$를 $h$를 따라 base change한 것으로 주어지고, closed embedding의 base change는 다시 closed embedding이므로 ([§올곱, ⁋보조정리 10](/ko/math/scheme_theory/fiber_products#lem10)) 이는 $X$의 closed subscheme이다. 이 closed subscheme이 $W$를 포함하여 위상적으로 $X$ 전체이므로, 이를 정의하는 ideal sheaf는 $X$의 각 affine open subset $\Spec A$ 위에서 $\mathfrak{N}(A)=0$에 포함되고 ([§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)), 따라서 $f=g$이다. 이를 [§스킴 사상의 성질들, ⁋정의 22](/ko/math/scheme_theory/properties_of_scheme_morphisms#def22)에 적용하면, $Y$가 separated이고 $X$가 reduced일 때 rational map의 동치관계는 두 representative가 $U\cap V$ 전체에서 일치한다는 조건과 같아진다. 그 글에서는 $Y$가 affine인 경우로 이를 확인하였으며, affine scheme이 언제나 separated인 만큼 이는 위 논증의 특수한 경우이다.
+Separatedness는 두 morphism이 언제 같은지를 판정하는 데에도 쓰인다. Reduced scheme $X$와 separated scheme $Y$, 그리고 $X$의 dense open subset $W$ 위에서 일치하는 두 morphism $\varphi,\psi: X \rightarrow Y$가 주어졌다 하자. 그럼 $\varphi$와 $\psi$가 유도하는 morphism $h: X \rightarrow Y\times_{\Spec \mathbb{Z}}Y$에 대하여 $\varphi$와 $\psi$가 일치하는 자리는 $\Delta$를 $h$를 따라 base change한 것으로 주어지고, closed embedding의 base change는 다시 closed embedding이므로 ([정리 6](#thm6)의 증명) 이는 $X$의 closed subscheme이다. 이 closed subscheme이 $W$를 포함하여 위상적으로 $X$ 전체이므로, 이를 정의하는 ideal sheaf는 $X$의 각 affine open subset $\Spec A$ 위에서 $\mathfrak{N}(A)=0$에 포함되고 ([§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)), 따라서 $\varphi=\psi$이다. 이를 [§스킴 사상의 성질들, ⁋정의 22](/ko/math/scheme_theory/properties_of_scheme_morphisms#def22)에 적용하면, $Y$가 separated이고 $X$가 reduced일 때 rational map의 동치관계는 두 representative가 $U\cap V$ 전체에서 일치한다는 조건과 같아진다. 그 글에서는 $Y$가 affine인 경우로 이를 확인하였으며, affine scheme이 언제나 separated인 만큼 이는 위 논증의 특수한 경우이다.
 
 ## 고유사상
 
 이제 compact 조건에 대응하는 성질로 넘어간다. 위상수학에서 우리는 compactness를 universally closed라는 조건으로 바꾸어 쓸 수 있음을 보았고 ([\[위상수학\] §고유함수, ⁋정리 6](/ko/math/topology/proper_maps#thm6)), 대수기하에서는 곱을 fiber product로 바꾼 이 조건이 그대로 정의가 된다.
 
 ::: 정의 9
-$f:X \rightarrow Y$가 *universally closed<sub>보편닫힌사상</sub>*라는 것은 $f$가 closed map이고, 임의의 $Y' \rightarrow Y$에 대해서도 $X\times_Y Y' \rightarrow Y'$가 closed인 것이다. Separated, universally closed인 finite type morphism을 *proper morphism<sub>고유사상</sub>*이라 부른다. 
+$\varphi:X \rightarrow Y$가 *universally closed<sub>보편닫힌사상</sub>*라는 것은 $\varphi$가 closed map이고, 임의의 $Y' \rightarrow Y$에 대해서도 $X\times_Y Y' \rightarrow Y'$가 closed인 것이다. Separated, universally closed인 finite type morphism을 *proper morphism<sub>고유사상</sub>*이라 부른다. 
 :::
 
 $Y'=Y$로 두면 두 번째 조건이 첫 번째 조건을 포함하므로, 실질적인 조건은 모든 base change가 closed map이라는 것 하나이다. 한편 우리는 이 절에서 Noetherian scheme들의 범주 안에서 작업하므로, 앞으로 universally closed를 확인할 때 base change $Y' \rightarrow Y$는 Noetherian scheme에 대한 것만 생각한다. 임의의 $Y'$에 대한 조건이 이로부터 따라온다는 것은 $Y'$를 affine으로 제한한 뒤 그 coordinate ring을 finitely generated subalgebra들의 filtered colimit으로 쓰는 극한 논법에서 얻어지며, 이는 이 글의 범위를 벗어나므로 생략하기로 한다.
@@ -236,16 +249,16 @@ $Y'=Y$로 두면 두 번째 조건이 첫 번째 조건을 포함하므로, 실�
 Proper morphism은 separated 조건과 universally closed 조건을 함께 요구하므로, 판정법 또한 두 조각으로 나뉜다. [정리 6](#thm6)이 lifting의 유일성으로 separatedness를 판정했으니, 남은 것은 lifting의 존재성이 universal closedness를 판정한다는 것이다.
 
 ::: 명제 10
-Noetherian scheme들 사이의 finite type scheme morphism $f:X \rightarrow Y$에 대하여, $f$가 universally closed인 것은 임의의 valuation ring $A$와 그 quotient field $K=\Frac(A)$에 대하여, 임의의 scheme morphism $\Spec A \rightarrow Y$, $\Spec K \rightarrow X$와 다음 commutative diagram
+Noetherian scheme들 사이의 finite type scheme morphism $\varphi:X \rightarrow Y$에 대하여, $\varphi$가 universally closed인 것은 임의의 valuation ring $A$와 그 quotient field $K=\Frac(A)$에 대하여, 임의의 scheme morphism $\Spec A \rightarrow Y$, $\Spec K \rightarrow X$와 다음 commutative diagram
 
-{% diagram Math/Scheme_Theory/Valuative_Criteria-2.svg width="8.27em" alt="valuative_criterion" %}
+{% diagram Math/Scheme_Theory/Valuative_Criteria-2.svg width="8.34em" alt="valuative_criterion" %}
 
 의 바깥쪽 square가 주어질 때마다, 적어도 하나의 $\Spec A \rightarrow X$가 존재하여 전체 diagram이 commute하는 것과 동치이다.
 :::
 ::: 증명
 [정리 6](#thm6)의 증명에서와 같이 바깥쪽 square를 $u:\Spec K \rightarrow X$, $v:\Spec A \rightarrow Y$, $j:\Spec K \rightarrow \Spec A$로 적고, 그 증명에서 인용한 두 표준적인 사실을 계속 사용한다. 곧 field $K$ 안의 local subring은 항상 $\Frac(A)=K$인 valuation ring $A$에 의해 dominate되며, morphism $\Spec K \rightarrow X$는 점 $x\in X$와 field homomorphism $\kappa(x) \rightarrow K$의 쌍과 같은 것이다. 여기에 valuation ring의 다음 극대성을 덧붙인다. 만일 $K$의 valuation ring $A$를 dominate하는 local subring $\mathcal{O}\subseteq K$가 주어졌다면 $\mathcal{O}=A$이다. 실제로 $c\in\mathcal{O}$가 $0$이 아니고 $c\notin A$라면 valuation ring의 정의에 의해 $c^{-1}\in A$이며, $c\notin A$이므로 $c^{-1}$은 $A$의 unit이 아니다. 곧 $c^{-1}\in\mathfrak{m}_A\subseteq \mathfrak{m}_\mathcal{O}$인데 $c\in\mathcal{O}$이므로 $c^{-1}$은 $\mathcal{O}$의 unit이 되어 모순이다. 따라서 $\mathcal{O}\subseteq A$이고, dominate의 정의에서 $A\subseteq\mathcal{O}$이므로 $\mathcal{O}=A$이다.
 
-먼저 $f$가 universally closed라 하고 lifting을 만들자. $v$를 따라 base change하여 $X_A=X\times_Y\Spec A$와 projection $\pi:X_A \rightarrow \Spec A$를 얻으면 $\pi$는 closed map이다. ([정의 9](#def9)) 한편 $u$와 $j$는 fiber product의 universal property에 의해 $\Spec A$ 위의 morphism $\tilde{u}:\Spec K \rightarrow X_A$를 유도하며, $\Spec A \rightarrow X_A$ 꼴의 $\pi$의 section으로서 $\tilde{u}$를 연장하는 것을 찾으면 이를 $X$로 project하여 원하는 lifting을 얻는다.
+먼저 $\varphi$가 universally closed라 하고 lifting을 만들자. $v$를 따라 base change하여 $X_A=X\times_Y\Spec A$와 projection $\pi:X_A \rightarrow \Spec A$를 얻으면 $\pi$는 closed map이다. ([정의 9](#def9)) 한편 $u$와 $j$는 fiber product의 universal property에 의해 $\Spec A$ 위의 morphism $\tilde{u}:\Spec K \rightarrow X_A$를 유도하며, $\Spec A \rightarrow X_A$ 꼴의 $\pi$의 section으로서 $\tilde{u}$를 연장하는 것을 찾으면 이를 $X$로 project하여 원하는 lifting을 얻는다.
 
 $\xi\in X_A$를 $\tilde{u}$의 image가 되는 점이라 하고 $Z=\cl(\{\xi\})$에 reduced scheme structure를 주자. ([§닫힌 부분스킴, ⁋정의 14](/ko/math/scheme_theory/closed_subschemes#def14)) $\pi\circ\tilde{u}=j$이므로 $\pi(\xi)$는 $\Spec A$의 generic point $(0)$이고, $\pi$가 closed map이므로 $\pi(Z)$는 $(0)$을 포함하는 닫힌집합, 곧 $\Spec A$ 전체이다. 따라서 $\pi(z)=\mathfrak{m}_A$인 $z\in Z$가 존재한다.
 
@@ -255,44 +268,44 @@ $$\mathcal{O}:=\mathcal{O}_{Z,z}\subseteq \kappa(\xi)=K,\qquad \Frac(\mathcal{O}
 
 임을 안다. 또 $\pi\vert_Z$가 유도하는 morphism $A=\mathcal{O}_{\Spec A,\mathfrak{m}_A} \rightarrow \mathcal{O}_{Z,z}$는 local homomorphism이며, generic point에서 이것이 유도하는 $K \rightarrow \kappa(\xi)=K$가 항등사상이므로 이 morphism은 $K$의 subring 사이의 포함사상이다. 곧 $\mathcal{O}$는 $A$를 dominate하는 $K$의 local subring이고, 위의 극대성에 의하여 $\mathcal{O}_{Z,z}=A$이다.
 
-그럼 canonical morphism $\Spec A=\Spec\mathcal{O}_{Z,z} \rightarrow Z \hookrightarrow X_A$를 얻고, 이것과 $\pi$의 합성은 ring 수준에서 $A$의 항등사상에 대응하므로 $\pi$의 section이다. 이 section을 $\Spec K$로 제한한 것은 $\xi$를 image로 갖고 residue field 위에서 $\kappa(\xi)=K$의 항등사상을 유도하므로 $\tilde{u}$와 같다. 따라서 이 section을 $X$로 project하면 $g\circ j=u$이고 $f\circ g=v$인 $g:\Spec A \rightarrow X$를 얻는다.
+그럼 canonical morphism $\Spec A=\Spec\mathcal{O}_{Z,z} \rightarrow Z \hookrightarrow X_A$를 얻고, 이것과 $\pi$의 합성은 ring 수준에서 $A$의 항등사상에 대응하므로 $\pi$의 section이다. 이 section을 $\Spec K$로 제한한 것은 $\xi$를 image로 갖고 residue field 위에서 $\kappa(\xi)=K$의 항등사상을 유도하므로 $\tilde{u}$와 같다. 따라서 이 section을 $X$로 project하면 $g\circ j=u$이고 $\varphi\circ g=v$인 $g:\Spec A \rightarrow X$를 얻는다.
 
 거꾸로 존재성 부분이 성립한다고 가정하자. [정의 9](#def9) 이후에 밝힌 규약대로 base change $Y' \rightarrow Y$는 Noetherian scheme에 대한 것만 생각한다.
 
-우선 존재성 부분이 base change에 대해 안정적이다. $Y' \rightarrow Y$와 $X'=X\times_YY'$, $f':X' \rightarrow Y'$가 주어졌다 하고, $\Spec K \rightarrow X'$와 $\Spec A \rightarrow Y'$가 $f'$에 대한 바깥쪽 square를 이룬다 하자. 이들을 $X' \rightarrow X$, $Y' \rightarrow Y$와 합성하면 $f$에 대한 바깥쪽 square를 얻으므로 lifting $g:\Spec A \rightarrow X$가 존재하고, $g$와 $\Spec A \rightarrow Y'$는 universal property에 의해 유일한 $g':\Spec A \rightarrow X'$를 준다. $g'\circ j$와 주어진 $\Spec K \rightarrow X'$는 $X' \rightarrow X$, $X' \rightarrow Y'$와 합성한 결과가 각각 같으므로 서로 같고, 따라서 $g'$는 $f'$에 대한 lifting이다. 한편 finite type morphism은 base change에 대해 안정적이고 Noetherian scheme 위의 finite type scheme은 다시 Noetherian이므로, $X'$는 Noetherian이고 $f'$는 finite type이다. 따라서 Noetherian scheme $X$와 finite type morphism $f:X \rightarrow Y$가 판정법의 존재성 부분을 만족할 때 $f$가 closed map임을 보이면, 이를 모든 base change에 적용하여 증명이 끝난다.
+우선 존재성 부분이 base change에 대해 안정적이다. $Y' \rightarrow Y$와 $X'=X\times_YY'$, $\varphi':X' \rightarrow Y'$가 주어졌다 하고, $\Spec K \rightarrow X'$와 $\Spec A \rightarrow Y'$가 $\varphi'$에 대한 바깥쪽 square를 이룬다 하자. 이들을 $X' \rightarrow X$, $Y' \rightarrow Y$와 합성하면 $\varphi$에 대한 바깥쪽 square를 얻으므로 lifting $g:\Spec A \rightarrow X$가 존재하고, $g$와 $\Spec A \rightarrow Y'$는 universal property에 의해 유일한 $g':\Spec A \rightarrow X'$를 준다. $g'\circ j$와 주어진 $\Spec K \rightarrow X'$는 $X' \rightarrow X$, $X' \rightarrow Y'$와 합성한 결과가 각각 같으므로 서로 같고, 따라서 $g'$는 $\varphi'$에 대한 lifting이다. 한편 finite type morphism은 base change에 대해 안정적이고 Noetherian scheme 위의 finite type scheme은 다시 Noetherian이므로, $X'$는 Noetherian이고 $\varphi'$는 finite type이다. 따라서 Noetherian scheme $X$와 finite type morphism $\varphi:X \rightarrow Y$가 판정법의 존재성 부분을 만족할 때 $\varphi$가 closed map임을 보이면, 이를 모든 base change에 적용하여 증명이 끝난다.
 
-이를 보이기 위해 $X$의 닫힌집합 $T$를 택하고 reduced scheme structure를 주자. Closed embedding $T\hookrightarrow X$는 finite morphism이므로 ([§닫힌 부분스킴, ⁋명제 4](/ko/math/scheme_theory/closed_subschemes#prop4)) finite type이고, 따라서 $T$는 Noetherian scheme이며 $f\vert_T:T \rightarrow Y$ 또한 finite type이다. 또 $f\vert_T$는 판정법의 존재성 부분을 물려받는다. 실제로 $\Spec K \rightarrow T$와 $\Spec A \rightarrow Y$가 $f\vert_T$에 대한 square를 이루면, $\Spec K \rightarrow T\hookrightarrow X$에 판정법을 적용하여 lifting $g_0:\Spec A \rightarrow X$를 얻는다. $\Spec A$의 모든 점은 generic point $(0)$의 specialization이고 morphism은 specialization을 보존하므로 $g_0(\Spec A)\subseteq \cl(\{g_0((0))\})\subseteq T$이며, $\Spec A$는 reduced이므로 $g_0$는 $T$를 경유한다. 여기에서 마지막 사실은 다음과 같이 얻어진다. Reduced scheme $S$에서의 morphism $\varphi:S \rightarrow X$의 image가 닫힌집합 $T$에 들어간다 하고, $X$의 affine open subset $\Spec B$와 $\varphi^{-1}(\Spec B)$의 affine open subset $\Spec R$을 택하자. $T\cap \Spec B=Z(\mathfrak{b})$ ($\mathfrak{b}$는 radical ideal)라 하면 $T$의 reduced structure는 그 위에서 $\Spec (B/\mathfrak{b})$이고, 대응하는 ring homomorphism $\psi:B \rightarrow R$는 임의의 prime ideal $\mathfrak{p}\subseteq R$에 대해 $\mathfrak{b}\subseteq \psi^{-1}(\mathfrak{p})$를 만족하므로
+이를 보이기 위해 $X$의 닫힌집합 $T$를 택하고 reduced scheme structure를 주자. Closed embedding $T\hookrightarrow X$는 finite morphism이므로 ([§닫힌 부분스킴, ⁋명제 4](/ko/math/scheme_theory/closed_subschemes#prop4)) finite type이고, 따라서 $T$는 Noetherian scheme이며 $\varphi\vert_T:T \rightarrow Y$ 또한 finite type이다. 또 $\varphi\vert_T$는 판정법의 존재성 부분을 물려받는다. 실제로 $\Spec K \rightarrow T$와 $\Spec A \rightarrow Y$가 $\varphi\vert_T$에 대한 square를 이루면, $\Spec K \rightarrow T\hookrightarrow X$에 판정법을 적용하여 lifting $g_0:\Spec A \rightarrow X$를 얻는다. $\Spec A$의 모든 점은 generic point $(0)$의 specialization이고 morphism은 specialization을 보존하므로 $g_0(\Spec A)\subseteq \cl(\{g_0((0))\})\subseteq T$이며, $\Spec A$는 reduced이므로 $g_0$는 $T$를 경유한다. 여기에서 마지막 사실은 다음과 같이 얻어진다. Reduced scheme $S$에서의 morphism $\psi:S \rightarrow X$의 image가 닫힌집합 $T$에 들어간다 하고, $X$의 affine open subset $\Spec B$와 $\psi^{-1}(\Spec B)$의 affine open subset $\Spec R$을 택하자. $T\cap \Spec B=Z(\mathfrak{b})$ ($\mathfrak{b}$는 radical ideal)라 하면 $T$의 reduced structure는 그 위에서 $\Spec (B/\mathfrak{b})$이고, 대응하는 ring homomorphism $\phi:B \rightarrow R$는 임의의 prime ideal $\mathfrak{p}\subseteq R$에 대해 $\mathfrak{b}\subseteq \phi^{-1}(\mathfrak{p})$를 만족하므로
 
-$$\psi(\mathfrak{b})\subseteq \bigcap_{\mathfrak{p}\in\Spec R}\mathfrak{p}=\mathfrak{N}(R)=(0)$$
+$$\phi(\mathfrak{b})\subseteq \bigcap_{\mathfrak{p}\in\Spec R}\mathfrak{p}=\mathfrak{N}(R)=(0)$$
 
-이다. 곧 $\psi$는 $B/\mathfrak{b}$를 유일하게 경유하고, 이렇게 얻어진 local factorization들은 유일성에 의해 붙는다.
+이다. 곧 $\phi$는 $B/\mathfrak{b}$를 유일하게 경유하고, 이렇게 얻어진 local factorization들은 유일성에 의해 붙는다.
 
-따라서 $f(T)=f\vert_T(T)$가 닫힌집합임을 보이면 되고, 결국 판정법의 존재성 부분을 만족하는 finite type morphism $f:X \rightarrow Y$ (단 $X$는 Noetherian)의 image $f(X)$가 닫혀 있음을 보이면 충분하다.
+따라서 $\varphi(T)=\varphi\vert_T(T)$가 닫힌집합임을 보이면 되고, 결국 판정법의 존재성 부분을 만족하는 finite type morphism $\varphi:X \rightarrow Y$ (단 $X$는 Noetherian)의 image $\varphi(X)$가 닫혀 있음을 보이면 충분하다.
 
-$f(X)$가 specialization에 대해 닫혀 있음을 먼저 본다. $y_1=f(x_1)\in f(X)$이고 $y_0\in\cl(\{y_1\})$이라 하자. $W=\cl(\{y_1\})$에 reduced scheme structure를 주면 $W$는 generic point $y_1$을 갖는 integral scheme이고, 앞에서와 같이 $\mathcal{O}=\mathcal{O}_{W,y_0}$는 $\Frac(\mathcal{O})=\kappa(y_1)$인 local domain이다. 이제 $K=\kappa(x_1)$이라 하고 $f$가 유도하는 field homomorphism $\kappa(y_1)\hookrightarrow K$를 통해 $\mathcal{O}$를 $K$의 local subring으로 보자. 그럼 $\mathcal{O}$를 dominate하는 $K$의 valuation ring $A$가 존재하고, 이로부터 두 morphism
+$\varphi(X)$가 specialization에 대해 닫혀 있음을 먼저 본다. $y_1=\varphi(x_1)\in \varphi(X)$이고 $y_0\in\cl(\{y_1\})$이라 하자. $W=\cl(\{y_1\})$에 reduced scheme structure를 주면 $W$는 generic point $y_1$을 갖는 integral scheme이고, 앞에서와 같이 $\mathcal{O}=\mathcal{O}_{W,y_0}$는 $\Frac(\mathcal{O})=\kappa(y_1)$인 local domain이다. 이제 $K=\kappa(x_1)$이라 하고 $\varphi$가 유도하는 field homomorphism $\kappa(y_1)\hookrightarrow K$를 통해 $\mathcal{O}$를 $K$의 local subring으로 보자. 그럼 $\mathcal{O}$를 dominate하는 $K$의 valuation ring $A$가 존재하고, 이로부터 두 morphism
 
 $$\Spec A \longrightarrow \Spec\mathcal{O} \longrightarrow W\hookrightarrow Y,\qquad u:\Spec K \longrightarrow X$$
 
-를 얻는다. 여기에서 $u$는 점 $x_1$과 $\kappa(x_1)=K$가 정의하는 canonical morphism이다. 이 둘은 바깥쪽 square를 이루는데, $\Spec K \rightarrow Y$로 가는 두 합성이 모두 점 $y_1$과 field homomorphism $\kappa(y_1)\hookrightarrow K$가 정의하는 canonical morphism이기 때문이다. 판정법의 존재성에 의하여 lifting $g_0:\Spec A \rightarrow X$가 존재하고, $\Spec A \rightarrow \Spec\mathcal{O}$가 local homomorphism에서 오므로 $\mathfrak{m}_A$는 $\mathfrak{m}_\mathcal{O}$, 곧 $y_0$으로 간다. 따라서 $f(g_0(\mathfrak{m}_A))=y_0$이고 $y_0\in f(X)$이다.
+를 얻는다. 여기에서 $u$는 점 $x_1$과 $\kappa(x_1)=K$가 정의하는 canonical morphism이다. 이 둘은 바깥쪽 square를 이루는데, $\Spec K \rightarrow Y$로 가는 두 합성이 모두 점 $y_1$과 field homomorphism $\kappa(y_1)\hookrightarrow K$가 정의하는 canonical morphism이기 때문이다. 판정법의 존재성에 의하여 lifting $g_0:\Spec A \rightarrow X$가 존재하고, $\Spec A \rightarrow \Spec\mathcal{O}$가 local homomorphism에서 오므로 $\mathfrak{m}_A$는 $\mathfrak{m}_\mathcal{O}$, 곧 $y_0$으로 간다. 따라서 $\varphi(g_0(\mathfrak{m}_A))=y_0$이고 $y_0\in \varphi(X)$이다.
 
 끝으로 [정리 6](#thm6)의 증명에서의 위상적인 관찰을 그대로 반복한다. $X$의 irreducible component들 $X_1,\ldots,X_r$의 generic point를 $\eta_1,\ldots,\eta_r$이라 하면 $X=\bigcup_{i=1}^r\cl(\{\eta_i\})$이므로
 
-$$\cl(f(X))=\bigcup_{i=1}^r\cl(\{f(\eta_i)\})$$
+$$\cl(\varphi(X))=\bigcup_{i=1}^r\cl(\{\varphi(\eta_i)\})$$
 
-이고, 따라서 $\cl(f(X))$의 모든 점은 $f(X)$의 점의 specialization이다. 앞에서 $f(X)$가 specialization에 대해 닫혀 있음을 보였으므로 $f(X)=\cl(f(X))$이다. 
+이고, 따라서 $\cl(\varphi(X))$의 모든 점은 $\varphi(X)$의 점의 specialization이다. 앞에서 $\varphi(X)$가 specialization에 대해 닫혀 있음을 보였으므로 $\varphi(X)=\cl(\varphi(X))$이다. 
 :::
 
 그럼 두 조각을 합치면 properness의 판정법을 얻는다.
 
 ::: 정리 11
-Noetherian scheme들 사이의 finite type scheme morphism $f:X \rightarrow Y$에 대하여, $f$가 proper인 것은 임의의 valuation ring $A$와 그 quotient field $K=\Frac(A)$에 대하여, 임의의 scheme morphism $\Spec A \rightarrow Y$, $\Spec K \rightarrow X$와 다음 commutative diagram
+Noetherian scheme들 사이의 finite type scheme morphism $\varphi:X \rightarrow Y$에 대하여, $\varphi$가 proper인 것은 임의의 valuation ring $A$와 그 quotient field $K=\Frac(A)$에 대하여, 임의의 scheme morphism $\Spec A \rightarrow Y$, $\Spec K \rightarrow X$와 다음 commutative diagram
 
-{% diagram Math/Scheme_Theory/Valuative_Criteria-2.svg width="8.27em" alt="valuative_criterion" %}
+{% diagram Math/Scheme_Theory/Valuative_Criteria-2.svg width="8.34em" alt="valuative_criterion" %}
 
 의 바깥쪽 square가 주어질 때마다, 정확히 하나의 $\Spec A \rightarrow X$가 존재하여 전체 diagram이 commute하는 것이 동치이다.
 :::
 ::: 증명
-$f$는 finite type이라 가정되어 있으므로, [정의 9](#def9)에 의하여 $f$가 proper인 것은 $f$가 separated이고 universally closed인 것이다. [정리 6](#thm6)에 의하여 $f$가 separated인 것은 임의의 바깥쪽 square가 많아야 하나의 lifting을 갖는 것이고, [명제 10](#prop10)에 의하여 $f$가 universally closed인 것은 임의의 바깥쪽 square가 적어도 하나의 lifting을 갖는 것이다. 두 조건이 함께 성립하는 것이 곧 모든 square가 정확히 하나의 lifting을 갖는 것이다.
+$\varphi$는 finite type이라 가정되어 있으므로, [정의 9](#def9)에 의하여 $\varphi$가 proper인 것은 $\varphi$가 separated이고 universally closed인 것이다. [정리 6](#thm6)에 의하여 $\varphi$가 separated인 것은 임의의 바깥쪽 square가 많아야 하나의 lifting을 갖는 것이고, [명제 10](#prop10)에 의하여 $\varphi$가 universally closed인 것은 임의의 바깥쪽 square가 적어도 하나의 lifting을 갖는 것이다. 두 조건이 함께 성립하는 것이 곧 모든 square가 정확히 하나의 lifting을 갖는 것이다.
 :::
 
 판정법이 실패하는 모습을 보아 두는 것이 좋다. [예시 7](#ex7)이 유일성이 깨지는 경우였다면, 다음은 존재성이 깨지는 경우이다.
@@ -316,7 +329,7 @@ Noetherian scheme들에 대하여,
 2. Proper morphism들의 합성은 proper이다. 
 3. Proper morphism은 base change에 의해 보존된다.
 4. Proper morphism은 fiber product에 의해 보존된다.
-5. 만일 $f:X \rightarrow Y$, $g:Y \rightarrow Z$가 scheme morphism들이고 $g$가 separated이며 $g\circ f$가 proper morphism이라면 $f$ 또한 proper morphism이다.
+5. 만일 $\varphi:X \rightarrow Y$, $\psi:Y \rightarrow Z$가 scheme morphism들이고 $\psi$가 separated이며 $\psi\circ \varphi$가 proper morphism이라면 $\varphi$ 또한 proper morphism이다.
 :::
 ::: 증명
 1번의 경우 closed embedding은 [따름정리 8](#cor8)의 1번에 의하여 separated이고, finite morphism이므로 ([§닫힌 부분스킴, ⁋명제 4](/ko/math/scheme_theory/closed_subschemes#prop4)) finite type이다. 또 closed embedding은 closed map이며 base change에 대해 안정적이므로 ([정리 6](#thm6)의 증명) universally closed이다.
@@ -325,14 +338,14 @@ Noetherian scheme들에 대하여,
 
 $$X\times_ZZ' \longrightarrow Y\times_ZZ' \longrightarrow Z'$$
 
-의 두 morphism은 각각 $f$와 $g$의 base change이고, 따라서 둘 다 closed map이다. Closed map의 합성은 closed map이므로 $X\times_ZZ' \rightarrow Z'$ 또한 closed이다.
+의 두 morphism은 각각 $\varphi$와 $\psi$의 base change이고, 따라서 둘 다 closed map이다. Closed map의 합성은 closed map이므로 $X\times_ZZ' \rightarrow Z'$ 또한 closed이다.
 
 3번의 경우 separated는 [따름정리 8](#cor8)의 3번, finite type은 base change에 대한 안정성이고, universally closed는 base change의 base change가 다시 base change라는 것에서 정의상 바로 얻어진다. 이어서 4번은 [따름정리 8](#cor8)의 4번에서와 같은 분해를 2번과 3번에 적용하면 된다.
 
-끝으로 5번을 보자. $\id_X$와 $f$가 유도하는 graph morphism $\Gamma_f:X \rightarrow X\times_ZY$를 생각하면 $f=p_2\circ\Gamma_f$이다. 이 때 $\Gamma_f$와 $f\times\id_Y: X\times_ZY \rightarrow Y\times_ZY$가 이루는 square는 $\Delta_{Y/Z}:Y \rightarrow Y\times_ZY$를 밑변으로 하는 cartesian square이다. 실제로 임의의 $T$에 대하여 $Y\times_ZY$로 가는 두 morphism을 맞추는 것은 $a:T \rightarrow X$와 $b:T \rightarrow Y$의 쌍 가운데 $f\circ a=b$인 것을 고르는 일이고, 이러한 쌍은 $a$ 하나가 결정하기 때문이다. 그럼 $g$가 separated라는 가정에서 $\Delta_{Y/Z}$가 closed embedding이므로 $\Gamma_f$ 또한 closed embedding이고, 1번에 의하여 proper이다. 한편 $p_2:X\times_ZY \rightarrow Y$는 $g\circ f$를 $g$를 따라 base change한 것이므로 3번에 의하여 proper이다. 따라서 2번에 의하여 $f=p_2\circ\Gamma_f$는 proper이다.
+끝으로 5번을 보자. $\id_X$와 $\varphi$가 유도하는 graph morphism $\Gamma_\varphi:X \rightarrow X\times_ZY$를 생각하면 $\varphi=p_2\circ\Gamma_\varphi$이다. 이 때 $\Gamma_\varphi$와 $\varphi\times\id_Y: X\times_ZY \rightarrow Y\times_ZY$가 이루는 square는 $\Delta_{Y/Z}:Y \rightarrow Y\times_ZY$를 밑변으로 하는 cartesian square이다. 실제로 임의의 $T$에 대하여 $Y\times_ZY$로 가는 두 morphism을 맞추는 것은 $a:T \rightarrow X$와 $b:T \rightarrow Y$의 쌍 가운데 $\varphi\circ a=b$인 것을 고르는 일이고, 이러한 쌍은 $a$ 하나가 결정하기 때문이다. 그럼 $\psi$가 separated라는 가정에서 $\Delta_{Y/Z}$가 closed embedding이므로 $\Gamma_\varphi$ 또한 closed embedding이고, 1번에 의하여 proper이다. 한편 $p_2:X\times_ZY \rightarrow Y$는 $\psi\circ \varphi$를 $\psi$를 따라 base change한 것이므로 3번에 의하여 proper이다. 따라서 2번에 의하여 $\varphi=p_2\circ\Gamma_\varphi$는 proper이다.
 :::
 
-5번에서 $g$가 separated라는 가정이 붙는 것은, 증명에서 $\Gamma_f$가 closed embedding이 되는 근거가 정확히 $\Delta_{Y/Z}$가 closed embedding이라는 것이기 때문이다. 이 가정이 없으면 $\Gamma_f$가 closed embedding이라는 보장이 사라지고 논증이 작동하지 않는다. [따름정리 8](#cor8)의 5번에는 이러한 가정이 필요하지 않았으므로, 두 항목의 모양이 서로 다르다는 점에 주의해야 한다.
+5번에서 $\psi$가 separated라는 가정이 붙는 것은, 증명에서 $\Gamma_\varphi$가 closed embedding이 되는 근거가 정확히 $\Delta_{Y/Z}$가 closed embedding이라는 것이기 때문이다. 이 가정이 없으면 $\Gamma_\varphi$가 closed embedding이라는 보장이 사라지고 논증이 작동하지 않는다. [따름정리 8](#cor8)의 5번에는 이러한 가정이 필요하지 않았으므로, 두 항목의 모양이 서로 다르다는 점에 주의해야 한다.
 
 한편 [따름정리 13](#cor13)의 1번은 다음의 특수한 경우이다. 이는 판정법이 실제로 어떻게 쓰이는지를 보여주는 가장 전형적인 예로, valuation ring이 integrally closed라는 사실 하나로 존재성이 나온다.
 
@@ -340,9 +353,9 @@ $$X\times_ZZ' \longrightarrow Y\times_ZZ' \longrightarrow Z'$$
 Noetherian scheme들 사이의 finite morphism은 proper이다.
 :::
 ::: 증명
-Finite morphism $f:X \rightarrow Y$는 affine morphism이므로 임의의 affine open subset $V\subseteq Y$에 대하여 $f^{-1}(V)$가 affine이고, 따라서 [보조정리 5](#lem5)와 closed embedding의 affine-local 판정에 의하여 ([§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)) $f$는 separated이다. 또 finite morphism은 finite type이다. ([§스킴 사상의 성질들, ⁋명제 15](/ko/math/scheme_theory/properties_of_scheme_morphisms#prop15)) 그러므로 [정리 11](#thm11)에 의하여 lifting의 존재성만 확인하면 된다.
+Finite morphism $\varphi:X \rightarrow Y$는 affine morphism이므로 임의의 affine open subset $V\subseteq Y$에 대하여 $\varphi^{-1}(V)$가 affine이고, 따라서 [보조정리 5](#lem5)와 closed embedding의 affine-local 판정에 의하여 ([§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)) $\varphi$는 separated이다. 또 finite morphism은 finite type이다. ([§스킴 사상의 성질들, ⁋명제 15](/ko/math/scheme_theory/properties_of_scheme_morphisms#prop15)) 그러므로 [정리 11](#thm11)에 의하여 lifting의 존재성만 확인하면 된다.
 
-바깥쪽 square $u:\Spec K \rightarrow X$, $v:\Spec A \rightarrow Y$가 주어졌다 하자. $\Spec A$의 모든 점은 generic point $(0)$의 specialization이고 morphism은 specialization을 보존하므로, $v(\mathfrak{m}_A)$를 포함하는 $Y$의 affine open subset $V=\Spec B$를 택하면 $V$는 $v((0))$ 또한 포함하고 따라서 $v$는 $V$를 경유한다. 그럼 $u$의 image는 $f^{-1}(V)=\Spec C$에 들어가며, $C$는 $B$-module로서 finitely generated이다. 이제 문제는 다음의 ring homomorphism들
+바깥쪽 square $u:\Spec K \rightarrow X$, $v:\Spec A \rightarrow Y$가 주어졌다 하자. $\Spec A$의 모든 점은 generic point $(0)$의 specialization이고 morphism은 specialization을 보존하므로, $v(\mathfrak{m}_A)$를 포함하는 $Y$의 affine open subset $V=\Spec B$를 택하면 $V$는 $v((0))$ 또한 포함하고 따라서 $v$는 $V$를 경유한다. 그럼 $u$의 image는 $\varphi^{-1}(V)=\Spec C$에 들어가며, $C$는 $B$-module로서 finitely generated이다. 이제 문제는 다음의 ring homomorphism들
 
 $$B \longrightarrow A,\qquad C \longrightarrow K$$
 
@@ -393,9 +406,9 @@ $$\x_j/\x_k=(\x_j/\x_i)\cdot(\x_k/\x_i)^{-1}$$
 
 임의의 Noetherian scheme $Y$에 대하여 $\mathbb{P}^n_Y=\mathbb{P}^n_\mathbb{Z}\times_{\Spec\mathbb{Z}}Y$이다. $Y=\Spec B$인 경우 $\mathbb{P}^n_B$의 chart $\Spec B[\x_0/\x_i,\ldots,\x_n/\x_i]$가 $U_i\times_{\Spec\mathbb{Z}}\Spec B$와 일치하기 때문이며, 일반적인 $Y$에 대해서는 이들을 붙이면 된다. 따라서 [따름정리 13](#cor13)에 의하여 $\mathbb{P}^n_Y \rightarrow Y$는 proper이고, 특히 finite type이므로 $\mathbb{P}^n_Y$는 Noetherian scheme이다.
 
-이제 $f:X \rightarrow Y$가 projective라 하면 $f$는 closed embedding $X\hookrightarrow \mathbb{P}^n_Y$와 projection $\mathbb{P}^n_Y \rightarrow Y$의 합성이다. ([정의 1](#def1)) Closed embedding은 proper이고 두 proper morphism의 합성은 proper이므로 ([따름정리 13](#cor13)), $f$는 proper이다.
+이제 $\varphi:X \rightarrow Y$가 projective라 하면 $\varphi$는 closed embedding $X\hookrightarrow \mathbb{P}^n_Y$와 projection $\mathbb{P}^n_Y \rightarrow Y$의 합성이다. ([정의 1](#def1)) Closed embedding은 proper이고 두 proper morphism의 합성은 proper이므로 ([따름정리 13](#cor13)), $\varphi$는 proper이다.
 
-마지막으로 $f:X \rightarrow Y$가 quasi-projective라 하고, 이를 open immersion $\iota: X \rightarrow X'$와 projective morphism $g:X' \rightarrow Y$의 합성 $f=g\circ\iota$로 분해하자. ([정의 1](#def1)) 방금 보인 것에 의해 $g$는 proper이고, 따라서 separated이며 finite type이다. 한편 open immersion은 separated이고 두 separated morphism의 합성은 separated이므로 ([따름정리 8](#cor8)), $f$는 separated이다. 또 open immersion은 locally of finite type이며, $X$가 Noetherian이므로 $X'$의 임의의 affine open subset의 $\iota$에 의한 preimage는 Noetherian space의 열린집합으로서 quasi-compact이다. 곧 $\iota$는 finite type이고 ([§스킴 사상의 성질들, ⁋정의 14](/ko/math/scheme_theory/properties_of_scheme_morphisms#def14)), 두 finite type morphism의 합성은 finite type이므로 $f$ 또한 finite type이다.
+마지막으로 $\varphi:X \rightarrow Y$가 quasi-projective라 하고, 이를 open immersion $\iota: X \rightarrow X'$와 projective morphism $\psi:X' \rightarrow Y$의 합성 $\varphi=\psi\circ\iota$로 분해하자. ([정의 1](#def1)) 방금 보인 것에 의해 $\psi$는 proper이고, 따라서 separated이며 finite type이다. 한편 open immersion은 separated이고 두 separated morphism의 합성은 separated이므로 ([따름정리 8](#cor8)), $\varphi$는 separated이다. 또 open immersion은 locally of finite type이며, $X$가 Noetherian이므로 $X'$의 임의의 affine open subset의 $\iota$에 의한 preimage는 Noetherian space의 열린집합으로서 quasi-compact이다. 곧 $\iota$는 finite type이고 ([§스킴 사상의 성질들, ⁋정의 14](/ko/math/scheme_theory/properties_of_scheme_morphisms#def14)), 두 finite type morphism의 합성은 finite type이므로 $\varphi$ 또한 finite type이다.
 :::
 
 이로써 우리는 판정법의 고전적인 귀결을 얻는다. Proper morphism은 정의상 closed map이므로, projective scheme에서 나가는 morphism의 image는 언제나 닫혀 있다.
@@ -404,12 +417,8 @@ $$\x_j/\x_k=(\x_j/\x_i)\cdot(\x_k/\x_i)^{-1}$$
 $\mathbb{K}$ 위의 projective scheme $X$와 separated finite type $\mathbb{K}$-scheme $Z$, 그리고 $\mathbb{K}$-morphism $\varphi:X \rightarrow Z$에 대하여 $\varphi(X)$는 $Z$의 닫힌집합이다.
 :::
 ::: 증명
-구조사상 $X \rightarrow \Spec\mathbb{K}$가 projective이므로 [정리 15](#thm15)에 의하여 proper이고, $Z \rightarrow \Spec\mathbb{K}$는 가정에 의하여 separated이다. 그럼 [따름정리 13](#cor13)의 5번을 $\varphi$와 $Z \rightarrow \Spec\mathbb{K}$에 적용하여 $\varphi$가 proper임을 얻고, 특히 $\varphi$는 closed map이므로 $X$ 자신이 $X$의 닫힌집합이라는 것으로부터 $\varphi(X)$가 닫혀 있다.
+Structure morphism $X \rightarrow \Spec\mathbb{K}$가 projective이므로 [정리 15](#thm15)에 의하여 proper이고, $Z \rightarrow \Spec\mathbb{K}$는 가정에 의하여 separated이다. 그럼 [따름정리 13](#cor13)의 5번을 $\varphi$와 $Z \rightarrow \Spec\mathbb{K}$에 적용하여 $\varphi$가 proper임을 얻고, 특히 $\varphi$는 closed map이므로 $X$ 자신이 $X$의 닫힌집합이라는 것으로부터 $\varphi(X)$가 닫혀 있다.
 :::
-
-이것이 classical한 대수기하학에서 projective variety를 *complete*하다고 부르는 이유이며, 소거이론의 기하학적인 형태이기도 하다. [예시 12](#ex12)와 대조하면 $\mathbb{A}^1_\mathbb{K}$에서는 이것이 성립하지 않는데, 가령 $\mathbb{A}^2_\mathbb{K}$의 쌍곡선 $Z(\x\y-1)$을 첫째 좌표로 사영하면 image가 $\mathbb{A}^1_\mathbb{K}\setminus\{0\}$이 되어 닫혀 있지 않다.
-
-끝으로 이 판정법들이 *valuative*라 불리는 이유를 짚어 두자. Valuation ring이라는 이름 자체가 valuation $\nu:K^\times \rightarrow G$의 값이 음이 아닌 원소들이 이루는 ring이라는 데에서 온 것이고 ([\[가환대수학\] §정칙국소환, ⁋정의 7](/ko/math/commutative_algebra/regular_local_rings#def7)), [예시 2](#ex2)에서 보았듯 $\Spec A$의 generic point와 closed point는 각각 $\nu$가 소멸하는 자리와 $\nu>0$인 자리에 해당한다. 곧 lifting $\Spec A \rightarrow X$를 찾는다는 것은 $X$ 위에서 valuation $\nu$의 중심이 될 점을 찾는다는 것이고, 판정법은 그러한 중심의 유일성과 존재성을 각각 separatedness와 universal closedness로 번역한 것이다.
 
 ---
 
