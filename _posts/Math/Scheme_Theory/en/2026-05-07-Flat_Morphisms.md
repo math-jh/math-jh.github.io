@@ -10,16 +10,17 @@ sidebar:
 
 date: 2025-02-21
 weight: 14
-translated_at: 2026-07-27T17:49:40+00:00
+translated_at: 2026-07-27T18:45:03+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-27T18:45:03+00:00
 ---
-We read a scheme morphism $\varphi: X \rightarrow S$ as a family parametrized by $S$ ([§Morphisms of Schemes, ⁋Example 10](/en/math/scheme_theory/morphism_of_schemes#ex10)), and defined the member of this family at $s\in S$ to be the fiber $X_s=X\times_S\Spec \kappa(s)$. ([§Fiber Products, ⁋Definition 12](/en/math/scheme_theory/fiber_products#def12)) However, how nicely this family behaves is information we cannot verify at present.
+We read a scheme morphism $\varphi: X \rightarrow S$ as a family parametrized by $S$ ([§Morphisms of Schemes, ⁋Example 10](/en/math/scheme_theory/morphism_of_schemes#ex10)), and defined the member of this family at $s\in S$ to be the fiber $X_s=X\times_S\Spec \kappa(s)$. ([§Fiber Products, ⁋Definition 12](/en/math/scheme_theory/fiber_products#def12)) However, how nicely this family behaves is not something we can verify at present.
 
 Indeed, such a family can behave badly; for instance, consider
 
 $$\Spec \mathbb{K}[t,\x]/(t\x) \longrightarrow \mathbb{A}^1_\mathbb{K}=\Spec \mathbb{K}[t].$$
 
-Thinking of this as a family parametrized by the variable $t$, over a fixed point $t_0\neq 0$ the equation $t_0\x=0$ forces the single point $\x=0$ to be the fiber, whereas over $t=0$ this condition becomes vacuous and the fiber becomes the entire line $\mathbb{A}^1_\mathbb{K}$ in the $\x$-direction. The dimension of the fiber jumps from $0$ to $1$.
+Thinking of this as a family parametrized by the variable $t$, over a fixed point $t_0\neq 0$ the equation $t_0\x=0$ forces the fiber to be the single point $\x=0$, whereas over $t=0$ this condition becomes vacuous and the fiber becomes the entire line $\mathbb{A}^1_\mathbb{K}$ in the $\x$-direction. The dimension of the fiber jumps from $0$ to $1$.
 
 What goes wrong algebraically is revealed by computing this fiber directly. Let $A=\mathbb{K}[t]$ and $B=\mathbb{K}[t,\x]/(t\x)$; then corresponding to the point $t_0$ is the maximal ideal $(t-t_0)$ of $A$, and the embedding of this point into $\Spec A$ is given by
 
@@ -43,7 +44,7 @@ Now applying $-\otimes_AB$ to obtain the fiber gives the following diagram
 
 {% diagram Math/Scheme_Theory/Flat_Morphisms-2.svg width="19.88em" alt="tensoring_kills_injectivity" %}
 
-and since the tensor product is right exact, the $0$ on the left end of the bottom row does not remain. The part where the injectivity of $\times t$ in $B$ fails is precisely the phenomenon that $\x\neq 0$ goes to $t\x=0$ via $\times t$, and geometrically this phenomenon manifested exactly as the entire affine line surviving at $t_0=0$.
+and since the tensor product is right exact, the $0$ on the left end of the bottom row does not remain. The failure of injectivity of $\times t$ in $B$ is precisely the phenomenon that $\x\neq 0$ goes to $t\x=0$ via $\times t$, and geometrically this manifested exactly as the entire affine line surviving at $t_0=0$.
 
 Since taking fibers is base change and base change in the affine case is tensor product, for general $X=\Spec B$ and $S=\Spec A$ the fiber at $s\in S$ is also $\Spec (B\otimes_A\kappa(s))$. More generally, the operation of moving a family along the base is always the functor $-\otimes_AB$, and as we saw above this functor need not be exact, so a similar problem occurs then too. That is, the condition we primarily desire for a family is precisely that $-\otimes_AB$ be an exact functor, i.e. flatness.
 
@@ -53,13 +54,13 @@ The definition of a flat module and its basic criteria are essentially the machi
 
 ## Definition of Flat Morphisms
 
-As pointed out above, the condition we want is to bring the flat module from commutative algebra into geometry geometrically.
+As pointed out above, the condition we want is to bring the notion of a flat module from commutative algebra into geometry.
 
 ::: Definition 1
 A morphism $\varphi: X \rightarrow Y$ is called *flat* if for every $x \in X$, the local ring $\mathcal{O}_{X,x}$ is flat as an $\mathcal{O}_{Y,\varphi(x)}$-module. If in addition the corresponding morphism of topological spaces is surjective, we call it *faithfully flat*.
 :::
 
-Although flatness in the above definition is given as a local condition at each point, in the affine case it can be rewritten as a global condition.
+Although flatness in the above definition is given as a local condition at each point, in the affine case it can be recast as a global condition.
 
 ::: Lemma 2
 For a ring homomorphism $\phi: A \rightarrow B$ and the induced morphism $\varphi: \Spec B \rightarrow \Spec A$, $\varphi$ being flat is equivalent to $B$ being flat as an $A$-module.
@@ -100,7 +101,7 @@ so applying $-\otimes_C (B \otimes_A C)$ to an injection $M' \hookrightarrow M$ 
 (2) Let $A \rightarrow B$ and $B \rightarrow C$ both be flat. For any $A$-module $N$, $N \otimes_A C \cong (N \otimes_A B) \otimes_B C$, so the functor $-\otimes_A C$ is the composition of $-\otimes_A B$ and $-\otimes_B C$. Since both functors are exact, their composition is as well, and therefore $C$ is $A$-flat.
 :::
 
-## Flat Family
+## Flat Families
 
 Now let us examine some concrete situations.
 
@@ -121,7 +122,7 @@ We have already seen that $\times t$ on $B=\mathbb{K}[t,\x]/(t\x)$ is not inject
 Reading the above counterexample algebraically again, the fact that there is an element $\x\neq 0$ in $B$ killing the parameter $t$, i.e. that $t$ is a zerodivisor in $B$, is what broke flatness. When the base is the spectrum of a PID, this phenomenon becomes exactly equivalent to the failure of flatness.
 
 ::: Proposition 5
-Let $A$ be a PID and $B$ an $A$-algebra. Then $\Spec B \rightarrow \Spec A$ is flat if and only if every nonzero element of $A$ is not a zerodivisor in $B$.
+Let $A$ be a PID and $B$ an $A$-algebra. Then $\Spec B \rightarrow \Spec A$ is flat if and only if no nonzero element of $A$ is a zerodivisor in $B$.
 :::
 ::: Proof
 By [Lemma 2](#lem2), this is equivalent to $B$ being $A$-flat. Since $A$ is a PID it is in particular an integral domain, so every nonzero element of $A$ is not a zerodivisor in $A$. Now apply [[Commutative Algebra] §Flatness, ⁋Corollary 3](/en/math/commutative_algebra/flatness#cor3) to $M=B$.
@@ -135,7 +136,7 @@ To write this precisely we need the dominant morphism from [§Properties of Sche
 Let $B$ be a Noetherian $\mathbb{K}[t]$-algebra and suppose $X=\Spec B$ is reduced. Then $X \rightarrow \mathbb{A}^1_\mathbb{K}$ is flat if and only if every irreducible component of $X$ dominates $\mathbb{A}^1_\mathbb{K}$.
 :::
 ::: Proof
-By [Proposition 5](#prop5), flatness is equivalent to every nonzero element of $\mathbb{K}[t]$ not being a zerodivisor in $B$.
+By [Proposition 5](#prop5), flatness is equivalent to no nonzero element of $\mathbb{K}[t]$ being a zerodivisor in $B$.
 
 Since $B$ is Noetherian, the zerodivisors of $B$ are the union of the elements of $\Ass B$. ([[Commutative Algebra] §Associated Primes, ⁋Theorem 7](/en/math/commutative_algebra/associated_primes#thm7)) Adding the assumption that $B$ is reduced, this union becomes exactly the union of the minimal prime ideals $\mathfrak{p}_1,\ldots, \mathfrak{p}_k$ of $B$. Indeed, the first result of this theorem is that minimal primes always belong to $\Ass B$, and conversely if $B$ is reduced then
 
