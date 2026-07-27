@@ -10,8 +10,9 @@ sidebar:
 
 date: 2025-03-08
 weight: 11
-translated_at: 2026-07-27T18:15:02+00:00
+translated_at: 2026-07-27T21:45:03+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-27T21:45:03+00:00
 ---
 We now examine closed subschemes of $\mathbb{P}^n=\mathbb{P}_\mathbb{K}^n$ as examples of closed subschemes. Although $\mathbb{P}^n$ is slightly more complicated than affine schemes, it is still easier to handle than a general scheme, because by [[Projective Spaces and the Proj Construction] §..., ⁋Definition 4](/en/math/scheme_theory/projective_schemes#def4), any closed subset of $\mathbb{P}^n$ can always be written as the zero set of homogeneous polynomials in $\mathbb{K}[\x_0,\ldots, \x_n]$. In other words, although these homogeneous polynomials are not functions defined on $\mathbb{P}^n$, they at least allow us to represent closed subsets in a manner almost analogous to affine schemes.
 
