@@ -10,10 +10,11 @@ sidebar:
 
 date: 2025-03-08
 weight: 12
-translated_at: 2026-07-26T19:45:02+00:00
+translated_at: 2026-07-27T01:15:03+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-27T01:15:03+00:00
 ---
-One of the things we promised when introducing schemes was the fiber product; since this is the product in $\Sch_{/S}$, we had to define $S$-schemes (and scheme morphisms) for this purpose. Now that we are prepared, we define the fiber product.
+One of the things we promised when introducing schemes was the fiber product; since this is the product in $\Sch_{/S}$, we had to define $S$-schemes (and scheme morphisms) in preparation. Now that we are ready, we define the fiber product.
 
 ## Definition and Existence of Fiber Products
 
@@ -29,15 +30,15 @@ That is, $X\times_SY$ satisfies the following property.
 > 
 > {% diagram Math/Scheme_Theory/Fiber_Products-1.svg width="9.32em" alt="fiber_diagram" %}
 > 
-> commutes. Moreover, whenever arbitrary $\psi_X:Z \rightarrow X$, $\psi_Y:Z \rightarrow Y$ satisfying $\varphi_Y\circ\psi_Y=\varphi_X\circ\psi_X$ are given, there exists a unique $\psi:Z \rightarrow X\times_SY$ such that $\psi_X=\rho_X\circ\psi$ and $\psi_Y=\rho_Y\circ\psi$.
+> commutes. Moreover, whenever morphisms $\psi_X:Z \rightarrow X$, $\psi_Y:Z \rightarrow Y$ satisfying $\varphi_Y\circ\psi_Y=\varphi_X\circ\psi_X$ are given, there exists a unique $\psi:Z \rightarrow X\times_SY$ such that $\psi_X=\rho_X\circ\psi$ and $\psi_Y=\rho_Y\circ\psi$.
 > 
 > {% diagram Math/Scheme_Theory/Fiber_Products-2.svg width="13.72em" alt="universal_product" %}
 
-Hence, there exists a canonical morphism from $X\times_SY$ to $S$, and from this we may view $X\times_SY$ as an $S$-scheme. Moreover, from this viewpoint it is obvious from the definition that $X\times_SY$ is also the product in $\Sch_{/S}$.
+Hence there is a canonical morphism from $X\times_SY$ to $S$, and from this we may view $X\times_SY$ as an $S$-scheme. Moreover, from this viewpoint it is obvious from the definition that $X\times_SY$ is also the product in $\Sch_{/S}$.
 
-After [§Morphisms of Schemes, ⁋Example 4](/en/math/scheme_theory/morphism_of_schemes#ex4) we saw that any scheme $X$ can always be thought of as a $\mathbb{Z}$-scheme in a unique way. Thus, assuming that a fiber product $X\times_SY$ satisfying [Definition 1](#def1) always exists, we know that for any two schemes $X, Y$, the object $X\times_{\Spec \mathbb{Z}}Y$ gives the product of $X$ and $Y$.
+After [§Morphisms of Schemes, ⁋Example 4](/en/math/scheme_theory/morphism_of_schemes#ex4) we saw that any scheme $X$ can always be regarded as a $\mathbb{Z}$-scheme in a unique way. Thus, assuming that a fiber product $X\times_SY$ satisfying [Definition 1](#def1) always exists, we know that for any two schemes $X, Y$, the object $X\times_{\Spec \mathbb{Z}}Y$ gives the product of $X$ and $Y$.
 
-Since [Definition 1](#def1) guarantees nothing about the existence of the fiber product $X\times_SY$, for this to be a genuine definition we must separately prove the existence of $X\times_SY$. ([Theorem 8](#thm8)) However, the existence of fiber products in $\AffSch$ is almost obvious, and this will be the starting point of our proof.
+Since [Definition 1](#def1) guarantees nothing about the existence of the fiber product $X\times_SY$, for this to be a genuine definition we must separately prove existence. ([Theorem 8](#thm8)) However, the existence of fiber products in $\AffSch$ is almost obvious, and this will be the starting point of our proof.
 
 ::: Lemma 2
 Given morphisms of affine schemes $\Spec A \rightarrow \Spec C$, $\Spec B \rightarrow\Spec C$, we have
@@ -48,7 +49,7 @@ $$\Spec A\times_{\Spec C}\Spec B\cong\Spec (A\otimes_C B).$$
 Via $\AffSch\cong\cRing^\op$, convert $\Spec A \rightarrow \Spec C$, $\Spec B \rightarrow \Spec C$ into $C \rightarrow A$, $C \rightarrow B$, and compare the universal property of [\[Algebraic Structures\] §Operations on Algebras, ⁋Theorem 8](/en/math/algebraic_structures/operations_of_algebras#thm8) with the universal property of the fiber product.
 :::
 
-To show that fiber products exist for general schemes, it now suffices to show that we can glue together the affine results examined in [Lemma 2](#lem2).
+To show that fiber products exist for general schemes, it now suffices to show that we can glue together the affine results from [Lemma 2](#lem2).
 
 First, when an open subscheme $U$ of $Z$ is given, writing it in the form $\iota:U \rightarrow Z$ using the inclusion morphism, the following lemma is almost a tautology.
 
@@ -63,7 +64,7 @@ is a fiber diagram.
 $\varphi^{-1}(U)$ satisfies the universal property of the fiber product.
 :::
 
-Now, with a slight application of this, we can prove the following lemma.
+Applying this slightly, we can prove the following lemma.
 
 ::: Lemma 4
 Given affine schemes $X, Y, Z$, and an open subscheme $Y'\hookrightarrow Y$ of $Y$, the fiber product $X\times_ZY'$ of $X\rightarrow Z$ and $Y'\hookrightarrow Y \rightarrow Z$ exists.
@@ -112,7 +113,7 @@ Since $Z'$ is affine, $X\times_{Z'}Y$ exists. Now let $T$ be an arbitrary scheme
 On the other hand, without the hypothesis on $\iota$ this does not hold. For example, taking the structure morphism $\iota:Z \rightarrow \Spec k$ of a $k$-scheme and giving identity morphisms on $X=Y=Z=\mathbb{A}^1_k$, we have $X\times_ZY=\mathbb{A}^1_k$ but $X\times_{\Spec k}Y=\mathbb{A}^2_k$.
 :::
 
-Now, using the above lemma, for arbitrary $X,Y,Z$ and scheme morphisms $\varphi_X:X \rightarrow Z$, $\varphi_Y: Y \rightarrow Z$, if we cover $Z$ by affine open covers $\{Z_i\}$, we know that fiber products $X_i\times_{Z_i}Y_i$ exist for $\varphi_X\vert^{Z_i}:\varphi_X^{-1}(Z_i) \rightarrow Z_i$ and $\varphi_Y\vert^{Z_i}:\varphi_Y^{-1}(Z_i) \rightarrow Z_i$. Now the intersection $Z_{ij}=Z_i\cap Z_j$ is an open subset of $Z_i$, so by [Lemma 7](#lem7) the fiber products of $\varphi_X\vert^{Z_{ij}}$ and $\varphi_Y\vert^{Z_{ij}}$ also exist and are open subschemes of both $X_i\times_{Z_i}Y_i$ and $X_j\times_{Z_j}Y_j$. Therefore, just as in the proof of [Lemma 5](#lem5), if we show that these data satisfy the conditions of [§Schemes, ⁋Lemma 9](/en/math/scheme_theory/schemes#lem9), we obtain the following theorem.
+Now, using the above lemma, for arbitrary $X,Y,Z$ and scheme morphisms $\varphi_X:X \rightarrow Z$, $\varphi_Y: Y \rightarrow Z$, if we cover $Z$ by affine open subsets $\{Z_i\}$, we know that fiber products $X_i\times_{Z_i}Y_i$ exist for $\varphi_X\vert^{Z_i}:\varphi_X^{-1}(Z_i) \rightarrow Z_i$ and $\varphi_Y\vert^{Z_i}:\varphi_Y^{-1}(Z_i) \rightarrow Z_i$. Now the intersection $Z_{ij}=Z_i\cap Z_j$ is an open subset of $Z_i$, so by [Lemma 7](#lem7) the fiber products of $\varphi_X\vert^{Z_{ij}}$ and $\varphi_Y\vert^{Z_{ij}}$ also exist and are open subschemes of both $X_i\times_{Z_i}Y_i$ and $X_j\times_{Z_j}Y_j$. Therefore, just as in the proof of [Lemma 5](#lem5), if we show that these data satisfy the conditions of [§Schemes, ⁋Lemma 9](/en/math/scheme_theory/schemes#lem9), we obtain the following theorem.
 
 ::: Theorem 8
 For arbitrary schemes $X,Y,Z$ and scheme morphisms $X \rightarrow Z$, $Y \rightarrow Z$, the fiber product $X\times_ZY$ exists.
@@ -153,7 +154,7 @@ This viewpoint is important, but for the moment the geometric intuition here is 
 
 First, for an arbitrarily given $S$-family $X \rightarrow S$ and an open embedding $S' \rightarrow S$, [Lemma 3](#lem3) shows that the $S'$-family $X\times_SS' \rightarrow S'$ is simply obtained by restricting the base of $X \rightarrow S$ to $S'$. Moreover, if we also assume that $X \rightarrow S$ is an open embedding, we know that $X\times_SS'$ is the intersection of $X$ and $S'$ (inside $S$).
 
-The above argument also works in the case of a closed embedding. For this we need to show the following lemma corresponding to [Lemma 3](#lem3).
+The above argument also works in the case of a closed embedding. For this we need the following lemma corresponding to [Lemma 3](#lem3).
 
 ::: Lemma 10
 For a ring homomorphism $\phi: B \rightarrow A$ and an arbitrary ideal $\mathfrak{b}$ of $B$, there exists an isomorphism
