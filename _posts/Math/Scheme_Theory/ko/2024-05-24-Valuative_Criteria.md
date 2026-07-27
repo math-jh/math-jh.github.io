@@ -5,7 +5,6 @@ excerpt: "Valuative criteria for separated, properness"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/valuative_criteria
-drift_needed: true
 sidebar: 
     nav: "scheme_theory-ko"
 
