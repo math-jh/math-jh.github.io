@@ -10,10 +10,11 @@ sidebar:
 
 date: 2024-05-24
 weight: 15
-translated_at: 2026-07-27T19:20:54+00:00
+translated_at: 2026-07-27T19:45:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-27T19:45:02+00:00
 ---
-In this post we define separated morphisms and proper morphisms. In previous posts we defined open subschemes ([§Schemes, ⁋Definition 4](/en/math/scheme_theory/schemes#def4)), and examined closed embeddings, the closed subschemes obtained from them, and ideal sheaves ([§Closed Subschemes, ⁋Definition 2](/en/math/scheme_theory/closed_subschemes#def2), [⁋Definition 5](/en/math/scheme_theory/closed_subschemes#def5)). We now add the following concepts.
+In this post we define separated morphisms and proper morphisms. In previous posts we defined open subschemes ([§Schemes, ⁋Definition 4](/en/math/scheme_theory/schemes#def4)), examined closed embeddings, the closed subschemes obtained from them, and ideal sheaves ([§Closed Subschemes, ⁋Definition 2](/en/math/scheme_theory/closed_subschemes#def2), [⁋Definition 5](/en/math/scheme_theory/closed_subschemes#def5)). We now add the following concepts.
 
 ::: Definition 1
 Let a scheme morphism $\varphi: X \rightarrow Y$ be given.
@@ -23,14 +24,14 @@ Let a scheme morphism $\varphi: X \rightarrow Y$ be given.
 3. We say $\varphi$ is *quasi-projective* if it can be factored as a composition of a suitable open immersion $X \rightarrow X'$ and a projective morphism $X' \rightarrow Y$.
 :::
 
-The first definition is obvious, and the second and third are relative versions, i.e., in $\Sch_{/Y}$, of [\[Algebraic Varieties\] §Projective Varieties, ⁋Definition 3](/en/math/algebraic_varieties/projective_varieties#def3) and [\[Algebraic Varieties\] §Quasi-Projective Varieties, ⁋Definition 1](/en/math/algebraic_varieties/quasi_projective_varieties#def1).
+The first definition is obvious; the second and third are relative versions—that is, in $\Sch_{/Y}$—of [\[Algebraic Varieties\] §Projective Varieties, ⁋Definition 3](/en/math/algebraic_varieties/projective_varieties#def3) and [\[Algebraic Varieties\] §Quasi-Projective Varieties, ⁋Definition 1](/en/math/algebraic_varieties/quasi_projective_varieties#def1).
 
-Before beginning the main story, it is good to look at the following example.
+Before beginning the main story, it is worth examining the following example.
 
 ::: Example 2
-Let a ring $A$ be a discrete valuation ring that is a subring of a field $K$. That is, for any $x\in K^\times$ either $x\in A$ or $x^{-1}\in A$, and $A$ is Noetherian with its maximal ideal $\mathfrak{m}$ principal. ([\[Commutative Algebra\] §Divisors, ⁋Definition 5](/en/math/commutative_algebra/divisors#def5)) Since any $x\in K^\times$ is represented as a ratio of elements of $A$ via $x$ or $x^{-1}$, we have $K=\Frac(A)$. Also $A$ is a local ring with $\mathfrak{m}$ as its unique maximal ideal ([\[Commutative Algebra\] §Divisors, ⁋Proposition 6](/en/math/commutative_algebra/divisors#prop6)), and choosing a uniformizer $\pi$, any $f\in K^\times$ is uniquely expressed as $f=\pi^nu$ for some integer $n$ and unit $u$ ([\[Commutative Algebra\] §Divisors, ⁋Proposition 8](/en/math/commutative_algebra/divisors#prop8)), so every nonzero ideal of $A$ is of the form $(\pi^n)$. In particular $A$ is a principal ideal domain, and its prime ideals are only $(0)$ and $\mathfrak{m}=(\pi)$.
+Let $A$ be a discrete valuation ring that is a subring of a field $K$. That is, for any $x\in K^\times$ either $x\in A$ or $x^{-1}\in A$, and $A$ is Noetherian with maximal ideal $\mathfrak{m}$ principal. ([\[Commutative Algebra\] §Divisors, ⁋Definition 5](/en/math/commutative_algebra/divisors#def5)) Since any $x\in K^\times$ is represented as a ratio of elements of $A$ via $x$ or $x^{-1}$, we have $K=\Frac(A)$. Also $A$ is a local ring with $\mathfrak{m}$ as its unique maximal ideal ([\[Commutative Algebra\] §Divisors, ⁋Proposition 6](/en/math/commutative_algebra/divisors#prop6)), and choosing a uniformizer $\pi$, any $f\in K^\times$ is uniquely expressed as $f=\pi^nu$ for some integer $n$ and unit $u$ ([\[Commutative Algebra\] §Divisors, ⁋Proposition 8](/en/math/commutative_algebra/divisors#prop8)); hence every nonzero ideal of $A$ is of the form $(\pi^n)$. In particular $A$ is a principal ideal domain, and its only prime ideals are $(0)$ and $\mathfrak{m}=(\pi)$.
 
-Hence $\Spec A$ consists of the two points $(0)$, $\mathfrak{m}$, and since
+Hence $\Spec A$ consists of the two points $(0)$ and $\mathfrak{m}$, and since
 
 $$Z((0))=\{(0),\mathfrak{m}\},\quad Z(\mathfrak{m})=\{\mathfrak{m}\}$$
 
@@ -53,15 +54,15 @@ we obtain
 $$\kappa((0))=K, \qquad \kappa(\mathfrak{m})=A_\mathfrak{m}/\mathfrak{m}A_\mathfrak{m}\cong A/\mathfrak{m}.$$
 :::
 
-Let us examine the example a bit more geometrically. Since $Z((0))=\Spec A$, the closure of $(0)$ is all of $\Spec A$, so $(0)$ becomes the generic point of this space. This situation is especially intuitively visible when, for a curve $C$ and a point $p$ on it, $\mathcal{O}_{C,p}$ is a discrete valuation ring. Specifically, the stalk
+Let us examine the example a bit more geometrically. Since $Z((0))=\Spec A$, the closure of $(0)$ is all of $\Spec A$, so $(0)$ is the generic point of this space. This situation is especially visible when, for a curve $C$ and a point $p$ on it, $\mathcal{O}_{C,p}$ is a discrete valuation ring. Specifically, the stalk
 
 $$\mathcal{O}_{C,p}=\varinjlim_{U\ni p} \mathcal{O}(U)$$
 
 can be viewed as germs at the point $p$, and the generic point $(0)$ of $\Spec \mathcal{O}_{C,p}$ is precisely what contains this data. Then the remaining (unique) point $\mathfrak{m}$ corresponds exactly to the point $p$, and the fact that this is a specialization of $(0)$ reflects that in defining a germ we look at neighborhoods arbitrarily close to $p$.
 
-In this picture, the role of $\Spec K$ is revealed by looking at the function side. Functions on $\Spec A$ are $A$ itself, i.e., germs regular at $p$, and elements of $K\cong A_\pi$, which are the functions on the only nontrivial open set $D(\pi)=\{(0)\}$, are those allowing negative order $n$ in the form $f=\pi^nu$. ([\[Commutative Algebra\] §Divisors, ⁋Proposition 8](/en/math/commutative_algebra/divisors#prop8), item 2) That is, this means functions having a pole at $p$ but of finite order, i.e., functions regular on the entire neighborhood except at $p$ alone; thus $\Spec K$ is the space obtained from this germ by extracting the center $p$, losing the information of $p$ while retaining only information about neighborhoods of $p$, and the canonical morphism $\Spec K \rightarrow \Spec A$ is exactly the inclusion map defined by this picture.
+In this picture, the role of $\Spec K$ is revealed by looking at the function side. Functions on $\Spec A$ are $A$ itself, i.e., germs regular at $p$, and elements of $K\cong A_\pi$—the functions on the only nontrivial open set $D(\pi)=\{(0)\}$—are those allowing negative order $n$ in the form $f=\pi^nu$. ([\[Commutative Algebra\] §Divisors, ⁋Proposition 8](/en/math/commutative_algebra/divisors#prop8), item 2) That is, these are functions having a pole at $p$ but of finite order, i.e., functions regular on the entire neighborhood except at $p$ alone; thus $\Spec K$ is the space obtained from this germ by extracting the center $p$, losing the information of $p$ while retaining only information about neighborhoods of $p$, and the canonical morphism $\Spec K \rightarrow \Spec A$ is exactly the inclusion map defined by this picture.
 
-Then a morphism $\Spec K \rightarrow X$ is a germ of a curve missing a point entering into $X$, and extending this to $\Spec A \rightarrow X$ is recovering the missing point inside $X$ and attaching the curve, i.e., finding the limit of the curve. That this extension exists at most one is separatedness, and that it exists exactly one is properness; this is the content of the two criteria we will see below. Topologically, this is the algebraic-geometric analogue of the facts that in a Hausdorff space a limit is unique ([\[Topology\] §Hausdorff Spaces, ⁋Proposition 4](/en/math/topology/Hausdorff_spaces#prop4)) and that in a compact space a limit always exists ([\[Topology\] §Compactness and Paracompactness, ⁋Lemma 1](/en/math/topology/compactness#lem1)).
+Then a morphism $\Spec K \rightarrow X$ is a germ of a curve missing a point entering into $X$, and extending this to $\Spec A \rightarrow X$ is recovering the missing point inside $X$ and attaching the curve, i.e., finding the limit of the curve. That this extension exists in at most one way is separatedness, and that it exists in exactly one way is properness; this is the content of the two criteria we will see below. Topologically, this is the algebraic-geometric analogue of the facts that in a Hausdorff space a limit is unique ([\[Topology\] §Hausdorff Spaces, ⁋Proposition 4](/en/math/topology/Hausdorff_spaces#prop4)) and that in a compact space a limit always exists ([\[Topology\] §Compactness and Paracompactness, ⁋Lemma 1](/en/math/topology/compactness#lem1)).
 
 ## Separated Morphisms
 
@@ -77,13 +78,13 @@ is called the *diagonal morphism* of $\varphi$. ([§Fiber Products, ⁋Definitio
 
 When we need to clarify which morphism's diagonal it is, we write $\Delta_{X/Y}$ instead of $\Delta$. From the definition, for the two projections $p_1,p_2: X\times_YX \rightarrow X$, it is obvious that $p_1\circ\Delta=p_2\circ\Delta=\id_X$. Also, $\Delta$ is injective and the restriction of $p_1$ to $\Delta(X)$ gives a continuous inverse to $\Delta$, so $\Delta$ is always a homeomorphism onto $\Delta(X)$. Therefore asking whether $\Delta$ is a closed embedding amounts to asking whether $\Delta(X)$ is closed and whether all functions on $X$ are obtained by restricting functions on $X\times_YX$. ([§Closed Subschemes, ⁋Definition 2](/en/math/scheme_theory/closed_subschemes#def2))
 
-As explained above, in algebraic geometry we think of separatedness as the property replacing Hausdorff. Recalling that a topological space $T$ is Hausdorff if and only if the diagonal is closed in $T\times T$ ([\[Topology\] §Hausdorff Spaces, ⁋Lemma 5](/en/math/topology/Hausdorff_spaces#lem5)), the following proposition is naturally expected.
+As explained above, in algebraic geometry we regard separatedness as the property replacing Hausdorff. Recalling that a topological space $T$ is Hausdorff if and only if the diagonal is closed in $T\times T$ ([\[Topology\] §Hausdorff Spaces, ⁋Lemma 5](/en/math/topology/Hausdorff_spaces#lem5)), the following proposition is naturally expected.
 
 ::: Proposition 4
 $\varphi:X \rightarrow Y$ is separated if and only if the image of $X$ under the diagonal morphism $\Delta: X \rightarrow X\times_YX$ is a closed set.
 :::
 ::: Proof
-By definition, if $\varphi$ is separated then $\Delta(X)$ is closed is obvious. Hence we assume $\Delta(X)$ is closed and show that $\Delta$ is a closed embedding. As seen before, $\Delta$ is always a homeomorphism onto $\Delta(X)$, so with the assumption the topological condition is already secured and we only need to show that $\mathcal{O}_{X\times_YX} \rightarrow \Delta_\ast \mathcal{O}_X$ is surjective. This can be checked on stalks.
+By definition, if $\varphi$ is separated then $\Delta(X)$ is closed, which is obvious. Hence we assume $\Delta(X)$ is closed and show that $\Delta$ is a closed embedding. As seen before, $\Delta$ is always a homeomorphism onto $\Delta(X)$, so with this assumption the topological condition is already secured and we only need to show that $\mathcal{O}_{X\times_YX} \rightarrow \Delta_\ast \mathcal{O}_X$ is surjective. This can be checked on stalks.
 
 First, there is nothing to see at points $q\notin \Delta(X)$. From the assumption that $\Delta(X)$ is closed, there exists an open neighborhood $W$ of $q$ such that $W\cap\Delta(X)=\emptyset$, and then $\Delta^{-1}(W)=\emptyset$ so
 
@@ -91,7 +92,7 @@ $$(\Delta_\ast\mathcal{O}_X)(W)=\mathcal{O}_X(\emptyset)=0$$
 
 and thus $(\Delta_\ast\mathcal{O}_X)_q=0$. The open neighborhoods chosen below cannot cover points outside $\Delta(X)$, so this is exactly where the assumption is actually used.
 
-Now consider points of the form $\Delta(p)$. For any $p\in X$ we can choose an open affine subset $U$ of $p$, and if necessary restrict $U$ so that $\varphi(U)$ is contained in some open affine subset $V$ of $Y$. Then $U\times_VU$ is an open subset of $X\times_YX$ and an open neighborhood of $\Delta(p)$, and since $p_1\circ\Delta=p_2\circ\Delta=\id_X$ we have $\Delta^{-1}(U\times_VU)=U$. On this, $\Delta: U \rightarrow U\times_VU$ is a closed embedding by [Lemma 5](#lem5) below, so $\mathcal{O}_{U\times_VU} \rightarrow \Delta_\ast\mathcal{O}_U$ is surjective, and in particular the morphism between stalks at $\Delta(p)$ is surjective.
+Now consider points of the form $\Delta(p)$. For any $p\in X$ we can choose an open affine subset $U$ containing $p$, and if necessary restrict $U$ so that $\varphi(U)$ is contained in some open affine subset $V$ of $Y$. Then $U\times_VU$ is an open subset of $X\times_YX$ and an open neighborhood of $\Delta(p)$, and since $p_1\circ\Delta=p_2\circ\Delta=\id_X$ we have $\Delta^{-1}(U\times_VU)=U$. On this, $\Delta: U \rightarrow U\times_VU$ is a closed embedding by [Lemma 5](#lem5) below, so $\mathcal{O}_{U\times_VU} \rightarrow \Delta_\ast\mathcal{O}_U$ is surjective, and in particular the morphism between stalks at $\Delta(p)$ is surjective.
 :::
 
 Then from this we obtain the following.
@@ -123,7 +124,7 @@ $$\mathbb{K}[\x_1,\x_2] \longrightarrow \mathbb{K}[t,1/t];\qquad \x_1,\x_2\mapst
 
 so within the chart $X_1\times_\mathbb{K}X_2\cong \mathbb{A}^2_\mathbb{K}$, the set $\Delta(X)$ is $Z(\x_1-\x_2)\cap D(\x_1)$, the diagonal with the origin removed. The closure of this set is the entire diagonal $Z(\x_1-\x_2)$, and its origin is exactly $(0_1,0_2)$, so $(0_1,0_2)$ does not belong to $\Delta(X)$ while belonging to its closure. Therefore $\Delta(X)$ is not closed, and by [Proposition 4](#prop4), $X$ is not separated. This space is also the standard example of a space that is not Hausdorff topologically.
 
-Now let us see the criterion for separatedness. Unlike in [Example 2](#ex2), the criterion is required for all valuation rings, not necessarily discrete ones, i.e., for all subrings $A$ of a field $K$ satisfying only the condition that for any $x\in K^\times$ either $x\in A$ or $x^{-1}\in A$. ([\[Commutative Algebra\] §Divisors, ⁋Definition 5](/en/math/commutative_algebra/divisors#def5)) Also below, $j:\Spec K \rightarrow \Spec A$ always denotes the morphism induced by the inclusion $A\hookrightarrow K$.
+Now let us see the criterion for separatedness. Unlike in [Example 2](#ex2), the criterion is required for all valuation rings, not necessarily discrete ones—i.e., for all subrings $A$ of a field $K$ satisfying only the condition that for any $x\in K^\times$ either $x\in A$ or $x^{-1}\in A$. ([\[Commutative Algebra\] §Divisors, ⁋Definition 5](/en/math/commutative_algebra/divisors#def5)) Also, below $j:\Spec K \rightarrow \Spec A$ always denotes the morphism induced by the inclusion $A\hookrightarrow K$.
 
 ::: Theorem 6
 For a Noetherian scheme $X$ and a scheme morphism $\varphi:X \rightarrow Y$, $\varphi$ is separated if and only if for any valuation ring $A$ and its quotient field $K=\Frac(A)$, whenever any scheme morphisms $\Spec A \rightarrow Y$, $\Spec K \rightarrow X$ and the following commutative diagram
@@ -235,7 +236,7 @@ Separatedness is also used to determine when two morphisms are equal. Let $X$ be
 
 ## Proper Morphisms
 
-Now we move to the property corresponding to the compact condition. In topology we saw that compactness can be rewritten as the condition of being universally closed ([\[Topology\] §Proper Maps, ⁋Theorem 6](/en/math/topology/proper_maps#thm6)), and in algebraic geometry this condition with products replaced by fiber products becomes the definition as is.
+Now we move to the property corresponding to compactness. In topology we saw that compactness can be rewritten as the condition of being universally closed ([\[Topology\] §Proper Maps, ⁋Theorem 6](/en/math/topology/proper_maps#thm6)), and in algebraic geometry this condition with products replaced by fiber products becomes the definition as is.
 
 ::: Definition 9
 We say $\varphi:X \rightarrow Y$ is *universally closed* if $\varphi$ is a closed map and for any $Y' \rightarrow Y$, the map $X\times_Y Y' \rightarrow Y'$ is also closed. A separated, universally closed finite type morphism is called a *proper morphism*.
