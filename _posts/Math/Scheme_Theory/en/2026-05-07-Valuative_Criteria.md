@@ -22,7 +22,7 @@ In previous posts we defined open subschemes ([§Schemes, ⁋Definition 4](/en/m
 Let a scheme morphism $f: X \rightarrow Y$ be given.
 
 1. If $f$ induces an isomorphism between open subschemes of $X$ and $Y$, we call $f$ an *open immersion*.
-2. We say $f$ is *projective* if for some suitable $n$, $f$ can be factored as a composition of a closed embedding and a projection, of the form $X\hookrightarrow \mathbb{P}^n_Y \rightarrow Y$. ([§Projective Schemes](/en/math/scheme_theory/projective_schemes))
+2. We say $f$ is *projective* if for some suitable $n$, $f$ can be factored as a composition of a closed embedding and a projection, of the form $X\hookrightarrow \mathbb{P}^n_Y \rightarrow Y$. ([§Projective Space and the Proj Construction](/en/math/scheme_theory/projective_schemes))
 3. We say $f$ is *quasi-projective* if it can be factored as a composition of a suitable open immersion $X \rightarrow X'$ and a projective morphism $X' \rightarrow Y$.
 :::
 

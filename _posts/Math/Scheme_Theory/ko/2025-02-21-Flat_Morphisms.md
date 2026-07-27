@@ -170,7 +170,7 @@ $$\Spec \mathbb{K}[t, \x, \y]/(\x\y - t) \longrightarrow \mathbb{A}^1_\mathbb{K}
 요컨대 flatness가 통제하는 것은 fiber가 특이해지는지의 여부가 아니라, fiber가 크기를 유지한 채로 이어지는지의 여부이다.
 :::
 
-지금까지 본 family에서 fiber는 모두 $\mathbb{A}^2$ 안의 곡선이었고, 따라서 무한대에 놓인 점들이 빠져 있었다. 이들까지 함께 보려면 곡선을 $\mathbb{P}^2$ 안에서 자르는 것이 자연스럽다. ([§사영스킴](/ko/math/scheme_theory/projective_schemes)) 이 때 $X$는 더 이상 affine이 아니므로 flatness는 affine chart마다 확인하게 된다.
+지금까지 본 family에서 fiber는 모두 $\mathbb{A}^2$ 안의 곡선이었고, 따라서 무한대에 놓인 점들이 빠져 있었다. 이들까지 함께 보려면 곡선을 $\mathbb{P}^2$ 안에서 자르는 것이 자연스럽다. ([§사영공간과 Proj 구성](/ko/math/scheme_theory/projective_schemes)) 이 때 $X$는 더 이상 affine이 아니므로 flatness는 affine chart마다 확인하게 된다.
 
 ::: 예시 8
 $\x,\y,\z$의 degree로 grading을 준 graded ring $A_\bullet=\mathbb{K}[t][\x,\y,\z]$를 생각하자. 여기에서 $t$는 degree $0$이며, 따라서 base ring은 $A_0=\mathbb{K}[t]$이다. Chart를 계산하면 $A_{(\x)}=\mathbb{K}[t][\y/\x,\z/\x]$이므로 $D_+(\x)$는 $\mathbb{A}^2_{\mathbb{K}[t]}$이고, $t$가 degree $0$이라 localization에서 살아남는다. 세 chart를 붙이면 $\Proj A_\bullet$은 $\mathbb{P}^2\times_\mathbb{K}\mathbb{A}^1_\mathbb{K}$가 되며, 모든 $f$에 대하여 $A_0\subseteq A_{(f)}$이므로 이들이 붙어 structure morphism $\Proj A_\bullet \rightarrow \mathbb{A}^1_\mathbb{K}$를 준다.

@@ -298,7 +298,7 @@ $\mathcal{O}_X$-가군층 $\mathcal{F}$가 *globally generated*라는 것은 각
 
 $$X_{s_i}=\{x\in X\mid \text{$(s_i)_x$가 $\mathcal{L}_x$를 생성한다}\}$$
 
-는 열린집합이다. 실제로 $\mathcal{L}$이 자명해지는 열린집합 위에서 $s_i$는 하나의 함수에 대응되고, 그 함수가 unit이 되는 점들의 모임은 열린집합이기 때문이다. 또 $s_i$들이 $\mathcal{L}$을 globally generate하므로 $\{X_{s_i}\}$는 $X$의 open cover이다. $X_{s_i}$ 위에서는 $s_i$가 $\mathcal{L}$의 자명화를 주므로 각각의 $j$에 대하여 $s_j/s_i\in \Gamma(X_{s_i},\mathcal{O}_X)$가 잘 정의된다. 한편 $D_+(\x_i)$는 $\Spec A[\x_0,\ldots,\x_n]_{(\x_i)}$와 isomorphic하므로 ([§사영스킴, ⁋정리 10](/ko/math/scheme_theory/projective_schemes#thm10)), ring homomorphism
+는 열린집합이다. 실제로 $\mathcal{L}$이 자명해지는 열린집합 위에서 $s_i$는 하나의 함수에 대응되고, 그 함수가 unit이 되는 점들의 모임은 열린집합이기 때문이다. 또 $s_i$들이 $\mathcal{L}$을 globally generate하므로 $\{X_{s_i}\}$는 $X$의 open cover이다. $X_{s_i}$ 위에서는 $s_i$가 $\mathcal{L}$의 자명화를 주므로 각각의 $j$에 대하여 $s_j/s_i\in \Gamma(X_{s_i},\mathcal{O}_X)$가 잘 정의된다. 한편 $D_+(\x_i)$는 $\Spec A[\x_0,\ldots,\x_n]_{(\x_i)}$와 isomorphic하므로 ([§사영공간과 Proj 구성, ⁋정리 10](/ko/math/scheme_theory/projective_schemes#thm10)), ring homomorphism
 
 $$A[\x_0,\ldots, \x_n]_{(\x_i)} \rightarrow \Gamma(X_{s_i},\mathcal{O}_X);\qquad \frac{\x_j}{\x_i}\mapsto \frac{s_j}{s_i}$$
 

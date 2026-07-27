@@ -23,7 +23,7 @@ published: false
 Scheme morphism $f: X \rightarrow Y$가 주어졌다 하자.
 
 1. $f$가 $X$와 $Y$의 open subscheme 사이의 isomorphism을 유도하면 $f$를 *open immersion<sub>열린 몰입</sub>*이라 부른다.
-2. $f$가 *projective<sub>사영사상</sub>*라는 것은 적당한 $n$에 대하여, $f$를 closed embedding과 projection의 합성 $X\hookrightarrow \mathbb{P}^n_Y \rightarrow Y$의 꼴로 분해할 수 있는 것이다. ([§사영스킴](/ko/math/scheme_theory/projective_schemes))
+2. $f$가 *projective<sub>사영사상</sub>*라는 것은 적당한 $n$에 대하여, $f$를 closed embedding과 projection의 합성 $X\hookrightarrow \mathbb{P}^n_Y \rightarrow Y$의 꼴로 분해할 수 있는 것이다. ([§사영공간과 Proj 구성](/ko/math/scheme_theory/projective_schemes))
 3. $f$가 *quasi-projective<sub>준사영사상</sub>*라는 것은 이를 적당한 open immersion $X \rightarrow X'$와 projective morphism $X' \rightarrow Y$의 합성으로 분해할 수 있는 것이다. 
 :::
 

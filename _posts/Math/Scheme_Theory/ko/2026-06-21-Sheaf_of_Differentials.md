@@ -172,7 +172,7 @@ $$0 \longrightarrow \Omega_{\mathbb{P}^n/k} \longrightarrow \mathcal{O}_{\mathbb
 이 존재한다.
 :::
 ::: 증명
-$\mathbb{P}^n=\Proj A_\bullet$, $A_\bullet=k[\x_0,\ldots, \x_n]$이라 하고 ([§사영스킴, ⁋예시 12](/ko/math/scheme_theory/projective_schemes#ex12)) 표준 affine open $U_i=D_+(\x_i)$ 위에서 작업한다. $U_i$ 위에서 좌표는 $y^{(i)}_j=\x_j/\x_i$ ($j\neq i$)이며, $\Omega_{\mathbb{P}^n/k}\vert_{U_i}$는 [명제 7](#prop7)에 의하여 $d y^{(i)}_j$ ($j\neq i$)를 자유 기저로 하는 rank $n$의 자유 sheaf이다.
+$\mathbb{P}^n=\Proj A_\bullet$, $A_\bullet=k[\x_0,\ldots, \x_n]$이라 하고 ([§사영공간과 Proj 구성, ⁋예시 12](/ko/math/scheme_theory/projective_schemes#ex12)) 표준 affine open $U_i=D_+(\x_i)$ 위에서 작업한다. $U_i$ 위에서 좌표는 $y^{(i)}_j=\x_j/\x_i$ ($j\neq i$)이며, $\Omega_{\mathbb{P}^n/k}\vert_{U_i}$는 [명제 7](#prop7)에 의하여 $d y^{(i)}_j$ ($j\neq i$)를 자유 기저로 하는 rank $n$의 자유 sheaf이다.
 
 오른쪽 morphism $\mathcal{O}(-1)^{\oplus(n+1)} \rightarrow \mathcal{O}$를 정의하자. $\mathcal{O}(-1)^{\oplus(n+1)}$의 standard basis를 $e_0,\ldots, e_n$이라 할 때, 이 morphism을 $e_j\mapsto \x_j$로 정의한다. 여기에서 $\x_j$는 $\mathcal{O}(-1) \rightarrow \mathcal{O}$, 곧 $\mathcal{O} \rightarrow \mathcal{O}(1)$의 전역 section으로서 $\mathcal{O}(-1)$을 $\mathcal{O}$로 보내는 곱이다. 각 $U_i$ 위에서 $\x_i$가 가역이므로 이 morphism은 surjective이다.
 

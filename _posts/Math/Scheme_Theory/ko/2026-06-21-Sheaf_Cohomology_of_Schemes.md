@@ -100,7 +100,7 @@ $$\check H^p(\mathcal{U}, \mathcal{F})\cong H^p(X, \mathcal{F})$$
 
 ## 사영공간 위의 line bundle
 
-이제 affine covering에 대한 Čech 계산을 사용하여 사영공간 위의 line bundle $\mathcal{O}(d)$의 cohomology를 scheme 수준에서 다룬다. 우선 $\mathcal{O}(d)$를 graded 가군의 언어로 정의한다. Ring $A$ 위의 사영공간은 $\mathbb{P}^n_A=\Proj A[\x_0,\ldots, \x_n]$이며 ([§사영스킴, ⁋정의 1](/ko/math/scheme_theory/projective_schemes#def1)), 이는 standard affine cover $\mathcal{U}=\{D_+(\x_i)\}_{i=0}^n$을 가진다.
+이제 affine covering에 대한 Čech 계산을 사용하여 사영공간 위의 line bundle $\mathcal{O}(d)$의 cohomology를 scheme 수준에서 다룬다. 우선 $\mathcal{O}(d)$를 graded 가군의 언어로 정의한다. Ring $A$ 위의 사영공간은 $\mathbb{P}^n_A=\Proj A[\x_0,\ldots, \x_n]$이며 ([§사영공간과 Proj 구성, ⁋정의 1](/ko/math/scheme_theory/projective_schemes#def1)), 이는 standard affine cover $\mathcal{U}=\{D_+(\x_i)\}_{i=0}^n$을 가진다.
 
 ::: 정의 5
 $S=A[\x_0,\ldots, \x_n]$을 standard grading을 가진 graded ring이라 하고, $S(d)$를 $S(d)_m=S_{d+m}$으로 grading을 옮긴 graded $S$-가군이라 하자. 그럼 standard affine cover $\mathcal{U}=\{D_+(\x_i)\}$ 위에서 각각의 $D_+(\x_i)=\Spec S_{(\x_i)}$에

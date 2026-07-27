@@ -56,7 +56,7 @@ As an example of a scheme morphism that is not a morphism between affine schemes
 
 $$\varphi:\mathbb{A}_\mathbb{K}^{n+1}\setminus \{0\} \rightarrow \mathbb{P}^n_\mathbb{K}$$
 
-that first appeared for motivation in [§Projective Schemes, §§Projective Space](/en/math/scheme_theory/projective_schemes#사영공간). This formula was traditionally used to construct projective space, but it did not appear in [§Projective Schemes, ⁋Example 12](/en/math/scheme_theory/projective_schemes#ex12) when the traditional projective space was translated into the language of schemes. This morphism of course satisfies the formula
+that first appeared for motivation in [§Projective Space and the Proj Construction, §§Projective Space](/en/math/scheme_theory/projective_schemes#사영공간). This formula was traditionally used to construct projective space, but it did not appear in [§Projective Space and the Proj Construction, ⁋Example 12](/en/math/scheme_theory/projective_schemes#ex12) when the traditional projective space was translated into the language of schemes. This morphism of course satisfies the formula
 
 $$(x_0,\ldots, x_n)\mapsto [x_0:\cdots:x_n],$$
 
@@ -66,7 +66,7 @@ To define $\varphi$ as a scheme morphism, consider the affine open subscheme of 
 
 $$D_+(\x_i)\cong \Spec \mathbb{K}[\x_0,\ldots, \x_n]_{(\x_i)}\cong \Spec \mathbb{K}[\x_{0/i},\ldots, \x_{n/i}]/(\x_{i/i}-1).$$
 
-([§Projective Schemes, ⁋Example 12](/en/math/scheme_theory/projective_schemes#ex12)) Also consider the affine space
+([§Projective Space and the Proj Construction, ⁋Example 12](/en/math/scheme_theory/projective_schemes#ex12)) Also consider the affine space
 
 $$\mathbb{A}^{n+1}_\mathbb{K}=\Spec \mathbb{K}[\x_0,\ldots, \x_n].$$
 
@@ -78,7 +78,7 @@ and $D(\x_i)\cong \Spec \mathbb{K}[\x_0,\ldots, \x_n]_{\x_i}$. Now for each $i$,
 
 $$\phi_i:\mathbb{K}[\x_{0/i},\ldots, \x_{n/i}]\rightarrow\mathbb{K}[\x_0,\ldots, \x_n]_{\x_i};\qquad \x_{k/i}\mapsto  \frac{\x_k}{\x_i}$$
 
-defines, by the first isomorphism theorem, a morphism $\varphi_i$ between affine schemes that gives the desired morphism. That these satisfy the conditions of [Proposition 1](#prop1) can also be checked by a brief computation. Now borrowing the notation from [§Projective Schemes, §§Projective Space](/en/math/scheme_theory/projective_schemes#사영공간) again, on each $D(\x_i)$ these are given by the formula
+defines, by the first isomorphism theorem, a morphism $\varphi_i$ between affine schemes that gives the desired morphism. That these satisfy the conditions of [Proposition 1](#prop1) can also be checked by a brief computation. Now borrowing the notation from [§Projective Space and the Proj Construction, §§Projective Space](/en/math/scheme_theory/projective_schemes#사영공간) again, on each $D(\x_i)$ these are given by the formula
 
 $$(x_0,\ldots, x_n) \rightarrow \left[\frac{x_0}{x_i}:\cdots:\frac{x_{i-1}}{x_i}:1:\frac{x_{i+1}}{x_i}:\cdots:\frac{x_n}{x_i} \right],$$
 

@@ -169,7 +169,7 @@ is the same. Setting $t=\x\y$, the coordinate ring is isomorphic to the integral
 In short, what flatness controls is not whether fibers become singular, but whether fibers continue with their size preserved.
 :::
 
-In the families we have seen so far, the fibers were all curves in $\mathbb{A}^2$, so points at infinity were missing. To include these as well, it is natural to cut the curves inside $\mathbb{P}^2$. ([§Projective Schemes](/en/math/scheme_theory/projective_schemes)) Then $X$ is no longer affine, so flatness must be checked on each affine chart.
+In the families we have seen so far, the fibers were all curves in $\mathbb{A}^2$, so points at infinity were missing. To include these as well, it is natural to cut the curves inside $\mathbb{P}^2$. ([§Projective Space and the Proj Construction](/en/math/scheme_theory/projective_schemes)) Then $X$ is no longer affine, so flatness must be checked on each affine chart.
 
 ::: Example 8
 Consider the graded ring $A_\bullet=\mathbb{K}[t][\x,\y,\z]$ graded by degree in $\x,\y,\z$. Here $t$ has degree $0$, so the base ring is $A_0=\mathbb{K}[t]$. Computing charts, $A_{(\x)}=\mathbb{K}[t][\y/\x,\z/\x]$ so $D_+(\x)$ is $\mathbb{A}^2_{\mathbb{K}[t]}$, and since $t$ has degree $0$ it survives localization. Patching the three charts, $\Proj A_\bullet$ becomes $\mathbb{P}^2\times_\mathbb{K}\mathbb{A}^1_\mathbb{K}$, and since $A_0\subseteq A_{(f)}$ for all $f$, these patch together to give the structure morphism $\Proj A_\bullet \rightarrow \mathbb{A}^1_\mathbb{K}$.

@@ -4226,7 +4226,7 @@
   - symbol: A_\bullet
     meaning: graded ring
     defs:
-    - label: §사영스킴
+    - label: §사영공간과 Proj 구성
       url: /ko/math/scheme_theory/projective_schemes#rmk
   - symbol: \AffSch
     meaning: affine scheme들의 category
@@ -4253,7 +4253,7 @@
   - symbol: A_{(\mathfrak{p})}
     meaning: 동차 prime에서의 동차 localization
     defs:
-    - label: §사영스킴
+    - label: §사영공간과 Proj 구성
       url: /ko/math/scheme_theory/projective_schemes#lem11
   - symbol: \Ass(A)
     meaning: $A$-module의 associated prime들의 모임
@@ -4323,17 +4323,17 @@
   - symbol: \mathbb{P}^n_\mathbb{K}
     meaning: $\mathbb{K}$ 위의 사영 $n$-공간
     defs:
-    - label: §사영스킴
+    - label: §사영공간과 Proj 구성
       url: /ko/math/scheme_theory/projective_schemes#ex12
   - symbol: \mathbb{P}^n
     meaning: projective $n$-space
     defs:
-    - label: §사영스킴
+    - label: §사영공간과 Proj 구성
       url: /ko/math/scheme_theory/projective_schemes
   - symbol: \Proj A_\bullet
     meaning: graded ring의 Proj
     defs:
-    - label: §사영스킴
+    - label: §사영공간과 Proj 구성
       url: /ko/math/scheme_theory/projective_schemes#def1
   - symbol: \Sch_{/S}
     meaning: $S$ 위의 스킴들의 슬라이스 범주
@@ -4370,7 +4370,7 @@
   - symbol: '[x_0:x_1:\cdots:x_n]'
     meaning: homogeneous coordinates
     defs:
-    - label: §사영스킴
+    - label: §사영공간과 Proj 구성
       url: /ko/math/scheme_theory/projective_schemes
   - symbol: X_f
     meaning: $f_x\neq0$인 점들의 열린집합

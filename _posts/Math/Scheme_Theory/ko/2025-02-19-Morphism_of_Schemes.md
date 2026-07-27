@@ -50,11 +50,11 @@ $$s_i:=\varphi_i^\sharp(W)(s)\in \mathcal{O}_X(\varphi^{-1}(W)\cap U_i)$$
 첫 주장은 [§아핀스킴, ⁋명제 11](/ko/math/scheme_theory/affine_schemes#prop11)의 $\AffSch$가 $\LRS$의 full subcategory라는 사실을 scheme morphism의 국소적인 모습에 그대로 적용한 것에 지나지 않는다. 다만 둘째 주장의 gluing condition은 ring homomorphism들 사이의 조건으로 적히지 않는다는 데 주의해야 한다. $V_i\neq V_k$인 경우 $\varphi_i$와 $\varphi_k$를 하나의 affine scheme 안에서 비교할 수 없어 이들을 $Y$ 안에서 비교해야 하고, 또 $U_i\cap U_k$는 일반적으로 affine scheme이 아니기 때문이다. 즉 scheme morphism을 붙이기 위해 주어지는 데이터는 ring homomorphism들이지만, 이들이 붙는지를 판정하는 조건은 그렇지 않다. 
 
 ::: 예시 2
-Affine scheme들 사이의 morphism이 아닌 scheme morphism의 예시로, $n\geq 1$에 대하여 [§사영스킴, §§사영공간](/ko/math/scheme_theory/projective_schemes#사영공간)에서 motivation을 위해 처음 등장했던 map
+Affine scheme들 사이의 morphism이 아닌 scheme morphism의 예시로, $n\geq 1$에 대하여 [§사영공간과 Proj 구성, §§사영공간](/ko/math/scheme_theory/projective_schemes#사영공간)에서 motivation을 위해 처음 등장했던 map
 
 $$\varphi:\mathbb{A}_\mathbb{K}^{n+1}\setminus \{0\} \rightarrow \mathbb{P}^n_\mathbb{K}$$
 
-이 있다. 이 식은 전통적으로 projective space를 만들 때 사용하는 식이었으나, [§사영스킴, ⁋예시 12](/ko/math/scheme_theory/projective_schemes#ex12)에서 전통적인 projective space를 scheme의 언어로 옮길 때는 등장하지 않았었다. 이 morphism은 물론 식 
+이 있다. 이 식은 전통적으로 projective space를 만들 때 사용하는 식이었으나, [§사영공간과 Proj 구성, ⁋예시 12](/ko/math/scheme_theory/projective_schemes#ex12)에서 전통적인 projective space를 scheme의 언어로 옮길 때는 등장하지 않았었다. 이 morphism은 물론 식 
 
 $$(x_0,\ldots, x_n)\mapsto [x_0:\cdots:x_n]$$
 
@@ -64,7 +64,7 @@ $$(x_0,\ldots, x_n)\mapsto [x_0:\cdots:x_n]$$
 
 $$D_+(\x_i)\cong \Spec \mathbb{K}[\x_0,\ldots, \x_n]_{(\x_i)}\cong \Spec \mathbb{K}[\x_{0/i},\ldots, \x_{n/i}]/(\x_{i/i}-1)$$
 
-을 생각하자. ([§사영스킴, ⁋예시 12](/ko/math/scheme_theory/projective_schemes#ex12)) 또, affine space 
+을 생각하자. ([§사영공간과 Proj 구성, ⁋예시 12](/ko/math/scheme_theory/projective_schemes#ex12)) 또, affine space 
 
 $$\mathbb{A}^{n+1}_\mathbb{K}=\Spec \mathbb{K}[\x_0,\ldots, \x_n]$$
 
@@ -76,7 +76,7 @@ $$\mathbb{A}^{n+1}_\mathbb{K}\setminus \{0\}=\bigcup_{i=0}^n D(\x_i)$$
 
 $$\phi_i:\mathbb{K}[\x_{0/i},\ldots, \x_{n/i}]\rightarrow\mathbb{K}[\x_0,\ldots, \x_n]_{\x_i};\qquad \x_{k/i}\mapsto  \frac{\x_k}{\x_i}$$
 
-에 first isomorphism theorem을 적용하여 정의된 affine scheme 사이의 morphism $\varphi_i$가 원하는 morphism이 된다. 이들이 [명제 1](#prop1)의 조건을 만족하는 것도 약간의 계산을 통해 확인할 수 있다. 이제 [§사영스킴, §§사영공간](/ko/math/scheme_theory/projective_schemes#사영공간)에서의 표기를 다시 빌려오면, 이들은 각각의 $D(\x_i)$ 위에서 다음 식
+에 first isomorphism theorem을 적용하여 정의된 affine scheme 사이의 morphism $\varphi_i$가 원하는 morphism이 된다. 이들이 [명제 1](#prop1)의 조건을 만족하는 것도 약간의 계산을 통해 확인할 수 있다. 이제 [§사영공간과 Proj 구성, §§사영공간](/ko/math/scheme_theory/projective_schemes#사영공간)에서의 표기를 다시 빌려오면, 이들은 각각의 $D(\x_i)$ 위에서 다음 식
 
 $$(x_0,\ldots, x_n) \rightarrow \left[\frac{x_0}{x_i}:\cdots:\frac{x_{i-1}}{x_i}:1:\frac{x_{i+1}}{x_i}:\cdots:\frac{x_n}{x_i} \right]$$
 
