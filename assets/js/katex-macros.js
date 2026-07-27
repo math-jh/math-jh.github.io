@@ -187,6 +187,7 @@ window.KATEX_MACROS = {
     "\\rSpec":"\\operatorname{\\underline{Spec}}",
     "\\rProj":"\\operatorname{\\underline{Proj}}",
     "\\S":"\\operatorname{S}",
+    "\\sat":"\\mathrm{sat}",
     "\\scl":"\\operatorname{scl}",
     "\\sgn":"\\operatorname{sgn}",
     "\\sHom":"\\mathop{\\mathcal{Hom}}",
