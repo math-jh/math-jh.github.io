@@ -16,7 +16,7 @@ published: false
 
 ---
 
-대수기하학의 많은 분류 문제는 각 밑공간 $T$에 "그 위의 족들의 모임"을 대응시키는 형태로 주어진다. 가령 어떤 고정된 형의 곡선들의 $T$-족, 또는 $T$ 위의 vector bundle들이 그것이다. 이러한 대응을 $T\mapsto F(T)$ 꼴의 functor $F:\Sch^\op \rightarrow \Set$로 적고, $F$를 표현하는 scheme을 찾는 것이 표현가능성의 관점이다. ([\[스킴\] §점함자, ⁋정의 5](/ko/math/scheme_theory/functor_of_points#def5)) 그런데 분류 대상이 비자명한 automorphism을 가지는 순간 이 관점은 곧바로 무너진다. 예컨대 $T$ 위의 line bundle을 분류하려 할 때, 두 line bundle은 국소적으로 동형이어도 대역적으로 동형이 아닐 수 있고, 더 본질적으로 각 line bundle은 $\mathcal{O}^\ast$만큼의 automorphism을 가진다. 만약 $F(T)$를 isomorphism class의 집합으로 두면 이 automorphism 정보가 사라지고, 그 결과 국소적으로 주어진 자료를 붙이는 하강이 집합 수준에서 더 이상 작동하지 않는다.
+대수기하학의 많은 분류 문제는 각 밑공간 $T$에 "그 위의 족들의 모임"을 대응시키는 형태로 주어진다. 가령 어떤 고정된 형의 곡선들의 $T$-족, 또는 $T$ 위의 vector bundle들이 그것이다. 이러한 대응을 $T\mapsto F(T)$ 꼴의 functor $F:\Sch^\op \rightarrow \Set$로 적고, $F$를 표현하는 scheme을 찾는 것이 표현가능성의 관점이다. ([\[스킴\] §점함자, ⁋정의 3](/ko/math/scheme_theory/functor_of_points#def3)) 그런데 분류 대상이 비자명한 automorphism을 가지는 순간 이 관점은 곧바로 무너진다. 예컨대 $T$ 위의 line bundle을 분류하려 할 때, 두 line bundle은 국소적으로 동형이어도 대역적으로 동형이 아닐 수 있고, 더 본질적으로 각 line bundle은 $\mathcal{O}^\ast$만큼의 automorphism을 가진다. 만약 $F(T)$를 isomorphism class의 집합으로 두면 이 automorphism 정보가 사라지고, 그 결과 국소적으로 주어진 자료를 붙이는 하강이 집합 수준에서 더 이상 작동하지 않는다.
 
 올바른 해법은 $F(T)$를 isomorphism class의 집합이 아니라 대상과 그들 사이의 isomorphism을 함께 기억하는 *groupoid*로 두는 것이다. 그러면 $T\mapsto F(T)$은 집합이 아니라 범주를 값으로 가지는, 즉 밑범주 위에서 변하는 범주가 된다. 이러한 "밑범주 위의 범주"를 정식화하는 두 가지 동치 언어가 pseudofunctor와 fibered category이며, 그 위에서 site의 covering을 따라 자료가 붙는 하강 조건을 부과한 것이 stack이다. Stack은 정확히 [\[스킴\] §충실평탄 하강, ⁋정리 10](/ko/math/scheme_theory/faithfully_flat_descent#thm10)을 groupoid 값 functor로 끌어올린 일반화이다. 이 글에서는 groupoid와 pseudofunctor로 동기를 마련한 뒤 category fibered in groupoid를 정의하고, 그 위에서 prestack과 stack을 도입하여 quasi-coherent sheaf의 stack과 torsor의 분류 stack $\mathbf{B}G$를 예로 다룬다.
 
@@ -125,7 +125,7 @@ CFG에서 pseudofunctor로 가는 방향은 [명제 7](#prop7)이다. Cleavage�
 ::: 예시 10
 밑범주를 $\mathcal{C}=\Sch$ (또는 고정된 base 위의 $\Sch/S$)로 둔다.
 
-1. (Representable CFG) 대상 $X\in \mathcal{C}$에 대하여 slice 범주 $\mathcal{C}/X$을 사영 $(T \rightarrow X)\mapsto T$과 함께 보면 CFG이다. $T$ 위의 fiber는 morphism 집합 $\Hom_\mathcal{C}(T, X)$을 이산 groupoid로 본 것이며, 이는 점함자 $h_X$에 대응하는 CFG이다. ([\[스킴\] §점함자, ⁋정리 3](/ko/math/scheme_theory/functor_of_points#thm3))
+1. (Representable CFG) 대상 $X\in \mathcal{C}$에 대하여 slice 범주 $\mathcal{C}/X$을 사영 $(T \rightarrow X)\mapsto T$과 함께 보면 CFG이다. $T$ 위의 fiber는 morphism 집합 $\Hom_\mathcal{C}(T, X)$을 이산 groupoid로 본 것이며, 이는 점함자 $h_X$에 대응하는 CFG이다. ([\[스킴\] §점함자, ⁋정리 1](/ko/math/scheme_theory/functor_of_points#thm1))
 
 2. (quasi-coherent sheaf의 CFG) 대상이 쌍 $(T, \mathcal{F})$ ($T\in \Sch$, $\mathcal{F}$은 $T$ 위의 quasi-coherent sheaf)이고, $(T, \mathcal{F})$에서 $(T', \mathcal{F}')$로의 morphism이 쌍 $(f, \alpha)$ ($f: T \rightarrow T'$, $\alpha: \mathcal{F}\xrightarrow{\sim}f^\ast \mathcal{F}'$은 isomorphism)인 범주를 $\mathcal{QC}$로 적는다. ([\[스킴\] §준연접층, ⁋정의 8](/ko/math/scheme_theory/quasicoherent_sheaves#def8)) 사영 $(T, \mathcal{F})\mapsto T$에 대하여 $T$ 위의 fiber는 $T$ 위의 quasi-coherent sheaf들의 groupoid $\QCoh(T)$ (isomorphism만 morphism으로 취한 것)이고, pullback functor는 $f^\ast$이다. ([\[스킴\] §준연접층, ⁋명제 15](/ko/math/scheme_theory/quasicoherent_sheaves#prop15))
 

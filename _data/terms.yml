@@ -135,8 +135,8 @@ A:
   primary: en
   note: '명사형(군의 작용)만 action. 동사형 ''작용한다/작용하는''은 한글 유지'
   defs:
-  - label: '[스킴] §대수적 군'
-    url: /ko/math/scheme_theory/algebraic_groups
+  - label: '[대수다양체] §대수적 군'
+    url: /ko/math/algebraic_varieties/algebraic_groups
 - id: acyclic
   en: acyclic
   ko: 비순환
@@ -205,8 +205,8 @@ A:
   ko: 아핀 대수적 군
   primary: en
   defs:
-  - label: '[스킴] §대수적 군'
-    url: /ko/math/scheme_theory/algebraic_groups
+  - label: '[대수다양체] §대수적 군'
+    url: /ko/math/algebraic_varieties/algebraic_groups
 - id: affine_algebraic_set
   en: affine algebraic set
   ko: 아핀 대수적 집합
@@ -309,8 +309,8 @@ A:
   ko: 대수적 군
   primary: en
   defs:
-  - label: '[스킴] §대수적 군'
-    url: /ko/math/scheme_theory/algebraic_groups
+  - label: '[대수다양체] §대수적 군'
+    url: /ko/math/algebraic_varieties/algebraic_groups
   see:
   - label: Lie group
     id: lie_group
@@ -336,8 +336,8 @@ A:
   ko: 대수적 토러스
   primary: en
   defs:
-  - label: '[스킴] §대수적 군'
-    url: /ko/math/scheme_theory/algebraic_groups
+  - label: '[대수다양체] §대수적 군'
+    url: /ko/math/algebraic_varieties/algebraic_groups
 - id: algebraic_variety
   en: algebraic variety
   ko: 대수다양체
@@ -1474,8 +1474,8 @@ C:
     url: /ko/math/representation_theory/character_theory
   - label: '[표현론] §유한차원 가환대수의 표현과 spectrum'
     url: /ko/math/representation_theory/spectrum_of_finite_dimensional_algebras
-  - label: '[스킴] §대수적 군'
-    url: /ko/math/scheme_theory/algebraic_groups
+  - label: '[대수다양체] §대수적 군'
+    url: /ko/math/algebraic_varieties/algebraic_groups
 - id: characteristic
   en: characteristic
   ko: 표수
@@ -1988,8 +1988,8 @@ C:
   ko: ''
   primary: en
   defs:
-  - label: '[스킴] §대수적 군'
-    url: /ko/math/scheme_theory/algebraic_groups
+  - label: '[대수다양체] §대수적 군'
+    url: /ko/math/algebraic_varieties/algebraic_groups
 - id: comonoid
   en: comonoid
   ko: 쌍대모노이드
@@ -4407,8 +4407,8 @@ F:
   ko: 고정점 집합
   primary: en
   defs:
-  - label: '[스킴] §대수적 군'
-    url: /ko/math/scheme_theory/algebraic_groups
+  - label: '[대수다양체] §대수적 군'
+    url: /ko/math/algebraic_varieties/algebraic_groups
 - id: fixer
   en: fixer
   ko: 고정자
@@ -4846,8 +4846,8 @@ G:
   ko: GIT 몫
   primary: en
   defs:
-  - label: '[스킴] §대수적 군'
-    url: /ko/math/scheme_theory/algebraic_groups
+  - label: '[토릭 기하학] §Cox 구성과 GIT quotient'
+    url: /ko/math/toric_geometry/cox_construction
 - id: givental_j_-function
   en: Givental $J$-function
   ko: 기벤탈 $J$-함수
@@ -7077,8 +7077,8 @@ L:
   ko: 선형화
   primary: en
   defs:
-  - label: '[스킴] §대수적 군'
-    url: /ko/math/scheme_theory/algebraic_groups
+  - label: '[토릭 기하학] §Cox 구성과 GIT quotient'
+    url: /ko/math/toric_geometry/cox_construction
 - id: linearly_dependent
   en: linearly dependent
   ko: 일차독립
@@ -10046,8 +10046,8 @@ R:
     url: /ko/math/representation_theory/representations_of_finite_groups
   - label: '[리 이론] §원환면의 작용'
     url: /ko/math/lie_theory/torus_action
-  - label: '[스킴] §대수적 군'
-    url: /ko/math/scheme_theory/algebraic_groups
+  - label: '[대수다양체] §대수적 군'
+    url: /ko/math/algebraic_varieties/algebraic_groups
   see:
   - label: Irreducible representation
     id: irreducible_representation
@@ -10547,8 +10547,8 @@ S:
   ko: 반안정
   primary: en
   defs:
-  - label: '[스킴] §대수적 군'
-    url: /ko/math/scheme_theory/algebraic_groups
+  - label: '[토릭 기하학] §Cox 구성과 GIT quotient'
+    url: /ko/math/toric_geometry/cox_construction
 - id: separable_algebraic_closure
   en: separable algebraic closure
   ko: 분리가능폐포

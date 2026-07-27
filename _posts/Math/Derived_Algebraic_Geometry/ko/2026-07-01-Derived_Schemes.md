@@ -22,7 +22,7 @@ published: false
 
 ## Affine derived scheme과 derived Spec
 
-고전적 affine scheme은 가환환 $A$에 반변적으로 대응하는 $\Spec A$였고, 그 본질은 점functor $h_{\Spec A}=\Hom(-,A)$가 test scheme 위에서 어떻게 보이는가에 있었다. ([\[스킴\] §점함자, ⁋정의 1](/ko/math/scheme_theory/functor_of_points#def1)) Derived 세계에서 우리는 이 그림을 그대로 옮기되, 가환환을 animated 가환환으로, 집합값 functor를 space값 functor로 바꾼다.
+고전적 affine scheme은 가환환 $A$에 반변적으로 대응하는 $\Spec A$였고, 그 본질은 점functor $h_{\Spec A}=\Hom(-,A)$가 test scheme 위에서 어떻게 보이는가에 있었다. ([\[스킴\] §스킴 사이의 사상, ⁋정의 9](/ko/math/scheme_theory/morphism_of_schemes#def9)) Derived 세계에서 우리는 이 그림을 그대로 옮기되, 가환환을 animated 가환환으로, 집합값 functor를 space값 functor로 바꾼다.
 
 ::: 정의 1
 Animated 가환환 $R\in \operatorname{Ani}$에 대하여, 그 *affine derived scheme* $\Spec R$은 $\operatorname{Ani}^\op$의 대상으로서의 $R$이며, 그 *점functor*는
@@ -105,7 +105,7 @@ $$F(R)\overset{\sim}{\longrightarrow}\lim_{[n]\in \Delta}F(R_n)$$
 Yoneda embedding $X\mapsto \operatorname{Map}_{\mathrm{dSch}}(-,X)\vert_{\mathrm{dAff}}$은 완전 충실한 포함 $\mathrm{dSch}\hookrightarrow \mathrm{dSt}$을 주며, derived scheme과 (뒤에서 정의할) geometric derived stack에 대하여 truncation functor $t_0$이 이들의 밑에 깔린 고전적 scheme·algebraic stack을 준다. 특히 고전적 algebraic stack은 discrete ring 위에서 truncated groupoid값을 갖는 derived stack으로서 $\mathrm{dSt}$에 완전 충실하게 들어간다.
 :::
 ::: 증명
-점functor가 étale hyperdescent를 만족함은 [명제 2](#prop2)의 localization이 étale localization으로 확장되고 fpqc 하강이 étale 하강을 함의하기 때문이며, 이는 [\[Stacks\] §Grothendieck 위상과 site, ⁋정리 17](/ko/math/stacks/grothendieck_topology#thm17)의 유도 판본이다. 완전 충실성은 Yoneda 보조정리의 $\infty$-범주 판본에서 나온다. ([\[스킴\] §점함자, ⁋정리 3](/ko/math/scheme_theory/functor_of_points#thm3)의 space값 승격) 고전적 algebraic stack $\mathcal{X}$을 derived stack으로 보려면, 그 functor를 discrete ring에 제한하고 groupoid를 $1$-truncated space로 보면 되며, hyperdescent가 $1$-truncated sheaf에서 통상적 stack 하강으로 환원됨을 확인하면 된다. ([\[Stacks\] §대수적 stack과 quotient stack, ⁋정의 6](/ko/math/stacks/algebraic_stacks#def6)) 자세한 논증은 ([TV], [Lur, SAG])에 있다.
+점functor가 étale hyperdescent를 만족함은 [명제 2](#prop2)의 localization이 étale localization으로 확장되고 fpqc 하강이 étale 하강을 함의하기 때문이며, 이는 [\[Stacks\] §Grothendieck 위상과 site, ⁋정리 17](/ko/math/stacks/grothendieck_topology#thm17)의 유도 판본이다. 완전 충실성은 Yoneda 보조정리의 $\infty$-범주 판본에서 나온다. ([\[스킴\] §점함자, ⁋정리 1](/ko/math/scheme_theory/functor_of_points#thm1)의 space값 승격) 고전적 algebraic stack $\mathcal{X}$을 derived stack으로 보려면, 그 functor를 discrete ring에 제한하고 groupoid를 $1$-truncated space로 보면 되며, hyperdescent가 $1$-truncated sheaf에서 통상적 stack 하강으로 환원됨을 확인하면 된다. ([\[Stacks\] §대수적 stack과 quotient stack, ⁋정의 6](/ko/math/stacks/algebraic_stacks#def6)) 자세한 논증은 ([TV], [Lur, SAG])에 있다.
 :::
 
 Derived stack 가운데 기하를 논할 수 있는 부류는 고전적 경우와 마찬가지로 atlas로 가려낸다. 다만 atlas의 source가 derived scheme이고, 차원·매끄러움은 유도 판본으로 읽는다.

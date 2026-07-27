@@ -212,7 +212,7 @@ Site $(\mathcal{C}, \tau)$ 위의 sheaf 범주 $\Sh(\mathcal{C}; \tau)$를 *Grot
 
 ## Subcanonical 위상과 representable presheaf
 
-Site 위의 sheaf 이론이 scheme 이론과 만나는 결정적인 지점은, 밑범주의 대상이 정의하는 representable presheaf가 그 위상에 대해 sheaf인가 하는 물음이다. 이것이 성립하면 대상 $X$를 그 functor of points $h_X$와 동일시하여 sheaf 범주 안의 한 대상으로 다룰 수 있고, scheme의 functorial 정의가 sheaf의 언어로 정당화된다. ([\[스킴\] §점함자, ⁋정의 5](/ko/math/scheme_theory/functor_of_points#def5))
+Site 위의 sheaf 이론이 scheme 이론과 만나는 결정적인 지점은, 밑범주의 대상이 정의하는 representable presheaf가 그 위상에 대해 sheaf인가 하는 물음이다. 이것이 성립하면 대상 $X$를 그 functor of points $h_X$와 동일시하여 sheaf 범주 안의 한 대상으로 다룰 수 있고, scheme의 functorial 정의가 sheaf의 언어로 정당화된다. ([\[스킴\] §점함자, ⁋정의 3](/ko/math/scheme_theory/functor_of_points#def3))
 
 ::: 정의 16
 Site $(\mathcal{C}, \tau)$가 *subcanonical<sub>준표준</sub>*이라는 것은, 모든 대상 $X\in \mathcal{C}$에 대하여 representable presheaf $h_X=\Hom_\mathcal{C}(-, X)$이 $\tau$-sheaf인 것이다. Subcanonical 위상들 가운데 가장 미세한 것이 존재하며 이를 *canonical topology<sub>표준 위상</sub>*라 부른다. 즉 어떤 위상이 subcanonical인 것은 그것이 canonical topology보다 거칠거나 같은 것이다.
@@ -243,7 +243,7 @@ $$\Hom_{\Ring}(R, A) \rightarrow \Hom_{\Ring}(R, B)\rightrightarrows \Hom_{\Ring
 일반적인 $X$에 대해서는 다음과 같이 붙인다. 두 morphism $g_1, g_2:\Spec B \rightarrow X$이 $\Spec(B\otimes_A B)$ 위에서 일치한다 하자. 위 affine 경우를 $X$의 affine open들에 적용하면 우선 두 morphism이 위상공간 사이의 연속함수로서 일치하고, 이어 각 affine open 위에서 structure sheaf에 대한 위 equalizer로부터 $g_1=g_2$임과, 정합적으로 주어진 morphism이 $\Spec A \rightarrow X$로 유일하게 내려옴을 얻는다. 여기에서 morphism의 상이 faithfully flat base change에 대해 잘 행동함과 quasi-compact 조건이 유한 affine covering으로의 환원을 가능하게 함을 사용한다. 따라서 $h_X$은 fpqc sheaf이다. Fpqc보다 거친 위상의 covering은 fpqc covering이므로 이들에 대해서도 sheaf 조건이 따라온다.
 :::
 
-[정리 17](#thm17)이 stack 이론으로 가는 길을 연다. Scheme $X$를 그 functor of points $h_X:\Sch^\op \rightarrow \Set$과 동일시하면 ([\[스킴\] §점함자, ⁋정리 3](/ko/math/scheme_theory/functor_of_points#thm3)), scheme은 fpqc site $\Sch$ 위의 sheaf 가운데 특별한 것, 즉 적절한 표현가능성 조건을 만족하는 sheaf로 자리매김한다. Functorially 정의된 moduli 문제 $F:\Sch^\op \rightarrow \Set$이 scheme을 표현하는지를 묻는 일은, 먼저 $F$가 fpqc sheaf인지를 확인하고 ([\[스킴\] §충실평탄 하강, ⁋정리 9](/ko/math/scheme_theory/faithfully_flat_descent#thm9)의 하강 논증과 같은 방식으로) 이어 그것이 국소적으로 표현가능한지를 보는 두 단계로 나뉜다. Stack은 이 그림에서 sheaf의 값을 집합 대신 groupoid로 확장하여, 점들이 비자명한 automorphism을 가지는 moduli 문제까지 포착하는 일반화이다. 그 정의와 전개는 이후의 글로 미룬다.
+[정리 17](#thm17)이 stack 이론으로 가는 길을 연다. Scheme $X$를 그 functor of points $h_X:\Sch^\op \rightarrow \Set$과 동일시하면 ([\[스킴\] §점함자, ⁋정리 1](/ko/math/scheme_theory/functor_of_points#thm1)), scheme은 fpqc site $\Sch$ 위의 sheaf 가운데 특별한 것, 즉 적절한 표현가능성 조건을 만족하는 sheaf로 자리매김한다. Functorially 정의된 moduli 문제 $F:\Sch^\op \rightarrow \Set$이 scheme을 표현하는지를 묻는 일은, 먼저 $F$가 fpqc sheaf인지를 확인하고 ([\[스킴\] §충실평탄 하강, ⁋정리 9](/ko/math/scheme_theory/faithfully_flat_descent#thm9)의 하강 논증과 같은 방식으로) 이어 그것이 국소적으로 표현가능한지를 보는 두 단계로 나뉜다. Stack은 이 그림에서 sheaf의 값을 집합 대신 groupoid로 확장하여, 점들이 비자명한 automorphism을 가지는 moduli 문제까지 포착하는 일반화이다. 그 정의와 전개는 이후의 글로 미룬다.
 
 ## $\mathbb{G}_a$의 sheaf 성질
 
@@ -254,7 +254,7 @@ $\mathbb{G}_a=\Spec \mathbb{Z}[\x]=\mathbb{A}^1$의 functor of points은 각 sch
 
 $$\mathbb{G}_a(T)=\Hom_{\Sch}(T, \mathbb{A}^1)=\Gamma(T, \mathcal{O}_T)$$
 
-을 대응시킨다. ([\[스킴\] §점함자, ⁋명제 7](/ko/math/scheme_theory/functor_of_points#prop7)) 이를 $\Sch$ 위의 presheaf로 본다.
+을 대응시킨다. ([\[스킴\] §점함자, ⁋명제 5](/ko/math/scheme_theory/functor_of_points#prop5)) 이를 $\Sch$ 위의 presheaf로 본다.
 
 먼저 Zariski 위상에 대해 $\mathbb{G}_a$가 sheaf임은 고전적이다. Open cover $T=\bigcup T_i$ 위에서 정합적인 대역 절단 $s_i\in \mathcal{O}_T(T_i)$들은 structure sheaf $\mathcal{O}_T$ 자체가 sheaf이므로 유일한 $s\in \mathcal{O}_T(T)$로 붙는다. 즉 [명제 11](#prop11)의 equalizer 조건이 정확히 $\mathcal{O}_T$의 sheaf 조건이다.
 
