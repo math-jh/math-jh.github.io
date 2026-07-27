@@ -225,7 +225,7 @@ First, for an algebraically closed field $\mathbb{K}$, considering the ring map 
 
 Now consider the scheme morphism $\Spec\iota: \Spec \mathbb{K}[\x,\y] \rightarrow\Spec \mathbb{K}[\x]$ corresponding to this. This is the function that takes any prime ideal $\mathfrak{p}\subseteq \mathbb{K}[\x,\y]$ and outputs the prime ideal $\mathfrak{p}\cap \mathbb{K}[\x]$ of $\mathbb{K}[\x]$. Geometrically, this is the function that corresponds a point $(x,y)$ of the affine plane $\mathbb{A}^2_\mathbb{K}$ to the point $x$ of the affine line $\mathbb{A}^1_\mathbb{K}$.
 
-{% diagram Math/Scheme_Theory/Properties_of_Scheme_Morphisms-1.svg width="27.72em" alt="finite_type_morphism" %}
+{% diagram Math/Scheme_Theory/Properties_of_Scheme_Morphisms-1.svg width="28.04em" alt="finite_type_morphism" %}
 
 As a related example of a finite morphism, there is the composition of the above ring homomorphism $\iota:\mathbb{K}[\x]\rightarrow \mathbb{K}[\x,\y]$ with the projection map $\pi:\mathbb{K}[\x,\y] \rightarrow \mathbb{K}[\x,\y]/(\x-\y^2)$. Then $\mathbb{K}[\x,\y]/(\x-\y^2)$ is generated as a $\mathbb{K}[\x]$-module by $1$ and $\y$, so $\phi:\mathbb{K}[\x] \rightarrow \mathbb{K}[\x,\y]/(\x-\y^2)$ is a finite morphism.
 
@@ -239,7 +239,7 @@ $$\phi: \mathbb{K}[\x] \rightarrow \mathbb{K}[\x,\y] \rightarrow \mathbb{K}[\x,\
 
 can be viewed geometrically as the projection from the zero set $Z(\x-\y^2)$ of $\x=\y^2$ onto the $x$-axis.
 
-{% diagram Math/Scheme_Theory/Properties_of_Scheme_Morphisms-2.svg width="25.48em" alt="finite_morphism" %}
+{% diagram Math/Scheme_Theory/Properties_of_Scheme_Morphisms-2.svg width="25.72em" alt="finite_morphism" %}
 
 The geometric difference between these two examples is quite clear. In the first example, the fiber over a point of the target is an infinite set, whereas in the second example, the fiber over a point is a finite set. Algebraically, this can be checked as follows: when we take any point $\mathfrak{p}=(\x-a)$ of the target $\mathbb{A}_\mathbb{K}^1$, any $\mathfrak{q}_b=(\x-a, \y-b)\in \mathbb{A}_\mathbb{K}^2$ satisfies $(\Spec\iota)(\mathfrak{q}_b)=\mathfrak{p}$, whereas in the second example, only the two points $\mathfrak{q}_+=(\x-a, \y-\sqrt{a})$ and $\mathfrak{q}_-=(\x-a, \y+\sqrt{a})$ satisfy $(\Spec\phi)(\mathfrak{q}_\pm)=\mathfrak{p}$.
 

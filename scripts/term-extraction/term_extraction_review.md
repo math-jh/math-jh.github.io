@@ -5115,3 +5115,7 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 ## term_extract_worker 2026-07-26 03:30
 
 - _posts/Math/Mirror_Symmetry/ko/2026-05-24-Gauss_Manin_Connection.md: 병기 필요 'oscillating integral' — 위키 ko 문서 'PID 제어기' — 병기형 도출 필요
+
+## term_extract_worker 2026-07-27 18:30
+
+- _posts/Math/Algebraic_Varieties/ko/2026-03-11-Algebraic_Groups.md: 병기 필요 'closed subgroup' — 위키 ko 문서 '위상군' — 병기형 도출 필요
