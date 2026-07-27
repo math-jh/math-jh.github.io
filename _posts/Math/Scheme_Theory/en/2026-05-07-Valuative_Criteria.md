@@ -74,7 +74,7 @@ As seen above, the idea of a separated morphism is that, given a germ of a curve
 ::: Definition 3
 For a scheme morphism $f:X \rightarrow Y$, the unique morphism induced by two copies of $\id_X$ via the universal property of the fiber product, i.e., the dashed arrow $\Delta: X \rightarrow X \times_Y X$ in the following diagram
 
-{% diagram Math/Scheme_Theory/Valuative_Criteria-1.svg width="13.51em" alt="diagonal_morphism" %}
+{% diagram Math/Scheme_Theory/Valuative_Criteria-1.svg width="13.58em" alt="diagonal_morphism" %}
 
 is called the *diagonal morphism* of $f$. ([§Fiber Products, ⁋Definition 1](/en/math/scheme_theory/fiber_products#def1)) If $\Delta$ is a closed embedding, we call $f$ *separated*, and say $X$ is *separated* over $Y$. If $X$ is separated over $\Spec \mathbb{Z}$, we simply call $X$ a *separated* scheme.
 :::
@@ -116,7 +116,7 @@ Now let us see a criterion for separatedness. Unlike in [Example 2](#ex2), the c
 ::: Theorem 6
 For a Noetherian scheme $X$ and a scheme morphism $f:X \rightarrow Y$, the condition that $f$ is separated is equivalent to the following: for any valuation ring $A$ with its quotient field $K=\Frac(A)$, and for any scheme morphisms $\Spec A \rightarrow Y$, $\Spec K \rightarrow X$ such that the outer square of the following commutative diagram
 
-{% diagram Math/Scheme_Theory/Valuative_Criteria-2.svg width="8.27em" alt="valuative_criterion" %}
+{% diagram Math/Scheme_Theory/Valuative_Criteria-2.svg width="8.34em" alt="valuative_criterion" %}
 
 is given, there is at most one morphism $\Spec A \rightarrow X$ making the entire diagram commute.
 :::
@@ -234,7 +234,7 @@ Because a proper morphism requires both the separated condition and the universa
 ::: Proposition 10
 For a finite type scheme morphism $f:X \rightarrow Y$ between Noetherian schemes, $f$ is universally closed if and only if for every valuation ring $A$ with quotient field $K=\Frac(A)$, every scheme morphism $\Spec A \rightarrow Y$, $\Spec K \rightarrow X$, and every commutative diagram of the outer square
 
-{% diagram Math/Scheme_Theory/Valuative_Criteria-2.svg width="8.27em" alt="valuative_criterion" %}
+{% diagram Math/Scheme_Theory/Valuative_Criteria-2.svg width="8.34em" alt="valuative_criterion" %}
 
 there exists at least one $\Spec A \rightarrow X$ making the whole diagram commute.
 :::
@@ -283,7 +283,7 @@ Putting the two pieces together, we obtain the valuative criterion for propernes
 ::: Theorem 11
 For a finite type scheme morphism $f:X \rightarrow Y$ between Noetherian schemes, $f$ is proper if and only if for any valuation ring $A$ and its quotient field $K=\Frac(A)$, and for any scheme morphisms $\Spec A \rightarrow Y$, $\Spec K \rightarrow X$ making the outer square of the following commutative diagram
 
-{% diagram Math/Scheme_Theory/Valuative_Criteria-2.svg width="8.27em" alt="valuative_criterion" %}
+{% diagram Math/Scheme_Theory/Valuative_Criteria-2.svg width="8.34em" alt="valuative_criterion" %}
 
 there exists exactly one $\Spec A \rightarrow X$ such that the entire diagram commutes.
 :::

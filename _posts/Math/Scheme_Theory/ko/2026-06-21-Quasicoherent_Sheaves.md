@@ -171,7 +171,7 @@ $$\theta_f:M_f \rightarrow \mathcal{F}(D(f))$$
 
 가 결정된다. 이들은 base $\{D(f)\}$ 위에서 morphism $\theta:\widetilde M \rightarrow \mathcal{F}$를 정의하므로, $\theta$가 stalk마다 동형임을 보이면 된다.
 
-이를 위해 $\mathcal{F}$의 준연접성을 사용한다. 각 점 $\mathfrak{p}$에 대하여 $\mathfrak{p}\in D(g)$이고 $\mathcal{F}\vert_{D(g)}\cong \widetilde N$인 적당한 $g$와 $A_g$-가군 $N$이 존재한다. ([정의 8](#def8)에서 affine open neighborhood를 principal open set으로 줄일 수 있는 것은 이들이 base이기 때문이다.) 그럼 $N=\mathcal{F}(D(g))$이고, [명제 5](#prop5)에 의하여 $D(g)$ 위로 제한된 $\theta$는 $\widetilde{M_g} \rightarrow \widetilde N$의 꼴이다. 두 연관층 사이의 morphism은 [정리 7](#thm7)에 의해 그 global section morphism으로 결정되므로, 이 restriction이 isomorphic한 것은 자연스러운 localization morphism $M_g=\mathcal{F}(\Spec A)_g \rightarrow \mathcal{F}(D(g))=N$이 isomorphic한 것과 같다. 이제 이 morphism이 동형임을 확인한다. $\Spec A$이 quasi-compact하므로 그 위에서 $\mathcal{F}$가 연관층이 되는 유한 개의 principal open $D(h_1),\ldots,D(h_m)$으로 $\Spec A$을 덮을 수 있고, sheaf 조건은 exact sequence
+이를 위해 $\mathcal{F}$의 준연접성을 사용한다. 각 점 $\mathfrak{p}$에 대하여 $\mathfrak{p}\in D(g)$이고 $\mathcal{F}\vert_{D(g)}\cong \widetilde N$인 적당한 $g$와 $A_g$-가군 $N$이 존재한다. ([정의 8](#def8)에서 affine open neighborhood를 principal open set으로 줄일 수 있는 것은 이들이 base이기 때문이다.) 그럼 $N=\mathcal{F}(D(g))$이고, [명제 5](#prop5)에 의하여 $D(g)$ 위로 제한된 $\theta$는 $\widetilde{M_g} \rightarrow \widetilde N$의 꼴이다. 두 연관층 사이의 morphism은 [정리 7](#thm7)에 의해 그 global section morphism으로 결정되므로, 이 restriction이 isomorphic한 것은 자연스러운 localization morphism $M_g=\mathcal{F}(\Spec A)_g \rightarrow \mathcal{F}(D(g))=N$이 isomorphic한 것과 같다. 이제 이 morphism이 동형임을 확인한다. $\Spec A$가 quasi-compact이므로 그 위에서 $\mathcal{F}$가 연관층이 되는 유한 개의 principal open $D(h_1),\ldots,D(h_m)$으로 $\Spec A$를 덮을 수 있고, sheaf 조건은 exact sequence
 
 $$0 \rightarrow \mathcal{F}(\Spec A) \rightarrow \prod_i \mathcal{F}(D(h_i)) \rightarrow \prod_{i,j}\mathcal{F}(D(h_ih_j))$$
 
@@ -188,7 +188,7 @@ $$0 \rightarrow \mathcal{F}(\Spec A) \rightarrow \prod_i \mathcal{F}(D(h_i)) \ri
 Scheme $X$ 위의 $\mathcal{O}_X$-가군층 $\mathcal{F}$에 대하여 다음이 동치이다.
 
 1. $\mathcal{F}$는 quasi-coherent sheaf이다.
-2. $X$의 모든 affine open subset $U\cong \Spec A$에 대하여, $A$-가군 $M_U=\mathcal{F}(U)$가 존재하여 $\mathcal{F}\vert_U\cong \widetilde{M_U}$이다.
+2. $X$의 모든 affine open subset $U\cong \Spec A$에 대하여, $A$-가군 $M_U=\mathcal{F}(U)$의 연관층이 $\mathcal{F}\vert_U\cong \widetilde{M_U}$를 준다.
 :::
 ::: 증명
 둘째 조건이 첫째 조건을 함의하는 것은 [정의 8](#def8)로부터 자명하므로 그 역을 보인다. $\mathcal{F}$가 quasi-coherent sheaf라 하고, 임의의 affine open subset $U=\Spec A$를 고정하자. 우리는 $\mathcal{F}\vert_U$가 $\Spec A$ 위의 quasi-coherent sheaf임을 보이면 [정리 9](#thm9)에 의해 $\mathcal{F}\vert_U\cong \widetilde{M_U}$ (단, $M_U=\mathcal{F}(U)$)가 따라온다.
@@ -218,7 +218,7 @@ Scheme $X$ 위의 $\mathcal{O}_X$-가군층 $\mathcal{E}$가 *locally free sheaf
 
 Locally free sheaf는 항상 quasi-coherent sheaf이다. 실제로 각 점의 근방을 affine $\Spec A$로 줄이면 $\mathcal{E}\vert_{\Spec A}\cong \mathcal{O}_{\Spec A}^{\oplus r}=\widetilde{A^{\oplus r}}$이므로, 이는 free 가군 $A^{\oplus r}$의 연관층이다. 더욱이 finite rank이면 $A^{\oplus r}$이 finitely presented이므로 locally free sheaf는 coherent sheaf이기도 하다.
 
-[\[대수다양체\] §선다발과 벡터다발, ⁋정의 23](/ko/math/algebraic_varieties/line_bundles#def23)에서 우리는 variety 위의 rank $r$ vector bundle을 정의하고, 그 section sheaf가 국소적으로 $\mathcal{O}_X^{\oplus r}$과 동형임을 보았다. ([\[대수다양체\] §선다발과 벡터다발, ⁋명제 5](/ko/math/algebraic_varieties/line_bundles#prop5)) Scheme의 언어에서 locally free sheaf는 정확히 이 vector bundle의 section sheaf에 대응하며, 특히 invertible sheaf는 line bundle에 대응한다. ([\[대수다양체\] §선다발과 벡터다발, ⁋정의 4](/ko/math/algebraic_varieties/line_bundles#def4)) 이름이 알려주듯, invertible sheaf는 tensor product에 대한 역원을 가진다.
+[\[대수다양체\] §선다발과 벡터다발, ⁋정의 23](/ko/math/algebraic_varieties/line_bundles#def23)에서 우리는 variety 위의 rank $r$ vector bundle을 local trivialization의 데이터로 정의하였고, rank $1$의 경우 그 section sheaf가 invertible sheaf임을 보았다. ([\[대수다양체\] §선다발과 벡터다발, ⁋명제 5](/ko/math/algebraic_varieties/line_bundles#prop5)) 일반적인 rank에서도 local trivialization이 section sheaf를 각 $U_i$ 위에서 $\mathcal{O}_{U_i}^{\oplus r}$로 만들어 주므로, scheme의 언어에서 locally free sheaf는 정확히 이 vector bundle의 section sheaf에 대응하며 특히 invertible sheaf는 line bundle에 대응한다. ([\[대수다양체\] §선다발과 벡터다발, ⁋정의 1](/ko/math/algebraic_varieties/line_bundles#def1)) 이름이 알려주듯, invertible sheaf는 tensor product에 대한 역원을 가진다.
 
 ::: 명제 13
 Invertible sheaf $\mathcal{L}$에 대하여, $\mathcal{L}^\vee=\sHom_{\mathcal{O}_X}(\mathcal{L}, \mathcal{O}_X)$ 또한 invertible sheaf이며, $\mathcal{L}\otimes_{\mathcal{O}_X}\mathcal{L}^\vee\cong \mathcal{O}_X$이다.
@@ -264,7 +264,7 @@ Scheme morphism $f:X \rightarrow Y$와 $Y$ 위의 quasi-coherent sheaf $\mathcal
 
 우리는 $f^\ast \widetilde M\cong \widetilde{M\otimes_A B}$임을 주장한다. 이를 보이기 위해 stalk을 비교한다. 임의의 $\mathfrak{q}\in \Spec B$와 $\mathfrak{p}=\phi^{-1}(\mathfrak{q})$에 대하여, inverse image와 tensor product가 stalk과 호환되므로
 
-$$(f^\ast \widetilde M)_\mathfrak{q}=(f^{-1}\widetilde M)_\mathfrak{q}\otimes_{(f^{-1}\mathcal{O}_A)_\mathfrak{q}}\mathcal{O}_{B,\mathfrak{q}}\cong \widetilde M_\mathfrak{p}\otimes_{A_\mathfrak{p}}B_\mathfrak{q}\cong M_\mathfrak{p}\otimes_{A_\mathfrak{p}}B_\mathfrak{q}$$
+$$(f^\ast \widetilde M)_\mathfrak{q}=(f^{-1}\widetilde M)_\mathfrak{q}\otimes_{(f^{-1}\mathcal{O}_{\Spec A})_\mathfrak{q}}\mathcal{O}_{\Spec B,\mathfrak{q}}\cong \widetilde M_\mathfrak{p}\otimes_{A_\mathfrak{p}}B_\mathfrak{q}\cong M_\mathfrak{p}\otimes_{A_\mathfrak{p}}B_\mathfrak{q}$$
 
 이고, ([명제 5](#prop5)) 한편 base change 가군의 stalk은
 
