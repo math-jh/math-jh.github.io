@@ -57,7 +57,7 @@ $\lMod{A}$는 bicomplete category이며, 특히 $A$-module들의 family $(M_i)$�
 
 뿐만 아니라 $\lMod{A}$는 abelian category가 된다. ([\[범주론\] §아벨 카테고리, ⁋정의 3](/ko/math/category_theory/abelian_categories#def3)) 이를 확인하기 위해서는 임의의 monomorphism $u:M \rightarrow N$은 그 cokernel $N \rightarrow N/M$의 kernel과 같고, 임의의 epimorphism $v:M \rightarrow N$은 그 kernel $\ker v$의 cokernel $M \rightarrow M/\ker v$과 같다는 것을 확인하면 된다. 
 
-## 자유가군
+## free module
 
 [§가군, ⁋예시 5](/ko/math/algebraic_structures/modules#ex5)에서 우리는 ring $A$가 $A$-module의 구조를 가진다는 것을 살펴보았다. 그럼 임의의 $A$-module homomorphism $u:A \rightarrow M$는 $u(1)$에 의해 유일하게 결정된다. 임의의 $\alpha\in A$에 대하여, 
 

@@ -54,7 +54,7 @@ Affine open subset $U=\Spec A$ 위에서 $\iota$를 공역에 대해 제한한 �
 
 그럼 1번은 [정의 1](#def1) 직후에 관찰한 대로 locally principal embedding의 cover를 affine으로 잡아도 되는 것에서 곧바로 따라온다.
 
-2번을 보기 위해 우선 $s\in A$에 대하여 $A \rightarrow (s)$, $a\mapsto as$를 생각하자. 이는 언제나 surjective이고 그 kernel이 $\ann(s)$이므로, 이것이 isomorphism인 것과 $s$가 non-zerodivisor인 것은 동치이다. 이제 $\iota$가 effective Cartier divisor라 하고 [정의 2](#def2)의 affine open cover $\{U_i=\Spec A_i\}$를 택하자. 그럼 $\mathcal{I}_{Z/X}(U_i)=(s_i)\cong A_i$이다. 한편 $\mathcal{I}_{Z/X}$는 quasi-coherent sheaf이고 ([§준연접층, ⁋명제 17](/ko/math/scheme_theory/quasicoherent_sheaves#prop17)) 준연접성은 affine-local이므로, [§준연접층, ⁋정리 10](/ko/math/scheme_theory/quasicoherent_sheaves#thm10)에 의하여 $\mathcal{I}_{Z/X}\vert_{U_i}\cong \widetilde{\mathcal{I}_{Z/X}(U_i)}$이다. 따라서 위의 동형은
+2번을 보기 위해 우선 $s\in A$에 대하여 $A \rightarrow (s)$, $a\mapsto as$를 생각하자. 이는 언제나 surjective이고 그 kernel이 $\ann(s)$이므로, 이것이 isomorphism인 것과 $s$가 non-zerodivisor인 것은 동치이다. 이제 $\iota$가 effective Cartier divisor라 하고 [정의 2](#def2)의 affine open cover $\{U_i=\Spec A_i\}$를 택하자. 그럼 $\mathcal{I}_{Z/X}(U_i)=(s_i)\cong A_i$이다. 한편 $\mathcal{I}_{Z/X}$는 quasi-coherent sheaf이고 ([§준연접층, ⁋명제 17](/ko/math/scheme_theory/quasicoherent_sheaves#prop17)) quasi-coherence는 affine-local이므로, [§준연접층, ⁋정리 10](/ko/math/scheme_theory/quasicoherent_sheaves#thm10)에 의하여 $\mathcal{I}_{Z/X}\vert_{U_i}\cong \widetilde{\mathcal{I}_{Z/X}(U_i)}$이다. 따라서 위의 동형은
 
 $$\mathcal{I}_{Z/X}\vert_{U_i}\cong \widetilde{(s_i)}\cong \widetilde{A_i}=\mathcal{O}_{U_i}$$
 
@@ -214,7 +214,7 @@ $f_x=\prod_Y g_Y^{n_Y}\in K(X)^\times$로 두자. 곱은 $x$를 지나는 유한
 Cartier divisor의 자료 $\{(U_i,f_i)\}$는 각 조각 위에서 하나의 함수를 지정하고 겹침 위에서 그 비율만을 통제한다. 이는 정확히 invertible sheaf를 국소적인 자명화와 transition function으로 기술하는 방식이므로, 인자에 invertible sheaf를 대응시킬 수 있다. 이 절에서도 $X$는 integral Noetherian scheme으로 둔다.
 
 ::: 정의 13
-Integral Noetherian scheme $X$와 Cartier divisor $D=\{(U_i,f_i)\}$에 대하여, $X$ 위의 $\mathcal{O}_X$-가군층 $\mathcal{O}_X(D)$를 각각의 공집합이 아닌 열린집합 $V$마다
+Integral Noetherian scheme $X$와 Cartier divisor $D=\{(U_i,f_i)\}$에 대하여, $X$ 위의 $\mathcal{O}_X$-module층 $\mathcal{O}_X(D)$를 각각의 공집합이 아닌 열린집합 $V$마다
 
 $$\Gamma(V,\mathcal{O}_X(D))=\{g\in K(X)\mid \text{모든 $i$에 대하여 } gf_i\in \Gamma(V\cap U_i,\mathcal{O}_X)\}$$
 
@@ -237,7 +237,7 @@ $$\Gamma(V,\mathcal{O}_X(D))=f_i^{-1}\Gamma(V,\mathcal{O}_X)$$
 
 이고, $f_i\in K(X)^\times$이므로 $g\mapsto gf_i$는 $\mathcal{O}_X(D)\vert_{U_i} \rightarrow \mathcal{O}_{U_i}$의 isomorphism이다. 즉 $\mathcal{O}_X(D)$는 rank $1$의 locally free sheaf이다.
 
-2번의 경우, $D'=\{(V_j,g_j)\}$라 하고 $D+D'$을 $\{(U_i\cap V_j, f_ig_j)\}$로 계산하면 1번에 의하여 세 sheaf는 $U_i\cap V_j$ 위에서 각각 $f_i^{-1}$, $g_j^{-1}$, $(f_ig_j)^{-1}$이 생성하는 자유 가군이다. 곱셈 $\mathcal{O}_X(D)\otimes \mathcal{O}_X(D') \rightarrow \mathcal{O}_X(D+D')$은 generator를 generator로 보내므로 각 조각 위에서 isomorphism이고, 따라서 전체에서 isomorphism이다.
+2번의 경우, $D'=\{(V_j,g_j)\}$라 하고 $D+D'$을 $\{(U_i\cap V_j, f_ig_j)\}$로 계산하면 1번에 의하여 세 sheaf는 $U_i\cap V_j$ 위에서 각각 $f_i^{-1}$, $g_j^{-1}$, $(f_ig_j)^{-1}$이 생성하는 자유 module이다. 곱셈 $\mathcal{O}_X(D)\otimes \mathcal{O}_X(D') \rightarrow \mathcal{O}_X(D+D')$은 generator를 generator로 보내므로 각 조각 위에서 isomorphism이고, 따라서 전체에서 isomorphism이다.
 
 3번의 경우, $D=\divisor(h)$라면 $\mathcal{O}_X(D)=h^{-1}\mathcal{O}_X\cong \mathcal{O}_X$이다. 거꾸로 isomorphism $\psi:\mathcal{O}_X \rightarrow \mathcal{O}_X(D)$가 주어졌다 하고 $h=\psi(1)\in \Gamma(X,\mathcal{O}_X(D))\subseteq K(X)$라 하자. 그럼 $h$는 각각의 $U_i$ 위에서 $\mathcal{O}_X(D)$를 생성하므로 1번과 비교하면 $h$와 $f_i^{-1}$은 $\mathcal{O}_X^\times$의 section만큼 차이나며, 곧 $f_i/h^{-1}=hf_i$가 $U_i$ 위의 invertible section이다. 따라서 [정의 7](#def7)의 동치관계에 의하여 $\{(U_i,f_i)\}$와 $\{(X,h^{-1})\}$은 같은 Cartier divisor를 정의하여 $D=\divisor(h^{-1})$이다.
 :::
@@ -292,7 +292,7 @@ $$\lvert \mathcal{L}\rvert=\mathbb{P}(\Gamma(X,\mathcal{L}))$$
 
 ## Ample invertible sheaf
 
-$\mathcal{O}_X$-가군층 $\mathcal{F}$가 *globally generated*라는 것은 각 점 $x$에서 stalk $\mathcal{F}_x$가 global section들의 germ으로 $\mathcal{O}_{X,x}$-가군으로서 생성되는 것이다. 이는 [\[대수다양체\] §사영공간의 코호몰로지, ⁋정의 6](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#def6)의 evaluation map이 surjective라는 조건을 scheme 위로 옮긴 것이며, invertible sheaf $\mathcal{L}$의 경우 linear system $\mathbb{P}(V)$의 base locus가 공집합인 것과 $V$의 절단들이 $\mathcal{L}$을 globally generate하는 것이 같은 조건이다.
+$\mathcal{O}_X$-module층 $\mathcal{F}$가 *globally generated*라는 것은 각 점 $x$에서 stalk $\mathcal{F}_x$가 global section들의 germ으로 $\mathcal{O}_{X,x}$-module로서 생성되는 것이다. 이는 [\[대수다양체\] §사영공간의 코호몰로지, ⁋정의 6](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#def6)의 evaluation map이 surjective라는 조건을 scheme 위로 옮긴 것이며, invertible sheaf $\mathcal{L}$의 경우 linear system $\mathbb{P}(V)$의 base locus가 공집합인 것과 $V$의 절단들이 $\mathcal{L}$을 globally generate하는 것이 같은 조건이다.
 
 생성절단들은 사영공간으로의 morphism을 결정한다. Ring $A$ 위의 scheme $X$와 invertible sheaf $\mathcal{L}$, 그리고 이를 globally generate하는 절단 $s_0,\ldots, s_n\in \Gamma(X,\mathcal{L})$이 주어졌다 하자. 각각의 $i$에 대하여
 
@@ -328,11 +328,11 @@ Noetherian scheme $X$ 위의 invertible sheaf $\mathcal{L}$에 대하여 다음�
 3. $\mathcal{L}$이 ample이고 invertible sheaf $\mathcal{M}$이 globally generated이면 $\mathcal{L}\otimes_{\mathcal{O}_X}\mathcal{M}$ 또한 ample이다.
 :::
 ::: 증명
-1번의 경우, $X=\Spec A$라 하고 coherent sheaf $\mathcal{F}$를 택하자. $\mathcal{L}$이 invertible sheaf이므로 $\mathcal{L}^{\otimes n}$은 각 점의 열린근방 위에서 $\mathcal{O}_X$와 동형이고, 따라서 $\mathcal{F}\otimes\mathcal{L}^{\otimes n}$은 그 근방 위에서 $\mathcal{F}$와 동형이다. 준연접성은 국소적인 조건이므로 이로부터 $\mathcal{F}\otimes\mathcal{L}^{\otimes n}$은 quasi-coherent sheaf이고, 곧 적당한 $A$-가군 $M$의 연관층 $\widetilde M$이다. ([§준연접층, ⁋정리 10](/ko/math/scheme_theory/quasicoherent_sheaves#thm10)) 그런데 $\widetilde M$의 stalk은 $M_\mathfrak{p}$이고 ([§준연접층, ⁋명제 5](/ko/math/scheme_theory/quasicoherent_sheaves#prop5)) 이는 global section 가군 $M$의 image로 생성되므로 $\widetilde M$은 globally generated이다. 따라서 $n_0=0$으로 두면 된다.
+1번의 경우, $X=\Spec A$라 하고 coherent sheaf $\mathcal{F}$를 택하자. $\mathcal{L}$이 invertible sheaf이므로 $\mathcal{L}^{\otimes n}$은 각 점의 열린근방 위에서 $\mathcal{O}_X$와 동형이고, 따라서 $\mathcal{F}\otimes\mathcal{L}^{\otimes n}$은 그 근방 위에서 $\mathcal{F}$와 동형이다. quasi-coherence는 국소적인 조건이므로 이로부터 $\mathcal{F}\otimes\mathcal{L}^{\otimes n}$은 quasi-coherent sheaf이고, 곧 적당한 $A$-module $M$의 associated sheaf $\widetilde M$이다. ([§준연접층, ⁋정리 10](/ko/math/scheme_theory/quasicoherent_sheaves#thm10)) 그런데 $\widetilde M$의 stalk은 $M_\mathfrak{p}$이고 ([§준연접층, ⁋명제 5](/ko/math/scheme_theory/quasicoherent_sheaves#prop5)) 이는 global section module $M$의 image로 생성되므로 $\widetilde M$은 globally generated이다. 따라서 $n_0=0$으로 두면 된다.
 
 2번에서 $\mathcal{L}$이 ample이면, coherent sheaf $\mathcal{F}$에 대해 $n_0$를 택하여 $n\geq n_0$마다 $\mathcal{F}\otimes\mathcal{L}^{\otimes n}$이 globally generated이도록 하자. 그럼 $k\geq n_0$에 대하여 $mk\geq n_0$이므로 $\mathcal{F}\otimes(\mathcal{L}^{\otimes m})^{\otimes k}$은 globally generated이다. 거꾸로 $\mathcal{L}^{\otimes m}$이 ample이라 하자. 각각의 $j=0,1,\ldots, m-1$에 대하여 $\mathcal{F}\otimes\mathcal{L}^{\otimes j}$ 또한 coherent sheaf이므로 $k_j$가 존재하여 $k\geq k_j$마다 $\mathcal{F}\otimes\mathcal{L}^{\otimes j}\otimes(\mathcal{L}^{\otimes m})^{\otimes k}$이 globally generated이다. $k_\ast=\max_jk_j$로 두면 $n\geq mk_\ast$인 임의의 $n$은 $n=mk+j$ ($k\geq k_\ast$, $0\leq j<m$)로 적히므로 $\mathcal{F}\otimes\mathcal{L}^{\otimes n}$은 globally generated이다.
 
-3번을 위해 우선 두 globally generated 가군층 $\mathcal{F},\mathcal{G}$의 tensor product가 다시 globally generated임을 관찰한다. Stalk $(\mathcal{F}\otimes\mathcal{G})_x\cong \mathcal{F}_x\otimes_{\mathcal{O}_{X,x}}\mathcal{G}_x$는 $\mathcal{F}_x$와 $\mathcal{G}_x$의 generator들의 tensor로 생성되고, 이들은 global section들의 germ의 tensor이기 때문이다. 이제 coherent sheaf $\mathcal{F}$에 대하여 $\mathcal{L}$의 ampleness가 주는 $n_0$를 택하면, $n\geq n_0$에 대하여
+3번을 위해 우선 두 globally generated module층 $\mathcal{F},\mathcal{G}$의 tensor product가 다시 globally generated임을 관찰한다. Stalk $(\mathcal{F}\otimes\mathcal{G})_x\cong \mathcal{F}_x\otimes_{\mathcal{O}_{X,x}}\mathcal{G}_x$는 $\mathcal{F}_x$와 $\mathcal{G}_x$의 generator들의 tensor로 생성되고, 이들은 global section들의 germ의 tensor이기 때문이다. 이제 coherent sheaf $\mathcal{F}$에 대하여 $\mathcal{L}$의 ampleness가 주는 $n_0$를 택하면, $n\geq n_0$에 대하여
 
 $$\mathcal{F}\otimes(\mathcal{L}\otimes\mathcal{M})^{\otimes n}\cong(\mathcal{F}\otimes\mathcal{L}^{\otimes n})\otimes\mathcal{M}^{\otimes n}$$
 

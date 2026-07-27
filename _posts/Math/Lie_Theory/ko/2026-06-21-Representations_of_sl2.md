@@ -16,7 +16,7 @@ published: false
 
 Semisimple Lie algebra의 표현론 전체에서 $\sl_2$는 가장 작으면서도 가장 근본적인 경우이다. 임의의 semisimple Lie algebra의 각 root $\alpha$는 그 안에 $\sl_2$와 isomorphic한 subalgebra $\sl_{2,\alpha}$를 낳고 ([§근계, ⁋명제 12](/ko/math/lie_theory/root_systems#prop12) 이후의 논의), 일반적인 highest weight 이론의 integrality와 Weyl group 대칭성은 모두 이 $\sl_2$들에 대한 표현론을 root별로 적용하여 얻어진다. 이 글에서 우리는 $\sl_2=\sl(2;\mathbb{C})$의 유한차원 representation을 완전히 분류한다. 각 정수 $n\geq 0$마다 차원 $n+1$의 irreducible representation $V(n)$이 동형을 무시하고 유일하게 존재함을 보이고, 임의의 유한차원 representation이 $h$의 작용으로 weight 분해되어 완전가약<sub>completely reducible</sub>임을 Casimir element를 통해 증명한 뒤, 두 irreducible representation의 tensor product를 분해하는 Clebsch–Gordan 공식을 유도한다.
 
-이 글 전체에서 기반 체는 $\mathbb{C}$이며, $\sl_2$의 representation이란 Lie algebra 준동형 $\sl_2\rightarrow\gl(V)$, 곧 유한차원 $\mathbb{C}$-벡터공간 $V$ 위의 $\sl_2$-가군 구조를 뜻한다. $x\in\sl_2$와 $v\in V$에 대하여 그 작용을 $x\cdot v$로 적는다.
+이 글 전체에서 기반 체는 $\mathbb{C}$이며, $\sl_2$의 representation이란 Lie algebra 준동형 $\sl_2\rightarrow\gl(V)$, 곧 유한차원 $\mathbb{C}$-벡터공간 $V$ 위의 $\sl_2$-module 구조를 뜻한다. $x\in\sl_2$와 $v\in V$에 대하여 그 작용을 $x\cdot v$로 적는다.
 
 ## 표준 기저와 weight space
 

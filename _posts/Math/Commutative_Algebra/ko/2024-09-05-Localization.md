@@ -49,7 +49,7 @@ Ring $A$의 부분집합 $S$가 *multiplicatively closed<sub>곱셈에 대하여
 특히 $1$은 공집합으로 index가 주어진 family의 곱으로 생각할 수 있으므로 정의에 의해 $1\in S$이다. 
 
 ::: 정의 4
-Ring $A$와 $A$-module $M$, 그리고 $A$의 multiplicative subset $S$에 대하여, $S$에서의 $M$의 *localization<sub>국소화</sub>*는 다음과 같이 정의되는 $A$-module $S^{-1}M$이다. 
+Ring $A$와 $A$-module $M$, 그리고 $A$의 multiplicative subset $S$에 대하여, $S$에서의 $M$의 *localization<sub>국소화</sub>*은 다음과 같이 정의되는 $A$-module $S^{-1}M$이다. 
 
 1. 집합으로서 $S^{-1}M$은 $M\times S$ 위에 다음과 같은 equivalence relation
     

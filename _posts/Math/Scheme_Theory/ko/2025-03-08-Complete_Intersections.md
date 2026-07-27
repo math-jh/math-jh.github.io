@@ -25,7 +25,7 @@ $$s_2\vert_{Z(s_1)}=\iota_1^\sharp(X)(s_2)\in(\iota_1)_\ast \mathcal{O}_{Z(s_1)}
 
 을 통해 $Z(s_1)$에서 $s_2\vert_{Z(s_1)}$의 vanishing scheme을 찾아나가는 것을 반복하여 얻어질 것이며, 물론 이를 위해서는 이 과정이 $s_1, \ldots, s_k$의 순서에 무관하게 같은 scheme을 주어야 할 것이다. 
 
-$k=1$인 경우, 곧 하나의 방정식이 잘라내는 경우는 [§인자와 선형계](/ko/math/scheme_theory/divisors_and_linear_systems)에서 effective Cartier divisor의 이름으로 이미 다루었다. 이 글에서 우리는 이를 여러 개의 방정식으로 확장하여 complete intersection을 정의하고, 그 codimension이 자르는 방정식의 개수와 정확히 일치함을 본다. 이어 [\[가환대수학\] §코쥴 복합체](/ko/math/commutative_algebra/koszul_complex)의 결과를 연관층으로 옮겨 structure sheaf의 국소적인 자유 분해를 얻고, 이로부터 conormal sheaf $\mathcal{I}/\mathcal{I}^2$이 rank $k$의 locally free sheaf라는 완전교차 고유의 성질을 이끌어낸다. 마지막으로 사영공간 안에서 대역적으로 잘리는 경우에는 이 분해가 하나의 대역적인 분해로 붙으므로, [§스킴의 층 코호몰로지](/ko/math/scheme_theory/sheaf_cohomology_of_schemes)의 Euler characteristic을 계산하여 Hilbert polynomial과 degree를 읽어낼 수 있다.
+$k=1$인 경우, 곧 하나의 방정식이 잘라내는 경우는 [§인자와 선형계](/ko/math/scheme_theory/divisors_and_linear_systems)에서 effective Cartier divisor의 이름으로 이미 다루었다. 이 글에서 우리는 이를 여러 개의 방정식으로 확장하여 complete intersection을 정의하고, 그 codimension이 자르는 방정식의 개수와 정확히 일치함을 본다. 이어 [\[가환대수학\] §코쥴 복합체](/ko/math/commutative_algebra/koszul_complex)의 결과를 associated sheaf로 옮겨 structure sheaf의 국소적인 자유 분해를 얻고, 이로부터 conormal sheaf $\mathcal{I}/\mathcal{I}^2$이 rank $k$의 locally free sheaf라는 완전교차 고유의 성질을 이끌어낸다. 마지막으로 사영공간 안에서 대역적으로 잘리는 경우에는 이 분해가 하나의 대역적인 분해로 붙으므로, [§스킴의 층 코호몰로지](/ko/math/scheme_theory/sheaf_cohomology_of_schemes)의 Euler characteristic을 계산하여 Hilbert polynomial과 degree를 읽어낼 수 있다.
 
 ## 여차원과 완전교차
 
@@ -88,35 +88,35 @@ $$0=\dim A_\mathfrak{p}/(s_1,\ldots, s_k)=\dim A_\mathfrak{p}-k$$
 
 ## 코쥴 분해와 conormal sheaf
 
-[정의 1](#def1)이 요구하는 것은 국소적으로 하나의 regular sequence가 $Z$를 잘라낸다는 것인데, regular sequence의 Koszul 복합체가 acyclic이라는 것은 이미 확인한 바이다. ([\[가환대수학\] §코쥴 복합체, ⁋정리 7](/ko/math/commutative_algebra/koszul_complex#thm7)) 이를 연관층으로 옮기면 complete intersection의 structure sheaf가 각 chart 위에서 명시적인 유한 자유 분해를 갖는다는 것이 된다.
+[정의 1](#def1)이 요구하는 것은 국소적으로 하나의 regular sequence가 $Z$를 잘라낸다는 것인데, regular sequence의 Koszul 복합체가 acyclic이라는 것은 이미 확인한 바이다. ([\[가환대수학\] §코쥴 복합체, ⁋정리 7](/ko/math/commutative_algebra/koszul_complex#thm7)) 이를 associated sheaf로 옮기면 complete intersection의 structure sheaf가 각 chart 위에서 명시적인 유한 자유 분해를 갖는다는 것이 된다.
 
 ::: 명제 5
-Locally Noetherian scheme $X$의 codimension $k$ complete intersection $\iota:Z\hookrightarrow X$와, $Z\cap U=Z(s_1,\ldots, s_k)$이고 $s_1,\ldots, s_k$가 $A$-regular sequence인 affine open subset $U=\Spec A$가 주어졌다 하자. 그럼 $\mathcal{O}_U$-가군층들의 sequence
+Locally Noetherian scheme $X$의 codimension $k$ complete intersection $\iota:Z\hookrightarrow X$와, $Z\cap U=Z(s_1,\ldots, s_k)$이고 $s_1,\ldots, s_k$가 $A$-regular sequence인 affine open subset $U=\Spec A$가 주어졌다 하자. 그럼 $\mathcal{O}_U$-module층들의 sequence
 
 $$0 \rightarrow \mathcal{O}_U^{\oplus\binom{k}{k}} \rightarrow \mathcal{O}_U^{\oplus\binom{k}{k-1}} \rightarrow \cdots \rightarrow \mathcal{O}_U^{\oplus\binom{k}{1}} \rightarrow \mathcal{O}_U \rightarrow (\iota_\ast\mathcal{O}_Z)\vert_U \rightarrow 0$$
 
-은 exact이다. 여기에서 $\mathcal{O}_U^{\oplus\binom{k}{j}}$은 Koszul 복합체 $K(s_1,\ldots, s_k)$의 $j$번째 항의 연관층이고, differential 또한 그 복합체의 것을 연관층으로 옮긴 것이다.
+은 exact이다. 여기에서 $\mathcal{O}_U^{\oplus\binom{k}{j}}$은 Koszul 복합체 $K(s_1,\ldots, s_k)$의 $j$번째 항의 associated sheaf이고, differential 또한 그 복합체의 것을 associated sheaf로 옮긴 것이다.
 :::
 ::: 증명
-$s_1,\ldots, s_k$가 $A$-regular sequence이므로 [\[가환대수학\] §코쥴 복합체, ⁋따름정리 8](/ko/math/commutative_algebra/koszul_complex#cor8)에 의하여 $K(s_1,\ldots, s_k)$는 $A/(s_1,\ldots, s_k)$의 free resolution이다. 곧 $K_j(s_1,\ldots, s_k)\cong A^{\oplus\binom{k}{j}}$이므로 $A$-가군들의 exact sequence
+$s_1,\ldots, s_k$가 $A$-regular sequence이므로 [\[가환대수학\] §코쥴 복합체, ⁋따름정리 8](/ko/math/commutative_algebra/koszul_complex#cor8)에 의하여 $K(s_1,\ldots, s_k)$는 $A/(s_1,\ldots, s_k)$의 free resolution이다. 곧 $K_j(s_1,\ldots, s_k)\cong A^{\oplus\binom{k}{j}}$이므로 $A$-module들의 exact sequence
 
 $$0 \rightarrow A^{\oplus\binom{k}{k}} \rightarrow \cdots \rightarrow A^{\oplus\binom{k}{1}} \rightarrow A \rightarrow A/(s_1,\ldots, s_k) \rightarrow 0$$
 
-을 얻는다. 연관층 functor는 exact이므로 ([§준연접층, ⁋명제 6](/ko/math/scheme_theory/quasicoherent_sheaves#prop6)) 이를 연관층으로 옮기면 위의 sequence가 exact이다. 마지막 항에 대해서는 $Z\cap U=Z(s_1,\ldots, s_k)$가 $\Spec A/(s_1,\ldots, s_k)$이고 ([§닫힌 부분스킴, ⁋정의 7](/ko/math/scheme_theory/closed_subschemes#def7) 이후의 논의) closed embedding을 따라 밀어낸 것이 그 연관층이므로 ([§준연접층, ⁋명제 17](/ko/math/scheme_theory/quasicoherent_sheaves#prop17), [§준연접층, ⁋정리 10](/ko/math/scheme_theory/quasicoherent_sheaves#thm10)), $(\iota_\ast\mathcal{O}_Z)\vert_U\cong \widetilde{A/(s_1,\ldots, s_k)}$이다.
+을 얻는다. associated sheaf functor는 exact이므로 ([§준연접층, ⁋명제 6](/ko/math/scheme_theory/quasicoherent_sheaves#prop6)) 이를 associated sheaf로 옮기면 위의 sequence가 exact이다. 마지막 항에 대해서는 $Z\cap U=Z(s_1,\ldots, s_k)$가 $\Spec A/(s_1,\ldots, s_k)$이고 ([§닫힌 부분스킴, ⁋정의 7](/ko/math/scheme_theory/closed_subschemes#def7) 이후의 논의) closed embedding을 따라 밀어낸 것이 그 associated sheaf이므로 ([§준연접층, ⁋명제 17](/ko/math/scheme_theory/quasicoherent_sheaves#prop17), [§준연접층, ⁋정리 10](/ko/math/scheme_theory/quasicoherent_sheaves#thm10)), $(\iota_\ast\mathcal{O}_Z)\vert_U\cong \widetilde{A/(s_1,\ldots, s_k)}$이다.
 :::
 
-이 분해의 오른쪽 끝 두 항이 담고 있는 정보를 ideal sheaf의 언어로 옮기면 완전교차 고유의 성질이 나온다. Ideal sheaf $\mathcal{I}=\mathcal{I}_{Z/X}$에 대하여 ([§닫힌 부분스킴, ⁋정의 5](/ko/math/scheme_theory/closed_subschemes#def5)) $\mathcal{I}$는 $\mathcal{I}/\mathcal{I}^2$ 위에 자명하게 작용하므로 $\mathcal{I}/\mathcal{I}^2$은 $\mathcal{O}_X/\mathcal{I}=\iota_\ast\mathcal{O}_Z$-가군층이고, 따라서 $Z$ 위의 quasi-coherent sheaf로 볼 수 있다. 일반적으로 이 sheaf에 대해서는 아무것도 말할 수 없지만, 자르는 방정식들이 regular sequence를 이루면 그 개수만큼의 자유도를 정확히 갖는다.
+이 분해의 오른쪽 끝 두 항이 담고 있는 정보를 ideal sheaf의 언어로 옮기면 완전교차 고유의 성질이 나온다. Ideal sheaf $\mathcal{I}=\mathcal{I}_{Z/X}$에 대하여 ([§닫힌 부분스킴, ⁋정의 5](/ko/math/scheme_theory/closed_subschemes#def5)) $\mathcal{I}$는 $\mathcal{I}/\mathcal{I}^2$ 위에 자명하게 작용하므로 $\mathcal{I}/\mathcal{I}^2$은 $\mathcal{O}_X/\mathcal{I}=\iota_\ast\mathcal{O}_Z$-module층이고, 따라서 $Z$ 위의 quasi-coherent sheaf로 볼 수 있다. 일반적으로 이 sheaf에 대해서는 아무것도 말할 수 없지만, 자르는 방정식들이 regular sequence를 이루면 그 개수만큼의 자유도를 정확히 갖는다.
 
 ::: 명제 6
 Locally Noetherian scheme $X$의 codimension $k$ complete intersection $\iota:Z\hookrightarrow X$와 그 ideal sheaf $\mathcal{I}=\mathcal{I}_{Z/X}$에 대하여, $\mathcal{I}/\mathcal{I}^2$은 $Z$ 위의 rank $k$의 locally free sheaf이다.
 :::
 ::: 증명
-주장은 $Z$의 각 점 주위에서 확인하면 되는 국소적인 것이고 $Z$의 점을 담는 chart는 $Z$와 만나므로, [정의 1](#def1)의 cover 가운데 $Z$와 만나는 것을 택하여 $X=\Spec A$, $\mathfrak{a}=\mathcal{I}(X)=(s_1,\ldots, s_k)$이고 $s_1,\ldots, s_k$가 $A$-regular sequence인 경우만 보면 충분하다. $\mathcal{I}$는 quasi-coherent sheaf이므로 ([§준연접층, ⁋명제 17](/ko/math/scheme_theory/quasicoherent_sheaves#prop17)) $\mathcal{I}=\widetilde{\mathfrak{a}}$이고 ([§준연접층, ⁋정리 10](/ko/math/scheme_theory/quasicoherent_sheaves#thm10)), $\mathcal{I}^2$은 곱셈 $\mathcal{I}\otimes_{\mathcal{O}_X}\mathcal{I} \rightarrow \mathcal{O}_X$의 image로서 연관층 functor가 exact이고 tensor product와 호환되므로 $\widetilde{\mathfrak{a}^2}$이다. 따라서 $\mathcal{I}/\mathcal{I}^2=\widetilde{\mathfrak{a}/\mathfrak{a}^2}$이고, $\mathfrak{a}/\mathfrak{a}^2$이 rank $k$의 free $A/\mathfrak{a}$-가군임을 보이면 된다.
+주장은 $Z$의 각 점 주위에서 확인하면 되는 국소적인 것이고 $Z$의 점을 담는 chart는 $Z$와 만나므로, [정의 1](#def1)의 cover 가운데 $Z$와 만나는 것을 택하여 $X=\Spec A$, $\mathfrak{a}=\mathcal{I}(X)=(s_1,\ldots, s_k)$이고 $s_1,\ldots, s_k$가 $A$-regular sequence인 경우만 보면 충분하다. $\mathcal{I}$는 quasi-coherent sheaf이므로 ([§준연접층, ⁋명제 17](/ko/math/scheme_theory/quasicoherent_sheaves#prop17)) $\mathcal{I}=\widetilde{\mathfrak{a}}$이고 ([§준연접층, ⁋정리 10](/ko/math/scheme_theory/quasicoherent_sheaves#thm10)), $\mathcal{I}^2$은 곱셈 $\mathcal{I}\otimes_{\mathcal{O}_X}\mathcal{I} \rightarrow \mathcal{O}_X$의 image로서 associated sheaf functor가 exact이고 tensor product와 호환되므로 $\widetilde{\mathfrak{a}^2}$이다. 따라서 $\mathcal{I}/\mathcal{I}^2=\widetilde{\mathfrak{a}/\mathfrak{a}^2}$이고, $\mathfrak{a}/\mathfrak{a}^2$이 rank $k$의 free $A/\mathfrak{a}$-module임을 보이면 된다.
 
 $A/\mathfrak{a}$-linear map $\psi:(A/\mathfrak{a})^{\oplus k} \rightarrow \mathfrak{a}/\mathfrak{a}^2$을 $e_i\mapsto s_i+\mathfrak{a}^2$으로 정의하자. $\mathfrak{a}$가 $s_i$들로 생성되므로 $\psi$는 surjective이다. Injectivity를 보이기 위해 $a_1,\ldots, a_k\in A$가 $\sum_ia_is_i\in \mathfrak{a}^2$을 만족한다 하자. $\mathfrak{a}^2$은 곱 $s_is_j$들로 생성되므로 적당한 $b_{ij}\in A$에 대하여 $\sum_ia_is_i=\sum_{i,j}b_{ij}s_is_j$이고, $c_i=a_i-\sum_jb_{ij}s_j$로 두면 $\sum_ic_is_i=0$이다. 곧 $\sum_ic_ie_i$는 Koszul 복합체 $K(s_1,\ldots, s_k)$의 degree $1$ cycle인데, [\[가환대수학\] §코쥴 복합체, ⁋정리 7](/ko/math/commutative_algebra/koszul_complex#thm7)에 의하여 $H_1(K(s_1,\ldots, s_k))=0$이므로 이는 boundary이다. Koszul differential이 $d(e_i\wedge e_j)=s_ie_j-s_je_i$로 주어지므로 boundary의 각 성분은 $\mathfrak{a}$에 속하고, 따라서 모든 $i$에 대하여 $c_i\in \mathfrak{a}$이다. 그럼 $a_i=c_i+\sum_jb_{ij}s_j\in \mathfrak{a}$이므로 $(A/\mathfrak{a})^{\oplus k}$ 안에서 $\sum_ia_ie_i=0$이고, $\psi$는 injective이다.
 :::
 
-$\mathcal{I}/\mathcal{I}^2$이 놓이는 자리는 conormal exact sequence이다. Closed subscheme $Z\hookrightarrow X$와 base scheme $S$에 대하여 [§Kähler 미분과 여접층, ⁋명제 2](/ko/math/scheme_theory/sheaf_of_differentials#prop2)를 연관층으로 옮기면 $Z$ 위의 exact sequence
+$\mathcal{I}/\mathcal{I}^2$이 놓이는 자리는 conormal exact sequence이다. Closed subscheme $Z\hookrightarrow X$와 base scheme $S$에 대하여 [§Kähler 미분과 여접층, ⁋명제 2](/ko/math/scheme_theory/sheaf_of_differentials#prop2)를 associated sheaf로 옮기면 $Z$ 위의 exact sequence
 
 $$\mathcal{I}/\mathcal{I}^2 \longrightarrow \Omega_{X/S}\vert_Z \longrightarrow \Omega_{Z/S} \longrightarrow 0$$
 
@@ -124,13 +124,13 @@ $$\mathcal{I}/\mathcal{I}^2 \longrightarrow \Omega_{X/S}\vert_Z \longrightarrow 
 
 ## Hilbert polynomial과 degree
 
-[참고 4](#rmk4)가 구별한 두 조건 가운데 강한 쪽, 곧 사영공간 안에서 대역적으로 잘리는 경우에는 [명제 5](#prop5)의 국소적인 분해가 하나의 대역적인 분해로 붙는다. 각 chart 위의 자유 가군이 twisting sheaf로 바뀔 뿐이다. 이 절에서는 ambient가 언제나 사영공간이므로 표기를 바꾸어, 앞 절까지 ambient를 가리키던 $X$를 여기에서는 $\mathbb{P}^n$의 closed subscheme을 가리키는 데 쓴다. 따라서 [명제 5](#prop5)와 [명제 6](#prop6)을 적용할 때에는 그 진술의 $X$를 $\mathbb{P}^n$의 chart로, $Z$를 $X$와 그 chart의 교집합으로 읽는다.
+[참고 4](#rmk4)가 구별한 두 조건 가운데 강한 쪽, 곧 사영공간 안에서 대역적으로 잘리는 경우에는 [명제 5](#prop5)의 국소적인 분해가 하나의 대역적인 분해로 붙는다. 각 chart 위의 자유 module이 twisting sheaf로 바뀔 뿐이다. 이 절에서는 ambient가 언제나 사영공간이므로 표기를 바꾸어, 앞 절까지 ambient를 가리키던 $X$를 여기에서는 $\mathbb{P}^n$의 closed subscheme을 가리키는 데 쓴다. 따라서 [명제 5](#prop5)와 [명제 6](#prop6)을 적용할 때에는 그 진술의 $X$를 $\mathbb{P}^n$의 chart로, $Z$를 $X$와 그 chart의 교집합으로 읽는다.
 
 ::: 명제 7
 Field $\mathbb{K}$ 위의 사영공간 $\mathbb{P}^n=\Proj S$ ($S=\mathbb{K}[\x_0,\ldots, \x_n]$)와 각각 degree $d_i>0$인 homogeneous polynomial들 $f_1,\ldots, f_k$가 주어지고, 이들이 $S$-regular sequence를 이룬다 하자. $X=V_+(f_1,\ldots, f_k)$이고 $\iota:X\hookrightarrow \mathbb{P}^n$이 그 closed embedding일 때 ([§사영공간의 닫힌 부분스킴, ⁋명제 1](/ko/math/scheme_theory/closed_subschemes_of_projective_spaces#prop1)) 다음이 성립한다.
 
 1. $\iota$는 codimension $k$의 complete intersection이며, [정의 1](#def1)의 affine open cover로 표준 chart들 $\{D_+(\x_m)\}_{m=0}^n$을 택할 수 있다.
-2. $J\subseteq \{1,\ldots, k\}$에 대하여 $d_J=\sum_{i\in J}d_i$로 적으면, $\mathcal{O}_{\mathbb{P}^n}$-가군층들의 sequence
+2. $J\subseteq \{1,\ldots, k\}$에 대하여 $d_J=\sum_{i\in J}d_i$로 적으면, $\mathcal{O}_{\mathbb{P}^n}$-module층들의 sequence
 
 	$$0 \rightarrow \bigoplus_{\lvert J\rvert=k}\mathcal{O}(-d_J) \rightarrow \cdots \rightarrow \bigoplus_{\lvert J\rvert=1}\mathcal{O}(-d_J) \rightarrow \mathcal{O}_{\mathbb{P}^n} \rightarrow \iota_\ast\mathcal{O}_X \rightarrow 0$$
 
@@ -139,13 +139,13 @@ Field $\mathbb{K}$ 위의 사영공간 $\mathbb{P}^n=\Proj S$ ($S=\mathbb{K}[\x_
 ::: 증명
 Chart $D_+(\x_m)=\Spec S_{(\x_m)}$을 고정하고 $g_i=f_i/\x_m^{d_i}\in S_{(\x_m)}$이라 하자. [§사영공간의 닫힌 부분스킴, ⁋명제 1](/ko/math/scheme_theory/closed_subschemes_of_projective_spaces#prop1)의 증명에서 확인한 chart별 기술에 의하여 $X\cap D_+(\x_m)=Z(g_1,\ldots, g_k)$이다.
 
-먼저 $S_{\x_m}$을 degree로 분해하면 $S_{\x_m}=\bigoplus_{j\in\mathbb{Z}}\x_m^jS_{(\x_m)}$이며 각각의 $\x_m^jS_{(\x_m)}$은 $S_{(\x_m)}$과 isomorphic한 $S_{(\x_m)}$-가군이다. $g_i$들이 degree $0$이므로 이들이 생성하는 ideal 또한 이 분해와 호환되어 임의의 $i$에 대하여 $S_{\x_m}/(g_1,\ldots, g_i)=\bigoplus_j\x_m^j\bigl(S_{(\x_m)}/(g_1,\ldots, g_i)\bigr)$이고, 곱하기 $g_{i+1}$은 각각의 성분을 보존한다. 이로부터 두 가지를 얻는다. 우선 곱하기 $g_{i+1}$이 $S_{\x_m}/(g_1,\ldots, g_i)$ 위에서 injective인 것은 $S_{(\x_m)}/(g_1,\ldots, g_i)$ 위에서 injective인 것과 동치이다. 또 위의 direct sum이 소멸하는 것은 그 각각의 성분이 소멸하는 것과 동치이므로, $(g_1,\ldots, g_i)S_{\x_m}$이 proper인 것은 $(g_1,\ldots, g_i)S_{(\x_m)}$이 proper인 것과 동치이다.
+먼저 $S_{\x_m}$을 degree로 분해하면 $S_{\x_m}=\bigoplus_{j\in\mathbb{Z}}\x_m^jS_{(\x_m)}$이며 각각의 $\x_m^jS_{(\x_m)}$은 $S_{(\x_m)}$과 isomorphic한 $S_{(\x_m)}$-module이다. $g_i$들이 degree $0$이므로 이들이 생성하는 ideal 또한 이 분해와 호환되어 임의의 $i$에 대하여 $S_{\x_m}/(g_1,\ldots, g_i)=\bigoplus_j\x_m^j\bigl(S_{(\x_m)}/(g_1,\ldots, g_i)\bigr)$이고, 곱하기 $g_{i+1}$은 각각의 성분을 보존한다. 이로부터 두 가지를 얻는다. 우선 곱하기 $g_{i+1}$이 $S_{\x_m}/(g_1,\ldots, g_i)$ 위에서 injective인 것은 $S_{(\x_m)}/(g_1,\ldots, g_i)$ 위에서 injective인 것과 동치이다. 또 위의 direct sum이 소멸하는 것은 그 각각의 성분이 소멸하는 것과 동치이므로, $(g_1,\ldots, g_i)S_{\x_m}$이 proper인 것은 $(g_1,\ldots, g_i)S_{(\x_m)}$이 proper인 것과 동치이다.
 
 이제 $X\cap D_+(\x_m)\neq\emptyset$일 때 $g_1,\ldots, g_k$가 $S_{(\x_m)}$-regular sequence임을 본다. 가정에 의하여 $Z(g_1,\ldots, g_k)\neq \emptyset$이므로 $(g_1,\ldots, g_k)$는 $S_{(\x_m)}$의 proper ideal이고, 위의 degree 분해에 의하여 $(g_1,\ldots, g_k)S_{\x_m}$ 또한 proper이다. 한편 $\x_m$은 $S_{\x_m}$에서 unit이므로 각각의 $i$에 대하여 $(f_1,\ldots, f_i)S_{\x_m}=(g_1,\ldots, g_i)S_{\x_m}$이고 $f_{i+1}$과 $g_{i+1}$은 unit 배만큼만 다르다. 특히 $(f_1,\ldots, f_k)S_{\x_m}$이 proper이며, localization이 exact이므로 $f_1,\ldots, f_k$는 $S_{\x_m}$-regular sequence이고 따라서 $g_1,\ldots, g_k$ 또한 그러하다. 다시 위의 degree 분해에 의하여 $g_1,\ldots, g_k$는 $S_{(\x_m)}$-regular sequence이다.
 
 표준 chart들 $\{D_+(\x_m)\}_{m=0}^n$은 $\mathbb{P}^n$의 affine open cover이고, 각각에 대하여 $X\cap D_+(\x_m)$은 공집합이거나 방금 얻은 regular sequence가 잘라내는 것이므로, 이로부터 1번을 얻는다.
 
-2번을 보자. $\lvert J\rvert=j$인 $J$에 대응하는 summand $\mathcal{O}(-d_J)$를 chart $D_+(\x_m)$ 위에서 생성절단 $\x_m^{-d_J}$로 자명화하면 ([§스킴의 층 코호몰로지, ⁋정의 5](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#def5)), 곱하기 $f_i$로 주어지는 $\mathcal{O}(-d_J) \rightarrow \mathcal{O}(-d_{J\setminus\{i\}})$은 $\x_m^{-d_J}a\mapsto \x_m^{-d_{J\setminus\{i\}}}g_ia$가 되어 곱하기 $g_i$이다. 곧 위의 sequence를 $D_+(\x_m)$으로 제한한 것은 $K(g_1,\ldots, g_k)$의 연관층에 $\widetilde{S_{(\x_m)}/(g_1,\ldots, g_k)}$를 이어붙인 것이다. $X$와 만나는 chart 위에서 이것이 exact이라는 것은, 방금 얻은 regular sequence 성질과 함께 ambient를 $D_+(\x_m)$으로 하고 그 closed subscheme을 $X\cap D_+(\x_m)$으로 하여 적용한 [명제 5](#prop5)이다. $X$와 만나지 않는 chart 위에서는 $(g_1,\ldots, g_k)=S_{(\x_m)}$이므로 [\[가환대수학\] §코쥴 복합체, ⁋명제 3](/ko/math/commutative_algebra/koszul_complex#prop3)에 의하여 모든 Koszul homology가 소멸하고, 특히 $H_0=S_{(\x_m)}/(g_1,\ldots, g_k)=0$이라 마지막 항도 $0$이 되어 역시 exact이다. Exactness는 stalk에서 확인되고 이러한 chart들이 $\mathbb{P}^n$을 덮으므로 위의 sequence는 exact이다.
+2번을 보자. $\lvert J\rvert=j$인 $J$에 대응하는 summand $\mathcal{O}(-d_J)$를 chart $D_+(\x_m)$ 위에서 생성절단 $\x_m^{-d_J}$로 자명화하면 ([§스킴의 층 코호몰로지, ⁋정의 5](/ko/math/scheme_theory/sheaf_cohomology_of_schemes#def5)), 곱하기 $f_i$로 주어지는 $\mathcal{O}(-d_J) \rightarrow \mathcal{O}(-d_{J\setminus\{i\}})$은 $\x_m^{-d_J}a\mapsto \x_m^{-d_{J\setminus\{i\}}}g_ia$가 되어 곱하기 $g_i$이다. 곧 위의 sequence를 $D_+(\x_m)$으로 제한한 것은 $K(g_1,\ldots, g_k)$의 associated sheaf에 $\widetilde{S_{(\x_m)}/(g_1,\ldots, g_k)}$를 이어붙인 것이다. $X$와 만나는 chart 위에서 이것이 exact이라는 것은, 방금 얻은 regular sequence 성질과 함께 ambient를 $D_+(\x_m)$으로 하고 그 closed subscheme을 $X\cap D_+(\x_m)$으로 하여 적용한 [명제 5](#prop5)이다. $X$와 만나지 않는 chart 위에서는 $(g_1,\ldots, g_k)=S_{(\x_m)}$이므로 [\[가환대수학\] §코쥴 복합체, ⁋명제 3](/ko/math/commutative_algebra/koszul_complex#prop3)에 의하여 모든 Koszul homology가 소멸하고, 특히 $H_0=S_{(\x_m)}/(g_1,\ldots, g_k)=0$이라 마지막 항도 $0$이 되어 역시 exact이다. Exactness는 stalk에서 확인되고 이러한 chart들이 $\mathbb{P}^n$을 덮으므로 위의 sequence는 exact이다.
 :::
 
 이제 각 항이 사영공간 위의 line bundle들의 유한 direct sum이므로, [§스킴의 층 코호몰로지](/ko/math/scheme_theory/sheaf_cohomology_of_schemes)에서 계산한 Euler characteristic을 교대합으로 더하면 $X$의 Hilbert polynomial이 그대로 읽힌다.

@@ -13,7 +13,7 @@ weight: 302
 
 ---
 
-우리는 [§가군의 직접곱과 직합, 텐서곱](/ko/math/algebraic_structures/operations_of_modules)에서 가군들의 연산을, [§환의 곱, 쌍대곱, 텐서곱](/ko/math/algebraic_structures/operations_of_rings)에서 ring들의 연산을 살펴보았다. $A$-algebra는 $A$-module 위에 bilinear한 곱셈을 추가한 구조이므로 ([§대수, ⁋정의 1](/ko/math/algebraic_structures/algebras#def1)), 가군의 단계에서 정의된 연산들 위에 곱셈이 잘 따라오는지를 확인하는 것이 이번 글의 내용이다. [§대수](/ko/math/algebraic_structures/algebras)에서와 마찬가지로 $A$는 항상 commutative ring이다.
+우리는 [§가군의 직접곱과 직합, 텐서곱](/ko/math/algebraic_structures/operations_of_modules)에서 module들의 연산을, [§환의 곱, 쌍대곱, 텐서곱](/ko/math/algebraic_structures/operations_of_rings)에서 ring들의 연산을 살펴보았다. $A$-algebra는 $A$-module 위에 bilinear한 곱셈을 추가한 구조이므로 ([§대수, ⁋정의 1](/ko/math/algebraic_structures/algebras#def1)), module의 단계에서 정의된 연산들 위에 곱셈이 잘 따라오는지를 확인하는 것이 이번 글의 내용이다. [§대수](/ko/math/algebraic_structures/algebras)에서와 마찬가지로 $A$는 항상 commutative ring이다.
 
 ## 대수의 직접곱과 직합
 
@@ -37,7 +37,7 @@ $$\bigl((\alpha x+y)z\bigr)_i=(\alpha x_i+y_i)z_i=\alpha(x_iz_i)+y_iz_i=\bigl(\a
 이를 다음과 같이 이름붙인다. 
 
 ::: 정의 2
-[명제 1](#prop1)에서 정의된 곱셈이 주어진 $A$-algebra $\prod_{i\in I}E_i$를 $E_i$들의 *direct product<sub>직접곱</sub>*이라 부른다. Canonical projection $\pr_i:\prod E_i \rightarrow E_i$들은 모두 $A$-algebra homomorphism이다.
+[명제 1](#prop1)에서 정의된 곱셈이 주어진 $A$-algebra $\prod_{i\in I}E_i$를 $E_i$들의 *direct product<sub>직접곱</sub>*라 부른다. Canonical projection $\pr_i:\prod E_i \rightarrow E_i$들은 모두 $A$-algebra homomorphism이다.
 :::
 
 그럼 이렇게 정의한 direct product는 $A$-algebra들의 category에서의 product이다, 즉, 다음의 universal property가 성립한다. 
@@ -114,7 +114,7 @@ $$\mu(s,t)=\tilde{m}(t)(s)$$
 :::
 
 ::: 정의 7
-두 $A$-algebra $E,E'$에 대하여, [명제 6](#prop6)의 곱셈이 주어진 $A$-algebra $E\otimes_AE'$을 $E$와 $E'$의 *tensor product<sub>텐서곱</sub>*이라 부른다.
+두 $A$-algebra $E,E'$에 대하여, [명제 6](#prop6)의 곱셈이 주어진 $A$-algebra $E\otimes_AE'$을 $E$와 $E'$의 *tensor product<sub>텐서곱</sub>*라 부른다.
 :::
 
 Direct product에서와 마찬가지로, tensor product는 두 대수의 성질을 그대로 물려받는다. 가령 $E,E'$이 모두 associative라면 generator들 위에서

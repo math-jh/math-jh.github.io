@@ -86,7 +86,7 @@ $$0\longrightarrow N\longrightarrow\mathbb{T}^d\overset{\bar\beta}{\longrightarr
 ::: 증명
 $\Delta$의 한 꼭짓점 $p$을 택하면, simple 조건에 의해 $p$에서 정확히 $n$개의 facet $F_{i_1},\ldots,F_{i_n}$이 만나고, smooth 조건에 의해 그 법선 $u_{i_1},\ldots,u_{i_n}$은 $\mathbb{Z}^n$의 $\mathbb{Z}$-basis를 이룬다. 이 $n$개의 벡터가 이미 $\beta(\mathbb{Z}^d)$ 안에서 $\mathbb{Z}^n$ 전체를 생성하므로 $\beta$은 전사이다.
 
-전사인 $\mathbb{Z}$-가군 사상 $\beta:\mathbb{Z}^d\rightarrow\mathbb{Z}^n$에 대하여, $\mathbb{Z}^n$이 자유이므로 short exact sequence $0\rightarrow\ker\beta\rightarrow\mathbb{Z}^d\rightarrow\mathbb{Z}^n\rightarrow0$은 분할된다. 따라서 $\mathbb{Z}^d\cong\ker\beta\oplus\mathbb{Z}^n$이고 $\mathfrak{n}=\ker\beta$은 rank $d-n$의 자유 direct sum 인자이다. 분할성에 의해 $\mathbb{R}^d=\mathfrak{n}_\mathbb{R}\oplus(\mathbb{Z}^n\text{의 들어올림})$이므로 실수계수 exact sequence도 곧바로 따라온다.
+전사인 $\mathbb{Z}$-module 사상 $\beta:\mathbb{Z}^d\rightarrow\mathbb{Z}^n$에 대하여, $\mathbb{Z}^n$이 자유이므로 short exact sequence $0\rightarrow\ker\beta\rightarrow\mathbb{Z}^d\rightarrow\mathbb{Z}^n\rightarrow0$은 분할된다. 따라서 $\mathbb{Z}^d\cong\ker\beta\oplus\mathbb{Z}^n$이고 $\mathfrak{n}=\ker\beta$은 rank $d-n$의 자유 direct sum 인자이다. 분할성에 의해 $\mathbb{R}^d=\mathfrak{n}_\mathbb{R}\oplus(\mathbb{Z}^n\text{의 들어올림})$이므로 실수계수 exact sequence도 곧바로 따라온다.
 
 마지막으로 functor $V\mapsto V/(\text{격자})$을 적용한다. $\mathfrak{n}$이 $\mathbb{Z}^d$의 direct sum 인자이므로 $N=\mathfrak{n}_\mathbb{R}/\mathfrak{n}$은 $\mathbb{T}^d=\mathbb{R}^d/\mathbb{Z}^d$의 closed 부분 torus이고, quotient $\mathbb{T}^d/N$은 $\mathbb{R}^n/\mathbb{Z}^n=\mathbb{T}^n$과 isomorphic하다. 분할성 덕분에 torsion이 생기지 않아 $N$은 연결된 차원 $d-n$의 torus이며, 지수화한 열 $0\rightarrow N\rightarrow\mathbb{T}^d\rightarrow\mathbb{T}^n\rightarrow0$이 완전하다.
 :::
@@ -135,7 +135,7 @@ $$\dim M_\Delta=\dim\mathbb{C}^d-2\dim N=2d-2(d-n)=2n$$
 
 이다. $\Delta$이 compact이고 위에서 $\phi_N^{-1}(c)$이 $\Delta$ 위로 사영되며 각 fiber가 좌표들의 위상 $\lvert z_k\rvert$이 고정된 torus의 부분집합이라 bounded이고 닫혀 있으므로 $\phi_N^{-1}(c)$은 compact이고, 따라서 그 quotient $M_\Delta$도 compact이다. $\mathbb{C}^d$과 $N$, $\Delta$이 연결이므로 $M_\Delta$도 연결이다.
 
-잔여 action은 다음과 같이 내려온다. $\mathbb{T}^d$이 $\mathbb{C}^d$ 위에 작용하고 그 subgroup $N$의 action으로 나누었으므로, quotient group $\mathbb{T}^n=\mathbb{T}^d/N$이 $M_\Delta$ 위에 작용한다. 이 action은 $\omega_\Delta$을 보존하며 그 운동량 사상은 $\phi$이 $\phi_N^{-1}(c)$ 위에서 유도하는 사상이 $\mathbb{T}^n$ 방향으로 내려온 것, 즉 위에서 정의한 $\mu_\Delta(z)=x$이다. Action의 효과성은 다음에서 나온다. $\mathbb{T}^n$의 한 원소가 $M_\Delta$의 모든 점을 고정하면, 그것을 $\mathbb{T}^d$로 들어 올린 action은 $\phi_N^{-1}(c)$을 $N$-orbit 안에서 보존하는데, 내부점 $x\in\Delta^\circ$ 위의 fiber에서는 $I(z)=\emptyset$이라 $\mathbb{T}^d$ 전체가 자유롭게 작용하므로 그 원소는 $N$에 속해야 하고, 따라서 $\mathbb{T}^n$에서는 항등원이다.
+잔여 action은 다음과 같이 내려온다. $\mathbb{T}^d$이 $\mathbb{C}^d$ 위에 작용하고 그 subgroup $N$의 action으로 나누었으므로, quotient group $\mathbb{T}^n=\mathbb{T}^d/N$이 $M_\Delta$ 위에 작용한다. 이 action은 $\omega_\Delta$을 보존하며 그 운동량 사상은 $\phi$이 $\phi_N^{-1}(c)$ 위에서 유도하는 사상이 $\mathbb{T}^n$ 방향으로 내려온 것, 즉 위에서 정의한 $\mu_\Delta(z)=x$이다. Action의 효과성은 다음에서 나온다. $\mathbb{T}^n$의 한 원소가 $M_\Delta$의 모든 점을 고정하면, 그것을 $\mathbb{T}^d$로 들어 올린 action은 $\phi_N^{-1}(c)$을 $N$-orbit 안에서 보존하는데, interior point $x\in\Delta^\circ$ 위의 fiber에서는 $I(z)=\emptyset$이라 $\mathbb{T}^d$ 전체가 자유롭게 작용하므로 그 원소는 $N$에 속해야 하고, 따라서 $\mathbb{T}^n$에서는 항등원이다.
 
 끝으로 운동량 다면체가 $\Delta$임은 위 projection에서 직접 읽힌다. $\mu_\Delta(z)=x$이 가능한 값의 집합은 정확히 $\{x\in\mathbb{R}^n\mid\langle x,u_k\rangle+\lambda_k\geq0\text{ for all }k\}=\Delta$이므로 $\mu_\Delta(M_\Delta)=\Delta$이다.
 :::

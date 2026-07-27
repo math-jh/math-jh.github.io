@@ -22,7 +22,7 @@ drift_needed: true
 Scheme $X$ 위에서도 abelian group들의 sheaf 범주 $\Sh(X)$는 abelian category이며 enough injective를 가진다. 따라서 [\[대수다양체\] §층 코호몰로지](/ko/math/algebraic_varieties/sheaf_cohomology)에서와 동일한 방식으로 global section functor의 derived functor를 정의할 수 있다. 우리의 주된 관심은 항상 quasi-coherent sheaf이지만, injective resolution은 $\Sh(X)$ 안에서 잡는다는 점에 유의한다.
 
 ::: 정의 1
-Scheme $X$ 위의 $\mathcal{O}_X$-가군층 $\mathcal{F}$에 대하여, global section functor $\Gamma(X, -):\Sh(X) \rightarrow \Ab$의 right derived functor를 ([\[호몰로지 대수학\] §유도함자, ⁋정의 9](/ko/math/homological_algebra/derived_functors#def9)) 취하여 $i$번째 *sheaf cohomology<sub>층 코호몰로지</sub>*를
+Scheme $X$ 위의 $\mathcal{O}_X$-module층 $\mathcal{F}$에 대하여, global section functor $\Gamma(X, -):\Sh(X) \rightarrow \Ab$의 right derived functor를 ([\[호몰로지 대수학\] §유도함자, ⁋정의 9](/ko/math/homological_algebra/derived_functors#def9)) 취하여 $i$번째 *sheaf cohomology<sub>층 코호몰로지</sub>*를
 
 $$H^i(X, \mathcal{F})=R^i\Gamma(X, -)(\mathcal{F})=\frac{\ker\bigl(\Gamma(X, \mathcal{I}^i) \rightarrow \Gamma(X, \mathcal{I}^{i+1})\bigr)}{\im\bigl(\Gamma(X, \mathcal{I}^{i-1}) \rightarrow \Gamma(X, \mathcal{I}^i)\bigr)}$$
 
@@ -32,7 +32,7 @@ $$H^i(X, \mathcal{F})=R^i\Gamma(X, -)(\mathcal{F})=\frac{\ker\bigl(\Gamma(X, \ma
 이 정의는 [\[대수다양체\] §층 코호몰로지, ⁋정의 1](/ko/math/algebraic_varieties/sheaf_cohomology#def1)을 임의의 scheme 위로 옮긴 것에 불과하며, $\mathcal{I}^\bullet$의 선택에 무관함을 비롯한 형식적 성질은 모두 homological algebra의 표준 논증으로부터 따라온다. 특히 $H^0(X, \mathcal{F})=\Gamma(X, \mathcal{F})$이고, sheaf의 short exact sequence는 long exact sequence를 유도한다.
 
 ::: 명제 2
-$\mathcal{O}_X$-가군층의 short exact sequence
+$\mathcal{O}_X$-module층의 short exact sequence
 
 $$0 \rightarrow \mathcal{F}' \rightarrow \mathcal{F} \rightarrow \mathcal{F}'' \rightarrow 0$$
 
@@ -60,11 +60,11 @@ $$H^i(X, \mathcal{F})=0 \qquad (i>0)$$
 이 성립한다.
 :::
 ::: 증명
-[§준연접층, ⁋정리 9](/ko/math/scheme_theory/quasicoherent_sheaves#thm9)에 의하여 $\QCoh(\Spec A)$는 $\Mod(A)$와 동치이므로, $\mathcal{F}=\widetilde M$인 $A$-가군 $M$이 존재한다. $\Mod(A)$는 enough injective를 가지므로 $M$의 injective resolution
+[§준연접층, ⁋정리 9](/ko/math/scheme_theory/quasicoherent_sheaves#thm9)에 의하여 $\QCoh(\Spec A)$는 $\rMod{A}$와 동치이므로, $\mathcal{F}=\widetilde M$인 $A$-module $M$이 존재한다. $\rMod{A}$는 enough injective를 가지므로 $M$의 injective resolution
 
 $$0 \rightarrow M \rightarrow I^0 \rightarrow I^1 \rightarrow \cdots$$
 
-을 잡자. 연관층 functor $\widetilde{(-)}$는 exact이므로 ([§준연접층, ⁋명제 6](/ko/math/scheme_theory/quasicoherent_sheaves#prop6)),
+을 잡자. associated sheaf functor $\widetilde{(-)}$는 exact이므로 ([§준연접층, ⁋명제 6](/ko/math/scheme_theory/quasicoherent_sheaves#prop6)),
 
 $$0 \rightarrow \widetilde M \rightarrow \widetilde{I^0} \rightarrow \widetilde{I^1} \rightarrow \cdots$$
 
@@ -74,14 +74,14 @@ $$H^i(\Spec A, \widetilde M)\cong H^i\bigl(\Gamma(\Spec A, \widetilde{I^\bullet}
 
 을 얻는다. 그런데 $I^\bullet$은 $M$의 injective resolution이므로 $\Gamma(\Spec A, \widetilde{I^k})=I^k$이고, $M \rightarrow I^\bullet$은 quasi-isomorphism이므로 우변의 cohomology는 $i>0$에서 모두 소멸한다. 따라서 $H^i(\Spec A, \widetilde M)=0$ ($i>0$)이다.
 
-남은 것은 injective $A$-가군 $I$의 연관층 $\widetilde I$이 acyclic이라는 것이다. 이를 위해 우리는 $\widetilde I$이 flasque임을 보이며, flasque sheaf가 $\Gamma(X, -)$-acyclic이라는 것은 이미 알고 있다. ([\[대수다양체\] §층 코호몰로지, ⁋명제 16](/ko/math/algebraic_varieties/sheaf_cohomology#prop16)) Flasque임을 보이는 것은 Noetherian 가정 아래에서 가장 명료하므로 그 경우를 먼저 다룬다. $A$가 Noetherian ring이라 하자. 임의의 principal open set $D(f)\subseteq \Spec A$에 대하여, restriction map은 [§준연접층, ⁋명제 5](/ko/math/scheme_theory/quasicoherent_sheaves#prop5)에 의하여 localization $I \rightarrow I_f$이다. 그런데 Noetherian ring 위에서 injective 가군의 localization은 다시 injective이며, 더 일반적으로 임의의 열린집합 $U=\Spec A\setminus V(\mathfrak{a})$에 대하여 restriction $\widetilde I(\Spec A)=I\rightarrow\widetilde I(U)$이 surjective임을 본다. Quasi-coherent sheaf의 section을 local cohomology와 잇는 exact sequence
+남은 것은 injective $A$-module $I$의 associated sheaf $\widetilde I$이 acyclic이라는 것이다. 이를 위해 우리는 $\widetilde I$이 flasque임을 보이며, flasque sheaf가 $\Gamma(X, -)$-acyclic이라는 것은 이미 알고 있다. ([\[대수다양체\] §층 코호몰로지, ⁋명제 16](/ko/math/algebraic_varieties/sheaf_cohomology#prop16)) Flasque임을 보이는 것은 Noetherian 가정 아래에서 가장 명료하므로 그 경우를 먼저 다룬다. $A$가 Noetherian ring이라 하자. 임의의 principal open set $D(f)\subseteq \Spec A$에 대하여, restriction map은 [§준연접층, ⁋명제 5](/ko/math/scheme_theory/quasicoherent_sheaves#prop5)에 의하여 localization $I \rightarrow I_f$이다. 그런데 Noetherian ring 위에서 injective module의 localization은 다시 injective이며, 더 일반적으로 임의의 열린집합 $U=\Spec A\setminus V(\mathfrak{a})$에 대하여 restriction $\widetilde I(\Spec A)=I\rightarrow\widetilde I(U)$이 surjective임을 본다. Quasi-coherent sheaf의 section을 local cohomology와 잇는 exact sequence
 $$I\longrightarrow\widetilde I(U)\longrightarrow H^1_{\mathfrak{a}}(I)\longrightarrow 0$$
 이 성립하는데, 여기서 $H^i_{\mathfrak{a}}(M)=\varinjlim_n\Ext^i_A(A/\mathfrak{a}^n,M)$이다. $I$가 injective이므로 모든 $n$에서 $\Ext^1_A(A/\mathfrak{a}^n,I)=0$이어서 $H^1_{\mathfrak{a}}(I)=0$이고, 따라서 위 restriction이 surjective이다. 같은 논증이 임의의 열린집합에 적용되므로 $\widetilde I$은 flasque이다 (Hartshorne III.3.4).
 
-$A$가 Noetherian이 아닌 경우에는, $\Spec A$의 임의의 open cover에 대하여 Čech complex $\check C^\bullet(\mathcal{U}, \widetilde M)$이 exact하다는 것을 직접 보이는 방식으로 같은 결론에 도달할 수 있다. 핵심은 affine scheme 위에서 quasi-coherent sheaf의 section이 모두 localization으로 주어지므로, principal open set들로 이루어진 cover에 대한 Čech complex가 가군 $M$의 분해로 환원되어 $p>0$에서 사라진다는 것이다. 어느 경우든 $\widetilde I$의 acyclicity가 성립한다.
+$A$가 Noetherian이 아닌 경우에는, $\Spec A$의 임의의 open cover에 대하여 Čech complex $\check C^\bullet(\mathcal{U}, \widetilde M)$이 exact하다는 것을 직접 보이는 방식으로 같은 결론에 도달할 수 있다. 핵심은 affine scheme 위에서 quasi-coherent sheaf의 section이 모두 localization으로 주어지므로, principal open set들로 이루어진 cover에 대한 Čech complex가 module $M$의 분해로 환원되어 $p>0$에서 사라진다는 것이다. 어느 경우든 $\widetilde I$의 acyclicity가 성립한다.
 :::
 
-[정리 3](#thm3)의 핵심은 affine scheme이 cohomology의 관점에서 "단순한" 공간이라는 것이다. 즉 affine 위에서는 quasi-coherent sheaf의 정보가 모두 $H^0$, 곧 그 global section 가군에 담겨 있으며, higher cohomology는 어떠한 새로운 정보도 주지 않는다. 이는 위상공간이 Čech cohomology의 관점에서 contractible한 것에 대응하는 대수기하학적 현상이다.
+[정리 3](#thm3)의 핵심은 affine scheme이 cohomology의 관점에서 "단순한" 공간이라는 것이다. 즉 affine 위에서는 quasi-coherent sheaf의 정보가 모두 $H^0$, 곧 그 global section module에 담겨 있으며, higher cohomology는 어떠한 새로운 정보도 주지 않는다. 이는 위상공간이 Čech cohomology의 관점에서 contractible한 것에 대응하는 대수기하학적 현상이다.
 
 이로부터 곧바로 affine covering에 대한 Leray 정리를 scheme 수준에서 얻는다. [\[대수다양체\] §층 코호몰로지, ⁋정리 11](/ko/math/algebraic_varieties/sheaf_cohomology#thm11)은 cover $\mathcal{U}$의 모든 유한 교집합 위에서 $\mathcal{F}$가 acyclic이면 $\check H^p(\mathcal{U}, \mathcal{F})\cong H^p(X, \mathcal{F})$임을 주는데, 이는 위상공간 수준의 정리이므로 scheme 위에서도 그대로 적용된다.
 
@@ -100,17 +100,17 @@ $$\check H^p(\mathcal{U}, \mathcal{F})\cong H^p(X, \mathcal{F})$$
 
 ## 사영공간 위의 line bundle
 
-이제 affine covering에 대한 Čech 계산을 사용하여 사영공간 위의 line bundle $\mathcal{O}(d)$의 cohomology를 scheme 수준에서 다룬다. 우선 $\mathcal{O}(d)$를 graded 가군의 언어로 정의한다. Ring $A$ 위의 사영공간은 $\mathbb{P}^n_A=\Proj A[\x_0,\ldots, \x_n]$이며 ([§사영공간과 Proj 구성, ⁋정의 1](/ko/math/scheme_theory/projective_schemes#def1)), 이는 standard affine cover $\mathcal{U}=\{D_+(\x_i)\}_{i=0}^n$을 가진다.
+이제 affine covering에 대한 Čech 계산을 사용하여 사영공간 위의 line bundle $\mathcal{O}(d)$의 cohomology를 scheme 수준에서 다룬다. 우선 $\mathcal{O}(d)$를 graded module의 언어로 정의한다. Ring $A$ 위의 사영공간은 $\mathbb{P}^n_A=\Proj A[\x_0,\ldots, \x_n]$이며 ([§사영공간과 Proj 구성, ⁋정의 1](/ko/math/scheme_theory/projective_schemes#def1)), 이는 standard affine cover $\mathcal{U}=\{D_+(\x_i)\}_{i=0}^n$을 가진다.
 
 ::: 정의 5
-$S=A[\x_0,\ldots, \x_n]$을 standard grading을 가진 graded ring이라 하고, $S(d)$를 $S(d)_m=S_{d+m}$으로 grading을 옮긴 graded $S$-가군이라 하자. 그럼 standard affine cover $\mathcal{U}=\{D_+(\x_i)\}$ 위에서 각각의 $D_+(\x_i)=\Spec S_{(\x_i)}$에
+$S=A[\x_0,\ldots, \x_n]$을 standard grading을 가진 graded ring이라 하고, $S(d)$를 $S(d)_m=S_{d+m}$으로 grading을 옮긴 graded $S$-module이라 하자. 그럼 standard affine cover $\mathcal{U}=\{D_+(\x_i)\}$ 위에서 각각의 $D_+(\x_i)=\Spec S_{(\x_i)}$에
 
 $$\mathcal{O}(d)(D_+(\x_i))=\bigl(S(d)_{\x_i}\bigr)_0=\x_i^d\cdot S_{(\x_i)}$$
 
 을 대응시키고, 겹치는 부분 위에서 자연스러운 동일시로 붙여 얻는 $\mathbb{P}^n_A$ 위의 invertible sheaf를 *twisting sheaf<sub>꼬임층</sub>* $\mathcal{O}(d)$라 부른다.
 :::
 
-여기에서 $S_{(\x_i)}$은 $S_{\x_i}$의 degree $0$ 부분이며, $\x_i^d\cdot S_{(\x_i)}$은 $S_{\x_i}$ 안에서 degree $d$인 원소들의 모임이다. 각 chart 위에서 $\mathcal{O}(d)\vert_{D_+(\x_i)}$은 $\x_i^d$를 generator로 하는 자유 $S_{(\x_i)}$-가군이므로 rank $1$ free이고, 따라서 $\mathcal{O}(d)$는 invertible sheaf이다. ([§준연접층, ⁋정의 12](/ko/math/scheme_theory/quasicoherent_sheaves#def12)) $d=0$인 경우 $\mathcal{O}(0)=\mathcal{O}_{\mathbb{P}^n_A}$이고, $\mathcal{O}(d)\otimes\mathcal{O}(e)\cong\mathcal{O}(d+e)$가 성립하므로 $\mathcal{O}(d)\cong\mathcal{O}(1)^{\otimes d}$이다. 이 정의는 [\[대수다양체\] §사영공간의 코호몰로지](/ko/math/algebraic_varieties/cohomology_of_projective_spaces)에서 variety 위의 $\mathcal{O}(d)$를 chart별 section으로 기술한 것과 정확히 일치한다.
+여기에서 $S_{(\x_i)}$은 $S_{\x_i}$의 degree $0$ 부분이며, $\x_i^d\cdot S_{(\x_i)}$은 $S_{\x_i}$ 안에서 degree $d$인 원소들의 모임이다. 각 chart 위에서 $\mathcal{O}(d)\vert_{D_+(\x_i)}$은 $\x_i^d$를 generator로 하는 자유 $S_{(\x_i)}$-module이므로 rank $1$ free이고, 따라서 $\mathcal{O}(d)$는 invertible sheaf이다. ([§준연접층, ⁋정의 12](/ko/math/scheme_theory/quasicoherent_sheaves#def12)) $d=0$인 경우 $\mathcal{O}(0)=\mathcal{O}_{\mathbb{P}^n_A}$이고, $\mathcal{O}(d)\otimes\mathcal{O}(e)\cong\mathcal{O}(d+e)$가 성립하므로 $\mathcal{O}(d)\cong\mathcal{O}(1)^{\otimes d}$이다. 이 정의는 [\[대수다양체\] §사영공간의 코호몰로지](/ko/math/algebraic_varieties/cohomology_of_projective_spaces)에서 variety 위의 $\mathcal{O}(d)$를 chart별 section으로 기술한 것과 정확히 일치한다.
 
 이제 cohomology를 계산한다. $\mathbb{P}^n_A$은 separated이므로 [따름정리 4](#cor4)에 의해 standard affine cover에 대한 Čech complex를 계산하면 충분하다. 그 결과는 variety의 경우와 형태가 동일하다.
 
@@ -135,7 +135,7 @@ $$0 \rightarrow \mathcal{O}(d-1)\xrightarrow{\times\x_n}\mathcal{O}(d) \rightarr
 마지막으로 $q=n$, $d\leq -n-1$에서 얻어지는 공간이 표기 $A[\x_0^{-1},\ldots, \x_n^{-1}]_{-d-n-1}$로 적히는 이유는 [\[대수다양체\] §사영공간의 코호몰로지, ⁋명제 1](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#prop1) 직후의 설명과 동일하다. 즉 모든 지수가 $-1$ 이하인 $d$차 monomial들을 $\y_j=\x_j^{-1}$로 치환하면 $\lvert d\rvert-(n+1)=-d-n-1$차의 "음의 degree" monomial 공간이 된다.
 :::
 
-[정리 6](#thm6)에서 $d\geq 0$일 때 $H^0(\mathbb{P}^n_A, \mathcal{O}(d))=A[\x_0,\ldots, \x_n]_d$이 degree $d$ homogeneous polynomial들의 free $A$-가군이라는 것은 $\mathcal{O}(d)$의 global section이 곧 $S_d$임을 다시 확인해 준다. 또 양 끝 차원 $H^0$와 $H^n$ 사이에는 Serre duality
+[정리 6](#thm6)에서 $d\geq 0$일 때 $H^0(\mathbb{P}^n_A, \mathcal{O}(d))=A[\x_0,\ldots, \x_n]_d$이 degree $d$ homogeneous polynomial들의 free $A$-module이라는 것은 $\mathcal{O}(d)$의 global section이 곧 $S_d$임을 다시 확인해 준다. 또 양 끝 차원 $H^0$와 $H^n$ 사이에는 Serre duality
 
 $$H^n(\mathbb{P}^n_A, \mathcal{O}(d))\cong H^0(\mathbb{P}^n_A, \mathcal{O}(-d-n-1))^\vee$$
 
@@ -170,7 +170,7 @@ $$H^i(\mathbb{P}^n, \mathcal{O}(-d)^{\oplus r}) \rightarrow H^i(\mathbb{P}^n, \m
 을 본다. 좌변은 [정리 6](#thm6)에 의하여 유한차원이고, 우변은 귀납 가정에 의하여 유한차원이므로 ($i+1$에서의 유한차원성), 가운데 항 $H^i(\mathbb{P}^n, \mathcal{F})$ 또한 유한차원이다. 이로써 모든 $i$에 대한 유한차원성을 얻는다.
 :::
 
-[정리 7](#thm7)은 projective scheme 위의 coherent sheaf가 좋은 유한성을 가짐을 보장한다. 이는 affine 위의 finitely generated 가군에 대한 유한성이 cohomology 수준에서 사영적 상황으로 옮겨진 것이며, [\[대수다양체\] §사영공간의 코호몰로지, ⁋정의 2](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#def2)의 Euler characteristic과 같은 불변량이 잘 정의되는 근거가 된다. 위 증명의 귀납에 사용한 globally generated 성질과 twist 후의 소멸은 다음 Serre vanishing에서 정량적으로 다시 등장한다.
+[정리 7](#thm7)은 projective scheme 위의 coherent sheaf가 좋은 유한성을 가짐을 보장한다. 이는 affine 위의 finitely generated module에 대한 유한성이 cohomology 수준에서 사영적 상황으로 옮겨진 것이며, [\[대수다양체\] §사영공간의 코호몰로지, ⁋정의 2](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#def2)의 Euler characteristic과 같은 불변량이 잘 정의되는 근거가 된다. 위 증명의 귀납에 사용한 globally generated 성질과 twist 후의 소멸은 다음 Serre vanishing에서 정량적으로 다시 등장한다.
 
 ::: 정리 8 (Serre Vanishing)
 Field $\mathbb{K}$ 위의 Noetherian projective scheme $X$와 closed immersion $X\hookrightarrow\mathbb{P}^n_\mathbb{K}$이 주는 very ample line bundle $\mathcal{O}_X(1)$ ([§인자와 선형계, ⁋정의 18](/ko/math/scheme_theory/divisors_and_linear_systems#def18)), 그리고 coherent sheaf $\mathcal{F}$에 대하여, 충분히 큰 $d\gg 0$에 대해
@@ -182,7 +182,7 @@ $$H^i(X, \mathcal{F}(d))=0 \qquad (i>0)$$
 ::: 증명
 [정리 7](#thm7)에서와 같이 closed immersion $\iota:X\hookrightarrow\mathbb{P}^n_{\mathbb{K}}$을 통해 $X=\mathbb{P}^n_{\mathbb{K}}$이고 $\mathcal{O}_X(1)=\mathcal{O}(1)$인 경우로 환원한다. 이 환원이 정당한 것은 $\iota$가 closed immersion이라 $\iota_\ast(\mathcal{F}(d))\cong(\iota_\ast\mathcal{F})(d)$이고 ($\mathcal{O}_X(1)=\iota^\ast\mathcal{O}(1)$이므로 projection formula로부터), cohomology가 $\iota_\ast$ 아래에서 보존되기 때문이다.
 
-먼저 $\mathcal{F}(d)$이 $d\gg0$에서 globally generated임을 본다. $S=\mathbb{K}[\x_0,\ldots, \x_n]$로 두고 graded $S$-가군 $\Gamma_\ast(\mathcal{F})=\bigoplus_{m\in\mathbb{Z}}\Gamma(\mathbb{P}^n, \mathcal{F}(m))$을 생각하면, 각 표준 affine $D_+(\x_j)$ 위에서 $\Gamma(D_+(\x_j), \mathcal{F})$은 degree $0$ localization $\Gamma_\ast(\mathcal{F})_{(\x_j)}$이고 이는 $S_{(\x_j)}$ 위의 finitely generated 가군이다. 각 generator를 $m_k/\x_j^{e_k}$ 꼴로 적고 $d_0=\max_{j,k}e_k$로 두면, $\x_j^{d_0-e_k}$를 곱한 $m_k\cdot\x_j^{d_0-e_k}\in\Gamma(\mathbb{P}^n, \mathcal{F}(d_0))$들이 $D_+(\x_j)$ 위에서 $\mathcal{F}(d_0)$의 stalk를 생성한다. $j$에 대해 최댓값을 취하면 $\mathcal{F}(d_0)$이 globally generated이고, $d\geq d_0$이면 $\mathcal{F}(d)=\mathcal{F}(d_0)\otimes\mathcal{O}(d-d_0)$ 또한 globally generated이다.
+먼저 $\mathcal{F}(d)$이 $d\gg0$에서 globally generated임을 본다. $S=\mathbb{K}[\x_0,\ldots, \x_n]$로 두고 graded $S$-module $\Gamma_\ast(\mathcal{F})=\bigoplus_{m\in\mathbb{Z}}\Gamma(\mathbb{P}^n, \mathcal{F}(m))$을 생각하면, 각 표준 affine $D_+(\x_j)$ 위에서 $\Gamma(D_+(\x_j), \mathcal{F})$은 degree $0$ localization $\Gamma_\ast(\mathcal{F})_{(\x_j)}$이고 이는 $S_{(\x_j)}$ 위의 finitely generated module이다. 각 generator를 $m_k/\x_j^{e_k}$ 꼴로 적고 $d_0=\max_{j,k}e_k$로 두면, $\x_j^{d_0-e_k}$를 곱한 $m_k\cdot\x_j^{d_0-e_k}\in\Gamma(\mathbb{P}^n, \mathcal{F}(d_0))$들이 $D_+(\x_j)$ 위에서 $\mathcal{F}(d_0)$의 stalk를 생성한다. $j$에 대해 최댓값을 취하면 $\mathcal{F}(d_0)$이 globally generated이고, $d\geq d_0$이면 $\mathcal{F}(d)=\mathcal{F}(d_0)\otimes\mathcal{O}(d-d_0)$ 또한 globally generated이다.
 
 이제 vanishing을 $i$에 대한 내림차순 귀납으로 본다. $i>n$에서는 [정리 7](#thm7)의 cohomological dimension에 의해 $H^i=0$이다. 임의의 $i\geq1$에 대하여, globally generated 성질로부터 surjection $\mathcal{O}^{\oplus r}\twoheadrightarrow\mathcal{F}(d_0)$을 잡고 kernel $\mathcal{K}$를 coherent sheaf로 하여 short exact sequence
 
@@ -248,9 +248,9 @@ $$H^i\bigl(X, \mathcal{F}\otimes\mathcal{L}^{\otimes q}\otimes(\mathcal{L}^{\oti
 
 $$\Gamma(X, \mathcal{F}\otimes\mathcal{L}^{\otimes n}) \longrightarrow (\mathcal{F}\otimes\mathcal{L}^{\otimes n})_P\otimes_{\mathcal{O}_{X,P}}\kappa(P) \longrightarrow 0$$
 
-이 exact이다. Stalk $(\mathcal{F}\otimes\mathcal{L}^{\otimes n})_P$는 Noetherian local ring $\mathcal{O}_{X,P}$ 위의 finitely generated 가군이므로, [\[가환대수학\] §정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8)의 2번에 의하여 유한 개의 global section의 germ이 이 stalk를 생성한다. 그 절단들이 정의하는 $\mathcal{O}_X^{\oplus c} \rightarrow \mathcal{F}\otimes\mathcal{L}^{\otimes n}$의 cokernel은 coherent sheaf이고 그 stalk가 $P$에서 $0$이므로, coherent sheaf의 support가 닫혀 있다는 것에서 $P$의 어떤 열린근방 위에서 $\mathcal{F}\otimes\mathcal{L}^{\otimes n}$은 globally generated이다.
+이 exact이다. Stalk $(\mathcal{F}\otimes\mathcal{L}^{\otimes n})_P$는 Noetherian local ring $\mathcal{O}_{X,P}$ 위의 finitely generated module이므로, [\[가환대수학\] §정수적 확장, ⁋보조정리 8](/ko/math/commutative_algebra/integral_extension#lem8)의 2번에 의하여 유한 개의 global section의 germ이 이 stalk를 생성한다. 그 절단들이 정의하는 $\mathcal{O}_X^{\oplus c} \rightarrow \mathcal{F}\otimes\mathcal{L}^{\otimes n}$의 cokernel은 coherent sheaf이고 그 stalk가 $P$에서 $0$이므로, coherent sheaf의 support가 닫혀 있다는 것에서 $P$의 어떤 열린근방 위에서 $\mathcal{F}\otimes\mathcal{L}^{\otimes n}$은 globally generated이다.
 
-이 논증은 $n\geq n_1$인 모든 $n$에서 성립하되 열린근방이 $n$에 따라 달라지므로, 이를 하나로 묶어야 한다. 위의 논증을 $\mathcal{F}=\mathcal{O}_X$에 적용하면 적당한 $m\geq1$이 존재하여 $\mathcal{L}^{\otimes m}$과 $\mathcal{L}^{\otimes(m+1)}$이 모두 $P$에서 global section들로 생성되므로, 두 열린근방의 교집합 $W$ 위에서 둘 다 globally generated이다. Globally generated인 두 가군층의 tensor product는 stalk의 generator들의 tensor를 보면 다시 globally generated이므로, $a,b\geq0$에 대하여 $\mathcal{L}^{\otimes(am+b(m+1))}$은 $W$ 위에서 globally generated이다. $m$과 $m+1$이 서로소이므로 $k\geq m^2$인 모든 정수 $k$가 $am+b(m+1)$의 꼴로 적히고, 곧 $W$ 위에서는 $k\geq m^2$인 모든 $k$에 대해 $\mathcal{L}^{\otimes k}$이 globally generated이다. 한편 $\mathcal{F}$ 자신에 대해 $n_2\geq n_1$을 하나 택하면 $\mathcal{F}\otimes\mathcal{L}^{\otimes n_2}$은 $P$의 어떤 열린근방 $V$ 위에서 globally generated이므로, $W\cap V$ 위에서는 $n\geq n_2+m^2$인 모든 $n$에 대해
+이 논증은 $n\geq n_1$인 모든 $n$에서 성립하되 열린근방이 $n$에 따라 달라지므로, 이를 하나로 묶어야 한다. 위의 논증을 $\mathcal{F}=\mathcal{O}_X$에 적용하면 적당한 $m\geq1$이 존재하여 $\mathcal{L}^{\otimes m}$과 $\mathcal{L}^{\otimes(m+1)}$이 모두 $P$에서 global section들로 생성되므로, 두 열린근방의 교집합 $W$ 위에서 둘 다 globally generated이다. Globally generated인 두 module층의 tensor product는 stalk의 generator들의 tensor를 보면 다시 globally generated이므로, $a,b\geq0$에 대하여 $\mathcal{L}^{\otimes(am+b(m+1))}$은 $W$ 위에서 globally generated이다. $m$과 $m+1$이 서로소이므로 $k\geq m^2$인 모든 정수 $k$가 $am+b(m+1)$의 꼴로 적히고, 곧 $W$ 위에서는 $k\geq m^2$인 모든 $k$에 대해 $\mathcal{L}^{\otimes k}$이 globally generated이다. 한편 $\mathcal{F}$ 자신에 대해 $n_2\geq n_1$을 하나 택하면 $\mathcal{F}\otimes\mathcal{L}^{\otimes n_2}$은 $P$의 어떤 열린근방 $V$ 위에서 globally generated이므로, $W\cap V$ 위에서는 $n\geq n_2+m^2$인 모든 $n$에 대해
 
 $$\mathcal{F}\otimes\mathcal{L}^{\otimes n}\cong(\mathcal{F}\otimes\mathcal{L}^{\otimes n_2})\otimes\mathcal{L}^{\otimes(n-n_2)}$$
 
@@ -314,7 +314,7 @@ $$\rchi(\mathbb{P}^n_\mathbb{K}, \mathcal{O}(d))=(-1)^n\binom{-d-1}{n}=\binom{n+
 이다. 마지막 등식은 $t=n+d$에 대해 $t(t-1)\cdots(t-n+1)=(-1)^n(n-t-1)(n-t-2)\cdots(-t)$인 것에서 얻어진다.
 :::
 
-이 값은 $d$에 대한 degree $n$의 다항식이며, [\[대수다양체\] §사영공간의 코호몰로지, ⁋따름정리 3](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#cor3)의 variety 판본과 일치한다. 곧 $\mathcal{O}(d)$를 twist해 나갈 때 cohomology의 교대합은 개별 cohomology가 겪는 세 국면과 무관하게 하나의 다항식을 따라간다. 이것이 일반적인 coherent sheaf에서도 성립한다는 것이 다음 정리이며, 이를 진술하기 위해 coherent sheaf $\mathcal{F}$의 *support*를 $\operatorname{Supp}\mathcal{F}=\{x\in X\mid \mathcal{F}_x\neq0\}$으로 정의한다. Affine chart 위에서 이는 대응하는 가군의 annihilator ideal의 zero set이므로 닫힌집합이다.
+이 값은 $d$에 대한 degree $n$의 다항식이며, [\[대수다양체\] §사영공간의 코호몰로지, ⁋따름정리 3](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#cor3)의 variety 판본과 일치한다. 곧 $\mathcal{O}(d)$를 twist해 나갈 때 cohomology의 교대합은 개별 cohomology가 겪는 세 국면과 무관하게 하나의 다항식을 따라간다. 이것이 일반적인 coherent sheaf에서도 성립한다는 것이 다음 정리이며, 이를 진술하기 위해 coherent sheaf $\mathcal{F}$의 *support*를 $\operatorname{Supp}\mathcal{F}=\{x\in X\mid \mathcal{F}_x\neq0\}$으로 정의한다. Affine chart 위에서 이는 대응하는 module의 annihilator ideal의 zero set이므로 닫힌집합이다.
 
 ::: 정리 15 (Hilbert)
 Field $\mathbb{K}$ 위의 사영공간 $\mathbb{P}^n_\mathbb{K}$의 closed subscheme $X$와 그 위의 coherent sheaf $\mathcal{F}$에 대하여, 유일한 numerical polynomial $P_\mathcal{F}$가 존재하여 ([\[가환대수학\] §힐베르트-사무엘 함수, ⁋정의 1](/ko/math/commutative_algebra/hilbert-samuel_function#def1)) 모든 정수 $d$에 대해
@@ -330,7 +330,7 @@ $$\rchi(\mathcal{F}(d))=P_\mathcal{F}(d)$$
 
 다음으로 $\mathbb{K}$가 무한체라 가정하여도 됨을 본다. 무한체로의 확대 $\mathbb{L}\supseteq\mathbb{K}$를 잡고 $\mathbb{P}^n_\mathbb{L} \rightarrow \mathbb{P}^n_\mathbb{K}$를 따라 $\mathcal{F}$를 끌어올리자. Standard affine cover에 대한 Čech complex는 계수를 확대한 $\check C^\bullet(\mathcal{U}, \mathcal{F})\otimes_\mathbb{K}\mathbb{L}$이고 $-\otimes_\mathbb{K}\mathbb{L}$은 exact이므로, [따름정리 4](#cor4)에 의하여 $\dim_\mathbb{L}H^i(\mathbb{P}^n_\mathbb{L}, \mathcal{F}_\mathbb{L}(d))=\dim_\mathbb{K}H^i(\mathbb{P}^n_\mathbb{K}, \mathcal{F}(d))$이다. 또 finite type scheme의 차원은 계수를 확대하여도 변하지 않으므로 support의 차원도 보존된다. 이는 affine chart $\Spec A$ 위에서 다음의 순서로 확인한다. $A$의 minimal prime들을 $\mathfrak{p}_1,\ldots, \mathfrak{p}_s$라 하면 $A \rightarrow \prod_kA/\mathfrak{p}_k$의 kernel은 nilradical이고 그 image는 $\prod_kA/\mathfrak{p}_k$ 안에서 integral인데, nilpotent는 spectrum을 바꾸지 않고 integral extension은 차원을 보존하므로 ([§차원, ⁋명제 5](/ko/math/scheme_theory/dimension#prop5)) $\dim A=\max_k\dim A/\mathfrak{p}_k$이다. $\mathbb{L}$이 $\mathbb{K}$ 위에서 flat이므로 이 ring homomorphism은 base change 후에도 nilpotent kernel과 integral image를 유지하여, 같은 등식이 $A\otimes_\mathbb{K}\mathbb{L}$에 대해서도 성립한다. 한편 각각의 $A/\mathfrak{p}_k$는 finitely generated $\mathbb{K}$-대수인 integral domain이므로 확대 이전에 [§차원, ⁋정리 9](/ko/math/scheme_theory/dimension#thm9)를 적용하여 injective한 finite ring homomorphism $\mathbb{K}[x_1,\ldots, x_{n_k}]\hookrightarrow A/\mathfrak{p}_k$를 얻을 수 있고, 이를 $\mathbb{L}$로 base change한 $\mathbb{L}[x_1,\ldots, x_{n_k}]\hookrightarrow(A/\mathfrak{p}_k)\otimes_\mathbb{K}\mathbb{L}$ 또한 injective이고 finite이므로 다시 [§차원, ⁋명제 5](/ko/math/scheme_theory/dimension#prop5)에 의하여 양변의 차원이 $n_k=\dim A/\mathfrak{p}_k$로 같다. 확대 후의 $A\otimes_\mathbb{K}\mathbb{L}$은 domain이 아닐 수 있어 Noether normalization을 확대된 계수 위에서 새로 적용할 수는 없으므로, 이처럼 확대 이전에 잡은 ring homomorphism을 base change하는 순서를 따라야 한다. 따라서 처음부터 $\mathbb{K}$가 무한체라 두어도 된다.
 
-이제 $r=\dim\operatorname{Supp}\mathcal{F}$에 대한 귀납법을 쓴다. $\mathcal{F}=0$이면 모든 cohomology가 소멸하므로 $P_\mathcal{F}=0$이다. $\mathcal{F}\neq0$이라 하고 $S=\mathbb{K}[\x_0,\ldots, \x_n]$이라 하자. 각각의 chart $D_+(\x_j)=\Spec S_{(\x_j)}$ 위에서 $\mathcal{F}$는 finitely generated 가군 $M_j$에 대응하며 ([§준연접층, ⁋정리 10](/ko/math/scheme_theory/quasicoherent_sheaves#thm10), [§준연접층, ⁋정의 11](/ko/math/scheme_theory/quasicoherent_sheaves#def11)), 각각의 $\Ass M_j$는 유한집합이다. ([\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 1번) 이들에 대응하는 $\mathbb{P}^n$의 점을 모두 모으면 유한 개이고, 각각은 irrelevant ideal을 포함하지 않는 homogeneous prime ideal $\mathfrak{p}_1,\ldots, \mathfrak{p}_t\subseteq S$를 준다. $\mathfrak{p}_k$가 homogeneous이므로 $S_1\subseteq\mathfrak{p}_k$이면 $\mathfrak{p}_k$가 irrelevant ideal을 포함하게 되고, 따라서 각각의 $\mathfrak{p}_k\cap S_1$은 $S_1$의 진부분공간이다. 한편 $\mathbb{K}$가 무한체이므로 벡터공간 $S_1$은 유한 개의 진부분공간의 합집합이 될 수 없다. 실제로 그러한 덮개가 존재한다면 덮개가 최소인 것을 택하고 첫 번째 부분공간에만 속하는 $u$와 그 부분공간에 속하지 않는 $v$를 잡으면, 무한히 많은 $v+\lambda u$ 가운데 어느 것도 첫 번째 부분공간에 속하지 않으므로 그 중 둘이 같은 다른 부분공간에 들어가고, 그 차가 $u$의 배수이므로 $u$가 그 부분공간에 속하게 되어 모순이다. 따라서 어떠한 $\mathfrak{p}_k$에도 속하지 않는 $\ell\in S_1$이 존재한다.
+이제 $r=\dim\operatorname{Supp}\mathcal{F}$에 대한 귀납법을 쓴다. $\mathcal{F}=0$이면 모든 cohomology가 소멸하므로 $P_\mathcal{F}=0$이다. $\mathcal{F}\neq0$이라 하고 $S=\mathbb{K}[\x_0,\ldots, \x_n]$이라 하자. 각각의 chart $D_+(\x_j)=\Spec S_{(\x_j)}$ 위에서 $\mathcal{F}$는 finitely generated module $M_j$에 대응하며 ([§준연접층, ⁋정리 10](/ko/math/scheme_theory/quasicoherent_sheaves#thm10), [§준연접층, ⁋정의 11](/ko/math/scheme_theory/quasicoherent_sheaves#def11)), 각각의 $\Ass M_j$는 유한집합이다. ([\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 1번) 이들에 대응하는 $\mathbb{P}^n$의 점을 모두 모으면 유한 개이고, 각각은 irrelevant ideal을 포함하지 않는 homogeneous prime ideal $\mathfrak{p}_1,\ldots, \mathfrak{p}_t\subseteq S$를 준다. $\mathfrak{p}_k$가 homogeneous이므로 $S_1\subseteq\mathfrak{p}_k$이면 $\mathfrak{p}_k$가 irrelevant ideal을 포함하게 되고, 따라서 각각의 $\mathfrak{p}_k\cap S_1$은 $S_1$의 진부분공간이다. 한편 $\mathbb{K}$가 무한체이므로 벡터공간 $S_1$은 유한 개의 진부분공간의 합집합이 될 수 없다. 실제로 그러한 덮개가 존재한다면 덮개가 최소인 것을 택하고 첫 번째 부분공간에만 속하는 $u$와 그 부분공간에 속하지 않는 $v$를 잡으면, 무한히 많은 $v+\lambda u$ 가운데 어느 것도 첫 번째 부분공간에 속하지 않으므로 그 중 둘이 같은 다른 부분공간에 들어가고, 그 차가 $u$의 배수이므로 $u$가 그 부분공간에 속하게 되어 모순이다. 따라서 어떠한 $\mathfrak{p}_k$에도 속하지 않는 $\ell\in S_1$이 존재한다.
 
 곱하기 $\ell$은 morphism $\mathcal{F}(-1) \rightarrow \mathcal{F}$을 주며, chart $D_+(\x_j)$ 위에서 이는 $M_j$ 위의 $\ell/\x_j$ 배이다. $\ell/\x_j$는 $M_j$의 어떠한 associated prime에도 속하지 않으므로 $M_j$의 zerodivisor가 아니고 ([\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 2번), 따라서 이 morphism은 injective이다. 그 cokernel을 $\mathcal{F}''$이라 하면 각각의 $d$에 대해 short exact sequence
 

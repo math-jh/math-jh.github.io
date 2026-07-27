@@ -16,7 +16,7 @@ published: false
 
 최고 무게 정리는 유한차원 기약 representation이 정확히 dominant integral weight $\lambda$에 대한 $L(\lambda)$들로 분류됨을 확립하였고, 이로써 표현론의 모든 질문은 각 $L(\lambda)$의 weight 구조, 곧 어떤 weight $\mu$가 어떤 multiplicity로 나타나는지를 계산하는 문제로 환원되었다 ([§최고 무게 가군, ⁋정리 12](/ko/math/lie_theory/highest_weight_modules#thm12)). $\sl_2$에서 이 정보는 단순하였다. Highest weight $m$의 기약 representation은 $m, m-2, \ldots, -m$의 weight를 각각 중복도 $1$로 가졌다 ([§sl₂의 표현론, ⁋정의 5](/ko/math/lie_theory/representations_of_sl2#def5)). 그러나 rank가 큰 semisimple Lie algebra에서는 weight 중복도가 더 이상 자명하지 않으며, 이를 닫힌 형태로 주는 것이 Weyl character 공식이다.
 
-이 글에서 우리는 representation $V$의 모든 weight 중복도를 한꺼번에 담는 *형식 지표*를 weight lattice의 group ring 안의 원소로 정의하고, Verma module $M(\mu)$의 formal character가 $e^\mu/\prod_{\alpha>0}(1-e^{-\alpha})$라는 명료한 닫힌 형태를 가짐을 본다. 그런 뒤 Casimir 원소가 정하는 central character를 이용하여 $\mathrm{ch}\,L(\lambda)$를 Verma module character들의 교대합으로 풀고, 이를 정리하면 dominant integral $\lambda$에 대하여
+이 글에서 우리는 representation $V$의 모든 weight 중복도를 한꺼번에 담는 *formal character*를 weight lattice의 group ring 안의 원소로 정의하고, Verma module $M(\mu)$의 formal character가 $e^\mu/\prod_{\alpha>0}(1-e^{-\alpha})$라는 명료한 닫힌 형태를 가짐을 본다. 그런 뒤 Casimir 원소가 정하는 central character를 이용하여 $\mathrm{ch}\,L(\lambda)$를 Verma module character들의 교대합으로 풀고, 이를 정리하면 dominant integral $\lambda$에 대하여
 
 $$\mathrm{ch}\,L(\lambda)=\frac{\sum_{w\in W}(-1)^{\ell(w)}e^{w(\lambda+\rho)}}{\sum_{w\in W}(-1)^{\ell(w)}e^{w\rho}}$$
 
@@ -31,7 +31,7 @@ $$P=\{\lambda\in\mathfrak{h}^\ast\mid\lambda(h_i)\in\mathbb{Z}\ \text{ for all s
 은 $\mathfrak{h}^\ast$ 안의 lattice를 이룬다. 유한차원 representation의 모든 weight는 각 $\sl_{2,\alpha_i}$-방향에서 정수 고윳값을 가지므로 ([§최고 무게 가군, ⁋정리 12](/ko/math/lie_theory/highest_weight_modules#thm12)의 증명) $P$ 안에 놓이고, 따라서 $P$가 formal character의 자연스러운 무대가 된다. 이 lattice 위에 group ring을 얹는다.
 
 ::: 정의 1
-Weight lattice $P$의 *group ring<sub>군환</sub>* $\mathbb{Z}[P]$는 형식기호 $\{e^\mu\mid\mu\in P\}$를 $\mathbb{Z}$-basis로 갖는 자유가군이며, 곱셈을
+Weight lattice $P$의 *group ring<sub>군환</sub>* $\mathbb{Z}[P]$는 형식기호 $\{e^\mu\mid\mu\in P\}$를 $\mathbb{Z}$-basis로 갖는 free module이며, 곱셈을
 
 $$e^\mu\cdot e^\nu=e^{\mu+\nu},\qquad e^0=1$$
 
@@ -64,11 +64,11 @@ $$\varepsilon(\mathrm{ch}\,V)=\sum_\mu\dim V_\mu=\dim V$$
 $\mathbb{Z}[P]$의 *completion<sub>완비화</sub>* $\widehat{\mathbb{Z}[P]}$는 유한 개의 weight $\lambda_1,\ldots,\lambda_r$이 존재하여 그 support가 $\bigcup_i(\lambda_i-Q^+)$ 안에 들어가는 형식합 $\sum_\mu c_\mu e^\mu$들의 집합이다. 여기에서 $Q^+=\sum_{\alpha\in\Phi^+}\mathbb{Z}_{\geq 0}\,\alpha$는 positive root들의 음이 아닌 정수 결합으로 이루어진 cone이다.
 :::
 
-이 support 조건 아래에서는 곱셈 $\bigl(\sum_\mu c_\mu e^\mu\bigr)\bigl(\sum_\nu d_\nu e^\nu\bigr)=\sum_\xi\bigl(\sum_{\mu+\nu=\xi}c_\mu d_\nu\bigr)e^\xi$의 각 계수가 유한합으로 잘 정의되므로 $\widehat{\mathbb{Z}[P]}$는 가환환이 되고 $\mathbb{Z}[P]$를 subring으로 포함한다. Weight가 highest weight $\mu$에서 positive root들을 빼서만 얻어지는 highest weight 가군의 formal character는 정확히 이 ring 안에서 닫힌 형태를 갖는다.
+이 support 조건 아래에서는 곱셈 $\bigl(\sum_\mu c_\mu e^\mu\bigr)\bigl(\sum_\nu d_\nu e^\nu\bigr)=\sum_\xi\bigl(\sum_{\mu+\nu=\xi}c_\mu d_\nu\bigr)e^\xi$의 각 계수가 유한합으로 잘 정의되므로 $\widehat{\mathbb{Z}[P]}$는 가환환이 되고 $\mathbb{Z}[P]$를 subring으로 포함한다. Weight가 highest weight $\mu$에서 positive root들을 빼서만 얻어지는 highest weight module의 formal character는 정확히 이 ring 안에서 닫힌 형태를 갖는다.
 
 ## Verma module의 형식 지표
 
-기약 representation의 character를 직접 다루기는 어렵지만, 그것을 덮는 Verma module $M(\mu)$의 character는 PBW basis가 곧장 닫힌 형태로 내어준다. Verma module은 $U(\mathfrak{n}^-)$ 위의 자유가군이고 그 weight들이 $\mu$에서 positive root들을 빼서 얻어지므로 ([§최고 무게 가군, ⁋명제 7](/ko/math/lie_theory/highest_weight_modules#prop7)), 각 weight space의 차원은 순수한 조합론적 양이 된다.
+기약 representation의 character를 직접 다루기는 어렵지만, 그것을 덮는 Verma module $M(\mu)$의 character는 PBW basis가 곧장 닫힌 형태로 내어준다. Verma module은 $U(\mathfrak{n}^-)$ 위의 free module이고 그 weight들이 $\mu$에서 positive root들을 빼서 얻어지므로 ([§최고 무게 가군, ⁋명제 7](/ko/math/lie_theory/highest_weight_modules#prop7)), 각 weight space의 차원은 순수한 조합론적 양이 된다.
 
 ::: 정의 4
 음이 아닌 정수에 값을 갖는 함수 $\mathcal{P}:Q^+\rightarrow\mathbb{Z}_{\geq 0}$을, $\nu\in Q^+$를 positive root들의 합 $\nu=\sum_{\alpha\in\Phi^+}k_\alpha\alpha$ ($k_\alpha\in\mathbb{Z}_{\geq 0}$)로 나타내는 방법의 수로 정의하고 이를 *Kostant partition function<sub>코스탄트 분할 함수</sub>*이라 부른다. $\nu\notin Q^+$이면 $\mathcal{P}(\nu)=0$으로 둔다.
@@ -144,13 +144,13 @@ $$s_i\Delta=\prod_{\alpha\in\Phi^+}\bigl(e^{s_i\alpha/2}-e^{-s_i\alpha/2}\bigr)$
 
 ## Weyl 지표 공식
 
-이제 기약 representation의 character를 Verma module character들로 표현한다. 발상은 두 가지 사실을 결합하는 것이다. 첫째, 임의의 highest weight 가군은 Jordan–Hölder 인자가 모두 기약 highest weight 가군 $L(\nu)$들이므로, formal character의 수준에서 $\mathrm{ch}\,M(\mu)=\sum_\nu[M(\mu):L(\nu)]\,\mathrm{ch}\,L(\nu)$이고, 이 관계는 $\mathrm{ch}\,L(\lambda)$를 $\mathrm{ch}\,M(\mu)$들의 정수계수 결합으로 거꾸로 푸는 것을 허용한다. 둘째, 그 결합에 어떤 $M(\mu)$가 실제로 들어올 수 있는지를 Casimir 원소의 central character가 강하게 제약한다.
+이제 기약 representation의 character를 Verma module character들로 표현한다. 발상은 두 가지 사실을 결합하는 것이다. 첫째, 임의의 highest weight module은 Jordan–Hölder 인자가 모두 기약 highest weight module $L(\nu)$들이므로, formal character의 수준에서 $\mathrm{ch}\,M(\mu)=\sum_\nu[M(\mu):L(\nu)]\,\mathrm{ch}\,L(\nu)$이고, 이 관계는 $\mathrm{ch}\,L(\lambda)$를 $\mathrm{ch}\,M(\mu)$들의 정수계수 결합으로 거꾸로 푸는 것을 허용한다. 둘째, 그 결합에 어떤 $M(\mu)$가 실제로 들어올 수 있는지를 Casimir 원소의 central character가 강하게 제약한다.
 
 ::: 명제 8
 $\mathfrak{g}$의 Casimir 원소 $\Omega\in U(\mathfrak{g})$는 Verma module $M(\mu)$ 위에서 스칼라 $\langle\mu+\rho,\mu+\rho\rangle-\langle\rho,\rho\rangle$로 작용한다. 여기에서 $\langle-,-\rangle$은 Killing form이 $\mathfrak{h}^\ast$ 위에 유도하는 $W$-불변 내적이다. 특히 두 weight $\mu,\mu'$에 대하여 $M(\mu)$와 $M(\mu')$ 위의 $\Omega$의 고윳값이 같을 필요충분조건은 $\mu'+\rho$가 $\mu+\rho$의 Weyl group orbit 위에 놓이는 것이다.
 :::
 ::: 증명
-$\Omega$는 $U(\mathfrak{g})$의 중심에 속하므로 ($\sl_2$의 경우가 [§보편 포락 대수, ⁋예시 12](/ko/math/lie_theory/universal_enveloping_algebra#ex12)) 각 weight space를 보존하며 highest weight 가군 위에서는 스칼라로 작용한다. $\Omega$를 삼각 분해 $\mathfrak{g}=\mathfrak{n}^-\oplus\mathfrak{h}\oplus\mathfrak{n}^+$에 맞춰 정렬하면
+$\Omega$는 $U(\mathfrak{g})$의 중심에 속하므로 ($\sl_2$의 경우가 [§보편 포락 대수, ⁋예시 12](/ko/math/lie_theory/universal_enveloping_algebra#ex12)) 각 weight space를 보존하며 highest weight module 위에서는 스칼라로 작용한다. $\Omega$를 삼각 분해 $\mathfrak{g}=\mathfrak{n}^-\oplus\mathfrak{h}\oplus\mathfrak{n}^+$에 맞춰 정렬하면
 
 $$\Omega=\sum_i H_i^2+\text{(lower terms)}+2\sum_{\alpha\in\Phi^+}f_\alpha e_\alpha+(\mathfrak{h}\text{-part})$$
 
@@ -169,7 +169,7 @@ $$\mathrm{ch}\,L(\lambda)=\frac{\sum_{w\in W}(-1)^{\ell(w)}\,e^{w(\lambda+\rho)}
 이다.
 :::
 ::: 증명
-$M(\lambda)$는 유한 길이의 가군이고 그 모든 composition factor는 highest weight $\nu\leq\lambda$인 기약 가군 $L(\nu)$이며 $L(\lambda)$가 중복도 $1$로 한 번 나타난다 ([§최고 무게 가군, ⁋명제 8](/ko/math/lie_theory/highest_weight_modules#prop8)). Formal character는 short exact sequence에 대해 가법적이므로
+$M(\lambda)$는 유한 길이의 module이고 그 모든 composition factor는 highest weight $\nu\leq\lambda$인 기약 module $L(\nu)$이며 $L(\lambda)$가 중복도 $1$로 한 번 나타난다 ([§최고 무게 가군, ⁋명제 8](/ko/math/lie_theory/highest_weight_modules#prop8)). Formal character는 short exact sequence에 대해 가법적이므로
 
 $$\mathrm{ch}\,M(\lambda)=\mathrm{ch}\,L(\lambda)+\sum_{\nu<\lambda}[M(\lambda):L(\nu)]\,\mathrm{ch}\,L(\nu)\tag{$\ast$}$$
 

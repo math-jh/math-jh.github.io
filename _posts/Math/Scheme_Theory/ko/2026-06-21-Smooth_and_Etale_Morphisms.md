@@ -31,7 +31,7 @@ $$\Omega_{X/S}=0$$
 인 것이다.
 :::
 
-이 정의는 affine 위에서 곧바로 계산된다. $S=\Spec A$, $X=\Spec B$이면 $\Omega_{X/S}=\widetilde{\Omega_{B/A}}$이므로 ([§Kähler 미분과 여접층, ⁋명제 4](/ko/math/scheme_theory/sheaf_of_differentials#prop4)), $f$가 unramified한 것은 Kähler 미분 가군 $\Omega_{B/A}$가 영인 것과 동치이다. 가령 field 확대 $K \subseteq L$이 separable algebraic이면 $\Omega_{L/K}=0$이고, 따라서 $\Spec L \rightarrow \Spec K$는 unramified하다. 반대로 characteristic $p$에서 $L=K(t^{1/p})$와 같은 inseparable 확대는 $\Omega_{L/K}\neq 0$을 주어 unramified하지 않다.
+이 정의는 affine 위에서 곧바로 계산된다. $S=\Spec A$, $X=\Spec B$이면 $\Omega_{X/S}=\widetilde{\Omega_{B/A}}$이므로 ([§Kähler 미분과 여접층, ⁋명제 4](/ko/math/scheme_theory/sheaf_of_differentials#prop4)), $f$가 unramified한 것은 Kähler 미분 module $\Omega_{B/A}$가 영인 것과 동치이다. 가령 field 확대 $K \subseteq L$이 separable algebraic이면 $\Omega_{L/K}=0$이고, 따라서 $\Spec L \rightarrow \Spec K$는 unramified하다. 반대로 characteristic $p$에서 $L=K(t^{1/p})$와 같은 inseparable 확대는 $\Omega_{L/K}\neq 0$을 주어 unramified하지 않다.
 
 Unramified 조건은 대각선 morphism을 통해 좌표 독립적으로 표현된다. Cotangent sheaf 자체가 대각선의 conormal로 정의되므로, 그 소멸은 대각선이 열린 부분scheme이 되는 것과 직접 연결된다.
 
@@ -89,7 +89,7 @@ $$\dim_{\kappa(\bar x)}\bigl(\Omega_{X_{\bar s}/k}\otimes \kappa(\bar x)\bigr)=\
 
 이다. 이는 정확히 regular local ring의 cotangent space $\mathfrak{m}/\mathfrak{m}^2$이 차원만큼의 dimension을 가진다는 사실이다. ([\[가환대수학\] §정칙국소환](/ko/math/commutative_algebra/regular_local_rings)의 regular local ring은 그 정의상 $\mathfrak{m}$이 $\dim$개의 원소로 생성되며, 이는 $\dim\mathfrak{m}/\mathfrak{m}^2=\dim$과 동치이다.) Cotangent sheaf는 base change와 commute하므로 $\Omega_{X_{\bar s}/k}=\Omega_{X/S}\otimes_S k$이고, 따라서 $\Omega_{X/S}\otimes \kappa(\bar x)$의 차원이 fiber 차원과 같다.
 
-이제 flatness와 결합한다. $f$가 flat이고 fiber 위에서 $\Omega$의 fiber 차원이 일정하므로, 유한표시 가군에 대한 국소자유성 판정에 의하여 $\Omega_{X/S}$는 $\mathfrak{p}$ 근방에서 그 차원만큼의 rank를 가지는 locally free sheaf이다. 구체적으로 $\Omega_{B/A}$는 finitely presented $B$-가군이고, $f$가 flat이고 모든 fiber에서 $\dim_{\kappa(x)}\Omega_{B/A}\otimes\kappa(x)$가 일정하므로 $\Omega_{B/A}$는 projective module, 곧 국소자유이다 (유한표시·flat module의 fiber rank가 국소상수이면 국소자유, Stacks 00NX). 그 rank가 fiber 차원과 같음은 위 계산에서 따른다.
+이제 flatness와 결합한다. $f$가 flat이고 fiber 위에서 $\Omega$의 fiber 차원이 일정하므로, 유한표시 module에 대한 국소자유성 판정에 의하여 $\Omega_{X/S}$는 $\mathfrak{p}$ 근방에서 그 차원만큼의 rank를 가지는 locally free sheaf이다. 구체적으로 $\Omega_{B/A}$는 finitely presented $B$-module이고, $f$가 flat이고 모든 fiber에서 $\dim_{\kappa(x)}\Omega_{B/A}\otimes\kappa(x)$가 일정하므로 $\Omega_{B/A}$는 projective module, 곧 국소자유이다 (유한표시·flat module의 fiber rank가 국소상수이면 국소자유, Stacks 00NX). 그 rank가 fiber 차원과 같음은 위 계산에서 따른다.
 
 역으로 두 번째 조건을 가정하자. $\Omega_{X/S}$가 국소자유이고 그 rank가 fiber 차원과 같으면, 각 geometric fiber $X_{\bar s}$ 위에서 $\Omega_{X_{\bar s}/k}$도 국소자유이며 그 rank가 fiber의 차원과 일치한다. 이는 $X_{\bar s}$의 모든 점에서 Zariski tangent space 차원이 국소차원과 같다는 것이고, $X_{\bar s}$가 finite type over a field이므로 그 점은 regular이다. (algebraically closed field 위에서 tangent space 차원과 국소차원이 일치하면 그 local ring은 regular이다.) 따라서 geometric fiber가 regular이고, 가정에 의해 $f$가 flat이므로 $f$는 smooth하다.
 :::
@@ -114,13 +114,13 @@ $B=A[\x_1,\ldots, \x_n]/(f_1,\ldots, f_r)$, $P=A[\x_1,\ldots, \x_n]$이라 하�
 
 $$\mathfrak{a}/\mathfrak{a}^2 \overset{\bar d}{\longrightarrow} \Omega_{P/A}\otimes_PB \longrightarrow \Omega_{B/A} \longrightarrow 0$$
 
-이며, $\Omega_{P/A}\otimes_PB$는 $d\x_1,\ldots, d\x_n$을 기저로 하는 rank $n$의 자유 $B$-가군이다. ([§Kähler 미분과 여접층, ⁋명제 7](/ko/math/scheme_theory/sheaf_of_differentials#prop7)) morphism $\bar d$는 $f_i+\mathfrak{a}^2\mapsto df_i=\sum_j(\partial f_i/\partial \x_j)d\x_j$로 주어진다. 한편 $\mathfrak{a}$가 $f_1,\ldots, f_r$로 생성되므로 $e_i\mapsto f_i+\mathfrak{a}^2$은 전사사상 $\varphi:B^{\oplus r} \rightarrow \mathfrak{a}/\mathfrak{a}^2$을 정의하며, 합성 $\bar d\circ\varphi$를 $e_i$와 $d\x_j$ 기저에 대하여 표현한 행렬이 정확히 Jacobian $J$의 transpose이다.
+이며, $\Omega_{P/A}\otimes_PB$는 $d\x_1,\ldots, d\x_n$을 기저로 하는 rank $n$의 자유 $B$-module이다. ([§Kähler 미분과 여접층, ⁋명제 7](/ko/math/scheme_theory/sheaf_of_differentials#prop7)) morphism $\bar d$는 $f_i+\mathfrak{a}^2\mapsto df_i=\sum_j(\partial f_i/\partial \x_j)d\x_j$로 주어진다. 한편 $\mathfrak{a}$가 $f_1,\ldots, f_r$로 생성되므로 $e_i\mapsto f_i+\mathfrak{a}^2$은 전사사상 $\varphi:B^{\oplus r} \rightarrow \mathfrak{a}/\mathfrak{a}^2$을 정의하며, 합성 $\bar d\circ\varphi$를 $e_i$와 $d\x_j$ 기저에 대하여 표현한 행렬이 정확히 Jacobian $J$의 transpose이다.
 
 $x$에서 $J$의 rank가 $r$이면 $(\bar d\circ\varphi)\otimes\kappa(x)$의 rank가 $r$이므로 $\varphi\otimes\kappa(x)$는 단사이고, 전사이기도 하므로 동형이다. 따라서 $\bar d\otimes\kappa(x)$ 또한 단사이며 그 image는 $\kappa(x)^{\oplus n}$의 $r$차원 부분공간이다. 그럼 conormal exact sequence를 $\kappa(x)$로 텐서한
 
 $$\mathfrak{a}/\mathfrak{a}^2\otimes\kappa(x) \overset{\bar d\otimes\kappa(x)}{\longrightarrow} \kappa(x)^{\oplus n} \longrightarrow \Omega_{B/A}\otimes\kappa(x) \longrightarrow 0$$
 
-에서 $\dim_{\kappa(x)}\Omega_{B/A}\otimes\kappa(x)=n-r$이다. 한편 $J$의 어떤 $r\times r$ 소행렬식 $g$가 $x$에서 영이 아니므로, $B_g$ 위에서는 그 소행렬식에 해당하는 부분행렬이 가역이 되어 $\bar d\circ\varphi$가 split injection이다. 특히 $\varphi$는 $D(g)$ 위에서 단사이고 이미 전사였으므로 동형이며, 따라서 $\mathfrak{a}/\mathfrak{a}^2$은 $D(g)$ 위에서 rank $r$의 자유 가군이고 $\bar d$는 자유 가군 사이의 split injection이다. 그럼 그 cokernel $\Omega_{B/A}$는 $B_g^{\oplus n}$의 direct summand이므로 $D(g)$ 위에서 rank $n-r$의 국소자유이다.
+에서 $\dim_{\kappa(x)}\Omega_{B/A}\otimes\kappa(x)=n-r$이다. 한편 $J$의 어떤 $r\times r$ 소행렬식 $g$가 $x$에서 영이 아니므로, $B_g$ 위에서는 그 소행렬식에 해당하는 부분행렬이 가역이 되어 $\bar d\circ\varphi$가 split injection이다. 특히 $\varphi$는 $D(g)$ 위에서 단사이고 이미 전사였으므로 동형이며, 따라서 $\mathfrak{a}/\mathfrak{a}^2$은 $D(g)$ 위에서 rank $r$의 자유 module이고 $\bar d$는 자유 module 사이의 split injection이다. 그럼 그 cokernel $\Omega_{B/A}$는 $B_g^{\oplus n}$의 direct summand이므로 $D(g)$ 위에서 rank $n-r$의 국소자유이다.
 
 남은 것은 $D(g)$ 위에서 $f$가 flat이라는 사실이다. 이 단계에서만 base에 Noetherian 조건이 필요하므로 먼저 이를 확보한다. $f_1,\ldots, f_r$의 계수들이 $A$ 안에서 생성하는 $\mathbb{Z}$-subalgebra를 $A_0$이라 하면 $A_0$은 Noetherian이고 ([\[가환대수학\] §기본 개념들, ⁋정리 12](/ko/math/commutative_algebra/basic_notions#thm12)), $B_0=A_0[\x_1,\ldots, \x_n]/(f_1,\ldots, f_r)$로 두면 $B=B_0\otimes_{A_0}A$이다. $\Spec B \rightarrow \Spec B_0$에 의한 $x$의 image를 $x_0$이라 하면 $\kappa(x_0)\subseteq \kappa(x)$이고 $J$의 $x$에서의 성분들은 $x_0$에서의 성분들의 image이므로, 행렬의 rank는 field 확대를 거쳐도 변하지 않아 $x_0$에서도 $J$의 rank는 $r$이다. Flatness는 base change에 대하여 보존되므로 ([§평탄사상, ⁋명제 3](/ko/math/scheme_theory/flat_morphisms#prop3)) $\Spec B_0 \rightarrow \Spec A_0$이 $x_0$의 어떤 열린근방 위에서 flat이면 그 preimage 위에서 $f$가 flat이고, 따라서 처음부터 $A$가 Noetherian이라 가정하여도 좋다.
 
@@ -166,7 +166,7 @@ $$B=\bigl(A[t]/(f)\bigr)_g$$
 의 꼴이고 monic 다항식 $f\in A[t]$와 $g\in A[t]/(f)$에 대하여 도함수 $f'$의 image가 $B$에서 가역일 때, $\Spec B \rightarrow \Spec A$를 *standard étale<sub>표준 에탈</sub>* morphism이라 부른다.
 :::
 
-여기서 $A[t]/(f)$는 monic $f$로 인하여 $A$ 위에서 자유 가군, 따라서 flat하고, localization $(\cdot)_g$ 역시 flat하므로 $B$는 $A$ 위에서 flat하다. 한편 conormal exact sequence에서 $\Omega_{(A[t]/(f))/A}\cong (A[t]/(f))/(f')$이고 $f'$를 가역으로 만드는 localization에서 이 가군이 소멸하므로 $\Omega_{B/A}=0$이다. 따라서 standard étale morphism은 실제로 étale하며, 핵심 조건인 $f'$의 가역성은 정확히 $f=0$이 중근을 가지지 않는다는 분리가능성의 대수적 표현이다. Étale morphism은 국소적으로 항상 이 standard 형태를 가진다는 구조 정리가 성립하지만, 그 증명은 본 글의 범위를 넘는다.
+여기서 $A[t]/(f)$는 monic $f$로 인하여 $A$ 위에서 자유 module, 따라서 flat하고, localization $(\cdot)_g$ 역시 flat하므로 $B$는 $A$ 위에서 flat하다. 한편 conormal exact sequence에서 $\Omega_{(A[t]/(f))/A}\cong (A[t]/(f))/(f')$이고 $f'$를 가역으로 만드는 localization에서 이 module이 소멸하므로 $\Omega_{B/A}=0$이다. 따라서 standard étale morphism은 실제로 étale하며, 핵심 조건인 $f'$의 가역성은 정확히 $f=0$이 중근을 가지지 않는다는 분리가능성의 대수적 표현이다. Étale morphism은 국소적으로 항상 이 standard 형태를 가진다는 구조 정리가 성립하지만, 그 증명은 본 글의 범위를 넘는다.
 
 ::: 예시 9
 Separable algebraic field 확대 $K \subseteq L$에 대하여 $\Spec L \rightarrow \Spec K$는 étale하다. 실제로 primitive element 정리에 의하여 $L=K[t]/(f)$이고 $f$가 separable이므로 $f'$가 $L$에서 가역이다. 따라서 이는 standard étale morphism이며, fiber가 한 점인 covering의 가장 단순한 예이다. 반면 inseparable 확대 $\mathbb{F}_p(t^{1/p}) \supseteq \mathbb{F}_p(t)$는 $\Omega\neq 0$이므로 unramified하지 않고, étale하지도 않다.
@@ -181,7 +181,7 @@ $$[n]:\mathbb{G}_m \longrightarrow \mathbb{G}_m,\qquad t\longmapsto t^n$$
 
 $$\Omega_{\mathbb{G}_m/\mathbb{G}_m}\cong k[t, t^{-1}]/(nt^{n-1})$$
 
-이다. $t$가 가역이므로 이 가군은 $k[t, t^{-1}]/(n)$과 같다. 따라서 $\operatorname{char}k\nmid n$이면 $n$이 가역이어서 $\Omega=0$이고, $[n]$은 flat하므로 ($k[t,t^{-1}]$이 $s\mapsto t^n$ 아래 자유 가군이다) étale하다. 반면 $\operatorname{char}k=p$가 $n$을 나누면 $\Omega\neq 0$이 되어 $[n]$은 unramified하지 않고, $p$에서 ramification이 일어난다. 이는 characteristic $p$에서 Frobenius가 분기를 일으키는 현상의 가장 단순한 사례이다.
+이다. $t$가 가역이므로 이 module은 $k[t, t^{-1}]/(n)$과 같다. 따라서 $\operatorname{char}k\nmid n$이면 $n$이 가역이어서 $\Omega=0$이고, $[n]$은 flat하므로 ($k[t,t^{-1}]$이 $s\mapsto t^n$ 아래 자유 module이다) étale하다. 반면 $\operatorname{char}k=p$가 $n$을 나누면 $\Omega\neq 0$이 되어 $[n]$은 unramified하지 않고, $p$에서 ramification이 일어난다. 이는 characteristic $p$에서 Frobenius가 분기를 일으키는 현상의 가장 단순한 사례이다.
 :::
 
 위 두 예시는 étale morphism이 "분기 없는 covering"이라는 직관을 구체화한다. Separable 확대와 characteristic을 나누지 않는 거듭제곱 morphism은 fiber가 분기 없이 균일하게 갈라지는 반면, inseparable 확대나 characteristic을 나누는 거듭제곱에서는 fiber가 무너지며 unramified 조건이 깨진다.

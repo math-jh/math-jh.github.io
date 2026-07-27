@@ -138,7 +138,7 @@ $$g^{-1} Rf_! = g^{-1} Rp_\ast j_! \cong Rp'_\ast (g'')^{-1} j_! \cong Rp'_\ast 
 
 Stalk 공식 $(Rf_! \mathcal{F})_y \cong R\Gamma_c(f^{-1}(y), \mathcal{F}\vert)$은 고유 받음의 본질을 가장 직접적으로 드러낸다. 통상적 받음의 stalk가 작은 근방 위의 cohomology의 colimit이었던 데 반해, 고유 받음의 stalk는 fiber 위의 compactly supported cohomology 그 자체이며 근방으로 새어 나가는 정보가 없다. Base change 동형은 이 fiber별 묘사가 fiber product 아래에서 fiber가 보존된다는 위상적 사실의 직접적 귀결일 뿐이다. 이 점에서 $Rf_!$은 $Rf_\ast$보다 기하학적으로 다루기 쉽다.
 
-다음으로 고유 받음과 tensor product 사이의 호환을 진술하는 projection formula를 본다. 이는 $Rf_!$이 $Y$ 위의 대상에 의한 tensor를 "통과시킨다"는 것으로, $Rf_!$이 $D(\Sh(Y))$-가군 functor임을 표현한다.
+다음으로 고유 받음과 tensor product 사이의 호환을 진술하는 projection formula를 본다. 이는 $Rf_!$이 $Y$ 위의 대상에 의한 tensor를 "통과시킨다"는 것으로, $Rf_!$이 $D(\Sh(Y))$-module functor임을 표현한다.
 
 ::: 정리 9 (projection formula)
 Compactifiable map $f: X \rightarrow Y$와 $\mathcal{F}^\bullet \in D(\Sh(X))$, $\mathcal{G}^\bullet \in D(\Sh(Y))$에 대해 자연스러운 동형

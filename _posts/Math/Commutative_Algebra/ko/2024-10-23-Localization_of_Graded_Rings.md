@@ -24,7 +24,7 @@ $$M(n)_k=M_{n+k}\qquad\text{for all $k$}$$
 우선 임의의 ring $A$와 $A$의 두 ideal $\mathfrak{a}, \mathfrak{b}$에 대하여, ideal quotient의 정의를 기억하자. ([§기본 개념들, §§기본 정의들](/ko/math/commutative_algebra/basic_notions#기본-정의들))
 
 ::: 정의 1
-Ring $A$와 $A$의 두 ideal $\mathfrak{a}, \mathfrak{b}$에 대하여, *ideal quotient<sub>몫아이디얼</sub>*을 다음의 식
+Ring $A$와 $A$의 두 ideal $\mathfrak{a}, \mathfrak{b}$에 대하여, *ideal quotient<sub>몫아이디얼</sub>*를 다음의 식
 
 $$(\mathfrak{a}:\mathfrak{b})=\{a\in A\mid a \mathfrak{b}\subseteq \mathfrak{a}\}$$
 

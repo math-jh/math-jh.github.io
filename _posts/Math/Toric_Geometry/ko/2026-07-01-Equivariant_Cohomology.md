@@ -71,7 +71,7 @@ $$\mathrm{pt}_G=EG\times_G\mathrm{pt}=EG/G=BG$$
 (3) $EG$의 한 점 $e_0$을 고정하면, 그 image $b_0=[e_0]\in BG$ 위의 fiber는 $\pi^{-1}(b_0)=\{[e_0,x]\mid x\in X\}$이고, $x\mapsto[e_0,x]$가 $X$와 이 fiber 사이의 위상동형을 준다. 이 포함 $\iota:X\hookrightarrow X_G$의 pullback $\iota^\ast:H_G^\bullet(X)\rightarrow H^\bullet(X)$이 restriction이다. $EG$가 path-connected이므로 $e_0$의 선택을 바꾸어도 $\iota$의 homotopy class, 따라서 $\iota^\ast$는 변하지 않는다.
 :::
 
-성질 (2)는 equivariant cohomology가 단순한 $R$-가군이 아니라 항상 $H^\bullet(BG)$ 위의 algebra라는, 이 이론의 가장 중요한 구조적 특징을 말한다. 이 base ring $H^\bullet(BG)=H_G^\bullet(\mathrm{pt})$이 작용의 정보를 담는 좌표 역할을 하며, 이후 torus의 경우 이것이 character lattice 위의 다항식환으로 구체화된다. 성질 (3)의 restriction $\iota^\ast$은 작용을 잊고 보통의 cohomology로 내려가는 morphism이며, $H^\bullet(BG)$의 양의 degree 부분을 $0$으로 보내는 augmentation과 호환된다.
+성질 (2)는 equivariant cohomology가 단순한 $R$-module이 아니라 항상 $H^\bullet(BG)$ 위의 algebra라는, 이 이론의 가장 중요한 구조적 특징을 말한다. 이 base ring $H^\bullet(BG)=H_G^\bullet(\mathrm{pt})$이 작용의 정보를 담는 좌표 역할을 하며, 이후 torus의 경우 이것이 character lattice 위의 다항식환으로 구체화된다. 성질 (3)의 restriction $\iota^\ast$은 작용을 잊고 보통의 cohomology로 내려가는 morphism이며, $H^\bullet(BG)$의 양의 degree 부분을 $0$으로 보내는 augmentation과 호환된다.
 
 작용이 free일 때 equivariant cohomology가 orbit space의 cohomology로 환원된다는, 도입부에서 요구한 성질을 이제 증명한다.
 
@@ -122,7 +122,7 @@ $H^\bullet(BT;\mathbb{Z})=\mathbb{Z}[t_1,\ldots,t_n]$이며 degree $2$ 부분 $H
 뒤따르는 두 계산은 모두 projective space를 fiber로 갖는 bundle의 cohomology를 구하는 일로 환원된다. 이를 위해 vector bundle의 projectivization에 대한 표준적인 결과를 line bundle들의 직합인 경우에 한해 정리해 둔다.
 
 ::: 명제 5 (projective bundle 정리)
-Paracompact 공간 $B$ 위의 복소 line bundle들 $L_1,\ldots,L_r$과 그 직합 $E=L_1\oplus\cdots\oplus L_r$에 대하여, fiberwise 일차원 부분공간들의 공간 $\mathbb{P}(E)\xrightarrow{\pi}B$를 생각하자. Tautological subbundle $\mathcal{O}_{\mathbb{P}(E)}(-1)\subseteq\pi^\ast E$의 first Chern class를 $h=c_1(\mathcal{O}_{\mathbb{P}(E)}(-1))$라 하면, $H^\bullet(\mathbb{P}(E))$은 $1,h,\ldots,h^{r-1}$을 기저로 갖는 free $H^\bullet(B)$-가군이며 단 하나의 관계식
+Paracompact 공간 $B$ 위의 복소 line bundle들 $L_1,\ldots,L_r$과 그 직합 $E=L_1\oplus\cdots\oplus L_r$에 대하여, fiberwise 일차원 부분공간들의 공간 $\mathbb{P}(E)\xrightarrow{\pi}B$를 생각하자. Tautological subbundle $\mathcal{O}_{\mathbb{P}(E)}(-1)\subseteq\pi^\ast E$의 first Chern class를 $h=c_1(\mathcal{O}_{\mathbb{P}(E)}(-1))$라 하면, $H^\bullet(\mathbb{P}(E))$은 $1,h,\ldots,h^{r-1}$을 기저로 갖는 free $H^\bullet(B)$-module이며 단 하나의 관계식
 
 $$\prod_{i=1}^r\big(h-\pi^\ast c_1(L_i)\big)=0$$
 
@@ -156,9 +156,9 @@ $$S^2_{S^1}=ES^1\times_{S^1}\mathbb{P}(\mathbb{C}_0\oplus\mathbb{C}_1)=\mathbb{P
 
 $$H_{S^1}^\bullet(S^2)=\mathbb{Z}[t][h]\big/\big((h-0)(h-t)\big)=\mathbb{Z}[t][h]/(h^2-th)$$
 
-이고, 이는 $\{1,h\}$를 기저로 갖는 free $\mathbb{Z}[t]$-가군이다 ($\lvert t\rvert=\lvert h\rvert=2$).
+이고, 이는 $\{1,h\}$를 기저로 갖는 free $\mathbb{Z}[t]$-module이다 ($\lvert t\rvert=\lvert h\rvert=2$).
 
-이 결과를 naive quotient와 대조하자. 앞서 보았듯 $S^2/S^1\cong[-1,1]$은 contractible이므로 $H^\bullet(S^2/S^1)=\mathbb{Z}$로 $0$차에만 남는다. 반면 $H_{S^1}^\bullet(S^2)$은 rank $2$의 free $\mathbb{Z}[t]$-가군으로, $S^2$의 위상을 ($2$라는 rank가 $H^\bullet(S^2)$의 차원과 같다는 점에서) 그리고 회전 작용을 (관계식 $h^2-th$에 나타나는 두 fixed point의 weight $0,1$을 통해) 모두 기억한다. 실제로 restriction $\iota^\ast:H_{S^1}^\bullet(S^2)\rightarrow H^\bullet(S^2)$은 $t=0$을 대입하는 것에 해당하여 ([명제 2](#prop2)의 (3))
+이 결과를 naive quotient와 대조하자. 앞서 보았듯 $S^2/S^1\cong[-1,1]$은 contractible이므로 $H^\bullet(S^2/S^1)=\mathbb{Z}$로 $0$차에만 남는다. 반면 $H_{S^1}^\bullet(S^2)$은 rank $2$의 free $\mathbb{Z}[t]$-module로, $S^2$의 위상을 ($2$라는 rank가 $H^\bullet(S^2)$의 차원과 같다는 점에서) 그리고 회전 작용을 (관계식 $h^2-th$에 나타나는 두 fixed point의 weight $0,1$을 통해) 모두 기억한다. 실제로 restriction $\iota^\ast:H_{S^1}^\bullet(S^2)\rightarrow H^\bullet(S^2)$은 $t=0$을 대입하는 것에 해당하여 ([명제 2](#prop2)의 (3))
 
 $$\mathbb{Z}[t][h]/(h^2-th)\xrightarrow{t\mapsto 0}\mathbb{Z}[h]/(h^2)=H^\bullet(S^2)$$
 
@@ -189,7 +189,7 @@ $$(\lambda_0,\ldots,\lambda_n)\cdot(z_0,\ldots,z_n)=(\lambda_0 z_0,\ldots,\lambd
 
 $$H_T^\bullet(\mathbb{P}^n)=\mathbb{Z}[t_0,\ldots,t_n][h]\Big/\prod_{i=0}^n(h-t_i)$$
 
-이다. 이는 $1,h,\ldots,h^n$을 기저로 갖는 free $\mathbb{Z}[t_0,\ldots,t_n]$-가군이다.
+이다. 이는 $1,h,\ldots,h^n$을 기저로 갖는 free $\mathbb{Z}[t_0,\ldots,t_n]$-module이다.
 :::
 ::: 증명
 $\mathbb{C}^{n+1}$의 $i$번째 좌표선은 $i$번째 좌표 character $t_i\in M=\mathrm{Hom}(T,S^1)$에 대한 일차원 representation $\mathbb{C}_{t_i}$이므로, $T$-representation으로서
@@ -204,7 +204,7 @@ $$\mathbb{P}^n_T=ET\times_T\mathbb{P}\Big(\bigoplus_i\mathbb{C}_{t_i}\Big)=\math
 
 $$H_T^\bullet(\mathbb{P}^n)=H^\bullet(\mathbb{P}^n_T)=\mathbb{Z}[t_0,\ldots,t_n][h]\Big/\prod_{i=0}^n(h-t_i)$$
 
-를 얻으며, 같은 명제로부터 이것이 $1,h,\ldots,h^n$을 기저로 갖는 free $\mathbb{Z}[t_0,\ldots,t_n]$-가군임이 따라온다.
+를 얻으며, 같은 명제로부터 이것이 $1,h,\ldots,h^n$을 기저로 갖는 free $\mathbb{Z}[t_0,\ldots,t_n]$-module임이 따라온다.
 :::
 
 관계식을 전개하면
@@ -219,10 +219,10 @@ $$\mathbb{Z}[t_0,\ldots,t_n][h]\Big/\prod_{i}(h-t_i)\xrightarrow{t_i\mapsto 0}\m
 
 ## Equivariant formality
 
-위 두 계산의 공통된 특징은 $H_T^\bullet(X)$이 $H_T^\bullet(\mathrm{pt})$ 위의 free 가군이고, $t_i=0$을 대입하면 정확히 $H^\bullet(X)$가 회복된다는 점이었다. 이 성질은 모든 작용에서 성립하지는 않으나, 성립할 때는 equivariant cohomology와 ordinary cohomology의 관계가 가장 단순해진다.
+위 두 계산의 공통된 특징은 $H_T^\bullet(X)$이 $H_T^\bullet(\mathrm{pt})$ 위의 free module이고, $t_i=0$을 대입하면 정확히 $H^\bullet(X)$가 회복된다는 점이었다. 이 성질은 모든 작용에서 성립하지는 않으나, 성립할 때는 equivariant cohomology와 ordinary cohomology의 관계가 가장 단순해진다.
 
 ::: 정의 8
-Torus $T$가 작용하는 공간 $X$ (cohomology가 각 degree에서 finitely generated)가 *equivariantly formal<sub>동변 형식적</sub>*이라는 것은 $H_T^\bullet(X)$이 $H_T^\bullet(\mathrm{pt})$ 위의 free 가군이고, augmentation $H_T^\bullet(\mathrm{pt})\rightarrow\mathbb{Z}$ (양의 degree를 $0$으로 보내는 morphism) 에 대하여 자연스러운 morphism
+Torus $T$가 작용하는 공간 $X$ (cohomology가 각 degree에서 finitely generated)가 *equivariantly formal<sub>동변 형식적</sub>*이라는 것은 $H_T^\bullet(X)$이 $H_T^\bullet(\mathrm{pt})$ 위의 free module이고, augmentation $H_T^\bullet(\mathrm{pt})\rightarrow\mathbb{Z}$ (양의 degree를 $0$으로 보내는 morphism) 에 대하여 자연스러운 morphism
 
 $$H_T^\bullet(X)\otimes_{H_T^\bullet(\mathrm{pt})}\mathbb{Z}\xrightarrow{\cong}H^\bullet(X)$$
 
@@ -233,7 +233,7 @@ $$H_T^\bullet(X)\otimes_{H_T^\bullet(\mathrm{pt})}\mathbb{Z}\xrightarrow{\cong}H
 
 $$E_2^{p,q}=H^p\big(BT;H^q(X)\big)\Longrightarrow H_T^{p+q}(X)$$
 
-를 생각하면, equivariant formality는 이 spectral sequence가 $E_2$ 면에서 collapse하는 것과 동치이다. 이 경우 $H_T^\bullet(X)$은 $H^\bullet(BT)$-가군으로서 $H^\bullet(X)\otimes_{\mathbb{Z}}H^\bullet(BT)$와 동형이 된다. Cohomology가 짝수 degree에만 있는 공간 (가령 cell이 모두 짝수 차원인 CW complex로, $\mathbb{P}^n$이나 일반적인 smooth projective toric variety가 이에 속한다) 은 degree의 parity 때문에 미분이 모두 사라져 항상 equivariantly formal이다. 이 freeness가 fixed point로의 restriction을 거의 단사로 만들어, 다음 글에서 다룰 localization 정리를 통한 계산을 가능하게 한다.
+를 생각하면, equivariant formality는 이 spectral sequence가 $E_2$ 면에서 collapse하는 것과 동치이다. 이 경우 $H_T^\bullet(X)$은 $H^\bullet(BT)$-module로서 $H^\bullet(X)\otimes_{\mathbb{Z}}H^\bullet(BT)$와 동형이 된다. Cohomology가 짝수 degree에만 있는 공간 (가령 cell이 모두 짝수 차원인 CW complex로, $\mathbb{P}^n$이나 일반적인 smooth projective toric variety가 이에 속한다) 은 degree의 parity 때문에 미분이 모두 사라져 항상 equivariantly formal이다. 이 freeness가 fixed point로의 restriction을 거의 단사로 만들어, 다음 글에서 다룰 localization 정리를 통한 계산을 가능하게 한다.
 
 ::: 참고 9
 $X$가 smooth variety이고 $G$가 compact Lie group으로 매끄럽게 작용할 때는, 위의 위상적 Borel 구성과 같은 $H_G^\bullet(X;\mathbb{R})$을 differential form으로 계산하는 model이 존재한다. Cartan model에서는 equivariant differential form의 복합체

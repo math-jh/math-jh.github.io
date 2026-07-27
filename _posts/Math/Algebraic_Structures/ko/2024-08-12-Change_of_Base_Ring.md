@@ -28,7 +28,7 @@ $B$-module $\rho_N:B\otimes N \rightarrow N$이 주어졌다 하자. 그럼 다�
 을 생각하면 우리는 이렇게 $A$-module을 대응시키는 것이 functorial하다는 것을 안다.
 
 ::: 정의 1
-Ring homomorphism $\phi:A \rightarrow B$에 대하여, 위와 같은 방식으로 정의된 functor를 $\phi^\ast: \lMod{B} \rightarrow \lMod{A}$로 쓰고, *restriction of scalar<sub>스칼라의 제한</sub>*이라 부른다. 
+Ring homomorphism $\phi:A \rightarrow B$에 대하여, 위와 같은 방식으로 정의된 functor를 $\phi^\ast: \lMod{B} \rightarrow \lMod{A}$로 쓰고, *restriction of scalar<sub>스칼라의 제한</sub>*라 부른다. 
 :::
 
 즉 이는 그냥 임의의 $B$-module $\rho_N: B\otimes N \rightarrow N$이 주어졌을 때, 이를 이용하여 $N$ 위에 $A$의 action을 다음 식
@@ -58,7 +58,7 @@ $$B\otimes_\mathbb{Z}(\phi^\ast B\otimes_AM)\cong (B\otimes_\mathbb{Z}\phi^\ast 
 으로 얻어지는 것으로 생각할 수도 있다.[^1] 또, 임의의 $A$-linear map $u:M \rightarrow M'$에 대하여 $\id_{\phi^\ast B}\otimes_A u$가 이렇게 정의된 두 $B$-module 사이의 $B$-linear map을 정의하는 것을 확인할 수 있다.
 
 ::: 정의 3
-위의 functor $\phi^\ast B\otimes_A-:\lMod{A} \rightarrow \lMod{B}$를 간단히 $\phi_!$라 쓰고, 이를 *extension of scalar<sub>스칼라의 확장</sub>*이라 부른다.
+위의 functor $\phi^\ast B\otimes_A-:\lMod{A} \rightarrow \lMod{B}$를 간단히 $\phi_!$라 쓰고, 이를 *extension of scalar<sub>스칼라의 확장</sub>*라 부른다.
 :::
 
 ## Coextension of scalar
@@ -78,7 +78,7 @@ $$(\beta\cdot g)(\alpha\cdot \beta')=g(\phi(\alpha)\beta'\beta)=g(\alpha\cdot(\b
 이므로 $\beta\cdot g$ 또한 $A$-linear map이다. 약간의 계산을 통해 이 또한 functorial하다는 것을 확인할 수 있으며, 따라서 다음이 정의된다.
 
 ::: 정의 4
-Functor $\Hom_A(\phi^\ast B,-): \lMod{A} \rightarrow \lMod{B}$를 *coextension of scalar<sub>스칼라의 쌍대확장</sub>*이라 부르고 $\phi_\ast$로 적는다.
+Functor $\Hom_A(\phi^\ast B,-): \lMod{A} \rightarrow \lMod{B}$를 *coextension of scalar<sub>스칼라의 쌍대확장</sub>*라 부르고 $\phi_\ast$로 적는다.
 :::
 
 ## 수반함자

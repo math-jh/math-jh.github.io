@@ -92,7 +92,7 @@ Symplectic manifold들 사이의 구조를 보존하는 morphism은 다음과 �
 
 ## 해밀턴 벡터장과 Poisson 괄호
 
-Nondegeneracy의 가장 중요한 쓰임은, 함수의 미분을 벡터장으로 바꾸어 주는 것이다. 각 벡터장 $X$에 대하여 $1$-form $\iota_X\omega$를 $(\iota_X\omega)(Y)=\omega(X,Y)$로 정의하면, $\omega$가 nondegenerate이므로 대응 $X\mapsto\iota_X\omega$는 벡터장들과 $1$-form들 사이의 ($C^\infty(M)$-가군으로서의) isomorphism이 된다. 
+Nondegeneracy의 가장 중요한 쓰임은, 함수의 미분을 벡터장으로 바꾸어 주는 것이다. 각 벡터장 $X$에 대하여 $1$-form $\iota_X\omega$를 $(\iota_X\omega)(Y)=\omega(X,Y)$로 정의하면, $\omega$가 nondegenerate이므로 대응 $X\mapsto\iota_X\omega$는 벡터장들과 $1$-form들 사이의 ($C^\infty(M)$-module로서의) isomorphism이 된다. 
 
 ::: 정의 6
 Symplectic manifold $(M,\omega)$와 함수 $H\in C^\infty(M)$에 대하여, $H$의 *Hamiltonian vector field<sub>해밀턴 벡터장</sub>* $X_H$를 

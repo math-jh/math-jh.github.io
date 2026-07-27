@@ -51,12 +51,12 @@ Abelian category $\mathcal{A}$의 대상 $M$에 대하여, 다음을 정의한�
     
     $$\cdots \longrightarrow P_2 \longrightarrow P_1 \longrightarrow P_0 \overset{\epsilon}{\longrightarrow} M \longrightarrow 0$$
 
-    가 exact이도록 하는 chain complex $P_\bullet$과 *augmentation map<sub>첨가 사상</sub>* $\epsilon: P_0 \rightarrow M$이다. 만일 각 $P_i$들이 모두 projective object들이라면 이를 *projective resolution<sub>사영분해</sub>*라 부른다.
+    가 exact이도록 하는 chain complex $P_\bullet$과 *augmentation map<sub>첨가 사상</sub>* $\epsilon: P_0 \rightarrow M$이다. 만일 각 $P_i$들이 모두 projective object들이라면 이를 *projective resolution<sub>사영분해</sub>*이라 부른다.
 2. $M$의 *right resolution<sub>오른쪽 분해</sub>*은 다음의 chain complex
     
     $$0 \longrightarrow M \overset{\eta}{\longrightarrow} I^0 \longrightarrow I^1 \longrightarrow I^2 \longrightarrow \cdots$$
 
-    가 exact이도록 하는 cochain complex $I^\bullet$과 *augmentation map* $\eta: M \rightarrow I^0$이다. 만일 각 $I^i$들이 모두 injective object들이라면 이를 *injective resolution<sub>단사분해</sub>*라 부른다.
+    가 exact이도록 하는 cochain complex $I^\bullet$과 *augmentation map* $\eta: M \rightarrow I^0$이다. 만일 각 $I^i$들이 모두 injective object들이라면 이를 *injective resolution<sub>단사분해</sub>*이라 부른다.
 :::
 
 $\mathcal{A}$의 projective object는 $\mathcal{A}^\op$의 injective object이다. 마찬가지로 $\mathcal{A}$가 enough projective를 갖는다면 $\mathcal{A}^\op$는 enough injective를 갖는다. 또, $M$의 $\mathcal{A}$에서의 projective resolution은 $M$의 $\mathcal{A}^\op$에서의 injective resolution과 동일하다. 때문에 다음 명제는 projective resolution에 대한 것만 증명해도 충분하다.

@@ -22,11 +22,11 @@ published: false
 
 $$R:=H_T^\bullet(\mathrm{pt};\mathbb{Q})=\mathbb{Q}[t_1,\ldots,t_n],\qquad \lvert t_i\rvert=2$$
 
-로 적는다. 이는 character lattice $M_T=\mathrm{Hom}(T,S^1)$의 symmetric algebra $\mathrm{Sym}_{\mathbb{Q}}(M_T\otimes\mathbb{Q})$이고, 각 character $\chi\in M_T$은 degree $2$ 원소로서 $R$ 안에 놓인다. ([§동변 코호몰로지, ⁋명제 4](/ko/math/toric_geometry/equivariant_cohomology#prop4)) $R$은 정역이므로 그 field of fractions $\mathrm{Frac}(R)=\mathbb{Q}(t_1,\ldots,t_n)$가 존재한다. 임의의 $R$-가군 $N$에 대하여 그 *localization*을
+로 적는다. 이는 character lattice $M_T=\mathrm{Hom}(T,S^1)$의 symmetric algebra $\mathrm{Sym}_{\mathbb{Q}}(M_T\otimes\mathbb{Q})$이고, 각 character $\chi\in M_T$은 degree $2$ 원소로서 $R$ 안에 놓인다. ([§동변 코호몰로지, ⁋명제 4](/ko/math/toric_geometry/equivariant_cohomology#prop4)) $R$은 정역이므로 그 field of fractions $\mathrm{Frac}(R)=\mathbb{Q}(t_1,\ldots,t_n)$가 존재한다. 임의의 $R$-module $N$에 대하여 그 *localization*을
 
 $$N_{\mathrm{loc}}:=N\otimes_R\mathrm{Frac}(R)$$
 
-로 적기로 한다. $\mathrm{Frac}(R)$이 $R$ 위에서 flat이므로 $N\mapsto N_{\mathrm{loc}}$은 완전함수이고, $N$이 torsion $R$-가군 (모든 원소가 $0$이 아닌 $R$의 원소에 의해 소멸되는 가군) 이면 $N_{\mathrm{loc}}=0$이다.
+로 적기로 한다. $\mathrm{Frac}(R)$이 $R$ 위에서 flat이므로 $N\mapsto N_{\mathrm{loc}}$은 완전함수이고, $N$이 torsion $R$-module (모든 원소가 $0$이 아닌 $R$의 원소에 의해 소멸되는 module) 이면 $N_{\mathrm{loc}}=0$이다.
 
 ## 고정점 성분과 그 normal bundle
 
@@ -118,19 +118,19 @@ $j_F:F\hookrightarrow M$을 fixed component의 포함, $\pi_M:M\rightarrow\mathr
 이제 핵심 보조정리로 넘어간다. Fixed locus를 제거한 자리 위에서는 작용이 어디서도 자명하지 않으므로, 그 equivariant cohomology가 $R$ 위에서 torsion이 된다. 이것이 localization의 대수적 원천이다.
 
 ::: 보조정리 6
-$U=M\setminus M^T$이라 하면 $H_T^\bullet(U)$은 torsion $R$-가군이다. 같은 결론이 pair의 상대 cohomology $H_T^\bullet(M,M^T)$에도 성립한다.
+$U=M\setminus M^T$이라 하면 $H_T^\bullet(U)$은 torsion $R$-module이다. 같은 결론이 pair의 상대 cohomology $H_T^\bullet(M,M^T)$에도 성립한다.
 :::
 ::: 증명
 $U$의 한 점 $x$를 보자. $x$는 fixed point가 아니므로 그 stabilizer $T_x=\{g\in T\mid g\cdot x=x\}$은 $T$의 진부분 closed subgroup이다. Slice 정리에 의해 $x$는 $T$-불변 근방 $T\times_{T_x}S_x$ ($S_x$는 slice) 를 가지며, 이때
 
 $$H_T^\bullet(T\times_{T_x}S_x)=H_{T_x}^\bullet(S_x)$$
 
-이다. 이 가군 위의 $R=H_T^\bullet(\mathrm{pt})$-작용은 restriction map $R=H_T^\bullet(\mathrm{pt})\rightarrow H_{T_x}^\bullet(\mathrm{pt})$을 거친다. $T_x$가 진부분 subgroup이므로 그 항등성분 $T_x^0$의 차원은 $n$보다 작거나, $T_x$가 유한군이다. $\mathbb{Q}$-계수에서 $H_{T_x}^\bullet(\mathrm{pt};\mathbb{Q})=H^\bullet(BT_x^0;\mathbb{Q})=\mathrm{Sym}_{\mathbb{Q}}\big(\mathrm{Hom}(T_x^0,S^1)\otimes\mathbb{Q}\big)$이고, restriction map $M_T\otimes\mathbb{Q}\rightarrow\mathrm{Hom}(T_x^0,S^1)\otimes\mathbb{Q}$은 차원이 떨어지므로 kernel이 $0$이 아니다. 그 kernel의 $0$이 아닌 원소 $\chi\in R$을 고르면, $\chi$는 $H_{T_x}^\bullet(S_x)$ 위에서 $0$으로 작용한다. 곧 $\chi$가 이 국소 가군을 소멸시킨다.
+이다. 이 module 위의 $R=H_T^\bullet(\mathrm{pt})$-작용은 restriction map $R=H_T^\bullet(\mathrm{pt})\rightarrow H_{T_x}^\bullet(\mathrm{pt})$을 거친다. $T_x$가 진부분 subgroup이므로 그 항등성분 $T_x^0$의 차원은 $n$보다 작거나, $T_x$가 유한군이다. $\mathbb{Q}$-계수에서 $H_{T_x}^\bullet(\mathrm{pt};\mathbb{Q})=H^\bullet(BT_x^0;\mathbb{Q})=\mathrm{Sym}_{\mathbb{Q}}\big(\mathrm{Hom}(T_x^0,S^1)\otimes\mathbb{Q}\big)$이고, restriction map $M_T\otimes\mathbb{Q}\rightarrow\mathrm{Hom}(T_x^0,S^1)\otimes\mathbb{Q}$은 차원이 떨어지므로 kernel이 $0$이 아니다. 그 kernel의 $0$이 아닌 원소 $\chi\in R$을 고르면, $\chi$는 $H_{T_x}^\bullet(S_x)$ 위에서 $0$으로 작용한다. 곧 $\chi$가 이 국소 module을 소멸시킨다.
 
 $M^T$이 콤팩트이고 그 보충 $U$를 위와 같은 유한 개의 $T$-불변 열린집합으로 덮을 수 있다. ($M$이 콤팩트이므로 임의의 콤팩트 부분집합이 유한 개로 덮이고, Mayer–Vietoris로 이어붙인다.) 각 조각을 소멸시키는 character들의 곱 $\chi=\chi_1\cdots\chi_r\in R$은 $0$이 아니며, Mayer–Vietoris exact sequence를 따라 귀납하면 $\chi$가 $H_T^\bullet(U)$ 전체를 소멸시킨다. 따라서 $H_T^\bullet(U)$은 torsion이다. $H_T^\bullet(M,M^T)$의 torsion성은 pair $(M,M^T)$의 동변 tubular neighborhood를 통한 excision으로 $U$의 (compactly supported) equivariant cohomology와 같은 orbit-type 조각들로 환원되어 같은 방식으로 따라온다. 전면적인 Mayer–Vietoris 논증은 [AB]의 §3과 [AF]의 §7을 따른다.
 :::
 
-이 torsion 현상이 의미하는 바는 직관적으로 명료하다. $\mathrm{Spec}R$을 좌표공간으로 볼 때, equivariant cohomology는 그 위의 가군으로서 작용의 stabilizer가 비자명한 자리에 support를 가지며, 작용이 거의 자유로운 $U$ 위에서는 support가 원점 주변의 진부분 자취로 밀려나 field of fractions로 넘어가면 사라진다. 이제 본 정리를 증명한다.
+이 torsion 현상이 의미하는 바는 직관적으로 명료하다. $\mathrm{Spec}R$을 좌표공간으로 볼 때, equivariant cohomology는 그 위의 module로서 작용의 stabilizer가 비자명한 자리에 support를 가지며, 작용이 거의 자유로운 $U$ 위에서는 support가 원점 주변의 진부분 자취로 밀려나 field of fractions로 넘어가면 사라진다. 이제 본 정리를 증명한다.
 
 ::: 정리 7 (Atiyah–Bott, Berline–Vergne localization 정리)
 포함 $i:M^T\hookrightarrow M$이 유도하는 restriction map은 localization 후 동형

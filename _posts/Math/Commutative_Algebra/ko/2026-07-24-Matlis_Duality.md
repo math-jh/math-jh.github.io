@@ -177,7 +177,7 @@ $E_n=(0:_E\mathfrak{m}^n)$으로 두면 [보조정리 10](#lem10)에 의하여 $
 $$\Hom_A(E,E)\overset{\sim}{\longrightarrow}\varprojlim_n\Hom_A(E_n,E)$$
 을 준다. 이는 합집합의 universal property, 곧 $E_n$들 위에서 서로 호환되는 map들의 족이 $E$ 전체 위의 map과 일대일로 대응한다는 사실이다. 한편 $E_n$이 $\mathfrak{m}^n$에 의하여 소멸되므로 임의의 $\Hom_A(E_n,E)$의 상은 $(0:_E\mathfrak{m}^n)=E_n$에 들어가고, 따라서
 $$\Hom_A(E_n,E)=D(E_n)=D(D(A/\mathfrak{m}^n))\cong A/\mathfrak{m}^n$$
-이다. 마지막 isomorphism은 유한 길이 module $A/\mathfrak{m}^n$에 [명제 9](#prop9)를 적용한 것이며, evaluation map의 naturality에 의하여 $m\leq n$에서의 제한사상 $D(E_n)\rightarrow D(E_m)$은 canonical projection $A/\mathfrak{m}^n\rightarrow A/\mathfrak{m}^m$에 대응한다. 그러므로
+이다. 마지막 isomorphism은 유한 길이 module $A/\mathfrak{m}^n$에 [명제 9](#prop9)를 적용한 것이며, evaluation map의 naturality에 의하여 $m\leq n$에서의 restriction map $D(E_n)\rightarrow D(E_m)$은 canonical projection $A/\mathfrak{m}^n\rightarrow A/\mathfrak{m}^m$에 대응한다. 그러므로
 $$\Hom_A(E,E)\cong\varprojlim_n D(E_n)\cong\varprojlim_n A/\mathfrak{m}^n=\widehat{A}$$
 이다.
 :::

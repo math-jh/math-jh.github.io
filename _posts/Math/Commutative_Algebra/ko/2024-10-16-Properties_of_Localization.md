@@ -13,7 +13,7 @@ weight: 3
 
 ---
 
-이제 우리는 localization의 추가적인 성질들에 대해 살펴본다. 이 글의 첫 번째 목표는 앞선 글에서 살펴본 가군의 localization과 ring의 localization 사이에 밀접한 관계가 있다는 것을 증명하는 것이다. 이 글에서 ring $A$, $A$의 multiplicative subset $S$와 $A$-module $M$을 고정한다. 
+이제 우리는 localization의 추가적인 성질들에 대해 살펴본다. 이 글의 첫 번째 목표는 앞선 글에서 살펴본 module의 localization과 ring의 localization 사이에 밀접한 관계가 있다는 것을 증명하는 것이다. 이 글에서 ring $A$, $A$의 multiplicative subset $S$와 $A$-module $M$을 고정한다. 
 
 ## 국소화와 Hom, tensor
 

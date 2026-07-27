@@ -13,11 +13,11 @@ weight: 1
 
 ---
 
-이 카테고리의 모든 글에서 등장하는 ring은 commutative ring이다. 또, 임의의 $A$-algebra는 항상 commutative associative unital $A$-algebra인 것으로 생각한다. 특히 우리는 [\[대수적 구조\] §대수, ⁋정의 1](/ko/math/algebraic_structures/algebras#def1) 이후에 associative unital $A$-algebra $E$와, ring homomorphism $A\rightarrow Z(E)$가 같은 것임을 살펴보았으므로, 앞으로의 논의에서 $A$-algebra는 ring homomorphism $A\rightarrow E$로 생각해도 충분하다. 
+이 category의 모든 글에서 등장하는 ring은 commutative ring이다. 또, 임의의 $A$-algebra는 항상 commutative associative unital $A$-algebra인 것으로 생각한다. 특히 우리는 [\[대수적 구조\] §대수, ⁋정의 1](/ko/math/algebraic_structures/algebras#def1) 이후에 associative unital $A$-algebra $E$와, ring homomorphism $A\rightarrow Z(E)$가 같은 것임을 살펴보았으므로, 앞으로의 논의에서 $A$-algebra는 ring homomorphism $A\rightarrow E$로 생각해도 충분하다. 
 
 ## 기본 정의들
 
-이 카테고리에서는 commutative ring $A$와 그 위에 정의된 module $M$에 대해 살펴본다. Ring $A$의 임의의 ideal $\mathfrak{a}$는 항상 $A$-module로 생각할 수 있으므로 많은 경우 우리는 $A$-module에 대한 이론을 전개하게 된다. 앞서 [\[대수적 구조\]](/ko/algebraic_structures/) 카테고리의 글들에서는 혼동을 방지하기 위해 $A$-module $M$의 원소를 $x,y,\ldots$으로, $A$의 원소를 $\alpha,\beta,\ldots$로 썼었는데, $\mathfrak{a}$도 $A$-module로 생각하면 이와 같이 표기법을 구분하는 것이 오히려 더 혼란을 주게 되므로, 이 카테고리에서는 이와 같은 구분을 하지 않는다. 
+이 category에서는 commutative ring $A$와 그 위에 정의된 module $M$에 대해 살펴본다. Ring $A$의 임의의 ideal $\mathfrak{a}$는 항상 $A$-module로 생각할 수 있으므로 많은 경우 우리는 $A$-module에 대한 이론을 전개하게 된다. 앞서 [\[대수적 구조\]](/ko/algebraic_structures/) category의 글들에서는 혼동을 방지하기 위해 $A$-module $M$의 원소를 $x,y,\ldots$으로, $A$의 원소를 $\alpha,\beta,\ldots$로 썼었는데, $\mathfrak{a}$도 $A$-module로 생각하면 이와 같이 표기법을 구분하는 것이 오히려 더 혼란을 주게 되므로, 이 category에서는 이와 같은 구분을 하지 않는다. 
 
 ::: 정의 1
 임의의 $A$-module $M$에 대하여, $M$의 *annihilator<sub>소멸자</sub>* $\ann(M)$을 다음 식
@@ -133,7 +133,7 @@ Ring $A$와 두 Noetherian $A$-module $M,N$에 대하여, $M\oplus N$은 Noether
 [명제 5](#prop5)를 $M\oplus N$과 그 submodule $M\oplus 0\cong M$에 대해 적용하면 된다.
 :::
 
-[\[다중선형대수학\]](/ko/multilinear_algebra) 카테고리에서 살펴보았던 finitely generated $A$-module의 조건은 다음의 exact sequence
+[\[다중선형대수학\]](/ko/multilinear_algebra) category에서 살펴보았던 finitely generated $A$-module의 조건은 다음의 exact sequence
 
 $$A^{\oplus n} \rightarrow M \rightarrow 0$$
 

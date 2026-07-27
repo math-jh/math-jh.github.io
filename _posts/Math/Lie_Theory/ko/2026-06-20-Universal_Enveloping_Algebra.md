@@ -15,7 +15,7 @@ published: false
 
 ---
 
-Lie algebra $\mathfrak{g}$의 표현론은 본질적으로 결합대수의 가군 이론으로 환원된다. 그 환원을 가능하게 하는 대상이 *universal enveloping algebra*이며, 이는 $\mathfrak{g}$의 Lie bracket을 결합대수의 commutator로 실현하는 가장 보편적인 결합대수이다. 이 글에서 우리는 이 대수를 tensor algebra의 quotient로 정의하고, 그 보편 성질을 서술한 뒤, 표준 여과<sub>filtration</sub>를 통해 얻어지는 associated graded가 symmetric algebra와 isomorphic임을 주장하는 Poincaré–Birkhoff–Witt 정리를 증명한다. 이 정리는 자연스러운 morphism $\mathfrak{g}\rightarrow U(\mathfrak{g})$가 단사임을 즉시 함의하며, semisimple Lie algebra의 표현론 전체의 기초가 된다.
+Lie algebra $\mathfrak{g}$의 표현론은 본질적으로 결합대수의 module 이론으로 환원된다. 그 환원을 가능하게 하는 대상이 *universal enveloping algebra*이며, 이는 $\mathfrak{g}$의 Lie bracket을 결합대수의 commutator로 실현하는 가장 보편적인 결합대수이다. 이 글에서 우리는 이 대수를 tensor algebra의 quotient로 정의하고, 그 보편 성질을 서술한 뒤, canonical filtration<sub>filtration</sub>를 통해 얻어지는 associated graded가 symmetric algebra와 isomorphic임을 주장하는 Poincaré–Birkhoff–Witt 정리를 증명한다. 이 정리는 자연스러운 morphism $\mathfrak{g}\rightarrow U(\mathfrak{g})$가 단사임을 즉시 함의하며, semisimple Lie algebra의 표현론 전체의 기초가 된다.
 
 이 글 전체에서 $k$는 고정된 체이고, $\mathfrak{g}$는 $k$ 위에 정의된 Lie algebra이다. ([§리 군, ⁋정의 8](/ko/math/lie_theory/Lie_groups#def8)) Lie algebra의 정의는 임의의 체 위에서 동일하게 주어지므로, 우리는 기반 체를 $k$로 일반화하여 사용한다.
 
@@ -100,7 +100,7 @@ $$\tilde{f}(x\otimes y-y\otimes x-[x,y])=f(x)f(y)-f(y)f(x)-f([x,y])=[f(x),f(y)]_
 
 $$\Hom_{\mathbf{Lie}_k}(\mathfrak{g},A_{\mathrm{Lie}})\cong\Hom_{\mathbf{Alg}_k}(U(\mathfrak{g}),A)$$
 
-를 정의한다는 것으로 다시 쓸 수 있다. 즉 functor $U:\mathbf{Lie}_k\rightarrow\mathbf{Alg}_k$는 commutator functor $(-)_{\mathrm{Lie}}:\mathbf{Alg}_k\rightarrow\mathbf{Lie}_k$의 left adjoint이며, $\iota$는 이 adjunction의 unit이다. 이 동형의 한 가지 직접적인 귀결로, $\mathfrak{g}$의 representation $\mathfrak{g}\rightarrow\End_k(V)_{\mathrm{Lie}}$들은 정확히 결합대수 준동형 $U(\mathfrak{g})\rightarrow\End_k(V)$들, 곧 $U(\mathfrak{g})$-가군 구조들과 일대일로 대응한다. 이것이 $\mathfrak{g}$의 표현론을 결합대수 $U(\mathfrak{g})$의 가군 이론으로 옮기는 다리이다.
+를 정의한다는 것으로 다시 쓸 수 있다. 즉 functor $U:\mathbf{Lie}_k\rightarrow\mathbf{Alg}_k$는 commutator functor $(-)_{\mathrm{Lie}}:\mathbf{Alg}_k\rightarrow\mathbf{Lie}_k$의 left adjoint이며, $\iota$는 이 adjunction의 unit이다. 이 동형의 한 가지 직접적인 귀결로, $\mathfrak{g}$의 representation $\mathfrak{g}\rightarrow\End_k(V)_{\mathrm{Lie}}$들은 정확히 결합대수 준동형 $U(\mathfrak{g})\rightarrow\End_k(V)$들, 곧 $U(\mathfrak{g})$-module 구조들과 일대일로 대응한다. 이것이 $\mathfrak{g}$의 표현론을 결합대수 $U(\mathfrak{g})$의 module 이론으로 옮기는 다리이다.
 
 ::: 명제 5
 Lie algebra 준동형 $\phi:\mathfrak{g}\rightarrow\mathfrak{h}$에 대하여, 다음 도식
@@ -134,7 +134,7 @@ $$U_m\cdot U_n\subseteq U_{m+n}$$
 핵심적인 관찰은 관계식 $xy-yx=[x,y]$가 여과의 관점에서 commutator의 degree를 떨어뜨린다는 것이다. $x,y\in\mathfrak{g}\subseteq U_1$이면 $xy,yx\in U_2$이지만 그 차 $xy-yx=[x,y]$는 $U_1$에 속한다. 일반적으로 $a\in U_m$, $b\in U_n$에 대하여 $ab-ba\in U_{m+n-1}$이 성립하며, 이는 아래 [보조정리 8](#lem8)에서 정밀하게 다룬다. 이로부터 associated graded는 commutative함이 예상된다.
 
 ::: 정의 7
-표준 여과 $\bigl(U_n\bigr)$에 대한 *associated graded<sub>동반 등급</sub>* 대수를
+canonical filtration $\bigl(U_n\bigr)$에 대한 *associated graded<sub>동반 등급</sub>* 대수를
 
 $$\gr U(\mathfrak{g})=\bigoplus_{n\geq 0}U_n/U_{n-1}$$
 
@@ -195,7 +195,7 @@ $$x_i\cdot z_S=x_j\cdot(x_i\cdot z_{S'})+[x_i,x_j]\cdot z_{S'}$$
 
 이제 조건 2가 모든 $i,j$와 모든 기저원소 $z_S$에 대하여 성립함을 $\lvert S\rvert$에 대한 귀납법으로 확인한다. 대칭성에 의해 $i>j$인 경우만 보면 되고, $i=j$이면 좌변이 자명히 $0$이며 $[x_i,x_i]=0$이다. $i>j$이고 $j\leq S$인 경우, action의 정의가 정확히 $x_i\cdot(x_j\cdot z_S)=x_j\cdot(x_i\cdot z_S)+[x_i,x_j]\cdot z_S$가 되도록 위에서 $x_i\cdot z_{(j,S)}$을 정의하였으므로 조건 2가 성립한다. $j\leq S$가 아닌 일반적인 경우는 $S=(l,S')$ ($l\leq S'$, $l<j<i$)로 쓰고, $x_l$을 한 칸 끄집어낸 뒤 길이 $n-1$인 $S'$에 대한 귀납 가정과 $\mathfrak{g}$의 Jacobi identity를 사용하여 정리하면 얻어진다. Jacobi identity가 들어가는 곳은 세 첨자 $i,j,l$에 대한 이중 commutator들이 상쇄되어야 하는 부분이며, 이는 $\mathfrak{g}$가 [§리 군, ⁋정의 8](/ko/math/lie_theory/Lie_groups#def8)의 Lie algebra라는 가정이 사용되는 유일한 지점이다.
 
-조건 2가 확립되면, 대응 $x_i\mapsto\bigl(s\mapsto x_i\cdot s\bigr)$은 $\mathfrak{g}$에서 $\End_k(\S(\mathfrak{g}))_{\mathrm{Lie}}$로의 Lie algebra 준동형이다. 실제로 조건 2가 바로 $[x_i,x_j]$의 action이 action들의 commutator와 일치한다는 진술이고, $\bigl(x_i\bigr)$가 $\mathfrak{g}$의 기저이므로 이는 $\mathfrak{g}$ 전체에서의 Lie algebra 준동형으로 확장된다. [명제 4](#prop4)에 의하여 이는 결합대수 준동형, 곧 $U(\mathfrak{g})$-가군 구조
+조건 2가 확립되면, 대응 $x_i\mapsto\bigl(s\mapsto x_i\cdot s\bigr)$은 $\mathfrak{g}$에서 $\End_k(\S(\mathfrak{g}))_{\mathrm{Lie}}$로의 Lie algebra 준동형이다. 실제로 조건 2가 바로 $[x_i,x_j]$의 action이 action들의 commutator와 일치한다는 진술이고, $\bigl(x_i\bigr)$가 $\mathfrak{g}$의 기저이므로 이는 $\mathfrak{g}$ 전체에서의 Lie algebra 준동형으로 확장된다. [명제 4](#prop4)에 의하여 이는 결합대수 준동형, 곧 $U(\mathfrak{g})$-module 구조
 
 $$\rho:U(\mathfrak{g})\longrightarrow\End_k(\S(\mathfrak{g}))$$
 
@@ -206,7 +206,7 @@ $$\rho(x_{i_1}\cdots x_{i_n})(1)=x_{i_1}\cdot\bigl(x_{i_2}\cdot(\cdots(x_{i_n}\c
 을 얻는다. 만일 정렬된 단항식들 사이에 비자명한 일차관계 $\sum_S\lambda_S\,x_{i_1^S}\cdots x_{i_{n_S}^S}=0$이 $U(\mathfrak{g})$에서 성립한다면, 양변에 $\rho(-)(1)$을 적용하여 $\sum_S\lambda_S\,z_S=0$을 $\S(\mathfrak{g})$에서 얻는데, $z_S$들은 $\S(\mathfrak{g})$의 기저이므로 모든 $\lambda_S=0$이다. 따라서 정렬된 단항식들은 일차독립이며, 생성성과 합쳐 $U(\mathfrak{g})$의 기저를 이룬다.
 :::
 
-위 증명에서 구성한 action $\rho$는 $\S(\mathfrak{g})$를 $U(\mathfrak{g})$-가군으로 만들며, $1\in\S(\mathfrak{g})$를 사용하면 $U(\mathfrak{g})$에서 $\S(\mathfrak{g})$로의 $k$-linear 동형 $u\mapsto\rho(u)(1)$을 정의한다. 이 동형이 정렬된 단항식 기저를 정렬된 단항식 기저로 보낸다는 점이 일차독립성 논증의 핵심이었다. 정리 9를 associated graded의 언어로 옮기면 다음을 얻는다.
+위 증명에서 구성한 action $\rho$는 $\S(\mathfrak{g})$를 $U(\mathfrak{g})$-module로 만들며, $1\in\S(\mathfrak{g})$를 사용하면 $U(\mathfrak{g})$에서 $\S(\mathfrak{g})$로의 $k$-linear 동형 $u\mapsto\rho(u)(1)$을 정의한다. 이 동형이 정렬된 단항식 기저를 정렬된 단항식 기저로 보낸다는 점이 일차독립성 논증의 핵심이었다. 정리 9를 associated graded의 언어로 옮기면 다음을 얻는다.
 
 ::: 정리 10
 [정의 7](#def7) 이후 구성한 자연스러운 전사 준동형
@@ -238,7 +238,7 @@ $\iota(\mathfrak{g})$는 길이 $1$인 정렬된 단항식 $x_i$들로 생성되
 
 ## 예시: $U(\sl_2)$
 
-PBW 정리가 주는 구체적인 그림을 보기 위해 $\sl_2=\sl(2;k)$의 보편 포락 대수를 살펴본다. $\sl_2$는 traceless $2\times 2$ 행렬들의 Lie algebra이며 ([§리 군, ⁋명제 12](/ko/math/lie_theory/Lie_groups#prop12)), 표준 기저
+PBW 정리가 주는 구체적인 그림을 보기 위해 $\sl_2=\sl(2;k)$의 보편 포락 대수를 살펴본다. $\sl_2$는 traceless $2\times 2$ 행렬들의 Lie algebra이며 ([§리 군, ⁋명제 12](/ko/math/lie_theory/Lie_groups#prop12)), standard basis
 
 $$h=\begin{pmatrix}1&0\\0&-1\end{pmatrix},\quad e=\begin{pmatrix}0&1\\0&0\end{pmatrix},\quad f=\begin{pmatrix}0&0\\1&0\end{pmatrix}$$
 

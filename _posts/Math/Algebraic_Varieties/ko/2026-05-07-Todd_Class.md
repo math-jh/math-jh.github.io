@@ -57,7 +57,7 @@ $$\operatorname{ch}(E\otimes F)=\sum_{i,j} e^{x_i+y_j}=\left(\sum_i e^{x_i}\righ
 가 성립한다. $\square$
 :::
 
-명제 [2](#prop2)의 첫 번째 성질은 Chern character를 Grothendieck group $K_0(X)$ 위에서 잘 정의된 가군 isomorphism
+명제 [2](#prop2)의 첫 번째 성질은 Chern character를 Grothendieck group $K_0(X)$ 위에서 잘 정의된 module isomorphism
 
 $$\operatorname{ch}: K_0(X)\longrightarrow A^\bullet(X)\otimes_\mathbb{Z}\mathbb{Q}$$
 

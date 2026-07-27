@@ -1,6 +1,6 @@
 ---
 title: "사영다발과 Leray–Hirsch 정리"
-description: "벡터다발의 사영다발을 도입하고, Leray–Hirsch 정리로 그 코호몰로지가 밑공간의 코호몰로지 위의 자유가군임을 보인 뒤, 이를 반복하여 splitting principle을 얻는다."
+description: "벡터다발의 사영다발을 도입하고, Leray–Hirsch 정리로 그 코호몰로지가 밑공간의 코호몰로지 위의 free module임을 보인 뒤, 이를 반복하여 splitting principle을 얻는다."
 excerpt: "Leray–Hirsch 정리와 splitting principle"
 
 categories: [Math / Algebraic Topology]
@@ -26,14 +26,14 @@ drift_needed: true
 여기서 fiber bundle이란 [§호모토피의 계산, ⁋참고 5](/ko/math/algebraic_topology/fibrations#rmk5)에서와 같이 밑공간이 열린집합들로 덮여 각 $U$ 위에서 $\pi^{-1}(U)$가 $U\times F$와 자연스럽게 homeomorphic한, 국소적으로 자명한 사상을 뜻한다. 이러한 $U$를 *trivializing open*이라 부르자.
 
 ::: 정리 1 (Leray–Hirsch)
-Paracompact 밑공간 $B$ 위의 fiber bundle $\pi:E\rightarrow B$의 fiber $F$에 대하여, $H^\bullet(F;\mathbb{Z})$가 유한 rank의 자유 abelian group이라 하자. 만일 class들 $a_1,\ldots,a_r\in H^\bullet(E;\mathbb{Z})$이 존재하여 각 fiber로의 restriction $a_1\vert_F,\ldots,a_r\vert_F$이 $H^\bullet(F;\mathbb{Z})$의 basis를 이룬다면, $H^\bullet(E;\mathbb{Z})$은 $a_1,\ldots,a_r$을 basis로 하는 $H^\bullet(B;\mathbb{Z})$ 위의 자유가군이다.
+Paracompact 밑공간 $B$ 위의 fiber bundle $\pi:E\rightarrow B$의 fiber $F$에 대하여, $H^\bullet(F;\mathbb{Z})$가 유한 rank의 자유 abelian group이라 하자. 만일 class들 $a_1,\ldots,a_r\in H^\bullet(E;\mathbb{Z})$이 존재하여 각 fiber로의 restriction $a_1\vert_F,\ldots,a_r\vert_F$이 $H^\bullet(F;\mathbb{Z})$의 basis를 이룬다면, $H^\bullet(E;\mathbb{Z})$은 $a_1,\ldots,a_r$을 basis로 하는 $H^\bullet(B;\mathbb{Z})$ 위의 free module이다.
 :::
 
 즉, 각 원소 $\xi\in H^\bullet(E)$는 $\xi=\sum_j\pi^\ast(\alpha_j)\smile a_j$의 꼴로 밑공간의 class $\alpha_j\in H^\bullet(B)$을 계수로 하여 유일하게 적힌다. 이를 morphism의 언어로 다시 적으면, $a_j\vert_F$이 $H^\bullet(F)$의 basis이므로 이들로 $H^\bullet(F)$를 식별하여 얻는
 
 $$\Phi:H^\bullet(B)\otimes_{\mathbb{Z}}H^\bullet(F)\rightarrow H^\bullet(E),\qquad \Phi\bigl(\alpha\otimes(a_j\vert_F)\bigr)=\pi^\ast\alpha\smile a_j$$
 
-가 $H^\bullet(B)$-가군의 isomorphism이라는 것이다.
+가 $H^\bullet(B)$-module의 isomorphism이라는 것이다.
 
 ::: 증명
 열린집합 $U\subseteq B$에 대하여 $E_U=\pi^{-1}(U)$라 쓰고, 같은 식으로 정의된 morphism
@@ -46,7 +46,7 @@ $$\Phi_U:H^\bullet(U)\otimes H^\bullet(F)\rightarrow H^\bullet(E_U),\qquad \Phi_
 
 $$H^\bullet(U\times F)\cong H^\bullet(U)\otimes H^\bullet(F)$$
 
-이 성립하고, 따라서 우변은 $\{1\times(a_k\vert_F)\}_k$을 basis로 하는 유한 rank의 자유 $H^\bullet(U)$-가군이다. 좌변 $H^\bullet(U)\otimes H^\bullet(F)$ 또한 $\{1\otimes(a_k\vert_F)\}_k$을 basis로 하는 같은 rank의 자유 $H^\bullet(U)$-가군이며, $\Phi_U$는 이를 원소 $a_j\vert_{E_U}\in H^\bullet(U\times F)$들로 보낸다. 그런데 $a_j\vert_{E_U}$을 한 fiber $\{u\}\times F$로 제한하면 $a_j\vert_F$이 되므로, Künneth 분해에서
+이 성립하고, 따라서 우변은 $\{1\times(a_k\vert_F)\}_k$을 basis로 하는 유한 rank의 자유 $H^\bullet(U)$-module이다. 좌변 $H^\bullet(U)\otimes H^\bullet(F)$ 또한 $\{1\otimes(a_k\vert_F)\}_k$을 basis로 하는 같은 rank의 자유 $H^\bullet(U)$-module이며, $\Phi_U$는 이를 원소 $a_j\vert_{E_U}\in H^\bullet(U\times F)$들로 보낸다. 그런데 $a_j\vert_{E_U}$을 한 fiber $\{u\}\times F$로 제한하면 $a_j\vert_F$이 되므로, Künneth 분해에서
 
 $$a_j\vert_{E_U}=1\times(a_j\vert_F)+(\text{$U$의 차수가 양인 항들})$$
 
@@ -57,7 +57,7 @@ $$a_j\vert_{E_U}=1\times(a_j\vert_F)+(\text{$U$의 차수가 양인 항들})$$
 Trivializing open들의 교집합은 다시 trivializing open이므로, $B$가 유한 trivializing covering을 가지면 covering의 크기에 대한 귀납으로 $\Phi_B$가 isomorphism임을 얻는다. 일반적인 paracompact 밑공간에 대해서는 open cover에 대한 직접극한 논증이 추가로 필요하며, 이는 [Hat]와 [BT]에 자세히 다루어져 있다.
 :::
 
-계수를 $\mathbb{Z}$로 두었지만, 위의 증명은 fiber의 cohomology가 자유가군이 되는 임의의 PID 계수에 대하여 그대로 성립한다. 조건의 핵심은 fiber의 cohomology가 전역적인 class로 "펼쳐진다"는 것으로, 이 때 전공간의 cohomology는 밑공간의 cohomology를 coefficient ring으로 삼아 fiber의 cohomology를 그대로 복제한 모양이 된다. 아래에서 이 정리는 밑공간이 무한차원인 경우 ($\CP^\infty$ 등) 에도 쓰이므로 일반 판본이 실제로 필요하다.
+계수를 $\mathbb{Z}$로 두었지만, 위의 증명은 fiber의 cohomology가 free module이 되는 임의의 PID 계수에 대하여 그대로 성립한다. 조건의 핵심은 fiber의 cohomology가 전역적인 class로 "펼쳐진다"는 것으로, 이 때 전공간의 cohomology는 밑공간의 cohomology를 coefficient ring으로 삼아 fiber의 cohomology를 그대로 복제한 모양이 된다. 아래에서 이 정리는 밑공간이 무한차원인 경우 ($\CP^\infty$ 등) 에도 쓰이므로 일반 판본이 실제로 필요하다.
 
 개념적으로 [정리 1](#thm1)은 [§호모토피의 계산, ⁋정리 15](/ko/math/algebraic_topology/fibrations#thm15)이 degenerate하는 특수한 경우이다. 전역 class $a_j$은 $H^\bullet(E)$에서 오므로 fiber 방향 열의 permanent cycle이고, 이들이 $H^\bullet(F)$ 전체를 생성하므로 곱 구조에 의해 모든 미분이 소멸하며, 동시에 그 존재가 $\pi_1(B)$의 $H^\bullet(F)$ 위 action을 자명하게 만들어 $E_2^{p,q}=H^p(B)\otimes H^q(F)$이 비틀림 없이 성립한다. 따라서 $E_2=E_\infty$가 되어 위의 결론이 그대로 따라온다. 우리가 택한 Mayer–Vietoris 증명은 이 spectral sequence를 경유하지 않고 같은 결론에 이르는 초등적인 우회로이며, 그런 만큼 국소계수계에 얽힌 미묘함도 자연스럽게 비켜간다.
 
@@ -80,7 +80,7 @@ $$\pi^\ast E\cong\gamma_E\oplus\gamma_E^\perp$$
 로 쪼갤 수 있고, 여기서 $\gamma_E^\perp$는 rank $(n-1)$의 complex vector bundle이다.
 
 ::: 정리 3
-Complex rank $n$ vector bundle $E\rightarrow B$의 projective bundle $\pi:\mathbb{P}(E)\rightarrow B$와 tautological line bundle $\gamma_E$에 대하여, $a=c_1(\gamma_E)\in H^2(\mathbb{P}(E);\mathbb{Z})$이라 두자. 그럼 $H^\bullet(\mathbb{P}(E);\mathbb{Z})$은 $1,a,\ldots,a^{n-1}$을 basis로 하는 $H^\bullet(B;\mathbb{Z})$ 위의 자유가군이다. 특히 $\pi^\ast:H^\bullet(B)\rightarrow H^\bullet(\mathbb{P}(E))$은 단사이다.
+Complex rank $n$ vector bundle $E\rightarrow B$의 projective bundle $\pi:\mathbb{P}(E)\rightarrow B$와 tautological line bundle $\gamma_E$에 대하여, $a=c_1(\gamma_E)\in H^2(\mathbb{P}(E);\mathbb{Z})$이라 두자. 그럼 $H^\bullet(\mathbb{P}(E);\mathbb{Z})$은 $1,a,\ldots,a^{n-1}$을 basis로 하는 $H^\bullet(B;\mathbb{Z})$ 위의 free module이다. 특히 $\pi^\ast:H^\bullet(B)\rightarrow H^\bullet(\mathbb{P}(E))$은 단사이다.
 :::
 
 ::: 증명
@@ -88,10 +88,10 @@ Complex rank $n$ vector bundle $E\rightarrow B$의 projective bundle $\pi:\mathb
 
 $$H^\bullet(\CP^{n-1};\mathbb{Z})=\mathbb{Z}[c_1(\gamma)]/(c_1(\gamma)^n)$$
 
-이다. 따라서 $1,a,\ldots,a^{n-1}$의 fiber로의 restriction은 $H^\bullet(\CP^{n-1})$의 basis를 이룬다. $H^\bullet(\CP^{n-1})$은 유한 rank의 자유가군이므로 [정리 1](#thm1)에 의하여 $H^\bullet(\mathbb{P}(E))$은 $1,a,\ldots,a^{n-1}$을 basis로 하는 $H^\bullet(B)$ 위의 자유가군이다. 이 basis에서 $1$에 대응하는 성분이 $\pi^\ast\alpha=\pi^\ast\alpha\smile 1$이고 $\Phi$가 isomorphism이므로 $\pi^\ast$은 단사이다.
+이다. 따라서 $1,a,\ldots,a^{n-1}$의 fiber로의 restriction은 $H^\bullet(\CP^{n-1})$의 basis를 이룬다. $H^\bullet(\CP^{n-1})$은 유한 rank의 free module이므로 [정리 1](#thm1)에 의하여 $H^\bullet(\mathbb{P}(E))$은 $1,a,\ldots,a^{n-1}$을 basis로 하는 $H^\bullet(B)$ 위의 free module이다. 이 basis에서 $1$에 대응하는 성분이 $\pi^\ast\alpha=\pi^\ast\alpha\smile 1$이고 $\Phi$가 isomorphism이므로 $\pi^\ast$은 단사이다.
 :::
 
-Generator로 $a=c_1(\gamma_E)$ 대신 그 dual $\gamma_E^\vee$의 first Chern class를 택해도 거듭제곱들이 같은 자유가군의 basis를 이루므로 결과는 같다. [정리 3](#thm3)은 projective bundle의 cohomology가 밑공간의 cohomology 위에서 tautological class $a$의 거듭제곱들로 완전히 펼쳐짐을 뜻한다.
+Generator로 $a=c_1(\gamma_E)$ 대신 그 dual $\gamma_E^\vee$의 first Chern class를 택해도 거듭제곱들이 같은 free module의 basis를 이루므로 결과는 같다. [정리 3](#thm3)은 projective bundle의 cohomology가 밑공간의 cohomology 위에서 tautological class $a$의 거듭제곱들로 완전히 펼쳐짐을 뜻한다.
 
 ::: 참고 4
 [정리 3](#thm3)은 사실 관계식까지 담아 정밀하게 적을 수 있다. Tautological line bundle의 dual $\gamma_E^\vee$의 first Chern class를 $\xi=c_1(\gamma_E^\vee)$라 하면, $H^\bullet(\mathbb{P}(E))$은 $H^\bullet(B)$-대수로서 generator $\xi$가 유일한 관계식
