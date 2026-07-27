@@ -14,7 +14,7 @@ published: false
 translated_at: 2026-07-26T19:15:03+00:00
 translation_source: kimi-cli
 ---
-We agreed to read a scheme morphism $f: X \rightarrow S$ as a family parametrized by $S$ ([§Morphisms of Schemes, ⁋Example 10](/en/math/scheme_theory/morphism_of_schemes#ex10)), and defined the member of this family at $s\in S$ as the fiber $X_s=X\times_S\Spec \kappa(s)$. ([§Fiber Products, ⁋Definition 12](/en/math/scheme_theory/fiber_products#def12)) However, how nicely this family behaves is information we cannot yet verify.
+We agreed to read a scheme morphism $\varphi: X \rightarrow S$ as a family parametrized by $S$ ([§Morphisms of Schemes, ⁋Example 10](/en/math/scheme_theory/morphism_of_schemes#ex10)), and defined the member of this family at $s\in S$ as the fiber $X_s=X\times_S\Spec \kappa(s)$. ([§Fiber Products, ⁋Definition 12](/en/math/scheme_theory/fiber_products#def12)) However, how nicely this family behaves is information we cannot yet verify.
 
 Indeed, such a family can behave badly; consider
 
@@ -26,7 +26,7 @@ What goes wrong algebraically is revealed by computing this fiber directly. Let 
 
 $$\Spec \kappa(t_0)\rightarrow \Spec A$$
 
-induced by the projection $A\rightarrow \kappa(t_0)$ to the residue field $\kappa(t_0)=A/(t-t_0)$. That is, the fiber $X_{t_0}$ over $t_0$ is the pullback of this point along $f$, i.e. the following diagram
+induced by the projection $A\rightarrow \kappa(t_0)$ to the residue field $\kappa(t_0)=A/(t-t_0)$. That is, the fiber $X_{t_0}$ over $t_0$ is the pullback of this point along $\varphi$, i.e. the following diagram
 
 {% diagram Math/Scheme_Theory/Flat_Morphisms-1.svg width="11.64em" alt="fiber_as_pullback" %}
 
@@ -57,24 +57,24 @@ The definition of a flat module and its basic criteria are essentially the machi
 As pointed out above, the condition we want is to bring the flat module from commutative algebra into geometry geometrically.
 
 ::: Definition 1
-A morphism $f: X \rightarrow Y$ is called *flat* if for every $x \in X$, the local ring $\mathcal{O}_{X,x}$ is flat as an $\mathcal{O}_{Y,f(x)}$-module. Additionally, if the corresponding morphism of topological spaces is surjective, we call it *faithfully flat*.
+A morphism $\varphi: X \rightarrow Y$ is called *flat* if for every $x \in X$, the local ring $\mathcal{O}_{X,x}$ is flat as an $\mathcal{O}_{Y,\varphi(x)}$-module. Additionally, if the corresponding morphism of topological spaces is surjective, we call it *faithfully flat*.
 :::
 
 Although flatness in the above definition is given as a local condition at each point, in the affine case it can be rewritten as a global condition.
 
 ::: Lemma 2
-For a ring homomorphism $\varphi: A \rightarrow B$ inducing the morphism $f: \Spec B \rightarrow \Spec A$, $f$ being flat is equivalent to $B$ being flat as an $A$-module.
+For a ring homomorphism $\phi: A \rightarrow B$ inducing the morphism $\varphi: \Spec B \rightarrow \Spec A$, $\varphi$ being flat is equivalent to $B$ being flat as an $A$-module.
 :::
 ::: Proof
-For notational convenience, whenever $\mathfrak{q}\in \Spec B$ is given we write $\mathfrak{p}=\varphi^{-1}(\mathfrak{q})$.
+For notational convenience, whenever $\mathfrak{q}\in \Spec B$ is given we write $\mathfrak{p}=\phi^{-1}(\mathfrak{q})$.
 
 First assume $B$ is $A$-flat. Since localization $B \rightarrow B_\mathfrak{q}$ is flat ([[Commutative Algebra] §Properties of Localization, ⁋Proposition 2](/en/math/commutative_algebra/properties_of_localization#prop2)), the functor $-\otimes_AB_\mathfrak{q}$ is the composition of $-\otimes_AB$ and $-\otimes_BB_\mathfrak{q}$, hence exact. That is, $B_\mathfrak{q}$ is $A$-flat. On the other hand, since $B_\mathfrak{q}$ is an $A_\mathfrak{p}$-algebra we have $A_\mathfrak{p}\otimes_AB_\mathfrak{q}\cong B_\mathfrak{q}$, and thus for any $A_\mathfrak{p}$-module $M$,
 
 $$M\otimes_AB_\mathfrak{q}\cong M\otimes_{A_\mathfrak{p}}(A_\mathfrak{p}\otimes_AB_\mathfrak{q})\cong M\otimes_{A_\mathfrak{p}}B_\mathfrak{q}$$
 
-holds. Now an injective map $M'\hookrightarrow M$ of $A_\mathfrak{p}$-modules is also an injective map of $A$-modules, so $M'\otimes_AB_\mathfrak{q} \rightarrow M\otimes_AB_\mathfrak{q}$ is injective, and by the above isomorphism $M'\otimes_{A_\mathfrak{p}}B_\mathfrak{q} \rightarrow M\otimes_{A_\mathfrak{p}}B_\mathfrak{q}$ is also injective. That is, $\mathcal{O}_{\Spec B,\mathfrak{q}}=B_\mathfrak{q}$ is $\mathcal{O}_{\Spec A,\mathfrak{p}}=A_\mathfrak{p}$-flat, and since $\mathfrak{q}$ was arbitrary, $f$ is flat.
+holds. Now an injective map $M'\hookrightarrow M$ of $A_\mathfrak{p}$-modules is also an injective map of $A$-modules, so $M'\otimes_AB_\mathfrak{q} \rightarrow M\otimes_AB_\mathfrak{q}$ is injective, and by the above isomorphism $M'\otimes_{A_\mathfrak{p}}B_\mathfrak{q} \rightarrow M\otimes_{A_\mathfrak{p}}B_\mathfrak{q}$ is also injective. That is, $\mathcal{O}_{\Spec B,\mathfrak{q}}=B_\mathfrak{q}$ is $\mathcal{O}_{\Spec A,\mathfrak{p}}=A_\mathfrak{p}$-flat, and since $\mathfrak{q}$ was arbitrary, $\varphi$ is flat.
 
-Conversely, assume $f$ is flat. For each $\mathfrak{q}$, $B_\mathfrak{q}$ is $A_\mathfrak{p}$-flat and $A \rightarrow A_\mathfrak{p}$ is flat, so by the same argument as above $B_\mathfrak{q}$ is $A$-flat. Now choose an injective map $M'\hookrightarrow M$ of $A$-modules and let
+Conversely, assume $\varphi$ is flat. For each $\mathfrak{q}$, $B_\mathfrak{q}$ is $A_\mathfrak{p}$-flat and $A \rightarrow A_\mathfrak{p}$ is flat, so by the same argument as above $B_\mathfrak{q}$ is $A$-flat. Now choose an injective map $M'\hookrightarrow M$ of $A$-modules and let
 
 $$K=\ker(M'\otimes_AB \longrightarrow M\otimes_AB).$$
 
@@ -86,8 +86,8 @@ By this lemma, when checking flatness we can almost always use the tools of comm
 ::: Proposition 3
 Flat morphisms are closed under base change and composition. That is, the following hold.
 
-1. If $f: X \rightarrow Y$ is flat and $Z \rightarrow Y$ is any morphism, then the base change $X \times_Y Z \rightarrow Z$ is flat. ([§Fiber Products](/en/math/scheme_theory/fiber_products))
-2. If $f: X \rightarrow Y$ and $g: Y \rightarrow Z$ are both flat, then the composition $g \circ f: X \rightarrow Z$ is also flat.
+1. If $\varphi: X \rightarrow Y$ is flat and $Z \rightarrow Y$ is any morphism, then the base change $X \times_Y Z \rightarrow Z$ is flat. ([§Fiber Products](/en/math/scheme_theory/fiber_products))
+2. If $\varphi: X \rightarrow Y$ and $\psi: Y \rightarrow Z$ are both flat, then the composition $\psi \circ \varphi: X \rightarrow Z$ is also flat.
 :::
 ::: Proof
 By [Lemma 2](#lem2), both reduce to the affine case.
@@ -130,7 +130,7 @@ By [Lemma 2](#lem2), this is equivalent to $B$ being $A$-flat. Since $A$ is a PI
 
 That is, for a family over $\mathbb{K}[t]$ to be flat is the same as its coordinate ring having no torsion as a $\mathbb{K}[t]$-module. A torsion element is one killed by a single function from the base, and geometrically a component trapped in a single fiber gives rise to such an element.
 
-To state this precisely we prepare some terminology. A morphism $g: Z \rightarrow Y$ is called *dominant* if its image is dense in $Y$, i.e. $\overline{g(Z)}=Y$. We have already treated the same condition for rational maps between varieties. ([[Algebraic Varieties] §Rational Maps, ⁋Definition 8](/en/math/algebraic_varieties/rational_maps#def8)) Below, saying an irreducible component $Z$ of $X$ dominates the base means that after giving $Z$ a reduced closed subscheme structure, the composition of the inclusion with $f$ is dominant.
+To state this precisely we prepare some terminology. A morphism $g: Z \rightarrow Y$ is called *dominant* if its image is dense in $Y$, i.e. $\overline{g(Z)}=Y$. We have already treated the same condition for rational maps between varieties. ([[Algebraic Varieties] §Rational Maps, ⁋Definition 8](/en/math/algebraic_varieties/rational_maps#def8)) Below, saying an irreducible component $Z$ of $X$ dominates the base means that after giving $Z$ a reduced closed subscheme structure, the composition of the inclusion with $\varphi$ is dominant.
 
 ::: Corollary 6
 Let $B$ be a Noetherian $\mathbb{K}[t]$-algebra and assume $X=\Spec B$ is reduced. Then $X \rightarrow \mathbb{A}^1_\mathbb{K}$ is flat if and only if every irreducible component of $X$ dominates $\mathbb{A}^1_\mathbb{K}$.
@@ -200,11 +200,11 @@ $$B=\mathbb{K}[t]\times \mathbb{K},$$
 
 and indeed writing out the prime ideals of $B$ directly makes this picture clear. Since $e=(0,1)$ satisfies $e(1-e)=0$, we know that any prime ideal of $B$ contains exactly one of $e$ and $1-e$, and those containing $e$ correspond to prime ideals of $B/(0\times \mathbb{K})=\mathbb{K}[t]$, while those containing $1-e$ correspond to prime ideals of $B/(\mathbb{K}[t]\times 0)=\mathbb{K}$. This can be represented in the plane $\mathbb{A}^2_\mathbb{K}$ as $X=Z(t\x, \x^2-\x)$.
 
-Now define $\varphi:\mathbb{K}[t] \rightarrow B$ by $t\mapsto (t,0)$. Then $\varphi(f)=(f, f(0))$, so
+Now define $\phi:\mathbb{K}[t] \rightarrow B$ by $t\mapsto (t,0)$. Then $\phi(f)=(f, f(0))$, so
 
 $$\varphi^{-1}(\mathfrak{p}\times \mathbb{K})=\mathfrak{p},\qquad \varphi^{-1}(\mathbb{K}[t]\times 0)=(t).$$
 
-That is, every point of the affine line except the origin, which is the target of $\Spec\varphi$, has exactly the same point of $X$ as the unique point of its fiber, but the fiber over the origin has two points: the origin of $X$ and one point above the origin. That is, the dimension of the fiber is $0$ everywhere, but the number of points making up the fiber jumps from $1$ to $2$.
+That is, every point of the affine line except the origin, which is the target of $\Spec\phi$, has exactly the same point of $X$ as the unique point of its fiber, but the fiber over the origin has two points: the origin of $X$ and one point above the origin. That is, the dimension of the fiber is $0$ everywhere, but the number of points making up the fiber jumps from $1$ to $2$.
 
 That this is not flat is because $(0,1)\neq 0$ while $t\cdot (0,1)=0$, so $t$ is a zerodivisor in $B$. ([Proposition 5](#prop5)) Since $X$ is reduced, we obtain the same conclusion from [Corollary 6](#cor6), because the isolated point among the two components cannot dominate $\mathbb{A}^1_\mathbb{K}$.
 :::
@@ -230,16 +230,16 @@ Looking at these three cases, there are two interesting things. First, although 
 Now in the remaining part of the post we examine more geometric properties of flat morphisms. For this, two preparations are needed, and this section is for them. Both of these preparations can be proved using [[Commutative Algebra] §Noether Normalization, ⁋Theorem 5](/en/math/commutative_algebra/noether_normalization#thm5).
 
 ::: Proposition 11 (Generic flatness)
-Let $Y$ be a Noetherian integral scheme and $f: X \rightarrow Y$ a finite type morphism. Then there exists a dense open subset $U$ of $Y$ such that $f\rvert^U: f^{-1}(U) \rightarrow U$ is flat.
+Let $Y$ be a Noetherian integral scheme and $\varphi: X \rightarrow Y$ a finite type morphism. Then there exists a dense open subset $U$ of $Y$ such that $\varphi\rvert^U: \varphi^{-1}(U) \rightarrow U$ is flat.
 :::
 ::: Proof
 Since $Y$ is irreducible, every nonempty open subset of $Y$ is dense. Thus it suffices to fix one affine open $V=\Spec A$ of $Y$ and find $U$ inside it. Since $Y$ is an integral scheme, $A=\mathcal{O}_Y(V)$ is an integral domain, and since the affine open of a Noetherian scheme is the spectrum of a Noetherian ring, $A$ is also a Noetherian ring. ([§Topology of Schemes, ⁋Lemma 13](/en/math/scheme_theory/topology_of_schemes#lem13))
 
-On the other hand, since $f$ is of finite type, $f^{-1}(V)$ is covered by finitely many affine opens $\Spec B_1,\ldots, \Spec B_k$ ([§Properties of Scheme Morphisms, ⁋Definition 14](/en/math/scheme_theory/properties_of_scheme_morphisms#def14)), and each $B_i$ is a finite type $A$-algebra. Applying [[Commutative Algebra] §Noether Normalization, ⁋Theorem 5](/en/math/commutative_algebra/noether_normalization#thm5) to $M=B_i$, there exists $0\neq a_i\in A$ such that $(B_i)_{a_i}$ is a free $A_{a_i}$-module. Let $a=a_1\cdots a_k$; then each $(B_i)_a$ is a localization of the free module $(B_i)_{a_i}$ and hence remains a free $A_a$-module, and since free modules are flat, by [Lemma 2](#lem2)
+On the other hand, since $\varphi$ is of finite type, $\varphi^{-1}(V)$ is covered by finitely many affine opens $\Spec B_1,\ldots, \Spec B_k$ ([§Properties of Scheme Morphisms, ⁋Definition 14](/en/math/scheme_theory/properties_of_scheme_morphisms#def14)), and each $B_i$ is a finite type $A$-algebra. Applying [[Commutative Algebra] §Noether Normalization, ⁋Theorem 5](/en/math/commutative_algebra/noether_normalization#thm5) to $M=B_i$, there exists $0\neq a_i\in A$ such that $(B_i)_{a_i}$ is a free $A_{a_i}$-module. Let $a=a_1\cdots a_k$; then each $(B_i)_a$ is a localization of the free module $(B_i)_{a_i}$ and hence remains a free $A_a$-module, and since free modules are flat, by [Lemma 2](#lem2)
 
 $$\Spec (B_i)_a \longrightarrow \Spec A_a=D(a)$$
 
-is flat. Since flatness is a local condition on $X$ and the $\Spec (B_i)_a$ cover $f^{-1}(D(a))$, the map $f^{-1}(D(a)) \rightarrow D(a)$ is flat. Since $A$ is an integral domain and $a\neq 0$, $D(a)$ is nonempty, so we can take $U=D(a)$ as the open set.
+is flat. Since flatness is a local condition on $X$ and the $\Spec (B_i)_a$ cover $\varphi^{-1}(D(a))$, the map $\varphi^{-1}(D(a)) \rightarrow D(a)$ is flat. Since $A$ is an integral domain and $a\neq 0$, $D(a)$ is nonempty, so we can take $U=D(a)$ as the open set.
 :::
 
 The second proposition concerns the shape of the image. While the image of a general morphism is neither open nor closed, the image of a finite type morphism is always a "nice" set in the following sense.
@@ -251,10 +251,10 @@ A subset of a topological space $T$ is called *constructible* if it can be writt
 Intuitively, a constructible subset is one that can be cut out by the zero locus of finitely many equations and by its complement, matching the pieces of geometric objects we consider. More precisely, a locally closed subset is written as the intersection $U\cap Z$ of an open and a closed set, and its complement is again a union of two locally closed subsets $(T\setminus U)\cup(T\setminus Z)$, so ([[Topology] §Quotient Spaces, ⁋Proposition 2](/en/math/topology/quotient_spaces#prop2)) we know that the collection of constructible subsets is closed under finite unions, finite intersections, and complements.
 
 ::: Theorem 13 (Chevalley)
-For a Noetherian scheme $Y$ and a finite type morphism $f: X \rightarrow Y$, $f(X)$ is a constructible subset of $Y$.
+For a Noetherian scheme $Y$ and a finite type morphism $\varphi: X \rightarrow Y$, $\varphi(X)$ is a constructible subset of $Y$.
 :::
 ::: Proof
-Since $Y$ is Noetherian it is covered by finitely many affine opens $V_j$, and since $f$ is of finite type each $f^{-1}(V_j)$ is also covered by finitely many affine opens. Thus $f(X)$ is a finite union of images of morphisms of the form $\Spec B \rightarrow \Spec A$. A constructible subset of an open set $V_j$ is a constructible subset of $Y$, and a finite union of constructible subsets is constructible, so it suffices to show the case where $Y=\Spec A$, $X=\Spec B$ from the start, and $B$ is a finite type $A$-algebra.
+Since $Y$ is Noetherian it is covered by finitely many affine opens $V_j$, and since $\varphi$ is of finite type each $\varphi^{-1}(V_j)$ is also covered by finitely many affine opens. Thus $\varphi(X)$ is a finite union of images of morphisms of the form $\Spec B \rightarrow \Spec A$. A constructible subset of an open set $V_j$ is a constructible subset of $Y$, and a finite union of constructible subsets is constructible, so it suffices to show the case where $Y=\Spec A$, $X=\Spec B$ from the start, and $B$ is a finite type $A$-algebra via a ring homomorphism $\phi: A \rightarrow B$.
 
 This affine case is solved by Noetherian induction on closed subsets of $Y$. For a closed subset $Z$ of $Y=\Spec A$, let the statement $P(Z)$ be:
 
@@ -268,21 +268,21 @@ Now let $\mathfrak{p}_1,\ldots, \mathfrak{p}_k$ be the minimal primes of $A$. Th
 
 $$f(X)=\bigcup_{j=1}^k f\big(X\times_Y V(\mathfrak{p}_j)\big),$$
 
-and each base change $X\times_YV(\mathfrak{p}_j)=\Spec (B\otimes_AA/\mathfrak{p}_j) \rightarrow V(\mathfrak{p}_j)$ is still affine and of finite type, so by the induction hypothesis $P(V(\mathfrak{p}_j))$ each term is constructible and hence $f(X)$ is constructible. Therefore it suffices to consider only the case $k=1$, i.e. $A$ is an integral domain.
+and each base change $X\times_YV(\mathfrak{p}_j)=\Spec (B\otimes_AA/\mathfrak{p}_j) \rightarrow V(\mathfrak{p}_j)$ is still affine and of finite type, so by the induction hypothesis $P(V(\mathfrak{p}_j))$ each term is constructible and hence $\varphi(X)$ is constructible. Therefore it suffices to consider only the case $k=1$, i.e. $A$ is an integral domain.
 
 The case $B=0$ is trivial, so assume $B\neq 0$. Then by [[Commutative Algebra] §Noether Normalization, ⁋Theorem 5](/en/math/commutative_algebra/noether_normalization#thm5), there exists $0\neq a\in A$ such that $B_a$ is a free $A_a$-module. The case where $a$ is a unit is likewise trivial, so assume $a$ is a non-unit. In this case, since $A$ is an integral domain, $V(a)$ is a proper closed subset of $Y$.
 
-First, if $B_a=0$, this means $\varphi(a)$ is nilpotent in $B$, so $\varphi(a)$ belongs to every prime ideal of $B$. Thus $f(X)\subseteq V(a)$, and $f(X)$ equals the image of the base change $X\times_YV(a) \rightarrow V(a)$, so it is constructible by the induction hypothesis $P(V(a))$.
+First, if $B_a=0$, this means $\phi(a)$ is nilpotent in $B$, so $\phi(a)$ belongs to every prime ideal of $B$. Thus $\varphi(X)\subseteq V(a)$, and $\varphi(X)$ equals the image of the base change $X\times_YV(a) \rightarrow V(a)$, so it is constructible by the induction hypothesis $P(V(a))$.
 
 Finally, consider the case $B_a\neq 0$ so that $B_a$ is a nonzero free $A_a$-module. For any $\mathfrak{p}\in D(a)$, letting $r$ be the rank of $B_a$,
 
 $$B_a\otimes_{A_a}\kappa(\mathfrak{p})\cong \kappa(\mathfrak{p})^{\oplus r}\neq 0$$
 
-so the fiber over $\mathfrak{p}$ is nonempty, and therefore $D(a)\subseteq f(X)$. Then
+so the fiber over $\mathfrak{p}$ is nonempty, and therefore $D(a)\subseteq \varphi(X)$. Then
 
 $$f(X)=D(a)\cup \big(f(X)\cap V(a)\big)$$
 
-and $f(X)\cap V(a)$ is the image of the base change $X\times_YV(a) \rightarrow V(a)$, so it is constructible by the induction hypothesis $P(V(a))$. Since $D(a)$ is open and hence constructible, $f(X)$ is constructible.
+and $\varphi(X)\cap V(a)$ is the image of the base change $X\times_YV(a) \rightarrow V(a)$, so it is constructible by the induction hypothesis $P(V(a))$. Since $D(a)$ is open and hence constructible, $\varphi(X)$ is constructible.
 :::
 
 Finally, we also record when a constructible set becomes open.
@@ -313,14 +313,14 @@ Since $F$ is closed under specialization, $Z_j=\overline{\{z_j\}}\subseteq F$, a
 Now that all preparations are complete, let us examine the geometric meaning of flatness. The content of flatness lies in controlling how fibers connect to each other, and its starting point is the following observation that a flat local homomorphism is automatically faithfully flat.
 
 ::: Lemma 15
-Let $\varphi: (A,\mathfrak{m}) \rightarrow (B,\mathfrak{n})$ be a local homomorphism between local rings that makes $B$ a flat $A$-module. Then for any nonzero $A$-module $M$, we have $M\otimes_AB\neq 0$, and in particular $\Spec B \rightarrow \Spec A$ is surjective.
+Let $\phi: (A,\mathfrak{m}) \rightarrow (B,\mathfrak{n})$ be a local homomorphism between local rings that makes $B$ a flat $A$-module. Then for any nonzero $A$-module $M$, we have $M\otimes_AB\neq 0$, and in particular $\Spec B \rightarrow \Spec A$ is surjective.
 :::
 ::: Proof
 Choose $0\neq \xi\in M$. Since $\ann(\xi)$ is a proper ideal of $A$, we have $\ann(\xi)\subseteq \mathfrak{m}$, and $A/\ann(\xi)\cong A\xi$ is a submodule of $M$. Applying the flat functor $-\otimes_AB$ gives the injective map
 
 $$B/\ann(\xi)B\cong (A/\ann(\xi))\otimes_AB\hookrightarrow M\otimes_AB.$$
 
-However, since $\varphi$ is a local homomorphism, $\ann(\xi)B\subseteq \mathfrak{m}B\subseteq \mathfrak{n}\subsetneq B$, and therefore $B/\ann(\xi)B\neq 0$. That is, $M\otimes_AB\neq 0$.
+However, since $\phi$ is a local homomorphism, $\ann(\xi)B\subseteq \mathfrak{m}B\subseteq \mathfrak{n}\subsetneq B$, and therefore $B/\ann(\xi)B\neq 0$. That is, $M\otimes_AB\neq 0$.
 
 Now for any $\mathfrak{p}\in \Spec A$, setting $M=\kappa(\mathfrak{p})$ we have $\kappa(\mathfrak{p})\neq 0$, so the ring
 
@@ -332,12 +332,12 @@ representing the fiber is nonzero and hence has a prime ideal. The point of $\Sp
 From this we obtain the *going-down* property, that a flat morphism lifts generizations. ([[Commutative Algebra] §System of Parameters, ⁋Lemma 8](/en/math/commutative_algebra/system_of_parameters#lem8))
 
 ::: Proposition 16
-Let $f: X \rightarrow Y$ be a flat morphism and $x \in X$ a point, and let $y'$ be a generization of $y=f(x)$, i.e. a point $y'$ with $y \in \overline{\{y'\}}$. Then there exists a generization $x'$ of $x$ such that $f(x')=y'$.
+Let $\varphi: X \rightarrow Y$ be a flat morphism and $x \in X$ a point, and let $y'$ be a generization of $y=\varphi(x)$, i.e. a point $y'$ with $y \in \overline{\{y'\}}$. Then there exists a generization $x'$ of $x$ such that $\varphi(x')=y'$.
 :::
 ::: Proof
-Choose an affine open neighborhood $V=\Spec A$ of $y$, and then an affine open neighborhood $U=\Spec B$ of $x$ inside $f^{-1}(V)$. Since $y'$ is a generization of $y$, we have $y'\in V$. Thus it suffices to show the case where $X=\Spec B$, $Y=\Spec A$, and $x=\mathfrak{q}$, $y=\mathfrak{p}=\varphi^{-1}(\mathfrak{q})$, $y'=\mathfrak{p}'\subseteq \mathfrak{p}$.
+Choose an affine open neighborhood $V=\Spec A$ of $y$, and then an affine open neighborhood $U=\Spec B$ of $x$ inside $\varphi^{-1}(V)$. Since $y'$ is a generization of $y$, we have $y'\in V$. Thus, writing $\phi: A \rightarrow B$ for the ring homomorphism corresponding to $\varphi$, it suffices to show the case where $X=\Spec B$, $Y=\Spec A$, and $x=\mathfrak{q}$, $y=\mathfrak{p}=\phi^{-1}(\mathfrak{q})$, $y'=\mathfrak{p}'\subseteq \mathfrak{p}$.
 
-By [Lemma 2](#lem2), $A_\mathfrak{p} \rightarrow B_\mathfrak{q}$ is a flat local homomorphism, so by [Lemma 15](#lem15), $\Spec B_\mathfrak{q} \rightarrow \Spec A_\mathfrak{p}$ is surjective. In particular, there exists a point of $\Spec B_\mathfrak{q}$ lying over $\mathfrak{p}'A_\mathfrak{p}\in \Spec A_\mathfrak{p}$, and pulling this back to a prime ideal of $B$ gives $\mathfrak{q}'\subseteq \mathfrak{q}$ with $\varphi^{-1}(\mathfrak{q}')=\mathfrak{p}'$. Since $\mathfrak{q}'\subseteq \mathfrak{q}$ means $x\in \overline{\{x'\}}$, the point $x'=\mathfrak{q}'$ is the desired one.
+By [Lemma 2](#lem2), $A_\mathfrak{p} \rightarrow B_\mathfrak{q}$ is a flat local homomorphism, so by [Lemma 15](#lem15), $\Spec B_\mathfrak{q} \rightarrow \Spec A_\mathfrak{p}$ is surjective. In particular, there exists a point of $\Spec B_\mathfrak{q}$ lying over $\mathfrak{p}'A_\mathfrak{p}\in \Spec A_\mathfrak{p}$, and pulling this back to a prime ideal of $B$ gives $\mathfrak{q}'\subseteq \mathfrak{q}$ with $\phi^{-1}(\mathfrak{q}')=\mathfrak{p}'$. Since $\mathfrak{q}'\subseteq \mathfrak{q}$ means $x\in \overline{\{x'\}}$, the point $x'=\mathfrak{q}'$ is the desired one.
 :::
 
 That is, a flat morphism always lifts generizations from the base upward. In particular, if $Y$ is irreducible with generic point $y$, then any point of $X$ is a specialization of some point of the generic fiber $X_y$, and therefore no component of $X$ can be trapped in a single fiber. What was observed in [Corollary 6](#cor6) for families over curves holds in general.
@@ -345,14 +345,14 @@ That is, a flat morphism always lifts generizations from the base upward. In par
 The first consequence of going-down is an exact equality for dimension. For a flat morphism, the local dimension of $X$ decomposes exactly into the local dimension of the base plus the local dimension of the fiber.
 
 ::: Proposition 17
-For a flat morphism $f: X \rightarrow Y$ between locally Noetherian schemes and a point $x\in X$, $y=f(x)$,
+For a flat morphism $\varphi: X \rightarrow Y$ between locally Noetherian schemes and a point $x\in X$, $y=\varphi(x)$,
 
 $$\dim \mathcal{O}_{X,x}=\dim \mathcal{O}_{Y,y}+\dim \mathcal{O}_{X_y,x}$$
 
-holds. Here $X_y=f^{-1}(y)$ is the fiber at $y$.
+holds. Here $X_y=\varphi^{-1}(y)$ is the fiber at $y$.
 :::
 ::: Proof
-First we check what the local ring of the fiber is. Localizing to the affine situation $X=\Spec B$, $Y=\Spec A$ and letting $x=\mathfrak{q}$, $y=\mathfrak{p}=\varphi^{-1}(\mathfrak{q})$, by definition $X_y=\Spec (B\otimes_A\kappa(\mathfrak{p}))$, and the local ring at the point corresponding to $x$ is
+First we check what the local ring of the fiber is. Localizing to the affine situation $X=\Spec B$, $Y=\Spec A$ and, writing $\phi: A \rightarrow B$ for the ring homomorphism corresponding to $\varphi$, letting $x=\mathfrak{q}$, $y=\mathfrak{p}=\phi^{-1}(\mathfrak{q})$, by definition $X_y=\Spec (B\otimes_A\kappa(\mathfrak{p}))$, and the local ring at the point corresponding to $x$ is
 
 $$\mathcal{O}_{X_y,x}=(B\otimes_A\kappa(\mathfrak{p}))_\mathfrak{q}\cong B_\mathfrak{q}\otimes_{A_\mathfrak{p}}\kappa(\mathfrak{p})\cong B_\mathfrak{q}/\mathfrak{p}B_\mathfrak{q}=\mathcal{O}_{X,x}/\mathfrak{m}_y\mathcal{O}_{X,x}.$$
 
@@ -361,7 +361,7 @@ That is, the local ring of the fiber is $\mathcal{O}_{X,x}$ divided by the maxim
 On the other hand, since $X$ and $Y$ are locally Noetherian, $\mathcal{O}_{X,x}$ and $\mathcal{O}_{Y,y}$ are Noetherian local rings, and by [Lemma 2](#lem2), $\mathcal{O}_{Y,y} \rightarrow \mathcal{O}_{X,x}$ is a flat local homomorphism. Therefore applying [[Commutative Algebra] §System of Parameters, ⁋Theorem 9](/en/math/commutative_algebra/system_of_parameters#thm9) gives the desired equality.
 :::
 
-If $X$ and $Y$ are finite type integral schemes over a field $\mathbb{K}$, then at closed points $\dim \mathcal{O}_{X,x}=\dim X$ holds, so for a closed point $y$ in the image of $f$, [Proposition 17](#prop17) takes the familiar form
+If $X$ and $Y$ are finite type integral schemes over a field $\mathbb{K}$, then at closed points $\dim \mathcal{O}_{X,x}=\dim X$ holds, so for a closed point $y$ in the image of $\varphi$, [Proposition 17](#prop17) takes the familiar form
 
 $$\dim X_y=\dim X-\dim Y.$$
 
@@ -370,12 +370,12 @@ This equality explains once more the non-flatness of the example from the introd
 Another geometric property of flat morphisms is that they send open sets to open sets, which is a consequence of [Theorem 13](#thm13) and [Lemma 14](#lem14).
 
 ::: Proposition 18
-For a Noetherian scheme $Y$ and a flat finite type morphism $f: X \rightarrow Y$, $f$ is an open map. That is, for any open set $U\subseteq X$, $f(U)$ is an open set of $Y$.
+For a Noetherian scheme $Y$ and a flat finite type morphism $\varphi: X \rightarrow Y$, $\varphi$ is an open map. That is, for any open set $U\subseteq X$, $\varphi(U)$ is an open set of $Y$.
 :::
 ::: Proof
-Since $Y$ is Noetherian and $f$ is of finite type, each affine open covering $X$ is the spectrum of a finite type algebra over a Noetherian ring and hence Noetherian by [[Commutative Algebra] §Basic Notions, ⁋Theorem 12](/en/math/commutative_algebra/basic_notions#thm12), and since $f$ is quasi-compact, $X$ is also quasi-compact. That is, $X$ is a Noetherian scheme in the sense of [§Topology of Schemes, ⁋Definition 14](/en/math/scheme_theory/topology_of_schemes#def14), and in particular Noetherian as a topological space. Then an open set $U\subseteq X$ is again Noetherian by [[Topology] §Dimension, ⁋Proposition 13](/en/math/topology/dimension#prop13), hence quasi-compact by [[Topology] §Dimension, ⁋Proposition 12](/en/math/topology/dimension#prop12), and since the inclusion of an open subscheme is flat ([Example 4](#ex4)), by [Proposition 3](#prop3) the composition $f\vert_U: U \rightarrow Y$ is also flat and of finite type. Thus it suffices to show the case $U=X$ from the start, i.e. that $f(X)$ is open.
+Since $Y$ is Noetherian and $\varphi$ is of finite type, each affine open covering $X$ is the spectrum of a finite type algebra over a Noetherian ring and hence Noetherian by [[Commutative Algebra] §Basic Notions, ⁋Theorem 12](/en/math/commutative_algebra/basic_notions#thm12), and since $\varphi$ is quasi-compact, $X$ is also quasi-compact. That is, $X$ is a Noetherian scheme in the sense of [§Topology of Schemes, ⁋Definition 14](/en/math/scheme_theory/topology_of_schemes#def14), and in particular Noetherian as a topological space. Then an open set $U\subseteq X$ is again Noetherian by [[Topology] §Dimension, ⁋Proposition 13](/en/math/topology/dimension#prop13), hence quasi-compact by [[Topology] §Dimension, ⁋Proposition 12](/en/math/topology/dimension#prop12), and since the inclusion of an open subscheme is flat ([Example 4](#ex4)), by [Proposition 3](#prop3) the composition $\varphi\vert_U: U \rightarrow Y$ is also flat and of finite type. Thus it suffices to show the case $U=X$ from the start, i.e. that $\varphi(X)$ is open.
 
-By [Theorem 13](#thm13), $f(X)$ is constructible. Also, if $y\in f(X)$ and a generization $y'$ of $y$ is given, choosing $x$ with $f(x)=y$ and applying [Proposition 16](#prop16) gives $x'$ with $f(x')=y'$, so $y'\in f(X)$. That is, $f(X)$ is closed under generization. Now [Lemma 14](#lem14) gives that $f(X)$ is open.
+By [Theorem 13](#thm13), $\varphi(X)$ is constructible. Also, if $y\in \varphi(X)$ and a generization $y'$ of $y$ is given, choosing $x$ with $\varphi(x)=y$ and applying [Proposition 16](#prop16) gives $x'$ with $\varphi(x')=y'$, so $y'\in \varphi(X)$. That is, $\varphi(X)$ is closed under generization. Now [Lemma 14](#lem14) gives that $\varphi(X)$ is open.
 :::
 
 ## Local Criteria for Flatness
@@ -383,23 +383,23 @@ By [Theorem 13](#thm13), $f(X)$ is constructible. Also, if $y\in f(X)$ and a gen
 Finally, we record criteria for checking flatness at each point. The tool measuring how far $\otimes$ deviates from being left-exact is the left derived functor of $\otimes$, namely $\Tor$. In particular, flatness was characterized by the vanishing of $\Tor_1^A(A/\mathfrak{a}, M)$ for all finitely generated ideals $\mathfrak{a}$ ([[Commutative Algebra] §Flatness, ⁋Proposition 1](/en/math/commutative_algebra/flatness#prop1)), and translating this into the language of geometry gives the following.
 
 ::: Proposition 19
-For a locally Noetherian scheme $Y$, a morphism $f: X \rightarrow Y$ locally of finite type, and points $x\in X$, $y=f(x)$, the following are equivalent: $\mathcal{O}_{X,x}$ is $\mathcal{O}_{Y,y}$-flat, and
+For a locally Noetherian scheme $Y$, a morphism $\varphi: X \rightarrow Y$ locally of finite type, and points $x\in X$, $y=\varphi(x)$, the following are equivalent: $\mathcal{O}_{X,x}$ is $\mathcal{O}_{Y,y}$-flat, and
 
 $$\Tor_1^{\mathcal{O}_{Y,y}}(\kappa(y), \mathcal{O}_{X,x})=0.$$
 :::
 ::: Proof
-Since $Y$ is locally Noetherian, $A=\mathcal{O}_{Y,y}$ is a Noetherian local ring, and since $f$ is locally of finite type, $X$ is also locally Noetherian so $E=\mathcal{O}_{X,x}$ is also a Noetherian local ring. The map $A \rightarrow E$ induced by $f$ is a local homomorphism, so $\mathfrak{m}_yE\subseteq \mathfrak{m}_x$ holds. Now setting $M=E$, since $M$ is a finitely generated $E$-module, all hypotheses of [[Commutative Algebra] §Flatness and Localization, ⁋Theorem 1](/en/math/commutative_algebra/local_criterion_for_flatness#thm1) are satisfied, and its conclusion is exactly the claimed equivalence.
+Since $Y$ is locally Noetherian, $A=\mathcal{O}_{Y,y}$ is a Noetherian local ring, and since $\varphi$ is locally of finite type, $X$ is also locally Noetherian so $E=\mathcal{O}_{X,x}$ is also a Noetherian local ring. The map $A \rightarrow E$ induced by $\varphi$ is a local homomorphism, so $\mathfrak{m}_yE\subseteq \mathfrak{m}_x$ holds. Now setting $M=E$, since $M$ is a finitely generated $E$-module, all hypotheses of [[Commutative Algebra] §Flatness and Localization, ⁋Theorem 1](/en/math/commutative_algebra/local_criterion_for_flatness#thm1) are satisfied, and its conclusion is exactly the claimed equivalence.
 :::
 
 Since flatness is essentially a definition about *how* a family moves, knowing only that a morphism is flat at a single point has little geometric meaning. The following theorem resolves this.
 
 ::: Theorem 20 (Openness of the flat locus)
-For a locally Noetherian scheme $Y$ and a morphism $f: X \rightarrow Y$ locally of finite type, the set of points $x\in X$ where $\mathcal{O}_{X,x}$ is $\mathcal{O}_{Y,f(x)}$-flat is an open subset of $X$.
+For a locally Noetherian scheme $Y$ and a morphism $\varphi: X \rightarrow Y$ locally of finite type, the set of points $x\in X$ where $\mathcal{O}_{X,x}$ is $\mathcal{O}_{Y,\varphi(x)}$-flat is an open subset of $X$.
 :::
 
-More generally, the above theorem holds even without any Noetherian condition on $Y$, as long as $f$ is only locally of finite presentation. With some effort, the proof of this theorem could also be done to some extent within what we know, but we omit it for the overall length of this post.
+More generally, the above theorem holds even without any Noetherian condition on $Y$, as long as $\varphi$ is only locally of finite presentation. With some effort, the proof of this theorem could also be done to some extent within what we know, but we omit it for the overall length of this post.
 
-Now by [Theorem 20](#thm20), verifying the vanishing of $\Tor$ at a point via [Proposition 19](#prop19) makes $f\vert_U$ a flat morphism over an open neighborhood $U$ of that point, so results requiring flatness of the entire morphism, such as [Proposition 3](#prop3) or [Proposition 18](#prop18), become applicable. In other words, the points where flatness fails form a closed set, confined to special places where components collide or are trapped in fibers, like the origin in the example from the introduction.
+Now by [Theorem 20](#thm20), verifying the vanishing of $\Tor$ at a point via [Proposition 19](#prop19) makes $\varphi\vert_U$ a flat morphism over an open neighborhood $U$ of that point, so results requiring flatness of the entire morphism, such as [Proposition 3](#prop3) or [Proposition 18](#prop18), become applicable. In other words, the points where flatness fails form a closed set, confined to special places where components collide or are trapped in fibers, like the origin in the example from the introduction.
 
 ## Flatness and Semicontinuity
 
@@ -425,7 +425,7 @@ Then $\mu$ is upper semicontinuous.
 ::: Proof
 Since $M\otimes_A\kappa(\mathfrak{p})=M_\mathfrak{p}/\mathfrak{p}M_\mathfrak{p}$ and $\mathfrak{p}A_\mathfrak{p}$ is the Jacobson radical of $A_\mathfrak{p}$, by [[Commutative Algebra] §Integral Extensions, ⁋Lemma 8](/en/math/commutative_algebra/integral_extension#lem8), $\mu(\mathfrak{p})$ equals the minimum number of elements generating $M_\mathfrak{p}$.
 
-Fix $\mathfrak{p}\in \Spec A$ and let $r=\mu(\mathfrak{p})$. Multiplying the $r$ elements generating $M_\mathfrak{p}$ by denominators, we obtain elements $m_1,\ldots, m_r$ of $M$ whose images generate $M_\mathfrak{p}$. Let $N$ be the cokernel of $\varphi: A^r \rightarrow M$ defined by these; then $N$ is a quotient of $M$ and hence finitely generated, and since $\varphi_\mathfrak{p}$ is surjective, $N_\mathfrak{p}=0$.
+Fix $\mathfrak{p}\in \Spec A$ and let $r=\mu(\mathfrak{p})$. Multiplying the $r$ elements generating $M_\mathfrak{p}$ by denominators, we obtain elements $m_1,\ldots, m_r$ of $M$ whose images generate $M_\mathfrak{p}$. Let $N$ be the cokernel of $\psi: A^r \rightarrow M$ defined by these; then $N$ is a quotient of $M$ and hence finitely generated, and since $\psi_\mathfrak{p}$ is surjective, $N_\mathfrak{p}=0$.
 
 For each generator $n_1,\ldots, n_k$ of $N$, there exists $s_j\notin \mathfrak{p}$ with $s_jn_j=0$, and since $\mathfrak{p}$ is prime, $f=s_1\cdots s_k$ also does not belong to $\mathfrak{p}$. Then $fN=0$, so for any $\mathfrak{q}\in D(f)$ we have $N_\mathfrak{q}=0$, and hence the images of $m_1,\ldots, m_r$ generate $M_\mathfrak{q}$, giving $\mu(\mathfrak{q})\leq r$. Therefore for any $\mathfrak{p}$ with $\mu(\mathfrak{p})\leq i$, we have $\mathfrak{p}\in D(f)\subseteq \{\mu\leq r\}\subseteq \{\mu\leq i\}$, so $\{\mu\leq i\}$ is open.
 :::

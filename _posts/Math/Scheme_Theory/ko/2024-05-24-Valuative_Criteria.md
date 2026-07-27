@@ -5,11 +5,14 @@ excerpt: "Valuative criteria for separated, properness"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/valuative_criteria
+drift_needed: true
 sidebar: 
     nav: "scheme_theory-ko"
 
 date: 2024-05-24
 weight: 15
+
+published: false
 ---
 
 이번 글에서 우리는 separated morphism과 proper morphism을 정의한다. 이들은 위상수학에서 Hausdorff 조건과 compact 조건을 대수기하로 옮겨온 것이라고 생각하면 편하다. 
@@ -217,6 +220,8 @@ $$X\times_SX' \longrightarrow Y\times_SX' \longrightarrow Y\times_SY'$$
 :::
 
 특히 2번과 5번을 함께 쓰면, $Y$가 separated scheme일 때 $Y$-scheme $X$가 separated scheme인 것과 그 구조사상 $X \rightarrow Y$가 separated인 것이 동치임을 안다. Affine scheme은 [보조정리 5](#lem5)에 의하여 언제나 separated scheme이므로, 가령 affine scheme 위의 scheme에 대해서는 separatedness를 구조사상만 보고 판정할 수 있다.
+
+Separatedness는 두 morphism이 언제 같은지를 판정하는 데에도 쓰인다. Reduced scheme $X$와 separated scheme $Y$, 그리고 $X$의 dense open subset $W$ 위에서 일치하는 두 morphism $f,g: X \rightarrow Y$가 주어졌다 하자. 그럼 $f$와 $g$가 유도하는 morphism $h: X \rightarrow Y\times_{\Spec \mathbb{Z}}Y$에 대하여 $f$와 $g$가 일치하는 자리는 $\Delta$를 $h$를 따라 base change한 것으로 주어지고, closed embedding의 base change는 다시 closed embedding이므로 ([§올곱, ⁋보조정리 10](/ko/math/scheme_theory/fiber_products#lem10)) 이는 $X$의 closed subscheme이다. 이 closed subscheme이 $W$를 포함하여 위상적으로 $X$ 전체이므로, 이를 정의하는 ideal sheaf는 $X$의 각 affine open subset $\Spec A$ 위에서 $\mathfrak{N}(A)=0$에 포함되고 ([§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)), 따라서 $f=g$이다. 이를 [§스킴 사상의 성질들, ⁋정의 22](/ko/math/scheme_theory/properties_of_scheme_morphisms#def22)에 적용하면, $Y$가 separated이고 $X$가 reduced일 때 rational map의 동치관계는 두 representative가 $U\cap V$ 전체에서 일치한다는 조건과 같아진다. 그 글에서는 $Y$가 affine인 경우로 이를 확인하였으며, affine scheme이 언제나 separated인 만큼 이는 위 논증의 특수한 경우이다.
 
 ## 고유사상
 
