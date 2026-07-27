@@ -5,14 +5,11 @@ excerpt: "Flat morphisms in algebraic geometry"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/flat_morphisms
-drift_needed: true
 sidebar: 
     nav: "scheme_theory-ko"
 
 date: 2025-02-21
 weight: 14
-
-published: false
 ---
 
 우리는 scheme morphism $\varphi: X \rightarrow S$를 $S$로 parametrize된 family로 읽기로 하였으며 ([§스킴 사이의 사상, ⁋예시 10](/ko/math/scheme_theory/morphism_of_schemes#ex10)), 이 family의 $s\in S$에서의 member를 fiber $X_s=X\times_S\Spec \kappa(s)$로 정의하였다. ([§올곱, ⁋정의 12](/ko/math/scheme_theory/fiber_products#def12)) 그러나 이 family가 얼마나 좋게 행동할지는 현재로서 우리가 확인할 수 없는 정보이다. 
@@ -343,8 +340,7 @@ $y$의 affine open neighborhood $V=\Spec A$를 택하고, 그 다음 $\varphi^{-
 
 즉 flat morphism은 base에서의 generization을 언제나 위로 들어올린다. 특히 $Y$가 irreducible이고 그 generic point가 $y$라면 $X$의 임의의 점은 generic fiber $X_y$의 어떤 점의 specialization이며, 따라서 $X$의 어떤 성분도 fiber 하나에 갇혀 있을 수 없다. [따름정리 6](#cor6)에서 곡선 위의 family에 대하여 관찰한 것이 일반적으로도 성립하는 것이다.
 
-Going-down의 첫 번째 결과는
- 차원에 대한 정확한 등식이다. Flat morphism에서 $X$의 local dimension은 base의 local dimension과 fiber의 local dimension으로 정확히 분해된다.
+Going-down의 첫 번째 결과는 차원에 대한 정확한 등식이다. Flat morphism에서 $X$의 local dimension은 base의 local dimension과 fiber의 local dimension으로 정확히 분해된다.
 
 ::: 명제 17
 Locally Noetherian scheme 사이의 flat morphism $\varphi: X \rightarrow Y$와 점 $x\in X$, $y=\varphi(x)$에 대하여
@@ -363,7 +359,7 @@ $$\mathcal{O}_{X_y,x}=(B\otimes_A\kappa(\mathfrak{p}))_\mathfrak{q}\cong B_\math
 한편 $X$와 $Y$가 locally Noetherian이므로 $\mathcal{O}_{X,x}$와 $\mathcal{O}_{Y,y}$는 Noetherian local ring이고, [보조정리 2](#lem2)에 의하여 $\mathcal{O}_{Y,y} \rightarrow \mathcal{O}_{X,x}$는 flat local homomorphism이다. 따라서 [\[가환대수학\] §매개계, ⁋정리 9](/ko/math/commutative_algebra/system_of_parameters#thm9)를 적용하면 원하는 등식을 얻는다.
 :::
 
-만일 $X$와 $Y$가 field $\mathbb{K}$ 위의 finite type integral scheme인 경우에는 closed point에서 $\dim \mathcal{O}_{X,x}=\dim X$가 성립하므로, $\varphi$의 상에 속하는 closed point $y$에 대하여 [명제 17](#prop17)는 익숙한 형태
+만일 $X$와 $Y$가 field $\mathbb{K}$ 위의 finite type integral scheme인 경우에는 closed point에서 $\dim \mathcal{O}_{X,x}=\dim X$가 성립하므로, $\varphi$의 image에 속하는 closed point $y$에 대하여 [명제 17](#prop17)는 익숙한 형태
 
 $$\dim X_y=\dim X-\dim Y$$
 
@@ -374,7 +370,7 @@ $$\dim X_y=\dim X-\dim Y$$
 Flat morphism의 또 다른 기하학적 성질은 열린집합을 열린집합으로 보낸다는 것으로, 이는 [정리 13](#thm13)과 [보조정리 14](#lem14)의 결과이다. 
 
 ::: 명제 18
-Noetherian scheme $Y$와 flat하고 finite type인 morphism $\varphi: X \rightarrow Y$에 대하여 $\varphi$는 열린 사상이다. 즉 임의의 열린집합 $U\subseteq X$에 대하여 $\varphi(U)$는 $Y$의 열린집합이다.
+Noetherian scheme $Y$와 flat하고 finite type인 morphism $\varphi: X \rightarrow Y$에 대하여 $\varphi$는 open map이다. 즉 임의의 열린집합 $U\subseteq X$에 대하여 $\varphi(U)$는 $Y$의 열린집합이다.
 :::
 ::: 증명
 $Y$가 Noetherian이고 $\varphi$가 finite type이므로, $X$를 덮는 각 affine open은 Noetherian ring 위의 finite type algebra의 spectrum이 되어 [\[가환대수학\] §기본 개념들, ⁋정리 12](/ko/math/commutative_algebra/basic_notions#thm12)에 의하여 Noetherian이고, $\varphi$가 quasi-compact이므로 $X$ 또한 quasi-compact이다. 즉 $X$는 [§스킴의 위상구조, ⁋정의 14](/ko/math/scheme_theory/topology_of_schemes#def14)의 의미에서 Noetherian scheme이며, 특히 위상공간으로서 Noetherian이다. 그럼 열린집합 $U\subseteq X$는 [\[위상수학\] §차원, ⁋명제 13](/ko/math/topology/dimension#prop13)에 의하여 다시 Noetherian이므로 [\[위상수학\] §차원, ⁋명제 12](/ko/math/topology/dimension#prop12)에 의하여 quasi-compact이고, open subscheme의 포함사상은 flat이므로 ([예시 4](#ex4)) [명제 3](#prop3)에 의하여 합성 $\varphi\vert_U: U \rightarrow Y$ 또한 flat하고 finite type이다. 그러므로 처음부터 $U=X$인 경우, 즉 $\varphi(X)$가 열린집합임을 보이면 충분하다.
