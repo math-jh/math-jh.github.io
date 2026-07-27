@@ -5,13 +5,11 @@ excerpt: "Projective space의 closed subscheme과 homogeneous ideal의 대응"
 
 categories: [Math / Scheme Theory]
 permalink: /ko/math/scheme_theory/closed_subschemes_of_projective_spaces
-drift_needed: true
 sidebar: 
     nav: "scheme_theory-ko"
 
 date: 2025-03-08
 weight: 11
-published: false
 
 ---
 
@@ -124,25 +122,25 @@ Homogeneous ideal $\mathfrak{a},\mathfrak{b}\subseteq A_\bullet$에 대하여 �
 마지막 주장은 [정리 3](#thm3)과 1번에 의하여 임의의 closed subscheme이 saturated ideal로부터 얻어지고, 2번이 그러한 ideal의 유일성을 주기 때문이다.
 :::
 
-[명제 5](#prop5)의 둘째 결과는 $\mathfrak{a}^\sat$이 $V_+(\mathfrak{a})$를 정의하는 homogeneous ideal 가운데 가장 큰 것임을 말해준다. $V_+(\mathfrak{b})=V_+(\mathfrak{a})$이면 $\mathfrak{b}\subseteq \mathfrak{b}^\sat=\mathfrak{a}^\sat$이기 때문이다. 앞에서 이보다 일반적인 형태로 언급한 것도 여기서 확인된다. 두 homogeneous ideal $\mathfrak{a}$와 $\mathfrak{b}$가 충분히 큰 degree에서 일치한다 하고 $f\in \mathfrak{a}^\sat$가 degree $d$의 homogeneous element라 하면, 각각의 $i$에 대하여 $\x_i^Nf\in \mathfrak{a}$인 $N$이 존재하고 $\mathfrak{a}$가 ideal이므로 $N$을 얼마든지 키울 수 있으니, $\x_i^Nf$의 degree가 두 ideal이 일치하는 범위에 들도록 잡으면 $\x_i^Nf\in \mathfrak{b}$이다. 즉 $f\in \mathfrak{b}^\sat$이고 대칭으로 $\mathfrak{a}^\sat=\mathfrak{b}^\sat$이므로 두 ideal은 같은 closed subscheme을 정의한다. 또 이 관점에서 보면 [정리 3](#thm3)의 증명이 만든 ideal은 이미 saturated인데, 그 증명의 $T$는 모든 $i$에 대하여 $f/\x_i^{\deg f}\in \mathfrak{b}_i$인 homogeneous element $f$들의 모임이었고 위의 계산은 이것이 정확히 $\mathfrak{a}^\sat$의 homogeneous element들임을 말해주기 때문이다.
+[명제 5](#prop5)의 둘째 결과는 $\mathfrak{a}^\sat$이 $V_+(\mathfrak{a})$를 정의하는 homogeneous ideal 가운데 가장 큰 것임을 말해준다. $V_+(\mathfrak{b})=V_+(\mathfrak{a})$이면 $\mathfrak{b}\subseteq \mathfrak{b}^\sat=\mathfrak{a}^\sat$이기 때문이다. 즉 saturation은 같은 closed subscheme을 정의하는 ideal들 가운데 표준적인 대표를 택하는 연산이고, $\x_i^Nf\in \mathfrak{a}$에서 $N$은 얼마든지 키울 수 있으므로 이 대표는 $\mathfrak{a}$의 충분히 큰 degree 부분만으로 결정된다. 따라서 이 절의 도입부에서 언급했듯, 두 homogeneous ideal이 충분히 큰 degree에서 일치하면 그 saturation이 같고, 따라서 둘은 같은 closed subscheme을 정의한다. 한편 이 관점에서 보면 [정리 3](#thm3)의 증명이 만든 ideal은 이미 saturated인데, 그 증명의 $T$는 모든 $i$에 대하여 $f/\x_i^{\deg f}\in \mathfrak{b}_i$인 homogeneous element $f$들의 모임이었고 위의 계산은 이것이 정확히 $\mathfrak{a}^\sat$의 homogeneous element들임을 말해주기 때문이다.
 
 ::: 예시 6
 $\mathbb{P}^1$에서 $\mathfrak{a}=(\x_0^2,\x_0\x_1)$을 생각하자. $D_+(\x_1)$ 위에서 $\mathfrak{a}_{(\x_1)}$은 $\x_0^2/\x_1^2$과 $\x_0\x_1/\x_1^2=\x_0/\x_1$로 생성되므로 $(\x_0/\x_1)$이고, $D_+(\x_0)$ 위에서는 $\x_0^2/\x_0^2=1$을 포함하므로 $A_{(\x_0)}$ 전체이다. 따라서 $V_+(\mathfrak{a})$는 점 $[0:1]$ 하나로 이루어진 reduced closed subscheme, 곧 $V_+(\x_0)$이다.
 
 이를 saturation으로 다시 읽으면, $\x_0^N\cdot \x_0\in (\x_0^2)$이고 $\x_1^N\cdot \x_0\in (\x_0\x_1)$이므로 $\x_0\in \mathfrak{a}^\sat$이다. 거꾸로 $f\in \mathfrak{a}^\sat$이면 $\x_1^Nf\in \mathfrak{a}\subseteq (\x_0)$인데 $(\x_0)$가 prime ideal이고 $\x_1\notin (\x_0)$이므로 $f\in (\x_0)$이다. 즉 $\mathfrak{a}^\sat=(\x_0)$이며, $\mathfrak{a}$는 이 점을 정의하지만 saturated는 아니다.
 
-Cone의 언어로 보면 $\mathfrak{a}$가 $\mathbb{A}^2$에서 자르는 것은 직선 $\x_0=0$에 원점에서의 embedded point가 얹힌 scheme이다. 실제로 $\mathbb{K}[\x_0,\x_1]/\mathfrak{a}$는 변수의 이름을 바꾸면 [§스킴의 대수구조, ⁋예시 11](/ko/math/scheme_theory/algebra_of_schemes#ex11)의 ring이고, 그 associated point는 직선의 generic point $(\x_0)$과 원점 $(\x_0,\x_1)$ 둘이며 후자가 embedded point이다. ([§스킴의 대수구조, ⁋정의 9](/ko/math/scheme_theory/algebra_of_schemes#def9)) Saturation은 원점에 얹힌 이 성분을 지워 직선만 남기는 연산이고, 원점은 $\mathbb{P}^1$의 어느 chart에도 없으므로 그 차이는 $V_+(\mathfrak{a})$에서 보이지 않는다.
+Cone의 언어로 보면 $\mathfrak{a}$가 $\mathbb{A}^2$에서 자르는 것은 직선 $\x_0=0$에 원점에서의 embedded point가 얹힌 scheme이고 ([§스킴의 대수구조, ⁋예시 11](/ko/math/scheme_theory/algebra_of_schemes#ex11)), saturation은 그 성분을 지워 직선만 남긴다. 원점은 $\mathbb{P}^1$의 어느 chart에도 나타나지 않으므로 그 차이가 $V_+(\mathfrak{a})$에서 보이지 않는 것이다.
 :::
 
 ## Projective scheme
 
-[§사영공간과 Proj 구성](/ko/math/scheme_theory/projective_schemes)에서 우리는 임의의 graded ring $A_\bullet$에 $\Proj$를 취해 scheme을 얻는 방법을 살펴보았지만, 그렇게 얻어지는 scheme들은 우리가 사영공간에서 기대하는 성질을 공유하지 않는다. 가령 $A_\bullet=\mathbb{K}[\x_1,\x_2,\ldots]$이라 두면 $\Proj A_\bullet$은 quasi-compact조차 아니다. 우리가 실제로 다루고 싶은 대상은 사영공간 안에 들어앉는 scheme들이며, 이번 글의 결과는 그러한 scheme들이 정확히 homogeneous ideal로 잘려나오는 것들임을 말해준다. 이제 이를 이름으로 확정한다.
+[\[대수다양체\] §사영다양체, ⁋정의 3](/ko/math/algebraic_varieties/projective_varieties#def3)에서 우리는 homogeneous polynomial들이 $\mathbb{P}^n$에서 자르는 닫힌집합을 projective algebraic set이라 부르고, 그 가운데 irreducible한 것을 projective variety라 불렀다. 이번 글의 결과는 이 정의를 scheme의 언어로 올릴 수 있게 해 준다. 
 
 ::: 정의 7
 Field $\mathbb{K}$ 위의 scheme $X$가 *projective scheme<sub>사영스킴</sub>*이라는 것은 적당한 $n\geq 0$과 closed embedding $X \rightarrow \mathbb{P}^n_\mathbb{K}$이 존재한다는 것이다. ([§닫힌 부분스킴, ⁋정의 2](/ko/math/scheme_theory/closed_subschemes#def2))
 :::
 
-[정리 3](#thm3)과 [명제 5](#prop5)에 의하여, $\mathbb{K}$ 위의 projective scheme은 정확히 saturated homogeneous ideal $\mathfrak{a}\subseteq \mathbb{K}[\x_0,\ldots,\x_n]$에 대한 $\Proj\bigl(\mathbb{K}[\x_0,\ldots,\x_n]/\mathfrak{a}\bigr)$들이다. 뒤집어 말하면 projective scheme은 degree $1$의 원소들로 생성되는 finitely generated graded $\mathbb{K}$-algebra의 $\Proj$이다. 실제로 그러한 algebra $B_\bullet$의 degree $1$ 부분의 generator $n+1$개를 택하면 surjection $\mathbb{K}[\x_0,\ldots,\x_n] \rightarrow B_\bullet$을 얻고, [명제 1](#prop1)이 이를 closed embedding $\Proj B_\bullet \rightarrow \mathbb{P}^n_\mathbb{K}$으로 옮겨준다.
+[정리 3](#thm3)과 [명제 5](#prop5)에 의하여, 동형을 무시하면 $\mathbb{K}$ 위의 projective scheme은 정확히 saturated homogeneous ideal $\mathfrak{a}\subseteq \mathbb{K}[\x_0,\ldots,\x_n]$에 대한 $\Proj\bigl(\mathbb{K}[\x_0,\ldots,\x_n]/\mathfrak{a}\bigr)$들이다. 뒤집어 말하면 projective scheme은 degree $1$의 원소들로 생성되는 finitely generated graded $\mathbb{K}$-algebra의 $\Proj$이다. 실제로 그러한 algebra $B_\bullet$의 degree $1$ 부분의 generator $n+1$개를 택하면 surjection $\mathbb{K}[\x_0,\ldots,\x_n] \rightarrow B_\bullet$을 얻고, [명제 1](#prop1)이 이를 closed embedding $\Proj B_\bullet \rightarrow \mathbb{P}^n_\mathbb{K}$으로 옮겨준다. 한편 [정의 7](#def7)은 고전적인 정의에서 irreducibility를 떼어낸 것으로, $\mathbb{K}$가 algebraically closed일 때 projective variety에 해당하는 것은 integral한 projective scheme이다. ([§스킴의 대수구조, ⁋정의 1](/ko/math/scheme_theory/algebra_of_schemes#def1))
 
 ---
 
