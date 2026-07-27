@@ -1,9 +1,1 @@
-_posts/Math/Analysis/ko/2026-06-02-Uniform_Convergence.md:137: 복합어(앞): …달리 미분
-_posts/Math/Complex_Analysis/ko/2026-06-21-Riemann_Mapping_Theorem.md:17: 복합어(앞): …각동형류
-_posts/Math/Complex_Geometry/ko/2026-06-22-Kahler_Manifolds.md:19: 조사 판정불가: 복소다양체+론의
-_posts/Math/Complex_Geometry/ko/2026-06-22-Kodaira_Embedding_Theorem.md:276: 조사 판정불가: 다양체+족
-_posts/Math/Gromov_Witten_Theory/ko/2026-07-10-Log_Stable_Maps.md:113: 조사 판정불가: 쌍대 격자+점
-_posts/Math/Gromov_Witten_Theory/ko/2026-07-10-Perfect_Obstruction_Theory.md:168: 조사 판정불가: 유리동치+류
-_posts/Math/Lie_Theory/ko/2025-01-07-Kazhdan_Lusztig_Polynomial.md:48: 복합어(앞): …재정규화
-_posts/Math/Sheaf_Theory/ko/2026-07-01-Verdier_Duality.md:174: 조사 판정불가: 다양체+라면
-_posts/Math/Sheaf_Theory/ko/2026-07-01-Verdier_Duality.md:191: 조사 판정불가: 다양체+였다면
+_posts/Math/Algebraic_Topology/ko/2025-09-07-Cohomology.md:313: 조사 판정불가: 텐서곱+하여

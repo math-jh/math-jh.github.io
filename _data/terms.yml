@@ -585,6 +585,13 @@ A:
   defs:
   - label: '[가환대수학] §동반소아이디얼'
     url: /ko/math/commutative_algebra/associated_primes
+- id: associated_sheaf
+  en: associated sheaf
+  ko: 연관층
+  primary: en
+  defs:
+  - label: '[스킴] §준연접층'
+    url: /ko/math/scheme_theory/quasicoherent_sheaves
 - id: associative
   en: associative
   ko: 결합법칙을 만족한다
@@ -7682,6 +7689,13 @@ M:
   defs:
   - label: '[대수적 위상수학] §Acyclic models theorem'
     url: /ko/math/algebraic_topology/acyclic_models_theorem
+- id: module
+  en: module
+  ko: 가군
+  primary: en
+  defs:
+  - label: '[대수적 구조] §가군'
+    url: /ko/math/algebraic_structures/modules
 - id: moduli_functor
   en: moduli functor
   ko: 모듈라이 함자
