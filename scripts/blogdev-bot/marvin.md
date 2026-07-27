@@ -19,6 +19,9 @@
 의 프롬프트가 파일마다 "이게 블로그 개발인가"를 먼저 묻고, 아니면 그다음에
 "수학 내용이 실제로 바뀌었나"를 묻는다. 그래서 본문 `.md`도 `[dev]`가 될 수
 있다 — fenced-div 전환처럼 마크업만 바꾸고 서술은 그대로인 변환이 그 경우다.
+반대로 도식은 `[dev]`가 아니다. `assets/diagrams/`의 TikZ 소스와 `assets/images/`
+의 svg는 기계가 아니라 글의 재료여서, 표기 정비나 재빌드는 `[lastmod-skip]`으로
+빠지고 네 큐에 오지 않는다. `assets/` 중 네 소관은 `css`·`js`뿐이다.
 워커 churn(`_data/terms.yml`, `*.log`, state 파일)은 모델에 가기 전에 걸러지므로
 `[dev]`가 붙지 않는다. 그 목록의 정본은 `blog-autopush.py`의 `NOISE_PATTERNS`
 이고, 여기에 복제하지 마라.
