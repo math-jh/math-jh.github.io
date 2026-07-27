@@ -14,7 +14,7 @@ sidebar:
 author: Marvin
 
 date: 2026-06-15
-last_modified_at: 2026-07-26
+last_modified_at: 2026-07-27
 weight: 21
 
 ---
@@ -91,3 +91,13 @@ elif re.match(r'<use\s', tag):
 스크립트는 추측하지 않는다. 흰 페인트가 self-closed 요소가 아니거나, 페이지 그룹이 하나가 아니거나, 결과가 XML로 파싱되지 않거나, mask 밖에 흰 페인트가 남거나, 원본의 path 데이터가 하나라도 사라지면 그 파일은 쓰지 않고 중단한다. 이 게이트를 달고 기존 SVG 25장을 제자리 수정했고, `build.sh`의 흰 채움 제거 단계도 정규식 치환 대신 이 스크립트를 통과하게 됐다(`--no-strip`은 그대로, 흰색이 진짜 물감인 그림용이다).
 
 그 결과로 교차 그림을 PNG로 남기던 규칙이 은퇴했다. [후속 커밋](https://github.com/math-jh/math-jh.github.io/commit/811355cb8e736b5d412295e74521d2dad051d288)이 남아 있던 tex발 PNG 6장을 마저 SVG로 전환해, 이제 LaTeX에서 나오는 래스터는 0장이다. 흰 배경을 전제로 칠해 온 지우개 자국을 한 장 한 장 절개로 돌려놓은 셈인데, 지운 것을 다시 지우는 일에 이렇게 공이 드는 줄은 칠할 때는 아무도 모른다.
+
+## 사후: 인라인 태그와 의미 기반 색 체계
+
+`img src="...svg"` 로 참조하던 622곳의 임베드가 [7월 26일 커밋](https://github.com/math-jh/math-jh.github.io/commit/81b7e8afe8c781e50ab92d1de9a1d22b29d1a242)에서 `{% raw %}{% diagram Math/카테고리/글제목-N.svg width="20em" alt="..." %}{% endraw %}` 한 태그로 바뀌었다. `_plugins/diagram_tag.rb`가 하는 일은 단순히 경로를 감싸는 게 아니다. SVG 파일을 읽어 `<figure>` 안에 **그대로 인라인**한다. `<img>`로 참조된 SVG는 자기 완결된 문서라 페이지의 CSS가 내부 요소를 건드릴 수 없는데, 인라인하면 `stroke`·`fill` 속성이 페이지 DOM의 일부가 되어 일반 CSS 선택자로 다크모드 색을 입힐 수 있다. 대신 dvisvgm이 찍는 글리프 id(`g1-101` 같은)가 한 페이지에 여러 다이어그램이 실리면 충돌하므로, 태그가 경로의 MD5 해시 6자리와 같은 파일 재등장 순번으로 접두를 붙여 네임스페이싱한다. green-ramp 예외 4개 SVG와 PNG는 여전히 옛 `img.invert` 분기로 렌더된다. 색이 열거 불가능하거나 래스터라 CSS 규칙을 못 쓰는 경우다.
+
+인라인화가 노린 것은 `_sass/_diagram-colors.scss`의 의미 계층이다. tex가 찍어낸 색값(`#333`, `#906b40` 같은 16진수)을 있는 그대로 두면 라이트/다크가 같은 색으로 고정된다. 대신 속성 선택자로 각 색을 역할별로 재해석한다. 잉크는 `currentColor`(본문 글자색 상속), 회색은 잉크와 배경을 tex의 `black!N` 비율 그대로 `mix($text-color, $background-color, N%)`, 음영·연한 accent fill은 accent색과 배경의 `mix`, 흰 지우개 paint는 배경색으로 불투명 덧칠이다. accent의 다크 전용 램프(라이트의 대비 사다리를 순서만 뒤집어 재현)는 `assets/css/main_dark.scss`에 따로 들어간다. 처음엔 accent1↔3을 그대로 맞바꿔봤는데, 코코아색이 다크 배경에서 대비 1.3:1로 묻혀 폐기되고 brass 색조를 텍스트색 쪽으로 끌어올린 새 사다리(`mix($diag-accent1, $text-color, …)`)로 앵커했다.
+
+이 규칙 목록은 유한하다. 새 그림이 목록에 없는 색을 쓰면 다크 모드에서 조용히 라이트와 같은 색으로 눌러붙는다. `scripts/diagrams/check_diagram_colors.py`가 이걸 잡는다. `_diagram-colors.scss`와 `main_dark.scss` 두 CSS 소스에서 속성 선택자에 등장하는 색을 파싱해 allowlist를 만들고, SVG에 그 밖의 색이 있으면 stderr에 경고한다. 빌드를 막지는 않는다. `build.sh`가 SVG 하나를 뽑을 때마다 바로 이 스크립트를 부른다.
+
+「사후: 흰 지우개와 mask 절개」에서 다룬 mask 절개는 이번에 일부 회귀했다. 절개의 경계에는 안티앨리어싱이 반투명 픽셀 몇 개를 남기는데, 인라인 SVG가 CSS로 배경색을 그대로 덧칠할 수 있게 되자 그 잔흔이 눈에 띄기 시작했다. 그래서 mask로 바꿔뒀던 31장을 역변환으로 되돌렸다. 역변환 결과가 mask 적용 이전 SVG와 바이트 단위로 같은지 확인하는 게이트를 통과한 것만 un-mask한다. 이제 흰 지우개는 실제 흰 도형인 채로 남고, `[fill='#fff']`·`[stroke='#fff']` 규칙이 배경색으로 불투명하게 덧칠한다. `build.sh`의 `STRIP` 기본값도 0으로 내려갔다. 인라인 경로는 mask 변환이 필요 없고, `img.invert`로 렌더되는 파일에 한해 `--strip`으로 옛 방식을 켤 수 있다.
