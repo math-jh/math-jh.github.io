@@ -136,7 +136,7 @@ Effective한 $D=\{(U_i,f_i)\}$가 주어졌다 하자. $f_i\in \Gamma(U_i,\mathc
 
 ## Weil 인자
 
-이제 반대편의 이론, 곧 codimension $1$짜리 닫힌집합들을 직접 세는 방식을 세운다. 이를 위해서는 rational function이 각각의 codimension $1$ 부분에서 갖는 zero와 pole의 order를 정의할 수 있어야 하고, 그러려면 그 자리에서의 local ring이 discrete valuation ring이어야 한다. 이 절에서 $X$는 언제나 normal이고 integral인 Noetherian scheme으로 둔다. ([§스킴의 대수구조, ⁋정의 6](/ko/math/scheme_theory/algebra_of_schemes#def6)) 그럼 $X$의 유일한 associated point는 generic point $\xi$이므로 [§스킴의 대수구조, ⁋정의 12](/ko/math/scheme_theory/algebra_of_schemes#def12)의 total quotient ring은 field
+이제 반대편의 이론, 곧 codimension $1$짜리 닫힌집합들을 직접 세는 방식을 세운다. 이를 위해서는 rational function이 각각의 codimension $1$ 부분에서 갖는 zero와 pole의 order를 정의할 수 있어야 하고, 그러려면 그 자리에서의 local ring이 discrete valuation ring이어야 한다. 이 절에서 $X$는 언제나 normal이고 integral인 Noetherian scheme으로 둔다. ([§스킴의 대수구조, ⁋정의 6](/ko/math/scheme_theory/algebra_of_schemes#def6)) 그럼 $X$의 유일한 associated point는 generic point $\xi$이므로 [§스킴의 대수구조, ⁋정의 12](/ko/math/scheme_theory/algebra_of_schemes#def12)의 total quotient ring은 [§스킴 사상의 성질들, §§유리사상](/ko/math/scheme_theory/properties_of_scheme_morphisms#유리사상)에서 정의한 function field
 
 $$K(X)=\mathcal{O}_{X,\xi}$$
 

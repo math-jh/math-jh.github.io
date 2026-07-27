@@ -47,7 +47,7 @@ $$\mathfrak{a}_{(\x_i)}=\left\{\frac{a}{\x_i^d}\middle\vert\text{$a\in\mathfrak{
 이렇게 얻어진 closed subscheme을 $V_+(\mathfrak{a})$로 적는다. 즉 $V_+(\mathfrak{a})$는 위상공간으로서는 $Z_+(\mathfrak{a})$이고, scheme으로서는 $\Proj(A_\bullet/\mathfrak{a})$이다. 표기에서 짐작할 수 있듯 이는 affine scheme에서의 대응 $\mathfrak{a}\mapsto \Spec(B/\mathfrak{a})$의 projective 버전이다.
 
 ::: 예시 2
-양의 degree를 갖는 nonzero homogeneous polynomial $f$가 생성하는 ideal $(f)$에 대하여 $V_+(f)=\Proj\bigl(\mathbb{K}[\x_0,\ldots,\x_n]/(f)\bigr)$를 degree $\deg f$의 *hypersurface*라 부른다. $f=0$이면 $V_+(0)=\mathbb{P}^n$이고 $f$가 nonzero 상수이면 $V_+(f)=\emptyset$이므로 이 조건이 필요하다. 가령 $\mathbb{P}^2$에서 $V_+(\x_0\x_2-\x_1^2)$은 conic이다.
+Positive degree를 갖는 nonzero homogeneous polynomial $f$가 생성하는 ideal $(f)$에 대하여 $V_+(f)=\Proj\bigl(\mathbb{K}[\x_0,\ldots,\x_n]/(f)\bigr)$를 degree $\deg f$의 *hypersurface*라 부른다. $f=0$이면 $V_+(0)=\mathbb{P}^n$이고 $f$가 nonzero 상수이면 $V_+(f)=\emptyset$이므로 이 조건이 필요하다. 가령 $\mathbb{P}^2$에서 $V_+(\x_0\x_2-\x_1^2)$은 conic이다.
 
 한편 $\mathbb{P}^2$의 두 closed subscheme $V_+(\x_0)$과 $V_+(\x_0^2)$을 비교하면, 이들의 underlying space는 $Z_+(\x_0)=Z_+(\x_0^2)$으로 동일하지만 scheme 구조는 다르다. 실제로 chart $D_+(\x_2)\cong\Spec\mathbb{K}[\x_0/\x_2,\x_1/\x_2]$ 위에서 전자는 ideal $(\x_0/\x_2)$로, 후자는 $(\x_0^2/\x_2^2)$로 주어지며 후자의 coordinate ring은 nilpotent element를 갖는다. 이는 [§닫힌 부분스킴, ⁋예시 1](/ko/math/scheme_theory/closed_subschemes#ex1)에서 살펴본 double point와 같은 종류의 non-reduced thickening이다. 다만 $V_+(\x_0^2)$의 ambient space는 $\mathbb{P}^1$이므로 이는 double point가 아니라 double line이다.
 :::
