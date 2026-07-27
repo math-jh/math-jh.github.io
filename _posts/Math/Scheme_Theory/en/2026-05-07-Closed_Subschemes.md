@@ -10,10 +10,11 @@ sidebar:
 
 date: 2025-02-18
 weight: 10
-translated_at: 2026-07-27T20:15:57+00:00
+translated_at: 2026-07-27T21:15:03+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-27T21:15:03+00:00
 ---
-In [§Schemes, ⁋Lemma 2](/en/math/scheme_theory/schemes#lem2) we saw that for an affine scheme $\Spec A$, any element $f$ defines an open affine subscheme $D(f)\cong \Spec A_f$, and in particular to compare the two structure sheaves we applied [\[Topology\] §Sheaves, ⁋Lemma 11](/en/math/topology/sheaves#lem11) to
+In [§Schemes, ⁋Lemma 2](/en/math/scheme_theory/schemes#lem2) we saw that for an affine scheme $\Spec A$, any element $f$ defines an open affine subscheme $D(f)\cong \Spec A_f$; in particular, to compare the two structure sheaves we applied [\[Topology\] §Sheaves, ⁋Lemma 11](/en/math/topology/sheaves#lem11) to
 
 $$(\Spec\epsilon)^\sharp: \mathcal{O}_{\Spec A} \rightarrow (\Spec \epsilon)_\ast \mathcal{O}_{\Spec A_f}$$
 
@@ -23,26 +24,26 @@ $$(\Spec\epsilon \lvert^{D(f)})^\sharp: \mathcal{O}_{D(f)} \rightarrow (\Spec\ep
 
 and from the fact that $\Spec A_f$ is an open subset of $\Spec A$ we could conclude that this is an isomorphism.
 
-On the other hand, by the second result of [§Spectra, ⁋Proposition 9](/en/math/scheme_theory/spectrums#prop9), given an affine scheme $\Spec A$ and an ideal $\mathfrak{a}$ of $A$, the $\Spec$ functor gives us
+On the other hand, by the second result of [§Spectra, ⁋Proposition 9](/en/math/scheme_theory/spectrums#prop9), given an affine scheme $\Spec A$ and an ideal $\mathfrak{a}$ of $A$, the $\Spec$ functor gives
 
 $$\Spec\pi: \Spec A/\mathfrak{a}\rightarrow \Spec A$$
 
-and we know that $\Spec\pi$ is injective and its image is the closed set $Z(\mathfrak{a})$. In this case as well, thinking of the canonical decomposition
+and we know that $\Spec\pi$ is injective and its image is the closed set $Z(\mathfrak{a})$. In this case as well, just as above we consider the canonical decomposition
 
 $$\Spec A/\mathfrak{a}\overset{\Spec\pi\vert^{Z(\mathfrak{a})}}{\longrightarrow} Z(\mathfrak{a}) \overset{\iota}{\longrightarrow}\Spec A$$
 
-as above, from
+and from
 
 $$(\Spec\pi)^\sharp: \mathcal{O}_{\Spec A} \rightarrow (\Spec\pi)_\ast \mathcal{O}_{\Spec A/\mathfrak{a}}$$
 
-we can construct a morphism of sheaves defined on $Z(\mathfrak{a})$
+we can construct a morphism of sheaves on $Z(\mathfrak{a})$
 
 $$\iota^{-1} \mathcal{O}_{\Spec A} \rightarrow (\Spec\pi\vert^{Z(\mathfrak{a})})_\ast \mathcal{O}_{\Spec A/\mathfrak{a}}$$
 
-but we have not defined a scheme structure on $Z(\mathfrak{a})$, and therefore we do not know the relationship between $\iota^{-1}\mathcal{O}_{\Spec A}$ and $\mathcal{O}_{Z(\mathfrak{a})}$, nor is there any guarantee that this is an isomorphism. In fact it is much more likely not to be an isomorphism, because $\iota^{-1}\mathcal{O}_{\Spec A}$ is defined using only the topological data of the closed set $Z(\mathfrak{a})$ from the structure sheaf of $\Spec A$, whereas $(\Spec\pi)_\ast\mathcal{O}_{\Spec A/\mathfrak{a}}$ also carries algebraic information about the ring $A/\mathfrak{a}$.
+but we have not defined a scheme structure on $Z(\mathfrak{a})$, and therefore we do not know the relationship between $\iota^{-1}\mathcal{O}_{\Spec A}$ and $\mathcal{O}_{Z(\mathfrak{a})}$, nor is there any guarantee that this is an isomorphism. In fact it is far more likely not to be an isomorphism, because $\iota^{-1}\mathcal{O}_{\Spec A}$ is defined using only the topological data of the closed set $Z(\mathfrak{a})$ from the structure sheaf of $\Spec A$, whereas $(\Spec\pi)_\ast\mathcal{O}_{\Spec A/\mathfrak{a}}$ also carries algebraic information about the ring $A/\mathfrak{a}$.
 
 ::: Example 1
-For example, fix a field $\mathbb{K}$ and consider the affine $1$-line $\mathbb{A}_\mathbb{K}^1=\Spec \mathbb{K}[\x]$. Then there are canonical surjections
+For example, fix a field $\mathbb{K}$ and consider the affine line $\mathbb{A}_\mathbb{K}^1=\Spec \mathbb{K}[\x]$. Then there are canonical surjections
 
 $$\pi_1:\mathbb{K}[\x] \rightarrow \mathbb{K}[\x]/(\x)\cong \mathbb{K},\qquad \pi_2:\mathbb{K}[\x] \rightarrow \mathbb{K}[\x]/(\x^2)$$
 
@@ -54,10 +55,10 @@ Therefore, considering the scheme morphisms
 
 $$\Spec\pi_1:\Spec \mathbb{K}[\x]/(\x) \rightarrow \Spec \mathbb{K}[\x],\qquad \Spec\pi_2:\Spec \mathbb{K}[\x]/(\x^2) \rightarrow \Spec \mathbb{K}[\x]$$
 
-defined by these, as continuous maps we know that $\Spec\pi_1$ sends the unique single point $(0)$ of $\Spec \mathbb{K}[\x]/(\x)$ to the point $(\x)$ of $\Spec \mathbb{K}[\x]$, and $\Spec\pi_2$ sends the unique single point $(\x)$ of $\Spec \mathbb{K}[\x]/(\x^2)$ to the point $(\x)$ of $\Spec \mathbb{K}[\x]$. That is, as continuous maps they define the same function, but of course $\Spec \mathbb{K}[\x]/(\x)$ and $\Spec \mathbb{K}[\x]/(\x^2)$ are not isomorphic as schemes.
+defined by these, as continuous maps we know that $\Spec\pi_1$ sends the unique point $(0)$ of $\Spec \mathbb{K}[\x]/(\x)$ to the point $(\x)$ of $\Spec \mathbb{K}[\x]$, and $\Spec\pi_2$ sends the unique point $(\x)$ of $\Spec \mathbb{K}[\x]/(\x^2)$ to the point $(\x)$ of $\Spec \mathbb{K}[\x]$. That is, as continuous maps they define the same function, but of course $\Spec \mathbb{K}[\x]/(\x)$ and $\Spec \mathbb{K}[\x]/(\x^2)$ are not isomorphic as schemes.
 :::
 
-Naturally, the structure sheaf we desire is of the form $(\Spec\pi)_\ast \mathcal{O}_{\Spec A/\mathfrak{a}}$ which contains algebraic information, and we will examine at the end of this post how this relates to $\iota^{-1}\mathcal{O}_{\Spec A}$.
+Naturally, the structure sheaf we desire is of the form $(\Spec\pi)_\ast \mathcal{O}_{\Spec A/\mathfrak{a}}$, which contains algebraic information, and we will examine at the end of this post how this relates to $\iota^{-1}\mathcal{O}_{\Spec A}$.
 
 ## Closed Subschemes
 
@@ -71,7 +72,7 @@ On the other hand, the most important property of the ring homomorphism $\pi: A 
 
 $$B=\im\phi\cong A/\ker\phi$$
 
-so this property exactly characterizes $\pi$. On the other hand, thinking of [\[Commutative Algebra\] §Properties of Localization, ⁋Proposition 4](/en/math/commutative_algebra/properties_of_localization#prop4), the surjectivity of $\pi$ can be checked by examining whether the localization $\pi_\mathfrak{p}: A_\mathfrak{p} \rightarrow (A/\mathfrak{a})_{\mathfrak{p}}$ at any prime ideal $\mathfrak{p}$ is surjective, which geometrically amounts to looking at the stalk at any point $\mathfrak{p}$ of the affine scheme $\Spec A$, and therefore by [\[Topology\] §Sheaves, ⁋Proposition 15](/en/math/topology/sheaves#prop15) this is equivalent to $(\Spec\pi)^\sharp$ being surjective.
+so this property exactly characterizes $\pi$. On the other hand, recalling [\[Commutative Algebra\] §Properties of Localization, ⁋Proposition 4](/en/math/commutative_algebra/properties_of_localization#prop4), the surjectivity of $\pi$ can be checked by examining whether the localization $\pi_\mathfrak{p}: A_\mathfrak{p} \rightarrow (A/\mathfrak{a})_{\mathfrak{p}}$ at any prime ideal $\mathfrak{p}$ is surjective, which geometrically amounts to looking at the stalk at any point $\mathfrak{p}$ of the affine scheme $\Spec A$, and therefore by [\[Topology\] §Sheaves, ⁋Proposition 15](/en/math/topology/sheaves#prop15) this is equivalent to $(\Spec\pi)^\sharp$ being surjective.
 
 ::: Definition 2
 A scheme morphism $\iota: Z \rightarrow X$ is called a *closed embedding* if $\iota$ is a homeomorphism between $Z$ and a closed subset of $X$, and the sheaf morphism $\iota^\sharp: \mathcal{O}_X \rightarrow \iota_\ast \mathcal{O}_Z$ is surjective.
