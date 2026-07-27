@@ -10,10 +10,11 @@ sidebar:
 
 date: 2026-06-21
 weight: 16
-translated_at: 2026-07-27T20:45:02+00:00
+translated_at: 2026-07-27T22:45:03+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-27T22:45:03+00:00
 ---
-The structure sheaf $\mathcal{O}_X$ of a scheme $X$ is itself a sheaf of rings, but we often need to deal with sheaves of modules defined over $\mathcal{O}_X$. For instance, on an affine scheme $\Spec A$, the objects of interest—namely, an $A$-module $M$—must be converted into a sheaf on $\Spec A$ in order to connect naturally with geometry; ideal sheaves and line bundles are also examples of such sheaves. However, an arbitrary $\mathcal{O}_X$-module is too coarse to be reduced to algebraic information on an affine. In this post, we define the sheaf constructed directly from a module on an affine, and from this introduce the notion of a *quasi-coherent sheaf*.
+The structure sheaf $\mathcal{O}_X$ of a scheme $X$ is itself a sheaf of rings, but we often need to work with sheaves of modules over $\mathcal{O}_X$. For instance, on an affine scheme $\Spec A$, the objects of interest—namely, an $A$-module $M$—must be converted into a sheaf on $\Spec A$ in order to connect naturally with geometry; ideal sheaves and line bundles are also examples of such sheaves. However, an arbitrary $\mathcal{O}_X$-module is too coarse to be reduced to algebraic information on an affine. In this post, we define the sheaf constructed directly from a module on an affine, and from this introduce the notion of a *quasi-coherent sheaf*.
 
 ## $\mathcal{O}_X$-module
 
@@ -36,7 +37,7 @@ For two $\mathcal{O}_X$-modules $\mathcal{F}, \mathcal{G}$,
 
 1. The *direct sum* $\mathcal{F}\oplus \mathcal{G}$ is the $\mathcal{O}_X$-module given by $U\mapsto \mathcal{F}(U)\oplus \mathcal{G}(U)$ on each open set.
 2. The *tensor product* $\mathcal{F}\otimes_{\mathcal{O}_X}\mathcal{G}$ is the sheafification of the presheaf $U\mapsto \mathcal{F}(U)\otimes_{\mathcal{O}_X(U)}\mathcal{G}(U)$.
-3. The *Sheaf Hom* $\sHom_{\mathcal{O}_X}(\mathcal{F}, \mathcal{G})$ is the $\mathcal{O}_X$-module given by $U\mapsto \Hom_{\mathcal{O}_X\vert_U}(\mathcal{F}\vert_U, \mathcal{G}\vert_U)$ on each open set.
+3. The *sheaf Hom* $\sHom_{\mathcal{O}_X}(\mathcal{F}, \mathcal{G})$ is the $\mathcal{O}_X$-module given by $U\mapsto \Hom_{\mathcal{O}_X\vert_U}(\mathcal{F}\vert_U, \mathcal{G}\vert_U)$ on each open set.
 :::
 
 In the above, for the direct sum and sheaf Hom, the assignment on each open set immediately forms a sheaf, but for the tensor product the presheaf
