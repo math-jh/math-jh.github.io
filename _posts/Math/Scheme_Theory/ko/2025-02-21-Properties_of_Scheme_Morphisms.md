@@ -274,7 +274,15 @@ Scheme morphism $\varphi: X \rightarrow Y$가 *locally of finite presentation<su
 
 ## 유리사상
 
-[§스킴의 대수구조, ⁋정의 12](/ko/math/scheme_theory/algebra_of_schemes#def12)에서 우리는 scheme $X$ 위의 유리함수를 정의역 $U$와 그 위의 함수 $f\in \Gamma(U, \mathcal{O}_X)$가 이루는 pair의 equivalence class로 정의하였다. 여기에서 $f$가 하는 일은 [§아핀스킴, ⁋정리 13](/ko/math/scheme_theory/affine_schemes#thm13)의 adjunction을 통해 scheme morphism $U \rightarrow \Spec \mathbb{Z}[\x]$를 주는 것이므로, target을 임의의 scheme으로 바꾸어 같은 구성을 반복하면 $X$ 전체에서는 정의되지 않는 대응을 얻게 되며, 이것이 이 절의 주인공인 rational map이다. 이를 정확히 적기 위해서는 어떤 열린집합을 정의역으로 허용할 것인지와, 서로 다른 정의역 위의 두 morphism을 언제 같은 것으로 볼 것인지를 정해야 한다. 
+[§스킴의 대수구조, ⁋정의 12](/ko/math/scheme_theory/algebra_of_schemes#def12)에서 우리는 scheme $X$ 위의 유리함수를 정의역 $U$와 그 위의 함수 $f\in \Gamma(U, \mathcal{O}_X)$가 이루는 pair의 equivalence class로 정의하였다. 여기에서 $f$가 하는 일은 다음과 같이 읽을 수 있다. $U$를 그 자체로 locally ringed space로 볼 때 [§아핀스킴, ⁋정리 13](/ko/math/scheme_theory/affine_schemes#thm13)의 adjunction은 다음의 전단사
+
+$$\Hom_\LRS(U, \Spec \mathbb{Z}[\x])\cong \Hom_{\cRing}(\mathbb{Z}[\x], \Gamma(U,\mathcal{O}_X))$$
+
+를 준다. 이제 임의의 commutative ring $B$에 대하여 ring homomorphism $\phi:\mathbb{Z}[\x]\rightarrow B$가 갖는 자유도를 따져보면, 우선 $\phi(1)=1$이 요구되므로 $\phi$의 $\mathbb{Z}$ 위에서의 값은 $\phi(n)=n\cdot 1_B$로 완전히 결정되고 ($\mathbb{Z}$가 $\cRing$의 initial object라는 것이 이 사실이다), 남은 자유도는 $\phi(\x)$ 하나뿐이어서 다음의 식
+
+$$\phi\left(\sum_i a_i\x^i\right)=\sum_i (a_i\cdot 1_B)\phi(\x)^i$$
+
+이 $\phi$를 결정한다. 역으로 임의의 $b\in B$에 대하여 위의 식으로 정의된 evaluation map $\operatorname{ev}_b:\mathbb{Z}[\x]\rightarrow B$는 ring homomorphism이고 $\operatorname{ev}_b(\x)=b$를 만족하므로, $\phi\mapsto \phi(\x)$와 $b\mapsto \operatorname{ev}_b$는 서로의 역이 된다. 곧 $\mathbb{Z}[\x]$가 한 원소 위의 free commutative ring이라는 사실로부터 $\Hom_{\cRing}(\mathbb{Z}[\x],B)\cong B$를 얻고, 여기에 $B=\Gamma(U,\mathcal{O}_X)$를 대입하면 위 전단사의 우변이 $\Gamma(U,\mathcal{O}_X)$ 자신과 자연스럽게 동일시된다. 즉 $U$ 위의 함수 $f$를 주는 것은 scheme morphism $U \rightarrow \Spec \mathbb{Z}[\x]=\mathbb{A}^1_\mathbb{Z}$를 주는 것과 같은 데이터이며, base scheme $\Spec R$ 위에서 같은 논증을 반복하면 $\mathbb{A}^1_R$을 얻는다. 그러므로 target을 임의의 scheme으로 바꾸어 같은 구성을 반복하면 $X$ 전체에서는 정의되지 않는 대응을 얻게 되며, 이것이 이 절의 주인공인 rational map이다. 이를 정확히 적기 위해서는 어떤 열린집합을 정의역으로 허용할 것인지와, 서로 다른 정의역 위의 두 morphism을 언제 같은 것으로 볼 것인지를 정해야 한다. 
 
 우선 image가 target 안의 작은 닫힌집합에 갇히지 않는 morphism에 이름을 붙인다.
 
