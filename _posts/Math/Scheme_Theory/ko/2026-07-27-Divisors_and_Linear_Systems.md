@@ -214,7 +214,7 @@ $f_x=\prod_Y g_Y^{n_Y}\in K(X)^\times$로 두자. 곱은 $x$를 지나는 유한
 Cartier divisor의 자료 $\{(U_i,f_i)\}$는 각 조각 위에서 하나의 함수를 지정하고 겹침 위에서 그 비율만을 통제한다. 이는 정확히 invertible sheaf를 국소적인 자명화와 transition function으로 기술하는 방식이므로, 인자에 invertible sheaf를 대응시킬 수 있다. 이 절에서도 $X$는 integral Noetherian scheme으로 둔다.
 
 ::: 정의 13
-Integral Noetherian scheme $X$와 Cartier divisor $D=\{(U_i,f_i)\}$에 대하여, $X$ 위의 $\mathcal{O}_X$-module층 $\mathcal{O}_X(D)$를 각각의 공집합이 아닌 열린집합 $V$마다
+Integral Noetherian scheme $X$와 Cartier divisor $D=\{(U_i,f_i)\}$에 대하여, $X$ 위의 $\mathcal{O}_X$-module $\mathcal{O}_X(D)$를 각각의 공집합이 아닌 열린집합 $V$마다
 
 $$\Gamma(V,\mathcal{O}_X(D))=\{g\in K(X)\mid \text{모든 $i$에 대하여 } gf_i\in \Gamma(V\cap U_i,\mathcal{O}_X)\}$$
 
@@ -292,7 +292,7 @@ $$\lvert \mathcal{L}\rvert=\mathbb{P}(\Gamma(X,\mathcal{L}))$$
 
 ## Ample invertible sheaf
 
-$\mathcal{O}_X$-module층 $\mathcal{F}$가 *globally generated*라는 것은 각 점 $x$에서 stalk $\mathcal{F}_x$가 global section들의 germ으로 $\mathcal{O}_{X,x}$-module로서 생성되는 것이다. 이는 [\[대수다양체\] §사영공간의 코호몰로지, ⁋정의 6](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#def6)의 evaluation map이 surjective라는 조건을 scheme 위로 옮긴 것이며, invertible sheaf $\mathcal{L}$의 경우 linear system $\mathbb{P}(V)$의 base locus가 공집합인 것과 $V$의 절단들이 $\mathcal{L}$을 globally generate하는 것이 같은 조건이다.
+$\mathcal{O}_X$-module $\mathcal{F}$가 *globally generated*라는 것은 각 점 $x$에서 stalk $\mathcal{F}_x$가 global section들의 germ으로 $\mathcal{O}_{X,x}$-module로서 생성되는 것이다. 이는 [\[대수다양체\] §사영공간의 코호몰로지, ⁋정의 6](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#def6)의 evaluation map이 surjective라는 조건을 scheme 위로 옮긴 것이며, invertible sheaf $\mathcal{L}$의 경우 linear system $\mathbb{P}(V)$의 base locus가 공집합인 것과 $V$의 절단들이 $\mathcal{L}$을 globally generate하는 것이 같은 조건이다.
 
 생성절단들은 사영공간으로의 morphism을 결정한다. Ring $A$ 위의 scheme $X$와 invertible sheaf $\mathcal{L}$, 그리고 이를 globally generate하는 절단 $s_0,\ldots, s_n\in \Gamma(X,\mathcal{L})$이 주어졌다 하자. 각각의 $i$에 대하여
 
@@ -332,7 +332,7 @@ Noetherian scheme $X$ 위의 invertible sheaf $\mathcal{L}$에 대하여 다음�
 
 2번에서 $\mathcal{L}$이 ample이면, coherent sheaf $\mathcal{F}$에 대해 $n_0$를 택하여 $n\geq n_0$마다 $\mathcal{F}\otimes\mathcal{L}^{\otimes n}$이 globally generated이도록 하자. 그럼 $k\geq n_0$에 대하여 $mk\geq n_0$이므로 $\mathcal{F}\otimes(\mathcal{L}^{\otimes m})^{\otimes k}$은 globally generated이다. 거꾸로 $\mathcal{L}^{\otimes m}$이 ample이라 하자. 각각의 $j=0,1,\ldots, m-1$에 대하여 $\mathcal{F}\otimes\mathcal{L}^{\otimes j}$ 또한 coherent sheaf이므로 $k_j$가 존재하여 $k\geq k_j$마다 $\mathcal{F}\otimes\mathcal{L}^{\otimes j}\otimes(\mathcal{L}^{\otimes m})^{\otimes k}$이 globally generated이다. $k_\ast=\max_jk_j$로 두면 $n\geq mk_\ast$인 임의의 $n$은 $n=mk+j$ ($k\geq k_\ast$, $0\leq j<m$)로 적히므로 $\mathcal{F}\otimes\mathcal{L}^{\otimes n}$은 globally generated이다.
 
-3번을 위해 우선 두 globally generated module층 $\mathcal{F},\mathcal{G}$의 tensor product가 다시 globally generated임을 관찰한다. Stalk $(\mathcal{F}\otimes\mathcal{G})_x\cong \mathcal{F}_x\otimes_{\mathcal{O}_{X,x}}\mathcal{G}_x$는 $\mathcal{F}_x$와 $\mathcal{G}_x$의 generator들의 tensor로 생성되고, 이들은 global section들의 germ의 tensor이기 때문이다. 이제 coherent sheaf $\mathcal{F}$에 대하여 $\mathcal{L}$의 ampleness가 주는 $n_0$를 택하면, $n\geq n_0$에 대하여
+3번을 위해 우선 두 globally generated $\mathcal{O}_X$-module $\mathcal{F},\mathcal{G}$의 tensor product가 다시 globally generated임을 관찰한다. Stalk $(\mathcal{F}\otimes\mathcal{G})_x\cong \mathcal{F}_x\otimes_{\mathcal{O}_{X,x}}\mathcal{G}_x$는 $\mathcal{F}_x$와 $\mathcal{G}_x$의 generator들의 tensor로 생성되고, 이들은 global section들의 germ의 tensor이기 때문이다. 이제 coherent sheaf $\mathcal{F}$에 대하여 $\mathcal{L}$의 ampleness가 주는 $n_0$를 택하면, $n\geq n_0$에 대하여
 
 $$\mathcal{F}\otimes(\mathcal{L}\otimes\mathcal{M})^{\otimes n}\cong(\mathcal{F}\otimes\mathcal{L}^{\otimes n})\otimes\mathcal{M}^{\otimes n}$$
 
