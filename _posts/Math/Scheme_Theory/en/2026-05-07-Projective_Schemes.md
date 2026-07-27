@@ -10,10 +10,11 @@ sidebar:
 
 date: 2025-02-02
 weight: 5
-translated_at: 2026-07-27T15:16:31+00:00
+translated_at: 2026-07-27T15:45:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-27T15:45:02+00:00
 ---
-In [§Schemes, ⁋Example 10](/en/math/scheme_theory/schemes#ex10) we glued two copies of the affine line $\mathbb{A}^1=\Spec \mathbb{K}[\x]$ in a suitable way to produce the projective space $\mathbb{P}^1$. This time we generalize this and discuss the $\Proj$ construction, which produces a scheme $\Proj A_\bullet$ from a graded ring $A_\bullet$.
+In [§Schemes, ⁋Example 10](/en/math/scheme_theory/schemes#ex10) we glued two copies of the affine line $\mathbb{A}^1=\Spec \mathbb{K}[\x]$ in a suitable way to produce the projective space $\mathbb{P}^1$. This time we generalize this construction and discuss the $\Proj$ construction, which produces a scheme $\Proj A_\bullet$ from a graded ring $A_\bullet$.
 
 ## Projective Space
 
