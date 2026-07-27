@@ -10,8 +10,9 @@ sidebar:
 
 date: 2025-02-18
 weight: 10
-translated_at: 2026-07-26T18:19:40+00:00
+translated_at: 2026-07-27T00:15:03+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-27T00:15:03+00:00
 ---
 In [§Schemes, ⁋Lemma 2](/en/math/scheme_theory/schemes#lem2) we saw that for an affine scheme $\Spec A$, any element $f$ defines an open affine subscheme $D(f)\cong \Spec A_f$, and in particular, to compare the two structure sheaves we applied [[Topology] §Sheaves, ⁋Lemma 11](/en/math/topology/sheaves#lem11) to the morphism
 
@@ -39,11 +40,11 @@ we can construct a morphism of sheaves on $Z(\mathfrak{a})$
 
 $$\iota^{-1} \mathcal{O}_{\Spec A} \rightarrow (\Spec\pi\vert^{Z(\mathfrak{a})})_\ast \mathcal{O}_{\Spec A/\mathfrak{a}}$$
 
-but we have not defined a scheme structure on $Z(\mathfrak{a})$, and therefore we do not even know the relationship between $\iota^{-1}\mathcal{O}_{\Spec A}$ and $\mathcal{O}_{Z(\mathfrak{a})}$, nor can we guarantee that this is an isomorphism. In fact, it is much more likely not to be an isomorphism, because while $\iota^{-1}\mathcal{O}_{\Spec A}$ is defined using only topological data from the structure sheaf of $\Spec A$ on the closed set $Z(\mathfrak{a})$, $(\Spec\pi)_\ast\mathcal{O}_{\Spec A/\mathfrak{a}}$ also carries algebraic information about the ring $A/\mathfrak{a}$.
+but we have not defined a scheme structure on $Z(\mathfrak{a})$, and therefore we do not even know the relationship between $\iota^{-1}\mathcal{O}_{\Spec A}$ and $\mathcal{O}_{Z(\mathfrak{a})}$, nor can we guarantee that this is an isomorphism. In fact, it is far more likely not to be an isomorphism, because while $\iota^{-1}\mathcal{O}_{\Spec A}$ is defined using only topological data from the structure sheaf of $\Spec A$ on the closed set $Z(\mathfrak{a})$, $(\Spec\pi)_\ast\mathcal{O}_{\Spec A/\mathfrak{a}}$ also carries algebraic information about the ring $A/\mathfrak{a}$.
 
 
 ::: Example 1
-For example, fix a field $\mathbb{K}$ and consider the affine $1$-line $\mathbb{A}_\mathbb{K}^1=\Spec \mathbb{K}[\x]$. Then we have the following canonical surjections
+For example, fix a field $\mathbb{K}$ and consider the affine line $\mathbb{A}_\mathbb{K}^1=\Spec \mathbb{K}[\x]$. Then we have the following canonical surjections
 
 $$\pi_1:\mathbb{K}[\x] \rightarrow \mathbb{K}[\x]/(\x)\cong \mathbb{K},\qquad \pi_2:\mathbb{K}[\x] \rightarrow \mathbb{K}[\x]/(\x^2)$$
 
@@ -72,7 +73,7 @@ On the other hand, the most important property of the ring homomorphism $\pi: A 
 
 $$B=\im\phi\cong A/\ker\phi$$
 
-so this property exactly characterizes $\pi$. Meanwhile, thinking of [[Commutative Algebra] §Properties of Localization, ⁋Proposition 4](/en/math/commutative_algebra/properties_of_localization#prop4), the surjectivity of $\pi$ can be checked by examining whether the localization $\pi_\mathfrak{p}: A_\mathfrak{p} \rightarrow (A/\mathfrak{a})_{\mathfrak{p}}$ at any prime ideal $\mathfrak{p}$ is surjective, which geometrically amounts to examining the stalk at any point $\mathfrak{p}$ of the affine scheme $\Spec A$, and therefore by [[Topology] §Sheaves, ⁋Proposition 15](/en/math/topology/sheaves#prop15) this is equivalent to $(\Spec\pi)^\sharp$ being surjective.
+so this property exactly characterizes $\pi$. Meanwhile, by [[Commutative Algebra] §Properties of Localization, ⁋Proposition 4](/en/math/commutative_algebra/properties_of_localization#prop4), the surjectivity of $\pi$ can be checked by examining whether the localization $\pi_\mathfrak{p}: A_\mathfrak{p} \rightarrow (A/\mathfrak{a})_{\mathfrak{p}}$ at any prime ideal $\mathfrak{p}$ is surjective, which geometrically amounts to examining the stalk at any point $\mathfrak{p}$ of the affine scheme $\Spec A$, and therefore by [[Topology] §Sheaves, ⁋Proposition 15](/en/math/topology/sheaves#prop15) this is equivalent to $(\Spec\pi)^\sharp$ being surjective.
 
 ::: Definition 2
 A scheme morphism $\iota: Z \rightarrow X$ is called a *closed embedding* if $\iota$ is a homeomorphism between $Z$ and a closed subset of $X$, and the sheaf morphism $\iota^\sharp: \mathcal{O}_X \rightarrow \iota_\ast \mathcal{O}_Z$ is surjective.
@@ -80,7 +81,7 @@ A scheme morphism $\iota: Z \rightarrow X$ is called a *closed embedding* if $\i
 For two closed embeddings $\iota: Z \rightarrow X$ and $\iota': Z' \rightarrow X$ into $X$, if there exists an isomorphism $i: Z' \rightarrow Z$ such that $\iota'=\iota\circ i$, we say they are equivalent, and this equivalence class is called a *closed subscheme* of $X$.
 :::
 
-The condition on the continuous map $\iota$ is obvious, and the intuition for $\iota^\sharp$ also admits a geometric interpretation: it means that functions on $Z$, or more precisely on $\iota(Z)$, must all be obtained by restricting functions from $X$ to $Z$. Or, conversely, given any function on $Z$, it must be possible to extend it locally in a neighborhood of each point to a function on $X$. Here the surjectivity of sheaves is a condition on stalks, so it does not mean global extension. For example, if we take $X=\mathbb{P}^1$ and the reduced closed subscheme $Z$ consisting of two points in it, then the map from $\Gamma(X,\mathcal{O}_X)=\mathbb{K}$ to $\Gamma(Z,\mathcal{O}_Z)=\mathbb{K}\times \mathbb{K}$ is not surjective. It is worth contrasting this with the case where $\iota$ is an open embedding. In that case $\iota^\sharp:\mathcal{O}_X \rightarrow \iota_\ast\mathcal{O}_Z$ itself is not an isomorphism. For example, taking $X=\mathbb{A}^1_k=\Spec k[t]$ and its open part $Z=D(t)=\Spec k[t,t^{-1}]$, we have $(\iota_\ast\mathcal{O}_Z)(X)=k[t,t^{-1}]$, so $k[t] \rightarrow k[t,t^{-1}]$ is not surjective. The correct statement is that since $\iota$ maps $Z$ to an open set, we have $\iota^{-1}\mathcal{O}_X\cong\mathcal{O}_Z$, that is, an isomorphism is induced between stalks at each point of $\iota(Z)$.
+The condition on the continuous map $\iota$ is clear, and the intuition for $\iota^\sharp$ also admits a geometric interpretation: it means that functions on $Z$, or more precisely on $\iota(Z)$, must all be obtained by restricting functions from $X$ to $Z$. Or, conversely, given any function on $Z$, it must be possible to extend it locally in a neighborhood of each point to a function on $X$. Here the surjectivity of sheaves is a condition on stalks, so it does not mean global extension. For example, if we take $X=\mathbb{P}^1$ and the reduced closed subscheme $Z$ consisting of two points in it, then the map from $\Gamma(X,\mathcal{O}_X)=\mathbb{K}$ to $\Gamma(Z,\mathcal{O}_Z)=\mathbb{K}\times \mathbb{K}$ is not surjective. It is worth contrasting this with the case where $\iota$ is an open embedding. In that case $\iota^\sharp:\mathcal{O}_X \rightarrow \iota_\ast\mathcal{O}_Z$ itself is not an isomorphism. For example, taking $X=\mathbb{A}^1_k=\Spec k[t]$ and its open part $Z=D(t)=\Spec k[t,t^{-1}]$, we have $(\iota_\ast\mathcal{O}_Z)(X)=k[t,t^{-1}]$, so $k[t] \rightarrow k[t,t^{-1}]$ is not surjective. The correct statement is that since $\iota$ maps $Z$ to an open set, we have $\iota^{-1}\mathcal{O}_X\cong\mathcal{O}_Z$, that is, an isomorphism is induced between stalks at each point of $\iota(Z)$.
 
 This definition is natural, but it is somewhat different in flavor from the properties of scheme morphisms we defined in previous posts. Therefore we examine the following equivalent condition.
 
@@ -201,7 +202,7 @@ Then any locally closed embedding is always locally of finite type. To check thi
 
 Now we define the image of a scheme morphism. Naturally, when any scheme morphism $\varphi: X \rightarrow Y$ is given, we would want its image $\im\varphi$ to also be equipped with a scheme structure. However, as a subset of the topological space $Y$, the image $\im\varphi$ may be neither open nor closed, so defining a structure sheaf on $\im\varphi$ using the structure sheaf of $Y$ seems hopeless.
 
-The solution to this is to define the *scheme-theoretic image* of $\varphi$ as the smallest closed subscheme of $\varphi$ containing the image of $\varphi$. For this we first need to examine what it means for one closed subscheme of $X$ to be smaller than another.
+The solution to this is to define the *scheme-theoretic image* of $\varphi$ as the smallest closed subscheme of $Y$ containing the image of $\varphi$. For this we first need to examine what it means for one closed subscheme of $X$ to be smaller than another.
 
 ::: Lemma 9
 Let two closed embeddings $\iota_1: Z_1 \rightarrow X$, $\iota_2: Z_2 \rightarrow X$ be given. Then there exists a suitable scheme morphism $\varphi: Z_1 \rightarrow Z_2$ satisfying $\iota_1=\iota_2\circ\varphi$ if and only if $\mathcal{I}_{Z_2/X}\subseteq \mathcal{I}_{Z_1/X}$. In this case $\varphi$ becomes a closed embedding.
@@ -235,7 +236,7 @@ $$\mathcal{I}_{Z/Y} \rightarrow \mathcal{O}_Y \rightarrow \varphi_\ast \mathcal{
 is zero. In this case, the smallest closed subscheme of $Y$ containing the image of $\varphi$ is called the *scheme-theoretic image* of $\varphi$.
 :::
 
-If in the above $Y$ is an affine scheme $\Spec B$, then closed subschemes of $Y$ are completely determined by ideals of $B$. Therefore in this case, the scheme-theoretic image of $Y$ will be the closed subscheme of $Y$ defined by the kernel of $\mathcal{O}_Y \rightarrow \varphi_\ast \mathcal{O}_X$. In the even more special case where $X$ is also affine, $\mathcal{O}_Y \rightarrow \varphi_\ast \mathcal{O}_X$ comes from a ring homomorphism $\phi$, so we can perform explicit computations.
+If in the above $Y$ is an affine scheme $\Spec B$, then closed subschemes of $Y$ are completely determined by ideals of $B$. Therefore in this case, the scheme-theoretic image of $\varphi$ will be the closed subscheme of $Y$ defined by the kernel of $\mathcal{O}_Y \rightarrow \varphi_\ast \mathcal{O}_X$. In the even more special case where $X$ is also affine, $\mathcal{O}_Y \rightarrow \varphi_\ast \mathcal{O}_X$ comes from a ring homomorphism $\phi$, so we can perform explicit computations.
 
 ::: Example 11
 Let us examine a slightly modified example of the closed embedding $\Spec\pi: \Spec \mathbb{K}[\x]/(\x^2) \rightarrow \Spec \mathbb{K}[\x]$ seen in [Example 1](#ex1). In this example, for distinction we write $\mathbb{K}[\x]/(\x^2)$ as $\mathbb{K}[\epsilon]/(\epsilon^2)$.
