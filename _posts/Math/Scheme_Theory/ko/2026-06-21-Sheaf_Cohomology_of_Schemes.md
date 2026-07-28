@@ -143,7 +143,7 @@ $$H^n(\mathbb{P}^n_A, \mathcal{O}(d))\cong H^0(\mathbb{P}^n_A, \mathcal{O}(-d-n-
 
 ## Noetherian projective scheme 위의 연접층
 
-이제 임의의 Noetherian projective scheme $X$와 그 위의 coherent sheaf ([§준연접층, ⁋정의 11](/ko/math/scheme_theory/quasicoherent_sheaves#def11)) $\mathcal{F}$에 대하여, cohomology의 두 가지 근본적 성질을 다룬다. 하나는 각 $H^i(X, \mathcal{F})$이 유한차원이라는 것이고, 다른 하나는 충분히 twist하면 higher cohomology가 소멸한다는 Serre vanishing이다. Projective scheme $X$는 어떤 사영공간 $\mathbb{P}^n_{\mathbb{K}}$의 closed subscheme이며, 그 위에 $\mathcal{O}_X(1)=\mathcal{O}_{\mathbb{P}^n}(1)\vert_X$을 twisting을 위한 line bundle로 사용한다. 좌표들의 restriction $\x_0\vert_X,\ldots, \x_n\vert_X$이 $\mathcal{O}_X(1)$을 globally generate하고 이들이 정의하는 morphism이 곧 포함사상 $X\hookrightarrow\mathbb{P}^n_\mathbb{K}$이므로, $\mathcal{O}_X(1)$은 very ample invertible sheaf이다. ([§인자와 선형계, ⁋정의 18](/ko/math/scheme_theory/divisors_and_linear_systems#def18)) Coherent sheaf $\mathcal{F}$에 대해 $\mathcal{F}(d)=\mathcal{F}\otimes_{\mathcal{O}_X}\mathcal{O}_X(d)$로 적는다.
+이제 임의의 Noetherian projective scheme $X$와 그 위의 coherent sheaf ([§준연접층, ⁋정의 11](/ko/math/scheme_theory/quasicoherent_sheaves#def11)) $\mathcal{F}$에 대하여, cohomology의 두 가지 근본적 성질을 다룬다. 하나는 각 $H^i(X, \mathcal{F})$이 유한차원이라는 것이고, 다른 하나는 충분히 twist하면 higher cohomology가 소멸한다는 Serre vanishing이다. Projective scheme $X$는 어떤 사영공간 $\mathbb{P}^n_{\mathbb{K}}$의 closed subscheme이며, 그 위에 $\mathcal{O}_X(1)=\mathcal{O}_{\mathbb{P}^n}(1)\vert_X$을 twisting을 위한 line bundle로 사용한다. 좌표들의 restriction $\x_0\vert_X,\ldots, \x_n\vert_X$이 $\mathcal{O}_X(1)$을 globally generate하고 이들이 정의하는 morphism이 곧 포함사상 $X\hookrightarrow\mathbb{P}^n_\mathbb{K}$이므로, $\mathcal{O}_X(1)$은 very ample invertible sheaf이다. ([§인자와 선형계, ⁋정의 17](/ko/math/scheme_theory/divisors_and_linear_systems#def17)) Coherent sheaf $\mathcal{F}$에 대해 $\mathcal{F}(d)=\mathcal{F}\otimes_{\mathcal{O}_X}\mathcal{O}_X(d)$로 적는다.
 
 먼저 closed immersion을 따라 cohomology가 보존된다는 관찰이 핵심이다. Closed embedding $\iota:X\hookrightarrow\mathbb{P}^n_{\mathbb{K}}$은 affine 사상이므로, pushforward $\iota_\ast$가 affine 위에서 정확하고 higher direct image를 만들지 않아 $H^i(X, \mathcal{F})\cong H^i(\mathbb{P}^n, \iota_\ast\mathcal{F})$이 성립한다. 따라서 두 성질 모두 $X=\mathbb{P}^n_{\mathbb{K}}$인 경우로 환원된다.
 
@@ -173,7 +173,7 @@ $$H^i(\mathbb{P}^n, \mathcal{O}(-d)^{\oplus r}) \rightarrow H^i(\mathbb{P}^n, \m
 [정리 7](#thm7)은 projective scheme 위의 coherent sheaf가 좋은 유한성을 가짐을 보장한다. 이는 affine 위의 finitely generated module에 대한 유한성이 cohomology 수준에서 사영적 상황으로 옮겨진 것이며, [\[대수다양체\] §사영공간의 코호몰로지, ⁋정의 2](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#def2)의 Euler characteristic과 같은 불변량이 잘 정의되는 근거가 된다. 위 증명의 귀납에 사용한 globally generated 성질과 twist 후의 소멸은 다음 Serre vanishing에서 정량적으로 다시 등장한다.
 
 ::: 정리 8 (Serre Vanishing)
-Field $\mathbb{K}$ 위의 Noetherian projective scheme $X$와 closed immersion $X\hookrightarrow\mathbb{P}^n_\mathbb{K}$이 주는 very ample line bundle $\mathcal{O}_X(1)$ ([§인자와 선형계, ⁋정의 18](/ko/math/scheme_theory/divisors_and_linear_systems#def18)), 그리고 coherent sheaf $\mathcal{F}$에 대하여, 충분히 큰 $d\gg 0$에 대해
+Field $\mathbb{K}$ 위의 Noetherian projective scheme $X$와 closed immersion $X\hookrightarrow\mathbb{P}^n_\mathbb{K}$이 주는 very ample line bundle $\mathcal{O}_X(1)$ ([§인자와 선형계, ⁋정의 17](/ko/math/scheme_theory/divisors_and_linear_systems#def17)), 그리고 coherent sheaf $\mathcal{F}$에 대하여, 충분히 큰 $d\gg 0$에 대해
 
 $$H^i(X, \mathcal{F}(d))=0 \qquad (i>0)$$
 
@@ -206,7 +206,7 @@ $$H^i(\mathbb{P}^n, \mathcal{O}(d-d_0)^{\oplus r}) \rightarrow H^i(\mathbb{P}^n,
 [정리 8](#thm8)의 증명에서 실제로 사용한 것은 $\mathcal{O}_X(1)$이 $X$를 사영공간 안으로 넣는 embedding에서 온다는 것, 곧 very ample이라는 것뿐이었다. 반면 [§인자와 선형계](/ko/math/scheme_theory/divisors_and_linear_systems)에서 정의한 ampleness는 사영공간을 전혀 언급하지 않고 오직 twist 후의 global generation만을 요구하는 조건이었다. 이 절에서 우리는 두 조건이 거듭제곱을 허용하면 일치한다는 것과, ampleness가 higher cohomology의 소멸만으로 판정된다는 Serre의 결과를 다룬다.
 
 ::: 따름정리 9
-Field $\mathbb{K}$ 위의 Noetherian projective scheme $X$ 위의 very ample invertible sheaf $\mathcal{L}$은 ample이다. ([§인자와 선형계, ⁋정의 19](/ko/math/scheme_theory/divisors_and_linear_systems#def19))
+Field $\mathbb{K}$ 위의 Noetherian projective scheme $X$ 위의 very ample invertible sheaf $\mathcal{L}$은 ample이다. ([§인자와 선형계, ⁋정의 18](/ko/math/scheme_theory/divisors_and_linear_systems#def18))
 :::
 ::: 증명
 $\mathcal{L}$이 very ample이므로 이를 globally generate하는 유한 개의 절단이 locally closed embedding $\iota:X \rightarrow \mathbb{P}^N_\mathbb{K}$를 정의하고 $\mathcal{L}\cong\iota^\ast\mathcal{O}(1)$이다. $X$가 $\mathbb{K}$ 위에서 projective이므로 $\iota(X)$는 닫힌집합이며 ([§값매김환, ⁋따름정리 16](/ko/math/scheme_theory/valuative_criteria#cor16)), 따라서 $\iota$는 closed immersion이다. 그럼 $\mathcal{L}$은 [정리 8](#thm8)에서 $\mathcal{O}_X(1)$이 맡은 역할을 그대로 할 수 있으므로, 임의의 coherent sheaf $\mathcal{F}$에 대하여 충분히 큰 모든 $d$에서 $\mathcal{F}\otimes\mathcal{L}^{\otimes d}$은 globally generated이다. 이것이 ampleness의 정의이다.
@@ -218,7 +218,7 @@ $\mathcal{L}$이 very ample이므로 이를 globally generate하는 유한 개�
 Field $\mathbb{K}$ 위의 Noetherian projective scheme $X$ 위의 invertible sheaf $\mathcal{L}$에 대하여, $\mathcal{L}$이 ample인 것과 적당한 $m>0$에 대하여 $\mathcal{L}^{\otimes m}$이 very ample인 것은 서로 동치이다.
 :::
 ::: 증명
-$\mathcal{L}^{\otimes m}$이 very ample이라 하자. [따름정리 9](#cor9)에 의하여 $\mathcal{L}^{\otimes m}$은 ample이고, [§인자와 선형계, ⁋명제 20](/ko/math/scheme_theory/divisors_and_linear_systems#prop20)의 2번에 의하여 $\mathcal{L}$ 또한 ample이다.
+$\mathcal{L}^{\otimes m}$이 very ample이라 하자. [따름정리 9](#cor9)에 의하여 $\mathcal{L}^{\otimes m}$은 ample이고, [§인자와 선형계, ⁋명제 19](/ko/math/scheme_theory/divisors_and_linear_systems#prop19)의 2번에 의하여 $\mathcal{L}$ 또한 ample이다.
 
 거꾸로 $\mathcal{L}$이 ample이라 하자. Closed point $x\in X$를 고정하고, $\mathcal{L}$이 자명해지는 affine open neighborhood $U\ni x$를 잡자. $Y=X\setminus U$에 reduced closed subscheme 구조를 주어 그 ideal sheaf $\mathcal{I}_Y$를 생각하면 이는 coherent sheaf이므로, ampleness에 의하여 적당한 $n>0$에 대해 $\mathcal{I}_Y\otimes\mathcal{L}^{\otimes n}$은 globally generated이다. $x\notin Y$이므로 $(\mathcal{I}_Y)_x=\mathcal{O}_{X,x}$이고, 따라서 $x$에서 소멸하지 않는 절단 $s\in\Gamma(X, \mathcal{I}_Y\otimes\mathcal{L}^{\otimes n})\subseteq\Gamma(X, \mathcal{L}^{\otimes n})$이 존재한다. 이 $s$는 $Y$ 위에서 소멸하므로 $s$가 stalk를 생성하는 점들의 열린집합 $X_s$는 ([§인자와 선형계, §§Ample invertible sheaf](/ko/math/scheme_theory/divisors_and_linear_systems#ample-invertible-sheaf)) $U$에 포함되고, $U$ 위에서 $\mathcal{L}^{\otimes n}$을 자명화하면 $s$는 함수 $f\in\Gamma(U, \mathcal{O}_X)$에 대응하여 $X_s=D(f)$는 affine이다.
 
@@ -229,7 +229,7 @@ $X$가 $\mathbb{K}$ 위에서 finite type이므로 각 affine chart의 coordinat
 이제 절단들 $s_1^N,\ldots, s_k^N$과 $t_{ij}$들을 함께 생각하자. $X_{s_i^N}=X_{s_i}$들이 $X$를 덮으므로 이들은 $\mathcal{L}^{\otimes mN}$을 globally generate하고, 따라서 morphism $\varphi:X \rightarrow \mathbb{P}^M_\mathbb{K}$를 정의한다. ([§인자와 선형계, §§Ample invertible sheaf](/ko/math/scheme_theory/divisors_and_linear_systems#ample-invertible-sheaf)) $s_i^N$에 대응하는 좌표가 소멸하지 않는 standard chart를 $V_i\subseteq\mathbb{P}^M_\mathbb{K}$라 하면 $\varphi^{-1}(V_i)=X_{s_i}$이고, $\varphi$의 구성에 의하여 $\varphi\vert_{X_{s_i}}:X_{s_i} \rightarrow V_i$는 좌표를 $t_{ij}/s_i^N=b_{ij}$로 보내는 ring homomorphism에 대응한다. $b_{ij}$들이 $B_i$를 생성하므로 이 homomorphism은 surjective이고, 따라서 $\varphi\vert_{X_{s_i}}$는 closed immersion이다. ([§아핀스킴, ⁋정리 13](/ko/math/scheme_theory/affine_schemes#thm13), [§닫힌 부분스킴, ⁋명제 3](/ko/math/scheme_theory/closed_subschemes#prop3)) Closed immersion인 것은 target에 대해 국소적인 조건이므로 $\varphi$는 열린집합 $\bigcup_iV_i$ 위로의 closed immersion, 곧 locally closed embedding이며 $\mathcal{L}^{\otimes mN}\cong\varphi^\ast\mathcal{O}(1)$은 very ample이다.
 :::
 
-[정리 10](#thm10)은 ampleness가 $\mathcal{L}$ 하나가 아니라 그 거듭제곱들이 함께 결정하는 성질임을 다시 확인해 준다. 실제로 [§인자와 선형계, ⁋명제 20](/ko/math/scheme_theory/divisors_and_linear_systems#prop20)의 2번은 ampleness가 거듭제곱을 취하여도 변하지 않는다고 말하는데, very ampleness는 그렇지 않으므로 두 개념 사이의 간극은 정확히 이 거듭제곱만큼이다. 이제 [정리 8](#thm8)과 합치면 ampleness를 cohomology만으로 읽어낼 수 있다.
+[정리 10](#thm10)은 ampleness가 $\mathcal{L}$ 하나가 아니라 그 거듭제곱들이 함께 결정하는 성질임을 다시 확인해 준다. 실제로 [§인자와 선형계, ⁋명제 19](/ko/math/scheme_theory/divisors_and_linear_systems#prop19)의 2번은 ampleness가 거듭제곱을 취하여도 변하지 않는다고 말하는데, very ampleness는 그렇지 않으므로 두 개념 사이의 간극은 정확히 이 거듭제곱만큼이다. 이제 [정리 8](#thm8)과 합치면 ampleness를 cohomology만으로 읽어낼 수 있다.
 
 ::: 정리 11 (Serre의 판정법)
 Field $\mathbb{K}$ 위의 Noetherian projective scheme $X$ 위의 invertible sheaf $\mathcal{L}$에 대하여 다음 두 조건은 서로 동치이다.
