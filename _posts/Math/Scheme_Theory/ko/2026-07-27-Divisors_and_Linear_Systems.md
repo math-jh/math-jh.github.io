@@ -19,21 +19,19 @@ published: false
 
 ## Effective Cartier divisor
 
-본질적으로 divisor는 codimension $1$에서 일어나는 현상이었다. 
-
-우선 국소적으로 하나의 방정식이 잘라내는 closed subscheme을 생각한다. Closed embedding $\iota: Z\hookrightarrow X$가 *locally principal*이라는 것은 $X$의 적당한 open cover $\{U_i\}$가 존재하여, $\iota$의 공역을 각각의 $U_i$로 제한하여 얻어지는 closed embedding $\iota\vert^{U_i}: \iota^{-1}(U_i) \rightarrow U_i$마다 적당한 $s_i\in \Gamma(U_i,\mathcal{O}_X)$가 존재하여 이것이 $Z(s_i)\hookrightarrow U_i$와 isomorphic한 것이다. 여기에서 $Z(s)$는 global section $s$의 vanishing scheme이다. ([§닫힌 부분스킴, ⁋정의 7](/ko/math/scheme_theory/closed_subschemes#def7)) 이 때 $U_i$들 각각을 affine open set들로 덮고 $s_i$들을 이들로 제한시키면 $\{U_i\}$가 affine open cover라 가정하여도 된다. 
-
-그러나 이 조건은 $s_i$를 죽이는 $0$이 아닌 원소가 존재하는 것을 막지 못하고, 그 결과 $Z$의 codimension이 $1$이 아닐 수 있다. 우리가 다룰 대상은 여기에 방정식이 관계식을 갖지 않는다는 요구를 더한 것이며, 두 조건이 실제로 다르다는 것은 [예시 4](#ex4)에서 확인한다. 
+이번 글에서 우리는 [\[대수다양체\] §인자](/ko/math/algebraic_varieties/divisors)와는 순서를 바꾸어 Cartier divisor를 먼저 정의한다. 
 
 ::: 정의 1
 Closed embedding $\iota: Z \hookrightarrow X$가 *effective Cartier divisor<sub>유효 카르티에 인자</sub>*라는 것은 $X$의 affine open cover $\{U_i=\Spec A_i\}$가 존재하여, 각각의 closed embedding들
 
 $$\iota\vert^{U_i}:\iota^{-1}(U_i) \rightarrow U_i$$
 
-마다 적당한 non-zerodivisor $s_i\in A_i=\Gamma(U_i, \mathcal{O}_X)$가 존재하여 두 closed embedding $\iota\vert^{U_i}$와 $Z(s_i)\hookrightarrow U_i$가 isomorphic한 것이다.
+마다 적당한 non-zerodivisor $s_i\in A_i=\Gamma(U_i, \mathcal{O}_X)$가 존재하여 두 closed embedding $\iota\vert^{U_i}$와 $s_i$의 vanishing scheme $Z(s_i)\hookrightarrow U_i$가 isomorphic한 것이다. ([§닫힌 부분스킴, ⁋정의 7](/ko/math/scheme_theory/closed_subschemes#def7))
 :::
 
-정의에 의해 locally principal embedding은 대략적으로 ideal sheaf가 (국소적으로는) 하나의 원소로 생성되는 것, 즉 principal ideal인 것이고 effective Cartier divisor는 적절한 affine cover를 잡으면 이 하나의 원소가 non-zerodivisor이도록 할 수 있는 것이다. 특히 임의의 effective Cartier divisor는 locally principal이다. 이 대략적인 서술을 ideal sheaf의 언어로 정확히 적어두자. ([§닫힌 부분스킴, ⁋정의 5](/ko/math/scheme_theory/closed_subschemes#def5))
+정의가 $s_i$에 요구하는 것은 non-zerodivisor라는 것뿐이므로 $Z$는 non-reduced일 수 있다. Algebraic variety에서는 closed subvariety가 언제나 reduced이므로, multiplicity를 담기 위해서는 [\[대수다양체\] §인자, ⁋정의 1](/ko/math/algebraic_varieties/divisors#def1)과 같이 formal sum을 사용하여 형식적으로 정수계수를 붙여주었어야 했다. 이제 $Z$ 자체가 multiplicity를 가지므로 effective인 경우에는 그러한 계수가 필요하지 않다. 가령 $X=\Spec \mathbb{K}[\x]$와 $s=\x^2$에 대하여 $\x^2$이 non-zerodivisor이므로 $Z(s)=\Spec \mathbb{K}[\x]/(\x^2)$은 effective Cartier divisor이며, 이는 원점 하나에 얹힌 non-reduced scheme으로서 multiplicity $2$를 갖는다.
+
+정의에 의해 effective Cartier divisor는 대략적으로 ideal sheaf가 국소적으로 하나의 원소로 생성되는 것, 즉 principal ideal이면서 그 원소를 non-zerodivisor로 잡을 수 있는 것이다. 이 대략적인 서술을 ideal sheaf의 언어로 정확히 적어두자. ([§닫힌 부분스킴, ⁋정의 5](/ko/math/scheme_theory/closed_subschemes#def5))
 
 ::: 명제 2
 Closed embedding $\iota: Z\hookrightarrow X$가 effective Cartier divisor인 것은, 그 ideal sheaf $\mathcal{I}_{Z/X}$가 invertible sheaf인 것과 동치이다. ([§준연접층, ⁋정의 12](/ko/math/scheme_theory/quasicoherent_sheaves#def12))
@@ -54,7 +52,7 @@ $$\mathcal{I}_{Z/X}\vert_{U_i}\cong \widetilde{(s_i)}\cong \widetilde{A_i}=\math
 
 ## Cartier 인자
 
-우선 하나의 non-zerodivisor가 잘라내는 경우, 곧 effective Cartier divisor의 이론을 끝까지 살펴본다. 출발점은 그 codimension이 언제나 $1$이라는 것이다.
+이제 effective Cartier divisor의 이론을 끝까지 살펴본다. 출발점은 그 codimension이 언제나 $1$이라는 것이다.
 
 ::: 명제 3
 Locally Noetherian scheme $X$ 위의 effective Cartier divisor $\iota:Z\hookrightarrow X$에 대하여, $Z$의 모든 irreducible component는 $X$에서 codimension $1$을 갖는다.
@@ -63,7 +61,7 @@ Locally Noetherian scheme $X$ 위의 effective Cartier divisor $\iota:Z\hookrigh
 Codimension은 국소적으로 계산되므로, [정의 1](#def1)의 affine open cover $\{U_i=\Spec A_i\}$ 가운데 하나를 택하여 $Z\cap U_i=Z(s_i)$이고 $s_i\in A_i$가 non-zerodivisor인 경우만 보면 충분하다. $Z$의 irreducible component $W$가 $U_i$와 만난다면 $W\cap U_i$는 $Z(s_i)$의 irreducible component이다. [§차원, ⁋명제 12](/ko/math/scheme_theory/dimension#prop12)에 의하여 $Z(s_i)$의 component는 $U_i$에서 codimension $0$이거나 $1$인데, codimension $0$인 component는 $U_i$ 자신의 irreducible component, 즉 $A_i$의 minimal prime ideal $\mathfrak{p}$에 대응된다. 만일 $W\cap U_i$가 그러한 component라면 $s_i$가 그 위에서 소멸하므로 $s_i\in \mathfrak{p}$이다. 그런데 Noetherian ring에서 non-zerodivisor는 어떠한 minimal prime ideal에도 속하지 않으므로 ([\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)) 이는 $s_i$가 non-zerodivisor라는 가정에 모순이다. 따라서 $W\cap U_i$의 codimension은 $1$이고, [§차원, ⁋명제 8](/ko/math/scheme_theory/dimension#prop8)에 의하여 $W$의 $X$에서의 codimension 또한 $1$이다.
 :::
 
-이로부터 앞에서 미룬 것, 곧 locally principal이지만 effective Cartier divisor는 아닌 closed embedding이 실제로 존재한다는 것을 확인할 수 있다.
+이로부터 [정의 1](#def1)에서 $s_i$가 non-zerodivisor라는 요구를 덜어내면 안 된다는 것을 알 수 있다. 그 요구만을 덜어낸 조건, 곧 각각의 $s_i$가 $A_i$의 임의의 원소여도 되는 것을 *locally principal*이라 부르는데, 다음은 locally principal이지만 effective Cartier divisor는 아닌 closed embedding이다.
 
 ::: 예시 4
 $X=\Spec \mathbb{K}[\x,\y]/(\x\y)$를 평면의 두 좌표축의 합집합이라 하고, $Z=Z(\x)$라 하자. 이는 global section $\x$ 하나의 vanishing scheme이므로, $X$ 자신을 cover로 택하면 $Z\hookrightarrow X$가 locally principal임을 안다.
@@ -119,11 +117,11 @@ Effective한 $D=\{(U_i,f_i)\}$가 주어졌다 하자. $f_i\in \Gamma(U_i,\mathc
 거꾸로 effective Cartier divisor $\iota:Z\hookrightarrow X$와 [정의 1](#def1)의 자료 $\{(U_i,s_i)\}$가 주어졌다 하자. $s_i$가 non-zerodivisor이므로 $s_i\in K(U_i)^\times$이다. 겹침 위에서는 $\mathcal{I}_{Z/X}$가 $s_i$로도 $s_j$로도 생성되므로 각 점에서 $s_i=us_j$인 local unit $u$가 존재하며, 이러한 $u$는 $s_i$와 $s_j$가 non-zerodivisor라는 것에서 유일하게 결정되어 겹침 전체의 section으로 붙는다. 곧 $\{(U_i,s_i)\}$는 effective한 Cartier divisor이다. 두 구성이 서로 역이라는 것은 어느 쪽이든 $\mathcal{I}_{Z/X}$를 국소적으로 생성하는 원소를 주고받는 것이므로 곧바로 확인된다.
 :::
 
-따라서 [정의 1](#def1)의 기하적인 자료와 [정의 6](#def6)의 대수적인 자료는 effective한 자리에서 같은 것을 가리키며, 앞으로 우리는 effective Cartier divisor와 $\CaDiv(X)$의 effective한 원소를 구별하지 않는다. 일반적인 Cartier divisor는 각각의 $U_i$ 위에서 $f_i$를 두 non-zerodivisor의 비로 적을 수 있으므로 국소적으로는 두 effective Cartier divisor의 차이며, 이런 뜻에서 $\CaDiv(X)$는 국소적으로 [정의 1](#def1)의 closed subscheme들로 생성된다. 이 관점은 아래에서 한 번 더 형태를 바꾸는데, [정의 12](#def12)에서 우리는 Cartier divisor $D$마다 invertible sheaf $\mathcal{O}_X(D)$를 만들고 $D$가 effective인 경우 $\mathcal{O}_X(-D)$가 [명제 7](#prop7)의 closed subscheme의 ideal sheaf임을 볼 것이다. 이 대응이 $\CaCl(X)$와 $\Pic(X)$ 사이의 동형으로 확장된다는 것이 [정리 14](#thm14)이다.
+따라서 [정의 1](#def1)의 기하적인 자료와 [정의 6](#def6)의 대수적인 자료는 effective인 경우에 같은 것을 가리키며, 앞으로 우리는 effective Cartier divisor와 $\CaDiv(X)$의 effective한 원소를 구별하지 않는다. 일반적인 Cartier divisor는 각각의 $U_i$ 위에서 $f_i$를 두 non-zerodivisor의 비로 적을 수 있으므로 국소적으로는 두 effective Cartier divisor의 차이며, 이런 뜻에서 $\CaDiv(X)$는 국소적으로 [정의 1](#def1)의 closed subscheme들로 생성된다. 이 관점은 아래에서 한 번 더 형태를 바꾸는데, [정의 12](#def12)에서 우리는 Cartier divisor $D$마다 invertible sheaf $\mathcal{O}_X(D)$를 만들고 $D$가 effective인 경우 $\mathcal{O}_X(-D)$가 [명제 7](#prop7)의 closed subscheme의 ideal sheaf임을 볼 것이다. 이 대응이 $\CaCl(X)$와 $\Pic(X)$ 사이의 동형으로 확장된다는 것이 [정리 14](#thm14)이다.
 
 ## Weil 인자
 
-이제 반대편의 이론, 곧 codimension $1$짜리 닫힌집합들을 직접 세는 방식을 세운다. 이를 위해서는 rational function이 각각의 codimension $1$ 부분에서 갖는 zero와 pole의 order를 정의할 수 있어야 하고, 그러려면 그 자리에서의 local ring이 discrete valuation ring이어야 한다. 이 절에서 $X$는 언제나 normal이고 integral인 Noetherian scheme으로 둔다. ([§스킴의 대수구조, ⁋정의 6](/ko/math/scheme_theory/algebra_of_schemes#def6)) 그럼 $X$의 유일한 associated point는 generic point $\xi$이므로 [§스킴의 대수구조, ⁋정의 12](/ko/math/scheme_theory/algebra_of_schemes#def12)의 total quotient ring은 [§스킴 사상의 성질들, §§유리사상](/ko/math/scheme_theory/properties_of_scheme_morphisms#유리사상)에서 정의한 function field
+이제 반대편의 이론, 곧 codimension $1$짜리 닫힌집합들을 직접 세는 방식을 세운다. 이를 위해서는 rational function이 각각의 codimension $1$ 부분에서 갖는 zero와 pole의 order를 정의할 수 있어야 하고, 그러려면 그 점에서의 local ring이 discrete valuation ring이어야 한다. 이 절에서 $X$는 언제나 normal이고 integral인 Noetherian scheme으로 둔다. ([§스킴의 대수구조, ⁋정의 6](/ko/math/scheme_theory/algebra_of_schemes#def6)) 그럼 $X$의 유일한 associated point는 generic point $\xi$이므로 [§스킴의 대수구조, ⁋정의 12](/ko/math/scheme_theory/algebra_of_schemes#def12)의 total quotient ring은 [§스킴 사상의 성질들, §§유리사상](/ko/math/scheme_theory/properties_of_scheme_morphisms#유리사상)에서 정의한 function field
 
 $$K(X)=\mathcal{O}_{X,\xi}$$
 
@@ -149,7 +147,7 @@ Normal integral Noetherian scheme $X$에 대하여 다음이 성립한다.
 Normal integral Noetherian scheme $X$의 codimension $1$ irreducible closed subset을 *prime divisor*라 부르고, prime divisor들로 생성되는 free abelian group $\Div(X)$의 원소를 $X$의 *Weil divisor<sub>베유 인자</sub>*라 부른다. Weil divisor $D=\sum_Y n_YY$가 *effective*라는 것은 모든 $n_Y$가 음이 아닌 것이며, 이를 $D\geq 0$으로 적는다.
 :::
 
-곧 Weil divisor는 codimension $1$짜리 닫힌집합들의 형식적인 정수계수 합이며, 각각의 계수는 그 자리에서 함수가 갖는 zero 또는 pole의 order를 기록하는 자리이다. 이 기록을 실제로 수행하는 것이 다음의 정의이다.
+곧 Weil divisor는 codimension $1$짜리 닫힌집합들의 형식적인 정수계수 합이며, 각각의 계수는 해당 prime divisor에서 함수가 갖는 zero 또는 pole의 order를 기록한다. 이 기록을 실제로 수행하는 것이 다음의 정의이다.
 
 ::: 정의 10
 Normal integral Noetherian scheme $X$와 $f\in K(X)^\times$에 대하여,
@@ -194,7 +192,7 @@ $f_x=\prod_Y g_Y^{n_Y}\in K(X)^\times$로 두자. 곱은 $x$를 지나는 유한
 이렇게 얻은 열린집합들을 affine으로 줄여 $X$의 affine open cover $\{U_x\}$를 얻자. 그럼 $\divisor(f_x)$와 $\divisor(f_{x'})$이 모두 $U_x\cap U_{x'}$ 위에서 $D$와 일치하므로 $f_x/f_{x'}$는 겹침과 만나는 모든 prime divisor에서 $\ord$가 $0$이며, 위의 injectivity 논증을 열린집합 $U_x\cap U_{x'}$에 적용하면 이는 $\mathcal{O}_X^\times$의 section이다. 곧 $\{(U_x,f_x)\}$는 Cartier divisor이고 그 image가 $D$이다. 마지막으로 principal divisor들이 서로 대응되므로 quotient 사이의 동형 $\CaCl(X)\cong\Cl(X)$이 유도된다.
 :::
 
-곧 factorial scheme 위에서는 두 인자 이론이 일치하며, 이는 [명제 5](#prop5)이 effective한 자리에서 말한 것을 임의의 계수로 확장한 것이다. 일반적인 normal scheme 위에서는 $\CaDiv(X)$의 image가 $\Div(X)$의 proper subgroup일 수 있고, 그 차이는 $X$의 singularity가 codimension $1$ 부분을 국소적으로 하나의 방정식으로 자르지 못하는 정도를 잰다.
+곧 factorial scheme 위에서는 두 인자 이론이 일치하며, 이는 [명제 5](#prop5)가 effective인 경우에 말한 것을 임의의 계수로 확장한 것이다. 일반적인 normal scheme 위에서는 $\CaDiv(X)$의 image가 $\Div(X)$의 proper subgroup일 수 있고, 그 차이는 $X$의 singularity가 codimension $1$ 부분을 국소적으로 하나의 방정식으로 자르지 못하는 정도를 잰다.
 
 ## $\mathcal{O}_X(D)$와 Picard group
 
@@ -326,4 +324,4 @@ $$\mathcal{F}\otimes(\mathcal{L}\otimes\mathcal{M})^{\otimes n}\cong(\mathcal{F}
 에서 첫째 인자는 globally generated이고 둘째 인자는 globally generated인 sheaf의 tensor power이므로 globally generated이다. 따라서 좌변 또한 globally generated이다.
 :::
 
-[명제 19](#prop19)의 1번은 ampleness가 affine 방향으로는 아무런 정보를 담지 않는다는 것을 말해준다. Ampleness가 실제로 쓰이는 자리는 사영적인 상황이며, 그곳에서 $\mathcal{L}$이 ample인 것과 적당한 $m>0$에 대하여 $\mathcal{L}^{\otimes m}$이 very ample인 것이 동치가 된다. 이 동치와, 고차 cohomology의 소멸로 ampleness를 판정하는 Serre의 판정법은 모두 사영공간 위의 cohomology 계산을 필요로 하므로 다음 글에서 다룬다.
+[명제 19](#prop19)의 1번은 ampleness가 affine 방향으로는 아무런 정보를 담지 않는다는 것을 말해준다. Ampleness가 실제로 쓰이는 것은 사영적인 상황이며, 그곳에서 $\mathcal{L}$이 ample인 것과 적당한 $m>0$에 대하여 $\mathcal{L}^{\otimes m}$이 very ample인 것이 동치가 된다. 이 동치와, 고차 cohomology의 소멸로 ampleness를 판정하는 Serre의 판정법은 모두 사영공간 위의 cohomology 계산을 필요로 하므로 다음 글에서 다룬다.
