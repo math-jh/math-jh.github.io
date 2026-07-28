@@ -19,7 +19,7 @@ published: false
 
 ## 카르티에 인자
 
-[\[대수다양체\] §인자](/ko/math/algebraic_varieties/divisors)에서는 Weil divisor를 먼저 정의하고 Cartier divisor를 그 후에 살펴보았다. 이는 Cartier divisor가 Weil divisor의 일반화이기 때문이었는데, 덕분에 우리는 singular variety에서 작동하는 divisor theory를 사용할 수 있었다. Scheme은 variety보다 여러 방면으로 일반적인 무대이므로, 우리는 처음부터 Weil divisor를 다루기보다 우리가 주로 사용할 Cartier divisor를 사용하기로 한다. 
+[\[대수다양체\] §인자](/ko/math/algebraic_varieties/divisors)에서는 Weil divisor를 먼저 정의하고 Cartier divisor를 그 후에 살펴보았다. 이는 Cartier divisor가 국소적으로 하나의 방정식으로 잘린다는 조건을 더함으로써 그 대상이 정의되는 공간을 일반화한 것이기 때문이었는데, 덕분에 우리는 singular variety에서 작동하는 divisor theory를 사용할 수 있었다. Scheme은 variety보다 여러 방면으로 일반적인 무대이므로, 우리는 처음부터 Weil divisor를 다루기보다 우리가 주로 사용할 Cartier divisor를 사용하기로 한다. 
 
 ::: 정의 1
 Closed embedding $\iota: Z \hookrightarrow X$가 *effective Cartier divisor<sub>유효 카르티에 인자</sub>*라는 것은 $X$의 affine open cover $\{U_i=\Spec A_i\}$가 존재하여, 각각의 closed embedding들
@@ -31,7 +31,7 @@ $$\iota\vert^{U_i}:\iota^{-1}(U_i) \rightarrow U_i$$
 
 정의가 $s_i$에 요구하는 것은 non-zerodivisor라는 것뿐이므로 $Z$는 non-reduced일 수 있다. Algebraic variety에서는 closed subvariety가 언제나 reduced이므로, multiplicity를 담기 위해서는 [\[대수다양체\] §인자, ⁋정의 1](/ko/math/algebraic_varieties/divisors#def1)과 같이 formal sum을 사용하여 형식적으로 정수계수를 붙여주었어야 했다. 이제 $Z$ 자체가 multiplicity를 가지므로 effective인 경우에는 그러한 계수가 필요하지 않다. 가령 $X=\Spec \mathbb{K}[\x]$와 $s=\x^2$에 대하여 $\x^2$이 non-zerodivisor이므로 $Z(s)=\Spec \mathbb{K}[\x]/(\x^2)$은 effective Cartier divisor이며, 이는 원점 하나에 얹힌 non-reduced scheme으로서 multiplicity $2$를 갖는다.
 
-[정의 1](#def1)을 ideal sheaf의 언어로 옮겨 적어두자. ([§닫힌 부분스킴, ⁋정의 5](/ko/math/scheme_theory/closed_subschemes#def5))
+위의 정의는 본질적으로 열린집합마다 정의되는 조건으로, cover에 의존하지만 이를 간단히 closed subscheme을 정의하는 ideal sheaf의 성질로 바꿔줄 수 있다. ([§닫힌 부분스킴, ⁋정의 5](/ko/math/scheme_theory/closed_subschemes#def5))
 
 ::: 명제 2
 Closed embedding $\iota: Z\hookrightarrow X$가 effective Cartier divisor인 것은, 그 ideal sheaf $\mathcal{I}_{Z/X}$가 invertible sheaf인 것과 동치이다. ([§준연접층, ⁋정의 12](/ko/math/scheme_theory/quasicoherent_sheaves#def12))
@@ -48,6 +48,8 @@ $$\mathcal{I}_{Z/X}\vert_{U_i}\cong \widetilde{(s_i)}\cong \widetilde{A_i}=\math
 거꾸로 $\mathcal{I}_{Z/X}$가 invertible sheaf라 하자. 임의의 점 $x$에 대하여 $\mathcal{I}_{Z/X}\vert_V\cong \mathcal{O}_V$인 열린근방 $V$를 택하고, $V$ 안에서 $x$를 담는 affine open subset $U=\Spec A$를 택하면 $\mathcal{I}_{Z/X}(U)\cong A$이다. 이 동형에서 $1\in A$의 image를 $s$라 하면 $\mathcal{I}_{Z/X}(U)=(s)$이고 $\ann(s)=0$이므로 $s$는 non-zerodivisor이다. 이러한 $U$들이 $X$를 덮으므로 [정의 1](#def1)의 조건이 충족된다.
 :::
 
+증명에서 사용한 사상 $A\rightarrow \mathcal{I}_{Z/X}(U)$가 [정의 1](#def1)의 두 요구를 명확하게 나눠준다. 이 사상이 surjective라는 것은 ideal $\mathcal{I}_{Z/X}(U)$가 $s$ 하나로 생성된다는 것, 곧 $Z$가 $U$ 위에서 방정식 하나로 잘린다는 것을 요구한다. 이 때, 위의 non-zerodivisor 조건은 $\ann(s)=0$가 되며, 이 때 이 사상이 injective가 되어 $\mathcal{I}_{Z/X}\vert_U\cong \mathcal{O}_U$를 얻는다. 만일 이 non-zerodivisor 조건을 뺀다면 각각의 $s_i$는 $A_i$의 임의의 원소로 택할 수 있으며, 이렇게 얻어지는 조건을 *locally principal*이라 부른다. 곧 effective Cartier divisor란 locally principal인 것 가운데 그 국소적인 방정식을 non-zerodivisor로 잡을 수 있는 것이다.
+
 Effective Cartier divisor의 가장 기본적인 성질은 그 codimension이 언제나 $1$이라는 것이다.
 
 ::: 명제 3
@@ -57,7 +59,7 @@ Locally Noetherian scheme $X$ 위의 effective Cartier divisor $\iota:Z\hookrigh
 Codimension은 국소적으로 계산되므로, [정의 1](#def1)의 affine open cover $\{U_i=\Spec A_i\}$ 가운데 하나를 택하여 $Z\cap U_i=Z(s_i)$이고 $s_i\in A_i$가 non-zerodivisor인 경우만 보면 충분하다. $Z$의 irreducible component $W$가 $U_i$와 만난다면 $W\cap U_i$는 $Z(s_i)$의 irreducible component이다. [§차원, ⁋명제 12](/ko/math/scheme_theory/dimension#prop12)에 의하여 $Z(s_i)$의 component는 $U_i$에서 codimension $0$이거나 $1$인데, codimension $0$인 component는 $U_i$ 자신의 irreducible component, 즉 $A_i$의 minimal prime ideal $\mathfrak{p}$에 대응된다. 만일 $W\cap U_i$가 그러한 component라면 $s_i$가 그 위에서 소멸하므로 $s_i\in \mathfrak{p}$이다. 그런데 Noetherian ring에서 non-zerodivisor는 어떠한 minimal prime ideal에도 속하지 않으므로 ([\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)) 이는 $s_i$가 non-zerodivisor라는 가정에 모순이다. 따라서 $W\cap U_i$의 codimension은 $1$이고, [§차원, ⁋명제 8](/ko/math/scheme_theory/dimension#prop8)에 의하여 $W$의 $X$에서의 codimension 또한 $1$이다.
 :::
 
-이로부터 [정의 1](#def1)에서 $s_i$가 non-zerodivisor라는 요구를 덜어내면 안 된다는 것을 알 수 있다. 그 요구만을 덜어낸 조건, 곧 각각의 $s_i$가 $A_i$의 임의의 원소여도 되는 것을 *locally principal*이라 부르는데, 다음은 locally principal이지만 effective Cartier divisor는 아닌 closed embedding이다.
+증명에서 $s_i$가 non-zerodivisor라는 요구가 쓰인 곳은 $s_i$가 $A_i$의 어떠한 minimal prime ideal에도 속하지 않는다는 것뿐이었다. 기하적으로 이는 $s_i$가 $X$의 irreducible component 위에서 통째로 소멸하지 않는다는 것이다. [정의 1](#def1)에서 이 요구를 덜어내면 방정식 $s_i$가 component 하나를 자르는 대신 그것을 통째로 삼킬 수 있고, 그러면 $Z$는 codimension $1$이 아니라 $X$의 component 자체가 된다. 다음 예시에서 이러한 상황을 확인하자.
 
 ::: 예시 4
 $X=\Spec \mathbb{K}[\x,\y]/(\x\y)$를 평면의 두 좌표축의 합집합이라 하고, $Z=Z(\x)$라 하자. 이는 global section $\x$ 하나의 vanishing scheme이므로, $X$ 자신을 cover로 택하면 $Z\hookrightarrow X$가 locally principal임을 안다.
@@ -67,7 +69,13 @@ $X=\Spec \mathbb{K}[\x,\y]/(\x\y)$를 평면의 두 좌표축의 합집합이라
 대수적으로는 [명제 2](#prop2)가 같은 것을 말해준다. 원점을 담는 affine open subset $U=\Spec A$를 어떻게 택하더라도 $U$는 두 좌표축과 모두 만나므로 $A$ 안에서 $\y$는 $0$이 아니고, $\mathcal{I}_{Z/X}(U)$를 생성하는 $\x$는 이를 죽이는 zerodivisor이다. 곧 이 ideal은 결코 free module이 될 수 없다.
 :::
 
-[예시 4](#ex4)에서 문제가 된 것은 원점에서의 local ring이 domain조차 아니었다는 것이다. 이러한 병리를 배제하면 [명제 3](#prop3)의 역이 성립한다.
+위의 예시에서 codimension이 예상대로 행동하지 않은 것은 $\x$가 minimal prime ideal에 포함되어 있었기 때문이다. 원소가 non-zerodivisor임을 요구함으로써 우리는 이와 같은 minimal prime ideal 뿐만 아니라 associated prime ideal 전체를 피할 수 있도록 해 주며, 예를 들어 다음의 scheme
+
+$$A=\mathbb{K}[\x,\y]/(\x^2,\x\y)$$
+
+에서 $(\x^2,\x\y)=(\x)\cap(\x^2,\y)$이므로 $\Ass(A)=\{(\x),(\x,\y)\}$인데, 이는 $\y$-축에 원점이 embedded point로 얹혀 있는 scheme이다. 여기에서 $\y$는 유일한 minimal prime ideal $(\x)$에 속하지 않으므로 $Z(\y)$는 어떠한 component도 삼키지 않고 codimension $1$을 가지지만, $\x\y=0$이고 $\x\neq 0$이므로 $\y$는 zerodivisor이고 $\ann(\y)=(\x)$이다. 따라서 $Z(\y)\hookrightarrow \Spec A$는 codimension $1$이면서도 effective Cartier divisor가 아니며, 이는 [명제 3](#prop3)의 역이 일반적으로 성립하지 않는다는 뜻이기도 하다.
+
+두 예시 모두에서 문제가 된 것은 해당하는 점에서의 local ring이 domain조차 아니었다는 것이다. 이러한 상황을 배제하면 [명제 3](#prop3)의 역이 성립한다.
 
 ::: 명제 5
 Locally Noetherian integral scheme $X$가 factorial이라 하자. ([§스킴의 대수구조, ⁋정의 7](/ko/math/scheme_theory/algebra_of_schemes#def7)) 그럼 codimension $1$인 임의의 integral closed subscheme $\iota:Z\hookrightarrow X$는 effective Cartier divisor이다.
@@ -84,19 +92,17 @@ $\mathfrak{p}A_\mathfrak{q}=(t)$라 하고, $\mathfrak{q}$ 바깥의 원소는 $
 그럼 $D(g)$는 $z$의 affine open neighborhood로서 그 위에서 $Z$는 $Z(f)$이며, $A_g$가 domain이고 $f\neq 0$이므로 $f$는 non-zerodivisor이다. 이렇게 얻은 열린집합들이 $X$를 덮으므로 [정의 1](#def1)에 의하여 $\iota$는 effective Cartier divisor이다.
 :::
 
-이 가정은 공허하지 않다. 모든 local ring이 regular local ring인 scheme이 그러한데, regular local ring이 UFD라는 것은 Auslander-Buchsbaum의 정리로 이 글에서 증명하지 않고 [\[가환대수학\] §정칙성의 호몰로지 판정](/ko/math/commutative_algebra/homological_criterion_for_regularity)에 위임한다. 곧 regular한 대상 위에서는 codimension $1$이라는 위상적인 조건만으로 방정식 하나를 되찾을 수 있다.
-
-이제 effective Cartier divisor들을 한데 모으면 group이 얻어진다. 이는 국소적인 방정식 자료만으로 서술되며, 방정식이 regular일 것을 요구하지 않고 그 비율만을 통제한다. 아래에서 $K(U)$는 [§스킴의 대수구조, ⁋정의 12](/ko/math/scheme_theory/algebra_of_schemes#def12)의 total quotient ring이다.
+즉, 위의 가정에 대해서는 codimension $1$이라는 위상적인 조건만으로 방정식 하나를 되찾을 수 있으며, 일반적으로 모든 local ring이 regular local ring인 scheme은 factorial이라는 것이 알려져 있으므로 특히 regular한 대상에서 이러한 결과가 성립한다. 일반적으로는 그러한 회복을 기대할 수 없으므로, 우리는 국소적인 방정식 자료 자체를 대상으로 삼아 이들을 한데 모은다. 이 때 각각의 방정식은 $U_i$ 위의 함수일 필요가 없고 겹침 위에서 그 비율만이 통제되며, 아래에서 $K(U)$는 [§스킴의 대수구조, ⁋정의 12](/ko/math/scheme_theory/algebra_of_schemes#def12)의 total quotient ring이다.
 
 ::: 정의 6
-Locally Noetherian scheme $X$ 위의 *Cartier divisor<sub>카르티에 인자</sub>*란 $X$의 affine open cover $\{U_i\}$와 각각의 $f_i\in K(U_i)^\times$가 이루는 자료 $\{(U_i,f_i)\}$로서, 임의의 $i,j$에 대하여 $f_i/f_j$가 $U_i\cap U_j$ 위에서 $\mathcal{O}_X^\times$의 section인 것이다. 두 자료 $\{(U_i,f_i)\}$와 $\{(V_j,g_j)\}$는 임의의 $i,j$에 대하여 $f_i/g_j$가 $U_i\cap V_j$ 위에서 $\mathcal{O}_X^\times$의 section일 때 같은 Cartier divisor로 본다. 이들은 덧셈
+Locally Noetherian scheme $X$ 위의 *Cartier divisor<sub>카르티에 인자</sub>*란 $X$의 affine open cover $\{U_i\}$와 각각의 $f_i\in K(U_i)^\times$가 이루는 데이터 $\{(U_i,f_i)\}$로, 임의의 $i,j$에 대하여 $f_i/f_j$가 $U_i\cap U_j$ 위에서 $\mathcal{O}_X^\times$의 section인 것이다. 이 때, 두 데이터 $\{(U_i,f_i)\}$와 $\{(V_j,g_j)\}$는 임의의 $i,j$에 대하여 $f_i/g_j$가 $U_i\cap V_j$ 위에서 $\mathcal{O}_X^\times$의 section일 때 같은 Cartier divisor로 본다. 이들은 덧셈
 
 $$\{(U_i,f_i)\}+\{(V_j,g_j)\}=\{(W, (f_ig_j)\vert_W)\}$$
 
 을 연산으로 하여 group을 이루며, 여기에서 $W$는 각각의 $U_i\cap V_j$에 포함되는 affine open subset들을 훑는다. 이 group을 $\CaDiv(X)$로 적는다.
 :::
 
-동치관계를 겹침 위에서의 unit 배수로 둔 것이 요점이다. 하나의 조각 위에서 방정식을 $\mathcal{O}_X^\times$의 section만큼 바꾸어도 같은 Cartier divisor이므로, $\CaDiv(X)$의 원소가 기록하는 것은 방정식 자체가 아니라 unit을 무시한 방정식의 자료이다. 여기에서 열린집합 $W\subseteq U$의 associated point들은 $U$의 associated point들 가운데 $W$에 속하는 것들이므로 ([§스킴의 대수구조, ⁋정의 8](/ko/math/scheme_theory/algebra_of_schemes#def8)) restriction이 $K(U)^\times \rightarrow K(W)^\times$를 주며, 이를 통해 자료를 세분할 수 있다. 세분한 자료는 동치관계에 의하여 원래의 것과 같은 Cartier divisor이고, 따라서 affine이 아닌 open cover $\{V_j\}$와 $f_j\in K(V_j)^\times$로 주어진 같은 꼴의 자료 또한 각각의 $V_j$를 affine open subset들로 덮어 하나의 Cartier divisor를 결정하며 그 결과는 세분의 선택에 무관하다. 위의 덧셈에서 $U_i\cap V_j$를 affine으로 세분한 것도 이 때문으로, 두 affine open subset의 교집합은 일반적으로 affine이 아니다. 아래에서 $\{(X,f)\}$처럼 affine이 아닐 수 있는 cover 위에 적은 자료는 모두 이러한 세분을 거친 것으로 읽는다.
+이는 [\[대수다양체\] §인자, ⁋정의 12](/ko/math/algebraic_varieties/divisors#def12)에서 살펴본 것과 같은 정의로, 각각의 $f_i$가 하나의 function field가 아니라 $U_i$마다의 $K(U_i)^\times$에서 온다는 것만이 다르다. 열린집합 $W\subseteq U$의 associated point들은 $U$의 associated point들 가운데 $W$에 속하는 것들이므로 ([§스킴의 대수구조, ⁋정의 8](/ko/math/scheme_theory/algebra_of_schemes#def8)) restriction $K(U)^\times\rightarrow K(W)^\times$가 있고, 따라서 자료를 세분하여도 동치관계에 의하여 같은 Cartier divisor를 얻는다. 두 affine open subset의 교집합이 affine이 아닐 수 있으므로 위의 덧셈이 $W$를 훑는 것도 이 때문이며, 아래에서 $\{(X,f)\}$처럼 affine이 아닐 수 있는 cover 위에 적은 자료 또한 세분을 거친 것으로 읽는다.
 
 $f_i$들이 모두 $\Gamma(U_i,\mathcal{O}_X)$에 속하는 Cartier divisor를 *effective*라 부른다. 이 조건은 동치관계와 어긋나지 않는다. $f_i$가 $\Gamma(U_i,\mathcal{O}_X)$에 속하고 $f_i/g_j$가 $U_i\cap V_j$ 위의 invertible section이면 $g_j=f_i\cdot(f_i/g_j)^{-1}$ 또한 그 위에서 $\mathcal{O}_X$의 section이며, 이러한 $U_i\cap V_j$들이 $V_j$를 덮기 때문이다. 또, $f\in K(X)^\times$ 하나가 정의하는 $\{(X,f)\}$ 꼴의 Cartier divisor를 $\divisor(f)$로 적고 *principal divisor<sub>주인자</sub>*라 부른다. 이들이 이루는 subgroup을 $\Prin(X)$라 하면 quotient group
 
