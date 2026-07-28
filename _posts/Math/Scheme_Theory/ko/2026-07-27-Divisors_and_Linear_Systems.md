@@ -102,13 +102,9 @@ $$\{(U_i,f_i)\}+\{(V_j,g_j)\}=\{(W, (f_ig_j)\vert_W)\}$$
 을 연산으로 하여 group을 이루며, 여기에서 $W$는 각각의 $U_i\cap V_j$에 포함되는 affine open subset들을 훑는다. 이 group을 $\CaDiv(X)$로 적는다.
 :::
 
-이는 [\[대수다양체\] §인자, ⁋정의 12](/ko/math/algebraic_varieties/divisors#def12)에서 살펴본 것과 같은 정의로, 각각의 $f_i$가 하나의 function field가 아니라 $U_i$마다의 $K(U_i)^\times$에서 온다는 것만이 다르다. 열린집합 $W\subseteq U$의 associated point들은 $U$의 associated point들 가운데 $W$에 속하는 것들이므로 ([§스킴의 대수구조, ⁋정의 8](/ko/math/scheme_theory/algebra_of_schemes#def8)) restriction $K(U)^\times\rightarrow K(W)^\times$가 있고, 따라서 자료를 세분하여도 동치관계에 의하여 같은 Cartier divisor를 얻는다. 두 affine open subset의 교집합이 affine이 아닐 수 있으므로 위의 덧셈이 $W$를 훑는 것도 이 때문이며, 아래에서 $\{(X,f)\}$처럼 affine이 아닐 수 있는 cover 위에 적은 자료 또한 세분을 거친 것으로 읽는다.
+이는 [\[대수다양체\] §인자, ⁋정의 12](/ko/math/algebraic_varieties/divisors#def12)에서 살펴본 것과 같은 정의로, 각각의 $f_i$가 하나의 function field가 아니라 $U_i$마다의 $K(U_i)^\times$에서 온다는 것만이 다르다. 열린집합 $W\subseteq U$의 associated point들은 $U$의 associated point들 가운데 $W$에 속하는 것들이므로 ([§스킴의 대수구조, ⁋정의 8](/ko/math/scheme_theory/algebra_of_schemes#def8)) restriction $K(U)^\times\rightarrow K(W)^\times$가 있으며, 이를 통해 자료를 세분할 수 있으므로 아래에서는 affine이 아닌 cover 위에 적은 자료도 같은 방식으로 읽는다.
 
-$f_i$들이 모두 $\Gamma(U_i,\mathcal{O}_X)$에 속하는 Cartier divisor를 *effective*라 부른다. 이 조건은 동치관계와 어긋나지 않는다. $f_i$가 $\Gamma(U_i,\mathcal{O}_X)$에 속하고 $f_i/g_j$가 $U_i\cap V_j$ 위의 invertible section이면 $g_j=f_i\cdot(f_i/g_j)^{-1}$ 또한 그 위에서 $\mathcal{O}_X$의 section이며, 이러한 $U_i\cap V_j$들이 $V_j$를 덮기 때문이다. 또, $f\in K(X)^\times$ 하나가 정의하는 $\{(X,f)\}$ 꼴의 Cartier divisor를 $\divisor(f)$로 적고 *principal divisor<sub>주인자</sub>*라 부른다. 이들이 이루는 subgroup을 $\Prin(X)$라 하면 quotient group
-
-$$\CaCl(X)=\CaDiv(X)/\Prin(X)$$
-
-가 정의되며, 두 Cartier divisor의 차가 principal일 때 이 둘을 *linearly equivalent*라 부른다. 우선 effective라는 이름이 [정의 1](#def1)와 충돌하지 않는다는 것이 다음의 내용이다.
+각각의 $f_i$가 모두 $\Gamma(U_i,\mathcal{O}_X)$에 속하는 Cartier divisor를 *effective*라 부르며, 이것이 위의 동치관계와 호환되는 것을 쉽게 확인할 수 있다. $f_i$가 $\Gamma(U_i,\mathcal{O}_X)$에 속하고 $f_i/g_j$가 $U_i\cap V_j$ 위에서 invertible section이라면 $g_j=f_i\cdot(f_i/g_j)^{-1}$ 또한 그 위에서 $\mathcal{O}_X$의 section이고, 이러한 $U_i\cap V_j$들이 $V_j$를 덮으므로 $g_j$ 역시 $\Gamma(V_j,\mathcal{O}_X)$에 속하기 때문이다. 이렇게 대수적으로 정의한 개념이 [정의 1](#def1)의 것과 일치한다는 것이 $\CaDiv(X)$에 관한 첫 번째 결과이다. 
 
 ::: 명제 7
 Locally Noetherian scheme $X$에 대하여, effective Cartier divisor $\iota:Z\hookrightarrow X$들과 $\CaDiv(X)$의 effective한 원소들은 서로 일대일로 대응한다.
@@ -119,21 +115,29 @@ Effective한 $D=\{(U_i,f_i)\}$가 주어졌다 하자. $f_i\in \Gamma(U_i,\mathc
 거꾸로 effective Cartier divisor $\iota:Z\hookrightarrow X$와 [정의 1](#def1)의 자료 $\{(U_i,s_i)\}$가 주어졌다 하자. $s_i$가 non-zerodivisor이므로 $s_i\in K(U_i)^\times$이다. 겹침 위에서는 $\mathcal{I}_{Z/X}$가 $s_i$로도 $s_j$로도 생성되므로 각 점에서 $s_i=us_j$인 local unit $u$가 존재하며, 이러한 $u$는 $s_i$와 $s_j$가 non-zerodivisor라는 것에서 유일하게 결정되어 겹침 전체의 section으로 붙는다. 곧 $\{(U_i,s_i)\}$는 effective한 Cartier divisor이다. 두 구성이 서로 역이라는 것은 어느 쪽이든 $\mathcal{I}_{Z/X}$를 국소적으로 생성하는 원소를 주고받는 것이므로 곧바로 확인된다.
 :::
 
-따라서 [정의 1](#def1)의 기하적인 자료와 [정의 6](#def6)의 대수적인 자료는 effective인 경우에 같은 것을 가리키며, 앞으로 우리는 effective Cartier divisor와 $\CaDiv(X)$의 effective한 원소를 구별하지 않는다. 일반적인 Cartier divisor는 각각의 $U_i$ 위에서 $f_i$를 두 non-zerodivisor의 비로 적을 수 있으므로 국소적으로는 두 effective Cartier divisor의 차이며, 이런 뜻에서 $\CaDiv(X)$는 국소적으로 [정의 1](#def1)의 closed subscheme들로 생성된다. 이 관점은 아래에서 한 번 더 형태를 바꾸는데, [정의 8](#def8)에서 우리는 Cartier divisor $D$마다 invertible sheaf $\mathcal{O}_X(D)$를 만들고 $D$가 effective인 경우 $\mathcal{O}_X(-D)$가 [명제 7](#prop7)의 closed subscheme의 ideal sheaf임을 볼 것이다. 이 대응이 $\CaCl(X)$와 $\Pic(X)$ 사이의 동형으로 확장된다는 것이 [정리 10](#thm10)이다.
+이로부터 우리는 effective Cartier divisor와 $\CaDiv(X)$의 effective한 원소를 구별하지 않는다. 일반적인 Cartier divisor는 각각의 $U_i$ 위에서 $f_i$를 두 non-zerodivisor의 비로 적을 수 있으므로 국소적으로는 두 effective Cartier divisor의 차이며, 이런 뜻에서 $\CaDiv(X)$는 국소적으로 [정의 1](#def1)의 closed subscheme들로 생성된다.
+
+우리는 $f\in K(X)^\times$ 하나가 정의하는 $\{(X,f)\}$ 꼴의 Cartier divisor를 $\divisor(f)$로 적고 *principal divisor<sub>주인자</sub>*라 부른다. Cartier divisor는 정의에 의해 언제나 국소적으로 함수 하나로 주어지므로, 여기에서 문제가 되는 것은 그 국소적인 자료를 하나의 전역적인 함수로 묶을 수 있는지의 여부이다. 이들이 이루는 subgroup을 $\Prin(X)$라 하면, quotient group
+
+$$\CaCl(X)=\CaDiv(X)/\Prin(X)$$
+
+가 정의되며, 두 Cartier divisor의 차가 principal일 때 이 둘을 *linearly equivalent*라 부른다. 
 
 ## $\mathcal{O}_X(D)$와 Picard group
 
-Cartier divisor의 자료 $\{(U_i,f_i)\}$는 각 조각 위에서 하나의 함수를 지정하고 겹침 위에서 그 비율만을 통제한다. 이는 정확히 invertible sheaf를 국소적인 자명화와 transition function으로 기술하는 방식이므로, 인자에 invertible sheaf를 대응시킬 수 있다. 이 절에서 $X$는 integral Noetherian scheme으로 둔다.
+Cartier divisor의 데이터 $\{(U_i,f_i)\}$는 각 조각 위에서 하나의 함수를 지정하고 겹침 위에서 그 비율만을 통제한다. 이는 정확히 invertible sheaf를 local trivialization과 transition function으로 기술하는 방식이므로, 인자에 invertible sheaf를 대응시킬 수 있다. 이 절에서 $X$는 *integral* Noetherian scheme으로 두자. 그럼 generic point에서의 local ring인 $K(X)$가 field이고 임의의 공집합이 아닌 열린집합에 대하여 $\Gamma(V,\mathcal{O}_X)$가 그 subring이므로, 아래에서 우리는 rational function들을 하나의 $K(X)$ 안에서 다룰 수 있다.
 
 ::: 정의 8
 Integral Noetherian scheme $X$와 Cartier divisor $D=\{(U_i,f_i)\}$에 대하여, $X$ 위의 $\mathcal{O}_X$-module $\mathcal{O}_X(D)$를 각각의 공집합이 아닌 열린집합 $V$마다
 
-$$\Gamma(V,\mathcal{O}_X(D))=\{g\in K(X)\mid \text{모든 $i$에 대하여 } gf_i\in \Gamma(V\cap U_i,\mathcal{O}_X)\}$$
+$$\Gamma(V,\mathcal{O}_X(D))=\{g\in K(X)\mid gf_i\in \Gamma(V\cap U_i,\mathcal{O}_X)\text{ for all $i$}\}$$
 
 로 정의하고, $\Gamma(\emptyset,\mathcal{O}_X(D))=0$으로 둔다. 여기에서 공집합이 아닌 열린집합들 사이의 restriction map은 $K(X)$의 원소를 그대로 보내는 것이다.
 :::
 
-정의의 조건은 각 점의 근방에서 확인되는 조건이므로 $\mathcal{O}_X(D)$는 실제로 $\mathcal{O}_X$의 곱셈에 대해 닫힌 sheaf이다. 또 이 sheaf는 $D$를 나타내는 자료의 선택에 무관하다. 다른 자료 $\{(V_j,g_j)\}$가 같은 Cartier divisor를 준다면 겹침 위에서 $f_i/g_j$가 invertible section이므로, $gf_i$가 $\mathcal{O}_X$의 section인 것과 $gg_j$가 그러한 것이 각각의 $V\cap U_i\cap V_j$ 위에서 같은 조건이기 때문이다. 직관적으로 $\Gamma(V,\mathcal{O}_X(D))$는 $D$가 지정하는 만큼의 pole만을 허용하는 rational function들의 모임이며, $D$가 effective이면 $\mathcal{O}_X\subseteq \mathcal{O}_X(D)$이고 $-D$에 대해서는 거꾸로 $D$ 위에서 소멸하는 함수들의 sheaf, 곧 [명제 7](#prop7)이 주는 closed subscheme의 ideal sheaf가 된다.
+이는 우리가 이미 [\[대수다양체\] §선다발과 벡터다발, ⁋정의 17](/ko/math/algebraic_varieties/line_bundles#def17)에서 다룬 것으로, 우리는 $f_i/f_j$를 transition function으로 삼아 line bundle을 만들고, 그 section들이 $\divisor(g)+D\geq 0$을 만족하는 rational function들임을 뒤이어 확인하였다. [정의 8](#def8)도 이 정의와 마찬가지로 sheaf $\mathcal{O}_X(D)$를 정의하는 것으로, 이 때 $\Gamma(V,\mathcal{O}_X(D))$는 $D$가 지정하는 만큼의 pole만을 허용하는 rational function들의 모임이다.
+
+정의의 조건은 각 점의 근방에서 확인되는 조건이므로 $\mathcal{O}_X(D)$는 실제로 $\mathcal{O}_X$의 곱셈에 대해 닫힌 sheaf이다. 또 이 sheaf는 $D$를 나타내는 데이터의 선택에 무관하다. 다른 자료 $\{(V_j,g_j)\}$가 같은 Cartier divisor를 준다면 겹침 위에서 $f_i/g_j$가 invertible section이므로, $gf_i$가 $\mathcal{O}_X$의 section인 것과 $gg_j$가 그러한 것이 각각의 $V\cap U_i\cap V_j$ 위에서 같은 조건이기 때문이다. $D$가 effective이면 $\mathcal{O}_X\subseteq \mathcal{O}_X(D)$이고 $-D$에 대해서는 거꾸로 $D$ 위에서 소멸하는 함수들의 sheaf, 곧 [명제 7](#prop7)이 주는 closed subscheme의 ideal sheaf가 된다.
 
 ::: 명제 9
 Integral Noetherian scheme $X$와 Cartier divisor $D,D'$에 대하여 다음이 성립한다.
