@@ -147,7 +147,7 @@ Closed embedding $\varphi: X \rightarrow Y$가 주어졌다 하자. [명제 3](#
 [§스킴 사상의 성질들, ⁋예시 16](/ko/math/scheme_theory/properties_of_scheme_morphisms#ex16)에서 만든 (quasi-)finite morphism의 기하학적 직관에 비추어볼 때, 적어도 closed embedding은 항상 quasi-finite이어야 하는 것이 자명하고, 여기에서 더 나아가 finite이기도 하다는 기하적인 해석이 가능하다. 
 
 ::: 정의 5
-임의의 scheme $Z$에 대하여, $\mathcal{O}_Z$의 subsheaf $\mathcal{I}$ 가운데 각각의 열린집합 $U$에서 $\mathcal{I}(U)$가 $\mathcal{O}_Z(U)$의 ideal을 이루는 것, 곧 $\mathcal{O}_Z$-module로서의 subsheaf를 $Z$의 *ideal sheaf*라 부른다. 특별히 closed embedding $\iota: Z \rightarrow X$에 대하여, $\mathcal{O}_X$의 subsheaf $\ker\iota^\sharp$를 $\iota$에 의해 정의되는 ideal sheaf라 부르고, 이를 $\mathcal{I}_{Z/X}$로 표기한다. 
+임의의 scheme $Z$에 대하여, $\mathcal{O}_Z$의 subsheaf $\mathcal{I}$ 가운데 각각의 열린집합 $U$에서 $\mathcal{I}(U)$가 $\mathcal{O}_Z(U)$의 ideal을 이루는 것을 $Z$의 *ideal sheaf*라 부른다. 특별히 closed embedding $\iota: Z \rightarrow X$에 대하여, $\mathcal{O}_X$의 subsheaf $\ker\iota^\sharp$를 $\iota$에 의해 정의되는 ideal sheaf라 부르고, 이를 $\mathcal{I}_{Z/X}$로 표기한다. 
 :::
 
 즉, 다음의 exact seqeunce

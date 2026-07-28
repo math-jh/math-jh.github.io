@@ -148,7 +148,7 @@ Let a closed embedding $\varphi: X \rightarrow Y$ be given. By [Proposition 3](#
 In light of the geometric intuition for (quasi-)finite morphisms built in [§Properties of Scheme Morphisms, ⁋Example 16](/en/math/scheme_theory/properties_of_scheme_morphisms#ex16), it is obvious that at least closed embeddings should always be quasi-finite, and here we have the further geometric interpretation that they are in fact finite.
 
 ::: Definition 5
-For any scheme $Z$, among subsheaves $\mathcal{I}$ of $\mathcal{O}_Z$ such that $\mathcal{I}(U)$ is an ideal of $\mathcal{O}_Z(U)$ for each open set $U$, that is, subsheaves as $\mathcal{O}_Z$-modules, we call those the *ideal sheaves* of $Z$. In particular, for a closed embedding $\iota: Z \rightarrow X$, we call the subsheaf $\ker\iota^\sharp$ of $\mathcal{O}_X$ the ideal sheaf defined by $\iota$, and denote it by $\mathcal{I}_{Z/X}$.
+For any scheme $Z$, among subsheaves $\mathcal{I}$ of $\mathcal{O}_Z$ such that $\mathcal{I}(U)$ is an ideal of $\mathcal{O}_Z(U)$ for each open set $U$, we call those the *ideal sheaves* of $Z$. In particular, for a closed embedding $\iota: Z \rightarrow X$, we call the subsheaf $\ker\iota^\sharp$ of $\mathcal{O}_X$ the ideal sheaf defined by $\iota$, and denote it by $\mathcal{I}_{Z/X}$.
 :::
 
 That is, there exists the following exact sequence
