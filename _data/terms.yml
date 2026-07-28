@@ -523,6 +523,13 @@ A:
   defs:
   - label: '[정수론] §산술적 함수와 뫼비우스 반전'
     url: /ko/math/number_theory/arithmetic_functions
+- id: arrow
+  en: arrow
+  ko: 화살표
+  primary: en
+  defs:
+  - label: '[표현론] §Quiver와 경로대수'
+    url: /ko/math/representation_theory/path_algebras
 - id: artinian
   en: Artinian
   ko: 아틴가군
@@ -5704,6 +5711,13 @@ I:
   defs:
   - label: '[집합론] §단조함수'
     url: /ko/math/set_theory/monotone_functions
+- id: indecomposable
+  en: indecomposable
+  ko: 분해불가능
+  primary: en
+  defs:
+  - label: '[표현론] §Krull–Schmidt 정리'
+    url: /ko/math/representation_theory/krull_schmidt
 - id: indefinite_integral
   en: indefinite integral
   ko: 부정적분
@@ -8763,6 +8777,20 @@ P:
     url: /ko/math/topology/compactness
   - label: '[미분다양체] §미분다양체'
     url: /ko/math/manifolds/smooth_manifolds
+- id: path
+  en: path
+  ko: 경로
+  primary: en
+  defs:
+  - label: '[표현론] §Quiver와 경로대수'
+    url: /ko/math/representation_theory/path_algebras
+- id: path_algebra
+  en: path algebra
+  ko: 경로대수
+  primary: en
+  defs:
+  - label: '[표현론] §Quiver와 경로대수'
+    url: /ko/math/representation_theory/path_algebras
 - id: path-connected
   en: path-connected
   ko: 경로연결
@@ -11111,6 +11139,8 @@ S:
   defs:
   - label: '[집합론] §이항관계'
     url: /ko/math/set_theory/binary_relation
+  - label: '[표현론] §Quiver와 경로대수'
+    url: /ko/math/representation_theory/path_algebras
   see:
   - label: Target
     id: target
@@ -11851,6 +11881,8 @@ T:
   defs:
   - label: '[집합론] §이항관계'
     url: /ko/math/set_theory/binary_relation
+  - label: '[표현론] §Quiver와 경로대수'
+    url: /ko/math/representation_theory/path_algebras
   see:
   - label: Source
     id: source
@@ -12177,6 +12209,13 @@ T:
   defs:
   - label: '[군론] §군의 확장'
     url: /ko/math/group_theory/extensions
+- id: trivial_path
+  en: trivial path
+  ko: 자명한 경로
+  primary: en
+  defs:
+  - label: '[표현론] §Quiver와 경로대수'
+    url: /ko/math/representation_theory/path_algebras
 - id: trivial_topology
   en: trivial topology
   ko: 자명한 위상
@@ -12577,6 +12616,13 @@ V:
   defs:
   - label: '[리 이론] §최고 무게 가군'
     url: /ko/math/lie_theory/highest_weight_modules
+- id: vertex
+  en: vertex
+  ko: 꼭짓점
+  primary: en
+  defs:
+  - label: '[표현론] §Quiver와 경로대수'
+    url: /ko/math/representation_theory/path_algebras
 - id: vertical_asymptote
   en: vertical asymptote
   ko: 수직점근선
