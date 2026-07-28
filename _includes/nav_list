@@ -111,6 +111,7 @@
           {% else %}
             <li><a href="{{ '/ko/about' | relative_url }}">블로그 소개</a></li>
             <li><a href="{{ '/ko/terms' | relative_url }}">찾아보기</a></li>
+            <li><a href="{{ '/ko/notations' | relative_url }}">기호 찾아보기</a></li>
           {% endif %}
         </ul>
       </li>
