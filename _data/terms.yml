@@ -10102,6 +10102,13 @@ R:
   see:
   - label: Irreducible representation
     id: irreducible_representation
+- id: representation-finite
+  en: representation-finite
+  ko: 유한표현형
+  primary: en
+  defs:
+  - label: '[표현론] §Gabriel 정리'
+    url: /ko/math/representation_theory/gabriel_theorem
 - id: representative
   en: representative
   ko: 대표원
