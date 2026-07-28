@@ -158,7 +158,7 @@ $$\Gamma(V,\mathcal{O}_X(D))=f_i^{-1}\Gamma(V,\mathcal{O}_X)$$
 3번의 경우, $D=\divisor(h)$라면 $\mathcal{O}_X(D)=h^{-1}\mathcal{O}_X\cong \mathcal{O}_X$이다. 거꾸로 isomorphism $\psi:\mathcal{O}_X \rightarrow \mathcal{O}_X(D)$가 주어졌다 하고 $h=\psi(1)\in \Gamma(X,\mathcal{O}_X(D))\subseteq K(X)$라 하자. 그럼 $h$는 각각의 $U_i$ 위에서 $\mathcal{O}_X(D)$를 생성하므로 1번과 비교하면 $h$와 $f_i^{-1}$은 $\mathcal{O}_X^\times$의 section만큼 차이나며, 곧 $f_i/h^{-1}=hf_i$가 $U_i$ 위의 invertible section이다. 따라서 [정의 6](#def6)의 동치관계에 의하여 $\{(U_i,f_i)\}$와 $\{(X,h^{-1})\}$은 같은 Cartier divisor를 정의하여 $D=\divisor(h^{-1})$이다.
 :::
 
-[명제 9](#prop9)에 의하여 $D\mapsto \mathcal{O}_X(D)$는 group homomorphism $\CaDiv(X) \rightarrow \Pic(X)$이고 그 kernel이 정확히 $\Prin(X)$이다. 여기에서 $\Pic(X)$는 invertible sheaf들의 isomorphism class가 tensor product에 대해 이루는 group이다. ([§준연접층, ⁋명제 13](/ko/math/scheme_theory/quasicoherent_sheaves#prop13)) 남은 것은 이 대응이 전사라는 것이다.
+위 명제에 의해 대응 $D\mapsto \mathcal{O}_X(D)$는 group homomorphism $\CaDiv(X)\rightarrow\Pic(X)$를 주며, 그 kerne이 곧 $\Prin(X)$가 된다. 따라서 우리는 이 대응의 image가 $\CaCl(X)=\CaDiv(X)/\Prin(X)$와 isomorphic하다는 것을 안다. 다음 정리는 이 결과를 매듭짓는 것으로, 이 대응이 전사이고 따라서 canonical isomorphism $\CaCl(X)\cong \Pic(X)$를 준다는 것을 보여준다.
 
 ::: 정리 10
 Integral Noetherian scheme $X$에 대하여, $D\mapsto \mathcal{O}_X(D)$는 isomorphism $\CaCl(X)\cong\Pic(X)$를 유도한다.
@@ -179,7 +179,7 @@ $$\varphi_i(g)=(gf_i)\cdot\frac{f_j}{f_i}t_j=(gf_j)\cdot t_j=\varphi_j(g)$$
 가 되어 이들은 하나의 isomorphism $\mathcal{O}_X(D)\cong\mathcal{L}$로 붙는다.
 :::
 
-따라서 integral Noetherian scheme 위에서 invertible sheaf를 다루는 것은 linear equivalence를 무시한 Cartier divisor를 다루는 것과 같다. Variety 수준에서 같은 대응은 [\[대수다양체\] §선다발과 벡터다발, ⁋명제 19](/ko/math/algebraic_varieties/line_bundles#prop19)에서 다루었다.
+따라서 integral Noetherian scheme 위에서 invertible sheaf를 다루는 것은 Cartier divisor를 linear equivalence까지만 기억하며 다루는 것과 같으며, variety 수준에서의 같은 대응이 [\[대수다양체\] §선다발과 벡터다발, ⁋명제 19](/ko/math/algebraic_varieties/line_bundles#prop19)이다.
 
 ## 베유 인자
 
