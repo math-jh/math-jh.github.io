@@ -15,11 +15,11 @@ published: false
 
 ---
 
-Scheme $X$ 위의 codimension $1$짜리 부분대상은 두 가지 서로 다른 방식으로 다룰 수 있다. 하나는 그러한 닫힌 부분집합들을 형식적인 정수계수 합으로 모으는 것이고, 다른 하나는 국소적으로 하나의 방정식이 잘라내는 closed subscheme을 다루는 것이다. 앞의 것은 $X$의 부분공간을 직접 세는 것이어서 기하적으로 투명하지만 $X$가 충분히 좋지 않으면 zero와 pole의 order를 정의할 수 없고, 뒤의 것은 임의의 scheme 위에서 정의되지만 국소적인 방정식이라는 자료를 명시적으로 들고 다녀야 한다. 이 글에서 우리는 두 이론을 각각 세우고, 그 사이의 비교를 통해 하나의 인자가 하나의 invertible sheaf를 결정한다는 것을 확인한다. 마지막으로 invertible sheaf의 global section들이 정의하는 사영공간으로의 morphism을 통해 linear system과 ampleness를 다룬다.
-
-Variety 수준에서의 같은 내용은 [\[대수다양체\] §인자](/ko/math/algebraic_varieties/divisors), [\[대수다양체\] §선다발과 벡터다발](/ko/math/algebraic_varieties/line_bundles), [\[대수다양체\] §선형계](/ko/math/algebraic_varieties/linear_systems)에서 다루었으며 구체적인 계산과 예시는 그곳에 있다. 여기에서는 scheme의 언어로 정의와 대응만을 다시 세운다.
+[§준연접층](/ko/math/scheme_theory/quasicoherent_sheaves)에서 quasi-coherent sheaf와 invertible sheaf를 정의하였으므로, 우리는 variety 위에서 하던 divisor와 line bundle의 계산을 이제 scheme 위에서 시작할 수 있다. 이 글의 목적은 [\[대수다양체\] §인자](/ko/math/algebraic_varieties/divisors), [\[대수다양체\] §선다발과 벡터다발](/ko/math/algebraic_varieties/line_bundles)와 [\[대수다양체\] §선형계](/ko/math/algebraic_varieties/linear_systems)에서 다루었던 내용들을 scheme의 언어로 올려주는 것이다. 
 
 ## Locally principal embedding
+
+본질적으로 divisor는 
 
 우선 국소적으로 하나의 방정식이 잘라내는 closed subscheme을 정의한다. 여기에서 $Z(s)$는 global section $s$의 vanishing scheme이다. ([§닫힌 부분스킴, ⁋정의 7](/ko/math/scheme_theory/closed_subschemes#def7))
 
