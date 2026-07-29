@@ -301,7 +301,7 @@ $$Z_j=\overline{F\cap Z_j}=\bigcup_{i=1}^n \overline{U_i\cap C_i\cap Z_j}$$
 
 $$U_i\cap Z_j\subseteq U_i\cap C_i\subseteq F$$
 
-이다. 한편 $U_i\cap Z_j$는 $Z_j$의 열린 부분집합이며 그 closure가 $Z_j$이므로 공집합이 아니다. $Z_j$는 $Y$의 irreducible closed subset이므로 generic point $z_j$를 가지며, $Z_j$의 공집합이 아닌 열린 부분집합은 언제나 $z_j$를 포함하므로 $z_j\in F$이다.
+이다. 한편 $U_i\cap Z_j$는 $Z_j$의 열린 부분집합이며 그 closure가 $Z_j$이므로 공집합이 아니다. $Z_j$는 $Y$의 irreducible closed subset이므로 generic point $\zeta_j$를 가지며, $Z_j$의 공집합이 아닌 열린 부분집합은 언제나 $\zeta_j$를 포함하므로 $\zeta_j\in F$이다.
 
 $F$가 specialization에 대하여 닫혀 있으므로 $Z_j=\overline{\{z_j\}}\subseteq F$이고, 이것이 모든 $j$에 대하여 성립하므로 $Z=\bigcup_j Z_j\subseteq F$이다. $F\subseteq Z$는 자명하므로 $F=Z$는 닫힌집합이다.
 :::

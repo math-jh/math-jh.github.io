@@ -193,6 +193,13 @@ A:
   defs:
   - label: '[범주론] §수반함자'
     url: /ko/math/category_theory/adjoints
+- id: admissible_sink_sequence
+  en: admissible sink sequence
+  ko: 허용 싱크 나열
+  primary: en
+  defs:
+  - label: '[표현론] §반사 함자'
+    url: /ko/math/representation_theory/reflection_functors
 - id: affine
   en: affine
   ko: 아핀
@@ -4013,6 +4020,13 @@ E:
   defs:
   - label: '[대수적 위상수학] §벡터다발의 특성류'
     url: /ko/math/algebraic_topology/characteristic_classes
+- id: euler_form
+  en: Euler form
+  ko: 오일러 형식
+  primary: en
+  defs:
+  - label: '[표현론] §반사 함자'
+    url: /ko/math/representation_theory/reflection_functors
 - id: euler_s_formula
   en: 'Euler''s formula'
   ko: Euler 공식
@@ -9071,6 +9085,13 @@ P:
     url: /ko/math/set_theory/operation_of_binary_relations
   - label: '[집합론] §동치관계의 예시들'
     url: /ko/math/set_theory/examples_of_equivalence
+- id: preinjective
+  en: preinjective
+  ko: 전입사적
+  primary: en
+  defs:
+  - label: '[표현론] §반사 함자'
+    url: /ko/math/representation_theory/reflection_functors
 - id: preorder_relation
   en: preorder relation
   ko: 원순서관계
@@ -9081,6 +9102,13 @@ P:
   see:
   - label: Order relation
     id: order_relation
+- id: preprojective
+  en: preprojective
+  ko: 전사영적
+  primary: en
+  defs:
+  - label: '[표현론] §반사 함자'
+    url: /ko/math/representation_theory/reflection_functors
 - id: presentation
   en: presentation
   ko: 표시
@@ -9889,6 +9917,13 @@ R:
     url: /ko/math/analysis/riemann_integral
   - label: '[대수다양체] §층 코호몰로지'
     url: /ko/math/algebraic_varieties/sheaf_cohomology
+- id: reflection
+  en: reflection
+  ko: 반사
+  primary: en
+  defs:
+  - label: '[표현론] §반사 함자'
+    url: /ko/math/representation_theory/reflection_functors
 - id: reflexive
   en: reflexive
   ko: 반사적
@@ -11018,6 +11053,13 @@ S:
   defs:
   - label: '[선형대수학] §특이값 분해'
     url: /ko/math/linear_algebra/singular_value_decomposition
+- id: sink
+  en: sink
+  ko: 들임 꼭짓점
+  primary: en
+  defs:
+  - label: '[표현론] §반사 함자'
+    url: /ko/math/representation_theory/reflection_functors
 - id: skeletal_category
   en: skeletal category
   ko: 뼈대 카테고리
@@ -11148,6 +11190,8 @@ S:
     url: /ko/math/set_theory/binary_relation
   - label: '[표현론] §Quiver와 경로대수'
     url: /ko/math/representation_theory/path_algebras
+  - label: '[표현론] §반사 함자'
+    url: /ko/math/representation_theory/reflection_functors
   see:
   - label: Target
     id: target
@@ -11977,6 +12021,13 @@ T:
   defs:
   - label: '[리 이론] §최고 무게 가군'
     url: /ko/math/lie_theory/highest_weight_modules
+- id: tits_form
+  en: tits form
+  ko: 티츠 형식
+  primary: en
+  defs:
+  - label: '[표현론] §반사 함자'
+    url: /ko/math/representation_theory/reflection_functors
 - id: topological_manifold
   en: topological manifold
   ko: 위상다양체

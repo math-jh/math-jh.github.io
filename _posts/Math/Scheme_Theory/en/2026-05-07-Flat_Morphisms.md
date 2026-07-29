@@ -303,7 +303,7 @@ for suitable $i$ we have $\overline{U_i\cap C_i\cap Z_j}=Z_j$. Then $U_i\cap C_i
 
 $$U_i\cap Z_j\subseteq U_i\cap C_i\subseteq F.$$
 
-On the other hand, $U_i\cap Z_j$ is an open subset of $Z_j$ whose closure is $Z_j$, so it is nonempty. Since $Z_j$ is an irreducible closed subset of $Y$, it has a generic point $z_j$, and any nonempty open subset of $Z_j$ always contains $z_j$, so $z_j\in F$.
+On the other hand, $U_i\cap Z_j$ is an open subset of $Z_j$ whose closure is $Z_j$, so it is nonempty. Since $Z_j$ is an irreducible closed subset of $Y$, it has a generic point $\zeta_j$, and any nonempty open subset of $Z_j$ always contains $\zeta_j$, so $\zeta_j\in F$.
 
 Since $F$ is closed under specialization, $Z_j=\overline{\{z_j\}}\subseteq F$, and since this holds for all $j$, we have $Z=\bigcup_j Z_j\subseteq F$. Since $F\subseteq Z$ is obvious, $F=Z$ is closed.
 :::

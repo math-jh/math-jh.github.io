@@ -298,7 +298,7 @@ $$K(X)=\left\{\frac{p(\x_1)+c\x_2}{q(\x_1)+c'\x_2} \mid q(0)\neq0\right\}$$
 이것이 고전적인 function field와 다른 점은, 위의 $K(X)$는 nonzero nilpotent을 담는다는 것이며 이것이 정확히 embedded point 때문이다. 구체적으로, $\x_2$는 $\x_2^2=0$을 만족하는 nilpotent element이면서도 $K(X)$에서 nonzero function이 된다. 만일 [정의 12](#def12)가 이 embedded point를 정의역에 담을 것을 요구하지 않았다면 원점을 뺀 $D(\x_1)$ 또한 정의역으로 허용되었을 것이고, [예시 11](#ex11)에서 보았듯 그 위에서 $\x_2$는 이미 $0$이므로 $\x_2$는 $K(X)$에서 사라졌을 것이며 따라서 $X$의 nilpotent 방향의 thickening이 $K(X)$에서 감지되지 않았을 것이다. 
 :::
 
-더 일반적으로, locally Noetherian scheme $X$ 위에 정의된 rational function들의 모임은 위의 construction과 마찬가지 방식으로 *total quotient ring* $K(X)$를 정의한다. 만일 $X$가 integral scheme이라면 $X$는 특히 irreducible이므로 유일한 generic point $x$를 가지며, 이 점은 임의의 affine open subset $U\cong\Spec A$에 대하여 integral domain $A$의 유일한 minimal prime ideal $(0)$에 대응되어야 한다. 그럼 이 점에서의 localization은 $A$의 nonzero element들을 모두 분모로 추가해 준 것, 즉 $\Frac(A)$와 같으므로 $K(X)\cong \mathcal{O}_{X,x}\cong \Frac(A)$이며, 이는 $X$가 하나의 affine open $\Spec A$로 이루어진 경우 이미 알고 있던 $A$의 fraction field가 일반적인 integral scheme에서도 그대로 field of rational functions의 역할을 한다는 것을 보여준다. 
+더 일반적으로, locally Noetherian scheme $X$ 위에 정의된 rational function들의 모임은 위의 construction과 마찬가지 방식으로 *total quotient ring* $K(X)$를 정의한다. 만일 $X$가 integral scheme이라면 $X$는 특히 irreducible이므로 유일한 generic point $\xi$를 가지며, 이 점은 임의의 affine open subset $U\cong\Spec A$에 대하여 integral domain $A$의 유일한 minimal prime ideal $(0)$에 대응되어야 한다. 그럼 이 점에서의 localization은 $A$의 nonzero element들을 모두 분모로 추가해 준 것, 즉 $\Frac(A)$와 같으므로 $K(X)\cong \mathcal{O}_{X,\xi}\cong \Frac(A)$이며, 이는 $X$가 하나의 affine open $\Spec A$로 이루어진 경우 이미 알고 있던 $A$의 fraction field가 일반적인 integral scheme에서도 그대로 field of rational functions의 역할을 한다는 것을 보여준다. 
 
 
 ---

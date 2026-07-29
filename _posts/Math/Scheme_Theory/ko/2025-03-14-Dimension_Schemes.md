@@ -34,7 +34,7 @@ $X$의 임의의 irreducible closed subset들의 chain
 
 $$Y_0\subsetneq Y_1\subsetneq\cdots\subsetneq Y_r$$
 
-에서 가장 작은 항 $Y_0$의 generic point $y_0$는 $X$의 점이므로 covering $(U_i)$에 의해 어떤 $U_i$에 속한다. 그러면 chain의 모든 항이 $U_i$와 만나므로, [\[위상수학\] §차원, ⁋명제 15](/ko/math/topology/dimension#prop15)의 inclusion-preserving bijection을 생각하면 $U_i$ 안의 같은 길이의 chain으로 대응된다. 거꾸로 $U_i$의 임의의 chain은 $X$ 안에서 closure를 취해 올려지므로 $\dim X\geq\dim U_i$이고, 따라서 $\dim X=\sup_i\dim U_i$이며 이는 명제의 조건과 동치이다.
+에서 가장 작은 항 $Y_0$의 generic point $\eta_0$는 $X$의 점이므로 covering $(U_i)$에 의해 어떤 $U_i$에 속한다. 그러면 chain의 모든 항이 $U_i$와 만나므로, [\[위상수학\] §차원, ⁋명제 15](/ko/math/topology/dimension#prop15)의 inclusion-preserving bijection을 생각하면 $U_i$ 안의 같은 길이의 chain으로 대응된다. 거꾸로 $U_i$의 임의의 chain은 $X$ 안에서 closure를 취해 올려지므로 $\dim X\geq\dim U_i$이고, 따라서 $\dim X=\sup_i\dim U_i$이며 이는 명제의 조건과 동치이다.
 :::
 
 증명이 실제로 준 것은 $\dim X=\sup_i\dim U_i$이며, $\dim X$가 유한하다는 가정이 없으면 등호가 성립하는 $i$가 존재하지 않을 수도 있다. 가령 $X=\coprod_{d\geq 0}\mathbb{A}^d_\mathbb{K}$는 무한차원이지만 각각의 affine open subset은 유한히 많은 성분만 만나므로 모두 유한차원이다.
@@ -152,7 +152,7 @@ $$A_{\mathfrak{m}}=\mathbb{K}[t^2,t^3]_{(t^2, t^3)}$$
 임을 확인할 수 있다. 이들을 비교하면 normalization이 원점에서 무엇을 하는지가 대수적으로 드러난다. $A_{\mathfrak{m}}$은 $1$차원 local ring임에도 maximal ideal을 하나의 원소로 생성할 수 없고 $t^2$과 $t^3$ 두 원소를 필요로 하므로 regular local ring이 아니다. ([\[가환대수학\] §차원, ⁋정의 12](/ko/math/commutative_algebra/Krull_dimension#def12)) 실제로 $\mathfrak{m}/\mathfrak{m}^2$은 $t^2$과 $t^3$의 image로 생성되는 $2$차원 벡터공간이며, 이는 [\[대수다양체\] §접공간과 매끄러움, ⁋예시 7](/ko/math/algebraic_varieties/tangent_spaces_and_smoothness#ex7)에서 cusp의 원점에서의 tangent space가 curve의 차원보다 큰 $2$차원으로 계산되었던 것과 같은 현상이다. 반면 normalization의 local ring $A[t]_{(t)}=\mathbb{K}[t]_{(t)}$는 maximal ideal이 단 하나의 원소 $t$로 생성되는 regular local ring이다. 즉 normalization은 singular한 local ring $A_{\mathfrak{m}}$을 regular local ring $A[t]_{(t)}$로 바꾸어 cusp를 펴는 것이다.
 :::
 
-임의의 integral scheme $X$에 대해서도 normalization을 같은 방식으로 정의할 수 있다. $X$를 affine open $\Spec A_i$들로 덮자. $X$가 integral이므로 유일한 generic point $x$를 가지며, 이 점은 각 $\Spec A_i$에서 domain $A_i$의 minimal prime $(0)$에 대응하여 그 stalk이 $\Frac(A_i)$가 된다. Stalk $\mathcal{O}_{X,x}$는 어느 affine open에서 계산하든 같으므로 모든 $\Frac(A_i)$가 하나의 공통 function field $K(X)$로 일치하며 ([§스킴 사상의 성질들, §§유리사상](/ko/math/scheme_theory/properties_of_scheme_morphisms#유리사상)), 우리는 각 조각에서 $A_i$의 $K(X)$ 안에서의 normalization $\tilde{A}_i$를 취할 수 있다. 이 때 normalization은 localization과 commute하므로 ([\[가환대수학\] §정수적 확장, ⁋명제 12](/ko/math/commutative_algebra/integral_extension#prop12)) 각 $\Spec\tilde{A}_i$의 겹침 $\Spec A_i\cap\Spec A_j$로의 restriction들이 서로 일치하고, 따라서 이들은 하나의 scheme $\tilde{X}$로 붙어 normalization morphism $\tilde{X}\rightarrow X$를 정의한다. 이 morphism은 affine-locally $A_i\hookrightarrow\tilde{A}_i$가 integral extension이므로 integral morphism이며, [명제 5](#prop5)에 의하여 각 조각에서 $\dim\Spec\tilde{A}_i=\dim\Spec A_i$이므로 [명제 2](#prop2)로부터 $\dim\tilde{X}=\dim X$를 얻는다. 
+임의의 integral scheme $X$에 대해서도 normalization을 같은 방식으로 정의할 수 있다. $X$를 affine open $\Spec A_i$들로 덮자. $X$가 integral이므로 유일한 generic point $\xi$를 가지며, 이 점은 각 $\Spec A_i$에서 domain $A_i$의 minimal prime $(0)$에 대응하여 그 stalk이 $\Frac(A_i)$가 된다. Stalk $\mathcal{O}_{X,\xi}$는 어느 affine open에서 계산하든 같으므로 모든 $\Frac(A_i)$가 하나의 공통 function field $K(X)$로 일치하며 ([§스킴 사상의 성질들, §§유리사상](/ko/math/scheme_theory/properties_of_scheme_morphisms#유리사상)), 우리는 각 조각에서 $A_i$의 $K(X)$ 안에서의 normalization $\tilde{A}_i$를 취할 수 있다. 이 때 normalization은 localization과 commute하므로 ([\[가환대수학\] §정수적 확장, ⁋명제 12](/ko/math/commutative_algebra/integral_extension#prop12)) 각 $\Spec\tilde{A}_i$의 겹침 $\Spec A_i\cap\Spec A_j$로의 restriction들이 서로 일치하고, 따라서 이들은 하나의 scheme $\tilde{X}$로 붙어 normalization morphism $\tilde{X}\rightarrow X$를 정의한다. 이 morphism은 affine-locally $A_i\hookrightarrow\tilde{A}_i$가 integral extension이므로 integral morphism이며, [명제 5](#prop5)에 의하여 각 조각에서 $\dim\Spec\tilde{A}_i=\dim\Spec A_i$이므로 [명제 2](#prop2)로부터 $\dim\tilde{X}=\dim X$를 얻는다. 
 
 이제 우리는 codimension을 정의한다. 
 
@@ -167,10 +167,10 @@ $$Z_n\supsetneq Z_{n-1}\supsetneq\cdots\supsetneq Z_0=\cl_X(Y)$$
 그럼 ring $A$의 prime ideal $\mathfrak{p}$의 codimension은 $\Spec A$에서 점 $\mathfrak{p}$의 codimension과 같은 것을 확인할 수 있다. ([\[가환대수학\] §차원, ⁋정의 2](/ko/math/commutative_algebra/Krull_dimension#def2))
 
 ::: 명제 8
-$X$의 irreducible closed subset $Y$와 $Y$의 generic point $y$에 대하여, $\codim_X Y=\dim \mathcal{O}_{X,y}$이 성립한다.
+$X$의 irreducible closed subset $Y$와 $Y$의 generic point $\eta$에 대하여, $\codim_X Y=\dim \mathcal{O}_{X,\eta}$이 성립한다.
 :::
 ::: 증명
-$Y$가 generic point $y$를 가지므로, 정의에 의해 $\codim_XY$와 $\codim_X\{y\}$가 같다. 이제 $y$를 포함하는 임의의 affine open subset $U\cong\Spec A$를 택하고, 이 isomorphism에 의해 $y\in U$가 $\mathfrak{p}_y\in \Spec A$에 대응된다 하자. 그럼 [\[위상수학\] §차원, ⁋명제 15](/ko/math/topology/dimension#prop15)로부터 우리는 $U$와 만나는 $X$의 irreducible closed subset들과 $U$의 irreducible closed subset들 사이의 일대일 대응이 존재한다는 것을 안다. 즉, $\codim_X\{y\}=\codim_U \mathfrak{p}_y$이다. 이제 [§스펙트럼, ⁋명제 16](/ko/math/scheme_theory/spectrums#prop16)으로부터 원하는 결과를 얻는다. 
+$Y$가 generic point $\eta$를 가지므로, 정의에 의해 $\codim_XY$와 $\codim_X\{\eta\}$가 같다. 이제 $\eta$를 포함하는 임의의 affine open subset $U\cong\Spec A$를 택하고, 이 isomorphism에 의해 $\eta\in U$가 $\mathfrak{p}_\eta\in \Spec A$에 대응된다 하자. 그럼 [\[위상수학\] §차원, ⁋명제 15](/ko/math/topology/dimension#prop15)로부터 우리는 $U$와 만나는 $X$의 irreducible closed subset들과 $U$의 irreducible closed subset들 사이의 일대일 대응이 존재한다는 것을 안다. 즉, $\codim_X\{\eta\}=\codim_U \mathfrak{p}_\eta$이다. 이제 [§스펙트럼, ⁋명제 16](/ko/math/scheme_theory/spectrums#prop16)으로부터 원하는 결과를 얻는다. 
 :::
 
 더 일반적으로 우리는 [\[가환대수학\] §차원, ⁋정의 2](/ko/math/commutative_algebra/Krull_dimension#def2)에서 codimension을 정의한 후 다음의 부등식
