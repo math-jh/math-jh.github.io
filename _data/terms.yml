@@ -4877,6 +4877,8 @@ G:
   defs:
   - label: '[선형대수학] §행렬'
     url: /ko/math/linear_algebra/matrices
+  - label: '[환론] §가역원과 영인자'
+    url: /ko/math/ring_theory/units_and_zero_divisors
 - id: generalized_cartan_matrix
   en: generalized Cartan matrix
   ko: 일반화 카르탕 행렬
@@ -7072,6 +7074,13 @@ L:
   defs:
   - label: '[범주론] §모노이드 범주'
     url: /ko/math/category_theory/monoidal_categories
+- id: left_zero_divisor
+  en: left zero divisor
+  ko: 왼쪽 영인자
+  primary: en
+  defs:
+  - label: '[환론] §가역원과 영인자'
+    url: /ko/math/ring_theory/units_and_zero_divisors
 - id: leg
   en: leg
   ko: 다리
@@ -8683,6 +8692,13 @@ O:
   defs:
   - label: '[대수적 구조] §군의 작용'
     url: /ko/math/algebraic_structures/group_actions
+- id: opposite_ring
+  en: opposite ring
+  ko: 반대환
+  primary: en
+  defs:
+  - label: '[환론] §Artin-Wedderburn 정리'
+    url: /ko/math/ring_theory/artin_wedderburn
 - id: opposite_schubert_cell
   en: opposite Schubert cell
   ko: 반대 슈베르트 셀
@@ -10215,6 +10231,13 @@ R:
   see:
   - label: Singular point
     id: singular_point
+- id: regular_element
+  en: regular element
+  ko: 정칙원
+  primary: en
+  defs:
+  - label: '[환론] §가역원과 영인자'
+    url: /ko/math/ring_theory/units_and_zero_divisors
 - id: regular_embedding
   en: regular embedding
   ko: 정칙 매입
@@ -10668,6 +10691,13 @@ R:
   defs:
   - label: '[범주론] §모노이드 범주'
     url: /ko/math/category_theory/monoidal_categories
+- id: right_zero_divisor
+  en: right zero divisor
+  ko: 오른쪽 영인자
+  primary: en
+  defs:
+  - label: '[환론] §가역원과 영인자'
+    url: /ko/math/ring_theory/units_and_zero_divisors
 - id: ring
   en: ring
   ko: 환
@@ -10742,6 +10772,13 @@ R:
   - label: '[집합론] §ZFC 공리계'
     url: /ko/math/set_theory/zfc_axioms
 S:
+- id: s_-isotypic_component
+  en: $S$-isotypic component
+  ko: 등형 성분
+  primary: en
+  defs:
+  - label: '[환론] §Semisimple module'
+    url: /ko/math/ring_theory/semisimple_modules
 - id: saddle_point
   en: saddle point
   ko: 안장점
@@ -10913,6 +10950,13 @@ S:
   defs:
   - label: '[리 이론] §근계'
     url: /ko/math/lie_theory/root_systems
+- id: semisimple_module
+  en: semisimple module
+  ko: 반단순 가군
+  primary: en
+  defs:
+  - label: '[환론] §Semisimple module'
+    url: /ko/math/ring_theory/semisimple_modules
 - id: semisimple_part
   en: semisimple part
   ko: 반단순 부분
@@ -10920,6 +10964,13 @@ S:
   defs:
   - label: '[리 이론] §Killing 형식과 Cartan 판정법'
     url: /ko/math/lie_theory/killing_form_and_cartan_criterion
+- id: semisimple_ring
+  en: semisimple ring
+  ko: 반단순환
+  primary: en
+  defs:
+  - label: '[환론] §Artin-Wedderburn 정리'
+    url: /ko/math/ring_theory/artin_wedderburn
 - id: semistable
   en: semistable
   ko: 반안정
@@ -12756,6 +12807,15 @@ U:
   defs:
   - label: '[범주론] §모노이드 대상'
     url: /ko/math/category_theory/monoid_objects#def1
+  - label: '[환론] §가역원과 영인자'
+    url: /ko/math/ring_theory/units_and_zero_divisors
+- id: unit_group
+  en: unit group
+  ko: 가역원군
+  primary: en
+  defs:
+  - label: '[환론] §가역원과 영인자'
+    url: /ko/math/ring_theory/units_and_zero_divisors
 - id: unit_normal_vector
   en: unit normal vector
   ko: 단위법선벡터
