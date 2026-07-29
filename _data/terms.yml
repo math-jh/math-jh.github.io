@@ -129,6 +129,8 @@ A:
   defs:
   - label: '[미적분학] §곡선과 벡터함수'
     url: /ko/math/calculus/vector_functions
+  - label: '[리만기하학] §측지선'
+    url: /ko/math/riemannian_geometry/geodesics
 - id: action
   en: action
   ko: 작용
@@ -1622,6 +1624,13 @@ C:
   defs:
   - label: '[리만기하학] §접속'
     url: /ko/math/riemannian_geometry/connection
+- id: christoffel_symbols
+  en: Christoffel symbols
+  ko: Christoffel 기호
+  primary: ko
+  defs:
+  - label: '[리만기하학] §레비-치비타 접속'
+    url: /ko/math/riemannian_geometry/Levi-Civita_connection
 - id: circle_or_line
   en: circle or line
   ko: 원-직선
@@ -2099,6 +2108,8 @@ C:
     url: /ko/math/algebraic_structures/algebraic_structures
   - label: '[복소기하학] §복소다양체'
     url: /ko/math/complex_geometry/complex_manifolds
+  - label: '[리만기하학] §레비-치비타 접속'
+    url: /ko/math/riemannian_geometry/Levi-Civita_connection
 - id: complement_set
   en: complement set
   ko: 여집합
@@ -3862,6 +3873,13 @@ E:
   defs:
   - label: '[범주론] §범주'
     url: /ko/math/category_theory/categories
+- id: energy
+  en: energy
+  ko: 에너지
+  primary: ko
+  defs:
+  - label: '[리만기하학] §측지선'
+    url: /ko/math/riemannian_geometry/geodesics
 - id: enough_injective
   en: enough injective
   ko: 충분한 단사 대상
@@ -4116,6 +4134,13 @@ E:
   defs:
   - label: '[복소해석학] §복소정칙함수'
     url: /ko/math/complex_analysis/holomorphic_functions
+- id: exponential_map
+  en: exponential map
+  ko: 지수사상
+  primary: en
+  defs:
+  - label: '[리만기하학] §지수사상'
+    url: /ko/math/riemannian_geometry/exponential_map
 - id: extended_euclidean_algorithm
   en: extended euclidean algorithm
   ko: 확장 유클리드 호제법
@@ -4474,6 +4499,13 @@ F:
   defs:
   - label: '[대수다양체] §층 코호몰로지'
     url: /ko/math/algebraic_varieties/sheaf_cohomology
+- id: flat
+  en: flat
+  ko: 평탄
+  primary: en
+  defs:
+  - label: '[리만기하학] §리만 곡률'
+    url: /ko/math/riemannian_geometry/curvature
 - id: flat_module
   en: flat module
   ko: 평탄가군
@@ -4707,6 +4739,13 @@ F:
   defs:
   - label: '[선형대수학] §선형대수학의 기본정리'
     url: /ko/math/linear_algebra/ftla
+- id: fundamental_theorem_of_riemannian_geometry
+  en: fundamental theorem of Riemannian geometry
+  ko: 리만 기하학의 기본 정리
+  primary: ko
+  defs:
+  - label: '[리만기하학] §레비-치비타 접속'
+    url: /ko/math/riemannian_geometry/Levi-Civita_connection
 G:
 - id: g_-invariant
   en: $G$-invariant
@@ -4854,6 +4893,34 @@ G:
   defs:
   - label: '[사교기하학] §Gromov-Witten 불변량'
     url: /ko/math/symplectic_geometry/gromov_witten
+- id: geodesic
+  en: geodesic
+  ko: 측지선
+  primary: ko
+  defs:
+  - label: '[리만기하학] §측지선'
+    url: /ko/math/riemannian_geometry/geodesics
+- id: geodesic_equation
+  en: geodesic equation
+  ko: 측지선 방정식
+  primary: ko
+  defs:
+  - label: '[리만기하학] §측지선'
+    url: /ko/math/riemannian_geometry/geodesics
+- id: geodesic_sphere
+  en: geodesic sphere
+  ko: 측지구면
+  primary: ko
+  defs:
+  - label: '[리만기하학] §지수사상'
+    url: /ko/math/riemannian_geometry/exponential_map
+- id: geodesically_complete
+  en: geodesically complete
+  ko: 측지적으로 완비된
+  primary: en
+  defs:
+  - label: '[리만기하학] §측지선'
+    url: /ko/math/riemannian_geometry/geodesics
 - id: geometric_multiplicity
   en: geometric multiplicity
   ko: 기하적 중복도
@@ -5039,6 +5106,13 @@ G:
   defs:
   - label: '[거울대칭] §Givental J-function과 Mirror Theorem'
     url: /ko/math/mirror_symmetry/givental_j_function
+- id: great_circle
+  en: great circle
+  ko: 대원
+  primary: ko
+  defs:
+  - label: '[리만기하학] §측지선'
+    url: /ko/math/riemannian_geometry/geodesics
 - id: greatest
   en: greatest
   ko: 최대
@@ -6948,6 +7022,13 @@ L:
   defs:
   - label: '[대수다양체] §층 코호몰로지'
     url: /ko/math/algebraic_varieties/sheaf_cohomology
+- id: levi-civita_connection
+  en: levi-civita connection
+  ko: Levi-Civita 접속
+  primary: en
+  defs:
+  - label: '[리만기하학] §레비-치비타 접속'
+    url: /ko/math/riemannian_geometry/Levi-Civita_connection
 - id: lichtenbaum_schlessinger_functor
   en: Lichtenbaum–Schlessinger functor
   ko: 리히텐바움-슐레진저 함자
@@ -7637,6 +7718,13 @@ M:
   defs:
   - label: '[해석학] §거리공간'
     url: /ko/math/analysis/metric_spaces
+- id: metric_connection
+  en: metric connection
+  ko: 리만 접속
+  primary: en
+  defs:
+  - label: '[리만기하학] §레비-치비타 접속'
+    url: /ko/math/riemannian_geometry/Levi-Civita_connection
 - id: metric_space
   en: metric space
   ko: 거리공간
@@ -8214,6 +8302,13 @@ N:
     url: /ko/math/riemannian_geometry/Riemannian_metric
   - label: '[그로모프-위튼 이론] §Refined Gysin 사상과 moduli의 교차이론'
     url: /ko/math/gromov-witten_theory/refined_gysin
+- id: normal_coordinate
+  en: normal coordinate
+  ko: 정규좌표
+  primary: en
+  defs:
+  - label: '[리만기하학] §지수사상'
+    url: /ko/math/riemannian_geometry/exponential_map
 - id: normal_domain
   en: normal domain
   ko: 정규정역
@@ -8252,6 +8347,13 @@ N:
   defs:
   - label: '[위상수학] §하우스도르프 공간'
     url: /ko/math/topology/Hausdorff_spaces
+- id: normal_neighborhood
+  en: normal neighborhood
+  ko: 정규근방
+  primary: en
+  defs:
+  - label: '[리만기하학] §지수사상'
+    url: /ko/math/riemannian_geometry/exponential_map
 - id: normal_regular_space
   en: normal regular space
   ko: 정규정칙공간
@@ -8703,6 +8805,20 @@ P:
   defs:
   - label: '[위상수학] §Compactness와 paracompactness'
     url: /ko/math/topology/compactness
+- id: parallel
+  en: parallel
+  ko: 평행
+  primary: ko
+  defs:
+  - label: '[리만기하학] §레비-치비타 접속'
+    url: /ko/math/riemannian_geometry/Levi-Civita_connection
+- id: parallel_transport
+  en: parallel transport
+  ko: 평행 운반
+  primary: en
+  defs:
+  - label: '[리만기하학] §레비-치비타 접속'
+    url: /ko/math/riemannian_geometry/Levi-Civita_connection
 - id: parallelizable
   en: parallelizable
   ko: 평행적
@@ -9459,6 +9575,13 @@ P:
   defs:
   - label: '[리 이론] §Weyl 완전가약성 정리'
     url: /ko/math/lie_theory/weyl_complete_reducibility
+- id: proper_variation
+  en: proper variation
+  ko: 고정변분
+  primary: ko
+  defs:
+  - label: '[리만기하학] §측지선'
+    url: /ko/math/riemannian_geometry/geodesics
 - id: pseudo-hyperbolic_distance
   en: pseudo-hyperbolic distance
   ko: 유사쌍곡거리
@@ -10244,6 +10367,13 @@ R:
   defs:
   - label: '[리 이론] §Richardson variety와 Peterson variety'
     url: /ko/math/lie_theory/richardson_peterson_variety
+- id: riemann_curvature_tensor
+  en: Riemann curvature tensor
+  ko: Riemann 곡률 텐서
+  primary: ko
+  defs:
+  - label: '[리만기하학] §리만 곡률'
+    url: /ko/math/riemannian_geometry/curvature
 - id: riemann_roch_dimension
   en: Riemann–Roch dimension
   ko: 리만-로흐 차원
@@ -12085,6 +12215,20 @@ T:
   defs:
   - label: '[토릭 기하학] §토릭 다양체의 정의'
     url: /ko/math/toric_geometry/toric_varieties
+- id: torsion
+  en: torsion
+  ko: 비틀림
+  primary: en
+  defs:
+  - label: '[리만기하학] §레비-치비타 접속'
+    url: /ko/math/riemannian_geometry/Levi-Civita_connection
+- id: torsion-free
+  en: torsion-free
+  ko: 비틀림 없는
+  primary: en
+  defs:
+  - label: '[리만기하학] §레비-치비타 접속'
+    url: /ko/math/riemannian_geometry/Levi-Civita_connection
 - id: torus-invariant_prime_divisor
   en: torus-invariant prime divisor
   ko: 토러스 불변 소인자
@@ -12592,6 +12736,20 @@ V:
   defs:
   - label: '[스킴] §닫힌 부분스킴'
     url: /ko/math/scheme_theory/closed_subschemes
+- id: variation
+  en: variation
+  ko: 변분
+  primary: ko
+  defs:
+  - label: '[리만기하학] §측지선'
+    url: /ko/math/riemannian_geometry/geodesics
+- id: variation_field
+  en: variation field
+  ko: 변분장
+  primary: ko
+  defs:
+  - label: '[리만기하학] §측지선'
+    url: /ko/math/riemannian_geometry/geodesics
 - id: variety
   en: variety
   ko: 다양체
