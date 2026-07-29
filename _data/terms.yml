@@ -1460,6 +1460,13 @@ C:
   defs:
   - label: '[군론] §군의 확장'
     url: /ko/math/group_theory/extensions
+- id: central_idempotent
+  en: central idempotent
+  ko: 중심 멱등원
+  primary: en
+  defs:
+  - label: '[환론] §Idempotent과 곱분해'
+    url: /ko/math/ring_theory/idempotents
 - id: chain_complex
   en: chain complex
   ko: 사슬복합체
@@ -1971,6 +1978,13 @@ C:
   see:
   - label: Kernel
     id: kernel
+- id: comaximal
+  en: comaximal
+  ko: 공최대
+  primary: en
+  defs:
+  - label: '[환론] §중국인의 나머지정리'
+    url: /ko/math/ring_theory/chinese_remainder_theorem
 - id: commutative
   en: commutative
   ko: 교환법칙을 만족한다
@@ -2113,10 +2127,10 @@ C:
     url: /ko/math/set_theory/examples_of_equivalence
   - label: '[대수적 구조] §대수적 구조'
     url: /ko/math/algebraic_structures/algebraic_structures
-  - label: '[복소기하학] §복소다양체'
-    url: /ko/math/complex_geometry/complex_manifolds
   - label: '[리만기하학] §레비-치비타 접속'
     url: /ko/math/riemannian_geometry/Levi-Civita_connection
+  - label: '[복소기하학] §복소다양체'
+    url: /ko/math/complex_geometry/complex_manifolds
 - id: complement_set
   en: complement set
   ko: 여집합
@@ -2411,6 +2425,8 @@ C:
   defs:
   - label: '[체론] §갈루아 확장'
     url: /ko/math/field_theory/galois_extension#def2
+  - label: '[환론] §나눗셈환'
+    url: /ko/math/ring_theory/division_rings
 - id: conjugate_point
   en: conjugate point
   ko: 켤레점
@@ -4319,6 +4335,8 @@ F:
     url: /ko/math/linear_algebra/fields
   - label: '[대수적 구조] §분수체'
     url: /ko/math/algebraic_structures/field_of_fractions
+  - label: '[환론] §나눗셈환'
+    url: /ko/math/ring_theory/division_rings
   see:
   - label: Division ring
     id: division_ring
@@ -5750,6 +5768,13 @@ I:
     url: /ko/math/commutative_algebra/basic_notions
   - label: '[가환대수학] §등급환의 국소화'
     url: /ko/math/commutative_algebra/localization_of_graded_rings
+- id: idempotent
+  en: idempotent
+  ko: 멱등원
+  primary: en
+  defs:
+  - label: '[환론] §Idempotent과 곱분해'
+    url: /ko/math/ring_theory/idempotents
 - id: identity_element
   en: identity element
   ko: 항등원
@@ -8370,6 +8395,8 @@ N:
     url: /ko/math/ring_theory/integral_domains
   - label: '[정수론] §가우스 정수와 두 제곱수의 합'
     url: /ko/math/number_theory/gaussian_integers
+  - label: '[환론] §나눗셈환'
+    url: /ko/math/ring_theory/division_rings
 - id: normal
   en: normal
   ko: 정규스킴
@@ -8796,6 +8823,8 @@ O:
     url: /ko/math/calculus/vector_functions
   - label: '[다중선형대수학] §쌍대공간'
     url: /ko/math/multilinear_algebra/dual_spaces
+  - label: '[환론] §Idempotent과 곱분해'
+    url: /ko/math/ring_theory/idempotents
 - id: orthogonal_basis
   en: orthogonal basis
   ko: 직교기저
@@ -9844,6 +9873,13 @@ Q:
   defs:
   - label: '[유도대수기하학] §Derived scheme과 derived stack'
     url: /ko/math/derived_algebraic_geometry/derived_schemes
+- id: quaternion_algebra
+  en: quaternion algebra
+  ko: 사원수 대수
+  primary: en
+  defs:
+  - label: '[환론] §나눗셈환'
+    url: /ko/math/ring_theory/division_rings
 - id: quotient
   en: quotient
   ko: 몫
@@ -12530,6 +12566,13 @@ T:
   defs:
   - label: '[미적분학] §다중적분'
     url: /ko/math/calculus/multiple_integrals
+- id: trivial
+  en: trivial
+  ko: 자명한
+  primary: en
+  defs:
+  - label: '[환론] §Idempotent과 곱분해'
+    url: /ko/math/ring_theory/idempotents
 - id: trivial_extension
   en: trivial extension
   ko: 자명한 확장
@@ -12568,6 +12611,16 @@ T:
   defs:
   - label: '[선형대수학] §벡터공간'
     url: /ko/math/linear_algebra/vector_spaces
+- id: trivialization
+  en: trivialization
+  ko: 자명화
+  primary: en
+  defs:
+  - label: '[미분다양체] §접다발과 여접다발'
+    url: /ko/math/manifolds/tangent_and_cotangent_bundles
+  see:
+  - label: Local trivialization
+    id: local_trivialization
 - id: twisted_inverse_image
   en: twisted inverse image
   ko: 비틀린 역상
