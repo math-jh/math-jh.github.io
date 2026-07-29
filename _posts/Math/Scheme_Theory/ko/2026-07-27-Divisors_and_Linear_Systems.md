@@ -164,7 +164,7 @@ $$\Gamma(V,\mathcal{O}_X(D))=f_i^{-1}\Gamma(V,\mathcal{O}_X)$$
 Integral Noetherian scheme $X$에 대하여, $D\mapsto \mathcal{O}_X(D)$는 isomorphism $\CaCl(X)\cong\Pic(X)$를 유도한다.
 :::
 ::: 증명
-[명제 9](#prop9)에 의하여 유도된 homomorphism이 injective이므로 surjectivity만 보이면 된다. Invertible sheaf $\mathcal{L}$과 그 자명화 $\psi_i:\mathcal{O}_{U_i} \rightarrow \mathcal{L}\vert_{U_i}$가 주어졌다 하자. 자명화는 열린부분집합으로의 제한에서 유지되므로 각각의 $U_i$를 affine open subset들로 덮어 세분하면, 처음부터 $\{U_i\}$가 affine open cover라 가정하여도 된다. 이제 $t_i=\psi_i(1)$을 $\mathcal{L}$의 $U_i$ 위의 generating section이라 하자. 그럼 겹침 위에서 $t_j=g_{ij}t_i$인 $g_{ij}\in \Gamma(U_i\cap U_j,\mathcal{O}_X)^\times$가 유일하게 결정되고, 이들은 $g_{ij}g_{jk}=g_{ik}$를 만족한다.
+[명제 9](#prop9)에 의하여 유도된 homomorphism이 injective이므로 surjectivity만 보이면 된다. Invertible sheaf $\mathcal{L}$과 그 trivialization $\psi_i:\mathcal{O}_{U_i} \rightarrow \mathcal{L}\vert_{U_i}$가 주어졌다 하자. Trivialization은 열린부분집합으로의 제한에서 유지되므로 각각의 $U_i$를 affine open subset들로 덮어 세분하면, 처음부터 $\{U_i\}$가 affine open cover라 가정하여도 된다. 이제 $t_i=\psi_i(1)$을 $\mathcal{L}$의 $U_i$ 위의 generating section이라 하자. 그럼 겹침 위에서 $t_j=g_{ij}t_i$인 $g_{ij}\in \Gamma(U_i\cap U_j,\mathcal{O}_X)^\times$가 유일하게 결정되고, 이들은 $g_{ij}g_{jk}=g_{ik}$를 만족한다.
 
 우선 $g_{ii}=1$이고 $g_{ji}=g_{ij}^{-1}$임을 관찰하고, 공집합이 아닌 $U_{i_0}$ 하나를 고정하여 $f_i=g_{ii_0}\in \Gamma(U_i\cap U_{i_0},\mathcal{O}_X)^\times$로 두자. $X$가 integral이므로 이는 $K(X)^\times$의 원소이고, cocycle 조건에서 $U_i\cap U_j\cap U_{i_0}$ 위에서 $f_i/f_j=g_{ii_0}g_{i_0j}=g_{ij}$이다. 그런데 $X$가 irreducible이므로 이 열린집합은 $U_i\cap U_j$의 조밀한 열린부분집합이고, $\Gamma(U_i\cap U_j,\mathcal{O}_X)$가 $K(X)$에 embed되므로 이 등식은 $U_i\cap U_j$ 전체에서 성립한다. 특히 $f_i/f_j$는 겹침 위에서 invertible section이므로 $D=\{(U_i,f_i)\}$는 Cartier divisor이다.
 
@@ -233,7 +233,7 @@ $$\Cl(X)=\Div(X)/\{\divisor(f)\mid f\in K(X)^\times\}$$
 
 [보조정리 11](#lem11)의 둘째 결과가 이 합의 유한성을 보장한다. 또, 각각의 $\ord_Y$가 group homomorphism이므로 $\divisor:K(X)^\times \rightarrow \Div(X)$ 또한 group homomorphism이며, 따라서 principal divisor들은 $\Div(X)$의 subgroup을 이루고 $\Cl(X)$가 잘 정의된다. 
 
-이 글의 서두에서 언급하였듯, 대수다양체에서 우리는 Weil divisor와 Cartier divisor가 기본적으로는 같은 것이며, Cartier divisor가 Weil divisor보다 조금 더 강한 조건으로 정의되었고, 따라서 더 나쁜 공간에서 정의된다는 점에서만 달랐다. 이 때 이 두 개념이 <em-ko>기본적으로 같다</em-ko>는 것은 [\[대수다양체\] §인자, ⁋명제 14](/ko/math/algebraic_varieties/divisors#prop14)의 결과로, 이 명제의 scheme 버전은 다음과 같다. 
+이 글의 서두에서 언급하였듯, [\[대수다양체\] §인자](/ko/math/algebraic_varieties/divisors)에서 우리는 Weil divisor와 Cartier divisor가 기본적으로는 같은 것이며, Cartier divisor가 Weil divisor보다 조금 더 강한 조건으로 정의되었고, 따라서 더 나쁜 공간에서 정의된다는 점에서만 달랐다. 이 때 이 두 개념이 <em-ko>기본적으로 같다</em-ko>는 것은 [\[대수다양체\] §인자, ⁋명제 14](/ko/math/algebraic_varieties/divisors#prop14)의 결과로, 이 명제의 scheme 버전은 다음과 같다. 
 
 ::: 명제 14
 Normal integral Noetherian scheme $X$가 주어졌다 하고, Cartier divisor $\{(U_i, f_i)\}$와 prime divisor $Y$가 주어질 때마다 $Y\cap U_i\neq\emptyset$이도록 하는 $i$를 택하자. 그럼 다음의 식
@@ -275,7 +275,7 @@ $D=\{(U_i,f_i)\}$라 하자. $s\in\Gamma(X,\mathcal{O}_X(D))$라는 것은 모�
 마지막으로 $D+\divisor(s)=D+\divisor(s')$은 $\divisor(s'/s)=0$과 같고, [정의 6](#def6)의 동치관계에 의하여 이는 $s'/s$가 각각의 $U_i$ 위에서 $\mathcal{O}_X^\times$의 section인 것, 곧 $s'/s\in \Gamma(X,\mathcal{O}_X)^\times$인 것이다.
 :::
 
-따라서 $D$와 linearly equivalent한 effective divisor들은 $\Gamma(X,\mathcal{O}_X(D))$의 $0$이 아닌 section들을 $\Gamma(X,\mathcal{O}_X)^\times$의 작용으로 나눈 것과 일대일로 대응한다. $X$가 field $\mathbb{K}$ 위의 scheme이고 $\Gamma(X,\mathcal{O}_X)=\mathbb{K}$인 경우 이 quotient는 벡터공간의 projectivization이 된다. ([\[대수다양체\] §선형계, ⁋정의 2](/ko/math/algebraic_varieties/linear_systems#def2)) 이 조건은 가령 $\mathbb{K}$가 대수적으로 닫혀 있고 $X$가 $\mathbb{K}$ 위의 projective integral scheme일 때 충족된다. 그러한 $X$에 대하여 $\Gamma(X,\mathcal{O}_X)$는 $\mathbb{K}$의 유한 확대체가 되는데, 이 유한성은 사영스킴 위의 cohomology 계산에서 얻어지므로 다음 글로 미룬다. $\mathbb{K}$가 대수적으로 닫혀 있지 않으면 이 확대가 자명하지 않을 수 있어 $\Gamma(X,\mathcal{O}_X)=\mathbb{K}$가 성립하지 않는다. 가령 $\mathbb{K}=\mathbb{R}$에 대하여 $\Proj \mathbb{R}[\x,\y]/(\x^2+\y^2)\cong\Spec\mathbb{C}$는 integral이고 $\mathbb{R}$ 위에서 projective이지만 그 global section들은 $\mathbb{C}$를 이룬다.
+따라서 $D$와 linearly equivalent한 effective divisor들은 $\Gamma(X,\mathcal{O}_X(D))$의 $0$이 아닌 section들을 $\Gamma(X,\mathcal{O}_X)^\times$의 작용으로 나눈 것과 일대일로 대응한다. $X$가 field $\mathbb{K}$ 위의 scheme이고 $\Gamma(X,\mathcal{O}_X)=\mathbb{K}$인 경우 이 quotient는 벡터공간의 projectivization이 되므로, [\[대수다양체\] §선형계, ⁋정의 2](/ko/math/algebraic_varieties/linear_systems#def2)를 복원한다.
 
 ::: 정의 16
 Field $\mathbb{K}$ 위의 integral scheme $X$가 $\Gamma(X,\mathcal{O}_X)=\mathbb{K}$를 만족한다 하자. Invertible sheaf $\mathcal{L}$에 대하여 그 *complete linear system<sub>완비 선형계</sub>*은
@@ -285,37 +285,41 @@ $$\lvert \mathcal{L}\rvert=\mathbb{P}(\Gamma(X,\mathcal{L}))$$
 이고, $\mathcal{L}$의 *linear system<sub>선형계</sub>*이란 부분공간 $V\subseteq \Gamma(X,\mathcal{L})$이 정의하는 $\mathbb{P}(V)\subseteq \lvert\mathcal{L}\rvert$이다.
 :::
 
-[명제 15](#prop15)에 의하여 $\mathcal{L}=\mathcal{O}_X(D)$인 경우 $\lvert\mathcal{L}\rvert$은 $D$와 linearly equivalent한 effective divisor들의 집합과 동일시되며, 이 때 이를 $\lvert D\rvert$로도 적는다. Linear system $\mathbb{P}(V)$에 대하여 $V$의 모든 section이 소멸하는 점들의 집합을 그 *base locus*라 부르며, base locus가 공집합인 linear system은 다음 절에서 사영공간으로의 morphism을 준다. 사영공간 위의 $\lvert\mathcal{O}(d)\rvert$가 degree $d$ hypersurface들의 family가 된다는 것과 같은 구체적인 계산은 [\[대수다양체\] §선형계](/ko/math/algebraic_varieties/linear_systems)에 있다.
+[명제 15](#prop15)에 의하여 $\mathcal{L}=\mathcal{O}_X(D)$인 경우 $\lvert\mathcal{L}\rvert$은 $D$와 linearly equivalent한 effective divisor들의 집합과 동일시되며, 이 때 이를 $\lvert D\rvert$로도 적는다. Linear system $\mathbb{P}(V)$에 대하여 $V$의 모든 section이 소멸하는 점들의 집합을 그 *base locus*라 부르며, base locus가 공집합인 linear system은 projective space로의 morphism을 주었다. ([\[대수다양체\] §선형계, ⁋정의 5](/ko/math/algebraic_varieties/linear_systems#def5)) 우리의 마지막 섹션은 이에 대한 것이다. 
 
 ## Ample invertible sheaf
 
 $\mathcal{O}_X$-module $\mathcal{F}$가 *globally generated*라는 것은 각 점 $x$에서 stalk $\mathcal{F}_x$가 global section들의 germ으로 $\mathcal{O}_{X,x}$-module로서 생성되는 것이다. 이는 [\[대수다양체\] §사영공간의 코호몰로지, ⁋정의 6](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#def6)의 evaluation map이 surjective라는 조건을 scheme 위로 옮긴 것이며, invertible sheaf $\mathcal{L}$의 경우 linear system $\mathbb{P}(V)$의 base locus가 공집합인 것과 $V$의 section들이 $\mathcal{L}$을 globally generate하는 것이 같은 조건이다.
 
-Generating section들은 사영공간으로의 morphism을 결정한다. Ring $A$ 위의 scheme $X$와 invertible sheaf $\mathcal{L}$, 그리고 이를 globally generate하는 section $s_0,\ldots, s_n\in \Gamma(X,\mathcal{L})$이 주어졌다 하자. 각각의 $i$에 대하여
+Generating section들은 projective space로의 morphism을 결정한다. Ring $A$ 위의 scheme $X$와 invertible sheaf $\mathcal{L}$, 그리고 이를 globally generate하는 section $s_0,\ldots, s_n\in \Gamma(X,\mathcal{L})$이 주어졌다 하자. 각각의 $i$에 대하여
 
-$$X_{s_i}=\{x\in X\mid \text{$(s_i)_x$가 $\mathcal{L}_x$를 생성한다}\}$$
+$$X_{s_i}=\{x\in X\mid \text{$(s_i)_x$ generates $\mathcal{L}_x$}\}$$
 
-는 열린집합이다. 실제로 $\mathcal{L}$이 자명해지는 열린집합 위에서 $s_i$는 하나의 함수에 대응되고, 그 함수가 unit이 되는 점들의 모임은 열린집합이기 때문이다. 또 $s_i$들이 $\mathcal{L}$을 globally generate하므로 $\{X_{s_i}\}$는 $X$의 open cover이다. $X_{s_i}$ 위에서는 $s_i$가 $\mathcal{L}$의 자명화를 주므로 각각의 $j$에 대하여 $s_j/s_i\in \Gamma(X_{s_i},\mathcal{O}_X)$가 잘 정의된다. 한편 $D_+(\x_i)$는 $\Spec A[\x_0,\ldots,\x_n]_{(\x_i)}$와 isomorphic하므로 ([§사영공간과 Proj 구성, ⁋정리 10](/ko/math/scheme_theory/projective_schemes#thm10)), ring homomorphism
+는 열린집합이다. 이는 $\mathcal{L}$의 trivializing open set 위에서 $s_i$는 하나의 함수에 대응되고, 그 함수가 unit이 되는 점들의 모임은 열린집합이기 때문이다. 또 $s_i$들이 $\mathcal{L}$을 globally generate하므로 $\{X_{s_i}\}$는 $X$의 open cover이며, $X_{s_i}$ 위에서는 $s_i$가 $\mathcal{L}$의 trivialization를 주므로 각각의 $j$에 대하여 $s_j/s_i\in \Gamma(X_{s_i},\mathcal{O}_X)$가 잘 정의된다. 이제 $D_+(\x_i)$는 $\Spec A[\x_0,\ldots,\x_n]_{(\x_i)}$와 isomorphic하므로 ([§사영공간과 Proj 구성, ⁋정리 10](/ko/math/scheme_theory/projective_schemes#thm10)), ring homomorphism
 
 $$A[\x_0,\ldots, \x_n]_{(\x_i)} \rightarrow \Gamma(X_{s_i},\mathcal{O}_X);\qquad \frac{\x_j}{\x_i}\mapsto \frac{s_j}{s_i}$$
 
-는 [§아핀스킴, ⁋정리 13](/ko/math/scheme_theory/affine_schemes#thm13)에 의하여 morphism $X_{s_i} \rightarrow D_+(\x_i)$를 준다. 이는 [§스킴 사이의 사상, ⁋예시 5](/ko/math/scheme_theory/morphism_of_schemes#ex5)에서 unit ideal을 생성하는 함수들로 한 구성과 같은 것이되, $X_{s_i}$가 affine이라는 보장이 없으므로 그곳의 affine 세분 대신 위의 adjunction을 직접 쓴 것이다. 겹침 위에서 이 morphism들은 $s_k/s_i=(s_k/s_j)(s_j/s_i)$에 의해 서로 일치하므로, 각각의 $X_{s_i}$를 affine open subset들로 덮어 얻은 $X$의 affine open cover에 [§스킴 사이의 사상, ⁋명제 1](/ko/math/scheme_theory/morphism_of_schemes#prop1)을 적용하면 이들은 하나의 morphism
+는 [§아핀스킴, ⁋정리 13](/ko/math/scheme_theory/affine_schemes#thm13)에 의하여 morphism $X_{s_i} \rightarrow D_+(\x_i)$를 준다. 교집합 위에서 이 morphism들은 $s_k/s_i=(s_k/s_j)(s_j/s_i)$에 의해 서로 일치하므로, 각각의 $X_{s_i}$를 affine open subset들로 덮어 얻은 $X$의 affine open cover에 [§스킴 사이의 사상, ⁋명제 1](/ko/math/scheme_theory/morphism_of_schemes#prop1)을 적용하면 이들은 하나의 morphism
 
 $$\varphi:X \rightarrow \mathbb{P}^n_A$$
 
-으로 붙는다. 곧 $\mathcal{L}$의 generating section을 택하는 것은 $X$를 사영공간 안으로 그리는 방법을 택하는 것이다.
+을 정의한다. 즉, $\mathcal{L}$의 generating section을 택하는 것은 $X$를 projective space 안으로 넣어주는 방법을 택하는 것이다.
 
 ::: 정의 17
 Noetherian ring $A$와 finite type $A$-scheme $X$ 위의 invertible sheaf $\mathcal{L}$이 *very ample*이라는 것은, $\mathcal{L}$을 globally generate하는 유한 개의 section $s_0,\ldots, s_n\in \Gamma(X,\mathcal{L})$이 존재하여 이들이 정의하는 morphism $\varphi:X \rightarrow \mathbb{P}^n_A$가 locally closed embedding인 것이다. ([§닫힌 부분스킴, ⁋정의 8](/ko/math/scheme_theory/closed_subschemes#def8))
 :::
 
-곧 very ample invertible sheaf는 $X$를 사영공간의 부분대상으로 실현하는 자료이며, $X$가 그 자체로 사영공간 안에 놓여 있지 않더라도 이를 통해 좌표를 부여할 수 있다. 그러나 $\mathcal{L}$ 하나만으로는 section이 부족하여 그러한 embedding이 얻어지지 않는 경우가 흔하고, 이 때는 $\mathcal{L}$을 여러 번 tensor하여 section을 늘리게 된다. 이러한 조작을 임의의 coherent sheaf에 대해 요구한 것이 다음의 정의이다.
+따라서, very ample invertible sheaf는 $X$를 projective space의 subspace로 실현하는 정보로, $X$가 그 자체로 projective space 안에 놓여 있지 않더라도 이를 통해 좌표를 부여할 수 있다. 
+
+그러나 일반적으로 $\mathcal{L}$이 globally generated인 것은 강한 조건이다. 예를 들어 section들이 $\mathcal{L}$을 globally generate하지 못하면 $\varphi$ 자체가 정의되지 않는다. 이러한 문제를 해결하기 위해 우리가 사용하던 것은 $\mathcal{L}$을 여러 번 tensor하는 것이다. 곱셈 $\Gamma(X,\mathcal{L})^{\otimes m} \rightarrow \Gamma(X,\mathcal{L}^{\otimes m})$이 $\mathcal{L}$의 section들로부터 $\mathcal{L}^{\otimes m}$의 section을 만들어 주며, 일반적으로 그 image 바깥에도 section이 존재하므로 $m$이 커질수록 다룰 수 있는 section이 많아진다. 가령 $\mathbb{P}^n$ 위에서 $\Gamma(\mathcal{O}(1))$은 일차식들이 이루는 $n+1$차원 공간인 반면 $\Gamma(\mathcal{O}(m))$은 degree $m$ homogeneous polynomial들이 이루는 $\binom{n+m}{n}$차원 공간이다.
+
+그렇다면 $\mathcal{L}^{\otimes m}$이 very ample이 되는 $m>0$이 존재하는지를 물을 수 있고, [\[대수다양체\] §선형계, ⁋정의 10](/ko/math/algebraic_varieties/linear_systems#def10)은 실제로 이를 ample의 정의로 삼았다. 그러나 이 서술은 ambient projective space를 경유하므로 $X$가 Noetherian ring 위의 finite type scheme이라는 가정 없이는 쓸 수 없다. 우리는 대신 twist가 sheaf를 얼마나 잘 펴는지만을 조건으로 삼아 임의의 Noetherian scheme에서 통하는 정의를 택한다.
 
 ::: 정의 18
 Noetherian scheme $X$ 위의 invertible sheaf $\mathcal{L}$이 *ample*이라는 것은, 임의의 coherent sheaf $\mathcal{F}$에 대하여 ([§준연접층, ⁋정의 11](/ko/math/scheme_theory/quasicoherent_sheaves#def11)) 적당한 $n_0$가 존재하여 모든 $n\geq n_0$에 대해 $\mathcal{F}\otimes_{\mathcal{O}_X}\mathcal{L}^{\otimes n}$이 globally generated인 것이다.
 :::
 
-이 정의는 section의 존재만을 요구하며 사영공간으로의 morphism을 직접 언급하지 않는다. 그 대신 충분히 많이 twist하면 어떠한 coherent sheaf도 global section만으로 생성된다는 것, 곧 $\mathcal{L}$이 $X$ 위의 모든 sheaf를 "펴는" 정도를 요구한다. 다음은 이 정의로부터 곧바로 얻어지는 성질들이다.
+이 정의는 section의 존재만을 요구하며 projective space로의 morphism을 직접 언급하지 않는다. 여기에서 조건을 모든 coherent sheaf에 대하여 요구하는 것이 본질적으로, 만일 $\mathcal{F}=\mathcal{O}_X$만 요구한다면, 즉 $\mathcal{L}^{\otimes n}$이 globally generated라는 조건을 요구한다면 이는 $X$에 대한 정보를 전혀 담지 못한다. 반면 임의의 $\mathcal{F}$들에 대해 이 조건을 요구하면 $\mathcal{L}$의 twist가 $X$ 위의 모든 국소적인 자료를 global section으로 끌어올리는지를 묻게 되며, 이것이 embedding의 존재를 대신할 만큼 강한 조건이 된다. 다음은 이 정의로부터 곧바로 얻어지는 성질들이다.
 
 ::: 명제 19
 Noetherian scheme $X$ 위의 invertible sheaf $\mathcal{L}$에 대하여 다음이 성립한다.
@@ -336,4 +340,10 @@ $$\mathcal{F}\otimes(\mathcal{L}\otimes\mathcal{M})^{\otimes n}\cong(\mathcal{F}
 에서 첫째 인자는 globally generated이고 둘째 인자는 globally generated인 sheaf의 tensor power이므로 globally generated이다. 따라서 좌변 또한 globally generated이다.
 :::
 
-[명제 19](#prop19)의 1번은 ampleness가 affine 방향으로는 아무런 정보를 담지 않는다는 것을 말해준다. Ampleness가 실제로 쓰이는 것은 사영적인 상황이며, 그곳에서 $\mathcal{L}$이 ample인 것과 적당한 $m>0$에 대하여 $\mathcal{L}^{\otimes m}$이 very ample인 것이 동치가 된다. 이 동치와, 고차 cohomology의 소멸로 ampleness를 판정하는 Serre의 판정법은 모두 사영공간 위의 cohomology 계산을 필요로 하므로 다음 글에서 다룬다.
+[명제 19](#prop19)의 1번에 의하면 affine scheme 위에서는 어떠한 invertible sheaf도 ample이므로, 이 조건은 $X$가 affine일 때 아무런 대상도 걸러내지 못한다. Ampleness가 실제로 대상을 구별하는 것은 $X$가 affine이 아닐 때이며, 특히 $X$가 Noetherian ring $A$ 위에서 projective인 경우 $\mathcal{L}$이 ample인 것과 적당한 $m>0$에 대하여 $\mathcal{L}^{\otimes m}$이 very ample인 것이 동치가 된다. 
+
+---
+
+**참고문헌**
+
+**[Vak]** R. Vakil, *The rising sea: Foundations of algebraic geometry*. Available [online](https://math.stanford.edu/~vakil/216blog/).
