@@ -5124,3 +5124,7 @@ Decide whether each one is a definition and add it to `_data/terms.yml` (then ru
 
 - _posts/Math/Representation_Theory/ko/2026-06-21-Gabriel_Theorem.md: 병기 필요 'Euler form' — 위키 ko 문서 '오일러 특성류' — 병기형 도출 필요
 - _posts/Math/Representation_Theory/ko/2026-06-21-Gabriel_Theorem.md: 병기 필요 'Tits form' — 위키 ko 문서 '푸른박새' — 병기형 도출 필요
+
+## term_extract_worker 2026-07-30 04:00
+
+- _posts/Math/Ring_Theory/ko/2025-04-01-Integral_Domains.md: 병기 필요 'associate in' — 소스 없음 (KMS exact ✗, 위키 ko ✗)

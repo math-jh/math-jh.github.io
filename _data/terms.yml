@@ -1139,6 +1139,13 @@ B:
   see:
   - label: Symmetric monoidal category
     id: symmetric_monoidal_category
+- id: brioschi_formula
+  en: brioschi formula
+  ko: Brioschi 공식
+  primary: ko
+  defs:
+  - label: '[리만기하학] §Theorema Egregium'
+    url: /ko/math/riemannian_geometry/theorema_egregium
 - id: bundle_map
   en: bundle map
   ko: 벡터다발 준동형사상
@@ -2404,6 +2411,13 @@ C:
   defs:
   - label: '[체론] §갈루아 확장'
     url: /ko/math/field_theory/galois_extension#def2
+- id: conjugate_point
+  en: conjugate point
+  ko: 켤레점
+  primary: en
+  defs:
+  - label: '[리만기하학] §비교 정리'
+    url: /ko/math/riemannian_geometry/comparison_theorems
 - id: conjugate_representation
   en: conjugate representation
   ko: 켤레표현
@@ -3213,6 +3227,13 @@ D:
     url: /ko/math/linear_algebra/determinant
   - label: '[다중선형대수학] §행렬식'
     url: /ko/math/multilinear_algebra/determinants
+- id: developable_surface
+  en: developable surface
+  ko: 전개가능 곡면
+  primary: en
+  defs:
+  - label: '[리만기하학] §Theorema Egregium'
+    url: /ko/math/riemannian_geometry/theorema_egregium
 - id: diagonal
   en: diagonal
   ko: 대각집합
@@ -4222,6 +4243,13 @@ E:
   defs:
   - label: '[미분다양체] §미분형식'
     url: /ko/math/manifolds/differential_forms
+- id: extrinsic
+  en: extrinsic
+  ko: 외재적
+  primary: ko
+  defs:
+  - label: '[리만기하학] §제2기본형식'
+    url: /ko/math/riemannian_geometry/second_fundamental_form
 F:
 - id: face
   en: face
@@ -4789,6 +4817,20 @@ G:
   defs:
   - label: '[체론] §갈루아 확장'
     url: /ko/math/field_theory/galois_extension
+- id: gauss_curvature
+  en: Gauss curvature
+  ko: Gauss 곡률
+  primary: ko
+  defs:
+  - label: '[리만기하학] §Theorema Egregium'
+    url: /ko/math/riemannian_geometry/theorema_egregium
+- id: gauss_formula
+  en: Gauss formula
+  ko: Gauss 공식
+  primary: ko
+  defs:
+  - label: '[리만기하학] §제2기본형식'
+    url: /ko/math/riemannian_geometry/second_fundamental_form
 - id: gauss-manin_connection
   en: Gauss-Manin connection
   ko: 가우스-마닌 접속
@@ -5822,6 +5864,13 @@ I:
     url: /ko/math/algebraic_structures/quotient_groups
   - label: '[정수론] §원시근'
     url: /ko/math/number_theory/primitive_roots
+- id: index_form
+  en: index form
+  ko: 지표형식
+  primary: en
+  defs:
+  - label: '[리만기하학] §비교 정리'
+    url: /ko/math/riemannian_geometry/comparison_theorems
 - id: index_set
   en: index set
   ko: 첨수집합
@@ -6489,6 +6538,20 @@ J:
   defs:
   - label: '[복소기하학] §Kähler 다양체'
     url: /ko/math/complex_geometry/kahler_manifolds
+- id: jacobi_equation
+  en: Jacobi equation
+  ko: 야코비 방정식
+  primary: en
+  defs:
+  - label: '[리만기하학] §비교 정리'
+    url: /ko/math/riemannian_geometry/comparison_theorems
+- id: jacobi_field
+  en: Jacobi field
+  ko: 야코비 장
+  primary: en
+  defs:
+  - label: '[리만기하학] §비교 정리'
+    url: /ko/math/riemannian_geometry/comparison_theorems
 - id: jacobi_matrix
   en: Jacobi matrix
   ko: 야코비 행렬
@@ -7304,6 +7367,13 @@ L:
   defs:
   - label: '[대수적 위상수학] §푸앵카레 쌍대성'
     url: /ko/math/algebraic_topology/Poincare_duality
+- id: local_isometry
+  en: local isometry
+  ko: 국소 등거리
+  primary: ko
+  defs:
+  - label: '[리만기하학] §Theorema Egregium'
+    url: /ko/math/riemannian_geometry/theorema_egregium
 - id: local_maximum
   en: local maximum
   ko: 극댓값
@@ -7676,6 +7746,13 @@ M:
   defs:
   - label: '[해석학] §실수의 완비성'
     url: /ko/math/analysis/completeness_of_reals
+- id: mean_curvature_vector
+  en: mean curvature vector
+  ko: 평균곡률 벡터
+  primary: en
+  defs:
+  - label: '[리만기하학] §제2기본형식'
+    url: /ko/math/riemannian_geometry/second_fundamental_form
 - id: meet
   en: meet
   ko: 만남
@@ -7777,6 +7854,13 @@ M:
   defs:
   - label: '[표현론] §Auslander–Reiten 이론'
     url: /ko/math/representation_theory/auslander_reiten
+- id: minimal_submanifold
+  en: minimal submanifold
+  ko: 극소 부분다양체
+  primary: en
+  defs:
+  - label: '[리만기하학] §제2기본형식'
+    url: /ko/math/riemannian_geometry/second_fundamental_form
 - id: minimum-norm_solution
   en: minimum-norm solution
   ko: 최소노름해
@@ -9346,6 +9430,13 @@ P:
   defs:
   - label: '[대수다양체] §인자'
     url: /ko/math/algebraic_varieties/divisors
+- id: principal_curvature
+  en: principal curvature
+  ko: 주곡률
+  primary: en
+  defs:
+  - label: '[리만기하학] §제2기본형식'
+    url: /ko/math/riemannian_geometry/second_fundamental_form
 - id: principal_cycle
   en: principal cycle
   ko: 주순환
@@ -9353,6 +9444,13 @@ P:
   defs:
   - label: '[대수다양체] §저우 군'
     url: /ko/math/algebraic_varieties/chow_groups
+- id: principal_direction
+  en: principal direction
+  ko: 주방향
+  primary: en
+  defs:
+  - label: '[리만기하학] §제2기본형식'
+    url: /ko/math/riemannian_geometry/second_fundamental_form
 - id: principal_divisor
   en: principal divisor
   ko: 주인자
@@ -10360,6 +10458,13 @@ R:
   defs:
   - label: '[해석학] §거리공간'
     url: /ko/math/analysis/metric_spaces
+- id: ricci_curvature
+  en: Ricci curvature
+  ko: 리치 곡률
+  primary: en
+  defs:
+  - label: '[리만기하학] §비교 정리'
+    url: /ko/math/riemannian_geometry/comparison_theorems
 - id: richardson_variety
   en: Richardson variety
   ko: 리처드슨 다양체
@@ -10684,6 +10789,13 @@ S:
   defs:
   - label: '[리만기하학] §접속'
     url: /ko/math/riemannian_geometry/connection
+- id: second_fundamental_form
+  en: second fundamental form
+  ko: 제2기본형식
+  primary: ko
+  defs:
+  - label: '[리만기하학] §제2기본형식'
+    url: /ko/math/riemannian_geometry/second_fundamental_form
 - id: section
   en: section
   ko: 단면
@@ -10699,6 +10811,13 @@ S:
   see:
   - label: Retraction
     id: retraction
+- id: sectional_curvature
+  en: sectional curvature
+  ko: 단면곡률
+  primary: en
+  defs:
+  - label: '[리만기하학] §비교 정리'
+    url: /ko/math/riemannian_geometry/comparison_theorems
 - id: segment
   en: segment
   ko: 절편
@@ -12151,6 +12270,13 @@ T:
   defs:
   - label: '[리 이론] §최고 무게 가군'
     url: /ko/math/lie_theory/highest_weight_modules
+- id: theorema_egregium
+  en: theorema egregium
+  ko: 놀라운 정리
+  primary: en
+  defs:
+  - label: '[리만기하학] §Theorema Egregium'
+    url: /ko/math/riemannian_geometry/theorema_egregium
 - id: tits_form
   en: tits form
   ko: 티츠 형식
@@ -12939,6 +13065,13 @@ W:
   see:
   - label: Cartier divisor
     id: cartier_divisor
+- id: weingarten_map
+  en: weingarten map
+  ko: Weingarten 사상
+  primary: ko
+  defs:
+  - label: '[리만기하학] §제2기본형식'
+    url: /ko/math/riemannian_geometry/second_fundamental_form
 - id: well-ordering
   en: well-ordering
   ko: 정렬순서

@@ -164,7 +164,7 @@ $$\Gamma(V,\mathcal{O}_X(D))=f_i^{-1}\Gamma(V,\mathcal{O}_X)$$
 Integral Noetherian scheme $X$에 대하여, $D\mapsto \mathcal{O}_X(D)$는 isomorphism $\CaCl(X)\cong\Pic(X)$를 유도한다.
 :::
 ::: 증명
-[명제 9](#prop9)에 의하여 유도된 homomorphism이 injective이므로 surjectivity만 보이면 된다. Invertible sheaf $\mathcal{L}$과 그 자명화 $\psi_i:\mathcal{O}_{U_i} \rightarrow \mathcal{L}\vert_{U_i}$가 주어졌다 하자. 자명화는 열린부분집합으로의 제한에서 유지되므로 각각의 $U_i$를 affine open subset들로 덮어 세분하면, 처음부터 $\{U_i\}$가 affine open cover라 가정하여도 된다. 이제 $t_i=\psi_i(1)$을 $\mathcal{L}$의 $U_i$ 위의 생성절단이라 하자. 그럼 겹침 위에서 $t_j=g_{ij}t_i$인 $g_{ij}\in \Gamma(U_i\cap U_j,\mathcal{O}_X)^\times$가 유일하게 결정되고, 이들은 $g_{ij}g_{jk}=g_{ik}$를 만족한다.
+[명제 9](#prop9)에 의하여 유도된 homomorphism이 injective이므로 surjectivity만 보이면 된다. Invertible sheaf $\mathcal{L}$과 그 자명화 $\psi_i:\mathcal{O}_{U_i} \rightarrow \mathcal{L}\vert_{U_i}$가 주어졌다 하자. 자명화는 열린부분집합으로의 제한에서 유지되므로 각각의 $U_i$를 affine open subset들로 덮어 세분하면, 처음부터 $\{U_i\}$가 affine open cover라 가정하여도 된다. 이제 $t_i=\psi_i(1)$을 $\mathcal{L}$의 $U_i$ 위의 generating section이라 하자. 그럼 겹침 위에서 $t_j=g_{ij}t_i$인 $g_{ij}\in \Gamma(U_i\cap U_j,\mathcal{O}_X)^\times$가 유일하게 결정되고, 이들은 $g_{ij}g_{jk}=g_{ik}$를 만족한다.
 
 우선 $g_{ii}=1$이고 $g_{ji}=g_{ij}^{-1}$임을 관찰하고, 공집합이 아닌 $U_{i_0}$ 하나를 고정하여 $f_i=g_{ii_0}\in \Gamma(U_i\cap U_{i_0},\mathcal{O}_X)^\times$로 두자. $X$가 integral이므로 이는 $K(X)^\times$의 원소이고, cocycle 조건에서 $U_i\cap U_j\cap U_{i_0}$ 위에서 $f_i/f_j=g_{ii_0}g_{i_0j}=g_{ij}$이다. 그런데 $X$가 irreducible이므로 이 열린집합은 $U_i\cap U_j$의 조밀한 열린부분집합이고, $\Gamma(U_i\cap U_j,\mathcal{O}_X)$가 $K(X)$에 embed되므로 이 등식은 $U_i\cap U_j$ 전체에서 성립한다. 특히 $f_i/f_j$는 겹침 위에서 invertible section이므로 $D=\{(U_i,f_i)\}$는 Cartier divisor이다.
 
@@ -207,17 +207,17 @@ Normal integral Noetherian scheme $X$에 대하여 다음이 성립한다.
 2번을 보이기 위해, $X$의 Noetherian 가정을 사용해 유한히 많은 affine open subset $U_1,\ldots, U_r$이 $X$를 덮는다 하자. 각각의 $Y$는 어떤 $U_k$와 만나며, 그럼 $Y\cap U_k$는 $U_k$의 codimension $1$ irreducible closed subset으로서 같은 generic point $\eta$를 가지므로, 하나의 $U=\Spec A$를 고정하고 그 위에서 유한성을 보이면 충분하다. 여기에서 $A$는 Noetherian domain이고 $\Frac(A)=K(X)$이므로 $f=a/b$인 $a,b\in A\setminus\{0\}$를 택할 수 있다. $Y\cap U$에 대응하는 codimension $1$ prime ideal을 $\mathfrak{p}$라 하면 $\mathcal{O}_{X,\eta}=A_\mathfrak{p}$이고, 만일 $a,b\notin \mathfrak{p}$라면 $a$와 $b$가 모두 $A_\mathfrak{p}$의 unit이므로 $f$의 valuation은 $0$이다. 따라서 valuation이 $0$이 아닌 $\mathfrak{p}$는 $(a)$ 또는 $(b)$를 포함하며, codimension $1$이라는 조건에서 이들은 $(a)$ 또는 $(b)$를 포함하는 minimal prime ideal이다. 그런데 Noetherian ring $A$의 ideal $\mathfrak{a}$에 대하여 $\mathfrak{a}=\ann(A/\mathfrak{a})$이므로, $\mathfrak{a}$를 포함하는 minimal prime ideal은 모두 $\Ass(A/\mathfrak{a})$에 속하고 이 집합은 유한하다. ([\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 1번) 따라서 그러한 $\mathfrak{p}$ 또한 유한히 많다.
 :::
 
-[보조정리 11](#lem11)의 1번과 [\[가환대수학\] §인자, ⁋명제 8](/ko/math/commutative_algebra/divisors#prop8)에 의하여, uniformizer $\pi$를 택하면 임의의 $f\in K(X)^\times$는 
+[보조정리 11](#lem11)의 1번을 만족하는 $Y$와 그 generic point $\eta$에 대하여, DVR $\mathcal{O}_{X, \eta}$의 uniformizer $\pi$를 택하면 임의의 $f\in K(X)^\times$는 
 
 $$f=\pi^nu,\qquad u\in \mathcal{O}_{X,\eta}^\times$$
 
-꼴로 유일하게 적히며, 이 정수 $n$은 $\pi$의 선택에 무관하다. 이를 $\ord_Y(f)$로 적는다. 두 원소의 곱에서 지수가 더해지므로 $\ord_Y:K(X)^\times \rightarrow \mathbb{Z}$는 group homomorphism이며, 이는 $\mathcal{O}_{X,\eta}$의 discrete valuation이다.
+꼴로 유일하게 적히며, 이 정수 $n$은 $\pi$의 선택에 무관하다. 이를 $\ord_Y(f)$로 적는다. 두 원소의 곱에서 지수가 더해지므로 $\ord_Y:K(X)^\times \rightarrow \mathbb{Z}$는 group homomorphism이며, 이는 정확히 $\mathcal{O}_{X,\eta}$의 discrete valuation이다.
 
 ::: 정의 12
 Normal integral Noetherian scheme $X$의 codimension $1$ irreducible closed subset을 *prime divisor*라 부르고, prime divisor들로 생성되는 free abelian group $\Div(X)$의 원소를 $X$의 *Weil divisor<sub>베유 인자</sub>*라 부른다. Weil divisor $D=\sum_Y n_YY$가 *effective*라는 것은 모든 $n_Y$가 음이 아닌 것이며, 이를 $D\geq 0$으로 적는다.
 :::
 
-곧 Weil divisor는 codimension $1$짜리 닫힌집합들의 형식적인 정수계수 합이며, 각각의 계수는 해당 prime divisor에서 함수가 갖는 zero 또는 pole의 order를 기록한다. 이 기록을 실제로 수행하는 것이 다음의 정의이다.
+곧 Weil divisor는 codimension $1$짜리 닫힌집합들의 정수계수의 formal sum이며, 각각의 계수는 해당 prime divisor에서 함수가 갖는 zero 또는 pole의 order를 기록한다. 이는 [\[대수다양체\] §인자, ⁋정의 1](/ko/math/algebraic_varieties/divisors#def1)의 Weil divisor를 scheme의 언어로 옮긴 것이며, 이 기록을 실제로 수행하는 것이 다음의 정의이다.
 
 ::: 정의 13
 Normal integral Noetherian scheme $X$와 $f\in K(X)^\times$에 대하여,
@@ -231,16 +231,14 @@ $$\Cl(X)=\Div(X)/\{\divisor(f)\mid f\in K(X)^\times\}$$
 를 $X$의 *divisor class group<sub>인자류군</sub>*이라 부른다.
 :::
 
-[보조정리 11](#lem11)의 2번이 이 합이 유한합임을 보장하고, 각각의 $\ord_Y$가 group homomorphism이므로 $\divisor:K(X)^\times \rightarrow \Div(X)$ 또한 group homomorphism이다. 따라서 principal divisor들은 $\Div(X)$의 subgroup을 이루고 $\Cl(X)$가 잘 정의된다. 여기에서 field $\mathbb{K}$ 위에서의 $\Cl(\mathbb{A}^n_\mathbb{K})=0$이나 $\Cl(\mathbb{P}^n_\mathbb{K})\cong\mathbb{Z}$와 같은 구체적인 계산은 [\[대수다양체\] §인자](/ko/math/algebraic_varieties/divisors)에서 다루었으며, 그곳의 논증은 scheme 위에서 글자 그대로 작동한다.
+[보조정리 11](#lem11)의 둘째 결과가 이 합의 유한성을 보장한다. 또, 각각의 $\ord_Y$가 group homomorphism이므로 $\divisor:K(X)^\times \rightarrow \Div(X)$ 또한 group homomorphism이며, 따라서 principal divisor들은 $\Div(X)$의 subgroup을 이루고 $\Cl(X)$가 잘 정의된다. 
 
-Principal divisor와 linearly equivalent라는 이름, 그리고 표기 $\divisor(f)$는 [정의 6](#def6) 다음에서 Cartier divisor에 대해 쓴 것을 그대로 옮긴 것이며, 두 용법이 어긋나지 않는다는 것은 [명제 14](#prop14)에서 확인한다. 이 절 바깥에서는 $X$가 normal이라는 가정을 두지 않아 Weil divisor 자체가 정의되지 않으므로, 아래에서 $\divisor(-)$는 언제나 Cartier divisor를 뜻한다.
-
-이제 두 이론을 비교한다. $X$가 integral이므로 공집합이 아닌 임의의 열린집합 $U$에 대하여 $K(U)=K(X)$이고, 따라서 [정의 6](#def6)의 Cartier divisor는 하나의 함수체 $K(X)$ 안에서 서술된다. 그럼 각각의 국소적인 방정식이 갖는 zero와 pole을 세어 Weil divisor를 얻을 수 있다.
+이 글의 서두에서 언급하였듯, 대수다양체에서 우리는 Weil divisor와 Cartier divisor가 기본적으로는 같은 것이며, Cartier divisor가 Weil divisor보다 조금 더 강한 조건으로 정의되었고, 따라서 더 나쁜 공간에서 정의된다는 점에서만 달랐다. 이 때 이 두 개념이 <em-ko>기본적으로 같다</em-ko>는 것은 [\[대수다양체\] §인자, ⁋명제 14](/ko/math/algebraic_varieties/divisors#prop14)의 결과로, 이 명제의 scheme 버전은 다음과 같다. 
 
 ::: 명제 14
-Normal integral Noetherian scheme $X$에 대하여, 다음의 식
+Normal integral Noetherian scheme $X$가 주어졌다 하고, Cartier divisor $\{(U_i, f_i)\}$와 prime divisor $Y$가 주어질 때마다 $Y\cap U_i\neq\emptyset$이도록 하는 $i$를 택하자. 그럼 다음의 식
 
-$$\{(U_i,f_i)\}\mapsto \sum_Y \ord_Y(f_i)\cdot Y\qquad(\text{$Y$마다 $Y\cap U_i\neq\emptyset$인 $i$를 택함})$$
+$$\{(U_i,f_i)\}\mapsto \sum_Y \ord_Y(f_i)\cdot Y$$
 
 은 injective group homomorphism $\CaDiv(X) \rightarrow \Div(X)$를 정의하며, principal divisor를 principal divisor로 보낸다. 만일 $X$가 factorial이라면 이는 isomorphism이고, 따라서 $\CaCl(X)\cong \Cl(X)$이다.
 :::
@@ -262,14 +260,14 @@ $f_x=\prod_Y g_Y^{n_Y}\in K(X)^\times$로 두자. 곱은 $x$를 지나는 유한
 이렇게 얻은 열린집합들을 affine으로 줄여 $X$의 affine open cover $\{U_x\}$를 얻자. 그럼 $\divisor(f_x)$와 $\divisor(f_{x'})$이 모두 $U_x\cap U_{x'}$ 위에서 $D$와 일치하므로 $f_x/f_{x'}$는 겹침과 만나는 모든 prime divisor에서 $\ord$가 $0$이며, 위의 injectivity 논증을 열린집합 $U_x\cap U_{x'}$에 적용하면 이는 $\mathcal{O}_X^\times$의 section이다. 곧 $\{(U_x,f_x)\}$는 Cartier divisor이고 그 image가 $D$이다. 마지막으로 principal divisor들이 서로 대응되므로 quotient 사이의 동형 $\CaCl(X)\cong\Cl(X)$이 유도된다.
 :::
 
-곧 factorial scheme 위에서는 두 인자 이론이 일치하며, 이는 [명제 5](#prop5)가 effective인 경우에 말한 것을 임의의 계수로 확장한 것이다. 여기에 [정리 10](#thm10)을 합치면 factorial인 경우 $\Cl(X)\cong\CaCl(X)\cong\Pic(X)$를 얻는다. 일반적인 normal scheme 위에서는 $\CaDiv(X)$의 image가 $\Div(X)$의 proper subgroup일 수 있고, 그 차이는 $X$의 singularity가 codimension $1$ 부분을 국소적으로 하나의 방정식으로 자르지 못하는 정도를 잰다.
+[명제 14](#prop14)의 마지막 주장은 factorial scheme 위에서 두 인자 이론이 일치한다는 것이며, 이는 effective인 경우에 적용되던 [명제 5](#prop5)를 임의의 계수로 확장한 것이다. 여기에 [정리 10](#thm10)을 합치면 factorial인 경우 $\Cl(X)\cong\CaCl(X)\cong\Pic(X)$를 얻는다. 일반적인 normal scheme 위에서는 $\CaDiv(X)$의 image가 $\Div(X)$의 proper subgroup일 수 있고, 그 차이는 $X$의 singularity가 codimension $1$ 부분을 국소적으로 하나의 방정식으로 자르지 못하는 정도를 잰다.
 
 ## 선형계
 
-Divisor $D$가 주어졌을 때 자연스러운 물음은 그 linear equivalence class 안에 어떠한 effective divisor가 들어 있는가이다. [정의 8](#def8)은 이 물음을 $\mathcal{O}_X(D)$의 global section에 대한 물음으로 바꾸어 준다.
+이제 우리는 [\[대수다양체\] §선형계](/ko/math/algebraic_varieties/linear_systems)의 내용을 빠르게 되짚는다. Divisor $D$가 주어졌을 때 자연스러운 물음은 그 linear equivalence class 안에 어떠한 effective divisor가 들어 있는지이며, [정의 8](#def8)은 이 물음을 $\mathcal{O}_X(D)$의 global section에 대한 물음으로 바꾸어 준다.
 
 ::: 명제 15
-Integral Noetherian scheme $X$와 Cartier divisor $D$에 대하여, $0\neq s\in \Gamma(X,\mathcal{O}_X(D))$마다 $D+\divisor(s)$는 effective Cartier divisor이며, 이 대응은 $D$와 linearly equivalent한 effective Cartier divisor 전체로의 surjection이다. 또, 두 절단 $s,s'$이 같은 divisor를 주는 것은 $s'/s\in \Gamma(X,\mathcal{O}_X)^\times$인 것과 동치이다.
+Integral Noetherian scheme $X$와 Cartier divisor $D$에 대하여, $0\neq s\in \Gamma(X,\mathcal{O}_X(D))$마다 $D+\divisor(s)$는 effective Cartier divisor이며, 이 대응은 $D$와 linearly equivalent한 effective Cartier divisor 전체로의 surjection이다. 또, 두 section $s,s'$이 같은 divisor를 주는 것은 $s'/s\in \Gamma(X,\mathcal{O}_X)^\times$인 것과 동치이다.
 :::
 ::: 증명
 $D=\{(U_i,f_i)\}$라 하자. $s\in\Gamma(X,\mathcal{O}_X(D))$라는 것은 모든 $i$에 대하여 $sf_i\in \Gamma(U_i,\mathcal{O}_X)$라는 것이고, $D+\divisor(s)=\{(U_i,sf_i)\}$이므로 이는 정확히 $D+\divisor(s)$가 effective라는 것이다. 거꾸로 $D'$이 effective이고 $D'-D=\divisor(h)$라면 $D'=\{(U_i,hf_i)\}$이므로 $hf_i\in\Gamma(U_i,\mathcal{O}_X)$이고, 곧 $h\in \Gamma(X,\mathcal{O}_X(D))$이며 그 image가 $D'$이다.
@@ -277,7 +275,7 @@ $D=\{(U_i,f_i)\}$라 하자. $s\in\Gamma(X,\mathcal{O}_X(D))$라는 것은 모�
 마지막으로 $D+\divisor(s)=D+\divisor(s')$은 $\divisor(s'/s)=0$과 같고, [정의 6](#def6)의 동치관계에 의하여 이는 $s'/s$가 각각의 $U_i$ 위에서 $\mathcal{O}_X^\times$의 section인 것, 곧 $s'/s\in \Gamma(X,\mathcal{O}_X)^\times$인 것이다.
 :::
 
-따라서 $D$와 linearly equivalent한 effective divisor들은 $\Gamma(X,\mathcal{O}_X(D))$의 $0$이 아닌 절단들을 $\Gamma(X,\mathcal{O}_X)^\times$의 작용으로 나눈 것과 일대일로 대응한다. $X$가 field $\mathbb{K}$ 위의 scheme이고 $\Gamma(X,\mathcal{O}_X)=\mathbb{K}$인 경우 이 quotient는 벡터공간의 projectivization이 된다. 이 조건은 가령 $\mathbb{K}$가 대수적으로 닫혀 있고 $X$가 $\mathbb{K}$ 위의 projective integral scheme일 때 충족된다. 그러한 $X$에 대하여 $\Gamma(X,\mathcal{O}_X)$는 $\mathbb{K}$의 유한 확대체가 되는데, 이 유한성은 사영스킴 위의 cohomology 계산에서 얻어지므로 다음 글로 미룬다. $\mathbb{K}$가 대수적으로 닫혀 있지 않으면 이 확대가 자명하지 않을 수 있어 $\Gamma(X,\mathcal{O}_X)=\mathbb{K}$가 성립하지 않는다. 가령 $\mathbb{K}=\mathbb{R}$에 대하여 $\Proj \mathbb{R}[\x,\y]/(\x^2+\y^2)\cong\Spec\mathbb{C}$는 integral이고 $\mathbb{R}$ 위에서 projective이지만 그 global section들은 $\mathbb{C}$를 이룬다.
+따라서 $D$와 linearly equivalent한 effective divisor들은 $\Gamma(X,\mathcal{O}_X(D))$의 $0$이 아닌 section들을 $\Gamma(X,\mathcal{O}_X)^\times$의 작용으로 나눈 것과 일대일로 대응한다. $X$가 field $\mathbb{K}$ 위의 scheme이고 $\Gamma(X,\mathcal{O}_X)=\mathbb{K}$인 경우 이 quotient는 벡터공간의 projectivization이 된다. ([\[대수다양체\] §선형계, ⁋정의 2](/ko/math/algebraic_varieties/linear_systems#def2)) 이 조건은 가령 $\mathbb{K}$가 대수적으로 닫혀 있고 $X$가 $\mathbb{K}$ 위의 projective integral scheme일 때 충족된다. 그러한 $X$에 대하여 $\Gamma(X,\mathcal{O}_X)$는 $\mathbb{K}$의 유한 확대체가 되는데, 이 유한성은 사영스킴 위의 cohomology 계산에서 얻어지므로 다음 글로 미룬다. $\mathbb{K}$가 대수적으로 닫혀 있지 않으면 이 확대가 자명하지 않을 수 있어 $\Gamma(X,\mathcal{O}_X)=\mathbb{K}$가 성립하지 않는다. 가령 $\mathbb{K}=\mathbb{R}$에 대하여 $\Proj \mathbb{R}[\x,\y]/(\x^2+\y^2)\cong\Spec\mathbb{C}$는 integral이고 $\mathbb{R}$ 위에서 projective이지만 그 global section들은 $\mathbb{C}$를 이룬다.
 
 ::: 정의 16
 Field $\mathbb{K}$ 위의 integral scheme $X$가 $\Gamma(X,\mathcal{O}_X)=\mathbb{K}$를 만족한다 하자. Invertible sheaf $\mathcal{L}$에 대하여 그 *complete linear system<sub>완비 선형계</sub>*은
@@ -287,13 +285,13 @@ $$\lvert \mathcal{L}\rvert=\mathbb{P}(\Gamma(X,\mathcal{L}))$$
 이고, $\mathcal{L}$의 *linear system<sub>선형계</sub>*이란 부분공간 $V\subseteq \Gamma(X,\mathcal{L})$이 정의하는 $\mathbb{P}(V)\subseteq \lvert\mathcal{L}\rvert$이다.
 :::
 
-[명제 15](#prop15)에 의하여 $\mathcal{L}=\mathcal{O}_X(D)$인 경우 $\lvert\mathcal{L}\rvert$은 $D$와 linearly equivalent한 effective divisor들의 집합과 동일시되며, 이 때 이를 $\lvert D\rvert$로도 적는다. Linear system $\mathbb{P}(V)$에 대하여 $V$의 모든 절단이 소멸하는 점들의 집합을 그 *base locus*라 부르며, base locus가 공집합인 linear system은 다음 절에서 사영공간으로의 morphism을 준다. 사영공간 위의 $\lvert\mathcal{O}(d)\rvert$가 degree $d$ hypersurface들의 family가 된다는 것과 같은 구체적인 계산은 [\[대수다양체\] §선형계](/ko/math/algebraic_varieties/linear_systems)에 있다.
+[명제 15](#prop15)에 의하여 $\mathcal{L}=\mathcal{O}_X(D)$인 경우 $\lvert\mathcal{L}\rvert$은 $D$와 linearly equivalent한 effective divisor들의 집합과 동일시되며, 이 때 이를 $\lvert D\rvert$로도 적는다. Linear system $\mathbb{P}(V)$에 대하여 $V$의 모든 section이 소멸하는 점들의 집합을 그 *base locus*라 부르며, base locus가 공집합인 linear system은 다음 절에서 사영공간으로의 morphism을 준다. 사영공간 위의 $\lvert\mathcal{O}(d)\rvert$가 degree $d$ hypersurface들의 family가 된다는 것과 같은 구체적인 계산은 [\[대수다양체\] §선형계](/ko/math/algebraic_varieties/linear_systems)에 있다.
 
 ## Ample invertible sheaf
 
-$\mathcal{O}_X$-module $\mathcal{F}$가 *globally generated*라는 것은 각 점 $x$에서 stalk $\mathcal{F}_x$가 global section들의 germ으로 $\mathcal{O}_{X,x}$-module로서 생성되는 것이다. 이는 [\[대수다양체\] §사영공간의 코호몰로지, ⁋정의 6](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#def6)의 evaluation map이 surjective라는 조건을 scheme 위로 옮긴 것이며, invertible sheaf $\mathcal{L}$의 경우 linear system $\mathbb{P}(V)$의 base locus가 공집합인 것과 $V$의 절단들이 $\mathcal{L}$을 globally generate하는 것이 같은 조건이다.
+$\mathcal{O}_X$-module $\mathcal{F}$가 *globally generated*라는 것은 각 점 $x$에서 stalk $\mathcal{F}_x$가 global section들의 germ으로 $\mathcal{O}_{X,x}$-module로서 생성되는 것이다. 이는 [\[대수다양체\] §사영공간의 코호몰로지, ⁋정의 6](/ko/math/algebraic_varieties/cohomology_of_projective_spaces#def6)의 evaluation map이 surjective라는 조건을 scheme 위로 옮긴 것이며, invertible sheaf $\mathcal{L}$의 경우 linear system $\mathbb{P}(V)$의 base locus가 공집합인 것과 $V$의 section들이 $\mathcal{L}$을 globally generate하는 것이 같은 조건이다.
 
-생성절단들은 사영공간으로의 morphism을 결정한다. Ring $A$ 위의 scheme $X$와 invertible sheaf $\mathcal{L}$, 그리고 이를 globally generate하는 절단 $s_0,\ldots, s_n\in \Gamma(X,\mathcal{L})$이 주어졌다 하자. 각각의 $i$에 대하여
+Generating section들은 사영공간으로의 morphism을 결정한다. Ring $A$ 위의 scheme $X$와 invertible sheaf $\mathcal{L}$, 그리고 이를 globally generate하는 section $s_0,\ldots, s_n\in \Gamma(X,\mathcal{L})$이 주어졌다 하자. 각각의 $i$에 대하여
 
 $$X_{s_i}=\{x\in X\mid \text{$(s_i)_x$가 $\mathcal{L}_x$를 생성한다}\}$$
 
@@ -305,19 +303,19 @@ $$A[\x_0,\ldots, \x_n]_{(\x_i)} \rightarrow \Gamma(X_{s_i},\mathcal{O}_X);\qquad
 
 $$\varphi:X \rightarrow \mathbb{P}^n_A$$
 
-으로 붙는다. 곧 $\mathcal{L}$의 생성절단을 택하는 것은 $X$를 사영공간 안으로 그리는 방법을 택하는 것이다.
+으로 붙는다. 곧 $\mathcal{L}$의 generating section을 택하는 것은 $X$를 사영공간 안으로 그리는 방법을 택하는 것이다.
 
 ::: 정의 17
-Noetherian ring $A$와 finite type $A$-scheme $X$ 위의 invertible sheaf $\mathcal{L}$이 *very ample*이라는 것은, $\mathcal{L}$을 globally generate하는 유한 개의 절단 $s_0,\ldots, s_n\in \Gamma(X,\mathcal{L})$이 존재하여 이들이 정의하는 morphism $\varphi:X \rightarrow \mathbb{P}^n_A$가 locally closed embedding인 것이다. ([§닫힌 부분스킴, ⁋정의 8](/ko/math/scheme_theory/closed_subschemes#def8))
+Noetherian ring $A$와 finite type $A$-scheme $X$ 위의 invertible sheaf $\mathcal{L}$이 *very ample*이라는 것은, $\mathcal{L}$을 globally generate하는 유한 개의 section $s_0,\ldots, s_n\in \Gamma(X,\mathcal{L})$이 존재하여 이들이 정의하는 morphism $\varphi:X \rightarrow \mathbb{P}^n_A$가 locally closed embedding인 것이다. ([§닫힌 부분스킴, ⁋정의 8](/ko/math/scheme_theory/closed_subschemes#def8))
 :::
 
-곧 very ample invertible sheaf는 $X$를 사영공간의 부분대상으로 실현하는 자료이며, $X$가 그 자체로 사영공간 안에 놓여 있지 않더라도 이를 통해 좌표를 부여할 수 있다. 그러나 $\mathcal{L}$ 하나만으로는 절단이 부족하여 그러한 embedding이 얻어지지 않는 경우가 흔하고, 이 때는 $\mathcal{L}$을 여러 번 tensor하여 절단을 늘리게 된다. 이러한 조작을 임의의 coherent sheaf에 대해 요구한 것이 다음의 정의이다.
+곧 very ample invertible sheaf는 $X$를 사영공간의 부분대상으로 실현하는 자료이며, $X$가 그 자체로 사영공간 안에 놓여 있지 않더라도 이를 통해 좌표를 부여할 수 있다. 그러나 $\mathcal{L}$ 하나만으로는 section이 부족하여 그러한 embedding이 얻어지지 않는 경우가 흔하고, 이 때는 $\mathcal{L}$을 여러 번 tensor하여 section을 늘리게 된다. 이러한 조작을 임의의 coherent sheaf에 대해 요구한 것이 다음의 정의이다.
 
 ::: 정의 18
 Noetherian scheme $X$ 위의 invertible sheaf $\mathcal{L}$이 *ample*이라는 것은, 임의의 coherent sheaf $\mathcal{F}$에 대하여 ([§준연접층, ⁋정의 11](/ko/math/scheme_theory/quasicoherent_sheaves#def11)) 적당한 $n_0$가 존재하여 모든 $n\geq n_0$에 대해 $\mathcal{F}\otimes_{\mathcal{O}_X}\mathcal{L}^{\otimes n}$이 globally generated인 것이다.
 :::
 
-이 정의는 절단의 존재만을 요구하며 사영공간으로의 morphism을 직접 언급하지 않는다. 그 대신 충분히 많이 twist하면 어떠한 coherent sheaf도 global section만으로 생성된다는 것, 곧 $\mathcal{L}$이 $X$ 위의 모든 sheaf를 "펴는" 정도를 요구한다. 다음은 이 정의로부터 곧바로 얻어지는 성질들이다.
+이 정의는 section의 존재만을 요구하며 사영공간으로의 morphism을 직접 언급하지 않는다. 그 대신 충분히 많이 twist하면 어떠한 coherent sheaf도 global section만으로 생성된다는 것, 곧 $\mathcal{L}$이 $X$ 위의 모든 sheaf를 "펴는" 정도를 요구한다. 다음은 이 정의로부터 곧바로 얻어지는 성질들이다.
 
 ::: 명제 19
 Noetherian scheme $X$ 위의 invertible sheaf $\mathcal{L}$에 대하여 다음이 성립한다.
