@@ -183,13 +183,17 @@ $$\varphi_i(g)=(gf_i)\cdot\frac{f_j}{f_i}t_j=(gf_j)\cdot t_j=\varphi_j(g)$$
 
 ## 베유 인자
 
-이제 반대편의 이론, 곧 codimension $1$짜리 닫힌집합들을 직접 세는 방식을 세운다. 이를 위해서는 rational function이 각각의 codimension $1$ 부분에서 갖는 zero와 pole의 order를 정의할 수 있어야 하고, 그러려면 그 점에서의 local ring이 discrete valuation ring이어야 한다. 이 절에서 $X$는 언제나 normal이고 integral인 Noetherian scheme으로 둔다. ([§스킴의 대수구조, ⁋정의 6](/ko/math/scheme_theory/algebra_of_schemes#def6)) 그럼 $X$의 유일한 associated point는 generic point $\xi$이므로 [§스킴의 대수구조, ⁋정의 12](/ko/math/scheme_theory/algebra_of_schemes#def12)의 total quotient ring은 [§스킴 사상의 성질들, §§유리사상](/ko/math/scheme_theory/properties_of_scheme_morphisms#유리사상)에서 정의한 function field
+이제 우리는 linear system을 살펴보기 전에 Weil divisor를 간략하게 살펴본다. 위에서 간략하게 언급했듯, Weil divisor는 Cartier divisor보다 좋은 공간에서만 정의되었었는데, 이를 scheme의 언어에서 어떻게 가져올지가 우리의 첫 번째 논의의 대상이다. 우선 Weil divisor가 정의되기 위해서는 rational function이 각각의 codimension $1$ 부분에서 갖는 zero와 pole의 order를 정의할 수 있어야 하고, 그러려면 그 점에서의 local ring이 discrete valuation ring이어야 한다. 그러나 이 조건이 실제로 어떤 조건인지는 다소 불명확하므로, 우리는 normality를 가정한다. ([§스킴의 대수구조, ⁋정의 6](/ko/math/scheme_theory/algebra_of_schemes#def6)) 그럼 [보조정리 11](#lem11)에서 이 가정이 codimension $1$ 부분에서 local ring을 DVR로 만들어준다는 것을 확인할 것이다.
+
+따라서 normal, integral Noetherian scheme $X$를 생각하자. $X$가 integral이므로 임의의 affine open subset은 domain의 spectrum이고, 따라서 $X$의 유일한 associated point는 generic point $\xi$이다. 그럼 [§스킴의 대수구조, ⁋정의 12](/ko/math/scheme_theory/algebra_of_schemes#def12)의 total quotient ring은 [§스킴 사상의 성질들, §§유리사상](/ko/math/scheme_theory/properties_of_scheme_morphisms#유리사상)에서 정의한 function field
 
 $$K(X)=\mathcal{O}_{X,\xi}$$
 
-이고, 임의의 공집합이 아닌 열린집합 $V$에 대하여 $\Gamma(V,\mathcal{O}_X)$는 $K(X)$의 subring이다. 특히 임의의 점 $x$에서의 local ring $\mathcal{O}_{X,x}$ 또한 $K(X)$의 subring이며 그 fraction field는 $K(X)$이다.
+가 되며, 임의의 공집합이 아닌 열린집합 $V$에 대하여 $\Gamma(V,\mathcal{O}_X)$는 $K(X)$의 subring으로 볼 수 있다. 특히 임의의 점 $x$에서의 local ring $\mathcal{O}_{X,x}$ 또한 $K(X)$의 subring이며 그 fraction field는 $K(X)$이다. 또한 이 embedding들이 restriction 및 germ을 취하는 것과 맞아떨어지므로, 등식
 
-이 embedding들 아래에서 $K(X)$의 원소가 $\Gamma(V,\mathcal{O}_X)$에 속하는 것은 $V$의 각 점에서 그 germ이 local ring에 속하는 것과 동치이다. 곧 $K(X)$ 안에서 $\Gamma(V,\mathcal{O}_X)=\bigcap_{x\in V}\mathcal{O}_{X,x}$이다. 실제로 $g\in K(X)$가 모든 $x\in V$에 대하여 $\mathcal{O}_{X,x}$에 속한다면, 각각의 $x$마다 열린근방 $V_x\subseteq V$와 $h_x\in \Gamma(V_x,\mathcal{O}_X)$가 존재하여 $h_x$의 $x$에서의 germ이 $g$이다. 위의 embedding들은 restriction map 및 germ을 취하는 것과 정합적이므로 이는 $K(X)$ 안에서 $h_x=g$라는 뜻이고, 따라서 $h_x$들은 겹침 위에서 서로 일치하여 하나의 $h\in \Gamma(V,\mathcal{O}_X)$로 붙으며 $K(X)$ 안에서 $h=g$이다. 역방향은 $\Gamma(V,\mathcal{O}_X) \rightarrow \mathcal{O}_{X,x}$가 germ을 취하는 것이므로 자명하다.
+$$\Gamma(V,\mathcal{O}_X)=\bigcap_{x\in V}\mathcal{O}_{X,x}$$
+
+이 $K(X)$ 안에서 성립함을 쉽게 확인할 수 있다. 즉, rational function이 열린집합 위에서 regular인지를 각 점의 local ring으로 판정할 수 있다.
 
 ::: 보조정리 11
 Normal integral Noetherian scheme $X$에 대하여 다음이 성립한다.
@@ -200,10 +204,14 @@ Normal integral Noetherian scheme $X$에 대하여 다음이 성립한다.
 ::: 증명
 1번의 경우, $X$가 normal이므로 $R=\mathcal{O}_{X,\eta}$는 normal domain이고 $X$가 locally Noetherian이므로 Noetherian이다. 또한 [§차원, ⁋명제 8](/ko/math/scheme_theory/dimension#prop8)에 의하여 $\dim R=\codim_X Y=1$이므로 $R$의 maximal ideal은 codimension $1$의 prime ideal이다. 한편 [\[가환대수학\] §정칙국소환, ⁋정리 11](/ko/math/commutative_algebra/regular_local_rings#thm11)을 normal domain $R$ 자신에 적용하면 (R1) 조건, 곧 codimension $1$ prime ideal에서의 localization이 discrete valuation ring이라는 것이 성립한다. 이를 $R$의 maximal ideal에 적용하고 $R$이 local ring이라는 것을 쓰면 $R$ 자신이 discrete valuation ring이다.
 
-2번을 보이기 위해, $X$가 Noetherian이므로 유한히 많은 affine open subset $U_1,\ldots, U_r$이 $X$를 덮는다 하자. 각각의 $Y$는 어떤 $U_k$와 만나며, 그럼 $Y\cap U_k$는 $U_k$의 codimension $1$ irreducible closed subset으로서 같은 generic point $\eta$를 가지므로, 하나의 $U=\Spec A$를 고정하고 그 위에서 유한성을 보이면 충분하다. 여기에서 $A$는 Noetherian domain이고 $\Frac(A)=K(X)$이므로 $f=a/b$인 $a,b\in A\setminus\{0\}$를 택할 수 있다. $Y\cap U$에 대응하는 codimension $1$ prime ideal을 $\mathfrak{p}$라 하면 $\mathcal{O}_{X,\eta}=A_\mathfrak{p}$이고, 만일 $a,b\notin \mathfrak{p}$라면 $a$와 $b$가 모두 $A_\mathfrak{p}$의 unit이므로 $f$의 valuation은 $0$이다. 따라서 valuation이 $0$이 아닌 $\mathfrak{p}$는 $(a)$ 또는 $(b)$를 포함하며, codimension $1$이라는 조건에서 이들은 $(a)$ 또는 $(b)$를 포함하는 minimal prime ideal이다. 그런데 Noetherian ring $A$의 ideal $\mathfrak{a}$에 대하여 $\mathfrak{a}=\ann(A/\mathfrak{a})$이므로, $\mathfrak{a}$를 포함하는 minimal prime ideal은 모두 $\Ass(A/\mathfrak{a})$에 속하고 이 집합은 유한하다. ([\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 1번) 따라서 그러한 $\mathfrak{p}$ 또한 유한히 많다.
+2번을 보이기 위해, $X$의 Noetherian 가정을 사용해 유한히 많은 affine open subset $U_1,\ldots, U_r$이 $X$를 덮는다 하자. 각각의 $Y$는 어떤 $U_k$와 만나며, 그럼 $Y\cap U_k$는 $U_k$의 codimension $1$ irreducible closed subset으로서 같은 generic point $\eta$를 가지므로, 하나의 $U=\Spec A$를 고정하고 그 위에서 유한성을 보이면 충분하다. 여기에서 $A$는 Noetherian domain이고 $\Frac(A)=K(X)$이므로 $f=a/b$인 $a,b\in A\setminus\{0\}$를 택할 수 있다. $Y\cap U$에 대응하는 codimension $1$ prime ideal을 $\mathfrak{p}$라 하면 $\mathcal{O}_{X,\eta}=A_\mathfrak{p}$이고, 만일 $a,b\notin \mathfrak{p}$라면 $a$와 $b$가 모두 $A_\mathfrak{p}$의 unit이므로 $f$의 valuation은 $0$이다. 따라서 valuation이 $0$이 아닌 $\mathfrak{p}$는 $(a)$ 또는 $(b)$를 포함하며, codimension $1$이라는 조건에서 이들은 $(a)$ 또는 $(b)$를 포함하는 minimal prime ideal이다. 그런데 Noetherian ring $A$의 ideal $\mathfrak{a}$에 대하여 $\mathfrak{a}=\ann(A/\mathfrak{a})$이므로, $\mathfrak{a}$를 포함하는 minimal prime ideal은 모두 $\Ass(A/\mathfrak{a})$에 속하고 이 집합은 유한하다. ([\[가환대수학\] §동반소아이디얼, ⁋정리 7](/ko/math/commutative_algebra/associated_primes#thm7)의 1번) 따라서 그러한 $\mathfrak{p}$ 또한 유한히 많다.
 :::
 
-[보조정리 11](#lem11)의 1번과 [\[가환대수학\] §인자, ⁋명제 8](/ko/math/commutative_algebra/divisors#prop8)에 의하여, uniformizer $\pi$를 택하면 임의의 $f\in K(X)^\times$는 $f=\pi^nu$ ($u\in \mathcal{O}_{X,\eta}^\times$) 꼴로 유일하게 적히며, 이 정수 $n$은 $\pi$의 선택에 무관하다. 이를 $\ord_Y(f)$로 적는다. 이러한 표기가 유일하므로 $\ord_Y:K(X)^\times \rightarrow \mathbb{Z}$는 group homomorphism이다.
+[보조정리 11](#lem11)의 1번과 [\[가환대수학\] §인자, ⁋명제 8](/ko/math/commutative_algebra/divisors#prop8)에 의하여, uniformizer $\pi$를 택하면 임의의 $f\in K(X)^\times$는 
+
+$$f=\pi^nu,\qquad u\in \mathcal{O}_{X,\eta}^\times$$
+
+꼴로 유일하게 적히며, 이 정수 $n$은 $\pi$의 선택에 무관하다. 이를 $\ord_Y(f)$로 적는다. 두 원소의 곱에서 지수가 더해지므로 $\ord_Y:K(X)^\times \rightarrow \mathbb{Z}$는 group homomorphism이며, 이는 $\mathcal{O}_{X,\eta}$의 discrete valuation이다.
 
 ::: 정의 12
 Normal integral Noetherian scheme $X$의 codimension $1$ irreducible closed subset을 *prime divisor*라 부르고, prime divisor들로 생성되는 free abelian group $\Div(X)$의 원소를 $X$의 *Weil divisor<sub>베유 인자</sub>*라 부른다. Weil divisor $D=\sum_Y n_YY$가 *effective*라는 것은 모든 $n_Y$가 음이 아닌 것이며, 이를 $D\geq 0$으로 적는다.
@@ -223,7 +231,7 @@ $$\Cl(X)=\Div(X)/\{\divisor(f)\mid f\in K(X)^\times\}$$
 를 $X$의 *divisor class group<sub>인자류군</sub>*이라 부른다.
 :::
 
-[보조정리 11](#lem11)의 2번이 이 합이 유한합임을 보장하고, 각각의 $\ord_Y$가 group homomorphism이므로 $\divisor:K(X)^\times \rightarrow \Div(X)$ 또한 group homomorphism이다. 따라서 principal divisor들은 $\Div(X)$의 subgroup을 이루고 $\Cl(X)$가 잘 정의된다. 여기에서 $\Cl(X)$가 $\Div(X)$보다 작으면서도 $X$의 정보를 잃지 않는다는 것, 그리고 field $\mathbb{K}$ 위에서 $\Cl(\mathbb{A}^n_\mathbb{K})=0$이나 $\Cl(\mathbb{P}^n_\mathbb{K})\cong\mathbb{Z}$와 같은 구체적인 계산은 [\[대수다양체\] §인자](/ko/math/algebraic_varieties/divisors)에서 다루었으며, 그곳의 논증은 scheme 위에서 글자 그대로 작동한다.
+[보조정리 11](#lem11)의 2번이 이 합이 유한합임을 보장하고, 각각의 $\ord_Y$가 group homomorphism이므로 $\divisor:K(X)^\times \rightarrow \Div(X)$ 또한 group homomorphism이다. 따라서 principal divisor들은 $\Div(X)$의 subgroup을 이루고 $\Cl(X)$가 잘 정의된다. 여기에서 field $\mathbb{K}$ 위에서의 $\Cl(\mathbb{A}^n_\mathbb{K})=0$이나 $\Cl(\mathbb{P}^n_\mathbb{K})\cong\mathbb{Z}$와 같은 구체적인 계산은 [\[대수다양체\] §인자](/ko/math/algebraic_varieties/divisors)에서 다루었으며, 그곳의 논증은 scheme 위에서 글자 그대로 작동한다.
 
 Principal divisor와 linearly equivalent라는 이름, 그리고 표기 $\divisor(f)$는 [정의 6](#def6) 다음에서 Cartier divisor에 대해 쓴 것을 그대로 옮긴 것이며, 두 용법이 어긋나지 않는다는 것은 [명제 14](#prop14)에서 확인한다. 이 절 바깥에서는 $X$가 normal이라는 가정을 두지 않아 Weil divisor 자체가 정의되지 않으므로, 아래에서 $\divisor(-)$는 언제나 Cartier divisor를 뜻한다.
 
