@@ -10,8 +10,9 @@ sidebar:
 
 date: 2026-07-27
 weight: 17
-translated_at: 2026-07-30T03:15:03+00:00
+translated_at: 2026-07-30T03:45:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-30T03:45:02+00:00
 ---
 [§Quasi-Coherent Sheaves](/en/math/scheme_theory/quasicoherent_sheaves)에서 quasi-coherent sheaf와 invertible sheaf를 정의하였으므로, 우리는 variety 위에서 하던 divisor와 line bundle의 계산을 이제 scheme 위에서 시작할 수 있다. 이 글의 목적은 [\[Algebraic Varieties\] §Divisors](/en/math/algebraic_varieties/divisors), [\[Algebraic Varieties\] §Line Bundles and Vector Bundles](/en/math/algebraic_varieties/line_bundles)와 [\[Algebraic Varieties\] §Linear Systems](/en/math/algebraic_varieties/linear_systems)에서 다루었던 내용들을 scheme의 언어로 올려주는 것이다.
 
