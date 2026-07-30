@@ -414,6 +414,13 @@ A:
   defs:
   - label: '[선형대수학] §행렬식'
     url: /ko/math/linear_algebra/determinant
+- id: amitsur_complex
+  en: amitsur complex
+  ko: Amitsur 복합체
+  primary: ko
+  defs:
+  - label: '[스킴] §충실평탄 하강'
+    url: /ko/math/scheme_theory/faithfully_flat_descent
 - id: ample
   en: ample
   ko: 풍부한
@@ -3259,6 +3266,20 @@ D:
   see:
   - label: Ascending chain condition
     id: ascending_chain_condition
+- id: descent
+  en: descent
+  ko: 하강
+  primary: en
+  defs:
+  - label: '[스킴] §충실평탄 하강'
+    url: /ko/math/scheme_theory/faithfully_flat_descent
+- id: descent_datum
+  en: descent datum
+  ko: 하강 자료
+  primary: en
+  defs:
+  - label: '[스킴] §충실평탄 하강'
+    url: /ko/math/scheme_theory/faithfully_flat_descent
 - id: determinant
   en: determinant
   ko: 행렬식
@@ -4631,6 +4652,13 @@ F:
   defs:
   - label: '[선형대수학] §쌍선형형식'
     url: /ko/math/linear_algebra/bilinear_form
+- id: fpqc_cover
+  en: fpqc cover
+  ko: fpqc 덮개
+  primary: en
+  defs:
+  - label: '[스킴] §충실평탄 하강'
+    url: /ko/math/scheme_theory/faithfully_flat_descent
 - id: fractional_ideal
   en: fractional ideal
   ko: 분수아이디얼
