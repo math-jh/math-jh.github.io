@@ -15,26 +15,28 @@ published: false
 drift_needed: true
 ---
 
-우리는 [\[대수다양체\] §층 코호몰로지](/ko/math/algebraic_varieties/sheaf_cohomology)에서 (quasi-projective) variety 위의 quasi-coherent sheaf에 대한 sheaf cohomology를 derived functor로 정의하고, Čech cohomology와의 비교 및 Leray 정리를 통해 이를 계산하는 방법을 살펴보았다. 이제 우리는 quasi-coherent sheaf를 scheme의 언어로 정리하였으므로, 같은 일을 scheme에서도 할 수 있다. 핵심적인 것은 이전 [\[대수다양체\] §층 코호몰로지](/ko/math/algebraic_varieties/sheaf_cohomology)에서의 quasi-projective 가정은 과도한 것이라는 것으로, seperatedness와 affine scheme 위에서의 vanishing theorem을 보이고 나면 해당 글과 마찬가지의 결과들을 증명할 수 있다. 
+우리는 [\[대수다양체\] §층 코호몰로지](/ko/math/algebraic_varieties/sheaf_cohomology)에서 (quasi-projective) variety 위의 sheaf cohomology를 derived functor로 정의하고, Čech cohomology와의 비교 및 Leray 정리를 통해 quasi-coherent sheaf의 cohomology를 계산하는 방법을 살펴보았다. 이제 우리는 quasi-coherent sheaf를 scheme의 언어로 정리하였으므로, 같은 일을 scheme에서도 할 수 있다. 핵심적인 것은 위 글에서의 quasi-projective 가정은 과도한 것이라는 것으로, separatedness와 affine scheme 위 quasi-coherent sheaf의 vanishing theorem을 보이고 나면 해당 글과 마찬가지의 결과들을 증명할 수 있다. 
 
 이전 몇 개의 글과 마찬가지로, 이번 글의 목표는 이미 [\[대수다양체\] §층 코호몰로지](/ko/math/algebraic_varieties/sheaf_cohomology)에서 다룬 내용을 scheme으로 올리는 것이며, 몇몇 계산은 직접 수행하기도 하지만, 대부분의 계산은 해당 글들에 맡겨두고 이 언어로 번역하는 작업이 주가 될 것이다. 
 
 ## 유도함자로서의 코호몰로지
 
-Scheme $X$ 위에서도 abelian group들의 sheaf들의 category $\Sh(X)$는 abelian category이며 enough injective를 가진다. 따라서 [\[대수다양체\] §층 코호몰로지](/ko/math/algebraic_varieties/sheaf_cohomology)에서와 동일한 방식으로 global section functor의 derived functor를 정의할 수 있다. 우리의 주된 관심은 항상 quasi-coherent sheaf이지만, 그곳에서와 마찬가지로 injective resolution은 $\Sh(X)$ 안에서 잡는다는 점에 유의하자.
+Scheme $X$ 위에서도 abelian group들의 sheaf들의 category $\Sh(X)$는 abelian category이며 enough injective를 가진다. 따라서 [\[대수다양체\] §층 코호몰로지](/ko/math/algebraic_varieties/sheaf_cohomology)에서와 동일한 방식으로 global section functor의 derived functor를 정의할 수 있다. 그곳에서와 마찬가지로 우리의 주된 관심은 항상 quasi-coherent sheaf이지만, 정의도 resolution도 $\Sh(X)$ 안에서 이루어진다. 
 
 ::: 정의 1
-Scheme $X$ 위의 $\mathcal{O}_X$-module $\mathcal{F}$에 대하여, global section functor $\Gamma(X, -):\Sh(X) \rightarrow \Ab$의 right derived functor를 ([\[호몰로지 대수학\] §유도함자, ⁋정의 9](/ko/math/homological_algebra/derived_functors#def9)) 취하여 $i$번째 *sheaf cohomology<sub>층 코호몰로지</sub>*를
+Scheme $X$ 위의 sheaf $\mathcal{F}$에 대하여, global section functor $\Gamma(X, -):\Sh(X) \rightarrow \Ab$의 right derived functor를 ([\[호몰로지 대수학\] §유도함자, ⁋정의 9](/ko/math/homological_algebra/derived_functors#def9)) 취하여 $i$번째 *sheaf cohomology<sub>층 코호몰로지</sub>*를
 
 $$H^i(X, \mathcal{F})=R^i\Gamma(X, -)(\mathcal{F})=\frac{\ker\bigl(\Gamma(X, \mathcal{I}^i) \rightarrow \Gamma(X, \mathcal{I}^{i+1})\bigr)}{\im\bigl(\Gamma(X, \mathcal{I}^{i-1}) \rightarrow \Gamma(X, \mathcal{I}^i)\bigr)}$$
 
 으로 정의한다. 여기에서 $0 \rightarrow \mathcal{F} \rightarrow \mathcal{I}^\bullet$은 $\Sh(X)$에서의 injective resolution이다.
 :::
 
-이 정의는 [\[대수다양체\] §층 코호몰로지, ⁋정의 1](/ko/math/algebraic_varieties/sheaf_cohomology#def1)을 임의의 scheme 위로 옮긴 것에 불과하며, $\mathcal{I}^\bullet$의 선택에 무관함을 비롯한 형식적 성질은 모두 homological algebra의 표준 논증으로부터 따라온다. 특히 $H^0(X, \mathcal{F})=\Gamma(X, \mathcal{F})$이고, sheaf의 short exact sequence는 long exact sequence를 유도한다. 여기에서 $\mathcal{O}_X$-module들의 category 안에서 injective resolution을 잡아도 같은 값이 얻어지는데, injective $\mathcal{O}_X$-module 또한 flasque이고 ([\[대수다양체\] §층 코호몰로지, ⁋보조정리 9](/ko/math/algebraic_varieties/sheaf_cohomology#lem9)의 증명에서 $i^U_!\mathbb{Z}_U$를 $i^U_!(\mathcal{O}_X\vert_U)$로 바꾸면 된다), flasque sheaf는 $\Gamma(X, -)$-acyclic이므로 ([\[대수다양체\] §층 코호몰로지, ⁋명제 16](/ko/math/algebraic_varieties/sheaf_cohomology#prop16)) 그러한 resolution이 $\Sh(X)$에서는 acyclic resolution이 되기 때문이다. ([\[대수다양체\] §층 코호몰로지, ⁋명제 17](/ko/math/algebraic_varieties/sheaf_cohomology#prop17))
+이 정의는 [\[대수다양체\] §층 코호몰로지, ⁋정의 1](/ko/math/algebraic_varieties/sheaf_cohomology#def1)을 임의의 scheme 위로 옮긴 것에 불과하며, 이 정의가 $\mathcal{I}^\bullet$의 선택에 무관하다는 사실을 비롯한 형식적 성질은 모두 homological algebra의 표준적인 논증으로부터 따라온다. 특히 $H^0(X, \mathcal{F})=\Gamma(X, \mathcal{F})$이고, sheaf의 short exact sequence는 long exact sequence를 유도한다.
+
+한편 $\Gamma(X, -)$가 $\Sh(X)$ 위의 functor이므로 $H^i(X, \mathcal{F})$는 일단 abelian group으로만 얻어지지만, $\mathcal{F}$가 $\mathcal{O}_X$-module인 경우에는 여기에 $\Gamma(X, \mathcal{O}_X)$-module 구조가 얹힌다. 각각의 $a\in\Gamma(X, \mathcal{O}_X)$에 대하여, $a$를 곱하는 것이 $\mathcal{F}$의 $\Sh(X)$에서의 endomorphism이므로 cohomology의 functoriality가 이를 준다.
 
 ::: 명제 2
-$\mathcal{O}_X$-module의 short exact sequence
+Sheaf의 short exact sequence
 
 $$0 \rightarrow \mathcal{F}' \rightarrow \mathcal{F} \rightarrow \mathcal{F}'' \rightarrow 0$$
 
