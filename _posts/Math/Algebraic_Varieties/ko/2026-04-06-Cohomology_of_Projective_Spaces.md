@@ -10,6 +10,8 @@ sidebar:
 
 date: 2026-04-06
 weight: 14
+
+drift_needed: true
 ---
 
 우리는 일찍이 [§선다발과 벡터다발, ⁋예시 12](/ko/math/algebraic_varieties/line_bundles#ex12)에서 line bundle $\mathcal{O}(d)$를 정의하고, [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16)의 계산을 통해 그 global section $H^0(\mathbb{P}^n, \mathcal{O}(d))$이 degree $d$의 homogeneous polynomial들과 동형임을 확인하였다. 그러나 우리가 이전 글에서 도입한 [§층 코호몰로지, ⁋정의 1](/ko/math/algebraic_varieties/sheaf_cohomology#def1)의 sheaf cohomology는 $H^0$뿐만 아니라 higher cohomology group들 $H^1, H^2, \ldots$까지 포함하는 더 풍부한 불변량이므로, 이제 우리는 $H^0$ 뿐만 아니라 higher cohomology group들을 사용하여 $\mathcal{O}(d)$의 정보를 모두 알아낼 것이다.
@@ -19,7 +21,7 @@ weight: 14
 $\mathcal{O}(d)$는 line bundle이므로 quasi-coherent sheaf이고, 따라서 sheaf cohomology를 계산하기 위해서는 Čech cohomology를 활용하여 standard affine cover $\mathcal{U}=\{U_0,\ldots, U_n\}$을 사용하면 충분하다. 다음은 그 계산의 결과이다.
 
 ::: 명제 1 (Bott)
-$\mathbb{P}^n$ 위의 line bundle $\mathcal{O}(d)$의 cohomology는 다음과 같다:
+$\mathbb{P}^n$ 위의 line bundle $\mathcal{O}(d)$의 cohomology는 다음과 같다.
 
 $$H^q(\mathbb{P}^n, \mathcal{O}(d)) = \begin{cases}
 \mathbb{K}[\x_0, \ldots, \x_n]_d & q = 0, d \geq 0 \\
@@ -69,47 +71,43 @@ $$\x_0^d, \quad\x_0^{d-1}\x_1,\quad\ldots, \quad\x_0\x_1^{d-1},\quad \x_1^d$$
 
 $$f_1-f_0=\sum_{i\geq 0}a_i \x_0^{d-i}\x_1^i-\sum_{j\geq 0}b_j\x_0^j\x_1^{d-j}\tag{$\ast$}$$
 
-임을 안다. 한편 $\check{C}^1$의 원소는 $d$차 monomial들
+임을 안다. 한편 $\check{C}^1=\mathcal{O}(d)(U_0\cap U_1)=\mathbb{K}[\x_0^{\pm 1}, \x_1^{\pm 1}]_d$는 지수에 아무런 제한이 없는 $d$차 monomial들
 
-$$\x_0^{2d}\x_1^{-d},\quad,\x_0^{2d-1}\x_1^{-d+1}, \quad, \ldots,\quad \x_0^{-d+1}\x_1^{2d-1},\quad\x_0^{-d}\x_1^{2d}\tag{$\ast\ast$}$$
+$$\x_0^a\x_1^{d-a},\qquad a\in\mathbb{Z}\tag{$\ast\ast$}$$
 
-로 생성된다. 만일 $d\geq 0$이라면, 이들 각각은 위의 ($\ast$)으로부터 명시적으로 얻어질 수 있다. 가령 $\x_0^{2d}\x_1^{-d}$는 $f_1$의 성분 중 $j=2d$항에서 얻을 수 있고, $\x_0^{-d}\x_1^{2d}$는 $f_0$의 성분 중에서 $i=2d$ 항으로부터 얻을 수 있다. 따라서 이 경우 $\coker\delta=0$이다. 그러나 만일 $d<0$이라면 $\delta$의 image로 나타낼 수 없는 monomial들이 생기는데, 이는 ($\ast$)를 이루는 각 항들을 분석해보면 적어도 하나의 지수가 $0$보다 크거나 같기 때문이다. 반면 ($\ast\ast$)에서는 두 지수가 모두 음수인 monomial들
+을 기저로 갖는 무한차원 공간이다. ($\ast$)의 두 합은 각각 $a\leq d$인 monomial들과 $a\geq 0$인 monomial들을 주므로, $\delta$의 image는 ($\ast\ast$) 가운데 $a\geq 0$이거나 $d-a\geq 0$인 것들이 생성하는 부분공간이다. 따라서 $\coker\delta$의 기저는 두 지수가 모두 음수인 것들, 곧 $d+1\leq a\leq -1$을 만족하는 $a$에 대응하는 monomial들이다. $d\geq -1$이면 그러한 $a$가 존재하지 않아 $\coker\delta=0$이고, $d\leq -2$이면
 
-$$\x_0^{-1}\x_1^{d+1}, \quad \x_0^{-2}\x_1^{d+2},\quad,\ldots, \x_0^{d+1}\x_1^{-1}$$
+$$\x_0^{-1}\x_1^{d+1}, \quad \x_0^{-2}\x_1^{d+2},\quad\ldots,\quad \x_0^{d+1}\x_1^{-1}$$
 
-이 생기며 이들이 $\coker \delta$를 생성한다. 주장의 표기법에 대해서는 증명이 끝난 후 별도로 설명하기로 한다.
+의 $-d-1$개가 $\coker \delta$의 기저를 이룬다. 주장의 표기법에 대해서는 증명이 끝난 후 별도로 설명하기로 한다.
 
-이제 일반적인 경우를 위해 귀납법을 사용하자. 이를 위해 $\mathbb{P}^n$의 hyperplane $H=\{\x_n=0\}$이 $\mathbb{P}^{n-1}$과 isomorphic하다는 점을 이용하기 위해, 다음의 short exact sequence
+이제 일반적인 $n$에 대한 증명을 마무리한다. 위의 $\mathbb{P}^1$ 계산에서 우리는 monomial마다 어떤 것이 $\ker$에, 어떤 것이 $\im$에 속하는지를 살펴보아 결론을 내렸는데, 이는 우연이 아니다. 어차피 coboundary map이 monomial을 monomial로 보내므로 Čech complex 전체가 Laurent monomial $\x^a=\x_0^{a_0}\cdots\x_n^{a_n}$ ($a\in\mathbb{Z}^{n+1}$, $\sum_ja_j=d$)마다의 subcomplex들의 direct sum으로 쪼개지고, 따라서 각각의 $a$에 대한 subcomplex만 계산하면 모든 $q$가 한꺼번에 나오기 때문이다.
 
-$$0 \longrightarrow \mathcal{O}(d-1)\overset{\times \x_n}{\longrightarrow} \mathcal{O}(d)\longrightarrow \mathcal{O}(d)\vert_H\longrightarrow 0$$
+Multi-index $a$를 고정하고, 지수의 부호에 따라 index들을 두 집합 $N_{<0}(a)=\{j\mid a_j<0\}$과 $N_{\geq 0}(a)=\{j\mid a_j\geq 0\}$으로 나누자. 위에서 본 monomial 조건에 의하여 $\x^a$가 $U_{i_0}\cap\cdots\cap U_{i_p}$ 위에서 regular한 것은
 
-를 생각하자. 그럼 이로부터 long exact sequence
+$$N_{<0}(a)\subseteq\{i_0,\ldots, i_p\}$$
 
-$$\cdots \rightarrow H^{i-1}(\mathbb{P}^{n-1}, \mathcal{O}(d)) \rightarrow H^i(\mathbb{P}^n, \mathcal{O}(d-1)) \rightarrow H^i(\mathbb{P}^n, \mathcal{O}(d)) \rightarrow H^i(\mathbb{P}^{n-1}, \mathcal{O}(d)) \rightarrow \cdots$$
+인 것과 동치이다. 따라서 $a$에 대응하는 subcomplex의 $p$번째 항은 $N_{<0}(a)$를 포함하는 $(p+1)$-원소 index set $I=\{i_0,\ldots, i_p\}$들이 이루는 vector space이고, 그 differential은 $I$에서 index를 하나씩 뺀 것들의 alternating sum이다. 여기에서 $I\supseteq N_{<0}(a)$이므로 $I=N_{<0}(a)\sqcup J$로 유일하게 적히고 $J$는 $N_{\geq 0}(a)$의 부분집합이며, $\lvert I\rvert=p+1$은 $\lvert J\rvert=p+1-\lvert N_{<0}(a)\rvert$와 같은 말이다. 곧 $I$ 가운데 $N_{<0}(a)$ 부분은 강제되고 $J$만 자유로우므로, 이 subcomplex는 $N_{\geq 0}(a)$의 부분집합들로 만들어지는 complex
 
-를 얻고 우리는 귀납적 과정에 의해 $\mathbb{P}^{n-1}$에서의 주장은 알고 있다. 그럼 특히 $0<i<n$에 대해서는
+$$K^q=\bigoplus_{\substack{J\subseteq N_{\geq 0}(a) \\ \lvert J\rvert=q}}\mathbb{K}\cdot e_J, \qquad \delta(e_J)=\sum_{v\in N_{\geq 0}(a)\setminus J}\pm e_{J\cup\{v\}}$$
 
-$$H^{i-1}(\mathbb{P}^{n-1}, \mathcal{O}(d))=H^i(\mathbb{P}^{n-1}, \mathcal{O}(d))=0$$
+를 차수만 $\lvert N_{<0}(a)\rvert$만큼 밀어 놓은 것이다. 
 
-이 성립하고, 이로부터 $H^i(\mathbb{P}^n, \mathcal{O}(d-1)) \cong H^i(\mathbb{P}^n, \mathcal{O}(d))$를 얻는다. 즉 모든 $d$에 대해서 $H^i(\mathbb{P}^n, \mathcal{O}(d))$는 isomorphic하며, 특히 만만한 $\mathcal{O}$에 대한 Čech cohomology
+위의 complex에 대하여, $N_{\geq 0}(a)$가 공집합이 아니면 $K^\bullet$은 exact임을 관찰하자. 이는 $v\in N_{\geq 0}(a)$를 하나 고정하고
 
-$$H^i(\mathbb{P}^n, \mathcal{O}(d))=H^i(\mathbb{P}^n, \mathcal{O})=0$$
+$$h(e_J)=\begin{cases} e_{J\setminus\{v\}} & v\in J \\ 0 & v\notin J\end{cases}$$
 
-임을 바로 보일 수 있으므로 이로부터
+으로 두면 부호를 맞추었을 때 $\delta h+h\delta=\mathrm{id}$가 성립하기 때문이다. 그럼 $K^0$을 떼어낸 complex 
 
-$$H^i(\mathbb{P}^n, \mathcal{O}(d))=0$$
+$$0 \rightarrow K^1 \rightarrow K^2 \rightarrow \cdots \rightarrow 0$$
 
-이 모든 $0<i<n$과 모든 $d$에 대해 성립함을 안다.
+의 cohomology는 $q=1$에서 
 
-이제 top cohomology 부분
+$$\ker(K^1 \rightarrow K^2)=\im(K^0 \rightarrow K^1)\cong K^0=\mathbb{K}$$
 
-$$\cdots\rightarrow H^{n-1}(\mathbb{P}^{n-1}, \mathcal{O}(d))\rightarrow H^n(\mathbb{P}^n, \mathcal{O}(d-1))\rightarrow H^n(\mathbb{P}^n, \mathcal{O}(d))\rightarrow H^n(\mathbb{P}^{n-1}, \mathcal{O}(d))=0$$
+이고 나머지 차수에서는 $0$이다. 즉, $N_{\geq 0}(a)$가 공집합이 아니고 위의 subcomplex가 $K^\bullet$ 전체이면 cohomology가 모든 차수에서 소멸하므로, 무언가 남으려면 이 두 조건 가운데 하나가 깨져야 한다. 위에서 살펴봤듯 뒤쪽 조건은 공집합 $J=\emptyset$에 해당하는 항, 곧 $K^0$이 들어 있는지의 문제인데, $N_{<0}(a)\neq\emptyset$이면 $I=N_{<0}(a)$ 자신이 $p=\lvert N_{<0}(a)\rvert-1\geq 0$에서 조건을 만족하므로 그 항이 들어 있고, $N_{<0}(a)=\emptyset$이면 $I$가 공집합일 수 없으므로 빠진다.
 
-을 보자. 만일 $d\geq -n$이라면, 다시 귀납적 가정으로부터 $H^{n-1}(\mathbb{P}^{n-1}, \mathcal{O}(d))=0$이므로 위와 마찬가지 논증으로 $H^n(\mathbb{P}^n, \mathcal{O}(d))=0$이 모든 $d>-n-1$에 대해 성립하는 것을 보일 수 있다. $d\leq -n-1$인 경우, $H^n$은 Čech complex로부터 직접 계산해야 하는데, 이를 위해 $\check{C}^n(\mathbb{P}^n, \mathcal{O}(d))$를 직접 계산하면 $n$-cochain은
-
-$$\mathbb{K}[\x_0^{\pm 1}, \ldots, \x_n^{\pm 1}]_d$$
-
-의 원소임을 알고, $n-1$-cochain의 image로 나타나지 않는 monomial들은 앞선 $\mathbb{P}^1$에서의 계산과 유사하게 <em-ko>모든</em-ko> 지수가 $0$보다 작은 $d$차식이며 이로부터 원하는 결과를 얻는다. $H^0$의 경우는, 위에서는 직접 계산해보았지만, 이미 언급했듯 이는 [§선다발과 벡터다발, ⁋예시 16](/ko/math/algebraic_varieties/line_bundles#ex16)의 재확인에 불과하므로 여기서는 굳이 반복하지 않기로 한다.
+이제 $N_{<0}(a)$에 따라 세 경우로 결론이 난다. 우선 $N_{<0}(a)=\emptyset$, 곧 모든 $a_j\geq 0$인 경우, 위에서 살펴봤듯 $N_{\geq 0}(a)$가 전체집합이고 $K^0$이 빠진 쪽이므로 cohomology는 $q=1$ 곧 $p=0$에서만 $\mathbb{K}$이고, 이러한 $\x^a$들이 $H^0(\mathbb{P}^n, \mathcal{O}(d))$의 기저를 이룬다. 이는 모든 지수가 음이 아닌 $d$차 monomial들이므로 $d\geq 0$일 때에만 존재하며 $\mathbb{K}[\x_0,\ldots, \x_n]_d$를 준다. 다음으로 $N_{<0}(a)=\{0,\ldots, n\}$, 곧 모든 $a_j<0$인 경우 $N_{\geq 0}(a)=\emptyset$이라 조건을 만족하는 $I$는 전체집합 하나뿐이므로 complex는 $p=n$에 $\mathbb{K}$ 하나만 놓인 것이고, 이러한 $\x^a$들이 $H^n(\mathbb{P}^n, \mathcal{O}(d))$의 기저를 이룬다. 이번에는 모든 지수가 $-1$ 이하이므로 그 합이 $-n-1$ 이하일 때, 곧 $d\leq -n-1$일 때에만 존재한다. 마지막으로 $N_{<0}(a)$가 공집합도 전체집합도 아닌 경우 $N_{\geq 0}(a)$가 공집합이 아니면서 $K^0$이 들어 있으므로 $K^\bullet$ 자신이 exact이고, 어느 차수에도 기여하지 않는다. 곧 $0<q<n$에서는 cohomology가 소멸한다.
 :::
 
 위 증명에서 우리는 각 변수 $\x_0,\cdots, \x_n$ 그리고 $d\leq -n-1$에 대하여, $H^n(\mathbb{P}^n, \mathcal{O}(d))$가 다음의 monomial들

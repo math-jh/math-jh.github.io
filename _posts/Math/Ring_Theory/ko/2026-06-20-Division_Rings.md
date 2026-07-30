@@ -12,8 +12,6 @@ date: 2026-06-20
 
 weight: 5
 
-published: false
-
 ---
 
 이 글에서 우리는 모든 nonzero 원소가 곱셈에 대한 역원을 갖는 ring, 즉 *division ring*을 본격적으로 다룬다. 
@@ -81,7 +79,7 @@ $$\x^n-1=(\x^d-1)\cdot\prod_{e\mid n\text{ but }e\nmid d}\Phi_e(\x)$$
 정수 $q\geq 2$와 $n\geq 2$에 대하여 $\lvert\Phi_n(q)\rvert>q-1$이다.
 :::
 ::: 증명
-Cyclotomic polynomial에 $q$를 대입하면 정의 3에 의해
+Cyclotomic polynomial에 $q$를 대입하면 [정의 3](#def3)에 의해
 
 $$\Phi_n(q)=\prod_{\substack{1\leq m\leq n\\ \gcd(m,n)=1}}(q-\zeta^m)$$
 
@@ -97,7 +95,7 @@ $$\lvert q-\zeta^m\rvert^2-(q-1)^2=q^2-2q\cos m\theta+1-(q^2-2q+1)=2q(1-\cos m\t
 
 $$\lvert\Phi_n(q)\rvert=\prod_{\substack{1\leq m\leq n\\ \gcd(m,n)=1}}\lvert q-\zeta^m\rvert\geq\lvert q-\zeta\rvert\geq q-1$$
 
-인데, 마지막 부등식의 경우 $\cos\theta\neq 0$임을 이용하면 이 부등식이 strict하므로 명제의 strict한 부등식을 얻는다.
+인데, 마지막 부등식의 경우 $\zeta\neq 1$, 즉 $\cos\theta\neq 1$임을 이용하면 이 부등식이 strict하므로 명제의 strict한 부등식을 얻는다.
 :::
 
 이제 정리를 증명한다.
@@ -108,7 +106,7 @@ $$\lvert\Phi_n(q)\rvert=\prod_{\substack{1\leq m\leq n\\ \gcd(m,n)=1}}\lvert q-\
 ::: 증명
 $D$를 finite division ring, $Z=Z(D)$를 그 center라 하자. 앞서 보았듯 $Z$는 finite field이고, 그 원소의 개수를 $q\geq 2$라 하면 $D$는 $Z$ 위의 유한차원 vector space로서 그 원소의 개수는 $\lvert D\rvert=q^n$의 꼴이다. 우리 주장은 $n=1$이어서 $D=Z$가 commutative하다는 것이다.
 
-이를 위해 multiplicative group $D^\times=D\setminus\{0\}$의 class equation을 만들자. ([\[대수적 구조\] §군의 작용, ⁋정리 14](/ko/math/algebraic_structures/group_actions#thm14)) $D^\times$의 conjugation action ([\[대수적 구조\] §군의 작용, ⁋명제 9](/ko/math/algebraic_structures/group_actions#prop9))에 대한 class equation은
+이를 위해 multiplicative group $D^\times=D\setminus\{0\}$의 class equation을 만들자. ([\[대수적 구조\] §군의 작용, ⁋정리 14](/ko/math/algebraic_structures/group_actions#thm14)) [\[대수적 구조\] §군의 작용, ⁋명제 9](/ko/math/algebraic_structures/group_actions#prop9)의 conjugation action에 대한 $D^\times$의 class equation은
 
 $$\lvert D^\times\rvert=\lvert Z(D^\times)\rvert+\sum_{x}\bigl[D^\times:C_{D^\times}(x)\bigr]$$
 
@@ -127,7 +125,7 @@ $$q^n-1=(q-1)+\sum_{x}\frac{q^n-1}{q^{d(x)}-1}\tag{$\ast$}$$
 이제 $n\geq 2$라 가정하고 모순을 얻자. Cyclotomic polynomial $\Phi_n(\x)$는 $q^n-1$을 나누며, 각 진약수 $d=d(x)<n$에 대해 $\frac{q^n-1}{q^d-1}$도 나눈다. 따라서, 위의 $(\ast)$에서 $\Phi_n(q)$는 반드시 $q-1$도 나눠야 한다. 즉 $\Phi_n(q)\mid q-1$이고 $q-1\geq 1$이므로 $\lvert\Phi_n(q)\rvert\leq q-1$이다. 그러나 [명제 4](#prop4)에 의해 $n\geq 2$이면 $\lvert\Phi_n(q)\rvert>q-1$이므로 모순이다.
 :::
 
-이 정리의 첫 번째 귀결은 finite integral domain에 대한 결과를 다시 준다.
+이 정리의 첫 번째 결과는 finite integral domain에 대한 결과를 다시 확인하는 것이다.
 
 ::: 따름정리 6
 $0\neq 1$인 finite ring $A$가 nonzero zero-divisor를 갖지 않으면 $A$는 field이다.
@@ -136,10 +134,7 @@ $0\neq 1$인 finite ring $A$가 nonzero zero-divisor를 갖지 않으면 $A$는 
 $A$가 finite ring이고 $0$ 이외의 zero divisor가 없다고 하자. 임의의 nonzero $a\in A$에 대해 left multiplication morphism $\lambda_a:A\rightarrow A$, $\lambda_a(x)=ax$를 생각하면, $ax=ay$일 때 $a(x-y)=0$이고 $a$가 zero divisor가 아니므로 $x=y$, 즉 $\lambda_a$가 단사이다. $A$가 유한집합이므로 $\lambda_a$는 전사이고, $av=1$인 $v$가 존재한다. 같은 논법을 right multiplication에 적용하면 $wa=1$인 $w$가 존재하며, $w=w(av)=(wa)v=v$이므로 $v$는 $a$의 양쪽 역원이다. 따라서 모든 nonzero 원소가 unit이고 $A$는 division ring이다. 유한 division ring은 [정리 5](#thm5)에 의해 field이다.
 :::
 
-이것이 [§가역원과 영인자, ⁋따름정리 6](/ko/math/ring_theory/units_and_zero_divisors#cor6)과 본질적으로 다른 것은 $A$의 commutativity를 가정하지 않았다는 것이다. 
-
-
-여기서는 commutativity를 가정하지 않고 출발하여 division ring임을 먼저 얻은 뒤 Wedderburn 정리로 commutativity를 결론지었다. Commutativity를 처음부터 가정하면 [정리 5](#thm5) 없이도 곱셈사상의 단사성만으로 field임을 얻으며, 이것이 "유한 integral domain은 field"라는 앞선 결과였다 (). Wedderburn 정리의 힘은 commutativity 가정 없이 zero divisor의 부재만으로 같은 결론에 이른다는 데에 있다.
+이것이 [§가역원과 영인자, ⁋따름정리 6](/ko/math/ring_theory/units_and_zero_divisors#cor6)과 본질적으로 다른 것은 $A$의 commutativity를 가정하지 않았다는 것이다. 만일 commutativity를 처음부터 가정했다면 이 따름정리를 증명하는 데에는 [정리 5](#thm5)가 필요하지 않았다. 이 정리의 힘은 commutativity 없이 유한성에 대한 가정만으로 같은 일을 수행했다는 것에 있다. 
 
 ## 사원수
 
@@ -157,11 +152,15 @@ $$i^2=j^2=k^2=-1,\qquad ij=k,\quad jk=i,\quad ki=j,\qquad ji=-k,\quad kj=-i,\qua
 를 $\mathbb{R}$-bilinear하게 확장하여 정의한 것이다.
 :::
 
-이 대수는 $2$차원 complex matrix들의 공간 $\Mat_2(\mathbb{C})$의 어떠한 subring으로도 실현된다. 구체적으로, 주어진 quaternion $q=a+bi+cj+dk$에 대해 $z=a+bi$, $w=c+di$로 두면
+관계식을 bilinear하게 확장했다는 것만으로는 이 곱셈이 결합적이라는 것이 따라오지 않으므로, 이는 따로 확인해야 한다. 가장 간단한 방법은 $\mathbb{H}$를 $2\times 2$ complex matrix들의 ring $\Mat_2(\mathbb{C})$ 안에서 실현하는 것이다. 주어진 quaternion $q=a+bi+cj+dk$에 대해 $z=a+bi$, $w=c+di$로 두고 $\mathbb{R}$-linear map $\varphi:\mathbb{H}\rightarrow\Mat_2(\mathbb{C})$를
 
-$$q\longmapsto\begin{pmatrix}z&-\bar w\\ w&\bar z\end{pmatrix}$$
+$$\varphi(q)=\begin{pmatrix}z&w\\ -\bar w&\bar z\end{pmatrix}$$
 
-는 $\mathbb{H}$를 $\Mat_2(\mathbb{C})$의 subring으로 본는 isomorphism을 주며, 실제로 이 representation에서 [정의 7](#def7)의 관계식이 모두 만족되는 것을 확인할 수 있다. 이 원소의 행렬식 
+로 정의하면, 기저원소들의 상은
+
+$$\varphi(1)=I,\qquad\varphi(i)=\begin{pmatrix}i&0\\ 0&-i\end{pmatrix},\qquad\varphi(j)=\begin{pmatrix}0&1\\ -1&0\end{pmatrix},\qquad\varphi(k)=\begin{pmatrix}0&i\\ i&0\end{pmatrix}$$
+
+이고, 이 네 행렬이 [정의 7](#def7)의 관계식을 모두 만족하는 것은 직접 계산으로 확인된다. 양변이 $q,q'$에 대해 각각 bilinear하므로 이로부터 모든 quaternion에 대해 $\varphi(qq')=\varphi(q)\varphi(q')$이 성립하고, 위의 네 행렬이 $\mathbb{R}$ 위에서 linearly independent이므로 $\varphi$는 단사이다. 따라서 $\Mat_2(\mathbb{C})$의 곱셈이 결합적이라는 사실이 $\mathbb{H}$로 옮겨 오며, $\mathbb{H}$는 subring $\varphi(\mathbb{H})\subseteq\Mat_2(\mathbb{C})$와 isomorphic한 ring이 된다. 한편 이 행렬의 determinant 
 
 $$\lvert z\rvert^2+\lvert w\rvert^2=a^2+b^2+c^2+d^2$$
 
@@ -189,7 +188,7 @@ Norm의 또 다른 성질 중 하나는 이것이 곱셈을 보존한다는 것�
 
 $$N(q_1q_2)=q_1q_2\overline{q_1q_2}=q_1q_2\bar q_2\bar q_1=q_1N(q_2)\bar q_1=N(q_2)q_1\bar q_1=N(q_1)N(q_2)$$
 
-이 성립한다.  이 multiplicity를 좌표로 풀어쓰면
+이 성립한다. 이 곱셈성을 좌표로 풀어쓰면
 
 $$(a_1^2+b_1^2+c_1^2+d_1^2)(a_2^2+b_2^2+c_2^2+d_2^2)=(\cdots)^2+(\cdots)^2+(\cdots)^2+(\cdots)^2$$
 
@@ -199,7 +198,7 @@ $$(a_1^2+b_1^2+c_1^2+d_1^2)(a_2^2+b_2^2+c_2^2+d_2^2)=(\cdots)^2+(\cdots)^2+(\cdo
 Quaternion algebra $\mathbb{H}$는 noncommutative division ring이다.
 :::
 ::: 증명
-$\mathbb{H}$가 $1\neq 0$인 ring임은 정의에서 확인하였고, commutative하지 않음은 $ij=k\neq -k=ji$에서 자명하다. 남은 것은 임의의 nonzero $q\in\mathbb{H}$가 곱셈에 대한 양쪽 역원을 가짐을 보이는 것이다.
+$\mathbb{H}$가 $1\neq 0$인 ring임은 위에서 확인하였고, commutative하지 않음은 $ij=k\neq -k=ji$에서 자명하다. 남은 것은 임의의 nonzero $q\in\mathbb{H}$가 곱셈에 대한 양쪽 역원을 가짐을 보이는 것이다.
 
 $q=a+bi+cj+dk\neq 0$이라 하면, 우리는 위에서 $N(q)=a^2+b^2+c^2+d^2$이 양의 실수임을 보았다. 그럼 이는 $\mathbb{H}$의 원소로 볼 수 있으며, 뿐만 아니라 $\mathbb{H}$의 모든 원소와 commute한다. 이는 $N(q)$의 역수 $N(q)^{-1}$ 또한 마찬가지이며, 따라서
 
@@ -212,27 +211,43 @@ $$\bigl(N(q)^{-1}\bar q\bigr)\cdot q=N(q)^{-1}(\bar q q)=N(q)^{-1}N(q)=1$$
 가 되는 것을 확인할 수 있다. 즉, $q^{-1}=N(q)^{-1}\bar q$가 $q$의 양쪽 역원이며 이로부터 원하는 주장을 얻는다. 
 :::
 
-$\mathbb{H}$가 무한 noncommutative division ring으로 존재할 수 있는 것은, [정리 5](#thm5)의 증명을 지탱하던 두 기계(center 위의 유한차원 vector space 구조와 class equation의 cyclotomic 항)가 무한 차원·무한 order에서는 작동하지 않기 때문이다.
-
 ## 단순 가군의 자기사상환
 
-Division ring이 자연스럽게 등장하는 또 하나의 맥락은 module 이론이다. Ring $R$ 위의 *simple module*은 nonzero이며 $0$과 자기 자신 외의 submodule을 갖지 않는 left $R$-module이다 ([\[가환대수학\] §조르단-횔더 정리, ⁋정의 1](/ko/math/commutative_algebra/Jordan-Holder_theorem#def1)). Simple module 사이의 homomorphism은 매우 제한되어 있으며, 이를 기술하는 것이 Schur의 보조정리이다.
+Division ring은 module의 endomorphism을 다룰 때 유용하게 사용된다. Ring $A$ 위에 정의된 nonzero module $M$이 *simple module<sub>단순가군</sub>*이라는 것은 $M$이 $0$과 자기 자신 외의 submodule을 갖지 않는 것이다. 논의의 편의상 $M$을 left module로 고정하자. 그럼 다음이 성립한다. 
 
 ::: 보조정리 10 (Schur)
-Ring $R$ 위의 simple module $M,N$에 대하여 다음이 성립한다.
+Ring $A$ 위의 simple module $M,N$에 대하여 다음이 성립한다.
 
-1. 임의의 $R$-module homomorphism $f:M\rightarrow N$은 zero map이거나 isomorphism이다.
-2. 특히 simple module $M$의 endomorphism ring $\End_R(M)$은 division ring이다.
+1. 임의의 $A$-module homomorphism $f:M\rightarrow N$은 zero map이거나 isomorphism이다.
+2. 특히 simple module $M$의 endomorphism ring $\End_A(M)$은 division ring이다.
 :::
 ::: 증명
-$f:M\rightarrow N$을 nonzero $R$-module homomorphism이라 하자. $\ker f$는 $M$의 submodule이고 $f\neq 0$이므로 $\ker f\neq M$이다. $M$이 simple이므로 $\ker f=0$, 즉 $f$는 단사이다. 또 $\im f$는 $N$의 nonzero submodule이고 $N$이 simple이므로 $\im f=N$, 즉 $f$는 전사이다. 따라서 $f$는 isomorphism이다. 이로써 1이 성립한다.
+$f:M\rightarrow N$을 nonzero $A$-module homomorphism이라 하자. $\ker f$는 $M$의 submodule이고 $f\neq 0$이므로 $\ker f\neq M$이다. $M$이 simple이므로 $\ker f=0$, 즉 $f$는 단사이다. 또 $\im f$는 $N$의 nonzero submodule이고 $N$이 simple이므로 $\im f=N$, 즉 $f$는 전사이다. 따라서 $f$는 isomorphism이다. 이로써 첫째 결과가 성립한다.
 
-이제 $M=N$인 경우를 보면, $\End_R(M)$은 morphism의 합성을 곱셈으로, 항등사상 $\id_M$을 항등원으로 하는 ring이다. $M$이 nonzero이므로 $\id_M\neq 0$, 즉 이 ring은 $0$이 아니다. 1에 의해 nonzero $f\in\End_R(M)$은 isomorphism이고, 그 역사상 $f^{-1}$ 또한 $R$-module homomorphism이므로 $\End_R(M)$의 원소이다. $f\circ f^{-1}=f^{-1}\circ f=\id_M$이므로 $f$는 unit이다. 따라서 모든 nonzero 원소가 unit이고, $\End_R(M)$은 division ring이다.
+이제 $M=N$인 경우를 보면, $\End_A(M)$은 morphism의 합성을 곱셈으로, 항등사상 $\id_M$을 항등원으로 하는 ring이다. $M$이 nonzero이므로 $\id_M\neq 0$, 즉 이 ring은 $0$이 아니다. 첫째 결과에 의해 nonzero $f\in\End_A(M)$은 isomorphism이고, 그 inverse $f^{-1}$ 또한 $A$-module homomorphism이므로 $\End_A(M)$의 원소이다. 또, $f\circ f^{-1}=f^{-1}\circ f=\id_M$이므로 $f$는 unit이다. 즉 모든 nonzero 원소가 unit이고, $\End_A(M)$은 division ring이다.
 :::
 
-이 보조정리는 simple module의 endomorphism ring이라는 형태로 division ring을 대량으로 공급한다. 표현론에서는 이 division ring이 흔히 작은 field로 판명되는데, 가령 algebraically closed field $\mathbb{C}$ 위의 유한군 $G$의 irreducible representation에 대해 $\End_{\mathbb{C}[G]}(M)\cong\mathbb{C}$가 됨이 알려져 있다 ([\[표현론\] §유한군의 표현론, ⁋보조정리 8](/ko/math/representation_theory/representations_of_finite_groups#lem8)). 그러나 base field가 algebraically closed가 아니면 이 division ring이 진정으로 noncommutative하거나 base field보다 큰 field가 될 수 있으며, 이때 보조정리 10이 주는 division ring 구조가 본질적인 정보를 담는다. 이것이 Artin–Wedderburn 이론에서 semisimple ring을 division ring 위의 matrix ring들의 곱으로 분해할 때 등장하는 division ring의 출처이다.
+이 보조정리는 simple module의 endomorphism ring이라는 형태로 division ring을 대량으로 공급한다. 반대로 division ring 자신을 그보다 작은 field 위의 vector space로 보면 그 field 위의 linear endomorphism들로 이루어진 ring 안에서 행렬로 나타나며, [정의 7](#def7) 직후에 손으로 적은 quaternion $\mathbb{H}$의 행렬표현도 이렇게 얻어진다. $\mathbb{H}$의 subfield $\mathbb{C}=\mathbb{R}+\mathbb{R}i$를 왼쪽에서 곱하여 $\mathbb{H}$를 $\mathbb{C}$-vector space로 보면, quaternion $q=a+bi+cj+dk$는 $z=a+bi$, $w=c+di$에 대하여
 
-Quaternion $\mathbb{H}$ 또한 이 관점에 들어맞는다. $\mathbb{H}$를 자기 자신 위의 left module로 보면 이는 simple $\mathbb{H}$-module이고, 그 endomorphism ring은 right multiplication들로 이루어져 다시 $\mathbb{H}$와 isomorphic하게 된다. 즉 [명제 9](#prop9)에서 직접 구성한 noncommutative division ring $\mathbb{H}$는 simple module의 endomorphism ring으로도 실현되며, 보조정리 10의 결론이 noncommutative 경우에도 비어 있지 않음을 보여 준다.
+$$q=z+wj$$
+
+로 유일하게 적히므로 $\{1,j\}$가 이 vector space의 basis이며 $\dim_{\mathbb{C}}\mathbb{H}=2$이다. 이제 각 $q\in\mathbb{H}$에 대한 right multiplication $\rho_q(x)=xq$를 생각하면
+
+$$\rho_q(ux)=uxq=u\rho_q(x)\qquad(u\in\mathbb{C})$$
+
+이므로 $\rho_q$는 $\mathbb{C}$-linear map, 즉 $\End_{\mathbb{C}}(\mathbb{H})$의 원소이고, $\rho_q=0$이면 $q=\rho_q(1)=0$이므로 $q\mapsto\rho_q$는 단사이다. 결합법칙에 의해 $\rho_{qq'}=\rho_{q'}\circ\rho_q$이므로 이 대응은 곱의 순서를 뒤집지만, 좌표를 행벡터로 적어 $\mathbb{C}$-linear map을 오른쪽에서 곱하는 행렬 $M_q$로 나타내면 순서가 한 번 더 뒤집히므로
+
+$$\mathbb{H}\longrightarrow\Mat_2(\mathbb{C}),\qquad q\longmapsto M_q$$
+
+는 단사 ring homomorphism이다. 이때 $M_q$의 두 행은 각각 $\rho_q(1)$과 $\rho_q(j)$의 좌표이며, [정의 7](#def7)의 관계식에서 $ji=-ij$이므로 임의의 $u\in\mathbb{C}$에 대하여 $ju=\bar uj$가 성립함을 이용하면 $\rho_q(1)=q=z+wj$와
+
+$$\rho_q(j)=jq=jz+jwj=\bar zj+\bar wj^2=-\bar w+\bar zj$$
+
+로부터
+
+$$M_q=\begin{pmatrix}z&w\\ -\bar w&\bar z\end{pmatrix}$$
+
+를 얻는다. 이것이 앞서 적은 행렬표현이며, 그 determinant $\lvert z\rvert^2+\lvert w\rvert^2$는 곧 norm $N(q)$이므로, nonzero $q$에 대하여 $M_q$가 가역행렬이라는 사실은 [명제 9](#prop9)가 보인 것과 같은 내용이다.
 
 ---
 
