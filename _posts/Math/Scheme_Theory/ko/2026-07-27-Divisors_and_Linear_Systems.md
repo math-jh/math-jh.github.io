@@ -11,8 +11,6 @@ sidebar:
 date: 2026-07-27
 weight: 17
 
-published: false
-
 ---
 
 [§준연접층](/ko/math/scheme_theory/quasicoherent_sheaves)에서 quasi-coherent sheaf와 invertible sheaf를 정의하였으므로, 우리는 variety 위에서 하던 divisor와 line bundle의 계산을 이제 scheme 위에서 시작할 수 있다. 이 글의 목적은 [\[대수다양체\] §인자](/ko/math/algebraic_varieties/divisors), [\[대수다양체\] §선다발과 벡터다발](/ko/math/algebraic_varieties/line_bundles)와 [\[대수다양체\] §선형계](/ko/math/algebraic_varieties/linear_systems)에서 다루었던 내용들을 scheme의 언어로 올려주는 것이다. 
@@ -158,7 +156,7 @@ $$\Gamma(V,\mathcal{O}_X(D))=f_i^{-1}\Gamma(V,\mathcal{O}_X)$$
 3번의 경우, $D=\divisor(h)$라면 $\mathcal{O}_X(D)=h^{-1}\mathcal{O}_X\cong \mathcal{O}_X$이다. 거꾸로 isomorphism $\psi:\mathcal{O}_X \rightarrow \mathcal{O}_X(D)$가 주어졌다 하고 $h=\psi(1)\in \Gamma(X,\mathcal{O}_X(D))\subseteq K(X)$라 하자. 그럼 $h$는 각각의 $U_i$ 위에서 $\mathcal{O}_X(D)$를 생성하므로 1번과 비교하면 $h$와 $f_i^{-1}$은 $\mathcal{O}_X^\times$의 section만큼 차이나며, 곧 $f_i/h^{-1}=hf_i$가 $U_i$ 위의 invertible section이다. 따라서 [정의 6](#def6)의 동치관계에 의하여 $\{(U_i,f_i)\}$와 $\{(X,h^{-1})\}$은 같은 Cartier divisor를 정의하여 $D=\divisor(h^{-1})$이다.
 :::
 
-위 명제에 의해 대응 $D\mapsto \mathcal{O}_X(D)$는 group homomorphism $\CaDiv(X)\rightarrow\Pic(X)$를 주며, 그 kerne이 곧 $\Prin(X)$가 된다. 따라서 우리는 이 대응의 image가 $\CaCl(X)=\CaDiv(X)/\Prin(X)$와 isomorphic하다는 것을 안다. 다음 정리는 이 결과를 매듭짓는 것으로, 이 대응이 전사이고 따라서 canonical isomorphism $\CaCl(X)\cong \Pic(X)$를 준다는 것을 보여준다.
+위 명제에 의해 대응 $D\mapsto \mathcal{O}_X(D)$는 group homomorphism $\CaDiv(X)\rightarrow\Pic(X)$를 주며, 그 kernel이 곧 $\Prin(X)$가 된다. 따라서 우리는 이 대응의 image가 $\CaCl(X)=\CaDiv(X)/\Prin(X)$와 isomorphic하다는 것을 안다. 다음 정리는 이 결과를 매듭짓는 것으로, 이 대응이 전사이고 따라서 canonical isomorphism $\CaCl(X)\cong \Pic(X)$를 준다는 것을 보여준다.
 
 ::: 정리 10
 Integral Noetherian scheme $X$에 대하여, $D\mapsto \mathcal{O}_X(D)$는 isomorphism $\CaCl(X)\cong\Pic(X)$를 유도한다.
@@ -295,7 +293,7 @@ Generating section들은 projective space로의 morphism을 결정한다. Ring $
 
 $$X_{s_i}=\{x\in X\mid \text{$(s_i)_x$ generates $\mathcal{L}_x$}\}$$
 
-는 열린집합이다. 이는 $\mathcal{L}$의 trivializing open set 위에서 $s_i$는 하나의 함수에 대응되고, 그 함수가 unit이 되는 점들의 모임은 열린집합이기 때문이다. 또 $s_i$들이 $\mathcal{L}$을 globally generate하므로 $\{X_{s_i}\}$는 $X$의 open cover이며, $X_{s_i}$ 위에서는 $s_i$가 $\mathcal{L}$의 trivialization를 주므로 각각의 $j$에 대하여 $s_j/s_i\in \Gamma(X_{s_i},\mathcal{O}_X)$가 잘 정의된다. 이제 $D_+(\x_i)$는 $\Spec A[\x_0,\ldots,\x_n]_{(\x_i)}$와 isomorphic하므로 ([§사영공간과 Proj 구성, ⁋정리 10](/ko/math/scheme_theory/projective_schemes#thm10)), ring homomorphism
+는 열린집합이다. 이는 $\mathcal{L}$의 trivializing open set 위에서 $s_i$는 하나의 함수에 대응되고, 그 함수가 unit이 되는 점들의 모임은 열린집합이기 때문이다. 또 $s_i$들이 $\mathcal{L}$을 globally generate하므로 $\{X_{s_i}\}$는 $X$의 open cover이며, $X_{s_i}$ 위에서는 $s_i$가 $\mathcal{L}$의 trivialization을 주므로 각각의 $j$에 대하여 $s_j/s_i\in \Gamma(X_{s_i},\mathcal{O}_X)$가 잘 정의된다. 이제 $D_+(\x_i)$는 $\Spec A[\x_0,\ldots,\x_n]_{(\x_i)}$와 isomorphic하므로 ([§사영공간과 Proj 구성, ⁋정리 10](/ko/math/scheme_theory/projective_schemes#thm10)), ring homomorphism
 
 $$A[\x_0,\ldots, \x_n]_{(\x_i)} \rightarrow \Gamma(X_{s_i},\mathcal{O}_X);\qquad \frac{\x_j}{\x_i}\mapsto \frac{s_j}{s_i}$$
 
@@ -303,7 +301,7 @@ $$A[\x_0,\ldots, \x_n]_{(\x_i)} \rightarrow \Gamma(X_{s_i},\mathcal{O}_X);\qquad
 
 $$\varphi:X \rightarrow \mathbb{P}^n_A$$
 
-을 정의한다. 즉, $\mathcal{L}$의 generating section을 택하는 것은 $X$를 projective space 안으로 넣어주는 방법을 택하는 것이다.
+을 정의한다. 즉, $\mathcal{L}$의 generating section을 택하는 것은 $X$를 projective space 안에서 나타내는 방법을 택하는 것이다.
 
 ::: 정의 17
 Noetherian ring $A$와 finite type $A$-scheme $X$ 위의 invertible sheaf $\mathcal{L}$이 *very ample*이라는 것은, $\mathcal{L}$을 globally generate하는 유한 개의 section $s_0,\ldots, s_n\in \Gamma(X,\mathcal{L})$이 존재하여 이들이 정의하는 morphism $\varphi:X \rightarrow \mathbb{P}^n_A$가 locally closed embedding인 것이다. ([§닫힌 부분스킴, ⁋정의 8](/ko/math/scheme_theory/closed_subschemes#def8))
