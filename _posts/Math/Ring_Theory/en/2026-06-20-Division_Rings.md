@@ -11,8 +11,9 @@ sidebar:
 date: 2026-06-20
 
 weight: 5
-translated_at: 2026-07-30T19:15:03+00:00
+translated_at: 2026-07-30T20:45:02+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-30T20:45:02+00:00
 ---
 In this post we study in earnest rings in which every nonzero element has a multiplicative inverse, i.e. *division rings*.
 
