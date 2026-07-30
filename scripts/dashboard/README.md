@@ -11,7 +11,7 @@
 | `index.html` | 셸 (`#app` + 모달 + pre-paint 테마) |
 | `app.js` | hash 라우팅 SPA — 마스트헤드·개요·상세 섹션 렌더러 전부 |
 | `dashboard.css` | 블로그 스킨(`_sass/minimal-mistakes/skins/_custom{,-dark}.scss`)의 토큰·자체를 그대로 |
-| `favicon-hammer3.svg` | 적용 중인 파비콘. 나머지 `favicon-*.svg` 는 탈락 후보 |
+| `favicon-gauge5.svg` | 파비콘 — 본사이트 마크(네이비 타일 + 브래스 네모, 8/16/sw3) 안에 계기판 |
 | `restart.sh` | 서버 재기동 |
 | `deploy/` | nginx 조각·crontab 줄 사본 (둘 다 레포 밖이라 재현용) |
 

@@ -537,7 +537,7 @@ class Handler(BaseHTTPRequestHandler):
         q = urllib.parse.parse_qs(u.query)
         path = u.path.rstrip("/") or "/"
 
-        # 파비콘 후보 SVG — 같은 디렉토리의 favicon-*.svg 만 허용
+        # 파비콘 SVG — 같은 디렉토리의 favicon-*.svg 만 허용
         if re.fullmatch(r"/favicon-[a-z0-9]+\.svg", u.path):
             try:
                 with open(os.path.join(HERE, os.path.basename(u.path)), "rb") as f:
