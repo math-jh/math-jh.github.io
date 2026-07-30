@@ -691,14 +691,15 @@ Conversion rules for the body:
 
 7. Footnotes: `[^1]` markers preserved; footnote bodies translated.
 
-8. References: `참고문헌` → `References`. BibTeX entries (author / journal / year / pages) unchanged.
+8. References: the bibliography is handled OUTSIDE this translation. If the body contains the literal line `@@REFERENCES@@`, copy that line verbatim, exactly once, in the same position. NEVER write a References section or bibliography entries yourself, and never invent citations.
 
 # Self-check before responding (must all pass)
 
 - Same math delimiters as the KO body: EN must have exactly as many `$$...$$` display spans AND exactly as many `$...$` inline spans as KO. None downgraded, none promoted, none added/dropped/split/merged.
 - Every `:::` opener from KO appears in EN with the label translated but the SAME derived anchor: the kind→prefix mapping (정의→def, 명제→prop, 정리→thm, 보조정리→lem, 따름정리→cor, 예시→ex, 참고→rmk) plus the unchanged number, and every `::: misc … {#id}` keeps its `{#id}` intact. The `:::` fence lines have the same count and order as KO; no Korean kind word survives on any opener.
 - No Korean labels remain (정의, 명제, 정리, 보조정리, 따름정리, 예시, 참고, 증명, 참고문헌).
-- **No Korean prose remains anywhere.** Every Korean sentence and paragraph is translated into English. Translating only headings, labels, and links while copying Korean paragraphs verbatim is a FAILED translation and will be rejected. The only Hangul allowed in the output is inside verbatim bibliography entries (e.g. a Korean book title).
+- **No Korean prose remains anywhere.** Every Korean sentence and paragraph is translated into English. Translating only headings, labels, and links while copying Korean paragraphs verbatim is a FAILED translation and will be rejected.
+- If the input contained the line `@@REFERENCES@@`, the output contains it verbatim, exactly once.
 - The body ends at the final content line — do not truncate mid-sentence.
 - Output begins with the first body character (no leading `---` or blank lines).
 
@@ -707,6 +708,54 @@ Now translate the body below."""
 
 def build_prompt(ko_body: str) -> str:
     return INSTRUCTIONS + "\n\n" + ko_body
+
+
+# ---------------------------------------------------------------------------
+# References isolation
+# ---------------------------------------------------------------------------
+# 참고문헌 섹션은 frontmatter처럼 엔진에 보내지 않는다. 엔진이 서지를 지어내
+# 붙이거나(2026-07-30 en Singular_Value_Decomposition에 [TB]·[Str] 발명 사례)
+# 항목을 고치는 것을 원천 차단하기 위해, 본문에서 블록을 잘라내 sentinel 한
+# 줄로 바꿔 보내고 번역 후 KO 원문 그대로(마커만 **References**로) 재부착한다.
+# footnote 정의는 참고문헌 뒤에 올 수 있으나 번역이 필요하므로 블록에 포함하지
+# 않는다 — 블록은 마커 줄부터 마지막 연속 엔트리 줄까지다.
+
+REFS_SENTINEL = "@@REFERENCES@@"
+_REFS_MARK_RE  = re.compile(r"^\*\*(참고문헌|References)\*\*[ \t]*$", re.M)
+_REFS_ENTRY_RE = re.compile(r"^\s*(\*\*\[[^\]]+\]\*\*|\[[^\]^]+\][ (])")
+
+
+def extract_refs_block(body: str) -> Tuple[str, Optional[str]]:
+    """(refs 블록을 sentinel로 치환한 body, 블록 원문) 반환. 블록 없으면 (body, None)."""
+    m = _REFS_MARK_RE.search(body)
+    if not m:
+        return body, None
+    head = body[: m.start()]
+    lines = body[m.start() :].split("\n")   # lines[0] = marker line
+    last = 0
+    for i, line in enumerate(lines[1:], start=1):
+        if _REFS_ENTRY_RE.match(line):
+            last = i
+        elif line.strip():
+            break                            # 엔트리·빈 줄 외의 내용 → 블록 종료
+    if last == 0:
+        return body, None                    # 마커만 있고 엔트리 없음
+    block = "\n".join(lines[: last + 1])
+    rest = "\n".join(lines[last + 1 :])
+    return head + REFS_SENTINEL + ("\n" + rest if rest else ""), block
+
+
+def reattach_refs_block(body: str, ko_refs: Optional[str]) -> str:
+    """sentinel 자리에 KO refs 블록을 마커만 영어화해 재부착한다."""
+    n = body.count(REFS_SENTINEL)
+    if ko_refs is None:
+        if n:
+            raise RuntimeError("refs sentinel appeared but KO has no references block")
+        return body
+    if n != 1:
+        raise RuntimeError(f"refs sentinel count {n} != 1 — engine dropped or duplicated it")
+    en_refs = _REFS_MARK_RE.sub("**References**", ko_refs, count=1)
+    return body.replace(REFS_SENTINEL, en_refs)
 
 
 POLISH_INSTRUCTIONS = """You are polishing the BODY of an existing English translation of a Korean math blog post. Frontmatter has been stripped and is handled separately by a script. Output ONLY the polished body. No frontmatter, no `---` lines, no explanation, no code fences, no preamble.
@@ -732,14 +781,15 @@ Given the Korean source body (for meaning reference) and the current English tra
 4. Fenced `:::` blocks (opener label already in English from the initial translation — keep it English), any legacy theorem-box HTML that remains (`<div class="...">`, `<ins id="...">**...**</ins>`, `<details class="proof"><summary>...</summary>`), and inline HTML (`<sub>...</sub>`, `<cap>`, `<em>`) — keep exactly, with ids and numbers unchanged.
 5. Section headers (`## ...`) — keep as-is unless genuinely wrong.
 6. Footnote markers `[^N]` and identifiers — unchanged.
-7. References / bibliography entries (BibTeX-style) — unchanged.
+7. References: the bibliography is handled OUTSIDE this polish. If the body contains the literal line `@@REFERENCES@@`, copy that line verbatim, exactly once, in the same position. NEVER write a References section or bibliography entries yourself.
 
 # Self-check before responding
 
 - Same math delimiters as the KO body — as many `$$...$$` display spans and as many `$...$` inline spans; none downgraded, none promoted.
 - Every `:::` opener present with its derived anchor (kind→prefix + N) unchanged and every `::: misc … {#id}` intact; `:::` line count and order match the KO source.
 - No Korean labels remain (정의, 명제, 정리, 보조정리, 따름정리, 예시, 참고, 증명, 참고문헌).
-- No Korean prose remains — every sentence of the output is English (verbatim bibliography entries excepted).
+- No Korean prose remains — every sentence of the output is English.
+- If the input contained the line `@@REFERENCES@@`, the output contains it verbatim, exactly once.
 - Output is body only — no frontmatter or `---` lines.
 
 # Style anchors
@@ -989,14 +1039,31 @@ def validate_translation(
                 f"{len(en_body)}c — polish truncation suspected"
             )
 
+    # References: the engine never sees the block (extract/reattach in
+    # translate()), so EN entries must be byte-identical to KO's. A mismatch
+    # means another path (incremental drift, manual EN edit) altered or
+    # invented entries.
+    _, ko_refs_blk = extract_refs_block(_body_after_frontmatter(ko_content).strip())
+    en_wo_refs, en_refs_blk = extract_refs_block(out_body)
+    if en_refs_blk is not None and ko_refs_blk is None:
+        return "references section present in EN but absent in KO — invented references"
+    if ko_refs_blk is not None and en_refs_blk is None:
+        return "references section missing in EN (present in KO)"
+    if ko_refs_blk and en_refs_blk:
+        ko_entries = ko_refs_blk.split("\n", 1)[1]
+        en_entries = en_refs_blk.split("\n", 1)[1]
+        if ko_entries != en_entries:
+            return "references entries differ from KO source"
+
     # Residual Korean prose: a lazy engine can pass every structural gate below
     # by returning the KO body near-verbatim (headings/labels translated, prose
     # copied — the copy has identical math profile, box ids, and length, and the
     # worker's own post-processing anglicizes labels and /ko/ paths, so nothing
-    # structural is left to fail). Count Hangul in the body outside math spans
-    # and <sub> glosses; the small allowance covers legitimate uses (Korean
-    # bibliography entries, mentions of Korean terminology).
-    prose = re.sub(r"<sub>.*?</sub>", "", out_body, flags=re.DOTALL)
+    # structural is left to fail). Count Hangul in the body outside math spans,
+    # <sub> glosses, and the references block (verbatim by construction, may
+    # legitimately cite Korean books); the small allowance covers mentions of
+    # Korean terminology in prose.
+    prose = re.sub(r"<sub>.*?</sub>", "", en_wo_refs, flags=re.DOTALL)
     prose = re.sub(r"\$\$.*?\$\$", "", prose, flags=re.DOTALL)
     prose = re.sub(r"\$[^$\n]*\$", "", prose)
     hangul = re.findall(r"[가-힣]", prose)
@@ -1206,7 +1273,10 @@ def translate(
         en_fields.update(_translate_fm_fields_via_kimi(fields_to_translate))
 
     # ---- Step 2: body translation / polish ----
+    # 참고문헌 격리: 엔진에는 sentinel만 보내고 KO 블록을 verbatim 재부착한다.
+    ko_body, ko_refs = extract_refs_block(ko_body)
     if reason == "polish" and en_current_body.strip():
+        en_current_body, _ = extract_refs_block(en_current_body)
         prompt = build_polish_prompt(ko_body, en_current_body)
     else:
         prompt = build_prompt(ko_body)
@@ -1226,6 +1296,7 @@ def translate(
     # 디스플레이는 `$$...$$` 이므로, 모델이 원래 내던 출력이 곧 정답이다. 남은 위험
     # (KO 의 디스플레이를 인라인으로 낮추는 것) 은 validate_translation 의 KO/EN
     # 수식 프로필 대조가 잡는다. 자세한 배경은 math_delimiters.py 참고.
+    en_body = reattach_refs_block(en_body, ko_refs)
 
     # ---- Step 4: compose final EN file ----
     polished_at_iso = translated_at_iso if reason == "polish" else None
