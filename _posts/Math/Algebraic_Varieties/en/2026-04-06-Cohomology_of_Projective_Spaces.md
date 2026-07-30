@@ -10,8 +10,9 @@ sidebar:
 
 date: 2026-04-06
 weight: 14
-translated_at: 2026-07-30T19:49:41+00:00
+translated_at: 2026-07-30T20:15:03+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-30T20:15:03+00:00
 ---
 We previously defined the line bundle $\mathcal{O}(d)$ in [§Line Bundles and Vector Bundles, ⁋Example 12](/en/math/algebraic_varieties/line_bundles#ex12), and verified through the computation of [§Line Bundles and Vector Bundles, ⁋Example 16](/en/math/algebraic_varieties/line_bundles#ex16) that its global sections $H^0(\mathbb{P}^n, \mathcal{O}(d))$ are isomorphic to homogeneous polynomials of degree $d$. However, the sheaf cohomology introduced in our earlier post [§Sheaf Cohomology, ⁋Definition 1](/en/math/algebraic_varieties/sheaf_cohomology#def1) is a richer invariant that includes not only $H^0$ but also the higher cohomology groups $H^1, H^2, \ldots$. Thus, we now aim to extract all information about $\mathcal{O}(d)$ using not just $H^0$ but all higher cohomology groups.
 
