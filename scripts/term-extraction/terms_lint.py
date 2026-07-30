@@ -13,6 +13,9 @@ categories.yml ko 표시명)과 대조한다. 차이: 저쪽은 in-memory 재작
   E LABEL     라벨이 '[categories.yml ko] §현재 글 제목' 이 아님   [--fix 가능]
   E EMPTY_GROUP 빈 그룹 (조판이 깨진다)                          [--fix 가능]
   E ORDER     그룹 내 정렬 위반 (nat_key·id 순 = 조판 순서)       [--fix 가능]
+  E CASE      인명 파생 고유명사 소문자 (terms_common._PROPER_FORMS 기준;
+              추출 시점 교정과 같은 표 — 기존 항목의 드리프트를 잡는다)
+                                                                [--fix 가능]
   E DEFS_ORDER defs 가 논리 순서가 아님 (categories.yml 순서→weight; 2026-07-21
               추가 — add_def 는 등록순 append 라 논리 순서 보장이 없었음. 모든
               def 대상이 해석 가능할 때만 검사·정렬)              [--fix 가능]
@@ -45,8 +48,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from terms_common import (  # noqa: E402
     BLOG_ROOT, CATEGORIES_PATH, TERMS_PATH, Issue, _frontmatter,
     category_ko_maps, chunk_field, chunk_id, insert_sorted, join_file,
-    letter_of, nat_key, permalink_map, semantic_checks, split_file, url_slug,
-    yaml_quote,
+    letter_of, nat_key, normalize_proper_case, permalink_map, semantic_checks,
+    split_file, url_slug, yaml_quote,
 )
 
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -169,6 +172,42 @@ def fix_order(text: str) -> tuple[str, int]:
         if ordered != chunks:
             n += 1
             groups[letter] = ordered
+    return join_file(header, groups), n
+
+
+_EN_LINE_RE = re.compile(r"^(  en: )(.*)$", re.M)
+
+
+def check_case(text: str) -> list[Issue]:
+    """en 표기의 인명 파생 고유명사 소문자 드리프트 (_PROPER_FORMS 기준)."""
+    _, groups = split_file(text)
+    out = []
+    for chunks in groups.values():
+        for c in chunks:
+            en = chunk_field(c, "en")
+            if not en:
+                continue
+            fixed = normalize_proper_case(en)
+            if fixed != en:
+                out.append(Issue("E", "CASE",
+                                 f"{chunk_id(c)}: en {en!r} → {fixed!r}",
+                                 fixable=True))
+    return out
+
+
+def fix_case(text: str) -> tuple[str, int]:
+    header, groups = split_file(text)
+    n = 0
+    for chunks in groups.values():
+        for i, c in enumerate(chunks):
+            en = chunk_field(c, "en")
+            if not en:
+                continue
+            fixed = normalize_proper_case(en)
+            if fixed != en:
+                chunks[i] = _EN_LINE_RE.sub(
+                    lambda m: m.group(1) + yaml_quote(fixed), c, count=1)
+                n += 1
     return join_file(header, groups), n
 
 
@@ -307,11 +346,13 @@ def run(path: Path, fix: bool, notify: bool) -> int:
     pmap = permalink_map()
     ko_by_slug, _ = category_ko_maps()
     issues = (semantic_checks(data, pmap, ko_by_slug) + check_order(text)
+              + check_case(text)
               + check_defs_order(text, pmap) + check_parser_parity(text, data))
 
     if fix and any(i.fixable for i in issues):
         BACKUP_PATH.write_text(text, encoding="utf-8")
-        new, n_lbl = fix_labels(text, pmap, ko_by_slug)
+        new, n_case = fix_case(text)
+        new, n_lbl = fix_labels(new, pmap, ko_by_slug)
         new, n_grp = fix_groups(new)  # 빈 그룹 제거 포함
         new, n_ord = fix_order(new)
         new, n_def = fix_defs_order(new, pmap)
@@ -331,9 +372,10 @@ def run(path: Path, fix: bool, notify: bool) -> int:
             tmp = path.with_suffix(".tmp")
             tmp.write_text(new, encoding="utf-8")
             tmp.replace(path)
-            log(f"자동 수정: 라벨 {n_lbl}건, 그룹 이동 {n_grp}건, "
+            log(f"자동 수정: 라벨 {n_lbl}건, 케이스 {n_case}건, 그룹 이동 {n_grp}건, "
                 f"정렬 {n_ord}그룹, defs 재정렬 {n_def}건 (백업: {BACKUP_PATH.name})")
             issues = (semantic_checks(nd, pmap, ko_by_slug) + check_order(new)
+                      + check_case(new)
                       + check_defs_order(new, pmap) + check_parser_parity(new, nd))
 
     errors = [i for i in issues if i.level == "E"]

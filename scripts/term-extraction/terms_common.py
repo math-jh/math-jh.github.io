@@ -60,16 +60,24 @@ GEN_ED_CATS, GEN_ED_DIRS = _gen_ed_sets()
 # ---------------------------------------------------------------------------
 
 _WRAP_RE = re.compile(r"\\math(?:frak|bb|cal|rm|bf|sf|scr|it)\{([^{}]*)\}")
+# 장식 매크로는 인자만 남긴다 — $\bar{\partial}$ 가 'bar…'(B 그룹)가 아니라
+# 'partial'(P 그룹)로 접히게.
+_DECOR_RE = re.compile(
+    r"\\(?:bar|hat|tilde|dot|vec|overline|underline|widehat|widetilde)\{([^{}]*)\}")
 _FRAC_RE = re.compile(r"(\d+)\\frac\{(\d+)\}\{(\d+)\}")  # 2\frac{1}{2} → 2.5
 _MACRO_RE = re.compile(r"\\([a-zA-Z]+)")
 
 
-def fold(s: str) -> str:
-    """수식·발음기호를 접은 평문. 분류·정렬·중복 판정의 공통 전처리."""
+def fold(s: str, strip_decor: bool = True) -> str:
+    """수식·발음기호를 접은 평문. 분류·정렬·중복 판정의 공통 전처리.
+    strip_decor=False 는 중복 판정용 — $\\partial$ 와 $\\bar{\\partial}$ 가
+    같은 키로 접히지 않도록 장식 매크로 이름을 남긴다."""
     s = unicodedata.normalize("NFD", s)
     s = "".join(c for c in s if not unicodedata.combining(c))
     s = _FRAC_RE.sub(lambda m: str(int(m[1]) + int(m[2]) / int(m[3])), s)
     s = _WRAP_RE.sub(r"\1", s)
+    if strip_decor:
+        s = _DECOR_RE.sub(r"\1", s)
     s = _MACRO_RE.sub(r"\1", s)
     return s.replace("$", "")
 
@@ -93,7 +101,7 @@ def nat_key(en: str):
 
 def dedup_key(s: str) -> str:
     """대소문자·발음기호·수식 무시 중복 판정 키."""
-    return re.sub(r"[^a-z0-9]", "", fold(s).casefold())
+    return re.sub(r"[^a-z0-9]", "", fold(s, strip_decor=False).casefold())
 
 
 def slugify_id(en: str) -> str:
@@ -108,8 +116,10 @@ def slugify_id(en: str) -> str:
 # 인명 파생 고유명사 대문자 정규화
 # ---------------------------------------------------------------------------
 # 용어 추출 LLM 이 인명 파생 형용사를 자주 소문자로 낸다(hermitian form…).
-# 색인 en 표기는 저장 직전 이 표로 강제 교정한다. 관용적으로 소문자인 형용사
-# (abelian·cartesian·boolean)는 표에 넣지 않아 그대로 둔다 — 코퍼스·표준 관례.
+# 색인 en 표기는 저장 직전 이 표로 강제 교정하고, terms_lint 의 CASE 검사가
+# 기존 항목도 같은 표로 잡는다(--fix 가능). 관용적으로 소문자인 형용사
+# (abelian·boolean)는 표에 넣지 않아 그대로 둔다 — 코퍼스·표준 관례.
+# Cartesian 은 2026-07-31 룰링으로 대문자 확정이라 표에 있다.
 # 키는 발음기호 접은 소문자, 값은 정본 표기(악센트 포함).
 _PROPER_FORMS = {
     "hermitian": "Hermitian", "noetherian": "Noetherian", "artinian": "Artinian",
@@ -142,6 +152,15 @@ _PROPER_FORMS = {
     "borel": "Borel", "baire": "Baire", "urysohn": "Urysohn", "zorn": "Zorn",
     "kronecker": "Kronecker", "wronskian": "Wronskian", "hessian": "Hessian",
     "green": "Green", "beltrami": "Beltrami", "riesz": "Riesz", "fatou": "Fatou",
+    "brioschi": "Brioschi", "carmichael": "Carmichael", "cartesian": "Cartesian",
+    "casimir": "Casimir", "coxeter": "Coxeter", "darboux": "Darboux",
+    "dynkin": "Dynkin", "eratosthenes": "Eratosthenes", "euclid": "Euclid",
+    "euclidean": "Euclidean", "gysin": "Gysin", "hessenberg": "Hessenberg",
+    "kostant": "Kostant", "levi": "Levi", "civita": "Civita",
+    "liouville": "Liouville", "mertens": "Mertens", "milnor": "Milnor",
+    "mobius": "Möbius", "moivre": "Moivre", "nijenhuis": "Nijenhuis",
+    "pell": "Pell", "tits": "Tits", "weingarten": "Weingarten",
+    "bezout": "Bézout",
 }
 _PROPER_LOOKUP = {
     "".join(c for c in unicodedata.normalize("NFD", k)
