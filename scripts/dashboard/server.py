@@ -244,6 +244,23 @@ def sec_workers():
     return out
 
 
+def _ko_typos(verdict):
+    """verify verdict의 KO-TYPOS 섹션에서 실제 지적 항목만 뽑는다.
+    '(none detected)' 류 한 줄이나 빈 섹션은 [] 로 취급한다."""
+    out, on = [], False
+    for ln in str(verdict).splitlines():
+        s = ln.strip()
+        if s.upper().startswith("KO-TYPOS"):
+            on = True
+            continue
+        if on:
+            if s.startswith("- "):
+                out.append(s[2:])
+            elif not s.startswith("-"):
+                break
+    return out
+
+
 def sec_translation():
     p = f"{ROOT}/scripts/translation/translation_state.json"
     try:
@@ -253,6 +270,7 @@ def sec_translation():
     files = d.get("files", {})
     by_status = {}
     recent = []
+    ko_typos = []
     for path, v in files.items():
         st = v.get("status", "?")
         by_status[st] = by_status.get(st, 0) + 1
@@ -260,9 +278,14 @@ def sec_translation():
         recent.append(dict(path=path, status=st, ts=ts,
                            retries=v.get("retries") or v.get("retry") or 0,
                            verdict=v.get("verdict") or v.get("verify_verdict") or ""))
+        typos = _ko_typos(v.get("verdict") or v.get("verify_verdict") or "")
+        if typos:
+            ko_typos.append(dict(path=path, items=typos,
+                                 verified_at=v.get("verified_at") or ""))
     recent.sort(key=lambda r: r["ts"], reverse=True)
+    ko_typos.sort(key=lambda r: r["verified_at"], reverse=True)
     return dict(stats=d.get("stats", {}), by_status=by_status,
-                recent=recent[:15], state_mtime=mtime(p))
+                recent=recent[:15], ko_typos=ko_typos, state_mtime=mtime(p))
 
 
 def sec_comments():
@@ -288,6 +311,14 @@ def sec_comments():
     return dict(ko=out.get("ko", []), en=out.get("en", []), mtime=mtime(p))
 
 
+# audit-report.md의 "### <제목>" → Issue counts 표의 kind 키 매핑
+_AUDIT_KIND = {
+    "Permalinks that break the convention": "permalink_convention",
+    "Internal links pointing nowhere": "internal_link_broken",
+    "FIXME / TODO markers left in posts": "fixme_marker",
+}
+
+
 def sec_audit():
     p = f"{ROOT}/scripts/audit/audit-report.md"
     try:
@@ -297,8 +328,18 @@ def sec_audit():
     counts = dict(re.findall(r"^\|\s*`([a-z_]+)`\s*\|\s*(\d+)\s*\|", text, re.M))
     scanned = re.search(r"Total posts scanned:\s*\*\*(\d+)\*\*", text)
     issues = re.search(r"at least one issue:\s*\*\*(\d+)\*\*", text)
+    # Actionable items 아래 "### 제목" 블록별 bullet 을 kind 별 상세로 수집
+    details = {}
+    m = re.search(r"^## Actionable items\s*$(.*?)(?=^## |\Z)", text, re.M | re.S)
+    if m:
+        for sec in re.finditer(r"^### (.+?)\s*$\n(.*?)(?=^### |\Z)",
+                               m.group(1), re.M | re.S):
+            kind = _AUDIT_KIND.get(sec.group(1).strip(), sec.group(1).strip())
+            details[kind] = [ln[2:].strip() for ln in sec.group(2).splitlines()
+                             if ln.startswith("- ")]
     return dict(mtime=mtime(p),
                 counts={k: int(v) for k, v in counts.items()},
+                details=details,
                 scanned=int(scanned.group(1)) if scanned else None,
                 posts_with_issues=int(issues.group(1)) if issues else None)
 
@@ -405,10 +446,11 @@ STATIC = {"/": ("index.html", "text/html; charset=utf-8"),
           "/dashboard.css": ("dashboard.css", "text/css; charset=utf-8"),
           "/app.js": ("app.js", "application/javascript; charset=utf-8")}
 
-# 상세 페이지 경로 — 전부 같은 index.html 을 주고 app.js 가 pathname 으로 갈린다.
-# (/dash/ 는 개요만 두고 상세를 나눈 구조. nginx 가 /dash/ 를 벗겨 보내므로
-#  여기서 보는 경로는 "/workers" 처럼 접두사가 없다.)
-SECTIONS = {"workers", "drafts", "weights", "translation", "audit", "activity"}
+# 구 상세 경로 — 라우팅은 hash(#workers …)로 넘어갔지만, 북마크된 구 경로에도
+# index.html 을 줘야 app.js 가 hash 라우트로 리다이렉트할 수 있다.
+# (nginx 가 /dash/ 를 벗겨 보내므로 여기서 보는 경로는 "/workers" 처럼 접두사가 없다.)
+SECTIONS = {"workers", "pipeline", "drafts", "weights", "translation", "audit",
+            "index", "activity"}
 
 
 class Handler(BaseHTTPRequestHandler):

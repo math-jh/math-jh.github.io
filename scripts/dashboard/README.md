@@ -1,6 +1,6 @@
 # scripts/dashboard — 블로그 운영 대시보드
 
-`https://preview.math-jh.com/dash/`. 미발행 글 현황·워커 상태·번역 큐·감사·색인·활동을
+`https://preview.math-jh.com/dash/`. 미발행 글 현황·워커 상태·파이프라인·번역 큐·감사·색인·활동을
 한자리에서 본다. 읽기 전용이다 — 레포에 아무것도 쓰지 않는다.
 
 ## 구성
@@ -8,18 +8,25 @@
 | 파일 | 역할 |
 | --- | --- |
 | `server.py` | stdlib HTTP 서버(8089, 127.0.0.1). 정적 파일 + `/api/*` |
-| `index.html` | 공통 셸. 섹션 경로 전부 이 파일을 받는다 |
-| `app.js` | `location.pathname` 으로 뷰를 고르는 렌더러 |
-| `dashboard.css` | 블로그 스킨(`_sass/minimal-mistakes/skins/_custom{,-dark}.scss`)의 색·폰트를 따른다 |
+| `index.html` | 셸 (`#app` + 모달 + pre-paint 테마) |
+| `app.js` | hash 라우팅 SPA — 마스트헤드·개요·상세 섹션 렌더러 전부 |
+| `dashboard.css` | 블로그 스킨(`_sass/minimal-mistakes/skins/_custom{,-dark}.scss`)의 토큰·자체를 그대로 |
 | `favicon-hammer3.svg` | 적용 중인 파비콘. 나머지 `favicon-*.svg` 는 탈락 후보 |
 | `restart.sh` | 서버 재기동 |
 | `deploy/` | nginx 조각·crontab 줄 사본 (둘 다 레포 밖이라 재현용) |
 
 ## 페이지
 
-`/dash/` 는 개요만 둔다 (타일 · "지금 볼 것" 임계값 알림 · 워커 한 줄 요약 · 최근 커밋).
-상세는 `/dash/workers`, `/dash/drafts`, `/dash/weights`, `/dash/translation`,
-`/dash/audit`, `/dash/activity`.
+**개요가 허브다** — 탭 네비 없음. `/dash/` 개요(판정 한 줄 + 24시간 실행 히트맵 + 지표 6장 +
+"지금 볼 것" + 파이프라인 + 최근 커밋 + 섹션 색인)에서 각 섹션으로 들어가고 `← 개요로` 로 돌아온다.
+라우팅은 hash: `#workers` `#pipeline` `#drafts` `#weights` `#translation` `#audit` `#index` `#activity`.
+구 경로(`/dash/workers` 등)는 서버가 index.html 을 주고 app.js 가 hash 로 리다이렉트한다.
+감사(`#audit`)와 색인(`#index`)은 별도 페이지다. 번역 큐에는 검증기 KO-TYPOS 지적 목록이
+뜨고(행 클릭 → 지적 전문 모달), 감사의 이슈 종류 행을 클릭하면 글·줄 단위 상세 모달이 열린다
+(`audit-report.md` 의 Actionable items 를 서버가 kind 별로 파싱).
+
+디자인 원본: claude.ai/design 프로젝트 `design_handoff_dashboard/` 번들 (2026-07-30 확정,
+토큰·조판·상호작용 스펙은 그 README 참조).
 
 ## API
 
@@ -39,9 +46,12 @@
 - **재기동은 `./restart.sh` 로만.** `pgrep -f dashboard/server.py` 를 셸 명령줄에 직접
   쓰면 그 명령줄까지 패턴에 걸려 자기 자신을 죽인다 (겪은 사고: 구 프로세스 생존 +
   신 프로세스 포트 충돌사). 실행은 절대경로로 — keeper cron 과 패턴을 맞춘다.
-- **자산·API 참조는 절대경로(`/dash/…`)여야 한다.** 상세 경로(`/dash/drafts`)에서
-  상대경로가 다른 디렉토리로 풀린다.
+- **자산·API 참조는 절대경로(`/dash/…`, `/assets/…`)여야 한다.** 구 상세 경로에서
+  상대경로가 다른 디렉토리로 풀린다. 폰트·아이콘은 블로그 자산(`/assets/css/fonts/`)을
+  같은 오리진에서 재사용한다 (nginx 4000 이 Jekyll `_site` 를 서빙하므로 도달 가능).
 - nginx 가 `/dash/` 접두사를 벗겨 보내므로 `server.py` 가 보는 경로에는 접두사가 없다.
+- 테마는 블로그와 같은 `MTHEME` 쿠키(auto|light|dark)를 공유한다. FOUC 방지용 pre-paint
+  스크립트가 index.html head 에 있다.
 - **ko/en 짝은 날짜 접두사를 뗀 slug 로 맞춘다.** en 파일은 번역 시점 날짜를 달고
   생성돼 ko 와 파일명이 다르다.
 - `_posts/Misc/**` 는 `ko/en` 하위 폴더 없이 평평한 단일 언어다.

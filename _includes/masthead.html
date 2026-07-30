@@ -129,6 +129,16 @@
             document.addEventListener('DOMContentLoaded', checkLanguageAvailability);
             </script>
             {% endif %}
+            <!-- 운영 대시보드 링크: 사설(preview.math-jh.com)에서만 노출 -->
+            <li class="settings-item" id="dash-link" style="display:none" onclick="location.href='/dash/'">
+              <span style="color:#bbb">Dashboard</span>
+              <i class="material-icons md-18" style="color:#a9874a; vertical-align:-.2em;">arrow_forward</i>
+            </li>
+            <script>
+            if (location.hostname === 'preview.math-jh.com') {
+              document.getElementById('dash-link').style.display = 'flex';
+            }
+            </script>
           </ul>
         </div>
         <button class="greedy-nav__toggle hidden" type="button">
