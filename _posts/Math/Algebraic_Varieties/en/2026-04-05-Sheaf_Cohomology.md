@@ -10,12 +10,13 @@ sidebar:
 
 date: 2026-04-05
 weight: 13
-translated_at: 2026-07-30T18:21:36+00:00
+translated_at: 2026-07-30T18:45:03+00:00
 translation_source: kimi-cli
+last_polished_at: 2026-07-30T18:45:03+00:00
 ---
-We have seen that line bundles can be used to define various invariants. For instance, in [§Line Bundles and Vector Bundles](/en/math/algebraic_varieties/line_bundles) we defined the global section space $\Gamma(X, \mathcal{L})$ of a line bundle $\mathcal{L}$. In particular, in [§Linear Systems, ⁋Definition 9](/en/math/algebraic_varieties/linear_systems#def9), we observed that the dimension of this space plays a key role in determining the dimension of the complete linear system, and hence the projective embedding of the variety.
+We have seen that line bundles can be used to define various invariants. For instance, in [§Line Bundles and Vector Bundles](/en/math/algebraic_varieties/line_bundles) we defined the global section space $\Gamma(X, \mathcal{L})$ of a line bundle $\mathcal{L}$. In particular, in [§Linear Systems, ⁋Definition 9](/en/math/algebraic_varieties/linear_systems#def9) we observed that the dimension of this space plays a key role in determining the dimension of the complete linear system, and hence the projective embedding of the variety.
 
-So far we have mainly used the language of line bundles for geometric intuition, but as we saw right after [§Canonical Bundle, ⁋Definition 1](/en/math/algebraic_varieties/canonical_bundle#def1), thinking in terms of the section sheaf of a line bundle means that this can fundamentally be rephrased in the language of sheaves. In this post we define the notion of sheaf cohomology.
+So far we have mainly used the language of line bundles for geometric intuition, but as we saw right after [§Canonical Bundle, ⁋Definition 1](/en/math/algebraic_varieties/canonical_bundle#def1), passing to the section sheaf of a line bundle means that this can fundamentally be rephrased in the language of sheaves. In this post we define the notion of sheaf cohomology.
 
 ## Definition as a Derived Functor
 
@@ -53,7 +54,7 @@ $$\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n}(-1)^{\oplus(n+1)}) = 0,$$
 
 whereas $\Gamma(\mathbb{P}^n, \mathcal{O}_{\mathbb{P}^n})=\mathbb{K}$, so surjectivity on the right cannot hold.
 
-The standard way to remedy this is to consider the right derived functor ([Homological Algebra §Derived Functors, ⁋Definition 9](/en/math/homological_algebra/derived_functors#def9)). Specifically, the category $\Sh(X)$ of sheaves of abelian groups on $X$ has enough injectives, because we can take injective objects stalkwise and then sheafify. Thus every sheaf $\mathcal{F}$ always has an injective resolution $\mathcal{I}^\bullet$, and from the complex
+The standard remedy is to consider the right derived functor ([Homological Algebra §Derived Functors, ⁋Definition 9](/en/math/homological_algebra/derived_functors#def9)). Specifically, the category $\Sh(X)$ of sheaves of abelian groups on $X$ has enough injectives, because we can take injective objects stalkwise and then sheafify. Thus every sheaf $\mathcal{F}$ always has an injective resolution $\mathcal{I}^\bullet$, and from the complex
 
 $$0 \rightarrow \Gamma(X, \mathcal{I}^0) \rightarrow \Gamma(X, \mathcal{I}^1) \rightarrow \Gamma(X, \mathcal{I}^2) \rightarrow \cdots$$
 
