@@ -481,7 +481,8 @@ function secWeights(d) {
   var s = secNode('weight 지도', cats.length + ' 카테고리 · 미발행 있는 곳 ' + open);
   var bar = el('div', 'toolbar');
   bar.innerHTML = '<label>정렬 <select id="wsort">' +
-      '<option value="un">미발행 수</option><option value="name">이름</option><option value="rate">완결률</option>' +
+      '<option value="un">미발행 수</option><option value="site">카테고리 순서</option>' +
+      '<option value="name">이름</option><option value="rate">완결률</option>' +
     '</select>' +
     '<button id="wdir" class="ghost-btn wdir" title="오름차순/내림차순"><i class="material-icons">arrow_downward</i></button></label>' +
     '<span class="count">눈금 하나 = 글 하나 · 왼쪽부터 weight 오름차순 · 커서를 올리면 weight</span>';
@@ -500,7 +501,12 @@ function secWeights(d) {
       dir.innerHTML = '<i class="material-icons">' + (state.wSortDesc ? 'arrow_downward' : 'arrow_upward') + '</i>';
     }
     dirIcon();
-    sel.onchange = function () { state.wSortKey = sel.value; renderWeights(d); };
+    sel.onchange = function () {
+      state.wSortKey = sel.value;
+      /* 카테고리 순서는 내림차순이 무의미하다 — 선택 시 정방향으로 맞춘다. */
+      if (sel.value === 'site' && state.wSortDesc) { state.wSortDesc = false; dirIcon(); }
+      renderWeights(d);
+    };
     dir.onclick = function () { state.wSortDesc = !state.wSortDesc; dirIcon(); renderWeights(d); };
     wireWTip();
     renderWeights(d);
@@ -526,7 +532,10 @@ function renderWeights(d) {
   var wrap = document.getElementById('wmap');
   if (!wrap) return;
   var mode = state.wSortKey, cats = (d.categories || []).slice();
-  if (mode === 'name') cats.sort(function (a, b) { return shortCat(a.name).localeCompare(shortCat(b.name)); });
+  if (mode === 'site') cats.sort(function (a, b) {
+    return (a.order || 0) - (b.order || 0) || shortCat(a.name).localeCompare(shortCat(b.name));
+  });
+  else if (mode === 'name') cats.sort(function (a, b) { return shortCat(a.name).localeCompare(shortCat(b.name)); });
   else if (mode === 'rate') cats.sort(function (a, b) {
     return (a.total - a.unpublished) / (a.total || 1) - (b.total - b.unpublished) / (b.total || 1);
   });

@@ -129,10 +129,15 @@ def parse_post(path):
     except ValueError:
         weight = None
 
+    # frontmatter의 categories 문자열 — _data/categories.yml subjects 키와 정확히
+    # 일치한다(디렉토리명은 하이픈·중첩에서 어긋나므로 순서 매칭엔 이걸 쓴다).
+    cat_fm = meta.get("categories", "").strip("[]").split(",")[0].strip().strip('"').strip("'")
+
     return dict(
         path=rel,
         lang=lang,
         category=category,
+        cat_fm=cat_fm,
         title=meta.get("title", os.path.basename(path)),
         permalink=meta.get("permalink", ""),
         weight=weight,
@@ -162,6 +167,29 @@ def scan_posts():
     return posts
 
 
+_SUBJECT_KEY = re.compile(r'^  "([^"]+)"\s*:')
+
+
+def subject_order():
+    """_data/categories.yml subjects 블록의 키 순서 → {카테고리 문자열: 순위}.
+    키 순서가 곧 사이트 표시 순서다 (그 파일 머리 주석 참조)."""
+    order, in_subjects = {}, False
+    try:
+        with open(f"{ROOT}/_data/categories.yml", encoding="utf-8") as fh:
+            for line in fh:
+                if line.startswith("subjects:"):
+                    in_subjects = True
+                elif in_subjects:
+                    if line[:1] not in (" ", "\n", "#"):
+                        break                # 다음 최상위 키
+                    m = _SUBJECT_KEY.match(line)
+                    if m:
+                        order[m.group(1)] = len(order)
+    except OSError:
+        pass
+    return order
+
+
 # ── 섹션별 수집 ──────────────────────────────────────────────────────────────
 def sec_posts(posts):
     now = time.time()
@@ -182,11 +210,16 @@ def sec_posts(posts):
     for p in ko:
         c = cats.setdefault(p["category"], [])
         c.append(p)
+    sub_order = subject_order()
     categories = []
     for name, items in sorted(cats.items()):
         items.sort(key=lambda p: (p["weight"] is None, p["weight"] if p["weight"] is not None else 0))
         categories.append(dict(
             name=name,
+            # categories.yml subjects 키 순서상의 순위. Misc/Peripherals/* 처럼
+            # 하위 폴더가 한 키를 공유하면 같은 값 — 클라이언트가 이름으로 tiebreak.
+            order=min((sub_order[p["cat_fm"]] for p in items if p["cat_fm"] in sub_order),
+                      default=len(sub_order)),
             total=len(items),
             unpublished=sum(1 for p in items if not p["published"]),
             posts=[dict(weight=p["weight"], title=p["title"], published=p["published"],
